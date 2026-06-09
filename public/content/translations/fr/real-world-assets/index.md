@@ -27,14 +27,14 @@ Les jetons RWA n’ont pas de valeur intrinsèque. Ils reflètent plutôt la val
 
 ## Quels sont les avantages des RWA? {#rwas-benefits}
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<Grid>
   <Card title="Propriété fractionnée" emoji=":house_buildings:" description="Les RWA démocratisent l'investissement. Si vous ne pouvez pas investir dans certains types d'actifs faute de moyens, vous pouvez désormais le faire en tant que propriétaire partiel."/>
   <Card title="Diversification des investissements" emoji="🛒" description="Vous pouvez investir dans plusieurs types d'actifs, ce qui vous permet de diversifier votre portefeuille sans dépenser des fortunes." />
   <Card title="Opportunités mondiales" emoji="🌏" description="Les RWA suppriment les barrières géographiques à l'investissement. Vous pouvez acheter des jetons pour des actifs situés partout dans le monde." />
   <Card title="Rendre les actifs liquides" emoji="🖼️" description="De nombreux actifs sont illiquides. Ils ont de la valeur, mais ce n'est pas comme avoir des liquidités à dépenser. En tokenisant un actif, les propriétaires peuvent en transformer tout ou partie en valeur utilisable."/>
   <Card title="Marché mondial" emoji="💰" description="Les propriétaires cherchant à capitaliser sur leurs actifs peuvent atteindre un plus grand nombre d'investisseurs, et pas seulement ceux qui ont les moyens d'acheter des terrains, des actions, des œuvres d'art ou des instruments financiers traditionnels." />
   <Card title="Se passer des intermédiaires" emoji="👩‍💻" description="Les jetons fonctionnent sur des contrats intelligents, ce qui signifie qu'ils peuvent être échangés directement entre personnes, sans intermédiaires ni frais associés." />
-</CardGrid>
+</Grid>
 
 ## Comment fonctionnent les RWA ? {#how-rwas-work}
 

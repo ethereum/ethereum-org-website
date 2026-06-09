@@ -39,7 +39,7 @@ const SpeedRunCard = ({
     />
 
     <CardContent>
-      <CardTitle variant="black">{title}</CardTitle>
+      <CardTitle size="lg">{title}</CardTitle>
       <CardParagraph>{description}</CardParagraph>
       <ButtonLink
         href="https://speedrunethereum.com/"

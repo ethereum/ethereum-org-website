@@ -29,11 +29,11 @@ Staker domowy otrzymuje nagrody bezpośrednio z protokołu za utrzymywanie swoje
 
 Stakowanie w domu wiąże się z większą odpowiedzialnością, ale zapewnia maksymalną kontrolę nad środkami i konfiguracją stakowania.
 
-<CardGrid>
+<Grid>
   <Card title="Zarabiaj nowe ETH" emoji="💸" description="Zdobywaj nagrody w ETH bezpośrednio z protokołu, gdy twój walidator jest online, bez żadnych pośredników." />
   <Card title="Pełna kontrola" emoji="🎛️" description="Zachowaj własne klucze. Wybierz kombinację klientów i sprzętu, która pozwala zminimalizować ryzyko i jak najlepiej przyczynić się do kondycji i bezpieczeństwa sieci. Zewnętrzne usługi stakingowe podejmują te decyzje za Ciebie i nie zawsze dokonują najbezpieczniejszych wyborów." />
   <Card title="Bezpieczeństwo sieci" emoji="🔐" description="Stakowanie w domu jest najbardziej wpływowym sposobem stakowania. Uruchamiając walidatora na własnym sprzęcie w domu, wzmacniasz odporność, decentralizację i bezpieczeństwo protokołu Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Kwestie do rozważenia przed rozpoczęciem stakowania w domu {#considerations-before-staking-solo}
 

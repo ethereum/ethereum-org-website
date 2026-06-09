@@ -21,11 +21,11 @@ W momencie opublikowania na sieci Ethereum staje się ona niemożliwa do zatrzym
 
 Aplikacje Ethereum mają swoją logikę działania na łańcuchu bloków Ethereum zamiast na scentralizowanym serwerze. Właśnie dlatego często były nazywane zdecentralizowanymi aplikacjami czy, w skrócie, dapkami.
 
-<CardGrid>
+<Grid>
   <Card title="Więcej prywatności" emoji=":detective:" description="Potrzebujesz tylko portfela Ethereum, aby korzystać z dowolnej dapki. Twoje dane osobowe nie są wymagane. Tak powinien zawsze wyglądać internet."/>
   <Card title="Globalnie dostępne" emoji="🌍" description="Dapki nie podlegają zasadom regionów ani sklepów z aplikacjami. Twój dostęp zależy od połączenia z internetem, a nie od tego, gdzie mieszkasz." />
   <Card title="Tańsze usługi" emoji=":handshake:" description="Dapki są peer-to-peer. Brak pośredników pobierających prowizję oznacza tańsze usługi." />
-</CardGrid>
+</Grid>
 
 ## Dlaczego ma to znacznie {#why-does-this-matter}
 

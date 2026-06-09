@@ -125,11 +125,12 @@ const CardContent = React.forwardRef<
 ))
 CardContent.displayName = "CardContent"
 
-const buttonVariants = cva("", {
+const buttonVariants = cva("gap-4", {
   variants: {
     buttons: {
-      full: "*:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
-      compact: "*:[button]:w-fit *:data-[label=button-link]:w-fit",
+      full: "flex flex-col *:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
+      compact:
+        "*:[button]:w-fit *:data-[label=button-link]:w-fit flex flex-wrap",
       inherit: "",
     },
   },
@@ -288,13 +289,12 @@ const CardBanner = React.forwardRef<HTMLDivElement, CardBannerProps>(
 CardBanner.displayName = "CardBanner"
 
 const titleVariants = cva(
-  "group-hover/link:underline group-focus/link:underline text-pretty",
+  "group-hover/link:underline group-focus/link:underline text-pretty text-2xl",
   {
     variants: {
-      variant: {
-        semibold: "text-lg font-semibold",
-        bold: "text-2xl font-bold",
-        black: "text-3xl font-black",
+      size: {
+        sm: "text-lg",
+        lg: "text-3xl",
       },
       spacing: {
         quarter:
@@ -305,7 +305,6 @@ const titleVariants = cva(
     },
 
     defaultVariants: {
-      variant: "bold",
       spacing: "quarter",
     },
   }
@@ -317,13 +316,13 @@ const CardTitle = React.forwardRef<
     VariantProps<typeof titleVariants> & {
       asChild?: boolean
     }
->(({ asChild, className, variant, spacing, ...props }, ref) => {
+>(({ asChild, className, size: variant, spacing, ...props }, ref) => {
   const Comp = asChild ? Slot : "h3"
   return (
     <Comp
       ref={ref}
       data-label="card-title"
-      className={cn(titleVariants({ variant, spacing }), className)}
+      className={cn(titleVariants({ size: variant, spacing }), className)}
       {...props}
     />
   )

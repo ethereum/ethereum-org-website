@@ -21,11 +21,11 @@ summaryPoints:
 
 Giao thức Ethereum nguyên bản không hỗ trợ ủy quyền đặt cọc, vì vậy các dịch vụ này đã được xây dựng để đáp ứng nhu cầu này. Nếu bạn có 32 ETH để góp, nhưng gặp khó khăn khi xử lý phần cứng, các dịch vụ SaaS cho phép bạn ủy thác phần khó trong khi bạn vẫn kiếm được phần thưởng khối vốn có.
 
-<CardGrid>
+<Grid>
   <Card title="Trình xác thực của riêng bạn" emoji=":desktop_computer:" description="Gửi 32 ETH của riêng bạn để kích hoạt bộ khóa ký sẽ tham gia vào sự đồng thuận của Ethereum. Theo dõi tiến trình của bạn bằng các bảng điều khiển để xem phần thưởng ETH tích lũy." />
   <Card title="Dễ dàng bắt đầu" emoji="🏁" description="Hãy quên đi thông số phần cứng, cài đặt, bảo trì và nâng cấp nút. Các nhà cung cấp SaaS cho phép bạn thuê ngoài phần việc khó khăn bằng cách tải lên thông tin xác thực ký của riêng bạn, cho phép họ chạy trình xác thực thay mặt bạn với một chi phí nhỏ." />
   <Card title="Hạn chế rủi ro của bạn" emoji=":shield:" description="Trong nhiều trường hợp, người dùng không phải từ bỏ quyền truy cập vào các khóa dùng để rút hoặc chuyển các khoản tiền đã đặt cọc. Các khóa này khác với các khóa ký, và có thể được lưu trữ riêng biệt để hạn chế (nhưng không loại bỏ hoàn toàn) rủi ro của bạn với tư cách là người đặt cọc." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

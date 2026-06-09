@@ -29,11 +29,11 @@ Seorang staker dari rumah menerima hadiah langsung dari protokol karena menjaga 
 
 Mengunci dari rumah datang dengan lebih banyak tanggung jawab tetapi memberi Anda kendali maksimum atas dana dan pengaturan mengunci Anda.
 
-<CardGrid>
+<Grid>
   <Card title="Dapatkan ETH baru" emoji="💸" description="Dapatkan hadiah dalam denominasi ETH langsung dari protokol saat validator Anda online, tanpa ada perantara yang mengambil potongan." />
   <Card title="Kendali penuh" emoji="🎛️" description="Simpan kunci Anda sendiri. Pilih kombinasi klien dan perangkat keras yang memungkinkan Anda meminimalkan risiko dan berkontribusi terbaik pada kesehatan dan keamanan jaringan. Layanan mengunci pihak ketiga membuat keputusan ini untuk Anda, dan mereka tidak selalu membuat pilihan yang paling aman." />
   <Card title="Keamanan jaringan" emoji="🔐" description="Mengunci dari rumah adalah cara paling berdampak untuk mengunci. Dengan menjalankan validator di perangkat keras Anda sendiri di rumah, Anda memperkuat ketahanan, desentralisasi, dan keamanan protokol Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Pertimbangan sebelum mengunci dari rumah {#considerations-before-staking-solo}
 

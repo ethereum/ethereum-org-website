@@ -38,7 +38,7 @@ const AdoptionSwiper = ({
                   className="mx-auto mb-4 h-36 object-contain"
                   sizes="256px"
                 />
-                <h3 className="mb-4 text-2xl font-bold">{title}</h3>
+                <h3 className="mb-4 text-2xl">{title}</h3>
                 <p className="mb-8">
                   <Translation
                     id={`page-10-year-adoption-card-${index + 1}-description`}

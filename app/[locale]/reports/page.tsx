@@ -15,6 +15,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import { ExternalLinkIcon } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import { Tag } from "@/components/ui/tag"
@@ -43,6 +44,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
+  const sortedReports = reports.sort((a, b) => {
+    const dateA = new Date(a.dateIso)
+    const dateB = new Date(b.dateIso)
+    return dateB.getTime() - dateA.getTime()
+  })
+
   return (
     <>
       <ReportsPageJsonLD
@@ -64,8 +71,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p>{t("page-reports-intro")}</p>
           </div>
 
-          <div className="grid grid-cols-fill-4 gap-4">
-            {reports.map(
+          <Grid>
+            {sortedReports.map(
               ({
                 slug,
                 title,
@@ -124,7 +131,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </Card>
               )
             )}
-          </div>
+          </Grid>
         </Section>
 
         <Section id="suggest" className="space-y-[1.5lh]">

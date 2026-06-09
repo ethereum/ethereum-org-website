@@ -27,14 +27,14 @@ Tokeny AŚR nie mają żadnej naturalnej wartości. Odzwierciedlają one wartoś
 
 ## Jakie są zalety AŚR? {#rwas-benefits}
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<Grid>
   <Card title="Własność ułamkowa" emoji=":house_buildings:" description="AŚR demokratyzują inwestycje. Jeśli nie stać Cię na inwestowanie w pewne rodzaje aktywów, teraz możesz stać się ich częściowym właścicielem."/>
   <Card title="Dywersyfikacja inwestycji" emoji="🛒" description="Możesz inwestować w wiele rodzajów aktywów, dywersyfikując swój portfel bez wydawania ogromnych sum pieniędzy." />
   <Card title="Globalne możliwości" emoji="🌏" description="AŚR usuwają bariery geograficzne w inwestowaniu. Możesz kupować tokeny aktywów zlokalizowanych w dowolnym miejscu na świecie." />
   <Card title="Zwiększenie płynności aktywów" emoji="🖼️" description="Wiele aktywów jest niepłynnych. Są cenne, ale to nie to samo co gotówka do wydania. Dzięki tokenizacji właściciele mogą zamienić część lub całość aktywów w wartość, którą mogą wykorzystać."/>
   <Card title="Światowy rynek" emoji="💰" description="Właściciele chcący spieniężyć swoje aktywa mogą dotrzeć do szerszego grona inwestorów, a nie tylko do tych, których stać na ziemię, akcje, dzieła sztuki czy tradycyjne instrumenty finansowe." />
   <Card title="Bez pośredników" emoji="👩‍💻" description="Tokeny działają w oparciu o smart kontrakty, co oznacza, że można nimi handlować bezpośrednio między osobami, bez pośredników i związanych z nimi opłat." />
-</CardGrid>
+</Grid>
 
 ## Jak działają AŚR? {#how-rwas-work}
 

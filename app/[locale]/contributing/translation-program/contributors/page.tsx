@@ -1,43 +1,21 @@
-import { type BaseHTMLAttributes } from "react"
-import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { CostLeaderboardData, Lang, PageParams } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
-import I18nProvider from "@/components/I18nProvider"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
-import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import allTimeData from "@/data/translation-reports/alltime/alltime-data.json"
 
 import ContributorsJsonLD from "./page-jsonld"
 
-const SLUG = "/contributing/translation-program/contributors"
 const NAMESPACE = "page-contributing-translation-program-contributors"
-
-const Content = ({ ...props }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <MainArticle className="w-full px-10 py-4" {...props} />
-)
-
-const Text = ({
-  className,
-  ...props
-}: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <p className={cn("mb-6", className)} {...props} />
-)
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -45,17 +23,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
+  const t = await getTranslations(NAMESPACE)
+  const tCommon = await getTranslations("common")
+
   const { contributors } = await getAppPageContributorInfo(
     "contributing/translation-program/contributors",
     locale as Lang
   )
-
-  const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage(SLUG)
-  const messages = pick(allMessages, requiredNamespaces)
-
-  const t = await getTranslations(NAMESPACE)
-  const tCommon = await getTranslations("common")
 
   const translators = (allTimeData as CostLeaderboardData[])
     .map((item) => item.username)
@@ -64,70 +38,75 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   return (
     <>
       <ContributorsJsonLD locale={locale} contributors={contributors} />
-      <I18nProvider locale={locale} messages={messages}>
-        <Flex className="w-full flex-col items-center">
-          <Content>
-            <Breadcrumbs slug={SLUG} className="mt-12" />
-            <h1 className="my-8 leading-xs">
-              {t("page-contributing-translation-program-contributors-title")}
-            </h1>
-            <h4 className="my-8 leading-xs">
-              {t(
-                "page-contributing-translation-program-contributors-number-of-contributors"
-              )}{" "}
-              {translators.length}
-            </h4>
-            <Text>
+
+      <PageHero
+        breadcrumbs={{
+          slug: "/contributing/translation-program/contributors",
+        }}
+        title={t("page-contributing-translation-program-contributors-title")}
+        description={
+          <>
+            <p>
+              <strong className="text-xl lg:text-2xl">
+                {t(
+                  "page-contributing-translation-program-contributors-number-of-contributors"
+                )}{" "}
+                {translators.length}
+              </strong>
+            </p>
+            <p>
               {t(
                 "page-contributing-translation-program-contributors-our-translators-1"
               )}
-            </Text>
-            <Text>
+            </p>
+            <p>
               {t(
                 "page-contributing-translation-program-contributors-our-translators-2"
               )}
-            </Text>
-            <Text>
+            </p>
+            <p>
               {t(
                 "page-contributing-translation-program-contributors-our-translators-3"
               )}
-            </Text>
-            <Text>
+            </p>
+            <p>
               {tCommon("page-languages-interested")}{" "}
               <InlineLink href="/contributing/translation-program/">
                 {tCommon("page-languages-learn-more")}
               </InlineLink>
               .
-            </Text>
-            <h2 className="mt-12 mb-8 leading-xs">
-              {t(
-                "page-contributing-translation-program-contributors-thank-you"
-              )}
-            </h2>
-            <List className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-              {translators
-                .sort((user1, user2) =>
-                  user1.toLowerCase().localeCompare(user2.toLowerCase())
-                )
-                .map((user) => (
-                  <ListItem key={user} className="text-body-medium">
-                    {user}
-                  </ListItem>
-                ))}
-            </List>
-            <Text>
-              {tCommon("page-languages-interested")}{" "}
-              <InlineLink href="/contributing/translation-program/">
-                {tCommon("page-languages-learn-more")}
-              </InlineLink>
-              .
-            </Text>
-          </Content>
-          <Content>
-            <FeedbackCard />
-          </Content>
-        </Flex>
-      </I18nProvider>
+            </p>
+          </>
+        }
+      />
+
+      <MainArticle className="w-full flex-col items-center px-4 lg:px-8">
+        <h2 className="mt-12 mb-8 leading-xs">
+          {t("page-contributing-translation-program-contributors-thank-you")}
+        </h2>
+
+        <List className="grid grid-cols-1 gap-x-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+          {translators
+            .sort((user1, user2) =>
+              user1.toLowerCase().localeCompare(user2.toLowerCase())
+            )
+            .map((user) => (
+              <ListItem key={user} className="truncate text-body-medium">
+                {user}
+              </ListItem>
+            ))}
+        </List>
+
+        <p>
+          {tCommon("page-languages-interested")}{" "}
+          <InlineLink href="/contributing/translation-program/">
+            {tCommon("page-languages-learn-more")}
+          </InlineLink>
+          .
+        </p>
+
+        <FeedbackCard />
+      </MainArticle>
     </>
   )
 }

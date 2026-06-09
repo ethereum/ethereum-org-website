@@ -32,6 +32,7 @@ import Translation from "@/components/Translation"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Center, Flex, Stack, VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -358,7 +359,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 style={{ width: "300px", height: "auto" }}
               />
               <div className="me-4">
-                <h2 className="mt-4 mb-5 text-2xl leading-[1.4] font-semibold md:text-[2rem]">
+                <h2 className="mt-4 mb-5 text-2xl leading-[1.4] md:text-[2rem]">
                   <Translation id="page-run-a-node:page-run-a-node-who-title" />
                 </h2>
                 <p className="body-medium mb-0">
@@ -383,7 +384,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <H2>
             <Translation id="page-run-a-node:page-run-a-node-why-title" />
           </H2>
-          <div className="grid grid-cols-fill-3 gap-x-4 gap-y-8">
+          <Grid columns={3} size="wider">
             {whyRunANodeCards.map(({ Svg, title, preview, body }) => (
               <ExpandableCard
                 contentPreview={preview}
@@ -396,7 +397,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 ))}
               </ExpandableCard>
             ))}
-          </div>
+          </Grid>
         </Content>
 
         <Divider />

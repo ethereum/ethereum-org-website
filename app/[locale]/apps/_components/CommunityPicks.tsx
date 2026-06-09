@@ -4,6 +4,7 @@ import AppCard from "@/components/AppCard"
 import Twitter from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { slugify } from "@/lib/utils/url"
@@ -105,9 +106,9 @@ const CommunityPicks = ({
         <AppsSwiper cards={cards} />
       </div>
 
-      <div className="hidden gap-6 sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <Grid columns={3} className="hidden sm:grid">
         {cards}
-      </div>
+      </Grid>
     </div>
   )
 }

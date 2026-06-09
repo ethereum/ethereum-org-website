@@ -1,15 +1,16 @@
-import React, { useState } from "react"
+"use client"
+
+import { useState } from "react"
 import { reverse, sortBy } from "lodash"
 
 import type { CostLeaderboardData } from "@/lib/types"
 
+import Emoji from "@/components/Emoji"
+import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-
-import Emoji from "./Emoji"
-import { Image } from "./Image"
 
 import { useTranslation } from "@/hooks/useTranslation"
 

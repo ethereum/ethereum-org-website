@@ -27,6 +27,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -620,7 +621,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                 <p className="mb-6">{t("page-stablecoins-saving")}</p>
               </div>
             </Flex>
-            <div className="mb-16 grid grid-cols-fill-4 gap-8">
+            <Grid className="mb-16">
               {dapps.map((dapp, idx) => (
                 <DataProductCard
                   key={idx}
@@ -633,7 +634,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                   className={dapp.className}
                 />
               ))}
-            </div>
+            </Grid>
           </Section>
           <Divider />
           <Section id="how">
@@ -663,14 +664,12 @@ async function Page(props: { params: Promise<PageParams> }) {
                       <Emoji text={feature.emoji} />
                     </div>
                     <div className="flex-1">
-                      <h3 className="mb-4 text-3xl font-bold">
-                        {feature.title}
-                      </h3>
+                      <h3 className="mb-4 text-3xl">{feature.title}</h3>
                       <div className="mb-6 text-lg">{feature.description}</div>
                       <div className="my-6 grid grid-cols-1 gap-6 md:grid-cols-2">
                         {feature.pros && (
                           <div>
-                            <h4 className="mb-2 rounded bg-success/25 p-2 text-xl font-semibold">
+                            <h4 className="mb-2 rounded bg-success/25 p-2 text-xl">
                               {t("pros")}
                             </h4>
                             <ul className="list-inside list-disc">
@@ -682,7 +681,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                         )}
                         {feature.cons && (
                           <div>
-                            <h4 className="mb-2 rounded bg-error/25 p-2 text-xl font-semibold">
+                            <h4 className="mb-2 rounded bg-error/25 p-2 text-xl">
                               {t("cons")}
                             </h4>
                             <ul className="list-inside list-disc">
@@ -695,7 +694,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                       </div>
                       {feature.links && feature.links.length > 0 && (
                         <div>
-                          <h4 className="mb-2 text-xl font-semibold">
+                          <h4 className="mb-2 text-xl">
                             {t("example-projects")}
                           </h4>
                           <ul className="list-inside list-disc">

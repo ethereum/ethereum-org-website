@@ -19,6 +19,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -149,7 +150,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <MainArticle className="space-y-20 px-4 py-10 md:px-8">
           {/* Major blockchain conferences */}
           <Section id="highlights">
-            <h2 className="mb-6 font-bold">
+            <h2 className="mb-6">
               {t("page-events-section-major-conferences")}
             </h2>
             <EdgeScrollContainer>
@@ -186,7 +187,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-events-section-hubs-subtitle")}
               </p>
             </div>
-            <div className="grid grid-cols-fill-3-w-full gap-4">
+            <Grid columns={3} size="wider">
               {communityHubs.map(
                 ({
                   id,
@@ -215,7 +216,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </div>
                     <div className="flex flex-1 flex-col gap-3">
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                        <h3 className="text-2xl font-bold">
+                        <h3 className="text-2xl">
                           {location}
                           <span className="sr-only">
                             &nbsp;
@@ -255,7 +256,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </div>
                 )
               )}
-            </div>
+            </Grid>
             <div className="md:px-4">
               <ButtonLink
                 href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"
@@ -304,7 +305,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-events-section-local-meetups-subtitle")}
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            <Grid columns={3}>
               {meetups.slice(0, 6).map((event) => (
                 <EventCard
                   key={event.id}
@@ -319,7 +320,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   }}
                 />
               ))}
-            </div>
+            </Grid>
             <div className="flex justify-center">
               <ButtonLink
                 href="/community/events/meetups/"
@@ -405,7 +406,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 />
               </div>
               <div>
-                <h3 className="mb-2 text-xl font-bold">
+                <h3 className="mb-2 text-xl">
                   {t("page-events-section-organizers-planning")}
                 </h3>
                 <p className="mb-4 max-w-4xl">
@@ -441,7 +442,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
                   </div>
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl">
                     {t("page-events-support-ethereum-everywhere")}
                   </h3>
                 </div>
@@ -505,7 +506,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={geodeLabsLogo} alt="" sizes="4rem" />
                   </div>
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl">
                     {t("page-events-support-geode-labs")}
                   </h3>
                 </div>

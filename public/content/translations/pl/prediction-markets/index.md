@@ -30,11 +30,11 @@ Teoretycznie, ponieważ obstawiający mogą czerpać zyski z trafnych prognoz, r
 
 W przeciwieństwie do tradycyjnych prognoz, rynki prognostyczne oparte na blockchainie są:
 
-<CardGrid>
+<Grid>
   <Card title="System zachęt" emoji=":money_with_wings:" description="Uczestnicy stakują prawdziwe środki, co przekłada się na wysoką jakość prognoz."/>
   <Card title="Decentralizacja" emoji="🌎" description="Użycie blockchaina i smart kontraktów zapewnia przejrzyste i zautomatyzowane wypłaty." />
   <Card title="Kursy rynkowe" emoji="🤝" description="Ceny ustalają traderzy handlujący udziałami w wynikach, a nie scentralizowany bukmacher." />
-</CardGrid>
+</Grid>
 
 Nawet jako obserwator rynku możesz uzyskać dostęp do wartościowych danych, które w innym przypadku byłyby niedostępne. Pomyśl o tym w ten sposób:
 

@@ -29,11 +29,11 @@ Uzamykatel z domova dostává odměny přímo z protokolu za to, že jejich vali
 
 Uzamčení z domova přináší větší odpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením uzamčení.
 
-<CardGrid>
+<Grid>
   <Card title="Získejte nové ETH" emoji="💸" description="Získejte odměny v ETH přímo z protokolu, když je váš validátor online, aniž by si zprostředkovatelé brali svůj podíl." />
   <Card title="Plná kontrola" emoji="🎛️" description="Ponechte si své vlastní klíče. Vyberte si kombinaci klientů a hardwaru, která vám umožní minimalizovat riziko a co nejlépe přispět ke zdraví a bezpečnosti sítě. Stakingové služby třetích stran tato rozhodnutí dělají za vás a ne vždy volí ta nejbezpečnější řešení." />
   <Card title="Zabezpečení sítě" emoji="🔐" description="Domácí staking je nejúčinnější způsob stakingu. Provozováním validátoru na vlastním hardwaru doma posilujete odolnost, decentralizaci a bezpečnost protokolu Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Co zvážit před uzamčením z domova {#considerations-before-staking-solo}
 
