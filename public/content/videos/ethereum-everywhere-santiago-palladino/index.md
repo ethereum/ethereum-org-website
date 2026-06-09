@@ -10,7 +10,7 @@ topic:
   - "community-stories"
   - "use-cases"
   - "events"
-format: talk
+format: presentation
 author: Ethereum Foundation
 breadcrumb: "Ethereum, Everywhere"
 ---
