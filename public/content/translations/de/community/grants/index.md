@@ -24,8 +24,6 @@ Diese Programme unterstützen das breite Ethereum-Ökosystem, indem sie einer Vi
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) – _Fördergelder zur Unterstützung von Ethereum-bezogener akademischer Arbeit_
 
 
-## Aggregatoren und Plattformen für Förderprogramme
-Diese Ressourcen sammeln und organisieren verschiedene Fördermöglichkeiten im gesamten Ethereum-Ökosystem und erleichtern so die Suche nach Finanzierungsmöglichkeiten, die den Anforderungen deines Projekts entsprechen. Wir haben sie nach Zielgruppen geordnet, um dir dabei zu helfen, die relevantesten Ressourcen für deinen spezifischen Finanzierungsbedarf zu finden.
 ## Aggregatoren und Plattformen für Förderprogramme {#grant-list-aggregators}
 
 Diese Ressourcen sammeln und organisieren verschiedene Fördermöglichkeiten im gesamten Ethereum-Ökosystem und erleichtern es, Finanzierungsmöglichkeiten zu entdecken, die den Anforderungen Ihres Projekts entsprechen. Wir haben sie nach Zielgruppen geordnet, um Ihnen den Einstieg bei der Suche nach den relevantesten Ressourcen basierend auf Ihrem spezifischen Finanzierungsbedarf zu erleichtern.

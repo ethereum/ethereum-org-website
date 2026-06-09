@@ -19,7 +19,6 @@ Ethereum.org ni rasilimali ya elimu isiyopendelea upande wowote. Matunzio ya vid
 Tovuti haiorodheshi video ambazo kimsingi zinatangaza bidhaa mahususi, tokeni, au huduma ya kibiashara.
 
 
-## Vigezo vya kujumuishwa
 ## Vigezo vya kujumuishwa {#criteria-for-inclusion}
 
 ### Lazima iwe nazo {#must-haves}
@@ -37,7 +36,6 @@ Tovuti haiorodheshi video ambazo kimsingi zinatangaza bidhaa mahususi, tokeni, a
 - **Kwa wakati na ya kudumu** – Maudhui ambayo yanasalia kuwa muhimu kwa muda mrefu hupendelewa zaidi ya nyenzo zinazotegemea wakati.
 
 
-## Jinsi ya kuongeza video
 ## Jinsi ya kuongeza video {#how-to-add-a-video}
 
 ### Chaguo la 1: Fungua suala {#open-an-issue}
@@ -146,14 +144,6 @@ Unaweza pia kutumia lebo mpya — zitapatikana kwa makundi ya kategoria ya baada
 Fungua ombi la kuvuta (pull request) na mabadiliko yako kwenye tawi la `dev`. Timu itakagua wasilisho lako na kutoa maoni.
 
 
-## Matengenezo
-Video zilizoorodheshwa hukaguliwa mara kwa mara ili kuhakikisha:
-
-- Bado zinakidhi vigezo vya kuorodheshwa
-- Zina taarifa sahihi na za kisasa
-- Zina viungo vinavyofanya kazi vya upangishaji/YouTube
-
-Ikiwa utagundua tatizo kwenye video iliyoorodheshwa, [unda suala](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) au tuma barua pepe kwa [website@ethereum.org](mailto:website@ethereum.org).
 ## Matengenezo {#maintenance}
 
 Video zilizoorodheshwa hukaguliwa mara kwa mara ili kuhakikisha:
@@ -165,8 +155,6 @@ Video zilizoorodheshwa hukaguliwa mara kwa mara ili kuhakikisha:
 Ukigundua tatizo na video iliyoorodheshwa, [unda suala](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) au tuma barua pepe kwa [website@ethereum.org](mailto:website@ethereum.org).
 
 
-## Masharti ya matumizi
-Tafadhali rejelea [masharti ya matumizi](/terms-of-use/) ya ethereum.org. Taarifa kwenye ethereum.org hutolewa kwa madhumuni ya taarifa za jumla pekee.
 ## Masharti ya matumizi {#terms-of-use}
 
 Tafadhali rejelea [masharti ya matumizi](/terms-of-use/) ya ethereum.org. Taarifa kwenye ethereum.org hutolewa kwa madhumuni ya taarifa za jumla pekee.

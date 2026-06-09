@@ -48,8 +48,6 @@ La mise à jour Glamsterdam se concentre sur trois objectifs principaux :
 En bref, Glamsterdam introduira des changements structurels pour s'assurer qu'à mesure que le réseau augmente sa capacité, il reste durable et que les performances restent élevées.
 
 
-## Mise à l'échelle de la couche 1 (l1) et traitement parallèle
-Une mise à l'échelle significative de la couche 1 (l1) nécessite de s'éloigner des hypothèses de confiance hors protocole et des contraintes d'exécution séquentielle. Glamsterdam résout ce problème en inscrivant la séparation de certaines tâches de construction de blocs et en introduisant de nouvelles structures de données qui permettent au réseau de se préparer au traitement parallèle.
 ## Mise à l'échelle de la couche 1 (l1) et traitement parallèle {#scale-l1}
 
 Une mise à l'échelle significative de la couche 1 (l1) nécessite de s'éloigner des hypothèses de confiance hors protocole et des contraintes d'exécution en série. Glamsterdam résout ce problème en inscrivant la séparation de certaines tâches de construction de blocs et en introduisant de nouvelles structures de données qui permettent au réseau de se préparer au traitement parallèle.
@@ -105,8 +103,6 @@ L'échange de liste d'accès au bloc (eth/71 ou EIP-8159) est le compagnon rése
 - [Spécification technique de l'EIP-8159](https://eips.ethereum.org/EIPS/eip-8159)
 
 
-## Durabilité du réseau
-À mesure que le réseau Ethereum se développe plus rapidement, il est important de s'assurer que le coût de son utilisation correspond à l'usure du matériel qui fait fonctionner Ethereum. Le réseau doit augmenter ses limites de capacité globales afin de se mettre à l'échelle en toute sécurité et de traiter plus de transactions.
 ## Durabilité du réseau {#network-sustainability}
 
 À mesure que le réseau Ethereum se développe plus rapidement, il est important de s'assurer que le coût de son utilisation correspond à l'usure du matériel qui exécute Ethereum. Le réseau doit augmenter ses limites de capacité globales afin de se mettre à l'échelle en toute sécurité et de traiter plus de transactions.
@@ -151,8 +147,6 @@ En tarifiant plus précisément les actions d'accès à l'état, Ethereum peut �
 **Ressources** : [Spécification technique de l'EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
 
-## Résilience du réseau
-Les améliorations apportées aux tâches des validateurs et aux processus de sortie garantissent la stabilité du réseau lors d'événements de réduction massifs et démocratisent la liquidité. Ces améliorations rendent le réseau plus stable et garantissent que tous les participants, grands et petits, sont traités équitablement.
 ## Résilience du réseau {#network-resilience}
 
 Les améliorations apportées aux tâches des validateurs et aux processus de sortie garantissent la stabilité du réseau lors d'événements de réduction (slashing) massifs et démocratisent la liquidité. Ces améliorations rendent le réseau plus stable et garantissent que tous les participants, grands et petits, sont traités équitablement.
@@ -193,8 +187,6 @@ La démocratisation de l'accès à la file d'attente de consolidation augmentera
 **Ressources** : [Spécification technique de l'EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
 
 
-## Améliorer l'expérience utilisateur et développeur
-La mise à jour Glamsterdam d'Ethereum vise à améliorer l'expérience utilisateur, à améliorer la découvrabilité des données et à gérer l'augmentation de la taille des messages pour éviter les échecs de synchronisation. Cela permet de suivre plus facilement ce qui se passe onchain tout en évitant les problèmes techniques à mesure que le réseau se met à l'échelle.
 ## Améliorer l'expérience utilisateur et développeur {#improve-user-developer-experience}
 
 La mise à jour Glamsterdam d'Ethereum vise à améliorer l'expérience utilisateur, à améliorer la découvrabilité des données et à gérer l'augmentation de la taille des messages pour éviter les échecs de synchronisation. Cela facilite le suivi de ce qui se passe onchain tout en évitant les problèmes techniques à mesure que le réseau évolue.

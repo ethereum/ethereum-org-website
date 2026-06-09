@@ -24,9 +24,6 @@ Bu programlar, geniş bir proje yelpazesine hibeler sunarak geniş Ethereum ekos
 - [Akademik Hibeler](https://esp.ethereum.foundation/academic-grants) - _Ethereum ile ilgili akademik çalışmaları destekleyen hibeler_
 
 
-## Hibe listesi toplayıcıları ve platformları
-
-Bu kaynaklar, Ethereum ekosistemindeki çeşitli hibe fırsatlarını derleyip düzenleyerek projenizin ihtiyaçlarına uygun fonlama fırsatlarını keşfetmeyi kolaylaştırır. Belirli fonlama ihtiyaçlarınıza göre en alakalı kaynakları bulmaya başlamanıza yardımcı olmak için bunları kullanıcı profillerine göre düzenledik.
 ## Hibe listesi toplayıcıları ve platformları {#grant-list-aggregators}
 
 Bu kaynaklar, Ethereum ekosistemindeki çeşitli hibe fırsatlarını derleyip düzenleyerek projenizin ihtiyaçlarına uygun fonlama fırsatlarını keşfetmeyi kolaylaştırır. Belirli fonlama ihtiyaçlarınıza göre en alakalı kaynakları bulmaya başlamanıza yardımcı olmak için bunları kişilere göre düzenledik.
@@ -67,9 +64,6 @@ Bu programlar, daha geniş topluluğa, kamusal mallara ve etki girişimlerine fa
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Kamu yararına olan projeleri desteklemek için karesel fonlama kullanan girişim hızlandırıcı programı_
 
 
-## Ethereum'da çalışın
-
-Kendi projenizi başlatmaya hazır değil misiniz? Ethereum ekosisteminde çalışacak ve katkıda bulunacak tutkulu bireyleri aktif olarak arayan yüzlerce şirket var. Daha fazla bilgi mi arıyorsunuz? [Ethereum ile ilgili işlere göz atın](/community/get-involved/#ethereum-jobs)
 ## Ethereum'da Çalışın {#work-in-ethereum}
 
 Kendi projenizi başlatmaya hazır değil misiniz? Ethereum ekosisteminde çalışacak ve katkıda bulunacak tutkulu bireyleri aktif olarak arayan yüzlerce şirket var. Daha fazla bilgi mi arıyorsunuz? [Ethereum ile ilgili işlere göz atın](/community/get-involved/#ethereum-jobs)

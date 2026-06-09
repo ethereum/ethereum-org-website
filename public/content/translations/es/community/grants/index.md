@@ -24,9 +24,6 @@ Estos programas apoyan el ecosistema general de Ethereum ofreciendo subvenciones
 - [Subvenciones académicas](https://esp.ethereum.foundation/academic-grants) - _Subvenciones para apoyar el trabajo académico relacionado con Ethereum_
 
 
-## Agregadores y plataformas de listas de subvenciones
-
-Estos recursos recopilan y organizan diversas oportunidades de subvenciones en todo el ecosistema de Ethereum, lo que facilita descubrir oportunidades de financiamiento que se adapten a las necesidades de tu proyecto. Los hemos organizado por perfil para ayudarte a empezar a encontrar los recursos más relevantes según tus necesidades específicas de financiamiento.
 ## Agregadores y plataformas de listas de subvenciones {#grant-list-aggregators}
 
 Estos recursos recopilan y organizan diversas oportunidades de subvenciones en todo el ecosistema de Ethereum, lo que facilita el descubrimiento de oportunidades de financiamiento que se adapten a las necesidades de su proyecto. Los hemos organizado por perfil para ayudarle a comenzar a encontrar los recursos más relevantes según sus necesidades específicas de financiamiento.
@@ -67,9 +64,6 @@ Estos programas se centran en financiar proyectos que benefician a la comunidad 
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Programa acelerador de empresas emergentes que utiliza el financiamiento cuadrático para apoyar proyectos que benefician el bien público_
 
 
-## Trabajar en Ethereum
-
-¿No estás listo para empezar tu propio proyecto? Hay cientos de empresas que buscan activamente personas apasionadas para trabajar y contribuir al ecosistema de Ethereum. ¿Buscas más información? [Consulta los empleos relacionados con Ethereum](/community/get-involved/#ethereum-jobs)
 ## Trabajar en Ethereum {#work-in-ethereum}
 
 ¿Aún no está listo para comenzar su propio proyecto? Hay cientos de empresas que buscan activamente personas apasionadas para trabajar y contribuir al ecosistema de Ethereum. ¿Busca más información? [Eche un vistazo a los trabajos relacionados con Ethereum](/community/get-involved/#ethereum-jobs)

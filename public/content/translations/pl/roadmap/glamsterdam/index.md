@@ -48,9 +48,6 @@ Aktualizacja Glamsterdam skupia się na trzech głównych celach:
 Krótko mówiąc, Glamsterdam wprowadzi zmiany strukturalne, aby zapewnić, że w miarę zwiększania pojemności sieci, pozostanie ona zrównoważona, a wydajność utrzyma się na wysokim poziomie.
 
 
-## Skalowanie warstwy 1 (L1) i przetwarzanie równoległe
-
-Znaczące skalowanie warstwy 1 (L1) wymaga odejścia od założeń dotyczących zaufania poza protokołem i ograniczeń wykonywania sekwencyjnego. Glamsterdam rozwiązuje ten problem poprzez wbudowanie w protokół separacji niektórych obowiązków związanych z budowaniem bloków i wprowadzenie nowych struktur danych, które pozwalają sieci przygotować się do przetwarzania równoległego.
 ## Skalowanie warstwy 1 (L1) i przetwarzanie równoległe {#scale-l1}
 
 Znaczące skalowanie warstwy 1 (L1) wymaga odejścia od założeń dotyczących zaufania poza protokołem i ograniczeń związanych z wykonywaniem szeregowym. Glamsterdam rozwiązuje ten problem poprzez włączenie do protokołu podziału niektórych obowiązków związanych z budowaniem bloków i wprowadzenie nowych struktur danych, które pozwalają sieci przygotować się do przetwarzania równoległego.
@@ -106,9 +103,6 @@ Wymiana listy dostępu do bloku (Block Access List Exchange - eth/71 lub EIP-815
 - [Specyfikacja techniczna EIP-8159](https://eips.ethereum.org/EIPS/eip-8159)
 
 
-## Zrównoważony rozwój sieci
-
-W miarę jak sieć Ethereum rośnie szybciej, ważne jest, aby upewnić się, że koszt korzystania z niej odpowiada zużyciu sprzętu, na którym działa Ethereum. Sieć musi zwiększyć swoje ogólne limity pojemności, aby bezpiecznie się skalować i przetwarzać więcej transakcji.
 ## Zrównoważony rozwój sieci {#network-sustainability}
 
 W miarę jak sieć Ethereum staje się coraz szybsza, ważne jest, aby upewnić się, że koszt korzystania z niej odpowiada zużyciu sprzętu, na którym działa Ethereum. Sieć musi zwiększyć swoje ogólne limity pojemności, aby bezpiecznie się skalować i przetwarzać więcej transakcji.
@@ -153,9 +147,6 @@ Dzięki dokładniejszemu wycenianiu działań związanych z dostępem do stanu, 
 **Zasoby**: [Specyfikacja techniczna EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
 
-## Odporność sieci
-
-Udoskonalenia obowiązków walidatorów i procesów wyjścia zapewniają stabilność sieci podczas zdarzeń masowego cięcia i demokratyzują płynność. Te ulepszenia sprawiają, że sieć jest bardziej stabilna i zapewniają, że wszyscy uczestnicy, duzi i mali, są traktowani sprawiedliwie.
 ## Odporność sieci {#network-resilience}
 
 Udoskonalenia obowiązków walidatorów i procesów wyjścia zapewniają stabilność sieci podczas zdarzeń masowego cięcia (mass-slashing) i demokratyzują płynność. Te ulepszenia sprawiają, że sieć jest bardziej stabilna i zapewniają, że wszyscy uczestnicy, duzi i mali, są traktowani sprawiedliwie.
@@ -196,9 +187,6 @@ Demokratyzacja dostępu do kolejki konsolidacji zwiększy prędkość, z jaką u
 **Zasoby**: [Specyfikacja techniczna EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
 
 
-## Poprawa doświadczenia użytkowników i deweloperów
-
-Aktualizacja Glamsterdam w Ethereum ma na celu poprawę doświadczenia użytkownika, zwiększenie możliwości odkrywania danych i obsługę rosnących rozmiarów wiadomości, aby zapobiec awariom synchronizacji. Ułatwia to śledzenie tego, co dzieje się onchain, jednocześnie zapobiegając problemom technicznym w miarę skalowania sieci.
 ## Poprawa doświadczenia użytkowników i deweloperów {#improve-user-developer-experience}
 
 Aktualizacja Glamsterdam w Ethereum ma na celu poprawę doświadczenia użytkownika, zwiększenie wykrywalności danych i obsługę rosnących rozmiarów wiadomości, aby zapobiec awariom synchronizacji. Ułatwia to śledzenie tego, co dzieje się onchain, jednocześnie zapobiegając problemom technicznym w miarę skalowania sieci.
@@ -258,13 +246,6 @@ Ta zmiana zapobiegłaby awariom synchronizacji sieci w okresach dużej aktywnoś
 **Zasoby**: [Specyfikacja techniczna EIP-7975](https://eips.ethereum.org/EIPS/eip-7975)
 
 
-## Dalsza lektura
-
-- [Mapa drogowa Ethereum](/roadmap/)
-- [Forkcast: Glamsterdam](https://forkcast.org/upgrade/glamsterdam)
-- [Glamsterdam Meta EIP](https://eips.ethereum.org/EIPS/eip-7773)
-- [Ogłoszenie na blogu: Aktualizacja priorytetów protokołu na 2026 rok](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
-- [Podcast The Daily Gwei Refuel - Post-quantum Ethereum, Glamsterdam is coming](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 ## Dalsza lektura {#further-reading}
 
 - [Mapa drogowa Ethereum](/roadmap/)
@@ -273,8 +254,6 @@ Ta zmiana zapobiegłaby awariom synchronizacji sieci w okresach dużej aktywnoś
 - [Ogłoszenie na blogu: Aktualizacja priorytetów protokołu na 2026 rok](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
 - [Podcast The Daily Gwei Refuel - Post-kwantowe Ethereum, nadchodzi Glamsterdam](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 
-
-## FAQ
 
 ## Często zadawane pytania (FAQ) {#faq}
 

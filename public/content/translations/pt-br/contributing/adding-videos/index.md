@@ -19,7 +19,6 @@ O ethereum.org é um recurso educacional neutro. A galeria de vídeos é selecio
 O site não lista vídeos que promovem principalmente um produto específico, token ou serviço comercial.
 
 
-## Critérios de inclusão
 ## Critérios de inclusão {#criteria-for-inclusion}
 
 ### Requisitos obrigatórios {#must-haves}
@@ -37,7 +36,6 @@ O site não lista vídeos que promovem principalmente um produto específico, to
 - **Atemporal e duradouro** – Conteúdo que permanece relevante ao longo do tempo é preferido em relação a materiais sensíveis ao tempo.
 
 
-## Como adicionar um vídeo
 ## Como adicionar um vídeo {#how-to-add-a-video}
 
 ### Opção 1: Abrir uma issue {#open-an-issue}
@@ -146,14 +144,6 @@ Você também pode usar novas tags — elas estarão disponíveis para futuros a
 Abra um pull request com suas alterações para a branch `dev`. A equipe revisará seu envio e fornecerá feedback.
 
 
-## Manutenção
-Os vídeos listados são revisados rotineiramente para garantir que:
-
-- Ainda atendam aos critérios de listagem
-- Contenham informações precisas e atualizadas
-- Tenham links de hospedagem/YouTube funcionando
-
-Se você notar um problema com um vídeo listado, [crie uma issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) ou envie um e-mail para [website@ethereum.org](mailto:website@ethereum.org).
 ## Manutenção {#maintenance}
 
 Os vídeos listados são revisados rotineiramente para garantir que:
@@ -165,8 +155,6 @@ Os vídeos listados são revisados rotineiramente para garantir que:
 Se você notar um problema com um vídeo listado, [crie uma issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) ou envie um e-mail para [website@ethereum.org](mailto:website@ethereum.org).
 
 
-## Termos de uso
-Consulte os [termos de uso](/terms-of-use/) do ethereum.org. As informações no ethereum.org são fornecidas exclusivamente para fins de informação geral.
 ## Termos de uso {#terms-of-use}
 
 Consulte os [termos de uso](/terms-of-use/) do ethereum.org. As informações no ethereum.org são fornecidas exclusivamente para fins de informação geral.

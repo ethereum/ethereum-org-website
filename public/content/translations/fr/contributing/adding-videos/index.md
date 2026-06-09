@@ -19,7 +19,6 @@ Ethereum.org est une ressource éducative et neutre. La galerie vidéo est organ
 Le site ne répertorie pas les vidéos qui font principalement la promotion d'un produit spécifique, d'un jeton ou d'un service commercial.
 
 
-## Critères d'inclusion
 ## Critères d'inclusion {#criteria-for-inclusion}
 
 ### Indispensables {#must-haves}
@@ -37,7 +36,6 @@ Le site ne répertorie pas les vidéos qui font principalement la promotion d'un
 - **Intemporel et toujours d'actualité** – Le contenu qui reste pertinent au fil du temps est préféré au matériel sensible au temps.
 
 
-## Comment ajouter une vidéo
 ## Comment ajouter une vidéo {#how-to-add-a-video}
 
 ### Option 1 : Ouvrir un ticket (issue) {#open-an-issue}
@@ -146,14 +144,6 @@ Vous pouvez également utiliser de nouvelles balises — elles seront disponible
 Ouvrez une demande d'extraction (pull request) avec vos modifications vers la branche `dev`. L'équipe examinera votre soumission et vous fera part de ses commentaires.
 
 
-## Maintenance
-Les vidéos répertoriées sont régulièrement examinées pour s'assurer qu'elles :
-
-- Répondent toujours aux critères de référencement
-- Contiennent des informations précises et à jour
-- Ont des liens d'hébergement/YouTube fonctionnels
-
-Si vous remarquez un problème avec une vidéo répertoriée, [créez un ticket (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) ou envoyez un e-mail à [website@ethereum.org](mailto:website@ethereum.org).
 ## Maintenance {#maintenance}
 
 Les vidéos répertoriées sont régulièrement examinées pour s'assurer qu'elles :
@@ -165,8 +155,6 @@ Les vidéos répertoriées sont régulièrement examinées pour s'assurer qu'ell
 Si vous remarquez un problème avec une vidéo répertoriée, [créez un ticket (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) ou envoyez un e-mail à [website@ethereum.org](mailto:website@ethereum.org).
 
 
-## Conditions d'utilisation
-Veuillez vous référer aux [conditions d'utilisation](/terms-of-use/) d'ethereum.org. Les informations sur ethereum.org sont fournies uniquement à des fins d'information générale.
 ## Conditions d'utilisation {#terms-of-use}
 
 Veuillez vous référer aux [conditions d'utilisation](/terms-of-use/) d'ethereum.org. Les informations sur ethereum.org sont fournies uniquement à des fins d'information générale.

@@ -24,8 +24,6 @@ Các chương trình này hỗ trợ hệ sinh thái Ethereum rộng lớn bằn
 - [Tài trợ Học thuật](https://esp.ethereum.foundation/academic-grants) - _Các khoản tài trợ để hỗ trợ công việc học thuật liên quan đến Ethereum_
 
 
-## Các nền tảng và trình tổng hợp danh sách tài trợ
-Các tài nguyên này tổng hợp và tổ chức các cơ hội tài trợ khác nhau trên toàn hệ sinh thái Ethereum, giúp bạn dễ dàng khám phá các cơ hội cấp vốn phù hợp với nhu cầu dự án của mình. Chúng tôi đã sắp xếp chúng theo từng nhóm đối tượng để giúp bạn bắt đầu tìm kiếm các tài nguyên phù hợp nhất dựa trên nhu cầu cấp vốn cụ thể của bạn.
 ## Các nền tảng và công cụ tổng hợp danh sách tài trợ {#grant-list-aggregators}
 
 Các tài nguyên này tổng hợp và sắp xếp nhiều cơ hội tài trợ khác nhau trên toàn hệ sinh thái Ethereum, giúp bạn dễ dàng khám phá các cơ hội cấp vốn phù hợp với nhu cầu của dự án. Chúng tôi đã phân loại chúng theo từng nhóm đối tượng để giúp bạn bắt đầu tìm kiếm các tài nguyên phù hợp nhất dựa trên nhu cầu tài trợ cụ thể của mình.
@@ -66,8 +64,6 @@ Các chương trình này tập trung vào việc tài trợ cho các dự án m
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Chương trình tăng tốc khởi nghiệp sử dụng tài trợ bậc hai để hỗ trợ các dự án mang lại lợi ích cho hàng hóa công cộng_
 
 
-## Làm việc trong Ethereum
-Bạn chưa sẵn sàng để bắt đầu dự án của riêng mình? Có hàng trăm công ty đang tích cực tìm kiếm những cá nhân đam mê để làm việc và đóng góp cho hệ sinh thái Ethereum. Bạn muốn tìm hiểu thêm thông tin? [Xem các công việc liên quan đến Ethereum](/community/get-involved/#ethereum-jobs)
 ## Làm việc trong Ethereum {#work-in-ethereum}
 
 Bạn chưa sẵn sàng để bắt đầu dự án của riêng mình? Có hàng trăm công ty đang tích cực tìm kiếm những cá nhân đam mê để làm việc và đóng góp cho hệ sinh thái Ethereum. Bạn muốn tìm hiểu thêm thông tin? [Hãy xem các công việc liên quan đến Ethereum](/community/get-involved/#ethereum-jobs)

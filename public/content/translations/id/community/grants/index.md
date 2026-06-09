@@ -24,8 +24,6 @@ Program-program ini mendukung ekosistem Ethereum secara luas dengan menawarkan h
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Hibah untuk mendukung karya akademik terkait Ethereum_
 
 
-## Agregator dan platform daftar hibah
-Sumber daya ini menyusun dan mengatur berbagai peluang hibah di seluruh ekosistem Ethereum, sehingga memudahkan untuk menemukan peluang pendanaan yang sesuai dengan kebutuhan proyek Anda. Kami telah mengaturnya berdasarkan persona untuk membantu Anda mulai menemukan sumber daya yang paling relevan berdasarkan kebutuhan pendanaan spesifik Anda.
 ## Agregator dan platform daftar hibah {#grant-list-aggregators}
 
 Sumber daya ini menyusun dan mengatur berbagai peluang hibah di seluruh ekosistem Ethereum, sehingga memudahkan untuk menemukan peluang pendanaan yang sesuai dengan kebutuhan proyek Anda. Kami telah mengaturnya berdasarkan persona untuk membantu Anda mulai menemukan sumber daya yang paling relevan berdasarkan kebutuhan pendanaan spesifik Anda.
@@ -66,8 +64,6 @@ Program-program ini berfokus pada pendanaan proyek yang bermanfaat bagi komunita
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Program akselerator perusahaan rintisan (start-up) yang menggunakan pendanaan kuadratik untuk mendukung proyek yang bermanfaat bagi barang publik_
 
 
-## Bekerja di Ethereum
-Belum siap untuk memulai proyek Anda sendiri? Ada ratusan perusahaan yang secara aktif mencari individu yang bersemangat untuk bekerja dan berkontribusi pada ekosistem Ethereum. Mencari informasi lebih lanjut? [Lihat pekerjaan terkait Ethereum](/community/get-involved/#ethereum-jobs)
 ## Bekerja di Ethereum {#work-in-ethereum}
 
 Belum siap untuk memulai proyek Anda sendiri? Ada ratusan perusahaan yang secara aktif mencari individu yang bersemangat untuk bekerja dan berkontribusi pada ekosistem Ethereum. Mencari informasi lebih lanjut? [Lihat pekerjaan terkait Ethereum](/community/get-involved/#ethereum-jobs)

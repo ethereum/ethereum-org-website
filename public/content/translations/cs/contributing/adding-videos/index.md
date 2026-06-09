@@ -19,7 +19,6 @@ Ethereum.org je neutrální vzdělávací zdroj. Videogalerie je spravována tak
 Stránka nezařazuje videa, která primárně propagují konkrétní produkt, token nebo komerční službu.
 
 
-## Kritéria pro zařazení
 ## Kritéria pro zařazení {#criteria-for-inclusion}
 
 ### Nutné požadavky {#must-haves}
@@ -37,7 +36,6 @@ Stránka nezařazuje videa, která primárně propagují konkrétní produkt, to
 - **Aktuální a nadčasové** – Obsah, který zůstává relevantní v průběhu času, je upřednostňován před materiálem citlivým na čas.
 
 
-## Jak přidat video
 ## Jak přidat video {#how-to-add-a-video}
 
 ### Možnost 1: Otevřít issue {#open-an-issue}
@@ -146,14 +144,6 @@ Můžete také použít nové štítky — budou k dispozici pro budoucí seskup
 Otevřete pull request s vašimi změnami do větve `dev`. Tým vaši žádost zkontroluje a poskytne zpětnou vazbu.
 
 
-## Údržba
-Zařazená videa jsou pravidelně kontrolována, aby se zajistilo, že:
-
-- Stále splňují kritéria pro zařazení
-- Obsahují přesné a aktuální informace
-- Mají funkční odkazy na hosting/YouTube
-
-Pokud si všimnete problému se zařazeným videem, [vytvořte issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) nebo pošlete e-mail na [website@ethereum.org](mailto:website@ethereum.org).
 ## Údržba {#maintenance}
 
 Zařazená videa jsou pravidelně kontrolována, aby se zajistilo, že:
@@ -165,8 +155,6 @@ Zařazená videa jsou pravidelně kontrolována, aby se zajistilo, že:
 Pokud si všimnete problému se zařazeným videem, [vytvořte issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) nebo pošlete e-mail na [website@ethereum.org](mailto:website@ethereum.org).
 
 
-## Podmínky použití
-Přečtěte si prosím [podmínky použití](/terms-of-use/) webu ethereum.org. Informace na ethereum.org jsou poskytovány výhradně pro obecné informační účely.
 ## Podmínky použití {#terms-of-use}
 
 Přečtěte si prosím [podmínky použití](/terms-of-use/) webu ethereum.org. Informace na ethereum.org jsou poskytovány výhradně pro obecné informační účely.
