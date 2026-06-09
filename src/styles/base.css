@@ -21,7 +21,7 @@
   h4,
   h5,
   h6 {
-    @apply font-black;
+    @apply font-black text-pretty wrap-break-word;
   }
 
   h1,
@@ -31,7 +31,7 @@
   h5,
   h6,
   section {
-    @apply scroll-mt-20;
+    @apply scroll-mt-32;
   }
 
   h1 {
@@ -123,5 +123,87 @@
     & > p {
       margin-bottom: calc(1.45rem / 2);
     }
+  }
+}
+
+/* CONTENT FLOW RHYTHM (POC -- see
+   .claude/skills/design-system/references/typography-spacing-flow-spec.md)
+   One `.flow` on a content region applies the rhythm to the direct children of
+   the region AND of any <section> within it (one level deep per section, so it
+   never reaches into a component's internals). Group content with
+   <section>/<Section>, not bare <div>s. A component that renders its own
+   <section> opts out with [data-flow="skip"]. Every gap is a margin-top multiple
+   of one base unit (--space); no em/lh. `calc(var(--spacing) * N)` == `--spacing(N)`. */
+
+:root {
+  /* The single base unit for the whole rhythm; responsive. */
+  --space: calc(var(--spacing) * 4); /* 16px */
+}
+
+@variant lg {
+  :root {
+    --space: calc(var(--spacing) * 6); /* 24px */
+  }
+}
+
+@layer base {
+  /* `:where()` keeps the scope at zero specificity, so the small type overrides
+     below win by intent and a plain utility class can still override any of it.
+     Scope = direct children of the region or of any <section> in it (not a
+     [data-flow="skip"] one). A first child has no preceding sibling, so the `+`
+     rules never touch it -- no explicit first-child reset needed. */
+
+  /* 1x default between adjacent blocks (heading->content, p->p, p->list, ...). */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + * {
+    margin-top: var(--space);
+  }
+
+  /* 2x above any heading that follows content within a region/section -- a
+     subsection heading, or a section heading preceded by a lead image. The
+     section's *first* heading has no preceding sibling so it gets none; the
+     section boundary below provides its break. (Ordered before the 3x rule so a
+     top-level markdown h1/h2 still wins 3x.) */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + :is(h2, h3, h4) {
+    margin-top: calc(var(--space) * 2);
+  }
+
+  /* 3x above a section boundary: an explicit <section> (React's <Section>), or a
+     top-level h1/h2 that is a direct child of the region (a flat markdown
+     stream). An h2 *inside* a section is its first child, so it has no margin --
+     the section element provides the break. An image leading a section sits at
+     the 1x default below the section top, hugging its heading, not 3x. */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + section,
+  :where(.flow) > * + :is(h1, h2) {
+    margin-top: calc(var(--space) * 3);
+  }
+
+  /* CTA / button groups: extra room above. A marker is needed because a button
+     group has no element selector; CTAs trail, so only the top gap matters. */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + [data-flow="cta"] {
+    margin-top: calc(var(--space) * 2);
+  }
+
+  /* A list following content needs its top gap restored explicitly: the legacy
+     global `ul/ol` rule sets margin-top:0 at specificity (0,0,1), which beats the
+     zero-specificity `* + *` default -- so without this a list has no space above
+     it. This rule matches that specificity and, being later, wins. */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + :is(ul, ol) {
+    margin-top: var(--space);
+  }
+
+  /* Lists: flow owns the vertical rhythm (drop the legacy global bottom margin),
+     but indentation is left to the list itself -- ui/list's `ms-6`, or the global
+     `ul/ol` start margin for raw lists. Adding our own padding here would double
+     the indent (flow is base-layer and can't override the utility `ms-6`). */
+  :where(.flow) :is(ul, ol) {
+    margin-bottom: 0;
+  }
+
+  :where(.flow) li {
+    margin-bottom: 0;
+  }
+
+  :where(.flow) li + li {
+    margin-top: calc(var(--space) * 0.5);
   }
 }
