@@ -125,11 +125,12 @@ const CardContent = React.forwardRef<
 ))
 CardContent.displayName = "CardContent"
 
-const buttonVariants = cva("", {
+const buttonVariants = cva("gap-4", {
   variants: {
     buttons: {
-      full: "*:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
-      compact: "*:[button]:w-fit *:data-[label=button-link]:w-fit",
+      full: "flex flex-col *:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
+      compact:
+        "*:[button]:w-fit *:data-[label=button-link]:w-fit flex flex-wrap",
       inherit: "",
     },
   },

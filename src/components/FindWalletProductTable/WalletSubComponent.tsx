@@ -124,9 +124,7 @@ const WalletSubComponent = ({
           })}
         </div>
         <div className="ml-3">
-          <h4 className="mb-2 text-md">
-            {t("page-find-wallet-social-links")}
-          </h4>
+          <h4 className="mb-2 text-md">{t("page-find-wallet-social-links")}</h4>
           <div className="flex flex-row gap-4">
             <SocialLink
               href={wallet.url}

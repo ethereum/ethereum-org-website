@@ -80,9 +80,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         >
           <div className="flex flex-1 flex-col gap-5">
             <div>
-              <h1 className="text-2xl">
-                {t("page-10-year-hero-title")}
-              </h1>
+              <h1 className="text-2xl">{t("page-10-year-hero-title")}</h1>
             </div>
 
             <div className="flex flex-1 flex-col gap-4">

@@ -40,9 +40,66 @@ Don't go from `<h2>` to `<h4>`. Screen reader users navigate by heading level, a
 
 In `PageHero` the eyebrow slot is a discriminated union: pass **either** `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element) **or** `header` -- not both. Don't conflate these fields. See `references/page-hero-walkthrough.md`.
 
-### The "page title" gap
+### Markdown page titles
 
-There's a recurring `text-[2.5rem]` arbitrary value in `MdComponents` for in-article page titles. This is a known gap pending a `--text-page-title` token decision. Until that lands, the arbitrary value is the convention there; don't reinvent your own page-title size. (Note: `PageHero` does **not** use this value -- its title is `text-3xl ... lg:text-6xl` -- so don't copy `text-[2.5rem]` into hero work.)
+In-article (markdown) page titles render as a plain `<h1>` from the layout (`Docs`/`Static`/`Tutorial`) -- the `text-4xl lg:text-5xl` default, no special token. (Historical note: this used to be a `text-[2.5rem]` arbitrary value in `MdComponents`; it's been removed.) `PageHero` owns hero titles separately (`text-3xl ... lg:text-6xl`) -- don't copy hero sizes into article titles or vice versa.
+
+## Content Spacing: the `.flow` rhythm
+
+For prose-like content -- a sequence of mixed headings, paragraphs, and lists -- vertical spacing is owned by the opt-in **`.flow`** system, not by per-element `mt-*`/`mb-*`. Add `flow` to the content region and write semantic tags; the rhythm is automatic.
+
+```tsx
+<div className="flow">
+  <h2>Section title</h2>
+  <p>Body copy. No margin classes needed.</p>
+  <h3>Subsection</h3>
+  <p>More copy.</p>
+</div>
+```
+
+It's already applied in markdown content -- `ContentContainer` and the `MainArticle` in the `Docs`/`Static`/`Tutorial` layouts -- so MDX prose just works. On React pages, add `flow` to a prose region yourself (it is **not** a default on `MainArticle`, since many pages use it as a grid/layout container).
+
+**The rhythm.** One responsive base unit `--space` (`--spacing(4)` = 16px mobile, `--spacing(6)` = 24px from `lg`); every gap is a `margin-top` multiple of it:
+
+| Gap | Multiple | mobile / desktop |
+|---|---|---|
+| default -- any block to any block (heading->content, p->p, p->list, image->p) | `1x` | 16 / 24 |
+| between list items (`li`->`li`) | `0.5x` | 8 / 12 |
+| above a subsection heading (`h3`/`h4`) | `2x` | 32 / 48 |
+| above a section boundary (a top-level `h1`/`h2`, or a `<section>`) | `3x` | 48 / 72 |
+| above a CTA/button group (`[data-flow="cta"]`) | `2x` | 32 / 48 |
+
+The designers' "heading hugs the content it introduces" effect is the `1x` default *below* a heading combined with the larger gap *above* it (3:1 for a section, 2:1 for a subsection) -- not a special tight value.
+
+**Scope.** `flow` styles the direct children of the region *and* the direct children of any `<section>` one level inside it -- so wrap a group of `<h2>` + content in `<Section>`/`<section>` and it gets the rhythm without its own `flow` class. A component that renders its own `<section>` but manages its own spacing opts out with `data-flow="skip"`. The rules are zero-specificity (`:where()`), so a plain utility class still overrides any gap when you genuinely need an exception.
+
+**To nest a group, reach for `<section>` (or `<Section>`), not `<div>`.** Flow reaches one level into a `<section>`, but a `<div>` is opaque to it -- its children get no rhythm at all:
+
+```tsx
+// children space correctly -- flow reaches one level into <section>
+<div className="flow">
+  <h2>Title</h2>
+  <section>
+    <h3>Subsection</h3>
+    <p>Spaced.</p>
+    <p>Spaced.</p>
+  </section>
+</div>
+
+// the <div> blocks flow -- its children get NO rhythm
+<div className="flow">
+  <h2>Title</h2>
+  <div>
+    <h3>Subsection</h3>
+    <p>No space above me.</p>
+    <p>No space above me.</p>
+  </div>
+</div>
+```
+
+**`.flow` vs `Stack`/`gap`.** Use `.flow` for *prose* (mixed heading/paragraph/list streams). Use `Stack`/`gap-*` (below) for *composition* -- repeated like-shaped blocks (cards, grid items, control rows). Don't put both on the same container.
+
+Full design rationale and edge cases: `references/typography-spacing-flow-spec.md`.
 
 ## Spacing Scale
 
@@ -167,6 +224,6 @@ These are the recurring patterns that cause "every page looks slightly different
 4. **`<div className="text-5xl font-bold">` for headings** -- use `<h1>`-`<h6>`
 5. **Page-level `<section className="my-32 py-16 px-4">`** -- use `Section`
 6. **Page-level horizontal padding hand-rolled** -- check the page layout, not the section
-7. **Arbitrary `text-[2.5rem]` for in-article titles** -- known gap; don't add new instances
+7. **Per-element `mt-*`/`mb-*` chains on prose** -- add `.flow` to the content region and let the rhythm own the spacing
 
 The pattern: when you reach for arbitrary values or inline class chains, pause and check whether a primitive already does this. The answer is almost always yes.
