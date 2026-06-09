@@ -178,4 +178,3 @@ That's not just better gaming. It's freedom.
   Learn more about Ethereum's open-source and onchain gaming ecosystem
 </DocLink>
 
-

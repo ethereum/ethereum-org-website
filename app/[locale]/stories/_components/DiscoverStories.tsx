@@ -15,13 +15,13 @@ import {
 import { FEATURED_STORIES } from "../utils"
 
 import digitalFeudalismCover from "@/public/content/stories/digital-feudalism/tarrence-cover-image.jpeg"
+import fundingCultureCover from "@/public/content/stories/funding-culture/pplpleasr-hero.png"
 import adoption1 from "@/public/images/10-year-anniversary/adoption-1.png"
-import adoption2 from "@/public/images/10-year-anniversary/adoption-2.png"
 
 // Placeholder imagery, keyed by featured slug -- swap for final art later.
 const placeholderImages = {
   "escaping-venezuela": adoption1,
-  "ukraine-payments": adoption2,
+  "funding-culture": fundingCultureCover,
   "digital-feudalism": digitalFeudalismCover,
 } as const
 

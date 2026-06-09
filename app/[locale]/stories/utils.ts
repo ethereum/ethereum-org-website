@@ -19,9 +19,9 @@ export const FEATURED_STORIES = [
     descriptionKey: "page-stories-featured-venezuela-description",
   },
   {
-    slug: "ukraine-payments",
-    titleKey: "page-stories-featured-ukraine-title",
-    descriptionKey: "page-stories-featured-ukraine-description",
+    slug: "funding-culture",
+    titleKey: "page-stories-featured-funding-culture-title",
+    descriptionKey: "page-stories-featured-funding-culture-description",
   },
   {
     slug: "digital-feudalism",
