@@ -22,6 +22,7 @@ import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
+import TweetEmbed from "@/components/TweetEmbed"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
@@ -202,6 +203,7 @@ export const reactComponents = {
   RestakingList,
   Tag,
   Title,
+  TweetEmbed,
   WhatAreAppsStories,
   YouTube,
 }

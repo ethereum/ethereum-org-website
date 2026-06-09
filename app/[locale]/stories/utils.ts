@@ -24,9 +24,9 @@ export const FEATURED_STORIES = [
     descriptionKey: "page-stories-featured-ukraine-description",
   },
   {
-    slug: "canadian-truckers",
-    titleKey: "page-stories-featured-truckers-title",
-    descriptionKey: "page-stories-featured-truckers-description",
+    slug: "digital-feudalism",
+    titleKey: "page-stories-featured-feudalism-title",
+    descriptionKey: "page-stories-featured-feudalism-description",
   },
 ] as const
 
