@@ -1,6 +1,6 @@
 ---
 title: Danksharding
-description: Aprenda sobre Proto-Danksharding y danksharding: dos actualizaciones secuenciales para escalar Ethereum.
+description: "Aprenda sobre Proto-Danksharding y danksharding: dos actualizaciones secuenciales para escalar Ethereum."
 lang: es
 summaryPoints:
   - El danksharding es una actualización de múltiples fases para mejorar la escalabilidad y capacidad de Ethereum.
