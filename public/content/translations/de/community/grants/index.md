@@ -66,8 +66,6 @@ Diese Programme konzentrieren sich auf die Finanzierung von Projekten, die der b
 - [Quadratic Accelerator](https://qacc.giveth.io/) – _Start-up-Accelerator-Programm, das quadratische Finanzierung nutzt, um Projekte zu unterstützen, die dem Gemeinwohl dienen_
 
 
-## Arbeiten im Ethereum-Bereich
-Noch nicht bereit, ein eigenes Projekt zu starten? Es gibt Hunderte von Unternehmen, die aktiv nach leidenschaftlichen Personen suchen, die im Ethereum-Ökosystem arbeiten und dazu beitragen möchten. Suchst du nach weiteren Informationen? [Sieh dir Ethereum-bezogene Jobs an](/community/get-involved/#ethereum-jobs)
 ## Arbeiten im Ethereum-Ökosystem {#work-in-ethereum}
 
 Noch nicht bereit, ein eigenes Projekt zu starten? Es gibt Hunderte von Unternehmen, die aktiv nach leidenschaftlichen Personen suchen, die im Ethereum-Ökosystem arbeiten und dazu beitragen möchten. Suchen Sie nach weiteren Informationen? [Sehen Sie sich Ethereum-bezogene Jobs an](/community/get-involved/#ethereum-jobs)
