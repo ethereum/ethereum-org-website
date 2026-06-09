@@ -1,7 +1,7 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-03-16 (updated with Gemini-confirmed transliteration policy from Hindi PR #17101)
+> Last updated: 2026-06-09 (PR #18375: added MDX duplicated-closer / dropped-`>` breakers, the duplicate ghost-heading migration artifact, and the ETHGlossary authority hierarchy for unlisted terms)
 
 ## Issue Categories
 
@@ -70,6 +70,12 @@ flag phonetic transliterations.
 
 **Transliteration authority:** ETHGlossary (https://ethglossary.visual-20-hoists.workers.dev) is the canonical source for term translations, including per-language transliterated forms for non-Latin scripts. The pipeline queries ETHGlossary directly; reviewers verify against the per-term `script_rule` returned by the API. The previous local bank at `.claude/translation-review/transliterations/` has been removed as of ETHGlossary v0.3.0.
 
+**Authority hierarchy — terms ETHGlossary covers vs. items it doesn't (READ THIS before flagging a transliteration/calque/keep-Latin "error"):**
+
+1. **For any term ETHGlossary covers, its per-term `script_rule` is the ONLY authority** for the transliterate / calque / keep-latin / always-latin decision. Query the API (`/filter` per file, or `/translations/{lang}/{termId}`); never assume.
+2. **For items ETHGlossary does NOT cover** (author names, brand-new product names not yet in the glossary, etc.), apply the script-aware fallback above: **transliterate** into non-Latin target scripts, **keep as-is** for Latin scripts.
+3. **Never infer a "default" `script_rule` for an unlisted term.** An absent glossary entry means "fall back to the script-aware policy," **NOT** "keep Latin." Example caught in PR #18375 review: a `te` author name "Mario Havel" rendered as "మారియో హావెల్" is **CORRECT** per the fallback — a reviewer flagging it as "should stay Latin" by assuming an `always_latin` default was a **false positive**. When ETHGlossary and a reviewer's instinct disagree, ETHGlossary (or, for unlisted items, this documented fallback) wins — there is one source of truth.
+
 ### 2. Cross-Script Contamination (CRITICAL)
 
 Crowdin translation memory leaks content from other language translations.
@@ -82,7 +88,7 @@ Crowdin translation memory leaks content from other language translations.
 
 ### 3. MDX Syntax Errors (CRITICAL — breaks builds)
 
-Four predictable categories that appear in every import:
+Predictable categories that appear in nearly every import:
 
 | Pattern | Example | Fix |
 |---------|---------|-----|
@@ -90,8 +96,20 @@ Four predictable categories that appear in every import:
 | Missing closing backtick | `` `<contract>.<function>() `` | Add closing backtick |
 | Misplaced backtick exposing JSX | ``(`<> ...` </>`)`` | Fix backtick placement |
 | Orphaned HTML closing tags | `</a>` from sentence restructuring | Remove orphaned tag |
+| Duplicated inner closer over a wrapper | `<ExpandableCard>…<ButtonLink>x</ButtonLink></ButtonLink>` (2nd should close the wrapper) | Restore the wrapper's real closing tag from the English source (`</ExpandableCard>`, `</Callout>`, …) |
+| Dropped `>` in angle-bracket link whose URL has parens | `[t](<https://en.wikipedia.org/wiki/Electra_(star))` | Restore the `>` before the final `)`: `…_(star)>)` |
 
-**Pattern:** These same 4 patterns recur in every Crowdin import. The first two are most common.
+**Pattern:** The first two are most common. The last two were the entire cause of the failing build in **PR #18375** (77 files, all 24 langs). **Detect deterministically** by compiling each changed file through `@mdx-js/mdx` (the parser `next-mdx-remote` uses) — strip frontmatter and `{#id}` heading anchors first (else every file false-positives on the custom heading-id syntax), and confirm the English sources compile clean as a control before trusting the run.
+
+### 3b. Duplicate "Ghost" Headings (CRITICAL — structural-migration artifact)
+
+When a base-branch change shifts page block structure — e.g. the h1 → `frontmatter.title` migration that removed leading `#` headings — the pipeline's incremental block-matching can mis-align and emit a section **twice**: an anchor-less "ghost" copy (often an older or differently-worded translation, sometimes a different formality register) immediately followed by the correct `{#anchor}` copy. The reader sees the section rendered twice in a row.
+
+**Signature:** a translated `h2`–`h4` heading **without** `{#id}` immediately followed (after blank lines and/or one duplicate paragraph) by a **same-level** heading **with** `{#id}`. English requires `{#id}` on every heading, so any anchor-less translated heading is the tell.
+
+**Fix:** delete the ghost block (the anchor-less heading + its duplicate paragraph) up to the anchored twin; keep the anchored version that matches the English source. Observed in **PR #18375** at **254 occurrences across 69 files** (24 langs × `community/grants`, `contributing/adding-videos`, `roadmap/glamsterdam`).
+
+**Detection:** scan changed translated files for `^#{2,4} ` lines lacking `{#` (outside code fences); classify each as ghost-twin (next same-level heading is anchored → safe to delete) vs. lone-missing-anchor (needs the anchor *added* from English) before fixing. **The durable fix belongs in the sanitizer** (collapse adjacent duplicate headings during sanitization) so future structural changes self-heal rather than shipping duplicates.
 
 ### 4. Semantic Inversions (CRITICAL)
 
