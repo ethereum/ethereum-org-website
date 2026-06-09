@@ -75,7 +75,8 @@
 
 These patterns are covered by existing fix functions and should have regression tests:
 
-- **Duplicated headings** (`fixDuplicatedHeadings`) -- `## Text? Text? {#id}`
+- **Duplicated headings** (`fixDuplicatedHeadings`) -- `## Text? Text? {#id}` (intra-line text duplication)
+- **Duplicate ghost heading blocks** (`fixDuplicateHeadingBlocks`) -- an anchor-less "ghost" heading (often an older/differently-worded translation) immediately followed by the correct same-level heading WITH `{#anchor}`, emitted when a structural change to the English source (e.g. the h1 -> frontmatter.title migration) confuses the pipeline's incremental block-matching. Removes the ghost block (heading + duplicate prose up to the anchored twin), keeping the anchored version. Code-fence-safe; leaves lone anchor-less headings to `syncHeaderIdsWithEnglish`. Found in PR #18375 (254 occurrences, 69 files, all 24 langs).
 - **Broken markdown links** (`fixBrokenMarkdownLinks`) -- `] (url)` space
 - **Escaped bold/italic** (`fixEscapedBoldAndItalic`) -- `\*\*text\*\*`; uses lookbehind to skip `\*` used as multiplication (e.g., `operand\*operand`)
 - **ASCII guillemets** (`fixAsciiGuillemets`) -- `<<text>>`
