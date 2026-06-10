@@ -23,7 +23,9 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 
 **Content**
 - [Create/edit content](/contributing/#how-to-update-content) – Suggest new pages or make tweaks to what's here already
+- [Write a builder article](/contributing/adding-articles/) - Contribute an article for the [Latest](/latest/) section
 - [Add community resources](/contributing/content-resources/) – Add a helpful article or resource to a relevant page
+- [Suggest a report](/contributing/adding-reports/) - Suggest a research report for the [Reports](/reports/) page
 - [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
 - [Suggest a video](/contributing/adding-videos/) – Suggest an educational video for the video gallery
