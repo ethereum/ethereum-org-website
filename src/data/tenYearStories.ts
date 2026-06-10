@@ -1,6 +1,48 @@
 import type { Story } from "../../app/[locale]/10years/_components/types"
 
 const tenYearStories: Story[] = [
+  // ─────────────────────────────────────────────────────────────────
+  // New community stories for /stories/ page
+  //   - Use full ISO dates, e.g. "2026-06-10"
+  // ─────────────────────────────────────────────────────────────────
+  {
+    storyEnglish:
+      "Talent in India is not limited to metros. I've seen curious and capable developers who just lacked early exposure to protocols, grants and global conversations. Ethereum gives us open access, open source code, open communities, open coordination. That permissionless layer is powerful.",
+    storyOriginal: "",
+    category: "Open Access",
+    name: "Suraj Sharma",
+    date: "2026-04-13",
+    country: "India",
+    twitter: "https://x.com/EFDevcon/status/2043673169056133579?s=20",
+    region: "",
+  },
+  {
+    storyEnglish:
+      "ETHIndia 2022 was a turning point. The energy of hundreds of developers shipping at midnight convinced me this ecosystem was worth committing to. I went from participant to mentor to organizer. Ethereum taught me that communities ship. I saw firsthand how one ecosystem could spawn an entire generation of Indian builders. Ethereum gave that talent a global stage. Developers here aren't just building for India anymore; now they are building for the world.",
+    storyOriginal: "",
+    category: "Community Collaboration, Builder Culture",
+    name: "Jatin Pandya",
+    date: "2026-03-17",
+    country: "India",
+    twitter: "https://x.com/EFDevcon/status/2033874812637221297?s=20",
+    region: "",
+  },
+  {
+    storyEnglish:
+      "I discovered Ethereum, and that moment completely redirected my life. It wasn't just a career change, it was a new beginning. Driven by curiosity, I dived headfirst into the Bitcoin whitepaper and the fundamentals of Ethereum. That curiosity soon turned into a passion for building. The thrill of winning a track prize at my first online hackathon was the spark I needed. Since then, I haven't stopped building and shipping.",
+    storyOriginal: "",
+    category: "Builder Culture",
+    name: "Bhawna Chauhan",
+    date: "2026-03-08",
+    country: "India",
+    twitter: "https://x.com/EFDevcon/status/2030613582124397001?s=20",
+    region: "",
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // Stories below: 10-year anniversary submissions (2025)
+  //   - Dates use "DD.M." shorthand, parsed as 2025 by parseStoryDates
+  // ─────────────────────────────────────────────────────────────────
   {
     storyEnglish:
       "I had a transaction with a friend who was overseas, and I was surprised that sending and receiving money through Ethereum was much faster and easier than I thought. It's much more transparent than the existing banking system, and there are no complicated procedures in the middle.",
