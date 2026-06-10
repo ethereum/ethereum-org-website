@@ -124,7 +124,7 @@ const CardContent = React.forwardRef<
     className={cn(
       childSpacingVariants({ spacing }),
       "flex-1 space-y-(--content-space) p-(--card-pad)",
-      "text-body-medium **:data-[label=card-title]:text-body **:[strong]:text-body",
+      "text-body-medium **:data-[label=card-title]:text-body **:[:is(h2,h3,h4,h5,h6,strong)]:text-body",
       className
     )}
     {...props}
