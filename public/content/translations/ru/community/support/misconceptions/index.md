@@ -1,73 +1,71 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
+title: Распространенные заблуждения об Эфириуме
+description: Развеиваем самые частые недопонимания о том, как работает Эфириум.
 lang: ru
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
+## Является ли Эфириум компанией? {#not-a-company}
 
-## Ethereum — это компания? {#not-a-company}
+Эфириум — это децентрализованная технология с открытым исходным кодом, поддерживаемая тысячами участников по всему миру. Не существует компании под названием «Эфириум», которая управляет аккаунтами, хранит средства или предоставляет поддержку клиентам.
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+[Фонд Ethereum](https://ethereum.foundation/) — это некоммерческая организация, которая поддерживает разработку Эфириума, но она не владеет и не управляет сетью. Ни одна организация не обладает такими правами.
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
-
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[ethereum.org](/)** — это образовательный ресурс, управляемый сообществом. Это не биржа, не кошелек и не финансовое учреждение. Он не хранит средства пользователей и не имеет доступа к аккаунтам.
 
 <DocLink href="/what-is-ethereum/">
-  Что такое Ethereum?
+  Что такое Эфириум?
 </DocLink>
 
-## Может ли кто-нибудь восстановить или заморозить мои средства? {#no-fund-access}
+## Может ли кто-то восстановить или заморозить мои средства? {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+В отличие от банка, в Эфириуме нет центрального органа, который мог бы заморозить, изъять или восстановить средства. Человек, владеющий приватными ключами (или сид-фразой), имеет полный и единоличный контроль над кошельком.
 
-This means:
+Это означает:
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- **Никто не сможет восстановить средства**, которые вы отправили на неправильный адрес
+- **Никто не сможет отменить** транзакцию после ее подтверждения
+- **Никто не сможет заморозить** ваш кошелек или заблокировать ваши транзакции
+- **Никто не сможет сбросить ваш пароль**, если вы потеряете свою сид-фразу
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+Именно поэтому защита вашей сид-фразы критически важна. Это единственный способ получить доступ к вашему кошельку. Если она будет потеряна или украдена, возможности восстановления не будет.
 
 <DocLink href="/security/">
-  Безопасность Ethereum и предотвращение мошенничества
+  Безопасность Эфириума и предотвращение мошенничества
 </DocLink>
 
-## Можно ли по-прежнему майнить Ethereum? {#no-mining}
+## Могу ли я все еще майнить Эфириум? {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+Эфириум перешел от [доказательства выполнения работы (PoW)](/glossary/#pow) к [доказательству доли владения (PoS)](/glossary/#pos) во время [Слияния](/roadmap/merge/) в сентябре 2022 года. Майнинг в Эфириуме больше невозможен.
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+Теперь сеть защищается валидаторами, которые [стейкают](/glossary/#staking) ETH. Любой может принять участие:
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **Соло-стейкинг:** Запустите собственного валидатора с 32 ETH — [узнать больше](/staking/solo/)
+- **Стейкинг как услуга:** Делегируйте управление узлом, сохраняя при этом свои ключи — [узнать больше](/staking/saas/)
+- **Совместный стейкинг:** Стейкайте с суммой менее 32 ETH, присоединившись к пулу — [узнать больше](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  Узнать больше о стейкинге
 </DocLink>
 
-## Существует ли служба поддержки Ethereum? {#no-support-team}
+## Существует ли служба поддержки Эфириума? {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+Поиск «официальной поддержки Эфириума» похож на поиск «официальной поддержки интернета». Такого, конечно, не существует, но в зависимости от вашей проблемы вы можете обратиться за поддержкой к своему интернет-провайдеру, производителю вашего маршрутизатора или одной из компаний, стоящих за устройством, приложением или веб-сайтом, которые вы используете.
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+С Эфириумом ситуация аналогичная. За Эфириумом в целом не стоит никакой компании, службы поддержки или справочной службы, но в зависимости от проблемы вы можете найти помощь, обратившись к вашему _провайдеру кошелька_, _сервису стейкинга_, _бирже_, _финансовому учреждению_ или _команде, поддерживающей приложение_, которое вы используете.
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+Поскольку Эфириум по умолчанию публично прозрачен, вы также можете найти [обозреватели блоков](/developers/docs/data-and-analytics/block-explorers/), [аналитические инструменты](/developers/tools/analytics/) и другие [ресурсы для онлайн-расследований](/community/support/scams/#analyze) полезными для самостоятельного изучения проблемы.
 
-That said, no one from Ethereum or ethereum.org will ever:
+При этом никто из Эфириума или ethereum.org никогда не будет:
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- Связываться с вами через личные сообщения
+- Просить вашу сид-фразу или приватные ключи
+- Просить вас отправить ETH для верификации вашего кошелька
+- Предлагать помощь в восстановлении средств за плату
 
-**Anyone doing any of the above is trying to scam you.**
+**Любой, кто делает что-либо из вышеперечисленного, пытается вас обмануть.**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+Если вам нужна помощь, реальные сообщества, которые могут помочь, перечислены на [странице поддержки](/community/support/). Это открытые сообщества, управляемые волонтерами, а не официальные каналы поддержки.
 
 <DocLink href="/security/">
-  Безопасность Ethereum и предотвращение мошенничества
+  Безопасность Эфириума и предотвращение мошенничества
 </DocLink>

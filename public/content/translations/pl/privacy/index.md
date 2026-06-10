@@ -1,36 +1,36 @@
 ---
-title: "Prywatność na Ethereum"
-description: "Narzędzia i techniki ochrony prywatności w Ethereum"
+title: Prywatność w Ethereum
+description: Narzędzia i techniki ochrony prywatności w Ethereum
 lang: pl
 ---
 
-# Prywatność na Ethereum {#introduction}
+Prywatność jest nie tylko niezbędna dla bezpieczeństwa osobistego, ale stanowi fundament wolności i kluczowy [gwarant decentralizacji](https://vitalik.eth.limo/general/2025/04/14/privacy.html). Prywatność daje ludziom możliwość swobodnego wyrażania siebie, przeprowadzania transakcji z innymi i organizowania społeczności. Jednak, podobnie jak w przypadku wszystkich blockchainów, publiczny rejestr Ethereum sprawia, że zachowanie prywatności jest wyzwaniem.
 
-Prywatność jest nie tylko niezbędna dla bezpieczeństwa osobistego, jest także kamieniem węgielnym wolności i kluczowym [gwarantem decentralizacji](https://vitalik.eth.limo/general/2025/04/14/privacy.html). Prywatność daje ludziom możliwość swobodnego wyrażania siebie, zawierania transakcji z innymi i organizowania społeczności. Ale podobnie jak w przypadku wszystkich blockchainów, publiczny rejestr Ethereum utrudnia zachowanie prywatności.
+Ethereum jest z założenia przejrzyste. Każde działanie onchain jest widoczne dla każdego, kto zechce je sprawdzić. Chociaż Ethereum oferuje pseudonimowość poprzez powiązanie Twojej aktywności z [kluczem publicznym](/decentralized-identity/#public-key-cryptography) zamiast z prawdziwą tożsamością, wzorce aktywności mogą być analizowane w celu ujawnienia poufnych informacji i identyfikacji użytkowników.
 
-Ethereum jest z założenia przejrzyste. Każde działanie w łańcuchu jest widoczne dla każdego, kto je sprawdzi. Chociaż Ethereum oferuje pseudonimowość poprzez powiązanie Twojej aktywności z [kluczem publicznym](/decentralized-identity/#public-key-cryptography) zamiast z tożsamością w świecie rzeczywistym, wzorce aktywności mogą być analizowane w celu ujawnienia poufnych informacji i identyfikacji użytkowników.
+Wbudowanie w Ethereum narzędzi chroniących prywatność może pomóc ludziom, organizacjom i instytucjom w bezpiecznej interakcji przy jednoczesnym ograniczeniu niepotrzebnego ujawniania danych. Sprawia to, że ekosystem jest bezpieczniejszy i bardziej praktyczny w szerszym zakresie przypadków użycia.
 
-Wbudowanie w Ethereum narzędzi chroniących prywatność może pomóc ludziom, organizacjom i instytucjom w bezpiecznej interakcji, ograniczając jednocześnie niepotrzebną ekspozycję. Dzięki temu ekosystem jest bezpieczniejszy i bardziej praktyczny dla szerszego zakresu zastosowań.
+<VideoWatch slug="privacy-is-existential" />
 
-## Prywatność zapisów {#privacy-of-writes}
+## Prywatność przy zapisie {#privacy-of-writes}
 
-Domyślnie każda transakcja zapisana na Ethereum jest publiczna i trwała. Obejmuje to nie tylko wysyłanie ETH, ale także rejestrowanie nazw ENS, zbieranie POAP-ów lub handel NFT. Codzienne działania, takie jak płatności, głosowanie czy weryfikacja tożsamości, mogą ujawnić Twoje informacje niepożądanym stronom. Istnieje kilka narzędzi i technik, które mogą pomóc uczynić je bardziej prywatnymi:
+Domyślnie każda transakcja zapisana w Ethereum jest publiczna i trwała. Obejmuje to nie tylko wysyłanie ETH, ale także rejestrowanie nazw ENS, zbieranie POAP-ów czy handel NFT. Codzienne czynności, takie jak płatności, głosowanie czy weryfikacja tożsamości, mogą ujawnić Twoje informacje niepowołanym stronom. Istnieje kilka narzędzi i technik, które mogą pomóc w zwiększeniu ich prywatności:
 
-### Protokoły mieszające (lub „miksery”) {#mixing-protocols}
+### Protokoły miksujące (lub „miksery”) {#mixing-protocols}
 
-Miksery zrywają połączenie między nadawcami a odbiorcami, umieszczając transakcje wielu użytkowników we wspólnej „puli”, a następnie pozwalając ludziom na późniejszą wypłatę na nowy adres. Ponieważ wpłaty i wypłaty są ze sobą pomieszane, obserwatorom znacznie trudniej jest je połączyć.
+Miksery zrywają powiązanie między nadawcami a odbiorcami, umieszczając transakcje wielu użytkowników we wspólnej „puli”, a następnie pozwalając im na późniejszą wypłatę na nowy adres. Ponieważ depozyty i wypłaty są ze sobą wymieszane, obserwatorom znacznie trudniej jest je powiązać.
 
 _Przykłady: [PrivacyPools](https://docs.privacypools.com/), [Tornado Cash](https://tornado.cash/)_
 
-### Pule chronione {#shielded-pools}
+### Pule osłonięte {#shielded-pools}
 
-Pule chronione są podobne do mikserów, ale pozwalają użytkownikom na prywatne przechowywanie i transferowanie środków wewnątrz samej puli. Zamiast tylko zaciemniać związek między wpłatą a wypłatą, chronione pule utrzymują stały stan prywatny, często zabezpieczony dowodami o zerowej wiedzy. Umożliwia to tworzenie prywatnych transferów, prywatnych sald i nie tylko.
+Pule osłonięte są podobne do mikserów, ale pozwalają użytkownikom na prywatne przechowywanie i transfer środków wewnątrz samej puli. Zamiast tylko ukrywać powiązanie między depozytem a wypłatą, pule osłonięte utrzymują ciągły prywatny stan, często zabezpieczony dowodami z wiedzą zerową. Umożliwia to tworzenie prywatnych transferów, prywatnych sald i nie tylko.
 
 _Przykłady: [Railgun](https://www.railgun.org/), [Aztec](https://aztec.network/), Nightfall_
 
-### Adresy stealth {#stealth-addresses}
+### Adresy ukryte {#stealth-addresses}
 
-[Adres stealth](https://vitalik.eth.limo/general/2023/01/20/stealth.html) jest jak nadanie każdemu nadawcy unikalnej, jednorazowej skrytki pocztowej, którą tylko Ty możesz otworzyć. Za każdym razem, gdy ktoś wysyła Ci kryptowaluty, trafiają one na nowy adres, więc nikt inny nie widzi, że wszystkie te płatności należą do Ciebie. Dzięki temu Twoja historia płatności pozostaje prywatna i trudniejsza do śledzenia.
+[Adres ukryty](https://vitalik.eth.limo/general/2023/01/20/stealth.html) jest jak podanie każdemu nadawcy unikalnej, jednorazowej skrytki pocztowej, którą tylko Ty możesz otworzyć. Za każdym razem, gdy ktoś wysyła Ci krypto, trafia ono na nowy adres, więc nikt inny nie może zobaczyć, że wszystkie te płatności należą do Ciebie. Dzięki temu Twoja historia płatności pozostaje prywatna i trudniejsza do wyśledzenia.
 
 _Przykłady: [UmbraCash](https://app.umbra.cash/faq), [FluidKey](https://www.fluidkey.com/)_
 
@@ -38,60 +38,60 @@ _Przykłady: [UmbraCash](https://app.umbra.cash/faq), [FluidKey](https://www.flu
 
 Inne projekty badające prywatne zapisy to [PlasmaFold](https://pse.dev/projects/plasma-fold) (prywatne płatności) oraz systemy takie jak [MACI](https://pse.dev/projects/maci) i [Semaphore](https://pse.dev/projects/semaphore) (prywatne głosowanie).
 
-Narzędzia te rozszerzają możliwości prywatnego zapisu na Ethereum, ale każde z nich wiąże się z kompromisami. Niektóre podejścia są wciąż eksperymentalne, niektóre zwiększają koszty lub złożoność, a niektóre narzędzia, takie jak miksery, mogą podlegać kontroli prawnej lub regulacyjnej w zależności od sposobu ich wykorzystania.
+Narzędzia te rozszerzają możliwości prywatnego zapisu w Ethereum, ale każde z nich wiąże się z kompromisami. Niektóre podejścia są wciąż eksperymentalne, inne zwiększają koszty lub złożoność, a niektóre narzędzia, takie jak miksery, mogą podlegać kontroli prawnej lub regulacyjnej w zależności od tego, jak są używane.
 
-## Prywatność odczytów {#privacy-of-reads}
+## Prywatność przy odczycie {#privacy-of-reads}
 
-Odczytywanie lub sprawdzanie jakichkolwiek informacji na Ethereum (np. salda Twojego portfela) odbywa się zazwyczaj za pośrednictwem usługi takiej jak dostawca portfela, dostawca węzła lub eksplorator bloków. Ponieważ polegasz na nich w kwestii odczytu blockchaina, mogą oni również zobaczyć Twoje żądania wraz z metadanymi, takimi jak adres IP lub lokalizacja. Jeśli stale sprawdzasz to samo konto, informacje te można połączyć, aby powiązać Twoją tożsamość z Twoją aktywnością.
+Odczytywanie lub sprawdzanie jakichkolwiek informacji w Ethereum (np. salda Twojego portfela) zazwyczaj odbywa się za pośrednictwem usługi, takiej jak dostawca portfela, dostawca węzła lub eksplorator bloków. Ponieważ polegasz na nich w kwestii odczytu blockchaina, mogą oni również zobaczyć Twoje żądania wraz z metadanymi, takimi jak Twój adres IP lub lokalizacja. Jeśli ciągle sprawdzasz to samo konto, informacje te można połączyć, aby powiązać Twoją tożsamość z Twoją aktywnością.
 
-Uruchomienie własnego węzła Ethereum zapobiegłoby temu, ale przechowywanie i synchronizacja całego blockchaina pozostaje kosztowna i niepraktyczna dla większości użytkowników, zwłaszcza na urządzeniach mobilnych.
+Uruchomienie własnego węzła Ethereum zapobiegłoby temu, ale przechowywanie i synchronizacja pełnego blockchaina pozostaje kosztowna i niepraktyczna dla większości użytkowników, zwłaszcza na urządzeniach mobilnych.
 
-Niektóre projekty badające prywatne odczyty obejmują [Private Information Retrieval](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (PIR, pobieranie danych bez ujawniania, czego szukasz), [zkID](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (prywatne sprawdzanie tożsamości za pomocą dowodów zerowej wiedzy), [vOPRF](https://pse.dev/projects/voprf) (używanie kont Web2 pseudonimowo w Web3), [vFHE](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (obliczanie na zaszyfrowanych danych) i [MachinaIO](https://pse.dev/projects/machina-io) (ukrywanie szczegółów programu przy jednoczesnym zachowaniu funkcjonalności).
+Niektóre projekty badające prywatne odczyty obejmują [Private Information Retrieval](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (PIR, pobieranie danych bez ujawniania tego, czego szukasz), [zkID](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (prywatne sprawdzanie tożsamości za pomocą dowodów z wiedzą zerową), [vOPRF](https://pse.dev/projects/voprf) (pseudonimowe korzystanie z kont Web2 w Web3), [vFHE](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (obliczenia na zaszyfrowanych danych) oraz [MachinaIO](https://pse.dev/projects/machina-io) (ukrywanie szczegółów programu przy zachowaniu funkcjonalności).
 
-## Prywatność udowadniania {#privacy-of-proving}
+## Prywatność przy dowodzeniu {#privacy-of-proving}
 
-Dowody z zachowaniem prywatności to narzędzia, których można używać w Ethereum, aby wykazać, że coś jest prawdą, bez ujawniania niepotrzebnych szczegółów. Na przykład możesz:
+Dowody chroniące prywatność to narzędzia, których możesz użyć w Ethereum, aby wykazać, że coś jest prawdą, bez ujawniania niepotrzebnych szczegółów. Na przykład możesz:
 
-- Udowodnić, że masz ukończone 18 lat, bez podawania pełnej daty urodzenia
-- Udowodnić posiadanie NFT lub tokena bez ujawniania całego portfela
+- Udowodnić, że masz ukończone 18 lat, bez udostępniania pełnej daty urodzenia
+- Udowodnić własność NFT lub tokena bez ujawniania całego swojego portfela
 - Udowodnić uprawnienia do członkostwa, nagrody lub głosu bez ujawniania innych danych osobowych
 
-Większość narzędzi do tego celu opiera się na technikach kryptograficznych, takich jak dowody o zerowej wiedzy, ale wyzwaniem jest uczynienie ich na tyle wydajnymi, aby mogły działać na urządzeniach codziennego użytku, były przenośne na dowolną platformę i bezpieczne.
+Większość narzędzi do tego celu opiera się na technikach kryptograficznych, takich jak dowody z wiedzą zerową, ale wyzwaniem jest uczynienie ich wystarczająco wydajnymi, aby działały na urządzeniach codziennego użytku, przenośnymi na dowolną platformę i bezpiecznymi.
 
-Niektóre projekty badające prywatność dowodzenia obejmują [Client Side Proving](https://pse.dev/projects/client-side-proving) (systemy dowodzenia ZK), [TLSNotary](https://tlsnotary.org/) (dowody autentyczności dla dowolnych danych w sieci), [Mopro](https://pse.dev/projects/mopro) (dowodzenie po stronie klienta mobilnego), [Private Proof Delegation](https://pse.dev/projects/private-proof-delegation) (frameworki delegacji, które unikają założeń dotyczących zaufania) oraz [Noir](https://noir-lang.org/) (język do prywatnych i weryfikowalnych obliczeń).
+Niektóre projekty badające prywatność przy dowodzeniu obejmują [Client Side Proving](https://pse.dev/projects/client-side-proving) (systemy dowodzenia ZK), [TLSNotary](https://tlsnotary.org/) (dowody autentyczności dla dowolnych danych w sieci), [Mopro](https://pse.dev/projects/mopro) (mobilne dowodzenie po stronie klienta), [Private Proof Delegation](https://pse.dev/projects/private-proof-delegation) (frameworki do delegowania, które unikają założeń dotyczących zaufania) oraz [Noir](https://noir-lang.org/) (język do prywatnych i weryfikowalnych obliczeń).
 
 ## Słowniczek prywatności {#privacy-glossary}
 
-**Anonimowość**: interakcja z trwale usuniętymi wszystkimi identyfikatorami z Twoich danych, co uniemożliwia prześledzenie informacji z powrotem do danej osoby
+**Anonimowy**: Interakcja z trwałym usunięciem wszystkich identyfikatorów z Twoich danych, co uniemożliwia powiązanie informacji z konkretną osobą
 
-**Szyfrowanie**: proces, który szyfruje dane, tak że tylko ktoś z odpowiednim kluczem może je odczytać
+**Szyfrowanie**: Proces, który miesza dane w taki sposób, że tylko osoba posiadająca odpowiedni klucz może je odczytać
 
-**[W pełni homomorficzne szyfrowanie](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (FHE)**: sposób na wykonywanie obliczeń bezpośrednio na zaszyfrowanych danych, bez ich odszyfrowywania
+**[W pełni homomorficzne szyfrowanie](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (FHE)**: Sposób wykonywania obliczeń bezpośrednio na zaszyfrowanych danych, bez ich uprzedniego deszyfrowania
 
-**[Nierozróżnialna obfuskacja](https://pse.dev/projects/machina-io) (iO)**: techniki ochrony prywatności, które sprawiają, że programy lub dane są niezrozumiałe, ale nadal użyteczne
+**[Nierozróżnialne zaciemnianie](https://pse.dev/projects/machina-io) (iO)**: Techniki prywatności, które sprawiają, że programy lub dane są niezrozumiałe, ale nadal użyteczne
 
-**[Obliczenia wielostronne](https://pse.dev/blog/secure-multi-party-computation) (MPC)**: metody, które pozwalają wielu stronom na wspólne obliczenie wyniku bez ujawniania swoich prywatnych danych wejściowych
+**[Obliczenia wielostronne](https://pse.dev/blog/secure-multi-party-computation) (MPC)**: Metody, które pozwalają wielu stronom wspólnie obliczyć wynik bez ujawniania ich prywatnych danych wejściowych
 
-**Programowalna kryptografia**: elastyczna, oparta na zasadach kryptografia, którą można dostosować w oprogramowaniu, aby kontrolować, jak i kiedy dane są udostępniane, weryfikowane lub ujawniane
+**Programowalna kryptografia**: Elastyczna, oparta na regułach kryptografia, którą można dostosować w oprogramowaniu, aby kontrolować, jak i kiedy dane są udostępniane, weryfikowane lub ujawniane
 
-**Pseudonimowość**: używanie unikalnych kodów lub numerów (takich jak adres Ethereum) zamiast osobistych identyfikatorów
+**Pseudonimowy**: Używanie unikalnych kodów lub numerów (takich jak adres Ethereum) zamiast identyfikatorów osobistych
 
-**Selektywne ujawnianie**: możliwość udostępniania tylko tego, co jest potrzebne (np. udowodnienie posiadania NFT bez ujawniania całej historii portfela)
+**Selektywne ujawnianie**: Możliwość udostępniania tylko tego, co jest potrzebne (np. udowodnienie, że posiadasz NFT bez ujawniania całej historii portfela)
 
-**Niepowiązywalność**: upewnienie się, że oddzielne działania na blockchainie nie mogą być powiązane z tym samym adresem
+**Brak możliwości powiązania (Unlinkability)**: Upewnienie się, że oddzielne działania na blockchainie nie mogą być powiązane z tym samym adresem
 
-**Weryfikowalność**: zapewnienie, że inni mogą potwierdzić prawdziwość roszczenia, np. poprzez walidację transakcji lub dowodu na Ethereum
+**Weryfikowalność**: Zapewnienie, że inni mogą potwierdzić prawdziwość roszczenia, na przykład poprzez walidację transakcji lub dowodu w Ethereum
 
-**Weryfikowalna delegacja**: przypisanie zadania — np. wygenerowania dowodu — innej stronie (np. portfelowi mobilnemu korzystającemu z serwera do ciężkiej kryptografii), przy jednoczesnym zachowaniu możliwości zweryfikowania, czy zostało ono wykonane poprawnie
+**Weryfikowalne delegowanie**: Przypisanie zadania — takiego jak wygenerowanie dowodu — innej stronie (np. portfelowi mobilnemu korzystającemu z serwera do ciężkiej kryptografii) przy jednoczesnej możliwości zweryfikowania, czy zostało ono wykonane poprawnie
 
-**[Dowody o zerowej wiedzy](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) (ZKP)**: protokoły kryptograficzne, które pozwalają komuś udowodnić prawdziwość informacji bez ujawniania danych źródłowych
+**[Dowody z wiedzą zerową](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) (ZKP)**: Protokoły kryptograficzne, które pozwalają komuś udowodnić, że informacja jest prawdziwa, bez ujawniania podstawowych danych
 
-**ZK Rollup**: system skalowalności, który grupuje transakcje poza łańcuchem i przesyła dowód ważności do łańcucha — domyślnie nie jest prywatny, ale umożliwia wydajne systemy prywatności (takie jak pule chronione) poprzez redukcję kosztów
+**ZK Rollup**: System skalowalności, który grupuje transakcje pozałańcuchowo i przesyła dowód ważności onchain — domyślnie nie jest prywatny, ale umożliwia wydajne systemy prywatności (takie jak pule osłonięte) poprzez redukcję kosztów
 
 ## Zasoby {#resources}
 
-- [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), laboratorium badawczo-rozwojowe Ethereum Foundation, skoncentrowane na prywatności dla ekosystemu
-- [Web3PrivacyNow](https://web3privacy.info/), sieć osób, projektów i stowarzyszonych organizacji, które chronią i promują prawa człowieka w Internecie
-- [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), witryna oceniająca portfele Ethereum, której celem jest udostępnienie kompleksowej listy portfeli, ich funkcjonalności, praktyk i wsparcia dla określonych standardów.
-- [Zk-kit](https://zkkit.pse.dev/): Zestaw bibliotek (algorytmów, funkcji użytkowych i struktur danych), które można ponownie wykorzystać w różnych projektach i protokołach zerowej wiedzy.
-- [Aplikacje zapewniające prywatność](/apps/categories/privacy/) – odkryj listę wyselekcjonowanych aplikacji zapewniających prywatność, które działają na Ethereum.
+- [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), laboratorium badawczo-rozwojowe Fundacji Ethereum skupiające się na prywatności w ekosystemie
+- [Web3PrivacyNow](https://web3privacy.info/), sieć ludzi, projektów i sprzymierzonych organizacji, które chronią i promują prawa człowieka w internecie
+- [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), strona z ocenami portfeli Ethereum, której celem jest dostarczenie kompleksowej listy portfeli, ich funkcjonalności, praktyk i wsparcia dla określonych standardów.
+- [Zk-kit](https://zkkit.pse.dev/): Zestaw bibliotek (algorytmów, funkcji narzędziowych i struktur danych), które można ponownie wykorzystać w różnych projektach i protokołach z wiedzą zerową.
+- [Privacy Apps](/apps/categories/privacy/) – Odkryj wyselekcjonowaną listę aplikacji chroniących prywatność, które działają w Ethereum.

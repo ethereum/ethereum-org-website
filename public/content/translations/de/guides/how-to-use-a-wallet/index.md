@@ -1,93 +1,91 @@
 ---
 title: Wie man eine Wallet verwendet
-metaTitle: "Wie man Ethereum-Wallets verwendet | Schritt für Schritt"
-description: "Ein Leitfaden, der erklärt, wie man Token sendet, empfängt und sich mit Web3-Projekten verbindet."
+metaTitle: Wie man Ethereum-Wallets verwendet | Schritt für Schritt
+description: Ein Leitfaden, der erklärt, wie man Token sendet, empfängt und sich mit Web3-Projekten verbindet.
 lang: de
 ---
 
-# Wie man eine Wallet verwendet
+Lerne, wie du alle grundlegenden Funktionen einer Wallet bedienst. Wenn du noch keine hast, sieh dir unseren Leitfaden [Wie man ein Ethereum-Konto erstellt](/guides/how-to-create-an-ethereum-account/) an.
 
-Erfahren Sie, wie Sie alle grundlegenden Funktionen einer Wallet bedienen. Wenn Sie noch keine haben, lesen Sie unseren Leitfaden [Wie man ein Ethereum-Konto erstellt](/guides/how-to-create-an-ethereum-account/).
+## Öffne deine Wallet {#open-your-wallet}
 
-## Öffnen Sie Ihre Wallet
+Du solltest ein Dashboard sehen, das wahrscheinlich dein Guthaben anzeigt und Schaltflächen zum Senden und Empfangen von Token enthält.
 
-Sie sollten ein Dashboard sehen, das wahrscheinlich Ihr Guthaben anzeigt und Schaltflächen zum Senden und Empfangen von Token enthält.
+## Kryptowährung empfangen {#receive-cryptocurrency}
 
-## Kryptowährung empfangen
+Möchtest du Krypto in deiner Wallet empfangen?
 
-Möchten Sie Krypto in Ihrer Wallet empfangen?
+Jedes Ethereum-Konto hat seine eigene Empfangsadresse, die eine eindeutige Folge von Zahlen und Buchstaben ist. Die Adresse funktioniert wie eine Bankkontonummer. Ethereum-Adressen beginnen immer mit „0x“. Du kannst diese Adresse mit jedem teilen: Es ist sicher, dies zu tun.
 
-Jedes Ethereum-Konto hat seine eigene Empfangsadresse, die eine eindeutige Folge von Zahlen und Buchstaben ist. Die Adresse funktioniert wie eine Bankkontonummer. Ethereum-Adressen beginnen immer mit „0x“. Sie können diese Adresse mit jedem teilen: Es ist sicher, dies zu tun.
+Deine Adresse ist wie deine Wohnadresse: Du musst den Leuten mitteilen, wie sie lautet, damit sie dich finden können. Es ist sicher, dies zu tun, da du deine Haustür immer noch mit einem anderen Schlüssel abschließen kannst, den nur du kontrollierst, sodass niemand eindringen kann, selbst wenn er weiß, wo du wohnst.
 
-Ihre Adresse ist wie Ihre Wohnadresse: Sie müssen den Leuten mitteilen, wie sie lautet, damit sie Sie finden können. Es ist sicher, dies zu tun, da Sie Ihre Haustür immer noch mit einem anderen Schlüssel abschließen können, den nur Sie kontrollieren, sodass niemand eindringen kann, selbst wenn er weiß, wo Sie wohnen.
+Du musst jedem, der dir Geld senden möchte, deine öffentliche Adresse mitteilen. Viele Wallet-Apps ermöglichen es dir, deine Adresse zu kopieren oder einen QR-Code zum Scannen anzuzeigen, um die Nutzung zu erleichtern. Vermeide es, eine Ethereum-Adresse manuell einzutippen. Dies kann leicht zu Tippfehlern und verlorenen Geldern führen.
 
-Sie müssen jedem, der Ihnen Geld senden möchte, Ihre öffentliche Adresse mitteilen. Viele Wallet-Apps ermöglichen es Ihnen, Ihre Adresse zu kopieren oder einen QR-Code zum Scannen anzuzeigen, um die Nutzung zu erleichtern. Vermeiden Sie es, eine Ethereum-Adresse manuell einzugeben. Dies kann leicht zu Tippfehlern und verlorenen Geldern führen.
+Verschiedene Apps können variieren oder eine andere Sprache verwenden, aber sie sollten dich durch einen ähnlichen Prozess führen, wenn du versuchst, Gelder zu transferieren.
 
-Verschiedene Apps können variieren oder eine andere Sprache verwenden, aber sie sollten Sie durch einen ähnlichen Prozess führen, wenn Sie versuchen, Gelder zu überweisen.
+1. Öffne deine Wallet-App.
+2. Klicke auf "Empfangen" (oder eine ähnlich formulierte Option).
+3. Kopiere deine Ethereum-Adresse in die Zwischenablage.
+4. Teile dem Absender deine Ethereum-Empfangsadresse mit.
 
-1. Öffnen Sie Ihre Wallet-App.
-2. Klicken Sie auf "Empfangen" (oder eine ähnlich formulierte Option).
-3. Kopieren Sie Ihre Ethereum-Adresse in die Zwischenablage.
-4. Teilen Sie dem Absender Ihre Ethereum-Empfangsadresse mit.
+## Kryptowährung senden {#send-cryptocurrency}
 
-## Kryptowährung senden
+Möchtest du ETH an eine andere Wallet senden?
 
-Möchten Sie ETH an eine andere Wallet senden?
+1. Öffne deine Wallet-App.
+2. Besorge dir die Empfangsadresse und stelle sicher, dass du mit demselben Netzwerk wie der Empfänger verbunden bist.
+3. Gib die Empfangsadresse ein oder scanne einen QR-Code mit deiner Kamera, damit du die Adresse nicht manuell schreiben musst.
+4. Klicke in deiner Wallet auf die Schaltfläche „Senden“ (oder eine ähnlich formulierte Alternative).
 
-1. Öffnen Sie Ihre Wallet-App.
-2. Besorgen Sie sich die Empfangsadresse und stellen Sie sicher, dass Sie mit demselben Netzwerk wie der Empfänger verbunden sind.
-3. Geben Sie die Empfangsadresse ein oder scannen Sie einen QR-Code mit Ihrer Kamera, damit Sie die Adresse nicht manuell schreiben müssen.
-4. Klicken Sie in Ihrer Wallet auf die Schaltfläche „Senden“ (oder eine ähnlich formulierte Alternative).
-
-![Senden-Feld für Krypto-Adresse](./send.png)
+![Send field for crypto address](./send.png)
 <br/>
 
-5. Viele Vermögenswerte wie DAI oder USDC existieren in mehreren Netzwerken. Stellen Sie beim Überweisen von Krypto-Token sicher, dass der Empfänger dasselbe Netzwerk wie Sie verwendet, da diese nicht austauschbar sind.
-6. Stellen Sie sicher, dass Ihre Wallet über ausreichend ETH verfügt, um die Transaktionsgebühr zu decken, die je nach Netzwerkbedingungen variiert. Die meisten Wallets fügen der Transaktion automatisch die vorgeschlagene Gebühr hinzu, die Sie dann bestätigen können.
-7. Sobald Ihre Transaktion verarbeitet wurde, wird der entsprechende Krypto-Betrag auf dem Konto des Empfängers angezeigt. Dies kann je nach aktueller Auslastung des Netzwerks einige Sekunden bis einige Minuten dauern.
+5. Viele Vermögenswerte, wie DAI oder USDC, existieren in mehreren Netzwerken. Wenn du Krypto-Token transferierst, stelle sicher, dass der Empfänger dasselbe Netzwerk wie du verwendet, da diese nicht austauschbar sind.
+6. Stelle sicher, dass deine Wallet über ausreichend ETH verfügt, um die Transaktionsgebühr zu decken, die je nach Netzwerkbedingungen variiert. Die meisten Wallets fügen der Transaktion automatisch die vorgeschlagene Gebühr hinzu, die du dann bestätigen kannst.
+7. Sobald deine Transaktion verarbeitet wurde, wird der entsprechende Krypto-Betrag auf dem Konto des Empfängers angezeigt. Dies kann je nach aktueller Auslastung des Netzwerks von wenigen Sekunden bis zu einigen Minuten dauern.
 
-## Mit Projekten verbinden
+## Mit Projekten verbinden {#connecting-to-projects}
 
-Ihre Adresse ist in allen Ethereum-Projekten dieselbe. Sie müssen sich bei keinem Projekt einzeln registrieren. Sobald Sie eine Wallet haben, können Sie sich ohne zusätzliche Informationen mit jedem Ethereum-Projekt verbinden. Es werden keine E-Mails oder andere persönliche Informationen benötigt.
+Deine Adresse ist in allen Ethereum-Projekten dieselbe. Du musst dich bei keinem Projekt einzeln registrieren. Sobald du eine Wallet hast, kannst du dich ohne zusätzliche Informationen mit jedem Ethereum-Projekt verbinden. Es werden keine E-Mails oder andere persönliche Informationen benötigt.
 
-1. Besuchen Sie die Website eines beliebigen Projekts.
-2. Wenn die Startseite des Projekts nur eine statische Beschreibung des Projekts ist, sollten Sie im Menü auf eine Schaltfläche "App öffnen" klicken können, die Sie zur eigentlichen Web-App weiterleitet.
-3. Sobald Sie in der App sind, klicken Sie auf „Verbinden“.
+1. Besuche die Website eines beliebigen Projekts.
+2. Wenn die Startseite des Projekts nur eine statische Beschreibung des Projekts ist, solltest du im Menü auf eine Schaltfläche wie "App öffnen" klicken können, die dich zur eigentlichen Web-App weiterleitet.
+3. Sobald du in der App bist, klicke auf „Verbinden“.
 
-![Schaltfläche, die es dem Benutzer ermöglicht, sich mit einer Wallet mit der Website zu verbinden](./connect1.png)
+![Button allowing user to connect to the website with a wallet](./connect1.png)
 
-4. Wählen Sie Ihre Wallet aus der bereitgestellten Optionsliste aus. Wenn Sie Ihre Wallet nicht sehen können, ist sie möglicherweise unter der Option „WalletConnect“ verborgen.
+4. Wähle deine Wallet aus der bereitgestellten Optionsliste aus. Wenn du deine Wallet nicht sehen kannst, ist sie möglicherweise unter der Option „WalletConnect“ verborgen.
 
-![Auswahl aus einer Liste von Wallets zur Verbindung](./connect2.png)
+![Selecting from a list of wallets to connect with](./connect2.png)
 
-5. Bestätigen Sie die Signaturanfrage in Ihrer Wallet, um die Verbindung herzustellen. **Das Signieren dieser Nachricht sollte keine ETH kosten**.
-6. Das war's! Beginnen Sie mit der Nutzung der App. Sie können einige interessante Projekte auf unserer [Dapps-Seite](/apps/#explore) finden.
+5. Bestätige die Signaturanfrage in deiner Wallet, um die Verbindung herzustellen. **Das Signieren dieser Nachricht sollte keine Ausgabe von ETH erfordern**.
+6. Das war's! Beginne mit der Nutzung der App. Du kannst einige interessante Projekte auf unserer [Dapps-Seite](/apps/#explore) finden.
    <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Möchten Sie mehr erfahren?</div>
+  <div>Möchtest du mehr erfahren?</div>
   <ButtonLink href="/guides/">
-    Sehen Sie sich unsere anderen Leitfäden an
+    Sieh dir unsere anderen Leitfäden an
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Häufig gestellte Fragen
+## Häufig gestellte Fragen {#frequently-asked-questions}
 
-### Wenn ich eine ETH-Adresse besitze, besitze ich dann dieselbe Adresse auf anderen Blockchains?
+### Wenn ich eine ETH-Adresse besitze, besitze ich dann dieselbe Adresse auf anderen Blockchains? {#if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains}
 
-Sie können dieselbe Adresse auf allen EVM-kompatiblen Blockchains verwenden (wenn Sie eine Wallet mit einer Wiederherstellungsphrase haben). Diese [Liste](https://chainlist.org/) zeigt Ihnen, welche Blockchains Sie mit derselben Adresse verwenden können. Einige Blockchains, wie Bitcoin, implementieren völlig andere Netzwerkregeln, und Sie benötigen eine andere Adresse mit einem anderen Format. Wenn Sie eine Smart Contract-Wallet haben, sollten Sie auf der Produktwebsite nach weiteren Informationen darüber suchen, welche Blockchains unterstützt werden.
+Du kannst dieselbe Adresse auf allen EVM-kompatiblen Blockchains verwenden (wenn du eine Wallet mit einer Wiederherstellungsphrase hast). Diese [Liste](https://chainlist.org/) zeigt dir, welche Blockchains du mit derselben Adresse verwenden kannst. Einige Blockchains, wie Bitcoin, implementieren ein völlig separates Set von Netzwerkregeln, und du benötigst eine andere Adresse mit einem anderen Format. Wenn du eine Smart Contract-Wallet hast, solltest du auf deren Produkt-Website nach weiteren Informationen darüber suchen, welche Blockchains unterstützt werden.
 
-### Kann ich dieselbe Adresse auf mehreren Geräten verwenden?
+### Kann ich dieselbe Adresse auf mehreren Geräten verwenden? {#can-i-use-the-same-address-on-multiple-devices}
 
-Ja, Sie können dieselbe Adresse auf mehreren Geräten verwenden. Wallets sind technisch gesehen nur eine Schnittstelle, um Ihnen Ihr Guthaben anzuzeigen und Transaktionen durchzuführen. Ihr Konto wird nicht in der Wallet gespeichert, sondern auf der Blockchain.
+Ja, du kannst dieselbe Adresse auf mehreren Geräten verwenden. Wallets sind technisch gesehen nur eine Schnittstelle, um dir dein Guthaben anzuzeigen und Transaktionen durchzuführen; dein Konto ist nicht in der Wallet gespeichert, sondern auf der Blockchain.
 
-### Ich habe die Krypto nicht erhalten, wo kann ich den Status einer Transaktion überprüfen?
+### Ich habe die Krypto nicht erhalten, wo kann ich den Status einer Transaktion überprüfen? {#i-have-not-received-the-crypto-where-can-i-check-the-status-of-a-transaction}
 
-Sie können [Blocksuchmaschinen](/developers/docs/data-and-analytics/block-explorers/) verwenden, um den Status jeder Transaktion in Echtzeit zu sehen. Alles, was Sie tun müssen, ist nach Ihrer Wallet-Adresse oder der ID der Transaktion zu suchen.
+Du kannst [Block-Explorer](/developers/docs/data-and-analytics/block-explorers/) verwenden, um den Status jeder Transaktion in Echtzeit zu sehen. Alles, was du tun musst, ist nach deiner Wallet-Adresse oder der ID der Transaktion zu suchen.
 
-### Kann ich Transaktionen stornieren oder rückgängig machen?
+### Kann ich Transaktionen abbrechen oder rückgängig machen? {#can-i-cancel-or-return-transactions}
 
-Nein, sobald eine Transaktion bestätigt ist, können Sie die Transaktion nicht mehr stornieren.
+Nein, sobald eine Transaktion bestätigt ist, kannst du die Transaktion nicht mehr abbrechen.

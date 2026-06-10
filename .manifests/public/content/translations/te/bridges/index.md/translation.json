@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-08T07:06:36.459Z",
+  "englishManifestHash": "31745535146c",
+  "placeholderOrder": [
+    "LINK-f50767",
+    "LINK-a21a82",
+    "LINK-1f3f3f",
+    "LINK-c5a507",
+    "LINK-8b61d5",
+    "LINK-d7edfc",
+    "LINK-b528f1",
+    "LINK-c70efa",
+    "LINK-e9d9af",
+    "LINK-09f5e8",
+    "LINK-7b68bc",
+    "LINK-33d03f",
+    "LINK-74b3ba",
+    "LINK-80659f",
+    "LINK-d86d6d",
+    "LINK-c329fd",
+    "LINK-11c94f",
+    "LINK-126859",
+    "LINK-4c0e0c",
+    "LINK-27c687",
+    "LINK-572c2b",
+    "LINK-5ba9aa",
+    "LINK-cffd98",
+    "LINK-f8d2bf",
+    "LINK-616160"
+  ],
+  "placeholderMap": {
+    "LINK-f50767": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#blockchain"
+      }
+    },
+    "LINK-1f3f3f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ether"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-c5a507": {
+      "type": "link",
+      "values": {
+        "url": "https://arbitrum.io/"
+      }
+    },
+    "LINK-8b61d5": {
+      "type": "link",
+      "values": {
+        "url": "https://portal.arbitrum.io/bridge"
+      }
+    },
+    "LINK-d7edfc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#rollups"
+      }
+    },
+    "LINK-b528f1": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#consensus"
+      }
+    },
+    "LINK-c70efa": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#dapp"
+      }
+    },
+    "LINK-e9d9af": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-use-a-bridge/"
+      }
+    },
+    "LINK-09f5e8": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#erc-20"
+      }
+    },
+    "LINK-7b68bc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#defi"
+      }
+    },
+    "LINK-33d03f": {
+      "type": "link",
+      "values": {
+        "url": "/get-eth"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-80659f": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17"
+      }
+    },
+    "LINK-d86d6d": {
+      "type": "link",
+      "values": {
+        "url": "https://l2beat.com/bridges/summary"
+      }
+    },
+    "LINK-c329fd": {
+      "type": "link",
+      "values": {
+        "url": "https://l2beat.com/bridges/summary"
+      }
+    },
+    "LINK-11c94f": {
+      "type": "link",
+      "values": {
+        "url": "https://defillama.com/bridges/Ethereum"
+      }
+    },
+    "LINK-126859": {
+      "type": "link",
+      "values": {
+        "url": "https://rekt.news/wormhole-rekt/"
+      }
+    },
+    "LINK-4c0e0c": {
+      "type": "link",
+      "values": {
+        "url": "https://rekt.news/leaderboard/"
+      }
+    },
+    "LINK-27c687": {
+      "type": "link",
+      "values": {
+        "url": "https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/"
+      }
+    },
+    "LINK-572c2b": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658"
+      }
+    },
+    "LINK-5ba9aa": {
+      "type": "link",
+      "values": {
+        "url": "https://gov.l2beat.com/t/l2bridge-risk-framework/31"
+      }
+    },
+    "LINK-cffd98": {
+      "type": "link",
+      "values": {
+        "url": "https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/"
+      }
+    },
+    "LINK-f8d2bf": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability"
+      }
+    },
+    "LINK-616160": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:06:36.459Z",
+      "status": "success"
+    }
+  }
+}

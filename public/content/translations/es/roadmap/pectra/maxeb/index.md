@@ -1,205 +1,204 @@
 ---
-title: MaxEB de Pectra
-description: "Más información sobre MaxEB en la publicación de Pectra"
+title: MaxEB
+metaTitle: Pectra MaxEB
+description: Obtén más información sobre MaxEB en la actualización Pectra
 lang: es
+authors: ["Nixo"]
 ---
 
-# MaxEB {#maxeb}
+*Resumen:* La bifurcación dura Pectra permite a los validadores de Ethereum optar por un saldo efectivo máximo más alto y capitalización (compounding) al convertir sus credenciales de retiro de **Tipo 1** a **Tipo 2**. La herramienta oficial para hacer esto es el Launchpad. Esta operación no se puede revertir.
 
-_tl;dr:_ La bifurcación dura Petra permite a los validadores de Ethereum optar por un balance efectivo máximo más alto y por intereses sobre intereses mediante la conversión de los credenciales de retirada de **Tipo 1** a los de **Tipo 2**. La herramienta oficial para hacer esto es el lanzador. Esta operación no se puede revertir.
+## Descripción general {#overview}
 
-## Presentación {#overview}
+### ¿A quién afecta? {#who-is-affected}
 
-### ¿A quién le afecta? {#who-is-affected}
+Cualquiera que ejecute un validador: probablemente sea alguien que conozca el índice (por ejemplo, [Validador #12345](https://beaconcha.in/validator/12345)) de un validador que controla. Si utilizas un protocolo para ejecutar un validador (por ejemplo, Lido CSM o Rocket Pool), tendrás que consultar con ellos para ver si admiten MaxEB y cuándo lo harán.
 
-Todos los que ejecuten un validador —probablemente sea alguien que conoce el índice (p. ej., [Validador #12345](https://beaconcha.in/validator/12345)) de un validador bajo su control—. Si usa un protocolo para ejecutar un validador (p. ej., Lido CSM o Rocket Pool), tendrá que consultar con ellos para ver si admiten maxEB y cuándo lo admiten.
+Si haces staking utilizando un token de staking líquido (LST) (por ejemplo, rETH o stETH), no se requiere ni se recomienda ninguna acción.
 
-Si hace staking con un token de staking líquido (p. ej., rETH o stETH), no se requiere ni se recomienda ninguna acción.
+### ¿Qué es "MaxEB"? {#what-is-maxeb}
 
-### ¿Qué es «maxEB»? {#what-is-maxeb}
+MaxEB = el saldo efectivo máximo (MAXimum Effective Balance) de un validador. Hasta la bifurcación dura Pectra, cada validador obtiene recompensas sobre un máximo de 32 ETH. Después de Pectra, los validadores tienen la opción de obtener recompensas sobre cualquier saldo entre 32 y 2048 ETH, en incrementos de 1 ETH, si optan por este cambio.
 
-maxEB = balance máximo efectivo de un validador. Hasta la bifurcación dura Pectra, cada validador gana sobre un máximo de 32 ETH. Después de Pectra, los validadores tienen la opción de ganar sobre cualquier balance entre 32 y 2048 ETH, en incrementos de 1 ETH optando participar en el cambio.
+### ¿Cómo opta por participar un validador? {#how-does-a-validator-opt-in}
 
-### ¿Cómo elige participar un validador? {#how-does-a-validator-opt-in}
+Un validador opta por el cambio a MaxEB convirtiendo sus credenciales de retiro de **Tipo 1** a **Tipo 2**. Esto se puede hacer en el [Launchpad (Acciones del validador)](https://launchpad.ethereum.org/validator-actions) después de que la bifurcación dura Pectra entre en funcionamiento. Al igual que con el **Tipo 0** → **Tipo 1**, la conversión de **Tipo 1** → **Tipo 2** es un proceso irreversible.
 
-Un validador elige participar en el cambio maxEB pasando de los credenciales de retirada de **Tipo 1** a los de **Tipo 2**. Esto puede hacerse en [Launchpad (Acciones del validador)](https://launchpad.ethereum.org/validator-actions) después de que se active la bifurcación dura Pectra. Como con **Tipo 0** → **Tipo 1**, convertir de **Tipo 1** → **Tipo 2** es un proceso irreversible.
+### ¿Qué son las credenciales de retiro? {#whats-a-withdrawal-credential}
 
-### ¿Qué es una credencial de retirada? {#whats-a-withdrawal-credential}
+Cuando ejecutas un validador, tienes un conjunto de credenciales de retiro. Estas se pueden encontrar en el archivo json de datos de tu depósito o puedes verlas en la [pestaña de depósitos](https://beaconcha.in/validator/12345#deposits) de tu validador en beaconcha.in.
 
-Cuando ejecuta un validador, tiene un conjunto de credenciales de retirada. Estos se pueden encontrar en los datos de depósito json o se pueden ver en el beaconcha.in de su validador [pestaña de depósito].
-(https://beaconcha.in/validator/12345#deposits).
+1. Credenciales de retiro de **Tipo 0**: Si las credenciales de retiro de tu validador comienzan con `0x00...`, depositaste antes de la bifurcación dura Shapella y aún no tienes configurada una dirección de retiro.
 
-1. Credenciales de retirada de **tipo 0**: si las credenciales de retirada de su validador comienzan con `0x00...`, usted realizó un depósito antes de la bifurcación dura de Shapella y aún no tiene una dirección de retirada configurada.
+![Type 0 withdrawal credential](./0x00-wd.png)
 
-![Credencial de retirada de tipo 0](./0x00-wd.png)
+2. Credenciales de retiro de **Tipo 1**: Si las credenciales de retiro de tu validador comienzan con `0x01...`, depositaste después de la bifurcación dura Shapella o ya convertiste tus credenciales de **Tipo 0** a credenciales de **Tipo 1**.
 
-2. Credenciales de retirada de **tipo 1**: si los credenciales de retirada de su validador comienzan por `0x01...`, usted realizó un depósito antes de la bifurcación dura de Shapella o ya convirtió sus credenciales de **tipo 0** a credenciales de **tipo 1**.
+ ![Type 1 withdrawal credential](./0x01-wd.png)
 
-![Credencial de retirada de tipo 1](./0x01-wd.png)
+3. Credenciales de retiro de **Tipo 2**: Este nuevo tipo de credencial de retiro comenzará con `0x02...` y se habilitará después de Pectra. A los validadores con credenciales de retiro de **Tipo 2** a veces se les llama "**validadores de capitalización**" (compounding validators).
 
-3. Credenciales de retirada de **tipo 2**: este nuevo tipo de credencial de retirada comenzará por `0x02...` y se habilitará después de Pectra. Los validadores con credenciales de **tipo 2** a veces son llamados **validadores compuestos**
-
-| **Permitido**     | **No permitido**  |
-| ----------------- | ----------------- |
-| ✅ Tipo 0 → Tipo 1 | ❌ Tipo 0 → Tipo 2 |
-| ✅ Tipo 1 → Tipo 2 | ❌ Tipo 1 → Tipo 0 |
-|                   | ❌ Tipo 2 → Tipo 1 |
-|                   | ❌ Tipo 2 → Tipo 0 |
+| **Permitido** | **No permitido** |
+| --- | --- |
+| ✅ Tipo 0 → Tipo 1 | ❌ Tipo 0 → Tipo 2 |
+| ✅ Tipo 1 → Tipo 2 | ❌ Tipo 1 → Tipo 0 |
+|  | ❌ Tipo 2 → Tipo 1 |
+|  | ❌ Tipo 2 → Tipo 0 |
 
 ### Riesgos {#risks}
 
-MaxEB permite a un validador mandar todo su balance a otro validador. Los usuarios que envíen una solicitud de consolidación deben verificar el origen y el contenido de la transacción que están firmando. La herramienta oficial para sacarle partido a las funcionalidades de maxEB es el lanzador. Si decide usar una herramienta de terceros, debería comprobar que:
+MaxEB permite a un validador enviar todo su saldo a otro validador. Los usuarios que envíen una solicitud de consolidación deben verificar el origen y el contenido de la transacción que están firmando. La herramienta oficial para aprovechar las funciones de MaxEB es el Launchpad. Si decides utilizar una herramienta de terceros, debes verificar que:
 
-- La clave pública de la fuente del validador y la dirección de retirada coinciden con el validador que controlan
-- La clave pública del validador de destino es correcta y les pertenece
-- La petición es una conversión, no una consolidación, si no tienen intención de enviar fondos a otro validador
-- La transacción se está firmando por la dirección de retirada correcta
+- La clave pública (pubkey) y la dirección de retiro del validador de origen coincidan con el validador que controlan.
+- La clave pública del validador de destino sea correcta y les pertenezca.
+- La solicitud sea una conversión, no una consolidación, si no tienen la intención de enviar fondos a otro validador.
+- La transacción esté siendo firmada por la dirección de retiro correcta.
 
-**Recomendamos encarecidamente** que delibere sobre cualquier herramienta de terceros que tenga pensado usar con la [comunidad de EthStaker](https://ethstaker.org/about). Es un lugar útil para verificar la sensatez de su enfoque y evitar errores. Si usa una herramienta maliciosa o mal configurada, **el balance completo de su validador podría envuarse a un validador que no controla** —y no hay forma de recuperarlo—.
+**Recomendamos encarecidamente** discutir cualquier herramienta de terceros que planees utilizar con la [comunidad de EthStaker](https://ethstaker.org/about). Es un lugar útil para comprobar que tu enfoque tiene sentido y evitar errores. Si utilizas una herramienta maliciosa o mal configurada, **todo el saldo de tu validador podría enviarse a un validador que no controlas**, sin forma de recuperarlo.
 
 ## Detalles técnicos {#technical-details}
 
 ### El flujo {#the-flow}
 
-Habrá dos usos posibles de la operación `ConsolidationRequest`:
+Habrá dos usos para la operación `ConsolidationRequest`:
 
-1. Convertir un validador existente de **tipo 1** a un validador de **tipo 2**
-2. Consolidar otros validadores en un validador de **tipo 2** existente
+1. Convertir un validador existente de **Tipo 1** a un validador de **Tipo 2**.
+2. Consolidar otros validadores en un validador de **Tipo 2** existente.
 
-En una conversión de un validador **Tipo 1** a un validador **Tipo 2**, tanto la _fuente_ como el _objetivo_ serán el validador que está convirtiendo. La operación costará gas y se pondrá a la cola detrás de otras solicitudes de consolidación. Esta cola está **separada** de la cola de depósitos y no se ve afectada por los nuevos depósitos de validador y se puede ver en [pectrified.com](https://pectrified.com/).
+En una conversión de un validador de **Tipo 1** a uno de **Tipo 2**, tanto el *origen* como el *destino* serán el validador que estás convirtiendo. La operación costará gas y se pondrá en cola detrás de otras solicitudes de consolidación. Esta cola es **independiente** de la cola de depósitos, no se ve afectada por los depósitos de nuevos validadores y se puede ver en [pectrified.com](https://pectrified.com/).
 
-Para consolidar los validadores, debe tener un _validador de destino_ que tenga una credencial de retirada **Tipo 2**. Este es el destino de cualquier saldo validador que se consolide y que se conserve el índice.
+Para consolidar validadores, debes tener un *validador de destino* que tenga credenciales de retiro de **Tipo 2**. Este es el destino de cualquier saldo de validador que se esté consolidando, y el índice que se conservará.
 
-### Requisitos para convertir a tipo 2 {#requirements-for-converting-to-type-2}
+### Requisitos para convertir al Tipo 2 {#requirements-for-converting-to-type-2}
 
-Esto será necesario para el primer validador que convierta a **Tipo 2**. El índice de este validador se conserva y está activo. Para una conversión, el _validador de origen_ == el \*validador de destino. \*
+Esto será necesario para el primer validador que conviertas al **Tipo 2**. El índice de este validador se conserva y permanece activo. Para una conversión, el *validador de origen* == el *validador de destino*.
 
 El validador debe...
 
 - estar activo
-- tener credenciales de retirada de **tipo 1**
-- no estar en un estado de salida (o cortado)
-- no tener retiradas activadas manualmente pendientes (no se aplica a los barridos)
+- tener credenciales de retiro de **Tipo 1**
+- no estar en estado de salida (ni haber sufrido un recorte)
+- no tener retiros pendientes activados manualmente (no se aplica a los barridos automáticos)
 
-![Ilustración de conversión](./conversion.png)
+![conversion illustration](./conversion.png)
 
 ### Requisitos para consolidar {#requirements-for-consolidating}
 
-Esta es la _misma operación_ que la conversión, pero es cuando el _validador de origen_ es diferente del _validador de destino_. El índice del validador de destino se conserva y acepta el saldo del validador de origen. El índice del validador de origen se pone en un estado `EXITED`.
+Esta es la *misma operación* que la conversión, pero ocurre cuando el *validador de origen* es diferente del *validador de destino*. El índice del validador de destino se conserva y acepta el saldo del validador de origen. El índice del validador de origen pasa a un estado `EXITED`.
 
-En este caso, el validador de código fuente tiene todos los mismos requisitos que los anteriores, además de:
+En este caso, el validador de origen tiene los mismos requisitos anteriores, además de:
 
-- haber estado activo durante al menos ~27,3 horas (uno `SHARD_COMMITTEE_PERIOD`)
+- haber estado activo durante al menos ~27,3 horas (un `SHARD_COMMITTEE_PERIOD`).
 
-El validador de destino debe
+El validador de destino debe:
 
-- tener credenciales de retirada del **tipo 2**
-- no estar en un estado de salida.
+- tener credenciales de retiro de **Tipo 2**
+- no estar en estado de salida.
 
-![Ilustración de consolidación](./consolidation.png)
+![consolidation illustration](./consolidation.png)
 
-### La petición de consolidación {#the-consolidation-request}
+### La solicitud de consolidación {#the-consolidation-request}
 
-La solicitud de consolidación la firmará la dirección de retirada asociada con el validador de origen y tendrá:
+La solicitud de consolidación será firmada por la dirección de retiro asociada con el validador de origen y contendrá:
 
-1. Dirección del validador de origen (p. ej., `0x15F4B914A0cCd14333D850ff311d6DafbFbAa32b`)
-2. Clave pública del validador de origen (p. ej., `0xa1d1ad0714035353258038e964ae9675dc0252ee22cea896825c01458e1807bfad2f9969338798548d9858a571f7425c`)
-3. Clave pública de ese validador de destino
+1. Dirección del validador de origen (por ejemplo, `0x15F4B914A0cCd14333D850ff311d6DafbFbAa32b`).
+2. Clave pública del validador de origen (por ejemplo, `0xa1d1ad0714035353258038e964ae9675dc0252ee22cea896825c01458e1807bfad2f9969338798548d9858a571f7425c`).
+3. Clave pública del validador de destino.
 
-En una conversión, 2 y 3 serán iguales. Esta operación se puede hacer en [el lanzador](https://launchpad.ethereum.org/).
+En una conversión, 2 y 3 serán iguales. Esta operación se puede realizar en [el Launchpad](https://launchpad.ethereum.org/).
 
 ### Requisitos de firma {#signing-requirements}
 
-Para enviar una `ConsolidationRequest`, la **dirección de retirada del validador de origen** debe firmar la solicitud. Esto demuestra el control sobre los fondos del validador.
+Para enviar una `ConsolidationRequest`, la **dirección de retiro del validador de origen** debe firmar la solicitud. Esto demuestra el control sobre los fondos del validador.
 
-### ¿Qué se ha firmado? {#what-is-signed}
+### ¿Qué se firma? {#what-is-signed}
 
-Se utiliza una [raíz de firma] separada por dominio (https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md#compute_signing_root) del objeto `ConsolidationRequest`.
+Se utiliza una [raíz de firma](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md#compute_signing_root) (signing root) con separación de dominios del objeto `ConsolidationRequest`.
 
 - **Dominio:** `DOMAIN_CONSOLIDATION_REQUEST`
-- **Firmando campos raíz:**
+- **Campos de la raíz de firma:**
   - `source_pubkey`: `BLSPubkey`
   - `target_pubkey`: `BLSPubkey`
   - `source_address`: `ExecutionAddress`
 
 La **firma BLS** resultante se envía junto con la solicitud.
 
-Nota: la firma se realiza mediante la dirección de retirada, no con la clave de validación.
+Nota: La firma la realiza la dirección de retiro, no la clave del validador.
 
-### Retiradas parciales {#partial-withdrawals}
+### Retiros parciales {#partial-withdrawals}
 
-Los validadores con credenciales **Tipo 1** obtienen barridos automáticos sin gas de su exceso de saldo (cualquier cosa por encima de 32 ETH) a su dirección de retirada. Debido a que **Tipo 2** permite a un validador componer saldos en incrementos de 1 ETH, no barrerá automáticamente los saldos hasta que alcance 2048 ETH. Las retiradas parciales en los validadores **Tipo 2** deben activarse manualmente y costarán gas.
+Los validadores con credenciales de **Tipo 1** obtienen barridos automáticos y sin costo de gas de su saldo excedente (cualquier cantidad superior a 32 ETH) hacia su dirección de retiro. Debido a que el **Tipo 2** permite a un validador capitalizar saldos en incrementos de 1 ETH, no barrerá automáticamente los saldos hasta que alcance los 2048 ETH. Los retiros parciales en validadores de **Tipo 2** deben activarse manualmente y costarán gas.
 
 ## Herramientas de consolidación {#consolidation-tooling}
 
-Hay varias herramientas disponibles para gestionar las consolidaciones. La herramienta oficial, creada por Ethereum Foundation, es [Launchpad](https://launchpad.ethereum.org/en/validator-actions). También hay herramientas de terceros creadas por entidades de la comunidad de participaciones que pueden ofrecer características que no proporcione el lanzador. Si bien Ethereum Foundation no audita ni respalda las herramientas aquí, las siguientes son herramientas de código abierto de miembros conocidos de la comunidad.
+Hay varias herramientas disponibles para gestionar las consolidaciones. La herramienta oficial, creada por la Fundación Ethereum, es el [Launchpad](https://launchpad.ethereum.org/en/validator-actions). También existen herramientas de terceros creadas por entidades de la comunidad de staking que pueden ofrecer funciones no proporcionadas por el Launchpad. Aunque las herramientas que se muestran aquí no están auditadas ni respaldadas por la Fundación Ethereum, las siguientes son herramientas de código abierto creadas por miembros conocidos de la comunidad.
 
-| Herramienta                                | Sitio web                                                                                                 | Código abierto                 | Creador                                        | Auditado                                                                                                                                               | Interfaz                                                                                | Características destacables                                                                          |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------ | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Administrador de participaciones de Pectra | pectrastaking.com                                                                         | Sí, Apache 2.0 | [Pier Two](https://piertwo.com/)               | No                                                                                                                                                     | Interfaz de usuario web                                                                 | Wallet Connect, funciona con SAFE                                                                    |
-| Herramienta CLI de Pectra Validator Ops    | [GitHub](https://github.com/Luganodes/Pectra-Batch-Contract)                                              | Sí, MIT                        | [Luganodes](https://www.luganodes.com/)        | Sí, cuantstamp [mayo de 2025](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html) | Línea de comandos                                                                       | Batching, para muchos validadores a la vez                                                           |
-| Ethereal                                   | [GitHub](https://github.com/wealdtech/ethereal)                                                           | Sí, Apache 2.0 | [Jim McDonald](https://www.attestant.io/team/) | No                                                                                                                                                     | Línea de comandos                                                                       | Lista completa de características para la gestión de validadores y nodos                             |
-| Siren                                      | [GitHub](https://github.com/sigp/siren)                                                                   | Sí, Apache 2.0 | [Sigma Prime](https://sigmaprime.io/)          | No                                                                                                                                                     | Algunas líneas de comandos, pero principalmente la interfaz de usuario web              | Solo funciona si está utilizando el cliente de consenso de Lighthouse                                |
-| Consolideth.app            | https://consolideth.app/ [GitHub](https://github.com/Stakely/consolideth) | Sí, licencias MIT              | [Stakely](https://stakely.io/)                 | No                                                                                                                                                     | IU web, alojada por Stakely y lista para ser autoalojada gratuitamente. | Admite conexiones con las principales billeteras, incluyendo Safe con WalletConnect. |
+| Herramienta | Sitio web | Código abierto | Creador | Auditada | Interfaz | Características destacadas |
+| --- | --- | --- | --- | --- | --- | --- |
+| Pectra Staking Manager | pectrastaking.com | Sí, Apache 2.0 | [Pier Two](https://piertwo.com/) | No | Interfaz web | WalletConnect, funciona con SAFE |
+| Pectra Validator Ops CLI Tool | [GitHub](https://github.com/Luganodes/Pectra-Batch-Contract) | Sí, MIT | [Luganodes](https://www.luganodes.com/) | Sí, Quantstamp [Mayo de 2025](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html) | Línea de comandos | Procesamiento por lotes, para muchos validadores a la vez |
+| Ethereal | [GitHub](https://github.com/wealdtech/ethereal) | Sí, Apache 2.0 | [Jim McDonald](https://www.attestant.io/team/) | No | Línea de comandos | Conjunto completo de funciones para la gestión de validadores y nodos |
+| Siren | [GitHub](https://github.com/sigp/siren) | Sí, Apache 2.0 | [Sigma Prime](https://sigmaprime.io/) | No | Algo de línea de comandos, pero principalmente interfaz web | Solo funciona si estás utilizando el cliente de consenso Lighthouse |
+| Consolideth.app | https://consolideth.app/ [GitHub](https://github.com/Stakely/consolideth) | Sí, licencias MIT | [Stakely](https://stakely.io/) | No | Interfaz web, alojada por Stakely y lista para ser autoalojada libremente | Admite las principales conexiones de billeteras, incluyendo Safe con WalletConnect |
 
 ## Preguntas frecuentes {#faq}
 
-### ¿Dar el consentimiento cambia mi propuesta de suerte o recompensas? {#change-luck-or-rewards}
+### ¿Optar por participar cambia mi suerte en las propuestas o mis recompensas? {#change-luck-or-rewards}
 
-No. Dar el consentimiento no disminuye su cambio de propuesta: sus deberes y selección de propuestas siguen siendo los mismos. Por ejemplo, si tiene dos validadores de 32 ETH frente a un validador de 64 ETH, tendrá las mismas posibilidades totales de ser seleccionado para proponer un bloque y ganar recompensas.
+No. Optar por participar no disminuye tus posibilidades de propuesta: tus deberes y la selección de propuestas siguen siendo los mismos. Por ejemplo, si tienes dos validadores de 32 ETH frente a un validador de 64 ETH, tendrás las mismas posibilidades totales de ser seleccionado para proponer un bloque y ganar recompensas.
 
-### ¿Dar consentimiento cambia en algo mis riesgos de sufrir recortes? {#change-slashing-risk}
+### ¿Optar por participar cambia mi riesgo de recorte? {#change-slashing-risk}
 
-Para operadores más pequeños o no profesionales, la respuesta corta es no. La respuesta más larga es que para los operadores profesionales que ejecutan muchos validadores por nodo con alerta rápida, consolidar en menos validadores puede reducir su capacidad de reaccionar a un recorte y evitar eventos en cascada. El recorte inicial de _penalización_ para todos los validadores se ha reducido drásticamente de 1 ETH (por 32 ETH) a 0,0078125 ETH (por 32 ETH) para compensar este riesgo.
+Para los operadores más pequeños o no profesionales, la respuesta corta es no. La respuesta más larga es que, para los operadores profesionales que ejecutan muchos validadores por nodo con alertas rápidas, la consolidación en menos validadores puede reducir su capacidad de reaccionar ante un recorte y prevenir eventos en cascada. La *penalización* inicial por recorte para todos los validadores se ha reducido drásticamente de 1 ETH (por cada 32 ETH) a 0,0078125 ETH (por cada 32 ETH) para compensar este riesgo.
 
-### ¿Tengo que salir de mi validador para convertir? {#exit-validator}
+### ¿Tengo que realizar la salida de mi validador para convertirlo? {#exit-validator}
 
-No. Puede convertir en su lugar sin tener que salir.
+No. Puedes convertirlo en el lugar sin realizar la salida.
 
-### ¿Cuánto tiempo llevará convertir / consolidar? {#how-long}
+### ¿Cuánto tiempo tomará convertir / consolidar? {#how-long}
 
-Un mínimo de 27,3 horas, aunque las consolidaciones también tienen una lista de espera. Esta cola es independiente de los depósitos y las retiradas y no se ve afectada por ellos.
+Un mínimo de 27,3 horas, pero las consolidaciones también están sujetas a una cola. Esta cola es independiente de las colas de depósitos y retiros, y no se ve afectada por ellas.
 
-### ¿Puedo mantener mi índice de validador? {#keep-validator-index}
+### ¿Puedo conservar el índice de mi validador? {#keep-validator-index}
 
-Sí. La conversión en el lugar mantiene el mismo índice de validador. Si consolida múltiples validadores, solo podrá mantener el índice del _validador de destino_.
+Sí. La conversión en el lugar mantiene el mismo índice del validador. Si consolidas varios validadores, solo podrás conservar el índice del *validador de destino*.
 
-### ¿Perderé las certificaciones? {#miss-attestations}
+### ¿Perderé atestaciones? {#miss-attestations}
 
-Durante una consolidación en otro validador, se sale el validador de la fuente y hay un período de espera de ~ 27 horas antes de que el saldo sea activo en el validador de destino. Este período \*\* no afecta las métricas de rendimiento \*\*.
+Durante una consolidación en otro validador, el validador de origen realiza la salida y hay un período de espera de ~27 horas antes de que el saldo esté activo en el validador de destino. Este período **no afecta las métricas de rendimiento**.
 
 ### ¿Incurriré en penalizaciones? {#incur-penalties}
 
-No. Mientras su validador esté en línea, no incurrirá en penalizaciones.
+No. Mientras tu validador esté en línea, no incurrirás en penalizaciones.
 
-### ¿Las direcciones de retirada de los validadores que se consolidan tienen que coincidir? {#withdrawal-addresses-match}
+### ¿Tienen que coincidir las direcciones de retiro de los validadores que se están consolidando? {#withdrawal-addresses-match}
 
-No. Aunque la _fuente_ debe autorizar la solicitud desde su propia dirección.
+No. Pero el *origen* debe autorizar la solicitud desde su propia dirección.
 
-### ¿Mis recompensas se agravarán después de convertir? {#rewards-compound}
+### ¿Se capitalizarán mis recompensas después de la conversión? {#rewards-compound}
 
-Sí. Con credenciales de \*\* Tipo 2 \*\*, las recompensas superiores a 32 ETH se reenvían automáticamente para participación, pero no al instante. Debido a un pequeño búfer (llamado [_histéresis_](https://eth2book.info/capella/part2/incentives/balances/#hysteresis)), su saldo debe alcanzar \*\* alrededor de 1,25 eth más \*\* antes de volver a enviar para participación la cantidad adicional. Entonces, en lugar de capitalizarse a 33,0 ETH, ocurre en 33,25 (saldo efectivo = 33 ETH), luego 34,25 (saldo efectivo = 34 ETH), etc.
+Sí. Con las credenciales de **Tipo 2**, las recompensas superiores a 32 ETH se vuelven a poner en staking automáticamente, pero no al instante. Debido a un pequeño margen (llamado [*histéresis*](https://eth2book.info/capella/part2/incentives/balances/#hysteresis)), tu saldo debe alcanzar **aproximadamente 1,25 ETH más** antes de que el extra se vuelva a poner en staking. Por lo tanto, en lugar de capitalizarse a los 33,0 ETH, ocurre a los 33,25 (saldo efectivo = 33 ETH), luego a los 34,25 (saldo efectivo = 34 ETH), y así sucesivamente.
 
-### ¿Aún puedo obtener barridos automáticos después de convertir? {#automatic-sweep}
+### ¿Aún puedo obtener barridos automáticos después de la conversión? {#automatic-sweep}
 
-Los barridos automáticos solo ocurrirán con exceso de saldos por encima de 2048. Para todas las demás retiradas parciales, tendrá que activarlas manualmente.
+Los barridos automáticos solo ocurrirán con saldos excedentes superiores a 2048. Para todos los demás retiros parciales, deberás activarlos manualmente.
 
 ### ¿Puedo cambiar de opinión y volver del Tipo 2 al Tipo 1? {#go-back-to-type1}
 
-No. La conversión a **tipo 2** es irreversible.
+No. La conversión al **Tipo 2** es irreversible.
 
-### Si quiero consolidar varios validadores, ¿tengo que convertir cada uno a Tipo 2 primero? {#consolidate-multiple-validators}
+### Si quiero consolidar varios validadores, ¿tengo que convertir cada uno al Tipo 2 primero? {#consolidate-multiple-validators}
 
-¡Pues no! Convierta un validador a Tipo 2 y luego úselo como objetivo. Todos los demás validadores consolidados en ese objetivo de Tipo 2 pueden ser Tipo 1 o Tipo 2
+¡No! Convierte un validador al Tipo 2 y luego úsalo como destino. Todos los demás validadores consolidados en ese destino de Tipo 2 pueden ser de Tipo 1 o Tipo 2.
 
-### Mi validador está fuera de línea o por debajo de 32 ETH, ¿todavía puedo convertirlo? {#offline-or-below-32eth}
+### Mi validador está fuera de línea o por debajo de 32 ETH, ¿aún puedo convertirlo? {#offline-or-below-32eth}
 
-Sí. Mientras esté activo (no salga) y pueda firmar con su dirección de retirada, puede convertirlo.
+Sí. Siempre que esté activo (sin haber realizado la salida) y puedas firmar con su dirección de retiro, puedes convertirlo.
 
 ## Recursos {#resources}
 
-- [Especificaciones de consenso de Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-hain.md): esta es la versión más real en la que debe confiar. En caso de duda, lea las especificaciones
-- No todo el mundo se sienten cómodo operando con un código, por eso [este maxeb-gpt](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) interpretar las especificaciones puede servirle de ayuda. _Descargo de responsabilidad: las especificaciones, no la IA, deben confiar en la verdad, ya que la IA puede malinterpretar la información o dar respuestas descabelladas_
-- [pectrified.com](https://pectrifice.com/): ver el estado de consolidaciones, depósitos y tiempos de listas de espera
-- [Ethereal](https://github.com/wealdtech/ethereal): herramienta CLI creada por la comunidad para administrar tareas de validador comunes
-- [Batch-validator-depositor](https://github.com/attestantio/batch-validator-depositor): contrato creado por la comunidad que permite depositar múltiples validadores de Ethereum en una sola transacción
+- [Especificaciones de consenso de Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md): Esta es la versión "más fiel" en la que debes confiar. En caso de duda, lee las especificaciones.
+- No todo el mundo se siente cómodo navegando por el código, por lo que [este maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) puede ayudar a interpretar las especificaciones. *Descargo de responsabilidad: Se debe confiar en las especificaciones, no en la IA, como la verdad, ya que la IA puede malinterpretar la información o alucinar respuestas.*
+- [pectrified.com](https://pectrified.com/): Ve el estado de las consolidaciones, los depósitos y los tiempos de espera en la cola.
+- [Ethereal](https://github.com/wealdtech/ethereal): Herramienta CLI creada por la comunidad para gestionar tareas comunes de los validadores.
+- [batch-validator-depositor](https://github.com/attestantio/batch-validator-depositor): Contrato creado por la comunidad que permite depositar en múltiples validadores de Ethereum en una sola transacción.

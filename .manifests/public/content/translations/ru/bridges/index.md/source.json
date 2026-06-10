@@ -1,0 +1,580 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/bridges/index.md",
+  "generatedAt": "2026-06-08T07:05:24.656Z",
+  "rootHash": "31745535146c",
+  "tree": {
+    "contentHash": "2ca8e6d32640",
+    "anchorHash": "d1283928dafe",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "ed615810e7b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "932572708fce"
+      },
+      "frontmatter:description": {
+        "contentHash": "afaa2fc68925",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "ead815e9c985",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "component:5": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-bridges": {
+        "contentHash": "71eebd0e5c9b",
+        "anchorHash": "753ed33757f8",
+        "labelHash": "f29d3a26a5b1",
+        "children": {
+          "_label": {
+            "contentHash": "f29d3a26a5b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "ba3b5e9e6e04",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ef7797e13d3a",
+            "anchorHash": "312433dbc1b2"
+          },
+          "prose:6": {
+            "contentHash": "70ef0268eaab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "f4a3760644d0",
+            "anchorHash": "91b433779c27"
+          },
+          "prose:7": {
+            "contentHash": "b8d31e852725",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:8": {
+            "contentHash": "0b4b3f08fd7a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "3684de0e12df",
+            "anchorHash": "9e90219c079d"
+          },
+          "prose:9": {
+            "contentHash": "b9ebaed3fcc1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "d55c3d039e5e",
+            "anchorHash": "69473f896edd"
+          },
+          "prose:10": {
+            "contentHash": "9f9126f29db0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "why-do-we-need-bridges": {
+        "contentHash": "3f5eebc13d9a",
+        "anchorHash": "c99dc4a6de5a",
+        "labelHash": "cbe69028acb1",
+        "children": {
+          "_label": {
+            "contentHash": "cbe69028acb1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "1d8cfb14a90b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8bffd6eadddc",
+            "anchorHash": "0908b49b3a4d"
+          },
+          "prose:5": {
+            "contentHash": "896f2d4a25b3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "c983c585ac3c",
+            "anchorHash": "1bfa51f40543"
+          },
+          "prose:6": {
+            "contentHash": "79b822cccbe2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "c40cc25b38bd",
+            "anchorHash": "ba5e7b6c637a"
+          },
+          "prose:7": {
+            "contentHash": "b2b60eec7e81",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "152ed6d36cf4",
+            "anchorHash": "97d2a28977c8"
+          },
+          "component:9": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "component:9"
+        ]
+      },
+      "bridge-use-cases": {
+        "contentHash": "ad3d8fb11e31",
+        "anchorHash": "1251089de7ce",
+        "labelHash": "c1e852090e96",
+        "children": {
+          "_label": {
+            "contentHash": "c1e852090e96",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d018174aa229",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "transaction-fees": {
+            "contentHash": "c33cc94c0c67",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "f4bf33f9ffc2",
+            "children": {
+              "_label": {
+                "contentHash": "f4bf33f9ffc2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "b0969465c099",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "dapps-other-chains": {
+            "contentHash": "7936b21bce47",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "139270f4076e",
+            "children": {
+              "_label": {
+                "contentHash": "139270f4076e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "1ea823a7bc3d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "explore-ecosystems": {
+            "contentHash": "10b7dbc37d69",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "064c245e16cf",
+            "children": {
+              "_label": {
+                "contentHash": "064c245e16cf",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a35633d0b7f8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "own-native": {
+            "contentHash": "a371db35a52c",
+            "anchorHash": "7368f46ea6f1",
+            "labelHash": "2929934488aa",
+            "children": {
+              "_label": {
+                "contentHash": "2929934488aa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "4269519e08f5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "1f090d6c3bb9",
+                "anchorHash": "7fdc86ff2220"
+              },
+              "prose:3": {
+                "contentHash": "f454a4e80edd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "3871f97fc9a1",
+                "anchorHash": "19902d6694f7"
+              },
+              "prose:4": {
+                "contentHash": "ad1a5a218312",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:6": {
+                "contentHash": "105536dfd76d",
+                "anchorHash": "695d51346443",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "2937013f2181"
+                  },
+                  "component:0": {
+                    "contentHash": "4b9f7d802648",
+                    "anchorHash": "3df6662f9563",
+                    "children": {
+                      "attr:text": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "bb3fc0c17a32"
+                      }
+                    }
+                  },
+                  "component:1": {
+                    "contentHash": "824ac84a85a4",
+                    "anchorHash": "a01b6f70b3e2",
+                    "children": {
+                      "component:0": {
+                        "contentHash": "571312b91975",
+                        "anchorHash": "2041b141908e",
+                        "children": {
+                          "prose:1": {
+                            "contentHash": "a1afb4348a4a",
+                            "anchorHash": "e3b0c44298fc"
+                          },
+                          "link:0": {
+                            "contentHash": "9e250797dfc6",
+                            "anchorHash": "3eeb90643e1e"
+                          },
+                          "prose:2": {
+                            "contentHash": "752e79b24348",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        },
+                        "childrenOrder": [
+                          "prose:1",
+                          "link:0",
+                          "prose:2"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "component:0",
+                  "component:1"
+                ]
+              },
+              "component:7": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4",
+              "component:6",
+              "component:7"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "transaction-fees",
+          "dapps-other-chains",
+          "explore-ecosystems",
+          "own-native"
+        ]
+      },
+      "types-of-bridge": {
+        "contentHash": "540b200fb480",
+        "anchorHash": "b7d8514a8cf8",
+        "labelHash": "e5c43b8852f8",
+        "children": {
+          "_label": {
+            "contentHash": "e5c43b8852f8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "8c7efa8b68d7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "89d756280b47"
+          },
+          "prose:3": {
+            "contentHash": "6260bfc2e60f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "09f33c74abb5",
+            "anchorHash": "ca0ceaa4279d"
+          },
+          "prose:4": {
+            "contentHash": "1186531da685",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "component:6"
+        ]
+      },
+      "use-bridge": {
+        "contentHash": "3d1439c54b83",
+        "anchorHash": "5b2ed888ab5c",
+        "labelHash": "7c57a39036b0",
+        "children": {
+          "_label": {
+            "contentHash": "7c57a39036b0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "b2bf9132ffaf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8465a66352b0",
+            "anchorHash": "956c61cfb445"
+          },
+          "prose:4": {
+            "contentHash": "951dcee3a7a4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "99de3910c84f",
+            "anchorHash": "956c61cfb445"
+          },
+          "prose:5": {
+            "contentHash": "ac8dd4cf76c8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "67cf4f703c05",
+            "anchorHash": "3160a0a4b8e5"
+          },
+          "prose:6": {
+            "contentHash": "ef19e0e60edb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "component:8"
+        ]
+      },
+      "bridge-risk": {
+        "contentHash": "c31753df7a13",
+        "anchorHash": "8e6efe1ad4fa",
+        "labelHash": "7594f4e40753",
+        "children": {
+          "_label": {
+            "contentHash": "7594f4e40753",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "6f94818d095e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "fdcfc1a46527",
+            "anchorHash": "5c6efeef444f"
+          },
+          "prose:4": {
+            "contentHash": "ec5973f4b44c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "94d7a10f5843",
+            "anchorHash": "48b920d5a843"
+          },
+          "prose:5": {
+            "contentHash": "cd2df600eb15",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "31b0fabfcd53",
+            "anchorHash": "afe6cba633f1"
+          },
+          "prose:6": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "component:8"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "0176b9cf88da",
+        "anchorHash": "386890e30745",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3fba2605f540",
+            "anchorHash": "0365d160426a"
+          },
+          "prose:6": {
+            "contentHash": "8bdb64245f18",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "1731c066c655",
+            "anchorHash": "41615098eea7"
+          },
+          "prose:7": {
+            "contentHash": "0d5d372db9c0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "2700ba4154d8",
+            "anchorHash": "6b30f1023ca5"
+          },
+          "prose:8": {
+            "contentHash": "587fdf72611b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "816a52e76ea7",
+            "anchorHash": "0a638f7a8164"
+          },
+          "prose:9": {
+            "contentHash": "fcd03a42462c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "db2239a66bab",
+            "anchorHash": "794afc9e4b5d"
+          },
+          "prose:10": {
+            "contentHash": "aaf1af3e1600",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "component:5",
+      "what-are-bridges",
+      "why-do-we-need-bridges",
+      "bridge-use-cases",
+      "types-of-bridge",
+      "use-bridge",
+      "bridge-risk",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

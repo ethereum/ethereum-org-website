@@ -1,155 +1,148 @@
 ---
-title: "Jak Sloučení ovlivnilo nabídku ETH"
-description: "Rozbor toho, jak Sloučení ovlivnilo nabídku ETH"
+title: Jak Merge ovlivnil nabídku ETH
+description: Rozbor toho, jak Merge ovlivnil nabídku ETH
 lang: cs
 ---
 
-# Jak Sloučení ovlivnilo nabídku ETH {#how-the-merge-impacts-ETH-supply}
+Merge představoval přechod sítě [Ethereum](/) z důkazu prací (PoW) na důkaz podílem (PoS), ke kterému došlo v září 2022. Způsob emise ETH prošel v době tohoto přechodu změnami. Dříve bylo nové ETH emitováno ze dvou zdrojů: z exekuční vrstvy (tj. Mainnet) a z vrstvy konsensu (tj. Beacon chain). Od Merge je emise na exekuční vrstvě nulová. Pojďme si to rozebrat.
 
-Sloučení představovalo přechod sítě Ethereum z důkazu prací na důkaz podílem, který proběhl v září 2022. Způsob vydávání nových ETH do oběhu v této době prošel změnami. Dříve se nová ETH vydávala ze dvou zdrojů: exekuční vrstvy (tj. Mainnet) a vrstvy konsenzu (tj. Beacon Chain). Od Sloučení je na exekuční vrstvě vydávání nových ETH nulové. Pojďme si to vysvětlit.
+## Složky emise ETH {#components-of-eth-issuance}
 
-## Složky vydávání ETH {#components-of-eth-issuance}
+Nabídku ETH můžeme rozdělit na dvě hlavní síly: emisi a spalování.
 
-Nabídku ETH můžeme rozdělit na dvě hlavní složky: vydávání a pálení.
-
-**Vydávání** ETH je proces vytváření ETH, které předtím neexistovaly. K **pálení** ETH dochází, když se stávající ETH zničí a odstraní z oběhu. Míra vydávání a pálení se vypočítává na základě několika parametrů a rovnováha mezi nimi určuje výslednou míru inflace či deflace etheru.
+**Emise** ETH je proces vytváření ETH, které dříve neexistovalo. **Spalování** ETH nastává, když je existující ETH zničeno, čímž je odstraněno z oběhu. Míra emise a spalování se vypočítává na základě několika parametrů a rovnováha mezi nimi určuje výslednou míru inflace/deflace etheru.
 
 <Card
 emoji=":chart_decreasing:"
-title="Vydávání ETH ve zkratce">
+title="ETH issuance tldr">
 
-- Před přechodem na důkaz podílem bylo těžařům vydáváno přibližně 13 000 ETH denně
-- Uzamykatelům je vydáváno přibližně 1 700 ETH denně, a to na základě celkového objemu přibližně 14 milionů uzamčených ETH
-- Přesné vydávání za uzamčení kolísá v závislosti na celkovém množství uzamčených ETH
-- **Od Sloučení zůstává pouze ~1 700 ETH/den, což snižuje celkové nové vydávání ETH o ~88 %**
-- Pálení: Toto kolísá v závislosti na poptávce v síti. - Pokud je průměrná cena paliva alespoň 16 gwei za daný den, nastává efektivní kompenzace právě těch ~1 700 ETH, které jsou vydávány validátorům, a směruje čistou inflaci ETH v daný den k nule nebo níže.
+- Před přechodem na důkaz podílem (PoS) bylo těžařům emitováno přibližně 13 000 ETH denně
+- Stakerům je emitováno přibližně 1 700 ETH denně, na základě celkových zhruba 14 milionů stakovaných ETH
+- Přesná emise ze stakingu kolísá v závislosti na celkovém množství stakovaného ETH
+- **Od Merge zůstává pouze ~1 700 ETH denně, což snižuje celkovou emisi nového ETH o ~88 %**
+- Spalování: To kolísá podle poptávky v síti. _Pokud_ je v daný den zaznamenána průměrná cena plynu alespoň 16 Gwei, efektivně to kompenzuje ~1 700 ETH, které je emitováno validátorům, a snižuje čistou inflaci ETH pro daný den na nulu nebo méně.
+
 </Card>
 
-## Před Sloučením (historicky) {#pre-merge}
+## Před Merge (historie) {#pre-merge}
 
-### Vydávání na exekuční vrstvě {#el-issuance-pre-merge}
+### Emise na exekuční vrstvě {#el-issuance-pre-merge}
 
-Za časů důkazu prací komunikovali těžaři pouze s exekuční vrstvou, a pokud byli první, kdo vyřešil další blok, byla jejich práce kompenzována blokovými odměnami. Od [vylepšení Constantinople](/ethereum-forks/#constantinople) v roce 2019 činila tato odměna 2 ETH za blok. Těžaři byli také odměňováni za zveřejňování [ommer](/glossary/#ommer) bloků, což byly platné bloky, které se neobjevily v nejdelším/kanonickém řetězci. Tyto odměny dosahovaly maximálně 1,75 ETH na ommer a byly _navíc k_ odměně vydané z kanonického bloku. Proces těžby byl ekonomicky náročnou aktivitou, která v minulosti navíc vyžadovala vysokou úroveň vydávání ETH za účelem zachování udržitelnosti.
+V rámci důkazu prací (PoW) těžaři interagovali pouze s exekuční vrstvou a byli odměňováni odměnami za blok, pokud byli prvním těžařem, který vyřešil další blok. Od upgradu [Konstantinopol](/ethereum-forks/#constantinople) v roce 2019 činila tato odměna 2 ETH za blok. Těžaři byli také odměňováni za publikování [ommer](/glossary/#ommer) bloků, což byly platné bloky, které neskončily v nejdelším/kanonickém řetězci. Tyto odměny dosahovaly maximálně 1,75 ETH za ommer a byly _navíc_ k odměně emitované z kanonického bloku. Proces těžby byl ekonomicky náročnou činností, která historicky vyžadovala vysokou úroveň emise ETH k udržení.
 
-### Vydávání na vrstvě konsenzu {#cl-issuance-pre-merge}
+### Emise na vrstvě konsensu {#cl-issuance-pre-merge}
 
-[Beacon Chain](/ethereum-forks/#beacon-chain-genesis) byl spuštěn v roce 2020. Místo těžařů je zabezpečena validátory využívajícími důkaz podílem. Tento řetězec byl inicializován uživateli Etherea, kteří vkládali ETH jednosměrně do chytrého kontraktu na hlavní síti (exekuční vrstva), který Řetězová vazba sledovala a připsala uživateli stejné množství ETH na novém řetězci. Dokud nedošlo ke Sloučení, validátoři Řetězové vazby nezpracovávali transakce a v podstatě dosahovali shody ohledně samotného stavu poolu validátorů.
+[Beacon chain](/ethereum-forks/#beacon-chain-genesis) byl spuštěn v roce 2020. Místo těžařů je zabezpečen validátory pomocí důkazu podílem (PoS). Tento řetězec byl spuštěn tak, že uživatelé Etherea jednosměrně vkládali ETH do chytrého kontraktu na Mainnetu (exekuční vrstvě), kterému Beacon chain naslouchá, a připisuje uživateli stejné množství ETH na novém řetězci. Dokud nedošlo k Merge, validátoři Beacon chainu nezpracovávali transakce a v podstatě dosahovali konsensu o stavu samotného fondu validátorů.
 
-Validátoři na Řetězové vazbě jsou za potvrzování stavu řetězce a navrhování bloků odměňováni v ETH. Odměny (nebo pokuty) jsou vypočítávány a rozdělovány každou epochu (každých 6,4 minuty) na základě výkonu validátorů. Odměny pro validátory jsou **výrazně** menší než odměny za těžbu, které byly dříve vydávány v rámci důkazu prací (2 ETH každých ~13,5 sekundy), protože provozování validujícího uzlu není tak ekonomicky náročné a nevyžaduje ani neopravňuje k tak vysoké odměně.
+Validátoři na Beacon chainu jsou odměňováni v ETH za potvrzování stavu řetězce a navrhování bloků. Odměny (nebo penalizace) se vypočítávají a rozdělují v každé epoše (každých 6,4 minuty) na základě výkonu validátora. Odměny validátorů jsou **výrazně** nižší než odměny za těžbu, které byly dříve emitovány v rámci důkazu prací (2 ETH každých ~13,5 sekundy), protože provozování validujícího uzlu není tak ekonomicky náročné, a proto nevyžaduje ani neospravedlňuje tak vysokou odměnu.
 
-### Rozpis vydávání před Sloučením {#pre-merge-issuance-breakdown}
+### Rozbor emise před Merge {#pre-merge-issuance-breakdown}
 
-Celková nabídka ETH: **~120 520 000 ETH** (v době Sloučení v září 2022)
+Celková nabídka ETH: **~120 520 000 ETH** (v době Merge v září 2022)
 
-**Vydávání v exekuční vrstvě:**
+**Emise na exekuční vrstvě:**
 
-- Odhad činil 2,08 ETH za 13,3 sekundy\*: **~4 930 000** ETH vydaných za rok
-- Výsledkem byla míra inflace **přibližně 4,09 %** (4,93 mil. za rok / 120,5 mil. celkem)
-- \*To zahrnuje 2 ETH za kanonický blok, plus průměrně 0,08 ETH za ommer bloky. Také používá 13,3 sekundy, což je základní cílový čas bloku bez vlivu [bomby obtížnosti](/glossary/#difficulty-bomb). ([Viz zdroj](https://bitinfocharts.com/ethereum/))
+- Byla odhadována na 2,08 ETH za 13,3 sekundy\*: **~4 930 000** ETH emitovaných za rok
+- Vedla k míře inflace **přibližně 4,09 %** (4,93 mil. ročně / 120,5 mil. celkem)
+- \*To zahrnuje 2 ETH za kanonický blok plus průměrně 0,08 ETH v průběhu času z ommer bloků. Také využívá 13,3 sekundy, což je základní cíl času bloku bez jakéhokoli vlivu [bomby obtížnosti](/glossary/#difficulty-bomb). ([Viz zdroj](https://bitinfocharts.com/ethereum/))
 
-**Vydávání ve vrstvě konsenzu:**
+**Emise na vrstvě konsensu:**
 
-- Při 14 000 000 celkově uzamčených ETH je míra vydávání ETH přibližně 1700 ETH/den ([Viz zdroj](https://ultrasound.money/))
-- Výsledkem je **~620 500** ETH vydaných za rok
-- Výsledkem byla míra inflace **přibližně 0,52 %** (620,5 tis. za rok / 119,3 mil. celkem)
-
-<Alert variant="update">
-<AlertContent>
-<AlertDescription>
-**Celková roční míra vydávání (před Sloučením): ~4,61 %** (4,09 % + 0,52 %)
-
-**~88,7 %** vydávání šlo těžařům na exekuční vrstvě (4,09 / 4,61 \* 100)
-
-**~11,3 %** bylo vydáváno uzamykatelům na vrstvě konsenzu (0,52 / 4,61 \* 100)
-</AlertDescription>
-
-</AlertContent>
-
-</Alert>
-
-## Po Sloučení (současnost) {#post-merge}
-
-### Vydávání na exekuční vrstvě {#el-issuance-post-merge}
-
-Vydávání na exekuční vrstvě je od Sloučení nulové. Důkaz prací již není platným prostředkem produkce bloků podle vylepšených pravidel konsenzu. Veškerá aktivita na exekuční vrstvě je zabalena do "beacon bloků", které jsou zveřejňovány a potvrzovány validátory důkazu podílem. Odměny za potvrzování a zveřejňování beacon bloků se účtují zvlášť na vrstvě konsenzu.
-
-### Vydávání na vrstvě konsenzu {#cl-issuance-post-merge}
-
-Vydávání na vrstvě konsenzu pokračuje i dnes jako před Sloučením, s malými odměnami pro validátory, kteří potvrzují a navrhují bloky. Odměny pro validátory se nadále připisují na _zůstatky validátorů_, které jsou spravovány v rámci vrstvy konsenzu. Na rozdíl od běžných ("exekučních") účtů, které mohou provádět transakce na Mainnetu, tyto oddělené účty Etherea nemohou volně provádět transakce s jinými účty Etherea. Prostředky z těchto účtů lze vybrat pouze na jednu specifikovanou exekuční adresu.
-
-Od vylepšení Shanghai/Capella, které proběhlo v dubnu 2023, jsou tyto výběry pro uzamykatele povoleny. Uzamykatelé jsou motivováni k výběru svých _výdělků/odměn (zůstatek nad 32 ETH)_, protože tyto prostředky jinak nepřispívají k váze jejich podílu (která je maximálně 32).
-
-Uzamykatelé se také mohou rozhodnout odejít a vybrat si celý zůstatek svého validátora. Aby byla zajištěna stabilita Etherea, je počet současně odcházejících validátorů omezen.
-
-Přibližně 0,33 % z celkového počtu validátorů může odejít v daný den. Standardně mohou odejít čtyři (4) validátoři za epochu (každých 6,4 minuty, neboli 900 za den). Další jeden (1) validátor může odejít na každých 65 536 (2<sup>16</sup>) dalších validátorů nad 262 144 (2<sup>18</sup>). Například při více než 327 680 validátorech může za epochu odejít pět (5) (1 125 za den). Šest (6) bude povoleno při celkovém počtu aktivních validátorů nad 393 216 a tak dále.
-
-S tím, jak bude více validátorů vybírat, bude se maximální počet odcházejících validátorů postupně snižovat na minimum čtyř, aby se záměrně zabránilo souběžnému výběru velkých destabilizujících částek uzamčených ETH.
-
-### Rozpis inflace po Sloučení {#post-merge-inflation-breakdown}
-
-- Celková nabídka ETH: **~120 520 000 ETH** (v době Sloučení v září 2022)
-- Vydávání na exekuční vrstvě: **0**
-- Vydávání na vrstvě konsenzu: Stejné jako výše, roční míra vydávání **~0,52 %** (při 14 milionech celkem uzamčených ETH)
+- Při celkovém počtu 14 000 000 stakovaných ETH je míra emise ETH přibližně 1 700 ETH denně ([Viz zdroj](https://ultrasound.money/))
+- Vede k **~620 500** ETH emitovaným za rok
+- Vedla k míře inflace **přibližně 0,52 %** (620,5 tis. ročně / 119,3 mil. celkem)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Celková roční míra vydávání: **~0,52 %**
+**Celková anualizovaná míra emise (před Merge): ~4,61 %** (4,09 % + 0,52 %)
 
-Čisté snížení ročního vydávání ETH: **~88,7 %** ((4,61 % – 0,52 %) / 4,61 % \* 100)
+**~88,7 %** emise šlo těžařům na exekuční vrstvě (4,09 / 4,61 * 100)
+
+**~11,3 %** bylo emitováno stakerům na vrstvě konsensu (0,52 / 4,61 * 100)
 </AlertDescription>
-
 </AlertContent>
-
 </Alert>
 
-## <Emoji text=":fire:" size="1" /> Pálení {#the-burn}
+## Po Merge (současnost) {#post-merge}
 
-Opakem vydávání ETH je stupeň, při které je ETH pálen. Aby byla transakce na Ethereu provedena, musí být zaplacen minimální poplatek (známý jako „základní poplatek“), který se neustále mění (blok od bloku) v závislosti na aktivitě sítě. Poplatek se platí v ETH a je _vyžadován_, aby byla transakce považována za platnou. Tento poplatek se během transakce _pálí_, čímž je odstraněn z oběhu.
+### Emise na exekuční vrstvě {#el-issuance-post-merge}
+
+Emise na exekuční vrstvě je od Merge nulová. Důkaz prací (PoW) již není podle aktualizovaných pravidel konsensu platným způsobem produkce bloků. Veškerá aktivita exekuční vrstvy je zabalena do „beacon bloků“, které jsou publikovány a potvrzovány validátory pomocí důkazu podílem (PoS). Odměny za potvrzování a publikování beacon bloků jsou účtovány odděleně na vrstvě konsensu.
+
+### Emise na vrstvě konsensu {#cl-issuance-post-merge}
+
+Emise na vrstvě konsensu pokračuje i dnes stejně jako před Merge, s malými odměnami pro validátory, kteří potvrzují a navrhují bloky. Odměny validátorů se nadále připisují k _zůstatkům validátorů_, které jsou spravovány v rámci vrstvy konsensu. Na rozdíl od běžných účtů („exekučních“ účtů), které mohou provádět transakce na Mainnetu, se jedná o oddělené účty Etherea, které nemohou volně provádět transakce s jinými účty Etherea. Prostředky na těchto účtech lze vybrat pouze na jedinou specifikovanou exekuční adresu.
+
+Od upgradu Šanghaj/Capella, který proběhl v dubnu 2023, byly tyto výběry stakerům umožněny. Stakeři jsou motivováni k výběru svých _výdělků/odměn (zůstatek nad 32 ETH)_, protože tyto prostředky jinak nepřispívají k váze jejich staku (která je maximálně 32).
+
+Stakeři se také mohou rozhodnout pro výstup a vybrat celý zůstatek svého validátora. Aby bylo zajištěno, že Ethereum zůstane stabilní, je počet validátorů, kteří mohou odejít současně, omezen.
+
+V daný den může provést výstup přibližně 0,33 % z celkového počtu validátorů. Ve výchozím nastavení mohou provést výstup čtyři (4) validátoři za epochu (každých 6,4 minuty, neboli 900 denně). Další jeden (1) validátor má povolen výstup za každých 65 536 (2<sup>16</sup>) dalších validátorů nad 262 144 (2<sup>18</sup>). Například při více než 327 680 validátorech jich může odejít pět (5) za epochu (1 125 denně). Šest (6) jich bude povoleno při celkovém počtu aktivních validátorů nad 393 216 a tak dále.
+
+S tím, jak bude vybírat více validátorů, se maximální počet vystupujících validátorů bude postupně snižovat na minimum čtyř, aby se záměrně zabránilo současnému výběru velkého, destabilizujícího množství stakovaného ETH.
+
+### Rozbor inflace po Merge {#post-merge-inflation-breakdown}
+
+- [Celková nabídka ETH](/eth/supply/): **~120 520 000 ETH** (v době Merge v září 2022)
+- Emise na exekuční vrstvě: **0**
+- Emise na vrstvě konsensu: Stejná jako výše, **~0,52 %** anualizovaná míra emise (při celkovém počtu 14 milionů stakovaných ETH)
+
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Celková anualizovaná míra emise: **~0,52 %**
+
+Čisté snížení roční emise ETH: **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+## <Emoji text=":fire:" size="1" /> Spalování {#the-burn}
+
+Opačnou silou k emisi ETH je rychlost, jakou je ETH spalováno. Aby se transakce na Ethereu provedla, musí být zaplacen minimální poplatek (známý jako „základní poplatek“), který neustále kolísá (blok od bloku) v závislosti na aktivitě sítě. Poplatek se platí v ETH a je _vyžadován_, aby byla transakce považována za platnou. Tento poplatek je během procesu transakce _spálen_, čímž je odstraněn z oběhu.
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
 
-Pálení poplatků bylo spuštěno s [vylepšením London](/ethereum-forks/#london) v srpnu 2021 a od Sloučení zůstává nezměněno.
+Spalování poplatků bylo spuštěno s [upgradem London](/ethereum-forks/#london) v srpnu 2021 a od Merge zůstává nezměněno.
 </AlertDescription>
-
 </AlertContent>
-
 </Alert>
 
-Kromě pálení poplatků zavedeného s vylepšením London mohou validátoři také dostávat pokuty za to, že jsou offline, nebo hůře, mohou být „potrestáni“ za porušení specifických pravidel, které ohrožuje bezpečnost sítě. Tyto pokuty vedou k odečtení ETH od zůstatku validátora, aniž by byly převedeny jako odměna jinému účtu, čímž se efektivně pálí/odstraňují z oběhu.
+Kromě spalování poplatků implementovaného upgradem London mohou validátoři také čelit penalizacím za to, že jsou offline, nebo hůře, mohou být penalizováni za porušení specifických pravidel, která ohrožují bezpečnost sítě. Tyto penalizace vedou ke snížení ETH ze zůstatku daného validátora, které není přímo odměněno žádnému jinému účtu, čímž se efektivně spaluje/odstraňuje z oběhu.
 
-### Výpočet průměrné ceny paliva pro deflaci {#calculating-average-gas-price-for-deflation}
+### Výpočet průměrné ceny plynu pro deflaci {#calculating-average-gas-price-for-deflation}
 
-Jak bylo uvedeno výše, množství vydaného ETH za daný den závisí na celkovém uzamčeném ETH. V době psaní tohoto textu je to přibližně 1700 ETH/den.
+Jak bylo uvedeno výše, množství ETH emitovaného v daný den závisí na celkovém stakovaném ETH. V době psaní tohoto článku je to přibližně 1 700 ETH denně.
 
-Abychom určili průměrnou cenu paliva potřebnou k úplné kompenzaci vydávání za dané 24hodinové období, začneme výpočtem celkového počtu bloků za den, při blokovém čase 12 sekund:
+Abychom určili průměrnou cenu plynu potřebnou k úplnému vyrovnání této emise v daném 24hodinovém období, začneme výpočtem celkového počtu bloků za den při čase bloku 12 sekund:
 
-- `(1 blok za 12 sekund) * (60 sekund za jednu minutu) = 5 bloků za jednu minutu`
-- `(5 bloků za jednu minutu) * (60 minut za jednu hodinu) = 300 bloků za jednu hodinu`
-- `(300 bloků za jednu hodinu) * (24 hodin za jeden den) = 7200 bloků za jeden den`
+- `(1 block / 12 seconds) * (60 seconds/minute) = 5 blocks/minute`
+- `(5 blocks/minute) * (60 minutes/hour) = 300 blocks/hour`
+- `(300 blocks/hour) * (24 hours/day) = 7200 blocks/day`
 
-Každý blok cílí na `15x10^6 paliva/blok` ([více o palivu](/developers/docs/gas/)). Použitím tohoto výpočtu můžeme stanovit průměrnou cenu paliva (v jednotkách gwei za jednotku paliva) potřebnou k vyrovnání vydávání, pokud je dané denní vydávání ETH v objemu 1700 ETH:
+Každý blok cílí na `15x10^6 gas/block` ([více o gasu](/developers/docs/gas/)). Pomocí toho můžeme vypočítat průměrnou cenu plynu (v jednotkách Gwei/gas) potřebnou k vyrovnání emise při celkové denní emisi ETH 1 700 ETH:
 
-- `7200 bloků/den * 15x10^6 paliva/blok * `**`Y gwei/palivo`**` * 1 ETH / 10^9 gwei = 1700 ETH/den`
+- `7200 blocks/day * 15x10^6 gas/block * `**`Y gwei/gas`**` * 1 ETH/ 10^9 gwei = 1700 ETH/day`
 
-Řešení pro `Y`:
+Výpočet pro `Y`:
 
-- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (zaokrouhleno pouze na dvě platné číslice)
+- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (zaokrouhleno na dvě platné číslice)
 
-Dalším způsobem, jak přeuspořádat tento poslední krok, by bylo nahradit `1700` proměnnou `X`, která představuje denní vydávání ETH, a zbytek zjednodušit na:
+Dalším způsobem, jak upravit tento poslední krok, by bylo nahradit `1700` proměnnou `X`, která představuje denní emisi ETH, a zbytek zjednodušit na:
 
 - `Y = (X(10^3)/(7200 * 15)) = X/108`
 
 Můžeme to zjednodušit a zapsat jako funkci `X`:
 
-- `f(X) = X/108`, kde `X` je denní vydávání ETH a `f(X)` představuje cenu gwei/palivo potřebnou k vyrovnání veškerého nově vydaného ETH.
+- `f(X) = X/108` kde `X` je denní emise ETH a `f(X)` představuje cenu v Gwei/gas potřebnou k vyrovnání veškerého nově emitovaného ETH.
 
-Například pokud `X` (denní vydávání ETH) vzroste na 1800 na základě celkového uzamčeného ETH, pak `f(X)` (gwei potřebné k vyrovnání veškerého vydávání) bude `17 gwei` (při použití 2 platných číslic).
+Takže například, pokud `X` (denní emise ETH) stoupne na 1 800 na základě celkového stakovaného ETH, `f(X)` (Gwei potřebné k vyrovnání veškeré emise) by pak bylo `17 gwei` (při použití 2 platných číslic).
 
 ## Další čtení {#further-reading}
 
-- [Sloučení](/roadmap/merge/)
-- [Ultrasound.money](https://ultrasound.money/) – _panely dostupné pro vizualizaci vydávání a pálení ETH v reálném čase_
-- [Grafické znázornění vydávání Etherea](https://www.attestant.io/posts/charting-ethereum-issuance/) – _Jim McDonald 2020_
+- [Merge](/roadmap/merge/)
+- [Ultrasound.money](https://ultrasound.money/) – _Dostupné panely pro vizualizaci emise a spalování ETH v reálném čase_
+- [Charting Ethereum Issuance](https://www.attestant.io/posts/charting-ethereum-issuance/) – _Jim McDonald 2020_

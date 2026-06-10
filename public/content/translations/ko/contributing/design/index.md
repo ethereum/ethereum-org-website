@@ -1,77 +1,76 @@
 ---
-title: "디자인 기여"
-description: "Ethereum.org에 디자인 기여하기"
+title: ethereum.org 디자인 기여
+metaTitle: 디자인 기여
+description: ethereum.org 디자인 기여
 lang: ko
 ---
 
-# ethereum.org 디자인 기여 {#design-contributions}
+디자인은 모든 프로젝트의 핵심 요소이며, 여러분의 시간과 디자인 기술을 ethereum.org에 쏟음으로써 방문자들의 사용자 경험을 개선하는 데 도움을 줄 수 있습니다. 오픈 소스 프로젝트에 기여하는 것은 협업 환경에서 관련 경험을 쌓고 기술을 개발할 수 있는 기회를 제공합니다. 여러분은 각자 고유한 관점과 통찰력을 가진 다른 디자이너, 개발자 및 커뮤니티 구성원들과 함께 일할 기회를 갖게 될 것입니다.
 
-디자인은 모든 프로젝트에서 중요한 요소이며, 여러분의 시간과 디자인 역량을 ethereum.org에 기여함으로써 방문자들의 사용자 경험을 향상시키는 데 도움을 줄 수 있습니다. 오픈 소스 프로젝트에 기여하는 것은 관련 경험을 쌓고 협업 환경에서 기술을 개발할 수 있는 기회를 제공합니다. 여러분은 다른 디자이너, 개발자, 그리고 커뮤니티 멤버들과 협업할 기회를 얻게 되며, 이들은 모두 독창적인 시각과 깊은 통찰력을 지니고 있습니다.
+궁극적으로, 이는 여러분의 디자인 기술을 보여주는 다양하고 인상적인 포트폴리오를 구축할 수 있는 훌륭한 방법입니다.
 
-결과적으로, 이는 여러분의 디자인 능력을 효과적으로 보여줄 수 있는 포트폴리오를 구축하는 좋은 기회가 됩니다.
-
-## 기여 방법?
+## 어떻게 기여할 수 있나요? {#how-to-contribute}
 
 ### <Emoji text=":one:" size={1} /> &nbsp;초기 디자인 프로토타입에 대한 피드백 제공 {#design-critique}
 
-우리는 때때로 초기 아이디어를 테스트하는 데 도움을 필요로 합니다. 이는 기술적 지식이 없어도 기여할 수 있는 좋은 방법입니다.
+때로는 초기 아이디어를 테스트하는 데 도움이 필요합니다. 이는 기술적인 지식 없이도 기여할 수 있는 훌륭한 방법입니다.
 
-1. 디자인팀은 [Discord](https://discord.com/invite/ethereum-org)와 [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)에 모의 디자인을 공유합니다.
-2. 여러분은 디자인에 대한 설명을 듣고 댓글 기능을 통해 피드백을 제공할 수 있습니다.
-3. 결과는 GitHub 이슈에 공유되며, 팀에서 최종 검토 후 이슈를 닫습니다.
+1. 디자인 팀이 [디스코드](https://discord.com/invite/ethereum-org)와 [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)에 목업 디자인을 공유합니다.
+2. 댓글 기능을 통해 피드백을 제공할 수 있도록 디자인에 대한 안내를 받게 됩니다.
+3. 결과는 GitHub 이슈에 공유된 후 팀에 의해 종료됩니다.
 
 ### <Emoji text=":two:" size={1} /> &nbsp;설문 조사 참여 {#answer-surveys}
 
-웹사이트에 피드백을 제공하는 방법:
+다음 방법을 통해 웹사이트에 대한 피드백을 제공해 주세요:
 
-1. Ethereum.org을 방문하여 페이지를 읽어봅니다.
-2. 오른쪽 하단 모서리에 있는 피드백 위젯을 클릭하여 디자인 및 콘텐츠 관련 질문에 답변합니다.
-3. 자유 형식 질문에 특히 집중해 주시기 바랍니다.
+1. ethereum.org를 방문하여 페이지들을 읽어봅니다.
+2. 우측 하단의 피드백 위젯을 클릭하고 디자인 및 콘텐츠 관련 질문에 답변합니다.
+3. 자유 형식의 질문에 집중해 주세요.
 
-### <Emoji text=":three:" size={1} /> &nbsp;웹사이트에서 디자인 관련 문제를 찾아 신고하기 {#report-design-issues}
+### <Emoji text=":three:" size={1} /> &nbsp;웹사이트에서 디자인 관련 이슈를 찾아 제보하기 {#report-design-issues}
 
-ethereum.org는 빠르게 성장하는 웹사이트로, 다양한 기능과 콘텐츠를 제공합니다. 일부 UI는 구식이 되거나 개선의 여지가 있을 수 있습니다. 이러한 문제점을 발견하신다면, 저희가 인지할 수 있도록 제보해 주시기 바랍니다.
+ethereum.org는 많은 기능과 콘텐츠를 갖추고 빠르게 성장하는 웹사이트입니다. 일부 UI는 쉽게 구식이 되거나 개선의 여지가 있을 수 있습니다. 이러한 사례를 발견하면 저희가 확인할 수 있도록 제보해 주세요.
 
-1. 웹사이트를 살펴보며 디자인을 주의 깊게 봐주세요.
-2. 관련 문제나 UX 문제를 발견하면 스크 린샷을 찍어 두세요.
-3. 발견된 문제는 [버그 리포트](https://github.com/ethereum/ethereum-org-website/issues/new/choose)를 사용하여 신고해 주세요.
+1. 웹사이트를 둘러보며 디자인에 주의를 기울입니다.
+2. 시각적 또는 UX 이슈를 발견하면 스크린샷을 찍고 메모를 남깁니다.
+3. [버그 리포트](https://github.com/ethereum/ethereum-org-website/issues/new/choose)를 사용하여 발견한 이슈를 제보합니다.
 
-### <Emoji text=":four:" size={1} /> &nbsp;디자인 변경 제안 {#propose-design-changes}
+### <Emoji text=":four:" size={1} /> &nbsp;디자인 변경 제안하기 {#propose-design-changes}
 
-디자인 과제에 도전하는 것이 편하시다면, GitHub 이슈 보드를 방문하여 [디자인 관련 이슈](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)를 필터링해 보세요.
+디자인 과제에 도전하는 것이 편하다면, GitHub 이슈 보드를 방문하여 [디자인 관련 이슈](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)를 필터링해 볼 수 있습니다.
 
-1. 웹사이트를 살펴보며 디자인에 주의를 기울이거나, GitHub 저장소에서 [“Design required” 태그](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)가 붙은 이슈들을 검토해 보세요.
-2. 해결책을 구상하고 디자인 하세요. (가급적 [디자인 시스템](https://www.figma.com/community/file/1134414495420383395)을 사용해 주세요).
-3. 해당 GitHub 이슈에 해결책을 제안하거나 [새로운 이슈를 생성](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)하세요.
-4. 이후 디자인 팀의 검토를 기다리면 됩니다.
+1. 웹사이트를 둘러보며 디자인에 주의를 기울이거나, GitHub 저장소로 이동하여 ["Design required" 태그](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)가 지정된 이슈를 검토합니다.
+2. 해결책을 구상하고 디자인합니다. (가급적 저희의 [디자인 시스템](https://www.figma.com/community/file/1134414495420383395)을 사용해 주세요).
+3. 해당 GitHub 이슈에 해결책을 제안하거나 [새로운 이슈를 생성합니다.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
+4. 디자인 팀의 검토를 기다립니다.
 
-### <Emoji text=":five:" size={1} /> &nbsp;디자인 시스템 함께 구축하기 {#Contribute-to-design-system}
+### <Emoji text=":five:" size={1} /> &nbsp;함께 디자인 시스템 구축하기 {#contribute-to-design-system}
 
-우리 디자인 시스템은 ethereum.org를 쉽고 재미있게 디자인할 수 있도록 도와줍니다. 경험 많은 디자이너라면 다양한 웹사이트 컴포넌트 제작에 기여하실 수 있습니다.
+저희의 디자인 시스템은 ethereum.org 디자인을 재미있고 쉽게 만들어 줍니다. 경험이 풍부한 디자이너라면 웹사이트를 위한 다양한 컴포넌트를 준비하는 데 도움을 주실 수 있습니다.
 
-1. GitHub의 [디자인 시스템 보드](https://github.com/ethereum/ethereum-org-website/labels/design%20system)에서 작업할 이슈를 선택하거나 새로운 이슈를 생성하세요.
-2. 선택한 이슈에 대해 할당을 요청하세요.
-3. Figma에서 요청받은 컴포넌트 디자인을 시작하세요.
-4. 검토 또는 지침이 필요하면 GitHub에서 디자인 팀과 공유하세요.
-5. 디자인 팀이 해당 사항을 검토합니다.
-6. 디자인 팀은 변경 사항을 반영하고 해당 파일을 커뮤니티에 게시할 것입니다.
+1. GitHub의 [디자인 시스템 보드](https://github.com/ethereum/ethereum-org-website/labels/design%20system)에서 작업할 이슈를 선택하거나 새로운 이슈를 생성합니다.
+2. 선택한 이슈를 본인에게 할당해 달라고 요청합니다.
+3. Figma에서 요청된 컴포넌트 디자인을 시작합니다.
+4. 검토나 안내가 필요할 때 GitHub에서 디자인 팀과 공유합니다.
+5. 디자인 팀이 검토를 진행합니다.
+6. 디자인 팀이 메인 파일에 변경 사항을 통합하고 커뮤니티에 파일을 게시합니다.
 
 ### <Emoji text=":six:" size={1} /> &nbsp;웹사이트에 디자인 관련 콘텐츠 작성하기 {#write-design-articles}
 
-이더리움 개발자 커뮤니티는 강력하지만, 디자인 커뮤니티는 다소 뒤쳐진 상태입니다. 웹3 지식을 갖춘 디자이너라면, 커뮤니티 전체가 함께 성장하고 발전할 수 있도록 여러분의 지식을 공유해 주세요. 여러분이 기여할 수 있는 [이더리움을 위한 디자인 페이지](/developers/docs/design-and-ux/)가 있습니다. 또한 저희 [리스팅 정책](/contributing/design/adding-design-resources)을 확인하실 수 있습니다.
+이더리움 개발자 커뮤니티는 강력하지만, 디자인 커뮤니티는 약간 뒤처져 있습니다. Web3 지식을 갖춘 디자이너라면, 우리 모두가 함께 성장하고 발전할 수 있도록 여러분의 배움을 더 넓은 커뮤니티와 공유하는 것을 고려해 주세요. 기여할 수 있는 [이더리움 디자인에 관한 페이지](/developers/docs/design-and-ux/)가 마련되어 있습니다. 또한 [등록 정책](/contributing/design/adding-design-resources)도 확인할 수 있습니다.
 
-1. Ethereum.org에서 다뤄야 할 디자인 주제를 구상해 보고, 디자이너들에게 도움이 될 수 있는 내용을 제안해 보세요.
-2. GitHub 저장소로 이동하여 주제를 제안하는 [이슈를 생성](https://github.com/ethereum/ethereum-org-website/issues/new)해 주세요 (아직 내용은 작성하지 마세요).
-3. 디자인 팀의 승인을 기다리세요.
-4. 승인되면 콘텐츠를 작성하세요.
-5. 해당 GitHub 이슈에 제출해 주세요.
+1. ethereum.org에서 다루어야 하고 이 분야의 디자이너들에게 유익할 만한 디자인 주제를 구상합니다.
+2. GitHub 저장소로 이동하여 주제를 제안하는 [이슈를 생성합니다](https://github.com/ethereum/ethereum-org-website/issues/new) (아직 콘텐츠를 작성하지 마세요).
+3. 디자인 팀의 승인을 기다립니다.
+4. 승인되면 콘텐츠를 작성합니다.
+5. 해당 GitHub 이슈에 제출합니다.
 
-### <Emoji text=":seven:" size={1} /> &nbsp;새 일러스트레이션 그리기 {#prepare-illustrations}
+### <Emoji text=":seven:" size={1} /> &nbsp;새로운 일러스트레이션 그리기 {#prepare-illustrations}
 
-시각화는 추상적인 주제를 설명하는 가장 강력한 도구 중 하나입니다. 다이어그램과 인포그래픽을 추가하면 엄청난 잠재력이 있습니다. 결국 한 장의 그림은 천 마디 말의 가치를 담고 있습니다.
+시각화는 추상적인 주제를 설명하는 가장 강력한 도구 중 하나입니다. 다이어그램과 인포그래픽을 추가함으로써 엄청난 잠재력을 발휘할 수 있습니다. 결국, 한 장의 이미지가 천 마디 말을 대신할 수 있습니다.
 
-1. 우리 웹사이트를 방문하여 새로운 인포그래픽이 추가될 수 있는 페이지를 확인하세요.
-2. 일러스트레이션 스타일이 저희 [자료](/assets/)와 일치하는지 확인하세요.
-3. GitHub 저장소로 이동하여 일러스트레이션을 제안하는 [이슈를 생성](https://github.com/ethereum/ethereum-org-website/issues/new)하세요.
-4. 디자인 팀이 검토할 것입니다.
-5. 새 이미지를 구현할 개발자에게 작업을 요청하기 위해 이슈를 새로 만듭니다.
+1. 웹사이트로 이동하여 새로운 인포그래픽이 추가될 수 있는 페이지를 확인합니다.
+2. 일러스트레이션 스타일이 저희의 [에셋](/assets/)과 일치하는지 확인합니다.
+3. GitHub 저장소로 이동하여 일러스트레이션을 제안하는 [이슈를 생성합니다](https://github.com/ethereum/ethereum-org-website/issues/new).
+4. 디자인 팀이 이를 검토합니다.
+5. 개발자에게 새로운 이미지 구현을 요청하는 새로운 이슈를 생성합니다.

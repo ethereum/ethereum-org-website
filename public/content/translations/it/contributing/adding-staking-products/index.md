@@ -1,10 +1,8 @@
 ---
 title: Aggiungere prodotti o servizi di staking
-description: La politica che utilizziamo quando aggiungiamo prodotti o servizi di staking su ethereum.org
+description: La politica che utilizziamo per l'aggiunta di prodotti o servizi di staking su ethereum.org
 lang: it
 ---
-
-# Aggiungere prodotti o servizi di staking {#adding-staking-products-or-services}
 
 Vogliamo assicurarci di elencare le migliori risorse possibili mantenendo gli utenti al sicuro e fiduciosi.
 
@@ -12,17 +10,17 @@ Chiunque è libero di suggerire l'aggiunta di un prodotto o servizio di staking 
 
 Attualmente elenchiamo prodotti e servizi di staking nelle seguenti pagine:
 
-- [Staking in solitaria](/staking/solo/)
+- [Solo staking](/staking/solo/)
 - [Staking come servizio](/staking/saas/)
 - [Pool di staking](/staking/pools/)
 
-La prova di stake sulla beacon chain è attiva dal 1° dicembre 2020. Sebbene lo staking sia ancora relativamente nuovo, abbiamo cercato di creare un quadro equo e trasparente per la valutazione su ethereum.org, ma i criteri di inserimento cambieranno e si evolveranno nel tempo e sono, in ultima analisi, a discrezione del team del sito web di ethereum.org.
+La Proof-of-Stake (PoS) sulla Beacon Chain è attiva dal 1° dicembre 2020. Sebbene lo staking sia ancora relativamente nuovo, abbiamo cercato di creare un quadro equo e trasparente per la valutazione su ethereum.org, ma i criteri di inserimento cambieranno ed evolveranno nel tempo e sono, in ultima analisi, a discrezione del team del sito web di ethereum.org.
 
 ## Il quadro decisionale {#the-decision-framework}
 
-La decisione di elencare un prodotto su ethereum.org non dipende da un singolo fattore. Vengono considerati insieme molteplici criteri quando si decide di elencare un prodotto o servizio. Più di questi criteri vengono soddisfatti, più è probabile che venga elencato.
+La decisione di elencare un prodotto su ethereum.org non dipende da un singolo fattore. Vengono considerati insieme molteplici criteri quando si decide di elencare un prodotto o servizio. Più criteri vengono soddisfatti, maggiore è la probabilità che venga elencato.
 
-**Innanzitutto, di quale categoria di prodotto o servizio si tratta?**
+**Innanzitutto, a quale categoria di prodotto o servizio appartiene?**
 
 - Strumenti per nodi o client
 - Gestione delle chiavi
@@ -38,7 +36,7 @@ Le proposte di prodotti o servizi di staking saranno valutate in base ai seguent
 **Quando è stato lanciato il progetto o servizio?**
 
 - Ci sono prove di quando il prodotto o servizio è diventato disponibile al pubblico?
-- Questo viene utilizzato per determinare il punteggio "testato sul campo" (battle tested) del prodotto.
+- Questo viene utilizzato per determinare il punteggio "battle tested" (testato sul campo) del prodotto.
 
 **Il progetto è mantenuto attivamente?**
 
@@ -59,13 +57,13 @@ Le proposte di prodotti o servizi di staking saranno valutate in base ai seguent
 
 - es. Linux, macOS, Windows, iOS, Android
 
-#### Software e contratti intelligenti {#software-and-smart-contracts}
+#### Software e smart contract {#software-and-smart-contracts}
 
-Per qualsiasi software personalizzato o contratto intelligente coinvolto:
+Per qualsiasi software personalizzato o smart contract coinvolto:
 
 **È tutto open source?**
 
-- I progetti open source dovrebbero avere un repository del codice sorgente disponibile pubblicamente
+- I progetti open source dovrebbero avere un repository di codice sorgente disponibile pubblicamente
 - Questo viene utilizzato per determinare il punteggio "open source" del prodotto.
 
 **Il prodotto è fuori dalla fase di sviluppo _beta_?**
@@ -76,35 +74,35 @@ Per qualsiasi software personalizzato o contratto intelligente coinvolto:
 **Il software è stato sottoposto a un audit di sicurezza esterno?**
 
 - In caso contrario, ci sono piani per condurre un audit esterno?
-- Questo viene utilizzato per determinare il punteggio "audited" (revisionato) del prodotto.
+- Questo viene utilizzato per determinare il punteggio "audited" (sottoposto ad audit) del prodotto.
 
 **Il progetto ha un programma di bug bounty?**
 
-- In caso contrario, ci sono piani per creare un bug bounty per la sicurezza?
+- In caso contrario, ci sono piani per creare un bug bounty di sicurezza?
 - Questo viene utilizzato per determinare il punteggio "bug bounty" del prodotto.
 
 #### Strumenti per nodi o client {#node-or-client-tooling}
 
 Per i prodotti software relativi alla configurazione, gestione o migrazione di nodi o client:
 
-**Quali client di livello di consenso (es. Lighthouse, Teku, Nimbus, Prysm, Grandine) sono supportati?**
+**Quali client del livello di consenso (es. Lighthouse, Teku, Nimbus, Prysm, Grandine) sono supportati?**
 
 - Quali client sono supportati? L'utente può scegliere?
 - Questo viene utilizzato per determinare il punteggio "multi-client" del prodotto.
 
 #### Staking come servizio {#staking-as-a-service}
 
-Per gli [elenchi di staking come servizio](/staking/saas/) (es. operazione di nodi delegata):
+Per gli [elenchi di staking come servizio](/staking/saas/) (es. operazione delegata del nodo):
 
 **Quali sono le commissioni associate all'utilizzo del servizio?**
 
-- Qual è la struttura delle commissioni, ad esempio, c'è una commissione mensile per il servizio?
-- Ci sono requisiti di staking aggiuntivi?
+- Qual è la struttura delle commissioni, ad esempio, c'è una tariffa mensile per il servizio?
+- Ci sono requisiti aggiuntivi per lo staking?
 
 **Agli utenti è richiesto di registrarsi per un account?**
 
-- Qualcuno può utilizzare il servizio senza permessi o KYC?
-- Questo viene utilizzato per determinare il punteggio "senza permessi" (permissionless) del prodotto.
+- Qualcuno può utilizzare il servizio senza autorizzazione o KYC?
+- Questo viene utilizzato per determinare il punteggio "permissionless" del prodotto.
 
 **Chi detiene le chiavi di firma e le chiavi di prelievo?**
 
@@ -113,41 +111,41 @@ Per gli [elenchi di staking come servizio](/staking/saas/) (es. operazione di no
 
 **Qual è la diversità dei client dei nodi gestiti?**
 
-- Quale percentuale di chiavi del validatore è gestita da un client di livello di consenso (CL) di maggioranza?
-- All'ultimo aggiornamento, Prysm è il client di livello di consenso eseguito dalla maggioranza degli operatori di nodi, il che è pericoloso per la rete. Se un qualsiasi client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo dati relativi al suo utilizzo.
-- Questo viene utilizzato per determinare il punteggio "client diversi" del prodotto.
+- Quale percentuale di chiavi del validatore è eseguita da un client del livello di consenso (CL) di maggioranza?
+- All'ultimo aggiornamento, Prysm è il client del livello di consenso eseguito dalla maggioranza degli operatori di nodi, il che è pericoloso per la rete. Se un qualsiasi client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo dati relativi al suo utilizzo.
+- Questo viene utilizzato per determinare il punteggio "diverse clients" (client diversificati) del prodotto.
 
 #### Pool di staking {#staking-pool}
 
-Per i [servizi di pool di staking](/staking/pools/):
+Per i [servizi di staking in pool](/staking/pools/):
 
-**Qual è l'ETH minimo richiesto per lo stake?**
+**Qual è l'ETH minimo richiesto per mettere in staking?**
 
 - es. 0,01 ETH
 
 **Quali sono le commissioni o i requisiti di staking previsti?**
 
 - Quale percentuale delle ricompense viene trattenuta come commissione?
-- Ci sono requisiti di staking aggiuntivi?
+- Ci sono requisiti aggiuntivi per lo staking?
 
-**C'è un token di liquidità?**
+**Esiste un token di liquidità?**
 
 - Quali sono i token coinvolti? Come funzionano? Quali sono gli indirizzi del contratto?
-- Questo viene utilizzato per determinare il punteggio "token di liquidità" del prodotto.
+- Questo viene utilizzato per determinare il punteggio "liquidity token" (token di liquidità) del prodotto.
 
-**Gli utenti possono partecipare come operatori di nodi?**
+**Gli utenti possono partecipare come operatori di nodo?**
 
-- Cosa è richiesto per eseguire i client del validatore utilizzando i fondi del pool?
-- Questo richiede il permesso di un individuo, un'azienda o una DAO?
-- Questo viene utilizzato per determinare il punteggio "nodi senza permessi" del prodotto.
+- Cosa è richiesto per eseguire i client del validatore utilizzando i fondi in pool?
+- Questo richiede l'autorizzazione da parte di un individuo, un'azienda o una DAO?
+- Questo viene utilizzato per determinare il punteggio "permissionless nodes" (nodi permissionless) del prodotto.
 
-**Qual è la diversità dei client degli operatori di nodi del pool?**
+**Qual è la diversità dei client degli operatori di nodo della pool?**
 
-- Quale percentuale di operatori di nodi esegue un client di livello di consenso (CL) di maggioranza?
-- All'ultimo aggiornamento, Prysm è il client di livello di consenso eseguito dalla maggioranza degli operatori di nodi, il che è pericoloso per la rete. Se un qualsiasi client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo dati relativi al suo utilizzo.
-- Questo viene utilizzato per determinare il punteggio "client diversi" del prodotto.
+- Quale percentuale di operatori di nodo esegue un client del livello di consenso (CL) di maggioranza?
+- All'ultimo aggiornamento, Prysm è il client del livello di consenso eseguito dalla maggioranza degli operatori di nodi, il che è pericoloso per la rete. Se un qualsiasi client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo dati relativi al suo utilizzo.
+- Questo viene utilizzato per determinare il punteggio "diverse clients" (client diversificati) del prodotto.
 
-### Altri criteri: i requisiti opzionali {#other-criteria}
+### Altri criteri: i vantaggi aggiuntivi {#other-criteria}
 
 **Quali interfacce utente sono supportate?**
 
@@ -155,7 +153,7 @@ Per i [servizi di pool di staking](/staking/pools/):
 
 **Per gli strumenti dei nodi, il software fornisce un modo semplice per passare da un client all'altro?**
 
-- L'utente può cambiare client in modo facile e sicuro utilizzando lo strumento?
+- L'utente può cambiare client in modo semplice e sicuro utilizzando lo strumento?
 
 **Per il SaaS, quanti validatori sono attualmente gestiti dal servizio?**
 
