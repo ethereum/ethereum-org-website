@@ -27,14 +27,14 @@ Tokeny RWA nemají žádnou vnitřní hodnotu. Spíše odrážejí hodnotu před
 
 ## Jaké jsou výhody RWA? {#rwas-benefits}
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<Grid>
   <Card title="Zlomkové vlastnictví" emoji=":house_buildings:" description="RWA demokratizují investování. Pokud nemůžete investovat do určitých typů aktiv, protože jsou pro vás příliš drahá, nyní se můžete stát jejich částečným vlastníkem."/>
   <Card title="Diverzifikace investic" emoji="🛒" description="Můžete investovat do více typů aktiv a diverzifikovat tak své portfolio, aniž byste museli utrácet obrovské částky." />
   <Card title="Globální příležitosti" emoji="🌏" description="RWA odstraňují geografické překážky pro investování. Můžete si koupit tokeny pro aktiva nacházející se kdekoli na světě." />
   <Card title="Zlikvidnění aktiv" emoji="🖼️" description="Mnoho aktiv je nelikvidních. Jsou sice cenná, ale to neznamená, že máte hotovost k útratě. Tokenizací mohou vlastníci přeměnit celé aktivum nebo jeho část na použitelnou hodnotu."/>
   <Card title="Celosvětový trh" emoji="💰" description="Vlastníci, kteří chtějí zhodnotit svá aktiva, mohou oslovit širší okruh investorů – nejen ty, kteří si obvykle mohou dovolit kupovat pozemky, akcie, umění nebo tradiční finanční nástroje." />
   <Card title="Bez prostředníků" emoji="👩‍💻" description="Tokeny běží na smart kontraktech, což znamená, že s nimi lze obchodovat přímo mezi lidmi bez potřeby zprostředkovatelů a jejich poplatků." />
-</CardGrid>
+</Grid>
 
 ## Jak RWA fungují? {#how-rwas-work}
 

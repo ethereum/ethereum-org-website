@@ -151,7 +151,11 @@ Use these instead of arbitrary `z-[N]` values:
 
 ### Grid templates
 
-`grid-cols-bento`, `grid-cols-fill-3`, `grid-cols-fill-4`, `grid-cols-fill-8`, `grid-cols-fill-10`, `grid-cols-fit-4`. Plus staking-specific grid templates.
+For responsive card/item grids, use the **`Grid` component** (`@/components/ui/grid`) -- it wraps the `grid-cols-auto-*` utility with `columns`, `size`, and `fit` variants. See `components.md`.
+
+`grid-cols-auto-N` (N = max columns, any integer) is a functional utility: at most N columns, each at least `--grid-item-min` wide (default `18rem`), folding to fewer columns as the viewport narrows. Set `--grid-repeat: auto-fit` to collapse empty tracks (default is `auto-fill`). `grid-cols-bento` covers the 12-col bento layout. Plus staking-specific grid templates.
+
+The enumerated `grid-cols-fill-N` / `grid-cols-fit-4` utilities are legacy (pre-`Grid`); existing usages are being migrated to `Grid`. Don't use them for new work.
 
 ### Misc
 
@@ -173,7 +177,7 @@ A `[Xpx]` or `[Xrem]` arbitrary in a className is a red flag. It's almost always
 The exceptions are genuinely arbitrary cases:
 - `w-[calc(100%-2rem)]` -- calc expressions
 - `aspect-[3/2]` -- aspect ratios that don't have a token
-- `grid-cols-[200px_1fr]` -- but check the custom `grid-cols-*` utilities above first; `grid-cols-bento`, `grid-cols-fill-N`, `grid-cols-fit-4` already exist for common cases
+- `grid-cols-[200px_1fr]` -- but for responsive card/item grids use the `Grid` component (or its `grid-cols-auto-*` utility), and `grid-cols-bento` for the bento layout. See "Grid templates" above.
 
 ## Dark Mode
 
@@ -192,7 +196,7 @@ The `useColorModeValue` hook (Chakra leftover) is **deprecated**. Don't introduc
 
 `<body>` automatically gets `bg-background font-body leading-base text-body`. You don't need to repeat these on top-level page wrappers.
 
-Headings (`<h1>` through `<h6>`) get sizing and `font-bold` from `base.css`:
+Headings (`<h1>` through `<h6>`) get sizing and `font-black` from `base.css`:
 - `<h1>`: `text-4xl lg:text-5xl`
 - `<h2>`: `text-3xl lg:text-4xl`
 - `<h3>`: `text-2xl lg:text-3xl`

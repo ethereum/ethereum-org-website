@@ -26,6 +26,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { LinkWithArrow } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -330,9 +331,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           />
         </div>
 
-        <div
+        <Grid
           id="callout-cards"
-          className="grid grid-cols-1 gap-8 p-8 md:grid-cols-2"
+          columns={2}
+          size="wide"
+          className="gap-y-8 p-8"
         >
           <Callout
             image={Callout1Image}
@@ -366,7 +369,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               {t("page-layer-2-learn-explore-networks")}
             </ButtonLink>
           </Callout>
-        </div>
+        </Grid>
 
         <div id="quiz" className="px-8 py-9">
           <StandaloneQuizWidget quizKey="layer-2" />

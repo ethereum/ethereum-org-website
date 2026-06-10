@@ -25,9 +25,12 @@ import { formatPriceUSD, numberFormat } from "@/lib/utils/numbers"
 
 import FloatingCard from "./FloatingCard"
 
-import borrowingImage from "@/public/images/homepage/savings/borrowing.png"
-import defiImage from "@/public/images/homepage/savings/defi.png"
-import remittancesImage from "@/public/images/homepage/savings/remittances.png"
+import borrowingImage from "@/public/images/heroes/developers-hub-hero.png"
+import borrowingImagePortrait from "@/public/images/heroes/developers-hub-hero-portrait.png"
+import defiImage from "@/public/images/heroes/learn-hub-hero.png"
+import defiImagePortrait from "@/public/images/heroes/learn-hub-hero-portrait.png"
+import remittancesImage from "@/public/images/heroes/quizzes-hub-hero.png"
+import remittancesImagePortrait from "@/public/images/heroes/quizzes-hub-hero-portrait.png"
 
 type ComparisonItem = {
   label: string
@@ -50,6 +53,7 @@ type Slide = {
   cta: string
   href: string
   image: typeof defiImage
+  imagePortrait: typeof defiImagePortrait
   comparison: ComparisonData
 }
 
@@ -78,6 +82,7 @@ function useSlides(): Slide[] {
       cta: t("page-index-carousel-privacy-cta"),
       href: "/apps/categories/privacy/",
       image: defiImage,
+      imagePortrait: defiImagePortrait,
       comparison: {
         traditional: {
           label: t("page-index-carousel-privacy-traditional-label"),
@@ -118,6 +123,7 @@ function useSlides(): Slide[] {
       cta: t("page-index-carousel-remittances-cta"),
       href: "/payments/",
       image: remittancesImage,
+      imagePortrait: remittancesImagePortrait,
       comparison: {
         traditional: {
           label: t("page-index-carousel-remittances-traditional-label"),
@@ -143,6 +149,7 @@ function useSlides(): Slide[] {
       cta: t("page-index-carousel-borrowing-cta"),
       href: "/defi/",
       image: borrowingImage,
+      imagePortrait: borrowingImagePortrait,
       comparison: {
         traditional: {
           label: t("page-index-carousel-borrowing-traditional-label"),
@@ -307,9 +314,9 @@ const SlideContent = ({
         <div className="relative hidden min-h-[500px] md:block lg:min-h-[700px]">
           <div className="absolute inset-y-0 right-0 w-full overflow-hidden rounded-4xl">
             <Image
-              src={slide.image}
+              src={slide.imagePortrait}
               alt=""
-              sizes="(max-width: 1024px) 384px, 512px"
+              sizes="(max-width: 991px) 384px, 512px"
               className="h-full w-full object-cover"
             />
           </div>

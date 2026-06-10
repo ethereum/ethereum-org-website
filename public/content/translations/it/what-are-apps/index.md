@@ -21,11 +21,11 @@ Una volta che un'app è pubblicata sulla blockchain di Ethereum, diventa inarres
 
 Le applicazioni di Ethereum hanno la loro logica in esecuzione sulla blockchain di Ethereum invece che su server centralizzati. Questo è il motivo per cui sono state spesso chiamate applicazioni decentralizzate o dApp in breve.
 
-<CardGrid>
+<Grid>
   <Card title="Più private" emoji=":detective:" description="Hai solo bisogno di un portafoglio di Ethereum per usare qualsiasi dApp. I tuoi dati personali non sono richiesti. Questo è internet come avrebbe sempre dovuto essere."/>
   <Card title="Accessibili a livello globale" emoji="🌍" description="Le dApp non sono governate dalle regole delle regioni e degli app store. Il tuo accesso dipende dall'avere una connessione internet, non da dove vivi." />
   <Card title="Servizi più economici" emoji=":handshake:" description="Le dApp sono peer-to-peer. Nessun intermediario che prende una percentuale significa servizi più economici." />
-</CardGrid>
+</Grid>
 
 ## Perché è importante {#why-does-this-matter}
 

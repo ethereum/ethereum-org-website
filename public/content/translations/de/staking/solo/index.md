@@ -29,11 +29,11 @@ Ein Home-Staker erhält Belohnungen direkt vom Protokoll, wenn er seinen Validat
 
 Home Staking geht mit mehr Verantwortung einher, bietet Ihnen jedoch maximale Kontrolle über Ihre Gelder und Ihr Staking-Setup.
 
-<CardGrid>
+<Grid>
   <Card title="Verdienen Sie neue ETH" emoji="💸" description="Verdienen Sie in ETH denominierte Belohnungen direkt vom Protokoll, wenn Ihr Validator online ist, ohne dass Zwischenhändler einen Anteil nehmen." />
   <Card title="Volle Kontrolle" emoji="🎛️" description="Behalten Sie Ihre eigenen Schlüssel. Wählen Sie die Kombination aus Clients und Hardware, die es Ihnen ermöglicht, Ihr Risiko zu minimieren und am besten zur Gesundheit und Sicherheit des Netzwerks beizutragen. Staking-Dienste von Drittanbietern treffen diese Entscheidungen für Sie und nicht immer die sichersten." />
   <Card title="Netzwerksicherheit" emoji="🔐" description="Home-Staking ist die wirkungsvollste Art zu staken. Indem Sie einen Validator auf Ihrer eigenen Hardware zu Hause betreiben, stärken Sie die Robustheit, Dezentralisierung und Sicherheit des Ethereum-Protokolls." />
-</CardGrid>
+</Grid>
 
 ## Überlegungen vor dem Home Staking {#considerations-before-staking-solo}
 

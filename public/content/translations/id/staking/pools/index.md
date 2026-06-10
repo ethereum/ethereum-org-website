@@ -23,11 +23,11 @@ Beberapa kolam beroperasi menggunakan kontrak pintar, di mana dana dapat disetor
 
 Selain manfaat yang kami uraikan dalam [pengantar mengunci (staking) kami](/staking/), melakukan stake dengan kolam memberikan sejumlah manfaat yang berbeda.
 
-<CardGrid>
+<Grid>
   <Card title="Hambatan masuk yang rendah" emoji="🐟" description="Bukan paus (whale)? Tidak masalah. Sebagian besar kolam staking memungkinkan Anda melakukan stake dengan jumlah ETH berapa pun dengan bergabung bersama staker lain, tidak seperti melakukan stake secara solo yang membutuhkan 32 ETH." />
   <Card title="Stake hari ini" emoji=":stopwatch:" description="Melakukan stake dengan kolam semudah melakukan tukar token. Tidak perlu khawatir tentang penyiapan perangkat keras dan pemeliharaan node. Kolam memungkinkan Anda menyetorkan ETH Anda yang memungkinkan operator node untuk menjalankan validator. Hadiah kemudian didistribusikan kepada kontributor dikurangi biaya untuk operasi node." />
   <Card title="Token staking" emoji=":droplet:" description="Banyak kolam staking menyediakan token yang mewakili klaim atas ETH yang Anda stake dan hadiah yang dihasilkannya. Ini memungkinkan Anda untuk memanfaatkan ETH yang Anda stake, misalnya, sebagai jaminan dalam aplikasi DeFi." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

@@ -1,7 +1,4 @@
-import { useLocale } from "next-intl"
-import type { HTMLAttributes } from "react"
-
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -17,53 +14,29 @@ import ListenToPlayer from "@/components/ListenToPlayer"
 import Logo from "@/components/Logo"
 import MainArticle from "@/components/MainArticle"
 import MatomoOptOut from "@/components/MatomoOptOut"
-import {
-  Heading1 as MdHeading1,
-  Heading2 as MdHeading2,
-  Heading3 as MdHeading3,
-  Heading4 as MdHeading4,
-} from "@/components/MdComponents"
+import PageActions from "@/components/PageActions"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
-import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import { Alert } from "@/components/ui/alert"
 import Callout from "@/components/ui/callout"
-import { Flex, Stack } from "@/components/ui/flex"
+import { Flex } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import WhitepaperBridge from "@/components/WhitepaperBridge"
 
 import { getEditPath } from "@/lib/utils/editPath"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 
-const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading1 className="md:text-5xl" {...props} />
-)
-const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading2 className="max-md:text-2xl" {...props} />
-)
-const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading3 className="max-md:text-xl" {...props} />
-)
-const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading4 className="max-md:text-md" {...props} />
-)
-
 // Static layout components
 export const staticComponents = {
-  h1: Heading1,
-  h2: Heading2,
-  h3: Heading3,
-  h4: Heading4,
   Alert,
   Callout,
   Contributors,
   EnergyConsumptionChart,
   GlossaryDefinition,
   GlossaryTooltip,
-  Link,
+  Link, // TODO: Refactor /community/online/ `Link` usage to `[]()` then deprecate this
   Logo,
   MatomoOptOut,
   NetworkUpgradeSummary,
@@ -93,9 +66,9 @@ export const StaticLayout = ({
   contentNotTranslated,
   contributors,
 }: StaticLayoutProps) => {
-  const locale = useLocale()
-
   const absoluteEditPath = getEditPath(slug)
+
+  const isGuidesHub = slug === "/guides/" || slug === "guides"
 
   return (
     <div className="w-full">
@@ -104,36 +77,41 @@ export const StaticLayout = ({
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <div className="w-full">
-          {slug === "/guides/" ? (
+          {isGuidesHub ? (
             <HubHero
               heroImg={GuideHeroImage}
               header={frontmatter.title}
               description={frontmatter.description}
             />
           ) : (
-            <Stack className="gap-8">
+            <div className="mb-6 max-w-3xl lg:mb-8">
               <Breadcrumbs slug={slug} />
-
-              {!slug.includes("/whitepaper") && lastEditLocaleTimestamp && (
-                <p
-                  className="text-body-medium"
-                  dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-                >
-                  <Translation id="page-last-updated" />:{" "}
-                  {lastEditLocaleTimestamp}
-                </p>
-              )}
-            </Stack>
+            </div>
           )}
 
-          <MainArticle className="max-w-3xl">
-            <TableOfContents
-              className="relative"
-              items={tocItems}
-              maxDepth={frontmatter.sidebarDepth || 2}
-              hideEditButton={!!frontmatter.hideEditButton}
-              isMobile
-            />
+          <MainArticle
+            className={
+              isGuidesHub
+                ? "flow mt-12 max-w-3xl [&>h1:first-of-type]:hidden"
+                : "flow flex max-w-3xl flex-col [&>h1:first-of-type]:-order-1"
+            }
+          >
+            {!isGuidesHub && (
+              <PageActions
+                slug={slug}
+                isTranslated={!contentNotTranslated}
+                editPath={absoluteEditPath}
+                hideEditButton={!!frontmatter.hideEditButton}
+                className="-ms-2 mb-6"
+              />
+            )}
+            <div className="mb-8 lg:hidden">
+              <TableOfContents
+                items={tocItems}
+                maxDepth={frontmatter.sidebarDepth || 2}
+                isMobile
+              />
+            </div>
             {children}
 
             {!frontmatter.hideEditButton && (
@@ -147,10 +125,8 @@ export const StaticLayout = ({
           </MainArticle>
         </div>
         <TableOfContents
-          editPath={absoluteEditPath}
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth || 2}
-          hideEditButton={!!frontmatter.hideEditButton}
         />
       </Flex>
     </div>

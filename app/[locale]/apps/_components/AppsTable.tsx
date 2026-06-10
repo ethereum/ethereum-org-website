@@ -6,6 +6,7 @@ import { AppData } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import FilterBar from "@/components/FilterBar"
+import { Grid } from "@/components/ui/grid"
 
 import { slugify } from "@/lib/utils/url"
 
@@ -49,7 +50,7 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
           eventName: "",
         }}
       />
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <Grid columns={3}>
         {filteredApps.map((app) => (
           <div key={app.name}>
             <AppCard
@@ -67,7 +68,7 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
             />
           </div>
         ))}
-      </div>
+      </Grid>
     </div>
   )
 }

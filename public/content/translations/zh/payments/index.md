@@ -26,11 +26,11 @@ summaryPoints:
 
 对于数百万在国外工作的人们，汇款回家是一种常态。 传统汇款服务通常费用高昂且处理时间缓慢。 以太坊提供了一种优秀的替代方案。
 
-<CardGrid>
+<Grid>
   <Card title="费用更低" emoji=":money_with_wings:" description="汇款服务的平均费用高达 14 美元，而以太坊交易通常不到 0.01 美元即可完成。"/>
   <Card title="转账更快" emoji="📶" description="国际电汇需要几天时间处理，而以太坊交易在几分钟内即可结算。" />
   <Card title="人人可用" emoji="🌎" description="你只需要一个网络连接和一个钱包应用，便能发送或接收以太币。" />
-</CardGrid>
+</Grid>
 
 ## 接入全球货币 {#access-to-global-currencies}
 

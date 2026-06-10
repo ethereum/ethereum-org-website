@@ -101,7 +101,7 @@ The page above is a Server Component (default), so it uses `getTranslations` fro
 // DON'T: Inline a hero from scratch
 <section className="relative">
   <h1 className="mt-8 mb-4 text-md uppercase font-normal">{eyebrow}</h1>
-  <h2 className="mt-8 mb-0 text-[2.5rem] !leading-xs font-bold lg:mt-12 lg:text-5xl">{title}</h2>
+  <h2 className="mt-8 mb-0 text-[2.5rem] !leading-xs lg:mt-12 lg:text-5xl">{title}</h2>
   <p className="mt-4 mb-8 text-xl !leading-xs lg:text-2xl">{description}</p>
   <div className="flex gap-4">{buttons}</div>
 </section>

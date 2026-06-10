@@ -23,11 +23,11 @@ Alguns pools operam usando contratos inteligentes, onde os fundos podem ser depo
 
 Além dos benefícios que descrevemos em nossa [introdução à participação](/staking/), fazer participação em um pool traz vários benefícios distintos.
 
-<CardGrid>
+<Grid>
   <Card title="Baixa barreira de entrada" emoji="🐟" description="Não é uma baleia? Sem problemas. A maioria dos pools de staking permite que você faça stake de praticamente qualquer quantia de ETH, unindo-se a outros stakers, diferente do stake individual, que exige 32 ETH." />
   <Card title="Faça stake hoje" emoji=":stopwatch:" description="Fazer stake com um pool é tão fácil quanto uma troca de token. Não precisa se preocupar com configuração de hardware e manutenção de nós. Os pools permitem que você deposite seu ETH, possibilitando que operadores de nós executem validadores. As recompensas são então distribuídas aos contribuidores, descontando uma taxa pelas operações dos nós." />
   <Card title="Tokens de staking" emoji=":droplet:" description="Muitos pools de staking fornecem um token que representa um direito sobre seu ETH em stake e as recompensas que ele gera. Isso permite que você utilize seu ETH em stake, por exemplo, como garantia em aplicativos DeFi." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

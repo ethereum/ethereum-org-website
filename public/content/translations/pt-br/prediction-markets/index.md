@@ -30,11 +30,11 @@ Em  teoria, dado que os apostadores podem ser beneficiados por acertar, os merca
 
 Diferentemente das projeções tradicionais, os mercados de projeção baseados em blockchain são:
 
-<CardGrid>
+<Grid>
   <Card title="Incentivado" emoji=":money_with_wings:" description="Os participantes aplicam fundos reais, o que leva a previsões de alta qualidade."/>
   <Card title="Descentralização" emoji="🌎" description="O uso de blockchain e contratos inteligentes garante pagamentos transparentes e automatizados." />
   <Card title="Probabilidades definidas pelo mercado" emoji="🤝" description="Os preços são definidos por traders que compram e vendem cotas de resultados, em vez de serem predefinidos por uma casa de apostas centralizada." />
-</CardGrid>
+</Grid>
 
 Mesmo como um observador do mercado, você pode avaliar dados valiosos que de outra forma não estariam disponíveis. Pense nisso assim:
 

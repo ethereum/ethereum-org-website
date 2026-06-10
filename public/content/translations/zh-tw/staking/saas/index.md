@@ -21,11 +21,11 @@ summaryPoints:
 
 以太坊協定本身並不支援質押委託，因此為了滿足此項需求，這類服務應運而生。 如果你有 32 個以太幣要質押，但懶得處理硬體設備，質押即服務可以讓你在賺取原生區塊酬勞的同時將困難的部分外包。
 
-<CardGrid>
+<Grid>
   <Card title="你自己的驗證者" emoji=":desktop_computer:" description="存入 32 ETH 來啟用你的簽名金鑰，參與以太坊共識。透過儀表板追蹤進度，看著 ETH 獎勵累積。" />
   <Card title="輕鬆上手" emoji="🏁" description="不用再煩惱硬體規格、設定、節點維護和升級。SaaS 供應商讓你外包困難的部分，只要上傳你的簽名憑證，他們就能以小額費用代表你執行驗證者。" />
   <Card title="限制你的風險" emoji=":shield:" description="在許多情況下，使用者無需交出用來提領或轉移質押資金的金鑰。這些金鑰與簽名金鑰不同，可分開存放，以限制（但非完全消除）你身為質押者的風險。" />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

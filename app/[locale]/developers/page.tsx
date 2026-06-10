@@ -26,6 +26,7 @@ import {
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
 import { VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
@@ -118,7 +119,7 @@ const WhyGrid = () => {
         <div className="flex gap-1.5" key={heading}>
           <CheckCircle />
           <div className="space-y-1">
-            <h3 className="text-lg">{heading}</h3>
+            <h3 className="text-lg font-bold">{heading}</h3>
             <p className="text-body-medium">{description}</p>
           </div>
         </div>
@@ -176,13 +177,13 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
             <p>{t("page-developers-build-section-desc")}</p>
             {/* Desktop */}
-            <div className="grid gap-6 max-md:hidden md:grid-cols-2 lg:grid-cols-4">
+            <Grid balanced={4} className="max-md:hidden">
               {paths.map((path, idx) => (
                 <BuilderCard path={path} key={idx} />
               ))}
 
               <SpeedRunCard {...speedRunDetails} />
-            </div>
+            </Grid>
 
             {/* Mobile */}
             <div className="-mx-8 md:hidden">
@@ -289,7 +290,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-jump-right-in-title")}
                 </CardTitle>
                 <CardParagraph>
@@ -349,7 +350,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-get-help-title")}
                 </CardTitle>
                 <CardParagraph>
@@ -384,7 +385,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-resources-title")}
                 </CardTitle>
                 <CardParagraph>
@@ -420,7 +421,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-tutorials-title")}
                 </CardTitle>
                 <CardParagraph>

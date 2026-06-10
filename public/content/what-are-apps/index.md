@@ -21,11 +21,11 @@ Once an app is published on Ethereum blockchain, it becomes unstoppable. This is
 
 Ethereum applications have their logic running on the Ethereum blockchain instead of in centralized servers. This is why they have often been called decentralized applications or dapps in short.
 
-<CardGrid>
+<Grid>
   <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
   <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
   <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
-</CardGrid>
+</Grid>
 
 ## Why does this matter {#why-does-this-matter}
 

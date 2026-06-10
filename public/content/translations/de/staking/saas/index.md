@@ -21,11 +21,11 @@ Staking as a Service („SaaS“) stellt eine Kategorie von Staking-Diensten dar
 
 Das [Ethereum](/)-Protokoll unterstützt von Haus aus keine Delegierung des Einsatzes, daher wurden diese Dienste entwickelt, um diese Nachfrage zu decken. Wenn Sie 32 ETH zum Staken haben, sich aber nicht mit Hardware befassen möchten, ermöglichen Ihnen SaaS-Dienste, den schwierigen Teil zu delegieren, während Sie native Block-Belohnungen verdienen.
 
-<CardGrid>
+<Grid>
   <Card title="Dein eigener Validator" emoji=":desktop_computer:" description="Zahle deine eigenen 32 ETH ein, um deine eigenen Signaturschlüssel zu aktivieren, die am Ethereum-Konsens teilnehmen. Überwache deinen Fortschritt mit Dashboards, um zu sehen, wie sich deine ETH-Belohnungen ansammeln." />
   <Card title="Einfacher Start" emoji="🏁" description="Vergiss Hardware-Spezifikationen, Einrichtung, Wartung des Blockchain-Knotens und Upgrades. SaaS-Anbieter ermöglichen es dir, den schwierigen Teil auszulagern, indem du deine eigenen Signaturdaten hochlädst, damit sie gegen eine geringe Gebühr einen Validator in deinem Namen betreiben können." />
   <Card title="Begrenze dein Risiko" emoji=":shield:" description="In vielen Fällen müssen Benutzer den Zugriff auf die Schlüssel nicht aufgeben, die das Abheben oder Überweisen von gestakten Geldern ermöglichen. Diese unterscheiden sich von den Signaturschlüsseln und können separat gespeichert werden, um dein Risiko als Staker zu begrenzen (aber nicht zu eliminieren)." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

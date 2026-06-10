@@ -21,11 +21,11 @@ Usługi stakingowe („SaaS”) reprezentują kategorię usług stakingowych, w 
 
 Protokół Ethereum nie wspiera natywnie delegowania stawek, więc stworzone zostały te usługi, aby zaspokoić zapotrzebowanie. Jeśli masz dostępne na poczet stakingu 32 ETH, ale nie czujesz się komfortowo z obsługą sprzętu, usługi SaaS pozwalają Ci na zdelegowanie tych czynności, podczas gdy Ty nadal możesz uzyskiwać natywne nagrody za blok.
 
-<CardGrid>
+<Grid>
   <Card title="Twój własny walidator" emoji=":desktop_computer:" description="Wpłać własne 32 ETH, aby aktywować swój zestaw kluczy do podpisywania, które wezmą udział w konsensusie Ethereum. Monitoruj swoje postępy na dashboardach i obserwuj, jak gromadzą się nagrody w ETH." />
   <Card title="Łatwy start" emoji="🏁" description="Zapomnij o specyfikacji sprzętu, konfiguracji, utrzymaniu węzła i aktualizacjach. Dostawcy SaaS pozwalają zlecić trudniejszą część: wystarczy, że prześlesz swoje poświadczenia do podpisywania, a oni za niewielką opłatą uruchomią walidatora w Twoim imieniu." />
   <Card title="Ogranicz swoje ryzyko" emoji=":shield:" description="W wielu przypadkach użytkownicy nie muszą rezygnować z dostępu do kluczy, które umożliwiają wypłatę lub transfer stakowanych środków. Różnią się one od kluczy do podpisywania i mogą być przechowywane osobno, aby ograniczyć (ale nie wyeliminować) ryzyko jako stakera." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

@@ -22,6 +22,7 @@ import { ButtonLink, ButtonLinkProps } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -180,17 +181,16 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   {t("page-community-why-get-involved-title")}
                 </H2>
               </Flex>
-              <Flex className="flex-wrap gap-8">
+              <Grid columns={3}>
                 {whyGetInvolvedCards.map((card, idx) => (
                   <MarkdownCard
                     key={idx}
                     emoji={card.emoji}
                     title={card.title}
                     description={card.description}
-                    className="w-full max-w-full min-w-[280px] flex-[1_0_30%] md:max-w-[46%] lg:max-w-[31%]"
                   />
                 ))}
-              </Flex>
+              </Grid>
             </div>
           </Flex>
           <div className="w-full bg-background-highlight pb-16 shadow-table-item-box">
@@ -237,7 +237,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   {t("page-community-open-source-description")}
                 </Subtitle>
                 <ButtonRow>
-                  <ButtonLink href="/community/get-involved/#ethereum-jobs/">
+                  <ButtonLink href="/community/get-involved#ethereum-jobs">
                     {t("page-community-find-a-job")}
                   </ButtonLink>
                   <StyledButtonLink

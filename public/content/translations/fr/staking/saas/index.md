@@ -21,11 +21,11 @@ Staking as a service ("la mise en jeu en tant que service, ou SaaS”) est une c
 
 Le protocole Ethereum ne soutient pas nativement la délégation de mise en jeu. Ces services ont donc été construits pour répondre à cette demande. Si vous avez 32 ETH à miser, mais que vous ne vous sentez pas à l'aise avec le matériel, les services SaaS vous permettent de déléguer la partie complexe pendant que vous gagnez des récompenses de bloc natif.
 
-<CardGrid>
+<Grid>
   <Card title="Votre propre validateur" emoji=":desktop_computer:" description="Déposez vos 32 ETH pour activer vos clés de signature qui participeront au consensus d'Ethereum. Suivez vos progrès sur des tableaux de bord pour voir vos récompenses en ETH s'accumuler." />
   <Card title="Démarrage facile" emoji="🏁" description="Oubliez les spécifications matérielles, la configuration, la maintenance des nœuds et les mises à niveau. Les fournisseurs SaaS vous permettent d'externaliser la partie difficile en téléversant vos propres identifiants de signature, leur permettant d'exécuter un validateur en votre nom, pour un coût modique." />
   <Card title="Limitez votre risque" emoji=":shield:" description="Dans de nombreux cas, les utilisateurs n'ont pas à renoncer à l'accès aux clés qui permettent de retirer ou de transférer les fonds mis en jeu. Celles-ci sont différentes des clés de signature et peuvent être stockées séparément pour limiter (mais pas éliminer) votre risque en tant que staker." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

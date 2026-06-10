@@ -108,8 +108,8 @@ const CalloutButtons = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "pt-//4 mt-auto flex flex-wrap gap-4 max-sm:flex-col",
-      "*:w-full *:text-center sm:*:w-fit", // Button styling
+      "mt-auto flex flex-wrap gap-4 @max-md/content:flex-col",
+      "**:w-full **:text-center @md/content:*:w-fit", // Button styling
       className
     )}
     {...props}

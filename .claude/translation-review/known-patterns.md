@@ -257,7 +257,24 @@ in Arabic mev/index.md. Sentences read "electric SUV extraction rates surged."
 
 **Not automatable** -- semantic error requiring human/AI review.
 
+### 20. Compound/Multi-Form Glossary Entries -> False-Positive "Critical" Flags (REVIEW HYGIENE)
+
+ETHGlossary frequently has multiple entries for one base term that differ by surrounding words. Checking only the bare entry produces false-positive critical flags. Before flagging a glossary deviation, check whether the English source uses a compound form and whether a matching compound glossary entry exists.
+
+**Confirmed in PR #18344 (latest/ builder blog) -- 3 of 5 agent-flagged "criticals" were false positives:**
+- pt-br: "Ethereum mainnet" -> "Rede Principal do Ethereum" flagged against bare `mainnet => Mainnet`, but glossary also has `Ethereum Mainnet => Rede Principal do Ethereum`. Correct.
+- mr: same; glossary has `Ethereum Mainnet => इथरियम मेननेट` (note its इथरियम spelling intentionally differs from standalone `Ethereum => इथेरियम`).
+- cs: "zero-knowledge proof" -> "důkaz s nulovou znalostí" flagged against bare `zero-knowledge => s nulovým vědomím`, but glossary has `zero-knowledge proof => důkaz s nulovou znalostí`. Translator correctly used the bare form for "zero-knowledge tooling/language" and the proof form for "zero-knowledge proof" (the vi agent caught this split; the cs agent missed it).
+
+**Rule:** when a flagged term has adjacent qualifier words in English (X Mainnet, X proof, X layer), grep the glossary JSON for the multi-word entry before treating it as critical. The `/filter` output already includes both forms.
+
 ## Per-Language Notes
+
+### Czech (cs) & Traditional Chinese (zh-tw) -- latest/ blog, Reviewed PR #18344
+- cs 8.8/10: 1 real critical fixed -- "gas" rendered as literal "plyn" (4x in building-on-ethereum-in-2026); ETHGlossary note mandates the loanword "gas" (same file already used "gasu"). zero-knowledge flag was a false positive (see pattern 20).
+- zh-tw 9.5/10: 1 real critical fixed -- "smart contract" as 智慧合約 -> 智能合約 (glossary: 智慧 is the smartphone sense, 智能 is the crypto term).
+- 22 other languages clean (0 real critical); fleet avg ~9.6/10. No MDX/href/semantic-inversion/cross-script issues across 72 files.
+- Several non-Latin glossary entries store lowercase `(l1)`/`(l2)`; translators render lowercase L1/L2 faithfully -- glossary-correct, not an error (candidate for ETHGlossary normalization).
 
 ### Turkish (tr) -- Reviewed PR #17182
 - Quality score: 7.7/10

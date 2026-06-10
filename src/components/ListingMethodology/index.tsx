@@ -32,7 +32,7 @@ const ListingMethodology = async ({
       className="mt-12 border-t border-body-light pt-12 md:mt-16 md:pt-16"
     >
       <div className="flex w-full flex-col gap-6 px-4 pb-16 md:w-2/3 lg:w-3/5">
-        <h2 id="methodology-heading" className="text-3xl font-bold md:text-4xl">
+        <h2 id="methodology-heading" className="text-3xl md:text-4xl">
           {heading}
         </h2>
 

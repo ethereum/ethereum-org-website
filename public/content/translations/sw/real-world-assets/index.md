@@ -27,14 +27,14 @@ Ishara za RWA hazina thamani yoyote ya ndani. Badala yake, zinaonyesha thamani y
 
 ## Je! Ni faida gani za RWAS? {#rwas-benefits}
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<Grid>
   <Card title="Umiliki wa Sehemu" emoji=":house_buildings:" description="RWA zinarahisisha uwekezaji kwa wote. Kama huna uwezo wa kuwekeza kwenye aina fulani za mali, sasa unaweza kufanya hivyo kama mmiliki wa sehemu."/>
   <Card title="Uanuwai wa Uwekezaji" emoji="🛒" description="Unaweza kuwekeza katika aina mbalimbali za mali, na hivyo kuongeza anuwai kwenye kwingineko yako bila kutumia kiasi kikubwa cha pesa." />
   <Card title="Fursa za Kimataifa" emoji="🌏" description="RWA zinaondoa vizuizi vya kijiografia kwenye uwekezaji. Unaweza kununua tokeni za mali zilizopo popote duniani." />
   <Card title="Fanya Mali Iwe na Ukwasi" emoji="🖼️" description="Mali nyingi hazina ukwasi. Zina thamani, lakini hiyo si sawa na kuwa na pesa unazoweza kutumia. Kwa kubadilisha mali kuwa tokeni, wamiliki wanaweza kugeuza sehemu yake au yote kuwa thamani wanayoweza kutumia."/>
   <Card title="Soko la Kimataifa" emoji="💰" description="Wamiliki wanaotaka kunufaika na mali zao wanaweza kuwafikia wawekezaji wa aina mbalimbali—sio tu wale wenye uwezo wa kununua ardhi, hisa, kazi za sanaa, au zana za jadi za kifedha." />
   <Card title="Epuka Watu wa Kati" emoji="👩‍💻" description="Tokeni zinaendeshwa na mikataba mahiri, ikimaanisha zinaweza kuuzwa na kununuliwa moja kwa moja baina ya watu, bila uhitaji wa watu wa kati na ada zao." />
-</CardGrid>
+</Grid>
 
 ## RWAs inafanyaje kazi? {#how-rwas-work}
 

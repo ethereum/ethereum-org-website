@@ -258,7 +258,7 @@ const ReleaseCarousel = () => {
                       </div>
                       <div className="flex flex-1 flex-col gap-8">
                         <div>
-                          <h2 className="text-4xl font-bold lg:text-6xl">
+                          <h2 className="text-4xl lg:text-6xl">
                             {release.releaseName}
                           </h2>
                           <p className="text-md">{getDisplayDate(release)}</p>

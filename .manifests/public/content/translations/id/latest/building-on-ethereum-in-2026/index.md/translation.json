@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-03T06:58:30.798Z",
+  "englishManifestHash": "483e69529ebb",
+  "placeholderOrder": [
+    "LINK-b8e25d",
+    "LINK-8a188b",
+    "LINK-f22107",
+    "LINK-1c8218",
+    "CODE-b03a82",
+    "CODE-ca8b16",
+    "CODE-5fa3e0",
+    "CODE-5fa3e0",
+    "LINK-659c53",
+    "LINK-ae8ff8",
+    "LINK-c57b23",
+    "LINK-3c2a0f",
+    "LINK-e88578",
+    "LINK-cb8330",
+    "LINK-563f2d",
+    "LINK-9ae7a5",
+    "LINK-174d38",
+    "LINK-880c0c",
+    "LINK-7d8bc6",
+    "LINK-0e9ca7",
+    "LINK-fc043c",
+    "LINK-80d92a"
+  ],
+  "placeholderMap": {
+    "CODE-b03a82": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x04"
+      }
+    },
+    "CODE-ca8b16": {
+      "type": "inline-code",
+      "values": {
+        "content": "SetCode"
+      }
+    },
+    "CODE-5fa3e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "wallet_sendCalls"
+      }
+    },
+    "LINK-b8e25d": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/dencun/"
+      }
+    },
+    "LINK-8a188b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/"
+      }
+    },
+    "LINK-f22107": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/"
+      }
+    },
+    "LINK-1c8218": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/glamsterdam/"
+      }
+    },
+    "LINK-659c53": {
+      "type": "link",
+      "values": {
+        "url": "https://forkcast.org/upgrade/hegota/"
+      }
+    },
+    "LINK-ae8ff8": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/en/2025/04/23/pectra-mainnet"
+      }
+    },
+    "LINK-c57b23": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/11/06/fusaka-mainnet-announcement"
+      }
+    },
+    "LINK-3c2a0f": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026"
+      }
+    },
+    "LINK-e88578": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2026/04/10/checkpoint-9"
+      }
+    },
+    "LINK-cb8330": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.org/en/roadmap/pectra/7702/"
+      }
+    },
+    "LINK-563f2d": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7702"
+      }
+    },
+    "LINK-9ae7a5": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7928"
+      }
+    },
+    "LINK-174d38": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7805"
+      }
+    },
+    "LINK-880c0c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8141"
+      }
+    },
+    "LINK-7d8bc6": {
+      "type": "link",
+      "values": {
+        "url": "https://forkcast.org/upgrade/hegota/"
+      }
+    },
+    "LINK-0e9ca7": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/gastracker"
+      }
+    },
+    "LINK-fc043c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7773"
+      }
+    },
+    "LINK-80d92a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.org/roadmap/glamsterdam/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-03T06:58:30.798Z",
+      "status": "success"
+    }
+  }
+}

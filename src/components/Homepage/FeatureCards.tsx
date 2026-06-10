@@ -63,7 +63,7 @@ const FeatureCards = async ({
                   <img src="/images/homepage/eth.svg" alt="eth logo" />
                 </div>
 
-                <h3 className="text-4xl font-bold text-white lg:text-5xl">
+                <h3 className="text-4xl text-white lg:text-5xl">
                   {t("page-index-features-ownership-title")}
                 </h3>
 
