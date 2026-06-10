@@ -174,4 +174,5 @@ module.exports = [
   ["/developers/docs/privacy-enhancements", "/privacy/"],
   ["/developers/docs/wallets", "/wallets/"],
   ["/blog", "https://blog.ethereum.org"],
+  ["/latest/feed.xml", "/latest/feed/"],
 ]
