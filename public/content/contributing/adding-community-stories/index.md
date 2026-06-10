@@ -46,76 +46,32 @@ The site does not list stories that primarily promote a specific product, token,
 
 #### Option 1: Submit via the intake form {#submit-via-intake-form}
 
-The stories page includes a "Submit your story" CTA linking to the Paperform intake at `https://ethereumstory.paperform.co/`. This is the recommended path for community members who are not familiar with GitHub.
+If you have a story to share, you can submit it using the intake form. The ethereum.org team will review your submission and follow up.
 
-#### Option 2: Open a pull request {#open-a-pull-request}
+<ButtonLink href="https://ethereumstory.paperform.co/">
+  Submit your story
+</ButtonLink>
 
-1. **Create the story directory and file:**
+#### Option 2: Open an issue on GitHub {#open-an-issue}
 
-   ```
-   public/content/stories/{your-story-slug}/index.md
-   ```
+If you want to suggest a community story for ethereum.org and it meets the criteria, create an issue on GitHub.
 
-   The slug should be URL-safe, lowercase, and use hyphens (e.g., `escaping-dictatorship`).
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?template=content-suggestion.yml">
+  Create an issue
+</ButtonLink>
 
-2. **Add frontmatter:**
+### Other ways to contribute a story {#other-ways-to-contribute}
 
-   ```yaml
-   ---
-   title: "Your Story Title"
-   description: "A 1–2 sentence summary of the story."
-   author: "Author Name"
-   team: "Human Stories"
-   tags:
-     - "relevant-tag-1"
-     - "relevant-tag-2"
-   published: 2026-06-01
-   image: /images/stories/your-story-image.png
-   breadcrumb: Short Label
-   lang: en
-   ---
-   ```
+You can also suggest a **short-form story** or a **video story**:
 
-   **Field reference:**
+- **Short-form stories** appear as cards on the [stories landing page](/stories/). These can be posted directly on ethereum.org or link to stories that were shared on Twitter.
+- **Video stories** are videos tagged with the `community-stories` category in the [video gallery](/videos/). To add one, follow the existing [adding videos](/contributing/adding-videos/) contribution guide and include `community-stories` in the topic tags.
 
-   | Field | Required | Description |
-   |---|---|---|
-   | `title` | Yes | Story title |
-   | `description` | Yes | 1–2 sentence summary |
-   | `author` | Yes | Author or storyteller name |
-   | `team` | Yes | Use `"Human Stories"` for community stories |
-   | `tags` | Yes | Array of topic tags (e.g., `stablecoins`, `censorship resistance`, `donations`, `financial inclusion`) |
-   | `published` | Yes | Publication date in `YYYY-MM-DD` format |
-   | `image` | No | Path to story header image in `/public/images/stories/`, or site default will be used |
-   | `breadcrumb` | Yes | Short label for breadcrumb navigation |
-   | `lang` | Yes | Language code matching the language the story is written in (e.g., `en`, `es`, `zh`). See [supported languages](/contributing/translation-program/). |
+If you want to suggest either type, create an issue on GitHub.
 
-3. **Write the story body:**
-   - Use `## Heading {#heading-id}` format for all h2–h4 headings (required by markdownlint).
-   - Write in a personal, narrative voice. First-person or third-person perspectives are both acceptable.
-   - Focus on the human experience - why Ethereum or its open-source ecosystem mattered in this situation, what problem it solved, and what it meant to the people involved.
-
-4. **Submit your PR** to the `dev` branch.
-
-### How to add a short-form story {#how-to-add-short-form-story}
-
-Short-form community stories and links to stories published on Twitter appear as cards on the `/stories/` landing page.
-
-To add a new short-form story:
-
-1. **Add an entry to the stories data file** (`src/data/tenYearStories.ts`). Each entry includes:
-   - `name` - The storyteller's display name.
-   - `country` - Country or region.
-   - `storyEnglish` - The story text in English.
-   - `storyOriginal` - (Optional) The story in the author's original language, if different from English.
-   - `twitter` - (Optional) Link to the storyteller's Twitter/X profile.
-   - `date` - Display date string.
-
-2. **Submit your PR** to the `dev` branch.
-
-### How to add a video story {#how-to-add-video-story}
-
-Video stories are videos tagged with the `community-stories` category in the [video gallery](/videos/). To add one, follow the existing [adding videos](/contributing/adding-videos/) contribution guide and **include `community-stories` in the `topic` tags array**.
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?template=BLANK_ISSUE">
+  Create an issue
+</ButtonLink>
 
 ### Maintenance {#maintenance}
 
