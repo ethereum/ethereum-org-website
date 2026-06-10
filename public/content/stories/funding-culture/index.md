@@ -82,7 +82,7 @@ It's one of the first times Ethereum was used not just to fund a film, but to de
 
 We premiered White Rabbit on the main stage at Devcon 2024. It was nominated for a VMA & Webby, featured in a Linkin Park music video (100M+ views), and Mirai was on the cover of Vogue Taiwan.
 
-(*Editor's note*: After this article was published, White Rabbit went on to win the [Emmy award for Outstanding Innovation In Emerging Media Programming - 2025](https://www.televisionacademy.com/shows/white-rabbit).)
+*(Editor's note: After this article was published, White Rabbit went on to win the [Emmy award for Outstanding Innovation In Emerging Media Programming - 2025](https://www.televisionacademy.com/shows/white-rabbit).)*
 
 It's not about chasing clout, but rather that Ethereum stories can move culture. 
 
