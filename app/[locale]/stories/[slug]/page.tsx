@@ -8,6 +8,7 @@ import mdComponents from "@/components/MdComponents"
 import { dateToString } from "@/lib/utils/date"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import SlugJsonLD from "../../[...slug]/page-jsonld"
 import { getStorySlugs } from "../utils"
 
 import { componentsMapping, TutorialLayout } from "@/layouts"
@@ -54,19 +55,27 @@ const StoryPage = async (props: {
   const messages = pick(allMessages, requiredNamespaces)
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <TutorialLayout
+    <>
+      <SlugJsonLD
+        locale={locale}
         slug={fullSlug}
         frontmatter={frontmatter}
-        tocItems={tocItems}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        contentNotTranslated={!isTranslated}
         contributors={contributors}
-        timeToRead={Math.round(timeToRead.minutes)}
-      >
-        {content}
-      </TutorialLayout>
-    </I18nProvider>
+      />
+      <I18nProvider locale={locale} messages={messages}>
+        <TutorialLayout
+          slug={fullSlug}
+          frontmatter={frontmatter}
+          tocItems={tocItems}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          contentNotTranslated={!isTranslated}
+          contributors={contributors}
+          timeToRead={Math.round(timeToRead.minutes)}
+        >
+          {content}
+        </TutorialLayout>
+      </I18nProvider>
+    </>
   )
 }
 

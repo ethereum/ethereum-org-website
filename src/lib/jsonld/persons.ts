@@ -449,4 +449,103 @@ export const KNOWN_PERSONS = {
       "https://www.linkedin.com/in/andersbrownworth",
     ],
   },
+
+  "tarrence-van-as": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#tarrence-van-as",
+    name: "Tarrence van As",
+    jobTitle: "CEO & Co-Founder",
+    worksFor: {
+      "@type": "Organization",
+      name: "Cartridge",
+      url: "https://cartridge.gg/",
+    },
+    description:
+      "Tarrence van As is the CEO and co-founder of Cartridge, a developer ecosystem for fully onchain games, and co-founder of Dojo, an open-source framework for building onchain games and Autonomous Worlds on Starknet. He also co-founded Dope World, an evolving onchain playground of games, story, and culture built on Starknet.",
+    knowsAbout: [
+      "Fully Onchain Games",
+      "Autonomous Worlds",
+      "Starknet Development",
+      "Game Engine Architecture",
+      "Digital Ownership",
+      "Blockchain Gaming Infrastructure",
+    ],
+    sameAs: [
+      "https://x.com/tarrence",
+      "https://github.com/tarrencev",
+      "https://www.linkedin.com/in/tarrence-van-as-b1440a23",
+    ],
+  },
+
+  "emily-yang": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#emily-yang",
+    name: "Emily Yang",
+    alternateName: "pplpleasr",
+    jobTitle: "Co-Founder",
+    worksFor: {
+      "@type": "Organization",
+      name: "Shibuya",
+      url: "https://www.shibuya.xyz/",
+    },
+    description:
+      "Emily Yang, known as pplpleasr, is a multidisciplinary artist and co-founder of Shibuya, a decentralized content studio pioneering permissionless creativity. From visual effects on feature films including Batman v Superman and Wonder Woman to defining the visual identity of the DeFi movement, she created Fortune magazine's first NFT cover and co-executive produced the Emmy-winning Vitalik: An Ethereum Story. She co-founded PleasrDAO and plsA0k1, a collaborative vault supporting emerging female artists in the NFT space.",
+    knowsAbout: [
+      "Decentralized Content Creation",
+      "NFT Art and Culture",
+      "DeFi Visual Identity",
+      "Permissionless Creativity",
+      "Onchain Film Production",
+      "Community-Funded Storytelling",
+    ],
+    sameAs: [
+      "https://x.com/pplpleasr1",
+      "https://pplplsr.com/",
+      "https://www.instagram.com/pplpleasr/",
+      "https://www.televisionacademy.com/bios/emily-yang",
+      "https://www.forbes.com/profile/emily-yang/",
+    ],
+  },
+
+  "santiago-palladino": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#santiago-palladino",
+    name: "Santiago Palladino",
+    jobTitle: "Engineer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Aztec",
+      url: "https://aztec.network/",
+    },
+    description:
+      "Santiago Palladino is a software engineer at Aztec and a councilmember at The Graph, with over two decades of professional development experience and nine years in the Ethereum ecosystem. Formerly at OpenZeppelin, where he contributed to smart contract security audits and led development of open-source tools for Ethereum applications. He authored Ethereum for Web Developers and holds an MSc in Computer Science from the University of Buenos Aires, where he taught Algorithms and Numerical Methods for seven years.",
+    knowsAbout: [
+      "Ethereum Application Development",
+      "Smart Contract Security",
+      "Privacy-Preserving Blockchains",
+      "Open-Source Developer Tooling",
+      "Layer 2 Scaling",
+      "Ethereum Developer Education",
+    ],
+    alumniOf: [
+      {
+        "@type": "Organization",
+        name: "OpenZeppelin",
+        url: "https://www.openzeppelin.com/",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Universidad de Buenos Aires",
+        url: "https://www.uba.ar/",
+      },
+    ],
+    sameAs: [
+      "https://x.com/smpalladino",
+      "https://palla.dev/",
+      "https://github.com/spalladino",
+      "https://www.linkedin.com/in/spalladino",
+      "https://www.youtube.com/@spalladino",
+      "https://dev.to/spalladino",
+    ],
+  },
 } as const
