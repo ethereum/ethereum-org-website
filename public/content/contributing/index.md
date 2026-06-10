@@ -24,8 +24,9 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 **Content**
 - [Create/edit content](/contributing/#how-to-update-content) – Suggest new pages or make tweaks to what's here already
 - [Add community resources](/contributing/content-resources/) – Add a helpful article or resource to a relevant page
-- [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
+- [Share your story](/contributing/adding-community-stories/) - Submit a story about your personal experiences with open-source and sanctuary technologies, how the Ethereum ecosystem has impacted your life, or how you and your community use Ethereum
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
+- [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
 - [Suggest a video](/contributing/adding-videos/) – Suggest an educational video for the video gallery
 
 **Feature ideas**
