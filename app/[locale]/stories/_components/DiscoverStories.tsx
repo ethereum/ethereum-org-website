@@ -55,7 +55,7 @@ const DiscoverStories = async () => {
               </CardBanner>
             </CardHeader>
             <CardContent>
-              <CardTitle variant="semibold">{t(story.titleKey)}</CardTitle>
+              <CardTitle>{t(story.titleKey)}</CardTitle>
               <CardParagraph size="sm" className="line-clamp-3">
                 {t(story.descriptionKey)}
               </CardParagraph>

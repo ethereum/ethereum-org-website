@@ -43,7 +43,7 @@ const MoreStories = ({ videos }: MoreStoriesProps) => {
             )}
           </CardBanner>
           <CardContent>
-            <CardTitle variant="semibold">{video.title}</CardTitle>
+            <CardTitle>{video.title}</CardTitle>
             <CardParagraph size="sm" className="line-clamp-2">
               {video.description}
             </CardParagraph>
