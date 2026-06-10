@@ -100,7 +100,7 @@ export const StaticLayout = ({
 
           <MainArticle
             className={cn(
-              "max-w-3xl",
+              "flow max-w-3xl",
               isGuidesHub && "mt-12",
               "**:[h1]:hidden" // TODO: Remove when non-English Static markdown update to remove `#` h1 line
             )}
