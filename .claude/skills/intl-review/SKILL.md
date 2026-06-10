@@ -25,6 +25,11 @@ Use the `/filter` endpoint to get the subset of glossary terms that actually app
 6. **MDX syntax errors are CRITICAL (build-breaking).** Raw `<` before numbers, unclosed backticks, orphaned closing tags, JSX attributes with embedded unescaped quotes — any of these breaks the build for that locale. Flag and fix.
 7. **Reporting zero critical issues is a valid outcome.** Don't invent issues to "show your work." If a thorough review surfaces no criticals, report `0 critical, N warnings` (or `0/0`) and that's a valid result.
 8. **Auto-fix is opt-out, not opt-in.** `/review-translations` applies fixes by default. Use `--no-fix` for review-only runs (GitHub Actions context, no commit auth). The review report still lists what would have been fixed.
+9. **All review changes go on the `intl/pending-*` branch being reviewed — NEVER `dev`.** Translation fixes AND knowledge-base updates (`known-patterns.md`, `per-language/{lang}.md`) for a given review are committed to that review's own `intl/pending-{base}` branch so they ride with the PR to GitHub. See the next section.
+
+## Where Review Changes Live
+
+Both translation fixes and knowledge-base updates (`per-language/{lang}.md`, `known-patterns.md`) go on the `intl/pending-{base}` branch under review — the `/review-translations` worktree — so they ride with the PR. Never leave review artifacts on `dev`; if you catch yourself editing `.claude/translation-review/` in the `dev` checkout, move them to the review branch and restore `dev`. Sequence: commit → push → submit review (`--approve` once the fix is pushed and no criticals remain, else `--comment`).
 
 ## Highest-Value Gotchas
 
@@ -113,4 +118,5 @@ Before submitting a translation-quality review:
 - [ ] Per-language quality score produced in the 5-category rubric
 - [ ] Per-language findings file updated at `.claude/translation-review/per-language/{lang}.md`
 - [ ] If new issue pattern surfaced, added to `references/known-patterns.md` (or `known-patterns.md` in the KB)
+- [ ] All review changes (fixes + knowledge-base updates) committed to the `intl/pending-*` branch under review and pushed — never left on `dev`
 - [ ] Build verification (`--build-local` or `--netlify-check`) run if the review touched MDX-syntax-related issues
