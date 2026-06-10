@@ -24,6 +24,10 @@ const {
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
+<<<<<<< HEAD
+=======
+  p: Paragraph,
+>>>>>>> 583c65127e (fixing bug from merge conflict)
   FeaturedText,
   Divider,
   hr: HR,
@@ -53,6 +57,10 @@ export const MdComponents: StoryObj = {
           <Para />
           <Heading4>Heading4</Heading4>
           <Para />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 583c65127e (fixing bug from merge conflict)
           <Divider />
           <HR />
           <FeaturedText>Feature Text</FeaturedText>

@@ -122,12 +122,14 @@ export const Page = ({
   />
 )
 
-export const ContentContainer = (props: ComponentProps<"article">) => (
-  <MainArticle
-    className="flow relative flex-[1_1_992px] px-8 pb-8 max-lg:pt-12"
-    {...props}
-  />
-)
+export const ContentContainer = (props: ComponentProps<"article">) => {
+  return (
+    <MainArticle
+      className="relative flex-[1_1_992px] px-8 pb-8 *:first:mt-0"
+      {...props}
+    />
+  )
+}
 
 export const ExpandableCardWithMargin = ({
   className,
@@ -157,7 +159,6 @@ export const reactComponents = {
   IssuesList,
   RestakingList,
   Tag,
-  Title,
   TweetEmbed,
   WhatAreAppsStories,
   YouTube,
