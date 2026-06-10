@@ -2,7 +2,7 @@
 title: "What happens when you fund culture, not just code"
 description: "Ethereum proved it can move more than money. Now fans fund, shape, and get credited in the films they love."
 author: "pplpleasr (Emily Yang)"
-team: "Human Stories"
+team: "Shibuya"
 tags:
   - "filmmaking"
   - "collective action"

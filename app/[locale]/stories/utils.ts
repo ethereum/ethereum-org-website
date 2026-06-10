@@ -14,9 +14,9 @@ const STORIES_DIR = join(process.cwd(), CONTENT_DIR, "stories")
  */
 export const FEATURED_STORIES = [
   {
-    slug: "escaping-venezuela",
-    titleKey: "page-stories-featured-venezuela-title",
-    descriptionKey: "page-stories-featured-venezuela-description",
+    slug: "argentinian-builders",
+    titleKey: "page-stories-featured-argentina-title",
+    descriptionKey: "page-stories-featured-argentina-description",
   },
   {
     slug: "funding-culture",

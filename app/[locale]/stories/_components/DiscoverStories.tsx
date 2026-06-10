@@ -20,7 +20,7 @@ import adoption1 from "@/public/images/10-year-anniversary/adoption-1.png"
 
 // Placeholder imagery, keyed by featured slug -- swap for final art later.
 const placeholderImages = {
-  "escaping-venezuela": adoption1,
+  "argentinian-builders": adoption1,
   "funding-culture": fundingCultureCover,
   "digital-feudalism": digitalFeudalismCover,
 } as const

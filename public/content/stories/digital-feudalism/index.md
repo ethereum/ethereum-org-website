@@ -2,7 +2,7 @@
 title: "Declaring independence from digital feudalism"
 description: "When game studios shut down servers, revoke licenses, and rewrite the rules, players lose everything. Onchain gaming offers a path to freedom."
 author: "Tarrence van As"
-team: "Human Stories"
+team: "Cartridge"
 tags:
   - "gaming"
   - "ownership"
