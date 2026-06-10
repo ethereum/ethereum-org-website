@@ -8,7 +8,7 @@ tags:
   - "adoption"
   - "community"
 published: "2025-11-03"
-image: /images/10-year-anniversary/adoption-1.png
+image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
 breadcrumb: Building from Argentina
 lang: en
 ---
