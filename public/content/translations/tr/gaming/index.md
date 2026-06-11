@@ -1,6 +1,6 @@
 ---
 title: Ethereum'da Oyun
-description: Ethereum'un doğrulanabilir kurallar, oyunculara ait varlıklar ve herkesin üzerine inşa edebileceği açık ekosistemlerle zincir içi oyunlara nasıl güç verdiğini öğrenin.
+description: "Ethereum'un doğrulanabilir kurallar, oyunculara ait varlıklar ve herkesin üzerine inşa edebileceği açık ekosistemlerle zincir içi oyunlara nasıl güç verdiğini öğrenin."
 lang: tr
 template: use-cases
 image: /images/robot-help-bar.png

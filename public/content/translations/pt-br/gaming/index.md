@@ -1,6 +1,6 @@
 ---
 title: Jogos no Ethereum
-description: Aprenda como o Ethereum impulsiona jogos onchain com regras verificáveis, ativos de propriedade dos jogadores e ecossistemas abertos nos quais qualquer um pode construir.
+description: "Aprenda como o Ethereum impulsiona jogos onchain com regras verificáveis, ativos de propriedade dos jogadores e ecossistemas abertos nos quais qualquer um pode construir."
 lang: pt-br
 template: use-cases
 image: /images/robot-help-bar.png

@@ -1,6 +1,6 @@
 ---
 title: Gry na Ethereum
-description: Dowiedz się, jak Ethereum napędza gry onchain z weryfikowalnymi zasadami, zasobami należącymi do graczy i otwartymi ekosystemami, na których każdy może budować.
+description: "Dowiedz się, jak Ethereum napędza gry onchain z weryfikowalnymi zasadami, zasobami należącymi do graczy i otwartymi ekosystemami, na których każdy może budować."
 lang: pl
 template: use-cases
 image: /images/robot-help-bar.png

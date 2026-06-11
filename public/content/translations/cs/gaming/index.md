@@ -1,6 +1,6 @@
 ---
-title: Hraní na Ethereu
-description: Zjistěte, jak Ethereum pohání onchain hry s ověřitelnými pravidly, aktivy vlastněnými hráči a otevřenými ekosystémy, na kterých může stavět kdokoli.
+title: "Hraní na Ethereu"
+description: "Zjistěte, jak Ethereum pohání onchain hry s ověřitelnými pravidly, aktivy vlastněnými hráči a otevřenými ekosystémy, na kterých může stavět kdokoli."
 lang: cs
 template: use-cases
 image: /images/robot-help-bar.png

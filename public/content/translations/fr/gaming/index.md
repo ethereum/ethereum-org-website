@@ -1,6 +1,6 @@
 ---
 title: Le jeu sur Ethereum
-description: Découvrez comment Ethereum propulse les jeux onchain avec des règles vérifiables, des actifs appartenant aux joueurs et des écosystèmes ouverts sur lesquels tout le monde peut construire.
+description: "Découvrez comment Ethereum propulse les jeux onchain avec des règles vérifiables, des actifs appartenant aux joueurs et des écosystèmes ouverts sur lesquels tout le monde peut construire."
 lang: fr
 template: use-cases
 image: /images/robot-help-bar.png

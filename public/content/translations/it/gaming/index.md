@@ -1,6 +1,6 @@
 ---
 title: Il gaming su Ethereum
-description: Scopri come Ethereum alimenta i giochi onchain con regole verificabili, risorse di proprietà dei giocatori ed ecosistemi aperti su cui chiunque può costruire.
+description: "Scopri come Ethereum alimenta i giochi onchain con regole verificabili, risorse di proprietà dei giocatori ed ecosistemi aperti su cui chiunque può costruire."
 lang: it
 template: use-cases
 image: /images/robot-help-bar.png

@@ -1,6 +1,6 @@
 ---
 title: Gaming auf Ethereum
-description: Erfahre, wie Ethereum Onchain-Spiele mit verifizierbaren Regeln, spielereigenen Assets und offenen Ökosystemen antreibt, auf denen jeder aufbauen kann.
+description: "Erfahre, wie Ethereum Onchain-Spiele mit verifizierbaren Regeln, spielereigenen Assets und offenen Ökosystemen antreibt, auf denen jeder aufbauen kann."
 lang: de
 template: use-cases
 image: /images/robot-help-bar.png

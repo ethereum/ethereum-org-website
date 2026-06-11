@@ -1,6 +1,6 @@
 ---
-title: الألعاب على إيثيريوم
-description: تعرف على كيفية تشغيل إيثيريوم للألعاب على السلسلة بقواعد قابلة للتحقق، وأصول يملكها اللاعبون، وأنظمة بيئية مفتوحة يمكن لأي شخص البناء عليها.
+title: "الألعاب على إيثيريوم"
+description: "تعرف على كيفية تشغيل إيثيريوم للألعاب على السلسلة بقواعد قابلة للتحقق، وأصول يملكها اللاعبون، وأنظمة بيئية مفتوحة يمكن لأي شخص البناء عليها."
 lang: ar
 template: use-cases
 image: /images/robot-help-bar.png
@@ -119,7 +119,7 @@ buttons:
 
 ## ابدأ مع الألعاب على إيثيريوم {#get-started-with-gaming-on-ethereum}
 
-1. **ابحث عن لعبة ممتعة لتلعبها** - تصفح الألعاب المدرجة أعلاه، أو استكشف منصات مثل [ChainPlay](https://chainplay.gg/chain/ethereum/)، و[Gam3s.GG](https://gam3s.gg/)، و[DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
+1. **ابحث عن لعبة ممتعة لتلعبها** - تصفح الألعاب المدرجة أعلاه، أو استكشف منصات مثل [ChainPlay](https://chainplay.gg/chain/ethereum/)، و[Gam<span dir="ltr">3s</span>.GG](https://gam3s.gg/)، و[DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games).
 2. **قم بإعداد محفظة الكريبتو الخاصة بك** - يحتاج اللاعبون إلى محفظة لإدارة الأصول الرقمية داخل اللعبة و(في بعض الحالات) لتسجيل الدخول إلى الألعاب. [ابحث عن محفظة هنا](/wallets/find-wallet/).
 3. **قم بتمويل محفظتك** - احصل على بعض الإيثر (ETH) أو الرموز المميزة ذات الصلة بشبكة الطبقة 2 (L2) التي تخطط للعب عليها. [تعرف على مكان الحصول على ETH هنا](/get-eth/). 
 4. **العب** - ابدأ اللعب واستمتع بالملكية الحقيقية لتقدمك داخل اللعبة!

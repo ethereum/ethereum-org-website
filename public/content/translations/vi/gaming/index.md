@@ -1,6 +1,6 @@
 ---
-title: Chơi game trên Ethereum
-description: Tìm hiểu cách Ethereum hỗ trợ các trò chơi trên chuỗi với các quy tắc có thể xác minh, tài sản do người chơi sở hữu và hệ sinh thái mở mà bất kỳ ai cũng có thể xây dựng.
+title: "Chơi game trên Ethereum"
+description: "Tìm hiểu cách Ethereum hỗ trợ các trò chơi trên chuỗi với các quy tắc có thể xác minh, tài sản do người chơi sở hữu và hệ sinh thái mở mà bất kỳ ai cũng có thể xây dựng."
 lang: vi
 template: use-cases
 image: /images/robot-help-bar.png

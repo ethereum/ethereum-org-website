@@ -1,6 +1,6 @@
 ---
-title: 以太坊上的遊戲
-description: 了解以太坊如何透過可驗證的規則、玩家擁有的資產以及任何人都可以參與建置的開放生態系統，為鏈上遊戲提供動力。
+title: "以太坊上的遊戲"
+description: "了解以太坊如何透過可驗證的規則、玩家擁有的資產以及任何人都可以參與建置的開放生態系統，為鏈上遊戲提供動力。"
 lang: zh-tw
 template: use-cases
 image: /images/robot-help-bar.png
