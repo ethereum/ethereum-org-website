@@ -9,8 +9,6 @@ Ethereum.org est un projet open source avec **plus de 12 000** contributeurs qui
 
 Nous sommes une communauté accueillante qui vous aidera à vous développer et à vous former dans l'écosystème [Ethereum](/) tout en contribuant de manière significative et en acquérant une expérience pratique pertinente !
 
-## Façons de contribuer {#ways-to-contribute}
-
 **Traductions**
 - [Rejoindre le programme de traduction](/contributing/translation-program/) – Aidez-nous à traduire ethereum.org dans de nouvelles langues
 
@@ -22,7 +20,9 @@ Nous sommes une communauté accueillante qui vous aidera à vous développer et 
 
 **Contenu**
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) – Suggérez de nouvelles pages ou apportez des modifications à ce qui existe déjà
+- [Rédiger un article de constructeur](/contributing/adding-articles/) - Contribuez en rédigeant un article pour la section [Dernières actualités](/latest/)
 - [Ajouter des ressources communautaires](/contributing/content-resources/) – Ajoutez un article ou une ressource utile à une page pertinente
+- [Suggérer un rapport](/contributing/adding-reports/) - Suggérez un rapport de recherche pour la page [Rapports](/reports/)
 - [Suggérer une ressource de design](/contributing/design/adding-design-resources/) – Ajoutez, mettez à jour et supprimez des ressources de design utiles
 - [Quiz](/contributing/quizzes/) – Ajoutez, mettez à jour et supprimez des banques de questions de quiz pour une page pertinente
 - [Suggérer une vidéo](/contributing/adding-videos/) – Suggérez une vidéo éducative pour la galerie vidéo
@@ -34,14 +34,13 @@ Nous sommes une communauté accueillante qui vous aidera à vous développer et 
 - [Ajouter une plateforme d'échange](/contributing/adding-exchanges/) – Ajoutez une plateforme d'échange à notre [outil de recherche de plateformes d'échange](/get-eth/#country-picker)
 - [Ajouter un produit](/contributing/adding-products/) – Ajoutez une application décentralisée (dapp) ou un portefeuille à une page pertinente
 - [Ajouter des outils de développement](/contributing/adding-developer-tools/) – Ajoutez un outil de développement à une page pertinente
-- [Ajouter une couche 2 (l2)](/contributing/adding-layer-2s/) – Ajoutez une couche 2 (l2) à une page pertinente
+- [Ajouter une couche 2](/contributing/adding-layer-2s/) – Ajoutez une couche 2 (l2) à une page pertinente
 - [Ajouter un produit ou service de staking](/contributing/adding-staking-products/) – Ajoutez un projet qui facilite le staking en solo, le staking mutualisé ou le staking en tant que service
 - [Ajouter un portefeuille](/contributing/adding-wallets/) – Ajoutez un portefeuille pour la [page de recherche de portefeuilles](/wallets/find-wallet/)
 - [Suggérer un projet pour notre page DeSci](/contributing/adding-desci-projects/) – Ajoutez un projet construit sur Ethereum qui contribue à la science décentralisée (DeSci)
-- [Ajouter une ressource](/contributing/adding-resources/) – Ajoutez une ressource utile à n'importe quelle page pertinente
+- [Ajouter une ressource](/contributing/adding-resources/) – Ajoutez une ressource utile à toute page pertinente
 
 Des questions ? 🤔 Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org)
-
 ## Bonnes premières tâches pour commencer à contribuer {#good-first-tasks-to-start-contributing}
 
 Voici quelques tâches actuelles que vous pourriez nous aider à résoudre et prendre en charge. Pour la plupart, vous aurez besoin d'un compte GitHub, car la majorité des modifications apportées au site Web sont effectuées via GitHub.
