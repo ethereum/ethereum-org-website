@@ -1,6 +1,6 @@
 ---
-title: Adicionando relatórios
-description: Diretrizes para sugerir relatórios de pesquisa para o ethereum.org
+title: "Adicionando relatórios"
+description: "Diretrizes para sugerir relatórios de pesquisa para o ethereum.org"
 lang: pt-br
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Artikel hinzufügen
-description: Richtlinien für das Beisteuern von Ersteller-Artikeln zu ethereum.org
+title: "Artikel hinzufügen"
+description: "Richtlinien für das Beisteuern von Ersteller-Artikeln zu ethereum.org"
 lang: de
 ---
 

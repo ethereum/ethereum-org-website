@@ -1,6 +1,6 @@
 ---
 title: Ajouter des articles
-description: Lignes directrices pour contribuer des articles de constructeurs à ethereum.org
+description: "Lignes directrices pour contribuer des articles de constructeurs à ethereum.org"
 lang: fr
 ---
 

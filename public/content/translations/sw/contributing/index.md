@@ -9,7 +9,7 @@ Ethereum.org ni mradi unaoendeshwa kwa programu huria wenye wachangiaji **12 000
 
 Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo wa ikolojia wa [Ethereum](/) huku pia ukichangia kwa maana na kupata uzoefu unaofaa wa vitendo!
 
-## Njia za kuchangia
+## Njia za kuchangia {#ways-to-contribute}
 
 **Tafsiri**
 - [Jiunge na programu ya kutafsiri](/contributing/translation-program/) – Tusaidie kuleta ethereum.org katika lugha mpya
@@ -92,6 +92,7 @@ Ikiwa mchango wako utaunganishwa kwenye ethereum.org, utakuwa na nafasi ya kudai
 [Zaidi kuhusu OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Jinsi ya kudai {#how-to-claim}
+
 1. Jiunge na [seva yetu ya Discord](https://discord.gg/ethereum-org).
 2. Bandika kiungo cha mchango wako katika chaneli ya `#🥇 | proof-of-contribution`.
 3. Subiri mshiriki wa timu yetu akutumie kiungo cha OAT yako.

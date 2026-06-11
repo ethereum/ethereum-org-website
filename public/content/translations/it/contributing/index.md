@@ -90,6 +90,7 @@ Se il tuo contributo viene unito in ethereum.org, avrai la possibilità di risca
 [Maggiori informazioni sugli OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Come riscattare {#how-to-claim}
+
 1. Unisciti al nostro [server Discord](https://discord.gg/ethereum-org).
 2. Incolla un link al tuo contributo nel canale `#🥇 | proof-of-contribution`.
 3. Attendi che un membro del nostro team ti invii un link al tuo OAT.

@@ -1,7 +1,7 @@
 ---
 title: "Přispívání na ethereum.org 🦄"
-metaTitle: Přispívání
-description: Zjistěte více o různých způsobech, jak můžete přispět na ethereum.org
+metaTitle: "Přispívání"
+description: "Zjistěte více o různých způsobech, jak můžete přispět na ethereum.org"
 lang: cs
 ---
 
@@ -90,6 +90,7 @@ Pokud bude váš příspěvek sloučen do ethereum.org, budete mít šanci náro
 [Více o OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Jak uplatnit nárok {#how-to-claim}
+
 1. Připojte se na náš [Discord server](https://discord.gg/ethereum-org).
 2. Vložte odkaz na svůj příspěvek do kanálu `#🥇 | proof-of-contribution`.
 3. Počkejte, až vám člen našeho týmu pošle odkaz na váš OAT.

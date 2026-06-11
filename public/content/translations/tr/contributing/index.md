@@ -1,7 +1,7 @@
 ---
 title: "ethereum.org'a Katkıda Bulunmak 🦄"
-metaTitle: Katkıda Bulunmak
-description: ethereum.org'a katkıda bulunabileceğiniz farklı yollar hakkında bilgi edinin
+metaTitle: "Katkıda Bulunmak"
+description: "ethereum.org'a katkıda bulunabileceğiniz farklı yollar hakkında bilgi edinin"
 lang: tr
 ---
 
@@ -90,6 +90,7 @@ Katkınız ethereum.org'da birleştirilirse, [Galxe](https://app.galxe.com/quest
 [OAT'ler hakkında daha fazlası](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Nasıl talep edilir {#how-to-claim}
+
 1. [Discord sunucumuza](https://discord.gg/ethereum-org) katılın.
 2. Katkınızın bir bağlantısını `#🥇 | proof-of-contribution` kanalına yapıştırın.
 3. Ekibimizden bir üyenin size OAT'nizin bağlantısını göndermesini bekleyin.

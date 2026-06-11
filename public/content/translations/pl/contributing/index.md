@@ -1,7 +1,7 @@
 ---
 title: "Współtworzenie ethereum.org 🦄"
-metaTitle: Współtworzenie
-description: Dowiedz się o różnych sposobach, w jakie możesz współtworzyć ethereum.org
+metaTitle: "Współtworzenie"
+description: "Dowiedz się o różnych sposobach, w jakie możesz współtworzyć ethereum.org"
 lang: pl
 ---
 
@@ -90,6 +90,7 @@ Jeśli Twój wkład zostanie scalony z ethereum.org, będziesz miał szansę ode
 [Więcej o OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Jak odebrać {#how-to-claim}
+
 1. Dołącz do naszego [serwera Discord](https://discord.gg/ethereum-org).
 2. Wklej link do swojego wkładu na kanale `#🥇 | proof-of-contribution`.
 3. Poczekaj, aż członek naszego zespołu wyśle Ci link do Twojego OAT.

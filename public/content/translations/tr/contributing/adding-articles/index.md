@@ -1,6 +1,6 @@
 ---
 title: Makale ekleme
-description: ethereum.org'a oluşturucu makaleleriyle katkıda bulunma yönergeleri
+description: "ethereum.org'a oluşturucu makaleleriyle katkıda bulunma yönergeleri"
 lang: tr
 ---
 

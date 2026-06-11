@@ -1,6 +1,6 @@
 ---
 title: Rapor ekleme
-description: ethereum.org'a araştırma raporları önermek için yönergeler
+description: "ethereum.org'a araştırma raporları önermek için yönergeler"
 lang: tr
 ---
 

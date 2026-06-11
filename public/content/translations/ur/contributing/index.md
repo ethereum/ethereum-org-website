@@ -1,7 +1,7 @@
 ---
 title: "⁦ethereum.org⁩ میں تعاون کرنا 🦄"
-metaTitle: تعاون کرنا
-description: ان مختلف طریقوں کے بارے میں جانیں جن سے آپ ⁦ethereum.org⁩ میں تعاون کر سکتے ہیں
+metaTitle: "تعاون کرنا"
+description: "ان مختلف طریقوں کے بارے میں جانیں جن سے آپ ⁦ethereum.org⁩ میں تعاون کر سکتے ہیں"
 lang: ur
 ---
 
@@ -90,6 +90,7 @@ lang: ur
 [<span dir="ltr">OATs</span> کے بارے میں مزید](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### دعویٰ کیسے کریں {#how-to-claim}
+
 1. ہمارے [ڈسکارڈ سرور](https://discord.gg/ethereum-org) میں شامل ہوں۔
 2. `#🥇 | proof-of-contribution` چینل میں اپنے تعاون کا لنک پیسٹ کریں۔
 3. ہماری ٹیم کے کسی رکن کی جانب سے آپ کو آپ کے <span dir="ltr">OAT</span> کا لنک بھیجنے کا انتظار کریں۔

@@ -1,6 +1,6 @@
 ---
-title: लेख जोड़ना
-description: ethereum.org पर निर्माता लेखों का योगदान करने के लिए दिशानिर्देश
+title: "लेख जोड़ना"
+description: "ethereum.org पर निर्माता लेखों का योगदान करने के लिए दिशानिर्देश"
 lang: hi
 ---
 

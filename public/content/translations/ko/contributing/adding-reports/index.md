@@ -1,6 +1,6 @@
 ---
-title: 보고서 추가하기
-description: ethereum.org에 연구 보고서를 제안하기 위한 가이드라인
+title: "보고서 추가하기"
+description: "ethereum.org에 연구 보고서를 제안하기 위한 가이드라인"
 lang: ko
 ---
 

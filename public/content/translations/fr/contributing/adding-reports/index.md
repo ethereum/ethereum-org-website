@@ -1,6 +1,6 @@
 ---
 title: Ajouter des rapports
-description: Lignes directrices pour suggérer des rapports de recherche à ethereum.org
+description: "Lignes directrices pour suggérer des rapports de recherche à ethereum.org"
 lang: fr
 ---
 

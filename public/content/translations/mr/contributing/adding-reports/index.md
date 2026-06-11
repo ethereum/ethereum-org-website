@@ -1,6 +1,6 @@
 ---
-title: अहवाल जोडणे
-description: ethereum.org वर संशोधन अहवाल सुचवण्यासाठी मार्गदर्शक तत्त्वे
+title: "अहवाल जोडणे"
+description: "ethereum.org वर संशोधन अहवाल सुचवण्यासाठी मार्गदर्शक तत्त्वे"
 lang: mr
 ---
 

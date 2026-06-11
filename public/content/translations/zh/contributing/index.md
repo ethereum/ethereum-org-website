@@ -1,7 +1,7 @@
 ---
 title: "为 ethereum.org 做出贡献 🦄"
-metaTitle: 贡献
-description: 了解为 ethereum.org 做出贡献的不同方式
+metaTitle: "贡献"
+description: "了解为 ethereum.org 做出贡献的不同方式"
 lang: zh
 ---
 
@@ -90,6 +90,7 @@ Ethereum.org 是一个开源项目，拥有 **12 000+** 名贡献者，他们帮
 [了解有关 OAT 的更多信息](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### 如何申领 {#how-to-claim}
+
 1. 加入我们的 [Discord 服务器](https://discord.gg/ethereum-org)。
 2. 在 `#🥇 | proof-of-contribution` 频道中粘贴你的贡献链接。
 3. 等待我们的团队成员向你发送 OAT 链接。

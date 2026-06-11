@@ -90,6 +90,7 @@ Si tu contribución se fusiona en ethereum.org, tendrás la oportunidad de recla
 [Más sobre los OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Cómo reclamar {#how-to-claim}
+
 1. Únete a nuestro [servidor de Discord](https://discord.gg/ethereum-org).
 2. Pega un enlace a tu contribución en el canal `#🥇 | proof-of-contribution`.
 3. Espera a que un miembro de nuestro equipo te envíe un enlace a tu OAT.

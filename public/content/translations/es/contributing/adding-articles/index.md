@@ -1,6 +1,6 @@
 ---
-title: Añadir artículos
-description: Pautas para contribuir con artículos de constructores a ethereum.org
+title: "Añadir artículos"
+description: "Pautas para contribuir con artículos de constructores a ethereum.org"
 lang: es
 ---
 

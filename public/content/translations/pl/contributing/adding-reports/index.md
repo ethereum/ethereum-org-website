@@ -1,6 +1,6 @@
 ---
-title: Dodawanie raportów
-description: Wytyczne dotyczące zgłaszania raportów badawczych do ethereum.org
+title: "Dodawanie raportów"
+description: "Wytyczne dotyczące zgłaszania raportów badawczych do ethereum.org"
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Dodawanie artykułów
-description: Wytyczne dotyczące dodawania artykułów dla budowniczych na ethereum.org
+title: "Dodawanie artykułów"
+description: "Wytyczne dotyczące dodawania artykułów dla budowniczych na ethereum.org"
 lang: pl
 ---
 

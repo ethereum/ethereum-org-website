@@ -1,6 +1,6 @@
 ---
-title: Thêm bài viết
-description: Hướng dẫn đóng góp bài viết cho trình xây dựng trên ethereum.org
+title: "Thêm bài viết"
+description: "Hướng dẫn đóng góp bài viết cho trình xây dựng trên ethereum.org"
 lang: vi
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Contribuer à ethereum.org 🦄"
 metaTitle: Contribuer
-description: Découvrez les différentes façons dont vous pouvez contribuer à ethereum.org
+description: "Découvrez les différentes façons dont vous pouvez contribuer à ethereum.org"
 lang: fr
 ---
 
@@ -90,6 +90,7 @@ Si votre contribution est fusionnée dans ethereum.org, vous aurez la possibilit
 [En savoir plus sur les OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Comment réclamer {#how-to-claim}
+
 1. Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org).
 2. Collez un lien vers votre contribution dans le canal `#🥇 | proof-of-contribution`.
 3. Attendez qu'un membre de notre équipe vous envoie un lien vers votre OAT.

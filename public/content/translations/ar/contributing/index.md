@@ -90,6 +90,7 @@ lang: ar
 [المزيد حول رموز OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### كيفية المطالبة {#how-to-claim}
+
 1. انضم إلى [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا.
 2. الصق رابطًا لمساهمتك في قناة `#🥇 | proof-of-contribution`.
 3. انتظر حتى يرسل لك أحد أعضاء فريقنا رابطًا لرمز OAT الخاص بك.

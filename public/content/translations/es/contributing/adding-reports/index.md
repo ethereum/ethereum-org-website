@@ -1,6 +1,6 @@
 ---
-title: Añadir informes
-description: Pautas para sugerir informes de investigación a ethereum.org
+title: "Añadir informes"
+description: "Pautas para sugerir informes de investigación a ethereum.org"
 lang: es
 ---
 

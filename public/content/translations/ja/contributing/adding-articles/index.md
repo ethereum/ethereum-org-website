@@ -1,6 +1,6 @@
 ---
-title: 記事の追加
-description: ethereum.orgにビルダー向け記事を寄稿するためのガイドライン
+title: "記事の追加"
+description: "ethereum.orgにビルダー向け記事を寄稿するためのガイドライン"
 lang: ja
 ---
 

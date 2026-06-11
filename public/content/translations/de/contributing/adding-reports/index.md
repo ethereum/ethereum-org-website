@@ -1,6 +1,6 @@
 ---
-title: Berichte hinzufügen
-description: Richtlinien für das Vorschlagen von Forschungsberichten für ethereum.org
+title: "Berichte hinzufügen"
+description: "Richtlinien für das Vorschlagen von Forschungsberichten für ethereum.org"
 lang: de
 ---
 

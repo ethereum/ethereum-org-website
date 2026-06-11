@@ -1,6 +1,6 @@
 ---
-title: लेख जोडणे
-description: ethereum.org वर निर्माता (builder) लेख योगदान देण्यासाठी मार्गदर्शक तत्त्वे
+title: "लेख जोडणे"
+description: "ethereum.org वर निर्माता (builder) लेख योगदान देण्यासाठी मार्गदर्शक तत्त्वे"
 lang: mr
 ---
 

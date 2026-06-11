@@ -1,6 +1,6 @@
 ---
-title: Přidávání článků
-description: Pokyny pro přispívání články pro tvůrce na ethereum.org
+title: "Přidávání článků"
+description: "Pokyny pro přispívání články pro tvůrce na ethereum.org"
 lang: cs
 ---
 

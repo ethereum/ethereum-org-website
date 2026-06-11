@@ -90,6 +90,7 @@ Se sua contribuição for mesclada no ethereum.org, você terá a chance de reiv
 [Mais sobre OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Como reivindicar {#how-to-claim}
+
 1. Junte-se ao nosso [servidor do Discord](https://discord.gg/ethereum-org).
 2. Cole um link para sua contribuição no canal `#🥇 | proof-of-contribution`.
 3. Aguarde até que um membro de nossa equipe envie um link para o seu OAT.

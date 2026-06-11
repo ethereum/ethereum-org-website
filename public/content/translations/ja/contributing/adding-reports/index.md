@@ -1,6 +1,6 @@
 ---
-title: レポートの追加
-description: ethereum.orgに調査レポートを提案するためのガイドライン
+title: "レポートの追加"
+description: "ethereum.orgに調査レポートを提案するためのガイドライン"
 lang: ja
 ---
 

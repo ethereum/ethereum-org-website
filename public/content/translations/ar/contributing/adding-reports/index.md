@@ -1,6 +1,6 @@
 ---
-title: إضافة التقارير
-description: إرشادات لاقتراح تقارير بحثية على ⁦ethereum.org⁩
+title: "إضافة التقارير"
+description: "إرشادات لاقتراح تقارير بحثية على ⁦ethereum.org⁩"
 lang: ar
 ---
 

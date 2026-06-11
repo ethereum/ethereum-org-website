@@ -90,6 +90,7 @@ Jika kontribusi Anda digabungkan ke dalam ethereum.org, Anda akan memiliki kesem
 [Lebih lanjut tentang OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Cara mengklaim {#how-to-claim}
+
 1. Bergabunglah dengan [server Discord](https://discord.gg/ethereum-org) kami.
 2. Tempelkan tautan ke kontribusi Anda di saluran `#🥇 | proof-of-contribution`.
 3. Tunggu anggota tim kami mengirimi Anda tautan ke OAT Anda.

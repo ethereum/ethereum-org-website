@@ -1,6 +1,6 @@
 ---
-title: Thêm báo cáo
-description: Hướng dẫn đề xuất các báo cáo nghiên cứu cho ethereum.org
+title: "Thêm báo cáo"
+description: "Hướng dẫn đề xuất các báo cáo nghiên cứu cho ethereum.org"
 lang: vi
 ---
 

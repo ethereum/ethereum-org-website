@@ -1,6 +1,6 @@
 ---
-title: Přidávání zpráv
-description: Pokyny pro navrhování výzkumných zpráv na ethereum.org
+title: "Přidávání zpráv"
+description: "Pokyny pro navrhování výzkumných zpráv na ethereum.org"
 lang: cs
 ---
 

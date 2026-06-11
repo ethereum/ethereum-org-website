@@ -1,6 +1,6 @@
 ---
-title: إضافة المقالات
-description: إرشادات للمساهمة بمقالات البناة في ⁦ethereum.org⁩
+title: "إضافة المقالات"
+description: "إرشادات للمساهمة بمقالات البناة في ⁦ethereum.org⁩"
 lang: ar
 ---
 
