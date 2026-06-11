@@ -15,6 +15,7 @@ lang: en
 
 > *This story was originally published as [a guest thread on the @Ethereum X profile](https://x.com/ethereum/status/2019505333593641179?s=20) on Feb 5, 2026. It has been lightly edited for readability.*
 
+## Guests in our own worlds {#guests-in-our-own-worlds}
 
 We spend more waking hours in digital spaces than physical ones. In those spaces we're guests, not owners.
 
@@ -29,6 +30,7 @@ Digital feudalism: you create the content, build the communities, generate the d
 Their terms change. Your work disappears. 
 
 ![A video game explorer character at a blocked door](./tarrance-image-1.png)
+
 
 Nowhere is digital feudalism more obvious than in gaming.
 
@@ -59,6 +61,8 @@ When the Star Wars Galaxies game shut down, thousands logged in to watch 14 year
 They lit fireworks and said goodbye. It was a funeral for a world they built and loved but never owned. 
 
 ![Screenshot of Star Wars Galaxies game shut down in-game event](./tarrance-4.png) 
+
+## What happens when players control their worlds {#what-happens-when-players-control-their-worlds}
 
 So what happens when players control their game worlds?
 
@@ -100,6 +104,8 @@ The future I'm talking about? It's live.
 
 ![Screenshot of Loot Survivor video game](./tarrance-9.png) 
 
+## Making crypto disappear {#making-crypto-disappear}
+
 “But Crypto is clunky, slow and hard to use.”
 
 For years, it was the 4-minute mile of our industry, a limit everyone accepted as the cost of decentralization.
@@ -119,6 +125,8 @@ Tools like [Cartridge Controller](https://docs.cartridge.gg/controller/overview)
 As crypto fades into the background, the games become fun.
 
 <TweetEmbed id="1963275825157202148" />
+
+## A world that can't be taken away {#a-world-that-cant-be-taken-away}
 
 Imagine a competitive game where the prize pool is locked in a smart contract. The winner is the winner.
 
@@ -163,6 +171,8 @@ You take back what always should have been yours.
 Every revolution begins with a realization: "It doesn't have to be this way." 
 
 <TweetEmbed id="1990799147616587954" />
+
+## Declaring independence {#declaring-independence}
 
 We're declaring independence from digital feudalism.
 

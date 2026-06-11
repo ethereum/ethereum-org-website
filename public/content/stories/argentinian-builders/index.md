@@ -14,6 +14,8 @@ lang: en
 ---
 > *This story was originally published as [a guest thread on the @Ethereum X profile](https://x.com/ethereum/status/1985408315074232397?s=20) on November 3, 2025. It has been lightly edited for readability.*
 
+## A crisis that rewired a generation {#a-crisis-that-rewired-a-generation}
+
 Devconnect is [coming to Argentina](https://devconnect.org/) in November. The country has a rich crypto history, so rich that it predates crypto itself.
 
 I'm [Santiago Palladino](https://palla.dev/), engineer at [Aztec](https://aztec.network/), based in Argentina—and here’s my take on what makes this country so unique. 
@@ -33,6 +35,8 @@ But when they couldn’t get their hands on any, they looked for anything that r
 ![Screenshot from Google Search Trends showing Argentina as top country for searches of Ethereum DAI](./santiago2.jpeg)
 
 _[Source](https://trends.google.com/trends/explore?date=2018-01-01%202022-01-01&q=ethereum%20dai&hl=en)._
+
+## From coworking space to crypto frontier {#from-coworking-space-to-crypto-frontier}
 
 My own journey started with the tech, back in 2017. I serendipitously visited Voltaire House for coworking, and happened to sit next to [Manuel Aráoz](https://maraoz.com/).
 
@@ -70,6 +74,8 @@ And that’s just the ones that self-report their location.
 
 _Sources: [Electric Capital Developer Report](https://www.developerreport.com/), [GitHub Innovation Graph](https://innovationgraph.github.com/)._
 
+## Milestones made in Argentina {#milestones-made-in-argentina}
+
 No wonder this led to many significant events in Ethereum history happening from here.
 
 Few people know that a smart contract language, Vyper’s predecessor, was withdrawn from circulation based on an audit coming out of a house in Argentina.
@@ -83,6 +89,8 @@ Or that the [ERC721 implementation](https://github.com/OpenZeppelin/openzeppelin
 Or that the deployments of [MakerDAO](https://x.com/MakerDAO) SAI and multi-collateral DAI happened from here, same as [Balancer](https://balancer.fi/) and [Aragon](https://www.aragon.org/). 
 
 <TweetEmbed id="1387903795032698881" />
+
+## Bringing Ethereum home {#bringing-ethereum-home}
 
 We Argentinians are passionate about our country and our culture. And we want others to experience it as well.
 

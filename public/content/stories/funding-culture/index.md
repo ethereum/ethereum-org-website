@@ -15,6 +15,8 @@ lang: en
 
 > *This story was originally published as [a guest thread on the @Ethereum X profile](https://x.com/ethereum/status/1928462812554072540?s=20) on May 30, 2025. It has been lightly edited for readability.*
 
+## Journey to disruption {#journey-to-disruption}
+
 What happens when you use Ethereum not just to fund code, but culture?
 
 Here's my journey from DeFi meme animator to building a decentralized film platform on Ethereum.
@@ -30,6 +32,8 @@ I minted it as an NFT and it sold for 310 ETH.
 But what made it historic was who bought it... 
 
 <TweetEmbed id="1374069664297406467" />
+
+## PleasrDAO and the rise of collective ownership {#pleasrdao-and-the-rise-of-collective-ownership}
 
 It wasn’t a whale. It was 23 wallet addresses who spun up a DAO on the spot to pool funds and win the auction. They called themselves [@PleasrDAO](https://x.com/PleasrDAO).
 
@@ -50,6 +54,8 @@ It raised 1,036 ETH in 48 hours, funded entirely by the Ethereum community.
 It made me ask a bigger question: If Ethereum could fund one film, why not many?
 
 Could it replace Hollywood’s outdated, bureaucratic system entirely, and reshape how stories get made? 
+
+## Building a studio without gatekeepers {#building-a-studio-without-gatekeepers}
 
 I started [Shibuya](https://www.shibuya.film/) with [Maciej Kuciara](https://www.kuciara.com/). Our dream: a platform where creators can crowdfund, publish, and evolve stories directly with their communities. No gatekeepers. Just story, community, and code.
 
@@ -80,6 +86,8 @@ Every producer in the credits is an ENS or wallet address. The order updates liv
 
 It's one of the first times Ethereum was used not just to fund a film, but to decide who gets credited in it. ENS = the new IMDb. 
 
+## White Rabbit: When Ethereum stories move culture {#white-rabbit-when-ethereum-stories-move-culture}
+
 We premiered White Rabbit on the main stage at Devcon 2024. It was nominated for a VMA & Webby, featured in a Linkin Park music video (100M+ views), and Mirai was on the cover of Vogue Taiwan.
 
 *(Editor's note: After this article was published, White Rabbit went on to win the [Emmy award for Outstanding Innovation In Emerging Media Programming - 2025](https://www.televisionacademy.com/shows/white-rabbit).)*
@@ -97,6 +105,8 @@ This is more than a collection of shorts. It’s a proof of concept for a new ki
 By blending streaming with crowdfunding, we can empower both creators and audiences to shape the future of storytelling. 
 
 <TweetEmbed id="1921928608039194795" />
+
+## Proving the system works {#proving-the-system-works}
 
 If we want to break out of the crypto echo chamber, we can do it through culture.
 
