@@ -47,6 +47,7 @@ Upgrade Glamsterdam se soustředí na tři hlavní cíle:
 
 Stručně řečeno, Glamsterdam zavede strukturální změny, které zajistí, že s rostoucí kapacitou sítě zůstane udržitelná a výkon zůstane vysoký.
 
+
 ## Škálování l1 a paralelní zpracování {#scale-l1}
 
 Smysluplné škálování vrstvy 1 (l1) vyžaduje odklon od mimoprotokolových předpokladů důvěry a omezení sériového provádění. Glamsterdam to řeší zakotvením oddělení určitých povinností při vytváření bloků a zavedením nových datových struktur, které síti umožňují připravit se na paralelní zpracování.
@@ -101,6 +102,7 @@ Výměna seznamu přístupů k bloku (Block Access List Exchange - eth/71 neboli
 - [Technická specifikace EIP-7928](https://eips.ethereum.org/EIPS/eip-7928)
 - [Technická specifikace EIP-8159](https://eips.ethereum.org/EIPS/eip-8159)
 
+
 ## Udržitelnost sítě {#network-sustainability}
 
 S tím, jak síť Ethereum roste rychleji, je důležité zajistit, aby náklady na její používání odpovídaly opotřebení hardwaru, na kterém Ethereum běží. Síť musí zvýšit své celkové kapacitní limity, aby mohla bezpečně škálovat a zpracovávat více transakcí.
@@ -144,6 +146,7 @@ Přesnějším oceněním akcí přístupu ke stavu může být Ethereum odolně
 
 **Zdroje**: [Technická specifikace EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
+
 ## Odolnost sítě {#network-resilience}
 
 Vylepšení povinností validátorů a procesů výstupu zajišťují stabilitu sítě během událostí hromadné penalizace a demokratizují likviditu. Tato vylepšení činí síť stabilnější a zajišťují, že se všemi účastníky, velkými i malými, je zacházeno spravedlivě.
@@ -182,6 +185,7 @@ Spravedlivější fronty výstupů umožní standardním výstupům vypůjčit s
 Demokratizace přístupu ke konsolidační frontě zvýší rychlost, jakou mohou uživatelé vybrat svůj stake během období vysoké poptávky, až 2,5krát, aniž by byla ohrožena bezpečnost sítě.
 
 **Zdroje**: [Technická specifikace EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
+
 
 ## Zlepšení uživatelské a vývojářské zkušenosti {#improve-user-developer-experience}
 
@@ -241,6 +245,7 @@ Tato změna by zabránila selháním synchronizace sítě během období silné 
 
 **Zdroje**: [Technická specifikace EIP-7975](https://eips.ethereum.org/EIPS/eip-7975)
 
+
 ## Další čtení {#further-reading}
 
 - [Plán vývoje Etherea](/roadmap/)
@@ -248,6 +253,7 @@ Tato změna by zabránila selháním synchronizace sítě během období silné 
 - [Glamsterdam Meta EIP](https://eips.ethereum.org/EIPS/eip-7773)
 - [Oznámení na blogu o aktualizaci priorit protokolu pro rok 2026](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
 - [Podcast The Daily Gwei Refuel - Postkvantové Ethereum, Glamsterdam se blíží](https://www.youtube.com/watch?v=qx9sd50uQjQ)
+
 
 ## Často kladené dotazy {#faq}
 

@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/adding-wallets/index.md",
+  "generatedAt": "2026-06-08T08:11:07.665Z",
+  "rootHash": "df65fc6c9354",
+  "tree": {
+    "contentHash": "48db5570cdeb",
+    "anchorHash": "ab8ab653a3d3",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "a322e6ac8a28",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "a97a924ac5a4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "01b5d6310b9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "bdcdbcb33729",
+        "anchorHash": "a16dbfe881c7"
+      },
+      "prose:2": {
+        "contentHash": "cb09fe21487d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-decision-framework": {
+        "contentHash": "62cf0f249674",
+        "anchorHash": "caf829f4a6f5",
+        "labelHash": "09f808a5016b",
+        "children": {
+          "_label": {
+            "contentHash": "09f808a5016b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "the-must-haves": {
+            "contentHash": "8c7d55006f66",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "c0101a929d45",
+            "children": {
+              "_label": {
+                "contentHash": "c0101a929d45",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a9216725da47",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "product-removals": {
+            "contentHash": "8952c8939ef9",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "ce50cdf7dded",
+            "children": {
+              "_label": {
+                "contentHash": "ce50cdf7dded",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "727b4a49b1d6",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "the-nice-to-haves": {
+            "contentHash": "b2d60cc300a8",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "6e3d366cc4b4",
+            "children": {
+              "_label": {
+                "contentHash": "6e3d366cc4b4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "6dd9cf12baee",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "the-must-haves",
+          "product-removals",
+          "the-nice-to-haves"
+        ]
+      },
+      "adding-a-wallet": {
+        "contentHash": "a78baa78374a",
+        "anchorHash": "98299143b686",
+        "labelHash": "c7d62f4162e0",
+        "children": {
+          "_label": {
+            "contentHash": "c7d62f4162e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9ca0388ac653",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "97ce0ae34941",
+            "anchorHash": "40a0dd25214d",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1741a83f7dd0"
+              },
+              "prose:0": {
+                "contentHash": "f3a0b68bee88",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "maintenance": {
+        "contentHash": "8554c7c8b058",
+        "anchorHash": "b61e667f3083",
+        "labelHash": "17ccfa5b681e",
+        "children": {
+          "_label": {
+            "contentHash": "17ccfa5b681e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "33250d9dfc72",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "9c7b4f2d5fd4",
+            "anchorHash": "1741a83f7dd0"
+          },
+          "prose:3": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "763fae517f52",
+            "anchorHash": "8b50843a77f2"
+          },
+          "prose:4": {
+            "contentHash": "bb7208bc9b5d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "terms-of-use": {
+        "contentHash": "8e1b968cb057",
+        "anchorHash": "7387a265c2e5",
+        "labelHash": "8c45a486e4b1",
+        "children": {
+          "_label": {
+            "contentHash": "8c45a486e4b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "299712208760",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "eb43b9b04b89",
+            "anchorHash": "d04de55860e6"
+          },
+          "prose:2": {
+            "contentHash": "c76503395908",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "the-decision-framework",
+      "adding-a-wallet",
+      "maintenance",
+      "terms-of-use"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

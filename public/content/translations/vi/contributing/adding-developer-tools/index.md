@@ -1,61 +1,59 @@
 ---
-title: "Thêm công cụ lập trình"
+title: Thêm công cụ dành cho nhà phát triển
 lang: vi
-description: "Các tiêu chí để được đưa vào danh sách công cụ lập trình trên ethereum.org"
+description: Tiêu chí của chúng tôi để liệt kê các công cụ dành cho nhà phát triển trên ethereum.org
 ---
 
-# Thêm các công cụ dành cho nhà phát triển {#contributing-to-ethereumorg-}
+Chúng tôi muốn đảm bảo rằng chúng tôi liệt kê các tài nguyên tốt nhất có thể dành cho nhà phát triển để mọi người có thể tự tin xây dựng và có được sự hỗ trợ mà họ cần.
 
-Chúng tôi muốn chắc chắn rằng chúng tôi cung cấp tài nguyên lập trình tốt nhất có thể, từ đó mọi người có thể xây dựng dự án với sự tin tưởng và nhận được đẩy đủ sự hỗ trợ cần thiết.
+Nếu có một công cụ hữu ích dành cho nhà phát triển mà chúng tôi đã bỏ sót, vui lòng đề xuất nó ở một nơi phù hợp.
 
-Nếu có công cụ lập trình hữu ích mà chúng tôi đã bỏ sót, hãy vui lòng đề xuất tại các trang phù hợp.
+Hiện tại, chúng tôi liệt kê các công cụ dành cho nhà phát triển trên toàn bộ [cổng thông tin dành cho nhà phát triển](/developers/) của chúng tôi.
 
-Chúng tôi hiện đang liệt kê các công cụ dành cho nhà phát triển trên [cổng thông tin dành cho nhà phát triển](/developers/) của chúng tôi.
-
-**Bạn có thể đề xuất bổ sung mới tại các trang có liên quan.**
+**Vui lòng đề xuất các bổ sung mới cho các trang phù hợp.**
 
 ## Cách chúng tôi quyết định {#ways-to-contribute}
 
-Các đề xuất Công cụ lập trình sẽ được đánh giá bởi các tiêu chí như sau:
+Các đề xuất công cụ dành cho nhà phát triển sẽ được đánh giá theo các tiêu chí sau:
 
-**Có thực sự khác biệt so với những công cụ đã công bố trước đây?**
+**Nó có sự khác biệt có ý nghĩa so với các công cụ đã được liệt kê không?**
 
-- Thuộc nhóm công cụ mới hoặc loại công cụ mới
-- Có tính năng mới so với các công cụ tương tự đã liệt kê
-- Phục vụ nhu cầu riêng biệt mà các công cụ hiện có chưa đáp ứng được
+- Các danh mục hoặc loại công cụ mới
+- Các tính năng mới so với các công cụ tương tự hiện có
+- Nhắm mục tiêu vào một trường hợp sử dụng riêng biệt chưa được các công cụ tương tự hiện có bao phủ
 
-**Tài liệu hướng dẫn sử dụng công cụ được biên soạn đầy đủ và rõ ràng không?**
+**Công cụ có tài liệu hướng dẫn tốt không?**
 
-- Có tài liệu hướng dẫn sử dụng không?
-- Tài liệu có đủ thông tin để biết cách sử dụng công cụ?
-- Được cập nhật gần đây không?
+- Có tài liệu hướng dẫn không?
+- Nó có đủ để sử dụng công cụ không?
+- Nó có được cập nhật gần đây không?
 
-**Công cụ này có được sử dụng rộng rãi?**
+**Công cụ có được sử dụng rộng rãi không?**
 
-- Chúng tôi sẽ xem xét các chỉ số trên Github Stars, số lượt tải xuống, và liệu công cụ được sử dụng bởi các công ty hoặc dự án có tiếng
+- Chúng tôi sẽ xem xét các số liệu như số sao trên GitHub, thống kê lượt tải xuống và liệu nó có được sử dụng bởi các công ty hoặc dự án đã biết hay không
 
-**Công cụ có đạt chất lượng?**
+**Công cụ có đủ chất lượng không?**
 
-- Có gặp lỗi thường xuyên không?
-- Có đáng tin cậy không?
-- Có được duy trì, cập nhật thường xuyen không?
+- Có các lỗi lặp đi lặp lại không?
+- Công cụ có đáng tin cậy không?
+- Công cụ có được bảo trì tích cực không?
 
-**Là công cụ mã nguồn mở không?**
+**Công cụ có phải là mã nguồn mở không?**
 
-Nhiều dự án trong hệ sinh thái Ethereum là mã nguồn mở. Chúng tôi có xu hướng ưu tiên đưa vào danh sách các dự án mã nguồn mở cho phép các lập trình viên trong cộng đồng có thể kiểm tra và đóng góp vào mã code.
+Nhiều dự án trong không gian Ethereum là mã nguồn mở. Chúng tôi có nhiều khả năng sẽ liệt kê các dự án mã nguồn mở cho phép các nhà phát triển trong cộng đồng kiểm tra mã và đóng góp cho nó.
 
 ---
 
-## Thứ tự Dự án {#product-ordering}
+## Thứ tự sản phẩm {#product-ordering}
 
-Các sản phẩm sẽ được liệt kê theo thứ tự ngày tháng gần nhất được thêm vào trang, trừ khi được sắp xếp theo thứ tự cụ thể nào khác, ví dụ như theo bảng chữ cái. Nói cách khác, sản phẩm mới nhất sẽ được thêm vào ở cuối danh sách.
+Trừ khi các sản phẩm được sắp xếp theo một thứ tự cụ thể khác, chẳng hạn như theo bảng chữ cái, các sản phẩm sẽ được hiển thị từ cũ nhất đến mới nhất được thêm vào trang. Nói cách khác, các sản phẩm mới nhất sẽ được thêm vào cuối danh sách.
 
 ---
 
 ## Thêm công cụ dành cho nhà phát triển của bạn {#how-decisions-about-the-site-are-made}
 
-Nếu bạn muốn thêm công cụ lập trình của bạn vào trang ethereum.org và công cụ đạt các tiêu chí, hãy tạo góp ý trên Github.
+Nếu bạn muốn thêm một công cụ dành cho nhà phát triển vào ethereum.org và nó đáp ứng các tiêu chí, hãy tạo một issue trên GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
-  Tạo vấn đề
+  Tạo issue
 </ButtonLink>

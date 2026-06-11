@@ -1,55 +1,58 @@
 ---
-title: "Sarılı ETH (WETH) Nedir?"
-description: "Ether (ETH) için ERC20 uyumlu bir sarıcı olan Sarılı ethere (WETH) giriş."
+title: Sarılmış ether (WETH)
+metaTitle: Sarılmış Ether (WETH) Nedir?
+description: Sarılmış ether'e (WETH) giriş—ether (ETH) için ERC-20 uyumlu bir sarmalayıcı. 
 lang: tr
 ---
 
-# Sarılı ether (WETH) {#intro-to-weth}
-
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Herhangi bir zincirde ETH sarmak veya sarmalamayı açmak için [WrapETH.com](https://www.wrapeth.com/) adresinde cüzdanınızı bağlayın.</div>
+<div>Herhangi bir zincirde ETH sarmak veya sarmasını açmak için cüzdanınızı [WrapETH.com](https://www.wrapeth.com/) adresinden bağlayın</div>
 </Alert>
 
-Ether (ETH), Ethereum'un ana para birimidir. Para birimi olarak kullanmak suretiyle hisseleme ve hesaplama için gas ücretlerini ödeme gibi çeşitli amaçlarla kullanılır. **WETH, Ethereum'daki diğer dijital varlık türleri olan birçok uygulamanın ve [ERC-20 jetonlarının](/glossary/#erc-20)** ihtiyaç duyduğu bazı ek işlevlere sahip, ETH'nin etkili bir şekilde yükseltilmiş formudur. ETH, bu jetonlar ile çalışabilmek için ERC-20 standardı olarak bilinen aynı kurallara uymalıdır.
+Ether (ETH), Ethereum'un ana para birimidir. Staking, bir para birimi olarak kullanım ve hesaplama için gaz ücretlerini ödeme gibi çeşitli amaçlar için kullanılır. **WETH, aslında Ethereum'daki diğer dijital varlık türleri olan [ERC-20 Token'ları](/glossary/#erc-20) ve birçok uygulama tarafından ihtiyaç duyulan bazı ek işlevlere sahip, ETH'nin yükseltilmiş bir biçimidir.** Bu Token'larla çalışabilmek için ETH'nin, ERC-20 standardı olarak bilinen ve onların uyduğu kuralların aynısına uyması gerekir.
 
-Bu boşluğu doldurabilmek için sarılı ETH (WETH) yaratıldı. **Sarılı ETH, sözleşmeye herhangi bir miktarda ETH yatırmanıza ve aynı miktarı basılmış WETH** olarak almanıza olanak tanıyan ve ERC-20 jeton standardına uygun bir akıllı sözleşmedir. WETH, ETH'nin yerel varlığı ETH olarak değil, ERC-20 jetonu olarak etkileşime girmenize olanak tanıyan bir temsilidir. Gaz ücretlerini ödemek için yine de yerel ETH'ye ihtiyacınız olacak, bu yüzden para yatırırken mutlaka bir miktar tasarruf yapın.
+Bu boşluğu doldurmak için sarılmış ether (WETH) oluşturuldu. **Sarılmış ETH, sözleşmeye herhangi bir miktarda ETH yatırmanıza ve ERC-20 Token standardına uyan aynı miktarda basılmış WETH almanıza olanak tanıyan bir akıllı sözleşmedir.** WETH, ETH'nin yerel varlık olarak değil, bir ERC-20 Token'ı olarak etkileşime girmenizi sağlayan bir temsilidir. Gaz ücretlerini ödemek için hâlâ yerel ETH'ye ihtiyacınız olacak, bu nedenle para yatırırken bir miktar ayırdığınızdan emin olun. 
 
-WETH akıllı sözleşmesini kullanarak WETH'yi ETH'ye çevirebilirsiniz. WETH akıllı sözleşmesi ile istediğiniz miktarda WETH kullanabilirsiniz ve aynı miktarı ETH olarak alırsınız. Biriktirilen WETH daha sonrasında yakılır ve yakılan WETH'ler dolaşımdan çıkarılır.
+WETH akıllı sözleşmesini kullanarak WETH'nin sarmasını açıp ETH'ye dönüştürebilirsiniz. WETH akıllı sözleşmesi ile herhangi bir miktarda WETH'yi bozdurabilir ve aynı miktarda ETH alabilirsiniz. Yatırılan WETH daha sonra yakılır ve dolaşımdaki WETH arzından çıkarılır.
 
-**ETH arzının yaklaşık olarak ~ %3'ü WETH jeton sözleşmesinde kilitlenir** ve bu da WETH'yi en çok kullanılan [akıllı sözleşmelerden](/glossary/#smart-contract) biri yapar. WETH, özellikle kullanıcılar merkeziyetsiz finans (DeFi) uygulamalarıyla etkileşime geçtiğinde önemlidir.
+**Dolaşımdaki ETH arzının kabaca ~%3'ü WETH Token sözleşmesinde kilitlidir**, bu da onu en çok kullanılan [akıllı sözleşmelerden](/glossary/#smart-contract) biri yapar. WETH, özellikle merkeziyetsiz finans (DeFi) uygulamalarıyla etkileşime giren kullanıcılar için önemlidir.
 
-## ETH'yi neden ERC-20 olarak sarmamız gerekiyor? {#why-do-we-need-to-wrap-eth}
+## Neden ETH'yi bir ERC-20 olarak sarmamız gerekiyor? {#why-do-we-need-to-wrap-eth}
 
-[ERC-20](/developers/docs/standards/tokens/erc-20/), isteyen herkesin Ethereum ekosisteminde bu standardı kullanan uygulama ve jetonlarla sorunsuz bir şekilde etkileşim kuran jetonlar oluşturabilmesini sağlayan aktarılabilir jetonlar için standart bir arayüz tanımlar. **ETH, ERC-20 standardından önceki** bir standart olduğundan bu spesifikasyona uymaz. Bu, ETH'yi diğer ERC-20 jetonlarıyla **kolayca** değiştiremeyeceğiniz veya **ERC-20 standardını kullanan uygulamalarda ETH kullanamayacağınız** anlamına gelir. ETH'yi sarmak size aşağıdakileri yapma olanağı tanır:
+[ERC-20](/developers/docs/standards/tokens/erc-20/), transfer edilebilir Token'lar için standart bir arayüz tanımlar, böylece herkes Ethereum ekosisteminde bu standardı kullanan uygulamalar ve Token'larla sorunsuz bir şekilde etkileşime giren Token'lar oluşturabilir. **ETH, ERC-20 standardından daha eski olduğu için**, ETH bu spesifikasyona uymaz. Bu, ETH'yi diğer ERC-20 Token'larıyla **kolayca takas edemeyeceğiniz** veya **ETH'yi ERC-20 standardını kullanan uygulamalarda kullanamayacağınız** anlamına gelir. ETH'yi sarmak size aşağıdakileri yapma fırsatı verir:
 
-- **ETH'yi ERC-20 jetonları ile değiştirme**: ETH'yi diğer ERC-20 jetonları ile doğrudan değiştiremezsiniz. WETH, ERC-20 değiştirilebilir jeton standardına uygun ve diğer ERC-20 jetonlarıyla takas edilebilen bir ether temsilidir.
+- **ETH'yi ERC-20 Token'larıyla takas etme**: ETH'yi doğrudan diğer ERC-20 Token'larıyla takas edemezsiniz. WETH, ERC-20 misli token standardına uyan ve diğer ERC-20 Token'larıyla takas edilebilen Ether'in bir temsilidir. 
 
-- **Merkeziyetsiz uygulamalarda ETH kullanma**: ETH, ERC20 ile uyumlu olmadığından geliştiricilerin merkeziyetsiz uygulamalarda ayrı arayüzler (biri ETH için, diğeri ERC-20 jetonları için) oluşturmaları gerekir. ETH'yi sarmak bu engeli ortadan kaldırır ve geliştiricilerin aynı merkeziyetsiz uygulama içinde ETH'yi ve diğer jetonları yönetmesini sağlar. Birçok merkeziyetsiz finans uygulaması bu standardı kullanır ve bu jetonların takası için pazarlar yaratır.
+- **ETH'yi dapp'lerde kullanma**: ETH, ERC-20 uyumlu olmadığı için geliştiricilerin merkeziyetsiz uygulamalarda (dapp) ayrı arayüzler (biri ETH, diğeri ERC-20 Token'ları için) oluşturması gerekirdi. ETH'yi sarmak bu engeli ortadan kaldırır ve geliştiricilerin aynı dapp içinde ETH ve diğer Token'ları işlemesine olanak tanır. Birçok merkeziyetsiz finans uygulaması bu standardı kullanır ve bu Token'ları takas etmek için piyasalar oluşturur.
 
-## Sarılı ether (WETH) ile ether (ETH) karşılaştırması: Fark nedir? {#weth-vs-eth-differences}
+## Sarılmış ether (WETH) ve ether (ETH): Fark nedir? {#weth-vs-eth-differences}
 
-|          | **Ether (ETH)**                                                                                                                                                                                                                 | **Sarılı Ether (WETH)**                                                                                                                                                                                                                                                             |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Arz      | ETH arzı, Ethereum protokolü tarafından yönetilir. ETH [ihracı](/roadmap/merge/issuance), işlemlerin gerçekleştirilmesi ve blokların oluşturulması sırasında Ethereum doğrulayıcıları tarafından gerçekleştirilir. | WETH, bir ERC-20 jetonudur ve arzı, bir akıllı sözleşme tarafından yönetilir. Yeni WETH birimleri, kullanıcılardan ETH depozitoları aldıktan sonra sözleşme tarafından ihraç edilir veya bir kullanıcı ETH karşılığında WETH almak istediğinde WETH birimleri yakılır. |
-| Mülkiyet | Sahiplik, hesap bakiyeniz aracılığıyla Ethereum protokolü tarafından yönetilir.                                                                                                                                                    | WETH'nin mülkiyeti, Ethereum protokolü tarafından güvence altına alınan WETH jeton akıllı sözleşmesi tarafından yönetilir.                                                                                                                                                             |
-| Gaz      | Ether (ETH), Ethereum ağındaki hesaplama ödemeleri için kabul edilen ödeme birimidir. Gaz ücretleri gwei (bir ether birimi) cinsinden belirlenir.                            | Gaz ödemeleri için WETH jetonunun kullanımı yerel olarak desteklenmez.                                                                                                                                                                                                                 |
+
+|            | **Ether (ETH)**                                                                                                                                                                                                                 | **Sarılmış Ether (WETH)**                                                                                                                                                                                                                                                                                    |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Arz     | [ETH arzı](/eth/supply/), [Ethereum](/) protokolü tarafından yönetilir. ETH'nin [ihracı](/roadmap/merge/issuance), işlemleri işlerken ve bloklar oluştururken Ethereum doğrulayıcıları tarafından gerçekleştirilir.                           | WETH, arzı bir akıllı sözleşme tarafından yönetilen bir ERC-20 Token'ıdır. Sözleşme kullanıcılardan ETH mevduatı aldıktan sonra yeni WETH birimleri ihraç edilir veya bir kullanıcı WETH'yi ETH için bozdurmak istediğinde WETH birimleri yakılır.                                                                                                                                        |
+| Sahiplik  | Sahiplik, hesap bakiyeniz aracılığıyla Ethereum protokolü tarafından yönetilir.  | WETH sahipliği, Ethereum protokolü tarafından güvence altına alınan WETH Token akıllı sözleşmesi tarafından yönetilir.                                                                                                                                         |
+| Gaz        | Ether (ETH), Ethereum ağındaki hesaplamalar için kabul edilen ödeme birimidir. Gaz ücretleri Gwei (bir Ether birimi) cinsinden ifade edilir.                                                                                    | WETH Token'ları ile gaz ödemesi yerel olarak desteklenmez.                                                                                                                                                                                              |
 
 ## Sıkça sorulan sorular {#faq}
+ 
+<ExpandableCard title="ETH sarmak/açmak için ödeme yapıyor musunuz?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
-<ExpandableCard title="ETH'yi sarmak veya çözmek ücretli mi?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+WETH sözleşmesini kullanarak ETH sarmak veya sarmasını açmak için gaz ücreti ödersiniz.
 
-WETH sözleşmesini kullanarak ETH'yi sarmak veya çözmek için gaz ücreti ödersiniz.
 </ExpandableCard>
 
 <ExpandableCard title="WETH güvenli mi?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
-WETH, basit ve test edilmiş bir akıllı sözleşmeye dayandığı için genellikle güvenli kabul edilir. WETH sözleşmesi resmen doğrulanmıştır. Bu, Ethereum'da akıllı sözleşmelere yönelik en yüksek güvenlik standardıdır.
+WETH, basit ve zorlu testlerden geçmiş bir akıllı sözleşmeye dayandığı için genellikle güvenli kabul edilir. WETH sözleşmesi ayrıca, Ethereum'daki akıllı sözleşmeler için en yüksek güvenlik standardı olan biçimsel doğrulama işleminden geçmiştir.
+
 </ExpandableCard>
 
-<ExpandableCard title="Neden farklı WETH jetonları görüyorum?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="Neden farklı WETH token'ları görüyorum?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
-Bu sayfada açıklanan [WETH'nin kanonik uygulamasının](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) yanı sıra, başka varyantları da vardır. Bunlar, uygulama geliştiricileri tarafından oluşturulan özel jetonlar veya diğer blokzincirlerde yayımlanmış sürümler olabilir ve farklı davranabilir ya da farklı güvenlik özelliklerine sahip olabilir. **Hangi WETH uygulaması ile etkileşimde olduğunuzu öğrenmek için jeton bilgilerini her zaman iki kez kontrol edin.**
+Bu sayfada açıklanan [standart WETH uygulamasının](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) yanı sıra, piyasada başka varyantlar da bulunmaktadır. Bunlar, uygulama geliştiricileri tarafından oluşturulan özel Token'lar veya diğer blokzincirlerinde ihraç edilen sürümler olabilir ve farklı davranabilir veya farklı güvenlik özelliklerine sahip olabilirler. **Hangi WETH uygulamasıyla etkileşime girdiğinizi bilmek için Token bilgilerini her zaman mutlaka kontrol edin.**
+
 </ExpandableCard>
 
 <ExpandableCard title="Diğer ağlardaki WETH sözleşmeleri nelerdir?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
@@ -57,10 +60,11 @@ Bu sayfada açıklanan [WETH'nin kanonik uygulamasının](https://etherscan.io/t
 - [Ethereum Ana Ağı](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
+
 </ExpandableCard>
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-- [Nedir bu WETH?](https://weth.tkn.eth.limo/)
-- [WETH'nin Blockscout'taki jeton bilgileri](https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
-- [WETH'nin Resmi Doğrulaması](https://zellic.io/blog/formal-verification-weth)
+- [WTF is WETH?](https://weth.tkn.eth.limo/)
+- [Blockscout üzerinde WETH Token bilgileri](https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
+- [WETH'nin Biçimsel Doğrulaması](https://zellic.io/blog/formal-verification-weth)

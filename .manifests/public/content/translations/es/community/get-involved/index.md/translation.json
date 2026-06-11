@@ -1,0 +1,468 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-06-08T07:13:23.603Z",
+  "englishManifestHash": "75c2ecf63ab6",
+  "placeholderOrder": [
+    "LINK-bcc978",
+    "LINK-98fd7b",
+    "LINK-09080c",
+    "LINK-e679ce",
+    "LINK-db77fc",
+    "LINK-8fb0a7",
+    "LINK-ad799e",
+    "LINK-eb2271",
+    "LINK-a8a76d",
+    "LINK-eb2271",
+    "LINK-d8e904",
+    "LINK-3ced12",
+    "LINK-e9f1d9",
+    "LINK-64962f",
+    "CODE-d93ec4",
+    "CODE-d3a696",
+    "LINK-4816a2",
+    "LINK-a8a76d",
+    "LINK-18a3b2",
+    "LINK-212248",
+    "LINK-7ee413",
+    "LINK-a8bd24",
+    "LINK-8fb0a7",
+    "LINK-71f2d5",
+    "LINK-e79d07",
+    "LINK-15220f",
+    "LINK-3bab6f",
+    "LINK-b178c2",
+    "LINK-d85f09",
+    "LINK-c506f1",
+    "LINK-6cba2e",
+    "LINK-4e4e05",
+    "LINK-15065d",
+    "LINK-b1b418",
+    "LINK-230fc7",
+    "LINK-5dd728",
+    "LINK-f2cdf3",
+    "LINK-d11cb0",
+    "LINK-a15a8d",
+    "LINK-666d2b",
+    "LINK-b8f7eb",
+    "LINK-729cb4",
+    "LINK-044b0a",
+    "LINK-8d8e19",
+    "LINK-c453bd",
+    "LINK-443851",
+    "LINK-51f93b",
+    "LINK-177637",
+    "LINK-641390",
+    "LINK-b8286b",
+    "LINK-57e3e3",
+    "LINK-6af168",
+    "LINK-fb2711",
+    "LINK-894bd2",
+    "LINK-257a27",
+    "LINK-221db1",
+    "LINK-1a02e2",
+    "LINK-dc241f",
+    "LINK-5e52e2",
+    "LINK-22c145",
+    "LINK-fbd25f",
+    "LINK-f7d4d6",
+    "LINK-90248d",
+    "LINK-6bc218",
+    "LINK-21c42d",
+    "LINK-bc765a",
+    "LINK-12c981",
+    "LINK-bcc978"
+  ],
+  "placeholderMap": {
+    "CODE-d93ec4": {
+      "type": "inline-code",
+      "values": {
+        "content": "e-review"
+      }
+    },
+    "CODE-d3a696": {
+      "type": "inline-code",
+      "values": {
+        "content": "discussion-to"
+      }
+    },
+    "LINK-bcc978": {
+      "type": "link",
+      "values": {
+        "url": "/community/code-of-conduct"
+      }
+    },
+    "LINK-98fd7b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-09080c": {
+      "type": "link",
+      "values": {
+        "url": "https://ethglobal.co/"
+      }
+    },
+    "LINK-e679ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/"
+      }
+    },
+    "LINK-db77fc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/@EthereumProtocol/streams"
+      }
+    },
+    "LINK-8fb0a7": {
+      "type": "link",
+      "values": {
+        "url": "https://esp.ethereum.foundation/wishlist/"
+      }
+    },
+    "LINK-ad799e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.web3bridgeafrica.com"
+      }
+    },
+    "LINK-eb2271": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/VmG7Uxc"
+      }
+    },
+    "LINK-a8a76d": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/Nz6rtfJ8Cu"
+      }
+    },
+    "LINK-d8e904": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org"
+      }
+    },
+    "LINK-3ced12": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1"
+      }
+    },
+    "LINK-e9f1d9": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-5069"
+      }
+    },
+    "LINK-64962f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review"
+      }
+    },
+    "LINK-4816a2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-cat-herders/EIPIP"
+      }
+    },
+    "LINK-18a3b2": {
+      "type": "link",
+      "values": {
+        "url": "/eips/"
+      }
+    },
+    "LINK-212248": {
+      "type": "link",
+      "values": {
+        "url": "https://challenges.ethereum.org/"
+      }
+    },
+    "LINK-7ee413": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch"
+      }
+    },
+    "LINK-a8bd24": {
+      "type": "link",
+      "values": {
+        "url": "https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022"
+      }
+    },
+    "LINK-71f2d5": {
+      "type": "link",
+      "values": {
+        "url": "https://allwallet.dev"
+      }
+    },
+    "LINK-e79d07": {
+      "type": "link",
+      "values": {
+        "url": "/community/research/"
+      }
+    },
+    "LINK-15220f": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/developers/buidlnetwork/"
+      }
+    },
+    "LINK-3bab6f": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/"
+      }
+    },
+    "LINK-b178c2": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/Nz6rtfJ8Cu"
+      }
+    },
+    "LINK-d85f09": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program"
+      }
+    },
+    "LINK-c506f1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-6cba2e": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-4e4e05": {
+      "type": "link",
+      "values": {
+        "url": "https://gitcoin.co/fund"
+      }
+    },
+    "LINK-15065d": {
+      "type": "link",
+      "values": {
+        "url": "https://clr.fund/#/about"
+      }
+    },
+    "LINK-b1b418": {
+      "type": "link",
+      "values": {
+        "url": "https://defillama.com/"
+      }
+    },
+    "LINK-230fc7": {
+      "type": "link",
+      "values": {
+        "url": "https://defiprime.com"
+      }
+    },
+    "LINK-5dd728": {
+      "type": "link",
+      "values": {
+        "url": "https://rotki.com/"
+      }
+    },
+    "LINK-f2cdf3": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/Nz6rtfJ8Cu"
+      }
+    },
+    "LINK-d11cb0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.raidguild.org/"
+      }
+    },
+    "LINK-a15a8d": {
+      "type": "link",
+      "values": {
+        "url": "/about/#open-jobs"
+      }
+    },
+    "LINK-666d2b": {
+      "type": "link",
+      "values": {
+        "url": "https://jobs.ashbyhq.com/ethereum-foundation"
+      }
+    },
+    "LINK-b8f7eb": {
+      "type": "link",
+      "values": {
+        "url": "https://jobstash.xyz"
+      }
+    },
+    "LINK-729cb4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethereumjobboard.com/"
+      }
+    },
+    "LINK-044b0a": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptocurrencyjobs.co/ethereum/"
+      }
+    },
+    "LINK-8d8e19": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/careers/"
+      }
+    },
+    "LINK-c453bd": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptojobslist.com/ethereum-jobs"
+      }
+    },
+    "LINK-443851": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bankless.com/jobs"
+      }
+    },
+    "LINK-51f93b": {
+      "type": "link",
+      "values": {
+        "url": "https://web3.career"
+      }
+    },
+    "LINK-177637": {
+      "type": "link",
+      "values": {
+        "url": "https://web3army.xyz/"
+      }
+    },
+    "LINK-641390": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptovalley.jobs/"
+      }
+    },
+    "LINK-b8286b": {
+      "type": "link",
+      "values": {
+        "url": "https://startup.jobs/ethereum-jobs"
+      }
+    },
+    "LINK-57e3e3": {
+      "type": "link",
+      "values": {
+        "url": "/dao/"
+      }
+    },
+    "LINK-6af168": {
+      "type": "link",
+      "values": {
+        "url": "https://daosquare.io/"
+      }
+    },
+    "LINK-fb2711": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/DAOSquare"
+      }
+    },
+    "LINK-894bd2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.developerdao.com/"
+      }
+    },
+    "LINK-257a27": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/developer_dao"
+      }
+    },
+    "LINK-221db1": {
+      "type": "link",
+      "values": {
+        "url": "https://dOrg.tech"
+      }
+    },
+    "LINK-1a02e2": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/dOrg_tech"
+      }
+    },
+    "LINK-dc241f": {
+      "type": "link",
+      "values": {
+        "url": "https://daohaus.club"
+      }
+    },
+    "LINK-5e52e2": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/nowdaoit"
+      }
+    },
+    "LINK-22c145": {
+      "type": "link",
+      "values": {
+        "url": "https://lexdao.org"
+      }
+    },
+    "LINK-fbd25f": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/lex_DAO"
+      }
+    },
+    "LINK-f7d4d6": {
+      "type": "link",
+      "values": {
+        "url": "https://metacartel.xyz"
+      }
+    },
+    "LINK-90248d": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/VENTURE_DAO"
+      }
+    },
+    "LINK-6bc218": {
+      "type": "link",
+      "values": {
+        "url": "https://metafactory.ai"
+      }
+    },
+    "LINK-21c42d": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/TheMetaFactory"
+      }
+    },
+    "LINK-bc765a": {
+      "type": "link",
+      "values": {
+        "url": "https://raidguild.org"
+      }
+    },
+    "LINK-12c981": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/RaidGuild"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:13:23.603Z",
+      "status": "success"
+    }
+  }
+}

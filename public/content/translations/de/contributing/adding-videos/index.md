@@ -18,6 +18,7 @@ Ethereum.org ist eine neutrale, lehrreiche Ressource. Die Videogalerie wird kura
 
 Die Website listet keine Videos auf, die in erster Linie ein bestimmtes Produkt, einen bestimmten Token oder eine kommerzielle Dienstleistung bewerben.
 
+
 ## Aufnahmekriterien {#criteria-for-inclusion}
 
 ### Grundvoraussetzungen {#must-haves}
@@ -33,6 +34,7 @@ Die Website listet keine Videos auf, die in erster Linie ein bestimmtes Produkt,
 - **Verfügt über ein Transkript** – Videos mit Transkripten verbessern die Barrierefreiheit und SEO. Wenn Sie keines haben, kann das ethereum.org-Team bei der Erstellung helfen.
 - **Von einer glaubwürdigen Quelle** – Inhalte von etablierten Pädagogen, Forschern und Quellen haben Vorrang.
 - **Zeitlos und dauerhaft relevant** – Inhalte, die über die Zeit hinweg relevant bleiben, werden gegenüber zeitkritischem Material bevorzugt.
+
 
 ## So fügen Sie ein Video hinzu {#how-to-add-a-video}
 
@@ -141,6 +143,7 @@ Sie können auch neue Tags verwenden – diese stehen dann für zukünftige Kate
 
 Erstellen Sie einen Pull Request mit Ihren Änderungen für den Branch `dev`. Das Team wird Ihre Einreichung überprüfen und Feedback geben.
 
+
 ## Wartung {#maintenance}
 
 Gelistete Videos werden regelmäßig überprüft, um sicherzustellen, dass sie:
@@ -150,6 +153,7 @@ Gelistete Videos werden regelmäßig überprüft, um sicherzustellen, dass sie:
 - über funktionierende Hosting-/YouTube-Links verfügen
 
 Wenn Ihnen ein Problem mit einem gelisteten Video auffällt, [erstellen Sie ein Issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) oder senden Sie eine E-Mail an [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Nutzungsbedingungen {#terms-of-use}
 

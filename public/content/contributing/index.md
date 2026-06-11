@@ -1,10 +1,9 @@
 ---
-title: Contributing
+title: "Contributing to ethereum.org 🦄"
+metaTitle: Contributing
 description: Learn about the different ways you can contribute to ethereum.org
 lang: en
 ---
-
-# Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg}
 
 Ethereum.org is an open-source run project with **12 000+** contributors that help translate, write, design and maintain the website.
 

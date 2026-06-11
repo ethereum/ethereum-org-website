@@ -47,6 +47,7 @@ Peningkatan Glamsterdam berpusat pada tiga tujuan utama:
 
 Singkatnya, Glamsterdam akan memperkenalkan perubahan struktural untuk memastikan bahwa seiring dengan peningkatan kapasitas jaringan, jaringan tersebut tetap berkelanjutan dan kinerjanya tetap tinggi.
 
+
 ## Skalakan lapisan 1 (l1) & pemrosesan paralel {#scale-l1}
 
 Penskalaan lapisan 1 (l1) yang bermakna memerlukan peralihan dari asumsi kepercayaan di luar protokol dan kendala eksekusi serial. Glamsterdam mengatasi hal ini dengan mengabadikan pemisahan tugas pembuatan blok tertentu dan memperkenalkan struktur data baru yang memungkinkan jaringan bersiap untuk pemrosesan paralel.
@@ -101,6 +102,7 @@ Pertukaran Daftar Akses Blok (eth/71 atau EIP-8159) adalah pendamping jaringan l
 - [Spesifikasi teknis EIP-7928](https://eips.ethereum.org/EIPS/eip-7928)
 - [Spesifikasi teknis EIP-8159](https://eips.ethereum.org/EIPS/eip-8159)
 
+
 ## Keberlanjutan jaringan {#network-sustainability}
 
 Seiring dengan pertumbuhan jaringan Ethereum yang lebih cepat, penting untuk memastikan bahwa biaya penggunaannya sesuai dengan keausan pada perangkat keras yang menjalankan Ethereum. Jaringan perlu meningkatkan batas kapasitas keseluruhannya agar dapat menskalakan dan memproses lebih banyak transaksi dengan aman.
@@ -144,6 +146,7 @@ Dengan menetapkan harga tindakan akses state secara lebih akurat, Ethereum dapat
 
 **Sumber daya**: [Spesifikasi teknis EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
+
 ## Ketahanan jaringan {#network-resilience}
 
 Penyempurnaan tugas validator dan proses keluar memastikan stabilitas jaringan selama peristiwa pemotongan massal dan mendemokratisasi likuiditas. Peningkatan ini membuat jaringan lebih stabil dan memastikan bahwa semua peserta, besar dan kecil, diperlakukan secara adil.
@@ -182,6 +185,7 @@ Antrean keluar yang lebih adil akan memungkinkan proses keluar standar untuk mem
 Mendemokratisasi akses ke antrean konsolidasi akan meningkatkan kecepatan pengguna untuk keluar dari stake mereka selama periode permintaan tinggi hingga 2,5x, tanpa mengorbankan keamanan jaringan.
 
 **Sumber daya**: [Spesifikasi teknis EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
+
 
 ## Meningkatkan pengalaman pengguna & pengembang {#improve-user-developer-experience}
 
@@ -241,6 +245,7 @@ Perubahan ini akan mencegah kegagalan sinkronisasi jaringan selama periode aktiv
 
 **Sumber daya**: [Spesifikasi teknis EIP-7975](https://eips.ethereum.org/EIPS/eip-7975)
 
+
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Peta jalan Ethereum](/roadmap/)
@@ -248,6 +253,7 @@ Perubahan ini akan mencegah kegagalan sinkronisasi jaringan selama periode aktiv
 - [Meta EIP Glamsterdam](https://eips.ethereum.org/EIPS/eip-7773)
 - [Pengumuman blog Pembaruan Prioritas Protokol untuk 2026](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
 - [Podcast The Daily Gwei Refuel - Ethereum Pasca-kuantum, Glamsterdam akan datang](https://www.youtube.com/watch?v=qx9sd50uQjQ)
+
 
 ## FAQ {#faq}
 

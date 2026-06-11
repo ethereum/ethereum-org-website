@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-06-08T10:33:12.498Z",
+  "englishManifestHash": "a2d0066392ec",
+  "placeholderOrder": [
+    "LINK-b8e25d",
+    "LINK-a21a82",
+    "CODE-b00fb3",
+    "LINK-54fa0a",
+    "LINK-c8fdd8",
+    "LINK-b7f13c",
+    "LINK-3baa8c",
+    "LINK-7f43c7",
+    "LINK-75964c",
+    "LINK-71daf6",
+    "LINK-7d8dd4",
+    "LINK-d9e642",
+    "LINK-18b472",
+    "LINK-5b0209",
+    "LINK-6e23f7",
+    "LINK-cd5be1",
+    "LINK-11b658",
+    "LINK-5e0d61",
+    "LINK-5b77a3",
+    "LINK-c7beac",
+    "LINK-103a7a",
+    "LINK-126818",
+    "LINK-7d57df",
+    "LINK-162d90",
+    "LINK-6c4cfe",
+    "LINK-082d38",
+    "LINK-292978",
+    "LINK-a39521",
+    "CODE-1f28e5",
+    "LINK-730a70",
+    "LINK-81d2c5",
+    "LINK-ce3d63",
+    "HTMLTAG-39de94",
+    "LINK-7c589f",
+    "LINK-0c0afc",
+    "LINK-f9bbaf",
+    "LINK-e47c05",
+    "LINK-4ee2b8",
+    "LINK-6f2585",
+    "LINK-dc6596",
+    "LINK-db8d68"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-39de94": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://epf.wiki/#/wiki/pectra-faq"
+      }
+    },
+    "CODE-b00fb3": {
+      "type": "inline-code",
+      "values": {
+        "content": "364032"
+      }
+    },
+    "CODE-1f28e5": {
+      "type": "inline-code",
+      "values": {
+        "content": "BLOCKHASH"
+      }
+    },
+    "LINK-b8e25d": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/dencun/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-54fa0a": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-c8fdd8": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/"
+      }
+    },
+    "LINK-b7f13c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/"
+      }
+    },
+    "LINK-3baa8c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7702"
+      }
+    },
+    "LINK-7f43c7": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/account-abstraction/"
+      }
+    },
+    "LINK-75964c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#eoa"
+      }
+    },
+    "LINK-71daf6": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/7702/"
+      }
+    },
+    "LINK-7d8dd4": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7251"
+      }
+    },
+    "LINK-d9e642": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-18b472": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/maxeb/"
+      }
+    },
+    "LINK-5b0209": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-availability/#data-availability-and-layer-2-rollups"
+      }
+    },
+    "LINK-6e23f7": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/dencun/"
+      }
+    },
+    "LINK-cd5be1": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7691"
+      }
+    },
+    "LINK-11b658": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7594"
+      }
+    },
+    "LINK-5e0d61": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding"
+      }
+    },
+    "LINK-5b77a3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-availability/blockchain-data-storage-strategies/#calldata"
+      }
+    },
+    "LINK-c7beac": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7623"
+      }
+    },
+    "LINK-103a7a": {
+      "type": "link",
+      "values": {
+        "url": "/staking/withdrawals/"
+      }
+    },
+    "LINK-126818": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7002"
+      }
+    },
+    "LINK-7d57df": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/capella/part2/deposits-withdrawals/deposit-processing/"
+      }
+    },
+    "LINK-162d90": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-6110"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-082d38": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2537"
+      }
+    },
+    "LINK-292978": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@benjaminion/bls12-381"
+      }
+    },
+    "LINK-a39521": {
+      "type": "link",
+      "values": {
+        "url": "/restaking/"
+      }
+    },
+    "LINK-730a70": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2935"
+      }
+    },
+    "LINK-81d2c5": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7549"
+      }
+    },
+    "LINK-ce3d63": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7840"
+      }
+    },
+    "LINK-7c589f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-0c0afc": {
+      "type": "link",
+      "values": {
+        "url": "/security/"
+      }
+    },
+    "LINK-f9bbaf": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-e47c05": {
+      "type": "link",
+      "values": {
+        "url": "https://epf.wiki/#/wiki/pectra-faq"
+      }
+    },
+    "LINK-4ee2b8": {
+      "type": "link",
+      "values": {
+        "url": "https://pectra.wtf"
+      }
+    },
+    "LINK-6f2585": {
+      "type": "link",
+      "values": {
+        "url": "https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience"
+      }
+    },
+    "LINK-dc6596": {
+      "type": "link",
+      "values": {
+        "url": "https://eip7702.io/"
+      }
+    },
+    "LINK-db8d68": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:33:12.498Z",
+      "status": "success"
+    }
+  }
+}

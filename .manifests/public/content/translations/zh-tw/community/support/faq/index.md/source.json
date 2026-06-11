@@ -1,0 +1,371 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/community/support/faq/index.md",
+  "generatedAt": "2026-06-08T07:31:25.637Z",
+  "rootHash": "1c96ffd90f07",
+  "tree": {
+    "contentHash": "80db4a13a84e",
+    "anchorHash": "418ce787aaf2",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "e956a9404b46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b550c73e807b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "wrong-wallet": {
+        "contentHash": "b1635d845b27",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "bfc09d7ac7da",
+        "children": {
+          "_label": {
+            "contentHash": "bfc09d7ac7da",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "26c6f2e01d3d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "lost-wallet-access": {
+        "contentHash": "1ba2cca767bf",
+        "anchorHash": "912af43cbc95",
+        "labelHash": "b9fa47025235",
+        "children": {
+          "_label": {
+            "contentHash": "b9fa47025235",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0429f9c050d1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "if-you-have-your-seed-phrase-recovery-phrase": {
+            "contentHash": "5204e42f562e",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "f19ae68159b7",
+            "children": {
+              "_label": {
+                "contentHash": "f19ae68159b7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "950eb2979bee",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "if-you-have-lost-your-seed-phrase": {
+            "contentHash": "1099c10d0de4",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "dd260a222fe1",
+            "children": {
+              "_label": {
+                "contentHash": "dd260a222fe1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a9e971e6e5db",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "if-your-account-is-on-an-exchange": {
+            "contentHash": "554047701ffe",
+            "anchorHash": "8b55d95ad466",
+            "labelHash": "4d965b7c6aa7",
+            "children": {
+              "_label": {
+                "contentHash": "4d965b7c6aa7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a064046ae7ec",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "ad47eb110a33",
+                "anchorHash": "86fad453acf5",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "4bd9354bb652"
+                  },
+                  "component:0": {
+                    "contentHash": "4b9f7d802648",
+                    "anchorHash": "81e8f88234e9",
+                    "children": {
+                      "attr:text": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "fe4b570e22cc"
+                      }
+                    }
+                  },
+                  "component:1": {
+                    "contentHash": "479661716975",
+                    "anchorHash": "fb3c2f4b6ca6",
+                    "children": {
+                      "component:0": {
+                        "contentHash": "ba0c662722a4",
+                        "anchorHash": "4b9f7d802648",
+                        "children": {
+                          "prose:0": {
+                            "contentHash": "1d6a7a609065",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "component:0",
+                  "component:1"
+                ]
+              },
+              "component:3": {
+                "contentHash": "297183898be7",
+                "anchorHash": "4bf6180c3c0a",
+                "children": {
+                  "attr:href": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "a1dda3f61da1"
+                  },
+                  "prose:0": {
+                    "contentHash": "2b58bdf9f156",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:href",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2",
+              "component:3"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "if-you-have-your-seed-phrase-recovery-phrase",
+          "if-you-have-lost-your-seed-phrase",
+          "if-your-account-is-on-an-exchange"
+        ]
+      },
+      "stuck-transaction": {
+        "contentHash": "044af30b7e6c",
+        "anchorHash": "4fc10a2cca1d",
+        "labelHash": "0ed27a7808e5",
+        "children": {
+          "_label": {
+            "contentHash": "0ed27a7808e5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "477d257db542",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "helpful-guides": {
+            "contentHash": "9d643b793218",
+            "anchorHash": "46db8221b3c7",
+            "labelHash": "004a43f864c8",
+            "children": {
+              "_label": {
+                "contentHash": "004a43f864c8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "0371528c6003",
+                "anchorHash": "1a9834a20a06"
+              },
+              "prose:3": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "00c417d4f47b",
+                "anchorHash": "de3aa5286016"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "helpful-guides"
+        ]
+      },
+      "giveaway-scam": {
+        "contentHash": "015dfbe45dd9",
+        "anchorHash": "e806b86b2188",
+        "labelHash": "e142cf34cd4e",
+        "children": {
+          "_label": {
+            "contentHash": "e142cf34cd4e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "55523701c58d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "4e21c196f6a9",
+            "anchorHash": "0745828f0cec"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "how-to-stake": {
+        "contentHash": "1406a6e07eaa",
+        "anchorHash": "6b4abcea7413",
+        "labelHash": "a14f26874bc3",
+        "children": {
+          "_label": {
+            "contentHash": "a14f26874bc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "f8d7926171b4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "321cdb0806ea",
+            "anchorHash": "28704a15211d"
+          },
+          "prose:3": {
+            "contentHash": "8591c29ce227",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "555151008fd7",
+            "anchorHash": "f696371c0a00"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "mining-ethereum": {
+        "contentHash": "91d9f895fda8",
+        "anchorHash": "9e61caabae5e",
+        "labelHash": "7f5e814d5af3",
+        "children": {
+          "_label": {
+            "contentHash": "7f5e814d5af3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "426756439ce9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "673993a95ab9",
+            "anchorHash": "02417f74856b"
+          },
+          "prose:5": {
+            "contentHash": "663ea1bfffe5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "769e0b8515e3",
+            "anchorHash": "5c0b88e44e45"
+          },
+          "prose:6": {
+            "contentHash": "76678e40cf8b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "c09500586c2c",
+            "anchorHash": "77488c35533d"
+          },
+          "prose:7": {
+            "contentHash": "ff44b76ecbc0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "f4caf4ff9573",
+            "anchorHash": "08afc5a0bebb"
+          },
+          "prose:8": {
+            "contentHash": "22313a5d42f2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "wrong-wallet",
+      "lost-wallet-access",
+      "stuck-transaction",
+      "giveaway-scam",
+      "how-to-stake",
+      "mining-ethereum"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

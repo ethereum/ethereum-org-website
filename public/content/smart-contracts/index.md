@@ -1,11 +1,9 @@
 ---
-title: Smart contracts
+title: Introduction to smart contracts
 metaTitle: "Smart contracts: What are they and their benefits"
 description: A non-technical introduction to smart contracts
 lang: en
 ---
-
-# Introduction to smart contracts {#introduction-to-smart-contracts}
 
 Smart contracts are the fundamental building blocks of [Ethereum's](/) application layer. They are computer programs stored on the [blockchain](/glossary/#blockchain) that follow "if this then that" logic, and are guaranteed to execute according to the rules defined by its code, which cannot be changed once created.
 

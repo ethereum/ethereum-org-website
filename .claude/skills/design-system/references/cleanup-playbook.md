@@ -102,11 +102,23 @@ return <div className="bg-white dark:bg-gray-900" />
 <h1>Page Title</h1>  // base.css already styles this
 ```
 
-If you need a specific size that doesn't match `base.css` defaults, override on the heading:
+If you need a heading at a different level's size, reuse the matching `text-h*` utility on the element:
 
 ```tsx
-<h2 className="text-4xl">Custom-sized Heading</h2>
+<h2 className="text-h1">Custom-sized Heading</h2>  // h2 semantics, h1 size
 ```
+
+## `text-3xl lg:text-4xl` (to match a heading size) -> `text-h*`
+
+```tsx
+// Before -- hand-reconstructs h2 sizing; drifts when the scale changes:
+<p className="text-3xl lg:text-4xl">Looks like an h2</p>
+
+// After -- one token, tracks base.css (size + line-height only, no weight):
+<p className="text-h2">Looks like an h2</p>
+```
+
+The `text-h1`-`text-h6` utilities (`src/styles/utilities.css`) are the single source of truth for heading sizing. Anytime the intent is "match heading level N's size," use `text-hN` rather than the raw responsive size classes.
 
 ## `<p className="text-Xxl font-bold">number</p>` -> `BigNumber`
 

@@ -23,6 +23,7 @@ Tyto programy podporují široký ekosystém Etherea tím, že nabízejí granty
 - [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Prohledávatelný adresář více než 1 000 projektů podpořených programem Ecosystem Support Program_
 - [Akademické granty](https://esp.ethereum.foundation/academic-grants) - _Granty na podporu akademické práce související s Ethereem_
 
+
 ## Agregátory seznamů grantů a platformy {#grant-list-aggregators}
 
 Tyto zdroje shromažďují a organizují různé grantové příležitosti napříč ekosystémem Etherea, což usnadňuje objevování možností financování, které odpovídají potřebám vašeho projektu. Rozdělili jsme je podle cílových skupin, abychom vám pomohli začít s hledáním nejrelevantnějších zdrojů na základě vašich konkrétních potřeb financování.
@@ -61,6 +62,7 @@ Tyto programy se zaměřují na financování projektů, které jsou přínosem 
 - [Giveth](https://giveth.io/) - _Krypto dárcovská platforma umožňující přímé dary pro dobročinné projekty s nulovými přidanými poplatky_
 - [Artizen](https://artizen.fund/) - _Pomáhá tvůrcům spolufinancovat nové projekty na pomezí umění, vědy, technologií a kultury_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Akcelerační program pro startupy, který využívá kvadratické financování k podpoře projektů prospěšných pro veřejné statky_
+
 
 ## Práce v Ethereu {#work-in-ethereum}
 

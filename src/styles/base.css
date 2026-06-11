@@ -35,27 +35,27 @@
   }
 
   h1 {
-    @apply text-4xl lg:text-5xl;
+    @apply text-h1;
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl;
+    @apply text-h2;
   }
 
   h3 {
-    @apply text-2xl lg:text-3xl;
+    @apply text-h3;
   }
 
   h4 {
-    @apply text-xl lg:text-2xl;
+    @apply text-h4;
   }
 
   h5 {
-    @apply text-md lg:text-xl;
+    @apply text-h5;
   }
 
   h6 {
-    @apply text-sm lg:text-md;
+    @apply text-h6;
   }
 
   pre,

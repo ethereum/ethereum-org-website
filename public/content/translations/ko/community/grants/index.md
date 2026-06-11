@@ -23,6 +23,7 @@ lang: ko
 - [ESP 보조금 탐색기(Grant Explorer)](https://esp.ethereum.foundation/funded-projects) - _생태계 지원 프로그램이 지원하는 1,000개 이상의 프로젝트를 검색할 수 있는 디렉터리입니다._
 - [학술 보조금(Academic Grants)](https://esp.ethereum.foundation/academic-grants) - _이더리움 관련 학술 연구를 지원하는 보조금입니다._
 
+
 ## 보조금 목록 애그리게이터 및 플랫폼 {#grant-list-aggregators}
 
 이러한 리소스는 이더리움 생태계 전반의 다양한 보조금 기회를 수집하고 정리하여 프로젝트의 요구 사항에 맞는 자금 지원 기회를 더 쉽게 찾을 수 있도록 해줍니다. 특정 자금 지원 요구 사항에 따라 가장 관련성 높은 리소스를 찾는 데 도움이 되도록 페르소나별로 정리했습니다.
@@ -61,6 +62,7 @@ lang: ko
 - [Giveth](https://giveth.io/) - _추가 수수료 없이 공익 프로젝트에 직접 기부할 수 있는 암호화폐 기부 플랫폼입니다._
 - [Artizen](https://artizen.fund/) - _예술, 과학, 기술 및 문화의 프론티어에서 크리에이터가 새로운 프로젝트에 매칭 펀드를 받을 수 있도록 지원합니다._
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _쿼드래틱 펀딩을 사용하여 공공재에 도움이 되는 프로젝트를 지원하는 스타트업 액셀러레이터 프로그램입니다._
+
 
 ## 이더리움에서 일하기 {#work-in-ethereum}
 

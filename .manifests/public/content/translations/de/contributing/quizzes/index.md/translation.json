@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-08T08:26:11.830Z",
+  "englishManifestHash": "dca6b3fe2448",
+  "placeholderOrder": [
+    "LINK-bf9532",
+    "LINK-1c42dd",
+    "LINK-2ebdab",
+    "LINK-f3000a",
+    "LINK-199998",
+    "LINK-199998",
+    "LINK-199998",
+    "LINK-199998"
+  ],
+  "placeholderMap": {
+    "LINK-bf9532": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2"
+      }
+    },
+    "LINK-1c42dd": {
+      "type": "link",
+      "values": {
+        "url": "/nft/"
+      }
+    },
+    "LINK-2ebdab": {
+      "type": "link",
+      "values": {
+        "url": "/what-is-ethereum/"
+      }
+    },
+    "LINK-f3000a": {
+      "type": "link",
+      "values": {
+        "url": "/what-is-ether/"
+      }
+    },
+    "LINK-199998": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:26:11.830Z",
+      "status": "success"
+    }
+  }
+}

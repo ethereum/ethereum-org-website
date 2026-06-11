@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-08T09:53:20.225Z",
+  "englishManifestHash": "b886653525d5",
+  "placeholderOrder": [
+    "LINK-cfd8a3",
+    "LINK-09f5e8",
+    "LINK-175f1a",
+    "LINK-554c85",
+    "LINK-b9b0fb",
+    "LINK-edc2e2",
+    "LINK-decd71",
+    "LINK-952e9f",
+    "LINK-942e47",
+    "IMAGE-85cb0f",
+    "IMAGE-b12677",
+    "IMAGE-c263e7",
+    "HTMLTAG-7a1718"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-7a1718": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "br"
+      }
+    },
+    "IMAGE-85cb0f": {
+      "type": "image",
+      "values": {
+        "path": "./swap1.png"
+      }
+    },
+    "IMAGE-b12677": {
+      "type": "image",
+      "values": {
+        "path": "./swap2.png"
+      }
+    },
+    "IMAGE-c263e7": {
+      "type": "image",
+      "values": {
+        "path": "./swap3.png"
+      }
+    },
+    "LINK-cfd8a3": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#dex"
+      }
+    },
+    "LINK-09f5e8": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#erc-20"
+      }
+    },
+    "LINK-175f1a": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#wallet"
+      }
+    },
+    "LINK-554c85": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-create-an-ethereum-account/"
+      }
+    },
+    "LINK-b9b0fb": {
+      "type": "link",
+      "values": {
+        "url": "https://app.uniswap.org/#/swap"
+      }
+    },
+    "LINK-edc2e2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.sushi.com/swap"
+      }
+    },
+    "LINK-decd71": {
+      "type": "link",
+      "values": {
+        "url": "https://app.1inch.io/#/1/unified/swap/ETH/DAI"
+      }
+    },
+    "LINK-952e9f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.curve.finance/dex/ethereum/swap/"
+      }
+    },
+    "LINK-942e47": {
+      "type": "link",
+      "values": {
+        "url": "/defi/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:53:20.225Z",
+      "status": "success"
+    }
+  }
+}
