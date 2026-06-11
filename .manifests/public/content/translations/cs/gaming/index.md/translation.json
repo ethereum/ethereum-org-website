@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-11T14:42:34.175Z",
+  "englishManifestHash": "9998a7c6df52",
+  "placeholderOrder": [
+    "LINK-5986c4",
+    "LINK-734450",
+    "LINK-6fdd77",
+    "LINK-032cef",
+    "LINK-21ea62",
+    "LINK-333db9",
+    "LINK-acd165",
+    "LINK-7025b6",
+    "LINK-8cc6be",
+    "LINK-1bf4bb",
+    "LINK-51ef83",
+    "LINK-80080b",
+    "LINK-f56c1a",
+    "LINK-53d644",
+    "LINK-8e694a",
+    "LINK-ae6e8b",
+    "LINK-c22f20",
+    "LINK-17ae6d",
+    "LINK-3ce277",
+    "LINK-86b6fe",
+    "LINK-3cd640",
+    "LINK-1cc098",
+    "LINK-ff5150",
+    "LINK-f1fb3a",
+    "LINK-113852",
+    "LINK-6c4cfe",
+    "LINK-eb269e",
+    "LINK-7f43c7",
+    "LINK-f1439b",
+    "LINK-aa8e8a",
+    "LINK-73b520",
+    "LINK-bfe0d7"
+  ],
+  "placeholderMap": {
+    "LINK-5986c4": {
+      "type": "link",
+      "values": {
+        "url": "/nft/"
+      }
+    },
+    "LINK-734450": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/learn/"
+      }
+    },
+    "LINK-6fdd77": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/scaling/"
+      }
+    },
+    "LINK-032cef": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/asph0d37"
+      }
+    },
+    "LINK-21ea62": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/Letsfuhpobw?t=140"
+      }
+    },
+    "LINK-333db9": {
+      "type": "link",
+      "values": {
+        "url": "https://ronan.eth.limo/blog/infinite-games/"
+      }
+    },
+    "LINK-acd165": {
+      "type": "link",
+      "values": {
+        "url": "https://www.roninchain.com/"
+      }
+    },
+    "LINK-7025b6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.starknet.io/"
+      }
+    },
+    "LINK-8cc6be": {
+      "type": "link",
+      "values": {
+        "url": "https://abs.xyz/"
+      }
+    },
+    "LINK-1bf4bb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.immutable.com/"
+      }
+    },
+    "LINK-51ef83": {
+      "type": "link",
+      "values": {
+        "url": "https://www.base.org/"
+      }
+    },
+    "LINK-80080b": {
+      "type": "link",
+      "values": {
+        "url": "https://cartridge.gg/"
+      }
+    },
+    "LINK-f56c1a": {
+      "type": "link",
+      "values": {
+        "url": "https://dojoengine.org/"
+      }
+    },
+    "LINK-53d644": {
+      "type": "link",
+      "values": {
+        "url": "https://mud.dev/"
+      }
+    },
+    "LINK-8e694a": {
+      "type": "link",
+      "values": {
+        "url": "https://proofofplay.com/"
+      }
+    },
+    "LINK-ae6e8b": {
+      "type": "link",
+      "values": {
+        "url": "https://thirdweb.com/"
+      }
+    },
+    "LINK-c22f20": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/YieldGuild"
+      }
+    },
+    "LINK-17ae6d": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/ManaGamingBR"
+      }
+    },
+    "LINK-3ce277": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/WASD_0x"
+      }
+    },
+    "LINK-86b6fe": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/Lgc_GG"
+      }
+    },
+    "LINK-3cd640": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/GamingGridx"
+      }
+    },
+    "LINK-1cc098": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/OLAGuildGames"
+      }
+    },
+    "LINK-ff5150": {
+      "type": "link",
+      "values": {
+        "url": "https://games.gg/"
+      }
+    },
+    "LINK-f1fb3a": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/GamingDailyx"
+      }
+    },
+    "LINK-113852": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/FOCGERS"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-eb269e": {
+      "type": "link",
+      "values": {
+        "url": "https://opensea.io/"
+      }
+    },
+    "LINK-7f43c7": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/account-abstraction/"
+      }
+    },
+    "LINK-f1439b": {
+      "type": "link",
+      "values": {
+        "url": "https://chainplay.gg/chain/ethereum/"
+      }
+    },
+    "LINK-aa8e8a": {
+      "type": "link",
+      "values": {
+        "url": "https://gam3s.gg/"
+      }
+    },
+    "LINK-73b520": {
+      "type": "link",
+      "values": {
+        "url": "https://dappradar.com/rankings/protocol/ethereum/category/games"
+      }
+    },
+    "LINK-bfe0d7": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/find-wallet/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-11T14:42:34.175Z",
+      "status": "success"
+    }
+  }
+}
