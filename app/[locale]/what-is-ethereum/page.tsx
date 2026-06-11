@@ -10,8 +10,8 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, ToCItem } from "@/lib/types"
 
+import ContentFeedback from "@/components/ContentFeedback"
 import DocLink from "@/components/DocLink"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import {
@@ -955,7 +955,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </UnorderedList>
           </Section>
 
-          <FeedbackCard />
+          <ContentFeedback />
         </div>
       </MainArticle>
     </>

@@ -8,9 +8,9 @@ import {
 
 import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -777,7 +777,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             contributors={contributors}
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
-          <FeedbackCard />
+          <ContentFeedback />
         </Content>
       </GappedPage>
     </I18nProvider>

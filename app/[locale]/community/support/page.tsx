@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -194,7 +194,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           </div>
         </Section>
 
-        <FeedbackCard />
+        <ContentFeedback />
       </MainArticle>
     </div>
   )

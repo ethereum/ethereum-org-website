@@ -2,9 +2,9 @@ import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
+import ContentFeedback from "@/components/ContentFeedback"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
@@ -121,7 +121,7 @@ export const StaticLayout = ({
                 lastEditLocaleTimestamp={lastEditLocaleTimestamp}
               />
             )}
-            <FeedbackCard isArticle />
+            <ContentFeedback isArticle />
           </MainArticle>
         </div>
         <TableOfContents

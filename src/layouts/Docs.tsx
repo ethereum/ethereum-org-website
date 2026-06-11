@@ -4,10 +4,10 @@ import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import CallToContribute from "@/components/CallToContribute"
+import ContentFeedback from "@/components/ContentFeedback"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import MainArticle from "@/components/MainArticle"
@@ -110,7 +110,7 @@ export const DocsLayout = ({
             />
           )}
           <BackToTop />
-          <FeedbackCard isArticle />
+          <ContentFeedback isArticle />
           <DocsNav contentNotTranslated={contentNotTranslated} />
         </MainArticle>
         {tocItems && (

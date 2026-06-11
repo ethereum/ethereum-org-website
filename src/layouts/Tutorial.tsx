@@ -5,9 +5,9 @@ import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -107,7 +107,7 @@ export const TutorialLayout = ({
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
         )}
-        <FeedbackCard />
+        <ContentFeedback />
       </MainArticle>
       {tocItems && (
         <TableOfContents

@@ -18,12 +18,16 @@ import { useSurvey } from "@/hooks/useSurvey"
 import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
 
-type FeedbackCardProps = {
+type ContentFeedbackProps = {
   prompt?: string
   isArticle?: boolean
 }
 
-const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
+const ContentFeedback = ({
+  prompt,
+  isArticle,
+  ...props
+}: ContentFeedbackProps) => {
   const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
@@ -110,4 +114,4 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   )
 }
 
-export default FeedbackCard
+export default ContentFeedback

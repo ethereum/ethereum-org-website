@@ -9,7 +9,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import CardList from "@/components/CardList"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import HorizontalCard from "@/components/HorizontalCard"
@@ -442,7 +442,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             contributors={contributors}
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
-          <FeedbackCard />
+          <ContentFeedback />
         </div>
       </MainArticle>
     </I18nProvider>

@@ -7,9 +7,9 @@ import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CardList from "@/components/CardList"
+import ContentFeedback from "@/components/ContentFeedback"
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Tooltip from "@/components/Tooltip"
@@ -390,7 +390,7 @@ const DepositContractPage = () => {
             </Card>
           </RightColumn>
         </FlexBox>
-        <FeedbackCard />
+        <ContentFeedback />
       </MainArticle>
     </>
   )

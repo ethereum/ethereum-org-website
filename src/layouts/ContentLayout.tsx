@@ -2,7 +2,7 @@ import type { HTMLAttributes } from "react"
 
 import { FileContributor } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import FileContributors from "@/components/FileContributors"
 import { ContentContainer, Page } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
@@ -49,7 +49,7 @@ export const ContentLayout = ({
             contributors={contributors}
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
-          <FeedbackCard />
+          <ContentFeedback />
         </ContentContainer>
         {showDropdown && dropdownLinks && (
           <MobileButtonDropdown list={dropdownLinks} />
