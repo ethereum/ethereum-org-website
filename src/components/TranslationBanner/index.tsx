@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from "react"
 import { X } from "lucide-react"
 import { useLocale } from "next-intl"
 
-import Emoji from "@/components/Emoji"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -53,38 +52,26 @@ const TranslationBanner = () => {
   }
 
   return (
-    <aside className="fixed end-0 bottom-0 z-popover rounded bg-background-highlight md:end-8 md:bottom-8">
-      <div
-        className={cn(
-          "relative flex justify-between",
-          "w-full md:max-w-[600px]",
-          "rounded-xs p-4",
-          "shadow-md"
-        )}
+    <aside
+      className={cn(
+        "fixed bottom-2 z-popover max-md:inset-x-2 md:inset-e-8 md:bottom-8 md:max-w-xl",
+        "rounded-base bg-background-highlight p-8 shadow-md max-sm:pt-10"
+      )}
+    >
+      <Button
+        variant="ghost"
+        size="sm"
+        className="absolute inset-e-0 top-0 m-2 hover:text-primary"
+        onClick={() => setIsOpen(false)}
       >
-        <div className="m-4 mt-10 flex flex-col gap-4 sm:mt-4">
-          <div className="flex flex-col-reverse items-start sm:flex-row sm:items-center">
-            <h3 className="leading-none md:text-2xl">
-              {t("translation-banner-no-bugs-title")}
-              <Emoji text=":bug:" className="ms-2 text-3xl sm:mb-auto" />
-            </h3>
-          </div>
-          <p>{t("translation-banner-no-bugs-content")}</p>
-          <div className="flex flex-col items-start sm:flex-row sm:items-center">
-            <Button onClick={handleDontShow}>
-              {t("translation-banner-no-bugs-dont-show-again")}
-            </Button>
-          </div>
-        </div>
-        <Button
-          variant="ghost"
-          size="sm"
-          className="absolute end-0 top-0 m-2 hover:text-primary"
-          onClick={() => setIsOpen(false)}
-        >
-          <X className="size-4" />
-        </Button>
-      </div>
+        <X className="size-4" />
+      </Button>
+
+      <h3 className="mb-2">{t("translation-banner-no-bugs-title")}</h3>
+      <p className="mb-6">{t("translation-banner-no-bugs-content")}</p>
+      <Button onClick={handleDontShow} className="max-sm:w-full">
+        {t("translation-banner-no-bugs-dont-show-again")}
+      </Button>
     </aside>
   )
 }

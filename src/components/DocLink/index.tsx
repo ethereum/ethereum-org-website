@@ -1,13 +1,8 @@
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ScrollText } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
-import Emoji from "../Emoji"
-import { Center, Flex, Stack } from "../ui/flex"
-import InlineLink from "../ui/Link"
-import { LinkBox, LinkOverlay } from "../ui/link-box"
-
-import { useRtlFlip } from "@/hooks/useRtlFlip"
+import Link from "../ui/Link"
 
 export type DocLinkProps = {
   children?: React.ReactNode
@@ -15,42 +10,32 @@ export type DocLinkProps = {
   isExternal?: boolean
 }
 
-const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
-  const { isRtl } = useRtlFlip()
+const DocLink = ({ href, children, isExternal }: DocLinkProps) => {
+  const durationClasses =
+    "duration-300 hover:duration-300 group-hover:duration-300"
 
   return (
-    <LinkBox
+    <Link
+      href={href}
+      hideArrow
       className={cn(
-        "flex rounded-xs border p-4 text-current no-underline",
-        "hover:rounded hover:bg-background-highlight hover:no-underline",
-        "group hover:shadow-[0_0_1px] hover:shadow-primary"
+        "group flex gap-4 rounded-base border p-4 text-current no-underline",
+        "hover:bg-background-highlight hover:no-underline",
+        "transition-all hover:scale-[1.005] hover:shadow hover:transition-all",
+        durationClasses
       )}
     >
-      <Flex className="flex-1 justify-between">
-        <Center>
-          <Emoji className="me-4 text-md" text=":page_with_curl:" />
-        </Center>
-        <Stack className="flex-1">
-          <LinkOverlay asChild>
-            <InlineLink href={href} hideArrow className="no-underline">
-              <p className="font-bold text-gray-600 dark:text-gray-200">
-                {children}
-              </p>
-            </InlineLink>
-          </LinkOverlay>
-        </Stack>
-
-        <ArrowRight
-          className={cn(
-            "mx-6 h-6 w-6 self-center",
-            "transition-transform duration-100 group-hover:scale-[1.2] group-hover:text-primary",
-            isExternal ? "-rotate-45" : "rotate-0",
-            isRtl && isExternal ? "-rotate-[135deg]" : "",
-            isRtl && !isExternal ? "-rotate-[180deg]" : ""
-          )}
-        />
-      </Flex>
-    </LinkBox>
+      <ScrollText className="shrink-0 self-center" />
+      <p className="flex-1 font-semibold">{children}</p>
+      <ArrowRight
+        className={cn(
+          "mx-6 shrink-0 self-center",
+          "transition-tranform group-hover:transition-tranform group-hover:scale-120 group-hover:text-primary",
+          isExternal ? "-rotate-45 rtl:-rotate-135" : "rotate-0 rtl:rotate-180",
+          durationClasses
+        )}
+      />
+    </Link>
   )
 }
 

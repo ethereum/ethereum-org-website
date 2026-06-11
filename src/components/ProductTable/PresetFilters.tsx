@@ -84,7 +84,7 @@ const PresetCard = ({
       <div
         onClick={handleCardClick}
         className={cn(
-          "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all duration-50 hover:bg-background-highlight lg:h-full lg:p-6",
+          "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border p-3 shadow-svg-button-link transition-all duration-50 hover:bg-background-highlight lg:h-full lg:p-6",
           "has-[:focus-visible]:outline has-[:focus-visible]:outline-4 has-[:focus-visible]:-outline-offset-4 has-[:focus-visible]:outline-primary-hover",
           isActive ? "border-primary" : "border-primary-low-contrast",
           showMobileSidebar && "h-full"

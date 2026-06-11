@@ -1,5 +1,3 @@
-"use client"
-
 import { ExternalLink } from "lucide-react"
 import TwImage, { type ImageProps } from "next/image"
 import type { ReactNode } from "react"
@@ -14,8 +12,6 @@ import * as url from "@/lib/utils/url"
 
 import { BaseLink } from "./ui/Link"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
-
 export type CardProps = {
   title?: ReactNode
   description?: ReactNode
@@ -29,7 +25,7 @@ export type CardProps = {
   onClick?: () => void
 }
 
-const Card = ({
+const Row = ({
   title,
   description,
   caption,
@@ -41,14 +37,13 @@ const Card = ({
   imageWidth = 20,
   ...props
 }: CardProps) => {
-  const { twFlipForRtl } = useRtlFlip()
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
 
   return (
     <div
       className={cn(
-        "text-text flex flex-row items-center gap-4 border p-4",
+        "text-text flex flex-row items-center gap-4 p-4",
         "transition-all duration-200",
         "hover:bg-background-highlight",
         className
@@ -76,7 +71,7 @@ const Card = ({
         </div>
       )}
       {isExternal && (
-        <ExternalLink className={cn("size-[1em]", twFlipForRtl)} />
+        <ExternalLink className="size-[1em] shrink-0 rtl:-scale-x-100" />
       )}
     </div>
   )
@@ -97,23 +92,28 @@ const CardList = ({
   customEventOptions,
   className,
 }: CardListProps) => (
-  <div className={cn("w-full bg-background", className)}>
+  <div
+    className={cn(
+      "w-full overflow-hidden rounded-base border bg-background",
+      className
+    )}
+  >
     {items.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link
+      const itemClasses = "not-last:border-b"
 
       return isLink ? (
-        <LinkBox key={id || idx}>
-          <Card {...listItem} imageWidth={imageWidth} />
+        <LinkBox key={id || idx} className={itemClasses}>
+          <Row {...listItem} imageWidth={imageWidth} />
         </LinkBox>
       ) : (
-        <div key={idx}>
-          <Card
+        <div key={idx} className={itemClasses}>
+          <Row
             onClick={() => {
               customEventOptions && trackCustomEvent(customEventOptions)
               clickHandler(idx)
             }}
-            className="mb-4"
             {...listItem}
           />
         </div>
