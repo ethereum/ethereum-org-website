@@ -30,6 +30,7 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   const locale = useLocale()
   const pathname = usePathname()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
+  const headingId = "feedback-card-heading"
 
   const isTutorial = pathname?.includes("tutorials")
 
@@ -67,9 +68,12 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
     <aside
       className="mt-8 mb-4 flex w-full max-w-3xl flex-col gap-4"
       {...props}
+      aria-labelledby={headingId}
       dir={dir}
     >
-      <h2 className="text-h3">{getTitle(feedbackSubmitted)}</h2>
+      <h2 id={headingId} className="text-h3">
+        {getTitle(feedbackSubmitted)}
+      </h2>
 
       <div
         className={cn("flex gap-x-4 gap-y-8", feedbackSubmitted && "flex-col")}
