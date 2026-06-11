@@ -1,11 +1,10 @@
 ---
-title: Adding Reports
+title: Adding reports
 description: Guidelines for suggesting research reports to ethereum.org
 lang: en
 ---
 
 # Adding reports {#adding-reports}
-
 ## Adding a report {#adding-a-report}
 
 Reports appear at [ethereum.org/reports/](/reports/) and feature research, analysis, and publications relevant to Ethereum from a range of sources. Anyone can suggest a report to be added.
