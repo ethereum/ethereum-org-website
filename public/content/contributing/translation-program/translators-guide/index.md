@@ -1,10 +1,9 @@
 ---
-title: Translators guide
+title: ethereum.org translation style guide
+metaTitle: Translators guide
 lang: en
 description: Instructions and tips for ethereum.org translators
 ---
-
-# Ethereum.org Translation Style Guide {#style-guide}
 
 The ethereum.org translation style guide contains some of the most important guidelines, instructions, and tips for translators, helping us localize the website.
 

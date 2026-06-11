@@ -6,23 +6,39 @@ The most common source of "one-off styling" in this codebase is ad-hoc spacing a
 
 Headings (`<h1>`-`<h6>`) are styled by `src/styles/base.css` element defaults. **Just write the semantic tag.** Don't reinvent with `<div className="text-Xxl font-bold">`.
 
-All headings default to `font-black` (weight 900) via `base.css`. **Do not re-apply a weight** -- a hardcoded `font-bold`/`font-semibold` on a heading sits in the utilities layer and silently overrides the base `font-black`, which is exactly the drift the heading-weight standardization removed. If you need a lighter weight for an eyebrow/kicker/label, that's a deliberate `font-normal`/`font-medium` choice, not a default.
+Sizing for each level lives in one place: the `text-h1`-`text-h6` utilities in `src/styles/utilities.css`. Each bundles the **font-size and line-height** for that level (responsive). `base.css` `@apply`s `text-h1` to `<h1>`, `text-h2` to `<h2>`, and so on -- so these utilities are the single source of truth for heading sizing.
 
-| Tag | Default sizing | When to use |
-|---|---|---|
-| `<h1>` | `text-4xl lg:text-5xl font-black` | Page title -- ONE per page |
-| `<h2>` | `text-3xl lg:text-4xl font-black` | Top-level section title |
-| `<h3>` | `text-2xl lg:text-3xl font-black` | Subsection title |
-| `<h4>` | `text-xl lg:text-2xl font-black` | Sub-subsection title |
-| `<h5>` | `text-lg font-black` | Small heading |
-| `<h6>` | `text-base font-black` | Smallest heading; also used in `Alert`/`Callout` titles |
+All headings default to `font-black` (weight 900) via `base.css`. The `text-h*` utilities carry size/line-height **only** -- not the weight. **Do not re-apply a weight** on a real heading -- a hardcoded `font-bold`/`font-semibold` sits in the utilities layer and silently overrides the base `font-black`, which is exactly the drift the heading-weight standardization removed. If you need a lighter weight for an eyebrow/kicker/label, that's a deliberate `font-normal`/`font-medium` choice, not a default.
+
+| Tag | Sizing utility | Expands to | When to use |
+|---|---|---|---|
+| `<h1>` | `text-h1` | `text-4xl lg:text-5xl` | Page title -- ONE per page |
+| `<h2>` | `text-h2` | `text-3xl lg:text-4xl` | Top-level section title |
+| `<h3>` | `text-h3` | `text-2xl lg:text-3xl` | Subsection title |
+| `<h4>` | `text-h4` | `text-xl lg:text-2xl` | Sub-subsection title |
+| `<h5>` | `text-h5` | `text-md lg:text-xl` | Small heading |
+| `<h6>` | `text-h6` | `text-sm lg:text-md` | Smallest heading; also used in `Alert`/`Callout` titles |
+
+### Matching a heading size on any element
+
+To make a non-heading element read at a given heading level's size, apply the utility -- never reconstruct the responsive pair by hand:
+
+```tsx
+// Wrong -- hand-reconstructs h2 sizing; drifts when the scale changes
+<p className="text-3xl lg:text-4xl">Looks like an h2</p>
+
+// Right -- one token, stays in sync with base.css
+<p className="text-h2">Looks like an h2</p>
+```
+
+This is size and line-height only -- it does not apply `font-black`. Set weight separately on a non-heading element if the design wants it.
 
 ### Overrides
 
-If you need a heading at a different size (because the design calls for it), override on the element:
+If you need a real heading at a different level's size (because the design calls for it), reuse the matching utility on the element:
 
 ```tsx
-<h2 className="text-4xl lg:text-5xl">A larger h2</h2>
+<h2 className="text-h1">A larger h2</h2>
 ```
 
 Don't override structurally (e.g., using `<h1>` for an `<h3>`-sized element just to get the size). Heading hierarchy matters for screen readers.
@@ -203,6 +219,8 @@ Tailwind text size utilities. Pair with leading utilities (`leading-base`, `lead
 | `text-4xl` | 40px | h1 (mobile), h2 (desktop) |
 | `text-5xl` | 48px | h1 (desktop) |
 | `text-6xl` / `text-7xl` | 56-72px | Special: `HomeHero` only |
+
+The "Common use" column maps these raw sizes to heading levels for reference. When your intent is "match a heading level's size," reach for the `text-h1`-`text-h6` utilities (see "Heading Sizes" above) instead of the raw class -- they bundle the responsive size + line-height and track `base.css`.
 
 Use semantic tokens (`text-body`, `text-body-medium`, `text-body-light`, `text-primary`, etc.) for color. See `references/tokens.md`.
 

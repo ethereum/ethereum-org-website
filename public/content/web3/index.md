@@ -1,10 +1,9 @@
 ---
-title: What is Web3 and why is it important?
+title: Introduction to Web3
+metaTitle: What is Web3 and why is it important?
 description: An introduction to Web3—the next evolution of the World Wide Web—and why it matters.
 lang: en
 ---
-
-# Introduction to Web3 {#introduction}
 
 Centralization has helped onboard billions of people to the World Wide Web and created the stable, robust infrastructure on which it lives. At the same time, a handful of centralized entities have a stronghold on large swathes of the World Wide Web, unilaterally deciding what should and should not be allowed.
 

@@ -20,9 +20,19 @@
     "score": 31000
   },
   {
+    "username": "revofusion",
+    "name": "Revofusion",
+    "score": 25000
+  },
+  {
     "username": "chainsecurity",
     "name": "ChainSecurity",
     "score": 24500
+  },
+  {
+    "username": "cyberthirst",
+    "name": "cyberthirst",
+    "score": 21000
   },
   {
     "username": "junorouse",
@@ -39,15 +49,15 @@
     "name": "John Youngseok Yang (Software Platform Lab)",
     "score": 20000
   },
-    {
-    "username": "revofusion",
-    "name": "Revofusion",
-    "score": 25000
-  },
   {
     "username": "peckshield",
     "name": "PeckShield",
     "score": 17000
+  },
+  {
+    "username": "iam-ned",
+    "name": "David Matosse",
+    "score": 16250
   },
   {
     "username": "itsunixiknowthis",
@@ -93,16 +103,6 @@
     "username": "jonasnick",
     "name": "Jonas Nick",
     "score": 10000
-  },
-  {
-    "username": "iam-ned",
-    "name": "David Matosse",
-    "score": 16250
-  },
-  {
-    "username": "cyberthirst",
-    "name": "cyberthirst",
-    "score": 11000
   },
   {
     "username": "jtoman",

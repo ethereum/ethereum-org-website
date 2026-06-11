@@ -1,30 +1,29 @@
 ---
-title: Proposal Pengembangan Ethereum (EIP)
+title: Pengantar Proposal Peningkatan Ethereum (EIP)
+metaTitle: Proposal Peningkatan Ethereum (EIP)
 description: Informasi dasar yang Anda butuhkan untuk memahami EIP
 lang: id
 ---
 
-# Pengantar Proposal Pengembangan Ethereum (EIP) {#introduction-to-ethereum-improvement-proposals}
-
 ## Apa itu EIP? {#what-are-eips}
 
-[Proposal Pengembangan Ethereum (EIP)](https://eips.ethereum.org/) adalah standar yang menentukan potensi fitur atau proses baru untuk Ethereum. EIP berisi spesifikasi teknis untuk perubahan yang diusulkan dan bertindak sebagai "sumber kebenaran" bagi komunitas. Peningkatan jaringan dan standar aplikasi untuk [Ethereum](/) didiskusikan dan dikembangkan melalui proses EIP.
+[Proposal Peningkatan Ethereum (EIP)](https://eips.ethereum.org/) adalah standar yang menentukan potensi fitur atau proses baru untuk Ethereum. EIP berisi spesifikasi teknis untuk perubahan yang diusulkan dan bertindak sebagai "sumber kebenaran" bagi komunitas. Peningkatan jaringan dan standar aplikasi untuk [Ethereum](/) didiskusikan dan dikembangkan melalui proses EIP.
 
 Siapa pun di dalam komunitas Ethereum memiliki kemampuan untuk membuat EIP. Panduan untuk menulis EIP disertakan dalam [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Sebuah EIP pada dasarnya harus memberikan spesifikasi teknis yang ringkas dengan sedikit motivasi. Penulis EIP bertanggung jawab untuk mencapai konsensus di dalam komunitas dan mendokumentasikan pendapat alternatif. Mengingat tingginya hambatan teknis untuk mengirimkan EIP yang tersusun dengan baik, secara historis, sebagian besar penulis EIP biasanya adalah pengembang aplikasi atau protokol.
 
 ## Mengapa EIP penting? {#why-do-eips-matter}
 
-EIP memainkan peran sentral dalam bagaimana perubahan terjadi dan didokumentasikan di Ethereum. EIP adalah cara bagi orang-orang untuk mengusulkan, memperdebatkan, dan mengadopsi perubahan. Ada [berbagai jenis EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), termasuk EIP inti untuk perubahan protokol tingkat rendah yang memengaruhi konsensus dan memerlukan peningkatan jaringan seperti [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), dan ERC untuk standar aplikasi seperti [EIP-20](https://eips.ethereum.org/EIPS/eip-20) dan [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
+EIP memainkan peran sentral dalam bagaimana perubahan terjadi dan didokumentasikan di Ethereum. EIP adalah cara bagi orang-orang untuk mengajukan proposal, memperdebatkan, dan mengadopsi perubahan. Ada [berbagai jenis EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), termasuk EIP inti untuk perubahan protokol tingkat rendah yang memengaruhi konsensus dan mewajibkan peningkatan jaringan seperti [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), dan ERC untuk standar aplikasi seperti [EIP-20](https://eips.ethereum.org/EIPS/eip-20) dan [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Setiap peningkatan jaringan terdiri dari serangkaian EIP yang perlu diimplementasikan oleh setiap [klien Ethereum](/learn/#clients-and-nodes) di jaringan. Ini berarti bahwa untuk tetap dalam konsensus dengan klien lain di mainnet Ethereum, pengembang klien perlu memastikan bahwa mereka telah mengimplementasikan semua EIP yang diperlukan.
+Setiap peningkatan jaringan terdiri dari serangkaian EIP yang perlu diimplementasikan oleh setiap [klien Ethereum](/learn/#clients-and-nodes) di jaringan. Ini berarti bahwa untuk tetap berada dalam konsensus dengan klien lain di Mainnet Ethereum, pengembang klien perlu memastikan bahwa mereka telah mengimplementasikan semua EIP yang diwajibkan.
 
-Selain memberikan spesifikasi teknis untuk perubahan, EIP adalah unit di mana tata kelola terjadi di Ethereum: siapa pun bebas untuk mengusulkannya, dan kemudian berbagai pemangku kepentingan di komunitas akan berdebat untuk menentukan apakah itu harus diadopsi sebagai standar atau dimasukkan dalam peningkatan jaringan. Karena EIP non-inti tidak harus diadopsi oleh semua aplikasi (misalnya, dimungkinkan untuk membuat token yang sepadan yang tidak mengimplementasikan EIP-20), tetapi EIP inti harus diadopsi secara luas (karena semua node harus ditingkatkan untuk tetap menjadi bagian dari jaringan yang sama), EIP inti memerlukan konsensus yang lebih luas di dalam komunitas daripada EIP non-inti.
+Selain memberikan spesifikasi teknis untuk perubahan, EIP adalah unit di mana tata kelola terjadi di Ethereum: siapa pun bebas untuk mengajukan proposal, dan kemudian berbagai pemangku kepentingan di komunitas akan berdebat untuk menentukan apakah proposal tersebut harus diadopsi sebagai standar atau disertakan dalam peningkatan jaringan. Karena EIP non-inti tidak harus diadopsi oleh semua aplikasi (misalnya, dimungkinkan untuk membuat token sepadan yang tidak mengimplementasikan EIP-20), tetapi EIP inti harus diadopsi secara luas (karena semua node harus ditingkatkan untuk tetap menjadi bagian dari jaringan yang sama), EIP inti mewajibkan konsensus yang lebih luas di dalam komunitas daripada EIP non-inti.
 
 ## Sejarah EIP {#history-of-eips}
 
-[Repositori GitHub Proposal Pengembangan Ethereum (EIP)](https://github.com/ethereum/EIPs) dibuat pada bulan Oktober 2015. Proses EIP didasarkan pada proses [Bitcoin Improvement Proposals (BIP)](https://github.com/bitcoin/bips), yang mana proses itu sendiri didasarkan pada proses [Python Enhancement Proposals (PEP)](https://www.python.org/dev/peps/).
+[Repositori GitHub Proposal Peningkatan Ethereum (EIP)](https://github.com/ethereum/EIPs) dibuat pada bulan Oktober 2015. Proses EIP didasarkan pada proses [Proposal Peningkatan Bitcoin (BIP)](https://github.com/bitcoin/bips), yang mana proses tersebut didasarkan pada proses [Proposal Peningkatan Python (PEP)](https://www.python.org/dev/peps/).
 
-Editor EIP bertugas dalam proses meninjau EIP untuk kelayakan teknis, masalah pemformatan, dan mengoreksi ejaan, tata bahasa, serta gaya kode. Martin Becze, Vitalik Buterin, Gavin Wood, dan beberapa orang lainnya adalah editor EIP asli dari tahun 2015 hingga akhir 2016.
+Editor EIP bertugas meninjau EIP untuk kelayakan teknis, masalah pemformatan, dan mengoreksi ejaan, tata bahasa, serta gaya kode. Martin Becze, Vitalik Buterin, Gavin Wood, dan beberapa orang lainnya adalah editor EIP asli dari tahun 2015 hingga akhir 2016.
 
 Editor EIP saat ini adalah
 
@@ -54,16 +53,16 @@ Proses standardisasi penuh beserta bagannya dijelaskan dalam [EIP-1](https://eip
 
 Jika Anda tertarik untuk membaca lebih lanjut tentang EIP, kunjungi [situs web EIP](https://eips.ethereum.org/) dan [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Berikut adalah beberapa tautan yang berguna:
 
-- [Daftar setiap Proposal Pengembangan Ethereum](https://eips.ethereum.org/all)
+- [Daftar setiap Proposal Peningkatan Ethereum](https://eips.ethereum.org/all)
 - [Deskripsi semua jenis EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Deskripsi semua status EIP](https://eips.ethereum.org/EIPS/eip-1#eip-process)
 
 ### Proyek edukasi komunitas {#community-projects}
 
-- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP adalah seri video edukasi yang membahas Proposal Pengembangan Ethereum (EIP) dan fitur utama dari peningkatan yang akan datang.*
-- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf memberikan informasi tambahan untuk Proposal Pengembangan Ethereum (EIP), termasuk statusnya, detail implementasi, pull request terkait, dan umpan balik komunitas.* 
-- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun menyediakan berita terbaru tentang Proposal Pengembangan Ethereum (EIP), pembaruan tentang pertemuan EIP, dan banyak lagi.*
-- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight adalah representasi dari status proses & statistik Proposal Pengembangan Ethereum (EIP) sesuai dengan informasi yang dikumpulkan dari berbagai sumber.*
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP adalah seri video edukasi yang membahas Proposal Peningkatan Ethereum (EIP) dan fitur utama dari peningkatan yang akan datang.*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf menyediakan informasi tambahan untuk Proposal Peningkatan Ethereum (EIP), termasuk statusnya, detail implementasi, pull request terkait, dan umpan balik komunitas.* 
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun menyediakan berita terbaru tentang Proposal Peningkatan Ethereum (EIP), pembaruan tentang pertemuan EIP, dan banyak lagi.*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight adalah representasi dari state proses & statistik Proposal Peningkatan Ethereum (EIP) sesuai dengan informasi yang dikumpulkan dari berbagai sumber.*
 
 ## Berpartisipasi {#participate}
 
@@ -73,6 +72,6 @@ Siapa pun dapat membuat EIP. Sebelum mengirimkan proposal, seseorang harus memba
 
 <cite class="citation">
 
-Konten halaman disediakan sebagian dari [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) oleh Hudson Jameson
+Konten halaman disediakan sebagian dari [Tata Kelola Pengembangan Protokol Ethereum dan Koordinasi Peningkatan Jaringan](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) oleh Hudson Jameson
 
 </cite>

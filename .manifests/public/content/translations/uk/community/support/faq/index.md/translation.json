@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-08T07:31:17.554Z",
+  "englishManifestHash": "1c96ffd90f07",
+  "placeholderOrder": [
+    "LINK-389aad",
+    "LINK-6b72ea",
+    "LINK-51d523",
+    "LINK-dc923c",
+    "LINK-baf224",
+    "LINK-72343e",
+    "LINK-d3a0e2",
+    "LINK-14f434",
+    "LINK-eeeb31"
+  ],
+  "placeholderMap": {
+    "LINK-389aad": {
+      "type": "link",
+      "values": {
+        "url": "https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/"
+      }
+    },
+    "LINK-6b72ea": {
+      "type": "link",
+      "values": {
+        "url": "https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/"
+      }
+    },
+    "LINK-51d523": {
+      "type": "link",
+      "values": {
+        "url": "/security/#common-scams"
+      }
+    },
+    "LINK-dc923c": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-baf224": {
+      "type": "link",
+      "values": {
+        "url": "https://launchpad.ethereum.org/"
+      }
+    },
+    "LINK-72343e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#pow"
+      }
+    },
+    "LINK-d3a0e2": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#pos"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-eeeb31": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#staking"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:31:17.554Z",
+      "status": "success"
+    }
+  }
+}

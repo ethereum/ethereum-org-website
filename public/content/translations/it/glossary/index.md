@@ -1,10 +1,10 @@
 ---
-title: Glossario di Ethereum
+title: Glossario
+metaTitle: Glossario di Ethereum
 description: Un glossario incompleto di termini tecnici e non tecnici relativi a Ethereum
 lang: it
+authors: ["Andreas Antonopoulos"]
 ---
-
-# Glossario {#ethereum-glossary}
 
 ## \# {#section-numbers}
 

@@ -1,159 +1,159 @@
 ---
-title: Scam help & reporting
-description: What to do if you have been scammed, how to secure your remaining assets, and where to report fraud.
+title: Меня обманули или я потерял средства
+metaTitle: Помощь и сообщения о мошенничестве
+description: Что делать, если вы стали жертвой мошенников, как обезопасить оставшиеся активы и куда сообщить о мошенничестве.
 lang: ru
 ---
 
-# I was scammed or lost funds {#scam-help}
-
-Cryptocurrency scams target people of all experience levels, including professionals in finance and technology. You are not alone, and being here is the right first step.
+Мошенничество с криптовалютой нацелено на людей с любым уровнем опыта, включая профессионалов в области финансов и технологий. Вы не одиноки, и то, что вы здесь — это правильный первый шаг.
 
 <Alert variant="error">
 <AlertEmoji text=":rotating_light:"/>
 <AlertContent>
 <AlertDescription>
 
-**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
+**Никто не может отменить транзакции в блокчейне.** Если кто-то связывается с вами и утверждает, что может вернуть ваши средства за определенную плату, это почти наверняка еще одно мошенничество. См. раздел [мошенничество с возвратом средств](#scam-types) ниже.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Secure your remaining assets {#secure-assets}
+## Обезопасьте оставшиеся активы {#secure-assets}
 
-If you interacted with a scammer or suspect your wallet is compromised, take these steps immediately:
+Если вы взаимодействовали с мошенником или подозреваете, что ваш кошелек скомпрометирован, немедленно предпримите следующие шаги:
 
-1. **Move remaining funds** to a new, secure wallet that the scammer does not have access to
-2. **Revoke token approvals.** Scammers often trick you into approving unlimited token spending. Revoking these permissions prevents further draining of your wallet
-3. **Change passwords** on any exchange accounts that may be linked
-4. **Enable two-factor authentication (2FA)** on all crypto-related accounts
+1. **Переведите оставшиеся средства** на новый безопасный кошелек, к которому у мошенника нет доступа.
+2. **Отзовите разрешения на использование токенов.** Мошенники часто обманом заставляют вас одобрить неограниченное расходование токенов. Отзыв этих разрешений предотвратит дальнейшее опустошение вашего кошелька.
+3. **Измените пароли** от всех аккаунтов на биржах, которые могут быть привязаны.
+4. **Включите двухфакторную аутентификацию (2FA)** для всех аккаунтов, связанных с криптовалютой.
 
-### How to revoke token approvals {#revoke-approvals}
+### Как отозвать разрешения на использование токенов {#revoke-approvals}
 
-When you interact with a dapp or smart contract, you may have granted it permission to spend your tokens. If a scammer tricked you into approving a malicious contract, they can continue draining your tokens even after the initial scam.
+Когда вы взаимодействуете с децентрализованным приложением (dapp) или смарт-контрактом, вы могли предоставить ему разрешение на расходование ваших токенов. Если мошенник обманом заставил вас одобрить вредоносный контракт, он может продолжать выводить ваши токены даже после первоначального мошенничества.
 
-Use these tools to check and revoke approvals:
+Используйте эти инструменты для проверки и отзыва разрешений:
 
-- [Revoke.cash](https://revoke.cash/): connect your wallet to see all active approvals and revoke them
-- [Revokescout](https://revoke.blockscout.com/): check and revoke approvals via Blockscout
-- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): check and revoke approvals via Etherscan
+- [Revoke.cash](https://revoke.cash/): подключите свой кошелек, чтобы увидеть все активные разрешения и отозвать их.
+- [Revokescout](https://revoke.blockscout.com/): проверяйте и отзывайте разрешения через Blockscout.
+- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): проверяйте и отзывайте разрешения через Etherscan.
 
 <DocLink href="/guides/how-to-revoke-token-access/">
-  Step-by-step guide: How to revoke token access
+  Пошаговое руководство: как отозвать доступ к токенам
 </DocLink>
 
-## Report scam addresses and websites {#report}
+## Сообщайте о мошеннических адресах и веб-сайтах {#report}
 
-Reporting helps warn other users and may assist law enforcement investigations. Document everything: transaction hashes, wallet addresses, screenshots, and any communication with the scammer.
+Сообщения о мошенничестве помогают предупредить других пользователей и могут помочь правоохранительным органам в расследовании. Документируйте все: хеши транзакций, адреса кошельков, скриншоты и любое общение с мошенником.
 
-### Report a scam address {#report-address}
+### Сообщить о мошенническом адресе {#report-address}
 
-- [Chainabuse](https://www.chainabuse.com/): community-driven scam and fraud reporting database. Submit reports and search for known scam addresses
-- [Etherscan report](https://info.etherscan.com/report-address/): flag an address on the most-used Ethereum block explorer
-- [CryptoScamDB](https://cryptoscamdb.org/): open-source database tracking cryptocurrency scams
+- [Chainabuse](https://www.chainabuse.com/): управляемая сообществом база данных для сообщений о мошенничестве. Отправляйте отчеты и ищите известные мошеннические адреса.
+- [Жалоба на Etherscan](https://info.etherscan.com/report-address/): отметьте адрес в самом популярном обозревателе блоков Эфириума.
+- [CryptoScamDB](https://cryptoscamdb.org/): база данных с открытым исходным кодом, отслеживающая мошенничество с криптовалютой.
 
-### Report a scam website or social media account {#report-website}
+### Сообщить о мошенническом веб-сайте или аккаунте в социальных сетях {#report-website}
 
-- [PhishTank](https://phishtank.org/): submit and verify phishing URLs
-- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): report phishing sites to Google so they get blocked in Chrome and other browsers
-- [Netcraft](https://report.netcraft.com/report/mistake): report malicious and fraudulent websites
-- Report directly on the social media platform where the scam occurred (Twitter/X, Discord, Telegram all have reporting features)
+- [PhishTank](https://phishtank.org/): отправляйте и проверяйте фишинговые URL-адреса.
+- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): сообщайте о фишинговых сайтах в Google, чтобы они были заблокированы в Хроме и других браузерах.
+- [Netcraft](https://report.netcraft.com/report/mistake): сообщайте о вредоносных и мошеннических веб-сайтах.
+- Сообщайте напрямую на платформе социальной сети, где произошло мошенничество (в Твиттере/X, Дискорде и Телеграме есть функции подачи жалоб).
 
-### Report to law enforcement {#report-law-enforcement}
+### Сообщить в правоохранительные органы {#report-law-enforcement}
 
-- **United States:** [FBI Internet Crime Complaint Center (IC3)](https://www.ic3.gov/)
-- **United Kingdom:** [Action Fraud](https://www.actionfraud.police.uk/)
-- **European Union:** [Europol](https://www.europol.europa.eu/report-a-crime)
-- **Other countries:** file a report with your local police. Cryptocurrency fraud is a crime in most jurisdictions
+- **США:** [Центр приема жалоб на преступления в Интернете ФБР (IC3)](https://www.ic3.gov/)
+- **Великобритания:** [Action Fraud](https://www.actionfraud.police.uk/)
+- **Европейский Союз:** [Европол](https://www.europol.europa.eu/report-a-crime)
+- **Другие страны:** подайте заявление в местную полицию. Мошенничество с криптовалютой является преступлением в большинстве юрисдикций.
 
-## Analyze what happened {#analyze}
+## Проанализируйте, что произошло {#analyze}
 
-Understanding where your funds went can help with reports and may support recovery efforts if the funds land on a centralized exchange.
+Понимание того, куда ушли ваши средства, может помочь при составлении отчетов и поддержать усилия по их возврату, если средства окажутся на централизованной бирже.
 
-- [Blockscout](https://eth.blockscout.com/): open-source block explorer to look up any transaction hash or wallet address to see where funds were sent
-- [Etherscan](https://etherscan.io/): look up any transaction hash or wallet address to see where funds were sent
-- [Chainabuse lookup](https://www.chainabuse.com/): check if an address has already been reported by other victims
-- [MetaSleuth](https://metasleuth.io/) by BlockSec: visual transaction tracing tool that maps fund flows
+- [Blockscout](https://eth.blockscout.com/): обозреватель блоков с открытым исходным кодом для поиска любого хеша транзакции или адреса кошелька, чтобы увидеть, куда были отправлены средства.
+- [Etherscan](https://etherscan.io/): найдите любой хеш транзакции или адрес кошелька, чтобы увидеть, куда были отправлены средства.
+- [Поиск в Chainabuse](https://www.chainabuse.com/): проверьте, сообщали ли уже об этом адресе другие жертвы.
+- [MetaSleuth](https://metasleuth.io/) от BlockSec: инструмент визуального отслеживания транзакций, который отображает потоки средств.
 
-**If funds were sent to a centralized exchange** (like Coinbase, Binance, Kraken), contact their support team immediately with the transaction details. Exchanges can sometimes freeze accounts flagged for fraud.
+**Если средства были отправлены на централизованную биржу** (например, Coinbase, Binance, Kraken), немедленно свяжитесь с их службой поддержки, предоставив детали транзакции. Биржи иногда могут замораживать аккаунты, отмеченные за мошенничество.
 
-## The hard truth {#hard-truth}
+## Горькая правда {#hard-truth}
 
-Because Ethereum is decentralized, no central authority can reverse transactions or recover stolen funds. Once a transaction is confirmed on the blockchain, it is final.
+Поскольку Эфириум децентрализованный, ни один центральный орган не может отменить транзакции или вернуть украденные средства. Как только транзакция подтверждена в блокчейне, она становится окончательной.
 
-Reporting is still valuable. Reports help law enforcement track organized fraud rings, and flagging addresses on Chainabuse and Etherscan warns future potential victims.
+Тем не менее, сообщать о мошенничестве все равно важно. Отчеты помогают правоохранительным органам отслеживать организованные мошеннические группировки, а пометка адресов на Chainabuse и Etherscan предупреждает будущих потенциальных жертв.
 
-## Types of scams to watch for {#scam-types}
+## Виды мошенничества, которых следует остерегаться {#scam-types}
 
 <ExpandableCard
-title="Мошеннические раздачи и аирдропы"
-contentPreview="Никто не раздает ETH бесплатно. Такие предложения — это всегда мошенничество."
+title="Giveaway and airdrop scams"
+contentPreview="No one is giving away free ETH. These offers are always scams."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
-
 >
 
-Scammers create fake giveaways promising to multiply your ETH or give you free tokens. They often impersonate well-known figures like Vitalik Buterin. If you send ETH to a "giveaway" address, you will not receive anything back.
+Мошенники создают фальшивые раздачи, обещая приумножить ваши ETH или дать вам бесплатные токены. Они часто выдают себя за известных личностей, таких как Виталик Бутерин. Если вы отправите ETH на адрес «раздачи», вы ничего не получите взамен.
 
-**Remember:** Vitalik and other prominent figures will never ask you to send them ETH.
+**Помните:** Виталик и другие известные личности никогда не попросят вас отправить им ETH.
 
-[More on common scams](/security/#common-scams)
+[Подробнее о распространенных видах мошенничества](/security/#common-scams)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Самозванство и поддельная поддержка"
-contentPreview="Никто из Ethereum или с сайта ethereum.org никогда не свяжется с вами первым."
+title="Impersonation and fake support"
+contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
-
 >
 
-Scammers impersonate Ethereum team members, moderators, or support agents on Discord, Telegram, and social media. They may send you direct messages offering help or claiming there is a problem with your account.
+Мошенники выдают себя за членов команды Эфириума, модераторов или агентов службы поддержки в Дискорде, Телеграме и социальных сетях. Они могут отправлять вам личные сообщения, предлагая помощь или утверждая, что с вашим аккаунтом возникла проблема.
 
-**Remember:**
+**Помните:**
 
-- There is no "Ethereum support team"
-- Real moderators will never DM you first
-- Never share your seed phrase or private keys with anyone, for any reason
-- Never click links sent in unsolicited messages
+- Не существует «службы поддержки Эфириума».
+- Настоящие модераторы никогда не напишут вам в личные сообщения первыми.
+- Никогда и ни по какой причине не делитесь своей сид-фразой или приватными ключами ни с кем.
+- Никогда не переходите по ссылкам, отправленным в нежелательных сообщениях.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Мошенничество с возвратом средств"
-contentPreview="Если вас обманули, остерегайтесь фальшивых «экспертов по возврату криптовалюты»."
+title="Recovery scams"
+contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
-
 >
 
-Recovery scams specifically target people who have already lost funds. Scammers monitor social media for people talking about being scammed, then reach out posing as "blockchain investigators" or "crypto recovery experts."
+Мошенничество с возвратом средств специально нацелено на людей, которые уже потеряли средства. Мошенники отслеживают социальные сети в поисках людей, рассказывающих о том, что их обманули, а затем связываются с ними, выдавая себя за «блокчейн-следователей» или «экспертов по возврату криптовалюты».
 
-They promise to trace and recover your stolen crypto for an upfront fee. After you pay, they disappear.
+Они обещают отследить и вернуть вашу украденную криптовалюту за авансовый платеж. После того как вы заплатите, они исчезают.
 
-**No legitimate service can reverse blockchain transactions.** Anyone promising this is lying. This is one of the most common follow-up scams.
+**Ни один законный сервис не может отменить транзакции в блокчейне.** Любой, кто обещает это, лжет. Это одно из самых распространенных повторных мошенничеств.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Фишинговые сайты и поддельные приложения"
-contentPreview="Мошеннические сайты имитируют настоящие кошельки и биржи, чтобы украсть ваши данные для входа."
+title="Phishing websites and fake apps"
+contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
-
 >
 
-Phishing sites look identical to real wallet apps, exchanges, or DeFi platforms. They trick you into entering your seed phrase or connecting your wallet, then drain your funds.
+Фишинговые сайты выглядят идентично настоящим приложениям-кошелькам, биржам или платформам децентрализованных финансов (DeFi). Они обманом заставляют вас ввести свою сид-фразу или подключить кошелек, а затем выводят ваши средства.
 
-**Protect yourself:**
+**Защитите себя:**
 
-- Always verify the URL before connecting your wallet
-- Bookmark the official sites you use regularly
-- Never enter your seed phrase on any website. Legitimate apps never ask for it
-- Use [PhishTank](https://phishtank.org/) to check suspicious URLs
+- Всегда проверяйте URL-адрес перед подключением кошелька.
+- Добавляйте в закладки официальные сайты, которые вы регулярно используете.
+- Никогда не вводите свою сид-фразу ни на каком веб-сайте. Законные приложения никогда не запрашивают ее.
+- Используйте [PhishTank](https://phishtank.org/) для проверки подозрительных URL-адресов.
 
 <DocLink href="/guides/how-to-id-scam-tokens/">
-  How to identify scam tokens
+  Как распознать мошеннические токены
 </DocLink>
+
 </ExpandableCard>
 
 <DocLink href="/security/">
-  Full guide to Ethereum security and scam prevention
+  Полное руководство по безопасности Эфириума и предотвращению мошенничества
 </DocLink>

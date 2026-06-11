@@ -47,6 +47,8 @@ Glamsterdam yükseltmesi üç ana hedefe odaklanır:
 
 Kısacası Glamsterdam, ağ kapasitesini artırırken sürdürülebilir kalmasını ve performansın yüksek kalmasını sağlamak için yapısal değişiklikler getirecektir.
 
+
+Anlamlı L1 ölçeklendirmesi, protokol dışı güven varsayımlarından ve sıralı yürütme kısıtlamalarından uzaklaşmayı gerektirir. Glamsterdam, belirli blok oluşturma görevlerinin ayrılmasını protokole dahil ederek ve ağın paralel işlemeye hazırlanmasına olanak tanıyan yeni veri yapıları sunarak bu sorunu ele alır.
 ## L1'i ölçeklendirme ve paralel işleme {#scale-l1}
 
 Anlamlı bir katman 1 (L1) ölçeklendirmesi, protokol dışı güven varsayımlarından ve seri yürütme kısıtlamalarından uzaklaşmayı gerektirir. Glamsterdam, belirli blok oluşturma görevlerinin ayrımını protokole dahil ederek ve ağın paralel işlemeye hazırlanmasını sağlayan yeni veri yapıları sunarak bu sorunu çözer.
@@ -101,6 +103,8 @@ Blok Erişim Listesi Değişimi (eth/71 veya EIP-8159), blok düzeyinde erişim 
 - [EIP-7928 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-7928)
 - [EIP-8159 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-8159)
 
+
+Ethereum ağı daha hızlı büyüdükçe, kullanım maliyetinin Ethereum'u çalıştıran donanım üzerindeki yıpranma ve aşınma ile eşleştiğinden emin olmak önemlidir. Ağın güvenli bir şekilde ölçeklenebilmesi ve daha fazla işlem işleyebilmesi için genel kapasite sınırlarını artırması gerekmektedir.
 ## Ağ sürdürülebilirliği {#network-sustainability}
 
 Ethereum ağı daha hızlı büyüdükçe, onu kullanma maliyetinin Ethereum'u çalıştıran donanımdaki aşınma ve yıpranmayla eşleştiğinden emin olmak önemlidir. Ağın güvenli bir şekilde ölçeklenmesi ve daha fazla işlem yapabilmesi için genel kapasite sınırlarını artırması gerekir.
@@ -144,6 +148,8 @@ Durum erişimi eylemlerini daha doğru fiyatlandırarak Ethereum, kazara veya ka
 
 **Kaynaklar**: [EIP-8038 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-8038)
 
+
+Doğrulayıcı görevlerinde ve çıkış süreçlerinde yapılan iyileştirmeler, kitlesel kesinti olayları sırasında ağ istikrarını sağlar ve likiditeyi demokratikleştirir. Bu iyileştirmeler ağı daha istikrarlı hale getirir ve büyük veya küçük tüm katılımcılara adil davranılmasını sağlar.
 ## Ağ dayanıklılığı {#network-resilience}
 
 Doğrulayıcı görevlerinde ve çıkış süreçlerinde yapılan iyileştirmeler, kitlesel kesinti (slashing) olayları sırasında ağ kararlılığını sağlar ve likiditeyi demokratikleştirir. Bu iyileştirmeler ağı daha istikrarlı hale getirir ve büyük veya küçük tüm katılımcılara adil davranılmasını sağlar.
@@ -183,6 +189,8 @@ Konsolidasyon kuyruğuna erişimi demokratikleştirmek, kullanıcıların yükse
 
 **Kaynaklar**: [EIP-8080 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-8080)
 
+
+Ethereum'un Glamsterdam yükseltmesi, kullanıcı deneyimini iyileştirmeyi, veri keşfedilebilirliğini artırmayı ve eşzamanlama hatalarını önlemek için artan mesaj boyutlarını idare etmeyi amaçlamaktadır. Bu, ağ ölçeklendikçe teknik aksaklıkları önlerken zincir içi neler olup bittiğini izlemeyi kolaylaştırır.
 ## Kullanıcı ve geliştirici deneyimini iyileştirme {#improve-user-developer-experience}
 
 Ethereum'un Glamsterdam yükseltmesi, kullanıcı deneyimini iyileştirmeyi, veri keşfedilebilirliğini artırmayı ve eşzamanlama hatalarını önlemek için artan mesaj boyutlarını idare etmeyi amaçlamaktadır. Bu, ağ ölçeklendikçe teknik aksaklıkları önlerken zincir içi neler olup bittiğini izlemeyi kolaylaştırır.
@@ -241,6 +249,12 @@ Bu değişiklik, yoğun aktivite dönemlerinde ağ eşzamanlama hatalarını ön
 
 **Kaynaklar**: [EIP-7975 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-7975)
 
+
+- [Ethereum yol haritası](/roadmap/)
+- [Forkcast: Glamsterdam](https://forkcast.org/upgrade/glamsterdam)
+- [Glamsterdam Meta EIP](https://eips.ethereum.org/EIPS/eip-7773)
+- [2026 için Protokol Öncelikleri Güncellemesi blog duyurusu](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
+- [The Daily Gwei Refuel podcast'i - Kuantum sonrası Ethereum, Glamsterdam geliyor](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 ## Daha fazla okuma {#further-reading}
 
 - [Ethereum yol haritası](/roadmap/)
@@ -248,6 +262,9 @@ Bu değişiklik, yoğun aktivite dönemlerinde ağ eşzamanlama hatalarını ön
 - [Glamsterdam Meta EIP](https://eips.ethereum.org/EIPS/eip-7773)
 - [2026 için Protokol Öncelikleri Güncellemesi blog duyurusu](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
 - [The Daily Gwei Refuel podcast'i - Kuantum sonrası Ethereum, Glamsterdam geliyor](https://www.youtube.com/watch?v=qx9sd50uQjQ)
+
+
+
 
 ## SSS {#faq}
 

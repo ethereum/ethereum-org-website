@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-08T07:23:13.879Z",
+  "englishManifestHash": "9e9ff834bd63",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-cea6df",
+    "LINK-991ca6",
+    "LINK-338942",
+    "LINK-be2e11",
+    "COMPONENT-801109"
+  ],
+  "placeholderMap": {
+    "COMPONENT-801109": {
+      "type": "component",
+      "values": {
+        "componentName": "Callout"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-cea6df": {
+      "type": "link",
+      "values": {
+        "url": "https://ethglobal.com/discord"
+      }
+    },
+    "LINK-991ca6": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethstaker"
+      }
+    },
+    "LINK-338942": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/ethstaker"
+      }
+    },
+    "LINK-be2e11": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:23:13.879Z",
+      "status": "success"
+    }
+  }
+}

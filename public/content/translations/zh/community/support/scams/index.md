@@ -1,159 +1,159 @@
 ---
-title: Scam help & reporting
-description: What to do if you have been scammed, how to secure your remaining assets, and where to report fraud.
+title: 我被骗了或丢失了资金
+metaTitle: 诈骗求助与举报
+description: 如果您遭遇诈骗该怎么办，如何保护您的剩余资产，以及在哪里举报欺诈行为。
 lang: zh
 ---
 
-# I was scammed or lost funds {#scam-help}
-
-Cryptocurrency scams target people of all experience levels, including professionals in finance and technology. You are not alone, and being here is the right first step.
+加密货币诈骗针对所有经验水平的人，包括金融和技术领域的专业人士。您并不孤单，来到这里是正确的第一步。
 
 <Alert variant="error">
 <AlertEmoji text=":rotating_light:"/>
 <AlertContent>
 <AlertDescription>
 
-**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
+**没有人可以撤销区块链交易。** 如果有人联系您，声称他们可以收费帮您找回资金，这几乎肯定是二次诈骗。请参阅下文的[恢复资金诈骗](#scam-types)。
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Secure your remaining assets {#secure-assets}
+## 保护您的剩余资产 {#secure-assets}
 
-If you interacted with a scammer or suspect your wallet is compromised, take these steps immediately:
+如果您与诈骗者有过互动，或者怀疑您的钱包已遭到入侵，请立即采取以下步骤：
 
-1. **Move remaining funds** to a new, secure wallet that the scammer does not have access to
-2. **Revoke token approvals.** Scammers often trick you into approving unlimited token spending. Revoking these permissions prevents further draining of your wallet
-3. **Change passwords** on any exchange accounts that may be linked
-4. **Enable two-factor authentication (2FA)** on all crypto-related accounts
+1. **转移剩余资金**到一个诈骗者无法访问的新的安全钱包中
+2. **撤销代币授权。** 诈骗者经常诱骗您授权无限制的代币支出。撤销这些权限可以防止您的钱包被进一步掏空
+3. **更改任何可能关联的交易所账户的密码**
+4. **在所有与加密货币相关的账户上启用双重身份验证 (2FA)**
 
-### How to revoke token approvals {#revoke-approvals}
+### 如何撤销代币授权 {#revoke-approvals}
 
-When you interact with a dapp or smart contract, you may have granted it permission to spend your tokens. If a scammer tricked you into approving a malicious contract, they can continue draining your tokens even after the initial scam.
+当您与去中心化应用 (dapp) 或智能合约交互时，您可能已经授予了它支出您代币的权限。如果诈骗者诱骗您授权了恶意合约，即使在最初的诈骗之后，他们也可以继续掏空您的代币。
 
-Use these tools to check and revoke approvals:
+使用以下工具检查并撤销授权：
 
-- [Revoke.cash](https://revoke.cash/): connect your wallet to see all active approvals and revoke them
-- [Revokescout](https://revoke.blockscout.com/): check and revoke approvals via Blockscout
-- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): check and revoke approvals via Etherscan
+- [Revoke.cash](https://revoke.cash/)：连接您的钱包以查看所有有效的授权并将其撤销
+- [Revokescout](https://revoke.blockscout.com/)：通过 Blockscout 检查并撤销授权
+- [Etherscan 代币授权检查器](https://etherscan.io/tokenapprovalchecker)：通过 Etherscan 检查并撤销授权
 
 <DocLink href="/guides/how-to-revoke-token-access/">
-  Step-by-step guide: How to revoke token access
+  分步指南：如何撤销代币访问权限
 </DocLink>
 
-## Report scam addresses and websites {#report}
+## 举报诈骗地址和网站 {#report}
 
-Reporting helps warn other users and may assist law enforcement investigations. Document everything: transaction hashes, wallet addresses, screenshots, and any communication with the scammer.
+举报有助于警告其他用户，并可能协助执法部门的调查。记录下一切：交易哈希、钱包地址、屏幕截图以及与诈骗者的任何通信。
 
-### Report a scam address {#report-address}
+### 举报诈骗地址 {#report-address}
 
-- [Chainabuse](https://www.chainabuse.com/): community-driven scam and fraud reporting database. Submit reports and search for known scam addresses
-- [Etherscan report](https://info.etherscan.com/report-address/): flag an address on the most-used Ethereum block explorer
-- [CryptoScamDB](https://cryptoscamdb.org/): open-source database tracking cryptocurrency scams
+- [Chainabuse](https://www.chainabuse.com/)：社区驱动的诈骗和欺诈举报数据库。提交举报并搜索已知的诈骗地址
+- [Etherscan 举报](https://info.etherscan.com/report-address/)：在最常用的以太坊区块浏览器上标记地址
+- [CryptoScamDB](https://cryptoscamdb.org/)：追踪加密货币诈骗的开源数据库
 
-### Report a scam website or social media account {#report-website}
+### 举报诈骗网站或社交媒体账户 {#report-website}
 
-- [PhishTank](https://phishtank.org/): submit and verify phishing URLs
-- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): report phishing sites to Google so they get blocked in Chrome and other browsers
-- [Netcraft](https://report.netcraft.com/report/mistake): report malicious and fraudulent websites
-- Report directly on the social media platform where the scam occurred (Twitter/X, Discord, Telegram all have reporting features)
+- [PhishTank](https://phishtank.org/)：提交并验证网络钓鱼 URL
+- [Google 安全浏览](https://safebrowsing.google.com/safebrowsing/report_phish/)：向 Google 举报网络钓鱼网站，以便在 Chrome 和其他浏览器中将其屏蔽
+- [Netcraft](https://report.netcraft.com/report/mistake)：举报恶意和欺诈网站
+- 直接在发生诈骗的社交媒体平台上举报（推特/X、Discord、电报都有举报功能）
 
-### Report to law enforcement {#report-law-enforcement}
+### 向执法部门报案 {#report-law-enforcement}
 
-- **United States:** [FBI Internet Crime Complaint Center (IC3)](https://www.ic3.gov/)
-- **United Kingdom:** [Action Fraud](https://www.actionfraud.police.uk/)
-- **European Union:** [Europol](https://www.europol.europa.eu/report-a-crime)
-- **Other countries:** file a report with your local police. Cryptocurrency fraud is a crime in most jurisdictions
+- **美国：** [FBI 互联网犯罪投诉中心 (IC3)](https://www.ic3.gov/)
+- **英国：** [Action Fraud](https://www.actionfraud.police.uk/)
+- **欧盟：** [欧洲刑警组织 (Europol)](https://www.europol.europa.eu/report-a-crime)
+- **其他国家/地区：** 向当地警方报案。在大多数司法管辖区，加密货币欺诈都是犯罪行为
 
-## Analyze what happened {#analyze}
+## 分析发生了什么 {#analyze}
 
-Understanding where your funds went can help with reports and may support recovery efforts if the funds land on a centralized exchange.
+了解您的资金去向有助于举报，如果资金最终流入中心化交易所，也可能有助于追回资金。
 
-- [Blockscout](https://eth.blockscout.com/): open-source block explorer to look up any transaction hash or wallet address to see where funds were sent
-- [Etherscan](https://etherscan.io/): look up any transaction hash or wallet address to see where funds were sent
-- [Chainabuse lookup](https://www.chainabuse.com/): check if an address has already been reported by other victims
-- [MetaSleuth](https://metasleuth.io/) by BlockSec: visual transaction tracing tool that maps fund flows
+- [Blockscout](https://eth.blockscout.com/)：开源区块浏览器，可查找任何交易哈希或钱包地址，以查看资金被发送到了哪里
+- [Etherscan](https://etherscan.io/)：查找任何交易哈希或钱包地址，以查看资金被发送到了哪里
+- [Chainabuse 查询](https://www.chainabuse.com/)：检查某个地址是否已被其他受害者举报
+- BlockSec 提供的 [MetaSleuth](https://metasleuth.io/)：绘制资金流向的可视化交易追踪工具
 
-**If funds were sent to a centralized exchange** (like Coinbase, Binance, Kraken), contact their support team immediately with the transaction details. Exchanges can sometimes freeze accounts flagged for fraud.
+**如果资金被发送到了中心化交易所**（如 Coinbase、币安、Kraken），请立即联系他们的支持团队并提供交易详情。交易所通常可以冻结被标记为欺诈的账户。
 
-## The hard truth {#hard-truth}
+## 残酷的真相 {#hard-truth}
 
-Because Ethereum is decentralized, no central authority can reverse transactions or recover stolen funds. Once a transaction is confirmed on the blockchain, it is final.
+由于以太坊是去中心化的，没有中央机构可以撤销交易或找回被盗资金。一旦交易在区块链上得到确认，它就是不可逆的。
 
-Reporting is still valuable. Reports help law enforcement track organized fraud rings, and flagging addresses on Chainabuse and Etherscan warns future potential victims.
+举报仍然很有价值。举报有助于执法部门追踪有组织的欺诈团伙，在 Chainabuse 和 Etherscan 上标记地址可以警告未来的潜在受害者。
 
-## Types of scams to watch for {#scam-types}
+## 需要警惕的诈骗类型 {#scam-types}
 
 <ExpandableCard
-title="赠品和空投骗局"
-contentPreview="没有人会白送 ETH。这类活动都是骗局。"
+title="Giveaway and airdrop scams"
+contentPreview="No one is giving away free ETH. These offers are always scams."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
-
 >
 
-Scammers create fake giveaways promising to multiply your ETH or give you free tokens. They often impersonate well-known figures like Vitalik Buterin. If you send ETH to a "giveaway" address, you will not receive anything back.
+诈骗者会制造虚假的赠品活动，承诺让您的 ETH 翻倍或给您免费的代币。他们经常冒充维塔利克·布特林等知名人物。如果您将 ETH 发送到“赠品”地址，您将不会收到任何回报。
 
-**Remember:** Vitalik and other prominent figures will never ask you to send them ETH.
+**请记住：** 维塔利克和其他知名人物绝不会要求您向他们发送 ETH。
 
-[More on common scams](/security/#common-scams)
+[了解更多常见诈骗](/security/#common-scams)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="冒充和虚假客服"
-contentPreview="以太坊或 ethereum.org 的任何人都不会主动联系你。"
+title="Impersonation and fake support"
+contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
-
 >
 
-Scammers impersonate Ethereum team members, moderators, or support agents on Discord, Telegram, and social media. They may send you direct messages offering help or claiming there is a problem with your account.
+诈骗者会在 Discord、电报和社交媒体上冒充以太坊团队成员、版主或支持人员。他们可能会给您发私信，提供帮助或声称您的账户存在问题。
 
-**Remember:**
+**请记住：**
 
-- There is no "Ethereum support team"
-- Real moderators will never DM you first
-- Never share your seed phrase or private keys with anyone, for any reason
-- Never click links sent in unsolicited messages
+- 不存在“以太坊支持团队”
+- 真正的版主绝不会主动给您发私信
+- 无论出于何种原因，绝不要与任何人分享您的助记词或私钥
+- 绝不要点击未经请求的消息中发送的链接
+
 </ExpandableCard>
 
 <ExpandableCard
-title="资产追回骗局"
-contentPreview="被骗之后，要当心假的‘加密货币追回专家’。"
+title="Recovery scams"
+contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
-
 >
 
-Recovery scams specifically target people who have already lost funds. Scammers monitor social media for people talking about being scammed, then reach out posing as "blockchain investigators" or "crypto recovery experts."
+恢复资金诈骗专门针对已经损失资金的人。诈骗者会监控社交媒体上谈论被骗的人，然后冒充“区块链调查员”或“加密货币恢复专家”与他们联系。
 
-They promise to trace and recover your stolen crypto for an upfront fee. After you pay, they disappear.
+他们承诺追踪并找回您被盗的加密货币，但需要预先收取费用。在您付款后，他们就会消失。
 
-**No legitimate service can reverse blockchain transactions.** Anyone promising this is lying. This is one of the most common follow-up scams.
+**没有任何合法的服务可以撤销区块链交易。** 任何承诺做到这一点的人都在撒谎。这是最常见的后续诈骗之一。
+
 </ExpandableCard>
 
 <ExpandableCard
-title="钓鱼网站和假冒应用"
-contentPreview="诈骗网站会模仿真实的钱包和交易所，以窃取你的登录凭据。"
+title="Phishing websites and fake apps"
+contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
-
 >
 
-Phishing sites look identical to real wallet apps, exchanges, or DeFi platforms. They trick you into entering your seed phrase or connecting your wallet, then drain your funds.
+网络钓鱼网站看起来与真实的钱包应用、交易所或去中心化金融 (DeFi) 平台一模一样。它们诱骗您输入助记词或连接钱包，然后掏空您的资金。
 
-**Protect yourself:**
+**保护您自己：**
 
-- Always verify the URL before connecting your wallet
-- Bookmark the official sites you use regularly
-- Never enter your seed phrase on any website. Legitimate apps never ask for it
-- Use [PhishTank](https://phishtank.org/) to check suspicious URLs
+- 在连接钱包之前，务必验证 URL
+- 将您经常使用的官方网站加入书签
+- 绝不要在任何网站上输入您的助记词。合法的应用绝不会要求您提供助记词
+- 使用 [PhishTank](https://phishtank.org/) 检查可疑的 URL
 
 <DocLink href="/guides/how-to-id-scam-tokens/">
-  How to identify scam tokens
+  如何识别诈骗代币
 </DocLink>
+
 </ExpandableCard>
 
 <DocLink href="/security/">
-  Full guide to Ethereum security and scam prevention
+  以太坊安全与防骗完整指南
 </DocLink>

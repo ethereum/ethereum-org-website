@@ -1,10 +1,9 @@
 ---
-title: Borsa ekleme
-description: "Ethereum.org'a borsa eklerken kullandığımız politika"
+title: Ethereum borsaları ekleme
+metaTitle: Borsa ekleme
+description: ethereum.org'a borsa eklerken kullandığımız politika
 lang: tr
 ---
-
-# Ethereum borsaları ekleme {#adding-ethereum-exchanges}
 
 Herkes ethereum.org'da yeni borsalar önermekte özgürdür.
 
@@ -12,29 +11,29 @@ Herkes ethereum.org'da yeni borsalar önermekte özgürdür.
 
 - [ethereum.org/get-eth](/get-eth/)
 
-Bu sayfa, bir kullanıcının nerede yaşadıklarını girmesine ve hangi borsaları kullanabileceğini görmesine olanak tanır. Bu, herhangi bir coğrafi kısıtlamanın erken ortaya çıkmasına yardımcı olur.
+Bu sayfa, bir kullanıcının nerede yaşadığını girmesine ve hangi borsaları kullanabileceğini görmesine olanak tanır. Bu, coğrafi kısıtlamaların erkenden ortaya çıkmasına yardımcı olur.
 
-Bu bağlamdan dolayı, bir borsa önerdiğinizde bazı özel bilgilere ihtiyacımız var.
+Bu bağlamdan dolayı, bir borsa önerdiğinizde bazı belirli bilgilere ihtiyacımız var.
 
-**NOT:** Merkeziyetsiz bir borsayı listelemek istiyorsanız, [cüzdanları ve merkeziyetsiz uygulamaları listeleme politikamıza](/contributing/adding-products/) göz atın.
+**NOT:** Merkeziyetsiz bir borsa listelemek istiyorsanız, [cüzdanları ve dapp'leri listeleme politikamıza](/contributing/adding-products/) göz atın.
 
 ## İhtiyacımız olanlar {#what-we-need}
 
-- Borsa için geçerli olan coğrafi kısıtlamalar. Borsayla ilişkili coğrafi kısıtlamalar, borsanın web sitesinin özel bir sayfasında veya bölümünde ayrıntılı olarak açıklanmalıdır.
+- Borsaya uygulanan coğrafi kısıtlamalar. Borsa ile ilişkili coğrafi kısıtlamalar, borsanın web sitesindeki özel bir sayfada veya bölümde ayrıntılı olarak açıklanmalıdır.
 - Kullanıcıların ETH satın almak için kullanabileceği para birimleri
-- Borsanın meşru bir ticaret şirketi olduğunun kanıtı
-- Sahip olabileceğiniz herhangi bir ek bilgi: Bu, şirket hakkında faaliyet yılları, finansal destek vb. gibi bilgiler olabilir.
+- Borsanın meşru bir ticaret şirketi olduğuna dair kanıt
+- Sahip olabileceğiniz ek bilgiler – bu, şirketin faaliyet yılları, finansal desteği vb. hakkında bilgiler olabilir.
 
-Bu bilgilere, [kullanıcıların kullanabilecekleri bir borsa bulmalarına doğru bir şekilde yardımcı olabilmemiz](/get-eth/#country-picker) için ihtiyacımız var.
+Bu bilgilere ihtiyacımız var, böylece [kullanıcıların kullanabilecekleri bir borsa bulmalarına](/get-eth/#country-picker) doğru bir şekilde yardımcı olabiliriz.
 
-Ve böylece ethereum.org, değişimin meşru ve güvenli bir hizmet olduğundan daha emin olabilir.
+Ve böylece ethereum.org, borsanın meşru ve güvenli bir hizmet olduğundan daha emin olabilir.
 
 ---
 
 ## Borsanızı ekleyin {#add-exchange}
 
-Ethereum.org'a bir borsa eklemek istiyorsanız, GitHub'da bir konu oluşturun.
+ethereum.org'a bir borsa eklemek istiyorsanız, GitHub'da bir issue oluşturun.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-  Bir konu oluşturun
+  Bir issue oluşturun
 </ButtonLink>

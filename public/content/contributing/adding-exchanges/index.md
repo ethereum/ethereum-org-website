@@ -1,10 +1,9 @@
 ---
-title: Adding exchanges
+title: Adding Ethereum exchanges
+metaTitle: Adding exchanges
 description: The policy we use when adding exchanges to ethereum.org
 lang: en
 ---
-
-# Adding Ethereum exchanges {#adding-ethereum-exchanges}
 
 Anyone is free to suggest new exchanges on ethereum.org.
 

@@ -961,6 +961,82 @@ function fixDuplicatedHeadings(content: string): {
 }
 
 /**
+ * Remove duplicate "ghost" heading blocks.
+ *
+ * When a structural change to the English source shifts block layout (e.g. the
+ * h1 -> frontmatter.title migration that removed leading `#` page titles), the
+ * pipeline's incremental block-matching can emit a section twice: an
+ * anchor-less "ghost" heading (often an older or differently-worded
+ * translation, sometimes a different formality register) immediately followed
+ * by the correct same-level heading WITH a `{#anchor}`. The reader sees the
+ * section rendered twice in a row.
+ *
+ * This removes the ghost block (the anchor-less heading plus the duplicate
+ * prose up to the anchored twin), keeping the canonical anchored version that
+ * matches the English source. English requires `{#id}` on every heading and
+ * `syncHeaderIdsWithEnglish` runs before this, so any remaining anchor-less
+ * heading is an artifact.
+ *
+ * Conservative by design — only acts when the immediately-following heading is
+ * the SAME level and HAS an anchor, and the lines between contain no code
+ * fence. It never half-cuts a fenced block, and it leaves "lone" anchor-less
+ * headings (no anchored twin) untouched — those need an anchor ADDED, which is
+ * `syncHeaderIdsWithEnglish`'s job, not this one.
+ */
+function fixDuplicateHeadingBlocks(content: string): {
+  content: string
+  fixCount: number
+} {
+  const lines = content.split("\n")
+  const headingRe = /^(#{1,6})\s+\S/
+  const anchorRe = /\{#[^}]+\}/
+  const fenceRe = /^\s*(```|~~~)/
+
+  // Index headings, skipping fenced code blocks.
+  const heads: Array<{ idx: number; level: number; hasAnchor: boolean }> = []
+  let inFence = false
+  for (let i = 0; i < lines.length; i++) {
+    if (fenceRe.test(lines[i])) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence) continue
+    const m = lines[i].match(headingRe)
+    if (m) {
+      heads.push({
+        idx: i,
+        level: m[1].length,
+        hasAnchor: anchorRe.test(lines[i]),
+      })
+    }
+  }
+
+  const drop = new Set<number>()
+  let fixCount = 0
+  for (let h = 0; h < heads.length - 1; h++) {
+    const ghost = heads[h]
+    const twin = heads[h + 1]
+    if (ghost.hasAnchor) continue
+    if (twin.level !== ghost.level || !twin.hasAnchor) continue
+    // The lines between the ghost heading and its anchored twin must contain no
+    // code fence — guarantees we never half-cut a fenced block.
+    let safe = true
+    for (let k = ghost.idx + 1; k < twin.idx; k++) {
+      if (fenceRe.test(lines[k])) {
+        safe = false
+        break
+      }
+    }
+    if (!safe) continue
+    for (let k = ghost.idx; k < twin.idx; k++) drop.add(k)
+    fixCount++
+  }
+
+  if (fixCount === 0) return { content, fixCount: 0 }
+  return { content: lines.filter((_, i) => !drop.has(i)).join("\n"), fixCount }
+}
+
+/**
  * Fix escaped bold/italic markers from Crowdin.
  * Crowdin often escapes markdown emphasis during translation:
  *   \*\*text\*\* → **text** (bold)
@@ -4490,6 +4566,10 @@ function processMarkdownFile(
     (n) => `Fixed ${n} duplicated headings`
   )
   applyFix(
+    () => fixDuplicateHeadingBlocks(content),
+    (n) => `Removed ${n} duplicate ghost heading block(s)`
+  )
+  applyFix(
     () => fixBrokenMarkdownLinks(content),
     (n) => `Fixed ${n} broken markdown links`
   )
@@ -5507,6 +5587,7 @@ function fixJsxAttributeSpacing(content: string): {
 export const _testOnly = {
   // Standalone fixes
   fixDuplicatedHeadings,
+  fixDuplicateHeadingBlocks,
   fixBrokenMarkdownLinks,
   fixEscapedBoldAndItalic,
   fixAsciiGuillemets,
