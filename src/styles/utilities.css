@@ -44,6 +44,30 @@
   background-image: var(--ten-year-gradient);
 }
 
+@utility text-h1 {
+  @apply text-4xl lg:text-5xl;
+}
+
+@utility text-h2 {
+  @apply text-3xl lg:text-4xl;
+}
+
+@utility text-h3 {
+  @apply text-2xl lg:text-3xl;
+}
+
+@utility text-h4 {
+  @apply text-xl lg:text-2xl;
+}
+
+@utility text-h5 {
+  @apply text-md lg:text-xl;
+}
+
+@utility text-h6 {
+  @apply text-sm lg:text-md;
+}
+
 /* Grid template columns */
 @utility grid-cols-bento {
   grid-template-columns: repeat(12, 1fr);

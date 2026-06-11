@@ -62,7 +62,7 @@ Same problem -- bypasses focus rings, hover states, and a11y baseline. Use `Butt
 
 ### Reinventing a heading with a `<div>`
 
-`<div className="text-5xl font-bold">Hello</div>` is wrong. Headings are styled by `base.css` defaults on `<h1>` through `<h6>`. Use the semantic tag and override sizes via `className` only when really needed.
+`<div className="text-5xl font-bold">Hello</div>` is wrong. Headings are styled by `base.css` defaults on `<h1>` through `<h6>`. Use the semantic tag and override sizes only when really needed -- with the `text-h1`-`text-h6` utilities (e.g. `<h2 className="text-h1">`), never a hand-reconstructed `text-3xl lg:text-4xl`. Those same `text-h*` utilities are also how you give a non-heading element a heading-level size.
 
 ### Inlining instead of composing
 
