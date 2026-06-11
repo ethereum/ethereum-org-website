@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-08T09:09:17.901Z",
+  "englishManifestHash": "54ca69e2cfb0",
+  "placeholderOrder": [
+    "LINK-5e43ec",
+    "LINK-9d6d3a",
+    "LINK-0168d9",
+    "LINK-1ee787",
+    "LINK-2cfbe9",
+    "LINK-2cfbe9",
+    "LINK-2cfbe9",
+    "LINK-a17794",
+    "LINK-b8c021",
+    "LINK-f61394",
+    "LINK-f9bbaf",
+    "LINK-2cfbe9",
+    "LINK-2cfbe9",
+    "LINK-258c27",
+    "LINK-2cfbe9",
+    "LINK-eb3d62"
+  ],
+  "placeholderMap": {
+    "LINK-5e43ec": {
+      "type": "link",
+      "values": {
+        "url": "/eips/#introduction-to-ethereum-improvement-proposals"
+      }
+    },
+    "LINK-9d6d3a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-0168d9": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-1ee787": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#london"
+      }
+    },
+    "LINK-2cfbe9": {
+      "type": "link",
+      "values": {
+        "url": "https://ultrasound.money"
+      }
+    },
+    "LINK-a17794": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io"
+      }
+    },
+    "LINK-b8c021": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-f61394": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-f9bbaf": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-258c27": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/issuance/"
+      }
+    },
+    "LINK-eb3d62": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:09:17.901Z",
+      "status": "success"
+    }
+  }
+}

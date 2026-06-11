@@ -1,10 +1,10 @@
 ---
-title: Glosarium Ethereum
+title: Glosarium
+metaTitle: Glosarium Ethereum
 description: Glosarium tidak lengkap tentang istilah teknis dan non-teknis yang berkaitan dengan Ethereum
 lang: id
+authors: ["Andreas Antonopoulos"]
 ---
-
-# Glosarium {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -500,6 +500,6 @@ _Disediakan sebagian oleh [Mastering Ethereum](https://github.com/ethereumbook/e
 
 ## Berkontribusi pada halaman ini {#contribute-to-this-page}
 
-Apakah ada yang terlewat? Apakah ada yang salah? Bantu kami meningkatkan dengan berkontribusi pada glosarium ini di GitHub!
+Apakah ada yang terlewat? Apakah ada yang salah? Bantu kami menyempurnakannya dengan berkontribusi pada glosarium ini di GitHub!
 
 [Pelajari lebih lanjut tentang cara berkontribusi](/contributing/adding-glossary-terms)

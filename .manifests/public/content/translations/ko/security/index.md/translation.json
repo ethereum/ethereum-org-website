@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-08T10:56:22.011Z",
+  "englishManifestHash": "7f0456edcad4",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-0e67f4",
+    "LINK-d0b741",
+    "LINK-645067",
+    "IMAGE-0a47b0",
+    "LINK-d7d242",
+    "IMAGE-f8ceeb",
+    "IMAGE-9790dd",
+    "IMAGE-844b09",
+    "LINK-14f434",
+    "LINK-177de7",
+    "LINK-a99bf8",
+    "IMAGE-0db0d1",
+    "LINK-704778",
+    "LINK-d67760",
+    "LINK-82cc23",
+    "CODEBLOCK-1b66b7",
+    "LINK-d72dcc",
+    "LINK-06d655",
+    "LINK-318432",
+    "IMAGE-02c3fc",
+    "LINK-6e9a94",
+    "LINK-877d7d",
+    "LINK-c2271d",
+    "LINK-d8cbf4",
+    "HTMLTAG-ddfb68",
+    "HTMLTAG-c1f5db",
+    "HTMLTAG-54d83b",
+    "LINK-328cad",
+    "LINK-75c503",
+    "LINK-80509b",
+    "LINK-7b214a",
+    "LINK-d3edd7",
+    "LINK-db75cf",
+    "LINK-762794",
+    "LINK-da96b8",
+    "LINK-28f0bf",
+    "LINK-00a0b7",
+    "LINK-2928a5",
+    "LINK-f0d58f",
+    "LINK-e50425"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-1b66b7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "HTMLTAG-ddfb68": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud"
+      }
+    },
+    "HTMLTAG-c1f5db": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://mashable.com/article/how-to-set-up-google-authenticator"
+      }
+    },
+    "HTMLTAG-54d83b": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://authy.com/"
+      }
+    },
+    "IMAGE-0a47b0": {
+      "type": "image",
+      "values": {
+        "path": "./twitterPhishingScam.png"
+      }
+    },
+    "IMAGE-f8ceeb": {
+      "type": "image",
+      "values": {
+        "path": "./appleTwitterScam.png"
+      }
+    },
+    "IMAGE-9790dd": {
+      "type": "image",
+      "values": {
+        "path": "./youtubeScam.png"
+      }
+    },
+    "IMAGE-844b09": {
+      "type": "image",
+      "values": {
+        "path": "./discordScam.png"
+      }
+    },
+    "IMAGE-0db0d1": {
+      "type": "image",
+      "values": {
+        "path": "./brokerScam.png"
+      }
+    },
+    "IMAGE-02c3fc": {
+      "type": "image",
+      "values": {
+        "path": "./passwordManager.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-0e67f4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ledger.com/"
+      }
+    },
+    "LINK-d0b741": {
+      "type": "link",
+      "values": {
+        "url": "https://trezor.io/"
+      }
+    },
+    "LINK-645067": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-revoke-token-access/"
+      }
+    },
+    "LINK-d7d242": {
+      "type": "link",
+      "values": {
+        "url": "https://harrydenley.com/faking-twitter-unfurling"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-177de7": {
+      "type": "link",
+      "values": {
+        "url": "/community/support/"
+      }
+    },
+    "LINK-a99bf8": {
+      "type": "link",
+      "values": {
+        "url": "https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico"
+      }
+    },
+    "LINK-704778": {
+      "type": "link",
+      "values": {
+        "url": "https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/"
+      }
+    },
+    "LINK-d67760": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=LLL_nQp1lGk"
+      }
+    },
+    "LINK-82cc23": {
+      "type": "link",
+      "values": {
+        "url": "https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/"
+      }
+    },
+    "LINK-d72dcc": {
+      "type": "link",
+      "values": {
+        "url": "<https://wikipedia.org/wiki/Social_engineering_(security"
+      }
+    },
+    "LINK-06d655": {
+      "type": "link",
+      "values": {
+        "url": "https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/"
+      }
+    },
+    "LINK-318432": {
+      "type": "link",
+      "values": {
+        "url": "https://haveibeenpwned.com"
+      }
+    },
+    "LINK-6e9a94": {
+      "type": "link",
+      "values": {
+        "url": "https://bitwarden.com/"
+      }
+    },
+    "LINK-877d7d": {
+      "type": "link",
+      "values": {
+        "url": "https://keepass.info/"
+      }
+    },
+    "LINK-c2271d": {
+      "type": "link",
+      "values": {
+        "url": "https://1password.com/"
+      }
+    },
+    "LINK-d8cbf4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.privacytools.io/secure-password-manager"
+      }
+    },
+    "LINK-328cad": {
+      "type": "link",
+      "values": {
+        "url": "https://www.yubico.com/resources/glossary/fido-u2f/"
+      }
+    },
+    "LINK-75c503": {
+      "type": "link",
+      "values": {
+        "url": "https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/"
+      }
+    },
+    "LINK-80509b": {
+      "type": "link",
+      "values": {
+        "url": "https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/"
+      }
+    },
+    "LINK-7b214a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget"
+      }
+    },
+    "LINK-d3edd7": {
+      "type": "link",
+      "values": {
+        "url": "https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq"
+      }
+    },
+    "LINK-db75cf": {
+      "type": "link",
+      "values": {
+        "url": "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds"
+      }
+    },
+    "LINK-762794": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media"
+      }
+    },
+    "LINK-da96b8": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e"
+      }
+    },
+    "LINK-28f0bf": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=m8jlnZuV1i4"
+      }
+    },
+    "LINK-00a0b7": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-id-scam-tokens/"
+      }
+    },
+    "LINK-2928a5": {
+      "type": "link",
+      "values": {
+        "url": "https://support.mycrypto.com/staying-safe/common-scams"
+      }
+    },
+    "LINK-f0d58f": {
+      "type": "link",
+      "values": {
+        "url": "https://bitcoin.org/en/scams"
+      }
+    },
+    "LINK-e50425": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/tayvano_/status/1516225457640787969"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:56:22.011Z",
+      "status": "success"
+    }
+  }
+}

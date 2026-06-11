@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-08T07:36:07.543Z",
+  "englishManifestHash": "80d6de5c34d3",
+  "placeholderOrder": [
+    "LINK-0da87f"
+  ],
+  "placeholderMap": {
+    "LINK-0da87f": {
+      "type": "link",
+      "values": {
+        "url": "/terms-of-use/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:36:07.543Z",
+      "status": "success"
+    }
+  }
+}

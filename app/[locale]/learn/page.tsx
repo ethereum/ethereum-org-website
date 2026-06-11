@@ -239,237 +239,223 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         heroSection={<HubHero {...heroContent} />}
         showDropdown={false}
       >
-        <div className="space-y-24 max-lg:pt-10">
-          {/* Section 1: Understand Ethereum */}
-          <Section id={tocItems[0].id} className="space-y-16">
-            <div className="space-y-8">
-              <h2>{tocItems[0].title}</h2>
-              <p>
-                {t("what-is-crypto-2-before-link")}{" "}
-                <InlineLink href="/">{tCommon("ethereum")}</InlineLink>{" "}
-                {t("what-is-crypto-2-after-link")}
-              </p>
+        {/* Section 1: Understand Ethereum */}
+        <Section id={tocItems[0].id}>
+          <h2>{tocItems[0].title}</h2>
+          <p>
+            {t("what-is-crypto-2-before-link")}{" "}
+            <InlineLink href="/">{tCommon("ethereum")}</InlineLink>{" "}
+            {t("what-is-crypto-2-after-link")}
+          </p>
 
-              <Grid>
-                <LearnCard
-                  href="/what-is-ethereum/"
-                  image={whatIsEth}
-                  title={t("what-is-ethereum-card-title")}
-                  description={t("understand-ethereum-card-description")}
-                  ctaLabel={t("understand-ethereum-cta")}
-                />
-                <LearnCard
-                  href="/what-is-ether/"
-                  image={eth}
-                  title={t("what-is-eth-card-title")}
-                  description={t("what-is-eth-description")}
-                  ctaLabel={t("what-is-eth-cta")}
-                />
-                <LearnCard
-                  href="/ethereum-vs-bitcoin/"
-                  image={financeTransparent}
-                  title={t("ethereum-vs-bitcoin-card-title")}
-                  description={t("ethereum-vs-bitcoin-card-description")}
-                  ctaLabel={t("ethereum-vs-bitcoin-cta")}
-                />
-              </Grid>
-
-              <h3>{t("keep-learning-title")}</h3>
-              <Grid>
-                <LearnCard
-                  href="/what-is-the-ethereum-network/"
-                  image={developersEthBlocks}
-                  title={t("ethereum-network-card-title")}
-                  description={t("ethereum-network-card-description")}
-                  ctaLabel={t("ethereum-network-cta")}
-                />
-                <LearnCard
-                  href="/web3/"
-                  image={impact}
-                  title={t("what-is-web3-card-title")}
-                  description={t("what-is-web3-card-description")}
-                  ctaLabel={t("what-is-web3-cta")}
-                />
-                <LearnCard
-                  href="/smart-contracts/"
-                  image={hackathon}
-                  title={t("smart-contracts-card-title")}
-                  description={t("smart-contracts-card-description")}
-                  ctaLabel={t("smart-contracts-cta")}
-                />
-              </Grid>
-
-              <AdditionalDocReading
-                heading={t("additional-reading-more-on-ethereum-basics")}
-                docLinks={[
-                  { href: "/guides/", children: t("guides-hub-desc") },
-                  { href: "/quizzes/", children: t("quiz-hub-desc") },
-                  {
-                    href: "/ethereum-history-founder-and-ownership/",
-                    children: t("more-on-ethereum-history"),
-                  },
-                  {
-                    href: "https://www.youtube.com/watch?v=UihMqcj-cqc",
-                    children: t(
-                      "additional-reading-ethereum-in-thirty-minutes"
-                    ),
-                    isExternal: true,
-                  },
-                ]}
-              />
-            </div>
-          </Section>
-
-          {/* Section 2: How to use Ethereum */}
-          <Section id={tocItems[1].id} className="space-y-16">
-            <div className="space-y-8">
-              <h2>{tocItems[1].title}</h2>
-              <p>{t("how-do-i-use-ethereum-1")}</p>
-
-              <Grid>
-                <LearnCard
-                  href="/wallets/"
-                  image={wallet}
-                  title={t("what-is-a-wallet-card-title")}
-                  description={t("wallets-card-description")}
-                  ctaLabel={t("wallets-cta")}
-                />
-                <LearnCard
-                  href="/wallets/find-wallet/"
-                  image={futureTransparent}
-                  title={t("find-a-wallet-card-title")}
-                  description={t("find-a-wallet-card-description")}
-                  ctaLabel={t("find-a-wallet-button")}
-                />
-                <LearnCard
-                  href="/get-eth/"
-                  image={eth}
-                  title={t("get-eth-card-title")}
-                  description={t("get-eth-card-description")}
-                  ctaLabel={t("get-eth-cta")}
-                />
-              </Grid>
-
-              <AdditionalDocReading
-                heading={t("additional-reading-more-on-using-ethereum")}
-                docLinks={[
-                  {
-                    href: "/guides/how-to-create-an-ethereum-account/",
-                    children: t(
-                      "additional-reading-how-to-create-an-ethereum-account"
-                    ),
-                  },
-                  {
-                    href: "/guides/how-to-use-a-wallet/",
-                    children: t("additional-reading-how-to-use-a-wallet"),
-                  },
-                ]}
-              />
-            </div>
-          </Section>
-
-          {/* Section 3: What is Ethereum used for - banner only */}
-          <Section id={tocItems[2].id} className="space-y-16">
-            <div className="space-y-8">
-              <h2>{tocItems[2].title}</h2>
-              <p>{t("what-is-ethereum-used-for-1")}</p>
-
-              <Callout
-                id="explore-use-cases"
-                title={t("explore-use-cases-card-title")}
-                image={developersEthBlocks}
-                description={t("explore-use-cases-card-description")}
-                variant="sm"
-                as="h3"
-              >
-                <ButtonLink href="/use-cases/">
-                  {t("explore-use-cases-cta")}
-                </ButtonLink>
-              </Callout>
-            </div>
-          </Section>
-
-          {/* Section 4: Go deeper */}
-          <Section id={tocItems[3].id} className="space-y-16">
-            <div className="space-y-8">
-              <h2>{tocItems[3].title}</h2>
-              <p>{t("go-deeper-description")}</p>
-            </div>
-
-            <Grid>
-              <LearnCard
-                href="/roadmap/"
-                image={merge}
-                title={t("ethereum-upgrades-card-title")}
-                description={t("ethereum-upgrades-card-description")}
-                ctaLabel={t("ethereum-upgrades-card-button")}
-              />
-              <LearnCard
-                href="/whitepaper/"
-                image={financeTransparent}
-                title={t("ethereum-whitepaper-card-title")}
-                description={t("ethereum-whitepaper-card-description")}
-                ctaLabel={t("ethereum-whitepaper-card-button")}
-              />
-              <LearnCard
-                href="/privacy/"
-                image={hackathon}
-                title={t("privacy-card-title")}
-                description={t("privacy-card-description")}
-                ctaLabel={t("privacy-card-button")}
-              />
-            </Grid>
-
-            <AdditionalDocReading
-              heading={t("more-on-ethereum-protocol-title")}
-              docLinks={[
-                {
-                  href: "/energy-consumption/",
-                  children: t("energy-consumption-card-title"),
-                },
-                {
-                  href: "/developers/",
-                  children: t(
-                    "more-on-ethereum-protocol-ethereum-for-developers"
-                  ),
-                },
-                {
-                  href: "/developers/docs/consensus-mechanisms/",
-                  children: t("more-on-ethereum-protocol-consensus"),
-                },
-                {
-                  href: "/developers/docs/evm/",
-                  children: t("more-on-ethereum-protocol-evm"),
-                },
-                {
-                  href: "/developers/docs/nodes-and-clients/",
-                  children: t("more-on-ethereum-protocol-nodes-and-clients"),
-                },
-              ]}
+          <Grid>
+            <LearnCard
+              href="/what-is-ethereum/"
+              image={whatIsEth}
+              title={t("what-is-ethereum-card-title")}
+              description={t("understand-ethereum-card-description")}
+              ctaLabel={t("understand-ethereum-cta")}
             />
-          </Section>
+            <LearnCard
+              href="/what-is-ether/"
+              image={eth}
+              title={t("what-is-eth-card-title")}
+              description={t("what-is-eth-description")}
+              ctaLabel={t("what-is-eth-cta")}
+            />
+            <LearnCard
+              href="/ethereum-vs-bitcoin/"
+              image={financeTransparent}
+              title={t("ethereum-vs-bitcoin-card-title")}
+              description={t("ethereum-vs-bitcoin-card-description")}
+              ctaLabel={t("ethereum-vs-bitcoin-cta")}
+            />
+          </Grid>
 
-          {/* Section 5: Books and podcasts */}
-          <Section id={tocItems[4].id} className="space-y-16">
-            <div className="space-y-8">
-              <h2>{tocItems[4].title}</h2>
+          <h3>{t("keep-learning-title")}</h3>
+          <Grid>
+            <LearnCard
+              href="/what-is-the-ethereum-network/"
+              image={developersEthBlocks}
+              title={t("ethereum-network-card-title")}
+              description={t("ethereum-network-card-description")}
+              ctaLabel={t("ethereum-network-cta")}
+            />
+            <LearnCard
+              href="/web3/"
+              image={impact}
+              title={t("what-is-web3-card-title")}
+              description={t("what-is-web3-card-description")}
+              ctaLabel={t("what-is-web3-cta")}
+            />
+            <LearnCard
+              href="/smart-contracts/"
+              image={hackathon}
+              title={t("smart-contracts-card-title")}
+              description={t("smart-contracts-card-description")}
+              ctaLabel={t("smart-contracts-cta")}
+            />
+          </Grid>
 
-              {furtherReading.map(({ heading, items }) => (
-                <Fragment key={heading}>
-                  <h3>{heading}</h3>
-                  <UnorderedList>
-                    {items.map(({ label, href, description }) => (
-                      <ListItem key={label}>
-                        <InlineLink href={href}>{label}</InlineLink> -{" "}
-                        <em>{description}</em>
-                      </ListItem>
-                    ))}
-                  </UnorderedList>
-                </Fragment>
-              ))}
-            </div>
-          </Section>
-        </div>
+          <AdditionalDocReading
+            heading={t("additional-reading-more-on-ethereum-basics")}
+            docLinks={[
+              { href: "/guides/", children: t("guides-hub-desc") },
+              { href: "/quizzes/", children: t("quiz-hub-desc") },
+              {
+                href: "/ethereum-history-founder-and-ownership/",
+                children: t("more-on-ethereum-history"),
+              },
+              {
+                href: "https://www.youtube.com/watch?v=UihMqcj-cqc",
+                children: t("additional-reading-ethereum-in-thirty-minutes"),
+                isExternal: true,
+              },
+            ]}
+          />
+        </Section>
+
+        {/* Section 2: How to use Ethereum */}
+        <Section id={tocItems[1].id}>
+          <h2>{tocItems[1].title}</h2>
+          <p>{t("how-do-i-use-ethereum-1")}</p>
+
+          <Grid>
+            <LearnCard
+              href="/wallets/"
+              image={wallet}
+              title={t("what-is-a-wallet-card-title")}
+              description={t("wallets-card-description")}
+              ctaLabel={t("wallets-cta")}
+            />
+            <LearnCard
+              href="/wallets/find-wallet/"
+              image={futureTransparent}
+              title={t("find-a-wallet-card-title")}
+              description={t("find-a-wallet-card-description")}
+              ctaLabel={t("find-a-wallet-button")}
+            />
+            <LearnCard
+              href="/get-eth/"
+              image={eth}
+              title={t("get-eth-card-title")}
+              description={t("get-eth-card-description")}
+              ctaLabel={t("get-eth-cta")}
+            />
+          </Grid>
+
+          <AdditionalDocReading
+            heading={t("additional-reading-more-on-using-ethereum")}
+            docLinks={[
+              {
+                href: "/guides/how-to-create-an-ethereum-account/",
+                children: t(
+                  "additional-reading-how-to-create-an-ethereum-account"
+                ),
+              },
+              {
+                href: "/guides/how-to-use-a-wallet/",
+                children: t("additional-reading-how-to-use-a-wallet"),
+              },
+            ]}
+          />
+        </Section>
+
+        {/* Section 3: What is Ethereum used for - banner only */}
+        <Section id={tocItems[2].id}>
+          <h2>{tocItems[2].title}</h2>
+          <p>{t("what-is-ethereum-used-for-1")}</p>
+
+          <Callout
+            id="explore-use-cases"
+            title={t("explore-use-cases-card-title")}
+            image={developersEthBlocks}
+            description={t("explore-use-cases-card-description")}
+            variant="sm"
+            as="h3"
+          >
+            <ButtonLink href="/use-cases/">
+              {t("explore-use-cases-cta")}
+            </ButtonLink>
+          </Callout>
+        </Section>
+
+        {/* Section 4: Go deeper */}
+        <Section id={tocItems[3].id}>
+          <h2>{tocItems[3].title}</h2>
+          <p>{t("go-deeper-description")}</p>
+
+          <Grid>
+            <LearnCard
+              href="/roadmap/"
+              image={merge}
+              title={t("ethereum-upgrades-card-title")}
+              description={t("ethereum-upgrades-card-description")}
+              ctaLabel={t("ethereum-upgrades-card-button")}
+            />
+            <LearnCard
+              href="/whitepaper/"
+              image={financeTransparent}
+              title={t("ethereum-whitepaper-card-title")}
+              description={t("ethereum-whitepaper-card-description")}
+              ctaLabel={t("ethereum-whitepaper-card-button")}
+            />
+            <LearnCard
+              href="/privacy/"
+              image={hackathon}
+              title={t("privacy-card-title")}
+              description={t("privacy-card-description")}
+              ctaLabel={t("privacy-card-button")}
+            />
+          </Grid>
+
+          <AdditionalDocReading
+            heading={t("more-on-ethereum-protocol-title")}
+            docLinks={[
+              {
+                href: "/energy-consumption/",
+                children: t("energy-consumption-card-title"),
+              },
+              {
+                href: "/developers/",
+                children: t(
+                  "more-on-ethereum-protocol-ethereum-for-developers"
+                ),
+              },
+              {
+                href: "/developers/docs/consensus-mechanisms/",
+                children: t("more-on-ethereum-protocol-consensus"),
+              },
+              {
+                href: "/developers/docs/evm/",
+                children: t("more-on-ethereum-protocol-evm"),
+              },
+              {
+                href: "/developers/docs/nodes-and-clients/",
+                children: t("more-on-ethereum-protocol-nodes-and-clients"),
+              },
+            ]}
+          />
+        </Section>
+
+        {/* Section 5: Books and podcasts */}
+        <Section id={tocItems[4].id}>
+          <h2>{tocItems[4].title}</h2>
+
+          {furtherReading.map(({ heading, items }) => (
+            <Fragment key={heading}>
+              <h3>{heading}</h3>
+              <UnorderedList>
+                {items.map(({ label, href, description }) => (
+                  <ListItem key={label}>
+                    <InlineLink href={href}>{label}</InlineLink> -{" "}
+                    <em>{description}</em>
+                  </ListItem>
+                ))}
+              </UnorderedList>
+            </Fragment>
+          ))}
+        </Section>
       </ContentLayout>
     </>
   )

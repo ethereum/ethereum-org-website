@@ -1,89 +1,87 @@
 ---
-title: Contrats intelligents
+title: Introduction aux contrats intelligents
 metaTitle: "Contrats intelligents : Que sont-ils et quels sont leurs avantages"
 description: Une introduction non technique aux contrats intelligents
 lang: fr
 ---
 
-# Introduction aux contrats intelligents {#introduction-to-smart-contracts}
+Les contrats intelligents sont les éléments fondamentaux de la couche applicative d'[Ethereum](/). Ce sont des programmes informatiques stockés sur la [chaîne de blocs](/glossary/#blockchain) qui suivent une logique « si ceci, alors cela », et dont l'exécution est garantie selon les règles définies par leur code, qui ne peut être modifié une fois créé.
 
-<div className="mt-4">
-<ListenToPlayer slug="/smart-contracts/" />
-</div>
+Nick Szabo a inventé le terme « contrat intelligent ». En 1994, il a écrit [une introduction au concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), et en 1996, il a rédigé [une exploration de ce que les contrats intelligents pourraient accomplir](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Les contrats intelligents sont les éléments fondamentaux de la couche applicative d'Ethereum. Ce sont des programmes informatiques stockés sur la [blockchain](/glossary/#blockchain) qui suivent la logique « si ceci alors cela » et sont garantis de s'exécuter selon les règles définies par leur code, qui ne peut être modifié une fois créé.
-
-L'expression « contrat intelligent » a été utilisée en premier par Nick Szabo. En 1994, il a rédigé [une introduction au concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) et en 1996, il a écrit [une exploration de ce que les contrats intelligents pouvaient faire](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
-
-Szabo a imaginé un marché numérique où des processus automatiques et [cryptographiquement sécurisés](/glossary/#cryptography) permettent aux transactions et aux fonctions commerciales de se dérouler sans intermédiaires de confiance. Les contrats intelligents Ethereum concrétisent cette vision.
+Szabo a imaginé une place de marché numérique où des processus automatiques et [sécurisés par la cryptographie](/glossary/#cryptography) permettent aux transactions et aux fonctions commerciales de se dérouler sans intermédiaires de confiance. Les contrats intelligents sur Ethereum mettent cette vision en pratique.
 
 Regardez Finematics expliquer les contrats intelligents :
 
-<YouTube id="pWGLtjG-F5c" />
+<VideoWatch slug="smart-contracts-code-is-law" />
 
 ## La confiance dans les contrats conventionnels {#trust-and-contracts}
 
-L'un des problèmes majeurs d'un contrat classique est la nécessité que des personnes de confiance assurent le suivi des résultats du contrat.
+L'un des plus grands problèmes d'un contrat traditionnel est la nécessité de faire confiance à des individus pour respecter les résultats du contrat.
 
-En voici un exemple :
+Voici un exemple :
 
-Alice et Bob font une course de vélo. Imaginons qu'Alice parie 10 € avec Bob qu'elle gagnera la course. Bob est sûr de gagner et accepte le pari. Finalement, Alice devance largement Bob et gagne de façon incontestable la course. Mais Bob refuse de payer le pari, prétendant qu'Alice a dû tricher.
+Alice et Bob font une course de vélo. Disons qu'Alice parie 10 $ avec Bob qu'elle gagnera la course. Bob est convaincu qu'il sera le vainqueur et accepte le pari. À la fin, Alice termine la course bien avant Bob et est la gagnante incontestée. Mais Bob refuse de payer le pari, affirmant qu'Alice a dû tricher.
 
-Cet exemple ridicule illustre le problème de tout accord non intelligent. Même si les conditions de l'accord sont remplies (p. ex., vous êtes le vainqueur de la course), vous devez toujours faire confiance à une autre personne pour honorer l'accord (p. ex., payer le pari).
+Cet exemple absurde illustre le problème de tout accord non intelligent. Même si les conditions de l'accord sont remplies (c'est-à-dire que vous êtes le vainqueur de la course), vous devez toujours faire confiance à une autre personne pour honorer l'accord (c'est-à-dire payer le pari).
 
 ## Un distributeur automatique numérique {#vending-machine}
 
-Nous pouvons comparer simplement un contrat intelligent à un distributeur automatique, qui fonctionne de manière assez similaire à un contrat intelligent ; des intrants spécifiques qui garantissent des résultats prédéterminés.
+Une métaphore simple pour un contrat intelligent est un distributeur automatique, qui fonctionne de manière assez similaire à un contrat intelligent : des entrées spécifiques garantissent des sorties prédéterminées.
 
-- Vous choisissez un produit
+- Vous sélectionnez un produit
 - Le distributeur automatique affiche le prix
 - Vous payez le prix
 - Le distributeur automatique vérifie que vous avez payé le bon montant
-- Le distributeur automatique vous remet votre article
+- Le distributeur automatique vous donne votre article
 
-Le distributeur automatique ne distribuera le produit choisi que si toutes les conditions sont remplies. Si vous ne sélectionnez pas un produit ou que vous n'insérez pas le montant suffisant, le distributeur automatique ne distribuera pas le produit.
+Le distributeur automatique ne distribuera le produit souhaité qu'une fois toutes les exigences remplies. Si vous ne sélectionnez pas de produit ou n'insérez pas assez d'argent, le distributeur automatique ne vous donnera pas votre produit.
 
 ## Exécution automatique {#automation}
 
-Le principal avantage d'un contrat intelligent est qu'il exécute de manière déterministe un code non ambigu lorsque certaines conditions sont remplies. Il n'est pas nécessaire d'attendre qu'un humain interprète ou négocie le résultat. Il n'est donc plus nécessaire de recourir à des intermédiaires de confiance.
+Le principal avantage d'un contrat intelligent est qu'il exécute de manière déterministe un code sans ambiguïté lorsque certaines conditions sont remplies. Il n'est pas nécessaire d'attendre qu'un humain interprète ou négocie le résultat. Cela supprime le besoin d'intermédiaires de confiance.
 
-Par exemple, vous pouvez rédiger un contrat intelligent qui détient des fonds en fiducie pour un enfant, autorisant celui-ci à retirer des fonds seulement à partir d'une date précise. S'il essaie de se retirer avant cette date, le contrat intelligent ne s'exécutera pas. Vous pouvez également rédiger un contrat qui vous fournit automatiquement une version numérique du titre de propriété d'une voiture lorsque vous payez le concessionnaire.
+Par exemple, vous pourriez écrire un contrat intelligent qui conserve des fonds sous séquestre pour un enfant, lui permettant de retirer les fonds après une date précise. S'il essaie de retirer avant cette date, le contrat intelligent ne s'exécutera pas. Ou vous pourriez écrire un contrat qui vous donne automatiquement une version numérique du titre de propriété d'une voiture lorsque vous payez le concessionnaire.
 
 ## Résultats prévisibles {#predictability}
 
-Les contrats traditionnels sont ambigus parce qu'ils dépendent de l'homme pour leur interprétation et leur mise en œuvre. Par exemple, deux juges peuvent interpréter un contrat différemment, ce qui peut conduire à des décisions incohérentes et à des résultats inégaux. Les contrats intelligents éliminent cette possibilité. En effet, les contrats intelligents s'exécutent précisément en fonction des conditions écrites dans le code du contrat. Cette précision signifie que, dans les mêmes circonstances, le contrat intelligent produit le même résultat.
+Les contrats traditionnels sont ambigus car ils dépendent des humains pour les interpréter et les appliquer. Par exemple, deux juges pourraient interpréter un contrat différemment, ce qui pourrait conduire à des décisions incohérentes et à des résultats inégaux. Les contrats intelligents éliminent cette possibilité. Au lieu de cela, les contrats intelligents s'exécutent précisément en fonction des conditions écrites dans le code du contrat. Cette précision signifie que, dans les mêmes circonstances, le contrat intelligent produira le même résultat.
 
 ## Registre public {#public-record}
 
-Les contrats intelligents sont utiles pour les audits et le suivi. Comme les contrats intelligents Ethereum sont sur une blockchain publique, tout le monde peut suivre instantanément les transferts d'actifs ainsi que toute autre information connexe. Vous pouvez par exemple vérifier si quelqu'un a envoyé de l'argent à votre adresse.
+Les contrats intelligents sont utiles pour les audits et le suivi. Étant donné que les contrats intelligents Ethereum sont sur une chaîne de blocs publique, n'importe qui peut suivre instantanément les transferts d'actifs et d'autres informations connexes. Par exemple, vous pouvez vérifier que quelqu'un a envoyé de l'argent à votre adresse.
 
-## Protection de la vie privée {#privacy-protection}
+## Protection de la confidentialité {#privacy-protection}
 
-Les contrats intelligents protègent également votre vie privée. Ethereum étant un réseau pseudonyme (vos transactions sont liées publiquement à une adresse cryptographique unique, et non à votre identité), vous pouvez protéger votre vie privée.
+Les contrats intelligents protègent également votre confidentialité. Puisqu'Ethereum est un réseau pseudonyme (vos transactions sont liées publiquement à une adresse cryptographique unique, et non à votre identité), vous pouvez protéger votre confidentialité des observateurs.
 
 ## Conditions visibles {#visible-terms}
 
-Enfin, comme pour les contrats traditionnels, vous pouvez vérifier le contenu d'un contrat intelligent avant de le signer (ou d'interagir avec). La transparence d'un contrat intelligent garantit que tout le monde peut l'examiner.
+Enfin, comme pour les contrats traditionnels, vous pouvez vérifier ce que contient un contrat intelligent avant de le signer. Contrairement à un contrat traditionnel, la transparence onchain d'un contrat intelligent permet à quiconque de l'examiner et de le réviser avant d'interagir avec lui. 
+
+Cependant, bien que n'importe qui puisse consulter les conditions d'un contrat intelligent, les données brutes de transaction sont conçues pour être interprétées par des applications et des portefeuilles, et non par des humains. Parce que ces données sont si difficiles à lire, les utilisateurs sont souvent confrontés à un risque de sécurité majeur appelé « signature aveugle », c'est-à-dire l'approbation d'une transaction qui interagit avec un contrat intelligent sans vraiment comprendre ce qu'elle fera. 
+
+L'écosystème Ethereum est en train de faire la transition vers des normes de **[signature en clair](https://clearsigning.org/)** (spécifiquement l'[ERC-7730](https://eips.ethereum.org/EIPS/eip-7730)). La signature en clair traduit les données opaques des contrats intelligents en descriptions de transaction simples et lisibles par l'homme, garantissant que quiconque puisse comprendre la véritable intention d'un contrat avant de signer.
 
 ## Cas d'utilisation des contrats intelligents {#use-cases}
 
 Les contrats intelligents peuvent faire essentiellement tout ce que les programmes informatiques peuvent faire.
 
-Ils peuvent effectuer des calculs, créer de la monnaie, stocker des données, frapper des [NFTs](/glossary/#nft), envoyer des communications et même générer des graphiques. Voici quelques exemples courants et concrets :
+Ils peuvent effectuer des calculs, créer de la monnaie, stocker des données, frapper des [NFT](/glossary/#nft), envoyer des communications et même générer des graphiques. Voici quelques exemples populaires du monde réel :
 
-- [Stablecoins](/stablecoins/)
-- [Création et distribution d'actifs numériques uniques](/nft/)
-- [Un échange de devises automatique et ouvert](/get-eth/#dex)
-- [Jeux décentralisés](/apps/categories/gaming)
+- [Les stablecoins](/stablecoins/)
+- [La création et la distribution d'actifs numériques uniques](/nft/)
+- [Un bureau de change automatique et ouvert](/get-eth/#dex)
+- [Les jeux décentralisés](/apps/categories/gaming)
 - [Une police d'assurance qui paie automatiquement](https://etherisc.com/)
-- [Une norme qui permet aux gens de créer des devises personnalisées et interopérables](/developers/docs/standards/tokens/)
+- [Une norme qui permet aux gens de créer des monnaies personnalisées et interopérables](/developers/docs/standards/tokens/)
 
-## En savoir plus {#further-reading}
+## Complément d'information {#further-reading}
 
 - [Comment les contrats intelligents vont changer le monde](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Les contrats intelligents pour les développeurs](/developers/docs/smart-contracts/)
 - [Apprendre à écrire des contrats intelligents](/developers/learning-tools/)
-- [Mastering Ethereum – Qu'est-ce qu'un contrat intelligent ?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Mastering Ethereum - Qu'est-ce qu'un contrat intelligent ?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
 
 <Divider />
 

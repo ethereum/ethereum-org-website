@@ -1,75 +1,73 @@
 ---
-title: "Kripto fonlarınızın akıllı sözleşme erişimini nasıl iptal edebilirsiniz?"
-description: "İstismarcı akıllı sözleşmenin token erişimini kaldırma üzerine bir rehber"
+title: Kripto fonlarınıza olan akıllı sözleşme erişimi nasıl iptal edilir
+description: Kötü niyetli akıllı sözleşme token erişimini iptal etme üzerine bir nasıl yapılır rehberi
 lang: tr
 ---
 
-# Kripto fonlarınızın akıllı sözleşme erişimini nasıl iptal edebilirsiniz?
+Bu rehber, fonlarınıza erişim izni verdiğiniz tüm [akıllı sözleşmelerin](/glossary/#smart-contract) bir listesini nasıl görüntüleyeceğinizi ve bunları nasıl iptal edeceğinizi öğretecektir.
 
-Bu rehber, fonlarınıza erişim izni verdiğiniz [akıllı sözleşmeler](/glossary/#smart-contract) listesini nasıl görebileceğinize ve izinlerinizi nasıl iptal edebileceğinize dair size bilgi verir.
+Bazen kötü niyetli geliştiriciler, akıllı sözleşmelerle etkileşime giren habersiz kullanıcıların fonlarına erişim sağlayan arka kapılar inşa ederler. Sıklıkla olan şey, bu tür platformların gelecekte küçük miktarlarda [gaz](/glossary/#gas) tasarrufu yapmak amacıyla kullanıcıdan **sınırsız sayıda token** harcama izni istemesidir, ancak bu artan bir riskle birlikte gelir.
 
-Bazen kötü amaçlı geliştiriciler akıllı sözleşmelere bu sözleşmelerle etkileşime geçen habersiz kullanıcıların fonlarına erişim sağlayacak arka kapılar eklerler. Genellikle bu tür platformlar, gelecekte küçük miktarlarda [gaz](/glossary/#gas) tasarrufu sağlamak amacıyla kullanıcıdan **sınırsız sayıda jeton** harcama izni ister ancak bu, artan riskleri de beraberinde getirir.
+Bir platform [cüzdanınızdaki](/glossary/#wallet) bir token üzerinde sınırsız erişim hakkına sahip olduğunda, fonlarınızı onların platformundan cüzdanınıza çekmiş olsanız bile tüm bu token'ları harcayabilirler. Kötü niyetli aktörler fonlarınıza erişmeye devam edebilir ve sizin için hiçbir kurtarma seçeneği bırakmadan bunları kendi cüzdanlarına çekebilirler.
 
-Bir platform [cüzdanınızdaki](/glossary/#wallet) bir jetona sınırsız erişim hakkına sahip olduğunda, platformdan fonlarınızı çekmiş olsanız bile o jetonların hepsini harcayabilir. Kötü amaçlı aktörler hâlâ fonlarınıza erişim sağlayabilir ve size kurtarma şansı vermeden kendi cüzdanlarına çekebilirler.
+Tek koruma yöntemi, test edilmemiş yeni projeleri kullanmaktan kaçınmak, yalnızca ihtiyacınız olanı onaylamak veya erişimi düzenli olarak iptal etmektir. Peki, bunu nasıl yaparsınız?
 
-Buna karşı biricik korunma yolları test edilmemiş yeni projeleri kullanmaktan kaçınmak, sadece ihtiyacınız kadarına izin vermek veya düzenli olarak erişimi kaldırmaktır. Peki, bunu nasıl yaparsınız?
+## 1. Adım: Erişim iptal etme araçlarını kullanın {#step-1-use-revoke-access-tools}
 
-## 1. Adım: Erişim kaldırma araçları kullanın
-
-Bazı web siteleri adresinize bağlı akıllı sözleşmeleri görmenize ve kaldırmanıza olanak sağlar. Web sitesini ziyaret edin ve cüzdanınızı bağlayın:
+Çeşitli web siteleri, adresinize bağlı akıllı sözleşmeleri görüntülemenize ve iptal etmenize olanak tanır. Web sitesini ziyaret edin ve cüzdanınızı bağlayın:
 
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
 - [Blockscout](https://eth.blockscout.com/essential-dapps/revoke) (Ethereum)
-- [Revoke](https://revoke.cash/) (birden çok ağ)
-- [Unrekt](https://app.unrekt.net/) (birden çok ağ)
-- [EverRevoke](https://everrise.com/everrevoke/) (birden çok ağ)
+- [Revoke](https://revoke.cash/) (birden fazla ağ)
+- [Unrekt](https://app.unrekt.net/) (birden fazla ağ)
+- [EverRevoke](https://everrise.com/everrevoke/) (birden fazla ağ)
 
-## 2. Adım: Cüzdanınızı bağlayın
+## 2. Adım: Cüzdanınızı bağlayın {#step-2-connect-your-wallet}
 
-Siteye girdiğiniz anda, "Connect wallet"(Cüzdanı bağla) üzerine tıklayın. Web sitesi sizi cüzdanı bağlamaya yönlendirmelidir.
+Web sitesine girdikten sonra "Cüzdanı bağla" (Connect wallet) seçeneğine tıklayın. Web sitesi cüzdanınızı bağlamanızı isteyecektir.
 
-Cüzdanınızda ve web sitesinde aynı ağı kullandığınızdan emin olun. Sadece seçili ağla ilişkili akıllı sözleşmeleri göreceksiniz. Örnek olarak, Ethereum Ana Ağı'na bağlanırsanız sadece Ethereum sözleşmeleri göreceksiniz, Polygon gibi diğer ağlardaki sözleşmeleri değil.
+Cüzdanınızda ve web sitesinde aynı ağı kullandığınızdan emin olun. Yalnızca seçilen ağla ilgili akıllı sözleşmeleri göreceksiniz. Örneğin, Ethereum Ana Ağı'na bağlanırsanız, Polygon gibi diğer zincirlerdeki sözleşmeleri değil, yalnızca Ethereum sözleşmelerini görürsünüz.
 
-## 3. Adım: Kaldırmak istediğiniz bir akıllı sözleşme seçin
+## 3. Adım: İptal etmek istediğiniz bir akıllı sözleşmeyi seçin {#step-3-select-a-smart-contract-you-wish-to-revoke}
 
-Token'larınıza erişim izni olan tüm sözleşmeleri ve bunların harcama limitlerini görmelisiniz. Sonlandırmak istediğinizi bulun.
+Token'larınıza erişim izni verilen tüm sözleşmeleri ve bunların harcama limitlerini görmelisiniz. Sonlandırmak istediğinizi bulun.
 
-Hangi sözleşmeyi seçmek istediğinizi bilmiyorsanız, hepsini kaldırabilirsiniz. Sizin için herhangi bir sıkıntı yaratmaz, ancak bu sözleşmelerle etkileşime geçtiğiniz bir dahaki seferde yeni izinler vermeniz gerekecektir.
+Hangi sözleşmeyi seçeceğinizi bilmiyorsanız, hepsini iptal edebilirsiniz. Bu sizin için herhangi bir sorun yaratmayacaktır, ancak bu sözleşmelerden herhangi biriyle bir sonraki etkileşiminizde yeni bir izin seti vermeniz gerekecektir.
 
-## 4. Adım: Fonlarınıza erişimi kaldırın
+## 4. Adım: Fonlarınıza erişimi iptal edin {#step-4-revoke-access-to-your-funds}
 
-Kaldırdığınızda, cüzdanınızda yeni bir işlem önerisi görmelisiniz. Bu beklenen bir durumdur. Kaldırmanın başarılı olması için ücreti ödemeniz gerekecektir. Ağa bağlı olarak bu işlem bir veya birkaç dakika arasında sürebilir.
+İptal et (revoke) seçeneğine tıkladığınızda, cüzdanınızda yeni bir işlem önerisi görmelisiniz. Bu beklenen bir durumdur. İptal işleminin başarılı olması için ücreti ödemeniz gerekecektir. Ağa bağlı olarak bunun işlenmesi bir dakikadan birkaç dakikaya kadar sürebilir.
 
-Kaldırılmış sözleşmenin listeden gidip gitmediğini kontrol etmek için birkaç dakika sonra kaldırma aracını yenilemenizi öneririz.
+İptal edilen sözleşmenin listeden kaybolup kaybolmadığını iki kez kontrol etmek için birkaç dakika sonra iptal aracını yenilemenizi ve cüzdanınızı tekrar bağlamanızı tavsiye ederiz.
 
-<mark>Asla projelere jetonlarınıza sınırsız erişim vermemenizi ve tüm jeton izinlerini düzenli olarak kaldırmanızı öneririz. Jeton erişimini kaldırmak asla bir fon kaybına sebep olmamalı, özellikle de yukarıda listelenmiş araçları kullanırsanız.</mark>
+<mark>Projelere token'larınıza sınırsız erişim izni vermemenizi ve tüm token harcama izni erişimlerini düzenli olarak iptal etmenizi öneririz. Token erişimini iptal etmek, özellikle yukarıda listelenen araçları kullanıyorsanız, asla fon kaybıyla sonuçlanmamalıdır.</mark>
 
-<br />
+ <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
+  <div>Daha fazlasını öğrenmek ister misiniz?</div>
   <ButtonLink href="/guides/">
-    Diğer rehberlerimizi inceleyin
+    Diğer rehberlerimize göz atın
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Sıkça sorulan sorular
+## Sıkça sorulan sorular {#frequently-asked-questions}
 
-### Token erişimini kaldırma ayrıca hisseleme, havuz oluşturma, borç verme işlemlerini de kaldırır mı?
+### Token erişimini iptal etmek staking, havuzlama, borç verme vb. işlemleri de sonlandırır mı? {#does-revoking-token-access-also-terminate-staking-pooling-lending-etc}
 
-Hayır, hiçbir [DeFi](/glossary/#defi) stratejinizi etkilemez. Pozisyonlarınızda kalırsınız ve ödüller vb. elde etmeye devam edersiniz.
+Hayır, [merkeziyetsiz finans (DeFi)](/glossary/#defi) stratejilerinizin hiçbirini etkilemeyecektir. Pozisyonlarınızda kalmaya ve ödüller vb. almaya devam edeceksiniz.
 
-### Bir projeden cüzdanın bağlantısını kesmek fonlarımın kullanım izinlerini kaldırmakla aynı mıdır?
+### Bir cüzdanın projeyle bağlantısını kesmek, fonlarımı kullanma iznini kaldırmakla aynı şey midir? {#is-disconnecting-a-wallet-from-a-project-the-same-as-removing-permission-to-use-my-funds}
 
-Hayır, cüzdanınızın bağlantısını projeden kestiyseniz, ancak token izinleri verdiyseniz bunlar, bu token'ları kullanmata devam edebilir. Söz konusu erişimi kaldırmanız gerekir.
+Hayır, cüzdanınızın projeyle bağlantısını kesseniz bile token harcama izni verdiyseniz, bu token'ları kullanmaya devam edebilirler. Bu erişimi iptal etmeniz gerekir.
 
-### Sözleşme izinleri ne zaman sona erer?
+### Sözleşme izninin süresi ne zaman dolacak? {#when-will-the-contract-permission-expire}
 
-Sözleşme izinleri için sona erme tarihi bulunmaz. Sözleşme izinleri verirseniz, verildiğinden yıllar sonrasında bile kullanılabilirler.
+Sözleşme izinlerinde son kullanma tarihi yoktur. Sözleşme izinleri verirseniz, verildikten yıllar sonra bile kullanılabilirler.
 
-### Neden projeler sınırsız token izni ayarlarlar?
+### Projeler neden sınırsız token harcama izni belirliyor? {#why-do-projects-set-unlimited-token-allowance}
 
-Projeler bunu genellikle gereken istek sayısını azaltmak için yaparlar, yani kullanıcı sadece bir defa izin verir ve işlem ücretini bir defa öder. Uygun olmasına rağmen, bu kullanıcıların zamanla yerleşmemiş veya denetlenmemiş sitelerde dikkatsizce izin vermesinden dolayı zararlı olabilir. Bazı cüzdanlar riskinizi sınırlamanız için izin verilen token miktarını sınırlamanıza imkân verir. Daha fazla bilgi için cüzdan sağlayıcınıza başvurun.
+Projeler bunu genellikle gereken istek sayısını en aza indirmek için yapar, yani kullanıcının yalnızca bir kez onaylaması ve işlem ücretini yalnızca bir kez ödemesi gerekir. Kullanışlı olsa da, zamanla kanıtlanmamış veya denetlenmemiş sitelerde kullanıcıların dikkatsizce onaylaması tehlikeli olabilir. Bazı cüzdanlar, riskinizi sınırlamak için onaylanan token miktarını manuel olarak kısıtlamanıza olanak tanır. Daha fazla bilgi için cüzdan sağlayıcınıza danışın.

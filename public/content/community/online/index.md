@@ -4,8 +4,6 @@ description: Discover online forums, chat rooms, and social media communities wh
 lang: en
 ---
 
-# Online communities {#online-communities}
-
 Hundreds of thousands of [Ethereum](/) enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
 
 ## Listing policy {#listing-policy}

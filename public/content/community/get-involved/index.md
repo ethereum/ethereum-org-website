@@ -4,8 +4,6 @@ description: How to get involved in the Ethereum community.
 lang: en
 ---
 
-# How can I get involved? {#get-involved}
-
 The Ethereum community includes people of many different backgrounds and skillsets. Whether you’re a developer, an artist, or an accountant, there are ways to get involved. Here’s a list of suggestions that might help you get started.
 
 Start by reading about the ethereum.org mission and values in our [code of conduct](/community/code-of-conduct).

@@ -63,7 +63,23 @@ Used in 5 places. Don't introduce new uses. Use Tailwind `dark:` variant + seman
 
 ### No `Heading` primitive -- use semantic tags
 
-`base.css` styles `<h1>`-`<h6>` with the right sizes and `font-black`. Just write `<h1>Title</h1>`. Override the size class on the heading element when really needed (`<h2 className="text-4xl">`), but don't re-apply a weight -- a utility-layer `font-bold` silently overrides the base `font-black`. Reinventing with `<div className="text-5xl font-bold">` loses semantics and screen-reader navigation.
+`base.css` styles `<h1>`-`<h6>` with the right sizes and `font-black`. Just write `<h1>Title</h1>`. Override the size on a heading element when really needed (`<h2 className="text-h1">` for an `h2` at `h1` size), but don't re-apply a weight -- a utility-layer `font-bold` silently overrides the base `font-black`. Reinventing with `<div className="text-5xl font-bold">` loses semantics and screen-reader navigation.
+
+### Match a heading size with `text-h1`-`text-h6`, never the raw responsive pair
+
+There are six size utilities -- `text-h1` through `text-h6` (`src/styles/utilities.css`) -- one per heading level. Each bundles the **font-size and line-height** for that level (responsive, e.g. `text-h2` = `text-3xl lg:text-4xl`). `base.css` itself `@apply`s these to the real `<h1>`-`<h6>` tags, so they are the single source of truth for heading sizing.
+
+Whenever you want a non-heading element (or a heading you're resizing) to read at a given heading level's size, use the utility -- **not** the responsive pair it expands to:
+
+```tsx
+// Wrong -- reconstructs h2 sizing by hand; drifts if the scale changes
+<p className="text-3xl lg:text-4xl">Looks like an h2</p>
+
+// Right -- one token, stays in sync with the heading scale
+<p className="text-h2">Looks like an h2</p>
+```
+
+`text-h*` sets size and line-height **only** -- it does *not* set `font-black`. Real headings get their weight from `base.css`; on other elements, set weight separately if you want it.
 
 ### One stray `toLocaleString` in `ui/chart.tsx:241`
 
