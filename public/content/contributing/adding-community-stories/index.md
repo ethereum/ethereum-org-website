@@ -1,10 +1,8 @@
 ---
-title: Adding Community Stories
+title: Adding community stories
 description: How to submit a community story about your experience with Ethereum to ethereum.org
 lang: en
 ---
-
-# Adding community stories {#adding-community-stories}
 
 ## How to contribute a story {#how-to-contribute}
 
