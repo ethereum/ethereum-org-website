@@ -9,39 +9,38 @@ Ethereum.org 是一个开源项目，拥有 **12 000+** 名贡献者，他们帮
 
 我们是一个热情的社区，将帮助你在[以太坊](/)生态系统中成长和学习，同时做出有意义的贡献并获得相关的实践经验！
 
-## 贡献方式 {#ways-to-contribute}
-
 **翻译**
 - [加入翻译计划](/contributing/translation-program/) – 帮助我们将 ethereum.org 翻译成新的语言
 
 **开发**
-- [处理未解决的议题](https://github.com/ethereum/ethereum-org-website/issues) – 我们已确定需要完成的工作
+- [处理未解决的议题](https://github.com/ethereum/ethereum-org-website/issues) – 完成我们已确定需要做的工作
 
 **设计**
 - [帮助设计网站](/contributing/design/) – 各种水平的设计师都可以为改进网站做出贡献
 
 **内容**
 - [创建/编辑内容](/contributing/#how-to-update-content) – 建议新页面或对现有内容进行调整
-- [添加社区资源](/contributing/content-resources/) – 在相关页面添加有用的文章或资源
+- [撰写构建者文章](/contributing/adding-articles/) - 为[最新动态](/latest/)部分贡献一篇文章
+- [添加社区资源](/contributing/content-resources/) – 向相关页面添加有用的文章或资源
+- [推荐报告](/contributing/adding-reports/) - 为[报告](/reports/)页面推荐一份研究报告
 - [推荐设计资源](/contributing/design/adding-design-resources/) – 添加、更新和删除有用的设计资源
 - [测验](/contributing/quizzes/) – 为相关页面添加、更新和删除测验题库
-- [推荐视频](/contributing/adding-videos/) – 为视频库推荐教育视频
+- [推荐视频](/contributing/adding-videos/) – 为视频库推荐一个教育视频
 
 **功能想法**
-- [请求功能](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – 告诉我们你对新功能或设计的任何想法
+- [请求功能](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – 让我们知道你对新功能或设计的任何想法
 
 **产品列表**
-- [添加交易所](/contributing/adding-exchanges/) – 将交易所添加到我们的[交易所查找工具](/get-eth/#country-picker)
-- [添加产品](/contributing/adding-products/) – 将去中心化应用 (dapp) 或钱包添加到相关页面
-- [添加开发者工具](/contributing/adding-developer-tools/) – 将开发者工具添加到相关页面
-- [添加二层网络 (l2)](/contributing/adding-layer-2s/) – 将二层网络 (l2) 添加到相关页面
-- [添加质押产品或服务](/contributing/adding-staking-products/) – 添加有助于促进独立质押、联合质押或质押即服务的项目
-- [添加钱包](/contributing/adding-wallets/) – 为[查找钱包页面](/wallets/find-wallet/)添加钱包
-- [为我们的去中心化科学 (DeSci) 页面推荐项目](/contributing/adding-desci-projects/) – 添加建立在以太坊上、有助于去中心化科学的项目
-- [添加资源](/contributing/adding-resources/) – 将有用的资源添加到任何相关页面
+- [添加交易所](/contributing/adding-exchanges/) – 向我们的[交易所查找工具](/get-eth/#country-picker)添加一个交易所
+- [添加产品](/contributing/adding-products/) – 向相关页面添加去中心化应用 (dapp) 或钱包
+- [添加开发者工具](/contributing/adding-developer-tools/) – 向相关页面添加开发者工具
+- [添加二层网络 (l2)](/contributing/adding-layer-2s/) – 向相关页面添加二层网络 (l2)
+- [添加质押产品或服务](/contributing/adding-staking-products/) – 添加一个有助于促进独立质押、联合质押或质押即服务的项目
+- [添加钱包](/contributing/adding-wallets/) – 为[查找钱包页面](/wallets/find-wallet/)添加一个钱包
+- [为我们的去中心化科学 (DeSci) 页面推荐项目](/contributing/adding-desci-projects/) – 添加一个建立在以太坊上、有助于去中心化科学的项目
+- [添加资源](/contributing/adding-resources/) – 向任何相关页面添加有用的资源
 
 有任何问题？🤔 加入我们的 [Discord 服务器](https://discord.gg/ethereum-org)
-
 ## 开始贡献的良好首选任务 {#good-first-tasks-to-start-contributing}
 
 以下是一些你可以帮助我们解决并负责的当前任务。对于大多数任务，你需要一个 GitHub 账户，因为对网站的大多数更改都是通过 GitHub 进行的。
