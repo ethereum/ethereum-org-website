@@ -9,39 +9,38 @@ Ethereum.org es un proyecto de código abierto con **más de 12 000** colaborado
 
 ¡Somos una comunidad acogedora que te ayudará a crecer y educarte en el ecosistema de [Ethereum](/) mientras contribuyes de manera significativa y obtienes experiencia práctica relevante!
 
-## Formas de contribuir {#ways-to-contribute}
-
 **Traducciones**
-- [Únete al programa de traducción](/contributing/translation-program/): ayúdanos a llevar ethereum.org a nuevos idiomas
+- [Únete al programa de traducción](/contributing/translation-program/) – Ayúdanos a llevar ethereum.org a nuevos idiomas
 
 **Desarrollo**
-- [Trabaja en un problema abierto](https://github.com/ethereum/ethereum-org-website/issues): trabajo que hemos identificado que necesita hacerse
+- [Trabaja en una tarea abierta](https://github.com/ethereum/ethereum-org-website/issues) – Trabajo que hemos identificado que debe realizarse
 
 **Diseño**
-- [Ayuda a diseñar el sitio web](/contributing/design/): los diseñadores de todos los niveles pueden contribuir a mejorar el sitio web
+- [Ayuda a diseñar el sitio web](/contributing/design/) – Diseñadores de todos los niveles pueden contribuir a mejorar el sitio web
 
 **Contenido**
-- [Crea/edita contenido](/contributing/#how-to-update-content): sugiere nuevas páginas o haz ajustes a lo que ya está aquí
-- [Añade recursos de la comunidad](/contributing/content-resources/): añade un artículo o recurso útil a una página relevante
-- [Sugiere un recurso de diseño](/contributing/design/adding-design-resources/): añade, actualiza y elimina recursos de diseño útiles
-- [Cuestionarios](/contributing/quizzes/): añade, actualiza y elimina bancos de preguntas de cuestionarios para una página relevante
-- [Sugiere un video](/contributing/adding-videos/): sugiere un video educativo para la galería de videos
+- [Crea/edita contenido](/contributing/#how-to-update-content) – Sugiere nuevas páginas o haz ajustes a lo que ya está aquí
+- [Escribe un artículo de constructor](/contributing/adding-articles/) - Contribuye con un artículo para la sección [Más reciente](/latest/)
+- [Añade recursos de la comunidad](/contributing/content-resources/) – Añade un artículo o recurso útil a una página relevante
+- [Sugiere un informe](/contributing/adding-reports/) - Sugiere un informe de investigación para la página de [Informes](/reports/)
+- [Sugiere un recurso de diseño](/contributing/design/adding-design-resources/) – Añade, actualiza y elimina recursos de diseño útiles
+- [Cuestionarios](/contributing/quizzes/) – Añade, actualiza y elimina bancos de preguntas de cuestionarios para una página relevante
+- [Sugiere un video](/contributing/adding-videos/) – Sugiere un video educativo para la galería de videos
 
 **Ideas de funciones**
-- [Solicita una función](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=): cuéntanos cualquier idea que tengas para una nueva función o diseño
+- [Solicita una función](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Cuéntanos cualquier idea que tengas para una nueva función o diseño
 
 **Listados de productos**
-- [Añade un exchange](/contributing/adding-exchanges/): añade un exchange a nuestro [buscador de exchanges](/get-eth/#country-picker)
-- [Añade un producto](/contributing/adding-products/): añade una aplicación descentralizada (dapp) o billetera a una página relevante
-- [Añade herramientas para desarrolladores](/contributing/adding-developer-tools/): añade una herramienta para desarrolladores a una página relevante
-- [Añade una capa 2 (l2)](/contributing/adding-layer-2s/): añade una capa 2 (l2) a una página relevante
-- [Añade un producto o servicio de staking](/contributing/adding-staking-products/): añade un proyecto que ayude a facilitar el staking en solitario, el staking conjunto o el staking como servicio
-- [Añade una billetera](/contributing/adding-wallets/): añade una billetera para la [página de buscar billeteras](/wallets/find-wallet/)
-- [Sugiere un proyecto para nuestra página de DeSci](/contributing/adding-desci-projects/): añade un proyecto construido en Ethereum que contribuya a la ciencia descentralizada (DeSci)
-- [Añade un recurso](/contributing/adding-resources/): añade un recurso útil a cualquier página relevante
+- [Añade un exchange](/contributing/adding-exchanges/) – Añade un exchange a nuestro [buscador de exchanges](/get-eth/#country-picker)
+- [Añade un producto](/contributing/adding-products/) – Añade una aplicación descentralizada (dapp) o billetera a una página relevante
+- [Añade herramientas para desarrolladores](/contributing/adding-developer-tools/) – Añade una herramienta para desarrolladores a una página relevante
+- [Añade una capa 2](/contributing/adding-layer-2s/) – Añade una capa 2 (l2) a una página relevante
+- [Añade un producto o servicio de staking](/contributing/adding-staking-products/) – Añade un proyecto que ayude a facilitar el staking en solitario, el staking conjunto o el staking como servicio
+- [Añade una billetera](/contributing/adding-wallets/) – Añade una billetera para la [página de búsqueda de billeteras](/wallets/find-wallet/)
+- [Sugiere un proyecto para nuestra página de DeSci](/contributing/adding-desci-projects/) – Añade un proyecto construido en Ethereum que contribuya a la ciencia descentralizada (DeSci)
+- [Añade un recurso](/contributing/adding-resources/) – Añade un recurso útil a cualquier página relevante
 
 ¿Tienes alguna pregunta? 🤔 Únete a nuestro [servidor de Discord](https://discord.gg/ethereum-org)
-
 ## Buenas tareas iniciales para empezar a contribuir {#good-first-tasks-to-start-contributing}
 
 Estas son algunas tareas actuales que podrías ayudarnos a resolver y de las que podrías hacerte cargo. Para la mayoría necesitarás una cuenta de GitHub, ya que la mayor parte de los cambios en el sitio web se realizan a través de GitHub.
