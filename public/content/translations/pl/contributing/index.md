@@ -9,20 +9,20 @@ Ethereum.org to projekt open-source z ponad **12 000** współtwórców, którzy
 
 Jesteśmy przyjazną społecznością, która pomoże Ci się rozwijać i edukować w ekosystemie [Ethereum](/), jednocześnie wnosząc znaczący wkład i zdobywając odpowiednie praktyczne doświadczenie!
 
-## Sposoby na współtworzenie {#ways-to-contribute}
-
 **Tłumaczenia**
 - [Dołącz do programu tłumaczeń](/contributing/translation-program/) – Pomóż nam udostępnić ethereum.org w nowych językach
 
 **Programowanie**
-- [Pracuj nad otwartym zgłoszeniem (issue)](https://github.com/ethereum/ethereum-org-website/issues) – Prace, które zidentyfikowaliśmy jako wymagające wykonania
+- [Pracuj nad otwartym zgłoszeniem](https://github.com/ethereum/ethereum-org-website/issues) – Prace, które zidentyfikowaliśmy jako wymagające wykonania
 
 **Projektowanie**
-- [Pomóż w projektowaniu strony](/contributing/design/) – Projektanci na wszystkich poziomach mogą przyczynić się do ulepszenia strony internetowej
+- [Pomóż w projektowaniu strony](/contributing/design/) – Projektanci na każdym poziomie mogą przyczynić się do ulepszenia strony
 
 **Treść**
 - [Twórz/edytuj treść](/contributing/#how-to-update-content) – Zaproponuj nowe strony lub wprowadź poprawki do tego, co już tu jest
+- [Napisz artykuł dla budowniczych](/contributing/adding-articles/) - Prześlij artykuł do sekcji [Najnowsze](/latest/)
 - [Dodaj zasoby społeczności](/contributing/content-resources/) – Dodaj pomocny artykuł lub zasób do odpowiedniej strony
+- [Zaproponuj raport](/contributing/adding-reports/) - Zaproponuj raport badawczy na stronę [Raporty](/reports/)
 - [Zaproponuj zasób projektowy](/contributing/design/adding-design-resources/) – Dodawaj, aktualizuj i usuwaj pomocne zasoby projektowe
 - [Quizy](/contributing/quizzes/) – Dodawaj, aktualizuj i usuwaj bazy pytań do quizów dla odpowiedniej strony
 - [Zaproponuj wideo](/contributing/adding-videos/) – Zaproponuj film edukacyjny do galerii wideo
@@ -34,14 +34,13 @@ Jesteśmy przyjazną społecznością, która pomoże Ci się rozwijać i edukow
 - [Dodaj giełdę](/contributing/adding-exchanges/) – Dodaj giełdę do naszej [wyszukiwarki giełd](/get-eth/#country-picker)
 - [Dodaj produkt](/contributing/adding-products/) – Dodaj zdecentralizowaną aplikację (dapp) lub portfel do odpowiedniej strony
 - [Dodaj narzędzia deweloperskie](/contributing/adding-developer-tools/) – Dodaj narzędzie deweloperskie do odpowiedniej strony
-- [Dodaj warstwę 2 (L2)](/contributing/adding-layer-2s/) – Dodaj warstwę 2 (L2) do odpowiedniej strony
-- [Dodaj produkt lub usługę stakingową](/contributing/adding-staking-products/) – Dodaj projekt, który ułatwia staking solo, staking grupowy lub staking jako usługę
-- [Dodaj portfel](/contributing/adding-wallets/) – Dodaj portfel do [strony wyszukiwania portfeli](/wallets/find-wallet/)
+- [Dodaj warstwę 2](/contributing/adding-layer-2s/) – Dodaj warstwę 2 (L2) do odpowiedniej strony
+- [Dodaj produkt lub usługę do stakingu](/contributing/adding-staking-products/) – Dodaj projekt, który ułatwia staking solo, staking grupowy lub staking jako usługę
+- [Dodaj portfel](/contributing/adding-wallets/) – Dodaj portfel na [stronę wyszukiwania portfeli](/wallets/find-wallet/)
 - [Zaproponuj projekt na naszą stronę DeSci](/contributing/adding-desci-projects/) – Dodaj projekt zbudowany na Ethereum, który przyczynia się do zdecentralizowanej nauki (DeSci)
 - [Dodaj zasób](/contributing/adding-resources/) – Dodaj przydatny zasób do dowolnej odpowiedniej strony
 
 Masz pytania? 🤔 Dołącz do naszego [serwera Discord](https://discord.gg/ethereum-org)
-
 ## Dobre pierwsze zadania na start {#good-first-tasks-to-start-contributing}
 
 Oto kilka bieżących zadań, w których rozwiązaniu możesz nam pomóc i za które możesz wziąć odpowiedzialność. Do większości z nich będziesz potrzebować konta na GitHub, ponieważ większość zmian na stronie jest wprowadzana za pośrednictwem GitHub.
