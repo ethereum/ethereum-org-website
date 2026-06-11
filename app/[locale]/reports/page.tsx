@@ -140,10 +140,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p>{t("page-reports-suggest-body")}</p>
           </div>
           <Flex className="flex-wrap gap-4 max-sm:*:[a]:w-full">
-            <ButtonLink
-              href="https://ethereumadoption.com/reports/eth/"
-              variant="outline"
-            >
+            <ButtonLink href="https://ethereumadoption.com/reports/eth/">
               {t("page-reports-more-cta")}
             </ButtonLink>
             <ButtonLink
