@@ -1,5 +1,5 @@
 ---
-title: Adding Articles
+title: Adding articles
 description: Guidelines for contributing builder articles to ethereum.org
 lang: en
 ---
