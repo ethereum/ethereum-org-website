@@ -4,7 +4,7 @@ import { AppWindowMac } from "lucide-react"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
-import { Image } from "@/components/Image"
+import AppCardImage from "@/components/AppCard/AppCardImage"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag, TagProps, TagsInlineText } from "@/components/ui/tag"
 import TruncatedText from "@/components/ui/TruncatedText"
@@ -127,12 +127,13 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
             )}
           >
             {thumbnail ? (
-              <Image
+              <AppCardImage
                 src={thumbnail}
                 alt={name}
                 className="size-full object-contain"
                 width={imageSize ? imageSizePixels[imageSize] : 64}
                 height={imageSize ? imageSizePixels[imageSize] : 64}
+                fallback={fallbackIcon}
               />
             ) : (
               fallbackIcon
