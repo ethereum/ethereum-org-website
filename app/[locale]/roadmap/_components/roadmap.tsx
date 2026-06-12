@@ -82,10 +82,10 @@ const RoadmapPage = () => {
 
   const technicalUpgradesItems = [
     {
-      icon: <DankshardingIcon className="size-7" />,
-      title: t("page-roadmap-danksharding-title"),
-      description: t("page-roadmap-danksharding-description"),
-      href: "/roadmap/danksharding",
+      icon: <ExtraSecurityIcon className="size-7" />,
+      title: t("page-roadmap-post-quantum-title"),
+      description: t("page-roadmap-post-quantum-description"),
+      href: "/roadmap/future-proofing/quantum-resistance",
     },
     {
       icon: <SingleSlotFinalityIcon className="size-7" />,
@@ -94,10 +94,10 @@ const RoadmapPage = () => {
       href: "/roadmap/single-slot-finality",
     },
     {
-      icon: <AccountAbstractionIcon className="size-7" />,
-      title: t("page-roadmap-account-abstraction-title"),
-      description: t("page-roadmap-account-abstraction-description"),
-      href: "/roadmap/account-abstraction",
+      icon: <ExtraSecurityIcon className="size-7" />,
+      title: t("page-roadmap-zkevm-title"),
+      description: t("page-roadmap-zkevm-description"),
+      href: "/roadmap/zkevm",
     },
     {
       icon: <StatelessnessIcon className="size-7" />,
@@ -106,10 +106,16 @@ const RoadmapPage = () => {
       href: "/roadmap/statelessness",
     },
     {
-      icon: <ExtraSecurityIcon className="size-7" />,
-      title: t("page-roadmap-zkevm-title"),
-      description: t("page-roadmap-zkevm-description"),
-      href: "/roadmap/zkevm",
+      icon: <AccountAbstractionIcon className="size-7" />,
+      title: t("page-roadmap-account-abstraction-title"),
+      description: t("page-roadmap-account-abstraction-description"),
+      href: "/roadmap/account-abstraction",
+    },
+    {
+      icon: <DankshardingIcon className="size-7" />,
+      title: t("page-roadmap-danksharding-title"),
+      description: t("page-roadmap-danksharding-description"),
+      href: "/roadmap/danksharding",
     },
   ]
 
