@@ -27,12 +27,12 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
       <img
         className="size-[132px]"
         src={contributor.avatar_url}
-        alt=""
+        alt={contributor.name}
         loading="lazy"
         decoding="async"
       />
       <div className="p-4">
-        <h3 className="mt-2 mb-4 text-md text-body">{contributor.name}</h3>
+        <h3 className="text-md text-body mb-4 mt-2">{contributor.name}</h3>
       </div>
     </>
   )
