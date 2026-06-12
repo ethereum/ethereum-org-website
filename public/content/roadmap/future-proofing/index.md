@@ -53,7 +53,7 @@ A key part of the transition strategy is **EIP-8141**, which introduces native [
 
 The Ethereum Foundation has outlined structured fork milestones targeting completion of core post-quantum infrastructure by approximately 2029. These are planning targets, not guaranteed commitments.
 
-[Read our detailed guide to post-quantum cryptography on Ethereum](/roadmap/future-proofing/quantum-resistance/)
+<ButtonLink variant="outline-color" href="/roadmap/future-proofing/quantum-resistance/">More on quantum resistance</ButtonLink>
 
 ## Simpler and more efficient Ethereum {#simpler-more-efficient-ethereum}
 
