@@ -12,7 +12,7 @@ Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar 
 ## Cara berkontribusi {#ways-to-contribute}
 
 **Terjemahan**
-- [Bergabung dengan program terjemahan](/contributing/translation-program/) – Bantu kami menghadirkan ethereum.org ke dalam bahasa baru
+- [Bergabunglah dengan program terjemahan](/contributing/translation-program/) – Bantu kami menghadirkan ethereum.org ke dalam bahasa baru
 
 **Pengembangan**
 - [Kerjakan masalah terbuka](https://github.com/ethereum/ethereum-org-website/issues) – Pekerjaan yang telah kami identifikasi dan perlu diselesaikan
@@ -22,7 +22,9 @@ Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar 
 
 **Konten**
 - [Buat/edit konten](/contributing/#how-to-update-content) – Sarankan halaman baru atau lakukan penyesuaian pada apa yang sudah ada di sini
+- [Tulis artikel pembangun](/contributing/adding-articles/) - Kontribusikan artikel untuk bagian [Terbaru](/latest/)
 - [Tambahkan sumber daya komunitas](/contributing/content-resources/) – Tambahkan artikel atau sumber daya yang bermanfaat ke halaman yang relevan
+- [Sarankan laporan](/contributing/adding-reports/) - Sarankan laporan penelitian untuk halaman [Laporan](/reports/)
 - [Sarankan sumber daya desain](/contributing/design/adding-design-resources/) – Tambahkan, perbarui, dan hapus sumber daya desain yang bermanfaat
 - [Kuis](/contributing/quizzes/) – Tambahkan, perbarui, dan hapus bank soal kuis untuk halaman yang relevan
 - [Sarankan video](/contributing/adding-videos/) – Sarankan video edukasi untuk galeri video
@@ -36,12 +38,11 @@ Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar 
 - [Tambahkan alat pengembang](/contributing/adding-developer-tools/) – Tambahkan alat pengembang ke halaman yang relevan
 - [Tambahkan lapisan 2 (l2)](/contributing/adding-layer-2s/) – Tambahkan lapisan 2 (l2) ke halaman yang relevan
 - [Tambahkan produk atau layanan staking](/contributing/adding-staking-products/) – Tambahkan proyek yang membantu memfasilitasi staking mandiri, staking gabungan, atau staking sebagai layanan
-- [Tambahkan dompet](/contributing/adding-wallets/) – Tambahkan dompet untuk [halaman cari dompet](/wallets/find-wallet/)
-- [Sarankan proyek untuk halaman sains terdesentralisasi (desci) kami](/contributing/adding-desci-projects/) – Tambahkan proyek yang dibangun di atas Ethereum yang berkontribusi pada sains terdesentralisasi (desci)
-- [Tambahkan sumber daya](/contributing/adding-resources/) – Tambahkan sumber daya yang berguna ke halaman relevan mana pun
+- [Tambahkan dompet](/contributing/adding-wallets/) – Tambahkan dompet untuk [halaman temukan dompet](/wallets/find-wallet/)
+- [Sarankan proyek untuk halaman DeSci kami](/contributing/adding-desci-projects/) – Tambahkan proyek yang dibangun di atas Ethereum yang berkontribusi pada sains terdesentralisasi (desci)
+- [Tambahkan sumber daya](/contributing/adding-resources/) – Tambahkan sumber daya yang berguna ke halaman mana pun yang relevan
 
 Ada pertanyaan? 🤔 Bergabunglah dengan [server Discord](https://discord.gg/ethereum-org) kami
-
 ## Tugas pertama yang baik untuk mulai berkontribusi {#good-first-tasks-to-start-contributing}
 
 Berikut adalah beberapa tugas saat ini yang dapat Anda bantu selesaikan dan ambil tanggung jawabnya. Untuk sebagian besar tugas, Anda akan memerlukan akun GitHub karena sebagian besar perubahan pada situs web dilakukan melalui GitHub.
@@ -91,6 +92,7 @@ Jika kontribusi Anda digabungkan ke dalam ethereum.org, Anda akan memiliki kesem
 [Lebih lanjut tentang OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Cara mengklaim {#how-to-claim}
+
 1. Bergabunglah dengan [server Discord](https://discord.gg/ethereum-org) kami.
 2. Tempelkan tautan ke kontribusi Anda di saluran `#🥇 | proof-of-contribution`.
 3. Tunggu anggota tim kami mengirimi Anda tautan ke OAT Anda.
