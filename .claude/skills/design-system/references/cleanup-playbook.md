@@ -323,7 +323,11 @@ className="z-popover"  // 1500
 
 See `tokens.md` for the full named z-index scale.
 
-## Inlined gradient with hex stops -> token gradient
+## Gradients -> named utilities (closed set)
+
+Gradients are the highest-duplication area of the styling system. The target is one class per gradient, with direction/stops/opacity/dark/RTL baked into the definition - no recipe rebuilt at a call site. See `tokens.md` ("Gradient backgrounds") for the decision ladder and rules; full inventory in `docs/gradient-audit.md`.
+
+### Inlined multi-stop hex gradient -> token utility
 
 ```tsx
 // Before:
@@ -332,10 +336,57 @@ className="bg-linear-to-br from-[#7f7fd5]/20 via-[#86a8e7]/20 to-[#91eae4]/20"
 // After (if a token gradient matches):
 className="bg-gradient-main"
 
-// If no existing gradient matches:
-// 1. Add a new @utility to utilities.css
-// 2. Use it
+// If no existing gradient matches: add a new @utility to utilities.css, then use it.
 ```
+
+### Re-spelled token recipe -> named utility / Card variant
+
+```tsx
+// Before (this exact recipe is hand-copied dozens of times):
+className="bg-linear-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20"
+
+// After (closed-set named utility):
+className="bg-tint-accent-a"
+
+// After (when it's a card): use the Card variant, which applies the utility internally:
+<Card decoration="accent-a">...</Card>
+```
+
+### Our-brand hex -> semantic token
+
+```tsx
+// Before (our-brand purples typed as hex):
+className="bg-linear-to-b from-[#5c1eb4] to-[#7b3fd8]"
+
+// After (semantic tokens; or the named utility once it exists):
+className="bg-linear-to-b from-primary to-primary-hover"
+```
+
+Hex is permitted **only** to match an exact *external* brand color (wallet logos, community-hub city brands). For those, don't re-spell the class per entry - pass the hue to a single locked utility:
+
+```tsx
+// Before (per-entity, repeated 50+ times in data):
+twGradiantBrandColor: "from-[#0052FF]"   // applied with bg-linear-to-b at the call site
+
+// After: only the hue varies; direction/opacity/dark fixed by the utility
+<div className="bg-brand-tint" style={{ "--brand-color": brandHex } as CSSProperties} />
+```
+
+### Deprecated v3 gradient syntax -> v4
+
+```tsx
+// Before (Tailwind v3):
+className="bg-gradient-to-b from-purple-700 to-purple-500"
+
+// After (v4 - the project standard):
+className="bg-linear-to-b from-purple-700 to-purple-500"
+```
+
+### Misnamed / dead gradient tokens
+
+- `bg-gradient-step-1` is a flat color, not a gradient - it's a `--color-*` token. Use it as a color (`bg-...`) and don't treat it as a gradient.
+- Duplicate aliases (e.g. two utilities pointing at the same `--gradient-*` var) should collapse to one name.
+- A gradient `@utility` with zero references is dead - remove it rather than carry it.
 
 ## Inline `<div className="flex flex-col gap-2">` -> `Stack`
 
