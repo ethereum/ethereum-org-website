@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-reports.json",
+  "generatedAt": "2026-06-11T14:14:06.595Z",
+  "rootHash": "69954179e90c",
+  "tree": {
+    "contentHash": "8beaf432cf0d",
+    "anchorHash": "fbf911228a15",
+    "children": {
+      "page-reports-title": {
+        "contentHash": "bb4da123185b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-reports-description": {
+        "contentHash": "8ec8e918337a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-reports-heading": {
+        "contentHash": "4491ae2dd30d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-reports-intro": {
+        "contentHash": "b54efc06be34",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-reports-pdf-size": {
+        "contentHash": "3fb589895d48",
+        "anchorHash": "1cee4d9b3af8",
+        "children": {
+          "prose:1": {
+            "contentHash": "1d393b0081b6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f651b7654a9c"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-reports-web-article": {
+        "contentHash": "f0c0e6b29539",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-reports-suggest-heading": {
+        "contentHash": "95336e3767b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-reports-suggest-body": {
+        "contentHash": "a5997d3df1aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-reports-more-cta": {
+        "contentHash": "7135bbced54c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-reports-suggest-cta": {
+        "contentHash": "353de3559e5d",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-reports-title",
+      "page-reports-description",
+      "page-reports-heading",
+      "page-reports-intro",
+      "page-reports-pdf-size",
+      "page-reports-web-article",
+      "page-reports-suggest-heading",
+      "page-reports-suggest-body",
+      "page-reports-more-cta",
+      "page-reports-suggest-cta"
+    ]
+  },
+  "sourceCommitSha": "0257e2e60d977d7f3209f8c3bc9d5ff14cdfd5bd"
+}

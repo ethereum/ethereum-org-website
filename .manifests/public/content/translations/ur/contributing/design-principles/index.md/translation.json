@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-08T08:18:19.494Z",
+  "englishManifestHash": "cabe908bdb9b",
+  "placeholderOrder": [
+    "LINK-84bf04",
+    "LINK-177d97",
+    "LINK-8eab9b",
+    "LINK-495268"
+  ],
+  "placeholderMap": {
+    "LINK-84bf04": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/"
+      }
+    },
+    "LINK-177d97": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-8eab9b": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    },
+    "LINK-495268": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title="
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:18:19.494Z",
+      "status": "success"
+    }
+  }
+}

@@ -7,6 +7,7 @@ import type { Lang } from "@/lib/types"
 
 import { FeedbackThumbsUpIcon } from "@/components/icons"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
@@ -63,41 +64,45 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   }
 
   return (
-    <div
-      className="mt-8 mb-4 flex w-full flex-col rounded border border-body-light bg-feedback-gradient p-6"
+    <aside
+      className="mt-8 mb-4 flex w-full max-w-3xl flex-col gap-4"
       {...props}
       dir={dir}
     >
-      <div className="flex flex-col gap-4">
-        <h2 className="mb-2 text-xl lg:text-2xl">
-          {getTitle(feedbackSubmitted)}
-        </h2>
-        {feedbackSubmitted && (
-          <p>
-            {t("feedback-widget-thank-you-subtitle")}{" "}
-            <Translation id="feedback-widget-thank-you-subtitle-ext" />
-          </p>
-        )}
-        <div className="flex gap-4">
-          {!feedbackSubmitted ? (
-            <>
-              <Button variant="outline" onClick={() => handleSubmit(true)}>
-                <FeedbackThumbsUpIcon className="text-2xl" />
-                {t("yes")}
-              </Button>
-              <Button variant="outline" onClick={() => handleSubmit(false)}>
-                <FeedbackThumbsUpIcon className="-scale-y-100 text-2xl" />
-                {t("no")}
-              </Button>
-            </>
-          ) : (
-            <Button variant="outline" onClick={handleSurveyOpen}>
+      <h2 className="text-h3">{getTitle(feedbackSubmitted)}</h2>
+
+      <div
+        className={cn("flex gap-x-4 gap-y-8", feedbackSubmitted && "flex-col")}
+      >
+        {!feedbackSubmitted ? (
+          <>
+            <Button variant="outline" onClick={() => handleSubmit(true)}>
+              <FeedbackThumbsUpIcon className="text-2xl" />
+              {t("yes")}
+            </Button>
+            <Button variant="outline" onClick={() => handleSubmit(false)}>
+              <FeedbackThumbsUpIcon className="-scale-y-100 text-2xl" />
+              {t("no")}
+            </Button>
+          </>
+        ) : (
+          <>
+            <p>
+              {t("feedback-widget-thank-you-subtitle")}{" "}
+              <Translation id="feedback-widget-thank-you-subtitle-ext" />
+            </p>
+
+            <Button
+              variant="outline"
+              onClick={handleSurveyOpen}
+              className="w-fit max-sm:w-full"
+            >
               {t("feedback-widget-thank-you-cta")}
             </Button>
-          )}
-        </div>
+          </>
+        )}
       </div>
-    </div>
+    </aside>
   )
 }
 

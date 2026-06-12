@@ -4,8 +4,6 @@ description: Non-english resources to learn about Ethereum
 lang: en
 ---
 
-# Language resources {#language-resources}
-
 The Ethereum community is global and comprised of millions of non-English speakers.
 
 Our aim is to provide educational content in all languages and help overcome the language barriers that make onboarding people from all over the world to Ethereum a challenge.

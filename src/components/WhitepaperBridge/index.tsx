@@ -47,9 +47,7 @@ const WhitepaperBridge = async () => {
 
       {/* Main heading */}
       <div className="space-y-3">
-        <h2 className="text-2xl text-body md:text-3xl">
-          {t("heading")}
-        </h2>
+        <h2 className="text-2xl text-body md:text-3xl">{t("heading")}</h2>
         <p className="max-w-2xl text-body-medium">
           {t.rich("description", {
             strong: (chunks) => <strong className="text-body">{chunks}</strong>,

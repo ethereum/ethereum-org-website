@@ -1,72 +1,70 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
+title: Dhana potofu za kawaida kuhusu Ethereum
+description: Kufafanua kutoelewana kwa kawaida kuhusu jinsi Ethereum inavyofanya kazi.
 lang: sw
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
-
 ## Je, Ethereum ni kampuni? {#not-a-company}
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+Ethereum ni teknolojia ya chanzo wazi, iliyogatuliwa inayodumishwa na maelfu ya wachangiaji duniani kote. Hakuna kampuni inayoitwa "Ethereum" inayosimamia akaunti, kushikilia fedha, au kutoa usaidizi kwa wateja.
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
+[Taasisi ya Ethereum](https://ethereum.foundation/) ni shirika lisilo la faida ambalo linaunga mkono maendeleo ya Ethereum, lakini halimiliki au kudhibiti mtandao. Hakuna chombo kimoja kinachofanya hivyo.
 
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[ethereum.org](/)** ni rasilimali ya elimu inayoendeshwa na jamii. Sio soko la kubadilisha fedha, mkoba, au taasisi ya kifedha. Haishikilii fedha zozote za mtumiaji na haiwezi kufikia akaunti zozote.
 
 <DocLink href="/what-is-ethereum/">
   Ethereum ni nini?
 </DocLink>
 
-## Je, mtu anaweza kurejesha au kufungia pesa zangu? {#no-fund-access}
+## Je, mtu anaweza kurejesha au kuzuia fedha zangu? {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+Tofauti na benki, hakuna mamlaka kuu kwenye Ethereum inayoweza kuzuia, kukamata, au kurejesha fedha. Mtu anayeshikilia funguo za siri (au kirai cha mbegu) ana udhibiti kamili na wa pekee juu ya mkoba.
 
-This means:
+Hii inamaanisha:
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- **Hakuna anayeweza kurejesha fedha** ulizotuma kwenye anwani isiyo sahihi
+- **Hakuna anayeweza kubatilisha** muamala baada ya kuthibitishwa
+- **Hakuna anayeweza kuzuia** mkoba wako au kuzuia miamala yako
+- **Hakuna anayeweza kuweka upya nenosiri lako** ikiwa utapoteza kirai cha mbegu chako
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+Hii ndiyo sababu kulinda kirai cha mbegu chako ni muhimu sana. Ndiyo njia pekee ya kufikia mkoba wako. Ikiwa itapotea au kuibiwa, hakuna chaguo la kurejesha.
 
 <DocLink href="/security/">
   Usalama wa Ethereum na kuzuia utapeli
 </DocLink>
 
-## Bado naweza kuchimba Ethereum? {#no-mining}
+## Je, bado ninaweza kufanya uchimbaji wa Ethereum? {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+Ethereum ilibadilika kutoka [Uthibitisho wa Kazi (PoW)](/glossary/#pow) hadi [Uthibitisho wa Dau (PoS)](/glossary/#pos) wakati wa [Unganisho](/roadmap/merge/) mnamo Septemba 2022. Uchimbaji hauwezekani tena kwenye Ethereum.
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+Mtandao sasa unalindwa na wathibitishaji ambao [wanaweka dhamana](/glossary/#staking) ya ETH. Mtu yeyote anaweza kushiriki:
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **Uwekaji dhamana wa kujitegemea:** Endesha mthibitishaji wako mwenyewe ukiwa na ETH 32—[jifunze zaidi](/staking/solo/)
+- **Kuweka hisa kama huduma:** Kaimisha uendeshaji wa nodi huku ukiweka funguo zako—[jifunze zaidi](/staking/saas/)
+- **Uwekaji dhamana wa pamoja:** Weka dhamana ukiwa na chini ya ETH 32 kwa kujiunga na bwawa—[jifunze zaidi](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  Jifunze zaidi kuhusu uwekaji dhamana
 </DocLink>
 
 ## Je, kuna timu ya usaidizi ya Ethereum? {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+Kutafuta "usaidizi rasmi wa Ethereum" ni sawa na kutafuta "usaidizi rasmi wa intaneti." Hii bila shaka haipo, lakini kulingana na suala lako unaweza kutafuta usaidizi kutoka kwa mtoa huduma wako wa intaneti, mtengenezaji wa maunzi ya kipanga njia chako, au mojawapo ya kampuni zilizo nyuma ya kifaa, programu au tovuti unayotumia.
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+Ethereum inafanana na hilo. Hakuna kampuni, timu ya usaidizi, au dawati la msaada nyuma ya Ethereum kwa ujumla, lakini kulingana na suala unaweza kupata msaada kwa kuwasiliana na _mtoa huduma wako wa mkoba_, _huduma ya uwekaji dhamana_, _soko la kubadilisha fedha_, _taasisi ya kifedha_ au _timu inayodumisha programu_ unayotumia.
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+Kwa kuwa Ethereum ni wazi kwa umma kwa chaguo-msingi, unaweza pia kupata [vivinjari vya kitalu](/developers/docs/data-and-analytics/block-explorers/), [zana za uchanganuzi](/developers/tools/analytics/), na [rasilimali nyingine za uchunguzi mtandaoni](/community/support/scams/#analyze) kuwa muhimu katika kuchunguza tatizo moja kwa moja.
 
-That said, no one from Ethereum or ethereum.org will ever:
+Hata hivyo, hakuna mtu kutoka Ethereum au ethereum.org ambaye atawahi:
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- Kuwasiliana nawe kupitia ujumbe wa moja kwa moja
+- Kukuuliza kirai cha mbegu chako au funguo za siri
+- Kukuomba utume ETH ili kuthibitisha mkoba wako
+- Kujitolea kukusaidia kurejesha fedha kwa malipo
 
-**Anyone doing any of the above is trying to scam you.**
+**Mtu yeyote anayefanya lolote kati ya hayo hapo juu anajaribu kukutapeli.**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+Ikiwa unahitaji msaada, jamii halisi zinazoweza kusaidia zimeorodheshwa kwenye [ukurasa wa usaidizi](/community/support/). Hizi ni jamii wazi zinazoendeshwa na watu wa kujitolea—sio njia rasmi za usaidizi.
 
 <DocLink href="/security/">
   Usalama wa Ethereum na kuzuia utapeli

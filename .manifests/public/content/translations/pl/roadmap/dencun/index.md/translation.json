@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "locale": "pl",
+  "translatedAt": "2026-06-08T10:10:53.710Z",
+  "englishManifestHash": "196c0ff16257",
+  "placeholderOrder": [
+    "LINK-d8a6bc",
+    "LINK-a46e3d",
+    "LINK-0c0afc",
+    "LINK-98464c",
+    "LINK-61032d",
+    "LINK-86f5c0",
+    "LINK-6aface",
+    "LINK-5907c8",
+    "LINK-115ec6",
+    "LINK-da2a06",
+    "LINK-a34be1",
+    "LINK-8c7abd",
+    "LINK-27d3d6",
+    "LINK-17f76c",
+    "LINK-3e0326",
+    "LINK-4b1a1c",
+    "LINK-91007d"
+  ],
+  "placeholderMap": {
+    "LINK-d8a6bc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#layer-2"
+      }
+    },
+    "LINK-a46e3d": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#epoch"
+      }
+    },
+    "LINK-0c0afc": {
+      "type": "link",
+      "values": {
+        "url": "/security/"
+      }
+    },
+    "LINK-98464c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#gas"
+      }
+    },
+    "LINK-61032d": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/scaling/"
+      }
+    },
+    "LINK-86f5c0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networking-layer/portal-network/"
+      }
+    },
+    "LINK-6aface": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-5907c8": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/scaling/"
+      }
+    },
+    "LINK-115ec6": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases"
+      }
+    },
+    "LINK-da2a06": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-a34be1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.eip4844.com/"
+      }
+    },
+    "LINK-8c7abd": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4844"
+      }
+    },
+    "LINK-27d3d6": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement"
+      }
+    },
+    "LINK-17f76c": {
+      "type": "link",
+      "values": {
+        "url": "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844"
+      }
+    },
+    "LINK-3e0326": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/proto_danksharding_faq"
+      }
+    },
+    "LINK-4b1a1c": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c"
+      }
+    },
+    "LINK-91007d": {
+      "type": "link",
+      "values": {
+        "url": "https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:10:53.710Z",
+      "status": "success"
+    }
+  }
+}

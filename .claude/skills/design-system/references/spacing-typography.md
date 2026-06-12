@@ -6,23 +6,39 @@ The most common source of "one-off styling" in this codebase is ad-hoc spacing a
 
 Headings (`<h1>`-`<h6>`) are styled by `src/styles/base.css` element defaults. **Just write the semantic tag.** Don't reinvent with `<div className="text-Xxl font-bold">`.
 
-All headings default to `font-black` (weight 900) via `base.css`. **Do not re-apply a weight** -- a hardcoded `font-bold`/`font-semibold` on a heading sits in the utilities layer and silently overrides the base `font-black`, which is exactly the drift the heading-weight standardization removed. If you need a lighter weight for an eyebrow/kicker/label, that's a deliberate `font-normal`/`font-medium` choice, not a default.
+Sizing for each level lives in one place: the `text-h1`-`text-h6` utilities in `src/styles/utilities.css`. Each bundles the **font-size and line-height** for that level (responsive). `base.css` `@apply`s `text-h1` to `<h1>`, `text-h2` to `<h2>`, and so on -- so these utilities are the single source of truth for heading sizing.
 
-| Tag | Default sizing | When to use |
-|---|---|---|
-| `<h1>` | `text-4xl lg:text-5xl font-black` | Page title -- ONE per page |
-| `<h2>` | `text-3xl lg:text-4xl font-black` | Top-level section title |
-| `<h3>` | `text-2xl lg:text-3xl font-black` | Subsection title |
-| `<h4>` | `text-xl lg:text-2xl font-black` | Sub-subsection title |
-| `<h5>` | `text-lg font-black` | Small heading |
-| `<h6>` | `text-base font-black` | Smallest heading; also used in `Alert`/`Callout` titles |
+All headings default to `font-black` (weight 900) via `base.css`. The `text-h*` utilities carry size/line-height **only** -- not the weight. **Do not re-apply a weight** on a real heading -- a hardcoded `font-bold`/`font-semibold` sits in the utilities layer and silently overrides the base `font-black`, which is exactly the drift the heading-weight standardization removed. If you need a lighter weight for an eyebrow/kicker/label, that's a deliberate `font-normal`/`font-medium` choice, not a default.
+
+| Tag | Sizing utility | Expands to | When to use |
+|---|---|---|---|
+| `<h1>` | `text-h1` | `text-4xl lg:text-5xl` | Page title -- ONE per page |
+| `<h2>` | `text-h2` | `text-3xl lg:text-4xl` | Top-level section title |
+| `<h3>` | `text-h3` | `text-2xl lg:text-3xl` | Subsection title |
+| `<h4>` | `text-h4` | `text-xl lg:text-2xl` | Sub-subsection title |
+| `<h5>` | `text-h5` | `text-md lg:text-xl` | Small heading |
+| `<h6>` | `text-h6` | `text-sm lg:text-md` | Smallest heading; also used in `Alert`/`Callout` titles |
+
+### Matching a heading size on any element
+
+To make a non-heading element read at a given heading level's size, apply the utility -- never reconstruct the responsive pair by hand:
+
+```tsx
+// Wrong -- hand-reconstructs h2 sizing; drifts when the scale changes
+<p className="text-3xl lg:text-4xl">Looks like an h2</p>
+
+// Right -- one token, stays in sync with base.css
+<p className="text-h2">Looks like an h2</p>
+```
+
+This is size and line-height only -- it does not apply `font-black`. Set weight separately on a non-heading element if the design wants it.
 
 ### Overrides
 
-If you need a heading at a different size (because the design calls for it), override on the element:
+If you need a real heading at a different level's size (because the design calls for it), reuse the matching utility on the element:
 
 ```tsx
-<h2 className="text-4xl lg:text-5xl">A larger h2</h2>
+<h2 className="text-h1">A larger h2</h2>
 ```
 
 Don't override structurally (e.g., using `<h1>` for an `<h3>`-sized element just to get the size). Heading hierarchy matters for screen readers.
@@ -40,9 +56,66 @@ Don't go from `<h2>` to `<h4>`. Screen reader users navigate by heading level, a
 
 In `PageHero` the eyebrow slot is a discriminated union: pass **either** `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element) **or** `header` -- not both. Don't conflate these fields. See `references/page-hero-walkthrough.md`.
 
-### The "page title" gap
+### Markdown page titles
 
-There's a recurring `text-[2.5rem]` arbitrary value in `MdComponents` for in-article page titles. This is a known gap pending a `--text-page-title` token decision. Until that lands, the arbitrary value is the convention there; don't reinvent your own page-title size. (Note: `PageHero` does **not** use this value -- its title is `text-3xl ... lg:text-6xl` -- so don't copy `text-[2.5rem]` into hero work.)
+In-article (markdown) page titles render as a plain `<h1>` from the layout (`Docs`/`Static`/`Tutorial`) -- the `text-4xl lg:text-5xl` default, no special token. (Historical note: this used to be a `text-[2.5rem]` arbitrary value in `MdComponents`; it's been removed.) `PageHero` owns hero titles separately (`text-3xl ... lg:text-6xl`) -- don't copy hero sizes into article titles or vice versa.
+
+## Content Spacing: the `.flow` rhythm
+
+For prose-like content -- a sequence of mixed headings, paragraphs, and lists -- vertical spacing is owned by the opt-in **`.flow`** system, not by per-element `mt-*`/`mb-*`. Add `flow` to the content region and write semantic tags; the rhythm is automatic.
+
+```tsx
+<div className="flow">
+  <h2>Section title</h2>
+  <p>Body copy. No margin classes needed.</p>
+  <h3>Subsection</h3>
+  <p>More copy.</p>
+</div>
+```
+
+It's already applied in markdown content -- `ContentContainer` and the `MainArticle` in the `Docs`/`Static`/`Tutorial` layouts -- so MDX prose just works. On React pages, add `flow` to a prose region yourself (it is **not** a default on `MainArticle`, since many pages use it as a grid/layout container).
+
+**The rhythm.** One responsive base unit `--space` (`--spacing(4)` = 16px mobile, `--spacing(6)` = 24px from `lg`); every gap is a `margin-top` multiple of it:
+
+| Gap | Multiple | mobile / desktop |
+|---|---|---|
+| default -- any block to any block (heading->content, p->p, p->list, image->p) | `1x` | 16 / 24 |
+| between list items (`li`->`li`) | `0.5x` | 8 / 12 |
+| above a subsection heading (`h3`/`h4`) | `2x` | 32 / 48 |
+| above a section boundary (a top-level `h1`/`h2`, or a `<section>`) | `3x` | 48 / 72 |
+| above a CTA/button group (`[data-flow="cta"]`) | `2x` | 32 / 48 |
+
+The designers' "heading hugs the content it introduces" effect is the `1x` default *below* a heading combined with the larger gap *above* it (3:1 for a section, 2:1 for a subsection) -- not a special tight value.
+
+**Scope.** `flow` styles the direct children of the region *and* the direct children of any `<section>` one level inside it -- so wrap a group of `<h2>` + content in `<Section>`/`<section>` and it gets the rhythm without its own `flow` class. A component that renders its own `<section>` but manages its own spacing opts out with `data-flow="skip"`. The rules are zero-specificity (`:where()`), so a plain utility class still overrides any gap when you genuinely need an exception.
+
+**To nest a group, reach for `<section>` (or `<Section>`), not `<div>`.** Flow reaches one level into a `<section>`, but a `<div>` is opaque to it -- its children get no rhythm at all:
+
+```tsx
+// children space correctly -- flow reaches one level into <section>
+<div className="flow">
+  <h2>Title</h2>
+  <section>
+    <h3>Subsection</h3>
+    <p>Spaced.</p>
+    <p>Spaced.</p>
+  </section>
+</div>
+
+// the <div> blocks flow -- its children get NO rhythm
+<div className="flow">
+  <h2>Title</h2>
+  <div>
+    <h3>Subsection</h3>
+    <p>No space above me.</p>
+    <p>No space above me.</p>
+  </div>
+</div>
+```
+
+**`.flow` vs `Stack`/`gap`.** Use `.flow` for *prose* (mixed heading/paragraph/list streams). Use `Stack`/`gap-*` (below) for *composition* -- repeated like-shaped blocks (cards, grid items, control rows). Don't put both on the same container.
+
+Full design rationale and edge cases: `references/typography-spacing-flow-spec.md`.
 
 ## Spacing Scale
 
@@ -147,6 +220,8 @@ Tailwind text size utilities. Pair with leading utilities (`leading-base`, `lead
 | `text-5xl` | 48px | h1 (desktop) |
 | `text-6xl` / `text-7xl` | 56-72px | Special: `HomeHero` only |
 
+The "Common use" column maps these raw sizes to heading levels for reference. When your intent is "match a heading level's size," reach for the `text-h1`-`text-h6` utilities (see "Heading Sizes" above) instead of the raw class -- they bundle the responsive size + line-height and track `base.css`.
+
 Use semantic tokens (`text-body`, `text-body-medium`, `text-body-light`, `text-primary`, etc.) for color. See `references/tokens.md`.
 
 ### Don't mix arbitrary text sizes
@@ -167,6 +242,6 @@ These are the recurring patterns that cause "every page looks slightly different
 4. **`<div className="text-5xl font-bold">` for headings** -- use `<h1>`-`<h6>`
 5. **Page-level `<section className="my-32 py-16 px-4">`** -- use `Section`
 6. **Page-level horizontal padding hand-rolled** -- check the page layout, not the section
-7. **Arbitrary `text-[2.5rem]` for in-article titles** -- known gap; don't add new instances
+7. **Per-element `mt-*`/`mb-*` chains on prose** -- add `.flow` to the content region and let the rhythm own the spacing
 
 The pattern: when you reach for arbitrary values or inline class chains, pause and check whether a primitive already does this. The answer is almost always yes.

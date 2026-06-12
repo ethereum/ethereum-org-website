@@ -1,0 +1,374 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/guides/how-to-use-a-bridge/index.md",
+  "generatedAt": "2026-06-08T09:53:46.243Z",
+  "rootHash": "19f4ebdb3e06",
+  "tree": {
+    "contentHash": "f3a1a4ba35f4",
+    "anchorHash": "66456b3b3135",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "152ed6d36cf4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "21a7b53833ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "3a0d152e1f72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a58abbdd2bc8",
+        "anchorHash": "6baff4bd9072"
+      },
+      "prose:2": {
+        "contentHash": "321ce2572e86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "1-determine-which-layer-2-network-you-want-to-use": {
+        "contentHash": "092fee594573",
+        "anchorHash": "c9357f03bb7b",
+        "labelHash": "f36bd9b01b4a",
+        "children": {
+          "_label": {
+            "contentHash": "f36bd9b01b4a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "73b619c1be7f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e4f42abfb851",
+            "anchorHash": "3b52f2e35fd0"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "2-go-to-the-selected-bridge": {
+        "contentHash": "83be11102047",
+        "anchorHash": "567ffc1e4b16",
+        "labelHash": "8ca468f6d6d2",
+        "children": {
+          "_label": {
+            "contentHash": "8ca468f6d6d2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "80bc38e7703d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3c2ccf68bd08",
+            "anchorHash": "043f81ba4c79"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "965c8502ab73",
+            "anchorHash": "ab2bfac5d792"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "60215f84f53c",
+            "anchorHash": "ad49025cbaad"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      },
+      "3-connect-to-the-bridge-with-your-wallet": {
+        "contentHash": "51c2f99e0ee8",
+        "anchorHash": "9fac81139a47",
+        "labelHash": "a7545066a4a4",
+        "children": {
+          "_label": {
+            "contentHash": "a7545066a4a4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "00576915a321",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "d5ff4d834036",
+            "anchorHash": "668fca8d66a2"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0"
+        ]
+      },
+      "4-specify-the-amount-and-move-the-funds": {
+        "contentHash": "117194ab79ec",
+        "anchorHash": "660eb79610c5",
+        "labelHash": "cb9ba2961779",
+        "children": {
+          "_label": {
+            "contentHash": "cb9ba2961779",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "e690a19917d3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "d5ff4d834036",
+            "anchorHash": "c90d95222c2c"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0"
+        ]
+      },
+      "5-confirm-the-transaction-in-your-wallet": {
+        "contentHash": "8dc7bd11c37b",
+        "anchorHash": "bee692d3ac6d",
+        "labelHash": "27fd93adb7ec",
+        "children": {
+          "_label": {
+            "contentHash": "27fd93adb7ec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "216fa65d75e5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2fe840e13244",
+            "anchorHash": "3a0cd05a64ae"
+          },
+          "prose:3": {
+            "contentHash": "b068a0c220bc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:1": {
+            "contentHash": "d5ff4d834036",
+            "anchorHash": "155e80fe0122"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "image:1"
+        ]
+      },
+      "6-wait-for-your-funds-to-be-moved": {
+        "contentHash": "ad765313282a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c81f70a5a688",
+        "children": {
+          "_label": {
+            "contentHash": "c81f70a5a688",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "025048be43a4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "7-add-the-selected-layer-2-network-to-your-wallet-optional": {
+        "contentHash": "75f9faa952d6",
+        "anchorHash": "f28c907f40ba",
+        "labelHash": "b087c0e1462b",
+        "children": {
+          "_label": {
+            "contentHash": "b087c0e1462b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "7e7d2669195b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ba588cc0e353",
+            "anchorHash": "296bef0433a7"
+          },
+          "prose:2": {
+            "contentHash": "c9dbc9190541",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:5": {
+            "contentHash": "1019a51618fb",
+            "anchorHash": "922415cc666f",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2937013f2181"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "491aaf33b92d",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "252d79a64486"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "e2a6d4a15100",
+                "anchorHash": "102fdc653ece",
+                "children": {
+                  "attr:className": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e796b9e20a49"
+                  },
+                  "prose:1": {
+                    "contentHash": "9aec37764785",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "html-tag:0": {
+                    "contentHash": "b47f8105a440",
+                    "anchorHash": "b9dbc082e3fe"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:className",
+                  "prose:1",
+                  "html-tag:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "component:4",
+          "component:5"
+        ]
+      },
+      "frequently-asked-questions": {
+        "contentHash": "298c8f1920d2",
+        "anchorHash": "d2c5d961b8e9",
+        "labelHash": "e956a9404b46",
+        "children": {
+          "_label": {
+            "contentHash": "e956a9404b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "what-if-i-have-funds-on-an-exchange": {
+            "contentHash": "2d8212f86c51",
+            "anchorHash": "c9357f03bb7b",
+            "labelHash": "460709134ead",
+            "children": {
+              "_label": {
+                "contentHash": "460709134ead",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "3f12a88bd9ec",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "9de168a704e0",
+                "anchorHash": "3b52f2e35fd0"
+              },
+              "prose:2": {
+                "contentHash": "0895e3ea3d20",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "can-i-go-back-to-ethereum-mainnet-after-i-bridge-my-tokens-to-l2": {
+            "contentHash": "c573a9c6acc9",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "9ec7c0f2196d",
+            "children": {
+              "_label": {
+                "contentHash": "9ec7c0f2196d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "56b06df95177",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "what-if-i-have-funds-on-an-exchange",
+          "can-i-go-back-to-ethereum-mainnet-after-i-bridge-my-tokens-to-l2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "1-determine-which-layer-2-network-you-want-to-use",
+      "2-go-to-the-selected-bridge",
+      "3-connect-to-the-bridge-with-your-wallet",
+      "4-specify-the-amount-and-move-the-funds",
+      "5-confirm-the-transaction-in-your-wallet",
+      "6-wait-for-your-funds-to-be-moved",
+      "7-add-the-selected-layer-2-network-to-your-wallet-optional",
+      "frequently-asked-questions"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

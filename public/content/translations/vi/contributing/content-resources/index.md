@@ -1,30 +1,30 @@
 ---
-title: "Bổ sung tài nguyên nội dung"
+title: Thêm tài nguyên nội dung
 lang: vi
-description: "Các tiêu chí duyệt nội dung tài nguyên bổ sung vào ethereum.org"
+description: Tiêu chí của chúng tôi để liệt kê các tài nguyên nội dung trên ethereum.org
 ---
 
-# Thêm tài nguyên nội dung {#adding-content-resources}
+Chúng tôi không thể hy vọng bao quát được mọi thứ về Ethereum, vì vậy chúng tôi cố gắng giới thiệu một số bài viết, hướng dẫn, bản tin, bảng việc làm và các tài nguyên nội dung tuyệt vời khác do cộng đồng tạo ra. Những tài nguyên này thường cung cấp thông tin chuyên sâu hơn về các chủ đề mà người dùng có thể quan tâm.
 
-Chúng tôi tin rằng không thể bao quát tất cả những nội dung về Ethereum cho nên chúng tôi cố gắng giới thiệu một số bài viết, tài liệu hướng dẫn sử dụng, bản tin điện tử có nội dung xuất sắc, thông tin tuyển dụng và nhiều tài nguyên nội dung tạo ra bởi cộng đồng. Những nội dung đó thường cung cấp thông tin sâu hơn về các chủ đề mà người dùng có thể quan tâm.
-
-Nếu có bạn cảm thấy nên thêm bất kì một nguồn nội dung nào, cứ thoải mái đề nghị nó ở nơi nào phù hợp.
+Nếu có một tài nguyên nội dung mà bạn cảm thấy nên được thêm vào một trang, đừng ngần ngại đề xuất nó ở một nơi phù hợp.
 
 ## Cách chúng tôi quyết định {#how-we-decide}
 
-Tài nguyên học tập sẽ được đánh giá dựa trên các tiêu chí sau:
+Các tài nguyên học tập sẽ được đánh giá theo các tiêu chí sau:
 
-- Nội dung có được cập nhật gần đây?
-- Có phải trả tiền mới xem được nội dung?
-- Thông tin có chính xác không? Là thông tin thực tế hay thiên kiến?
-- Tác giả có đáng tin cậy? Có trích dẫn nguồn tham khảo không?
-- Nội dung này có mang đến giá trị khác biệt so với những tài liệu/đường link hiện có không nhắc tới?
-- Nội dung này có phục vụ cho một trong những [chân dung người dùng](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) của chúng tôi không?
+- Nội dung có được cập nhật không?
+- Nội dung có bị giới hạn bởi tường phí (paywall) không?
+- Thông tin có chính xác không? Nó dựa trên thực tế hay dựa trên quan điểm cá nhân?
+- Tác giả có đáng tin cậy không? Họ có trích dẫn các nguồn tài liệu của mình không?
+- Nội dung này có mang lại giá trị khác biệt mà các tài nguyên/liên kết hiện tại chưa bao quát được không?
+- Nội dung này có phục vụ một trong những [chân dung người dùng](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) của chúng tôi không?
 
 ---
 
 ## Thêm tài nguyên nội dung của bạn {#add-your-content-resource}
 
-Nếu bạn muốn thêm tài nguyên nội dung vào trang ethereum.org và đạt các tiêu chí, hãy tạo góp ý trên Github.
+Nếu bạn muốn thêm một tài nguyên nội dung vào ethereum.org và nó đáp ứng các tiêu chí, hãy tạo một issue trên GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">Tạo góp ý</ButtonLink>
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+  Tạo một issue
+</ButtonLink>

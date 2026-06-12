@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-08T09:46:00.127Z",
+  "englishManifestHash": "07ee46fc6f48",
+  "placeholderOrder": [
+    "LINK-53691e",
+    "IMAGE-9fa983",
+    "LINK-8a1fc8",
+    "LINK-cd105e",
+    "LINK-c079ef",
+    "LINK-f07134"
+  ],
+  "placeholderMap": {
+    "IMAGE-9fa983": {
+      "type": "image",
+      "values": {
+        "path": "./wallet-box.png"
+      }
+    },
+    "LINK-53691e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#nft"
+      }
+    },
+    "LINK-8a1fc8": {
+      "type": "link",
+      "values": {
+        "url": "/guides/"
+      }
+    },
+    "LINK-cd105e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bitcoin.com/get-started/what-is-wbtc/"
+      }
+    },
+    "LINK-c079ef": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#address"
+      }
+    },
+    "LINK-f07134": {
+      "type": "link",
+      "values": {
+        "url": "https://chainlist.org/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:46:00.127Z",
+      "status": "success"
+    }
+  }
+}

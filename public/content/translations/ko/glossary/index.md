@@ -1,10 +1,10 @@
 ---
-title: "이더리움 용어집"
-description: "이더리움 관련 기술 및 비기술 용어를 다루는 미완료된 용어집"
+title: 용어집
+metaTitle: 이더리움 용어집
+description: 이더리움과 관련된 기술 및 비기술 용어의 불완전한 용어집입니다.
 lang: ko
+authors: ["안드레아스 안토노풀로스"]
 ---
-
-# 용어집 {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: ko
 
 ## 출처 {#sources}
 
-_[Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum)의 [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook)에서 CC-BY-SA 라이선스에 따라 일부 내용을 제공합니다._
+_CC-BY-SA 라이선스에 따라 [안드레아스 M. 안토노풀로스, 개빈 우드](https://aantonop.com/books/mastering-ethereum)가 저술한 [마스터링 이더리움(Mastering Ethereum)](https://github.com/ethereumbook/ethereumbook)에서 일부 내용을 제공받았습니다._
 
 <Divider />
 
 ## 이 페이지에 기여하기 {#contribute-to-this-page}
 
-저희가 무엇인가를 놓쳤나요? 정확하지 않은 부분이 있나요? 깃허브의 용어집에 기여하심으로써 개선에 도움을 주세요!
+빠진 내용이 있나요? 잘못된 부분이 있나요? GitHub에서 이 용어집에 기여하여 개선하는 데 도움을 주세요!
 
 [기여하는 방법에 대해 자세히 알아보기](/contributing/adding-glossary-terms)

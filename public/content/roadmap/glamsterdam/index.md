@@ -4,8 +4,6 @@ description: Learn about the Glamsterdam protocol upgrade
 lang: en
 ---
 
-# Glamsterdam {#glamsterdam}
-
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
