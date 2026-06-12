@@ -7,7 +7,7 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "smart-contracts"
+  - "how-ethereum-works"
 format: explainer
 author: Finematics
 breadcrumb: "Smart Contracts"
