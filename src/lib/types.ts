@@ -1148,7 +1148,7 @@ export type EventCardProps = {
 
 export type PageWithContributorsProps = {
   contributors: FileContributor[]
-  lastEditLocaleTimestamp?: string
+  lastEditLocaleTimestamp?: string | null
   locale?: Lang
 }
 

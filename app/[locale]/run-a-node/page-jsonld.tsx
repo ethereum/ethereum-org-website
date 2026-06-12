@@ -15,7 +15,7 @@ export default async function RunANodePageJsonLD({
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp: string | null
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-run-a-node")
@@ -82,7 +82,9 @@ export default async function RunANodePageJsonLD({
           description:
             "Guide to running your own Ethereum node, benefits, and requirements",
         },
-        dateModified: lastEditLocaleTimestamp,
+        ...(lastEditLocaleTimestamp && {
+          dateModified: lastEditLocaleTimestamp,
+        }),
       },
     ],
   }
