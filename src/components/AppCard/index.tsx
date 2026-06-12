@@ -70,7 +70,11 @@ export interface AppCardProps
     VariantProps<typeof layoutVariants> {
   // Content
   name: string
+  nameClassName?: string
   description?: string
+  descriptionClassName?: string
+  descriptionMaxLines?: number
+  descriptionExpandable?: boolean
   thumbnail?: string
   category?: string
   categoryTagStatus?: TagProps["status"]
@@ -95,7 +99,11 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
     {
       // Content
       name,
+      nameClassName,
       description,
+      descriptionClassName,
+      descriptionMaxLines,
+      descriptionExpandable = true,
       thumbnail,
       category,
       categoryTagStatus,
@@ -141,7 +149,7 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
         )}
 
         {/* Content */}
-        <div className="flex flex-1 flex-col gap-1.5">
+        <div className="flex min-w-0 flex-1 flex-col gap-1.5">
           {/* Category tag - shown if category is provided */}
           {category && (
             <Tag size="small" className="w-fit py-0" status={categoryTagStatus}>
@@ -150,14 +158,21 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
           )}
 
           {/* Name - hover effect triggers when inside a group (LinkBox) */}
-          <p className="text-lg leading-none font-bold text-body group-hover/appcard:text-primary-hover">
+          <p
+            className={cn(
+              "line-clamp-1 text-lg leading-none font-bold break-words text-body group-hover/appcard:text-primary-hover",
+              nameClassName
+            )}
+          >
             {name}
           </p>
 
           {/* Description - shown if description is provided */}
           {description && (
             <TruncatedText
-              className="text-body"
+              className={cn("text-body", descriptionClassName)}
+              maxLines={descriptionMaxLines}
+              showToggle={descriptionExpandable}
               matomoEvent={descriptionTracking}
             >
               {description}

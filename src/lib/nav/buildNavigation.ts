@@ -251,8 +251,13 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/developers/tools/",
             },
             {
-              label: t("nav-code-tutorials-label"),
-              description: t("nav-code-tutorials-description"),
+              label: t("learn-ethereum-development"),
+              description: t("nav-learn-ethereum-development-description"),
+              href: "/developers/tools/education-standards/",
+            },
+            {
+              label: t("tutorials"),
+              description: t("nav-tutorials-description"),
               href: "/developers/tutorials/",
             },
             {

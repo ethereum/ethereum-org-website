@@ -6,7 +6,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import type { DeveloperTool, DeveloperToolCategorySlug } from "../types"
+import type { DeveloperTool } from "../types"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
@@ -14,15 +14,20 @@ import { REFERENCE } from "@/lib/jsonld/references"
 export default async function DevelopersToolsCategoryJsonLD({
   locale,
   category,
+  categoryLabel,
   categoryTools,
   contributors,
 }: {
   locale: string
-  category: DeveloperToolCategorySlug
+  category: string
+  categoryLabel: string
   categoryTools: DeveloperTool[]
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations("page-developers-tools")
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
 
   const url = normalizeUrlForJsonLd(locale, `/developers/tools/${category}`)
 
@@ -39,11 +44,9 @@ export default async function DevelopersToolsCategoryJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: t(`page-developers-tools-category-${category}-title`),
-        description: t(
-          `page-developers-tools-category-${category}-meta-description`
-        ),
-        url,
+        name: categoryLabel,
+        description: t("page-developers-tools-meta-description"),
+        url: url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -72,7 +75,7 @@ export default async function DevelopersToolsCategoryJsonLD({
             {
               "@type": "ListItem",
               position: 4,
-              name: t(`page-developers-tools-category-${category}-title`),
+              name: categoryLabel,
               item: url,
             },
           ],
@@ -84,12 +87,10 @@ export default async function DevelopersToolsCategoryJsonLD({
       {
         "@type": "ItemList",
         "@id": `${url}#category-tools`,
-        name: t(`page-developers-tools-category-${category}-title`),
-        description: t(
-          `page-developers-tools-category-${category}-description`
-        ),
-        url,
-        numberOfItems: categoryTools.length,
+        name: categoryLabel,
+        description: t("page-developers-tools-meta-description"),
+        url: url,
+        numberOfItems: Math.min(categoryTools.length, 10),
         itemListElement: categoryTools.slice(0, 10).map((tool, index) => ({
           "@type": "ListItem",
           position: index + 1,
