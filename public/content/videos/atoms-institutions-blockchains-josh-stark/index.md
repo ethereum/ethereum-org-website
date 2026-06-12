@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "how-ethereum-works"
   - "blockchain"
-  - "ethereum"
+  - "privacy-and-security"
 format: presentation
 author: ETHGlobal
 breadcrumb: "Atoms, Institutions, Blockchains"

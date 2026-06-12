@@ -1,3 +1,4 @@
+import { execSync } from "child_process"
 import fs from "fs"
 import path from "path"
 
@@ -51,6 +52,37 @@ type PlaceholderData = Record<Path, Placeholder>
  * "ftp://"
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
+
+const VIDEO_EXTENSIONS = [".mp4", ".webm", ".mov"]
+
+/**
+ * Get video dimensions using ffprobe. Falls back gracefully if ffprobe
+ * is not installed or the file cannot be probed.
+ */
+const getVideoSize = (
+  src: string,
+  dir: string
+): { width: number; height: number } | undefined => {
+  if (absolutePathRegex.exec(src)) {
+    return
+  }
+  const shouldJoin = !path.isAbsolute(src) || src.startsWith("/")
+  let filePath = src
+  if (dir && shouldJoin) {
+    filePath = path.join(dir, src)
+  }
+  try {
+    const output = execSync(
+      `ffprobe -v quiet -select_streams v:0 -show_entries stream=width,height -of csv=p=0:s=x "${filePath}"`,
+      { encoding: "utf8", timeout: 5000 }
+    ).trim()
+    const [w, h] = output.split("x").map(Number)
+    if (w && h) return { width: w, height: h }
+  } catch {
+    // ffprobe not available or failed — dimensions will be omitted
+  }
+  return undefined
+}
 
 const getImageSize = (src: string, dir: string) => {
   if (absolutePathRegex.exec(src)) {
@@ -163,9 +195,15 @@ const rehypeImg = (options: Options) => {
     visit(tree, "element", (node) => {
       if (node.tagName === "img" && node.properties) {
         const src = node.properties.src as string
-        const dimensions = getImageSize(src, dir)
+        const ext = path.extname(src).toLowerCase()
+        const isVideo = VIDEO_EXTENSIONS.includes(ext)
 
-        if (!dimensions) {
+        const dimensions = isVideo
+          ? getVideoSize(src, dir)
+          : getImageSize(src, dir)
+
+        // Skip non-video files that have no detectable dimensions
+        if (!dimensions && !isVideo) {
           return
         }
 
@@ -179,13 +217,18 @@ const rehypeImg = (options: Options) => {
           imageIsTranslated && locale !== DEFAULT_LOCALE
             ? translatedImgPath
             : originalPath
-        node.properties.width = dimensions.width
-        node.properties.height = dimensions.height
-        node.properties.aspectRatio =
-          (dimensions.width || 1) / (dimensions.height || 1)
 
-        // Add image node to images array
-        images.push(node)
+        if (dimensions) {
+          node.properties.width = dimensions.width
+          node.properties.height = dimensions.height
+          node.properties.aspectRatio =
+            (dimensions.width || 1) / (dimensions.height || 1)
+        }
+
+        // Only generate blur placeholders for images, not videos
+        if (!isVideo) {
+          images.push(node)
+        }
       }
     })
 

@@ -8,7 +8,7 @@ duration: "0:36:34"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
+  - "defi"
 format: interview
 author: Ethereum Foundation
 breadcrumb: "Building Aave"

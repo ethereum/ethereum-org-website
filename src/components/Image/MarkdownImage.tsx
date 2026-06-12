@@ -37,6 +37,25 @@ const MarkdownImage = ({
 
   const fileExt = extname(transformedSrc).toLowerCase()
   const isAnimated = [".gif", ".apng", ".webp"].includes(fileExt)
+  const isVideo = [".mp4", ".webm", ".mov"].includes(fileExt)
+
+  if (isVideo) {
+    return (
+      <span className="flex justify-center">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          width={isNaN(imageWidth) ? undefined : imageWidth}
+          height={isNaN(imageHeight) ? undefined : imageHeight}
+          className="h-auto max-w-full"
+          aria-label={alt || undefined}
+          src={transformedSrc}
+        />
+      </span>
+    )
+  }
 
   return (
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx

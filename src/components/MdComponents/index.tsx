@@ -22,6 +22,7 @@ import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
+import TweetEmbed from "@/components/TweetEmbed"
 import * as AlertComponents from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
@@ -121,12 +122,14 @@ export const Page = ({
   />
 )
 
-export const ContentContainer = (props: ComponentProps<"article">) => (
-  <MainArticle
-    className="flow relative flex-[1_1_992px] px-8 pb-8 max-lg:pt-12"
-    {...props}
-  />
-)
+export const ContentContainer = (props: ComponentProps<"article">) => {
+  return (
+    <MainArticle
+      className="relative flex-[1_1_992px] px-8 pb-8 *:first:mt-0"
+      {...props}
+    />
+  )
+}
 
 export const ExpandableCardWithMargin = ({
   className,
@@ -156,6 +159,7 @@ export const reactComponents = {
   IssuesList,
   RestakingList,
   Tag,
+  TweetEmbed,
   WhatAreAppsStories,
   YouTube,
 }
