@@ -9,6 +9,8 @@ Ethereum.org es un proyecto de código abierto con **más de 12 000** colaborado
 
 ¡Somos una comunidad acogedora que te ayudará a crecer y educarte en el ecosistema de [Ethereum](/) mientras contribuyes de manera significativa y obtienes experiencia práctica relevante!
 
+## Formas de contribuir {#ways-to-contribute}
+
 **Traducciones**
 - [Únete al programa de traducción](/contributing/translation-program/) – Ayúdanos a llevar ethereum.org a nuevos idiomas
 

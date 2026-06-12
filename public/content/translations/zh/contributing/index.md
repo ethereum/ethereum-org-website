@@ -9,6 +9,8 @@ Ethereum.org 是一个开源项目，拥有 **12 000+** 名贡献者，他们帮
 
 我们是一个热情的社区，将帮助你在[以太坊](/)生态系统中成长和学习，同时做出有意义的贡献并获得相关的实践经验！
 
+## 贡献方式 {#ways-to-contribute}
+
 **翻译**
 - [加入翻译计划](/contributing/translation-program/) – 帮助我们将 ethereum.org 翻译成新的语言
 

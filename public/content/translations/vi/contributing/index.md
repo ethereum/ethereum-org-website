@@ -9,6 +9,8 @@ Ethereum.org là một dự án mã nguồn mở với **hơn 12.000** người 
 
 Chúng tôi là một cộng đồng thân thiện sẽ giúp bạn phát triển và học hỏi trong hệ sinh thái [Ethereum](/) đồng thời đóng góp một cách có ý nghĩa và có được kinh nghiệm thực tế liên quan!
 
+## Các cách đóng góp {#ways-to-contribute}
+
 **Dịch thuật**
 - [Tham gia chương trình dịch thuật](/contributing/translation-program/) – Giúp chúng tôi mang ethereum.org đến với các ngôn ngữ mới
 

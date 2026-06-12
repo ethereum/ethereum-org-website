@@ -78,7 +78,7 @@ Wasanidi programu wa michezo wanaweza kuamua kujumuisha vipengele tofauti vya Et
 
 ### Ingia na Ethereum {#sign-in-with-ethereum}
 
-Wachezaji wanaweza kutumia akaunti zao mnyororoni kuingia kwenye mchezo. Hili kwa kawaida huwezeshwa kupitia kusaini muamala na mkoba wa Web3 wa mchezaji. Wachezaji wanaweza kisha kushikilia rasilimali zao za ndani ya mchezo na kubeba sifa zao za mchezaji katika akaunti moja, kwenye michezo yoyote wanayoingia kwa kutumia mkoba huo huo. EVM ya Ethereum ni kiwango kinachotumiwa sana kwenye minyororo mingi ya vitalu, kwa hivyo mchezaji mara nyingi anaweza kutumia akaunti hiyo hiyo kuingia kwenye michezo kwenye mnyororo wowote wa vitalu unaoendana na EVM ambao mkoba unasaidia (kumbuka: baadhi ya mikoba ya Web3 inahitaji uingizaji wa RPC kwa mikono, hasa kwa minyororo mipya ya vitalu, kabla ya kuweza kutumika kufanya chochote kwenye mnyororo huo).
+Wachezaji wanaweza kutumia akaunti zao mnyororoni kuingia kwenye mchezo. Hili kwa kawaida huwezeshwa kupitia kusaini muamala na mkoba wa Web3 wa mchezaji. Wachezaji wanaweza kisha kushikilia rasilimali zao za ndani ya mchezo na kubeba sifa zao za mchezaji katika akaunti moja, kwenye michezo yoyote wanayoingia kwa kutumia mkoba huo huo. [EVM](/developers/docs/evm/) ya Ethereum ni kiwango kinachotumiwa sana kwenye minyororo mingi ya vitalu, kwa hivyo mchezaji mara nyingi anaweza kutumia akaunti hiyo hiyo kuingia kwenye michezo kwenye mnyororo wowote wa vitalu unaoendana na EVM ambao mkoba unasaidia (kumbuka: baadhi ya mikoba ya Web3 inahitaji uingizaji wa RPC kwa mikono, hasa kwa minyororo mipya ya vitalu, kabla ya kuweza kutumika kufanya chochote kwenye mnyororo huo).
 
 ### Tokeni zinazoweza kubadilishwa {#fungible-tokens}
 

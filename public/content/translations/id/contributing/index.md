@@ -9,6 +9,8 @@ Ethereum.org adalah proyek sumber terbuka dengan **12.000+** kontributor yang me
 
 Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar di ekosistem [Ethereum](/) sekaligus memberikan kontribusi yang berarti dan mendapatkan pengalaman praktis yang relevan!
 
+## Cara berkontribusi {#ways-to-contribute}
+
 **Terjemahan**
 - [Bergabunglah dengan program terjemahan](/contributing/translation-program/) – Bantu kami menghadirkan ethereum.org ke dalam bahasa baru
 

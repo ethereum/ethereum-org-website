@@ -9,6 +9,8 @@ Ethereum.org, web sitesinin çevrilmesine, yazılmasına, tasarlanmasına ve sü
 
 Biz, [Ethereum](/) ekosisteminde gelişmenize ve öğrenmenize yardımcı olurken, aynı zamanda anlamlı katkılarda bulunmanızı ve ilgili pratik deneyimi kazanmanızı sağlayan misafirperver bir topluluğuz!
 
+## Katkıda bulunma yolları {#ways-to-contribute}
+
 **Çeviriler**
 - [Çeviri programına katılın](/contributing/translation-program/) – ethereum.org'u yeni dillere taşımamıza yardımcı olun
 
