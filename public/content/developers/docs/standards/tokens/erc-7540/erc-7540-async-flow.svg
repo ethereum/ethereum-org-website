@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" font-family="monospace" font-size="13">
+  <style>
+    text { fill: currentColor; }
+    .label { font-weight: bold; font-size: 13px; }
+    .note { font-size: 11px; opacity: 0.6; }
+    .step { font-size: 11px; opacity: 0.7; }
+    line { stroke: currentColor; stroke-width: 1.5; }
+    rect.box { fill: #f5f0ff; stroke: #7c5cbf; stroke-width: 1.5; rx: 4; }
+  </style>
+
+  <!-- Title -->
+  <text x="340" y="24" text-anchor="middle" font-weight="bold" font-size="15">ERC-7540 (asynchronous)</text>
+
+  <!-- Lifeline labels -->
+  <text x="90" y="58" text-anchor="middle" class="label">Investor</text>
+  <text x="320" y="58" text-anchor="middle" class="label">Vault</text>
+  <text x="560" y="58" text-anchor="middle" class="label">Manager</text>
+
+  <!-- Lifelines -->
+  <line x1="90" y1="68" x2="90" y2="420" stroke-dasharray="4,4" stroke="currentColor" opacity="0.4"/>
+  <line x1="320" y1="68" x2="320" y2="420" stroke-dasharray="4,4" stroke="currentColor" opacity="0.4"/>
+  <line x1="560" y1="68" x2="560" y2="420" stroke-dasharray="4,4" stroke="currentColor" opacity="0.4"/>
+
+  <!-- requestDeposit -->
+  <line x1="90" y1="95" x2="310" y2="95" marker-end="url(#arr)"/>
+  <text x="200" y="88" text-anchor="middle" font-size="12">requestDeposit()</text>
+  <text x="200" y="115" text-anchor="middle" class="note">assets locked</text>
+
+  <!-- batch to manager -->
+  <line x1="320" y1="130" x2="550" y2="130" marker-end="url(#arr)"/>
+  <text x="435" y="123" text-anchor="middle" font-size="12">batch to manager</text>
+
+  <!-- Manager processing box -->
+  <rect class="box" x="460" y="150" width="200" height="150"/>
+  <text x="560" y="172" text-anchor="middle" class="step" font-weight="bold">Step 1: Approve</text>
+  <text x="560" y="188" text-anchor="middle" class="step">set asset price,</text>
+  <text x="560" y="204" text-anchor="middle" class="step">release assets for investment</text>
+  <text x="560" y="230" text-anchor="middle" class="step">... manager invests ...</text>
+  <text x="560" y="258" text-anchor="middle" class="step" font-weight="bold">Step 2: Issue</text>
+  <text x="560" y="274" text-anchor="middle" class="step">set share price,</text>
+  <text x="560" y="290" text-anchor="middle" class="step">mint shares</text>
+
+  <!-- fulfillment arrow -->
+  <line x1="560" y1="320" x2="330" y2="320" marker-end="url(#arr)" stroke-dasharray="6,3"/>
+  <text x="445" y="340" text-anchor="middle" font-size="12">fulfillment</text>
+
+  <!-- deposit (claim) -->
+  <line x1="90" y1="370" x2="310" y2="370" marker-end="url(#arr)"/>
+  <text x="200" y="363" text-anchor="middle" font-size="12">deposit()</text>
+
+  <!-- shares back -->
+  <line x1="320" y1="395" x2="100" y2="395" marker-end="url(#arr)" stroke-dasharray="6,3"/>
+  <text x="200" y="388" text-anchor="middle" font-size="12">shares</text>
+  <text x="200" y="415" text-anchor="middle" class="note">(claim)</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="currentColor"/>
+    </marker>
+  </defs>
+</svg>
