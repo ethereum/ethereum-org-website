@@ -123,9 +123,23 @@ export async function getVideoSlugs(): Promise<string[]> {
   if (slugsCache) return slugsCache
 
   const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
-  const entries = await readdir(videosDir, { withFileTypes: true })
-  slugsCache = entries.filter((e) => e.isDirectory()).map((e) => e.name)
-  return slugsCache
+  try {
+    const entries = await readdir(videosDir, { withFileTypes: true })
+    slugsCache = entries.filter((e) => e.isDirectory()).map((e) => e.name)
+    return slugsCache
+  } catch (error) {
+    // Serverless runtimes (e.g. Netlify Functions) don't bundle public/
+    // content, so readdir throws ENOENT when this is called outside the
+    // build. Degrade gracefully to match getPostSlugs().
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      console.warn(
+        `Videos directory ${videosDir} not found, returning empty slug list`
+      )
+      slugsCache = []
+      return slugsCache
+    }
+    throw error
+  }
 }
 
 /**
