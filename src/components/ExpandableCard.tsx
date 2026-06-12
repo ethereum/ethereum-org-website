@@ -98,11 +98,7 @@ const ExpandableCard = ({
           </AccordionTrigger>
           <AccordionContent
             forceMount={forceMount}
-            className={cn(
-              "p-6! pt-0! text-md",
-              forceMount &&
-                "in-data-[state=closed]:hidden in-data-[state=closed]:h-0"
-            )}
+            className="p-6! pt-0! text-md"
           >
             <div className="space-y-[1lh] border-t pt-6 [&>p]:first:mt-0 [&>p]:last:mb-0">
               {children}
