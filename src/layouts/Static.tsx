@@ -72,63 +72,63 @@ export const StaticLayout = ({
   const isGuidesHub = slug === "/guides/" || slug === "guides"
 
   return (
-    <div className="w-full">
-      <Flex
-        className="mx-auto mb-16 w-full justify-between p-8 lg:pt-16"
-        dir={contentNotTranslated ? "ltr" : "unset"}
-      >
-        <div className="w-full">
-          {isGuidesHub ? (
-            <HubHero
-              heroImg={GuideHeroImage}
-              header={frontmatter.title}
-              description={frontmatter.description}
+    <Flex
+      className="justify-between p-8 lg:py-16"
+      dir={contentNotTranslated ? "ltr" : "unset"}
+    >
+      <main className="max-w-3xl">
+        {isGuidesHub ? (
+          <HubHero
+            heroImg={GuideHeroImage}
+            header={frontmatter.title}
+            description={frontmatter.description}
+          />
+        ) : (
+          <>
+            <Breadcrumbs slug={slug} />
+            <h1 className="mt-6 lg:mt-8">{frontmatter.title}</h1>
+            <PageActions
+              slug={slug}
+              isTranslated={!contentNotTranslated}
+              editPath={absoluteEditPath}
+              hideEditButton={!!frontmatter.hideEditButton}
+              className="my-4"
             />
-          ) : (
-            <div className="max-w-3xl">
-              <Breadcrumbs slug={slug} />
-              <h1 className="mt-6 lg:mt-8">{frontmatter.title}</h1>
-              <PageActions
-                slug={slug}
-                isTranslated={!contentNotTranslated}
-                editPath={absoluteEditPath}
-                hideEditButton={!!frontmatter.hideEditButton}
-                className="my-4"
-              />
-            </div>
+          </>
+        )}
+
+        <MainArticle
+          className={cn(
+            "flow",
+            isGuidesHub && "mt-12",
+            "**:[h1]:hidden" // TODO: Remove when non-English Static markdown update to remove `#` h1 line
           )}
+        >
+          <TableOfContents
+            items={tocItems}
+            maxDepth={frontmatter.sidebarDepth || 2}
+            isMobile
+            className="mb-8 lg:hidden"
+          />
 
-          <MainArticle
-            className={cn(
-              "flow max-w-3xl",
-              isGuidesHub && "mt-12",
-              "**:[h1]:hidden" // TODO: Remove when non-English Static markdown update to remove `#` h1 line
-            )}
-          >
-            <TableOfContents
-              items={tocItems}
-              maxDepth={frontmatter.sidebarDepth || 2}
-              isMobile
-              className="mb-8 lg:hidden"
+          {children}
+
+          {!frontmatter.hideEditButton && (
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
             />
+          )}
+        </MainArticle>
 
-            {children}
-
-            {!frontmatter.hideEditButton && (
-              <FileContributors
-                className="my-10 border-t"
-                contributors={contributors}
-                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-              />
-            )}
-            <ContentFeedback isArticle />
-          </MainArticle>
-        </div>
-        <TableOfContents
-          items={tocItems}
-          maxDepth={frontmatter.sidebarDepth || 2}
-        />
-      </Flex>
-    </div>
+        {/* End-of-page actions */}
+        <ContentFeedback isArticle />
+      </main>
+      <TableOfContents
+        items={tocItems}
+        maxDepth={frontmatter.sidebarDepth || 2}
+      />
+    </Flex>
   )
 }

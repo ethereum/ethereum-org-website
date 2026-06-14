@@ -21,7 +21,6 @@ import Translation from "@/components/Translation"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
-import Link from "@/components/ui/Link"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
@@ -78,7 +77,8 @@ export const DocsLayout = ({
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <SideNav path={addSlashes(slug)} />
-        <main className="min-w-0 flex-1 p-8 wrap-break-word xl:p-16">
+
+        <main className="min-w-0 flex-1 p-8 xl:p-16">
           <MainArticle className="flow">
             <h1 id="top">{frontmatter.title}</h1>
             <PageActions
@@ -104,12 +104,9 @@ export const DocsLayout = ({
           </MainArticle>
 
           {/* End-of-page actions */}
-          <Link href="#top">
-            <Translation id="page-developers-docs:back-to-top" /> ↑
-          </Link>
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
-          <ContentFeedback isArticle />
           <DocsNav contentNotTranslated={contentNotTranslated} />
+          <ContentFeedback isArticle />
         </main>
 
         {tocItems && (
