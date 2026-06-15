@@ -33,7 +33,7 @@ export const ContentLayout = ({
     <div {...props}>
       {heroSection}
 
-      <div className="mx-auto mb-16 flex w-full flex-col justify-between lg:flex-row lg:pt-16">
+      <div className="flex w-full justify-between pt-space-3x pb-space-2x max-lg:flex-col">
         <TableOfContents
           items={tocItems}
           dropdownLinks={dropdownLinks}
@@ -42,7 +42,7 @@ export const ContentLayout = ({
           variant="left"
         />
 
-        <main className="min-w-0 flex-[1_1_992px] px-8 pb-8 max-lg:pt-12">
+        <main className="min-w-0 shrink grow basis-5xl px-page">
           <MainArticle className="flow">
             {children}
 

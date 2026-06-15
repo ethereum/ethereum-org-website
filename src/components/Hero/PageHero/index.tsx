@@ -99,7 +99,7 @@ const PageHero = ({
         </div>
       )}
       <div className="max-w-3xl flex-1 p-(--pad) lg:px-[calc(var(--pad)*1.5)] lg:py-[calc(var(--pad)*2)]">
-        <div className="mb-[calc(var(--space)*2)]">
+        <div className="mb-space-2x">
           <Eyebrow />
         </div>
 
@@ -107,7 +107,7 @@ const PageHero = ({
           {title}
         </PrimaryHeading>
 
-        <div className="space-y-[0.5lh] text-lg not-last:mb-[calc(var(--space)*3)]">
+        <div className="space-y-[0.5lh] text-lg not-last:mb-space-3x">
           {typeof description === "string" ? <p>{description}</p> : description}
         </div>
 
