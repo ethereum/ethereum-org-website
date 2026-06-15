@@ -5,6 +5,16 @@
    (e.g. .dark containers). */
 
 @theme inline {
+  /* Layout spacing */
+  --spacing-page: var(--page-pad); /* The single base unit for standard page padding; responsive. */
+  --spacing-page-2x: calc(var(--page-pad) * 2);
+  
+  --spacing-space-half: calc(var(--space) * 0.5);
+  --spacing-space: var(--space); /* The single base unit for the whole flow rhythm; responsive */
+  --spacing-space-2x: calc(var(--space) * 2);
+  --spacing-space-3x: calc(var(--space) * 3);
+  --spacing-space-4x: calc(var(--space) * 4);
+
   /* Reset default breakpoints (project uses non-standard sm=480) */
   --breakpoint-*: initial;
 
