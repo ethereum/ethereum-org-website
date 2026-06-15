@@ -14,7 +14,6 @@ import { CallToAction } from "../CallToAction"
 const variants = cva(
   cn(
     "flex flex-col border-b",
-    "[--pad:--spacing(8)]",
     "[--space:--spacing(4)] lg:[--space:--spacing(6)]" // Base spacing relative to primary header font-size
   ),
   {
@@ -89,7 +88,7 @@ const PageHero = ({
           <Image
             className={cn(
               "object-contain max-lg:max-h-64 max-lg:w-auto max-lg:max-w-full lg:absolute lg:inset-0 lg:size-full",
-              "py-8 pe-(--pad) max-lg:px-(--pad) max-lg:pb-[calc(var(--pad)/2)]"
+              "py-8 pe-hero max-lg:px-hero max-lg:pb-hero-half"
             )}
             src={heroImg}
             alt=""
@@ -98,12 +97,12 @@ const PageHero = ({
           />
         </div>
       )}
-      <div className="max-w-3xl flex-1 p-(--pad) lg:px-[calc(var(--pad)*1.5)] lg:py-[calc(var(--pad)*2)]">
+      <div className="max-w-3xl flex-1 p-hero lg:px-hero-1.5x lg:py-hero-2x">
         <div className="mb-space-2x">
           <Eyebrow />
         </div>
 
-        <PrimaryHeading className="text-4xl font-black not-last:mb-(--space) lg:text-6xl">
+        <PrimaryHeading className="text-4xl font-black not-last:mb-space lg:text-6xl">
           {title}
         </PrimaryHeading>
 

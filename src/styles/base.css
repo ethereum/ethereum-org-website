@@ -141,6 +141,8 @@
 
   /* The single base unit for the whole rhythm; responsive. */
   @apply [--space:--spacing(4)] lg:[--space:--spacing(6)];
+
+  @apply [--hero-pad:--spacing(8)];
 }
 
 @layer base {
