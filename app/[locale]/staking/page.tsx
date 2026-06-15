@@ -42,6 +42,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { staking } from "@/data/topics/staking"
+
 import StakingCommunityCallout from "./_components/StakingCommunityCallout"
 import StakingPageJsonLD from "./page-jsonld"
 
@@ -134,64 +136,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ]
 
   const dropdownLinks: ButtonDropdownList = {
-    text: t("page-staking-dropdown-staking-options"),
-    ariaLabel: t("page-staking-dropdown-staking-options-alt"),
-    items: [
-      {
-        text: t("page-staking-dropdown-home"),
-        href: "/staking/",
-        matomo: {
-          eventCategory: `Staking dropdown`,
-          eventAction: `Clicked`,
-          eventName: "clicked staking home",
-        },
+    text: t(staking.dropdown.textKey),
+    ariaLabel: t(staking.dropdown.ariaLabelKey),
+    items: staking.dropdown.items.map((item) => ({
+      text: t(item.textKey),
+      href: item.href,
+      matomo: {
+        eventCategory: staking.dropdown.matomoCategory,
+        eventAction: "Clicked",
+        eventName: item.matomoEvent,
       },
-      {
-        text: t("page-staking-dropdown-solo"),
-        href: "/staking/solo/",
-        matomo: {
-          eventCategory: `Staking dropdown`,
-          eventAction: `Clicked`,
-          eventName: "clicked solo staking",
-        },
-      },
-      {
-        text: t("page-staking-dropdown-saas"),
-        href: "/staking/saas/",
-        matomo: {
-          eventCategory: `Staking dropdown`,
-          eventAction: `Clicked`,
-          eventName: "clicked staking as a service",
-        },
-      },
-      {
-        text: t("page-staking-dropdown-pools"),
-        href: "/staking/pools/",
-        matomo: {
-          eventCategory: `Staking dropdown`,
-          eventAction: `Clicked`,
-          eventName: "clicked pooled staking",
-        },
-      },
-      {
-        text: t("page-staking-dropdown-withdrawals"),
-        href: "/staking/withdrawals/",
-        matomo: {
-          eventCategory: `Staking dropdown`,
-          eventAction: `Clicked`,
-          eventName: "clicked about withdrawals",
-        },
-      },
-      {
-        text: t("page-staking-dropdown-dvt"),
-        href: "/staking/dvt/",
-        matomo: {
-          eventCategory: `Staking dropdown`,
-          eventAction: `Clicked`,
-          eventName: "clicked about dvt",
-        },
-      },
-    ],
+    })),
   }
 
   const tocItems = {
