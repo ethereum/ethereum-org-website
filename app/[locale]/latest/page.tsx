@@ -1,16 +1,10 @@
-import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
 import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import PageHero from "@/components/Hero/PageHero"
-import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { BaseLink } from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
@@ -19,7 +13,6 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getBlogPostsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
 
 import BlogPageJsonLD from "./page-jsonld"
@@ -45,11 +38,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-latest")
 
-  // Get i18n messages
-  const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage("/latest")
-  const messages = pick(allMessages, requiredNamespaces)
-
   const blogPosts = await getBlogPostsData(locale)
 
   const { contributors } = await getAppPageContributorInfo(
@@ -64,67 +52,69 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         blogPosts={blogPosts}
         contributors={contributors}
       />
-      <I18nProvider locale={locale} messages={messages}>
-        <PageHero
-          breadcrumbs={{ slug: "latest" }}
-          heroImg={heroImg}
-          title={t("page-latest-title")}
-          description={t("page-latest-subtitle")}
-        />
-        <MainArticle className="mx-auto my-0 flex w-full flex-col items-center">
-          <div className="my-8 w-full max-w-screen-lg shadow-table-box">
-            {blogPosts.length === 0 ? (
-              <p className="p-12 text-center text-body-medium">
-                {t("page-latest-no-posts")}
-              </p>
-            ) : (
-              blogPosts.map((post) => (
-                <BaseLink
-                  key={post.href}
-                  href={post.href}
-                  className="block w-full space-y-6 border-b p-8 no-underline duration-100 hover:bg-background-highlight"
-                  hideArrow
-                  customEventOptions={{
-                    eventCategory: "builder-blog",
-                    eventAction: "click",
-                    eventName: post.title,
-                  }}
-                >
-                  <h3 className="text-2xl text-body">{post.title}</h3>
-                  <p className="text-body-medium uppercase">
-                    <Emoji text=":writing_hand:" className="me-2 text-sm" />
-                    {post.author}
-                    {post.team ? <> • {post.team}</> : null}
-                    {post.published ? (
-                      <> •{publishedDate(locale as Lang, post.published)}</>
-                    ) : null}
-                    {post.timeToRead ? (
-                      <>
-                        {" "}
-                        •
-                        <Emoji text=":stopwatch:" className="mx-2 text-sm" />
-                        {t("page-latest-minute-read", {
-                          minutes: post.timeToRead,
-                        })}
-                      </>
-                    ) : null}
-                  </p>
-                  <p className="text-body-medium">{post.description}</p>
-                  <div className="flex flex-wrap">
-                    {post.tags?.map((tag) => (
-                      <Tag key={tag} status="tag" className="me-2 mb-2">
-                        {tag}
-                      </Tag>
-                    ))}
-                  </div>
-                </BaseLink>
-              ))
-            )}
-          </div>
 
-          <ContentFeedback />
-        </MainArticle>
-      </I18nProvider>
+      <PageHero
+        breadcrumbs={{ slug: "latest" }}
+        heroImg={heroImg}
+        title={t("page-latest-title")}
+        description={t("page-latest-subtitle")}
+        variant="no-divider"
+      />
+
+      <MainArticle className="mx-auto my-page w-full max-w-screen-lg shadow-table-box">
+        {blogPosts.length === 0 ? (
+          <p className="p-12 text-center text-body-medium">
+            {t("page-latest-no-posts")}
+          </p>
+        ) : (
+          blogPosts.map((post) => (
+            <BaseLink
+              key={post.href}
+              href={post.href}
+              className="block w-full space-y-6 border-b px-page py-8 no-underline duration-100 hover:bg-background-highlight"
+              hideArrow
+              customEventOptions={{
+                eventCategory: "builder-blog",
+                eventAction: "click",
+                eventName: post.title,
+              }}
+            >
+              <h3 className="text-2xl text-body">{post.title}</h3>
+              <p className="text-body-medium uppercase">
+                <Emoji text=":writing_hand:" className="me-2 text-sm" />
+                {post.author}
+                {post.team ? <> • {post.team}</> : null}
+                {post.published ? (
+                  <> •{publishedDate(locale as Lang, post.published)}</>
+                ) : null}
+                {post.timeToRead ? (
+                  <>
+                    {" "}
+                    •
+                    <Emoji text=":stopwatch:" className="mx-2 text-sm" />
+                    {t("page-latest-minute-read", {
+                      minutes: post.timeToRead,
+                    })}
+                  </>
+                ) : null}
+              </p>
+              <p className="text-body-medium">{post.description}</p>
+              <div className="flex flex-wrap">
+                {post.tags?.map((tag) => (
+                  <Tag key={tag} status="tag" className="me-2 mb-2">
+                    {tag}
+                  </Tag>
+                ))}
+              </div>
+            </BaseLink>
+          ))
+        )}
+      </MainArticle>
+
+      {/* End-of-page actions */}
+      <div className="p-page">
+        <ContentFeedback />
+      </div>
     </>
   )
 }
