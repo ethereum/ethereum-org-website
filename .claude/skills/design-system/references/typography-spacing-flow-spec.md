@@ -31,8 +31,8 @@ The "hug" the designers wanted is NOT a special tight gap below headings -- it i
 Rules live in `src/styles/base.css` (`@layer base`), opt-in via the `.flow` class:
 
 ```css
-:root       { --space: calc(var(--spacing) * 4); }           /* 16px (== --spacing(4)) */
-@variant lg { :root { --space: calc(var(--spacing) * 6); } } /* 24px */
+/* base.css defines the responsive base unit on :root via @apply */
+:root { @apply [--space:--spacing(4)] lg:[--space:--spacing(6)]; } /* 16px -> 24px from lg */
 
 @layer base {
   /* SCOPE (abbreviated below) = direct children of the region OR of any <section>
