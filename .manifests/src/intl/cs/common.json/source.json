@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-06-08T11:40:07.313Z",
-  "rootHash": "8859281c9894",
+  "generatedAt": "2026-06-11T18:12:11.327Z",
+  "rootHash": "37e3e90aabf2",
   "tree": {
-    "contentHash": "37cbcc725ee7",
-    "anchorHash": "04ad04fb0db4",
+    "contentHash": "68ced947acb6",
+    "anchorHash": "2b0750c7dab9",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -43,8 +43,16 @@
         "contentHash": "6d923239d710",
         "anchorHash": "e3b0c44298fc"
       },
+      "adding-articles": {
+        "contentHash": "329a25cac231",
+        "anchorHash": "e3b0c44298fc"
+      },
       "adding-products": {
         "contentHash": "2b0088c852a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-reports": {
+        "contentHash": "8ece37aa3045",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-staking-products": {
@@ -2249,7 +2257,9 @@
       "adding-exchanges",
       "adding-glossary-terms",
       "adding-layer-2s",
+      "adding-articles",
       "adding-products",
+      "adding-reports",
       "adding-staking-products",
       "adding-wallets",
       "ai-agents",
@@ -2784,5 +2794,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "e7089af701ba3acee7872235b2cc7706c10efc91"
+  "sourceCommitSha": "2e0bedf904a21d6a5283f6df5a7894ec4f4b54c3"
 }

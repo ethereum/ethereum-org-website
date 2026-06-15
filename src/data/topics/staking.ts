@@ -32,6 +32,11 @@ export const staking: TopicConfig = {
         href: "/staking/withdrawals/",
         matomoEvent: "clicked about withdrawals",
       },
+      {
+        textKey: "page-staking-dropdown-dvt",
+        href: "/staking/dvt/",
+        matomoEvent: "clicked about dvt",
+      },
     ],
   },
 }

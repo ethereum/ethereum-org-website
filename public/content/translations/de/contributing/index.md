@@ -1,7 +1,7 @@
 ---
 title: "Zu ethereum.org beitragen 🦄"
 metaTitle: Mitwirken
-description: Erfahre mehr über die verschiedenen Möglichkeiten, wie du zu ethereum.org beitragen kannst
+description: "Erfahre mehr über die verschiedenen Möglichkeiten, wie du zu ethereum.org beitragen kannst"
 lang: de
 ---
 
@@ -18,30 +18,31 @@ Wir sind eine einladende Community, die dir hilft, im [Ethereum](/)-Ökosystem z
 - [Arbeite an einem offenen Issue](https://github.com/ethereum/ethereum-org-website/issues) – Aufgaben, die wir identifiziert haben und die erledigt werden müssen
 
 **Design**
-- [Hilf bei der Gestaltung der Website](/contributing/design/) – Designer aller Erfahrungsstufen können zur Verbesserung der Website beitragen
+- [Hilf bei der Gestaltung der Website](/contributing/design/) – Designer aller Erfahrungsstufen können dazu beitragen, die Website zu verbessern
 
-**Inhalte**
-- [Inhalte erstellen/bearbeiten](/contributing/#how-to-update-content) – Schlage neue Seiten vor oder nimm Anpassungen an bereits vorhandenen Inhalten vor
-- [Community-Ressourcen hinzufügen](/contributing/content-resources/) – Füge einer relevanten Seite einen hilfreichen Artikel oder eine Ressource hinzu
-- [Eine Design-Ressource vorschlagen](/contributing/design/adding-design-resources/) – Füge hilfreiche Design-Ressourcen hinzu, aktualisiere oder lösche sie
+**Inhalt**
+- [Inhalte erstellen/bearbeiten](/contributing/#how-to-update-content) – Schlage neue Seiten vor oder nimm Anpassungen an bereits vorhandenen vor
+- [Schreibe einen Ersteller-Artikel](/contributing/adding-articles/) - Steuere einen Artikel für den Bereich [Aktuelles](/latest/) bei
+- [Füge Community-Ressourcen hinzu](/contributing/content-resources/) – Füge einer relevanten Seite einen hilfreichen Artikel oder eine Ressource hinzu
+- [Schlage einen Bericht vor](/contributing/adding-reports/) - Schlage einen Forschungsbericht für die Seite [Berichte](/reports/) vor
+- [Schlage eine Design-Ressource vor](/contributing/design/adding-design-resources/) – Füge hilfreiche Design-Ressourcen hinzu, aktualisiere oder lösche sie
 - [Quizze](/contributing/quizzes/) – Füge Fragenkataloge für Quizze auf einer relevanten Seite hinzu, aktualisiere oder lösche sie
-- [Ein Video vorschlagen](/contributing/adding-videos/) – Schlage ein Lehrvideo für die Videogalerie vor
+- [Schlage ein Video vor](/contributing/adding-videos/) – Schlage ein Lehrvideo für die Videogalerie vor
 
 **Ideen für neue Funktionen**
-- [Eine Funktion anfragen](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Lass uns wissen, wenn du Ideen für eine neue Funktion oder ein neues Design hast
+- [Fordere eine Funktion an](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Lass uns wissen, wenn du Ideen für eine neue Funktion oder ein neues Design hast
 
-**Produktauflistungen**
-- [Eine Börse hinzufügen](/contributing/adding-exchanges/) – Füge eine Börse zu unserer [Börsensuche](/get-eth/#country-picker) hinzu
-- [Ein Produkt hinzufügen](/contributing/adding-products/) – Füge einer relevanten Seite eine Dezentrale Anwendung (Dapp) oder Wallet hinzu
-- [Entwicklertools hinzufügen](/contributing/adding-developer-tools/) – Füge einer relevanten Seite ein Entwicklertool hinzu
-- [Einen Layer 2 hinzufügen](/contributing/adding-layer-2s/) – Füge einer relevanten Seite einen Layer 2 (L2) hinzu
-- [Ein Staking-Produkt oder einen Service hinzufügen](/contributing/adding-staking-products/) – Füge ein Projekt hinzu, das Solo Staking, Pooled Staking oder Staking as a Service erleichtert
-- [Eine Wallet hinzufügen](/contributing/adding-wallets/) – Füge eine Wallet für die Seite [Wallets finden](/wallets/find-wallet/) hinzu
-- [Ein Projekt für unsere DeSci-Seite vorschlagen](/contributing/adding-desci-projects/) – Füge ein auf Ethereum basierendes Projekt hinzu, das zur Dezentralisierten Wissenschaft (DeSci) beiträgt
-- [Eine Ressource hinzufügen](/contributing/adding-resources/) – Füge einer relevanten Seite eine nützliche Ressource hinzu
+**Produktlisten**
+- [Füge eine Börse hinzu](/contributing/adding-exchanges/) – Füge eine Börse zu unserer [Börsensuche](/get-eth/#country-picker) hinzu
+- [Füge ein Produkt hinzu](/contributing/adding-products/) – Füge eine Dezentrale Anwendung (Dapp) oder Wallet zu einer relevanten Seite hinzu
+- [Füge Entwicklertools hinzu](/contributing/adding-developer-tools/) – Füge ein Entwicklertool zu einer relevanten Seite hinzu
+- [Füge eine Layer 2 hinzu](/contributing/adding-layer-2s/) – Füge eine Layer 2 (L2) zu einer relevanten Seite hinzu
+- [Füge ein Staking-Produkt oder einen Staking-Dienst hinzu](/contributing/adding-staking-products/) – Füge ein Projekt hinzu, das Solo Staking, Pooled Staking oder Staking as a Service erleichtert
+- [Füge eine Wallet hinzu](/contributing/adding-wallets/) – Füge eine Wallet für die Seite [Wallets finden](/wallets/find-wallet/) hinzu
+- [Schlage ein Projekt für unsere DeSci-Seite vor](/contributing/adding-desci-projects/) – Füge ein auf Ethereum basierendes Projekt hinzu, das zur Dezentralisierten Wissenschaft (DeSci) beiträgt
+- [Füge eine Ressource hinzu](/contributing/adding-resources/) – Füge eine nützliche Ressource zu einer relevanten Seite hinzu
 
 Noch Fragen? 🤔 Tritt unserem [Discord-Server](https://discord.gg/ethereum-org) bei
-
 ## Gute erste Aufgaben für den Einstieg {#good-first-tasks-to-start-contributing}
 
 Dies sind einige aktuelle Aufgaben, bei deren Lösung du uns helfen und für die du Verantwortung übernehmen könntest. Für die meisten benötigst du ein GitHub-Konto, da die meisten Änderungen an der Website über GitHub vorgenommen werden.
@@ -91,6 +92,7 @@ Wenn dein Beitrag in ethereum.org zusammengeführt wird, hast du die Möglichkei
 [Mehr über OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### So kannst du ihn beanspruchen {#how-to-claim}
+
 1. Tritt unserem [Discord-Server](https://discord.gg/ethereum-org) bei.
 2. Füge einen Link zu deinem Beitrag im Kanal `#🥇 | proof-of-contribution` ein.
 3. Warte darauf, dass dir ein Mitglied unseres Teams einen Link zu deinem OAT sendet.

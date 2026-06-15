@@ -1,7 +1,7 @@
 ---
 title: "Přispívání na ethereum.org 🦄"
-metaTitle: Přispívání
-description: Zjistěte více o různých způsobech, jak můžete přispět na ethereum.org
+metaTitle: "Přispívání"
+description: "Zjistěte více o různých způsobech, jak můžete přispět na ethereum.org"
 lang: cs
 ---
 
@@ -15,33 +15,34 @@ Jsme přátelská komunita, která vám pomůže růst a vzdělávat se v ekosys
 - [Zapojte se do překladatelského programu](/contributing/translation-program/) – Pomozte nám přeložit ethereum.org do nových jazyků
 
 **Vývoj**
-- [Pracujte na otevřeném problému (issue)](https://github.com/ethereum/ethereum-org-website/issues) – Práce, kterou jsme identifikovali a je třeba ji udělat
+- [Pracujte na otevřeném úkolu](https://github.com/ethereum/ethereum-org-website/issues) – Práce, kterou jsme identifikovali a je třeba ji udělat
 
 **Design**
-- [Pomozte s designem webu](/contributing/design/) – Designéři všech úrovní mohou přispět ke zlepšení webových stránek
+- [Pomozte s designem webu](/contributing/design/) – Designéři všech úrovní mohou přispět ke zlepšení webu
 
 **Obsah**
-- [Vytvářejte/upravujte obsah](/contributing/#how-to-update-content) – Navrhněte nové stránky nebo upravte to, co už tu je
+- [Vytvořte/upravte obsah](/contributing/#how-to-update-content) – Navrhněte nové stránky nebo upravte to, co už tu je
+- [Napište článek pro tvůrce](/contributing/adding-articles/) - Přispějte článkem do sekce [Nejnovější](/latest/)
 - [Přidejte komunitní zdroje](/contributing/content-resources/) – Přidejte užitečný článek nebo zdroj na příslušnou stránku
-- [Navrhněte zdroj pro design](/contributing/design/adding-design-resources/) – Přidávejte, aktualizujte a mažte užitečné zdroje pro design
-- [Kvízy](/contributing/quizzes/) – Přidávejte, aktualizujte a mažte sady kvízových otázek pro příslušnou stránku
+- [Navrhněte zprávu](/contributing/adding-reports/) - Navrhněte výzkumnou zprávu pro stránku [Zprávy](/reports/)
+- [Navrhněte zdroj pro design](/contributing/design/adding-design-resources/) – Přidejte, aktualizujte a odstraňte užitečné zdroje pro design
+- [Kvízy](/contributing/quizzes/) – Přidejte, aktualizujte a odstraňte sady kvízových otázek pro příslušnou stránku
 - [Navrhněte video](/contributing/adding-videos/) – Navrhněte vzdělávací video do videogalerie
 
 **Nápady na funkce**
-- [Požádejte o novou funkci](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Dejte nám vědět o jakýchkoli nápadech na novou funkci nebo design
+- [Požádejte o funkci](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Dejte nám vědět o jakýchkoli nápadech na novou funkci nebo design
 
 **Seznamy produktů**
 - [Přidejte burzu](/contributing/adding-exchanges/) – Přidejte burzu do našeho [vyhledávače burz](/get-eth/#country-picker)
 - [Přidejte produkt](/contributing/adding-products/) – Přidejte decentralizovanou aplikaci (dapp) nebo peněženku na příslušnou stránku
 - [Přidejte vývojářské nástroje](/contributing/adding-developer-tools/) – Přidejte vývojářský nástroj na příslušnou stránku
 - [Přidejte vrstvu 2](/contributing/adding-layer-2s/) – Přidejte vrstvu 2 (l2) na příslušnou stránku
-- [Přidejte produkt nebo službu pro staking](/contributing/adding-staking-products/) – Přidejte projekt, který usnadňuje sólo staking, společný staking nebo staking jako službu
-- [Přidejte peněženku](/contributing/adding-wallets/) – Přidejte peněženku na [stránku pro hledání peněženek](/wallets/find-wallet/)
+- [Přidejte stakingový produkt nebo službu](/contributing/adding-staking-products/) – Přidejte projekt, který usnadňuje sólo staking, společný staking nebo staking jako službu
+- [Přidejte peněženku](/contributing/adding-wallets/) – Přidejte peněženku na stránku [najít peněženku](/wallets/find-wallet/)
 - [Navrhněte projekt pro naši stránku DeSci](/contributing/adding-desci-projects/) – Přidejte projekt postavený na Ethereu, který přispívá k decentralizované vědě (DeSci)
 - [Přidejte zdroj](/contributing/adding-resources/) – Přidejte užitečný zdroj na jakoukoli příslušnou stránku
 
 Máte nějaké dotazy? 🤔 Připojte se na náš [Discord server](https://discord.gg/ethereum-org)
-
 ## Dobré první úkoly pro začátek přispívání {#good-first-tasks-to-start-contributing}
 
 Zde je několik aktuálních úkolů, které byste nám mohli pomoci vyřešit a převzít za ně odpovědnost. Pro většinu z nich budete potřebovat účet na GitHubu, protože většina změn na webu se provádí přes GitHub.
@@ -91,6 +92,7 @@ Pokud bude váš příspěvek sloučen do ethereum.org, budete mít šanci náro
 [Více o OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Jak uplatnit nárok {#how-to-claim}
+
 1. Připojte se na náš [Discord server](https://discord.gg/ethereum-org).
 2. Vložte odkaz na svůj příspěvek do kanálu `#🥇 | proof-of-contribution`.
 3. Počkejte, až vám člen našeho týmu pošle odkaz na váš OAT.
