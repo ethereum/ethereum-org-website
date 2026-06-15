@@ -211,7 +211,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               id="who"
               className="mx-auto max-w-4xl rounded-2xl bg-linear-to-br from-blue-500/20 from-10% to-pink-600/20 to-90% p-page **:[p]:max-w-3xl"
             >
-              <div className="mb-(--space) flex items-center justify-between gap-8 border-b pb-(--space) max-md:flex-col md:gap-12">
+              <div className="mb-space flex items-center justify-between gap-8 border-b pb-space max-md:flex-col md:gap-12">
                 <Image
                   src={impact}
                   alt=""
