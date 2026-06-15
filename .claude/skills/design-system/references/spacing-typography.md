@@ -73,7 +73,7 @@ For prose-like content -- a sequence of mixed headings, paragraphs, and lists --
 </div>
 ```
 
-It's already applied in markdown content -- `ContentContainer` and the `MainArticle` in the `Docs`/`Static`/`Tutorial` layouts -- so MDX prose just works. On React pages, add `flow` to a prose region yourself (it is **not** a default on `MainArticle`, since many pages use it as a grid/layout container).
+It's already applied in markdown content -- the `MainArticle` in the `ContentLayout`, `Docs`, `Static`, and `Tutorial` layouts -- so MDX prose just works. On React pages, add `flow` to a prose region yourself (it is **not** a default on `MainArticle`, since many pages use it as a grid/layout container).
 
 **The rhythm.** One responsive base unit `--space` (`--spacing(4)` = 16px mobile, `--spacing(6)` = 24px from `lg`); every gap is a `margin-top` multiple of it:
 
