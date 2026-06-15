@@ -792,7 +792,7 @@ export type ChainName = (typeof chains)[number]["name"]
 
 export type NonEVMChainName = "Starknet"
 
-export type AppOnlyChainName = "Immutable zkEVM"
+export type AppOnlyChainName = "Immutable zkEVM" | "Ronin"
 
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel
