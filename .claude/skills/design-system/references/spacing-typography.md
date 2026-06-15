@@ -135,7 +135,7 @@ If you do need a fractional value, prefer scale syntax over arbitrary syntax. Se
 | Between content blocks within a section | `gap-12` (48px) or `gap-16` (64px) |
 | Between sections on a page | `gap-16` to `gap-24` (64-96px) |
 | Section padding (vertical) | `py-16` to `py-24` |
-| Container horizontal padding | Handled by `Section`/page layout, not per-component |
+| Container horizontal padding | The `page` padding token (`px-page`), via `Section`/page layout -- not per-component |
 
 These are heuristics, not rules. Match what surrounding components use rather than picking arbitrarily.
 
@@ -163,6 +163,15 @@ import { Stack } from "@/components/ui/flex"
 ### `Section` for page-level padding
 
 `@/components/ui/section` handles the `<section>` wrapper with appropriate scroll-margin (so sticky-nav doesn't clip the heading when navigating to anchors). Use it for top-level page sections instead of writing your own `<section className="...">` chain.
+
+### Page padding (`--page-pad`) and rhythm (`--space`) tokens
+
+Two responsive design tokens back the standard page metrics; both are registered in `theme.css` so they generate Tailwind spacing utilities:
+
+- **`--page-pad`** -- standard page/section horizontal padding: `--spacing(4)` (1rem) on mobile, `--spacing(8)` (2rem) from `md`. Use the `page` utilities (`px-page`, `p-page`, `pb-page`, `gap-page`, and the `*-page-2x` step) instead of hard-coding `px-4 md:px-8` or an arbitrary `px-(--page-pad)`. Keeps horizontal page padding consistent across pages.
+- **`--space`** -- the `.flow` rhythm base (`--spacing(4)` mobile, `--spacing(6)` from `lg`). `.flow` applies it automatically; when you need the same unit *manually* (an explicit gap or margin outside a flow region), reach for the `space` utilities (`mt-space`, `gap-space`, `space-y-space-2x`, `mt-space-half`, `mt-space-3x`, ...) rather than re-deriving `mt-4 lg:mt-6`.
+
+Prefer these tokens over the raw scale for page padding and flow rhythm so the metrics stay coherent and scale from a single variable.
 
 ## Logical Spacing for RTL
 
