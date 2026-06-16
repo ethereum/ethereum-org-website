@@ -19,7 +19,7 @@ import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 // Uncomment `Alert` for Bug Bounty Banner:
 // import { Alert } from "@/components/ui/alert"
-import { CardParagraph } from "@/components/ui/card"
+import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
@@ -616,7 +616,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   ).map((key, idx) => (
                     <ListItem
                       key={key}
-                      className="flex items-start gap-4 rounded border border-border bg-background p-4"
+                      className="rounded-base flex items-start gap-4 border bg-background p-4"
                     >
                       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
                         {idx + 1}
@@ -638,112 +638,129 @@ export default async function Page(props: { params: Promise<Params> }) {
               </p>
               <Grid balanced={4}>
                 {/* Low */}
-                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
-                  <span className="mb-4 inline-flex w-fit rounded-full bg-green-500/10 px-3 py-1 text-sm font-semibold text-green-600 dark:text-green-400">
-                    {t("page-upgrades-bug-bounty-severity-low-title")}
-                  </span>
-                  <UnorderedList className="text-sm">
-                    <ListItem>
-                      {t.rich("page-upgrades-bug-bounty-severity-low-li-1", {
-                        strong: StrongGreaterThan,
-                      })}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich("page-upgrades-bug-bounty-severity-low-li-2", {
-                        strong: StrongGreaterThan,
-                      })}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich("page-upgrades-bug-bounty-severity-low-li-3", {
-                        strong: StrongGreaterThan,
-                      })}
-                    </ListItem>
-                  </UnorderedList>
-                </div>
+                <Card variant="nested">
+                  <CardContent className="text-sm">
+                    <span className="mb-4 inline-flex w-fit rounded-full bg-green-500/10 px-3 py-1 font-semibold text-green-600 dark:text-green-400">
+                      {t("page-upgrades-bug-bounty-severity-low-title")}
+                    </span>
+                    <UnorderedList>
+                      <ListItem>
+                        {t.rich("page-upgrades-bug-bounty-severity-low-li-1", {
+                          strong: StrongGreaterThan,
+                        })}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich("page-upgrades-bug-bounty-severity-low-li-2", {
+                          strong: StrongGreaterThan,
+                        })}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich("page-upgrades-bug-bounty-severity-low-li-3", {
+                          strong: StrongGreaterThan,
+                        })}
+                      </ListItem>
+                    </UnorderedList>
+                  </CardContent>
+                </Card>
                 {/* Medium */}
-                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
-                  <span className="mb-4 inline-flex w-fit rounded-full bg-yellow-500/10 px-3 py-1 text-sm font-semibold text-yellow-600 dark:text-yellow-400">
-                    {t("page-upgrades-bug-bounty-severity-medium-title")}
-                  </span>
-                  <UnorderedList className="text-sm">
-                    <ListItem>
-                      {t.rich("page-upgrades-bug-bounty-severity-medium-li-1", {
-                        strong: StrongGreaterThan,
-                      })}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich("page-upgrades-bug-bounty-severity-medium-li-2", {
-                        strong: StrongGreaterThan,
-                      })}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich("page-upgrades-bug-bounty-severity-medium-li-3", {
-                        strong: StrongGreaterThan,
-                      })}
-                    </ListItem>
-                  </UnorderedList>
-                </div>
+                <Card variant="nested">
+                  <CardContent className="text-sm">
+                    <span className="mb-4 inline-flex w-fit rounded-full bg-yellow-500/10 px-3 py-1 font-semibold text-yellow-600 dark:text-yellow-400">
+                      {t("page-upgrades-bug-bounty-severity-medium-title")}
+                    </span>
+                    <UnorderedList>
+                      <ListItem>
+                        {t.rich(
+                          "page-upgrades-bug-bounty-severity-medium-li-1",
+                          {
+                            strong: StrongGreaterThan,
+                          }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-upgrades-bug-bounty-severity-medium-li-2",
+                          {
+                            strong: StrongGreaterThan,
+                          }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-upgrades-bug-bounty-severity-medium-li-3",
+                          {
+                            strong: StrongGreaterThan,
+                          }
+                        )}
+                      </ListItem>
+                    </UnorderedList>
+                  </CardContent>
+                </Card>
                 {/* High */}
-                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
-                  <span className="mb-4 inline-flex w-fit rounded-full bg-orange-500/10 px-3 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
-                    {t("page-upgrades-bug-bounty-severity-high-title")}
-                  </span>
-                  <UnorderedList className="text-sm">
-                    <ListItem>
-                      {t.rich("page-upgrades-bug-bounty-severity-high-li-1", {
-                        strong: StrongGreaterThan,
-                      })}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich("page-upgrades-bug-bounty-severity-high-li-2", {
-                        strong: StrongGreaterThan,
-                      })}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich("page-upgrades-bug-bounty-severity-high-li-3", {
-                        strong: StrongGreaterThan,
-                      })}
-                    </ListItem>
-                  </UnorderedList>
-                </div>
+                <Card variant="nested">
+                  <CardContent className="text-sm">
+                    <span className="mb-4 inline-flex w-fit rounded-full bg-orange-500/10 px-3 py-1 font-semibold text-orange-600 dark:text-orange-400">
+                      {t("page-upgrades-bug-bounty-severity-high-title")}
+                    </span>
+                    <UnorderedList>
+                      <ListItem>
+                        {t.rich("page-upgrades-bug-bounty-severity-high-li-1", {
+                          strong: StrongGreaterThan,
+                        })}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich("page-upgrades-bug-bounty-severity-high-li-2", {
+                          strong: StrongGreaterThan,
+                        })}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich("page-upgrades-bug-bounty-severity-high-li-3", {
+                          strong: StrongGreaterThan,
+                        })}
+                      </ListItem>
+                    </UnorderedList>
+                  </CardContent>
+                </Card>
                 {/* Critical */}
-                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
-                  <span className="mb-4 inline-flex w-fit rounded-full bg-red-500/10 px-3 py-1 text-sm font-semibold text-red-600 dark:text-red-400">
-                    {t("page-upgrades-bug-bounty-severity-critical-title")}
-                  </span>
-                  <UnorderedList className="text-sm">
-                    <ListItem>
-                      {t.rich(
-                        "page-upgrades-bug-bounty-severity-critical-li-1",
-                        { strong: StrongGreaterThan }
-                      )}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich(
-                        "page-upgrades-bug-bounty-severity-critical-li-2",
-                        { strong: Strong }
-                      )}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich(
-                        "page-upgrades-bug-bounty-severity-critical-li-3",
-                        { strong: Strong }
-                      )}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich(
-                        "page-upgrades-bug-bounty-severity-critical-li-4",
-                        { strong: Strong }
-                      )}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich(
-                        "page-upgrades-bug-bounty-severity-critical-li-5",
-                        { strong: Strong }
-                      )}
-                    </ListItem>
-                  </UnorderedList>
-                </div>
+                <Card variant="nested">
+                  <CardContent className="text-sm">
+                    <span className="mb-4 inline-flex w-fit rounded-full bg-red-500/10 px-3 py-1 font-semibold text-red-600 dark:text-red-400">
+                      {t("page-upgrades-bug-bounty-severity-critical-title")}
+                    </span>
+                    <UnorderedList>
+                      <ListItem>
+                        {t.rich(
+                          "page-upgrades-bug-bounty-severity-critical-li-1",
+                          { strong: StrongGreaterThan }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-upgrades-bug-bounty-severity-critical-li-2",
+                          { strong: Strong }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-upgrades-bug-bounty-severity-critical-li-3",
+                          { strong: Strong }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-upgrades-bug-bounty-severity-critical-li-4",
+                          { strong: Strong }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-upgrades-bug-bounty-severity-critical-li-5",
+                          { strong: Strong }
+                        )}
+                      </ListItem>
+                    </UnorderedList>
+                  </CardContent>
+                </Card>
               </Grid>
             </div>
           </Content>
