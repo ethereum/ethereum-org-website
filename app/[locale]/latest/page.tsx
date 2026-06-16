@@ -71,7 +71,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <BaseLink
               key={post.href}
               href={post.href}
-              className="block w-full space-y-6 border-b px-page py-8 no-underline duration-100 hover:bg-background-highlight"
+              className="flow block border-b px-page py-8 no-underline duration-100 hover:bg-background-highlight"
               hideArrow
               customEventOptions={{
                 eventCategory: "builder-blog",
@@ -99,9 +99,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 ) : null}
               </p>
               <p className="text-body-medium">{post.description}</p>
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap gap-2">
                 {post.tags?.map((tag) => (
-                  <Tag key={tag} status="tag" className="me-2 mb-2">
+                  <Tag key={tag} status="tag">
                     {tag}
                   </Tag>
                 ))}
