@@ -241,7 +241,7 @@ const PresetFilters = ({
   )
 
   return (
-    <FieldSet className="gap-0">
+    <FieldSet className="relative min-w-0 gap-0 overflow-x-clip">
       <FieldLegend className="sr-only">
         {t("page-find-wallet-persona-legend")}
       </FieldLegend>
