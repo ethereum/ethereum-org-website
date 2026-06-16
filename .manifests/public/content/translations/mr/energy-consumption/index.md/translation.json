@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "locale": "mr",
+  "translatedAt": "2026-06-08T09:07:16.298Z",
+  "englishManifestHash": "b6237cb11820",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-c705fb",
+    "LINK-64e584",
+    "LINK-5bc86b",
+    "LINK-1d132a",
+    "LINK-6275e7",
+    "LINK-c43313",
+    "LINK-b443f4",
+    "LINK-fde0ff",
+    "LINK-fde0ff",
+    "LINK-513fd8",
+    "LINK-7af188",
+    "LINK-87df25",
+    "LINK-75c3ca",
+    "LINK-d42ac2",
+    "LINK-4a0522",
+    "LINK-8a1a82",
+    "LINK-aab71c",
+    "LINK-6768be",
+    "LINK-2b1c2b",
+    "LINK-3dc3d4",
+    "IMAGE-7d4ba1",
+    "LINK-1666ce",
+    "LINK-5c9980",
+    "LINK-593da8",
+    "LINK-da76b3",
+    "LINK-912d9b",
+    "LINK-9bfd10",
+    "LINK-3e123c",
+    "LINK-51265f",
+    "LINK-1b675d",
+    "LINK-9d9bc4",
+    "LINK-5467a6",
+    "LINK-6558be",
+    "LINK-bde93c",
+    "LINK-14f434"
+  ],
+  "placeholderMap": {
+    "IMAGE-7d4ba1": {
+      "type": "image",
+      "values": {
+        "path": "energy_consumption_pre_post_merge.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-c705fb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-64e584": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow"
+      }
+    },
+    "LINK-5bc86b": {
+      "type": "link",
+      "values": {
+        "url": "https://carbon-ratings.com/eth-report-2022"
+      }
+    },
+    "LINK-1d132a": {
+      "type": "link",
+      "values": {
+        "url": "https://carbon-ratings.com"
+      }
+    },
+    "LINK-6275e7": {
+      "type": "link",
+      "values": {
+        "url": "https://carbon-ratings.com/eth-report-2022"
+      }
+    },
+    "LINK-c43313": {
+      "type": "link",
+      "values": {
+        "url": "https://ccaf.io/cbnsi/ethereum"
+      }
+    },
+    "LINK-b443f4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches"
+      }
+    },
+    "LINK-fde0ff": {
+      "type": "link",
+      "values": {
+        "url": "https://ccaf.io/cbnsi/cbeci/comparisons"
+      }
+    },
+    "LINK-513fd8": {
+      "type": "link",
+      "values": {
+        "url": "https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential"
+      }
+    },
+    "LINK-7af188": {
+      "type": "link",
+      "values": {
+        "url": "https://ccaf.io/cbnsi/ethereum/1"
+      }
+    },
+    "LINK-87df25": {
+      "type": "link",
+      "values": {
+        "url": "https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf"
+      }
+    },
+    "LINK-75c3ca": {
+      "type": "link",
+      "values": {
+        "url": "https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf"
+      }
+    },
+    "LINK-d42ac2": {
+      "type": "link",
+      "values": {
+        "url": "<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1"
+      }
+    },
+    "LINK-4a0522": {
+      "type": "link",
+      "values": {
+        "url": "<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final"
+      }
+    },
+    "LINK-8a1a82": {
+      "type": "link",
+      "values": {
+        "url": "https://carbon-ratings.com/eth-report-2022"
+      }
+    },
+    "LINK-aab71c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coindesk.com/business/2020/05/19/the-last-word-on-bitcoins-energy-consumption/"
+      }
+    },
+    "LINK-6768be": {
+      "type": "link",
+      "values": {
+        "url": "https://ccaf.io/cbnsi/cbeci/comparisons"
+      }
+    },
+    "LINK-2b1c2b": {
+      "type": "link",
+      "values": {
+        "url": "https://ccaf.io/cbnsi/ethereum"
+      }
+    },
+    "LINK-3dc3d4": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-1666ce": {
+      "type": "link",
+      "values": {
+        "url": "/refi/"
+      }
+    },
+    "LINK-5c9980": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Solarpunk"
+      }
+    },
+    "LINK-593da8": {
+      "type": "link",
+      "values": {
+        "url": "https://gitcoin.co"
+      }
+    },
+    "LINK-da76b3": {
+      "type": "link",
+      "values": {
+        "url": "/desci/"
+      }
+    },
+    "LINK-912d9b": {
+      "type": "link",
+      "values": {
+        "url": "https://ccaf.io/cbnsi/ethereum"
+      }
+    },
+    "LINK-9bfd10": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf"
+      }
+    },
+    "LINK-3e123c": {
+      "type": "link",
+      "values": {
+        "url": "https://kylemcdonald.github.io/ethereum-emissions/"
+      }
+    },
+    "LINK-51265f": {
+      "type": "link",
+      "values": {
+        "url": "https://digiconomist.net/ethereum-energy-consumption/"
+      }
+    },
+    "LINK-1b675d": {
+      "type": "link",
+      "values": {
+        "url": "https://ethmerge.com/"
+      }
+    },
+    "LINK-9d9bc4": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/InsideTheSim"
+      }
+    },
+    "LINK-5467a6": {
+      "type": "link",
+      "values": {
+        "url": "https://carbon-ratings.com/eth-report-2022"
+      }
+    },
+    "LINK-6558be": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8"
+      }
+    },
+    "LINK-bde93c": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/beacon-chain"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:07:16.298Z",
+      "status": "success"
+    }
+  }
+}

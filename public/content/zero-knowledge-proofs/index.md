@@ -1,10 +1,9 @@
 ---
-title: Zero-knowledge proofs
+title: What are zero-knowledge proofs?
+metaTitle: Zero-knowledge proofs
 description: A non-technical introduction to zero-knowledge proofs for beginners.
 lang: en
 ---
-
-# What are zero-knowledge proofs? {#what-are-zk-proofs}
 
 A zero-knowledge proof is a way of proving the validity of a statement without revealing the statement itself. The ‘prover’ is the party trying to prove a claim, while the ‘verifier’ is responsible for validating the claim.
 

@@ -1,94 +1,95 @@
 ---
-title: "Cómo detectar los tókenes de estafa"
-description: "Detectar los tókenes de estafa, cómo hacen para parecer legítimos y cómo evitarlos."
+title: Cómo identificar tokens fraudulentos
+description: Comprender los tokens fraudulentos, cómo se hacen pasar por legítimos y cómo evitarlos.
 lang: es
 ---
 
-# Cómo identificar los tokens de estafa {#identify-scam-tokens}
+Uno de los usos más comunes de Ethereum es que un grupo cree un token negociable, en cierto sentido, su propia moneda. Estos tokens suelen seguir un estándar, [ERC-20](/developers/docs/standards/tokens/erc-20/). Sin embargo, dondequiera que haya casos de uso legítimos que aporten valor, también hay delincuentes que intentan robar ese valor para sí mismos.
 
-Uno de los usos más comunes para Ethereum es que un grupo cree un token intercambiable, en cierto sentido su propia moneda. Estos tokens suelen seguir un estándar, [ERC-20](/developers/docs/standards/tokens/erc-20/). No obstante, en cualquier lugar donde haya casos de uso legítimos que aporten valor, también hay criminales que intentan robar ese valor para sí mismos.
+Hay dos formas en las que es probable que te engañen:
 
-Hay dos maneras en las que puede que intenten engañarle:
+- **Vendiéndote un token fraudulento**, que puede parecerse al token legítimo que deseas comprar, pero que es emitido por los estafadores y no vale nada.
+- **Engañándote para firmar transacciones maliciosas**, generalmente dirigiéndote a su propia interfaz de usuario. Podrían intentar que le des a sus contratos una asignación sobre tus tokens ERC-20, exponiendo información confidencial que les da acceso a tus activos, etc. Estas interfaces de usuario pueden ser clones casi perfectos de sitios honestos, pero con trampas ocultas.
 
-- **Vendiéndole un token de estafa**, que puede parecerse al token legítimo que desea comprar, pero es emitido por estafadores y no vale nada.
-- **Engañándole para que firme transacciones maliciosas**, normalmente dirigiéndole a su propia interfaz de usuario. Podrían intentar que le dé a sus contratos una asignación en sus tókenes ERC-20, exponiendo información confidencial que les dé acceso a sus activos, etc. Estas interfaces de usuario podrían ser clones casi perfectos de sitios honestos, pero con trucos ocultos.
-
-Para ilustrar qué son los tokens de estafa y cómo identificarlos, vamos a ver un ejemplo de uno: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Este token intenta parecerse al token legítimo [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
+Para ilustrar qué son los tokens fraudulentos y cómo identificarlos, vamos a ver un ejemplo de uno: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Este token intenta parecerse al token legítimo [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="¿Qué es ARB?"
+title="What is ARB?"
 contentPreview=''>
 
-Arbitrum es una organización que desarrolla y gestiona [optimistic rollups] (/developers/docs/scaling/optimistic-rollups/). Inicialmente, Arbitrum se fundó como una empresa con fines lucrativos, pero luego tomó medidas para descentralizarse. Como parte del proceso, han lanzado un [token de gobernanza] que admite transacciones (/dao/#token-based-membership).
+Arbitrum es una organización que desarrolla y gestiona [rollups optimistas](/developers/docs/scaling/optimistic-rollups/). Inicialmente, Arbitrum se organizó como una empresa con fines de lucro, pero luego tomó medidas para descentralizarse. Como parte de ese proceso, emitieron un [token de gobernanza](/dao/#token-based-membership) negociable.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="¿Por qué el token de estafa se llama wARB?"
+title="Why is the scam token called wARB?"
 contentPreview=''>
 
-Hay una convención en Ethereum que dice que cuando un activo no cumple con ERC-20, creamos una versión «encubierta» del mismo cuyo nombre comienza por «w». Así que, por ejemplo, tenemos wBTC para bitcoin y <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH para ether</a>.
+Existe una convención en Ethereum de que cuando un activo no es compatible con ERC-20, creamos una versión "envuelta" (wrapped) del mismo con un nombre que comienza con "w". Así, por ejemplo, tenemos wBTC para Bitcoin y <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH para ether</a>.
 
-No tiene sentido crear una versión encubierta de un token ERC-20 que ya está en Ethereum, pero los estafadores confían en la apariencia de legitimidad en lugar de la realidad subyacente.
+No tiene sentido crear una versión envuelta de un token ERC-20 que ya está en Ethereum, pero los estafadores se basan en la apariencia de legitimidad en lugar de la realidad subyacente.
+
 </ExpandableCard>
 
-## ¿Cómo funcionan los tókenes estafa? {#how-do-scam-tokens-work}
+## ¿Cómo funcionan los tokens fraudulentos? {#how-do-scam-tokens-work}
 
-La finalidad última de Ethereum es la descentralización. Esto significa que no hay una autoridad central que pueda confiscar sus activos ni impedirle implementar un contrato inteligente. Aunque también significa que los estafadores pueden desplegar cualquier contrato inteligente que deseen.
+El objetivo principal de Ethereum es la descentralización. Esto significa que no hay una autoridad central que pueda confiscar tus activos o impedirte desplegar un contrato inteligente. Pero también significa que los estafadores pueden desplegar cualquier contrato inteligente que deseen.
 
 <ExpandableCard
-title="¿Qué son los contratos inteligentes?"
+title="What are smart contracts?"
 contentPreview=''>
 
-[Los contratos inteligentes](/developers/docs/smart-contracts/) son los programas que se ejecutan sobre la cadena de bloques de Ethereum. Cada token ERC-20, por ejemplo, se implementa como un contrato inteligente.
+Los [contratos inteligentes](/developers/docs/smart-contracts/) son los programas que se ejecutan sobre la cadena de bloques de Ethereum. Cada token ERC-20, por ejemplo, se implementa como un contrato inteligente.
+
 </ExpandableCard>
 
-Específicamente, Arbitrum desplegó un contrato que utiliza el símbolo `ARB`. Pero eso no impide que otras personas también desplieguen un contrato que utiliza exactamente el mismo símbolo, o uno similar. Quienquiera que escriba el contrato puede establecer lo que hará el contrato.
+Específicamente, Arbitrum desplegó un contrato que usa el símbolo `ARB`. Pero eso no impide que otras personas también desplieguen un contrato que use exactamente el mismo símbolo, o uno similar. Quien escribe el contrato es quien establece lo que hará el contrato.
 
-## Apariencia legítima {#appearing-legitimate}
+## Aparentar legitimidad {#appearing-legitimate}
 
-Hay varios trucos que los creadores de tókenes estafa hacen para que parezcan legítimos.
+Hay varios trucos que los creadores de tokens fraudulentos utilizan para aparentar legitimidad.
 
-- **Nombre y símbolo legítimos**. Como se mencionó anteriormente, los contratos ERC-20 pueden tener el mismo símbolo y nombre que otros contratos ERC-20. Con respecto a la seguridad, no puede contar con esos campos.
+- **Nombre y símbolo legítimos**. Como se mencionó anteriormente, los contratos ERC-20 pueden tener el mismo símbolo y nombre que otros contratos ERC-20. No puedes confiar en esos campos para tu seguridad.
 
-- **Propietarios legítimos**. Los tokens estafa a menudo regalan saldos significativos a direcciones que se puede esperar que sean titulares legítimos del token real.
+- **Propietarios legítimos**. Los tokens fraudulentos a menudo hacen airdrop de saldos significativos a direcciones que se esperaría que fueran titulares legítimos del token real.
 
-  Por ejemplo, examinemos `wARB` de nuevo. [Alrededor del 16 % de los tokens](https://eth.blockscout.com/token/0xb047c8032b99841713b8E3872F06cF32beb27b82?tab=holders) están en posesión de una dirección cuya etiqueta pública es [Arbitrum Foundation: Deployer](https://eth.blockscout.com/address/0x1C8db745ABe3C8162119b9Ef2c13864Cd1FDD72F). Esta _no_ es una dirección falsa, es realmente la dirección que [desplegó el contrato real de ARB en la red principal de Ethereum](https://eth.blockscout.com/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
+  Por ejemplo, veamos `wARB` de nuevo. [Alrededor del 16 % de los tokens](https://eth.blockscout.com/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?tab=holders) están en manos de una dirección cuya etiqueta pública es [Arbitrum Foundation: Deployer](https://eth.blockscout.com/address/0x1C8db745ABe3C8162119b9Ef2c13864Cd1FDD72F). Esta _no_ es una dirección falsa, realmente es la dirección que [desplegó el contrato ARB real en la red principal de Ethereum](https://eth.blockscout.com/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
 
-  Debido a que el saldo ERC-20 de una dirección es parte del almacenamiento del contrato ERC-20, se puede especificar en el contrato para que sea lo que el desarrollador del contrato desee. También es posible que un contrato prohíba las transferencias para que los usuarios legítimos no puedan deshacerse de esos tókenes estafa.
+  Debido a que el saldo ERC-20 de una dirección es parte del almacenamiento del contrato ERC-20, el contrato puede especificar que sea lo que el desarrollador del contrato desee. También es posible que un contrato prohíba las transferencias para que los usuarios legítimos no puedan deshacerse de esos tokens fraudulentos.
 
-- **Transferencias legítimas**. _Los propietarios legítimos no pagarían por transferir un token de estafa a otros, así que si hay transferencias debe ser legítimo, ¿verdad?_ **Incorrecto**. Los eventos `Transfer` son producidos por el contrato ERC-20. Un estafador puede escribir fácilmente el contrato de tal manera que produzca esas acciones.
+- **Transferencias legítimas**. _Los propietarios legítimos no pagarían por transferir un token fraudulento a otros, así que si hay transferencias debe ser legítimo, ¿verdad?_ **Falso**. Los eventos `Transfer` son producidos por el contrato ERC-20. Un estafador puede escribir fácilmente el contrato de tal manera que produzca esas acciones.
 
 ## Sitios web fraudulentos {#websites}
 
-Los estafadores también pueden producir sitios web muy convincentes, a veces incluso clones precisos de sitios auténticos con interfaces de usuario idénticas, pero con trucos sutiles. Los ejemplos podrían ser enlaces externos que parecen legítimos remitiendo al usuario a un sitio de estafa externo, o instrucciones incorrectas que guían al usuario a exponer sus claves o enviar fondos a la dirección de un atacante.
+Los estafadores también pueden crear sitios web muy convincentes, a veces incluso clones precisos de sitios auténticos con interfaces de usuario idénticas, pero con trampas sutiles. Algunos ejemplos podrían ser enlaces externos que parecen legítimos pero que en realidad envían al usuario a un sitio fraudulento externo, o instrucciones incorrectas que guían al usuario a exponer sus claves o enviar fondos a la dirección de un atacante.
 
-La mejor práctica para evitar esto es comprobar cuidadosamente la URL de los sitios que visita y guardar las direcciones de los sitios auténticos conocidos en sus marcadores. Luego, puede acceder al sitio real a través de sus marcadores sin cometer accidentalmente errores ortográficos ni depender de enlaces externos.
+La mejor práctica para evitar esto es verificar cuidadosamente la URL de los sitios que visitas y guardar las direcciones de los sitios auténticos conocidos en tus marcadores. Luego, puedes acceder al sitio real a través de tus marcadores sin cometer errores ortográficos accidentalmente ni depender de enlaces externos.
 
-## ¿Cómo puede protegerse a sí mismo? {#protect-yourself}
+## ¿Cómo puedes protegerte? {#protect-yourself}
 
-1. **Compruebe la dirección del contrato**. Los tókenes legítimos provienen de organizaciones legítimas, y puede ver las direcciones del contrato en el sitio web de la organización. Por ejemplo, [para `ARB` puede ver las direcciones legítimas aquí](https://docs.arbitrum.foundation/deployment-addresses#token).
+1. **Verifica la dirección del contrato**. Los tokens legítimos provienen de organizaciones legítimas, y puedes ver las direcciones de los contratos en el sitio web de la organización. Por ejemplo, [para `ARB` puedes ver las direcciones legítimas aquí](https://docs.arbitrum.foundation/deployment-addresses#token).
 
-2. **Los tókenes reales tienen liquidez**. Otra opción es ver el tamaño del fondo de liquidez en [Uniswap](https://uniswap.org/), uno de los protocolos de intercambio de tokens más comunes. Este protocolo funciona utilizando fondos de liquidez, en los que los inversores depositan sus tókenes con la esperanza de obtener la devolución de las comisiones de transacciones.
+2. **Los tokens reales tienen liquidez**. Otra opción es observar el tamaño del fondo de liquidez en [Uniswap](https://uniswap.org/), uno de los protocolos de intercambio de tokens más comunes. Este protocolo funciona utilizando fondos de liquidez, en los que los inversores depositan sus tokens con la esperanza de obtener un rendimiento de las tarifas de negociación.
 
-Los tókenes estafa suelen tener pequeños fondos de liquidez, si los hay, porque los estafadores no quieren arriesgar activos reales. Por ejemplo, el fondo de Uniswap `ARB`/`ETH` contiene alrededor de un millón de dólares ([vea aquí el valor actualizado](https://app.uniswap.org/explore#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca)) y comprar o vender una pequeña cantidad no va a cambiar el precio:
+Los tokens fraudulentos suelen tener fondos de liquidez diminutos, si es que tienen alguno, porque los estafadores no quieren arriesgar activos reales. Por ejemplo, el fondo de liquidez de Uniswap de `ARB`/`ETH` contiene alrededor de un millón de dólares ([consulta aquí el valor actualizado](https://app.uniswap.org/explore#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca)) y comprar o vender una pequeña cantidad no va a cambiar el precio:
 
-![Comprando un token legítimo](./uniswap-real.png)
+![Buying a legitimate token](./uniswap-real.png)
 
-Pero cuando intente comprar el token de estafa `wARB`, incluso una pequeña compra cambiaría el precio en más del 90 %:
+Pero cuando intentas comprar el token fraudulento `wARB`, incluso una compra diminuta cambiaría el precio en más del 90 %:
 
-![Comprando un token de estafa](./uniswap-scam.png)
+![Buying a scam token](./uniswap-scam.png)
 
-Esta es otra prueba que nos muestra que `wARB` no es probable que sea un token legítimo.
+Esta es otra prueba que nos demuestra que es poco probable que `wARB` sea un token legítimo.
 
-3. **Consulte en Etherscan**. La comunidad ya ha identificado y denunciado muchos tókenes estafa. Dichos tokens están [marcados en Etherscan](https://info.etherscan.com/etherscan-token-reputation/). Si bien Etherscan no es una fuente autorizada «oficial»( la naturaleza de las redes descentralizadas impide que haya una fuente autorizada de legitimidad), los tókenes que Etherscan identifica como estafas es probable que sean estafas.
+3. **Busca en Etherscan**. Muchos tokens fraudulentos ya han sido identificados y reportados por la comunidad. Dichos tokens están [marcados en Etherscan](https://info.etherscan.com/etherscan-token-reputation/). Si bien Etherscan no es una fuente de verdad autorizada (es la naturaleza de las redes descentralizadas que no pueda haber una fuente autorizada de legitimidad), es probable que los tokens identificados por Etherscan como estafas lo sean.
 
-   ![Token de estafa en Etherscan](./etherscan-scam.png)
+   ![Scam token in Etherscan](./etherscan-scam.png)
 
 ## Conclusión {#conclusion}
 
-Mientras haya valor en el mundo, va a haber estafadores que intenten robarlo para su beneficio, y en un mundo descentralizado no hay nadie que le proteja excepto usted mismo. Esperamos que recuerde estos puntos para ayudar a distinguir los tókenes legítimos de las estafas:
+Mientras haya valor en el mundo, habrá estafadores que intenten robarlo para sí mismos, y en un mundo descentralizado no hay nadie que te proteja excepto tú mismo. Con suerte, recordarás estos puntos para ayudarte a distinguir los tokens legítimos de las estafas:
 
-- Los tókenes estafa se hacen pasar por tókenes legítimos, pueden usar el mismo nombre, símbolo, etc.
-- Los tokens de estafa _no pueden_ usar la misma dirección del contrato.
-- La mejor fuente para la dirección del token legítimo es la organización propietaria del token.
-- En su defecto, puede usar aplicaciones populares y de confianza como [Uniswap](https://app.uniswap.org/#/swap) y [Blockscout](https://eth.blockscout.com/).
+- Los tokens fraudulentos se hacen pasar por tokens legítimos, pueden usar el mismo nombre, símbolo, etc.
+- Los tokens fraudulentos _no pueden_ usar la misma dirección de contrato.
+- La mejor fuente para obtener la dirección del token legítimo es la organización a la que pertenece el token.
+- En su defecto, puedes usar aplicaciones populares y confiables como [Uniswap](https://app.uniswap.org/#/swap) y [Blockscout](https://eth.blockscout.com/).

@@ -80,9 +80,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         >
           <div className="flex flex-1 flex-col gap-5">
             <div>
-              <h1 className="text-2xl">
-                {t("page-10-year-hero-title")}
-              </h1>
+              <h1 className="text-2xl">{t("page-10-year-hero-title")}</h1>
             </div>
 
             <div className="flex flex-1 flex-col gap-4">
@@ -315,7 +313,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <div
                 key={`adoption-card-${index}`}
                 className={cn(
-                  "w-[70%] rounded-2xl p-8 shadow",
+                  "w-[70%] rounded-base p-8 shadow",
                   index % 2 === 0 && "ml-auto",
                   index !== 0 && "-mt-10",
                   zIndexClasses[index],

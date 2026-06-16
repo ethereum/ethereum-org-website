@@ -1,0 +1,925 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/community/get-involved/index.md",
+  "generatedAt": "2026-06-08T07:15:40.489Z",
+  "rootHash": "75c2ecf63ab6",
+  "tree": {
+    "contentHash": "a62a01caa924",
+    "anchorHash": "4bc97a12e698",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "759088733728",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "2fe2aac1e97c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "5bee555449a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "1be775fe4f07",
+        "anchorHash": "7828a0bf1b7a"
+      },
+      "prose:2": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "developers": {
+        "contentHash": "daae92789477",
+        "anchorHash": "9e8e0af9b03f",
+        "labelHash": "9b30ac6650b7",
+        "children": {
+          "_label": {
+            "contentHash": "9b30ac6650b7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:8": {
+            "contentHash": "7adf6bfcce9c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a6b84b5c9d4b",
+            "anchorHash": "10260c8eaaaa"
+          },
+          "prose:9": {
+            "contentHash": "d839728c48dc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "58c45f156e35",
+            "anchorHash": "d9696d5c2954"
+          },
+          "prose:10": {
+            "contentHash": "60f049edf90c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "140326634b42",
+            "anchorHash": "00ec2e5e724f"
+          },
+          "prose:11": {
+            "contentHash": "f84ed11c1187",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "0a477a59b5bf",
+            "anchorHash": "2277732e0f0f"
+          },
+          "prose:12": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "7a750152a064",
+            "anchorHash": "9aebd844a5ff"
+          },
+          "prose:13": {
+            "contentHash": "4c43df1ef182",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "121940d1a54a",
+            "anchorHash": "5c083f533e12"
+          },
+          "prose:14": {
+            "contentHash": "0cc414574f91",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "2e6b261fbc5c",
+            "anchorHash": "9967a02d22fa"
+          },
+          "prose:15": {
+            "contentHash": "afc36eb5b32e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "6f5c608c73a0",
+            "anchorHash": "0a6abac06e9c"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:8",
+          "link:0",
+          "prose:9",
+          "link:1",
+          "prose:10",
+          "link:2",
+          "prose:11",
+          "link:3",
+          "prose:12",
+          "link:4",
+          "prose:13",
+          "link:5",
+          "prose:14",
+          "link:6",
+          "prose:15",
+          "link:7"
+        ]
+      },
+      "researchers-and-academics": {
+        "contentHash": "7ed48feebcc8",
+        "anchorHash": "094a9f3e930e",
+        "labelHash": "7fb174bb56fd",
+        "children": {
+          "_label": {
+            "contentHash": "7fb174bb56fd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:15": {
+            "contentHash": "5b8cc3e5403a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2e6b261fbc5c",
+            "anchorHash": "9967a02d22fa"
+          },
+          "prose:16": {
+            "contentHash": "863a131c8502",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "75e605d044a1",
+            "anchorHash": "2560ff2941a6"
+          },
+          "prose:17": {
+            "contentHash": "aebeb3d690a8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "a68aaed81868",
+            "anchorHash": "8b618399ddf0"
+          },
+          "prose:18": {
+            "contentHash": "601e24759498",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "9463c7e082a1",
+            "anchorHash": "1ba3412d923d"
+          },
+          "prose:19": {
+            "contentHash": "244149e47a1d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "72dcd6cf9279",
+            "anchorHash": "24a4aef7da3d"
+          },
+          "prose:20": {
+            "contentHash": "2e96b9125f3e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "d3a696094978"
+          },
+          "prose:21": {
+            "contentHash": "32142a122e29",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "b63e015fcc2d",
+            "anchorHash": "a263932163f9"
+          },
+          "prose:22": {
+            "contentHash": "afc36eb5b32e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "6f5c608c73a0",
+            "anchorHash": "0a6abac06e9c"
+          },
+          "prose:23": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "a0e272a5d2ed",
+            "anchorHash": "8665fcadefe5"
+          },
+          "prose:24": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "ef0e40b1a1e3",
+            "anchorHash": "b51a8ea3d7be"
+          },
+          "prose:25": {
+            "contentHash": "85250dccbccd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "e34f69085081",
+            "anchorHash": "2c0a75178a1a"
+          },
+          "prose:26": {
+            "contentHash": "d30de8c92d19",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "f0c28494fedb",
+            "anchorHash": "91bb97377ff9"
+          },
+          "prose:27": {
+            "contentHash": "bf077fae181c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:12": {
+            "contentHash": "7a750152a064",
+            "anchorHash": "9aebd844a5ff"
+          },
+          "prose:28": {
+            "contentHash": "43718554be53",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:13": {
+            "contentHash": "237a071557fb",
+            "anchorHash": "00e0ed8fe183"
+          },
+          "prose:29": {
+            "contentHash": "1360a69e1a26",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:14": {
+            "contentHash": "b9c25bf26945",
+            "anchorHash": "0d572bb52869"
+          },
+          "prose:30": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:15",
+          "link:0",
+          "prose:16",
+          "link:1",
+          "prose:17",
+          "link:2",
+          "prose:18",
+          "link:3",
+          "prose:19",
+          "link:4",
+          "prose:20",
+          "inline-code:5",
+          "prose:21",
+          "link:6",
+          "prose:22",
+          "link:7",
+          "prose:23",
+          "link:8",
+          "prose:24",
+          "link:9",
+          "prose:25",
+          "link:10",
+          "prose:26",
+          "link:11",
+          "prose:27",
+          "link:12",
+          "prose:28",
+          "link:13",
+          "prose:29",
+          "link:14",
+          "prose:30"
+        ]
+      },
+      "non-technical": {
+        "contentHash": "2d66830d867b",
+        "anchorHash": "12fa1ed95f21",
+        "labelHash": "37527855d096",
+        "children": {
+          "_label": {
+            "contentHash": "37527855d096",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fcfb0199cfcd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "meetups": {
+            "contentHash": "1a919c6f45b8",
+            "anchorHash": "975813d9c3b1",
+            "labelHash": "996449625e38",
+            "children": {
+              "_label": {
+                "contentHash": "996449625e38",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "0148c3614f0d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "25614a17eee8",
+                "anchorHash": "b4714c52e5d8"
+              },
+              "prose:2": {
+                "contentHash": "55a69c27a390",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "write-content": {
+            "contentHash": "4de204c081bc",
+            "anchorHash": "30a998122194",
+            "labelHash": "e9a06f51078d",
+            "children": {
+              "_label": {
+                "contentHash": "e9a06f51078d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "ea623876e493",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "2aa5eda99cab",
+                "anchorHash": "73847946c646"
+              },
+              "prose:2": {
+                "contentHash": "bb7208bc9b5d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "take-notes": {
+            "contentHash": "61bd7cf0194b",
+            "anchorHash": "5a413c566216",
+            "labelHash": "5e0469d3d682",
+            "children": {
+              "_label": {
+                "contentHash": "5e0469d3d682",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "6d8a219e3203",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "aec3c8b84acb",
+                "anchorHash": "0a6abac06e9c"
+              },
+              "prose:2": {
+                "contentHash": "8389cecad169",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "translate-ethereum": {
+            "contentHash": "3349631efb03",
+            "anchorHash": "362dc2229409",
+            "labelHash": "580e1e8d2cee",
+            "children": {
+              "_label": {
+                "contentHash": "580e1e8d2cee",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "c25cddcbccbb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "fcec91509759",
+                "anchorHash": "be4ece9c0bdd"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "run-a-node": {
+            "contentHash": "c42efa811709",
+            "anchorHash": "c3bc7609277e",
+            "labelHash": "37a70eebd3a9",
+            "children": {
+              "_label": {
+                "contentHash": "37a70eebd3a9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "9b9f05cca291",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "b68edac60c0f",
+                "anchorHash": "4b27a10ef117"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "staking": {
+            "contentHash": "9112b95e7bd7",
+            "anchorHash": "7c09b041d36b",
+            "labelHash": "406ac3dd5da0",
+            "children": {
+              "_label": {
+                "contentHash": "406ac3dd5da0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "dd6e10a3c1c0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "69d6e676fc84",
+                "anchorHash": "28704a15211d"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "support-projects": {
+            "contentHash": "7081d0897d18",
+            "anchorHash": "45b7c92ffd44",
+            "labelHash": "8666a2d99fc5",
+            "children": {
+              "_label": {
+                "contentHash": "8666a2d99fc5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "088c91f1e1a4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "f24403e9a771",
+                "anchorHash": "2914a28c28c2"
+              },
+              "prose:3": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "ae685ab6651b",
+                "anchorHash": "430576b2f82b"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "meetups",
+          "write-content",
+          "take-notes",
+          "translate-ethereum",
+          "run-a-node",
+          "staking",
+          "support-projects"
+        ]
+      },
+      "financial-professionals": {
+        "contentHash": "9a8828719488",
+        "anchorHash": "199580e7a82c",
+        "labelHash": "70aa1f94be98",
+        "children": {
+          "_label": {
+            "contentHash": "70aa1f94be98",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "5445879c1c0e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "de0d99648920",
+            "anchorHash": "930ceb8db887"
+          },
+          "prose:4": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "cd431e5dcab8",
+            "anchorHash": "c03b1b7f7ab6"
+          },
+          "prose:5": {
+            "contentHash": "2c30bf3201d7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "7bf6e57a75e7",
+            "anchorHash": "1fa3d4d1343b"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      },
+      "product-managers": {
+        "contentHash": "4524b47dfbb8",
+        "anchorHash": "d06456d42219",
+        "labelHash": "877862727499",
+        "children": {
+          "_label": {
+            "contentHash": "877862727499",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "b77cf63ea08e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ef68a95cf96b",
+            "anchorHash": "0a6abac06e9c"
+          },
+          "prose:3": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "f1caa0e90444",
+            "anchorHash": "20ae1440685d"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "marketing": {
+        "contentHash": "86435a7647e2",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3c1558f11712",
+        "children": {
+          "_label": {
+            "contentHash": "3c1558f11712",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "545745f8104b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "ethereum-jobs": {
+        "contentHash": "28e1a70d69b5",
+        "anchorHash": "9a3770907beb",
+        "labelHash": "4103629855b7",
+        "children": {
+          "_label": {
+            "contentHash": "4103629855b7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:12": {
+            "contentHash": "8a326c25ed4f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f6987cef5c40",
+            "anchorHash": "e8568582f882"
+          },
+          "prose:13": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "657efa0e9755",
+            "anchorHash": "7a135007ee55"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "9828c25314a8",
+            "anchorHash": "c1138546c284"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "a69f7b6ced15",
+            "anchorHash": "562be1f92339"
+          },
+          "prose:16": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "52367ab5305e",
+            "anchorHash": "126ccb836dbb"
+          },
+          "prose:17": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "638bb0f8846d",
+            "anchorHash": "f1995c0b2158"
+          },
+          "prose:18": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "0cd9a54f9065",
+            "anchorHash": "1a31c13c306e"
+          },
+          "prose:19": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "4fa89aadc038",
+            "anchorHash": "fe53f121c8d7"
+          },
+          "prose:20": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "53e5fa034937",
+            "anchorHash": "68c59f952097"
+          },
+          "prose:21": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "fa3252d21615",
+            "anchorHash": "30af076bff55"
+          },
+          "prose:22": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "2fddd32ec9a9",
+            "anchorHash": "3328f5b53803"
+          },
+          "prose:23": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "5e2604b9e430",
+            "anchorHash": "7991f258a207"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:12",
+          "link:0",
+          "prose:13",
+          "link:1",
+          "prose:14",
+          "link:2",
+          "prose:15",
+          "link:3",
+          "prose:16",
+          "link:4",
+          "prose:17",
+          "link:5",
+          "prose:18",
+          "link:6",
+          "prose:19",
+          "link:7",
+          "prose:20",
+          "link:8",
+          "prose:21",
+          "link:9",
+          "prose:22",
+          "link:10",
+          "prose:23",
+          "link:11"
+        ]
+      },
+      "decentralized-autonomous-organizations-daos": {
+        "contentHash": "a51153339534",
+        "anchorHash": "d24de8573f8b",
+        "labelHash": "c594dc03abed",
+        "children": {
+          "_label": {
+            "contentHash": "c594dc03abed",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:18": {
+            "contentHash": "5009b7f8f698",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "95e41dfce377",
+            "anchorHash": "d1d1f4395a5a"
+          },
+          "prose:19": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "52ca11f0bac7",
+            "anchorHash": "42a58977bde4"
+          },
+          "link:2": {
+            "contentHash": "8bb680420021",
+            "anchorHash": "2ccfdf2554c8"
+          },
+          "prose:20": {
+            "contentHash": "9cec0c2e87f0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "20f8789fd824",
+            "anchorHash": "3642d3ec19c0"
+          },
+          "link:4": {
+            "contentHash": "16932d515b25",
+            "anchorHash": "f9febcd446b1"
+          },
+          "prose:21": {
+            "contentHash": "a03f7a8a7a6c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "0ea357bf40a5",
+            "anchorHash": "3519f4f620ff"
+          },
+          "link:6": {
+            "contentHash": "87e9d664d2d8",
+            "anchorHash": "f514372cb5d3"
+          },
+          "prose:22": {
+            "contentHash": "4d8df0bd3b4e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "a1fa0f49300c",
+            "anchorHash": "07535b80fe4f"
+          },
+          "link:8": {
+            "contentHash": "f63bad10dbab",
+            "anchorHash": "811cb85ac4e8"
+          },
+          "prose:23": {
+            "contentHash": "394979ddd1ad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "3502285e43df",
+            "anchorHash": "291be343b822"
+          },
+          "link:10": {
+            "contentHash": "3e5e7dd710c5",
+            "anchorHash": "4624257ca9c1"
+          },
+          "prose:24": {
+            "contentHash": "639c62ccd094",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "7544a2cb1e31",
+            "anchorHash": "5775c147b151"
+          },
+          "link:12": {
+            "contentHash": "80ff8df72dd8",
+            "anchorHash": "6fe522bb32b2"
+          },
+          "prose:25": {
+            "contentHash": "2e44a68c5899",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:13": {
+            "contentHash": "3d0b75ad3fa1",
+            "anchorHash": "5d7537dfd986"
+          },
+          "link:14": {
+            "contentHash": "873fffdf2e66",
+            "anchorHash": "290e83160642"
+          },
+          "prose:26": {
+            "contentHash": "fcade65ff6c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:15": {
+            "contentHash": "03728d741138",
+            "anchorHash": "9b6c54bf7dfe"
+          },
+          "link:16": {
+            "contentHash": "62b88e014278",
+            "anchorHash": "5b96c67be0c6"
+          },
+          "prose:27": {
+            "contentHash": "689f27e172f5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:17": {
+            "contentHash": "1be775fe4f07",
+            "anchorHash": "7828a0bf1b7a"
+          },
+          "prose:28": {
+            "contentHash": "10174a218575",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:18",
+          "link:0",
+          "prose:19",
+          "link:1",
+          "link:2",
+          "prose:20",
+          "link:3",
+          "link:4",
+          "prose:21",
+          "link:5",
+          "link:6",
+          "prose:22",
+          "link:7",
+          "link:8",
+          "prose:23",
+          "link:9",
+          "link:10",
+          "prose:24",
+          "link:11",
+          "link:12",
+          "prose:25",
+          "link:13",
+          "link:14",
+          "prose:26",
+          "link:15",
+          "link:16",
+          "prose:27",
+          "link:17",
+          "prose:28"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "developers",
+      "researchers-and-academics",
+      "non-technical",
+      "financial-professionals",
+      "product-managers",
+      "marketing",
+      "ethereum-jobs",
+      "decentralized-autonomous-organizations-daos"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

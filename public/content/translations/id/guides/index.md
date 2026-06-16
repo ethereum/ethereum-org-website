@@ -4,24 +4,22 @@ description: Kumpulan panduan praktis yang menjelaskan dasar-dasar penggunaan Et
 lang: id
 ---
 
-# Panduan Ethereum
+Apakah Anda ingin memulai perjalanan Ethereum Anda? Panduan praktis kami memandu Anda langkah demi langkah untuk memulai, dan memudahkan Anda menavigasi teknologi baru ini.
 
-Apakah Anda ingin memulai perjalanan Ethereum Anda? Panduan praktis kami memandu Anda langkah demi langkah untuk memulai, dan mempermudah navigasi teknologi baru ini.
-
-## Memulai
+## Memulai {#getting-started}
 
 1. [Cara "membuat" akun Ethereum](/guides/how-to-create-an-ethereum-account/) - Siapa pun dapat membuat dompet secara gratis. Panduan ini akan menunjukkan kepada Anda dari mana harus memulai.
 
 2. [Cara menggunakan dompet](/guides/how-to-use-a-wallet/) - Pelajari cara mengirim dan menerima token di dompet Anda dan cara menghubungkan dompet ke proyek.
 
-## Dasar-dasar keamanan
+## Dasar-dasar keamanan {#security-basics}
 
 1. [Cara mencabut akses kontrak pintar ke dana kripto Anda](/guides/how-to-revoke-token-access/) - Jika Anda tiba-tiba melihat transaksi di dompet Anda yang tidak Anda mulai, panduan ini akan mengajarkan Anda cara mencegah hal itu terjadi lagi.
 
 2. [Cara mengidentifikasi token penipuan](/guides/how-to-id-scam-tokens/) - Apa itu token penipuan? Bagaimana mereka membuat diri mereka terlihat sah, dan bagaimana Anda mengidentifikasinya untuk melindungi diri sendiri dan menghindari penipuan?
 
-## Menggunakan Ethereum
+## Menggunakan Ethereum {#using-ethereum}
 
-1. [Cara menjembatani token ke layer 2](/guides/how-to-use-a-bridge/) - Apakah transaksi Ethereum terlalu mahal? Pertimbangkan untuk beralih ke solusi peningkatan Ethereum yang disebut layer 2.
+1. [Cara menjembatani token ke lapisan 2 (l2)](/guides/how-to-use-a-bridge/) - Apakah transaksi Ethereum terlalu mahal? Pertimbangkan untuk beralih ke solusi penskalaan Ethereum yang disebut lapisan 2 (l2).
 
 2. [Cara menukar token](/guides/how-to-swap-tokens/) - Apakah Anda ingin menukar token Anda dengan yang lain? Panduan sederhana ini akan menunjukkan kepada Anda cara melakukannya.

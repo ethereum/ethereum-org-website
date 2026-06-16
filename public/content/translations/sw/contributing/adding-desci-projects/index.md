@@ -1,44 +1,42 @@
 ---
 title: Kuongeza miradi ya DeSci
-description: Sera tunayoitumia tunapoongeza kiungo cha miradi kwenye ukurasa wa DeSci kwenye ethereum.org
+description: Sera tunayotumia tunapoongeza kiungo cha miradi kwenye ukurasa wa DeSci kwenye ethereum.org
 lang: sw
 ---
 
-# Kuongeza miradi {#adding-projects}
+Tunataka kuhakikisha tunaonyesha miradi mbalimbali na kutoa picha nzuri ya mandhari ya sayansi iliyogatuliwa (DeSci).
 
-Tunataka kuhakikisha tunaonyesha miradi mbalimbali na kutoa picha nzuri ya mandhari ya DeSci.
-
-Mtu yeyote yuko huru kupendekeza mradi wa kuorodhesha kwenye ukurasa wa DeSci kwenye ethereum.org. Vile vile, mtu yeyote anayegundua mradi ambao hauhusiani tena au hautimizi tena vigezo vyetu vya kustahiki yuko huru kupendekeza uondoaji wake.
+Mtu yeyote yuko huru kupendekeza mradi wa kuorodheshwa kwenye ukurasa wa DeSci kwenye ethereum.org. Vilevile, mtu yeyote anayegundua mradi ambao haufai tena au hautimizi tena vigezo vyetu vya kustahiki yuko huru kupendekeza uondolewe.
 
 ## Mfumo wa uamuzi {#the-decision-framework}
 
-### Vigezo vya kujumuishwa: Mahitaji ya lazima {#the-must-haves}
+### Vigezo vya kujumuishwa: mambo ya lazima {#the-must-haves}
 
-- **Msimbo/data huria** - Uwazi wa msimbo na data ni kanuni ya msingi ya DeSci, hivyo miradi ya DeSci haipaswi kuwa ya chanzo funge. Msingi wa msimbo unapaswa kupatikana na ikiwezekana uwe wazi kwa maombi ya kuvuta (PRs).
-- **Miradi ya DeSci inapaswa kugatuliwa kwa njia inayoonekana** - Hii inaweza kujumuisha kutawaliwa na DAO, au kwa kujenga kwa kutumia rundo la teknolojia lililogatuliwa pamoja na pochi zisizo za ulinzi. Pengine inahusisha mikataba-erevu inayoweza kukaguliwa kwenye Ethereum.
-- **Taarifa za uorodheshaji zilizo za kweli na sahihi** - Inatarajiwa kwamba orodha zozote zilizopendekezwa kutoka kwa miradi zinakuja na taarifa za kweli na sahihi. Bidhaa zitakazodanganya taarifa za orodha, kama kudai bidhaa yako ni "chanzo wazi" wakati siyo, zitatolewa.
-- **Kujitolea kunakoonekana kupanua ufikiaji wa sayansi** - Mradi wa DeSci unapaswa kuweza kueleza jinsi wanavyopanua ushiriki katika sayansi kwa umma kwa jumla, sio tu kwa wamiliki wa tokeni/NFT.
-- **Inapatikana ulimwenguni kote** - Mradi wako hauna vikwazo vya kijiografia au mahitaji ya KYC yanayowatenga watu fulani kupata huduma yako.
-- **Tovuti na nyaraka zenye taarifa** - Ni muhimu wageni kwenye tovuti ya mradi waweze kuelewa kile ambacho mradi unafanya hasa, jinsi unavyochangia katika ugatuzi wa miundombinu ya sayansi na jinsi ya kushiriki.
-- **Mradi unapaswa kuwa sehemu ya mfumo ikolojia wa Ethereum** - Katika ethereum.org tunaamini Ethereum (na Tabaka zake za 2) kuwa ndio tabaka la msingi linalofaa kwa vuguvugu la DeSci.
-- **Mradi umeimarika vizuri** - Mradi una watumiaji halisi ambao wameweza kupata huduma za mradi kwa miezi kadhaa.
+- **Msimbo/data ya chanzo wazi** - Uwazi wa msimbo na data ni kanuni kuu ya DeSci, kwa hivyo miradi ya DeSci haipaswi kuwa ya chanzo kilichofungwa. Msingi wa msimbo unapaswa kufikika na kwa hakika uwe wazi kwa PRs.
+- **Miradi ya DeSci inapaswa kuwa iliyogatuliwa kwa uthibitisho** - Hii inaweza kujumuisha kusimamiwa na DAO, au kwa kujenga na mrundikano wa teknolojia iliyogatuliwa ikijumuisha pochi zisizo za udhamini. Pengine inahusisha mikataba mahiri inayoweza kukaguliwa kwenye Ethereum.
+- **Taarifa za uorodheshaji za kweli na sahihi** - Inatarajiwa kwamba uorodheshaji wowote unaopendekezwa kutoka kwa miradi unakuja na taarifa za kweli na sahihi. Bidhaa zinazogushi taarifa za uorodheshaji, kama vile kutangaza bidhaa yako ni "chanzo wazi" wakati sivyo, zitaondolewa.
+- **Ufungamanisho unaothibitishwa wa kupanua ufikiaji wa sayansi** - Mradi wa DeSci unapaswa kuwa na uwezo wa kueleza jinsi wanavyopanua ushiriki katika sayansi kwa umma kwa ujumla, sio tu kwa wamiliki wa tokeni/NFT.
+- **Inafikika kimataifa** - Mradi wako hauna vikwazo vya kijiografia au mahitaji ya KYC ambayo yanatenga baadhi ya watu kufikia huduma yako.
+- **Tovuti na nyaraka zenye taarifa** - Ni muhimu kwamba wageni kwenye tovuti ya mradi waweze kuelewa kile mradi unafanya hasa, jinsi unavyochangia katika ugatuzi wa miundombinu ya sayansi na jinsi ya kushiriki.
+- **Mradi unapaswa kuwa sehemu ya mfumo wa ikolojia wa Ethereum** - Kwenye ethereum.org tunaamini Ethereum (na tabaka la 2 (l2) zake) kuwa tabaka la msingi linalofaa kwa vuguvugu la DeSci.
+- **Mradi umeimarika vizuri kiasi** - Mradi una watumiaji halisi ambao wameweza kufikia huduma za mradi kwa miezi kadhaa.
 
-### Sifa za ziada
+### Mambo mazuri kuwa nayo {#nice-to-haves}
 
-- **Inapatikana katika lugha nyingi** - Mradi wako umetafsiriwa katika lugha nyingi, kuruhusu watumiaji kote ulimwenguni kuufikia.
-- **Rasilimali za kielimu** - Bidhaa yako inapaswa kuwa na uzoefu mzuri wa kuanzisha mtumiaji ili kusaidia na kuwaelimisha watumiaji. Au ushahidi wa jinsi-ya maudhui kama makala au filamu.
-- **Ukaguzi wa wahusika wengine** - Bidhaa yako imekaguliwa kitaalamu kwa ajili ya udhaifu na mhusika mwingine anayeaminika.
-- **Mtu wa mawasiliano** - Mtu wa mawasiliano wa mradi (huyu anaweza kuwa mwakilishi kutoka DAO au jamii) atatusaidia sana kupata taarifa sahihi wakati mabadiliko yanapofanywa. Hii itaendelea kuhuisha ethereum.org ili iwe rahisi kusimamia wakati wa kukusanya taarifa za baadaye.
+- **Inapatikana katika lugha nyingi** - Mradi wako umetafsiriwa katika lugha nyingi kuruhusu watumiaji kote ulimwenguni kuufikia.
+- **Rasilimali za elimu** - Bidhaa yako inapaswa kuwa na uzoefu wa uingizaji ulioundwa vizuri ili kusaidia na kuelimisha watumiaji. Au ushahidi wa maudhui ya jinsi ya kufanya kama vile makala au video.
+- **Ukaguzi wa wahusika wengine** - Bidhaa yako imekaguliwa kitaalamu kwa udhaifu na mhusika mwingine anayeaminika.
+- **Mtu wa kuwasiliana naye** - Mtu wa kuwasiliana naye kwa ajili ya mradi (huyu anaweza kuwa mwakilishi kutoka kwa DAO au jumuiya) atatusaidia sana kupata taarifa sahihi mabadiliko yanapofanywa. Hii itafanya usasishaji wa ethereum.org uweze kudhibitiwa wakati wa kukusanya taarifa za baadaye.
 
 ## Matengenezo {#maintenance}
 
-Kama ni asili ya maji ya Ethereum, timu na bidhaa kuja na kwenda na uvumbuzi hutokea kila siku, hivyo tutaweza kufanya ukaguzi wa kawaida wa maudhui yetu ya:
+Kama ilivyo asili ya kubadilika ya Ethereum, timu na bidhaa huja na kuondoka na uvumbuzi hutokea kila siku, kwa hivyo tutafanya ukaguzi wa mara kwa mara wa maudhui yetu ili:
 
-- Hakikisha kwamba miradi yote iliyoorodheshwa bado inatimiza vigezo vyetu
-- Thibitisha kuwa hakuna bidhaa ambazo zimependekezwa zinazokidhi vigezo vyetu zaidi kuliko zile zilizoorodheshwa sasa hivi.
+- Kuhakikisha kwamba miradi yote iliyoorodheshwa bado inatimiza vigezo vyetu
+- Kuthibitisha hakuna bidhaa ambazo zimependekezwa ambazo zinatimiza vigezo vyetu zaidi kuliko zile zilizoorodheshwa kwa sasa
 
-Ethereum.org inasimamiwa na jamii ya chanzo huria na tunategemea jamii kusaidia kuiweka ikiwa ya kisasa. Ukigundua taarifa yoyote kuhusu miradi iliyoorodheshwa inayohitaji kusasishwa, tafadhali fungua suala au ombi la kuvuta (pull request) kwenye hazina yetu ya GitHub.
+Ethereum.org inadumishwa na jumuiya ya chanzo wazi na tunategemea jumuiya kusaidia kuiweka kisasa. Ikiwa utagundua taarifa yoyote kuhusu miradi iliyoorodheshwa inayohitaji kusasishwa, tafadhali fungua suala au ombi la kuvuta kwenye hazina yetu ya GitHub.
 
 ## Masharti ya matumizi {#terms-of-use}
 
-Tafadhali pia rejelea [masharti yetu ya matumizi](/terms-of-use/). Taarifa juu ya ethereum.org hutolewa tu kwa madhumuni ya taarifa ya jumla.
+Tafadhali pia rejelea [masharti yetu ya matumizi](/terms-of-use/). Taarifa kwenye ethereum.org hutolewa kwa madhumuni ya taarifa za jumla pekee.

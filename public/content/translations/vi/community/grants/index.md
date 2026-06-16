@@ -23,6 +23,7 @@ Các chương trình này hỗ trợ hệ sinh thái Ethereum rộng lớn bằn
 - [Trình khám phá Tài trợ ESP](https://esp.ethereum.foundation/funded-projects) - _Danh mục có thể tìm kiếm gồm hơn 1.000 dự án được hỗ trợ bởi Chương trình Hỗ trợ Hệ sinh thái_
 - [Tài trợ Học thuật](https://esp.ethereum.foundation/academic-grants) - _Các khoản tài trợ để hỗ trợ công việc học thuật liên quan đến Ethereum_
 
+
 ## Các nền tảng và công cụ tổng hợp danh sách tài trợ {#grant-list-aggregators}
 
 Các tài nguyên này tổng hợp và sắp xếp nhiều cơ hội tài trợ khác nhau trên toàn hệ sinh thái Ethereum, giúp bạn dễ dàng khám phá các cơ hội cấp vốn phù hợp với nhu cầu của dự án. Chúng tôi đã phân loại chúng theo từng nhóm đối tượng để giúp bạn bắt đầu tìm kiếm các tài nguyên phù hợp nhất dựa trên nhu cầu tài trợ cụ thể của mình.
@@ -61,6 +62,7 @@ Các chương trình này tập trung vào việc tài trợ cho các dự án m
 - [Giveth](https://giveth.io/) - _Nền tảng quyên góp tiền mã hóa cho phép quyên góp trực tiếp cho các dự án vì mục đích tốt đẹp mà không có thêm phí_
 - [Artizen](https://artizen.fund/) - _Giúp các nhà sáng tạo đối ứng vốn cho các dự án mới ở biên giới của nghệ thuật, khoa học, công nghệ và văn hóa_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Chương trình tăng tốc khởi nghiệp sử dụng tài trợ bậc hai để hỗ trợ các dự án mang lại lợi ích cho hàng hóa công cộng_
+
 
 ## Làm việc trong Ethereum {#work-in-ethereum}
 

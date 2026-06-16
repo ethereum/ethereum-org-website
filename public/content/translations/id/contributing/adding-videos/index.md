@@ -18,6 +18,7 @@ Ethereum.org adalah sumber daya edukasi yang netral. Galeri video dikurasi untuk
 
 Situs ini tidak mencantumkan video yang utamanya mempromosikan produk, token, atau layanan komersial tertentu.
 
+
 ## Kriteria penyertaan {#criteria-for-inclusion}
 
 ### Wajib ada {#must-haves}
@@ -33,6 +34,7 @@ Situs ini tidak mencantumkan video yang utamanya mempromosikan produk, token, at
 - **Memiliki transkrip** – Video dengan transkrip meningkatkan aksesibilitas dan SEO. Jika Anda tidak memilikinya, tim ethereum.org dapat membantu membuatnya.
 - **Dari sumber yang kredibel** – Konten dari pendidik, peneliti, dan sumber yang sudah mapan mendapat prioritas.
 - **Tepat waktu dan abadi (evergreen)** – Konten yang tetap relevan seiring berjalannya waktu lebih disukai daripada materi yang sensitif terhadap waktu.
+
 
 ## Cara menambahkan video {#how-to-add-a-video}
 
@@ -141,6 +143,7 @@ Anda juga dapat menggunakan tag baru — tag tersebut akan tersedia untuk pengel
 
 Buka pull request dengan perubahan Anda ke cabang `dev`. Tim akan meninjau kiriman Anda dan memberikan umpan balik.
 
+
 ## Pemeliharaan {#maintenance}
 
 Video yang dicantumkan ditinjau secara rutin untuk memastikan video tersebut:
@@ -150,6 +153,7 @@ Video yang dicantumkan ditinjau secara rutin untuk memastikan video tersebut:
 - Memiliki tautan hosting/YouTube yang berfungsi
 
 Jika Anda melihat masalah pada video yang dicantumkan, [buat sebuah isu](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) atau kirim email ke [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Ketentuan penggunaan {#terms-of-use}
 

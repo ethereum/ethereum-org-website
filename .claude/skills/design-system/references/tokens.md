@@ -117,7 +117,7 @@ This file also registers:
   - `lg: 992px`  ← non-Tailwind-default
   - `xl: 1280px`
   - `2xl: 1536px`
-- **Custom radii**: `--radius-4xl: 2rem`
+- **Canonical radius**: `--radius-base` (`= var(--radius-2xl)`, 1rem). Use the `rounded-base` utility as the default corner radius for cards, list/table containers, banners, and most rounded surfaces -- prefer it over reaching for `rounded-2xl`/`rounded-xl`/`rounded-3xl` directly. (`--radius-4xl: 2rem` is no longer a custom override -- Tailwind v4 ships `4xl` in its default scale, so `rounded-4xl` still works for the larger full-bleed/hero surfaces that intentionally use it.)
 - **Animations**: `--animate-spin-30`, `--animate-pulse-light`, `--animate-fade-in`, `--animate-blink`, etc.
 
 > **Spacing**: Tailwind v4 generates fractional spacing classes automatically (e.g., `mt-3.5`, `mt-7.5`, `inset-s-3.75`). The custom `--spacing-7_5`, `--spacing-10_5`, etc. defined in this file may be vestigial from v3 and worth verifying as a cleanup item. Don't rely on the underscore notation -- use the v4 native fractional syntax (`mt-7.5`, not `mt-7_5`).
@@ -196,15 +196,15 @@ The `useColorModeValue` hook (Chakra leftover) is **deprecated**. Don't introduc
 
 `<body>` automatically gets `bg-background font-body leading-base text-body`. You don't need to repeat these on top-level page wrappers.
 
-Headings (`<h1>` through `<h6>`) get sizing and `font-black` from `base.css`:
-- `<h1>`: `text-4xl lg:text-5xl`
-- `<h2>`: `text-3xl lg:text-4xl`
-- `<h3>`: `text-2xl lg:text-3xl`
-- `<h4>`: `text-xl lg:text-2xl`
-- `<h5>`: `text-lg`
-- `<h6>`: `text-base`
+Headings (`<h1>` through `<h6>`) get sizing and `font-black` from `base.css`. Sizing comes from the `text-h1`-`text-h6` utilities in `src/styles/utilities.css`, which `base.css` `@apply`s to each tag (size + line-height only -- the `font-black` is applied separately):
+- `<h1>` -> `text-h1` (`text-4xl lg:text-5xl`)
+- `<h2>` -> `text-h2` (`text-3xl lg:text-4xl`)
+- `<h3>` -> `text-h3` (`text-2xl lg:text-3xl`)
+- `<h4>` -> `text-h4` (`text-xl lg:text-2xl`)
+- `<h5>` -> `text-h5` (`text-md lg:text-xl`)
+- `<h6>` -> `text-h6` (`text-sm lg:text-md`)
 
-This means `<h1>Hello</h1>` already looks correct. Writing `<div className="text-5xl font-bold">Hello</div>` is reinventing -- and it loses semantics.
+This means `<h1>Hello</h1>` already looks correct. Writing `<div className="text-5xl font-bold">Hello</div>` is reinventing -- and it loses semantics. To make any element match a heading level's size, apply the `text-h*` utility (e.g. `text-h2`) rather than hand-reconstructing the responsive pair -- see `references/spacing-typography.md` "Heading Sizes."
 
 `<a>` tags get `text-primary` + underline + `focus-visible` outline.
 

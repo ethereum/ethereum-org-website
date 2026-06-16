@@ -1,22 +1,20 @@
 ---
-title: "Ebene 2 hinzufügen"
-description: "Die Richtlinie, die wir beim Hinzufügen einer Ebene 2 zu ethereum.org anwenden"
+title: Layer 2 hinzufügen
+description: Die Richtlinie, die wir beim Hinzufügen eines Layer 2 zu ethereum.org anwenden
 lang: de
 ---
 
-# Ebene 2 hinzufügen {#adding-layer-2}
+Wir möchten sicherstellen, dass wir die bestmöglichen Ressourcen auflisten, damit Benutzer sich sicher und souverän im Layer-2-Bereich bewegen können.
 
-Wir möchten sicherstellen, dass wir die bestmöglichen Ressourcen auflisten, damit Benutzer sicher und souverän im Bereich der Ebene 2 navigieren können.
+Es steht jedem frei, das Hinzufügen eines Layer 2 auf ethereum.org vorzuschlagen. Wenn wir einen Layer 2 übersehen haben, **[schlage ihn bitte vor](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-Jeder kann vorschlagen, eine Ebene 2 auf ethereum.org hinzuzufügen. Wenn wir eine Ebene 2 übersehen haben, **[schlagen Sie diese bitte vor](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
-
-Wir listen derzeit L2s auf den folgenden Seiten auf:
+Wir listen L2s derzeit auf den folgenden Seiten auf:
 
 - [Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/)
-- [Zero-Knowledge Rollups](/developers/docs/scaling/zk-rollups/)
-- [Ebene 2](/layer-2/)
+- [Zero-Knowledge-Rollups](/developers/docs/scaling/zk-rollups/)
+- [Layer 2](/layer-2/)
 
-Ebene 2 ist ein relativ neues und aufregendes Paradigma für Ethereum. Wir haben versucht, einen fairen Rahmen für die Berücksichtigung auf ethereum.org zu schaffen, aber die Kriterien für die Auflistung werden sich im Laufe der Zeit ändern und weiterentwickeln.
+Layer 2 ist ein relativ neues und spannendes Paradigma für Ethereum. Wir haben versucht, einen fairen Rahmen für die Berücksichtigung auf ethereum.org zu schaffen, aber die Kriterien für die Auflistung werden sich im Laufe der Zeit ändern und weiterentwickeln.
 
 ## Der Entscheidungsrahmen {#decision-framework}
 
@@ -24,51 +22,51 @@ Ebene 2 ist ein relativ neues und aufregendes Paradigma für Ethereum. Wir haben
 
 **Auflistung auf L2BEAT**
 
-- Um berücksichtigt zu werden, muss dieses Projekt auf [L2BEAT](https://l2beat.com) gelistet sein. L2BEAT bietet eine robuste Risikobewertung von Ebene-2-Projekten, auf die wir uns bei der Bewertung von L2-Projekten stützen. **Wenn das Projekt nicht auf L2BEAT aufgeführt ist, werden wir es nicht als L2 auf ethereum.org auflisten.**
-- [Erfahren Sie, wie Sie Ihr L2-Projekt zu L2BEAT hinzufügen](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Um berücksichtigt zu werden, muss dieses Projekt auf [L2BEAT](https://l2beat.com) gelistet sein. L2BEAT bietet eine robuste Risikobewertung von Layer-2-Projekten, auf die wir uns bei der Bewertung von L2-Projekten stützen. **Wenn das Projekt nicht auf L2BEAT aufgeführt ist, werden wir es nicht als L2 auf ethereum.org auflisten.**
+- [Erfahre, wie du dein L2-Projekt zu L2BEAT hinzufügst](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Open Source**
 
-- Ihr Code muss zugänglich sein und Sie sollten PRs aus der breiteren Community akzeptieren.
+- Dein Code muss zugänglich sein und du solltest PRs aus der breiteren Community akzeptieren.
 
-**Kategorie der Ebene 2**
+**Layer-2-Kategorie**
 
-Wir betrachten derzeit die folgenden als Ebene-2-Lösungen:
+Wir betrachten derzeit die folgenden als Layer-2-Lösungen:
 
 - Optimistic Rollup
-- Zero-Knowledge Rollup
+- Zero-Knowledge-Rollup
 
-_Wir betrachten andere Skalierungslösungen, die Ethereum nicht für die Datenverfügbarkeit oder Sicherheit nutzen, nicht als Ebene 2._
+_Wir betrachten andere Skalierungslösungen, die Ethereum nicht für die Datenverfügbarkeit oder Sicherheit nutzen, nicht als Layer 2._
 
-**Ethereum für Datenverfügbarkeit**
+**Ethereum für die Datenverfügbarkeit**
 
-- Datenverfügbarkeit ist ein wichtiges Unterscheidungsmerkmal zwischen anderen Skalierungslösungen und Ebene 2. Ein Projekt **muss** das Ethereum-Mainnet für die Datenverfügbarkeit nutzen, um für eine Auflistung in Betracht gezogen zu werden.
+- Die Datenverfügbarkeit ist ein wichtiges Unterscheidungsmerkmal zwischen anderen Skalierungslösungen und Layer 2. Ein Projekt **muss** das Ethereum Mainnet für die Datenverfügbarkeit nutzen, um für eine Auflistung in Betracht gezogen zu werden.
 
-**Kettenübergreifende Brücken**
+**Bridges**
 
-- Wie können Benutzer in die Ebene 2 einsteigen?
+- Wie können Benutzer auf den Layer 2 gelangen?
 
 **Datum, an dem das Projekt live ging**
 
-- Eine Ebene 2, die seit über 6 Monaten auf dem Mainnet „live“ ist
+- Ein Layer 2, der seit über 6 Monaten auf dem Mainnet „live“ ist
 
-- Neuere Projekte, die sich noch nicht in der Praxis bei Benutzern bewährt haben, werden mit geringerer Wahrscheinlichkeit gelistet.
+- Neuere Projekte, die noch nicht von Benutzern in der Praxis erprobt wurden, werden seltener gelistet.
 
 **Externes Sicherheitsaudit**
 
-- Ob durch ein Audit, ein internes Sicherheitsteam oder eine andere Methode, die Sicherheit Ihres Produkts muss zuverlässig getestet werden. Dies verringert das Risiko für unsere Benutzer und zeigt uns, dass Sie Sicherheit ernst nehmen.
+- Ob durch ein Audit, ein internes Sicherheitsteam oder eine andere Methode – die Sicherheit deines Produkts muss zuverlässig getestet sein. Dies verringert das Risiko für unsere Benutzer und zeigt uns, dass du Sicherheit ernst nimmst.
 
 **Nachhaltige Nutzerbasis**
 
-- Wir berücksichtigen Metriken wie den TVL-Verlauf, Transaktionsstatistiken und ob es von bekannten Unternehmen oder Projekten genutzt wird.
+- Wir berücksichtigen Metriken wie den Verlauf des gesamten gebundenen Werts (TVL), Transaktionsstatistiken und ob es von bekannten Unternehmen oder Projekten genutzt wird
 
 **Aktives Entwicklungsteam**
 
-- Wir werden keine Ebene 2 auflisten, an der kein aktives Team arbeitet.
+- Wir werden keinen Layer 2 auflisten, an dem kein aktives Team arbeitet.
 
-**Blocksuchmaschine**
+**Block-Explorer**
 
-- Gelistete Projekte erfordern eine funktionierende Blocksuchmaschine, damit Benutzer problemlos auf der Chain navigieren können.
+- Gelistete Projekte erfordern einen funktionierenden Block-Explorer, damit Benutzer problemlos auf der Chain navigieren können.
 
 ### Weitere Kriterien: die Nice-to-haves {#nice-to-haves}
 
@@ -76,21 +74,21 @@ _Wir betrachten andere Skalierungslösungen, die Ethereum nicht für die Datenve
 
 - Können Benutzer direkt von einer Börse einzahlen und/oder abheben?
 
-**Links zu Dapps im Ökosystem der Ebene 2**
+**Links zu Dezentralen Anwendungen (Dapps) im Layer-2-Ökosystem**
 
-- Wir möchten Informationen darüber bereitstellen können, was Benutzer auf dieser Ebene 2 erwarten können. (z. B. https://portal.arbitrum.io/, https://www.optimism.io/apps)
+- Wir möchten Informationen darüber bereitstellen können, was Benutzer auf diesem Layer 2 tun können. (z. B. https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Listen von Token-Verträgen**
 
-- Da Vermögenswerte auf der Ebene 2 eine neue Adresse haben werden, teilen Sie uns bitte mit, falls eine Token-Listen-Ressource verfügbar ist.
+- Da Vermögenswerte auf Layer 2 eine neue Adresse haben werden, teile uns bitte mit, falls eine Token-Listen-Ressource verfügbar ist.
 
 **Native Wallet-Unterstützung**
 
-- Unterstützen irgendwelche Wallets die L2 nativ?
+- Unterstützen irgendwelche Wallets den L2 nativ?
 
-## Fügen Sie Ihre Ebene 2 hinzu {#add-exchange}
+## Füge deinen Layer 2 hinzu {#add-exchange}
 
-Wenn Sie eine Ebene 2 zu ethereum.org hinzufügen möchten, erstellen Sie ein Issue auf GitHub.
+Wenn du einen Layer 2 zu ethereum.org hinzufügen möchtest, erstelle ein Issue auf GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Ein Issue erstellen

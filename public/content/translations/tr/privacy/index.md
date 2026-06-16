@@ -1,97 +1,97 @@
 ---
 title: Ethereum'da Gizlilik
-description: "Ethereum'da gizliliğinizi korumak için araçlar ve teknikler"
+description: Ethereum'da gizliliğinizi korumak için araçlar ve teknikler
 lang: tr
 ---
 
-# Ethereum'da Gizlilik {#introduction}
+Gizlilik sadece kişisel güvenlik için gerekli değildir, aynı zamanda özgürlüğün temel taşı ve [merkeziyetsizlik için kilit bir güvencedir](https://vitalik.eth.limo/general/2025/04/14/privacy.html). Gizlilik, insanlara kendilerini ifade etme, başkalarıyla işlem yapma ve toplulukları özgürce organize etme yeteneği verir. Ancak tüm blokzincirler gibi, Ethereum'un halka açık defteri de gizliliği zorlaştırır.
 
-Gizlilik yalnızca kişisel güvenlik için gerekli olmakla kalmaz, aynı zamanda özgürlüğün temel taşı ve [merkeziyetsizliğin kilit bir garantörüdür](https://vitalik.eth.limo/general/2025/04/14/privacy.html). Gizlilik insanlara kendilerini ifade etme, başkalarıyla işlem yapma ve toplulukları özgürce organize etme olanağı tanır. Ancak tüm blokzincirler gibi Ethereum'un halka açık defteri de gizliliği zorlaştırır.
+Ethereum tasarımı gereği şeffaftır. Her zincir içi eylem, bakan herkes tarafından görülebilir. Ethereum, etkinliğinizi gerçek dünyadaki bir kimlik yerine bir [açık anahtara](/decentralized-identity/#public-key-cryptography) bağlayarak takma ad kullanımı sunsa da, etkinlik kalıpları hassas bilgileri ortaya çıkarmak ve kullanıcıları tanımlamak için analiz edilebilir.
 
-Ethereum tasarım gereği şeffaftır. Zincir üstündeki her eylem, bakan herkese görünür. Ethereum, faaliyetlerinizi gerçek dünya kimliği yerine bir [açık anahtara](/decentralized-identity/#public-key-cryptography) bağlayarak takma ad kullanma olanağı sunsa da, hassas bilgileri ortaya çıkarmak ve kullanıcıları tanımlamak için faaliyet kalıpları analiz edilebilir.
+Ethereum'a gizliliği koruyan araçlar inşa etmek, insanların, kuruluşların ve kurumların gereksiz ifşayı sınırlarken güvenli bir şekilde etkileşimde bulunmasına yardımcı olabilir. Bu, ekosistemi daha geniş bir kullanım senaryosu yelpazesi için daha güvenli ve daha pratik hale getirir.
 
-Ethereum'a gizliliği koruyan araçlar oluşturmak, insanların, kuruluşların ve kurumların gereksiz ifşayı sınırlarken güvenli bir şekilde etkileşim kurmasına yardımcı olabilir. Bu, ekosistemi daha geniş bir kullanım senaryosu yelpazesi için daha güvenli ve pratik hale getirir.
+<VideoWatch slug="privacy-is-existential" />
 
-## Yazımlar için gizlilik {#privacy-of-writes}
+## Yazma işlemleri için gizlilik {#privacy-of-writes}
 
-Varsayılan olarak, Ethereum'a yazılan her işlem halka açık ve kalıcıdır. Buna sadece ETH göndermek değil, aynı zamanda ENS adlarını kaydetmek, POAP'leri toplamak veya NFT ticareti yapmak da dahildir. Ödemeler, oylama veya kimlik doğrulama gibi günlük eylemler, bilgilerinizi istenmeyen taraflara ifşa edebilir. Bunları daha gizli hale getirmeye yardımcı olabilecek birkaç araç ve teknik vardır:
+Varsayılan olarak, Ethereum'da yazılan her işlem herkese açık ve kalıcıdır. Bu sadece ETH göndermeyi değil, aynı zamanda ENS isimlerini kaydetmeyi, POAP'leri toplamayı veya NFT ticareti yapmayı da içerir. Ödemeler, oy verme veya kimlik doğrulama gibi günlük eylemler, bilgilerinizi istenmeyen taraflara ifşa edebilir. Bunları daha gizli hale getirmeye yardımcı olabilecek çeşitli araçlar ve teknikler vardır:
 
-### Karıştırma protokolleri (veya "karıştırıcılar") {#mixing-protocols}
+### Karıştırma protokolleri (veya "mikserler") {#mixing-protocols}
 
-Karıştırıcılar, birçok kullanıcının işlemlerini paylaşılan bir "havuza" koyarak ve daha sonra insanların yeni bir adrese para çekmesine izin vererek göndericiler ve alıcılar arasındaki bağlantıyı koparır. Para yatırma ve çekme işlemleri birbirine karıştırıldığından, gözlemcilerin bunları birbirine bağlaması çok daha zordur.
+Mikserler, birçok kullanıcının işlemlerini ortak bir "havuza" koyarak ve ardından insanların daha sonra yeni bir adrese çekim yapmasına izin vererek göndericiler ve alıcılar arasındaki bağlantıyı koparır. Yatırma ve çekim işlemleri birbirine karıştığı için, gözlemcilerin bunları birbirine bağlaması çok daha zordur.
 
 _Örnekler: [PrivacyPools](https://docs.privacypools.com/), [Tornado Cash](https://tornado.cash/)_
 
 ### Korumalı Havuzlar {#shielded-pools}
 
-Korumalı havuzlar karıştırıcılara benzerdir ancak kullanıcıların havuzun içinde özel olarak fon tutmalarına ve transfer etmelerine olanak tanır. Sadece para yatırma ve çekme arasındaki bağlantıyı gizlemek yerine, korumalı havuzlar genellikle sıfır bilgi ispatlarıyla güvence altına alınan, devam eden özel bir durumu sürdürür. Bu, özel transferler, özel bakiyeler ve daha fazlasını oluşturmayı mümkün kılar.
+Korumalı havuzlar mikserlere benzer, ancak kullanıcıların fonları havuzun kendi içinde gizli bir şekilde tutmasına ve transfer etmesine olanak tanır. Korumalı havuzlar, sadece yatırma ve çekim arasındaki bağlantıyı gizlemek yerine, genellikle sıfır bilgi ispatları ile güvence altına alınan devam eden gizli bir durum sürdürür. Bu, gizli transferler, gizli bakiyeler ve daha fazlasını oluşturmayı mümkün kılar.
 
 _Örnekler: [Railgun](https://www.railgun.org/), [Aztec](https://aztec.network/), Nightfall_
 
 ### Gizli adresler {#stealth-addresses}
 
-Bir [gizli adres](https://vitalik.eth.limo/general/2023/01/20/stealth.html), her göndericiye benzersiz, tek seferlik bir posta kutusu vermek gibidir ve bunu sadece siz açabilirsiniz. Biri size her kripto gönderdiğinde, bu yeni bir adrese gider, böylece başka kimse tüm bu ödemelerin size ait olduğunu göremez. Bu, ödeme geçmişinizi gizli tutar ve izlenmesini zorlaştırır.
+Bir [gizli adres](https://vitalik.eth.limo/general/2023/01/20/stealth.html), her göndericiye yalnızca sizin açabileceğiniz benzersiz, tek seferlik bir posta kutusu vermek gibidir. Birisi size her kripto gönderdiğinde, bu yeni bir adrese gider, böylece başka hiç kimse tüm bu ödemelerin size ait olduğunu göremez. Bu, ödeme geçmişinizi gizli tutar ve izlenmesini zorlaştırır.
 
 _Örnekler: [UmbraCash](https://app.umbra.cash/faq), [FluidKey](https://www.fluidkey.com/)_
 
-### Diğer kullanım durumları {#other-use-cases}
+### Diğer kullanım senaryoları {#other-use-cases}
 
-Özel yazımları araştıran diğer projeler arasında [PlasmaFold](https://pse.dev/projects/plasma-fold) (özel ödemeler) ve [MACI](https://pse.dev/projects/maci) ve [Semaphore](https://pse.dev/projects/semaphore) (özel oylama) gibi sistemler bulunmaktadır.
+Gizli yazma işlemlerini araştıran diğer projeler arasında [PlasmaFold](https://pse.dev/projects/plasma-fold) (gizli ödemeler) ile [MACI](https://pse.dev/projects/maci) ve [Semaphore](https://pse.dev/projects/semaphore) (gizli oy verme) gibi sistemler bulunur.
 
-Bu araçlar, Ethereum'a özel olarak yazma seçeneklerini genişletir, ancak her birinin kendine özgü ödünleri vardır. Bazı yaklaşımlar hâlâ deneyseldir, bazıları maliyetleri veya karmaşıklığı artırır ve karıştırıcılar gibi bazı araçlar nasıl kullanıldıklarına bağlı olarak yasal veya düzenleyici denetimlerle karşılaşabilir.
+Bu araçlar Ethereum'da gizli bir şekilde yazma seçeneklerini genişletir, ancak her birinin ödünleşimleri vardır. Bazı yaklaşımlar hala deneyseldir, bazıları maliyetleri veya karmaşıklığı artırır ve mikserler gibi bazı araçlar nasıl kullanıldıklarına bağlı olarak yasal veya düzenleyici incelemelerle karşı karşıya kalabilir.
 
-## Okumalar için gizlilik {#privacy-of-reads}
+## Okuma işlemleri için gizlilik {#privacy-of-reads}
 
-Ethereum'daki herhangi bir bilgiyi okumak veya kontrol etmek (örneğin cüzdan bakiyeniz) genellikle cüzdan sağlayıcınız, bir düğüm sağlayıcısı veya bir blok kaşifi gibi bir hizmet aracılığıyla gerçekleşir. Blokzinciri sizin için okumak üzere onlara güvendiğiniz için, IP adresiniz veya konumunuz gibi meta verilerle birlikte isteklerinizi de görebilirler. Sürekli aynı hesabı kontrol ederseniz, bu bilgiler kimliğinizi faaliyetlerinize bağlamak için bir araya getirilebilir.
+Ethereum'daki herhangi bir bilgiyi (örneğin cüzdan bakiyenizi) okumak veya kontrol etmek genellikle cüzdan sağlayıcınız, bir düğüm sağlayıcısı veya bir blok gezgini gibi bir hizmet aracılığıyla gerçekleşir. Blokzinciri sizin için okumaları konusunda onlara güvendiğiniz için, IP adresiniz veya konumunuz gibi meta verilerle birlikte isteklerinizi de görebilirler. Aynı hesabı kontrol etmeye devam ederseniz, bu bilgiler kimliğinizi etkinliğinizle ilişkilendirmek için bir araya getirilebilir.
 
-Kendi Ethereum düğümünüzü çalıştırmak bunu önler, ancak tam blokzincirini depolamak ve senkronize etmek, özellikle mobil cihazlarda çoğu kullanıcı için maliyetli ve pratik değildir.
+Kendi Ethereum düğümünüzü çalıştırmak bunu önleyecektir, ancak tüm blokzinciri depolamak ve eşzamanlamak çoğu kullanıcı için, özellikle de mobil cihazlarda, maliyetli ve pratik olmayan bir durum olmaya devam etmektedir.
 
-Özel okumaları araştıran bazı projeler şunları içerir: [Özel Bilgi Erişimi](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (PIR, ne aradığınızı ifşa etmeden veri getirme), [zkID](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (sıfır bilgi ispatlarıyla özel kimlik kontrolleri), [vOPRF](https://pse.dev/projects/voprf) (Web3'te Web2 hesaplarını takma adla kullanma), [vFHE](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (şifrelenmiş veriler üzerinde hesaplama yapma) ve [MachinaIO](https://pse.dev/projects/machina-io) (işlevselliği korurken program ayrıntılarını gizleme).
+Gizli okuma işlemlerini araştıran bazı projeler arasında [Gizli Bilgi Erişimi](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (PIR, ne aradığınızı ifşa etmeden veri getirme), [zkID](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (sıfır bilgi ispatları ile gizli kimlik kontrolleri), [vOPRF](https://pse.dev/projects/voprf) (Web2 hesaplarını Web3'te takma adla kullanma), [vFHE](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (şifrelenmiş veriler üzerinde hesaplama yapma) ve [MachinaIO](https://pse.dev/projects/machina-io) (işlevselliği korurken program ayrıntılarını gizleme) bulunur.
 
-## Kanıtlama için gizlilik {#privacy-of-proving}
+## İspatlama için gizlilik {#privacy-of-proving}
 
-Gizliliği koruyan kanıtlar, gereksiz ayrıntıları ifşa etmeden bir şeyin doğru olduğunu göstermek için Ethereum'da kullanabileceğiniz araçlardır. Örneğin, şunları yapabilirsiniz:
+Gizliliği koruyan ispatlar, Ethereum'da gereksiz ayrıntıları ifşa etmeden bir şeyin doğru olduğunu göstermek için kullanabileceğiniz araçlardır. Örneğin, şunları yapabilirsiniz:
 
-- Tüm doğum tarihinizi paylaşmadan 18 yaşından büyük olduğunuzu kanıtlama
-- Tüm cüzdanınızı ifşa etmeden bir NFT veya jetonun sahipliğini kanıtlama
-- Diğer kişisel verileri ifşa etmeden bir üyeliğe, ödüle veya oya uygun olduğunuzu kanıtlama
+- Tam doğum tarihinizi paylaşmadan 18 yaşından büyük olduğunuzu ispatlamak
+- Tüm cüzdanınızı ifşa etmeden bir NFT veya Token sahipliğini ispatlamak
+- Diğer kişisel verilerinizi açığa çıkarmadan bir üyelik, ödül veya oy için uygunluğunuzu ispatlamak
 
-Bunlar için çoğu araç, sıfır bilgi ispatları gibi kriptografik tekniklere dayanır, ancak asıl zorluk onları günlük cihazlarda çalışacak kadar verimli, herhangi bir platforma taşınabilir ve güvenli hale getirmektir.
+Bunlar için çoğu araç, sıfır bilgi ispatları gibi kriptografik tekniklere dayanır, ancak asıl zorluk bunları günlük cihazlarda çalışacak kadar verimli, herhangi bir platforma taşınabilir ve güvenli hale getirmektir.
 
-Kanıtlama için gizliliği araştıran bazı projeler şunları içerir: [İstemci Tarafı Kanıtlama](https://pse.dev/projects/client-side-proving) (ZK kanıtlama sistemleri), [TLSNotary](https://tlsnotary.org/), (web'deki herhangi bir verinin özgünlüğünün kanıtı), [Mopro](https://pse.dev/projects/mopro) (mobil istemci tarafı kanıtlama), [Özel Kanıt Yetkilendirmesi](https://pse.dev/projects/private-proof-delegation) (güven varsayımlarından kaçınan yetkilendirme çerçeveleri) ve [Noir](https://noir-lang.org/) (özel ve doğrulanabilir hesaplama dili).
+İspatlama için gizliliği araştıran bazı projeler arasında [İstemci Tarafı İspatlama](https://pse.dev/projects/client-side-proving) (ZK ispatlama sistemleri), [TLSNotary](https://tlsnotary.org/) (web'deki herhangi bir veri için özgünlük ispatları), [Mopro](https://pse.dev/projects/mopro) (mobil istemci tarafı ispatlama), [Gizli İspat Yetki Devri](https://pse.dev/projects/private-proof-delegation) (güven varsayımlarından kaçınan yetki devri çerçeveleri) ve [Noir](https://noir-lang.org/) (gizli ve doğrulanabilir hesaplama dili) bulunur.
 
 ## Gizlilik Sözlüğü {#privacy-glossary}
 
-**Anonim**: Verilerinizdeki tüm tanımlayıcıların kalıcı olarak kaldırılmasıyla etkileşimde bulunarak, bilgilerin bir kişiye kadar izlenmesini imkansız kılmak
+**Anonim**: Verilerinizden tüm tanımlayıcıların kalıcı olarak kaldırılarak etkileşimde bulunulması, bilgilerin bir bireye kadar izlenmesini imkansız hale getirir
 
-**Şifreleme**: Verileri yalnızca doğru anahtara sahip birinin okuyabileceği şekilde karıştıran bir süreç
+**Şifreleme**: Verileri yalnızca doğru anahtara sahip birinin okuyabileceği şekilde karıştıran bir işlem
 
-**[Tamamen Homomorfik Şifreleme](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (FHE)**: Şifrelenmiş verilerin şifresini hiç çözmeden doğrudan üzerinde hesaplamalar yapmanın bir yolu
+**[Tam Homomorfik Şifreleme](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (FHE)**: Şifrelenmiş veriler üzerinde, şifreyi hiç çözmeden doğrudan hesaplama yapmanın bir yolu
 
-**[Ayırt Edilemez Gizleme](https://pse.dev/projects/machina-io) (iO)**: Programları veya verileri kullanılabilir kalırken anlaşılmaz hale getiren gizlilik teknikleri
+**[Ayırt Edilemez Karartma](https://pse.dev/projects/machina-io) (iO)**: Programları veya verileri hala kullanılabilir durumdayken anlaşılmaz hale getiren gizlilik teknikleri
 
-**[Çok Taraflı Hesaplama](https://pse.dev/blog/secure-multi-party-computation) (MPC)**: Birden çok tarafın özel girdilerini ifşa etmeden birlikte bir sonuç hesaplamasına olanak tanıyan yöntemler
+**[Çok Taraflı Hesaplama](https://pse.dev/blog/secure-multi-party-computation) (MPC)**: Birden fazla tarafın gizli girdilerini açığa çıkarmadan bir sonucu birlikte hesaplamasına olanak tanıyan yöntemler
 
-**Programlanabilir Kriptografi**: Verilerin nasıl ve ne zaman paylaşıldığını, doğrulandığını veya ifşa edildiğini kontrol etmek için yazılımda özelleştirilebilen esnek, kural odaklı kriptografi
+**Programlanabilir Kriptografi**: Verilerin nasıl ve ne zaman paylaşılacağını, doğrulanacağını veya ifşa edileceğini kontrol etmek için yazılımda özelleştirilebilen esnek, kural odaklı kriptografi
 
-**Takma adlı**: Kişisel tanımlayıcılar yerine benzersiz kodlar veya numaralar (bir Ethereum adresi gibi) kullanma
+**Takma Adlı (Pseudonymous)**: Kişisel tanımlayıcıların yerine benzersiz kodlar veya numaralar (bir Ethereum adresi gibi) kullanmak
 
-**Seçici İfşa**: Yalnızca ihtiyaç duyulanı paylaşma yeteneği (örneğin, tüm cüzdan geçmişinizi ifşa etmeden bir NFT'ye sahip olduğunuzu kanıtlama)
+**Seçici İfşa**: Yalnızca gerekeni paylaşma yeteneği (örneğin, tüm cüzdan geçmişinizi ifşa etmeden bir NFT'ye sahip olduğunuzu ispatlamak)
 
-**Bağlantısızlık**: Blokzincirindeki ayrı eylemlerin aynı adrese geri bağlanamamasını sağlamak
+**Bağlantısızlık**: Blokzincirdeki ayrı eylemlerin aynı adrese bağlanamayacağından emin olmak
 
-**Doğrulanabilirlik**: Başkalarının, Ethereum'daki bir işlemi veya kanıtı doğrulamak gibi bir iddianın doğru olduğunu teyit edebilmesini sağlamak
+**Doğrulanabilirlik**: Başkalarının, Ethereum'daki bir işlemi veya ispatı doğrulamak gibi bir talebin doğru olduğunu onaylayabilmesini sağlamak
 
-**Doğrulanabilir Yetkilendirme**: Başka bir tarafa bir görev atamak (örneğin, ağır kriptografi için bir sunucu kullanan bir mobil cüzdan gibi bir kanıt oluşturmak) ve aynı zamanda doğru yapıldığını doğrulayabilmek
+**Doğrulanabilir Yetki Devri**: Bir görevi (örneğin bir ispat oluşturmak) başka bir tarafa (örneğin ağır kriptografi için bir sunucu kullanan bir mobil cüzdan) atarken, aynı zamanda doğru yapıldığını doğrulayabilmek
 
-**[Sıfır Bilgi İspatları](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) (ZKP'ler)**: Birinin, temel verileri ifşa etmeden bilginin doğru olduğunu kanıtlamasına olanak tanıyan kriptografik protokoller
+**[Sıfır Bilgi İspatları](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) (ZKP'ler)**: Birinin temel verileri ifşa etmeden bilginin doğru olduğunu ispatlamasına izin veren kriptografik protokoller
 
-**ZK Toplaması**: İşlemleri zincir dışında gruplayan ve zincir üstünde bir geçerlilik kanıtı sunan bir ölçeklenebilirlik sistemi — varsayılan olarak özel değildir, ancak maliyetleri düşürerek (korumalı havuzlar gibi) verimli gizlilik sistemlerini etkinleştirirler
+**ZK Rollup**: İşlemleri zincir dışı gruplayan ve zincir içi bir geçerlilik kanıtı sunan bir ölçeklenebilirlik sistemi; varsayılan olarak gizli değildir, ancak maliyetleri düşürerek verimli gizlilik sistemlerini (korumalı havuzlar gibi) mümkün kılarlar
 
 ## Kaynaklar {#resources}
 
-- [Ethereum'un Gizlilik Temsilcileri](https://pse.dev/) (PSE), ekosistem için gizliliğe odaklanmış bir Ethereum Foundation araştırma ve geliştirme laboratuvarı
-- [Web3PrivacyNow](https://web3privacy.info/), çevrimiçi insan haklarını koruyan ve ilerleten insan, proje ve uyumlu kuruluşlardan oluşan bir ağ
-- [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), cüzdanların kapsamlı bir listesini, işlevselliklerini, uygulamalarını ve belirli standartlara desteklerini sağlamayı amaçlayan bir Ethereum cüzdan derecelendirme sitesidir.
-- [Zk-kit](https://zkkit.pse.dev/): Farklı projelerde ve sıfır bilgi protokollerinde yeniden kullanılabilen bir kütüphane seti (algoritmalar, yardımcı fonksiyonlar ve veri yapıları).
-- [Gizlilik Uygulamaları](/apps/categories/privacy/) - Ethereum'da çalışan, özenle seçilmiş Gizlilik uygulamalarının bir listesini keşfedin.
+- [Ethereum Gizlilik Temsilcileri](https://pse.dev/) (PSE), ekosistem için gizliliğe odaklanan bir Ethereum Vakfı araştırma ve geliştirme laboratuvarı
+- [Web3PrivacyNow](https://web3privacy.info/), çevrimiçi insan haklarını koruyan ve geliştiren insanlardan, projelerden ve uyumlu kuruluşlardan oluşan bir ağ
+- [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), cüzdanların, işlevlerinin, uygulamalarının ve belirli standartlara yönelik desteklerinin kapsamlı bir listesini sunmayı amaçlayan bir Ethereum cüzdan derecelendirme sitesi.
+- [Zk-kit](https://zkkit.pse.dev/): Farklı projelerde ve sıfır bilgi protokollerinde yeniden kullanılabilecek bir dizi kütüphane (algoritmalar, yardımcı işlevler ve veri yapıları).
+- [Gizlilik Uygulamaları](/apps/categories/privacy/) - Ethereum üzerinde çalışan özenle seçilmiş Gizlilik uygulamalarının bir listesini keşfedin.

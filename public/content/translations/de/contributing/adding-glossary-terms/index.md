@@ -1,10 +1,8 @@
 ---
-title: "Hinzufügen von Glossarbegriffen"
+title: Glossarbegriffe hinzufügen
 lang: de
-description: "Unsere Kriterien für das Hinzufügen neuer Begriffe zum ethereum.org-Glossar"
+description: Unsere Kriterien für das Hinzufügen neuer Begriffe zum ethereum.org-Glossar
 ---
-
-# Hinzufügen von Glossarbegriffen {#contributing-to-ethereumorg-}
 
 Dieser Bereich verändert sich jeden Tag. Ständig nehmen Ethereum-Nutzer neue Begriffe in ihren Wortschatz auf, und wir brauchen deine Hilfe, um eine genaue, aktuelle Referenz für alles rund um Ethereum bereitzustellen. Sieh dir das aktuelle [Glossar](/glossary/) an und lies weiter unten, wenn du helfen möchtest!
 

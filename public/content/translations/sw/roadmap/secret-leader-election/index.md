@@ -1,44 +1,42 @@
 ---
-title: Uchaguzi wa siri wa viongozi
-description: Maelezo ya jinsi uchaguzi wa kiongozi wa siri unavyoweza kusaidia kuwalinda Wathibitishaji kutokana na mashambulizi
+title: Uchaguzi wa kiongozi wa siri
+description: Maelezo ya jinsi uchaguzi wa kiongozi wa siri unavyoweza kusaidia kulinda wathibitishaji dhidi ya mashambulizi
 lang: sw
 summaryPoints:
-  - Anwani ya IP ya wapendekezaji wa bloku inaweza kujulikana mapema, na kuwafanya wawe katika hatari ya mashambulizi
-  - Uchaguzi wa kiongozi wa siri huficha utambulisho wa Wathibitishaji ili wasiweze kujulikana mapema
-  - Nyongeza ya wazo hili ni kufanya uteuzi wa Mthibitishaji uwe wa nasibu katika kila yanayopangwa.
+  - Anwani ya IP ya wapendekezaji wa bloku inaweza kujulikana mapema, na kuwafanya wawe katika hatari ya kushambuliwa
+  - Uchaguzi wa kiongozi wa siri huficha utambulisho wa wathibitishaji ili wasijulikane mapema
+  - Uboreshaji wa wazo hili ni kufanya uteuzi wa mthibitishaji uwe wa kubahatisha katika kila sloti.
 ---
 
-# Uchaguzi wa kiongozi wa siri {#single-secret-leader-election}
+Katika utaratibu wa makubaliano wa leo unaotegemea [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos), orodha ya wapendekezaji wa bloku wanaofuata ni ya umma na inawezekana kupata anwani zao za IP. Hii inamaanisha kuwa washambuliaji wanaweza kutambua ni wathibitishaji gani wanatarajiwa kupendekeza kitalu na kuwalenga kwa shambulio la kunyima huduma (DOS) ambalo linawafanya washindwe kupendekeza kitalu chao kwa wakati.
 
-Katika utaratibu wa makubaliano unaotegemea [uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos) wa leo, orodha ya wapendekezaji wa bloku wanaofuata iko wazi na inawezekana kupanga anwani zao za IP. Hii inamaanisha kuwa washambulizi wanaweza kutambua ni Wathibitishaji gani wanaotarajiwa kupendekeza bloku na kuwalenga kwa shambulio la kukatiza huduma (DOS) linalowaacha wasiweze kupendekeza bloku yao kwa wakati.
+Hii inaweza kuunda fursa kwa mshambuliaji kupata faida. Kwa mfano mpendekezaji wa bloku aliyechaguliwa kwa sloti `n+1` anaweza kumfanyia DOS mpendekezaji katika sloti `n` ili akose fursa yake ya kupendekeza kitalu. Hii itamruhusu mpendekezaji wa bloku anayeshambulia kutoa MEV ya sloti zote mbili, au kuchukua miamala yote ambayo ilipaswa kugawanywa katika vitalu viwili na badala yake kuiweka yote katika kimoja, na kupata ada zote zinazohusiana. Hili lina uwezekano wa kuathiri wathibitishaji wa nyumbani zaidi kuliko wathibitishaji wa kitaasisi wenye uzoefu ambao wanaweza kutumia mbinu za hali ya juu zaidi kujilinda dhidi ya mashambulizi ya DOS, na kwa hivyo inaweza kuwa nguvu ya kuweka udhibiti kati.
 
-Hii inaweza kuunda fursa kwa mshambulizi kupata faida. Kwa mfano, mpendekezaji wa bloku aliyechaguliwa kwa ajili ya yanayopangwa `n+1` anaweza kumshambulia kwa DOS mpendekezaji katika yanayopangwa `n` ili akose fursa yake ya kupendekeza bloku. Hii ingemruhusu mpendekezaji wa bloku mshambulizi kutoa MEV ya yanayopangwa yote mawili, au kunyakua miamala yote ambayo ingepaswa kugawanywa katika bloku mbili na badala yake kuijumuisha yote katika moja, na kupata ada zote zinazohusiana. Hii ina uwezekano wa kuathiri Wathibitishaji wa nyumbani zaidi ya Wathibitishaji wa taasisi za kisasa wanaoweza kutumia mbinu za hali ya juu zaidi kujilinda dhidi ya mashambulizi ya DOS, na kwa hivyo inaweza kuwa nguvu ya kuweka mamlaka kati.
+Kuna suluhisho kadhaa kwa tatizo hili. Moja ni [teknolojia ya kithibitishaji kilichosambazwa (DVT)](https://github.com/ethereum/distributed-validator-specs) ambayo inalenga kusambaza kazi mbalimbali zinazohusiana na kuendesha mthibitishaji kwenye mashine nyingi, kwa urudufu, ili iwe vigumu sana kwa mshambuliaji kuzuia kitalu kupendekezwa katika sloti fulani. Hata hivyo, suluhisho thabiti zaidi ni **Uchaguzi wa Kiongozi Mmoja wa Siri (Single Secret Leader Election - SSLE)**.
 
-Kuna suluhu kadhaa za tatizo hili. Moja wapo ni [Teknolojia ya Mthibitishaji Iliyosambazwa](https://github.com/ethereum/distributed-validator-specs) ambayo inalenga kueneza kazi mbalimbali zinazohusiana na kuendesha Mthibitishaji kwenye mashine nyingi, na upungufu, ili iwe vigumu zaidi kwa mshambulizi kuzuia bloku kupendekezwa katika yanayopangwa maalum. Hata hivyo, suluhu thabiti zaidi ni **Uchaguzi Mmoja wa Kiongozi wa Siri (SSLE)**.
+## Uchaguzi wa kiongozi mmoja wa siri {#secret-leader-election}
 
-## Uchaguzi mmoja wa kiongozi wa siri {#secret-leader-election}
+Katika SSLE, kriptografia mahiri inatumika kuhakikisha kuwa mthibitishaji aliyechaguliwa pekee ndiye anayejua kuwa amechaguliwa. Hii inafanya kazi kwa kuwa na kila mthibitishaji kuwasilisha ufungamanisho kwa siri wanayoshiriki wote. Mafungamanisho yanachanganywa na kusanidiwa upya ili hakuna mtu anayeweza kuoanisha mafungamanisho kwa wathibitishaji lakini kila mthibitishaji anajua ni ufungamanisho upi ni wake. Kisha, ufungamanisho mmoja unachaguliwa kwa kubahatisha. Ikiwa mthibitishaji atagundua kuwa ufungamanisho wake ulichaguliwa, anajua ni zamu yake kupendekeza kitalu.
 
-Katika SSLE, kriptografia ya kijanja hutumiwa kuhakikisha kuwa ni Mthibitishaji aliyechaguliwa pekee ndiye anayejua kuwa amechaguliwa. Hii hufanya kazi kwa kuwa na kila Mthibitishaji anayewasilisha ahadi kwa siri wanayoshiriki wote. Ahadi hizo huchanganywa na kusanidiwa upya ili mtu yeyote asiweze kuhusisha ahadi na Wathibitishaji lakini kila Mthibitishaji anajua ni ahadi ipi ni yake. Kisha, ahadi moja huchaguliwa kwa nasibu. Ikiwa Mthibitishaji atagundua kwamba ahadi yake imechaguliwa, anajua kuwa ni zamu yake kupendekeza bloku.
+Utekelezaji unaoongoza wa wazo hili unaitwa [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763). Ambao unafanya kazi kama ifuatavyo:
 
-Utekelezaji mkuu wa wazo hili unaitwa [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763). Ambayo hufanya kazi kama ifuatavyo:
+1. Wathibitishaji hufanya ufungamanisho kwa siri ya pamoja. Mpango wa ufungamanisho umeundwa kwa njia ambayo unaweza kufungamanishwa na utambulisho wa mthibitishaji lakini pia kubahatishwa ili hakuna mtu wa tatu anayeweza kubadili mchakato wa ufungamanisho na kuunganisha ufungamanisho maalum kwa mthibitishaji maalum.
+2. Mwanzoni mwa kipindi, kundi la kubahatisha la wathibitishaji linachaguliwa ili kuchukua sampuli za mafungamanisho kutoka kwa wathibitishaji 16,384, kwa kutumia RANDAO.
+3. Kwa sloti 8182 zinazofuata (siku 1), wapendekezaji wa bloku huchanganya na kubahatisha sehemu ya mafungamanisho kwa kutumia Entropi yao wenyewe ya kibinafsi.
+4. Baada ya kuchanganya kukamilika, RANDAO inatumika kuunda orodha iliyopangwa ya mafungamanisho. Orodha hii inaoanishwa kwenye sloti za Ethereum.
+5. Wathibitishaji wanaona kuwa ufungamanisho wao umeambatanishwa na sloti maalum, na wakati sloti hiyo inapofika wanapendekeza kitalu.
+6. Rudia hatua hizi ili upangaji wa mafungamanisho kwenye sloti uwe mbele sana ya sloti ya sasa kila wakati.
 
-1. Wathibitishaji hujitolea kwa siri ya pamoja. Mpango wa ahadi umeundwa hivi kwamba unaweza kufungamanishwa na utambulisho wa Mthibitishaji lakini pia kufanywa kuwa wa nasibu ili mtu wa tatu asiweze kubadili mchakato wa uhusiano huo na kuhusisha ahadi maalum na Mthibitishaji maalum.
-2. Mwanzoni mwa epoki, seti ya nasibu ya Wathibitishaji huchaguliwa kuchukua sampuli za ahadi kutoka kwa Wathibitishaji 16,384, kwa kutumia RANDAO.
-3. Kwa yanayopangwa 8182 yajayo (siku 1), wapendekezaji wa bloku huchanganya na kufanya nasibu sehemu ndogo ya ahadi kwa kutumia entropi yao ya kibinafsi.
-4. Baada ya uchanganyaji kukamilika, RANDAO hutumika kuunda orodha iliyopangwa ya ahadi. Orodha hii inahusishwa na yanayopangwa ya Ethereum.
-5. Wathibitishaji wanaona kuwa ahadi yao imeambatanishwa na yanayopangwa maalum, na yanayopangwa hilo linapofika wanapendekeza bloku.
-6. Rudia hatua hizi ili ugawaji wa ahadi kwa yanayopangwa daima uwe mbele sana ya yanayopangwa la sasa.
+Hii inazuia washambuliaji kujua mapema ni mthibitishaji gani maalum atapendekeza kitalu kinachofuata, na kuzuia uwezo wa mashambulizi ya DOS.
 
-Hii huwazuia washambulizi kujua mapema ni Mthibitishaji gani maalum atapendekeza bloku inayofuata, na kuzuia uwezekano wa mashambulizi ya DOS.
+## Uchaguzi wa kiongozi wa siri asiye mmoja (SnSLE) {#secret-non-single-leader-election}
 
-## Uchaguzi wa kiongozi usio mmoja wa siri (SnSLE) {#secret-non-single-leader-election}
-
-Pia kuna pendekezo tofauti linalolenga kuunda hali ambapo kila Mthibitishaji ana nafasi ya nasibu ya kupendekeza bloku katika kila yanayopangwa, sawa na jinsi pendekezo la bloku lilivyoamuliwa chini ya uthibitisho-wa-kazi, inayojulikana kama **uchaguzi wa kiongozi usio mmoja wa siri (SnSLE)**. Njia moja rahisi ya kufanya hivi ni kutumia chaguo la kukokotoa la RANDAO linalotumiwa kuchagua Wathibitishaji kwa nasibu katika itifaki ya leo. Wazo la RANDAO ni kwamba nambari ya nasibu ya kutosha inatolewa kwa kuchanganya hashi zilizowasilishwa na Wathibitishaji wengi huru. Katika SnSLE, hashi hizi zinaweza kutumika kumchagua mpendekezaji wa bloku anayefuata, kwa mfano kwa kuchagua hashi yenye thamani ya chini zaidi. Masafa ya hashi halali yanaweza kubanwa ili kurekebisha uwezekano wa Wathibitishaji binafsi kuchaguliwa katika kila yanayopangwa. Kwa kudai kuwa hashi lazima iwe chini ya `2^256 * 5 / N` ambapo `N` = idadi ya Wathibitishaji wanaofanya kazi, nafasi ya Mthibitishaji yeyote binafsi kuchaguliwa katika kila yanayopangwa itakuwa `5/N`. Katika mfano huu, kutakuwa na uwezekano wa 99.3% wa angalau mpendekezaji mmoja kutoa hashi halali katika kila yanayopangwa.
+Pia kuna pendekezo tofauti ambalo linalenga kuunda hali ambapo kila mthibitishaji ana nafasi ya kubahatisha ya kupendekeza kitalu katika kila sloti, sawa na jinsi pendekezo la kitalu lilivyoamuliwa chini ya Uthibitisho wa Kazi (PoW), linalojulikana kama **uchaguzi wa kiongozi wa siri asiye mmoja (secret non-single leader election - SnSLE)**. Njia moja rahisi ya kufanya hivi ni kutumia utendakazi wa RANDAO unaotumika kuchagua wathibitishaji kwa kubahatisha katika itifaki ya leo. Wazo la RANDAO ni kwamba nambari ya kubahatisha ya kutosha inazalishwa kwa kuchanganya heshi zilizowasilishwa na wathibitishaji wengi wanaojitegemea. Katika SnSLE, heshi hizi zinaweza kutumika kuchagua mpendekezaji wa bloku anayefuata, kwa mfano kwa kuchagua heshi yenye thamani ya chini zaidi. Masafa ya heshi halali yanaweza kuzuiwa ili kurekebisha uwezekano wa wathibitishaji binafsi kuchaguliwa katika kila sloti. Kwa kusisitiza kwamba heshi lazima iwe chini ya `2^256 * 5 / N` ambapo `N` = idadi ya wathibitishaji wanaofanya kazi, nafasi ya mthibitishaji yeyote binafsi kuchaguliwa katika kila sloti itakuwa `5/N`. Katika mfano huu, kungekuwa na nafasi ya 99.3% ya angalau mpendekezaji mmoja kuzalisha heshi halali katika kila sloti.
 
 ## Maendeleo ya sasa {#current-progress}
 
-SSLE na SnSLE zote ziko katika awamu ya utafiti. Bado hakuna vipimo vilivyokamilishwa kwa wazo lolote kati ya hayo. SSLE na SnSLE ni mapendekezo yanayoshindana ambayo yote hayawezi kutekelezwa. Kabla ya kuzinduliwa, yanahitaji utafiti na maendeleo zaidi, uundaji wa mfano, na utekelezaji kwenye testnet za umma.
+SSLE na SnSLE zote ziko katika awamu ya utafiti. Hakuna vipimo vilivyokamilishwa kwa wazo lolote bado. SSLE na SnSLE ni mapendekezo yanayoshindana ambayo hayawezi kutekelezwa yote mawili. Kabla ya kutolewa yanahitaji utafiti na maendeleo zaidi, uundaji wa mifano, na utekelezaji kwenye mitandao ya majaribio ya umma.
 
-## Masomo zaidi {#further-reading}
+## Kusoma zaidi {#further-reading}
 
 - [SnSLE](https://ethresear.ch/t/secret-non-single-leader-election/11789)

@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/guides/how-to-revoke-token-access/index.md",
+  "generatedAt": "2026-06-08T09:50:46.355Z",
+  "rootHash": "fbc89685d900",
+  "tree": {
+    "contentHash": "19505b72ddfb",
+    "anchorHash": "23157b542ee5",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d8d58a776ff6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "1b38c36b6d97",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:3": {
+        "contentHash": "26ae0c920615",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "81fbd2f198c9",
+        "anchorHash": "89d756280b47"
+      },
+      "prose:4": {
+        "contentHash": "48ffc2e6a4ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "2fe840e13244",
+        "anchorHash": "3a0cd05a64ae"
+      },
+      "prose:5": {
+        "contentHash": "47bd20d01712",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "e8d44050873d",
+        "anchorHash": "de6693d6d477"
+      },
+      "prose:6": {
+        "contentHash": "58488a5c5e23",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "step-1-use-revoke-access-tools": {
+        "contentHash": "65480ba6aa33",
+        "anchorHash": "12a324f5eaa0",
+        "labelHash": "8a34d1eaa7ae",
+        "children": {
+          "_label": {
+            "contentHash": "8a34d1eaa7ae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "dbf9dc2b9c2d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d0299bb7f22b",
+            "anchorHash": "0d2f25f8875b"
+          },
+          "prose:6": {
+            "contentHash": "d77fdf644dcc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3dee05652774",
+            "anchorHash": "7ea0201a8359"
+          },
+          "prose:7": {
+            "contentHash": "d77fdf644dcc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "87e6d00bbf53",
+            "anchorHash": "85e6de2830ef"
+          },
+          "prose:8": {
+            "contentHash": "1cdc5e87a401",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "acd1f590697f",
+            "anchorHash": "f01e7d7507d8"
+          },
+          "prose:9": {
+            "contentHash": "1cdc5e87a401",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "2eaf9c31995b",
+            "anchorHash": "a69081bf55d3"
+          },
+          "prose:10": {
+            "contentHash": "920c950ac99f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "step-2-connect-your-wallet": {
+        "contentHash": "1e38be0a03ba",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2e5435417baa",
+        "children": {
+          "_label": {
+            "contentHash": "2e5435417baa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "89b5708df133",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "step-3-select-a-smart-contract-you-wish-to-revoke": {
+        "contentHash": "471717fd191f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "54f69addc0bd",
+        "children": {
+          "_label": {
+            "contentHash": "54f69addc0bd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "74a4cf978b08",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "step-4-revoke-access-to-your-funds": {
+        "contentHash": "e748f0b6095f",
+        "anchorHash": "a953f7c2f208",
+        "labelHash": "5ec6e3b5e95d",
+        "children": {
+          "_label": {
+            "contentHash": "5ec6e3b5e95d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3f8534113602",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "1019a51618fb",
+            "anchorHash": "922415cc666f",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2937013f2181"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "491aaf33b92d",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "252d79a64486"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "e2a6d4a15100",
+                "anchorHash": "102fdc653ece",
+                "children": {
+                  "attr:className": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e796b9e20a49"
+                  },
+                  "prose:1": {
+                    "contentHash": "9aec37764785",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "html-tag:0": {
+                    "contentHash": "b47f8105a440",
+                    "anchorHash": "b9dbc082e3fe"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:className",
+                  "prose:1",
+                  "html-tag:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "html-tag:0",
+          "component:3"
+        ]
+      },
+      "frequently-asked-questions": {
+        "contentHash": "66cdb091a3c9",
+        "anchorHash": "f680ba277013",
+        "labelHash": "e956a9404b46",
+        "children": {
+          "_label": {
+            "contentHash": "e956a9404b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "does-revoking-token-access-also-terminate-staking-pooling-lending-etc": {
+            "contentHash": "d809966f5708",
+            "anchorHash": "92f5811344eb",
+            "labelHash": "989518e91f16",
+            "children": {
+              "_label": {
+                "contentHash": "989518e91f16",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "59322567344f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "3871f97fc9a1",
+                "anchorHash": "19902d6694f7"
+              },
+              "prose:2": {
+                "contentHash": "370ef00d08c5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "is-disconnecting-a-wallet-from-a-project-the-same-as-removing-permission-to-use-my-funds": {
+            "contentHash": "519a221fbd3c",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "24722d346e1b",
+            "children": {
+              "_label": {
+                "contentHash": "24722d346e1b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "0b6487e653ce",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "when-will-the-contract-permission-expire": {
+            "contentHash": "f6c9afde69f2",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "4840676e3405",
+            "children": {
+              "_label": {
+                "contentHash": "4840676e3405",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e014bd031e66",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "why-do-projects-set-unlimited-token-allowance": {
+            "contentHash": "1569ccfdb350",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "e4fc42e4d6b2",
+            "children": {
+              "_label": {
+                "contentHash": "e4fc42e4d6b2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "b36763a66f6e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "does-revoking-token-access-also-terminate-staking-pooling-lending-etc",
+          "is-disconnecting-a-wallet-from-a-project-the-same-as-removing-permission-to-use-my-funds",
+          "when-will-the-contract-permission-expire",
+          "why-do-projects-set-unlimited-token-allowance"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:3",
+      "link:0",
+      "prose:4",
+      "link:1",
+      "prose:5",
+      "link:2",
+      "prose:6",
+      "step-1-use-revoke-access-tools",
+      "step-2-connect-your-wallet",
+      "step-3-select-a-smart-contract-you-wish-to-revoke",
+      "step-4-revoke-access-to-your-funds",
+      "frequently-asked-questions"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

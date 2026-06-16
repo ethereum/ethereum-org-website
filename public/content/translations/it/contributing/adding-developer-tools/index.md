@@ -4,11 +4,9 @@ lang: it
 description: I nostri criteri per elencare gli strumenti per sviluppatori su ethereum.org
 ---
 
-# Aggiungere strumenti per sviluppatori {#contributing-to-ethereumorg-}
-
 Vogliamo assicurarci di elencare le migliori risorse per sviluppatori possibili, in modo che le persone possano sviluppare con fiducia e avere il supporto di cui hanno bisogno.
 
-Se c'è uno strumento utile per sviluppatori che ci è sfuggito, sentiti libero di suggerirlo in una sezione appropriata.
+Se c'è uno strumento per sviluppatori utile che ci è sfuggito, sentiti libero di suggerirlo in un luogo appropriato.
 
 Attualmente elenchiamo gli strumenti per sviluppatori in tutto il nostro [portale per sviluppatori](/developers/).
 
@@ -18,7 +16,7 @@ Attualmente elenchiamo gli strumenti per sviluppatori in tutto il nostro [portal
 
 Le proposte di strumenti per sviluppatori saranno valutate in base ai seguenti criteri:
 
-**Si differenzia in modo significativo dagli strumenti già elencati?**
+**È significativamente diverso dagli strumenti già elencati?**
 
 - Nuove categorie o tipi di strumenti
 - Nuove funzionalità rispetto a strumenti simili esistenti
@@ -32,7 +30,7 @@ Le proposte di strumenti per sviluppatori saranno valutate in base ai seguenti c
 
 **Lo strumento è ampiamente utilizzato?**
 
-- Prenderemo in considerazione metriche come le stelle su GitHub, le statistiche di download e se viene utilizzato da aziende o progetti noti
+- Prenderemo in considerazione metriche come le stelle su GitHub, le statistiche di download e se è utilizzato da aziende o progetti noti
 
 **Lo strumento è di qualità sufficiente?**
 
@@ -48,7 +46,7 @@ Molti progetti nello spazio di Ethereum sono open source. È più probabile che 
 
 ## Ordinamento dei prodotti {#product-ordering}
 
-A meno che i prodotti non siano specificamente ordinati in altro modo, ad esempio in ordine alfabetico, verranno visualizzati dal meno recente al più recente aggiunto alla pagina. In altre parole, i prodotti più recenti vengono aggiunti in fondo all'elenco.
+A meno che i prodotti non siano specificamente ordinati in altro modo, ad esempio in ordine alfabetico, i prodotti verranno visualizzati dal meno recente al più recente aggiunto alla pagina. In altre parole, i prodotti più recenti vengono aggiunti in fondo all'elenco.
 
 ---
 

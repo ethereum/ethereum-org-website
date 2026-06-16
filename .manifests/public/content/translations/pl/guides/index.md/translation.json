@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "locale": "pl",
+  "translatedAt": "2026-06-08T09:59:51.846Z",
+  "englishManifestHash": "c35a580d2421",
+  "placeholderOrder": [
+    "LINK-cfcffe",
+    "LINK-6a91ba",
+    "LINK-645067",
+    "LINK-7b7195",
+    "LINK-e9d9af",
+    "LINK-8bca5c"
+  ],
+  "placeholderMap": {
+    "LINK-cfcffe": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-create-an-ethereum-account/"
+      }
+    },
+    "LINK-6a91ba": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-use-a-wallet/"
+      }
+    },
+    "LINK-645067": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-revoke-token-access/"
+      }
+    },
+    "LINK-7b7195": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-id-scam-tokens/"
+      }
+    },
+    "LINK-e9d9af": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-use-a-bridge/"
+      }
+    },
+    "LINK-8bca5c": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-swap-tokens/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:59:51.846Z",
+      "status": "success"
+    }
+  }
+}

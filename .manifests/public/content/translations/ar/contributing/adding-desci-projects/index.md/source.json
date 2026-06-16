@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/adding-desci-projects/index.md",
+  "generatedAt": "2026-06-08T07:35:56.855Z",
+  "rootHash": "80d6de5c34d3",
+  "tree": {
+    "contentHash": "7f49aede9a5a",
+    "anchorHash": "b9b2d7c4e451",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "23dea4993da3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b7fb15e5a54f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "f4d79b9a31c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-decision-framework": {
+        "contentHash": "fef6fcd0f8c6",
+        "anchorHash": "e2c84f5cb440",
+        "labelHash": "09f808a5016b",
+        "children": {
+          "_label": {
+            "contentHash": "09f808a5016b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "the-must-haves": {
+            "contentHash": "b226e65b3105",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "c0101a929d45",
+            "children": {
+              "_label": {
+                "contentHash": "c0101a929d45",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a19a8cbe522f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "nice-to-haves": {
+            "contentHash": "dfea575c4756",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "07c388a499ff",
+            "children": {
+              "_label": {
+                "contentHash": "07c388a499ff",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "7f3f1772dd45",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "the-must-haves",
+          "nice-to-haves"
+        ]
+      },
+      "maintenance": {
+        "contentHash": "f868f3dfb63c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "17ccfa5b681e",
+        "children": {
+          "_label": {
+            "contentHash": "17ccfa5b681e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bcb6cf7e3e73",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "terms-of-use": {
+        "contentHash": "8e1b968cb057",
+        "anchorHash": "7387a265c2e5",
+        "labelHash": "8c45a486e4b1",
+        "children": {
+          "_label": {
+            "contentHash": "8c45a486e4b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "299712208760",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "eb43b9b04b89",
+            "anchorHash": "d04de55860e6"
+          },
+          "prose:2": {
+            "contentHash": "c76503395908",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "the-decision-framework",
+      "maintenance",
+      "terms-of-use"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

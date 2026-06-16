@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "locale": "pl",
+  "translatedAt": "2026-06-08T10:30:40.525Z",
+  "englishManifestHash": "223d09081b9f",
+  "placeholderOrder": [
+    "CODEBLOCK-73f27b",
+    "CODE-c5f58d",
+    "LINK-60423a",
+    "LINK-5f8b9c",
+    "LINK-33699a",
+    "LINK-0e708a",
+    "LINK-51548e",
+    "CODE-5fa3e0",
+    "LINK-92de3d",
+    "LINK-e5e700",
+    "LINK-72bc9d",
+    "LINK-b87ad7",
+    "CODE-bfa3d0",
+    "CODE-c5f58d",
+    "CODE-c5f58d",
+    "CODE-c5f58d",
+    "CODE-8c401e",
+    "CODE-25f74b",
+    "LINK-857c7f",
+    "LINK-c2b4ff",
+    "CODE-bb5406",
+    "CODE-bb5406",
+    "CODE-5ee72b",
+    "CODE-bb5406",
+    "CODE-5ee72b",
+    "LINK-b27743",
+    "CODE-b760f4",
+    "CODE-c3f202",
+    "CODE-281395",
+    "LINK-da24e5",
+    "LINK-f3ae1b",
+    "LINK-6c0804",
+    "LINK-da661c",
+    "LINK-b38413",
+    "LINK-7e4e00",
+    "LINK-077726",
+    "LINK-457396",
+    "LINK-c8c63c",
+    "LINK-73bd7d",
+    "LINK-c35d5e",
+    "LINK-003152"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-73f27b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-c5f58d": {
+      "type": "inline-code",
+      "values": {
+        "content": "tx.origin"
+      }
+    },
+    "CODE-5fa3e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "wallet_sendCalls"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-8c401e": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender == tx.origin"
+      }
+    },
+    "CODE-25f74b": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonReentrant"
+      }
+    },
+    "CODE-bb5406": {
+      "type": "inline-code",
+      "values": {
+        "content": "init"
+      }
+    },
+    "CODE-5ee72b": {
+      "type": "inline-code",
+      "values": {
+        "content": "initWithSig"
+      }
+    },
+    "CODE-b760f4": {
+      "type": "inline-code",
+      "values": {
+        "content": "bool"
+      }
+    },
+    "CODE-c3f202": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint"
+      }
+    },
+    "CODE-281395": {
+      "type": "inline-code",
+      "values": {
+        "content": "chain_id=0"
+      }
+    },
+    "LINK-60423a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.erc4337.io/bundlers"
+      }
+    },
+    "LINK-5f8b9c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0"
+      }
+    },
+    "LINK-33699a": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@yoav/unified-erc-4337-mempool"
+      }
+    },
+    "LINK-0e708a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0"
+      }
+    },
+    "LINK-51548e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/MetaMask/delegation-framework/releases/tag/v1.3.0"
+      }
+    },
+    "LINK-92de3d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5792.md"
+      }
+    },
+    "LINK-e5e700": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6900.md"
+      }
+    },
+    "LINK-72bc9d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform/modular-account"
+      }
+    },
+    "LINK-b87ad7": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.safe.global/advanced/eip-7702/7702-safe"
+      }
+    },
+    "LINK-857c7f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol"
+      }
+    },
+    "LINK-c2b4ff": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html"
+      }
+    },
+    "LINK-b27743": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.safe.global/advanced/eip-7702/7702-safe"
+      }
+    },
+    "LINK-da24e5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/calibur"
+      }
+    },
+    "LINK-f3ae1b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/calibur/tree/main/audits"
+      }
+    },
+    "LINK-6c0804": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform/modular-account"
+      }
+    },
+    "LINK-da661c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform/modular-account/tree/develop/audits"
+      }
+    },
+    "LINK-b38413": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/AmbireTech/ambire-common/blob/feature/eip-7702/contracts/AmbireAccount7702.sol"
+      }
+    },
+    "LINK-7e4e00": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/AmbireTech/ambire-common/tree/feature/eip-7702/audits"
+      }
+    },
+    "LINK-077726": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/MetaMask/delegation-framework"
+      }
+    },
+    "LINK-457396": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/MetaMask/delegation-framework/tree/main/audits"
+      }
+    },
+    "LINK-c8c63c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/accounts/Simple7702Account.sol"
+      }
+    },
+    "LINK-73bd7d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/eth-infinitism/account-abstraction/blob/develop/audits/SpearBit%20Account%20Abstraction%20Security%20Review%20-%20Mar%202025.pdf"
+      }
+    },
+    "LINK-c35d5e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Luganodes/Pectra-Batch-Contract"
+      }
+    },
+    "LINK-003152": {
+      "type": "link",
+      "values": {
+        "url": "https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:30:40.525Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,13 +1,12 @@
 ---
-title: Ethereum Foundation Mandate
+title: The Ethereum Foundation Mandate
+metaTitle: Ethereum Foundation Mandate
 description: Explore the official Ethereum Foundation Mandate, defining the Foundation's purpose, principles, and commitments to the Ethereum ecosystem.
 hideEditButton: true
 sidebarDepth: 1
 lang: en
 authors: ["Ethereum Foundation"]
 ---
-
-# The Ethereum Foundation Mandate {#mandate}
 
 This mandate was originally published by the Ethereum Foundation on March 13, 2026. Read the [original mandate here](https://ethereum.foundation/ef-mandate.pdf) in its fully-designed format.
 

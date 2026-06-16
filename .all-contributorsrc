@@ -14313,6 +14313,24 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "icmoore",
+      "name": "Ian Moore",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48072017?v=4",
+      "profile": "https://defimind.ai",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "sawaadee",
+      "name": "sawadee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/170385320?v=4",
+      "profile": "https://github.com/sawaadee",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,

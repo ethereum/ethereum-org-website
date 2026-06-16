@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-08T07:32:30.093Z",
+  "englishManifestHash": "1dd146c8f906",
+  "placeholderOrder": [
+    "LINK-b83248",
+    "LINK-b2d868",
+    "LINK-14f434",
+    "LINK-72343e",
+    "LINK-d3a0e2",
+    "LINK-eeeb31",
+    "LINK-99b583",
+    "LINK-115ac9",
+    "LINK-696667",
+    "LINK-a1b5b2",
+    "LINK-12eab4",
+    "LINK-d4a2e3",
+    "LINK-e5c434"
+  ],
+  "placeholderMap": {
+    "LINK-b83248": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.foundation/"
+      }
+    },
+    "LINK-b2d868": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-72343e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#pow"
+      }
+    },
+    "LINK-d3a0e2": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#pos"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-eeeb31": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#staking"
+      }
+    },
+    "LINK-99b583": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo/"
+      }
+    },
+    "LINK-115ac9": {
+      "type": "link",
+      "values": {
+        "url": "/staking/saas/"
+      }
+    },
+    "LINK-696667": {
+      "type": "link",
+      "values": {
+        "url": "/staking/pools/"
+      }
+    },
+    "LINK-a1b5b2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-and-analytics/block-explorers/"
+      }
+    },
+    "LINK-12eab4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tools/analytics/"
+      }
+    },
+    "LINK-d4a2e3": {
+      "type": "link",
+      "values": {
+        "url": "/community/support/scams/#analyze"
+      }
+    },
+    "LINK-e5c434": {
+      "type": "link",
+      "values": {
+        "url": "/community/support/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:32:30.093Z",
+      "status": "success"
+    }
+  }
+}
