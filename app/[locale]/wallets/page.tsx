@@ -364,9 +364,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <p className="mb-[1.45rem] text-md leading-base">
                   {t("page-wallets-seed-phrase-example")}
                 </p>
-                <p className="mb-4 rounded-md bg-black p-2 font-mono text-sm text-white">
-                  {t("page-wallets-seed-phrase-snippet")}
-                </p>
+                <div className="mb-4 rounded-base bg-black p-2">
+                  <p className="font-mono text-sm text-white">
+                    {t("page-wallets-seed-phrase-snippet")}
+                  </p>
+                </div>
                 <p className="mb-[1.45rem] text-md leading-base">
                   {t("page-wallets-seed-phrase-write-down")}
                 </p>
