@@ -56,7 +56,7 @@ const StakingLaunchpadWidget = () => {
   return (
     <div
       className={cn(
-        "space-y-6 rounded-base p-6 md:p-8",
+        "flow rounded-base p-4 md:p-8", // TODO: use p-page when PR #18409 merged
         "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
       )}
     >
@@ -69,7 +69,7 @@ const StakingLaunchpadWidget = () => {
         onChange={handleChange}
         defaultValue={selectOptions[0]}
         variant="outline"
-        className="my-4 md:max-w-[50%]"
+        className="w-full md:max-w-md!"
       />
       <p>
         {t.rich("page-staking.page-staking-launchpad-widget-p1", {
@@ -83,7 +83,7 @@ const StakingLaunchpadWidget = () => {
         })}
       </p>
       <p>{t("page-staking-launchpad-widget-p2")}</p>
-      <ButtonLink href={data[selection].url} className="mb-12 w-full md:w-auto">
+      <ButtonLink href={data[selection].url} className="max-md:w-full">
         {t("page-staking:page-staking-launchpad-widget-start", {
           network:
             selection === "mainnet"
@@ -97,7 +97,7 @@ const StakingLaunchpadWidget = () => {
       <ButtonLink
         href="#node-and-client-tools"
         variant="outline"
-        className="w-full md:w-auto"
+        className="max-md:w-full"
       >
         <Tools /> {t("page-staking-launchpad-widget-link")}
       </ButtonLink>
