@@ -33,7 +33,7 @@ const StakingGuides = async () => {
     },
   ]
 
-  return <CardList items={guides} />
+  return <CardList className="flex flex-col gap-4" items={guides} />
 }
 
 export default StakingGuides
