@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-about.json",
+  "generatedAt": "2026-06-16T15:14:40.529Z",
+  "rootHash": "a78aa1f151a9",
+  "tree": {
+    "contentHash": "757bb16404e6",
+    "anchorHash": "9cfb2277316b",
+    "children": {
+      "page-about-h2": {
+        "contentHash": "5f5c5baf8fbc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-h3": {
+        "contentHash": "005119da15fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-h3-1": {
+        "contentHash": "da47d493387f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-h3-2": {
+        "contentHash": "92dec99c0685",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-li-1": {
+        "contentHash": "2b6b853c9e59",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-li-2": {
+        "contentHash": "9b0f1b10aff5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-li-3": {
+        "contentHash": "6842ca7df105",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-li-4": {
+        "contentHash": "6842ca7df105",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-link-1": {
+        "contentHash": "b4724e2d6812",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-link-2": {
+        "contentHash": "f911e414cf6b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-link-3": {
+        "contentHash": "d16580a4069c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-link-4": {
+        "contentHash": "2a5f1a5953b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-link-5": {
+        "contentHash": "5507a0a64bdf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-link-6": {
+        "contentHash": "431a4df85a38",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-link-7": {
+        "contentHash": "d09ddf7f1563",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-p-1": {
+        "contentHash": "cdbe17b28460",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-p-2": {
+        "contentHash": "f07f38e48a19",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-p-3": {
+        "contentHash": "0bfec2eeb5d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-p-4": {
+        "contentHash": "53302e16694d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-p-5": {
+        "contentHash": "2d6684fbe0b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-p-6": {
+        "contentHash": "c939a7534a77",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-p-7": {
+        "contentHash": "12b9ca9538d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-about-p-8": {
+        "contentHash": "d736ca753c10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-energy-consumption-chart-legend": {
+        "contentHash": "990b6a4b5795",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-global-data-centers-label": {
+        "contentHash": "5a65abab06c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-airbnb-label": {
+        "contentHash": "14c8df83d4b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-gold-mining-cbeci-label": {
+        "contentHash": "ec1ae0c6fe14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-btc-pow-label": {
+        "contentHash": "d9b80566db5f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-netflix-label": {
+        "contentHash": "f09f149fa268",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-eth-pow-label": {
+        "contentHash": "66bbbff01767",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-gaming-us-label": {
+        "contentHash": "9e82584a0748",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-paypal-label": {
+        "contentHash": "ab8a4f6bb84d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-eth-pos-label": {
+        "contentHash": "b58b6cdcad65",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-about-h2",
+      "page-about-h3",
+      "page-about-h3-1",
+      "page-about-h3-2",
+      "page-about-li-1",
+      "page-about-li-2",
+      "page-about-li-3",
+      "page-about-li-4",
+      "page-about-link-1",
+      "page-about-link-2",
+      "page-about-link-3",
+      "page-about-link-4",
+      "page-about-link-5",
+      "page-about-link-6",
+      "page-about-link-7",
+      "page-about-p-1",
+      "page-about-p-2",
+      "page-about-p-3",
+      "page-about-p-4",
+      "page-about-p-5",
+      "page-about-p-6",
+      "page-about-p-7",
+      "page-about-p-8",
+      "page-what-is-ethereum-energy-consumption-chart-legend",
+      "energy-consumption-chart-global-data-centers-label",
+      "energy-consumption-chart-airbnb-label",
+      "energy-consumption-gold-mining-cbeci-label",
+      "energy-consumption-chart-btc-pow-label",
+      "energy-consumption-chart-netflix-label",
+      "energy-consumption-chart-eth-pow-label",
+      "energy-consumption-chart-gaming-us-label",
+      "energy-consumption-chart-paypal-label",
+      "energy-consumption-chart-eth-pos-label"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}
