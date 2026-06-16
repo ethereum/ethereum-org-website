@@ -100,7 +100,7 @@
   "node-term": "노드",
   "node-definition": "네트워크에 참여하는 소프트웨어 클라이언트입니다. <a href=\"/developers/docs/nodes-and-clients/\">노드 및 클라이언트에 대해 더 알아보기</a>.",
   "ommer-term": "오머 (엉클) 블록",
-  "ommer-definition": "<a href=\"/glossary/#pow\">작업증명 (PoW)</a> <a href=\"/glossary/#miner\">채굴자</a>가 유효한 <a href=\"/glossary/#block\">블록</a>을 찾았을 때, 다른 채굴자가 경쟁 블록을 게시하여 블록체인의 끝에 먼저 추가되었을 수 있습니다. 이 유효하지만 오래된 블록은 최신 블록에 의해 <em>오머</em>로 포함되어 부분적인 블록 보상을 받을 수 있습니다. \"오머(ommer)\"라는 용어는 부모 블록의 형제 블록을 지칭하는 선호되는 성 중립적 용어이지만, 때로는 \"엉클(uncle)\"이라고도 불립니다. 이는 이더리움이 <HTML-PLACEHOLDER-HTMLTAG-7ff424>작업증명 (PoW)</HTML-PLACEHOLDER-HTMLTAG-7ff424> 네트워크였을 때 흔히 발생했습니다. 이제 이더리움은 <a href=\"/glossary/#pos\">지분 증명 (PoS)</a>을 사용하므로 슬롯당 하나의 블록 제안자만 선택됩니다.",
+  "ommer-definition": "<a href=\"/glossary/#pow\">작업증명 (PoW)</a> <a href=\"/glossary/#miner\">채굴자</a>가 유효한 <a href=\"/glossary/#block\">블록</a>을 찾았을 때, 다른 채굴자가 경쟁 블록을 게시하여 블록체인의 끝에 먼저 추가되었을 수 있습니다. 이 유효하지만 오래된 블록은 최신 블록에 의해 <em>오머</em>로 포함되어 부분적인 블록 보상을 받을 수 있습니다. \"오머(ommer)\"라는 용어는 부모 블록의 형제 블록을 지칭하는 선호되는 성 중립적 용어이지만, 때로는 \"엉클(uncle)\"이라고도 불립니다. 이는 이더리움이 <a href=\"/glossary/#pow\">작업증명 (PoW)</a> 네트워크였을 때 흔히 발생했습니다. 이제 이더리움은 <a href=\"/glossary/#pos\">지분 증명 (PoS)</a>을 사용하므로 슬롯당 하나의 블록 제안자만 선택됩니다.",
   "onchain-term": "온체인",
   "onchain-definition": "블록체인에서 발생하며 공개적으로 사용할 수 있는 작업이나 트랜잭션을 의미합니다.",
   "optimistic-rollup-term": "옵티미스틱 롤업",

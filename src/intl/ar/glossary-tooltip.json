@@ -160,7 +160,7 @@
   "web3-term": "⁦Web3⁩",
   "web3-definition": "⁦Web3⁩ هو الإنترنت الجديد مع سلسلة الكتل، حيث يتحكم المستخدمون في بياناتهم ومعاملاتهم، وليس الشركات. لا حاجة لمشاركة أي معلومات شخصية. <a href=\"/web3/\">المزيد عن ⁦Web3⁩</a>.",
   "wei-term": "⁦Wei⁩",
-  "wei-definition": "أصغر فئة من الإيثر. ⁦10<sup>18</sup>⁩ <HTML-PLACEHOLDER-HTMLTAG-063f8a>⁦Wei⁩</HTML-PLACEHOLDER-HTMLTAG-063f8a> = ⁦1⁩ إيثر.",
+  "wei-definition": "أصغر فئة من الإيثر. ⁦10<sup>18</sup>⁩ <a href=\"/glossary/#wei\">⁦Wei⁩</a> = ⁦1⁩ إيثر.",
   "zk-proof-term": "إثبات المعرفة الصفرية",
   "zk-proof-definition": "إثبات المعرفة الصفرية هو طريقة تشفير تسمح للفرد بإثبات صحة عبارة ما دون نقل أي معلومات إضافية. <a href=\"/developers/docs/scaling/zk-rollups/\">المزيد عن تجميعات المعرفة الصفرية</a>."
 }

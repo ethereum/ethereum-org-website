@@ -100,7 +100,7 @@
   "node-term": "节点",
   "node-definition": "参与网络的软件客户端。<a href=\"/developers/docs/nodes-and-clients/\">更多关于节点和客户端的信息</a>。",
   "ommer-term": "叔块",
-  "ommer-definition": "当<a href=\"/glossary/#pow\">工作量证明 (PoW)</a>的<a href=\"/glossary/#miner\">矿工</a>找到一个有效的<a href=\"/glossary/#block\">区块</a>时，另一个矿工可能已经发布了一个竞争区块，该区块首先被添加到区块链的顶端。这个有效但陈旧的区块可以被较新的区块作为<em>叔块</em>包含在内，并获得部分区块奖励。“ommer”是父区块的兄弟区块的首选性别中立术语，但有时也被称为“uncle”（叔块）。这在以太坊还是<HTML-PLACEHOLDER-HTMLTAG-7ff424>工作量证明 (PoW)</HTML-PLACEHOLDER-HTMLTAG-7ff424>网络时很常见。现在以太坊使用<a href=\"/glossary/#pos\">权益证明 (PoS)</a>，每个时隙只选择一个区块提议者。",
+  "ommer-definition": "当<a href=\"/glossary/#pow\">工作量证明 (PoW)</a>的<a href=\"/glossary/#miner\">矿工</a>找到一个有效的<a href=\"/glossary/#block\">区块</a>时，另一个矿工可能已经发布了一个竞争区块，该区块首先被添加到区块链的顶端。这个有效但陈旧的区块可以被较新的区块作为<em>叔块</em>包含在内，并获得部分区块奖励。“ommer”是父区块的兄弟区块的首选性别中立术语，但有时也被称为“uncle”（叔块）。这在以太坊还是<a href=\"/glossary/#pow\">工作量证明 (PoW)</a>网络时很常见。现在以太坊使用<a href=\"/glossary/#pos\">权益证明 (PoS)</a>，每个时隙只选择一个区块提议者。",
   "onchain-term": "链上",
   "onchain-definition": "指在区块链上发生且公开可见的操作或交易。",
   "optimistic-rollup-term": "乐观 Rollup",
