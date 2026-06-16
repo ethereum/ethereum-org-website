@@ -5,7 +5,6 @@ import { newToCrypto } from "@/data/wallets/new-to-crypto"
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
-import AuroxImage from "@/public/images/wallets/aurox.png"
 import BitgetImage from "@/public/images/wallets/bitget.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BraavosImage from "@/public/images/wallets/braavos_wallet.png"
@@ -2173,53 +2172,6 @@ export const walletsData: WalletData[] = [
       "Scroll",
       "Blast",
     ],
-  },
-  {
-    last_updated: "2025-01-25",
-    name: "Aurox Wallet",
-    image: AuroxImage,
-    twBackgroundColor: "bg-[#1F47FF]",
-    twGradiantBrandColor: "from-[#1F47FF]",
-    url: "https://getaurox.com/wallet",
-    active_development_team: true,
-    languages_supported: ["en"],
-    twitter: "https://x.com/getaurox",
-    discord: "https://aurox.app/discord",
-    reddit: "",
-    telegram: "",
-    ios: false,
-    android: false,
-    linux: false,
-    windows: false,
-    macOS: false,
-    firefox: false,
-    chromium: true,
-    hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/GetAurox/Aurox-Wallet",
-    non_custodial: true,
-    security_audit: ["https://skynet.certik.com/projects/aurox"],
-    scam_protection: true,
-    hardware_support: true,
-    rpc_importing: true,
-    nft_support: true,
-    connect_to_dapps: true,
-    staking: false,
-    swaps: true,
-    multichain: true,
-    layer_2: true,
-    gas_fee_customization: true,
-    ens_support: true,
-    erc_20_support: true,
-    buy_crypto: false,
-    withdraw_crypto: false,
-    multisig: false,
-    social_recovery: false,
-    onboard_documentation:
-      "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
-    documentation:
-      "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
-    supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
   {
     last_updated: "2025-10-20",
