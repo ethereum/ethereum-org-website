@@ -74,10 +74,7 @@ const FaqContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionContent
     ref={ref}
-    className={cn(
-      "w-full overflow-hidden px-4 text-sm md:px-8",
-      "transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-    )}
+    className="w-full px-4 text-sm md:px-8"
     {...props}
   >
     <div className={cn("border-t border-body-light py-3 md:py-6", className)}>
