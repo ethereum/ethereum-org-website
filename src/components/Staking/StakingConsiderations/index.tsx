@@ -63,7 +63,7 @@ export type StakingConsiderationsProps = {
 
 const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   const {
-    StyledSvg,
+    Svg,
     caution,
     description,
     dropdownLinks,
@@ -128,15 +128,15 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
       </div>
       <Flex
         className={cn(
-          "min-h-[410px] flex-[2] flex-col items-center rounded-base bg-background-highlight p-6",
+          "flow min-h-96 flex-2 flex-col items-center rounded-base bg-background-highlight p-6 text-center",
           // Square the panel's start corner where the highlighted (active or
           // hovered) first/last tab meets it, so the tab flows flush (desktop only).
           isHighlighted(0) && "md:rounded-ss-none",
           isHighlighted(lastIndex) && "md:rounded-es-none"
         )}
       >
-        <StyledSvg />
-        <h3 className="mt-10 text-2xl leading-[1.4]">{title}</h3>
+        <Svg className="text-8xl" />
+        <h3>{title}</h3>
         <p>{description}</p>
         <Flex className="mt-auto justify-center gap-8">
           {!!valid && (
