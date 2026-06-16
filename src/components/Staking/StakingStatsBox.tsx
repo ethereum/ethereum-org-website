@@ -28,8 +28,8 @@ const Label = ({ children }: ChildOnlyProp) => (
   </Flex>
 )
 
-// BeaconchainTooltip component
-const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
+// DataSourceTooltip component
+const DataSourceTooltip = ({ children }: ChildOnlyProp) => (
   <Tooltip content={children}>
     <Info className="active:primary focus:primary size-[1em] text-md hover:text-primary" />
   </Tooltip>
@@ -45,7 +45,9 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
 
   // Helper functions
   const formatInteger = (amount: number): string =>
-    amount ? numberFormat(locale).format(amount) : "—"
+    amount
+      ? numberFormat(locale, { maximumFractionDigits: 0 }).format(amount)
+      : "—"
 
   const formatPercentage = (amount: number): string =>
     numberFormat(locale, {
@@ -55,7 +57,7 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
     }).format(amount)
 
   const totalEth = formatInteger(data.totalEthStaked)
-  const totalValidators = formatInteger(data.validatorscount)
+  const percentStaked = formatPercentage(data.stakedPercentage)
   const currentApr = formatPercentage(data.apr)
 
   return (
@@ -64,41 +66,39 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
         <Value>{totalEth}</Value>
         <Label>
           {t("page-staking-stats-box-metric-1")}
-          <BeaconchainTooltip>
+          <DataSourceTooltip>
             <div className="normal-case">
               <p>{t("page-staking-stats-box-metric-1-tooltip")}</p>
               {t("common:data-provided-by")}{" "}
-              <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
+              <InlineLink href="https://dune.com/">Dune Analytics</InlineLink>
             </div>
-          </BeaconchainTooltip>
+          </DataSourceTooltip>
         </Label>
       </Cell>
       <Cell>
-        <Value>{totalValidators}</Value>
+        <Value>{percentStaked}</Value>
         <Label>
           {t("page-staking-stats-box-metric-2")}
-          <BeaconchainTooltip>
+          <DataSourceTooltip>
             <div className="normal-case">
               <p>{t("page-staking-stats-box-metric-2-tooltip")}</p>
               {t("common:data-provided-by")}{" "}
-              <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
+              <InlineLink href="https://dune.com/">Dune Analytics</InlineLink>
             </div>
-          </BeaconchainTooltip>
+          </DataSourceTooltip>
         </Label>
       </Cell>
       <Cell>
         <Value>{currentApr}</Value>
         <Label>
           {t("page-staking-stats-box-metric-3")}
-          <BeaconchainTooltip>
+          <DataSourceTooltip>
             <div className="normal-case">
               <p>{t("page-staking-stats-box-metric-3-tooltip")}</p>
               {t("common:data-provided-by")}{" "}
-              <InlineLink href="https://beaconcha.in/ethstore">
-                Beaconcha.in
-              </InlineLink>
+              <InlineLink href="https://dune.com/">Dune Analytics</InlineLink>
             </div>
-          </BeaconchainTooltip>
+          </DataSourceTooltip>
         </Label>
       </Cell>
     </Flex>
