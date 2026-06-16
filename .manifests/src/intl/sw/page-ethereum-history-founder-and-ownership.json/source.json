@@ -1,0 +1,504 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-ethereum-history-founder-and-ownership.json",
+  "generatedAt": "2026-06-16T15:39:02.965Z",
+  "rootHash": "d1eb7cf80656",
+  "tree": {
+    "contentHash": "71befb56e301",
+    "anchorHash": "83a1b53ae042",
+    "children": {
+      "page-ethereum-history-founder-and-ownership-meta-title": {
+        "contentHash": "4ddc7e3714a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-meta-description": {
+        "contentHash": "5c4e4c6eb126",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-twitter-meta-description": {
+        "contentHash": "7ef10eb31623",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-title": {
+        "contentHash": "4ddc7e3714a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-description-1": {
+        "contentHash": "fb16e2325fbf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-description-1": {
+        "contentHash": "52448fd5d27c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f2a50a4d4298",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum": {
+        "contentHash": "1d4860011a22",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-1": {
+        "contentHash": "4c871be396a7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "984d708bf3d9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-2": {
+        "contentHash": "4d02012926db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-3": {
+        "contentHash": "b3c6693360ce",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d1cbc6f67080",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-4": {
+        "contentHash": "c4d6a33a8e8f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "96c032eccb83",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-5": {
+        "contentHash": "766383295d40",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-when-ethereum-when-did-ethereum-launch": {
+        "contentHash": "e5402d677b82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now": {
+        "contentHash": "20e993079bcd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-founder-of-ethereum": {
+        "contentHash": "ed67e97a8805",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-6": {
+        "contentHash": "89a12080630e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-vitalik-buterin": {
+        "contentHash": "d7d85e862ef0",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "acf802bb84ec",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-gavin-wood": {
+        "contentHash": "8673ede2d695",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "df34db2a3a92",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-joseph-lubin": {
+        "contentHash": "27763f4b49b5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a9f1e9a4c63b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-jeffrey-wilcke": {
+        "contentHash": "9b172c20afa9",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "64923b9943d2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-mihai-alisie": {
+        "contentHash": "87d987565a7a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "689e73c4966b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-anthony-di-lorio": {
+        "contentHash": "0b03ea17c91b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ad87c13e7ebe",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-amir-chetrit": {
+        "contentHash": "030d14e74b40",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7f05696b4d27",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-charles-hoskinson": {
+        "contentHash": "1e853a269d68",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9c1d471539d7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-7": {
+        "contentHash": "b99b00976049",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "42aa9b1f4b7b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-1": {
+        "contentHash": "6f509381dd0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-2": {
+        "contentHash": "9f1481b9508c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "61a3ab0490b3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-3": {
+        "contentHash": "c5be5879aff3",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ebb01de15aae",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-4": {
+        "contentHash": "523d58838fff",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a2427aecdc26",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-5": {
+        "contentHash": "cc25cc9f9297",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1d31c46807e5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-6": {
+        "contentHash": "da25b1e5546b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "bfa7d57eaee3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-7": {
+        "contentHash": "66c626b6c599",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "80db2e90df86",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-8": {
+        "contentHash": "1df0a0615ff3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-9": {
+        "contentHash": "e69bf67c608d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-10": {
+        "contentHash": "c245d28e5b7a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-11": {
+        "contentHash": "bb0d5c09376f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9ef53c44b0cd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-12": {
+        "contentHash": "0f65fe8f822c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-13": {
+        "contentHash": "a662716d5105",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-1": {
+        "contentHash": "a51350189130",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-2": {
+        "contentHash": "693e8d0274cb",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "619233767f39",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-3": {
+        "contentHash": "0b12c3c17aae",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b6176236e5e2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-4": {
+        "contentHash": "97ffe62760d2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "525b2e756bc0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-5": {
+        "contentHash": "f5c90503a1b8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d594d78eaddb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-6": {
+        "contentHash": "3428a4123764",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation": {
+        "contentHash": "2900efdcfe9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-1": {
+        "contentHash": "2e0e271493d6",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "23d984d2ecbe",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-2": {
+        "contentHash": "2521a3803afb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-3": {
+        "contentHash": "ca613bee97cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-4": {
+        "contentHash": "d963f06018c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-5": {
+        "contentHash": "b5761e3e8c4c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-core-developers": {
+        "contentHash": "f33e2ee5d19d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-core-developers-description-1": {
+        "contentHash": "297efdf643a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-eip": {
+        "contentHash": "111ffbbddb57",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-eip-description-1": {
+        "contentHash": "d2a99407f438",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9ed7699fef96",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-validators": {
+        "contentHash": "9b82cbb6ab29",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-validators-description-1": {
+        "contentHash": "06dc50d37d1d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "09d6eea25975",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-validators-description-2": {
+        "contentHash": "7b1b29e1ac8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-validators-description-3": {
+        "contentHash": "daad4989bdda",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-conclusion": {
+        "contentHash": "89db2ad881f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-conclusion-description-1": {
+        "contentHash": "1e06f9fbe399",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e8f6a74f492d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-conclusion-description-2": {
+        "contentHash": "22622a7e7edb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-history-founder-and-ownership-conclusion-description-3": {
+        "contentHash": "cf4b6872e24a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6cb3c81ff38b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-history-founder-and-ownership-conclusion-description-4": {
+        "contentHash": "7ee37835f02b",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-ethereum-history-founder-and-ownership-meta-title",
+      "page-ethereum-history-founder-and-ownership-meta-description",
+      "page-ethereum-history-founder-and-ownership-twitter-meta-description",
+      "page-ethereum-history-founder-and-ownership-title",
+      "page-ethereum-history-founder-and-ownership-description-1",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-description-1",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-1",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-2",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-3",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-4",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-5",
+      "page-ethereum-history-founder-and-ownership-when-ethereum-when-did-ethereum-launch",
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now",
+      "page-ethereum-history-founder-and-ownership-founder-of-ethereum",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-6",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-vitalik-buterin",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-gavin-wood",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-joseph-lubin",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-jeffrey-wilcke",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-mihai-alisie",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-anthony-di-lorio",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-amir-chetrit",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-charles-hoskinson",
+      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-7",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-1",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-2",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-3",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-4",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-5",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-6",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-7",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-8",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-9",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-10",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-11",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-12",
+      "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-13",
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-1",
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-2",
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-3",
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-4",
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-5",
+      "page-ethereum-history-founder-and-ownership-who-owns-and-runs-ethereum-now-description-6",
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation",
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-1",
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-2",
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-3",
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-4",
+      "page-ethereum-history-founder-and-ownership-ethereum-foundation-description-5",
+      "page-ethereum-history-founder-and-ownership-core-developers",
+      "page-ethereum-history-founder-and-ownership-core-developers-description-1",
+      "page-ethereum-history-founder-and-ownership-eip",
+      "page-ethereum-history-founder-and-ownership-eip-description-1",
+      "page-ethereum-history-founder-and-ownership-validators",
+      "page-ethereum-history-founder-and-ownership-validators-description-1",
+      "page-ethereum-history-founder-and-ownership-validators-description-2",
+      "page-ethereum-history-founder-and-ownership-validators-description-3",
+      "page-ethereum-history-founder-and-ownership-conclusion",
+      "page-ethereum-history-founder-and-ownership-conclusion-description-1",
+      "page-ethereum-history-founder-and-ownership-conclusion-description-2",
+      "page-ethereum-history-founder-and-ownership-conclusion-description-3",
+      "page-ethereum-history-founder-and-ownership-conclusion-description-4"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

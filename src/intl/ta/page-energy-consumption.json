@@ -5,8 +5,8 @@
   "energy-consumption-chart-eth-pow-label": "ETH PoW",
   "energy-consumption-chart-gaming-us-label": "அமெரிக்காவில் கேமிங்",
   "energy-consumption-chart-global-data-centers-label": "உலகளாவிய தரவு மையங்கள்",
-  "energy-consumption-chart-netflix-label": "Netflix",
-  "energy-consumption-chart-paypal-label": "PayPal",
-  "energy-consumption-gold-mining-cbeci-label": "தங்கச் சுரங்கம்",
-  "energy-consumption-chart-legend": "ஆண்டு ஆற்றல் நுகர்வு TWh/yr இல்"
+  "energy-consumption-chart-netflix-label": "நெட்ஃப்ளிக்ஸ்",
+  "energy-consumption-chart-paypal-label": "பேபால்",
+  "energy-consumption-gold-mining-cbeci-label": "தங்கச் சுரங்கப்பணி",
+  "energy-consumption-chart-legend": "TWh/yr இல் ஆண்டு ஆற்றல் நுகர்வு"
 }

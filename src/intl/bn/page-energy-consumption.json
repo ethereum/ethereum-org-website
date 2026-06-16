@@ -4,9 +4,9 @@
   "energy-consumption-chart-eth-pos-label": "ETH PoS",
   "energy-consumption-chart-eth-pow-label": "ETH PoW",
   "energy-consumption-chart-gaming-us-label": "যুক্তরাষ্ট্রে গেমিং",
-  "energy-consumption-chart-global-data-centers-label": "গ্লোবাল ডাটা সেন্টার",
-  "energy-consumption-chart-netflix-label": "Netflix",
-  "energy-consumption-chart-paypal-label": "PayPal",
-  "energy-consumption-gold-mining-cbeci-label": "স্বর্ণ উত্তোলন",
+  "energy-consumption-chart-global-data-centers-label": "গ্লোবাল ডেটা সেন্টার",
+  "energy-consumption-chart-netflix-label": "নেটফ্লিক্স",
+  "energy-consumption-chart-paypal-label": "পেপ্যাল",
+  "energy-consumption-gold-mining-cbeci-label": "স্বর্ণ মাইনিং",
   "energy-consumption-chart-legend": "TWh/yr-এ বার্ষিক শক্তি খরচ"
 }
