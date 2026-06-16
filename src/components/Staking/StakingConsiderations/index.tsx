@@ -19,7 +19,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
 
-// Concave fillets that flare a highlighted tab's exposed edge into the panel.
+// Concave fillets that flare a highlighted tab's top/bottom edges into the panel.
 // Driven by the local `--tab-r` custom property; `ltr`/`rtl` swap the gradient's
 // open corner so the curve always faces away from the panel seam.
 const TOP_FILLET =
@@ -76,8 +76,9 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
     activeIndex,
   } = useStakingConsiderations({ page })
 
-  // Hover is tracked in JS (not CSS) so each item knows whether its neighbor is
-  // also highlighted -- letting an active + hovered pair merge without a seam.
+  // Hover is tracked in JS (not CSS) so the panel can square the corner where a
+  // highlighted first/last tab meets it, and so a hovered tab flares into the
+  // panel like the active one.
   const [hovered, setHovered] = useState<number | null>(null)
   const isHighlighted = (i: number) => i === activeIndex || i === hovered
   const lastIndex = (pageData?.length ?? 0) - 1
@@ -95,10 +96,6 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
             {/* TODO: Make mobile responsive */}
             {pageData.map(({ title, matomo }, idx) => {
               const highlighted = isHighlighted(idx)
-              // Round/fillet only the edges of a highlighted run that are exposed
-              // (neighbor not highlighted); merged neighbors share a flat seam.
-              const roundTop = highlighted && !isHighlighted(idx - 1)
-              const roundBottom = highlighted && !isHighlighted(idx + 1)
               return (
                 <ListItem
                   key={idx}
@@ -112,11 +109,15 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                     highlighted
                       ? "bg-background-highlight text-body"
                       : "text-primary",
-                    roundTop && "rounded-ss-(--tab-r)",
-                    roundBottom && "rounded-es-(--tab-r)",
-                    // Fillets only on exposed edges, never at the list ends.
-                    roundTop && idx !== 0 && TOP_FILLET,
-                    roundBottom && idx !== lastIndex && BOTTOM_FILLET
+                    // Each highlighted tab is its own rounded pill flaring into
+                    // the panel -- the inter-item gap keeps neighbours visually
+                    // separate, so we always round both start corners rather
+                    // than flattening a shared seam.
+                    highlighted && "rounded-s-(--tab-r)",
+                    // Fillets curve the top/bottom edge into the panel, but never
+                    // poke past the list ends (the panel rounds those corners).
+                    highlighted && idx !== 0 && TOP_FILLET,
+                    highlighted && idx !== lastIndex && BOTTOM_FILLET
                   )}
                 >
                   {title}
