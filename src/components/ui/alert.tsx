@@ -1,7 +1,6 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
-import { getTranslations } from "next-intl/server"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
@@ -99,23 +98,24 @@ const AlertDescription = React.forwardRef<
 ))
 AlertDescription.displayName = "AlertDescription"
 
+/**
+ * Dismiss control for an `Alert`. Env-agnostic: the caller owns the
+ * (required) `aria-label` and any dismissal behaviour (`onClick`), so it
+ * composes into server or client trees alike.
+ */
 const AlertCloseButton = React.forwardRef<
   HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement>
->(async ({ className, ...props }, ref) => {
-  const t = await getTranslations("common")
-  return (
-    <Button
-      ref={ref}
-      variant="ghost"
-      className={cn("-me-4 rounded-full text-body", className)}
-      {...props}
-      aria-label={props["aria-label"] || t("close")}
-    >
-      <X className="h-6 w-6" />
-    </Button>
-  )
-})
+  React.ButtonHTMLAttributes<HTMLButtonElement> & { "aria-label": string }
+>(({ className, ...props }, ref) => (
+  <Button
+    ref={ref}
+    variant="ghost"
+    className={cn("-me-4 rounded-full text-body", className)}
+    {...props}
+  >
+    <X className="h-6 w-6" />
+  </Button>
+))
 AlertCloseButton.displayName = "AlertCloseButton"
 
 const AlertEmoji = ({ className, ...props }: EmojiProps) => (
