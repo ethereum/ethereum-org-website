@@ -15,6 +15,14 @@
     @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
+  /* Tailwind v4 Preflight dropped the v3 rule that gave buttons a pointer
+     cursor (the "buttons use the default cursor" change). Restore it globally
+     so interactive buttons don't fall back to the UA arrow cursor. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
   h1,
   h2,
   h3,

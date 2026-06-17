@@ -17,7 +17,6 @@ import type {
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import type { DeveloperToolsDataEnvelope } from "./fetchers/developer-tools/utils"
-import type { BeaconChainData } from "./fetchers/fetchBeaconChain"
 import type { BlobscanStats } from "./fetchers/fetchBlobscanStats"
 import type { GasPriceData } from "./fetchers/fetchGasPrice"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
@@ -37,7 +36,6 @@ export const getCommunityPicks = () => get<CommunityPick[]>(KEYS.COMMUNITY_PICKS
 export const getCalendarEvents = () => get<CommunityEventsReturnType>(KEYS.CALENDAR_EVENTS)
 export const getRSSData = () => get<RSSItem[][]>(KEYS.RSS)
 export const getAttestantPosts = () => get<RSSItem[]>(KEYS.POSTS)
-export const getBeaconchainData = () => get<BeaconChainData>(KEYS.BEACONCHAIN)
 export const getBlobscanStats = () => get<BlobscanStats>(KEYS.BLOBSCAN_STATS)
 export const getEthereumMarketcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_MARKETCAP)
 export const getEthereumStablecoinsMcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_STABLECOINS_MCAP)
@@ -47,6 +45,7 @@ export const getGitHistory = () => get<Commit[]>(KEYS.GIT_HISTORY)
 export const getGithubRepoData = () => get<Record<string, GithubRepoData>>(KEYS.GITHUB_REPO_DATA)
 export const getStablecoinsData = () => get<CoinGeckoCoinMarketResponse>(KEYS.STABLECOINS_DATA)
 export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_STAKED)
+export const getStakedPercentageData = () => get<MetricReturnData>(KEYS.STAKED_PERCENTAGE)
 export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
 export const getDeveloperToolsData = () => get<DeveloperToolsDataEnvelope>(KEYS.DEVELOPER_TOOLS)

@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Mainnet",
   "page-staking-launchpad-widget-start": "Začněte stakovat na síti {network}",
   "page-staking-launchpad-widget-span": "Vyberte síť",
-  "page-staking-launchpad-widget-p1": "Očekává se, že sólo validátoři si před riskováním prostředků <strong>otestují své nastavení</strong> a provozní dovednosti na testnetu {{network}}. Pamatujte, že je důležité vybrat si <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">menšinového klienta</a>, protože to zvyšuje bezpečnost sítě a omezuje vaše riziko.",
+  "page-staking-launchpad-widget-p1": "Od sólo validátorů se očekává, že si před riskováním prostředků <strong>otestují své nastavení</strong> a provozní dovednosti na testnetu {network}. Pamatujte, že je důležité vybrat si <link>menšinového klienta</link>, protože to zvyšuje bezpečnost sítě a omezuje vaše riziko.",
   "page-staking-launchpad-widget-p2": "Pokud vám to vyhovuje, můžete vše potřebné nastavit z příkazového řádku pouze pomocí Staking Launchpadu.",
   "page-staking-launchpad-widget-p3": "Aby to bylo jednodušší, podívejte se na některé z níže uvedených nástrojů a průvodců, které vám mohou pomoci společně se Staking Launchpadem snadno nastavit vaše klienty.",
   "page-staking-launchpad-widget-link": "Softwarové nástroje a průvodce",

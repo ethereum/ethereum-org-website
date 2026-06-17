@@ -1,0 +1,406 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-collectibles.json",
+  "generatedAt": "2026-06-16T15:18:07.922Z",
+  "rootHash": "312e8f816e6f",
+  "tree": {
+    "contentHash": "8e93922c6c6d",
+    "anchorHash": "f7e2f05eaf08",
+    "children": {
+      "page-collectibles-already-desc": {
+        "contentHash": "14ad5df25dd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-already-title": {
+        "contentHash": "1f1b50978c60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-desc": {
+        "contentHash": "954c30b030a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-design-1issue": {
+        "contentHash": "d4bffd161cee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-design-desc": {
+        "contentHash": "079b049cd40c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-design-title": {
+        "contentHash": "0072e6b93494",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-design-user-testing": {
+        "contentHash": "c7b26d2aa4d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-developer-10pr": {
+        "contentHash": "3e02953d5459",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-developer-1pr": {
+        "contentHash": "557f3e0de3f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-developer-5pr": {
+        "contentHash": "1e9e71b6d24f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-developer-desc": {
+        "contentHash": "f0bcbbefeb95",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-developer-title": {
+        "contentHash": "3fb7b39416f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-gitpoap-1pr": {
+        "contentHash": "0454aab00103",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-gitpoap-desc": {
+        "contentHash": "30bbed4594bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-gitpoap-title": {
+        "contentHash": "7afd89be66e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-instructions-1": {
+        "contentHash": "7d03b320ff5b",
+        "anchorHash": "ed5e234f1c63",
+        "children": {
+          "prose:1": {
+            "contentHash": "990c2713bc51",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "505554929de3",
+            "anchorHash": "2e6d2bb748ea"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0"
+        ]
+      },
+      "page-collectibles-code-content-instructions-2": {
+        "contentHash": "06f8d1c0fc1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-instructions-3": {
+        "contentHash": "1e07b20f95f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-title": {
+        "contentHash": "2ca2bc62ad80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-writing-badge-1": {
+        "contentHash": "722be793b69c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-writing-desc": {
+        "contentHash": "e5e471ac8a68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-code-content-writing-title": {
+        "contentHash": "a8bfae3eee94",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-connect-wallet": {
+        "contentHash": "7b1f118169bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-contributing-since": {
+        "contentHash": "54f02712146c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-contributor-img-alt": {
+        "contentHash": "89cfca710eb2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-contributor-progress-label": {
+        "contentHash": "ddcd2779294a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-current-year-title": {
+        "contentHash": "07e958351b97",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-get-started": {
+        "contentHash": "983f31101864",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-hero-description": {
+        "contentHash": "738e0fa4ca28",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-hero-header": {
+        "contentHash": "bd16f9725e02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-hero-title": {
+        "contentHash": "185d8ef0ae5e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-how-step1-desc": {
+        "contentHash": "f854701ade5d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-how-step1-title": {
+        "contentHash": "97b0c61b99f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-how-step2-desc": {
+        "contentHash": "70e522acc9f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-how-step2-title": {
+        "contentHash": "633fe0a747ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-how-step3-desc": {
+        "contentHash": "4a678ebda4e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-how-step3-title": {
+        "contentHash": "94d54f9f7b5d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-how-title": {
+        "contentHash": "9c870aa6e5e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-improve-desc-1": {
+        "contentHash": "f63570ebebdb",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "71dde2366fef",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-collectibles-improve-desc-2": {
+        "contentHash": "de3caf81a839",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4e3532141862",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-collectibles-improve-title": {
+        "contentHash": "12dcb9aea4d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-index-frequency": {
+        "contentHash": "ddc42dd67088",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-instructions-label": {
+        "contentHash": "934652dce41d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-previous-years-badge-count": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "e84a76f92454",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2bbb54caae00"
+          }
+        }
+      },
+      "page-collectibles-previous-years-collectors-count": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "49df262e8674",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ac1db594409"
+          }
+        }
+      },
+      "page-collectibles-previous-years-no-badges": {
+        "contentHash": "a5e4eccefbb7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-previous-years": {
+        "contentHash": "a36bfcc6df1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-social-desc": {
+        "contentHash": "0883a0fde9bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-social-instructions-1": {
+        "contentHash": "a375472438b3",
+        "anchorHash": "436ac9568cee",
+        "children": {
+          "prose:1": {
+            "contentHash": "9328da69749e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "3a9884e3ad9a",
+            "anchorHash": "f002990b159f"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0"
+        ]
+      },
+      "page-collectibles-social-instructions-2": {
+        "contentHash": "2e42db009f2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-social-instructions-3": {
+        "contentHash": "921ae404dd1f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-social-title": {
+        "contentHash": "f1b7505afa5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-stats-collectors": {
+        "contentHash": "c6926e7662d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-stats-minted": {
+        "contentHash": "3798b4e02a7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-stats-unique-badges": {
+        "contentHash": "bccfbe31f5ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-translations-1000": {
+        "contentHash": "cbf81d03c0b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-translations-10000": {
+        "contentHash": "02e90a527245",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-translations-250": {
+        "contentHash": "b6decac8ef51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-translations-50000": {
+        "contentHash": "7cf3e2651d69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-translations-badge-desc": {
+        "contentHash": "5c6c9c6830be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-translations-desc": {
+        "contentHash": "1287dce57f3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-translations-instructions-1": {
+        "contentHash": "a35ad89443f8",
+        "anchorHash": "107b6e344fce",
+        "children": {
+          "prose:1": {
+            "contentHash": "4b415d08c8f5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "dae45f8c8e6b",
+            "anchorHash": "acdbf55e512f"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0"
+        ]
+      },
+      "page-collectibles-translations-instructions-2": {
+        "contentHash": "71a202e24721",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-translations-instructions-3": {
+        "contentHash": "787bc8432e0e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-collectibles-translations-title": {
+        "contentHash": "266a41b90d4f",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-collectibles-already-desc",
+      "page-collectibles-already-title",
+      "page-collectibles-code-content-desc",
+      "page-collectibles-code-content-design-1issue",
+      "page-collectibles-code-content-design-desc",
+      "page-collectibles-code-content-design-title",
+      "page-collectibles-code-content-design-user-testing",
+      "page-collectibles-code-content-developer-10pr",
+      "page-collectibles-code-content-developer-1pr",
+      "page-collectibles-code-content-developer-5pr",
+      "page-collectibles-code-content-developer-desc",
+      "page-collectibles-code-content-developer-title",
+      "page-collectibles-code-content-gitpoap-1pr",
+      "page-collectibles-code-content-gitpoap-desc",
+      "page-collectibles-code-content-gitpoap-title",
+      "page-collectibles-code-content-instructions-1",
+      "page-collectibles-code-content-instructions-2",
+      "page-collectibles-code-content-instructions-3",
+      "page-collectibles-code-content-title",
+      "page-collectibles-code-content-writing-badge-1",
+      "page-collectibles-code-content-writing-desc",
+      "page-collectibles-code-content-writing-title",
+      "page-collectibles-connect-wallet",
+      "page-collectibles-contributing-since",
+      "page-collectibles-contributor-img-alt",
+      "page-collectibles-contributor-progress-label",
+      "page-collectibles-current-year-title",
+      "page-collectibles-get-started",
+      "page-collectibles-hero-description",
+      "page-collectibles-hero-header",
+      "page-collectibles-hero-title",
+      "page-collectibles-how-step1-desc",
+      "page-collectibles-how-step1-title",
+      "page-collectibles-how-step2-desc",
+      "page-collectibles-how-step2-title",
+      "page-collectibles-how-step3-desc",
+      "page-collectibles-how-step3-title",
+      "page-collectibles-how-title",
+      "page-collectibles-improve-desc-1",
+      "page-collectibles-improve-desc-2",
+      "page-collectibles-improve-title",
+      "page-collectibles-index-frequency",
+      "page-collectibles-instructions-label",
+      "page-collectibles-previous-years-badge-count",
+      "page-collectibles-previous-years-collectors-count",
+      "page-collectibles-previous-years-no-badges",
+      "page-collectibles-previous-years",
+      "page-collectibles-social-desc",
+      "page-collectibles-social-instructions-1",
+      "page-collectibles-social-instructions-2",
+      "page-collectibles-social-instructions-3",
+      "page-collectibles-social-title",
+      "page-collectibles-stats-collectors",
+      "page-collectibles-stats-minted",
+      "page-collectibles-stats-unique-badges",
+      "page-collectibles-translations-1000",
+      "page-collectibles-translations-10000",
+      "page-collectibles-translations-250",
+      "page-collectibles-translations-50000",
+      "page-collectibles-translations-badge-desc",
+      "page-collectibles-translations-desc",
+      "page-collectibles-translations-instructions-1",
+      "page-collectibles-translations-instructions-2",
+      "page-collectibles-translations-instructions-3",
+      "page-collectibles-translations-title"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

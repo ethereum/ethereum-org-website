@@ -1,64 +1,64 @@
 ---
-title: "بيئات التطوير المتكاملة (IDEs)"
-description: "تعرف على بيئات التطوير المتكاملة المستندة إلى الويب وسطح المكتب لتطوير إيثريوم، بما في ذلك ريميكس وVS Code والمكونات الإضافية الشائعة."
+title: "بيئات التطوير المتكاملة (⁦IDEs⁩)"
+description: "تعرف على بيئات التطوير المتكاملة (⁦IDEs⁩) المستندة إلى الويب وسطح المكتب لتطوير إيثيريوم، بما في ذلك ⁦Remix⁩ و⁦VS Code⁩ والإضافات الشائعة."
 lang: ar
 ---
 
-عندما يتعلق الأمر بإعداد [بيئة تطوير متكاملة (IDE)](https://wikipedia.org/wiki/Integrated_development_environment)، فإن برمجة التطبيقات على إيثريوم تشبه برمجة أي مشروع برمجي آخر. هناك العديد من الخيارات للاختيار من بينها، لذلك في نهاية اليوم، اختر IDE أو محرر الكود الذي يناسب تفضيلاتك بشكل أفضل. على الأرجح أن أفضل خيار IDE لتطوير إيثريوم هو IDE الذي تستخدمه بالفعل لتطوير البرامج التقليدية.
+عندما يتعلق الأمر بإعداد [بيئة تطوير متكاملة (<span dir="ltr">IDE</span>)](https://wikipedia.org/wiki/Integrated_development_environment)، فإن برمجة التطبيقات على إيثيريوم تشبه برمجة أي مشروع برمجي آخر. هناك العديد من الخيارات للاختيار من بينها، لذا في نهاية المطاف، اختر بيئة التطوير المتكاملة أو محرر الأكواد الذي يناسب تفضيلاتك. في الغالب، أفضل خيار لبيئة التطوير المتكاملة لتطوير إيثيريوم هو البيئة التي تستخدمها بالفعل لتطوير البرمجيات التقليدية.
 
 ## بيئات التطوير المتكاملة المستندة إلى الويب {#web-based-ides}
 
-إذا كنت تبحث عن التلاعب بالكود قبل [إعداد بيئة تطوير محلية](/developers/local-environment/)، فإن تطبيقات الويب هذه مصممة خصيصًا لتطوير عقود إيثريوم الذكية.
+إذا كنت تتطلع إلى تجربة الأكواد قبل [إعداد بيئة تطوير محلية](/developers/local-environment/)، فإن تطبيقات الويب هذه مصممة خصيصًا لتطوير العقود الذكية على إيثيريوم.
 
-**[ريميكس](https://remix.ethereum.org/)** - **_بيئة تطوير متكاملة قائمة على الويب مع تحليل ثابت مدمج، وآلة افتراضية لاختبار سلسلة الكتل_**
+**[Remix](https://remix.ethereum.org/)** - **_بيئة تطوير متكاملة مستندة إلى الويب مع تحليل ثابت مدمج، وآلة افتراضية لاختبار سلسلة الكتل_**
 
-- [الوثائق](https://remix-ide.readthedocs.io/en/latest/#)
-- [جيتر](https://gitter.im/ethereum/remix)
+- [المستندات](https://remix-ide.readthedocs.io/en/latest/#)
+- [Gitter](https://gitter.im/ethereum/remix)
 
-**[ChainIDE](https://chainide.com/)** - **_بيئة تطوير متكاملة متعددة السلاسل قائمة على السحابة_**
+**[ChainIDE](https://chainide.com/)** - **_بيئة تطوير متكاملة سحابية متعددة السلاسل_**
 
-- [الوثائق](https://chainide.gitbook.io/chainide-english-1/)
+- [المستندات](https://chainide.gitbook.io/chainide-english-1/)
 - [منتدى المساعدة](https://forum.chainide.com/)
 
-**[Replit (سوليديتي Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_بيئة تطوير قابلة للتخصيص لـ إيثريوم مع إعادة تحميل سريعة، والتحقق من الأخطاء، ودعم من الدرجة الأولى لشبكة الاختبار_**
+**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_بيئة تطوير قابلة للتخصيص لإيثيريوم مع إعادة تحميل سريع، والتحقق من الأخطاء، ودعم ممتاز لشبكات الاختبار_**
 
-- [الوثائق](https://docs.replit.com/)
+- [المستندات](https://docs.replit.com/)
 
-**[تيندرلي Sandbox](https://sandbox.tenderly.co/)** - **_بيئة سريعة للنماذج الأولية حيث يمكنك كتابة العقود الذكية وتنفيذها وتصحيح أخطائها في المتصفح باستخدام سوليديتي وJavaScript_**
+**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_بيئة نماذج أولية سريعة حيث يمكنك كتابة العقود الذكية وتنفيذها وتصحيح أخطائها في المتصفح باستخدام Solidity و<span dir="ltr">JavaScript</span>_**
 
-**[EthFiddle](https://ethfiddle.com/)** - **_بيئة تطوير متكاملة على الويب تتيح لك كتابة عقدك الذكي وتجميعه وتصحيح أخطائه_**
+**[EthFiddle](https://ethfiddle.com/)** - **_بيئة تطوير متكاملة مستندة إلى الويب تتيح لك كتابة عقدك الذكي وتجميعه وتصحيح أخطائه_**
 
-- [جيتر](https://gitter.im/loomnetwork/ethfiddle)
+- [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
 ## بيئات التطوير المتكاملة لسطح المكتب {#desktop-ides}
 
-لقد قامت معظم بيئات التطوير المتكاملة الراسخة ببناء مكونات إضافية لتعزيز تجربة تطوير إيثريوم. على أقل تقدير، فإنها توفر تمييزًا لبناء الجملة لـ [لغات العقود الذكية](/developers/docs/smart-contracts/languages/).
+قامت معظم بيئات التطوير المتكاملة الراسخة ببناء إضافات لتحسين تجربة تطوير إيثيريوم. كحد أدنى، توفر هذه الإضافات تمييزًا لغويًا لـ [لغات العقود الذكية](/developers/docs/smart-contracts/languages/).
 
-**Visual Studio Code -** **_بيئة تطوير متكاملة احترافية متعددة المنصات مع دعم إيثريوم الرسمي_**
+**<span dir="ltr">Visual Studio Code</span> -** **_بيئة تطوير متكاملة احترافية متعددة المنصات مع دعم رسمي لإيثيريوم_**
 
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [عينات الأكواد البرمجية](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
-- [غيت هاب](https://github.com/microsoft/vscode)
+- [<span dir="ltr">Visual Studio Code</span>](https://code.visualstudio.com/)
+- [نماذج الأكواد](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
+- [GitHub](https://github.com/microsoft/vscode)
 
-**JetBrains IDEs (IntelliJ IDEA, etc.) -** **_Essential tools for software developers and teams_**
+**بيئات التطوير المتكاملة من <span dir="ltr">JetBrains</span> (مثل <span dir="ltr">IntelliJ IDEA</span> وغيرها) -** **_أدوات أساسية لمطوري البرمجيات والفرق_**
 
-- [JetBrains](https://www.jetbrains.com/)
-- [غيت هاب](https://github.com/JetBrains)
-- [IntelliJ سوليديتي](https://github.com/intellij-solidity/intellij-solidity/)
+- [<span dir="ltr">JetBrains</span>](https://www.jetbrains.com/)
+- [GitHub](https://github.com/JetBrains)
+- [<span dir="ltr">IntelliJ Solidity</span>](https://github.com/intellij-solidity/intellij-solidity/)
 
-**ريميكس Desktop -** **_جرِّب ريميكس IDE على جهازك المحلي_**
+**<span dir="ltr">Remix Desktop</span> -** **_جرب بيئة التطوير المتكاملة Remix على جهازك المحلي_**
 
 - [تنزيل](https://github.com/ethereum/remix-desktop/releases)
-- [غيت هاب](https://github.com/ethereum/remix-desktop)
+- [GitHub](https://github.com/ethereum/remix-desktop)
 
-## المكونات الإضافية والملحقات {#plugins-extensions}
+## الإضافات والملحقات {#plugins-extensions}
 
-- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - لغة إيثريوم سوليديتي لـ Visual Studio Code
-- [سوليديتي + هارد هات for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - دعم سوليديتي و هارد هات من فريق هارد هات
-- [Prettier سوليديتي](https://github.com/prettier-solidity/prettier-plugin-solidity) - منسق أكواد برمجية يستخدم prettier
+- [<span dir="ltr">solidity</span>](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - لغة Solidity لإيثيريوم على <span dir="ltr">Visual Studio Code</span>
+- [Solidity + Hardhat لـ <span dir="ltr">VS Code</span>](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - دعم Solidity وHardhat من فريق Hardhat
+- [<span dir="ltr">Prettier Solidity</span>](https://github.com/prettier-solidity/prettier-plugin-solidity) - منسق أكواد باستخدام <span dir="ltr">prettier</span>
 
 ## قراءة إضافية {#further-reading}
 
-- [إيثريوم IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- قائمة ألكيمي ببيئات التطوير المتكاملة لـ Ethereum_
+- [بيئات التطوير المتكاملة لإيثيريوم](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- قائمة Alchemy لبيئات التطوير المتكاملة لإيثيريوم_
 
-_هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
+_هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وأضفه!_

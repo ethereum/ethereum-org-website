@@ -225,7 +225,7 @@
   --spacing-128: 32rem;
 
   /* Border radius */
-  --radius-4xl: 2rem;
+  --radius-base: var(--radius-2xl);
 
   /* Box shadows */
   --shadow-table-box: var(--table-box-shadow);

@@ -1,0 +1,541 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/dapps/index.md",
+  "generatedAt": "2026-06-16T22:25:29.965Z",
+  "rootHash": "dab69e61929c",
+  "tree": {
+    "contentHash": "55f4d77007a7",
+    "anchorHash": "b3d1f3d39099",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "6d37e71931f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:2": {
+        "contentHash": "52d1c1018b4f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "d0665bba31dc",
+        "anchorHash": "c7308a37e8aa"
+      },
+      "prose:3": {
+        "contentHash": "7d8482e74c28",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:4": {
+        "contentHash": "5a15c6be7b7a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "27ff972b3cad",
+        "anchorHash": "a9d9cc796044",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "f312429d44b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "4d69c9830fa1",
+            "anchorHash": "12c27408c3cf"
+          },
+          "prose:2": {
+            "contentHash": "cd2445afc05d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "definition-of-a-dapp": {
+        "contentHash": "4434265e1a3b",
+        "anchorHash": "0f58959903f2",
+        "labelHash": "297102659535",
+        "children": {
+          "_label": {
+            "contentHash": "297102659535",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "d06319756351",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "0448df491ba4",
+            "anchorHash": "2817c788b433"
+          },
+          "prose:2": {
+            "contentHash": "18bcabf611d9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "on-smart-contracts": {
+            "contentHash": "204971bf3faf",
+            "anchorHash": "e3bf24aee659",
+            "labelHash": "2e015cc804c7",
+            "children": {
+              "_label": {
+                "contentHash": "2e015cc804c7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "965efe0e0891",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "81fbd2f198c9",
+                "anchorHash": "c7308a37e8aa"
+              },
+              "prose:2": {
+                "contentHash": "a8dac19077b2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "on-smart-contracts"
+        ]
+      },
+      "benefits-of-dapp-development": {
+        "contentHash": "c17fca12217d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "31e2b74a87d0",
+        "children": {
+          "_label": {
+            "contentHash": "31e2b74a87d0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "799ee6faed30",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "drawbacks-of-dapp-development": {
+        "contentHash": "458c6086dd3a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "98fdcb23ecc1",
+        "children": {
+          "_label": {
+            "contentHash": "98fdcb23ecc1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c48f659824f0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "visual-learner": {
+        "contentHash": "fb3c2f4b6ca6",
+        "anchorHash": "10e37dc09033",
+        "labelHash": "1ba669cb6c18",
+        "children": {
+          "_label": {
+            "contentHash": "1ba669cb6c18",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "103bbfb48b88",
+            "children": {
+              "attr:slug": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "c591e0e303f4"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1"
+        ]
+      },
+      "dapp-tools": {
+        "contentHash": "1f842b3aeb4a",
+        "anchorHash": "f11a0e1512bc",
+        "labelHash": "39799ee1e303",
+        "children": {
+          "_label": {
+            "contentHash": "39799ee1e303",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:14": {
+            "contentHash": "b82a7ded0317",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f911e414cf6b",
+            "anchorHash": "bc8c470a1cd1"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "95846c6a199d",
+            "anchorHash": "cf8768160829"
+          },
+          "prose:16": {
+            "contentHash": "8dd973e80ffc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "f911e414cf6b",
+            "anchorHash": "277e09b95711"
+          },
+          "prose:17": {
+            "contentHash": "a1215b809a15",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "45b14de1a664",
+            "anchorHash": "7165c55bd0b5"
+          },
+          "prose:18": {
+            "contentHash": "173f6e2cbc43",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "35ae17cfbf79",
+            "anchorHash": "ce93116dde20"
+          },
+          "prose:19": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "f911e414cf6b",
+            "anchorHash": "827d8e3ec642"
+          },
+          "prose:20": {
+            "contentHash": "e6c9cebfd3c5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "4b91f285aed6",
+            "anchorHash": "43cb83aba523"
+          },
+          "prose:21": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "f911e414cf6b",
+            "anchorHash": "a0352c094b12"
+          },
+          "prose:22": {
+            "contentHash": "ff06b7910a50",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "9e3391e9bf07",
+            "anchorHash": "544a45e05240"
+          },
+          "prose:23": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "c205924de0fe",
+            "anchorHash": "3734c52fd414"
+          },
+          "prose:24": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "f911e414cf6b",
+            "anchorHash": "c18952dfaae0"
+          },
+          "prose:25": {
+            "contentHash": "86b8110350d2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "bb08def146c1",
+            "anchorHash": "0e8626bdabc4"
+          },
+          "prose:26": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:12": {
+            "contentHash": "c205924de0fe",
+            "anchorHash": "8d812dcc46fc"
+          },
+          "prose:27": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:13": {
+            "contentHash": "053bc65874ad",
+            "anchorHash": "6dc5d801caa4"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:14",
+          "link:0",
+          "prose:15",
+          "link:1",
+          "prose:16",
+          "link:2",
+          "prose:17",
+          "link:3",
+          "prose:18",
+          "link:4",
+          "prose:19",
+          "link:5",
+          "prose:20",
+          "link:6",
+          "prose:21",
+          "link:7",
+          "prose:22",
+          "link:8",
+          "prose:23",
+          "link:9",
+          "prose:24",
+          "link:10",
+          "prose:25",
+          "link:11",
+          "prose:26",
+          "link:12",
+          "prose:27",
+          "link:13"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "47cbaf2eb18d",
+        "anchorHash": "f019f61b043c",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c4a412c24f83",
+            "anchorHash": "56797486af51"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "2bd0dc76fec6",
+            "anchorHash": "1fc27bc738de"
+          },
+          "prose:7": {
+            "contentHash": "2815645c6efc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "70462a6e577f",
+            "anchorHash": "d0cd196c2e23"
+          },
+          "prose:8": {
+            "contentHash": "fc0bb93218c6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "5abf34207224",
+            "anchorHash": "e7d14fb97722"
+          },
+          "prose:9": {
+            "contentHash": "59a4b753b70c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "4aa2b43d20ee",
+            "anchorHash": "3c98cd2d1d23"
+          },
+          "prose:10": {
+            "contentHash": "dfe3ad8b8103",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "related-topics": {
+        "contentHash": "39472070a0a0",
+        "anchorHash": "520f0ba492d2",
+        "labelHash": "aea370bca4ee",
+        "children": {
+          "_label": {
+            "contentHash": "aea370bca4ee",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "52b574852c8e",
+            "anchorHash": "496b8e555c12"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "81dc3a308ef5",
+            "anchorHash": "f1bdb6df8255"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "tutorials": {
+        "contentHash": "558212865feb",
+        "anchorHash": "421f6dbfad76",
+        "labelHash": "8466037aee2a",
+        "children": {
+          "_label": {
+            "contentHash": "8466037aee2a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "87713332e69a",
+            "anchorHash": "d1480f1cf36e"
+          },
+          "prose:6": {
+            "contentHash": "0c28d7d8fd24",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "cbe0c894b78e",
+            "anchorHash": "bbcc8b0aa4a6"
+          },
+          "prose:7": {
+            "contentHash": "e50adc30f9ae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "72d0cd97d6d3",
+            "anchorHash": "2bb31db58ede"
+          },
+          "prose:8": {
+            "contentHash": "4a2dd3b13e79",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "56a48a830f91",
+            "anchorHash": "b2aaac73b1f3"
+          },
+          "prose:9": {
+            "contentHash": "66559f845a59",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "aaa591cec2e8",
+            "anchorHash": "8d031ee158a4"
+          },
+          "prose:10": {
+            "contentHash": "7611d73cf735",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "prerequisites",
+      "definition-of-a-dapp",
+      "benefits-of-dapp-development",
+      "drawbacks-of-dapp-development",
+      "visual-learner",
+      "dapp-tools",
+      "further-reading",
+      "related-topics",
+      "tutorials"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

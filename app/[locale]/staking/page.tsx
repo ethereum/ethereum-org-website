@@ -27,6 +27,7 @@ import { Section } from "@/components/ui/section"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { computeStakingApr } from "@/lib/utils/staking"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { staking } from "@/data/topics/staking"
@@ -35,7 +36,7 @@ import StakingCommunityCallout from "./_components/StakingCommunityCallout"
 import StakingPageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import { getBeaconchainData } from "@/lib/data"
+import { getStakedPercentageData, getTotalEthStakedData } from "@/lib/data"
 import heroImg from "@/public/images/upgrades/upgrade_rhino.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -44,21 +45,24 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
-  // Fetch data using the new data-layer functions (already cached)
-  const beaconchainData = await getBeaconchainData()
+  const [totalEthStaked, stakedPercentage] = await Promise.all([
+    getTotalEthStakedData(),
+    getStakedPercentageData(),
+  ])
 
-  // Handle null cases - throw error if required data is missing
-  if (!beaconchainData) {
-    throw new Error("Failed to fetch Beaconchain data")
+  if (
+    !totalEthStaked ||
+    !stakedPercentage ||
+    "error" in totalEthStaked ||
+    "error" in stakedPercentage
+  ) {
+    throw new Error("Failed to fetch staking stats data")
   }
 
-  // Extract values from data structures
-  const { totalEthStaked, validatorscount, apr } = beaconchainData
-
   const data: StakingStatsData = {
-    totalEthStaked: "value" in totalEthStaked ? totalEthStaked.value : 0,
-    validatorscount: "value" in validatorscount ? validatorscount.value : 0,
-    apr: "value" in apr ? apr.value : 0,
+    totalEthStaked: totalEthStaked.value,
+    stakedPercentage: stakedPercentage.value,
+    apr: computeStakingApr(totalEthStaked.value),
   }
 
   // Get i18n messages

@@ -1,74 +1,69 @@
 ---
-title: "كيفية استخدام مانتيكور لإيجاد الأخطاء في العقود الذكية"
-description: "كيفية استخدام مانتيكور لإيجاد الأخطاء في العقود الذكية بشكل تلقائي"
-author: Trailofbits
+title: "كيفية استخدام مانتيكور للعثور على الأخطاء في العقود الذكية"
+description: "كيفية استخدام مانتيكور للعثور تلقائيًا على الأخطاء في العقود الذكية"
+author: "تريل أوف بيتس"
 lang: ar
 tags:
-  [
-    "Solidity",
-    "العقود الذكيه ",
-    "الأمن",
-    "الاختبار",
-    "التحقق الرسمي"
-  ]
+  ["Solidity", "العقود الذكية", "الأمان", "الاختبار", "التحقق الرسمي"]
 skill: advanced
+breadcrumb: "مانتيكور"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
-الهدف من هذا الدرس التعليمي هو توضيح كيفية استخدام مانتيكور للعثور تلقائيًا على الأخطاء في العقود الذكية.
+الهدف من هذا البرنامج التعليمي هو إظهار كيفية استخدام مانتيكور للعثور تلقائيًا على الأخطاء في العقود الذكية.
 
 ## التثبيت {#installation}
 
-يتطلب مانتيكور إصدار python 3.6 >=. يمكن تثبيته من خلال pip أو باستخدام docker.
+يتطلب مانتيكور إصدار <span dir="ltr">= Python 3.6</span>. يمكن تثبيته من خلال <span dir="ltr">pip</span> أو باستخدام Docker.
 
-### مانتيكور من خلال docker {#manticore-through-docker}
+### مانتيكور من خلال Docker {#manticore-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_الأمر الأخير يشغل eth-security-toolbox في حاوية docker لديها صلاحية الوصول إلى دليلك الحالي. يمكنك تغيير الملفات من مضيفك، وتشغيل الأدوات على الملفات من حاوية docker_
+_يقوم الأمر الأخير بتشغيل <span dir="ltr">eth-security-toolbox</span> في Docker لديه حق الوصول إلى دليلك الحالي. يمكنك تغيير الملفات من مضيفك، وتشغيل الأدوات على الملفات من Docker_
 
-داخل حاوية docker، قم بتشغيل:
+داخل Docker، قم بتشغيل:
 
 ```bash
 solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### مانتيكور من خلال pip {#manticore-through-pip}
+### مانتيكور من خلال <span dir="ltr">pip</span> {#manticore-through-pip}
 
 ```bash
 pip3 install --user manticore
 ```
 
-يُنصح باستخدام solc 0.5.11.
+يوصى باستخدام <span dir="ltr">solc 0.5.11</span>.
 
-### تشغيل نص برمجي {#running-a-script}
+### تشغيل برنامج نصي {#running-a-script}
 
-لتشغيل نص python برمجي باستخدام python 3:
+لتشغيل برنامج نصي بلغة Python باستخدام <span dir="ltr">Python 3</span>:
 
 ```bash
 python3 script.py
 ```
 
-## مقدمة في التنفيذ الرمزي الديناميكي {#introduction-to-dynamic-symbolic-execution}
+## مقدمة إلى التنفيذ الرمزي الديناميكي {#introduction-to-dynamic-symbolic-execution}
 
 ### التنفيذ الرمزي الديناميكي باختصار {#dynamic-symbolic-execution-in-a-nutshell}
 
-التنفيذ الرمزي الديناميكي (DSE) هو أسلوب لتحليل البرامج يستكشف فضاء الحالة بدرجة عالية من الوعي الدلالي. تعتمد هذه التقنية على اكتشاف "مسارات البرنامج"، والتي يتم تمثيلها كصيغ رياضية تسمى `path predicates`. من الناحية المفاهيمية، تعمل هذه التقنية على مسندات المسار (path predicates) في خطوتين:
+التنفيذ الرمزي الديناميكي (DSE) هو تقنية لتحليل البرامج تستكشف مساحة حالة بدرجة عالية من الوعي الدلالي. تعتمد هذه التقنية على اكتشاف "مسارات البرنامج"، ممثلة كصيغ رياضية تسمى `path predicates`. من الناحية المفاهيمية، تعمل هذه التقنية على مسندات المسار في خطوتين:
 
-1. يتم إنشاؤها باستخدام قيود على مدخلات البرنامج.
-2. يتم استخدامها لتوليد مدخلات للبرنامج من شأنها أن تتسبب في تنفيذ المسارات المرتبطة بها.
+1. يتم بناؤها باستخدام قيود على مدخلات البرنامج.
+2. يتم استخدامها لإنشاء مدخلات البرنامج التي ستؤدي إلى تنفيذ المسارات المرتبطة.
 
-لا ينتج عن هذا النهج أي نتائج إيجابية خاطئة بمعنى أنه يمكن تشغيل جميع حالات البرنامج المحددة أثناء التنفيذ الفعلي. على سبيل المثال، إذا وجد التحليل تجاوزًا للسعة في عدد صحيح (integer overflow)، فمن المضمون أن يكون قابلاً للتكرار.
+لا ينتج عن هذا النهج أي نتائج إيجابية كاذبة بمعنى أنه يمكن تشغيل جميع حالات البرنامج المحددة أثناء التنفيذ الملموس. على سبيل المثال، إذا وجد التحليل تجاوز السعة لعدد صحيح، فمن المضمون أن يكون قابلاً لإعادة الإنتاج.
 
-### مثال على مسند المسار (Path Predicate) {#path-predicate-example}
+### مثال على مسند المسار {#path-predicate-example}
 
-للحصول على فكرة عن كيفية عمل التنفيذ الرمزي الديناميكي (DSE)، خذ المثال التالي:
+للحصول على نظرة ثاقبة حول كيفية عمل التنفيذ الرمزي الديناميكي (DSE)، ضع في اعتبارك المثال التالي:
 
 ```solidity
 function f(uint a){
@@ -80,18 +75,18 @@ function f(uint a){
 }
 ```
 
-بما أن `f()` تحتوي على مسارين، فإن التنفيذ الرمزي الديناميكي (DSE) سيقوم ببناء مسندين مختلفين للمسار:
+نظرًا لأن `f()` يحتوي على مسارين، سيقوم التنفيذ الرمزي الديناميكي (DSE) ببناء مسندي مسار مختلفين:
 
 - المسار 1: `a == 65`
 - المسار 2: `Not (a == 65)`
 
-كل مسند مسار هو صيغة رياضية يمكن إعطاؤها لما يسمى [محلل SMT](https://wikipedia.org/wiki/Satisfiability_modulo_theories)، الذي سيحاول حل المعادلة. بالنسبة لـ `المسار 1`، سيقول المحلل أنه يمكن استكشاف المسار باستخدام `a = 65`. بالنسبة لـ `المسار 2`، يمكن للمحلل أن يعطي `a` أي قيمة بخلاف 65، على سبيل المثال `a = 0`.
+كل مسند مسار هو صيغة رياضية يمكن إعطاؤها لما يسمى [مُحِلّ SMT](https://wikipedia.org/wiki/Satisfiability_modulo_theories)، والذي سيحاول حل المعادلة. بالنسبة لـ `Path 1`، سيقول المُحِلّ أنه يمكن استكشاف المسار باستخدام `a = 65`. بالنسبة لـ `Path 2`، يمكن للمُحِلّ إعطاء `a` أي قيمة بخلاف 65، على سبيل المثال `a = 0`.
 
 ### التحقق من الخصائص {#verifying-properties}
 
-يسمح مانتيكور بالتحكم الكامل في كل عمليات تنفيذ كل مسار. نتيجة لذلك، يسمح لك بإضافة قيود عشوائية على أي شيء تقريبًا. يسمح هذا التحكم بإنشاء خصائص على العقد.
+يتيح مانتيكور تحكمًا كاملاً في جميع عمليات تنفيذ كل مسار. ونتيجة لذلك، فإنه يسمح لك بإضافة قيود عشوائية إلى أي شيء تقريبًا. يسمح هذا التحكم بإنشاء خصائص على العقد.
 
-خذ المثال التالي:
+ضع في اعتبارك المثال التالي:
 
 ```solidity
 function unsafe_add(uint a, uint b) returns(uint c){
@@ -100,7 +95,7 @@ function unsafe_add(uint a, uint b) returns(uint c){
 }
 ```
 
-هنا لا يوجد سوى مسار واحد لاستكشافه في الدالة:
+هنا يوجد مسار واحد فقط لاستكشافه في الدالة:
 
 - المسار 1: `c = a + b`
 
@@ -108,9 +103,9 @@ function unsafe_add(uint a, uint b) returns(uint c){
 
 - `c = a + b AND (c < a OR c < b)`
 
-إذا كان من الممكن إيجاد تقييم لـ `a` و `b` يكون فيه مسند المسار أعلاه ممكنًا، فهذا يعني أنك قد وجدت تجاوزًا للسعة. على سبيل المثال، يمكن للمحلل إنشاء المدخل `a = 10 , b = MAXUINT256`.
+إذا كان من الممكن العثور على تقييم لـ `a` و `b` يكون فيه مسند المسار أعلاه ممكنًا، فهذا يعني أنك وجدت تجاوز السعة. على سبيل المثال، يمكن للمُحِلّ إنشاء الإدخال `a = 10 , b = MAXUINT256`.
 
-إذا أخذت في الاعتبار نسخة مصححة:
+إذا كنت تفكر في إصدار ثابت:
 
 ```solidity
 function safe_add(uint a, uint b) returns(uint c){
@@ -121,17 +116,17 @@ function safe_add(uint a, uint b) returns(uint c){
 }
 ```
 
-الصيغة المرتبطة مع التحقق من تجاوز السعة ستكون:
+ستكون الصيغة المرتبطة بالتحقق من تجاوز السعة هي:
 
 - `c = a + b AND (c >= a) AND (c=>b) AND (c < a OR c < b)`
 
-لا يمكن حل هذه الصيغة؛ بعبارة أخرى، هذا **دليل** على أنه في `safe_add`، ستزداد قيمة `c` دائمًا.
+لا يمكن حل هذه الصيغة؛ بعبارة أخرى، هذا **دليل** على أنه في `safe_add`، سيزداد `c` دائمًا.
 
-وبالتالي، يعد التنفيذ الرمزي الديناميكي (DSE) أداة قوية، يمكنها التحقق من القيود العشوائية على النص البرمجي الخاص بك.
+وبالتالي، فإن التنفيذ الرمزي الديناميكي (DSE) هو أداة قوية يمكنها التحقق من القيود العشوائية على الكود الخاص بك.
 
 ## التشغيل تحت مانتيكور {#running-under-manticore}
 
-سنرى كيف نستكشف عقدًا ذكيًا باستخدام واجهة برمجة تطبيقات مانتيكور. الهدف هو العقد الذكي التالي [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
+سنرى كيفية استكشاف عقد ذكي باستخدام API الخاص بمانتيكور. الهدف هو العقد الذكي التالي [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -147,13 +142,13 @@ contract Simple {
 
 ### تشغيل استكشاف مستقل {#run-a-standalone-exploration}
 
-يمكنك تشغيل مانتيكور مباشرة على العقد الذكي بالأمر التالي (`project` يمكن أن يكون ملف سوليديتي، أو دليل مشروع):
+يمكنك تشغيل مانتيكور مباشرة على العقد الذكي بواسطة الأمر التالي (يمكن أن يكون `project` ملف Solidity، أو دليل مشروع):
 
 ```bash
 $ manticore project
 ```
 
-ستحصل على مخرجات لحالات اختبار مثل هذه (قد يتغير الترتيب):
+ستحصل على مخرجات حالات الاختبار مثل هذه (قد يتغير الترتيب):
 
 ```
 ...
@@ -168,39 +163,39 @@ $ manticore project
 ...
 ```
 
-بدون معلومات إضافية، سيستكشف مانتيكور العقد بمعاملات رمزية جديدة حتى يتوقف عن استكشاف مسارات جديدة في العقد. لا يقوم مانتيكور بتشغيل معاملات جديدة بعد معاملة فاشلة (على سبيل المثال: بعد revert).
+بدون معلومات إضافية، سيستكشف مانتيكور العقد بمعاملات رمزية جديدة حتى لا يستكشف مسارات جديدة على العقد. لا يقوم مانتيكور بتشغيل معاملات جديدة بعد فشل إحداها (على سبيل المثال: بعد تراجع).
 
 سيقوم مانتيكور بإخراج المعلومات في دليل `mcore_*`. من بين أمور أخرى، ستجد في هذا الدليل:
 
 - `global.summary`: التغطية وتحذيرات المترجم
-- `test_XXXXX.summary`: التغطية، آخر تعليمة، أرصدة الحسابات لكل حالة اختبار
+- `test_XXXXX.summary`: التغطية، التعليمات الأخيرة، أرصدة الحساب لكل حالة اختبار
 - `test_XXXXX.tx`: قائمة مفصلة بالمعاملات لكل حالة اختبار
 
-هنا يجد مانتيكور 7 حالات اختبار، والتي تتوافق مع (قد يتغير ترتيب أسماء الملفات):
+هنا يجد مانتيكور 7 حالات اختبار، والتي تتوافق مع (قد يتغير ترتيب اسم الملف):
 
-|                                                           |  المعاملة 0 |         المعاملة 1         | المعاملة 2                 | النتيجة |
-| :-------------------------------------------------------: | :---------: | :------------------------: | -------------------------- | :-----: |
-| **test_00000000.tx** | إنشاء العقد | f(!=65) | f(!=65) |   STOP  |
-| **test_00000001.tx** | إنشاء العقد |      الدالة الاحتياطية     |                            |  REVERT |
-| **test_00000002.tx** | إنشاء العقد |                            |                            |  RETURN |
-| **test_00000003.tx** | إنشاء العقد |  f(65)  |                            |  REVERT |
-| **test_00000004.tx** | إنشاء العقد | f(!=65) |                            |   STOP  |
-| **test_00000005.tx** | إنشاء العقد | f(!=65) | f(65)   |  REVERT |
-| **test_00000006.tx** | إنشاء العقد | f(!=65) | الدالة الاحتياطية          |  REVERT |
+|                      |   المعاملة 0   |   المعاملة 1   | المعاملة 2     | النتيجة |
+| :------------------: | :---------------: | :---------------: | ----------------- | :----: |
+| **test_00000000.tx** | إنشاء عقد |      f(!=65)      | f(!=65)           |  STOP  |
+| **test_00000001.tx** | إنشاء عقد | دالة احتياطية |                   | REVERT |
+| **test_00000002.tx** | إنشاء عقد |                   |                   | RETURN |
+| **test_00000003.tx** | إنشاء عقد |       f(65)       |                   | REVERT |
+| **test_00000004.tx** | إنشاء عقد |      f(!=65)      |                   |  STOP  |
+| **test_00000005.tx** | إنشاء عقد |      f(!=65)      | f(65)             | REVERT |
+| **test_00000006.tx** | إنشاء عقد |      f(!=65)      | دالة احتياطية | REVERT |
 
-_ملخص الاستكشاف: f(!=65) تشير إلى استدعاء الدالة f بأي قيمة مختلفة عن 65._
+_ملخص الاستكشاف <span dir="ltr">f(!=65)</span> يشير إلى استدعاء f بأي قيمة تختلف عن 65._
 
-كما تلاحظ، يقوم مانتيكور بإنشاء حالة اختبار فريدة لكل معاملة ناجحة أو تم التراجع عنها (reverted).
+كما تلاحظ، يقوم مانتيكور بإنشاء حالة اختبار فريدة لكل معاملة ناجحة أو متراجعة.
 
-استخدم علامة `--quick-mode` إذا كنت تريد استكشافًا سريعًا للنص البرمجي (فهي تعطل كاشفات الأخطاء، وحساب الغاز، ...)
+استخدم علامة `--quick-mode` إذا كنت تريد استكشافًا سريعًا للكود (فهي تعطل مكتشفات الأخطاء، وحساب الغاز، ...)
 
-### التعامل مع عقد ذكي من خلال واجهة برمجة التطبيقات (API) {#manipulate-a-smart-contract-through-the-api}
+### التعامل مع عقد ذكي من خلال API {#manipulate-a-smart-contract-through-the-api}
 
-يصف هذا القسم تفاصيل كيفية التعامل مع عقد ذكي من خلال واجهة برمجة تطبيقات مانتيكور بايثون. يمكنك إنشاء ملف جديد بامتداد python `*.py` وكتابة النص البرمجي اللازم عن طريق إضافة أوامر واجهة برمجة التطبيقات (API) (سيتم وصف أساسياتها أدناه) في هذا الملف ثم تشغيله بالأمر `$ python3 *.py`. يمكنك أيضًا تنفيذ الأوامر أدناه مباشرة في وحدة تحكم python، لتشغيل وحدة التحكم استخدم الأمر `$ python3`.
+يصف هذا القسم تفاصيل كيفية التعامل مع عقد ذكي من خلال API الخاص بمانتيكور في Python. يمكنك إنشاء ملف جديد بامتداد Python `*.py` وكتابة الكود اللازم عن طريق إضافة أوامر API (والتي سيتم وصف أساسياتها أدناه) في هذا الملف ثم تشغيله باستخدام الأمر `$ python3 *.py`. كما يمكنك تنفيذ الأوامر أدناه مباشرة في وحدة تحكم Python، لتشغيل وحدة التحكم استخدم الأمر `$ python3`.
 
 ### إنشاء الحسابات {#creating-accounts}
 
-أول شيء يجب عليك فعله هو بدء بلوكتشين جديدة بالأوامر التالية:
+أول شيء يجب عليك فعله هو بدء سلسلة كتل جديدة باستخدام الأوامر التالية:
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -208,13 +203,13 @@ from manticore.ethereum import ManticoreEVM
 m = ManticoreEVM()
 ```
 
-يتم إنشاء حساب غير مرتبط بعقد باستخدام [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
+يتم إنشاء حساب غير عقد باستخدام [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-يمكن نشر عقد سوليديتي باستخدام [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
+يمكن نشر عقد Solidity باستخدام [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
 
 ```solidity
 source_code = '''
@@ -227,24 +222,24 @@ contract Simple {
     }
 }
 '''
-# بدء العقد
+# Initiate the contract
 contract_account = m.solidity_create_contract(source_code, owner=user_account)
 ```
 
 #### ملخص {#summary}
 
-- يمكنك إنشاء حسابات المستخدمين وحسابات العقود باستخدام [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) و [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
+- يمكنك إنشاء حسابات مستخدمين وحسابات عقود باستخدام [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) و [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
 ### تنفيذ المعاملات {#executing-transactions}
 
 يدعم مانتيكور نوعين من المعاملات:
 
-- المعاملة الأولية (Raw transaction): يتم استكشاف جميع الدوال
-- المعاملة المسماة (Named transaction): يتم استكشاف دالة واحدة فقط
+- معاملة خام: يتم استكشاف جميع الدوال
+- معاملة مسماة: يتم استكشاف دالة واحدة فقط
 
-#### المعاملة الأولية {#raw-transaction}
+#### معاملة خام {#raw-transaction}
 
-يتم تنفيذ معاملة أولية باستخدام [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
+يتم تنفيذ معاملة خام باستخدام [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
 
 ```python
 m.transaction(caller=user_account,
@@ -253,10 +248,10 @@ m.transaction(caller=user_account,
               value=value)
 ```
 
-يمكن أن يكون المتصل (caller) أو العنوان (address) أو البيانات (data) أو قيمة المعاملة إما ملموسة أو رمزية:
+يمكن أن يكون المتصل، أو العنوان، أو البيانات، أو قيمة المعاملة إما ملموسة أو رمزية:
 
 - [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) ينشئ قيمة رمزية.
-- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) ينشئ مصفوفة بايت رمزية.
+- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) ينشئ مصفوفة بايتات رمزية.
 
 على سبيل المثال:
 
@@ -269,24 +264,24 @@ m.transaction(caller=user_account,
               value=symbolic_value)
 ```
 
-إذا كانت البيانات رمزية، فسيستكشف مانتيكور جميع دوال العقد أثناء تنفيذ المعاملة. سيكون من المفيد الاطلاع على شرح الدالة الاحتياطية (Fallback Function) في مقال [Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) لفهم كيفية عمل اختيار الدالة.
+إذا كانت البيانات رمزية، فسيستكشف مانتيكور جميع دوال العقد أثناء تنفيذ المعاملة. سيكون من المفيد رؤية شرح الدالة الاحتياطية في مقال [تطبيق عملي على Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) لفهم كيفية عمل اختيار الدالة.
 
-#### المعاملة المسماة {#named-transaction}
+#### معاملة مسماة {#named-transaction}
 
 يمكن تنفيذ الدوال من خلال أسمائها.
-لتنفيذ `f(uint var)` بقيمة رمزية، من user_account، وبقيمة 0 إيثر، استخدم:
+لتنفيذ `f(uint var)` بقيمة رمزية، من حساب المستخدم، وبـ <span dir="ltr">0 إيثر</span>، استخدم:
 
 ```python
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var, caller=user_account, value=0)
 ```
 
-إذا لم يتم تحديد `قيمة` المعاملة، فإنها تساوي 0 بشكل افتراضي.
+إذا لم يتم تحديد `value` للمعاملة، فسيكون 0 افتراضيًا.
 
 #### ملخص {#summary-1}
 
-- يمكن أن تكون وسائط (arguments) المعاملة ملموسة أو رمزية
-- المعاملة الأولية ستستكشف جميع الدوال
+- يمكن أن تكون وسيطات المعاملة ملموسة أو رمزية
+- ستستكشف المعاملة الخام جميع الدوال
 - يمكن استدعاء الدالة باسمها
 
 ### مساحة العمل {#workspace}
@@ -294,16 +289,16 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 `m.workspace` هو الدليل المستخدم كدليل إخراج لجميع الملفات التي تم إنشاؤها:
 
 ```python
-print("النتائج موجودة في {}".format(m.workspace))
+print("Results are in {}".format(m.workspace))
 ```
 
 ### إنهاء الاستكشاف {#terminate-the-exploration}
 
-لإيقاف الاستكشاف، استخدم [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). لا ينبغي إرسال أي معاملات أخرى بمجرد استدعاء هذه الطريقة، ويقوم مانتيكور بإنشاء حالات اختبار لكل مسار تم استكشافه.
+لإيقاف الاستكشاف استخدم [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). لا ينبغي إرسال أي معاملات أخرى بمجرد استدعاء هذه الطريقة ويقوم مانتيكور بإنشاء حالات اختبار لكل مسار تم استكشافه.
 
 ### ملخص: التشغيل تحت مانتيكور {#summary-running-under-manticore}
 
-بجمع كل الخطوات السابقة معًا، نحصل على:
+بوضع جميع الخطوات السابقة معًا، نحصل على:
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -319,15 +314,15 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
-print("النتائج موجودة في {}".format(m.workspace))
+print("Results are in {}".format(m.workspace))
 m.finalize() # إيقاف الاستكشاف
 ```
 
-يمكنك العثور على كل النص البرمجي أعلاه في [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
+يمكنك العثور على جميع الأكواد أعلاه في [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
 
-## الحصول على مسارات الطرح (throwing paths) {#getting-throwing-paths}
+## الحصول على مسارات الاستثناءات {#getting-throwing-paths}
 
-سنقوم الآن بإنشاء مدخلات محددة للمسارات التي تثير استثناءً (exception) في `f()`. لا يزال الهدف هو العقد الذكي التالي [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
+سنقوم الآن بإنشاء مدخلات محددة للمسارات التي تثير استثناءً في `f()`. الهدف لا يزال العقد الذكي التالي [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -342,24 +337,24 @@ contract Simple {
 
 ### استخدام معلومات الحالة {#using-state-information}
 
-كل مسار يتم تنفيذه له حالته الخاصة من البلوكتشين. تكون الحالة إما جاهزة (ready) أو مقتولة (killed)، مما يعني أنها تصل إلى تعليمة THROW أو REVERT:
+كل مسار يتم تنفيذه له حالته الخاصة في سلسلة الكتل. تكون الحالة إما جاهزة أو مقتولة، مما يعني أنها تصل إلى تعليمة <span dir="ltr">THROW</span> أو <span dir="ltr">REVERT</span>:
 
-- [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): قائمة الحالات الجاهزة (التي لم تنفذ REVERT/INVALID)
+- [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): قائمة الحالات الجاهزة (لم تقم بتنفيذ <span dir="ltr">REVERT/INVALID</span>)
 - [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): قائمة الحالات المقتولة
 - [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): جميع الحالات
 
 ```python
 for state in m.all_states:
-    # افعل شيئًا بالحالة
+    # القيام بشيء ما بالحالة
 ```
 
 يمكنك الوصول إلى معلومات الحالة. على سبيل المثال:
 
 - `state.platform.get_balance(account.address)`: رصيد الحساب
 - `state.platform.transactions`: قائمة المعاملات
-- `state.platform.transactions[-1].return_data`: البيانات التي تم إرجاعها بواسطة آخر معاملة
+- `state.platform.transactions[-1].return_data`: البيانات التي أرجعتها المعاملة الأخيرة
 
-البيانات التي تم إرجاعها بواسطة آخر معاملة هي مصفوفة يمكن تحويلها إلى قيمة باستخدام ABI.deserialize، على سبيل المثال:
+البيانات التي أرجعتها المعاملة الأخيرة هي مصفوفة، والتي يمكن تحويلها إلى قيمة باستخدام <span dir="ltr">ABI.deserialize</span>، على سبيل المثال:
 
 ```python
 data = state.platform.transactions[0].return_data
@@ -376,13 +371,13 @@ m.generate_testcase(state, 'BugFound')
 
 ### ملخص {#summary-2}
 
-- يمكنك التكرار على الحالة باستخدام m.all_states
-- `state.platform.get_balance(account.address)` تُرجع رصيد الحساب
-- `state.platform.transactions` تُرجع قائمة المعاملات
-- `transaction.return_data` هي البيانات المُرجعة
-- `m.generate_testcase(state, name)` تنشئ مدخلات للحالة
+- يمكنك التكرار عبر الحالة باستخدام <span dir="ltr">m.all_states</span>
+- `state.platform.get_balance(account.address)` يُرجع رصيد الحساب
+- `state.platform.transactions` يُرجع قائمة المعاملات
+- `transaction.return_data` هي البيانات المرجعة
+- `m.generate_testcase(state, name)` يُنشئ مدخلات للحالة
 
-### ملخص: الحصول على مسار الطرح (Throwing Path) {#summary-getting-throwing-path}
+### ملخص: الحصول على مسار الاستثناء {#summary-getting-throwing-path}
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -398,22 +393,21 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
-## تحقق مما إذا كان التنفيذ ينتهي بـ REVERT أو INVALID
-
+## تحقق مما إذا كان التنفيذ ينتهي بتراجع أو غير صالح
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
-        print('تم العثور على طرح (Throw) {}'.format(m.workspace))
+        print('Throw found {}'.format(m.workspace))
         m.generate_testcase(state, 'ThrowFound')
 ```
 
-يمكنك العثور على كل النص البرمجي أعلاه في [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
+يمكنك العثور على جميع الأكواد أعلاه في [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
 
-_ملاحظة: كان بإمكاننا إنشاء نص برمجي أبسط بكثير، حيث أن جميع الحالات التي يتم إرجاعها بواسطة terminated_state تحتوي على REVERT أو INVALID في نتيجتها: هذا المثال كان يهدف فقط إلى توضيح كيفية التعامل مع واجهة برمجة التطبيقات (API)._
+_ملاحظة: كان بإمكاننا إنشاء برنامج نصي أبسط بكثير، حيث أن جميع الحالات التي تم إرجاعها بواسطة <span dir="ltr">terminated_state</span> تحتوي على <span dir="ltr">REVERT</span> أو <span dir="ltr">INVALID</span> في نتيجتها: كان هذا المثال يهدف فقط إلى توضيح كيفية التعامل مع API._
 
-## إضافة قيود {#adding-constraints}
+## إضافة القيود {#adding-constraints}
 
-سنرى كيف يمكن تقييد الاستكشاف. سنفترض أن توثيق `f()` ينص على أن الدالة لا يتم استدعاؤها أبدًا بـ `a == 65`، لذا فإن أي خطأ مع `a == 65` ليس خطأ حقيقيًا. لا يزال الهدف هو العقد الذكي التالي [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
+سنرى كيفية تقييد الاستكشاف. سنفترض أن وثائق `f()` تنص على أن الدالة لا يتم استدعاؤها أبدًا باستخدام `a == 65`، لذا فإن أي خطأ مع `a == 65` ليس خطأً حقيقيًا. الهدف لا يزال العقد الذكي التالي [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -428,22 +422,22 @@ contract Simple {
 
 ### العوامل (Operators) {#operators}
 
-يسهل وحدة [Operators](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py) التعامل مع القيود، ومن بين ما توفره:
+تسهل وحدة [العوامل](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py) التعامل مع القيود، ومن بين أمور أخرى توفر:
 
-- Operators.AND،
-- Operators.OR،
-- Operators.UGT (أكبر من غير المؤشر)،
-- Operators.UGE (أكبر من أو يساوي غير المؤشر)،
-- Operators.ULT (أقل من غير المؤشر)،
-- Operators.ULE (أقل من أو يساوي غير المؤشر).
+- <span dir="ltr">Operators.AND</span>،
+- <span dir="ltr">Operators.OR</span>،
+- <span dir="ltr">Operators.UGT</span> (أكبر من بدون إشارة)،
+- <span dir="ltr">Operators.UGE</span> (أكبر من أو يساوي بدون إشارة)،
+- <span dir="ltr">Operators.ULT</span> (أقل من بدون إشارة)،
+- <span dir="ltr">Operators.ULE</span> (أقل من أو يساوي بدون إشارة).
 
-لاستيراد الوحدة، استخدم ما يلي:
+لاستيراد الوحدة استخدم ما يلي:
 
 ```python
 from manticore.core.smtlib import Operators
 ```
 
-يُستخدم `Operators.CONCAT` لربط مصفوفة بقيمة. على سبيل المثال، يجب تغيير return_data لمعاملة ما إلى قيمة ليتم فحصها مقابل قيمة أخرى:
+يُستخدم `Operators.CONCAT` لربط مصفوفة بقيمة. على سبيل المثال، يجب تغيير <span dir="ltr">return_data</span> لمعاملة إلى قيمة ليتم التحقق منها مقابل قيمة أخرى:
 
 ```python
 last_return = Operators.CONCAT(256, *last_return)
@@ -453,7 +447,7 @@ last_return = Operators.CONCAT(256, *last_return)
 
 يمكنك استخدام القيود بشكل عام أو لحالة معينة.
 
-#### قيد عام {#state-constraint}
+#### قيد عام {#state-constraint-2}
 
 استخدم `m.constrain(constraint)` لإضافة قيد عام.
 على سبيل المثال، يمكنك استدعاء عقد من عنوان رمزي، وتقييد هذا العنوان ليكون قيمًا محددة:
@@ -467,15 +461,15 @@ m.transaction(caller=user_account,
               value=0)
 ```
 
-#### قيد الحالة {#state-constraint}
+#### قيد الحالة {#state-constraint-3}
 
 استخدم [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) لإضافة قيد إلى حالة معينة.
-يمكن استخدامه لتقييد الحالة بعد استكشافها للتحقق من خاصية معينة عليها.
+يمكن استخدامه لتقييد الحالة بعد استكشافها للتحقق من بعض الخصائص عليها.
 
 ### التحقق من القيد {#checking-constraint}
 
 استخدم `solver.check(state.constraints)` لمعرفة ما إذا كان القيد لا يزال ممكنًا.
-على سبيل المثال، سيقيد ما يلي symbolic_value لتكون مختلفة عن 65 والتحقق مما إذا كانت الحالة لا تزال ممكنة:
+على سبيل المثال، سيقيد ما يلي <span dir="ltr">symbolic_value</span> ليكون مختلفًا عن 65 ويتحقق مما إذا كانت الحالة لا تزال ممكنة:
 
 ```python
 state.constrain(symbolic_var != 65)
@@ -485,7 +479,7 @@ if solver.check(state.constraints):
 
 ### ملخص: إضافة القيود {#summary-adding-constraints}
 
-بإضافة قيد إلى النص البرمجي السابق، نحصل على:
+بإضافة قيد إلى الكود السابق، نحصل على:
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -506,19 +500,18 @@ contract_account.f(symbolic_var)
 
 no_bug_found = True
 
-## تحقق مما إذا كان التنفيذ ينتهي بـ REVERT أو INVALID
-
+## تحقق مما إذا كان التنفيذ ينتهي بتراجع أو غير صالح
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
-        # نحن لا نأخذ في الاعتبار المسار الذي يكون فيه a == 65
+        # لا نأخذ في الاعتبار المسار حيث a == 65
         condition = symbolic_var != 65
         if m.generate_testcase(state, name="BugFound", only_if=condition):
-            print(f'تم العثور على خطأ، النتائج في {m.workspace}')
+            print(f'Bug found, results are in {m.workspace}')
             no_bug_found = False
 
 if no_bug_found:
-    print(f'لم يتم العثور على أخطاء')
+    print(f'No bug found')
 ```
 
-يمكنك العثور على كل النص البرمجي أعلاه في [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
+يمكنك العثور على جميع الأكواد أعلاه في [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)

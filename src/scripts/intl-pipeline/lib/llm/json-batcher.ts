@@ -348,47 +348,59 @@ function restoreHtmlInValue(
   return value
 }
 
+/** Matches any leftover placeholder token (open, close, or self-closing). */
+const RESIDUAL_PLACEHOLDER_RE =
+  /<\/?HTML-PLACEHOLDER-[A-Z]+-[a-f0-9]+(?:\s*\/)?>/g
+
 function restoreHtmlInString(
   text: string,
   map: PlaceholderMap,
   path: string,
   failures: string[]
 ): string {
-  const entries = map.get(path)
-  if (!entries) return text
-
   let result = text
-  for (const { placeholder, original } of entries) {
-    if (placeholder.startsWith("HTMLTAG:")) {
-      // Wrapper placeholder: rebuild original tag around translated text
-      const hash = placeholder.slice(8)
-      const openTag = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
-      const closeTag = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
 
-      const openIdx = result.indexOf(openTag)
-      const closeIdx = result.indexOf(closeTag)
-      if (openIdx >= 0 && closeIdx >= 0) {
-        const translatedText = result.slice(openIdx + openTag.length, closeIdx)
+  // Restore every known placeholder by GLOBAL token replacement. The model is
+  // permitted to reorder wrapper pairs and may duplicate a linked phrase, so a
+  // single hash can appear an arbitrary number of times in the translated value
+  // -- and a self-closing token may move. Replacing all occurrences of each
+  // hash's tokens is order-, count-, and duplicate-safe (a given hash always
+  // maps to one original tag). The previous per-occurrence indexOf restore
+  // rebuilt only the first match and silently shipped the rest (PR #18418).
+  const entries = map.get(path)
+  if (entries) {
+    for (const { placeholder, original } of entries) {
+      if (placeholder.startsWith("HTMLTAG:")) {
+        const hash = placeholder.slice(8)
+        const openTag = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+        const closeTag = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
         const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
         const closingMatch = original.match(/<\/(\w+)>/)
         if (tagMatch && closingMatch) {
-          const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
-          result =
-            result.slice(0, openIdx) +
-            rebuilt +
-            result.slice(closeIdx + closeTag.length)
+          result = result
+            .split(openTag)
+            .join(`<${tagMatch[1]}${tagMatch[2] || ""}>`)
+          result = result.split(closeTag).join(`</${closingMatch[1]}>`)
         }
       } else {
-        failures.push(`${path}: missing wrapper ${openTag} (was: ${original})`)
+        // Self-closing placeholder: global direct replacement.
+        result = result.split(placeholder).join(original)
       }
-    } else {
-      // Self-closing placeholder: direct replacement
-      if (!result.includes(placeholder)) {
-        failures.push(`${path}: missing ${placeholder} (was: ${original})`)
-        continue
-      }
-      result = result.replace(placeholder, original)
     }
   }
+
+  // Guard: any placeholder still present could not be restored from this
+  // value's map (unknown hash, count mismatch the loop above did not cover,
+  // or a value with no map entry at all). Never ship the raw token to readers
+  // -- strip the markup (preserving any inner text) and report a failure so
+  // the caller can escalate instead of silently committing broken output.
+  const residual = result.match(RESIDUAL_PLACEHOLDER_RE)
+  if (residual) {
+    for (const token of new Set(residual)) {
+      failures.push(`${path}: unresolved placeholder ${token}`)
+    }
+    result = result.replace(RESIDUAL_PLACEHOLDER_RE, "")
+  }
+
   return result
 }

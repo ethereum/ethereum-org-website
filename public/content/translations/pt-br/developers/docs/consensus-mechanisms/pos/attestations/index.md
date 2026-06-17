@@ -1,40 +1,40 @@
 ---
 title: "Atestações"
-description: "Uma descrição de atestações em prova de participação Ethereum."
+description: "Uma descrição das atestações no Ethereum de prova de participação (proof-of-stake)."
 lang: pt-br
 ---
 
-Espera-se que um validador crie, assine e transmita uma atestação durante cada época. Esta página descreve como são esses certificados e como eles são processados e comunicados entre clientes de consenso.
+Espera-se que um validador crie, assine e transmita uma atestação durante cada época. Esta página descreve como são essas atestações e como elas são processadas e comunicadas entre os clientes de consenso.
 
 ## O que é uma atestação? {#what-is-an-attestation}
 
-A cada [época](/glossary/#epoch) (6,4 minutos), um validador propõe uma atestação para a rede. A atestação é para um espaço específico na época. O objetivo da atestação é votar a favor da visão do validador da cadeia, em particular, o bloco justificado mais recente e o primeiro bloco na época atual (conhecidos como pontos de verificação `source` e `target`). Essas informações são combinadas por todos os validadores participantes, permitindo que a rede chegue a consenso sobre o estado da blockchain.
+A cada [época](/glossary/#epoch) (6,4 minutos), um validador propõe uma atestação para a rede. A atestação é para um slot específico na época. O objetivo da atestação é votar a favor da visão do validador sobre a cadeia, em particular o bloco justificado mais recente e o primeiro bloco na época atual (conhecidos como pontos de verificação (checkpoints) `source` e `target`). Essas informações são combinadas para todos os validadores participantes, permitindo que a rede chegue a um consenso sobre o estado da blockchain.
 
 A atestação contém os seguintes componentes:
 
-- `aggregation_bits`: uma bitlist de validadores onde a posição mapeia para o índice do validador em seu comitê; o valor (0/1) indica se o validador assinou o `data` (ou seja, se ele está ativo e concorda com o proponente de bloco)
+- `aggregation_bits`: uma lista de bits (bitlist) de validadores onde a posição mapeia para o índice do validador em seu comitê; o valor (0/1) indica se o validador assinou os `data` (ou seja, se eles estão ativos e concordam com o propositor de bloco)
 - `data`: detalhes relacionados à atestação, conforme definido abaixo
 - `signature`: uma assinatura BLS que agrega as assinaturas de validadores individuais
 
-A primeira tarefa de um validador de atestação é construir o `data`. O `data` contém as seguintes informações:
+A primeira tarefa para um validador que está atestando é construir os `data`. Os `data` contêm as seguintes informações:
 
-- `slot`: o número do slot ao qual a atestação se refere
-- `index`: um número que identifica a qual comitê o validador pertence em um determinado slot
-- `beacon_block_root`: hash raiz do bloco que o validador vê no cabeçalho da cadeia (o resultado da aplicação do algoritmo de escolha de bifurcação)
-- `source`: parte do voto de finalidade que indica o que os validadores veem como o bloco justificado mais recente
-- `target`: parte do voto de finalidade que indica o que os validadores veem como o primeiro bloco na época atual
+- `slot`: O número do slot ao qual a atestação se refere
+- `index`: Um número que identifica a qual comitê o validador pertence em um determinado slot
+- `beacon_block_root`: O hash raiz do bloco que o validador vê no topo (head) da cadeia (o resultado da aplicação do algoritmo de escolha de bifurcação)
+- `source`: Parte do voto de finalidade indicando o que os validadores veem como o bloco justificado mais recente
+- `target`: Parte do voto de finalidade indicando o que os validadores veem como o primeiro bloco na época atual
 
-Depois que o `data` for construído, o validador pode inverter o bit no `aggregation_bits` correspondente ao seu próprio índice de validador de 0 para 1 para mostrar que participou.
+Uma vez que os `data` são construídos, o validador pode alterar o bit em `aggregation_bits` correspondente ao seu próprio índice de validador de 0 para 1 para mostrar que participou.
 
-Finalmente, o validador assina a atestação e o transmite para a rede.
+Por fim, o validador assina a atestação e a transmite para a rede.
 
 ### Atestação agregada {#aggregated-attestation}
 
-Há uma sobrecarga substancial associada ao envio desses dados em torno da rede para cada validador. Portanto, as atestações de validadores individuais são agregados dentro das sub-redes antes de serem transmitidas de forma mais ampla. Isso inclui agregar assinaturas para que uma atestação transmitida inclua o `data` de consenso e uma única assinatura formada pela combinação das assinaturas de todos os validadores que concordam com esse `data`. Isso pode ser verificado usando `aggregation_bits`, pois isso fornece o índice de cada validador em seu comitê (cujo ID é fornecido em `data`), que pode ser usado para consultar assinaturas individuais.
+Há uma sobrecarga substancial associada à passagem desses dados pela rede para cada validador. Portanto, as atestações de validadores individuais são agregadas em sub-redes antes de serem transmitidas de forma mais ampla. Isso inclui agregar assinaturas juntas para que uma atestação que é transmitida inclua os `data` de consenso e uma única assinatura formada pela combinação das assinaturas de todos os validadores que concordam com esses `data`. Isso pode ser verificado usando `aggregation_bits`, pois isso fornece o índice de cada validador em seu comitê (cujo ID é fornecido em `data`), que pode ser usado para consultar assinaturas individuais.
 
-Em cada época, 16 validadores em cada sub-rede são selecionados para serem os `agregadores`. Os agregadores coletam todas as atestações que recebem pela rede gossip que têm `data` equivalente aos seus. O remetente de cada atestação correspondente é registrado no `aggregation_bits`. Os agregadores então transmitem a agregação de atestação para a rede mais ampla.
+Em cada época, 16 validadores em cada sub-rede são selecionados para serem os `aggregators`. Os agregadores coletam todas as atestações das quais ouvem falar na rede de fofocas (gossip network) que têm `data` equivalentes aos seus. O remetente de cada atestação correspondente é registrado em `aggregation_bits`. Os agregadores então transmitem o agregado de atestações para a rede mais ampla.
 
-Quando um validador é selecionado para ser um proponente de blocos, eles empacotam as atestações das sub-redes até o último slot do novo bloco.
+Quando um validador é selecionado para ser um propositor de bloco, ele empacota as atestações agregadas das sub-redes até o slot mais recente no novo bloco.
 
 ### Ciclo de vida de inclusão da atestação {#attestation-inclusion-lifecycle}
 
@@ -44,49 +44,49 @@ Quando um validador é selecionado para ser um proponente de blocos, eles empaco
 4. Propagação
 5. Inclusão
 
-O ciclo de vida da atestação está delineado no esquema abaixo:
+O ciclo de vida da atestação é descrito no esquema abaixo:
 
-![ciclo de vida da atestação](./attestation_schematic.png)
+![attestation lifecycle](./attestation_schematic.png)
 
 ## Recompensas {#rewards}
 
-Validadores são recompensados por enviar os atestações. A recompensa da atestação depende dos sinalizadores de participação (fonte, destino e cabeçalho), da recompensa básica e da taxa de participação.
+Os validadores recebem recompensas por enviar atestações. A recompensa da atestação depende das flags de participação (origem, destino e topo), da recompensa base e da taxa de participação.
 
-Cada um dos sinalizadores de participação pode ser verdadeiro ou falso, dependendo da atestação enviada e do atraso de inclusão dela.
+Cada uma das flags de participação pode ser verdadeira ou falsa, dependendo da atestação enviada e do seu atraso de inclusão.
 
-O melhor cenário ocorre quando todos os três sinalizadores são verdadeiros, caso em que um validador ganharia (por sinalizador correto):
+O melhor cenário ocorre quando todas as três flags são verdadeiras, caso em que um validador ganharia (por flag correta):
 
-`recompensa += recompensa base * peso do sinalizador * taxa de atestação do sinalizador / 64`
+`reward += base reward * flag weight * flag attesting rate / 64`
 
-A taxa de atestação do sinalizador é medida usando a soma dos saldos efetivos de todos os validadores de atestação do sinalizador em questão em comparação com o saldo real do ativo total.
+A taxa de atestação da flag é medida usando a soma dos saldos efetivos de todos os validadores que atestam para a flag fornecida em comparação com o saldo efetivo ativo total.
 
 ### Recompensa base {#base-reward}
 
-A recompensa base é calculada de acordo com o número de validadores atestadores e seus saldos efetivos de ether em stake:
+A recompensa base é calculada de acordo com o número de validadores que atestam e seus saldos efetivos de ether em stake:
 
-`recompensa base = saldo efetivo do validador x 2^6 / SQRT(saldo efetivo de todos os validadores ativos)`
+`base reward = validator effective balance x 2^6 / SQRT(Effective balance of all active validators)`
 
-#### Atraso na inclusão {#inclusion-delay}
+#### Atraso de inclusão {#inclusion-delay}
 
-No momento em que os validadores votaram no cabeçalho da cadeia (`bloco n`), o `bloco n+1` ainda não havia sido proposto. Portanto, as atestações são naturalmente incluídas **um bloco depois**, de modo que todas as atestações que votaram no `bloco n` como cabeçalho da cadeia foram incluídas no `bloco n+1`, e o **atraso na inclusão** é de 1. Se o atraso de inclusão dobrar para dois slots, a recompensa da atestação cai pela metade, porque para calcular a recompensa da atestação, a recompensa base é multiplicada pelo recíproco do atraso de inclusão.
+No momento em que os validadores votaram no topo da cadeia (`block n`), `block n+1` ainda não havia sido proposto. Portanto, as atestações são naturalmente incluídas **um bloco depois**, de modo que todas as atestações que votaram em `block n` como o topo da cadeia foram incluídas em `block n+1` e o **atraso de inclusão** é 1. Se o atraso de inclusão dobrar para dois slots, a recompensa da atestação cai pela metade, porque para calcular a recompensa da atestação, a recompensa base é multiplicada pelo recíproco do atraso de inclusão.
 
 ### Cenários de atestação {#attestation-scenarios}
 
-#### Validador de votação ausente {#missing-voting-validator}
+#### Validador votante ausente {#missing-voting-validator}
 
-Validadores têm um máximo de 1 época para enviar sua atestação. Se a atestação foi perdido na época 0, eles podem enviá-lo com um atraso na inclusão na época 1.
+Os validadores têm no máximo 1 época para enviar sua atestação. Se a atestação foi perdida na época 0, eles podem enviá-la com um atraso de inclusão na época 1.
 
 #### Agregador ausente {#missing-aggregator}
 
-Existem 16 Agregadores por época no total. Além disso, validadores aleatórios se inscrevem em **duas sub-redes por 256 épocas** e servem como backup caso os agregadores estejam ausentes.
+Existem 16 agregadores por época no total. Além disso, validadores aleatórios se inscrevem em **duas sub-redes por 256 épocas** e servem como backup caso os agregadores estejam ausentes.
 
-#### Proponente de bloco ausente {#missing-block-proposer}
+#### Propositor de bloco ausente {#missing-block-proposer}
 
-Observe que, em alguns casos, um agregador de sorte também pode se tornar o proponente de blocos. Se a atestação não foi incluída porque o proponente de bloco foi perdido, o proponente do próximo bloco pega a atestação agregada e a inclui no próximo bloco. No entanto, o **atraso na inclusão** aumentará em um.
+Observe que, em alguns casos, um agregador sortudo também pode se tornar o propositor de bloco. Se a atestação não foi incluída porque o propositor de bloco desapareceu, o próximo propositor de bloco pegaria a atestação agregada e a incluiria no próximo bloco. No entanto, o **atraso de inclusão** aumentará em um.
 
 ## Leitura adicional {#further-reading}
 
-- [Atestações na especificação de consenso anotada do Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Atestações em eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
+- [Atestações na especificação de consenso anotada de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
+- [Atestações no eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
-_Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-a!_
+_Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_

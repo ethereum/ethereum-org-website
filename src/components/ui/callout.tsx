@@ -42,7 +42,7 @@ const CalloutRoot = React.forwardRef<
     <div
       className={cn(
         "flex flex-col @3xl/callout:flex-row-reverse",
-        "rounded-2xl",
+        "rounded-base",
         "bg-card-gradient-secondary"
       )}
     >

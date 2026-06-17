@@ -58,7 +58,10 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
     <footer className="border-t">
       <div className="flex flex-wrap items-center justify-center gap-8 p-4 md:justify-between">
         <p className="text-sm text-body-medium italic">
-          {t("website-last-updated")}: {lastDeployLocaleTimestamp}
+          {t("website-last-updated")}:{" "}
+          {/* Deploy date changes every release; exclude it from visual diffs
+              so it doesn't flake every page snapshot in Chromatic. */}
+          <span data-chromatic="ignore">{lastDeployLocaleTimestamp}</span>
         </p>
 
         <GoToTopButton label={t("go-to-top")} />

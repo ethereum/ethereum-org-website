@@ -101,8 +101,8 @@ export const getActivity = async (
       state: valueLocked,
     },
     {
-      apiProvider: "Beaconcha.in",
-      apiUrl: "https://beaconcha.in",
+      apiProvider: "Dune Analytics",
+      apiUrl: "https://dune.com",
       label: t("page-index-network-stats-total-eth-staked"),
       state: totalEtherStaked,
     },

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-16T15:50:09.968Z",
+  "englishManifestHash": "4c02db7f6bb0",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "HTML-TAG-2",
+    "HTML-TAG-3",
+    "HTML-TAG-4",
+    "HTML-TAG-5",
+    "HTML-TAG-6"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#dapp"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#peer-to-peer-network"
+      }
+    },
+    "HTML-TAG-2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "br"
+      }
+    },
+    "HTML-TAG-3": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://cpubenchmark.net",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/"
+      }
+    },
+    "HTML-TAG-5": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#pos"
+      }
+    },
+    "HTML-TAG-6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#staking"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T15:50:09.968Z",
+      "status": "success"
+    }
+  }
+}
