@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "メインネット",
   "page-staking-launchpad-widget-start": "{network}でステーキングを開始する",
   "page-staking-launchpad-widget-span": "ネットワークを選択",
-  "page-staking-launchpad-widget-p1": "ソロのバリデータは、資金をリスクにさらす前に、{{network}}テストネットで<strong>セットアップ</strong>と運用スキルをテストすることが推奨されます。ネットワークのセキュリティを向上させ、自身のリスクを制限するためにも、<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">マイノリティ・クライアント</a>を選択することが重要であることを忘れないでください。",
+  "page-staking-launchpad-widget-p1": "ソロ・バリデータは、資金をリスクにさらす前に、{network}テストネットで<strong>セットアップをテスト</strong>し、運用スキルを確認することが推奨されます。ネットワークのセキュリティを向上させ、自身のリスクを抑えるためにも、<link>マイノリティ・クライアント</link>を選択することが重要であることを覚えておいてください。",
   "page-staking-launchpad-widget-p2": "慣れている場合は、Staking Launchpadのみを使用して、必要なすべてのセットアップをコマンドラインから行うことができます。",
   "page-staking-launchpad-widget-p3": "より簡単に行うために、Staking Launchpadと併用してクライアントのセットアップを容易にする以下のツールやガイドを確認してください。",
   "page-staking-launchpad-widget-link": "ソフトウェアツールとガイド",

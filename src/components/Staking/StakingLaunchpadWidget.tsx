@@ -3,16 +3,16 @@
 import { useState } from "react"
 
 import Tools from "@/components/icons/tools.svg"
-import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { CANONICAL_STAKING_TESTNET } from "@/lib/constants"
 
+import { Strong } from "../IntlStringElements"
 import Select, { type SelectOnChange } from "../Select"
+import InlineLink from "../ui/Link"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -39,9 +39,8 @@ const StakingLaunchpadWidget = () => {
       label: t("page-staking:page-staking-network-testnet", {
         network: CANONICAL_STAKING_TESTNET,
       }),
-      url: "https://hoodi.launchpad.ethereum.org",
+      url: `https://${CANONICAL_STAKING_TESTNET.toLowerCase()}.launchpad.ethereum.org`,
     },
-    url: `https://${CANONICAL_STAKING_TESTNET.toLowerCase()}.launchpad.ethereum.org`,
     mainnet: {
       label: "Mainnet",
       url: "https://launchpad.ethereum.org",
@@ -54,56 +53,54 @@ const StakingLaunchpadWidget = () => {
   }))
 
   return (
-    <Flex
+    <div
       className={cn(
-        "flex-col rounded-base p-6 md:p-8",
+        "flow rounded-base p-4 md:p-8",
         "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
       )}
     >
-      <span className="leading-6 text-body-medium">
-        <Translation id="page-staking:page-staking-launchpad-widget-span" />
-      </span>
-      <div className="my-4 md:max-w-[50%]">
-        <Select
-          instanceId="staking-launchpad-select"
-          options={selectOptions}
-          onChange={handleChange}
-          defaultValue={selectOptions[0]}
-          variant="outline"
-        />
-      </div>
-      <p className="mb-6 leading-6">
-        <Translation id="page-staking:page-staking-launchpad-widget-p1" />
+      <p className="text-body-medium">
+        {t("page-staking-launchpad-widget-span")}
       </p>
-      <p className="mb-6 leading-6">
-        <Translation id="page-staking:page-staking-launchpad-widget-p2" />
+      <Select
+        instanceId="staking-launchpad-select"
+        options={selectOptions}
+        onChange={handleChange}
+        defaultValue={selectOptions[0]}
+        variant="outline"
+        className="w-full md:max-w-md!"
+      />
+      <p>
+        {t.rich("page-staking.page-staking-launchpad-widget-p1", {
+          network: CANONICAL_STAKING_TESTNET,
+          strong: Strong,
+          link: (chunks) => (
+            <InlineLink href="/developers/docs/nodes-and-clients/client-diversity/">
+              {chunks}
+            </InlineLink>
+          ),
+        })}
       </p>
-      <div className="mb-4">
-        <ButtonLink href={data[selection].url} className="w-full md:w-auto">
-          {t("page-staking:page-staking-launchpad-widget-start", {
-            network:
-              selection === "mainnet"
-                ? t("page-staking:page-staking-launchpad-widget-mainnet-label")
-                : t("page-staking:page-staking-network-testnet", {
-                    network: CANONICAL_STAKING_TESTNET,
-                  }),
-          })}
-        </ButtonLink>
-      </div>
-      <p className="mb-6 leading-6">
-        <Translation id="page-staking:page-staking-launchpad-widget-p3" />
-      </p>
-      <div>
-        <ButtonLink
-          href="#node-and-client-tools"
-          variant="outline"
-          className="w-full md:w-auto"
-        >
-          <Tools />{" "}
-          <Translation id="page-staking:page-staking-launchpad-widget-link" />
-        </ButtonLink>
-      </div>
-    </Flex>
+      <p>{t("page-staking-launchpad-widget-p2")}</p>
+      <ButtonLink href={data[selection].url} className="max-md:w-full">
+        {t("page-staking:page-staking-launchpad-widget-start", {
+          network:
+            selection === "mainnet"
+              ? t("page-staking:page-staking-launchpad-widget-mainnet-label")
+              : t("page-staking:page-staking-network-testnet", {
+                  network: CANONICAL_STAKING_TESTNET,
+                }),
+        })}
+      </ButtonLink>
+      <p>{t("page-staking-launchpad-widget-p3")}</p>
+      <ButtonLink
+        href="#node-and-client-tools"
+        variant="outline"
+        className="max-md:w-full"
+      >
+        <Tools /> {t("page-staking-launchpad-widget-link")}
+      </ButtonLink>
+    </div>
   )
 }
 
