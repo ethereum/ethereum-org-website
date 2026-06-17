@@ -30,7 +30,7 @@ const DocLink = ({ href, children, isExternal }: DocLinkProps) => {
       <ArrowRight
         className={cn(
           "mx-6 shrink-0 self-center",
-          "transition-tranform group-hover:transition-tranform group-hover:scale-120 group-hover:text-primary",
+          "transition-transform group-hover:scale-120 group-hover:text-primary group-hover:transition-transform",
           isExternal ? "-rotate-45 rtl:-rotate-135" : "rotate-0 rtl:rotate-180",
           durationClasses
         )}
