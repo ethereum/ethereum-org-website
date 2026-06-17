@@ -1,0 +1,552 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-17T00:12:27.370Z",
+  "englishManifestHash": "f0c62c4ae24d",
+  "placeholderOrder": [
+    "CODEBLOCK-6f62d4",
+    "CODEBLOCK-b6ba0e",
+    "CODEBLOCK-45564e",
+    "CODEBLOCK-72137d",
+    "CODE-a83e28",
+    "CODEBLOCK-a4cc9a",
+    "CODE-19c104",
+    "CODE-2a6540",
+    "CODE-c8546d",
+    "LINK-46dc98",
+    "CODE-4f74c4",
+    "CODE-6fca62",
+    "CODE-2c958a",
+    "CODE-ca9781",
+    "CODE-a1528d",
+    "CODEBLOCK-26d18c",
+    "CODE-acc053",
+    "CODE-87a10a",
+    "CODE-ca9781",
+    "CODE-3e23e8",
+    "CODE-4fe1fc",
+    "CODEBLOCK-25454b",
+    "CODE-bda966",
+    "CODE-db118e",
+    "CODE-2e7d2c",
+    "LINK-559283",
+    "CODE-982b71",
+    "CODEBLOCK-a2b2c7",
+    "CODE-244210",
+    "CODEBLOCK-e899c5",
+    "CODEBLOCK-40e8c1",
+    "CODE-705974",
+    "CODE-5e600e",
+    "CODE-f9a679",
+    "CODE-c4e66f",
+    "CODE-056d5b",
+    "CODE-0d8db9",
+    "CODE-d1cbc2",
+    "CODE-84abfe",
+    "CODEBLOCK-52d635",
+    "LINK-962e4f",
+    "CODEBLOCK-990789",
+    "LINK-7e5637",
+    "CODEBLOCK-fa0793",
+    "LINK-962e4f",
+    "LINK-7e5637",
+    "LINK-152d3f",
+    "CODEBLOCK-292463",
+    "LINK-1cafdd",
+    "LINK-e1b05e",
+    "CODEBLOCK-080b3b",
+    "LINK-7815ab",
+    "CODE-2c3072",
+    "CODEBLOCK-628048",
+    "CODE-cd4240",
+    "CODE-50c7aa",
+    "CODEBLOCK-9a3561",
+    "LINK-194b4f",
+    "CODEBLOCK-7d96f7",
+    "LINK-cabb6a",
+    "CODE-2cebfe",
+    "CODE-19c104",
+    "LINK-559283",
+    "CODE-982b71",
+    "CODEBLOCK-1b9a1b",
+    "LINK-d84ddc",
+    "LINK-974822",
+    "LINK-893b4a",
+    "CODEBLOCK-a844f4",
+    "CODE-97e8a3",
+    "CODE-4c621f",
+    "CODE-24f8b7",
+    "CODEBLOCK-f67cdb",
+    "LINK-86cb28",
+    "CODEBLOCK-cfe27e",
+    "CODE-97e8a3",
+    "CODE-4c621f",
+    "CODE-a1cd3b",
+    "CODE-0e5c61",
+    "CODEBLOCK-0f2feb",
+    "LINK-cabb6a",
+    "CODE-2cebfe",
+    "CODE-19c104",
+    "CODE-2a6540",
+    "CODE-2a6540",
+    "LINK-559283",
+    "CODE-982b71",
+    "CODEBLOCK-1b9a1b",
+    "LINK-4385b7",
+    "CODEBLOCK-d54075",
+    "CODE-30b530",
+    "CODEBLOCK-b758c2",
+    "CODE-47fae7",
+    "CODEBLOCK-7176e7",
+    "LINK-154a39",
+    "CODE-52ede7",
+    "CODEBLOCK-a79a23",
+    "CODEBLOCK-4f6115",
+    "LINK-cabb6a",
+    "CODE-2cebfe"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-6f62d4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b6ba0e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-45564e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-72137d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a4cc9a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-26d18c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-25454b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a2b2c7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e899c5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-40e8c1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-52d635": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-990789": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fa0793": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-292463": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-080b3b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-628048": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9a3561": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7d96f7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1b9a1b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a844f4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f67cdb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cfe27e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0f2feb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d54075": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b758c2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7176e7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a79a23": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4f6115": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-a83e28": {
+      "type": "inline-code",
+      "values": {
+        "content": "path predicates"
+      }
+    },
+    "CODE-19c104": {
+      "type": "inline-code",
+      "values": {
+        "content": "f()"
+      }
+    },
+    "CODE-2a6540": {
+      "type": "inline-code",
+      "values": {
+        "content": "a == 65"
+      }
+    },
+    "CODE-c8546d": {
+      "type": "inline-code",
+      "values": {
+        "content": "Not (a == 65)"
+      }
+    },
+    "CODE-4f74c4": {
+      "type": "inline-code",
+      "values": {
+        "content": "Path 1"
+      }
+    },
+    "CODE-6fca62": {
+      "type": "inline-code",
+      "values": {
+        "content": "a = 65"
+      }
+    },
+    "CODE-2c958a": {
+      "type": "inline-code",
+      "values": {
+        "content": "Path 2"
+      }
+    },
+    "CODE-ca9781": {
+      "type": "inline-code",
+      "values": {
+        "content": "a"
+      }
+    },
+    "CODE-a1528d": {
+      "type": "inline-code",
+      "values": {
+        "content": "a = 0"
+      }
+    },
+    "CODE-acc053": {
+      "type": "inline-code",
+      "values": {
+        "content": "c = a + b"
+      }
+    },
+    "CODE-87a10a": {
+      "type": "inline-code",
+      "values": {
+        "content": "c = a + b AND (c < a OR c < b)"
+      }
+    },
+    "CODE-3e23e8": {
+      "type": "inline-code",
+      "values": {
+        "content": "b"
+      }
+    },
+    "CODE-4fe1fc": {
+      "type": "inline-code",
+      "values": {
+        "content": "a = 10 , b = MAXUINT256"
+      }
+    },
+    "CODE-bda966": {
+      "type": "inline-code",
+      "values": {
+        "content": "c = a + b AND (c >= a) AND (c=>b) AND (c < a OR c < b)"
+      }
+    },
+    "CODE-db118e": {
+      "type": "inline-code",
+      "values": {
+        "content": "safe_add"
+      }
+    },
+    "CODE-2e7d2c": {
+      "type": "inline-code",
+      "values": {
+        "content": "c"
+      }
+    },
+    "CODE-982b71": {
+      "type": "inline-code",
+      "values": {
+        "content": "example.sol"
+      }
+    },
+    "CODE-244210": {
+      "type": "inline-code",
+      "values": {
+        "content": "project"
+      }
+    },
+    "CODE-705974": {
+      "type": "inline-code",
+      "values": {
+        "content": "mcore_*"
+      }
+    },
+    "CODE-5e600e": {
+      "type": "inline-code",
+      "values": {
+        "content": "global.summary"
+      }
+    },
+    "CODE-f9a679": {
+      "type": "inline-code",
+      "values": {
+        "content": "test_XXXXX.summary"
+      }
+    },
+    "CODE-c4e66f": {
+      "type": "inline-code",
+      "values": {
+        "content": "test_XXXXX.tx"
+      }
+    },
+    "CODE-056d5b": {
+      "type": "inline-code",
+      "values": {
+        "content": "--quick-mode"
+      }
+    },
+    "CODE-0d8db9": {
+      "type": "inline-code",
+      "values": {
+        "content": "*.py"
+      }
+    },
+    "CODE-d1cbc2": {
+      "type": "inline-code",
+      "values": {
+        "content": "$ python3 *.py"
+      }
+    },
+    "CODE-84abfe": {
+      "type": "inline-code",
+      "values": {
+        "content": "$ python3"
+      }
+    },
+    "CODE-2c3072": {
+      "type": "inline-code",
+      "values": {
+        "content": "f(uint var)"
+      }
+    },
+    "CODE-cd4240": {
+      "type": "inline-code",
+      "values": {
+        "content": "value"
+      }
+    },
+    "CODE-50c7aa": {
+      "type": "inline-code",
+      "values": {
+        "content": "m.workspace"
+      }
+    },
+    "CODE-2cebfe": {
+      "type": "inline-code",
+      "values": {
+        "content": "example_run.py"
+      }
+    },
+    "CODE-97e8a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "state.platform.get_balance(account.address)"
+      }
+    },
+    "CODE-4c621f": {
+      "type": "inline-code",
+      "values": {
+        "content": "state.platform.transactions"
+      }
+    },
+    "CODE-24f8b7": {
+      "type": "inline-code",
+      "values": {
+        "content": "state.platform.transactions[-1].return_data"
+      }
+    },
+    "CODE-a1cd3b": {
+      "type": "inline-code",
+      "values": {
+        "content": "transaction.return_data"
+      }
+    },
+    "CODE-0e5c61": {
+      "type": "inline-code",
+      "values": {
+        "content": "m.generate_testcase(state, name)"
+      }
+    },
+    "CODE-30b530": {
+      "type": "inline-code",
+      "values": {
+        "content": "Operators.CONCAT"
+      }
+    },
+    "CODE-47fae7": {
+      "type": "inline-code",
+      "values": {
+        "content": "m.constrain(constraint)"
+      }
+    },
+    "CODE-52ede7": {
+      "type": "inline-code",
+      "values": {
+        "content": "solver.check(state.constraints)"
+      }
+    },
+    "LINK-46dc98": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Satisfiability_modulo_theories"
+      }
+    },
+    "LINK-559283": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol"
+      }
+    },
+    "LINK-962e4f": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account"
+      }
+    },
+    "LINK-7e5637": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract"
+      }
+    },
+    "LINK-152d3f": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction"
+      }
+    },
+    "LINK-1cafdd": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value"
+      }
+    },
+    "LINK-e1b05e": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer"
+      }
+    },
+    "LINK-7815ab": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/"
+      }
+    },
+    "LINK-194b4f": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize"
+      }
+    },
+    "LINK-cabb6a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py"
+      }
+    },
+    "LINK-d84ddc": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/states.html#accessing"
+      }
+    },
+    "LINK-974822": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/states.html#accessings"
+      }
+    },
+    "LINK-893b4a": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/states.html#accessings"
+      }
+    },
+    "LINK-86cb28": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase"
+      }
+    },
+    "LINK-4385b7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py"
+      }
+    },
+    "LINK-154a39": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:12:27.370Z",
+      "status": "success"
+    }
+  }
+}

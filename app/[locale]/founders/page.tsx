@@ -4,11 +4,12 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tag } from "@/components/ui/tag"
@@ -348,7 +349,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <FoundersPageJsonLD locale={locale} contributors={contributors} />
 
       <div>
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
           heroImg={heroImg}
           title={t("page-founders-title")}
@@ -383,7 +384,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   value={key}
                   className="mt-12 border-0 p-0"
                 >
-                  <div className="grid grid-cols-fill-4 gap-4">
+                  <Grid>
                     {entities.map(
                       ({
                         name,
@@ -397,11 +398,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       }) => (
                         <Card
                           key={name}
-                          className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+                          className="row-span-3 grid grid-rows-subgrid gap-0"
                         >
-                          <h3 className="sr-only">{name}</h3>
-                          <Logo className="my-auto max-h-9 max-w-full [&_*]:!fill-body" />
-                          <div className="space-y-4">
+                          <CardHeader className="my-auto">
+                            <h3 className="sr-only">{name}</h3>
+                            <Logo className="max-h-9 max-w-full **:fill-body!" />
+                          </CardHeader>
+                          <CardContent spacing="md">
                             {!!tags.length && (
                               <div className="flex flex-wrap gap-x-1 gap-y-2">
                                 {tags.map((tag) => (
@@ -430,14 +433,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                                 <p>{highlight}</p>
                               </div>
                             ))}
-                          </div>
-                          <ButtonLink href={href} variant="outline">
-                            {ctaLabel || categoryCtaLabel}
-                          </ButtonLink>
+                          </CardContent>
+                          <CardFooter>
+                            <ButtonLink href={href} variant="outline">
+                              {ctaLabel || categoryCtaLabel}
+                            </ButtonLink>
+                          </CardFooter>
                         </Card>
                       )
                     )}
-                  </div>
+                  </Grid>
                 </TabsContent>
               ))}
             </Tabs>

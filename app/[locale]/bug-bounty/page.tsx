@@ -3,10 +3,8 @@ import type { ComponentProps } from "react"
 
 import type { ChildOnlyProp, Lang, Params } from "@/lib/types"
 
-/* Uncomment for Bug Bounty Banner: */
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
-import Card from "@/components/Card"
 import CardList, { CardProps } from "@/components/CardList"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
@@ -16,12 +14,16 @@ import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
+import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
-import { Center, Flex, VStack } from "@/components/ui/flex"
+// Uncomment `Alert` for Bug Bounty Banner:
+// import { Alert } from "@/components/ui/alert"
+import { CardParagraph } from "@/components/ui/card"
+import { Flex, Stack, VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
-import Link from "@/components/ui/Link"
-import { ListItem, UnorderedList } from "@/components/ui/list"
+import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -63,7 +65,7 @@ const Text = ({ className, ...props }: ComponentProps<"p">) => (
 )
 
 const FullLeaderboardContainer = (props: ChildOnlyProp) => (
-  <VStack className="mx-auto my-8 max-w-3xl px-8 py-0" {...props} />
+  <Stack className="w-full max-w-3xl" {...props} />
 )
 
 const ClientRow = (props: ChildOnlyProp) => (
@@ -76,12 +78,6 @@ const Client = (props: ChildOnlyProp) => (
 
 const Row = (props: ChildOnlyProp) => (
   <Flex className="items-center lg:flex-wrap" {...props} />
-)
-
-const StyledCard = ({ children, ...props }) => (
-  <Card className="m-4 flex-[1_1_464px] justify-start p-6" {...props}>
-    {children}
-  </Card>
 )
 
 const StrongGreaterThan = (chunks: React.ReactNode) => (
@@ -251,9 +247,11 @@ export default async function Page(props: { params: Promise<Params> }) {
   return (
     <>
       <BugBountyJsonLD locale={locale} contributors={contributors} />
+      {/* Uncomment for Bug Bounty Banner: */}
+      {/* <Alert variant="banner">
+        Fusaka vulnerabilities are now part of the Bug Bounty Program!
+      </Alert> */}
       <MainArticle className="mx-auto my-0 flex w-full flex-col items-center">
-        {/* Uncomment for Bug Bounty Banner: */}
-        {/* <BugBountyBanner /> */}
         <Content>
           <VStack className="-mt-8 justify-between lg:mt-0 lg:flex-row lg:ps-0">
             <div className="flex-1 basis-1/2 pt-24 pr-0 pb-16 pl-0 lg:-mt-32 lg:pt-32 lg:pr-8 lg:pb-32 lg:pl-8">
@@ -271,7 +269,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                <h1 className="mb-6 text-4xl font-bold lg:text-5xl">
+                <h1 className="mb-6 text-4xl lg:text-5xl">
                   {t("page-upgrades-bug-bounty-slogan")}&nbsp;
                   <Emoji text=":bug:" />
                 </h1>
@@ -280,7 +278,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 {t("page-upgrades-bug-bounty-subtitle")}
               </Text>
               <Flex className="mt-4 flex-wrap items-center gap-4">
-                <ButtonLink href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+                <ButtonLink href="https://bbp-form.ethereum.org/">
                   {t("page-upgrades-bug-bounty-submit")}
                 </ButtonLink>
                 <ButtonLink variant="outline" href="#in-scope" isSecondary>
@@ -387,105 +385,110 @@ export default async function Page(props: { params: Promise<Params> }) {
               <Text>
                 {t.rich("page-upgrades-bug-bounty-validity-desc", {
                   a: (chunks) => (
-                    <Link href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+                    <InlineLink href="https://bbp-form.ethereum.org/">
                       {chunks}
-                    </Link>
+                    </InlineLink>
                   ),
                 })}
               </Text>
             </div>
-            <Flex className="mt-8 -mr-4 mb-12 -ml-4 flex-wrap">
-              <StyledCard
+            <Flex className="mt-8 mb-12 flex-wrap gap-8">
+              <MarkdownCard
                 emoji=":ledger:"
                 title={t("page-upgrades-bug-bounty-ledger-title")}
                 description={t("page-upgrades-bug-bounty-ledger-desc")}
+                variant="nested"
+                className="flex-[1_1_464px]"
               >
-                <InlineLink href="https://github.com/ethereum/consensus-specs">
-                  {t("page-upgrades-bug-bounty-specs")}
-                </InlineLink>
-                <br />
-                <InlineLink href="https://github.com/ethereum/execution-specs">
-                  {t("page-upgrades-bug-bounty-execution-specs")}
-                </InlineLink>
-                <br />
                 <div>
-                  <Text>{t("page-upgrades-bug-bounty-annotations")}</Text>
-                  <UnorderedList>
-                    <ListItem>
-                      <InlineLink href="https://benjaminion.xyz/eth2-annotated-spec/">
-                        Ben Edgington&apos;s{" "}
-                        {t("page-upgrades-bug-bounty-annotated-specs")}
-                      </InlineLink>
-                    </ListItem>
-                    <ListItem>
-                      <InlineLink href="https://github.com/ethereum/annotated-spec">
-                        Vitalik Buterin&apos;s{" "}
-                        {t("page-upgrades-bug-bounty-annotated-specs")}
-                      </InlineLink>
-                    </ListItem>
-                  </UnorderedList>
+                  <InlineLink href="https://github.com/ethereum/consensus-specs">
+                    {t("page-upgrades-bug-bounty-specs")}
+                  </InlineLink>
+                  <br />
+                  <InlineLink href="https://github.com/ethereum/execution-specs">
+                    {t("page-upgrades-bug-bounty-execution-specs")}
+                  </InlineLink>
                 </div>
-                <div>
-                  <H4>{t("page-upgrades-bug-bounty-types")}</H4>
-                  <UnorderedList>
-                    <ListItem>{t("page-upgrades-bug-bounty-type-1")}</ListItem>
-                    <ListItem>{t("page-upgrades-bug-bounty-type-2")}</ListItem>
-                    <ListItem>{t("page-upgrades-bug-bounty-type-3")}</ListItem>
-                    <ListItem>{t("page-upgrades-bug-bounty-type-4")}</ListItem>
-                  </UnorderedList>
-                </div>
-                <div>
-                  <H4>{t("page-upgrades-bug-bounty-specs-docs")}</H4>
-                  <CardList items={specs} />
-                </div>
-              </StyledCard>
-              <StyledCard
+
+                <CardParagraph>
+                  {t("page-upgrades-bug-bounty-annotations")}
+                </CardParagraph>
+                <UnorderedList>
+                  <ListItem>
+                    <InlineLink href="https://benjaminion.xyz/eth2-annotated-spec/">
+                      Ben Edgington&apos;s{" "}
+                      {t("page-upgrades-bug-bounty-annotated-specs")}
+                    </InlineLink>
+                  </ListItem>
+                  <ListItem>
+                    <InlineLink href="https://github.com/ethereum/annotated-spec">
+                      Vitalik Buterin&apos;s{" "}
+                      {t("page-upgrades-bug-bounty-annotated-specs")}
+                    </InlineLink>
+                  </ListItem>
+                </UnorderedList>
+
+                <H4>{t("page-upgrades-bug-bounty-types")}</H4>
+                <UnorderedList>
+                  <ListItem>{t("page-upgrades-bug-bounty-type-1")}</ListItem>
+                  <ListItem>{t("page-upgrades-bug-bounty-type-2")}</ListItem>
+                  <ListItem>{t("page-upgrades-bug-bounty-type-3")}</ListItem>
+                  <ListItem>{t("page-upgrades-bug-bounty-type-4")}</ListItem>
+                </UnorderedList>
+
+                <H4>{t("page-upgrades-bug-bounty-specs-docs")}</H4>
+                <CardList items={specs} />
+              </MarkdownCard>
+              <MarkdownCard
                 emoji=":computer:"
                 title={t("page-upgrades-bug-bounty-client-bugs")}
                 description={t("page-upgrades-bug-bounty-client-bugs-desc")}
+                variant="nested"
+                className="flex-[1_1_464px]"
               >
-                <div>
-                  <Text>
-                    {t("page-upgrades-bug-bounty-client-bugs-desc-2")}
-                  </Text>
-                  <H4>{t("page-upgrades-bug-bounty-types")}</H4>
-                  <UnorderedList>
-                    <ListItem>
-                      {t("page-upgrades-bug-bounty-clients-type-1")}
-                    </ListItem>
-                    <ListItem>
-                      {t("page-upgrades-bug-bounty-clients-type-2")}
-                    </ListItem>
-                    <ListItem>
-                      {t("page-upgrades-bug-bounty-clients-type-3")}
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div>
-                  <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
-                  <CardList items={clients} />
-                </div>
-              </StyledCard>
-              <StyledCard
+                <CardParagraph>
+                  {t("page-upgrades-bug-bounty-client-bugs-desc-2")}
+                </CardParagraph>
+                <H4>{t("page-upgrades-bug-bounty-types")}</H4>
+                <UnorderedList>
+                  <ListItem>
+                    {t("page-upgrades-bug-bounty-clients-type-1")}
+                  </ListItem>
+                  <ListItem>
+                    {t("page-upgrades-bug-bounty-clients-type-2")}
+                  </ListItem>
+                  <ListItem>
+                    {t("page-upgrades-bug-bounty-clients-type-3")}
+                  </ListItem>
+                </UnorderedList>
+
+                <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
+                <CardList items={clients} />
+              </MarkdownCard>
+
+              <MarkdownCard
                 emoji=":book:"
                 title={t("page-upgrades-bug-bounty-misc-bugs")}
                 description={t("page-upgrades-bug-bounty-misc-bugs-desc")}
+                variant="nested"
+                className="flex-[1_1_464px]"
               >
-                <div>
-                  <Text>{t("page-upgrades-bug-bounty-misc-bugs-desc-2")}</Text>
-                </div>
-                <div>
-                  <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
-                  <CardList items={languages} />
-                </div>
-              </StyledCard>
-              <StyledCard
+                <CardParagraph>
+                  {t("page-upgrades-bug-bounty-misc-bugs-desc-2")}
+                </CardParagraph>
+                <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
+                <CardList items={languages} />
+              </MarkdownCard>
+
+              <MarkdownCard
                 emoji=":scroll:"
                 title={t("page-upgrades-bug-bounty-deposit-bugs")}
                 description={t("page-upgrades-bug-bounty-deposit-bugs-desc")}
+                variant="nested"
+                className="flex-[1_1_464px]"
               >
+                <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                 <div>
-                  <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                   <InlineLink href="https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/deposit-contract.md">
                     {t("page-upgrades-bug-bounty-deposit-contract-specs")}
                   </InlineLink>
@@ -494,14 +497,17 @@ export default async function Page(props: { params: Promise<Params> }) {
                     {t("page-upgrades-bug-bounty-deposit-contract-source")}
                   </InlineLink>
                 </div>
-              </StyledCard>
-              <StyledCard
+              </MarkdownCard>
+
+              <MarkdownCard
                 emoji=":bug:"
                 title={t("page-upgrades-bug-bounty-dependency-bugs")}
                 description={t("page-upgrades-bug-bounty-dependency-bugs-desc")}
+                variant="nested"
+                className="flex-[1_1_464px]"
               >
+                <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                 <div>
-                  <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                   <InlineLink href="https://github.com/ethereum/c-kzg-4844">
                     C-KZG-4844
                   </InlineLink>
@@ -510,19 +516,23 @@ export default async function Page(props: { params: Promise<Params> }) {
                     Go-ETH-KZG
                   </InlineLink>
                 </div>
-              </StyledCard>
+              </MarkdownCard>
+
               {/* Out of Scope */}
-              <div
+              <MarkdownCard
                 id="out-of-scope"
-                className="m-4 flex-[1_1_100%] overflow-hidden rounded-xs border border-solid bg-background-highlight p-6"
+                variant="nested"
+                className="flex-[1_1_100%]"
               >
-                <H2>{t("page-upgrades-bug-bounty-not-included")}</H2>
-                <p className="mb-6 text-body-medium">
+                <h2>{t("page-upgrades-bug-bounty-not-included")}</h2>
+                <CardParagraph>
                   {t.rich("page-upgrades-bug-bounty-not-included-desc", {
-                    a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
+                    a: (chunks) => (
+                      <InlineLink href="#in-scope">{chunks}</InlineLink>
+                    ),
                   })}
-                </p>
-                <ul className="space-y-2">
+                </CardParagraph>
+                <UnorderedList>
                   {(
                     [
                       {
@@ -539,6 +549,10 @@ export default async function Page(props: { params: Promise<Params> }) {
                       },
                       {
                         key: "page-upgrades-bug-bounty-not-included-li-4",
+                        footnote: false,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-10",
                         footnote: false,
                       },
                       {
@@ -563,28 +577,35 @@ export default async function Page(props: { params: Promise<Params> }) {
                       },
                     ] as const
                   ).map(({ key, footnote }) => (
-                    <li key={key} className="flex items-start gap-3 text-sm">
+                    <ListItem
+                      key={key}
+                      className="flex items-start gap-3 text-sm"
+                    >
                       <span className="mt-0.5 shrink-0 text-error">✕</span>
                       <span>
                         {t(key)}
                         {footnote && <sup>*</sup>}
                       </span>
-                    </li>
+                    </ListItem>
                   ))}
-                </ul>
-                <p className="mt-4 text-xs text-body-medium">
+                </UnorderedList>
+                <CardParagraph size="sm">
                   <sup>*</sup>
                   {t("page-upgrades-bug-bounty-out-of-scope-footnote")}
-                </p>
-              </div>
+                </CardParagraph>
+              </MarkdownCard>
 
               {/* Bug Hunting Rules */}
-              <div className="m-4 flex-[1_1_100%] overflow-hidden rounded-xs border border-solid bg-background-highlight p-6">
-                <H2 id="rules">{t("page-upgrades-bug-bounty-hunting")}</H2>
-                <Text className="text-body-medium italic">
-                  {t("page-upgrades-bug-bounty-hunting-desc")}
-                </Text>
-                <ol className="mt-6 space-y-3">
+              <MarkdownCard
+                id="rules"
+                variant="nested"
+                className="flex-[1_1_100%]"
+              >
+                <h2>{t("page-upgrades-bug-bounty-hunting")}</h2>
+                <CardParagraph>
+                  <em>{t("page-upgrades-bug-bounty-hunting-desc")}</em>
+                </CardParagraph>
+                <OrderedList className="m-0">
                   {(
                     [
                       "page-upgrades-bug-bounty-hunting-li-1",
@@ -593,18 +614,18 @@ export default async function Page(props: { params: Promise<Params> }) {
                       "page-upgrades-bug-bounty-hunting-li-4",
                     ] as const
                   ).map((key, idx) => (
-                    <li
+                    <ListItem
                       key={key}
-                      className="flex items-start gap-4 rounded-xs border border-border bg-background p-4"
+                      className="flex items-start gap-4 rounded border border-border bg-background p-4"
                     >
                       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
                         {idx + 1}
                       </span>
                       <span className="text-sm leading-relaxed">{t(key)}</span>
-                    </li>
+                    </ListItem>
                   ))}
-                </ol>
-              </div>
+                </OrderedList>
+              </MarkdownCard>
             </Flex>
 
             {/* Vulnerability Severity Qualifications */}
@@ -615,219 +636,210 @@ export default async function Page(props: { params: Promise<Params> }) {
               <p className="mb-8 max-w-[100ch] text-body-medium">
                 {t("page-upgrades-bug-bounty-severity-qualifications-desc")}
               </p>
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+              <Grid balanced={4}>
                 {/* Low */}
                 <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-green-500/10 px-3 py-1 text-sm font-semibold text-green-600 dark:text-green-400">
                     {t("page-upgrades-bug-bounty-severity-low-title")}
                   </span>
-                  <ul className="space-y-2 text-sm">
-                    <li>
+                  <UnorderedList className="text-sm">
+                    <ListItem>
                       {t.rich("page-upgrades-bug-bounty-severity-low-li-1", {
                         strong: StrongGreaterThan,
                       })}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich("page-upgrades-bug-bounty-severity-low-li-2", {
                         strong: StrongGreaterThan,
                       })}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich("page-upgrades-bug-bounty-severity-low-li-3", {
                         strong: StrongGreaterThan,
                       })}
-                    </li>
-                  </ul>
+                    </ListItem>
+                  </UnorderedList>
                 </div>
                 {/* Medium */}
                 <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-yellow-500/10 px-3 py-1 text-sm font-semibold text-yellow-600 dark:text-yellow-400">
                     {t("page-upgrades-bug-bounty-severity-medium-title")}
                   </span>
-                  <ul className="space-y-2 text-sm">
-                    <li>
+                  <UnorderedList className="text-sm">
+                    <ListItem>
                       {t.rich("page-upgrades-bug-bounty-severity-medium-li-1", {
                         strong: StrongGreaterThan,
                       })}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich("page-upgrades-bug-bounty-severity-medium-li-2", {
                         strong: StrongGreaterThan,
                       })}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich("page-upgrades-bug-bounty-severity-medium-li-3", {
                         strong: StrongGreaterThan,
                       })}
-                    </li>
-                  </ul>
+                    </ListItem>
+                  </UnorderedList>
                 </div>
                 {/* High */}
                 <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-orange-500/10 px-3 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
                     {t("page-upgrades-bug-bounty-severity-high-title")}
                   </span>
-                  <ul className="space-y-2 text-sm">
-                    <li>
+                  <UnorderedList className="text-sm">
+                    <ListItem>
                       {t.rich("page-upgrades-bug-bounty-severity-high-li-1", {
                         strong: StrongGreaterThan,
                       })}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich("page-upgrades-bug-bounty-severity-high-li-2", {
                         strong: StrongGreaterThan,
                       })}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich("page-upgrades-bug-bounty-severity-high-li-3", {
                         strong: StrongGreaterThan,
                       })}
-                    </li>
-                  </ul>
+                    </ListItem>
+                  </UnorderedList>
                 </div>
                 {/* Critical */}
                 <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-red-500/10 px-3 py-1 text-sm font-semibold text-red-600 dark:text-red-400">
                     {t("page-upgrades-bug-bounty-severity-critical-title")}
                   </span>
-                  <ul className="space-y-2 text-sm">
-                    <li>
+                  <UnorderedList className="text-sm">
+                    <ListItem>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-1",
                         { strong: StrongGreaterThan }
                       )}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-2",
                         { strong: Strong }
                       )}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-3",
                         { strong: Strong }
                       )}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-4",
                         { strong: Strong }
                       )}
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       {t.rich(
                         "page-upgrades-bug-bounty-severity-critical-li-5",
                         { strong: Strong }
                       )}
-                    </li>
-                  </ul>
+                    </ListItem>
+                  </UnorderedList>
                 </div>
-              </div>
+              </Grid>
             </div>
           </Content>
         </div>
         <Content>
-          <Row>
-            <div className="max-w-[100ch] flex-1">
-              <H2 id="submit-bug">{t("page-upgrades-bug-bounty-submit")}</H2>
-            </div>
-          </Row>
+          <H2 id="submit-bug">{t("page-upgrades-bug-bounty-submit")}</H2>
+          <BugBountyCards />
         </Content>
-        <BugBountyCards />
         <div
           id="leaderboard"
-          className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box"
+          className={cn(
+            "flex w-full flex-col items-start justify-center lg:flex-row",
+            "mt-8 gap-x-16 gap-y-8 px-8 pt-20 pb-16",
+            "border-t bg-banner-grid-gradient shadow-table-item-box"
+          )}
         >
-          <Flex className="flex-col items-start justify-center lg:flex-row">
-            <FullLeaderboardContainer>
-              <H2 id="el-leaderboard" className="text-center">
-                {t("page-upgrades-bug-bounty-hunting-execution-leaderboard")}
-              </H2>
-              <Text>
-                {t(
-                  "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle"
-                )}
-              </Text>
-              <Leaderboard content={executionBountyHunters} />
-            </FullLeaderboardContainer>
-            <FullLeaderboardContainer>
-              <H2 id="cl-leaderboard" className="text-center">
-                {t("page-upgrades-bug-bounty-hunting-leaderboard")}
-              </H2>
-              <Text>
-                {t("page-upgrades-bug-bounty-hunting-leaderboard-subtitle")}
-              </Text>
-              <Leaderboard content={consensusBountyHunters} />
-            </FullLeaderboardContainer>
-          </Flex>
-        </div>
-        <Divider />
-        <Content>
-          <Center>
-            <H2 id="faq" className="text-center">
-              {t("page-upgrades-question-title")}
+          <FullLeaderboardContainer>
+            <H2 id="el-leaderboard">
+              {t("page-upgrades-bug-bounty-hunting-execution-leaderboard")}
             </H2>
-          </Center>
-          <Flex className="mt-16 flex-col lg:flex-row">
-            <div className="w-full">
-              <ExpandableCard
-                title={t("bug-bounty-faq-q2-title")}
-                contentPreview={t("bug-bounty-faq-q2-contentPreview")}
-              >
-                <Text>
-                  {t.rich("bug-bounty-faq-q2-content-1", {
-                    a: (chunks) => (
-                      <Link href="https://blog.ethereum.org/">{chunks}</Link>
-                    ),
-                  })}
-                </Text>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q3-title")}
-                contentPreview={t("bug-bounty-faq-q3-contentPreview")}
-              >
-                <Text>
-                  {t.rich("bug-bounty-faq-q3-content-1", {
-                    strong: Strong,
-                  })}
-                </Text>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q4-title")}
-                contentPreview={t("bug-bounty-faq-q4-contentPreview")}
-              >
-                <Text>{t("bug-bounty-faq-q4-content-1")}</Text>
-              </ExpandableCard>
-            </div>
-            <Flex className="ms-0 w-full flex-col lg:ms-8">
-              <ExpandableCard
-                title={t("bug-bounty-faq-q5-title")}
-                contentPreview={t("bug-bounty-faq-q5-contentPreview")}
-              >
-                <Text>{t("bug-bounty-faq-q5-content-1")}</Text>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q6-title")}
-                contentPreview={t("bug-bounty-faq-q6-contentPreview")}
-              >
-                <Text>{t("bug-bounty-faq-q6-content-1")}</Text>
-                <Text>{t("bug-bounty-faq-q6-content-2")}</Text>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q7-title")}
-                contentPreview={t("bug-bounty-faq-q7-contentPreview")}
-              >
-                <Text>{t("bug-bounty-faq-q7-content-1")}</Text>
-              </ExpandableCard>
-            </Flex>
-          </Flex>
+            <Text>
+              {t(
+                "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle"
+              )}
+            </Text>
+            <Leaderboard content={executionBountyHunters} />
+          </FullLeaderboardContainer>
+          <FullLeaderboardContainer>
+            <H2 id="cl-leaderboard">
+              {t("page-upgrades-bug-bounty-hunting-leaderboard")}
+            </H2>
+            <Text>
+              {t("page-upgrades-bug-bounty-hunting-leaderboard-subtitle")}
+            </Text>
+            <Leaderboard content={consensusBountyHunters} />
+          </FullLeaderboardContainer>
+        </div>
+        <div className="w-full space-y-16 px-8 py-4">
+          <H2 id="faq">{t("page-upgrades-question-title")}</H2>
+          <AccordionContainer>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q2-title")}
+              contentPreview={t("bug-bounty-faq-q2-contentPreview")}
+            >
+              <p>
+                {t.rich("bug-bounty-faq-q2-content-1", {
+                  a: (chunks) => (
+                    <InlineLink href="https://blog.ethereum.org/">
+                      {chunks}
+                    </InlineLink>
+                  ),
+                })}
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q3-title")}
+              contentPreview={t("bug-bounty-faq-q3-contentPreview")}
+            >
+              <p>
+                {t.rich("bug-bounty-faq-q3-content-1", {
+                  strong: Strong,
+                })}
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q4-title")}
+              contentPreview={t("bug-bounty-faq-q4-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q4-content-1")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q5-title")}
+              contentPreview={t("bug-bounty-faq-q5-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q5-content-1")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q6-title")}
+              contentPreview={t("bug-bounty-faq-q6-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q6-content-1")}</p>
+              <p>{t("bug-bounty-faq-q6-content-2")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q7-title")}
+              contentPreview={t("bug-bounty-faq-q7-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q7-content-1")}</p>
+            </ExpandableCard>
+          </AccordionContainer>
           <FileContributors
-            className="my-10 border-t"
+            className="border-t"
             contributors={contributors}
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
-        </Content>
+        </div>
         <FeedbackCard />
       </MainArticle>
     </>

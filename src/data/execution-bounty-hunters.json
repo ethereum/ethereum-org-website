@@ -20,9 +20,19 @@
     "score": 31000
   },
   {
+    "username": "revofusion",
+    "name": "Revofusion",
+    "score": 25000
+  },
+  {
     "username": "chainsecurity",
     "name": "ChainSecurity",
     "score": 24500
+  },
+  {
+    "username": "cyberthirst",
+    "name": "cyberthirst",
+    "score": 21000
   },
   {
     "username": "junorouse",
@@ -39,15 +49,15 @@
     "name": "John Youngseok Yang (Software Platform Lab)",
     "score": 20000
   },
-    {
-    "username": "revofusion",
-    "name": "Revofusion",
-    "score": 25000
-  },
   {
     "username": "peckshield",
     "name": "PeckShield",
     "score": 17000
+  },
+  {
+    "username": "iam-ned",
+    "name": "David Matosse",
+    "score": 16250
   },
   {
     "username": "itsunixiknowthis",
@@ -95,11 +105,6 @@
     "score": 10000
   },
   {
-    "username": "iam-ned",
-    "name": "David Matosse",
-    "score": 16250
-  },
-  {
     "username": "jtoman",
     "name": "John Toman",
     "score": 10000
@@ -123,6 +128,11 @@
     "username": "",
     "name": "Dominic Brütsch",
     "score": 7500
+  },
+  {
+    "username": "r9295",
+    "name": "aarnavrotten",
+    "score": 5250
   },
   {
     "username": "HarryR",
@@ -152,11 +162,6 @@
   {
     "username": "Yenya030",
     "name": "Yenya",
-    "score": 5000
-  },
-  {
-    "username": "r9295",
-    "name": "aarnavrotten",
     "score": 5000
   },
   {
@@ -330,6 +335,11 @@
     "score": 1000
   },
   {
+    "username": "sonny2k",
+    "name": "sonny2k",
+    "score": 1000
+  },
+  {
     "username": "n0thingness",
     "name": "Daniel Briskin",
     "score": 750
@@ -373,6 +383,16 @@
     "username": "wadeAlexC",
     "name": "Alexander Wade",
     "score": 500
+  },
+  {
+    "username": "rholterhus",
+    "name": "Riley Holterhus",
+    "score": 250
+  },
+  {
+    "username": "howydev",
+    "name": "Howy",
+    "score": 250
   },
   {
     "username": "gitpusha",

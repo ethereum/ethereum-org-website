@@ -4,8 +4,9 @@ lang: it
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Ricevi incentivi finanziari per generare previsioni accurate"
-summaryPoint2: "Previsioni di alta qualità su eventi futuri"
+summaryPoints:
+  - "Ricevi incentivi finanziari per generare previsioni accurate"
+  - "Previsioni di alta qualità su eventi futuri"
 buttons: 
   - content: Scopri di più
     toId: how-prediction-markets-work
@@ -30,11 +31,11 @@ In teoria, poiché gli scommettitori traggono profitto dall'avere ragione, i mer
 
 A differenza delle previsioni tradizionali, i mercati di previsione basati su blockchain sono:
 
-<CardGrid>
+<Grid>
   <Card title="Incentivati" emoji=":money_with_wings:" description="I partecipanti mettono in stake fondi reali, il che incoraggia previsioni di alta qualità."/>
   <Card title="Decentralizzazione" emoji="🌎" description="L'utilizzo della blockchain e dei contratti intelligenti garantisce pagamenti trasparenti e automatizzati." />
   <Card title="Quote guidate dal mercato" emoji="🤝" description="I prezzi sono stabiliti dai trader che comprano e vendono quote di risultato, piuttosto che preimpostati da un allibratore centralizzato." />
-</CardGrid>
+</Grid>
 
 Anche come osservatore del mercato, puoi valutare dati preziosi che altrimenti non sarebbero disponibili. Pensala in questo modo:
 

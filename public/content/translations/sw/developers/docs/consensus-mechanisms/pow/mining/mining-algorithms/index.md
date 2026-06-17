@@ -1,6 +1,6 @@
 ---
-title: Maelekezo ya uchimbaji
-description: Mtazamo wa kina wa kanuni zilizotumika kwa ajili ya uchimbaji wa Ethereum.
+title: Algoriti za uchimbaji
+description: Mtazamo wa kina wa algoriti zinazotumika kwa uchimbaji wa Ethereum.
 lang: sw
 ---
 
@@ -8,35 +8,35 @@ lang: sw
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-Uthibitisho wa kazi sio msingi tena wa utaratibu wa makubaliano wa Ethereum, kumaanisha uchimbaji umezimwa. Badala yake, Ethereum inalindwa na wathibitishaji ambao wanashiriki ETH. Unaweza kuanza kuweka ETH yako leo. Soma zaidi kwenye <a href='/roadmap/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>ushahidi-wa-stake</a>, na <a href='/staking/'>staking</a>. Ukurasa huu ni kwa ajili ya maslahi ya kihistoria tu.
+Uthibitisho wa Kazi (PoW) haupo tena chini ya utaratibu wa makubaliano wa Ethereum, ikimaanisha uchimbaji umezimwa. Badala yake, Ethereum inalindwa na wathibitishaji wanaoweka dhamana ya ETH. Unaweza kuanza kuweka dhamana ya ETH yako leo. Soma zaidi kuhusu <a href='/roadmap/merge/'>Unganisho</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>Uthibitisho wa Dau (PoS)</a>, na <a href='/staking/'>uwekaji dhamana</a>. Ukurasa huu ni kwa ajili ya historia tu.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Uchimbaji wa Ethereum ulitumia kanuni inayojulikana kama Ethash. Wazo la msingi la kanuni ni kwamba mchimbaji anajaribu kupata ingizo la nonce kwa kutumia hesabu za nguvu ili hashi inayotokana iwe ndogo kuliko kizingiti kilichowekwa na ugumu uliokokotolewa. Kiwango hiki cha ugumu kinaweza kurekebishwa kwa nguvu, na kuruhusu uzalishaji wa bloku kufanyika kwa muda wa kawaida.
+Uchimbaji wa Ethereum ulitumia algoriti inayojulikana kama Ethash. Wazo la msingi la algoriti ni kwamba mchimbaji anajaribu kutafuta ingizo la nonsi akitumia ukokotoaji wa nguvu ghafi (brute force) ili heshi inayotokana iwe ndogo kuliko kiwango kilichowekwa na ugumu uliokokotolewa. Kiwango hiki cha ugumu kinaweza kurekebishwa kwa kubadilika, kuruhusu uzalishaji wa kitalu kufanyika kwa muda wa kawaida.
 
-## Mahitaji ya awali {#prerequisites}
+## Masharti ya awali {#prerequisites}
 
-Ili kuelewa ukurasa huu vizuri, tunapendekeza kwanza usome kuhusu [makubaliano ya uthibitishaji-wa-kazi](/developers/docs/consensus-mechanisms/pow) na [uchimbaji](/developers/docs/consensus-mechanisms/pow/mining).
+Ili kuelewa vyema ukurasa huu, tunapendekeza usome kwanza kuhusu [mwafaka wa Uthibitisho wa Kazi (PoW)](/developers/docs/consensus-mechanisms/pow) na [uchimbaji](/developers/docs/consensus-mechanisms/pow/mining).
 
 ## Dagger Hashimoto {#dagger-hashimoto}
 
-Dagger Hashimoto ilikuwa kanuni ya utafiti mtangulizi ya uchimbaji wa Ethereum ambayo Ethash iliichukua nafasi. Ulikuwa ni mchanganyiko wa kanuni mbili tofauti: Dagger na Hashimoto. Lilikuwa tu utekelezaji wa utafiti na lilichukuliwa nafasi na Ethash wakati Mtandao Mkuu wa Ethereum ulizinduliwa.
+Dagger Hashimoto ilikuwa algoriti ya utafiti ya awali kwa ajili ya uchimbaji wa Ethereum ambayo Ethash iliichukua nafasi yake. Ilikuwa ni muunganiko wa algoriti mbili tofauti: Dagger na Hashimoto. Ilikuwa tu utekelezaji wa utafiti na ilichukuliwa nafasi na Ethash wakati Mtandao Mkuu wa Ethereum ulipozinduliwa.
 
-[Dagger](http://www.hashcash.org/papers/dagger.html) inahusisha uzalishaji wa [Grafu Elekezi Isiyo na Mzunguko](https://en.wikipedia.org/wiki/Directed_acyclic_graph), ambapo vipande vyake nasibu huunganishwa kwa hashi. Kanuni kuu ni kwamba kila nonce inahitaji tu sehemu ndogo ya mti mkuu wa data. Kuhesabu upya mti mdogo kwa kila nonce ni ghali sana kwa uchimbaji - hivyo basi kuna haja ya kuhifadhi mti - lakini ni sawa kwa uthibitishaji wa thamani ya nonce moja. Dagger iliundwa kuwa mbadala wa kanuni zilizopo kama Scrypt, ambazo ni ngumu kwa kumbukumbu lakini ni ngumu kuthibitisha wakati ugumu wao wa kumbukumbu unapoongezeka hadi viwango vya usalama halisi. Hata hivyo, Dagger ilikuwa hatarini kwa uharakishaji wa maunzi ya kumbukumbu ya pamoja na iliachwa ili kupendelea njia nyingine za utafiti.
+[Dagger](http://www.hashcash.org/papers/dagger.html) inahusisha uzalishaji wa [Directed Acyclic Graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph), ambapo vipande vyake vya nasibu vinaunganishwa pamoja kuwa heshi. Kanuni kuu ni kwamba kila nonsi inahitaji tu sehemu ndogo ya mti mkubwa wa jumla wa data. Kukokotoa upya mti mdogo kwa kila nonsi ni kizuizi kwa uchimbaji - hivyo kuna haja ya kuhifadhi mti - lakini ni sawa kwa uthibitishaji wa thamani ya nonsi moja. Dagger ilibuniwa kuwa mbadala wa algoriti zilizopo kama Scrypt, ambazo ni ngumu kwa kumbukumbu lakini ni ngumu kuthibitisha wakati ugumu wao wa kumbukumbu unapoongezeka hadi viwango salama vya kweli. Hata hivyo, Dagger ilikuwa hatarini kwa uongezaji kasi wa maunzi ya kumbukumbu ya pamoja na ikaachwa kwa ajili ya njia nyingine za utafiti.
 
-[Hashimoto](http://diyhpl.us/%7Ebryan/papers2/bitcoin/meh/hashimoto.pdf) ni kanuni inayoongeza ukinzani wa ASIC kwa kufungwa na I/O (yaani, usomaji wa kumbukumbu ndio kipengele kinachozuia katika mchakato wa uchimbaji). Nadharia ni kwamba RAM inapatikana zaidi kuliko hesabu; mabilioni ya dola za utafiti tayari yamechunguza uboreshaji wa RAM kwa matumizi tofauti, ambayo mara nyingi huhusisha mifumo ya ufikiaji isiyo ya kawaida (hivyo “kumbukumbu ya ufikiaji nasibu”). Kwa hiyo, RAM iliyopo inawezekana kuwa karibu na ubora wa juu kwa kutathmini kanuni. Hashimoto hutumia mnyororo wa bloku kama chanzo cha data, na kukidhi (1) na (3) hapo juu kwa wakati mmoja.
+[Hashimoto](http://diyhpl.us/%7Ebryan/papers2/bitcoin/meh/hashimoto.pdf) ni algoriti inayoongeza ukinzani wa ASIC kwa kuwa na kikomo cha I/O (yaani, usomaji wa kumbukumbu ndio kikwazo katika mchakato wa uchimbaji). Nadharia ni kwamba RAM inapatikana zaidi kuliko ukokotoaji; mabilioni ya dola ya utafiti tayari yamechunguza uboreshaji wa RAM kwa matumizi tofauti, ambayo mara nyingi yanahusisha mifumo ya ufikiaji inayokaribia nasibu (hivyo "random access memory"). Kama matokeo, RAM iliyopo inaelekea kuwa karibu na kiwango bora kwa kutathmini algoriti. Hashimoto inatumia mnyororo wa vitalu kama chanzo cha data, ikikidhi kwa wakati mmoja (1) na (3) hapo juu.
 
-Dagger-Hashimoto ilitumia matoleo yaliyorekebishwa ya kanuni za Dagger na Hashimoto. Tofauti kati ya Dagger Hashimoto na Hashimoto ni kwamba, badala ya kutumia mnyororo wa bloku kama chanzo cha data, Dagger Hashimoto hutumia seti ya data iliyoundwa maalum, ambayo husasishwa kulingana na data ya bloku kila baada ya bloku N. Seti ya data inazalishwa kwa kutumia kanuni ya Dagger, ikiruhusu uhesabuji mzuri wa seti ndogo maalum kwa kila nonce kwa ajili ya kanuni ya uthibitishaji ya mteja nyepesi. Tofauti kati ya Dagger Hashimoto na Dagger ni kwamba, tofauti na Dagger ya asili, seti ya data inayotumika kuuliza bloku ni ya kudumu kiasi, ikisasishwa tu kwa vipindi vya nadra (k.m., mara moja kwa wiki). Hii inamaanisha kuwa sehemu ya juhudi ya kuzalisha seti ya data ni karibu na sifuri, kwa hivyo hoja za Sergio Lerner kuhusu ongezeko la kasi ya kumbukumbu ya pamoja zinakuwa si muhimu.
+Dagger-Hashimoto ilitumia matoleo yaliyorekebishwa ya algoriti za Dagger na Hashimoto. Tofauti kati ya Dagger Hashimoto na Hashimoto ni kwamba, badala ya kutumia mnyororo wa vitalu kama chanzo cha data, Dagger Hashimoto inatumia seti ya data iliyozalishwa maalum, ambayo inasasishwa kulingana na data ya kitalu kila baada ya vitalu N. Seti ya data inazalishwa kwa kutumia algoriti ya Dagger, ikiruhusu kukokotoa kwa ufanisi seti ndogo maalum kwa kila nonsi kwa ajili ya algoriti ya uthibitishaji ya kiteja chepesi. Tofauti kati ya Dagger Hashimoto na Dagger ni kwamba, tofauti na Dagger ya asili, seti ya data inayotumika kuulizia kitalu ni ya nusu-kudumu, inasasishwa tu kwa vipindi vya mara kwa mara (k.m., mara moja kwa wiki). Hii inamaanisha kuwa sehemu ya juhudi za kuzalisha seti ya data inakaribia sifuri, hivyo hoja za Sergio Lerner kuhusu uongezaji kasi wa kumbukumbu ya pamoja zinakuwa hazina maana.
 
 Zaidi kuhusu [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 ## Ethash {#ethash}
 
-Ethash ilikuwa kanuni ya uchimbaji ambayo ilitumika kwenye Mtandao Mkuu halisi wa Ethereum chini ya usanifu wa uthibitishaji-wa-kazi ambao sasa umeacha kutumika. Ethash kimsingi lilikuwa jina jipya lililopewa toleo maalum la Dagger-Hashimoto baada ya kanuni kusasishwa kwa kiasi kikubwa, huku bado ikirithi kanuni za msingi za mtangulizi wake. Mtandao Mkuu wa Ethereum ulitumia Ethash pekee - Dagger Hashimoto ilikuwa toleo la U&U la kanuni ya uchimbaji ambalo lilichukuliwa nafasi kabla ya uchimbaji kuanza kwenye Mtandao Mkuu wa Ethereum.
+Ethash ilikuwa algoriti ya uchimbaji ambayo ilitumika hasa kwenye Mtandao Mkuu wa Ethereum halisi chini ya usanifu wa Uthibitisho wa Kazi (PoW) uliopitwa na wakati sasa. Ethash ilikuwa kwa ufanisi jina jipya lililopewa toleo maalum la Dagger-Hashimoto baada ya algoriti kusasishwa kwa kiasi kikubwa, huku bado ikirithi kanuni za msingi za mtangulizi wake. Mtandao Mkuu wa Ethereum ulitumia Ethash pekee - Dagger Hashimoto ilikuwa toleo la R&D la algoriti ya uchimbaji ambalo lilichukuliwa nafasi kabla ya uchimbaji kuanza kwenye Mtandao Mkuu wa Ethereum.
 
 [Zaidi kuhusu Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-_Unajua rasilimali ya jamii iliyokusaidia?_ Hariri ukurasa huu na uiongeze!_
+_Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_

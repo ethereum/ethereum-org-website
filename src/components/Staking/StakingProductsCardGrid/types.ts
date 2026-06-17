@@ -13,7 +13,6 @@ export enum FlagType {
 export type Product = {
   name: string
   imageName: string
-  color: string
   url: string
   platforms: Array<string>
   ui: Array<string>

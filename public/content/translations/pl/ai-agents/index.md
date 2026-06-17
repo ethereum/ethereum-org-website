@@ -4,13 +4,13 @@ metaTitle: Agenci AI | Agenci AI na Ethereum
 description: "Przegląd agentów AI na Ethereum"
 lang: pl
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: "Ludzie stojący przy stole z ekranami"
-summaryPoint1: "AI, która współpracuje z blockchainem i dokonuje niezależnych transakcji"
-summaryPoint2: Kontroluje portfele blockchain i finanse
-summaryPoint3: "Współpracuje z ludźmi i innymi agentami"
+summaryPoints:
+  - "AI, która współpracuje z blockchainem i dokonuje niezależnych transakcji"
+  - "Kontroluje portfele blockchain i finanse"
+  - "Współpracuje z ludźmi i innymi agentami"
 buttons:
   - content: Czym są agenci AI?
     toId: what-are-ai-agents
@@ -39,11 +39,11 @@ W przeciwieństwie do tego zdecentralizowany ekosystem Ethereum oferuje kilka is
 
 Te czynniki przekształcają agentów AI z prostych botów w dynamiczne, samodoskonalące się systemy, które stanowią istotną wartość w wielu obszarach:
 
-<CardGrid>
+<Grid>
   <Card title="Zautomatyzowane DeFi" emoji=":money_with_wings:" description="Agenci AI śledzą trendy rynkowe, realizują transakcje i zarządzają portfelami — sprawiając, że złożony świat DeFi staje się o wiele bardziej przystępny."/>
   <Card title="Nowa gospodarka agentów AI" emoji="🌎" description="Agenci AI mogą zatrudniać innych agentów (lub ludzi) o różnych umiejętnościach do wykonywania dla nich specjalistycznych zadań." />
   <Card title="Zarządzanie ryzykiem" emoji="🛠️" description="Monitorując transakcje, agenci AI pomagają wykrywać oszustwa oraz lepiej i szybciej chronić Twoje cyfrowe aktywa." />
-</CardGrid>
+</Grid>
 
 ## Weryfikowalna AI {#verifiable-ai}
 

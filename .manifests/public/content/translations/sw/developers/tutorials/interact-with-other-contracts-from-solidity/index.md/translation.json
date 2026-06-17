@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "locale": "sw",
+  "translatedAt": "2026-06-17T00:20:54.608Z",
+  "englishManifestHash": "33bc317ec90e",
+  "placeholderOrder": [
+    "LINK-4dd9d2",
+    "LINK-ea9787",
+    "LINK-e947a6",
+    "CODE-a78cfd",
+    "CODE-815115",
+    "CODE-a78cfd",
+    "CODEBLOCK-458fdc",
+    "CODE-922c13",
+    "CODE-815115",
+    "CODEBLOCK-1a7598",
+    "CODEBLOCK-1c8e85",
+    "CODE-a78cfd",
+    "CODEBLOCK-50bfb3",
+    "CODE-f967ab",
+    "CODE-e6e0ba",
+    "CODE-f967ab",
+    "CODE-f67923",
+    "CODE-a78cfd",
+    "CODEBLOCK-2e1d27",
+    "LINK-ec5d8f",
+    "CODE-815115",
+    "CODE-a78cfd",
+    "CODEBLOCK-7bbdc4",
+    "IMAGE-78e0a8"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-458fdc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1a7598": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1c8e85": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-50bfb3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2e1d27": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7bbdc4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-a78cfd": {
+      "type": "inline-code",
+      "values": {
+        "content": "Counter"
+      }
+    },
+    "CODE-815115": {
+      "type": "inline-code",
+      "values": {
+        "content": "CounterFactory"
+      }
+    },
+    "CODE-922c13": {
+      "type": "inline-code",
+      "values": {
+        "content": "onlyFactory"
+      }
+    },
+    "CODE-f967ab": {
+      "type": "inline-code",
+      "values": {
+        "content": "getCount"
+      }
+    },
+    "CODE-e6e0ba": {
+      "type": "inline-code",
+      "values": {
+        "content": "getMyCount"
+      }
+    },
+    "CODE-f67923": {
+      "type": "inline-code",
+      "values": {
+        "content": "increment"
+      }
+    },
+    "IMAGE-78e0a8": {
+      "type": "image",
+      "values": {
+        "path": "./counterfactory-deploy.png"
+      }
+    },
+    "LINK-4dd9d2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/deploying-your-first-smart-contract/"
+      }
+    },
+    "LINK-ea9787": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/"
+      }
+    },
+    "LINK-e947a6": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/"
+      }
+    },
+    "LINK-ec5d8f": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:20:54.608Z",
+      "status": "success"
+    }
+  }
+}

@@ -4,8 +4,9 @@ lang: zh-tw
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "藉由得到財務的激勵產生正確的預測"
-summaryPoint2: "高品質預測未來事件"
+summaryPoints:
+  - "藉由得到財務的激勵產生正確的預測"
+  - "高品質預測未來事件"
 buttons:
   - content: 瞭解更多
     toId: how-prediction-markets-work
@@ -29,11 +30,11 @@ buttons:
 
 與傳統預測不同，基於區塊鏈的預測市場有以下特點：
 
-<CardGrid>
+<Grid>
   <Card title="激勵機制" emoji=":money_with_wings:" description="參與者質押真實資金，因此能做出高品質的預測。"/>
   <Card title="去中心化" emoji="🌎" description="使用區塊鏈和智能合約，確保支付過程透明且自動化。" />
   <Card title="市場決定賠率" emoji="🤝" description="價格是由交易員買賣結果份額所決定，而非由中心化的莊家預設。" />
-</CardGrid>
+</Grid>
 
 即便作為市場的旁觀者，您也可以評估原本無法獲得的有價值數據。 可以這樣想：
 

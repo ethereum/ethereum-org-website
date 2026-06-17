@@ -4,13 +4,13 @@ metaTitle: Pagamenti su Ethereum
 description: Una panoramica sui pagamenti su Ethereum
 lang: it
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: Un logo Eth mostrato insieme a mani che donano.
-summaryPoint1: Un mondo in cui il denaro si muove liberamente come le informazioni
-summaryPoint2: Aperto e globale, consente transazioni senza confini per tutti
-summaryPoint3: Pagamenti ricevuti in un minuto
+summaryPoints:
+  - "Un mondo in cui il denaro si muove liberamente come le informazioni"
+  - "Aperto e globale, consente transazioni senza confini per tutti"
+  - "Pagamenti ricevuti in un minuto"
 ---
 
 Ogni giorno, milioni di persone affrontano la stessa sfida: spostare denaro oltre confine è lento, costoso e spesso frustrante. Un libero professionista a Bali aspetta giorni affinché il pagamento del suo cliente di New York venga accreditato. Ciò colpisce in particolare le persone in regioni con infrastrutture bancarie limitate, rendendo difficile la partecipazione all'economia globale.
@@ -26,11 +26,11 @@ Questo non è un sogno lontano: sta accadendo oggi su Ethereum. Mentre le istitu
 
 Per milioni di persone che lavorano all'estero, inviare denaro a casa è una necessità regolare. I servizi di rimessa tradizionali comportano spesso commissioni elevate e tempi di elaborazione lenti. Ethereum offre un'alternativa convincente.
 
-<CardGrid>
+<Grid>
   <Card title="Commissioni più economiche" emoji=":money_with_wings:" description="I servizi di rimessa addebitano in media fino a 14 $ di commissioni. Le transazioni su Ethereum possono spesso essere completate a meno di 0,01 $."/>
   <Card title="Trasferimenti più veloci" emoji="📶" description="I bonifici internazionali richiedono diversi giorni per essere elaborati. Le transazioni su Ethereum vengono regolate in pochi minuti." />
   <Card title="Aperto a chiunque" emoji="🌎" description="Hai solo bisogno di una connessione Internet e di un'app portafoglio per inviare o ricevere Ether." />
-</CardGrid>
+</Grid>
 
 ## Accesso alle valute globali {#access-to-global-currencies}
 

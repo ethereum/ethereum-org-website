@@ -103,9 +103,14 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
 export const getHackathons = async (): Promise<EventItem[]> => {
   const events = await getEventsData()
   if (!events) return []
-  return events.filter(
-    (e) =>
+  const now = new Date()
+  return events.filter((e) => {
+    const isHackathon =
       e.eventTypes?.includes("hackathon") ||
       e.tags?.some((tag) => tag.toLowerCase() === "hackathon")
-  )
+    if (!isHackathon) return false
+    // Guard against stale cached data showing past events
+    const cutoff = e.endTime ? new Date(e.endTime) : new Date(e.startTime)
+    return cutoff >= now
+  })
 }

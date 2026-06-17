@@ -1,73 +1,71 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
+title: इथेरियमबद्दलचे सामान्य गैरसमज
+description: इथेरियम कसे काम करते याबद्दलचे सर्वात सामान्य गैरसमज दूर करणे.
 lang: mr
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
+## इथेरियम ही एखादी कंपनी आहे का? {#not-a-company}
 
-## Ethereum एक कंपनी आहे का? {#not-a-company}
+इथेरियम हे ओपन-सोर्स, विकेंद्रित तंत्रज्ञान आहे जे जगभरातील हजारो योगदानकर्त्यांद्वारे राखले जाते. "इथेरियम" नावाची कोणतीही कंपनी नाही जी खाती व्यवस्थापित करते, निधी ठेवते किंवा ग्राहक समर्थन प्रदान करते.
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+[इथेरियम फाउंडेशन](https://ethereum.foundation/) ही एक ना-नफा संस्था आहे जी इथेरियमच्या विकासाला समर्थन देते, परंतु ती नेटवर्कची मालकी किंवा नियंत्रण ठेवत नाही. कोणत्याही एका संस्थेकडे हे नियंत्रण नाही.
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
-
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[ethereum.org](/)** हे समुदायाद्वारे चालवले जाणारे शैक्षणिक संसाधन आहे. हे कोणतेही एक्सचेंज, वॉलेट किंवा वित्तीय संस्था नाही. हे वापरकर्त्यांचा कोणताही निधी ठेवत नाही आणि कोणत्याही खात्यांमध्ये प्रवेश करू शकत नाही.
 
 <DocLink href="/what-is-ethereum/">
-  Ethereum म्हणजे काय?
+  इथेरियम म्हणजे काय?
 </DocLink>
 
-## कोणी माझे पैसे परत मिळवू किंवा गोठवू शकते का? {#no-fund-access}
+## कोणी माझा निधी परत मिळवू शकतो किंवा गोठवू शकतो का? {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+बँकेच्या विपरीत, इथेरियमवर असा कोणताही केंद्रीय अधिकारी नाही जो निधी गोठवू, जप्त करू किंवा परत मिळवू शकेल. ज्या व्यक्तीकडे खाजगी की (किंवा बीज वाक्य) आहेत त्याचे वॉलेटवर पूर्ण आणि एकमेव नियंत्रण असते.
 
-This means:
+याचा अर्थ असा की:
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- तुम्ही चुकीच्या पत्त्यावर पाठवलेला **निधी कोणीही परत मिळवू शकत नाही**
+- व्यवहार निश्चित झाल्यानंतर **कोणीही तो उलट करू शकत नाही**
+- **कोणीही तुमचे वॉलेट गोठवू शकत नाही** किंवा तुमचे व्यवहार रोखू शकत नाही
+- जर तुम्ही तुमचे बीज वाक्य गमावले तर **कोणीही तुमचा पासवर्ड रीसेट करू शकत नाही**
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+म्हणूनच तुमच्या बीज वाक्याचे संरक्षण करणे अत्यंत महत्त्वाचे आहे. तुमच्या वॉलेटमध्ये प्रवेश करण्याचा हा एकमेव मार्ग आहे. जर ते हरवले किंवा चोरीला गेले, तर ते परत मिळवण्याचा कोणताही पर्याय नाही.
 
 <DocLink href="/security/">
-  Ethereum सुरक्षा आणि घोटाळा प्रतिबंध
+  इथेरियम सुरक्षा आणि घोटाळा प्रतिबंध
 </DocLink>
 
-## मी अजूनही Ethereum माइन करू शकतो का? {#no-mining}
+## मी अजूनही इथेरियमचे खनन करू शकतो का? {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+सप्टेंबर 2022 मध्ये [द मर्ज](/roadmap/merge/) दरम्यान इथेरियमने [प्रूफ-ऑफ-वर्क (PoW)](/glossary/#pow) वरून [प्रूफ-ऑफ-स्टेक (PoS)](/glossary/#pos) वर स्थलांतर केले. इथेरियमवर आता खनन शक्य नाही.
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+नेटवर्क आता ETH [स्टेक](/glossary/#staking) करणाऱ्या प्रमाणकांद्वारे सुरक्षित केले जाते. कोणीही यात सहभागी होऊ शकतो:
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **सोलो स्टेकिंग:** 32 ETH सह तुमचा स्वतःचा प्रमाणक चालवा—[अधिक जाणून घ्या](/staking/solo/)
+- **सेवा म्हणून स्टेकिंग:** तुमच्या कीज स्वतःकडे ठेवून नोड ऑपरेशन्ससाठी प्रतिनिधी नेमा—[अधिक जाणून घ्या](/staking/saas/)
+- **एकत्रित स्टेकिंग:** पूलमध्ये सामील होऊन 32 ETH पेक्षा कमी रकमेसह स्टेक करा—[अधिक जाणून घ्या](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  स्टेकिंगबद्दल अधिक जाणून घ्या
 </DocLink>
 
-## Ethereum सपोर्ट टीम आहे का? {#no-support-team}
+## इथेरियमची कोणतीही सपोर्ट टीम आहे का? {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+"अधिकृत इथेरियम सपोर्ट" शोधणे हे "अधिकृत इंटरनेट सपोर्ट" शोधण्यासारखे आहे. अर्थातच असे काहीही अस्तित्वात नाही, परंतु तुमच्या समस्येनुसार तुम्ही तुमचा इंटरनेट सेवा प्रदाता, तुमचा राउटर हार्डवेअर निर्माता किंवा तुम्ही वापरत असलेले डिव्हाइस, ॲप किंवा वेबसाइटमागील एखाद्या कंपनीकडून मदत घेऊ शकता.
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+इथेरियम देखील असेच आहे. संपूर्ण इथेरियमच्या मागे कोणतीही कंपनी, सपोर्ट टीम किंवा हेल्प डेस्क नाही, परंतु समस्येनुसार तुम्ही तुमचा _वॉलेट प्रदाता_, _स्टेकिंग सेवा_, _एक्सचेंज_, _वित्तीय संस्था_ किंवा तुम्ही वापरत असलेल्या _ॲपची देखभाल करणारी टीम_ यांच्याशी संपर्क साधून मदत मिळवू शकता.
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+इथेरियम हे डीफॉल्टनुसार सार्वजनिकरित्या पारदर्शक असल्याने, तुम्हाला एखाद्या समस्येची थेट चौकशी करण्यासाठी [ब्लॉक एक्सप्लोरर्स](/developers/docs/data-and-analytics/block-explorers/), [विश्लेषण साधने](/developers/tools/analytics/) आणि इतर [ऑनलाइन तपास संसाधने](/community/support/scams/#analyze) देखील उपयुक्त वाटू शकतात.
 
-That said, no one from Ethereum or ethereum.org will ever:
+असे असले तरी, इथेरियम किंवा ethereum.org मधील कोणीही कधीही:
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- थेट संदेशाद्वारे (डायरेक्ट मेसेज) तुमच्याशी संपर्क साधणार नाही
+- तुमचे बीज वाक्य किंवा खाजगी कीज मागणार नाही
+- तुमचे वॉलेट सत्यापित करण्यासाठी तुम्हाला ETH पाठवण्यास सांगणार नाही
+- शुल्काच्या बदल्यात तुम्हाला निधी परत मिळवण्यासाठी मदतीची ऑफर देणार नाही
 
-**Anyone doing any of the above is trying to scam you.**
+**वरीलपैकी काहीही करणारी कोणतीही व्यक्ती तुमची फसवणूक करण्याचा प्रयत्न करत आहे.**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+जर तुम्हाला मदतीची आवश्यकता असेल, तर मदत करू शकणारे खरे समुदाय [सपोर्ट पेजवर](/community/support/) सूचीबद्ध केले आहेत. हे स्वयंसेवकांद्वारे चालवले जाणारे, खुले समुदाय आहेत—अधिकृत सपोर्ट चॅनेल नाहीत.
 
 <DocLink href="/security/">
-  Ethereum सुरक्षा आणि घोटाळा प्रतिबंध
+  इथेरियम सुरक्षा आणि घोटाळा प्रतिबंध
 </DocLink>

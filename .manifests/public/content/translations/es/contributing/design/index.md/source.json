@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/design/index.md",
+  "generatedAt": "2026-06-08T08:21:05.540Z",
+  "rootHash": "c2516db218de",
+  "tree": {
+    "contentHash": "e0dd567f5795",
+    "anchorHash": "cf9ed9e1ba54",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "aba7c7ad9593",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8fece7c38e9d"
+      },
+      "frontmatter:description": {
+        "contentHash": "aba7c7ad9593",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "d1a53e3d8415",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-to-contribute": {
+        "contentHash": "ba22d3dde359",
+        "anchorHash": "9c7aed9a95f6",
+        "labelHash": "791596f6d49c",
+        "children": {
+          "_label": {
+            "contentHash": "791596f6d49c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "design-critique": {
+            "contentHash": "544c94b807c6",
+            "anchorHash": "8eea59919e61",
+            "labelHash": "f3f3b9c97107",
+            "children": {
+              "_label": {
+                "contentHash": "f3f3b9c97107",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "633a9553f8b4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "053bc65874ad",
+                "anchorHash": "ac4ae417760d"
+              },
+              "prose:3": {
+                "contentHash": "56baf039f52f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "f911e414cf6b",
+                "anchorHash": "7f4748030548"
+              },
+              "prose:4": {
+                "contentHash": "dc9ece733281",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "answer-surveys": {
+            "contentHash": "8caa4cafcf71",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "0e28c6f6ad4d",
+            "children": {
+              "_label": {
+                "contentHash": "0e28c6f6ad4d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "0b723af887d3",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "report-design-issues": {
+            "contentHash": "8c4a87aa928c",
+            "anchorHash": "ddfbc35669aa",
+            "labelHash": "07362d953aa8",
+            "children": {
+              "_label": {
+                "contentHash": "07362d953aa8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "e8e44530eb0a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "b3e5ea77d259",
+                "anchorHash": "eac9a19718c6"
+              },
+              "prose:2": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "propose-design-changes": {
+            "contentHash": "ce4c2c4763e6",
+            "anchorHash": "0163f818a1e1",
+            "labelHash": "369f54a45c34",
+            "children": {
+              "_label": {
+                "contentHash": "369f54a45c34",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "a9e15128d0a0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "1d27976fb538",
+                "anchorHash": "7f4748030548"
+              },
+              "prose:5": {
+                "contentHash": "0a797de683ce",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "8c30ac8bc817",
+                "anchorHash": "7f4748030548"
+              },
+              "prose:6": {
+                "contentHash": "58ba60ec5b2c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "935b1d1de719",
+                "anchorHash": "44d6161084af"
+              },
+              "prose:7": {
+                "contentHash": "66737a3e273a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "62d062e4825b",
+                "anchorHash": "198b7c78f61d"
+              },
+              "prose:8": {
+                "contentHash": "f63db015e5be",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8"
+            ]
+          },
+          "contribute-to-design-system": {
+            "contentHash": "4267bce4f12f",
+            "anchorHash": "e767188cbf28",
+            "labelHash": "41d66e41c38e",
+            "children": {
+              "_label": {
+                "contentHash": "41d66e41c38e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "8e8c896e7e73",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "490e5ab51309",
+                "anchorHash": "23d675a7e8a6"
+              },
+              "prose:2": {
+                "contentHash": "42443e474755",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "write-design-articles": {
+            "contentHash": "7fb59eb96d45",
+            "anchorHash": "5be229fc65c8",
+            "labelHash": "b612722702c0",
+            "children": {
+              "_label": {
+                "contentHash": "b612722702c0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "a6d5122cfb12",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "8e7e5a2c3b3f",
+                "anchorHash": "9d5a65245a69"
+              },
+              "prose:4": {
+                "contentHash": "70b689f89f37",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "cf9bea75b03b",
+                "anchorHash": "414cf8774371"
+              },
+              "prose:5": {
+                "contentHash": "f013f26938e2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "0dd2cf908aab",
+                "anchorHash": "4377cb7c66b3"
+              },
+              "prose:6": {
+                "contentHash": "42c078fbee18",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "prepare-illustrations": {
+            "contentHash": "29000ddf6346",
+            "anchorHash": "b1d5435cf2c4",
+            "labelHash": "5676f2d1f6c9",
+            "children": {
+              "_label": {
+                "contentHash": "5676f2d1f6c9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "f08fd1dd3fc4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "8bf729ffe074",
+                "anchorHash": "fdf33e30f8bc"
+              },
+              "prose:3": {
+                "contentHash": "a5e9fdd862ce",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "0dd2cf908aab",
+                "anchorHash": "4377cb7c66b3"
+              },
+              "prose:4": {
+                "contentHash": "98242a09ca9e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "design-critique",
+          "answer-surveys",
+          "report-design-issues",
+          "propose-design-changes",
+          "contribute-to-design-system",
+          "write-design-articles",
+          "prepare-illustrations"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "how-to-contribute"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

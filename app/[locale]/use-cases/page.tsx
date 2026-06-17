@@ -3,19 +3,22 @@ import { getTranslations } from "next-intl/server"
 import type { PageParams, ToCItem } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 
-import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DocLink from "@/components/DocLink"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, ImageProps } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
   CardContent,
+  CardFooter,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
@@ -54,17 +57,25 @@ const UseCaseCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:p-4">
-    <CardBanner background="none" fit="contain">
-      <Image src={image} alt="" sizes="250px" />
-    </CardBanner>
-    <CardContent className="p-0">
-      <CardTitle variant="bold">{title}</CardTitle>
-      <CardParagraph variant="light">{description}</CardParagraph>
+  <Card>
+    <CardHeader>
+      <CardBanner background="none" fit="contain">
+        <Image
+          src={image}
+          alt=""
+          sizes="(min-width: 1280px) 340px, (min-width: 992px) 440px, (min-width: 640px) calc(50vw - 2.5rem), calc(100vw - 4rem)"
+        />
+      </CardBanner>
+    </CardHeader>
+    <CardContent>
+      <CardTitle>{title}</CardTitle>
+      <CardParagraph>{description}</CardParagraph>
     </CardContent>
-    <ButtonLink href={href} variant="solid">
-      {ctaLabel}
-    </ButtonLink>
+    <CardFooter>
+      <ButtonLink href={href} className="w-full">
+        {ctaLabel}
+      </ButtonLink>
+    </CardFooter>
   </Card>
 )
 
@@ -116,185 +127,175 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         heroSection={<HubHero {...heroContent} />}
         showDropdown={false}
       >
-        <div className="space-y-24 max-lg:pt-10">
-          <p className="text-lg text-body-medium">
-            {t("page-intro-before-link")}{" "}
-            <InlineLink href="/what-is-ether/">
-              {t("page-intro-ether-link")}
-            </InlineLink>
-            {t("page-intro-after-link")}
-          </p>
+        <p className="text-lg text-body-medium">
+          {t("page-intro-before-link")}{" "}
+          <InlineLink href="/what-is-ether/">
+            {t("page-intro-ether-link")}
+          </InlineLink>
+          {t("page-intro-after-link")}
+        </p>
 
-          {/* Financial tools */}
-          <Section id={tocItems[0].id} className="space-y-16">
-            <div className="space-y-8">
-              <h2>{tocItems[0].title}</h2>
-              <p>{t("financial-tools-description")}</p>
+        {/* Financial tools */}
+        <Section id={tocItems[0].id}>
+          <h2>{tocItems[0].title}</h2>
+          <p>{t("financial-tools-description")}</p>
 
-              <div className="grid grid-cols-fill-4 gap-4">
-                <UseCaseCard
-                  href="/defi/"
-                  image={defi}
-                  title={t("defi-title")}
-                  description={t("defi-description")}
-                  ctaLabel={t("defi-cta")}
-                />
-                <UseCaseCard
-                  href="/stablecoins/"
-                  image={stablecoinsHero}
-                  title={t("stablecoins-title")}
-                  description={t("stablecoins-description")}
-                  ctaLabel={t("stablecoins-cta")}
-                />
-                <UseCaseCard
-                  href="/payments/"
-                  image={ethImg}
-                  title={t("payments-title")}
-                  description={t("payments-description")}
-                  ctaLabel={t("payments-cta")}
-                />
-              </div>
-            </div>
+          <Grid>
+            <UseCaseCard
+              href="/defi/"
+              image={defi}
+              title={t("defi-title")}
+              description={t("defi-description")}
+              ctaLabel={t("defi-cta")}
+            />
+            <UseCaseCard
+              href="/stablecoins/"
+              image={stablecoinsHero}
+              title={t("stablecoins-title")}
+              description={t("stablecoins-description")}
+              ctaLabel={t("stablecoins-cta")}
+            />
+            <UseCaseCard
+              href="/payments/"
+              image={ethImg}
+              title={t("payments-title")}
+              description={t("payments-description")}
+              ctaLabel={t("payments-cta")}
+            />
+          </Grid>
 
-            <div className="space-y-8">
-              <h3>{t("novel-uses-title")}</h3>
+          <h3>{t("novel-uses-title")}</h3>
 
-              <div className="grid grid-cols-fill-4 gap-4">
-                <UseCaseCard
-                  href="/real-world-assets/"
-                  image={manAndDog}
-                  title={t("rwa-title")}
-                  description={t("rwa-description")}
-                  ctaLabel={t("rwa-cta")}
-                />
-                <UseCaseCard
-                  href="/prediction-markets/"
-                  image={predictionMarkets}
-                  title={t("prediction-markets-title")}
-                  description={t("prediction-markets-description")}
-                  ctaLabel={t("prediction-markets-cta")}
-                />
-                <UseCaseCard
-                  href="https://institutions.ethereum.org/"
-                  image={restaking}
-                  title={t("institutions-title")}
-                  description={t("institutions-description")}
-                  ctaLabel={t("institutions-cta")}
-                />
-              </div>
-            </div>
+          <Grid>
+            <UseCaseCard
+              href="/real-world-assets/"
+              image={manAndDog}
+              title={t("rwa-title")}
+              description={t("rwa-description")}
+              ctaLabel={t("rwa-cta")}
+            />
+            <UseCaseCard
+              href="/prediction-markets/"
+              image={predictionMarkets}
+              title={t("prediction-markets-title")}
+              description={t("prediction-markets-description")}
+              ctaLabel={t("prediction-markets-cta")}
+            />
+            <UseCaseCard
+              href="https://institutions.ethereum.org/"
+              image={restaking}
+              title={t("institutions-title")}
+              description={t("institutions-description")}
+              ctaLabel={t("institutions-cta")}
+            />
+          </Grid>
 
-            <div className="flex xl:mx-36">
-              <DocLink href="/restaking/">{t("restaking-link")}</DocLink>
-            </div>
-          </Section>
+          <div className="flex xl:mx-36">
+            <DocLink href="/restaking/">{t("restaking-link")}</DocLink>
+          </div>
+        </Section>
 
-          {/* AI agents banner */}
-          <CalloutBannerSSR
-            id="ai-agents"
-            title={t("ai-agents-title")}
-            image={aiAgentsHero}
-            description={t("ai-agents-description")}
-            variant="small"
-          >
-            <ButtonLink href="/ai-agents/" className="w-fit max-sm:w-full">
-              {t("ai-agents-cta")}
-            </ButtonLink>
-          </CalloutBannerSSR>
+        {/* AI agents banner */}
+        <Callout
+          id="ai-agents"
+          title={t("ai-agents-title")}
+          image={aiAgentsHero}
+          description={t("ai-agents-description")}
+          variant="sm"
+        >
+          <ButtonLink href="/ai-agents/">{t("ai-agents-cta")}</ButtonLink>
+        </Callout>
 
-          {/* Digital ownership and gaming */}
-          <Section id={tocItems[1].id} className="space-y-8">
-            <h2>{tocItems[1].title}</h2>
-            <p>{t("digital-ownership-description")}</p>
+        {/* Digital ownership and gaming */}
+        <Section id={tocItems[1].id}>
+          <h2>{tocItems[1].title}</h2>
+          <p>{t("digital-ownership-description")}</p>
 
-            <div className="grid grid-cols-fill-4 gap-4">
-              <UseCaseCard
-                href="/nft/"
-                image={infrastructureTransparent}
-                title={t("nft-title")}
-                description={t("nft-description")}
-                ctaLabel={t("nft-cta")}
-              />
-              <UseCaseCard
-                href="/gaming/"
-                image={robotHelpBar}
-                title={t("gaming-title")}
-                description={t("gaming-description")}
-                ctaLabel={t("gaming-cta")}
-              />
-            </div>
-          </Section>
+          <Grid>
+            <UseCaseCard
+              href="/nft/"
+              image={infrastructureTransparent}
+              title={t("nft-title")}
+              description={t("nft-description")}
+              ctaLabel={t("nft-cta")}
+            />
+            <UseCaseCard
+              href="/gaming/"
+              image={robotHelpBar}
+              title={t("gaming-title")}
+              description={t("gaming-description")}
+              ctaLabel={t("gaming-cta")}
+            />
+          </Grid>
+        </Section>
 
-          {/* Organizations and identity */}
-          <Section id={tocItems[2].id} className="space-y-8">
-            <h2>{tocItems[2].title}</h2>
-            <p>{t("organizations-description")}</p>
+        {/* Organizations and identity */}
+        <Section id={tocItems[2].id}>
+          <h2>{tocItems[2].title}</h2>
+          <p>{t("organizations-description")}</p>
 
-            <div className="grid grid-cols-fill-4 gap-4">
-              <UseCaseCard
-                href="/dao/"
-                image={daoImg}
-                title={t("dao-title")}
-                description={t("dao-description")}
-                ctaLabel={t("dao-cta")}
-              />
-              <UseCaseCard
-                href="/decentralized-identity/"
-                image={ethGifCat}
-                title={t("identity-title")}
-                description={t("identity-description")}
-                ctaLabel={t("identity-cta")}
-              />
-              <UseCaseCard
-                href="/social-networks/"
-                image={ethereumLearn}
-                title={t("social-title")}
-                description={t("social-description")}
-                ctaLabel={t("social-cta")}
-              />
-            </div>
-          </Section>
+          <Grid>
+            <UseCaseCard
+              href="/dao/"
+              image={daoImg}
+              title={t("dao-title")}
+              description={t("dao-description")}
+              ctaLabel={t("dao-cta")}
+            />
+            <UseCaseCard
+              href="/decentralized-identity/"
+              image={ethGifCat}
+              title={t("identity-title")}
+              description={t("identity-description")}
+              ctaLabel={t("identity-cta")}
+            />
+            <UseCaseCard
+              href="/social-networks/"
+              image={ethereumLearn}
+              title={t("social-title")}
+              description={t("social-description")}
+              ctaLabel={t("social-cta")}
+            />
+          </Grid>
+        </Section>
 
-          {/* Science and public goods */}
-          <Section id={tocItems[3].id} className="space-y-8">
-            <h2>{tocItems[3].title}</h2>
-            <p>{t("science-description")}</p>
+        {/* Science and public goods */}
+        <Section id={tocItems[3].id}>
+          <h2>{tocItems[3].title}</h2>
+          <p>{t("science-description")}</p>
 
-            <div className="grid grid-cols-fill-4 gap-4">
-              <UseCaseCard
-                href="/desci/"
-                image={futureTransparent}
-                title={t("desci-title")}
-                description={t("desci-description")}
-                ctaLabel={t("desci-cta")}
-              />
-              <UseCaseCard
-                href="/refi/"
-                image={financeTransparent}
-                title={t("refi-title")}
-                description={t("refi-description")}
-                ctaLabel={t("refi-cta")}
-              />
-            </div>
-          </Section>
+          <Grid>
+            <UseCaseCard
+              href="/desci/"
+              image={futureTransparent}
+              title={t("desci-title")}
+              description={t("desci-description")}
+              ctaLabel={t("desci-cta")}
+            />
+            <UseCaseCard
+              href="/refi/"
+              image={financeTransparent}
+              title={t("refi-title")}
+              description={t("refi-description")}
+              ctaLabel={t("refi-cta")}
+            />
+          </Grid>
+        </Section>
 
-          {/* Ready to start? */}
-          <CalloutBannerSSR
-            id="ready-to-start"
-            title={t("ready-to-start-title")}
-            description={t("ready-to-start-description")}
-            variant="medium"
-          >
-            <div className="flex flex-wrap gap-4 max-sm:flex-col [&>a]:max-sm:flex-1">
-              <ButtonLink href="/wallets/find-wallet/" variant="solid">
-                {t("ready-to-start-wallet-cta")}
-              </ButtonLink>
-              <ButtonLink href="/get-eth/" variant="outline" isSecondary>
-                {t("ready-to-start-eth-cta")}
-              </ButtonLink>
-            </div>
-          </CalloutBannerSSR>
-        </div>
+        {/* Ready to start? */}
+        <Callout
+          id="ready-to-start"
+          title={t("ready-to-start-title")}
+          description={t("ready-to-start-description")}
+          variant="sm"
+        >
+          <ButtonLink href="/wallets/find-wallet/">
+            {t("ready-to-start-wallet-cta")}
+          </ButtonLink>
+          <ButtonLink href="/get-eth/" variant="outline" isSecondary>
+            {t("ready-to-start-eth-cta")}
+          </ButtonLink>
+        </Callout>
       </ContentLayout>
     </>
   )

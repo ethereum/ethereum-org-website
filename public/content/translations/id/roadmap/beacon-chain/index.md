@@ -5,9 +5,10 @@ lang: id
 template: upgrade
 image: /images/upgrades/core.png
 alt: 
-summaryPoint1: Beacon Chain memperkenalkan proof-of-stake ke ekosistem Ethereum.
-summaryPoint2: Ini digabungkan dengan rantai proof-of-work Ethereum asli pada bulan September 2022.
-summaryPoint3: Beacon Chain memperkenalkan logika konsensus dan protokol gossip blok yang sekarang mengamankan Ethereum.
+summaryPoints:
+  - "Beacon Chain memperkenalkan proof-of-stake ke ekosistem Ethereum."
+  - "Ini digabungkan dengan rantai proof-of-work Ethereum asli pada bulan September 2022."
+  - "Beacon Chain memperkenalkan logika konsensus dan protokol gossip blok yang sekarang mengamankan Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

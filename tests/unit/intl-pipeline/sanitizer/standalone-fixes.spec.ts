@@ -9,6 +9,7 @@ import { _testOnly } from "@/scripts/intl-pipeline/intl-sanitizer"
 
 const {
   fixDuplicatedHeadings,
+  fixDuplicateHeadingBlocks,
   fixBrokenMarkdownLinks,
   fixEscapedBoldAndItalic,
   fixAsciiGuillemets,
@@ -1775,41 +1776,34 @@ author: Ori Pomerantz
   })
 
   test.describe("fixKnownBrandGarbles", () => {
-    test("fixes GitHub garble to Latin without locale (fallback)", () => {
+    test("fixes GitHub garble to canonical Latin form", () => {
       const input = "- [يجتبه](https://github.com/alchemyplatform)"
       const { content, fixCount } = fixKnownBrandGarbles(input)
       expect(content).toBe("- [GitHub](https://github.com/alchemyplatform)")
       expect(fixCount).toBe(1)
     })
 
-    test("fixes GitHub garble to Arabic transliteration with ar locale", () => {
-      const input = "- [يجتبه](https://github.com/alchemyplatform)"
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
-      expect(content).toBe("- [غيت هاب](https://github.com/alchemyplatform)")
-      expect(fixCount).toBe(1)
-    })
-
-    test("fixes multiple GitHub garbles with locale", () => {
+    test("fixes multiple GitHub garbles", () => {
       const input =
         "- [يجتبه](https://github.com/foo)\n- [يجتبه](https://github.com/bar)"
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      const { content, fixCount } = fixKnownBrandGarbles(input)
       expect(content).toBe(
-        "- [غيت هاب](https://github.com/foo)\n- [غيت هاب](https://github.com/bar)"
+        "- [GitHub](https://github.com/foo)\n- [GitHub](https://github.com/bar)"
       )
       expect(fixCount).toBe(2)
     })
 
-    test("fixes Solidity garble to Arabic transliteration in tags", () => {
+    test("fixes Solidity garble in tags to canonical Latin", () => {
       const input = 'tags: ["الصلابة", "Waffle", "الاختبار"]'
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
-      expect(content).toBe('tags: ["سوليديتي", "Waffle", "الاختبار"]')
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe('tags: ["Solidity", "Waffle", "الاختبار"]')
       expect(fixCount).toBe(1)
     })
 
-    test("fixes Solidity garble to Arabic transliteration in prose", () => {
+    test("fixes Solidity garble in prose to canonical Latin", () => {
       const input = "يمكنك كتابة العقود الذكية باستخدام الصلابة"
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
-      expect(content).toBe("يمكنك كتابة العقود الذكية باستخدام سوليديتي")
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe("يمكنك كتابة العقود الذكية باستخدام Solidity")
       expect(fixCount).toBe(1)
     })
 
@@ -1822,7 +1816,7 @@ author: Ori Pomerantz
 
     test("skips code blocks", () => {
       const input = "```\nيجتبه\n```"
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      const { content, fixCount } = fixKnownBrandGarbles(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
@@ -3020,6 +3014,58 @@ author: Ori Pomerantz
       const { content, fixCount } = fixMisalignedCodeFences(input)
       expect(content).toBe("    ~~~sh\n    cmd\n    ~~~")
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixDuplicateHeadingBlocks", () => {
+    test("removes an anchor-less ghost heading block before its anchored twin", () => {
+      const input =
+        "Intro paragraph.\n\n## Skalierung\n\nGhost paragraph.\n\n## Skalierung neu {#scale}\n\nReal paragraph."
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(
+        "Intro paragraph.\n\n## Skalierung neu {#scale}\n\nReal paragraph."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles a ghost heading directly followed by the anchored twin", () => {
+      const input = "## FAQ\n## Häufig gestellte Fragen {#faq}\n\nBody."
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe("## Häufig gestellte Fragen {#faq}\n\nBody.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves clean anchored headings unchanged", () => {
+      const input =
+        "## One {#one}\n\nA paragraph.\n\n## Two {#two}\n\nAnother paragraph."
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a lone anchor-less heading untouched (no anchored same-level twin)", () => {
+      // Next heading is a different level -> not a ghost twin; needs an anchor
+      // ADDED by syncHeaderIdsWithEnglish, not removal here.
+      const input = "## Lonely\n\npara\n\n### Sub {#sub}\n\nmore"
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("ignores heading-like lines inside code fences", () => {
+      const input =
+        "## Real {#real}\n\npara\n\n```md\n## not a heading\nmore\n```"
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not delete across a code fence between ghost and twin", () => {
+      const input =
+        "## Ghost\n\n```text\n## fake\n```\n\n## Ghost real {#ghost}\n\nbody"
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 })

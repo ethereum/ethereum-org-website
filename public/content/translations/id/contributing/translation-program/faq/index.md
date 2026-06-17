@@ -1,33 +1,32 @@
 ---
-title: Pertanyaan yang sering diajukan (FAQ) Program Terjemahan
+title: Panduan menerjemahkan ethereum.org
+metaTitle: Pertanyaan umum (FAQ) Program Terjemahan
 lang: id
-description: Pertanyaan yang sering diajukan tentang Program Terjemahan ethereum.org
+description: Pertanyaan umum tentang Program Terjemahan ethereum.org
 ---
 
-# Panduan menerjemahkan ethereum.org {#translating-ethereum-guide}
-
-Jika Anda baru mengenal Program Terjemahan dan ragu untuk bergabung, berikut adalah beberapa FAQ yang dapat membantu Anda memulai. Gunakan panduan ini untuk menemukan jawaban atas pertanyaan yang paling umum.
+Jika Anda baru mengenal Program Terjemahan dan ragu untuk bergabung, berikut adalah beberapa FAQ (pertanyaan umum) yang dapat membantu Anda memulai. Gunakan panduan ini untuk menemukan jawaban atas pertanyaan yang paling umum.
 
 ## Bisakah saya mendapatkan kompensasi karena menerjemahkan ethereum.org? {#compensation}
 
-Ethereum.org adalah situs web sumber terbuka, yang berarti siapa pun dapat terlibat dan berkontribusi.
+Ethereum.org adalah situs web sumber terbuka (open-source), yang berarti siapa pun dapat terlibat dan berkontribusi.
 
 Program Terjemahan ethereum.org adalah perpanjangan dari hal tersebut dan diselenggarakan dengan filosofi yang serupa.
 
-Tujuan dari Program Terjemahan adalah untuk membuat konten Ethereum dapat diakses oleh semua orang, terlepas dari bahasa yang mereka gunakan. Ini juga memungkinkan setiap orang yang menguasai dua bahasa untuk terlibat dengan ekosistem Ethereum dan berkontribusi dengan cara yang mudah diakses.
+Tujuan dari Program Terjemahan adalah untuk membuat konten Ethereum dapat diakses oleh semua orang, terlepas dari bahasa yang mereka gunakan. Program ini juga memungkinkan setiap orang yang menguasai dua bahasa (bilingual) untuk terlibat dengan ekosistem Ethereum dan berkontribusi dengan cara yang mudah diakses.
 
-Untuk alasan ini, Program Terjemahan bersifat terbuka dan sukarela, dan partisipasi tidak dikenakan kompensasi. Jika kami memberikan kompensasi kepada penerjemah berdasarkan jumlah kata yang mereka terjemahkan, kami hanya dapat mengundang mereka yang memiliki pengalaman terjemahan yang memadai (penerjemah profesional) untuk bergabung dengan Program Terjemahan. Hal ini akan membuat Program Terjemahan menjadi eksklusif dan mencegah kami mencapai tujuan yang telah digariskan, khususnya: memungkinkan semua orang untuk berpartisipasi dan terlibat dengan ekosistem.
+Karena alasan ini, Program Terjemahan bersifat terbuka dan sukarela, serta partisipasinya tidak dikenakan kompensasi. Jika kami memberikan kompensasi kepada penerjemah berdasarkan jumlah kata yang mereka terjemahkan, kami hanya dapat mengundang mereka yang memiliki pengalaman menerjemahkan yang memadai (penerjemah profesional) untuk bergabung dengan Program Terjemahan. Hal ini akan membuat Program Terjemahan menjadi eksklusif dan mencegah kami mencapai tujuan yang telah digariskan, khususnya: memungkinkan semua orang untuk berpartisipasi dan terlibat dengan ekosistem.
 
 Kami melakukan segala upaya untuk memungkinkan kontributor kami berhasil dalam ekosistem Ethereum; banyak insentif non-moneter yang tersedia seperti: [menawarkan POAP](/contributing/translation-program/acknowledgements/#poap) dan [sertifikat penerjemah](/contributing/translation-program/acknowledgements/#certificate), serta menyelenggarakan [Papan Peringkat Terjemahan](/contributing/translation-program/acknowledgements/) dan [mencantumkan semua penerjemah kami di situs](/contributing/translation-program/contributors/).
 
 ## Bagaimana cara menerjemahkan string dengan `<HTML tags>`? {#tags}
 
-Tidak setiap string ditulis dalam bentuk teks murni. Ada beberapa string yang terdiri dari skrip campuran seperti tag HTML (`<0>`, `</0>`). Ini biasanya untuk hyperlink atau gaya alternatif di tengah kalimat.
+Tidak setiap string ditulis dalam bentuk teks murni. Ada beberapa string yang terdiri dari campuran skrip seperti tag HTML (`<0>`, `</0>`). Ini biasanya untuk tautan (hyperlink) atau gaya alternatif di tengah kalimat.
 
 - Terjemahkan teks di dalam tag tetapi jangan terjemahkan tag itu sendiri. Apa pun yang ada di dalam `<` dan `>` tidak boleh diterjemahkan atau dihapus.
-- Untuk menjaga string tetap aman, kami menyarankan Anda mengklik tombol "Copy Source" di kiri bawah. Ini akan menyalin string asli dan menempelkannya ke dalam kotak teks. Ini memungkinkan Anda memperjelas di mana letak tag dan membantu Anda menghindari kesalahan.
+- Untuk menjaga string tetap aman, kami menyarankan Anda mengeklik tombol "Copy Source" (Salin Sumber) di kiri bawah. Ini akan menyalin string asli dan menempelkannya ke dalam kotak teks. Hal ini memungkinkan Anda memperjelas di mana letak tag dan membantu Anda menghindari kesalahan.
 
-![Antarmuka Crowdin dengan tombol salin sumber disorot](./html-tag-strings.png)
+![Crowdin interface with copy source button highlighted](./html-tag-strings.png)
 
 Anda dapat memindahkan posisi tag di dalam string agar lebih alami dalam bahasa Anda – pastikan saja untuk memindahkan seluruh tag.
 
@@ -37,31 +36,31 @@ Untuk informasi lebih mendalam tentang menangani tag dan cuplikan kode, silakan 
 
 Sering kali string sumber saja mungkin tidak cukup bagi Anda untuk memberikan terjemahan yang akurat.
 
-- Lihat "tangkapan layar" dan "konteks" untuk informasi lebih lanjut. Di bagian string sumber, Anda akan melihat gambar tangkapan layar terlampir yang akan menunjukkan kepada Anda bagaimana kami menggunakan string tersebut dalam konteks.
-- Jika Anda masih tidak yakin, beri tanda di "bagian komentar". [Tidak yakin bagaimana cara meninggalkan komentar?](#comment)
+- Lihat "screenshots" (tangkapan layar) dan "context" (konteks) untuk informasi lebih lanjut. Di bagian string sumber, Anda akan melihat gambar tangkapan layar terlampir yang akan menunjukkan kepada Anda bagaimana kami menggunakan string tersebut dalam konteks.
+- Jika Anda masih tidak yakin, sampaikan masalah di "comment section" (bagian komentar). [Tidak yakin bagaimana cara meninggalkan komentar?](#comment)
 
-![Menunjukkan bagaimana konteks dapat diberikan untuk sebuah string dengan tangkapan layar](./source-string.png)
+![Showing how context can be provided for a string with a screenshot](./source-string.png)
 
-![Contoh tangkapan layar yang ditambahkan untuk konteks](./source-string-2.png)
+![An example screenshot added for context](./source-string-2.png)
 
-## Bagaimana cara saya meninggalkan komentar atau mengajukan pertanyaan? Saya ingin menandai masalah atau salah ketik... {#comment}
+## Bagaimana cara saya meninggalkan komentar atau mengajukan pertanyaan? Saya ingin melaporkan masalah atau salah ketik... {#comment}
 
-Jika Anda ingin menandai string tertentu yang memerlukan perhatian, jangan ragu untuk mengirimkan komentar.
+Jika Anda ingin melaporkan masalah pada string tertentu yang memerlukan perhatian, jangan ragu untuk mengirimkan komentar.
 
-- Klik tombol kedua di bilah kanan atas. Tab tersembunyi akan muncul di sebelah kanan Anda. Tinggalkan komentar baru dan klik kotak centang "Issue" di bagian bawah. Anda dapat menentukan jenis masalah dengan memilih salah satu opsi dari menu tarik-turun.
-- Setelah dikirimkan, ini akan dilaporkan ke tim kami. Kami akan memperbaiki masalah tersebut dan memberi tahu Anda dengan membalas komentar Anda dan menutup masalah tersebut.
+- Klik tombol kedua di bilah kanan atas. Tab tersembunyi akan muncul di sebelah kanan Anda. Tinggalkan komentar baru dan klik kotak centang "Issue" (Masalah) di bagian bawah. Anda dapat menentukan jenis masalah dengan memilih salah satu opsi dari menu tarik-turun.
+- Setelah dikirimkan, hal itu akan dilaporkan ke tim kami. Kami akan memperbaiki masalah tersebut dan memberi tahu Anda dengan membalas komentar Anda dan menutup masalah tersebut.
 - Jika Anda melaporkan terjemahan yang salah, terjemahan dan alternatif yang Anda sarankan akan ditinjau oleh penutur asli selama peninjauan berikutnya.
 
-![Menunjukkan cara membuat komentar dan masalah](./comment-issue.png)
+![Showing how to make comments and issues](./comment-issue.png)
 
-## Apa itu Memori Terjemahan (TM)? {#translation-memory}
+## Apa itu Translation Memory (TM)? {#translation-memory}
 
-Memori Terjemahan (TM) adalah fitur Crowdin yang menyimpan semua string yang diterjemahkan sebelumnya di seluruh ethereum.org. Saat sebuah string diterjemahkan, string tersebut secara otomatis disimpan ke dalam TM proyek kami. Ini bisa menjadi alat yang berguna untuk membantu Anda menghemat waktu!
+Translation Memory (TM) adalah fitur Crowdin yang menyimpan semua string yang sebelumnya telah diterjemahkan di seluruh ethereum.org. Saat sebuah string diterjemahkan, string tersebut secara otomatis disimpan ke dalam TM proyek kami. Ini bisa menjadi alat yang berguna untuk membantu Anda menghemat waktu!
 
-- Lihat bagian "TM and MT Suggestions" dan Anda akan melihat bagaimana penerjemah lain menerjemahkan string yang sama atau serupa. Jika Anda menemukan saran dengan tingkat kecocokan yang tinggi, jangan ragu untuk merujuk ke terjemahan tersebut dengan mengkliknya.
-- Jika tidak ada apa pun dalam daftar, Anda dapat mencari terjemahan yang dibuat sebelumnya di TM dan menggunakannya kembali untuk konsistensi.
+- Lihat bagian "TM and MT Suggestions" (Saran TM dan MT) dan Anda akan melihat bagaimana penerjemah lain menerjemahkan string yang sama atau serupa. Jika Anda menemukan saran dengan tingkat kecocokan yang tinggi, jangan ragu untuk merujuk ke terjemahan tersebut dengan mengekliknya.
+- Jika tidak ada apa pun dalam daftar, Anda dapat mencari terjemahan yang dibuat sebelumnya di TM dan menggunakannya kembali demi konsistensi.
 
-![Tangkapan layar memori terjemahan](./translation-memory.png)
+![A screenshot of the translation memory](./translation-memory.png)
 
 ## Bagaimana cara menggunakan glosarium Crowdin? {#glossary}
 
@@ -69,34 +68,34 @@ Terminologi Ethereum adalah bagian penting lainnya dari pekerjaan terjemahan kam
 
 Glosarium Crowdin adalah tempat terbaik untuk klarifikasi istilah dan definisi. Ada dua cara untuk merujuk ke glosarium.
 
-- Pertama, ketika Anda menemukan istilah yang digarisbawahi pada string sumber, Anda dapat mengarahkan mouse ke atasnya dan melihat definisi singkatnya.
+- Pertama, ketika Anda menemukan istilah yang digarisbawahi pada string sumber, Anda dapat mengarahkan kursor mouse ke atasnya dan melihat definisi singkatnya.
 
-![Contoh definisi glosarium](./glossary-definition.png)
+![An example glossary definition](./glossary-definition.png)
 
-- Kedua, Jika Anda melihat istilah yang tidak familier bagi Anda tetapi tidak digarisbawahi, Anda dapat mencari di tab glosarium (tombol ketiga di kolom kanan). Anda akan menemukan penjelasan tentang istilah tertentu dan istilah yang sering digunakan dalam proyek.
+- Kedua, Jika Anda melihat istilah yang tidak familier bagi Anda tetapi tidak digarisbawahi, Anda dapat mencarinya di tab glosarium (tombol ketiga di kolom kanan). Anda akan menemukan penjelasan tentang istilah tertentu dan istilah yang sering digunakan dalam proyek.
 
-![Tangkapan layar yang menunjukkan di mana menemukan tab glosarium di Crowdin](./glossary-tab.png)
+![A screenshot showing where to find the glossary tab in Crowdin](./glossary-tab.png)
 
-- Jika Anda masih tidak dapat menemukannya, ini adalah kesempatan Anda untuk menambahkan istilah baru! Kami mendorong Anda untuk mencarinya di mesin pencari dan menambahkan deskripsinya ke glosarium. Ini akan sangat membantu penerjemah lain untuk lebih memahami istilah tersebut.
+- Jika Anda masih tidak dapat menemukannya, ini adalah kesempatan Anda untuk menambahkan istilah baru! Kami mendorong Anda untuk mencarinya di mesin pencari dan menambahkan deskripsinya ke glosarium. Hal ini akan sangat membantu penerjemah lain untuk lebih memahami istilah tersebut.
 
-![Tangkapan layar yang menunjukkan cara menambahkan istilah glosarium ke Crowdin](./add-glossary-term.png)
+![A screenshot showing how to add a glossary term to Crowdin](./add-glossary-term.png)
 
 ### Kebijakan terjemahan terminologi {#terminology}
 
-_Untuk nama (merek, perusahaan, orang) dan istilah teknologi baru (Beacon Chain, shard chain, dll.)_
+_Untuk nama (merek, perusahaan, orang) dan istilah teknologi baru (Rantai suar, rantai shard, dll.)_
 
-Ethereum menghadirkan banyak istilah baru yang baru-baru ini diciptakan. Beberapa istilah akan bervariasi dari satu penerjemah ke penerjemah lainnya karena tidak ada terjemahan resmi dalam bahasa masing-masing. Ketidakkonsistenan semacam itu dapat menyebabkan kesalahpahaman dan menurunkan keterbacaan.
+Ethereum menghadirkan banyak istilah baru yang baru-baru ini diciptakan. Beberapa istilah akan bervariasi dari satu penerjemah ke penerjemah lainnya karena tidak ada terjemahan resmi dalam bahasa mereka masing-masing. Ketidakkonsistenan semacam itu dapat menyebabkan kesalahpahaman dan menurunkan keterbacaan.
 
 Karena keragaman linguistik dan standardisasi yang berbeda dalam setiap bahasa, hampir tidak mungkin untuk menghasilkan kebijakan terjemahan terminologi terpadu yang dapat diadaptasi dalam semua bahasa yang didukung.
 
 Setelah pertimbangan yang cermat, kami telah mencapai keputusan untuk menyerahkan terminologi yang paling sering digunakan kepada Anda, para penerjemah.
 
-Inilah yang kami sarankan, ketika Anda menemukan istilah yang tidak familier bagi Anda:
+Berikut adalah saran kami, ketika Anda menemukan istilah yang tidak familier bagi Anda:
 
-- Rujuk ke [Glosarium istilah](#glossary), Anda mungkin menemukan bagaimana penerjemah lain sebelumnya menerjemahkannya. Jika Anda merasa istilah yang diterjemahkan sebelumnya tidak sesuai, jangan ragu untuk memulihkan terjemahan Anda dengan menambahkan istilah baru ke Glosarium Crowdin.
+- Rujuk ke [Glosarium istilah](#glossary), Anda mungkin menemukan bagaimana penerjemah lain sebelumnya menerjemahkannya. Jika Anda merasa istilah yang diterjemahkan sebelumnya tidak tepat, jangan ragu untuk memulihkan terjemahan Anda dengan menambahkan istilah baru ke Glosarium Crowdin.
 - Jika terjemahan sebelumnya tidak ada di Glosarium, kami mendorong Anda untuk mencarinya di mesin pencari atau artikel media yang menunjukkan bagaimana istilah tersebut sebenarnya digunakan di komunitas Anda.
 - Jika Anda tidak menemukan referensi sama sekali, jangan ragu untuk memercayai intuisi Anda dan menyarankan terjemahan baru ke bahasa Anda!
-- Jika Anda merasa kurang percaya diri untuk melakukannya, biarkan istilah tersebut tidak diterjemahkan. Terkadang, istilah bahasa Inggris lebih dari cukup dalam memberikan definisi yang akurat.
+- Jika Anda merasa kurang percaya diri untuk melakukannya, biarkan istilah tersebut tidak diterjemahkan. Terkadang, istilah bahasa Inggris sudah lebih dari cukup dalam menyampaikan definisi yang akurat.
 
 Kami menyarankan Anda membiarkan nama merek, perusahaan, dan personel tidak diterjemahkan karena terjemahan dapat menyebabkan kebingungan yang tidak perlu dan kesulitan SEO.
 
@@ -110,9 +109,9 @@ Proses peninjauannya mudah; setelah sekumpulan konten 100% diterjemahkan, kami m
 
 Saat ini, semua konten non-bahasa Inggris diterjemahkan langsung dari konten sumber bahasa Inggris, dan konten apa pun yang tidak ada dalam bahasa Inggris tidak dapat ditambahkan ke bahasa lain.
 
-Untuk menyarankan konten baru bagi ethereum.org, Anda dapat [membuat masalah](https://github.com/ethereum/ethereum-org-website/issues) di GitHub. Jika ditambahkan, konten akan ditulis dalam bahasa Inggris dan diterjemahkan ke bahasa lain menggunakan Crowdin.
+Untuk menyarankan konten baru bagi ethereum.org, Anda dapat [membuat *issue*](https://github.com/ethereum/ethereum-org-website/issues) di GitHub. Jika ditambahkan, konten akan ditulis dalam bahasa Inggris dan diterjemahkan ke bahasa lain menggunakan Crowdin.
 
-Kami berencana untuk menambahkan dukungan untuk penambahan konten non-bahasa Inggris dalam waktu dekat.
+Kami berencana untuk menambahkan dukungan bagi penambahan konten non-bahasa Inggris dalam waktu dekat.
 
 ## Hubungi kami {#contact}
 

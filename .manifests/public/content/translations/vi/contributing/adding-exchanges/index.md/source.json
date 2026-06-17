@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/adding-exchanges/index.md",
+  "generatedAt": "2026-06-08T07:42:53.583Z",
+  "rootHash": "cd570c438fb8",
+  "tree": {
+    "contentHash": "d7aa56adc4a5",
+    "anchorHash": "2dae93d0f69c",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "52b0dd711943",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1374aad8d5da"
+      },
+      "frontmatter:description": {
+        "contentHash": "f09fbb0c01d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:2": {
+        "contentHash": "119e9882313c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "37b61e339720",
+        "anchorHash": "0152aeef8597"
+      },
+      "prose:3": {
+        "contentHash": "7f7a0cb691b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "d22bcbb0cfa5",
+        "anchorHash": "afd4d39245df"
+      },
+      "prose:4": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-we-need": {
+        "contentHash": "05f10badbf7b",
+        "anchorHash": "d52aa1ed55de",
+        "labelHash": "725e68b763a9",
+        "children": {
+          "_label": {
+            "contentHash": "725e68b763a9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "4ba0e8a68d6d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "9bf012ba40a5",
+            "anchorHash": "85981604d5f8"
+          },
+          "prose:2": {
+            "contentHash": "e92e811aa9ac",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "add-exchange": {
+        "contentHash": "4692eab58389",
+        "anchorHash": "62121068a171",
+        "labelHash": "89537039b2c6",
+        "children": {
+          "_label": {
+            "contentHash": "89537039b2c6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d57f128e3738",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "97ce0ae34941",
+            "anchorHash": "361e30e0e546",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d673eaa36ae9"
+              },
+              "prose:0": {
+                "contentHash": "f3a0b68bee88",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "what-we-need",
+      "add-exchange"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

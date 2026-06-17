@@ -4,8 +4,9 @@ lang: es
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Reciba incentivos económicos por generar pronósticos precisos"
-summaryPoint2: Predicciones de alta calidad sobre eventos futuros
+summaryPoints:
+  - "Reciba incentivos económicos por generar pronósticos precisos"
+  - "Predicciones de alta calidad sobre eventos futuros"
 buttons:
   - content: Más información
     toId: "cómo-funcionan-los-mercados-de-predicción"
@@ -29,11 +30,11 @@ En teoría, dado que los apostadores pueden obtener ganancias al acertar, los me
 
 A diferencia de las predicciones tradicionales, los mercados de predicción basados en cadenas de bloques son:
 
-<CardGrid>
+<Grid>
   <Card title="Incentivado" emoji=":money_with_wings:" description="Los participantes depositan fondos reales, lo que se traduce en predicciones de alta calidad."/>
   <Card title="Descentralización" emoji="🌎" description="Usar la blockchain y contratos inteligentes garantiza pagos transparentes y automatizados." />
   <Card title="Precios definidos por el mercado" emoji="🤝" description="Los precios los fijan los traders al comprar y vender participaciones sobre resultados, en lugar de una casa de apuestas centralizada." />
-</CardGrid>
+</Grid>
 
 Incluso como observador del mercado, usted puede evaluar datos valiosos que no estarían disponibles de otro modo. Piense en lo siguiente:
 

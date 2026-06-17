@@ -4,13 +4,13 @@ metaTitle: Paiements sur Ethereum
 description: "Un aperçu des paiements sur Ethereum"
 lang: fr
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "Logo d’Ethereum accompagné de mains tendues."
-summaryPoint1: "Un monde où l’argent circule aussi librement que l’information"
-summaryPoint2: "Ouvert et global, permettant des transactions sans frontières pour tous"
-summaryPoint3: "Paiements reçus en moins d’une minute"
+summaryPoints:
+  - "Un monde où l’argent circule aussi librement que l’information"
+  - "Ouvert et global, permettant des transactions sans frontières pour tous"
+  - "Paiements reçus en moins d’une minute"
 ---
 
 Chaque jour, des millions de personnes font face au même défi : transférer de l’argent à travers le monde est lent, coûteux et souvent frustrant. Un freelance à Bali attend plusieurs jours que le paiement de son client à New York soit validé. Cela touche particulièrement les personnes vivant dans des régions où l’infrastructure bancaire est limitée, rendant leur participation à l’économie mondiale difficile.
@@ -26,11 +26,11 @@ Ce n'est pas un rêve lointain — cela se produit aujourd'hui sur Ethereum. Bie
 
 Pour des millions de personnes travaillant à l’étranger, envoyer de l’argent au pays est une nécessité régulière. Les services de transfert de fonds traditionnels s’accompagnent souvent de frais élevés et de délais de traitement longs. Ethereum propose une alternative intéressante.
 
-<CardGrid>
+<Grid>
   <Card title="Frais moins chers" emoji=":money_with_wings:" description="Les services de transfert d'argent facturent en moyenne jusqu'à 14 $ de frais. Les transactions Ethereum peuvent souvent être réalisées pour moins de 0,01 $."/>
   <Card title="Transferts plus rapides" emoji="📶" description="Les virements bancaires internationaux prennent plusieurs jours à être traités. Les transactions Ethereum sont réglées en quelques minutes." />
   <Card title="Ouvert à tous" emoji="🌎" description="Vous n'avez besoin que d'une connexion Internet et d'une application de portefeuille pour envoyer ou recevoir de l'Ether." />
-</CardGrid>
+</Grid>
 
 ## Accès aux monnaies mondiales {#access-to-global-currencies}
 

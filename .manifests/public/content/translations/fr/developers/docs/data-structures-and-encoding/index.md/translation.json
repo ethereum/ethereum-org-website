@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-16T22:27:44.424Z",
+  "englishManifestHash": "296f46770e92",
+  "placeholderOrder": [
+    "LINK-edb449",
+    "LINK-133fc6",
+    "LINK-7d9533",
+    "LINK-5ab9dd",
+    "LINK-14bdd2",
+    "LINK-febd74"
+  ],
+  "placeholderMap": {
+    "LINK-edb449": {
+      "type": "link",
+      "values": {
+        "url": "/run-a-node/"
+      }
+    },
+    "LINK-133fc6": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-7d9533": {
+      "type": "link",
+      "values": {
+        "url": "/whitepaper/"
+      }
+    },
+    "LINK-5ab9dd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/patricia-merkle-trie"
+      }
+    },
+    "LINK-14bdd2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/rlp"
+      }
+    },
+    "LINK-febd74": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/ssz"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:27:44.424Z",
+      "status": "success"
+    }
+  }
+}

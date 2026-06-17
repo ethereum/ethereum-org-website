@@ -1,7 +1,7 @@
 import { Check } from "lucide-react"
+import { getImageProps } from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
 
-import { Image } from "@/components/Image"
 import { LinkWithArrow } from "@/components/ui/Link"
 import {
   Section,
@@ -12,10 +12,12 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
+import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import FloatingCard from "./FloatingCard"
 
-import builtToLastImage from "@/public/images/homepage/built-to-last.png"
+import sectionImage from "@/public/images/heroes/garden.jpg"
+import sectionImagePortrait from "@/public/images/heroes/garden-portrait.png"
 
 type TrustLogosProps = {
   className?: string
@@ -32,6 +34,30 @@ const TrustLogos = async ({
   const uptime = numberToPercent(1, locale)
   const count = numberFormat(locale).format(10)
 
+  const portraitSizes = `(max-width: ${breakpointAsNumber["lg"] - 1}px) 384px, 512px`
+  const landscapeSizes = `(max-width: ${breakpointAsNumber["sm"] - 1}px) calc(100vw - 32px), 100vw`
+
+  const {
+    props: { srcSet: srcSetPortrait },
+  } = getImageProps({
+    alt: "",
+    ...sectionImagePortrait,
+    sizes: portraitSizes,
+  })
+
+  const {
+    props: { srcSet: srcSetLandscape, ...imgRest },
+  } = getImageProps({
+    alt: "",
+    ...sectionImage,
+    sizes: landscapeSizes,
+  })
+
+  // Remove blurWidth/blurHeight from imgRest to avoid React DOM warnings
+  // (Next.js getImageProps includes them but they're not valid HTML attributes)
+  delete (imgRest as Record<string, unknown>).blurWidth
+  delete (imgRest as Record<string, unknown>).blurHeight
+
   return (
     <Section
       id="trust"
@@ -41,12 +67,19 @@ const TrustLogos = async ({
       <div className="relative shrink-0 md:w-96 lg:w-128">
         <div className="relative min-h-[400px] md:min-h-[500px] lg:min-h-[700px]">
           <div className="absolute inset-0 w-full overflow-hidden rounded-4xl">
-            <Image
-              src={builtToLastImage}
-              alt={t("page-index-trust-image-alt")}
-              sizes="(max-width: 768px) 100vw, 1024px"
-              className="h-full w-full object-cover"
-            />
+            <picture>
+              <source
+                media={`(min-width: ${breakpointAsNumber["md"]}px)`}
+                srcSet={srcSetPortrait}
+                sizes={portraitSizes}
+              />
+              <source
+                media={`(max-width: ${breakpointAsNumber["md"] - 1}px)`}
+                srcSet={srcSetLandscape}
+                sizes={landscapeSizes}
+              />
+              <img {...imgRest} alt="" className="h-full w-full object-cover" />
+            </picture>
           </div>
 
           <FloatingCard className="absolute top-8 -left-4 z-10 shadow-lg md:top-12 lg:-left-8">

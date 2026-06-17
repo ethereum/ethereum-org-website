@@ -1,80 +1,79 @@
 ---
 title: "Dowód autorytetu (PoA)"
-description: "Wyjaśnienie protokołu konsensusu opartego na dowodzie autorytetu i jego roli w ekosystemie blockchain."
+description: "Wyjaśnienie protokołu konsensusu dowodu autorytetu i jego roli w ekosystemie blockchain."
 lang: pl
 ---
 
-**Dowód autorytetu (PoA)** to algorytm konsensusu oparty na reputacji, który jest zmodyfikowaną wersją [dowodu stawki](/developers/docs/consensus-mechanisms/pos/). Jest on używany głównie przez prywatne łańcuchy, sieci testowe i lokalne sieci deweloperskie. PoA jest algorytmem konsensusu opartym na reputacji, który wymaga zaufania do zestawu autoryzowanych sygnatariuszy do tworzenia bloków, w przeciwieństwie do mechanizmu opartego na stawkach w PoS.
+**Dowód autorytetu (PoA)** to oparty na reputacji algorytm konsensusu, który jest zmodyfikowaną wersją [dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos/). Jest on najczęściej używany przez prywatne łańcuchy, sieci testowe i lokalne sieci deweloperskie. PoA to oparty na reputacji algorytm konsensusu, który wymaga zaufania do zestawu autoryzowanych podmiotów podpisujących w celu tworzenia bloków, zamiast mechanizmu opartego na stawce w PoS.
 
 ## Wymagania wstępne {#prerequisites}
 
-Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznanie się z [transakcjami](/developers/docs/transactions/), [blokami](/developers/docs/blocks/) i [mechanizmami konsensusu](/developers/docs/consensus-mechanisms/).
+Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznać się z [transakcjami](/developers/docs/transactions/), [blokami](/developers/docs/blocks/) oraz [mechanizmami konsensusu](/developers/docs/consensus-mechanisms/).
 
 ## Czym jest dowód autorytetu (PoA)? {#what-is-poa}
 
-Dowód autorytetu jest zmodyfikowaną wersją **[dowodu stawki](/developers/docs/consensus-mechanisms/pos/) (PoS)**, który jest algorytmem konsensusu opartym na reputacji zamiast mechanizmu opartego na stawkach w PoS. Termin ten został po raz pierwszy wprowadzony w 2017 roku przez Gavina Wooda, a ten algorytm konsensusu jest używany głównie przez prywatne łańcuchy, sieci testowe i lokalne sieci deweloperskie, ponieważ eliminuje potrzebę posiadania wysokiej jakości zasobów, jak to ma miejsce w przypadku PoW, i przezwycięża problemy ze skalowalnością PoS, posiadając mały podzbiór węzłów przechowujących blockchain i produkujących bloki.
+Dowód autorytetu to zmodyfikowana wersja **[dowodu stawki](/developers/docs/consensus-mechanisms/pos/) (PoS)**, będąca algorytmem konsensusu opartym na reputacji, w przeciwieństwie do mechanizmu opartego na stawce w PoS. Termin ten został wprowadzony po raz pierwszy w 2017 roku przez Gavina Wooda, a ten algorytm konsensusu jest najczęściej używany przez prywatne łańcuchy, sieci testowe i lokalne sieci deweloperskie, ponieważ eliminuje potrzebę posiadania wysokiej jakości zasobów, jak ma to miejsce w przypadku dowodu pracy (PoW), oraz rozwiązuje problemy ze skalowalnością PoS poprzez posiadanie małego podzbioru węzłów przechowujących blockchain i tworzących bloki.
 
-Dowód autorytetu wymaga zaufania do zestawu autoryzowanych sygnatariuszy, którzy są ustawieni w [bloku genezy](/glossary/#genesis-block). W większości obecnych implementacji wszyscy autoryzowani sygnatariusze zachowują równą władzę i przywileje przy określaniu konsensusu łańcucha. Ideą stakingu reputacji jest to, że każdy autoryzowany walidator jest dobrze znany wszystkim dzięki takim rzeczom jak „znaj swojego klienta” (KYC) lub dzięki temu, że jedynym walidatorem jest dobrze znana organizacja – w ten sposób, jeśli walidator zrobi coś złego, jego tożsamość jest znana.
+Dowód autorytetu wymaga zaufania do zestawu autoryzowanych podpisujących, którzy są określeni w [bloku genezy](/glossary/#genesis-block). W większości obecnych implementacji wszyscy autoryzowani podpisujący zachowują równą władzę i przywileje podczas ustalania konsensusu łańcucha. Ideą stakingu reputacji jest to, że każdy autoryzowany walidator jest dobrze znany wszystkim dzięki procedurom takim jak KYC (poznaj swojego klienta), lub poprzez to, że jedynym walidatorem jest dobrze znana organizacja — w ten sposób, jeśli walidator zrobi coś złego, jego tożsamość jest znana.
 
-Istnieje wiele implementacji PoA, ale standardową implementacją Ethereum jest **clique**, która implementuje [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique jest przyjazny dla deweloperów i łatwy do wdrożenia, obsługując wszystkie typy synchronizacji klientów. Inne implementacje to [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) i [Aura](https://openethereum.github.io/Chain-specification).
+Istnieje wiele implementacji PoA, ale standardową implementacją Ethereum jest **clique**, która wdraża [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique to przyjazny dla deweloperów i łatwy do wdrożenia standard, obsługujący wszystkie typy synchronizacji klientów. Inne implementacje obejmują [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) oraz [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Jak to działa {#how-it-works}
 
-W PoA wybiera się zestaw autoryzowanych sygnatariuszy do tworzenia nowych bloków. Sygnatariusze są wybierani na podstawie swojej reputacji i są jedynymi, którzy mogą tworzyć nowe bloki. Sygnatariusze są wybierani w trybie okrężnym, a każdy z nich może utworzyć blok w określonych ramach czasowych. Czas tworzenia bloku jest stały, a sygnatariusze są zobowiązani do utworzenia bloku w tych ramach czasowych.
+W PoA wybierany jest zestaw autoryzowanych podpisujących do tworzenia nowych bloków. Podpisujący są wybierani na podstawie ich reputacji i tylko oni mają prawo tworzyć nowe bloki. Podpisujący są wybierani w systemie round-robin (karuzelowym), a każdy z nich może utworzyć blok w określonym przedziale czasowym. Czas tworzenia bloku jest stały, a podpisujący są zobowiązani do utworzenia bloku w tym przedziale czasowym.
 
-Reputacja w tym kontekście nie jest rzeczą wymierną, ale raczej reputacją znanych korporacji, takich jak Microsoft i Google. Stąd sposób wyboru zaufanych sygnatariuszy nie jest algorytmiczny, ale jest raczej normalnym ludzkim aktem _zaufania_, w którym podmiot, powiedzmy na przykład Microsoft, tworzy prywatną sieć PoA pomiędzy setkami lub tysiącami startupów i sam odgrywa rolę jedynego zaufanego sygnatariusza z możliwością dodania w przyszłości innych znanych sygnatariuszy, takich jak Google. Startupy bez wątpienia zaufałyby, że Microsoft będzie zawsze działał w uczciwy sposób i korzystał z sieci. Rozwiązuje to potrzebę stakowania w różnych małych/prywatnych sieciach, które zostały zbudowane w różnych celach, aby utrzymać je zdecentralizowane i działające, wraz z potrzebą górników, co zużywa dużo energii i zasobów. Niektóre prywatne sieci używają standardu PoA, takie jak VeChain, a niektóre go modyfikują, jak Binance, który używa [PoSA](https://academy.binance.com/en/glossary/proof-of-staked-authority-posa), co jest niestandardową, zmodyfikowaną wersją PoA i PoS.
+Reputacja w tym kontekście nie jest wartością wymierną, ale raczej reputacją dobrze znanych korporacji, takich jak Microsoft i Google. Dlatego sposób wyboru zaufanych podpisujących nie jest algorytmiczny, lecz opiera się na zwykłym ludzkim akcie _zaufania_. Przykładowo, jeśli podmiot taki jak Microsoft tworzy prywatną sieć PoA pomiędzy setkami lub tysiącami startupów i przyjmuje rolę jedynego zaufanego podpisującego (z możliwością dodania w przyszłości innych znanych podpisujących, takich jak Google), startupy bez wątpienia ufałyby, że Microsoft zawsze będzie działał uczciwie, i korzystałyby z tej sieci. Rozwiązuje to potrzebę stakowania w różnych małych/prywatnych sieciach, które zostały zbudowane w różnych celach, aby utrzymać je jako zdecentralizowane i funkcjonujące, a także eliminuje potrzebę posiadania górników, co zużywa dużo energii i zasobów. Niektóre prywatne sieci używają standardu PoA w jego oryginalnej formie, jak np. VeChain, a inne go modyfikują, jak Binance, które używa [PoSA](https://academy.binance.com/en/glossary/proof-of-staked-authority-posa), będącego niestandardową, zmodyfikowaną wersją PoA i PoS.
 
-Proces głosowania jest przeprowadzany przez samych sygnatariuszy. Każdy sygnatariusz głosuje za dodaniem lub usunięciem sygnatariusza w swoim bloku podczas tworzenia nowego bloku. Głosy są podliczane przez węzły, a sygnatariusze są dodawani lub usuwani na podstawie głosów osiągających określony próg `SIGNER_LIMIT`.
+Proces głosowania jest przeprowadzany przez samych podpisujących. Każdy podpisujący oddaje głos za dodaniem lub usunięciem podpisującego w swoim bloku podczas tworzenia nowego bloku. Głosy są zliczane przez węzły, a podpisujący są dodawani lub usuwani na podstawie głosów, które osiągną określony próg `SIGNER_LIMIT`.
 
-Może wystąpić sytuacja, w której pojawią się małe forki. Trudność bloku zależy od tego, czy blok został podpisany w kolejce, czy poza nią. Bloki podpisane „w kolejce” mają trudność 2, a bloki podpisane „poza kolejką” mają trudność 1. W przypadku małych forków łańcuch z większością sygnatariuszy zatwierdzających bloki „w kolejce” zgromadzi największą trudność i wygra.
+Może dojść do sytuacji, w której wystąpią małe forki (rozgałęzienia); trudność bloku zależy od tego, czy blok został podpisany w swojej kolejności, czy poza nią. Bloki „w kolejności” (in turn) mają trudność 2, a bloki „poza kolejnością” (out of turn) mają trudność 1. W przypadku małych forków, łańcuch, w którym większość podpisujących pieczętuje bloki „w kolejności”, zgromadzi największą trudność i wygra.
 
 ## Wektory ataków {#attack-vectors}
 
-### Złośliwi sygnatariusze {#malicious-signers}
+### Złośliwi podpisujący {#malicious-signers}
 
-Złośliwy użytkownik może zostać dodany do listy sygnatariuszy, lub klucz/maszyna podpisująca może zostać przejęta. W takim scenariuszu protokół musi być w stanie obronić się przed reorganizacjami i spamem. Proponowanym rozwiązaniem jest to, że przy liście N autoryzowanych sygnatariuszy, każdy sygnatariusz może wybić tylko 1 blok na każde K bloków. Zapewnia to ograniczenie szkód, a pozostali walidatorzy mogą odwołać złośliwego użytkownika.
+Złośliwy użytkownik może zostać dodany do listy podpisujących lub klucz/maszyna do podpisywania może zostać skompromitowana. W takim scenariuszu protokół musi być w stanie obronić się przed reorganizacją łańcucha i spamowaniem. Proponowane rozwiązanie polega na tym, że przy liście N autoryzowanych podpisujących, każdy z nich może wybijać tylko 1 blok na każde K bloków. Zapewnia to ograniczenie szkód, a pozostali walidatorzy mogą przegłosować usunięcie złośliwego użytkownika.
 
 ### Cenzura {#censorship-attack}
 
-Innym interesującym wektorem ataku jest sytuacja, w której sygnatariusz (lub grupa sygnatariuszy) próbuje cenzurować bloki głosujące za usunięciem ich z listy autoryzacyjnej. Aby obejść ten problem, dozwolona częstotliwość bicia przez sygnatariuszy jest ograniczona do 1 z N/2. Zapewnia to, że złośliwi sygnatariusze muszą kontrolować co najmniej 51% kont podpisujących, w którym to momencie skutecznie staliby się nowym źródłem prawdy dla łańcucha.
+Innym interesującym wektorem ataku jest sytuacja, w której podpisujący (lub grupa podpisujących) próbuje cenzurować bloki zawierające głosy za usunięciem ich z listy autoryzacji. Aby temu zaradzić, dozwolona częstotliwość wybijania przez podpisujących jest ograniczona do 1 na N/2. Gwarantuje to, że złośliwi podpisujący muszą kontrolować co najmniej 51% kont podpisujących, w którym to momencie staliby się oni de facto nowym źródłem prawdy dla łańcucha.
 
 ### Spam {#spam-attack}
 
-Innym niewielkim wektorem ataku jest wstrzykiwanie przez złośliwych sygnatariuszy nowych propozycji głosowania do każdego bloku, który wybijają. Ponieważ węzły muszą podliczać wszystkie głosy, aby stworzyć aktualną listę autoryzowanych sygnatariuszy, muszą rejestrować wszystkie głosy w czasie. Bez ograniczenia okna głosowania, mogłoby to rosnąć powoli, ale bez ograniczeń. Rozwiązaniem jest umieszczenie _ruchomego_ okna W bloków, po którym głosy są uważane za nieaktualne. _Rozsądnym oknem może być 1-2 epok._
+Kolejnym drobnym wektorem ataku są złośliwi podpisujący, którzy wstrzykują nowe propozycje głosowania do każdego wybijanego przez siebie bloku. Ponieważ węzły muszą zliczać wszystkie głosy, aby utworzyć rzeczywistą listę autoryzowanych podpisujących, muszą one rejestrować wszystkie głosy w czasie. Bez nałożenia limitu na okno głosowania, mogłoby to rosnąć powoli, ale w sposób nieograniczony. Rozwiązaniem jest zastosowanie _przesuwnego_ okna W bloków, po którym głosy są uważane za nieaktualne. _Rozsądnym oknem mogą być 1-2 epoki._
 
 ### Bloki współbieżne {#concurrent-blocks}
 
-W sieci PoA, gdy jest N autoryzowanych sygnatariuszy, każdy sygnatariusz może wybić 1 blok z K, co oznacza, że N-K+1 walidatorów może bić bloki w dowolnym momencie. Aby zapobiec wyścigowi tych walidatorów o bloki, każdy sygnatariusz powinien dodać mały losowy „offset” do czasu, w którym wydaje nowy blok. Chociaż ten proces zapewnia, że małe forki są rzadkie, sporadyczne forki mogą się nadal zdarzać, tak jak w sieci głównej. Jeśli okaże się, że sygnatariusz nadużywa swojej władzy i powoduje chaos, pozostali sygnatariusze mogą go odwołać.
+W sieci PoA, gdy istnieje N autoryzowanych podpisujących, każdy z nich może wybijać 1 blok na K, co oznacza, że N-K+1 walidatorów może wybijać w dowolnym momencie. Aby zapobiec wyścigowi tych walidatorów o bloki, każdy podpisujący powinien dodać małe, losowe „przesunięcie” (offset) do czasu publikacji nowego bloku. Chociaż proces ten zapewnia, że małe forki są rzadkie, sporadyczne rozgałęzienia wciąż mogą się zdarzać, podobnie jak w sieci głównej. Jeśli okaże się, że podpisujący nadużywa swojej władzy i powoduje chaos, pozostali podpisujący mogą go przegłosować i usunąć.
 
-Jeśli na przykład jest 10 autoryzowanych sygnatariuszy i każdy sygnatariusz może utworzyć 1 blok z 20, to w danym momencie 11 walidatorów może tworzyć bloki. Aby zapobiec ich wyścigowi o tworzenie bloków, każdy sygnatariusz dodaje mały losowy „offset” do czasu, w którym wydaje nowy blok. Zmniejsza to występowanie małych forków, ale nadal pozwala na sporadyczne forki, jak widać w sieci głównej Ethereum. Jeśli sygnatariusz nadużyje swojej władzy i spowoduje zakłócenia, może zostać odwołany z sieci.
+Jeśli na przykład jest 10 autoryzowanych podpisujących, a każdy z nich może utworzyć 1 blok na 6, to w dowolnym momencie 5 walidatorów może tworzyć bloki. Aby zapobiec ich wyścigowi w tworzeniu bloków, każdy podpisujący dodaje małe, losowe „przesunięcie” do czasu publikacji nowego bloku. Zmniejsza to występowanie małych forków, ale nadal pozwala na sporadyczne rozgałęzienia, jak widać to w sieci głównej Ethereum. Jeśli podpisujący nadużyje swojego autorytetu i spowoduje zakłócenia, może zostać usunięty z sieci w drodze głosowania.
 
-## Zalety i wady {#pros-and-cons}
+## Plusy i minusy {#pros-and-cons}
 
-| Zalety                                                                                                                                                                                 | Wady                                                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bardziej skalowalny niż inne popularne mechanizmy, takie jak PoS i PoW, ponieważ opiera się na ograniczonej liczbie sygnatariuszy bloków.                              | Sieci PoA zazwyczaj mają stosunkowo niewielką liczbę węzłów walidujących. To sprawia, że sieć PoA jest bardziej scentralizowana.                        |
-| Blockchainy PoA są niezwykle tanie w prowadzeniu i utrzymaniu.                                                                                                         | Zostanie autoryzowanym sygnatariuszem jest zazwyczaj poza zasięgiem zwykłej osoby, ponieważ blockchain wymaga podmiotów o ugruntowanej reputacji.                       |
-| Transakcje są potwierdzane bardzo szybko, co może zająć mniej niż 1 sekundę, ponieważ do walidacji nowych bloków wymagana jest tylko ograniczona liczba sygnatariuszy. | Złośliwi sygnatariusze mogliby dokonać reorganizacji, podwójnego wydatkowania, cenzurować transakcje w sieci. Te ataki są łagodzone, ale wciąż możliwe. |
+| Plusy                                                                                                                                                                     | Minusy                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bardziej skalowalny niż inne popularne mechanizmy, takie jak PoS i PoW, ponieważ opiera się na ograniczonej liczbie podpisujących bloki                                   | Sieci PoA zazwyczaj mają stosunkowo niewielką liczbę węzłów walidujących. Sprawia to, że sieć PoA jest bardziej scentralizowana.                                      |
+| Blockchainy PoA są niezwykle tanie w utrzymaniu i działaniu                                                                                                               | Zostanie autoryzowanym podpisującym jest zazwyczaj poza zasięgiem zwykłego człowieka, ponieważ blockchain wymaga podmiotów o ugruntowanej reputacji.                  |
+| Transakcje są potwierdzane bardzo szybko, czas ten może wynosić mniej niż 1 sekundę, ponieważ do walidacji nowych bloków wymagana jest tylko ograniczona liczba podpisujących | Złośliwi podpisujący mogą przeprowadzić reorganizację łańcucha, podwójne wydatkowanie lub cenzurować transakcje w sieci; ataki te są łagodzone, ale nadal możliwe |
 
 ## Dalsza lektura {#further-reading}
 
-- [EIP-225](https://eips.ethereum.org/EIPS/eip-225) _standard Clique_
-- [Badanie Proof of Authority](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md) _Kryptoekonomia_
-- [Czym jest Proof of Authority](https://forum.openzeppelin.com/t/proof-of-authority/3577) _OpenZeppelin_
-- [Wyjaśnienie Proof of Authority](https://academy.binance.com/en/articles/proof-of-authority-explained) _binance_
+- [EIP-225](https://eips.ethereum.org/EIPS/eip-225) _Standard Clique_
+- [Badanie nad dowodem autorytetu](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md) _Kryptoekonomia_
+- [Czym jest dowód autorytetu](https://forum.openzeppelin.com/t/proof-of-authority/3577) _OpenZeppelin_
+- [Wyjaśnienie dowodu autorytetu](https://academy.binance.com/en/articles/proof-of-authority-explained) _Binance_
 - [PoA w blockchainie](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Wyjaśnienie Clique](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [Przestarzałe PoA, specyfikacja Aura](https://openethereum.github.io/Chain-specification)
 - [IBFT 2.0, inna implementacja PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
-### Jesteś raczej wzrokowcem? Dla wzrokowców {#visual-learner}
+### Wolisz uczyć się wzrokowo? {#visual-learner}
 
 Obejrzyj wizualne wyjaśnienie dowodu autorytetu:
 
-<YouTube id="Mj10HSEM5_8" />
+<VideoWatch slug="proof-of-authority-explained" />
 
 ## Powiązane tematy {#related-topics}
 
-- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
-- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-
+- [Dowód pracy (PoW)](/developers/docs/consensus-mechanisms/pow/)
+- [Dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos/)

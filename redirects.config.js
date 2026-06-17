@@ -101,7 +101,8 @@ module.exports = [
   ["/enterprise/private-ethereum", "https://institutions.ethereum.org/"],
   ["/enterprise/use-cases", "https://institutions.ethereum.org/", false],
   ["/dashboards", "/resources"],
-  ["/tds", "/trillion-dollar-security"],
+  ["/tds", "/reports/trillion-dollar-security"],
+  ["/trillion-dollar-security", "/reports/trillion-dollar-security"],
   ["/10-years", "/10years"],
   ["/history", "/ethereum-forks"],
   ["/developers/docs/scaling/rollups", "/developers/docs/scaling/#rollups"],
@@ -115,6 +116,12 @@ module.exports = [
     "/contributing/translation-program/blog-translations",
     "/contributing/translation-program/",
   ],
+  ["/contributing/translation-program/translatathon/details", "/contributing/"],
+  [
+    "/contributing/translation-program/translatathon/terms-and-conditions",
+    "/contributing/",
+  ],
+  ["/contributing/translation-program/translatathon", "/contributing/"],
   ["/donate", "/"],
   [
     "/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash",
@@ -167,4 +174,11 @@ module.exports = [
   ["/developers/docs/privacy-enhancements", "/privacy/"],
   ["/developers/docs/wallets", "/wallets/"],
   ["/blog", "https://blog.ethereum.org"],
+  // Storybook (Chromatic) convenience redirects
+  ["/storybook", "https://master--63b7ea99632763723c7f4d6b.chromatic.com/"],
+  ["/storybook/dev", "https://dev--63b7ea99632763723c7f4d6b.chromatic.com/"],
+  [
+    "/storybook/staging",
+    "https://staging--63b7ea99632763723c7f4d6b.chromatic.com/",
+  ],
 ]

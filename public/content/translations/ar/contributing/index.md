@@ -1,119 +1,116 @@
 ---
-title: "المساهمة"
-description: "تعرف على الطرق المختلفة التي تمكنك على المساهمة في ethereum.org"
+title: "المساهمة في ⁦ethereum.org⁩ 🦄"
+metaTitle: "المساهمة"
+description: "تعرف على الطرق المختلفة التي يمكنك من خلالها المساهمة في ⁦ethereum.org⁩"
 lang: ar
 ---
 
-# المساهمة في ethereum.org 🦄 {#contributing-to-ethereumorg}
+موقع <span dir="ltr">ethereum.org</span> هو مشروع مفتوح المصدر يضم أكثر من **<span dir="ltr">+12 000</span>** مساهم يساعدون في ترجمة الموقع وكتابته وتصميمه وصيانته.
 
-Ethereum.org هو مشروع مفتوح المصدر يضم **أكثر من 12,000** مساهم يساعدون في ترجمة الموقع الإلكتروني وكتابته وتصميمه وصيانته.
-
-نحن مجتمع ترحيبي سيساعدك على النمو والتثقيف في نظام إيثريوم البيئي بينما تساهم أيضًا بشكل هادف وتحصل على خبرة عملية ذات صلة!
+نحن مجتمع مرحب سيساعدك على النمو والتعلم في نظام [إيثيريوم](/) البيئي مع تقديم مساهمة هادفة واكتساب خبرة عملية ذات صلة!
 
 ## طرق المساهمة {#ways-to-contribute}
 
-**ترجمات**
-
-- [انضم إلى برنامج الترجمة](/contributing/translation-program/) – ساعدنا في إتاحة ethereum.org بلغات جديدة
+**الترجمات**
+- [الانضمام إلى برنامج الترجمة](/contributing/translation-program/) – ساعدنا في توفير <span dir="ltr">ethereum.org</span> بلغات جديدة
 
 **التطوير**
-
-- [العمل على مشكلة مفتوحة](https://github.com/ethereum/ethereum-org-website/issues) – عمل حددنا أنه بحاجة إلى إنجاز
+- [العمل على مشكلة مفتوحة](https://github.com/ethereum/ethereum-org-website/issues) – الأعمال التي حددناها وتحتاج إلى إنجاز
 
 **التصميم**
-
-- [ساعد في تصميم الموقع](/contributing/design/) – يمكن للمصممين من جميع المستويات المساهمة في تحسين الموقع
+- [المساعدة في تصميم الموقع](/contributing/design/) – يمكن للمصممين من جميع المستويات المساهمة في تحسين الموقع
 
 **المحتوى**
-
 - [إنشاء/تعديل المحتوى](/contributing/#how-to-update-content) – اقتراح صفحات جديدة أو إجراء تعديلات على ما هو موجود بالفعل
-- [إضافة موارد المجتمع](/contributing/content-resources/) – أضف مقالًا أو موردًا مفيدًا إلى صفحة ذات صلة
-- [اقترح مورد تصميم](/contributing/design/adding-design-resources/) – إضافة موارد تصميم مفيدة وتحديثها وحذفها
-- [الاختبارات](/contributing/quizzes/) – إضافة وتحديث وحذف بنوك أسئلة الاختبار لصفحة ذات صلة
+- [كتابة مقال باني](/contributing/adding-articles/) - المساهمة بمقال لقسم [الأحدث](/latest/)
+- [إضافة موارد المجتمع](/contributing/content-resources/) – إضافة مقال أو مورد مفيد إلى صفحة ذات صلة
+- [اقتراح تقرير](/contributing/adding-reports/) - اقتراح تقرير بحثي لصفحة [التقارير](/reports/)
+- [اقتراح مورد تصميم](/contributing/design/adding-design-resources/) – إضافة وتحديث وحذف موارد التصميم المفيدة
+- [الاختبارات](/contributing/quizzes/) – إضافة وتحديث وحذف بنوك أسئلة الاختبارات لصفحة ذات صلة
+- [اقتراح فيديو](/contributing/adding-videos/) – اقتراح فيديو تعليمي لمعرض مقاطع الفيديو
 
-**أفكار مميزة**
-
-- [اطلب ميزة](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – أخبرنا بأي أفكار لديك لميزة أو تصميم جديد
+**أفكار الميزات**
+- [طلب ميزة](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – أخبرنا بأي أفكار لديك لميزة أو تصميم جديد
 
 **قوائم المنتجات**
+- [إضافة منصة تداول](/contributing/adding-exchanges/) – إضافة منصة تداول إلى [أداة البحث عن منصات التداول](/get-eth/#country-picker) الخاصة بنا
+- [إضافة منتج](/contributing/adding-products/) – إضافة تطبيق لامركزي (<span dir="ltr">dapp</span>) أو محفظة إلى صفحة ذات صلة
+- [إضافة أدوات المطورين](/contributing/adding-developer-tools/) – إضافة أداة مطور إلى صفحة ذات صلة
+- [إضافة طبقة 2 (<span dir="ltr">L2</span>)](/contributing/adding-layer-2s/) – إضافة طبقة 2 إلى صفحة ذات صلة
+- [إضافة منتج أو خدمة تخزين](/contributing/adding-staking-products/) – إضافة مشروع يساعد في تسهيل التخزين الفردي، أو التخزين المجمع، أو التحصيص كخدمة
+- [إضافة محفظة](/contributing/adding-wallets/) – إضافة محفظة لصفحة [البحث عن المحافظ](/wallets/find-wallet/)
+- [اقتراح مشروع لصفحة العلم اللامركزي (<span dir="ltr">DeSci</span>) الخاصة بنا](/contributing/adding-desci-projects/) – إضافة مشروع مبني على إيثيريوم يساهم في العلم اللامركزي
+- [إضافة مورد](/contributing/adding-resources/) – إضافة مورد مفيد إلى أي صفحة ذات صلة
 
-- [أضف منصة تداول](/contributing/adding-exchanges/) – أضف منصة تداول إلى [مُكتشِف منصات التداول](/get-eth/#country-picker) الخاص بنا
-- [أضف منتجًا](/contributing/adding-products/) – أضف تطبيقًا لامركزيًا أو محفظة إلى صفحة ذات صلة
-- [إضافة أدوات المطورين](/contributing/adding-developer-tools/) – أضف أداة مطور إلى صفحة ذات صلة
-- [إضافة طبقة ثانية (Layer 2)](/contributing/adding-layer-2s/) – أضف طبقة ثانية (Layer 2) إلى صفحة ذات صلة
-- [أضف منتج أو خدمة تخزين](/contributing/adding-staking-products/) – أضف مشروعًا يساعد على تسهيل التخزين الفردي، أو التخزين المجمع، أو التخزين كخدمة
-- [أضف محفظة](/contributing/adding-wallets/) – أضف محفظة إلى [صفحة البحث عن المحافظ](/wallets/find-wallet/)
-- [اقترح مشروعًا لصفحة DeSci الخاصة بنا](/contributing/adding-desci-projects/) – أضف مشروعًا مبنيًا على إيثريوم يساهم في العلوم اللامركزية
+هل لديك أي أسئلة؟ 🤔 انضم إلى [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا
+## مهام أولى جيدة لبدء المساهمة {#good-first-tasks-to-start-contributing}
 
-أي أسئلة؟ 🤔 انضم إلى [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا
+هذه بعض المهام الحالية التي يمكنك مساعدتنا في حلها وتحمل مسؤوليتها. بالنسبة لمعظمها، ستحتاج إلى حساب <span dir="ltr">GitHub</span> حيث يتم إجراء معظم التغييرات على الموقع من خلال <span dir="ltr">GitHub</span>.
 
-## مهام أولى جيدة للبدء في المساهمة
+<IssuesList my={8} />
 
-هذه بعض المهام الحالية التي يمكنك مساعدتنا في حلها وتحمل المسؤولية عنها. بالنسبة لأغلب المستخدمين، ستحتاج إلى حساب غيت هاب، حيث يتم إجراء معظم التغييرات على موقع الويب من خلال غيت هاب.
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">عرض جميع المهام</ButtonLink>
 
-<IssuesList issues={gfissues} my={8} />
+## كيفية العمل على <span dir="ltr">ethereum.org</span> {#how-to-update-content}
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">عرض كل المهام</ButtonLink>
+إذا كنت ترغب في المساهمة في [برنامج الترجمة](/contributing/translation-program/)، نطلب منك إنشاء حساب على [<span dir="ltr">Crowdin</span>](https://crowdin.com/project/ethereum-org). لكل شيء آخر – إضافة أو تعديل المحتوى أو المرئيات على الموقع، إصلاح الأخطاء، العمل على المهام المفتوحة – ستحتاج إلى حساب [<span dir="ltr">GitHub</span>](https://github.com/).
 
-## كيفية العمل على ethereum.org {#how-to-update-content}
+تتم جميع التحديثات عبر عملية طلبات السحب (PR) في <span dir="ltr">GitHub</span>. هذا يعني أنك تقوم بإنشاء نسخة محلية من الموقع، وإجراء تغييراتك، وطلب دمج تغييراتك. إذا لم تقم بذلك من قبل، فاتبع التعليمات الموجودة في أسفل [مستودع <span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website) الخاص بنا.
 
-إذا كنت ترغب في المساهمة في [برنامج الترجمة](/contributing/translation-program/)، فنحن نطلب منك إنشاء حساب على [كراودين](https://crowdin.com/project/ethereum-org). لكل شيء آخر – إضافة أو تعديل المحتوى أو العناصر المرئية للموقع، وإصلاح الأخطاء، والعمل على المهام المفتوحة – ستحتاج إلى حساب على [غيت هاب](https://github.com/).
+لا تحتاج إلى إذن للعمل على أي شيء، ولكن من الأفضل دائمًا إعلامنا بما تخطط للقيام به. يمكنك القيام بذلك عن طريق:
 
-تتم كل التحديثات عبر عملية سحب الطلب (PR) في غيت هاب. هذا يعني أنك تنشئ نسخة محلية للموقع لكي تقوم بتغييرات في النهاية يمكنك أن تطلب الدمج. إذا لم تكن قد فعلت هذا من قبل، فاتبع التعليمات الموجودة أسفل [مستودع غيت هاب](https://github.com/ethereum/ethereum-org-website) الخاص بنا.
-
-أنت لست في حاجة إلى الإذن من أجل العمل على شيء ما, لكن من المحبب أن تطلعنا على ما تخطط للقيام به. بمكنك القيام بهذا الأخير عن طريق:
-
-- التعليق على مشكلة أو طلب سحب (PR) في [غيت هاب](https://github.com/ethereum/ethereum-org-website)
+- التعليق على مشكلة أو طلب سحب (PR) في [<span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website)
 - المراسلة على [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا
 
-قبل أن تبدأ, تيقن من أنك على دراية بما يلي:
+قبل المساهمة، تأكد من أنك على دراية بما يلي:
 
-- [الرؤية المتطورة لـ ethereum.org](/about/)
+- [الرؤية المتطورة لـ <span dir="ltr">ethereum.org</span>](/about/)
 - [مبادئ التصميم](/contributing/design-principles/) الخاصة بنا
 - [دليل الأسلوب](/contributing/style-guide/) الخاص بنا
-- [مدونة السلوك](/community/code-of-conduct) الخاصة بنا
+- [قواعد السلوك](/community/code-of-conduct) الخاصة بنا
 
-## كيفية اتخاذ القرارات بشأن الموقع {#how-decisions-about-the-site-are-made}
+## كيف يتم اتخاذ القرارات بشأن الموقع {#how-decisions-about-the-site-are-made}
 
-تتخذ القرارات الخاصة بالتعديلات الفردية أو تطوير التصميم و التحديثات الأساسية, عن طريق فريق أفراده متوزعين عبر جميع أنحاء النظام الإيكولوجي لمؤسسة إيثيريوم. من بين أعضاء هذا الفريق نجد: مديري المشاريع, المبرمجون, المصممون, فرع التسويق و الاتصالات و خبراء المواضيع. آراء أعضاء مجتمعنا هي أساس كل قرار, لذلك يرجى طرح الأسئلة في المشكلات, عرض تعديلات أو تواصل مع الفريق من خلال:
+يتم اتخاذ القرارات المتعلقة بطلبات السحب (PRs) الفردية، وتطور التصميم، والترقيات الرئيسية من قبل فريق من جميع أنحاء نظام إيثيريوم البيئي. يضم هذا الفريق مديري مشاريع، ومطورين، ومصممين، ومسؤولي تسويق واتصالات، وخبراء في الموضوع. تُوجه مدخلات المجتمع كل قرار: لذا يرجى طرح الأسئلة في المشكلات، أو إرسال طلبات السحب، أو الاتصال بالفريق:
 
-- [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [<span dir="ltr">website@ethereum.org</span>](mailto:website@ethereum.org)
+- [<span dir="ltr">@ethdotorg</span>](https://twitter.com/ethdotorg)
 - [خادم ديسكورد](https://discord.gg/ethereum-org)
 
 ### ملاحظة حول الانتحال {#plagiarism}
 
-عند مساهمتك بأي محتوى أو أداة في إيثيروم.org,بجب عليك استعمال عملك أو محتواك الأصلي فقط حيث أنك تملك حقوق لنشره. تستعمل العديد من مشاريع النظام الإيكولوجي لإيثيريوم, ترخيص مفتوح المصدر الذي يسمح بتبادل المعلومات بحُرية. لكن إن تعذر إيجاد هذه المعلومة, فلا تحاول إضافتها إلى إيثيريوم.org. وسيتم رفض كل طلب تعديل ظهر عليه أي نوع من السرقة الفكرية.
+استخدم فقط عملك الأصلي أو المحتوى الذي لديك إذن باستخدامه عند المساهمة بأي محتوى أو عنصر في <span dir="ltr">ethereum.org</span>. تستخدم العديد من المشاريع داخل نظام إيثيريوم البيئي تراخيص مفتوحة المصدر تسمح بالمشاركة المجانية للمعلومات. ومع ذلك، إذا لم تتمكن من العثور على هذه المعلومات، فلا تحاول إضافتها إلى <span dir="ltr">ethereum.org</span>. سيتم رفض أي طلبات سحب تُعتبر انتحالاً.
 
-## هل هذه تجربتك الأولى مع المصادر المفتوحة؟ جديد في مجال المصادر المفتوحة؟ {#new-to-open-source}
+## هل أنت جديد في المصادر المفتوحة؟ {#new-to-open-source}
 
-لدينا في مستودع غيت هاب الخاص بنا مشكلات سهلة مصممة خصيصًا للمطورين الجدد في مجال المصادر المفتوحة، وتحمل تصنيف [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+لدينا مشكلات ذات حاجز دخول منخفض في مستودع <span dir="ltr">GitHub</span> الخاص بنا مصممة خصيصًا للمطورين الجدد في المصادر المفتوحة وتحمل تصنيف [مشكلة أولى جيدة](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-## اطلب رمز الإنجاز Onchain (OAT) الخاص بك {#oat}
+## مطالبة برمز إنجاز على السلسلة (OAT) الخاص بك {#oat}
 
-إذا تم دمج مساهمتك في ethereum.org، فستتاح لك فرصة للمطالبة بشارة خاصة على [Galxe](https://app.galxe.com/quest/ethereumorg). رمز الإنجاز على السلسلة (OAT) هو دليل على أنك ساعدت في جعل النظام البيئي أكثر روعة.
+إذا تم دمج مساهمتك في <span dir="ltr">ethereum.org</span>، فستتاح لك فرصة المطالبة بشارة خاصة على [<span dir="ltr">Galxe</span>](https://app.galxe.com/quest/ethereumorg). رمز الإنجاز على السلسلة (OAT) هو دليل على أنك ساعدت في جعل النظام البيئي أكثر روعة.
 
-[المزيد عن رموز OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
-
-### كيفية المطالبة
-
-1. انضم إلى [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا.
-2. الصق رابط مساهمتك في قناة `#🥇 | proof-of-contribution`.
-3. انتظر أحد أعضاء فريقنا ليرسل لك رابطًا إلى OAT الخاص بك.
-4. اطلب OAT الخاص بك!
-
-يجب عليك فقط استخدام محافظ الحفظ الذاتي للمطالبة بـ OATs. لا تستخدم حسابات التبادل أو الحسابات الأخرى التي لا تمتلك مفاتيحها الخاصة، حيث لن تسمح لك هذه الحسابات بالوصول إلى مفاتيح OAT الخاصة بك وإدارتها.
-
-## طالب بـ جيت بي أو إيه بي الخاص بك {#claim-gitpoap}
-
-ستعترف منصة جيت بي أو إيه بي تلقائيا على مساهماتك و تسمح لك بالحصول على POAP فريدة من نوعها خاصة بالمساهمين و يتم ذلك على منصتها!
+[المزيد حول رموز OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### كيفية المطالبة {#how-to-claim}
 
-1. تفضل بزيارة [جيت بي أو إيه بي](https://www.gitpoap.io).
-2. سجل باستعمال محفظتك أو بريدك الإلكتروني عبر خيارات التسجيل المتاحة.
-3. ابحث عن اسم المستخدم لغيت هاب أو عنوان ETH أو أسماء الإي إن إس أو أي جيت بي أو إيه بي للتحقق إذا كنت مؤهل.
-4. إذا كان حسابك على غيت هاب مؤهل يمكنك عندها إستلام جيت بي أو إيه بي الخاصة بك!
+1. انضم إلى [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا.
+2. الصق رابطًا لمساهمتك في قناة `#🥇 | proof-of-contribution`.
+3. انتظر حتى يرسل لك أحد أعضاء فريقنا رابطًا لرمز OAT الخاص بك.
+4. طالب برمز OAT الخاص بك!
+
+يجب عليك استخدام محافظ حفظ ذاتي فقط للمطالبة برموز OAT. لا تستخدم حسابات منصات التداول أو الحسابات الأخرى التي لا تمتلك مفاتيحها الخاصة، حيث لن تسمح لك هذه الحسابات بالوصول إلى رموز OAT الخاصة بك وإدارتها.
+
+## مطالبة بـ <span dir="ltr">GitPOAP</span> الخاص بك {#claim-gitpoap}
+
+سيتعرف <span dir="ltr">GitPOAP</span> أيضًا تلقائيًا على مساهمتك المدمجة ويتيح لك سك <span dir="ltr">POAP</span> مساهمين فريد ومنفصل على منصتهم نفسها!
+
+
+### كيفية المطالبة {#how-to-claim-2}
+
+1. قم بزيارة [<span dir="ltr">GitPOAP</span>](https://www.gitpoap.io).
+2. اتصل باستخدام محفظة أو حتى ببريدك الإلكتروني من خلال خيار تسجيل الدخول.
+3. ابحث عن اسم مستخدم <span dir="ltr">GitHub</span> الخاص بك، أو عنوان <span dir="ltr">ETH</span>، أو أسماء <span dir="ltr">ENS</span>، أو أي <span dir="ltr">GitPOAP</span> للتحقق مما إذا كنت مؤهلاً.
+4. إذا كان حساب <span dir="ltr">GitHub</span> الخاص بك مؤهلاً، فستتمكن من سك <span dir="ltr">GitPOAP</span>!
 
 ## المساهمون {#contributors}
 

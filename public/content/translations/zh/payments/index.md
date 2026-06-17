@@ -4,13 +4,13 @@ metaTitle: "以太坊支付"
 description: "以太坊支付概览"
 lang: zh
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "以太坊标志与一双给予的手一同展示。"
-summaryPoint1: "一个金钱像信息一样自由流通的世界"
-summaryPoint2: "开放全球，共享未来，赋能每个人实现无界交易"
-summaryPoint3: "一分钟内收到汇款"
+summaryPoints:
+  - "一个金钱像信息一样自由流通的世界"
+  - "开放全球，共享未来，赋能每个人实现无界交易"
+  - "一分钟内收到汇款"
 ---
 
 每天，全球数百万人正在经历同样的困境：跨境转账既手续繁琐又费用高昂，还经常遇到阻碍。 在巴厘岛的自由职业者要等待数天才能收到纽约客户的汇款。 这尤其影响银行基础设施有限地区的人们，使得他们难以参与全球经济。
@@ -26,11 +26,11 @@ summaryPoint3: "一分钟内收到汇款"
 
 对于数百万在国外工作的人们，汇款回家是一种常态。 传统汇款服务通常费用高昂且处理时间缓慢。 以太坊提供了一种优秀的替代方案。
 
-<CardGrid>
+<Grid>
   <Card title="费用更低" emoji=":money_with_wings:" description="汇款服务的平均费用高达 14 美元，而以太坊交易通常不到 0.01 美元即可完成。"/>
   <Card title="转账更快" emoji="📶" description="国际电汇需要几天时间处理，而以太坊交易在几分钟内即可结算。" />
   <Card title="人人可用" emoji="🌎" description="你只需要一个网络连接和一个钱包应用，便能发送或接收以太币。" />
-</CardGrid>
+</Grid>
 
 ## 接入全球货币 {#access-to-global-currencies}
 

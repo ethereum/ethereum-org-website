@@ -56,7 +56,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             alt={t("page-start-hero-alt")}
             sizes="(max-width: 1504px) 100vw, 1504px"
             className="h-full w-full object-cover"
-            priority
+            preload
           />
         </div>
 
@@ -71,7 +71,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <StartWithEthereumFlow newToCryptoWallets={wallets} />
             </div>
 
-            <div className="flex w-full flex-col gap-12 rounded-2xl border border-accent-c/10 bg-linear-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% px-12 py-16 md:flex-row dark:from-accent-c/20 dark:to-accent-c/10">
+            <div className="flex w-full flex-col gap-12 rounded-base border border-accent-c/10 bg-linear-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% px-12 py-16 md:flex-row dark:from-accent-c/20 dark:to-accent-c/10">
               <div className="flex flex-1 flex-col gap-8">
                 <h2 className="">{t("page-start-share-section-title")}</h2>
                 <p>{t("page-start-share-section-description")}</p>
@@ -80,7 +80,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </div>
               </div>
               <div className="flex max-w-[450px] flex-col items-center justify-center">
-                <Image src={ManDogeImage} alt={t("page-start-man-doge-alt")} />
+                <Image
+                  src={ManDogeImage}
+                  alt={t("page-start-man-doge-alt")}
+                  sizes="(max-width: 479px) calc(100vw - 64px), 375px"
+                />
               </div>
             </div>
           </I18nProvider>

@@ -4,13 +4,13 @@ metaTitle: "以太坊支付"
 description: "以太坊支付概要"
 lang: zh-tw
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "以太坊標誌與給予的手一同展示。"
-summaryPoint1: "一個金錢如資訊般自由流通的世界"
-summaryPoint2: "開放且全球化，讓所有人實現無國界交易"
-summaryPoint3: "一分鐘內收到款項"
+summaryPoints:
+  - "一個金錢如資訊般自由流通的世界"
+  - "開放且全球化，讓所有人實現無國界交易"
+  - "一分鐘內收到款項"
 ---
 
 數百萬人每天面臨同樣的挑戰：跨境轉賬緩慢、昂貴，且經常遇到阻礙。 在峇里島的自由業者需等待多天才能收到紐約客戶的款項。 這由其影響銀行基礎設施有線區域的人們，使他們難以參與國際經濟。
@@ -26,11 +26,11 @@ summaryPoint3: "一分鐘內收到款項"
 
 對於數百萬在國外工作的人們來說，匯款回家是一種經常性需求。 傳統匯款服務通常費用昂貴，且處理時間緩慢。 以太坊提供一個更優秀的替代方案。
 
-<CardGrid>
+<Grid>
   <Card title="費用更便宜" emoji=":money_with_wings:" description="匯款服務平均收取高達 14 美元的費用，而以太坊交易通常不到 0.01 美元就能完成。"/>
   <Card title="轉帳更快速" emoji="📶" description="國際電匯需要數天處理，而以太坊交易在幾分鐘內就能完成結算。" />
   <Card title="人人皆可使用" emoji="🌎" description="只需網路連線和錢包應用程式，你就能發送或接收以太幣。" />
-</CardGrid>
+</Grid>
 
 ## 獲取全球貨幣 {#access-to-global-currencies}
 

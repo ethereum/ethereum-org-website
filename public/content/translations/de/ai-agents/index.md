@@ -4,13 +4,13 @@ metaTitle: KI-Agenten | KI-Agenten auf Ethereum
 description: "Ein Überblick über KI-Agenten auf Ethereum"
 lang: de
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Menschen versammelt an einem Terminal-Tisch
-summaryPoint1: "KI, die mit der Blockchain interagiert und unabhängig handelt"
-summaryPoint2: Kontrolliert Wallets und Gelder auf der Blockchain
-summaryPoint3: "Stellt Menschen oder andere Agenten für Arbeiten ein"
+summaryPoints:
+  - "KI, die mit der Blockchain interagiert und unabhängig handelt"
+  - "Kontrolliert Wallets und Gelder auf der Blockchain"
+  - "Stellt Menschen oder andere Agenten für Arbeiten ein"
 buttons:
   - content: Was sind KI-Agenten?
     toId: what-are-ai-agents
@@ -39,11 +39,11 @@ Im Gegensatz dazu bietet das dezentralisierte Ökosystem von Ethereum mehrere en
 
 Diese Faktoren verwandeln KI-Agenten von einfachen Bots in dynamische, sich selbst verbessernde Systeme, die in mehreren Sektoren erheblichen Mehrwert bieten:
 
-<CardGrid>
+<Grid>
   <Card title="Automatisiertes DeFi" emoji=":money_with_wings:" description="KI-Agenten behalten Markttrends genau im Auge, führen Trades aus und verwalten Portfolios – was die komplexe Welt von DeFi viel zugänglicher macht."/>
   <Card title="Neue KI-Agenten-Wirtschaft" emoji="🌎" description="KI-Agenten können andere Agenten (oder Menschen) mit unterschiedlichen Fähigkeiten einstellen, um spezialisierte Aufgaben für sie auszuführen." />
   <Card title="Risikomanagement" emoji="🛠️" description="Durch die Überwachung von Transaktionsaktivitäten können KI-Agenten helfen, Betrug zu erkennen und Ihre digitalen Vermögenswerte besser und schneller zu schützen." />
-</CardGrid>
+</Grid>
 
 ## Verifizierbare KI {#verifiable-ai}
 

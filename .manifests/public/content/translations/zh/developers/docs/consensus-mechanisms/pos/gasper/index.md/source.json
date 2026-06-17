@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/gasper/index.md",
+  "generatedAt": "2026-06-16T22:10:37.030Z",
+  "rootHash": "871a4a5e1fa5",
+  "tree": {
+    "contentHash": "e1ff3d6859b2",
+    "anchorHash": "cb2c3c0f1328",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d143a4908b25",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "345f8b77a832",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "20bbe89ad944",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "18a398e37448",
+        "anchorHash": "e1030385a4d7",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "094876df8c63",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "769e0b8515e3",
+            "anchorHash": "0e500613f6a4"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "role-of-gasper": {
+        "contentHash": "63a3a30c7705",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fa359231c9e6",
+        "children": {
+          "_label": {
+            "contentHash": "fa359231c9e6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "53eae10e37db",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-is-finality": {
+        "contentHash": "094399f2c09c",
+        "anchorHash": "05955e8287f5",
+        "labelHash": "b6383fcc764b",
+        "children": {
+          "_label": {
+            "contentHash": "b6383fcc764b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "7c8846b94562",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "00b70951e455",
+            "anchorHash": "8b5f98890e67"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "incentives-and-slashing": {
+            "contentHash": "49c91066267b",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "2ecb80f349cb",
+            "children": {
+              "_label": {
+                "contentHash": "2ecb80f349cb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "3bb3b6bc7ed0",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "inactivity-leak": {
+            "contentHash": "6049164f4d60",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "cde947a022ff",
+            "children": {
+              "_label": {
+                "contentHash": "cde947a022ff",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "126bc19713f7",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "fork-choice": {
+            "contentHash": "e9ec6da01897",
+            "anchorHash": "228ade6c74f7",
+            "labelHash": "98e00165704e",
+            "children": {
+              "_label": {
+                "contentHash": "98e00165704e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "e037a2f0ddc9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1cb3a2b4105e"
+              },
+              "prose:2": {
+                "contentHash": "da780d28477d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "inline-code:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "incentives-and-slashing",
+          "inactivity-leak",
+          "fork-choice"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "05d6cdacb514",
+        "anchorHash": "323c1a1ad86f",
+        "labelHash": "bd2e42f237b3",
+        "children": {
+          "_label": {
+            "contentHash": "bd2e42f237b3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "b3edf03f7b25",
+            "anchorHash": "bf359eb8dd42"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "abdc76c47330",
+            "anchorHash": "8b5f98890e67"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "prerequisites",
+      "role-of-gasper",
+      "what-is-finality",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

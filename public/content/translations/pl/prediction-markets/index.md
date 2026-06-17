@@ -4,8 +4,9 @@ lang: pl
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Otrzymuj zachęty finansowe za tworzenie trafnych prognoz"
-summaryPoint2: "Wysokiej jakości prognozy dotyczące przyszłych wydarzeń"
+summaryPoints:
+  - "Otrzymuj zachęty finansowe za tworzenie trafnych prognoz"
+  - "Wysokiej jakości prognozy dotyczące przyszłych wydarzeń"
 buttons:
   - content: Dowiedz się więcej
     toId: how-prediction-markets-work
@@ -29,11 +30,11 @@ Teoretycznie, ponieważ obstawiający mogą czerpać zyski z trafnych prognoz, r
 
 W przeciwieństwie do tradycyjnych prognoz, rynki prognostyczne oparte na blockchainie są:
 
-<CardGrid>
+<Grid>
   <Card title="System zachęt" emoji=":money_with_wings:" description="Uczestnicy stakują prawdziwe środki, co przekłada się na wysoką jakość prognoz."/>
   <Card title="Decentralizacja" emoji="🌎" description="Użycie blockchaina i smart kontraktów zapewnia przejrzyste i zautomatyzowane wypłaty." />
   <Card title="Kursy rynkowe" emoji="🤝" description="Ceny ustalają traderzy handlujący udziałami w wynikach, a nie scentralizowany bukmacher." />
-</CardGrid>
+</Grid>
 
 Nawet jako obserwator rynku możesz uzyskać dostęp do wartościowych danych, które w innym przypadku byłyby niedostępne. Pomyśl o tym w ten sposób:
 

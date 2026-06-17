@@ -4,13 +4,13 @@ metaTitle: Mawakala wa AI | Mawakala wa AI kwenye Ethereum
 description: Muhtasari wa mawakala wa AI kwenye Ethereum
 lang: sw
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Watu walikusanyika kwenye jedwali la kituo
-summaryPoint1: AI ambayo inaingiliana na kiambajengo na inafanya biashara kwa kujitegemea
-summaryPoint2: Hudhibiti pochi na fedha zilizo kwenye mnyororo
-summaryPoint3: Huajiri watu au mawakala wengine kwa kazi
+summaryPoints:
+  - "AI ambayo inaingiliana na kiambajengo na inafanya biashara kwa kujitegemea"
+  - "Hudhibiti pochi na fedha zilizo kwenye mnyororo"
+  - "Huajiri watu au mawakala wengine kwa kazi"
 buttons:
   - content: Mawakala wa AI ni nini?
     toId: what-are-ai-agents
@@ -39,11 +39,11 @@ Kwa upande mwingine, mfumo mtawanyo wa ikilojia wa Ethereum hutoa faida kadhaa m
 
 Sababu hizi hubadilisha mawakala wa AI kutoka roboti rahisi hadi mifumo inayobadilika, inayojiboresha ambayo hutoa thamani kubwa katika sekta nyingi:
 
-<CardGrid>
+<Grid>
   <Card title="DeFi ya Kiotomatiki" emoji=":money_with_wings:" description="Maajenti wa AI hufuatilia kwa karibu mienendo ya soko, hutekeleza biashara, na kusimamia portfolio — na kufanya ulimwengu tata wa DeFi uwe rahisi zaidi."/>
   <Card title="Uchumi mpya wa maajenti wa AI" emoji="🌎" description="Maajenti wa AI wanaweza kuajiri maajenti wengine (au binadamu) wenye ujuzi tofauti ili kuwafanyia kazi maalum." />
   <Card title="Usimamizi wa Hatari" emoji="🛠️" description="Kwa kufuatilia shughuli za miamala, maajenti wa AI wanaweza kusaidia kutambua utapeli na kulinda mali zako za kidijitali vizuri zaidi na kwa haraka." />
-</CardGrid>
+</Grid>
 
 ## AI inayoweza kuthibitishwa {#verifiable-ai}
 

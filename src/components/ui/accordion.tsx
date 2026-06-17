@@ -5,6 +5,15 @@ import { ChevronNext } from "@/components/Chevron"
 
 import { cn } from "@/lib/utils/cn"
 
+const AccordionContainer = ({
+  className,
+  ...props
+}: React.BaseHTMLAttributes<HTMLDivElement>) => {
+  return (
+    <div className={cn("w-full max-w-5xl space-y-4", className)} {...props} />
+  )
+}
+
 const Accordion = AccordionPrimitive.Root
 
 const AccordionItem = React.forwardRef<
@@ -46,16 +55,33 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionContent = React.forwardRef<
   React.ComponentRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->(({ className, children, ...props }, ref) => (
+>(({ className, forceMount = true, children, ...props }, ref) => (
+  // With forceMount, Radix never hides closed content, so collapse is
+  // CSS-only: grid rows animate 1fr <-> 0fr. duration-200! (important) is
+  // required because Radix zeroes this node's inline transition-duration
+  // while re-measuring on every toggle. The visibility transition drops
+  // closed content from the tab order without removing it from the DOM.
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    forceMount={forceMount} // forceMount keeps content in DOM for SEO crawlers
+    className="grid grid-rows-[1fr] text-sm transition-[grid-template-rows,visibility] duration-200! ease-out data-[state=closed]:invisible data-[state=closed]:grid-rows-[0fr]"
     {...props}
   >
-    <div className={cn("p-2 md:p-4", className)}>{children}</div>
+    {/* The grid item must clip overflow and carry no vertical padding
+        (padding floors a box's height, so the 0fr row could never fully
+        collapse); padding lives one level deeper instead. */}
+    <div className="min-h-0 overflow-hidden">
+      <div className={cn("p-2 md:p-4", className)}>{children}</div>
+    </div>
   </AccordionPrimitive.Content>
 ))
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-export { Accordion, AccordionContent, AccordionItem, AccordionTrigger }
+export {
+  Accordion,
+  AccordionContainer,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+}

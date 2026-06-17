@@ -4,8 +4,9 @@ lang: cs
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Získejte finanční pobídky za vytváření přesných předpovědí"
-summaryPoint2: "Vysoce kvalitní předpovědi budoucích událostí"
+summaryPoints:
+  - "Získejte finanční pobídky za vytváření přesných předpovědí"
+  - "Vysoce kvalitní předpovědi budoucích událostí"
 buttons:
   - content: Další informace
     toId: how-prediction-markets-work
@@ -29,11 +30,11 @@ Teoreticky, protože sázející mohou ze správných odhadů profitovat, mohou 
 
 Na rozdíl od tradičního prognózování jsou predikční trhy založené na blockchainu:
 
-<CardGrid>
+<Grid>
   <Card title="Motivované" emoji=":money_with_wings:" description="Účastníci stakují reálné prostředky, což vede ke kvalitním předpovědím."/>
   <Card title="Decentralizace" emoji="🌎" description="Použití blockchainu a chytrých kontraktů zajišťuje transparentní a automatizované výplaty." />
   <Card title="Kurzy řízené trhem" emoji="🤝" description="Ceny nastavují obchodníci nákupem a prodejem podílů na výsledku, nikoli centralizovaná sázková kancelář." />
-</CardGrid>
+</Grid>
 
 I jako pozorovatel trhu můžete posoudit cenná data, která by jinak nebyla k dispozici. Představte si to takto:
 

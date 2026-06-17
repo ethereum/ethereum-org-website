@@ -1,10 +1,8 @@
 ---
-title: Adding Videos
+title: Adding videos
 description: The policy for adding videos to ethereum.org
 lang: en
 ---
-
-# Adding Videos {#adding-videos}
 
 The [ethereum.org video gallery](/videos/) features videos about Ethereum and the Ethereum ecosystem from community creators and trusted sources. Anyone can suggest a video to be added.
 

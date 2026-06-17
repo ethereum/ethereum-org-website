@@ -4,8 +4,9 @@ lang: tr
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Doğru tahminler oluşturmak için finansal teşvikler alın"
-summaryPoint2: "Gelecekteki olaylar hakkında yüksek kaliteli tahminler"
+summaryPoints:
+  - "Doğru tahminler oluşturmak için finansal teşvikler alın"
+  - "Gelecekteki olaylar hakkında yüksek kaliteli tahminler"
 buttons:
   - content: Daha fazla bilgi edinin
     toId: how-prediction-markets-work
@@ -29,11 +30,11 @@ Teorik olarak, bahisçiler doğru olmaktan kâr elde edecekleri için, tahmin pi
 
 Geleneksel tahminlerin aksine, blokzincir tabanlı tahmin piyasaları şöyledir:
 
-<CardGrid>
+<Grid>
   <Card title="Teşvikli" emoji=":money_with_wings:" description="Katılımcılar gerçek fon yatırır, bu da tahminlerin daha kaliteli olmasını sağlar."/>
   <Card title="Merkeziyetsizlik" emoji="🌎" description="Blok zinciri ve akıllı sözleşmeler kullanmak, şeffaf ve otomatik ödemeler sağlar." />
   <Card title="Piyasa Odaklı Oranlar" emoji="🤝" description="Fiyatlar, merkezi bir bahisçi tarafından önceden belirlenmek yerine, sonuç paylarını alıp satan yatırımcılar tarafından oluşturulur." />
-</CardGrid>
+</Grid>
 
 Piyasanın bir gözlemcisi olarak bile, başka türlü ulaşılamayacak değerli verileri değerlendirebilirsiniz. Şöyle düşünün:
 

@@ -1,10 +1,9 @@
 ---
-title: Contributing
+title: "Contributing to ethereum.org 🦄"
+metaTitle: Contributing
 description: Learn about the different ways you can contribute to ethereum.org
 lang: en
 ---
-
-# Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg}
 
 Ethereum.org is an open-source run project with **12 000+** contributors that help translate, write, design and maintain the website.
 
@@ -23,7 +22,9 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 
 **Content**
 - [Create/edit content](/contributing/#how-to-update-content) – Suggest new pages or make tweaks to what's here already
+- [Write a builder article](/contributing/adding-articles/) - Contribute an article for the [Latest](/latest/) section
 - [Add community resources](/contributing/content-resources/) – Add a helpful article or resource to a relevant page
+- [Suggest a report](/contributing/adding-reports/) - Suggest a research report for the [Reports](/reports/) page
 - [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
 - [Suggest a video](/contributing/adding-videos/) – Suggest an educational video for the video gallery
@@ -47,7 +48,7 @@ Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
 
 These are few current tasks that you could help us solve and take responsibility for. For most you will need GitHub account as most changes to the website are made through GitHub.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">See all tasks</ButtonLink>
 

@@ -109,9 +109,9 @@ export const getAttestantPosts = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getBeaconchainData = createCachedGetter(
-  dataLayer.getBeaconchainData,
-  ["beaconchain-data"],
+export const getStakedPercentageData = createCachedGetter(
+  dataLayer.getStakedPercentageData,
+  ["staked-percentage-data"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -190,12 +190,6 @@ export const getAccountHolders = createCachedGetter(
 export const getTranslationGlossary = createCachedGetter(
   dataLayer.getTranslationGlossary,
   ["translation-glossary"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getGitHubContributors = createCachedGetter(
-  dataLayer.getGitHubContributors,
-  ["github-contributors"],
   CACHE_REVALIDATE_DAY
 )
 

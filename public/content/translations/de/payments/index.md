@@ -4,13 +4,13 @@ metaTitle: Zahlungen auf Ethereum
 description: "Ein Überblick über Zahlungen auf Ethereum"
 lang: de
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "Ein Eth-Logo, das zusammen mit gebenden Händen angezeigt wird."
-summaryPoint1: Eine Welt, in der sich Geld so frei bewegt wie Informationen
-summaryPoint2: "Offen und global, ermöglicht grenzenlose Transaktionen für alle"
-summaryPoint3: Zahlungen innerhalb einer Minute erhalten
+summaryPoints:
+  - "Eine Welt, in der sich Geld so frei bewegt wie Informationen"
+  - "Offen und global, ermöglicht grenzenlose Transaktionen für alle"
+  - "Zahlungen innerhalb einer Minute erhalten"
 ---
 
 Jeden Tag stehen Millionen von Menschen vor der gleichen Herausforderung: Geld über Grenzen hinweg zu bewegen, ist langsam, teuer und oft frustrierend. Ein Freiberufler auf Bali wartet tagelang darauf, dass die Zahlung seines Kunden aus New York freigegeben wird. Dies betrifft insbesondere Menschen in Regionen mit begrenzter Bankinfrastruktur, was es ihnen erschwert, an der globalen Wirtschaft teilzunehmen.
@@ -27,11 +27,11 @@ Dies ist kein ferner Traum – es passiert heute auf Ethereum. Während traditio
 
 Für Millionen von Menschen, die im Ausland arbeiten, ist es eine regelmäßige Notwendigkeit, Geld in die Heimat zu schicken. Traditionelle Überweisungsdienste sind oft mit hohen Gebühren und langsamen Bearbeitungszeiten verbunden. Ethereum bietet eine überzeugende Alternative.
 
-<CardGrid>
+<Grid>
   <Card title="Günstigere Gebühren" emoji=":money_with_wings:" description="Überweisungsdienste berechnen im Durchschnitt bis zu 14 $ an Gebühren. Ethereum-Transaktionen können oft für unter 0,01 $ abgeschlossen werden."/>
   <Card title="Schnellere Transfers" emoji="📶" description="Internationale Banküberweisungen dauern mehrere Tage. Ethereum-Transaktionen werden in Minuten abgewickelt." />
   <Card title="Offen für alle" emoji="🌎" description="Sie benötigen nur eine Internetverbindung und eine Wallet-App, um Ether zu senden oder zu empfangen." />
-</CardGrid>
+</Grid>
 
 ## Zugang zu globalen Währungen {#access-to-global-currencies}
 

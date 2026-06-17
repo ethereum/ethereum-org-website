@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-08T08:39:51.497Z",
+  "englishManifestHash": "4a72ebf3a62c",
+  "placeholderOrder": [
+    "LINK-b7b995",
+    "LINK-0e1da1",
+    "LINK-89dc4b",
+    "LINK-1bb378",
+    "LINK-3c6031",
+    "LINK-d263c8",
+    "LINK-0909b1",
+    "LINK-2a6207",
+    "LINK-652564",
+    "LINK-62e38b",
+    "LINK-53b25a",
+    "LINK-1d80d3",
+    "LINK-46f659",
+    "LINK-f8f7d0",
+    "LINK-10aa05",
+    "LINK-b51152",
+    "LINK-5c1dcc",
+    "LINK-dfde37",
+    "LINK-810eeb",
+    "LINK-d4400f",
+    "LINK-c0bef5",
+    "LINK-ca106b",
+    "LINK-2bafe6",
+    "LINK-2dd2f0",
+    "LINK-fc6f2a",
+    "LINK-2d8af6",
+    "LINK-b676c8"
+  ],
+  "placeholderMap": {
+    "LINK-b7b995": {
+      "type": "link",
+      "values": {
+        "url": "https://www.trados.com/solutions/translation-management/"
+      }
+    },
+    "LINK-0e1da1": {
+      "type": "link",
+      "values": {
+        "url": "https://phrase.com/blog/posts/multilingual-content-management/"
+      }
+    },
+    "LINK-89dc4b": {
+      "type": "link",
+      "values": {
+        "url": "https://crowdin.com/"
+      }
+    },
+    "LINK-1bb378": {
+      "type": "link",
+      "values": {
+        "url": "https://lokalise.com/"
+      }
+    },
+    "LINK-3c6031": {
+      "type": "link",
+      "values": {
+        "url": "https://www.transifex.com/"
+      }
+    },
+    "LINK-d263c8": {
+      "type": "link",
+      "values": {
+        "url": "https://phrase.com/"
+      }
+    },
+    "LINK-0909b1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.smartcat.com/"
+      }
+    },
+    "LINK-2a6207": {
+      "type": "link",
+      "values": {
+        "url": "https://poeditor.com/"
+      }
+    },
+    "LINK-652564": {
+      "type": "link",
+      "values": {
+        "url": "https://www.trados.com/products/trados-studio/"
+      }
+    },
+    "LINK-62e38b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.memoq.com/"
+      }
+    },
+    "LINK-53b25a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.memsource.com/"
+      }
+    },
+    "LINK-1d80d3": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Translation_management_system"
+      }
+    },
+    "LINK-46f659": {
+      "type": "link",
+      "values": {
+        "url": "https://phrase.com/blog/posts/7-things-every-translation-management-software-should-have/"
+      }
+    },
+    "LINK-f8f7d0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.memoq.com/tools/what-is-a-translation-management-system"
+      }
+    },
+    "LINK-10aa05": {
+      "type": "link",
+      "values": {
+        "url": "https://gengo.com/translator-product-updates/16-best-translation-management-systems/"
+      }
+    },
+    "LINK-b51152": {
+      "type": "link",
+      "values": {
+        "url": "https://contentrules.com/creating-translation-workflow/"
+      }
+    },
+    "LINK-5c1dcc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.smartling.com/resources/101/what-is-translation-workflow-management/"
+      }
+    },
+    "LINK-dfde37": {
+      "type": "link",
+      "values": {
+        "url": "https://www.rixtrans.com/translation-workflow"
+      }
+    },
+    "LINK-810eeb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.trados.com/solutions/terminology-management/translation-101-what-is-terminology-management.html"
+      }
+    },
+    "LINK-d4400f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.languagescientific.com/terminology-management-why-it-matters/#:~:text=Terminology%20management%20is%20the%20process,are%20related%20to%20each%20other."
+      }
+    },
+    "LINK-c0bef5": {
+      "type": "link",
+      "values": {
+        "url": "http://clearwordstranslations.com/language/en/what-is-terminology-management/"
+      }
+    },
+    "LINK-ca106b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.memsource.com/translation-memory/"
+      }
+    },
+    "LINK-2bafe6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.smartling.com/resources/101/what-is-translation-memory/"
+      }
+    },
+    "LINK-2dd2f0": {
+      "type": "link",
+      "values": {
+        "url": "http://info.lionbridge.com/rs/lionbridge/images/Lionbridge%20FAQ_Glossary_2013.pdf"
+      }
+    },
+    "LINK-fc6f2a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.transifex.com/glossary/glossary"
+      }
+    },
+    "LINK-2d8af6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.nimdzi.com/nimdzi-100-top-lsp/"
+      }
+    },
+    "LINK-b676c8": {
+      "type": "link",
+      "values": {
+        "url": "https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:39:51.497Z",
+      "status": "success"
+    }
+  }
+}

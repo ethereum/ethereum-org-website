@@ -1,8 +1,7 @@
 import { ExternalLink } from "lucide-react"
+import { getTranslations } from "next-intl/server"
 
 import Emoji from "@/components/Emoji"
-
-import { cn } from "@/lib/utils/cn"
 
 import { GITHUB_URL } from "@/lib/constants"
 
@@ -11,9 +10,6 @@ import { Flex } from "./ui/flex"
 import { LinkBox } from "./ui/link-box"
 import { LinkOverlay } from "./ui/link-box"
 import { List, ListItem } from "./ui/list"
-
-import { useRtlFlip } from "@/hooks/useRtlFlip"
-import { useTranslation } from "@/hooks/useTranslation"
 
 type Person = {
   name: string
@@ -26,13 +22,12 @@ type LeaderboardProps = {
   limit?: number
 }
 
-const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
-  const { twFlipForRtl } = useRtlFlip()
-  const { t } = useTranslation("page-bug-bounty")
+const Leaderboard = async ({ content, limit = 100 }: LeaderboardProps) => {
+  const t = await getTranslations("page-bug-bounty")
 
   return (
     <List
-      className="ms-0 mb-8 w-full list-none bg-background shadow-table-box"
+      className="ms-0 mb-8 w-full list-none overflow-hidden rounded-base bg-background shadow-table-box"
       aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content
@@ -52,9 +47,12 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
           }
 
           return (
-            <ListItem className="mb-0" key={username}>
+            <ListItem
+              className="mb-0 not-last:border-b"
+              key={name + username + score}
+            >
               <LinkBox
-                className="mb-1 flex w-full items-center justify-between p-4 shadow-table-item-box hover:rounded-lg hover:bg-background-highlight hover:no-underline hover:shadow-primary"
+                className="flex w-full items-center justify-between p-4 hover:bg-background-highlight hover:no-underline hover:shadow-primary"
                 key={idx}
               >
                 <div className="me-4 opacity-40">{idx + 1}</div>
@@ -92,7 +90,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                   </div>
                 </Flex>
                 {emoji && <Emoji className="me-8 text-2xl" text={emoji} />}
-                <ExternalLink className={cn("size-[1em]", twFlipForRtl)} />
+                <ExternalLink className="size-[1em] rtl:-scale-x-100" />
               </LinkBox>
             </ListItem>
           )

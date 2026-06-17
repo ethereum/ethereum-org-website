@@ -29,17 +29,16 @@ Ein Home-Staker erhält Belohnungen direkt vom Protokoll, wenn er seinen Validat
 
 Home Staking geht mit mehr Verantwortung einher, bietet Ihnen jedoch maximale Kontrolle über Ihre Gelder und Ihr Staking-Setup.
 
-<CardGrid>
+<Grid>
   <Card title="Verdienen Sie neue ETH" emoji="💸" description="Verdienen Sie in ETH denominierte Belohnungen direkt vom Protokoll, wenn Ihr Validator online ist, ohne dass Zwischenhändler einen Anteil nehmen." />
   <Card title="Volle Kontrolle" emoji="🎛️" description="Behalten Sie Ihre eigenen Schlüssel. Wählen Sie die Kombination aus Clients und Hardware, die es Ihnen ermöglicht, Ihr Risiko zu minimieren und am besten zur Gesundheit und Sicherheit des Netzwerks beizutragen. Staking-Dienste von Drittanbietern treffen diese Entscheidungen für Sie und nicht immer die sichersten." />
   <Card title="Netzwerksicherheit" emoji="🔐" description="Home-Staking ist die wirkungsvollste Art zu staken. Indem Sie einen Validator auf Ihrer eigenen Hardware zu Hause betreiben, stärken Sie die Robustheit, Dezentralisierung und Sicherheit des Ethereum-Protokolls." />
-</CardGrid>
+</Grid>
 
 ## Überlegungen vor dem Home Staking {#considerations-before-staking-solo}
 
 So sehr wir uns auch wünschen, dass Home Staking für jeden zugänglich und risikofrei ist, entspricht dies nicht der Realität. Es gibt einige praktische und ernsthafte Überlegungen, die Sie beachten sollten, bevor Sie sich entscheiden, Ihre ETH von zu Hause aus zu staken.
 
-<InfoGrid>
 <ExpandableCard title="Pflichtlektüre" eventCategory="SoloStaking" eventName="clicked required reading">
 Wenn Sie Ihren eigenen Blockchain-Knoten betreiben, sollten Sie einige Zeit darauf verwenden, zu lernen, wie Sie die von Ihnen gewählte Software verwenden. Dies beinhaltet das Lesen relevanter Dokumentationen und die Aufmerksamkeit für die Kommunikationskanäle dieser Entwicklerteams.
 
@@ -71,8 +70,6 @@ Im Gegensatz zu Inaktivitätsstrafen für das Offline-Sein ist <em>Slashing</em>
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Mehr über Slashing und den Lebenszyklus von Validatoren</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

@@ -29,17 +29,16 @@ summaryPoints:
 
 ホームステーキングはより多くの責任を伴いますが、資金とステーキングのセットアップをご自身で最大限に制御することができます。
 
-<CardGrid>
+<Grid>
   <Card title="新しいETHを獲得" emoji="💸" description="バリデータがオンラインの間、仲介者なしでプロトコルから直接ETH建ての報酬を獲得できます。" />
   <Card title="すべてを自分で管理" emoji="🎛️" description="自身の鍵は自分で管理。リスクを最小限に抑え、ネットワークの健全性とセキュリティに最も貢献できるクライアントとハードウェアの組み合わせを選びましょう。第三者のステーキングサービスはあなたに代わって決定を行いますが、その選択が常に最も安全とは限りません。" />
   <Card title="ネットワークのセキュリティ" emoji="🔐" description="ホームステーキングは、最もインパクトのあるステーキング方法です。自宅のハードウェアでバリデータを実行することで、イーサリアムプロトコルの堅牢性、分散化、セキュリティを強化できます。" />
-</CardGrid>
+</Grid>
 
 ## ホームステーキングを行う前の考慮事項 {#considerations-before-staking-solo}
 
 ホームステーキングが誰にとってもアクセス可能でリスクフリーであることを願っていますが、現実はそうではありません。 ETHをホームステーキングすることを選択する前に、留意すべき実践的かつ深刻な考慮事項がいくつかあります。
 
-<InfoGrid>
 <ExpandableCard title="必読事項" eventCategory="SoloStaking" eventName="clicked required reading">
 ご自身のノードを運用する際には、選択したソフトウェアの使用方法を学ぶために時間をかけるべきです。 これには、関連ドキュメントを読み、それらの開発チームのコミュニケーションチャネルに注意を払うことが含まれます。
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">スラッシングとバリデータのライフサイクルに関する詳細</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

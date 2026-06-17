@@ -38,7 +38,7 @@ const WhitepaperBridge = async () => {
   ] as const
 
   return (
-    <Section className="my-8 space-y-6 rounded-2xl border border-primary-low-contrast bg-radial-a p-6 md:p-8">
+    <Section className="my-8 space-y-6 rounded-base border border-primary-low-contrast bg-radial-a p-6 md:p-8">
       {/* Eyebrow tag - uses warning status for attention */}
       <Tag status="warning" variant="outline" size="small" className="gap-1.5">
         <Info className="size-3.5" />
@@ -47,9 +47,7 @@ const WhitepaperBridge = async () => {
 
       {/* Main heading */}
       <div className="space-y-3">
-        <h2 className="text-2xl font-bold text-body md:text-3xl">
-          {t("heading")}
-        </h2>
+        <h2 className="text-2xl text-body md:text-3xl">{t("heading")}</h2>
         <p className="max-w-2xl text-body-medium">
           {t.rich("description", {
             strong: (chunks) => <strong className="text-body">{chunks}</strong>,
@@ -78,7 +76,7 @@ const WhitepaperBridge = async () => {
           <p className="mb-4 text-sm font-semibold tracking-wide text-body-medium uppercase">
             {t("whats-changed")}
           </p>
-          <UnorderedList className="ms-0 space-y-3">
+          <UnorderedList className="m-0 space-y-3">
             {evolutionKeys.map((key) => (
               <Flex key={key} className="gap-3">
                 <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-success" />

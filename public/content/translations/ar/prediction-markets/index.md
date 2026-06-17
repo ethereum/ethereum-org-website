@@ -4,8 +4,9 @@ lang: ar
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "خذ المال لتعطيك خبر صحيحة"
-summaryPoint2: "تنبأت عالية الجودة حول الأحداث المستقبلية"
+summaryPoints:
+  - "خذ المال لتعطيك خبر صحيحة"
+  - "تنبأت عالية الجودة حول الأحداث المستقبلية"
 buttons:
   - content: معرفة المزيد
     toId: how-prediction-markets-work
@@ -29,11 +30,11 @@ buttons:
 
 على عكس التنبؤات التقليدية، فإن أسواق التنبؤ المعتمدة على البلوكتشين هي:
 
-<CardGrid>
+<Grid>
   <Card title="تحفيزي" emoji=":money_with_wings:" description="يخزّن المشاركون أموالاً حقيقية، مما يضمن الحصول على توقعات عالية الجودة."/>
   <Card title="اللامركزية" emoji="🌎" description="يضمن استخدام البلوك تشين والعقود الذكية دفعات شفافة وتلقائية." />
   <Card title="أسعار يحددها السوق" emoji="🤝" description="يحدد المتداولون الأسعار عبر شراء وبيع حصص النتائج، بدلاً من تحديدها مسبقاً من قبل صانع مراهنات مركزي." />
-</CardGrid>
+</Grid>
 
 حتى كمراقب للسوق، يمكنك تقييم بيانات قيمة لم تكن لتتوفر بخلاف ذلك. فكر في الأمر بهذه الطريقة:
 

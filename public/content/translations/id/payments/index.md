@@ -4,13 +4,13 @@ metaTitle: Pembayaran di Ethereum
 description: Gambaran umum tentang pembayaran di Ethereum
 lang: id
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: Logo Eth ditampilkan bersama dengan tangan yang memberi.
-summaryPoint1: Dunia di mana uang bergerak sebebas informasi
-summaryPoint2: Terbuka dan global, memungkinkan transaksi tanpa batas untuk semua orang
-summaryPoint3: Pembayaran diterima dalam waktu satu menit
+summaryPoints:
+  - "Dunia di mana uang bergerak sebebas informasi"
+  - "Terbuka dan global, memungkinkan transaksi tanpa batas untuk semua orang"
+  - "Pembayaran diterima dalam waktu satu menit"
 ---
 
 Setiap hari, jutaan orang menghadapi tantangan yang sama: memindahkan uang melintasi batas negara itu lambat, mahal, dan sering kali membuat frustrasi. Seorang pekerja lepas di Bali menunggu berhari-hari agar pembayaran dari kliennya di New York cair. Hal ini sangat memengaruhi orang-orang di wilayah dengan infrastruktur perbankan yang terbatas, sehingga menyulitkan mereka untuk berpartisipasi dalam ekonomi global.
@@ -26,11 +26,11 @@ Ini bukanlah mimpi yang jauh—ini terjadi hari ini di Ethereum. Meskipun lembag
 
 Bagi jutaan orang yang bekerja di luar negeri, mengirim uang kembali ke kampung halaman adalah kebutuhan rutin. Layanan pengiriman uang tradisional sering kali membebankan biaya tinggi dan waktu pemrosesan yang lambat. Ethereum menawarkan alternatif yang menarik.
 
-<CardGrid>
+<Grid>
   <Card title="Biaya Lebih Murah" emoji=":money_with_wings:" description="Layanan pengiriman uang rata-rata membebankan biaya hingga description=4. Transaksi Ethereum sering kali dapat diselesaikan di bawah $0,01."/>
   <Card title="Transfer Lebih Cepat" emoji="📶" description="Transfer kawat internasional membutuhkan waktu beberapa hari untuk diproses. Transaksi Ethereum diselesaikan dalam hitungan menit." />
   <Card title="Terbuka untuk siapa saja" emoji="🌎" description="Anda hanya memerlukan koneksi internet dan aplikasi dompet untuk mengirim atau menerima Ether." />
-</CardGrid>
+</Grid>
 
 ## Akses ke mata uang global {#access-to-global-currencies}
 

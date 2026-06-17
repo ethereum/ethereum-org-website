@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef, Suspense } from "react"
+import { Suspense } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -8,21 +8,21 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import Callout from "@/components/Callout"
-import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
+import PageHero from "@/components/Hero/PageHero"
 import HorizontalCard from "@/components/HorizontalCard"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
-import PageHero from "@/components/PageHero"
+import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -35,14 +35,7 @@ import { WalletSimulator } from "./WalletSimulator"
 import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
-import HeroImage from "@/public/images/wallets/wallet-hero.png"
-
-const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
-  <Card
-    className="m-4 max-w-full min-w-[280px] flex-1 bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
-    {...props}
-  />
-)
+import heroImg from "@/public/images/wallets/wallet-hero.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -58,49 +51,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("wallets", locale as Lang)
-
-  const heroContent = {
-    title: t("page-wallets-title"),
-    header: t("page-wallets-slogan"),
-    subtitle: t("page-wallets-subtitle"),
-    image: HeroImage,
-    alt: t("page-wallets-alt"),
-    // TODO: remove conditional after soft launch
-    buttons:
-      locale === "en"
-        ? [
-            {
-              href: "/wallets/find-wallet/",
-              content: t("page-wallets-find-wallet-link"),
-              matomo: {
-                eventCategory: "Header buttons",
-                eventAction: "click",
-                eventName: "Find_wallet",
-              },
-            },
-            {
-              href: `#${SIMULATOR_ID}`,
-              content: "How to use a wallet",
-              matomo: {
-                eventCategory: "Header buttons",
-                eventAction: "click",
-                eventName: "How_to_use_wallet",
-              },
-              variant: "outline" as const,
-            },
-          ]
-        : [
-            {
-              href: "/wallets/find-wallet/",
-              content: t("page-wallets-find-wallet-link"),
-              matomo: {
-                eventCategory: "Header button",
-                eventAction: "click",
-                eventName: "Find_wallet",
-              },
-            },
-          ],
-  }
 
   const cards = [
     {
@@ -202,9 +152,52 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />
-      <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <PageHero content={heroContent} isReverse />
 
+      <PageHero
+        header={t("page-wallets-title")}
+        heroImg={heroImg}
+        title={t("page-wallets-slogan")}
+        description={t("page-wallets-subtitle")}
+        // TODO: remove conditional after soft launch
+        buttons={
+          locale === "en"
+            ? [
+                {
+                  href: "/wallets/find-wallet/",
+                  content: t("page-wallets-find-wallet-link"),
+                  matomo: {
+                    eventCategory: "Header buttons",
+                    eventAction: "click",
+                    eventName: "Find_wallet",
+                  },
+                },
+                {
+                  href: `#${SIMULATOR_ID}`,
+                  content: "How to use a wallet",
+                  matomo: {
+                    eventCategory: "Header buttons",
+                    eventAction: "click",
+                    eventName: "How_to_use_wallet",
+                  },
+                  variant: "outline",
+                },
+              ]
+            : [
+                {
+                  href: "/wallets/find-wallet/",
+                  content: t("page-wallets-find-wallet-link"),
+                  matomo: {
+                    eventCategory: "Header button",
+                    eventAction: "click",
+                    eventName: "Find_wallet",
+                  },
+                },
+              ]
+        }
+        variant="no-divider"
+      />
+
+      <MainArticle className="mx-auto flex w-full flex-col items-center">
         <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">
           <div className="-mb-8 w-full px-8 py-4 pb-0">
             <ListenToPlayer slug="/wallets/" />
@@ -233,17 +226,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
             </div>
           </div>
-          <div className="w-full px-8 py-4">
-            <div className="-ms-4 -me-4 flex flex-wrap">
-              {cards.map((card, idx) => (
-                <StyledCard
-                  key={idx}
-                  emoji={card.emoji}
-                  title={card.title}
-                  description={card.description}
-                />
-              ))}
-            </div>
+          <div className="flex w-full flex-wrap gap-8 px-8 py-4">
+            {cards.map((card, idx) => (
+              <MarkdownCard
+                key={idx}
+                emoji={card.emoji}
+                title={card.title}
+                description={card.description}
+                variant="nested"
+                className="max-w-full min-w-[280px] flex-1 md:max-w-[46%] lg:max-w-[31%]"
+              />
+            ))}
           </div>
         </div>
 
@@ -304,7 +297,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <p className="mb-2 text-lg leading-base text-body-medium italic md:text-xl lg:text-2xl">
                   Interactive tutorial
                 </p>
-                <h2 className="m-0 text-3xl leading-[115%] font-bold lg:text-5xl">
+                <h2 className="m-0 text-3xl leading-[115%] lg:text-5xl">
                   How to use a wallet
                 </h2>
               </WalletSimulator>
@@ -334,6 +327,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   src={FindWalletImage}
                   alt=""
                   className="mt-8 w-full max-w-[800px] bg-cover bg-no-repeat"
+                  sizes="(max-width: 864px) calc(100vw - 64px), 800px"
                 />
               </div>
             </div>
@@ -370,7 +364,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <p className="mb-[1.45rem] text-md leading-base">
                   {t("page-wallets-seed-phrase-example")}
                 </p>
-                <div className="rounded-base mb-4 bg-black p-2">
+                <div className="mb-4 rounded-base bg-black p-2">
                   <p className="font-mono text-sm text-white">
                     {t("page-wallets-seed-phrase-snippet")}
                   </p>
@@ -414,32 +408,26 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-explore")}
           </h2>
-          <div className="-ms-4 -me-4 mt-16 flex flex-wrap">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <Callout
               image={ETHImage}
-              titleKey="page-wallets:page-wallets-get-some"
-              alt={t("page-wallets-get-some-alt")}
-              descriptionKey="page-wallets:page-wallets-get-some-desc"
-              className="min-h-full flex-1 basis-[424px]"
+              title={t("page-wallets-get-some")}
+              description={t("page-wallets-get-some-desc")}
+              as="h3"
             >
-              <div>
-                <ButtonLink href="/get-eth/">
-                  {t("page-wallets-get-some-btn")}
-                </ButtonLink>
-              </div>
+              <ButtonLink href="/get-eth/">
+                {t("page-wallets-get-some-btn")}
+              </ButtonLink>
             </Callout>
             <Callout
               image={DappsImage}
-              titleKey="page-wallets:page-wallets-try-dapps"
-              alt={t("page-wallets-try-dapps-alt")}
-              descriptionKey="page-wallets:page-wallets-try-dapps-desc"
-              className="min-h-full flex-1 basis-[424px]"
+              title={t("page-wallets-try-dapps")}
+              description={t("page-wallets-try-dapps-desc")}
+              as="h3"
             >
-              <div>
-                <ButtonLink href="/apps/">
-                  {t("page-wallets-more-on-dapps-btn")}
-                </ButtonLink>
-              </div>
+              <ButtonLink href="/apps/">
+                {t("page-wallets-more-on-dapps-btn")}
+              </ButtonLink>
             </Callout>
           </div>
         </div>

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-08T07:10:40.079Z",
+  "englishManifestHash": "c38e7fe81055",
+  "placeholderOrder": [
+    "LINK-8c3242",
+    "LINK-5bab5a",
+    "LINK-2e4faa",
+    "LINK-fd037b",
+    "LINK-e66547",
+    "LINK-f59186",
+    "LINK-60d50d",
+    "LINK-c238b7"
+  ],
+  "placeholderMap": {
+    "LINK-8c3242": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.org/community/events/"
+      }
+    },
+    "LINK-5bab5a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.org/community/events/"
+      }
+    },
+    "LINK-2e4faa": {
+      "type": "link",
+      "values": {
+        "url": "https://esp.ethereum.foundation/"
+      }
+    },
+    "LINK-fd037b": {
+      "type": "link",
+      "values": {
+        "url": "https://esp.ethereum.foundation/"
+      }
+    },
+    "LINK-e66547": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.org/community/grants/#ethereum-grants"
+      }
+    },
+    "LINK-f59186": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=io2Dx1ouz8o"
+      }
+    },
+    "LINK-60d50d": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/NapulETH/status/1905732699094151623"
+      }
+    },
+    "LINK-c238b7": {
+      "type": "link",
+      "values": {
+        "url": "https://sekto.tech/ethkl24"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:10:40.079Z",
+      "status": "success"
+    }
+  }
+}

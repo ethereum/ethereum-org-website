@@ -4,13 +4,13 @@ metaTitle: Platby na Ethereu
 description: "Přehled plateb na Ethereu"
 lang: cs
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "Logo Eth zobrazené s podávajícíma si rukama."
-summaryPoint1: "Svět, kde se peníze pohybují stejně volně jako informace"
-summaryPoint2: "Otevřené a globální, umožňující bezhraniční transakce pro všechny"
-summaryPoint3: "Platby přijaté do minuty"
+summaryPoints:
+  - "Svět, kde se peníze pohybují stejně volně jako informace"
+  - "Otevřené a globální, umožňující bezhraniční transakce pro všechny"
+  - "Platby přijaté do minuty"
 ---
 
 Každý den čelí miliony lidí stejné výzvě: přesouvání peněz přes hranice je pomalé, drahé a často frustrující. Nezávislý pracovník na Bali čeká dny na zúčtování platby od svého klienta z New Yorku. To se týká zejména lidí v regionech s omezenou bankovní infrastrukturou, což jim ztěžuje účastnit se globální ekonomiky.
@@ -26,11 +26,11 @@ To není žádný vzdálený sen – děje se to dnes na Ethereu. Zatímco tradi
 
 Pro miliony lidí pracujících v zahraničí je posílání peněz domů pravidelnou nutností. Tradiční remitenční služby jsou často spojeny s vysokými poplatky a pomalou dobou zpracování. Ethereum nabízí zajímavou alternativu.
 
-<CardGrid>
+<Grid>
   <Card title="Levnější poplatky" emoji=":money_with_wings:" description="Služby pro převod peněz si v průměru účtují poplatky až 14 $. Transakce na Ethereu přitom často stojí méně než 0,01 $."/>
   <Card title="Rychlejší převody" emoji="📶" description="Zpracování mezinárodních bankovních převodů trvá několik dní. Transakce na Ethereu jsou vyřízeny během několika minut." />
   <Card title="Otevřeno pro každého" emoji="🌎" description="K odesílání nebo přijímání Etherů vám stačí jen připojení k internetu a peněženka." />
-</CardGrid>
+</Grid>
 
 ## Přístup ke globálním měnám {#access-to-global-currencies}
 

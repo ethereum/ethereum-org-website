@@ -29,17 +29,16 @@ A home staker receives rewards directly from the protocol for keeping their vali
 
 Home staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
-<CardGrid>
+<Grid>
   <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
   <Card title="Network security" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
-</CardGrid>
+</Grid>
 
 ## Considerations before home staking {#considerations-before-staking-solo}
 
 As much as we wish that home staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to home stake your ETH.
 
-<InfoGrid>
 <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
 When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
 
@@ -71,7 +70,6 @@ Different from inactivity penalties for being offline, <em>slashing</em> is a mu
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> More on slashing and validator lifecycle</a>
 </ExpandableCard>
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

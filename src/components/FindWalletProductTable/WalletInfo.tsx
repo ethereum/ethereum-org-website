@@ -69,7 +69,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
           <Image
             src={wallet.image}
             alt=""
-            className="size-6 self-center object-contain lg:row-span-full lg:size-14 lg:self-start"
+            className="size-6 self-center object-contain lg:row-span-2 lg:size-14 lg:self-start"
           />
 
           <p className="self-center text-xl font-bold lg:self-start">

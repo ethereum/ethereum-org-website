@@ -115,7 +115,7 @@ const CentralizedExchanges = ({
         <>
           <ResultsContainer>
             <ListContainer>
-              <h3 className="text-xl font-semibold md:text-2xl">
+              <h3 className="text-xl md:text-2xl">
                 {t("page-get-eth-exchanges-header-exchanges")}
               </h3>
               {hasExchangeResults && (

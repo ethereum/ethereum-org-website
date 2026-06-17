@@ -4,13 +4,13 @@ metaTitle: "이더리움 결제"
 description: "이더리움 결제 개요"
 lang: ko
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "기부와 함께 이더리움 로고가 표시되고 있습니다."
-summaryPoint1: "돈이 정보만큼 자유롭게 움직이는 세상"
-summaryPoint2: "개방적이고 글로벌하며 누구에게나 국경 없는 거래를 가능하게 합니다"
-summaryPoint3: "1분 이내에 받은 결제 금액"
+summaryPoints:
+  - "돈이 정보만큼 자유롭게 움직이는 세상"
+  - "개방적이고 글로벌하며 누구에게나 국경 없는 거래를 가능하게 합니다"
+  - "1분 이내에 받은 결제 금액"
 ---
 
 매일 수백만 명의 사람들이 같은 도전에 직면하고 있습니다: 국경을 넘어 돈을 옮기는 것은 느리고 비용이 많이 들며 종종 좌절감을 줍니다. 발리의 한 프리랜서는 뉴욕 고객으로부터 결제가 완료될 때까지 며칠을 기다립니다. 이는 특히 은행 인프라가 제한된 지역의 사람들에게 영향을 미쳐 글로벌 경제에 참여하기 어렵게 만듭니다.
@@ -26,11 +26,11 @@ summaryPoint3: "1분 이내에 받은 결제 금액"
 
 해외에서 일하는 수백만 명의 사람들에게 본국으로 송금하는 것은 정기적인 필수품입니다. 전통적인 송금 서비스는 종종 높은 수수료와 느린 처리 시간을 동반합니다. 이더리움은 매력적인 대안을 제시합니다.
 
-<CardGrid>
+<Grid>
   <Card title="더 저렴한 수수료" emoji=":money_with_wings:" description="송금 서비스는 평균적으로 최대 14달러의 수수료를 부과하지만, 이더리움 거래는 0.01달러 미만으로 완료되는 경우가 많습니다."/>
   <Card title="더 빠른 송금" emoji="📶" description="국제 은행 송금은 처리하는 데 며칠이 걸리지만, 이더리움 거래는 몇 분 안에 정산됩니다." />
   <Card title="누구나 이용 가능" emoji="🌎" description="인터넷 연결과 지갑 앱만 있으면 이더를 보내거나 받을 수 있습니다." />
-</CardGrid>
+</Grid>
 
 ## 글로벌 통화에 대한 접근성 {#access-to-global-currencies}
 

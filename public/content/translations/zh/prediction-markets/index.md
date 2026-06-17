@@ -4,8 +4,9 @@ lang: zh
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "通过精准预测获取经济回报"
-summaryPoint2: "关于未来事件的高质量预测"
+summaryPoints:
+  - "通过精准预测获取经济回报"
+  - "关于未来事件的高质量预测"
 buttons:
   - content: 了解更多
     toId: how-prediction-markets-work
@@ -29,11 +30,11 @@ buttons:
 
 与传统预测不同，基于区块链的预测市场具有以下特点：
 
-<CardGrid>
+<Grid>
   <Card title="激励驱动" emoji=":money_with_wings:" description="参与者质押真实资金，从而带来高质量的预测。"/>
   <Card title="去中心化" emoji="🌎" description="使用区块链和智能合约，确保支付透明且自动执行。" />
   <Card title="市场驱动的赔率" emoji="🤝" description="价格由交易者买卖结果份额来设定，而非由中心化的庄家预设。" />
-</CardGrid>
+</Grid>
 
 即便作为市场旁观者，也有几率通过链上透明的博弈行为与价格信号，获取一些常规渠道无法获得数据。 可以这样想：
 

@@ -7,6 +7,7 @@ import { useLocale } from "next-intl"
 import type { EventItem } from "@/lib/types"
 
 import { Alert, AlertContent } from "@/components/ui/alert"
+import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 
 import EventCard from "../../_components/EventCard"
@@ -50,7 +51,7 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
         {t("page-events-search-sr-text")}
       </span>
       {filteredEvents.length ? (
-        <div className="grid grid-cols-fill-4 gap-8">
+        <Grid>
           {filteredEvents.map((event) => (
             <EventCard
               key={event.id}
@@ -65,9 +66,9 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
               }}
             />
           ))}
-        </div>
+        </Grid>
       ) : (
-        <Alert variant="warning">
+        <Alert variant="warning" role="status">
           <Info className="size-6 !text-current" />
           <AlertContent>{t("page-events-search-no-results")}</AlertContent>
         </Alert>

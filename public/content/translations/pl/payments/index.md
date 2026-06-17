@@ -4,13 +4,13 @@ metaTitle: "Płatności na Ethereum"
 description: "Przegląd płatności na Ethereum"
 lang: pl
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "Logo Eth wyświetlane wraz z dłońmi w geście dawania."
-summaryPoint1: "Świat, w którym pieniądze przemieszczają się tak swobodnie jak informacje"
-summaryPoint2: "Otwarte i globalne, umożliwiające wszystkim transakcje bez granic"
-summaryPoint3: "Płatności otrzymywane w mniej niż minutę"
+summaryPoints:
+  - "Świat, w którym pieniądze przemieszczają się tak swobodnie jak informacje"
+  - "Otwarte i globalne, umożliwiające wszystkim transakcje bez granic"
+  - "Płatności otrzymywane w mniej niż minutę"
 ---
 
 Każdego dnia miliony ludzi stają przed tym samym wyzwaniem: przesyłanie pieniędzy za granicę jest powolne, kosztowne i często frustrujące. Freelancer na Bali czeka dniami, aż płatność od klienta z Nowego Jorku zostanie zrealizowana. Problem ten szczególnie dotyka osoby w regionach z ograniczoną infrastrukturą bankową, co utrudnia im udział w globalnej gospodarce.
@@ -26,11 +26,11 @@ To nie jest odległa wizja – to dzieje się już dziś na Ethereum. Podczas gd
 
 Dla milionów ludzi pracujących za granicą wysyłanie pieniędzy do domu jest regularną koniecznością. Tradycyjne usługi przekazów pieniężnych często wiążą się z wysokimi opłatami i powolnym czasem realizacji. Ethereum oferuje atrakcyjną alternatywę.
 
-<CardGrid>
+<Grid>
   <Card title="Tańsze opłaty" emoji=":money_with_wings:" description="Średnia opłata za przekaz pieniężny wynosi do 14 USD. Transakcje w Ethereum często kosztują poniżej 0,01 USD."/>
   <Card title="Szybsze transfery" emoji="📶" description="Przetworzenie międzynarodowych przelewów bankowych zajmuje kilka dni. Transakcje Ethereum są rozliczane w ciągu kilku minut." />
   <Card title="Otwarte dla każdego" emoji="🌎" description="Wystarczy połączenie z internetem i aplikacja portfela, aby wysyłać lub odbierać Ether." />
-</CardGrid>
+</Grid>
 
 ## Dostęp do globalnych walut {#access-to-global-currencies}
 

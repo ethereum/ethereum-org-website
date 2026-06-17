@@ -1,16 +1,15 @@
 ---
-title: Ethereum Foundation & community grant programs
+title: Ethereum grants
+metaTitle: Ethereum Foundation & community grant programs
 description: A listing of the grant programs throughout the Ethereum ecosystem.
 lang: en
 ---
-
-# Ethereum grants {#ethereum-grants}
 
 The programs listed below offer a variety of funding grants for projects working to promote the success and growth of the [Ethereum](/) ecosystem. Use this as a guide to find and apply for funds to help make your next Ethereum project a success.
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
-<Alert variant="update" className="mt-8">
+<Alert variant="update">
 <Emoji text="🎗️" />
 <div>Founders, need help accelerating your business? [Head over to Founders Support](/founders/)</div>
 </Alert>

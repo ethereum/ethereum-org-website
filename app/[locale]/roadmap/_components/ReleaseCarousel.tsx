@@ -113,7 +113,7 @@ const ReleaseCarousel = () => {
   return (
     <div className="w-full max-w-[100vw] overflow-hidden" dir="ltr">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6">
-        <div className="w-full rounded-2xl bg-background-highlight py-6">
+        <div className="w-full rounded-base bg-background-highlight py-6">
           <div className="flex flex-col gap-6">
             {/* First Carousel */}
             <Carousel
@@ -248,16 +248,17 @@ const ReleaseCarousel = () => {
                     className="w-full pl-4"
                   >
                     <div className="flex w-full flex-col gap-6 lg:flex-row">
-                      <div className="w-full flex-1 rounded-2xl">
+                      <div className="w-full flex-1 rounded-base">
                         <Image
                           src={release.image}
                           alt={release.releaseName}
-                          className="h-[240px] rounded-2xl object-cover md:h-[266px] lg:h-[551px]"
+                          className="h-[240px] rounded-base object-cover md:h-[266px] lg:h-[551px]"
+                          sizes="(max-width: 992px) 100vw, (max-width: 1536px) 50vw, 768px"
                         />
                       </div>
                       <div className="flex flex-1 flex-col gap-8">
                         <div>
-                          <h2 className="text-4xl font-bold lg:text-6xl">
+                          <h2 className="text-4xl lg:text-6xl">
                             {release.releaseName}
                           </h2>
                           <p className="text-md">{getDisplayDate(release)}</p>

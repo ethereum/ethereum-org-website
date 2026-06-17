@@ -2,6 +2,7 @@ import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
 import { getTranslations } from "next-intl/server"
+import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -10,23 +11,23 @@ import Emoji, { type EmojiProps } from "../Emoji"
 import { Button } from "./buttons/Button"
 
 const alertVariants = cva(
-  "flex flex-row gap-4 items-center rounded-lg border p-4",
+  "flex gap-4 items-center rounded-base border p-4 text-body/70",
   {
     variants: {
       variant: {
-        info: "bg-background-highlight border",
+        info: "bg-background-highlight",
         error:
-          "border-error bg-error-light [&_h6]:text-error [&_svg]:text-error text-gray-800",
+          "dark:border-error/70 border-error dark:bg-error-dark bg-error-light **:[svg:not(.lucide-external-link)]:text-error",
         success:
-          "border-success bg-success-light [&_h6]:text-success [&_svg]:text-success text-gray-800",
+          "dark:border-success/70 border-success dark:bg-success-dark bg-success-light **:[svg:not(.lucide-external-link)]:text-success",
         warning:
-          "border-warning bg-warning-light [&_h6]:text-warning [&_svg]:text-warning text-gray-800",
+          "dark:border-warning/70 border-warning dark:bg-warning-dark bg-warning-light **:[svg:not(.lucide-external-link)]:text-warning",
         update:
-          "bg-primary-low-contrast border-primary-high-contrast [&_h6]:text-primary-high-contrast [&_svg]:text-primary-high-contrast",
-      },
-      size: {
-        // Useful for banner alerts
-        full: "rounded-none border-none w-full",
+          "border-primary-high-contrast/70 bg-primary-low-contrast **:[svg:not(.lucide-external-link)]:text-primary-high-contrast",
+        banner: cn(
+          "rounded-none text-balance border-none w-full text-center justify-center bg-primary-action px-8",
+          "text-white **:[a]:text-white **:[a]:hover:text-white/80 **:[a]:visited:text-white"
+        ),
       },
     },
     defaultVariants: {
@@ -35,17 +36,25 @@ const alertVariants = cva(
   }
 )
 
+/**
+ * Visual notice component. Renders an `aside` for `variant="banner"`,
+ * otherwise a `div`. No ARIA role by default -- pass `role="status"` for
+ * polite dynamic announcements (e.g. filter result counts) or
+ * `role="alert"` for assertive runtime errors.
+ */
 const Alert = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
->(({ className, variant, size, ...props }, ref) => (
-  <div
-    ref={ref}
-    role="alert"
-    className={cn(alertVariants({ variant, size }), className)}
-    {...props}
-  />
-))
+>(({ className, variant, ...props }, ref) => {
+  const Comp = variant === "banner" ? "aside" : "div"
+  return (
+    <Comp
+      ref={ref}
+      className={cn(alertVariants({ variant }), className)}
+      {...props}
+    />
+  )
+})
 Alert.displayName = "Alert"
 
 const AlertContent = React.forwardRef<
@@ -56,12 +65,23 @@ const AlertContent = React.forwardRef<
 ))
 AlertContent.displayName = "AlertContent"
 
-const AlertTitle = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
-  <h6 ref={ref} className={cn("tracking-tight", className)} {...props} />
-))
+export interface AlertTitleProps
+  extends React.HTMLAttributes<HTMLParagraphElement> {
+  asChild?: boolean
+}
+
+const AlertTitle = React.forwardRef<HTMLParagraphElement, AlertTitleProps>(
+  ({ className, asChild, ...props }, ref) => {
+    const Comp = asChild ? Slot : "p"
+    return (
+      <Comp
+        ref={ref}
+        className={cn("font-bold text-body dark:text-body", className)}
+        {...props}
+      />
+    )
+  }
+)
 AlertTitle.displayName = "AlertTitle"
 
 const AlertDescription = React.forwardRef<

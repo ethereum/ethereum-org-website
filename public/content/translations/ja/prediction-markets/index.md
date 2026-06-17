@@ -4,8 +4,9 @@ lang: ja
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "金融的インセンティブを受け取って正確な予測を実行"
-summaryPoint2: "将来のイベントに関する高品質の予測"
+summaryPoints:
+  - "金融的インセンティブを受け取って正確な予測を実行"
+  - "将来のイベントに関する高品質の予測"
 buttons:
   - content: もっと詳しく
     toId: how-prediction-markets-work
@@ -29,11 +30,11 @@ buttons:
 
 従来の予測市場とは異なり、ブロックチェーンベースの予測市場には以下の特徴があります。
 
-<CardGrid>
+<Grid>
   <Card title="インセンティブ付き" emoji=":money_with_wings:" description="参加者は実資金をステークするため、質の高い予測につながります。"/>
   <Card title="分散化" emoji="🌎" description="ブロックチェーンとスマートコントラクトを使うことで、透明で自動化された支払いを実現します。" />
   <Card title="市場が決めるオッズ" emoji="🤝" description="価格は中央集権型のブックメーカーが事前に設定するのではなく、トレーダーによる結果シェアの売買で決まります。" />
-</CardGrid>
+</Grid>
 
 同市場の観察者に該当する場合でも、通常は入手できない貴重なデータを活用することができます。 具体的な内容は、次の通りです。
 

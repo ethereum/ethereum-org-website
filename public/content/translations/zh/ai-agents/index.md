@@ -4,13 +4,13 @@ metaTitle: "AI 智能体｜以太坊上的 AI 智能体"
 description: "以太坊上的 AI 智能体概览"
 lang: zh
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: "人们聚集在终端桌子旁"
-summaryPoint1: "与区块链交互并独立进行交易的 AI"
-summaryPoint2: "控制链上钱包与资金"
-summaryPoint3: "雇佣人类或其他代理进行工作"
+summaryPoints:
+  - "与区块链交互并独立进行交易的 AI"
+  - "控制链上钱包与资金"
+  - "雇佣人类或其他代理进行工作"
 buttons:
   - content: 什么是 AI 智能体？
     toId: what-are-ai-agents
@@ -39,11 +39,11 @@ AI智能体是使用人工智能来执行任务或做出自主决策的软件程
 
 这些因素将AI智能体从简单的机器人转变为动态的、自我完善的系统，为多个领域提供巨大的价值：
 
-<CardGrid>
+<Grid>
   <Card title="自动化 DeFi" emoji=":money_with_wings:" description="AI 代理密切关注市场趋势、执行交易和管理投资组合，让复杂的 DeFi 世界变得更加平易近人。"/>
   <Card title="全新 AI 代理经济" emoji="🌎" description="AI 代理可以雇佣其他具备不同技能的代理（或人类）来为自己执行专门任务。" />
   <Card title="风险管理" emoji="🛠️" description="通过监控交易活动，AI 代理可以更快、更好地帮助您发现骗局并保护您的数字资产。" />
-</CardGrid>
+</Grid>
 
 ## 以太坊上的 AI 代理 {#ai-agents-on-ethereum}
 

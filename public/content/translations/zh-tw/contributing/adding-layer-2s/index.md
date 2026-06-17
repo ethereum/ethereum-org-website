@@ -1,97 +1,95 @@
 ---
-title: "新增二層網路"
-description: "向 ethereum.org 新增二層網路時使用的政策"
+title: 新增第二層 (L2)
+description: 我們在 ethereum.org 上新增第二層 (L2) 時所使用的政策
 lang: zh-tw
 ---
 
-# 新增 Layer 2 {#adding-layer-2}
+我們希望確保列出盡可能最好的資源，以便使用者能夠安全且自信地探索第二層 (L2) 領域。
 
-我們想確保上架最佳的資源，讓使用者能夠以安全放心的方式瀏覽二層網路空間。
+任何人都可以在 ethereum.org 上自由建議新增第二層 (L2)。如果我們遺漏了某個第二層 (L2)，**[請向我們建議](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)！**
 
-任何人都可以建議在 ethereum.org 上新增二層網路。 如果我們遺漏了任何 Layer 2，**[請建議我們](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)！**
+我們目前在以下頁面列出 L2：
 
-我們目前在以下頁面上架二層網路：
+- [樂觀 Rollup](/developers/docs/scaling/optimistic-rollups/)
+- [零知識卷疊](/developers/docs/scaling/zk-rollups/)
+- [第二層 (L2)](/layer-2/)
 
-- [樂觀卷軸](/developers/docs/scaling/optimistic-rollups/)
-- [零知識卷軸](/developers/docs/scaling/zk-rollups/)
-- [Layer 2](/layer-2/)
+第二層 (L2) 對以太坊來說是一個相對較新且令人興奮的典範。我們試圖在 ethereum.org 上建立一個公平的考量框架，但上架標準將隨著時間的推移而改變和演進。
 
-二層網路是以太坊相對較新且令人興奮的範式。 我們嘗試在 ethereum.org 上創建一個公平的考量框架，但納入標準會隨時間推移而變化和發展。
+## 決策框架 {#decision-framework}
 
-## 決策框架
+### 收錄標準：必備條件 {#criteria-for-inclusion-the-must-haves}
 
-### 收錄標準：必要條件 {#criteria-for-inclusion-the-must-haves}
+**在 L2BEAT 上列出**
 
-**在 L2BEAT 上架**
-
-- 若要納入考量，此專案必須已列於 [L2BEAT](https://l2beat.com)。 L2BEAT 為二層網路專案提供了可靠的風險評估，供我們評估二層網路專案。 **如果專案未在 L2BEAT 上架，我們不會將其以 L2 的形式列在 ethereum.org。**
-- [了解如何將您的 L2 專案新增至 L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md)。
+- 為了納入考量，該專案必須列在 [L2BEAT](https://l2beat.com) 上。L2BEAT 提供了對第二層 (L2) 專案的穩健風險評估，我們依賴它來評估 L2 專案。**如果該專案未在 L2BEAT 上列出，我們將不會在 ethereum.org 上將其列為 L2。**
+- [了解如何將你的 L2 專案新增至 L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md)。
 
 **開源**
 
-- 你的程式碼必須是可存取的，同時你應接受來自更廣泛社群的拉取請求 (PR)。
+- 你的程式碼必須是可存取的，並且你應該接受來自更廣泛社群的 PR。
 
-**二層網路類別**
+**第二層 (L2) 類別**
 
-我們目前將以下列為二層網路解決方案：
+我們目前將以下視為第二層 (L2) 解決方案：
 
-- 樂觀卷軸
-- 零知識卷軸
+- 樂觀 Rollup
+- 零知識卷疊
 
-_我們不認為其他不使用以太坊來提供資料可用性或安全性的擴展解決方案是 Layer 2。_
+_我們不將其他不使用以太坊來實現資料可用性或安全性的擴容解決方案視為第二層 (L2)。_
 
-**以太坊的資料可用性**
+**以太坊用於資料可用性**
 
-- 資料可用性是其他擴張方案與二層網路方案之間的重要區分因素。 專案**必須**使用以太坊主網來提供資料可用性，才能考慮列入清單。
+- 資料可用性是其他擴容解決方案與第二層 (L2) 之間的重要區分因素。專案**必須**使用以太坊主網來實現資料可用性，才能被考慮列出。
 
-**跨鏈橋**
+**橋接器**
 
-- 使用者怎樣才能登錄利用二層網路？
+- 使用者如何能夠進入該第二層 (L2)？
 
 **專案上線日期**
 
-- 二層網路已在主網「上線」超過 6 個月
+- 在主網上「上線」超過 6 個月的第二層 (L2)
 
-- 未經使用者實際測試的較新專案不太可能上架。
+- 尚未經過使用者實戰測試的較新專案較不可能被列出。
 
-**外部安全審核**
+**外部安全稽核**
 
-- 無論是透過審核、內部安全團隊或其他方法，你的產品安全性都必須經可靠測試。 這將降低我們的使用者面臨的風險，並向我們表明你非常重視安全性。
+- 無論是透過稽核、內部安全團隊還是其他方法，你的產品安全性必須經過可靠的測試。這降低了我們使用者的風險，並向我們表明你認真對待安全性。
 
-**持續的使用者群**
+**持續的使用者基礎**
 
-- 我們會考慮總鎖定價值 (TVL) 歷史記錄、交易統計數據以及是否被知名公司或專案使用等指標
+- 我們將考慮總鎖倉量 (TVL) 歷史記錄、交易統計數據，以及它是否被知名公司或專案使用等指標
 
 **活躍的開發團隊**
 
-- 我們不會上架沒有活躍團隊去開發專案的二層網路。
+- 我們不會列出沒有活躍團隊致力於專案的第二層 (L2)。
 
-**區塊瀏覽器**
+**區塊鏈瀏覽器**
 
-- 上架的專案需要正常運作的區塊瀏覽器，讓使用者輕鬆瀏覽區塊鏈。
+- 列出的專案要求有一個可運作的區塊鏈瀏覽器，以允許使用者輕鬆瀏覽該鏈。
 
-### 其他標準：加分項 {#nice-to-haves}
+### 其他標準：加分條件 {#nice-to-haves}
 
 **交易所對專案的支援**
 
-- 使用者能否直接存款到交易所和/或從交易所提款？
+- 使用者是否能夠直接從交易所存款和/或提款？
 
-**二層網絡生態系統的去中心化應用程式連結**
+**第二層 (L2) 生態系統中去中心化應用程式 (dapp) 的連結**
 
-- 我們希望能夠提供有關使用者可以在此二層網路上執行哪些操作的資訊。 （例如 https://portal.arbitrum.io/、https://www.optimism.io/apps）
+- 我們希望能夠提供有關使用者可以期望在這個第二層 (L2) 上做什麼的資訊。（例如：https://portal.arbitrum.io/、https://www.optimism.io/apps）
 
 **代幣合約清單**
 
-- 由於資產會在二層網路擁有新地址，如有可用的代幣清單資源，請分享。
+- 由於資產在第二層 (L2) 上將會有一個新地址，如果有可用的代幣清單資源，請分享。
 
-**支援原生錢包**
+**原生錢包支援**
 
-- 是否有任何錢包原生支援二層網路？
+- 是否有任何錢包原生支援該 L2？
 
-## 新增您的 Layer 2 {#add-exchange}
+## 新增你的第二層 (L2) {#add-exchange}
 
-如果你想在 ethereum.org 上新增二層網路層，請在 GitHub 上建立議題。
+如果你想在 ethereum.org 上新增第二層 (L2)，請在 GitHub 上建立一個 issue。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
-提交一個議題
+  建立 issue
 </ButtonLink>

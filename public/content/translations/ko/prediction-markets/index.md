@@ -4,8 +4,9 @@ lang: ko
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "정확한 예측에 대한 금전적 보상 제공"
-summaryPoint2: "미래 이벤트에 대한 높은 수준의 예측"
+summaryPoints:
+  - "정확한 예측에 대한 금전적 보상 제공"
+  - "미래 이벤트에 대한 높은 수준의 예측"
 buttons:
   - content: 자세히 알아보기
     toId: how-prediction-markets-work
@@ -29,11 +30,11 @@ buttons:
 
 기존 예측 방식과 달리, 블록체인 기반 예측 시장은:
 
-<CardGrid>
+<Grid>
   <Card title="인센티브 기반" emoji=":money_with_wings:" description="참가자들이 실제 자금을 스테이킹하므로 예측의 질이 높아집니다."/>
   <Card title="탈중앙화" emoji="🌎" description="블록체인과 스마트 계약으로 지급 절차가 투명하고 자동화됩니다." />
   <Card title="시장 기반 배당률" emoji="🤝" description="중앙화된 북메이커가 아닌, 결과 지분을 거래하는 트레이더들이 가격을 결정해요." />
-</CardGrid>
+</Grid>
 
 시장을 관찰하는 것만으로도, 다른 방식으로는 얻기 힘든 귀중한 데이터를 평가할 수 있습니다. 이렇게 생각해 보세요:
 

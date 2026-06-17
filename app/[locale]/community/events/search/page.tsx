@@ -3,10 +3,11 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { EventItem, Lang, PageParams } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import { Alert, AlertContent } from "@/components/ui/alert"
 import { Button } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/section"
 
@@ -82,7 +83,7 @@ const Page = async (props: {
 
     return (
       <>
-        <div className="grid grid-cols-fill-4 gap-8">
+        <Grid>
           {filteredEvents.map((event) => (
             <EventCard
               key={event.id}
@@ -97,7 +98,7 @@ const Page = async (props: {
               }}
             />
           ))}
-        </div>
+        </Grid>
       </>
     )
   }
@@ -110,11 +111,10 @@ const Page = async (props: {
   return (
     <>
       <EventsSearchJsonLD locale={locale} contributors={contributors} />
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug: "/community/events/search" }}
         title={title}
         description={t("page-events-meetups-hero-subtitle")}
-        className="pb-0"
       />
 
       <MainArticle className="flex flex-col gap-16 px-4 py-10 md:px-8">

@@ -4,13 +4,13 @@ metaTitle: "Thanh toán trên Ethereum"
 description: "Tổng quan về thanh toán trên Ethereum"
 lang: vi
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "Biểu tượng của ETH được hiển thị cùng hình ảnh những bàn tay đang trao đi."
-summaryPoint1: "Một thế giới nơi mà tiền di chuyển tự do như thông tin"
-summaryPoint2: "Tự do và toàn cầu, cho phép giao dịch xuyên biên giới cho mọi người"
-summaryPoint3: "Giao dịch hoàn tất trong vòng một phút"
+summaryPoints:
+  - "Một thế giới nơi mà tiền di chuyển tự do như thông tin"
+  - "Tự do và toàn cầu, cho phép giao dịch xuyên biên giới cho mọi người"
+  - "Giao dịch hoàn tất trong vòng một phút"
 ---
 
 Mỗi ngày, hàng triệu người gặp cùng một thử thách: di chuyển tiền xuyên biên giới rất chậm, chi phí đắt, và thường rất khó chịu. Một người có công việc tự do tại Bali chờ đợi cả ngày để nhận được tiền thanh toán từ khách hàng ở New York. Điều này đặc biệt ảnh hưởng đến những người sống ở các khu vực có hạ tầng ngân hàng hạn chế, khiến họ khó tham gia vào nền kinh tế toàn cầu.
@@ -26,11 +26,11 @@ Mỗi ngày, hàng triệu người gặp cùng một thử thách: di chuyển 
 
 Với hàng triệu người làm việc ở nước ngoài, gửi tiền về nhà là một nhu cầu thường xuyên. Hệ thống chuyển tiền quốc tế thường bao gồm phí giao dịch cao và chậm chạp. Ethereum mang đến một trải nghiệm hoàn toàn khác.
 
-<CardGrid>
+<Grid>
   <Card title="Phí rẻ hơn" emoji=":money_with_wings:" description="Các dịch vụ chuyển tiền thường thu phí tới 14 đô la, trong khi giao dịch trên Ethereum thường chỉ tốn dưới 0,01 đô la."/>
   <Card title="Chuyển tiền nhanh hơn" emoji="📶" description="Chuyển tiền quốc tế mất vài ngày xử lý, trong khi giao dịch Ethereum chỉ mất vài phút để hoàn tất." />
   <Card title="Mở cho mọi người" emoji="🌎" description="Bạn chỉ cần có kết nối Internet và một ứng dụng ví để gửi hoặc nhận Ether." />
-</CardGrid>
+</Grid>
 
 ## Tiếp cận tiền tệ toàn cầu {#access-to-global-currencies}
 

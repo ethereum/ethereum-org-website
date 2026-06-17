@@ -1,20 +1,21 @@
-import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { Lang, PageParams } from "@/lib/types"
+import type { CostLeaderboardData, Lang, PageParams } from "@/lib/types"
 
-import I18nProvider from "@/components/I18nProvider"
+import FeedbackCard from "@/components/FeedbackCard"
+import PageHero from "@/components/Hero/PageHero"
+import MainArticle from "@/components/MainArticle"
+import InlineLink from "@/components/ui/Link"
+import { List, ListItem } from "@/components/ui/list"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import Contributors from "./_components/contributors"
+import allTimeData from "@/data/translation-reports/alltime/alltime-data.json"
+
 import ContributorsJsonLD from "./page-jsonld"
+
+const NAMESPACE = "page-contributing-translation-program-contributors"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -22,24 +23,90 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
+  const t = await getTranslations(NAMESPACE)
+  const tCommon = await getTranslations("common")
+
   const { contributors } = await getAppPageContributorInfo(
     "contributing/translation-program/contributors",
     locale as Lang
   )
 
-  // Get i18n messages
-  const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage(
-    "/contributing/translation-program/contributors"
-  )
-  const messages = pick(allMessages, requiredNamespaces)
+  const translators = (allTimeData as CostLeaderboardData[])
+    .map((item) => item.username)
+    .filter((item) => item.length > 0)
 
   return (
     <>
       <ContributorsJsonLD locale={locale} contributors={contributors} />
-      <I18nProvider locale={locale} messages={messages}>
-        <Contributors />
-      </I18nProvider>
+
+      <PageHero
+        breadcrumbs={{
+          slug: "/contributing/translation-program/contributors",
+        }}
+        title={t("page-contributing-translation-program-contributors-title")}
+        description={
+          <>
+            <p>
+              <strong className="text-xl lg:text-2xl">
+                {t(
+                  "page-contributing-translation-program-contributors-number-of-contributors"
+                )}{" "}
+                {translators.length}
+              </strong>
+            </p>
+            <p>
+              {t(
+                "page-contributing-translation-program-contributors-our-translators-1"
+              )}
+            </p>
+            <p>
+              {t(
+                "page-contributing-translation-program-contributors-our-translators-2"
+              )}
+            </p>
+            <p>
+              {t(
+                "page-contributing-translation-program-contributors-our-translators-3"
+              )}
+            </p>
+            <p>
+              {tCommon("page-languages-interested")}{" "}
+              <InlineLink href="/contributing/translation-program/">
+                {tCommon("page-languages-learn-more")}
+              </InlineLink>
+              .
+            </p>
+          </>
+        }
+      />
+
+      <MainArticle className="w-full flex-col items-center px-4 lg:px-8">
+        <h2 className="mt-12 mb-8 leading-xs">
+          {t("page-contributing-translation-program-contributors-thank-you")}
+        </h2>
+
+        <List className="grid grid-cols-1 gap-x-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+          {translators
+            .sort((user1, user2) =>
+              user1.toLowerCase().localeCompare(user2.toLowerCase())
+            )
+            .map((user) => (
+              <ListItem key={user} className="truncate text-body-medium">
+                {user}
+              </ListItem>
+            ))}
+        </List>
+
+        <p>
+          {tCommon("page-languages-interested")}{" "}
+          <InlineLink href="/contributing/translation-program/">
+            {tCommon("page-languages-learn-more")}
+          </InlineLink>
+          .
+        </p>
+
+        <FeedbackCard />
+      </MainArticle>
     </>
   )
 }
@@ -50,9 +117,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations(
-    "page-contributing-translation-program-contributors"
-  )
+  const t = await getTranslations(NAMESPACE)
 
   return await getMetadata({
     locale,

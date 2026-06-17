@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/calling-a-smart-contract-from-javascript/index.md",
+  "generatedAt": "2026-06-16T23:52:53.236Z",
+  "rootHash": "01d2013a1e15",
+  "tree": {
+    "contentHash": "a1c5d5677a2d",
+    "anchorHash": "87691d137698",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "613479e69683",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "c8eb57e48ed1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d28104c20376"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ea27a6f3c248"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bf82e675a9bb"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "72175d37816b"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f26cb6fb8ba7"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f57c65384837"
+      },
+      "frontmatter:address": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "875b7ef46ba2"
+      },
+      "prose:2": {
+        "contentHash": "f6e5345444d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "d0665bba31dc",
+        "anchorHash": "c7308a37e8aa"
+      },
+      "prose:3": {
+        "contentHash": "9d708ccdc29a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "bc814577e1c7",
+        "anchorHash": "8d1c6523ecdc"
+      },
+      "prose:4": {
+        "contentHash": "6201111b83a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:16": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "03688cf08653"
+      },
+      "prose:0": {
+        "contentHash": "30f8ac2bd1b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:18": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9c0c0c7a47b8"
+      },
+      "inline-code:0": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "82d62f3d66dd"
+      },
+      "inline-code:1": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "27f576cafbb2"
+      },
+      "prose:5": {
+        "contentHash": "da1ce507864c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "f9a3c835ec27",
+        "anchorHash": "162089770e35"
+      },
+      "prose:6": {
+        "contentHash": "adb4458c71cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:26": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "93c17f2186bd"
+      },
+      "code-fence:28": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c7058ac636e0"
+      },
+      "prose:1": {
+        "contentHash": "d0964e79e81a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "call-reading-value-from-a-smart-contract": {
+        "contentHash": "00d9d69a436c",
+        "anchorHash": "29fa756d76b5",
+        "labelHash": "bd4412c30841",
+        "children": {
+          "_label": {
+            "contentHash": "bd4412c30841",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "e4c2b26f808d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "95a182fc6180",
+            "anchorHash": "5fdc8b4a2fc4"
+          },
+          "prose:4": {
+            "contentHash": "2c3c3874990c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8173bca605a3"
+          },
+          "prose:5": {
+            "contentHash": "701150a56cdb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7edb360f06ac"
+          },
+          "prose:6": {
+            "contentHash": "cd34a81518d9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c3f8c4ae65ca"
+          },
+          "prose:1": {
+            "contentHash": "1466e5ebbcff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "inline-code:2",
+          "prose:6",
+          "code-fence:8",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "send-sending-a-transaction-to-a-smart-contract-function": {
+        "contentHash": "64c3f7ce8f6c",
+        "anchorHash": "0475de6651f1",
+        "labelHash": "838c21f249c4",
+        "children": {
+          "_label": {
+            "contentHash": "838c21f249c4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3c0058437875",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "1c0c3b2c7bf1"
+          },
+          "prose:2": {
+            "contentHash": "91a4d494a0e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "47d6c6a31363",
+            "anchorHash": "8261bd22ae0f"
+          },
+          "prose:3": {
+            "contentHash": "62e532fbe48d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "587826798257",
+            "anchorHash": "b7954eec50aa"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "code-fence:2",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "frontmatter:address",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "code-fence:16",
+      "prose:0",
+      "code-fence:18",
+      "prose:3",
+      "inline-code:0",
+      "prose:4",
+      "inline-code:1",
+      "prose:5",
+      "link:2",
+      "prose:6",
+      "code-fence:26",
+      "prose:0",
+      "code-fence:28",
+      "prose:1",
+      "inline-code:0",
+      "prose:2",
+      "call-reading-value-from-a-smart-contract",
+      "send-sending-a-transaction-to-a-smart-contract-function"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

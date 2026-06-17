@@ -1,0 +1,1075 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md",
+  "generatedAt": "2026-06-17T00:50:07.871Z",
+  "rootHash": "abeabd1a0da0",
+  "tree": {
+    "contentHash": "30b8b1cd43c1",
+    "anchorHash": "5fa181e98175",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "ed4afc5b5954",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "36a567823eac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b941c9c8232d"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e4ebe60e777f"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5297aea8bd90"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8e0882600097"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "65599c83d307"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "39acd69cc9c5"
+      },
+      "prose:3": {
+        "contentHash": "e319b37265a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "2805fc43d2b5",
+        "anchorHash": "aabdbc65cea9"
+      },
+      "prose:4": {
+        "contentHash": "e1820dc9312f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "285141884585",
+        "anchorHash": "6fe575a80485"
+      },
+      "prose:5": {
+        "contentHash": "a928130cf9cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "181b853e542f",
+        "anchorHash": "82f7eadf6db0"
+      },
+      "prose:6": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-basics": {
+        "contentHash": "555f99b423de",
+        "anchorHash": "2d31cb6686ff",
+        "labelHash": "a5e729fb76c8",
+        "children": {
+          "_label": {
+            "contentHash": "a5e729fb76c8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bc8f691e00e4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "alchemy-does-not-store-your-private-keys": {
+            "contentHash": "88304e6e1602",
+            "anchorHash": "9002e8bce106",
+            "labelHash": "e7cc24a4fc08",
+            "children": {
+              "_label": {
+                "contentHash": "e7cc24a4fc08",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "4d1bc695f236",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "774b13b8f8e9",
+                "anchorHash": "c792df881db1"
+              },
+              "prose:2": {
+                "contentHash": "c4b2896a2081",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "what-is-a-signer": {
+            "contentHash": "658778056da8",
+            "anchorHash": "bacd97328d8b",
+            "labelHash": "22d9407192db",
+            "children": {
+              "_label": {
+                "contentHash": "22d9407192db",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "6a0091ab80c4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "cd9b930645df",
+                "anchorHash": "4d52623dbc7b"
+              },
+              "prose:3": {
+                "contentHash": "303ded210d84",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "157c99e12c26",
+                "anchorHash": "dc6add8c5da7"
+              },
+              "prose:4": {
+                "contentHash": "114493223519",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "why-do-i-need-to-sign-my-transactions": {
+            "contentHash": "80aba6bf5a37",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "37f0a233d2d0",
+            "children": {
+              "_label": {
+                "contentHash": "37f0a233d2d0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "9b25883f34f9",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "how-do-i-protect-my-private-key": {
+            "contentHash": "abb7aa343995",
+            "anchorHash": "3f9a850ba050",
+            "labelHash": "78a4c0b02b73",
+            "children": {
+              "_label": {
+                "contentHash": "78a4c0b02b73",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "6302f00f641c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e9cbb0224c4a"
+              },
+              "prose:2": {
+                "contentHash": "354dc373e2ae",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "inline-code:0",
+              "prose:2"
+            ]
+          },
+          "difference-between-send-and-send-raw": {
+            "contentHash": "2a40ba635056",
+            "anchorHash": "e13926eaa3dd",
+            "labelHash": "262557f0b27d",
+            "children": {
+              "_label": {
+                "contentHash": "262557f0b27d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "beee7c66761a"
+              },
+              "prose:8": {
+                "contentHash": "6201111b83a0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "4731faadc819"
+              },
+              "prose:9": {
+                "contentHash": "ad33b03d6437",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "cec586a72737",
+                "anchorHash": "a25da37e6889"
+              },
+              "prose:10": {
+                "contentHash": "0fb82e3a78de",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "55cca2ec77e2",
+                "anchorHash": "d0351b625814"
+              },
+              "prose:11": {
+                "contentHash": "d1a4982804fe",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "d1332a231467",
+                "anchorHash": "49b4e69a6fcd"
+              },
+              "prose:12": {
+                "contentHash": "d63924822051",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "4731faadc819"
+              },
+              "prose:13": {
+                "contentHash": "9a3f5a8b1cf4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:6": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "4731faadc819"
+              },
+              "prose:14": {
+                "contentHash": "46282687cee9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:7": {
+                "contentHash": "df334a9d6f31",
+                "anchorHash": "cb417f126b70"
+              },
+              "prose:15": {
+                "contentHash": "be76f003832d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "inline-code:0",
+              "prose:8",
+              "inline-code:1",
+              "prose:9",
+              "link:2",
+              "prose:10",
+              "link:3",
+              "prose:11",
+              "link:4",
+              "prose:12",
+              "inline-code:5",
+              "prose:13",
+              "inline-code:6",
+              "prose:14",
+              "link:7",
+              "prose:15"
+            ]
+          },
+          "what-is-the-web3-library": {
+            "contentHash": "ceda05fd5309",
+            "anchorHash": "a6e52a3716f6",
+            "labelHash": "1632bbe6977c",
+            "children": {
+              "_label": {
+                "contentHash": "1632bbe6977c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "23a4331d4c77",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "fce32e90ca84",
+                "anchorHash": "f463915cbafa"
+              },
+              "prose:5": {
+                "contentHash": "aaacd101b0d7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "fcec91509759",
+                "anchorHash": "0d74363c464a"
+              },
+              "prose:6": {
+                "contentHash": "cab2644828bc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "cc90ce1732a6",
+                "anchorHash": "1533ac9fe631"
+              },
+              "prose:7": {
+                "contentHash": "3be3d1c0f4ae",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "e1ba4807a15d",
+                "anchorHash": "887e507e440d"
+              },
+              "prose:8": {
+                "contentHash": "bb7208bc9b5d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8"
+            ]
+          },
+          "how-to-send-secure-gas-optimized-and-private-transactions": {
+            "contentHash": "5415293df3c6",
+            "anchorHash": "ff3131d7913a",
+            "labelHash": "225f4dd5822c",
+            "children": {
+              "_label": {
+                "contentHash": "225f4dd5822c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "0136e9bf6a1a",
+                "anchorHash": "b7e3cc735e95"
+              },
+              "prose:6": {
+                "contentHash": "99d15a0270c0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "24d048d574a5",
+                "anchorHash": "65295851e159"
+              },
+              "prose:7": {
+                "contentHash": "897da07ac52b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "7941f0458043",
+                "anchorHash": "6fe575a80485"
+              },
+              "prose:8": {
+                "contentHash": "6bc54f13bea5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "42e318ce3678",
+                "anchorHash": "dc6add8c5da7"
+              },
+              "prose:9": {
+                "contentHash": "4d012781ce4e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "215d34582772",
+                "anchorHash": "e39dc2f6065b"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "alchemy-does-not-store-your-private-keys",
+          "what-is-a-signer",
+          "why-do-i-need-to-sign-my-transactions",
+          "how-do-i-protect-my-private-key",
+          "difference-between-send-and-send-raw",
+          "what-is-the-web3-library",
+          "how-to-send-secure-gas-optimized-and-private-transactions"
+        ]
+      },
+      "steps-to-sending-your-transaction": {
+        "contentHash": "46b874ed6eb1",
+        "anchorHash": "061e7c2d67db",
+        "labelHash": "ce46c285eb3d",
+        "children": {
+          "_label": {
+            "contentHash": "ce46c285eb3d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "create-an-alchemy-app-on-the-sepolia-testnet": {
+            "contentHash": "d25a66dafcd7",
+            "anchorHash": "932d822e0eb0",
+            "labelHash": "209eb834b0d3",
+            "children": {
+              "_label": {
+                "contentHash": "209eb834b0d3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "043e889299e4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "baef80b0957b",
+                "anchorHash": "b9a286d1cf58"
+              },
+              "prose:2": {
+                "contentHash": "3bced6328744",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "request-eth-from-sepolia-faucet": {
+            "contentHash": "eda025783cf7",
+            "anchorHash": "587288ef0d76",
+            "labelHash": "e01630779acd",
+            "children": {
+              "_label": {
+                "contentHash": "e01630779acd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "ef769089c4d0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "f4fda26bccda",
+                "anchorHash": "aeefb839756c"
+              },
+              "prose:2": {
+                "contentHash": "20216a69f7ef",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "create-a-new-project-direction": {
+            "contentHash": "d1454cabdced",
+            "anchorHash": "27db0a3104b6",
+            "labelHash": "7839c631964e",
+            "children": {
+              "_label": {
+                "contentHash": "7839c631964e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "f68353800cb3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "951cf22d1841"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "code-fence:2"
+            ]
+          },
+          "install-alchemy-web3": {
+            "contentHash": "b4d9a24ce248",
+            "anchorHash": "288ff06c4a1a",
+            "labelHash": "6748c57fc539",
+            "children": {
+              "_label": {
+                "contentHash": "6748c57fc539",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "ae5a88a470cd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "fce32e90ca84",
+                "anchorHash": "f463915cbafa"
+              },
+              "prose:3": {
+                "contentHash": "f17abd14871a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "6de811191fd7",
+                "anchorHash": "bc87e40630e7"
+              },
+              "prose:4": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:6": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ff17e130226c"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4",
+              "code-fence:6"
+            ]
+          },
+          "install-dotenv": {
+            "contentHash": "3058727c02f4",
+            "anchorHash": "4ecc64921dfe",
+            "labelHash": "a7184124f893",
+            "children": {
+              "_label": {
+                "contentHash": "a7184124f893",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "e147605db36f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e9cbb0224c4a"
+              },
+              "prose:2": {
+                "contentHash": "c51fabb2f792",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:4": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "8de9861263e7"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "inline-code:0",
+              "prose:2",
+              "code-fence:4"
+            ]
+          },
+          "create-the-dotenv-file": {
+            "contentHash": "82dde080bddd",
+            "anchorHash": "a12312ebd8d1",
+            "labelHash": "df5b08e0ea28",
+            "children": {
+              "_label": {
+                "contentHash": "df5b08e0ea28",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "a2a769e959cf",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e9cbb0224c4a"
+              },
+              "prose:5": {
+                "contentHash": "f66a71a4f323",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "de21f6ce52e2"
+              },
+              "prose:6": {
+                "contentHash": "dc5a1bda1745",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5ce4be42c135"
+              },
+              "prose:7": {
+                "contentHash": "4a3636dacfd9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "83ca68be6227",
+                "anchorHash": "80d7e64e94df"
+              },
+              "prose:8": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:10": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "f1cd10295b0f"
+              },
+              "component:11": {
+                "contentHash": "7d36653f5dc2",
+                "anchorHash": "3f261a1c1fe7",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "4bd9354bb652"
+                  },
+                  "component:0": {
+                    "contentHash": "9d802948c6ee",
+                    "anchorHash": "47b8b23f8e77",
+                    "children": {
+                      "component:0": {
+                        "contentHash": "300a300f9d23",
+                        "anchorHash": "aab4b49e4b93",
+                        "children": {
+                          "prose:1": {
+                            "contentHash": "3585108f3ad6",
+                            "anchorHash": "e3b0c44298fc"
+                          },
+                          "html-tag:0": {
+                            "contentHash": "a1aa6596787c",
+                            "anchorHash": "245fe57a8ca9"
+                          },
+                          "prose:2": {
+                            "contentHash": "eb36be6c0671",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        },
+                        "childrenOrder": [
+                          "prose:1",
+                          "html-tag:0",
+                          "prose:2"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "component:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "inline-code:0",
+              "prose:5",
+              "inline-code:1",
+              "prose:6",
+              "inline-code:2",
+              "prose:7",
+              "link:3",
+              "prose:8",
+              "code-fence:10",
+              "component:11"
+            ]
+          },
+          "create-sendtx-js": {
+            "contentHash": "c7d1b89c53b8",
+            "anchorHash": "822bbd3c635f",
+            "labelHash": "f4b92d66a7cc",
+            "children": {
+              "_label": {
+                "contentHash": "f4b92d66a7cc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "ddea9a6c45ae",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "78377b525757"
+              },
+              "prose:3": {
+                "contentHash": "5300469bb306",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "76884fed92aa"
+              },
+              "prose:4": {
+                "contentHash": "71d6cee68603",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-comment:6": {
+                "contentHash": "c08753ff3e67",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:7": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "77024e159a9d"
+              },
+              "prose:18": {
+                "contentHash": "3814ce56fe47",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:19": {
+                "contentHash": "bf6ea2a880af",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "2b2f7f42eb26",
+                "anchorHash": "86bb512976b6"
+              },
+              "prose:20": {
+                "contentHash": "b38b849a7a2b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "326cc280d091",
+                "anchorHash": "57a4720e8bf8"
+              },
+              "prose:21": {
+                "contentHash": "1bff53634dc7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ce922519a3c3"
+              },
+              "prose:22": {
+                "contentHash": "1b87ac4b8905",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:4": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "663ea1bfffe5"
+              },
+              "prose:23": {
+                "contentHash": "82156698b26c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "b5b8b9576430",
+                "anchorHash": "f72596a4719b"
+              },
+              "prose:24": {
+                "contentHash": "9ef6941268d6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:6": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "cd42404d52ad"
+              },
+              "prose:25": {
+                "contentHash": "e551e56a7ea7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:7": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2fe840e13244"
+              },
+              "prose:26": {
+                "contentHash": "648fa6c6a226",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:8": {
+                "contentHash": "53ece6159230",
+                "anchorHash": "632dc3603d91"
+              },
+              "prose:27": {
+                "contentHash": "7a629ac91d53",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:9": {
+                "contentHash": "8cc5348e3f87",
+                "anchorHash": "eb8069ffe3b9"
+              },
+              "prose:28": {
+                "contentHash": "004aed934257",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:10": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "78377b525757"
+              },
+              "prose:29": {
+                "contentHash": "e219ef4d1b4b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:11": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "6a31b63811f8"
+              },
+              "prose:30": {
+                "contentHash": "3843edb7b01c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:12": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "99f391be0bc0"
+              },
+              "prose:31": {
+                "contentHash": "1cac1e808e7b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:13": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "c522337787f3"
+              },
+              "prose:32": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:14": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "9f2eeb19c9b7"
+              },
+              "prose:33": {
+                "contentHash": "7622d554471e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:15": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "9f2eeb19c9b7"
+              },
+              "prose:34": {
+                "contentHash": "7e264d7e0c84",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:16": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d21f08b3294a"
+              },
+              "prose:35": {
+                "contentHash": "0d37141e3766",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:17": {
+                "contentHash": "501496a44865",
+                "anchorHash": "ac203a87d7f3"
+              },
+              "prose:36": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "inline-code:0",
+              "prose:3",
+              "inline-code:1",
+              "prose:4",
+              "code-comment:6",
+              "code-fence:7",
+              "prose:18",
+              "inline-code:0",
+              "prose:19",
+              "link:1",
+              "prose:20",
+              "link:2",
+              "prose:21",
+              "inline-code:3",
+              "prose:22",
+              "inline-code:4",
+              "prose:23",
+              "link:5",
+              "prose:24",
+              "inline-code:6",
+              "prose:25",
+              "inline-code:7",
+              "prose:26",
+              "link:8",
+              "prose:27",
+              "link:9",
+              "prose:28",
+              "inline-code:10",
+              "prose:29",
+              "inline-code:11",
+              "prose:30",
+              "inline-code:12",
+              "prose:31",
+              "inline-code:13",
+              "prose:32",
+              "inline-code:14",
+              "prose:33",
+              "inline-code:15",
+              "prose:34",
+              "inline-code:16",
+              "prose:35",
+              "link:17",
+              "prose:36"
+            ]
+          },
+          "run-the-code-using-node-sendtx-js": {
+            "contentHash": "51b4759cbb8f",
+            "anchorHash": "707d016de6e9",
+            "labelHash": "535e8f9fac7c",
+            "children": {
+              "_label": {
+                "contentHash": "535e8f9fac7c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "7cfd2731c98a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "6f79152048b0"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "code-fence:2"
+            ]
+          },
+          "see-your-transaction-in-the-mempool": {
+            "contentHash": "dd88584f8e55",
+            "anchorHash": "0fa9f55d1428",
+            "labelHash": "b24890b9c4a8",
+            "children": {
+              "_label": {
+                "contentHash": "b24890b9c4a8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "8801598a2b0c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d1c1545a519f",
+                "anchorHash": "79b8f5199275"
+              },
+              "prose:6": {
+                "contentHash": "a97c0b88bdc6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "a4de46774047"
+              },
+              "prose:7": {
+                "contentHash": "c6d24947d229",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:2": {
+                "contentHash": "4265acd69e8d",
+                "anchorHash": "0cf6f7a549af"
+              },
+              "prose:8": {
+                "contentHash": "22c2711708e3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "053bc65874ad",
+                "anchorHash": "0725688166ee"
+              },
+              "prose:9": {
+                "contentHash": "ca5d194a6296",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "ed4ef9bcc0cb",
+                "anchorHash": "ed4ef9bcc0cb"
+              },
+              "prose:10": {
+                "contentHash": "d2e2adf7177b",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "inline-code:1",
+              "prose:7",
+              "image:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "create-an-alchemy-app-on-the-sepolia-testnet",
+          "request-eth-from-sepolia-faucet",
+          "create-a-new-project-direction",
+          "install-alchemy-web3",
+          "install-dotenv",
+          "create-the-dotenv-file",
+          "create-sendtx-js",
+          "run-the-code-using-node-sendtx-js",
+          "see-your-transaction-in-the-mempool"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "prose:3",
+      "link:0",
+      "prose:4",
+      "link:1",
+      "prose:5",
+      "link:2",
+      "prose:6",
+      "the-basics",
+      "steps-to-sending-your-transaction"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

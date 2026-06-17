@@ -22,16 +22,19 @@ export default async function WalletsPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#wallets` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-wallets-meta-title"),
         description: t("page-wallets-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -55,11 +58,12 @@ export default async function WalletsPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#wallets` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#wallets`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-wallets-title"),
         description: t("page-wallets-meta-description"),
         image: "https://ethereum.org/images/wallets/wallet-hero.png",

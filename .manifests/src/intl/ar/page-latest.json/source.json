@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-latest.json",
+  "generatedAt": "2026-06-16T15:42:47.550Z",
+  "rootHash": "cb0321314367",
+  "tree": {
+    "contentHash": "abdf4392dfc1",
+    "anchorHash": "5cd4143460ba",
+    "children": {
+      "page-latest-meta-description": {
+        "contentHash": "6ea1dc1a067c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-title": {
+        "contentHash": "d90f62475406",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-subtitle": {
+        "contentHash": "4d24f72f88d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-no-posts": {
+        "contentHash": "0232d1746fc0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-read-more": {
+        "contentHash": "83b794145c0c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-minute-read": {
+        "contentHash": "2a91c15e1d3d",
+        "anchorHash": "b109f5f09c65",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "15fe0a36aa0c"
+          },
+          "prose:1": {
+            "contentHash": "b337c94500c5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-latest-team-attribution": {
+        "contentHash": "9e847484a658",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-latest-meta-description",
+      "page-latest-title",
+      "page-latest-subtitle",
+      "page-latest-no-posts",
+      "page-latest-read-more",
+      "page-latest-minute-read",
+      "page-latest-team-attribution"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

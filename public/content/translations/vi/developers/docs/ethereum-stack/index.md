@@ -1,56 +1,56 @@
 ---
-title: "Giới thiệu về Ethereum stack"
-description: "Một hướng dẫn về các lớp khác nhau của nền tảng Ethereum và cách chúng kết hợp với nhau."
+title: "Giới thiệu về ngăn xếp Ethereum"
+description: "Hướng dẫn chi tiết về các lớp khác nhau của ngăn xếp Ethereum và cách chúng kết hợp với nhau."
 lang: vi
 ---
 
-Giống như bất kỳ bộ phần mềm nào, "bộ Ethereum" hoàn chỉnh sẽ khác nhau tùy theo từng dự án dựa trên mục tiêu của bạn.
+Giống như bất kỳ ngăn xếp phần mềm nào, "ngăn xếp Ethereum" hoàn chỉnh sẽ khác nhau tùy theo từng dự án phụ thuộc vào mục tiêu của bạn.
 
-Tuy nhiên, có những thành phần chính của Ethereum giúp chúng ta hình dung cách mà các ứng dụng phần mềm tương tác với chuỗi khối của Ethereum. Hiểu các lớp trong stack sẽ giúp bạn nắm bắt được những cách khác nhau mà Ethereum có thể được tích hợp vào các phần mềm dự án.
+Tuy nhiên, có những thành phần cốt lõi của Ethereum giúp cung cấp một mô hình tư duy về cách các ứng dụng phần mềm tương tác với chuỗi khối Ethereum. Việc hiểu các lớp của ngăn xếp sẽ giúp bạn hiểu các cách khác nhau mà Ethereum có thể được tích hợp vào các dự án phần mềm.
 
-## Cấp 1: Máy ảo Ethereum {#ethereum-virtual-machine}
+## Cấp độ 1: Máy ảo Ethereum {#ethereum-virtual-machine}
 
-[Máy ảo Ethereum (EVM)](/developers/docs/evm/) là môi trường thực thi cho các hợp đồng thông minh trên Ethereum. Tất cả các hợp đồng thông minh và thay đổi trạng thái trên chuỗi khối Ethereum đều được thực thi bởi [các giao dịch](/developers/docs/transactions/). EVM xử lý toàn bộ quy trình giao dịch trên mạng Ethereum.
+[Máy ảo Ethereum (EVM)](/developers/docs/evm/) là môi trường thực thi cho các hợp đồng thông minh trên Ethereum. Tất cả các hợp đồng thông minh và những thay đổi trạng thái trên chuỗi khối Ethereum đều được thực thi bởi các [giao dịch](/developers/docs/transactions/). EVM đảm nhận toàn bộ việc xử lý giao dịch trên mạng lưới Ethereum.
 
-Giống như bất kỳ máy ảo nào, EVM tạo ra một lớp trừu tượng giữa các mã và máy đang chạy (một nút Ethereum). Hiện tại, EVM đang chạy trên hàng ngàn nút phân bổ khắp nơi trên thế giới.
+Giống như bất kỳ máy ảo nào, EVM tạo ra một mức độ trừu tượng giữa mã đang thực thi và máy thực thi (một nút Ethereum). Hiện tại, EVM đang chạy trên hàng ngàn nút được phân tán trên toàn thế giới.
 
-Chi tiết thì EVM sử dụng một bộ lệnh opcode để thực hiện các tác vụ cụ thể. Các mã vận hành này (140 mã riêng biệt) cho phép EVM [hoàn thiện Turing](https://en.wikipedia.org/wiki/Turing_completeness), nghĩa là EVM có thể tính toán gần như mọi thứ, miễn là có đủ tài nguyên.
+Về mặt kỹ thuật, EVM sử dụng một tập hợp các chỉ thị mã lệnh để thực thi các tác vụ cụ thể. Các mã lệnh (140 mã lệnh duy nhất) này cho phép EVM đạt được tính [Turing-complete (đầy đủ Turing)](https://en.wikipedia.org/wiki/Turing_completeness), điều này có nghĩa là EVM có khả năng tính toán hầu như mọi thứ, nếu có đủ tài nguyên.
 
-Là một nhà phát triển dapp, bạn không cần phải biết quá nhiều về EVM—chỉ cần biết rằng nó tồn tại và giữ cho tất cả các ứng dụng trên Ethereum hoạt động một cách trơn tru mà không xảy ra bất kỳ gián đoạn nào.
+Là một nhà phát triển ứng dụng phi tập trung (dapp), bạn không cần phải biết nhiều về EVM ngoài việc nó tồn tại và nó cung cấp sức mạnh một cách đáng tin cậy cho tất cả các ứng dụng trên Ethereum mà không có thời gian chết.
 
-## Cấp 2: Hợp đồng thông minh {#smart-contracts}
+## Cấp độ 2: Hợp đồng thông minh {#smart-contracts}
 
-[Các hợp đồng thông minh](/developers/docs/smart-contracts/) là các chương trình thực thi chạy trên chuỗi khối Ethereum.
+[Hợp đồng thông minh](/developers/docs/smart-contracts/) là các chương trình có thể thực thi chạy trên chuỗi khối Ethereum.
 
-Các hợp đồng thông minh được viết bằng các [ngôn ngữ lập trình](/developers/docs/smart-contracts/languages/) cụ thể, được biên dịch thành mã byte EVM (các lệnh máy cấp thấp được gọi là mã vận hành).
+Hợp đồng thông minh được viết bằng các [ngôn ngữ lập trình](/developers/docs/smart-contracts/languages/) cụ thể được biên dịch thành mã byte EVM (các chỉ thị máy cấp thấp được gọi là mã lệnh).
 
-Hợp đồng thông minh không chỉ là thư viện mã nguồn mở, mà thực ra chúng giống như dịch vụ API mở luôn hoạt động và không thể bị tắt. Hợp đồng thông minh cung cấp các chức năng công khai mà người dùng và các ứng dụng ([các ứng dụng phi tập trung](/developers/docs/dapps/)) có thể tương tác mà không cần sự cho phép. Bất kỳ ứng dụng nào cũng có thể tích hợp với các hợp đồng thông minh đã triển khai để tạo nên chức năng, chẳng hạn như thêm [nguồn cấp dữ liệu](/developers/docs/oracles/) hoặc để hỗ trợ hoán đổi token. Ngoài ra, bất kỳ ai cũng có thể triển khai các hợp đồng thông minh mới trên Ethereum để thêm chức năng tùy chỉnh nhằm đáp ứng nhu cầu của ứng dụng của họ.
+Hợp đồng thông minh không chỉ đóng vai trò là các thư viện mã nguồn mở, về cơ bản chúng còn là các dịch vụ API mở luôn chạy và không thể bị gỡ xuống. Hợp đồng thông minh cung cấp các hàm công khai mà người dùng và các ứng dụng ([dapp](/developers/docs/dapps/)) có thể tương tác mà không cần sự cho phép. Bất kỳ ứng dụng nào cũng có thể tích hợp với các hợp đồng thông minh đã được triển khai để kết hợp các chức năng, chẳng hạn như thêm [nguồn cấp dữ liệu](/developers/docs/oracles/) hoặc để hỗ trợ hoán đổi token. Ngoài ra, bất kỳ ai cũng có thể triển khai các hợp đồng thông minh mới lên Ethereum để thêm chức năng tùy chỉnh nhằm đáp ứng nhu cầu ứng dụng của họ.
 
-Nếu bạn là một nhà phát triển dapp, bạn chỉ cần viết hợp đồng thông minh nếu muốn thêm chức năng tùy chỉnh trên chuỗi khối Ethereum. Bạn có thể thấy rằng bạn có thể đáp ứng hầu hết hoặc tất cả nhu cầu của dự án chỉ bằng cách tích hợp với các hợp đồng thông minh hiện có, chẳng hạn như nếu bạn muốn hỗ trợ thanh toán bằng stablecoin hoặc cho phép trao đổi token một cách phi tập trung.
+Là một nhà phát triển dapp, bạn sẽ chỉ cần viết các hợp đồng thông minh nếu bạn muốn thêm chức năng tùy chỉnh trên chuỗi khối Ethereum. Bạn có thể thấy rằng mình có thể đạt được hầu hết hoặc tất cả các nhu cầu của dự án chỉ bằng cách tích hợp với các hợp đồng thông minh hiện có, ví dụ như nếu bạn muốn hỗ trợ thanh toán bằng stablecoin hoặc cho phép sàn giao dịch token phi tập trung.
 
-## Cấp 3: Các nút Ethereum {#ethereum-nodes}
+## Cấp độ 3: Các nút Ethereum {#ethereum-nodes}
 
-Để một ứng dụng có thể tương tác với chuỗi khối Ethereum, ứng dụng đó phải kết nối với một [nút Ethereum](/developers/docs/nodes-and-clients/). Kết nối với một nút cho phép bạn đọc dữ liệu blockchain và cũng có thể gửi giao dịch đến mạng.
+Để một ứng dụng có thể tương tác với chuỗi khối Ethereum, nó phải kết nối với một [nút Ethereum](/developers/docs/nodes-and-clients/). Việc kết nối với một nút cho phép bạn đọc dữ liệu chuỗi khối và/hoặc gửi các giao dịch đến mạng lưới.
 
-Các nút Ethereum là những máy tính chạy phần mềm - một client Ethereum. Một client là một bản triển khai của Ethereum, giúp xác minh tất cả các giao dịch trong mỗi khối, giữ cho mạng lưới an toàn và dữ liệu chính xác. **Các nút Ethereum là chuỗi khối Ethereum**. Họ cùng nhau lưu trữ trạng thái của blockchain Ethereum và đạt được sự đồng thuận về các giao dịch để biến đổi trạng thái của blockchain.
+Các nút Ethereum là các máy tính chạy phần mềm - một máy khách Ethereum. Máy khách là một bản triển khai của Ethereum giúp xác minh tất cả các giao dịch trong mỗi khối, giữ cho mạng lưới an toàn và dữ liệu chính xác. **Các nút Ethereum chính là chuỗi khối Ethereum**. Chúng cùng nhau lưu trữ trạng thái của chuỗi khối Ethereum và đạt được sự đồng thuận về các giao dịch để thay đổi trạng thái chuỗi khối.
 
-Bằng cách kết nối ứng dụng của bạn với một nút Ethereum (thông qua [API JSON-RPC](/developers/docs/apis/json-rpc/)), ứng dụng của bạn có thể đọc dữ liệu từ chuỗi khối (chẳng hạn như số dư tài khoản của người dùng) cũng như quảng bá các giao dịch mới đến mạng lưới (chẳng hạn như chuyển ETH giữa các tài khoản người dùng hoặc thực thi các chức năng của hợp đồng thông minh).
+Bằng cách kết nối ứng dụng của bạn với một nút Ethereum (thông qua [API JSON-RPC](/developers/docs/apis/json-rpc/)), ứng dụng của bạn có thể đọc dữ liệu từ chuỗi khối (chẳng hạn như số dư tài khoản người dùng) cũng như phát sóng các giao dịch mới lên mạng lưới (chẳng hạn như chuyển ETH giữa các tài khoản người dùng hoặc thực thi các hàm của hợp đồng thông minh).
 
-## Cấp 4: API máy khách Ethereum {#ethereum-client-apis}
+## Cấp độ 4: Các API máy khách Ethereum {#ethereum-client-apis}
 
-Nhiều thư viện tiện ích (được xây dựng và duy trì bởi cộng đồng mã nguồn mở của Ethereum) cho phép ứng dụng của bạn kết nối và giao tiếp với chuỗi khối Ethereum.
+Nhiều thư viện tiện ích (được xây dựng và duy trì bởi cộng đồng mã nguồn mở của Ethereum) cho phép các ứng dụng của bạn kết nối và giao tiếp với chuỗi khối Ethereum.
 
-Nếu ứng dụng hướng tới người dùng của bạn là một ứng dụng web, bạn có thể chọn `npm install` một [API JavaScript](/developers/docs/apis/javascript/) trực tiếp trong frontend của mình. Hoặc có lẽ bạn sẽ chọn triển khai chức năng này ở phía máy chủ, bằng cách sử dụng API [Python](/developers/docs/programming-languages/python/) hoặc [Java](/developers/docs/programming-languages/java/).
+Nếu ứng dụng hướng tới người dùng của bạn là một ứng dụng web, bạn có thể chọn `npm install` một [API JavaScript](/developers/docs/apis/javascript/) trực tiếp trong giao diện người dùng (frontend) của mình. Hoặc có lẽ bạn sẽ chọn triển khai chức năng này ở phía máy chủ (server-side), sử dụng một API [Python](/developers/docs/programming-languages/python/) hoặc [Java](/developers/docs/programming-languages/java/).
 
-Mặc dù những API này không phải là một phần cần thiết trong hệ thống, nhưng chúng giúp đơn giản hóa rất nhiều khi làm việc trực tiếp với một nút Ethereum. Chúng cũng cung cấp các hàm tiện ích (ví dụ: chuyển đổi ETH sang Gwei) để với tư cách là một nhà phát triển, bạn có thể dành ít thời gian hơn để xử lý những điều phức tạp của các máy khách Ethereum và dành nhiều thời gian hơn để tập trung vào chức năng dành riêng cho ứng dụng của bạn.
+Mặc dù các API này không phải là một phần bắt buộc của ngăn xếp, chúng trừu tượng hóa phần lớn sự phức tạp của việc tương tác trực tiếp với một nút Ethereum. Chúng cũng cung cấp các hàm tiện ích (ví dụ: chuyển đổi ETH sang Gwei) để với tư cách là một nhà phát triển, bạn có thể dành ít thời gian hơn để giải quyết những sự phức tạp của các máy khách Ethereum và dành nhiều thời gian hơn để tập trung vào chức năng cụ thể cho ứng dụng của bạn.
 
-## Cấp 5: Các ứng dụng cho người dùng cuối {#end-user-applications}
+## Cấp độ 5: Các ứng dụng dành cho người dùng cuối {#end-user-applications}
 
-Ở cấp độ cao nhất của stack là việc khách hàng sử dụng ứng dụng Đây là những ứng dụng tiêu chuẩn mà bạn thường xuyên sử dụng và xây dựng ngày nay: chủ yếu là ứng dụng web và ứng dụng di động.
+Ở cấp độ cao nhất của ngăn xếp là các ứng dụng hướng tới người dùng. Đây là những ứng dụng tiêu chuẩn mà bạn thường xuyên sử dụng và xây dựng ngày nay: chủ yếu là các ứng dụng web và di động.
 
-Cách mà bạn phát triển những giao diện người dùng này cơ bản vẫn như vậy. Người dùng thường không cần phải biết ứng dụng họ đang sử dụng được xây dựng trên nền tảng chuỗi khối
+Cách bạn phát triển các giao diện người dùng này về cơ bản vẫn không thay đổi. Thường thì người dùng sẽ không cần biết ứng dụng họ đang sử dụng được xây dựng bằng một chuỗi khối.
 
-## Bạn đã sẵn sàng chọn stack cho mình? Sẵn sàng chọn stack của bạn? {#ready-to-choose-your-stack}
+## Bạn đã sẵn sàng chọn ngăn xếp của mình chưa? {#ready-to-choose-your-stack}
 
 Hãy xem hướng dẫn của chúng tôi để [thiết lập môi trường phát triển cục bộ](/developers/local-environment/) cho ứng dụng Ethereum của bạn.
 
@@ -58,4 +58,4 @@ Hãy xem hướng dẫn của chúng tôi để [thiết lập môi trường ph
 
 - [Kiến trúc của một ứng dụng Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 
-_Biết về nguồn lực cộng đồng đã giúp đỡ bạn? Chỉnh sửa trang này và bổ sung!_
+_Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho bạn? Hãy chỉnh sửa trang này và thêm nó vào!_

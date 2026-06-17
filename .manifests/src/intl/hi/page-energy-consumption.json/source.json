@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-energy-consumption.json",
+  "generatedAt": "2026-06-16T15:34:39.070Z",
+  "rootHash": "aad0071392cd",
+  "tree": {
+    "contentHash": "6ea620605de0",
+    "anchorHash": "48e074099046",
+    "children": {
+      "energy-consumption-chart-airbnb-label": {
+        "contentHash": "14c8df83d4b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-btc-pow-label": {
+        "contentHash": "d9b80566db5f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-eth-pos-label": {
+        "contentHash": "b58b6cdcad65",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-eth-pow-label": {
+        "contentHash": "66bbbff01767",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-gaming-us-label": {
+        "contentHash": "9e82584a0748",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-global-data-centers-label": {
+        "contentHash": "5a65abab06c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-netflix-label": {
+        "contentHash": "f09f149fa268",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-paypal-label": {
+        "contentHash": "ab8a4f6bb84d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-gold-mining-cbeci-label": {
+        "contentHash": "ec1ae0c6fe14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption-chart-legend": {
+        "contentHash": "990b6a4b5795",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "energy-consumption-chart-airbnb-label",
+      "energy-consumption-chart-btc-pow-label",
+      "energy-consumption-chart-eth-pos-label",
+      "energy-consumption-chart-eth-pow-label",
+      "energy-consumption-chart-gaming-us-label",
+      "energy-consumption-chart-global-data-centers-label",
+      "energy-consumption-chart-netflix-label",
+      "energy-consumption-chart-paypal-label",
+      "energy-consumption-gold-mining-cbeci-label",
+      "energy-consumption-chart-legend"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

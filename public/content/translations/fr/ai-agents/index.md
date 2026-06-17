@@ -4,13 +4,13 @@ metaTitle: Agents IA | Agents IA sur Ethereum
 description: "Un aperçu des agents IA sur Ethereum"
 lang: fr
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: "Des gens rassemblés autour d'un panneau de terminal"
-summaryPoint1: "IA qui interagit avec la blockchain et effectue des transactions de manière autonome"
-summaryPoint2: "Contrôle des portefeuilles et des fonds sur la blockchain"
-summaryPoint3: Embauche des humains ou d'autres agents pour travailler
+summaryPoints:
+  - "IA qui interagit avec la blockchain et effectue des transactions de manière autonome"
+  - "Contrôle des portefeuilles et des fonds sur la blockchain"
+  - "Embauche des humains ou d'autres agents pour travailler"
 buttons:
   - content: Que sont les agents IA ?
     toId: what-are-ai-agents
@@ -39,11 +39,11 @@ En revanche, l’écosystème décentralisé d’Ethereum offre plusieurs avanta
 
 Ces facteurs transforment les agents IA de simples bots en systèmes dynamiques et auto-améliorants qui apportent une valeur significative dans de nombreux secteurs :
 
-<CardGrid>
+<Grid>
   <Card title="DeFi automatisée" emoji=":money_with_wings:" description="Les agents IA surveillent les tendances du marché, exécutent des transactions et gèrent les portefeuilles, rendant le monde complexe de la DeFi bien plus accessible."/>
   <Card title="Nouvelle économie d'agents IA" emoji="🌎" description="Les agents IA peuvent engager d'autres agents (ou humains) dotés de compétences différentes pour accomplir des tâches spécialisées." />
   <Card title="Gestion des risques" emoji="🛠️" description="En surveillant les activités transactionnelles, les agents IA peuvent aider à repérer les arnaques et à protéger vos actifs numériques plus rapidement et plus efficacement." />
-</CardGrid>
+</Grid>
 
 ## Agents IA sur Ethereum {#ai-agents-on-ethereum}
 

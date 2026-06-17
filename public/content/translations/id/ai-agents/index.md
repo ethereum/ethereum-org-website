@@ -4,13 +4,13 @@ metaTitle: Agen AI | Agen AI di Ethereum
 description: Gambaran umum tentang agen AI di Ethereum
 lang: id
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Orang-orang berkumpul di meja terminal
-summaryPoint1: AI yang berinteraksi dengan blockchain dan berdagang secara mandiri
-summaryPoint2: Mengontrol dompet dan dana onchain
-summaryPoint3: Mempekerjakan manusia atau agen lain untuk bekerja
+summaryPoints:
+  - "AI yang berinteraksi dengan blockchain dan berdagang secara mandiri"
+  - "Mengontrol dompet dan dana onchain"
+  - "Mempekerjakan manusia atau agen lain untuk bekerja"
 buttons:
   - content: Apa itu agen AI?
     toId: what-are-ai-agents
@@ -39,11 +39,11 @@ Sebaliknya, ekosistem desentralisasi Ethereum menawarkan beberapa keuntungan uta
 
 Faktor-faktor ini mengubah agen AI dari sekadar bot sederhana menjadi sistem dinamis yang dapat meningkatkan kemampuannya sendiri, yang menawarkan nilai signifikan di berbagai sektor:
 
-<CardGrid>
+<Grid>
   <Card title="DeFi Otomatis" emoji=":money_with_wings:" description="Agen AI terus mengawasi tren pasar, mengeksekusi perdagangan, dan mengelola portofolio — membuat dunia DeFi yang kompleks menjadi jauh lebih mudah didekati."/>
   <Card title="Ekonomi agen AI baru" emoji="🌎" description="Agen AI dapat mempekerjakan agen lain (atau manusia) dengan keterampilan berbeda untuk melakukan tugas khusus bagi mereka." />
   <Card title="Manajemen risiko" emoji="🛠️" description="Dengan memantau aktivitas transaksional, agen AI dapat membantu mendeteksi penipuan dan melindungi aset digital Anda dengan lebih baik dan lebih cepat." />
-</CardGrid>
+</Grid>
 
 ## AI yang dapat diverifikasi {#verifiable-ai}
 

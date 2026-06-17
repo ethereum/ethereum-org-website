@@ -4,8 +4,6 @@ description: The policy we use when adding a staking products or services to eth
 lang: en
 ---
 
-# Adding staking products or services {#adding-staking-products-or-services}
-
 We want to make sure we list the best resources possible while keeping users safe and confident.
 
 Anyone is free to suggest adding a staking products or service on ethereum.org. If there's one that we have missed, **[please suggest it](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**

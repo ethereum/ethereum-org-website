@@ -43,7 +43,7 @@ pnpm-lock.yaml.bak
 next-env.d.ts
 
 # rss feeds
-feed.xml
+/feed.xml
 
 # Sitemaps
 sitemap*.xml
@@ -72,3 +72,6 @@ storybook-static-pages
 
 # Git worktrees for Claude commands
 .worktrees
+
+# Hide skill eval workspaces
+.claude/skills/*-workspace

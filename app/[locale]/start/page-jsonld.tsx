@@ -26,16 +26,19 @@ export default async function StartPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#start` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-start-meta-title"),
         description: t("page-start-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -59,11 +62,12 @@ export default async function StartPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#start` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#start`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-start-title"),
         description: t("page-start-meta-description"),
         image: "https://ethereum.org/images/heroes/developers-hub-hero.jpg",

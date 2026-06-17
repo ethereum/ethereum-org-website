@@ -29,17 +29,16 @@ summaryPoints:
 
 單獨質押需要承擔更多責任，但能助你最大程度上控制你的資金和質押設定。
 
-<CardGrid>
+<Grid>
   <Card title="賺取新的 ETH" emoji="💸" description="當您的驗證者上線時，可直接從協議賺取以 ETH 計價的獎勵，無須讓中間人抽成。" />
   <Card title="完全控制" emoji="🎛️" description="自行保管金鑰。自由選擇用戶端與硬體組合，將風險降到最低，並為網路的健康和安全做出最大貢獻。第三方質押服務會為您做這些決定，但他們的選擇不一定最安全。" />
   <Card title="網路安全" emoji="🔐" description="在家質押是最具影響力的方式。透過在家用自己的硬體執行驗證者，您可以強化以太坊協議的穩健性、去中心化和安全性。" />
-</CardGrid>
+</Grid>
 
 ## 單獨質押前的考量事項 {#considerations-before-staking-solo}
 
 雖然我們希望人人都能輕鬆無風險地進行單獨質押，但現實並非如此。 在選擇單獨質押您的 ETH 之前，有一些實際且重要的考量事項需要謹記在心。
 
-<InfoGrid>
 <ExpandableCard title="必讀內容" eventCategory="SoloStaking" eventName="clicked required reading">
 在操作您自己的節點時，您應該花一些時間學習如何使用您所選擇的軟體。 這包括閱讀相關文件，並關注開發團隊的溝通管道。
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多關於罰沒與驗證者生命週期的資訊</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

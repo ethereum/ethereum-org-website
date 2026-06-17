@@ -4,13 +4,13 @@ metaTitle: "Yapay zeka aracıları | Ethereum üzerindeki yapay zeka aracıları
 description: "Ethereum üzerindeki yapay zeka aracılarına genel bir bakış"
 lang: tr
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: "Terminal masasında toplanan insanlar"
-summaryPoint1: "Blokzincirle etkileşime giren ve bağımsız olarak ticaret yapan yapay zeka"
-summaryPoint2: "Zincir üstü cüzdanları ve fonları kontrol eder"
-summaryPoint3: "İş için insanları veya diğer aracıları işe alır"
+summaryPoints:
+  - "Blokzincirle etkileşime giren ve bağımsız olarak ticaret yapan yapay zeka"
+  - "Zincir üstü cüzdanları ve fonları kontrol eder"
+  - "İş için insanları veya diğer aracıları işe alır"
 buttons:
   - content: Yapay zeka aracıları nedir?
     toId: what-are-ai-agents
@@ -39,11 +39,11 @@ Buna karşılık, Ethereum'un merkeziyetsiz ekosistemi birkaç temel avantaj sun
 
 Bu faktörler, yapay zeka aracılarını basit botlardan, birden fazla sektörde önemli değer sunan dinamik, kendi kendini geliştiren sistemlere dönüştürür:
 
-<CardGrid>
+<Grid>
   <Card title="Otomatik DeFi" emoji=":money_with_wings:" description="Yapay zeka ajanları piyasa trendlerini izler, alım satım yapar ve portföyleri yöneterek DeFi'nin karmaşık dünyasını daha erişilebilir hale getirir."/>
   <Card title="Yeni yapay zeka ajanı ekonomisi" emoji="🌎" description="Yapay zeka ajanları, özel görevler için farklı yeteneklere sahip diğer ajanları (veya insanları) kiralayabilir." />
   <Card title="Risk yönetimi" emoji="🛠️" description="Yapay zeka ajanları, işlem faaliyetlerini izleyerek dolandırıcılıkları tespit etmeye yardımcı olabilir ve dijital varlıklarınızı daha hızlı ve daha iyi koruyabilir." />
-</CardGrid>
+</Grid>
 
 ## Doğrulanabilir Yapay Zeka {#verifiable-ai}
 

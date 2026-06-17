@@ -1,0 +1,138 @@
+name: Wait for PR checks
+description: Poll a PR's status checks via gh CLI until they reach a terminal state. Always exits 0 — read `outputs.outcome` and decide downstream.
+
+inputs:
+  github_token:
+    description: Token used for gh CLI calls.
+    required: true
+  pr_number:
+    description: Pull request number to poll.
+    required: true
+  check_name:
+    description: Case-insensitive substring matching a single check (name or context). If omitted, watches ALL checks on the PR.
+    required: false
+    default: ""
+  required_checks:
+    description: Comma-separated case-insensitive substrings that MUST each appear in the rollup before success. Guards against false-success when expected checks never posted. Empty = no requirement.
+    required: false
+    default: ""
+  timeout_seconds:
+    description: Hard cap before giving up.
+    required: false
+    default: "1800"
+  poll_interval_seconds:
+    description: Sleep between polls.
+    required: false
+    default: "30"
+
+outputs:
+  outcome:
+    description: One of `success`, `failure`, or `timeout`.
+    value: ${{ steps.wait.outputs.outcome }}
+  failed_checks:
+    description: Comma-separated names of checks in a failed terminal state (empty unless outcome is `failure`).
+    value: ${{ steps.wait.outputs.failed_checks }}
+  missing_checks:
+    description: Comma-separated `required_checks` that never appeared in the rollup (set only when outcome is `timeout`).
+    value: ${{ steps.wait.outputs.missing_checks }}
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      id: wait
+      env:
+        GH_TOKEN: ${{ inputs.github_token }}
+        PR_NUMBER: ${{ inputs.pr_number }}
+        CHECK_NAME: ${{ inputs.check_name }}
+        REQUIRED_CHECKS: ${{ inputs.required_checks }}
+        TIMEOUT: ${{ inputs.timeout_seconds }}
+        INTERVAL: ${{ inputs.poll_interval_seconds }}
+      run: |
+        deadline=$(( $(date +%s) + TIMEOUT ))
+        while [[ $(date +%s) -lt $deadline ]]; do
+          if ! rollup=$(gh pr view "$PR_NUMBER" --json statusCheckRollup -q '.statusCheckRollup' 2>&1); then
+            echo "::warning::gh pr view failed (transient?) — retrying after ${INTERVAL}s: $rollup"
+            sleep "$INTERVAL"
+            continue
+          fi
+
+          if [[ -n "$CHECK_NAME" ]]; then
+            filtered=$(echo "$rollup" | jq --arg name "$CHECK_NAME" '
+              [.[] | select(
+                ((.name    // "") | test($name; "i")) or
+                ((.context // "") | test($name; "i"))
+              )]
+            ')
+          elif [[ -n "$REQUIRED_CHECKS" ]]; then
+            # Gate only on the required checks. Other checks (e.g. Chromatic
+            # "UI Review"/"UI Tests") sit PENDING awaiting manual approval and
+            # must not block success — that approval is a post-review human step.
+            filtered=$(echo "$rollup" | jq --arg req "$REQUIRED_CHECKS" '
+              ($req | split(",") | map(ascii_downcase | gsub("^\\s+|\\s+$"; ""))) as $needles
+              | [.[] | select(
+                  ((.name // .context // "") | ascii_downcase) as $n
+                  | [$needles[] | . as $needle | $n | contains($needle)] | any
+                )]
+            ')
+          else
+            filtered="$rollup"
+          fi
+
+          counts=$(echo "$filtered" | jq -r '
+            (length) as $count
+            | ([.[] | select(
+                (.conclusion // .state) as $s
+                | $s == null or $s == "" or
+                  $s == "QUEUED" or $s == "IN_PROGRESS" or
+                  $s == "PENDING" or $s == "EXPECTED"
+              )] | length) as $pending
+            | ([.[] | select(
+                (.conclusion // .state) as $s
+                | $s == "FAILURE" or $s == "TIMED_OUT" or
+                  $s == "CANCELLED" or $s == "ERROR" or
+                  $s == "ACTION_REQUIRED"
+              ) | (.name // .context)] | join(",")) as $failed
+            | "\($count)\t\($pending)\t\($failed)"
+          ')
+          count=$(echo "$counts" | cut -f1)
+          pending=$(echo "$counts" | cut -f2)
+          failed=$(echo "$counts" | cut -f3)
+
+          if [[ -n "$failed" ]]; then
+            echo "outcome=failure" >> "$GITHUB_OUTPUT"
+            echo "failed_checks=$failed" >> "$GITHUB_OUTPUT"
+            echo "Failure detected on: $failed"
+            exit 0
+          fi
+
+          missing=""
+          if [[ -n "$REQUIRED_CHECKS" ]]; then
+            missing=$(echo "$rollup" | jq -r --arg req "$REQUIRED_CHECKS" '
+              ($req | split(",") | map(ascii_downcase | gsub("^\\s+|\\s+$"; ""))) as $needles
+              | [.[] | (.name // .context // "") | ascii_downcase] as $names
+              | [$needles[] | . as $n | select([$names[] | contains($n)] | any | not)]
+              | join(",")
+            ')
+          fi
+
+          if [[ "$count" -gt 0 && "$pending" -eq 0 && -z "$missing" ]]; then
+            echo "outcome=success" >> "$GITHUB_OUTPUT"
+            echo "All $count checks reached terminal-success."
+            exit 0
+          fi
+
+          if [[ -n "$missing" ]]; then
+            echo "Waiting — required checks not yet posted: $missing (sleeping ${INTERVAL}s)"
+          else
+            echo "Waiting — $pending of $count checks not terminal yet (sleeping ${INTERVAL}s)"
+          fi
+          sleep "$INTERVAL"
+        done
+        echo "outcome=timeout" >> "$GITHUB_OUTPUT"
+        if [[ -n "$missing" ]]; then
+          echo "missing_checks=$missing" >> "$GITHUB_OUTPUT"
+          echo "Timed out after ${TIMEOUT}s — required checks never posted: $missing"
+        else
+          echo "Timed out waiting after ${TIMEOUT}s."
+        fi

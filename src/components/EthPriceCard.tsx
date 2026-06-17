@@ -41,7 +41,7 @@ const EthPriceCard = ({
   return (
     <Flex
       className={cn(
-        "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded border p-6",
+        "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded-base border p-6",
         isNegativeChange
           ? "bg-linear-to-b from-error/10 dark:border-error/50"
           : "bg-linear-to-t from-success/20 dark:border-success/50",

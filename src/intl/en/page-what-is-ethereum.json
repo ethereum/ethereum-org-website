@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "What is Ethereum? (A Complete Guide) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "What is Ethereum? (A Complete Guide)",
   "page-what-is-ethereum-meta-description": "A full overview of what Ethereum is, how it works, what it does and how to start using or building on it. Explained in simple terms.",
   "page-what-is-ethereum-title": "What is Ethereum?",
   "page-what-is-ethereum-hero-description-1": "Ethereum is a decentralized blockchain network and software development platform, powered by the cryptocurrency ether (ETH).",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "What is the Ethereum roadmap for 2026?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum doesn't follow a fixed roadmap. It follows a shared vision.",
   "page-what-is-ethereum-roadmap-intro-2": "Network upgrades are made as EIPs and developed in public by contributors around the world. There's no central team deciding what happens, just people building what they believe is useful based on users' needs.",
-  "page-what-is-ethereum-roadmap-intro-3": "Fusaka is the most recent upgrade, launched in December 2025. It introduced PeerDAS for more efficient L2 data availability and raised the default gas limit to ~60M. Looking ahead to 2026, Glamsterdam is in development and expected in H1 2026.",
+  "page-what-is-ethereum-roadmap-intro-3": "Fusaka is the most recent upgrade, launched in December 2025. It introduced PeerDAS for more efficient L2 data availability and raised the default gas limit to ~60M. Looking ahead to 2026, Glamsterdam is in development and expected in H2 2026.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>Looking ahead</a>, Ethereum's priorities include:",
   "page-what-is-ethereum-roadmap-priority-1": "Making the core protocol and its L2s faster and cheaper for everyone",
   "page-what-is-ethereum-roadmap-priority-2": "Improving the experience for users and developers",

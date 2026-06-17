@@ -4,13 +4,13 @@ metaTitle: What is a DAO? | Decentralized Autonomous Organization
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: A representation of a DAO voting on a proposal.
-summaryPoint1: Member-owned communities without centralized leadership.
-summaryPoint2: A safe way to collaborate with internet strangers.
-summaryPoint3: A safe place to commit funds to a specific cause.
+summaryPoints:
+  - "Member-owned communities without centralized leadership."
+  - "A safe way to collaborate with internet strangers."
+  - "A safe place to commit funds to a specific cause."
 ---
 
 ## What are DAOs? {#what-are-daos}
@@ -113,10 +113,6 @@ _Typically used to govern broad decentralized protocols and/or tokens themselves
 Share-based DAOs are more permissioned, but still quite open. Any prospective members can submit a proposal to join the DAO, usually offering a tribute of some value in the form of tokens or work. Shares represent direct voting power and ownership. Members can exit at any time with their proportionate share of the treasury.
 
 _Typically used for more closer-knit, human-centric organizations like charities, worker collectives, and investment clubs. Can also govern protocols and tokens as well._
-
-#### A famous example {#share-example}
-
-[MolochDAO](https://molochdao.com/) – MolochDAO is focused on funding Ethereum projects. They require a proposal for membership so the group can assess whether you have the necessary expertise and capital to make informed judgments about potential grantees. You can't just buy access to the DAO on the open market.
 
 ### Reputation-based membership {#reputation-based-membership}
 

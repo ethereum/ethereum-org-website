@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-06-08T11:24:52.645Z",
+  "englishManifestHash": "710a05559898",
+  "placeholderOrder": [
+    "LINK-67edbe",
+    "LINK-41737e",
+    "LINK-74b3ba",
+    "LINK-fb2e62",
+    "LINK-3a4c05",
+    "LINK-a21a82",
+    "LINK-956e7c",
+    "COMPONENT-326f81",
+    "COMPONENT-036a64",
+    "COMPONENT-740f77",
+    "LINK-d29fbd",
+    "COMPONENT-5c1d6d",
+    "LINK-5d9457",
+    "LINK-da7442",
+    "LINK-a90d81",
+    "LINK-92f28b",
+    "LINK-defdd7",
+    "LINK-0fdf2e"
+  ],
+  "placeholderMap": {
+    "COMPONENT-326f81": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/wrapped-eth",
+        "eventName": "clicked Do you pay to wrap/unwrap ETH?"
+      }
+    },
+    "COMPONENT-036a64": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/wrapped-eth",
+        "eventName": "clicked Is WETH safe?"
+      }
+    },
+    "COMPONENT-740f77": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/wrapped-eth",
+        "eventName": "clicked Why am I seeing different WETH tokens?"
+      }
+    },
+    "LINK-d29fbd": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      }
+    },
+    "COMPONENT-5c1d6d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/wrapped-eth",
+        "eventName": "clicked What are the WETH contracts on other networks?"
+      }
+    },
+    "LINK-5d9457": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+      }
+    },
+    "LINK-da7442": {
+      "type": "link",
+      "values": {
+        "url": "https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+      }
+    },
+    "LINK-a90d81": {
+      "type": "link",
+      "values": {
+        "url": "https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006"
+      }
+    },
+    "LINK-67edbe": {
+      "type": "link",
+      "values": {
+        "url": "https://www.wrapeth.com/"
+      }
+    },
+    "LINK-41737e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#erc-20"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-3a4c05": {
+      "type": "link",
+      "values": {
+        "url": "/eth/supply/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-956e7c": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/issuance"
+      }
+    },
+    "LINK-92f28b": {
+      "type": "link",
+      "values": {
+        "url": "https://weth.tkn.eth.limo/"
+      }
+    },
+    "LINK-defdd7": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+      }
+    },
+    "LINK-0fdf2e": {
+      "type": "link",
+      "values": {
+        "url": "https://zellic.io/blog/formal-verification-weth"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T11:24:52.645Z",
+      "status": "success"
+    }
+  }
+}

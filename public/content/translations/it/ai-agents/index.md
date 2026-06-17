@@ -4,13 +4,13 @@ metaTitle: Agenti IA | Agenti IA su Ethereum
 description: Una panoramica degli agenti IA su Ethereum
 lang: it
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Persone riunite a un tavolo con terminali
-summaryPoint1: IA che interagisce con la blockchain e fa trading in modo indipendente
-summaryPoint2: Controlla portafogli e fondi on-chain
-summaryPoint3: Assume esseri umani o altri agenti per lavorare
+summaryPoints:
+  - "IA che interagisce con la blockchain e fa trading in modo indipendente"
+  - "Controlla portafogli e fondi on-chain"
+  - "Assume esseri umani o altri agenti per lavorare"
 buttons:
   - content: Cosa sono gli agenti IA?
     toId: what-are-ai-agents
@@ -39,11 +39,11 @@ Al contrario, l'ecosistema decentralizzato di Ethereum offre diversi vantaggi ch
 
 Questi fattori trasformano gli agenti IA da semplici bot in sistemi dinamici e in grado di auto-migliorarsi che offrono un valore significativo in molteplici settori:
 
-<CardGrid>
+<Grid>
   <Card title="DeFi automatizzata" emoji=":money_with_wings:" description="Gli agenti IA tengono d'occhio le tendenze del mercato, eseguono operazioni e gestiscono portafogli, rendendo il complesso mondo della DeFi molto più accessibile."/>
   <Card title="Nuova economia degli agenti IA" emoji="🌎" description="Gli agenti IA possono assumere altri agenti (o esseri umani) con competenze diverse per eseguire compiti specializzati per loro." />
   <Card title="Gestione del rischio" emoji="🛠️" description="Monitorando le attività transazionali, gli agenti IA possono aiutare a individuare le truffe e salvaguardare i tuoi asset digitali in modo migliore e più rapido." />
-</CardGrid>
+</Grid>
 
 ## IA verificabile {#verifiable-ai}
 

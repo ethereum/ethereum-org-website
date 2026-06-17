@@ -8,6 +8,7 @@ import type { EventItem } from "@/lib/types"
 
 import { Alert, AlertContent } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 
 import EventCard from "../_components/EventCard"
@@ -57,7 +58,11 @@ export default function FilterEvents({ events }: FilterProps) {
 
     if (!filteredEvents.length)
       return (
-        <Alert variant="warning" className="mx-auto max-w-xl justify-center">
+        <Alert
+          variant="warning"
+          role="status"
+          className="mx-auto max-w-xl justify-center"
+        >
           <Info className="size-6 !text-current" />
           <AlertContent className="flex-none">
             {t("page-events-search-no-results")}
@@ -67,7 +72,7 @@ export default function FilterEvents({ events }: FilterProps) {
 
     return (
       <>
-        <div className="grid grid-cols-fill-4 gap-8">
+        <Grid columns={3}>
           {filteredEvents.slice(0, MAX_RESULTS).map((event) => (
             <EventCard
               key={event.id}
@@ -82,7 +87,7 @@ export default function FilterEvents({ events }: FilterProps) {
               }}
             />
           ))}
-        </div>
+        </Grid>
         {filteredEvents.length > MAX_RESULTS && (
           <div className="flex justify-center">
             <ButtonLink

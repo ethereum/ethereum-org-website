@@ -4,8 +4,9 @@ lang: vi
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Nhận động lực tài chính để tạo ra các dự báo chính xác"
-summaryPoint2: "Dự đoán chất lượng về các sự kiện tương lai"
+summaryPoints:
+  - "Nhận động lực tài chính để tạo ra các dự báo chính xác"
+  - "Dự đoán chất lượng về các sự kiện tương lai"
 buttons:
   - content: Tìm hiểu thêm
     toId: "cách-thị-trường-dự-đoán-hoạt-động"
@@ -29,11 +30,11 @@ Về giả thuyết, bởi vì những người đánh cược thường nhắm 
 
 Không giống như dự đoán truyền thống, thị trường dự đoán trên chuỗi khối là:
 
-<CardGrid>
+<Grid>
   <Card title="Được khuyến khích" emoji=":money_with_wings:" description="Người tham gia đặt cược bằng tiền thật, qua đó đưa ra những dự đoán chất lượng cao."/>
   <Card title="Tính phi tập trung" emoji="🌎" description="Sử dụng blockchain và hợp đồng thông minh đảm bảo việc thanh toán minh bạch và tự động." />
   <Card title="Tỷ lệ cược theo thị trường" emoji="🤝" description="Giá được thiết lập bởi các nhà giao dịch mua và bán cổ phần kết quả, thay vì được một nhà cái tập trung định sẵn." />
-</CardGrid>
+</Grid>
 
 Mặc dù chỉ là người quan sát thị trường, bạn cũng có thể truy cập những dữ liệu có giá trị mà bình thường khó tiếp cận. Hãy xem nó như thế này:
 

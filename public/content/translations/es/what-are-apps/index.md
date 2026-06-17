@@ -21,11 +21,11 @@ Una vez que una aplicación se publica en la cadena de bloques de Ethereum, se v
 
 Las aplicaciones de Ethereum tienen su lógica de ejecución en la cadena de bloques de Ethereum en vez de servidores centralizados. Por eso a menudo se les llaman aplicaciones descentralizadas, o «DApps» como forma abreviada.
 
-<CardGrid>
+<Grid>
   <Card title="Más privacidad" emoji=":detective:" description="Solo necesitas una billetera de Ethereum para usar cualquier dapp. No se requieren tus datos personales. Así es como internet siempre debió ser."/>
   <Card title="Acceso global" emoji="🌍" description="Las dapps no se rigen por las reglas de las regiones ni de las tiendas de aplicaciones. Tu acceso depende de tener conexión a internet, no de dónde vivas." />
   <Card title="Servicios más baratos" emoji=":handshake:" description="Las dapps son peer-to-peer. Sin intermediarios que se lleven una comisión, los servicios son más baratos." />
-</CardGrid>
+</Grid>
 
 ## ¿Por qué es importante? {#why-does-this-matter}
 

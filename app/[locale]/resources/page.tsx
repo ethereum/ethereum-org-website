@@ -2,14 +2,15 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
 import Github from "@/components/icons/github.svg"
 import StackIcon from "@/components/icons/stack.svg"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Stack, VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -78,7 +79,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <ResourcesPageJsonLD locale={locale} contributors={contributors} />
 
       <MainArticle className="relative flex flex-col">
-        <BannerNotification shouldShow className="text-center max-md:flex-col">
+        <Alert variant="banner" className="max-md:flex-col">
           {t("page-resources-banner-notification-message")}{" "}
           <Link
             href={new URL(
@@ -94,7 +95,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           >
             {t("page-resources-share-feedback")}
           </Link>
-        </BannerNotification>
+        </Alert>
 
         <HubHero
           title={t("page-resources-hero-title")}
@@ -127,11 +128,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </div>
                     <h2 className="flex-1 text-start font-black">{label}</h2>
                   </div>
-                  <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-6">
+                  <Grid columns={2} size="wider" className="lg:gap-y-6">
                     {boxes.map(({ title, metric, items, className }) => (
                       <div
                         className={cn(
-                          "overflow-hidden rounded-2xl border shadow-lg",
+                          "overflow-hidden rounded-base border shadow-lg",
                           className
                         )}
                         key={title}
@@ -153,7 +154,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </Grid>
                 </section>
               </Stack>
             ))}

@@ -29,17 +29,16 @@ Seorang staker dari rumah menerima hadiah langsung dari protokol karena menjaga 
 
 Mengunci dari rumah datang dengan lebih banyak tanggung jawab tetapi memberi Anda kendali maksimum atas dana dan pengaturan mengunci Anda.
 
-<CardGrid>
+<Grid>
   <Card title="Dapatkan ETH baru" emoji="💸" description="Dapatkan hadiah dalam denominasi ETH langsung dari protokol saat validator Anda online, tanpa ada perantara yang mengambil potongan." />
   <Card title="Kendali penuh" emoji="🎛️" description="Simpan kunci Anda sendiri. Pilih kombinasi klien dan perangkat keras yang memungkinkan Anda meminimalkan risiko dan berkontribusi terbaik pada kesehatan dan keamanan jaringan. Layanan mengunci pihak ketiga membuat keputusan ini untuk Anda, dan mereka tidak selalu membuat pilihan yang paling aman." />
   <Card title="Keamanan jaringan" emoji="🔐" description="Mengunci dari rumah adalah cara paling berdampak untuk mengunci. Dengan menjalankan validator di perangkat keras Anda sendiri di rumah, Anda memperkuat ketahanan, desentralisasi, dan keamanan protokol Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Pertimbangan sebelum mengunci dari rumah {#considerations-before-staking-solo}
 
 Meskipun kami berharap mengunci dari rumah dapat diakses dan bebas risiko bagi semua orang, ini bukanlah kenyataan. Ada beberapa pertimbangan praktis dan serius yang perlu diingat sebelum memilih untuk mengunci ETH Anda dari rumah.
 
-<InfoGrid>
 <ExpandableCard title="Bacaan wajib" eventCategory="SoloStaking" eventName="clicked required reading">
 Saat mengoperasikan node Anda sendiri, Anda harus meluangkan waktu untuk mempelajari cara menggunakan perangkat lunak yang telah Anda pilih. Ini melibatkan membaca dokumentasi yang relevan dan peka terhadap saluran komunikasi dari tim pengembang tersebut.
 
@@ -71,8 +70,6 @@ Berbeda dengan penalti ketidakaktifan karena offline, <em>pemotongan</em> adalah
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Lebih lanjut tentang pemotongan dan siklus hidup validator</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

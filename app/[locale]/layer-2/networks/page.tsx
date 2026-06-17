@@ -7,13 +7,14 @@ import {
 
 import type { ExtendedRollup, Lang, PageParams } from "@/lib/types"
 
-import CalloutSSR from "@/components/CalloutSSR"
-import { ContentHero, type ContentHeroProps } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
 import NetworkMaturity from "@/components/NetworkMaturity"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
+import { Grid } from "@/components/ui/grid"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -147,13 +148,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-layer-2-networks")
   const tCommon = await getTranslations("common")
 
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "/layer-2/networks", startDepth: 1 },
-    heroImg,
-    title: tCommon("nav-networks-explore-networks-label"),
-    description: t("page-layer-2-networks-hero-description"),
-  }
-
   return (
     <I18nProvider locale={locale} messages={messages}>
       <Layer2NetworksPageJsonLD
@@ -162,7 +156,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
       />
       <MainArticle className="relative flex flex-col">
-        <ContentHero {...heroProps} />
+        <PageHero
+          breadcrumbs={{ slug: "/layer-2/networks", startDepth: 1 }}
+          heroImg={heroImg}
+          title={tCommon("nav-networks-explore-networks-label")}
+          description={t("page-layer-2-networks-hero-description")}
+        />
 
         <Layer2NetworksTable {...layer2NetworksProps} />
 
@@ -191,47 +190,40 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <NetworkMaturity />
 
-        <div
-          id="callout-cards"
-          className="flex w-full flex-col px-8 py-9 lg:flex-row lg:gap-16"
-        >
-          <CalloutSSR
+        <Grid id="callout-cards" columns={2} size="wide" className="p-8">
+          <Callout
             image={Callout1Image}
             title={t("page-layer-2-networks-callout-1-title")}
             description={t("page-layer-2-networks-callout-1-description")}
           >
-            <div>
-              <ButtonLink
-                href="/layer-2/"
-                customEventOptions={{
-                  eventCategory: "l2_networks",
-                  eventAction: "button_click",
-                  eventName: "bottom_hub",
-                }}
-              >
-                {tCommon("learn-more")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
-          <CalloutSSR
+            <ButtonLink
+              href="/layer-2/"
+              customEventOptions={{
+                eventCategory: "l2_networks",
+                eventAction: "button_click",
+                eventName: "bottom_hub",
+              }}
+            >
+              {tCommon("learn-more")}
+            </ButtonLink>
+          </Callout>
+          <Callout
             image={Callout2Image}
             title={t("page-layer-2-networks-callout-2-title")}
             description={t("page-layer-2-networks-callout-2-description")}
           >
-            <div>
-              <ButtonLink
-                href="/layer-2/learn/"
-                customEventOptions={{
-                  eventCategory: "l2_networks",
-                  eventAction: "button_click",
-                  eventName: "bottom_learn",
-                }}
-              >
-                {tCommon("learn-more")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
-        </div>
+            <ButtonLink
+              href="/layer-2/learn/"
+              customEventOptions={{
+                eventCategory: "l2_networks",
+                eventAction: "button_click",
+                eventName: "bottom_learn",
+              }}
+            >
+              {tCommon("learn-more")}
+            </ButtonLink>
+          </Callout>
+        </Grid>
       </MainArticle>
     </I18nProvider>
   )
