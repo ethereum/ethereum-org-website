@@ -1,16 +1,16 @@
 ---
 title: Integrierte Entwicklungsumgebungen (IDEs)
-description: "Erfahren Sie mehr über webbasierte und Desktop-IDEs für die Ethereum-Entwicklung, einschließlich Remix, VS Code und beliebter Plugins."
+description: Erfahren Sie mehr über webbasierte und Desktop-IDEs für die Ethereum-Entwicklung, einschließlich Remix, VS Code und beliebter Plugins.
 lang: de
 ---
 
-Wenn es um die Einrichtung einer [integrierten Entwicklungsumgebung (IDE)](https://wikipedia.org/wiki/Integrated_development_environment) geht, ist die Programmierung von Anwendungen auf Ethereum ähnlich wie bei jedem anderen Softwareprojekt. Es gibt viele Optionen zur Auswahl, also wählen Sie letztendlich die IDE oder den Code-Editor, der am besten zu Ihren Vorlieben passt. Höchstwahrscheinlich ist die beste IDE-Wahl für Ihre Ethereum-Entwicklung die IDE, die Sie bereits für die traditionelle Softwareentwicklung verwenden.
+Wenn es um die Einrichtung einer [integrierten Entwicklungsumgebung (IDE)](https://wikipedia.org/wiki/Integrated_development_environment) geht, ist die Programmierung von Anwendungen auf Ethereum ähnlich wie bei jedem anderen Softwareprojekt. Es gibt viele Optionen zur Auswahl, wählen Sie also letztendlich die IDE oder den Code-Editor, der Ihren Vorlieben am besten entspricht. Höchstwahrscheinlich ist die beste IDE-Wahl für Ihre Ethereum-Entwicklung die IDE, die Sie bereits für die traditionelle Softwareentwicklung verwenden.
 
 ## Webbasierte IDEs {#web-based-ides}
 
-Wenn Sie mit Code herumspielen möchten, bevor Sie [eine lokale Entwicklungsumgebung einrichten](/developers/local-environment/), sind diese Web-Apps speziell für die Entwicklung von Ethereum-Smart-Contracts entwickelt worden.
+Wenn Sie ein wenig mit Code experimentieren möchten, bevor Sie [eine lokale Entwicklungsumgebung einrichten](/developers/local-environment/), sind diese Web-Apps maßgeschneidert für die Entwicklung von Ethereum-Smart-Contracts.
 
-**[Remix](https://remix.ethereum.org/)** - **_Webbasierte IDE mit integrierter statischer Analyse und einer Test-Blockchain Virtual Machine_**
+**[Remix](https://remix.ethereum.org/)** - **_Webbasierte IDE mit integrierter statischer Analyse und einer Test-Blockchain-Virtual-Machine_**
 
 - [Dokumentation](https://remix-ide.readthedocs.io/en/latest/#)
 - [Gitter](https://gitter.im/ethereum/remix)
@@ -20,7 +20,7 @@ Wenn Sie mit Code herumspielen möchten, bevor Sie [eine lokale Entwicklungsumge
 - [Dokumentation](https://chainide.gitbook.io/chainide-english-1/)
 - [Hilfeforum](https://forum.chainide.com/)
 
-**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_Eine anpassbare Entwicklungsumgebung für Ethereum mit Hot-Reloading, Fehlerüberprüfung und erstklassiger Testnet-Unterstützung_**
+**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_Eine anpassbare Entwicklungsumgebung für Ethereum mit Hot-Reloading, Fehlerprüfung und erstklassiger Testnetz-Unterstützung_**
 
 - [Dokumentation](https://docs.replit.com/)
 
@@ -32,7 +32,7 @@ Wenn Sie mit Code herumspielen möchten, bevor Sie [eine lokale Entwicklungsumge
 
 ## Desktop-IDEs {#desktop-ides}
 
-Die meisten etablierten IDEs haben Plugins entwickelt, um die Ethereum-Entwicklungserfahrung zu verbessern. Zumindest bieten sie Syntaxhervorhebung für [Smart-Contract-Sprachen](/developers/docs/smart-contracts/languages/).
+Die meisten etablierten IDEs haben Plugins entwickelt, um die Ethereum-Entwicklungserfahrung zu verbessern. Zumindest bieten sie Syntax-Hervorhebung für [Smart-Contract-Sprachen](/developers/docs/smart-contracts/languages/).
 
 **Visual Studio Code -** **_Professionelle plattformübergreifende IDE mit offizieller Ethereum-Unterstützung_**
 
@@ -46,7 +46,7 @@ Die meisten etablierten IDEs haben Plugins entwickelt, um die Ethereum-Entwicklu
 - [GitHub](https://github.com/JetBrains)
 - [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
 
-**Remix Desktop -** **_Erleben Sie die Remix IDE auf Ihrem lokalen Rechner_**
+**Remix Desktop -** **_Erleben Sie die Remix-IDE auf Ihrem lokalen Rechner_**
 
 - [Download](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
@@ -55,7 +55,7 @@ Die meisten etablierten IDEs haben Plugins entwickelt, um die Ethereum-Entwicklu
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language für Visual Studio Code
 - [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Solidity- und Hardhat-Unterstützung durch das Hardhat-Team
-- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Code-Formatierer, der Prettier verwendet
+- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Code-Formatierer mit Prettier
 
 ## Weiterführende Literatur {#further-reading}
 

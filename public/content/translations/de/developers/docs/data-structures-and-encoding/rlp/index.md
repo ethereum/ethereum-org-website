@@ -1,11 +1,11 @@
 ---
-title: Recursive-Length-Prefix-Serialisierung (RLP)
-description: "Eine Definition der RLP-Codierung in der Ausführungsebene von Ethereum."
+title: Recursive-Length Prefix (RLP) Serialisierung
+description: Eine Definition der RLP-Codierung in der Ausführungsschicht von Ethereum.
 lang: de
 sidebarDepth: 2
 ---
 
-Die Recursive-Length-Prefix-Serialisierung (RLP) wird in den Ausführungs-Clients von Ethereum umfassend verwendet. RLP standardisiert die Datenübertragung zwischen Blockchain-Knoten in einem platzsparenden Format. Der Zweck von RLP besteht darin, beliebig verschachtelte Arrays von Binärdaten zu codieren, und RLP ist die primäre Codierungsmethode, die zur Serialisierung von Objekten in der Ausführungsebene von Ethereum verwendet wird. Der Hauptzweck von RLP ist die Codierung von Strukturen; mit Ausnahme von positiven Ganzzahlen (Integers) delegiert RLP die Codierung spezifischer Datentypen (z. B. Strings, Floats) an Protokolle höherer Ordnung. Positive Ganzzahlen müssen in Big-Endian-Binärform ohne führende Nullen dargestellt werden (wodurch der ganzzahlige Wert Null dem leeren Byte-Array entspricht). Deserialisierte positive Ganzzahlen mit führenden Nullen müssen von jedem Protokoll höherer Ordnung, das RLP verwendet, als ungültig behandelt werden.
+Die Recursive-Length Prefix (RLP) Serialisierung wird in den Ausführungs-Clients von Ethereum umfassend verwendet. RLP standardisiert den Transfer von Daten zwischen Knoten in einem platzsparenden Format. Der Zweck von RLP ist es, beliebig verschachtelte Arrays von Binärdaten zu codieren, und RLP ist die primäre Codierungsmethode, die zur Serialisierung von Objekten in der Ausführungsschicht von Ethereum verwendet wird. Der Hauptzweck von RLP ist die Codierung von Struktur; mit Ausnahme von positiven Ganzzahlen delegiert RLP die Codierung spezifischer Datentypen (z. B. Strings, Floats) an Protokolle höherer Ordnung. Positive Ganzzahlen müssen in Big-Endian-Binärform ohne führende Nullen dargestellt werden (wodurch der ganzzahlige Wert Null dem leeren Byte-Array entspricht). Deserialisierte positive Ganzzahlen mit führenden Nullen müssen von jedem Protokoll höherer Ordnung, das RLP verwendet, als ungültig behandelt werden.
 
 Weitere Informationen finden Sie im [Ethereum Yellow Paper (Anhang B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
@@ -30,30 +30,30 @@ Zum Beispiel sind alle folgenden Dinge Elemente:
 - und komplexere Datenstrukturen wie `["cat", ["puppy", "cow"], "horse", [[]], "pig", [""], "sheep"]`.
 - die Zahl `100`
 
-Beachten Sie, dass im Kontext des Rests dieser Seite „String“ „eine bestimmte Anzahl von Bytes an Binärdaten“ bedeutet; es werden keine speziellen Codierungen verwendet und es wird kein Wissen über den Inhalt der Strings vorausgesetzt (außer wie durch die Regel gegen nicht-minimale positive Ganzzahlen gefordert).
+Beachten Sie, dass im Kontext des Rests dieser Seite "String" bedeutet: "eine bestimmte Anzahl von Bytes an Binärdaten"; es werden keine speziellen Codierungen verwendet, und es wird kein Wissen über den Inhalt der Strings vorausgesetzt (außer wie durch die Regel gegen nicht-minimale positive Ganzzahlen gefordert).
 
 Die RLP-Codierung ist wie folgt definiert:
 
 - Eine positive Ganzzahl wird in das kürzeste Byte-Array umgewandelt, dessen Big-Endian-Interpretation die Ganzzahl ist, und dann gemäß den unten stehenden Regeln als String codiert.
 - Für ein einzelnes Byte, dessen Wert im Bereich `[0x00, 0x7f]` (dezimal `[0, 127]`) liegt, ist dieses Byte seine eigene RLP-Codierung.
-- Andernfalls, wenn ein String 0-55 Bytes lang ist, besteht die RLP-Codierung aus einem einzelnen Byte mit dem Wert **0x80** (dez. 128) plus der Länge des Strings, gefolgt vom String. Der Bereich des ersten Bytes ist somit `[0x80, 0xb7]` (dez. `[128, 183]`).
-- Wenn ein String mehr als 55 Bytes lang ist, besteht die RLP-Codierung aus einem einzelnen Byte mit dem Wert **0xb7** (dez. 183) plus der Länge in Bytes der Länge des Strings in Binärform, gefolgt von der Länge des Strings, gefolgt vom String. Zum Beispiel würde ein 1024 Byte langer String als `\xb9\x04\x00` (dez. `185, 4, 0`) gefolgt vom String codiert werden. Hier ist `0xb9` (183 + 2 = 185) das erste Byte, gefolgt von den 2 Bytes `0x0400` (dez. 1024), die die Länge des eigentlichen Strings angeben. Der Bereich des ersten Bytes ist somit `[0xb8, 0xbf]` (dez. `[184, 191]`).
+- Andernfalls, wenn ein String 0-55 Bytes lang ist, besteht die RLP-Codierung aus einem einzelnen Byte mit dem Wert **0x80** (dez. 128) plus der Länge des Strings, gefolgt von dem String. Der Bereich des ersten Bytes ist somit `[0x80, 0xb7]` (dez. `[128, 183]`).
+- Wenn ein String mehr als 55 Bytes lang ist, besteht die RLP-Codierung aus einem einzelnen Byte mit dem Wert **0xb7** (dez. 183) plus der Länge in Bytes der Länge des Strings in Binärform, gefolgt von der Länge des Strings, gefolgt von dem String. Zum Beispiel würde ein 1024 Byte langer String als `\xb9\x04\x00` (dez. `185, 4, 0`) gefolgt von dem String codiert werden. Hier ist `0xb9` (183 + 2 = 185) das erste Byte, gefolgt von den 2 Bytes `0x0400` (dez. 1024), die die Länge des eigentlichen Strings angeben. Der Bereich des ersten Bytes ist somit `[0xb8, 0xbf]` (dez. `[184, 191]`).
 - Wenn ein String 2^64 Bytes lang oder länger ist, darf er nicht codiert werden.
-- Wenn die gesamten Nutzdaten (Payload) einer Liste (d. h. die kombinierte Länge aller ihrer RLP-codierten Elemente) 0-55 Bytes lang sind, besteht die RLP-Codierung aus einem einzelnen Byte mit dem Wert **0xc0** plus der Länge der Nutzdaten, gefolgt von der Verkettung der RLP-Codierungen der Elemente. Der Bereich des ersten Bytes ist somit `[0xc0, 0xf7]` (dez. `[192, 247]`).
-- Wenn die gesamten Nutzdaten einer Liste mehr als 55 Bytes lang sind, besteht die RLP-Codierung aus einem einzelnen Byte mit dem Wert **0xf7** plus der Länge in Bytes der Länge der Nutzdaten in Binärform, gefolgt von der Länge der Nutzdaten, gefolgt von der Verkettung der RLP-Codierungen der Elemente. Der Bereich des ersten Bytes ist somit `[0xf8, 0xff]` (dez. `[248, 255]`).
+- Wenn die gesamte Nutzlast (Payload) einer Liste (d. h. die kombinierte Länge aller ihrer RLP-codierten Elemente) 0-55 Bytes lang ist, besteht die RLP-Codierung aus einem einzelnen Byte mit dem Wert **0xc0** plus der Länge der Nutzlast, gefolgt von der Verkettung der RLP-Codierungen der Elemente. Der Bereich des ersten Bytes ist somit `[0xc0, 0xf7]` (dez. `[192, 247]`).
+- Wenn die gesamte Nutzlast einer Liste mehr als 55 Bytes lang ist, besteht die RLP-Codierung aus einem einzelnen Byte mit dem Wert **0xf7** plus der Länge in Bytes der Länge der Nutzlast in Binärform, gefolgt von der Länge der Nutzlast, gefolgt von der Verkettung der RLP-Codierungen der Elemente. Der Bereich des ersten Bytes ist somit `[0xf8, 0xff]` (dez. `[248, 255]`).
 
-In Kurzform:
+In knapper Form:
 
-| Bereich     | Byte 1     | Byte 2     | ...        | Byte 9                | Byte 10    | Bedeutung                                 |
+| Bereich       | Byte 1     | Byte 2     | ...        | Byte 9                | Byte 10    | Bedeutung                                   |
 | ----------- | ---------- | ---------- | ---------- | --------------------- | ---------- | ----------------------------------------- |
 | `0x00-0x7f` | `0ppppppp` |            |            |                       |            | Einzel-Byte-String                        |
-| `0x80-0xb7` | `10nnnnnn` | `pppppppp` | `...`      |                       |            | kurzer String (0-55 Bytes)                |
-| `0xb8-0xbf` | `10111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | langer String, N+1 Bytes für Länge, dann Nutzdaten |
-| `0xc0-0xf7` | `11nnnnnn` | `pppppppp` | `...`      |                       |            | kurze Liste (0-55 Bytes)                  |
-| `0xf8-0xff` | `11111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | lange Liste, N+1 Bytes für Länge, dann Nutzdaten |
+| `0x80-0xb7` | `10nnnnnn` | `pppppppp` | `...`      |                       |            | kurzer String (0-55 Bytes)                 |
+| `0xb8-0xbf` | `10111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | langer String, N+1 Bytes für Länge, dann Nutzlast |
+| `0xc0-0xf7` | `11nnnnnn` | `pppppppp` | `...`      |                       |            | kurze Liste (0-55 Bytes)                   |
+| `0xf8-0xff` | `11111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | lange Liste, N+1 Bytes für Länge, dann Nutzlast |
 
-- `p` = Nutzdaten (Payload)
-- `n` = Länge (Anzahl der Nutzdaten-Bytes)
+- `p` = Nutzlast (Payload)
+- `n` = Länge (Anzahl der Nutzlast-Bytes)
 - `N` = Länge-der-Länge-Offset (N+1 `n` Bytes folgen)
 
 Im Code sieht das so aus:
@@ -103,11 +103,11 @@ Gemäß den Regeln und dem Prozess der RLP-Codierung wird die Eingabe der RLP-De
 
 1.  Anhand des ersten Bytes (d. h. des Präfixes) der Eingabedaten werden der Datentyp, die Länge der eigentlichen Daten und der Offset decodiert;
 
-2.  Anhand des Typs und des Offsets der Daten werden die Daten entsprechend decodiert, wobei die minimale Codierungsregel für positive Ganzzahlen beachtet wird;
+2.  Entsprechend dem Typ und dem Offset der Daten werden die Daten entsprechend decodiert, wobei die Regel der minimalen Codierung für positive Ganzzahlen beachtet wird;
 
 3.  Fahren Sie mit der Decodierung des Rests der Eingabe fort;
 
-Dabei lauten die Regeln für die Decodierung von Datentypen und Offsets wie folgt:
+Dabei lauten die Regeln zur Decodierung von Datentypen und Offsets wie folgt:
 
 1.  Die Daten sind ein String, wenn der Bereich des ersten Bytes (d. h. des Präfixes) [0x00, 0x7f] ist, und der String ist exakt das erste Byte selbst;
 
@@ -115,9 +115,9 @@ Dabei lauten die Regeln für die Decodierung von Datentypen und Offsets wie folg
 
 3.  Die Daten sind ein String, wenn der Bereich des ersten Bytes [0xb8, 0xbf] ist, und die Länge des Strings, dessen Länge in Bytes gleich dem ersten Byte minus 0xb7 ist, folgt auf das erste Byte, und der String folgt auf die Länge des Strings;
 
-4.  Die Daten sind eine Liste, wenn der Bereich des ersten Bytes [0xc0, 0xf7] ist, und die Verkettung der RLP-Codierungen aller Elemente der Liste, deren gesamte Nutzdaten gleich dem ersten Byte minus 0xc0 sind, folgt auf das erste Byte;
+4.  Die Daten sind eine Liste, wenn der Bereich des ersten Bytes [0xc0, 0xf7] ist, und die Verkettung der RLP-Codierungen aller Elemente der Liste, deren gesamte Nutzlast gleich dem ersten Byte minus 0xc0 ist, folgt auf das erste Byte;
 
-5.  Die Daten sind eine Liste, wenn der Bereich des ersten Bytes [0xf8, 0xff] ist, und die gesamten Nutzdaten der Liste, deren Länge gleich dem ersten Byte minus 0xf7 ist, folgen auf das erste Byte, und die Verkettung der RLP-Codierungen aller Elemente der Liste folgt auf die gesamten Nutzdaten der Liste;
+5.  Die Daten sind eine Liste, wenn der Bereich des ersten Bytes [0xf8, 0xff] ist, und die gesamte Nutzlast der Liste, deren Länge gleich dem ersten Byte minus 0xf7 ist, folgt auf das erste Byte, und die Verkettung der RLP-Codierungen aller Elemente der Liste folgt auf die gesamte Nutzlast der Liste;
 
 Im Code sieht das so aus:
 
@@ -169,8 +169,8 @@ def to_integer(b):
 ## Weiterführende Literatur {#further-reading}
 
 - [RLP in Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
-- [Ethereum under the hood: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
-- [Coglio, A. (2020). Ethereum's Recursive Length Prefix in ACL2. arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
+- [Ethereum unter der Haube: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
+- [Coglio, A. (2020). Ethereum's Recursive Length Prefix in ACL2. arXiv Preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
 ## Verwandte Themen {#related-topics}
 
