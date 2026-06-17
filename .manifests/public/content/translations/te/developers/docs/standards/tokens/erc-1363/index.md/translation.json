@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-16T23:14:01.293Z",
+  "englishManifestHash": "47ae48efd8cf",
+  "placeholderOrder": [
+    "CODE-27f576",
+    "CODE-b7f373",
+    "CODE-74e216",
+    "LINK-5717a5",
+    "LINK-fb2e62",
+    "CODE-27f576",
+    "CODE-b7f373",
+    "CODE-74e216",
+    "CODE-27f576",
+    "CODE-b7f373",
+    "LINK-a5d5f0",
+    "CODE-14e331",
+    "CODE-8aaf35",
+    "CODE-84c614",
+    "CODEBLOCK-b1df04",
+    "CODE-f7c538",
+    "CODE-91b8a4",
+    "CODE-ead894",
+    "CODEBLOCK-11eca4",
+    "CODE-f2fcc8",
+    "CODE-f88413",
+    "CODEBLOCK-99efae",
+    "LINK-6b68f6",
+    "LINK-6f1f3e"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-b1df04": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-11eca4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-99efae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-27f576": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer"
+      }
+    },
+    "CODE-b7f373": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom"
+      }
+    },
+    "CODE-74e216": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve"
+      }
+    },
+    "CODE-14e331": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC1363"
+      }
+    },
+    "CODE-8aaf35": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC20"
+      }
+    },
+    "CODE-84c614": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC165"
+      }
+    },
+    "CODE-f7c538": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferAndCall"
+      }
+    },
+    "CODE-91b8a4": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFromAndCall"
+      }
+    },
+    "CODE-ead894": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC1363Receiver"
+      }
+    },
+    "CODE-f2fcc8": {
+      "type": "inline-code",
+      "values": {
+        "content": "approveAndCall"
+      }
+    },
+    "CODE-f88413": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC1363Spender"
+      }
+    },
+    "LINK-5717a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-a5d5f0": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1363"
+      }
+    },
+    "LINK-6b68f6": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1363"
+      }
+    },
+    "LINK-6f1f3e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/vittominacori/erc1363-payable-token"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:14:01.293Z",
+      "status": "success"
+    }
+  }
+}

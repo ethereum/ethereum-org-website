@@ -1,45 +1,40 @@
 ---
-title: "స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలి"
-description: "స్మార్ట్ కాంట్రాక్ట్‌లలో స్వయంచాలకంగా బగ్‌లను కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలి"
-author: Trailofbits
+title: స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలి
+description: స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను స్వయంచాలకంగా కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలి
+author: ట్రైల్ఆఫ్‌బిట్స్
 lang: te
 tags:
-  [
-    "Solidity",
-    "స్మార్ట్ కాంట్రాక్టులు",
-    "భద్రత",
-    "పరీక్షించడం",
-    "ఫార్మల్ వెరిఫికేషన్"
-  ]
+  ["Solidity", "స్మార్ట్ కాంట్రాక్ట్‌లు", "భద్రత", "పరీక్షించడం", "ఫార్మల్ వెరిఫికేషన్"]
 skill: advanced
+breadcrumb: మాంటికోర్
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
-ఈ ట్యుటోరియల్ యొక్క లక్ష్యం స్మార్ట్ కాంట్రాక్ట్‌లలో స్వయంచాలకంగా బగ్‌లను కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలో చూపించడం.
+ఈ ట్యుటోరియల్ యొక్క ఉద్దేశ్యం స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను స్వయంచాలకంగా కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలో చూపించడం.
 
-## సంస్థాపన {#installation}
+## ఇన్‌స్టాలేషన్ {#installation}
 
-మాంటికోర్‌కు >= పైథాన్ 3.6 అవసరం. దీనిని పిప్ ద్వారా లేదా డాకర్‌ని ఉపయోగించి ఇన్‌స్టాల్ చేయవచ్చు.
+మాంటికోర్‌కు >= Python 3.6 అవసరం. దీనిని pip ద్వారా లేదా Docker ఉపయోగించి ఇన్‌స్టాల్ చేయవచ్చు.
 
-### డాకర్ ద్వారా మాంటికోర్ {#manticore-through-docker}
+### Docker ద్వారా మాంటికోర్ {#manticore-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_చివరి కమాండ్ మీ ప్రస్తుత డైరెక్టరీకి యాక్సెస్ ఉన్న డాకర్‌లో eth-security-toolboxను రన్ చేస్తుంది. మీరు మీ హోస్ట్ నుండి ఫైల్‌లను మార్చవచ్చు, మరియు డాకర్_ నుండి ఫైల్‌లపై సాధనాలను అమలు చేయండి
+_చివరి కమాండ్ మీ ప్రస్తుత డైరెక్టరీకి యాక్సెస్ ఉన్న Dockerలో eth-security-toolboxని రన్ చేస్తుంది. మీరు మీ హోస్ట్ నుండి ఫైల్‌లను మార్చవచ్చు మరియు Docker నుండి ఫైల్‌లపై టూల్స్‌ను రన్ చేయవచ్చు_
 
-డాకర్ లోపల, రన్ చేయండి:
+Docker లోపల, ఇలా రన్ చేయండి:
 
 ```bash
 solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### పిప్ ద్వారా మాంటికోర్ {#manticore-through-pip}
+### pip ద్వారా మాంటికోర్ {#manticore-through-pip}
 
 ```bash
 pip3 install --user manticore
@@ -47,28 +42,28 @@ pip3 install --user manticore
 
 solc 0.5.11 సిఫార్సు చేయబడింది.
 
-### ఒక స్క్రిప్ట్‌ను అమలు చేయడం {#running-a-script}
+### స్క్రిప్ట్‌ను రన్ చేయడం {#running-a-script}
 
-పైథాన్ 3 తో పైథాన్ స్క్రిప్ట్‌ను అమలు చేయడానికి:
+Python 3తో Python స్క్రిప్ట్‌ను రన్ చేయడానికి:
 
 ```bash
 python3 script.py
 ```
 
-## డైనమిక్ సింబాలిక్ ఎగ్జిక్యూషన్‌కు పరిచయం {#introduction-to-dynamic-symbolic-execution}
+## డైనమిక్ సింబాలిక్ ఎగ్జిక్యూషన్ పరిచయం {#introduction-to-dynamic-symbolic-execution}
 
-### సంక్షిప్తంగా డైనమిక్ సింబాలిక్ ఎగ్జిక్యూషన్ {#dynamic-symbolic-execution-in-a-nutshell}
+### డైనమిక్ సింబాలిక్ ఎగ్జిక్యూషన్ (DSE) సంగ్రహంగా {#dynamic-symbolic-execution-in-a-nutshell}
 
-డైనమిక్ సింబాలిక్ ఎగ్జిక్యూషన్ (DSE) అనేది అధిక స్థాయి సెమాంటిక్ అవగాహనతో ఒక స్టేట్ స్పేస్‌ను అన్వేషించే ఒక ప్రోగ్రామ్ విశ్లేషణ పద్ధతి. ఈ పద్ధతి "ప్రోగ్రామ్ పాత్‌ల" ఆవిష్కరణపై ఆధారపడి ఉంటుంది, వీటిని `పాత్ ప్రిడికేట్స్` అని పిలిచే గణిత సూత్రాలుగా సూచిస్తారు. సంభావితంగా, ఈ పద్ధతి పాత్ ప్రిడికేట్‌లపై రెండు దశలలో పనిచేస్తుంది:
+డైనమిక్ సింబాలిక్ ఎగ్జిక్యూషన్ (DSE) అనేది అధిక స్థాయి సెమాంటిక్ అవగాహనతో స్థితి (state) స్పేస్‌ను అన్వేషించే ప్రోగ్రామ్ విశ్లేషణ సాంకేతికత. ఈ సాంకేతికత "ప్రోగ్రామ్ పాత్‌ల" అన్వేషణపై ఆధారపడి ఉంటుంది, వీటిని `path predicates` అని పిలువబడే గణిత సూత్రాలుగా సూచిస్తారు. సంభావితంగా, ఈ సాంకేతికత పాత్ ప్రెడికేట్‌లపై రెండు దశల్లో పనిచేస్తుంది:
 
-1. ప్రోగ్రామ్ ఇన్‌పుట్‌పై పరిమితులను ఉపయోగించి అవి నిర్మించబడ్డాయి.
+1. ప్రోగ్రామ్ ఇన్‌పుట్‌పై పరిమితులను ఉపయోగించి అవి నిర్మించబడతాయి.
 2. అనుబంధిత పాత్‌లను అమలు చేయడానికి కారణమయ్యే ప్రోగ్రామ్ ఇన్‌పుట్‌లను రూపొందించడానికి అవి ఉపయోగించబడతాయి.
 
-గుర్తించబడిన అన్ని ప్రోగ్రామ్ స్టేట్‌లు కాంక్రీట్ ఎగ్జిక్యూషన్ సమయంలో ప్రేరేపించబడతాయి అనే అర్థంలో ఈ విధానం ఎటువంటి తప్పుడు పాజిటివ్‌లను ఉత్పత్తి చేయదు. ఉదాహరణకు, విశ్లేషణలో ఒక పూర్ణాంక ఓవర్‌ఫ్లో కనుగొనబడితే, అది పునరుత్పత్తి చేయబడుతుందని హామీ ఇవ్వబడింది.
+గుర్తించబడిన అన్ని ప్రోగ్రామ్ స్థితులను కాంక్రీట్ ఎగ్జిక్యూషన్ సమయంలో ట్రిగ్గర్ చేయవచ్చు కాబట్టి ఈ విధానం ఎలాంటి ఫాల్స్ పాజిటివ్‌లను ఉత్పత్తి చేయదు. ఉదాహరణకు, విశ్లేషణలో పూర్ణాంక ఓవర్‌ఫ్లో కనుగొనబడితే, అది పునరుత్పత్తి చేయబడుతుందని హామీ ఇవ్వబడుతుంది.
 
-### పాత్ ప్రిడికేట్ ఉదాహరణ {#path-predicate-example}
+### పాత్ ప్రెడికేట్ ఉదాహరణ {#path-predicate-example}
 
-DSE ఎలా పనిచేస్తుందో ఒక అవగాహన పొందడానికి, కింది ఉదాహరణను పరిగణించండి:
+DSE ఎలా పనిచేస్తుందో అర్థం చేసుకోవడానికి, కింది ఉదాహరణను పరిశీలించండి:
 
 ```solidity
 function f(uint a){
@@ -80,18 +75,18 @@ function f(uint a){
 }
 ```
 
-`f()` రెండు పాత్‌లను కలిగి ఉన్నందున, ఒక DSE రెండు వేర్వేరు పాత్ ప్రిడికేట్‌లను నిర్మిస్తుంది:
+`f()` రెండు పాత్‌లను కలిగి ఉన్నందున, DSE రెండు విభిన్న పాత్ ప్రెడికేట్‌లను నిర్మిస్తుంది:
 
 - పాత్ 1: `a == 65`
-- పాత్ 2: `కాదు (a == 65)`
+- పాత్ 2: `Not (a == 65)`
 
-ప్రతి పాత్ ప్రిడికేట్ ఒక గణిత సూత్రం, దీనిని [SMT సాల్వర్](https://wikipedia.org/wiki/Satisfiability_modulo_theories) అని పిలవబడే దానికి ఇవ్వవచ్చు, అది సమీకరణాన్ని పరిష్కరించడానికి ప్రయత్నిస్తుంది. `పాత్ 1` కోసం, సాల్వర్ `a = 65` తో పాత్‌ను అన్వేషించవచ్చని చెబుతుంది. `పాత్ 2` కోసం, సాల్వర్ `a` కు 65 కాకుండా ఏదైనా విలువను ఇవ్వగలదు, ఉదాహరణకు `a = 0`.
+ప్రతి పాత్ ప్రెడికేట్ అనేది ఒక గణిత సూత్రం, దీనిని [SMT పరిష్కర్త](https://wikipedia.org/wiki/Satisfiability_modulo_theories) అని పిలువబడే దానికి ఇవ్వవచ్చు, ఇది సమీకరణాన్ని పరిష్కరించడానికి ప్రయత్నిస్తుంది. `Path 1` కోసం, పాత్‌ను `a = 65`తో అన్వేషించవచ్చని పరిష్కర్త చెబుతుంది. `Path 2` కోసం, పరిష్కర్త `a`కి 65 కాకుండా మరేదైనా విలువను ఇవ్వగలదు, ఉదాహరణకు `a = 0`.
 
 ### లక్షణాలను ధృవీకరించడం {#verifying-properties}
 
-మాంటికోర్ ప్రతి పాత్ యొక్క అన్ని ఎగ్జిక్యూషన్‌పై పూర్తి నియంత్రణను అనుమతిస్తుంది. ఫలితంగా, ఇది దాదాపు దేనికైనా యాదృచ్ఛిక పరిమితులను జోడించడానికి మిమ్మల్ని అనుమతిస్తుంది. ఈ నియంత్రణ కాంట్రాక్ట్‌పై లక్షణాల సృష్టికి అనుమతిస్తుంది.
+ప్రతి పాత్ యొక్క మొత్తం ఎగ్జిక్యూషన్‌పై మాంటికోర్ పూర్తి నియంత్రణను అనుమతిస్తుంది. ఫలితంగా, ఇది దాదాపు దేనికైనా ఏకపక్ష పరిమితులను జోడించడానికి మిమ్మల్ని అనుమతిస్తుంది. ఈ నియంత్రణ కాంట్రాక్ట్‌పై లక్షణాలను సృష్టించడానికి అనుమతిస్తుంది.
 
-కింది ఉదాహరణను పరిగణించండి:
+కింది ఉదాహరణను పరిశీలించండి:
 
 ```solidity
 function unsafe_add(uint a, uint b) returns(uint c){
@@ -100,17 +95,17 @@ function unsafe_add(uint a, uint b) returns(uint c){
 }
 ```
 
-ఇక్కడ ఫంక్షన్‌లో అన్వేషించడానికి ఒకే ఒక్క పాత్ ఉంది:
+ఇక్కడ ఫంక్షన్‌లో అన్వేషించడానికి ఒకే ఒక పాత్ ఉంది:
 
 - పాత్ 1: `c = a + b`
 
-మాంటికోర్‌ను ఉపయోగించి, మీరు ఓవర్‌ఫ్లో కోసం తనిఖీ చేయవచ్చు, మరియు పాత్ ప్రిడికేట్‌కు పరిమితులను జోడించవచ్చు:
+మాంటికోర్‌ని ఉపయోగించి, మీరు ఓవర్‌ఫ్లో కోసం తనిఖీ చేయవచ్చు మరియు పాత్ ప్రెడికేట్‌కు పరిమితులను జోదించవచ్చు:
 
 - `c = a + b AND (c < a OR c < b)`
 
-పైన ఉన్న పాత్ ప్రిడికేట్ సాధ్యమయ్యే `a` మరియు `b` యొక్క మూల్యాంకనాన్ని కనుగొనడం సాధ్యమైతే, మీరు ఒక ఓవర్‌ఫ్లోను కనుగొన్నారని అర్థం. ఉదాహరణకు సాల్వర్ ఇన్‌పుట్ `a = 10 , b = MAXUINT256`ను రూపొందించగలదు.
+పైన ఉన్న పాత్ ప్రెడికేట్ సాధ్యమయ్యే `a` మరియు `b` యొక్క విలువను కనుగొనడం సాధ్యమైతే, మీరు ఓవర్‌ఫ్లోను కనుగొన్నారని అర్థం. ఉదాహరణకు పరిష్కర్త `a = 10 , b = MAXUINT256` ఇన్‌పుట్‌ను రూపొందించగలదు.
 
-మీరు ఒక స్థిరమైన సంస్కరణను పరిగణించినట్లయితే:
+మీరు స్థిరమైన సంస్కరణను పరిశీలిస్తే:
 
 ```solidity
 function safe_add(uint a, uint b) returns(uint c){
@@ -121,17 +116,17 @@ function safe_add(uint a, uint b) returns(uint c){
 }
 ```
 
-ఓవర్‌ఫ్లో తనిఖీతో అనుబంధిత సూత్రం ఇలా ఉంటుంది:
+ఓవర్‌ఫ్లో తనిఖీతో అనుబంధించబడిన సూత్రం ఇలా ఉంటుంది:
 
 - `c = a + b AND (c >= a) AND (c=>b) AND (c < a OR c < b)`
 
-ఈ సూత్రాన్ని పరిష్కరించలేము; మరో మాటలో చెప్పాలంటే, ఇది `safe_add`లో `c` ఎల్లప్పుడూ పెరుగుతుందనడానికి ఒక **రుజువు**.
+ఈ సూత్రాన్ని పరిష్కరించలేము; మరో మాటలో చెప్పాలంటే, `safe_add`లో, `c` ఎల్లప్పుడూ పెరుగుతుందనడానికి ఇది ఒక **రుజువు**.
 
-అందువల్ల DSE ఒక శక్తివంతమైన సాధనం, ఇది మీ కోడ్‌పై యాదృచ్ఛిక పరిమితులను ధృవీకరించగలదు.
+DSE అనేది మీ కోడ్‌పై ఏకపక్ష పరిమితులను ధృవీకరించగల శక్తివంతమైన సాధనం.
 
-## మాంటికోర్ కింద నడుస్తోంది {#running-under-manticore}
+## మాంటికోర్ కింద రన్ చేయడం {#running-under-manticore}
 
-మాంటికోర్ API తో స్మార్ట్ కాంట్రాక్ట్‌ను ఎలా అన్వేషించాలో మనం చూస్తాము. లక్ష్యం కింది స్మార్ట్ కాంట్రాక్ట్ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
+మాంటికోర్ APIతో స్మార్ట్ కాంట్రాక్ట్‌ను ఎలా అన్వేషించాలో మనం చూస్తాము. లక్ష్యం కింది స్మార్ట్ కాంట్రాక్ట్ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -145,62 +140,62 @@ contract Simple {
 }
 ```
 
-### ఒక స్వతంత్ర అన్వేషణను అమలు చేయండి {#run-a-standalone-exploration}
+### స్వతంత్ర అన్వేషణను రన్ చేయండి {#run-a-standalone-exploration}
 
-మీరు కింది కమాండ్ ద్వారా నేరుగా స్మార్ట్ కాంట్రాక్ట్‌పై మాంటికోర్‌ను అమలు చేయవచ్చు (`project` ఒక సాలిడిటీ ఫైల్ లేదా ప్రాజెక్ట్ డైరెక్టరీ కావచ్చు):
+కింది కమాండ్ ద్వారా మీరు మాంటికోర్‌ను నేరుగా స్మార్ట్ కాంట్రాక్ట్‌పై రన్ చేయవచ్చు (`project` అనేది Solidity ఫైల్ లేదా ప్రాజెక్ట్ డైరెక్టరీ కావచ్చు):
 
 ```bash
 $ manticore project
 ```
 
-మీరు ఇలాంటి టెస్ట్‌కేసుల అవుట్‌పుట్‌ను పొందుతారు (ఆర్డర్ మారవచ్చు):
+మీరు దీనిలాంటి టెస్ట్‌కేస్‌ల అవుట్‌పుట్‌ను పొందుతారు (క్రమం మారవచ్చు):
 
 ```
 ...
-... m.c.manticore:INFO: Generated testcase No. 0 - STOP
-... m.c.manticore:INFO: Generated testcase No. 1 - REVERT
-... m.c.manticore:INFO: Generated testcase No. 2 - RETURN
-... m.c.manticore:INFO: Generated testcase No. 3 - REVERT
-... m.c.manticore:INFO: Generated testcase No. 4 - STOP
-... m.c.manticore:INFO: Generated testcase No. 5 - REVERT
-... m.c.manticore:INFO: Generated testcase No. 6 - REVERT
-... m.c.manticore:INFO: Results in /home/ethsec/workshops/Automated Smart Contracts Audit - TruffleCon 2018/manticore/examples/mcore_t6vi6ij3
+... m.c.manticore:INFO: టెస్ట్‌కేస్ నం. 0 రూపొందించబడింది - STOP
+... m.c.manticore:INFO: టెస్ట్‌కేస్ నం. 1 రూపొందించబడింది - REVERT
+... m.c.manticore:INFO: టెస్ట్‌కేస్ నం. 2 రూపొందించబడింది - RETURN
+... m.c.manticore:INFO: టెస్ట్‌కేస్ నం. 3 రూపొందించబడింది - REVERT
+... m.c.manticore:INFO: టెస్ట్‌కేస్ నం. 4 రూపొందించబడింది - STOP
+... m.c.manticore:INFO: టెస్ట్‌కేస్ నం. 5 రూపొందించబడింది - REVERT
+... m.c.manticore:INFO: టెస్ట్‌కేస్ నం. 6 రూపొందించబడింది - REVERT
+... m.c.manticore:INFO: ఫలితాలు /home/ethsec/workshops/Automated Smart Contracts Audit - TruffleCon 2018/manticore/examples/mcore_t6vi6ij3 లో ఉన్నాయి
 ...
 ```
 
-అదనపు సమాచారం లేకుండా, మాంటికోర్ కొత్త సింబాలిక్ లావాదేవీలతో కాంట్రాక్ట్‌ను అన్వేషిస్తుంది, అది కాంట్రాక్ట్‌లో కొత్త పాత్‌లను అన్వేషించే వరకు. విఫలమైన దాని తర్వాత మాంటికోర్ కొత్త లావాదేవీలను అమలు చేయదు (ఉదా: రివర్ట్ తర్వాత).
+అదనపు సమాచారం లేకుండా, మాంటికోర్ కాంట్రాక్ట్‌పై కొత్త పాత్‌లను అన్వేషించడం ఆపే వరకు కొత్త సింబాలిక్ లావాదేవీలతో కాంట్రాక్ట్‌ను అన్వేషిస్తుంది. విఫలమైన లావాదేవీ తర్వాత (ఉదా: రివర్ట్ తర్వాత) మాంటికోర్ కొత్త లావాదేవీలను రన్ చేయదు.
 
-మాంటికోర్ సమాచారాన్ని `mcore_*` డైరెక్టరీలో అవుట్‌పుట్ చేస్తుంది. ఇతర వాటితో పాటు, మీరు ఈ డైరెక్టరీలో కనుగొంటారు:
+మాంటికోర్ సమాచారాన్ని `mcore_*` డైరెక్టరీలో అవుట్‌పుట్ చేస్తుంది. ఇతర వాటితో పాటు, మీరు ఈ డైరెక్టరీలో వీటిని కనుగొంటారు:
 
 - `global.summary`: కవరేజ్ మరియు కంపైలర్ హెచ్చరికలు
-- `test_XXXXX.summary`: కవరేజ్, చివరి సూచన, ప్రతి టెస్ట్ కేసుకు ఖాతా బ్యాలెన్స్‌లు
-- `test_XXXXX.tx`: ప్రతి టెస్ట్ కేసుకు లావాదేవీల వివరణాత్మక జాబితా
+- `test_XXXXX.summary`: కవరేజ్, చివరి సూచన, ప్రతి టెస్ట్ కేస్‌కు ఖాతా బ్యాలెన్స్‌లు
+- `test_XXXXX.tx`: ప్రతి టెస్ట్ కేస్‌కు లావాదేవీల వివరణాత్మక జాబితా
 
-ఇక్కడ మాంటికోర్ 7 టెస్ట్ కేసులను కనుగొంది, అవి వీటికి అనుగుణంగా ఉంటాయి (ఫైల్‌నేమ్ ఆర్డర్ మారవచ్చు):
+ఇక్కడ మాంటికోర్ 7 టెస్ట్ కేసులను కనుగొంది, ఇవి వీటికి అనుగుణంగా ఉంటాయి (ఫైల్ పేరు క్రమం మారవచ్చు):
 
-|                                                           |     లావాదేవీ 0     |         లావాదేవీ 1         | లావాదేవీ 2                 |  ఫలితం |
-| :-------------------------------------------------------: | :----------------: | :------------------------: | -------------------------- | :----: |
-| **test_00000000.tx** | కాంట్రాక్ట్ సృష్టి | f(!=65) | f(!=65) |  STOP  |
-| **test_00000001.tx** | కాంట్రాక్ట్ సృష్టి |     ఫాల్‌బ్యాక్ ఫంక్షన్    |                            | REVERT |
-| **test_00000002.tx** | కాంట్రాక్ట్ సృష్టి |                            |                            | RETURN |
-| **test_00000003.tx** | కాంట్రాక్ట్ సృష్టి |  f(65)  |                            | REVERT |
-| **test_00000004.tx** | కాంట్రాక్ట్ సృష్టి | f(!=65) |                            |  STOP  |
-| **test_00000005.tx** | కాంట్రాక్ట్ సృష్టి | f(!=65) | f(65)   | REVERT |
-| **test_00000006.tx** | కాంట్రాక్ట్ సృష్టి | f(!=65) | ఫాల్‌బ్యాక్ ఫంక్షన్        | REVERT |
+|                      |   లావాదేవీ 0   |   లావాదేవీ 1   | లావాదేవీ 2     | ఫలితం |
+| :------------------: | :---------------: | :---------------: | ----------------- | :----: |
+| **test_00000000.tx** | కాంట్రాక్ట్ సృష్టి |      f(!=65)      | f(!=65)           |  STOP  |
+| **test_00000001.tx** | కాంట్రాక్ట్ సృష్టి | ఫాల్‌బ్యాక్ ఫంక్షన్ |                   | REVERT |
+| **test_00000002.tx** | కాంట్రాక్ట్ సృష్టి |                   |                   | RETURN |
+| **test_00000003.tx** | కాంట్రాక్ట్ సృష్టి |       f(65)       |                   | REVERT |
+| **test_00000004.tx** | కాంట్రాక్ట్ సృష్టి |      f(!=65)      |                   |  STOP  |
+| **test_00000005.tx** | కాంట్రాక్ట్ సృష్టి |      f(!=65)      | f(65)             | REVERT |
+| **test_00000006.tx** | కాంట్రాక్ట్ సృష్టి |      f(!=65)      | ఫాల్‌బ్యాక్ ఫంక్షన్ | REVERT |
 
-_అన్వేషణ సారాంశం f(!=65) అంటే 65 కంటే భిన్నమైన ఏదైనా విలువతో f పిలువబడిందని సూచిస్తుంది._
+_అన్వేషణ సారాంశం f(!=65) అనేది 65కి భిన్నమైన ఏదైనా విలువతో పిలువబడే fని సూచిస్తుంది._
 
-మీరు గమనించినట్లుగా, మాంటికోర్ ప్రతి విజయవంతమైన లేదా రివర్ట్ చేయబడిన లావాదేవీకి ఒక ప్రత్యేకమైన టెస్ట్ కేసును ఉత్పత్తి చేస్తుంది.
+మీరు గమనించినట్లుగా, ప్రతి విజయవంతమైన లేదా రివర్ట్ చేయబడిన లావాదేవీకి మాంటికోర్ ఒక ప్రత్యేకమైన టెస్ట్ కేస్‌ను రూపొందిస్తుంది.
 
-మీరు వేగవంతమైన కోడ్ అన్వేషణను కోరుకుంటే `--quick-mode` ఫ్లాగ్‌ను ఉపయోగించండి (ఇది బగ్ డిటెక్టర్లు, గ్యాస్ గణన మొదలైనవాటిని నిలిపివేస్తుంది)
+మీకు వేగవంతమైన కోడ్ అన్వేషణ కావాలంటే `--quick-mode` ఫ్లాగ్‌ని ఉపయోగించండి (ఇది బగ్ డిటెక్టర్‌లు, గ్యాస్ గణన మొదలైనవాటిని నిలిపివేస్తుంది...)
 
 ### API ద్వారా స్మార్ట్ కాంట్రాక్ట్‌ను మార్చడం {#manipulate-a-smart-contract-through-the-api}
 
-ఈ విభాగం మాంటికోర్ పైథాన్ API ద్వారా స్మార్ట్ కాంట్రాక్ట్‌ను ఎలా మార్చాలో వివరిస్తుంది. మీరు పైథాన్ ఎక్స్‌టెన్షన్ `*.py` తో కొత్త ఫైల్‌ను సృష్టించవచ్చు మరియు API ఆదేశాలను (వీటి ప్రాథమికాలు క్రింద వివరించబడతాయి) ఈ ఫైల్‌లోకి జోడించడం ద్వారా అవసరమైన కోడ్‌ను వ్రాయవచ్చు, ఆపై `$ python3 *.py` ఆదేశంతో దాన్ని అమలు చేయండి. అలాగే మీరు కింది ఆదేశాలను నేరుగా పైథాన్ కన్సోల్‌లోకి అమలు చేయవచ్చు, కన్సోల్‌ను అమలు చేయడానికి `$ python3` ఆదేశాన్ని ఉపయోగించండి.
+మాంటికోర్ Python API ద్వారా స్మార్ట్ కాంట్రాక్ట్‌ను ఎలా మార్చాలో ఈ విభాగం వివరిస్తుంది. మీరు Python ఎక్స్‌టెన్షన్ `*.py`తో కొత్త ఫైల్‌ను సృష్టించవచ్చు మరియు ఈ ఫైల్‌లోకి API కమాండ్‌లను (వీటి ప్రాథమిక అంశాలు క్రింద వివరించబడతాయి) జోడించడం ద్వారా అవసరమైన కోడ్‌ను వ్రాయవచ్చు, ఆపై దానిని `$ python3 *.py` కమాండ్‌తో రన్ చేయవచ్చు. అలాగే మీరు కింది కమాండ్‌లను నేరుగా Python కన్సోల్‌లో అమలు చేయవచ్చు, కన్సోల్‌ను రన్ చేయడానికి `$ python3` కమాండ్‌ను ఉపయోగించండి.
 
 ### ఖాతాలను సృష్టించడం {#creating-accounts}
 
-మీరు చేయవలసిన మొదటి విషయం కింది ఆదేశాలతో కొత్త బ్లాక్ చైనును ప్రారంభించడం:
+మీరు చేయవలసిన మొదటి విషయం కింది కమాండ్‌లతో కొత్త బ్లాక్‌చైన్‌ను ప్రారంభించడం:
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -208,13 +203,13 @@ from manticore.ethereum import ManticoreEVM
 m = ManticoreEVM()
 ```
 
-ఒక నాన్-కాంట్రాక్ట్ ఖాతా [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) ఉపయోగించి సృష్టించబడుతుంది:
+నాన్-కాంట్రాక్ట్ ఖాతా [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) ఉపయోగించి సృష్టించబడుతుంది:
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-ఒక సాలిడిటీ కాంట్రాక్ట్‌ను [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract) ఉపయోగించి అమలు చేయవచ్చు:
+[m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract) ఉపయోగించి Solidity కాంట్రాక్ట్‌ను డిప్లాయ్ చేయవచ్చు:
 
 ```solidity
 source_code = '''
@@ -233,18 +228,18 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### సారాంశం {#summary}
 
-- మీరు [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) మరియు [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract) తో వినియోగదారు మరియు కాంట్రాక్ట్ ఖాతాలను సృష్టించవచ్చు.
+- మీరు [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) మరియు [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract)తో వినియోగదారు మరియు కాంట్రాక్ట్ ఖాతాలను సృష్టించవచ్చు.
 
 ### లావాదేవీలను అమలు చేయడం {#executing-transactions}
 
 మాంటికోర్ రెండు రకాల లావాదేవీలకు మద్దతు ఇస్తుంది:
 
-- రా లావాదేవీ: అన్ని ఫంక్షన్లు అన్వేషించబడతాయి
-- పేరున్న లావాదేవీ: ఒకే ఒక ఫంక్షన్ అన్వేషించబడుతుంది
+- ముడి (Raw) లావాదేవీ: అన్ని ఫంక్షన్‌లు అన్వేషించబడతాయి
+- పేరున్న (Named) లావాదేవీ: ఒక ఫంక్షన్ మాత్రమే అన్వేషించబడుతుంది
 
-#### రా లావాదేవీ {#raw-transaction}
+#### ముడి లావాదేవీ {#raw-transaction}
 
-ఒక రా లావాదేవీ [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction) ఉపయోగించి అమలు చేయబడుతుంది:
+ముడి లావాదేవీ [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction) ఉపయోగించి అమలు చేయబడుతుంది:
 
 ```python
 m.transaction(caller=user_account,
@@ -253,12 +248,12 @@ m.transaction(caller=user_account,
               value=value)
 ```
 
-కాలర్, చిరునామా, డేటా, లేదా లావాదేవీ యొక్క విలువ కాంక్రీట్ లేదా సింబాలిక్ కావచ్చు:
+కాలర్, చిరునామా, డేటా లేదా లావాదేవీ విలువ కాంక్రీట్ లేదా సింబాలిక్ కావచ్చు:
 
-- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) ఒక సింబాలిక్ విలువను సృష్టిస్తుంది.
-- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) ఒక సింబాలిక్ బైట్ శ్రేణిని సృష్టిస్తుంది.
+- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) సింబాలిక్ విలువను సృష్టిస్తుంది.
+- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) సింబాలిక్ బైట్ శ్రేణిని సృష్టిస్తుంది.
 
-ఉదాహరణకి:
+ఉదాహరణకు:
 
 ```python
 symbolic_value = m.make_symbolic_value()
@@ -269,24 +264,24 @@ m.transaction(caller=user_account,
               value=symbolic_value)
 ```
 
-డేటా సింబాలిక్ అయితే, మాంటికోర్ లావాదేవీ అమలు సమయంలో కాంట్రాక్ట్ యొక్క అన్ని ఫంక్షన్లను అన్వేషిస్తుంది. ఫంక్షన్ ఎంపిక ఎలా పనిచేస్తుందో అర్థం చేసుకోవడానికి [హ్యాండ్స్ ఆన్ ది ఈథర్నాట్ CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) కథనంలో ఫాల్‌బ్యాక్ ఫంక్షన్ వివరణను చూడటం సహాయకరంగా ఉంటుంది.
+డేటా సింబాలిక్ అయితే, లావాదేవీ అమలు సమయంలో మాంటికోర్ కాంట్రాక్ట్ యొక్క అన్ని ఫంక్షన్‌లను అన్వేషిస్తుంది. ఫంక్షన్ ఎంపిక ఎలా పనిచేస్తుందో అర్థం చేసుకోవడానికి [హ్యాండ్స్ ఆన్ ది ఈథర్‌నాట్ CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) కథనంలోని ఫాల్‌బ్యాక్ ఫంక్షన్ వివరణను చూడటం సహాయకరంగా ఉంటుంది.
 
 #### పేరున్న లావాదేవీ {#named-transaction}
 
-ఫంక్షన్లను వాటి పేరు ద్వారా అమలు చేయవచ్చు.
-సింబాలిక్ విలువతో `f(uint var)` ను user_account నుండి, మరియు 0 ఈథర్‌తో అమలు చేయడానికి, ఉపయోగించండి:
+ఫంక్షన్‌లను వాటి పేరు ద్వారా అమలు చేయవచ్చు.
+user_account నుండి సింబాలిక్ విలువతో మరియు 0 ఈథర్‌తో `f(uint var)`ని అమలు చేయడానికి, దీన్ని ఉపయోగించండి:
 
 ```python
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var, caller=user_account, value=0)
 ```
 
-లావాదేవీ యొక్క `value` పేర్కొనకపోతే, అది డిఫాల్ట్‌గా 0 అవుతుంది.
+లావాదేవీ యొక్క `value` పేర్కొనబడకపోతే, అది అప్రమేయంగా 0 అవుతుంది.
 
 #### సారాంశం {#summary-1}
 
-- ఒక లావాదేవీ యొక్క వాదనలు కాంక్రీట్ లేదా సింబాలిక్ కావచ్చు
-- ఒక రా లావాదేవీ అన్ని ఫంక్షన్లను అన్వేషిస్తుంది
+- లావాదేవీ యొక్క ఆర్గ్యుమెంట్‌లు కాంక్రీట్ లేదా సింబాలిక్ కావచ్చు
+- ముడి లావాదేవీ అన్ని ఫంక్షన్‌లను అన్వేషిస్తుంది
 - ఫంక్షన్‌ను వాటి పేరు ద్వారా పిలవవచ్చు
 
 ### వర్క్‌స్పేస్ {#workspace}
@@ -297,13 +292,13 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 print("Results are in {}".format(m.workspace))
 ```
 
-### అన్వేషణను ముగించండి {#terminate-the-exploration}
+### అన్వేషణను ముగించడం {#terminate-the-exploration}
 
-అన్వేషణను ఆపడానికి [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize)ని ఉపయోగించండి. ఈ పద్ధతిని పిలిచిన తర్వాత తదుపరి లావాదేవీలు పంపకూడదు మరియు మాంటికోర్ అన్వేషించబడిన ప్రతి పాత్‌కు టెస్ట్ కేసులను ఉత్పత్తి చేస్తుంది.
+అన్వేషణను ఆపడానికి [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize)ని ఉపయోగించండి. ఈ పద్ధతిని పిలిచిన తర్వాత తదుపరి లావాదేవీలు పంపబడకూడదు మరియు అన్వేషించిన ప్రతి పాత్‌కు మాంటికోర్ టెస్ట్ కేసులను రూపొందిస్తుంది.
 
-### సారాంశం: మాంటికోర్ కింద నడుస్తోంది {#summary-running-under-manticore}
+### సారాంశం: మాంటికోర్ కింద రన్ చేయడం {#summary-running-under-manticore}
 
-మునుపటి దశలన్నింటినీ కలిపి, మనం పొందుతాము:
+మునుపటి దశలన్నింటినీ కలిపితే, మనకు ఇది వస్తుంది:
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -320,14 +315,14 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 print("Results are in {}".format(m.workspace))
-m.finalize() # stop the exploration
+m.finalize() # అన్వేషణను నిలిపివేయండి
 ```
 
-పై కోడ్ అంతా మీరు [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)లో కనుగొనవచ్చు
+పైన ఉన్న కోడ్ అంతా మీరు [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)లో కనుగొనవచ్చు
 
 ## త్రోయింగ్ పాత్‌లను పొందడం {#getting-throwing-paths}
 
-ఇప్పుడు మనం `f()`లో మినహాయింపును పెంచే పాత్‌ల కోసం నిర్దిష్ట ఇన్‌పుట్‌లను రూపొందిస్తాము. లక్ష్యం ఇప్పటికీ కింది స్మార్ట్ కాంట్రాక్ట్ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
+మేము ఇప్పుడు `f()`లో మినహాయింపును (exception) పెంచే పాత్‌ల కోసం నిర్దిష్ట ఇన్‌పుట్‌లను రూపొందిస్తాము. లక్ష్యం ఇప్పటికీ కింది స్మార్ట్ కాంట్రాక్ట్ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -340,26 +335,26 @@ contract Simple {
 }
 ```
 
-### స్టేట్ సమాచారాన్ని ఉపయోగించడం {#using-state-information}
+### స్థితి సమాచారాన్ని ఉపయోగించడం {#using-state-information}
 
-అమలు చేయబడిన ప్రతి పాత్ బ్లాక్ చైను యొక్క దాని స్థితిని కలిగి ఉంటుంది. ఒక స్థితి సిద్ధంగా ఉంటుంది లేదా అది చంపబడుతుంది, అంటే అది THROW లేదా REVERT సూచనను చేరుకుంటుంది:
+అమలు చేయబడిన ప్రతి పాత్‌కు దాని బ్లాక్‌చైన్ స్థితి ఉంటుంది. ఒక స్థితి సిద్ధంగా ఉంటుంది లేదా అది చంపబడుతుంది (killed), అంటే అది THROW లేదా REVERT సూచనను చేరుకుంటుంది:
 
-- [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): సిద్ధంగా ఉన్న స్థితుల జాబితా (అవి REVERT/INVALID ను అమలు చేయలేదు)
+- [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): సిద్ధంగా ఉన్న స్థితుల జాబితా (అవి REVERT/INVALIDని అమలు చేయలేదు)
 - [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): చంపబడిన స్థితుల జాబితా
 - [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): అన్ని స్థితులు
 
 ```python
 for state in m.all_states:
-    # స్టేట్‌తో ఏదైనా చేయండి
+    # స్థితితో ఏదైనా చేయండి
 ```
 
-మీరు స్థితి సమాచారాన్ని యాక్సెస్ చేయవచ్చు. ఉదాహరణకి:
+మీరు స్థితి సమాచారాన్ని యాక్సెస్ చేయవచ్చు. ఉదాహరణకు:
 
-- `state.platform.get_balance(account.address)`: ఖాతా యొక్క బ్యాలెన్స్
+- `state.platform.get_balance(account.address)`: ఖాతా బ్యాలెన్స్
 - `state.platform.transactions`: లావాదేవీల జాబితా
-- `state.platform.transactions[-1].return_data`: చివరి లావాదేవీ ద్వారా తిరిగి ఇవ్వబడిన డేటా
+- `state.platform.transactions[-1].return_data`: చివరి లావాదేవీ ద్వారా అందించబడిన డేటా
 
-చివరి లావాదేవీ ద్వారా తిరిగి ఇవ్వబడిన డేటా ఒక శ్రేణి, దీనిని ABI.deserialize తో ఒక విలువగా మార్చవచ్చు, ఉదాహరణకు:
+చివరి లావాదేవీ ద్వారా అందించబడిన డేటా ఒక శ్రేణి (array), దీనిని ABI.deserializeతో విలువగా మార్చవచ్చు, ఉదాహరణకు:
 
 ```python
 data = state.platform.transactions[0].return_data
@@ -376,11 +371,11 @@ m.generate_testcase(state, 'BugFound')
 
 ### సారాంశం {#summary-2}
 
-- మీరు m.all_states తో స్థితిపై పునరావృతం చేయవచ్చు
-- `state.platform.get_balance(account.address)` ఖాతా బ్యాలెన్స్‌ను తిరిగి ఇస్తుంది
-- `state.platform.transactions` లావాదేవీల జాబితాను తిరిగి ఇస్తుంది
-- `transaction.return_data` అనేది తిరిగి ఇవ్వబడిన డేటా
-- `m.generate_testcase(state, name)` స్థితి కోసం ఇన్‌పుట్‌లను ఉత్పత్తి చేస్తుంది
+- మీరు m.all_statesతో స్థితిపై మళ్ళీ మళ్ళీ (iterate) చేయవచ్చు
+- `state.platform.get_balance(account.address)` ఖాతా బ్యాలెన్స్‌ను అందిస్తుంది
+- `state.platform.transactions` లావాదేవీల జాబితాను అందిస్తుంది
+- `transaction.return_data` అనేది అందించబడిన డేటా
+- `m.generate_testcase(state, name)` స్థితి కోసం ఇన్‌పుట్‌లను రూపొందిస్తుంది
 
 ### సారాంశం: త్రోయింగ్ పాత్‌ను పొందడం {#summary-getting-throwing-path}
 
@@ -398,8 +393,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
-## Check if an execution ends with a REVERT or INVALID
-
+## అమలు రివర్ట్ లేదా INVALID తో ముగుస్తుందో లేదో తనిఖీ చేయండి
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -407,13 +401,13 @@ for state in m.terminated_states:
         m.generate_testcase(state, 'ThrowFound')
 ```
 
-పై కోడ్ అంతా మీరు [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)లో కనుగొనవచ్చు
+పైన ఉన్న కోడ్ అంతా మీరు [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)లో కనుగొనవచ్చు
 
-_గమనిక మేము చాలా సరళమైన స్క్రిప్ట్‌ను రూపొందించగలిగేవాళ్లం, ఎందుకంటే terminated_state ద్వారా తిరిగి ఇవ్వబడిన అన్ని స్థితుల ఫలితంలో REVERT లేదా INVALID ఉంది: ఈ ఉదాహరణ కేవలం APIని ఎలా మార్చాలో ప్రదర్శించడానికి మాత్రమే ఉద్దేశించబడింది._
+_గమనిక, terminated_state ద్వారా అందించబడిన అన్ని స్థితులు వాటి ఫలితంలో REVERT లేదా INVALIDని కలిగి ఉన్నందున, మేము చాలా సులభమైన స్క్రిప్ట్‌ను రూపొందించి ఉండవచ్చు: ఈ ఉదాహరణ APIని ఎలా మార్చాలో ప్రదర్శించడానికి మాత్రమే ఉద్దేశించబడింది._
 
 ## పరిమితులను జోడించడం {#adding-constraints}
 
-అన్వేషణను ఎలా నియంత్రించాలో చూద్దాం. ఫంక్షన్ ఎప్పుడూ `a == 65` తో పిలువబడదని `f()` యొక్క డాక్యుమెంటేషన్ పేర్కొంటుందని మేము ఊహిస్తాము, కాబట్టి `a == 65` తో ఉన్న ఏ బగ్ అయినా నిజమైన బగ్ కాదు. లక్ష్యం ఇప్పటికీ కింది స్మార్ట్ కాంట్రాక్ట్ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
+అన్వేషణను ఎలా పరిమితం చేయాలో మనం చూస్తాము. `f()` యొక్క డాక్యుమెంటేషన్ ఫంక్షన్ ఎప్పుడూ `a == 65`తో పిలవబడదని పేర్కొంటుందని మేము ఊహిస్తాము, కాబట్టి `a == 65`తో ఉన్న ఏదైనా బగ్ నిజమైన బగ్ కాదు. లక్ష్యం ఇప్పటికీ కింది స్మార్ట్ కాంట్రాక్ట్ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -428,14 +422,14 @@ contract Simple {
 
 ### ఆపరేటర్లు {#operators}
 
-[ఆపరేటర్లు](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py) మాడ్యూల్ పరిమితుల మార్పును సులభతరం చేస్తుంది, ఇతర వాటితో పాటు ఇది అందిస్తుంది:
+[ఆపరేటర్లు](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py) మాడ్యూల్ పరిమితుల తారుమారుని సులభతరం చేస్తుంది, ఇతర వాటితో పాటు ఇది వీటిని అందిస్తుంది:
 
 - Operators.AND,
 - Operators.OR,
-- Operators.UGT (unsigned greater than),
-- Operators.UGE (unsigned greater than or equal to),
-- Operators.ULT (unsigned lower than),
-- Operators.ULE (unsigned lower than or equal to).
+- Operators.UGT (అన్‌సైన్డ్ గ్రేటర్ దేన్),
+- Operators.UGE (అన్‌సైన్డ్ గ్రేటర్ దేన్ లేదా ఈక్వల్ టు),
+- Operators.ULT (అన్‌సైన్డ్ లోయర్ దేన్),
+- Operators.ULE (అన్‌సైన్డ్ లోయర్ దేన్ లేదా ఈక్వల్ టు).
 
 మాడ్యూల్‌ను దిగుమతి చేయడానికి కింది వాటిని ఉపయోగించండి:
 
@@ -443,7 +437,7 @@ contract Simple {
 from manticore.core.smtlib import Operators
 ```
 
-`Operators.CONCAT` అనేది ఒక శ్రేణిని ఒక విలువకు కలపడానికి ఉపయోగించబడుతుంది. ఉదాహరణకు, ఒక లావాదేవీ యొక్క return_data ను మరొక విలువతో సరిపోల్చడానికి ఒక విలువగా మార్చాలి:
+శ్రేణిని విలువకు కలపడానికి (concatenate) `Operators.CONCAT` ఉపయోగించబడుతుంది. ఉదాహరణకు, లావాదేవీ యొక్క return_data మరొక విలువతో తనిఖీ చేయడానికి విలువగా మార్చబడాలి:
 
 ```python
 last_return = Operators.CONCAT(256, *last_return)
@@ -451,12 +445,12 @@ last_return = Operators.CONCAT(256, *last_return)
 
 ### పరిమితులు {#state-constraint}
 
-మీరు పరిమితులను ప్రపంచవ్యాప్తంగా లేదా ఒక నిర్దిష్ట స్థితి కోసం ఉపయోగించవచ్చు.
+మీరు పరిమితులను ప్రపంచవ్యాప్తంగా (globally) లేదా నిర్దిష్ట స్థితి కోసం ఉపయోగించవచ్చు.
 
-#### గ్లోబల్ పరిమితి {#state-constraint}
+#### గ్లోబల్ పరిమితి {#state-constraint-2}
 
-గ్లోబల్ పరిమితిని జోడించడానికి `m.constrain(constraint)` ను ఉపయోగించండి.
-ఉదాహరణకు, మీరు ఒక సింబాలిక్ చిరునామా నుండి ఒక కాంట్రాక్ట్‌ను పిలవవచ్చు మరియు ఈ చిరునామాను నిర్దిష్ట విలువలకు పరిమితం చేయవచ్చు:
+గ్లోబల్ పరిమితిని జోడించడానికి `m.constrain(constraint)`ని ఉపయోగించండి.
+ఉదాహరణకు, మీరు సింబాలిక్ చిరునామా నుండి కాంట్రాక్ట్‌ను పిలవవచ్చు మరియు ఈ చిరునామాను నిర్దిష్ట విలువలకే పరిమితం చేయవచ్చు:
 
 ```python
 symbolic_address = m.make_symbolic_value()
@@ -467,25 +461,25 @@ m.transaction(caller=user_account,
               value=0)
 ```
 
-#### స్థితి పరిమితి {#state-constraint}
+#### స్థితి పరిమితి {#state-constraint-3}
 
-ఒక నిర్దిష్ట స్థితికి పరిమితిని జోడించడానికి [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain)ని ఉపయోగించండి.
-దానిపై కొన్ని లక్షణాలను తనిఖీ చేయడానికి దాని అన్వేషణ తర్వాత స్థితిని పరిమితం చేయడానికి దీనిని ఉపయోగించవచ్చు.
+నిర్దిష్ట స్థితికి పరిమితిని జోడించడానికి [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain)ని ఉపయోగించండి.
+దానిపై కొంత లక్షణాన్ని తనిఖీ చేయడానికి దాని అన్వేషణ తర్వాత స్థితిని పరిమితం చేయడానికి దీనిని ఉపయోగించవచ్చు.
 
 ### పరిమితిని తనిఖీ చేయడం {#checking-constraint}
 
-ఒక పరిమితి ఇప్పటికీ సాధ్యమేనా అని తెలుసుకోవడానికి `solver.check(state.constraints)` ను ఉపయోగించండి.
-ఉదాహరణకు, కిందిది symbolic_value ను 65 కంటే భిన్నంగా ఉండేలా పరిమితం చేస్తుంది మరియు స్థితి ఇప్పటికీ సాధ్యమేనా అని తనిఖీ చేస్తుంది:
+పరిమితి ఇంకా సాధ్యమేనా అని తెలుసుకోవడానికి `solver.check(state.constraints)`ని ఉపయోగించండి.
+ఉదాహరణకు, కిందివి symbolic_valueని 65కి భిన్నంగా ఉండేలా పరిమితం చేస్తాయి మరియు స్థితి ఇంకా సాధ్యమేనా అని తనిఖీ చేస్తాయి:
 
 ```python
 state.constrain(symbolic_var != 65)
 if solver.check(state.constraints):
-    # state is feasible
+    # స్థితి సాధ్యమే
 ```
 
 ### సారాంశం: పరిమితులను జోడించడం {#summary-adding-constraints}
 
-మునుపటి కోడ్‌కు పరిమితిని జోడిస్తే, మనం పొందుతాము:
+మునుపటి కోడ్‌కు పరిమితిని జోడిస్తే, మనకు ఇది వస్తుంది:
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -506,19 +500,18 @@ contract_account.f(symbolic_var)
 
 no_bug_found = True
 
-## ఒక ఎగ్జిక్యూషన్ REVERT లేదా INVALID తో ముగుస్తుందో లేదో తనిఖీ చేయండి
-
+## అమలు రివర్ట్ లేదా INVALID తో ముగుస్తుందో లేదో తనిఖీ చేయండి
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
-        # a == 65 అయిన పాత్‌ను మేము పరిగణించము
+        # a == 65 ఉన్న మార్గాన్ని మేము పరిగణించము
         condition = symbolic_var != 65
         if m.generate_testcase(state, name="BugFound", only_if=condition):
-            print(f'బగ్ కనుగొనబడింది, ఫలితాలు {m.workspace} లో ఉన్నాయి')
+            print(f'Bug found, results are in {m.workspace}')
             no_bug_found = False
 
 if no_bug_found:
-    print(f'బగ్ ఏదీ కనుగొనబడలేదు')
+    print(f'No bug found')
 ```
 
-పై కోడ్ అంతా మీరు [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)లో కనుగొనవచ్చు
+పైన ఉన్న కోడ్ అంతా మీరు [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)లో కనుగొనవచ్చు
