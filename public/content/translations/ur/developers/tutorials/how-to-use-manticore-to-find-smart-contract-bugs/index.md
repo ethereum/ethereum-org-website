@@ -1,50 +1,50 @@
 ---
-title: "اسمارٹ کانٹریکٹس میں بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں"
-description: "اسمارٹ کانٹریکٹس میں خودکار طور پر بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں"
-author: Trailofbits
+title: سمارٹ کنٹریکٹس میں بگز تلاش کرنے کے لیے مینٹیکور کا استعمال کیسے کریں
+description: سمارٹ کنٹریکٹس میں خودکار طور پر بگز تلاش کرنے کے لیے مینٹیکور کا استعمال کیسے کریں
+author: ٹریل آف بٹس
 lang: ur
 tags:
-  ["Solidity", "اسمارٹ کانٹریکٹس", "سیکیورٹی", "ٹیسٹنگ", "رسمی تصدیق"]
+  ["solidity", "سمارٹ کنٹریکٹس", "سیکیورٹی", "ٹیسٹنگ", "رسمی تصدیق"]
 skill: advanced
-breadcrumb: Manticore
+breadcrumb: مینٹیکور
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
-اس ٹیوٹوریل کا مقصد یہ دکھانا ہے کہ اسمارٹ کانٹریکٹس میں خودکار طور پر بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کیا جائے۔
+اس ٹیوٹوریل کا مقصد یہ دکھانا ہے کہ سمارٹ کنٹریکٹس میں خودکار طور پر بگز تلاش کرنے کے لیے مینٹیکور کا استعمال کیسے کیا جائے۔
 
 ## انسٹالیشن {#installation}
 
-Manticore کے لیے <span dir="ltr">= python 3.6</span> درکار ہے۔ اسے pip کے ذریعے یا docker کا استعمال کرتے ہوئے انسٹال کیا جا سکتا ہے۔
+مینٹیکور کے لیے <span dir="ltr">>= python 3.6</span> درکار ہے۔ اسے pip کے ذریعے یا Docker کا استعمال کرتے ہوئے انسٹال کیا جا سکتا ہے۔
 
-### docker کے ذریعے Manticore {#manticore-through-docker}
+### Docker کے ذریعے مینٹیکور {#manticore-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_آخری کمانڈ eth-security-toolbox کو ایک docker میں چلاتی ہے جسے آپ کی موجودہ ڈائرکٹری تک رسائی حاصل ہوتی ہے۔ آپ اپنے ہوسٹ سے فائلیں تبدیل کر سکتے ہیں، اور docker سے فائلوں پر ٹولز چلا سکتے ہیں_
+_آخری کمانڈ ایک Docker میں <span dir="ltr">eth-security-toolbox</span> چلاتی ہے جسے آپ کی موجودہ ڈائریکٹری تک رسائی حاصل ہے۔ آپ اپنے ہوسٹ سے فائلیں تبدیل کر سکتے ہیں، اور Docker سے فائلوں پر ٹولز چلا سکتے ہیں_
 
-docker کے اندر، چلائیں:
+Docker کے اندر، چلائیں:
 
 ```bash
 solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### pip کے ذریعے Manticore {#manticore-through-pip}
+### pip کے ذریعے مینٹیکور {#manticore-through-pip}
 
 ```bash
 pip3 install --user manticore
 ```
 
-solc 0.5.11 تجویز کیا جاتا ہے۔
+<span dir="ltr">solc 0.5.11</span> تجویز کیا جاتا ہے۔
 
-### اسکرپٹ چلانا {#running-a-script}
+### سکرپٹ چلانا {#running-a-script}
 
-python 3 کے ساتھ python اسکرپٹ چلانے کے لیے:
+Python 3 کے ساتھ Python سکرپٹ چلانے کے لیے:
 
 ```bash
 python3 script.py
@@ -52,16 +52,16 @@ python3 script.py
 
 ## ڈائنامک سمبولک ایگزیکیوشن کا تعارف {#introduction-to-dynamic-symbolic-execution}
 
-### ڈائنامک سمبولک ایگزیکیوشن مختصر الفاظ میں {#dynamic-symbolic-execution-in-a-nutshell}
+### ڈائنامک سمبولک ایگزیکیوشن کا مختصر جائزہ {#dynamic-symbolic-execution-in-a-nutshell}
 
-ڈائنامک سمبولک ایگزیکیوشن (DSE) ایک پروگرام تجزیہ کی تکنیک ہے جو اعلی درجے کی معنوی آگاہی کے ساتھ اسٹیٹ اسپیس (state space) کو دریافت کرتی ہے۔ یہ تکنیک "پروگرام پاتھس" کی دریافت پر مبنی ہے، جنہیں ریاضیاتی فارمولوں کے طور پر پیش کیا جاتا ہے جنہیں `path predicates` کہا جاتا ہے۔ تصوراتی طور پر، یہ تکنیک دو مراحل میں path predicates پر کام کرتی ہے:
+ڈائنامک سمبولک ایگزیکیوشن (DSE) ایک پروگرام تجزیہ کی تکنیک ہے جو اعلی درجے کی معنوی آگاہی کے ساتھ حالت کی جگہ (state space) کو دریافت کرتی ہے۔ یہ تکنیک "پروگرام پاتھس" کی دریافت پر مبنی ہے، جنہیں ریاضیاتی فارمولوں کے طور پر پیش کیا جاتا ہے جنہیں `path predicates` کہا جاتا ہے۔ تصوراتی طور پر، یہ تکنیک پاتھ پریڈیکیٹس پر دو مراحل میں کام کرتی ہے:
 
 1. انہیں پروگرام کے ان پٹ پر پابندیوں (constraints) کا استعمال کرتے ہوئے بنایا جاتا ہے۔
-2. انہیں پروگرام کے ان پٹس بنانے کے لیے استعمال کیا جاتا ہے جو متعلقہ پاتھس کو ایگزیکیوٹ کرنے کا سبب بنیں گے۔
+2. انہیں پروگرام کے ان پٹس بنانے کے لیے استعمال کیا جاتا ہے جو متعلقہ پاتھس کو چلانے کا سبب بنیں گے۔
 
-یہ طریقہ کار اس لحاظ سے کوئی غلط مثبت (false positives) پیدا نہیں کرتا کہ شناخت شدہ تمام پروگرام اسٹیٹس کو ٹھوس ایگزیکیوشن کے دوران متحرک کیا جا سکتا ہے۔ مثال کے طور پر، اگر تجزیہ میں کوئی انٹیجر اوور فلو (integer overflow) ملتا ہے، تو اس کے دوبارہ پیدا ہونے کی ضمانت ہوتی ہے۔
+یہ نقطہ نظر اس لحاظ سے کوئی غلط مثبت (false positives) پیدا نہیں کرتا کہ تمام شناخت شدہ پروگرام کی حالتوں کو ٹھوس ایگزیکیوشن کے دوران متحرک کیا جا سکتا ہے۔ مثال کے طور پر، اگر تجزیہ میں کوئی انٹیجر اوور فلو ملتا ہے، تو اس کے دوبارہ پیدا ہونے کی ضمانت دی جاتی ہے۔
 
-### Path Predicate کی مثال {#path-predicate-example}
+### پاتھ پریڈیکیٹ کی مثال {#path-predicate-example}
 
 DSE کیسے کام کرتا ہے اس کی بصیرت حاصل کرنے کے لیے، درج ذیل مثال پر غور کریں:
 
@@ -69,28 +69,28 @@ DSE کیسے کام کرتا ہے اس کی بصیرت حاصل کرنے کے ل
 function f(uint a){
 
   if (a == 65) {
-      // A bug is present
+      // ایک بگ موجود ہے
   }
 
 }
 ```
 
-چونکہ `f()` میں دو پاتھس شامل ہیں، ایک DSE دو مختلف path predicates بنائے گا:
+چونکہ `f()` میں دو پاتھس شامل ہیں، ایک DSE دو مختلف پاتھ پریڈیکیٹس بنائے گا:
 
 - پاتھ 1: `a == 65`
 - پاتھ 2: `Not (a == 65)`
 
-ہر path predicate ایک ریاضیاتی فارمولہ ہے جو ایک نام نہاد [SMT solver](https://wikipedia.org/wiki/Satisfiability_modulo_theories) کو دیا جا سکتا ہے، جو مساوات کو حل کرنے کی کوشش کرے گا۔ `Path 1` کے لیے، سولور کہے گا کہ پاتھ کو `a = 65` کے ساتھ دریافت کیا جا سکتا ہے۔ `Path 2` کے لیے، سولور `a` کو 65 کے علاوہ کوئی بھی ویلیو دے سکتا ہے، مثال کے طور پر `a = 0`۔
+ہر پاتھ پریڈیکیٹ ایک ریاضیاتی فارمولہ ہے جو ایک نام نہاد [SMT حل کنندہ](https://wikipedia.org/wiki/Satisfiability_modulo_theories) کو دیا جا سکتا ہے، جو مساوات کو حل کرنے کی کوشش کرے گا۔ `Path 1` کے لیے، حل کنندہ کہے گا کہ پاتھ کو `a = 65` کے ساتھ دریافت کیا جا سکتا ہے۔ `Path 2` کے لیے، حل کنندہ `a` کو 65 کے علاوہ کوئی بھی قدر دے سکتا ہے، مثال کے طور پر `a = 0`۔
 
 ### خصوصیات کی تصدیق {#verifying-properties}
 
-Manticore ہر پاتھ کی تمام ایگزیکیوشن پر مکمل کنٹرول کی اجازت دیتا ہے۔ نتیجے کے طور پر، یہ آپ کو تقریباً کسی بھی چیز میں من مانی پابندیاں (constraints) شامل کرنے کی اجازت دیتا ہے۔ یہ کنٹرول کانٹریکٹ پر خصوصیات بنانے کی اجازت دیتا ہے۔
+مینٹیکور ہر پاتھ کی تمام ایگزیکیوشن پر مکمل کنٹرول کی اجازت دیتا ہے۔ نتیجے کے طور پر، یہ آپ کو تقریباً کسی بھی چیز میں صوابدیدی پابندیاں (arbitrary constraints) شامل کرنے کی اجازت دیتا ہے۔ یہ کنٹرول کنٹریکٹ پر خصوصیات بنانے کی اجازت دیتا ہے۔
 
 درج ذیل مثال پر غور کریں:
 
 ```solidity
 function unsafe_add(uint a, uint b) returns(uint c){
-  c = a + b; // no overflow protection
+  c = a + b; // اوور فلو سے کوئی تحفظ نہیں
   return c;
 }
 ```
@@ -99,11 +99,11 @@ function unsafe_add(uint a, uint b) returns(uint c){
 
 - پاتھ 1: `c = a + b`
 
-Manticore کا استعمال کرتے ہوئے، آپ اوور فلو کی جانچ کر سکتے ہیں، اور path predicate میں پابندیاں شامل کر سکتے ہیں:
+مینٹیکور کا استعمال کرتے ہوئے، آپ اوور فلو کی جانچ کر سکتے ہیں، اور پاتھ پریڈیکیٹ میں پابندیاں شامل کر سکتے ہیں:
 
 - `c = a + b AND (c < a OR c < b)`
 
-اگر `a` اور `b` کی ایسی ویلیو تلاش کرنا ممکن ہے جس کے لیے مندرجہ بالا path predicate قابل عمل ہو، تو اس کا مطلب ہے کہ آپ کو ایک اوور فلو مل گیا ہے۔ مثال کے طور پر سولور ان پٹ `a = 10 , b = MAXUINT256` بنا سکتا ہے۔
+اگر `a` اور `b` کی ایسی قدر تلاش کرنا ممکن ہے جس کے لیے اوپر دیا گیا پاتھ پریڈیکیٹ قابل عمل ہو، تو اس کا مطلب ہے کہ آپ کو ایک اوور فلو مل گیا ہے۔ مثال کے طور پر حل کنندہ ان پٹ `a = 10 , b = MAXUINT256` بنا سکتا ہے۔
 
 اگر آپ ایک درست شدہ ورژن پر غور کریں:
 
@@ -122,11 +122,11 @@ function safe_add(uint a, uint b) returns(uint c){
 
 یہ فارمولہ حل نہیں کیا جا سکتا؛ دوسرے الفاظ میں یہ ایک **ثبوت** ہے کہ `safe_add` میں، `c` ہمیشہ بڑھے گا۔
 
-اس طرح DSE ایک طاقتور ٹول ہے، جو آپ کے کوڈ پر من مانی پابندیوں کی تصدیق کر سکتا ہے۔
+اس طرح DSE ایک طاقتور ٹول ہے، جو آپ کے کوڈ پر صوابدیدی پابندیوں کی تصدیق کر سکتا ہے۔
 
-## Manticore کے تحت چلانا {#running-under-manticore}
+## مینٹیکور کے تحت چلانا {#running-under-manticore}
 
-ہم دیکھیں گے کہ Manticore API کے ساتھ اسمارٹ کانٹریکٹ کو کیسے دریافت کیا جائے۔ ہدف درج ذیل اسمارٹ کانٹریکٹ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol) ہے:
+ہم دیکھیں گے کہ مینٹیکور API کے ساتھ سمارٹ کنٹریکٹ کو کیسے دریافت کیا جائے۔ ہدف درج ذیل سمارٹ کنٹریکٹ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol) ہے:
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -140,9 +140,9 @@ contract Simple {
 }
 ```
 
-### اسٹینڈ اکیلے (standalone) ایکسپلوریشن چلائیں {#run-a-standalone-exploration}
+### ایک اسٹینڈ الون دریافت چلائیں {#run-a-standalone-exploration}
 
-آپ درج ذیل کمانڈ کے ذریعے Manticore کو براہ راست اسمارٹ کانٹریکٹ پر چلا سکتے ہیں (`project` ایک Solidity فائل، یا پروجیکٹ ڈائرکٹری ہو سکتی ہے):
+آپ درج ذیل کمانڈ کے ذریعے مینٹیکور کو براہ راست سمارٹ کنٹریکٹ پر چلا سکتے ہیں (`project` ایک Solidity فائل، یا پروجیکٹ ڈائریکٹری ہو سکتی ہے):
 
 ```bash
 $ manticore project
@@ -163,35 +163,35 @@ $ manticore project
 ...
 ```
 
-اضافی معلومات کے بغیر، Manticore کانٹریکٹ کو نئی سمبولک ٹرانزیکشنز کے ساتھ اس وقت تک دریافت کرے گا جب تک کہ وہ کانٹریکٹ پر نئے پاتھس دریافت نہ کر لے۔ Manticore ناکام ہونے والی ٹرانزیکشن کے بعد نئی ٹرانزیکشنز نہیں چلاتا (مثلاً: revert کے بعد)۔
+اضافی معلومات کے بغیر، مینٹیکور نئی سمبولک ٹرانزیکشنز کے ساتھ کنٹریکٹ کو اس وقت تک دریافت کرے گا جب تک کہ یہ کنٹریکٹ پر نئے پاتھس دریافت نہ کر لے۔ مینٹیکور ناکام ہونے والی ٹرانزیکشن کے بعد نئی ٹرانزیکشنز نہیں چلاتا (مثلاً: ریورٹ کے بعد)۔
 
-Manticore معلومات کو `mcore_*` ڈائرکٹری میں آؤٹ پٹ کرے گا۔ دیگر چیزوں کے علاوہ، آپ کو اس ڈائرکٹری میں یہ ملے گا:
+مینٹیکور معلومات کو `mcore_*` ڈائریکٹری میں آؤٹ پٹ کرے گا۔ دیگر چیزوں کے علاوہ، آپ کو اس ڈائریکٹری میں یہ ملے گا:
 
 - `global.summary`: کوریج اور کمپائلر وارننگز
 - `test_XXXXX.summary`: کوریج، آخری ہدایت، فی ٹیسٹ کیس اکاؤنٹ بیلنس
 - `test_XXXXX.tx`: فی ٹیسٹ کیس ٹرانزیکشنز کی تفصیلی فہرست
 
-یہاں Manticore کو 7 ٹیسٹ کیسز ملتے ہیں، جو اس سے مطابقت رکھتے ہیں (فائل کے نام کی ترتیب تبدیل ہو سکتی ہے):
+یہاں مینٹیکور کو 7 ٹیسٹ کیسز ملتے ہیں، جو اس سے مطابقت رکھتے ہیں (فائل کے نام کی ترتیب تبدیل ہو سکتی ہے):
 
 |                      |   ٹرانزیکشن 0   |   ٹرانزیکشن 1   | ٹرانزیکشن 2     | نتیجہ |
 | :------------------: | :---------------: | :---------------: | ----------------- | :----: |
-| **test_00000000.tx** | کانٹریکٹ کی تخلیق |      f(!=65)      | f(!=65)           |  STOP  |
-| **test_00000001.tx** | کانٹریکٹ کی تخلیق | fallback فنکشن |                   | REVERT |
-| **test_00000002.tx** | کانٹریکٹ کی تخلیق |                   |                   | RETURN |
-| **test_00000003.tx** | کانٹریکٹ کی تخلیق |       f(65)       |                   | REVERT |
-| **test_00000004.tx** | کانٹریکٹ کی تخلیق |      f(!=65)      |                   |  STOP  |
-| **test_00000005.tx** | کانٹریکٹ کی تخلیق |      f(!=65)      | f(65)             | REVERT |
-| **test_00000006.tx** | کانٹریکٹ کی تخلیق |      f(!=65)      | fallback فنکشن | REVERT |
+| **test_00000000.tx** | کنٹریکٹ کی تخلیق |      f(!=65)      | f(!=65)           |  STOP  |
+| **test_00000001.tx** | کنٹریکٹ کی تخلیق | فال بیک فنکشن |                   | REVERT |
+| **test_00000002.tx** | کنٹریکٹ کی تخلیق |                   |                   | RETURN |
+| **test_00000003.tx** | کنٹریکٹ کی تخلیق |       f(65)       |                   | REVERT |
+| **test_00000004.tx** | کنٹریکٹ کی تخلیق |      f(!=65)      |                   |  STOP  |
+| **test_00000005.tx** | کنٹریکٹ کی تخلیق |      f(!=65)      | f(65)             | REVERT |
+| **test_00000006.tx** | کنٹریکٹ کی تخلیق |      f(!=65)      | فال بیک فنکشن | REVERT |
 
-_ایکسپلوریشن سمری f(!=65) ظاہر کرتی ہے کہ f کو 65 کے علاوہ کسی بھی ویلیو کے ساتھ کال کیا گیا ہے۔_
+_دریافت کا خلاصہ f(!=65) ظاہر کرتا ہے کہ f کو 65 کے علاوہ کسی بھی قدر کے ساتھ کال کیا گیا ہے۔_
 
-جیسا کہ آپ دیکھ سکتے ہیں، Manticore ہر کامیاب یا واپس کی گئی (reverted) ٹرانزیکشن کے لیے ایک منفرد ٹیسٹ کیس بناتا ہے۔
+جیسا کہ آپ دیکھ سکتے ہیں، مینٹیکور ہر کامیاب یا ریورٹ ہونے والی ٹرانزیکشن کے لیے ایک منفرد ٹیسٹ کیس بناتا ہے۔
 
-اگر آپ تیز کوڈ ایکسپلوریشن چاہتے ہیں تو `--quick-mode` فلیگ استعمال کریں (یہ بگ ڈیٹیکٹرز، گیس کیلکولیشن وغیرہ کو غیر فعال کر دیتا ہے)
+اگر آپ تیز کوڈ کی دریافت چاہتے ہیں تو `--quick-mode` فلیگ استعمال کریں (یہ بگ ڈیٹیکٹرز، گیس کے حساب کتاب وغیرہ کو غیر فعال کر دیتا ہے)
 
-### API کے ذریعے اسمارٹ کانٹریکٹ کو مینیپولیٹ کریں {#manipulate-a-smart-contract-through-the-api}
+### API کے ذریعے سمارٹ کنٹریکٹ کو مینیپولیٹ کریں {#manipulate-a-smart-contract-through-the-api}
 
-یہ سیکشن تفصیلات بیان کرتا ہے کہ Manticore Python API کے ذریعے اسمارٹ کانٹریکٹ کو کیسے مینیپولیٹ کیا جائے۔ آپ python ایکسٹینشن `*.py` کے ساتھ نئی فائل بنا سکتے ہیں اور اس فائل میں API کمانڈز (جن کی بنیادی باتیں ذیل میں بیان کی جائیں گی) شامل کر کے ضروری کوڈ لکھ سکتے ہیں اور پھر اسے `$ python3 *.py` کمانڈ کے ساتھ چلا سکتے ہیں۔ اس کے علاوہ آپ ذیل کی کمانڈز کو براہ راست python کنسول میں بھی چلا سکتے ہیں، کنسول چلانے کے لیے `$ python3` کمانڈ استعمال کریں۔
+یہ سیکشن تفصیلات بیان کرتا ہے کہ مینٹیکور Python API کے ذریعے سمارٹ کنٹریکٹ کو کیسے مینیپولیٹ کیا جائے۔ آپ Python ایکسٹینشن `*.py` کے ساتھ نئی فائل بنا سکتے ہیں اور اس فائل میں API کمانڈز (جن کی بنیادی باتیں ذیل میں بیان کی جائیں گی) شامل کر کے ضروری کوڈ لکھ سکتے ہیں اور پھر اسے `$ python3 *.py` کمانڈ کے ساتھ چلا سکتے ہیں۔ اس کے علاوہ آپ ذیل کی کمانڈز کو براہ راست Python کنسول میں بھی چلا سکتے ہیں، کنسول چلانے کے لیے `$ python3` کمانڈ استعمال کریں۔
 
 ### اکاؤنٹس بنانا {#creating-accounts}
 
@@ -203,13 +203,13 @@ from manticore.ethereum import ManticoreEVM
 m = ManticoreEVM()
 ```
 
-ایک نان-کانٹریکٹ اکاؤنٹ [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) کا استعمال کرتے ہوئے بنایا جاتا ہے:
+ایک نان کنٹریکٹ اکاؤنٹ [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) کا استعمال کرتے ہوئے بنایا جاتا ہے:
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-ایک Solidity کانٹریکٹ کو [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract) کا استعمال کرتے ہوئے ڈیپلائے کیا جا سکتا ہے:
+ایک Solidity کنٹریکٹ کو [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract) کا استعمال کرتے ہوئے ڈیپلائے کیا جا سکتا ہے:
 
 ```solidity
 source_code = '''
@@ -228,18 +228,18 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### خلاصہ {#summary}
 
-- آپ [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) اور [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract) کے ساتھ صارف اور کانٹریکٹ اکاؤنٹس بنا سکتے ہیں۔
+- آپ [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) اور [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract) کے ساتھ صارف اور کنٹریکٹ اکاؤنٹس بنا سکتے ہیں۔
 
-### ٹرانزیکشنز کو ایگزیکیوٹ کرنا {#executing-transactions}
+### ٹرانزیکشنز کو انجام دینا {#executing-transactions}
 
-Manticore دو قسم کی ٹرانزیکشنز کو سپورٹ کرتا ہے:
+مینٹیکور دو قسم کی ٹرانزیکشنز کو سپورٹ کرتا ہے:
 
-- Raw ٹرانزیکشن: تمام فنکشنز دریافت کیے جاتے ہیں
-- Named ٹرانزیکشن: صرف ایک فنکشن دریافت کیا جاتا ہے
+- خام (Raw) ٹرانزیکشن: تمام فنکشنز دریافت کیے جاتے ہیں
+- نامزد (Named) ٹرانزیکشن: صرف ایک فنکشن دریافت کیا جاتا ہے
 
-#### Raw ٹرانزیکشن {#raw-transaction}
+#### خام ٹرانزیکشن {#raw-transaction}
 
-ایک raw ٹرانزیکشن [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction) کا استعمال کرتے ہوئے ایگزیکیوٹ کی جاتی ہے:
+ایک خام ٹرانزیکشن [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction) کا استعمال کرتے ہوئے انجام دی جاتی ہے:
 
 ```python
 m.transaction(caller=user_account,
@@ -248,10 +248,10 @@ m.transaction(caller=user_account,
               value=value)
 ```
 
-کالر، ایڈریس، ڈیٹا، یا ٹرانزیکشن کی ویلیو ٹھوس (concrete) یا علامتی (symbolic) ہو سکتی ہے:
+کالر، پتہ، ڈیٹا، یا ٹرانزیکشن کی قدر یا تو ٹھوس (concrete) یا علامتی (symbolic) ہو سکتی ہے:
 
-- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) ایک علامتی ویلیو بناتا ہے۔
-- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) ایک علامتی بائٹ ایرے (byte array) بناتا ہے۔
+- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) ایک علامتی قدر بناتا ہے۔
+- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) ایک علامتی بائٹ ایرے بناتا ہے۔
 
 مثال کے طور پر:
 
@@ -264,41 +264,41 @@ m.transaction(caller=user_account,
               value=symbolic_value)
 ```
 
-اگر ڈیٹا علامتی ہے، تو Manticore ٹرانزیکشن ایگزیکیوشن کے دوران کانٹریکٹ کے تمام فنکشنز کو دریافت کرے گا۔ فنکشن کا انتخاب کیسے کام کرتا ہے یہ سمجھنے کے لیے [Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) آرٹیکل میں Fallback فنکشن کی وضاحت دیکھنا مددگار ثابت ہوگا۔
+اگر ڈیٹا علامتی ہے، تو مینٹیکور ٹرانزیکشن کی ایگزیکیوشن کے دوران کنٹریکٹ کے تمام فنکشنز کو دریافت کرے گا۔ فنکشن کا انتخاب کیسے کام کرتا ہے یہ سمجھنے کے لیے [Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) آرٹیکل میں فال بیک فنکشن کی وضاحت دیکھنا مددگار ثابت ہوگا۔
 
-#### Named ٹرانزیکشن {#named-transaction}
+#### نامزد ٹرانزیکشن {#named-transaction}
 
-فنکشنز کو ان کے نام کے ذریعے ایگزیکیوٹ کیا جا سکتا ہے۔
-`f(uint var)` کو ایک علامتی ویلیو کے ساتھ، user_account سے، اور 0 ether کے ساتھ ایگزیکیوٹ کرنے کے لیے، استعمال کریں:
+فنکشنز کو ان کے نام کے ذریعے انجام دیا جا سکتا ہے۔
+`f(uint var)` کو ایک علامتی قدر کے ساتھ، user_account سے، اور 0 ایتھر کے ساتھ انجام دینے کے لیے، استعمال کریں:
 
 ```python
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var, caller=user_account, value=0)
 ```
 
-اگر ٹرانزیکشن کی `value` متعین نہیں کی گئی ہے، تو یہ بائی ڈیفالٹ 0 ہوتی ہے۔
+اگر ٹرانزیکشن کی `value` متعین نہیں کی گئی ہے، تو یہ پہلے سے طے شدہ طور پر 0 ہوتی ہے۔
 
 #### خلاصہ {#summary-1}
 
-- ٹرانزیکشن کے آرگومنٹس ٹھوس یا علامتی ہو سکتے ہیں
-- ایک raw ٹرانزیکشن تمام فنکشنز کو دریافت کرے گی
+- ٹرانزیکشن کے دلائل (arguments) ٹھوس یا علامتی ہو سکتے ہیں
+- ایک خام ٹرانزیکشن تمام فنکشنز کو دریافت کرے گی
 - فنکشن کو ان کے نام سے کال کیا جا سکتا ہے
 
 ### ورک اسپیس {#workspace}
 
-`m.workspace` وہ ڈائرکٹری ہے جو تیار کردہ تمام فائلوں کے لیے آؤٹ پٹ ڈائرکٹری کے طور پر استعمال ہوتی ہے:
+`m.workspace` وہ ڈائریکٹری ہے جو تیار کردہ تمام فائلوں کے لیے آؤٹ پٹ ڈائریکٹری کے طور پر استعمال ہوتی ہے:
 
 ```python
 print("Results are in {}".format(m.workspace))
 ```
 
-### ایکسپلوریشن کو ختم کریں {#terminate-the-exploration}
+### دریافت کو ختم کریں {#terminate-the-exploration}
 
-ایکسپلوریشن کو روکنے کے لیے [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize) استعمال کریں۔ ایک بار جب یہ طریقہ کال ہو جائے تو مزید کوئی ٹرانزیکشن نہیں بھیجی جانی چاہیے اور Manticore دریافت کیے گئے ہر پاتھ کے لیے ٹیسٹ کیسز بناتا ہے۔
+دریافت کو روکنے کے لیے [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize) استعمال کریں۔ ایک بار جب یہ طریقہ کال ہو جائے تو مزید کوئی ٹرانزیکشن نہیں بھیجی جانی چاہیے اور مینٹیکور دریافت کیے گئے ہر پاتھ کے لیے ٹیسٹ کیسز بناتا ہے۔
 
-### خلاصہ: Manticore کے تحت چلانا {#summary-running-under-manticore}
+### خلاصہ: مینٹیکور کے تحت چلانا {#summary-running-under-manticore}
 
-پچھلے تمام مراحل کو ایک ساتھ ملانے سے، ہمیں حاصل ہوتا ہے:
+پچھلے تمام مراحل کو ایک ساتھ ملانے پر، ہمیں حاصل ہوتا ہے:
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -315,14 +315,14 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 print("Results are in {}".format(m.workspace))
-m.finalize() # stop the exploration
+m.finalize() # کھوج کو روکیں
 ```
 
-اوپر دیا گیا تمام کوڈ آپ [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py) میں تلاش کر سکتے ہیں
+اوپر دیا گیا تمام کوڈ آپ کو [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py) میں مل سکتا ہے
 
-## تھروئنگ پاتھس (throwing paths) حاصل کرنا {#getting-throwing-paths}
+## تھروئنگ پاتھس (Throwing paths) حاصل کرنا {#getting-throwing-paths}
 
-اب ہم `f()` میں ایکسیپشن (exception) پیدا کرنے والے پاتھس کے لیے مخصوص ان پٹس بنائیں گے۔ ہدف اب بھی درج ذیل اسمارٹ کانٹریکٹ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol) ہے:
+اب ہم `f()` میں ایکسیپشن (exception) پیدا کرنے والے پاتھس کے لیے مخصوص ان پٹس بنائیں گے۔ ہدف اب بھی درج ذیل سمارٹ کنٹریکٹ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol) ہے:
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -335,26 +335,26 @@ contract Simple {
 }
 ```
 
-### اسٹیٹ کی معلومات کا استعمال {#using-state-information}
+### حالت کی معلومات کا استعمال {#using-state-information}
 
-ایگزیکیوٹ ہونے والے ہر پاتھ کی اپنی بلاک چین کی اسٹیٹ (state) ہوتی ہے۔ ایک اسٹیٹ یا تو تیار (ready) ہوتی ہے یا اسے ختم (killed) کر دیا جاتا ہے، جس کا مطلب ہے کہ یہ THROW یا REVERT ہدایت تک پہنچ جاتی ہے:
+ہر ایگزیکیوٹ ہونے والے پاتھ کی بلاک چین کی اپنی حالت ہوتی ہے۔ ایک حالت یا تو تیار (ready) ہوتی ہے یا اسے ختم (killed) کر دیا جاتا ہے، جس کا مطلب ہے کہ یہ THROW یا REVERT ہدایت تک پہنچ جاتی ہے:
 
-- [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): ان اسٹیٹس کی فہرست جو تیار ہیں (انہوں نے REVERT/INVALID کو ایگزیکیوٹ نہیں کیا)
-- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): ان اسٹیٹس کی فہرست جو ختم ہو چکی ہیں
-- [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): تمام اسٹیٹس
+- [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): ان حالتوں کی فہرست جو تیار ہیں (انہوں نے REVERT/INVALID کو ایگزیکیوٹ نہیں کیا)
+- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): ان حالتوں کی فہرست جو ختم ہو چکی ہیں
+- [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): تمام حالتیں
 
 ```python
 for state in m.all_states:
-    # do something with state
+    # حالت کے ساتھ کچھ کریں
 ```
 
-آپ اسٹیٹ کی معلومات تک رسائی حاصل کر سکتے ہیں۔ مثال کے طور پر:
+آپ حالت کی معلومات تک رسائی حاصل کر سکتے ہیں۔ مثال کے طور پر:
 
 - `state.platform.get_balance(account.address)`: اکاؤنٹ کا بیلنس
 - `state.platform.transactions`: ٹرانزیکشنز کی فہرست
 - `state.platform.transactions[-1].return_data`: آخری ٹرانزیکشن کے ذریعے واپس کیا گیا ڈیٹا
 
-آخری ٹرانزیکشن کے ذریعے واپس کیا گیا ڈیٹا ایک ایرے (array) ہے، جسے ABI.deserialize کے ساتھ ایک ویلیو میں تبدیل کیا جا سکتا ہے، مثال کے طور پر:
+آخری ٹرانزیکشن کے ذریعے واپس کیا گیا ڈیٹا ایک ایرے ہے، جسے <span dir="ltr">ABI.deserialize</span> کے ساتھ ایک قدر میں تبدیل کیا جا سکتا ہے، مثال کے طور پر:
 
 ```python
 data = state.platform.transactions[0].return_data
@@ -371,11 +371,11 @@ m.generate_testcase(state, 'BugFound')
 
 ### خلاصہ {#summary-2}
 
-- آپ m.all_states کے ساتھ اسٹیٹ پر ایٹریٹ (iterate) کر سکتے ہیں
+- آپ <span dir="ltr">m.all_states</span> کے ساتھ حالت پر اعادہ (iterate) کر سکتے ہیں
 - `state.platform.get_balance(account.address)` اکاؤنٹ کا بیلنس واپس کرتا ہے
 - `state.platform.transactions` ٹرانزیکشنز کی فہرست واپس کرتا ہے
 - `transaction.return_data` واپس کیا گیا ڈیٹا ہے
-- `m.generate_testcase(state, name)` اسٹیٹ کے لیے ان پٹس بناتا ہے
+- `m.generate_testcase(state, name)` حالت کے لیے ان پٹس بناتا ہے
 
 ### خلاصہ: تھروئنگ پاتھ حاصل کرنا {#summary-getting-throwing-path}
 
@@ -393,7 +393,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
-## Check if an execution ends with a REVERT or INVALID
+## چیک کریں کہ کیا عمل درآمد ریورٹ یا INVALID پر ختم ہوتا ہے
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -401,13 +401,13 @@ for state in m.terminated_states:
         m.generate_testcase(state, 'ThrowFound')
 ```
 
-اوپر دیا گیا تمام کوڈ آپ [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py) میں تلاش کر سکتے ہیں
+اوپر دیا گیا تمام کوڈ آپ کو [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py) میں مل سکتا ہے
 
-_نوٹ کریں کہ ہم ایک بہت آسان اسکرپٹ بنا سکتے تھے، کیونکہ terminated_state کے ذریعے واپس کی گئی تمام اسٹیٹس کے نتیجے میں REVERT یا INVALID ہوتا ہے: اس مثال کا مقصد صرف یہ ظاہر کرنا تھا کہ API کو کیسے مینیپولیٹ کیا جائے۔_
+_نوٹ کریں کہ ہم ایک بہت آسان سکرپٹ بنا سکتے تھے، کیونکہ <span dir="ltr">terminated_state</span> کے ذریعے واپس کی گئی تمام حالتوں کے نتیجے میں REVERT یا INVALID ہوتا ہے: اس مثال کا مقصد صرف یہ ظاہر کرنا تھا کہ API کو کیسے مینیپولیٹ کیا جائے۔_
 
-## پابندیاں (constraints) شامل کرنا {#adding-constraints}
+## پابندیاں شامل کرنا {#adding-constraints}
 
-ہم دیکھیں گے کہ ایکسپلوریشن کو کیسے محدود کیا جائے۔ ہم یہ فرض کریں گے کہ `f()` کی دستاویزات میں کہا گیا ہے کہ فنکشن کو کبھی بھی `a == 65` کے ساتھ کال نہیں کیا جاتا، لہذا `a == 65` کے ساتھ کوئی بھی بگ حقیقی بگ نہیں ہے۔ ہدف اب بھی درج ذیل اسمارٹ کانٹریکٹ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol) ہے:
+ہم دیکھیں گے کہ دریافت کو کیسے محدود کیا جائے۔ ہم یہ فرض کریں گے کہ `f()` کی دستاویزات میں کہا گیا ہے کہ فنکشن کو کبھی بھی `a == 65` کے ساتھ کال نہیں کیا جاتا، لہذا `a == 65` کے ساتھ کوئی بھی بگ حقیقی بگ نہیں ہے۔ ہدف اب بھی درج ذیل سمارٹ کنٹریکٹ [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol) ہے:
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -424,12 +424,12 @@ contract Simple {
 
 [Operators](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py) ماڈیول پابندیوں کی مینیپولیشن میں سہولت فراہم کرتا ہے، دیگر چیزوں کے علاوہ یہ فراہم کرتا ہے:
 
-- Operators.AND,
-- Operators.OR,
-- Operators.UGT (unsigned greater than),
-- Operators.UGE (unsigned greater than or equal to),
-- Operators.ULT (unsigned lower than),
-- Operators.ULE (unsigned lower than or equal to).
+- <span dir="ltr">Operators.AND</span>،
+- <span dir="ltr">Operators.OR</span>،
+- <span dir="ltr">Operators.UGT</span> (unsigned greater than)،
+- <span dir="ltr">Operators.UGE</span> (unsigned greater than or equal to)،
+- <span dir="ltr">Operators.ULT</span> (unsigned lower than)،
+- <span dir="ltr">Operators.ULE</span> (unsigned lower than or equal to)۔
 
 ماڈیول امپورٹ کرنے کے لیے درج ذیل کا استعمال کریں:
 
@@ -437,20 +437,20 @@ contract Simple {
 from manticore.core.smtlib import Operators
 ```
 
-`Operators.CONCAT` کا استعمال ایک ایرے کو ایک ویلیو کے ساتھ جوڑنے (concatenate) کے لیے کیا جاتا ہے۔ مثال کے طور پر، کسی ٹرانزیکشن کے return_data کو ایک ویلیو میں تبدیل کرنے کی ضرورت ہوتی ہے تاکہ اسے کسی دوسری ویلیو کے خلاف چیک کیا جا سکے:
+`Operators.CONCAT` کا استعمال ایک ایرے کو ایک قدر کے ساتھ جوڑنے (concatenate) کے لیے کیا جاتا ہے۔ مثال کے طور پر، کسی ٹرانزیکشن کے <span dir="ltr">return_data</span> کو کسی دوسری قدر کے خلاف جانچنے کے لیے ایک قدر میں تبدیل کرنے کی ضرورت ہوتی ہے:
 
 ```python
 last_return = Operators.CONCAT(256, *last_return)
 ```
 
-### پابندیاں (Constraints) {#state-constraint}
+### پابندیاں {#state-constraint}
 
-آپ پابندیوں کو عالمی سطح پر (globally) یا کسی مخصوص اسٹیٹ کے لیے استعمال کر سکتے ہیں۔
+آپ پابندیوں کو عالمی سطح پر (globally) یا کسی مخصوص حالت کے لیے استعمال کر سکتے ہیں۔
 
-#### عالمی پابندی (Global constraint) {#state-constraint}
+#### عالمی پابندی {#state-constraint-2}
 
 عالمی پابندی شامل کرنے کے لیے `m.constrain(constraint)` استعمال کریں۔
-مثال کے طور پر، آپ کسی کانٹریکٹ کو ایک علامتی ایڈریس سے کال کر سکتے ہیں، اور اس ایڈریس کو مخصوص ویلیوز تک محدود کر سکتے ہیں:
+مثال کے طور پر، آپ کسی کنٹریکٹ کو ایک علامتی پتے سے کال کر سکتے ہیں، اور اس پتے کو مخصوص اقدار تک محدود کر سکتے ہیں:
 
 ```python
 symbolic_address = m.make_symbolic_value()
@@ -461,25 +461,25 @@ m.transaction(caller=user_account,
               value=0)
 ```
 
-#### اسٹیٹ کی پابندی (State constraint) {#state-constraint}
+#### حالت کی پابندی {#state-constraint-3}
 
-کسی مخصوص اسٹیٹ میں پابندی شامل کرنے کے لیے [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) استعمال کریں۔
-اسے ایکسپلوریشن کے بعد اسٹیٹ کو محدود کرنے کے لیے استعمال کیا جا سکتا ہے تاکہ اس پر کچھ خصوصیات کی جانچ کی جا سکے۔
+کسی مخصوص حالت میں پابندی شامل کرنے کے لیے [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) استعمال کریں۔
+اسے دریافت کے بعد حالت کو محدود کرنے کے لیے استعمال کیا جا سکتا ہے تاکہ اس پر کسی خاصیت کی جانچ کی جا سکے۔
 
 ### پابندی کی جانچ کرنا {#checking-constraint}
 
-یہ جاننے کے لیے کہ آیا کوئی پابندی اب بھی قابل عمل ہے `solver.check(state.constraints)` استعمال کریں۔
-مثال کے طور پر، درج ذیل symbolic_value کو 65 سے مختلف ہونے تک محدود کرے گا اور چیک کرے گا کہ آیا اسٹیٹ اب بھی قابل عمل ہے:
+یہ جاننے کے لیے کہ آیا کوئی پابندی اب بھی قابل عمل ہے، `solver.check(state.constraints)` استعمال کریں۔
+مثال کے طور پر، درج ذیل <span dir="ltr">symbolic_value</span> کو 65 سے مختلف ہونے تک محدود کرے گا اور جانچے گا کہ آیا حالت اب بھی قابل عمل ہے:
 
 ```python
 state.constrain(symbolic_var != 65)
 if solver.check(state.constraints):
-    # state is feasible
+    # حالت قابل عمل ہے
 ```
 
 ### خلاصہ: پابندیاں شامل کرنا {#summary-adding-constraints}
 
-پچھلے کوڈ میں پابندی شامل کرنے سے، ہمیں حاصل ہوتا ہے:
+پچھلے کوڈ میں پابندی شامل کرنے پر، ہمیں حاصل ہوتا ہے:
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -500,11 +500,11 @@ contract_account.f(symbolic_var)
 
 no_bug_found = True
 
-## Check if an execution ends with a REVERT or INVALID
+## چیک کریں کہ کیا عمل درآمد ریورٹ یا INVALID پر ختم ہوتا ہے
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
-        # we do not consider the path were a == 65
+        # ہم اس راستے پر غور نہیں کرتے جہاں a == 65
         condition = symbolic_var != 65
         if m.generate_testcase(state, name="BugFound", only_if=condition):
             print(f'Bug found, results are in {m.workspace}')
@@ -514,4 +514,4 @@ if no_bug_found:
     print(f'No bug found')
 ```
 
-اوپر دیا گیا تمام کوڈ آپ [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py) میں تلاش کر سکتے ہیں
+اوپر دیا گیا تمام کوڈ آپ کو [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py) میں مل سکتا ہے
