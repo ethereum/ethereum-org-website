@@ -1,55 +1,55 @@
 ---
-title: "如何將 Tellor 設定為您的預言機"
-description: "入門指南：將 Tellor 預言機整合至您的協定"
-author: "Tellor"
+title: 如何將泰勒設定為你的預言機
+description: 將泰勒預言機整合到你的協定中的入門指南
+author: "泰勒"
 lang: zh-tw
-tags: [ "solidity", "smart contracts", "oracles" ]
+tags: ["solidity", "智能合約", "預言機"]
 skill: beginner
-breadcrumb: "Tellor預言機"
+breadcrumb: 泰勒預言機
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-隨堂測驗：您的協定即將完成，但需要一個預言機來存取鏈下資料...您該怎麼辦？
+隨堂測驗：你的協定即將完成，但需要一個預言機來存取鏈下資料……你會怎麼做？
 
 ## (軟性) 先決條件 {#soft-prerequisites}
 
-本篇文章旨在讓存取預言機資料流的過程盡可能簡單明瞭。 話雖如此，為了專注於預言機的相關內容，我們假設您具備以下程式設計能力。
+本文旨在讓存取預言機資料來源變得盡可能簡單明瞭。儘管如此，為了專注於預言機方面，我們對你的程式設計技能水準有以下假設。
 
 假設：
 
-- 您會使用終端機
-- 您已安裝 npm
-- 您知道如何使用 npm 來管理相依性
+- 你能夠操作終端機
+- 你已安裝 npm
+- 你知道如何使用 npm 來管理相依性套件
 
-Tellor 是一個已上線且可供執行的開源預言機。 本入門指南將說明如何輕鬆啟用並執行 Tellor，為您的專案提供一個完全去中心化且抗審查的預言機。
+泰勒是一個即時且開源的預言機，隨時可供實作。這篇入門指南旨在展示啟動並執行泰勒有多麼容易，為你的專案提供一個完全去中心化且抗審查的預言機。
 
 ## 概覽 {#overview}
 
-Tellor 是一個預言機系統，各方可以在系統中請求鏈下資料點 (例如 BTC/USD) 的值，而回報者則會競相將此值新增到鏈上資料庫，此資料庫可供所有以太坊智能合約存取。 此資料庫的輸入內容，由已質押回報者組成的網路保護。 Tellor 利用加密經濟激勵機制，獎勵誠實提交資料的回報者，並透過發行 Tellor 的代幣 Tributes (TRB) 以及爭議機制來懲罰惡意行為者。
+泰勒是一個預言機系統，各方可以請求鏈下資料點的值（例如 BTC/USD），而報告者會競爭將此值新增至鏈上資料庫中，供所有以太坊智能合約存取。這個資料庫的輸入由一個質押報告者網路來保護。泰勒利用加密經濟激勵機制，透過發行泰勒的代幣 Tributes (TRB) 以及爭議機制，來獎勵報告者誠實提交資料並懲罰惡意行為者。
 
-在本教學中，我們將介紹：
+在本教學中，我們將探討：
 
-- 設定您啟用與執行時所需的初始工具組。
-- 逐步解說一個簡單範例。
-- 列出目前可供測試 Tellor 的網路所使用的測試網位址。
+- 設定啟動並執行所需的初始工具組。
+- 逐步演練一個簡單的範例。
+- 列出目前可用來測試泰勒的網路測試網地址。
 
 ## UsingTellor {#usingtellor}
 
-您首先要做的是安裝使用 Tellor 作為預言機所需的基本工具。 使用[此套件](https://github.com/tellor-io/usingtellor) 來安裝 Tellor 使用者合約：
+你要做的第一件事是安裝將泰勒作為預言機所需的基本工具。使用[此套件](https://github.com/tellor-io/usingtellor)來安裝泰勒使用者合約：
 
 `npm install usingtellor`
 
-安裝後，您的合約就能繼承「UsingTellor」合約中的函式。
+安裝完成後，這將允許你的合約繼承「UsingTellor」合約中的函式。
 
-太棒了！ 現在您已準備好工具，讓我們透過一個簡單的練習來擷取比特幣價格：
+太棒了！既然你已經準備好工具，讓我們來進行一個簡單的練習，擷取比特幣價格：
 
 ### BTC/USD 範例 {#btcusd-example}
 
-繼承 UsingTellor 合約，並將 Tellor 位址作為建構函式引數傳入：
+繼承 UsingTellor 合約，並將泰勒地址作為建構函式引數傳遞：
 
-例如：
+這是一個範例：
 
 ```solidity
 import "usingtellor/contracts/UsingTellor.sol";
@@ -75,8 +75,8 @@ function setBtcPrice() public {
 }
 ```
 
-如需完整的合約位址清單，請參閱[此處](https://docs.tellor.io/tellor/the-basics/contracts-reference)。
+如需完整的合約地址清單，請參閱[此處](https://docs.tellor.io/tellor/the-basics/contracts-reference)。
 
-為方便使用，UsingTellor 儲存庫隨附 [Tellor Playground](https://github.com/tellor-io/TellorPlayground) 合約版本，以簡化整合。 請參閱[此處](https://github.com/tellor-io/sampleUsingTellor#tellor-playground)取得實用函式清單。
+為了方便使用，UsingTellor 存放庫隨附了一個 [Tellor Playground](https://github.com/tellor-io/TellorPlayground) 合約版本，以便更輕鬆地進行整合。請參閱[此處](https://github.com/tellor-io/sampleUsingTellor#tellor-playground)以取得實用函式清單。
 
-若要更穩健地執行 Tellor 預言機，請到[此處](https://github.com/tellor-io/usingtellor/blob/master/README.md)查看可用函式的完整清單。
+如需更穩健的泰勒預言機實作，請在[此處](https://github.com/tellor-io/usingtellor/blob/master/README.md)查看可用函式的完整清單。

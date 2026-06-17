@@ -1,6 +1,6 @@
 ---
-title: "挖礦"
-description: "解釋以太坊挖礦的運作方式。"
+title: 挖礦
+description: 解釋以太坊過去如何進行挖礦。
 lang: zh-tw
 ---
 
@@ -8,79 +8,79 @@ lang: zh-tw
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-工作量證明不再是以太坊共識機制的基礎，這意味著挖礦已完結。 取而代之的是，以太坊由抵押以太幣的驗證者來保障安全。 你能從現在開始質押以太幣。 閱讀更多關於<a href='/roadmap/merge/'>合併</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>權益證明</a>和<a href='/staking/'>質押</a>的資訊。 此頁面僅為滿足對歷史的興趣。
+工作量證明不再是以太坊底層的共識機制，這意味著挖礦已經被關閉。取而代之的是，[以太坊](/)現在由質押 ETH 的驗證者來保護。您今天就可以開始質押您的 ETH。了解更多關於<a href='/roadmap/merge/'>合併</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>權益證明 (PoS)</a>和<a href='/staking/'>質押</a>的資訊。本頁面僅供歷史參考。
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## 先決條件 {#prerequisites}
 
-為了更了解此頁面，我們建議您先閱讀[交易](/developers/docs/transactions/)、[區塊](/developers/docs/blocks/) 和[工作量證明](/developers/docs/consensus-mechanisms/pow/)。
+為了更易於理解本頁面，我們建議您先閱讀[交易](/developers/docs/transactions/)、[區塊](/developers/docs/blocks/)和[工作量證明 (PoW)](/developers/docs/consensus-mechanisms/pow/)。
 
 ## 什麼是以太坊挖礦？ {#what-is-ethereum-mining}
 
-挖礦是在以太坊現已棄用的工作量證明架構中，建立要新增至以太坊區塊鏈的交易區塊的過程。
+在以太坊現已棄用的工作量證明架構中，挖礦是建立交易區塊並將其新增至以太坊區塊鏈的過程。
 
-挖礦一詞起源於將加密貨幣與黃金作類比。 黃金或貴金屬很稀有，數位代幣也一樣，而在工作量證明系統中，增加代幣總量的唯一方法是透過挖礦。 在工作量證明以太坊中，挖礦是僅有的代幣發行方式。 然而，與黃金或貴金屬不同，以太坊挖礦透過於區塊鏈中建立、驗證、發布和傳播區塊，也是保護網路安全的方式。
+挖礦一詞源於將加密貨幣比作黃金的說法。黃金或貴金屬是稀缺的，數位代幣也是如此，而在工作量證明系統中增加總量的唯一方法就是透過挖礦。在工作量證明的以太坊中，唯一的發行方式就是透過挖礦。然而，與黃金或貴金屬不同的是，以太坊挖礦也是透過在區塊鏈中建立、驗證、發布和傳播區塊來保護網路的一種方式。
 
-以太幣挖礦 = 保護網路安全
+挖出以太幣 = 保護網路
 
-挖礦是任何工作量證明區塊鏈的命脈。 在過渡到權益證明之前，以太坊礦工 - 即運行軟體的電腦，利用它們的時間和算力來處理交易並產出區塊。
+挖礦是任何工作量證明區塊鏈的命脈。在過渡到權益證明之前，以太坊礦工（執行軟體的電腦）利用他們的時間和運算能力來處理交易並產生區塊。
 
-## 為何需要礦工？ {#why-do-miners-exist}
+## 為什麼會有礦工？ {#why-do-miners-exist}
 
-在以太坊這樣的去中心化機制中，我們須確保所有參與者同意統一的交易順序。 礦工透過解決計算難題來產出區塊，保護網路免受攻擊，幫助實現這個目標。
+在以太坊等去中心化的系統中，我們需要確保每個人都對交易順序達成共識。礦工透過解決運算上困難的謎題來產生區塊，從而幫助實現這一點，並保護網路免受攻擊。
 
-[更多關於工作量證明](/developers/docs/consensus-mechanisms/pow/)
+[更多關於工作量證明的資訊](/developers/docs/consensus-mechanisms/pow/)
 
-以前任何人都能使用自己的電腦在以太坊網路上挖礦。 然而，並非每個人都能透過挖以太幣 (ETH) 而獲利。 在大多數情況下，礦工必須購買專用電腦硬體，並要使用廉價能源。 普通電腦不太可能獲得足夠的區塊獎勵來支付相關挖礦成本。
+以前，任何人都可以使用他們的電腦在以太坊網路上挖礦。然而，並非所有人都能透過挖出以太幣 (ETH) 獲利。在大多數情況下，礦工必須購買專用的電腦硬體，並能取得廉價的能源。一般電腦不太可能賺取足夠的區塊獎勵來支付相關的挖礦成本。
 
 ### 挖礦成本 {#cost-of-mining}
 
-- 建置及維護挖礦設備所需硬體的潛在成本
-- 為挖礦設備供電的電力成本
-- 如果你在礦池中挖礦，這些礦池通常會對礦池產生的每個區塊收取固定百分比的費用
-- 支援挖礦設備的潛在設備成本（通風、能源監控和電力拉線等等）
+- 建立和維護礦機所需硬體的潛在成本
+- 為礦機供電的電費
+- 如果您在礦池中挖礦，這些礦池通常會對礦池產生的每個區塊收取固定百分比的費用
+- 支援礦機的設備潛在成本（通風、能源監控、電線等）
 
-若要進一步探索挖礦的獲利能力，請使用挖礦計算機，例如 [Etherscan](https://etherscan.io/ether-mining-calculator) 提供的計算機。
+要進一步探索挖礦的獲利能力，請使用挖礦計算機，例如 [Etherscan](https://etherscan.io/ether-mining-calculator) 提供的計算機。
 
-## 以太坊交易是如何被挖出的 {#how-ethereum-transactions-were-mined}
+## 以太坊交易過去是如何被挖出的 {#how-ethereum-transactions-were-mined}
 
-以下概述如何在以太坊工作量證明中挖掘交易。 您可以在[此處](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos)找到以太坊權益證明流程的類似說明。
+以下概述了在以太坊工作量證明中交易是如何被挖出的。關於以太坊權益證明中此過程的類似描述，可以在[這裡](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos)找到。
 
-1. 使用者用某個[帳戶](/developers/docs/accounts/)的私密金鑰撰寫並簽署[交易](/developers/docs/transactions/)請求。
+1. 使用者撰寫[交易](/developers/docs/transactions/)請求，並使用某個[帳戶](/developers/docs/accounts/)的私鑰對其進行簽章。
 2. 使用者從某個[節點](/developers/docs/nodes-and-clients/)將交易請求廣播到整個以太坊網路。
-3. 當接收到新交易請求時，以太坊網路中的每個節點新增該請求至其本機記憶體池，這是他們已在區塊中收到但尚未提交至區塊鏈的所有交易請求的清單。
-4. 在某個時間點，挖礦節點會將數十或數百個交易請求匯總成一個潛在的[區塊](/developers/docs/blocks/)，此方式會在不超過區塊 Gas 上限的情況下，最大化他們賺取的[礦工費](/developers/docs/gas/)。 挖礦節點接著:
-   1. 驗證每筆交易請求的有效性 (亦即，沒有人試圖從他們尚未簽署的帳戶轉出以太幣、請求格式沒有錯誤等)，然後執行請求的程式碼，改變他們本機 EVM 副本的狀態。 對於每個傳送到其帳戶的此類交易請求，礦工將取得交易費作為獎勵。
-   2. 一旦區塊中的所有交易請求都已在本機以太坊虛擬機副本上驗證並執行，為潛在區塊產生工作量證明「合法性證書」的過程便會開始。
-5. 最終，礦工將完成區塊證書的產生，該區塊中包括我們的特定交易請求。 接著礦工廣播此完成的區塊，其中包括上述證書和宣稱的新以太坊虛擬機狀態的校驗和。
-6. 其他節點接收到此新區塊。 它們會驗證證書，自行執行區塊中的所有交易（包括最初由你的使用者廣播的交易），並驗證在執行所有交易後，其新的以太坊虛擬機狀態之校驗和是否與曠工區塊所宣稱的狀態之校驗和相符。 僅當此時，這些節點才會附加此區塊於其區塊鏈的尾部，並接受新的以太坊虛擬機狀態作為規範化狀態。
-7. 各節點從其本機未履行之交易請求記憶體池中移除新區塊中的所有交易。
-8. 加入網路的新節點依序下載所有區塊，包括包含我們感興趣的交易的區塊。 他們會初始化一個本機以太坊虛擬機副本（始於空白狀態的以太坊虛擬機），接著開始執行其本機以太坊虛擬機副本之上每個區塊中的每筆交易，驗證期間每個區塊的狀態校驗和。
+3. 在得知新的交易請求後，以太坊網路中的每個節點都會將該請求新增至其本機記憶體池中，這是一個包含他們所知但尚未在區塊中提交至區塊鏈的所有交易請求的清單。
+4. 在某個時刻，挖礦節點會將幾十或幾百個交易請求彙整成一個潛在的[區塊](/developers/docs/blocks/)，其方式是在保持低於區塊 Gas 限制的同時，最大化他們賺取的[交易手續費](/developers/docs/gas/)。然後挖礦節點會：
+   1. 驗證每個交易請求的有效性（即沒有人試圖從他們尚未產生簽章的帳戶中轉帳以太幣，請求格式正確等），然後執行請求的程式碼，改變其本機 EVM 副本的狀態。礦工會將每個此類交易請求的交易手續費獎勵給自己的帳戶。
+   2. 一旦區塊中的所有交易請求都在本機 EVM 副本上經過驗證和執行，就開始為潛在區塊產生工作量證明「合法性憑證」的過程。
+5. 最終，礦工將完成為包含我們特定交易請求的區塊產生憑證。然後礦工廣播完成的區塊，其中包含憑證和聲稱的新 EVM 狀態的校驗和。
+6. 其他節點得知新區塊。他們驗證憑證，自行執行區塊上的所有交易（包括我們使用者最初廣播的交易），並驗證在執行所有交易後其新 EVM 狀態的校驗和是否與礦工區塊聲稱的狀態校驗和相符。只有這樣，這些節點才會將此區塊附加到其區塊鏈的尾端，並接受新的 EVM 狀態為權威狀態。
+7. 每個節點從其未完成交易請求的本機記憶體池中移除新區塊中的所有交易。
+8. 加入網路的新節點會依序下載所有區塊，包括包含我們感興趣之交易的區塊。他們初始化一個本機 EVM 副本（從空白狀態的 EVM 開始），然後在其本機 EVM 副本上執行每個區塊中的每筆交易，並在此過程中驗證每個區塊的狀態校驗和。
 
-每筆交易只被挖掘一次（包含在新區塊中並首次傳播），但在推進規範化以太坊虛擬機狀態的過程中會被每個參與者執行並驗證。 這突顯了區塊鏈的核心理念之一：**不要信任，而去驗證**。
+每筆交易都會被挖出（包含在新區塊中並首次傳播）一次，但在推進權威 EVM 狀態的過程中，會由每個參與者執行和驗證。這突顯了區塊鏈的核心理念之一：**不要信任，要驗證**。
 
-## Ommer (叔) 塊 {#ommer-blocks}
+## 叔塊 {#ommer-blocks}
 
-基於工作量證明的區塊挖掘具有概率性，這意味著有時由於網路延遲，會同時發布兩個有效區塊。 在這種情況下，協定必須確定最長（因此也是最「有效」）的鏈，同時透過針對已提交但未被包含的有效區塊給予部分獎勵，來確保對曠工的公平性。 這鼓勵了網路進一步去中心化，因為面臨較大延遲的小礦工，仍然可以透過 [ommer](/glossary/#ommer) 區塊獎勵產生回報。
+工作量證明上的區塊挖礦是機率性的，這意味著有時由於網路延遲，兩個有效的區塊會同時發布。在這種情況下，協定必須決定最長（因此也是最「有效」）的鏈，同時透過部分獎勵未被包含的有效提案區塊來確保對礦工的公平性。這鼓勵了網路進一步的去中心化，因為可能面臨較大延遲的較小礦工仍然可以透過[叔塊](/glossary/#ommer)獎勵產生回報。
 
-對於父區塊的兄弟姐妹區塊來說，「ommer/兄弟姐妹」一詞是首選的不分性別的詞，但有時也被稱為「uncle/叔」塊。 **自從以太坊轉向權益證明後，就不再挖出 Ommer 區塊**，因為每個時隙只會選出一個提案者。 您可以透過查看已挖出的 Ommer 區塊的[歷史圖表](https://ycharts.com/indicators/ethereum_uncle_rate)來了解此變化。
+「Ommer」一詞是父區塊之兄弟區塊的首選性別中立術語，但有時也被稱為「uncle」（叔塊）。**自從以太坊轉向權益證明以來，不再挖出叔塊**，因為在每個時槽中只會選出一個提案者。您可以透過檢視已挖出叔塊的[歷史圖表](https://ycharts.com/indicators/ethereum_uncle_rate)來看到這個變化。
 
 ## 視覺化示範 {#a-visual-demo}
 
-觀看影片，Austin 會帶你了解挖礦與工作量證明區塊鏈。
+觀看 Austin 為您講解挖礦和工作量證明區塊鏈。
 
-<YouTube id="zcX7OJ-L8XQ" />
+<VideoWatch slug="blockchain-eth-build" />
 
 ## 挖礦演算法 {#mining-algorithm}
 
-以太坊主網只使用過一種挖礦演算法－['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/)。 Ethash 是原始研發演算法 ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) 的後繼演算法。
+以太坊主網只使用過一種挖礦演算法：[「Ethash」](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/)。Ethash 是最初稱為 [「Dagger-Hashimoto」](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) 的研發演算法的後繼者。
 
-[更多關於挖礦演算法的資訊](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
+[更多關於挖礦演算法的資訊](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/)。
 
 ## 相關主題 {#related-topics}
 
-- [Gas](/developers/docs/gas/)
+- [燃料](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)
-- [工作量證明](/developers/docs/consensus-mechanisms/pow/)
+- [工作量證明 (PoW)](/developers/docs/consensus-mechanisms/pow/)

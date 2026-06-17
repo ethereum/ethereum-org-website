@@ -1,60 +1,60 @@
 ---
-title: "ERC-1363 可支付代幣標準"
-description: "ERC-1363 是 ERC-20 代幣的擴充介面，支援在單一交易內，於轉帳後在接收方合約上執行自訂邏輯，或在核准後於支出方合約上執行自訂邏輯。"
+title: ERC-1363 可支付代幣標準
+description: ERC-1363 是 ERC-20 代幣的擴充介面，支援在單筆交易中，於轉帳後在接收方合約上執行自訂邏輯，或在授權後於花費方合約上執行自訂邏輯。
 lang: zh-tw
 ---
 
-## 介紹 {#introduction}
+## 簡介 {#introduction}
 
 ### 什麼是 ERC-1363？ {#what-is-erc1363}
 
-ERC-1363 是 ERC-20 代幣的擴充介面，支援在單一交易內，於轉帳後在接收方合約上執行自訂邏輯，或在核准後於支出方合約上執行自訂邏輯。
+ERC-1363 是 ERC-20 代幣的擴充介面，支援在單筆交易中，於轉帳後在接收方合約上執行自訂邏輯，或在授權後於花費方合約上執行自訂邏輯。
 
-### 與 ERC-20 的區別 {#erc20-differences}
+### 與 ERC-20 的差異 {#erc20-differences}
 
-`transfer`、`transferFrom` 和 `approve` 等標準 ERC-20 操作，若沒有另一筆交易，就不允許在接收方或支出方合約上執行程式碼。
-這在 UI 開發上增加了複雜性，也為採用帶來阻力，因為使用者必須等待第一筆交易執行完畢後，才能提交第二筆交易。
-他們還必須支付兩次 GAS。
+標準的 ERC-20 操作（如 `transfer`、`transferFrom` 和 `approve`）不允許在沒有獨立交易的情況下，於接收方或花費方合約上執行程式碼。
+這增加了使用者介面開發的複雜性，並在採用上產生摩擦，因為使用者必須等待第一筆交易執行完畢後，才能送出第二筆交易。
+他們還必須支付兩次燃料費用。
 
-ERC-1363 讓同質化代幣能更容易執行動作，且無須使用任何鏈下監聽器即可運作。
-它允許在單一交易中，於轉帳或核准後，對接收方或支出方合約進行回呼。
+ERC-1363 讓同質化代幣能夠更輕鬆地執行動作，且無需使用任何鏈下監聽器即可運作。
+它允許在單筆交易中，於轉帳或授權後，對接收方或花費方合約進行回呼 (callback)。
 
 ## 先決條件 {#prerequisites}
 
-為更佳地理解本頁面，我們建議您先閱讀關於：
+為了更了解本頁面，我們建議您先閱讀以下內容：
 
 - [代幣標準](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
-## 主旨 {#body}
+## 內文 {#body}
 
-ERC-1363 為 ERC-20 代幣引入了標準 API，以便在 `transfer`、`transferFrom` 或 `approve` 之後與智能合約互動。
+ERC-1363 為 ERC-20 代幣引入了標準 API，以便在 `transfer`、`transferFrom` 或 `approve` 之後與智能合約進行互動。
 
-此標準提供轉帳代幣的基本功能，也允許代幣被核准，以便由另一個鏈上第三方花用，然後對接收方或支出方合約進行回呼。
+此標準提供了轉帳代幣的基本功能，並允許代幣被授權以便由另一個鏈上第三方花費，然後在接收方或花費方合約上進行回呼。
 
-有許多智能合約的提案用途可以接受 ERC-20 回呼。
+有許多關於可接受 ERC-20 回呼的智能合約的提議用途。
 
-範例如下：
+例如：
 
-- **群眾募資**：送出的代幣會觸發即時獎勵分配。
-- **服務**：付款一步驟即可啟用服務存取權限。
-- **發票**：代幣會自動結清發票。
-- **訂閱**：在支付第一個月款項的交易中核准年費率，即可啟用訂閱。
+- **群眾募資**：發送代幣會觸發即時的獎勵分配。
+- **服務**：付款可一步到位地啟用服務存取權限。
+- **發票**：代幣會自動結算發票。
+- **訂閱**：授權年費會在第一個月的付款中啟用訂閱。
 
-基於這些原因，它最初被命名為 **「Payable Token」(可支付代幣)**。
+基於這些原因，它最初被命名為 **「可支付代幣 (Payable Token)」**。
 
-回呼行為進一步擴展了它的功用，實現了無縫互動，例如：
+回呼行為進一步擴展了其效用，實現了無縫互動，例如：
 
 - **質押**：轉帳的代幣會觸發在質押合約中的自動鎖定。
-- **投票**：收到的代幣會在管理體系中註冊為投票。
-- **交換**：代幣核准一步驟即可啟用交換邏輯。
+- **投票**：接收到的代幣會在治理系統中登記投票。
+- **兌換**：代幣授權可一步到位地啟用兌換邏輯。
 
-在所有需要在收到轉帳或核准後執行回呼的情況下，都可以使用 ERC-1363 代幣來實現特定的功用。
-ERC-1363 也能夠透過驗證接收方處理代幣的能力，來避免智能合約中的代幣遺失或代幣鎖定。
+在所有需要於轉帳或收到授權後執行回呼的情況下，ERC-1363 代幣可用於特定的公用程式。
+ERC-1363 也可用於透過驗證接收方處理代幣的能力，來避免代幣遺失或在智能合約中被鎖定。
 
-與其他 ERC-20 擴充提案不同，ERC-1363 不會覆寫 ERC-20 的 `transfer` 和 `transferFrom` 方法，而是定義要實作的介面 ID，以維持與 ERC-20 的向後相容性。
+與其他 ERC-20 擴充提案不同，ERC-1363 不會覆寫 ERC-20 的 `transfer` 和 `transferFrom` 方法，並定義了要實作的介面 ID，以維持與 ERC-20 的向下相容性。
 
-來自 [EIP-1363](https://eips.ethereum.org/EIPS/eip-1363):
+摘自 [EIP-1363](https://eips.ethereum.org/EIPS/eip-1363)：
 
 ### 方法 {#methods}
 
@@ -65,11 +65,11 @@ pragma solidity ^0.8.0;
 
 /**
  * @title ERC1363
- * @dev ERC-20 代幣的擴充介面，支援在單一交易內，於 `transfer` 或 `transferFrom` 後在接收方合約上執行程式碼，或在 `approve` 後於支出方合約上執行程式碼。
+ * @dev ERC-20 代幣的擴展介面，支援在單筆交易中，於 `transfer` 或 `transferFrom` 之後在接收者合約上執行程式碼，或在 `approve` 之後在花費者合約上執行程式碼。
  */
 interface ERC1363 is ERC20, ERC165 {
   /*
-   * 注意：此介面的 ERC-165 識別碼為 0xb0202a11。
+   * NOTE: 此介面的 ERC-165 識別碼為 0xb0202a11。
    * 0xb0202a11 ===
    *   bytes4(keccak256('transferAndCall(address,uint256)')) ^
    *   bytes4(keccak256('transferAndCall(address,uint256,bytes)')) ^
@@ -80,55 +80,61 @@ interface ERC1363 is ERC20, ERC165 {
    */
 
   /**
-   * @dev 將 `value` 數量的代幣從呼叫者的帳戶移至 `to`，然後在 `to` 上呼叫 `ERC1363Receiver::onTransferReceived`。
-   * @param to 代幣要轉入的地址。
+   * @dev 將 `value` 數量的代幣從呼叫者的帳戶轉移至 `to`
+   * 然後在 `to` 上呼叫 `ERC1363Receiver::onTransferReceived`。
+   * @param to 代幣被轉帳到的地址。
    * @param value 要轉帳的代幣數量。
-   * @return 一個布林值，表示操作成功，除非擲回錯誤。
+   * @return 一個布林值，表示操作是否成功（除非拋出錯誤）。
    */
   function transferAndCall(address to, uint256 value) external returns (bool);
 
   /**
-   * @dev 將 `value` 數量的代幣從呼叫者的帳戶移至 `to`，然後在 `to` 上呼叫 `ERC1363Receiver::onTransferReceived`。
-   * @param to 代幣要轉入的地址。
+   * @dev 將 `value` 數量的代幣從呼叫者的帳戶轉移至 `to`
+   * 然後在 `to` 上呼叫 `ERC1363Receiver::onTransferReceived`。
+   * @param to 代幣被轉帳到的地址。
    * @param value 要轉帳的代幣數量。
-   * @param data 額外資料，無特定格式，在呼叫 `to` 時傳送。
-   * @return 一個布林值，表示操作成功，除非擲回錯誤。
+   * @param data 沒有指定格式的附加資料，在呼叫 `to` 時發送。
+   * @return 一個布林值，表示操作是否成功（除非拋出錯誤）。
    */
   function transferAndCall(address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev 使用額度機制，將 `value` 數量的代幣從 `from` 移至 `to`，然後在 `to` 上呼叫 `ERC1363Receiver::onTransferReceived`。
-   * @param from 代幣要轉出的地址。
-   * @param to 代幣要轉入的地址。
+   * @dev 使用授權機制將 `value` 數量的代幣從 `from` 轉移至 `to`
+   * 然後在 `to` 上呼叫 `ERC1363Receiver::onTransferReceived`。
+   * @param from 發送代幣的來源地址。
+   * @param to 代幣被轉帳到的地址。
    * @param value 要轉帳的代幣數量。
-   * @return 一個布林值，表示操作成功，除非擲回錯誤。
+   * @return 一個布林值，表示操作是否成功（除非拋出錯誤）。
    */
   function transferFromAndCall(address from, address to, uint256 value) external returns (bool);
 
   /**
-   * @dev 使用額度機制，將 `value` 數量的代幣從 `from` 移至 `to`，然後在 `to` 上呼叫 `ERC1363Receiver::onTransferReceived`。
-   * @param from 代幣要轉出的地址。
-   * @param to 代幣要轉入的地址。
+   * @dev 使用授權機制將 `value` 數量的代幣從 `from` 轉移至 `to`
+   * 然後在 `to` 上呼叫 `ERC1363Receiver::onTransferReceived`。
+   * @param from 發送代幣的來源地址。
+   * @param to 代幣被轉帳到的地址。
    * @param value 要轉帳的代幣數量。
-   * @param data 額外資料，無特定格式，在呼叫 `to` 時傳送。
-   * @return 一個布林值，表示操作成功，除非擲回錯誤。
+   * @param data 沒有指定格式的附加資料，在呼叫 `to` 時發送。
+   * @return 一個布林值，表示操作是否成功（除非拋出錯誤）。
    */
   function transferFromAndCall(address from, address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev 將呼叫者代幣中的 `value` 數量設定為 `spender` 的額度，然後在 `spender` 上呼叫 `ERC1363Spender::onApprovalReceived`。
-   * @param spender 將花用資金的地址。
-   * @param value 要花用的代幣數量。
-   * @return 一個布林值，表示操作成功，除非擲回錯誤。
+   * @dev 將 `value` 數量的代幣設定為 `spender` 對呼叫者代幣的授權額度
+   * 然後在 `spender` 上呼叫 `ERC1363Spender::onApprovalReceived`。
+   * @param spender 將花費資金的地址。
+   * @param value 要花費的代幣數量。
+   * @return 一個布林值，表示操作是否成功（除非拋出錯誤）。
    */
   function approveAndCall(address spender, uint256 value) external returns (bool);
 
   /**
-   * @dev 將呼叫者代幣中的 `value` 數量設定為 `spender` 的額度，然後在 `spender` 上呼叫 `ERC1363Spender::onApprovalReceived`。
-   * @param spender 將花用資金的地址。
-   * @param value 要花用的代幣數量。
-   * @param data 額外資料，無特定格式，在呼叫 `spender` 時傳送。
-   * @return 一個布林值，表示操作成功，除非擲回錯誤。
+   * @dev 將 `value` 數量的代幣設定為 `spender` 對呼叫者代幣的授權額度
+   * 然後在 `spender` 上呼叫 `ERC1363Spender::onApprovalReceived`。
+   * @param spender 將花費資金的地址。
+   * @param value 要花費的代幣數量。
+   * @param data 沒有指定格式的附加資料，在呼叫 `spender` 時發送。
+   * @return 一個布林值，表示操作是否成功（除非拋出錯誤）。
    */
   function approveAndCall(address spender, uint256 value, bytes calldata data) external returns (bool);
 }
@@ -158,17 +164,17 @@ interface ERC165 {
  */
 interface ERC1363Receiver {
   /**
-   * @dev 每當 `operator` 從 `from` 透過 `ERC1363::transferAndCall` 或 `ERC1363::transferFromAndCall` 將 ERC-1363 代幣轉帳到此合約時，此函式就會被呼叫。
+   * @dev 每當 `operator` 透過 `ERC1363::transferAndCall` 或 `ERC1363::transferFromAndCall` 將 ERC-1363 代幣從 `from` 轉帳至此合約時，就會呼叫此函式。
    *
-   * 注意：為接受轉帳，此函式必須回傳
+   * NOTE: 若要接受轉帳，此函式必須回傳
    * `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`
-   * (即 0x88a7ca5c，或其自身的函式選擇器)。
+   * （即 0x88a7ca5c，或其自身的函式選擇器）。
    *
    * @param operator 呼叫 `transferAndCall` 或 `transferFromAndCall` 函式的地址。
-   * @param from 代幣轉出的來源地址。
+   * @param from 代幣轉帳的來源地址。
    * @param value 轉帳的代幣數量。
-   * @param data 額外資料，無特定格式。
-   * @return 如果允許轉帳，則回傳 `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`，除非擲回錯誤。
+   * @param data 沒有指定格式的附加資料。
+   * @return 如果允許轉帳，則回傳 `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`（除非拋出錯誤）。
    */
   function onTransferReceived(address operator, address from, uint256 value, bytes calldata data) external returns (bytes4);
 }
@@ -183,16 +189,17 @@ interface ERC1363Receiver {
  */
 interface ERC1363Spender {
   /**
-   * @dev 每當 ERC-1363 代幣的 `owner` 透過 `ERC1363::approveAndCall` 核准此合約花用其代幣時，此函式就會被呼叫。
+   * @dev 每當 ERC-1363 代幣的 `owner` 透過 `ERC1363::approveAndCall` 授權此合約
+   * 花費其代幣時，就會呼叫此函式。
    *
-   * 注意：為接受核准，此函式必須回傳
+   * NOTE: 若要接受授權，此函式必須回傳
    * `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`
-   * (即 0x7b04a2d0，或其自身的函式選擇器)。
+   * （即 0x7b04a2d0，或其自身的函式選擇器）。
    *
    * @param owner 呼叫 `approveAndCall` 函式且先前擁有代幣的地址。
-   * @param value 要花用的代幣數量。
-   * @param data 額外資料，無特定格式。
-   * @return 如果允許核准，則回傳 `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`，除非擲回錯誤。
+   * @param value 要花費的代幣數量。
+   * @param data 沒有指定格式的附加資料。
+   * @return 如果允許授權，則回傳 `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`（除非拋出錯誤）。
    */
   function onApprovalReceived(address owner, uint256 value, bytes calldata data) external returns (bytes4);
 }

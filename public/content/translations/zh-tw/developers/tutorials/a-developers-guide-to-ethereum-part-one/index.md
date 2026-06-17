@@ -1,32 +1,33 @@
 ---
-title: "給 Python 開發者的以太坊介紹，第一部分"
-description: "以太坊開發介紹，特別適合了解 Python 程式語言的開發人員。"
-author: Marc Garreau
+title: Python 開發者以太坊指南（第一部分）
+description: 以太坊開發簡介，特別適合具備 Python 程式語言知識的開發者
+author: 馬克·加羅
 lang: zh-tw
-tags: [ "Python", "web3.py" ]
+tags: ["python", "web3.py"]
 skill: beginner
+breadcrumb: 使用 Python 開發以太坊
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 
-所以，您已經聽說過以太坊，並準備好要深入探索了嗎？ 本文將快速介紹一些區塊鏈基礎知識，然後讓您與一個模擬的以太坊節點互動——讀取區塊資料、檢查帳戶餘額以及傳送交易。 在此過程中，我們將強調傳統的應用程式建置方式與這種新的去中心化範式之間的差異。
+所以，你聽說過以太坊，並準備好一探究竟了嗎？本文將快速介紹一些區塊鏈基礎知識，然後帶你與模擬的以太坊節點進行互動：讀取區塊資料、檢查帳戶餘額以及發送交易。在此過程中，我們將強調傳統應用程式建置方式與這種全新的去中心化典範之間的差異。
 
-## （非強制）先決條件 {#soft-prerequisites}
+## （軟性）先決條件 {#soft-prerequisites}
 
-本文旨在讓廣大開發人員都能輕鬆理解。 [Python 工具](/developers/docs/programming-languages/python/)將會被使用，但它們只是用來傳達概念的載體——如果您不是 Python 開發人員也沒問題。 不過，我會先假設您已經具備一些基礎知識，這樣我們就可以快速進入以太坊專屬的部分。
+本文希望能讓廣大開發者都能輕鬆理解。雖然會涉及 [Python 工具](/developers/docs/programming-languages/python/)，但它們只是傳達概念的媒介——如果你不是 Python 開發者也沒關係。不過，我會假設你已經具備一些基礎知識，這樣我們就能快速進入以太坊的特定內容。
 
-假設：
+假設條件：
 
-- 您能夠操作終端機，
-- 您寫過幾行 Python 程式碼，
-- 您的電腦上已安裝 Python 3.6 或更高版本（強烈建議使用[虛擬環境](https://realpython.com/effective-python-environment/#virtual-environments)），以及
-- 您使用過 `pip`，Python 的套件安裝程式。
-  再次強調，即使您不符合上述任何條件，或者不打算重現本文中的程式碼，您仍然可以順利地跟上進度。
+- 你熟悉終端機的基本操作，
+- 你寫過幾行 Python 程式碼，
+- 你的電腦上已安裝 Python 3.6 或更高版本（強烈建議使用[虛擬環境](https://realpython.com/effective-python-environment/#virtual-environments)），並且
+- 你使用過 Python 的套件安裝程式 `pip`。
+  再說一次，如果上述條件不符，或者你不打算重現本文中的程式碼，你應該還是能順利跟上進度。
 
 ## 區塊鏈簡介 {#blockchains-briefly}
 
-描述以太坊的方式有很多種，但其核心是一個區塊鏈。 區塊鏈由一系列的區塊組成，所以讓我們從這裡開始。 簡單來說，以太坊區塊鏈上的每個區塊只包含一些元資料和一個交易列表。 在 JSON 格式中，它看起來像這樣：
+描述以太坊的方式有很多種，但其核心是一個區塊鏈。區塊鏈由一系列區塊組成，所以我們從這裡開始。簡單來說，以太坊區塊鏈上的每個區塊只是一些中繼資料和一份交易清單。以 JSON 格式表示，它看起來像這樣：
 
 ```json
 {
@@ -38,108 +39,108 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 }
 ```
 
-每個[區塊](/developers/docs/blocks/)都包含對前一個區塊的引用；`parentHash` 就是前一個區塊的哈希。
+每個[區塊](/developers/docs/blocks/)都有一個指向前一個區塊的參考；`parentHash` 只是前一個區塊的雜湊值。
 
-<FeaturedText>注意：以太坊經常使用<a href="https://wikipedia.org/wiki/Hash_function">哈希函數</a>來產生固定大小的值（「哈希」）。 哈希在以太坊中扮演著重要角色，但目前您可以放心地將它們視為唯一的識別碼。</FeaturedText>
+<FeaturedText>注意：以太坊經常使用<a href="https://wikipedia.org/wiki/Hash_function">雜湊函式</a>來產生固定大小的值（「雜湊」）。雜湊在以太坊中扮演著重要角色，但你現在可以放心地將它們視為唯一識別碼。</FeaturedText>
 
-![一個描述區塊鏈的圖表，包含每個區塊內的資料](./blockchain-diagram.png)
+![A diagram depicting a blockchain including the data inside  each block](./blockchain-diagram.png)
 
-_區塊鏈本質上是一個鏈結串列；每個區塊都包含對前一個區塊的引用。_
+_區塊鏈本質上是一個鏈結串列；每個區塊都有一個指向前一個區塊的參考。_
 
-這種資料結構本身並不是什麼新奇的東西，但管理網路的規則（即點對點協定）卻是全新的。 沒有中心化的權威機構；網路中的對等節點必須合作以維持網路運作，並透過競爭來決定下一個區塊要包含哪些交易。 所以，當您想寄錢給朋友時，您需要將該交易廣播到網路上，然後等待它被包含在即將產生的區塊中。
+這種資料結構並不新奇，但管理網路的規則（即點對點協定）卻很新穎。這裡沒有中央權威機構；點對點網路必須協作以維持網路運作，並競爭決定將哪些交易納入下一個區塊。因此，當你想匯錢給朋友時，你需要將該交易廣播到網路，然後等待它被納入即將產生的區塊中。
 
-區塊鏈要驗證金錢確實從一位使用者傳送給另一位使用者，唯一的方法是使用該區塊鏈的原生貨幣（即由該區塊鏈創造和管理的貨幣）。 在以太坊中，這種貨幣稱為以太幣 (ether)，而以太坊區塊鏈是唯一包含帳戶餘額官方記錄的地方。
+區塊鏈驗證資金是否確實從一個使用者發送到另一個使用者的唯一方法，是使用該區塊鏈原生的（即由其創建和管理的）貨幣。在以太坊中，這種貨幣被稱為以太幣，而以太坊區塊鏈包含帳戶餘額的唯一官方紀錄。
 
-## 新範式 {#a-new-paradigm}
+## 全新典範 {#a-new-paradigm}
 
-這個新的去中心化技術堆疊催生了新的開發者工具。 這類工具存在於許多程式語言中，但我們將從 Python 的角度來探討。 重申一次：即使 Python 不是您偏好的語言，跟上本文的內容應該也不會太困難。
+這個全新的去中心化技術堆疊催生了新的開發者工具。許多程式語言都有這類工具，但我們將從 Python 的角度來探討。重申一次：即使 Python 不是你首選的語言，跟上進度也不會有太大困難。
 
-想要與以太坊互動的 Python 開發人員很可能會使用 [Web3.py](https://web3py.readthedocs.io/)。 Web3.py 是一個函式庫，它能大幅簡化您連接到以太坊節點，以及從節點傳送和接收資料的方式。
+想要與以太坊互動的 Python 開發者很可能會使用 [Web3.py](https://web3py.readthedocs.io/)。Web3.py 是一個函式庫，它大幅簡化了連接以太坊節點以及從中發送和接收資料的方式。
 
-<FeaturedText>注意：「以太坊節點」和「以太坊用戶端」這兩個詞可以互換使用。 無論是哪個詞，指的都是以太坊網路參與者執行的軟體。 這個軟體可以讀取區塊資料、在新區塊加入鏈上時接收更新、廣播新交易等等。 技術上來說，用戶端是軟體，節點是執行軟體的電腦。</FeaturedText>
+<FeaturedText>注意：「以太坊節點」和「以太坊客戶端」通常交替使用。無論哪種情況，它都指的是以太坊網路參與者所執行的軟體。該軟體可以讀取區塊資料、在鏈上新增區塊時接收更新、廣播新交易等等。嚴格來說，客戶端是軟體，而節點是執行該軟體的電腦。</FeaturedText>
 
-[以太坊用戶端](/developers/docs/nodes-and-clients/)可以設定為透過 [IPC](https://wikipedia.org/wiki/Inter-process_communication)、HTTP 或 Websocket 進行連線，因此 Web3.py 需要對應此設定。 Web3.py 將這些連線選項稱為**提供者**。 您需要從這三種提供者中選擇一種，將 Web3.py 執行個體與您的節點連結。
+[以太坊客戶端](/developers/docs/nodes-and-clients/)可以設定為透過 [IPC](https://wikipedia.org/wiki/Inter-process_communication)、HTTP 或 Websockets 進行連線，因此 Web3.py 需要反映此設定。Web3.py 將這些連線選項稱為**提供者 (providers)**。你需要選擇這三個提供者之一，將 Web3.py 實例與你的節點連結。
 
-![一個圖表，顯示 web3.py 如何使用 IPC 將您的應用程式連接到以太坊節點](./web3py-and-nodes.png)
+![A diagram showing how web3.py uses IPC to connect your application to an Ethereum node](./web3py-and-nodes.png)
 
-_設定以太坊節點和 Web3.py 使用相同的協定進行通訊，例如此圖中的 IPC。_
+_設定以太坊節點和 Web3.py 透過相同的協定進行通訊，例如本圖中的 IPC。_
 
-一旦 Web3.py 設定正確，您就可以開始與區塊鏈互動。 以下是一些 Web3.py 的使用範例，作為後續內容的預覽：
+一旦 Web3.py 設定正確，你就可以開始與區塊鏈互動。以下是幾個 Web3.py 的使用範例，作為接下來內容的預覽：
 
 ```python
 # 讀取區塊資料：
 w3.eth.get_block('latest')
 
-# 傳送一筆交易：
+# 發送一筆交易：
 w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
 ## 安裝 {#installation}
 
-在這份逐步教學中，我們只會在 Python 直譯器中操作。 我們不會建立任何目錄、檔案、類別或函式。
+在本教學中，我們只會在 Python 直譯器中操作。我們不會建立任何目錄、檔案、類別或函式。
 
-<FeaturedText>注意：在下面的範例中，以 `$` 開頭的指令是用於在終端機中執行的。 （請勿輸入 `$`，它只是表示一行的開始。）</FeaturedText>
+<FeaturedText>注意：在以下範例中，以 `$` 開頭的指令應在終端機中執行。（請勿輸入 `$`，它僅表示該行的開頭。）</FeaturedText>
 
-首先，安裝 [IPython](https://ipython.org/)，這是一個方便探索的使用者友好環境。 IPython 提供了 tab 鍵自動完成等功能，讓您更容易了解 Web3.py 的各種可能性。
+首先，安裝 [IPython](https://ipython.org/) 以獲得一個易於探索的使用者友善環境。IPython 提供 Tab 鍵自動補齊等功能，讓你更容易了解 Web3.py 中可用的操作。
 
 ```bash
 pip install ipython
 ```
 
-Web3.py 是以 `web3` 的名稱發布的。 安裝方式如下：
+Web3.py 以 `web3` 的名稱發布。請按如下方式安裝：
 
 ```bash
 pip install web3
 ```
 
-還有一件事——我們稍後將模擬一個區塊鏈，這需要額外安裝幾個相依套件。 您可以透過以下方式安裝：
+還有一件事——我們稍後將模擬一個區塊鏈，這需要幾個額外的相依套件。你可以透過以下方式安裝它們：
 
 ```bash
 pip install 'web3[tester]'
 ```
 
-您已準備就緒！
+一切準備就緒！
 
-注意：`web3[tester]` 套件支援到 Python 3.10.xx 版本。
+注意：`web3[tester]` 套件最高支援至 Python 3.10.xx 版本。
 
-## 啟動沙箱 {#spin-up-a-sandbox}
+## 啟動沙盒 {#spin-up-a-sandbox}
 
-在終端機中執行 `ipython` 來開啟一個新的 Python 環境。 這和執行 `python` 類似，但提供了更多附加功能。
+在終端機中執行 `ipython` 來開啟一個新的 Python 環境。這類似於執行 `python`，但附帶了更多實用功能。
 
 ```bash
 ipython
 ```
 
-這會印出您正在執行的 Python 和 IPython 版本資訊，然後您會看到一個等待輸入的提示符號：
+這將印出一些關於你正在執行的 Python 和 IPython 版本的資訊，然後你應該會看到一個等待輸入的提示字元：
 
 ```python
 In [1]:
 ```
 
-您現在看到的是一個互動式 Python shell。 基本上，這是一個可以讓您盡情實驗的沙箱。 如果您已經進行到這一步，是時候匯入 Web3.py 了：
+你現在看到的是一個互動式 Python shell。本質上，它是一個供你遊玩的沙盒。如果你已經進行到這一步，是時候匯入 Web3.py 了：
 
 ```python
 In [1]: from web3 import Web3
 ```
 
-## Web3 模組介紹 {#introducing-the-web3-module}
+## 介紹 Web3 模組 {#introducing-the-web3-module}
 
-除了作為通往以太坊的閘道，[Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) 模組還提供了一些便捷函式。 讓我們來探索其中幾個。
+除了作為通往以太坊的閘道器之外，[Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) 模組還提供了一些便利的函式。讓我們來探索幾個。
 
-在以太坊應用程式中，您通常需要轉換貨幣單位。 Web3 模組為此提供了幾個輔助方法：[from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) 和 [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei)。
+在以太坊應用程式中，你通常需要轉換貨幣面額。Web3 模組為此提供了幾個輔助方法：[from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) 和 [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei)。
 
 <FeaturedText>
-注意：眾所周知，電腦不擅長處理小數運算。 為了解決這個問題，開發人員通常以「分」為單位來儲存美元金額。 例如，價格為 5.99 美元的商品在資料庫中可能會被儲存為 599。
+注意：眾所周知，電腦在處理小數運算方面表現不佳。為了解決這個問題，開發者通常以美分來儲存美元金額。例如，價格為 5.99 美元的商品可能會在資料庫中儲存為 599。
 
-在處理<b>以太幣</b>交易時也使用類似的模式。 然而，以太幣不是兩位小數點，而是 18 位！ 以太幣的最小單位稱為 <b>wei</b>，因此在傳送交易時指定的是這個數值。
+在處理<b>以太幣</b>交易時也使用了類似的模式。然而，以太幣不是兩位小數，而是 18 位！以太幣的最小面額稱為 <b>Wei</b>，因此這是在發送交易時指定的值。
 
-1 以太幣 = 1000000000000000000 wei
+1 ether = 1000000000000000000 wei
 
-1 wei = 0.000000000000000001 以太幣
+1 wei = 0.000000000000000001 ether
 
 </FeaturedText>
 
-試著在 wei 與其他單位之間轉換一些數值。 請注意，在以太幣和 wei 之間[還有許多單位的名稱](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)。 其中比較有名的是 **gwei**，因為交易費用通常用它來表示。
+嘗試將一些值轉換為 Wei 或從 Wei 轉換回來。請注意，在以太幣和 Wei 之間[有許多面額的名稱](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)。其中最著名的是 **Gwei**，因為交易手續費通常以它來表示。
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -149,50 +150,50 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Web3 模組上的其他工具方法包括資料格式轉換器（例如 [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)）、位址輔助工具（例如 [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)）和哈希函數（例如 [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）。 本系列文章的後續部分將會介紹其中許多內容。 若要查看所有可用的方法和屬性，可以輸入 `Web3` 來利用 IPython 的自動完成功能。 並在句點後按兩次 tab 鍵。
+Web3 模組上的其他公用程式方法包括資料格式轉換器（例如 [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)）、地址輔助工具（例如 [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)）和雜湊函式（例如 [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）。其中許多內容將在本系列的後續部分中介紹。要檢視所有可用的方法和屬性，請利用 IPython 的自動補齊功能：輸入 `Web3`. 並在句點後按兩次 Tab 鍵。
 
-## 與鏈互動 {#talk-to-the-chain}
+## 與鏈對話 {#talk-to-the-chain}
 
-便捷方法很棒，但讓我們繼續來談談區塊鏈。 下一步是設定 Web3.py 與以太坊節點進行通訊。 在這裡，我們可以選擇使用 IPC、HTTP 或 Websocket 提供者。
+這些便利的方法很棒，但讓我們繼續探討區塊鏈。下一步是設定 Web3.py 以與以太坊節點進行通訊。在這裡，我們可以選擇使用 IPC、HTTP 或 Websocket 提供者。
 
-我們不會走這條路，但使用 HTTP 提供者的完整工作流程範例如下：
+我們不會採用這種方式，但使用 HTTP 提供者的完整工作流程範例可能如下所示：
 
 - 下載一個以太坊節點，例如 [Geth](https://geth.ethereum.org/)。
-- 在一個終端機視窗中啟動 Geth，並等待它同步網路。 預設的 HTTP 連接埠是 `8545`，但可以自行設定。
-- 讓 Web3.py 透過 HTTP 連接到 `localhost:8545` 上的節點。
+- 在一個終端機視窗中啟動 Geth，並等待它同步網路。預設的 HTTP 連接埠是 `8545`，但可以進行設定。
+- 告訴 Web3.py 透過 HTTP 連接到 `localhost:8545` 上的節點。
   `w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))`
-- 使用 `w3` 執行個體與節點互動。
+- 使用 `w3` 實例與節點互動。
 
-雖然這是一種「真實」的作法，但同步過程需要數小時，而且如果您只想要一個開發環境，這並非必要。 為此，Web3.py 提供了第四種提供者：**EthereumTesterProvider**。 這個測試提供者會連結到一個模擬的以太坊節點，它有較寬鬆的權限和可供使用的假貨幣。
+雖然這是一種「真實」的作法，但同步過程需要數小時，如果你只是想要一個開發環境，這是不必要的。為此，Web3.py 提供了第四種提供者：**EthereumTesterProvider**。這個測試提供者連結到一個模擬的以太坊節點，具有寬鬆的權限和假貨幣供你遊玩。
 
-![一個圖表，顯示 EthereumTesterProvider 將您的 web3.py 應用程式連結到一個模擬的以太坊節點](./ethereumtesterprovider.png)
+![A diagram showing the EthereumTesterProvider linking your web3.py application to a simulated Ethereum node](./ethereumtesterprovider.png)
 
-_EthereumTesterProvider 會連接到一個模擬節點，對於快速建立開發環境來說非常方便。_
+_EthereumTesterProvider 連接到模擬節點，對於快速建立開發環境非常方便。_
 
-那個模擬節點稱為 [eth-tester](https://github.com/ethereum/eth-tester)，我們在執行 `pip install web3[tester]` 指令時已經將它安裝。 設定 Web3.py 使用此測試提供者非常簡單：
+這個模擬節點稱為 [eth-tester](https://github.com/ethereum/eth-tester)，我們在執行 `pip install web3[tester]` 指令時已經安裝了它。設定 Web3.py 使用這個測試提供者非常簡單：
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 ```
 
-現在您準備好在鏈上遨遊了！ 這不是大家會說的話。 我剛才亂編的。 讓我們快速導覽一下。
+現在你準備好在鏈上衝浪了！其實沒人這麼說，這是我瞎編的。讓我們來快速瀏覽一下。
 
 ## 快速導覽 {#the-quick-tour}
 
-首先，做個基本功能檢查：
+首先，進行基本檢查：
 
 ```python
 In [5]: w3.is_connected()
 Out[5]: True
 ```
 
-因為我們使用的是測試提供者，這個測試不是很有價值，但如果它失敗了，很可能是您在實例化 `w3` 變數時打錯了字。 再次檢查您是否包含了內層的括號，即 `Web3.EthereumTesterProvider()`。
+由於我們使用的是測試提供者，這不是一個非常有價值的測試，但如果它確實失敗了，很可能是你在實例化 `w3` 變數時輸入錯誤。請仔細檢查你是否包含了內層括號，即 `Web3.EthereumTesterProvider()`。
 
-## 導覽第一站：[帳戶](/developers/docs/accounts/) {#tour-stop-1-accounts}
+## 導覽站點 #1：[帳戶](/developers/docs/accounts/) {#tour-stop-1-accounts}
 
-為了方便，測試提供者建立了一些帳戶，並預先存入了測試以太幣。
+為了方便起見，測試提供者建立了一些帳戶，並預先載入了測試以太幣。
 
-首先，讓我們看看這些帳戶的列表：
+首先，讓我們看看這些帳戶的清單：
 
 ```python
 In [6]: w3.eth.accounts
@@ -201,25 +202,25 @@ Out[6]: ['0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf',
  '0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69', ...]
 ```
 
-如果您執行這個指令，您應該會看到一個包含十個以 `0x` 開頭的字串列表。 每個都是一個**公開位址**，在某些方面，類似於支票帳戶的帳號。 您可以將此位址提供給想傳送以太幣給您的人。
+如果你執行這個指令，你應該會看到一個包含十個以 `0x` 開頭的字串清單。每一個都是一個**公開地址**，在某些方面類似於支票帳戶的帳號。你會將這個地址提供給想要發送以太幣給你的人。
 
-如前所述，測試提供者已為每個帳戶預先存入一些測試以太幣。 讓我們來看看第一個帳戶裡有多少錢：
+如前所述，測試提供者已在每個帳戶中預先載入了一些測試以太幣。讓我們看看第一個帳戶裡有多少錢：
 
 ```python
 In [7]: w3.eth.get_balance(w3.eth.accounts[0])
 Out[7]: 1000000000000000000000000
 ```
 
-好多個零！ 在您笑著把錢存入假銀行之前，回想一下前面關於貨幣單位的課程。 以太幣的數值是以最小單位 wei 來表示的。 將它轉換成以太幣：
+好多個零！在你開心地跑去假銀行之前，回想一下前面關於貨幣面額的課程。以太幣的值以最小面額 Wei 表示。將其轉換為以太幣：
 
 ```python
 In [8]: w3.from_wei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
 
-一百萬測試以太幣——還不賴。
+一百萬個測試以太幣——還是相當不錯的。
 
-## 導覽第二站：區塊資料 {#tour-stop-2-block-data}
+## 導覽站點 #2：區塊資料 {#tour-stop-2-block-data}
 
 讓我們來看看這個模擬區塊鏈的狀態：
 
@@ -234,15 +235,15 @@ Out[9]: AttributeDict({
 })
 ```
 
-一個區塊會傳回很多資訊，但這裡只指出幾點：
+關於區塊會回傳很多資訊，但這裡只指出幾點：
 
-- 區塊編號是零——無論您多久之前設定測試提供者都一樣。 與真實的以太坊網路每 12 秒新增一個新區塊不同，這個模擬會等到您給它一些工作才會有動作。
-- `transactions` 是一個空列表，原因相同：我們還沒有做任何事。 第一個區塊是**空區塊**，只是為了啟動這條鏈。
-- 請注意，`parentHash` 只是一堆空位元組。 這表示它是鏈中的第一個區塊，也稱為**創世區塊**。
+- 區塊編號為零——無論你多久前設定了測試提供者。與真實的以太坊網路每 12 秒新增一個新區塊不同，這個模擬環境會一直等待，直到你給它一些工作做。
+- `transactions` 是一個空清單，原因相同：我們還沒有做任何事情。這第一個區塊是一個**空區塊**，只是為了啟動這條鏈。
+- 請注意，`parentHash` 只是一堆空位元組。這表示它是鏈中的第一個區塊，也稱為**創世區塊**。
 
-## 導覽第三站：[交易](/developers/docs/transactions/) {#tour-stop-3-transactions}
+## 導覽站點 #3：[交易](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
-在有待處理的交易之前，我們會一直停在區塊 0，所以讓我們來建立一筆交易。 從一個帳戶傳送幾枚測試以太幣到另一個帳戶：
+在有待處理交易之前，我們會一直停留在區塊零，所以讓我們給它一筆交易。將一些測試以太幣從一個帳戶發送到另一個帳戶：
 
 ```python
 In [10]: tx_hash = w3.eth.send_transaction({
@@ -253,16 +254,16 @@ In [10]: tx_hash = w3.eth.send_transaction({
 })
 ```
 
-通常這時候您需要等待幾秒鐘，讓您的交易被包含在新區塊中。 完整的過程大致如下：
+通常在這個時候，你需要等待幾秒鐘，讓你的交易被納入新區塊中。完整的過程大致如下：
 
-1. 提交一筆交易並保留交易哈希。 在包含該交易的區塊被建立和廣播之前，該交易是「待處理」狀態。
+1. 提交交易並保留交易雜湊值。在包含該交易的區塊被建立並廣播之前，該交易處於「待處理」狀態。
    `tx_hash = w3.eth.send_transaction({ … })`
-2. 等待交易被包含在一個區塊中：
+2. 等待交易被納入區塊中：
    `w3.eth.wait_for_transaction_receipt(tx_hash)`
-3. 繼續執行應用程式邏輯。 查看成功的交易：
+3. 繼續應用程式邏輯。要檢視成功的交易：
    `w3.eth.get_transaction(tx_hash)`
 
-我們的模擬環境會立即將交易新增到新區塊中，因此我們可以立即查看該交易：
+我們的模擬環境會立即將交易新增到新區塊中，因此我們可以立即檢視該交易：
 
 ```python
 In [11]: w3.eth.get_transaction(tx_hash)
@@ -277,9 +278,9 @@ Out[11]: AttributeDict({
 })
 ```
 
-您會在這裡看到一些熟悉的詳細資訊：`from`、`to` 和 `value` 欄位應與我們 `send_transaction` 呼叫的輸入相符。 另一個讓人安心的地方是，這筆交易被包含在區塊編號 1 中，作為第一筆交易 (`'transactionIndex': 0`)。
+你會在這裡看到一些熟悉的細節：`from`、`to` 和 `value` 欄位應該與我們呼叫 `send_transaction` 時的輸入相符。另一個令人安心的細節是，這筆交易作為第一筆交易（`'transactionIndex': 0`）被納入了第 1 號區塊中。
 
-我們也可以透過檢查兩個相關帳戶的餘額來輕鬆驗證這筆交易是否成功。 三枚以太幣應該已經從一個帳戶轉移到另一個帳戶。
+我們也可以透過檢查涉及的兩個帳戶的餘額，輕鬆驗證這筆交易是否成功。應該有三個以太幣從一個帳戶轉移到了另一個帳戶。
 
 ```python
 In [12]: w3.eth.get_balance(w3.eth.accounts[0])
@@ -289,12 +290,12 @@ In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 
-後者看起來沒錯！ 餘額從 1,000,000 以太幣增加到 1,000,003 以太幣。 但第一個帳戶發生了什麼事？ 它似乎損失了比三枚以太幣多一點的金額。 唉，天下沒有白吃的午餐，使用以太坊公有網路需要您補償其他對等節點所提供的支援。 提交交易的帳戶被扣除了一筆小額交易費用——這筆費用是消耗的 gas 量（一次 ETH 轉帳為 21000 單位 gas）乘以根據網路活動變動的基本費用，再加上給予將交易包含在區塊中的驗證者的小費。
+後者看起來不錯！餘額從 1,000,000 變成了 1,000,003 顆以太幣。但是第一個帳戶發生了什麼事？它似乎損失了略多於三顆以太幣。唉，天下沒有白吃的午餐，使用以太坊公共網路需要你補償同儕所提供的支援。提交交易的帳戶被扣除了一小筆交易手續費——這筆費用是消耗的燃料量（ETH 轉帳為 21000 單位燃料）乘以根據網路活動而變化的基礎費用，再加上支付給將交易納入區塊的驗證者的小費。
 
-更多關於 [gas](/developers/docs/gas/#post-london) 的資訊
+了解更多關於[燃料](/developers/docs/gas/#post-london)的資訊
 
-<FeaturedText>注意：在公有網路上，交易費用會根據網路需求以及您希望交易處理的速度而變動。 如果您對費用計算的詳細說明感興趣，請參閱我之前關於<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">交易如何被包含在區塊中</a>的文章。</FeaturedText>
+<FeaturedText>注意：在公共網路上，交易手續費是可變的，取決於網路需求以及你希望交易被處理的速度。如果你對費用的計算方式感興趣，請參閱我之前關於<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">交易如何被納入區塊</a>的文章。</FeaturedText>
 
 ## 喘口氣 {#and-breathe}
 
-我們已經進行了一段時間，這裡似乎是個休息的好時機。 兔子洞還很深，我們將在本系列的第二部分繼續探索。 即將介紹的概念：連接到真實節點、智慧合約和代幣。 還有其他問題嗎？ 讓我知道！ 您的回饋將影響我們接下來的方向。 歡迎透過 [Twitter](https://twitter.com/wolovim) 提出請求。
+我們已經進行了一段時間，所以現在似乎是個休息的好時機。探索之旅還在繼續，我們將在本系列的第二部分繼續深入。接下來的一些概念包括：連接到真實節點、智能合約和代幣。有後續問題嗎？請讓我知道！你的回饋將影響我們接下來的方向。歡迎透過[推特](https://twitter.com/wolovim)提出請求。
