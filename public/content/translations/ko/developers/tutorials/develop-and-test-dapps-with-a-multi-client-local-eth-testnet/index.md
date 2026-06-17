@@ -1,46 +1,46 @@
 ---
-title: "로컬, 멀티클라이언트 테스트넷에서 dApp을 개발하고 테스트하는 방법"
-description: "이 가이드에서는 먼저 다중 클라이언트 로컬 이더리움 테스트넷을 인스턴스화하고 구성하는 방법을 안내한 다음, 테스트넷을 사용하여 dApp을 배포하고 테스트합니다."
-author: "Tedi Mitiku"
+title: 로컬 다중 클라이언트 테스트넷에서 dapp을 개발하고 테스트하는 방법
+description: 이 가이드는 먼저 다중 클라이언트 로컬 이더리움 테스트넷을 인스턴스화하고 구성하는 방법을 안내한 다음, 해당 테스트넷을 사용하여 dapp을 배포하고 테스트하는 방법을 설명합니다.
+author: "테디 미티쿠"
 tags:
   [
     "클라이언트",
     "노드",
-    "스마트 계약",
-    "결합성",
+    "스마트 컨트랙트",
+    "조합 가능성",
     "합의 레이어",
-    "실행 레이어",
-    "테스트"
+    "실행 계층",
+    "테스트",
   ]
 skill: intermediate
-breadcrumb: "멀티 클라이언트 테스트넷"
+breadcrumb: 다중 클라이언트 테스트넷
 lang: ko
 published: 2023-04-11
 ---
 
 ## 소개 {#introduction}
 
-이 가이드는 구성 가능한 로컬 이더리움 테스트넷을 인스턴스화하고, 스마트 계약을 배포하며, 테스트넷을 사용하여 dApp에 대한 테스트를 실행하는 과정을 안내합니다. 이 가이드는 라이브 테스트넷이나 메인넷에 배포하기 전에 다양한 네트워크 구성에 대해 로컬에서 dApp을 개발하고 테스트하려는 dApp 개발자를 위해 설계되었습니다.
+이 가이드는 구성 가능한 로컬 이더리움 테스트넷을 인스턴스화하고, 여기에 스마트 컨트랙트를 배포하며, 테스트넷을 사용하여 탈중앙화 애플리케이션 (dapp)에 대한 테스트를 실행하는 과정을 안내합니다. 이 가이드는 라이브 테스트넷이나 메인넷에 배포하기 전에 다양한 네트워크 구성에 대해 로컬에서 dapp을 개발하고 테스트하려는 dapp 개발자를 위해 작성되었습니다.
 
-이 가이드에서는 다음을 수행합니다.
+이 가이드에서 다룰 내용은 다음과 같습니다.
 
-- [Kurtosis](https://www.kurtosis.com/)를 사용하여 [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package)로 로컬 이더리움 테스트넷을 인스턴스화합니다.
-- Hardhat dApp 개발 환경을 로컬 테스트넷에 연결하여 dApp을 컴파일, 배포 및 테스트합니다.
-- 노드 수 및 특정 EL/CL 클라이언트 페어링과 같은 파라미터를 포함하여 로컬 테스트넷을 구성하여 다양한 네트워크 구성에 대한 개발 및 테스트 워크플로를 활성화합니다.
+- [Kurtosis](https://www.kurtosis.com/)를 사용하여 [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) 패키지로 로컬 이더리움 테스트넷 인스턴스화
+- Hardhat dapp 개발 환경을 로컬 테스트넷에 연결하여 dapp을 컴파일, 배포 및 테스트
+- 노드 수 및 특정 EL/CL 클라이언트 페어링과 같은 매개변수를 포함하여 로컬 테스트넷을 구성하여 다양한 네트워크 구성에 대한 개발 및 테스트 워크플로 활성화
 
 ### Kurtosis란 무엇인가요? {#what-is-kurtosis}
 
-[Kurtosis](https://www.kurtosis.com/)는 다중 컨테이너 테스트 환경 구성을 위해 설계된 구성 가능한 빌드 시스템입니다. 이를 통해 개발자는 블록체인 테스트넷과 같이 동적 설정 로직이 필요한 재현 가능한 환경을 만들 수 있습니다.
+[Kurtosis](https://www.kurtosis.com/)는 다중 컨테이너 테스트 환경을 구성하기 위해 설계된 조합 가능한 빌드 시스템입니다. 특히 개발자가 블록체인 테스트넷과 같이 동적 설정 로직이 필요한 재현 가능한 환경을 만들 수 있도록 지원합니다.
 
-이 가이드에서 Kurtosis eth-network-package는 [`geth`](https://geth.ethereum.org/) 실행 레이어(EL) 클라이언트와 [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/), [`lodestar`](https://lodestar.chainsafe.io/) 합의 레이어(CL) 클라이언트를 지원하는 로컬 이더리움 테스트넷을 가동합니다. 이 패키지는 Hardhat Network, Ganache, Anvil과 같은 프레임워크의 네트워크에 대한 구성 가능하고 조합 가능한 대안 역할을 합니다. Kurtosis는 개발자가 사용하는 테스트넷에 대한 더 큰 제어와 유연성을 제공하며, 이것이 [이더리움 재단이 머지를 테스트하기 위해 Kurtosis를 사용한](https://www.kurtosis.com/blog/testing-the-ethereum-merge) 주된 이유이며 네트워크 업그레이드를 테스트하기 위해 계속 사용하고 있습니다.
+이 가이드에서 Kurtosis eth-network-package는 [`geth`](https://geth.ethereum.org/) 실행 계층(EL) 클라이언트뿐만 아니라 [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/), [`lodestar`](https://lodestar.chainsafe.io/) 합의 레이어(CL) 클라이언트를 지원하는 로컬 이더리움 테스트넷을 가동합니다. 이 패키지는 Hardhat Network, Ganache, Anvil과 같은 프레임워크의 네트워크에 대한 구성 가능하고 조합 가능한 대안 역할을 합니다. Kurtosis는 개발자에게 사용하는 테스트넷에 대한 더 큰 제어력과 유연성을 제공하며, 이는 [이더리움 재단이 머지를 테스트하기 위해 Kurtosis를 사용](https://www.kurtosis.com/blog/testing-the-ethereum-merge)했고 네트워크 업그레이드 테스트에 계속 사용하는 주요 이유입니다.
 
 ## Kurtosis 설정 {#setting-up-kurtosis}
 
-진행하기 전에 다음을 확인하십시오.
+계속 진행하기 전에 다음 사항을 확인하세요.
 
-- 로컬 머신에 [Docker 엔진을 설치하고 시작](https://docs.kurtosis.com/install/#i-install--start-docker)했습니다.
-- [Kurtosis CLI를 설치](https://docs.kurtosis.com/install#ii-install-the-cli)했습니다(CLI가 이미 설치되어 있는 경우 최신 릴리스로 업그레이드).
-- [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable), [npx](https://www.npmjs.com/package/npx)를 설치했습니다(dApp 환경용).
+- 로컬 머신에 [Docker 엔진 설치 및 시작](https://docs.kurtosis.com/install/#i-install--start-docker)
+- [Kurtosis CLI 설치](https://docs.kurtosis.com/install#ii-install-the-cli) (이미 CLI가 설치되어 있는 경우 최신 릴리스로 업그레이드)
+- [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable), [npx](https://www.npmjs.com/package/npx) 설치 (dapp 환경용)
 
 ## 로컬 이더리움 테스트넷 인스턴스화 {#instantiate-testnet}
 
@@ -50,9 +50,9 @@ published: 2023-04-11
 kurtosis --enclave local-eth-testnet run github.com/kurtosis-tech/eth-network-package
 ```
 
-참고: 이 명령어는 '--enclave' 플래그를 사용하여 네트워크 이름을 "local-eth-testnet"으로 지정합니다.
+참고: 이 명령어는 `--enclave` 플래그를 사용하여 네트워크 이름을 "local-eth-testnet"으로 지정합니다.
 
-Kurtosis는 지침을 해석, 검증 및 실행하는 동안 내부적으로 수행하는 단계를 출력합니다. 마지막으로 다음과 유사한 출력이 표시되어야 합니다.
+Kurtosis는 명령을 해석, 검증 및 실행하기 위해 내부적으로 수행하는 단계를 출력합니다. 마지막에는 다음과 유사한 출력이 표시되어야 합니다.
 
 ```python
 INFO[2023-04-04T18:09:44-04:00] ======================================================
@@ -89,48 +89,49 @@ d7b802f623e8   el-client-0                                    engine-rpc: 8551/t
 514a829c0a84   prelaunch-data-generator-1680646157905431468   <none>                                        STOPPED
 62bd62d0aa7a   prelaunch-data-generator-1680646157915424301   <none>                                        STOPPED
 05e9619e0e90   prelaunch-data-generator-1680646157922872635   <none>                                        STOPPED
+
 ```
 
-축하합니다! Docker를 통해 Kurtosis를 사용하여 CL(`lighthouse`) 및 EL 클라이언트(`geth`)가 있는 로컬 이더리움 테스트넷을 인스턴스화했습니다.
+축하합니다! Kurtosis를 사용하여 Docker 환경에서 CL(`lighthouse`) 및 EL 클라이언트(`geth`)가 포함된 로컬 이더리움 테스트넷을 인스턴스화했습니다.
 
 ### 검토 {#review-instantiate-testnet}
 
-이 섹션에서는 Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) 내에서 로컬 이더리움 테스트넷을 시작하기 위해 Kurtosis가 [GitHub에 원격으로 호스팅된 `eth-network-package`](https://github.com/kurtosis-tech/eth-network-package)를 사용하도록 지시하는 명령을 실행했습니다. 엔클레이브 내부에는 "파일 아티팩트"와 "사용자 서비스"가 모두 있습니다.
+이 섹션에서는 Kurtosis가 [GitHub에 원격으로 호스팅된 `eth-network-package`](https://github.com/kurtosis-tech/eth-network-package)를 사용하여 Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) 내에 로컬 이더리움 테스트넷을 가동하도록 지시하는 명령을 실행했습니다. Enclave 내부에는 "파일 아티팩트(file artifacts)"와 "사용자 서비스(user services)"가 모두 있습니다.
 
-엔클레이브의 [파일 아티팩트](https://docs.kurtosis.com/advanced-concepts/files-artifacts/)에는 EL 및 CL 클라이언트를 부트스트랩하기 위해 생성 및 활용된 모든 데이터가 포함됩니다. 데이터는 이 [Docker 이미지](https://github.com/ethpandaops/ethereum-genesis-generator)에서 빌드된 `prelaunch-data-generator` 서비스를 사용하여 생성되었습니다.
+Enclave의 [파일 아티팩트](https://docs.kurtosis.com/advanced-concepts/files-artifacts/)에는 EL 및 CL 클라이언트를 부트스트랩하기 위해 생성되고 활용된 모든 데이터가 포함됩니다. 이 데이터는 이 [Docker 이미지](https://github.com/ethpandaops/ethereum-genesis-generator)에서 빌드된 `prelaunch-data-generator` 서비스를 사용하여 생성되었습니다.
 
-사용자 서비스는 엔클레이브에서 작동하는 모든 컨테이너화된 서비스를 표시합니다. EL 클라이언트와 CL 클라이언트를 모두 갖춘 단일 노드가 생성된 것을 알 수 있습니다.
+사용자 서비스는 Enclave에서 작동하는 모든 컨테이너화된 서비스를 표시합니다. EL 클라이언트와 CL 클라이언트를 모두 갖춘 단일 노드가 생성된 것을 확인할 수 있습니다.
 
-## dApp 개발 환경을 로컬 이더리움 테스트넷에 연결 {#connect-your-dapp}
+## dapp 개발 환경을 로컬 이더리움 테스트넷에 연결 {#connect-your-dapp}
 
-### dApp 개발 환경 설정 {#set-up-dapp-env}
+### dapp 개발 환경 설정 {#set-up-dapp-env}
 
-이제 실행 중인 로컬 테스트넷이 있으므로 dApp 개발 환경을 연결하여 로컬 테스트넷을 사용할 수 있습니다. 이 가이드에서는 Hardhat 프레임워크를 사용하여 블랙잭 dApp을 로컬 테스트넷에 배포합니다.
+이제 실행 중인 로컬 테스트넷이 있으므로 dapp 개발 환경을 연결하여 로컬 테스트넷을 사용할 수 있습니다. 이 가이드에서는 Hardhat 프레임워크를 사용하여 블랙잭 dapp을 로컬 테스트넷에 배포합니다.
 
-dApp 개발 환경을 설정하려면 샘플 dApp이 포함된 저장소를 클론하고 종속성을 설치한 후 다음을 실행하세요.
+dapp 개발 환경을 설정하려면 샘플 dapp이 포함된 리포지토리를 복제하고 종속성을 설치하세요. 다음을 실행합니다.
 
 ```python
 git clone https://github.com/kurtosis-tech/awesome-kurtosis.git && cd awesome-kurtosis/smart-contract-example && yarn
 ```
 
-여기서 사용되는 [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) 폴더에는 [Hardhat](https://hardhat.org/) 프레임워크를 사용하는 dApp 개발자를 위한 일반적인 설정이 포함되어 있습니다.
+여기에 사용된 [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) 폴더에는 [Hardhat](https://hardhat.org/) 프레임워크를 사용하는 dapp 개발자를 위한 일반적인 설정이 포함되어 있습니다.
 
-- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts)에는 Blackjack dApp을 위한 몇 가지 간단한 스마트 계약이 포함되어 있습니다.
-- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts)에는 로컬 이더리움 네트워크에 토큰 계약을 배포하는 스크립트가 포함되어 있습니다.
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test)에는 토큰 계약에 대한 간단한 .js 테스트가 포함되어 있으며, Blackjack dApp의 각 플레이어에게 1000개가 민팅되었는지 확인합니다.
+- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts)에는 블랙잭 dapp을 위한 몇 가지 간단한 스마트 컨트랙트가 포함되어 있습니다.
+- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts)에는 로컬 이더리움 네트워크에 토큰 컨트랙트를 배포하는 스크립트가 포함되어 있습니다.
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test)에는 블랙잭 dapp의 각 플레이어에게 1000개의 토큰이 발행되었는지 확인하기 위한 토큰 컨트랙트용 간단한 .js 테스트가 포함되어 있습니다.
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts)는 Hardhat 설정을 구성합니다.
 
 ### 로컬 테스트넷을 사용하도록 Hardhat 구성 {#configure-hardhat}
 
-dApp 개발 환경이 설정되었으므로 이제 Kurtosis를 사용하여 생성된 로컬 이더리움 테스트넷을 사용하도록 Hardhat을 연결합니다. 이를 위해 `hardhat.config.ts` 구성 파일의 `localnet` 구조체에서 `<$YOUR_PORT>`를 `el-client-<num>` 서비스의 rpc uri 출력 포트로 바꿉니다. 이 샘플의 경우 포트는 `64248`입니다. 사용자의 포트는 다를 것입니다.
+dapp 개발 환경이 설정되었으므로, 이제 Kurtosis를 사용하여 생성된 로컬 이더리움 테스트넷을 사용하도록 Hardhat을 연결합니다. 이를 수행하려면 `hardhat.config.ts` 구성 파일의 `localnet` 구조체에 있는 `<$YOUR_PORT>`를 `el-client-<num>` 서비스에서 출력된 rpc uri의 포트로 바꿉니다. 이 샘플의 경우 포트는 `64248`가 됩니다. 여러분의 포트는 다를 수 있습니다.
 
 `hardhat.config.ts`의 예시:
 
 ```js
 localnet: {
-url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: $YOUR_PORT를 ETH 네트워크 KURTOSIS 패키지에서 생성한 노드 URI의 포트로 교체하세요
+url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: $YOUR_PORT를 ETH 네트워크 Kurtosis 패키지에서 생성된 노드 URI의 포트로 교체하세요
 
-// 이들은 eth-network-package에 의해 생성된, 사전에 자금이 충전된 테스트 계정과 연관된 개인 키입니다
+// 이들은 eth-network-package에서 생성한 사전 자금이 지원된 테스트 계정과 관련된 프라이빗 키입니다
 // <https://github.com/kurtosis-tech/eth-network-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star>
 accounts: [
     "ef5177cd0b6b21c87db5a0bf35d4084a8a57a9d6a064f86d51ac85f2b873a4e2",
@@ -143,13 +144,13 @@ accounts: [
 },
 ```
 
-파일을 저장하면 Hardhat dApp 개발 환경이 로컬 이더리움 테스트넷에 연결됩니다! 다음을 실행하여 테스트넷이 작동하는지 확인할 수 있습니다.
+파일을 저장하면 Hardhat dapp 개발 환경이 로컬 이더리움 테스트넷에 연결됩니다! 다음을 실행하여 테스트넷이 작동하는지 확인할 수 있습니다.
 
 ```python
 npx hardhat balances --network localnet
 ```
 
-출력은 다음과 같아야 합니다.
+출력은 다음과 유사해야 합니다.
 
 ```python
 0x878705ba3f8Bc32FCf7F4CAa1A35E72AF65CF766 has balance 10000000000000000000000000
@@ -160,34 +161,34 @@ npx hardhat balances --network localnet
 0x1F6298457C5d76270325B724Da5d1953923a6B88 has balance 10000000000000000000000000
 ```
 
-이는 Hardhat이 로컬 테스트넷을 사용하고 있으며 `eth-network-package`에 의해 생성된 사전에 자금이 충전된 계정을 감지했음을 확인합니다.
+이는 Hardhat이 로컬 테스트넷을 사용하고 있으며 `eth-network-package`에 의해 생성된 사전 자금이 지원된 계정을 감지함을 확인해 줍니다.
 
-### 로컬에서 dApp 배포 및 테스트 {#deploy-and-test-dapp}
+### 로컬에서 dapp 배포 및 테스트 {#deploy-and-test-dapp}
 
-dApp 개발 환경이 로컬 이더리움 테스트넷에 완전히 연결되었으므로 이제 로컬 테스트넷을 사용하여 dApp에 대한 개발 및 테스트 워크플로를 실행할 수 있습니다.
+dapp 개발 환경이 로컬 이더리움 테스트넷에 완전히 연결되었으므로, 이제 로컬 테스트넷을 사용하여 dapp에 대한 개발 및 테스트 워크플로를 실행할 수 있습니다.
 
-`ChipToken.sol` 스마트 계약을 로컬 프로토타이핑 및 개발을 위해 컴파일하고 배포하려면 다음을 실행하세요.
+로컬 프로토타이핑 및 개발을 위해 `ChipToken.sol` 스마트 컨트랙트를 컴파일하고 배포하려면 다음을 실행하세요.
 
 ```python
 npx hardhat compile
 npx hardhat run scripts/deploy.ts --network localnet
 ```
 
-출력은 다음과 같아야 합니다.
+출력은 다음과 유사해야 합니다.
 
 ```python
-ChipToken이 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d에 배포되었습니다
+ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-이제 로컬 dApp에 대해 `simple.js` 테스트를 실행하여 Blackjack dApp의 각 플레이어에게 1000개가 민팅되었는지 확인하세요.
+이제 로컬 dapp에 대해 `simple.js` 테스트를 실행하여 블랙잭 dapp의 각 플레이어에게 1000개의 토큰이 발행되었는지 확인해 보세요.
 
-출력은 다음과 같아야 합니다.
+출력은 다음과 유사해야 합니다.
 
 ```python
 npx hardhat test --network localnet
 ```
 
-출력은 다음과 같아야 합니다.
+출력은 다음과 유사해야 합니다.
 
 ```python
 ChipToken
@@ -199,25 +200,25 @@ ChipToken
 
 ### 검토 {#review-dapp-workflows}
 
-이 시점에서 dApp 개발 환경을 설정하고, Kurtosis가 생성한 로컬 이더리움 네트워크에 연결했으며, dApp에 대해 컴파일, 배포 및 간단한 테스트를 실행했습니다.
+이 시점에서 dapp 개발 환경을 설정하고, Kurtosis가 생성한 로컬 이더리움 네트워크에 연결했으며, dapp을 컴파일, 배포하고 간단한 테스트를 실행했습니다.
 
-이제 다양한 네트워크 구성에서 dApp을 테스트하기 위해 기본 네트워크를 구성하는 방법을 살펴보겠습니다.
+이제 다양한 네트워크 구성에서 dapp을 테스트하기 위해 기본 네트워크를 구성하는 방법을 살펴보겠습니다.
 
 ## 로컬 이더리움 테스트넷 구성 {#configure-testnet}
 
 ### 클라이언트 구성 및 노드 수 변경 {#configure-client-config-and-num-nodes}
 
-로컬 이더리움 테스트넷은 개발 또는 테스트하려는 시나리오 및 특정 네트워크 구성에 따라 다양한 EL 및 CL 클라이언트 쌍과 다양한 수의 노드를 사용하도록 구성할 수 있습니다. 즉, 일단 설정되면 맞춤형 로컬 테스트넷을 가동하고 이를 사용하여 동일한 워크플로(배포, 테스트 등)를 실행할 수 있습니다. 다양한 네트워크 구성 하에서 모든 것이 예상대로 작동하는지 확인합니다. 수정할 수 있는 다른 파라미터에 대해 자세히 알아보려면 이 링크를 방문하세요.
+로컬 이더리움 테스트넷은 개발하거나 테스트하려는 시나리오 및 특정 네트워크 구성에 따라 다양한 EL 및 CL 클라이언트 쌍과 다양한 수의 노드를 사용하도록 구성할 수 있습니다. 즉, 한 번 설정하면 사용자 지정된 로컬 테스트넷을 가동하고 이를 사용하여 다양한 네트워크 구성에서 동일한 워크플로(배포, 테스트 등)를 실행하여 모든 것이 예상대로 작동하는지 확인할 수 있습니다. 수정할 수 있는 다른 매개변수에 대해 자세히 알아보려면 이 링크를 방문하세요.
 
-시도해 보세요! JSON 파일을 통해 `eth-network-package`에 다양한 구성 옵션을 전달할 수 있습니다. 이 네트워크 파라미터 JSON 파일은 Kurtosis가 로컬 이더리움 네트워크를 설정하는 데 사용할 특정 구성을 제공합니다.
+한번 시도해 보세요! JSON 파일을 통해 `eth-network-package`에 다양한 구성 옵션을 전달할 수 있습니다. 이 네트워크 매개변수 JSON 파일은 Kurtosis가 로컬 이더리움 네트워크를 설정하는 데 사용할 특정 구성을 제공합니다.
 
-기본 구성 파일을 사용하여 다른 EL/CL 쌍을 가진 두 개의 노드를 시작하도록 편집하세요.
+기본 구성 파일을 가져와서 다른 EL/CL 쌍을 가진 두 개의 노드를 가동하도록 편집합니다.
 
-- 노드 1: `geth`/`lighthouse`
-- 노드 2: `geth`/`lodestar`
-- 노드 3: `geth`/`teku`
+- `geth`/`lighthouse`를 사용하는 노드 1
+- `geth`/`lodestar`를 사용하는 노드 2
+- `geth`/`teku`를 사용하는 노드 3
 
-이 구성은 dApp 테스트를 위해 이더리움 노드 구현의 이기종 네트워크를 생성합니다. 이제 구성 파일은 다음과 같이 표시됩니다.
+이 구성은 dapp을 테스트하기 위해 이더리움 노드 구현의 이기종 네트워크를 생성합니다. 이제 구성 파일은 다음과 같아야 합니다.
 
 ```yaml
 {
@@ -273,19 +274,19 @@ ChipToken
 }
 ```
 
-각 `participants` 구조체는 네트워크의 노드에 매핑되므로 3개의 `participants` 구조체는 Kurtosis에게 네트워크에 3개의 노드를 가동하도록 지시합니다. 각 `participants` 구조체를 통해 특정 노드에 사용되는 EL 및 CL 쌍을 지정할 수 있습니다.
+각 `participants` 구조체는 네트워크의 노드에 매핑되므로, 3개의 `participants` 구조체는 Kurtosis에 네트워크에서 3개의 노드를 가동하도록 지시합니다. 각 `participants` 구조체를 사용하면 해당 특정 노드에 사용되는 EL 및 CL 쌍을 지정할 수 있습니다.
 
-`network_params` 구조체는 각 노드의 제네시스 파일을 생성하는 데 사용되는 네트워크 설정과 네트워크의 슬롯당 시간(초)과 같은 기타 설정을 구성합니다.
+`network_params` 구조체는 각 노드의 제네시스 파일을 생성하는 데 사용되는 네트워크 설정과 네트워크의 슬롯당 초와 같은 기타 설정을 구성합니다.
 
-편집한 파라미터 파일을 원하는 디렉터리에 저장하고(아래 예에서는 바탕화면에 저장됨) 다음을 실행하여 Kurtosis 패키지를 실행하는 데 사용합니다.
+편집한 매개변수 파일을 원하는 디렉터리(아래 예에서는 바탕 화면에 저장됨)에 저장한 다음, 이를 사용하여 다음을 실행하여 Kurtosis 패키지를 실행합니다.
 
 ```python
 kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/kurtosis-tech/eth-network-package "$(cat ~/eth-network-params.json)"
 ```
 
-참고: `kurtosis clean -a` 명령어는 Kurtosis에게 새 테스트넷을 시작하기 전에 이전 테스트넷과 그 내용을 파괴하도록 지시하는 데 사용됩니다.
+참고: 여기서 `kurtosis clean -a` 명령은 Kurtosis에 새 테스트넷을 시작하기 전에 이전 테스트넷과 그 내용을 파괴하도록 지시하는 데 사용됩니다.
 
-다시 한 번, Kurtosis가 잠시 작동하고 진행 중인 개별 단계를 출력합니다. 결과적으로 출력은 다음과 같아야 합니다.
+다시 한 번, Kurtosis는 잠시 동안 작동하며 진행 중인 개별 단계를 출력합니다. 최종적으로 출력은 다음과 유사해야 합니다.
 
 ```python
 Starlark code successfully run. No output was returned.
@@ -351,22 +352,22 @@ ad6f401126fa   el-client-2                                    engine-rpc: 8551/t
 3d4aaa75e218   prelaunch-data-generator-1680882122201668972   <none>                                           STOPPED
 ```
 
-축하합니다! 로컬 테스트넷을 1개가 아닌 3개의 노드를 갖도록 성공적으로 구성했습니다. dApp에 대해 이전과 동일한 워크플로(배포 및 테스트)를 실행하려면 `hardhat.config.ts` 구성 파일의 `localnet` 구조체에서 `<$YOUR_PORT>`를 새 3노드 로컬 테스트넷의 `el-client-<num>` 서비스에서 출력된 rpc uri의 포트로 바꾸어 이전과 동일한 작업을 수행하세요.
+축하합니다! 로컬 테스트넷을 1개가 아닌 3개의 노드를 갖도록 성공적으로 구성했습니다. dapp에 대해 이전과 동일한 워크플로(배포 및 테스트)를 실행하려면, `hardhat.config.ts` 구성 파일의 `localnet` 구조체에 있는 `<$YOUR_PORT>`를 새로운 3노드 로컬 테스트넷의 `el-client-<num>` 서비스에서 출력된 rpc uri의 포트로 교체하여 이전과 동일한 작업을 수행하세요.
 
 ## 결론 {#conclusion}
 
 이것으로 끝입니다! 이 짧은 가이드를 요약하자면 다음과 같습니다.
 
-- Kurtosis를 사용하여 Docker를 통해 로컬 이더리움 테스트넷을 생성했습니다.
-- 로컬 dApp 개발 환경을 로컬 이더리움 네트워크에 연결했습니다.
-- 로컬 이더리움 네트워크에서 dApp을 배포하고 간단한 테스트를 실행했습니다.
-- 기본 이더리움 네트워크를 3개의 노드를 갖도록 구성했습니다.
+- Kurtosis를 사용하여 Docker 환경에서 로컬 이더리움 테스트넷 생성
+- 로컬 dapp 개발 환경을 로컬 이더리움 네트워크에 연결
+- 로컬 이더리움 네트워크에 dapp을 배포하고 간단한 테스트 실행
+- 기본 이더리움 네트워크가 3개의 노드를 갖도록 구성
 
-잘된 점, 개선할 점 또는 질문에 대한 답변에 대해 여러분의 의견을 듣고 싶습니다. 주저하지 마시고 [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose)를 통해 연락하시거나 [이메일을 보내주세요](mailto:feedback@kurtosistech.com)!
+여러분에게 어떤 점이 좋았는지, 어떤 점을 개선할 수 있는지, 또는 질문에 대한 답변을 듣고 싶습니다. 주저하지 말고 [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose)를 통해 연락하거나 [이메일을 보내주세요](mailto:feedback@kurtosistech.com)!
 
-### 기타 예제 및 가이드 {#other-examples-guides}
+### 기타 예시 및 가이드 {#other-examples-guides}
 
-[빠른 시작](https://docs.kurtosis.com/quickstart)(Postgres 데이터베이스와 API를 구축)과 [awesome-kurtosis 저장소](https://github.com/kurtosis-tech/awesome-kurtosis)의 다른 예제를 확인해 보시기 바랍니다. 여기에는 다음 패키지를 포함한 훌륭한 예제가 있습니다.
+[빠른 시작](https://docs.kurtosis.com/quickstart)(Postgres 데이터베이스와 그 위에 API를 구축하는 곳)과 [awesome-kurtosis 리포지토리](https://github.com/kurtosis-tech/awesome-kurtosis)의 다른 예시를 확인해 보시기 바랍니다. 여기에는 다음을 위한 패키지를 포함하여 훌륭한 예시가 있습니다.
 
-- 동일한 로컬 이더리움 테스트넷을 가동하지만 트랜잭션 스패머(트랜잭션 시뮬레이션용), 포크 모니터, 연결된 Grafana 및 Prometheus 인스턴스와 같은 추가 서비스가 연결되어 있습니다.
-- 동일한 로컬 이더리움 네트워크에 대한 [하위 네트워킹 테스트](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) 수행
+- [동일한 로컬 이더리움 테스트넷을 가동](https://github.com/kurtosis-tech/eth2-package)하지만, 트랜잭션 스패머(트랜잭션 시뮬레이션용), 포크 모니터, 연결된 Grafana 및 Prometheus 인스턴스와 같은 추가 서비스가 연결됨
+- 동일한 로컬 이더리움 네트워크에 대해 [서브 네트워킹 테스트](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) 수행
