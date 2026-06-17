@@ -14,8 +14,10 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import Translation from "@/components/Translation"
+import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -323,10 +325,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div
-          id="layer-2-callout-cards"
-          className="flex w-full flex-col gap-8 p-8 *:flex-1 md:flex-row"
-        >
+        <Grid id="layer-2-callout-cards" columns={3} className="p-8">
           {calloutCards.map((card, idx) => (
             <MarkdownCard
               key={idx}
@@ -335,7 +334,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               emoji={card.emoji}
             />
           ))}
-        </div>
+        </Grid>
 
         <div id="layer-2-ready-to-start" className="w-full px-8 py-9">
           <div className="flex flex-col items-center gap-8">
@@ -450,12 +449,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div
-          id="layer-2-faq"
-          className="flex w-full max-w-[832px] flex-col gap-12 px-8 py-9"
-        >
+        <div id="layer-2-faq" className="space-y-8 px-8 py-9">
           <h2>{t("page-layer-2-faq-title")}</h2>
-          <div>
+          <AccordionContainer>
             <ExpandableCard
               title={t("page-layer-2-faq-ExpandableCard-1-title")}
               eventCategory="l2_hub"
@@ -502,11 +498,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             >
               <p>{t("page-layer-2-faq-ExpandableCard-4-description")}</p>
             </ExpandableCard>
-          </div>
+          </AccordionContainer>
         </div>
-        <div
+        <Grid
           id="layer-2-callout-cards"
-          className="grid grid-cols-1 gap-8 p-8 md:grid-cols-2"
+          columns={2}
+          size="wide"
+          className="p-8"
         >
           <Callout
             image={ExploreImage}
@@ -540,7 +538,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               {tCommon("learn-more")}
             </ButtonLink>
           </Callout>
-        </div>
+        </Grid>
       </MainArticle>
     </I18nProvider>
   )

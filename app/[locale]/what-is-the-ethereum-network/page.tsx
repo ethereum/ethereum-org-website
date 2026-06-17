@@ -5,7 +5,7 @@ import type { Lang, ToCItem } from "@/lib/types"
 import CommentCard from "@/components/CommentCard"
 import DocLink from "@/components/DocLink"
 import FileContributors from "@/components/FileContributors"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
@@ -37,18 +37,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       "what-is-the-ethereum-network",
       locale as Lang
     )
-
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "learn/what-is-the-ethereum-network", startDepth: 1 },
-    heroImg,
-    title: t("page-what-is-ethereum-network-title"),
-    description: (
-      <>
-        <p>{t("page-what-is-ethereum-network-description-1")}</p>
-        <p>{t("page-what-is-ethereum-network-description-2")}</p>
-      </>
-    ),
-  }
 
   const tocItems: ToCItem[] = [
     {
@@ -85,7 +73,20 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />
-      <ContentHero {...heroProps} />
+      <PageHero
+        breadcrumbs={{
+          slug: "learn/what-is-the-ethereum-network",
+          startDepth: 1,
+        }}
+        heroImg={heroImg}
+        title={t("page-what-is-ethereum-network-title")}
+        description={
+          <>
+            <p>{t("page-what-is-ethereum-network-description-1")}</p>
+            <p>{t("page-what-is-ethereum-network-description-2")}</p>
+          </>
+        }
+      />
 
       <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
         <div
@@ -202,7 +203,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-gas-section-description-3"
                 )}
                 name="Tim Beiko"
-                title="Protocol Coordination, Ethereum Foundation"
+                title="Protocol Coordination, Ethereum Foundation (2025)"
               />
               <p>
                 {t.rich(
@@ -309,7 +310,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-staking-section-description-6"
                 )}
                 name="Barnabé Monnot"
-                title="Protocol Architecture, Ethereum Foundation"
+                title="Protocol Architecture, Ethereum Foundation (2025)"
               />
               <p>
                 {t.rich(

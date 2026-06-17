@@ -1,4 +1,3 @@
-import React from "react"
 import Image from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -6,7 +5,7 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardBanner, CardFooter, CardHeader } from "@/components/ui/card"
+import { Card, CardBanner, CardContent, CardHeader } from "@/components/ui/card"
 import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -28,7 +27,7 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
         />
       </CardBanner>
     </CardHeader>
-    <CardFooter>
+    <CardContent>
       <ButtonLink
         size="lg"
         href="/reports/trillion-dollar-security.pdf"
@@ -36,7 +35,7 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
       >
         {cta}
       </ButtonLink>
-    </CardFooter>
+    </CardContent>
   </Card>
 )
 
@@ -85,7 +84,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   altText={t("page-trillion-dollar-security-image-alt-report")}
                 />
               </div>
-              <div className="flex-1 space-y-6 xl:max-w-screen-lg">
+              <div className="flow flex-1 xl:max-w-screen-lg">
                 <p>{t("page-trillion-dollar-security-hero-paragraph-1")}</p>
                 <p>{t("page-trillion-dollar-security-hero-paragraph-2")}</p>
                 <ul>
@@ -221,860 +220,661 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
           {/* Main Content Sections - Each with its own sticky heading */}
           <div className="my-16 w-full space-y-32 lg:space-y-48">
             {/* User Experience section */}
-            <section
-              id="ux"
-              className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
-            >
+            <section id="ux" className="flex flex-col gap-8 lg:flex-row">
               <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
-                <h3 className="mb-4">
+                <h2 className="mb-4">
                   1. {t("page-trillion-dollar-security-user-experience-title")}
-                </h3>
+                </h2>
                 <p>{t("page-trillion-dollar-security-section-1-intro")}</p>
               </div>
-              <div className="flex-1">
-                <div className="space-y-10">
-                  <div className="space-y-4">
-                    <p>
-                      {t("page-trillion-dollar-security-section-1-paragraph-1")}
-                    </p>
-                    <p>
-                      {t("page-trillion-dollar-security-section-1-paragraph-2")}
-                    </p>
-                    <p>
-                      {t("page-trillion-dollar-security-section-1-paragraph-3")}
-                    </p>
-                  </div>
+              <div className="flow flex-1">
+                <p>
+                  {t("page-trillion-dollar-security-section-1-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-paragraph-2")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-paragraph-3")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-1-1-title")}
-                    </h4>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-1-paragraph-1"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-1-paragraph-2"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-1-paragraph-3"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-1-paragraph-4"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-1-paragraph-5"
-                      )}
-                    </p>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-1-2-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-1-2-paragraph")}
-                    </p>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-1-3-title")}
-                    </h4>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-3-paragraph-1"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-3-paragraph-2"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-3-paragraph-3"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-3-paragraph-4"
-                      )}
-                    </p>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-1-4-title")}
-                    </h4>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-4-paragraph-1"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-4-paragraph-2"
-                      )}
-                    </p>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-1-5-title")}
-                    </h4>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-5-paragraph-1"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-5-paragraph-2"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-5-paragraph-3"
-                      )}
-                    </p>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-1-6-title")}
-                    </h4>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-6-paragraph-1"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-1-6-paragraph-2"
-                      )}
-                    </p>
-                  </div>
-                </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-1-1-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-1-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-1-paragraph-2")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-1-paragraph-3")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-1-paragraph-4")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-1-paragraph-5")}
+                </p>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-1-2-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-2-paragraph")}
+                </p>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-1-3-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-3-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-3-paragraph-2")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-3-paragraph-3")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-3-paragraph-4")}
+                </p>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-1-4-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-4-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-4-paragraph-2")}
+                </p>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-1-5-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-5-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-5-paragraph-2")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-5-paragraph-3")}
+                </p>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-1-6-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-6-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-1-6-paragraph-2")}
+                </p>
               </div>
             </section>
 
             {/* Smart Contract Security section */}
             <section
               id="smart-contracts"
-              className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
+              className="flex flex-col gap-8 lg:flex-row"
             >
               <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
-                <h3 className="mb-4">
+                <h2 className="mb-4">
                   2. {t("page-trillion-dollar-security-smart-contract-title")}
-                </h3>
+                </h2>
                 <p>{t("page-trillion-dollar-security-section-2-intro")}</p>
               </div>
-              <div className="flex-1">
-                <div className="space-y-10">
-                  <div className="space-y-4">
-                    <p>
-                      {t("page-trillion-dollar-security-section-2-paragraph-1")}
-                    </p>
-                    <ul className="my-0 ml-6 list-disc">
-                      <li>
-                        {t("page-trillion-dollar-security-section-2-list-1")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-2-list-2")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-2-list-3")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-2-list-4")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-2-list-5")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-2-list-6")}
-                      </li>
-                    </ul>
-                    <p>
-                      {t("page-trillion-dollar-security-section-2-paragraph-2")}
-                    </p>
-                  </div>
+              <div className="flow flex-1">
+                <p>
+                  {t("page-trillion-dollar-security-section-2-paragraph-1")}
+                </p>
+                <ul>
+                  <li>{t("page-trillion-dollar-security-section-2-list-1")}</li>
+                  <li>{t("page-trillion-dollar-security-section-2-list-2")}</li>
+                  <li>{t("page-trillion-dollar-security-section-2-list-3")}</li>
+                  <li>{t("page-trillion-dollar-security-section-2-list-4")}</li>
+                  <li>{t("page-trillion-dollar-security-section-2-list-5")}</li>
+                  <li>{t("page-trillion-dollar-security-section-2-list-6")}</li>
+                </ul>
+                <p>
+                  {t("page-trillion-dollar-security-section-2-paragraph-2")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-2-1-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-2-1-paragraph")}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-1-list-title-1"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-1-list-desc-1"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-1-list-title-2"
-                          )}
-                        </b>
-                        ,{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-1-list-desc-2"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-1-list-title-3"
-                          )}
-                        </b>
-                        ,{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-1-list-desc-3"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-1-list-title-4"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-1-list-desc-4"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-1-list-title-5"
-                          )}
-                        </b>
-                        ,{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-1-list-desc-5"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-1-list-title-6"
-                          )}
-                        </b>
-                        ,{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-1-list-desc-6"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-1-list-title-7"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-1-list-desc-7"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-1-list-title-8"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-1-list-desc-8"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-1-list-title-9"
-                          )}
-                          .
-                        </b>
-                      </li>
-                    </ul>
-                  </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-2-1-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-2-1-paragraph")}
+                </p>
+                <ul>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-1-list-title-1"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-1-list-desc-1")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-1-list-title-2"
+                      )}
+                    </b>
+                    ,{" "}
+                    {t("page-trillion-dollar-security-section-2-1-list-desc-2")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-1-list-title-3"
+                      )}
+                    </b>
+                    ,{" "}
+                    {t("page-trillion-dollar-security-section-2-1-list-desc-3")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-1-list-title-4"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-1-list-desc-4")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-1-list-title-5"
+                      )}
+                    </b>
+                    ,{" "}
+                    {t("page-trillion-dollar-security-section-2-1-list-desc-5")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-1-list-title-6"
+                      )}
+                    </b>
+                    ,{" "}
+                    {t("page-trillion-dollar-security-section-2-1-list-desc-6")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-1-list-title-7"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-1-list-desc-7")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-1-list-title-8"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-1-list-desc-8")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-1-list-title-9"
+                      )}
+                      .
+                    </b>
+                  </li>
+                </ul>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-2-2-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-2-2-paragraph")}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-2-list-title-1"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-2-list-desc-1"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-2-list-title-2"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-2-list-desc-2"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-2-list-title-3"
-                          )}
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-2-list-desc-3"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-2-list-title-4"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-2-list-desc-4"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-2-list-title-5"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-2-list-desc-5"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-2-list-title-6"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-2-list-desc-6"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-2-2-list-title-7"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-2-2-list-desc-7"
-                        )}
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-2-3-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-2-3-paragraph")}
-                    </p>
-                  </div>
-                </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-2-2-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-2-2-paragraph")}
+                </p>
+                <ul>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-2-list-title-1"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-2-list-desc-1")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-2-list-title-2"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-2-list-desc-2")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-2-list-title-3"
+                      )}
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-2-list-desc-3")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-2-list-title-4"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-2-list-desc-4")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-2-list-title-5"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-2-list-desc-5")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-2-list-title-6"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-2-list-desc-6")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-2-2-list-title-7"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-2-2-list-desc-7")}
+                  </li>
+                </ul>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-2-3-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-2-3-paragraph")}
+                </p>
               </div>
             </section>
 
             {/* Infrastructure & Cloud Security section */}
             <section
               id="infrastructure"
-              className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
+              className="flex flex-col gap-8 lg:flex-row"
             >
               <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
-                <h3 className="mb-4">
+                <h2 className="mb-4">
                   3. {t("page-trillion-dollar-security-infrastructure-title")}
-                </h3>
+                </h2>
                 <p>{t("page-trillion-dollar-security-section-3-intro")}</p>
               </div>
-              <div className="flex-1">
-                <div className="space-y-10">
-                  <div className="space-y-4">
-                    <p>
-                      {t("page-trillion-dollar-security-section-3-paragraph-1")}
-                    </p>
-                  </div>
+              <div className="flow flex-1">
+                <p>
+                  {t("page-trillion-dollar-security-section-3-paragraph-1")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-3-1-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-3-1-paragraph")}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-3-1-list-title-1"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-3-1-list-desc-1"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-3-1-list-title-2"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-3-1-list-desc-2"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-3-1-list-title-3"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-3-1-list-desc-3"
-                        )}
-                      </li>
-                    </ul>
-                    <p>
-                      {t.rich(
-                        "page-trillion-dollar-security-section-3-1-paragraph-2",
-                        {
-                          a: (chunks) => (
-                            <Link href="https://l2beat.com/">{chunks}</Link>
-                          ),
-                        }
-                      )}
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-3-2-title")}
-                    </h4>
-                    <p>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-3-1-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-3-1-paragraph")}
+                </p>
+                <ul>
+                  <li>
+                    <b>
                       {t(
-                        "page-trillion-dollar-security-section-3-2-paragraph-1"
+                        "page-trillion-dollar-security-section-3-1-list-title-1"
                       )}
-                    </p>
-                    <p>
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-3-1-list-desc-1")}
+                  </li>
+                  <li>
+                    <b>
                       {t(
-                        "page-trillion-dollar-security-section-3-2-paragraph-2"
+                        "page-trillion-dollar-security-section-3-1-list-title-2"
                       )}
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-3-3-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-3-3-paragraph")}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        {t("page-trillion-dollar-security-section-3-3-list-1")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-3-3-list-2")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-3-3-list-3")}
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-3-4-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-3-4-paragraph")}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-3-4-list-title-1"
-                          )}
-                        </b>
-                        ,{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-3-4-list-desc-1"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-3-4-list-title-2"
-                          )}
-                        </b>
-                        ,{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-3-4-list-desc-2"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-3-4-list-title-3"
-                          )}
-                        </b>
-                        ,{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-3-4-list-desc-3"
-                        )}
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-3-5-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-3-5-paragraph")}
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-3-6-title")}
-                    </h4>
-                    <p>
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-3-1-list-desc-2")}
+                  </li>
+                  <li>
+                    <b>
                       {t(
-                        "page-trillion-dollar-security-section-3-6-paragraph-1"
+                        "page-trillion-dollar-security-section-3-1-list-title-3"
                       )}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        {t("page-trillion-dollar-security-section-3-6-list-1")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-3-6-list-2")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-3-6-list-3")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-3-6-list-4")}
-                      </li>
-                    </ul>
-                    <p>
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-3-1-list-desc-3")}
+                  </li>
+                </ul>
+                <p>
+                  {t.rich(
+                    "page-trillion-dollar-security-section-3-1-paragraph-2",
+                    {
+                      a: (chunks) => (
+                        <Link href="https://l2beat.com/">{chunks}</Link>
+                      ),
+                    }
+                  )}
+                </p>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-3-2-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-3-2-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-3-2-paragraph-2")}
+                </p>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-3-3-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-3-3-paragraph")}
+                </p>
+                <ul>
+                  <li>
+                    {t("page-trillion-dollar-security-section-3-3-list-1")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-3-3-list-2")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-3-3-list-3")}
+                  </li>
+                </ul>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-3-4-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-3-4-paragraph")}
+                </p>
+                <ul>
+                  <li>
+                    <b>
                       {t(
-                        "page-trillion-dollar-security-section-3-6-paragraph-2"
+                        "page-trillion-dollar-security-section-3-4-list-title-1"
                       )}
-                    </p>
-                  </div>
-                </div>
+                    </b>
+                    ,{" "}
+                    {t("page-trillion-dollar-security-section-3-4-list-desc-1")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-3-4-list-title-2"
+                      )}
+                    </b>
+                    ,{" "}
+                    {t("page-trillion-dollar-security-section-3-4-list-desc-2")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-3-4-list-title-3"
+                      )}
+                    </b>
+                    ,{" "}
+                    {t("page-trillion-dollar-security-section-3-4-list-desc-3")}
+                  </li>
+                </ul>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-3-5-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-3-5-paragraph")}
+                </p>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-3-6-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-3-6-paragraph-1")}
+                </p>
+                <ul>
+                  <li>
+                    {t("page-trillion-dollar-security-section-3-6-list-1")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-3-6-list-2")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-3-6-list-3")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-3-6-list-4")}
+                  </li>
+                </ul>
+                <p>
+                  {t("page-trillion-dollar-security-section-3-6-paragraph-2")}
+                </p>
               </div>
             </section>
 
             {/* Consensus Protocol section */}
-            <section
-              id="consensus"
-              className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
-            >
+            <section id="consensus" className="flex flex-col gap-8 lg:flex-row">
               <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
-                <h3 className="mb-4">
+                <h2 className="mb-4">
                   4. {t("page-trillion-dollar-security-consensus-title")}
-                </h3>
+                </h2>
                 <p>{t("page-trillion-dollar-security-section-4-intro")}</p>
               </div>
-              <div className="flex-1">
-                <div className="space-y-10">
-                  <div className="space-y-4">
-                    <p>
-                      {t("page-trillion-dollar-security-section-4-paragraph-1")}
-                    </p>
-                  </div>
+              <div className="flow flex-1">
+                <p>
+                  {t("page-trillion-dollar-security-section-4-paragraph-1")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-4-1-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-4-1-paragraph")}
-                    </p>
-                  </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-4-1-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-4-1-paragraph")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-4-2-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-4-2-paragraph")}
-                    </p>
-                  </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-4-2-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-4-2-paragraph")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-4-3-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-4-3-paragraph")}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        {t("page-trillion-dollar-security-section-4-3-list-1")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-4-3-list-2")}
-                      </li>
-                    </ul>
-                  </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-4-3-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-4-3-paragraph")}
+                </p>
+                <ul>
+                  <li>
+                    {t("page-trillion-dollar-security-section-4-3-list-1")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-4-3-list-2")}
+                  </li>
+                </ul>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-4-4-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-4-4-paragraph")}
-                    </p>
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-4-5-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-4-5-paragraph")}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        {t("page-trillion-dollar-security-section-4-5-list-1")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-4-5-list-2")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-4-5-list-3")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-4-5-list-4")}
-                      </li>
-                    </ul>
-                  </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-4-4-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-4-4-paragraph")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-4-6-title")}
-                    </h4>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-4-6-paragraph-1"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-4-6-paragraph-2"
-                      )}
-                    </p>
-                  </div>
-                </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-4-5-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-4-5-paragraph")}
+                </p>
+                <ul>
+                  <li>
+                    {t("page-trillion-dollar-security-section-4-5-list-1")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-4-5-list-2")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-4-5-list-3")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-4-5-list-4")}
+                  </li>
+                </ul>
+
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-4-6-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-4-6-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-4-6-paragraph-2")}
+                </p>
               </div>
             </section>
 
             {/* Incident Response & Mitigation section */}
-            <section
-              id="incident"
-              className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
-            >
+            <section id="incident" className="flex flex-col gap-8 lg:flex-row">
               <div className="top-24 flex h-fit shrink-0 flex-col items-start self-start lg:sticky lg:flex lg:w-[400px]">
-                <h3 className="mb-4">
+                <h2 className="mb-4">
                   5. {t("page-trillion-dollar-security-incident-title")}
-                </h3>
+                </h2>
               </div>
-              <div className="flex-1">
-                <div className="space-y-10">
-                  <div className="space-y-4">
-                    <p>
-                      {t("page-trillion-dollar-security-section-5-paragraph-1")}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-5-list-title-1"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-5-list-desc-1"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-5-list-title-2"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-5-list-desc-2"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-5-list-title-3"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-5-list-desc-3"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-5-list-title-4"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-5-list-desc-4"
-                        )}
-                      </li>
-                      <li>
-                        <b>
-                          {t(
-                            "page-trillion-dollar-security-section-5-list-title-5"
-                          )}
-                          .
-                        </b>{" "}
-                        {t(
-                          "page-trillion-dollar-security-section-5-list-desc-5"
-                        )}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+              <div className="flow flex-1">
+                <p>
+                  {t("page-trillion-dollar-security-section-5-paragraph-1")}
+                </p>
+                <ul>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-5-list-title-1"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-5-list-desc-1")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-5-list-title-2"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-5-list-desc-2")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-5-list-title-3"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-5-list-desc-3")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-5-list-title-4"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-5-list-desc-4")}
+                  </li>
+                  <li>
+                    <b>
+                      {t(
+                        "page-trillion-dollar-security-section-5-list-title-5"
+                      )}
+                      .
+                    </b>{" "}
+                    {t("page-trillion-dollar-security-section-5-list-desc-5")}
+                  </li>
+                </ul>
               </div>
             </section>
 
             {/* Social layer and governance section */}
-            <section
-              id="social"
-              className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
-            >
+            <section id="social" className="flex flex-col gap-8 lg:flex-row">
               <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
-                <h3 className="mb-4">
+                <h2 className="mb-4">
                   6. {t("page-trillion-dollar-security-social-title")}
-                </h3>
+                </h2>
                 <p>{t("page-trillion-dollar-security-section-6-intro")}</p>
               </div>
-              <div className="flex-1">
-                <div className="space-y-10">
-                  <div className="space-y-4">
-                    <p>
-                      {t("page-trillion-dollar-security-section-6-paragraph-1")}
-                    </p>
-                  </div>
+              <div className="flow flex-1">
+                <p>
+                  {t("page-trillion-dollar-security-section-6-paragraph-1")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-6-1-title")}
-                    </h4>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-6-1-paragraph-1"
-                      )}
-                      <br />
-                      {t(
-                        "page-trillion-dollar-security-section-6-1-paragraph-2"
-                      )}
-                    </p>
-                    <ul className="mt-2 ml-6 list-disc">
-                      <li>
-                        {t("page-trillion-dollar-security-section-6-1-list-1")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-6-1-list-2")}
-                      </li>
-                      <li>
-                        {t("page-trillion-dollar-security-section-6-1-list-3")}
-                      </li>
-                    </ul>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-6-1-paragraph-3"
-                      )}
-                    </p>
-                  </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-6-1-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-6-1-paragraph-1")}
+                  <br />
+                  {t("page-trillion-dollar-security-section-6-1-paragraph-2")}
+                </p>
+                <ul>
+                  <li>
+                    {t("page-trillion-dollar-security-section-6-1-list-1")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-6-1-list-2")}
+                  </li>
+                  <li>
+                    {t("page-trillion-dollar-security-section-6-1-list-3")}
+                  </li>
+                </ul>
+                <p>
+                  {t("page-trillion-dollar-security-section-6-1-paragraph-3")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-6-2-title")}
-                    </h4>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-6-2-paragraph-1"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-6-2-paragraph-2"
-                      )}
-                    </p>
-                  </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-6-2-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-6-2-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-6-2-paragraph-2")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-6-3-title")}
-                    </h4>
-                    <p>
-                      {t("page-trillion-dollar-security-section-6-3-paragraph")}
-                    </p>
-                  </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-6-3-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-6-3-paragraph")}
+                </p>
 
-                  <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
-                      {t("page-trillion-dollar-security-section-6-4-title")}
-                    </h4>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-6-4-paragraph-1"
-                      )}
-                    </p>
-                    <p>
-                      {t(
-                        "page-trillion-dollar-security-section-6-4-paragraph-2"
-                      )}
-                    </p>
-                  </div>
-                </div>
+                <h3 className="text-xl">
+                  {t("page-trillion-dollar-security-section-6-4-title")}
+                </h3>
+                <p>
+                  {t("page-trillion-dollar-security-section-6-4-paragraph-1")}
+                </p>
+                <p>
+                  {t("page-trillion-dollar-security-section-6-4-paragraph-2")}
+                </p>
               </div>
             </section>
           </div>

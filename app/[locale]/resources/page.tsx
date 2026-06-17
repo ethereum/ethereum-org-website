@@ -10,6 +10,7 @@ import Translation from "@/components/Translation"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Stack, VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -127,11 +128,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </div>
                     <h2 className="flex-1 text-start font-black">{label}</h2>
                   </div>
-                  <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-6">
+                  <Grid columns={2} size="wider" className="lg:gap-y-6">
                     {boxes.map(({ title, metric, items, className }) => (
                       <div
                         className={cn(
-                          "overflow-hidden rounded-2xl border shadow-lg",
+                          "overflow-hidden rounded-base border shadow-lg",
                           className
                         )}
                         key={title}
@@ -153,7 +154,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </Grid>
                 </section>
               </Stack>
             ))}

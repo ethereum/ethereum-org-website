@@ -1,25 +1,23 @@
 ---
-title: "Missão e visão"
+title: Missão e visão
 lang: pt-br
-description: "A missão e visão do Programa de Tradução do ethereum.org"
+description: A missão e visão do Programa de Tradução do ethereum.org
 ---
 
-# Missão e visão {#mission-and-vision}
+A comunidade Ethereum tem como objetivo ser global e inclusiva, mas grande parte de seu conteúdo atende apenas a falantes de inglês, deixando de fora os 6 bilhões de não falantes de inglês do mundo. Para que o ethereum.org atue como o portal para o Ethereum para a comunidade mundial, acreditamos que fornecer conteúdo sobre o Ethereum em seus idiomas nativos para não falantes de inglês é essencial.
 
-O objetivo da comunidade Ethereum é global e inclusiva, mas grande parte do seu conteúdo apenas atende aos falantes da língua inglesa, deixando de fora os 6 bilhões de pessoas no mundo que não falam inglês. O objetivo do ethereum.org é servir como um portal do Ethereum para a comunidade mundial. Por isso, acreditamos que é essencial fornecer conteúdo aos falantes não nativos de língua inglesa.
-
-O Programa de Tradução do ethereum.org visa tornar o Ethereum acessível para todos, traduzindo o site ethereum.org e outros conteúdos do Ethereum para o maior número de idiomas possível.
+O Programa de Tradução do ethereum.org tem como objetivo tornar o Ethereum acessível a todos, traduzindo o ethereum.org e outros conteúdos do Ethereum para o maior número possível de idiomas.
 
 ## Nossa missão {#our-mission}
 
-- Fornecer versões traduzidas do site para incentivar os visitantes ao redor do mundo a aprender sobre o Ethereum em seus respectivos idiomas
+- Fornecer versões traduzidas do site para capacitar visitantes de todo o mundo a aprender sobre o Ethereum em seu idioma nativo
 - Facilitar a integração de mais membros à comunidade global do Ethereum
-- Permitir compartilhamento mais acessível e inclusivo de informações e conhecimentos sobre o Ethereum
-- Dar autonomia aos membros da comunidade para que contribuam com traduções no Ethereum e deixem sua marca no ecossistema
-- Identificar, conectar e fornecer orientações a colaboradores que procuram participar do ecossistema
+- Permitir um compartilhamento mais acessível e inclusivo de informações e conhecimentos sobre o Ethereum
+- Capacitar os membros da comunidade a contribuir com traduções para o Ethereum e deixar sua marca no ecossistema
+- Identificar, conectar-se e fornecer orientação a colaboradores apaixonados que buscam se envolver no ecossistema
 
 ## Nossa visão {#our-vision}
 
-- Traduzir conteúdo essencial para os membros da comunidade Ethereum do maior número de países e partes do mundo possível
-- Apoiar o compartilhamento de conhecimento de idiomas para criar uma comunidade Ethereum mais bem informada e educada
-- Aumentar a inclusão e acessibilidade do Ethereum removendo as barreiras linguísticas que impedem os falantes de outros idiomas que não o inglês de entrarem no ecossistema
+- Traduzir conteúdo essencial para membros da comunidade Ethereum do maior número possível de países e partes do mundo
+- Apoiar o compartilhamento de conhecimento entre idiomas para criar uma comunidade Ethereum mais bem informada e educada
+- Aumentar a inclusividade e a acessibilidade do Ethereum, removendo as barreiras linguísticas que impedem que não falantes de inglês se juntem ao ecossistema

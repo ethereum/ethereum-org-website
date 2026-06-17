@@ -4,11 +4,12 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tag } from "@/components/ui/tag"
@@ -348,7 +349,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <FoundersPageJsonLD locale={locale} contributors={contributors} />
 
       <div>
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
           heroImg={heroImg}
           title={t("page-founders-title")}
@@ -383,7 +384,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   value={key}
                   className="mt-12 border-0 p-0"
                 >
-                  <div className="grid grid-cols-fill-4 gap-4">
+                  <Grid>
                     {entities.map(
                       ({
                         name,
@@ -441,7 +442,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         </Card>
                       )
                     )}
-                  </div>
+                  </Grid>
                 </TabsContent>
               ))}
             </Tabs>

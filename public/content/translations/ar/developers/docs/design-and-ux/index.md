@@ -1,69 +1,72 @@
 ---
-title: "التصميم وتجربة المستخدم في web3"
-description: "مقدمة في تصميم تجربة المستخدم والبحث في مجال الويب 3 والإيثريوم"
+title: "التصميم وتجربة المستخدم في ⁦Web3⁩"
+description: "مقدمة في تصميم وبحث تجربة المستخدم في مجال ⁦Web3⁩ وإيثيريوم"
 lang: ar
 ---
 
-هل أنت جديد في التصميم باستخدام إيثريوم؟ هذا هو المكان المناسب لك. لقد كتب مجتمع إيثريوم موارد لتعريفك بأساسيات تصميم وبحث web3. ستتعرف على المفاهيم الأساسية التي قد تختلف عن تصميمات التطبيقات الأخرى التي تعرفها.
+هل أنت جديد في التصميم باستخدام إيثيريوم؟ هذا هو المكان المناسب لك. كتب مجتمع إيثيريوم موارد لتعريفك بأساسيات التصميم والبحث في Web3. ستتعرف على المفاهيم الأساسية التي قد تختلف عن تصميمات التطبيقات الأخرى التي اعتدت عليها.
 
-هل تحتاج إلى فهم أكثر أساسية لـ web3 أولاً؟ اطلع على [**مركز التعلم**](/learn/).
+هل تحتاج إلى فهم أساسي أكثر لـ Web3 أولاً؟ تحقق من [**مركز التعلم**](/learn/).
 
-## ابدأ ببحث المستخدمين {#start-with-user-research}
+## ابدأ ببحث المستخدم {#start-with-user-research}
 
-يتجاوز التصميم الفعال إنشاء واجهات مستخدم جذابة بصريًا. وهذا يتطلب الحصول على فهم عميق لاحتياجات المستخدم وأهدافه والعوامل الدافعة. لذلك، نوصي بشدة أن يتبنى جميع المصممين عملية تصميم، مثل [**عملية الماسة المزدوجة**](https://en.wikipedia.org/wiki/Double_Diamond_\(design_process_model\))، لضمان أن يكون عملهم مدروسًا ومقصودًا.
+يتجاوز التصميم الفعال إنشاء واجهات مستخدم جذابة بصريًا. فهو يتضمن اكتساب فهم عميق لاحتياجات المستخدم وأهدافه والعوامل الدافعة له. لذلك، نوصي بشدة أن يتبنى جميع المصممين عملية تصميم، مثل [**عملية الماسة المزدوجة**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>)، لضمان أن يكون عملهم مدروسًا ومقصودًا.
 
-- [ويب3 بحاجة إلى المزيد من باحثي ومصممي تجربة المستخدم](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - نظرة عامة على نضج التصميم الحالي
-- [دليل بسيط لأبحاث تجربة المستخدم في ويب3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - دليل بسيط لكيفية إجراء الأبحاث
-- [كيفية اتخاذ قرارات تجربة المستخدم في ويب3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - نظرة عامة موجزة عن البحث الكمي والنوعي والاختلافات بينهما (فيديو، 6 دقائق)
-- [كونك باحث تجربة مستخدم في ويب3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - وجهة نظر شخصية حول ما يعنيه أن تكون باحث تجربة مستخدم في ويب3
+إذا كنت ترغب في معرفة أكثر نقاط الضعف إلحاحًا في تجربة المستخدم حاليًا، فتحقق من **[خريطة مشكلات تجربة المستخدم الحالية](https://ethux.design/)** هذه.
 
-## دراسات بحثية في ويب3 {#research-in-web3}
+- [يحتاج Web3 إلى المزيد من باحثي ومصممي تجربة المستخدم](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - نظرة عامة على نضج التصميم الحالي
+- [دليل بسيط لبحث تجربة المستخدم في Web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - دليل بسيط حول كيفية إجراء البحث
+- [كيفية التعامل مع قرارات تجربة المستخدم في Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - نظرة عامة موجزة على البحث الكمي والنوعي والاختلافات بينهما (فيديو، <span dir="ltr">6</span> دقائق)
+- [أن تكون باحثًا في تجربة المستخدم في Web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - وجهة نظر شخصية حول طبيعة عمل باحث تجربة المستخدم في Web3
 
-هذه قائمة مختارة من أبحاث المستخدم التي تم إجراؤها في web3 والتي قد تساعد في اتخاذ القرارات المتعلقة بالتصميم والمنتجات أو تعمل كمصدر إلهام لإجراء دراسة خاصة.
+## دراسات بحثية في Web3 {#research-in-web3}
 
-| مجال التركيز                                                      | الاسم                                                                                                                                                                                                                    |
-| :---------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <Tag variant="solid" status="success">تجهيز العملات الرقمية</Tag> | [نبض Reown 2024: مشاعر مستهلكي العملات الرقمية واستخدامها](https://reown.com/blog/unveiling-walletconnects-consumer-crypto-report)                                                                       |
-| <Tag variant="solid" status="success">تجهيز العملات الرقمية</Tag> | [CRADL: تجربة المستخدم في العملة الرقمية](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                          |
-| <Tag variant="solid" status="success">تجهيز العملات الرقمية</Tag> | [CRADL: التجهيز للعملات الرقمية](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                                                   |
-| <Tag variant="solid" status="success">تجهيز العملات الرقمية</Tag> | [تقرير تجربة المستخدم للبيتكوين](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                                                   |
-| <Tag variant="solid" status="success">تجهيز العملات الرقمية</Tag> | [Consensys: حالة تصور ويب3 حول العالم 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                                                      |
-| <Tag variant="solid" status="success">تجهيز العملات الرقمية</Tag> | [NEAR: تسريع الرحلة نحو التبني](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                                                  |
-| <Tag status="tag">التحصيص</Tag>                             | [OpenUX: تجربة مستخدم مشغل عقدة روكيت بول](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)                                                                   |
-| <Tag status="tag">التحصيص</Tag>                             | [التحصيص: الاتجاهات الرئيسية، والاستنتاجات، والتنبؤات - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)            |
-| <Tag status="tag">التحصيص</Tag>                             | [التحصيص متعدد التطبيقات](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20\(MAS\)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf)                                   |
-| <Tag variant="solid" status="error">داو</Tag>                     | [تحديث أبحاث داو لعام 2022: ما الذي يحتاجه منشئو داو؟](https://blog.aragon.org/2022-dao-research-update/)                                                                                                |
-| <Tag status="error">التمويل اللامركزي</Tag>                       | [مجمعات التغطية](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                                                                 |
-| <Tag status="error">التمويل اللامركزي</Tag>                       | [Consensys: تقرير أبحاث مستخدمي التمويل اللامركزي 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                                      |
-| <Tag variant="solid">ميتافيرس</Tag>                               | [ميتافيرس: تقرير أبحاث المستخدمين](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                                                  |
-| <Tag variant="solid">ميتافيرس</Tag>                               | [الذهاب في رحلة سفاري: البحث عن المستخدمين في ميتافيرس](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (فيديو، 27 دقيقة) |
+هذه قائمة منسقة بأبحاث المستخدمين التي أُجريت في Web3 والتي قد تساعد في قرارات التصميم والمنتج أو تعمل كمصدر إلهام لإجراء دراستك الخاصة.
 
-## التصميم لـ ويب3 {#design-for-web3}
+| مجال التركيز                                           | الاسم                                                                                                                                                                               |
+| :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |                                         
+| <Tag variant="solid" status="success">تهيئة الكريبتو</Tag>    | [The Reown Pulse 2024: مشاعر واستخدام مستهلكي الكريبتو](https://reown.com/blog/unveiling-walletconnects-consumer-crypto-report)                                                |
+| <Tag variant="solid" status="success">تهيئة الكريبتو</Tag>    | [CRADL: تجربة المستخدم في العملات المشفرة](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                |
+| <Tag variant="solid" status="success">تهيئة الكريبتو</Tag>    | [CRADL: التهيئة للعملات المشفرة](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                        |
+| <Tag variant="solid" status="success">تهيئة الكريبتو</Tag>    | [تقرير تجربة مستخدم بيتكوين](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                          |
+| <Tag variant="solid" status="success">تهيئة الكريبتو</Tag>    | [كونسينسيس: حالة تصور Web3 حول العالم <span dir="ltr">2023</span>](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                            |
+| <Tag variant="solid" status="success">تهيئة الكريبتو</Tag>    | [NEAR: تسريع الرحلة نحو التبني](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                          |
+| <Tag status="tag">التخزين</Tag>             | [OpenUX: تجربة مستخدم مشغل عقدة Rocket Pool](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)         |
+| <Tag status="tag">التخزين</Tag>             | [التخزين: الاتجاهات الرئيسية، والوجبات الجاهزة، والتوقعات - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo) |
+| <Tag status="tag">التخزين</Tag>             | [تخزين التطبيقات المتعددة](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)         |
+| <Tag variant="solid" status="error">DAO</Tag>                    | [تحديث أبحاث DAO لعام <span dir="ltr">2022</span>: ماذا يحتاج بناة DAO؟](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
+| <Tag status="error">التمويل اللامركزي (DeFi)</Tag>                  | [مجمعات التغطية](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                           |
+| <Tag status="error">التمويل اللامركزي (DeFi)</Tag>                  | [كونسينسيس: تقرير أبحاث مستخدمي التمويل اللامركزي (DeFi) لعام <span dir="ltr">2022</span>](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                            |
+| <Tag variant="solid">الميتافيرس</Tag>             | [الميتافيرس: تقرير أبحاث المستخدمين](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                             |
+| <Tag variant="solid">الميتافيرس</Tag>             | [الذهاب في رحلة سفاري: البحث عن المستخدمين في الميتافيرس](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (فيديو، <span dir="ltr">27</span> دقيقة)  |
 
-- [كتيب تصميم تجربة المستخدم لـ ويب3](https://web3ux.design/) - دليل عملي لتصميم تطبيقات ويب3
-- [مبادئ تصميم ويب3](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - إطار عمل لقواعد تجربة المستخدم للتطبيقات اللامركزية القائمة على البلوك تشين
-- [مبادئ تصميم البلوك تشين](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - الدروس المستفادة من فريق تصميم البلوك تشين في IBM
-- [Neueux.com](https://neueux.com/apps) - مكتبة واجهة المستخدم لتدفقات المستخدمين مع خيارات تصفية متنوعة
-- [أزمة قابلية استخدام ويب3: ما تحتاج إلى معرفته!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - حلقة نقاش حول مخاطر بناء المشاريع التي تركز على المطورين (فيديو، 34 دقيقة)
+## التصميم لـ Web3 {#design-for-web3}
 
-## بدء الاستخدام {#getting-started}
+- [دليل تصميم Web3](https://learnweb3.design/) - مجموعة شاملة من أطر العمل والملاحظات حول مبادئ تجربة مستخدم Web3، وأنماط التمويل اللامركزي (DeFi)، وتصميم الحوكمة، وتجربة مستخدم المحفظة، والتفكير على مستوى البروتوكول للمصممين والمؤسسين
+- [كتيب تصميم تجربة مستخدم Web3](https://web3ux.design/) - دليل عملي لتصميم تطبيقات Web3
+- [مبادئ تصميم Web3](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - إطار عمل لقواعد تجربة المستخدم للتطبيقات اللامركزية (dapps) القائمة على سلسلة الكتل
+- [مبادئ تصميم سلسلة الكتل](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - الدروس المستفادة من فريق تصميم سلسلة الكتل في IBM
+- [Neueux.com](https://neueux.com/apps) - مكتبة واجهة مستخدم لتدفقات المستخدمين مع خيارات تصفية متنوعة
+- [أزمة قابلية الاستخدام في Web3: ما تحتاج إلى معرفته!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - حلقة نقاش حول مخاطر بناء المشاريع التي تركز على المطورين (فيديو، <span dir="ltr">34</span> دقيقة)
 
-- [الاستدلالات لـ ويب3](/developers/docs/design-and-ux/heuristics-for-web3/) - 7 استدلالات لتصميم واجهة ويب3
-- [أفضل ممارسات تصميم DEX](/developers/docs/design-and-ux/dex-design-best-practice/) - دليل لتصميم المنصات اللامركزية
+## البدء {#getting-started}
 
-## دراسات حالة تصميم ويب3 {#design-case-studies}
+- [الاستدلالات لـ Web3](/developers/docs/design-and-ux/heuristics-for-web3/) - <span dir="ltr">7</span> استدلالات لتصميم واجهة Web3
+- [أفضل ممارسات تصميم منصات التداول اللامركزية (DEX)](/developers/docs/design-and-ux/dex-design-best-practice/) - دليل لتصميم منصات التداول اللامركزية
+
+## دراسات حالة لتصميم Web3 {#design-case-studies}
 
 - [Deep Work Studio](https://www.deepwork.studio/case-studies)
-- [بيع رمز غير قابل للاستبدال (إن إف تي) على أوبن سي](https://builtformars.com/case-studies/opensea)
-- [تحليل تفصيلي لتجربة مستخدم المحفظة: كيف تحتاج المحافظ إلى التغيير](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (فيديو، 20 دقيقة)
+- [بيع رمز غير قابل للاستبدال (NFT) على أوبن سي](https://builtformars.com/case-studies/opensea)
+- [تفكيك تجربة مستخدم المحفظة: كيف تحتاج المحافظ إلى التغيير](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (فيديو، <span dir="ltr">20</span> دقيقة)
 
 ## مكافآت التصميم {#bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
 - [هاكاثونات Buildbox](https://app.buidlbox.io/)
-- [هاكاثونات إي تي إتش جلوبال](https://ethglobal.com/)
+- [هاكاثونات ETHGlobal](https://ethglobal.com/)
 
-## منظمات داو والمجتمعات التصميمية {#design-daos-and-communities}
+## مجتمعات ومنظمات التصميم المستقلة اللامركزية (DAOs) {#design-daos-and-communities}
 
 شارك في المنظمات المهنية التي يقودها المجتمع أو انضم إلى مجموعات التصميم لمناقشة الموضوعات والاتجاهات المتعلقة بالتصميم والبحث مع الأعضاء الآخرين.
 
@@ -72,15 +75,15 @@ lang: ar
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
 
-## أنظمة التصميم ومصادر التصميم الأخرى {#design-systems-and-resources}
+## أنظمة التصميم وموارد التصميم الأخرى {#design-systems-and-resources}
 
-- [تصميم أوبتيميزم](https://www.figma.com/@optimism) (فيجما)
-- [نظام تصميم Ethereum.org](https://www.figma.com/@ethdotorg) (فيجما)
-- [Finity، نظام تصميم من بوليغون](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (فيجما)
-- [نظام تصميم Kleros](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (فيجما)
-- [نظام تصميم Safe](https://www.figma.com/community/file/1337417127407098506/safe-design-system) (فيجما)
-- [نظام تصميم إي إن إس](https://thorin.ens.domains/)
+- [تصميم أوبتيميزم](https://www.figma.com/@optimism) (Figma)
+- [نظام تصميم Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)
+- [Finity، نظام تصميم من بوليغون](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
+- [نظام تصميم Kleros](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)
+- [نظام تصميم Safe](https://www.figma.com/community/file/1337417127407098506/safe-design-system) (Figma)
+- [نظام تصميم ENS](https://thorin.ens.domains/)
 - [نظام تصميم Mirror](https://degen-xyz.vercel.app/)
 
-**المقالات والمشاريع المدرجة في هذه الصفحة ليست تأييدات رسمية**، ويتم توفيرها لأغراض إعلامية فقط.
-نضيف الروابط إلى هذه الصفحة بناءً على المعايير الموجودة في [سياسة الإدراج](/contributing/design/adding-design-resources) الخاصة بنا. إذا كنت ترغب في أن نضيف مشروعًا/مقالة، فقم بتحرير هذه الصفحة على [غيت هاب](https://github.com/ethereum/ethereum-org-website/blob/dev/public/content/developers/docs/design-and-ux/index.md).
+**المقالات والمشاريع المدرجة في هذه الصفحة ليست موافقات رسمية**، ويتم توفيرها لأغراض إعلامية فقط.
+نضيف روابط إلى هذه الصفحة بناءً على المعايير الواردة في [سياسة الإدراج](/contributing/design/adding-design-resources) الخاصة بنا. إذا كنت ترغب في أن نضيف مشروعًا/مقالًا، فقم بتعديل هذه الصفحة على [GitHub](https://github.com/ethereum/ethereum-org-website/blob/dev/public/content/developers/docs/design-and-ux/index.md).

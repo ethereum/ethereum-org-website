@@ -29,17 +29,16 @@ summaryPoints:
 
 홈 스테이킹은 더 많은 책임이 따르지만, 자금 및 스테이킹 설정에 대한 최대한의 제어권을 제공합니다.
 
-<CardGrid>
+<Grid>
   <Card title="새로운 ETH 받기" emoji="💸" description="검증자가 온라인일 때 중개인 수수료 없이 프로토콜에서 직접 ETH 보상을 받으세요." />
   <Card title="완전한 제어" emoji="🎛️" description="자신만의 키를 보관하고 위험을 최소화하며 네트워크 건전성과 보안에 가장 잘 기여하는 클라이언트와 하드웨어 조합을 선택하세요. 타사 스테이킹 서비스가 대신 결정해 주기도 하지만 항상 가장 안전한 선택을 하는 것은 아닙니다." />
   <Card title="네트워크 보안" emoji="🔐" description="홈 스테이킹은 가장 영향력 있는 스테이킹 방법입니다. 집에서 자신만의 하드웨어로 검증자를 운영하여 이더리움 프로토콜의 견고성, 탈중앙성, 보안을 강화할 수 있습니다." />
-</CardGrid>
+</Grid>
 
 ## 홈 스테이킹 전 고려사항 {#considerations-before-staking-solo}
 
 홈 스테이킹이 모든 사람에게 접근 가능하고 위험이 없기를 바라지만, 현실은 그렇지 않습니다. ETH를 홈 스테이킹하기로 선택하기 전에 명심해야 할 몇 가지 실용적이고 중요한 고려 사항이 있습니다.
 
-<InfoGrid>
 <ExpandableCard title="필독 자료" eventCategory="SoloStaking" eventName="clicked required reading">
 자체 노드를 운영할 때는 선택한 소프트웨어의 사용법을 배우는 데 시간을 투자해야 합니다. 여기에는 관련 문서를 읽고 해당 개발팀의 소통 채널에 주의를 기울이는 것이 포함됩니다.
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 슬래싱 및 검증자 수명 주기에 대해 더 알아보기</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Mainnet",
   "page-staking-launchpad-widget-start": "{network}에서 스테이킹 시작하기",
   "page-staking-launchpad-widget-span": "네트워크 선택",
-  "page-staking-launchpad-widget-p1": "솔로 검증자는 자금을 위험에 빠뜨리기 전에 {{network}} 테스트넷에서 <strong>설정을 테스트</strong>하고 운영 기술을 확인해야 합니다. 네트워크의 보안을 향상시키고 위험을 제한하므로 <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">소수 클라이언트</a>를 선택하는 것이 중요하다는 점을 기억하세요.",
+  "page-staking-launchpad-widget-p1": "솔로 검증자는 자금을 위험에 노출하기 전에 {network} 테스트넷에서 <strong>자신의 설정을 테스트</strong>하고 운영 기술을 점검해야 합니다. 네트워크의 보안을 향상시키고 위험을 제한하므로 <link>소수 클라이언트</link>를 선택하는 것이 중요하다는 점을 기억하세요.",
   "page-staking-launchpad-widget-p2": "익숙하다면 Staking Launchpad만 사용하여 명령줄에서 필요한 모든 것을 설정할 수 있습니다.",
   "page-staking-launchpad-widget-p3": "더 쉽게 진행하려면, Staking Launchpad와 함께 클라이언트를 쉽게 설정하는 데 도움이 되는 아래의 도구와 가이드를 확인하세요.",
   "page-staking-launchpad-widget-link": "소프트웨어 도구 및 가이드",

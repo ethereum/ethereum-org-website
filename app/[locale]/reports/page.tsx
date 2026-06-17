@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -14,6 +14,8 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import { ExternalLinkIcon } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import { Tag } from "@/components/ui/tag"
@@ -42,6 +44,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
+  const sortedReports = reports.sort((a, b) => {
+    const dateA = new Date(a.dateIso)
+    const dateB = new Date(b.dateIso)
+    return dateB.getTime() - dateA.getTime()
+  })
+
   return (
     <>
       <ReportsPageJsonLD
@@ -50,7 +58,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         reports={reports}
       />
 
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug: "research/reports", startDepth: 1 }}
         heroImg={heroImg}
         title={t("page-reports-title")}
@@ -63,8 +71,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p>{t("page-reports-intro")}</p>
           </div>
 
-          <div className="grid grid-cols-fill-4 gap-4">
-            {reports.map(
+          <Grid>
+            {sortedReports.map(
               ({
                 slug,
                 title,
@@ -123,7 +131,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </Card>
               )
             )}
-          </div>
+          </Grid>
         </Section>
 
         <Section id="suggest" className="space-y-[1.5lh]">
@@ -131,12 +139,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <h2>{t("page-reports-suggest-heading")}</h2>
             <p>{t("page-reports-suggest-body")}</p>
           </div>
-          <ButtonLink
-            href="https://github.com/ethereum/ethereum-org-website/issues/new/choose"
-            variant="outline"
-          >
-            {t("page-reports-suggest-cta")}
-          </ButtonLink>
+          <Flex className="flex-wrap gap-4 max-sm:*:[a]:w-full">
+            <ButtonLink href="https://ethereumadoption.com/reports/eth/">
+              {t("page-reports-more-cta")}
+            </ButtonLink>
+            <ButtonLink
+              href="https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+              variant="outline"
+            >
+              {t("page-reports-suggest-cta")}
+            </ButtonLink>
+          </Flex>
         </Section>
       </MainArticle>
     </>
@@ -154,8 +167,8 @@ export async function generateMetadata(props: {
   return await getMetadata({
     locale,
     slug: ["reports"],
-    title: t("page-reports-metadata-title"),
-    description: t("page-reports-metadata-description"),
+    title: t("page-reports-title"),
+    description: t("page-reports-description"),
     image: "/images/reports/reports-hero.webp",
   })
 }

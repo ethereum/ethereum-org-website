@@ -23,11 +23,11 @@ Alcune pool operano utilizzando contratti intelligenti, in cui i fondi possono e
 
 Oltre ai vantaggi che abbiamo delineato nella nostra [introduzione allo staking](/staking/), fare staking con una pool comporta una serie di vantaggi distinti.
 
-<CardGrid>
+<Grid>
   <Card title="Bassa barriera all'ingresso" emoji="🐟" description="Non sei una balena? Nessun problema. La maggior parte delle pool di staking ti consente di fare staking praticamente con qualsiasi importo di ETH unendo le forze con altri staker, a differenza dello staking in solitaria che richiede 32 ETH." />
   <Card title="Fai staking oggi" emoji=":stopwatch:" description="Fare staking con una pool è facile come uno scambio di token. Non c'è bisogno di preoccuparsi della configurazione dell'hardware e della manutenzione del nodo. Le pool ti consentono di depositare i tuoi ETH, il che permette agli operatori dei nodi di eseguire i validatori. Le ricompense vengono poi distribuite ai contributori meno una commissione per le operazioni del nodo." />
   <Card title="Token di staking" emoji=":droplet:" description="Molte pool di staking forniscono un token che rappresenta un diritto sui tuoi ETH in staking e sulle ricompense che genera. Questo ti consente di utilizzare i tuoi ETH in staking, ad esempio, come collaterale nelle applicazioni DeFi." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

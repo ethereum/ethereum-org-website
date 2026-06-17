@@ -18,6 +18,7 @@ Ethereum.org je neutrální vzdělávací zdroj. Videogalerie je spravována tak
 
 Stránka nezařazuje videa, která primárně propagují konkrétní produkt, token nebo komerční službu.
 
+
 ## Kritéria pro zařazení {#criteria-for-inclusion}
 
 ### Nutné požadavky {#must-haves}
@@ -33,6 +34,7 @@ Stránka nezařazuje videa, která primárně propagují konkrétní produkt, to
 - **Obsahuje přepis** – Videa s přepisy zlepšují přístupnost a SEO. Pokud jej nemáte, tým ethereum.org vám může pomoci s jeho vytvořením.
 - **Z důvěryhodného zdroje** – Obsah od zavedených vzdělavatelů, výzkumníků a zdrojů má prioritu.
 - **Aktuální a nadčasové** – Obsah, který zůstává relevantní v průběhu času, je upřednostňován před materiálem citlivým na čas.
+
 
 ## Jak přidat video {#how-to-add-a-video}
 
@@ -141,6 +143,7 @@ Můžete také použít nové štítky — budou k dispozici pro budoucí seskup
 
 Otevřete pull request s vašimi změnami do větve `dev`. Tým vaši žádost zkontroluje a poskytne zpětnou vazbu.
 
+
 ## Údržba {#maintenance}
 
 Zařazená videa jsou pravidelně kontrolována, aby se zajistilo, že:
@@ -150,6 +153,7 @@ Zařazená videa jsou pravidelně kontrolována, aby se zajistilo, že:
 - Mají funkční odkazy na hosting/YouTube
 
 Pokud si všimnete problému se zařazeným videem, [vytvořte issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) nebo pošlete e-mail na [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Podmínky použití {#terms-of-use}
 

@@ -109,9 +109,9 @@ export const getAttestantPosts = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getBeaconchainData = createCachedGetter(
-  dataLayer.getBeaconchainData,
-  ["beaconchain-data"],
+export const getStakedPercentageData = createCachedGetter(
+  dataLayer.getStakedPercentageData,
+  ["staked-percentage-data"],
   CACHE_REVALIDATE_DAY
 )
 

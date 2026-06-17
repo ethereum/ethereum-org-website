@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Мейннет",
   "page-staking-launchpad-widget-start": "Начать стейкинг в {network}",
   "page-staking-launchpad-widget-span": "Выберите сеть",
-  "page-staking-launchpad-widget-p1": "Ожидается, что соло-валидаторы <strong>протестируют свою установку</strong> и навыки работы в тестовой сети {{network}}, прежде чем рисковать средствами. Помните, что важно выбрать <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">клиент меньшинства</a>, так как это повышает безопасность сети и ограничивает ваши риски.",
+  "page-staking-launchpad-widget-p1": "Соло-валидаторам следует <strong>протестировать свои настройки</strong> и навыки работы в тестовой сети {network}, прежде чем рисковать средствами. Помните, что важно выбрать <link>клиент меньшинства</link>, поскольку это повышает безопасность сети и снижает ваши риски.",
   "page-staking-launchpad-widget-p2": "Если вам это удобно, вы можете настроить все необходимое из командной строки, используя только Staking Launchpad.",
   "page-staking-launchpad-widget-p3": "Чтобы упростить задачу, ознакомьтесь с некоторыми инструментами и руководствами ниже, которые могут помочь вам вместе со Staking Launchpad легко настроить ваши клиенты.",
   "page-staking-launchpad-widget-link": "Программные инструменты и руководство",

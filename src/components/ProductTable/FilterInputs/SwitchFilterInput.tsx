@@ -59,7 +59,7 @@ const SwitchFilterInput = ({
       {description && (
         <FieldDescription
           id={descriptionId}
-          className="ms-8 text-base leading-normal font-normal text-body-medium"
+          className="ps-8 text-base leading-normal font-normal text-body-medium"
         >
           {description}
         </FieldDescription>

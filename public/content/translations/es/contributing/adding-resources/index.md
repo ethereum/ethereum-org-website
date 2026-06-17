@@ -1,22 +1,20 @@
 ---
-title: "Añadir recursos"
-description: "Las políticas que seguimos al añadir recursos a ethereum.org"
+title: Añadir recursos
+description: La política que utilizamos al añadir recursos a ethereum.org
 lang: es
 ---
 
-# Añadir recursos {#adding-resources}
+Queremos asegurarnos de listar los mejores recursos posibles mientras mantenemos a los usuarios seguros y confiados.
 
-Queremos asegurarnos de que incluimos los mejores recursos posibles al tiempo que velamos por la seguridad y confianza de nuestros usuarios.
+Cualquier persona es libre de sugerir nuevos recursos para añadir al panel de recursos en ethereum.org, que actualmente se encuentra en [ethereum.org/resources](/resources/).
 
-Todo el mundo puede sugerir que se añadan nuevos recursos al panel de recursos en ethereum.org, que actualmente se encuentra en [ethereum.org/resources](/resources/).
+Aunque agradecemos las nuevas incorporaciones, los recursos actuales se eligieron en función de la experiencia que intentamos crear para nuestros usuarios. Estos se basan en algunos de nuestros principios de diseño:
 
-Aunque recibimos nuevas inclusiones, los recursos actuales se han seleccionado en función de la experiencia que queremos ofrecer a nuestros usuarios. Estos se basan en algunos de nuestros principios de diseño:
+- _Inspirador_: cualquier cosa en ethereum.org debería ofrecer algo nuevo a los usuarios
+- _Una buena historia_: lo que se lista debería proporcionar un momento de revelación
+- _Creíble_: todo debería ser empresas/proyectos legítimos para minimizar el riesgo para los usuarios
 
-- _Inspirador_: cualquier contenido de ethereum.org debe ofrecer algo nuevo a los usuarios
-- _Una historia con gancho_: lo que se lista debe informar y gustar.
-- _Creíble_: todos deberían ser negocios/proyectos legítimos para minimizar el riesgo para los usuarios
-
-En general, **ethereum.org trata de proporcionar una experiencia introductoria fluida a nuevos usuarios**. Por eso, añadimos recursos basándonos en su:
+En general, **ethereum.org tiene como objetivo proporcionar una experiencia de incorporación fluida para los nuevos usuarios**. Por esa razón, añadimos recursos basándonos en su:
 
 - facilidad de uso
 - precisión
@@ -26,28 +24,28 @@ En general, **ethereum.org trata de proporcionar una experiencia introductoria f
 
 ### Criterios {#criteria}
 
-- **Información de listado honesta y precisa**: cualquier sugerencia de listado debe incluir información honesta y precisa. Los productos que falseen información se eliminarán.
-- **Proyecto activo**: el recurso debería matenerlo un equipo activo para garantizar la calidad y el soporte a los usuarios. Los recursos obsoletos se pueden eliminar.
+- **Información de listado honesta y precisa**: cualquier listado sugerido debe venir con información honesta y precisa. Los productos que falsifiquen información serán eliminados.
+- **Proyecto activo**: el recurso debe ser mantenido por un equipo activo para garantizar la calidad y el soporte a los usuarios. Los recursos desactualizados están sujetos a eliminación.
 
-### Ordenación de productos {#product-ordering}
+### Orden de los productos {#product-ordering}
 
-Nos reservamos el derecho a ordenar productos basándonos en su impacto. Los nuevos productos se añadirán generalmente al final de la lista, a no ser que se especifique lo contrario.
+Nos reservamos el derecho de ordenar los productos en función de su impacto. Por lo general, los nuevos productos se añadirán al final de la lista a menos que se especifique lo contrario.
 
 ## Mantenimiento {#maintenance}
 
-A medida que evoluciona el ecosistema de Ethereum, revisaremos de forma rutinaria nuestro contenido para:
+A medida que el ecosistema de Ethereum evoluciona, revisaremos rutinariamente nuestro contenido para:
 
-- Asegurarse de que todos los recursos listados aún cumplen con nuestros criterios
-- Cerciórese de que no haya productos que hayan sido sugeridos y que cumplan con más de nuestros criterios que los actualmente listados.
+- Asegurarnos de que todos los recursos listados sigan cumpliendo nuestros criterios
+- Verificar que no haya productos sugeridos que cumplan más de nuestros criterios que los que están listados actualmente
 
-Puede ayudar con esta tarea comprobando e informándonos de las conclusiones. [Abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml) o envíe un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org).
+Puedes ayudar con esto revisando y haciéndonoslo saber. [Crea un issue](https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml) o envía un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org).
 
 ---
 
-## Añadir su recurso {#add-your-resource}
+## Añade tu recurso {#add-your-resource}
 
-Si quiere añadir un recurso a ethereum.org y cumple con los criterios, cree una incidencia en GitHub.
+Si quieres añadir un recurso a ethereum.org y cumple con los criterios, crea un issue en GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=resource+📚&template=suggest_resource.yaml">
-  Crear una incidencia
+  Crear un issue
 </ButtonLink>

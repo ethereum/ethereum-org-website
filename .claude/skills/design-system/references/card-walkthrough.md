@@ -141,7 +141,7 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 ```
 
 - For banner images. Default `background="body"` paints a tinted placeholder so loading images don't flash unstyled. Use `background="none"` only when the image will *not* cover the full rectangle and a tint behind it would look wrong.
-- `size` variants: `full | lg | base | sm | thumbnail`. Prefer one of these over `className="h-..."` — the height tokens are part of the design system's vertical rhythm.
+- `size` variants: `full | lg | base | sm | thumbnail-lg | thumbnail`. Prefer one of these over `className="h-..."` — the height tokens are part of the design system's vertical rhythm. `thumbnail-lg` (128px square) and `thumbnail` (64px square) both `shrink-0` for small logo/icon placements above content.
 - `fit="contain"` with a *single* `<Image>` child triggers an auto-blurred-backdrop effect: the same image is cloned, scaled, blurred, and placed behind to fill any letterboxing. If you pass two children, you lose this magic and need to provide your own backdrop.
 - `zoom`: `true` (default) propagates the parent `group/link` hover/focus into an image scale-up; pass `zoom={false}` when the art shouldn't move.
 - Placement:
@@ -162,13 +162,14 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 ### `CardTitle`
 
 ```tsx
-<CardTitle>Default <h3>, bold variant</CardTitle>
-<CardTitle variant="semibold">Smaller, semibold</CardTitle>
+<CardTitle>Default <h3>, text-2xl</CardTitle>
+<CardTitle size="sm">Smaller (text-lg)</CardTitle>
+<CardTitle size="lg">Larger (text-3xl)</CardTitle>
 <CardTitle asChild><h2>Use h2 when nested inside the doc outline requires it</h2></CardTitle>
 ```
 
 - Renders as `<h3>` by default. **You MUST use `asChild` and pass your own semantic tag** when the card sits before the first `<h2>` (or anywhere h3 would break the heading outline). Heading order is an a11y requirement, not a stylistic choice.
-- `variant`: `semibold | bold (default) | black` — different visual weights for different card prominence. Pick by visual hierarchy, not arbitrarily.
+- `size`: `sm (text-lg) | lg (text-3xl)`; omit for the default `text-2xl`. This controls **size only** -- the weight is always `font-black`, inherited from the base heading style. There is no per-weight variant anymore (the old `variant="semibold|bold|black"` API was replaced when headings were standardized on `font-black`).
 - `spacing` controls the gap between the title and the immediately-following `CardParagraph` (uses `:has(+...)`):
   - `quarter` (default): one-quarter of `--content-space`. Tight binding between title and lead paragraph.
   - `none`: zero gap.

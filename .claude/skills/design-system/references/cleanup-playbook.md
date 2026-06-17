@@ -102,11 +102,23 @@ return <div className="bg-white dark:bg-gray-900" />
 <h1>Page Title</h1>  // base.css already styles this
 ```
 
-If you need a specific size that doesn't match `base.css` defaults, override on the heading:
+If you need a heading at a different level's size, reuse the matching `text-h*` utility on the element:
 
 ```tsx
-<h2 className="text-4xl">Custom-sized Heading</h2>
+<h2 className="text-h1">Custom-sized Heading</h2>  // h2 semantics, h1 size
 ```
+
+## `text-3xl lg:text-4xl` (to match a heading size) -> `text-h*`
+
+```tsx
+// Before -- hand-reconstructs h2 sizing; drifts when the scale changes:
+<p className="text-3xl lg:text-4xl">Looks like an h2</p>
+
+// After -- one token, tracks base.css (size + line-height only, no weight):
+<p className="text-h2">Looks like an h2</p>
+```
+
+The `text-h1`-`text-h6` utilities (`src/styles/utilities.css`) are the single source of truth for heading sizing. Anytime the intent is "match heading level N's size," use `text-hN` rather than the raw responsive size classes.
 
 ## `<p className="text-Xxl font-bold">number</p>` -> `BigNumber`
 
@@ -233,19 +245,22 @@ Add the new key to `src/intl/en/[namespace].json`.
 
 > **Data fetching patterns** (Server Component data, caching, sources) are out of scope for this design-system skill. See the `data-layer` skill for canonical fetching guidance.
 
-## `PageHero` -> `ContentHero` (or appropriate Hero variant)
+## `PageHero`: discrete props, not a `content` object
+
+`PageHero` (from `@/components/Hero`) takes discrete props:
 
 ```tsx
-// Before:
-import PageHero from "@/components/PageHero"
-<PageHero header={...} title={...} description={...} />
-
-// After:
-import { ContentHero } from "@/components/Hero"
-<ContentHero {...} />
+import { PageHero } from "@/components/Hero"
+<PageHero
+  header={...}      // small uppercase eyebrow (h1); or use `breadcrumbs` instead
+  heroImg={...}     // omit for a text-only hero
+  title={...}       // large heading
+  description={...}
+  buttons={[...]}   // up to two
+/>
 ```
 
-The shapes are different; you may need to restructure the page slightly. `PageHero` is on the deprecation track.
+Porting an older `content={{ title, header, subtitle, image, alt }}` shape? Mind the field swap: the old `title` was the eyebrow (now `header`), the old `header` was the large heading (now `title`), `image`/`alt` -> `heroImg` (decorative), and `isReverse` is gone (the layout auto-reverses when `heroImg` is present). See `references/page-hero-walkthrough.md`.
 
 ## `BannerNotification` -> `Alert variant="banner"`
 
@@ -395,7 +410,7 @@ export const StakingLayout = ({ children, frontmatter, slug, ... }) => {
   const { t } = useTranslation("page-staking")
   const dropdownLinks = { text: t("..."), items: [ /* ... */ ] }
   const heroProps = { ...frontmatter, breadcrumbs: { slug, startDepth: 1 }, heroImg: { ... } }
-  return <ContentLayout dropdownLinks={dropdownLinks} heroSection={<ContentHero {...heroProps} />}>{children}</ContentLayout>
+  return <ContentLayout dropdownLinks={dropdownLinks} heroSection={<PageHero {...heroProps} />}>{children}</ContentLayout>
 }
 
 // After -- the data lives in a config file, no layout component needed:

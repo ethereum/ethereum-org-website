@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/ethereum-stack/index.md",
+  "generatedAt": "2026-06-16T22:47:17.005Z",
+  "rootHash": "7cf6cfe5c8a4",
+  "tree": {
+    "contentHash": "89d2751776bb",
+    "anchorHash": "7b30f0f2b403",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "52b574852c8e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "9df4e22c8f6a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "02e4c2fa0921",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-virtual-machine": {
+        "contentHash": "f964d1a44749",
+        "anchorHash": "0286a2a0b1f0",
+        "labelHash": "5f4751ec9eef",
+        "children": {
+          "_label": {
+            "contentHash": "5f4751ec9eef",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "b344d80e24a3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "6676f17ddccb",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:4": {
+            "contentHash": "21c9ae610423",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "81dc075c3d55",
+            "anchorHash": "d20c9fa6d21a"
+          },
+          "prose:5": {
+            "contentHash": "ccef91b1689f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "5beb55403a01",
+            "anchorHash": "5c15bd930e41"
+          },
+          "prose:6": {
+            "contentHash": "41987aa25eac",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "smart-contracts": {
+        "contentHash": "5ba6d02322e8",
+        "anchorHash": "34ac82a7f0f7",
+        "labelHash": "c38693ecf904",
+        "children": {
+          "_label": {
+            "contentHash": "c38693ecf904",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c9239b20a918",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:4": {
+            "contentHash": "cbec239d148f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "ad2f7e397e87",
+            "anchorHash": "fcadb84ff2dc"
+          },
+          "prose:5": {
+            "contentHash": "d6f0e33fcfe2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "c40cc25b38bd",
+            "anchorHash": "585d8438b20c"
+          },
+          "prose:6": {
+            "contentHash": "f9015bc4864d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "9cadf4237296",
+            "anchorHash": "8c881c9c51dc"
+          },
+          "prose:7": {
+            "contentHash": "56cc8a466a2c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "link:3",
+          "prose:7"
+        ]
+      },
+      "ethereum-nodes": {
+        "contentHash": "157045d297fb",
+        "anchorHash": "cd9b77da1103",
+        "labelHash": "a360b3b30438",
+        "children": {
+          "_label": {
+            "contentHash": "a360b3b30438",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "f438e0229850",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c8beece22609",
+            "anchorHash": "94d095604d5e"
+          },
+          "prose:3": {
+            "contentHash": "370d56d1b8e7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "376771824ebe",
+            "anchorHash": "191567028ad9"
+          },
+          "prose:4": {
+            "contentHash": "5a7a93acfa77",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "ethereum-client-apis": {
+        "contentHash": "17dee3c358d6",
+        "anchorHash": "444be78c56b4",
+        "labelHash": "8a9beb08beaf",
+        "children": {
+          "_label": {
+            "contentHash": "8a9beb08beaf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "dd59018a82e4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3a2dc0ae21eb"
+          },
+          "prose:5": {
+            "contentHash": "ca978112ca1b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "6276e0372382",
+            "anchorHash": "93ad88bd412d"
+          },
+          "prose:6": {
+            "contentHash": "818b38ebf262",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "18885f27b5af",
+            "anchorHash": "535dcca2ab92"
+          },
+          "prose:7": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "c1ba60ce1358",
+            "anchorHash": "ecb5f8aa681f"
+          },
+          "prose:8": {
+            "contentHash": "9d2a38e23b34",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "inline-code:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "end-user-applications": {
+        "contentHash": "83617273ae09",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "4c5c95501139",
+        "children": {
+          "_label": {
+            "contentHash": "4c5c95501139",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a87c7eb1b552",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "ready-to-choose-your-stack": {
+        "contentHash": "63bde6c945b0",
+        "anchorHash": "04e0b222bb53",
+        "labelHash": "4b295ea54204",
+        "children": {
+          "_label": {
+            "contentHash": "4b295ea54204",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "868cee38383f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d02a400d7736",
+            "anchorHash": "62319d285b0e"
+          },
+          "prose:2": {
+            "contentHash": "fe77cacda80a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "3b927aea4602",
+        "anchorHash": "112d942a8af7",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2bd0dc76fec6",
+            "anchorHash": "1fc27bc738de"
+          },
+          "prose:2": {
+            "contentHash": "0d8c7c05e170",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "ethereum-virtual-machine",
+      "smart-contracts",
+      "ethereum-nodes",
+      "ethereum-client-apis",
+      "end-user-applications",
+      "ready-to-choose-your-stack",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

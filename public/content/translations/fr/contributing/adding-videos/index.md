@@ -18,6 +18,7 @@ Ethereum.org est une ressource éducative et neutre. La galerie vidéo est organ
 
 Le site ne répertorie pas les vidéos qui font principalement la promotion d'un produit spécifique, d'un jeton ou d'un service commercial.
 
+
 ## Critères d'inclusion {#criteria-for-inclusion}
 
 ### Indispensables {#must-haves}
@@ -33,6 +34,7 @@ Le site ne répertorie pas les vidéos qui font principalement la promotion d'un
 - **Possède une transcription** – Les vidéos avec des transcriptions améliorent l'accessibilité et le référencement (SEO). Si vous n'en avez pas, l'équipe d'ethereum.org peut vous aider à en générer une.
 - **Provient d'une source crédible** – Le contenu provenant d'éducateurs, de chercheurs et de sources établis est prioritaire.
 - **Intemporel et toujours d'actualité** – Le contenu qui reste pertinent au fil du temps est préféré au matériel sensible au temps.
+
 
 ## Comment ajouter une vidéo {#how-to-add-a-video}
 
@@ -141,6 +143,7 @@ Vous pouvez également utiliser de nouvelles balises — elles seront disponible
 
 Ouvrez une demande d'extraction (pull request) avec vos modifications vers la branche `dev`. L'équipe examinera votre soumission et vous fera part de ses commentaires.
 
+
 ## Maintenance {#maintenance}
 
 Les vidéos répertoriées sont régulièrement examinées pour s'assurer qu'elles :
@@ -150,6 +153,7 @@ Les vidéos répertoriées sont régulièrement examinées pour s'assurer qu'ell
 - Ont des liens d'hébergement/YouTube fonctionnels
 
 Si vous remarquez un problème avec une vidéo répertoriée, [créez un ticket (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) ou envoyez un e-mail à [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Conditions d'utilisation {#terms-of-use}
 

@@ -18,6 +18,7 @@ O ethereum.org é um recurso educacional neutro. A galeria de vídeos é selecio
 
 O site não lista vídeos que promovem principalmente um produto específico, token ou serviço comercial.
 
+
 ## Critérios de inclusão {#criteria-for-inclusion}
 
 ### Requisitos obrigatórios {#must-haves}
@@ -33,6 +34,7 @@ O site não lista vídeos que promovem principalmente um produto específico, to
 - **Possui uma transcrição** – Vídeos com transcrições melhoram a acessibilidade e o SEO. Se você não tiver uma, a equipe do ethereum.org pode ajudar a gerá-la.
 - **De uma fonte confiável** – Conteúdo de educadores, pesquisadores e fontes estabelecidas recebe prioridade.
 - **Atemporal e duradouro** – Conteúdo que permanece relevante ao longo do tempo é preferido em relação a materiais sensíveis ao tempo.
+
 
 ## Como adicionar um vídeo {#how-to-add-a-video}
 
@@ -141,6 +143,7 @@ Você também pode usar novas tags — elas estarão disponíveis para futuros a
 
 Abra um pull request com suas alterações para a branch `dev`. A equipe revisará seu envio e fornecerá feedback.
 
+
 ## Manutenção {#maintenance}
 
 Os vídeos listados são revisados rotineiramente para garantir que:
@@ -150,6 +153,7 @@ Os vídeos listados são revisados rotineiramente para garantir que:
 - Tenham links de hospedagem/YouTube funcionando
 
 Se você notar um problema com um vídeo listado, [crie uma issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) ou envie um e-mail para [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Termos de uso {#terms-of-use}
 

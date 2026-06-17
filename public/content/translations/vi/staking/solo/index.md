@@ -29,17 +29,16 @@ Một người stake tại nhà sẽ nhận phần thưởng trực tiếp từ 
 
 Stake tại nhà kèm theo trách nhiệm nhưng cung cấp sự kiểm soát tối đa quỹ của bạn và thiết lập Staking.
 
-<CardGrid>
+<Grid>
   <Card title="Kiếm ETH mới" emoji="💸" description="Nhận phần thưởng bằng ETH trực tiếp từ giao thức khi trình xác thực của bạn trực tuyến, không có bên trung gian nào cắt phế." />
   <Card title="Toàn quyền kiểm soát" emoji="🎛️" description="Tự giữ khóa của bạn. Chọn kết hợp máy khách và phần cứng để giảm thiểu rủi ro và góp phần bảo mật mạng lưới. Các dịch vụ đặt cược của bên thứ ba quyết định thay bạn, và họ không phải lúc nào cũng chọn phương án an toàn nhất." />
   <Card title="Bảo mật mạng lưới" emoji="🔐" description="Đặt cược tại nhà là cách đặt cược có tác động lớn nhất. Bằng cách chạy một trình xác thực trên phần cứng của riêng bạn tại nhà, bạn sẽ củng cố sự vững chắc, tính phi tập trung và bảo mật của giao thức Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Những điều cần cân nhắc trước khi đặt cược tại nhà {#considerations-before-staking-solo}
 
 Dù chúng tôi rất mong muốn việc đặt cược tại nhà có thể dễ tiếp cận và không có rủi ro cho mọi người, nhưng thực tế lại không phải như vậy. Có một số cân nhắc thực tế và nghiêm túc cần ghi nhớ trước khi chọn đặt cược ETH tại nhà.
 
-<InfoGrid>
 <ExpandableCard title="Tài liệu cần đọc" eventCategory="SoloStaking" eventName="clicked required reading">
 Khi vận hành nút của riêng mình, bạn nên dành thời gian để tìm hiểu cách sử dụng phần mềm mình đã chọn. Điều này bao gồm việc đọc các tài liệu liên quan và theo dõi các kênh liên lạc của các nhóm phát triển đó.
 
@@ -71,8 +70,6 @@ Khác với các hình phạt do không hoạt động khi ngoại tuyến, <em>
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Thông tin thêm về việc cắt giảm và vòng đời của trình xác thực</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

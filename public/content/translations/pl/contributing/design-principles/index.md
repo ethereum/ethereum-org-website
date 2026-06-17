@@ -1,93 +1,92 @@
 ---
-title: Zasady projektowania
+title: Nasze zasady projektowania
+metaTitle: Zasady projektowania
 lang: pl
-description: "Zasady leżące u podstaw decyzji projektowych i treści na ethereum.org"
+description: Zasady stojące za decyzjami dotyczącymi projektowania i treści na ethereum.org
 ---
 
-# Nasze zasady projektowania {#contributing-to-ethereumorg-}
+<Emoji text=":wave:" size={1} /> Witaj w zasadach projektowania ethereum.org. Jest to część trwającego procesu rozwoju i ulepszania ethereum.org.
 
-<Emoji text=":wave:" size={1} /> Cześć, witaj w zasadach projektowania dla ethereum.org. Jest to część bieżącego procesu ewolucji i ulepszania ethereum.org.
+Nasze zasady kształtują wygląd i działanie witryny oraz znajdujące się na niej treści.
 
-Nasze zasady wpływają na wygląd i odbiór strony oraz na treści, które się na niej znajdują.
-
-Powinieneś je przeczytać, zanim [zaczniesz współtworzyć ethereum.org](/contributing/).
+Warto się z nimi zapoznać, zanim zaczniesz [współtworzyć ethereum.org](/contributing/).
 
 ## Czym są zasady projektowania? {#ways-to-contribute}
 
-Nie martw się, są całkiem proste! **Zasady projektowania** to zbiór wytycznych, do których odnosimy się podczas projektowania (tj. tworzenia, utrzymywania lub aktualizowania) czegoś.
+Bez obaw, są one całkiem proste! **Zasady projektowania** to zestaw wytycznych, do których odwołujemy się podczas projektowania (tj. tworzenia, utrzymywania lub aktualizowania) czegoś.
 
-W kontekście ethereum.org te zasady projektowania są podstawą tego, co chcemy, aby strona reprezentowała i pokazywała światu. Są zarówno aspiracyjne, **jak i** funkcjonalne. Nie chodzi tylko o to, jak strona _wygląda_, ale także jak _działa_, a nawet jak sprawia, że ktoś się _czuje_. Wszystko, od kolorów po układy stron, aż po sposób, w jaki mówimy o Ethereum na stronie, powinno być oparte na tych zasadach.
+W kontekście ethereum.org te zasady projektowania są fundamentem tego, co chcemy, aby witryna reprezentowała i przekazywała światu. Mają one charakter zarówno aspiracyjny, **jak i** funkcjonalny. Nie chodzi tylko o to, jak witryna _wygląda_, ale także jak _działa_, a nawet jakie _uczucia_ wywołuje. Wszystko, od kolorów, przez układy stron, aż po sposób, w jaki mówimy o Ethereum na stronie, powinno opierać się na tych zasadach.
 
 ## Zasady w praktyce {#how-decisions-about-the-site-are-made}
 
-Spójrzmy na przykład. Jedną z zasad jest „Wiarygodność”, co oznacza, że chcemy, aby odwiedzający stronę _czuli_ i _wiedzieli_, że jest ona godna zaufania – tak jak cały ekosystem Ethereum. W ramach tej zasady mamy 3 funkcjonalne „podzasady”, które naszym zdaniem są konkretnymi krokami, które możemy podjąć, aby strona była wiarygodna:
+Spójrzmy na przykład. Jedną z zasad jest „Wiarygodność”, co oznacza, że chcemy, aby odwiedzający witrynę _czuli_ i _wiedzieli_, że jest ona godna zaufania – podobnie jak szerszy ekosystem Ethereum. W ramach tej zasady mamy 3 funkcjonalne „podzasady”, które naszym zdaniem są konkretnymi krokami, jakie możemy podjąć, aby uczynić witrynę wiarygodną:
 
-- _„Świeżość”_, tj. utrzymywanie aktualności treści.
-- _„Dowód społeczny”_, tj. pokazywanie wielkości, różnorodności i aktywności ekosystemu (wiesz: postęp w aktualizacjach Ethereum, DeFi, gry, wszystkie hackathony itp.)
-- _„Spójność”_, tj. spójność w projektowaniu strony oraz w tonie i dokładności tekstu.
+- _„Świeżość”_, czyli dbanie o aktualność treści.
+- _„Społeczny dowód słuszności”_, czyli ukazywanie wielkości, różnorodności i aktywności ekosystemu (wiesz: postępy w aktualizacjach Ethereum, zdecentralizowane finanse (DeFi), gry, wszystkie hackathony itp.)
+- _„Spójność”_, czyli konsekwencja w projektowaniu witryny oraz tonie i dokładności tekstów.
 
-Tak więc, podejmując decyzje projektowe lub dotyczące copywritingu, możemy odnieść się do zasady „Wiarygodności” i zapytać:
+Więc kiedy podejmujemy decyzje projektowe lub copywriterskie, możemy odwołać się do zasady „Wiarygodności” i zapytać:
 
-- _„Czy strona odzwierciedla aktualne informacje?”_
+- _„Czy witryna odzwierciedla aktualne informacje?”_
 - _„Jak i gdzie pokazujemy wielkość i aktywność ekosystemu?”_
-- _„Czy nowe proponowane wkłady od członka społeczności, które przeglądam, są zgodne z obecnym projektem i treścią na stronie?”_
+- _„Czy nowe propozycje zmian od członka społeczności, które właśnie sprawdzam, są spójne z obecnym projektem i tekstami na stronie?”_
 
 ## Zasady projektowania ethereum.org {#contributors}
 
 ### 1. Inspirujące {#1-inspirational}
 
-Strona powinna inspirować użytkowników do marzeń o tym, jak Ethereum może zmienić świat. Powinna motywować ludzi do odkrywania, zabawy i majsterkowania z narzędziami i aplikacjami ekosystemu Ethereum.
+Witryna powinna inspirować użytkowników do marzeń o tym, jak Ethereum może zmienić świat. Powinna motywować ludzi do odkrywania, zabawy i majsterkowania przy narzędziach i aplikacjach ekosystemu Ethereum.
 
-- **Radykalne:** Strona powinna komunikować ambitne cele Ethereum, aby w znaczący sposób zmienić świat. Powinno być jasne, że Ethereum to nie tylko nowy stos technologiczny – to technologia transformacyjna.
-- **Wzmocnienie przez edukację:** Strona powinna edukować ludzi, aby mogli zrozumieć potencjał Ethereum, znaleźć swoje miejsce w ekosystemie i czuć się wzmocnionymi, by w nim uczestniczyć.
+- **Radykalność:** Witryna powinna komunikować ambitne cele Ethereum, polegające na znaczącej zmianie świata. Powinno być jasne, że Ethereum to nie tylko nowy stos technologiczny – to technologia transformacyjna.
+- **Wzmacnianie poprzez edukację:** Witryna powinna edukować ludzi, aby mogli zrozumieć potencjał Ethereum, znaleźć swoje miejsce w ekosystemie i poczuć się zmotywowani do uczestnictwa w nim.
 
 Kierunek wizualny • Treść
 
 ### 2. Uniwersalne {#2-universal}
 
-Ethereum to globalny, zdecentralizowany projekt, a nasza publiczność to odzwierciedla. Strona powinna aspirować do bycia dostępną dla każdego i wrażliwą na wiele kultur świata.
+Ethereum to globalny, zdecentralizowany projekt, a nasi odbiorcy to odzwierciedlają. Witryna powinna aspirować do bycia dostępną dla każdego i wrażliwą na wiele kultur świata.
 
-- **Dostępne:** Strona powinna być zgodna z wytycznymi dotyczącymi dostępności – w tym dla osób o niskiej przepustowości łącza.
-- **Proste:** Strona powinna być prosta i jednoznaczna. Tekst nie powinien używać języka, który może być błędnie zinterpretowany lub utracony w tłumaczeniu.
-- **Ethereum jest wieloaspektowe:** Ethereum to projekt, baza kodu, społeczność i wizja. Ethereum jest cenne dla różnych ludzi z różnych powodów i istnieje wiele sposobów na zaangażowanie.
+- **Dostępność:** Witryna powinna przestrzegać wytycznych dotyczących dostępności – w tym dla osób z połączeniami o niskiej przepustowości.
+- **Bezpośredniość:** Witryna powinna być prosta i jednoznaczna. Teksty nie powinny używać języka, który może zostać źle zinterpretowany lub utracić sens w tłumaczeniu.
+- **Wielowymiarowość Ethereum:** Ethereum to projekt, baza kodu, społeczność i wizja. Ethereum jest wartościowe dla różnych ludzi z różnych powodów i istnieje wiele sposobów na zaangażowanie się.
 
-Systemy pisma • Użycie kolorów • Kierunek wizualny • Treść
+Systemy pisma • Użycie koloru • Kierunek wizualny • Treść
 
-### 3. Dobra opowieść {#3-a-good-story}
+### 3. Dobra historia {#3-a-good-story}
 
-Strona internetowa powinna funkcjonować jak dobra opowieść. Odwiedzający są w podróży, a treść, którą wnosisz, jest jej częścią. Twój wkład powinien wpisywać się w jasną narrację: z początkiem (wprowadzenie/punkt wejścia), środkiem (zbiór nauk i spostrzeżeń) i końcem (link(i) do odpowiednich zasobów lub następnych kroków).
+Witryna powinna działać jak dobra historia. Odwiedzający są w podróży, a treści, które wnosisz, są jej częścią. Twój wkład powinien wpisywać się w jasną narrację: taką z początkiem (wprowadzenie/punkt wejścia), rozwinięciem (zestaw informacji i wniosków) oraz zakończeniem (link(i) do odpowiednich zasobów lub kolejne kroki).
 
-- **Hierarchiczna**: Jasna, hierarchicznie ustrukturyzowana architektura informacji pomaga odwiedzającym ethereum.org poruszać się po stronie „jako opowieści” w dążeniu do osiągnięcia swoich celów.
-- **Odskocznia:** Jesteśmy odskocznią dla każdego, kto szuka odpowiedzi. Nie chcemy zastępować ani być substytutem dla wielu zasobów, które już istnieją. Dajemy odpowiedź i zapewniamy rzetelne kolejne kroki.
+- **Hierarchiczność**: Jasna, hierarchicznie ustrukturyzowana architektura informacji pomaga odwiedzającym ethereum.org poruszać się po witrynie „jak po historii”, gdy dążą do osiągnięcia swoich celów.
+- **Punkt wyjścia:** Jesteśmy punktem wyjścia dla każdego, kto szuka odpowiedzi. Nie chcemy zastępować ani stawać się substytutem wielu już istniejących zasobów. Udzielamy odpowiedzi i wskazujemy wiarygodne kolejne kroki.
 
-Podróże użytkownika • Treść
+Ścieżki użytkowników • Treść
 
 ### 4. Wiarygodne {#4-credible}
 
-Ludzie mogą szukać wprowadzenia do ekosystemu Ethereum lub mogą być sceptykami. Uznaj tę odpowiedzialność w sposobie komunikacji. Upewnij się, że obie grupy odejdą z większym zaufaniem do ekosystemu Ethereum.
+Ludzie mogą szukać wprowadzenia do ekosystemu Ethereum lub mogą być sceptykami. Uznaj tę odpowiedzialność w sposobie komunikacji. Upewnij się, że obie te grupy opuszczą stronę z większym zaufaniem do ekosystemu Ethereum.
 
-- **Świeże:** Zawsze aktualne.
-- **Dowód społeczny:** Pokaż wielkość, różnorodność i aktywność ekosystemu.
-- **Spójne:** Spójność w projektowaniu i treści komunikuje wiarygodność.
+- **Świeżość:** Zawsze na bieżąco.
+- **Społeczny dowód słuszności:** Ukazuj wielkość, różnorodność i aktywność ekosystemu.
+- **Spójność:** Konsekwencja w projektowaniu i treści komunikuje wiarygodność.
 
 Kierunek wizualny • Treść
 
-### 5. Wspólne doskonalenie {#5-collaborative-improvement}
+### 5. Wspólne ulepszanie {#5-collaborative-improvement}
 
-Strona jest produktem wielu współtwórców, tak jak cały ekosystem.
+Witryna jest produktem wielu współtwórców, podobnie jak cały ekosystem.
 
-- **Otwarte:** Świętuj przejrzystość kodu źródłowego, procesów i projektów w całym ekosystemie.
-- **Rozszerzalne:** Modułowość jest kluczowym elementem wszystkiego, co robimy, więc wkład również powinien być modułowy. Podstawowy projekt, kod komponentów i implementacja strony powinny umożliwiać jej łatwe rozszerzanie w przyszłości.
-- **Eksperymentalne:** Nieustannie eksperymentujemy, testujemy i iterujemy.
-- **Wspólne:** Ten projekt łączy nas wszystkich.
-- **Zrównoważone:** Przygotowanie do długoterminowego utrzymania przez społeczność
+- **Otwartość:** Celebruj przejrzystość kodu źródłowego, procesów i projektów w całym ekosystemie.
+- **Rozszerzalność:** Modułowość jest kluczowym elementem wszystkiego, co robimy, dlatego wkład również powinien być modułowy. Główny projekt, kod komponentów i implementacja witryny powinny umożliwiać jej łatwą rozbudowę w przyszłości.
+- **Eksperymentalność:** Stale eksperymentujemy, testujemy i iterujemy.
+- **Współpraca:** Ten projekt łączy nas wszystkich.
+- **Zrównoważony rozwój:** Przygotowanie do długoterminowego utrzymania przez społeczność
 
-Możesz zobaczyć nasze zasady projektowania w działaniu [na całej naszej stronie](/).
+Możesz zobaczyć nasze zasady projektowania w akcji [na całej naszej stronie](/).
 
 ## Przekaż opinię {#give-feedback}
 
-**Podziel się swoją opinią na temat tego dokumentu!** Jedną z naszych proponowanych zasad jest „**Wspólne doskonalenie**”, co oznacza, że chcemy, aby strona była produktem wielu współtwórców. Tak więc w duchu tej zasady chcemy podzielić się tymi zasadami projektowania ze społecznością Ethereum.
+**Podziel się swoją opinią na temat tego dokumentu!** Jedną z naszych proponowanych zasad jest „**Wspólne ulepszanie**”, co oznacza, że chcemy, aby witryna była produktem wielu współtwórców. W duchu tej zasady chcemy podzielić się tymi zasadami projektowania ze społecznością Ethereum.
 
-Chociaż te zasady koncentrują się na stronie ethereum.org, mamy nadzieję, że wiele z nich jest reprezentatywnych dla wartości całego ekosystemu Ethereum. Może nawet zechcesz włączyć niektóre z nich do własnego projektu!
+Chociaż te zasady koncentrują się na witrynie ethereum.org, mamy nadzieję, że wiele z nich odzwierciedla wartości całego ekosystemu Ethereum. Być może zechcesz nawet włączyć niektóre z nich do własnego projektu!
 
-Daj nam znać, co myślisz, na [serwerze Discord](https://discord.gg/ethereum-org) lub [tworząc zgłoszenie](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Podziel się swoimi przemyśleniami na [serwerze Discord](https://discord.gg/ethereum-org) lub [tworząc zgłoszenie](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

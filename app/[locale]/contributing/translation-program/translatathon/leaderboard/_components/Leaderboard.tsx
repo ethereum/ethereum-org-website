@@ -43,8 +43,8 @@ const AvatarWithFallback = ({ username }: { username: string }) => {
 }
 
 export const Leaderboard = () => (
-  <div className="mb-8 w-full max-w-3xl bg-background-highlight shadow-md">
-    <div className="bg-muted text-foreground mb-px flex w-full items-center justify-between p-4">
+  <div className="mb-8 w-full max-w-3xl rounded-base bg-background-highlight shadow-md">
+    <div className="mb-px flex w-full items-center justify-between border-b p-4">
       <div className="flex">
         <div className="w-10 opacity-40">#</div>
         <div className="div-row me-8 flex items-center wrap-break-word">
@@ -69,7 +69,7 @@ export const Leaderboard = () => (
       return (
         <div
           key={index}
-          className="text-foreground hover:rounded-base hover:bg-accent/50 mb-px flex w-full items-center justify-between px-4 py-2 shadow-xs hover:shadow-md"
+          className="mb-px flex w-full items-center justify-between px-4 py-2 shadow-xs hover:bg-background/50 hover:shadow-md"
         >
           <div className="flex">
             <div className="flex w-10 items-center">

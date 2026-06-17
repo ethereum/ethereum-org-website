@@ -26,11 +26,11 @@ Questo non è un sogno lontano: sta accadendo oggi su Ethereum. Mentre le istitu
 
 Per milioni di persone che lavorano all'estero, inviare denaro a casa è una necessità regolare. I servizi di rimessa tradizionali comportano spesso commissioni elevate e tempi di elaborazione lenti. Ethereum offre un'alternativa convincente.
 
-<CardGrid>
+<Grid>
   <Card title="Commissioni più economiche" emoji=":money_with_wings:" description="I servizi di rimessa addebitano in media fino a 14 $ di commissioni. Le transazioni su Ethereum possono spesso essere completate a meno di 0,01 $."/>
   <Card title="Trasferimenti più veloci" emoji="📶" description="I bonifici internazionali richiedono diversi giorni per essere elaborati. Le transazioni su Ethereum vengono regolate in pochi minuti." />
   <Card title="Aperto a chiunque" emoji="🌎" description="Hai solo bisogno di una connessione Internet e di un'app portafoglio per inviare o ricevere Ether." />
-</CardGrid>
+</Grid>
 
 ## Accesso alle valute globali {#access-to-global-currencies}
 

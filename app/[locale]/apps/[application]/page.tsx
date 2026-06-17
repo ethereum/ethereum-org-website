@@ -139,6 +139,8 @@ const Page = async (props: {
     locale as Lang
   )
 
+  const hasChainInfo = (app.networks as ChainName[]).length > 0
+
   const allImages = [
     ...(app.bannerImage ? [app.bannerImage] : []),
     ...app.screenshots,
@@ -189,29 +191,36 @@ const Page = async (props: {
                     </div>
                     <h1 className="mt-0 text-xl lg:text-5xl">{app.name}</h1>
                     <div className="flex flex-col items-start gap-2 lg:flex-row lg:items-center">
-                      <div className="flex flex-row items-center gap-2">
-                        <ChainImages
-                          chains={app.networks as ChainName[]}
-                          className="mt-2"
-                        />
-                        <p className="text-sm text-body-medium">
-                          by {app.parentCompany}
-                        </p>
-                      </div>
-                      <div className="flex flex-row items-center">
-                        <LanguagesIcon className="size-6" />
-                        <p className="text-sm text-body-medium">
-                          {formatStringList(
-                            formatLanguageNames(app.languages),
-                            5
-                          )}{" "}
-                          <SupportedLanguagesTooltip
-                            supportedLanguages={formatLanguageNames(
-                              app.languages
-                            )}
-                          />
-                        </p>
-                      </div>
+                      {(hasChainInfo || app.parentCompany) && (
+                        <div className="flex flex-row items-center gap-2">
+                          {hasChainInfo && (
+                            <ChainImages chains={app.networks as ChainName[]} />
+                          )}
+                          {app.parentCompany && (
+                            <p className="text-sm text-body-medium">
+                              {t("page-apps-by-company", {
+                                company: app.parentCompany,
+                              })}
+                            </p>
+                          )}
+                        </div>
+                      )}
+                      {app.languages.length > 0 && (
+                        <div className="flex flex-row items-center">
+                          <LanguagesIcon className="size-6" />
+                          <p className="text-sm text-body-medium">
+                            {formatStringList(
+                              formatLanguageNames(app.languages),
+                              5
+                            )}{" "}
+                            <SupportedLanguagesTooltip
+                              supportedLanguages={formatLanguageNames(
+                                app.languages
+                              )}
+                            />
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 lg:flex-row">
@@ -341,7 +350,7 @@ const Page = async (props: {
                 app.description
               )}
             </p>
-            <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
+            <div className="flex h-fit w-full flex-col gap-4 rounded-base border bg-background p-8 md:row-span-2 md:w-44">
               <h3 className="text-lg">{t("page-apps-info-title")}</h3>
               <div>
                 <p className="text-sm text-body-medium">
@@ -372,7 +381,7 @@ const Page = async (props: {
 
           {relatedApps.length > 0 && (
             <div className="flex flex-col px-4 py-10 md:px-8">
-              <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-linear-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
+              <div className="flex w-full flex-col items-center gap-8 rounded-base bg-linear-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
                 <h2>{t("page-apps-more-apps-like-this")}</h2>
                 <div className="flex w-full flex-col gap-4 lg:flex-row">
                   {relatedApps.map((relatedApp) => (

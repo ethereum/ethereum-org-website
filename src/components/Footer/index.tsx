@@ -58,7 +58,10 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
     <footer className="px-4 py-4">
       <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light px-4 py-4 md:justify-between">
         <p className="text-sm text-body-medium italic">
-          {t("website-last-updated")}: {lastDeployLocaleTimestamp}
+          {t("website-last-updated")}:{" "}
+          {/* Deploy date changes every release; exclude it from visual diffs
+              so it doesn't flake every page snapshot in Chromatic. */}
+          <span data-chromatic="ignore">{lastDeployLocaleTimestamp}</span>
         </p>
 
         <GoToTopButton label={t("go-to-top")} />
@@ -76,7 +79,7 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
       <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
           <div key={idx}>
-            <h3 className="my-5 text-sm font-bold">{section.title}</h3>
+            <h3 className="my-5 text-sm">{section.title}</h3>
             <List className="m-0 mb-4 list-none text-sm">
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} className="mb-4">

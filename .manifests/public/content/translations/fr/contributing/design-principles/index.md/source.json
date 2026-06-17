@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/design-principles/index.md",
+  "generatedAt": "2026-06-08T08:16:35.889Z",
+  "rootHash": "cabe908bdb9b",
+  "tree": {
+    "contentHash": "7815cbce54a2",
+    "anchorHash": "ce2563a9a642",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "864029c21baa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "748e464b2b49"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:description": {
+        "contentHash": "78c9e2f96eb7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "html-tag:0": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:2": {
+        "contentHash": "fad16c4d4072",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "92e6f8bb7eb8",
+        "anchorHash": "73847946c646"
+      },
+      "prose:3": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ways-to-contribute": {
+        "contentHash": "3eea85d023c9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e13de0ea134b",
+        "children": {
+          "_label": {
+            "contentHash": "e13de0ea134b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2d05443ebe7c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-decisions-about-the-site-are-made": {
+        "contentHash": "9787c2cddb02",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ba2bf8802f55",
+        "children": {
+          "_label": {
+            "contentHash": "ba2bf8802f55",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9d35f621675c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "contributors": {
+        "contentHash": "155c65a522b4",
+        "anchorHash": "c12fad876f52",
+        "labelHash": "48c5ade4a588",
+        "children": {
+          "_label": {
+            "contentHash": "48c5ade4a588",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1-inspirational": {
+            "contentHash": "d7d484f83de8",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "ccfa9199a4d1",
+            "children": {
+              "_label": {
+                "contentHash": "ccfa9199a4d1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "dd83afe1bb5d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "2-universal": {
+            "contentHash": "efcbfee80862",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "bf642dd9926d",
+            "children": {
+              "_label": {
+                "contentHash": "bf642dd9926d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "9dcd17f3e2b1",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "3-a-good-story": {
+            "contentHash": "8156f881b888",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "1dcd1dee384f",
+            "children": {
+              "_label": {
+                "contentHash": "1dcd1dee384f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "15c2de01f9b4",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "4-credible": {
+            "contentHash": "2e3f447913b1",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "a9229e018e74",
+            "children": {
+              "_label": {
+                "contentHash": "a9229e018e74",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "f9d5ce0e0172",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "5-collaborative-improvement": {
+            "contentHash": "ed537ae8f482",
+            "anchorHash": "5eb493ceb97f",
+            "labelHash": "c086adabf66a",
+            "children": {
+              "_label": {
+                "contentHash": "c086adabf66a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "4e6c5813c578",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "a487055de82a",
+                "anchorHash": "8a5edab28263"
+              },
+              "prose:2": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "1-inspirational",
+          "2-universal",
+          "3-a-good-story",
+          "4-credible",
+          "5-collaborative-improvement"
+        ]
+      },
+      "give-feedback": {
+        "contentHash": "8b8dd5980f2d",
+        "anchorHash": "c253fe215386",
+        "labelHash": "9fe6a46e0ba3",
+        "children": {
+          "_label": {
+            "contentHash": "9fe6a46e0ba3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "deccd1530d3b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3a9884e3ad9a",
+            "anchorHash": "d06d348772a4"
+          },
+          "prose:3": {
+            "contentHash": "d082c73ca298",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "dacd2dfa375b",
+            "anchorHash": "92144b06ff14"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:lang",
+      "frontmatter:description",
+      "html-tag:0",
+      "prose:2",
+      "link:1",
+      "prose:3",
+      "ways-to-contribute",
+      "how-decisions-about-the-site-are-made",
+      "contributors",
+      "give-feedback"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

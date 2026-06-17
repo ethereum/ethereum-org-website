@@ -18,6 +18,7 @@ Ethereum.org ni rasilimali ya elimu isiyopendelea upande wowote. Matunzio ya vid
 
 Tovuti haiorodheshi video ambazo kimsingi zinatangaza bidhaa mahususi, tokeni, au huduma ya kibiashara.
 
+
 ## Vigezo vya kujumuishwa {#criteria-for-inclusion}
 
 ### Lazima iwe nazo {#must-haves}
@@ -33,6 +34,7 @@ Tovuti haiorodheshi video ambazo kimsingi zinatangaza bidhaa mahususi, tokeni, a
 - **Ina nakala ya maandishi** – Video zilizo na nakala za maandishi huboresha ufikiaji na SEO. Ikiwa huna, timu ya ethereum.org inaweza kusaidia kutengeneza moja.
 - **Kutoka kwa chanzo cha kuaminika** – Maudhui kutoka kwa waelimishaji, watafiti, na vyanzo vilivyoimarishwa hupewa kipaumbele.
 - **Kwa wakati na ya kudumu** – Maudhui ambayo yanasalia kuwa muhimu kwa muda mrefu hupendelewa zaidi ya nyenzo zinazotegemea wakati.
+
 
 ## Jinsi ya kuongeza video {#how-to-add-a-video}
 
@@ -141,6 +143,7 @@ Unaweza pia kutumia lebo mpya — zitapatikana kwa makundi ya kategoria ya baada
 
 Fungua ombi la kuvuta (pull request) na mabadiliko yako kwenye tawi la `dev`. Timu itakagua wasilisho lako na kutoa maoni.
 
+
 ## Matengenezo {#maintenance}
 
 Video zilizoorodheshwa hukaguliwa mara kwa mara ili kuhakikisha:
@@ -150,6 +153,7 @@ Video zilizoorodheshwa hukaguliwa mara kwa mara ili kuhakikisha:
 - Zina viungo vya kupangisha/YouTube vinavyofanya kazi
 
 Ukigundua tatizo na video iliyoorodheshwa, [unda suala](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) au tuma barua pepe kwa [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Masharti ya matumizi {#terms-of-use}
 

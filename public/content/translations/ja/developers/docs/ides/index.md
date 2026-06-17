@@ -1,14 +1,14 @@
 ---
 title: "統合開発環境 (IDE)"
-description: "Remix、VS Code、人気のプラグインなど、イーサリアム開発のためのウェブベース及びデスクトップIDEについて学ぶ。"
+description: "Remix、VS Code、人気のプラグインなど、イーサリアム開発向けのウェブベースおよびデスクトップIDEについて学びます。"
 lang: ja
 ---
 
-[統合開発環境 (IDE)](https://wikipedia.org/wiki/Integrated_development_environment) のセットアップに関して言えば、イーサリアム上のアプリケーションのプログラミングは、他のソフトウェアプロジェクトのプログラミングと類似しています。 多くの選択肢があるので、最終的には自分の好みに合ったIDEやコードエディタを選んでください。 イーサリアムの開発に最適なIDEは、ほとんどの場合、従来のソフトウェア開発ですでに使用しているIDEです。
+[統合開発環境 (IDE)](https://wikipedia.org/wiki/Integrated_development_environment)のセットアップに関して言えば、イーサリアム上のアプリケーションのプログラミングは、他のソフトウェアプロジェクトのプログラミングと似ています。多くの選択肢があるため、最終的には自分の好みに最も合うIDEやコードエディタを選択してください。イーサリアム開発に最適なIDEは、おそらく従来のソフトウェア開発ですでに使用しているIDEでしょう。
 
 ## ウェブベースのIDE {#web-based-ides}
 
-[ローカル開発環境をセットアップする](/developers/local-environment/)前にコードを試したいのであれば、これらのウェブアプリはイーサリアムのスマートコントラクト開発用にカスタムビルドされています。
+[ローカル開発環境をセットアップ](/developers/local-environment/)する前にコードをいじってみたい場合、これらのウェブアプリはイーサリアムのスマート・コントラクト開発用にカスタムビルドされているため便利です。
 
 **[Remix](https://remix.ethereum.org/)** - **_静的解析機能とテスト用ブロックチェーン仮想マシンを内蔵したウェブベースのIDE_**
 
@@ -20,27 +20,27 @@ lang: ja
 - [ドキュメント](https://chainide.gitbook.io/chainide-english-1/)
 - [ヘルプフォーラム](https://forum.chainide.com/)
 
-**[Replit (Solidityスターター - ベータ版)](https://replit.com/@replit/Solidity-starter-beta)** - **_ホットリロード、エラーチェック、優れたテストネットサポートを備えた、イーサリアム向けのカスタマイズ可能な開発環境_**
+**[Replit (Solidity Starter - ベータ版)](https://replit.com/@replit/Solidity-starter-beta)** - **_ホットリロード、エラーチェック、ファーストクラスのテストネットサポートを備えた、カスタマイズ可能なイーサリアム向け開発環境_**
 
 - [ドキュメント](https://docs.replit.com/)
 
-**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_SolidityとJavaScriptを使用してブラウザ上でスマートコントラクトを記述、実行、デバッグできる高速プロトタイピング環境_**
+**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_ブラウザ上でSolidityとJavaScriptを使用してスマート・コントラクトの記述、実行、デバッグができる高速なプロトタイピング環境_**
 
-**[EthFiddle](https://ethfiddle.com/)** - **_スマートコントラクトの記述、コンパイル、デバッグを可能にするウェブベースのIDE_**
+**[EthFiddle](https://ethfiddle.com/)** - **_スマート・コントラクトの記述、コンパイル、デバッグができるウェブベースのIDE_**
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
 ## デスクトップIDE {#desktop-ides}
 
-ほとんどの定番IDEでは、イーサリアムの開発体験を向上させるプラグインが構築されています。 最低限、[スマートコントラクト言語](/developers/docs/smart-contracts/languages/)のシンタックスハイライトを提供します。
+確立されたIDEの多くは、イーサリアムの開発体験を向上させるためのプラグインを構築しています。少なくとも、[スマート・コントラクト言語](/developers/docs/smart-contracts/languages/)のシンタックスハイライトを提供しています。
 
-**Visual Studio Code -** **_イーサリアムの公式サポートを備えた、プロフェッショナルなクロスプラットフォームIDE_**
+**Visual Studio Code -** **_公式のイーサリアムサポートを備えたプロフェッショナル向けのクロスプラットフォームIDE_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [コードサンプル](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**JetBrains IDEs (IntelliJ IDEA, etc.) -** **_ソフトウェアデベロッパーやチームに不可欠なツール_**
+**JetBrains IDE (IntelliJ IDEAなど) -** **_ソフトウェア開発者やチームにとって不可欠なツール_**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)
@@ -53,12 +53,12 @@ lang: ja
 
 ## プラグインと拡張機能 {#plugins-extensions}
 
-- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Visual Studio Code向けイーサリアムSolidity言語
+- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Visual Studio Code向けのイーサリアムSolidity言語サポート
 - [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - HardhatチームによるSolidityおよびHardhatサポート
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Prettierを使用したコードフォーマッター
 
-## 参考リンク {#further-reading}
+## 参考文献 {#further-reading}
 
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- AlchemyによるイーサリアムIDEのリスト_
 
-_役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
+_役に立つコミュニティリソースをご存知ですか？このページを編集して追加してください！_

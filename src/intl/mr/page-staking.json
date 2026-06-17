@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Mainnet",
   "page-staking-launchpad-widget-start": "{network} वर स्टेकिंग सुरू करा",
   "page-staking-launchpad-widget-span": "नेटवर्क निवडा",
-  "page-staking-launchpad-widget-p1": "सोलो प्रमाणकांनी निधी धोक्यात घालण्यापूर्वी {{network}} टेस्टनेटवर <strong>त्यांच्या सेटअपची चाचणी</strong> आणि ऑपरेशनल कौशल्यांची चाचणी करणे अपेक्षित आहे. लक्षात ठेवा की <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">अल्पसंख्याक क्लायंट</a> निवडणे महत्त्वाचे आहे कारण ते नेटवर्कची सुरक्षा सुधारते आणि तुमचा धोका मर्यादित करते.",
+  "page-staking-launchpad-widget-p1": "निधी धोक्यात घालण्यापूर्वी सोलो प्रमाणकांनी {network} टेस्टनेटवर <strong>त्यांचे सेटअप तपासणे</strong> आणि कार्यप्रणाली कौशल्ये आजमावणे अपेक्षित आहे. लक्षात ठेवा की <link>अल्पसंख्याक क्लायंट</link> निवडणे महत्त्वाचे आहे कारण ते नेटवर्कची सुरक्षा सुधारते आणि तुमची जोखीम मर्यादित करते.",
   "page-staking-launchpad-widget-p2": "जर तुम्हाला ते सोयीस्कर वाटत असेल, तर तुम्ही केवळ Staking Launchpad वापरून कमांड लाइनवरून आवश्यक असलेले सर्व काही सेट करू शकता.",
   "page-staking-launchpad-widget-p3": "गोष्टी सोप्या करण्यासाठी, खालील काही साधने आणि मार्गदर्शक तपासा जे तुम्हाला Staking Launchpad सोबत तुमचे क्लायंट सहजतेने सेट करण्यात मदत करू शकतात.",
   "page-staking-launchpad-widget-link": "सॉफ्टवेअर साधने आणि मार्गदर्शक",

@@ -26,11 +26,11 @@ summaryPoints:
 
 對於數百萬在國外工作的人們來說，匯款回家是一種經常性需求。 傳統匯款服務通常費用昂貴，且處理時間緩慢。 以太坊提供一個更優秀的替代方案。
 
-<CardGrid>
+<Grid>
   <Card title="費用更便宜" emoji=":money_with_wings:" description="匯款服務平均收取高達 14 美元的費用，而以太坊交易通常不到 0.01 美元就能完成。"/>
   <Card title="轉帳更快速" emoji="📶" description="國際電匯需要數天處理，而以太坊交易在幾分鐘內就能完成結算。" />
   <Card title="人人皆可使用" emoji="🌎" description="只需網路連線和錢包應用程式，你就能發送或接收以太幣。" />
-</CardGrid>
+</Grid>
 
 ## 獲取全球貨幣 {#access-to-global-currencies}
 

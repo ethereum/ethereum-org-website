@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Red principal",
   "page-staking-launchpad-widget-start": "Comenzar a hacer staking en {network}",
   "page-staking-launchpad-widget-span": "Elegir red",
-  "page-staking-launchpad-widget-p1": "Se espera que los validadores en solitario <strong>prueben su configuración</strong> y habilidades operativas en la red de prueba {{network}} antes de arriesgar fondos. Recuerde que es importante elegir un <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">cliente minoritario</a> ya que mejora la seguridad de la red y limita su riesgo.",
+  "page-staking-launchpad-widget-p1": "Se espera que los validadores en solitario <strong>prueben su configuración</strong> y habilidades operativas en la red de prueba {network} antes de arriesgar fondos. Recuerde que es importante elegir un <link>cliente minoritario</link>, ya que mejora la seguridad de la red y limita su riesgo.",
   "page-staking-launchpad-widget-p2": "Si se siente cómodo con ello, puede configurar todo lo necesario desde la línea de comandos utilizando únicamente el Staking Launchpad.",
   "page-staking-launchpad-widget-p3": "Para facilitar las cosas, consulte algunas de las herramientas y guías a continuación que pueden ayudarle junto con el Staking Launchpad a configurar sus clientes con facilidad.",
   "page-staking-launchpad-widget-link": "Herramientas de software y guía",

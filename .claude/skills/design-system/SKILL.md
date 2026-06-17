@@ -43,7 +43,7 @@ These are landmines where the code looks reasonable but the pattern is wrong. Th
 - **Cards**: `import { Card } from "@/components/ui/card"` is canonical for app code. The `<Card>` markdown shortcode is backed by `@/components/MarkdownCard` — that wrapper is rarely imported from app code, since composing the `ui/card` parts directly is more flexible.
 - **Tooltips**: `import Tooltip from "@/components/Tooltip"` (mobile-aware, Matomo-tracked, scroll-close). **Not** `import { Tooltip } from "@/components/ui/tooltip"` (that's the bare Radix primitive used internally).
 - **Modals**: `import Modal from "@/components/ui/dialog-modal"` (default export, the high-level convenience) for typical modal needs. `@/components/ui/dialog` is the vanilla shadcn-style primitive for fine-grained Radix control. Same names exported from both files; **do not mix sources within a feature**.
-- **Heroes**: import from `@/components/Hero` (`ContentHero`, `SimpleHero`, `HubHero`, `MdxHero`, `HomeHero`). **Not** `@/components/PageHero` (deprecation track).
+- **Heroes**: import from `@/components/Hero` (`PageHero`, `HubHero`, `MdxHero`, `HomeHero`). `PageHero` is the canonical workhorse, covering both image and text-only page heroes.
 
 ### Stale shadcn token names that don't resolve
 
@@ -63,7 +63,23 @@ Used in 5 places. Don't introduce new uses. Use Tailwind `dark:` variant + seman
 
 ### No `Heading` primitive -- use semantic tags
 
-`base.css` styles `<h1>`-`<h6>` with the right sizes and `font-bold`. Just write `<h1>Title</h1>`. Override the size class on the heading element when really needed (`<h2 className="text-4xl">`). Reinventing with `<div className="text-5xl font-bold">` loses semantics and screen-reader navigation.
+`base.css` styles `<h1>`-`<h6>` with the right sizes and `font-black`. Just write `<h1>Title</h1>`. Override the size on a heading element when really needed (`<h2 className="text-h1">` for an `h2` at `h1` size), but don't re-apply a weight -- a utility-layer `font-bold` silently overrides the base `font-black`. Reinventing with `<div className="text-5xl font-bold">` loses semantics and screen-reader navigation.
+
+### Match a heading size with `text-h1`-`text-h6`, never the raw responsive pair
+
+There are six size utilities -- `text-h1` through `text-h6` (`src/styles/utilities.css`) -- one per heading level. Each bundles the **font-size and line-height** for that level (responsive, e.g. `text-h2` = `text-3xl lg:text-4xl`). `base.css` itself `@apply`s these to the real `<h1>`-`<h6>` tags, so they are the single source of truth for heading sizing.
+
+Whenever you want a non-heading element (or a heading you're resizing) to read at a given heading level's size, use the utility -- **not** the responsive pair it expands to:
+
+```tsx
+// Wrong -- reconstructs h2 sizing by hand; drifts if the scale changes
+<p className="text-3xl lg:text-4xl">Looks like an h2</p>
+
+// Right -- one token, stays in sync with the heading scale
+<p className="text-h2">Looks like an h2</p>
+```
+
+`text-h*` sets size and line-height **only** -- it does *not* set `font-black`. Real headings get their weight from `base.css`; on other elements, set weight separately if you want it.
 
 ### One stray `toLocaleString` in `ui/chart.tsx:241`
 
@@ -80,7 +96,7 @@ Don't add more. Use `numberFormat()`.
 | Button | `import { Button, ButtonLink } from "@/components/ui/buttons/Button"` |
 | Anchor (in prose) | `import InlineLink from "@/components/ui/Link"` (default) |
 | Anchor (CTA with arrow) | `import { LinkWithArrow } from "@/components/ui/Link"` |
-| Page hero | `import { ContentHero, SimpleHero, HubHero, MdxHero } from "@/components/Hero"` |
+| Page hero | `import { PageHero, HubHero, MdxHero } from "@/components/Hero"` |
 | Inline alert | `import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"` |
 | Top-of-page banner | `import { Alert } from "@/components/ui/alert"` then `<Alert variant="banner">` |
 | Big numeric display | `import BigNumber from "@/components/BigNumber"` |

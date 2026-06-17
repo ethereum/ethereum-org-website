@@ -1,5 +1,4 @@
 import { MDXRemoteProps } from "next-mdx-remote"
-import type { HTMLAttributes } from "react"
 
 import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
@@ -13,12 +12,7 @@ import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
-import {
-  Heading1 as MdHeading1,
-  Heading2 as MdHeading2,
-  Heading3 as MdHeading3,
-  Heading4 as MdHeading4,
-} from "@/components/MdComponents"
+import PageActions from "@/components/PageActions"
 import { PieChart } from "@/components/PieChart"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
@@ -31,38 +25,8 @@ import InlineLink from "@/components/ui/Link"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
-import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
 import { addSlashes } from "@/lib/utils/url"
-
-const baseHeadingClasses = "font-bold scroll-mt-40 break-words"
-
-const H1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading1
-    className={cn(baseHeadingClasses, "max-md:mt-0 max-md:text-[2rem]")}
-    {...props}
-  />
-)
-
-const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading2
-    className={cn(
-      baseHeadingClasses,
-      "mt-12 border-b border-[#e5e5e5] pb-2 text-2xl max-md:leading-4xs dark:border-[#333]"
-    )}
-    {...props}
-  />
-)
-
-const baseSubHeadingClasses = "leading-xs font-semibold break-words"
-
-const H3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading3 className={cn(baseSubHeadingClasses, "mt-12")} {...props} />
-)
-
-const H4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading4 className={baseSubHeadingClasses} {...props} />
-)
 
 const BackToTop = (props: ChildOnlyProp) => (
   <div className="display-none mt-12 flex border-t pt-8" {...props}>
@@ -73,10 +37,6 @@ const BackToTop = (props: ChildOnlyProp) => (
 )
 
 export const docsComponents = {
-  h1: H1,
-  h2: H2,
-  h3: H3,
-  h4: H4,
   ...mdxTableComponents,
   ButtonLink,
   Card: MarkdownCard,
@@ -126,25 +86,29 @@ export const DocsLayout = ({
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <SideNav path={addSlashes(slug)} />
-        <MainArticle className="min-w-0 flex-1 px-8 pt-8 pb-8 md:px-16 md:pt-12 md:pb-16">
-          <H1 id="top">{frontmatter.title}</H1>
+        <MainArticle className="flow min-w-0 flex-1 px-8 pt-8 pb-8 md:px-16 md:pt-12 md:pb-16">
+          <h1 id="top">{frontmatter.title}</h1>
+          <PageActions
+            slug={slug}
+            isTranslated={!contentNotTranslated}
+            editPath={absoluteEditPath}
+            hideEditButton={!!frontmatter.hideEditButton}
+            className="-ms-2 mb-10 lg:mb-12"
+          />
+          <TableOfContents
+            items={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+            isMobile
+          />
+          {children}
+          {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           {!frontmatter.hideEditButton && (
             <FileContributors
+              className="my-10 border-t"
               contributors={contributors}
               lastEditLocaleTimestamp={lastEditLocaleTimestamp}
             />
           )}
-          <TableOfContents
-            editPath={absoluteEditPath}
-            items={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
-            hideEditButton={!!frontmatter.hideEditButton}
-            isMobile
-          />
-          <div className="prose prose-lg max-w-none break-words">
-            {children}
-          </div>
-          {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop />
           <FeedbackCard isArticle />
           <DocsNav contentNotTranslated={contentNotTranslated} />
@@ -152,10 +116,8 @@ export const DocsLayout = ({
         {tocItems && (
           <TableOfContents
             className={isPageIncomplete ? "pt-20" : "pt-12"}
-            editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
-            hideEditButton={!!frontmatter.hideEditButton}
           />
         )}
       </div>

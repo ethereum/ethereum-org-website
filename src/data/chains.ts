@@ -1188,6 +1188,17 @@ const chains = [
     chain: "Polynomial",
   },
   {
+    name: "ACME Mainnet Stealth",
+    infoURL: "",
+    chainId: 8224,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ASM",
+  },
+  {
     name: "B3",
     infoURL: "https://b3.fun",
     chainId: 8333,
@@ -2320,6 +2331,17 @@ const chains = [
       decimals: 18,
     },
     chain: "ILT",
+  },
+  {
+    name: "Crynux on Base",
+    infoURL: "https://crynux.io",
+    chainId: 18896214,
+    nativeCurrency: {
+      name: "Crynux",
+      symbol: "CNX",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "DBK Chain",

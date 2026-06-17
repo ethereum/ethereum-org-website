@@ -5,12 +5,14 @@ import { Image } from "@/components/Image"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -20,9 +22,9 @@ import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
 import { ChevronNext } from "../Chevron"
 
+import learnImage from "@/public/images/heroes/guides-hub-hero.jpg"
+import enterpriseImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 import developersImage from "@/public/images/homepage/get-started/developers.png"
-import enterpriseImage from "@/public/images/homepage/get-started/enterprise.png"
-import learnImage from "@/public/images/homepage/get-started/learn.png"
 
 type GetStartedGridProps = {
   className?: string
@@ -104,7 +106,7 @@ const GetStartedGrid = async ({
           </p>
         </div>
 
-        <div className="mx-auto grid w-7xl max-w-full grid-cols-fill-3 gap-8">
+        <Grid columns={3} size="wide" className="mx-auto w-7xl max-w-full">
           {cards.map((card) => (
             <Card
               key={card.title}
@@ -162,14 +164,14 @@ const GetStartedGrid = async ({
                 </ul>
               </CardContent>
               <CardFooter>
-                <p className="inline-flex items-center font-bold text-primary group-hover/link:text-primary-hover">
+                <CardButtonFake>
                   {card.cta}
                   <ChevronNext className="size-5" />
-                </p>
+                </CardButtonFake>
               </CardFooter>
             </Card>
           ))}
-        </div>
+        </Grid>
       </div>
     </Section>
   )

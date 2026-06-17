@@ -29,17 +29,16 @@ Bir bireysel hisseleyici, doğrulayıcısını düzgünce çalışmasını ve ç
 
 Bireysel hisseleme daha çok sorumluluk gerektirir ancak fonlarınız ve hisseleme kurulumunuz üzerinde maksimum kontrol sağlar.
 
-<CardGrid>
+<Grid>
   <Card title="Yeni ETH kazanın" emoji="💸" description="Doğrulayıcınız çevrimiçiyken, hiçbir aracı pay almadan doğrudan protokolden ETH cinsinden ödüller kazanın." />
   <Card title="Tam kontrol" emoji="🎛️" description="Kendi anahtarlarınızı elinizde tutun. Riskinizi en aza indirmenize ve ağın sağlığına ve güvenliğine en iyi şekilde katkıda bulunmanıza olanak tanıyan istemci ve donanım kombinasyonunu seçin. Üçüncü taraf staking hizmetleri bu kararları sizin yerinize verir ve her zaman en güvenli tercihleri yapmazlar." />
   <Card title="Ağ güvenliği" emoji="🔐" description="Evde stake etmek, stake etmenin en etkili yoludur. Evde kendi donanımınızda bir doğrulayıcı çalıştırarak Ethereum protokolünün sağlamlığını, merkeziyetsizliğini ve güvenliğini güçlendirirsiniz." />
-</CardGrid>
+</Grid>
 
 ## Evden stake etme öncesinde dikkat edilmesi gerekenler {#considerations-before-staking-solo}
 
 Evden stake etmenin herkes için erişilebilir ve risksiz olmasını ne kadar istesek de bu gerçek değil. ETH'nizi evden stake etmeyi seçmeden önce akılda tutulması gereken bazı pratik ve ciddi hususlar vardır.
 
-<InfoGrid>
 <ExpandableCard title="Okunması gerekenler" eventCategory="SoloStaking" eventName="clicked required reading">
 Kendi düğümünüzü çalıştırırken, seçtiğiniz yazılımı nasıl kullanacağınızı öğrenmek için biraz zaman ayırmalısınız. Bu, ilgili belgeleri okumayı ve bu geliştirici ekiplerinin iletişim kanallarına aşina olmayı içerir.
 
@@ -71,8 +70,6 @@ Donanım zaman zaman arızalanır, ağ bağlantıları kesilir ve istemci yazıl
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Kesme ve doğrulayıcı yaşam döngüsü hakkında daha fazla bilgi</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

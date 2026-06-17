@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/staking/dvt/index.md",
+  "generatedAt": "2026-06-08T11:07:41.416Z",
+  "rootHash": "eea73d61bda6",
+  "tree": {
+    "contentHash": "69e23a2a5b01",
+    "anchorHash": "f1b4b101dc0d",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "0585efee2b31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "d76673b153b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "3975331d4b50",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "image:0": {
+        "contentHash": "8c524fe832da",
+        "anchorHash": "b18e3622ecc8"
+      },
+      "why-do-we-need-dvt": {
+        "contentHash": "e3806bc158e2",
+        "anchorHash": "e479a394cede",
+        "labelHash": "8f39d3660dd9",
+        "children": {
+          "_label": {
+            "contentHash": "8f39d3660dd9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "security": {
+            "contentHash": "51f515b84bc9",
+            "anchorHash": "5eb493ceb97f",
+            "labelHash": "8f6fb4eb7f42",
+            "children": {
+              "_label": {
+                "contentHash": "8f6fb4eb7f42",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "62a23c82a6e2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "a13bebeb57e1",
+                "anchorHash": "8a5edab28263"
+              },
+              "prose:2": {
+                "contentHash": "3fad2e3ce611",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "no-single-point-of-failure": {
+            "contentHash": "5b1e7c42f1c0",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "fcb2a077949f",
+            "children": {
+              "_label": {
+                "contentHash": "fcb2a077949f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "aee9a2b477fb",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "decentralization": {
+            "contentHash": "ac14f1fa9ec0",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "e8492d3e2f90",
+            "children": {
+              "_label": {
+                "contentHash": "e8492d3e2f90",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "7f2625a11427",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "security",
+          "no-single-point-of-failure",
+          "decentralization"
+        ]
+      },
+      "how-does-dvt-work": {
+        "contentHash": "364b430854df",
+        "anchorHash": "f30400e17e1d",
+        "labelHash": "d9a1fca5e97e",
+        "children": {
+          "_label": {
+            "contentHash": "d9a1fca5e97e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "e4f7bfc17913",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "165326368ad5",
+            "anchorHash": "f705ae6ee364"
+          },
+          "prose:6": {
+            "contentHash": "13ae96852652",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "cb98a46c506e",
+            "anchorHash": "80f8ca9c6c61"
+          },
+          "prose:7": {
+            "contentHash": "c2edd54c602b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "d256c47c0b98",
+            "anchorHash": "35f090d529bd"
+          },
+          "prose:8": {
+            "contentHash": "7004cab1cedd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "fc1045576119",
+            "anchorHash": "27b9865cb417"
+          },
+          "prose:9": {
+            "contentHash": "37f203364da4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "6598e46bd333",
+            "anchorHash": "55935c2515b4"
+          },
+          "prose:10": {
+            "contentHash": "31788937084c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "dvt-use-cases": {
+        "contentHash": "90643538850c",
+        "anchorHash": "002e489a313f",
+        "labelHash": "06dada86a590",
+        "children": {
+          "_label": {
+            "contentHash": "06dada86a590",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2f6aa4730065",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "solo-stakers": {
+            "contentHash": "5d140cd5b866",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "99b82be383a1",
+            "children": {
+              "_label": {
+                "contentHash": "99b82be383a1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "10d3473a8423",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "saas": {
+            "contentHash": "2c3bb0ccd41a",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "1e63b7df1573",
+            "children": {
+              "_label": {
+                "contentHash": "1e63b7df1573",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e833c7dbccff",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "staking-pools": {
+            "contentHash": "b74b6f45f67a",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "d2c3c6c36c0d",
+            "children": {
+              "_label": {
+                "contentHash": "d2c3c6c36c0d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "574865c0fafe",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "solo-stakers",
+          "saas",
+          "staking-pools"
+        ]
+      },
+      "potential-drawbacks-of-using-dvt": {
+        "contentHash": "4764348caef5",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ab398c1ff440",
+        "children": {
+          "_label": {
+            "contentHash": "ab398c1ff440",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "841298e1bd56",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "4a82a9bd017a",
+        "anchorHash": "096c9ad71aa4",
+        "labelHash": "bd2e42f237b3",
+        "children": {
+          "_label": {
+            "contentHash": "bd2e42f237b3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1309a0b92c13",
+            "anchorHash": "164f452ba69f"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "ed5c85702f93",
+            "anchorHash": "d245482cf8f3"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "886d2add1a7f",
+            "anchorHash": "be8e0b952520"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "image:0",
+      "why-do-we-need-dvt",
+      "how-does-dvt-work",
+      "dvt-use-cases",
+      "potential-drawbacks-of-using-dvt",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}
