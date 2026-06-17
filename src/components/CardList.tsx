@@ -7,7 +7,6 @@ import type { MatomoEventOptions } from "@/lib/types"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
 
 import { BaseLink } from "./ui/Link"
@@ -22,7 +21,7 @@ export type CardProps = {
   imageWidth?: number
   alt?: string
   className?: string
-  onClick?: () => void
+  customEventOptions?: MatomoEventOptions
 }
 
 const Row = ({
@@ -33,7 +32,7 @@ const Row = ({
   image,
   className,
   alt,
-  onClick,
+  customEventOptions,
   imageWidth = 20,
   ...props
 }: CardProps) => {
@@ -48,14 +47,18 @@ const Row = ({
         "hover:bg-background-highlight",
         className
       )}
-      onClick={onClick}
       {...props}
     >
       {image && <TwImage src={image} alt={alt ?? ""} width={imageWidth} />}
       <div className="flex flex-1 basis-3/4 flex-col">
         {isLink ? (
           <LinkOverlay asChild>
-            <BaseLink href={link} hideArrow className="text-body no-underline">
+            <BaseLink
+              href={link}
+              hideArrow
+              className="text-body no-underline"
+              customEventOptions={customEventOptions}
+            >
               {title}
             </BaseLink>
           </LinkOverlay>
@@ -80,7 +83,6 @@ const Row = ({
 export type CardListProps = {
   items: CardProps[]
   imageWidth?: number
-  clickHandler?: (idx: string | number) => void
   customEventOptions?: MatomoEventOptions
   className?: string
 }
@@ -88,7 +90,6 @@ export type CardListProps = {
 const CardList = ({
   items,
   imageWidth,
-  clickHandler = () => null,
   customEventOptions,
   className,
 }: CardListProps) => (
@@ -105,17 +106,15 @@ const CardList = ({
 
       return isLink ? (
         <LinkBox key={id || idx} className={itemClasses}>
-          <Row {...listItem} imageWidth={imageWidth} />
+          <Row
+            {...listItem}
+            customEventOptions={customEventOptions}
+            imageWidth={imageWidth}
+          />
         </LinkBox>
       ) : (
         <div key={idx} className={itemClasses}>
-          <Row
-            onClick={() => {
-              customEventOptions && trackCustomEvent(customEventOptions)
-              clickHandler(idx)
-            }}
-            {...listItem}
-          />
+          <Row {...listItem} />
         </div>
       )
     })}
