@@ -1,36 +1,40 @@
 ---
-title: "Infrastructures de développement des dApps"
+title: Frameworks de développement de dapps
 description: Explorez les avantages des frameworks et comparez les options disponibles.
 lang: fr
 ---
 
 ## Introduction aux frameworks {#introduction-to-frameworks}
 
-La construction d'une dApp complète nécessite différentes technologies. Les infrastructures logiciels incluent de nombreuses fonctionnalités ou fournissent des systèmes de plugin pour choisir les outils que vous voulez.
+La création d'une application décentralisée (dapp) complète nécessite
+différentes technologies. Les frameworks logiciels incluent un grand nombre des fonctionnalités
+requises ou fournissent des systèmes de plugins simples pour choisir les outils que vous
+souhaitez.
 
-Ces infrastructures sont livrés avec de nombreuses fonctionnalités prêtes à l'emploi :
+Les frameworks sont livrés avec de nombreuses fonctionnalités prêtes à l'emploi,
+telles que :
 
-- Fonctionnalités pour faire tourner une instance locale de la blockchain.
-- Utilitaires pour compiler et tester vos contrats intelligents.
-- Modules de développement client pour construire votre application orientée utilisateur
-  au sein du même projet/référentiel.
-- Configuration pour se connecter aux réseaux Ethereum et déployer
-  des contrats, que ce soit sur une instance exécutée localement ou sur l'un
-  des réseaux publics d'Ethereum.
-- Distribution d'applications décentralisées : intégrations avec des options de
-  stockage comme IPFS.
+- Des fonctionnalités pour lancer une instance locale de chaîne de blocs.
+- Des utilitaires pour compiler et tester vos contrats intelligents.
+- Des modules complémentaires de développement client pour créer votre application orientée utilisateur
+  au sein du même projet/dépôt.
+- Une configuration pour se connecter aux réseaux Ethereum et déployer des
+  contrats, que ce soit sur une instance exécutée localement ou sur l'un des
+  réseaux publics d'Ethereum.
+- La distribution d'applications décentralisées - des intégrations avec des options de stockage
+  comme IPFS.
 
 ## Prérequis {#prerequisites}
 
-Avant de plonger dans les frameworks, nous vous recommandons de lire d'abord notre introduction aux [dapps](/developers/docs/dapps/) et à la [pile Ethereum](/developers/docs/ethereum-stack/).
+Avant de vous plonger dans les frameworks, nous vous recommandons de lire d'abord notre introduction aux [dapps](/developers/docs/dapps/) et à la [pile Ethereum](/developers/docs/ethereum-stack/).
 
 ## Frameworks disponibles {#available-frameworks}
 
-**Foundry** - **_Foundry est une boîte à outils ultra-rapide, portable et modulaire pour le développement d'applications Ethereum_**
+**Foundry** - **_Foundry est une boîte à outils extrêmement rapide, portable et modulaire pour le développement d'applications Ethereum_**
 
 - [Installer Foundry](https://book.getfoundry.sh/)
 - [Livre Foundry](https://book.getfoundry.sh/)
-- [Chat de la communauté Foundry sur Telegram](https://t.me/foundry_support)
+- [Discussion de la communauté Foundry sur Telegram](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
 **Hardhat -** **_Environnement de développement Ethereum pour les professionnels._**
@@ -38,38 +42,38 @@ Avant de plonger dans les frameworks, nous vous recommandons de lire d'abord not
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_L'outil de développement de contrats intelligents pour les pythonistes, les data scientists et les professionnels de la sécurité._**
+**Ape -** **_L'outil de développement de contrats intelligents pour les développeurs Python, les scientifiques des données et les professionnels de la sécurité._**
 
 - [Documentation](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_Une plateforme pour développer des applications blockchain sur la JVM._**
+**Web3j -** **_Une plateforme pour développer des applications de chaîne de blocs sur la JVM._**
 
 - [Page d'accueil](https://www.web3labs.com/web3j-sdk)
 - [Documentation](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_Bibliothèque Kotlin/Java/Android asynchrone et très performante pour les blockchains basées sur l'EVM._**
+**ethers-kt -** **_Bibliothèque Kotlin/Java/Android asynchrone et haute performance pour les chaînes de blocs basées sur l'EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Exemples](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Créez des applications alimentées par Ethereum avec une seule commande. Fournit un panel d'infrastructures d'interface utilisateur et des modèles DeFi parmi lesquels faire votre choix._**
+**Create Eth App -** **_Créez des applications propulsées par Ethereum avec une seule commande. Livré avec une large offre de frameworks d'interface utilisateur et de modèles de finance décentralisée (DeFi) parmi lesquels choisir._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modèles](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Ethers.js + Hardhat + composants et hooks React pour le web3 : tout ce dont vous avez besoin pour commencer à créer des applications décentralisées basées sur des contrats intelligents._**
+**Scaffold-ETH -** **_Composants et hooks Ethers.js + Hardhat + React pour le Web3 : tout ce dont vous avez besoin pour commencer à créer des applications décentralisées propulsées par des contrats intelligents._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Plateforme de développement Web3 qui permet aux développeurs blockchain de créer, tester, déboguer, surveiller et exploiter des contrats intelligents et d'améliorer l'UX des dapps._**
+**Tenderly -** **_Plateforme de développement Web3 qui permet aux développeurs de chaîne de blocs de créer, tester, déboguer, surveiller et exploiter des contrats intelligents et d'améliorer l'expérience utilisateur (UX) des dapps._**
 
 - [Site Web](https://tenderly.co/)
 - [Documentation](https://docs.tenderly.co/)
 
-**The Graph -** **_The Graph pour interroger efficacement les données de la blockchain._**
+**The Graph -** **_The Graph pour interroger efficacement les données de la chaîne de blocs._**
 
 - [Site Web](https://thegraph.com/)
 - [Tutoriel](/developers/tutorials/the-graph-fixing-web3-data-querying/)
@@ -86,7 +90,7 @@ Avant de plonger dans les frameworks, nous vous recommandons de lire d'abord not
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_Créez des applications web3 qui peuvent interagir avec vos contrats intelligents à l'aide de nos puissants SDK et CLI._**
+**SDK thirdweb -** **_Créez des applications Web3 qui peuvent interagir avec vos contrats intelligents à l'aide de nos puissants SDK et de notre interface en ligne de commande (CLI)._**
 
 - [Documentation](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -97,44 +101,44 @@ Avant de plonger dans les frameworks, nous vous recommandons de lire d'abord not
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Plateforme de développement web3 de niveau entreprise, qui vous permet de créer des applications NFT sur toutes les principales chaînes EVM (et autres)._**
+**Crossmint -** **_Plateforme de développement Web3 de niveau entreprise, qui vous permet de créer des applications NFT sur toutes les principales chaînes EVM (et autres)._**
 
 - [Site Web](https://www.crossmint.com)
 - [Documentation](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
-**Brownie -** **_Environnement de développement et framework de test basé sur Python._**
+**Brownie -** **_Environnement de développement et framework de test basés sur Python._**
 
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-- **Brownie n'est plus développé actuellement**
+- **Brownie n'est actuellement plus maintenu**
 
-**OpenZeppelin SDK -** **_La boîte à outils ultime pour contrats intelligents : une suite d'outils pour vous aider à développer, compiler, mettre à jour, déployer et interagir avec des contrats intelligents._**
+**SDK OpenZeppelin -** **_La boîte à outils ultime pour les contrats intelligents : une suite d'outils pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
+- [SDK OpenZeppelin Defender](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum de la communauté](https://forum.openzeppelin.com/c/support/17)
-- **Le développement de OpenZeppelin SDK a été arrêté**
+- **Le développement du SDK OpenZeppelin est terminé**
 
-**Catapulta -** **_Outil de déploiement de contrats intelligents multi-chaînes, automatise les vérifications dans les explorateurs de blocs, assure le suivi des contrats intelligents déployés et partage les rapports de déploiement, plug-and-play pour les projets Foundry et Hardhat._**
+**Catapulta -** **_Outil de déploiement de contrats intelligents multi-chaînes, automatisez les vérifications dans les explorateurs de blocs, gardez une trace des contrats intelligents déployés et partagez des rapports de déploiement, prêt à l'emploi pour les projets Foundry et Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (par Covalent) -** **_GoldRush propose la suite d'API de données blockchain la plus complète pour les développeurs, les analystes et les entreprises. Que vous construisiez un tableau de bord DeFi, un portefeuille, un robot de trading, un agent d'IA ou une plateforme de conformité, les API de données fournissent un accès rapide, précis et convivial pour les développeurs aux données essentielles en chaîne dont vous avez besoin_**
+**GoldRush (propulsé par Covalent) -** **_GoldRush offre la suite d'API de données de chaîne de blocs la plus complète pour les développeurs, les analystes et les entreprises. Que vous construisiez un tableau de bord DeFi, un portefeuille, un bot de trading, un agent IA ou une plateforme de conformité, les API de données fournissent un accès rapide, précis et convivial pour les développeurs aux données onchain essentielles dont vous avez besoin_**
 
 - [Site Web](https://goldrush.dev/)
 - [Documentation](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Framework Python tout-en-un pour le test de contrats, le fuzzing, le déploiement, l'analyse de vulnérabilités et la navigation dans le code._**
+**Wake -** **_Framework Python tout-en-un pour les tests de contrats, le fuzzing, le déploiement, l'analyse des vulnérabilités et la navigation dans le code._**
 
 - [Page d'accueil](https://getwake.io/)
 - [Documentation](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Extension VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Framework open source, modulaire et agnostique qui permet aux développeurs d'applications décentralisées d'intégrer facilement des identités décentralisées et des justificatifs vérifiables dans leurs applications._**
+**Veramo -** **_Framework open source, modulaire et agnostique qui permet aux développeurs d'applications décentralisées d'intégrer facilement des identités décentralisées et des identifiants vérifiables dans leurs applications._**
 
 - [Page d'accueil](https://veramo.io/)
 - [Documentation](https://veramo.io/docs/basics/introduction)
@@ -142,10 +146,14 @@ Avant de plonger dans les frameworks, nous vous recommandons de lire d'abord not
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [Paquet NPM](https://www.npmjs.com/package/@veramo/core)
 
-## En savoir plus {#further-reading}
+## Lectures complémentaires {#further-reading}
 
-_Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
+_Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
 - [Configurer un environnement de développement local](/developers/local-environment/)
+
+## Tutoriels : Frameworks de développement sur Ethereum {#tutorials}
+
+- [Contrat intelligent Hello World pour les débutants – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Créez et déployez un contrat intelligent hello world à l'aide de Hardhat, puis connectez-le à un frontend._

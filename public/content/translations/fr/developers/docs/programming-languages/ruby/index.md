@@ -1,60 +1,60 @@
 ---
-title: "Ethereum pour les développeurs Ruby"
-description: "Apprendre à développer sur Ethereum en utilisant des projets et des outils basés sur Ruby."
+title: Ethereum pour les développeurs Ruby
+description: Apprenez à développer pour Ethereum en utilisant des projets et des outils basés sur Ruby.
 lang: fr
 incomplete: false
 ---
 
 <FeaturedText>Apprenez à développer pour Ethereum en utilisant des projets et des outils basés sur Ruby.</FeaturedText>
 
-Utilisez Ethereum pour créer des applications décentralisées (ou « dApps ») qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces dApps sont dignes de confiance, c'est-à-dire qu'une fois déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
+Utilisez Ethereum pour créer des applications décentralisées (dapps) qui tirent parti des avantages de la cryptomonnaie et de la technologie de la chaîne de blocs. Ces dapps peuvent être sans tiers de confiance, ce qui signifie qu'une fois déployées sur Ethereum, elles s'exécuteront toujours comme programmé. Elles peuvent contrôler des actifs numériques pour créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune entité ou personne unique ne les contrôle et qu'elles sont presque impossibles à censurer.
 
 ## Premiers pas avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
 
-**Commencer à intégrer Ruby avec Ethereum**
+**Faites vos premiers pas dans l'intégration de Ruby avec Ethereum**
 
-Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
+Besoin d'une introduction plus basique d'abord ? Consultez [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
-- [Blockchain expliquée](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Comprendre les contrats intelligents (https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Écrivez votre premier contrat intelligent (https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Apprenez comment compiler et déployer Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [La chaîne de blocs expliquée](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Comprendre les contrats intelligents](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [Écrire votre premier contrat intelligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [Apprendre à compiler et déployer Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## Articles pour débutants {#beginner-articles}
 
-- [Comprendre enfin les comptes sur Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
-- [Enfin, authentifier les utilisateurs de Rails avec MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
+- [Enfin comprendre les comptes Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
+- [Enfin authentifier les utilisateurs Rails avec MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
 - [Comment se connecter au réseau Ethereum en utilisant Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Comment générer une nouvelle adresse Ethereum en Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
-## Articles intermédiaires {#intermediate-articles}
+## Articles de niveau intermédiaire {#intermediate-articles}
 
-- [Application blockchain avec Ruby](https://www.nopio.com/blog/blockchain-app-ruby/)
+- [Application de chaîne de blocs avec Ruby](https://www.nopio.com/blog/blockchain-app-ruby/)
 - [Utiliser Ruby, connecté à Ethereum, pour exécuter le contrat intelligent](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
 
 ## Projets et outils Ruby {#ruby-projects-and-tools}
 
-### Actif {#active}
+### Actifs {#active}
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _Bibliothèque Ruby et client RPC pour gérer les comptes, les messages et les transactions Ethereum_
-- [keccak.rb](https://github.com/q9f/keccak.rb) - _Le hachage Keccak (SHA3) utilisé par Ethereum_
-- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Implémentation Ruby de Sign-In with Ethereum_
+- [keccak.rb](https://github.com/q9f/keccak.rb) - _Le hash Keccak (SHA3) utilisé par Ethereum_
+- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Implémentation Ruby de Sign-In with Ethereum (SIWE)_
 - [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _Gem Rails qui ajoute des routes de connexion locale SIWE_
 - [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _Exemple SIWE utilisant Ruby on Rails avec un contrôleur personnalisé_
 - [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Stratégie OmniAuth pour Sign In With Ethereum (SIWE)_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _Stratégie OmniAuth pour l'authentification via la propriété de NFT_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Modèle Ethereum on Rails qui permet de connecter MetaMask à Ruby on Rails_
 
-### Archivé / Non maintenu {#archived--no-longer-maintained}
+### Archivés / Plus maintenus {#archived--no-longer-maintained}
 
-- [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _Appeler les méthodes RPC d'un nœud Ethereum avec Ruby_
-- [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _Bibliothèque Ruby pour générer des adresses ETH à partir d'un portefeuille déterministe hiérarchique selon la norme BIP32_
+- [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _Appel de méthodes RPC d'un nœud Ethereum avec Ruby_
+- [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _Bibliothèque Ruby pour générer des adresses ETH à partir d'un portefeuille hiérarchique déterministe selon la norme BIP32_
 - [etherlite](https://github.com/budacom/etherlite) - _Intégration d'Ethereum pour Ruby on Rails_
-- [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _Client Ruby Ethereum utilisant l'interface JSON-RPC pour envoyer des transactions, créer des contrats et interagir avec eux, ainsi qu'une boîte à outils utile pour travailler avec un nœud Ethereum_
+- [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _Client Ethereum Ruby utilisant l'interface JSON-RPC pour envoyer des transactions, créer et interagir avec des contrats, ainsi qu'une boîte à outils utile pour travailler avec un nœud Ethereum_
 - [omniauth-ethereum.rb](https://github.com/q9f/omniauth-ethereum.rb) - _Implémente la stratégie de fournisseur Ethereum pour OmniAuth_
 
-Vous cherchez davantage de ressources ? Consultez [notre page d'accueil pour les développeurs](/developers/).
+Vous cherchez plus de ressources ? Consultez [notre page d'accueil pour les développeurs](/developers/).
 
 ## Contributeurs de la communauté Ruby {#ruby-community-contributors}
 
-Le [groupe Telegram Ethereum Ruby](https://t.me/ruby_eth) héberge une communauté en pleine croissance et constitue la ressource dédiée aux discussions sur l'un des projets ci-dessus et les sujets connexes.
+Le [groupe Telegram Ethereum Ruby](https://t.me/ruby_eth) héberge une communauté en croissance rapide et constitue la ressource dédiée aux discussions sur l'un des projets ci-dessus et les sujets connexes.
