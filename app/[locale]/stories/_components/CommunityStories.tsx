@@ -2,45 +2,51 @@
 
 import { useState } from "react"
 
-import { Story } from "@/lib/types"
+import type { Story } from "@/lib/types"
 
 import StoryCard from "@/components/StoryCard"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
-type StoriesProps = {
+type CommunityStoriesProps = {
   stories: Story[]
 }
 
-const STORIES_SHOWN = 5
+const STORIES_SHOWN = 12
 
-const Stories = ({ stories }: StoriesProps) => {
+const CommunityStories = ({ stories }: CommunityStoriesProps) => {
   const { t } = useTranslation("page-10-year-anniversary")
   const [storiesToShow, setStoriesToShow] = useState(STORIES_SHOWN)
 
   const visibleStories = stories.slice(0, storiesToShow)
 
   return (
-    <div className="flex flex-1 flex-col gap-8">
-      {visibleStories.map((story) => (
-        <StoryCard key={story.name} story={story} />
-      ))}
-      {/* Show more button only if there are more stories to show */}
+    <div className="flex flex-col gap-8">
+      <div className="gap-6 sm:columns-2 lg:columns-3 xl:columns-4">
+        {visibleStories.map((story, index) => (
+          <StoryCard
+            key={`${story.name}-${index}`}
+            story={story}
+            expandable={false}
+            className="mb-6 break-inside-avoid"
+          />
+        ))}
+      </div>
       {storiesToShow < stories.length && (
-        <div className="mt-4 flex justify-center">
+        <div className="flex justify-center">
           <Button
             onClick={() =>
               setStoriesToShow((n) =>
                 Math.min(n + STORIES_SHOWN, stories.length)
               )
             }
+            variant="outline"
             customEventOptions={{
               eventAction: "click",
-              eventName: "10 year anniversary show more stories",
-              eventCategory: "10-year-anniversary",
+              eventName: "stories show more community",
+              eventCategory: "community-stories",
             }}
-            variant="outline"
           >
             {t("page-10-year-stories-show-more")}
           </Button>
@@ -50,4 +56,4 @@ const Stories = ({ stories }: StoriesProps) => {
   )
 }
 
-export default Stories
+export default CommunityStories
