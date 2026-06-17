@@ -1,71 +1,74 @@
 ---
-title: Design i UX w web3
-description: "Wprowadzenie do projektowania UX i badań w przestrzeni web3 i Ethereum"
+title: Projektowanie i UX w Web3
+description: Wprowadzenie do projektowania i badań UX w przestrzeni Web3 i Ethereum
 lang: pl
 ---
 
-Dopiero zaczynasz projektować z Ethereum? To odpowiednie miejsce dla Ciebie. Społeczność Ethereum przygotowała zasoby, które wprowadzą Cię w podstawy projektowania i badań w web3. Poznasz podstawowe pojęcia, które mogą różnić się od innych projektów aplikacji, które znasz.
+Dopiero zaczynasz projektować z Ethereum? To właściwe miejsce dla Ciebie. Społeczność Ethereum przygotowała materiały, które wprowadzą Cię w podstawy projektowania i badań w Web3. Poznasz kluczowe koncepcje, które mogą różnić się od projektów innych aplikacji, z którymi masz do czynienia.
 
-Potrzebujesz najpierw bardziej podstawowej wiedzy o web3? Sprawdź [**Centrum Wiedzy**](/learn/).
+Potrzebujesz najpierw bardziej podstawowego zrozumienia Web3? Sprawdź [**Centrum nauki**](/learn/).
 
 ## Zacznij od badań użytkowników {#start-with-user-research}
 
-Skuteczne projektowanie to coś więcej niż tworzenie atrakcyjnych wizualnie interfejsów użytkownika. Wymaga ono głębokiego zrozumienia potrzeb, celów i czynników motywujących użytkownika. Dlatego gorąco polecamy, aby wszyscy projektanci przyjęli proces projektowy, taki jak [**proces podwójnego diamentu**](https://en.wikipedia.org/wiki/Double_Diamond_\(design_process_model\)), w celu zapewnienia, że ich praca jest przemyślana i celowa.
+Skuteczne projektowanie wykracza poza tworzenie atrakcyjnych wizualnie interfejsów użytkownika. Obejmuje głębokie zrozumienie potrzeb, celów i czynników motywujących użytkownika. Dlatego gorąco polecamy wszystkim projektantom przyjęcie procesu projektowego, takiego jak [**proces podwójnego diamentu (double diamond)**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>), aby upewnić się, że ich praca jest przemyślana i celowa.
 
-- [Web3 potrzebuje więcej badaczy i projektantów UX](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - Przegląd obecnej dojrzałości projektowej
-- [Prosty przewodnik po badaniach UX w web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - Prosty przewodnik, jak prowadzić badania
-- [Jak podchodzić do decyzji UX w Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - Krótki przegląd badań ilościowych i jakościowych oraz różnic między nimi (wideo, 6 min)
-- [Bycie badaczem UX w web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - Osobiste spojrzenie na to, jak to jest być badaczem UX w web3
+Jeśli chcesz zobaczyć, jakie są obecnie najbardziej palące problemy z UX, sprawdź tę **[mapę obecnych problemów z UX](https://ethux.design/)**.
 
-## Badania w web3 {#research-in-web3}
+- [Web3 potrzebuje więcej badaczy i projektantów UX](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) – Przegląd obecnej dojrzałości projektowej
+- [Prosty przewodnik po badaniach UX w Web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) – Prosty przewodnik, jak prowadzić badania
+- [Jak podchodzić do decyzji UX w Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) – Krótki przegląd badań ilościowych i jakościowych oraz różnic między nimi (wideo, 6 min)
+- [Bycie badaczem UX w Web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) – Osobiste spojrzenie na to, jak to jest być badaczem UX w Web3
 
-To jest wybrana lista badań użytkowników przeprowadzonych w web3, która może pomóc w podejmowaniu decyzji projektowych i produktowych lub posłużyć jako inspiracja do przeprowadzenia własnego badania.
+## Badania w Web3 {#research-in-web3}
 
-| Obszar zainteresowania                                             | Nazwa                                                                                                                                                                                                         |
-| :----------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <Tag variant="solid" status="success">Wprowadzanie do krypto</Tag> | [The Reown Pulse 2024: Crypto Consumer Sentiment & Usage](https://reown.com/blog/unveiling-walletconnects-consumer-crypto-report)                                         |
-| <Tag variant="solid" status="success">Wprowadzanie do krypto</Tag> | [CRADL: UX w kryptowalutach](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                            |
-| <Tag variant="solid" status="success">Wprowadzanie do krypto</Tag> | [CRADL: Wprowadzanie do kryptowalut](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                                    |
-| <Tag variant="solid" status="success">Wprowadzanie do krypto</Tag> | [Raport UX Bitcoin](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                                                     |
-| <Tag variant="solid" status="success">Wprowadzanie do krypto</Tag> | [ConSensys: Stan postrzegania Web3 na świecie w 2023 r.](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                              |
-| <Tag variant="solid" status="success">Wprowadzanie do krypto</Tag> | [NEAR: Przyspieszanie drogi do adopcji](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                               |
-| <Tag status="tag">Staking</Tag>                                    | [OpenUX: UX operatora węzła Rocket Pool](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)                                                            |
-| <Tag status="tag">Staking</Tag>                                    | [Staking: Kluczowe trendy, wnioski i prognozy - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)               |
-| <Tag status="tag">Staking</Tag>                                    | [Staking w wielu aplikacjach](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20\(MAS\)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf)                          |
-| <Tag variant="solid" status="error">DAO</Tag>                      | [Aktualizacja badań DAO 2022: Czego potrzebują twórcy DAO?](https://blog.aragon.org/2022-dao-research-update/)                                                                                |
-| <Tag status="error">DeFi</Tag>                                     | [Pule ubezpieczeniowe](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                                                |
-| <Tag status="error">DeFi</Tag>                                     | [ConSensys: Raport z badań użytkowników DeFi 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                                |
-| <Tag variant="solid">Metawersum</Tag>                              | [Metawersum: Raport z badań użytkowników](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                                |
-| <Tag variant="solid">Metawersum</Tag>                              | [Na safari: Badanie użytkowników w metawersum](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (wideo, 27 min) |
+Oto wyselekcjonowana lista badań użytkowników przeprowadzonych w Web3, która może pomóc w podejmowaniu decyzji projektowych i produktowych lub posłużyć jako inspiracja do przeprowadzenia własnego badania.
 
-## Projektowanie dla web3 {#design-for-web3}
+| Obszar zainteresowania                                  | Nazwa                                                                                                                                                                              |
+| :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |                                         
+| <Tag variant="solid" status="success">Onboarding krypto</Tag>    | [The Reown Pulse 2024: Nastroje i użytkowanie krypto przez konsumentów](https://reown.com/blog/unveiling-walletconnects-consumer-crypto-report)                                                |
+| <Tag variant="solid" status="success">Onboarding krypto</Tag>    | [CRADL: UX w kryptowalutach](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                |
+| <Tag variant="solid" status="success">Onboarding krypto</Tag>    | [CRADL: Onboarding do kryptowalut](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                        |
+| <Tag variant="solid" status="success">Onboarding krypto</Tag>    | [Raport UX Bitcoina](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                          |
+| <Tag variant="solid" status="success">Onboarding krypto</Tag>    | [ConsenSys: Stan postrzegania Web3 na świecie w 2023 r.](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                            |
+| <Tag variant="solid" status="success">Onboarding krypto</Tag>    | [NEAR: Przyspieszenie drogi do adopcji](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                          |
+| <Tag status="tag">Staking</Tag>             | [OpenUX: UX operatora węzła Rocket Pool](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)         |
+| <Tag status="tag">Staking</Tag>             | [Staking: Kluczowe trendy, wnioski i przewidywania – Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo) |
+| <Tag status="tag">Staking</Tag>             | [Staking w wielu aplikacjach](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)         |
+| <Tag variant="solid" status="error">DAO</Tag>                    | [Aktualizacja badań DAO 2022: Czego potrzebują twórcy DAO?](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
+| <Tag status="error">DeFi</Tag>                  | [Pule ubezpieczeniowe](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                           |
+| <Tag status="error">DeFi</Tag>                  | [ConsenSys: Raport z badań użytkowników DeFi 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                            |
+| <Tag variant="solid">Metawersum</Tag>             | [Metawersum: Raport z badań użytkowników](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                             |
+| <Tag variant="solid">Metawersum</Tag>             | [Going on Safari: Badanie użytkowników w metawersum](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (wideo, 27 min)  |
 
-- [Podręcznik projektowania UX w Web3](https://web3ux.design/) - Praktyczny przewodnik po projektowaniu aplikacji Web3
-- [Zasady projektowania w Web3](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - Zbiór zasad UX dla dapek opartych na blockchainie
-- [Zasady projektowania blockchain](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Wnioski wyciągnięte przez zespół projektantów blockchain w IBM
-- [Neueux.com](https://neueux.com/apps) - Biblioteka UI przepływów użytkowników z różnorodnymi opcjami filtrowania
-- [Kryzys użyteczności Web3: Co MUSISZ wiedzieć!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - Dyskusja panelowa na temat pułapek budowania projektów skoncentrowanych na deweloperach (wideo, 34 min)
+## Projektowanie dla Web3 {#design-for-web3}
 
-## Pierwsze kroki {#getting-started}
+- [Web3 Design Playbook](https://learnweb3.design/) – Kompleksowy zbiór frameworków i notatek na temat zasad UX w Web3, wzorców DeFi, projektowania zarządzania, UX portfeli i myślenia na poziomie protokołu dla projektantów i założycieli
+- [Podręcznik projektowania UX w Web3](https://web3ux.design/) – Praktyczny przewodnik po projektowaniu aplikacji Web3
+- [Zasady projektowania w Web3](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) – Zestaw reguł UX dla zdecentralizowanych aplikacji (dapp) opartych na blockchainie
+- [Zasady projektowania blockchaina](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) – Wnioski wyciągnięte przez zespół projektowy blockchaina w IBM
+- [Neueux.com](https://neueux.com/apps) – Biblioteka UI przepływów użytkowników z różnorodnymi opcjami filtrowania
+- [Kryzys użyteczności Web3: Co MUSISZ wiedzieć!](https://www.youtube.com/watch?v=oBSXT_6YDzg) – Dyskusja panelowa na temat pułapek budowania projektów skoncentrowanych na deweloperach (wideo, 34 min)
 
-- [Heurystyki dla Web3](/developers/docs/design-and-ux/heuristics-for-web3/) - 7 heurystyk projektowania interfejsu Web3
-- [Dobre praktyki projektowania DEX](/developers/docs/design-and-ux/dex-design-best-practice/) - Przewodnik po projektowaniu zdecentralizowanych giełd
+## Od czego zacząć {#getting-started}
+
+- [Heurystyki dla Web3](/developers/docs/design-and-ux/heuristics-for-web3/) – 7 heurystyk dla projektowania interfejsów Web3
+- [Najlepsze praktyki projektowania DEX](/developers/docs/design-and-ux/dex-design-best-practice/) – Przewodnik po projektowaniu zdecentralizowanych giełd
 
 ## Studia przypadków projektowania w Web3 {#design-case-studies}
 
 - [Deep Work Studio](https://www.deepwork.studio/case-studies)
 - [Sprzedaż NFT na OpenSea](https://builtformars.com/case-studies/opensea)
-- [Analiza UX portfela: jak portfele muszą się zmienić](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (wideo, 20 min)
+- [Analiza UX portfeli: jak portfele muszą się zmienić](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (wideo, 20 min)
 
-## Nagrody za projekty {#bounties}
+## Zlecenia projektowe (Bounties) {#bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
 - [Hackathony Buildbox](https://app.buidlbox.io/)
 - [Hackathony ETHGlobal](https://ethglobal.com/)
 
-## DAO projektowe i społeczności {#design-daos-and-communities}
+## DAO i społeczności projektowe {#design-daos-and-communities}
 
-Zaangażuj się w profesjonalne organizacje kierowane przez społeczność lub dołącz do grup projektowych, aby dyskutować z innymi członkami na tematy i trendy związane z projektowaniem i badaniami.
+Zaangażuj się w profesjonalne organizacje napędzane przez społeczność lub dołącz do grup projektowych, aby dyskutować o tematach i trendach związanych z projektowaniem i badaniami z innymi członkami.
 
 - [Vectordao.com](https://vectordao.com/)
 - [Deepwork.studio](https://www.deepwork.studio/)
@@ -74,7 +77,7 @@ Zaangażuj się w profesjonalne organizacje kierowane przez społeczność lub d
 
 ## Systemy projektowe i inne zasoby projektowe {#design-systems-and-resources}
 
-- [System projektowy Optimism](https://www.figma.com/@optimism) (Figma)
+- [Optimism Design](https://www.figma.com/@optimism) (Figma)
 - [System projektowy Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, system projektowy od Polygon](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [System projektowy Kleros](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)
@@ -82,5 +85,5 @@ Zaangażuj się w profesjonalne organizacje kierowane przez społeczność lub d
 - [System projektowy ENS](https://thorin.ens.domains/)
 - [System projektowy Mirror](https://degen-xyz.vercel.app/)
 
-**Artykuły i projekty wymienione na tej stronie nie stanowią oficjalnego poparcia** i są udostępniane wyłącznie w celach informacyjnych.
-Dodajemy linki na tę stronę w oparciu o kryteria zawarte w naszej [polityce umieszczania na liście](/contributing/design/adding-design-resources). Jeśli chcesz, abyśmy dodali projekt/artykuł, edytuj tę stronę na [GitHubie](https://github.com/ethereum/ethereum-org-website/blob/dev/public/content/developers/docs/design-and-ux/index.md).
+**Artykuły i projekty wymienione na tej stronie nie są oficjalnie rekomendowane** i zostały udostępnione wyłącznie w celach informacyjnych.
+Dodajemy linki do tej strony na podstawie kryteriów w naszej [polityce dodawania](/contributing/design/adding-design-resources). Jeśli chcesz, abyśmy dodali projekt/artykuł, edytuj tę stronę na [GitHubie](https://github.com/ethereum/ethereum-org-website/blob/dev/public/content/developers/docs/design-and-ux/index.md).

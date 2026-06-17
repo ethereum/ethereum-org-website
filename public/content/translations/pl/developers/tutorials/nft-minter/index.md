@@ -1,80 +1,72 @@
 ---
-title: Samouczek mintowania NFT
-description: "W tym samouczku zbudujesz minter NFT i dowiesz się, jak stworzyć pełną dapką, łącząc swój inteligentny kontrakt z frontendem React za pomocą MetaMask i narzędzi Web3."
+title: "Samouczek: Minter NFT"
+description: W tym samouczku zbudujesz minter NFT i dowiesz się, jak stworzyć zdecentralizowaną aplikację (dapp) typu full stack, łącząc swój inteligentny kontrakt z frontendem w React za pomocą MetaMask i narzędzi Web3.
 author: "smudgil"
-tags:
-  [
-    "solidity",
-    "NFT",
-    "alchemy",
-    "smart kontrakty",
-    "frontend",
-    "Pinata"
-  ]
+tags: ["Solidity", "NFT", "Alchemy", "inteligentne kontrakty", "frontend", "Pinata", "ERC-721"]
 skill: intermediate
-breadcrumb: "Dapp NFT minter"
+breadcrumb: Dapp do wybijania NFT
 lang: pl
 published: 2021-10-06
 ---
 
-Jednym z największych wyzwań dla deweloperów wywodzących się ze środowiska Web2 jest zorientowanie się, jak połączyć swój inteligentny kontrakt z projektem frontendu i wejść z nim w interakcję.
+Jednym z największych wyzwań dla programistów wywodzących się ze środowiska Web2 jest zrozumienie, jak połączyć inteligentny kontrakt z projektem frontendowym i wchodzić z nim w interakcje.
 
-Tworząc minter NFT — prosty interfejs użytkownika, w którym można wprowadzić link do zasobu cyfrowego, tytuł i opis — dowiesz się, jak:
+Budując minter NFT — prosty interfejs użytkownika (UI), w którym można wprowadzić link do swojego aktywa cyfrowego, tytuł i opis — dowiesz się, jak:
 
-- Połączyć się z MetaMask za pośrednictwem projektu frontendowego
-- Wywoływać metody inteligentnego kontraktu z poziomu frontendu
+- Połączyć się z MetaMask przez swój projekt frontendowy
+- Wywoływać metody inteligentnego kontraktu z frontendu
 - Podpisywać transakcje za pomocą MetaMask
 
-W tym samouczku jako frameworku frontendowego będziemy używać [React](https://react.dev/). Ponieważ ten samouczek skupia się głównie na rozwoju Web3, nie będziemy poświęcać wiele czasu na analizowanie podstaw React. Zamiast tego skupimy się na wprowadzeniu funkcjonalności do naszego projektu.
+W tym samouczku użyjemy [React](https://react.dev/) jako naszego frameworka frontendowego. Ponieważ ten samouczek skupia się głównie na programowaniu w Web3, nie będziemy poświęcać dużo czasu na omawianie podstaw React. Zamiast tego skupimy się na dodaniu funkcjonalności do naszego projektu.
 
-Warunkiem wstępnym jest posiadanie podstawowej wiedzy na temat React — jak działają komponenty, propsy, useState/useEffect i podstawowe wywoływanie funkcji. Jeśli te terminy są dla Ciebie nowe, możesz zapoznać się z tym [samouczkiem Wprowadzenie do React](https://react.dev/learn/tutorial-tic-tac-toe). Wzrokowcom gorąco polecamy tę doskonałą serię filmów [Pełny nowoczesny samouczek React](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) autorstwa Net Ninja.
+Wymagane jest podstawowe zrozumienie React — znajomość działania komponentów, propsów, useState/useEffect oraz podstawowego wywoływania funkcji. Jeśli nigdy wcześniej nie słyszałeś o żadnym z tych terminów, warto zapoznać się z tym [samouczkiem wprowadzającym do React](https://react.dev/learn/tutorial-tic-tac-toe). Wzrokowcom gorąco polecamy tę doskonałą serię filmów [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) autorstwa Net Ninja.
 
-A jeśli jeszcze go nie masz, na pewno będziesz potrzebować konta Alchemy, aby ukończyć ten samouczek, a także aby cokolwiek budować na blockchainie. Zarejestruj się, aby otrzymać darmowe konto [tutaj](https://alchemy.com/).
+Jeśli jeszcze tego nie zrobiłeś, na pewno będziesz potrzebować konta Alchemy, aby ukończyć ten samouczek, a także zbudować cokolwiek na blockchainie. Zarejestruj darmowe konto [tutaj](https://alchemy.com/).
 
 Bez zbędnych ceregieli, zaczynajmy!
 
-## Tworzenie NFT 101 {#making-nfts-101}
+## Podstawy tworzenia NFT {#making-nfts-101}
 
-Zanim w ogóle zaczniemy przyglądać się jakiemukolwiek kodowi, ważne jest, aby zrozumieć, jak działa tworzenie NFT. Składa się ono z dwóch kroków:
+Zanim w ogóle zaczniemy przeglądać jakikolwiek kod, ważne jest, aby zrozumieć, jak działa tworzenie NFT. Obejmuje to dwa kroki:
 
-### Opublikuj inteligentny kontrakt NFT na blockchainie Ethereum {#publish-nft}
+### Wdrożenie inteligentnego kontraktu NFT na blockchainie Ethereum {#publish-nft}
 
-Największa różnica między dwoma standardami inteligentnych kontraktów NFT polega na tym, że ERC-1155 jest standardem wielotokenowym i zawiera funkcjonalność partii, podczas gdy ERC-721 jest standardem jednotokenowym i w związku z tym obsługuje tylko transfer jednego tokena na raz.
+Największą różnicą między dwoma standardami inteligentnych kontraktów NFT jest to, że ERC-1155 to standard wielotokenowy (multi-token) i obejmuje funkcjonalność wsadową (batch), podczas gdy ERC-721 to standard pojedynczego tokena i dlatego obsługuje przesyłanie tylko jednego tokena naraz.
 
-### Wywołaj funkcję mintowania {#minting-function}
+### Wywołanie funkcji wybijania {#minting-function}
 
-Zazwyczaj ta funkcja mintowania wymaga podania dwóch zmiennych jako parametrów: po pierwsze `recipient`, który określa adres, na który trafi nowo wybite NFT, a po drugie `tokenURI` NFT, czyli ciąg znaków, który odwołuje się do dokumentu JSON opisującego metadane NFT.
+Zazwyczaj ta funkcja wybijania wymaga przekazania dwóch zmiennych jako parametrów: po pierwsze `recipient`, który określa adres, na który trafi nowo wybite NFT, a po drugie `tokenURI` NFT, czyli ciąg znaków (string) wskazujący na dokument JSON opisujący metadane NFT.
 
-Metadane NFT to tak naprawdę to, co ożywia go, pozwalając na posiadanie takich właściwości jak nazwa, opis, obraz (lub inny zasób cyfrowy) i inne atrybuty. Oto [przykład tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), który zawiera metadane NFT.
+Metadane NFT to tak naprawdę to, co ożywia token, pozwalając mu posiadać właściwości, takie jak nazwa, opis, obraz (lub inne aktywo cyfrowe) i inne atrybuty. Oto [przykład tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), który zawiera metadane NFT.
 
-W tym samouczku skupimy się na części 2, wywołaniu istniejącej funkcji mintowania inteligentnego kontraktu NFT za pomocą naszego interfejsu użytkownika React.
+W tym samouczku skupimy się na części 2, czyli wywołaniu funkcji wybijania istniejącego inteligentnego kontraktu NFT za pomocą naszego interfejsu użytkownika w React.
 
-[Oto link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) do inteligentnego kontraktu ERC-721 NFT, który będziemy wywoływać w tym samouczku. Jeśli chcesz dowiedzieć się, jak go stworzyliśmy, gorąco polecamy zapoznanie się z naszym innym samouczkiem, [„Jak stworzyć NFT”](https://www.alchemy.com/docs/how-to-create-an-nft).
+[Oto link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) do inteligentnego kontraktu NFT ERC-721, który będziemy wywoływać w tym samouczku. Jeśli chcesz dowiedzieć się, jak go stworzyliśmy, gorąco polecamy zapoznanie się z naszym innym samouczkiem: [„Jak stworzyć NFT”](https://www.alchemy.com/docs/how-to-create-an-nft).
 
-Super, teraz, gdy rozumiemy, jak działa tworzenie NFT, sklonujmy nasze pliki startowe!
+Świetnie, skoro już rozumiemy, jak działa tworzenie NFT, sklonujmy nasze pliki startowe!
 
 ## Klonowanie plików startowych {#clone-the-starter-files}
 
-Najpierw przejdź do [repozytorium GitHub nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial), aby pobrać pliki startowe dla tego projektu. Sklonuj to repozytorium do swojego lokalnego środowiska.
+Najpierw przejdź do [repozytorium nft-minter-tutorial na GitHubie](https://github.com/alchemyplatform/nft-minter-tutorial), aby pobrać pliki startowe dla tego projektu. Sklonuj to repozytorium do swojego środowiska lokalnego.
 
-Po otwarciu sklonowanego repozytorium `nft-minter-tutorial` zauważysz, że zawiera ono dwa foldery: `minter-starter-files` i `nft-minter`.
+Kiedy otworzysz to sklonowane repozytorium `nft-minter-tutorial`, zauważysz, że zawiera ono dwa foldery: `minter-starter-files` i `nft-minter`.
 
-- `minter-starter-files` zawiera pliki startowe (zasadniczo interfejs użytkownika React) dla tego projektu. W tym samouczku **będziemy pracować w tym katalogu**, ponieważ dowiesz się, jak ożywić ten interfejs użytkownika, łącząc go z portfelem Ethereum i inteligentnym kontraktem NFT.
-- `nft-minter` zawiera cały ukończony samouczek i jest dostępny jako **odniesienie**, **jeśli utkniesz**.
+- `minter-starter-files` zawiera pliki startowe (zasadniczo interfejs użytkownika w React) dla tego projektu. W tym samouczku **będziemy pracować w tym katalogu**, ucząc się, jak ożywić ten interfejs, łącząc go z portfelem Ethereum i inteligentnym kontraktem NFT.
+- `nft-minter` zawiera cały ukończony samouczek i służy jako **punkt odniesienia**, **jeśli utkniesz.**
 
-Następnie otwórz swoją kopię `minter-starter-files` w edytorze kodu, a następnie przejdź do folderu `src`.
+Następnie otwórz swoją kopię `minter-starter-files` w edytorze kodu, a potem przejdź do folderu `src`.
 
-Cały kod, który napiszemy, będzie znajdować się w folderze `src`. Będziemy edytować komponent `Minter.js` i pisać dodatkowe pliki javascript, aby nadać naszemu projektowi funkcjonalność Web3.
+Cały kod, który napiszemy, będzie znajdował się w folderze `src`. Będziemy edytować komponent `Minter.js` i pisać dodatkowe pliki JavaScript, aby nadać naszemu projektowi funkcjonalność Web3.
 
-## Krok 2: Sprawdź nasze pliki startowe {#step-2-check-out-our-starter-files}
+## Krok 2: Sprawdzenie plików startowych {#step-2-check-out-our-starter-files}
 
-Zanim zaczniemy kodować, warto sprawdzić, co już zostało dla nas przygotowane w plikach startowych.
+Zanim zaczniemy kodować, ważne jest, aby sprawdzić, co już zostało dla nas przygotowane w plikach startowych.
 
-### Uruchomienie projektu React {#get-your-react-project-running}
+### Uruchomienie projektu w React {#get-your-react-project-running}
 
-Zacznijmy od uruchomienia projektu React w naszej przeglądarce. Piękno React polega na tym, że gdy nasz projekt jest już uruchomiony w przeglądarce, wszelkie zapisane przez nas zmiany będą na bieżąco aktualizowane w przeglądarce.
+Zacznijmy od uruchomienia projektu React w naszej przeglądarce. Piękno React polega na tym, że gdy nasz projekt jest uruchomiony w przeglądarce, wszelkie zapisane przez nas zmiany będą aktualizowane na żywo.
 
-Aby uruchomić projekt, przejdź do katalogu głównego folderu `minter-starter-files`, a następnie uruchom `npm install` w terminalu, aby zainstalować zależności projektu:
+Aby uruchomić projekt, przejdź do katalogu głównego folderu `minter-starter-files` i uruchom `npm install` w terminalu, aby zainstalować zależności projektu:
 
 ```bash
 cd minter-starter-files
@@ -87,17 +79,17 @@ Po zakończeniu instalacji uruchom `npm start` w terminalu:
 npm start
 ```
 
-Powinno to otworzyć adres http://localhost:3000/ w przeglądarce, gdzie zobaczysz frontend naszego projektu. Powinien on składać się z 3 pól: miejsca na wprowadzenie linku do zasobu NFT, wprowadzenie nazwy NFT i podanie opisu.
+Spowoduje to otwarcie http://localhost:3000/ w przeglądarce, gdzie zobaczysz frontend naszego projektu. Powinien składać się z 3 pól: miejsca na wprowadzenie linku do aktywa NFT, nazwy NFT oraz opisu.
 
-Jeśli spróbujesz kliknąć przyciski „Połącz portfel” lub „Mintuj NFT”, zauważysz, że nie działają – to dlatego, że wciąż musimy zaprogramować ich funkcjonalność! :\)
+Jeśli spróbujesz kliknąć przyciski „Connect Wallet” (Połącz portfel) lub „Mint NFT” (Wybij NFT), zauważysz, że nie działają — to dlatego, że wciąż musimy zaprogramować ich funkcjonalność! :\)
 
 ### Komponent Minter.js {#minter-js}
 
 **UWAGA:** Upewnij się, że jesteś w folderze `minter-starter-files`, a nie w folderze `nft-minter`!
 
-Wróćmy do folderu `src` w naszym edytorze i otwórzmy plik `Minter.js`. Jest bardzo ważne, abyśmy zrozumieli wszystko w tym pliku, ponieważ jest to główny komponent React, nad którym będziemy pracować.
+Wróćmy do folderu `src` w naszym edytorze i otwórzmy plik `Minter.js`. To bardzo ważne, abyśmy zrozumieli wszystko w tym pliku, ponieważ jest to główny komponent React, nad którym będziemy pracować.
 
-Na górze tego pliku mamy zmienne stanu, które będziemy aktualizować po określonych zdarzeniach.
+Na górze tego pliku znajdują się nasze zmienne stanu, które będziemy aktualizować po określonych zdarzeniach.
 
 ```javascript
 //Zmienne stanu
@@ -108,17 +100,17 @@ const [description, setDescription] = useState("")
 const [url, setURL] = useState("")
 ```
 
-Nigdy nie słyszałeś o zmiennych stanu React lub hookach stanu? Sprawdź [tę](https://legacy.reactjs.org/docs/hooks-state.html) dokumentację.
+Nigdy nie słyszałeś o zmiennych stanu lub hookach stanu w React? Sprawdź [tę](https://legacy.reactjs.org/docs/hooks-state.html) dokumentację.
 
-Oto, co reprezentuje każda ze zmiennych:
+Oto co reprezentuje każda ze zmiennych:
 
-- `walletAddress` - ciąg znaków, który przechowuje adres portfela użytkownika
-- `status` - ciąg znaków, który zawiera wiadomość do wyświetlenia na dole interfejsu użytkownika
-- `name` - ciąg znaków, który przechowuje nazwę NFT
-- `description` - ciąg znaków, który przechowuje opis NFT
-- `url` - ciąg znaków, który jest linkiem do zasobu cyfrowego NFT
+- `walletAddress` - ciąg znaków przechowujący adres portfela użytkownika
+- `status` - ciąg znaków zawierający wiadomość do wyświetlenia na dole interfejsu użytkownika
+- `name` - ciąg znaków przechowujący nazwę NFT
+- `description` - ciąg znaków przechowujący opis NFT
+- `url` - ciąg znaków będący linkiem do aktywa cyfrowego NFT
 
-Po zmiennych stanu zobaczysz trzy niezimplementowane funkcje: `useEffect`, `connectWalletPressed` i `onMintPressed`. Zauważysz, że wszystkie te funkcje są `async`, ponieważ będziemy w nich wykonywać asynchroniczne wywołania API! Ich nazwy są tożsame z ich funkcjonalnością:
+Po zmiennych stanu zobaczysz trzy niezaimplementowane funkcje: `useEffect`, `connectWalletPressed` i `onMintPressed`. Zauważysz, że wszystkie te funkcje to `async` (asynchroniczne), ponieważ będziemy w nich wykonywać asynchroniczne wywołania API! Ich nazwy odpowiadają ich funkcjonalnościom:
 
 ```javascript
 useEffect(async () => {
@@ -134,13 +126,13 @@ const onMintPressed = async () => {
 }
 ```
 
-- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html) - to hook React, który jest wywoływany po wyrenderowaniu komponentu. Ponieważ ma przekazany pusty prop tablicy `[]` (patrz linia 3), zostanie wywołany tylko przy _pierwszym_ renderowaniu komponentu. Tutaj wywołamy nasz nasłuchiwacz portfela i inną funkcję portfela, aby zaktualizować nasz interfejs użytkownika, aby odzwierciedlić, czy portfel jest już podłączony.
-- `connectWalletPressed` - ta funkcja zostanie wywołana, aby połączyć portfel MetaMask użytkownika z naszą dapką.
-- `onMintPressed` - ta funkcja zostanie wywołana w celu mintowania NFT użytkownika.
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html) - to hook React, który jest wywoływany po wyrenderowaniu komponentu. Ponieważ przekazano do niego pustą tablicę `[]` (zobacz linię 3), zostanie on wywołany tylko przy _pierwszym_ renderowaniu komponentu. Tutaj wywołamy nasz nasłuchiwacz portfela (wallet listener) i inną funkcję portfela, aby zaktualizować nasz interfejs użytkownika i odzwierciedlić, czy portfel jest już podłączony.
+- `connectWalletPressed` - ta funkcja zostanie wywołana, aby połączyć portfel MetaMask użytkownika z naszą zdecentralizowaną aplikacją (dapp).
+- `onMintPressed` - ta funkcja zostanie wywołana, aby wybić NFT użytkownika.
 
-Pod koniec tego pliku mamy interfejs użytkownika naszego komponentu. Jeśli uważnie przeskanujesz ten kod, zauważysz, że aktualizujemy nasze zmienne stanu `url`, `name` i `description`, gdy zmienia się dane wejściowe w odpowiadających im polach tekstowych.
+Pod koniec tego pliku znajduje się interfejs użytkownika naszego komponentu. Jeśli uważnie przeanalizujesz ten kod, zauważysz, że aktualizujemy nasze zmienne stanu `url`, `name` i `description`, gdy zmieniają się dane wejściowe w odpowiadających im polach tekstowych.
 
-Zobaczysz również, że `connectWalletPressed` i `onMintPressed` są wywoływane odpowiednio po kliknięciu przycisków o identyfikatorach `mintButton` i `walletButton`.
+Zobaczysz również, że `connectWalletPressed` i `onMintPressed` są wywoływane po kliknięciu przycisków o identyfikatorach odpowiednio `mintButton` i `walletButton`.
 
 ```javascript
 //interfejs użytkownika naszego komponentu
@@ -148,91 +140,91 @@ return (
   <div className="Minter">
     <button id="walletButton" onClick={connectWalletPressed}>
       {walletAddress.length > 0 ? (
-        "Połączono: " +
+        "Connected: " +
         String(walletAddress).substring(0, 6) +
         "..." +
         String(walletAddress).substring(38)
       ) : (
-        <span>Połącz portfel</span>
+        <span>Connect Wallet</span>
       )}
     </button>
 
     <br></br>
-    <h1 id="title">🧙‍♂️ Minter NFT od Alchemy</h1>
+    <h1 id="title">🧙‍♂️ Alchemy NFT Minter</h1>
     <p>
-      Wystarczy dodać link do zasobu, nazwę i opis, a następnie nacisnąć „Mintuj”.
+      Simply add your asset's link, name, and description, then press "Mint."
     </p>
     <form>
-      <h2>🖼 Link do zasobu: </h2>
+      <h2>🖼 Link to asset: </h2>
       <input
         type="text"
-        placeholder="np. https://gateway.pinata.cloud/ipfs/<hash>"
+        placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
-      <h2>🤔 Nazwa: </h2>
+      <h2>🤔 Name: </h2>
       <input
         type="text"
-        placeholder="np. Moje pierwsze NFT!"
+        placeholder="e.g., My first NFT!"
         onChange={(event) => setName(event.target.value)}
       />
-      <h2>✍️ Opis: </h2>
+      <h2>✍️ Description: </h2>
       <input
         type="text"
-        placeholder="np. Jeszcze fajniejsze niż cryptokitties ;)"
+        placeholder="e.g., Even cooler than cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>
     <button id="mintButton" onClick={onMintPressed}>
-      Mintuj NFT
+      Mint NFT
     </button>
     <p id="status">{status}</p>
-</div>
+  </div>
 )
 ```
 
-Na koniec zajmijmy się tym, gdzie ten komponent Minter jest dodawany.
+Na koniec omówmy, gdzie dodawany jest ten komponent Minter.
 
-Jeśli przejdziesz do pliku `App.js`, który jest głównym komponentem w React, działającym jako kontener dla wszystkich innych komponentów, zobaczysz, że nasz komponent Minter jest wstawiony w linii 7.
+Jeśli przejdziesz do pliku `App.js`, który jest głównym komponentem w React działającym jako kontener dla wszystkich innych komponentów, zobaczysz, że nasz komponent Minter jest wstrzykiwany w linii 7.
 
-**W tym samouczku będziemy edytować tylko plik `Minter.js` i dodawać pliki w naszym folderze `src`.**
+**W tym samouczku będziemy edytować tylko `Minter.js file` i dodawać pliki w naszym folderze `src`.**
 
 Teraz, gdy rozumiemy, z czym pracujemy, skonfigurujmy nasz portfel Ethereum!
 
-## Skonfiguruj swój portfel Ethereum {#set-up-your-ethereum-wallet}
+## Konfiguracja portfela Ethereum {#set-up-your-ethereum-wallet}
 
-Aby użytkownicy mogli wchodzić w interakcję z Twoim inteligentnym kontraktem, będą musieli połączyć swój portfel Ethereum z Twoją dapką.
+Aby użytkownicy mogli wchodzić w interakcje z Twoim inteligentnym kontraktem, będą musieli połączyć swój portfel Ethereum z Twoją zdecentralizowaną aplikacją (dapp).
 
-### Pobierz MetaMask {#download-metamask}
+### Pobranie MetaMask {#download-metamask}
 
-W tym samouczku użyjemy MetaMask, wirtualnego portfela w przeglądarce, który służy do zarządzania adresem konta Ethereum. Jeśli chcesz dowiedzieć się więcej o tym, jak działają transakcje w Ethereum, sprawdź [tę stronę](/developers/docs/transactions/).
+W tym samouczku użyjemy MetaMask, wirtualnego portfela w przeglądarce, służącego do zarządzania adresem konta Ethereum. Jeśli chcesz dowiedzieć się więcej o tym, jak działają transakcje w Ethereum, sprawdź [tę stronę](/developers/docs/transactions/).
 
-Możesz pobrać i utworzyć konto MetaMask za darmo [tutaj](https://metamask.io/download). Podczas tworzenia konta, lub jeśli już je masz, upewnij się, że przełączyłeś się na „sieć testową Ropsten” w prawym górnym rogu (abyśmy nie mieli do czynienia z prawdziwymi pieniędzmi).
+Możesz pobrać i utworzyć konto MetaMask za darmo [tutaj](https://metamask.io/download). Podczas tworzenia konta lub jeśli już je posiadasz, upewnij się, że przełączyłeś się na „Ropsten Test Network” w prawym górnym rogu \(abyśmy nie operowali prawdziwymi pieniędzmi\).
 
-### Dodaj ether z Faucet {#add-ether-from-faucet}
+### Dodanie etheru z kranika {#add-ether-from-faucet}
 
-Aby mintować nasze NFT (lub podpisywać jakiekolwiek transakcje na blockchainie Ethereum), będziemy potrzebować trochę fałszywego Eth. Aby uzyskać Eth, możesz przejść do [Ropsten faucet](https://faucet.ropsten.be/) i wprowadzić adres swojego konta Ropsten, a następnie kliknąć „Wyślij Ropsten Eth”. Wkrótce powinieneś zobaczyć Eth na swoim koncie MetaMask!
+Aby wybić nasze NFT (lub podpisać jakiekolwiek transakcje na blockchainie Ethereum), będziemy potrzebować trochę fałszywego ETH. Aby zdobyć ETH, możesz przejść do [kranika Ropsten](https://faucet.ropsten.be/) i wprowadzić adres swojego konta Ropsten, a następnie kliknąć „Send Ropsten Eth”. Wkrótce potem powinieneś zobaczyć ETH na swoim koncie MetaMask!
 
-### Sprawdź swoje saldo {#check-your-balance}
+### Sprawdzenie salda {#check-your-balance}
 
-Aby sprawdzić, czy nasze saldo jest na miejscu, wykonajmy żądanie [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) za pomocą [narzędzia kompozytora Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Zwróci to ilość Eth w naszym portfelu. Po wprowadzeniu adresu konta MetaMask i kliknięciu „Wyślij żądanie” powinieneś zobaczyć następującą odpowiedź:
+Aby upewnić się, że nasze saldo tam jest, wykonajmy żądanie [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) za pomocą [narzędzia composer od Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Zwróci to ilość ETH w naszym portfelu. Po wprowadzeniu adresu konta MetaMask i kliknięciu „Send Request” (Wyślij żądanie), powinieneś zobaczyć odpowiedź podobną do tej:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**UWAGA:** ten wynik jest w wei, a nie w eth. Wei jest używany jako najmniejsza jednostka etheru. Konwersja z wei na eth to: 1 eth = 10¹⁸ wei. Więc jeśli przekonwertujemy 0xde0b6b3a7640000 na system dziesiętny, otrzymamy 1\*10¹⁸, co równa się 1 eth.
+**UWAGA:** Ten wynik jest w wei, a nie w ETH. Wei jest używane jako najmniejszy nominał etheru. Przelicznik z wei na ETH to: 1 ETH = 10¹⁸ wei. Więc jeśli przekonwertujemy 0xde0b6b3a7640000 na system dziesiętny, otrzymamy 1\*10¹⁸, co równa się 1 ETH.
 
 Uff! Nasze fałszywe pieniądze są na miejscu! <Emoji text=":money_mouth_face:" size={1} />
 
-## Połącz MetaMask ze swoim interfejsem użytkownika {#connect-metamask-to-your-UI}
+## Połączenie MetaMask z interfejsem użytkownika {#connect-metamask-to-your-ui}
 
-Teraz, gdy nasz portfel MetaMask jest skonfigurowany, połączmy z nim naszą dapką!
+Teraz, gdy nasz portfel MetaMask jest skonfigurowany, połączmy z nim naszą zdecentralizowaną aplikację (dapp)!
 
-Ponieważ chcemy stosować paradygmat [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), stworzymy osobny plik, który będzie zawierał nasze funkcje do zarządzania logiką, danymi i zasadami naszej dapki, a następnie przekażemy te funkcje do naszego frontendu (naszego komponentu Minter.js).
+Ponieważ chcemy trzymać się paradygmatu [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), utworzymy osobny plik zawierający nasze funkcje do zarządzania logiką, danymi i regułami naszej dapp, a następnie przekażemy te funkcje do naszego frontendu (naszego komponentu Minter.js).
 
 ### Funkcja `connectWallet` {#connect-wallet-function}
 
-W tym celu utwórzmy nowy folder o nazwie `utils` w katalogu `src` i dodajmy do niego plik o nazwie `interact.js`, który będzie zawierał wszystkie nasze funkcje interakcji z portfelem i inteligentnym kontraktem.
+Aby to zrobić, utwórzmy nowy folder o nazwie `utils` w katalogu `src` i dodajmy do niego plik o nazwie `interact.js`, który będzie zawierał wszystkie nasze funkcje interakcji z portfelem i inteligentnym kontraktem.
 
 W naszym pliku `interact.js` napiszemy funkcję `connectWallet`, którą następnie zaimportujemy i wywołamy w naszym komponencie `Minter.js`.
 
@@ -246,7 +238,7 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       })
       const obj = {
-        status: "👆🏽 Wpisz wiadomość w polu tekstowym powyżej.",
+        status: "👆🏽 Write a message in the text-field above.",
         address: addressArray[0],
       }
       return obj
@@ -264,8 +256,8 @@ export const connectWallet = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              Musisz zainstalować MetaMask, wirtualny portfel Ethereum, w swojej
-              przeglądarce.
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -277,26 +269,26 @@ export const connectWallet = async () => {
 
 Przeanalizujmy, co robi ten kod:
 
-Najpierw nasza funkcja sprawdza, czy `window.ethereum` jest włączone w Twojej przeglądarce.
+Po pierwsze, nasza funkcja sprawdza, czy `window.ethereum` jest włączone w Twojej przeglądarce.
 
-`window.ethereum` to globalny interfejs API wstrzykiwany przez MetaMask i innych dostawców portfeli, który pozwala stronom internetowym na żądanie dostępu do kont Ethereum użytkowników. Po zatwierdzeniu może odczytywać dane z blockchainów, z którymi użytkownik jest połączony, i sugerować, aby użytkownik podpisywał wiadomości i transakcje. Sprawdź [dokumentację MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents), aby uzyskać więcej informacji!
+`window.ethereum` to globalne API wstrzykiwane przez MetaMask i innych dostawców portfeli, które pozwala stronom internetowym na żądanie dostępu do kont Ethereum użytkowników. Po zatwierdzeniu może odczytywać dane z blockchainów, z którymi połączony jest użytkownik, i sugerować mu podpisywanie wiadomości oraz transakcji. Sprawdź [dokumentację MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents), aby uzyskać więcej informacji!
 
-Jeśli `window.ethereum` _nie jest_ obecne, oznacza to, że MetaMask nie jest zainstalowany. Powoduje to zwrócenie obiektu JSON, w którym zwrócony `adres` jest pustym ciągiem, a obiekt `status` JSX informuje, że użytkownik musi zainstalować MetaMask.
+Jeśli `window.ethereum` _nie jest_ obecne, oznacza to, że MetaMask nie jest zainstalowany. Skutkuje to zwróceniem obiektu JSON, w którym zwrócony `address` jest pustym ciągiem znaków, a obiekt JSX `status` przekazuje informację, że użytkownik musi zainstalować MetaMask.
 
-**Większość funkcji, które piszemy, będzie zwracać obiekty JSON, których możemy użyć do aktualizacji naszych zmiennych stanu i interfejsu użytkownika.**
+**Większość funkcji, które napiszemy, będzie zwracać obiekty JSON, których możemy użyć do aktualizacji naszych zmiennych stanu i interfejsu użytkownika.**
 
-Teraz, jeśli `window.ethereum` _jest_ obecne, to wtedy robi się ciekawie.
+Jeśli jednak `window.ethereum` _jest_ obecne, wtedy robi się ciekawie.
 
-Używając pętli try/catch, spróbujemy połączyć się z MetaMask, wywołując [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Wywołanie tej funkcji otworzy MetaMask w przeglądarce, gdzie użytkownik zostanie poproszony o podłączenie swojego portfela do Twojej dapki.
+Używając bloku try/catch, spróbujemy połączyć się z MetaMask, wywołując [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Wywołanie tej funkcji otworzy MetaMask w przeglądarce, po czym użytkownik zostanie poproszony o połączenie swojego portfela z Twoją dapp.
 
-- Jeśli użytkownik zdecyduje się połączyć, `metoda: "eth_requestAccounts"` zwróci tablicę zawierającą wszystkie adresy kont użytkownika, które są połączone z dapką. W sumie nasza funkcja `connectWallet` zwróci obiekt JSON, który zawiera _pierwszy_ `adres` w tej tablicy (patrz linia 9) oraz wiadomość `status`, która prosi użytkownika o napisanie wiadomości do inteligentnego kontraktu.
-- Jeśli użytkownik odrzuci połączenie, obiekt JSON będzie zawierał pusty ciąg dla zwróconego `adresu` oraz komunikat `status`, który odzwierciedla, że użytkownik odrzucił połączenie.
+- Jeśli użytkownik zdecyduje się połączyć, `method: "eth_requestAccounts"` zwróci tablicę zawierającą wszystkie adresy kont użytkownika, które są połączone z dapp. W sumie nasza funkcja `connectWallet` zwróci obiekt JSON, który zawiera _pierwszy_ `address` w tej tablicy \(zobacz linię 9\) oraz wiadomość `status`, która zachęca użytkownika do napisania wiadomości do inteligentnego kontraktu.
+- Jeśli użytkownik odrzuci połączenie, obiekt JSON będzie zawierał pusty ciąg znaków dla zwróconego `address` oraz wiadomość `status` odzwierciedlającą fakt, że użytkownik odrzucił połączenie.
 
-### Dodaj funkcję connectWallet do komponentu interfejsu użytkownika Minter.js {#add-connect-wallet}
+### Dodanie funkcji connectWallet do komponentu interfejsu użytkownika Minter.js {#add-connect-wallet}
 
-Teraz, gdy napisaliśmy tę funkcję `connectWallet`, połączmy ją z naszym komponentem `Minter.js`.
+Teraz, gdy napisaliśmy tę funkcję `connectWallet`, połączmy ją z naszym komponentem `Minter.js.`.
 
-Najpierw będziemy musieli zaimportować naszą funkcję do naszego pliku `Minter.js`, dodając `import { connectWallet } from "./utils/interact.js";` na górze pliku `Minter.js`. Twoje pierwsze 11 linii `Minter.js` powinno teraz wyglądać tak:
+Najpierw będziemy musieli zaimportować naszą funkcję do pliku `Minter.js`, dodając `import { connectWallet } from "./utils/interact.js";` na samej górze pliku `Minter.js`. Twoje pierwsze 11 linii pliku `Minter.js` powinno teraz wyglądać tak:
 
 ```javascript
 import { useEffect, useState } from "react";
@@ -312,7 +304,7 @@ const Minter = (props) => {
   const [url, setURL] = useState("");
 ```
 
-Następnie w naszej funkcji `connectWalletPressed` wywołamy naszą zaimportowaną funkcję `connectWallet`, w ten sposób:
+Następnie wewnątrz naszej funkcji `connectWalletPressed` wywołamy zaimportowaną funkcję `connectWallet` w ten sposób:
 
 ```javascript
 const connectWalletPressed = async () => {
@@ -322,21 +314,21 @@ const connectWalletPressed = async () => {
 }
 ```
 
-Zauważ, jak większość naszej funkcjonalności jest wyabstrahowana z naszego komponentu `Minter.js` z pliku `interact.js`? Robimy tak, aby zachować zgodność z paradygmatem M-V-C!
+Zauważ, jak większość naszej funkcjonalności jest wyabstrahowana z naszego komponentu `Minter.js` do pliku `interact.js`? Robimy to, aby zachować zgodność z paradygmatem M-V-C!
 
-W `connectWalletPressed` po prostu wykonujemy wywołanie await do naszej zaimportowanej funkcji `connectWallet`, a za pomocą jej odpowiedzi aktualizujemy nasze zmienne `status` i `walletAddress` za pomocą ich hooków stanu.
+W `connectWalletPressed` po prostu wykonujemy wywołanie await do naszej zaimportowanej funkcji `connectWallet` i używając jej odpowiedzi, aktualizujemy nasze zmienne `status` i `walletAddress` za pomocą ich hooków stanu.
 
-Teraz zapiszmy oba pliki `Minter.js` i `interact.js` i przetestujmy nasz interfejs użytkownika.
+Teraz zapiszmy oba pliki `Minter.js` i `interact.js` i przetestujmy nasz dotychczasowy interfejs użytkownika.
 
-Otwórz przeglądarkę pod adresem localhost:3000 i naciśnij przycisk „Połącz portfel” w prawym górnym rogu strony.
+Otwórz przeglądarkę na localhost:3000 i naciśnij przycisk „Connect Wallet” w prawym górnym rogu strony.
 
-Jeśli masz zainstalowany MetaMask, powinieneś zostać poproszony o podłączenie swojego portfela do Twojej dapki. Zaakceptuj zaproszenie do połączenia.
+Jeśli masz zainstalowany MetaMask, powinieneś zostać poproszony o połączenie portfela z Twoją dapp. Zaakceptuj zaproszenie do połączenia.
 
-Powinieneś zobaczyć, że przycisk portfela teraz odzwierciedla, że Twój adres jest podłączony.
+Powinieneś zobaczyć, że przycisk portfela odzwierciedla teraz fakt, że Twój adres jest połączony.
 
-Następnie spróbuj odświeżyć stronę... to jest dziwne. Nasz przycisk portfela prosi nas o podłączenie MetaMask, mimo że jest już podłączony...
+Następnie spróbuj odświeżyć stronę... to dziwne. Nasz przycisk portfela prosi nas o połączenie MetaMask, mimo że jest już połączony...
 
-Ale nie martw się! Możemy to łatwo naprawić, implementując funkcję o nazwie `getCurrentWalletConnected`, która sprawdzi, czy adres jest już podłączony do naszej dapki i odpowiednio zaktualizuje nasz interfejs użytkownika!
+Nie martw się jednak! Możemy to łatwo naprawić, implementując funkcję o nazwie `getCurrentWalletConnected`, która sprawdzi, czy adres jest już połączony z naszą dapp i odpowiednio zaktualizuje nasz interfejs użytkownika!
 
 ### Funkcja getCurrentWalletConnected {#get-current-wallet}
 
@@ -352,12 +344,12 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 Wpisz wiadomość w polu tekstowym powyżej.",
+          status: "👆🏽 Write a message in the text-field above.",
         }
       } else {
         return {
           address: "",
-          status: "🦊 Połącz się z MetaMask za pomocą przycisku w prawym górnym rogu.",
+          status: "🦊 Connect to MetaMask using the top right button.",
         }
       }
     } catch (err) {
@@ -374,8 +366,8 @@ export const getCurrentWalletConnected = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              Musisz zainstalować MetaMask, wirtualny portfel Ethereum, w swojej
-              przeglądarce.
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -387,11 +379,11 @@ export const getCurrentWalletConnected = async () => {
 
 Ten kod jest _bardzo_ podobny do funkcji `connectWallet`, którą napisaliśmy wcześniej.
 
-Główna różnica polega na tym, że zamiast wywoływać metodę `eth_requestAccounts`, która otwiera MetaMask, aby użytkownik mógł połączyć swój portfel, tutaj wywołujemy metodę `eth_accounts`, która po prostu zwraca tablicę zawierającą adresy MetaMask aktualnie połączone z naszą dapką.
+Główna różnica polega na tym, że zamiast wywoływać metodę `eth_requestAccounts`, która otwiera MetaMask, aby użytkownik mógł połączyć swój portfel, tutaj wywołujemy metodę `eth_accounts`, która po prostu zwraca tablicę zawierającą adresy MetaMask aktualnie połączone z naszą dapp.
 
 Aby zobaczyć tę funkcję w akcji, wywołajmy ją w funkcji `useEffect` naszego komponentu `Minter.js`.
 
-Tak jak zrobiliśmy to dla `connectWallet`, musimy zaimportować tę funkcję z naszego pliku `interact.js` do naszego pliku `Minter.js` w ten sposób:
+Podobnie jak w przypadku `connectWallet`, musimy zaimportować tę funkcję z naszego pliku `interact.js` do pliku `Minter.js` w ten sposób:
 
 ```javascript
 import { useEffect, useState } from "react"
@@ -411,13 +403,13 @@ useEffect(async () => {
 }, [])
 ```
 
-Zauważ, że używamy odpowiedzi z naszego wywołania `getCurrentWalletConnected`, aby zaktualizować nasze zmienne stanu `walletAddress` i `status`.
+Zauważ, że używamy odpowiedzi z naszego wywołania `getCurrentWalletConnected` do aktualizacji naszych zmiennych stanu `walletAddress` i `status`.
 
-Po dodaniu tego kodu spróbuj odświeżyć okno przeglądarki. Przycisk powinien informować, że jesteś połączony i pokazywać podgląd adresu podłączonego portfela - nawet po odświeżeniu!
+Po dodaniu tego kodu spróbuj odświeżyć okno przeglądarki. Przycisk powinien informować, że jesteś połączony, i pokazywać podgląd adresu połączonego portfela - nawet po odświeżeniu!
 
-### Zaimplementuj addWalletListener {#implement-add-wallet-listener}
+### Implementacja addWalletListener {#implement-add-wallet-listener}
 
-Ostatnim krokiem w konfiguracji portfela naszej dapki jest zaimplementowanie nasłuchiwacza portfela, aby nasz interfejs użytkownika aktualizował się, gdy zmieni się stan naszego portfela, na przykład gdy użytkownik się rozłączy lub zmieni konto.
+Ostatnim krokiem w konfiguracji portfela naszej dapp jest zaimplementowanie nasłuchiwacza portfela (wallet listener), aby nasz interfejs użytkownika aktualizował się, gdy zmienia się stan naszego portfela, na przykład gdy użytkownik się rozłącza lub przełącza konta.
 
 W pliku `Minter.js` dodaj funkcję `addWalletListener`, która wygląda następująco:
 
@@ -427,10 +419,10 @@ function addWalletListener() {
     window.ethereum.on("accountsChanged", (accounts) => {
       if (accounts.length > 0) {
         setWallet(accounts[0])
-        setStatus("👆🏽 Wpisz wiadomość w polu tekstowym powyżej.")
+        setStatus("👆🏽 Write a message in the text-field above.")
       } else {
         setWallet("")
-        setStatus("🦊 Połącz się z MetaMask za pomocą przycisku w prawym górnym rogu.")
+        setStatus("🦊 Connect to MetaMask using the top right button.")
       }
     })
   } else {
@@ -438,7 +430,7 @@ function addWalletListener() {
       <p>
         {" "}
         🦊 <a target="_blank" href={`https://metamask.io/download`}>
-          Musisz zainstalować MetaMask, wirtualny portfel Ethereum, w swojej przeglądarce.
+          You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
     )
@@ -446,13 +438,13 @@ function addWalletListener() {
 }
 ```
 
-Przeanalizujmy szybko, co się tutaj dzieje:
+Szybko przeanalizujmy, co się tutaj dzieje:
 
-- Najpierw nasza funkcja sprawdza, czy `window.ethereum` jest włączone (tj. MetaMask jest zainstalowany).
-  - Jeśli nie jest, po prostu ustawiamy naszą zmienną stanu `status` na ciąg JSX, który prosi użytkownika o zainstalowanie MetaMask.
-  - Jeśli jest włączone, ustawiamy nasłuchiwacz `window.ethereum.on("accountsChanged")` w linii 3, który nasłuchuje zmian stanu w portfelu MetaMask, co obejmuje sytuacje, gdy użytkownik podłącza dodatkowe konto do dapki, zmienia konta lub odłącza konto. Jeśli co najmniej jedno konto jest połączone, zmienna stanu `walletAddress` jest aktualizowana jako pierwsze konto w tablicy `konta` zwróconej przez nasłuchiwacz. W przeciwnym razie `walletAddress` jest ustawiany jako pusty ciąg.
+- Po pierwsze, nasza funkcja sprawdza, czy `window.ethereum` jest włączone \(tj. czy MetaMask jest zainstalowany\).
+  - Jeśli nie jest, po prostu ustawiamy naszą zmienną stanu `status` na ciąg JSX, który zachęca użytkownika do zainstalowania MetaMask.
+  - Jeśli jest włączone, konfigurujemy nasłuchiwacz `window.ethereum.on("accountsChanged")` w linii 3, który nasłuchuje zmian stanu w portfelu MetaMask, co obejmuje sytuacje, gdy użytkownik łączy dodatkowe konto z dapp, przełącza konta lub odłącza konto. Jeśli podłączone jest co najmniej jedno konto, zmienna stanu `walletAddress` jest aktualizowana jako pierwsze konto w tablicy `accounts` zwróconej przez nasłuchiwacz. W przeciwnym razie `walletAddress` jest ustawiane jako pusty ciąg znaków.
 
-Na koniec musimy wywołać go w naszej funkcji `useEffect`:
+Na koniec musimy wywołać ją w naszej funkcji `useEffect`:
 
 ```javascript
 useEffect(async () => {
@@ -464,64 +456,64 @@ useEffect(async () => {
 }, [])
 ```
 
-I voila! Ukończyliśmy programowanie całej funkcjonalności naszego portfela! Teraz, gdy nasz portfel jest skonfigurowany, dowiedzmy się, jak mintować nasze NFT!
+I voila! Zakończyliśmy programowanie całej funkcjonalności naszego portfela! Teraz, gdy nasz portfel jest skonfigurowany, dowiedzmy się, jak wybić nasze NFT!
 
-## Metadane NFT 101 {#nft-metadata-101}
+## Podstawy metadanych NFT {#nft-metadata-101}
 
-Pamiętasz więc metadane NFT, o których właśnie mówiliśmy w kroku 0 tego samouczka – ożywiają one NFT, pozwalając mu mieć właściwości, takie jak zasób cyfrowy, nazwa, opis i inne atrybuty.
+Pamiętasz metadane NFT, o których mówiliśmy w Kroku 0 tego samouczka — to one ożywiają NFT, pozwalając mu posiadać właściwości, takie jak aktywo cyfrowe, nazwa, opis i inne atrybuty.
 
-Będziemy musieli skonfigurować te metadane jako obiekt JSON i przechować go, abyśmy mogli przekazać go jako parametr `tokenURI` podczas wywoływania funkcji `mintNFT` naszego inteligentnego kontraktu.
+Będziemy musieli skonfigurować te metadane jako obiekt JSON i zapisać je, abyśmy mogli przekazać je jako parametr `tokenURI` podczas wywoływania funkcji `mintNFT` naszego inteligentnego kontraktu.
 
-Tekst w polach „Link do zasobu”, „Nazwa”, „Opis” będzie składał się z różnych właściwości metadanych naszego NFT. Sformatujemy te metadane jako obiekt JSON, ale istnieje kilka opcji, gdzie możemy przechowywać ten obiekt JSON:
+Tekst w polach „Link to Asset” (Link do aktywa), „Name” (Nazwa), „Description” (Opis) będzie stanowić różne właściwości metadanych naszego NFT. Sformatujemy te metadane jako obiekt JSON, ale istnieje kilka opcji, gdzie możemy przechowywać ten obiekt JSON:
 
-- Moglibyśmy przechowywać go na blockchainie Ethereum; jednak byłoby to bardzo kosztowne.
+- Moglibyśmy przechowywać go na blockchainie Ethereum; jednak byłoby to bardzo drogie.
 - Moglibyśmy przechowywać go na scentralizowanym serwerze, takim jak AWS lub Firebase. Ale to zniweczyłoby nasz etos decentralizacji.
-- Moglibyśmy użyć IPFS, zdecentralizowanego protokołu i sieci peer-to-peer do przechowywania i udostępniania danych w rozproszonym systemie plików. Ponieważ ten protokół jest zdecentralizowany i bezpłatny, jest to nasza najlepsza opcja!
+- Moglibyśmy użyć IPFS, zdecentralizowanego protokołu i sieci peer-to-peer do przechowywania i udostępniania danych w rozproszonym systemie plików. Ponieważ ten protokół jest zdecentralizowany i darmowy, jest to nasza najlepsza opcja!
 
 Aby przechowywać nasze metadane w IPFS, użyjemy [Pinata](https://pinata.cloud/), wygodnego API i zestawu narzędzi IPFS. W następnym kroku wyjaśnimy dokładnie, jak to zrobić!
 
-## Użyj Pinata, aby przypiąć swoje metadane do IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Użycie Pinata do przypięcia metadanych do IPFS {#use-pinata-to-pin-your-metadata-to-ipfs}
 
-Jeśli nie masz konta [Pinata](https://pinata.cloud/), zarejestruj się, aby uzyskać bezpłatne konto [tutaj](https://app.pinata.cloud/auth/signup) i wykonaj kroki, aby zweryfikować swój adres e-mail i konto.
+Jeśli nie masz konta [Pinata](https://pinata.cloud/), zarejestruj darmowe konto [tutaj](https://app.pinata.cloud/auth/signup) i wykonaj kroki w celu weryfikacji adresu e-mail i konta.
 
-### Utwórz swój klucz API Pinata {#create-pinata-api-key}
+### Utworzenie klucza API Pinata {#create-pinata-api-key}
 
-Przejdź na stronę [https://pinata.cloud/keys](https://pinata.cloud/keys), a następnie wybierz przycisk „New Key” u góry, ustaw widżet Admin jako włączony i nazwij swój klucz.
+Przejdź na stronę [https://pinata.cloud/keys](https://pinata.cloud/keys), a następnie wybierz przycisk „New Key” (Nowy klucz) na górze, ustaw widżet Admin jako włączony i nazwij swój klucz.
 
-Następnie pojawi się wyskakujące okienko z informacjami o Twoim API. Upewnij się, że umieściłeś to w bezpiecznym miejscu.
+Następnie zobaczysz wyskakujące okienko z informacjami o Twoim API. Upewnij się, że przechowujesz je w bezpiecznym miejscu.
 
-Teraz, gdy nasz klucz jest skonfigurowany, dodajmy go do naszego projektu, abyśmy mogli go użyć.
+Teraz, gdy nasz klucz jest skonfigurowany, dodajmy go do naszego projektu, abyśmy mogli z niego korzystać.
 
-### Utwórz plik .env {#create-a-env}
+### Utworzenie pliku .env {#create-a-env}
 
-Możemy bezpiecznie przechowywać nasz klucz Pinata i sekret w pliku środowiskowym. Zainstalujmy pakiet [dotenv](https://www.npmjs.com/package/dotenv) w katalogu projektu.
+Możemy bezpiecznie przechowywać nasz klucz i sekret Pinata w pliku środowiskowym. Zainstalujmy [pakiet dotenv](https://www.npmjs.com/package/dotenv) w katalogu Twojego projektu.
 
-Otwórz nową kartę w terminalu (oddzielną od tej, na której działa host lokalny) i upewnij się, że jesteś w folderze `minter-starter-files`, a następnie uruchom następujące polecenie w terminalu:
+Otwórz nową kartę w terminalu \(oddzielną od tej, na której działa localhost\) i upewnij się, że jesteś w folderze `minter-starter-files`, a następnie uruchom następujące polecenie w terminalu:
 
 ```text
 npm install dotenv --save
 ```
 
-Następnie utwórz plik `.env` w katalogu głównym `minter-starter-files`, wpisując w wierszu poleceń:
+Następnie utwórz plik `.env` w katalogu głównym `minter-starter-files`, wpisując w wierszu poleceń następujące polecenie:
 
 ```javascript
 vim.env
 ```
 
-To otworzy twój plik `.env` w vim (edytorze tekstu). Aby go zapisać, naciśnij kolejno „esc” + „:” + „q” na klawiaturze.
+Spowoduje to otwarcie pliku `.env` w vimie \(edytorze tekstu\). Aby go zapisać, naciśnij na klawiaturze kolejno „esc” + „:” + „q”.
 
-Następnie w VSCode przejdź do pliku `.env` i dodaj do niego swój klucz API Pinata i sekret API, w ten sposób:
+Następnie w VSCode przejdź do pliku `.env` i dodaj do niego swój klucz API Pinata oraz sekret API, w ten sposób:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-api-key>
 REACT_APP_PINATA_SECRET = <pinata-api-secret>
 ```
 
-Zapisz plik, a następnie jesteś gotowy do rozpoczęcia pisania funkcji przesyłania metadanych JSON do IPFS!
+Zapisz plik, a następnie będziesz gotowy do rozpoczęcia pisania funkcji przesyłającej metadane JSON do IPFS!
 
-### Zaimplementuj pinJSONToIPFS {#pin-json-to-ipfs}
+### Implementacja pinJSONToIPFS {#pin-json-to-ipfs}
 
-Na szczęście dla nas Pinata ma [API specjalnie do przesyłania danych JSON do IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) i wygodny przykład JavaScript z axios, którego możemy użyć, z niewielkimi modyfikacjami.
+Na szczęście dla nas, Pinata posiada [API specjalnie do przesyłania danych JSON do IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) oraz wygodny przykład w JavaScript z użyciem axios, którego możemy użyć z niewielkimi modyfikacjami.
 
 W folderze `utils` utwórzmy kolejny plik o nazwie `pinata.js`, a następnie zaimportujmy nasz sekret i klucz Pinata z pliku .env w ten sposób:
 
@@ -531,7 +523,7 @@ const key = process.env.REACT_APP_PINATA_KEY
 const secret = process.env.REACT_APP_PINATA_SECRET
 ```
 
-Następnie wklej dodatkowy kod z poniższego przykładu do pliku `pinata.js`. Nie martw się, wyjaśnimy, co wszystko oznacza!
+Następnie wklej poniższy dodatkowy kod do pliku `pinata.js`. Nie martw się, przeanalizujemy, co to wszystko oznacza!
 
 ```javascript
 require("dotenv").config()
@@ -569,42 +561,42 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 Więc co dokładnie robi ten kod?
 
-Po pierwsze, importuje [axios](https://www.npmjs.com/package/axios), klienta HTTP opartego na obietnicach dla przeglądarki i node.js, którego użyjemy do złożenia żądania do Pinata.
+Po pierwsze, importuje [axios](https://www.npmjs.com/package/axios), opartego na obietnicach (promises) klienta HTTP dla przeglądarki i Node.js, którego użyjemy do wykonania żądania do Pinata.
 
-Następnie mamy naszą asynchroniczną funkcję `pinJSONToIPFS`, która przyjmuje `JSONBody` jako dane wejściowe oraz klucz API i sekret Pinata w nagłówku, wszystko po to, aby wykonać żądanie POST do ich API `pinJSONToIPFS`.
+Następnie mamy naszą asynchroniczną funkcję `pinJSONToIPFS`, która przyjmuje `JSONBody` jako dane wejściowe oraz klucz i sekret API Pinata w nagłówku, a wszystko to w celu wykonania żądania POST do ich API `pinJSONToIPFS`.
 
-- Jeśli to żądanie POST zakończy się pomyślnie, nasza funkcja zwraca obiekt JSON z wartością logiczną `success` ustawioną na true i `pinataUrl`, pod którym zostały przypięte nasze metadane. Użyjemy tego zwróconego `pinataUrl` jako wejścia `tokenURI` do funkcji mintowania naszego inteligentnego kontraktu.
-- Jeśli to żądanie post nie powiedzie się, nasza funkcja zwróci obiekt JSON z wartością logiczną `success` ustawioną na false i ciągiem `message`, który przekaże nasz błąd.
+- Jeśli to żądanie POST zakończy się sukcesem, nasza funkcja zwraca obiekt JSON z wartością logiczną `success` ustawioną na true oraz `pinataUrl`, gdzie przypięto nasze metadane. Użyjemy tego zwróconego `pinataUrl` jako danych wejściowych `tokenURI` dla funkcji wybijania naszego inteligentnego kontraktu.
+- Jeśli to żądanie POST się nie powiedzie, nasza funkcja zwraca obiekt JSON z wartością logiczną `success` ustawioną na false oraz ciągiem znaków `message`, który przekazuje nasz błąd.
 
-Podobnie jak w przypadku typów zwrotnych funkcji `connectWallet`, zwracamy obiekty JSON, abyśmy mogli użyć ich parametrów do aktualizacji naszych zmiennych stanu i interfejsu użytkownika.
+Podobnie jak w przypadku typów zwracanych przez naszą funkcję `connectWallet`, zwracamy obiekty JSON, abyśmy mogli użyć ich parametrów do aktualizacji naszych zmiennych stanu i interfejsu użytkownika.
 
-## Wczytaj swój inteligentny kontrakt {#load-your-smart-contract}
+## Załadowanie inteligentnego kontraktu {#load-your-smart-contract}
 
-Teraz, gdy mamy sposób na przesyłanie metadanych NFT do IPFS za pomocą naszej funkcji `pinJSONToIPFS`, będziemy potrzebować sposobu na załadowanie instancji naszego inteligentnego kontraktu, abyśmy mogli wywołać jego funkcję `mintNFT`.
+Teraz, gdy mamy sposób na przesłanie naszych metadanych NFT do IPFS za pomocą naszej funkcji `pinJSONToIPFS`, będziemy potrzebować sposobu na załadowanie instancji naszego inteligentnego kontraktu, abyśmy mogli wywołać jego funkcję `mintNFT`.
 
-Jak już wspomnieliśmy, w tym samouczku będziemy używać [tego istniejącego inteligentnego kontraktu NFT](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); jeśli jednak chcesz dowiedzieć się, jak go stworzyliśmy, lub stworzyć własny, gorąco polecamy zapoznanie się z naszym innym samouczkiem, [„Jak stworzyć NFT”](https://www.alchemy.com/docs/how-to-create-an-nft).
+Jak wspomnieliśmy wcześniej, w tym samouczku użyjemy [tego istniejącego inteligentnego kontraktu NFT](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); jednak jeśli chcesz dowiedzieć się, jak go stworzyliśmy, lub stworzyć własny, gorąco polecamy zapoznanie się z naszym innym samouczkiem: [„Jak stworzyć NFT”](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 ### ABI kontraktu {#contract-abi}
 
-Jeśli dokładnie przeanalizowałeś nasze pliki, zauważysz, że w naszym katalogu `src` znajduje się plik `contract-abi.json`. ABI jest niezbędne do określenia, którą funkcję kontrakt wywoła, a także do zapewnienia, że funkcja zwróci dane w oczekiwanym formacie.
+Jeśli uważnie przyjrzałeś się naszym plikom, zauważyłeś, że w naszym katalogu `src` znajduje się plik `contract-abi.json`. ABI jest niezbędne do określenia, którą funkcję wywoła kontrakt, a także do upewnienia się, że funkcja zwróci dane w oczekiwananym formacie.
 
-Będziemy również potrzebować klucza API Alchemy i API Alchemy Web3, aby połączyć się z blockchainem Ethereum i załadować nasz inteligentny kontrakt.
+Będziemy również potrzebować klucza API Alchemy oraz API Alchemy Web3, aby połączyć się z blockchainem Ethereum i załadować nasz inteligentny kontrakt.
 
-### Utwórz klucz API Alchemy {#create-alchemy-api}
+### Utworzenie klucza API Alchemy {#create-alchemy-api}
 
 Jeśli nie masz jeszcze konta Alchemy, [zarejestruj się za darmo tutaj.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Po utworzeniu konta Alchemy możesz wygenerować klucz API, tworząc aplikację. Pozwoli nam to na składanie żądań do sieci testowej Ropsten.
+Po utworzeniu konta Alchemy możesz wygenerować klucz API, tworząc aplikację. Pozwoli nam to na wykonywanie żądań do sieci testowej Ropsten.
 
-Przejdź na stronę „Create App” w swoim panelu Alchemy, najeżdżając kursorem na „Apps” w pasku nawigacyjnym i klikając „Create App”.
+Przejdź do strony „Create App” (Utwórz aplikację) w panelu Alchemy, najechawszy na „Apps” (Aplikacje) na pasku nawigacyjnym i klikając „Create App”.
 
-Nazwij swoją aplikację — my wybraliśmy „My First NFT!”, podaj krótki opis, wybierz „Staging” dla środowiska używanego do księgowania aplikacji i wybierz „Ropsten” dla swojej sieci.
+Nazwij swoją aplikację (my wybraliśmy „My First NFT!”), podaj krótki opis, wybierz „Staging” jako środowisko (Environment) używane do księgowości aplikacji i wybierz „Ropsten” jako swoją sieć (Network).
 
-Kliknij „Utwórz aplikację” i to wszystko! Twoja aplikacja powinna pojawić się w poniższej tabeli.
+Kliknij „Create app” i to wszystko! Twoja aplikacja powinna pojawić się w tabeli poniżej.
 
-Wspaniale, teraz, gdy stworzyliśmy nasz adres URL HTTP API Alchemy, skopiuj go do schowka...
+Niesamowite, więc teraz, gdy utworzyliśmy nasz adres URL HTTP API Alchemy, skopiuj go do schowka...
 
-…a następnie dodajmy go do naszego pliku `.env`. W sumie twój plik .env powinien wyglądać tak:
+…a następnie dodajmy go do naszego pliku `.env`. W sumie Twój plik .env powinien wyglądać tak:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
@@ -612,18 +604,18 @@ REACT_APP_PINATA_SECRET = <pinata-secret>
 REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 ```
 
-Teraz, gdy mamy już ABI naszego kontraktu i klucz API Alchemy, jesteśmy gotowi do załadowania naszego inteligentnego kontraktu za pomocą [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
+Teraz, gdy mamy nasze ABI kontraktu i nasz klucz API Alchemy, jesteśmy gotowi do załadowania naszego inteligentnego kontraktu za pomocą [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
 
-### Skonfiguruj punkt końcowy Alchemy Web3 i kontrakt {#setup-alchemy-endpoint}
+### Konfiguracja punktu końcowego Alchemy Web3 i kontraktu {#setup-alchemy-endpoint}
 
-Po pierwsze, jeśli jeszcze go nie masz, musisz zainstalować [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), przechodząc do katalogu domowego: `nft-minter-tutorial` w terminalu:
+Po pierwsze, jeśli jeszcze tego nie zrobiłeś, będziesz musiał zainstalować [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), przechodząc do katalogu domowego: `nft-minter-tutorial` w terminalu:
 
 ```text
 cd ..
 npm install @alch/alchemy-web3
 ```
 
-Następnie wróćmy do naszego pliku `interact.js`. Na górze pliku dodaj następujący kod, aby zaimportować swój klucz Alchemy z pliku .env i skonfigurować swój punkt końcowy Alchemy Web3:
+Następnie wróćmy do naszego pliku `interact.js`. Na górze pliku dodaj następujący kod, aby zaimportować klucz Alchemy z pliku .env i skonfigurować punkt końcowy Alchemy Web3:
 
 ```javascript
 require("dotenv").config()
@@ -632,7 +624,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) to nakładka na [Web3.js](https://docs.web3js.org/), zapewniająca ulepszone metody API i inne kluczowe korzyści, które ułatwiają życie dewelopera web3. Został zaprojektowany tak, aby wymagał minimalnej konfiguracji, dzięki czemu możesz od razu zacząć go używać w swojej aplikacji!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) to wrapper dla [Web3.js](https://docs.web3js.org/), zapewniający ulepszone metody API i inne kluczowe korzyści, które ułatwią Ci życie jako programiście Web3. Został zaprojektowany tak, aby wymagał minimalnej konfiguracji, dzięki czemu możesz od razu zacząć go używać w swojej aplikacji!
 
 Następnie dodajmy do naszego pliku ABI kontraktu i adres kontraktu.
 
@@ -646,23 +638,23 @@ const contractABI = require("../contract-abi.json")
 const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 ```
 
-Gdy mamy już obie te rzeczy, jesteśmy gotowi do rozpoczęcia kodowania naszej funkcji mintowania!
+Gdy mamy już oba te elementy, jesteśmy gotowi do rozpoczęcia kodowania naszej funkcji wybijania!
 
-## Zaimplementuj funkcję mintNFT {#implement-the-mintnft-function}
+## Implementacja funkcji mintNFT {#implement-the-mintnft-function}
 
-W pliku `interact.js` zdefiniujmy naszą funkcję, `mintNFT`, która, jak sama nazwa wskazuje, będzie mintować nasze NFT.
+Wewnątrz pliku `interact.js` zdefiniujmy naszą funkcję `mintNFT`, która, jak sama nazwa wskazuje, wybije nasze NFT.
 
-Ponieważ będziemy wykonywać liczne wywołania asynchroniczne (do Pinata, aby przypiąć nasze metadane do IPFS, Alchemy Web3, aby załadować nasz inteligentny kontrakt, i MetaMask, aby podpisać nasze transakcje), nasza funkcja również będzie asynchroniczna.
+Ponieważ będziemy wykonywać liczne wywołania asynchroniczne \(do Pinata, aby przypiąć nasze metadane do IPFS, do Alchemy Web3, aby załadować nasz inteligentny kontrakt, oraz do MetaMask, aby podpisać nasze transakcje\), nasza funkcja również będzie asynchroniczna.
 
-Trzy dane wejściowe do naszej funkcji to `url` naszego zasobu cyfrowego, `name` i `description`. Dodaj następującą sygnaturę funkcji pod funkcją `connectWallet`:
+Trzema danymi wejściowymi do naszej funkcji będą `url` naszego aktywa cyfrowego, `name` oraz `description`. Dodaj następującą sygnaturę funkcji poniżej funkcji `connectWallet`:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {}
 ```
 
-### Obsługa błędów wejściowych {#input-error-handling}
+### Obsługa błędów danych wejściowych {#input-error-handling}
 
-Naturalnie, sensowne jest posiadanie jakiejś formy obsługi błędów wejściowych na początku funkcji, abyśmy opuścili tę funkcję, jeśli nasze parametry wejściowe nie są poprawne. Wewnątrz naszej funkcji dodajmy następujący kod:
+Naturalnie, sensowne jest posiadanie jakiejś formy obsługi błędów danych wejściowych na początku funkcji, abyśmy mogli z niej wyjść, jeśli nasze parametry wejściowe nie są poprawne. Wewnątrz naszej funkcji dodajmy następujący kod:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
@@ -670,27 +662,27 @@ export const mintNFT = async (url, name, description) => {
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗Upewnij się, że wszystkie pola są wypełnione przed mintowaniem.",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 }
 ```
 
-Zasadniczo, jeśli którykolwiek z parametrów wejściowych jest pustym ciągiem, zwracamy obiekt JSON, w którym wartość logiczna `success` jest fałszywa, a ciąg `status` informuje, że wszystkie pola w naszym interfejsie użytkownika muszą być wypełnione.
+Zasadniczo, jeśli którykolwiek z parametrów wejściowych jest pustym ciągiem znaków, zwracamy obiekt JSON, w którym wartość logiczna `success` to false, a ciąg znaków `status` przekazuje informację, że wszystkie pola w naszym interfejsie użytkownika muszą być wypełnione.
 
-### Przesyłanie metadanych do IPFS {#upload-metadata-to-ipfs}
+### Przesłanie metadanych do IPFS {#upload-metadata-to-ipfs}
 
-Gdy już wiemy, że nasze metadane są poprawnie sformatowane, następnym krokiem jest opakowanie ich w obiekt JSON i przesłanie go do IPFS za pomocą funkcji `pinJSONToIPFS`, którą napisaliśmy!
+Gdy wiemy już, że nasze metadane są sformatowane poprawnie, następnym krokiem jest opakowanie ich w obiekt JSON i przesłanie do IPFS za pomocą napisanej przez nas funkcji `pinJSONToIPFS`!
 
-W tym celu musimy najpierw zaimportować funkcję `pinJSONToIPFS` do naszego pliku `interact.js`. Na samym początku `interact.js` dodajmy:
+Aby to zrobić, najpierw musimy zaimportować funkcję `pinJSONToIPFS` do naszego pliku `interact.js`. Na samej górze pliku `interact.js` dodajmy:
 
 ```javascript
 import { pinJSONToIPFS } from "./pinata.js"
 ```
 
-Przypomnijmy, że `pinJSONToIPFS` przyjmuje treść JSON. Więc zanim do niego zadzwonimy, będziemy musieli sformatować nasze parametry `url`, `name` i `description` w obiekt JSON.
+Przypomnijmy, że `pinJSONToIPFS` przyjmuje ciało JSON. Zanim więc ją wywołamy, będziemy musieli sformatować nasze parametry `url`, `name` i `description` w obiekt JSON.
 
-Zaktualizujmy nasz kod, aby utworzyć obiekt JSON o nazwie `metadata`, a następnie wykonajmy wywołanie `pinJSONToIPFS` z tym parametrem `metadata`:
+Zaktualizujmy nasz kod, aby utworzyć obiekt JSON o nazwie `metadata`, a następnie wywołajmy `pinJSONToIPFS` z tym parametrem `metadata`:
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
@@ -698,33 +690,33 @@ export const mintNFT = async (url, name, description) => {
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗Upewnij się, że wszystkie pola są wypełnione przed mintowaniem.",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 
-  //tworzenie metadanych
+  //utwórz metadane
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //wywołanie pinata
+  //wykonaj wywołanie do Pinata
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 Coś poszło nie tak podczas przesyłania Twojego tokenURI.",
+      status: "😢 Something went wrong while uploading your tokenURI.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
 }
 ```
 
-Zauważ, że przechowujemy odpowiedź naszego wywołania do `pinJSONToIPFS(metadata)` w obiekcie `pinataResponse`. Następnie analizujemy ten obiekt pod kątem ewentualnych błędów.
+Zauważ, że przechowujemy odpowiedź z naszego wywołania `pinJSONToIPFS(metadata)` w obiekcie `pinataResponse`. Następnie parsujemy ten obiekt w poszukiwaniu błędów.
 
-Jeśli wystąpi błąd, zwracamy obiekt JSON, w którym wartość logiczna `success` jest fałszywa, a nasz ciąg `status` informuje, że nasze wywołanie nie powiodło się. W przeciwnym razie wyodrębniamy `pinataURL` z `pinataResponse` i przechowujemy go jako naszą zmienną `tokenURI`.
+Jeśli wystąpi błąd, zwracamy obiekt JSON, w którym wartość logiczna `success` to false, a nasz ciąg znaków `status` przekazuje informację, że nasze wywołanie się nie powiodło. W przeciwnym razie wyodrębniamy `pinataURL` z `pinataResponse` i przechowujemy go jako naszą zmienną `tokenURI`.
 
-Teraz nadszedł czas, aby załadować nasz inteligentny kontrakt za pomocą Alchemy Web3 API, które zainicjowaliśmy na początku naszego pliku. Dodaj następującą linię kodu na dole funkcji `mintNFT`, aby ustawić kontrakt w globalnej zmiennej `window.contract`:
+Teraz nadszedł czas, aby załadować nasz inteligentny kontrakt za pomocą API Alchemy Web3, które zainicjowaliśmy na górze naszego pliku. Dodaj następującą linię kodu na dole funkcji `mintNFT`, aby ustawić kontrakt w zmiennej globalnej `window.contract`:
 
 ```javascript
 window.contract = await new web3.eth.Contract(contractABI, contractAddress)
@@ -733,9 +725,9 @@ window.contract = await new web3.eth.Contract(contractABI, contractAddress)
 Ostatnią rzeczą do dodania w naszej funkcji `mintNFT` jest nasza transakcja Ethereum:
 
 ```javascript
-//ustaw swoją transakcję Ethereum
+//skonfiguruj swoją transakcję Ethereum
 const transactionParameters = {
-  to: contractAddress, // Wymagane, z wyjątkiem publikacji kontraktów.
+  to: contractAddress, // Wymagane z wyjątkiem publikacji kontraktu.
   from: window.ethereum.selectedAddress, // musi pasować do aktywnego adresu użytkownika.
   data: window.contract.methods
     .mintNFT(window.ethereum.selectedAddress, tokenURI)
@@ -751,26 +743,26 @@ try {
   return {
     success: true,
     status:
-      "✅ Sprawdź swoją transakcję na Etherscan: https://ropsten.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
   return {
     success: false,
-    status: "😥 Coś poszło nie tak: " + error.message,
+    status: "😥 Something went wrong: " + error.message,
   }
 }
 ```
 
-Jeśli jesteś już zaznajomiony z transakcjami Ethereum, zauważysz, że struktura jest dość podobna do tego, co widziałeś.
+Jeśli znasz już transakcje Ethereum, zauważysz, że struktura jest dość podobna do tego, co już widziałeś.
 
-- Po pierwsze, ustawiamy nasze parametry transakcji.
-  - `to` określa adres odbiorcy (nasz inteligentny kontrakt)
-  - `from` określa sygnatariusza transakcji (połączony adres użytkownika z MetaMask: `window.ethereum.selectedAddress`)
-  - `data` zawiera wywołanie metody `mintNFT` naszego inteligentnego kontraktu, która jako dane wejściowe otrzymuje nasz `tokenURI` i adres portfela użytkownika, `window.ethereum.selectedAddress`
-- Następnie wykonujemy wywołanie await, `window.ethereum.request,`, w którym prosimy MetaMask o podpisanie transakcji. Zauważ, że w tym żądaniu określamy naszą metodę eth (eth_SentTransaction) i przekazujemy nasze `transactionParameters`. W tym momencie w przeglądarce otworzy się MetaMask i poprosi użytkownika o podpisanie lub odrzucenie transakcji.
-  - Jeśli transakcja zakończy się powodzeniem, funkcja zwróci obiekt JSON, w którym wartość logiczna `success` jest ustawiona na true, a ciąg `status` prosi użytkownika o sprawdzenie Etherscan w celu uzyskania dalszych informacji o transakcji.
-  - Jeśli transakcja się nie powiedzie, funkcja zwróci obiekt JSON, w którym wartość logiczna `success` jest ustawiona na false, a ciąg `status` przekazuje komunikat o błędzie.
+- Po pierwsze, konfigurujemy parametry naszej transakcji.
+  - `to` określa adres odbiorcy \(nasz inteligentny kontrakt\)
+  - `from` określa osobę podpisującą transakcję \(adres użytkownika połączony z MetaMask: `window.ethereum.selectedAddress`\)
+  - `data` zawiera wywołanie metody `mintNFT` naszego inteligentnego kontraktu, która otrzymuje nasze `tokenURI` oraz adres portfela użytkownika, `window.ethereum.selectedAddress`, jako dane wejściowe
+- Następnie wykonujemy wywołanie await, `window.ethereum.request,`, w którym prosimy MetaMask o podpisanie transakcji. Zauważ, że w tym żądaniu określamy naszą metodę eth \(eth_SentTransaction\) i przekazujemy nasze `transactionParameters`. W tym momencie MetaMask otworzy się w przeglądarce i poprosi użytkownika o podpisanie lub odrzucenie transakcji.
+  - Jeśli transakcja zakończy się sukcesem, funkcja zwróci obiekt JSON, w którym wartość logiczna `success` jest ustawiona na true, a ciąg znaków `status` zachęca użytkownika do sprawdzenia Etherscan w celu uzyskania dodatkowych informacji o transakcji.
+  - Jeśli transakcja się nie powiedzie, funkcja zwróci obiekt JSON, w którym wartość logiczna `success` jest ustawiona na false, a ciąg znaków `status` przekazuje komunikat o błędzie.
 
 W sumie nasza funkcja `mintNFT` powinna wyglądać tak:
 
@@ -780,32 +772,32 @@ export const mintNFT = async (url, name, description) => {
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗Upewnij się, że wszystkie pola są wypełnione przed mintowaniem.",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 
-  //tworzenie metadanych
+  //utwórz metadane
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //żądanie przypięcia pinata
+  //żądanie przypięcia Pinata
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 Coś poszło nie tak podczas przesyłania Twojego tokenURI.",
+      status: "😢 Something went wrong while uploading your tokenURI.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
 
-  //wczytaj inteligentny kontrakt
+  //załaduj inteligentny kontrakt
   window.contract = await new web3.eth.Contract(contractABI, contractAddress) //loadContract();
 
-  //ustaw swoją transakcję Ethereum
+  //skonfiguruj swoją transakcję Ethereum
   const transactionParameters = {
-    to: contractAddress, // Wymagane, z wyjątkiem publikacji kontraktów.
+    to: contractAddress, // Wymagane z wyjątkiem publikacji kontraktu.
     from: window.ethereum.selectedAddress, // musi pasować do aktywnego adresu użytkownika.
     data: window.contract.methods
       .mintNFT(window.ethereum.selectedAddress, tokenURI)
@@ -821,21 +813,21 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Sprawdź swoją transakcję na Etherscan: https://ropsten.etherscan.io/tx/" +
+        "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {
     return {
       success: false,
-      status: "😥 Coś poszło nie tak: " + error.message,
+      status: "😥 Something went wrong: " + error.message,
     }
   }
 }
 ```
 
-To jest jedna gigantyczna funkcja! Teraz musimy tylko podłączyć naszą funkcję `mintNFT` do naszego komponentu `Minter.js`...
+To jedna gigantyczna funkcja! Teraz musimy tylko połączyć naszą funkcję `mintNFT` z naszym komponentem `Minter.js`...
 
-## Podłącz mintNFT do naszego frontendu Minter.js {#connect-our-frontend}
+## Połączenie mintNFT z naszym frontendem Minter.js {#connect-our-frontend}
 
 Otwórz plik `Minter.js` i zaktualizuj linię `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` na górze, aby wyglądała tak:
 
@@ -847,7 +839,7 @@ import {
 } from "./utils/interact.js"
 ```
 
-Na koniec zaimplementuj funkcję `onMintPressed`, aby wykonać wywołanie await do zaimportowanej funkcji `mintNFT` i zaktualizować zmienną stanu `status`, aby odzwierciedlić, czy nasza transakcja powiodła się, czy nie:
+Na koniec zaimplementuj funkcję `onMintPressed`, aby wykonać wywołanie await do zaimportowanej funkcji `mintNFT` i zaktualizować zmienną stanu `status`, aby odzwierciedlić, czy nasza transakcja zakończyła się sukcesem, czy niepowodzeniem:
 
 ```javascript
 const onMintPressed = async () => {
@@ -856,22 +848,22 @@ const onMintPressed = async () => {
 }
 ```
 
-## Wdróż swoje NFT na działającej stronie internetowej {#deploy-your-NFT}
+## Wdrożenie NFT na działającej stronie internetowej {#deploy-your-nft}
 
-Gotowy na udostępnienie swojego projektu na żywo, aby użytkownicy mogli z nim wchodzić w interakcję? Sprawdź [ten samouczek](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) dotyczący wdrażania Twojego Minera na działającej stronie internetowej.
+Gotowy, aby udostępnić swój projekt użytkownikom do interakcji? Sprawdź [ten samouczek](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) dotyczący wdrażania Mintera na działającej stronie internetowej.
 
-Jeszcze jeden krok...
+Jeszcze jeden, ostatni krok...
 
-## Szturmem zdobądź świat blockchaina {#take-the-blockchain-world-by-storm}
+## Podbij świat blockchaina {#take-the-blockchain-world-by-storm}
 
 Żartuję, dotarłeś do końca samouczka!
 
 Podsumowując, budując minter NFT, z powodzeniem nauczyłeś się, jak:
 
-- Połączyć się z MetaMask za pośrednictwem projektu frontendowego
-- Wywoływać metody inteligentnego kontraktu z poziomu frontendu
+- Połączyć się z MetaMask przez swój projekt frontendowy
+- Wywoływać metody inteligentnego kontraktu z frontendu
 - Podpisywać transakcje za pomocą MetaMask
 
-Prawdopodobnie chcesz mieć możliwość pochwalenia się NFT wygenerowanymi za pośrednictwem Twojej dapki w swoim portfelu — więc koniecznie sprawdź nasz krótki samouczek [„Jak wyświetlić swoje NFT w portfelu”](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
+Prawdopodobnie chciałbyś móc pochwalić się w swoim portfelu NFT wybitymi za pośrednictwem Twojej dapp — więc koniecznie sprawdź nasz krótki samouczek [Jak wyświetlić swoje NFT w portfelu](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
 
-I, jak zawsze, jeśli masz jakieś pytania, jesteśmy tutaj, aby pomóc na [Discordzie Alchemy](https://discord.gg/gWuC7zB). Nie możemy się doczekać, aby zobaczyć, jak zastosujesz koncepcje z tego samouczka w swoich przyszłych projektach!
+I jak zawsze, jeśli masz jakiekolwiek pytania, jesteśmy tutaj, aby pomóc na [Discordzie Alchemy](https://discord.gg/gWuC7zB). Nie możemy się doczekać, aby zobaczyć, jak zastosujesz koncepcje z tego samouczka w swoich przyszłych projektach!

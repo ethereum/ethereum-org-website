@@ -1,89 +1,89 @@
 ---
-title: "Sieć portali"
-description: "Przegląd Sieci portali — sieci w fazie rozwoju, zaprojektowanej do obsługi klientów o niskich zasobach."
+title: Portal Network
+description: Przegląd Portal Network – będącej w fazie rozwoju sieci zaprojektowanej do obsługi klientów o niskich zasobach.
 lang: pl
 ---
 
-Ethereum to sieć złożona z komputerów, na których działa oprogramowanie klienckie Ethereum. Każdy z tych komputerów nazywany jest „węzłem”. Oprogramowanie klienckie pozwala węzłowi wysyłać i odbierać dane w sieci Ethereum oraz weryfikuje dane pod kątem zasad protokołu Ethereum. Węzły przechowują wiele danych historycznych w swojej pamięci dyskowej i dodają do nich nowe pakiety informacji, znane jako bloki, otrzymywane od innych węzłów w sieci. Jest to konieczne, aby zawsze sprawdzać, czy dany węzeł posiada informacje zgodne z resztą sieci. Oznacza to, że uruchomienie węzła może wymagać dużo miejsca na dysku. Niektóre operacje węzła mogą również wymagać dużej ilości pamięci RAM.
+[Ethereum](/) to sieć składająca się z komputerów, na których działa oprogramowanie klienta Ethereum. Każdy z tych komputerów nazywany jest „węzłem” (ang. node). Oprogramowanie klienta pozwala węzłowi wysyłać i odbierać dane w sieci Ethereum oraz weryfikuje dane zgodnie z regułami protokołu Ethereum. Węzły przechowują wiele danych historycznych na swoich dyskach i dodają do nich nowe pakiety informacji, znane jako bloki, otrzymywane od innych węzłów w sieci. Jest to niezbędne, aby zawsze sprawdzać, czy węzeł ma informacje spójne z resztą sieci. Oznacza to, że uruchomienie węzła może wymagać dużej ilości miejsca na dysku. Niektóre operacje węzła mogą również wymagać dużej ilości pamięci RAM.
 
-Aby obejść ten problem z pamięcią dyskową, opracowano „lekkie” węzły, które żądają informacji od pełnych węzłów, zamiast przechowywać je wszystkie samodzielnie. Oznacza to jednak, że lekki węzeł nie weryfikuje informacji samodzielnie i zamiast tego ufa innemu węzłowi. Oznacza to również, że pełne węzły muszą podjąć dodatkową pracę, aby obsłużyć te lekkie węzły.
+Aby obejść ten problem z miejscem na dysku, opracowano „lekkie węzły” (ang. light nodes), które żądają informacji od pełnych węzłów, zamiast przechowywać je w całości samodzielnie. Oznacza to jednak, że lekki węzeł nie weryfikuje informacji niezależnie i zamiast tego ufa innemu węzłowi. Oznacza to również, że pełne węzły muszą podjąć dodatkową pracę, aby obsłużyć te lekkie węzły.
 
-Sieć portali to nowy projekt sieciowy dla Ethereum, który ma na celu rozwiązanie problemu dostępności danych dla „lekkich” węzłów bez konieczności ufania lub dodatkowego obciążania pełnych węzłów poprzez udostępnianie niezbędnych danych w małych fragmentach w całej sieci.
+Portal Network to nowy projekt sieciowy dla Ethereum, który ma na celu rozwiązanie problemu dostępności danych (DA) dla „lekkich” węzłów bez konieczności ufania pełnym węzłom lub nakładania na nie dodatkowego obciążenia, poprzez udostępnianie niezbędnych danych w małych fragmentach w całej sieci.
 
-Więcej na temat [węzłów i klientów](/developers/docs/nodes-and-clients/)
+Więcej o [węzłach i klientach](/developers/docs/nodes-and-clients/)
 
-## Dlaczego potrzebujemy Sieci portali {#why-do-we-need-portal-network}
+## Dlaczego potrzebujemy Portal Network {#why-do-we-need-portal-network}
 
-Węzły Ethereum przechowują własną pełną lub częściową kopię blockchaina Ethereum. Ta lokalna kopia jest używana do walidacji transakcji i zapewnienia, że węzeł podąża za właściwym łańcuchem. Te lokalnie przechowywane dane pozwalają węzłom niezależnie zweryfikować, czy przychodzące dane są ważne i prawidłowe, bez konieczności ufania żadnemu innemu podmiotowi.
+Węzły Ethereum przechowują własną pełną lub częściową kopię blockchaina Ethereum. Ta lokalna kopia służy do walidacji transakcji i upewnienia się, że węzeł podąża za właściwym łańcuchem. Te lokalnie przechowywane dane pozwalają węzłom niezależnie weryfikować, czy przychodzące dane są ważne i poprawne, bez konieczności ufania jakiemukolwiek innemu podmiotowi.
 
-Ta lokalna kopia blockchaina oraz powiązane dane o stanie i potwierdzeniach zajmują dużo miejsca na dysku twardym węzła. Na przykład, do uruchomienia węzła za pomocą [Geth](https://geth.ethereum.org) sparowanego z klientem konsensusu zalecany jest dysk twardy o pojemności 2 TB. Korzystając z synchronizacji typu snap, która przechowuje tylko dane łańcucha z relatywnie najnowszego zestawu bloków, Geth zazwyczaj zajmuje około 650 GB miejsca na dysku, ale rośnie w tempie około 14 GB/tydzień (można okresowo przycinać węzeł z powrotem do 650 GB).
+Ta lokalna kopia blockchaina oraz powiązane dane stanu i pokwitowań zajmują dużo miejsca na dysku twardym węzła. Na przykład do uruchomienia węzła przy użyciu [Geth](https://geth.ethereum.org) w połączeniu z klientem konsensusu zalecany jest dysk twardy o pojemności 2 TB. Korzystając z synchronizacji snap (snap sync), która przechowuje tylko dane łańcucha ze stosunkowo niedawnego zestawu bloków, Geth zazwyczaj zajmuje około 650 GB miejsca na dysku, ale rośnie w tempie około 14 GB tygodniowo (można okresowo przycinać węzeł z powrotem do 650 GB).
 
-Oznacza to, że uruchamianie węzłów może być kosztowne, ponieważ duża ilość miejsca na dysku musi być przeznaczona na Ethereum. W planie działania Ethereum istnieje kilka rozwiązań tego problemu, w tym [wygasanie historii](/roadmap/statelessness/#history-expiry), [wygasanie stanu](/roadmap/statelessness/#state-expiry) i [bezstanowość](/roadmap/statelessness/). Jednakże do ich wdrożenia prawdopodobnie pozostało jeszcze kilka lat. Istnieją również [lekkie węzły](/developers/docs/nodes-and-clients/light-clients/), które nie zapisują własnej kopii danych łańcucha, lecz żądają potrzebnych im danych od pełnych węzłów. Oznacza to jednak, że lekkie węzły muszą ufać pełnym węzłom w kwestii dostarczania rzetelnych danych, a także obciąża to pełne węzły, które muszą obsługiwać dane potrzebne lekkim węzłom.
+Oznacza to, że uruchamianie węzłów może być kosztowne, ponieważ duża ilość miejsca na dysku musi być dedykowana dla Ethereum. Na mapie drogowej Ethereum znajduje się kilka rozwiązań tego problemu, w tym [wygasanie historii](/roadmap/statelessness/#history-expiry), [wygasanie stanu](/roadmap/statelessness/#state-expiry) i [bezstanowość](/roadmap/statelessness/). Jednak prawdopodobnie minie jeszcze kilka lat, zanim zostaną one wdrożone. Istnieją również [lekkie węzły](/developers/docs/nodes-and-clients/light-clients/), które nie zapisują własnej kopii danych łańcucha, lecz żądają potrzebnych im danych od pełnych węzłów. Oznacza to jednak, że lekkie węzły muszą ufać pełnym węzłom, że dostarczą uczciwe dane, a także obciąża to pełne węzły, które muszą obsługiwać dane potrzebne lekkim węzłom.
 
-Sieć portali ma na celu zapewnienie alternatywnego sposobu pozyskiwania danych przez lekkie węzły, który nie wymaga zaufania ani znacznego zwiększania pracy, jaką muszą wykonywać pełne węzły. Sposobem na to będzie wprowadzenie nowej metody udostępniania danych przez węzły Ethereum w całej sieci.
+Portal Network ma na celu zapewnienie alternatywnego sposobu pozyskiwania danych przez lekkie węzły, który nie wymaga zaufania ani znacznego zwiększania pracy, jaką muszą wykonać pełne węzły. Sposobem na to będzie wprowadzenie nowego sposobu udostępniania danych w sieci przez węzły Ethereum.
 
-## Jak działa Sieć portali? {#how-does-portal-network-work}
+## Jak działa Portal Network? {#how-does-portal-network-work}
 
-Węzły Ethereum mają ścisłe protokoły, które określają sposób ich wzajemnej komunikacji. Klienci wykonawczy komunikują się za pomocą zestawu podprotokołów znanych jako [DevP2P](/developers/docs/networking-layer/#devp2p), podczas gdy klienci konsensusu używają innego stosu podprotokołów o nazwie [libP2P](/developers/docs/networking-layer/#libp2p). Definiują one typy danych, które mogą być przekazywane między węzłami.
+Węzły Ethereum mają ścisłe protokoły, które określają, w jaki sposób komunikują się ze sobą. Klienty warstwy wykonawczej komunikują się za pomocą zestawu podprotokołów znanych jako [devp2p](/developers/docs/networking-layer/#devp2p), podczas gdy klienty konsensusu używają innego stosu podprotokołów zwanego [libp2p](/developers/docs/networking-layer/#libp2p). Definiują one rodzaje danych, które mogą być przekazywane między węzłami.
 
-![devP2P i libP2P](portal-network-devp2p-libp2p.png)
+![devP2P and libP2P](portal-network-devp2p-libp2p.png)
 
-Węzły mogą również udostępniać określone dane za pośrednictwem [API JSON-RPC](/developers/docs/apis/json-rpc/), w ten sposób aplikacje i portfele wymieniają informacje z węzłami Ethereum. Jednak żaden z nich nie jest idealnym protokołem do obsługi danych dla lekkich klientów.
+Węzły mogą również udostępniać określone dane za pośrednictwem [API JSON-RPC](/developers/docs/apis/json-rpc/), w ten sposób aplikacje i portfele wymieniają informacje z węzłami Ethereum. Jednak żaden z nich nie jest idealnym protokołem do udostępniania danych lekkim klientom.
 
-Lekcy klienci nie mogą obecnie żądać określonych fragmentów danych łańcucha za pośrednictwem DevP2P lub libP2p, ponieważ protokoły te są przeznaczone wyłącznie do umożliwienia synchronizacji łańcucha oraz rozpowszechniania bloków i transakcji. Lekcy klienci nie chcą pobierać tych informacji, ponieważ przestałyby być „lekkimi”.
+Lekkie klienty nie mogą obecnie żądać określonych fragmentów danych łańcucha przez devp2p lub libp2p, ponieważ te protokoły są zaprojektowane tylko w celu umożliwienia synchronizacji łańcucha oraz rozgłaszania (gossiping) bloków i transakcji. Lekkie klienty nie chcą pobierać tych informacji, ponieważ przestałyby być „lekkie”.
 
-Interfejs API JSON-RPC również nie jest idealnym wyborem dla żądań danych przez lekkiego klienta, ponieważ opiera się na połączeniu z określonym pełnym węzłem lub scentralizowanym dostawcą RPC, który może obsłużyć dane. Oznacza to, że lekki klient musi ufać uczciwości danego węzła/dostawcy, a także pełny węzeł może być zmuszony do obsługi wielu żądań od wielu lekkich klientów, co zwiększa jego wymagania dotyczące przepustowości.
+API JSON-RPC również nie jest idealnym wyborem dla żądań danych lekkich klientów, ponieważ opiera się na połączeniu z określonym pełnym węzłem lub scentralizowanym dostawcą RPC, który może udostępniać dane. Oznacza to, że lekki klient musi ufać temu konkretnemu węzłowi/dostawcy, że jest uczciwy, a ponadto pełny węzeł może musieć obsługiwać wiele żądań od wielu lekkich klientów, co zwiększa jego wymagania dotyczące przepustowości.
 
-Celem Sieci portali jest ponowne przemyślenie całego projektu, budując go specjalnie z myślą o lekkości, poza ograniczeniami projektowymi istniejących klientów Ethereum.
+Celem Portal Network jest przemyślenie całego projektu, budowanie specjalnie pod kątem lekkości, poza ograniczeniami projektowymi istniejących klientów Ethereum.
 
-Główną ideą Sieci portali jest wykorzystanie najlepszych elementów obecnego stosu sieciowego poprzez umożliwienie udostępniania informacji potrzebnych lekkim klientom, takich jak dane historyczne i tożsamość obecnej głowy łańcucha, za pośrednictwem lekkiej, zdecentralizowanej sieci peer-to-peer w stylu DevP2P, wykorzystującej [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (podobne do Bittorrent).
+Główną ideą Portal Network jest wykorzystanie najlepszych elementów obecnego stosu sieciowego poprzez umożliwienie udostępniania informacji potrzebnych lekkim klientom, takich jak dane historyczne i tożsamość obecnego szczytu łańcucha (head of the chain), za pośrednictwem lekkiej, zdecentralizowanej sieci peer-to-peer w stylu devp2p, wykorzystującej [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (podobnie jak w sieci BitTorrent).
 
-Pomysł polega na dodaniu do każdego węzła małych części całkowitych historycznych danych Ethereum i niektórych określonych obowiązków węzła. Następnie żądania są obsługiwane poprzez wyszukiwanie węzłów przechowujących określone dane, o które poproszono, i pobieranie ich od nich.
+Pomysł polega na dodaniu do każdego węzła małych części całkowitych danych historycznych Ethereum i pewnych specyficznych obowiązków węzła. Następnie żądania są obsługiwane poprzez wyszukiwanie węzłów przechowujących określone dane, o które poproszono, i pobieranie ich od nich.
 
-Odwraca to normalny model, w którym lekkie węzły znajdują pojedynczy węzeł i proszą go o filtrowanie i obsługę dużych ilości danych; zamiast tego szybko filtrują dużą sieć węzłów, z których każdy obsługuje niewielkie ilości danych.
+Odwraca to normalny model lekkich węzłów, które znajdują pojedynczy węzeł i żądają od niego filtrowania i udostępniania dużych ilości danych; zamiast tego szybko filtrują dużą sieć węzłów, z których każdy obsługuje niewielkie ilości danych.
 
-Celem jest umożliwienie zdecentralizowanej sieci lekkich klientów Portal:
+Celem jest umożliwienie zdecentralizowanej sieci lekkich klientów Portal na:
 
-- śledzenie głowy łańcucha
-- synchronizowanie najnowszych i historycznych danych łańcucha
-- pobieranie danych o stanie
-- transmitowanie transakcji
+- śledzenie szczytu łańcucha
+- synchronizację najnowszych i historycznych danych łańcucha
+- pobieranie danych stanu
+- rozgłaszanie transakcji
 - wykonywanie transakcji przy użyciu [EVM](/developers/docs/evm/)
 
-Korzyści płynące z tego projektu sieci to:
+Korzyści z takiego projektu sieci to:
 
 - zmniejszenie zależności od scentralizowanych dostawców
-- Zmniejszenie zużycia przepustowości internetowej
-- Zminimalizowana lub zerowa synchronizacja
-- Dostępność dla urządzeń o ograniczonych zasobach (\<1 GB RAM, \<100 MB miejsca na dysku, 1 procesor)
+- zmniejszenie zużycia przepustowości Internetu
+- zminimalizowana lub zerowa synchronizacja
+- dostępność dla urządzeń o ograniczonych zasobach (\<1 GB RAM, \<100 MB miejsca na dysku, 1 CPU)
 
-Poniższa tabela przedstawia funkcje istniejących klientów, które mogą być dostarczane przez Sieć portali, umożliwiając użytkownikom dostęp do tych funkcji na urządzeniach o bardzo niskich zasobach.
+Poniższa tabela przedstawia funkcje istniejących klientów, które mogą być dostarczane przez Portal Network, umożliwiając użytkownikom dostęp do tych funkcji na urządzeniach o bardzo niskich zasobach.
 
-### Sieci portali
+### Sieci Portal {#the-portal-networks}
 
-| Lekki klient Beacon  | Sieć stanu               | Plotkowanie transakcji | Sieć historii |
-| -------------------- | ------------------------ | ---------------------- | ------------- |
-| Lekki łańcuch Beacon | Konto i pamięć kontraktu | Lekki mempool          | Nagłówki      |
-| Dane protokołu       |                          |                        | Treści bloków |
-|                      |                          |                        | Potwierdzenia |
+| Lekki klient Beacon | Sieć stanu                   | Rozgłaszanie transakcji | Sieć historii   | Kanoniczny indeks transakcji |
+| ------------------- | ---------------------------- | ----------------------- | --------------- | ---------------------------- |
+| Lekki łańcuch Beacon| Pamięć kont i kontraktów     | Lekki mempool           | Nagłówki        | TxHash > Hash, Indeks        |
+| Dane protokołu      |                              |                         | Ciała bloków    |                              |
+|                     |                              |                         | Pokwitowania    |                              |
 
-## Domyślna różnorodność klientów {#client-diversity-as-default}
+## Różnorodność klientów domyślnie {#client-diversity-as-default}
 
-Deweloperzy Sieci portali podjęli również decyzję projektową, aby od samego początku budować cztery oddzielne klienty Sieci portali.
+Deweloperzy Portal Network podjęli również decyzję projektową o zbudowaniu czterech oddzielnych klientów Portal Network od pierwszego dnia.
 
-Klienci Sieci portali to:
+Klienty Portal Network to:
 
 - [Trin](https://github.com/ethereum/trin): napisany w języku Rust
 - [Fluffy](https://fluffy.guide): napisany w języku Nim
-- [Ultralight](https://github.com/ethereumjs/ultralight): napisany w języku Typescript
+- [Ultralight](https://github.com/ethereumjs/ultralight): napisany w języku TypeScript
 - [Shisui](https://github.com/zen-eth/shisui): napisany w języku Go
 
 Posiadanie wielu niezależnych implementacji klientów zwiększa odporność i decentralizację sieci Ethereum.
 
-Jeśli jeden klient napotka problemy lub luki w zabezpieczeniach, inne klienty mogą nadal działać płynnie, zapobiegając pojedynczemu punktowi awarii. Dodatkowo, różnorodne implementacje klientów sprzyjają innowacjom i konkurencji, napędzając ulepszenia i zmniejszając ryzyko monokultury w ekosystemie.
+Jeśli jeden klient napotka problemy lub luki w zabezpieczeniach, inne klienty mogą nadal działać płynnie, zapobiegając pojedynczemu punktowi awarii. Ponadto różnorodne implementacje klientów sprzyjają innowacjom i konkurencji, napędzając ulepszenia i zmniejszając ryzyko monokultury w ekosystemie.
 
 ## Dalsza lektura {#further-reading}
 
-- [Sieć portali (Piper Merriam na Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
-- [Discord Sieci portali](https://discord.gg/CFFnmE7Hbs)
-- [Strona internetowa Sieci portali](https://www.ethportal.net/)
+- [Portal Network (Piper Merriam na Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
+- [Discord Portal Network](https://discord.gg/CFFnmE7Hbs)
+- [Strona internetowa Portal Network](https://www.ethportal.net/)
