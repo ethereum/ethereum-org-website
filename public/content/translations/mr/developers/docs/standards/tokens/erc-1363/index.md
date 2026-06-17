@@ -1,76 +1,75 @@
 ---
-title: "ERC-1363 पेयबल टोकन मानक"
-description: "ERC-1363 हा ERC-20 टोकनसाठी एक एक्सटेंशन इंटरफेस आहे जो हस्तांतरणानंतर प्राप्तकर्त्याच्या करारावर किंवा मंजुरीनंतर खर्च करणाऱ्याच्या करारावर, सर्व काही एकाच व्यवहारामध्ये, कस्टम लॉजिक कार्यान्वित करण्यास समर्थन देतो."
+title: ERC-1363 पेयेबल टोकन स्टँडर्ड
+description: ERC-1363 हा ERC-20 टोकन्ससाठी एक विस्तार इंटरफेस आहे जो एकाच व्यवहारामध्ये हस्तांतरणानंतर प्राप्तकर्ता कॉन्ट्रॅक्टवर किंवा मंजुरीनंतर खर्च करणाऱ्या कॉन्ट्रॅक्टवर सानुकूल लॉजिक कार्यान्वित करण्यास समर्थन देतो.
 lang: mr
 ---
 
-## प्रस्तावना {#introduction}
+## परिचय {#introduction}
 
 ### ERC-1363 म्हणजे काय? {#what-is-erc1363}
 
-ERC-1363 हा ERC-20 टोकनसाठी एक एक्सटेंशन इंटरफेस आहे जो हस्तांतरणानंतर प्राप्तकर्त्याच्या करारावर किंवा मंजुरीनंतर खर्च करणाऱ्याच्या करारावर, सर्व काही एकाच व्यवहारामध्ये, कस्टम लॉजिक कार्यान्वित करण्यास समर्थन देतो.
+ERC-1363 हा ERC-20 टोकन्ससाठी एक विस्तार इंटरफेस आहे जो एकाच व्यवहारामध्ये हस्तांतरणानंतर प्राप्तकर्ता कॉन्ट्रॅक्टवर किंवा मंजुरीनंतर खर्च करणाऱ्या कॉन्ट्रॅक्टवर सानुकूल लॉजिक कार्यान्वित करण्यास समर्थन देतो.
 
 ### ERC-20 मधील फरक {#erc20-differences}
 
-`transfer`, `transferFrom` आणि `approve` यासारख्या मानक ERC-20 ऑपरेशन्स स्वतंत्र व्यवहाराशिवाय प्राप्तकर्ता किंवा खर्च करणाऱ्या करारावर कोड अंमलबजावणीस परवानगी देत नाहीत.
-यामुळे UI विकासात गुंतागुंत निर्माण होते आणि अवलंब करण्यामध्ये अडथळा येतो कारण वापरकर्त्यांना पहिला व्यवहार कार्यान्वित होण्याची वाट पाहावी लागते आणि मग दुसरा व्यवहार सबमिट करावा लागतो.
-त्यांना दोनदा GAS देखील भरावा लागतो.
+प्रमाणित ERC-20 ऑपरेशन्स जसे की `transfer`, `transferFrom` आणि `approve`, वेगळ्या व्यवहाराशिवाय प्राप्तकर्ता किंवा खर्च करणाऱ्या कॉन्ट्रॅक्टवर कोड कार्यान्वित करण्याची परवानगी देत नाहीत.
+यामुळे UI विकासामध्ये गुंतागुंत निर्माण होते आणि अवलंबनामध्ये अडथळा येतो कारण वापरकर्त्यांना पहिला व्यवहार कार्यान्वित होण्याची प्रतीक्षा करावी लागते आणि नंतर दुसरा व्यवहार सबमिट करावा लागतो.
+त्यांना दोनदा गॅस (GAS) देखील भरावा लागतो.
 
-ERC-1363 फंजिबल टोकनला अधिक सहजपणे क्रिया करण्यास आणि कोणत्याही ऑफ-चेन लिसनरचा वापर न करता काम करण्यास सक्षम बनवते.
-हे हस्तांतरण किंवा मंजुरीनंतर, एकाच व्यवहारामध्ये, रिसीव्हर किंवा स्पेंडर करारावर कॉलबॅक करण्याची परवानगी देते.
+ERC-1363 फंजिबल टोकन्सना अधिक सहजपणे कृती करण्यास आणि कोणत्याही साखळीबाह्य लिसनरच्या वापराविना कार्य करण्यास सक्षम बनवते.
+हे एकाच व्यवहारामध्ये, हस्तांतरण किंवा मंजुरीनंतर, प्राप्तकर्ता किंवा खर्च करणाऱ्या कॉन्ट्रॅक्टवर कॉलबॅक करण्याची परवानगी देते.
 
 ## पूर्वतयारी {#prerequisites}
 
-हे पान अधिक चांगल्या प्रकारे समजून घेण्यासाठी, आम्ही शिफारस करतो की तुम्ही प्रथम याबद्दल वाचा:
+हे पृष्ठ अधिक चांगल्या प्रकारे समजून घेण्यासाठी, आम्ही शिफारस करतो की तुम्ही प्रथम याबद्दल वाचा:
 
 - [टोकन मानके](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
 ## मुख्य भाग {#body}
 
-ERC-1363, `transfer`, `transferFrom` किंवा `approve` नंतर ERC-20 टोकनला स्मार्ट करारांशी संवाद साधण्यासाठी एक मानक API सादर करते.
+ERC-1363 हे ERC-20 टोकन्ससाठी `transfer`, `transferFrom` किंवा `approve` नंतर स्मार्ट कॉन्ट्रॅक्ट्सशी संवाद साधण्यासाठी एक प्रमाणित API सादर करते.
 
-हे मानक टोकन हस्तांतरित करण्यासाठी मूलभूत कार्यक्षमता प्रदान करते, तसेच टोकनला मंजूर करण्याची परवानगी देते जेणेकरून ते दुसऱ्या ऑन-चेन तृतीय पक्षाद्वारे खर्च केले जाऊ शकतात, आणि नंतर रिसीव्हर किंवा स्पेंडर करारावर कॉलबॅक करते.
+हे मानक टोकन्स हस्तांतरित करण्यासाठी मूलभूत कार्यक्षमता प्रदान करते, तसेच टोकन्स मंजूर करण्याची परवानगी देते जेणेकरून ते दुसऱ्या ऑनचेन तृतीय पक्षाद्वारे खर्च केले जाऊ शकतील आणि नंतर प्राप्तकर्ता किंवा खर्च करणाऱ्या कॉन्ट्रॅक्टवर कॉलबॅक करू शकतील.
 
-ERC-20 कॉलबॅक स्वीकारू शकणार्‍या स्मार्ट करारांचे अनेक प्रस्तावित उपयोग आहेत.
+स्मार्ट कॉन्ट्रॅक्ट्सचे अनेक प्रस्तावित उपयोग आहेत जे ERC-20 कॉलबॅक स्वीकारू शकतात.
 
-उदाहरणे असू शकतात:
+उदाहरणे अशी असू शकतात:
 
-- **क्राउडसेल्स**: पाठवलेले टोकन त्वरित रिवॉर्ड वाटप सुरू करतात.
+- **क्राउडसेल्स**: पाठवलेले टोकन्स त्वरित बक्षीस वाटप ट्रिगर करतात.
 - **सेवा**: पेमेंट एकाच टप्प्यात सेवा प्रवेश सक्रिय करते.
-- **इन्व्हॉइसेस**: टोकन आपोआप इन्व्हॉइसेस सेटल करतात.
-- **सबस्क्रिप्शन्स**: वार्षिक दराला मंजुरी दिल्याने पहिल्या महिन्याच्या पेमेंटमध्येच सबस्क्रिप्शन सक्रिय होते.
+- **इनव्हॉइसेस**: टोकन्स आपोआप इनव्हॉइसेस निकाली काढतात.
+- **सदस्यत्वे**: वार्षिक दर मंजूर केल्याने पहिल्या महिन्याच्या पेमेंटमध्ये सदस्यत्व सक्रिय होते.
 
-या कारणांमुळे याला मूळतः **"पेयबल टोकन"** असे नाव देण्यात आले होते.
+या कारणांमुळे याला मूळतः **"पेयेबल टोकन"** असे नाव देण्यात आले होते.
 
-कॉलबॅक वर्तणूक त्याची उपयुक्तता आणखी वाढवते, ज्यामुळे यांसारखे अखंड संवाद सक्षम होतात:
+कॉलबॅक वर्तन त्याची उपयुक्तता आणखी वाढवते, ज्यामुळे यासारखे अखंड संवाद शक्य होतात:
 
-- **स्टेकिंग**: हस्तांतरित केलेले टोकन स्टेकिंग करारामध्ये स्वयंचलित लॉकिंग सुरू करतात.
-- **मतदान**: प्राप्त झालेले टोकन प्रशासन प्रणालीमध्ये मते नोंदवतात.
-- **स्वॅपिंग**: टोकन मान्यता एकाच टप्प्यात स्वॅप लॉजिक सक्रिय करतात.
+- **स्टेकिंग**: हस्तांतरित केलेले टोकन्स स्टेकिंग कॉन्ट्रॅक्टमध्ये स्वयंचलित लॉकिंग ट्रिगर करतात.
+- **मतदान**: प्राप्त झालेले टोकन्स प्रशासन प्रणालीमध्ये मत नोंदवतात.
+- **अदलाबदल**: टोकन मंजुरी एकाच टप्प्यात अदलाबदल लॉजिक सक्रिय करतात.
 
-ERC-1363 टोकन सर्व प्रकरणांमध्ये विशिष्ट उपयुक्ततांसाठी वापरले जाऊ शकतात, ज्यात हस्तांतरण किंवा मंजुरी मिळाल्यानंतर कॉलबॅक कार्यान्वित करणे आवश्यक असते.
-प्राप्तकर्त्याच्या टोकन हाताळण्याच्या क्षमतेची पडताळणी करून स्मार्ट करारांमध्ये टोकनचे नुकसान किंवा टोकन लॉकिंग टाळण्यासाठी ERC-1363 उपयुक्त आहे.
+ERC-1363 टोकन्सचा वापर अशा सर्व प्रकरणांमध्ये विशिष्ट उपयुक्ततेसाठी केला जाऊ शकतो जिथे हस्तांतरण किंवा मंजुरी मिळाल्यानंतर कॉलबॅक कार्यान्वित करणे आवश्यक असते.
+प्राप्तकर्त्याची टोकन्स हाताळण्याची क्षमता तपासून स्मार्ट कॉन्ट्रॅक्ट्समध्ये टोकन गमावणे किंवा टोकन लॉक होणे टाळण्यासाठी देखील ERC-1363 उपयुक्त आहे.
 
-इतर ERC-20 एक्सटेंशन प्रस्तावांच्या विपरीत, ERC-1363 हे ERC-20 `transfer` आणि `transferFrom` पद्धतींना ओव्हरराइड करत नाही आणि ERC-20 सह बॅकवर्ड सुसंगतता राखून अंमलबजावणीसाठी इंटरफेस आयडी परिभाषित करते.
+इतर ERC-20 विस्तार प्रस्तावांच्या विपरीत, ERC-1363 हे ERC-20 च्या `transfer` आणि `transferFrom` पद्धतींना ओव्हरराइड करत नाही आणि ERC-20 सह बॅकवर्ड सुसंगतता राखून लागू करण्यासाठी इंटरफेस IDs परिभाषित करते.
 
-[EIP-1363](https://eips.ethereum.org/EIPS/eip-1363) वरून:
+[EIP-1363](https://eips.ethereum.org/EIPS/eip-1363) मधून:
 
-### मेथड्स {#methods}
+### पद्धती {#methods}
 
-ERC-1363 मानक लागू करणाऱ्या स्मार्ट करारांनी `ERC1363` इंटरफेसमधील सर्व फंक्शन्स, तसेच `ERC20` आणि `ERC165` इंटरफेस **अवश्य** लागू केले पाहिजेत.
+ERC-1363 मानकाची अंमलबजावणी करणाऱ्या स्मार्ट कॉन्ट्रॅक्ट्सनी `ERC1363` इंटरफेसमधील सर्व फंक्शन्स, तसेच `ERC20` आणि `ERC165` इंटरफेसेस लागू करणे **आवश्यक** आहे.
 
 ```solidity
 pragma solidity ^0.8.0;
 
 /**
  * @title ERC1363
- * @dev An extension interface for ERC-20 tokens that supports executing code on a recipient contract
- * after `transfer` or `transferFrom`, or code on a spender contract after `approve`, in a single transaction.
+ * @dev ERC-20 टोकन्ससाठी एक विस्तार इंटरफेस जो एकाच व्यवहारामध्ये `transfer` किंवा `transferFrom` नंतर प्राप्तकर्त्याच्या कॉन्ट्रॅक्टवर कोड कार्यान्वित करण्यास, किंवा `approve` नंतर खर्च करणाऱ्याच्या (spender) कॉन्ट्रॅक्टवर कोड कार्यान्वित करण्यास समर्थन देतो.
  */
 interface ERC1363 is ERC20, ERC165 {
   /*
-   * NOTE: the ERC-165 identifier for this interface is 0xb0202a11.
+   * टीप: या इंटरफेससाठी ERC-165 आयडेंटिफायर 0xb0202a11 आहे.
    * 0xb0202a11 ===
    *   bytes4(keccak256('transferAndCall(address,uint256)')) ^
    *   bytes4(keccak256('transferAndCall(address,uint256,bytes)')) ^
@@ -81,61 +80,61 @@ interface ERC1363 is ERC20, ERC165 {
    */
 
   /**
-   * @dev Moves a `value` amount of tokens from the caller's account to `to`
-   * and then calls `ERC1363Receiver::onTransferReceived` on `to`.
-   * @param to The address to which tokens are being transferred.
-   * @param value The amount of tokens to be transferred.
-   * @return A boolean value indicating the operation succeeded unless throwing.
+   * @dev कॉलरच्या खात्यातून `to` कडे टोकन्सची `value` रक्कम हलवते
+   * आणि नंतर `to` वर `ERC1363Receiver::onTransferReceived` कॉल करते.
+   * @param to तो पत्ता ज्यावर टोकन्स हस्तांतरित केले जात आहेत.
+   * @param value हस्तांतरित केल्या जाणाऱ्या टोकन्सची रक्कम.
+   * @return एक बुलियन मूल्य जे त्रुटी (throw) न आल्यास ऑपरेशन यशस्वी झाल्याचे दर्शवते.
    */
   function transferAndCall(address to, uint256 value) external returns (bool);
 
   /**
-   * @dev Moves a `value` amount of tokens from the caller's account to `to`
-   * and then calls `ERC1363Receiver::onTransferReceived` on `to`.
-   * @param to The address to which tokens are being transferred.
-   * @param value The amount of tokens to be transferred.
-   * @param data Additional data with no specified format, sent in call to `to`.
-   * @return A boolean value indicating the operation succeeded unless throwing.
+   * @dev कॉलरच्या खात्यातून `to` कडे टोकन्सची `value` रक्कम हलवते
+   * आणि नंतर `to` वर `ERC1363Receiver::onTransferReceived` कॉल करते.
+   * @param to तो पत्ता ज्यावर टोकन्स हस्तांतरित केले जात आहेत.
+   * @param value हस्तांतरित केल्या जाणाऱ्या टोकन्सची रक्कम.
+   * @param data कोणत्याही निर्दिष्ट फॉरमॅटशिवाय अतिरिक्त डेटा, जो `to` ला कॉल करताना पाठवला जातो.
+   * @return एक बुलियन मूल्य जे त्रुटी (throw) न आल्यास ऑपरेशन यशस्वी झाल्याचे दर्शवते.
    */
   function transferAndCall(address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism
-   * and then calls `ERC1363Receiver::onTransferReceived` on `to`.
-   * @param from The address from which to send tokens.
-   * @param to The address to which tokens are being transferred.
-   * @param value The amount of tokens to be transferred.
-   * @return A boolean value indicating the operation succeeded unless throwing.
+   * @dev अलोवन्स (allowance) यंत्रणेचा वापर करून `from` कडून `to` कडे टोकन्सची `value` रक्कम हलवते
+   * आणि नंतर `to` वर `ERC1363Receiver::onTransferReceived` कॉल करते.
+   * @param from तो पत्ता ज्यावरून टोकन्स पाठवायचे आहेत.
+   * @param to तो पत्ता ज्यावर टोकन्स हस्तांतरित केले जात आहेत.
+   * @param value हस्तांतरित केल्या जाणाऱ्या टोकन्सची रक्कम.
+   * @return एक बुलियन मूल्य जे त्रुटी (throw) न आल्यास ऑपरेशन यशस्वी झाल्याचे दर्शवते.
    */
   function transferFromAndCall(address from, address to, uint256 value) external returns (bool);
 
   /**
-   * @dev Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism
-   * and then calls `ERC1363Receiver::onTransferReceived` on `to`.
-   * @param from The address from which to send tokens.
-   * @param to The address to which tokens are being transferred.
-   * @param value The amount of tokens to be transferred.
-   * @param data Additional data with no specified format, sent in call to `to`.
-   * @return A boolean value indicating the operation succeeded unless throwing.
+   * @dev अलोवन्स (allowance) यंत्रणेचा वापर करून `from` कडून `to` कडे टोकन्सची `value` रक्कम हलवते
+   * आणि नंतर `to` वर `ERC1363Receiver::onTransferReceived` कॉल करते.
+   * @param from तो पत्ता ज्यावरून टोकन्स पाठवायचे आहेत.
+   * @param to तो पत्ता ज्यावर टोकन्स हस्तांतरित केले जात आहेत.
+   * @param value हस्तांतरित केल्या जाणाऱ्या टोकन्सची रक्कम.
+   * @param data कोणत्याही निर्दिष्ट फॉरमॅटशिवाय अतिरिक्त डेटा, जो `to` ला कॉल करताना पाठवला जातो.
+   * @return एक बुलियन मूल्य जे त्रुटी (throw) न आल्यास ऑपरेशन यशस्वी झाल्याचे दर्शवते.
    */
   function transferFromAndCall(address from, address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev Sets a `value` amount of tokens as the allowance of `spender` over the caller's tokens
-   * and then calls `ERC1363Spender::onApprovalReceived` on `spender`.
-   * @param spender The address which will spend the funds.
-   * @param value The amount of tokens to be spent.
-   * @return A boolean value indicating the operation succeeded unless throwing.
+   * @dev कॉलरच्या टोकन्सवर `spender` चे अलोवन्स (allowance) म्हणून टोकन्सची `value` रक्कम सेट करते
+   * आणि नंतर `spender` वर `ERC1363Spender::onApprovalReceived` कॉल करते.
+   * @param spender तो पत्ता जो निधी खर्च करेल.
+   * @param value खर्च केल्या जाणाऱ्या टोकन्सची रक्कम.
+   * @return एक बुलियन मूल्य जे त्रुटी (throw) न आल्यास ऑपरेशन यशस्वी झाल्याचे दर्शवते.
    */
   function approveAndCall(address spender, uint256 value) external returns (bool);
 
   /**
-   * @dev Sets a `value` amount of tokens as the allowance of `spender` over the caller's tokens
-   * and then calls `ERC1363Spender::onApprovalReceived` on `spender`.
-   * @param spender The address which will spend the funds.
-   * @param value The amount of tokens to be spent.
-   * @param data Additional data with no specified format, sent in call to `spender`.
-   * @return A boolean value indicating the operation succeeded unless throwing.
+   * @dev कॉलरच्या टोकन्सवर `spender` चे अलोवन्स (allowance) म्हणून टोकन्सची `value` रक्कम सेट करते
+   * आणि नंतर `spender` वर `ERC1363Spender::onApprovalReceived` कॉल करते.
+   * @param spender तो पत्ता जो निधी खर्च करेल.
+   * @param value खर्च केल्या जाणाऱ्या टोकन्सची रक्कम.
+   * @param data कोणत्याही निर्दिष्ट फॉरमॅटशिवाय अतिरिक्त डेटा, जो `spender` ला कॉल करताना पाठवला जातो.
+   * @return एक बुलियन मूल्य जे त्रुटी (throw) न आल्यास ऑपरेशन यशस्वी झाल्याचे दर्शवते.
    */
   function approveAndCall(address spender, uint256 value, bytes calldata data) external returns (bool);
 }
@@ -156,52 +155,48 @@ interface ERC165 {
 }
 ```
 
-`transferAndCall` किंवा `transferFromAndCall` द्वारे ERC-1363 टोकन स्वीकारू इच्छिणाऱ्या स्मार्ट कराराने `ERC1363Receiver` इंटरफेस **अवश्य** लागू केला पाहिजे:
+ज्या स्मार्ट कॉन्ट्रॅक्टला `transferAndCall` किंवा `transferFromAndCall` द्वारे ERC-1363 टोकन्स स्वीकारायचे आहेत त्यांनी `ERC1363Receiver` इंटरफेस लागू करणे **आवश्यक** आहे:
 
 ```solidity
 /**
  * @title ERC1363Receiver
- * @dev Interface for any contract that wants to support `transferAndCall` or `transferFromAndCall` from ERC-1363 token contracts.
+ * @dev कोणत्याही कॉन्ट्रॅक्टसाठी इंटरफेस ज्याला ERC-1363 टोकन कॉन्ट्रॅक्ट्समधून `transferAndCall` किंवा `transferFromAndCall` ला समर्थन द्यायचे आहे.
  */
 interface ERC1363Receiver {
   /**
-   * @dev Whenever ERC-1363 tokens are transferred to this contract via `ERC1363::transferAndCall` or `ERC1363::transferFromAndCall`
-   * by `operator` from `from`, this function is called.
+   * @dev जेव्हा जेव्हा `operator` द्वारे `from` कडून `ERC1363::transferAndCall` किंवा `ERC1363::transferFromAndCall` मार्गे या कॉन्ट्रॅक्टमध्ये ERC-1363 टोकन्स हस्तांतरित केले जातात, तेव्हा हे फंक्शन कॉल केले जाते.
    *
-   * NOTE: To accept the transfer, this must return
-   * `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`
-   * (i.e. 0x88a7ca5c, or its own function selector).
+   * टीप: हस्तांतरण स्वीकारण्यासाठी, याने `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`
+   * (म्हणजेच 0x88a7ca5c, किंवा स्वतःचा फंक्शन सिलेक्टर) परत करणे आवश्यक आहे.
    *
-   * @param operator The address which called `transferAndCall` or `transferFromAndCall` function.
-   * @param from The address which are tokens transferred from.
-   * @param value The amount of tokens transferred.
-   * @param data Additional data with no specified format.
-   * @return `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))` if transfer is allowed unless throwing.
+   * @param operator तो पत्ता ज्याने `transferAndCall` किंवा `transferFromAndCall` फंक्शन कॉल केले.
+   * @param from तो पत्ता ज्यावरून टोकन्स हस्तांतरित केले जातात.
+   * @param value हस्तांतरित केलेल्या टोकन्सची रक्कम.
+   * @param data कोणत्याही निर्दिष्ट फॉरमॅटशिवाय अतिरिक्त डेटा.
+   * @return त्रुटी (throw) न आल्यास आणि हस्तांतरण अनुमत असल्यास `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`.
    */
   function onTransferReceived(address operator, address from, uint256 value, bytes calldata data) external returns (bytes4);
 }
 ```
 
-`approveAndCall` द्वारे ERC-1363 टोकन स्वीकारू इच्छिणाऱ्या स्मार्ट कराराने `ERC1363Spender` इंटरफेस **अवश्य** लागू केला पाहिजे:
+ज्या स्मार्ट कॉन्ट्रॅक्टला `approveAndCall` द्वारे ERC-1363 टोकन्स स्वीकारायचे आहेत त्यांनी `ERC1363Spender` इंटरफेस लागू करणे **आवश्यक** आहे:
 
 ```solidity
 /**
  * @title ERC1363Spender
- * @dev Interface for any contract that wants to support `approveAndCall` from ERC-1363 token contracts.
+ * @dev कोणत्याही कॉन्ट्रॅक्टसाठी इंटरफेस ज्याला ERC-1363 टोकन कॉन्ट्रॅक्ट्समधून `approveAndCall` ला समर्थन द्यायचे आहे.
  */
 interface ERC1363Spender {
   /**
-   * @dev Whenever an ERC-1363 tokens `owner` approves this contract via `ERC1363::approveAndCall`
-   * to spend their tokens, this function is called.
+   * @dev जेव्हा जेव्हा ERC-1363 टोकन्सचा `owner` त्यांचे टोकन्स खर्च करण्यासाठी `ERC1363::approveAndCall` मार्गे या कॉन्ट्रॅक्टला मंजुरी देतो, तेव्हा हे फंक्शन कॉल केले जाते.
    *
-   * NOTE: To accept the approval, this must return
-   * `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`
-   * (i.e. 0x7b04a2d0, or its own function selector).
+   * टीप: मंजुरी स्वीकारण्यासाठी, याने `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`
+   * (म्हणजेच 0x7b04a2d0, किंवा स्वतःचा फंक्शन सिलेक्टर) परत करणे आवश्यक आहे.
    *
-   * @param owner The address which called `approveAndCall` function and previously owned the tokens.
-   * @param value The amount of tokens to be spent.
-   * @param data Additional data with no specified format.
-   * @return `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))` if approval is allowed unless throwing.
+   * @param owner तो पत्ता ज्याने `approveAndCall` फंक्शन कॉल केले आणि ज्याच्याकडे पूर्वी टोकन्सची मालकी होती.
+   * @param value खर्च केल्या जाणाऱ्या टोकन्सची रक्कम.
+   * @param data कोणत्याही निर्दिष्ट फॉरमॅटशिवाय अतिरिक्त डेटा.
+   * @return त्रुटी (throw) न आल्यास आणि मंजुरी अनुमत असल्यास `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`.
    */
   function onApprovalReceived(address owner, uint256 value, bytes calldata data) external returns (bytes4);
 }
@@ -209,5 +204,5 @@ interface ERC1363Spender {
 
 ## पुढील वाचन {#further-reading}
 
-- [ERC-1363: पेयबल टोकन मानक](https://eips.ethereum.org/EIPS/eip-1363)
+- [ERC-1363: पेयेबल टोकन स्टँडर्ड](https://eips.ethereum.org/EIPS/eip-1363)
 - [ERC-1363: GitHub रेपो](https://github.com/vittominacori/erc1363-payable-token)
