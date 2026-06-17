@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-17T01:13:41.716Z",
+  "englishManifestHash": "6af1aa8d8b38",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-a9dba0",
+    "LINK-e038f0",
+    "LINK-74b3ba",
+    "LINK-264f4a",
+    "LINK-4ff05c",
+    "LINK-b88a3a",
+    "LINK-e84c81",
+    "LINK-4c50b2",
+    "LINK-19467e",
+    "LINK-d9fbfa",
+    "LINK-5986c4",
+    "LINK-40eea2",
+    "LINK-bd342c",
+    "LINK-09f5e8",
+    "LINK-b46f2a",
+    "LINK-702567",
+    "LINK-53ec42",
+    "LINK-e349ee",
+    "LINK-b46f2a",
+    "LINK-2e7f52",
+    "LINK-e4d77c",
+    "LINK-9b0f6e",
+    "LINK-d69e9d",
+    "LINK-5288bf",
+    "LINK-c3a225",
+    "LINK-d5ded9",
+    "LINK-21da21",
+    "LINK-1dbe3b",
+    "LINK-c65e42",
+    "LINK-d4763c",
+    "LINK-688c2b",
+    "LINK-591769",
+    "LINK-931173",
+    "LINK-216e3c",
+    "LINK-ea7b1c",
+    "LINK-9b1aa1",
+    "LINK-281a99",
+    "LINK-cdd12b",
+    "LINK-71dacd",
+    "LINK-42688f",
+    "LINK-84e7c3",
+    "LINK-5720af",
+    "LINK-576526",
+    "LINK-5a51e1",
+    "LINK-dd810b"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-a9dba0": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#blockchain"
+      }
+    },
+    "LINK-e038f0": {
+      "type": "link",
+      "values": {
+        "url": "/apps/"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-264f4a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact"
+      }
+    },
+    "LINK-4ff05c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#peer-to-peer-network"
+      }
+    },
+    "LINK-b88a3a": {
+      "type": "link",
+      "values": {
+        "url": "https://ipfs.io/"
+      }
+    },
+    "LINK-e84c81": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#nft"
+      }
+    },
+    "LINK-4c50b2": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ens"
+      }
+    },
+    "LINK-19467e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#wallet"
+      }
+    },
+    "LINK-d9fbfa": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/"
+      }
+    },
+    "LINK-5986c4": {
+      "type": "link",
+      "values": {
+        "url": "/nft/"
+      }
+    },
+    "LINK-40eea2": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#layer-2"
+      }
+    },
+    "LINK-bd342c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.minds.com/"
+      }
+    },
+    "LINK-09f5e8": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#erc-20"
+      }
+    },
+    "LINK-b46f2a": {
+      "type": "link",
+      "values": {
+        "url": "https://farcaster.xyz/"
+      }
+    },
+    "LINK-702567": {
+      "type": "link",
+      "values": {
+        "url": "https://status.app/"
+      }
+    },
+    "LINK-53ec42": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/"
+      }
+    },
+    "LINK-e349ee": {
+      "type": "link",
+      "values": {
+        "url": "https://lens.xyz/"
+      }
+    },
+    "LINK-2e7f52": {
+      "type": "link",
+      "values": {
+        "url": "https://efp.app/"
+      }
+    },
+    "LINK-e4d77c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethcomments.xyz/"
+      }
+    },
+    "LINK-9b0f6e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#web3"
+      }
+    },
+    "LINK-d69e9d": {
+      "type": "link",
+      "values": {
+        "url": "https://basicattentiontoken.org/"
+      }
+    },
+    "LINK-5288bf": {
+      "type": "link",
+      "values": {
+        "url": "https://brave.com/brave-rewards/"
+      }
+    },
+    "LINK-c3a225": {
+      "type": "link",
+      "values": {
+        "url": "https://creators.brave.com/"
+      }
+    },
+    "LINK-d5ded9": {
+      "type": "link",
+      "values": {
+        "url": "https://audius.co/"
+      }
+    },
+    "LINK-21da21": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998"
+      }
+    },
+    "LINK-1dbe3b": {
+      "type": "link",
+      "values": {
+        "url": "https://audius.co/tiktok"
+      }
+    },
+    "LINK-c65e42": {
+      "type": "link",
+      "values": {
+        "url": "https://whitepaper.audius.co/"
+      }
+    },
+    "LINK-d4763c": {
+      "type": "link",
+      "values": {
+        "url": "https://sorare.com/"
+      }
+    },
+    "LINK-688c2b": {
+      "type": "link",
+      "values": {
+        "url": "https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet"
+      }
+    },
+    "LINK-591769": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract"
+      }
+    },
+    "LINK-931173": {
+      "type": "link",
+      "values": {
+        "url": "https://sorare.com/help/a/10969733392797/what-network-should-i-use-to-fund-my-eth-wallet"
+      }
+    },
+    "LINK-216e3c": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com"
+      }
+    },
+    "LINK-ea7b1c": {
+      "type": "link",
+      "values": {
+        "url": "https://help.x.com/en/using-x/tips"
+      }
+    },
+    "LINK-9b1aa1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack"
+      }
+    },
+    "LINK-281a99": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/"
+      }
+    },
+    "LINK-cdd12b": {
+      "type": "link",
+      "values": {
+        "url": "https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/"
+      }
+    },
+    "LINK-71dacd": {
+      "type": "link",
+      "values": {
+        "url": "https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media"
+      }
+    },
+    "LINK-42688f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/"
+      }
+    },
+    "LINK-84e7c3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks"
+      }
+    },
+    "LINK-5720af": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=UdT2lpcGvcQ"
+      }
+    },
+    "LINK-576526": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=SG2HUiVp0rE"
+      }
+    },
+    "LINK-5a51e1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=DTxE9KV3YrE"
+      }
+    },
+    "LINK-dd810b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.reddit.com/r/CryptoCurrency/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T01:13:41.716Z",
+      "status": "success"
+    }
+  }
+}
