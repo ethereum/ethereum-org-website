@@ -31,7 +31,6 @@ Their terms change. Your work disappears.
 
 ![A video game explorer character at a blocked door](./tarrance-image-1.png)
 
-
 Nowhere is digital feudalism more obvious than in gaming.
 
 When game publisher Ubisoft shut down The Crew, they also revoked every buyer's $60 license.

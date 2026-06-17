@@ -10,7 +10,6 @@ import { TagButton } from "@/components/ui/tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useTranslation } from "@/hooks/useTranslation"
 
 type CommunityStoriesProps = {
@@ -63,16 +62,6 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
 
   const visibleStories = filteredStories.slice(0, storiesToShow)
 
-  // Distribute cards across columns round-robin instead of using CSS multi-column
-  // (`columns-*`), whose height-balancing can leave a trailing column empty when
-  // one card is much taller than the rest. Round-robin guarantees every column is
-  // used and keeps a natural left-to-right reading order.
-  const columnCount =
-    useBreakpointValue<number>({ base: 1, sm: 2, lg: 3, xl: 4 }) ?? 1
-  const columns = Array.from({ length: columnCount }, (_, col) =>
-    visibleStories.filter((_, index) => index % columnCount === col)
-  )
-
   const handleTagSelect = (label: string) => {
     const isActive = label === selectedTag
     setStoriesToShow(STORIES_SHOWN)
@@ -104,18 +93,17 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
         </div>
       )}
 
-      <div className="flex gap-6">
-        {columns.map((column, colIndex) => (
-          <div key={colIndex} className="flex flex-1 flex-col gap-6">
-            {column.map((story, index) => (
-              <StoryCard
-                key={`${story.name}-${colIndex}-${index}`}
-                story={story}
-                expandable={false}
-                showDate={false}
-              />
-            ))}
-          </div>
+      {/* CSS multi-column gives true masonry packing with zero JS, so the
+          server and client render identical markup (no hydration mismatch). */}
+      <div className="gap-6 sm:columns-2 lg:columns-3 xl:columns-4">
+        {visibleStories.map((story, index) => (
+          <StoryCard
+            key={`${story.name}-${index}`}
+            story={story}
+            expandable={false}
+            showDate={false}
+            className="mb-6 break-inside-avoid"
+          />
         ))}
       </div>
 
