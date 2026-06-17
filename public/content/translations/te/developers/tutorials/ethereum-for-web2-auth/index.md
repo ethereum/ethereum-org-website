@@ -473,7 +473,7 @@ idpRouter.post(`/login`,
       res.send(getLoginPage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
 ```
 
-ప్రామాణీకరణ అభ్యర్థన యొక్క IDని చదవడానికి మనం [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144)ని ఉపయోగించగలగాలి. అయితే, నేను దాన్ని పని చేసేలా చేయలేకపోయాను మరియు దానిపై ఎక్కువ సమయం వెచ్చించడం విలువైనది కాదు కాబట్టి నేను కేవలం [సాధారణ-ప్రయోజన XML పార్సర్‌ను](https://www.npmjs.com/package/fast-xml-parser) ఉపయోగిస్తాను. మనకు అవసరమైన సమాచారం `<samlp:AuthnRequest>`` ట్యాగ్ లోపల ఉన్న ``ID`` లక్షణం, ఇది XML యొక్క అగ్ర స్థాయిలో ఉంటుంది.
+ప్రామాణీకరణ అభ్యర్థన యొక్క IDని చదవడానికి మనం [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144)ని ఉపయోగించగలగాలి. అయితే, నేను దాన్ని పని చేసేలా చేయలేకపోయాను మరియు దానిపై ఎక్కువ సమయం వెచ్చించడం విలువైనది కాదు కాబట్టి నేను కేవలం [సాధారణ-ప్రయోజన XML పార్సర్‌ను](https://www.npmjs.com/package/fast-xml-parser) ఉపయోగిస్తాను. మనకు అవసరమైన సమాచారం `<samlp:AuthnRequest>` ట్యాగ్ లోపల ఉన్న ``ID`` లక్షణం, ఇది XML యొక్క అగ్ర స్థాయిలో ఉంటుంది.
 
 ## ఎథీరియం సంతకాలను ఉపయోగించడం {#using-ethereum-signatures}
 
