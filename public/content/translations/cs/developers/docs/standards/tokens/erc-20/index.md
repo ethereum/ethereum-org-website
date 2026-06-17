@@ -1,6 +1,6 @@
 ---
 title: Standard tokenu ERC-20
-description: "Seznamte se s ERC-20, standardem pro zaměnitelné tokeny na síti Ethereum, který umožňuje interoperabilní tokenové aplikace."
+description: Přečtěte si o ERC-20, standardu pro zaměnitelné tokeny na Ethereu, který umožňuje interoperabilní tokenové aplikace.
 lang: cs
 ---
 
@@ -8,20 +8,20 @@ lang: cs
 
 **Co je to token?**
 
-Tokeny mohou v ekosystému Etherea reprezentovat prakticky cokoliv:
+Tokeny mohou v [Ethereu](/) představovat prakticky cokoliv:
 
-- reputační body na online platformě
+- body reputace na online platformě
 - dovednosti postavy ve hře
 - finanční aktiva, jako je podíl ve společnosti
 - fiat měnu, jako je USD
 - unci zlata
-- a více...
+- a další...
 
-Takováto mocná funkce Etherea musí být samozřejmě ošetřena robustním standardem, že? A právě zde hraje svou roli ERC-20! Tento standard umožňuje vývojářům vytvářet tokenové aplikace, které jsou interoperabilní s jinými produkty a službami. Standard ERC-20 se také používá k poskytnutí dodatečné funkcionality pro [ether](/glossary/#ether).
+Takto mocná funkce Etherea musí být řízena robustním standardem, že? Přesně v tom hraje svou roli ERC-20! Tento standard umožňuje vývojářům vytvářet tokenové aplikace, které jsou interoperabilní s jinými produkty a službami. Standard ERC-20 se také používá k poskytování dalších funkcí pro [ether](/glossary/#ether).
 
 **Co je ERC-20?**
 
-ERC-20 zavádí standard pro zaměnitelné tokeny, které, jinými slovy, mají vlastnost, díky níž je každý token naprosto stejný (typem i hodnotou) jako jiný token. ERC-20 token funguje stejně jako ETH, což znamená, že 1 token je a vždy bude roven všem ostatním tokenům.
+ERC-20 zavádí standard pro zaměnitelné tokeny (Fungible Tokens), jinými slovy mají vlastnost, díky které je každý token naprosto stejný (typem a hodnotou) jako jiný token. Například token ERC-20 se chová stejně jako ETH, což znamená, že 1 token je a vždy bude roven všem ostatním tokenům.
 
 ## Předpoklady {#prerequisites}
 
@@ -29,18 +29,18 @@ ERC-20 zavádí standard pro zaměnitelné tokeny, které, jinými slovy, mají 
 - [Chytré kontrakty](/developers/docs/smart-contracts/)
 - [Standardy tokenů](/developers/docs/standards/tokens/)
 
-## Tělo {#body}
+## Hlavní část {#body}
 
-ERC-20 (Ethereum Request for Comments 20), navržený Fabianem Vogelstellerem v listopadu 2015, je tokenový standard, který implementuje API pro tokeny v rámci smart kontraktů.
+ERC-20 (Ethereum Request for Comments 20), navržený Fabianem Vogelstellerem v listopadu 2015, je standard tokenu, který implementuje API pro tokeny v rámci chytrých kontraktů.
 
-Příklady funkcionalit, které ERC-20 poskytuje:
+Příklady funkcí, které ERC-20 poskytuje:
 
 - převod tokenů z jednoho účtu na druhý
-- získání informace o aktuálním zůstatku tokenů na účtu
-- získání celkové nabídky tokenů dostupných v síti
-- schválení, zda může být určitá částka tokenů z účtu použita třetí stranou
+- získání aktuálního zůstatku tokenů na účtu
+- získání celkové nabídky tokenu dostupné v síti
+- schválit, zda může být určité množství tokenů z účtu utraceno účtem třetí strany
 
-Pokud smart kontrakt implementuje následující metody a události, může být nazván ERC-20 kontraktem a po spuštění bude zodpovědný za sledování tokenů vytvořených na Ethereu.
+Pokud chytrý kontrakt implementuje následující metody a události, může být nazýván kontraktem tokenu ERC-20 a po nasazení bude zodpovědný za sledování vytvořených tokenů na Ethereu.
 
 Z [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
@@ -67,12 +67,11 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### Příklady {#web3py-example}
 
-Podívejme se, proč je tento standard tak důležitý pro zjednodušení prohlížení jakéhokoliv kontraktu ERC-20 tokenu na Ethereu.
-Abychom mohli vytvořit rozhraní pro jakýkoliv ERC-20 token, stačí nám Contract Application Binary Interface (ABI). Jak můžete vidět níže, použijeme zjednodušené ABI, abychom vám to ukázali na jednoduchém příkladu.
+Pojďme se podívat, proč je standard tak důležitý pro zjednodušení kontroly jakéhokoli kontraktu tokenu ERC-20 na Ethereu. K vytvoření rozhraní pro jakýkoli token ERC-20 potřebujeme pouze aplikační binární rozhraní kontraktu (ABI). Jak můžete vidět níže, použijeme zjednodušené ABI, aby byl příklad co nejsrozumitelnější.
 
-#### Příklad Web3.py {#web3py-example}
+#### Příklad s Web3.py {#web3py-example-2}
 
-Nejprve se ujistěte, že máte nainstalovanou knihovnu Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
+Nejprve se ujistěte, že máte nainstalovanou knihovnu [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) pro Python:
 
 ```
 pip install web3
@@ -85,12 +84,12 @@ from web3 import Web3
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
-weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ether (WETH)
+weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Zabalený ether (WETH)
 
 acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
-# This is a simplified Contract Application Binary Interface (ABI) of an ERC-20 Token Contract.
-# It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
+# Toto je zjednodušené aplikační binární rozhraní (ABI) kontraktu ERC-20 tokenu.
+# Zpřístupní pouze metody: balanceOf(address), decimals(), symbol() a totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -145,42 +144,47 @@ print("Addr Balance:", addr_balance)
 
 ### Problém s příjmem tokenů ERC-20 {#reception-issue}
 
-**K 20. červnu 2024 byly kvůli tomuto problému ztraceny tokeny ERC-20 v hodnotě nejméně 83 656 418 $.** **Všimněte si, že čistá implementace ERC-20 je náchylná k tomuto problému, pokud nad rámec níže uvedeného standardu neimplementujete sadu dodatečných omezení.**
+**K 20. 6. 2024 byly kvůli tomuto problému ztraceny tokeny ERC-20 v hodnotě nejméně 83 656 418 USD. Upozorňujeme, že čistá implementace ERC-20 je k tomuto problému náchylná, pokud nad rámec standardu neimplementujete sadu dalších omezení, jak je uvedeno níže.**
 
-Když jsou ERC-20 tokeny poslány do smart kontraktu, který není k práci s nimi konstruován, mohou být tyto tokeny ztraceny navždy. K tomu dochází, když přijímající kontrakt nemá funkci, která by rozpoznala příchozí tokeny, nebo na ně dokázala reagovat, a ve standardu ERC-20 neexistuje mechanismus, který by přijímající kontrakt upozornil na příchozí tokeny. Hlavní způsoby, jak může tento problém vzniknout, jsou:
+Když jsou tokeny ERC-20 odeslány do chytrého kontraktu, který není navržen pro práci s tokeny ERC-20, mohou být tyto tokeny trvale ztraceny. K tomu dochází proto, že přijímající kontrakt nemá funkci pro rozpoznání nebo reakci na příchozí tokeny a ve standardu ERC-20 neexistuje žádný mechanismus, který by přijímající kontrakt o příchozích tokenech informoval. Hlavní způsoby, jakými se tento problém projevuje, jsou:
 
-1. Mechanismus přenosu tokenů
-
-- ERC-20 tokeny jsou přenášeny pomocí funkcí transfer nebo transferFrom
-  - Když uživatel odešle tokeny na adresu kontraktu pomocí těchto funkcí, tokeny jsou přeneseny bez ohledu na to, zda je přijímající kontrakt navržen k jejich zpracování
-
-2. Nedostatek upozornění
-   - Přijímající kontrakt nedostává žádné upozornění nebo zpětné volání, že mu byly odeslány nějaké tokeny
-   - Pokud přijímající kontrakt postrádá mechanismus pro zpracování příchozích tokenů (například fallback funkci nebo speciální funkci pro správu přijetí tokenů), tokeny jsou fakticky na adrese tohoto kontraktu zaseknuté
-3. Bez vestavěné manipulace
-   - Standard ERC-20 nemá povinnou funkci, kterou by přijímající kontrakty musely implementovat, což vede k situacím, kdy kontrakty nejsou schopny příchozí tokeny správně spravovat
+1.	Mechanismus převodu tokenů
+  - Tokeny ERC-20 se převádějí pomocí funkcí transfer nebo transferFrom
+	- Když uživatel odešle tokeny na adresu kontraktu pomocí těchto funkcí, tokeny jsou převedeny bez ohledu na to, zda je přijímající kontrakt navržen tak, aby s nimi dokázal pracovat
+2.	Chybějící upozornění
+	- Přijímající kontrakt neobdrží upozornění ani zpětné volání (callback), že mu byly odeslány tokeny
+	- Pokud přijímající kontrakt postrádá mechanismus pro zpracování tokenů (např. záložní funkci nebo vyhrazenou funkci pro správu příjmu tokenů), tokeny v podstatě uvíznou na adrese kontraktu
+3.	Žádné vestavěné zpracování
+	- Standard ERC-20 neobsahuje povinnou funkci, kterou by přijímající kontrakty musely implementovat, což vede k situaci, kdy mnoho kontraktů není schopno správně spravovat příchozí tokeny
 
 **Možná řešení**
 
-I když není možné tomuto problému s ERC-20 zcela zabránit, existují metody, které umožňují výrazně snížit možnost ztráty tokenů pro koncového uživatele:
+Ačkoli není možné tomuto problému u ERC-20 zcela zabránit, existují metody, které by umožnily výrazně snížit pravděpodobnost ztráty tokenů pro koncového uživatele:
 
-- Nejčastějším problémem je, když uživatel pošle tokeny na adresu samotného kontraktu tokenu (např. USDT vložené na adresu kontraktu tokenu USDT). Doporučuje se omezit funkci `transfer(..)` tak, aby takové pokusy o převod vrátila zpět. Zvažte přidání kontroly `require(_to != address(this));` v rámci implementace funkce `transfer(..)`.
-- Funkce `transfer(..)` obecně není určena k vkládání tokenů do kontraktů. Vzor `approve(..) & transferFrom(..)` se namísto toho používá k vkládání tokenů ERC-20 do kontraktů. Je možné omezit funkci převodu tak, aby se s ní zakázalo vkládání tokenů do jakýchkoli kontraktů, může to však narušit kompatibilitu s kontrakty, které předpokládají, že tokeny lze vkládat do kontraktů pomocí funkce `trasnfer(..)` (např. u poolů likvidity Uniswap).
-- Vždy předpokládejte, že tokeny ERC-20 mohou skončit ve vašem kontraktu, i když váš kontrakt nemá nikdy žádné přijímat. Na straně příjemce neexistuje žádný způsob, jak zabránit náhodným vkladům nebo je odmítnout. Doporučuje se implementovat funkci, která by umožnila extrahovat náhodně vložené tokeny ERC-20.
+- Nejčastějším problémem je, když uživatel odešle tokeny na samotnou adresu kontraktu tokenu (např. USDT vložené na adresu kontraktu tokenu USDT). Doporučuje se omezit funkci `transfer(..)`, aby takové pokusy o převod zvrátila. Zvažte přidání kontroly `require(_to != address(this));` v rámci implementace funkce `transfer(..)`.
+- Funkce `transfer(..)` obecně není navržena pro vkládání tokenů do kontraktů. Místo toho se pro vkládání tokenů ERC-20 do kontraktů používá vzor `approve(..) & transferFrom(..)`. Je možné omezit funkci převodu tak, aby neumožňovala vkládání tokenů do jakýchkoli kontraktů, nicméně to může narušit kompatibilitu s kontrakty, které předpokládají, že tokeny lze do kontraktů vkládat pomocí funkce `transfer(..)` (např. fondy likvidity Uniswap).
+- Vždy předpokládejte, že tokeny ERC-20 mohou skončit ve vašem kontraktu, i když váš kontrakt nemá nikdy žádné přijmout. Neexistuje způsob, jak zabránit nebo odmítnout náhodné vklady na straně příjemce. Doporučuje se implementovat funkci, která by umožnila extrahovat náhodně vložené tokeny ERC-20.
 - Zvažte použití alternativních standardů tokenů.
 
-Z tohoto problému vzešly některé alternativní standardy, jako například [ERC-223](/developers/docs/standards/tokens/erc-223) nebo [ERC-1363](/developers/docs/standards/tokens/erc-1363).
+Z tohoto problému vzešly některé alternativní standardy, jako je [ERC-223](/developers/docs/standards/tokens/erc-223) nebo [ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
 ## Další čtení {#further-reading}
 
 - [EIP-20: Standard tokenu ERC-20](https://eips.ethereum.org/EIPS/eip-20)
-- [OpenZeppelin – Tokeny](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
-- [OpenZeppelin – Implementace ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [Alchemy – Průvodce tokeny ERC20 v Solidity](https://www.alchemy.com/overviews/erc20-solidity)
+- [OpenZeppelin - Tokeny](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
+- [OpenZeppelin - Implementace ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy - Průvodce tokeny ERC-20 v Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Další standardy zaměnitelných tokenů {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
-- [ERC-4626 – Tokenizované trezory](/developers/docs/standards/tokens/erc-4626)
+- [ERC-4626 - Tokenizované trezory](/developers/docs/standards/tokens/erc-4626)
+
+## Návody: Vývoj s ERC-20 na Ethereu {#tutorials}
+
+- [Průvodce kontraktem ERC-20](/developers/tutorials/erc20-annotated-code/) _– Komentovaný průvodce implementací kontraktu ERC-20 od OpenZeppelin řádek po řádku._
+- [ERC-20 s bezpečnostními pojistkami](/developers/tutorials/erc20-with-safety-rails/) _– Jak přidat ochranné prvky k tokenům ERC-20, které uživatelům pomohou vyhnout se běžným chybám._
+- [Odesílání tokenů pomocí Ethers.js](/developers/tutorials/send-token-ethersjs/) _– Průvodce převodem tokenů ERC-20 pomocí Ethers.js pro začátečníky._
+- [Některé triky používané podvodnými tokeny a jak je odhalit](/developers/tutorials/scam-token-tricks/) _– Detailní pohled na vzorce podvodných tokenů ERC-20 a jak je identifikovat._

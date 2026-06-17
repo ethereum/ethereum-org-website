@@ -1,50 +1,50 @@
 ---
 title: Gasper
-description: "Vysvětlení mechanismu důkazu podílem Gasper."
+description: Vysvětlení mechanismu Gasper v rámci důkazu podílem (PoS).
 lang: cs
 ---
 
-Gasper je kombinací Casper the Friendly Finality Gadget (Casper-FFG) a algoritmu pro výběr větve LMD-GHOST. Tyto komponenty společně tvoří mechanismus konsenzu, který zabezpečuje Ethereum na bázi důkazu podílem. Casper je mechanismus, který povyšuje určité bloky na „finalizované“, takže noví účastníci sítě si mohou být jisti, že synchronizují kanonický řetězec. Algoritmus pro výběr větve využívá nahromaděné hlasy, aby zajistil, že uzly mohou snadno vybrat tu správnou větev, když v blockchainu vzniknou větve.
+Gasper je kombinací Casper the Friendly Finality Gadget (Casper FFG) a algoritmu volby forku LMD-GHOST. Společně tyto komponenty tvoří mechanismus konsensu, který zabezpečuje Ethereum na bázi důkazu podílem (PoS). Casper je mechanismus, který povyšuje určité bloky na „finalizované“, takže noví účastníci v síti si mohou být jisti, že synchronizují kanonický řetězec. Algoritmus volby forku využívá nashromážděné hlasy k zajištění toho, aby uzly mohly snadno vybrat ten správný, když v blockchainu vzniknou forky.
 
-**Upozornění:** Původní definice Casper-FFG byla pro zařazení do systému Gasper mírně aktualizována. Na této stránce se budeme zabývat aktualizovanou verzí.
+**Poznámka:** Původní definice Casper FFG byla pro začlenění do Gasperu mírně upravena. Na této stránce se zabýváme aktualizovanou verzí.
 
-## Předpoklady
+## Předpoklady {#prerequisites}
 
-Pro pochopení tohoto materiálu je nutné si přečíst úvodní stránku o [důkazu podílem](/developers/docs/consensus-mechanisms/pos/).
+Pro pochopení tohoto materiálu je nutné si přečíst úvodní stránku o [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos/).
 
-## Role systému Gasper {#role-of-gasper}
+## Role Gasperu {#role-of-gasper}
 
-Gasper funguje na blockchainu s důkazem podílem, kde uzly poskytují ether jako bezpečnostní zálohu, která může být zničena, pokud jsou nečinné nebo nečestné při navrhování nebo validaci bloků. Gasper je mechanismus, který definuje, jak jsou validátoři odměňováni a trestáni, jak se rozhodují, které bloky přijmout a které odmítnout a na které větvi blockchainu stavět.
+Gasper funguje nad blockchainem s důkazem podílem (PoS), kde uzly poskytují ether jako bezpečnostní zálohu, která může být zničena, pokud jsou při navrhování nebo validaci bloků líné nebo nečestné. Gasper je mechanismus definující, jak jsou validátory odměňovány a trestány, jak rozhodují, které bloky přijmout a odmítnout, a na kterém forku blockchainu stavět.
 
 ## Co je to finalita? {#what-is-finality}
 
-Finalita je vlastnost určitých bloků, která znamená, že nemohou být vráceny zpět, pokud nedošlo ke kritickému selhání konsenzu a útočník nezničil alespoň 1/3 celkového uzamčeného etheru. Finalizované bloky lze považovat za informace, kterými si je blockchain jistý. Aby mohl být blok finalizován, musí projít dvoukrokovým procesem vylepšení:
+Finalita je vlastnost určitých bloků, která znamená, že nemohou být zvráceny, pokud nedojde ke kritickému selhání konsensu a útočník nezničí alespoň 1/3 celkového etheru vloženého jako stake. Finalizované bloky lze chápat jako informace, kterými si je blockchain jistý. Aby byl blok finalizován, musí projít dvoukrokovým procesem povýšení:
 
-1. Dvě třetiny z celkového uzamčeného etheru musí hlasovat pro zahrnutí tohoto bloku do kanonického řetězce. Tato podmínka povýší blok na „justifikovaný“. Je nepravděpodobné, že by justifikované bloky byly vráceny zpět, ale za určitých podmínek se to může stát.
-2. Když je další blok justifikován nad justifikovaným blokem, je povýšen na „finalizovaný“. Finalizace bloku je závazek zahrnout daný blok do kanonického řetězce. Nelze jej vrátit zpět, pokud útočník nezničí miliony etheru (miliardy USD).
+1. Dvě třetiny celkového etheru vloženého jako stake musí hlasovat pro zahrnutí tohoto bloku do kanonického řetězce. Tato podmínka povyšuje blok na „ospravedlněný“. Je nepravděpodobné, že by ospravedlněné bloky byly zvráceny, ale za určitých podmínek se tak může stát.
+2. Když je další blok ospravedlněn nad již ospravedlněným blokem, je povýšen na „finalizovaný“. Finalizace bloku je závazek zahrnout blok do kanonického řetězce. Nemůže být zvrácen, pokud útočník nezničí miliony etherů (miliardy USD).
 
-Tato vylepšení bloků se nedějí v každém slotu. Místo toho lze justifikovat a finalizovat pouze bloky na hranicích epoch. Tyto bloky jsou známé jako „checkpointy“. Vylepšení se týká dvojic checkpointů. Mezi dvěma po sobě jdoucími checkpointy musí existovat „propojení nadpoloviční většinou“ (tzn. dvě třetiny z celkového uzamčeného etheru hlasují, že checkpoint B je správným potomkem checkpointu A), aby se starší checkpoint povýšil na finalizovaný a novější blok na justifikovaný.
+Tato povyšování bloků se nedějí v každém slotu. Místo toho mohou být ospravedlněny a finalizovány pouze bloky na hranici epochy. Tyto bloky jsou známé jako „kontrolní body“. Povyšování zvažuje dvojice kontrolních bodů. Mezi dvěma po sobě jdoucími kontrolními body musí existovat „spojení supervětšiny“ (tj. dvě třetiny celkového etheru vloženého jako stake hlasují, že kontrolní bod B je správným potomkem kontrolního bodu A), aby se starší kontrolní bod povýšil na finalizovaný a novější blok na ospravedlněný.
 
-Protože finalita vyžaduje dvoutřetinovou shodu na tom, že blok je kanonický, útočník nemůže vytvořit alternativní finalizovaný řetězec, aniž by:
+Protože finalita vyžaduje dvoutřetinovou shodu na tom, že je blok kanonický, útočník nemůže vytvořit alternativní finalizovaný řetězec bez toho, aby:
 
-1. Vlastnil nebo manipuloval se dvěma třetinami z celkového uzamčeného etheru.
-2. Zničil alespoň jednu třetinu z celkového uzamčeného etheru.
+1. Vlastnil nebo manipuloval se dvěma třetinami celkového etheru vloženého jako stake.
+2. Zničil alespoň jednu třetinu celkového etheru vloženého jako stake.
 
-První podmínka vyplývá z toho, že k finalizaci řetězce jsou zapotřebí dvě třetiny uzamčeného etheru. Druhá podmínka vyplývá z toho, že pokud dvě třetiny z celkového podílu hlasovaly pro obě větve, pak jedna třetina musela hlasovat pro obě. Dvojí hlasování je podmínka pro slashing, která by byla maximálně potrestána a jedna třetina celkového podílu by byla zničena. K květnu 2022 to vyžaduje, aby útočník spálil ether v hodnotě zhruba 10 miliard dolarů. Algoritmus, který v systému Gasper justifikuje a finalizuje bloky, je mírně upravenou formou [Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437.pdf).
+První podmínka vyplývá z toho, že k finalizaci řetězce jsou potřeba dvě třetiny etheru vloženého jako stake. Druhá podmínka vzniká proto, že pokud dvě třetiny celkového staku hlasovaly pro oba forky, pak jedna třetina musela hlasovat pro oba. Dvojité hlasování je podmínkou pro penalizaci, která by byla maximálně potrestána, a jedna třetina celkového staku by byla zničena. K květnu 2022 by to vyžadovalo, aby útočník spálil ether v hodnotě přibližně 10 miliard dolarů. Algoritmus, který ospravedlňuje a finalizuje bloky v Gasperu, je mírně upravenou formou [Casper the Friendly Finality Gadget (Casper FFG)](https://arxiv.org/pdf/1710.09437.pdf).
 
-### Pobídky a slashing {#incentives-and-slashing}
+### Pobídky a penalizace {#incentives-and-slashing}
 
-Validátoři jsou odměňováni za poctivé navrhování a validaci bloků. Ether je odměňován a přidáván k jejich podílu. Na druhou stranu validátoři, kteří jsou nepřítomní a nekonají, když jsou k tomu vyzváni, o tyto odměny přicházejí a někdy ztratí malou část svého stávajícího podílu. Sankce za offline stav jsou však malé a ve většině případů se rovnají nákladům ušlé příležitosti ze ztracených odměn. Některé akce validátorů je však velmi obtížné provést náhodou a značí nějaký zlovolný úmysl, jako je navrhování více bloků pro stejný slot, atestování více bloků pro stejný slot nebo protiřečení si s předchozími hlasy o checkpointech. Jedná se o chování, které je „trestatelné slashingem“ a které je trestáno přísněji – slashing má za následek zničení části podílu validátora a jeho odstranění ze sítě validátorů. Tento proces trvá 36 dní. První den je udělena počáteční pokuta až do výše 1 ETH. Poté ether slasheovaného validátora během doby odchodu pomalu odtéká, ale 18. den obdrží „korelační pokutu“, která je vyšší, když je ve stejnou dobu slasheováno více validátorů. Maximální trest je celý podíl. Tyto odměny a tresty jsou navrženy tak, aby motivovaly poctivé validátory a odrazovaly od útoků na síť.
+Validátory jsou odměňovány za poctivé navrhování a validaci bloků. Ether je vyplácen jako odměna a přidáván k jejich staku. Na druhou stranu validátory, které jsou nepřítomné a nekonají, když jsou k tomu vyzvány, přicházejí o tyto odměny a někdy ztrácejí malou část svého stávajícího staku. Tresty za to, že jsou offline, jsou však malé a ve většině případů představují pouze náklady obětované příležitosti v podobě ušlých odměn. Některé akce validátorů je však velmi obtížné provést omylem a naznačují zlý záměr, jako je navrhování více bloků pro stejný slot, atestování více bloků pro stejný slot nebo odporování předchozím hlasům pro kontrolní body. Jedná se o chování podléhající penalizaci, které je trestáno přísněji – penalizace vede ke zničení části staku validátoru a k jeho odstranění ze sítě validátorů. Tento proces trvá 36 dní. První den je udělena počáteční penalizace až do výše 1 ETH. Poté ether penalizovaného validátoru pomalu uniká během období výstupu, ale 18. den obdrží „korelační penalizaci“, která je tím větší, čím více validátorů je penalizováno ve stejnou dobu. Maximálním trestem je celý stake. Tyto odměny a tresty jsou navrženy tak, aby motivovaly poctivé validátory a odrazovaly od útoků na síť.
 
-### Únik z neaktivity {#inactivity-leak}
+### Únik za neaktivitu {#inactivity-leak}
 
-Kromě zabezpečení poskytuje Gasper také „pravděpodobnou živost“. Je to podmínka, že dokud dvě třetiny z celkového uzamčeného etheru hlasují poctivě a dodržují protokol, řetězec bude schopen finalizace bez ohledu na jakoukoli jinou aktivitu (jako jsou útoky, problémy s latencí nebo slashing). Jinými slovy, jedna třetina celkového uzamčeného etheru musí být nějakým způsobem kompromitována, aby se zabránilo finalizaci řetězce. V systému Gasper existuje další obranná linie proti selhání živosti, známá jako „únik z neaktivity“. Tento mechanismus se aktivuje, když se řetězci nepodařilo finalizovat déle než čtyři epochy. Validátorům, kteří aktivně neatestují většinový řetězec, se postupně odčerpává jejich podíl, dokud většina znovu nezíská dvoutřetinový podíl z celkového objemu, což zajišťuje, že selhání živosti jsou pouze dočasná.
+Kromě bezpečnosti poskytuje Gasper také „pravděpodobnou živost“ (plausible liveness). To je podmínka, že dokud dvě třetiny celkového etheru vloženého jako stake hlasují poctivě a dodržují protokol, řetězec bude schopen finalizovat bez ohledu na jakoukoli jinou aktivitu (jako jsou útoky, problémy s latencí nebo penalizace). Jinými slovy, jedna třetina celkového etheru vloženého jako stake musí být nějakým způsobem kompromitována, aby se zabránilo finalizaci řetězce. V Gasperu existuje další obranná linie proti selhání živosti, známá jako „únik za neaktivitu“. Tento mechanismus se aktivuje, když se řetězci nepodaří finalizovat po dobu delší než čtyři epochy. Validátorům, které aktivně neatestují většinový řetězec, je jejich stake postupně odčerpáván, dokud většina nezíská zpět dvě třetiny celkového staku, což zajišťuje, že selhání živosti jsou pouze dočasná.
 
-### Výběr větve {#fork-choice}
+### Volba forku {#fork-choice}
 
-Původní definice Casper-FFG zahrnovala algoritmus pro výběr větve, který zavedl pravidlo: `sledujte řetězec obsahující justifikovaný checkpoint, který má největší výšku`, kde výška je definována jako největší vzdálenost od genesis bloku. V systému Gasper je původní pravidlo pro výběr větve zastaralé a nahrazeno sofistikovanějším algoritmem zvaným LMD-GHOST. Je důležité si uvědomit, že za normálních podmínek není pravidlo pro výběr větve nutné – pro každý slot existuje jediný navrhovatel bloku a poctiví validátoři jej atestují. Algoritmus pro výběr větve je vyžadován pouze v případech velké asynchronicity sítě nebo když se nepoctivý navrhovatel bloku dopustil ekvivokace. Když však tyto případy nastanou, algoritmus pro výběr větve je kritickou obranou, která zajišťuje správný řetězec.
+Původní definice Casper FFG zahrnovala algoritmus volby forku, který ukládal pravidlo: `follow the chain containing the justified checkpoint that has the greatest height`, kde výška je definována jako největší vzdálenost od genesis bloku. V Gasperu je původní pravidlo volby forku zavrženo ve prospěch sofistikovanějšího algoritmu zvaného LMD-GHOST. Je důležité si uvědomit, že za normálních podmínek není pravidlo volby forku nutné – pro každý slot existuje jediný navrhovatel bloku a poctivé validátory jej atestují. Algoritmus volby forku je vyžadován pouze v případech velké asynchronicity sítě nebo když nečestný navrhovatel bloku jedná dvojznačně. Když však tyto případy nastanou, algoritmus volby forku je kritickou obranou, která zabezpečuje správný řetězec.
 
-LMD-GHOST je zkratka pro „latest message-driven greedy heaviest observed sub-tree“ (nejnovější zprávou řízený chamtivý nejtěžší pozorovaný podstrom). Jedná se o odborný způsob, jak definovat algoritmus, který jako kanonickou větev vybere tu s největší nahromaděnou váhou atestací (chamtivý nejtěžší podstrom) a který v případě, že je od validátora přijato více zpráv, bere v úvahu pouze tu poslední (řízený nejnovější zprávou). Před přidáním nejtěžšího bloku do svého kanonického řetězce každý validátor posoudí každý blok pomocí tohoto pravidla.
+LMD-GHOST je zkratka pro „latest message-driven greedy heaviest observed sub-tree“ (nejtěžší pozorovaný podstrom řízený nejnovějšími zprávami). Jedná se o žargonem nabitý způsob definice algoritmu, který vybírá fork s největší nashromážděnou váhou atestací jako ten kanonický (greedy heaviest subtree) a který v případě, že je od validátoru přijato více zpráv, bere v úvahu pouze tu nejnovější (latest-message driven). Před přidáním nejtěžšího bloku do svého kanonického řetězce každý validátor posoudí každý blok pomocí tohoto pravidla.
 
 ## Další čtení {#further-reading}
 

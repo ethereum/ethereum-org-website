@@ -1,35 +1,35 @@
 ---
 title: Dagger-Hashimoto
-description: "Podrobný pohled na algoritmus Dagger-Hashimoto."
+description: Detailní pohled na algoritmus Dagger-Hashimoto.
 lang: cs
 ---
 
-Dagger-Hashimoto byla původní výzkumná implementace a specifikace těžebního algoritmu Etherea. Dagger-Hashimoto byl nahrazen [Ethash](#ethash). Těžba byla zcela vypnuta při [Sloučení](/roadmap/merge/) dne 15. září 2022. Od té doby je Ethereum zabezpečeno pomocí mechanismu [důkazu podílem](/developers/docs/consensus-mechanisms/pos). Tato stránka má historický význam – informace na ní již nejsou pro Ethereum po Sloučení relevantní.
+Dagger-Hashimoto byla původní výzkumná implementace a specifikace pro těžební algoritmus Etherea. Dagger-Hashimoto byl nahrazen algoritmem [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/#ethash). Těžba byla kompletně vypnuta při [Merge](/roadmap/merge/) 15. září 2022. Od té doby je Ethereum zabezpečeno pomocí mechanismu [důkaz podílem (PoS)](/developers/docs/consensus-mechanisms/pos). Tato stránka slouží pro historickou zajímavost – zde uvedené informace již nejsou pro Ethereum po Merge relevantní.
 
 ## Předpoklady {#prerequisites}
 
-Pro lepší pochopení této stránky doporučujeme si nejprve přečíst o [konsensu důkazu prací](/developers/docs/consensus-mechanisms/pow), [těžbě](/developers/docs/consensus-mechanisms/pow/mining) a [těžebních algoritmech](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
+Pro lepší pochopení této stránky doporučujeme nejprve si přečíst o [konsensu důkazu prací (PoW)](/developers/docs/consensus-mechanisms/pow), [těžbě](/developers/docs/consensus-mechanisms/pow/mining) a [těžebních algoritmech](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
-Dagger-Hashimoto se snaží splnit dva cíle:
+Dagger-Hashimoto má za cíl splnit dva cíle:
 
-1. **Odolnost vůči ASIC**: výhoda plynoucí z vytvoření specializovaného hardwaru pro tento algoritmus by měla být co nejmenší
-2. **Ověřitelnost lehkým klientem**: blok by měl být efektivně ověřitelný lehkým klientem.
+1.  **Odolnost vůči ASIC**: výhoda z vytvoření specializovaného hardwaru pro tento algoritmus by měla být co nejmenší.
+2.  **Ověřitelnost lehkým klientem**: blok by měl být efektivně ověřitelný lehkým klientem.
 
-S další úpravou také specifikujeme, jak v případě potřeby splnit třetí cíl, avšak za cenu zvýšené složitosti:
+S dodatečnou úpravou také specifikujeme, jak v případě potřeby splnit třetí cíl, avšak za cenu vyšší složitosti:
 
-**Úplné úložiště řetězce**: těžba by měla vyžadovat uložení celého stavu blockchainu (kvůli nepravidelné struktuře stavového stromu Ethereum očekáváme, že bude možné určité prořezávání, zejména některých často používaných kontraktů, ale chceme to minimalizovat).
+**Ukládání celého řetězce**: těžba by měla vyžadovat uložení kompletního stavu blockchainu (kvůli nepravidelné struktuře stavové trie Etherea předpokládáme, že bude možné určité prořezávání, zejména u některých často používaných kontraktů, ale chceme to minimalizovat).
 
 ## Generování DAG {#dag-generation}
 
-Kód algoritmu bude definován níže v jazyce Python. Nejprve uvedeme `encode_int` pro převádění celých čísel bez znaménka o zadané přesnosti na řetězce. Je uvedena i jeho inverzní funkce:
+Kód algoritmu bude níže definován v jazyce Python. Nejprve uvádíme `encode_int` pro převod (marshaling) celých čísel bez znaménka se zadanou přesností na řetězce. Je uvedena i jeho inverzní funkce:
 
 ```python
 NUM_BITS = 512
 
 def encode_int(x):
-    "Zakóduje celé číslo x jako řetězec 64 znaků pomocí schématu big-endian"
+    "Encode an integer x as a string of 64 characters using a big-endian scheme"
     o = ''
     for _ in range(NUM_BITS / 8):
         o = chr(x % 256) + o
@@ -37,7 +37,7 @@ def encode_int(x):
     return o
 
 def decode_int(s):
-    "Dekóduje celé číslo x z řetězce pomocí schématu big-endian"
+    "Unencode an integer x from a string using a big-endian scheme"
     x = 0
     for c in s:
         x *= 256
@@ -68,24 +68,25 @@ Parametry použité pro algoritmus jsou:
 SAFE_PRIME_512 = 2**512 - 38117     # Největší bezpečné prvočíslo menší než 2**512
 
 params = {
-      "n": 4000055296 * 8 // NUM_BITS,  # Velikost datové sady (4 gigabajty); MUSÍ BÝT NÁSOBEK 65536
-      "n_inc": 65536,                   # Přírůstek hodnoty n za období; MUSÍ BÝT NÁSOBEK 65536
-                                        # s epochtime=20000 dává 882 MB ročně
-      "cache_size": 2500,               # Velikost mezipaměti lehkého klienta (může si zvolit lehký klient, není součástí specifikace algoritmu)
-      "diff": 2**14,                    # Obtížnost (upraveno během vyhodnocování bloku)
+      "n": 4000055296 * 8 // NUM_BITS,  # Velikost datové sady (4 gigabajty); MUSÍ BÝT NÁSOBKEM 65536
+      "n_inc": 65536,                   # Přírůstek hodnoty n za období; MUSÍ BÝT NÁSOBKEM 65536
+                                        # s epochtime=20000 dává růst 882 MB za rok
+      "cache_size": 2500,               # Velikost mezipaměti lehkého klienta (může být zvolena lehkým
+                                        # klientem; není součástí specifikace algoritmu)
+      "diff": 2**14,                    # Obtížnost (upravuje se během vyhodnocování bloku)
       "epochtime": 100000,              # Délka epochy v blocích (jak často se datová sada aktualizuje)
       "k": 1,                           # Počet rodičů uzlu
-      "w": w,                          # Používá se pro hašování modulárním umocňováním
-      "accesses": 200,                  # Počet přístupů k datové sadě během hashimota
-      "P": SAFE_PRIME_512               # Bezpečné prvočíslo pro hašování a generování náhodných čísel
+      "w": w,                          # Používá se pro hashování modulárním umocňováním
+      "accesses": 200,                  # Počet přístupů k datové sadě během hashimoto
+      "P": SAFE_PRIME_512               # Bezpečné prvočíslo pro hashování a generování náhodných čísel
 }
 ```
 
-`P` je v tomto případě prvočíslo zvolené tak, že `log₂(P)` je jen o málo menší než 512, což odpovídá 512 bitům, které jsme používali k reprezentaci našich čísel. Všimněte si, že je třeba ukládat pouze druhou polovinu DAG, takže de-facto požadavek na paměť RAM začíná na 1 GB a roste o 441 MB ročně.
+`P` je v tomto případě prvočíslo zvolené tak, aby `log₂(P)` bylo jen o něco menší než 512, což odpovídá 512 bitům, které používáme k reprezentaci našich čísel. Všimněte si, že ve skutečnosti je nutné ukládat pouze druhou polovinu DAG, takže de facto požadavek na RAM začíná na 1 GB a roste o 441 MB ročně.
 
-### Vytvoření grafu Daggeru {#dagger-graph-building}
+### Budování grafu Dagger {#dagger-graph-building}
 
-Primitivní funkce pro vytvoření grafu Daggeru je definována následovně:
+Primitivum pro budování grafu Dagger je definováno následovně:
 
 ```python
 def produce_dag(params, seed, length):
@@ -100,13 +101,13 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-V podstatě začíná graf jako jediný uzel, `sha3(seed)`, a odtud začne postupně přidávat další uzly na základě náhodných předchozích uzlů. Když je vytvořen nový uzel, je vypočítána modulární mocnina seedu pro náhodný výběr některých indexů menších než `i` (pomocí `x % i` výše) a hodnoty uzlů na těchto indexech jsou použity ve výpočtu pro generování nové hodnoty `x`, která je pak vložena do malé funkce důkazu prací (založené na XOR) pro konečné vygenerování hodnoty grafu na indexu `i`. Důvodem tohoto konkrétního návrhu je vynutit si sekvenční přístup k DAG; další hodnota DAG, ke které se bude přistupovat, nemůže být určena, dokud není známa aktuální hodnota. Nakonec modulární umocňování výsledek dále hašuje.
+V podstatě začíná graf jako jediný uzel, `sha3(seed)`, a odtud začne postupně přidávat další uzly na základě náhodných předchozích uzlů. Když je vytvořen nový uzel, vypočítá se modulární mocnina seedu, aby se náhodně vybraly některé indexy menší než `i` (pomocí `x % i` výše), a hodnoty uzlů na těchto indexech se použijí ve výpočtu k vygenerování nové hodnoty pro `x`, která je pak předána do malé funkce důkazu prací (založené na XOR), aby se nakonec vygenerovala hodnota grafu na indexu `i`. Důvodem tohoto konkrétního návrhu je vynutit sekvenční přístup k DAG; další hodnotu DAG, ke které se bude přistupovat, nelze určit, dokud není známa aktuální hodnota. Nakonec modulární umocňování výsledek dále zahashuje.
 
-Tento algoritmus se opírá o několik výsledků z teorie čísel. Diskuzi naleznete v dodatku níže.
+Tento algoritmus se opírá o několik výsledků z teorie čísel. Diskusi naleznete v příloze níže.
 
 ## Vyhodnocení lehkým klientem {#light-client-evaluation}
 
-Výše uvedená konstrukce grafu má umožnit rekonstrukci každého uzlu v grafu výpočtem podstromu pouze malého počtu uzlů a vyžaduje pouze malé množství pomocné paměti. Všimněte si, že s k=1 je podstrom pouze řetězcem hodnot vedoucích až k prvnímu prvku v DAG.
+Výše uvedená konstrukce grafu má umožnit rekonstrukci každého uzlu v grafu výpočtem podstromu pouze malého počtu uzlů a vyžaduje pouze malé množství pomocné paměti. Všimněte si, že při k=1 je podstrom pouze řetězec hodnot sahající až k prvnímu prvku v DAG.
 
 Výpočetní funkce lehkého klienta pro DAG funguje následovně:
 
@@ -130,13 +131,13 @@ def quick_calc(params, seed, p):
     return quick_calc_cached(p)
 ```
 
-V podstatě se jedná pouze o přepsání výše uvedeného algoritmu, který odstraňuje smyčku výpočtu hodnot pro celý DAG a nahrazuje dřívější vyhledávání uzlů rekurzivním voláním nebo vyhledáváním v mezipaměti. Všimněte si, že pro `k=1` je mezipaměť zbytečná, ačkoliv další optimalizace ve skutečnosti předpočítává prvních několik tisíc hodnot DAG a ponechává je jako statickou mezipaměť pro výpočty; implementaci tohoto kódu naleznete v dodatku.
+V podstatě se jedná o pouhý přepis výše uvedeného algoritmu, který odstraňuje smyčku výpočtu hodnot pro celý DAG a nahrazuje dřívější vyhledávání uzlů rekurzivním voláním nebo vyhledáváním v mezipaměti (cache). Všimněte si, že pro `k=1` je mezipaměť zbytečná, ačkoli další optimalizace ve skutečnosti předpočítává prvních několik tisíc hodnot DAG a udržuje je jako statickou mezipaměť pro výpočty; implementaci kódu naleznete v příloze.
 
-## Dvojitá vyrovnávací paměť DAG {#double-buffer}
+## Dvojitý buffer DAGů {#double-buffer}
 
-V plnohodnotném klientovi se používá [_dvojitá vyrovnávací paměť_](https://wikipedia.org/wiki/Multiple_buffering) 2 DAGů vytvořených podle výše uvedeného vzorce. Myšlenka je taková, že DAG se vytvářejí každých `epochtime` bloků podle výše uvedených parametrů. Místo toho, aby klient používal nejnovější vytvořený DAG, používá ten předchozí. Výhodou je, že to umožňuje nahrazovat DAG v průběhu času, aniž by bylo nutné zahrnout krok, kdy těžaři musí náhle přepočítat všechna data. V opačném případě existuje potenciál pro náhlé dočasné zpomalení zpracování řetězce v pravidelných intervalech a dramatické zvýšení centralizace. Tím vzniká riziko 51% útoku během několika minut před přepočítáním všech dat.
+V plném klientovi se používá [_dvojitý buffer_](https://wikipedia.org/wiki/Multiple_buffering) 2 DAGů vytvořených podle výše uvedeného vzorce. Myšlenka spočívá v tom, že DAGy jsou produkovány každých `epochtime` bloků podle výše uvedených parametrů. Místo toho, aby klient používal nejnovější vyprodukovaný DAG, používá ten předchozí. Výhodou toho je, že to umožňuje postupnou výměnu DAGů bez nutnosti začlenit krok, kdy by těžaři museli náhle přepočítat všechna data. V opačném případě by hrozilo náhlé dočasné zpomalení zpracování řetězce v pravidelných intervalech a dramatické zvýšení centralizace. Tím by vzniklo riziko 51% útoku během těch několika minut, než by byla všechna data přepočítána.
 
-Algoritmus použitý ke generování sady DAG používaných k výpočtu práce pro blok je následující:
+Algoritmus používaný ke generování sady DAGů použitých k výpočtu práce pro blok je následující:
 
 ```python
 def get_prevhash(n):
@@ -163,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # Zadní vyrovnávací paměť není možná, vytvořte pouze přední vyrovnávací paměť
+        # Není možný žádný zadní buffer, vytvořte pouze přední buffer
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:
@@ -175,7 +176,7 @@ def get_daggerset(params, block):
 
 ## Hashimoto {#hashimoto}
 
-Původní myšlenkou Hashimota je použít blockchain jako datovou sadu, provést výpočet, který vybere N indexů z blockchainu, shromáždí transakce na těchto indexech, provede XOR těchto dat a vrátí haš výsledku. Původní algoritmus Thaddeuse Dryji, přeložený do Pythonu pro konzistenci, je následující:
+Myšlenkou původního algoritmu Hashimoto je použít blockchain jako datovou sadu, provést výpočet, který vybere N indexů z blockchainu, shromáždí transakce na těchto indexech, provede XOR těchto dat a vrátí hash výsledku. Původní algoritmus Thaddeuse Dryji, přeložený do Pythonu pro konzistenci, je následující:
 
 ```python
 def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
@@ -188,7 +189,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
     return txid_mix ^ (nonce << 192)
 ```
 
-Bohužel, ačkoli je Hashimoto považováno za paměťově náročné, spoléhá na 256bitovou aritmetiku, která má značnou výpočetní režii. Dagger-Hashimoto však k řešení tohoto problému používá při indexování své datové sady pouze nejméně významných 64 bitů.
+Bohužel, ačkoli je Hashimoto považován za náročný na RAM, spoléhá se na 256bitovou aritmetiku, která má značnou výpočetní režii. Dagger-Hashimoto však k řešení tohoto problému používá při indexování své datové sady pouze 64 nejméně významných bitů.
 
 ```python
 def hashimoto(dag, dagsize, params, header, nonce):
@@ -199,7 +200,7 @@ def hashimoto(dag, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-Použití dvojitého SHA3 umožňuje formu předběžného ověření s nulovými daty a téměř okamžitou odezvou, kdy se ověřuje pouze to, že byla poskytnuta správná mezihodnota. Tato vnější vrstva důkazu prací je vysoce přívětivá k ASIC a poměrně slabá, ale existuje proto, aby ještě více ztížila útoky DDoS, protože toto malé množství práce musí být provedeno, aby se vytvořil blok, který nebude okamžitě zamítnut. Zde je verze pro lehkého klienta:
+Použití dvojitého SHA3 umožňuje formu téměř okamžitého předběžného ověření s nulovými daty, které ověřuje pouze to, že byla poskytnuta správná mezihodnota. Tato vnější vrstva důkazu prací je velmi přátelská k ASIC a poměrně slabá, ale existuje proto, aby ještě více ztížila DDoS útoky, protože toto malé množství práce musí být vykonáno, aby byl vytvořen blok, který nebude okamžitě odmítnut. Zde je verze pro lehkého klienta:
 
 ```python
 def quick_hashimoto(seed, dagsize, params, header, nonce):
@@ -212,7 +213,7 @@ def quick_hashimoto(seed, dagsize, params, header, nonce):
 
 ## Těžba a ověřování {#mining-and-verifying}
 
-Nyní to všechno spojíme do těžebního algoritmu:
+Nyní to všechno spojme do těžebního algoritmu:
 
 ```python
 def mine(daggerset, params, block):
@@ -238,7 +239,7 @@ def verify(daggerset, params, block, nonce):
     return result * params["diff"] < 2**256
 ```
 
-Ověření přátelské k lehkému klientovi:
+Ověřování přátelské k lehkým klientům:
 
 ```python
 def light_verify(params, header, nonce):
@@ -250,55 +251,55 @@ def light_verify(params, header, nonce):
 
 Všimněte si také, že Dagger-Hashimoto klade další požadavky na hlavičku bloku:
 
-- Aby dvouvrstvé ověření fungovalo, musí hlavička bloku obsahovat jak nonce, tak střední hodnotu před hašováním sha3.
+- Aby fungovalo dvouvrstvé ověřování, musí mít hlavička bloku jak nonce, tak střední hodnotu před sha3.
 - Někde musí hlavička bloku ukládat sha3 aktuální sady seedů.
 
 ## Další čtení {#further-reading}
 
-_Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
+_Znáte komunitní zdroj, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 
-## Dodatek {#appendix}
+## Příloha {#appendix}
 
-Jak bylo uvedeno výše, RNG použité pro generování DAG se opírá o některé výsledky z teorie čísel. Nejprve poskytneme ujištění, že Lehmerův RNG, který je základem proměnné `picker`, má široké období. Za druhé, ukážeme, že `pow(x,3,P)` nezobrazí `x` na `1` nebo `P-1` za předpokladu, že na začátku je `x ∈ [2,P-2]`. Nakonec ukážeme, že `pow(x,3,P)` má nízkou míru kolizí, pokud je považováno za hašovací funkci.
+Jak bylo uvedeno výše, generátor náhodných čísel (RNG) použitý pro generování DAG se opírá o některé výsledky z teorie čísel. Zaprvé poskytujeme ujištění, že Lehmerův RNG, který je základem pro proměnnou `picker`, má širokou periodu. Zadruhé ukazujeme, že `pow(x,3,P)` nenamapuje `x` na `1` nebo `P-1` za předpokladu, že na začátku je `x ∈ [2,P-2]`. Nakonec ukazujeme, že `pow(x,3,P)` má nízkou míru kolizí, když se s ním zachází jako s hashovací funkcí.
 
 ### Lehmerův generátor náhodných čísel {#lehmer-random-number}
 
-Přestože funkce `produce_dag` nemusí produkovat nezaujatá náhodná čísla, potenciální hrozbou je, že `seed**i % P` nabývá pouze několika hodnot. To by mohlo poskytnout výhodu těžařům, kteří vzor rozpoznají, oproti těm, kteří ho nerozpoznají.
+Ačkoli funkce `produce_dag` nemusí produkovat nezkreslená náhodná čísla, potenciální hrozbou je, že `seed**i % P` nabývá pouze hrstky hodnot. To by mohlo poskytnout výhodu těžařům, kteří tento vzorec rozpoznají, oproti těm, kteří jej nerozpoznají.
 
-Abychom se tomu vyhnuli, odvoláváme se na výsledek z teorie čísel. [_Bezpečné prvočíslo_](https://en.wikipedia.org/wiki/Safe_prime) je definováno jako prvočíslo `P` takové, že `(P-1)/2` je také prvočíslo. _Řád_ členu `x` [multiplikativní skupiny](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` je definován jako minimální `m` takové, že <pre>xᵐ mod P ≡ 1</pre>
+Aby se tomu zabránilo, využívá se výsledek z teorie čísel. [_Bezpečné prvočíslo_](https://en.wikipedia.org/wiki/Safe_prime) je definováno jako prvočíslo `P` takové, že `(P-1)/2` je také prvočíslo. _Řád_ prvku `x` [multiplikativní grupy](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` je definován jako minimální `m` takové, že <pre>xᵐ mod P ≡ 1</pre>
 Vzhledem k těmto definicím máme:
 
-> Pozorování 1. Nechť `x` je členem multiplikativní skupiny `ℤ/Pℤ` pro bezpečné prvočíslo `P`. Pokud `x mod P ≠ 1 mod P` a `x mod P ≠ P-1 mod P`, pak řád `x` je buď `P-1` nebo `(P-1)/2`.
+> Pozorování 1. Nechť `x` je prvek multiplikativní grupy `ℤ/Pℤ` pro bezpečné prvočíslo `P`. Pokud `x mod P ≠ 1 mod P` a `x mod P ≠ P-1 mod P`, pak řád `x` je buď `P-1` nebo `(P-1)/2`.
 
-_Důkaz_. Protože `P` je bezpečné prvočíslo, pak podle [Lagrangeovy věty][lagrange] máme, že řád `x` je buď `1`, `2`, `(P-1)/2` nebo `P-1`.
+_Důkaz_. Protože `P` je bezpečné prvočíslo, pak podle [Lagrangeovy věty][lagrange] platí, že řád `x` je buď `1`, `2`, `(P-1)/2` nebo `P-1`.
 
 Řád `x` nemůže být `1`, protože podle Malé Fermatovy věty máme:
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
 
-Proto musí být `x` multiplikativní identitou `ℤ/nℤ`, která je jedinečná. Protože jsme předpokládali, že `x ≠ 1`, není to možné.
+Proto `x` musí být multiplikativní identitou `ℤ/nℤ`, která je jedinečná. Vzhledem k tomu, že jsme předpokládali `x ≠ 1`, není to možné.
 
-Řád `x` nemůže být `2`, pokud `x ≠ P-1`, protože by to porušilo, že `P` je prvočíslo.
+Řád `x` nemůže být `2`, pokud neplatí `x = P-1`, protože by to porušovalo skutečnost, že `P` je prvočíslo.
 
-Z výše uvedeného tvrzení můžeme rozpoznat, že iterace `(picker * init) % P` bude mít délku cyklu alespoň `(P-1)/2`. Je to proto, že jsme zvolili `P` jako bezpečné prvočíslo přibližně rovné vyšší mocnině dvou a `init` je v intervalu `[2,2**256+1]`. Vzhledem k velikosti `P` bychom nikdy neměli očekávat cyklus z modulárního umocňování.
+Z výše uvedeného tvrzení můžeme vyvodit, že iterace `(picker * init) % P` bude mít délku cyklu alespoň `(P-1)/2`. Je to proto, že jsme zvolili `P` jako bezpečné prvočíslo přibližně rovné vyšší mocnině dvou a `init` je v intervalu `[2,2**256+1]`. Vzhledem k velikosti `P` bychom nikdy neměli očekávat cyklus z modulárního umocňování.
 
-Když přiřazujeme první buňku v DAG (proměnná označená `init`), vypočítáme `pow(sha3(seed) + 2, 3, P)`. Na první pohled to nezaručuje, že výsledek nebude ani `1`, ani `P-1`. Protože je však `P-1` bezpečné prvočíslo, máme následující další ujištění, které je důsledkem Pozorování 1:
+Když přiřazujeme první buňku v DAG (proměnná označená `init`), počítáme `pow(sha3(seed) + 2, 3, P)`. Na první pohled to nezaručuje, že výsledek není ani `1`, ani `P-1`. Protože je však `P-1` bezpečné prvočíslo, máme následující dodatečné ujištění, které je důsledkem Pozorování 1:
 
-> Pozorování 2. Nechť `x` je členem multiplikativní skupiny `ℤ/Pℤ` pro bezpečné prvočíslo `P` a nechť `w` je přirozené číslo. Pokud `x mod P ≠ 1 mod P` a `x mod P ≠ P-1 mod P`, a také `w mod P ≠ P-1 mod P` a `w mod P ≠ 0 mod P`, pak `xʷ mod P ≠ 1 mod P` a `xʷ mod P ≠ P-1 mod P`
+> Pozorování 2. Nechť `x` je prvek multiplikativní grupy `ℤ/Pℤ` pro bezpečné prvočíslo `P` a nechť `w` je přirozené číslo. Pokud `x mod P ≠ 1 mod P` a `x mod P ≠ P-1 mod P`, a zároveň `w mod P ≠ P-1 mod P` a `w mod P ≠ 0 mod P`, pak `xʷ mod P ≠ 1 mod P` a `xʷ mod P ≠ P-1 mod P`
 
-### Modulární umocňování jako hašovací funkce {#modular-exponentiation}
+### Modulární umocňování jako hashovací funkce {#modular-exponentiation}
 
 Pro určité hodnoty `P` a `w` může mít funkce `pow(x, w, P)` mnoho kolizí. Například `pow(x,9,19)` nabývá pouze hodnot `{1,18}`.
 
-Vzhledem k tomu, že `P` je prvočíslo, lze pomocí následujícího výsledku zvolit vhodné `w` pro hašovací funkci modulárního umocňování:
+Vzhledem k tomu, že `P` je prvočíslo, lze vhodné `w` pro hashovací funkci modulárního umocňování zvolit pomocí následujícího výsledku:
 
 > Pozorování 3. Nechť `P` je prvočíslo; `w` a `P-1` jsou nesoudělná právě tehdy, když pro všechna `a` a `b` v `ℤ/Pℤ` platí:<center>`aʷ mod P ≡ bʷ mod P` právě tehdy, když `a mod P ≡ b mod P`</center>
 
-Vzhledem k tomu, že `P` je prvočíslo a `w` je nesoudělné s `P-1`, máme tedy `|{pow(x, w, P) : x ∈ ℤ}| = P`, z čehož vyplývá, že hašovací funkce má nejmenší možnou míru kolizí.
+Tedy, vzhledem k tomu, že `P` je prvočíslo a `w` je nesoudělné s `P-1`, platí, že `|{pow(x, w, P) : x ∈ ℤ}| = P`, což znamená, že hashovací funkce má minimální možnou míru kolizí.
 
-Ve zvláštním případě, že `P` je bezpečné prvočíslo, jak jsme si zvolili, pak `P-1` má pouze dělitele 1, 2, `(P-1)/2` a `P-1`. Protože `P` > 7, víme, že 3 je nesoudělné s `P-1`, a proto `w=3` splňuje výše uvedené tvrzení.
+Ve speciálním případě, kdy je `P` bezpečné prvočíslo, jak jsme zvolili, má `P-1` pouze dělitele 1, 2, `(P-1)/2` a `P-1`. Protože `P` > 7, víme, že 3 je nesoudělné s `P-1`, a proto `w=3` splňuje výše uvedené tvrzení.
 
-## Efektivnější algoritmus vyhodnocování založený na mezipaměti {#cache-based-evaluation}
+## Efektivnější vyhodnocovací algoritmus založený na mezipaměti {#cache-based-evaluation}
 
 ```python
 def quick_calc(params, seed, p):

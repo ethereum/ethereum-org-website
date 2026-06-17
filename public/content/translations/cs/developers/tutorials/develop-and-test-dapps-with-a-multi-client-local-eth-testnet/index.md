@@ -1,50 +1,50 @@
 ---
-title: "Jak vyvíjet a testovat dApp na lokálním, multi-klientském testnetu"
-description: "Tento průvodce vás nejprve provede vytvořením instance a konfigurací lokálního Ethereum testnetu s více klienty a následně použitím testnetu k nasazení a testování dApp."
+title: Jak vyvíjet a testovat dApp na lokálním testnetu s více klienty
+description: Tento průvodce vás nejprve provede tím, jak vytvořit a nakonfigurovat lokální testnet Etherea s více klienty, a poté tento testnet použijete k nasazení a testování dApp.
 author: "Tedi Mitiku"
 tags:
   [
     "klienti",
     "uzly",
-    "smart kontrakt účty",
-    "složitelnost",
-    "konsensuální vrstva",
+    "chytré kontrakty",
+    "komponovatelnost",
+    "vrstva konsensu",
     "exekuční vrstva",
-    "testování"
+    "testování",
   ]
 skill: intermediate
-breadcrumb: "Multi-klient testnet"
+breadcrumb: Testnet s více klienty
 lang: cs
 published: 2023-04-11
 ---
 
 ## Úvod {#introduction}
 
-Tato příručka vás provede procesem vytvoření instance konfigurovatelného lokálního Ethereum testnetu, nasazením chytrého kontraktu a použitím testnetu ke spuštění testů vaší dApp. Tato příručka je určena pro vývojáře dApps, kteří chtějí lokálně vyvíjet a testovat své dApps s různými konfiguracemi sítě před nasazením na živý testnet nebo mainnet.
+Tento průvodce vás provede procesem vytvoření konfigurovatelného lokálního testnetu Etherea, nasazení chytrého kontraktu na něj a použitím testnetu ke spouštění testů vaší decentralizované aplikace (dapp). Tento průvodce je určen pro vývojáře dapp, kteří chtějí vyvíjet a testovat své dapp lokálně proti různým konfiguracím sítě před nasazením na živý testnet nebo Mainnet.
 
-V této příručce:
+V tomto průvodci budete:
 
-- Vytvoříte instanci lokálního Ethereum testnetu s [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) pomocí [Kurtosis](https://www.kurtosis.com/),
-- Připojíte své vývojové prostředí Hardhat dApp k lokálnímu testnetu pro kompilaci, nasazení a testování dApp a
-- Nakonfigurujete lokální testnet, včetně parametrů, jako je počet uzlů a konkrétní párování EL/CL klientů, abyste umožnili vývoj a testování s různými konfiguracemi sítě.
+- Vytvářet lokální testnet Etherea pomocí [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) s využitím nástroje [Kurtosis](https://www.kurtosis.com/),
+- Připojovat své vývojové prostředí Hardhat pro dapp k lokálnímu testnetu za účelem kompilace, nasazení a testování dapp, a
+- Konfigurovat lokální testnet, včetně parametrů jako je počet uzlů a specifické párování klientů EL/CL, abyste umožnili vývojové a testovací procesy proti různým konfiguracím sítě.
 
 ### Co je Kurtosis? {#what-is-kurtosis}
 
-[Kurtosis](https://www.kurtosis.com/) je skládací systém sestavení určený pro konfiguraci vícekontejnerových testovacích prostředí. Umožňuje vývojářům vytvářet reprodukovatelná prostředí, která vyžadují logiku dynamického nastavení, jako jsou například blockchainové testnety.
+[Kurtosis](https://www.kurtosis.com/) je komponovatelný sestavovací systém navržený pro konfiguraci testovacích prostředí s více kontejnery. Konkrétně umožňuje vývojářům vytvářet reprodukovatelná prostředí, která vyžadují dynamickou logiku nastavení, jako jsou testnety blockchainu.
 
-V této příručce balíček Kurtosis eth-network-package spouští lokální Ethereum testnet s podporou klienta [`geth`](https://geth.ethereum.org/) exekuční vrstvy (EL) a také klientů [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) a [`lodestar`](https://lodestar.chainsafe.io/) konsensuální vrstvy (CL). Tento balíček slouží jako konfigurovatelná a skládací alternativa k sítím v rámcích jako Hardhat Network, Ganache a Anvil. Kurtosis nabízí vývojářům větší kontrolu a flexibilitu nad testnety, které používají, což je hlavní důvod, proč [nadace Ethereum použila Kurtosis k testování Sloučení](https://www.kurtosis.com/blog/testing-the-ethereum-merge) a nadále ho používá k testování upgradů sítě.
+V tomto průvodci balíček Kurtosis eth-network-package spustí lokální testnet Etherea s podporou klienta exekuční vrstvy (EL) [`geth`](https://geth.ethereum.org/) a také klientů vrstvy konsensu (CL) [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) a [`lodestar`](https://lodestar.chainsafe.io/). Tento balíček slouží jako konfigurovatelná a komponovatelná alternativa k sítím ve frameworcích jako Hardhat Network, Ganache a Anvil. Kurtosis nabízí vývojářům větší kontrolu a flexibilitu nad testnety, které používají, což je hlavní důvod, proč [Nadace Ethereum použila Kurtosis k testování Merge](https://www.kurtosis.com/blog/testing-the-ethereum-merge) a nadále jej používá k testování upgradů sítě.
 
 ## Nastavení Kurtosis {#setting-up-kurtosis}
 
 Než budete pokračovat, ujistěte se, že máte:
 
 - [Nainstalovaný a spuštěný Docker engine](https://docs.kurtosis.com/install/#i-install--start-docker) na vašem lokálním počítači
-- [Nainstalovaný Kurtosis CLI](https://docs.kurtosis.com/install#ii-install-the-cli) (nebo aktualizovaný na nejnovější verzi, pokud již máte CLI nainstalovaný)
-- Nainstalovaný [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) a [npx](https://www.npmjs.com/package/npx) (pro vaše prostředí dApp)
+- [Nainstalované Kurtosis CLI](https://docs.kurtosis.com/install#ii-install-the-cli) (nebo aktualizované na nejnovější verzi, pokud již máte CLI nainstalované)
+- Nainstalované [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) a [npx](https://www.npmjs.com/package/npx) (pro vaše prostředí dapp)
 
-## Vytvoření instance lokálního Ethereum testnetu {#instantiate-testnet}
+## Vytvoření lokálního testnetu Etherea {#instantiate-testnet}
 
-Pro spuštění lokálního Ethereum testnetu spusťte:
+Chcete-li spustit lokální testnet Etherea, spusťte:
 
 ```python
 kurtosis --enclave local-eth-testnet run github.com/kurtosis-tech/eth-network-package
@@ -52,7 +52,7 @@ kurtosis --enclave local-eth-testnet run github.com/kurtosis-tech/eth-network-pa
 
 Poznámka: Tento příkaz pojmenuje vaši síť: „local-eth-testnet“ pomocí příznaku `--enclave`.
 
-Kurtosis bude průběžně vypisovat kroky, které provádí, zatímco interpretuje, ověřuje a následně provádí pokyny. Na konci byste měli vidět výstup, který se podobá následujícímu:
+Kurtosis vypíše kroky, které provádí na pozadí, když pracuje na interpretaci, validaci a následném provedení instrukcí. Na konci byste měli vidět výstup, který se podobá následujícímu:
 
 ```python
 INFO[2023-04-04T18:09:44-04:00] ======================================================
@@ -92,46 +92,46 @@ d7b802f623e8   el-client-0                                    engine-rpc: 8551/t
 
 ```
 
-Gratulujeme! Použili jste Kurtosis k vytvoření instance lokálního Ethereum testnetu s klientem CL (`lighthouse`) a EL (`geth`) přes Docker.
+Gratulujeme! Použili jste Kurtosis k vytvoření lokálního testnetu Etherea s klientem CL (`lighthouse`) a EL (`geth`) přes Docker.
 
-### Rekapitulace {#review-instantiate-testnet}
+### Shrnutí {#review-instantiate-testnet}
 
-V této části jste spustili příkaz, který nařídil Kurtosisu, aby použil [`eth-network-package` hostovaný vzdáleně na GitHubu](https://github.com/kurtosis-tech/eth-network-package) ke spuštění lokálního Ethereum testnetu v rámci Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/). Uvnitř vaší enklávy najdete jak „souborové artefakty“, tak „uživatelské služby“.
+V této části jste provedli příkaz, který nařídil Kurtosis použít [`eth-network-package` hostovaný vzdáleně na GitHubu](https://github.com/kurtosis-tech/eth-network-package) ke spuštění lokálního testnetu Etherea v rámci [Enklávy](https://docs.kurtosis.com/advanced-concepts/enclaves/) Kurtosis. Uvnitř vaší enklávy najdete jak „souborové artefakty“ (file artifacts), tak „uživatelské služby“ (user services).
 
-[Souborové artefakty](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) ve vaší enklávě obsahují všechna data vygenerovaná a využitá k zavedení klientů EL a CL. Data byla vytvořena pomocí služby `prelaunch-data-generator` sestavené z tohoto [obrazu Dockeru](https://github.com/ethpandaops/ethereum-genesis-generator)
+[Souborové artefakty](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) ve vaší enklávě zahrnují všechna data vygenerovaná a využitá k inicializaci klientů EL a CL. Data byla vytvořena pomocí služby `prelaunch-data-generator` sestavené z tohoto [obrazu Dockeru](https://github.com/ethpandaops/ethereum-genesis-generator)
 
-Uživatelské služby zobrazují všechny kontejnerizované služby běžící ve vaší enklávě. Všimnete si, že byl vytvořen jediný uzel, který obsahuje klienta EL i klienta CL.
+Uživatelské služby zobrazují všechny kontejnerizované služby fungující ve vaší enklávě. Všimnete si, že byl vytvořen jeden uzel, který obsahuje jak klienta EL, tak klienta CL.
 
-## Připojení vývojového prostředí dApp k lokálnímu Ethereum testnetu {#connect-your-dapp}
+## Připojení vašeho vývojového prostředí dapp k lokálnímu testnetu Etherea {#connect-your-dapp}
 
-### Nastavení vývojového prostředí dApp {#set-up-dapp-env}
+### Nastavení vývojového prostředí dapp {#set-up-dapp-env}
 
-Nyní, když máte spuštěný lokální testnet, můžete k němu připojit své vývojové prostředí dApp. V této příručce bude použit framework Hardhat k nasazení blackjack dApp na váš lokální testnet.
+Nyní, když máte běžící lokální testnet, můžete připojit své vývojové prostředí dapp, aby váš lokální testnet využívalo. V tomto průvodci bude použit framework Hardhat k nasazení blackjack dapp na váš lokální testnet.
 
-Chcete-li nastavit vývojové prostředí dApp, naklonujte repozitář, který obsahuje naši ukázkovou dApp, a nainstalujte její závislosti spuštěním:
+Chcete-li nastavit své vývojové prostředí dapp, naklonujte repozitář, který obsahuje naši ukázkovou dapp, a nainstalujte její závislosti spuštěním:
 
 ```python
 git clone https://github.com/kurtosis-tech/awesome-kurtosis.git && cd awesome-kurtosis/smart-contract-example && yarn
 ```
 
-Složka [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) použitá zde obsahuje typické nastavení pro vývojáře dApp používajícího framework [Hardhat](https://hardhat.org/):
+Zde použitá složka [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) obsahuje typické nastavení pro vývojáře dapp používajícího framework [Hardhat](https://hardhat.org/):
 
-- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) obsahuje několik jednoduchých chytrých kontraktů pro Blackjack dApp
-- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) obsahuje skript pro nasazení tokenového kontraktu do vaší lokální sítě Ethereum
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) obsahuje jednoduchý .js test pro váš tokenový kontrakt, který potvrdí, že každý hráč v naší Blackjack dApp má pro sebe vyraženo 1000 tokenů
+- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) obsahuje několik jednoduchých chytrých kontraktů pro blackjack dapp
+- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) obsahuje skript pro nasazení kontraktu tokenu do vaší lokální sítě Etherea
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) obsahuje jednoduchý .js test pro váš kontrakt tokenu, který potvrzuje, že každý hráč v naší blackjack dapp má pro sebe vyraženo 1000 tokenů
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) konfiguruje vaše nastavení Hardhat
 
-### Konfigurace Hardhatu pro použití lokálního testnetu {#configure-hardhat}
+### Konfigurace Hardhat pro použití lokálního testnetu {#configure-hardhat}
 
-S nastaveným vývojovým prostředím dApp nyní připojíte Hardhat k lokálnímu Ethereum testnetu vygenerovanému pomocí Kurtosis. Chcete-li toho dosáhnout, nahraďte `<$YOUR_PORT>` ve struktuře `localnet` v konfiguračním souboru `hardhat.config.ts` portem z výstupu RPC URI libovolné služby `el-client-<num>`. V tomto ukázkovém případě by port byl `64248`. Váš port bude jiný.
+S nastaveným vývojovým prostředím dapp nyní připojíte Hardhat, aby používal lokální testnet Etherea vygenerovaný pomocí Kurtosis. Abyste toho dosáhli, nahraďte `<$YOUR_PORT>` ve struktuře `localnet` ve vašem konfiguračním souboru `hardhat.config.ts` portem z výstupu rpc uri z jakékoli služby `el-client-<num>`. V tomto ukázkovém případě by port byl `64248`. Váš port se bude lišit.
 
 Příklad v `hardhat.config.ts`:
 
 ```js
 localnet: {
-url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: NAHRAĎTE $YOUR_PORT PORTEM Z URI UZLU, KTERÝ VYTVOŘIL BALÍČEK KURTOSIS ETH-NETWORK-PACKAGE
+url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: NAHRAĎTE $YOUR_PORT PORTEM URI UZLU VYTVOŘENÉHO BALÍČKEM ETH NETWORK KURTOSIS
 
-// Toto jsou soukromé klíče spojené s předem financovanými testovacími účty vytvořenými balíčkem eth-network-package
+// Toto jsou soukromé klíče spojené s předplacenými testovacími účty vytvořenými balíčkem eth-network-package
 // <https://github.com/kurtosis-tech/eth-network-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star>
 accounts: [
     "ef5177cd0b6b21c87db5a0bf35d4084a8a57a9d6a064f86d51ac85f2b873a4e2",
@@ -144,13 +144,13 @@ accounts: [
 },
 ```
 
-Jakmile soubor uložíte, vaše vývojové prostředí Hardhat dApp je nyní připojeno k vašemu lokálnímu Ethereum testnetu! Funkčnost vašeho testnetu můžete ověřit spuštěním:
+Jakmile soubor uložíte, vaše vývojové prostředí Hardhat pro dapp je nyní připojeno k vašemu lokálnímu testnetu Etherea! Můžete ověřit, že váš testnet funguje, spuštěním:
 
 ```python
 npx hardhat balances --network localnet
 ```
 
-Výstup by měl vypadat přibližně takto:
+Výstup by měl vypadat nějak takto:
 
 ```python
 0x878705ba3f8Bc32FCf7F4CAa1A35E72AF65CF766 has balance 10000000000000000000000000
@@ -161,13 +161,13 @@ Výstup by měl vypadat přibližně takto:
 0x1F6298457C5d76270325B724Da5d1953923a6B88 has balance 10000000000000000000000000
 ```
 
-To potvrzuje, že Hardhat používá váš lokální testnet a detekuje předfinancované účty vytvořené balíčkem `eth-network-package`.
+To potvrzuje, že Hardhat používá váš lokální testnet a detekuje předem financované účty vytvořené pomocí `eth-network-package`.
 
-### Lokální nasazení a testování vaší dApp {#deploy-and-test-dapp}
+### Nasazení a testování vaší dapp lokálně {#deploy-and-test-dapp}
 
-S vývojovým prostředím dApp plně připojeným k lokálnímu Ethereum testnetu nyní můžete spouštět vývojové a testovací pracovní postupy proti své dApp pomocí lokálního testnetu.
+S vývojovým prostředím dapp plně připojeným k lokálnímu testnetu Etherea nyní můžete spouštět vývojové a testovací procesy proti vaší dapp pomocí lokálního testnetu.
 
-Pro kompilaci a nasazení chytrého kontraktu `ChipToken.sol` pro lokální prototypování a vývoj spusťte:
+Chcete-li zkompilovat a nasadit chytrý kontrakt `ChipToken.sol` pro lokální prototypování a vývoj, spusťte:
 
 ```python
 npx hardhat compile
@@ -180,15 +180,15 @@ Výstup by měl vypadat nějak takto:
 ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-Nyní zkuste spustit test `simple.js` proti vaší lokální dApp, abyste potvrdili, že každý hráč v naší Blackjack dApp má pro sebe vyraženo 1000 tokenů:
+Nyní zkuste spustit test `simple.js` proti vaší lokální dapp, abyste potvrdili, že každý hráč v naší blackjack dapp má pro sebe vyraženo 1000 tokenů:
 
-Výstup by měl vypadat přibližně takto:
+Výstup by měl vypadat nějak takto:
 
 ```python
 npx hardhat test --network localnet
 ```
 
-Výstup by měl vypadat přibližně takto:
+Výstup by měl vypadat nějak takto:
 
 ```python
 ChipToken
@@ -198,27 +198,27 @@ ChipToken
   1 passing (654ms)
 ```
 
-### Rekapitulace {#review-dapp-workflows}
+### Shrnutí {#review-dapp-workflows}
 
-V tomto bodě jste nastavili vývojové prostředí dApp, připojili jste ho k lokální síti Ethereum vytvořené pomocí Kurtosis a zkompilovali, nasadili a spustili jste jednoduchý test proti vaší dApp.
+V tomto okamžiku jste nastavili vývojové prostředí dapp, připojili jej k lokální síti Etherea vytvořené pomocí Kurtosis a zkompilovali, nasadili a spustili jednoduchý test proti vaší dapp.
 
-Nyní se podívejme, jak můžete konfigurovat podkladovou síť pro testování našich dApps v různých konfiguracích sítě.
+Nyní se podívejme, jak můžete konfigurovat podkladovou síť pro testování našich dapp v různých konfiguracích sítě.
 
-## Konfigurace lokálního Ethereum testnetu {#configure-testnet}
+## Konfigurace lokálního testnetu Etherea {#configure-testnet}
 
 ### Změna konfigurací klientů a počtu uzlů {#configure-client-config-and-num-nodes}
 
-Váš lokální Ethereum testnet lze nakonfigurovat tak, aby používal různé páry klientů EL a CL, stejně jako různý počet uzlů, v závislosti na scénáři a specifické konfiguraci sítě, kterou chcete vyvíjet nebo testovat. To znamená, že po nastavení můžete spustit přizpůsobený lokální testnet a použít jej ke spuštění stejných pracovních postupů (nasazení, testy atd.) v různých konfiguracích sítě, abyste se ujistili, že vše funguje podle očekávání. Chcete-li se dozvědět více o dalších parametrech, které můžete upravit, navštivte tento odkaz.
+Váš lokální testnet Etherea lze nakonfigurovat tak, aby používal různé páry klientů EL a CL, stejně jako různý počet uzlů, v závislosti na scénáři a konkrétní konfiguraci sítě, kterou chcete vyvíjet nebo testovat. To znamená, že po nastavení můžete spustit přizpůsobený lokální testnet a použít jej ke spuštění stejných procesů (nasazení, testy atd.) v různých konfiguracích sítě, abyste se ujistili, že vše funguje podle očekávání. Chcete-li se dozvědět více o dalších parametrech, které můžete upravit, navštivte tento odkaz.
 
-Vyzkoušejte to! Prostřednictvím souboru JSON můžete balíčku `eth-network-package` předat různé možnosti konfigurace. Tento soubor JSON s parametry sítě poskytuje specifické konfigurace, které Kurtosis použije k nastavení lokální sítě Ethereum.
+Vyzkoušejte to! Různé možnosti konfigurace můžete předat do `eth-network-package` prostřednictvím souboru JSON. Tento soubor JSON s parametry sítě poskytuje specifické konfigurace, které Kurtosis použije k nastavení lokální sítě Etherea.
 
-Vezměte výchozí konfigurační soubor a upravte jej tak, aby se spustily dva uzly s různými páry EL/CL:
+Vezměte výchozí konfigurační soubor a upravte jej tak, aby spustil dva uzly s různými páry EL/CL:
 
 - Uzel 1 s `geth`/`lighthouse`
 - Uzel 2 s `geth`/`lodestar`
 - Uzel 3 s `geth`/`teku`
 
-Tato konfigurace vytváří heterogenní síť implementací uzlů Ethereum pro testování vaší dApp. Váš konfigurační soubor by nyní měl vypadat takto:
+Tato konfigurace vytváří heterogenní síť implementací uzlů Etherea pro testování vaší dapp. Váš konfigurační soubor by nyní měl vypadat takto:
 
 ```yaml
 {
@@ -274,19 +274,19 @@ Tato konfigurace vytváří heterogenní síť implementací uzlů Ethereum pro 
 }
 ```
 
-Každá struktura `participants` odpovídá jednomu uzlu v síti, takže 3 struktury `participants` řeknou Kurtosisu, aby spustil 3 uzly ve vaší síti. Každá struktura `participants` vám umožní určit pár EL a CL použitý pro daný konkrétní uzel.
+Každá struktura `participants` se mapuje na uzel v síti, takže 3 struktury `participants` řeknou Kurtosis, aby ve vaší síti spustil 3 uzly. Každá struktura `participants` vám umožní specifikovat pár EL a CL použitý pro daný konkrétní uzel.
 
-Struktura `network_params` konfiguruje nastavení sítě, která se používají k vytvoření genesis souborů pro každý uzel, a také další nastavení, jako jsou sekundy na slot sítě.
+Struktura `network_params` konfiguruje nastavení sítě, která se používají k vytvoření souborů genesis pro každý uzel, a také další nastavení, jako jsou sekundy na slot sítě.
 
-Uložte si upravený soubor parametrů do libovolného adresáře (v níže uvedeném příkladu je uložen na plochu) a poté ho použijte ke spuštění balíčku Kurtosis spuštěním:
+Uložte svůj upravený soubor s parametry do libovolného adresáře (v níže uvedeném příkladu je uložen na ploše) a poté jej použijte ke spuštění balíčku Kurtosis spuštěním:
 
 ```python
 kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/kurtosis-tech/eth-network-package "$(cat ~/eth-network-params.json)"
 ```
 
-Poznámka: příkaz `kurtosis clean -a` se zde používá k tomu, aby Kurtosis zničil starý testnet a jeho obsah před spuštěním nového.
+Poznámka: příkaz `kurtosis clean -a` se zde používá k tomu, aby dal Kurtosis pokyn zničit starý testnet a jeho obsah před spuštěním nového.
 
-Kurtosis bude opět chvíli pracovat a vypisovat jednotlivé kroky, které probíhají. Nakonec by výstup měl vypadat nějak takto:
+Kurtosis bude opět chvíli pracovat a vypíše jednotlivé kroky, které probíhají. Nakonec by výstup měl vypadat nějak takto:
 
 ```python
 Starlark code successfully run. No output was returned.
@@ -352,22 +352,22 @@ ad6f401126fa   el-client-2                                    engine-rpc: 8551/t
 3d4aaa75e218   prelaunch-data-generator-1680882122201668972   <none>                                           STOPPED
 ```
 
-Gratulujeme! Úspěšně jste nakonfigurovali svůj lokální testnet tak, aby měl 3 uzly místo 1. Chcete-li spustit stejné pracovní postupy jako dříve proti vaší dApp (nasazení a testování), proveďte stejné operace jako dříve tak, že nahradíte `<$YOUR_PORT>` ve struktuře `localnet` v konfiguračním souboru `hardhat.config.ts` portem z výstupu RPC URI libovolné služby `el-client-<num>` ve vašem novém, 3uzlovém lokálním testnetu.
+Gratulujeme! Úspěšně jste nakonfigurovali svůj lokální testnet tak, aby měl 3 uzly místo 1. Chcete-li spustit stejné procesy jako dříve proti vaší dapp (nasazení a testování), proveďte stejné operace jako dříve nahrazením `<$YOUR_PORT>` ve struktuře `localnet` ve vašem konfiguračním souboru `hardhat.config.ts` portem z výstupu rpc uri z jakékoli služby `el-client-<num>` ve vašem novém lokálním testnetu se 3 uzly.
 
 ## Závěr {#conclusion}
 
-A to je vše! Abychom shrnuli tuto krátkou příručku:
+A to je vše! Abychom shrnuli tohoto krátkého průvodce, vy jste:
 
-- Vytvořili jste lokální Ethereum testnet přes Docker pomocí Kurtosis
-- Připojili jste své lokální vývojové prostředí dApp k lokální síti Ethereum
-- Nasadili jste dApp a spustili jste na ní jednoduchý test v lokální síti Ethereum
-- Nakonfigurovali jste podkladovou síť Ethereum tak, aby měla 3 uzly
+- Vytvořili lokální testnet Etherea přes Docker pomocí Kurtosis
+- Připojili své lokální vývojové prostředí dapp k lokální síti Etherea
+- Nasadili dapp a spustili proti ní jednoduchý test na lokální síti Etherea
+- Nakonfigurovali podkladovou síť Etherea tak, aby měla 3 uzly
 
-Rádi bychom od vás slyšeli, co se vám povedlo, co by se dalo vylepšit, nebo abychom zodpověděli jakékoli vaše dotazy. Neváhejte se nám ozvat přes [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) nebo nám [napište e-mail](mailto:feedback@kurtosistech.com)!
+Rádi od vás uslyšíme, co se vám povedlo, co by se dalo zlepšit, nebo zodpovíme jakékoli vaše dotazy. Neváhejte se na nás obrátit přes [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) nebo nám [napište e-mail](mailto:feedback@kurtosistech.com)!
 
 ### Další příklady a průvodci {#other-examples-guides}
 
-Doporučujeme vám podívat se na náš [rychlý start](https://docs.kurtosis.com/quickstart) (kde si na něm postavíte databázi Postgres a API) a naše další příklady v našem [repozitáři awesome-kurtosis](https://github.com/kurtosis-tech/awesome-kurtosis), kde najdete několik skvělých příkladů, včetně balíčků pro:
+Doporučujeme vám podívat se na náš [rychlý start](https://docs.kurtosis.com/quickstart) (kde postavíte databázi Postgres a nad ní API) a naše další příklady v našem [repozitáři awesome-kurtosis](https://github.com/kurtosis-tech/awesome-kurtosis), kde najdete několik skvělých příkladů, včetně balíčků pro:
 
-- Spuštění stejného lokálního Ethereum testnetu, ale s připojenými dalšími službami, jako je spammer transakcí (pro simulaci transakcí), monitor větví a připojená instance Grafana a Prometheus
-- Provedení [testu podsíťování](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) proti stejné lokální síti Ethereum
+- [Spuštění stejného lokálního testnetu Etherea](https://github.com/kurtosis-tech/eth2-package), ale s připojenými dalšími službami, jako je spammer transakcí (pro simulaci transakcí), monitor forků a připojená instance Grafana a Prometheus
+- Provedení [testu podsítí](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) proti stejné lokální síti Etherea

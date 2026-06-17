@@ -1,89 +1,89 @@
 ---
-title: The Portal Network
-description: "Přehled sítě Portal Network - sítě ve vývoji, navržené pro podporu nízkozdrojových klientů."
+title: Portal Network
+description: Přehled sítě Portal Network – sítě ve vývoji, která je navržena pro podporu klientů s nízkými nároky na zdroje.
 lang: cs
 ---
 
-Ethereum je síť složená z počítačů, které provozují softwarové klienty Etherea. Každý z těchto počítačů se nazývá síťový „uzel“. Klientský software umožňuje uzlu odesílat a přijímat data v síti Ethereum a ověřovat data podle pravidel protokolu Etherea. Uzel uchovává velké množství historických dat na svém disku a přidává další, když přijme nové informační pakety, známé jako bloky, od ostatních uzlů v síti. To je nutné pro neustálou kontrolu, zda má uzel informace konzistentní se zbytkem sítě. To znamená, že provozování uzlu může vyžadovat hodně prostoru na disku. Některé operace uzlu mohou vyžadovat také hodně RAM.
+[Ethereum](/) je síť tvořená počítači, na kterých běží klientský software Etherea. Každý z těchto počítačů se nazývá „uzel“. Klientský software umožňuje uzlu odesílat a přijímat data v síti Ethereum a ověřuje data podle pravidel protokolu Etherea. Uzly uchovávají na svých discích velké množství historických dat a přidávají k nim další, když od ostatních uzlů v síti obdrží nové balíčky informací, známé jako bloky. To je nezbytné pro neustálou kontrolu, zda má uzel informace konzistentní se zbytkem sítě. To znamená, že provozování uzlu může vyžadovat hodně místa na disku. Některé operace uzlu mohou vyžadovat také hodně paměti RAM.
 
-Aby se tento problém s prostorem vyřešil, byly vyvinuty „jednoduché“ uzly, které požadují informace od úplných uzlů, místo aby je všechny uchovávaly samy. To však znamená, že jednoduchý uzel nezávisle neověřuje informace a místo toho důvěřuje jinému uzlu. Znamená to také, že úplné uzly musí vykonávat dodatečnou práci, aby těmto jednoduchým uzlům poskytly potřebná data.
+Aby se tento problém s diskovým úložištěm vyřešil, byly vyvinuty „lehké uzly“ (light nodes), které si vyžadují informace od plných uzlů, místo aby je všechny ukládaly samy. To však znamená, že lehký uzel informace neověřuje nezávisle a místo toho důvěřuje jinému uzlu. Znamená to také, že plné uzly musí převzít práci navíc, aby těmto lehkým uzlům mohly sloužit.
 
-Portal Network je nový síťový design pro Ethereum, který si klade za cíl vyřešit problém dostupnosti dat pro „jednoduché“ uzly, aniž by bylo nutné důvěřovat úplným uzlům nebo na ně klást další zátěž, sdílením potřebných dat v malých kouscích napříč sítí.
+Portal Network je nový návrh sítě pro Ethereum, jehož cílem je vyřešit problém dostupnosti dat pro „lehké“ uzly, aniž by musely důvěřovat plným uzlům nebo je nadměrně zatěžovat, a to sdílením potřebných dat v malých částech napříč sítí.
 
 Více o [uzlech a klientech](/developers/docs/nodes-and-clients/)
 
-## Proč potřebujeme síť Portal {#why-do-we-need-portal-network}
+## Proč potřebujeme Portal Network {#why-do-we-need-portal-network}
 
-Síťové uzly na Ethereu uchovávají vlastní plnou nebo částečnou kopii blockchainu Etherea. Tato lokální kopie slouží k validaci transakcí a zajištění, že uzel sleduje správný řetězec. Tato lokálně uložená data umožňují síťovým uzlům nezávisle ověřovat, že příchozí data jsou platná a správná, aniž by musely důvěřovat jakékoli jiné entitě.
+Uzly Etherea ukládají svou vlastní úplnou nebo částečnou kopii blockchainu Etherea. Tato lokální kopie se používá k ověřování transakcí a zajištění toho, že uzel sleduje správný řetězec. Tato lokálně uložená data umožňují uzlům nezávisle ověřit, že příchozí data jsou platná a správná, aniž by musely důvěřovat jakémukoli jinému subjektu.
 
-Tato lokální kopie blockchainu a s ní spojená stavová a potvrzovací data zabírají na pevném disku uzlu hodně místa. Například pro spuštění uzlu pomocí [Geth](https://geth.ethereum.org) spárovaného s konsensuálním klientem se doporučuje 2TB pevný disk. Při použití snap syncu, který ukládá data řetězce pouze z relativně nedávné sady bloků, obvykle Geth zabírá asi 650 GB diskového prostoru, ale roste přibližně o 14 GB týdně (uzel můžete pravidelně snižovat úschovu zpět na 650 GB).
+Tato lokální kopie blockchainu a související data o stavu a stvrzenkách zabírají na pevném disku uzlu spoustu místa. Například pro provoz uzlu pomocí [Geth](https://geth.ethereum.org) spárovaného s konsensuálním klientem se doporučuje 2TB pevný disk. Při použití synchronizace snap (snap sync), která ukládá pouze data řetězce z relativně nedávné sady bloků, Geth obvykle zabírá asi 650 GB místa na disku, ale roste rychlostí přibližně 14 GB za týden (uzel můžete pravidelně prořezávat zpět na 650 GB).
 
-To znamená, že provozování síťových uzlů může být nákladné, protože velké množství diskového prostoru musí být vyhrazeno pro Ethereum. V plánu Ethereum existuje několik řešení tohoto problému, včetně [vypršení historie](/roadmap/statelessness/#history-expiry), [vypršení stavu](/roadmap/statelessness/#state-expiry) a [bezstavovosti](/roadmap/statelessness/). Tato řešení jsou však pravděpodobně od implementace vzdálena několik let. Existují také [lehké uzly](/developers/docs/nodes-and-clients/light-clients/), které neukládají vlastní kopii dat řetězce, ale vyžadují data, která potřebují, od plných uzlů. To však znamená, že jednoduché uzly musí důvěřovat úplným uzlům, že poskytnou poctivá data, a zároveň zatěžují úplné uzly, které musí tato data poskytovat.
+To znamená, že provozování uzlů může být drahé, protože Ethereu musí být vyhrazeno velké množství místa na disku. V plánu vývoje Etherea (roadmap) existuje několik řešení tohoto problému, včetně [exspirace historie](/roadmap/statelessness/#history-expiry), [exspirace stavu](/roadmap/statelessness/#state-expiry) a [bezstavovosti](/roadmap/statelessness/). Jejich implementace je však pravděpodobně ještě několik let vzdálená. Existují také [lehké uzly](/developers/docs/nodes-and-clients/light-clients/), které neukládají svou vlastní kopii dat řetězce, ale vyžadují potřebná data od plných uzlů. To však znamená, že lehké uzly musí důvěřovat plným uzlům, že poskytují poctivá data, a také to zatěžuje plné uzly, které musí poskytovat data, jež lehké uzly potřebují.
 
-Portal Network si klade za cíl poskytnout alternativní způsob, jak mohou jednoduché uzly získat svá data, aniž by musely důvěřovat úplným uzlům nebo výrazně přispívat k práci, kterou musí úplné uzly vykonávat. Tento cíl bude dosažen zavedením nového způsobu, jak mohou uzly Etherea sdílet data napříč sítí.
+Portal Network si klade za cíl poskytnout lehkým uzlům alternativní způsob získávání dat, který nevyžaduje důvěru ani významně nezvyšuje množství práce, kterou musí plné uzly vykonávat. Způsob, jakým toho bude dosaženo, je zavedení nového způsobu sdílení dat mezi uzly Etherea napříč sítí.
 
 ## Jak funguje Portal Network? {#how-does-portal-network-work}
 
-Síťové uzly na Ethereu mají přísné protokoly, které definují, jak spolu komunikují. Exekuční klienti komunikují pomocí sady subprotokolů známých jako [DevP2P](/developers/docs/networking-layer/#devp2p), zatímco konsensuální klienti používají jinou sadu subprotokolů nazvanou [libP2P](/developers/docs/networking-layer/#libp2p). Tyto protokoly definují typy dat, která mohou být mezi uzly předávána.
+Uzly Etherea mají přísné protokoly, které definují, jak spolu komunikují. Exekuční klienti komunikují pomocí sady podprotokolů známých jako [devp2p](/developers/docs/networking-layer/#devp2p), zatímco konsensuální klienti používají jinou sadu podprotokolů zvanou [libp2p](/developers/docs/networking-layer/#libp2p). Ty definují typy dat, která si mohou uzly mezi sebou předávat.
 
-![devP2P a libP2P](portal-network-devp2p-libp2p.png)
+![devP2P and libP2P](portal-network-devp2p-libp2p.png)
 
-Uzly mohou také poskytovat specifická data prostřednictvím [JSON-RPC API](/developers/docs/apis/json-rpc/), což je způsob, jakým si aplikace a peněženky vyměňují informace s uzly Ethereum. Nicméně, žádný z těchto protokolů není ideální pro poskytování dat jednoduchým klientům.
+Uzly mohou také poskytovat specifická data prostřednictvím [JSON-RPC API](/developers/docs/apis/json-rpc/), což je způsob, jakým si aplikace a peněženky vyměňují informace s uzly Etherea. Žádný z nich však není ideálním protokolem pro poskytování dat lehkým klientům.
 
-Jednoduché uzly aktuálně nemohou požadovat konkrétní části dat řetězce přes DevP2P nebo libP2p, protože tyto protokoly jsou navrženy pouze pro synchronizaci řetězce a šíření bloků a transakcí. Jednoduché uzly nechtějí tato data stahovat, protože by to narušilo jejich jednoduchost.
+Lehcí klienti v současné době nemohou požadovat konkrétní části dat řetězce přes devp2p nebo libp2p, protože tyto protokoly jsou navrženy pouze k tomu, aby umožnily synchronizaci řetězce a šíření (gossiping) bloků a transakcí. Lehcí klienti tyto informace stahovat nechtějí, protože by tím přestali být „lehcí“.
 
-JSON-RPC API také není ideální volbou pro požadavky na data vyslaná od jednoduchými klienty, protože spoléhá na připojení ke konkrétnímu úplnému uzlu nebo centralizovanému poskytovateli RPC, který může tato data sdílet. To znamená, že jednoduchý klient musí důvěřovat tomuto konkrétnímu uzlu nebo poskytovateli, že bude poctivý, a také úplný uzel může být zatížen množstvím požadavků od mnoha jednoduchých klientů, což zvyšuje jeho nároky na šířku pásma.
+JSON-RPC API není ideální volbou ani pro datové požadavky lehkých klientů, protože spoléhá na připojení ke konkrétnímu plnému uzlu nebo centralizovanému poskytovateli RPC, který může data poskytnout. To znamená, že lehký klient musí důvěřovat tomuto konkrétnímu uzlu/poskytovateli, že je poctivý, a plný uzel by navíc mohl muset zpracovávat spoustu požadavků od mnoha lehkých klientů, což by zvyšovalo jeho nároky na šířku pásma.
 
-Cílem sítě Portal Network je znovu promyslet celý design, s důrazem na jednoduchost, mimo omezení existujících Ethereum klientů.
+Smyslem sítě Portal Network je přehodnotit celý návrh a stavět specificky pro lehkost, mimo konstrukční omezení stávajících klientů Etherea.
 
-Hlavní myšlenkou sítě Portal je vzít to nejlepší ze současného síťového stacku tím, že umožní, aby informace potřebné pro lehké klienty, jako jsou historická data a identita aktuální hlavy řetězce, byly obsluhovány prostřednictvím odlehčené, decentralizované peer-to-peer sítě ve stylu DevP2P s využitím [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (podobně jako Bittorrent).
+Základní myšlenkou sítě Portal Network je převzít to nejlepší ze současného síťového zásobníku tím, že umožní poskytovat informace potřebné pro lehké klienty, jako jsou historická data a identita aktuální hlavy řetězce, prostřednictvím odlehčené decentralizované peer-to-peer sítě ve stylu devp2p pomocí [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (podobně jako BitTorrent).
 
-Idea je přidat malé části celkových historických dat Etherea a určité specifické uzlové odpovědnosti každému uzlu. Poté jsou požadavky obsluhovány tím, že se vyhledají síťové uzly uchovávající požadovaná data a tato data se od nich získají.
+Myšlenkou je přidat každému uzlu malé části celkových historických dat Etherea a některé specifické povinnosti uzlu. Požadavky jsou pak obsluhovány vyhledáním uzlů, které ukládají konkrétní požadovaná data, a jejich získáním od nich.
 
-Tento přístup obrací normální model, kdy jednoduché uzly vyhledávají jediný uzel a požadují po něm filtrování a poskytování velkých objemů dat; místo toho rychle filtrují velkou síť uzlů, z nichž každý zpracovává malé množství dat.
+Tím se obrací běžný model, kdy lehké uzly najdou jeden uzel a požádají ho o filtrování a poskytování velkých objemů dat; místo toho rychle filtrují velkou síť uzlů, z nichž každý zpracovává malé množství dat.
 
-Cílem je umožnit decentralizované síti jednoduchých Portal klientů:
+Cílem je umožnit decentralizované síti lehkých klientů Portal:
 
-- sledovat hlavičku řetězce
+- sledovat hlavu řetězce
 - synchronizovat nedávná a historická data řetězce
-- získávat stavová data
+- získávat data o stavu
 - vysílat transakce
 - provádět transakce pomocí [EVM](/developers/docs/evm/)
 
-Výhody tohoto síťového designu jsou:
+Výhody tohoto návrhu sítě jsou:
 
 - snížení závislosti na centralizovaných poskytovatelích
-- Snížení využití internetové šířky pásma
-- Minimální nebo žádná synchronizace
-- Přístupné pro zařízení s omezenými zdroji (\<1 GB RAM, \<100 MB místa na disku, 1 CPU)
+- snížení využití šířky pásma internetu
+- minimalizovaná nebo nulová synchronizace
+- přístupnost pro zařízení s omezenými zdroji (\<1 GB RAM, \<100 MB místa na disku, 1 CPU)
 
-Níže uvedená tabulka ukazuje funkce stávajících klientů, které může poskytovat síť Portal, což uživatelům umožňuje přístup k těmto funkcím na zařízeních s velmi malými zdroji.
+Níže uvedená tabulka ukazuje funkce stávajících klientů, které může Portal Network poskytovat, což uživatelům umožňuje přístup k těmto funkcím na zařízeních s velmi nízkými zdroji.
 
-### Sítě Portal
+### Sítě Portal Network {#the-portal-networks}
 
-| Lehký klient Beaconu        | Stavová síť           | Gossip transakcí  | Historická síť |
-| --------------------------- | --------------------- | ----------------- | -------------- |
-| Lehká data pro Beacon Chain | Úložiště účtů a smluv | Odlehčený mempool | Hlavičky       |
-| Data protokolu              |                       |                   | Těla bloků     |
-|                             |                       |                   | Potvrzení      |
+| Lehký klient Beacon | Stavová síť                  | Šíření transakcí    | Historická síť  | Kanonický index transakcí |
+| ------------------- | ---------------------------- | ------------------- | --------------- | ------------------------- |
+| Lehký Beacon chain  | Úložiště účtů a kontraktů    | Odlehčený mempool   | Hlavičky        | TxHash > Hash, Index      |
+| Data protokolu      |                              |                     | Těla bloků      |                           |
+|                     |                              |                     | Stvrzenky       |                           |
 
-## Diverzita klientů ve výchozím nastavení {#client-diversity-as-default}
+## Klientská diverzita ve výchozím nastavení {#client-diversity-as-default}
 
-Vývojáři sítě Portal se také od prvního dne rozhodli vytvořit čtyři samostatné klienty sítě Portal.
+Vývojáři sítě Portal Network také učinili rozhodnutí vytvořit od prvního dne čtyři samostatné klienty sítě Portal Network.
 
 Klienti sítě Portal Network jsou:
 
-- [Trin](https://github.com/ethereum/trin): napsaný v Rustu
-- [Fluffy](https://fluffy.guide): napsaný v Nim
-- [Ultralight](https://github.com/ethereumjs/ultralight): napsaný v Typescriptu
-- [Shisui](https://github.com/zen-eth/shisui): napsaný v Go
+- [Trin](https://github.com/ethereum/trin): napsaný v jazyce Rust
+- [Fluffy](https://fluffy.guide): napsaný v jazyce Nim
+- [Ultralight](https://github.com/ethereumjs/ultralight): napsaný v jazyce TypeScript
+- [Shisui](https://github.com/zen-eth/shisui): napsaný v jazyce Go
 
 Mít více nezávislých implementací klientů zvyšuje odolnost a decentralizaci sítě Ethereum.
 
-Pokud by jeden klient měl problémy nebo zranitelnosti, ostatní klienti mohou nadále hladce fungovat, čímž se zabrání vzniku jediného bodu selhání. Různorodost implementací klientů navíc podporuje inovace a konkurenci, což vede k vylepšením a snižuje riziko monokultury v ekosystému.
+Pokud se u jednoho klienta vyskytnou problémy nebo zranitelnosti, ostatní klienti mohou nadále hladce fungovat, čímž se zabrání jedinému bodu selhání. Různorodé implementace klientů navíc podporují inovace a konkurenci, což vede ke zlepšením a snižuje riziko monokultury v rámci ekosystému.
 
 ## Další čtení {#further-reading}
 
-- [Síť Portal (Piper Merriam na Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
-- [Discord sítě Portal](https://discord.gg/CFFnmE7Hbs)
-- [Webové stránky sítě Portal](https://www.ethportal.net/)
+- [Portal Network (Piper Merriam na Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
+- [Discord sítě Portal Network](https://discord.gg/CFFnmE7Hbs)
+- [Webové stránky sítě Portal Network](https://www.ethportal.net/)

@@ -1,219 +1,217 @@
 ---
-title: "Osvědčené postupy návrhu decentralizovaných burz (DEX)"
-description: "Průvodce vysvětlující rozhodnutí o návrhu UX/UI pro směnu tokenů."
+title: Osvědčené postupy pro návrh decentralizovaných burz (DEX)
+description: Průvodce vysvětlující rozhodnutí ohledně UX/UI při swapování tokenů.
 lang: cs
 ---
 
-Od spuštění Uniswapu v roce 2018 byly spuštěny stovky decentralizovaných burz na desítkách různých řetězců.
-Mnohé z nich zavedly nové prvky nebo přidaly vlastní vylepšení, ale rozhraní zůstalo obecně stejné.
+Od spuštění Uniswapu v roce 2018 byly na desítkách různých sítí spuštěny stovky decentralizovaných burz.
+Mnoho z nich představilo nové prvky nebo přidalo vlastní vylepšení, ale rozhraní zůstalo v podstatě stejné.
 
 Jedním z důvodů je [Jakobův zákon](https://lawsofux.com/jakobs-law/):
 
-> Uživatelé tráví většinu svého času na jiných stránkách. To znamená, že uživatelé dávají přednost tomu, aby vaše stránky fungovaly stejně jako všechny ostatní stránky, které již znají.
+> Uživatelé tráví většinu času na jiných webech. To znamená, že preferují, aby váš web fungoval stejně jako všechny ostatní weby, které už znají.
 
-Díky prvním inovátorům, jako jsou Uniswap, Pancakeswap a Sushiswap, mají uživatelé DeFi kolektivní představu o tom, jak DEX vypadá.
-Z tohoto důvodu se nyní objevuje něco jako „osvědčený postup“. Stále častěji vidíme, že se rozhodnutí o designu napříč weby standardizují. Vývoj DEX můžete vnímat jako obrovský příklad testování v reálném čase. Věci, které fungovaly, zůstaly, věci, které ne, byly zahozeny. Stále je zde prostor pro osobitost, ale existují určité standardy, kterým by měla DEX vyhovovat.
+Díky raným inovátorům, jako jsou Uniswap, Pancakeswap a Sushiswap, mají uživatelé decentralizovaných financí (DeFi) společnou představu o tom, jak má DEX vypadat.
+Z tohoto důvodu se nyní objevuje něco jako „osvědčené postupy“. Vidíme, že se stále více rozhodnutí ohledně designu napříč weby standardizuje. Vývoj DEXů můžete vnímat jako obrovský příklad testování v praxi. Věci, které fungovaly, zůstaly, a ty, které ne, byly zahozeny. Stále je zde prostor pro osobitost, ale existují určité standardy, kterým by se měl DEX přizpůsobit.
 
-Tento článek je shrnutím:
-
+Tento článek je shrnutím toho:
 - co zahrnout
 - jak to udělat co nejpoužitelnější
-- hlavní způsoby přizpůsobení designu
+- jaké jsou hlavní způsoby přizpůsobení designu
 
-Všechny příklady drátěných modelů (wireframes) byly vytvořeny speciálně pro tento článek, ačkoli všechny vycházejí ze skutečných projektů.
+Všechny ukázkové wireframy byly vytvořeny speciálně pro tento článek, ačkoli všechny vycházejí ze skutečných projektů.
 
-Sada pro Figmu je také zahrnuta na konci – klidně ji použijte a zrychlete si tak tvorbu vlastních drátěných modelů!
+Na konci článku je také přiložen Figma kit – neváhejte ho použít a urychlit tak tvorbu vlastních wireframů!
 
-## Základní anatomie DEX {#basic-anatomy-of-a-dex}
+## Základní anatomie DEXu {#basic-anatomy-of-a-dex}
 
 Uživatelské rozhraní (UI) obecně obsahuje tři prvky:
-
 1. Hlavní formulář
 2. Tlačítko
-3. Panel s podrobnostmi
+3. Panel podrobností
 
-![Obecné UI burzy DEX zobrazující tři hlavní prvky](./1.png)
+![Generic DEX UI, showing the three main elements](./1.png)
+
 
 ## Varianty {#variations}
 
-To bude v tomto článku běžné téma, ale existují různé způsoby, jak mohou být tyto prvky uspořádány. „Panel podrobností“ může být:
-
+Toto bude v tomto článku časté téma, ale existují různé způsoby, jak lze tyto prvky uspořádat. „Panel podrobností“ může být:
 - Nad tlačítkem
 - Pod tlačítkem
 - Skrytý v rozbalovacím panelu
 - A/nebo v modálním okně „náhledu“
-
-Pozn. Modální okno „náhledu“ je volitelné, ale pokud v hlavním uživatelském rozhraní zobrazujete jen velmi málo podrobností, stává se nezbytným.
+  
+Pozn.: Modální okno „náhledu“ je volitelné, ale pokud v hlavním UI zobrazujete jen velmi málo podrobností, stává se nezbytným.
 
 ## Struktura hlavního formuláře {#structure-of-the-main-form}
 
-Toto je pole, kde si skutečně vybíráte, který token chcete směnit. Komponenta se skládá ze vstupního pole a malého tlačítka v jednom řádku.
+Toto je pole, kde si reálně vybíráte, který token chcete swapovat. Komponenta se skládá ze vstupního pole a malého tlačítka v jednom řádku.
 
-Burzy DEX obvykle zobrazují další podrobnosti v jednom řádku nad a v jednom řádku pod, i když to lze nakonfigurovat i jinak.
+DEXy obvykle zobrazují další podrobnosti v jednom řádku nahoře a v jednom řádku dole, ačkoli to lze nakonfigurovat i jinak.
 
-![Vstupní řádek s řádkem podrobností nad a pod](./2.png)
+![Input row, with a details row above and below](./2.png)
 
 ## Varianty {#variations2}
 
-Jsou zde uvedeny dvě varianty uživatelského rozhraní; jedna bez ohraničení, která vytváří velmi otevřený design, a druhá, kde má vstupní řádek ohraničení, což vytváří zaměření na tento prvek.
+Zde jsou zobrazeny dvě varianty UI; jedna bez jakýchkoli ohraničení, což vytváří velmi otevřený design, a druhá, kde má vstupní řádek ohraničení, což na tento prvek strhává pozornost.
 
-![Dvě varianty UI hlavního formuláře](./3.png)
+![Two UI variations of the main form](./3.png)
 
-Tato základní struktura umožňuje v návrhu zobrazit **čtyři klíčové informace**: jednu v každém rohu. Pokud existuje pouze jeden horní/dolní řádek, pak jsou k dispozici pouze dvě místa.
+Tato základní struktura umožňuje v designu zobrazit **čtyři klíčové informace**: jednu v každém rohu. Pokud je k dispozici pouze jeden horní/spodní řádek, jsou zde pouze dvě místa.
 
-Během vývoje DeFi se sem zařadilo mnoho různých věcí.
+Během vývoje DeFi sem byla zahrnuta spousta různých věcí.
 
-## Klíčové informace, které je třeba zahrnout {#key-info-to-include}
+## Klíčové informace k zahrnutí {#key-info-to-include}
 
 - Zůstatek v peněžence
 - Tlačítko Max
-- Fiatový ekvivalent
-- Dopad na cenu u „obdržené“ částky
+- Ekvivalent ve fiat měně
+- Cenový dopad na „přijatou“ částku
 
-V počátcích DeFi fiatový ekvivalent často chyběl. Pokud vytváříte jakýkoli projekt Web3, je nezbytné, aby byl zobrazen fiatový ekvivalent. Uživatelé stále přemýšlejí v místních měnách, takže aby to odpovídalo jejich mentálním modelům z reálného světa, mělo by to být zahrnuto.
+V raných dobách DeFi ekvivalent ve fiat měně často chyběl. Pokud budujete jakýkoli projekt ve Web3, je nezbytné, aby byl ekvivalent ve fiat měně zobrazen. Uživatelé stále uvažují v lokálních měnách, takže aby to odpovídalo mentálním modelům reálného světa, mělo by to být zahrnuto.
 
-Ve druhém poli (v tom, kde si vybíráte token, na který směňujete) můžete také uvést dopad na cenu vedle částky ve fiat měně, a to výpočtem rozdílu mezi vstupní částkou a odhadovanou výstupní částkou. Je to poměrně užitečný detail, který je dobré zahrnout.
+Ve druhém poli (tom, kde vybíráte token, na který swapujete) můžete vedle částky ve fiat měně zahrnout také cenový dopad, a to výpočtem rozdílu mezi vstupní částkou a odhadovanou výstupní částkou. Je to docela užitečný detail, který se vyplatí přidat.
 
-Procentuální tlačítka (např. 25 %, 50 %, 75 %) mohou být užitečnou funkcí, ale zabírají více místa, přidávají více výzev k akci a zvyšují mentální zátěž. To samé platí pro procentuální posuvníky. Některá z těchto rozhodnutí ohledně UI budou záviset na vaší značce a typu uživatele.
+Procentuální tlačítka (např. 25 %, 50 %, 75 %) mohou být užitečnou funkcí, ale zabírají více místa, přidávají další výzvy k akci a zvyšují mentální zátěž. Totéž platí pro procentuální posuvníky. Některá z těchto rozhodnutí ohledně UI budou záviset na vaší značce a typu uživatelů.
 
-Další podrobnosti mohou být zobrazeny pod hlavním formulářem. Protože je tento typ informací určen především pro profesionální uživatele, dává smysl buď:
+Další podrobnosti lze zobrazit pod hlavním formulářem. Vzhledem k tomu, že tento typ informací je určen převážně pro pokročilé uživatele, dává smysl buď:
+- zachovat je co nejminimalističtější, nebo;
+- skrýt je v rozbalovacím panelu
 
-- udržovat ho co nejminimálnější, nebo;
-- skrýt ho do rozbalovacího panelu
-
-![Podrobnosti zobrazené v rozích hlavního formuláře](./4.png)
+![Details shown in the corners of that main form](./4.png)
 
 ## Další informace k zahrnutí {#extra-info-to-include}
 
-- Cenu tokenu
-- Skluz
-- Minimální obdržená částka
+- Cena tokenu
+- Cenový skluz
+- Minimum k přijetí
 - Očekávaný výstup
-- Dopad na cenu
+- Cenový dopad
 - Odhad nákladů na gas
-- Další poplatky
-- Směrování příkazu
+- Ostatní poplatky
+- Směrování objednávky
 
-Některé z těchto údajů by mohly být volitelné.
+Dalo by se říci, že některé z těchto podrobností by mohly být volitelné.
 
-Směrování příkazů je zajímavé, ale pro většinu uživatelů nepředstavuje velký rozdíl.
+Směrování objednávky je zajímavé, ale pro většinu uživatelů nehraje velkou roli.
 
-Některé další podrobnosti pouze uvádějí totéž různými způsoby. Například „minimální obdržená částka“ a „skluz“ jsou dvě strany téže mince. Pokud máte skluz nastavený na 1 %, pak minimální částka, kterou můžete očekávat, se rovná očekávanému výstupu - 1 %. Některá UI zobrazují očekávanou částku, minimální částku a skluz… Což je užitečné, ale možná až přehnané.
+Některé další podrobnosti jednoduše opakují totéž jinými slovy. Například „minimum k přijetí“ a „cenový skluz“ jsou dvě strany téže mince. Pokud máte cenový skluz nastavený na 1 %, pak minimum, které můžete očekávat, že obdržíte = očekávaný výstup - 1 %. Některá UI zobrazují očekávanou částku, minimální částku a cenový skluz... Což je užitečné, ale možná až zbytečně překombinované. 
 
-Většina uživatelů stejně ponechá výchozí nastavení skluzu.
+Většina uživatelů stejně ponechá výchozí cenový skluz.
 
-„Dopad na cenu“ se často zobrazuje v závorkách vedle fiatového ekvivalentu v poli „Do“. Je to skvělý UX detail, který lze přidat, ale pokud je zobrazen zde, je opravdu nutné ho znovu zobrazovat níže? A pak znovu na obrazovce náhledu?
+„Cenový dopad“ se často zobrazuje v závorkách vedle ekvivalentu ve fiat měně v poli „do“. Je to skvělý UX detail, ale pokud je zobrazen zde, je opravdu nutné ho znovu ukazovat níže? A pak znovu na obrazovce náhledu?
 
-Mnoho uživatelů (zejména těch, kteří směňují malé částky) se o tyto podrobnosti nebude starat; jednoduše zadají číslo a stisknou tlačítko pro směnu.
+Mnoho uživatelů (zejména těch, kteří swapují malé částky) se o tyto podrobnosti nebude zajímat; jednoduše zadají číslo a kliknou na swap.
 
-![Některé podrobnosti ukazují stejnou věc](./5.png)
+![Some details show the same thing](./5.png)
 
-Jaké podrobnosti přesně zobrazíte, bude záviset na vašem publiku a na tom, jaký dojem má aplikace budit.
+To, jaké přesně podrobnosti se zobrazí, bude záviset na vašem publiku a na tom, jaký dojem chcete, aby aplikace vyvolávala.
 
-Pokud do panelu s podrobnostmi zahrnete toleranci skluzu, měli byste ji také umožnit upravovat přímo odtud. Toto je dobrý příklad „urychlovače“; šikovný trik v UX, který může zrychlit postupy zkušených uživatelů, aniž by to ovlivnilo obecnou použitelnost aplikace.
+Pokud do panelu podrobností zahrnete toleranci cenového skluzu, měli byste také umožnit její úpravu přímo odtud. Je to dobrý příklad „akcelerátoru“; šikovného UX triku, který může urychlit postup zkušených uživatelů, aniž by to ovlivnilo celkovou použitelnost aplikace.
 
-![Skluz lze ovládat z panelu podrobností](./6.png)
+![Slippage can be controlled from the details panel](./6.png)
 
-Je dobré se pečlivě zamyslet nejen nad jednou konkrétní informací na jedné obrazovce, ale nad celým postupem: zadání čísel v hlavním formuláři → kontrola podrobností → kliknutí na obrazovku náhledu (pokud ji máte).
-Měl by být panel s podrobnostmi viditelný po celou dobu, nebo musí uživatel kliknout, aby ho rozbalil?
-Měli byste vytvářet tření přidáním obrazovky náhledu? To donutí uživatele zpomalit a zvážit svůj obchod, což může být užitečné. Ale chtějí vidět všechny stejné informace znovu? Co je pro ně v tuto chvíli nejužitečnější?
+Je dobré pečlivě přemýšlet nejen o jedné konkrétní informaci na jedné obrazovce, ale o celém průchodu:
+Zadávání čísel v hlavním formuláři → Procházení podrobností → Kliknutí na obrazovku náhledu (pokud máte obrazovku náhledu). 
+Měl by být panel podrobností viditelný neustále, nebo na něj musí uživatel kliknout, aby se rozbalil?
+Měli byste vytvářet tření přidáním obrazovky náhledu? To nutí uživatele zpomalit a zvážit svůj obchod, což může být užitečné. Ale chtějí znovu vidět všechny stejné informace? Co je pro ně v tuto chvíli nejužitečnější?
 
-## Možnosti návrhu {#design-options}
+## Možnosti designu {#design-options}
 
-Jak již bylo zmíněno, mnoho z toho závisí na vašem osobním stylu
+Jak již bylo zmíněno, hodně z toho závisí na vašem osobním stylu.
 Kdo je váš uživatel?
 Jaká je vaše značka?
-Chcete „profesionální“ rozhraní, které zobrazuje každý detail, nebo chcete být minimalističtí?
-I když se zaměřujete na profesionální uživatele, kteří chtějí všechny možné informace, měli byste si pamatovat moudrá slova Alana Coopera:
+Chcete „profi“ rozhraní zobrazující každý detail, nebo chcete být minimalističtí?
+I když cílíte na pokročilé uživatele, kteří chtějí všechny možné informace, měli byste mít na paměti moudrá slova Alana Coopera:
 
-> Bez ohledu na to, jak krásné a skvělé je vaše rozhraní, bylo by lepší, kdyby ho bylo méně.
+> Bez ohledu na to, jak krásné, bez ohledu na to, jak skvělé je vaše rozhraní, bylo by lepší, kdyby ho bylo méně.
 
 ### Struktura {#structure}
 
 - tokeny vlevo, nebo tokeny vpravo
-- 2 nebo 3 řádky
+- 2 řádky nebo 3
 - podrobnosti nad nebo pod tlačítkem
-- podrobnosti rozbalené, sbalené nebo nezobrazené
+- podrobnosti rozbalené, minimalizované nebo nezobrazené
 
-### Styl komponenty {#component-style}
+### Styl komponent {#component-style}
 
-- prázdný
-- s obrysem
-- vyplněný
+- prázdné
+- ohraničené
+- vyplněné
 
-Z čistě UX hlediska na stylu UI záleží méně, než si myslíte. Vizuální trendy přicházejí a odcházejí v cyklech a mnoho preferencí je subjektivních.
+Z čistě UX hlediska záleží na stylu UI méně, než si myslíte. Vizuální trendy přicházejí a odcházejí v cyklech a velká část preferencí je subjektivní.
 
-Nejjednodušší způsob, jak to pochopit – a přemýšlet o různých konfiguracích – je podívat se na několik příkladů a pak si sami zaexperimentovat.
+Nejjednodušší způsob, jak pro to získat cit – a zamyslet se nad různými konfiguracemi – je podívat se na několik příkladů a pak sami trochu experimentovat.
 
-Přiložená sada pro Figmu obsahuje prázdné, obrysové a vyplněné komponenty.
+Přiložený Figma kit obsahuje prázdné, ohraničené a vyplněné komponenty.
 
-Podívejte se na níže uvedené příklady, abyste viděli různé způsoby, jak to všechno můžete složit dohromady:
+Podívejte se na níže uvedené příklady, abyste viděli různé způsoby, jak to všechno poskládat dohromady:
 
-![3 řádky ve vyplněném stylu](./7.png)
+![3 rows in a filled style](./7.png)
 
-![3 řádky ve stylu s obrysem](./8.png)
+![3 rows in a outlined style](./8.png)
 
-![2 řádky v prázdném stylu](./9.png)
+![2 rows in an empty style](./9.png)
 
-![3 řádky ve stylu s obrysem, s panelem podrobností](./10.png)
+![3 rows in an outlined style, with a details panel](./10.png)
 
-![3 řádky se vstupním řádkem ve stylu s obrysem](./11.png)
+![3 rows with the input row in an outlined style](./11.png)
 
-![2 řádky ve vyplněném stylu](./12.png)
+![2 rows in a filled style](./12.png)
 
-## Ale na kterou stranu by měl token jít? {#but-which-side-should-the-token-go-on}
+## Ale na kterou stranu by měl token přijít? {#but-which-side-should-the-token-go-on}
 
-Podstatné je, že to na použitelnost pravděpodobně nemá velký vliv. Existuje však několik věcí, které je třeba mít na paměti a které vás mohou přiklonit na jednu nebo druhou stranu.
+Základem je, že to pravděpodobně nemá velký vliv na použitelnost. Je však třeba mít na paměti několik věcí, které by vás mohly přiklonit na jednu či druhou stranu.
 
-Je mírně zajímavé sledovat, jak se móda s časem mění. Uniswap měl původně token vlevo, ale od té doby ho přesunul doprava. Sushiswap také provedl tuto změnu během vylepšení designu. Většina, ale ne všechny protokoly následovaly.
+Bylo docela zajímavé sledovat, jak se móda postupem času mění. Uniswap měl zpočátku token vlevo, ale od té doby ho přesunul doprava. Sushiswap tuto změnu provedl také během aktualizace designu. Většina protokolů, i když ne všechny, tento trend následovala.
 
-Finanční konvence tradičně umisťuje symbol měny před číslo, např. $50, €50, £50, ale my _říkáme_ 50 dolarů, 50 eur, 50 liber.
+Finanční konvence tradičně umisťuje symbol měny před číslo, např. $50, €50, £50, ale *říkáme* 50 dolarů, 50 eur, 50 liber.
 
-Pro běžného uživatele – zejména pro toho, kdo čte zleva doprava, shora dolů – je token vpravo pravděpodobně přirozenější.
+Běžnému uživateli – zejména někomu, kdo čte zleva doprava a shora dolů – pravděpodobně připadá token vpravo přirozenější.
 
-![UI s tokeny vlevo](./13.png)
+![A UI with tokens on the left](./13.png)
 
-Umístění tokenu vlevo a všech čísel vpravo vypadá příjemně symetricky, což je plus, ale toto uspořádání má i další nevýhodu.
+Umístění tokenu vlevo a všech čísel vpravo vypadá příjemně symetricky, což je plus, ale toto rozložení má i další nevýhodu.
 
-Zákon blízkosti říká, že prvky, které jsou blízko u sebe, jsou vnímány jako související. Proto chceme umisťovat související položky vedle sebe. Zůstatek tokenu přímo souvisí se samotným tokenem a změní se vždy, když je vybrán nový token. Proto dává o něco větší smysl, aby byl zůstatek tokenu vedle tlačítka pro výběr tokenu. Mohl by být přesunut pod token, ale to narušuje symetrii rozvržení.
+Zákon blízkosti říká, že položky, které jsou blízko sebe, jsou vnímány jako související. V souladu s tím chceme umístit související položky vedle sebe. Zůstatek tokenu přímo souvisí se samotným tokenem a změní se vždy, když je vybrán nový token. Proto dává o něco větší smysl, aby byl zůstatek tokenu vedle tlačítka pro výběr tokenu. Mohl by být přesunut pod token, ale to narušuje symetrii rozložení.
 
-Nakonec mají obě možnosti svá plusy a mínusy, ale je zajímavé, jak se zdá, že trend směřuje k tokenu napravo.
+Nakonec existují plusy a minusy pro obě možnosti, ale je zajímavé, jak se zdá, že trend směřuje k tokenu vpravo.
 
 ## Chování tlačítka {#button-behavior}
 
-Nemějte samostatné tlačítko pro Schválit. Také nemějte samostatné kliknutí pro Schválit. Uživatel chce směnit, takže na tlačítku stačí uvést „Směnit“ a jako první krok zahájit schválení. Modální okno může zobrazovat pokrok pomocí krokování nebo jednoduchého oznámení „transakce 1 ze 2 – schvalování“.
+Nemějte samostatné tlačítko pro schválení. Také nemějte samostatné kliknutí pro schválení. Uživatel chce provést swap, takže na tlačítku jednoduše uveďte „swap“ a zahajte schvalování jako první krok. Modální okno může zobrazovat průběh pomocí krokování nebo jednoduchého upozornění „tx 1 ze 2 – schvalování“.
 
-![UI se samostatnými tlačítky pro schválení a směnu](./14.png)
+![A UI with separate buttons for approve and swap](./14.png)
 
-![UI s jedním tlačítkem s nápisem „Schválit“](./15.png)
+![A UI with one button that says approve](./15.png)
 
 ### Tlačítko jako kontextová nápověda {#button-as-contextual-help}
 
-Tlačítko může sloužit dvojímu účelu jako upozornění!
+Tlačítko může plnit dvojí funkci a sloužit i jako upozornění!
 
-Je to vlastně poměrně neobvyklý designový vzor mimo Web3, ale v něm se stal standardem. Je to dobrá inovace, protože šetří místo a udržuje pozornost.
+Mimo Web3 je to vlastně poměrně neobvyklý návrhový vzor, ale v jeho rámci se stal standardem. Je to dobrá inovace, protože šetří místo a udržuje pozornost.
 
-Pokud je hlavní akce – SMĚNIT – nedostupná z důvodu chyby, důvod lze vysvětlit pomocí tlačítka, např.:
+Pokud je hlavní akce – SWAP – nedostupná kvůli chybě, důvod lze vysvětlit pomocí tlačítka, např.:
 
 - přepnout síť
 - připojit peněženku
 - různé chyby
 
-Tlačítko může být také **přiřazeno k akci**, která má být provedena. Například pokud uživatel nemůže provést směnu, protože je na špatné síti, na tlačítku by mělo být uvedeno „Přepnout na Ethereum“ a po kliknutí na tlačítko by se síť měla přepnout na Ethereum. To výrazně zrychluje postup uživatele.
+Tlačítko lze také **namapovat na akci**, kterou je třeba provést. Pokud například uživatel nemůže swapovat, protože je ve špatné síti, tlačítko by mělo říkat „přepnout na Ethereum“, a když na něj uživatel klikne, mělo by přepnout síť na Ethereum. To výrazně urychluje postup uživatele.
 
-![Klíčové akce iniciované z hlavní výzvy k akci (CTA)](./16.png)
+![Key actions being initiated from the main CTA](./16.png)
 
-![Chybová zpráva zobrazená v hlavní výzvě k akci (CTA)](./17.png)
+![Error message shown within the main CTA](./17.png)
 
 ## Vytvořte si vlastní pomocí tohoto souboru Figma {#build-your-own-with-this-figma-file}
 
-Díky tvrdé práci několika protokolů se design DEX hodně zlepšil. Víme, jaké informace uživatel potřebuje, jak bychom je měli zobrazit a jak zajistit, aby byl postup co nejplynulejší.
-Doufejme, že tento článek poskytuje solidní přehled principů UX.
+Díky tvrdé práci mnoha protokolů se design DEXů hodně zlepšil. Víme, jaké informace uživatel potřebuje, jak bychom je měli zobrazovat a jak zajistit, aby byl průchod co nejplynulejší.
+Doufejme, že tento článek poskytuje solidní přehled o principech UX. 
 
-Pokud chcete experimentovat, neváhejte použít sadu drátěných modelů pro Figma. Je co nejjednodušší, ale má dostatečnou flexibilitu k tomu, aby bylo možné základní strukturu sestavit různými způsoby.
+Pokud chcete experimentovat, neváhejte použít Figma wireframe kit. Je udržován co nejjednodušší, ale má dostatečnou flexibilitu pro sestavení základní struktury různými způsoby.
 
-[Sada drátěných modelů pro Figma](https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit)
+[Figma wireframe kit](https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit)
 
-DeFi se bude i nadále vyvíjet a vždy je co zlepšovat.
+DeFi se bude i nadále vyvíjet a vždy je prostor pro zlepšení. 
 
 Hodně štěstí!

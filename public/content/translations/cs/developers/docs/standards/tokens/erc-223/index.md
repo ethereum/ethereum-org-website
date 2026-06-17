@@ -1,6 +1,6 @@
 ---
 title: Standard tokenu ERC-223
-description: "Přehled standardu zastupitelných tokenů ERC-223, jak funguje a srovnání s ERC-20."
+description: Přehled standardu zaměnitelného tokenu ERC-223, jak funguje a srovnání s ERC-20.
 lang: cs
 ---
 
@@ -8,15 +8,15 @@ lang: cs
 
 ### Co je ERC-223? {#what-is-erc223}
 
-ERC-223 je standard pro zastupitelné tokeny, podobný standardu ERC-20. Klíčový rozdíl spočívá v tom, že ERC-223 definuje nejen API tokenu, ale také logiku pro převod tokenů od odesílatele k příjemci. Zavádí komunikační model, který umožňuje zpracování převodů tokenů na straně příjemce.
+ERC-223 je standard pro zaměnitelné tokeny, podobný standardu ERC-20. Hlavním rozdílem je, že ERC-223 nedefinuje pouze API tokenu, ale také logiku pro převod tokenů od odesílatele k příjemci. Zavádí komunikační model, který umožňuje zpracovávat převody tokenů na straně příjemce.
 
 ### Rozdíly oproti ERC-20 {#erc20-differences}
 
-ERC-223 řeší některá omezení ERC-20 a zavádí novou metodu interakce mezi kontraktem tokenu a kontraktem, který může tokeny přijímat. Existuje několik věcí, které jsou s ERC-223 možné, ale s ERC-20 ne:
+ERC-223 řeší některá omezení ERC-20 a zavádí novou metodu interakce mezi kontraktem tokenu a kontraktem, který může tokeny přijímat. Existuje několik věcí, které jsou možné s ERC-223, ale ne s ERC-20:
 
-- Zpracování převodu tokenů na straně příjemce: Příjemci mohou zjistit, že je ukládán token ERC-223.
-- Odmítnutí nesprávně odeslaných tokenů: Pokud uživatel odešle tokeny ERC-223 do kontraktu, který nemá tokeny přijímat, může kontrakt transakci odmítnout a zabránit tak ztrátě tokenů.
-- Metadata v převodech: Tokeny ERC-223 mohou obsahovat metadata, což umožňuje k transakcím s tokeny připojit libovolné informace.
+- Zpracování převodu tokenů na straně příjemce: Příjemci mohou detekovat, že je vkládán token ERC-223.
+- Odmítnutí nesprávně odeslaných tokenů: Pokud uživatel odešle tokeny ERC-223 na kontrakt, který nemá přijímat tokeny, kontrakt může transakci odmítnout, čímž zabrání ztrátě tokenů.
+- Metadata v převodech: Tokeny ERC-223 mohou obsahovat metadata, což umožňuje připojit k transakcím tokenů libovolné informace.
 
 ## Předpoklady {#prerequisites}
 
@@ -25,14 +25,13 @@ ERC-223 řeší některá omezení ERC-20 a zavádí novou metodu interakce mezi
 - [Standardy tokenů](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
-## Tělo {#body}
+## Hlavní část {#body}
 
-ERC-223 je tokenový standard, který implementuje API pro tokeny v rámci chytrých kontraktů. Deklaruje také API pro kontrakty, které mají přijímat tokeny ERC-223. Kontrakty, které nepodporují rozhraní API ERC-223 Receiver, nemohou přijímat tokeny ERC-223, což zabraňuje chybám uživatelů.
+ERC-223 je standard tokenu, který implementuje API pro tokeny v rámci chytrých kontraktů. Deklaruje také API pro kontrakty, které mají přijímat tokeny ERC-223. Kontrakty, které nepodporují API příjemce ERC-223, nemohou přijímat tokeny ERC-223, což předchází chybám uživatelů.
 
-Pokud chytrý kontrakt implementuje následující metody a události, lze jej označit za kontrakt tokenu kompatibilní s ERC-223. Po nasazení
-bude zodpovědný za sledování vytvořených tokenů na Ethereu.
+Pokud chytrý kontrakt implementuje následující metody a události, může být nazýván kontraktem tokenu kompatibilním s ERC-223. Po nasazení bude zodpovědný za sledování vytvořených tokenů na Ethereu.
 
-Kontrakt nemusí obsahovat pouze tyto funkce a vývojář může do tohoto kontraktu přidat jakoukoli jinou funkci z různých tokenových standardů. Například funkce `approve` a `transferFrom` nejsou součástí standardu ERC-223, ale v případě potřeby je lze implementovat.
+Kontrakt není povinen mít pouze tyto funkce a vývojář může do tohoto kontraktu přidat jakoukoli jinou funkci z různých standardů tokenů. Například funkce `approve` a `transferFrom` nejsou součástí standardu ERC-223, ale tyto funkce by mohly být implementovány, pokud by to bylo nutné.
 
 Z [EIP-223](https://eips.ethereum.org/EIPS/eip-223):
 
@@ -56,7 +55,7 @@ Kontrakt, který má přijímat tokeny ERC-223, musí implementovat následujíc
 function tokenReceived(address _from, uint _value, bytes calldata _data)
 ```
 
-Pokud jsou tokeny ERC-223 odeslány do kontraktu, který neimplementuje funkci `tokenReceived(..)`, převod musí selhat a tokeny nesmí být přesunuty ze zůstatku odesílatele.
+Pokud jsou tokeny ERC-223 odeslány na kontrakt, který neimplementuje funkci `tokenReceived(..)`, pak musí převod selhat a tokeny nesmí být přesunuty ze zůstatku odesílatele.
 
 ### Události {#events}
 
@@ -66,7 +65,7 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 ### Příklady {#examples}
 
-API tokenu ERC-223 je podobné API ERC-20, takže z hlediska vývoje uživatelského rozhraní zde není žádný rozdíl. Jedinou výjimkou je, že tokeny ERC-223 nemusí mít funkce `approve` + `transferFrom`, protože ty jsou pro tento standard volitelné.
+API tokenu ERC-223 je podobné API ERC-20, takže z pohledu vývoje uživatelského rozhraní (UI) zde není žádný rozdíl. Jedinou výjimkou je, že tokeny ERC-223 nemusí mít funkce `approve` + `transferFrom`, protože ty jsou pro tento standard volitelné.
 
 #### Příklady v Solidity {#solidity-example}
 
@@ -116,7 +115,7 @@ contract VeryBasicERC223Token {
 }
 ```
 
-Nyní chceme, aby jiný kontrakt přijímal vklady tokenu `tokenA` za předpokladu, že tokenA je tokenem ERC-223. Kontrakt musí přijímat pouze tokenA a odmítat všechny ostatní tokeny. Když kontrakt obdrží tokenA, musí emitovat událost `Deposit()` a zvýšit hodnotu interní proměnné `deposits`.
+Nyní chceme, aby jiný kontrakt přijímal vklady `tokenA` za předpokladu, že tokenA je token ERC-223. Kontrakt musí přijímat pouze tokenA a odmítnout jakékoli jiné tokeny. Když kontrakt obdrží tokenA, musí vyvolat událost `Deposit()` a zvýšit hodnotu interní proměnné `deposits`.
 
 Zde je kód:
 
@@ -127,11 +126,11 @@ contract RecipientContract is IERC223Recipient {
     address tokenA; // Jediný token, který chceme přijmout.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // Je důležité si uvědomit, že v rámci této funkce
+        // Je důležité pochopit, že v rámci této funkce
         // msg.sender je adresa tokenu, který je přijímán,
-        // msg.value je vždy 0, protože kontrakt tokenu ve většině případů nevlastní ani neposílá ether,
-        // _from je odesílatel převodu tokenu,
-        // _value je množství vložených tokenů.
+        // msg.value  je vždy 0, protože kontrakt tokenu ve většině případů nevlastní ani neodesílá ether,
+        // _from      je odesílatel převodu tokenu,
+        // _value     je množství tokenů, které bylo vloženo.
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -141,21 +140,21 @@ contract RecipientContract is IERC223Recipient {
 
 ## Často kladené dotazy {#faq}
 
-### Co se stane, když do kontraktu pošleme nějaký tokenB? {#sending-tokens}
+### Co se stane, když na kontrakt odešleme nějaký tokenB? {#sending-tokens}
 
 Transakce selže a převod tokenů se neuskuteční. Tokeny budou vráceny na adresu odesílatele.
 
-### Jak můžeme na tento kontrakt provést vklad? {#contract-deposits}
+### Jak můžeme provést vklad do tohoto kontraktu? {#contract-deposits}
 
-Zavolejte funkci `transfer(address,uint256)` nebo `transfer(address,uint256,bytes)` tokenu ERC-223 a zadejte adresu kontraktu `RecipientContract`.
+Zavolejte funkci `transfer(address,uint256)` nebo `transfer(address,uint256,bytes)` tokenu ERC-223 a zadejte adresu `RecipientContract`.
 
 ### Co se stane, když na tento kontrakt převedeme token ERC-20? {#erc-20-transfers}
 
-Pokud je na `RecipientContract` odeslán token ERC-20, tokeny budou převedeny, ale převod nebude rozpoznán (nebude spuštěna žádná událost `Deposit()` a hodnota vkladů se nezmění). Nežádoucí vklady ERC-20 nelze filtrovat ani jim zabránit.
+Pokud je token ERC-20 odeslán na `RecipientContract`, tokeny budou převedeny, ale převod nebude rozpoznán (nebude vyvolána žádná událost `Deposit()` a hodnota vkladů se nezmění). Nechtěné vklady ERC-20 nelze filtrovat ani jim zabránit.
 
 ### Co když chceme po dokončení vkladu tokenu spustit nějakou funkci? {#function-execution}
 
-Existuje několik způsobů, jak toho dosáhnout. V tomto příkladu se budeme řídit metodou, díky níž jsou převody ERC-223 totožné s převody etheru:
+Existuje několik způsobů, jak to udělat. V tomto příkladu budeme postupovat metodou, díky které jsou převody ERC-223 identické s převody etheru:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
@@ -165,7 +164,7 @@ contract RecipientContract is IERC223Recipient {
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
         require(msg.sender == tokenA);
-        address(this).call(_data); // Zpracujte příchozí transakci a proveďte následné volání funkce.
+        address(this).call(_data); // Zpracovat příchozí transakci a provést následné volání funkce.
     }
     function foo() public
     {
@@ -178,21 +177,21 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Když `RecipientContract` obdrží token ERC-223, spustí funkci zakódovanou jako parametr `_data` transakce tokenu, a to stejným způsobem, jakým transakce s etherem kódují volání funkcí jako transakční `data`. Pro více informací si přečtěte o [datovém poli](/developers/docs/transactions/#the-data-field).
+Když `RecipientContract` obdrží token ERC-223, kontrakt spustí funkci zakódovanou jako parametr `_data` transakce tokenu, identicky jako transakce etheru kódují volání funkcí jako `data` transakce. Pro více informací si přečtěte o [datovém poli](/developers/docs/transactions/#the-data-field).
 
-Ve výše uvedeném příkladu musí být token ERC-223 převeden na adresu kontraktu `RecipientContract` pomocí funkce `transfer(address,uin256,bytes calldata _data)`. Pokud bude datový parametr `0xc2985578` (podpis funkce `foo()`), pak bude po přijetí vkladu tokenu vyvolána funkce foo() a bude spuštěna událost Foo().
+Ve výše uvedeném příkladu musí být token ERC-223 převeden na adresu `RecipientContract` pomocí funkce `transfer(address,uin256,bytes calldata _data)`. Pokud bude parametr data `0xc2985578` (podpis funkce `foo()`), pak bude po přijetí vkladu tokenu vyvolána funkce foo() a bude spuštěna událost Foo().
 
-Parametry lze také zakódovat do `dat` převodu tokenu, například můžeme zavolat funkci bar() s hodnotou 12345 pro `_someNumber`. V tomto případě musí být `data` `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2`, kde `0x0423a132` je podpis funkce `bar(uint256)` a `00000000000000000000000000000000000000000000000000000000000004d2` je 12345 jako uint256.
+Parametry mohou být zakódovány také v `data` převodu tokenu, například můžeme zavolat funkci bar() s hodnotou 12345 pro `_someNumber`. V tomto případě musí být `data` `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2`, kde `0x0423a132` je podpis funkce `bar(uint256)` a `00000000000000000000000000000000000000000000000000000000000004d2` je 12345 jako uint256.
 
 ## Omezení {#limitations}
 
-Ačkoli ERC-223 řeší několik problémů, které se vyskytují ve standardu ERC-20, není bez vlastních omezení:
+Ačkoli ERC-223 řeší několik problémů zjištěných ve standardu ERC-20, není bez vlastních omezení:
 
-- Přijetí a kompatibilita: ERC-223 ještě není široce přijat, což může omezit jeho kompatibilitu se stávajícími nástroji a platformami.
+- Adopce a kompatibilita: ERC-223 zatím není široce přijat, což může omezit jeho kompatibilitu s existujícími nástroji a platformami.
 - Zpětná kompatibilita: ERC-223 není zpětně kompatibilní s ERC-20, což znamená, že stávající kontrakty a nástroje ERC-20 nebudou s tokeny ERC-223 fungovat bez úprav.
-- Náklady na palivo: Dodatečné kontroly a funkce v převodech ERC-223 mohou mít za následek vyšší náklady na palivo ve srovnání s transakcemi ERC-20.
+- Náklady na gas: Dodatečné kontroly a funkce v převodech ERC-223 mohou vést k vyšším nákladům na gas ve srovnání s transakcemi ERC-20.
 
 ## Další čtení {#further-reading}
 
-- [EIP-223: Tokenový standard ERC-223](https://eips.ethereum.org/EIPS/eip-223)
+- [EIP-223: Standard tokenu ERC-223](https://eips.ethereum.org/EIPS/eip-223)
 - [Původní návrh ERC-223](https://github.com/ethereum/eips/issues/223)
