@@ -1362,6 +1362,8 @@ export type Story = {
   twitter: string | null
   country: string | null
   date: string
+  /** Comma-separated category labels used by the /stories community filter. */
+  category?: string
 }
 
 export type SectionNavDetails = {
