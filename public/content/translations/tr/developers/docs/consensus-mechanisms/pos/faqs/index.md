@@ -1,172 +1,172 @@
 ---
-title: "Sıkça Sorulan Sorular"
-description: "Ethereum'da hisse ispatı üzerine sıkça sorulan sorular."
+title: Sıkça Sorulan Sorular
+description: Hisse kanıtı (PoS) Ethereum hakkında sıkça sorulan sorular.
 lang: tr
 ---
 
-## Hisse ispatı nedir {#what-is-proof-of-stake}
+## Hisse kanıtı (PoS) nedir? {#what-is-proof-of-stake}
 
-Hisse ispatı, değerli varlıkların dürüst olmayan şekilde hareket eden saldırganlar tarafından kaybedilmesini sağlayarak blok zincirlere güvenlik sağlayabilen bir algoritma çeşitidir. Hisse ispatı sistemleri, bazı varlıkların mevcut olmasını gerektirir ve eğer doğrulayıcı, kanıtlanabilir şekilde sahtekarlık içeren bir davranışa katılırsa bu varlıklar yok edilebilir. Ethereum, blok zinciri güvence altına almak için hisse ispatı mekanizması kullanır.
+Hisse kanıtı (PoS), dürüst olmayan şekilde davranan saldırganların değerli varlıklarını kaybetmelerini sağlayarak blokzincirlere güvenlik sağlayabilen bir algoritma sınıfıdır. Hisse kanıtı sistemleri, bir dizi doğrulayıcının, doğrulayıcının kanıtlanabilir şekilde dürüst olmayan bir davranışta bulunması durumunda yok edilebilecek bir varlığı erişilebilir kılmasını gerektirir. Ethereum, blokzinciri güvence altına almak için bir hisse kanıtı mekanizması kullanır.
 
-## Hisse ispatı ile iş ispatı farkları nedir? {#comparison-to-proof-of-work}
+## Hisse kanıtı (PoS) ile iş kanıtı (PoW) nasıl karşılaştırılır? {#comparison-to-proof-of-work}
 
-Hem iş ispatı hem de hisse ispatı, kötü niyetli aktörleri ağa taciz veya dolandırıcılık yapmaktan ekonomik olarak caydıran mekanizmalardır. Her iki durumda da, mutabakata aktif olarak katılan düğümler, eğer yanlış davranırlarsa kaybedecekleri bir varlığı ağa "yerleştirir".
+Hem iş kanıtı (PoW) hem de hisse kanıtı (PoS), kötü niyetli aktörleri ağa spam göndermekten veya ağı dolandırmaktan ekonomik olarak caydıran mekanizmalardır. Her iki durumda da, mutabakata aktif olarak katılan düğümler, kötü davrandıklarında kaybedecekleri bir varlığı "ağa" koyarlar.
 
-Hisse ispatında bu varlık enerjidir. Madenci olarak bilinen düğüm, diğer herhangi bir düğümden daha hızlı bir değeri hesaplamayı amaçlayan bir algoritmayı çalıştırır. En hızlı düğüm zincirdeki yeni bloku önerme hakkına sahiptir. Zincirin geçmişini değiştirmek veya blok teklifini domine etmek için bir madencinin her zaman yarışı kazanan kadar büyük bir hesaplama gücüne sahip olması gerekecektir. Bu, engellenemez derecede pahalı ve zor bir işlemdir ve zinciri saldırılardan korur. İş ispatı kullanarak "madencilik" yapmak için gereken enerji, madencilerin ödediği gerçek dünya varlığıdır.
+İş kanıtında bu varlık enerjidir. Madenci olarak bilinen düğüm, bir değeri diğer tüm düğümlerden daha hızlı hesaplamayı amaçlayan bir algoritma çalıştırır. En hızlı düğüm, zincire bir blok teklif etme hakkına sahip olur. Zincirin geçmişini değiştirmek veya blok teklifine hükmetmek için bir madencinin yarışı her zaman kazanacak kadar çok hesaplama gücüne sahip olması gerekir. Bu, aşırı derecede pahalı ve gerçekleştirilmesi zor bir işlemdir, bu da zinciri saldırılardan korur. İş kanıtı kullanarak "madencilik" yapmak için gereken enerji, madencilerin bedelini ödediği gerçek dünyadan bir varlıktır.
 
-Hisse ispatı, doğrulayıcılar olarak bilinen düğümlerin, açıkça bir kripto varlığını bir akıllı sözleşmeye göndermelerini gerektirir. Bir doğrulayıcı yanlış davranırsa, bu kripto varlık yok edilebilir çünkü doğrulayıcılar varlıklarını enerji harcaması yoluyla dolaylı olarak değil, doğrudan zincire "hisseler".
+Hisse kanıtı, doğrulayıcı olarak bilinen düğümlerin bir akıllı sözleşmeye açıkça bir kripto varlık sunmasını gerektirir. Bir doğrulayıcı kötü davranırsa, varlıklarını enerji harcaması yoluyla dolaylı olarak değil, doğrudan zincire "stake ettikleri" için bu kripto yok edilebilir.
 
-İş ispatı, madencilik sürecinde elektrik tüketildiği için çok daha fazla enerji tüketimine neden olur. Öte yandan, hisse ispatı ise sadece çok az bir enerji miktarı gerektirir - Ethereum doğrulayıcıları, hatta Raspberry Pi gibi düşük güçlü cihazlarda bile çalışabilir. Ethereum'un hisse ispatı mekanizması, iş ispatına göre daha güvenli olarak düşünülmektedir çünkü saldırmak için gerekli maliyet daha yüksektir ve saldırganın karşılaşacağı sonuçlar daha ciddidir.
+İş kanıtı çok daha fazla enerjiye açtır çünkü madencilik sürecinde elektrik yakılır. Hisse kanıtı ise yalnızca çok küçük bir miktar enerji gerektirir; Ethereum doğrulayıcıları Raspberry Pi gibi düşük güçlü bir cihazda bile çalışabilir. Ethereum'un hisse kanıtı mekanizmasının iş kanıtından daha güvenli olduğu düşünülmektedir çünkü saldırmanın maliyeti daha yüksektir ve bir saldırgan için sonuçları daha ağırdır.
 
-İş ispatı ile hisse ispatı arasındaki farklılıklar tartışmalı bir konudur. [Vitalik Buterin'in blogu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) ve Justin Drake ile Lyn Alden arasındaki tartışma, argümanların iyi bir özetini sunuyor.
+İş kanıtı ile hisse kanıtı karşılaştırması tartışmalı bir konudur. [Vitalik Buterin'in blogu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) ile Justin Drake ve Lyn Alden arasındaki tartışma, argümanların iyi bir özetini sunmaktadır.
 
-<YouTube id="1m12zgJ42dI" />
+<VideoWatch slug="pow-vs-pos" />
 
-## Hisse ispatı enerji açısından verimli mi? {#is-pos-energy-efficient}
+## Hisse kanıtı (PoS) enerji açısından verimli midir? {#is-pos-energy-efficient}
 
-Evet. Hisse ispatı ağındaki düğümler çok az bir enerji kullanır. Üçüncü taraf bir çalışma, tüm Ethereum hisse ispatı ağının yılda yaklaşık 0,0026 TWh enerji tükettiğini sonuçlandırdı - yalnızca ABD'deki oyun sektöründen yaklaşık 13.000 kat daha az.
+Evet. Bir hisse kanıtı ağındaki düğümler çok az miktarda enerji kullanır. Üçüncü taraf bir çalışma, tüm hisse kanıtı Ethereum ağının yılda yaklaşık 0,0026 TWh tükettiği sonucuna varmıştır; bu, yalnızca ABD'deki oyun sektöründen yaklaşık 13.000 kat daha azdır.
 
 [Ethereum'un enerji tüketimi hakkında daha fazla bilgi](/energy-consumption/).
 
-## Hisse ispatı güvenli mi? {#is-pos-secure}
+## Hisse kanıtı (PoS) güvenli midir? {#is-pos-secure}
 
-Ethereum'un hisse ispatı oldukça güvenlidir. Bu mekanizma, kullanıma geçmeden önce sekiz yıl boyunca titizlikle araştırıldı, geliştirildi ve test edildi. Güvenlik garantileri iş ispatı blok zincirlerinden farklıdır. Hisse ispatında, kötü niyetli doğrulayıcılar aktif olarak cezalandırılabilir ("slashed") ve doğrulayıcı kümesinden çıkarılabilir, bu da önemli miktarda ETH'ye mal olabilir. İş ispatı altında, bir saldırgan yeterli karma gücüne sahip oldukça saldırılarını tekrarlayabilir. Aynı ölçekte saldırıları iş ispatındaki Ethereum'a karşı düzenlemek de hisse ispatındaki gibi daha maliyetlidir. Zincirin canlılığını etkilemek için, ağdaki toplam hisselenmiş etherin en az %33'ü gereklidir (çok sofistike saldırılar ve başarı olasılığı son derece düşük durumlar hariç). Gelecekteki blok içeriğini kontrol etmek için en az %51 toplam hisselenmiş ETH gereklidir ve geçmişi yeniden yazmak için hisselenen toplam token'ın %66'sından fazlasına ihtiyaç vardır. Ethereum protokolü, %33 veya %51 saldırı senaryolarında bu varlıkları yok ederken, %66 saldırı senaryosunda ise sosyal mutabakat yoluyla bu varlıkları yok edebilir.
+Ethereum'un hisse kanıtı çok güvenlidir. Mekanizma, yayına girmeden önce sekiz yıl boyunca titizlikle araştırılmış, geliştirilmiş ve test edilmiştir. Güvenlik garantileri, iş kanıtı blokzincirlerinden farklıdır. Hisse kanıtında, kötü niyetli doğrulayıcılar aktif olarak cezalandırılabilir ("ceza kesintisi" uygulanabilir) ve doğrulayıcı setinden çıkarılabilir, bu da onlara önemli miktarda ETH'ye mal olur. İş kanıtı altında, bir saldırgan yeterli hash gücüne sahip olduğu sürece saldırısını tekrarlamaya devam edebilir. Hisse kanıtı Ethereum'da eşdeğer saldırılar düzenlemek, iş kanıtı altındakinden daha maliyetlidir. Zincirin canlılığını etkilemek için, ağda stake edilen toplam Ether'in en az %33'ü gereklidir (başarı olasılığı son derece düşük olan çok karmaşık saldırı durumları hariç). Gelecekteki blokların içeriğini kontrol etmek için toplam stake edilen ETH'nin en az %51'i, geçmişi yeniden yazmak için ise toplam stake'in %66'sından fazlası gereklidir. Ethereum protokolü, %33 veya %51 saldırısı senaryolarında bu varlıkları yok eder ve %66 saldırısı senaryosunda ise sosyal mutabakat yoluyla bunu gerçekleştirir.
 
-- [Ethereum hisse ispatını saldırganlardan koruma hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
-- [Hisse ispatı tasarımı hakkında daha fazla bilgi](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
+- [Ethereum hisse kanıtını saldırganlardan korumak hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+- [Hisse kanıtı tasarımı hakkında daha fazla bilgi](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
 
-## Hisse ispatı Ethereum'u daha ucuz hale getirir mi? {#does-pos-make-ethereum-cheaper}
+## Hisse kanıtı (PoS) Ethereum'u daha ucuz hale getirir mi? {#does-pos-make-ethereum-cheaper}
 
 Hayır. Bir işlem göndermenin maliyeti (gaz ücreti), daha fazla ağ talebiyle artan dinamik bir ücret piyasası tarafından belirlenir. Mutabakat mekanizması bunu doğrudan etkilemez.
 
 [Gaz hakkında daha fazla bilgi](/developers/docs/gas).
 
-## Düğümler, istemciler ve doğrulayıcılar nedir? {#what-are-nodes-clients-and-validators}
+## Düğümler, istemciler ve doğrulayıcılar nelerdir? {#what-are-nodes-clients-and-validators}
 
-Düğümler, Ethereum ağına bağlı bilgisayarlardır. İstemciler, bilgisayarı bir düğüm haline getirirken çalıştırdıkları yazılımdır. İki tür istemci vardır: yürütüm istemcileri ve fikir birliği istemcileri. Hem yürütüm istemcileri hem de fikir birliği istemcileri bir düğüm oluşturmak için gereklidir. Bir doğrulayıcı, bir fikir birliği istemcisine isteğe bağlı olarak eklenen ve düğümün hisse ispatı uzlaşısına katılmasını sağlayan bir eklentidir. Bu, seçildiklerinde bloklar oluşturup teklif etmeyi ve ağda duydukları blokları onaylamayı içerir. Bir doğrulayıcı çalıştırmak için düğüm işletmecisinin 32 ETH'yi mevduat sözleşmesine yatırması gerekmektedir.
+Düğümler, Ethereum ağına bağlı bilgisayarlardır. İstemciler, bilgisayarı bir düğüme dönüştürmek için çalıştırdıkları yazılımlardır. İki tür istemci vardır: yürütme istemcileri ve fikir birliği istemcileri. Bir düğüm oluşturmak için her ikisine de ihtiyaç vardır. Bir doğrulayıcı, düğümün hisse kanıtı mutabakatına katılmasını sağlayan, fikir birliği istemcisine isteğe bağlı bir eklentidir. Bu, seçildiğinde bloklar oluşturmak ve teklif etmek ile ağda duydukları blokları onaylamak anlamına gelir. Bir doğrulayıcı çalıştırmak için düğüm operatörünün yatırma sözleşmesine 32 ETH yatırması gerekir.
 
 - [Düğümler ve istemciler hakkında daha fazla bilgi](/developers/docs/nodes-and-clients)
-- [Hisseleme hakkında daha fazla bilgi](/staking)
+- [Staking hakkında daha fazla bilgi](/staking)
 
-## Hisse ispatı yeni bir fikir midir? {#is-pos-new}
+## Hisse kanıtı (PoS) yeni bir fikir mi? {#is-pos-new}
 
-Hayır. BitcoinTalk'ta bir kullanıcı, 2011'de Bitcoin'e bir yükseltme olarak [hisse ispatının temel fikrini önerdi](https://bitcointalk.org/index.php?topic=27787.0). Bu, Ethereum Ana Ağı'na yerleştirmeye hazır olmasından 11 yıl önceydi. Bazı diğer zincirler hisse ispatını Ethereum'dan önce yerleştirdi ancak Ethereum'un özgül mekanizmasını (Gasper olarak bilinen) yerleştiremedi.
+Hayır. BitcoinTalk'taki bir kullanıcı 2011 yılında Bitcoin için bir yükseltme olarak [hisse kanıtının temel fikrini teklif etti](https://bitcointalk.org/index.php?topic=27787.0). Ethereum Ana Ağı üzerinde uygulanmaya hazır hale gelmesi on bir yıl sürdü. Diğer bazı zincirler hisse kanıtını Ethereum'dan daha önce uyguladı, ancak Ethereum'un (Gasper olarak bilinen) özel mekanizmasını değil.
 
-## Ethereum'un hisse ispatıyla ilgili özel olan nedir? {#why-is-ethereum-pos-special}
+## Ethereum'un hisse kanıtının (PoS) özelliği nedir? {#why-is-ethereum-pos-special}
 
-Ethereum'un hisse ispatı mekanizması kendi tasarımına özgüdür. Tasarlanan ve yerleştirilen ilk hisse ispatı mekanizması bu değildi, ancak en güçlüsüdür. Hisse ispatı mekanizması ''Casper'' olarak bilinir. Casper, doğrulayıcıların blok önermek için nasıl seçildiğini, tasdiklenmenin nasıl ve ne zaman yapıldığını, tasdiklemelerin nasıl sayıldığını, doğrulayıcılara verilen ödülleri ve cezaları, cezalandırma koşullarını, hareketsizlik gibi güvenlik mekanizmalarını ve "kesinlik" koşullarını tanımlar. Kesinlik; bir blokun gerçekçi zincirin sürekli parçası olarak algılanmasını sağlayan duurmdur, hisselenmiş ETH'lerin en az %66'sı tarafından oylanmış olması gerekir. Geliştiriciler Casper'i özellikle Ethereum için oluşturdu ve Ethereum da Casper'in işletildiği ilk ve tek blok zincirdir.
+Ethereum'un hisse kanıtı mekanizması tasarımı itibarıyla benzersizdir. Tasarlanan ve uygulanan ilk hisse kanıtı mekanizması değildi, ancak en sağlam olanıdır. Hisse kanıtı mekanizması "Casper" olarak bilinir. Casper; doğrulayıcıların blok teklif etmek için nasıl seçildiğini, onayların nasıl ve ne zaman yapıldığını, onayların nasıl sayıldığını, doğrulayıcılara verilen ödülleri ve cezaları, ceza kesintisi koşullarını, hareketsizlik sızıntısı gibi arıza emniyeti mekanizmalarını ve "kesinlik" koşullarını tanımlar. Kesinlik, bir bloğun kurallı zincirin kalıcı bir parçası olarak kabul edilebilmesi için ağda stake edilen toplam ETH'nin en az %66'sı tarafından oylanmış olması koşuludur. Araştırmacılar Casper'ı özel olarak Ethereum için geliştirdiler ve Ethereum bunu uygulayan ilk ve tek blokzincirdir.
 
-Casper'a ek olarak, Ethereum'un hisse ispatı LMD-GHOST adlı bir çatal seçim algoritması kullanır. Bu, aynı yuva için iki blok var olduğunda ortaya çıkan bir durumda gereklidir. Bu, blok zincirin iki ayrı çatalını oluşturur. LMD-GHOST, en fazla "yoğunluğa" sahip olanı seçer. Yoğunluk, doğrulayıcıların etkin bakiyesiyle ağırlıklı olarak hesaplanan tasdiklerin sayısıdır. LMD-GHOST, Ethereum'a özgüdür.
+Casper'a ek olarak, Ethereum'un hisse kanıtı LMD-GHOST adı verilen bir çatallanma seçimi algoritması kullanır. Bu, aynı slot için iki bloğun var olduğu bir durumun ortaya çıkması halinde gereklidir. Bu, blokzincirin iki çatallanmasını yaratır. LMD-GHOST, onayların en büyük "ağırlığına" sahip olanı seçer. Ağırlık, doğrulayıcıların etkin bakiyesi ile ağırlıklandırılmış onay sayısıdır. LMD-GHOST Ethereum'a özgüdür.
 
-Casper ve LMD-GHOST'un kombinasyonuna Gasper denir.
+Casper ve LMD-GHOST kombinasyonu Gasper olarak bilinir.
 
 [Gasper hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/gasper/)
 
-## Cezalandırma nedir? {#what-is-slashing}
+## Ceza kesintisi (slashing) nedir? {#what-is-slashing}
 
-Cezalandırma, bir doğrulayıcının bazı kilitli token'larının yok edilmesi ve doğrulayıcının ağdan çıkarılması işlemine verilen terimdir. Cezalandırma işlemi sonucu kaybedilen ETH miktarı, uzaklaştırılan doğrulayıcı sayısıyla ölçeklenir - bu, iş birliği yapan doğrulayıcıların bireylere kıyasla daha ağır şekilde cezalandırılmasına neden olur.
+Ceza kesintisi, bir doğrulayıcının stake'inin bir kısmının yok edilmesine ve doğrulayıcının ağdan atılmasına verilen terimdir. Bir ceza kesintisinde kaybedilen ETH miktarı, ceza kesintisine uğrayan doğrulayıcıların sayısıyla orantılıdır; bu, gizli anlaşma yapan doğrulayıcıların bireylerden daha ağır şekilde cezalandırıldığı anlamına gelir.
 
-[Kesinti hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
+[Ceza kesintisi hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
 
-## Neden doğrulayıcılar 32 ETH'ye ihtiyaç duyar? {#why-32-eth}
+## Doğrulayıcıların neden 32 ETH'ye ihtiyacı var? {#why-32-eth}
 
-Doğrulayıcılar eğer kötü davranırlarsa kaybedecek bir şeyleri olsun diye 32 ETH hisselemek zorundalar. Neden özellikle 32 ETH hisselemek zorunda olduklarının sebebiyse düğümlerin en uygun yazılımal yürümesine imkân sağlamaktır. Eğer doğrulayıcı başına asgari ETH tutarı daha az olsaydı doğrulayıcı sayısı ve dolayısıyla her bir yuvada işlenmesi gereken mesaj miktarı artacaktı ki, bu da düğümlerin yürütülmesi için daha güçlü donanımlara ihtiyaç duyulacağı demektir.
+Doğrulayıcıların, kötü davrandıklarında kaybedecekleri bir şeyleri olması için ETH stake etmeleri gerekir. Özellikle 32 ETH stake etmelerinin gerekmesinin nedeni, düğümlerin mütevazı donanımlarda çalışmasını sağlamaktır. Doğrulayıcı başına minimum ETH daha düşük olsaydı, doğrulayıcı sayısı ve dolayısıyla her slotta işlenmesi gereken mesaj sayısı artardı, bu da bir düğümü çalıştırmak için daha güçlü bir donanımın gerekeceği anlamına gelirdi.
 
 ## Doğrulayıcılar nasıl seçilir? {#how-are-validators-selected}
 
-Her yuva için tek bir doğrulayıcı, her blok önerisini rastgele seçmek üzere RANDAO adlı bir algoritma kullanarak seçilir. Bu algoritma, blok önerisinde bulunan bir karma ile her blokta güncellenen bir tohumun karıştırılmasıyla çalışır. Bu değer, toplam doğrulayıcı kümesinden belirli bir doğrulayıcıyı seçmek için kullanılır. Doğrulayıcı seçimi, iki dönem öncesinden belirlenir.
+Her slotta bir blok teklif etmek üzere, blok teklifçisinden gelen bir hash'i her blokta güncellenen bir tohumla karıştıran RANDAO adlı bir algoritma kullanılarak sözde rastgele tek bir doğrulayıcı seçilir. Bu değer, toplam doğrulayıcı setinden belirli bir doğrulayıcıyı seçmek için kullanılır. Doğrulayıcı seçimi iki dönem (epoch) önceden sabitlenir.
 
 [Doğrulayıcı seçimi hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
-## Kilit öğütme nedir? {#what-is-stake-grinding}
+## Stake öğütme nedir? {#what-is-stake-grinding}
 
-Kilit öğütme, saldırganın kendi doğrulayıcılarını lehine seçici algoritmayı yönlendirmeye çalıştığı bir hisse ispatı ağ saldırısı türüdür. RanDAO'ya yönelik yapılan kilit öğütme saldırıları için hisselenen toplam ETH'nin yaklaşık yarısı gereklidir.
+Stake öğütme, saldırganın doğrulayıcı seçimi algoritmasını kendi doğrulayıcıları lehine yönlendirmeye çalıştığı, hisse kanıtı ağlarına yönelik bir saldırı kategorisidir. RANDAO üzerindeki stake öğütme saldırıları, toplam stake edilen ETH'nin yaklaşık yarısını gerektirir.
 
-[Hisse öğütme hakkında daha fazla bilgi](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
+[Stake öğütme hakkında daha fazla bilgi](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
 
-## Sosyal cezalandırma nedir? {#what-is-social-slashing}
+## Sosyal kesinti nedir? {#what-is-social-slashing}
 
-Sosyal cezalandırma, topluluğun bir saldırıya yanıt olarak blok zincirin bir çatalını yönetme yeteneğidir. Bu, topluluğun, bir saldırının dürüst olmayan bir zinciri kesinleştirmesinin ardından kurtulmasını sağlar. Sosyal cezalandırma, sansür saldırılarına karşı da kullanılabilir.
+Sosyal kesinti, topluluğun bir saldırıya yanıt olarak blokzincirin bir çatallanmasını koordine etme yeteneğidir. Topluluğun, dürüst olmayan bir zinciri kesinleştiren bir saldırgandan kurtulmasını sağlar. Sosyal kesinti, sansür saldırılarına karşı da kullanılabilir.
 
 - [Sosyal kesinti hakkında daha fazla bilgi](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin'in sosyal kesinti üzerine yazısı](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin'in sosyal kesinti hakkındaki görüşleri](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
-## Cezalandırılacak mıyım? {#will-i-get-slashed}
+## Ceza kesintisine uğrayacak mıyım? {#will-i-get-slashed}
 
-Bir doğrulayıcı olarak, kasıtlı olarak kötü niyetli davranışlarda bulunmadıkça cezalandırılmak oldukça zordur. Cezalandırma, doğrulayıcıların aynı yuva için birden fazla blok önerdiği veya tasdiklemeleriyle çeliştiği çok belirli senaryolarda uygulanır - bunların kazara meydana gelme olasılığı çok düşüktür.
+Bir doğrulayıcı olarak, kasıtlı olarak kötü niyetli bir davranışta bulunmadığınız sürece ceza kesintisine uğramanız çok zordur. Ceza kesintisi yalnızca doğrulayıcıların aynı slot için birden fazla blok teklif ettiği veya onaylarıyla kendileriyle çeliştiği çok özel senaryolarda uygulanır; bunların kazara ortaya çıkması pek olası değildir.
 
-[Kesinti koşulları hakkında daha fazla bilgi](https://eth2book.info/altair/part2/incentives/slashing)
+[Ceza kesintisi koşulları hakkında daha fazla bilgi](https://eth2book.info/altair/part2/incentives/slashing)
 
-## Riske atmama sorunu nedir? {#what-is-nothing-at-stake-problem}
+## Kaybedecek bir şey yok problemi nedir? {#what-is-nothing-at-stake-problem}
 
-Riske atmama sorunu, bazı hisse ispatı mekanizmalarında yalnızca ödüllerin ve cezaların olmadığı bir kavramsal sorundur. Eğer hiçbir şey riske atılmamışsa, faydacı bir doğrulayıcı, ödüllerini artırdığı için herhangi bir blok zincir çatalına veya hatta birden çok çatala tanıklık etmekten eşit derecede memnun olur. Ethereum, tek bir kanonik zinciri sağlamak için kesinlik koşullarını ve cezalandırmayı kullanarak bunu aşar.
+Kaybedecek bir şey yok problemi, yalnızca ödüllerin olduğu ve cezaların olmadığı bazı hisse kanıtı mekanizmalarındaki kavramsal bir sorundur. Eğer kaybedecek bir şey yoksa, pragmatik bir doğrulayıcı blokzincirin herhangi bir çatallanmasını, hatta birden fazla çatallanmasını onaylamaktan eşit derecede mutlu olur, çünkü bu onların ödüllerini artırır. Ethereum, tek bir kurallı zincir sağlamak için kesinlik koşullarını ve ceza kesintisini kullanarak bu sorunu aşar.
 
-[Ortada hisse olmama sorunu hakkında daha fazla bilgi](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[Kaybedecek bir şey yok problemi hakkında daha fazla bilgi](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
-## Çatal seçim algoritması nedir? {#what-is-a-fork-choice-algorithm}
+## Çatallanma seçimi algoritması nedir? {#what-is-a-fork-choice-algorithm}
 
-Bir çatal seçim algoritması hangi zincirin gerçekçi zincir olacağına karar veren kuralları işler. En uygun koşullar altında herhangi bir çatal seçim kuralına gerek yoktur çünkü yuva başına bir blok önerici ve seçilen bir blok vardır. Ancak kimi zaman aynı yuva için birden fazla blok veya geç gelen bilgi, başa yakın blokların nasıl düzenleneceği konusunda birden fazla seçeneğe yol açabilir. Bu durumlarda tüm müşteriler, hepsinin aynı blok sekanslarını seçtiğinden emin olmak adına bazı kuralları işlemelidir. Çatal seçim algoritması bu kuralları kodlar.
+Bir çatallanma seçimi algoritması, hangi zincirin kurallı zincir olduğunu belirleyen kuralları uygular. Optimum koşullar altında, slot başına yalnızca bir blok teklifçisi ve aralarından seçim yapılabilecek tek bir blok olduğu için bir çatallanma seçimi kuralına gerek yoktur. Ancak bazen, aynı slot için birden fazla blok veya geç gelen bilgiler, zincirin başındaki blokların nasıl organize edileceğine dair birden fazla seçeneğe yol açar. Bu durumlarda, tüm istemcilerin doğru blok dizisini seçtiklerinden emin olmak için bazı kuralları aynı şekilde uygulaması gerekir. Çatallanma seçimi algoritması bu kuralları kodlar.
 
-Ethereum'un çatal seçim algoritmasına LMD-GHOST denir. Bu; en çok tasdik ağırlığına sahip yani en fazla hisselenmiş ETH'nin oy verdiği çatalı seçer.
+Ethereum'un çatallanma seçimi algoritması LMD-GHOST olarak adlandırılır. En büyük onay ağırlığına sahip olan çatallanmayı, yani en çok stake edilen ETH'nin oy verdiği çatallanmayı seçer.
 
 [LMD-GHOST hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/gasper/#fork-choice)
 
-## Hisse ispatı içinde kesinlik ne demektir? {#what-is-finality}
+## Hisse kanıtında (PoS) kesinlik nedir? {#what-is-finality}
 
-Hisse ispatı içinde kesinlik; belirli bir blokun gerçekçi zincirin sürekli bir parçası olduğunu garanti altına alır ve eğer saldırganın toplam hisselenmiş etherin %33'ünü yaktığı bir mutabakat hatası olmazsa geri çevrilemez. Bu, ''ihtimali kesinlik'' de denen kripto-ekonomik kesinlik, iş ispatı blok zincirleriyle alakalıdır. İhtimali kesinlikte, bloklar için açıkça kesinleşmiş/kesinleşmemiş durumlar yoktur - blok yaşlandıkça, blokun zincirden kaldırılma olasılığı giderek azalır ve kullanıcılar kendileri için bir blokun ne zaman yeterince "güvenli" olduğuna karar verir. Kripto-ekonomik kesinlik ile birlikte kontrol noktası blok çiftleri, hisselenmiş etherin %66'sı tarafından oylanmak zorundadır. Eğer bu şart sağlanırsa bu kontrol noktaları arasındaki bloklar açık bir şekilde ''kesinleştirilir''.
+Hisse kanıtında kesinlik, belirli bir bloğun kurallı zincirin kalıcı bir parçası olduğunun ve bir saldırganın toplam stake edilen Ether'in %33'ünü yaktığı bir mutabakat hatası olmadığı sürece geri alınamayacağının garantisidir. Bu, iş kanıtı blokzincirleriyle ilgili olan "olasılıksal kesinlik" kavramının aksine "kripto-ekonomik" kesinliktir. Olasılıksal kesinlikte, bloklar için açıkça kesinleşmiş/kesinleşmemiş durumlar yoktur; bir bloğun eskidikçe zincirden çıkarılma olasılığı giderek azalır ve kullanıcılar bir bloğun "güvenli" olduğundan ne zaman yeterince emin olduklarına kendileri karar verirler. Kripto-ekonomik kesinlikte, kontrol noktası blok çiftlerinin stake edilen Ether'in %66'sı tarafından oylanması gerekir. Bu koşul sağlanırsa, bu kontrol noktaları arasındaki bloklar açıkça "kesinleşmiş" olur.
 
 [Kesinlik hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/#finality)
 
-## ''Zayıf öznellik'' nedir? {#what-is-weak-subjectivity}
+## "Zayıf öznellik" nedir? {#what-is-weak-subjectivity}
 
-Zayıf öznellik; blok zincirin mevcut durumunu doğrulamak için sosyal bilginin kullanıldığı, hisse ispatı ağlarının bir özelliğidir. Yeni düğümlere veya uzun bir çevrimdışı sürenin ardından ağa tekrar katılan düğümlere, düğümün doğru zincirde olup olmadığını hemen görebilecekleri şu anlık durum verilebilir. Bu durumlar "zayıf öznellik kontrol noktaları" olarak bilinir ve bunlar, diğer düğüm operatörlerinden dışta veya blok gezginlerinden ya da çeşitli genel uç noktalardan elde edilebilir.
+Zayıf öznellik, blokzincirin mevcut durumunu doğrulamak için sosyal bilgilerin kullanıldığı hisse kanıtı ağlarının bir özelliğidir. Yeni düğümlere veya uzun süre çevrimdışı kaldıktan sonra ağa yeniden katılan düğümlere, düğümün doğru zincirde olup olmadığını hemen görebilmesi için yakın zamana ait bir durum verilebilir. Bu durumlar "zayıf öznellik kontrol noktaları" olarak bilinir ve diğer düğüm operatörlerinden bant dışı olarak, blok gezginlerinden veya çeşitli halka açık uç noktalardan elde edilebilirler.
 
 [Zayıf öznellik hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/weak-subjectivity)
 
-## Hisse ispatı sansüre dirençli midir? {#is-pos-censorship-resistant}
+## Hisse kanıtı (PoS) sansüre dirençli midir? {#is-pos-censorship-resistant}
 
-Sansür direncini kanıtlamak şu anda zordur. Ancak iş ispatının aksine hisse ispatı, sansür uygulayan doğrulayıcıların iptallerinin koordine edilme seçeneğini sunar. Protokole; blok inşacıları blok önericilerden ayıracak ve inşacıların her bir blokta dahil etmesi gereken yürütme listesini işletecek olan gelecek değişiklikler vardır. Bu öneri, önerici-inşacı ayrımı olarak bilinir ve doğrulayıcıların yürütmelere sansür uygulmasını engellemeye yardım eder.
+Sansüre dirençli olmayı şu anda kanıtlamak zordur. Ancak iş kanıtından farklı olarak hisse kanıtı, sansür uygulayan doğrulayıcıları cezalandırmak için ceza kesintilerini koordine etme seçeneği sunar. Protokolde, blok inşacılarını blok teklifçilerinden ayıran ve inşacıların her bloğa dahil etmesi gereken işlem listelerini uygulayan yaklaşan değişiklikler vardır. Bu teklif, teklifçi-oluşturucu ayrımı (PBS) olarak bilinir ve doğrulayıcıların işlemleri sansürlemesini önlemeye yardımcı olur.
 
-[Önerici-inşacı ayrımı hakkında daha fazla bilgi](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
+[Teklifçi-oluşturucu ayrımı (PBS) hakkında daha fazla bilgi](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
 
-## Ethereum hisse ispatı sistemi %51 saldırılabilir mi? {#pos-51-attack}
+## Ethereum'un hisse kanıtı (PoS) sistemine %51 saldırısı yapılabilir mi? {#pos-51-attack}
 
-Evet. Hisse ispatları, tıpkı iş ispatlarının olduğu gibi %51 saldırılarına karşı hassastır. Saldırganın ağın karma gücünün %51'ini gerektirmesinden ziyade saldırgan, toplam hisselenmiş ETH'lerin %51'ine ihtiyaç duyar. Toplam hisselemenin %51'ini biriktiren bir saldırgan çatal seçim algoritmasının kontrolünü ele alır. Bu, saldırganın belirli işlemleri sansürlemesine, kısaca yeniden düzenlemeler yapmasına ve blokları kendi lehine yeniden sıralayarak MEV (Maksimum Çıkarılabilir Değer) çıkarmasına imkân tanır.
+Evet. Hisse kanıtı, tıpkı iş kanıtı gibi %51 saldırılarına karşı savunmasızdır. Saldırganın ağın hash gücünün %51'ine ihtiyaç duyması yerine, toplam stake edilen ETH'nin %51'ine ihtiyacı vardır. Toplam stake'in %51'ini biriktiren bir saldırgan, çatallanma seçimi algoritmasını kontrol etme hakkı kazanır. Bu, saldırganın belirli işlemleri sansürlemesine, kısa menzilli yeniden düzenlemeler yapmasına ve blokları kendi lehine yeniden sıralayarak MEV elde etmesine olanak tanır.
 
-[Hisse ispatına yönelik saldırılar hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+[Hisse kanıtı saldırıları hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 
-## Sosyal koordinasyon nedir, buna neden ihtiyaç duyulur? {#what-is-social-coordination}
+## Sosyal koordinasyon nedir ve neden gereklidir? {#what-is-social-coordination}
 
-Sosyal koordinasyon, dürüst blokların kesinleşmiş olanları düzeltmek amacıyla bir saldırıdan kurtulunması ve Ethereum için son savunma hattı olarak kullanılır. Bu durumda, Ethereum topluluğu "dışta" koordine olup dürüst bir azınlık çatalını kullanmayı kabul etmek zorunda kalır ve bu süreçte saldırganın doğrulayıcılarını cezalandırır. Bu, uygulamaların ve borsaların dürüst çatalı tanımasını gerektirir.
+Sosyal koordinasyon, dürüst olmayan blokları kesinleştiren bir saldırıdan dürüst bir zincirin kurtarılmasına olanak tanıyan, Ethereum için son bir savunma hattıdır. Bu durumda, Ethereum topluluğunun "bant dışı" koordine olması ve bu süreçte saldırganın doğrulayıcılarına ceza kesintisi uygulayarak dürüst bir azınlık çatallanmasını kullanmayı kabul etmesi gerekir. Bu, uygulamaların ve borsaların da dürüst çatallanmayı tanımasını gerektirir.
 
 [Sosyal koordinasyon hakkında daha fazla bilgi edinin](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
 
-## Hisse ispatında daha zengin olabilir miyim? {#do-rich-get-richer}
+## Hisse kanıtında (PoS) zenginler daha mı zengin olur? {#do-rich-get-richer}
 
-Birinin hisselemesi gereken ETH miktarı ne kadar yüksekse, o kadar fazla doğrulayıcı çalıştırabilir ve o kadar çok ödül birikebilir. Ödüller hisselenen ETH miktarıyla doğrusal olarak ölçeklendirilir ve herkes aynı yüzde oranında getiri elde eder. Hisse ispatı aksine, iş ispatı zenginleri daha fazla zenginleştirir çünkü ölçeklendirilen donanım satın alan daha zengin madenciler, ölçeklendirme ekonomisinden faydalanır ve bu da servet ile ödül arasındaki ilişkinin doğrusal olmayan bir şekilde artmasına neden olur.
+Birinin stake edecek ne kadar çok ETH'si varsa, o kadar çok doğrulayıcı çalıştırabilir ve o kadar çok ödül biriktirebilir. Ödüller, stake edilen ETH miktarıyla doğrusal olarak ölçeklenir ve herkes aynı oranda getiri elde eder. İş kanıtı, zenginleri hisse kanıtından daha fazla zenginleştirir çünkü büyük ölçekte donanım satın alan daha zengin madenciler ölçek ekonomilerinden yararlanır, bu da zenginlik ile ödül arasındaki ilişkinin doğrusal olmadığı anlamına gelir.
 
-## Hisse ispatı iş ispatından daha merkezi midir? {#is-pos-decentralized}
+## Hisse kanıtı (PoS) iş kanıtından (PoW) daha mı merkezidir? {#is-pos-decentralized}
 
-Hayır, iş ispatı, madencilik maliyetleri arttıkça bireyleri, ardından küçük şirketleri dışlayarak merkezileşmeye doğru eğilim gösterir. Hisse ispatının mevcut sorunu, likit hisseleme türevlerinin (LSD'ler) etkisidir. Bunlar, gerçek ETH'nin çıkartılmadan herkesin ikincil piyasalarda takas edebileceği bir sağlayıcı tarafından hisselenen ETH'yi temsil eden token'lardır. LSD'ler, kullanıcıların 32 ETH'den az bir miktarla hisselemesine olanak tanır, ancak aynı zamanda birkaç büyük organizasyonun çoğunluğu hisseleme miktarını kontrol etme riski yaratır. Bu yüzden [solo hisseleme](/staking/solo), Ethereum için en iyi seçenektir.
+Hayır, iş kanıtı merkezileşmeye eğilimlidir çünkü madencilik maliyetleri artar ve önce bireyleri, ardından küçük şirketleri ve benzerlerini piyasanın dışına iter. Hisse kanıtı ile ilgili mevcut sorun, likit staking türevlerinin (LSD'ler) etkisidir. Bunlar, gerçek ETH'nin stake'i kaldırılmadan herkesin ikincil piyasalarda takas edebileceği, bir sağlayıcı tarafından stake edilen ETH'yi temsil eden tokenlardır. LSD'ler, kullanıcıların 32 ETH'den daha az bir miktarla stake yapmasına olanak tanır, ancak aynı zamanda birkaç büyük kuruluşun stake'in büyük bir kısmını kontrol etmesiyle sonuçlanabilecek bir merkezileşme riski de yaratır. Bu nedenle [bireysel staking](/staking/solo) Ethereum için en iyi seçenektir.
 
-[LSD'lerde hisse merkezileşmesi hakkında daha fazla bilgi](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+[LSD'lerde stake merkezileşmesi hakkında daha fazla bilgi](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
-## Neden sadece ETH hisseleyebilirim? {#why-can-i-only-stake-eth}
+## Neden sadece ETH stake edebilirim? {#why-can-i-only-stake-eth}
 
-ETH, Ethereum'un doğal para birimidir. Tüm hisselerin etkili dengelemelerini hesaplamak ve oy ağırlıklarını belirlemek için tek bir para birimine ihtiyaç vardır; aynı zamanda güvenlik açısından da önemlidir. ETH, bir akıllı sözleşme değil, Ethereum'un temel bir bileşenidir. Başka para birimlerini dahil etmek, hisselemenin karmaşıklığını önemli ölçüde artırır ve güvenliği azaltır.
+ETH, Ethereum'un yerel para birimidir. Hem oyları ağırlıklandırmak için etkin bakiyelerin muhasebeleştirilmesi hem de güvenlik açısından tüm stake'lerin cinsinden ifade edildiği tek bir para birimine sahip olmak esastır. ETH'nin kendisi bir akıllı sözleşmeden ziyade Ethereum'un temel bir bileşenidir. Diğer para birimlerini dahil etmek, karmaşıklığı önemli ölçüde artıracak ve staking güvenliğini azaltacaktır.
 
-## Ethereum, hisse ispatı kullanılan tek blok zincir mi? {#is-ethereum-the-only-pos-blockchain}
+## Ethereum tek hisse kanıtı (PoS) blokzinciri midir? {#is-ethereum-the-only-pos-blockchain}
 
-Hayır, birkaç tane hisse ispatı blok zinciri bulunmaktadır. Hiçbiri Ethereum'a tam olarak benzemez, Ethereum'un hisse ispatı mekanizması benzersizdir.
+Hayır, birkaç hisse kanıtı blokzinciri vardır. Hiçbiri Ethereum ile aynı değildir; Ethereum'un hisse kanıtı mekanizması benzersizdir.
 
-## Birleşim nedir? {#what-is-the-merge}
+## Birleşme (The Merge) nedir? {#what-is-the-merge}
 
-Birleşim, Ethereum'un iş ispatı tabanlı mutabakat mekanizmasını kapattığı ve hisse ispatı tabanlı mutabakat mekanizmasını devreye aldığı an olarak adlandırılır. Birleşim, 15 Eylül 2022'de gerçekleşti.
+Birleşme, Ethereum'un iş kanıtı tabanlı mutabakat mekanizmasını kapatıp hisse kanıtı tabanlı mutabakat mekanizmasını açtığı andı. Birleşme 15 Eylül 2022'de gerçekleşti.
 
-[Birleşim hakkında daha fazla bilgi](/roadmap/merge)
+[Birleşme hakkında daha fazla bilgi](/roadmap/merge)
 
-## Cansızlık ve güvenlilik nedir? {#what-are-liveness-and-safety}
+## Canlılık ve güvenlik nedir? {#what-are-liveness-and-safety}
 
-Cansızlık ve güvenlik, bir blok zincir için temel güvenlik endişeleridir. Cansızlık, bir zincirin kesinleştirilebilir olma durumunu ifade eder. Zincir kesinleştirmeyi durdurursa veya kullanıcılar buna kolayca erişemezse, bunlar cansızlık hataları olarak kabul edilir. Erişim maliyetinin aşırı derecede yüksek olması da bir cansızlık hatası olarak değerlendirilebilir. Güvenlik, zincire saldırmanın ne kadar zor olduğunu ifade eder - yani, çelişen kontrol noktalarını kesinleştirmek.
+Canlılık ve güvenlik, bir blokzincir için iki temel güvenlik endişesidir. Canlılık, kesinleşen bir zincirin kullanılabilirliğidir. Zincir kesinleşmeyi durdurursa veya kullanıcılar zincire kolayca erişemezse, bunlar canlılık hatalarıdır. Son derece yüksek erişim maliyeti de bir canlılık hatası olarak kabul edilebilir. Güvenlik, zincire saldırmanın (yani çelişen kontrol noktalarını kesinleştirmenin) ne kadar zor olduğunu ifade eder.
 
-[Casper raporunda daha fazlasını okuyun](https://arxiv.org/pdf/1710.09437.pdf)
+[Casper makalesinde daha fazla bilgi edinin](https://arxiv.org/pdf/1710.09437.pdf)

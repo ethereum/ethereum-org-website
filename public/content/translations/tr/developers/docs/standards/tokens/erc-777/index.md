@@ -1,45 +1,45 @@
 ---
-title: "ERC-777 Token Standardı"
-description: "Güvenlik nedeniyle ERC-20 önerilse de, kancalara sahip geliştirilmiş bir değiştirilebilir jeton standardı olan ERC-777 hakkında bilgi edinin."
+title: ERC-777 Token Standardı
+description: Güvenlik nedeniyle ERC-20 önerilse de, kancalara (hooks) sahip geliştirilmiş bir misli token standardı olan ERC-777 hakkında bilgi edinin.
 lang: tr
 ---
 
 ## Uyarı {#warning}
 
-**ERC-777'nin, [farklı saldırı biçimlerine karşı savunmasızlığı](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620) nedeniyle düzgün bir şekilde uygulanması zordur. Bunun yerine [ERC-20](/developers/docs/standards/tokens/erc-20/) kullanılması önerilir.** Bu sayfa, tarihsel bir arşiv olarak kalır.
+**ERC-777'nin [farklı saldırı türlerine karşı duyarlılığı](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620) nedeniyle doğru bir şekilde uygulanması zordur. Bunun yerine [ERC-20](/developers/docs/standards/tokens/erc-20/) kullanılması önerilir.** Bu sayfa tarihi bir arşiv olarak kalmaktadır.
 
-## Giriş {#introduction}
+## Giriş? {#introduction}
 
-ERC-777, mevcut [ERC-20](/developers/docs/standards/tokens/erc-20/) standardını geliştiren bir değiştirilebilir jeton standardıdır.
+ERC-777, mevcut [ERC-20](/developers/docs/standards/tokens/erc-20/) standardını geliştiren bir misli token standardıdır.
 
 ## Ön Koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamak için öncelikle [ERC-20](/developers/docs/standards/tokens/erc-20/) hakkında bilgi edinmenizi öneririz.
+Bu sayfayı daha iyi anlamak için öncelikle [ERC-20](/developers/docs/standards/tokens/erc-20/) hakkında okumanızı öneririz.
 
-## ERC-777, ERC-20'nin üzerine ne tür iyileştirmeler önerir? {#-erc-777-vs-erc-20}
+## ERC-777, ERC-20'ye göre hangi iyileştirmeleri sunar? {#-erc-777-vs-erc-20}
 
-ERC-777, ERC-20'nin üzerine aşağıdaki iyileştirmeleri sağlar.
+ERC-777, ERC-20'ye göre aşağıdaki iyileştirmeleri sağlar.
 
 ### Kancalar {#hooks}
 
-Kancalar, bir akıllı sözleşmenin kodunda açıklanan bir fonksiyondur. Kancalar, jetonlar sözleşme aracılığıyla gönderildiğinde veya alındığında çağrılır. Bu, bir akıllı sözleşmenin gelen veya giden jetonlara tepki vermesini sağlar.
+Kancalar, bir akıllı sözleşme kodunda tanımlanan bir işlevdir. Kancalar, sözleşme aracılığıyla Token gönderildiğinde veya alındığında çağrılır. Bu, bir akıllı sözleşmenin gelen veya giden Token'lara tepki vermesini sağlar.
 
 Kancalar, [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820) standardı kullanılarak kaydedilir ve keşfedilir.
 
-#### Kancalar neden kullanışlıdır? {#why-are-hooks-great}
+#### Kancalar neden harikadır? {#why-are-hooks-great}
 
-1. Kancalar, bir sözleşmeye jeton göndermeyi ve sözleşmeyi tek bir işlemde bilgilendirmeyi sağlar; bunun aksine [ERC-20](https://eips.ethereum.org/EIPS/eip-20) ise bunu başarmak için çift çağrı (`approve`/`transferFrom`) gerektirir.
-2. Kayıtlı kancalara sahip olmayan sözleşmeler ERC-777 ile uyumsuzlardır. Gönderen sözleşme, alıcı sözleşme bir kanca kaydetmediyse işlemi iptal eder. Bu, ERC-777 dışındaki akıllı sözleşmelere yanlışlıkla transfer yapılmasını önler.
-3. Kancalar işlemleri reddedebilirler.
+1. Kancalar, bunu başarmak için çift çağrı (`approve`/`transferFrom`) gerektiren [ERC-20](https://eips.ethereum.org/EIPS/eip-20)'nin aksine, tek bir işlemde bir sözleşmeye Token göndermeye ve sözleşmeyi bilgilendirmeye olanak tanır.
+2. Kanca kaydetmemiş sözleşmeler ERC-777 ile uyumsuzdur. Alıcı sözleşme bir kanca kaydetmediğinde, gönderen sözleşme işlemi iptal edecektir. Bu, ERC-777 olmayan akıllı sözleşmelere yanlışlıkla yapılan transferleri önler.
+3. Kancalar işlemleri reddedebilir.
 
 ### Ondalıklar {#decimals}
 
-Standart ayrıca ERC-20'de `decimals` kaynaklı kafa karışıklığını da çözer. Bu netlik, geliştirici deneyimini geliştirir.
+Standart ayrıca ERC-20'de `decimals` etrafında oluşan kafa karışıklığını da çözer. Bu netlik, geliştirici deneyimini iyileştirir.
 
 ### ERC-20 ile geriye dönük uyumluluk {#backwards-compatibility-with-erc-20}
 
-ERC-777 sözleşmeleri ile sanki ERC-20 sözleşmeleriymiş gibi etkileşime geçilebilir.
+ERC-777 sözleşmeleriyle, sanki ERC-20 sözleşmeleriymiş gibi etkileşime girilebilir.
 
-## Ek Okumalar {#further-reading}
+## Daha Fazla Okuma {#further-reading}
 
-[EIP-777: Jeton Standardı](https://eips.ethereum.org/EIPS/eip-777)
+[EIP-777: Token Standardı](https://eips.ethereum.org/EIPS/eip-777)

@@ -1,93 +1,93 @@
 ---
-title: "Gerçek dünya varlıkları (RWA'lar)"
-metaTitle: "RWA'lar nedir? | Gerçek dünya varlıklarının Faydaları ve Kullanımı"
-description: "Ethereum'daki Gerçek dünya varlıklarına genel bir bakış"
+title: Gerçek dünya varlıkları (RWA'lar)
+metaTitle: RWA'lar nedir? | Gerçek Dünya Varlıklarının Faydaları ve Kullanımı
+description: Ethereum'daki gerçek dünya varlıklarına genel bir bakış
 lang: tr
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: "Adam ve köpek oyun oynuyor."
+alt: Oynayan adam ve köpek.
 sidebarDepth: 2
 summaryPoints:
-  - "Değerli emtiaları dijital tokenlere dönüştürme yöntemi."
-  - "Artık bir mülkün veya eşyanın tamamını satın almak yerine, gerçek hayattaki nesnelerin veya varlıkların bir kısmına sahip olabilirsiniz."
-  - "Geleneksel finansı blokzincir ekosistemine bağlar."
+  - "Değerli emtiaları dijital tokenlara dönüştürmek için bir yöntem."
+  - "Artık bir mülkün veya eşyanın tamamını satın almak zorunda kalmadan, gerçek hayattaki nesnelerin veya varlıkların bir kısmına sahip olabilirsiniz."
+  - "Geleneksel finansı Blokzincir ekosistemiyle birbirine bağlar."
 ---
 
-Gerçek dünya varlıkları (RWA'lar), gayrimenkul, altın, hisse senetleri, sanat eserleri, makineler veya koleksiyon ürünleri gibi mevcut servet biçimlerini temsil eden jetonlardır. Bu öğeleri jetonlaştırmak, onları dijital forma dönüştürerek birden fazla sahip arasında bölünmelerine olanak tanır ve ticaretini yapmayı kolaylaştırır.
+Gerçek dünya varlıkları (RWA'lar), gayrimenkul, altın, hisse senetleri, sanat eserleri, makineler veya koleksiyon parçaları gibi mevcut zenginlik biçimlerini temsil eden tokenlardır. Bu öğeleri tokenlaştırmak, onları dijital forma dönüştürerek birden fazla sahip arasında bölünmelerine olanak tanır ve ticaretini kolaylaştırır.
 
 ## RWA'lar nedir? {#what-are-rwas}
 
-Bazı RWA'lar, altın külçeleri veya ticari binalar gibi görebileceğiniz ve dokunabileceğiniz somut öğelerdir. Diğerleri ise devlet borcu, fikri mülkiyet veya bir şirketteki öz sermaye gibi soyut varlıklardır.
+Bazı RWA'lar somuttur; altın külçeleri veya ticari binalar gibi görebileceğiniz ve dokunabileceğiniz öğelerdir. Diğerleri ise devlet borcu, fikri mülkiyet veya bir şirketteki öz sermaye gibi soyuttur.
+ 
+Tokenlaştırıldığında, bu varlıklar değer birimlerine dönüştürülür. Tokenlaştırılmış altın, bunun nasıl çalıştığına dair iyi bir örnektir. [Paxos](https://www.paxos.com/) şirketi, 400 onsluk altın külçelerini Ethereum Blokzinciri üzerinde her biri bir ons altınla desteklenen 400 tokena dönüştürür. Token sahipleri, tokenlarını istedikleri zaman altın karşılığında bozdurabilirler. Bu durum, başka bir RWA şirketi olan [Tether Gold](https://gold.tether.to/)'dan satın alınan tokenlar için de geçerlidir.
 
-Jetonlaştırıldığında, bu varlıklar değer birimlerine dönüştürülür. Jetonlaştırılmış altın, bunun nasıl çalıştığına iyi bir örnektir. [Paxos](https://www.paxos.com/) şirketi, 400 onsluk altın külçelerini Ethereum blokzincirinde her biri bir ons altınla desteklenen 400 jetona dönüştürür. Jeton sahipleri, istedikleri zaman jetonlarını altın karşılığında kullanabilirler. Bu durum, başka bir RWA şirketi olan [Tether Gold](https://gold.tether.to/) üzerinden satın alınan jetonlar için de geçerlidir.
-
-Her jeton daha da küçük parçalara bölünebilir. Örneğin, Tether Gold jetonları 0,000001 gibi küçük parçalara ayrılabilir.
-
-RWA jetonlarının kendilerine özgü bir değeri yoktur. Bunun yerine, temsil ettikleri öğenin değerini yansıtırlar ve bu nedenle jetonun değeri, öğenin değeriyle birlikte değişir.
+Her bir token daha da küçük parçalara bölünebilir. Örneğin Tether Gold tokenları, 0.000001 kadar küçük parçalara ayrılabilir.
+ 
+RWA tokenlarının kendi başlarına bir içsel değeri yoktur. Bunun yerine, temsil ettikleri öğenin değerini yansıtırlar ve bu nedenle tokenın değeri, öğenin değeriyle birlikte değişir.
 
 ## RWA'ların faydaları nelerdir? {#rwas-benefits}
 
 <Grid>
-  <Card title="Kısmi Sahiplik" emoji=":house_buildings:" description="RWA'lar yatırımı demokratikleştirir. Belirli varlık türlerine yatırım yapmaya gücünüz yetmiyorsa artık kısmi bir sahip olarak yatırım yapabilirsiniz."/>
-  <Card title="Yatırım çeşitlendirmesi" emoji="🛒" description="Birden fazla varlık türüne yatırım yapabilir, büyük meblağlar harcamadan portföyünüzü çeşitlendirebilirsiniz." />
-  <Card title="Küresel fırsatlar" emoji="🌏" description="RWA'lar yatırımdaki coğrafi engelleri ortadan kaldırır. Dünyanın herhangi bir yerindeki varlıklar için token satın alabilirsiniz." />
-  <Card title="Varlıklara likidite kazandırma" emoji="🖼️" description="Çoğu varlık likit değildir. Değerli olmaları, harcanabilir nakit olmalarıyla aynı anlama gelmez. Sahipleri, bir varlığı token'laştırarak bir kısmını veya tamamını kullanabilecekleri bir değere dönüştürebilir."/>
-  <Card title="Küresel pazar" emoji="💰" description="Varlıklarını değerlendirmek isteyen sahipler, sadece arsa, hisse senedi, sanat eseri veya geleneksel finansal araçları alabilenlere değil, çok daha geniş bir yatırımcı kitlesine ulaşabilir." />
-  <Card title="Aracıları atlayın" emoji="👩‍💻" description="Token'lar akıllı sözleşmelerle çalışır; bu sayede aracılara ve onların ücretlerine gerek kalmadan kişiden kişiye alınıp satılabilirler." />
+  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
+  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
+  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
+  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
+  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
+  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
 </Grid>
 
 ## RWA'lar nasıl çalışır? {#how-rwas-work}
 
 RWA ekosisteminden birkaç örneğe göz atalım: gayrimenkul, geleneksel finansal ürünler ve güzel sanatlar.
 
-### Gayrimenkul yatırımı {#investing-in-real-estate}
+### Gayrimenkule yatırım yapmak {#investing-in-real-estate}
 
-Gayrimenkule yatırım yapmak istediğinizi, ancak bir mülkün tamamını satın almanın bütçenizin dışında olduğunu varsayalım. Bunun yerine, [RealT](https://realt.co/) gibi bir proje aracılığıyla RWA satın alabilirsiniz. Jetonları, bir mülkün tapusunu elinde tutmak için oluşturulmuş bir limited şirketteki (LLC) hisseleri temsil eder. Jeton sahipleri, sahip oldukları paya göre sabit para şeklinde kira geliri elde ederler; RealT, şimdiye kadar yatırımcılara 15 milyon ABD doları net kira geliri geri ödediğini söylüyor.
+Diyelim ki gayrimenkule yatırım yapmak istiyorsunuz, ancak bir mülkün tamamını satın almak bütçenizi aşıyor. Bunun yerine, [RealT](https://realt.co/) gibi bir proje aracılığıyla RWA'lar satın alabilirsiniz. Bu projenin tokenları, bir mülkün tapusunu elinde tutmak için oluşturulmuş bir limited şirketteki (LLC) hisseleri temsil eder. Token sahipleri, ellerinde bulundurdukları paya göre sabit coinler (stablecoin) şeklinde kira geliri elde ederler; RealT, bugüne kadar yatırımcılara 15 milyon ABD doları net kira geliri sağladığını belirtmektedir. 
 
-Aynı doğrultudaki başka bir proje olan [LABS Group](https://x.com/labsgroupio), insanların 100 ABD doları gibi küçük miktarlarla jetonlaştırılmış gayrimenkullere yatırım yapmasına olanak tanır.
+Aynı doğrultudaki bir başka proje olan [LABS Group](https://x.com/labsgroupio), insanların 100 ABD doları gibi küçük miktarlarla tokenlaştırılmış gayrimenkullere yatırım yapmasına olanak tanır.
 
 ### Finansal ürünlere yatırım yapmak {#investing-in-financial-products}
 
-Birkaç proje, menkul kıymetleri, hisse senetlerini, tahvilleri ve diğer finansal araçları blokzincire taşıyarak geleneksel finans dünyası ile merkeziyetsiz finans (DeFi) arasında köprü kuruyor.
+Çeşitli projeler, menkul kıymetleri, hisse senetlerini, tahvilleri ve diğer finansal araçları Blokzincir üzerine taşıyarak geleneksel finans dünyası ile merkeziyetsiz finans (DeFi) arasında köprü kurar.
 
-Örneğin, Ethereum tabanlı [Securitize](https://securitize.io/) şirketi, geleneksel finansal ürünleri jetonlaştırma konusunda uzmanlaşmıştır. 2024 yılında, bir RWA fonu başlatmak için BlackRock ile ortaklık kurdu. BlackRock, sonunda varlıklarının 10 trilyon ABD doları değerindeki kısmını jetonlaştırmayı planladığını söylüyor: CEO'su Larry Fink, jetonlaştırmayı "piyasalar için yeni nesil" olarak adlandırdı.
+Örneğin, Ethereum tabanlı [Securitize](https://securitize.io/) şirketi geleneksel finansal ürünleri tokenlaştırma konusunda uzmanlaşmıştır. 2024 yılında, bir RWA fonu başlatmak için BlackRock ile ortaklık kurdu. BlackRock, nihayetinde 10 trilyon ABD doları değerindeki varlıklarını tokenlaştırmayı planladığını söylüyor: CEO'su Larry Fink, tokenlaştırmayı "piyasalar için yeni nesil" olarak adlandırdı.
 
 ### Güzel sanatlara yatırım yapmak {#investing-in-fine-art}
 
-Güzel sanatlar yatırımı için birkaç farklı mekanizma bulunmaktadır. [Masterworks](https://www.masterworks.com/), sanat eseri satın alır, her bir parçayı menkul kıymetleştirir ve hisseleri jeton şeklinde satar. Daha sonra sanat eserini satmayı ve kârı jeton sahiplerine dağıtmayı planlıyor.
+Güzel sanatlar yatırımı için birkaç farklı mekanizma bulunmaktadır. [Masterworks](https://www.masterworks.com/) sanat eserleri satın alır, her bir parçayı menkul kıymetleştirir ve hisseleri token şeklinde satar. Daha sonra sanat eserini satmayı ve kârı token sahiplerine dağıtmayı planlamaktadır.
 
-Jeton sahipleri, sanat eserinin depolanmasını veya gelecekteki satışını kontrol etmez. Bunun yerine, sanat eserinin değeriyle birlikte yükselip düşen jetonlarını ne kadar süre ellerinde tutacaklarından sorumludurlar.
+Token sahipleri, sanat eserinin depolanmasını veya gelecekteki satışını kontrol etmezler. Bunun yerine, sanat eserinin değeriyle birlikte yükselen ve düşen tokenlarını ne kadar süre ellerinde tutacaklarına karar verirler.
+ 
+Bu arada, Blokzincir tabanlı dijital sanat sicili [Artory](https://www.artory.com/), sanat eserlerinin orijinalliğini doğrular ve geçmiş sahipliği kaydeder.
 
-Bu arada, blokzincir tabanlı dijital sanat sicili [Artory](https://www.artory.com/), sanat eserlerinin orijinalliğini doğrular ve geçmiş mülkiyet kayıtlarını tutar.
+### Koleksiyon parçalarına yatırım yapmak {#investing-in-collectibles}
 
-### Koleksiyon ürünlerine yatırım yapmak {#investing-in-collectibles}
+Şimdiye kadar, bu örneklerin çoğu tokenlaştırmanın çeşitli zenginlik türlerinin kısmi sahipliğine nasıl olanak tanıdığını göstermektedir. Tokenlaştırmanın bir diğer faydası da, koleksiyon parçaları gibi değerli eşyaların küresel pazarda ticaretini mümkün kılmasıdır.
 
-Şimdiye kadar, bu örneklerin çoğu, jetonlaştırmanın çeşitli servet türlerinde kısmi mülkiyete nasıl izin verdiğini göstermektedir. Jetonlaştırmanın bir diğer faydası da, koleksiyon ürünleri gibi değerli eşyaların küresel piyasada ticaretini sağlamasıdır.
+Bunun bir örneği, takas kartlarını (beyzbol kartları, futbol kartları veya Pokemon kartları gibi) tokenlaştıran [Courtyard](https://courtyard.io/)'dır. Kart sahipleri, kartlarını ABD'deki güvenli bir depolama tesisine gönderirler. Kartlar dijital tokenlar olarak basılır ve Courtyard'ın pazar yerinde alım satım yapılabilmesi için sahiplerinin cüzdanlarına eklenir. Courtyard yalnızca derecelendirilmiş kartları kabul eder: bu, üçüncü bir tarafın bir kartın orijinalliğini onayladığı ve yıpranmış veya kusursuz olmasına bakılmaksızın durumuna göre bir puan verdiği anlamına gelir.
 
-Bunun bir örneği, beyzbol kartları, futbol kartları veya Pokemon kartları gibi takas kartlarını jetonlaştıran [Courtyard](https://courtyard.io/)'dur. Kart sahipleri kartlarını ABD'deki güvenli bir depolama tesisine gönderir. Kartlar, dijital jetonlar olarak basılır ve Courtyard'ın pazar yerinde ticaret için sahiplerinin cüzdanlarına eklenir. Courtyard yalnızca derecelendirilmiş kartları kabul eder: bu, üçüncü bir tarafın kartın orijinalliğini onayladığı ve yıpranmış veya bozulmamış olmasına bağlı olarak durumuna göre bir puan verdiği anlamına gelir.
-
-Courtyard ayrıca bir tür telif hakkı planı da sunar. Bir kart her satıldığında, onu jetonlaştıran kişi gelirin yüzde birini alır. Yalnızca kartın ilk sahipleri bu şekilde ödüllendirilir. Bir sahip, dünyanın neresinde olursa olsun, istediği zaman dijital kartlarını fiziksel kartlarla takas edebilir.
+Courtyard ayrıca bir tür telif hakkı planı sunar. Bir kart her satıldığında, onu tokenlaştıran kişi gelirin yüzde birini alır. Yalnızca kartı ilk oluşturanlar bu şekilde ödüllendirilir. Bir sahip, dünyanın neresinde olursa olsun, istediği zaman dijital kartlarını fiziksel kartlarla takas edebilir. 
 
 ## RWA'ların sınırlamaları nelerdir? {#rwas-limitations}
 
-Bu erken aşamada RWA'ların zorluklarından biri, gerçek hayattaki nesneler ile dijital temsilleri arasındaki bağlantıyı sağlamaktır.
+Bu erken aşamada RWA'ların zorluklarından biri, gerçek hayattaki nesneler ile dijital temsilleri arasındaki bağlantının sağlanmasını içerir.
 
-RWA projelerinin yatırımcılara rezerv kanıtı sunması, yani dijital jetonları destekleyen fiziksel nesnelerin yasal sahibi olduklarının garantisini vermesi olumlu bir işarettir. Daha önce bahsedilen, varlıklarını güvenli depolamada tutan ve sahiplerine istedikleri zaman bir jetonu fiziksel eşdeğeriyle takas etme seçeneği sunan Paxos, Tether Gold veya Courtyard'ı düşünün.
+RWA projelerinin yatırımcılara rezerv kanıtı (dijital tokenları destekleyen fiziksel nesnelerin yasal sahipleri olduklarının garantisi) sunması olumlu bir işarettir. Daha önce bahsedilen ve varlıklarını güvenli depolamada tutan ve sahiplerine istedikleri zaman bir tokenı fiziksel karşılığıyla takas etme seçeneği sunan Paxos, Tether Gold veya Courtyard'ı düşünün.
 
-Başka bir sınırlama, jeton sahipliğinin dünya çapındaki hukuk sistemleri tarafından tanınıp tanınmadığıdır. Başka bir deyişle, akıllı sözleşmeler bir mahkemede uygulanabilir mi veya bir RWA jetonunun sahibi gerçek hayattaki öğenin mülkiyetini talep edebilir mi?
+Bir diğer sınırlama, token sahipliğinin dünya çapındaki hukuk sistemleri tarafından tanınıp tanınmadığıdır. Başka bir deyişle, akıllı sözleşmeler bir hukuk mahkemesinde uygulanabilir mi veya bir RWA tokenının sahibi gerçek hayattaki öğenin sahipliğini talep edebilir mi?
 
-Jetonlaştırmayı özel olarak tanımak için yasal çerçeveler oluşturma konusunda öncüler arasında Singapur, Birleşik Arap Emirlikleri, Hong Kong ve 2021'de jetonlaştırma gibi teknolojileri düzenlemek için 'Blokzincir Yasası' olarak adlandırılan bir yasa çıkaran İsviçre yer alıyor. Avrupa Birliği RWA'ları düzenleme sürecini başlatmışken, Amerika Birleşik Devletleri'nde Menkul Kıymetler ve Borsa Komisyonu'nun bir noktada RWA'lar hakkında bir kılavuz yayınlaması bekleniyor.
+Özellikle tokenlaştırmayı tanımak için yasal çerçeveler oluşturma konusunda önde gelenlerden bazıları Singapur, Birleşik Arap Emirlikleri, Hong Kong ve tokenlaştırma gibi teknolojileri düzenlemek için 2021'de 'Blokzincir Yasası' lakaplı bir mevzuat getiren İsviçre'dir. Avrupa Birliği RWA'ları düzenleme sürecine başlamıştır, Amerika Birleşik Devletleri'nde ise Menkul Kıymetler ve Borsa Komisyonu'nun bir noktada RWA'lar hakkında rehberlik yayınlaması beklenmektedir.
 
 ## Daha fazla bilgi edinin {#learn-more}
 
-[Akıllı sözleşmelere](/smart-contracts/) dalın veya farklı bir jeton sınıfı olan [değiştirilemez jetonlar (NFT)](/nft/) hakkında daha fazla bilgi edinin.
+[Akıllı sözleşmeleri](/smart-contracts/) derinlemesine inceleyin veya farklı bir token sınıfı olan [niteliksiz tokenlar (NFT)](/nft/) hakkında daha fazla bilgi edinin.
 
-## Daha fazla kaynak {#further-reading}
+## İleri okuma {#further-reading}
 
-- Britannica'da [Varlık jetonlaştırma nedir?](https://www.britannica.com/money/real-world-asset-tokenization)
-- Dünya Ekonomik Forumu'nda [Jetonlaştırmanın küresel finans ve yatırımı nasıl dönüştürdüğü](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/)
-- Forbes'ta [Kripto yatırımcılarının gerçek dünya varlıklarını jetonlaştırma hakkında bilmesi gerekenler](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/)
-- Britannica'da [Akıllı sözleşmelerin blokzincir ile nasıl çalıştığı](https://www.britannica.com/money/how-smart-contracts-work)
-- Medium'da [Jetonlaştırılmış gerçek dünya varlıkları DeFi'yi nasıl dönüştürüyor](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a)
-- [Kriptoda RWA nedir? Blokzincirdeki rolü açıklandı](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) BitDegree'de
-- Forbes'ta [Piyasa değerine göre günümüzün en iyi gerçek dünya varlıkları (RWA) coin'leri](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/)
+- Britannica'da [Varlık tokenlaştırma nedir?](https://www.britannica.com/money/real-world-asset-tokenization)
+- Dünya Ekonomik Forumu'nda [Tokenlaştırma küresel finans ve yatırımı nasıl dönüştürüyor?](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/)
+- Forbes'ta [Kripto yatırımcılarının gerçek dünya varlıklarını tokenlaştırma hakkında bilmesi gerekenler](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/)
+- Britannica'da [Akıllı sözleşmeler Blokzincir ile nasıl çalışır?](https://www.britannica.com/money/how-smart-contracts-work)
+- Medium'da [Tokenlaştırılmış gerçek dünya varlıkları DeFi'yi nasıl dönüştürüyor?](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a)
+- BitDegree'de [Kriptoda RWA nedir? Blokzincirdeki rolü açıklandı](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto)
+- Forbes'ta [Piyasa değerine göre günümüzün en iyi gerçek dünya varlıkları (RWA'lar) coinleri](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/)

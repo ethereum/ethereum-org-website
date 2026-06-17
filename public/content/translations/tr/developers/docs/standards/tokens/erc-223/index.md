@@ -1,6 +1,6 @@
 ---
-title: "ERC-223 Jeton Standardı"
-description: "ERC-223 değiştirilebilir jeton standardına genel bir bakış, çalışma şekli ve ERC-20 ile karşılaştırılması."
+title: ERC-223 Token Standardı
+description: ERC-223 misli Token standardına, nasıl çalıştığına ve ERC-20 ile karşılaştırmasına genel bir bakış.
 lang: tr
 ---
 
@@ -8,36 +8,36 @@ lang: tr
 
 ### ERC-223 nedir? {#what-is-erc223}
 
-ERC-223, ERC-20 standardına benzer şekilde, değiştirilebilir jetonlara yönelik bir standarttır. Temel fark, ERC-223'ün yalnızca jeton API'sini değil aynı zamanda jetonları göndericiden alıcıya transfer etme mantığını da tanımlamasıdır. Jeton transferlerinin alıcının tarafında işlenmesini sağlayan bir iletişim modeline sahiptir.
+ERC-223, ERC-20 standardına benzer şekilde misli Token'lar için bir standarttır. Temel fark, ERC-223'ün yalnızca Token API'sini değil, aynı zamanda Token'ları göndericiden alıcıya transfer etme mantığını da tanımlamasıdır. Token transferlerinin alıcı tarafında işlenmesine olanak tanıyan bir iletişim modeli sunar.
 
 ### ERC-20'den farkları {#erc20-differences}
 
-ERC-223, ERC-20'nin bazı sınırlamalarını ele alır ve jeton sözleşmesi ile jetonları alabilecek sözleşme arasında yeni bir etkileşim yöntemi sunar. ERC-223 ile mümkün olup ERC-20 ile mümkün olmayan birkaç şey şunlardır:
+ERC-223, ERC-20'nin bazı sınırlamalarını ele alır ve Token sözleşmesi ile Token'ları alabilecek bir sözleşme arasında yeni bir etkileşim yöntemi sunar. ERC-223 ile mümkün olup ERC-20 ile mümkün olmayan birkaç şey vardır:
 
-- Alıcı tarafında jeton transferi işlemlerinin yönetimi: Alıcılar, ERC-223 jetonlarının yatırıldığını tespit edebilirler.
-- Yanlış gönderilmiş jetonların reddedilmesi: Bir kullanıcının ERC-223 jetonlarını jeton alması beklenmeyen bir sözleşmeye göndermesi halinde sözleşme, işlemi reddedebilir ve bu da jeton kaybını önler.
-- Transferlerde meta veri: ERC-223 jetonları, jeton işlemlerine rastgele bilgi eklenmesini sağlayan meta veriler içerebilir.
+- Alıcı tarafında Token transferi işleme: Alıcılar, bir ERC-223 Token'ının yatırıldığını tespit edebilir.
+- Yanlış gönderilen Token'ların reddedilmesi: Bir kullanıcı, Token almaması gereken bir sözleşmeye ERC-223 Token'ları gönderirse, sözleşme işlemi reddederek Token kaybını önleyebilir.
+- Transferlerde meta veri: ERC-223 Token'ları, Token işlemlerine isteğe bağlı bilgilerin eklenmesine olanak tanıyan meta veri içerebilir.
 
 ## Ön Koşullar {#prerequisites}
 
 - [Hesaplar](/developers/docs/accounts)
 - [Akıllı Sözleşmeler](/developers/docs/smart-contracts/)
-- [Jeton standartları](/developers/docs/standards/tokens/)
+- [Token standartları](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
 ## Gövde {#body}
 
-ERC-223, akıllı sözleşmeler içindeki jetonlar için bir API uygulayan bir jeton standardıdır. Ayrıca, ERC-223 jetonlarını alması gereken sözleşmeler için bir API belirtir. ERC-223 Alıcı API'sini desteklemeyen sözleşmeler ERC-223 jetonlarlarını alamaz ve bu da kullanıcı hatalarını önler.
+ERC-223, akıllı sözleşmeler içindeki Token'lar için bir API uygulayan bir Token standardıdır. Ayrıca ERC-223 Token'larını alması beklenen sözleşmeler için de bir API bildirir. ERC-223 Alıcı API'sini desteklemeyen sözleşmeler ERC-223 Token'larını alamaz, bu da kullanıcı hatalarını önler.
 
-Aşağıdaki yöntem ve olayları uyguluyan bir akıllı sözleşme, ERC-223 uyumlu bir jeton sözleşmesi olarak adlandırılabilir. Dağıtıldıktan sonra, Ethereum üzerinde oluşturulan jetonları takip etmekten sorumlu olacaktır.
+Bir akıllı sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-223 uyumlu bir Token sözleşmesi olarak adlandırılabilir. Dağıtıldıktan sonra, Ethereum üzerinde oluşturulan Token'ları takip etmekten sorumlu olacaktır.
 
-Sözleşmenin yalnızca bu işlevlere sahip olması gerekmez ve bir geliştirici, bu sözleşmeye farklı jeton standartlarına ait herhangi bir özelliği ekleyebilir. Örneğin, `approve` ve `transferFrom` fonksiyonları ERC-223 standardının bir parçası olmasa da, gerekli durumlarda bu fonksiyonlar uygulanabilir.
+Sözleşme yalnızca bu işlevlere sahip olmak zorunda değildir ve bir geliştirici bu sözleşmeye farklı Token standartlarından başka herhangi bir özellik ekleyebilir. Örneğin, `approve` ve `transferFrom` işlevleri ERC-223 standardının bir parçası değildir ancak gerekirse bu işlevler uygulanabilir.
 
-[EIP-223'den](https://eips.ethereum.org/EIPS/eip-223):
+[EIP-223](https://eips.ethereum.org/EIPS/eip-223)'ten:
 
 ### Yöntemler {#methods}
 
-ERC-223 jetonu şu yöntemleri uygulamalıdır:
+ERC-223 Token'ı aşağıdaki yöntemleri uygulamalıdır:
 
 ```solidity
 function name() public view returns (string)
@@ -49,13 +49,13 @@ function transfer(address _to, uint256 _value) public returns (bool success)
 function transfer(address _to, uint256 _value, bytes calldata _data) public returns (bool success)
 ```
 
-ERC-223 jetonlarını alması gereken bir sözleşme, şu yöntemi uygulamalıdır:
+ERC-223 Token'larını alması beklenen bir sözleşme aşağıdaki yöntemi uygulamalıdır:
 
 ```solidity
 function tokenReceived(address _from, uint _value, bytes calldata _data)
 ```
 
-ERC-223 jetonlarının `tokenReceived(..)` fonksiyonunu uygulamayan bir sözleşmeye gönderilmesi halinde transfer başarısız olmalı ve jetonlar gönderenin bakiyesinden çıkarılmamalıdır.
+ERC-223 Token'ları `tokenReceived(..)` işlevini uygulamayan bir sözleşmeye gönderilirse, transfer başarısız olmalı ve Token'lar göndericinin bakiyesinden taşınmamalıdır.
 
 ### Olaylar {#events}
 
@@ -65,11 +65,11 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 ### Örnekler {#examples}
 
-ERC-223 jetonu API'si ERC-20'ye benzer olduğundan, kullanıcı arayüzü geliştirme açısından herhangi bir fark yoktur. Burada tek istisna, ERC-223 jetonlarının bu standart için opsiyonel olan `approve` + `transferFrom` fonksiyonlarına sahip olamamasıdır.
+ERC-223 Token'ının API'si ERC-20'ninkine benzerdir, bu nedenle kullanıcı arayüzü (UI) geliştirme açısından hiçbir fark yoktur. Buradaki tek istisna, bu standart için isteğe bağlı olduklarından ERC-223 Token'larının `approve` + `transferFrom` işlevlerine sahip olmayabilmesidir.
 
 #### Solidity örnekleri {#solidity-example}
 
-Aşağıdaki örnek, temel bir ERC-223 jeton sözleşmesinin nasıl çalıştığını gösterir:
+Aşağıdaki örnek, temel bir ERC-223 Token sözleşmesinin nasıl çalıştığını göstermektedir:
 
 ```solidity
 pragma solidity ^0.8.19;
@@ -115,7 +115,7 @@ contract VeryBasicERC223Token {
 }
 ```
 
-Şimdi tokenA jetonunun bir ERC-223 jetonu olduğunu varsayarak `tokenA` depozitolarını kabul eden başka bir sözleşme istiyoruz. Sözleşme yalnızca tokenA'yı kabul etmeli ve diğer jetonları reddetmelidir. Sözleşme tokenA'yı aldığında, bir `Deposit()` olayı yaymalı ve dahili 'deposits' değişkeninin değerini artırmalıdır.
+Şimdi, tokenA'nın bir ERC-223 Token'ı olduğunu varsayarak başka bir sözleşmenin `tokenA` yatırma işlemlerini kabul etmesini istiyoruz. Sözleşme yalnızca tokenA'yı kabul etmeli ve diğer tüm Token'ları reddetmelidir. Sözleşme tokenA'yı aldığında bir `Deposit()` olayı yaymalı ve dahili `deposits` değişkeninin değerini artırmalıdır.
 
 İşte kod:
 
@@ -123,14 +123,14 @@ contract VeryBasicERC223Token {
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
-    address tokenA; // Kabul etmek istediğimiz tek jeton.
+    address tokenA; // Kabul etmek istediğimiz tek Token.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // Bu fonksiyonun içinde şunu anlamak önemlidir
-        // msg.sender, alınan bir jetonun adresidir,
-        // msg.value her zaman 0'dır çünkü jeton sözleşmesi çoğu durumda ether sahibi değildir veya ether göndermez,
-        // _from, jeton transferinin göndericisidir,
-        // _value, yatırılan jetonların miktarıdır.
+        // Bu fonksiyon içinde şunu anlamak önemlidir
+        // msg.sender alınan bir Token'ın Adresidir,
+        // msg.value  Token Sözleşmesi çoğu durumda Ether'e sahip olmadığı veya göndermediği için her zaman 0'dır,
+        // _from      Token transferinin göndericisidir,
+        // _value     yatırılan Token miktarıdır.
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -140,31 +140,31 @@ contract RecipientContract is IERC223Recipient {
 
 ## Sıkça sorulan sorular {#faq}
 
-### Eğer sözleşmeye bir miktar tokenB gönderirsek ne olur? {#sending-tokens}
+### Sözleşmeye biraz tokenB gönderirsek ne olur? {#sending-tokens}
 
-İşlem başarısız olur ve ve jeton transferi gerçekleşmez. Jetonlar göndericinin adresine iade edilir.
+İşlem başarısız olacak ve Token transferi gerçekleşmeyecektir. Token'lar göndericinin adresine iade edilecektir.
 
-### Bu sözleşmeye nasıl para yatırabiliriz? {#contract-deposits}
+### Bu sözleşmeye nasıl yatırma işlemi yapabiliriz? {#contract-deposits}
 
-`RecipientContract` adresini belirterek ERC-223 jetonun `transfer(address,uint256)` veya `transfer(address,uint256,bytes)` fonksiyonunu çağırın.
+`RecipientContract` adresini belirterek ERC-223 Token'ının `transfer(address,uint256)` veya `transfer(address,uint256,bytes)` işlevini çağırın.
 
-### Bir ERC-20 jetonunu bu sözleşmeye transfer edersek ne olur? {#erc-20-transfers}
+### Bu sözleşmeye bir ERC-20 Token'ı transfer edersek ne olur? {#erc-20-transfers}
 
-`RecipientContract` adresine bir ERC-20 jetonu gönderilirse, jetonlar transfer edilir ancak transfer tanınmaz (hiçbir `Deposit()` olayı tetiklenmez ve depozito değeri değişmez). İstenmeyen ERC-20 depozitoları filtrelenemez veya engellenemez.
+Eğer `RecipientContract` adresine bir ERC-20 Token'ı gönderilirse, Token'lar transfer edilecek ancak transfer tanınmayacaktır (hiçbir `Deposit()` olayı tetiklenmeyecek ve yatırılan miktar değeri değişmeyecektir). İstenmeyen ERC-20 yatırma işlemleri filtrelenemez veya engellenemez.
 
-### Jeton yatırımı tamamlandıktan sonra bazı fonksiyonları yürütmek istersek ne yapmalıyız? {#function-execution}
+### Token yatırma işlemi tamamlandıktan sonra bir işlevi yürütmek istersek ne olur? {#function-execution}
 
-Bunu yapmanın birkaç yolu vardır. Bu örnekte, ERC-223 transferlerini ether transferlerine özdeş hale getiren yöntemi takip edeceğiz:
+Bunu yapmanın birden fazla yolu vardır. Bu örnekte, ERC-223 transferlerini Ether transferleriyle aynı kılan yöntemi izleyeceğiz:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
     event Foo();
     event Bar(uint256 someNumber);
-    address tokenA; // The only token that we want to accept.
+    address tokenA; // Kabul etmek istediğimiz tek Token.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
         require(msg.sender == tokenA);
-        address(this).call(_data); // Handle incoming transaction and perform a subsequent function call.
+        address(this).call(_data); // Gelen işlemi işleyin ve ardından bir fonksiyon çağrısı gerçekleştirin.
     }
     function foo() public
     {
@@ -177,21 +177,21 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-`RecipientContract` bir ERC-223 jetonu aldığında sözleşme, tıpkı ether işlemlerinin fonksiyon çağrılarını işlem `data` olarak kodlaması gibi, jeton işleminin `_data` parametresi olarak kodlanan bir fonksiyonu yürütür. Daha fazla bilgi için [veri alanını](/developers/docs/transactions/#the-data-field) okuyun.
+`RecipientContract` bir ERC-223 Token'ı aldığında, sözleşme, tıpkı Ether işlemlerinin işlev çağrılarını işlem `data`'si olarak kodlamasına benzer şekilde, Token işleminin `_data` parametresi olarak kodlanmış bir işlevi yürütecektir. Daha fazla bilgi için [veri alanını](/developers/docs/transactions/#the-data-field) okuyun.
 
-Yukarıdaki örnekte, bir ERC-223 jetonunun `transfer(address,uin256,bytes calldata _data)` fonksiyonu ile `RecipientContract` adresine transferi gerekmektedir. Eğer veri parametresi `0xc2985578` (`foo()` fonksiyonunun imzası) ise, jeton depozitosu alındıktan sonra foo() fonksiyonu çağrılır ve Foo() olayı tetiklenir.
+Yukarıdaki örnekte, bir ERC-223 Token'ı `transfer(address,uin256,bytes calldata _data)` işlevi ile `RecipientContract` adresine transfer edilmelidir. Veri parametresi `0xc2985578` (bir `foo()` işlevinin imzası) olursa, Token yatırma işlemi alındıktan sonra foo() işlevi çağrılacak ve Foo() olayı tetiklenecektir.
 
-Parametreler jeton transferinin `data`sına da kodlanabilir, örneğin `_someNumber` için 12345 değeriyle bar() fonksiyonunu çağırabiliriz. Bu durumda `data` şu şekilde olmalıdır: `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2`, burada `0x0423a132`, `bar(uint256)` fonksiyonunun imzası ve `00000000000000000000000000000000000000000000000000000000000004d2` ise uint256 olarak 12345'tir.
+Parametreler Token transferinin `data`'sine de kodlanabilir, örneğin `_someNumber` için 12345 değeriyle bar() işlevini çağırabiliriz. Bu durumda `data`, `0x0423a132`'nin `bar(uint256)` işlevinin imzası ve `00000000000000000000000000000000000000000000000000000000000004d2`'nin uint256 olarak 12345 olduğu `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2` olmalıdır.
 
 ## Sınırlamalar {#limitations}
 
-ERC-223, ERC-20 standardında bulunan birkaç sorunu ele alırken, kendi sınırlamaları da vardır:
+ERC-223, ERC-20 standardında bulunan çeşitli sorunları ele alsa da, kendi sınırlamaları da yok değildir:
 
-- Benimsenme ve Uyumluluk: ERC-223 henüz geniş çapta benimsenmemiştir, bu da mevcut araç ve platformlarla uyumluluğunu sınırlayabilir.
-- Geriye Dönük Uyumluluk: ERC-223, ERC-20 ile geriye dönük uyumlu değildir; bu nedenle mevcut ERC-20 sözleşmeleri ve araçlar, ERC-223 jetonları ile modifikasyon yapılmadan çalışmaz.
-- Gaz Maliyetleri: ERC-223 transferlerindeki ek kontrol ve işlevler, ERC-20 işlemlerine kıyasla daha yüksek gaz maliyetlerine neden olabilir.
+- Benimsenme ve Uyumluluk: ERC-223 henüz yaygın olarak benimsenmemiştir, bu da mevcut araçlar ve platformlarla uyumluluğunu sınırlayabilir.
+- Geriye Dönük Uyumluluk: ERC-223, ERC-20 ile geriye dönük uyumlu değildir, yani mevcut ERC-20 sözleşmeleri ve araçları değişiklik yapılmadan ERC-223 Token'larıyla çalışmayacaktır.
+- Gaz Maliyetleri: ERC-223 transferlerindeki ek kontroller ve işlevler, ERC-20 işlemlerine kıyasla daha yüksek Gaz maliyetlerine neden olabilir.
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla okuma {#further-reading}
 
-- [EIP-223: ERC-223 Jeton Standardı](https://eips.ethereum.org/EIPS/eip-223)
-- [İlk ERC-223 önerisi](https://github.com/ethereum/eips/issues/223)
+- [EIP-223: ERC-223 Token Standardı](https://eips.ethereum.org/EIPS/eip-223)
+- [İlk ERC-223 teklifi](https://github.com/ethereum/eips/issues/223)

@@ -1,219 +1,217 @@
 ---
-title: "Merkeziyetsiz borsa (DEX) tasarımına ilişkin en iyi pratikler"
-description: "Jeton takasına yönelik kullanıcı deneyimi/kullanıcı arayüzü kararlarını açıklayan bir rehber."
+title: Merkeziyetsiz borsa (DEX) tasarımı en iyi uygulamaları
+description: Token takası için UX/UI kararlarını açıklayan bir rehber.
 lang: tr
 ---
 
-Uniswap'in 2018'de başlatılmasından beri onlarca farklı zincirde yüzlerce merkeziyetsiz borsa oluşturuldu.
-Bunların çoğu, yeni özellikler ve kendine has yenilikler getirdi, ancak arayüz genel olarak aynı kaldı.
+2018'de Uniswap'ın piyasaya sürülmesinden bu yana, düzinelerce farklı zincirde yüzlerce merkeziyetsiz borsa başlatıldı.
+Bunların birçoğu yeni unsurlar sundu veya kendi yorumlarını kattı, ancak arayüz genel olarak aynı kaldı.
 
-Bunun sebeplerinden biri [Jakob’s Law](https://lawsofux.com/jakobs-law/):
+Bunun bir nedeni [Jakob'un Yasası](https://lawsofux.com/jakobs-law/)'dır:
 
-> Kullanıcıların çoğu zamanını diğer sitelerde geçirir. Bu, kullanıcıların sizin sitenizin kendi bildiği diğer sitelerle benzer şekilde çalışmasını tercih ediyor olduğu anlamına gelir.
+> Kullanıcılar zamanlarının çoğunu diğer sitelerde geçirirler. Bu, kullanıcıların sizin sitenizin de zaten bildikleri diğer tüm sitelerle aynı şekilde çalışmasını tercih ettiği anlamına gelir.
 
-Uniswap, Pancakeswap ve Sushiswap gibi yenilikçi projeler sayesinde DeFi kullanıcıları bir merkeziyetsiz borsanın nasıl göründüğü hakkında kolektif bir fikre sahiptir.
-Bu nedenle "en iyi pratik" olarak adlandırabileceğimiz bir şey ortaya çıkıyor. Sitelerde giderek daha fazla tasarım kararının standart hale geldiğini görüyoruz. Merkeziyetsiz borsaların geçirdiği evrimi, onu canlı olarak test etmenin dev bir örneği olarak görebilirsiniz. İşe yarayan şeyler kaldı, yaramayanlar gözden düştü. Merkeziyetsiz borsalara belli bir karakter eklemek hala mümkün, ancak artık uymaları gereken kesin standartlar da var.
+Uniswap, Pancakeswap ve Sushiswap gibi erken dönem yenilikçiler sayesinde, merkeziyetsiz finans (DeFi) kullanıcıları bir DEX'in neye benzediğine dair ortak bir fikre sahiptir.
+Bu nedenle, artık "en iyi uygulama" gibi bir şey ortaya çıkıyor. Giderek daha fazla tasarım kararının siteler arasında standartlaştırıldığını görüyoruz. DEX'lerin evrimini, canlı test etmenin devasa bir örneği olarak görebilirsiniz. İşe yarayan şeyler kaldı, yaramayanlar ise çöpe atıldı. Kişiselleştirme için hala yer var, ancak bir DEX'in uyması gereken belirli standartlar da bulunuyor.
 
-Bu makale aşağıdakilerin özetinden oluşuyor:
+Bu makale şunların bir özetidir:
+- nelerin dahil edileceği
+- mümkün olduğunca nasıl kullanışlı hale getirileceği
+- tasarımı özelleştirmenin temel yolları
 
-- dahil edilecek şeyler
-- en kullanışlı hale getirme yöntemleri
-- tasarımı özelleştirmenin başlıca yolları
+Örnek tel kafeslerin (wireframe) tümü, gerçek projelere dayanmalarına rağmen bu makale için özel olarak hazırlanmıştır.
 
-Tüm örnek web sitesi şemaları bu makale için özel olarak hazırlanmıştır, ancak hepsi gerçek projelere dayanmaktadır.
+Figma kiti de alt kısımda yer almaktadır; kendi tel kafeslerinizi hızlandırmak için kullanmaktan çekinmeyin!
 
-Aşağıya Figma kitini de ekledik, kendi web sitesi şemalarınız için kullanmaktan çekinmeyin!
+## Bir DEX'in temel anatomisi {#basic-anatomy-of-a-dex}
 
-## Bir merkeziyetsiz borsanın temel anatomisi {#basic-anatomy-of-a-dex}
-
-Kullanıcı Arayüzü genelde 3 parçadan oluşur:
-
+Kullanıcı arayüzü (UI) genellikle üç unsur içerir:
 1. Ana form
-2. Buton
+2. Düğme
 3. Ayrıntılar paneli
 
-![3 temel parçayı gösteren genel merkeziyetsiz borsa kullanıcı arayüzü](./1.png)
+![Generic DEX UI, showing the three main elements](./1.png)
+
 
 ## Varyasyonlar {#variations}
 
-Burası, bu makalede ortak bir tema olacaktır ancak bu öğelerin organize edilmesinin birçok farklı yolu vardır. "Ayrıntılar paneli" aşağıdaki şekillerde olabilir:
-
-- Butonun üstünde
-- Butonun altında
-- Akordiyon panelde gizlenmiş
-- Ve/veya bir "önizleme" modunda
-
-Not Bir "önizleme" modeli opsiyoneldir, fakat ana UI'da oldukça az detay gösteriyorsanız gerekli hale gelir.
+Bu makalede yaygın bir tema olacak, ancak bu unsurların düzenlenebileceği çeşitli farklı yollar vardır. "Ayrıntılar paneli" şuralarda olabilir:
+- Düğmenin üstünde
+- Düğmenin altında
+- Bir akordeon panelinde gizli
+- Ve/veya bir "önizleme" kipselinde (modal)
+  
+Not: Bir "önizleme" kipseli isteğe bağlıdır, ancak ana kullanıcı arayüzünde çok az ayrıntı gösteriyorsanız bu zorunlu hale gelir.
 
 ## Ana formun yapısı {#structure-of-the-main-form}
 
-Bu, aslında hangi jetonu takas etmek istediğinizi seçeceğiniz kısımdır. Bileşen bir satırın içinde bulunan bir giriş alanından ve küçük bir butondan oluşur.
+Bu, aslında hangi token'ı takas etmek istediğinizi seçtiğiniz kutudur. Bileşen, bir girdi alanı ve aynı satırda küçük bir düğmeden oluşur.
 
-Farklı şekilde yapılandırılabilse de merkeziyetsiz borsalar genelde ek detayları bir satır üstte ve bir satır altta gösterir.
+DEX'ler genellikle ek ayrıntıları bir satır üstte ve bir satır altta gösterir, ancak bu farklı şekilde yapılandırılabilir.
 
-![Üstünde ve altında ayrıntı satırı olan giriş satırı](./2.png)
+![Input row, with a details row above and below](./2.png)
 
 ## Varyasyonlar {#variations2}
 
-Burada iki farklı kullanıcı arayüzü varyasyonu gösteriliyor; birincisi hiçbir sınırı olmayan ve oldukça açık bir tasarım oluşturan, diğeri ise giriş satırının sınırının olduğu ve bu sayede odak noktasının o öğeye çevrildiği bir arayüz.
+Burada iki kullanıcı arayüzü varyasyonu gösterilmektedir; biri hiç kenarlığı olmayan ve çok açık bir tasarım yaratan, diğeri ise girdi satırının bir kenarlığa sahip olduğu ve o unsura odaklanmayı sağlayan varyasyondur.
 
-![Ana formun iki UI varyasyonu](./3.png)
+![Two UI variations of the main form](./3.png)
 
-Bu temel yapı, tasarımda **dört temel bilginin** gösterilmesine olanak tanır: her köşede bir tane. Sadece bir üst/alt sıra varsa, o halde sadece iki nokta vardır.
+Bu temel yapı, tasarımda **dört temel bilgi parçasının** gösterilmesine olanak tanır: her köşede bir tane. Yalnızca bir üst/alt satır varsa, o zaman sadece iki nokta vardır.
 
-DeFi'nin gelişimi sırasında buraya çok farklı şeyler dahil edildi.
+Merkeziyetsiz finansın (DeFi) evrimi sırasında buraya pek çok farklı şey dahil edilmiştir.
 
-## Dahil edilecek önemli bilgiler {#key-info-to-include}
+## Dahil edilecek temel bilgiler {#key-info-to-include}
 
-- Cüzdandaki bakiye
-- Maksimum butonu
-- Fiat eşdeğeri
-- Fiyatın "alınacak" tutar üzerinde olan etkisi
+- Cüzdan bakiyesi
+- Maksimum düğmesi
+- İtibari para (fiat) karşılığı
+- "Alınan" miktar üzerindeki fiyat etkisi
 
-DeFi'nin ilk zamanlarında, fiat eşdeğerine genellikle yer verilmiyordu. Herhangi bir türden Web3 projesi oluşturuyorsanız, mutlaka fiat eşdeğerinin gösterilmesi gerekir. Kullanıcılar hala yerel para birimleri cinsinden düşünüyorlar, dolayısıyla gerçek dünyanın mental modelleriyle eşleşmesi için bunun da dahil edilmesi gerekiyor.
+DeFi'nin ilk günlerinde, itibari para karşılığı genellikle eksikti. Herhangi bir tür Web3 projesi geliştiriyorsanız, itibari para karşılığının gösterilmesi çok önemlidir. Kullanıcılar hala yerel para birimleri cinsinden düşünmektedir, bu nedenle gerçek dünyadaki zihinsel modellerle eşleşmesi için bu dahil edilmelidir.
 
-İkinci alanda (takas edeceğiniz jetonu seçtiğiniz alanda) girdi miktarı ile tahmini çıktı miktarları arasındaki farkı hesaplayarak fiat para miktarının yanına fiyat etkisini de ekleyebilirsiniz. Bu, dahil edilmesi oldukça işe yarayacak bir ayrıntıdır.
+İkinci alanda (takas edeceğiniz token'ı seçtiğiniz alan), girdi miktarı ile tahmini çıktı miktarları arasındaki farkı hesaplayarak itibari para miktarının yanına fiyat etkisini de ekleyebilirsiniz. Bu, dahil edilmesi oldukça yararlı bir ayrıntıdır.
 
-Yüzde butonları (örn. %25, %50, %75) kullanışlı bir özellik olabilir ancak daha fazla yer kaplar, daha fazla eylem çağrısı ekler ve daha fazla zihinsel yüke neden olur. Yüzde kaydırıcılar için de aynısı geçerlidir. Bu UI kararlarının bazıları markanıza ve kullanıcı tipinize bağlı olacaktır.
+Yüzde düğmeleri (ör. %25, %50, %75) yararlı bir özellik olabilir, ancak daha fazla yer kaplar, daha fazla eylem çağrısı ekler ve zihinsel yükü artırır. Yüzde kaydırıcıları için de aynısı geçerlidir. Bu kullanıcı arayüzü kararlarından bazıları markanıza ve kullanıcı tipinize bağlı olacaktır.
 
-Ekstra ayrıntılar ana formun altında gösterilebilir. Bu tür bilgiler çoğunlukla profesyonel kullanıcılara yönelik olduğundan şunlardan birini yapmak mantıklı olur:
+Ek ayrıntılar ana formun altında gösterilebilir. Bu tür bilgiler çoğunlukla profesyonel kullanıcılar için olduğundan, şunlardan birini yapmak mantıklıdır:
+- mümkün olduğunca minimal tutmak veya;
+- bir akordeon panelinde gizlemek
 
-- mümkün olduğunca minimal tutun veya;
-- bir akordiyon panelde gizleyin
+![Details shown in the corners of that main form](./4.png)
 
-![Ana formun köşelerinde gösterilen ayrıntılar](./4.png)
-
-## Dahil edilecek ekstra bilgiler {#extra-info-to-include}
+## Dahil edilecek ek bilgiler {#extra-info-to-include}
 
 - Token fiyatı
-- Slipaj
-- Minimum alınan
+- Fiyat kayması
+- Alınacak minimum miktar
 - Beklenen çıktı
 - Fiyat etkisi
-- Tahmini gaz ücreti
+- Tahmini gaz maliyeti
 - Diğer ücretler
-- Sipariş yönlendirme
+- Emir yönlendirme
 
-Bu ayrıntıların bir kısmının opsiyonel olabileceği iddia edilebilir.
+Tartışmaya açık olsa da, bu ayrıntılardan bazıları isteğe bağlı olabilir.
 
-Sipariş yönlendirme ilgi çekici olsa da çoğu kullanıcı için pek de fark yaratmaz.
+Emir yönlendirme ilginçtir, ancak çoğu kullanıcı için pek bir fark yaratmaz.
 
-Diğer bazı ayrıntılar ise aynı şeyin farklı şekillerde ifade edilmesinden ibarettir. Örneğin "minimum alınan" ve "slipaj" aynı paranın iki yüzüdür. Eğer slipajınız %1 olarak ayarlanmışsa, bekleyeceğiniz minimum alınacak miktar = beklenen çıktı-%1. Bazı kullanıcı arayüzleri beklenen miktarı, minimum miktarı ve slipajı gösterir… Bu, yararlı ama muhtemelen aşırıdır.
+Diğer bazı ayrıntılar ise aynı şeyi farklı şekillerde ifade etmekten ibarettir. Örneğin "alınacak minimum miktar" ve "fiyat kayması" aynı madalyonun iki yüzüdür. Fiyat kaymasını %1 olarak ayarladıysanız, almayı bekleyebileceğiniz minimum miktar = beklenen çıktı - %1'dir. Bazı kullanıcı arayüzleri beklenen miktarı, minimum miktarı ve fiyat kaymasını gösterir... Bu yararlıdır ancak muhtemelen gereğinden fazladır. 
 
-Çoğu kullanıcı yine de varsayılan slipajı bırakacaktır.
+Çoğu kullanıcı zaten varsayılan fiyat kaymasını olduğu gibi bırakacaktır.
 
-"Fiyat etkisi," genellikle "alınacak" alanında, fiat karşılığının yanında parantez içinde gösterilir. Bu eklenmesi gereken harika bir kullanıcı deneyimi detayıdır ancak burada gösteriliyorsa, aşağıda tekrar gösterilmesine gerçekten gerek var mı? Sonra da tekrar bir önizleme ekranında?
+"Fiyat etkisi" genellikle "alıcı" alanındaki itibari para karşılığının yanında parantez içinde gösterilir. Bu, eklemek için harika bir UX ayrıntısıdır, ancak burada gösteriliyorsa, aşağıda tekrar gösterilmesine gerçekten gerek var mı? Ve sonra bir önizleme ekranında tekrar?
 
-Çoğu kullanıcı (özellikle küçük miktarlar takas edenler) bu detaylarla ilgilenmeyecek, basitçe bir sayı girecek ve takasa tıklayacak.
+Pek çok kullanıcı (özellikle küçük miktarlarda takas yapanlar) bu ayrıntıları umursamayacaktır; sadece bir sayı girip takas düğmesine basacaklardır.
 
-![Bazı detaylar aynı şeyleri gösteriyor](./5.png)
+![Some details show the same thing](./5.png)
 
-Tam olarak hangi detayların gösterileceği, kitlenize ve uygulamanızın nelere sahip olmasını istediğinize bağlıdır.
+Tam olarak hangi ayrıntıların gösterileceği, hedef kitlenize ve uygulamanın nasıl bir his vermesini istediğinize bağlı olacaktır.
 
-Ayrıntılar paneline slipaj toleransını dahil edecekseniz, bu değerin buradan doğrudan düzenlenebilir olmasını da sağlamalısınız. Bu, uygulamanın genel kullanılabilirliğini etkilemeden deneyimli kullanıcıların akışlarını hızlandırabilen şık bir UX numarası olan "hızlandırıcı" için iyi bir örnek teşkil eder.
+Ayrıntılar paneline fiyat kayması toleransını dahil ederseniz, bunu doğrudan buradan düzenlenebilir hale de getirmelisiniz. Bu, bir "hızlandırıcı" için iyi bir örnektir; uygulamanın genel kullanılabilirliğini etkilemeden deneyimli kullanıcıların akışlarını hızlandırabilen akıllıca bir UX hilesidir.
 
-![Slipaj ayrıntılar panelinden kontrol edilebilir](./6.png)
+![Slippage can be controlled from the details panel](./6.png)
 
-Belirli bir ekranda tek bir bilgi parçası hakkında değil, tüm akış hakkında dikkatlice düşünmek iyi bir fikir: Ana Formda sayıların girilmesi → Detayların taranması → Önizleme Ekranına tıklanması (eğer bir önizleme ekranına sahipseniz).
-Ayrıntılar paneli her zaman görünür mü olmalı yoksa genişletmek için kullanıcı mı üzerine tıklamalı?
-Önizleme ekranı ekleyerek sürtüşme yaratmaya gerek var mı? Bu, kullanıcıyı yavaşlayıp işlemini gözden geçirmeye zorlar ve bu da yararlı olabilir. Ancak kullanıcılar tüm bu bilgileri tekrar görmek ister mi? Bu noktada onlar için en faydalı olan nedir?
+Sadece bir ekrandaki belirli bir bilgi parçası hakkında değil, tüm akış hakkında dikkatlice düşünmek iyi bir fikirdir:
+Ana Forma sayıları girmek → Ayrıntıları Taramak → Önizleme Ekranına Tıklamak (bir önizleme ekranınız varsa). 
+Ayrıntılar paneli her zaman görünür mü olmalı, yoksa kullanıcının genişletmek için tıklaması mı gerekiyor?
+Bir önizleme ekranı ekleyerek sürtünme yaratmalı mısınız? Bu, kullanıcıyı yavaşlamaya ve işlemlerini düşünmeye zorlar, ki bu yararlı olabilir. Ancak aynı bilgilerin tümünü tekrar görmek istiyorlar mı? Bu noktada onlar için en yararlı olan şey nedir?
 
 ## Tasarım seçenekleri {#design-options}
 
-Daha önce de belirtildiği gibi, bunların çoğu kişisel tarzınıza bağlıdır.
+Belirtildiği gibi, bunların çoğu kişisel tarzınıza bağlıdır
 Kullanıcınız kim?
-Markanız ne?
-Tüm ayrıntıları gösteren "pro" bir arayüz mü yoksa minimalist bir arayüz mü istiyorsunuz?
-Mümkün olan tüm bilgileri isteyen profesyonel kullanıcıları hedefliyor olsanız bile Alan Cooper'ın bu dahiyane sözünü unutmamalısınız:
+Markanız nedir?
+Her ayrıntıyı gösteren "profesyonel" bir arayüz mü istiyorsunuz, yoksa minimalist mi olmak istiyorsunuz?
+Mümkün olan tüm bilgileri isteyen profesyonel kullanıcıları hedefliyor olsanız bile, Alan Cooper'ın şu bilgece sözlerini unutmamalısınız:
 
-> Arayüzünüz ne kadar güzel, ne kadar havalı olursa olsun, daha azı daha iyi olurdu.
+> Arayüzünüz ne kadar güzel, ne kadar havalı olursa olsun, daha azı olsaydı daha iyi olurdu.
 
 ### Yapı {#structure}
 
-- jetonların solda ya da sağda olması
-- 2 satır veya 3
-- ayrıntıların butonun üstünde ya da altında olması
-- ayrıntıların genişletilmiş, küçültülmüş veya gösterilmiyor olması
+- token'lar solda veya token'lar sağda
+- 2 satır veya 3 satır
+- ayrıntılar düğmenin üstünde veya altında
+- ayrıntılar genişletilmiş, küçültülmüş veya gösterilmiyor
 
 ### Bileşen stili {#component-style}
 
 - boş
-- taslağı çizilmiş
-- doldurulmuş
+- dış hatlı
+- dolu
 
-Olaya tamamen kullanıcı deneyimi açısından bakarsak, kullanıcı arayüzü stilinin etkisinin sandığınızdan daha az olduğunu söyleyebiliriz. Görsel trendler döngüler halinde değişirler ve çoğu tercih subjektiftir.
+Saf bir UX bakış açısından, UI stili düşündüğünüzden daha az önemlidir. Görsel trendler döngüler halinde gelir ve geçer ve tercihlerin çoğu özneldir.
 
-Bunu hissedebilmenin -ve farklı ayarlamalar hakkında düşünebilmenin - en kolay yolu, birkaç örneğe bakıp deneysel bir şeyler yapmanızdır.
+Bunu hissetmenin - ve çeşitli farklı yapılandırmalar hakkında düşünmenin - en kolay yolu, bazı örneklere göz atmak ve ardından kendiniz biraz deneme yapmaktır.
 
-Dahil edilen Figma kiti boş, taslağı çizilmiş ve doldurulmuş bileşenlerden oluşmaktadır.
+Dahil edilen Figma kiti boş, dış hatlı ve dolu bileşenler içerir.
 
-Aşağıdaki örneklere baktığınızda tümünü bir araya getirmenin farklı yollarını görebilirsiniz:
+Tüm bunları bir araya getirmenin farklı yollarını görmek için aşağıdaki örneklere göz atın:
 
-![doldurulmuş stilde 3 satır](./7.png)
+![3 rows in a filled style](./7.png)
 
-![taslağı çizilmiş stilde 3 satır](./8.png)
+![3 rows in a outlined style](./8.png)
 
-![boş stilde 2 satır](./9.png)
+![2 rows in an empty style](./9.png)
 
-![taslağı çizilmiş stilde, ayrıntılar paneline sahip 3 satır](./10.png)
+![3 rows in an outlined style, with a details panel](./10.png)
 
-![giriş satırı taslağı çizilmiş stilde olan 3 satır](./11.png)
+![3 rows with the input row in an outlined style](./11.png)
 
-![doldurulmuş stilde 2 satır](./12.png)
+![2 rows in a filled style](./12.png)
 
-## Ama jeton hangi tarafta olmalı? {#but-which-side-should-the-token-go-on}
+## Peki token hangi tarafta olmalı? {#but-which-side-should-the-token-go-on}
 
-Sonuç olarak, kullanılabilirlik açısından büyük bir fark yaratmayacağı söylenebilir. Ancak aklınızda bulundurmanız gereken ve kararınızı etkileyebilecek birkaç şey var.
+Sonuç olarak, bunun kullanılabilirlik açısından muhtemelen büyük bir fark yaratmadığı söylenebilir. Ancak, sizi bir yöne veya diğerine çekebilecek akılda tutulması gereken birkaç şey vardır.
 
-Modanın zamanla nasıl değiştiğini görmek biraz ilginç bir deneyim oldu. Uniswap başlangıçta jetonu solda tutuyordu, fakat artık sağa geçirdi. Sushiswap da bir tasarım güncellemesi sırasında bu değişikliğe gitti. Hepsi olmasa da çoğu protokol aynı yolu izledi.
+Zamanla modanın değiştiğini görmek biraz ilginç oldu. Uniswap başlangıçta token'ı solda tutuyordu, ancak o zamandan beri sağa taşıdı. Sushiswap da bir tasarım yükseltmesi sırasında bu değişikliği yaptı. Hepsi olmasa da çoğu protokol bu örneği izledi.
 
-Geleneksel finansta para biriminin simgesi genelde sayının önüne koyulur, örneğin $50, €50, £50 gibi, fakat biz 50 dolar, 50 euro, 50 pound _diyoruz_.
+Finansal gelenekler genellikle para birimi sembolünü sayıdan önce koyar, örn. $50, €50, £50, ancak biz 50 dolar, 50 Euro, 50 sterlin *deriz*.
 
-Ortalama kullanıcı -özellikle soldan sağa, üstten alta okuyan biri için- jetonu sağda gördüğünde muhtemelen daha doğal hisseder.
+Genel kullanıcı için - özellikle soldan sağa, yukarıdan aşağıya okuyan biri için - token'ın sağda olması muhtemelen daha doğal hissettirir.
 
-![jetonların solda olduğu bir UI](./13.png)
+![A UI with tokens on the left](./13.png)
 
-Jetonu sola yerleştirip tüm sayıları sağda tuttuğunuzda hoş bir simetrik görüntü oluşur, bu da bir artıdır, fakat bu düzenin de farklı bir olumsuz tarafı vardır.
+Token'ı sola ve tüm sayıları sağa koymak hoş bir şekilde simetrik görünür, ki bu bir artıdır, ancak bu düzenin başka bir dezavantajı vardır.
 
-Yakınlık yasası, birbirine yakın duran öğelerin birbiriyle alakalı olarak değerlendirildiğini ifade eder. Buna uyarak alakalı öğeleri yan yana koymamız daha iyi olacaktır. Jeton bakiyesi doğrudan jetonun kendisine bağlıdır ve yeni bir jeton seçildiğinde değişir. Bu yüzden jeton bakiyesinin jeton seçme butonunun yanında olması biraz daha mantıklıdır. Jetonun altına da koyulabilir, fakat bu da yerleşim simetrisini bozar.
+Yakınlık yasası, birbirine yakın olan öğelerin ilişkili olarak algılandığını belirtir. Buna göre, ilişkili öğeleri yan yana yerleştirmek isteriz. Token bakiyesi doğrudan token'ın kendisiyle ilişkilidir ve yeni bir token seçildiğinde değişecektir. Bu nedenle, token bakiyesinin token seçme düğmesinin yanında olması biraz daha mantıklıdır. Token'ın altına taşınabilir, ancak bu da düzenin simetrisini bozar.
 
-Sonuç olarak, iki seçeneğin de artıları ve eksileri vardır fakat jetonun sağa yerleştirilmesi ilginç bir şekilde daha popülerdir.
+Sonuçta, her iki seçeneğin de artıları ve eksileri vardır, ancak eğilimin token'ın sağda olmasına doğru görünmesi ilginçtir.
 
-## Buton davranışı {#button-behavior}
+## Düğme davranışı {#button-behavior}
 
-Onaylama için ayrı bir buton oluşturmayın. Onaylama için ayrı bir tıklamaya da gerek olmasın. Kullanıcı Takas yapmak istiyor, butona “swap” deyin ve ilk adım olarak onayı başlatın. Bir mod, bir adımlayıcı ile ilerlemeyi veya basit bir "tx 1/2 - onaylanıyor" bildirimini gösterebilir.
+Onaylamak için ayrı bir düğmeniz olmasın. Ayrıca Onaylamak için ayrı bir tıklama da olmasın. Kullanıcı Takas yapmak istiyor, bu yüzden düğmede sadece "takas" deyin ve ilk adım olarak onayı başlatın. Bir kipsel (modal), bir adım göstergesiyle veya basit bir "işlem 1/2 - onaylanıyor" bildirimiyle ilerlemeyi gösterebilir.
 
-![Onay ve takas için ayrı butonları olan bir UI](./14.png)
+![A UI with separate buttons for approve and swap](./14.png)
 
-![Onayla yazan tek bir butona sahip bir UI](./15.png)
+![A UI with one button that says approve](./15.png)
 
-### Bağlamsal yardım olarak buton {#button-as-contextual-help}
+### Bağlamsal yardım olarak düğme {#button-as-contextual-help}
 
-Bu buton bir uyarı görevi de görebilir!
+Düğme bir uyarı olarak çifte görev yapabilir!
 
-Bu, aslında Web3 dışında oldukça sıra dışı bir tasarım desenidir, ancak Web3 içerisinde standart hale gelmiştir. Aslında yerden tasarruf ettiği ve odağı topladığı için iyi bir yeniliktir.
+Bu aslında Web3 dışında oldukça alışılmadık bir tasarım modelidir, ancak kendi içinde standart hale gelmiştir. Yerden tasarruf sağladığı ve dikkati odaklanmış tuttuğu için bu iyi bir yeniliktir.
 
-Eğer ana eylem - SWAP - (Takas) bir hata nedeniyle kullanılamıyorsa, bunun nedeni düğme ile açıklanabilir, örneğin:
+Ana eylem - TAKAS - bir hata nedeniyle kullanılamıyorsa, bunun nedeni düğme ile açıklanabilir, örn.:
 
-- ağ değiştirin
-- cüzdanı bağlayın
+- ağı değiştir
+- cüzdanı bağla
 - çeşitli hatalar
 
-Buton, aynı zamanda gerçekleştirilmesi gereken **eylemle de eşleştirilebilir**. Mesela, eğer bir kullanıcı takas işlemini yanlış ağda olduğu için gerçekleştiremiyorsa butonun "Ethereum'a geç" demesi gerekir ve kullanıcı butona tıkladığında Ethereum ağına geçmelidir. Bu, kullanıcı akışını önemli derecede hızlandırır.
+Düğme ayrıca gerçekleştirilmesi gereken **eylemle eşleştirilebilir**. Örneğin, kullanıcı yanlış ağda olduğu için takas yapamıyorsa, düğmede "Ethereum'a geç" yazmalı ve kullanıcı düğmeye tıkladığında ağı Ethereum olarak değiştirmelidir. Bu, kullanıcı akışını önemli ölçüde hızlandırır.
 
-![Ana CTA'dan başlatılan temel eylemler](./16.png)
+![Key actions being initiated from the main CTA](./16.png)
 
-![Ana CTA içinde gösterilen hata mesajı](./17.png)
+![Error message shown within the main CTA](./17.png)
 
 ## Bu figma dosyasıyla kendinizinkini oluşturun {#build-your-own-with-this-figma-file}
 
-Birçok farklı protokolün sıkı çalışması sayesinde merkeziyetsiz borsa tasarımı oldukça ilerledi. Kullanıcının hangi bilgilere ihtiyacı olduğunu, bu bilgileri nasıl göstermemiz gerektiğini ve bu akışı nasıl mümkün olabildiğince düzgün yapabileceğimizi biliyoruz.
-Bu makalenin UX prensipleriyle ilgili sağlam bir temel sunabildiğini umarız.
+Birden fazla protokolün sıkı çalışması sayesinde, DEX tasarımı çok gelişti. Kullanıcının hangi bilgilere ihtiyacı olduğunu, bunları nasıl göstermemiz gerektiğini ve akışı mümkün olduğunca nasıl pürüzsüz hale getireceğimizi biliyoruz.
+Umarız bu makale UX ilkelerine dair sağlam bir genel bakış sunar. 
 
-Eğer denemek isterseniz, lütfen Figma web sitesi şeması kitini kullanmaktan çekinmeyin. Olabildiğince basit tuttuk, fakat çeşitli yollarla temel yapıyı oluşturabilmeye yetecek kadar esnekliğe sahip.
+Deneme yapmak isterseniz, lütfen Figma tel kafes kitini kullanmaktan çekinmeyin. Mümkün olduğunca basit tutulmuştur, ancak temel yapıyı çeşitli şekillerde oluşturmak için yeterli esnekliğe sahiptir.
 
-[Figma web sitesi şeması kiti](https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit)
+[Figma tel kafes kiti](https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit)
 
-DeFi evrimine devam edecek ve gelişime her zaman yer var.
+DeFi gelişmeye devam edecek ve her zaman iyileştirme için yer vardır. 
 
 İyi şanslar!
