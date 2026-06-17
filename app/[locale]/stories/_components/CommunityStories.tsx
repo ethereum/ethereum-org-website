@@ -29,6 +29,7 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
             key={`${story.name}-${index}`}
             story={story}
             expandable={false}
+            showDate={false}
             className="mb-6 break-inside-avoid"
           />
         ))}

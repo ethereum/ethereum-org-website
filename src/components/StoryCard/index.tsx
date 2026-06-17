@@ -21,6 +21,11 @@ type StoryCardProps = {
    * inline height change would reflow every column. Defaults to true.
    */
   expandable?: boolean
+  /**
+   * When false, the story date is hidden. Defaults to true (shown on the
+   * /10years page); /stories opts out.
+   */
+  showDate?: boolean
 }
 
 /**
@@ -29,7 +34,12 @@ type StoryCardProps = {
  * can be dropped into any layout (single-column list on /10years, masonry on
  * /stories).
  */
-const StoryCard = ({ story, className, expandable = true }: StoryCardProps) => {
+const StoryCard = ({
+  story,
+  className,
+  expandable = true,
+  showDate = true,
+}: StoryCardProps) => {
   const { t } = useTranslation("page-10-year-anniversary")
   const [isFlipped, setIsFlipped] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
@@ -133,7 +143,9 @@ const StoryCard = ({ story, className, expandable = true }: StoryCardProps) => {
             </div>
           )}
 
-          <p className="mt-2 text-sm text-body-medium">{story.date}</p>
+          {showDate && (
+            <p className="mt-2 text-sm text-body-medium">{story.date}</p>
+          )}
         </div>
       </CardContent>
     </Card>
