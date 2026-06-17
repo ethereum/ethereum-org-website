@@ -1,138 +1,132 @@
 ---
-title: "7 principios heurísticos para el diseño de interfaces web3"
-description: Principios para mejorar la usabilidad en Web3
+title: 7 heurísticas para el diseño de interfaces de Web3
+description: Principios para mejorar la usabilidad de Web3
 lang: es
 ---
 
-Los principios heurísticos de usabilidad son reglas generales que pueden utilizarse para medir cuán fácil de usar es su sitio.
-Las 7 reglas heurísticas aquí presentadas están específicamente diseñadas para la Web3 y deben usarse junto con [los 10 principios generales de diseño de interacción](https://www.nngroup.com/articles/ten-usability-heuristics/) de Jakob Nielsen.
+Las heurísticas de usabilidad son «reglas generales» amplias que puedes utilizar para medir la usabilidad de tu sitio.
+Las 7 heurísticas que se presentan aquí están adaptadas específicamente para Web3 y deben usarse junto con los [10 principios generales para el diseño de interacción](https://www.nngroup.com/articles/ten-usability-heuristics/) de Jakob Nielsen.
 
-## Siete principios heurísticos de usabilidad para la Web3 {#seven-usability-heuristics-for-web3}
+## Siete heurísticas de usabilidad para Web3 {#seven-usability-heuristics-for-web3}
 
-1. La retroalimentación precede a la acción
+1. La retroalimentación sigue a la acción
 2. Seguridad y confianza
 3. La información más importante es obvia
 4. Terminología comprensible
-5. Las acciones son lo más breves posible
+5. Las acciones son lo más cortas posible
 6. Las conexiones de red son visibles y flexibles
 7. Control desde la aplicación, no desde la billetera
 
+
 ## Definiciones y ejemplos {#definitions-and-examples}
 
-### 1. La retroalimentación precede a la acción {#feedback-follows-action}
+### 1. La retroalimentación sigue a la acción {#feedback-follows-action}
 
-**Si algo ha ocurrido o está ocurriendo, debe ser evidente**
+**Debe ser obvio cuando algo ha sucedido o está sucediendo.**
 
-Quienes usan el sitio deciden sus próximos pasos en función del resultado de los pasos previos. Por lo que resulta vital mantenerlos informados sobre el estado del sistema. En la Web3 esto es especialmente importante, ya que las transacciones a veces pueden tardar un poco en confirmarse en la cadena de bloques. Si no reciben retroalimentación informándoles que deben esperar, los usuarios no tendrán la seguridad de si algo ha ocurrido.
+Los usuarios deciden sus próximos pasos en función del resultado de sus pasos anteriores. Por lo tanto, es esencial que se mantengan informados sobre el estado del sistema. Esto es especialmente importante en Web3, ya que las transacciones a veces pueden tardar un poco en confirmarse en la cadena de bloques. Si no hay retroalimentación que les informe que deben esperar, los usuarios no estarán seguros de si ha sucedido algo.
 
-**Recomendaciones**
+**Consejos:** 
+- Informa al usuario mediante mensajes, notificaciones y otras alertas.
+- Comunica los tiempos de espera de forma clara.
+- Si una acción va a tardar más de unos segundos, tranquiliza al usuario con un temporizador o una animación para que sienta que algo está sucediendo.
+- Si hay varios pasos en un proceso, muestra cada uno de ellos.
 
-- Informar a quienes usan el sistema mediante mensajería, notificaciones u otro tipo de alertas.
-- Comunicar claramente los tiempos de espera.
-- Si una acción va a tomar más de un par de segundos, tranquilice al usuario con un temporizador o animación para que sepa que algo está ocurriendo.
-- Si un proceso tiene varios pasos, muestre cada uno de ellos.
+**Ejemplo:**
+Mostrar cada paso involucrado en una transacción ayuda a los usuarios a saber en qué parte del proceso se encuentran. Los iconos adecuados permiten al usuario conocer el estado de sus acciones.
 
-**Ejemplo**
-Mostrar cada uno de los pasos de una transacción ayuda a los usuarios a saber en qué momento del proceso se encuentran. Una iconografía adecuada le permite al usuario conocer el estado de sus acciones.
-
-![Informar al usuario el paso a paso a la hora de intercambiar tokens](./Image1.png)
+![Informing the user about each step when swapping tokens](./Image1.png)
 
 ### 2. La seguridad y la confianza están integradas {#security-and-trust-are-backed-in}
 
-La seguridad debe ser prioritaria, y esto debe resaltarse para el usuario.
-Las personas se preocupan mucho por sus datos. La seguridad es una de las preocupaciones primordiales y, como tal, debe ser considerada en todos los niveles del diseño. Siempre debe tratar de ganarse la confianza de los usuarios, pero la forma de lograrlo varía en cada aplicación. No debe ser una consideración secundaria, sino algo diseñado de manera consciente en cada etapa. La confianza debe generarse en toda la experiencia del usuario, incluyendo los canales sociales, la documentación, así como la interfaz final. Dentro de los aspectos que afectan dicha confianza están el nivel de descentralización, el estado multifirma de la tesorería y si la identidad del equipo es conocida púbicamente o no (doxada).
+Se debe priorizar la seguridad, y esto debe enfatizarse para el usuario. 
+Las personas se preocupan profundamente por sus datos. La seguridad suele ser una preocupación principal para los usuarios, por lo que debe considerarse en todos los niveles del diseño. Siempre debes buscar ganarte la confianza de tus usuarios, pero la forma de hacerlo puede significar cosas diferentes en distintas aplicaciones. No debe ser una idea de último momento, sino que debe diseñarse conscientemente en todo momento. Construye confianza a lo largo de la experiencia del usuario, incluyendo los canales sociales y la documentación, así como en la interfaz de usuario final. Aspectos como el nivel de descentralización, el estado multifirma de la tesorería y si el equipo es público (doxxed), afectan la confianza de los usuarios.
 
-**Recomendaciones**
+**Consejos:**
+- Enumera tus auditorías con orgullo
+- Obtén múltiples auditorías
+- Anuncia cualquier característica de seguridad que hayas diseñado
+- Destaca los posibles riesgos, incluidas las integraciones subyacentes
+- Comunica la complejidad de las estrategias
+- Considera los problemas ajenos a la interfaz de usuario que podrían afectar la percepción de seguridad de tus usuarios
 
-- Enumere sus auditorías con orgullo.
-- Obtenga múltiples auditorías.
-- Anuncie las características de seguridad que haya diseñado.
-- Resalte los posibles riesgos, incluidas las integraciones subyacentes.
-- Comunique la complejidad de las estrategias.
-- Tome en cuenta aspectos no relacionados a la interfaz que puedan afectar la percepción de seguridad de los usuarios.
+**Ejemplo:** 
+Incluye tus auditorías en el pie de página, con un tamaño destacado.
 
-**Ejemplo:**
-Incluya sus auditorías en el pie de página, en un tamaño que destaque.
-
-![Auditorías referenciadas en el pie de página del sitio web](./Image2.png)
+![Audits referenced in the website footer](./Image2.png)
 
 ### 3. La información más importante es obvia {#the-most-important-info-is-obvious}
 
-Para sistemas complejos, muestre solo los datos más relevantes. Determine qué es lo más importante y priorice su exposición.
-Demasiada información es abrumadora y los usuarios suelen basarse en un solo dato al tomar decisiones. En las Finanzas Descentralizadas (DeFi), probablemente será la Tasa de Porcentaje Anual (APR) en las aplicaciones de rendimiento y la proporción entre el préstamo y el valor (LTV) en las aplicaciones de préstamo.
+Para sistemas complejos, muestra solo los datos más relevantes. Determina qué es lo más importante y prioriza su visualización. 
+Demasiada información resulta abrumadora y los usuarios suelen anclarse en un solo dato a la hora de tomar decisiones. En las finanzas descentralizadas (DeFi), esto probablemente será el APR en las aplicaciones de rendimiento y el LTV en las aplicaciones de préstamos.
 
-**Recomendaciones**
+**Consejos:**
+- La investigación de usuarios revelará la métrica más importante
+- Haz que la información clave sea grande y que los demás detalles sean pequeños y discretos
+- Las personas no leen, escanean; asegúrate de que tu diseño sea fácil de escanear
 
-- La investigación de los usuarios revelará la métrica más importante.
-- Haga que la información clave sea de tamaño grande, y mantenga los detalles pequeños y discretos.
-- La gente no lee, da un vistazo general; asegúrese de que el diseño contribuya a ello.
+**Ejemplo:** Los tokens grandes a todo color son fáciles de encontrar al escanear. El APR es grande y está resaltado con un color de acento.
 
-**Ejemplo:** Los tokens grandes resultan fáciles de encontrar cuando da un vistazo. La Tasa de Porcentaje Anual (APR) es grande y se resalta con un color de acento.
-
-![El token y la APR son fáciles de encontrar](./Image3.png)
+![The token and APR are easy to find](./Image3.png)
 
 ### 4. Terminología clara {#clear-terminology}
 
 La terminología debe ser comprensible y adecuada.
-El uso de jerga técnica puede ser un gran obstáculo, ya que exige la construcción de un modelo mental completamente nuevo. Los usuarios no pueden relacionar el diseño con palabras, frases y conceptos que ya conocen. Todo les parece confuso y desconocido, y antes de que puedan siquiera intentar utilizar la aplicación, ya existe una curva de aprendizaje en extremo pronunciada. Una persona puede acercarse a una aplicación de Finanzas Descentralizadas (DeFi) queriendo ahorrar algo de dinero, y de repente lo que encuentra es: minería, farming, staking, emisiones, sobornos, bóvedas, bloqueadores, veTokens, vesting, épocas, algoritmos descentralizados, liquidez propiedad del protocolo…
-Intente siempre utilizar términos que sean sencillos y comprensibles para la mayor cantidad de personas posible. No invente términos completamente nuevos solamente para su proyecto.
+La jerga técnica puede ser un gran obstáculo, porque requiere la construcción de un modelo mental completamente nuevo. Los usuarios no pueden relacionar el diseño con palabras, frases y conceptos que ya conocen. Todo parece confuso y desconocido, y hay una curva de aprendizaje pronunciada antes de que puedan siquiera intentar usarlo. Un usuario podría acercarse a DeFi queriendo ahorrar algo de dinero, y lo que encuentra es: minería, farming, staking, emisiones, sobornos, bóvedas, bloqueadores, veTokens, adquisición de derechos, épocas, algoritmos descentralizados, liquidez propiedad del protocolo...
+Intenta usar términos simples que sean entendidos por el grupo más amplio de personas. No inventes términos completamente nuevos solo para tu proyecto.
 
-**Recomendaciones**
-
-- Use terminología simple y consistente.
-- Use palabras existentes siempre que sea posible.
-- No invente sus propios términos.
-- Siga las convenciones tal cual son.
-- Eduque lo más posible a los usuarios.
+**Consejos:**
+- Usa una terminología simple y coherente
+- Usa el lenguaje existente tanto como sea posible
+- No inventes tus propios términos
+- Sigue las convenciones a medida que aparezcan
+- Educa a los usuarios tanto como sea posible
 
 **Ejemplo:**
-“Sus recompensas” es un término neutral muy entendido por todos; no una nueva palabra creada para este proyecto. Las recomepensas se denominan en dólares americanos para alinearse con los modelos mentales del mundo real, incluso cuando las recompensas en sí estén en otro token.
+«Tus recompensas» es un término neutral y ampliamente comprendido; no es una palabra nueva inventada para este proyecto. Las recompensas están denominadas en USD para coincidir con los modelos mentales del mundo real, incluso si las recompensas en sí están en otro token.
 
-![Recompensas de tokens mostradas en dólares americanos. ](./Image4.png)
+![Token rewards, displayed in U.S. dollars](./Image4.png)
 
-### 5. Las acciones son lo más breves posible {#actions-are-as-short-as-possible}
+### 5. Las acciones son lo más cortas posible {#actions-are-as-short-as-possible}
 
-Acelere las interacciones de los usuarios agrupando acciones menores.
-Esto puede hacerse tanto a nivel del contrato inteligente como de la interfaz del usuario. El usuario no debería tener que desplazarse de una parte a otra del sistema, o abandonarlo por completo, para completar una acción habitual.
+Acelera las interacciones del usuario agrupando subacciones. 
+Esto se puede hacer a nivel del contrato inteligente, así como en la interfaz de usuario. El usuario no debería tener que moverse de una parte del sistema a otra (o abandonar el sistema por completo) para completar una acción común. 
 
-**Recomendaciones**
+**Consejos:**
+- Combina «Aprobar» con otras acciones siempre que sea posible
+- Agrupa los pasos de firma lo más cerca posible
 
-- Combine "Aprobar" con otras acciones donde sea posible.
-- Agrupe los pasos de firma lo más cerca posible.
+**Ejemplo:** Combinar «añadir liquidez» y «hacer staking» es un ejemplo sencillo de un acelerador que le ahorra al usuario tanto tiempo como gas.
 
-**Ejemplo:** Combinar “agregar liquidez” y “hacer staking” es un ejemplo sencillo de un acelerador que le ahorra tanto tiempo como gas al usuario.
-
-![Modal que muestra un interrumptor para combinar las acciones de depositar y hacer staking](./Image5.png)
+![Modal showing a switch to combine the deposit and stake actions](./Image5.png)
 
 ### 6. Las conexiones de red son visibles y flexibles {#network-connections-are-visible-and-flexible}
 
-Informe al usuario a qué red está conectado y proporcione accesos directos claros para cambiar de red.
-Esto es especialmente importante en aplicaciones multicadena. Las funciones principales de la aplicación deben mantenerse visibles independientemente de que dicha aplicación esté desconectada o conectada a una red no compatible.
+Informa al usuario sobre a qué red está conectado y proporciona atajos claros para cambiar de red. 
+Esto es especialmente importante en aplicaciones multicadena. Las funciones principales de la aplicación deben seguir siendo visibles mientras se está desconectado o conectado a una red no compatible.
 
-**Recomendaciones**
+**Consejos:**
+- Muestra la mayor parte posible de la aplicación mientras esté desconectada
+- Muestra a qué red está conectado actualmente el usuario
+- No obligues al usuario a ir a la billetera para cambiar de red
+- Si la aplicación requiere que el usuario cambie de red, solicita la acción desde la llamada a la acción principal
+- Si la aplicación contiene mercados o bóvedas para múltiples redes, indica claramente qué conjunto está viendo el usuario actualmente
 
-- Muestre lo más posible de la aplicación cuando esté desconectada.
-- Muestre a qué red está conectado el usuario.
-- No haga que el usuario tenga quer ir a su billetera para cambiar de red.
-- Si la aplicación requiere que el usuario cambie de red, solicite esa acción desde el botón principal de llamada a la acción.
-- Si la aplicación contiene mercados o bóvedas para múltiples redes, indique claramente cuál está visualizando el usuario en ese momento.
+**Ejemplo:** Muestra al usuario a qué red está conectado y permítele cambiarla en la barra de la aplicación.
 
-**Ejemplo:** Muestre al usuario a qué red está conectado y permítale cambiarla desde la barra de la aplicación.
-
-![Botón desplegable que muestra la red a la que el usuario está conectado](./Image6.png)
+![Dropdown button showing the connected network](./Image6.png)
 
 ### 7. Control desde la aplicación, no desde la billetera {#control-from-the-app-not-the-wallet}
 
-La interfaz debe informar al usuario sobre todo lo que necesita saber y darle control sobre todo lo que necesita hacer.
-En la Web3, existen acciones que se realizan en la interfaz y acciones que realizan en la billetera. Generalmente, usted inicia una acción en la interfaz y seguidamente la confirma en la billetera. Los usuarios pueden sentirse incómodos si estos dos espacios no se integran cuidadosamente.
+La interfaz de usuario debe decirle al usuario todo lo que necesita saber y darle control sobre todo lo que necesita hacer. 
+En Web3, hay acciones que realizas en la interfaz de usuario y acciones que realizas en la billetera. Por lo general, inicias una acción en la interfaz de usuario y luego la confirmas en la billetera. Los usuarios pueden sentirse incómodos si estas dos vertientes no se integran cuidadosamente.
 
-**Recomendaciones**
+**Consejos:**
+- Comunica el estado del sistema a través de retroalimentación en la interfaz de usuario
+- Mantén un registro de su historial
+- Proporciona enlaces a exploradores de bloques para transacciones antiguas
+- Proporciona atajos para cambiar de red. 
 
-- Comunique el estado del sistema mediante comentarios en la interfaz de usuario.
-- Mantenga un historial.
-- Proporcione enlaces hacia exploradores de bloques para transacciones anteriores.
-- Provea accesos directos para cambiar de red.
+**Ejemplo:** Un contenedor sutil muestra al usuario qué tokens relevantes tiene en su billetera, y la llamada a la acción (CTA) principal proporciona un atajo para cambiar la red.
 
-**Ejemplo:** Un contenedor discreto muestra al usuario los tokens relevantes que tiene en su billetera, y el CTA principal ofrece un acceso directo para cambiar la red.
-
-![CTA principal solicita al usuario cambiar de red](./Image7.png)
+![Main CTA is prompting the user to switch network](./Image7.png)

@@ -1,80 +1,79 @@
 ---
 title: Prueba de autoridad (PoA)
-description: "Explicación del protocolo de consenso \"Prueba de autoridad\" y su papel en el ecosistema de cadenas de bloques."
+description: Una explicación del protocolo de consenso de prueba de autoridad y su papel en el ecosistema de la cadena de bloques.
 lang: es
 ---
 
-Prueba de autoridad (PoA) es un algoritmo de consenso basado en reputación que es una versión modificada de la [prueba de participación](/developers/docs/consensus-mechanisms/pos/). Se utiliza principalmente en cadenas privadas, redes de prueba y redes de desarrollo local. PoA es un algoritmo de consenso basado en reputación que requiere confiar en un conjunto de firmantes autorizados para producir bloques, en lugar de utilizar un mecanismo basado en participación en PoS.
+**La prueba de autoridad (PoA)** es un algoritmo de consenso basado en la reputación que es una versión modificada de la [prueba de participación](/developers/docs/consensus-mechanisms/pos/). Se utiliza principalmente en cadenas privadas, redes de prueba y redes de desarrollo local. La PoA es un algoritmo de consenso basado en la reputación que requiere confiar en un conjunto de firmantes autorizados para producir bloques, en lugar de un mecanismo basado en la participación como en la PoS.
 
 ## Requisitos previos {#prerequisites}
 
-Para un mejor entendimiento de esta página, le recomendamos leer primero [transacciones](/developers/docs/transactions/), [bloques](/developers/docs/blocks/) y [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
+Para entender mejor esta página, le recomendamos que primero lea sobre las [transacciones](/developers/docs/transactions/), los [bloques](/developers/docs/blocks/) y los [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
 
-## ¿Qué es Prueba de autoridad (PoA)? {#what-is-poa}
+## ¿Qué es la prueba de autoridad (PoA)? {#what-is-poa}
 
-La Prueba de autoridad es una versión modificada de **[prueba de participación](/developers/docs/consensus-mechanisms/pos/) (PoS)** que es un algoritmo de consenso basado en reputación en lugar del mecanismo basado en participación en PoS. El término fue introducido por primera vez en 2017 por Gavin Wood, y este algoritmo de consenso ha sido utilizado principalmente en cadenas privadas, redes de prueba y redes de desarrollo local, ya que supera la necesidad de recursos de alta calidad de PoW y resuelve los problemas de escalabilidad de PoS al tener un pequeño subconjunto de nodos almacenando la cadena de bloques y produciendo bloques.
+La prueba de autoridad es una versión modificada de la **[prueba de participación](/developers/docs/consensus-mechanisms/pos/) (PoS)** que consiste en un algoritmo de consenso basado en la reputación en lugar del mecanismo basado en la participación de la PoS. El término fue introducido por primera vez en 2017 por Gavin Wood, y este algoritmo de consenso se ha utilizado principalmente en cadenas privadas, redes de prueba y redes de desarrollo local, ya que supera la necesidad de recursos de alta calidad como lo hace la prueba de trabajo (PoW), y supera los problemas de escalabilidad de la PoS al tener un pequeño subconjunto de nodos que almacenan la cadena de bloques y producen bloques.
 
-La prueba de autoridad requiere confiar en un grupo establecido de firmantes que se establece en el [bloque inicial](/glossary/#genesis-block). En la mayoría de las implementaciones actuales, todos los firmantes autorizados conservan el mismo poder y privilegios al determinar el consenso de la cadena. La idea detrás del staking de reputación es que cada validador autorizado sea conocido por todos a través de mecanismos como el conocimiento del cliente (KYC), o teniendo una organización reconocida como único validador; de este modo, si un validador hace algo incorrecto, se conoce su identidad.
+La prueba de autoridad requiere confiar en un conjunto de firmantes autorizados que se establecen en el [bloque génesis](/glossary/#genesis-block). En la mayoría de las implementaciones actuales, todos los firmantes autorizados conservan el mismo poder y privilegios al determinar el consenso de la cadena. La idea detrás del staking de reputación es que cada validador autorizado es bien conocido por todos a través de procesos como KYC (conozca a su cliente), o al tener una organización reconocida como el único validador; de esta manera, si un validador hace algo mal, se conoce su identidad.
 
-Existen diversas implementaciones de PoA, pero la implementación estándar de Ethereum es **clique**, que implementa [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique es fácil de utilizar para los desarrolladores y un estándar fácil de implementar dado que soporta todo tipo de sincronización de clientes. Otras implementaciones incluyen [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) y [Aura](https://openethereum.github.io/Chain-specification).
+Existen múltiples implementaciones de PoA, pero la implementación estándar de Ethereum es **clique**, que implementa el [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique es un estándar fácil de implementar y amigable para los desarrolladores, que admite todos los tipos de sincronización de clientes. Otras implementaciones incluyen [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) y [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Cómo funciona {#how-it-works}
 
-En PoA, se selecciona un grupo de firmantes autorizados para crear nuevos bloques. Los firmantes son seleccionados en función de su reputación y son los únicos autorizados a crear nuevos bloques. Los firmantes se seleccionan por turnos y cada uno puede crear un bloque en un período de tiempo específico. El tiempo de creación del bloque es fijo, y los firmantes deben crear un bloque dentro de ese período de tiempo.
+En la PoA, se selecciona un conjunto de firmantes autorizados para crear nuevos bloques. Los firmantes se seleccionan en función de su reputación y son los únicos autorizados para crear nuevos bloques. Los firmantes se seleccionan de forma rotativa (round-robin), y a cada firmante se le permite crear un bloque en un período de tiempo específico. El tiempo de creación del bloque es fijo, y los firmantes deben crear un bloque dentro de ese período de tiempo.
 
-La reputación en este contexto no es algo cuantificado, sino que se basa en la reputación de corporaciones bien conocidas, como Microsoft y Google. Por lo tanto, la forma de seleccionar a los firmantes de confianza no es algorítmica, sino que se basa en el acto humano normal de _confianza_. Por ejemplo, una entidad como Microsoft crea una red privada PoA entre cientos o miles de startups, y al ser el único firmante de confianza con la posibilidad de agregar otros firmantes conocidos como Google en el futuro, las startups confiarían sin duda en que Microsoft actuará de manera honesta en todo momento y utilizar la red. Esto resuelve la necesidad de realizar staking in diferentes redes pequeñas o privadas que se construyeron con diferentes propósitos para mantenerlas descentralizadas y en funcionamiento, junto con la necesidad de mineros, lo cual consume mucha energía y recursos. Algunas redes privadas utilizan el estándar PoA, como VeChain, mientras que otras lo modifican, como Binance, que utiliza [PoSA](https://academy.binance.com/en/glossary/proof-of-staked-authority-posa), una versión modificada de PoA y PoS.
+La reputación en este contexto no es algo cuantificado, sino que es la reputación de corporaciones reconocidas como Microsoft y Google; por lo tanto, la forma de seleccionar a los firmantes de confianza no es algorítmica, sino que es el acto humano normal de _confianza_ donde una entidad, digamos por ejemplo Microsoft, crea una red privada PoA entre cientos o miles de startups y asume el rol como el único firmante de confianza con la posibilidad de agregar otros firmantes reconocidos como Google en el futuro. Las startups, sin duda, confiarían en que Microsoft actuará de manera honesta en todo momento y usarían la red. Esto resuelve la necesidad de hacer staking en diferentes redes pequeñas/privadas que se construyeron con diferentes propósitos para mantenerlas descentralizadas y en funcionamiento, junto con la necesidad de mineros, lo que consume mucha energía y recursos. Algunas redes privadas utilizan el estándar PoA tal cual, como VeChain, y otras lo modifican, como Binance, que utiliza [PoSA](https://academy.binance.com/en/glossary/proof-of-staked-authority-posa), que es una versión modificada y personalizada de PoA y PoS.
 
-El proceso de votación lo realizan los propios firmantes. Cada firmante vota por la adición o eliminación de otro firmante en su bloque cuando crean un nuevo bloque. Los votos son contabilizacos por los nodos, y los firmantes se agregan o eliminan en función de que los votos alcancen un umbral específico, denominado SIGNER_LIMIT.
+El proceso de voto lo realizan los propios firmantes. Cada firmante emite un voto para la adición o eliminación de un firmante en su bloque cuando crea un nuevo bloque. Los nodos cuentan los votos, y los firmantes se agregan o eliminan en función de si los votos alcanzan un cierto umbral `SIGNER_LIMIT`.
 
-Puede haber situaciones en la que ocurran pequeñas bifurcaciones. La dificultad de un bloque depende de si el bloque fué firmado en turno o fuera de turno. Los bloques "en turno" tienen dificultad 2, y los bloques "fuera de turno" tienen dificultad 1. En el caso de pequeñas bifurcaciones, la cadena en la que la mayoría de los firmantes sellen bloques "a turno" acumulará la mayor dificultad y ganará.
+Puede darse una situación en la que se produzcan pequeñas bifurcaciones; la dificultad de un bloque depende de si el bloque se firmó en su turno o fuera de su turno. Los bloques «en turno» tienen una dificultad de 2, y los bloques «fuera de turno» tienen una dificultad de 1. En el caso de pequeñas bifurcaciones, la cadena con la mayoría de los firmantes sellando bloques «en turno» acumulará la mayor dificultad y ganará.
 
 ## Vectores de ataque {#attack-vectors}
 
 ### Firmantes maliciosos {#malicious-signers}
 
-Un usuario malicioso podría ser incluido en la lista de firmantes, o una clave o máquina firmante podría encontrarse comprometida. En estas situaciones, el protocolo debe poder defenderse en contra de reorganizaciones y spamming. La solución propuesta es que, para una lista dada de N firmantes autorizados, cada firmante pueda mintear 1 de cada K bloques. Esto asegura que los daños sean limitados y que el resto de los validadores puedan votar y eliminar al usuario malicioso.
+Un usuario malicioso podría agregarse a la lista de firmantes, o una clave de firma/máquina podría verse comprometida. En tal escenario, el protocolo debe ser capaz de defenderse contra reorganizaciones y spam. La solución propuesta es que, dada una lista de N firmantes autorizados, cualquier firmante solo puede acuñar 1 bloque de cada K. Esto asegura que el daño sea limitado, y el resto de los validadores pueden expulsar al usuario malicioso mediante su voto.
 
 ### Censura {#censorship-attack}
 
-Otro tipo de vector de ataque que resulta interesante ocurre cuando un firmante (o grupo de firmantes) intenta censurar bloques que votan para retirarlo de la lista de autorización. Para lidiar con esto, la frecuencia de minteo de los firmantes se encuentra restringida a 1 de N/2. Esto asegura que firmantes maliciosos necesiten controlar aunque sea el 51% del total de cuentas firmantes, punto en el cual se volverían la nueva fuente de verdad para la cadena.
+Otro vector de ataque interesante es si un firmante (o grupo de firmantes) intenta censurar los bloques que votan para eliminarlos de la lista de autorización. Para solucionar esto, la frecuencia de acuñación permitida de los firmantes está restringida a 1 de cada N/2. Esto asegura que los firmantes maliciosos necesiten controlar al menos el 51 % de las cuentas de firma, momento en el que se convertirían efectivamente en la nueva fuente de verdad para la cadena.
 
 ### Spam {#spam-attack}
 
-Otro vector de ataque más pequeño ocurre cuando firmantes maliciosos inyectan nuevas propuestas de voto dentro de cada bloque que mintean. Dado que los nodos necesitan realizar un conteo de todos los votos para crear la lista de firmantes autorizados, deben registrar todos los votos a lo largo del tiempo. Sin establecer un límite al período de voto, esto podría incrementar lentamente a lo largo del tiempo. La solución es colocar una ventana _móvil_ de W bloques luego de la cual los votos se consideren obsoletos. _Una duración de ventana móvil que resulta razonable podría ser 1-2 épocas._
+Otro pequeño vector de ataque son los firmantes maliciosos que inyectan nuevas propuestas de voto dentro de cada bloque que acuñan. Dado que los nodos necesitan contar todos los votos para crear la lista real de firmantes autorizados, deben registrar todos los votos a lo largo del tiempo. Sin establecer un límite en la ventana de votación, esto podría crecer lentamente, pero sin límites. La solución es colocar una ventana _móvil_ de W bloques después de la cual los votos se consideran obsoletos. _Una ventana razonable podría ser de 1 a 2 épocas._
 
 ### Bloques concurrentes {#concurrent-blocks}
 
-En una red de PoA, cuando hay N firmantes autorizados, a cada firmante se le permite mintear 1 de K bloques, lo cual significa que N-K+1 validadores pueden mintear en cualquier momento dado. Para evitar que los validadores se apresuren por los bloques, cada firmante debería agregar una cantidad aleatoria de tiempo al tiempo que toma lanzar un nuevo bloque. Aunque este proceso asegura que pequeñas bifurcaciones en el código sean raras, estas pueden ocurrir igualmente, como ocurre en la Red principal. Si se descubre que un firmante está abusando de su poder y originando caos, los firmantes restantes pueden votar en su contra para retirarle su condición de firmante.
+En una red PoA, cuando hay N firmantes autorizados, a cada firmante se le permite acuñar 1 bloque de cada K, lo que significa que a N-K+1 validadores se les permite acuñar en cualquier momento dado. Para evitar que estos validadores compitan por los bloques, cada firmante debe agregar un pequeño «desplazamiento» aleatorio al momento en que publica un nuevo bloque. Aunque este proceso asegura que las pequeñas bifurcaciones sean raras, aún pueden ocurrir bifurcaciones ocasionales, al igual que en la Red principal. Si se descubre que un firmante está abusando de su poder y causando caos, los otros firmantes pueden expulsarlo mediante su voto.
 
-Si, por ejemplo, hubiera 10 firmantes autorizados y cada firmante puede crear 1 de 20 bloques, entonces en cualquier momento 11 validadores pueden crear bloques. Para evitar que los validadores se apresuren a crear bloques, cada firmante incluye un tiempo adicional aleatorio al tiempo que les toma lanzar un nuevo bloque. Esto reduce la cantidad de bifurcaciones en el código, pero aún permite bifurcaciones ocasionales, como se observa en la Red principal de Ethereum. Si un firmante utiliza su autoridad de forma incorrecta alterando el funcionamento correcto de los procesos, otros firmantes pueden votar en su contra y excluirlo de la red.
+Si, por ejemplo, hay 10 firmantes autorizados y a cada firmante se le permite crear 1 bloque de cada 6, entonces en cualquier momento dado, 5 validadores pueden crear bloques. Para evitar que compitan por crear bloques, cada firmante agrega un pequeño «desplazamiento» aleatorio al momento en que publica un nuevo bloque. Esto reduce la aparición de pequeñas bifurcaciones, pero aún permite bifurcaciones ocasionales, como se ve en la red principal de Ethereum. Si un firmante hace un mal uso de su autoridad y causa interrupciones, puede ser expulsado de la red mediante una votación.
 
-## Ventajas y desventajas {#pros-and-cons}
+## Pros y contras {#pros-and-cons}
 
-| Pros                                                                                                                                                     | Contras                                                                                                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Más escalable que otros mecanismos populares, tales como PoS y PoW, dado que está basado en un cantidad limitada de firmantes de bloque. | Las redes de PoA suelen tener una cantidad relativamente pequeña de nodos validadores. Esto hace que las redes PoA sean más centralizadas.                                                           |
-| Las cadenas de bloques de PoA son muy baratas de ejecutar y mantener.                                                                    | Volverse un firmante autorizado suele estár estar fuera del alcance de una persona común y corriente, dado que las cadenas de bloques requieren entidades con reputación establecida.                                |
-| Las transacciones son confirmadas rápidamente dado que la cantidad de firmantes necesarios para validar nuevos bloques es limitada.      | Firmantes maliciosos podrían reorganizar el orden de los bloques, realizar un doble gasto, censurar transacciones en la red. La posibilidad de estos ataques se reduce, pero siguen siendo posibles. |
+| Pros                                                                                                                                                                      | Contras                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Más escalable que otros mecanismos populares como PoS y PoW, ya que se basa en un número limitado de firmantes de bloques                                                 | Las redes PoA suelen tener un número relativamente pequeño de nodos validadores. Esto hace que una red PoA sea más centralizada.                                                      |
+| Las cadenas de bloques PoA son increíblemente baratas de ejecutar y mantener                                                                                              | Convertirse en un firmante autorizado suele estar fuera del alcance de una persona común, porque la cadena de bloques requiere entidades con una reputación establecida.              |
+| Las transacciones se confirman muy rápido, pudiendo tardar menos de 1 segundo, porque solo se requiere un número limitado de firmantes para validar nuevos bloques        | Los firmantes maliciosos podrían causar una reorganización, realizar un doble gasto o censurar transacciones en la red; esos ataques están mitigados, pero aún son posibles           |
 
-## Lecturas adicionales {#further-reading}
+## Más información {#further-reading}
 
-- [EIP-225](https://eips.ethereum.org/EIPS/eip-225): _estándar clique_
-- [Estudio de Prueba de autoridad](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md): _aspectos económicos de las cripto_
-- [¿Qué es Prueba de autoridad?](https://forum.openzeppelin.com/t/proof-of-authority/3577): _OpenZeppelin_
-- [Explicación de la Prueba de autoridad](https://academy.binance.com/en/articles/proof-of-authority-explained): _Binance_
+- [EIP-225](https://eips.ethereum.org/EIPS/eip-225): _estándar Clique_
+- [Estudio sobre la prueba de autoridad](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md): _Criptoeconomía_
+- [Qué es la prueba de autoridad](https://forum.openzeppelin.com/t/proof-of-authority/3577): _OpenZeppelin_
+- [Explicación de la prueba de autoridad](https://academy.binance.com/en/articles/proof-of-authority-explained): _Binance_
 - [PoA en la cadena de bloques](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
-- [Clique explicado](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
-- [PoA obsoleta, especificación Aura](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, otro tipo de implementación de PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
+- [Explicación de Clique](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
+- [PoA obsoleta, especificación de Aura](https://openethereum.github.io/Chain-specification)
+- [IBFT 2.0, otra implementación de PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
-### ¿Retiene usted mejor las cosas cuando las ve? {#visual-learner}
+### ¿Aprende mejor de forma visual? {#visual-learner}
 
 Vea una explicación visual de la prueba de autoridad:
 
-<YouTube id="Mj10HSEM5_8" />
+<VideoWatch slug="proof-of-authority-explained" />
 
 ## Temas relacionados {#related-topics}
 
 - [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
 - [Prueba de participación](/developers/docs/consensus-mechanisms/pos/)
-
