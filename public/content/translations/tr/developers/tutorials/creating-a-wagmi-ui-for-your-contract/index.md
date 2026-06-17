@@ -247,7 +247,7 @@ Bu, JSX içine if ifadeleri koymanın standart yoludur.
 
 JSX, HTML'den daha katı olan XML standardını izler. Bir etiketin karşılık gelen bir bitiş etiketi yoksa, onu sonlandırmak için sonunda bir eğik çizgi (`/`) _olmalıdır_.
 
-Burada bu tür iki etiketimiz var: `<Greeter />` (aslında sözleşmeyle konuşan HTML kodunu içerir) ve [yatay bir çizgi için `<HTML-PLACEHOLDER-HTMLTAG-8d9513 />`](https://www.w3schools.com/tags/tag_hr.asp).
+Burada bu tür iki etiketimiz var: `<Greeter />` (aslında sözleşmeyle konuşan HTML kodunu içerir) ve [yatay bir çizgi için `<hr />`](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

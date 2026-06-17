@@ -336,7 +336,7 @@ Kazi hii inaruhusu kiwanda (na kiwanda pekee) kubainisha tokeni mbili za ERC-20 
 
 #### Kazi za Ndani za Usasishaji {#pair-update-internal}
 
-##### \_update {#}
+##### \_update
 
 ```solidity
     // sasisha akiba na, kwenye wito wa kwanza kwa kila kitalu, vilimbikizi vya bei
@@ -391,7 +391,7 @@ Ukotoaji huu wa bei ndio sababu tunahitaji kujua ukubwa wa akiba za zamani.
 
 Hatimaye, sasisha vigezo vya kimataifa na utoe tukio la `Sync`.
 
-##### \_mintFee {#}
+##### \_mintFee
 
 ```solidity
     // kama ada imewashwa, fua ukwasi sawa na 1/6 ya ukuaji katika sqrt(k)
@@ -461,7 +461,7 @@ Msimbo huu unapata urejeshaji huo inapowezekana.
 
 Kumbuka kwamba ingawa muamala au mkataba wowote _unaweza_ kuita kazi hizi, zimeundwa kuitwa kutoka kwa mkataba wa pembezoni. Ikiwa utaziita moja kwa moja hutaweza kudanganya badilishano la jozi, lakini unaweza kupoteza thamani kupitia kosa.
 
-##### mint {#}
+##### mint
 
 ```solidity
     // kazi hii ya kiwango cha chini inapaswa kuitwa kutoka kwenye mkataba ambao unafanya ukaguzi muhimu wa usalama
@@ -547,7 +547,7 @@ Tumia kazi ya `UniswapV2ERC20._mint` kuunda haswa tokeni za ziada za ukwasi na k
 
 Sasisha vigezo vya hali (`reserve0`, `reserve1`, na ikihitajika `kLast`) na utoe tukio linalofaa.
 
-##### burn {#}
+##### burn
 
 ```solidity
     // kazi hii ya kiwango cha chini inapaswa kuitwa kutoka kwenye mkataba ambao unafanya ukaguzi muhimu wa usalama
@@ -594,7 +594,7 @@ Mtoa ukwasi anapokea thamani sawa ya tokeni zote mbili. Kwa njia hii hatubadilis
 
 Sehemu iliyobaki ya kazi ya `burn` ni picha ya kioo ya kazi ya `mint` hapo juu.
 
-##### swap {#}
+##### swap
 
 ```solidity
     // kazi hii ya kiwango cha chini inapaswa kuitwa kutoka kwenye mkataba ambao unafanya ukaguzi muhimu wa usalama
@@ -662,7 +662,7 @@ Huu ni ukaguzi wa kiakili ili kuhakikisha hatupotezi kutokana na badilishano. Ha
 
 Sasisha `reserve0` na `reserve1`, na ikihitajika vilimbikizi vya bei na mhuri wa muda na utoe tukio.
 
-##### Usawazishaji au Skim {#}
+##### Usawazishaji au Skim
 
 Inawezekana kwa salio halisi kutoka nje ya usawazishaji na akiba ambazo badilishano la jozi linafikiri linazo.
 Hakuna njia ya kutoa tokeni bila idhini ya mkataba, lakini uwekaji ni jambo tofauti. Akaunti inaweza kuhamisha tokeni kwa badilishano bila kuita `mint` au `swap`.

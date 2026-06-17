@@ -336,7 +336,7 @@ Diese Funktion ermöglicht es der Factory (und nur der Factory), die beiden ERC-
 
 #### Interne Update-Funktionen {#pair-update-internal}
 
-##### \_update {#}
+##### \_update
 
 ```solidity
     // aktualisiert Reserven und, beim ersten Aufruf pro Block, Preisakkumulatoren
@@ -391,7 +391,7 @@ Diese Preisberechnung ist der Grund, warum wir die alten Reservegrößen kennen 
 
 Aktualisieren Sie schließlich die globalen Variablen und geben Sie ein `Sync`-Ereignis aus.
 
-##### \_mintFee {#}
+##### \_mintFee
 
 ```solidity
     // wenn Gebühr aktiviert ist, präge Liquidität entsprechend 1/6 des Wachstums von sqrt(k)
@@ -461,7 +461,7 @@ Dieser Code holt sich diese Rückerstattung, wenn möglich.
 
 Beachten Sie, dass zwar jede Transaktion oder jeder Vertrag diese Funktionen aufrufen _kann_, sie jedoch so konzipiert sind, dass sie vom Peripherie-Vertrag aufgerufen werden. Wenn Sie sie direkt aufrufen, können Sie den Paar-Tausch nicht betrügen, aber Sie könnten durch einen Fehler Wert verlieren.
 
-##### mint {#}
+##### mint
 
 ```solidity
     // diese Low-Level-Funktion sollte von einem Vertrag aufgerufen werden, der wichtige Sicherheitsprüfungen durchführt
@@ -547,7 +547,7 @@ Verwenden Sie die Funktion `UniswapV2ERC20._mint`, um die zusätzlichen Liquidit
 
 Aktualisieren Sie die Zustandsvariablen (`reserve0`, `reserve1` und bei Bedarf `kLast`) und geben Sie das entsprechende Ereignis aus.
 
-##### burn {#}
+##### burn
 
 ```solidity
     // diese Low-Level-Funktion sollte von einem Vertrag aufgerufen werden, der wichtige Sicherheitsprüfungen durchführt
@@ -594,7 +594,7 @@ Der Liquiditätsanbieter erhält den gleichen Wert beider Token. Auf diese Weise
 
 Der Rest der Funktion `burn` ist das Spiegelbild der obigen Funktion `mint`.
 
-##### swap {#}
+##### swap
 
 ```solidity
     // diese Low-Level-Funktion sollte von einem Vertrag aufgerufen werden, der wichtige Sicherheitsprüfungen durchführt
@@ -662,7 +662,7 @@ Dies ist eine Plausibilitätsprüfung, um sicherzustellen, dass wir durch den Ta
 
 Aktualisieren Sie `reserve0` und `reserve1` und bei Bedarf die Preisakkumulatoren und den Zeitstempel und geben Sie ein Ereignis aus.
 
-##### Sync oder Skim {#}
+##### Sync oder Skim
 
 Es ist möglich, dass die tatsächlichen Salden nicht mehr mit den Reserven synchron sind, von denen der Paar-Tausch glaubt, dass er sie hat.
 Es gibt keine Möglichkeit, Token ohne die Zustimmung des Vertrags abzuheben, aber Einzahlungen sind eine andere Sache. Ein Konto kann Token an den Tausch transferieren, ohne entweder `mint` oder `swap` aufzurufen.

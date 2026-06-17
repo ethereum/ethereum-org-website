@@ -79,7 +79,7 @@ Staker perlu memberikan alamat penarikan (jika tidak diberikan pada setoran awal
 Validator juga dapat sepenuhnya keluar sebagai validator, yang akan membuka kunci sisa saldo ETH mereka untuk penarikan. Akun yang telah memberikan alamat penarikan eksekusi dan menyelesaikan proses keluar akan menerima seluruh saldo mereka ke alamat penarikan yang diberikan selama penyapuan validator berikutnya.
 
 <ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Apa yang terjadi jika saya terkena pemotongan?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Dengan menggunakan penyedia SaaS, Anda mempercayakan operasi node Anda kepada orang lain. Hal ini disertai dengan risiko kinerja node yang buruk, yang tidak berada dalam kendali Anda. Jika validator Anda dipotong, saldo validator Anda akan dikenakan penalti dan dikeluarkan secara paksa dari kumpulan validator.

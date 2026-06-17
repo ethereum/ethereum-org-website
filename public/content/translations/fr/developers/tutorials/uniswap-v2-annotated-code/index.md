@@ -336,7 +336,7 @@ Cette fonction permet à l'usine (et uniquement à l'usine) de spécifier les de
 
 #### Fonctions de mise à jour internes {#pair-update-internal}
 
-##### \_update {#}
+##### \_update
 
 ```solidity
     // mettre à jour les réserves et, lors du premier appel par bloc, les accumulateurs de prix
@@ -391,7 +391,7 @@ Ce calcul de prix est la raison pour laquelle nous devons connaître les ancienn
 
 Enfin, mettre à jour les variables globales et émettre un événement `Sync`.
 
-##### \_mintFee {#}
+##### \_mintFee
 
 ```solidity
     // si les frais sont activés, frapper une liquidité équivalente à 1/6 de la croissance de sqrt(k)
@@ -461,7 +461,7 @@ Ce code obtient ce remboursement lorsque cela est possible.
 
 Notez que bien que n'importe quelle transaction ou contrat _puisse_ appeler ces fonctions, elles sont conçues pour être appelées depuis le contrat périphérique. Si vous les appelez directement, vous ne pourrez pas tromper l'échange de paires, mais vous pourriez perdre de la valeur à cause d'une erreur.
 
-##### mint {#}
+##### mint
 
 ```solidity
     // cette fonction de bas niveau doit être appelée depuis un contrat qui effectue des vérifications de sécurité importantes
@@ -547,7 +547,7 @@ Utiliser la fonction `UniswapV2ERC20._mint` pour créer réellement les jetons d
 
 Mettre à jour les variables d'état (`reserve0`, `reserve1`, et si nécessaire `kLast`) et émettre l'événement approprié.
 
-##### burn {#}
+##### burn
 
 ```solidity
     // cette fonction de bas niveau doit être appelée depuis un contrat qui effectue des vérifications de sécurité importantes
@@ -594,7 +594,7 @@ Le fournisseur de liquidité reçoit une valeur égale des deux jetons. De cette
 
 Le reste de la fonction `burn` est l'image miroir de la fonction `mint` ci-dessus.
 
-##### swap {#}
+##### swap
 
 ```solidity
     // cette fonction de bas niveau doit être appelée depuis un contrat qui effectue des vérifications de sécurité importantes
@@ -662,7 +662,7 @@ C'est une vérification de cohérence pour s'assurer que nous ne perdons pas lor
 
 Mettre à jour `reserve0` et `reserve1`, et si nécessaire les accumulateurs de prix et l'horodatage, et émettre un événement.
 
-##### Sync ou Skim {#}
+##### Sync ou Skim
 
 Il est possible que les soldes réels se désynchronisent des réserves que l'échange de paires pense avoir.
 Il n'y a aucun moyen de retirer des jetons sans le consentement du contrat, mais les dépôts sont une autre affaire. Un compte peut transférer des jetons à l'échange sans appeler ni `mint` ni `swap`.

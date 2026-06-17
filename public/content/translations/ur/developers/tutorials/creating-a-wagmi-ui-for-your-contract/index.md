@@ -247,7 +247,7 @@ JSX کے اندر if سٹیٹمنٹس رکھنے کا یہ معیاری طریق
 
 JSX <span dir="ltr">XML</span> معیار کی پیروی کرتا ہے، جو <span dir="ltr">HTML</span> سے زیادہ سخت ہے۔ اگر کسی ٹیگ کا متعلقہ اختتامی ٹیگ نہیں ہے، تو اسے ختم کرنے کے لیے اس کے آخر میں سلیش (`/`) _لازمی_ ہونا چاہیے۔
 
-یہاں ہمارے پاس ایسے دو ٹیگز ہیں، `<Greeter />` (جس میں دراصل وہ <span dir="ltr">HTML</span> کوڈ ہوتا ہے جو کنٹریکٹ سے بات کرتا ہے) اور [افقی لائن کے لیے `<HTML-PLACEHOLDER-HTMLTAG-8d9513 />`](https://www.w3schools.com/tags/tag_hr.asp)۔
+یہاں ہمارے پاس ایسے دو ٹیگز ہیں، `<Greeter />` (جس میں دراصل وہ <span dir="ltr">HTML</span> کوڈ ہوتا ہے جو کنٹریکٹ سے بات کرتا ہے) اور [افقی لائن کے لیے `<hr />`](https://www.w3schools.com/tags/tag_hr.asp)۔
 
 ```tsx
           <button type="button" onClick={disconnect}>

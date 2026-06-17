@@ -336,7 +336,7 @@ Bu fonksiyon, fabrikanın (ve yalnızca fabrikanın) bu çiftin takas edeceği i
 
 #### Dahili Güncelleme Fonksiyonları {#pair-update-internal}
 
-##### \_update {#}
+##### \_update
 
 ```solidity
     // rezervleri ve her Blok başına ilk çağrıda fiyat biriktiricilerini günceller
@@ -391,7 +391,7 @@ Bu fiyat hesaplaması, eski rezerv boyutlarını bilmemiz gerekmesinin nedenidir
 
 Son olarak, global değişkenleri güncelleyin ve bir `Sync` olayı yayınlayın.
 
-##### \_mintFee {#}
+##### \_mintFee
 
 ```solidity
     // eğer ücret açıksa, sqrt(k)'daki büyümenin 1/6'sına eşdeğer Likidite bas
@@ -461,7 +461,7 @@ Bu kod, mümkün olduğunda bu iadeyi alır.
 
 Herhangi bir işlem veya sözleşme bu fonksiyonları çağırabilse de, bunların çevre (periphery) sözleşmesinden çağrılmak üzere tasarlandığını unutmayın. Bunları doğrudan çağırırsanız çift takasını kandıramazsınız, ancak bir hata nedeniyle değer kaybedebilirsiniz.
 
-##### mint {#}
+##### mint
 
 ```solidity
     // bu düşük seviyeli fonksiyon, önemli güvenlik kontrollerini gerçekleştiren bir Sözleşme tarafından çağrılmalıdır
@@ -547,7 +547,7 @@ Ek likidite token'larını gerçekten oluşturmak ve bunları doğru hesaba verm
 
 Durum değişkenlerini (`reserve0`, `reserve1` ve gerekirse `kLast`) güncelleyin ve uygun olayı yayınlayın.
 
-##### burn {#}
+##### burn
 
 ```solidity
     // bu düşük seviyeli fonksiyon, önemli güvenlik kontrollerini gerçekleştiren bir Sözleşme tarafından çağrılmalıdır
@@ -594,7 +594,7 @@ Likidite sağlayıcı her iki token'dan da eşit değer alır. Bu şekilde dövi
 
 `burn` fonksiyonunun geri kalanı, yukarıdaki `mint` fonksiyonunun ayna görüntüsüdür.
 
-##### swap {#}
+##### swap
 
 ```solidity
     // bu düşük seviyeli fonksiyon, önemli güvenlik kontrollerini gerçekleştiren bir Sözleşme tarafından çağrılmalıdır
@@ -662,7 +662,7 @@ Bu, takastan kaybetmediğimizden emin olmak için bir mantık kontrolüdür. Bir
 
 `reserve0` ve `reserve1` değerlerini ve gerekirse fiyat biriktiricilerini ve zaman damgasını güncelleyin ve bir olay yayınlayın.
 
-##### Sync veya Skim {#}
+##### Sync veya Skim
 
 Gerçek bakiyelerin, çift takasının sahip olduğunu düşündüğü rezervlerle eşzamanlamasının bozulması mümkündür.
 Sözleşmenin izni olmadan token çekmenin bir yolu yoktur, ancak yatırma işlemleri farklı bir konudur. Bir hesap, `mint` veya `swap` fonksiyonlarını çağırmadan takasa token transfer edebilir.

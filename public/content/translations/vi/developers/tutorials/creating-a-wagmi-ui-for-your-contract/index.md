@@ -252,7 +252,7 @@ Cú pháp `{<condition> && <value>} means "if the condition is `true`, evaluate 
 
 JSX tuân theo tiêu chuẩn XML, nghiêm ngặt hơn HTML. Nếu một thẻ không có thẻ đóng tương ứng, nó _phải_ có một dấu gạch chéo (`/`) ở cuối để kết thúc nó.
 
-Ở đây chúng ta có hai thẻ như vậy, `<Greeter />` (thực sự chứa mã HTML giao tiếp với hợp đồng) và [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` cho một đường ngang](https://www.w3schools.com/tags/tag_hr.asp).
+Ở đây chúng ta có hai thẻ như vậy, `<Greeter />` (thực sự chứa mã HTML giao tiếp với hợp đồng) và [`<hr />` cho một đường ngang](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

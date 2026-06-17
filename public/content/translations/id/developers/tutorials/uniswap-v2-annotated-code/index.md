@@ -336,7 +336,7 @@ Fungsi ini memungkinkan pabrik (dan hanya pabrik) untuk menentukan dua token ERC
 
 #### Fungsi Pembaruan Internal {#pair-update-internal}
 
-##### \_update {#}
+##### \_update
 
 ```solidity
     // memperbarui cadangan dan, pada panggilan pertama per blok, akumulator harga
@@ -391,7 +391,7 @@ Perhitungan harga ini adalah alasan kita perlu mengetahui ukuran cadangan lama.
 
 Terakhir, perbarui variabel global dan pancarkan peristiwa `Sync`.
 
-##### \_mintFee {#}
+##### \_mintFee
 
 ```solidity
     // jika biaya aktif, cetak likuiditas yang setara dengan 1/6 dari pertumbuhan sqrt(k)
@@ -461,7 +461,7 @@ Kode ini mendapatkan pengembalian dana tersebut jika memungkinkan.
 
 Perhatikan bahwa meskipun transaksi atau kontrak apa pun _dapat_ memanggil fungsi-fungsi ini, mereka dirancang untuk dipanggil dari kontrak pinggiran (periphery). Jika Anda memanggilnya secara langsung, Anda tidak akan dapat menipu pertukaran pasangan, tetapi Anda mungkin kehilangan nilai karena kesalahan.
 
-##### mint {#}
+##### mint
 
 ```solidity
     // fungsi tingkat rendah ini harus dipanggil dari kontrak yang melakukan pemeriksaan keamanan penting
@@ -547,7 +547,7 @@ Gunakan fungsi `UniswapV2ERC20._mint` untuk benar-benar mencetak token likuidita
 
 Perbarui variabel state (`reserve0`, `reserve1`, dan jika perlu `kLast`) dan pancarkan peristiwa yang sesuai.
 
-##### burn {#}
+##### burn
 
 ```solidity
     // fungsi tingkat rendah ini harus dipanggil dari kontrak yang melakukan pemeriksaan keamanan penting
@@ -594,7 +594,7 @@ Penyedia likuiditas menerima nilai yang sama dari kedua token. Dengan cara ini k
 
 Sisa dari fungsi `burn` adalah cerminan dari fungsi `mint` di atas.
 
-##### swap {#}
+##### swap
 
 ```solidity
     // fungsi tingkat rendah ini harus dipanggil dari kontrak yang melakukan pemeriksaan keamanan penting
@@ -662,7 +662,7 @@ Ini adalah pemeriksaan kewarasan (sanity check) untuk memastikan kita tidak rugi
 
 Perbarui `reserve0` dan `reserve1`, dan jika perlu akumulator harga dan stempel waktu serta pancarkan peristiwa.
 
-##### Sinkronisasi atau Skim {#}
+##### Sinkronisasi atau Skim
 
 Ada kemungkinan saldo riil menjadi tidak sinkron dengan cadangan yang dianggap dimiliki oleh pertukaran pasangan.
 Tidak ada cara untuk melakukan penarikan token tanpa persetujuan kontrak, tetapi setoran adalah masalah yang berbeda. Sebuah akun dapat mentransfer token ke pertukaran tanpa memanggil `mint` atau `swap`.

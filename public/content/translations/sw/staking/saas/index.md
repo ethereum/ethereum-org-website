@@ -79,7 +79,7 @@ Waweka dhamana wanahitaji kutoa anwani ya utoaji (kama haikutolewa kwenye uwekaj
 Wathibitishaji wanaweza pia kujitoa kikamilifu kama mthibitishaji, ambayo itafungua salio lao la ETH lililosalia kwa utoaji. Akaunti ambazo zimetoa anwani ya utoaji ya utekelezaji na kukamilisha mchakato wa kujitoa zitapokea salio lao lote kwenye anwani ya utoaji iliyotolewa wakati wa ufagiaji unaofuata wa mthibitishaji.
 
 <ButtonLink href="/staking/withdrawals/">Zaidi kuhusu utoaji wa uwekaji dhamana</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Nini kinatokea ikiwa nitakatwa?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Kwa kutumia mtoa huduma wa SaaS, unakabidhi uendeshaji wa nodi yako kwa mtu mwingine. Hii inakuja na hatari ya utendakazi duni wa nodi, ambayo haiko chini ya udhibiti wako. Ikitokea mthibitishaji wako amekumbwa na ukataji, salio la mthibitishaji wako litaadhibiwa na kuondolewa kwa nguvu kutoka kwenye kundi la wathibitishaji.

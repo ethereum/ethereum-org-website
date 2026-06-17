@@ -79,7 +79,7 @@ Os stakers precisam fornecer um endereço de saque (se não for fornecido no dep
 Os validadores também podem sair totalmente como um validador, o que desbloqueará seu saldo restante de ETH para saque. As contas que forneceram um endereço de saque de execução e concluíram o processo de saída receberão todo o seu saldo no endereço de saque fornecido durante a próxima varredura do validador.
 
 <ButtonLink href="/staking/withdrawals/">Mais sobre saques de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="O que acontece se eu for penalizado?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Ao usar um provedor de SaaS, você está confiando a operação do seu nó a outra pessoa. Isso vem com o risco de baixo desempenho do nó, o que não está sob seu controle. No caso de seu validador ser penalizado (slashed), o saldo do seu validador será penalizado e removido à força do pool de validadores.

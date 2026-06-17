@@ -79,7 +79,7 @@ Osoby stakujące muszą podać adres wypłaty (jeśli nie został podany przy po
 Walidatorzy mogą również całkowicie wyjść jako walidator, co odblokuje ich pozostałe saldo ETH do wypłaty. Konta, które podały adres wypłaty w warstwie wykonawczej i zakończyły proces wyjścia, otrzymają całe swoje saldo na podany adres wypłaty podczas następnego cyklu sprawdzania walidatorów (validator sweep).
 
 <ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Co się stanie, jeśli zostanę ukarany cięciem?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Korzystając z usług dostawcy SaaS, powierzasz obsługę swojego węzła komuś innemu. Wiąże się to z ryzykiem słabej wydajności węzła, nad którą nie masz kontroli. W przypadku cięcia Twojego walidatora, saldo walidatora zostanie ukarane i przymusowo usunięte z puli walidatorów.

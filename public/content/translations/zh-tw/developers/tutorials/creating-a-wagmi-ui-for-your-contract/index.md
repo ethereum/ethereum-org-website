@@ -252,7 +252,7 @@ React 元件的 JSX <em>必須</em>回傳單一 HTML 元件。當我們有多個
 
 JSX 遵循 XML 標準，這比 HTML 更嚴格。如果標籤沒有對應的結束標籤，它_必須_在末尾加上斜線 (`/`) 來終止它。
 
-這裡我們有兩個這樣的標籤，`<Greeter />`（它實際上包含與合約通訊的 HTML 程式碼）和[代表水平線的 `<HTML-PLACEHOLDER-HTMLTAG-8d9513 />`](https://www.w3schools.com/tags/tag_hr.asp)。
+這裡我們有兩個這樣的標籤，`<Greeter />`（它實際上包含與合約通訊的 HTML 程式碼）和[代表水平線的 `<hr />`](https://www.w3schools.com/tags/tag_hr.asp)。
 
 ```tsx
           <button type="button" onClick={disconnect}>

@@ -252,7 +252,7 @@ Hii ndiyo njia ya kawaida ya kuweka taarifa za if ndani ya JSX.
 
 JSX inafuata kiwango cha XML, ambacho ni kikali zaidi kuliko HTML. Ikiwa lebo haina lebo ya mwisho inayolingana, _lazima_ iwe na mkwaju (`/`) mwishoni ili kuikomesha.
 
-Hapa tuna lebo mbili kama hizo, `<Greeter />` (ambayo kwa kweli ina kodi ya HTML inayozungumza na mkataba) na [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` kwa ajili ya mstari wa mlalo](https://www.w3schools.com/tags/tag_hr.asp).
+Hapa tuna lebo mbili kama hizo, `<Greeter />` (ambayo kwa kweli ina kodi ya HTML inayozungumza na mkataba) na [`<hr />` kwa ajili ya mstari wa mlalo](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

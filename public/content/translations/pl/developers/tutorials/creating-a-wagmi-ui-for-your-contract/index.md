@@ -247,7 +247,7 @@ To standardowy sposób umieszczania instrukcji warunkowych if wewnątrz JSX.
 
 JSX jest zgodny ze standardem XML, który jest bardziej rygorystyczny niż HTML. Jeśli znacznik nie ma odpowiadającego mu znacznika zamykającego, _musi_ mieć ukośnik (`/`) na końcu, aby go zakończyć.
 
-Tutaj mamy dwa takie znaczniki: `<Greeter />` (który w rzeczywistości zawiera kod HTML komunikujący się z kontraktem) oraz [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` dla linii poziomej](https://www.w3schools.com/tags/tag_hr.asp).
+Tutaj mamy dwa takie znaczniki: `<Greeter />` (który w rzeczywistości zawiera kod HTML komunikujący się z kontraktem) oraz [`<hr />` dla linii poziomej](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

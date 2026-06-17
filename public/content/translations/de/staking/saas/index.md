@@ -79,7 +79,7 @@ Staker müssen eine Abhebungsadresse angeben (falls nicht bei der Ersteinzahlung
 Validatoren können auch vollständig als Validator austreten, wodurch ihr verbleibendes ETH-Guthaben zur Abhebung freigegeben wird. Konten, die eine Abhebungsadresse für die Ausführungsschicht angegeben und den Austrittsprozess abgeschlossen haben, erhalten ihr gesamtes Guthaben beim nächsten Validator-Sweep an die angegebene Abhebungsadresse.
 
 <ButtonLink href="/staking/withdrawals/">Mehr über Staking-Abhebungen</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Was passiert, wenn ich geslasht werde?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Durch die Nutzung eines SaaS-Anbieters vertraust du den Betrieb deines Knotens jemand anderem an. Dies birgt das Risiko einer schlechten Knoten-Leistung, die nicht in deiner Kontrolle liegt. Für den Fall, dass dein Validator geslasht wird, wird dein Validator-Guthaben bestraft und zwangsweise aus dem Validator-Pool entfernt.

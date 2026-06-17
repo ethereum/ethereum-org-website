@@ -336,7 +336,7 @@ Esta función permite a la fábrica (y solo a la fábrica) especificar los dos t
 
 #### Funciones de actualización interna {#pair-update-internal}
 
-##### \_update {#}
+##### \_update
 
 ```solidity
     // actualiza las reservas y, en la primera llamada por bloque, los acumuladores de precios
@@ -391,7 +391,7 @@ Este cálculo de precio es la razón por la que necesitamos conocer los tamaños
 
 Finalmente, actualice las variables globales y emita un evento `Sync`.
 
-##### \_mintFee {#}
+##### \_mintFee
 
 ```solidity
     // si la tarifa está activada, acuñar liquidez equivalente a 1/6 del crecimiento en sqrt(k)
@@ -461,7 +461,7 @@ Este código obtiene ese reembolso cuando es posible.
 
 Tenga en cuenta que, si bien cualquier transacción o contrato _puede_ llamar a estas funciones, están diseñadas para ser llamadas desde el contrato periférico. Si las llama directamente, no podrá engañar al intercambio de pares, pero podría perder valor por un error.
 
-##### mint {#}
+##### mint
 
 ```solidity
     // esta función de bajo nivel debe ser llamada desde un contrato que realice comprobaciones de seguridad importantes
@@ -547,7 +547,7 @@ Use la función `UniswapV2ERC20._mint` para crear realmente los tokens de liquid
 
 Actualice las variables de estado (`reserve0`, `reserve1` y, si es necesario, `kLast`) y emita el evento apropiado.
 
-##### burn {#}
+##### burn
 
 ```solidity
     // esta función de bajo nivel debe ser llamada desde un contrato que realice comprobaciones de seguridad importantes
@@ -594,7 +594,7 @@ El proveedor de liquidez recibe el mismo valor de ambos tokens. De esta manera n
 
 El resto de la función `burn` es la imagen especular de la función `mint` anterior.
 
-##### swap {#}
+##### swap
 
 ```solidity
     // esta función de bajo nivel debe ser llamada desde un contrato que realice comprobaciones de seguridad importantes
@@ -662,7 +662,7 @@ Esta es una verificación de cordura para asegurarnos de que no perdemos con el 
 
 Actualice `reserve0` y `reserve1` y, si es necesario, los acumuladores de precios y la marca de tiempo y emita un evento.
 
-##### Sincronización o Skim {#}
+##### Sincronización o Skim
 
 Es posible que los saldos reales se desincronicen con las reservas que el intercambio de pares cree que tiene.
 No hay forma de retirar tokens sin el consentimiento del contrato, pero los depósitos son un asunto diferente. Una cuenta puede transferir tokens al intercambio sin llamar a `mint` ni a `swap`.

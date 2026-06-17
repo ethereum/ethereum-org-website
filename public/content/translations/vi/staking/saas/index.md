@@ -79,7 +79,7 @@ Những người đặt cọc cần cung cấp một Địa chỉ rút tiền (n
 Các trình xác thực cũng có thể thoát hoàn toàn với tư cách là một trình xác thực, điều này sẽ mở khóa số dư ETH còn lại của họ để rút tiền. Các Tài khoản đã cung cấp Địa chỉ rút tiền thực thi và hoàn tất quá trình thoát sẽ nhận được toàn bộ số dư của họ vào Địa chỉ rút tiền được cung cấp trong lần quét trình xác thực tiếp theo.
 
 <ButtonLink href="/staking/withdrawals/">Tìm hiểu thêm về rút tiền đặt cọc</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Điều gì sẽ xảy ra nếu tôi bị phạt cắt giảm?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Bằng cách sử dụng một nhà cung cấp SaaS, bạn đang giao phó hoạt động của nút của mình cho người khác. Điều này đi kèm với rủi ro hiệu suất nút kém, nằm ngoài tầm kiểm soát của bạn. Trong trường hợp trình xác thực của bạn bị phạt cắt giảm, số dư trình xác thực của bạn sẽ bị phạt và bị buộc loại khỏi nhóm trình xác thực.

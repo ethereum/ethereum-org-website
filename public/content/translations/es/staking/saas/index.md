@@ -79,7 +79,7 @@ Los stakers deben proporcionar una dirección de retiro (si no se proporcionó e
 Los validadores también pueden realizar una salida completa como validador, lo que desbloqueará su saldo de ETH restante para su retiro. Las cuentas que hayan proporcionado una dirección de retiro de ejecución y completado el proceso de salida recibirán su saldo completo en la dirección de retiro proporcionada durante el próximo barrido de validadores.
 
 <ButtonLink href="/staking/withdrawals/">Más sobre los retiros de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="¿Qué pasa si sufro un recorte?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Al utilizar un proveedor de SaaS, está confiando la operación de su nodo a otra persona. Esto conlleva el riesgo de un rendimiento deficiente del nodo, lo cual no está bajo su control. En caso de que su validador sufra un recorte, el saldo de su validador será penalizado y eliminado por la fuerza del grupo de validadores.

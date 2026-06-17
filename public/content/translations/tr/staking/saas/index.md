@@ -79,7 +79,7 @@ Staker'ların bir çekim adresi sağlaması gerekir (ilk para yatırma işlemind
 Doğrulayıcılar ayrıca bir doğrulayıcı olarak tamamen çıkış yapabilirler, bu da kalan ETH bakiyelerinin çekim için kilidini açacaktır. Bir yürütme çekim adresi sağlayan ve çıkış sürecini tamamlayan hesaplar, bir sonraki doğrulayıcı taraması sırasında tüm bakiyelerini sağlanan çekim adresine alacaklardır.
 
 <ButtonLink href="/staking/withdrawals/">Staking çekim işlemleri hakkında daha fazlası</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Ceza kesintisine uğrarsam ne olur?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Bir SaaS sağlayıcısı kullanarak, düğümünüzün operasyonunu başka birine emanet etmiş olursunuz. Bu, kontrolünüzde olmayan zayıf düğüm performansı riskiyle birlikte gelir. Doğrulayıcınızın kesintiye uğraması durumunda, doğrulayıcı bakiyeniz cezalandırılacak ve zorla doğrulayıcı havuzundan çıkarılacaktır.

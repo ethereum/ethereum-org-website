@@ -247,7 +247,7 @@ Esta es la forma estándar de poner declaraciones if dentro de JSX.
 
 JSX sigue el estándar XML, que es más estricto que HTML. Si una etiqueta no tiene una etiqueta de cierre correspondiente, _debe_ tener una barra diagonal (`/`) al final para terminarla.
 
-Aquí tenemos dos de esas etiquetas, `<Greeter />` (que en realidad contiene el código HTML que se comunica con el contrato) y [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` para una línea horizontal](https://www.w3schools.com/tags/tag_hr.asp).
+Aquí tenemos dos de esas etiquetas, `<Greeter />` (que en realidad contiene el código HTML que se comunica con el contrato) y [`<hr />` para una línea horizontal](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

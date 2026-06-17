@@ -247,7 +247,7 @@ Esta é a maneira padrão de colocar instruções if dentro do JSX.
 
 O JSX segue o padrão XML, que é mais rigoroso que o HTML. Se uma tag não tiver uma tag de fechamento correspondente, ela _deve_ ter uma barra (`/`) no final para terminá-la.
 
-Aqui temos duas dessas tags, `<Greeter />` (que na verdade contém o código HTML que se comunica com o contrato) e [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` para uma linha horizontal](https://www.w3schools.com/tags/tag_hr.asp).
+Aqui temos duas dessas tags, `<Greeter />` (que na verdade contém o código HTML que se comunica com o contrato) e [`<hr />` para uma linha horizontal](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

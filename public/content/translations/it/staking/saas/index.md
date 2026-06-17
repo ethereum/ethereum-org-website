@@ -79,7 +79,7 @@ Gli staker devono fornire un indirizzo di prelievo (se non fornito al momento de
 I validatori possono anche uscire completamente come validatori, il che sbloccherà il loro saldo ETH rimanente per il prelievo. Gli account che hanno fornito un indirizzo di prelievo di esecuzione e completato il processo di uscita riceveranno l'intero saldo all'indirizzo di prelievo fornito durante la successiva scansione dei validatori.
 
 <ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi di staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Cosa succede se subisco lo slashing?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Utilizzando un fornitore SaaS, affidi il funzionamento del tuo nodo a qualcun altro. Questo comporta il rischio di scarse prestazioni del nodo, che non sono sotto il tuo controllo. Nel caso in cui il tuo validatore subisca lo slashing, il saldo del tuo validatore verrà penalizzato e rimosso forzatamente dal pool dei validatori.

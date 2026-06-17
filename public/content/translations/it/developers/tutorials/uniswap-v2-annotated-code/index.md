@@ -336,7 +336,7 @@ Questa funzione permette alla factory (e solo alla factory) di specificare i due
 
 #### Funzioni di aggiornamento interne {#pair-update-internal}
 
-##### \_update {#}
+##### \_update
 
 ```solidity
     // aggiorna le riserve e, alla prima chiamata per blocco, gli accumulatori di prezzo
@@ -391,7 +391,7 @@ Questo calcolo del prezzo è il motivo per cui abbiamo bisogno di conoscere le v
 
 Infine, aggiorna le variabili globali ed emetti un evento `Sync`.
 
-##### \_mintFee {#}
+##### \_mintFee
 
 ```solidity
     // se la commissione è attiva, conia liquidità equivalente a 1/6 della crescita in sqrt(k)
@@ -461,7 +461,7 @@ Questo codice ottiene quel rimborso quando possibile.
 
 Nota che mentre qualsiasi transazione o contratto _può_ chiamare queste funzioni, sono progettate per essere chiamate dal contratto periferico. Se le chiami direttamente non sarai in grado di imbrogliare lo scambio della coppia, ma potresti perdere valore a causa di un errore.
 
-##### mint {#}
+##### mint
 
 ```solidity
     // questa funzione di basso livello dovrebbe essere chiamata da un contratto che esegue importanti controlli di sicurezza
@@ -547,7 +547,7 @@ Usa la funzione `UniswapV2ERC20._mint` per creare effettivamente i token di liqu
 
 Aggiorna le variabili di stato (`reserve0`, `reserve1` e, se necessario, `kLast`) ed emetti l'evento appropriato.
 
-##### burn {#}
+##### burn
 
 ```solidity
     // questa funzione di basso livello dovrebbe essere chiamata da un contratto che esegue importanti controlli di sicurezza
@@ -594,7 +594,7 @@ Il fornitore di liquidità riceve un valore uguale di entrambi i token. In quest
 
 Il resto della funzione `burn` è l'immagine speculare della funzione `mint` sopra.
 
-##### swap {#}
+##### swap
 
 ```solidity
     // questa funzione di basso livello dovrebbe essere chiamata da un contratto che esegue importanti controlli di sicurezza
@@ -662,7 +662,7 @@ Questo è un controllo di integrità per assicurarci di non perdere dallo swap. 
 
 Aggiorna `reserve0` e `reserve1` e, se necessario, gli accumulatori di prezzo e il timestamp ed emetti un evento.
 
-##### Sync o Skim {#}
+##### Sync o Skim
 
 È possibile che i saldi reali perdano la sincronizzazione con le riserve che lo scambio della coppia pensa di avere.
 Non c'è modo di prelevare token senza il consenso del contratto, ma i depositi sono un'altra questione. Un account può trasferire token allo scambio senza chiamare né `mint` né `swap`.

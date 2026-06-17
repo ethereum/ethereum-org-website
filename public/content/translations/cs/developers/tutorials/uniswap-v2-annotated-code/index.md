@@ -336,7 +336,7 @@ Tato funkce umožňuje továrně (a pouze továrně) specifikovat dva tokeny ERC
 
 #### Interní funkce aktualizace {#pair-update-internal}
 
-##### \_update {#}
+##### \_update
 
 ```solidity
     // aktualizuje rezervy a při prvním volání v bloku i cenové akumulátory
@@ -391,7 +391,7 @@ Tento výpočet ceny je důvodem, proč potřebujeme znát staré velikosti reze
 
 Nakonec aktualizujte globální proměnné a emitujte událost `Sync`.
 
-##### \_mintFee {#}
+##### \_mintFee
 
 ```solidity
     // pokud je poplatek zapnutý, razit likviditu odpovídající 1/6 růstu sqrt(k)
@@ -461,7 +461,7 @@ Tento kód získá tuto náhradu, kdykoli je to možné.
 
 Všimněte si, že ačkoli jakákoli transakce nebo kontrakt _může_ tyto funkce volat, jsou navrženy tak, aby byly volány z periferního kontraktu. Pokud je zavoláte přímo, nebudete moci směnárnu párů podvést, ale můžete ztratit hodnotu kvůli chybě.
 
-##### mint {#}
+##### mint
 
 ```solidity
     // tato nízkoúrovňová funkce by měla být volána z kontraktu, který provádí důležité bezpečnostní kontroly
@@ -547,7 +547,7 @@ Použijte funkci `UniswapV2ERC20._mint` ke skutečnému vytvoření dalších to
 
 Aktualizujte stavové proměnné (`reserve0`, `reserve1` a v případě potřeby `kLast`) a emitujte příslušnou událost.
 
-##### burn {#}
+##### burn
 
 ```solidity
     // tato nízkoúrovňová funkce by měla být volána z kontraktu, který provádí důležité bezpečnostní kontroly
@@ -594,7 +594,7 @@ Poskytovatel likvidity obdrží stejnou hodnotu obou tokenů. Tímto způsobem n
 
 Zbytek funkce `burn` je zrcadlovým obrazem funkce `mint` výše.
 
-##### swap {#}
+##### swap
 
 ```solidity
     // tato nízkoúrovňová funkce by měla být volána z kontraktu, který provádí důležité bezpečnostní kontroly
@@ -662,7 +662,7 @@ Toto je kontrola správnosti (sanity check), abychom se ujistili, že na swapu n
 
 Aktualizujte `reserve0` a `reserve1` a v případě potřeby akumulátory cen a časové razítko a emitujte událost.
 
-##### Synchronizace nebo Skim {#}
+##### Synchronizace nebo Skim
 
 Je možné, že se skutečné zůstatky dostanou mimo synchronizaci s rezervami, o kterých si směnárna párů myslí, že je má.
 Neexistuje způsob, jak vybrat tokeny bez souhlasu kontraktu, ale vklady jsou jiná věc. Účet může převést tokeny na směnárnu, aniž by zavolal `mint` nebo `swap`.

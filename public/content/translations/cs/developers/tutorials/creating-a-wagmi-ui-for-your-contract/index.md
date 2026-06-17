@@ -247,7 +247,7 @@ Toto je standardní způsob, jak vkládat podmínky if do JSX.
 
 JSX se řídí standardem XML, který je přísnější než HTML. Pokud značka nemá odpovídající koncovou značku, _musí_ mít na konci lomítko (`/`), které ji ukončí.
 
-Zde máme dvě takové značky, `<Greeter />` (která ve skutečnosti obsahuje HTML kód komunikující s kontraktem) a [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` pro vodorovnou čáru](https://www.w3schools.com/tags/tag_hr.asp).
+Zde máme dvě takové značky, `<Greeter />` (která ve skutečnosti obsahuje HTML kód komunikující s kontraktem) a [`<hr />` pro vodorovnou čáru](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

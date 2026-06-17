@@ -247,7 +247,7 @@ Dies ist der Standardweg, um if-Anweisungen in JSX einzufügen.
 
 JSX folgt dem XML-Standard, der strenger ist als HTML. Wenn ein Tag kein entsprechendes End-Tag hat, _muss_ es einen Schrägstrich (`/`) am Ende haben, um es abzuschließen.
 
-Hier haben wir zwei solcher Tags, `<Greeter />` (das tatsächlich den HTML-Code enthält, der mit dem Vertrag kommuniziert) und [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` für eine horizontale Linie](https://www.w3schools.com/tags/tag_hr.asp).
+Hier haben wir zwei solcher Tags, `<Greeter />` (das tatsächlich den HTML-Code enthält, der mit dem Vertrag kommuniziert) und [`<hr />` für eine horizontale Linie](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

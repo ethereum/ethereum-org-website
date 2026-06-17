@@ -247,7 +247,7 @@ Ini adalah cara standar untuk meletakkan pernyataan if di dalam JSX.
 
 JSX mengikuti standar XML, yang lebih ketat daripada HTML. Jika sebuah tag tidak memiliki tag penutup yang sesuai, tag tersebut _harus_ memiliki garis miring (`/`) di bagian akhir untuk mengakhirinya.
 
-Di sini kita memiliki dua tag semacam itu, `<Greeter />` (yang sebenarnya berisi kode HTML yang berkomunikasi dengan kontrak) dan [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` untuk garis horizontal](https://www.w3schools.com/tags/tag_hr.asp).
+Di sini kita memiliki dua tag semacam itu, `<Greeter />` (yang sebenarnya berisi kode HTML yang berkomunikasi dengan kontrak) dan [`<hr />` untuk garis horizontal](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

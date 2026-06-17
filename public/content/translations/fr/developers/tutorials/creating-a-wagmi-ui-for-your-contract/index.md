@@ -247,7 +247,7 @@ C'est la manière standard de mettre des instructions if à l'intérieur de JSX.
 
 JSX suit la norme XML, qui est plus stricte que HTML. Si une balise n'a pas de balise de fin correspondante, elle _doit_ avoir une barre oblique (`/`) à la fin pour la terminer.
 
-Ici, nous avons deux de ces balises, `<Greeter />` (qui contient en fait le code HTML qui communique avec le contrat) et [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` pour une ligne horizontale](https://www.w3schools.com/tags/tag_hr.asp).
+Ici, nous avons deux de ces balises, `<Greeter />` (qui contient en fait le code HTML qui communique avec le contrat) et [`<hr />` pour une ligne horizontale](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>

@@ -79,7 +79,7 @@ Les stakers doivent fournir une adresse de retrait (si elle n'a pas été fourni
 Les validateurs peuvent également effectuer une sortie complète en tant que validateur, ce qui débloquera leur solde d'ETH restant pour le retrait. Les comptes qui ont fourni une adresse de retrait d'exécution et terminé le processus de sortie recevront l'intégralité de leur solde à l'adresse de retrait fournie lors du prochain balayage des validateurs.
 
 <ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Que se passe-t-il si je subis une réduction ?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 En utilisant un fournisseur SaaS, vous confiez le fonctionnement de votre nœud à quelqu'un d'autre. Cela s'accompagne du risque de mauvaises performances du nœud, ce qui n'est pas sous votre contrôle. Dans le cas où votre validateur subit une réduction, le solde de votre validateur sera pénalisé et retiré de force du pool de validateurs.
