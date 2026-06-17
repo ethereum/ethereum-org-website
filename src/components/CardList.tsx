@@ -1,5 +1,3 @@
-"use client"
-
 import { ExternalLink } from "lucide-react"
 import TwImage, { type ImageProps } from "next/image"
 import type { ReactNode } from "react"
@@ -9,12 +7,9 @@ import type { MatomoEventOptions } from "@/lib/types"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
 
 import { BaseLink } from "./ui/Link"
-
-import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export type CardProps = {
   title?: ReactNode
@@ -26,10 +21,10 @@ export type CardProps = {
   imageWidth?: number
   alt?: string
   className?: string
-  onClick?: () => void
+  customEventOptions?: MatomoEventOptions
 }
 
-const Card = ({
+const Row = ({
   title,
   description,
   caption,
@@ -37,30 +32,33 @@ const Card = ({
   image,
   className,
   alt,
-  onClick,
+  customEventOptions,
   imageWidth = 20,
   ...props
 }: CardProps) => {
-  const { twFlipForRtl } = useRtlFlip()
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
 
   return (
     <div
       className={cn(
-        "text-text flex flex-row items-center gap-4 border p-4",
+        "text-text flex flex-row items-center gap-4 p-4",
         "transition-all duration-200",
         "hover:bg-background-highlight",
         className
       )}
-      onClick={onClick}
       {...props}
     >
       {image && <TwImage src={image} alt={alt ?? ""} width={imageWidth} />}
       <div className="flex flex-1 basis-3/4 flex-col">
         {isLink ? (
           <LinkOverlay asChild>
-            <BaseLink href={link} hideArrow className="text-body no-underline">
+            <BaseLink
+              href={link}
+              hideArrow
+              className="text-body no-underline"
+              customEventOptions={customEventOptions}
+            >
               {title}
             </BaseLink>
           </LinkOverlay>
@@ -76,7 +74,7 @@ const Card = ({
         </div>
       )}
       {isExternal && (
-        <ExternalLink className={cn("size-[1em]", twFlipForRtl)} />
+        <ExternalLink className="size-[1em] shrink-0 rtl:-scale-x-100" />
       )}
     </div>
   )
@@ -85,7 +83,6 @@ const Card = ({
 export type CardListProps = {
   items: CardProps[]
   imageWidth?: number
-  clickHandler?: (idx: string | number) => void
   customEventOptions?: MatomoEventOptions
   className?: string
 }
@@ -93,29 +90,31 @@ export type CardListProps = {
 const CardList = ({
   items,
   imageWidth,
-  clickHandler = () => null,
   customEventOptions,
   className,
 }: CardListProps) => (
-  <div className={cn("w-full bg-background", className)}>
+  <div
+    className={cn(
+      "w-full overflow-hidden rounded-base border bg-background",
+      className
+    )}
+  >
     {items.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link
+      const itemClasses = "not-last:border-b"
 
       return isLink ? (
-        <LinkBox key={id || idx}>
-          <Card {...listItem} imageWidth={imageWidth} />
+        <LinkBox key={id || idx} className={itemClasses}>
+          <Row
+            {...listItem}
+            customEventOptions={customEventOptions}
+            imageWidth={imageWidth}
+          />
         </LinkBox>
       ) : (
-        <div key={idx}>
-          <Card
-            onClick={() => {
-              customEventOptions && trackCustomEvent(customEventOptions)
-              clickHandler(idx)
-            }}
-            className="mb-4"
-            {...listItem}
-          />
+        <div key={idx} className={itemClasses}>
+          <Row {...listItem} />
         </div>
       )
     })}

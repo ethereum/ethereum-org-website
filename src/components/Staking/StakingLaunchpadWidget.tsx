@@ -56,7 +56,7 @@ const StakingLaunchpadWidget = () => {
   return (
     <Flex
       className={cn(
-        "flex-col rounded p-6 md:p-8",
+        "flex-col rounded-base p-6 md:p-8",
         "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
       )}
     >

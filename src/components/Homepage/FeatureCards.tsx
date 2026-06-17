@@ -58,7 +58,7 @@ const FeatureCards = async ({
               />
 
               <div className="relative z-10 flex flex-col gap-6">
-                <div className="flex size-16 items-center justify-center rounded-2xl bg-white/20">
+                <div className="flex size-16 items-center justify-center rounded-base bg-white/20">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/homepage/eth.svg" alt="eth logo" />
                 </div>

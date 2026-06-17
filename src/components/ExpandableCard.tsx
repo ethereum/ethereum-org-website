@@ -71,7 +71,7 @@ const ExpandableCard = ({
       >
         <AccordionItem
           value="item-1"
-          className="rounded-2xl border hover:bg-background-highlight"
+          className="rounded-base border hover:bg-background-highlight"
         >
           <AccordionTrigger
             hideIcon
