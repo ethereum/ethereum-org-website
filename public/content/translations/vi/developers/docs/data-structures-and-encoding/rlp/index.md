@@ -1,48 +1,62 @@
 ---
-title: Recursive-length prefix (RLP) serialization
-description: "Giải thích về mã hóa rlp trong excution layer của Ethereum."
+title: Tuần tự hóa tiền tố độ dài đệ quy (RLP)
+description: Định nghĩa về mã hóa rlp trong lớp thực thi của Ethereum.
 lang: vi
 sidebarDepth: 2
 ---
 
-Recursive Length Prefix (RLP) serialization được sử dụng phổ biến trong các execution client của Ethereum. RLP chuẩn hóa việc truyền dữ liệu giữa các node với một định dạng tiết kiệm không gian. Mục đích của RLP là mã hóa các mảng dữ liệu nhị phân lồng nhau bất kỳ, và RLP là phương thức mã hóa chính được sử dụng để tuần tự hóa các đối tượng trong excution layer của Ethereum. Mục đích chính của RLP là mã hóa cấu trúc; ngoại trừ các số nguyên dương, RLP ủy thác việc mã hóa các kiểu dữ liệu cụ thể (ví dụ: chuỗi, số thực) cho các giao thức bậc cao hơn. Các số nguyên dương phải được biểu diễn dưới dạng nhị phân big-endian không có số không ở đầu (do đó làm cho giá trị số nguyên không tương đương với mảng byte trống). Các số nguyên dương được giải tuần tự hóa có số không ở đầu phải bị coi là không hợp lệ bởi bất kỳ giao thức bậc cao nào sử dụng RLP.
+Tuần tự hóa tiền tố độ dài đệ quy (RLP) được sử dụng rộng rãi trong các client thực thi của Ethereum. RLP tiêu chuẩn hóa việc chuyển dữ liệu giữa các node theo một định dạng tiết kiệm không gian. Mục đích của RLP là mã hóa các mảng dữ liệu nhị phân lồng nhau tùy ý, và RLP là phương pháp mã hóa chính được sử dụng để tuần tự hóa các đối tượng trong lớp thực thi của Ethereum. Mục đích chính của RLP là mã hóa cấu trúc; ngoại trừ các số nguyên dương, RLP ủy quyền việc mã hóa các kiểu dữ liệu cụ thể (ví dụ: chuỗi, số thực) cho các giao thức bậc cao hơn. Các số nguyên dương phải được biểu diễn dưới dạng nhị phân Big-endian không có các số 0 ở đầu (do đó làm cho giá trị số nguyên 0 tương đương với mảng byte rỗng). Các số nguyên dương được giải tuần tự hóa có các số 0 ở đầu phải được coi là không hợp lệ bởi bất kỳ giao thức bậc cao nào sử dụng RLP.
 
-Thông tin thêm trong [sách vàng Ethereum (Phụ lục B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
+Xem thêm thông tin trong [sách vàng Ethereum (Phụ lục B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
-Để sử dụng RLP để mã hóa một dictionary, 2 chuẩn được sử dụng là:
+Để sử dụng RLP mã hóa một từ điển, hai dạng chuẩn được đề xuất là:
 
 - sử dụng `[[k1,v1],[k2,v2]...]` với các khóa theo thứ tự từ điển
-- sử dụng mã hóa Patricia Tree bậc cao như Ethereum
+- sử dụng mã hóa Patricia Tree bậc cao hơn như [Ethereum](/) đang làm
 
 ## Định nghĩa {#definition}
 
-Phương thức mã hóa RLP lấy một item. Một item được định nghĩa như sau：
+Hàm mã hóa RLP nhận vào một mục (item). Một mục được định nghĩa như sau：
 
 - một chuỗi (tức là mảng byte) là một mục
-- một list các item là một item
+- một danh sách các mục là một mục
 - một số nguyên dương là một mục
 
-Ví dụ, tất cả các mục dưới đều là item:
+Ví dụ, tất cả những thứ sau đây đều là các mục:
 
 - một chuỗi rỗng;
 - chuỗi chứa từ "cat";
-- một list chứa số lượng chuỗi bất kỳ;
+- một danh sách chứa số lượng chuỗi bất kỳ;
 - và các cấu trúc dữ liệu phức tạp hơn như `["cat", ["puppy", "cow"], "horse", [[]], "pig", [""], "sheep"]`.
 - số `100`
 
-Lưu ý rằng trong ngữ cảnh của phần còn lại của trang này, 'chuỗi' có nghĩa là "một số byte dữ liệu nhị phân nhất định"; không có mã hóa đặc biệt nào được sử dụng và không có kiến thức nào về nội dung của các chuỗi được ngụ ý (ngoại trừ theo yêu cầu của quy tắc chống lại các số nguyên dương không tối thiểu).
+Lưu ý rằng trong ngữ cảnh của phần còn lại trên trang này, 'chuỗi' có nghĩa là "một số lượng byte dữ liệu nhị phân nhất định"; không có mã hóa đặc biệt nào được sử dụng và không ngụ ý bất kỳ kiến thức nào về nội dung của các chuỗi (ngoại trừ những gì được yêu cầu bởi quy tắc chống lại các số nguyên dương không tối giản).
 
 Mã hóa RLP được định nghĩa như sau:
 
-- Đối với một số nguyên dương, nó được chuyển đổi thành mảng byte ngắn nhất mà diễn giải big-endian của nó là số nguyên, và sau đó được mã hóa thành một chuỗi theo các quy tắc bên dưới.
-- Đối với một byte đơn có giá trị trong phạm vi `[0x00, 0x7f]` (thập phân `[0, 127]`), byte đó là mã hóa RLP của chính nó.
-- Nếu không, nếu một chuỗi dài 0-55 byte, mã hóa RLP bao gồm một byte đơn có giá trị **0x80** (hệ thập phân 128) cộng với độ dài của chuỗi, theo sau là chuỗi. Do đó, phạm vi của byte đầu tiên là `[0x80, 0xb7]` (hệ thập phân `[128, 183]`).
-- Nếu một chuỗi dài hơn 55 byte, mã hóa RLP bao gồm một byte đơn có giá trị **0xb7** (hệ thập phân 183) cộng với độ dài tính bằng byte của độ dài chuỗi ở dạng nhị phân, theo sau là độ dài của chuỗi, theo sau là chuỗi. Ví dụ: một chuỗi dài 1024 byte sẽ được mã hóa là `\xb9\x04\x00` (hệ thập phân `185, 4, 0`) theo sau là chuỗi. Ở đây, `0xb9` (183 + 2 = 185) là byte đầu tiên, theo sau là 2 byte `0x0400` (hệ thập phân 1024) biểu thị độ dài của chuỗi thực tế. Do đó, phạm vi của byte đầu tiên là `[0xb8, 0xbf]` (hệ thập phân `[184, 191]`).
-- Nếu một chuỗi dài 2^64 byte, hoặc dài hơn, nó có thể không được mã hóa.
-- Nếu tổng tải trọng của một danh sách (tức là tổng độ dài của tất cả các mục được mã hóa RLP) dài 0-55 byte, mã hóa RLP bao gồm một byte đơn có giá trị **0xc0** cộng với độ dài của tải trọng, theo sau là sự nối tiếp của các mã hóa RLP của các mục. Do đó, phạm vi của byte đầu tiên là `[0xc0, 0xf7]` (hệ thập phân `[192, 247]`).
-- Nếu tổng tải trọng của một danh sách dài hơn 55 byte, mã hóa RLP bao gồm một byte đơn có giá trị **0xf7** cộng với độ dài tính bằng byte của độ dài tải trọng ở dạng nhị phân, theo sau là độ dài của tải trọng, theo sau là sự nối tiếp của các mã hóa RLP của các mục. Do đó, phạm vi của byte đầu tiên là `[0xf8, 0xff]` (hệ thập phân `[248, 255]`).
+- Đối với một số nguyên dương, nó được chuyển đổi thành mảng byte ngắn nhất mà cách diễn giải Big-endian của nó là số nguyên đó, và sau đó được mã hóa thành một chuỗi theo các quy tắc bên dưới.
+- Đối với một byte đơn có giá trị nằm trong khoảng `[0x00, 0x7f]` (thập phân `[0, 127]`), byte đó chính là mã hóa RLP của nó.
+- Nếu không, nếu một chuỗi dài từ 0-55 byte, mã hóa RLP bao gồm một byte đơn có giá trị **0x80** (thập phân 128) cộng với độ dài của chuỗi, theo sau là chuỗi đó. Do đó, phạm vi của byte đầu tiên là `[0x80, 0xb7]` (thập phân `[128, 183]`).
+- Nếu một chuỗi dài hơn 55 byte, mã hóa RLP bao gồm một byte đơn có giá trị **0xb7** (thập phân 183) cộng với độ dài tính bằng byte của độ dài chuỗi dưới dạng nhị phân, theo sau là độ dài của chuỗi, rồi đến chuỗi đó. Ví dụ, một chuỗi dài 1024 byte sẽ được mã hóa thành `\xb9\x04\x00` (thập phân `185, 4, 0`) theo sau là chuỗi đó. Ở đây, `0xb9` (183 + 2 = 185) là byte đầu tiên, theo sau là 2 byte `0x0400` (thập phân 1024) biểu thị độ dài của chuỗi thực tế. Do đó, phạm vi của byte đầu tiên là `[0xb8, 0xbf]` (thập phân `[184, 191]`).
+- Nếu một chuỗi dài 2^64 byte hoặc dài hơn, nó có thể không được mã hóa.
+- Nếu tổng payload của một danh sách (tức là tổng độ dài của tất cả các mục của nó đang được mã hóa RLP) dài từ 0-55 byte, mã hóa RLP bao gồm một byte đơn có giá trị **0xc0** cộng với độ dài của payload, theo sau là sự nối tiếp các mã hóa RLP của các mục. Do đó, phạm vi của byte đầu tiên là `[0xc0, 0xf7]` (thập phân `[192, 247]`).
+- Nếu tổng payload của một danh sách dài hơn 55 byte, mã hóa RLP bao gồm một byte đơn có giá trị **0xf7** cộng với độ dài tính bằng byte của độ dài payload dưới dạng nhị phân, theo sau là độ dài của payload, rồi đến sự nối tiếp các mã hóa RLP của các mục. Do đó, phạm vi của byte đầu tiên là `[0xf8, 0xff]` (thập phân `[248, 255]`).
 
-Đây là trong code:
+Dưới dạng ngắn gọn:
+
+| Phạm vi       | Byte 1     | Byte 2     | ...        | Byte 9                | Byte 10    | Ý nghĩa                                   |
+| ----------- | ---------- | ---------- | ---------- | --------------------- | ---------- | ----------------------------------------- |
+| `0x00-0x7f` | `0ppppppp` |            |            |                       |            | chuỗi một byte                        |
+| `0x80-0xb7` | `10nnnnnn` | `pppppppp` | `...`      |                       |            | chuỗi ngắn (0-55 byte)                 |
+| `0xb8-0xbf` | `10111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | chuỗi dài, N+1 byte cho độ dài, sau đó là payload |
+| `0xc0-0xf7` | `11nnnnnn` | `pppppppp` | `...`      |                       |            | danh sách ngắn (0-55 byte)                   |
+| `0xf8-0xff` | `11111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | danh sách dài, N+1 byte cho độ dài, sau đó là payload |
+
+- `p` = payload
+- `n` = len (số lượng byte của payload)
+- `N` = offset của độ dài của độ dài (N+1 byte `n` theo sau)
+
+Trong mã code, điều này là:
 
 ```python
 def rlp_encode(input):
@@ -74,38 +88,38 @@ def to_binary(x):
 
 - chuỗi "dog" = [ 0x83, 'd', 'o', 'g' ]
 - danh sách [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
-- chuỗi trống ('null') = `[ 0x80 ]`
-- danh sách trống = `[ 0xc0 ]`
+- chuỗi rỗng ('null') = `[ 0x80 ]`
+- danh sách rỗng = `[ 0xc0 ]`
 - số nguyên 0 = `[ 0x80 ]`
 - byte '\\x00' = `[ 0x00 ]`
 - byte '\\x0f' = `[ 0x0f ]`
 - các byte '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
-- [biểu diễn lý thuyết tập hợp](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) của ba, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- chuỗi "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
+- [biểu diễn lý thuyết tập hợp](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) của số ba, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- chuỗi "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
 ## Giải mã RLP {#rlp-decoding}
 
-Dựa theo các quy tắc và quy trình mã hóa RLP, đầu vào của mã hóa RLP được coi là một mảng dữ liệu nhị phân. Quá trình giải mã hóa RLP như sau:
+Theo các quy tắc và quy trình mã hóa RLP, đầu vào của giải mã RLP được coi là một mảng dữ liệu nhị phân. Quy trình giải mã RLP như sau:
 
-1. theo byte đầu tiên (tức là tiền tố) của dữ liệu đầu vào và giải mã kiểu dữ liệu, độ dài của dữ liệu thực tế và độ lệch;
+1.  dựa vào byte đầu tiên (tức là tiền tố) của dữ liệu đầu vào và giải mã kiểu dữ liệu, độ dài của dữ liệu thực tế và offset;
 
-2. theo loại và độ lệch của dữ liệu, giải mã dữ liệu tương ứng, tuân thủ quy tắc mã hóa tối thiểu cho các số nguyên dương;
+2.  dựa vào kiểu và offset của dữ liệu, giải mã dữ liệu tương ứng, tuân thủ quy tắc mã hóa tối giản cho các số nguyên dương;
 
-3. tiếp tục giải mã hóa phần còn lại của đầu vào;
+3.  tiếp tục giải mã phần còn lại của đầu vào;
 
-Trong số đó, các quy tắc giải mã kiểu dữ liệu và offset như sau:
+Trong đó, các quy tắc giải mã kiểu dữ liệu và offset như sau:
 
-1. dữ liệu là một chuỗi nếu phạm vi của byte đầu tiên (tức là tiền tố) là [0x00, 0x7f] và chuỗi chính xác là chính byte đầu tiên đó;
+1.  dữ liệu là một chuỗi nếu phạm vi của byte đầu tiên (tức là tiền tố) là [0x00, 0x7f], và chuỗi chính xác là byte đầu tiên đó;
 
-2. dữ liệu là một chuỗi nếu phạm vi của byte đầu tiên là [0x80, 0xb7] và chuỗi có độ dài bằng byte đầu tiên trừ đi 0x80 theo sau byte đầu tiên;
+2.  dữ liệu là một chuỗi nếu phạm vi của byte đầu tiên là [0x80, 0xb7], và chuỗi có độ dài bằng byte đầu tiên trừ đi 0x80 sẽ theo sau byte đầu tiên;
 
-3. dữ liệu là một chuỗi nếu phạm vi của byte đầu tiên là [0xb8, 0xbf] và độ dài của chuỗi có độ dài tính bằng byte bằng byte đầu tiên trừ đi 0xb7 theo sau byte đầu tiên và chuỗi theo độ dài của chuỗi;
+3.  dữ liệu là một chuỗi nếu phạm vi của byte đầu tiên là [0xb8, 0xbf], và độ dài của chuỗi (tính bằng byte) bằng byte đầu tiên trừ đi 0xb7 sẽ theo sau byte đầu tiên, và chuỗi sẽ theo sau độ dài của chuỗi;
 
-4. dữ liệu là một list nếu phạm vi của byte đầu tiên là [0xc0, 0xf7], và phần mã hóa rlp của tất cả item của list có độ lớn băngf byte đầu tiên trừ 0xc0 theo sau byte đầu tiên;
+4.  dữ liệu là một danh sách nếu phạm vi của byte đầu tiên là [0xc0, 0xf7], và sự nối tiếp các mã hóa RLP của tất cả các mục trong danh sách mà tổng payload bằng byte đầu tiên trừ đi 0xc0 sẽ theo sau byte đầu tiên;
 
-5. dữ liệu là một list nếu phạm vi của byte đầu tiên là [0xb8, 0xff] và toàn bộ payload của list có độ dài bằng byte đầu tiên trừ đi 0xf7 theo sau byte đầu tiên, và các mã hóa rlp của các item nối tiếp nhau nằm tiếp sau;
+5.  dữ liệu là một danh sách nếu phạm vi của byte đầu tiên là [0xf8, 0xff], và tổng payload của danh sách có độ dài bằng byte đầu tiên trừ đi 0xf7 sẽ theo sau byte đầu tiên, và sự nối tiếp các mã hóa RLP của tất cả các mục trong danh sách sẽ theo sau tổng payload của danh sách;
 
-Đây là trong code:
+Trong mã code, điều này là:
 
 ```python
 def rlp_decode(input):
@@ -155,9 +169,9 @@ def to_integer(b):
 ## Đọc thêm {#further-reading}
 
 - [RLP trong Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
-- [Hậu trường Ethereum: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
-- [Coglio, A. (2020). Ethereum's Recursive Length Prefix in ACL2. arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
+- [Bên trong Ethereum: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
+- [Coglio, A. (2020). Tiền tố độ dài đệ quy của Ethereum trong ACL2. Bản in trước arXiv arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
-## Các chủ đề liên quan {#related-topics}
+## Chủ đề liên quan {#related-topics}
 
-- [Cây Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
+- [Patricia merkle trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
