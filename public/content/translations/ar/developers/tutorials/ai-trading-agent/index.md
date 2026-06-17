@@ -1,66 +1,71 @@
 ---
-title: "اصنع وكيل تداول الذكاء الاصطناعي الخاص بك على الإيثريوم"
-description: "في هذا البرنامج التعليمي، ستتعلم كيفية إنشاء وكيل تداول بسيط للذكاء الاصطناعي. يقرأ هذا الوكيل المعلومات من سلسلة الكتل (blockchain)، ويطلب من LLM توصية بناءً على تلك المعلومات، وينفذ الصفقة التي يوصي بها LLM، ثم ينتظر ويكرر."
-author: "أوري بوميرانتز"
-tags: [ "الذكاء الاصطناعي", "تداول", "وكيل", "Python" ]
+title: أنشئ وكيل تداول ذكاء اصطناعي خاص بك على إيثيريوم
+description: في هذا البرنامج التعليمي، ستتعلم كيفية إنشاء وكيل تداول ذكاء اصطناعي بسيط. يقرأ هذا الوكيل المعلومات من سلسلة الكتل، ويطلب من نموذج لغوي كبير (LLM) توصية بناءً على تلك المعلومات، وينفذ التداول الذي يوصي به النموذج، ثم ينتظر ويكرر العملية.
+author: أوري بوميرانتس
+tags:
+  - الذكاء الاصطناعي
+  - التداول
+  - وكيل
+  - python
 skill: intermediate
+breadcrumb: وكيل تداول ذكاء اصطناعي
 published: 2026-02-13
 lang: ar
 sidebarDepth: 3
 ---
 
-في هذا البرنامج التعليمي، ستتعلم كيفية إنشاء وكيل تداول بسيط للذكاء الاصطناعي. يعمل هذا الوكيل باستخدام هذه الخطوات:
+في هذا البرنامج التعليمي، ستتعلم كيفية بناء وكيل تداول ذكاء اصطناعي بسيط. يعمل هذا الوكيل باستخدام الخطوات التالية:
 
 1. قراءة الأسعار الحالية والسابقة لرمز مميز، بالإضافة إلى معلومات أخرى قد تكون ذات صلة
-2. إنشاء استعلام بهذه المعلومات، بالإضافة إلى معلومات أساسية لشرح مدى صلتها بالموضوع
-3. إرسال الاستعلام واستلام سعر متوقع
+2. بناء استعلام باستخدام هذه المعلومات، إلى جانب معلومات أساسية لشرح كيف يمكن أن تكون ذات صلة
+3. إرسال الاستعلام وتلقي سعر متوقع
 4. التداول بناءً على التوصية
-5. انتظر وكرر
+5. الانتظار والتكرار
 
-يوضح هذا الوكيل كيفية قراءة المعلومات وترجمتها إلى استعلام ينتج عنه إجابة قابلة للاستخدام واستخدام تلك الإجابة. كل هذه خطوات مطلوبة لوكيل الذكاء الاصطناعي. يتم تنفيذ هذا الوكيل بلغة بايثون بايثون لأنها اللغة الأكثر شيوعًا المستخدمة في الذكاء الاصطناعي.
+يوضح هذا الوكيل كيفية قراءة المعلومات، وترجمتها إلى استعلام ينتج إجابة قابلة للاستخدام، واستخدام تلك الإجابة. كل هذه خطوات مطلوبة لأي وكيل ذكاء اصطناعي. تم تنفيذ هذا الوكيل بلغة Python لأنها اللغة الأكثر شيوعًا المستخدمة في الذكاء الاصطناعي.
 
-## لماذا نفعل هذا؟ {#why-do-this}
+## لماذا نقوم بذلك؟ {#why-do-this}
 
-تسمح وكلاء التداول الآلي للمطورين باختيار وتنفيذ استراتيجية تداول. تسمح [وكلاء الذكاء الاصطناعي](/ai-agents) باستراتيجيات تداول أكثر تعقيدًا وديناميكية، ومن المحتمل استخدام معلومات وخوارزميات لم يفكر المطور في استخدامها.
+تسمح وكلاء التداول الآلي للمطورين باختيار وتنفيذ استراتيجية تداول. تسمح [وكلاء الذكاء الاصطناعي](/ai-agents) باستراتيجيات تداول أكثر تعقيدًا وديناميكية، وربما تستخدم معلومات وخوارزميات لم يفكر المطور حتى في استخدامها.
 
 ## الأدوات {#tools}
 
-يستخدم هذا البرنامج التعليمي [بايثون](https://www.python.org/) و[مكتبة ويب3](https://web3py.readthedocs.io/en/stable/) و[يوني سواب v3](https://github.com/Uniswap/v3-periphery) للحصول على عروض الأسعار والتداول.
+يستخدم هذا البرنامج التعليمي [Python](https://www.python.org/)، و[مكتبة Web3](https://web3py.readthedocs.io/en/stable/)، و[يونيسواب <span dir="ltr">v3</span>](https://github.com/Uniswap/v3-periphery) للحصول على الأسعار والتداول.
 
-### لماذا لغة بايثون؟ {#python}
+### لماذا Python؟ {#python}
 
-اللغة الأكثر استخدامًا في الذكاء الاصطناعي هي [بايثون](https://www.python.org/)، لذلك نستخدمها هنا. لا تقلق إذا كنت لا تعرف لغة بايثون بايثون. اللغة واضحة جدًا، وسأشرح بالضبط ما تفعله.
+اللغة الأكثر استخدامًا للذكاء الاصطناعي هي [Python](https://www.python.org/)، لذلك نستخدمها هنا. لا تقلق إذا كنت لا تعرف Python. اللغة واضحة جدًا، وسأشرح بالضبط ما تفعله.
 
-تُعد [مكتبة ويب3](https://web3py.readthedocs.io/en/stable/) هي واجهة برمجة تطبيقات إيثريوم API الأكثر شيوعًا في لغة بايثون. إنه سهل الاستخدام إلى حد ما.
+[مكتبة Web3](https://web3py.readthedocs.io/en/stable/) هي واجهة برمجة تطبيقات (API) إيثيريوم الأكثر شيوعًا في Python. وهي سهلة الاستخدام إلى حد ما.
 
-### التداول على سلسلة الكتل (blockchain) {#trading-on-blockchain}
+### التداول على سلسلة الكتل {#trading-on-blockchain}
 
-هناك [العديد من منصات التداول الموزعة (DEX)](/apps/categories/defi/) التي تتيح لك تداول الرموز المميزة على إيثريوم. ومع ذلك، فإنها تميل إلى أن تكون لها أسعار صرف متشابهة بسبب [المراجحة](/developers/docs/smart-contracts/composability/#better-user-experience).
+هناك [العديد من منصات التداول اللامركزية (DEX)](/apps/categories/defi/) التي تتيح لك تداول الرموز المميزة على إيثيريوم. ومع ذلك، فإنها تميل إلى امتلاك أسعار صرف مماثلة بسبب [المراجحة (arbitrage)](/developers/docs/smart-contracts/composability/#better-user-experience).
 
-تعتبر [يوني سواب](https://app.uniswap.org/) منصة تداول لامركزية مستخدمة على نطاق واسع ويمكننا استخدامها لكل من عروض الأسعار (لرؤية القيم النسبية للرموز المميزة) والصفقات.
+[يونيسواب](https://app.uniswap.org/) هي منصة تداول لامركزية مستخدمة على نطاق واسع يمكننا استخدامها لكل من الأسعار (لرؤية القيم النسبية للرموز المميزة) والتداولات.
 
 ### OpenAI {#openai}
 
-بالنسبة لنموذج لغوي كبير، اخترت أن أبدأ مع [OpenAI](https://openai.com/). لتشغيل التطبيق في هذا البرنامج التعليمي، ستحتاج إلى الدفع للوصول إلى واجهة برمجة التطبيقات API. الحد الأدنى للدفع وهو 5 دولارات هو أكثر من كافٍ.
+بالنسبة للنموذج اللغوي الكبير، اخترت البدء باستخدام [OpenAI](https://openai.com/). لتشغيل التطبيق في هذا البرنامج التعليمي، ستحتاج إلى الدفع مقابل الوصول إلى واجهة برمجة التطبيقات (API). الحد الأدنى للدفع وهو <span dir="ltr">$5</span> أكثر من كافٍ.
 
 ## التطوير، خطوة بخطوة {#step-by-step}
 
-لتبسيط التطوير، ننتقل على مراحل. كل خطوة هي فرع في غيت هاب.
+لتبسيط التطوير، سنمضي في مراحل. كل خطوة هي فرع في GitHub.
 
 ### البدء {#getting-started}
 
-هناك خطوات للبدء في استخدام UNIX أو لينكس (بما في ذلك [WSL](https://learn.microsoft.com/en-us/windows/wsl/install))
+هناك خطوات للبدء في أنظمة UNIX أو Linux (بما في ذلك [WSL](https://learn.microsoft.com/en-us/windows/wsl/install))
 
-1. إذا لم يكن لديك بالفعل، فقم بتنزيل وتثبيت [بايثون](https://www.python.org/downloads/).
+1. إذا لم يكن لديك بالفعل، فقم بتنزيل وتثبيت [Python](https://www.python.org/downloads/).
 
-2. استنسخ مستودع غيت هاب.
+2. استنسخ مستودع GitHub.
 
    ```sh
    git clone https://github.com/qbzzt/260215-ai-agent.git -b 01-getting-started
    cd 260215-ai-agent
    ```
 
-3. قم بتثبيت [`uv`](https://docs.astral.sh/uv/getting-started/installation/). قد يكون الأمر على نظامك مختلفًا.
+3. قم بتثبيت [`uv`](https://docs.astral.sh/uv/getting-started/installation/). قد يكون الأمر مختلفًا في نظامك.
 
    ```sh
    pipx install uv
@@ -78,26 +83,26 @@ sidebarDepth: 3
    source .venv/bin/activate
    ```
 
-6. للتحقق من أن بايثون وويب3 يعملان بشكل صحيح، قم بتشغيل `python3` وزوده بهذا البرنامج. يمكنك إدخاله في الموجه `>>>`؛ ليست هناك حاجة لإنشاء ملف.
+6. للتحقق من أن Python و Web3 يعملان بشكل صحيح، قم بتشغيل `python3` وزوده بهذا البرنامج. يمكنك إدخاله في موجه `>>>`؛ ليست هناك حاجة لإنشاء ملف.
 
    ```python
-   from web3 import ويب3
+   from web3 import Web3
    MAINNET_URL = "https://eth.drpc.org"
-   w3 = ويب3(ويب3.HTTPProvider(MAINNET_URL))
+   w3 = Web3(Web3.HTTPProvider(MAINNET_URL))
    w3.eth.block_number
    quit()
    ```
 
-### القراءة من سلسلة الكتل (blockchain) {#read-blockchain}
+### القراءة من سلسلة الكتل {#read-blockchain}
 
-الخطوة التالية هي القراءة من سلسلة الكتل (blockchain). للقيام بذلك، تحتاج إلى التغيير إلى الفرع `02-read-quote` ثم استخدام `uv` لتشغيل البرنامج.
+الخطوة التالية هي القراءة من سلسلة الكتل. للقيام بذلك، تحتاج إلى التبديل إلى فرع `02-read-quote` ثم استخدام `uv` لتشغيل البرنامج.
 
 ```sh
 git checkout 02-read-quote
 uv run agent.py
 ```
 
-يجب أن تتلقى قائمة بكائنات `Quote`، لكل منها طابع زمني وسعر وأصل (حاليًا دائمًا `WETH/USDC`).
+يجب أن تتلقى قائمة بكائنات `Quote`، كل منها يحتوي على طابع زمني، وسعر، والأصل (حاليًا دائمًا `WETH/USDC`).
 
 إليك شرح سطر بسطر.
 
@@ -113,19 +118,19 @@ import functools
 import sys
 ```
 
-استورد المكتبات التي نحتاجها. يتم شرحها أدناه عند استخدامها.
+استيراد المكتبات التي نحتاجها. سيتم شرحها أدناه عند استخدامها.
 
 ```python
 print = functools.partial(print, flush=True)
 ```
 
-يستبدل `print` في لغة بايثون بإصدار يقوم دائمًا بتفريغ الإخراج على الفور. هذا مفيد في نص برمجي طويل الأمد لأننا لا نريد انتظار تحديثات الحالة أو إخراج تصحيح الأخطاء.
+يستبدل `print` الخاص بـ Python بإصدار يقوم دائمًا بمسح المخرجات (flushes output) على الفور. هذا مفيد في نص برمجي طويل الأمد لأننا لا نريد انتظار تحديثات الحالة أو مخرجات تصحيح الأخطاء.
 
 ```python
 MAINNET_URL = "https://eth.drpc.org"
 ```
 
-عنوان URL للوصول إلى الشبكة الرئيسية (mainnet). يمكنك الحصول على واحدة من [العقدة كخدمة](/developers/docs/nodes-and-clients/nodes-as-a-service/) أو استخدام إحدى تلك المعلن عنها في [Chainlist](https://chainlist.org/chain/1).
+رابط (URL) للوصول إلى الشبكة الرئيسية. يمكنك الحصول على واحد من [العقدة كخدمة (Node as a service)](/developers/docs/nodes-and-clients/nodes-as-a-service/) أو استخدام أحد الروابط المعلن عنها في [Chainlist](https://chainlist.org/chain/1).
 
 ```python
 BLOCK_TIME_SECONDS = 12
@@ -134,20 +139,20 @@ HOUR_BLOCKS = MINUTE_BLOCKS * 60
 DAY_BLOCKS = HOUR_BLOCKS * 24
 ```
 
-تحدث كتلة الشبكة الرئيسية لـ إيثريوم عادةً كل اثنتي عشرة ثانية، لذا فهذه هي عدد الكتل التي نتوقع حدوثها في فترة زمنية. لاحظ أن هذا ليس رقمًا دقيقًا. عندما يكون [مقدم الكتلة](/developers/docs/consensus-mechanisms/pos/block-proposal/) معطلاً، يتم تخطي تلك الكتلة، ويكون وقت الكتلة التالية 24 ثانية. إذا أردنا الحصول على الكتلة الدقيقة للطابع الزمني، فسنستخدم [البحث الثنائي](https://en.wikipedia.org/wiki/Binary_search). ومع ذلك، هذا قريب بما فيه الكفاية لأغراضنا. التنبؤ بالمستقبل ليس علمًا دقيقًا.
+تحدث كتلة شبكة إيثيريوم الرئيسية عادةً كل اثنتي عشرة ثانية، لذا فهذا هو عدد الكتل التي نتوقع حدوثها في فترة زمنية معينة. لاحظ أن هذا ليس رقمًا دقيقًا. عندما يكون [مقترح الكتلة](/developers/docs/consensus-mechanisms/pos/block-proposal/) معطلاً، يتم تخطي تلك الكتلة، ويكون الوقت للكتلة التالية هو <span dir="ltr">24</span> ثانية. إذا أردنا الحصول على الكتلة الدقيقة لطابع زمني معين، فسنستخدم [البحث الثنائي (binary search)](https://en.wikipedia.org/wiki/Binary_search). ومع ذلك، هذا قريب بما يكفي لأغراضنا. التنبؤ بالمستقبل ليس علمًا دقيقًا.
 
 ```python
 CYCLE_BLOCKS = DAY_BLOCKS
 ```
 
-حجم الدورة. نراجع عروض الأسعار مرة واحدة في كل دورة ونحاول تقدير القيمة في نهاية الدورة التالية.
+حجم الدورة. نقوم بمراجعة الأسعار مرة واحدة في كل دورة ونحاول تقدير القيمة في نهاية الدورة التالية.
 
 ```python
-# عنوان المجمع الذي نقرأ منه
+# عنوان المجمع الذي نقرأه
 WETHUSDC_ADDRESS = Web3.to_checksum_address("0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640")
 ```
 
-تؤخذ قيم عروض الأسعار من مجمع يوني سواب 3 USDC/WETH على العنوان [`0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640`](https://eth.blockscout.com/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640?tab=read_write_contract). هذا العنوان موجود بالفعل في شكل المجموع الاختباري، ولكن من الأفضل استخدام [`Web3.to_checksum_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_checksum_address) لجعل الكود قابلاً لإعادة الاستخدام.
+تؤخذ قيم الأسعار من مجمع يونيسواب <span dir="ltr">v3</span> لـ USDC/WETH في العنوان [`0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640`](https://eth.blockscout.com/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640?tab=read_write_contract). هذا العنوان موجود بالفعل في شكل المجموع الاختباري (checksum)، ولكن من الأفضل استخدام [`Web3.to_checksum_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_checksum_address) لجعل الكود قابلاً لإعادة الاستخدام.
 
 ```python
 POOL_ABI = [
@@ -162,13 +167,13 @@ ERC20_ABI = [
 ]
 ```
 
-هذه هي [واجهات التطبيق الثنائية ABIs](https://docs.soliditylang.org/en/latest/abi-spec.html) للعقدين اللذين نحتاج إلى الاتصال بهما. للحفاظ على الكود موجزًا، نقوم بتضمين الوظائف التي نحتاج إلى استدعائها فقط.
+هذه هي [واجهات التطبيق الثنائية (ABIs)](https://docs.soliditylang.org/en/latest/abi-spec.html) للعقدين اللذين نحتاج إلى الاتصال بهما. للحفاظ على إيجاز الكود، نقوم بتضمين الوظائف التي نحتاج إلى استدعائها فقط.
 
 ```python
 w3 = Web3(Web3.HTTPProvider(MAINNET_URL))
 ```
 
-قم ببدء مكتبة [`Web3`](https://web3py.readthedocs.io/en/stable/quickstart.html#remote-providers) واتصل بعقدة إيثريوم.
+بدء مكتبة [`Web3`](https://web3py.readthedocs.io/en/stable/quickstart.html#remote-providers) والاتصال بعقدة إيثيريوم.
 
 ```python
 @dataclass(frozen=True)
@@ -179,9 +184,9 @@ class ERC20Token:
     contract: Contract
 ```
 
-هذه إحدى طرق إنشاء فئة بيانات في لغة بايثون. يُستخدم نوع البيانات [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) للاتصال بالعقد. لاحظ `(frozen=True)`. في لغة بايثون بايثون، تُعرَّف [القيم المنطقية booleans](https://en.wikipedia.org/wiki/Boolean_data_type) على أنها `True` أو `False`، بأحرف كبيرة. فئة البيانات هذه `frozen`، مما يعني أنه لا يمكن تعديل الحقول.
+هذه إحدى الطرق لإنشاء فئة بيانات (data class) في Python. يُستخدم نوع البيانات [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) للاتصال بالعقد. لاحظ `(frozen=True)`. في Python، يتم تعريف [القيم المنطقية (booleans)](https://en.wikipedia.org/wiki/Boolean_data_type) كـ `True` أو `False`، بأحرف كبيرة. فئة البيانات هذه هي `frozen`، مما يعني أنه لا يمكن تعديل الحقول.
 
-لاحظ المسافة البادئة. على عكس [اللغات المشتقة من C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages)، تستخدم لغة بايثون المسافة البادئة للإشارة إلى الكتل. يعرف مفسر بايثون أن التعريف التالي ليس جزءًا من فئة البيانات هذه لأنه لا يبدأ بنفس المسافة البادئة لحقول فئة البيانات.
+لاحظ المسافة البادئة. على عكس [اللغات المشتقة من C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages)، تستخدم Python المسافة البادئة للإشارة إلى الكتل البرمجية. يعرف مترجم Python أن التعريف التالي ليس جزءًا من فئة البيانات هذه لأنه لا يبدأ بنفس المسافة البادئة لحقول فئة البيانات.
 
 ```python
 @dataclass(frozen=True)
@@ -194,44 +199,44 @@ class PoolInfo:
     decimal_factor: Decimal = 1
 ```
 
-يُستخدم النوع [`Decimal`](https://docs.python.org/3/library/decimal.html) للتعامل مع الكسور العشرية بدقة.
+يُستخدم النوع [`Decimal`](https://docs.python.org/3/library/decimal.html) للتعامل بدقة مع الكسور العشرية.
 
 ```python
     def get_price(self, block: int) -> Decimal:
 ```
 
-هذه هي طريقة تعريف دالة في بايثون. التعريف بمسافة بادئة لإظهار أنه لا يزال جزءًا من `PoolInfo`.
+هذه هي الطريقة لتعريف دالة في Python. يتم وضع مسافة بادئة للتعريف لإظهار أنه لا يزال جزءًا من `PoolInfo`.
 
-في دالة تعد جزءًا من فئة بيانات، يكون المعامل الأول دائمًا هو `self`، وهو مثيل فئة البيانات الذي تم استدعاؤه هنا. هنا يوجد معلمة أخرى، رقم الكتلة.
+في الدالة التي تعد جزءًا من فئة بيانات، يكون المعامل الأول دائمًا `self`، وهو مثيل فئة البيانات الذي تم استدعاؤه هنا. يوجد هنا معامل آخر، وهو رقم الكتلة.
 
 ```python
         assert block <= w3.eth.block_number, "Block is in the future"
 ```
 
-إذا استطعنا قراءة المستقبل، فلن نحتاج إلى الذكاء الاصطناعي للتداول.
+لو كنا نستطيع قراءة المستقبل، لما احتجنا إلى الذكاء الاصطناعي للتداول.
 
 ```python
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-بناء الجملة لاستدعاء دالة على آلة الإيثريوم الافتراضية EVM من ويب3 هو كالتالي: `<contract object>.functions.<function name>().call(<parameters>)`. يمكن أن تكون المعلمات هي معلمات دالة آلة الإيثريوم الافتراضية EVM (إن وجدت؛ هنا لا توجد) أو [معلمات مسماة](https://en.wikipedia.org/wiki/Named_parameter) لتعديل سلوك سلسلة الكتل (blockchain). هنا نستخدم واحدًا، `block_identifier`، لتحديد [رقم الكتلة](/developers/docs/apis/json-rpc/#default-block) الذي نرغب في التشغيل فيه.
+بناء الجملة لاستدعاء دالة على آلة إيثيريوم الافتراضية (EVM) من Web3 هو كالتالي: `<contract object>.functions.<function name>().call(<parameters>)`. يمكن أن تكون المعاملات هي معاملات دالة EVM (إن وجدت؛ هنا لا يوجد) أو [معاملات مسماة (named parameters)](https://en.wikipedia.org/wiki/Named_parameter) لتعديل سلوك سلسلة الكتل. هنا نستخدم واحدًا، `block_identifier`، لتحديد [رقم الكتلة](/developers/docs/apis/json-rpc/#default-block) الذي نرغب في التشغيل فيه.
 
-النتيجة هي [هذه البنية، في شكل مصفوفة](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). القيمة الأولى هي دالة لسعر الصرف بين الرمزين.
+النتيجة هي [هذا الهيكل (struct)، في شكل مصفوفة](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). القيمة الأولى هي دالة لسعر الصرف بين الرمزين المميزين.
 
 ```python
         raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2
 ```
 
-لتقليل الحسابات على السلسلة، لا يقوم يوني سواب v3 بتخزين عامل الصرف الفعلي بل جذره التربيعي. نظرًا لأن آلة إيثريوم الافتراضية (EVM) لا تدعم حسابات النقطة العائمة أو الكسور، فبدلاً من القيمة الفعلية، تكون الاستجابة <math><msqrt><mi>price</mi></msqrt><mo>&#x22C5</mo><msup><mn>2</mn><mn>96</mn></msup></math>
+لتقليل الحسابات على السلسلة، لا يقوم يونيسواب <span dir="ltr">v3</span> بتخزين عامل الصرف الفعلي بل جذره التربيعي. نظرًا لأن EVM لا تدعم رياضيات الفاصلة العائمة أو الكسور، فبدلاً من القيمة الفعلية، تكون الاستجابة هي <math><msqrt><mi>price</mi></msqrt><mo>&#x22C5;</mo><msup><mn>2</mn><mn>96</mn></msup></math>
 
 ```python
-         # (token1 لكل token0)
+         # (الرمز المميز 1 لكل الرمز المميز 0)
         return 1/(raw_price * self.decimal_factor)
 ```
 
-السعر الخام الذي نحصل عليه هو عدد `token0` الذي نحصل عليه مقابل كل `token1`. في مجمعنا، `token0` هو USDC (عملة مستقرة بنفس قيمة الدولار الأمريكي) و`token1` هو [WETH](https://opensea.io/learn/blockchain/what-is-weth). القيمة التي نريدها حقًا هي عدد الدولارات لكل WETH، وليس العكس.
+السعر الخام الذي نحصل عليه هو عدد `token0` الذي نحصل عليه مقابل كل `token1`. في المجمع الخاص بنا، `token0` هو USDC (عملة مستقرة بنفس قيمة الدولار الأمريكي) و `token1` هو [إيثر مغلف (WETH)](https://opensea.io/learn/blockchain/what-is-weth). القيمة التي نريدها حقًا هي عدد الدولارات لكل WETH، وليس العكس.
 
-العامل العشري هو النسبة بين [العوامل العشرية](https://docs.openzeppelin.com/contracts/4.x/erc20#a-note-on-decimals) للرمزين.
+العامل العشري هو النسبة بين [العوامل العشرية](https://docs.openzeppelin.com/contracts/4.x/erc20#a-note-on-decimals) للرمزين المميزين.
 
 ```python
 @dataclass(frozen=True)
@@ -241,7 +246,7 @@ class Quote:
     asset: str
 ```
 
-تمثل فئة البيانات هذه عرض سعر: سعر أصل معين في نقطة زمنية معينة. في هذه المرحلة، حقل `asset` غير ذي صلة لأننا نستخدم مجمعًا واحدًا وبالتالي لدينا أصل واحد. ومع ذلك، سنضيف المزيد من الأصول لاحقًا.
+تمثل فئة البيانات هذه سعرًا: سعر أصل معين في نقطة زمنية معينة. في هذه المرحلة، حقل `asset` غير ذي صلة لأننا نستخدم مجمعًا واحدًا وبالتالي لدينا أصل واحد. ومع ذلك، سنضيف المزيد من الأصول لاحقًا.
 
 ```python
 def read_token(address: str) -> ERC20Token:
@@ -257,7 +262,7 @@ def read_token(address: str) -> ERC20Token:
     )
 ```
 
-تأخذ هذه الدالة عنوانًا وتعيد معلومات حول عقد الرمز المميز في ذلك العنوان. لإنشاء [عقد ويب3 `Contract` جديد](https://web3py.readthedocs.io/en/stable/web3.contract.html)، نوفر العنوان وواجهة التطبيق الثنائية ABI لـ `w3.eth.contract`.
+تأخذ هذه الدالة عنوانًا وتُرجع معلومات حول عقد الرمز المميز في ذلك العنوان. لإنشاء [`Contract` جديد في Web3](https://web3py.readthedocs.io/en/stable/web3.contract.html)، نقدم العنوان و ABI إلى `w3.eth.contract`.
 
 ```python
 def read_pool(address: str) -> PoolInfo:
@@ -277,22 +282,22 @@ def read_pool(address: str) -> PoolInfo:
     )
 ```
 
-تعيد هذه الدالة كل ما نحتاجه حول [مجمع معين](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol). البناء `f"<string>"` هو [سلسلة نصية منسقة](https://docs.python.org/3/reference/lexical_analysis.html#f-strings).
+تُرجع هذه الدالة كل ما نحتاجه حول [مجمع معين](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol). بناء الجملة `f"<string>"` هو [سلسلة نصية منسقة (formatted string)](https://docs.python.org/3/reference/lexical_analysis.html#f-strings).
 
 ```python
 def get_quote(pool: PoolInfo, block_number: int = None) -> Quote:
 ```
 
-الحصول على كائن `Quote`. القيمة الافتراضية لـ `block_number` هي `None` (بدون قيمة).
+الحصول على كائن `Quote`. القيمة الافتراضية لـ `block_number` هي `None` (لا توجد قيمة).
 
 ```python
     if block_number is None:
         block_number = w3.eth.block_number
 ```
 
-إذا لم يتم تحديد رقم كتلة، فاستخدم `w3.eth.block_number`، وهو أحدث رقم كتلة. هذا هو بناء الجملة لـ[عبارة `if`](https://docs.python.org/3/reference/compound_stmts.html#the-if-statement).
+إذا لم يتم تحديد رقم الكتلة، فاستخدم `w3.eth.block_number`، وهو أحدث رقم كتلة. هذا هو بناء الجملة لـ [عبارة `if`](https://docs.python.org/3/reference/compound_stmts.html#the-if-statement).
 
-قد يبدو أنه كان من الأفضل تعيين القيمة الافتراضية على `w3.eth.block_number`، ولكن هذا لا يعمل جيدًا لأنه سيكون رقم الكتلة في وقت تعريف الدالة. في وكيل يعمل لفترة طويلة، ستكون هذه مشكلة.
+قد يبدو كما لو كان من الأفضل تعيين القيمة الافتراضية إلى `w3.eth.block_number`، ولكن هذا لا يعمل بشكل جيد لأنه سيكون رقم الكتلة في وقت تعريف الدالة. في وكيل يعمل لفترة طويلة، ستكون هذه مشكلة.
 
 ```python
     block = w3.eth.get_block(block_number)
@@ -304,20 +309,20 @@ def get_quote(pool: PoolInfo, block_number: int = None) -> Quote:
     )
 ```
 
-استخدم [مكتبة `datetime`](https://docs.python.org/3/library/datetime.html) لتنسيقها إلى تنسيق قابل للقراءة من قبل البشر ونماذج اللغة الكبيرة (LLMs). استخدم [`Decimal.quantize`](https://docs.python.org/3/library/decimal.html#decimal.Decimal.quantize) لتقريب القيمة إلى منزلتين عشريتين.
+استخدم [مكتبة `datetime`](https://docs.python.org/3/library/datetime.html) لتنسيقه إلى تنسيق قابل للقراءة للبشر والنماذج اللغوية الكبيرة (LLMs). استخدم [`Decimal.quantize`](https://docs.python.org/3/library/decimal.html#decimal.Decimal.quantize) لتقريب القيمة إلى منزلتين عشريتين.
 
 ```python
 def get_quotes(pool: PoolInfo, start_block: int, end_block: int, step: int) -> list[Quote]:
 ```
 
-في لغة بايثون، يمكنك تعريف [قائمة](https://docs.python.org/3/library/stdtypes.html#typesseq-list) لا يمكن أن تحتوي إلا على نوع معين باستخدام `list[<type>]`.
+في Python، يمكنك تعريف [قائمة](https://docs.python.org/3/library/stdtypes.html#typesseq-list) يمكن أن تحتوي فقط على نوع معين باستخدام `list[<type>]`.
 
 ```python
     quotes = []
     for block in range(start_block, end_block + 1, step):
 ```
 
-في بايثون، تتكرر [حلقة `for`](https://docs.python.org/3/tutorial/controlflow.html#for-statements) عادةً على قائمة. تأتي قائمة أرقام الكتل التي يتم البحث عن عروض الأسعار فيها من [`range`](https://docs.python.org/3/library/stdtypes.html#range).
+في Python، عادةً ما تتكرر [حلقة `for`](https://docs.python.org/3/tutorial/controlflow.html#for-statements) عبر قائمة. تأتي قائمة أرقام الكتل للعثور على الأسعار فيها من [`range`](https://docs.python.org/3/library/stdtypes.html#range).
 
 ```python
         quote = get_quote(pool, block)
@@ -325,7 +330,7 @@ def get_quotes(pool: PoolInfo, start_block: int, end_block: int, step: int) -> l
     return quotes
 ```
 
-لكل رقم كتلة، احصل على كائن `Quote` وأضفه إلى قائمة `quotes`. ثم قم بإرجاع تلك القائمة.
+لكل رقم كتلة، احصل على كائن `Quote` وأضفه إلى قائمة `quotes`. ثم أرجع تلك القائمة.
 
 ```python
 pool = read_pool(WETHUSDC_ADDRESS)
@@ -339,21 +344,21 @@ quotes = get_quotes(
 pprint(quotes)
 ```
 
-هذا هو الكود الرئيسي للبرنامج النصي. اقرأ معلومات المجمع، واحصل على اثني عشر عرض سعر، وقم بطباعتها بشكل جميل [`pprint`](https://docs.python.org/3/library/pprint.html#pprint.pprint).
+هذا هو الكود الرئيسي للنص البرمجي. اقرأ معلومات المجمع، واحصل على اثني عشر سعرًا، وقم بـ [`pprint`](https://docs.python.org/3/library/pprint.html#pprint.pprint) لها.
 
-### إنشاء موجه {#prompt}
+### إنشاء مطالبة (Prompt) {#prompt}
 
-بعد ذلك، نحتاج إلى تحويل هذه القائمة من عروض الأسعار إلى موجه لـ LLM والحصول على قيمة مستقبلية متوقعة.
+بعد ذلك، نحتاج إلى تحويل قائمة الأسعار هذه إلى مطالبة لنموذج لغوي كبير (LLM) والحصول على قيمة مستقبلية متوقعة.
 
 ```sh
 git checkout 03-create-prompt
 uv run agent.py
 ```
 
-سيكون الإخراج الآن موجهًا إلى LLM، على غرار:
+سيكون الإخراج الآن عبارة عن مطالبة لنموذج لغوي كبير، مشابهة لـ:
 
 ```
-بالنظر إلى عروض الأسعار هذه:
+بناءً على هذه الأسعار:
 الأصل: WETH/USDC
         2026-01-20T16:34 3016.21
         .
@@ -368,33 +373,34 @@ uv run agent.py
         .
         2026-02-01T17:50 33.46
 
-ماذا تتوقع أن تكون قيمة WETH/USDC في الوقت 2026-02-02T17:56؟
+
+ما هي القيمة التي تتوقعها لـ WETH/USDC في الوقت 2026-02-02T17:56؟
 
 قدم إجابتك كرقم واحد مقرب إلى منزلتين عشريتين،
 بدون أي نص آخر.
 ```
 
-لاحظ أن هناك عروض أسعار لأصلين هنا، `WETH/USDC` و`WBTC/WETH`. قد تؤدي إضافة عروض أسعار من أصل آخر إلى تحسين دقة التنبؤ.
+لاحظ أن هناك أسعارًا لأصلين هنا، `WETH/USDC` و `WBTC/WETH`. قد تؤدي إضافة أسعار من أصل آخر إلى تحسين دقة التنبؤ.
 
-#### كيف يبدو الموجه {#prompt-explanation}
+#### كيف تبدو المطالبة {#prompt-explanation}
 
-يحتوي هذا الموجه على ثلاثة أقسام، وهي شائعة جدًا في موجهات LLM.
+تحتوي هذه المطالبة على ثلاثة أقسام، وهي شائعة جدًا في مطالبات النماذج اللغوية الكبيرة.
 
-1. المعلومات. تحتوي نماذج اللغة الكبيرة على الكثير من المعلومات من تدريبها، لكنها عادة لا تملك الأحدث. هذا هو سبب حاجتنا إلى استرداد أحدث عروض الأسعار هنا. تسمى إضافة المعلومات إلى موجه [التوليد المعزز بالاسترداد (RAG)](https://en.wikipedia.org/wiki/Retrieval-augmented_generation).
+1. المعلومات. تمتلك النماذج اللغوية الكبيرة الكثير من المعلومات من تدريبها، لكنها عادة لا تمتلك أحدث المعلومات. هذا هو السبب في أننا بحاجة إلى استرداد أحدث الأسعار هنا. تسمى إضافة المعلومات إلى المطالبة [التوليد المعزز بالاسترداد (RAG)](https://en.wikipedia.org/wiki/Retrieval-augmented_generation).
 
-2. السؤال الفعلي. هذا ما نريد أن نعرفه.
+2. السؤال الفعلي. هذا ما نريد معرفته.
 
-3. تعليمات تنسيق الإخراج. عادة، سيعطينا نموذج اللغة الكبير تقديرًا مع شرح لكيفية وصوله إليه. هذا أفضل للبشر، لكن برنامج الكمبيوتر يحتاج فقط إلى الخلاصة.
+3. تعليمات تنسيق المخرجات. عادةً، سيعطينا النموذج اللغوي الكبير تقديرًا مع شرح لكيفية وصوله إليه. هذا أفضل للبشر، لكن برنامج الكمبيوتر يحتاج فقط إلى النتيجة النهائية.
 
 #### شرح الكود {#prompt-code}
 
-ها هو الكود الجديد.
+إليك الكود الجديد.
 
 ```python
 from datetime import datetime, timezone, timedelta
 ```
 
-نحتاج إلى تزويد LLM بالوقت الذي نريد تقديرًا له. للحصول على وقت "n دقيقة/ساعة/يوم" في المستقبل، نستخدم [فئة `timedelta`](https://docs.python.org/3/library/datetime.html#datetime.timedelta).
+نحتاج إلى تزويد النموذج اللغوي الكبير بالوقت الذي نريد تقديرًا له. للحصول على وقت "n دقائق/ساعات/أيام" في المستقبل، نستخدم [فئة `timedelta`](https://docs.python.org/3/library/datetime.html#datetime.timedelta).
 
 ```python
 # عناوين المجمعات التي نقرأها
@@ -415,7 +421,7 @@ class PoolInfo:
     def get_price(self, block: int) -> Decimal:
         assert block <= w3.eth.block_number, "Block is in the future"
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
-        raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2  # (token1 per token0)
+        raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2  # (الرمز المميز 1 لكل الرمز المميز 0)
         if self.reverse:
             return 1/(raw_price * self.decimal_factor)
         else:
@@ -442,7 +448,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 لمعرفة ما إذا كان المجمع بحاجة إلى عكسه، نحصل على ذلك كمدخل إلى `read_pool`. أيضًا، يجب إعداد رمز الأصل بشكل صحيح.
 
-إن البناء `<a> if <b> else <c>` هو المكافئ في لغة بايثون لـ[المشغل الشرطي الثلاثي](https://en.wikipedia.org/wiki/Ternary_conditional_operator)، والذي سيكون في لغة مشتقة من C `<b> ? <a> : <c>`.
+بناء الجملة `<a> if <b> else <c>` هو المعادل في Python لـ [المعامل الشرطي الثلاثي (ternary conditional operator)](https://en.wikipedia.org/wiki/Ternary_conditional_operator)، والذي سيكون في لغة مشتقة من C هو `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:
@@ -452,14 +458,14 @@ def format_quotes(quotes: list[Quote]) -> str:
     return result
 ```
 
-تبني هذه الدالة سلسلة نصية تنسق قائمة بكائنات `Quote`، بافتراض أنها تنطبق جميعها على نفس الأصل.
+تقوم هذه الدالة ببناء سلسلة نصية تنسق قائمة من كائنات `Quote`، بافتراض أنها تنطبق جميعها على نفس الأصل.
 
 ```python
 def make_prompt(quotes: list[list[Quote]], expected_time: str, asset: str) -> str:
     return f"""
 ```
 
-في بايثون، تُكتب [السلاسل النصية الحرفية متعددة الأسطر](https://www.w3schools.com/python/gloss_python_multi_line_strings.asp) على النحو التالي: `"""` .... `"""`.
+في Python، تُكتب [السلاسل النصية متعددة الأسطر](https://www.w3schools.com/python/gloss_python_multi_line_strings.asp) كـ `"""` .... `"""`.
 
 ```python
 Given these quotes:
@@ -469,7 +475,7 @@ Given these quotes:
 }
 ```
 
-هنا، نستخدم نمط [MapReduce](https://en.wikipedia.org/wiki/MapReduce) لإنشاء سلسلة نصية لكل قائمة عرض أسعار باستخدام `format_quotes`، ثم نختصرها إلى سلسلة نصية واحدة لاستخدامها في الموجه.
+هنا، نستخدم نمط [MapReduce](https://en.wikipedia.org/wiki/MapReduce) لإنشاء سلسلة نصية لكل قائمة أسعار باستخدام `format_quotes`، ثم تقليلها إلى سلسلة نصية واحدة لاستخدامها في المطالبة.
 
 ```python
 What would you expect the value for {asset} to be at time {expected_time}?
@@ -479,7 +485,7 @@ without any other text.
     """
 ```
 
-بقية الموجه كما هو متوقع.
+بقية المطالبة كما هو متوقع.
 
 ```python
 wethusdc_pool = read_pool(WETHUSDC_ADDRESS, True)
@@ -499,7 +505,7 @@ wethwbtc_quotes = get_quotes(
 )
 ```
 
-راجع المجمعين واحصل على عروض أسعار من كليهما.
+مراجعة المجمعين والحصول على أسعار من كليهما.
 
 ```python
 future_time = (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()[0:16]
@@ -507,32 +513,29 @@ future_time = (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()[0:16]
 print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.asset))
 ```
 
-حدد النقطة الزمنية المستقبلية التي نريد التقدير لها، وقم بإنشاء الموجه.
+تحديد النقطة الزمنية المستقبلية التي نريد التقدير لها، وإنشاء المطالبة.
 
-### التفاعل مع LLM {#interface-llm}
+### التفاعل مع نموذج لغوي كبير (LLM) {#interface-llm}
 
-بعد ذلك، نقوم بتوجيه LLM فعلي ونحصل على قيمة مستقبلية متوقعة. لقد كتبت هذا البرنامج باستخدام OpenAI، لذا إذا كنت تريد استخدام مزود مختلف، فستحتاج إلى تعديله.
+بعد ذلك، نقوم بمطالبة نموذج لغوي كبير فعلي ونتلقى قيمة مستقبلية متوقعة. لقد كتبت هذا البرنامج باستخدام OpenAI، لذا إذا كنت ترغب في استخدام مزود مختلف، فستحتاج إلى تعديله.
 
 1. احصل على [حساب OpenAI](https://auth.openai.com/create-account)
-
-2. [قم بتمويل الحساب](https://platform.openai.com/settings/organization/billing/overview)—الحد الأدنى للمبلغ في وقت كتابة هذا التقرير هو 5 دولارات
-
-3. [أنشئ مفتاح واجهة برمجة تطبيقات](https://platform.openai.com/settings/organization/api-keys)
-
-4. في سطر الأوامر، قم بتصدير مفتاح واجهة برمجة التطبيقات حتى يتمكن برنامجك من استخدامه
+2. [قم بتمويل الحساب](https://platform.openai.com/settings/organization/billing/overview) — الحد الأدنى للمبلغ في وقت الكتابة هو <span dir="ltr">$5</span>
+3. [أنشئ مفتاح API](https://platform.openai.com/settings/organization/api-keys)
+4. في سطر الأوامر، قم بتصدير مفتاح API حتى يتمكن برنامجك من استخدامه
 
    ```sh
-   export OPENAI_API_KEY=sk-<بقية المفتاح هنا>
+   export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. سحب الوكيل وتشغيله
+5. قم بالتبديل (Checkout) وتشغيل الوكيل
 
    ```sh
    git checkout 04-interface-llm
    uv run agent.py
    ```
 
-ها هو الكود الجديد.
+إليك الكود الجديد.
 
 ```python
 from openai import OpenAI
@@ -540,7 +543,7 @@ from openai import OpenAI
 open_ai = OpenAI()  # يقرأ العميل متغير البيئة OPENAI_API_KEY
 ```
 
-قم باستيراد واجهة برمجة تطبيقات OpenAI وإنشاء مثيل لها.
+استيراد وإنشاء مثيل لواجهة برمجة تطبيقات OpenAI.
 
 ```python
 response = open_ai.chat.completions.create(
@@ -581,27 +584,27 @@ uv run test-predictor.py
 النتيجة المتوقعة مشابهة لـ:
 
 ```
-التنبؤ لـ 2026-01-05T19:50: التنبؤ 3138.93 دولارًا أمريكيًا، الحقيقي 3218.92 دولارًا أمريكيًا، الخطأ 79.99 دولارًا أمريكيًا
-التنبؤ لـ 2026-01-06T19:56: التنبؤ 3243.39 دولارًا أمريكيًا، الحقيقي 3221.08 دولارًا أمريكيًا، الخطأ 22.31 دولارًا أمريكيًا
-التنبؤ لـ 2026-01-07T20:02: التنبؤ 3223.24 دولارًا أمريكيًا، الحقيقي 3146.89 دولارًا أمريكيًا، الخطأ 76.35 دولارًا أمريكيًا
-التنبؤ لـ 2026-01-08T20:11: التنبؤ 3150.47 دولارًا أمريكيًا، الحقيقي 3092.04 دولارًا أمريكيًا، الخطأ 58.43 دولارًا أمريكيًا
+التنبؤ لـ 2026-01-05T19:50: المتوقع 3138.93 USD، الفعلي 3218.92 USD، الخطأ 79.99 USD
+التنبؤ لـ 2026-01-06T19:56: المتوقع 3243.39 USD، الفعلي 3221.08 USD، الخطأ 22.31 USD
+التنبؤ لـ 2026-01-07T20:02: المتوقع 3223.24 USD، الفعلي 3146.89 USD، الخطأ 76.35 USD
+التنبؤ لـ 2026-01-08T20:11: المتوقع 3150.47 USD، الفعلي 3092.04 USD، الخطأ 58.43 USD
 .
 .
 .
-التنبؤ لـ 2026-01-31T22:33: التنبؤ 2637.73 دولارًا أمريكيًا، الحقيقي 2417.77 دولارًا أمريكيًا، الخطأ 219.96 دولارًا أمريكيًا
-التنبؤ لـ 2026-02-01T22:41: التنبؤ 2381.70 دولارًا أمريكيًا، الحقيقي 2318.84 دولارًا أمريكيًا، الخطأ 62.86 دولارًا أمريكيًا
-التنبؤ لـ 2026-02-02T22:49: التنبؤ 2234.91 دولارًا أمريكيًا، الحقيقي 2349.28 دولارًا أمريكيًا، الخطأ 114.37 دولارًا أمريكيًا
-متوسط خطأ التنبؤ على مدار 29 تنبؤًا: 83.87103448275862068965517241 دولارًا أمريكيًا
-متوسط التغيير لكل توصية: 4.787931034482758620689655172 دولار أمريكي
-التباين المعياري للتغيرات: 104.42 دولار أمريكي
-أيام مربحة: 51.72%
-أيام خاسرة: 48.28%
+التنبؤ لـ 2026-01-31T22:33: المتوقع 2637.73 USD، الفعلي 2417.77 USD، الخطأ 219.96 USD
+التنبؤ لـ 2026-02-01T22:41: المتوقع 2381.70 USD، الفعلي 2318.84 USD، الخطأ 62.86 USD
+التنبؤ لـ 2026-02-02T22:49: المتوقع 2234.91 USD، الفعلي 2349.28 USD، الخطأ 114.37 USD
+متوسط خطأ التنبؤ على مدار 29 تنبؤًا: 83.87103448275862068965517241 USD
+متوسط التغيير لكل توصية: 4.787931034482758620689655172 USD
+التباين القياسي للتغييرات: 104.42 USD
+الأيام المربحة: 51.72%
+الأيام الخاسرة: 48.28%
 ```
 
-معظم المختبر مطابق للوكيل، ولكن إليك الأجزاء الجديدة أو المعدلة.
+معظم كود الاختبار مطابق للوكيل، ولكن إليك الأجزاء الجديدة أو المعدلة.
 
 ```python
-CYCLES_FOR_TEST = 40 # للاختبار الخلفي، كم عدد الدورات التي نختبرها
+CYCLES_FOR_TEST = 40 # للاختبار الرجعي، كم عدد الدورات التي نختبرها
 
 # الحصول على الكثير من عروض الأسعار
 wethusdc_pool = read_pool(WETHUSDC_ADDRESS, True)
@@ -621,10 +624,10 @@ wethwbtc_quotes = get_quotes(
 )
 ```
 
-نحن ننظر إلى `CYCLES_FOR_TEST` (المحدد هنا بـ 40) يومًا إلى الوراء.
+ننظر إلى `CYCLES_FOR_TEST` (محددة كـ <span dir="ltr">40</span> هنا) يومًا للوراء.
 
 ```python
-# إنشاء تنبؤات والتحقق منها مقابل التاريخ الحقيقي
+# إنشاء توقعات والتحقق منها مقابل التاريخ الحقيقي
 
 total_error = Decimal(0)
 changes = []
@@ -632,20 +635,20 @@ changes = []
 
 هناك نوعان من الأخطاء التي نهتم بها. الأول، `total_error`، هو ببساطة مجموع الأخطاء التي ارتكبها المتنبئ.
 
-لفهم الثاني، `changes`، نحتاج إلى تذكر غرض الوكيل. ليس التنبؤ بنسبة WETH/USDC (سعر ETH). بل إصدار توصيات البيع والشراء. إذا كان السعر حاليًا 2000 دولار وتنبأ بـ 2010 دولارات غدًا، فإننا لا نمانع إذا كانت النتيجة الفعلية 2020 دولارًا وحققنا أموالًا إضافية. لكننا نمانع إذا تنبأ بـ 2010 دولارات، واشترى ETH بناءً على تلك التوصية، وانخفض السعر إلى 1990 دولارًا.
+لفهم الثاني، `changes`، نحتاج إلى تذكر الغرض من الوكيل. ليس الغرض هو التنبؤ بنسبة WETH/USDC (سعر ETH). بل إصدار توصيات البيع والشراء. إذا كان السعر حاليًا <span dir="ltr">$2000</span> وتوقع أن يكون <span dir="ltr">$2010</span> غدًا، فلا نمانع إذا كانت النتيجة الفعلية هي <span dir="ltr">$2020</span> وكسبنا أموالاً إضافية. لكننا _نمانع_ إذا توقع <span dir="ltr">$2010</span>، واشترى ETH بناءً على تلك التوصية، وانخفض السعر إلى <span dir="ltr">$1990</span>.
 
 ```python
 for index in range(0,len(wethusdc_quotes)-CYCLES_BACK):
 ```
 
-لا يمكننا النظر إلا في الحالات التي يتوفر فيها السجل الكامل (القيم المستخدمة للتنبؤ والقيمة الحقيقية لمقارنتها بها). وهذا يعني أن أحدث حالة يجب أن تكون تلك التي بدأت قبل `CYCLES_BACK`.
+يمكننا فقط النظر في الحالات التي يتوفر فيها السجل الكامل (القيم المستخدمة للتنبؤ والقيمة في العالم الحقيقي لمقارنتها بها). هذا يعني أن أحدث حالة يجب أن تكون تلك التي بدأت منذ `CYCLES_BACK`.
 
 ```python
     wethusdc_slice = wethusdc_quotes[index:index+CYCLES_BACK]
     wethwbtc_slice = wethwbtc_quotes[index:index+CYCLES_BACK]
 ```
 
-استخدم [شرائح](https://www.w3schools.com/python/ref_func_slice.asp) للحصول على نفس عدد العينات التي يستخدمها الوكيل. الكود بين هنا والجزء التالي هو نفس كود الحصول على التنبؤ الموجود لدينا في الوكيل.
+استخدم [الشرائح (slices)](https://www.w3schools.com/python/ref_func_slice.asp) للحصول على نفس عدد العينات الذي يستخدمه الوكيل. الكود الموجود بين هنا والمقطع التالي هو نفس كود الحصول على التنبؤ الموجود لدينا في الوكيل.
 
 ```python
     predicted_price = Decimal(response.choices[0].message.content.strip())
@@ -653,7 +656,7 @@ for index in range(0,len(wethusdc_quotes)-CYCLES_BACK):
     prediction_time_price = wethusdc_quotes[index+CYCLES_BACK-1].price
 ```
 
-احصل على السعر المتوقع والسعر الحقيقي والسعر وقت التنبؤ. نحتاج إلى السعر وقت التنبؤ لتحديد ما إذا كانت التوصية بالشراء أو البيع.
+احصل على السعر المتوقع، والسعر الفعلي، والسعر في وقت التنبؤ. نحتاج إلى السعر في وقت التنبؤ لتحديد ما إذا كانت التوصية هي الشراء أم البيع.
 
 ```python
     error = abs(predicted_price - real_price)
@@ -669,7 +672,7 @@ for index in range(0,len(wethusdc_quotes)-CYCLES_BACK):
     changes.append(price_increase if recomended_action == 'buy' else -price_increase)
 ```
 
-بالنسبة لـ `changes`، نريد التأثير النقدي لشراء أو بيع عملة ETH واحدة. لذا أولاً، نحتاج إلى تحديد التوصية، ثم تقييم كيفية تغير السعر الفعلي، وما إذا كانت التوصية قد حققت ربحًا (تغيير إيجابي) أو كلفت أموالًا (تغيير سلبي).
+بالنسبة لـ `changes`، نريد التأثير النقدي لشراء أو بيع واحد ETH. لذا أولاً، نحتاج إلى تحديد التوصية، ثم تقييم كيفية تغير السعر الفعلي، وما إذا كانت التوصية قد حققت أرباحًا (تغيير إيجابي) أو تسببت في خسارة (تغيير سلبي).
 
 ```python
 print (f"Mean prediction error over {len(wethusdc_quotes)-CYCLES_BACK} predictions: {total_error / Decimal(len(wethusdc_quotes)-CYCLES_BACK)} USD")
@@ -681,41 +684,41 @@ var = sum((x - mean_change) ** 2 for x in changes) / length_changes
 print (f"Standard variance of changes: {var.sqrt().quantize(Decimal("0.01"))} USD")
 ```
 
-تقرير النتائج.
+الإبلاغ عن النتائج.
 
 ```python
 print (f"Profitable days: {len(list(filter(lambda x: x > 0, changes)))/length_changes:.2%}")
 print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_changes:.2%}")
 ```
 
-استخدم [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) لحساب عدد الأيام المربحة وعدد الأيام المكلفة. النتيجة هي كائن مرشح، والذي نحتاج إلى تحويله إلى قائمة للحصول على الطول.
+استخدم [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) لحساب عدد الأيام المربحة وعدد الأيام الخاسرة. النتيجة هي كائن تصفية (filter object)، والذي نحتاج إلى تحويله إلى قائمة للحصول على الطول.
 
 ### إرسال المعاملات {#submit-txn}
 
-الآن نحن بحاجة إلى إرسال المعاملات بالفعل. ومع ذلك، لا أريد إنفاق أموال حقيقية في هذه المرحلة، قبل إثبات النظام. بدلاً من ذلك، سننشئ انقسام محلي للشبكة الرئيسية، و "نتداول" على تلك الشبكة.
+الآن نحتاج إلى إرسال المعاملات فعليًا. ومع ذلك، لا أريد إنفاق أموال حقيقية في هذه المرحلة، قبل إثبات كفاءة النظام. بدلاً من ذلك، سنقوم بإنشاء تفرع محلي من الشبكة الرئيسية، و"التداول" على تلك الشبكة.
 
-فيما يلي خطوات إنشاء انقسام محلي وتمكين التداول.
+إليك خطوات إنشاء تفرع محلي وتمكين التداول.
 
-1. قم بتثبيت [فاوندري](https://getfoundry.sh/introduction/installation)
+1. قم بتثبيت [Foundry](https://getfoundry.sh/introduction/installation)
 
-2. ابدأ [`anvil`](https://getfoundry.sh/anvil/overview)
+2. ابدأ تشغيل [`anvil`](https://getfoundry.sh/anvil/overview)
 
    ```sh
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   يستمع `anvil` على عنوان URL الافتراضي لـ فاوندري، http://localhost:8545، لذلك لا نحتاج إلى تحديد عنوان URL لأمر `cast` الذي نستخدمه لمعالجة سلسلة الكتل (blockchain).
+   يستمع `anvil` على الرابط الافتراضي لـ Foundry، وهو http://localhost:8545، لذلك لا نحتاج إلى تحديد الرابط لـ [أمر `cast`](https://getfoundry.sh/cast/overview) الذي نستخدمه لمعالجة سلسلة الكتل.
 
-3. عند التشغيل في `anvil`، هناك عشرة حسابات اختبار تحتوي على ETH—قم بتعيين متغيرات البيئة للحساب الأول
+3. عند التشغيل في `anvil`، هناك عشرة حسابات اختبار تحتوي على ETH — قم بتعيين متغيرات البيئة للحساب الأول
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ADDRESS=`cast wallet address $PRIVATE_KEY`
    ```
 
-4. هذه هي العقود التي نحتاج إلى استخدامها. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) هو عقد يوني سواب v3 الذي نستخدمه للتداول الفعلي. يمكننا التداول مباشرة من خلال المجمع، ولكن هذا أسهل بكثير.
+4. هذه هي العقود التي نحتاج إلى استخدامها. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) هو عقد يونيسواب <span dir="ltr">v3</span> الذي نستخدمه للتداول الفعلي. يمكننا التداول مباشرة من خلال المجمع، ولكن هذا أسهل بكثير.
 
-   المتغيران السفليان هما مسارات يوني سواب v3 المطلوبة للتبديل بين WETH وUSDC.
+   المتغيران السفليان هما مسارات يونيسواب <span dir="ltr">v3</span> المطلوبة للمبادلة بين WETH و USDC.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -726,13 +729,13 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    USDC_TO_WETH=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
    ```
 
-5. يحتوي كل حساب من حسابات الاختبار على 10000 ETH. استخدم عقد WETH لتغليف 1000 ETH للحصول على 1000 WETH للتداول.
+5. يحتوي كل حساب من حسابات الاختبار على <span dir="ltr">10,000 ETH</span>. استخدم عقد WETH لتغليف <span dir="ltr">1000 ETH</span> للحصول على <span dir="ltr">1000 WETH</span> للتداول.
 
    ```sh
    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
    ```
 
-6. استخدم `SwapRouter` لتداول 500 WETH مقابل USDC.
+6. استخدم `SwapRouter` لمبادلة <span dir="ltr">500 WETH</span> مقابل USDC.
 
    ```sh
    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 500ether --private-key $PRIVATE_KEY
@@ -743,16 +746,16 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
        --private-key $PRIVATE_KEY
    ```
 
-   ينشئ استدعاء `approve` بدلًا يسمح لـ `SwapRouter` بإنفاق بعض رموزنا. لا يمكن للعقود مراقبة الأحداث، لذلك إذا قمنا بنقل الرموز المميزة مباشرة إلى عقد `SwapRouter`، فلن يعرف أنه تم الدفع له. بدلاً من ذلك، نسمح لعقد `SwapRouter` بإنفاق مبلغ معين، ثم يقوم `SwapRouter` بذلك. يتم ذلك من خلال دالة يستدعيها `SwapRouter`، لذلك يعرف ما إذا كانت ناجحة.
+   يُنشئ استدعاء `approve` سماحية تسمح لـ `SwapRouter` بإنفاق بعض الرموز المميزة الخاصة بنا. لا يمكن للعقود مراقبة الأحداث، لذلك إذا قمنا بتحويل الرموز المميزة مباشرة إلى عقد `SwapRouter`، فلن يعرف أنه تم الدفع له. بدلاً من ذلك، نسمح لعقد `SwapRouter` بإنفاق مبلغ معين، ثم يقوم `SwapRouter` بذلك. يتم ذلك من خلال دالة يستدعيها `SwapRouter`، لذلك يعرف ما إذا كانت ناجحة.
 
-7. تحقق من أن لديك ما يكفي من كلا الرمزين.
+7. تحقق من أن لديك ما يكفي من كلا الرمزين المميزين.
 
    ```sh
    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
    echo `cast call $USDC_ADDRESS "balanceOf(address)" $ADDRESS | cast to-dec`/10^6 | bc
    ```
 
-الآن بعد أن أصبح لدينا WETH وUSDC، يمكننا تشغيل الوكيل بالفعل.
+الآن بعد أن أصبح لدينا WETH و USDC، يمكننا تشغيل الوكيل فعليًا.
 
 ```sh
 git checkout 05-trade
@@ -764,29 +767,29 @@ uv run agent.py
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
 السعر الحالي: 1843.16
-في 2026-02-06T23:07، السعر المتوقع: 1724.41 دولار أمريكي
-أرصدة الحسابات قبل التداول:
+في 2026-02-06T23:07، السعر المتوقع: 1724.41 USD
+أرصدة الحساب قبل التداول:
 رصيد USDC: 927301.578272
 رصيد WETH: 500
-بيع، أتوقع أن ينخفض السعر بمقدار 118.75 دولارًا أمريكيًا
+بيع، أتوقع أن ينخفض السعر بمقدار 118.75 USD
 تم إرسال معاملة الموافقة: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
 تم تعدين معاملة الموافقة.
 تم إرسال معاملة البيع: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
 تم تعدين معاملة البيع.
-أرصدة الحسابات بعد التداول:
+أرصدة الحساب بعد التداول:
 رصيد USDC: 929143.797116
 رصيد WETH: 499
 ```
 
-لاستخدامه بالفعل، تحتاج إلى بعض التغييرات الطفيفة.
+لاستخدامه فعليًا، تحتاج إلى بعض التغييرات الطفيفة.
 
 - في السطر 14، قم بتغيير `MAINNET_URL` إلى نقطة وصول حقيقية، مثل `https://eth.drpc.org`
 - في السطر 28، قم بتغيير `PRIVATE_KEY` إلى مفتاحك الخاص
-- ما لم تكن ثريًا جدًا ويمكنك شراء أو بيع 1 ETH كل يوم لوكيل غير مثبت، فقد ترغب في تغيير 29 لتقليل `WETH_TRADE_AMOUNT`
+- ما لم تكن ثريًا جدًا ويمكنك شراء أو بيع <span dir="ltr">1 ETH</span> كل يوم لوكيل غير مثبت، فقد ترغب في تغيير السطر 29 لتقليل `WETH_TRADE_AMOUNT`
 
 #### شرح الكود {#trading-code}
 
-ها هو الكود الجديد.
+إليك الكود الجديد.
 
 ```python
 SWAP_ROUTER_ADDRESS=Web3.to_checksum_address("0xE592427A0AEce92De3Edee1F18E0157C05861564")
@@ -812,7 +815,7 @@ ERC20_ABI = [
 ]
 ```
 
-للتداول فعليًا، نحتاج إلى وظيفة `approve`. نريد أيضًا إظهار الأرصدة قبل وبعد، لذلك نحتاج أيضًا إلى `balanceOf`.
+للتداول الفعلي، نحتاج إلى دالة `approve`. نريد أيضًا إظهار الأرصدة قبل وبعد، لذلك نحتاج أيضًا إلى `balanceOf`.
 
 ```python
 SWAP_ROUTER_ABI = [
@@ -820,7 +823,7 @@ SWAP_ROUTER_ABI = [
 ]
 ```
 
-في واجهة التطبيق الثنائية `SwapRouter`، نحتاج فقط إلى `exactInput`. هناك وظيفة ذات صلة، `exactOutput`، يمكننا استخدامها لشراء WETH واحد بالضبط، ولكن من أجل البساطة نستخدم `exactInput` فقط في كلتا الحالتين.
+في ABI الخاص بـ `SwapRouter` نحتاج فقط إلى `exactInput`. هناك دالة ذات صلة، `exactOutput`، يمكننا استخدامها لشراء WETH واحد بالضبط، ولكن للتبسيط نستخدم فقط `exactInput` في كلتا الحالتين.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -830,7 +833,7 @@ swap_router = w3.eth.contract(
 )
 ```
 
-تعريفات ويب3 للحساب `account` ([https://web3py.readthedocs.io/en/stable/web3.eth.account.html](https://web3py.readthedocs.io/en/stable/web3.eth.account.html)) وعقد `SwapRouter`.
+تعريفات Web3 لـ [`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) وعقد `SwapRouter`.
 
 ```python
 def txn_params() -> dict:
@@ -842,13 +845,13 @@ def txn_params() -> dict:
     }
 ```
 
-معلمات المعاملة. نحتاج إلى وظيفة هنا لأن [النون](https://en.wikipedia.org/wiki/Cryptographic_nonce) يجب أن يتغير في كل مرة.
+معاملات المعاملة. نحتاج إلى دالة هنا لأن [الرقم الفريد (nonce)](https://en.wikipedia.org/wiki/Cryptographic_nonce) يجب أن يتغير في كل مرة.
 
 ```python
 def approve_token(contract: Contract, amount: int):
 ```
 
-الموافقة على بدل رمز مميز لـ `SwapRouter`.
+الموافقة على سماحية الرمز المميز لـ `SwapRouter`.
 
 ```python
     txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
@@ -856,7 +859,7 @@ def approve_token(contract: Contract, amount: int):
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
 ```
 
-هذه هي الطريقة التي نرسل بها معاملة في ويب3. أولاً نستخدم كائن `Contract` ([https://web3py.readthedocs.io/en/stable/web3.contract.html](https://web3py.readthedocs.io/en/stable/web3.contract.html)) لبناء المعاملة. ثم نستخدم `web3.eth.account.sign_transaction` ([https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction)) لتوقيع المعاملة، باستخدام `PRIVATE_KEY`. أخيرًا، نستخدم `w3.eth.send_raw_transaction` ([https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction)) لإرسال المعاملة.
+هذه هي الطريقة التي نرسل بها معاملة في Web3. أولاً نستخدم [كائن `Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) لبناء المعاملة. ثم نستخدم [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction) لتوقيع المعاملة، باستخدام `PRIVATE_KEY`. أخيرًا، نستخدم [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction) لإرسال المعاملة.
 
 ```python
     print(f"Approve transaction sent: {tx_hash.hex()}")
@@ -864,7 +867,7 @@ def approve_token(contract: Contract, amount: int):
     print("Approve transaction mined.")
 ```
 
-تنتظر `w3.eth.wait_for_transaction_receipt` ([https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt)) حتى يتم تعدين المعاملة. يعيد الإيصال إذا لزم الأمر.
+ينتظر [`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) حتى يتم تعدين المعاملة. ويُرجع الإيصال إذا لزم الأمر.
 
 ```python
 SELL_PARAMS = {
@@ -876,7 +879,7 @@ SELL_PARAMS = {
 }
 ```
 
-هذه هي المعلمات عند بيع WETH.
+هذه هي المعاملات عند بيع WETH.
 
 ```python
 def make_buy_params(quote: Quote) -> dict:
@@ -889,7 +892,7 @@ def make_buy_params(quote: Quote) -> dict:
     }
 ```
 
-على عكس `SELL_PARAMS`، يمكن أن تتغير معلمات الشراء. مبلغ الإدخال هو تكلفة 1 WETH، كما هو متاح في `quote`.
+على عكس `SELL_PARAMS`، يمكن أن تتغير معاملات الشراء. مبلغ الإدخال هو تكلفة <span dir="ltr">1 WETH</span>، كما هو متاح في `quote`.
 
 ```python
 def buy(quote: Quote):
@@ -902,6 +905,7 @@ def buy(quote: Quote):
     w3.eth.wait_for_transaction_receipt(tx_hash)
     print("Buy transaction mined.")
 
+
 def sell():
     approve_token(wethusdc_pool.token1.contract,
                   WETH_TRADE_AMOUNT * 10**wethusdc_pool.token1.decimals)
@@ -913,7 +917,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-وظائف `buy()` و `sell()` متطابقة تقريبًا. أولاً، نوافق على بدل كافٍ لـ `SwapRouter`، ثم نستدعيه بالمسار والمبلغ الصحيحين.
+الدالتان `buy()` و `sell()` متطابقتان تقريبًا. أولاً نوافق على سماحية كافية لـ `SwapRouter`، ثم نستدعيه بالمسار والمبلغ الصحيحين.
 
 ```python
 def balances():
@@ -924,55 +928,55 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
-تقرير أرصدة المستخدم بالعملتين.
+الإبلاغ عن أرصدة المستخدم بكلتا العملتين.
 
 ```python
-print("أرصدة الحساب قبل التداول:")
+print("Account balances before trade:")
 balances()
 
 if (expected_price > current_price):
-    print(f"شراء، أتوقع أن يرتفع السعر بمقدار {expected_price - current_price} دولار أمريكي")
+    print(f"Buy, I expect the price to go up by {expected_price - current_price} USD")
     buy(wethusdc_quotes[-1])
 else:
-    print(f"بيع، أتوقع أن ينخفض السعر بمقدار {current_price - expected_price} دولار أمريكي")
+    print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
     sell()
 
-print("أرصدة الحساب بعد التداول:")
+print("Account balances after trade:")
 balances()
 ```
 
-يعمل هذا الوكيل حاليًا مرة واحدة فقط. ومع ذلك، يمكنك تغييره للعمل بشكل مستمر إما عن طريق تشغيله من [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) أو عن طريق تغليف الأسطر 368-400 في حلقة واستخدام [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) للانتظار حتى يحين وقت الدورة التالية.
+يعمل هذا الوكيل حاليًا مرة واحدة فقط. ومع ذلك، يمكنك تغييره ليعمل بشكل مستمر إما عن طريق تشغيله من [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) أو عن طريق تغليف الأسطر 368-400 في حلقة واستخدام [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) للانتظار حتى يحين وقت الدورة التالية.
 
-## التحسينات الممكنة {#improvements}
+## تحسينات محتملة {#improvements}
 
-هذه ليست نسخة إنتاج كاملة؛ إنها مجرد مثال لتعليم الأساسيات. فيما يلي بعض الأفكار للتحسينات.
+هذه ليست نسخة إنتاج كاملة؛ إنها مجرد مثال لتعليم الأساسيات. إليك بعض الأفكار للتحسينات.
 
-### تداول أذكى {#smart-trading}
+### تداول أكثر ذكاءً {#smart-trading}
 
-هناك حقيقتان مهمتان يتجاهلهما الوكيل عند تحديد ما يجب القيام به.
+هناك حقيقتان مهمتان يتجاهلهما الوكيل عند اتخاذ قرار بشأن ما يجب القيام به.
 
-- _حجم التغيير المتوقع_. يبيع الوكيل كمية ثابتة من `WETH` إذا كان من المتوقع أن ينخفض السعر، بغض النظر عن حجم الانخفاض.
-  يمكن القول إنه من الأفضل تجاهل التغييرات الطفيفة والبيع بناءً على مدى توقعنا لانخفاض السعر.
-- _المحفظة الحالية_. إذا كانت 10% من محفظتك في WETH وتعتقد أن السعر سيرتفع، فمن المحتمل أن يكون من المنطقي شراء المزيد. ولكن إذا كانت 90% من محفظتك في WETH، فقد تكون معرضًا بشكل كافٍ، وليست هناك حاجة لشراء المزيد. والعكس صحيح إذا كنت تتوقع أن ينخفض السعر.
+- _حجم التغيير المتوقع_. يبيع الوكيل مبلغًا ثابتًا من `WETH` إذا كان من المتوقع أن ينخفض السعر، بغض النظر عن حجم الانخفاض.
+  يمكن القول إنه سيكون من الأفضل تجاهل التغييرات الطفيفة والبيع بناءً على مقدار الانخفاض المتوقع في السعر.
+- _المحفظة الحالية_. إذا كان <span dir="ltr">10%</span> من محفظتك في WETH وتعتقد أن السعر سيرتفع، فمن المنطقي على الأرجح شراء المزيد. ولكن إذا كان <span dir="ltr">90%</span> من محفظتك في WETH، فقد تكون معرضًا للسوق بشكل كافٍ، ولا داعي لشراء المزيد. العكس صحيح إذا كنت تتوقع انخفاض السعر.
 
-### ماذا لو كنت تريد أن تبقي استراتيجية التداول الخاصة بك سرية؟ {#secret}
+### ماذا لو كنت تريد الحفاظ على سرية استراتيجية التداول الخاصة بك؟ {#secret}
 
-يمكن لبائعي الذكاء الاصطناعي رؤية الاستعلامات التي ترسلها إلى نماذج اللغة الكبيرة الخاصة بهم، مما قد يكشف عن نظام التداول العبقري الذي طورته مع وكيلك. نظام التداول الذي يستخدمه عدد كبير جدًا من الأشخاص لا قيمة له لأن عددًا كبيرًا جدًا من الأشخاص يحاولون الشراء عندما تريد الشراء (ويرتفع السعر) ويحاولون البيع عندما تريد البيع (وينخفض السعر).
+يمكن لموردي الذكاء الاصطناعي رؤية الاستعلامات التي ترسلها إلى نماذجهم اللغوية الكبيرة، مما قد يكشف عن نظام التداول العبقري الذي طورته مع وكيلك. نظام التداول الذي يستخدمه عدد كبير جدًا من الأشخاص لا قيمة له لأن الكثير من الأشخاص يحاولون الشراء عندما تريد الشراء (ويرتفع السعر) ويحاولون البيع عندما تريد البيع (وينخفض السعر).
 
-يمكنك تشغيل LLM محليًا، على سبيل المثال، باستخدام [LM-Studio](https://lmstudio.ai/)، لتجنب هذه المشكلة.
+يمكنك تشغيل نموذج لغوي كبير محليًا، على سبيل المثال، باستخدام [LM-Studio](https://lmstudio.ai/)، لتجنب هذه المشكلة.
 
-### من بوت الذكاء الاصطناعي إلى وكيل الذكاء الاصطناعي {#bot-to-agent}
+### من روبوت ذكاء اصطناعي إلى وكيل ذكاء اصطناعي {#bot-to-agent}
 
-يمكنك تقديم حجة جيدة بأن هذا [بوت ذكاء اصطناعي، وليس وكيل ذكاء اصطناعي](/ai-agents/#ai-agents-vs-ai-bots). إنه يطبق استراتيجية بسيطة نسبيًا تعتمد على معلومات محددة مسبقًا. يمكننا تمكين التحسين الذاتي، على سبيل المثال، من خلال توفير قائمة بمجمعات يوني سواب v3 وأحدث قيمها والسؤال عن المجموعة التي لديها أفضل قيمة تنبؤية.
+يمكنك تقديم حجة قوية بأن هذا [روبوت ذكاء اصطناعي، وليس وكيل ذكاء اصطناعي](/ai-agents/#ai-agents-vs-ai-bots). فهو ينفذ استراتيجية بسيطة نسبيًا تعتمد على معلومات محددة مسبقًا. يمكننا تمكين التحسين الذاتي، على سبيل المثال، من خلال توفير قائمة بمجمعات يونيسواب <span dir="ltr">v3</span> وأحدث قيمها والسؤال عن أي مجموعة لها أفضل قيمة تنبؤية.
 
-### الحماية من الانزلاق {#slippage-protection}
+### الحماية من الانزلاق السعري {#slippage-protection}
 
-حاليًا لا توجد [حماية من الانزلاق](https://uniswapv3book.com/milestone_3/slippage-protection.html). إذا كان السعر الحالي 2000 دولار، والسعر المتوقع 2100 دولار، فسيقوم الوكيل بالشراء. ومع ذلك، إذا ارتفعت التكلفة إلى 2200 دولار قبل أن يشتري الوكيل، فلن يكون هناك معنى للشراء بعد الآن.
+حاليًا لا توجد [حماية من الانزلاق السعري](https://uniswapv3book.com/milestone_3/slippage-protection.html). إذا كان السعر الحالي هو <span dir="ltr">$2000</span>، والسعر المتوقع هو <span dir="ltr">$2100</span>، فسيقوم الوكيل بالشراء. ومع ذلك، إذا ارتفعت التكلفة قبل أن يشتري الوكيل إلى <span dir="ltr">$2200</span>، فلن يكون من المنطقي الشراء بعد الآن.
 
-لتنفيذ الحماية من الانزلاق، حدد قيمة `amountOutMinimum` في السطرين 325 و 334 من [`agent.py`](https://github.com/qbzzt/260215-ai-agent/blob/05-trade/agent.py#L325).
+لتنفيذ الحماية من الانزلاق السعري، حدد قيمة `amountOutMinimum` في السطرين 325 و 334 من [`agent.py`](https://github.com/qbzzt/260215-ai-agent/blob/05-trade/agent.py#L325).
 
-## الخلاصة {#conclusion}
+## الخاتمة {#conclusion}
 
-نأمل أن تعرف الآن ما يكفي للبدء في استخدام وكلاء الذكاء الاصطناعي. هذه ليست نظرة عامة شاملة على الموضوع؛ فهناك كتب كاملة مخصصة لذلك، لكن هذا يكفي لتبدأ. حظ سعيد!
+نأمل أن تكون الآن تعرف ما يكفي للبدء مع وكلاء الذكاء الاصطناعي. هذه ليست نظرة عامة شاملة على الموضوع؛ هناك كتب كاملة مخصصة لذلك، ولكن هذا يكفي لتبدأ. حظًا موفقًا!
 
-[انظر هنا لمزيد من أعمالي](https://cryptodocguy.pro/).
+[انظر هنا للمزيد من أعمالي](https://cryptodocguy.pro/).

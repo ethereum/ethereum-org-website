@@ -1,149 +1,151 @@
 ---
-title: "أُطر تطوير التطبيقات اللامركزية"
-description: "التعرف على مزايا الأطر ومقارنة الخيارات المتوفرة."
+title: أطر عمل تطوير التطبيقات اللامركزية ⁦(dapps)⁩
+description: استكشف مزايا أطر العمل وقارن بين الخيارات المتاحة.
 lang: ar
 ---
 
-## مقدمة إلى أطر العمل {#introduction-to-frameworks}
+## مقدمة عن أطر العمل {#introduction-to-frameworks}
 
-يتطلب بناء تطبيق لامركزي كامل قطعًا مختلفة من التكنولوجيا. وتشمل أطر البرمجيات العديد من الميزات المطلوبة أو توفّر أنظمة مكونات إضافية سهلة لاختيار الأدوات التي تريدها.
+يتطلب بناء تطبيق لامركزي (dapp) متكامل أجزاءً مختلفة من التكنولوجيا. تتضمن أطر عمل البرامج العديد من الميزات المطلوبة أو توفر أنظمة إضافات سهلة لاختيار الأدوات التي ترغب بها.
 
-تأتي هذه الأطر مع الكثير من الوظائف غير المألوفة، على غرار:
+تأتي أطر العمل مع الكثير من الوظائف الجاهزة للاستخدام، مثل:
 
-- الميزات لتدوير مثيل سلسلة كتل محلي.
-- أدوات مساندة لتجميع عقودك الذكية واختبارها.
-- إضافات تطوير العميل لبناء تطبيقك المواجه للمستخدم ضمن نفس المشروع/المستودع.
-- تكوين للاتصال بشبكات إيثريوم ونشر العقود، سواء إلى مثيل يعمل محليًا أو إحدى شبكات إيثريوم العامة.
-- توزيع التطبيقات اللامركزية - التكامل مع خيارات التخزين مثل آي بي إف إس.
+- ميزات لإنشاء نسخة محلية من سلسلة الكتل.
+- أدوات مساعدة لتجميع واختبار عقودك الذكية.
+- إضافات تطوير العميل لبناء تطبيقك المواجه للمستخدم داخل نفس المشروع/المستودع.
+- إعدادات للاتصال بشبكات إيثيريوم ونشر العقود، سواء على نسخة تعمل محليًا، أو إحدى شبكات إيثيريوم العامة.
+- توزيع التطبيقات اللامركزية - تكاملات مع خيارات التخزين مثل <span dir="ltr">IPFS</span>.
 
 ## المتطلبات الأساسية {#prerequisites}
 
-قبل الخوض في أطر العمل، نوصيك أولاً بقراءة مقدمتنا عن [التطبيقات اللامركزية](/developers/docs/dapps/) و[مكدس إيثريوم](/developers/docs/ethereum-stack/).
+قبل التعمق في أطر العمل، نوصيك بقراءة مقدمتنا عن [التطبيقات اللامركزية (dapps)](/developers/docs/dapps/) و[حزمة إيثيريوم](/developers/docs/ethereum-stack/) أولاً.
 
 ## أطر العمل المتاحة {#available-frameworks}
 
-**فاوندري** - **_Foundry هي مجموعة أدوات سريعة للغاية ومحمولة ومعيارية لتطوير تطبيقات Ethereum_**
+**Foundry** - **_Foundry عبارة عن مجموعة أدوات سريعة للغاية ومحمولة ومعيارية لتطوير تطبيقات إيثيريوم_**
 
-- [تثبيت فاوندري](https://book.getfoundry.sh/)
-- [كتاب فاوندري](https://book.getfoundry.sh/)
-- [دردشة مجتمع فاوندري على تيليغرام](https://t.me/foundry_support)
-- [Awesome فاوندري](https://github.com/crisgarner/awesome-foundry)
+- [تثبيت Foundry](https://book.getfoundry.sh/)
+- [كتاب Foundry](https://book.getfoundry.sh/)
+- [دردشة مجتمع Foundry على تيليغرام](https://t.me/foundry_support)
+- [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**هارد هات -** **_بيئة تطوير إيثريوم للمحترفين._**
+**Hardhat -** **_بيئة تطوير إيثيريوم للمحترفين._**
 
-- [hardhat.org](https://hardhat.org)
-- [غيت هاب](https://github.com/nomiclabs/hardhat)
+- [<span dir="ltr">hardhat.org</span>](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_أداة تطوير العقود الذكية لخبراء بايثون وعلماء البيانات ومحترفي الأمن._**
+**Ape -** **_أداة تطوير العقود الذكية لمبرمجي Python، وعلماء البيانات، ومحترفي الأمن._**
 
-- [الوثائق](https://docs.apeworx.io/ape/stable/)
-- [غيت هاب](https://github.com/ApeWorX/ape)
+- [التوثيق](https://docs.apeworx.io/ape/stable/)
+- [GitHub](https://github.com/ApeWorX/ape)
 
-**ويب 3 جي -** **_منصة لتطوير تطبيقات البلوكتشين على JVM._**
+**Web3j -** **_منصة لتطوير تطبيقات سلسلة الكتل على <span dir="ltr">JVM</span>._**
 
 - [الصفحة الرئيسية](https://www.web3labs.com/web3j-sdk)
-- [الوثائق](https://docs.web3j.io)
-- [غيت هاب](https://github.com/web3j/web3j)
+- [التوثيق](https://docs.web3j.io)
+- [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_مكتبة Kotlin/جافا/أندرويد غير متزامنة وعالية الأداء لسلاسل الكتل القائمة على EVM._**
+**ethers-kt -** **_مكتبة غير متزامنة وعالية الأداء لـ Kotlin/Java/Android لسلاسل الكتل القائمة على <span dir="ltr">EVM</span>._**
 
-- [غيت هاب](https://github.com/Kr1ptal/ethers-kt)
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [أمثلة](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [ديسكورد](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App - **_أنشئ تطبيقات مدعومة من إيثريوم بأمر واحد._** يضم مجموعة واسعة من أطر واجهات المستخدم ونماذج دي فاي التي يمكن الاختيار منها._**
+**Create Eth App -** **_أنشئ تطبيقات مدعومة من إيثيريوم بأمر واحد. تأتي مع مجموعة واسعة من أطر عمل واجهة المستخدم وقوالب التمويل اللامركزي (DeFi) للاختيار من بينها._**
 
-- [غيت هاب](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://github.com/paulrberg/create-eth-app)
 - [قوالب](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_مكونات وخطافات إيثرز.جي إس + هارد هات + رياكت لـ web3: كل ما تحتاجه للبدء في بناء تطبيقات لامركزية مدعومة بالعقود الذكية._**
+**Scaffold-Eth -** **_مكونات وخطافات (hooks) لـ Ethers.js + Hardhat + React لـ Web3: كل ما تحتاجه للبدء في بناء تطبيقات لامركزية مدعومة بالعقود الذكية._**
 
-- [غيت هاب](https://github.com/scaffold-eth/scaffold-eth-2)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**تيندرلي -** **_منصة تطوير ويب3 تمكن مطوري البلوكتشين من بناء العقود الذكية واختبارها وتصحيحها ومراقبتها وتشغيلها وتحسين تجربة مستخدم dApp._**
+**Tenderly -** **_منصة تطوير Web3 تمكن مطوري سلسلة الكتل من بناء واختبار وتصحيح أخطاء ومراقبة وتشغيل العقود الذكية وتحسين تجربة المستخدم للتطبيقات اللامركزية (dapps)._**
 
-- [موقع الويب](https://tenderly.co/)
-- [الوثائق](https://docs.tenderly.co/)
+- [الموقع الإلكتروني](https://tenderly.co/)
+- [التوثيق](https://docs.tenderly.co/)
 
-**ذا غراف -** **_The Graph للاستعلام عن بيانات البلوكتشين بكفاءة._**
+**The Graph -** **_The Graph للاستعلام عن بيانات سلسلة الكتل بكفاءة._**
 
-- [موقع الويب](https://thegraph.com/)
+- [الموقع الإلكتروني](https://thegraph.com/)
 - [برنامج تعليمي](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
-**ألكيمي -** **_منصة تطوير إيثريوم._**
+**Alchemy -** **_منصة تطوير إيثيريوم._**
 
-- [alchemy.com](https://www.alchemy.com/)
-- [غيت هاب](https://github.com/alchemyplatform)
+- [<span dir="ltr">alchemy.com</span>](https://www.alchemy.com/)
+- [GitHub](https://github.com/alchemyplatform)
 - [ديسكورد](https://discord.com/invite/alchemyplatform)
 
-**NodeReal -** **_منصة تطوير إيثريوم._**
+**NodeReal -** **_منصة تطوير إيثيريوم._**
 
-- [Nodereal.io](https://nodereal.io/)
-- [غيت هاب](https://github.com/node-real)
+- [<span dir="ltr">Nodereal.io</span>](https://nodereal.io/)
+- [GitHub](https://github.com/node-real)
 - [ديسكورد](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_ابنِ تطبيقات web3 التي يمكنها التفاعل مع عقودك الذكية باستخدام مجموعات SDK وCLI القوية الخاصة بنا._**
+**thirdweb SDK -** **_قم ببناء تطبيقات Web3 يمكنها التفاعل مع عقودك الذكية باستخدام حزم تطوير البرمجيات (SDKs) وواجهة سطر الأوامر (CLI) القوية الخاصة بنا._**
 
-- [الوثائق](https://portal.thirdweb.com/sdk/)
-- [غيت هاب](https://github.com/thirdweb-dev/)
+- [التوثيق](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
 
-**تشين ستاك -** **_منصة تطوير ويب3 (إيثريوم وغيرها)._**
+**Chainstack -** **_منصة تطوير Web3 (إيثيريوم وغيرها)._**
 
-- [chainstack.com](https://www.chainstack.com/)
-- [غيت هاب](https://github.com/chainstack)
+- [<span dir="ltr">chainstack.com</span>](https://www.chainstack.com/)
+- [GitHub](https://github.com/chainstack)
 - [ديسكورد](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_منصة تطوير web3 على مستوى المؤسسات، تتيح لك بناء تطبيقات إن إف تي على جميع سلاسل EVM الرئيسية (وغيرها)._**
+**Crossmint -** **_منصة تطوير Web3 على مستوى المؤسسات، تتيح لك بناء تطبيقات الرموز غير القابلة للاستبدال (NFT) على جميع السلاسل الرئيسية وسلاسل <span dir="ltr">EVM</span> (وغيرها)._**
 
-- [موقع الويب](https://www.crossmint.com)
+- [الموقع الإلكتروني](https://www.crossmint.com)
 - [التوثيق](https://docs.crossmint.com)
 - [ديسكورد](https://discord.com/invite/crossmint)
 
-**Brownie -** **_بيئة تطوير وإطار اختبار قائم على بايثون._**
+**Brownie -** **_بيئة تطوير وإطار عمل للاختبار قائم على Python._**
 
-- [الوثائق](https://eth-brownie.readthedocs.io/en/latest/)
-- [غيت هاب](https://github.com/eth-brownie/brownie)
-- **براوني غير محتفظ بالصيانة حاليًا**
+- [التوثيق](https://eth-brownie.readthedocs.io/en/latest/)
+- [GitHub](https://github.com/eth-brownie/brownie)
+- **Brownie غير مدعوم حاليًا**
 
-**أوبن زبلين SDK -** **_مجموعة أدوات العقود الذكية النهائية: مجموعة من الأدوات لمساعدتك في تطوير العقود الذكية وتجميعها وترقيتها ونشرها والتفاعل معها._**
+**OpenZeppelin SDK -** **_مجموعة أدوات العقود الذكية المثالية: مجموعة من الأدوات لمساعدتك في تطوير وتجميع وترقية ونشر والتفاعل مع العقود الذكية._**
 
-- [أوبن زبلين Defender SDK](https://docs.openzeppelin.com/defender/sdk)
-- [غيت هاب](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [أوبن زبلن Defender SDK](https://docs.openzeppelin.com/defender/sdk)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [منتدى المجتمع](https://forum.openzeppelin.com/c/support/17)
-- **انتهى تطوير SDK أوبن زبلين**
+- **انتهى تطوير أوبن زبلن SDK**
 
-**Catapulta -** **_أداة نشر العقود الذكية متعددة السلاسل، وأتمتة عمليات التحقق في مستكشفات الكتل، وتتبع العقود الذكية المنشورة ومشاركة تقارير النشر، والتوصيل والتشغيل لمشاريع فاوندري وهارد هات._**
+**Catapulta -** **_أداة نشر العقود الذكية متعددة السلاسل، تعمل على أتمتة عمليات التحقق في مستكشفات الكتل، وتتبع العقود الذكية المنشورة ومشاركة تقارير النشر، وهي جاهزة للتشغيل (plug-n-play) لمشاريع Foundry وHardhat._**
 
-- [موقع الويب](https://catapulta.sh/)
-- [الوثائق](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (بدعم من Covalent) - **_تقدم GoldRush مجموعة واجهات برمجة التطبيقات (API) الأكثر شمولاً لبيانات البلوكتشين للمطورين والمحللين والمؤسسات._** سواء كنت تبني لوحة معلومات للتمويل اللامركزي (دي فاي)، أو محفظة، أو روبوت تداول، أو وكيل ذكاء اصطناعي، أو منصة امتثال، فإن واجهات برمجة التطبيقات للبيانات توفر وصولاً سريعًا ودقيقًا وسهل الاستخدام للمطورين إلى بيانات على السلسلة الأساسية التي تحتاجها_**
+**GoldRush (بدعم من Covalent) -** **_تقدم GoldRush مجموعة <span dir="ltr">API</span> لبيانات سلسلة الكتل الأكثر شمولاً للمطورين والمحللين والمؤسسات. سواء كنت تبني لوحة معلومات للتمويل اللامركزي (DeFi)، أو محفظة، أو روبوت تداول، أو وكيل ذكاء اصطناعي، أو منصة امتثال، فإن واجهات برمجة التطبيقات (APIs) للبيانات توفر وصولاً سريعًا ودقيقًا وسهل الاستخدام للمطورين إلى البيانات الأساسية على السلسلة التي تحتاجها_**
 
-- [موقع الويب](https://goldrush.dev/)
-- [الوثائق](https://goldrush.dev/docs/chains/ethereum)
-- [غيت هاب](https://github.com/covalenthq)
+- [الموقع الإلكتروني](https://goldrush.dev/)
+- [التوثيق](https://goldrush.dev/docs/chains/ethereum)
+- [GitHub](https://github.com/covalenthq)
 - [ديسكورد](https://www.covalenthq.com/discord/)
 
-**ويك -** **_إطار عمل بايثون شامل لاختبار العقود، والاختبار الضبابي، والنشر، ومسح الثغرات الأمنية، والتنقل في التعليمات البرمجية._**
+**Wake -** **_إطار عمل Python شامل لاختبار العقود، واختبار التشويش (fuzzing)، والنشر، ومسح الثغرات الأمنية، والتنقل في الكود._**
 
 - [الصفحة الرئيسية](https://getwake.io/)
-- [الوثائق](https://ackeeblockchain.com/wake/docs/latest/)
-- [غيت هاب](https://github.com/Ackee-Blockchain/wake)
-- [ملحق VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+- [التوثيق](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [إضافة <span dir="ltr">VS Code</span>](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_إطار عمل مفتوح المصدر، ونمطي، وغير محدد يسهل على مطوري التطبيقات اللامركزية بناء هويات لامركزية وبيانات اعتماد قابلة للتحقق في تطبيقاتهم._**
+**Veramo -** **_إطار عمل مفتوح المصدر ومعياري ومستقل يسهل على مطوري التطبيقات اللامركزية بناء هويات لامركزية وبيانات اعتماد يمكن التحقق منها في تطبيقاتهم._**
 
 - [الصفحة الرئيسية](https://veramo.io/)
-- [الوثائق](https://veramo.io/docs/basics/introduction)
-- [غيت هاب](https://github.com/uport-project/veramo)
+- [التوثيق](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
 - [ديسكورد](https://discord.com/invite/FRRBdjemHV)
-- [حزمة NPM](https://www.npmjs.com/package/@veramo/core)
+- [حزمة <span dir="ltr">NPM</span>](https://www.npmjs.com/package/@veramo/core)
 
 ## قراءة إضافية {#further-reading}
 
-_هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
+_هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وأضفه!_
 
-## المواضيع ذات الصلة {#related-topics}
+## مواضيع ذات صلة {#related-topics}
 
 - [إعداد بيئة تطوير محلية](/developers/local-environment/)
+
+## برامج تعليمية: أطر عمل التطوير على إيثيريوم {#tutorials}
+
+- [عقد ذكي "Hello World" للمبتدئين – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– قم ببناء ونشر عقد ذكي "Hello World" باستخدام Hardhat، ثم قم بتوصيله بواجهة أمامية._
