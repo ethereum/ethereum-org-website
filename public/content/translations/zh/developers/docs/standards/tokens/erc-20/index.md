@@ -1,6 +1,6 @@
 ---
-title: "ERC-20 代币标准"
-description: "了解 ERC-20，这是以太坊上的同质化代币标准，可实现代币应用程序的互操作。"
+title: ERC-20 代币标准
+description: 了解 ERC-20，这是以太坊上的同质化代币标准，支持可互操作的代币应用程序。
 lang: zh
 ---
 
@@ -8,42 +8,41 @@ lang: zh
 
 **什么是代币？**
 
-代币可以在以太坊中表示任何东西：
+代币几乎可以代表[以太坊](/)中的任何东西：
 
 - 在线平台中的信誉积分
-- 游戏中一个角色的技能
-- 金融资产类似于公司股份的资产
-- 像美元一样的法定货币
+- 游戏中角色的技能
+- 金融资产，如公司股份
+- 法定货币，如美元
 - 一盎司黄金
-- 以及更多...
+- 以及更多……
 
-以太坊的这种强大特点必须以强有力的标准来处理，对吗？ 这正是
-ERC-20 发挥其作用的地方！ 此标准允许开发者构建可与其他产品和服务互相操作的代币应用程序。 ERC-20 标准还可用于为[以太币](/glossary/#ether)提供附加功能。
+以太坊如此强大的功能必须由一个强大的标准来处理，对吧？这正是 ERC-20 发挥作用的地方！该标准允许开发者构建与其他产品和服务可互操作的代币应用程序。ERC-20 标准还用于为[以太币](/glossary/#ether)提供附加功能。
 
 **什么是 ERC-20？**
 
-ERC-20 提出了一个同质化代币的标准，换句话说，它们具有一种属性，使得每个代币都与另一个代币（在类型和价值上）完全相同。 例如，一个 ERC-20 代币就像以太币一样，意味着一个代币会并永远会与其他代币一样。
+ERC-20 引入了同质化代币的标准，换句话说，它们具有一种属性，使得每个代币（在类型和价值上）与另一个代币完全相同。例如，一个 ERC-20 代币的作用就像 ETH 一样，这意味着 1 个代币现在和将来都始终等于所有其他代币。
 
 ## 前提条件 {#prerequisites}
 
-- [帐户](/developers/docs/accounts)
+- [账户](/developers/docs/accounts)
 - [智能合约](/developers/docs/smart-contracts/)
 - [代币标准](/developers/docs/standards/tokens/)
 
 ## 正文 {#body}
 
-ERC-20（以太坊意见征求 20）由 Fabian Vogelsteller 提出于 2015 年 11 月。这是一个能实现智能合约中代币的应用程序接口标准。
+ERC-20（Ethereum Request for Comments 20，以太坊征求意见稿 20）由 Fabian Vogelsteller 于 2015 年 11 月提出，是一种在智能合约中为代币实现 API 的代币标准。
 
-ERC-20 的功能示例包括：
+ERC-20 提供的功能示例：
 
-- 将代币从一个帐户转到另一个帐户
-- 获取帐户的当前代币余额
-- 获取网络上可用代币的总供应量
-- 批准一个帐户中一定的代币金额由第三方帐户使用
+- 将代币从一个账户转账到另一个账户
+- 获取账户的当前代币余额
+- 获取网络上可用的代币总供应量
+- 授权第三方账户是否可以花费某个账户中的一定数量的代币
 
-如果智能合约实施了下列方法和事件，它可以被称为 ERC-20 代币合约，一旦部署，将负责跟踪以太坊上创建的代币。
+如果一个智能合约实现了以下方法和事件，它就可以被称为 ERC-20 代币合约，并且一旦部署，它将负责跟踪在以太坊上创建的代币。
 
-来自 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)：
+摘自 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)：
 
 ### 方法 {#methods}
 
@@ -68,12 +67,11 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### 示例 {#web3py-example}
 
-让我们看看如此重要的一个标准是如何使我们能够简单地检查以太坊上的任何 ERC-20 代币合约。
-我们只需要合约的应用程序二进制接口 (ABI) 来创造一个 ERC-20 代币界面。 下面我们将使用一个简化的应用程序二进制接口，让例子变得更为简单。
+让我们看看标准为何如此重要，它使我们能够轻松检查以太坊上的任何 ERC-20 代币合约。我们只需要合约应用程序二进制接口（ABI）即可创建任何 ERC-20 代币的接口。正如你在下面看到的，我们将使用一个简化的 ABI，使其成为一个低门槛的示例。
 
-#### Web3.py 示例 {#web3py-example}
+#### Web3.py 示例 {#web3py-example-2}
 
-首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 程序库：
+首先，确保你已经安装了 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
 
 ```
 pip install web3
@@ -86,12 +84,12 @@ from web3 import Web3
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
-weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # 包装的以太币 (WETH)
+weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # 包装以太币 (WETH)
 
-acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
+acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # 尤尼斯瓦普 V2: DAI 2
 
-# 这是 ERC-20 代币合约的简化版合约应用程序二进制接口 (ABI)。
-# 它只会公开以下方法：balanceOf(address)、decimals()、symbol() 和 totalSupply()
+# 这是一个 ERC-20 代币合约的简化合约应用二进制接口 (ABI)。
+# 它将仅暴露以下方法：balanceOf(address)、decimals()、symbol() 和 totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -146,38 +144,36 @@ print("Addr Balance:", addr_balance)
 
 ### ERC-20 代币接收问题 {#reception-issue}
 
-**截至 2024 年 6 月 20 日，因该问题损失的 ERC-20 代币价值至少达 83,656,418 美元。** **请注意，纯粹的 ERC-20 实现很容易出现此问题，除非您在标准之上实施下面列出的一组额外限制。**
+**截至 2024 年 6 月 20 日，至少有价值 83,656,418 美元的 ERC-20 代币因该问题而丢失。请注意，纯粹的 ERC-20 实现很容易出现此问题，除非你在标准之上实施如下所列的一系列额外限制。**
 
-当 ERC-20 代币被发送到并非为处理 ERC-20 代币而设计的智能合约时，这些代币可能会永久丢失。 出现这种情况的原因是，接收合约无法识别或回应所传入的代币，而且 ERC-20 标准中也没有通知接受合约所传入代币的机制。 导致这一问题的主要原因包括：
+当 ERC-20 代币被发送到一个并非设计用于处理 ERC-20 代币的智能合约时，这些代币可能会永久丢失。发生这种情况是因为接收合约没有识别或响应传入代币的功能，并且 ERC-20 标准中没有机制来通知接收合约有关传入代币的信息。此问题的主要表现形式包括：
 
-1. 代币转移机制
+1.	代币转账机制
+  - ERC-20 代币使用 transfer 或 transferFrom 函数进行转账
+	-	当用户使用这些函数将代币发送到合约地址时，无论接收合约是否设计为处理它们，代币都会被转账
+2.	缺乏通知
+	-	接收合约不会收到代币已发送给它的通知或回调
+	-	如果接收合约缺乏处理代币的机制（例如，回退函数或管理代币接收的专用函数），代币实际上会卡在合约地址中
+3.	没有内置处理机制
+	-	ERC-20 标准不包含接收合约必须实现的强制性函数，导致许多合约无法正确管理传入的代币
 
-- ERC-20 代币使用 transfer 或 transferFrom 函数进行转移
-  - 当用户使用这些函数将代币发送到合约地址时，无论接收合约是否是为处理它们而设计，代币都会被转移
+**可能的解决方案**
 
-2. 缺乏通知
-   - 接收合约不会收到已向其发送代币的通知或回调
-   - 如果接收合约缺乏处理代币的机制（例如，回退函数或专门用于处理代币接收的函数），则代币实际上会卡在合约的地址中
-3. 无内置处理
-   - ERC-20 标准不包含用于接收待实现合约的强制函数，导致许多合约无法正确管理传入的代币
+虽然无法完全防止 ERC-20 出现此问题，但有一些方法可以显著降低最终用户丢失代币的可能性：
 
-**潜在解决方案**
-
-虽然无法通过 ERC-20 完全避免此问题，但有一些方法可以显著降低最终用户遭遇代币损失的可能性：
-
-- 最常见的问题是当用户将代币发送到代币合约地址本身时（例如，将 USDT 存入 USDT 代币合约的地址）。 建议限制 `transfer(..)` 函数，以撤销此类转账尝试。 考虑在 `transfer(..)` 函数的实现中添加 `require(_to != address(this));` 检查。
-- 通常，`transfer(..)` 函数并非为向合约存入代币而设计。 `approve(..) 和 `transferFrom(..)`模式是向合约存入 ERC-20 代币的替代方法。 可以通过限制 transfer 函数以禁止用其向任何合约存入代币，但这可能会破坏与那些假设可以用`trasnfer(..)` 函数向合约存入代币的合约的兼容性（例如，Uniswap 流动性池）。
-- 必须预设ERC-20代币可能会意外地转入您的合约，即便该合约理应不接收任何的代币​。 接收的人没有办法阻止或拒绝意外的存款。 建议实现一个功能，允许提取出那些被意外转入的ERC-20代币。
+- 最常见的问题是用户将代币发送到代币合约地址本身（例如，将 USDT 存入 USDT 代币合约的地址）。建议限制 `transfer(..)` 函数以回退此类转账尝试。考虑在 `transfer(..)` 函数的实现中添加 `require(_to != address(this));` 检查。
+- `transfer(..)` 函数通常不是为将代币存入合约而设计的。相反，`approve(..) & transferFrom(..)` 模式用于将 ERC-20 代币存入合约。可以限制转账函数以禁止使用它将代币存入任何合约，但这可能会破坏与假设可以使用 `transfer(..)` 函数将代币存入合约的合约（例如，尤尼斯瓦普流动性池）的兼容性。
+- 始终假设 ERC-20 代币最终可能会进入你的合约，即使你的合约本不应该接收任何代币。在接收方无法防止或拒绝意外存款。建议实现一个允许提取意外存入的 ERC-20 代币的函数。
 - 考虑使用替代的代币标准。
 
-为解决此问题，出现了一些替代标准，例如 [ERC-223](/developers/docs/standards/tokens/erc-223) 或 [ERC-1363](/developers/docs/standards/tokens/erc-1363)。
+针对此问题已经出现了一些替代标准，例如 [ERC-223](/developers/docs/standards/tokens/erc-223) 或 [ERC-1363](/developers/docs/standards/tokens/erc-1363)。
 
-## 扩展阅读{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [EIP-20：ERC-20 代币标准](https://eips.ethereum.org/EIPS/eip-20)
-- [OpenZeppelin - 代币](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
-- [OpenZeppelin - ERC-20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [Alchemy - Solidity ERC20 代币指南](https://www.alchemy.com/overviews/erc20-solidity)
+- [欧本齐柏林 - 代币](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
+- [欧本齐柏林 - ERC-20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy - Solidity ERC-20 代币指南](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## 其他同质化代币标准 {#fungible-token-standards}
 
@@ -185,3 +181,10 @@ print("Addr Balance:", addr_balance)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - 代币化金库](/developers/docs/standards/tokens/erc-4626)
+
+## 教程：在以太坊上使用 ERC-20 进行构建 {#tutorials}
+
+- [ERC-20 合约演练](/developers/tutorials/erc20-annotated-code/) _– 欧本齐柏林 ERC-20 合约实现的逐行注释演练。_
+- [带有安全护栏的 ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– 如何为 ERC-20 代币添加安全防护，以帮助用户避免常见错误。_
+- [使用 Ethers.js 发送代币](/developers/tutorials/send-token-ethersjs/) _– 使用 Ethers.js 转账 ERC-20 代币的初学者友好指南。_
+- [诈骗代币使用的一些伎俩以及如何检测它们](/developers/tutorials/scam-token-tricks/) _– 深入探讨诈骗 ERC-20 代币模式以及如何识别它们。_

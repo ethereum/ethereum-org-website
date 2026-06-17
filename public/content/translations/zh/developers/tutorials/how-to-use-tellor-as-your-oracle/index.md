@@ -1,53 +1,53 @@
 ---
-title: "如何将 Tellor 设置为你的预言机"
-description: "将 Tellor 预言机集成到协议中的指南"
-author: "Tellor"
+title: 如何将泰勒设置为你的预言机
+description: 将泰勒预言机集成到你的协议中的入门指南
+author: "泰勒"
 lang: zh
-tags: [ "Solidity", "智能合同", "预言机" ]
+tags: ["solidity", "智能合约", "预言机"]
 skill: beginner
-breadcrumb: "Tellor预言机"
+breadcrumb: 泰勒预言机
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-小测验：你的协议即将完成，但它需要一个预言机来访问链下数据......你该怎么做？
+突击测验：你的协议即将完成，但它需要一个预言机来访问链下数据……你该怎么办？
 
-## (软)先决条件 {#soft-prerequisites}
+## （软）先决条件 {#soft-prerequisites}
 
-这篇文章旨在解释如何让访问预言机数据馈送变得简单易行。 这就是说，我们假定你具备一定的编码技能水平，下文侧重于讲述预言机方面。
+本文旨在让访问预言机数据源变得尽可能简单直接。话虽如此，为了将重点放在预言机方面，我们对你的编程技能水平有以下假设。
 
-本文假定：
+假设：
 
 - 你能够使用终端
-- 你安装了 npm
+- 你已安装 npm
 - 你知道如何使用 npm 管理依赖项
 
-Tellor 是一种可供直接实现的开源预言机。 本初学者教程旨在展示如何轻松地运行 Tellor，为你的项目提供一个完全去中心化的、抗审查的预言机。
+泰勒是一个实时且开源的预言机，随时可以投入使用。这篇初学者指南旨在展示启动和运行泰勒是多么容易，从而为你的项目提供一个完全去中心化且抗审查的预言机。
 
 ## 概述 {#overview}
 
-Tellor 是一种预言机系统，参与者可以在该系统中请求链下数据点（例如 BTC/USD）的值，提供者相互竞争将该值添加到链上数据库中，使得所有以太坊智能合约都可以访问该值。 该数据库的输入由质押提供者网络提供保护。 Tellor 利用加密经济激励机制，奖励提供者诚实的数据提交行为，并通过发行 Tellor 的代币 Tributes (TRB) 和争议机制来惩罚不良行为者。
+泰勒是一个预言机系统，各方可以请求链下数据点（例如 BTC/USD）的值，而报告者则竞争将该值添加到所有以太坊智能合约均可访问的链上数据库中。这个数据库的输入由一个由质押报告者组成的网络来保障安全。泰勒利用加密经济激励机制，通过发行泰勒的代币 Tributes (TRB) 和争议机制，奖励报告者诚实的数据提交并惩罚恶意行为者。
 
 在本教程中，我们将介绍：
 
-- 设置你需要运行的初始工具包。
-- 讲解一个简单示例。
-- 列出目前可以测试 Tellor 的网络的测试网地址。
+- 设置启动和运行所需的初始工具包。
+- 演示一个简单的示例。
+- 列出目前可以测试泰勒的网络的测试网地址。
 
 ## UsingTellor {#usingtellor}
 
-首先安装一些基本工具，以便将 Tellor 作为预言机。 使用[此软件包](https://github.com/tellor-io/usingtellor)来安装 Tellor 用户合约：
+你要做的第一件事是安装将泰勒用作预言机所需的基本工具。使用[此包](https://github.com/tellor-io/usingtellor)安装泰勒用户合约：
 
 `npm install usingtellor`
 
-安装完成后，将允许你的合约继承 'UsingTellor' 合约的函数。
+安装完成后，这将允许你的合约继承“UsingTellor”合约中的函数。
 
-很好！ 既然你已经准备好工具了，我们来完成一个简单的练习来获取比特币价格：
+太棒了！既然你已经准备好了工具，让我们通过一个简单的练习来检索比特币价格：
 
 ### BTC/USD 示例 {#btcusd-example}
 
-继承 UsingTellor 合约，并将 Tellor 地址作为构造函数参数传入：
+继承 UsingTellor 合约，将泰勒地址作为构造函数参数传递：
 
 下面是一个示例：
 
@@ -75,8 +75,8 @@ function setBtcPrice() public {
 }
 ```
 
-如需完整的合约地址列表，请参阅[此处](https://docs.tellor.io/tellor/the-basics/contracts-reference)。
+有关合约地址的完整列表，请参阅[此处](https://docs.tellor.io/tellor/the-basics/contracts-reference)。
 
-为方便使用，UsingTellor 代码库附带了 [Tellor Playground](https://github.com/tellor-io/TellorPlayground) 合约的一个版本，以便于集成。 有关实用函数列表，请参阅[此处](https://github.com/tellor-io/sampleUsingTellor#tellor-playground)。
+为了便于使用，UsingTellor 仓库附带了一个版本的 [Tellor Playground](https://github.com/tellor-io/TellorPlayground) 合约，以便更轻松地进行集成。有关实用函数的列表，请参阅[此处](https://github.com/tellor-io/sampleUsingTellor#tellor-playground)。
 
-要更稳健地实现 Tellor 预言机，请查看[此处](https://github.com/tellor-io/usingtellor/blob/master/README.md)的可用函数完整列表。
+要获得更稳健的泰勒预言机实现，请在[此处](https://github.com/tellor-io/usingtellor/blob/master/README.md)查看可用函数的完整列表。

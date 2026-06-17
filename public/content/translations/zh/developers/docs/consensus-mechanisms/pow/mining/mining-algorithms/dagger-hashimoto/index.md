@@ -1,35 +1,35 @@
 ---
 title: Dagger-Hashimoto
-description: "详细了解 Dagger-Hashimoto 算法。"
+description: 深入了解 Dagger-Hashimoto 算法。
 lang: zh
 ---
 
-Dagger-Hashimoto 是以太坊挖矿算法的原始研究实现和规范。 Dagger-Hashimoto 已被 [Ethash](#ethash) 取代。 2022 年 9 月 15 日[合并](/roadmap/merge/)后，挖矿已完全停止。 此后，以太坊转而使用[权益证明](/developers/docs/consensus-mechanisms/pos)机制来保障安全。 本页面展示与历史有关的内容，其中的信息不再与合并后的以太坊相关。
+Dagger-Hashimoto 是以太坊挖矿算法的最初研究实现和规范。Dagger-Hashimoto 被 [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/#ethash) 取代。2022 年 9 月 15 日，在[合并](/roadmap/merge/)时，挖矿被完全关闭。从那时起，以太坊转而使用[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos)机制来保障安全。本页面仅供历史参考——此处的信息不再适用于合并后的以太坊。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
-为了更好地理解本页内容，我们建议您首先阅读有关[工作量证明共识](/developers/docs/consensus-mechanisms/pow)、[挖矿](/developers/docs/consensus-mechanisms/pow/mining)和[挖矿算法](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms)的资料。
+为了更好地理解本页面，我们建议您首先阅读[工作量证明 (PoW) 共识](/developers/docs/consensus-mechanisms/pow)、[挖矿](/developers/docs/consensus-mechanisms/pow/mining)以及[挖矿算法](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms)。
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto 旨在实现两个目标：
 
-1. **抗 ASIC 性**：为该算法创建专用硬件的好处应尽可能小
-2. **轻客户端可验证性**：区块应能由轻客户端高效验证。
+1.  **抗 ASIC**：为该算法创建专用硬件所带来的收益应尽可能小
+2.  **轻客户端可验证性**：轻客户端应能高效地验证区块。
 
-在作出进一步修改后，我们还要具体说明如何在必要时实现第三个目标，但要以增加复杂性为代价：
+通过额外的修改，我们还说明了如何在需要时实现第三个目标，但这会增加额外的复杂性：
 
-**全链存储**：挖矿应要求存储完整的区块链状态（由于以太坊状态树的结构不规则，我们预计可以进行一些修剪，特别是一些常用合约，但我们希望将其最小化）。
+**全链存储**：挖矿应要求存储完整的区块链状态（由于以太坊状态树的不规则结构，我们预计可以进行一些修剪，特别是针对一些常用合约，但我们希望尽量减少这种情况）。
 
 ## DAG 生成 {#dag-generation}
 
-以下算法代码将在 Python 中定义。 首先，我们给出 `encode_int`，用于将指定精度的无符号整数封送为字符串。 同时还定义了它的逆函数。
+该算法的代码将在下面用 Python 定义。首先，我们提供 `encode_int`，用于将指定精度的无符号整数编组为字符串。同时也给出了它的逆运算：
 
 ```python
 NUM_BITS = 512
 
 def encode_int(x):
-    "使用大端方案将整数 x 编码为 64 个字符的字符串"
+    "Encode an integer x as a string of 64 characters using a big-endian scheme"
     o = ''
     for _ in range(NUM_BITS / 8):
         o = chr(x % 256) + o
@@ -37,7 +37,7 @@ def encode_int(x):
     return o
 
 def decode_int(s):
-    "使用大端方案从字符串中解码整数 x"
+    "Unencode an integer x from a string using a big-endian scheme"
     x = 0
     for c in s:
         x *= 256
@@ -45,7 +45,7 @@ def decode_int(s):
     return x
 ```
 
-接下来我们假设 `sha3` 是一个接收整数并输出整数的函数，而 `dbl_sha3` 是一个 double-sha3 函数；如果要将此参考代码转换为实现，请使用：
+接下来，我们假设 `sha3` 是一个接受整数并输出整数的函数，而 `dbl_sha3` 是一个双重 SHA-3 函数；如果将此参考代码转换为实现，请使用：
 
 ```python
 from pyethereum import utils
@@ -62,31 +62,31 @@ def dbl_sha3(x):
 
 ### 参数 {#parameters}
 
-该算法使用的参数有：
+该算法使用的参数如下：
 
 ```python
 SAFE_PRIME_512 = 2**512 - 38117     # 小于 2**512 的最大安全素数
 
 params = {
       "n": 4000055296 * 8 // NUM_BITS,  # 数据集的大小（4 GB）；必须是 65536 的倍数
-      "n_inc": 65536,                   # 每个时段的 n 值增量；必须是 65536 的倍数
-                                        # epochtime=20000 时，每年增长 882 MB
-      "cache_size": 2500,               # 轻客户端的缓存大小（可由轻客户端选择；
-                                        # 不属于算法规范）
+      "n_inc": 65536,                   # 每个周期 n 值的增量；必须是 65536 的倍数
+                                        # 当 epochtime=20000 时，每年增长 882 MB
+      "cache_size": 2500,               # 轻客户端缓存的大小（可由轻
+                                        # 客户端选择；不属于算法规范的一部分）
       "diff": 2**14,                    # 难度（在区块评估期间调整）
-      "epochtime": 100000,              # 一个时段的区块长度（数据集的更新频率）
-      "k": 1,                           # 节点的父节点数量
-      "w": w,                           # 用于模幂哈希
+      "epochtime": 100000,              # 以区块为单位的 epoch 长度（数据集更新的频率）
+      "k": 1,                           # 一个节点的父节点数量
+      "w": w,                          # 用于模幂哈希处理
       "accesses": 200,                  # hashimoto 期间的数据集访问次数
-      "P": SAFE_PRIME_512               # 用于哈希和随机数生成的安全素数
+      "P": SAFE_PRIME_512               # 用于哈希处理和随机数生成的安全素数
 }
 ```
 
-在这种情况下，`P` 是一个质数，其选择要使 `log₂(P)` 略小于 512，这对应于我们一直用来表示数字的 512 位。 请注意，实际上只需要存储有向无环图的后半部分，因此，实际内存要求最初为 1 GB，每年增长 441 MB。
+在这种情况下，`P` 是一个被选定的素数，使得 `log₂(P)` 略小于 512，这对应于我们一直用来表示数字的 512 位。请注意，实际上只需要存储 DAG 的后半部分，因此实际的 RAM 需求从 1 GB 开始，并以每年 441 MB 的速度增长。
 
 ### Dagger 图构建 {#dagger-graph-building}
 
-Dagger 建图基本式的定义如下：
+Dagger 图构建原语定义如下：
 
 ```python
 def produce_dag(params, seed, length):
@@ -101,15 +101,15 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-本质上，它以单个节点 `sha3(seed)` 启动一个图，然后从那里开始，根据随机的先前节点顺序添加其他节点。 当创建一个新节点时，会计算种子的模幂，以随机选择一些小于 `i` 的索引（使用上面的 `x % i`），然后使用这些索引处节点的值进行计算，以生成新的 `x` 值，该值再被送入一个小的（基于 XOR 的）工作量证明函数，最终生成索引为 `i` 的图值。 这种特殊设计背后的基本原理是强制按顺序访问有向无环图。如果当前值未知，则无法确定要访问的下一个有向无环图的值。 最后，模幂运算会使结果更加恶化。
+本质上，它从一个单节点 `sha3(seed)` 开始构建图，然后基于随机的先前节点依次添加其他节点。创建新节点时，会计算种子的模幂，以随机选择一些小于 `i` 的索引（使用上面的 `x % i`），并将这些索引处的节点值用于计算，从而为 `x` 生成一个新值，然后将其输入到一个小型工作量证明函数（基于 XOR）中，最终生成图在索引 `i` 处的值。这种特定设计背后的基本原理是强制对 DAG 进行顺序访问；在知道当前值之前，无法确定将要访问的 DAG 的下一个值。最后，模幂运算对结果进行进一步的哈希处理。
 
-这种算法依赖于数字理论的若干结果。 讨论情况见下文附录。
+该算法依赖于数论中的几个结果。有关讨论，请参见下面的附录。
 
 ## 轻客户端评估 {#light-client-evaluation}
 
-上述构图旨在实现图中每个节点的重构，只计算少量节点的子树，并且仅需少量的辅助内存。 请注意，当 k=1 时，子树只是一个上升到有向无环图第一个元素的值链。
+上述图构建旨在允许通过仅计算少量节点的子树并仅需要少量辅助内存来重建图中的每个节点。请注意，当 k=1 时，子树只是一个向上延伸到 DAG 中第一个元素的值链。
 
-轻量级客户端中，有向无环图的计算函数如下：
+DAG 的轻客户端计算函数工作原理如下：
 
 ```python
 def quick_calc(params, seed, p):
@@ -131,13 +131,13 @@ def quick_calc(params, seed, p):
     return quick_calc_cached(p)
 ```
 
-本质上，它只是对上述算法的重写，删除了计算整个有向无环图值的循环，并用递归调用或缓存查找替换了早期的节点查找。 请注意，对于 `k=1` 的情况，缓存是不必要的，尽管进一步的优化实际上预先计算了 DAG 的前几千个值，并将其作为静态缓存进行计算；有关此代码的实现，请参见附录。
+本质上，它只是上述算法的重写，删除了计算整个 DAG 值的循环，并将早期的节点查找替换为递归调用或缓存查找。请注意，对于 `k=1`，缓存是不必要的，尽管进一步的优化实际上预先计算了 DAG 的前几千个值，并将其作为计算的静态缓存保留；有关此代码实现，请参见附录。
 
 ## DAG 的双缓冲 {#double-buffer}
 
-在全客户端中，会使用由上述公式生成的 2 个 DAG 的[_双缓冲_](https://wikipedia.org/wiki/Multiple_buffering)。 其思想是，根据上述参数，每隔 `epochtime` 个区块就会生成一个 DAG。 但客户端使用的并非是最新生成的有向无环图，而是前一个。 这样做的好处是，有向无环图可以随着时间的推移而被替换掉，无需包含矿工必须突然重新计算所有数据的步骤。 否则，定期的链处理可能会突然暂时放缓，并大幅提高中心化程度。 因此，在重新计算所有数据之前的几分钟时间内，存在 51% 的攻击风险。
+在全节点客户端中，使用了由上述公式生成的 2 个 DAG 的[双缓冲 (double buffer)](https://wikipedia.org/wiki/Multiple_buffering)。其理念是，根据上述参数，每隔 `epochtime` 个区块生成一次 DAG。客户端不使用最新生成的 DAG，而是使用前一个 DAG。这样做的好处是，它允许随着时间的推移替换 DAG，而无需引入矿工必须突然重新计算所有数据的步骤。否则，可能会在固定时间间隔内出现链处理突然暂时变慢的情况，并急剧增加中心化程度。从而在重新计算所有数据之前的几分钟内带来 51%攻击风险。
 
-要生成用于块工作计算的有向无环图集，算法如下：
+用于生成计算区块工作量所需 DAG 集合的算法如下：
 
 ```python
 def get_prevhash(n):
@@ -164,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # 无法使用后向缓冲，仅创建前向缓冲
+        # 不可能有后备缓冲区，只需创建前置缓冲区
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:
@@ -176,7 +176,7 @@ def get_daggerset(params, block):
 
 ## Hashimoto {#hashimoto}
 
-初始 Hashimoto 旨在将区块链用作数据集，执行从区块链中选择 N 个索引的计算，收集这些索引处的交易，对这些数据执行 XOR，并返回结果哈希值。 Thaddeus Dryja 的初始算法（为了保持一致性，被转化成 Python），具体如下：
+最初 Hashimoto 算法背后的理念是将区块链用作数据集，执行一项计算：从区块链中选择 N 个索引，收集这些索引处的交易，对这些数据执行 XOR 运算，并返回结果的哈希。Thaddeus Dryja 的原始算法（为保持一致性已转换为 Python）如下：
 
 ```python
 def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
@@ -189,7 +189,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
     return txid_mix ^ (nonce << 192)
 ```
 
-不幸的是，虽然 Hashimoto 被视为内存硬件，但它依靠的是 256 位计算，计算量非常之大。 然而，Dagger-Hashimoto 在索引其数据集时仅使用最低有效 64 位来解决此问题。
+不幸的是，虽然 Hashimoto 被认为是内存困难 (RAM hard) 的，但它依赖于 256 位算术，这具有相当大的计算开销。然而，Dagger-Hashimoto 在索引其数据集时仅使用最低有效 64 位来解决此问题。
 
 ```python
 def hashimoto(dag, dagsize, params, header, nonce):
@@ -200,7 +200,7 @@ def hashimoto(dag, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-使用双 SHA3 可以实现零数据、近乎即时的预验证，仅验证是否提供了正确的中间值。 此工作量证明的外层对专用集成电路高度友好且相当薄弱，但它的存在使分布式拒绝服务变得更加困难，因为必须完成少量工作才能生成不会立即被拒绝的区块。 以下为轻量级客户端版本：
+双重 SHA-3 的使用允许一种零数据、近乎即时的预验证形式，仅验证是否提供了正确的中间值。这一外层工作量证明非常适合 ASIC 且相当薄弱，但它的存在是为了使 DDoS 攻击变得更加困难，因为必须完成少量工作才能生成不会被立即拒绝的区块。以下是轻客户端版本：
 
 ```python
 def quick_hashimoto(seed, dagsize, params, header, nonce):
@@ -211,9 +211,9 @@ def quick_hashimoto(seed, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-## 挖矿和验证 {#mining-and-verifying}
+## 挖矿与验证 {#mining-and-verifying}
 
-现在，将它们全部整合到挖矿算法中：
+现在，让我们将所有内容整合到挖矿算法中：
 
 ```python
 def mine(daggerset, params, block):
@@ -230,7 +230,7 @@ def mine(daggerset, params, block):
     return nonce
 ```
 
-以下为验证算法：
+以下是验证算法：
 
 ```python
 def verify(daggerset, params, block, nonce):
@@ -239,7 +239,7 @@ def verify(daggerset, params, block, nonce):
     return result * params["diff"] < 2**256
 ```
 
-轻量级客户端的友好验证：
+对轻客户端友好的验证：
 
 ```python
 def light_verify(params, header, nonce):
@@ -249,55 +249,55 @@ def light_verify(params, header, nonce):
     return result * params["diff"] < 2**256
 ```
 
-另外，请注意 Dagger-Hashimoto 对区块头有着额外的要求：
+此外，请注意 Dagger-Hashimoto 对区块头施加了额外要求：
 
-- 为了使双层验证起效，区块头必须同时具有随机数和中间值 pre-sha3
-- 在某处，区块头必须存储当前种子集的 sha3
+- 为了使双层验证起作用，区块头必须同时具有随机数和 SHA-3 之前的中间值
+- 区块头必须在某处存储当前种子集的 SHA-3 哈希
 
-## 扩展阅读{#further-reading}
+## 延伸阅读 {#further-reading}
 
-_你还知道哪些对你有帮助的社区资源？ 请编辑本页面并添加进来！_
+_知道对您有帮助的社区资源吗？编辑本页面并添加它！_
 
 ## 附录 {#appendix}
 
-如前所述，用于生成有向无环图的随机数生成依赖于数论的一些结果。 首先，我们保证作为 `picker` 变量基础的 Lehmer RNG 具有很长的周期。 其次，我们证明只要 `x ∈ [2,P-2]`，`pow(x,3,P)` 就不会将 `x` 映射到 `1` 或 `P-1`。 最后，我们证明当 `pow(x,3,P)` 被当作哈希函数时，其冲突率很低。
+如上所述，用于 DAG 生成的随机数生成器 (RNG) 依赖于数论中的一些结果。首先，我们保证作为 `picker` 变量基础的 Lehmer RNG 具有很长的周期。其次，我们证明，如果以 `x ∈ [2,P-2]` 开始，`pow(x,3,P)` 不会将 `x` 映射到 `1` 或 `P-1`。最后，我们证明当 `pow(x,3,P)` 被视为哈希函数时，其碰撞率很低。
 
 ### Lehmer 随机数生成器 {#lehmer-random-number}
 
-虽然 `produce_dag` 函数不需要生成无偏随机数，但一个潜在的威胁是 `seed**i % P` 只会取少数几个值。 这可以为矿工识别模式提供优势。
+虽然 `produce_dag` 函数不需要生成无偏随机数，但一个潜在的威胁是 `seed**i % P` 只能取少数几个值。这可能会给识别出该模式的矿工带来优势，而未识别出的矿工则处于劣势。
 
-为了避免这种情况，可采用数论结果。 [_安全素数_](https://en.wikipedia.org/wiki/Safe_prime) 定义为素数 `P`，其中 `(P-1)/2` 也是素数。 [乘法群](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` 的成员 `x` 的_阶_定义为最小的 `m`，使得 <pre>xᵐ mod P ≡ 1</pre>
-根据这些定义，我们有：
+为了避免这种情况，我们求助于数论中的一个结果。[_安全素数 (Safe Prime)_](https://en.wikipedia.org/wiki/Safe_prime) 定义为一个素数 `P`，使得 `(P-1)/2` 也是素数。[乘法群](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` 的成员 `x` 的_阶 (order)_ 定义为满足以下条件的最小 `m`：<pre>xᵐ mod P ≡ 1</pre>
+基于这些定义，我们得出：
 
-> 观察 1。 设 `x` 是乘法群 `ℤ/Pℤ` 的一个成员，其中 `P` 是一个安全素数。 如果 `x mod P ≠ 1 mod P` 且 `x mod P ≠ P-1 mod P`，那么 `x` 的阶是 `P-1` 或 `(P-1)/2`。
+> 观察 1。设 `x` 为安全素数 `P` 的乘法群 `ℤ/Pℤ` 的成员。如果 `x mod P ≠ 1 mod P` 且 `x mod P ≠ P-1 mod P`，则 `x` 的阶要么是 `P-1`，要么是 `(P-1)/2`。
 
-_证明_。 由于 `P` 是一个安全素数，那么根据[拉格朗日定理][lagrange]，我们可知 `x` 的阶是 `1`、`2`、`(P-1)/2` 或 `P-1`。
+_证明_。由于 `P` 是安全素数，根据[拉格朗日定理][lagrange]，我们得出 `x` 的阶要么是 `1`、`2`、`(P-1)/2`，要么是 `P-1`。
 
-`x` 的阶不可能是 `1`，因为根据费马小定理，我们有：
+`x` 的阶不能是 `1`，因为根据费马小定理，我们有：
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
 
-因此，`x` 必须是 `ℤ/nℤ` 的乘法单位元，而乘法单位元是唯一的。 由于我们已经假设 `x ≠ 1`，所以这是不可能的。
+因此 `x` 必须是 `ℤ/nℤ` 的乘法单位元，这是唯一的。由于我们假设 `x ≠ 1`，这是不可能的。
 
-`x` 的阶不可能是 `2`，除非 `x = P-1`，因为这将违背 `P` 是素数这一事实。
+除非 `x = P-1`，否则 `x` 的阶不能是 `2`，因为这会违反 `P` 是素数的前提。
 
-从以上命题中，我们可以认识到，迭代 `(picker * init) % P` 的循环长度至少为 `(P-1)/2`。 这是因为我们选择的 `P` 是一个安全素数，约等于 2 的一个较高次幂，并且 `init` 在区间 `[2,2**256+1]` 内。 考虑到 `P` 的数量级，我们不应该期望模幂运算会出现循环。
+从上述命题中，我们可以认识到迭代 `(picker * init) % P` 的循环长度至少为 `(P-1)/2`。这是因为我们选择 `P` 作为一个近似等于 2 的较高次幂的安全素数，并且 `init` 在区间 `[2,2**256+1]` 内。考虑到 `P` 的量级，我们绝不应期望模幂运算会出现循环。
 
-在分配 DAG 中的第一个单元格（标记为 `init` 的变量）时，我们计算 `pow(sha3(seed) + 2, 3, P)`。 乍一看，这并不能保证结果既不是 `1` 也不是 `P-1`。 然而，由于 `P-1` 是一个安全素数，我们有以下额外的保证，这是观察 1 的一个推论：
+当我们分配 DAG 中的第一个单元格（标记为 `init` 的变量）时，我们计算 `pow(sha3(seed) + 2, 3, P)`。乍一看，这并不能保证结果既不是 `1` 也不是 `P-1`。然而，由于 `P-1` 是安全素数，我们有以下额外保证，这是观察 1 的推论：
 
-> 观察 2。 设 `x` 是乘法群 `ℤ/Pℤ` 的一个成员（其中 `P` 是一个安全素数），并设 `w` 是一个自然数。 如果 `x mod P ≠ 1 mod P` 且 `x mod P ≠ P-1 mod P`，并且 `w mod P ≠ P-1 mod P` 且 `w mod P ≠ 0 mod P`，那么 `xʷ mod P ≠ 1 mod P` 且 `xʷ mod P ≠ P-1 mod P`
+> 观察 2。设 `x` 为安全素数 `P` 的乘法群 `ℤ/Pℤ` 的成员，并设 `w` 为自然数。如果 `x mod P ≠ 1 mod P` 且 `x mod P ≠ P-1 mod P`，以及 `w mod P ≠ P-1 mod P` 且 `w mod P ≠ 0 mod P`，则 `xʷ mod P ≠ 1 mod P` 且 `xʷ mod P ≠ P-1 mod P`
 
-### 作为哈希函数的模幂运算 {#modular-exponentiation}
+### 模幂运算作为哈希函数 {#modular-exponentiation}
 
-对于 `P` 和 `w` 的某些值，函数 `pow(x, w, P)` 可能会有很多冲突。 例如，`pow(x,9,19)` 只取 `{1,18}` 这几个值。
+对于 `P` 和 `w` 的某些值，函数 `pow(x, w, P)` 可能会有许多碰撞。例如，`pow(x,9,19)` 只能取值 `{1,18}`。
 
-鉴于 `P` 是素数，可以使用以下结果为模幂哈希函数选择一个合适的 `w`：
+鉴于 `P` 是素数，可以使用以下结果为模幂哈希函数选择合适的 `w`：
 
-> 观察 3。 设 `P` 是一个素数；`w` 和 `P-1` 互素，当且仅当对于 `ℤ/Pℤ` 中的所有 `a` 和 `b`：<center>`aʷ mod P ≡ bʷ mod P` 当且仅当 `a mod P ≡ b mod P`</center>
+> 观察 3。设 `P` 为素数；`w` 和 `P-1` 互素，当且仅当对于 `ℤ/Pℤ` 中的所有 `a` 和 `b`：<center>`aʷ mod P ≡ bʷ mod P` 当且仅当 `a mod P ≡ b mod P`</center>
 
-因此，鉴于 `P` 是素数且 `w` 与 `P-1` 互素，我们有 `|{pow(x, w, P) : x ∈ ℤ}| = P`，这意味着该哈希函数具有最小的可能冲突率。
+因此，鉴于 `P` 是素数且 `w` 与 `P-1` 互素，我们得出 `|{pow(x, w, P) : x ∈ ℤ}| = P`，这意味着该哈希函数具有尽可能低的碰撞率。
 
-在我们所选的 `P` 是安全素数的特殊情况下，`P-1` 仅有因子 1、2、`(P-1)/2` 和 `P-1`。 由于 `P` > 7，我们知道 3 与 `P-1` 互素，因此 `w=3` 满足上述命题。
+在我们选择的 `P` 为安全素数的特殊情况下，`P-1` 只有因子 1、2、`(P-1)/2` 和 `P-1`。由于 `P` > 7，我们知道 3 与 `P-1` 互素，因此 `w=3` 满足上述命题。
 
 ## 更高效的基于缓存的评估算法 {#cache-based-evaluation}
 
