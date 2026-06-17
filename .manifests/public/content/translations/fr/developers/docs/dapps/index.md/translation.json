@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-16T22:23:38.406Z",
+  "englishManifestHash": "dab69e61929c",
+  "placeholderOrder": [
+    "LINK-5bbb7f",
+    "LINK-a21a82",
+    "LINK-a9bc26",
+    "LINK-318476",
+    "LINK-adc8d3",
+    "LINK-396254",
+    "LINK-1ac4d5",
+    "LINK-78e8f8",
+    "LINK-52b07d",
+    "LINK-90a797",
+    "LINK-2879c3",
+    "LINK-8bf749",
+    "LINK-b37372",
+    "LINK-2a8d92",
+    "LINK-6a97ad",
+    "LINK-88193e",
+    "LINK-63efc2",
+    "LINK-fa1d80",
+    "LINK-f97824",
+    "LINK-c1f26e",
+    "LINK-54e492",
+    "LINK-3cac7e",
+    "LINK-4993ae",
+    "LINK-0b2738",
+    "LINK-981a71",
+    "LINK-ea9290",
+    "LINK-003d26",
+    "LINK-a66df4",
+    "LINK-7b564f",
+    "LINK-e81a82",
+    "LINK-756544"
+  ],
+  "placeholderMap": {
+    "LINK-5bbb7f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-a9bc26": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-318476": {
+      "type": "link",
+      "values": {
+        "url": "https://ipfs.io/"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-396254": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/scaffold-eth/scaffold-eth-2"
+      }
+    },
+    "LINK-1ac4d5": {
+      "type": "link",
+      "values": {
+        "url": "https://punkwallet.io/"
+      }
+    },
+    "LINK-78e8f8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/paulrberg/create-eth-app"
+      }
+    },
+    "LINK-52b07d": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#abi"
+      }
+    },
+    "LINK-90a797": {
+      "type": "link",
+      "values": {
+        "url": "https://oneclickdapp.com"
+      }
+    },
+    "LINK-2879c3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/oneclickdapp/oneclickdapp-v1"
+      }
+    },
+    "LINK-8bf749": {
+      "type": "link",
+      "values": {
+        "url": "https://etherflow.quiknode.io/"
+      }
+    },
+    "LINK-b37372": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/abunsen/etherflow"
+      }
+    },
+    "LINK-2a8d92": {
+      "type": "link",
+      "values": {
+        "url": "https://thirdweb.com/"
+      }
+    },
+    "LINK-6a97ad": {
+      "type": "link",
+      "values": {
+        "url": "https://portal.thirdweb.com/"
+      }
+    },
+    "LINK-88193e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/thirdweb-dev/"
+      }
+    },
+    "LINK-63efc2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.crossmint.com"
+      }
+    },
+    "LINK-fa1d80": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.crossmint.com"
+      }
+    },
+    "LINK-f97824": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/crossmint"
+      }
+    },
+    "LINK-c1f26e": {
+      "type": "link",
+      "values": {
+        "url": "/apps"
+      }
+    },
+    "LINK-54e492": {
+      "type": "link",
+      "values": {
+        "url": "https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application"
+      }
+    },
+    "LINK-3cac7e": {
+      "type": "link",
+      "values": {
+        "url": "https://limechain.tech/blog/what-are-dapps-the-2021-guide/"
+      }
+    },
+    "LINK-4993ae": {
+      "type": "link",
+      "values": {
+        "url": "https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps"
+      }
+    },
+    "LINK-0b2738": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/dapps"
+      }
+    },
+    "LINK-981a71": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/ethereum-stack/"
+      }
+    },
+    "LINK-ea9290": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-003d26": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/uniswap-v2-annotated-code/"
+      }
+    },
+    "LINK-a66df4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
+      }
+    },
+    "LINK-7b564f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/hello-world-smart-contract-fullstack/"
+      }
+    },
+    "LINK-e81a82": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/server-components/"
+      }
+    },
+    "LINK-756544": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/ipfs-decentralized-ui/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:23:38.406Z",
+      "status": "success"
+    }
+  }
+}

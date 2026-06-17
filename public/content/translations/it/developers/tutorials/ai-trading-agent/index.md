@@ -1,16 +1,16 @@
 ---
-title: Crea il tuo agente di trading IA su Ethereum
-description: In questo tutorial imparerai come creare un semplice agente di trading IA. Questo agente legge informazioni dalla blockchain, chiede a un LLM una raccomandazione basata su tali informazioni, esegue lo scambio raccomandato dall'LLM, quindi attende e ripete.
+title: Crea il tuo agente IA di trading su Ethereum
+description: In questo tutorial imparerai come creare un semplice agente IA di trading. Questo agente legge le informazioni dalla blockchain, chiede a un LLM una raccomandazione basata su tali informazioni, esegue l'operazione raccomandata dall'LLM, quindi attende e ripete.
 author: Ori Pomerantz
 tags: ["IA", "trading", "agente", "Python"]
 skill: intermediate
-breadcrumb: Agente di trading IA
+breadcrumb: Agente IA di trading
 published: 2026-02-13
 lang: it
 sidebarDepth: 3
 ---
 
-In questo tutorial imparerai come costruire un semplice agente di trading IA. Questo agente funziona seguendo questi passaggi:
+In questo tutorial imparerai come costruire un semplice agente IA di trading. Questo agente funziona seguendo questi passaggi:
 
 1. Leggere i prezzi attuali e passati di un token, oltre ad altre informazioni potenzialmente rilevanti
 2. Costruire una query con queste informazioni, insieme a informazioni di base per spiegare come potrebbero essere rilevanti
@@ -18,7 +18,7 @@ In questo tutorial imparerai come costruire un semplice agente di trading IA. Qu
 4. Fare trading in base alla raccomandazione
 5. Attendere e ripetere
 
-Questo agente dimostra come leggere informazioni, tradurle in una query che produce una risposta utilizzabile e utilizzare tale risposta. Tutti questi sono passaggi richiesti per un agente IA. Questo agente è implementato in Python perché è il linguaggio più comune utilizzato nell'IA.
+Questo agente dimostra come leggere le informazioni, tradurle in una query che produce una risposta utilizzabile e utilizzare tale risposta. Tutti questi sono passaggi richiesti per un agente IA. Questo agente è implementato in Python perché è il linguaggio più comune utilizzato nell'IA.
 
 ## Perché farlo? {#why-do-this}
 
@@ -32,17 +32,17 @@ Questo tutorial utilizza [Python](https://www.python.org/), la [libreria Web3](h
 
 Il linguaggio più utilizzato per l'IA è [Python](https://www.python.org/), quindi lo useremo qui. Non preoccuparti se non conosci Python. Il linguaggio è molto chiaro e spiegherò esattamente cosa fa.
 
-La [libreria Web3](https://web3py.readthedocs.io/en/stable/) è l'API Ethereum per Python più comune. È piuttosto facile da usare.
+La [libreria Web3](https://web3py.readthedocs.io/en/stable/) è l'API di Ethereum per Python più comune. È piuttosto facile da usare.
 
 ### Fare trading sulla blockchain {#trading-on-blockchain}
 
-Ci sono [molti exchange decentralizzati (DEX)](/apps/categories/defi/) che ti permettono di scambiare token su Ethereum. Tuttavia, tendono ad avere tassi di cambio simili a causa dell'[arbitraggio](/developers/docs/smart-contracts/composability/#better-user-experience).
+Ci sono [molti exchange distribuiti (DEX)](/apps/categories/defi/) che ti permettono di scambiare token su Ethereum. Tuttavia, tendono ad avere tassi di cambio simili a causa dell'[arbitraggio](/developers/docs/smart-contracts/composability/#better-user-experience).
 
-[Uniswap](https://app.uniswap.org/) è un DEX ampiamente utilizzato che possiamo usare sia per le quotazioni (per vedere i valori relativi dei token) sia per gli scambi.
+[Uniswap](https://app.uniswap.org/) è un DEX ampiamente utilizzato che possiamo usare sia per le quotazioni (per vedere i valori relativi dei token) sia per le operazioni di trading.
 
 ### OpenAI {#openai}
 
-Per un modello linguistico di grandi dimensioni (LLM), ho scelto di iniziare con [OpenAI](https://openai.com/). Per eseguire l'applicazione in questo tutorial dovrai pagare per l'accesso all'API. Il pagamento minimo di 5$ è più che sufficiente.
+Per un modello linguistico di grandi dimensioni (LLM), ho scelto di iniziare con [OpenAI](https://openai.com/). Per eseguire l'applicazione in questo tutorial dovrai pagare per l'accesso all'API. Il pagamento minimo di 5 $ è più che sufficiente.
 
 ## Sviluppo, passo dopo passo {#step-by-step}
 
@@ -59,27 +59,27 @@ Ci sono dei passaggi per iniziare su UNIX o Linux (incluso [WSL](https://learn.m
    ```sh
    git clone https://github.com/qbzzt/260215-ai-agent.git -b 01-getting-started
    cd 260215-ai-agent
-```
+   ```
 
 3. Installa [`uv`](https://docs.astral.sh/uv/getting-started/installation/). Il comando sul tuo sistema potrebbe essere diverso.
 
    ```sh
    pipx install uv
-```
+   ```
 
 4. Scarica le librerie.
 
    ```sh
    uv sync
-```
+   ```
 
 5. Attiva l'ambiente virtuale.
 
    ```sh
    source .venv/bin/activate
-```
+   ```
 
-6. Per verificare che Python e Web3 funzionino correttamente, esegui `python3` e forniscigli questo programma. Puoi inserirlo al prompt `>>>`; non c'è bisogno di creare un file.
+6. Per verificare che Python e Web3 funzionino correttamente, esegui `python3` e forniscigli questo programma. Puoi inserirlo al prompt `>>>`; non è necessario creare un file.
 
    ```python
    from web3 import Web3
@@ -87,7 +87,7 @@ Ci sono dei passaggi per iniziare su UNIX o Linux (incluso [WSL](https://learn.m
    w3 = Web3(Web3.HTTPProvider(MAINNET_URL))
    w3.eth.block_number
    quit()
-```
+   ```
 
 ### Leggere dalla blockchain {#read-blockchain}
 
@@ -120,13 +120,13 @@ Importa le librerie di cui abbiamo bisogno. Sono spiegate di seguito quando veng
 print = functools.partial(print, flush=True)
 ```
 
-Sostituisce il `print` di Python con una versione che svuota sempre l'output immediatamente. Questo è utile in uno script a esecuzione prolungata perché non vogliamo aspettare per gli aggiornamenti di stato o l'output di debug.
+Sostituisce `print` di Python con una versione che svuota sempre l'output immediatamente. Questo è utile in uno script a esecuzione prolungata perché non vogliamo aspettare per gli aggiornamenti di stato o l'output di debug.
 
 ```python
 MAINNET_URL = "https://eth.drpc.org"
 ```
 
-Un URL per accedere alla rete principale. Puoi ottenerne uno da [Nodo come servizio](/developers/docs/nodes-and-clients/nodes-as-a-service/) o usarne uno tra quelli pubblicizzati su [Chainlist](https://chainlist.org/chain/1).
+Un URL per accedere alla Mainnet. Puoi ottenerne uno da un [Nodo come servizio](/developers/docs/nodes-and-clients/nodes-as-a-service/) o usarne uno tra quelli pubblicizzati su [Chainlist](https://chainlist.org/chain/1).
 
 ```python
 BLOCK_TIME_SECONDS = 12
@@ -135,7 +135,7 @@ HOUR_BLOCKS = MINUTE_BLOCKS * 60
 DAY_BLOCKS = HOUR_BLOCKS * 24
 ```
 
-Un blocco della rete principale di Ethereum viene tipicamente prodotto ogni dodici secondi, quindi questo è il numero di blocchi che ci aspetteremmo in un determinato periodo di tempo. Nota che questa non è una cifra esatta. Quando il [proponente del blocco](/developers/docs/consensus-mechanisms/pos/block-proposal/) è inattivo, quel blocco viene saltato e il tempo per il blocco successivo è di 24 secondi. Se volessimo ottenere il blocco esatto per un timestamp, useremmo la [ricerca binaria](https://it.wikipedia.org/wiki/Ricerca_dicotomica). Tuttavia, questo è abbastanza vicino per i nostri scopi. Prevedere il futuro non è una scienza esatta.
+Un blocco della Mainnet di Ethereum viene tipicamente generato ogni dodici secondi, quindi questo è il numero di blocchi che ci aspetteremmo in un determinato periodo di tempo. Nota che questa non è una cifra esatta. Quando il [proponente del blocco](/developers/docs/consensus-mechanisms/pos/block-proposal/) è inattivo, quel blocco viene saltato e il tempo per il blocco successivo è di 24 secondi. Se volessimo ottenere il blocco esatto per un timestamp, useremmo la [ricerca binaria](https://en.wikipedia.org/wiki/Binary_search). Tuttavia, questo è abbastanza preciso per i nostri scopi. Prevedere il futuro non è una scienza esatta.
 
 ```python
 CYCLE_BLOCKS = DAY_BLOCKS
@@ -148,7 +148,7 @@ La dimensione del ciclo. Esaminiamo le quotazioni una volta per ciclo e cerchiam
 WETHUSDC_ADDRESS = Web3.to_checksum_address("0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640")
 ```
 
-I valori delle quotazioni sono presi dalla pool USDC/WETH di Uniswap 3 all'indirizzo [`0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640`](https://eth.blockscout.com/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640?tab=read_write_contract). Questo indirizzo è già in formato checksum, ma è meglio usare [`Web3.to_checksum_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_checksum_address) per rendere il codice riutilizzabile.
+I valori delle quotazioni sono presi dal pool USDC/WETH di Uniswap v3 all'indirizzo [`0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640`](https://eth.blockscout.com/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640?tab=read_write_contract). Questo indirizzo è già in formato checksum, ma è meglio usare [`Web3.to_checksum_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_checksum_address) per rendere il codice riutilizzabile.
 
 ```python
 POOL_ABI = [
@@ -180,9 +180,9 @@ class ERC20Token:
     contract: Contract
 ```
 
-Questo è un modo per creare una classe di dati (data class) in Python. Il tipo di dati [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) viene utilizzato per connettersi al contratto. Nota il `(frozen=True)`. In Python i [booleani](https://it.wikipedia.org/wiki/Tipo_booleano) sono definiti come `True` o `False`, con l'iniziale maiuscola. Questa classe di dati è `frozen` (congelata), il che significa che i campi non possono essere modificati.
+Questo è un modo per creare una data class in Python. Il tipo di dato [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) viene utilizzato per connettersi al contratto. Nota il `(frozen=True)`. In Python i [booleani](https://en.wikipedia.org/wiki/Boolean_data_type) sono definiti come `True` o `False`, con l'iniziale maiuscola. Questa data class è `frozen`, il che significa che i campi non possono essere modificati.
 
-Nota l'indentazione. A differenza dei [linguaggi derivati dal C](https://it.wikipedia.org/wiki/Linguaggio_C), Python usa l'indentazione per denotare i blocchi. L'interprete Python sa che la definizione seguente non fa parte di questa classe di dati perché non inizia con la stessa indentazione dei campi della classe di dati.
+Nota l'indentazione. A differenza dei [linguaggi derivati dal C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages), Python usa l'indentazione per denotare i blocchi. L'interprete Python sa che la definizione seguente non fa parte di questa data class perché non inizia con la stessa indentazione dei campi della data class.
 
 ```python
 @dataclass(frozen=True)
@@ -203,7 +203,7 @@ Il tipo [`Decimal`](https://docs.python.org/3/library/decimal.html) viene utiliz
 
 Questo è il modo per definire una funzione in Python. La definizione è indentata per mostrare che fa ancora parte di `PoolInfo`.
 
-In una funzione che fa parte di una classe di dati, il primo parametro è sempre `self`, l'istanza della classe di dati che ha effettuato la chiamata. Qui c'è un altro parametro, il numero del blocco.
+In una funzione che fa parte di una data class, il primo parametro è sempre `self`, l'istanza della data class che ha effettuato la chiamata. Qui c'è un altro parametro, il numero del blocco.
 
 ```python
         assert block <= w3.eth.block_number, "Block is in the future"
@@ -215,22 +215,22 @@ Se potessimo leggere il futuro, non avremmo bisogno dell'IA per il trading.
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-La sintassi per chiamare una funzione sull'EVM da Web3 è questa: `<contract object>.functions.<function name>().call(<parameters>)`. I parametri possono essere i parametri della funzione EVM (se presenti; qui non ce ne sono) o [parametri nominati](https://it.wikipedia.org/wiki/Parametro_nominato) per modificare il comportamento della blockchain. Qui ne usiamo uno, `block_identifier`, per specificare [il numero del blocco](/developers/docs/apis/json-rpc/#default-block) in cui desideriamo eseguire.
+La sintassi per chiamare una funzione sull'EVM da Web3 è questa: `<contract object>.functions.<function name>().call(<parameters>)`. I parametri possono essere i parametri della funzione EVM (se presenti; qui non ce ne sono) o [parametri nominati](https://en.wikipedia.org/wiki/Named_parameter) per modificare il comportamento della blockchain. Qui ne usiamo uno, `block_identifier`, per specificare [il numero del blocco](/developers/docs/apis/json-rpc/#default-block) in cui desideriamo eseguire l'operazione.
 
-Il risultato è [questa struct, in forma di array](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). Il primo valore è una funzione del tasso di cambio tra i due token.
+Il risultato è [questa struct, in formato array](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). Il primo valore è una funzione del tasso di cambio tra i due token.
 
 ```python
         raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2
 ```
 
-Per ridurre i calcoli on-chain, Uniswap v3 non memorizza il fattore di cambio effettivo, ma piuttosto la sua radice quadrata. Poiché l'EVM non supporta la matematica in virgola mobile o le frazioni, invece del valore effettivo, la risposta è <math><msqrt><mi>price</mi></msqrt><mo>&#x22C5;</mo><msup><mn>2</mn><mn>96</mn></msup></math>
+Per ridurre i calcoli onchain, Uniswap v3 non memorizza il fattore di cambio effettivo, ma piuttosto la sua radice quadrata. Poiché l'EVM non supporta la matematica in virgola mobile o le frazioni, invece del valore effettivo, la risposta è <math><msqrt><mi>price</mi></msqrt><mo>&#x22C5;</mo><msup><mn>2</mn><mn>96</mn></msup></math>
 
 ```python
          # (token1 per token0)
         return 1/(raw_price * self.decimal_factor)
 ```
 
-Il prezzo grezzo che otteniamo è il numero di `token0` che riceviamo per ogni `token1`. Nella nostra pool `token0` è USDC (stablecoin con lo stesso valore di un dollaro USA) e `token1` è [WETH](https://opensea.io/learn/blockchain/what-is-weth). Il valore che vogliamo veramente è il numero di dollari per WETH, non l'inverso.
+Il prezzo grezzo che otteniamo è il numero di `token0` che riceviamo per ogni `token1`. Nel nostro pool `token0` è USDC (stablecoin con lo stesso valore di un dollaro USA) e `token1` è [WETH](https://opensea.io/learn/blockchain/what-is-weth). Il valore che vogliamo veramente è il numero di dollari per WETH, non l'inverso.
 
 Il fattore decimale è il rapporto tra i [fattori decimali](https://docs.openzeppelin.com/contracts/4.x/erc20#a-note-on-decimals) per i due token.
 
@@ -242,7 +242,7 @@ class Quote:
     asset: str
 ```
 
-Questa classe di dati rappresenta una quotazione: il prezzo di un asset specifico in un dato momento. A questo punto, il campo `asset` è irrilevante perché usiamo una singola pool e quindi abbiamo un singolo asset. Tuttavia, aggiungeremo altri asset in seguito.
+Questa data class rappresenta una quotazione: il prezzo di un asset specifico in un dato momento. A questo punto, il campo `asset` è irrilevante perché usiamo un singolo pool e quindi abbiamo un singolo asset. Tuttavia, aggiungeremo altri asset in seguito.
 
 ```python
 def read_token(address: str) -> ERC20Token:
@@ -278,7 +278,7 @@ def read_pool(address: str) -> PoolInfo:
     )
 ```
 
-Questa funzione restituisce tutto ciò di cui abbiamo bisogno su [una pool specifica](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol). La sintassi `f"<string>"` è una [stringa formattata](https://docs.python.org/3/reference/lexical_analysis.html#f-strings).
+Questa funzione restituisce tutto ciò di cui abbiamo bisogno su [un pool specifico](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol). La sintassi `f"<string>"` è una [stringa formattata](https://docs.python.org/3/reference/lexical_analysis.html#f-strings).
 
 ```python
 def get_quote(pool: PoolInfo, block_number: int = None) -> Quote:
@@ -340,7 +340,7 @@ quotes = get_quotes(
 pprint(quotes)
 ```
 
-Questo è il codice principale dello script. Leggi le informazioni sulla pool, ottieni dodici quotazioni e stampale con [`pprint`](https://docs.python.org/3/library/pprint.html#pprint.pprint).
+Questo è il codice principale dello script. Leggi le informazioni del pool, ottieni dodici quotazioni e [stampale (`pprint`)](https://docs.python.org/3/library/pprint.html#pprint.pprint).
 
 ### Creare un prompt {#prompt}
 
@@ -354,7 +354,7 @@ uv run agent.py
 L'output ora sarà un prompt per un LLM, simile a:
 
 ```
-Given these quotes:
+Date queste quotazioni:
 Asset: WETH/USDC
         2026-01-20T16:34 3016.21
         .
@@ -370,19 +370,19 @@ Asset: WBTC/WETH
         2026-02-01T17:50 33.46
 
 
-What would you expect the value for WETH/USDC to be at time 2026-02-02T17:56?
+Quale ti aspetteresti che sia il valore per WETH/USDC al momento 2026-02-02T17:56?
 
-Provide your answer as a single number rounded to two decimal places,
-without any other text.
+Fornisci la tua risposta come un singolo numero arrotondato a due cifre decimali,
+senza alcun altro testo.
 ```
 
 Nota che qui ci sono quotazioni per due asset, `WETH/USDC` e `WBTC/WETH`. L'aggiunta di quotazioni da un altro asset potrebbe migliorare l'accuratezza della previsione.
 
 #### Come si presenta un prompt {#prompt-explanation}
 
-Questo prompt contiene tre sezioni, che sono piuttosto comuni nei prompt degli LLM.
+Questo prompt contiene tre sezioni, che sono piuttosto comuni nei prompt per LLM.
 
-1. Informazioni. Gli LLM hanno molte informazioni derivanti dal loro addestramento, ma di solito non hanno le più recenti. Questo è il motivo per cui dobbiamo recuperare le ultime quotazioni qui. L'aggiunta di informazioni a un prompt è chiamata [retrieval augmented generation (RAG)](https://it.wikipedia.org/wiki/Retrieval-augmented_generation).
+1. Informazioni. Gli LLM hanno molte informazioni derivanti dal loro addestramento, ma di solito non hanno le più recenti. Questo è il motivo per cui dobbiamo recuperare le ultime quotazioni qui. L'aggiunta di informazioni a un prompt è chiamata [retrieval augmented generation (RAG)](https://en.wikipedia.org/wiki/Retrieval-augmented_generation).
 
 2. La domanda vera e propria. Questo è ciò che vogliamo sapere.
 
@@ -417,14 +417,14 @@ class PoolInfo:
     def get_price(self, block: int) -> Decimal:
         assert block <= w3.eth.block_number, "Block is in the future"
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
-        raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2 # (token1 per token0)
+        raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2  # (token1 per token0)
         if self.reverse:
             return 1/(raw_price * self.decimal_factor)
         else:
             return raw_price * self.decimal_factor
 ```
 
-Nella pool WETH/USDC, vogliamo sapere quanti `token0` (USDC) ci servono per comprare un `token1` (WETH). Nella pool WETH/WBTC, vogliamo sapere quanti `token1` (WETH) ci servono per comprare un `token0` (WBTC, che è Bitcoin avvolto). Dobbiamo tenere traccia se il rapporto della pool deve essere invertito.
+Nel pool WETH/USDC, vogliamo sapere quanti `token0` (USDC) ci servono per comprare un `token1` (WETH). Nel pool WETH/WBTC, vogliamo sapere quanti `token1` (WETH) ci servono per comprare un `token0` (WBTC, che è Bitcoin incapsulato). Dobbiamo tenere traccia se il rapporto del pool deve essere invertito.
 
 ```python
 def read_pool(address: str, reverse: bool = False) -> PoolInfo:
@@ -442,9 +442,9 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
     )
 ```
 
-Per sapere se una pool deve essere invertita, dobbiamo ottenerlo come input per `read_pool`. Inoltre, il simbolo dell'asset deve essere impostato correttamente.
+Per sapere se un pool deve essere invertito, dobbiamo ottenerlo come input per `read_pool`. Inoltre, il simbolo dell'asset deve essere impostato correttamente.
 
-La sintassi `<a> if <b> else <c>` è l'equivalente Python dell'[operatore condizionale ternario](https://it.wikipedia.org/wiki/Operatore_ternario), che in un linguaggio derivato dal C sarebbe `<b> ? <a> : <c>`.
+La sintassi `<a> if <b> else <c>` è l'equivalente in Python dell'[operatore condizionale ternario](https://en.wikipedia.org/wiki/Ternary_conditional_operator), che in un linguaggio derivato dal C sarebbe `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:
@@ -471,7 +471,7 @@ Given these quotes:
 }
 ```
 
-Qui, usiamo il pattern [MapReduce](https://it.wikipedia.org/wiki/MapReduce) per generare una stringa per ogni elenco di quotazioni con `format_quotes`, quindi le riduciamo in una singola stringa da usare nel prompt.
+Qui, usiamo il pattern [MapReduce](https://en.wikipedia.org/wiki/MapReduce) per generare una stringa per ogni elenco di quotazioni con `format_quotes`, per poi ridurle in una singola stringa da usare nel prompt.
 
 ```python
 What would you expect the value for {asset} to be at time {expected_time}?
@@ -501,7 +501,7 @@ wethwbtc_quotes = get_quotes(
 )
 ```
 
-Esamina le due pool e ottieni le quotazioni da entrambe.
+Esamina i due pool e ottieni le quotazioni da entrambi.
 
 ```python
 future_time = (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()[0:16]
@@ -516,27 +516,27 @@ Determina il momento futuro per il quale vogliamo la stima e crea il prompt.
 Successivamente, interroghiamo un vero LLM e riceviamo un valore futuro atteso. Ho scritto questo programma usando OpenAI, quindi se vuoi usare un provider diverso, dovrai adattarlo.
 
 1. Ottieni un [account OpenAI](https://auth.openai.com/create-account)
-2. [Finanzia l'account](https://platform.openai.com/settings/organization/billing/overview): l'importo minimo al momento della stesura è di 5$
+2. [Finanzia l'account](https://platform.openai.com/settings/organization/billing/overview): l'importo minimo al momento della stesura è di 5 $
 3. [Crea una chiave API](https://platform.openai.com/settings/organization/api-keys)
 4. Nella riga di comando, esporta la chiave API in modo che il tuo programma possa usarla
 
    ```sh
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
-```
+   ```
 
 5. Fai il checkout ed esegui l'agente
 
    ```sh
    git checkout 04-interface-llm
    uv run agent.py
-```
+   ```
 
 Ecco il nuovo codice.
 
 ```python
 from openai import OpenAI
 
-open_ai = OpenAI() # Il client legge la variabile d'ambiente OPENAI_API_KEY
+open_ai = OpenAI()  # Il client legge la variabile d'ambiente OPENAI_API_KEY
 ```
 
 Importa e istanzia l'API di OpenAI.
@@ -567,7 +567,7 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
-Emetti il prezzo e fornisci una raccomandazione di acquisto o vendita.
+Stampa il prezzo e fornisci una raccomandazione di acquisto o vendita.
 
 #### Testare le previsioni {#testing-the-predictions}
 
@@ -580,21 +580,21 @@ uv run test-predictor.py
 Il risultato atteso è simile a:
 
 ```
-Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
-Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
-Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
-Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
+Previsione per 2026-01-05T19:50: previsto 3138.93 USD, reale 3218.92 USD, errore 79.99 USD
+Previsione per 2026-01-06T19:56: previsto 3243.39 USD, reale 3221.08 USD, errore 22.31 USD
+Previsione per 2026-01-07T20:02: previsto 3223.24 USD, reale 3146.89 USD, errore 76.35 USD
+Previsione per 2026-01-08T20:11: previsto 3150.47 USD, reale 3092.04 USD, errore 58.43 USD
 .
 .
 .
-Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
-Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
-Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
-Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
-Mean change per recommendation: 4.787931034482758620689655172 USD
-Standard variance of changes: 104.42 USD
-Profitable days: 51.72%
-Losing days: 48.28%
+Previsione per 2026-01-31T22:33: previsto 2637.73 USD, reale 2417.77 USD, errore 219.96 USD
+Previsione per 2026-02-01T22:41: previsto 2381.70 USD, reale 2318.84 USD, errore 62.86 USD
+Previsione per 2026-02-02T22:49: previsto 2234.91 USD, reale 2349.28 USD, errore 114.37 USD
+Errore medio di previsione su 29 previsioni: 83.87103448275862068965517241 USD
+Variazione media per raccomandazione: 4.787931034482758620689655172 USD
+Varianza standard delle variazioni: 104.42 USD
+Giorni redditizi: 51.72%
+Giorni in perdita: 48.28%
 ```
 
 La maggior parte del tester è identica all'agente, ma ecco le parti nuove o modificate.
@@ -620,10 +620,10 @@ wethwbtc_quotes = get_quotes(
 )
 ```
 
-Guardiamo indietro di `CYCLES_FOR_TEST` (specificato qui come 40) giorni.
+Guardiamo indietro di `CYCLES_FOR_TEST` (specificato come 40 qui) giorni.
 
 ```python
-# Crea previsioni e verificale con lo storico reale
+# Crea previsioni e confrontale con lo storico reale
 
 total_error = Decimal(0)
 changes = []
@@ -631,7 +631,7 @@ changes = []
 
 Ci sono due tipi di errori a cui siamo interessati. Il primo, `total_error`, è semplicemente la somma degli errori commessi dal predittore.
 
-Per capire il secondo, `changes`, dobbiamo ricordare lo scopo dell'agente. Non è prevedere il rapporto WETH/USDC (prezzo di ETH). È emettere raccomandazioni di vendita e acquisto. Se il prezzo è attualmente di 2000$ e prevede 2010$ per domani, non ci dispiace se il risultato effettivo è 2020$ e guadagniamo soldi extra. Ma ci _dispiace_ se ha previsto 2010$ e ha comprato ETH in base a quella raccomandazione, e il prezzo scende a 1990$.
+Per capire il secondo, `changes`, dobbiamo ricordare lo scopo dell'agente. Non è prevedere il rapporto WETH/USDC (prezzo di ETH). È emettere raccomandazioni di vendita e acquisto. Se il prezzo è attualmente di 2000 $ e prevede 2010 $ per domani, non ci dispiace se il risultato effettivo è 2020 $ e guadagniamo soldi extra. Ma ci _dispiace_ se ha previsto 2010 $ e ha comprato ETH in base a quella raccomandazione, e il prezzo scende a 1990 $.
 
 ```python
 for index in range(0,len(wethusdc_quotes)-CYCLES_BACK):
@@ -668,7 +668,7 @@ Calcola l'errore e aggiungilo al totale.
     changes.append(price_increase if recomended_action == 'buy' else -price_increase)
 ```
 
-Per `changes`, vogliamo l'impatto monetario dell'acquisto o della vendita di un ETH. Quindi, per prima cosa, dobbiamo determinare la raccomandazione, quindi valutare come è cambiato il prezzo effettivo e se la raccomandazione ha fatto guadagnare (variazione positiva) o perdere denaro (variazione negativa).
+Per `changes`, vogliamo l'impatto monetario dell'acquisto o della vendita di un ETH. Quindi, per prima cosa, dobbiamo determinare la raccomandazione, poi valutare come è cambiato il prezzo effettivo e se la raccomandazione ha fatto guadagnare (variazione positiva) o perdere denaro (variazione negativa).
 
 ```python
 print (f"Mean prediction error over {len(wethusdc_quotes)-CYCLES_BACK} predictions: {total_error / Decimal(len(wethusdc_quotes)-CYCLES_BACK)} USD")
@@ -691,9 +691,9 @@ Usa [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) per contare
 
 ### Inviare transazioni {#submit-txn}
 
-Ora dobbiamo effettivamente inviare transazioni. Tuttavia, non voglio spendere soldi veri a questo punto, prima che il sistema sia collaudato. Invece, creeremo una biforcazione locale della rete principale e faremo "trading" su quella rete.
+Ora dobbiamo effettivamente inviare le transazioni. Tuttavia, non voglio spendere soldi veri a questo punto, prima che il sistema sia collaudato. Invece, creeremo un fork locale della Mainnet e faremo "trading" su quella rete.
 
-Ecco i passaggi per creare una biforcazione locale e abilitare il trading.
+Ecco i passaggi per creare un fork locale e abilitare il trading.
 
 1. Installa [Foundry](https://getfoundry.sh/introduction/installation)
 
@@ -701,7 +701,7 @@ Ecco i passaggi per creare una biforcazione locale e abilitare il trading.
 
    ```sh
    anvil --fork-url https://eth.drpc.org --block-time 12
-```
+   ```
 
    `anvil` è in ascolto sull'URL predefinito per Foundry, http://localhost:8545, quindi non abbiamo bisogno di specificare l'URL per [il comando `cast`](https://getfoundry.sh/cast/overview) che usiamo per manipolare la blockchain.
 
@@ -710,11 +710,11 @@ Ecco i passaggi per creare una biforcazione locale e abilitare il trading.
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ADDRESS=`cast wallet address $PRIVATE_KEY`
-```
+   ```
 
-4. Questi sono i contratti che dobbiamo usare. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) è il contratto Uniswap v3 che usiamo per fare effettivamente trading. Potremmo fare trading direttamente tramite la pool, ma questo è molto più semplice.
+4. Questi sono i contratti che dobbiamo usare. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) è il contratto Uniswap v3 che usiamo per fare effettivamente trading. Potremmo fare trading direttamente tramite il pool, ma questo è molto più semplice.
 
-   Le due variabili in basso sono i percorsi di Uniswap v3 necessari per lo scambio tra WETH e USDC.
+   Le due variabili in basso sono i percorsi di Uniswap v3 necessari per effettuare lo swap tra WETH e USDC.
 
    ```sh
    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -723,13 +723,13 @@ Ecco i passaggi per creare una biforcazione locale e abilitare il trading.
    SWAP_ROUTER=0xE592427A0AEce92De3Edee1F18E0157C05861564
    WETH_TO_USDC=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc20001F4A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
    USDC_TO_WETH=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
-```
+   ```
 
-5. Ciascuno degli account di test ha 10.000 ETH. Usa il contratto WETH per avvolgere 1000 ETH per ottenere 1000 WETH per il trading.
+5. Ciascuno degli account di test ha 10.000 ETH. Usa il contratto WETH per incapsulare 1000 ETH per ottenere 1000 WETH per il trading.
 
    ```sh
    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
-```
+   ```
 
 6. Usa `SwapRouter` per scambiare 500 WETH con USDC.
 
@@ -740,16 +740,16 @@ Ecco i passaggi per creare una biforcazione locale e abilitare il trading.
        "exactInput((bytes,address,uint256,uint256,uint256))" \
        "($WETH_TO_USDC,$ADDRESS,$MAXINT,500ether,1000000)" \
        --private-key $PRIVATE_KEY
-```
+   ```
 
-   La chiamata `approve` crea un'indennità (allowance) che consente a `SwapRouter` di spendere alcuni dei nostri token. I contratti non possono monitorare gli eventi, quindi se trasferissimo i token direttamente al contratto `SwapRouter`, non saprebbe di essere stato pagato. Invece, permettiamo al contratto `SwapRouter` di spendere un certo importo, e poi `SwapRouter` lo fa. Questo viene fatto tramite una funzione chiamata da `SwapRouter`, in modo che sappia se ha avuto successo.
+   La chiamata `approve` crea un'autorizzazione di spesa che consente a `SwapRouter` di spendere alcuni dei nostri token. I contratti non possono monitorare gli eventi, quindi se trasferissimo i token direttamente al contratto `SwapRouter`, non saprebbe di essere stato pagato. Invece, permettiamo al contratto `SwapRouter` di spendere un certo importo, e poi `SwapRouter` lo fa. Questo viene fatto tramite una funzione chiamata da `SwapRouter`, in modo che sappia se ha avuto successo.
 
 7. Verifica di avere abbastanza di entrambi i token.
 
    ```sh
    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
    echo `cast call $USDC_ADDRESS "balanceOf(address)" $ADDRESS | cast to-dec`/10^6 | bc
-```
+   ```
 
 Ora che abbiamo WETH e USDC, possiamo effettivamente eseguire l'agente.
 
@@ -762,19 +762,19 @@ L'output sarà simile a:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-Current price: 1843.16
-In 2026-02-06T23:07, expected price: 1724.41 USD
-Account balances before trade:
-USDC Balance: 927301.578272
-WETH Balance: 500
-Sell, I expect the price to go down by 118.75 USD
-Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-Approve transaction mined.
-Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-Sell transaction mined.
-Account balances after trade:
-USDC Balance: 929143.797116
-WETH Balance: 499
+Prezzo attuale: 1843.16
+Nel 2026-02-06T23:07, prezzo atteso: 1724.41 USD
+Saldi dell'account prima del trade:
+Saldo USDC: 927301.578272
+Saldo WETH: 500
+Vendi, mi aspetto che il prezzo scenda di 118.75 USD
+Transazione di approvazione inviata: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Transazione di approvazione minata.
+Transazione di vendita inviata: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Transazione di vendita minata.
+Saldi dell'account dopo il trade:
+Saldo USDC: 929143.797116
+Saldo WETH: 499
 ```
 
 Per usarlo effettivamente, hai bisogno di alcune piccole modifiche.
@@ -829,7 +829,7 @@ swap_router = w3.eth.contract(
 )
 ```
 
-Le definizioni Web3 per l'[`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) e il contratto `SwapRouter`.
+Le definizioni Web3 per il [contratto `account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) e il contratto `SwapRouter`.
 
 ```python
 def txn_params() -> dict:
@@ -841,13 +841,13 @@ def txn_params() -> dict:
     }
 ```
 
-I parametri della transazione. Abbiamo bisogno di una funzione qui perché [il nonce](https://it.wikipedia.org/wiki/Nonce) deve cambiare ogni volta.
+I parametri della transazione. Abbiamo bisogno di una funzione qui perché [il nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) deve cambiare ogni volta.
 
 ```python
 def approve_token(contract: Contract, amount: int):
 ```
 
-Approva un'indennità di token per `SwapRouter`.
+Approva un'autorizzazione di spesa del token per `SwapRouter`.
 
 ```python
     txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
@@ -855,7 +855,7 @@ Approva un'indennità di token per `SwapRouter`.
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
 ```
 
-Questo è il modo in cui inviamo una transazione in Web3. Per prima cosa usiamo [l'oggetto `Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) per costruire la transazione. Quindi usiamo [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction) per firmare la transazione, usando `PRIVATE_KEY`. Infine, usiamo [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction) per inviare la transazione.
+Ecco come inviamo una transazione in Web3. Per prima cosa usiamo [l'oggetto `Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) per costruire la transazione. Poi usiamo [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction) per firmare la transazione, usando `PRIVATE_KEY`. Infine, usiamo [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction) per inviare la transazione.
 
 ```python
     print(f"Approve transaction sent: {tx_hash.hex()}")
@@ -863,7 +863,7 @@ Questo è il modo in cui inviamo una transazione in Web3. Per prima cosa usiamo 
     print("Approve transaction mined.")
 ```
 
-[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) attende fino a quando la transazione non viene minata. Restituisce la ricevuta se necessario.
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) attende finché la transazione non viene minata. Restituisce la ricevuta se necessario.
 
 ```python
 SELL_PARAMS = {
@@ -913,7 +913,7 @@ def sell():
     print("Sell transaction mined.")
 ```
 
-Le funzioni `buy()` e `sell()` sono quasi identiche. Per prima cosa approviamo un'indennità sufficiente per `SwapRouter`, e poi lo chiamiamo con il percorso e l'importo corretti.
+Le funzioni `buy()` e `sell()` sono quasi identiche. Per prima cosa approviamo un'autorizzazione di spesa sufficiente per `SwapRouter`, e poi lo chiamiamo con il percorso e l'importo corretti.
 
 ```python
 def balances():
@@ -952,24 +952,24 @@ Questa non è una versione di produzione completa; è semplicemente un esempio p
 Ci sono due fatti importanti che l'agente ignora quando decide cosa fare.
 
 - _L'entità del cambiamento previsto_. L'agente vende un importo fisso di `WETH` se si prevede che il prezzo diminuirà, indipendentemente dall'entità del calo.
-  Probabilmente, sarebbe meglio ignorare i cambiamenti minori e vendere in base a quanto ci aspettiamo che il prezzo diminuisca.
-- _Il portafoglio attuale_. Se il 10% del tuo portafoglio è in WETH e pensi che il prezzo salirà, probabilmente ha senso comprarne di più. Ma se il 90% del tuo portafoglio è in WETH, potresti essere sufficientemente esposto e non c'è bisogno di comprarne di più. Il contrario è vero se ti aspetti che il prezzo scenda.
+  Sarebbe probabilmente meglio ignorare i cambiamenti minori e vendere in base a quanto ci aspettiamo che il prezzo scenda.
+- _Il portafoglio attuale_. Se il 10% del tuo portafoglio è in WETH e pensi che il prezzo salirà, probabilmente ha senso comprarne di più. Ma se il 90% del tuo portafoglio è in WETH, potresti essere sufficientemente esposto e non c'è bisogno di comprarne di più. È vero il contrario se ti aspetti che il prezzo scenda.
 
 ### E se volessi mantenere segreta la tua strategia di trading? {#secret}
 
 I fornitori di IA possono vedere le query che invii ai loro LLM, il che potrebbe esporre il geniale sistema di trading che hai sviluppato con il tuo agente. Un sistema di trading che troppe persone usano è inutile perché troppe persone cercano di comprare quando tu vuoi comprare (e il prezzo sale) e cercano di vendere quando tu vuoi vendere (e il prezzo scende).
 
-Puoi eseguire un LLM localmente, ad esempio, usando [LM-Studio](https://lmstudio.ai/), per evitare questo problema.
+Puoi eseguire un LLM localmente, ad esempio usando [LM-Studio](https://lmstudio.ai/), per evitare questo problema.
 
 ### Da bot IA ad agente IA {#bot-to-agent}
 
-Si può sostenere a ragione che questo sia [un bot IA, non un agente IA](/ai-agents/#ai-agents-vs-ai-bots). Implementa una strategia relativamente semplice che si basa su informazioni predefinite. Possiamo abilitare l'auto-miglioramento, ad esempio, fornendo un elenco di pool Uniswap v3 e i loro ultimi valori e chiedendo quale combinazione abbia il miglior valore predittivo.
+Si può sostenere a ragione che questo sia [un bot IA, non un agente IA](/ai-agents/#ai-agents-vs-ai-bots). Implementa una strategia relativamente semplice che si basa su informazioni predefinite. Possiamo abilitare l'auto-miglioramento, ad esempio, fornendo un elenco di pool di Uniswap v3 e i loro ultimi valori e chiedendo quale combinazione abbia il miglior valore predittivo.
 
-### Protezione dallo slippage {#slippage-protection}
+### Protezione dallo slittamento {#slippage-protection}
 
-Attualmente non c'è [protezione dallo slippage](https://uniswapv3book.com/milestone_3/slippage-protection.html). Se la quotazione attuale è di 2000$ e il prezzo previsto è di 2100$, l'agente comprerà. Tuttavia, se prima che l'agente compri il costo sale a 2200$, non ha più senso comprare.
+Attualmente non c'è alcuna [protezione dallo slittamento](https://uniswapv3book.com/milestone_3/slippage-protection.html). Se la quotazione attuale è di 2000 $ e il prezzo atteso è di 2100 $, l'agente comprerà. Tuttavia, se prima che l'agente compri il costo sale a 2200 $, non ha più senso comprare.
 
-Per implementare la protezione dallo slippage, specifica un valore `amountOutMinimum` nelle righe 325 e 334 di [`agent.py`](https://github.com/qbzzt/260215-ai-agent/blob/05-trade/agent.py#L325).
+Per implementare la protezione dallo slittamento, specifica un valore `amountOutMinimum` nelle righe 325 e 334 di [`agent.py`](https://github.com/qbzzt/260215-ai-agent/blob/05-trade/agent.py#L325).
 
 ## Conclusione {#conclusion}
 

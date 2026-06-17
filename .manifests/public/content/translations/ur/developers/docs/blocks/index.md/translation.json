@@ -1,0 +1,428 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-16T21:52:30.075Z",
+  "englishManifestHash": "1ab3ddd23cb7",
+  "placeholderOrder": [
+    "LINK-60076a",
+    "LINK-8efafa",
+    "LINK-cd977e",
+    "LINK-a21a82",
+    "IMAGE-0ffab3",
+    "LINK-fb70b4",
+    "LINK-cf2e5c",
+    "CODE-655883",
+    "CODE-c156a0",
+    "CODE-794a15",
+    "CODE-1d844a",
+    "CODE-230d83",
+    "CODE-230d83",
+    "CODE-e7a44c",
+    "CODE-b77923",
+    "CODE-8a61a6",
+    "CODE-dcc3bc",
+    "CODE-cd759b",
+    "CODE-d03b09",
+    "CODE-a68005",
+    "CODE-1f38b3",
+    "CODE-c14516",
+    "CODE-d7cfb7",
+    "CODE-d03b09",
+    "CODE-6aa5b5",
+    "CODE-3a6eb0",
+    "CODE-1a2fc2",
+    "CODE-3a6eb0",
+    "CODE-813a89",
+    "CODE-3a6eb0",
+    "CODE-655883",
+    "CODE-1bc04b",
+    "CODE-d8b9f4",
+    "CODE-41cf67",
+    "CODE-34a040",
+    "CODE-d7cfb7",
+    "CODE-d7cfb7",
+    "CODE-1d844a",
+    "CODE-435353",
+    "CODE-0a6680",
+    "CODE-0a6680",
+    "CODE-2dbec1",
+    "CODE-7cd4ed",
+    "CODE-1d844a",
+    "CODE-52afe7",
+    "CODE-b7c584",
+    "CODE-d7e21b",
+    "CODE-26e842",
+    "CODE-d7ea1e",
+    "CODE-736bee",
+    "CODE-323748",
+    "CODE-25ee23",
+    "CODE-328097",
+    "CODE-26460e",
+    "CODE-da9a5c",
+    "CODE-ae27f6",
+    "CODE-d7cfb7",
+    "CODE-2dbec1",
+    "CODE-7cd4ed",
+    "CODE-1d844a",
+    "CODE-52afe7",
+    "CODE-b7c584",
+    "CODE-d7e21b",
+    "CODE-26e842",
+    "CODE-d7ea1e",
+    "CODE-736bee",
+    "CODE-323748",
+    "CODE-25ee23",
+    "CODE-328097",
+    "CODE-26460e",
+    "CODE-81dc07",
+    "CODE-b81bfa",
+    "CODE-b81bfa",
+    "CODE-b79e8c",
+    "CODE-d80c9b",
+    "CODE-cf38d9",
+    "CODE-1bc04b",
+    "CODE-d3425d",
+    "LINK-feb60c",
+    "LINK-8efafa",
+    "LINK-ce8c89",
+    "LINK-5e1d6e"
+  ],
+  "placeholderMap": {
+    "CODE-655883": {
+      "type": "inline-code",
+      "values": {
+        "content": "slot"
+      }
+    },
+    "CODE-c156a0": {
+      "type": "inline-code",
+      "values": {
+        "content": "proposer_index"
+      }
+    },
+    "CODE-794a15": {
+      "type": "inline-code",
+      "values": {
+        "content": "parent_root"
+      }
+    },
+    "CODE-1d844a": {
+      "type": "inline-code",
+      "values": {
+        "content": "state_root"
+      }
+    },
+    "CODE-230d83": {
+      "type": "inline-code",
+      "values": {
+        "content": "body"
+      }
+    },
+    "CODE-e7a44c": {
+      "type": "inline-code",
+      "values": {
+        "content": "randao_reveal"
+      }
+    },
+    "CODE-b77923": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth1_data"
+      }
+    },
+    "CODE-8a61a6": {
+      "type": "inline-code",
+      "values": {
+        "content": "graffiti"
+      }
+    },
+    "CODE-dcc3bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "proposer_slashings"
+      }
+    },
+    "CODE-cd759b": {
+      "type": "inline-code",
+      "values": {
+        "content": "attester_slashings"
+      }
+    },
+    "CODE-d03b09": {
+      "type": "inline-code",
+      "values": {
+        "content": "attestations"
+      }
+    },
+    "CODE-a68005": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposits"
+      }
+    },
+    "CODE-1f38b3": {
+      "type": "inline-code",
+      "values": {
+        "content": "voluntary_exits"
+      }
+    },
+    "CODE-c14516": {
+      "type": "inline-code",
+      "values": {
+        "content": "sync_aggregate"
+      }
+    },
+    "CODE-d7cfb7": {
+      "type": "inline-code",
+      "values": {
+        "content": "execution_payload"
+      }
+    },
+    "CODE-6aa5b5": {
+      "type": "inline-code",
+      "values": {
+        "content": "aggregation_bits"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-1a2fc2": {
+      "type": "inline-code",
+      "values": {
+        "content": "signature"
+      }
+    },
+    "CODE-813a89": {
+      "type": "inline-code",
+      "values": {
+        "content": "attestation"
+      }
+    },
+    "CODE-1bc04b": {
+      "type": "inline-code",
+      "values": {
+        "content": "index"
+      }
+    },
+    "CODE-d8b9f4": {
+      "type": "inline-code",
+      "values": {
+        "content": "beacon_block_root"
+      }
+    },
+    "CODE-41cf67": {
+      "type": "inline-code",
+      "values": {
+        "content": "source"
+      }
+    },
+    "CODE-34a040": {
+      "type": "inline-code",
+      "values": {
+        "content": "target"
+      }
+    },
+    "CODE-435353": {
+      "type": "inline-code",
+      "values": {
+        "content": "execution payload"
+      }
+    },
+    "CODE-0a6680": {
+      "type": "inline-code",
+      "values": {
+        "content": "execution_payload_header"
+      }
+    },
+    "CODE-2dbec1": {
+      "type": "inline-code",
+      "values": {
+        "content": "parent_hash"
+      }
+    },
+    "CODE-7cd4ed": {
+      "type": "inline-code",
+      "values": {
+        "content": "fee_recipient"
+      }
+    },
+    "CODE-52afe7": {
+      "type": "inline-code",
+      "values": {
+        "content": "receipts_root"
+      }
+    },
+    "CODE-b7c584": {
+      "type": "inline-code",
+      "values": {
+        "content": "logs_bloom"
+      }
+    },
+    "CODE-d7e21b": {
+      "type": "inline-code",
+      "values": {
+        "content": "prev_randao"
+      }
+    },
+    "CODE-26e842": {
+      "type": "inline-code",
+      "values": {
+        "content": "block_number"
+      }
+    },
+    "CODE-d7ea1e": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas_limit"
+      }
+    },
+    "CODE-736bee": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas_used"
+      }
+    },
+    "CODE-323748": {
+      "type": "inline-code",
+      "values": {
+        "content": "timestamp"
+      }
+    },
+    "CODE-25ee23": {
+      "type": "inline-code",
+      "values": {
+        "content": "extra_data"
+      }
+    },
+    "CODE-328097": {
+      "type": "inline-code",
+      "values": {
+        "content": "base_fee_per_gas"
+      }
+    },
+    "CODE-26460e": {
+      "type": "inline-code",
+      "values": {
+        "content": "block_hash"
+      }
+    },
+    "CODE-da9a5c": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactions_root"
+      }
+    },
+    "CODE-ae27f6": {
+      "type": "inline-code",
+      "values": {
+        "content": "withdrawal_root"
+      }
+    },
+    "CODE-81dc07": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactions"
+      }
+    },
+    "CODE-b81bfa": {
+      "type": "inline-code",
+      "values": {
+        "content": "withdrawals"
+      }
+    },
+    "CODE-b79e8c": {
+      "type": "inline-code",
+      "values": {
+        "content": "withdrawal"
+      }
+    },
+    "CODE-d80c9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address"
+      }
+    },
+    "CODE-cf38d9": {
+      "type": "inline-code",
+      "values": {
+        "content": "amount"
+      }
+    },
+    "CODE-d3425d": {
+      "type": "inline-code",
+      "values": {
+        "content": "validatorIndex"
+      }
+    },
+    "IMAGE-0ffab3": {
+      "type": "image",
+      "values": {
+        "path": "./tx-block.png"
+      }
+    },
+    "LINK-60076a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-8efafa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-cd977e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-fb70b4": {
+      "type": "link",
+      "values": {
+        "url": "https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf"
+      }
+    },
+    "LINK-cf2e5c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-feb60c": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/chart/blocktime"
+      }
+    },
+    "LINK-ce8c89": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-5e1d6e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T21:52:30.075Z",
+      "status": "success"
+    }
+  }
+}

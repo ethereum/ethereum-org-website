@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-06-16T22:10:04.808Z",
+  "englishManifestHash": "871a4a5e1fa5",
+  "placeholderOrder": [
+    "LINK-2655ce",
+    "LINK-a6fdd6",
+    "CODE-1cb3a2",
+    "LINK-66f2db",
+    "LINK-145d4d"
+  ],
+  "placeholderMap": {
+    "CODE-1cb3a2": {
+      "type": "inline-code",
+      "values": {
+        "content": "follow the chain containing the justified checkpoint that has the greatest height"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-a6fdd6": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/1710.09437.pdf"
+      }
+    },
+    "LINK-66f2db": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/2003.03052.pdf"
+      }
+    },
+    "LINK-145d4d": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/1710.09437.pdf"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:10:04.808Z",
+      "status": "success"
+    }
+  }
+}
