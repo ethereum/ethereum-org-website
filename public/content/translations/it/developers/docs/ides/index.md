@@ -1,38 +1,38 @@
 ---
-title: Ambienti di Sviluppo Integrati (IDE)
-description: "Scopri gli IDE basati sul web e desktop per lo sviluppo su Ethereum, inclusi Remix, VS Code e i plugin più popolari."
+title: Ambienti di sviluppo integrati (IDE)
+description: Scopri gli IDE basati sul web e desktop per lo sviluppo su Ethereum, inclusi Remix, VS Code e i plugin più popolari.
 lang: it
 ---
 
-Quando si tratta di configurare un [ambiente di sviluppo integrato (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programmare applicazioni su Ethereum è simile a programmare qualsiasi altro progetto software. Ci sono molte opzioni tra cui scegliere, quindi, alla fine, scegli l'IDE o l'editor di codice che meglio si adatta alle tue preferenze. Molto probabilmente la scelta migliore di un IDE per il tuo sviluppo su Ethereum è l'IDE che usi già per lo sviluppo software tradizionale.
+Quando si tratta di configurare un [ambiente di sviluppo integrato (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programmare applicazioni su Ethereum è simile a programmare qualsiasi altro progetto software. Ci sono molte opzioni tra cui scegliere, quindi, alla fine, scegli l'IDE o l'editor di codice che meglio si adatta alle tue preferenze. Molto probabilmente la scelta migliore come IDE per il tuo sviluppo su Ethereum è l'IDE che usi già per lo sviluppo software tradizionale.
 
 ## IDE basati sul web {#web-based-ides}
 
-Se stai cercando di armeggiare con il codice prima di [configurare un ambiente di sviluppo locale](/developers/local-environment/), queste app web sono create appositamente per lo sviluppo di contratti intelligenti su Ethereum.
+Se stai cercando di smanettare con il codice prima di [configurare un ambiente di sviluppo locale](/developers/local-environment/), queste app web sono create appositamente per lo sviluppo di smart contract su Ethereum.
 
 **[Remix](https://remix.ethereum.org/)** - **_IDE basato sul web con analisi statica integrata e una macchina virtuale blockchain di test_**
 
 - [Documentazione](https://remix-ide.readthedocs.io/en/latest/#)
 - [Gitter](https://gitter.im/ethereum/remix)
 
-**[ChainIDE](https://chainide.com/)** - **_Un IDE multi-chain basato sul cloud_**
+**[ChainIDE](https://chainide.com/)** - **_Un IDE multi-catena basato sul cloud_**
 
 - [Documentazione](https://chainide.gitbook.io/chainide-english-1/)
-- [Forum di supporto](https://forum.chainide.com/)
+- [Forum di assistenza](https://forum.chainide.com/)
 
-**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_Un ambiente di sviluppo personalizzabile per Ethereum con ricaricamento a caldo, controllo degli errori e supporto di prim'ordine per le reti di test_**
+**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_Un ambiente di sviluppo personalizzabile per Ethereum con ricaricamento a caldo (hot reloading), controllo degli errori e supporto di prim'ordine per le testnet_**
 
 - [Documentazione](https://docs.replit.com/)
 
-**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_Un ambiente di prototipazione rapida in cui puoi scrivere, eseguire ed effettuare il debug di contratti intelligenti nel browser usando Solidity e JavaScript_**
+**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_Un ambiente di prototipazione rapida in cui puoi scrivere, eseguire ed effettuare il debug di smart contract nel browser usando Solidity e JavaScript_**
 
-**[EthFiddle](https://ethfiddle.com/)** - **_IDE basato sul web che ti consente di scrivere, compilare ed effettuare il debug del tuo contratto intelligente_**
+**[EthFiddle](https://ethfiddle.com/)** - **_IDE basato sul web che ti consente di scrivere, compilare ed effettuare il debug del tuo smart contract_**
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
 ## IDE desktop {#desktop-ides}
 
-La maggior parte degli IDE consolidati ha creato plugin per migliorare l'esperienza di sviluppo su Ethereum. Come minimo, forniscono l'evidenziazione della sintassi per i [linguaggi dei contratti intelligenti](/developers/docs/smart-contracts/languages/).
+La maggior parte degli IDE consolidati ha creato plugin per migliorare l'esperienza di sviluppo su Ethereum. Come minimo, forniscono l'evidenziazione della sintassi per i [linguaggi degli smart contract](/developers/docs/smart-contracts/languages/).
 
 **Visual Studio Code -** **_IDE multipiattaforma professionale con supporto ufficiale per Ethereum_**
 
@@ -40,7 +40,7 @@ La maggior parte degli IDE consolidati ha creato plugin per migliorare l'esperie
 - [Esempi di codice](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**IDE JetBrains (IntelliJ IDEA, ecc.) -** **_Strumenti essenziali per sviluppatori di software e team_**
+**IDE JetBrains (IntelliJ IDEA, ecc.) -** **_Strumenti essenziali per sviluppatori e team di software_**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)

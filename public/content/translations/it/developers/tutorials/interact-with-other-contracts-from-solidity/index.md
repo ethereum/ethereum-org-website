@@ -1,8 +1,8 @@
 ---
 title: Interagire con altri contratti da Solidity
-description: Come distribuire un contratto intelligente da un contratto esistente e interagirvi
+description: Come distribuire uno smart contract da un contratto esistente e interagirvi
 author: "jdourlens"
-tags: ["contratti intelligenti", "Solidity", "Remix", "distribuzione", "componibilità"]
+tags: ["smart contract", "solidity", "remix", "distribuzione", "componibilità"]
 skill: advanced
 breadcrumb: Interazioni tra contratti
 lang: it
@@ -12,9 +12,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Nei tutorial precedenti abbiamo imparato molto su [come distribuire il tuo primo contratto intelligente](/developers/tutorials/deploying-your-first-smart-contract/) e aggiungervi alcune funzionalità come [controllare l'accesso con i modificatori](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o [gestire gli errori in Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). In questo tutorial impareremo come distribuire un contratto intelligente da un contratto esistente e interagirvi.
+Nei tutorial precedenti abbiamo imparato molto su [come distribuire il tuo primo smart contract](/developers/tutorials/deploying-your-first-smart-contract/) e aggiungervi alcune funzionalità come [controllare l'accesso con i modificatori](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o [gestire gli errori in Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). In questo tutorial impareremo come distribuire uno smart contract da un contratto esistente e interagirvi.
 
-Creeremo un contratto che consenta a chiunque di avere il proprio contratto intelligente `Counter` creandone una fabbrica (factory), il cui nome sarà `CounterFactory`. Innanzitutto, ecco il codice del nostro contratto intelligente `Counter` iniziale:
+Creeremo un contratto che consenta a chiunque di avere il proprio smart contract `Counter` creandone una factory, il cui nome sarà `CounterFactory`. Innanzitutto, ecco il codice del nostro smart contract `Counter` iniziale:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -52,17 +52,17 @@ contract Counter {
 }
 ```
 
-Nota che abbiamo leggermente modificato il codice del contratto per tenere traccia dell'indirizzo della factory e dell'indirizzo del proprietario del contratto. Quando chiami il codice di un contratto da un altro contratto, il msg.sender si riferirà all'indirizzo della nostra factory del contratto. Questo è **un punto davvero importante da comprendere** poiché usare un contratto per interagire con altri contratti è una pratica comune. Dovresti quindi prestare attenzione a chi è il mittente nei casi complessi.
+Nota che abbiamo modificato leggermente il codice del contratto per tenere traccia dell'indirizzo della factory e dell'indirizzo del proprietario del contratto. Quando chiami il codice di un contratto da un altro contratto, msg.sender si riferirà all'indirizzo della nostra factory di contratti. Questo è **un punto davvero importante da comprendere**, poiché usare un contratto per interagire con altri contratti è una pratica comune. Dovresti quindi prestare attenzione a chi sia il mittente nei casi complessi.
 
 Per questo abbiamo anche aggiunto un modificatore `onlyFactory` che si assicura che la funzione che modifica lo stato possa essere chiamata solo dalla factory, la quale passerà il chiamante originale come parametro.
 
-All'interno della nostra nuova `CounterFactory` che gestirà tutti gli altri Counter, aggiungeremo una mappatura (mapping) che assocerà un proprietario all'indirizzo del suo contratto counter:
+All'interno del nostro nuovo `CounterFactory` che gestirà tutti gli altri Counter, aggiungeremo una mappatura che assocerà un proprietario all'indirizzo del suo contratto counter:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-In Ethereum, le mappature sono l'equivalente degli oggetti in javascript, consentono di mappare una chiave di tipo A a un valore di tipo B. In questo caso mappiamo l'indirizzo di un proprietario con l'istanza del suo Counter.
+In Ethereum, le mappature (mapping) sono l'equivalente degli oggetti in JavaScript; consentono di mappare una chiave di tipo A a un valore di tipo B. In questo caso mappiamo l'indirizzo di un proprietario con l'istanza del suo Counter.
 
 L'istanziazione di un nuovo Counter per qualcuno avrà questo aspetto:
 
@@ -88,7 +88,7 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-La prima funzione controlla se il contratto Counter esiste per un dato indirizzo e poi chiama il metodo `getCount` dall'istanza. La seconda funzione: `getMyCount` è solo una scorciatoia per passare il msg.sender direttamente alla funzione `getCount`.
+La prima funzione controlla se il contratto Counter esiste per un dato indirizzo e poi chiama il metodo `getCount` dall'istanza. La seconda funzione: `getMyCount` è solo una scorciatoia per passare msg.sender direttamente alla funzione `getCount`.
 
 La funzione `increment` è abbastanza simile ma passa il mittente originale della transazione al contratto `Counter`:
 
@@ -101,7 +101,7 @@ function increment() public {
 
 Nota che se chiamato troppe volte, il nostro counter potrebbe essere vittima di un overflow. Dovresti usare la [libreria SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) il più possibile per proteggerti da questo possibile caso.
 
-Per distribuire il nostro contratto, dovrai fornire sia il codice della `CounterFactory` che del `Counter`. Quando distribuisci, ad esempio in Remix, dovrai selezionare CounterFactory.
+Per distribuire il nostro contratto, dovrai fornire sia il codice di `CounterFactory` che di `Counter`. Quando distribuisci, ad esempio in Remix, dovrai selezionare CounterFactory.
 
 Ecco il codice completo:
 
@@ -168,6 +168,6 @@ contract CounterFactory {
 
 Dopo la compilazione, nella sezione di distribuzione di Remix selezionerai la factory da distribuire:
 
-![Selezione della factory da distribuire in Remix](./counterfactory-deploy.png)
+![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
 
-Quindi puoi giocare con la tua factory del contratto e controllare il cambiamento del valore. Se desideri chiamare il contratto intelligente da un indirizzo diverso, dovrai cambiare l'indirizzo nella selezione Account di Remix.
+Quindi puoi giocare con la tua factory di contratti e controllare il cambiamento del valore. Se desideri chiamare lo smart contract da un indirizzo diverso, dovrai cambiare l'indirizzo nella selezione Account di Remix.
