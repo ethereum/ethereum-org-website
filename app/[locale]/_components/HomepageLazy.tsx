@@ -14,7 +14,7 @@ const Skeleton = ({
   <Section className={className}>
     <div
       data-slot="loading"
-      className={`w-full animate-pulse rounded-2xl bg-background-highlight ${heightClass}`}
+      className={`w-full animate-pulse rounded-base bg-background-highlight ${heightClass}`}
     />
   </Section>
 )

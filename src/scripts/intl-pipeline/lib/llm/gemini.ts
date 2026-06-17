@@ -913,6 +913,20 @@ async function translateJsonFile(
   // Merge batches into final JSON
   const finalContent = mergeJsonBatches(translatedBatches)
 
+  // Hard guard: a raw placeholder token must never reach a shipped file
+  // (PR #18418 leaked <HTML-PLACEHOLDER-HTMLTAG-...> into 7 locales). Restoration
+  // already strips and reports any survivor per value; if one still reaches the
+  // merged output, fail the file loudly so the caller records it instead of
+  // committing broken markup.
+  const leakedPlaceholder = finalContent.match(
+    /<\/?HTML-PLACEHOLDER-[A-Z]+-[a-f0-9]+(?:\s*\/)?>/
+  )
+  if (leakedPlaceholder) {
+    throw new Error(
+      `${filePath}: unrestored placeholder reached output (${leakedPlaceholder[0]}); refusing to ship`
+    )
+  }
+
   // Final validation: merged result against original English
   if (prepared.batchContents.length > 1) {
     const validation = validateTranslatedJson(finalContent, fileContent)

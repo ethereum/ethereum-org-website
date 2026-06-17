@@ -189,24 +189,26 @@ jobs:
             - Do NOT prompt with AskUserQuestion — fully automated.
             - NEVER call `gh pr review --approve` or `--request-changes`. The
               skill already forbids this; do not work around it.
-            - When done, write the markdown summary table to
-              /tmp/review-summary.md so the next workflow step can read it.
+            - The full summary goes in the PR comment (--post-comment). Do NOT
+              write it anywhere else — Discord only gets a pass/fail line.
 
-      - name: Read review summary
+      - name: Collect preview + Chromatic links
         if: steps.wait.outputs.outcome == 'success'
-        id: summary
+        id: links
         run: |
-          if [[ -f /tmp/review-summary.md ]]; then
-            summary=$(head -n 30 /tmp/review-summary.md | head -c 1200)
-          else
-            summary="(no summary captured)"
-          fi
-          delim="EOF_$(uuidgen)"
-          {
-            echo "text<<$delim"
-            echo "$summary"
-            echo "$delim"
-          } >> "$GITHUB_OUTPUT"
+          rollup=$(gh pr view "${{ needs.prepare.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" --json statusCheckRollup \
+            -q '.statusCheckRollup')
+          # Chromatic posts both "UI Tests" (snapshot results) and "UI Review"
+          # (approval page) contexts per project. We want the UI Tests build
+          # links — NOT UI Review — and the build URL is on .targetUrl, not the
+          # GHA job's .detailsUrl (which points at the Actions log).
+          preview=$(echo "$rollup"    | jq -r '[.[] | select(.context=="netlify/ethereumorg/deploy-preview") | .targetUrl] | first // empty')
+          components=$(echo "$rollup" | jq -r '[.[] | select(.context=="UI Tests: ethereum-org-website") | .targetUrl] | first // empty')
+          pages=$(echo "$rollup"      | jq -r '[.[] | select(.context=="UI Tests: ethereum-org-website-pages") | .targetUrl] | first // empty')
+          echo "preview=$preview"       >> "$GITHUB_OUTPUT"
+          echo "components=$components" >> "$GITHUB_OUTPUT"
+          echo "pages=$pages"           >> "$GITHUB_OUTPUT"
 
       - name: Announce ready for human
         if: steps.wait.outputs.outcome == 'success'
@@ -216,9 +218,10 @@ jobs:
           message_id: ${{ needs.prepare.outputs.discord_message_id }}
           message: |
             :white_check_mark: **Release ${{ needs.prepare.outputs.version }} reviewed — ready for human approval + merge**  •  ${{ needs.prepare.outputs.pr_url }}
-
-            ${{ steps.summary.outputs.text }}
-
+            Automated review passed — full summary is in the PR comments.
+            ${{ steps.links.outputs.preview && format(':eyes: Preview: <{0}>', steps.links.outputs.preview) || '' }}
+            ${{ steps.links.outputs.components && format(':art: Chromatic (components): <{0}>', steps.links.outputs.components) || '' }}
+            ${{ steps.links.outputs.pages && format(':framed_picture: Chromatic (pages): <{0}>', steps.links.outputs.pages) || '' }}
             Remaining manual steps: approve Chromatic, approve PR, merge.
 
       - name: Announce wait-and-review failure

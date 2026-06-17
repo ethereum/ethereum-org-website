@@ -1,93 +1,93 @@
 ---
-title: Mali halisi za dunia (RWAs)
-metaTitle: RWAs ni nini? Faida na matumizi ya Thamani halisiza Ulimwengu
-description: Muhtasari wa Mali Halisi kwenye Ethereum
+title: Rasilimali za ulimwengu halisi (RWA)
+metaTitle: RWA ni nini? | Faida na Matumizi ya Rasilimali za ulimwengu halisi
+description: Muhtasari wa Rasilimali za ulimwengu halisi kwenye Ethereum
 lang: sw
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: Mwanamume na mbwa wanaocheza.
+alt: Mwanamume na mbwa wakicheza.
 sidebarDepth: 2
 summaryPoints:
   - "Njia ya kubadilisha bidhaa zenye thamani kuwa tokeni za kidijitali."
-  - "Sasa unaweza kumiliki sehemu za vitu vya kweli au mali, badala ya kununua mali yote au kitu."
-  - "Inaunganisha fedha za jadi na mfumo wa ikolojia wa blockchain."
+  - "Sasa unaweza kumiliki sehemu za vitu au rasilimali za maisha halisi, badala ya kulazimika kununua mali au kitu kizima."
+  - "Inaunganisha mfumo wa fedha wa asili na mfumo wa ikolojia wa mnyororo wa vitalu."
 ---
 
-Mali ya ulimwengu wa kweli (RWAs) ni ishara zinazowakilisha aina za utajiri, kama mali isiyohamishika, dhahabu, hisa, sanaa, mashine au mkusanyiko. Kuinua vitu hivi hutafsiri kwa fomu ya dijiti, ikiruhusu kugawanywa kati ya wamiliki wengi na kuifanya iwe rahisi kuzifanya.
+Rasilimali za ulimwengu halisi (RWA) ni tokeni zinazowakilisha aina zilizopo za utajiri, kama vile mali isiyohamishika, dhahabu, hisa, sanaa, mashine au vitu vya kukusanywa. Uundaji wa tokeni wa vitu hivi unavibadilisha kuwa katika mfumo wa kidijitali, na kuruhusu kugawanywa kati ya wamiliki wengi na kurahisisha biashara yake.
 
-## RWAs ni nini? {#what-are-rwas}
+## RWA ni nini? {#what-are-rwas}
 
-Baadhi ya RWA zinaonekana - vitu unaweza kuona na kugusa, kama baa za dhahabu au majengo ya kibiashara. Wengine hawaonekani, kama deni la serikali, mali ya kiakili, au usawa katika kampuni.
+Baadhi ya RWA zinaonekana—vitu unavyoweza kuona na kugusa, kama vile vipande vya dhahabu au majengo ya kibiashara. Nyingine hazionekani, kama vile deni la serikali, haki miliki, au hisa katika kampuni.
+ 
+Zinapofanyiwa uundaji wa tokeni, rasilimali hizi hubadilishwa kuwa vipimo vya thamani. Dhahabu iliyofanyiwa uundaji wa tokeni ni mfano mzuri wa jinsi hii inavyofanya kazi. Kampuni ya [Paxos](https://www.paxos.com/) inabadilisha vipande vya dhahabu vya wakia 400 kuwa tokeni 400 kwenye mnyororo wa vitalu wa Ethereum, kila moja ikiungwa mkono na wakia moja ya dhahabu. Wamiliki wa tokeni wanaweza kukomboa tokeni zao kwa dhahabu wakati wowote. Hivyo ndivyo ilivyo pia kwa tokeni zilizonunuliwa kutoka kwa kampuni nyingine ya RWA, [Tether Gold](https://gold.tether.to/).
 
-Wakati wa kupunguzwa, mali hizi zinageuzwa kuwa vitengo vya thamani. Dhahabu iliyotolewa ni mfano mzuri wa jinsi hii inavyofanya kazi. Kampuni [Paxos](https://www.paxos.com/) hutafsiri baa za dhahabu 400-ndani ya ishara 400 kwenye Ethereum blockchain, kila moja inayoungwa mkono na aunzi moja ya dhahabu. Wamiliki wa ishara wanaweza kukomboa ishara zao kwa dhahabu wakati wowote. Hiyo pia ndio kesi ya ishara zilizonunuliwa kutoka kwa kampuni nyingine ya RWA, [Tether Gold](https://gold.tether.to/).
+Kila tokeni inaweza kugawanywa katika sehemu ndogo zaidi. Tokeni za Tether Gold, kwa mfano, zinaweza kugawanywa katika sehemu ndogo hadi 0.000001.
+ 
+Tokeni za RWA hazina thamani yoyote ya asili. Badala yake, zinaonyesha thamani ya kitu zinachowakilisha, na hivyo thamani ya tokeni inabadilika kulingana na thamani ya kitu hicho.
 
-Kila ishara inaweza kugawanywa katika sehemu ndogo hata. Tokeni za dhahabu za tether, kwa mfano, zinaweza kugawanywa katika sehemu ndogo kama 0.000001.
-
-Ishara za RWA hazina thamani yoyote ya ndani. Badala yake, zinaonyesha thamani ya kitu ambacho wanawakilisha, na kwa hivyo thamani ya ishara inabadilika pamoja na thamani ya bidhaa.
-
-## Je! Ni faida gani za RWAS? {#rwas-benefits}
+## Je, kuna faida gani za RWA? {#rwas-benefits}
 
 <Grid>
-  <Card title="Umiliki wa Sehemu" emoji=":house_buildings:" description="RWA zinarahisisha uwekezaji kwa wote. Kama huna uwezo wa kuwekeza kwenye aina fulani za mali, sasa unaweza kufanya hivyo kama mmiliki wa sehemu."/>
-  <Card title="Uanuwai wa Uwekezaji" emoji="🛒" description="Unaweza kuwekeza katika aina mbalimbali za mali, na hivyo kuongeza anuwai kwenye kwingineko yako bila kutumia kiasi kikubwa cha pesa." />
-  <Card title="Fursa za Kimataifa" emoji="🌏" description="RWA zinaondoa vizuizi vya kijiografia kwenye uwekezaji. Unaweza kununua tokeni za mali zilizopo popote duniani." />
-  <Card title="Fanya Mali Iwe na Ukwasi" emoji="🖼️" description="Mali nyingi hazina ukwasi. Zina thamani, lakini hiyo si sawa na kuwa na pesa unazoweza kutumia. Kwa kubadilisha mali kuwa tokeni, wamiliki wanaweza kugeuza sehemu yake au yote kuwa thamani wanayoweza kutumia."/>
-  <Card title="Soko la Kimataifa" emoji="💰" description="Wamiliki wanaotaka kunufaika na mali zao wanaweza kuwafikia wawekezaji wa aina mbalimbali—sio tu wale wenye uwezo wa kununua ardhi, hisa, kazi za sanaa, au zana za jadi za kifedha." />
-  <Card title="Epuka Watu wa Kati" emoji="👩‍💻" description="Tokeni zinaendeshwa na mikataba mahiri, ikimaanisha zinaweza kuuzwa na kununuliwa moja kwa moja baina ya watu, bila uhitaji wa watu wa kati na ada zao." />
+  <Card title="Umiliki wa Sehemu" emoji=":house_buildings:" description="RWA hufanya uwekezaji upatikane kwa wote. Ikiwa umezuiwa kuwekeza katika aina fulani za rasilimali kwa sababu huna uwezo wa kununua katika masoko hayo, sasa unaweza kufanya hivyo kama mmiliki wa sehemu."/>
+  <Card title="Utofautishaji wa uwekezaji" emoji="🛒" description="Unaweza kuwekeza katika aina nyingi za rasilimali, kukuruhusu kutofautisha potifolio yako bila kutumia kiasi kikubwa cha pesa kama cha mifuko ya uwekezaji." />
+  <Card title="Fursa za kimataifa" emoji="🌏" description="RWA huondoa vizuizi vya kijiografia katika uwekezaji. Unaweza kununua tokeni za rasilimali zilizoko popote duniani." />
+  <Card title="Fanya rasilimali ziwe na ukwasi" emoji="🖼️" description="Rasilimali nyingi hazina ukwasi. Zina thamani, lakini hiyo si sawa na kuwa na pesa taslimu unayoweza kutumia. Kwa kuunda tokeni za rasilimali, wamiliki wanaweza kubadilisha sehemu au rasilimali yote kuwa thamani wanayoweza kutumia."/>
+  <Card title="Soko la dunia nzima" emoji="💰" description="Wamiliki wanaotafuta kugeuza rasilimali zao kuwa mtaji wanaweza kuwafikia wawekezaji wengi zaidi—sio tu watu ambao kwa kawaida wana uwezo wa kununua ardhi, hisa, kazi za sanaa, au zana za kifedha za kitamaduni." />
+  <Card title="Epuka watu wa kati" emoji="👩‍💻" description="Tokeni huendeshwa kwenye mikataba mahiri, ikimaanisha tokeni zinaweza kuuzwa na kununuliwa kati ya mtu na mtu bila kuhitaji watu wa kati na ada zao." />
 </Grid>
 
-## RWAs inafanyaje kazi? {#how-rwas-work}
+## Je, RWA zinafanyaje kazi? {#how-rwas-work}
 
-Wacha tuangalie mifano michache kutoka kwa mfumo wa ikolojia wa RWA: mali isiyohamishika, bidhaa za jadi za kifedha, na sanaa nzuri.
+Hebu tuangalie mifano michache kutoka kwenye mfumo wa ikolojia wa RWA: mali isiyohamishika, bidhaa za kifedha za asili, na sanaa nzuri.
 
 ### Kuwekeza katika mali isiyohamishika {#investing-in-real-estate}
 
-Sema kuwa unapenda kuwekeza katika mali isiyohamishika, lakini ununuzi wa mali nzima hauwezi kufikiwa. Badala yake, unaweza kununua RWAs kupitia mradi kama vile [RealT](https://realt.co/). Ishara zake zinawakilisha hisa katika kampuni ndogo ya dhima (LLC) iliyoundwa kushikilia hati ya mali. Wamiliki wa ishara hupokea mapato ya kukodisha kwa njia ya Stablecoins kulingana na sehemu wanayoshikilia; RealT anasema hadi sasa imerudisha dola milioni 15 za dola katika mapato ya jumla ya kukodisha kwa wawekezaji.
+Tuseme ungependa kuwekeza katika mali isiyohamishika, lakini kununua mali nzima ni vigumu. Badala yake, unaweza kununua RWA kupitia mradi kama vile [RealT](https://realt.co/). Tokeni zake zinawakilisha hisa katika kampuni ya dhima yenye kikomo (LLC) iliyoundwa kushikilia hati ya mali. Wamiliki wa tokeni hupokea mapato ya kodi kwa njia ya sarafu dhabiti (stablecoins) kulingana na sehemu wanayomiliki; RealT inasema hadi sasa imerudisha dola milioni 15 za Marekani katika mapato halisi ya kodi kwa wawekezaji. 
 
-Mradi mwingine kando ya mistari hiyo hiyo, [Maabara ya Kikundi](https://x.com/labsgroupio), inaruhusu watu kununua katika mali isiyohamishika iliyo na kiasi kidogo kama $ 100 USD.
+Mradi mwingine unaofanana na huo, [LABS Group](https://x.com/labsgroupio), unaruhusu watu kununua mali isiyohamishika iliyofanyiwa uundaji wa tokeni kwa kiasi kidogo hadi dola 100 za Marekani.
 
 ### Kuwekeza katika bidhaa za kifedha {#investing-in-financial-products}
 
-Miradi kadhaa hufunga ulimwengu wa fedha za jadi na fedha za madaraka (DeFi) kwa kuleta dhamana, hisa, vifungo na vyombo vingine vya kifedha kwenye blockchain.
+Miradi kadhaa inajenga daraja kati ya ulimwengu wa fedha za asili na fedha zilizogatuliwa (DeFi) kwa kuleta dhamana, hisa, hatifungani na zana nyingine za kifedha kwenye mnyororo wa vitalu.
 
-Kwa mfano, kampuni ya msingi wa Ethereum [Securitize](https://securitize.io/) inataalam katika kuashiria bidhaa za jadi za kifedha. Mnamo 2024, ilishirikiana na BlackRock kuzindua mfuko wa RWA. BlackRock anasema ina mpango wa hatimaye kuangazia dola trilioni 10 za mali yake: Mkurugenzi Mtendaji wake, Larry Fink, aliita ishara "kizazi kijacho kwa masoko".
+Kwa mfano, kampuni inayotegemea Ethereum ya [Securitize](https://securitize.io/) inajishughulisha na uundaji wa tokeni wa bidhaa za kifedha za asili. Mnamo 2024, ilishirikiana na BlackRock kuzindua mfuko wa RWA. BlackRock inasema inapanga hatimaye kufanya uundaji wa tokeni wa dola trilioni 10 za Marekani za rasilimali zake: Mkurugenzi Mtendaji wake, Larry Fink, aliuita uundaji wa tokeni "kizazi kijacho cha masoko".
 
-### Kuwekeza katika Sanaa Nzuri {#investing-in-fine-art}
+### Kuwekeza katika sanaa nzuri {#investing-in-fine-art}
 
-Kuna mifumo tofauti tofauti za uwekezaji mzuri wa sanaa. [Masterworks](https://www.masterworks.com/) hununua mchoro, huhifadhi kila kipande, na huuza hisa katika mfumo wa ishara. Inapanga baadaye kuuza mchoro na kusambaza faida kwa wamiliki wa ishara.
+Kuna mifumo michache tofauti ya uwekezaji wa sanaa nzuri. [Masterworks](https://www.masterworks.com/) hununua kazi za sanaa, kuweka dhamana kwa kila kipande, na kuuza hisa kwa njia ya tokeni. Inapanga baadaye kuuza kazi za sanaa na kusambaza faida kwa wamiliki wa tokeni.
 
-Wamiliki wa ishara hawadhibiti uhifadhi au uuzaji wa baadaye wa mchoro. Badala yake, wanasimamia ni muda gani wanashikilia ishara zao, ambazo hupanda na kushuka kulingana na thamani ya sanaa.
+Wamiliki wa tokeni hawadhibiti uhifadhi au uuzaji wa baadaye wa kazi ya sanaa. Badala yake, wanahusika na muda gani wanashikilia tokeni zao, ambazo hupanda na kushuka kulingana na thamani ya sanaa.
+ 
+Wakati huo huo, sajili ya sanaa ya kidijitali inayotegemea mnyororo wa vitalu ya [Artory](https://www.artory.com/) inathibitisha uhalisi wa kazi za sanaa na kurekodi umiliki wa zamani.
 
-Wakati huo huo, Msajili wa Sanaa ya Dijiti ya Digital-msingi [Sanaa](https://www.artory.com/) inathibitisha ukweli wa kazi za sanaa na kurekodi umiliki wa zamani.
+### Kuwekeza katika vitu vya kukusanywa {#investing-in-collectibles}
 
-### Kuwekeza katika mkusanyiko {#investing-in-collectibles}
+Kufikia sasa, mifano mingi kati ya hii inaonyesha jinsi uundaji wa tokeni unavyoruhusu umiliki wa sehemu wa aina mbalimbali za utajiri. Faida nyingine ya uundaji wa tokeni ni kwamba inawezesha biashara ya vitu vya thamani, kama vile vitu vya kukusanywa, kwenye soko la kimataifa.
 
-Kufikia sasa, mifano hii mingi inaonyesha jinsi ishara inaruhusu umiliki wa aina ya utajiri. Faida nyingine ya ishara ni kwamba inawezesha biashara ya vitu muhimu, kama vile mkusanyiko, kwenye soko la kimataifa.
+Mfano mmoja wa hili ni [Courtyard](https://courtyard.io/), ambayo inafanya uundaji wa tokeni wa kadi za biashara–fikiria kadi za besiboli, kadi za mpira wa miguu au kadi za Pokemon. Wamiliki wa kadi husafirisha kadi zao kwenye kituo salama cha kuhifadhi nchini Marekani. Kadi hizo hutengenezwa kama tokeni za kidijitali na kuongezwa kwenye pochi za wamiliki kwa ajili ya biashara kwenye soko la Courtyard. Courtyard inakubali tu kadi zilizokadiriwa: hapo ndipo mhusika wa tatu amethibitisha uhalisi wa kadi na kuipa alama kulingana na hali yake, iwe imechakaa au ni mpya kabisa.
 
-Mfano mmoja wa hii ni [ua](https://courtyard.io/), ambayo inaonyesha kadi za biashara -fikiria kadi za baseball, kadi za mpira wa miguu au kadi za Pokemon. Wamiliki wa kadi husafirisha kadi zao kwenye kituo salama cha kuhifadhi huko USA. The cards are minted as digital tokens and added to the owners’ wallets for trading on Courtyard’s marketplace. Ua unakubali tu kadi za kiwango cha juu: ndipo mtu wa tatu amethibitisha uhalisi wa kadi na kuipatia alama kulingana na hali yake, iwe imepunguka au pristine.
+Courtyard pia inatoa aina ya mpango wa mirabaha. Kila wakati kadi inapouzwa, mtu aliyeifanyia uundaji wa tokeni hupokea asilimia moja ya mapato. Waanzilishi wa kadi pekee ndio wanaotuzwa kwa njia hii. Wakati wowote, mmiliki anaweza kufanya badilishano la kadi zao za kidijitali kwa kadi halisi, bila kujali wako wapi ulimwenguni. 
 
-Ua pia hutoa aina ya mpango wa kifalme. Kila wakati kadi inauzwa, mtu ambaye aliiga hupokea asilimia moja ya mapato. Waanzilishi wa kadi pekee ndio wanalipwa kwa njia hii. Wakati wowote, mmiliki anaweza kubadilisha kadi zao za dijiti kwa kadi za mwili, haijalishi ziko ulimwenguni.
+## Je, kuna mapungufu gani ya RWA? {#rwas-limitations}
 
-## Je! Ni mapungufu gani ya RWAS? {#rwas-limitations}
+Moja ya changamoto za RWA, katika hatua hii ya awali, inahusisha kuhakikisha muunganisho kati ya vitu vya maisha halisi na uwakilishi wake wa kidijitali.
 
-Changamoto moja ya RWAs, katika hatua hii ya mapema, inajumuisha kuhakikisha uhusiano kati ya vitu vya kweli na uwakilishi wao wa dijiti.
+Ishara nzuri ni wakati miradi ya RWA inawapa wawekezaji uthibitisho wa akiba–dhamana kwamba wao ni wamiliki halali wa vitu halisi vinavyounga mkono tokeni za kidijitali. Fikiria Paxos, Tether Gold, au Courtyard, zilizotajwa hapo awali, ambazo zote zinashikilia rasilimali zao katika hifadhi salama na kuwapa wamiliki chaguo la kufanya badilishano la tokeni kwa kitu chake halisi wakati wowote.
 
-Bendera ya kijani ni wakati miradi ya RWA inapeana wawekezaji na dhibitisho la akiba -dhamana kwamba wao ni wamiliki wa kisheria wa vitu vya mwili vinaunga mkono ishara za dijiti. Fikiria Paxos, Tether Gold, au ua, iliyotajwa hapo awali, ambayo yote yanashikilia mali zao katika uhifadhi salama na inawapa wamiliki chaguo la kubadilisha ishara kwa sawa na mwili wake wakati wowote.
+Kizuizi kingine ni ikiwa umiliki wa tokeni unatambuliwa na mifumo ya kisheria duniani kote. Kwa maneno mengine, je, mikataba mahiri inaweza kutekelezwa katika mahakama ya sheria, au mmiliki wa tokeni ya RWA anaweza kudai umiliki wa kitu cha maisha halisi?
 
-Kizuizi kingine ni ikiwa umiliki wa ishara unatambuliwa na mifumo ya kisheria kote ulimwenguni. Kwa maneno mengine, je! Mikataba smart inaweza kutekelezwa katika korti ya sheria, au mmiliki wa ishara ya RWA inaweza kudai umiliki wa kitu halisi cha maisha?
-
-Baadhi ya watangulizi katika suala la kuanzisha mifumo ya kisheria haswa kutambua ishara ni pamoja na Singapore, Falme za Kiarabu, Hong Kong, na Uswizi, ambayo ilianzisha sheria mnamo 2021 ilipewa jina la 'blockchain' kudhibiti teknolojia kama vile. Jumuiya ya Ulaya imeanza mchakato wa kudhibiti RWAs, wakati huko Merika, Tume ya Usalama na Uuzaji inatarajiwa kutoa mwongozo juu ya RWAs wakati fulani.
+Baadhi ya waanzilishi katika suala la kuweka mifumo ya kisheria hasa kutambua uundaji wa tokeni ni pamoja na Singapore, Falme za Kiarabu, Hong Kong, na Uswizi, ambayo ilianzisha sheria mnamo 2021 iliyopewa jina la utani la 'Sheria ya Mnyororo wa Vitalu' (Blockchain Act) ili kudhibiti teknolojia kama vile uundaji wa tokeni. Umoja wa Ulaya umeanza mchakato wa kudhibiti RWA, wakati nchini Marekani, Tume ya Usalama na Ubadilishanaji (Securities and Exchange Commission) inatarajiwa kutoa mwongozo kuhusu RWA wakati fulani.
 
 ## Jifunze zaidi {#learn-more}
 
-Kuingia kwenye [mikataba ya smart](/smart-contracts/) au ujue zaidi juu ya darasa tofauti la ishara, [tokeni zisizo na fungi (NFT)](/nft/).
+Chunguza kwa kina [mikataba mahiri](/smart-contracts/) au pata maelezo zaidi kuhusu darasa tofauti la tokeni, [tokeni zisizoweza kubadilishana (NFT)](/nft/).
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-- [Je! Mali ya mali ni nini](https://www.britannica.com/money/real-world-asset-tokenization) ya Britannica
-- [Jinsi uwekaji ishara unavyobadilisha fedha na uwekezaji wa kimataifa](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/) kwenye World Economic Forum
-- [Mambo ambayo wawekezaji wa kripto wanahitaji kujua kuhusu kuweka ishara kwenye mali za ulimwengu halisi](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/) kwenye Forbes
-- [Jinsi mikataba-erevu inavyofanya kazi na mnyororo wa bloku](https://www.britannica.com/money/how-smart-contracts-work) kwenye Britannica
-- [Jinsi mali zenye ishara za ulimwengu halisi zinavyobadilisha DeFi](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a) kwenye Medium
-- [RWA ni nini katika kripto? Wajibu wake katika mnyororo wa bloku umeelezewa](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) kwenye BitDegree
-- [Sarafu za juu za mali za ulimwengu halisi (RWAs) leo kulingana na kiwango cha soko](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/) kwenye Forbes
+- [Uundaji wa tokeni wa rasilimali ni nini?](https://www.britannica.com/money/real-world-asset-tokenization) kwenye Britannica
+- [Jinsi uundaji wa tokeni unavyobadilisha fedha na uwekezaji wa kimataifa](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/) kwenye Jukwaa la Uchumi Duniani (World Economic Forum)
+- [Kile ambazo wawekezaji wa kripto wanahitaji kujua kuhusu uundaji wa tokeni wa rasilimali za ulimwengu halisi](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/) kwenye Forbes
+- [Jinsi mikataba mahiri inavyofanya kazi na mnyororo wa vitalu](https://www.britannica.com/money/how-smart-contracts-work) kwenye Britannica
+- [Jinsi rasilimali za ulimwengu halisi zilizofanyiwa uundaji wa tokeni zinavyobadilisha DeFi](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a) kwenye Medium
+- [RWA ni nini katika kripto? Jukumu lake la mnyororo wa vitalu limeelezwa](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) kwenye BitDegree
+- [Sarafu kuu za rasilimali za ulimwengu halisi (RWA) leo kwa mtaji wa soko](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/) kwenye Forbes

@@ -1,0 +1,936 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-17T00:27:21.720Z",
+  "englishManifestHash": "808d25c6ac9a",
+  "placeholderOrder": [
+    "LINK-eb5ea9",
+    "LINK-7df3f7",
+    "LINK-e58ce8",
+    "LINK-668d01",
+    "CODE-665d06",
+    "CODE-258ef7",
+    "LINK-aaeacc",
+    "LINK-db9470",
+    "LINK-7d65d0",
+    "LINK-b29c32",
+    "CODE-3f09ba",
+    "CODE-abb530",
+    "CODE-621ca7",
+    "CODE-abb530",
+    "CODE-621ca7",
+    "CODE-abb530",
+    "CODE-25a663",
+    "CODE-25a663",
+    "CODE-bc17e7",
+    "CODE-abb530",
+    "CODE-3a2dc0",
+    "CODEBLOCK-77c4ff",
+    "CODE-06bf4a",
+    "CODEBLOCK-80f5b9",
+    "CODE-abb530",
+    "CODE-621ca7",
+    "CODE-25a663",
+    "CODE-bc17e7",
+    "CODEBLOCK-6d7967",
+    "LINK-faf58e",
+    "CODE-1319ba",
+    "CODE-073c16",
+    "CODE-82a353",
+    "CODE-c9046f",
+    "CODE-28e5eb",
+    "CODE-b6e70b",
+    "CODE-7569af",
+    "CODE-df4ece",
+    "CODE-2d4a63",
+    "CODEBLOCK-3fe5fb",
+    "LINK-72d43b",
+    "CODE-b6e70b",
+    "CODE-4f53cd",
+    "CODE-7569af",
+    "CODE-df4ece",
+    "CODE-28e5eb",
+    "CODE-82a353",
+    "CODE-c9046f",
+    "CODE-7569af",
+    "CODE-df4ece",
+    "CODE-81ac4b",
+    "CODE-1820e4",
+    "CODEBLOCK-228cfb",
+    "CODE-9b5b59",
+    "CODE-2cbe62",
+    "CODE-25a663",
+    "LINK-0eaf8d",
+    "LINK-f9ea87",
+    "LINK-3ce673",
+    "LINK-97d164",
+    "LINK-2ab690",
+    "CODEBLOCK-c9fedc",
+    "LINK-c43361",
+    "CODE-283d00",
+    "CODE-6fd897",
+    "CODE-25a663",
+    "CODE-1fa251",
+    "CODE-1fa251",
+    "CODE-283d00",
+    "CODE-bc17e7",
+    "CODE-1fa251",
+    "CODEBLOCK-23a098",
+    "CODE-b08881",
+    "CODE-b08881",
+    "LINK-0fc8df",
+    "CODE-b08881",
+    "CODE-d80c9b",
+    "CODE-073c16",
+    "CODE-b08881",
+    "LINK-436a98",
+    "CODE-c436b6",
+    "CODE-e35109",
+    "CODE-283d00",
+    "CODE-d80c9b",
+    "CODE-073c16",
+    "CODE-d80c9b",
+    "CODE-073c16",
+    "CODE-283d00",
+    "CODE-99a96b",
+    "CODE-bc17e7",
+    "CODE-76801c",
+    "CODE-bc17e7",
+    "CODE-bc17e7",
+    "CODEBLOCK-e1b1d7",
+    "CODE-7569af",
+    "CODE-283d00",
+    "CODEBLOCK-9fb4fb",
+    "CODE-bc17e7",
+    "CODE-1fa251",
+    "CODE-7569af",
+    "CODE-283d00",
+    "CODE-073c16",
+    "CODE-1319ba",
+    "CODE-bc17e7",
+    "CODE-1fa251",
+    "CODE-de61d1",
+    "CODE-1fa251",
+    "CODE-de61d1",
+    "CODEBLOCK-e2bca5",
+    "CODE-283d00",
+    "CODE-4100e4",
+    "CODE-062b91",
+    "CODE-b6e70b",
+    "CODE-bc17e7",
+    "CODE-283d00",
+    "CODE-1fa251",
+    "CODE-bc17e7",
+    "CODEBLOCK-c77c4c",
+    "CODE-b6e70b",
+    "CODEBLOCK-76bf47",
+    "CODE-de61d1",
+    "CODE-1319ba",
+    "CODE-073c16",
+    "CODE-bc17e7",
+    "CODE-02a963",
+    "CODEBLOCK-720fa4",
+    "CODE-b08881",
+    "CODE-073c16",
+    "CODE-dd8de1",
+    "CODE-1319ba",
+    "CODE-bc62a3",
+    "CODE-1319ba",
+    "CODE-b6e70b",
+    "CODEBLOCK-ed1fba",
+    "CODE-258ef7",
+    "CODE-480e30",
+    "LINK-694db2",
+    "LINK-694db2",
+    "LINK-b06454",
+    "LINK-db618d",
+    "LINK-daa6fb",
+    "CODE-abb530",
+    "CODEBLOCK-13d8cf",
+    "CODE-e9cbb0",
+    "CODE-abb530",
+    "CODEBLOCK-67b862",
+    "CODE-e9cbb0",
+    "CODE-e9cbb0",
+    "CODEBLOCK-0d385d",
+    "LINK-c3fb5d",
+    "CODE-6fd897",
+    "CODE-10e4a1",
+    "CODEBLOCK-3b9050",
+    "CODE-10e4a1",
+    "CODEBLOCK-557e7b",
+    "LINK-838640",
+    "CODE-4219c5",
+    "CODE-3ba878",
+    "CODE-4219c5",
+    "CODE-aee408",
+    "CODE-4c0fe4",
+    "CODE-4c0fe4",
+    "CODE-258ef7",
+    "CODE-aee408",
+    "CODE-ab530a",
+    "CODE-283d00",
+    "CODE-4219c5",
+    "CODE-480e30",
+    "LINK-b4445a",
+    "LINK-9dd8b5",
+    "CODE-25a663",
+    "CODE-b8bcd2",
+    "LINK-428c2f",
+    "CODE-e9cbb0",
+    "CODEBLOCK-fa0f89",
+    "LINK-9844e6",
+    "LINK-9844e6",
+    "CODE-3f09ba",
+    "CODEBLOCK-6fd0a4",
+    "CODE-1fa251",
+    "CODEBLOCK-b8267a",
+    "LINK-9844e6",
+    "LINK-fd1ffc",
+    "CODEBLOCK-cb983e",
+    "CODE-1fa251",
+    "CODE-480e30",
+    "CODE-28e5eb",
+    "CODE-82a353",
+    "CODE-c9046f",
+    "CODE-283d00",
+    "CODEBLOCK-397a90",
+    "CODEBLOCK-24952f",
+    "CODE-aee408",
+    "CODE-073c16",
+    "CODE-4219c5",
+    "CODE-4219c5",
+    "CODE-1fa251",
+    "CODE-1fa251",
+    "CODEBLOCK-81ac13",
+    "CODE-4219c5",
+    "CODE-28e5eb",
+    "CODE-82a353",
+    "CODE-c9046f",
+    "CODE-45447b",
+    "CODE-4219c5",
+    "CODE-45447b",
+    "CODEBLOCK-6b57ca",
+    "CODE-9564cd",
+    "CODE-2bd886",
+    "CODE-aee408",
+    "CODE-073c16",
+    "CODE-aa05d2",
+    "CODE-2bd886",
+    "CODE-258ef7",
+    "CODE-480e30",
+    "CODE-0bc6dc",
+    "CODEBLOCK-ccc180",
+    "CODE-480e30",
+    "CODEBLOCK-f51717",
+    "CODE-663ea1",
+    "CODE-75857a",
+    "CODE-f8d3ec",
+    "CODE-3a6eb0",
+    "CODE-480e30",
+    "CODE-258ef7",
+    "CODE-f8d3ec",
+    "CODE-0b8d8a",
+    "CODE-c2b5a7",
+    "CODE-aee408",
+    "CODE-073c16",
+    "CODE-aee408",
+    "CODE-073c16",
+    "CODE-480e30",
+    "CODEBLOCK-6a2018",
+    "CODE-480e30",
+    "CODE-bc17e7",
+    "CODE-bc17e7",
+    "CODE-aacb45",
+    "CODEBLOCK-dad07a",
+    "CODE-df4ece",
+    "CODE-480e30",
+    "CODE-073c16",
+    "CODEBLOCK-9998d2",
+    "LINK-2844bf",
+    "LINK-da3448",
+    "LINK-34265f"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-77c4ff": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-80f5b9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6d7967": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3fe5fb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-228cfb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c9fedc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-23a098": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e1b1d7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9fb4fb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e2bca5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c77c4c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-76bf47": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-720fa4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ed1fba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-13d8cf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-67b862": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0d385d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3b9050": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-557e7b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fa0f89": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6fd0a4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b8267a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cb983e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-397a90": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-24952f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-81ac13": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6b57ca": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ccc180": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f51717": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6a2018": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dad07a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9998d2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-665d06": {
+      "type": "inline-code",
+      "values": {
+        "content": "recipient"
+      }
+    },
+    "CODE-258ef7": {
+      "type": "inline-code",
+      "values": {
+        "content": "tokenURI"
+      }
+    },
+    "CODE-3f09ba": {
+      "type": "inline-code",
+      "values": {
+        "content": "nft-minter-tutorial"
+      }
+    },
+    "CODE-abb530": {
+      "type": "inline-code",
+      "values": {
+        "content": "minter-starter-files"
+      }
+    },
+    "CODE-621ca7": {
+      "type": "inline-code",
+      "values": {
+        "content": "nft-minter"
+      }
+    },
+    "CODE-25a663": {
+      "type": "inline-code",
+      "values": {
+        "content": "src"
+      }
+    },
+    "CODE-bc17e7": {
+      "type": "inline-code",
+      "values": {
+        "content": "Minter.js"
+      }
+    },
+    "CODE-3a2dc0": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm install"
+      }
+    },
+    "CODE-06bf4a": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm start"
+      }
+    },
+    "CODE-1319ba": {
+      "type": "inline-code",
+      "values": {
+        "content": "walletAddress"
+      }
+    },
+    "CODE-073c16": {
+      "type": "inline-code",
+      "values": {
+        "content": "status"
+      }
+    },
+    "CODE-82a353": {
+      "type": "inline-code",
+      "values": {
+        "content": "name"
+      }
+    },
+    "CODE-c9046f": {
+      "type": "inline-code",
+      "values": {
+        "content": "description"
+      }
+    },
+    "CODE-28e5eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "url"
+      }
+    },
+    "CODE-b6e70b": {
+      "type": "inline-code",
+      "values": {
+        "content": "useEffect"
+      }
+    },
+    "CODE-7569af": {
+      "type": "inline-code",
+      "values": {
+        "content": "connectWalletPressed"
+      }
+    },
+    "CODE-df4ece": {
+      "type": "inline-code",
+      "values": {
+        "content": "onMintPressed"
+      }
+    },
+    "CODE-2d4a63": {
+      "type": "inline-code",
+      "values": {
+        "content": "async"
+      }
+    },
+    "CODE-4f53cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "[]"
+      }
+    },
+    "CODE-81ac4b": {
+      "type": "inline-code",
+      "values": {
+        "content": "mintButton"
+      }
+    },
+    "CODE-1820e4": {
+      "type": "inline-code",
+      "values": {
+        "content": "walletButton"
+      }
+    },
+    "CODE-9b5b59": {
+      "type": "inline-code",
+      "values": {
+        "content": "App.js"
+      }
+    },
+    "CODE-2cbe62": {
+      "type": "inline-code",
+      "values": {
+        "content": "Minter.js file"
+      }
+    },
+    "CODE-283d00": {
+      "type": "inline-code",
+      "values": {
+        "content": "connectWallet"
+      }
+    },
+    "CODE-6fd897": {
+      "type": "inline-code",
+      "values": {
+        "content": "utils"
+      }
+    },
+    "CODE-1fa251": {
+      "type": "inline-code",
+      "values": {
+        "content": "interact.js"
+      }
+    },
+    "CODE-b08881": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum"
+      }
+    },
+    "CODE-d80c9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address"
+      }
+    },
+    "CODE-c436b6": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum.request({ method: \"eth_requestAccounts\" });"
+      }
+    },
+    "CODE-e35109": {
+      "type": "inline-code",
+      "values": {
+        "content": "method: \"eth_requestAccounts\""
+      }
+    },
+    "CODE-99a96b": {
+      "type": "inline-code",
+      "values": {
+        "content": "Minter.js."
+      }
+    },
+    "CODE-76801c": {
+      "type": "inline-code",
+      "values": {
+        "content": "import { connectWallet } from \"./utils/interact.js\";"
+      }
+    },
+    "CODE-de61d1": {
+      "type": "inline-code",
+      "values": {
+        "content": "getCurrentWalletConnected"
+      }
+    },
+    "CODE-4100e4": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_requestAccounts"
+      }
+    },
+    "CODE-062b91": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_accounts"
+      }
+    },
+    "CODE-02a963": {
+      "type": "inline-code",
+      "values": {
+        "content": "addWalletListener"
+      }
+    },
+    "CODE-dd8de1": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum.on(\"accountsChanged\")"
+      }
+    },
+    "CODE-bc62a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "accounts"
+      }
+    },
+    "CODE-480e30": {
+      "type": "inline-code",
+      "values": {
+        "content": "mintNFT"
+      }
+    },
+    "CODE-e9cbb0": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env"
+      }
+    },
+    "CODE-10e4a1": {
+      "type": "inline-code",
+      "values": {
+        "content": "pinata.js"
+      }
+    },
+    "CODE-4219c5": {
+      "type": "inline-code",
+      "values": {
+        "content": "pinJSONToIPFS"
+      }
+    },
+    "CODE-3ba878": {
+      "type": "inline-code",
+      "values": {
+        "content": "JSONBody"
+      }
+    },
+    "CODE-aee408": {
+      "type": "inline-code",
+      "values": {
+        "content": "success"
+      }
+    },
+    "CODE-4c0fe4": {
+      "type": "inline-code",
+      "values": {
+        "content": "pinataUrl"
+      }
+    },
+    "CODE-ab530a": {
+      "type": "inline-code",
+      "values": {
+        "content": "message"
+      }
+    },
+    "CODE-b8bcd2": {
+      "type": "inline-code",
+      "values": {
+        "content": "contract-abi.json"
+      }
+    },
+    "CODE-45447b": {
+      "type": "inline-code",
+      "values": {
+        "content": "metadata"
+      }
+    },
+    "CODE-9564cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "pinJSONToIPFS(metadata)"
+      }
+    },
+    "CODE-2bd886": {
+      "type": "inline-code",
+      "values": {
+        "content": "pinataResponse"
+      }
+    },
+    "CODE-aa05d2": {
+      "type": "inline-code",
+      "values": {
+        "content": "pinataURL"
+      }
+    },
+    "CODE-0bc6dc": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.contract"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-75857a": {
+      "type": "inline-code",
+      "values": {
+        "content": "from"
+      }
+    },
+    "CODE-f8d3ec": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum.selectedAddress"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-0b8d8a": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum.request,"
+      }
+    },
+    "CODE-c2b5a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactionParameters"
+      }
+    },
+    "CODE-aacb45": {
+      "type": "inline-code",
+      "values": {
+        "content": "import { connectWallet, getCurrentWalletConnected } from \"./utils/interact.js\";"
+      }
+    },
+    "LINK-eb5ea9": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/"
+      }
+    },
+    "LINK-7df3f7": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/learn/tutorial-tic-tac-toe"
+      }
+    },
+    "LINK-e58ce8": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d"
+      }
+    },
+    "LINK-668d01": {
+      "type": "link",
+      "values": {
+        "url": "https://alchemy.com/"
+      }
+    },
+    "LINK-aaeacc": {
+      "type": "link",
+      "values": {
+        "url": "https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2"
+      }
+    },
+    "LINK-db9470": {
+      "type": "link",
+      "values": {
+        "url": "https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
+      }
+    },
+    "LINK-7d65d0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/how-to-create-an-nft"
+      }
+    },
+    "LINK-b29c32": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform/nft-minter-tutorial"
+      }
+    },
+    "LINK-faf58e": {
+      "type": "link",
+      "values": {
+        "url": "https://legacy.reactjs.org/docs/hooks-state.html"
+      }
+    },
+    "LINK-72d43b": {
+      "type": "link",
+      "values": {
+        "url": "https://legacy.reactjs.org/docs/hooks-effect.html"
+      }
+    },
+    "LINK-0eaf8d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-f9ea87": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io/download"
+      }
+    },
+    "LINK-3ce673": {
+      "type": "link",
+      "values": {
+        "url": "https://faucet.ropsten.be/"
+      }
+    },
+    "LINK-97d164": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance"
+      }
+    },
+    "LINK-2ab690": {
+      "type": "link",
+      "values": {
+        "url": "https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D"
+      }
+    },
+    "LINK-c43361": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller"
+      }
+    },
+    "LINK-0fc8df": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents"
+      }
+    },
+    "LINK-436a98": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts"
+      }
+    },
+    "LINK-694db2": {
+      "type": "link",
+      "values": {
+        "url": "https://pinata.cloud/"
+      }
+    },
+    "LINK-b06454": {
+      "type": "link",
+      "values": {
+        "url": "https://app.pinata.cloud/auth/signup"
+      }
+    },
+    "LINK-db618d": {
+      "type": "link",
+      "values": {
+        "url": "https://pinata.cloud/keys"
+      }
+    },
+    "LINK-daa6fb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/dotenv"
+      }
+    },
+    "LINK-c3fb5d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json"
+      }
+    },
+    "LINK-838640": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/axios"
+      }
+    },
+    "LINK-b4445a": {
+      "type": "link",
+      "values": {
+        "url": "https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
+      }
+    },
+    "LINK-9dd8b5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/how-to-create-an-nft"
+      }
+    },
+    "LINK-428c2f": {
+      "type": "link",
+      "values": {
+        "url": "https://alchemy.com/?a=eth-org-nft-minter"
+      }
+    },
+    "LINK-9844e6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform/alchemy-web3"
+      }
+    },
+    "LINK-fd1ffc": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/"
+      }
+    },
+    "LINK-2844bf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online"
+      }
+    },
+    "LINK-da3448": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet"
+      }
+    },
+    "LINK-34265f": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/gWuC7zB"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:27:21.720Z",
+      "status": "success"
+    }
+  }
+}

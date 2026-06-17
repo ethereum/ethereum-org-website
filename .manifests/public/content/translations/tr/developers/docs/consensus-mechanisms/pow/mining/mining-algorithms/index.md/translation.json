@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-06-16T22:22:36.304Z",
+  "englishManifestHash": "40ccc57434cd",
+  "placeholderOrder": [
+    "HTMLTAG-addbca",
+    "HTMLTAG-85419b",
+    "HTMLTAG-fd28ad",
+    "LINK-139dc0",
+    "LINK-3d4134",
+    "LINK-9be4a3",
+    "LINK-a696f8",
+    "LINK-5f0e9f",
+    "LINK-cebf2c",
+    "LINK-1a2415"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-addbca": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/roadmap/merge/"
+      }
+    },
+    "HTMLTAG-85419b": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "HTMLTAG-fd28ad": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/staking/"
+      }
+    },
+    "LINK-139dc0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow"
+      }
+    },
+    "LINK-3d4134": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining"
+      }
+    },
+    "LINK-9be4a3": {
+      "type": "link",
+      "values": {
+        "url": "http://www.hashcash.org/papers/dagger.html"
+      }
+    },
+    "LINK-a696f8": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Directed_acyclic_graph"
+      }
+    },
+    "LINK-5f0e9f": {
+      "type": "link",
+      "values": {
+        "url": "http://diyhpl.us/%7Ebryan/papers2/bitcoin/meh/hashimoto.pdf"
+      }
+    },
+    "LINK-cebf2c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto"
+      }
+    },
+    "LINK-1a2415": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:22:36.304Z",
+      "status": "success"
+    }
+  }
+}

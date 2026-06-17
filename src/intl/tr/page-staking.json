@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Ana Ağ",
   "page-staking-launchpad-widget-start": "{network} üzerinde stake etmeye başlayın",
   "page-staking-launchpad-widget-span": "Ağ seçin",
-  "page-staking-launchpad-widget-p1": "Bireysel doğrulayıcıların, fonlarını riske atmadan önce {{network}} test ağında <strong>kurulumlarını test etmeleri</strong> ve operasyonel becerilerini denemeleri beklenir. Ağın güvenliğini artırdığı ve riskinizi sınırladığı için <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">azınlık istemcisi</a> seçmenin önemli olduğunu unutmayın.",
+  "page-staking-launchpad-widget-p1": "Bireysel doğrulayıcıların, fonlarını riske atmadan önce {network} test ağında operasyonel becerilerini ve <strong>kurulumlarını test etmeleri</strong> beklenir. Ağın güvenliğini artırdığı ve riskinizi sınırladığı için bir <link>azınlık istemcisi</link> seçmenin önemli olduğunu unutmayın.",
   "page-staking-launchpad-widget-p2": "Eğer bu konuda rahatsanız, yalnızca Staking Launchpad'i kullanarak komut satırından gereken her şeyi kurabilirsiniz.",
   "page-staking-launchpad-widget-p3": "İşleri kolaylaştırmak için, istemcilerinizi kolayca kurmanızda Staking Launchpad'in yanı sıra size yardımcı olabilecek aşağıdaki bazı araçlara ve rehberlere göz atın.",
   "page-staking-launchpad-widget-link": "Yazılım araçları ve rehber",

@@ -1,0 +1,312 @@
+{
+  "version": 1,
+  "locale": "ta",
+  "translatedAt": "2026-06-16T22:27:02.576Z",
+  "englishManifestHash": "a1f30f76fd65",
+  "placeholderOrder": [
+    "LINK-75f1e7",
+    "LINK-22b90d",
+    "LINK-8ecd04",
+    "LINK-f48725",
+    "LINK-75f1e7",
+    "LINK-110b0e",
+    "LINK-8ecd04",
+    "LINK-f50767",
+    "LINK-a17794",
+    "LINK-fd7bd3",
+    "LINK-2b0df9",
+    "LINK-c31dc1",
+    "LINK-a27534",
+    "LINK-c0372d",
+    "LINK-64bd64",
+    "LINK-2c9287",
+    "LINK-15a99a",
+    "LINK-58024a",
+    "CODE-2a12da",
+    "CODE-81dc07",
+    "CODE-98f38f",
+    "CODE-b5ac69",
+    "LINK-88141f",
+    "LINK-67f294",
+    "LINK-7f1bdf",
+    "LINK-f01b82",
+    "LINK-2a412d",
+    "LINK-fcd810",
+    "LINK-d9e057",
+    "LINK-2dec22",
+    "LINK-d1c4bb",
+    "LINK-68c380",
+    "LINK-d251c8",
+    "LINK-1b9a4c",
+    "LINK-9a1a4b",
+    "LINK-0a53b4",
+    "LINK-92428a",
+    "LINK-4c1ca2",
+    "LINK-04c72b",
+    "LINK-b5628b",
+    "LINK-4cafa7",
+    "LINK-679f17",
+    "LINK-2cae8c",
+    "LINK-7bdf53"
+  ],
+  "placeholderMap": {
+    "CODE-2a12da": {
+      "type": "inline-code",
+      "values": {
+        "content": "blocks"
+      }
+    },
+    "CODE-81dc07": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactions"
+      }
+    },
+    "CODE-98f38f": {
+      "type": "inline-code",
+      "values": {
+        "content": "logs"
+      }
+    },
+    "CODE-b5ac69": {
+      "type": "inline-code",
+      "values": {
+        "content": "traces"
+      }
+    },
+    "LINK-75f1e7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-and-analytics/block-explorers/"
+      }
+    },
+    "LINK-22b90d": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#index"
+      }
+    },
+    "LINK-8ecd04": {
+      "type": "link",
+      "values": {
+        "url": "https://www.wikipedia.org/wiki/API"
+      }
+    },
+    "LINK-f48725": {
+      "type": "link",
+      "values": {
+        "url": "https://www.wikipedia.org/wiki/Representational_state_transfer"
+      }
+    },
+    "LINK-110b0e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.wikipedia.org/wiki/Representational_state_transfer"
+      }
+    },
+    "LINK-f50767": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#blockchain"
+      }
+    },
+    "LINK-a17794": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io"
+      }
+    },
+    "LINK-fd7bd3": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com"
+      }
+    },
+    "LINK-2b0df9": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/"
+      }
+    },
+    "LINK-c31dc1": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs/en/quick-start/"
+      }
+    },
+    "LINK-a27534": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-c0372d": {
+      "type": "link",
+      "values": {
+        "url": "https://clientdiversity.org/"
+      }
+    },
+    "LINK-64bd64": {
+      "type": "link",
+      "values": {
+        "url": "https://www.rated.network"
+      }
+    },
+    "LINK-2c9287": {
+      "type": "link",
+      "values": {
+        "url": "https://supermajority.info//"
+      }
+    },
+    "LINK-15a99a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethernodes.org/"
+      }
+    },
+    "LINK-58024a": {
+      "type": "link",
+      "values": {
+        "url": "https://dune.com/"
+      }
+    },
+    "LINK-88141f": {
+      "type": "link",
+      "values": {
+        "url": "https://sqd.dev/"
+      }
+    },
+    "LINK-67f294": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.sqd.dev/"
+      }
+    },
+    "LINK-7f1bdf": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/subsquid-labs/squid-evm-examples"
+      }
+    },
+    "LINK-f01b82": {
+      "type": "link",
+      "values": {
+        "url": "https://subquery.network/"
+      }
+    },
+    "LINK-d9e057": {
+      "type": "link",
+      "values": {
+        "url": "https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html"
+      }
+    },
+    "LINK-2a412d": {
+      "type": "link",
+      "values": {
+        "url": "https://managedservice.subquery.network/"
+      }
+    },
+    "LINK-fcd810": {
+      "type": "link",
+      "values": {
+        "url": "https://app.subquery.network/dashboard"
+      }
+    },
+    "LINK-2dec22": {
+      "type": "link",
+      "values": {
+        "url": "https://www.codex.io/"
+      }
+    },
+    "LINK-d1c4bb": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.codex.io"
+      }
+    },
+    "LINK-68c380": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.codex.io/explore"
+      }
+    },
+    "LINK-d251c8": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.codex.io/signup"
+      }
+    },
+    "LINK-1b9a4c": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures"
+      }
+    },
+    "LINK-9a1a4b": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs/en/about/"
+      }
+    },
+    "LINK-0a53b4": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current"
+      }
+    },
+    "LINK-92428a": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/apis#contracts"
+      }
+    },
+    "LINK-4c1ca2": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.blockscout.com/devs/apis"
+      }
+    },
+    "LINK-04c72b": {
+      "type": "link",
+      "values": {
+        "url": "https://beaconcha.in"
+      }
+    },
+    "LINK-b5628b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.dune.com/#dune-basics"
+      }
+    },
+    "LINK-4cafa7": {
+      "type": "link",
+      "values": {
+        "url": "https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html"
+      }
+    },
+    "LINK-679f17": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.sqd.dev/"
+      }
+    },
+    "LINK-2cae8c": {
+      "type": "link",
+      "values": {
+        "url": "https://eql.sh/blog/alpha-release-notes"
+      }
+    },
+    "LINK-7bdf53": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/learn-foundational-ethereum-topics-with-sql/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:27:02.576Z",
+      "status": "success"
+    }
+  }
+}

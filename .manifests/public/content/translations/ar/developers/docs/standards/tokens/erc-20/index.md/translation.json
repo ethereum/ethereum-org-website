@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-16T23:14:51.493Z",
+  "englishManifestHash": "da37c14d63ab",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-5db5cb",
+    "LINK-c3cad3",
+    "LINK-3923cd",
+    "LINK-5717a5",
+    "LINK-826f5e",
+    "CODEBLOCK-9ead89",
+    "CODEBLOCK-9dad7d",
+    "LINK-38b427",
+    "CODEBLOCK-fe2886",
+    "CODEBLOCK-f47baa",
+    "CODE-aef744",
+    "CODE-22d90c",
+    "CODE-aef744",
+    "CODE-aef744",
+    "CODE-46779e",
+    "CODE-aef744",
+    "LINK-7f05c5",
+    "LINK-fca926",
+    "LINK-598eaf",
+    "LINK-d79fbb",
+    "LINK-620e42",
+    "LINK-4c5779",
+    "LINK-7f05c5",
+    "LINK-fca926",
+    "LINK-35929e",
+    "LINK-85e51c",
+    "LINK-2e47d8",
+    "LINK-5c7eba",
+    "LINK-6ab473",
+    "LINK-a62680"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-9ead89": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9dad7d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fe2886": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f47baa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-aef744": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer(..)"
+      }
+    },
+    "CODE-22d90c": {
+      "type": "inline-code",
+      "values": {
+        "content": "require(_to != address(this));"
+      }
+    },
+    "CODE-46779e": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve(..) & transferFrom(..)"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-5db5cb": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ether"
+      }
+    },
+    "LINK-c3cad3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts"
+      }
+    },
+    "LINK-3923cd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-5717a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-826f5e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      }
+    },
+    "LINK-38b427": {
+      "type": "link",
+      "values": {
+        "url": "https://web3py.readthedocs.io/en/stable/quickstart.html#installation"
+      }
+    },
+    "LINK-7f05c5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-223"
+      }
+    },
+    "LINK-fca926": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-1363"
+      }
+    },
+    "LINK-598eaf": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      }
+    },
+    "LINK-d79fbb": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20"
+      }
+    },
+    "LINK-620e42": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol"
+      }
+    },
+    "LINK-4c5779": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/erc20-solidity"
+      }
+    },
+    "LINK-35929e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-777"
+      }
+    },
+    "LINK-85e51c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-4626"
+      }
+    },
+    "LINK-2e47d8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code/"
+      }
+    },
+    "LINK-5c7eba": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-with-safety-rails/"
+      }
+    },
+    "LINK-6ab473": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/send-token-ethersjs/"
+      }
+    },
+    "LINK-a62680": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/scam-token-tricks/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:14:51.493Z",
+      "status": "success"
+    }
+  }
+}

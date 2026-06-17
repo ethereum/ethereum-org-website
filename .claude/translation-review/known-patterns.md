@@ -350,6 +350,24 @@ ETHGlossary frequently has multiple entries for one base term that differ by sur
 - "liquid staking" as "liquid mortgage" in community/research
 - Tone/register: formal MSA consistently maintained where translated
 
+### 22. Leaked HTML Placeholder Tokens in JSON Restore (CRITICAL -- pipeline artifact)
+
+The intl-pipeline extracts attributed HTML tags (`<a href>`, `<img>`) from JSON string values into content-addressed wrappers `<HTML-PLACEHOLDER-HTMLTAG-{hash}>text</...>` before translation, then restores them. A restore bug let a placeholder token ship verbatim into shipped files (reader-visible junk).
+
+**Signature:** literal `HTML-PLACEHOLDER-HTMLTAG-<6hex>` (or `-CODE-`/`-LINK-`/`-IMAGE-`/`-COMPONENT-`) text inside a translated JSON value.
+
+**Root cause (PR #18418):** the translated value contained a placeholder hash MORE times than the English source had the tag (LLM/TM reused a linked phrase); the old restore rebuilt only the first occurrence per source entry, and the surplus leaked silently (the single entry restored fine, so no failure was logged). The hash is content-addressed from the English tag, so the SAME hash leaks across every affected locale -- a fleet-wide tell.
+
+**Detection (deterministic):** `grep -rl "HTML-PLACEHOLDER" src/intl/` -- EN source is always clean, so any hit is a translation-side leak. **Run this grep on every JSON import as a backstop, regardless of agent findings.**
+
+**Fix:** restore by global token replacement (a hash always maps to one original tag) + residual-placeholder guard (`json-batcher.ts`), and a hard throw on any placeholder reaching merged output (`gemini.ts`). Full writeup: `docs/solutions/logic-errors/intl-pipeline-html-placeholder-leak.md`.
+
+### All 22 languages -- glossary-tooltip + 20 page JSONs, Reviewed PR #18418 (intl/pending-dev)
+- 22 langs x 21 UI-string JSONs (it: 20; `page-history.json` failed upstream, excluded). Fleet avg **~9.7/10**.
+- **Only critical fleet-wide: pattern 22** -- 7 langs leaked one placeholder in `glossary-tooltip.json` (`ar` wei-definition `#wei`; `cs/ja/ko/pl/uk/zh` ommer-definition `#pow`). All hand-fixed to the correct anchor; pipeline fixed to prevent recurrence.
+- Scores: fr/it/vi 10.0; de/es/hi/id/pl/ru/ur 9.8; tr 9.7; ar/bn/ja/ko/sw/ta/uk/zh 9.6; cs 9.5; mr/te 9.4.
+- Confirmed clean across the fleet: no semantic inversions (PoW/PoS, validator/miner, mainnet/testnet), no translated internal hrefs, no transliterated domains, no cross-script contamination, ICU placeholders + rich-text tags intact, brand/script policy correct per group. zh `智能合约` correct (not `智慧`). Historically weak ar/vi/tr clean of prior failure modes.
+
 ## Agent Architecture Notes
 
 - JSON files with 40+ entries can exceed Opus context window — plan for Sonnet fallback or 3-way split

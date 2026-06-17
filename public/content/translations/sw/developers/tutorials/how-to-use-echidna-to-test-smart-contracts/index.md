@@ -1,11 +1,11 @@
 ---
-title: Jinsi ya kutumia Echidna kujaribu mikataba-erevu
-description: Jinsi ya kutumia Echidna kujaribu mikataba-erevu kiotomatiki
+title: Jinsi ya kutumia Echidna kujaribu mikataba mahiri
+description: Jinsi ya kutumia Echidna kujaribu mikataba mahiri kiotomatiki
 author: "Trailofbits"
 lang: sw
-tags: ["solidity", "smart contracts", "security", "testing", "fuzzing"]
+tags: ["Solidity", "mikataba mahiri", "usalama", "upimaji", "fuzzing"]
 skill: advanced
-breadcrumb: "Echidna"
+breadcrumb: Echidna
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
@@ -13,55 +13,55 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 ## Usakinishaji {#installation}
 
-Echidna inaweza kusakinishwa kupitia docker au kutumia binary iliyokusanywa awali.
+Echidna inaweza kusakinishwa kupitia Docker au kwa kutumia faili ya mfumo wa binary iliyokusanywa tayari.
 
-### Echidna kupitia docker {#echidna-through-docker}
+### Echidna kupitia Docker {#echidna-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_Amri ya mwisho huendesha eth-security-toolbox kwenye docker ambayo ina ufikiaji wa saraka yako ya sasa. Unaweza kubadilisha faili kutoka kwa mwenyeji wako, na uendeshe zana kwenye faili kutoka kwa docker_
+_Amri ya mwisho inaendesha eth-security-toolbox kwenye Docker ambayo ina ufikiaji wa saraka yako ya sasa. Unaweza kubadilisha faili kutoka kwa kompyuta yako, na kuendesha zana kwenye faili kutoka kwenye Docker_
 
-Ndani ya docker, endesha :
+Ndani ya Docker, endesha:
 
 ```bash
 solc-select 0.5.11
 cd /home/training
 ```
 
-### Binary {#binary}
+### Faili ya Binary {#binary}
 
 [https://github.com/crytic/echidna/releases/tag/v1.4.0.0](https://github.com/crytic/echidna/releases/tag/v1.4.0.0)
 
-## Utangulizi wa fuzzing kulingana na sifa {#introduction-to-property-based-fuzzing}
+## Utangulizi wa fuzzing inayotegemea sifa {#introduction-to-property-based-fuzzing}
 
-Echidna ni fuzzer kulingana na sifa, tulielezea katika machapisho yetu ya awali ya blogu ([1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/), [2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/), [3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)).
+Echidna ni fuzzer inayotegemea sifa, tuliyoielezea katika machapisho yetu ya awali ya blogu ([1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/), [2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/), [3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)).
 
 ### Fuzzing {#fuzzing}
 
-[Fuzzing](https://wikipedia.org/wiki/Fuzzing) ni mbinu inayojulikana sana katika jumuiya ya usalama. Inajumuisha kuzalisha pembejeo ambazo ni nasibu kiasi ili kupata hitilafu katika programu. Fuzzers za programu za jadi (kama vile [AFL](http://lcamtuf.coredump.cx/afl/) au [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) zinajulikana kuwa zana bora za kupata hitilafu.
+[Fuzzing](https://wikipedia.org/wiki/Fuzzing) ni mbinu inayojulikana sana katika jamii ya usalama. Inajumuisha kuzalisha data za kuingiza ambazo ni za kubahatisha ili kupata hitilafu kwenye programu. Fuzzers za programu za kitamaduni (kama vile [AFL](http://lcamtuf.coredump.cx/afl/) au [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) zinajulikana kuwa zana bora za kupata hitilafu.
 
-Zaidi ya uzalishaji wa pembejeo nasibu kabisa, kuna mbinu na mikakati mingi ya kuzalisha pembejeo nzuri, ikiwemo:
+Zaidi ya uzalishaji wa data za kuingiza kwa kubahatisha tu, kuna mbinu na mikakati mingi ya kuzalisha data nzuri za kuingiza, ikiwa ni pamoja na:
 
-- Pata maoni kutoka kwa kila utekelezaji na uelekeze uzalishaji kwa kutumia maoni hayo. Kwa mfano, ikiwa pembejeo mpya iliyozalishwa itasababisha ugunduzi wa njia mpya, inaweza kuwa na maana kuzalisha pembejeo mpya zilizo karibu nayo.
-- Kuzalisha pembejeo inayoheshimu kizuizi cha kimuundo. Kwa mfano, ikiwa pembejeo yako ina kichwa chenye checksum, itakuwa na maana kuiruhusu fuzzer kuzalisha pembejeo inayohakiki checksum.
-- Kutumia pembejeo zinazojulikana kuzalisha pembejeo mpya: ikiwa una uwezo wa kufikia seti kubwa ya data ya pembejeo halali, fuzzer yako inaweza kuzalisha pembejeo mpya kutoka humo, badala ya kuanza uzalishaji wake kutoka mwanzo. Hizi kwa kawaida huitwa _mbegu_.
+- Kupata mrejesho kutoka kwa kila utekelezaji na kuongoza uzalishaji kwa kuutumia. Kwa mfano, ikiwa data mpya iliyozalishwa inasababisha ugunduzi wa njia mpya, inaweza kuwa na maana kuzalisha data mpya zinazokaribiana nayo.
+- Kuzalisha data za kuingiza kwa kuzingatia kizuizi cha kimuundo. Kwa mfano, ikiwa data yako ina kichwa chenye checksum, itakuwa na maana kuruhusu fuzzer izalishe data inayothibitisha checksum hiyo.
+- Kutumia data zinazojulikana kuzalisha data mpya: ikiwa una ufikiaji wa mkusanyiko mkubwa wa data halali, fuzzer yako inaweza kuzalisha data mpya kutoka kwayo, badala ya kuanza uzalishaji wake kutoka mwanzo. Hizi kwa kawaida huitwa _mbegu (seeds)_.
 
-### Fuzzing kulingana na sifa {#property-based-fuzzing}
+### Fuzzing inayotegemea sifa {#property-based-fuzzing}
 
-Echidna ni ya familia maalum ya fuzzer: fuzzing kulingana na sifa iliyohamasishwa sana na [QuickCheck](https://wikipedia.org/wiki/QuickCheck). Tofauti na fuzzer za kawaida ambazo zitajaribu kupata kuharibika, Echidna itajaribu kuvunja visivyobadilika vilivyobainishwa na mtumiaji.
+Echidna ni ya familia maalum ya fuzzer: fuzzing inayotegemea sifa iliyohamasishwa sana na [QuickCheck](https://wikipedia.org/wiki/QuickCheck). Tofauti na fuzzer za kawaida ambazo zitajaribu kutafuta mkwamo wa programu, Echidna itajaribu kuvunja vigezo visivyobadilika (invariants) vilivyofafanuliwa na mtumiaji.
 
-Katika mikataba-erevu, visivyobadilika ni chaguo za kukokotoa za Solidity, ambazo zinaweza kuwakilisha hali yoyote isiyo sahihi au batili ambayo mkataba unaweza kufikia, ikiwa ni pamoja na:
+Katika mikataba mahiri, vigezo visivyobadilika ni vipengele vya Solidity, ambavyo vinaweza kuwakilisha hali yoyote isiyo sahihi au batili ambayo mkataba unaweza kufikia, ikiwa ni pamoja na:
 
-- Udhibiti usio sahihi wa ufikiaji: mshambulizi alikua mmiliki wa mkataba.
+- Udhibiti usio sahihi wa ufikiaji: mshambuliaji alikua mmiliki wa mkataba.
 - Mashine ya hali isiyo sahihi: tokeni zinaweza kuhamishwa wakati mkataba umesitishwa.
-- Hesabu isiyo sahihi: mtumiaji anaweza kufanya 'underflow' salio lake na kupata tokeni za bure zisizo na kikomo.
+- Hesabu isiyo sahihi: mtumiaji anaweza kupunguza salio lake chini ya sifuri (underflow) na kupata tokeni za bure zisizo na kikomo.
 
 ### Kujaribu sifa na Echidna {#testing-a-property-with-echidna}
 
-Tutaona jinsi ya kujaribu mkataba-erevu na Echidna. Lengo ni mkataba-erevu ufuatao [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol):
+Tutaona jinsi ya kujaribu mkataba mahiri na Echidna. Lengo ni mkataba mahiri ufuatao [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol):
 
 ```solidity
 contract Token{
@@ -82,23 +82,23 @@ contract Token{
 Tutafanya dhana kwamba tokeni hii lazima iwe na sifa zifuatazo:
 
 - Mtu yeyote anaweza kuwa na kiwango cha juu cha tokeni 1000
-- Tokeni haiwezi kuhamishwa (sio tokeni ya ERC20)
+- Tokeni haiwezi kuhamishwa (sio tokeni ya ERC-20)
 
 ### Andika sifa {#write-a-property}
 
-Sifa za Echidna ni chaguo za kukokotoa za Solidity. Sifa lazima:
+Sifa za Echidna ni vipengele vya Solidity. Sifa lazima:
 
-- Haina kigezo
-- Rejesha `true` ikiwa imefanikiwa
-- Jina lake kuanza na `echidna`
+- Isiwe na hoja (argument)
+- Irudishe `true` ikiwa imefanikiwa
+- Iwe na jina lake linaloanza na `echidna`
 
 Echidna ita:
 
-- Zalisha kiotomatiki miamala isiyo ya kawaida ili kujaribu sifa.
-- Ripoti miamala yoyote inayoongoza sifa kurejesha `false` au kutupa hitilafu.
-- Puuza athari za kando wakati wa kuita sifa (yaani, ikiwa sifa inabadilisha kigezo cha hali, inapotea baada ya jaribio)
+- Zalisha miamala ya kiholela kiotomatiki ili kujaribu sifa.
+- Ripoti miamala yoyote inayosababisha sifa kurudisha `false` au kutoa hitilafu.
+- Tupa athari za kando wakati wa kuita sifa (yaani, ikiwa sifa inabadilisha kigezo cha hali, inatupwa baada ya jaribio)
 
-Sifa ifuatayo hukagua kwamba mhusika hana zaidi ya tokeni 1000:
+Sifa ifuatayo inakagua kuwa mpigaji hana zaidi ya tokeni 1000:
 
 ```solidity
 function echidna_balance_under_1000() public view returns(bool){
@@ -106,7 +106,7 @@ function echidna_balance_under_1000() public view returns(bool){
 }
 ```
 
-Tumia urithi kutenganisha mkataba wako na sifa zako:
+Tumia urithi (inheritance) kutenganisha mkataba wako na sifa zako:
 
 ```solidity
 contract TestToken is Token{
@@ -120,14 +120,14 @@ contract TestToken is Token{
 
 ### Anzisha mkataba {#initiate-a-contract}
 
-Echidna inahitaji [kiunda](/developers/docs/smart-contracts/anatomy/#constructor-functions) bila kigezo. Ikiwa mkataba wako unahitaji uanzishaji maalum, unahitaji kuufanya katika kiunda.
+Echidna inahitaji [konstrukta](/developers/docs/smart-contracts/anatomy/#constructor-functions) isiyo na hoja. Ikiwa mkataba wako unahitaji uanzishaji maalum, unahitaji kufanya hivyo kwenye konstrukta.
 
 Kuna anwani maalum katika Echidna:
 
-- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` ambayo huita kiunda.
-- `0x10000`, `0x20000`, na `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` ambazo huita kiholela chaguo za kukokotoa zingine.
+- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` ambayo inaita konstrukta.
+- `0x10000`, `0x20000`, na `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` ambazo huita vipengele vingine kwa kubahatisha.
 
-Hatuhitaji uanzishaji wowote maalum katika mfano wetu wa sasa, kwa hivyo kiunda chetu hakina kitu.
+Hatuhitaji uanzishaji wowote maalum katika mfano wetu wa sasa, kwa sababu hiyo konstrukta yetu ni tupu.
 
 ### Endesha Echidna {#run-echidna}
 
@@ -145,7 +145,7 @@ echidna-test contract.sol --contract MyContract
 
 ### Muhtasari: Kujaribu sifa {#summary-testing-a-property}
 
-Yafuatayo ni muhtasari wa uendeshaji wa echidna kwenye mfano wetu:
+Ifuatayo inatoa muhtasari wa uendeshaji wa Echidna kwenye mfano wetu:
 
 ```solidity
 contract TestToken is Token{
@@ -168,12 +168,12 @@ echidna_balance_under_1000: failed!💥
 ...
 ```
 
-Echidna iligundua kuwa sifa inakiukwa ikiwa `backdoor` itaitwa.
+Echidna iligundua kuwa sifa inakiukwa ikiwa `backdoor` inaitwa.
 
-## Kuchuja chaguo za kukokotoa za kuita wakati wa kampeni ya fuzzing {#filtering-functions-to-call-during-a-fuzzing-campaign}
+## Kuchuja vipengele vya kuita wakati wa kampeni ya fuzzing {#filtering-functions-to-call-during-a-fuzzing-campaign}
 
-Tutaona jinsi ya kuchuja chaguo za kukokotoa za kufanyiwa 'fuzz'.
-Lengo ni mkataba-erevu ufuatao:
+Tutaona jinsi ya kuchuja vipengele vitakavyofanyiwa fuzzing.
+Lengo ni mkataba mahiri ufuatao:
 
 ```solidity
 contract C {
@@ -225,7 +225,7 @@ contract C {
 ```
 
 Mfano huu mdogo unalazimisha Echidna kupata mfuatano fulani wa miamala ili kubadilisha kigezo cha hali.
-Hii ni ngumu kwa fuzzer (inapendekezwa kutumia zana ya utekelezaji wa ishara kama [Manticore](https://github.com/trailofbits/manticore)).
+Hili ni gumu kwa fuzzer (inapendekezwa kutumia zana ya utekelezaji wa kiishara kama [Manticore](https://github.com/trailofbits/manticore)).
 Tunaweza kuendesha Echidna ili kuthibitisha hili:
 
 ```bash
@@ -235,20 +235,20 @@ echidna_state4: passed! 🎉
 Seed: -3684648582249875403
 ```
 
-### Kuchuja chaguo za kukokotoa {#filtering-functions}
+### Kuchuja vipengele {#filtering-functions}
 
-Echidna ina shida kupata mfuatano sahihi wa kujaribu mkataba huu kwa sababu chaguo mbili za kukokotoa za kuweka upya (`reset1` na `reset2`) zitaweka vigezo vyote vya hali kuwa `false`.
-Hata hivyo, tunaweza kutumia kipengele maalum cha Echidna ama kuweka kwenye orodha nyeusi chaguo za kukokotoa za kuweka upya au kuweka kwenye orodha nyeupe tu chaguo za kukokotoa za `f`, `g`,
-`h` na `i`.
+Echidna inapata shida kupata mfuatano sahihi wa kujaribu mkataba huu kwa sababu vipengele viwili vya kuweka upya (`reset1` na `reset2`) vitaweka vigezo vyote vya hali kuwa `false`.
+Hata hivyo, tunaweza kutumia kipengele maalum cha Echidna kuweka kwenye orodha nyeusi kipengele cha kuweka upya au kuweka kwenye orodha nyeupe vipengele vya `f`, `g`,
+`h` na `i` pekee.
 
-Ili kuweka kwenye orodha nyeusi chaguo za kukokotoa, tunaweza kutumia faili hii ya usanidi:
+Ili kuweka vipengele kwenye orodha nyeusi, tunaweza kutumia faili hili la usanidi:
 
 ```yaml
 filterBlacklist: true
 filterFunctions: ["reset1", "reset2"]
 ```
 
-Njia nyingine ya kuchuja chaguo za kukokotoa ni kuorodhesha chaguo za kukokotoa zilizoidhinishwa. Ili kufanya hivyo, tunaweza kutumia faili hii ya usanidi:
+Njia nyingine ya kuchuja vipengele ni kuorodhesha vipengele vilivyo kwenye orodha nyeupe. Ili kufanya hivyo, tunaweza kutumia faili hili la usanidi:
 
 ```yaml
 filterBlacklist: false
@@ -256,11 +256,11 @@ filterFunctions: ["f", "g", "h", "i"]
 ```
 
 - `filterBlacklist` ni `true` kwa chaguo-msingi.
-- Kuchuja kutafanywa kwa jina tu (bila vigezo). Ikiwa una `f()` na `f(uint256)`, kichujio cha `"f"` kitafanana na chaguo zote mbili za kukokotoa.
+- Uchujaji utafanywa kwa jina pekee (bila vigezo). Ikiwa una `f()` na `f(uint256)`, kichujio `"f"` kitalingana na vipengele vyote viwili.
 
 ### Endesha Echidna {#run-echidna-1}
 
-Ili kuendesha Echidna na faili ya usanidi `blacklist.yaml`:
+Ili kuendesha Echidna na faili la usanidi `blacklist.yaml`:
 
 ```bash
 echidna-test multi.sol --config blacklist.yaml
@@ -273,11 +273,11 @@ echidna_state4: failed!💥
     i()
 ```
 
-Echidna itapata mfuatano wa miamala ya kukanusha sifa karibu mara moja.
+Echidna itapata mfuatano wa miamala wa kukanusha sifa karibu mara moja.
 
-### Muhtasari: Kuchuja chaguo za kukokotoa {#summary-filtering-functions}
+### Muhtasari: Kuchuja vipengele {#summary-filtering-functions}
 
-Echidna inaweza kuweka kwenye orodha nyeusi au orodha nyeupe chaguo za kukokotoa za kuita wakati wa kampeni ya fuzzing kwa kutumia:
+Echidna inaweza kuweka kwenye orodha nyeusi au orodha nyeupe vipengele vya kuita wakati wa kampeni ya fuzzing kwa kutumia:
 
 ```yaml
 filterBlacklist: true
@@ -289,12 +289,11 @@ echidna-test contract.sol --config config.yaml
 ...
 ```
 
-Echidna huanza kampeni ya fuzzing ama kwa kuweka kwenye orodha nyeusi `f1`, `f2` na `f3` au kwa kuita hizi pekee, kulingana
-na thamani ya boolean ya `filterBlacklist`.
+Echidna inaanza kampeni ya fuzzing iwe kwa kuweka kwenye orodha nyeusi `f1`, `f2` na `f3` au kwa kuita hizi pekee, kulingana na thamani ya boolean ya `filterBlacklist`.
 
-## Jinsi ya kujaribu assert ya Solidity na Echidna {#how-to-test-soliditys-assert-with-echidna}
+## Jinsi ya kujaribu thibitisha ya Solidity na Echidna {#how-to-test-soliditys-assert-with-echidna}
 
-Katika mafunzo haya mafupi, tutaonyesha jinsi ya kutumia Echidna kujaribu ukaguzi wa dai katika mikataba. Tuseme tuna mkataba kama huu:
+Katika mafunzo haya mafupi, tutaonyesha jinsi ya kutumia Echidna kujaribu ukaguzi wa uthibitisho katika mikataba. Tuseme tuna mkataba kama huu:
 
 ```solidity
 contract Incrementor {
@@ -309,9 +308,9 @@ contract Incrementor {
 }
 ```
 
-### Andika dai {#write-an-assertion}
+### Andika uthibitisho {#write-an-assertion}
 
-Tunataka kuhakikisha kuwa `tmp` ni ndogo au sawa na `counter` baada ya kurudisha tofauti yake. Tunaweza kuandika sifa ya Echidna, lakini tutahitaji kuhifadhi thamani ya `tmp` mahali fulani. Badala yake, tunaweza kutumia dai kama hili:
+Tunataka kuhakikisha kuwa `tmp` ni ndogo au sawa na `counter` baada ya kurudisha tofauti yake. Tungeweza kuandika sifa ya Echidna, lakini tutahitaji kuhifadhi thamani ya `tmp` mahali fulani. Badala yake, tungeweza kutumia uthibitisho kama huu:
 
 ```solidity
 contract Incrementor {
@@ -328,35 +327,35 @@ contract Incrementor {
 
 ### Endesha Echidna {#run-echidna-2}
 
-Ili kuwezesha upimaji wa kutofaulu kwa dai, tengeneza [faili ya usanidi wa Echidna](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
+Ili kuwezesha upimaji wa kufeli kwa uthibitisho, tengeneza [faili la usanidi la Echidna](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
 
 ```yaml
 checkAsserts: true
 ```
 
-Tunapoendesha mkataba huu katika Echidna, tunapata matokeo yanayotarajiwa:
+Tunapoendesha mkataba huu katika Echidna, tunapata matokeo yaliyotarajiwa:
 
 ```bash
 echidna-test assert.sol --config config.yaml
 Analyzing contract: assert.sol:Incrementor
 assertion in inc: failed!💥
   Call sequence, shrinking (2596/5000):
-    inc(217110167319967866419195559689128982722488122124807605757398297001483711807488)
+    inc(21711016731996786641919559689128982722488122124807605757398297001483711807488)
     inc(7237005577332262213973186563042994240829374041602535252466099000494570602496)
     inc(86844066927987146567678238756515930889952488499230423029593188005934847229952)
 
 Seed: 1806480648350826486
 ```
 
-Kama unavyoona, Echidna inaripoti kushindwa kwa dai fulani katika chaguo la kukokotoa la `inc`. Kuongeza zaidi ya dai moja kwa kila chaguo la kukokotoa kunawezekana, lakini Echidna haiwezi kusema ni dai gani lililoshindwa.
+Kama unavyoona, Echidna inaripoti kufeli kwa uthibitisho katika kipengele cha `inc`. Kuongeza zaidi ya uthibitisho mmoja kwa kila kipengele kunawezekana, lakini Echidna haiwezi kusema ni uthibitisho upi uliofeli.
 
-### Wakati gani na jinsi gani ya kutumia madai {#when-and-how-use-assertions}
+### Lini na jinsi ya kutumia uthibitisho {#when-and-how-use-assertions}
 
-Madai yanaweza kutumika kama njia mbadala ya sifa dhahiri, haswa ikiwa masharti ya kukagua yanahusiana moja kwa moja na matumizi sahihi ya operesheni fulani `f`. Kuongeza madai baada ya msimbo fulani kutalazimisha ukaguzi ufanyike mara tu baada ya kutekelezwa:
+Uthibitisho unaweza kutumika kama mbadala wa sifa za wazi, hasa ikiwa masharti ya kukagua yanahusiana moja kwa moja na matumizi sahihi ya operesheni fulani `f`. Kuongeza uthibitisho baada ya msimbo fulani kutalazimisha kuwa ukaguzi utafanyika mara tu baada ya kutekelezwa:
 
 ```solidity
 function f(..) public {
-    // msimbo fulani tata
+    // kodi fulani tata
     ...
     assert (condition);
     ...
@@ -364,7 +363,7 @@ function f(..) public {
 
 ```
 
-Kinyume chake, kutumia sifa ya wazi ya echidna kutatekeleza miamala kwa nasibu na hakuna njia rahisi ya kulazimisha ni lini hasa itakaguliwa. Bado inawezekana kufanya njia hii mbadala:
+Kinyume chake, kutumia sifa ya wazi ya Echidna kutatekeleza miamala kwa kubahatisha na hakuna njia rahisi ya kulazimisha hasa ni lini itakaguliwa. Bado inawezekana kufanya mbadala huu:
 
 ```solidity
 function echidna_assert_after_f() public returns (bool) {
@@ -373,22 +372,22 @@ function echidna_assert_after_f() public returns (bool) {
 }
 ```
 
-Hata hivyo, kuna baadhi ya masuala:
+Hata hivyo, kuna baadhi ya matatizo:
 
-- Inashindwa ikiwa `f` imetangazwa kama `internal` au `external`.
-- Haijulikani ni vigezo vipi vinapaswa kutumika kuita `f`.
-- Ikiwa `f` inabatilika, sifa itashindwa.
+- Inafeli ikiwa `f` imetangazwa kama `internal` au `external`.
+- Haieleweki ni hoja zipi zinapaswa kutumika kuita `f`.
+- Ikiwa `f` itatengua, sifa itafeli.
 
-Kwa ujumla, tunapendekeza kufuata [pendekezo la John Regehr](https://blog.regehr.org/archives/1091) kuhusu jinsi ya kutumia madai:
+Kwa ujumla, tunapendekeza kufuata [pendekezo la John Regehr](https://blog.regehr.org/archives/1091) kuhusu jinsi ya kutumia uthibitisho:
 
-- Usilazimishe athari yoyote ya kando wakati wa ukaguzi wa dai. Kwa mfano: `assert(ChangeStateAndReturn() == 1)`
-- Usidai kauli zilizo wazi. Kwa mfano `assert(var >= 0)` ambapo `var` imetangazwa kama `uint`.
+- Usilazimishe athari yoyote ya kando wakati wa ukaguzi wa uthibitisho. Kwa mfano: `assert(ChangeStateAndReturn() == 1)`
+- Usithibitishe kauli zilizo wazi. Kwa mfano `assert(var >= 0)` ambapo `var` imetangazwa kama `uint`.
 
-Mwisho, tafadhali **usitumie** `require` badala ya `assert`, kwani Echidna haitaweza kuitambua (lakini mkataba utabatilika hata hivyo).
+Hatimaye, tafadhali **usitumie** `require` badala ya `assert`, kwa kuwa Echidna haitaweza kuigundua (lakini mkataba utatengua hata hivyo).
 
-### Muhtasari: Ukaguzi wa Madai {#summary-assertion-checking}
+### Muhtasari: Ukaguzi wa Uthibitisho {#summary-assertion-checking}
 
-Yafuatayo ni muhtasari wa uendeshaji wa echidna kwenye mfano wetu:
+Ifuatayo inatoa muhtasari wa uendeshaji wa Echidna kwenye mfano wetu:
 
 ```solidity
 contract Incrementor {
@@ -408,18 +407,18 @@ echidna-test assert.sol --config config.yaml
 Analyzing contract: assert.sol:Incrementor
 assertion in inc: failed!💥
   Call sequence, shrinking (2596/5000):
-    inc(217110167319967866419195559689128982722488122124807605757398297001483711807488)
+    inc(21711016731996786641919559689128982722488122124807605757398297001483711807488)
     inc(7237005577332262213973186563042994240829374041602535252466099000494570602496)
     inc(86844066927987146567678238756515930889952488499230423029593188005934847229952)
 
 Seed: 1806480648350826486
 ```
 
-Echidna iligundua kuwa dai katika `inc` linaweza kushindwa ikiwa chaguo hili la kukokotoa litaitwa mara nyingi na vigezo vikubwa.
+Echidna iligundua kuwa uthibitisho katika `inc` unaweza kufeli ikiwa kipengele hiki kitaitwa mara nyingi na hoja kubwa.
 
-## Kukusanya na kurekebisha mkusanyiko wa Echidna {#collecting-and-modifying-an-echidna-corpus}
+## Kukusanya na kurekebisha mkusanyiko wa data wa Echidna {#collecting-and-modifying-an-echidna-corpus}
 
-Tutaona jinsi ya kukusanya na kutumia mkusanyiko wa miamala na Echidna. Lengo ni mkataba-erevu ufuatao [`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol):
+Tutaona jinsi ya kukusanya na kutumia mkusanyiko wa data wa miamala na Echidna. Lengo ni mkataba mahiri ufuatao [`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol):
 
 ```solidity
 contract C {
@@ -439,8 +438,8 @@ contract C {
 }
 ```
 
-Mfano huu mdogo unalazimisha Echidna kupata thamani fulani ili kubadilisha kigezo cha hali. Hii ni ngumu kwa fuzzer
-(inapendekezwa kutumia zana ya utekelezaji wa ishara kama [Manticore](https://github.com/trailofbits/manticore)).
+Mfano huu mdogo unalazimisha Echidna kupata thamani fulani ili kubadilisha kigezo cha hali. Hili ni gumu kwa fuzzer
+(inapendekezwa kutumia zana ya utekelezaji wa kiishara kama [Manticore](https://github.com/trailofbits/manticore)).
 Tunaweza kuendesha Echidna ili kuthibitisha hili:
 
 ```bash
@@ -452,30 +451,30 @@ echidna_magic_values: passed! 🎉
 Seed: 2221503356319272685
 ```
 
-Hata hivyo, bado tunaweza kutumia Echidna kukusanya mkusanyiko tunapoendesha kampeni hii ya 'fuzzing'.
+Hata hivyo, bado tunaweza kutumia Echidna kukusanya mkusanyiko wa data wakati wa kuendesha kampeni hii ya fuzzing.
 
-### Kukusanya mkusanyiko {#collecting-a-corpus}
+### Kukusanya mkusanyiko wa data {#collecting-a-corpus}
 
-Ili kuwezesha ukusanyaji wa mkusanyiko, tengeneza saraka ya mkusanyiko:
+Ili kuwezesha ukusanyaji wa mkusanyiko wa data, tengeneza saraka ya mkusanyiko wa data:
 
 ```bash
 mkdir corpus-magic
 ```
 
-Na [faili ya usanidi wa Echidna](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
+Na [faili la usanidi la Echidna](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
 
 ```yaml
 coverage: true
 corpusDir: "corpus-magic"
 ```
 
-Sasa tunaweza kuendesha zana yetu na kuangalia mkusanyiko uliokusanywa:
+Sasa tunaweza kuendesha zana yetu na kukagua mkusanyiko wa data uliokusanywa:
 
 ```bash
 echidna-test magic.sol --config config.yaml
 ```
 
-Echidna bado haiwezi kupata thamani sahihi za 'uchawi', lakini tunaweza kuangalia mkusanyiko iliokusanya.
+Echidna bado haiwezi kupata thamani sahihi za kichawi (magic values), lakini tunaweza kuangalia mkusanyiko wa data iliokusanya.
 Kwa mfano, moja ya faili hizi ilikuwa:
 
 ```json
@@ -521,18 +520,17 @@ Kwa mfano, moja ya faili hizi ilikuwa:
 ]
 ```
 
-Ni wazi, pembejeo hii haitasababisha kutofaulu kwa sifa yetu. Hata hivyo, katika hatua inayofuata, tutaona jinsi ya kuirekebisha kwa ajili hiyo.
+Ni wazi, data hii haitasababisha kufeli katika sifa yetu. Hata hivyo, katika hatua inayofuata, tutaona jinsi ya kuirekebisha kwa ajili hiyo.
 
-### Kupanda mbegu kwenye mkusanyiko {#seeding-a-corpus}
+### Kupanda mbegu kwenye mkusanyiko wa data {#seeding-a-corpus}
 
-Echidna inahitaji msaada ili kushughulikia chaguo la kukokotoa la `magic`. Tutakili na kurekebisha pembejeo ili kutumia vigezo
-vinavyofaa kwake:
+Echidna inahitaji msaada fulani ili kushughulika na kipengele cha `magic`. Tunakwenda kunakili na kurekebisha data ya kuingiza ili kutumia vigezo vinavyofaa kwayo:
 
 ```bash
 cp corpus/2712688662897926208.txt corpus/new.txt
 ```
 
-Tutarekebisha `new.txt` ili iite `magic(42,129,333,0)`. Sasa, tunaweza kuendesha Echidna tena:
+Tutarekebisha `new.txt` ili kuita `magic(42,129,333,0)`. Sasa, tunaweza kuendesha Echidna tena:
 
 ```bash
 echidna-test magic.sol --config config.yaml
@@ -550,9 +548,9 @@ Seed: -7293830866560616537
 
 Wakati huu, iligundua kuwa sifa inakiukwa mara moja.
 
-## Kupata miamala yenye matumizi makubwa ya Gesi {#finding-transactions-with-high-gas-consumption}
+## Kupata miamala yenye matumizi makubwa ya gesi {#finding-transactions-with-high-gas-consumption}
 
-Tutaona jinsi ya kupata miamala yenye matumizi makubwa ya Gesi na Echidna. Lengo ni mkataba-erevu ufuatao:
+Tutaona jinsi ya kupata miamala yenye matumizi makubwa ya gesi na Echidna. Lengo ni mkataba mahiri ufuatao:
 
 ```solidity
 contract C {
@@ -577,28 +575,28 @@ contract C {
 }
 ```
 
-Hapa `expensive` inaweza kuwa na matumizi makubwa ya Gesi.
+Hapa `expensive` inaweza kuwa na matumizi makubwa ya gesi.
 
-Hivi sasa, Echidna daima inahitaji mali ya kujaribu: hapa `echidna_test` daima inarudi `true`.
+Kwa sasa, Echidna daima inahitaji sifa ya kujaribu: hapa `echidna_test` daima inarudisha `true`.
 Tunaweza kuendesha Echidna ili kuthibitisha hili:
 
 ```
 echidna-test gas.sol
 ...
-echidna_test: passed! 🎉
+echidna_test: imefaulu! 🎉
 
-Seed: 2320549945714142710
+Mbegu: 2320549945714142710
 ```
 
 ### Kupima Matumizi ya Gesi {#measuring-gas-consumption}
 
-Ili kuwezesha matumizi ya Gesi na Echidna, tengeneza faili ya usanidi `config.yaml`:
+Ili kuwezesha matumizi ya gesi na Echidna, tengeneza faili la usanidi `config.yaml`:
 
 ```yaml
 estimateGas: true
 ```
 
-Katika mfano huu, tutapunguza pia ukubwa wa mfuatano wa manunuzi ili kufanya matokeo yawe rahisi kueleweka:
+Katika mfano huu, pia tutapunguza ukubwa wa mfuatano wa miamala ili kufanya matokeo yawe rahisi kueleweka:
 
 ```yaml
 seqLen: 2
@@ -607,7 +605,7 @@ estimateGas: true
 
 ### Endesha Echidna {#run-echidna-3}
 
-Mara tu tunapokuwa na faili ya usanidi iliyoundwa, tunaweza kuendesha Echidna kama hii:
+Mara tu tunapokuwa na faili la usanidi lililotengenezwa, tunaweza kuendesha Echidna hivi:
 
 ```bash
 echidna-test gas.sol --config config.yaml
@@ -626,11 +624,10 @@ Seed: -325611019680165325
 
 - Gesi inayoonyeshwa ni makadirio yaliyotolewa na [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-).
 
-### Kuchuja Simu zinazopunguza Gesi {#filtering-out-gas-reducing-calls}
+### Kuchuja Miito Inayopunguza Gesi {#filtering-out-gas-reducing-calls}
 
-Mafunzo kuhusu **kuchuja chaguo za kukokotoa za kuita wakati wa kampeni ya fuzzing** hapo juu yanaonyesha jinsi ya
-kuondoa baadhi ya chaguo za kukokotoa kutoka kwa majaribio yako.  
-Hii inaweza kuwa muhimu kwa kupata makadirio sahihi ya Gesi.
+Mafunzo kuhusu **kuchuja vipengele vya kuita wakati wa kampeni ya fuzzing** hapo juu yanaonyesha jinsi ya kuondoa baadhi ya vipengele kwenye upimaji wako.  
+Hili linaweza kuwa muhimu kwa kupata makadirio sahihi ya gesi.
 Fikiria mfano ufuatao:
 
 ```solidity
@@ -657,22 +654,22 @@ contract C {
 }
 ```
 
-Ikiwa Echidna inaweza kuita chaguo zote za kukokotoa, haitapata kwa urahisi miamala yenye gharama kubwa ya Gesi:
+Ikiwa Echidna inaweza kuita vipengele vyote, haitapata kwa urahisi miamala yenye gharama kubwa ya gesi:
 
 ```
 echidna-test pushpop.sol --config config.yaml
 ...
-pop used a maximum of 10746 gas
+pop ilitumia kiwango cha juu cha gesi 10746
 ...
-check used a maximum of 23730 gas
+check ilitumia kiwango cha juu cha gesi 23730
 ...
-clear used a maximum of 35916 gas
+clear ilitumia kiwango cha juu cha gesi 35916
 ...
-push used a maximum of 40839 gas
+push ilitumia kiwango cha juu cha gesi 40839
 ```
 
-Hiyo ni kwa sababu gharama inategemea ukubwa wa `addrs` na simu za nasibu huelekea kuacha safu karibu tupu.
-Kuorodhesha `pop` na `clear` nyeusi, hata hivyo, hutupa matokeo bora zaidi:
+Hiyo ni kwa sababu gharama inategemea ukubwa wa `addrs` na miito ya kubahatisha huwa inaacha safu (array) karibu tupu.
+Kuweka kwenye orodha nyeusi `pop` na `clear`, hata hivyo, kunatupa matokeo bora zaidi:
 
 ```yaml
 filterBlacklist: true
@@ -682,14 +679,14 @@ filterFunctions: ["pop", "clear"]
 ```
 echidna-test pushpop.sol --config config.yaml
 ...
-push used a maximum of 40839 gas
+push ilitumia kiwango cha juu cha gesi 40839
 ...
-check used a maximum of 1484472 gas
+check ilitumia kiwango cha juu cha gesi 1484472
 ```
 
-### Muhtasari: Kupata miamala yenye matumizi makubwa ya Gesi {#summary-finding-transactions-with-high-gas-consumption}
+### Muhtasari: Kupata miamala yenye matumizi makubwa ya gesi {#summary-finding-transactions-with-high-gas-consumption}
 
-Echidna inaweza kupata miamala yenye matumizi makubwa ya Gesi kwa kutumia chaguo la usanidi la `estimateGas`:
+Echidna inaweza kupata miamala yenye matumizi makubwa ya gesi kwa kutumia chaguo la usanidi la `estimateGas`:
 
 ```yaml
 estimateGas: true
@@ -700,4 +697,4 @@ echidna-test contract.sol --config config.yaml
 ...
 ```
 
-Echidna itaripoti mfuatano wenye matumizi ya juu zaidi ya Gesi kwa kila chaguo la kukokotoa, mara tu kampeni ya fuzzing itakapokamilika.
+Echidna itaripoti mfuatano wenye matumizi ya juu zaidi ya gesi kwa kila kipengele, mara tu kampeni ya fuzzing itakapokamilika.

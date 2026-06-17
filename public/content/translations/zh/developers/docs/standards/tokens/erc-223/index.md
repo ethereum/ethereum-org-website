@@ -1,6 +1,6 @@
 ---
 title: "ERC-223 代币标准"
-description: "关于 ERC-223 同质化代币标准的概述、它的运作方式以及与 ERC-20 的对比。"
+description: "ERC-223 同质化代币标准概述、工作原理以及与 ERC-20 的比较。"
 lang: zh
 ---
 
@@ -8,36 +8,36 @@ lang: zh
 
 ### 什么是 ERC-223？ {#what-is-erc223}
 
-ERC-223 是一种同质化代币标准，与 ERC-20 标准类似。 主要的区别在于，ERC-223 不仅定义了代币应用程序接口，还定义了从发送者向接收者转移代币的逻辑。 它引入了一个交流模型，使代币转账能够能在接收方进行处理。
+ERC-223 是一种同质化代币标准，类似于 ERC-20 标准。主要区别在于，ERC-223 不仅定义了代币 API，还定义了从发送方到接收方的代币转账逻辑。它引入了一种通信模型，允许在接收方处理代币转账。
 
 ### 与 ERC-20 的区别 {#erc20-differences}
 
-ERC-223 解决了 ERC-20 存在的一些限制，并在代币合约与可能接收代币的合约之间引入了一种新的交互方法。 有几件事情是 ERC-223 能够做到但 ERC-20 不能做到的：
+ERC-223 解决了一些 ERC-20 的局限性，并引入了代币合约与可能接收代币的合约之间交互的新方法。有几项功能是 ERC-223 可以实现而 ERC-20 无法实现的：
 
-- 在接收方处理代币转账：接收者可以检测到 ERC-223 代币的存入。
-- 拒绝不当发送的代币：如果用户向不应该接收代币的合约发送 ERC-223 代币，合约可以拒绝该交易，以避免损失代币。
-- 转账中的元数据：ERC-223 代币可以包含元数据，允许代币交易上附加任意信息。
+- 接收方的代币转账处理：接收方可以检测到 ERC-223 代币正在被存入。
+- 拒绝不当发送的代币：如果用户将 ERC-223 代币发送到不应接收代币的合约，该合约可以拒绝该交易，从而防止代币丢失。
+- 转账中的元数据：ERC-223 代币可以包含元数据，允许将任意信息附加到代币交易中。
 
 ## 前提条件 {#prerequisites}
 
-- [帐户](/developers/docs/accounts)
+- [账户](/developers/docs/accounts)
 - [智能合约](/developers/docs/smart-contracts/)
 - [代币标准](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
 ## 正文 {#body}
 
-ERC-223 是一种在智能合约中实现代币应用程序接口的代币标准。 它也为应该接收 ERC-223 代币的合约声明了一个应用程序接口。 不支持 ERC-223 接收者应用程序接口的合约无法接收 ERC-223 代币，防止了用户出错。
+ERC-223 是一种代币标准，它在智能合约中实现了代币的 API。它还为应该接收 ERC-223 代币的合约声明了一个 API。不支持 ERC-223 接收者 API 的合约无法接收 ERC-223 代币，从而防止了用户错误。
 
-实现了以下方法和事件的智能合约可以被称为兼容 ERC-223 的代币合约。 一旦被部署，它将负责追踪在以太坊上创建的代币。
+如果智能合约实现了以下方法和事件，则可以称之为兼容 ERC-223 的代币合约。一旦部署，它将负责跟踪以太坊上创建的代币。
 
-合约能够拥有的函数不止这些，开发者可以将各种代币标准的任何其他功能添加到该合约。 例如，`approve` 和 `transferFrom` 函数不是 ERC-223 标准的一部分，但如果有必要，可以实现这些函数。
+该合约并不局限于仅包含这些函数，开发者可以向该合约添加来自不同代币标准的任何其他功能。例如，`approve` 和 `transferFrom` 函数不是 ERC-223 标准的一部分，但如果需要，也可以实现这些函数。
 
-来自 [EIP-223](https://eips.ethereum.org/EIPS/eip-223)：
+摘自 [EIP-223](https://eips.ethereum.org/EIPS/eip-223)：
 
 ### 方法 {#methods}
 
-ERC-223 代币必须实现以下方法:
+ERC-223 代币必须实现以下方法：
 
 ```solidity
 function name() public view returns (string)
@@ -55,7 +55,7 @@ function transfer(address _to, uint256 _value, bytes calldata _data) public retu
 function tokenReceived(address _from, uint _value, bytes calldata _data)
 ```
 
-如果 ERC-223 代币被发送到没有实现 `tokenReceived(..)` 函数的合约，那么这笔转账必定会失败，并且代币不会从发送者的余额中移走。
+如果将 ERC-223 代币发送到未实现 `tokenReceived(..)` 函数的合约，则转账必须失败，并且代币不得从发送方的余额中扣除。
 
 ### 事件 {#events}
 
@@ -65,11 +65,11 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 ### 示例 {#examples}
 
-ERC-223 代币的应用程序接口与 ERC-20 的相似，因此从用户界面开发的角度上看两者没有区别。 唯一的区别是，ERC-223 代币可能不具有 `approve` + `transferFrom` 函数，因为这些函数对该标准来说是可选的。
+ERC-223 代币的 API 与 ERC-20 类似，因此从用户界面 (UI) 开发的角度来看没有区别。唯一的例外是 ERC-223 代币可能没有 `approve` + `transferFrom` 函数，因为这些函数对于该标准是可选的。
 
-#### Solidity 的示例 {#solidity-example}
+#### Solidity 示例 {#solidity-example}
 
-以下示例说明了基础 ERC-223 代币合约是如何运作的：
+以下示例说明了基本的 ERC-223 代币合约是如何运作的：
 
 ```solidity
 pragma solidity ^0.8.19;
@@ -115,7 +115,7 @@ contract VeryBasicERC223Token {
 }
 ```
 
-现在我们希望另一个合约接受 `tokenA` 存款（假设该 tokenA 是一种 ERC-223 代币）。 该合约必须只接受 tokenA 并拒绝其他代币。 当合约接收 tokenA 时，它必须触发一个 `Deposit()` 事件并增加 `deposits` 内部变量的值。
+现在我们希望另一个合约接受 `tokenA` 的存款，假设 tokenA 是一个 ERC-223 代币。该合约必须仅接受 tokenA 并拒绝任何其他代币。当合约接收到 tokenA 时，它必须触发一个 `Deposit()` 事件并增加内部 `deposits` 变量的值。
 
 代码如下：
 
@@ -123,14 +123,14 @@ contract VeryBasicERC223Token {
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
-    address tokenA; // The only token that we want to accept.
+    address tokenA; // 我们唯一想要接收的代币。
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // 在此函数中理解这一点很重要
-        // msg.sender 是正在被接收的一个代币的地址，
-        // 由于代币合约在大多数情况下不拥有或发送以太币，msg.value 始终为 0，
-        // _from      是代币转账的发送者，
-        // _value     是存入的代币数量。
+        // 重要的是要理解在这个函数中
+        // msg.sender 是正在接收的代币的地址，
+        // msg.value 始终为 0，因为在大多数情况下代币合约不拥有或发送以太币，
+        // _from 是代币转账的发送者，
+        // _value 是存入的代币数量。
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -138,33 +138,33 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-## 常见问题{#faq}
+## 常见问题 {#faq}
 
-### 如果我们将一些 tokenB 发送到合约会发生什么？ {#sending-tokens}
+### 如果我们将一些 tokenB 发送到该合约会发生什么？ {#sending-tokens}
 
-交易会失败，并且不会发生代币的转移。 代币将被退回到发送者的地址。
+交易将失败，代币转账不会发生。代币将退还到发送方的地址。
 
 ### 我们如何向该合约存款？ {#contract-deposits}
 
-调用 ERC-223 代币的 `transfer(address,uint256)` 或 `transfer(address,uint256,bytes)` 函数，指定 `RecipientContract` 的地址。
+调用 ERC-223 代币的 `transfer(address,uint256)` 或 `transfer(address,uint256,bytes)` 函数，并指定 `RecipientContract` 的地址。
 
-### 如果我们将 ERC-20 代币转移到该合约会发生什么？ {#erc-20-transfers}
+### 如果我们将 ERC-20 代币转账到该合约会发生什么？ {#erc-20-transfers}
 
-如果 ERC-20 代币被发送到 `RecipientContract`，这些代币将被转移，但转账不会被识别（不会触发 `Deposit()` 事件，存款值不会发生改变）。 无法过滤或防止不必要的 ERC-20 存款。
+如果将 ERC-20 代币发送到 `RecipientContract`，代币将被转账，但该转账不会被识别（不会触发 `Deposit()` 事件，存款值也不会改变）。无法过滤或阻止不需要的 ERC-20 存款。
 
-### 如果我们希望在代币存款完成后执行一些函数呢？ {#function-execution}
+### 如果我们想在代币存款完成后执行某些函数怎么办？ {#function-execution}
 
-有多种方法可以做到这点。 在此示例中，我们将使用的方法会使 ERC-223 转账与以太币转账相同：
+有多种方法可以做到这一点。在这个示例中，我们将采用使 ERC-223 转账与以太币转账完全相同的方法：
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
     event Foo();
     event Bar(uint256 someNumber);
-    address tokenA; // The only token that we want to accept.
+    address tokenA; // 我们唯一想要接收的代币。
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
         require(msg.sender == tokenA);
-        address(this).call(_data); // Handle incoming transaction and perform a subsequent function call.
+        address(this).call(_data); // 处理传入的交易并执行后续的函数调用。
     }
     function foo() public
     {
@@ -177,21 +177,21 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-当 `RecipientContract` 收到 ERC-223 代币时，合约会执行一个编码为代币交易参数 `_data` 的函数，这与以太币交易将函数调用编码为交易 `data` 相同。 阅读[数据字段](/developers/docs/transactions/#the-data-field)以获取更多信息。
+当 `RecipientContract` 接收到 ERC-223 代币时，合约将执行编码为代币交易 `_data` 参数的函数，这与以太币交易将函数调用编码为交易 `data` 的方式完全相同。阅读[数据字段](/developers/docs/transactions/#the-data-field)了解更多信息。
 
-在上述示例中，ERC-223 代币必须通过 `transfer(address,uin256,bytes calldata _data)` 函数转移到 `RecipientContract` 的地址。 如果数据参数将为 `0xc2985578`（`foo()` 函数的签名），那么在收到代币存款之后，将会调用 foo() 函数并触发事件 Foo()。
+在上述示例中，必须使用 `transfer(address,uin256,bytes calldata _data)` 函数将 ERC-223 代币转账到 `RecipientContract` 的地址。如果数据参数为 `0xc2985578`（`foo()` 函数的签名），则在收到代币存款后将调用 foo() 函数，并触发 Foo() 事件。
 
-也可以将参数编码到代币转账的 `data` 中，例如我们可以使用数值 12345 作为 `_someNumber` 来调用 bar() 函数。 在这种情况下，`data` 必须为 `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2`，其中 `0x0423a132` 是 `bar(uint256)` 函数的签名，`00000000000000000000000000000000000000000000000000000000000004d2` 是 uint256 类型的 12345。
+参数也可以编码在代币转账的 `data` 中，例如我们可以调用 bar() 函数，并将 `_someNumber` 的值设为 12345。在这种情况下，`data` 必须是 `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2`，其中 `0x0423a132` 是 `bar(uint256)` 函数的签名，而 `00000000000000000000000000000000000000000000000000000000000004d2` 是作为 uint256 的 12345。
 
 ## 局限性 {#limitations}
 
-虽然 ERC-223 解决了 ERC-20 标准中存在的一些问题，但它也有自己的局限性：
+虽然 ERC-223 解决了 ERC-20 标准中发现的几个问题，但它也有自身的局限性：
 
-- 采用与兼容性：ERC-223 目前还未被广泛采用，这可能会限制其与现有工具和平台的兼容性。
+- 采用与兼容性：ERC-223 尚未被广泛采用，这可能会限制其与现有工具和平台的兼容性。
 - 向后兼容性：ERC-223 不向后兼容 ERC-20，这意味着现有的 ERC-20 合约和工具在未经修改的情况下无法与 ERC-223 代币一起使用。
-- 燃料成本：与 ERC-20 交易相比，ERC-223 转账中的额外检查与功能可能导致更高的燃料成本。
+- Gas 成本：与 ERC-20 交易相比，ERC-223 转账中的额外检查和功能可能会导致更高的 Gas 成本。
 
-## 扩展阅读{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [EIP-223：ERC-223 代币标准](https://eips.ethereum.org/EIPS/eip-223)
-- [初始 ERC-223 提案](https://github.com/ethereum/eips/issues/223)
+- [最初的 ERC-223 提案](https://github.com/ethereum/eips/issues/223)

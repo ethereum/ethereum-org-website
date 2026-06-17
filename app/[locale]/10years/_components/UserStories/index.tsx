@@ -52,7 +52,7 @@ const Stories = ({ stories }: StoriesProps) => {
           <div
             key={story.name}
             className={cn(
-              "relative w-full rounded-2xl border bg-background p-6 transition-all duration-500",
+              "relative w-full rounded-base border bg-background p-6 transition-all duration-500",
               story.storyOriginal && "cursor-pointer"
             )}
           >

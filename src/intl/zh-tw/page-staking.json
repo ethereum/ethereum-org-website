@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "主網",
   "page-staking-launchpad-widget-start": "開始在 {network} 上質押",
   "page-staking-launchpad-widget-span": "選擇網路",
-  "page-staking-launchpad-widget-p1": "獨立驗證者應在冒險投入資金之前，先在 {{network}} 測試網上<strong>測試其設定</strong>與操作技能。請記住，選擇<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">少數客戶端</a>非常重要，因為這能提高網路的安全性並限制你的風險。",
+  "page-staking-launchpad-widget-p1": "獨立驗證者應在將資金置於風險之前，先在 {network} 測試網上<strong>測試其設定</strong>與操作技能。請記住，選擇<link>少數客戶端</link>非常重要，因為這能提升網路的安全性並限制您的風險。",
   "page-staking-launchpad-widget-p2": "如果你對此感到熟悉，你可以單獨使用質押啟動板從命令列設定所需的一切。",
   "page-staking-launchpad-widget-p3": "為了讓事情變得更簡單，請查看下方的一些工具和指南，它們可以與質押啟動板一起幫助你輕鬆設定客戶端。",
   "page-staking-launchpad-widget-link": "軟體工具與指南",

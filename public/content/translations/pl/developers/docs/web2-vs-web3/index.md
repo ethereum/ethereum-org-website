@@ -1,62 +1,62 @@
 ---
-title: "Web2 w porównaniu z Web3"
-description: "Porównaj scentralizowane usługi Web2 ze zdecentralizowanymi aplikacjami Web3 opartymi na technologii blockchain Ethereum."
+title: Web2 vs Web3
+description: "Porównanie scentralizowanych usług Web2 ze zdecentralizowanymi aplikacjami Web3 zbudowanymi w oparciu o technologię blockchain Ethereum."
 lang: pl
 ---
 
-Web2 odnosi się do wersji internetu znanej dziś większości z nas. Internet zdominowany przez firmy, które świadczą usługi w zamian za dane osobowe. Web3, w kontekście Ethereum, odwołuje się do zdecentralizowanych aplikacji, które działają w łańcuchu bloków. Są to aplikacje, które umożliwiają każdemu uczestniczenie bez zarabiania na jego danych osobowych.
+Web2 odnosi się do wersji internetu, którą większość z nas zna dzisiaj. Internetu zdominowanego przez firmy świadczące usługi w zamian za Twoje dane osobowe. Web3, w kontekście [Ethereum](/), odnosi się do zdecentralizowanych aplikacji (dapp), które działają na blockchainie. Są to aplikacje, które pozwalają każdemu na uczestnictwo bez monetyzacji jego danych osobowych.
 
-Szukasz zasobu bardziej przyjaznego dla początkujących? Zobacz nasze [wprowadzenie do web3](/web3/).
+Szukasz materiałów bardziej przyjaznych dla początkujących? Zobacz nasze [wprowadzenie do Web3](/web3/).
 
-## Korzyści Web3 {#web3-benefits}
+## Korzyści z Web3 {#web3-benefits}
 
-Wielu deweloperów Web3 zdecydowało się budować zdecentralizowane aplikacje ze względu na nieodłączną decentralizację Ethereum:
+Wielu programistów Web3 zdecydowało się na tworzenie dappów ze względu na nieodłączną decentralizację Ethereum:
 
-- Każdy, kto jest w sieci, ma uprawnienia do korzystania z usługi — lub innymi słowy, uprawnienia nie są wymagane.
-- Nikt nie może Cię zablokować ani odmówić dostępu do usługi.
-- Płatności są realizowane za pomocą natywnego tokenu, etheru (ETH).
-- Ethereum jest kompletne w sensie Turinga, co oznacza, że ​​można zaprogramować praktycznie wszystko.
+- Każdy, kto jest w sieci, ma uprawnienia do korzystania z usługi – innymi słowy, pozwolenie nie jest wymagane.
+- Nikt nie może Cię zablokować ani odmówić Ci dostępu do usługi.
+- Płatności są wbudowane za pośrednictwem natywnego tokena, etheru (ETH).
+- Ethereum jest kompletne w sensie Turinga, co oznacza, że możesz zaprogramować w nim praktycznie wszystko.
 
 ## Praktyczne porównania {#practical-comparisons}
 
-| Web2                                                                                            | Web3                                                                                                                 |
-| ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Twitter może cenzurować dowolne konto lub tweet                                                 | Tweety Web3 nie mogłyby być cenzurowane, ponieważ kontrola jest zdecentralizowana                                    |
-| Usługa płatnicza może podjąć decyzję o niedopuszczeniu płatności za niektóre rodzaje prac       | Aplikacje płatności Web3 nie wymagają żadnych danych osobowych i nie mogą uniemożliwiać płatności                    |
-| Serwery aplikacji gigantów ekonomicznych mogą zostać wyłączone i wpłynąć na dochody pracowników | Serwery Web3 nie mogą zostać wyłączone – używają Ethereum, zdecentralizowanej sieci tysięcy komputerów jako backendu |
+| Web2                                                                                                       | Web3                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Twitter może ocenzurować dowolne konto lub tweeta                                                          | Tweety w Web3 byłyby niemożliwe do ocenzurowania, ponieważ kontrola jest zdecentralizowana                                                     |
+| Usługa płatnicza może zdecydować o niedopuszczeniu płatności za określone rodzaje pracy                    | Aplikacje płatnicze Web3 nie wymagają danych osobowych i nie mogą blokować płatności                                                           |
+| Serwery aplikacji dla tzw. gig economy (ekonomii fuch) mogą ulec awarii i wpłynąć na dochody pracowników | Serwery Web3 nie mogą ulec awarii – jako swój backend wykorzystują Ethereum, zdecentralizowaną sieć tysięcy komputerów |
 
-To nie oznacza, że wszystkie usługi należy przekształcić w zdecentralizowane aplikacje. Te przykłady ilustrują główne różnice między usługami web2 i web3.
+Nie oznacza to, że wszystkie usługi muszą zostać przekształcone w dappy. Te przykłady ilustrują główne różnice między usługami Web2 i Web3.
 
 ## Ograniczenia Web3 {#web3-limitations}
 
-Web3 ma teraz pewne ograniczenia:
+Web3 ma obecnie pewne ograniczenia:
 
-- Skalowalność — transakcje są wolniejsze w web3, ponieważ są zdecentralizowane. Zmiany stanu, jak płatności, muszą być przetwarzane przez węzeł i propagowane w całej sieci.
-- UX – interakcja z aplikacjami web3 może wymagać dodatkowych kroków, oprogramowania i edukacji. Może to stanowić przeszkodę w akceptacji.
-- Dostępność — brak integracji z nowoczesnymi przeglądarkami internetowymi sprawia, że web3 jest mniej dostępna dla większości użytkowników.
-- Koszt — większość udanych zdecentralizowanych aplikacji umieszcza bardzo małe części swojego kodu w blockchainie, ponieważ jest to kosztowne.
+- Skalowalność – transakcje w Web3 są wolniejsze, ponieważ są zdecentralizowane. Zmiany stanu, takie jak płatność, muszą zostać przetworzone przez węzeł i rozpropagowane w całej sieci.
+- UX (doświadczenie użytkownika) – interakcja z aplikacjami Web3 może wymagać dodatkowych kroków, oprogramowania i edukacji. Może to stanowić przeszkodę w adopcji.
+- Dostępność – brak integracji w nowoczesnych przeglądarkach internetowych sprawia, że Web3 jest mniej dostępne dla większości użytkowników.
+- Koszty – większość odnoszących sukcesy dappów umieszcza na blockchainie bardzo małe fragmenty swojego kodu, ponieważ jest to drogie.
 
-## Centralizacja a decentralizacja {#centralization-vs-decentralization}
+## Centralizacja vs decentralizacja {#centralization-vs-decentralization}
 
-W tabeli poniżej wymieniono pewne zalety i wady scentralizowanych i zdecentralizowanych sieci cyfrowych.
+W poniższej tabeli przedstawiamy w ogólnym zarysie niektóre zalety i wady scentralizowanych i zdecentralizowanych sieci cyfrowych.
 
-| Systemy scentralizowane                                                                                                                                                                                                                                                                              | Systemy zdecentralizowane                                                                                                                                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Niska średnica sieci (wszyscy uczestnicy są podłączeni do organu centralnego); informacja jest szybko rozsyłana, ponieważ rozsyłanie jest prowadzone przez organ centralny z wieloma zasobami obliczeniowymi.                                                     | Najodleglejsi uczestnicy sieci mogą być znacznie odsunięci od siebie. Informacje nadawane z jednej strony sieci mogą potrzebować dużo czasu, aby dotrzeć do drugiej strony.                                                                                          |
-| Zazwyczaj wyższa wydajność (większa przepustowość, mniej całkowitych kosztów zasobów obliczeniowych) i łatwiejsze do wdrożenia.                                                                                                                                   | Zwykle niższa wydajność (mniejsza przepustowość, więcej całkowitych zasobów obliczeniowych wydatkowanych) i bardziej skomplikowana do wdrożenia.                                                                                                                  |
-| W przypadku sprzecznych danych rozwiązanie jest jasne i łatwe: ostatecznym źródłem prawdy jest organ centralny.                                                                                                                                                      | Protokół (często złożony) jest potrzebny do rozstrzygania sporów, jeśli współuczestnicy zgłaszają sprzeczne roszczenia co do stanu danych, które mają być zsynchronizowane.                                                                                       |
-| Pojedynczy punkt awarii: złośliwe podmioty mogą być w stanie zniszczyć sieć poprzez atak na organ centralny.                                                                                                                                                         | Brak pojedynczego punktu awarii: sieć może nadal funkcjonować, nawet jeśli duża część uczestników zostanie zaatakowana/wyeliminowana.                                                                                                                                |
-| Koordynacja między uczestnikami sieci jest znacznie łatwiejsza i jest prowadzona przez organ centralny. Organ centralny może zmusić uczestników sieci do przyjmowania aktualizacji, aktualizacji protokołów itp., przy bardzo niewielkim sprzeciwie. | Koordynacja jest często trudna, ponieważ żaden przedstawiciel nie ma ostatecznego głosu w decyzjach dotyczących sieci, modernizacji protokołów itp. W najgorszym przypadku sieć jest podatna na rozpad, gdy dochodzi do nieporozumień dotyczących zmian w protokole. |
-| Organ centralny może cenzurować dane, potencjalnie oddzielić części sieci od interakcji z resztą sieci.                                                                                                                                                                              | Cenzura jest o wiele trudniejsza, ponieważ informacje mogą rozprzestrzeniać się w sieci na wiele sposobów.                                                                                                                                                                           |
-| Udział w sieci jest kontrolowany przez organ centralny.                                                                                                                                                                                                                              | Każdy może uczestniczyć w sieci; nie ma „stróżów” Najlepiej byłoby, gdyby koszty uczestnictwa były bardzo niskie.                                                                                                                                                                    |
+| Systemy scentralizowane                                                                                                                                                                                                                                                        | Systemy zdecentralizowane                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mała średnica sieci (wszyscy uczestnicy są połączeni z centralnym organem); informacje rozchodzą się szybko, ponieważ propagacją zajmuje się centralny organ dysponujący dużymi zasobami obliczeniowymi.                                                                     | Najbardziej oddaleni uczestnicy w sieci mogą być potencjalnie oddzieleni od siebie wieloma krawędziami. Informacje nadawane z jednej strony sieci mogą potrzebować dużo czasu, aby dotrzeć na drugą stronę.                                                                                                      |
+| Zazwyczaj wyższa wydajność (wyższa przepustowość, mniejsze całkowite zużycie zasobów obliczeniowych) i łatwiejsza implementacja.                                                                                                                                               | Zazwyczaj niższa wydajność (niższa przepustowość, większe całkowite zużycie zasobów obliczeniowych) i bardziej złożona implementacja.                                                                                                                                                                            |
+| W przypadku sprzecznych danych rozwiązanie jest jasne i proste: ostatecznym źródłem prawdy jest centralny organ.                                                                                                                                                               | Do rozwiązywania sporów potrzebny jest protokół (często złożony), jeśli węzły równorzędne wysuwają sprzeczne twierdzenia dotyczące stanu danych, co do których uczestnicy mają być zsynchronizowani.                                                                                                             |
+| Pojedynczy punkt awarii: złośliwi aktorzy mogą być w stanie wyłączyć sieć, atakując centralny organ.                                                                                                                                                                           | Brak pojedynczego punktu awarii: sieć może nadal funkcjonować, nawet jeśli duża część uczestników zostanie zaatakowana lub wyłączona.                                                                                                                                                                            |
+| Koordynacja między uczestnikami sieci jest znacznie łatwiejsza i zajmuje się nią centralny organ. Centralny organ może zmusić uczestników sieci do przyjęcia ulepszeń, aktualizacji protokołu itp. przy bardzo małym oporze.                                                 | Koordynacja jest często trudna, ponieważ żaden pojedynczy podmiot nie ma ostatecznego głosu w decyzjach na poziomie sieci, aktualizacjach protokołu itp. W najgorszym przypadku sieć jest podatna na podziały, gdy pojawiają się nieporozumienia dotyczące zmian w protokole.                                  |
+| Centralny organ może cenzurować dane, potencjalnie odcinając części sieci od interakcji z resztą sieci.                                                                                                                                                                        | Cenzura jest znacznie trudniejsza, ponieważ informacje mają wiele dróg propagacji w sieci.                                                                                                                                                                                                                       |
+| Uczestnictwo w sieci jest kontrolowane przez centralny organ.                                                                                                                                                                                                                  | Każdy może uczestniczyć w sieci; nie ma żadnych „strażników” (gatekeepers). W idealnym przypadku koszt uczestnictwa jest bardzo niski.                                                                                                                                                                           |
 
-Zauważ, że są to ogólne wzorce, które mogą nie występować w każdej sieci. Ponadto w rzeczywistości stopień, w jakim sieć jest scentralizowana/zdecentralizowana, leży w spektrum; żadna sieć nie jest całkowicie scentralizowana lub całkowicie zdecentralizowana.
+Należy pamiętać, że są to ogólne wzorce, które mogą nie sprawdzać się w każdej sieci. Ponadto w rzeczywistości stopień centralizacji/decentralizacji sieci leży na pewnym spektrum; żadna sieć nie jest całkowicie scentralizowana ani całkowicie zdecentralizowana.
 
 ## Dalsza lektura {#further-reading}
 
-- [Czym jest Web3?](/web3/) - _ethereum.org_
+- [Czym jest Web3?](/web3/) – _ethereum.org_
 - [Architektura aplikacji Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
-- [Znaczenie decentralizacji](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _6 lutego 2017 - Vitalik Buterin_
-- [Dlaczego decentralizacja ma znaczenie](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) _18 lutego 2018 - Chris Dixon_
-- [Czym jest Web 3.0 i dlaczego ma znaczenie](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _31 grudnia 2019 - Max Mersch i Richard Muirhead_
-- [Dlaczego potrzebujemy Web 3.0](https://gavofyork.medium.com/why-we-need-web-3-0-5da4f2bf95ab) _12 września 2018 - Gavin Wood_
+- [Znaczenie decentralizacji](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _6 lutego 2017 r. – Vitalik Buterin_
+- [Dlaczego decentralizacja ma znaczenie](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) _18 lutego 2018 r. – Chris Dixon_
+- [Czym jest Web 3.0 i dlaczego ma znaczenie](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _31 grudnia 2019 r. – Max Mersch i Richard Muirhead_
+- [Dlaczego potrzebujemy Web 3.0](https://gavofyork.medium.com/why-we-need-web-3-0-5da4f2bf95ab) _12 września 2018 r. – Gavin Wood_

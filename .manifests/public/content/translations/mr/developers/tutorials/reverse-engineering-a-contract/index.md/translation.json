@@ -1,0 +1,791 @@
+{
+  "version": 1,
+  "locale": "mr",
+  "translatedAt": "2026-06-17T00:39:37.537Z",
+  "englishManifestHash": "e4c0956c3b54",
+  "placeholderOrder": [
+    "LINK-6dd727",
+    "LINK-ef17b1",
+    "LINK-afd1ac",
+    "CODE-0bfb4d",
+    "LINK-7dac18",
+    "LINK-d5e123",
+    "LINK-d3b233",
+    "IMAGE-b16fa6",
+    "LINK-cc173d",
+    "CODE-5b950e",
+    "CODEBLOCK-414787",
+    "CODE-792aac",
+    "CODE-792aac",
+    "CODE-16a36e",
+    "CODE-c8361f",
+    "CODEBLOCK-ade933",
+    "CODE-f8b3c7",
+    "CODE-fe9808",
+    "LINK-936d95",
+    "IMAGE-909dc7",
+    "CODE-04b0b7",
+    "CODE-04b0b7",
+    "LINK-46750f",
+    "CODE-59114e",
+    "CODE-dde8be",
+    "LINK-afab55",
+    "CODE-a54942",
+    "IMAGE-53a038",
+    "CODE-417e2c",
+    "LINK-43461c",
+    "CODE-dde8be",
+    "CODE-417e2c",
+    "CODE-5daf80",
+    "CODE-684888",
+    "CODE-20c8a1",
+    "CODE-8be336",
+    "CODE-5daf80",
+    "CODE-5daf80",
+    "LINK-3a7b62",
+    "CODE-8b3587",
+    "CODE-5daf80",
+    "CODE-dde8be",
+    "IMAGE-47c7aa",
+    "LINK-29d700",
+    "CODE-2283b6",
+    "CODE-c3172d",
+    "CODE-c3172d",
+    "CODE-0607a7",
+    "IMAGE-e1822a",
+    "CODE-0f88b9",
+    "LINK-a15686",
+    "LINK-216073",
+    "CODE-3204e1",
+    "CODE-4f3e8b",
+    "CODE-18558c",
+    "CODE-fe9808",
+    "LINK-70a18d",
+    "LINK-f80e18",
+    "LINK-3158de",
+    "LINK-b2e65f",
+    "LINK-f559dd",
+    "IMAGE-89a4bb",
+    "LINK-55ee8a",
+    "CODE-9d0040",
+    "CODE-0607a7",
+    "CODE-5dbb1a",
+    "CODE-c3172d",
+    "CODE-5dbb1a",
+    "CODE-c3172d",
+    "CODE-5dbb1a",
+    "CODE-fe9808",
+    "CODE-e1d034",
+    "CODE-9d0040",
+    "CODE-e1d034",
+    "LINK-cb9182",
+    "CODE-e1d034",
+    "CODE-5dbb1a",
+    "CODE-fe9808",
+    "CODE-777d46",
+    "CODE-9d0040",
+    "LINK-675ee8",
+    "CODE-777d46",
+    "CODE-5dbb1a",
+    "CODE-fe9808",
+    "CODE-9d0040",
+    "CODE-817b53",
+    "LINK-b31eaa",
+    "CODE-5dbb1a",
+    "CODE-fe9808",
+    "CODE-9d0040",
+    "LINK-b31eaa",
+    "CODE-5daf80",
+    "CODE-5daf80",
+    "LINK-a8df87",
+    "LINK-779b24",
+    "LINK-76375f",
+    "LINK-135fff",
+    "LINK-393885",
+    "LINK-4920f2",
+    "IMAGE-972572",
+    "LINK-2c4503",
+    "LINK-fecda4",
+    "LINK-28e6fd",
+    "LINK-ca0b58",
+    "LINK-3158de",
+    "LINK-656bd3",
+    "LINK-b2e65f",
+    "LINK-202694",
+    "LINK-135fff",
+    "LINK-393885",
+    "LINK-f3929f",
+    "CODE-06c9e3",
+    "CODE-4bf606",
+    "LINK-1f1b16",
+    "CODEBLOCK-b72a31",
+    "CODE-c4d0cf",
+    "CODE-935f68",
+    "CODE-2f2417",
+    "CODE-c73fa7",
+    "CODEBLOCK-1a6c52",
+    "CODE-67cb04",
+    "CODE-77951f",
+    "CODE-2f2417",
+    "CODE-097a9d",
+    "CODEBLOCK-c1007f",
+    "CODEBLOCK-5dbaf0",
+    "CODE-66a40a",
+    "CODE-777d46",
+    "LINK-564358",
+    "CODE-6d87be",
+    "CODEBLOCK-13723c",
+    "CODEBLOCK-7b88c9",
+    "LINK-b36093",
+    "LINK-dc05c7",
+    "LINK-6c02a4",
+    "CODE-67cb04",
+    "LINK-19555f",
+    "CODE-67cb04",
+    "CODEBLOCK-fea0ce",
+    "LINK-00a44b",
+    "CODE-0b3fa3",
+    "LINK-3cd121",
+    "IMAGE-88883e",
+    "LINK-6aa3d0",
+    "CODE-dd1b3c",
+    "CODEBLOCK-5c2a9a",
+    "CODEBLOCK-184da6",
+    "CODE-dd1b3c",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-414787": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ade933": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b72a31": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1a6c52": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c1007f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5dbaf0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-13723c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7b88c9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fea0ce": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5c2a9a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-184da6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-0bfb4d": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x2510c039cc3b061d79e564b38836da87e31b342f"
+      }
+    },
+    "CODE-5b950e": {
+      "type": "inline-code",
+      "values": {
+        "content": "B1"
+      }
+    },
+    "CODE-792aac": {
+      "type": "inline-code",
+      "values": {
+        "content": "PUSH"
+      }
+    },
+    "CODE-16a36e": {
+      "type": "inline-code",
+      "values": {
+        "content": "A1"
+      }
+    },
+    "CODE-c8361f": {
+      "type": "inline-code",
+      "values": {
+        "content": "A2"
+      }
+    },
+    "CODE-f8b3c7": {
+      "type": "inline-code",
+      "values": {
+        "content": "JUMP"
+      }
+    },
+    "CODE-fe9808": {
+      "type": "inline-code",
+      "values": {
+        "content": "JUMPI"
+      }
+    },
+    "CODE-04b0b7": {
+      "type": "inline-code",
+      "values": {
+        "content": "JUMPDEST"
+      }
+    },
+    "CODE-59114e": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.value"
+      }
+    },
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-a54942": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x"
+      }
+    },
+    "CODE-417e2c": {
+      "type": "inline-code",
+      "values": {
+        "content": "Storage[6]"
+      }
+    },
+    "CODE-5daf80": {
+      "type": "inline-code",
+      "values": {
+        "content": "Value*"
+      }
+    },
+    "CODE-684888": {
+      "type": "inline-code",
+      "values": {
+        "content": "*"
+      }
+    },
+    "CODE-20c8a1": {
+      "type": "inline-code",
+      "values": {
+        "content": "ADDRESS BALANCE"
+      }
+    },
+    "CODE-8be336": {
+      "type": "inline-code",
+      "values": {
+        "content": "NOT"
+      }
+    },
+    "CODE-8b3587": {
+      "type": "inline-code",
+      "values": {
+        "content": "Value* + CALLVALUE"
+      }
+    },
+    "CODE-2283b6": {
+      "type": "inline-code",
+      "values": {
+        "content": "DELEGATE_CALL"
+      }
+    },
+    "CODE-c3172d": {
+      "type": "inline-code",
+      "values": {
+        "content": "RETURN"
+      }
+    },
+    "CODE-0607a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "REVERT"
+      }
+    },
+    "CODE-0f88b9": {
+      "type": "inline-code",
+      "values": {
+        "content": "1C"
+      }
+    },
+    "CODE-3204e1": {
+      "type": "inline-code",
+      "values": {
+        "content": "DUP1"
+      }
+    },
+    "CODE-4f3e8b": {
+      "type": "inline-code",
+      "values": {
+        "content": "PUSH4 (((method signature>"
+      }
+    },
+    "CODE-18558c": {
+      "type": "inline-code",
+      "values": {
+        "content": "EQ"
+      }
+    },
+    "CODE-9d0040": {
+      "type": "inline-code",
+      "values": {
+        "content": "payable"
+      }
+    },
+    "CODE-5dbb1a": {
+      "type": "inline-code",
+      "values": {
+        "content": "splitter()"
+      }
+    },
+    "CODE-e1d034": {
+      "type": "inline-code",
+      "values": {
+        "content": "currentWindow()"
+      }
+    },
+    "CODE-777d46": {
+      "type": "inline-code",
+      "values": {
+        "content": "merkleRoot()"
+      }
+    },
+    "CODE-817b53": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldataload(4)"
+      }
+    },
+    "CODE-06c9e3": {
+      "type": "inline-code",
+      "values": {
+        "content": "claim(<params>)"
+      }
+    },
+    "CODE-4bf606": {
+      "type": "inline-code",
+      "values": {
+        "content": "isClaimed(<params>)"
+      }
+    },
+    "CODE-c4d0cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "require"
+      }
+    },
+    "CODE-935f68": {
+      "type": "inline-code",
+      "values": {
+        "content": "if"
+      }
+    },
+    "CODE-2f2417": {
+      "type": "inline-code",
+      "values": {
+        "content": "_param1"
+      }
+    },
+    "CODE-c73fa7": {
+      "type": "inline-code",
+      "values": {
+        "content": "_param1 * _param2"
+      }
+    },
+    "CODE-67cb04": {
+      "type": "inline-code",
+      "values": {
+        "content": "_param2"
+      }
+    },
+    "CODE-77951f": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint256"
+      }
+    },
+    "CODE-097a9d": {
+      "type": "inline-code",
+      "values": {
+        "content": "currentWindow"
+      }
+    },
+    "CODE-66a40a": {
+      "type": "inline-code",
+      "values": {
+        "content": "unknown2eb4a7ab"
+      }
+    },
+    "CODE-6d87be": {
+      "type": "inline-code",
+      "values": {
+        "content": "_param4"
+      }
+    },
+    "CODE-0b3fa3": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xdbd5..."
+      }
+    },
+    "CODE-dd1b3c": {
+      "type": "inline-code",
+      "values": {
+        "content": "claim"
+      }
+    },
+    "IMAGE-b16fa6": {
+      "type": "image",
+      "values": {
+        "path": "opcode-view.png"
+      }
+    },
+    "IMAGE-909dc7": {
+      "type": "image",
+      "values": {
+        "path": "flowchart-entry.png"
+      }
+    },
+    "IMAGE-53a038": {
+      "type": "image",
+      "values": {
+        "path": "calldata-empty.png"
+      }
+    },
+    "IMAGE-47c7aa": {
+      "type": "image",
+      "values": {
+        "path": "flowchart-entry.png"
+      }
+    },
+    "IMAGE-e1822a": {
+      "type": "image",
+      "values": {
+        "path": "flowchart-proxy.png"
+      }
+    },
+    "IMAGE-89a4bb": {
+      "type": "image",
+      "values": {
+        "path": "flowchart-abi.png"
+      }
+    },
+    "IMAGE-972572": {
+      "type": "image",
+      "values": {
+        "path": "create-tx.png"
+      }
+    },
+    "IMAGE-88883e": {
+      "type": "image",
+      "values": {
+        "path": "claim-tx.png"
+      }
+    },
+    "LINK-6dd727": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code"
+      }
+    },
+    "LINK-ef17b1": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code"
+      }
+    },
+    "LINK-afd1ac": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f"
+      }
+    },
+    "LINK-7dac18": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f"
+      }
+    },
+    "LINK-d5e123": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes"
+      }
+    },
+    "LINK-d3b233": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e"
+      }
+    },
+    "LINK-cc173d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.google.com/spreadsheets/d/1tKmTJiNjUwHbW64wCKOSJxHjmh0bAUapt6btUYE7kDA/edit?usp=sharing"
+      }
+    },
+    "LINK-936d95": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.10/abi-spec.html"
+      }
+    },
+    "LINK-46750f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#wei"
+      }
+    },
+    "LINK-afab55": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7"
+      }
+    },
+    "LINK-43461c": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange"
+      }
+    },
+    "LINK-3a7b62": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/stat/supply"
+      }
+    },
+    "LINK-29d700": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.openzeppelin.com/proxy-patterns/"
+      }
+    },
+    "LINK-a15686": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-145"
+      }
+    },
+    "LINK-216073": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes"
+      }
+    },
+    "LINK-70a18d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4byte.directory/"
+      }
+    },
+    "LINK-f80e18": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e"
+      }
+    },
+    "LINK-3158de": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4"
+      }
+    },
+    "LINK-b2e65f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab"
+      }
+    },
+    "LINK-f559dd": {
+      "type": "link",
+      "values": {
+        "url": "#the-handler-at-0x7c"
+      }
+    },
+    "LINK-55ee8a": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity-by-example.org/payable/"
+      }
+    },
+    "LINK-cb9182": {
+      "type": "link",
+      "values": {
+        "url": "#the-e4-code"
+      }
+    },
+    "LINK-675ee8": {
+      "type": "link",
+      "values": {
+        "url": "#the-da-code"
+      }
+    },
+    "LINK-b31eaa": {
+      "type": "link",
+      "values": {
+        "url": "#the-da-code"
+      }
+    },
+    "LINK-a8df87": {
+      "type": "link",
+      "values": {
+        "url": "#splitter"
+      }
+    },
+    "LINK-779b24": {
+      "type": "link",
+      "values": {
+        "url": "#currentwindow"
+      }
+    },
+    "LINK-76375f": {
+      "type": "link",
+      "values": {
+        "url": "#merkleroot"
+      }
+    },
+    "LINK-135fff": {
+      "type": "link",
+      "values": {
+        "url": "#0x81e580d3"
+      }
+    },
+    "LINK-393885": {
+      "type": "link",
+      "values": {
+        "url": "#0x1f135823"
+      }
+    },
+    "LINK-4920f2": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f"
+      }
+    },
+    "LINK-2c4503": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761"
+      }
+    },
+    "LINK-fecda4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4byte.directory/signatures/?bytes4_signature=0x8ffb5c97"
+      }
+    },
+    "LINK-28e6fd": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4byte.directory/signatures/?bytes4_signature=0xd2ef0795"
+      }
+    },
+    "LINK-ca0b58": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4byte.directory/signatures/?bytes4_signature=0x338b1d31"
+      }
+    },
+    "LINK-656bd3": {
+      "type": "link",
+      "values": {
+        "url": "#currentwindow"
+      }
+    },
+    "LINK-202694": {
+      "type": "link",
+      "values": {
+        "url": "#merkleroot"
+      }
+    },
+    "LINK-f3929f": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf"
+      }
+    },
+    "LINK-1f1b16": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761"
+      }
+    },
+    "LINK-564358": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/crypto-0-nite/merkle-proofs-explained-6dd429623dc5"
+      }
+    },
+    "LINK-b36093": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange"
+      }
+    },
+    "LINK-dc05c7": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      }
+    },
+    "LINK-6c02a4": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code"
+      }
+    },
+    "LINK-19555f": {
+      "type": "link",
+      "values": {
+        "url": "https://weth.tkn.eth.limo/"
+      }
+    },
+    "LINK-00a44b": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#events"
+      }
+    },
+    "LINK-3cd121": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/tx/0xe7d3b7e00f645af17dfbbd010478ef4af235896c65b6548def1fe95b3b7d2274"
+      }
+    },
+    "LINK-6aa3d0": {
+      "type": "link",
+      "values": {
+        "url": "#claim"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:39:37.537Z",
+      "status": "success"
+    }
+  }
+}

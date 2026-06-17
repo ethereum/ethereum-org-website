@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "الشبكة الرئيسية",
   "page-staking-launchpad-widget-start": "ابدأ التخزين على {network}",
   "page-staking-launchpad-widget-span": "اختر الشبكة",
-  "page-staking-launchpad-widget-p1": "يُتوقع من المُدَقِّقين الفرديين <strong>اختبار إعداداتهم</strong> ومهاراتهم التشغيلية على شبكة اختبار {{network}} قبل المخاطرة بالأموال. تذكر أنه من المهم اختيار <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">عميل أقلية</a> لأن ذلك يحسن من أمان الشبكة ويحد من مخاطرك.",
+  "page-staking-launchpad-widget-p1": "يُتوقع من المُدَقِّقين الفرديين <strong>اختبار إعداداتهم</strong> ومهاراتهم التشغيلية على شبكة اختبار {network} قبل المخاطرة بالأموال. تذكر أنه من المهم اختيار <link>عميل أقلية</link> لأن ذلك يحسن أمان الشبكة ويحد من مخاطرك.",
   "page-staking-launchpad-widget-p2": "إذا كنت مرتاحًا لذلك، يمكنك إعداد كل ما يلزم من سطر الأوامر باستخدام منصة إطلاق التخزين وحدها.",
   "page-staking-launchpad-widget-p3": "لجعل الأمور أسهل، تحقق من بعض الأدوات والأدلة أدناه التي يمكن أن تساعدك جنبًا إلى جنب مع منصة إطلاق التخزين لإعداد عملائك بسهولة.",
   "page-staking-launchpad-widget-link": "أدوات البرامج والأدلة",

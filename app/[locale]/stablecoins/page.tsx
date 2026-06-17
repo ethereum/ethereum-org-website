@@ -536,7 +536,7 @@ async function Page(props: { params: Promise<PageParams> }) {
               >
                 <Grid
                   balanced={2}
-                  className="gap-8 rounded-2xl bg-background-highlight p-6 text-start md:p-10"
+                  className="gap-8 rounded-base bg-background-highlight p-6 text-start md:p-10"
                 >
                   <div>
                     <h3 className="mb-4 text-2xl font-black">{type.title}</h3>
