@@ -1,10 +1,10 @@
 ---
-title: NFT Basım Aracı Eğitimi
-description: Bu eğitimde, bir NFT basım aracı oluşturacak ve MetaMask ile Web3 araçlarını kullanarak akıllı sözleşmenizi bir React ön yüzüne bağlayıp tam yığın bir merkeziyetsiz uygulama (dapp) oluşturmayı öğreneceksiniz.
+title: "NFT Basım Aracı Eğitimi"
+description: "Bu eğitimde, bir NFT basım aracı oluşturacak ve MetaMask ile Web3 araçlarını kullanarak akıllı sözleşmenizi bir React ön yüzüne bağlayıp tam yığın bir merkeziyetsiz uygulama (dapp) oluşturmayı öğreneceksiniz."
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "akıllı sözleşmeler", "ön yüz", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "akıllı sözleşmeler", "ön yüz", "Pinata", "erc-721"]
 skill: intermediate
-breadcrumb: NFT basım dapp'i
+breadcrumb: "NFT basım dapp'i"
 lang: tr
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

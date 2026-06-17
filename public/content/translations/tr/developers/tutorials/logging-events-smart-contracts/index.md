@@ -1,10 +1,10 @@
 ---
-title: Olaylar ile akıllı sözleşmelerden verileri günlüğe kaydetme
-description: Akıllı sözleşme olaylarına ve bunları verileri günlüğe kaydetmek için nasıl kullanabileceğinize dair bir giriş
+title: "Olaylar ile akıllı sözleşmelerden verileri günlüğe kaydetme"
+description: "Akıllı sözleşme olaylarına ve bunları verileri günlüğe kaydetmek için nasıl kullanabileceğinize dair bir giriş"
 author: "jdourlens"
-tags: ["akıllı sözleşmeler", "remix", "solidity", "olaylar"]
+tags: ["akıllı sözleşmeler", "Remix", "Solidity", "olaylar"]
 skill: intermediate
-breadcrumb: Olay günlüğü oluşturma
+breadcrumb: "Olay günlüğü oluşturma"
 lang: tr
 published: 2020-04-03
 source: EthereumDev

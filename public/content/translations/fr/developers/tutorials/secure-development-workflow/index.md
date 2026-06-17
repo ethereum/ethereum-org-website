@@ -1,10 +1,10 @@
 ---
-title: Liste de contrôle de sécurité des contrats intelligents
-description: Un flux de travail suggéré pour écrire des contrats intelligents sécurisés
+title: "Liste de contrôle de sécurité des contrats intelligents"
+description: "Un flux de travail suggéré pour écrire des contrats intelligents sécurisés"
 author: "Trailofbits"
-tags: ["contrats intelligents", "sécurité", "solidity"]
+tags: ["contrats intelligents", "sécurité", "Solidity"]
 skill: intermediate
-breadcrumb: Liste de contrôle de sécurité
+breadcrumb: "Liste de contrôle de sécurité"
 lang: fr
 published: 2020-09-07
 source: Building secure contracts

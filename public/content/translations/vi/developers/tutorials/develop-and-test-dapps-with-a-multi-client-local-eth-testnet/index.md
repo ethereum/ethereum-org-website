@@ -1,6 +1,6 @@
 ---
-title: Cách phát triển và thử nghiệm dapp trên mạng thử nghiệm đa máy khách cục bộ
-description: Hướng dẫn này trước tiên sẽ chỉ cho bạn cách khởi tạo và cấu hình mạng thử nghiệm Ethereum đa máy khách cục bộ trước khi sử dụng mạng thử nghiệm đó để triển khai và thử nghiệm dapp.
+title: "Cách phát triển và thử nghiệm dapp trên mạng thử nghiệm đa máy khách cục bộ"
+description: "Hướng dẫn này trước tiên sẽ chỉ cho bạn cách khởi tạo và cấu hình mạng thử nghiệm Ethereum đa máy khách cục bộ trước khi sử dụng mạng thử nghiệm đó để triển khai và thử nghiệm dapp."
 author: "Tedi Mitiku"
 tags:
   [
@@ -13,7 +13,7 @@ tags:
     "thử nghiệm",
   ]
 skill: intermediate
-breadcrumb: Mạng thử nghiệm đa máy khách
+breadcrumb: "Mạng thử nghiệm đa máy khách"
 lang: vi
 published: 2023-04-11
 ---

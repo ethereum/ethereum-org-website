@@ -1,6 +1,6 @@
 ---
-title: 智能合约简介
-description: 智能合约概述，重点介绍其独有的特征和局限性。
+title: "智能合约简介"
+description: "智能合约概述，重点介绍其独有的特征和局限性。"
 lang: zh
 ---
 

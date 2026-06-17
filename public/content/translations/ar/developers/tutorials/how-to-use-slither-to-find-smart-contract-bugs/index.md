@@ -1,7 +1,7 @@
 ---
-title: ⁦كيفية استخدام سليذر للعثور على أخطاء العقود الذكية⁩
-description: ⁦كيفية استخدام سليذر للعثور تلقائيًا على الأخطاء في العقود الذكية⁩
-author: تريل أوف بيتس
+title: "⁦كيفية استخدام سليذر للعثور على أخطاء العقود الذكية⁩"
+description: "⁦كيفية استخدام سليذر للعثور تلقائيًا على الأخطاء في العقود الذكية⁩"
+author: "تريل أوف بيتس"
 lang: ar
 tags:
   - Solidity
@@ -9,7 +9,7 @@ tags:
   - الأمان
   - الاختبار
 skill: advanced
-breadcrumb: ⁦سليذر⁩
+breadcrumb: "⁦سليذر⁩"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -150,7 +150,7 @@ print(f'The expression {expression} has a addition: {visitor.result()}')
 
 - [تظليل متغير الحالة (State variable shadowing)](https://github.com/crytic/slither/wiki/Detector-Documentation#state-variable-shadowing): يكرر عبر جميع متغيرات الحالة ويتحقق مما إذا كان أي منها يظلل متغيرًا من عقد موروث ([state.py#L51-L62](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/shadowing/state.py#L51-L62))
 
-- [واجهة ERC-20 غير صحيحة](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface): يبحث عن تواقيع دوال ERC-20 غير الصحيحة ([incorrect_erc20_interface.py#L34-L55](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55))
+- [واجهة <span dir="ltr">ERC-20</span> غير صحيحة](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface): يبحث عن تواقيع دوال <span dir="ltr">ERC-20</span> غير الصحيحة ([incorrect_erc20_interface.py#L34-L55](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55))
 
 ### التحليل الدلالي {#semantic-analysis}
 

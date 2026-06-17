@@ -1,6 +1,6 @@
 ---
-title: Portal Ağı
-description: Portal Ağına genel bakış - düşük kaynaklı istemcileri desteklemek için tasarlanmış, geliştirilmekte olan bir ağ.
+title: "Portal Ağı"
+description: "Portal Ağına genel bakış - düşük kaynaklı istemcileri desteklemek için tasarlanmış, geliştirilmekte olan bir ağ."
 lang: tr
 ---
 

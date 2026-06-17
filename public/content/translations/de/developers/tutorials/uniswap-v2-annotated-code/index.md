@@ -2,7 +2,7 @@
 title: "Uniswap-v2-Vertrag im Detail"
 description: Wie funktioniert der Uniswap-v2-Vertrag? Warum ist er so geschrieben?
 author: Ori Pomerantz
-tags: ["solidity", "dapps"]
+tags: ["Solidity", "dapps"]
 skill: intermediate
 breadcrumb: Uniswap-v2-Walkthrough
 published: 2021-05-01
@@ -336,7 +336,7 @@ Diese Funktion ermöglicht es der Factory (und nur der Factory), die beiden ERC-
 
 #### Interne Update-Funktionen {#pair-update-internal}
 
-##### \_update {#pair-external}
+##### \_update {#}
 
 ```solidity
     // aktualisiert Reserven und, beim ersten Aufruf pro Block, Preisakkumulatoren
@@ -391,7 +391,7 @@ Diese Preisberechnung ist der Grund, warum wir die alten Reservegrößen kennen 
 
 Aktualisieren Sie schließlich die globalen Variablen und geben Sie ein `Sync`-Ereignis aus.
 
-##### \_mintFee {#uniswapv2factory}
+##### \_mintFee {#}
 
 ```solidity
     // wenn Gebühr aktiviert ist, präge Liquidität entsprechend 1/6 des Wachstums von sqrt(k)
@@ -457,11 +457,11 @@ Verwenden Sie die Funktion `UniswapV2ERC20._mint`, um die zusätzlichen Liquidit
 Wenn keine Gebühr festgelegt ist, setze `kLast` auf null (falls es das nicht schon ist). Als dieser Vertrag geschrieben wurde, gab es eine [Gas-Rückerstattungsfunktion](https://eips.ethereum.org/EIPS/eip-3298), die Verträge dazu ermutigte, die Gesamtgröße des Ethereum-Zustands zu reduzieren, indem sie Speicher, den sie nicht benötigten, auf null setzten.
 Dieser Code holt sich diese Rückerstattung, wenn möglich.
 
-#### Von außen zugängliche Funktionen {#uniswapv2erc20}
+#### Von außen zugängliche Funktionen {#pair-external}
 
 Beachten Sie, dass zwar jede Transaktion oder jeder Vertrag diese Funktionen aufrufen _kann_, sie jedoch so konzipiert sind, dass sie vom Peripherie-Vertrag aufgerufen werden. Wenn Sie sie direkt aufrufen, können Sie den Paar-Tausch nicht betrügen, aber Sie könnten durch einen Fehler Wert verlieren.
 
-##### mint {#periphery-contracts}
+##### mint {#}
 
 ```solidity
     // diese Low-Level-Funktion sollte von einem Vertrag aufgerufen werden, der wichtige Sicherheitsprüfungen durchführt
@@ -547,7 +547,7 @@ Verwenden Sie die Funktion `UniswapV2ERC20._mint`, um die zusätzlichen Liquidit
 
 Aktualisieren Sie die Zustandsvariablen (`reserve0`, `reserve1` und bei Bedarf `kLast`) und geben Sie das entsprechende Ereignis aus.
 
-##### burn {#uniswapv2router01}
+##### burn {#}
 
 ```solidity
     // diese Low-Level-Funktion sollte von einem Vertrag aufgerufen werden, der wichtige Sicherheitsprüfungen durchführt
@@ -594,7 +594,7 @@ Der Liquiditätsanbieter erhält den gleichen Wert beider Token. Auf diese Weise
 
 Der Rest der Funktion `burn` ist das Spiegelbild der obigen Funktion `mint`.
 
-##### swap {#uniswapv2router02}
+##### swap {#}
 
 ```solidity
     // diese Low-Level-Funktion sollte von einem Vertrag aufgerufen werden, der wichtige Sicherheitsprüfungen durchführt
@@ -662,7 +662,7 @@ Dies ist eine Plausibilitätsprüfung, um sicherzustellen, dass wir durch den Ta
 
 Aktualisieren Sie `reserve0` und `reserve1` und bei Bedarf die Preisakkumulatoren und den Zeitstempel und geben Sie ein Ereignis aus.
 
-##### Sync oder Skim {#add-liquidity}
+##### Sync oder Skim {#}
 
 Es ist möglich, dass die tatsächlichen Salden nicht mehr mit den Reserven synchron sind, von denen der Paar-Tausch glaubt, dass er sie hat.
 Es gibt keine Möglichkeit, Token ohne die Zustimmung des Vertrags abzuheben, aber Einzahlungen sind eine andere Sache. Ein Konto kann Token an den Tausch transferieren, ohne entweder `mint` oder `swap` aufzurufen.
@@ -690,7 +690,7 @@ In diesem Fall gibt es zwei Lösungen:
 }
 ```
 
-### UniswapV2Factory.sol {#remove-liquidity}
+### UniswapV2Factory.sol {#uniswapv2factory}
 
 [Dieser Vertrag](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) erstellt die Paar-Tausche.
 
@@ -812,7 +812,7 @@ Speichern Sie die neuen Paar-Informationen in den Zustandsvariablen und geben Si
 
 Diese beiden Funktionen ermöglichen es `feeSetter`, den Gebührenempfänger (falls vorhanden) zu steuern und `feeSetter` in eine neue Adresse zu ändern.
 
-### UniswapV2ERC20.sol {#trade}
+### UniswapV2ERC20.sol {#uniswapv2erc20}
 
 [Dieser Vertrag](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementiert den ERC-20-Liquiditäts-Token. Er ähnelt dem [OpenZeppelin-ERC-20-Vertrag](/developers/tutorials/erc20-annotated-code), daher werde ich nur den Teil erklären, der anders ist, die `permit`-Funktionalität.
 
@@ -899,15 +899,15 @@ Aus dem Digest und der Signatur können wir die Adresse, die sie signiert hat, m
 
 Wenn alles in Ordnung ist, behandeln Sie dies als [eine ERC-20-Genehmigung (approve)](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## Die Peripherie-Verträge {#uniswapv2migrator}
+## Die Peripherie-Verträge {#periphery-contracts}
 
 Die Peripherie-Verträge sind die API (Application Programming Interface) für Uniswap. Sie stehen für externe Aufrufe zur Verfügung, entweder von anderen Verträgen oder dezentralen Anwendungen (dapps). Sie könnten die Kernverträge direkt aufrufen, aber das ist komplizierter und Sie könnten Werte verlieren, wenn Sie einen Fehler machen. Die Kernverträge enthalten nur Tests, um sicherzustellen, dass sie nicht betrogen werden, aber keine Plausibilitätsprüfungen für andere. Diese befinden sich in der Peripherie, damit sie bei Bedarf aktualisiert werden können.
 
-### UniswapV2Router01.sol {#libraries}
+### UniswapV2Router01.sol {#uniswapv2router01}
 
 [Dieser Vertrag](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) hat Probleme und [sollte nicht mehr verwendet werden](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Glücklicherweise sind die Peripherie-Verträge zustandslos und halten keine Vermögenswerte, sodass es einfach ist, ihn als veraltet zu markieren und den Leuten vorzuschlagen, stattdessen den Ersatz, `UniswapV2Router02`, zu verwenden.
 
-### UniswapV2Router02.sol {#math}
+### UniswapV2Router02.sol {#uniswapv2router02}
 
 In den meisten Fällen würden Sie Uniswap über [diesen Vertrag](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) nutzen.
 Wie man ihn verwendet, können Sie [hier](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02) sehen.
@@ -963,7 +963,7 @@ Der Konstruktor setzt lediglich die unveränderlichen Zustandsvariablen.
 
 Diese Funktion wird aufgerufen, wenn wir Token aus dem WETH-Vertrag wieder in ETH einlösen. Nur der von uns verwendete WETH-Vertrag ist dazu autorisiert.
 
-#### Liquidität hinzufügen {#fixedpoint}
+#### Liquidität hinzufügen {#add-liquidity}
 
 Diese Funktionen fügen dem Tauschpaar Token hinzu, was den Liquiditätspool vergrößert.
 
@@ -1148,7 +1148,7 @@ Um die ETH einzuzahlen, verpackt der Vertrag sie zunächst in WETH und transferi
 
 Der Benutzer hat uns die ETH bereits gesendet. Wenn also etwas übrig bleibt (weil der andere Token weniger wertvoll ist, als der Benutzer dachte), müssen wir eine Rückerstattung veranlassen.
 
-#### Liquidität entfernen {#uniswapv2library}
+#### Liquidität entfernen {#remove-liquidity}
 
 Diese Funktionen entfernen Liquidität und zahlen den Liquiditätsanbieter aus.
 
@@ -1309,7 +1309,7 @@ Diese Funktion kann für Token verwendet werden, die Transfer- oder Speichergeb�
 
 Die letzte Funktion kombiniert Speichergebühren mit Meta-Transaktionen.
 
-#### Handel {#transfer-helper}
+#### Handel {#trade}
 
 ```solidity
     // **** TAUSCH ****
@@ -1667,15 +1667,15 @@ Dies sind dieselben Varianten, die für normale Token verwendet werden, aber sie
 
 Diese Funktionen sind nur Proxys, die die [UniswapV2Library-Funktionen](#uniswapv2library) aufrufen.
 
-### UniswapV2Migrator.sol {#conclusion}
+### UniswapV2Migrator.sol {#uniswapv2migrator}
 
 Dieser Vertrag wurde verwendet, um Tausche von der alten v1 auf v2 zu migrieren. Da sie nun migriert wurden, ist er nicht mehr relevant.
 
-## Die Bibliotheken
+## Die Bibliotheken {#libraries}
 
 Die [SafeMath-Bibliothek](https://docs.openzeppelin.com/contracts/2.x/api/math) ist gut dokumentiert, daher muss sie hier nicht dokumentiert werden.
 
-### Math
+### Math {#math}
 
 Diese Bibliothek enthält einige mathematische Funktionen, die normalerweise in Solidity-Code nicht benötigt werden, weshalb sie nicht Teil der Sprache sind.
 
@@ -1720,7 +1720,7 @@ Wir sollten niemals die Quadratwurzel von null benötigen. Die Quadratwurzeln vo
 }
 ```
 
-### Festkommabruchteile (UQ112x112)
+### Festkommabruchteile (UQ112x112) {#fixedpoint}
 
 Diese Bibliothek verarbeitet Brüche, die normalerweise nicht Teil der Ethereum-Arithmetik sind. Sie tut dies, indem sie die Zahl _x_ als _x\*2^112_ kodiert. Dadurch können wir die ursprünglichen Additions- und Subtraktions-Opcodes ohne Änderung verwenden.
 
@@ -1757,7 +1757,7 @@ Da y `uint112` ist, kann es höchstens 2^112-1 sein. Diese Zahl kann immer noch 
 
 Wenn wir zwei `UQ112x112`-Werte dividieren, wird das Ergebnis nicht mehr mit 2^112 multipliziert. Stattdessen nehmen wir also eine Ganzzahl für den Nenner. Wir hätten einen ähnlichen Trick für die Multiplikation anwenden müssen, aber wir müssen keine Multiplikation von `UQ112x112`-Werten durchführen.
 
-### UniswapV2Library
+### UniswapV2Library {#uniswapv2library}
 
 Diese Bibliothek wird nur von den Peripherie-Verträgen verwendet
 
@@ -1879,7 +1879,7 @@ Diese Funktion macht in etwa dasselbe, aber sie erhält den Ausgabebetrag und li
 
 Diese beiden Funktionen übernehmen die Identifizierung der Werte, wenn es notwendig ist, mehrere Paar-Tauschvorgänge zu durchlaufen.
 
-### Transfer Helper
+### Transfer Helper {#transfer-helper}
 
 [Diese Bibliothek](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) fügt Erfolgsprüfungen rund um ERC-20- und Ethereum-Transfers hinzu, um einen Revert und die Rückgabe eines `false`-Wertes auf die gleiche Weise zu behandeln.
 
@@ -1964,7 +1964,7 @@ Diese Funktion implementiert die [transferFrom-Funktionalität von ERC-20](https
 
 Diese Funktion transferiert Ether an ein Konto. Jeder Aufruf an einen anderen Vertrag kann versuchen, Ether zu senden. Da wir eigentlich keine Funktion aufrufen müssen, senden wir keine Daten mit dem Aufruf.
 
-## Fazit
+## Fazit {#conclusion}
 
 Dies ist ein langer Artikel mit etwa 50 Seiten. Wenn du es bis hierher geschafft hast: Herzlichen Glückwunsch! Hoffentlich hast du inzwischen die Überlegungen verstanden, die beim Schreiben einer echten Anwendung (im Gegensatz zu kurzen Beispielprogrammen) eine Rolle spielen, und bist nun besser in der Lage, Verträge für deine eigenen Anwendungsfälle zu schreiben.
 

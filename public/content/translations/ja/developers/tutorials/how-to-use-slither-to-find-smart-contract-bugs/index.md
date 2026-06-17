@@ -1,11 +1,11 @@
 ---
-title: スリザーを使用してスマートコントラクトのバグを見つける方法
-description: スリザーを使用してスマートコントラクトのバグを自動的に見つける方法
-author: トレイルオブビッツ
+title: "スリザーを使用してスマートコントラクトのバグを見つける方法"
+description: "スリザーを使用してスマートコントラクトのバグを自動的に見つける方法"
+author: "トレイルオブビッツ"
 lang: ja
-tags: ["solidity", "スマートコントラクト", "セキュリティ", "テスト"]
+tags: ["Solidity", "スマートコントラクト", "セキュリティ", "テスト"]
 skill: advanced
-breadcrumb: スリザー
+breadcrumb: "スリザー"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

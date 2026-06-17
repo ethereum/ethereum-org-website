@@ -1,11 +1,11 @@
 ---
 title: "Inżynieria wsteczna kontraktu"
-description: Jak zrozumieć kontrakt, gdy nie masz kodu źródłowego
+description: "Jak zrozumieć kontrakt, gdy nie masz kodu źródłowego"
 author: Ori Pomerantz
 lang: pl
 tags: ["evm", "kody operacji"]
 skill: advanced
-breadcrumb: Inżynieria wsteczna
+breadcrumb: "Inżynieria wsteczna"
 published: 2021-12-30
 ---
 ## Wprowadzenie {#introduction}

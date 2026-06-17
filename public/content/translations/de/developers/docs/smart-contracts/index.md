@@ -1,6 +1,6 @@
 ---
-title: Einführung in Smart Contracts
-description: Ein Überblick über Smart Contracts mit Fokus auf ihre einzigartigen Eigenschaften und Einschränkungen.
+title: "Einführung in Smart Contracts"
+description: "Ein Überblick über Smart Contracts mit Fokus auf ihre einzigartigen Eigenschaften und Einschränkungen."
 lang: de
 ---
 

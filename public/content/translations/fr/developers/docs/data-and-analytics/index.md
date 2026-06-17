@@ -1,6 +1,6 @@
 ---
-title: Données et analyses
-description: Comment obtenir des analyses et des données onchain à utiliser dans vos applications décentralisées (dapps)
+title: "Données et analyses"
+description: "Comment obtenir des analyses et des données onchain à utiliser dans vos applications décentralisées (dapps)"
 lang: fr
 ---
 

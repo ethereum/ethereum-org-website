@@ -1,11 +1,11 @@
 ---
-title: 如何使用埃奇德納測試智能合約
-description: 如何使用埃奇德納自動測試智能合約
+title: "如何使用埃奇德納測試智能合約"
+description: "如何使用埃奇德納自動測試智能合約"
 author: "Trailofbits"
 lang: zh-tw
-tags: ["solidity", "智能合約", "安全", "測試", "模糊測試"]
+tags: ["Solidity", "智能合約", "安全", "測試", "模糊測試"]
 skill: advanced
-breadcrumb: 埃奇德納
+breadcrumb: "埃奇德納"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

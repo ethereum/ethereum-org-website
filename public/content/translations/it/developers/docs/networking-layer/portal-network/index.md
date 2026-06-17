@@ -1,6 +1,6 @@
 ---
 title: Il Portal Network
-description: Una panoramica del Portal Network: una rete in fase di sviluppo progettata per supportare i client con poche risorse.
+description: "Una panoramica del Portal Network: una rete in fase di sviluppo progettata per supportare i client con poche risorse."
 lang: it
 ---
 

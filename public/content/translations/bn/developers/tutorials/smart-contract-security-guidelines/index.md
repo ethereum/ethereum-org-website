@@ -1,13 +1,13 @@
 ---
-title: স্মার্ট কন্ট্রাক্ট সিকিউরিটি গাইডলাইন
-description: আপনার ড্যাপ তৈরি করার সময় বিবেচনা করার মতো সিকিউরিটি গাইডলাইনের একটি চেকলিস্ট
+title: "স্মার্ট কন্ট্রাক্ট সিকিউরিটি গাইডলাইন"
+description: "আপনার ড্যাপ তৈরি করার সময় বিবেচনা করার মতো সিকিউরিটি গাইডলাইনের একটি চেকলিস্ট"
 author: Trailofbits
 tags:
   - solidity
   - স্মার্ট কন্ট্রাক্ট
   - সিকিউরিটি
 skill: intermediate
-breadcrumb: সিকিউরিটি গাইডলাইন
+breadcrumb: "সিকিউরিটি গাইডলাইন"
 lang: bn
 published: 2020-09-06
 source: Building secure contracts

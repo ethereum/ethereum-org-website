@@ -1,11 +1,11 @@
 ---
-title: ステーキング・アズ・ア・サービス
-description: ステーキング・アズ・ア・サービスについて学ぶ
+title: "ステーキング・アズ・ア・サービス"
+description: "ステーキング・アズ・ア・サービスについて学ぶ"
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: 雲に浮かぶサイのレスリー。
+alt: "雲に浮かぶサイのレスリー。"
 sidebarDepth: 2
 summaryPoints:
   - サードパーティのノードオペレーターがバリデータクライアントの運用を処理します

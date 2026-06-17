@@ -1,7 +1,7 @@
 ---
-title: Як використовувати Ехідну для тестування смарт-контрактів
-description: Як використовувати Ехідну для автоматичного тестування смарт-контрактів
-author: Трейлофбітс
+title: "Як використовувати Ехідну для тестування смарт-контрактів"
+description: "Як використовувати Ехідну для автоматичного тестування смарт-контрактів"
+author: "Трейлофбітс"
 lang: uk
 tags:
   - Solidity
@@ -10,7 +10,7 @@ tags:
   - тестування
   - фазинг
 skill: advanced
-breadcrumb: Ехідна
+breadcrumb: "Ехідна"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

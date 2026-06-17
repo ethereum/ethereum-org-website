@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmelerin biçimsel doğrulaması
-description: Ethereum akıllı sözleşmeleri için biçimsel doğrulamaya genel bir bakış
+title: "Akıllı sözleşmelerin biçimsel doğrulaması"
+description: "Ethereum akıllı sözleşmeleri için biçimsel doğrulamaya genel bir bakış"
 lang: tr
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Atak i obrona dowodu stawki (PoS) w Ethereum
-description: Dowiedz się o znanych wektorach ataków na dowód stawki w Ethereum i sposobach obrony przed nimi.
+description: "Dowiedz się o znanych wektorach ataków na dowód stawki w Ethereum i sposobach obrony przed nimi."
 lang: pl
 ---
 

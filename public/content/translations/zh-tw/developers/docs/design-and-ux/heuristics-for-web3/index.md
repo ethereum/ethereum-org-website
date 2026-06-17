@@ -1,6 +1,6 @@
 ---
-title: Web3 介面設計的 7 個啟發式原則
-description: 改善 Web3 易用性的原則
+title: "Web3 介面設計的 7 個啟發式原則"
+description: "改善 Web3 易用性的原則"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Struktury danych i kodowanie
-description: Przegląd podstawowych struktur danych Ethereum.
+description: "Przegląd podstawowych struktur danych Ethereum."
 lang: pl
 sidebarDepth: 2
 ---

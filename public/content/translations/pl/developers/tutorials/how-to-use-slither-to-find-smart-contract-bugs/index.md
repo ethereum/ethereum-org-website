@@ -1,9 +1,9 @@
 ---
-title: Jak używać narzędzia Slither do znajdowania błędów w inteligentnych kontraktach
-description: Jak używać narzędzia Slither do automatycznego znajdowania błędów w inteligentnych kontraktach
+title: "Jak używać narzędzia Slither do znajdowania błędów w inteligentnych kontraktach"
+description: "Jak używać narzędzia Slither do automatycznego znajdowania błędów w inteligentnych kontraktach"
 author: Trailofbits
 lang: pl
-tags: ["solidity", "inteligentne kontrakty", "bezpieczeństwo", "testowanie"]
+tags: ["Solidity", "inteligentne kontrakty", "bezpieczeństwo", "testowanie"]
 skill: advanced
 breadcrumb: Slither
 published: 2020-06-09

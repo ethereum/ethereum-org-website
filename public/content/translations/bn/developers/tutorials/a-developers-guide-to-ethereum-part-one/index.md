@@ -1,13 +1,13 @@
 ---
-title: একজন Python ডেভেলপারের জন্য ইথেরিয়াম পরিচিতি, পর্ব 1
-description: ইথেরিয়াম ডেভেলপমেন্টের একটি পরিচিতি, বিশেষ করে যাদের Python প্রোগ্রামিং ভাষার জ্ঞান আছে তাদের জন্য দরকারী
-author: মার্ক গ্যারো
+title: "একজন Python ডেভেলপারের জন্য ইথেরিয়াম পরিচিতি, পর্ব 1"
+description: "ইথেরিয়াম ডেভেলপমেন্টের একটি পরিচিতি, বিশেষ করে যাদের Python প্রোগ্রামিং ভাষার জ্ঞান আছে তাদের জন্য দরকারী"
+author: "মার্ক গ্যারো"
 lang: bn
 tags:
   - python
   - web3.py
 skill: beginner
-breadcrumb: Python এর সাথে ইথেরিয়াম
+breadcrumb: "Python এর সাথে ইথেরিয়াম"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

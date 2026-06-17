@@ -1,11 +1,11 @@
 ---
-title: স্মার্ট কন্ট্রাক্ট টেস্ট করতে কীভাবে একিডনা (Echidna) ব্যবহার করবেন
-description: কীভাবে স্মার্ট কন্ট্রাক্ট স্বয়ংক্রিয়ভাবে টেস্ট করতে একিডনা ব্যবহার করবেন
+title: "স্মার্ট কন্ট্রাক্ট টেস্ট করতে কীভাবে একিডনা (Echidna) ব্যবহার করবেন"
+description: "কীভাবে স্মার্ট কন্ট্রাক্ট স্বয়ংক্রিয়ভাবে টেস্ট করতে একিডনা ব্যবহার করবেন"
 author: "ট্রেইলঅফবিটস"
 lang: bn
 tags: ["Solidity", "স্মার্ট কন্ট্রাক্ট", "নিরাপত্তা", "টেস্টিং", "ফাজিং"]
 skill: advanced
-breadcrumb: একিডনা
+breadcrumb: "একিডনা"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

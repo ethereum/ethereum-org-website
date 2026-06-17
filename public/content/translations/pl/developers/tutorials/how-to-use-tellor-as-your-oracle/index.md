@@ -1,9 +1,9 @@
 ---
-title: Jak skonfigurować Tellor jako swoją wyrocznię
-description: Przewodnik, jak zacząć integrację wyroczni Tellor z Twoim protokołem
+title: "Jak skonfigurować Tellor jako swoją wyrocznię"
+description: "Przewodnik, jak zacząć integrację wyroczni Tellor z Twoim protokołem"
 author: "Tellor"
 lang: pl
-tags: ["solidity", "inteligentne kontrakty", "wyrocznie"]
+tags: ["Solidity", "inteligentne kontrakty", "wyrocznie"]
 skill: beginner
 breadcrumb: Wyrocznia Tellor
 published: 2021-06-29

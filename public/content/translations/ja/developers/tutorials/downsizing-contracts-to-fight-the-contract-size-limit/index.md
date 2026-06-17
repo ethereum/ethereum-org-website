@@ -1,11 +1,11 @@
 ---
 title: "コントラクトサイズ制限に対処するためのコントラクトの縮小"
 description: "スマート・コントラクトが大きくなりすぎるのを防ぐにはどうすればよいでしょうか？"
-author: マーカス・ワース
+author: "マーカス・ワース"
 lang: ja
-tags: ["solidity", "スマート・コントラクト", "ストレージ"]
+tags: ["Solidity", "スマート・コントラクト", "ストレージ"]
 skill: intermediate
-breadcrumb: コントラクトの縮小
+breadcrumb: "コントラクトの縮小"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

@@ -1,13 +1,13 @@
 ---
-title: ⁦مقدمة مطور ⁦Python⁩ إلى إيثيريوم، الجزء الأول⁩
-description: ⁦مقدمة لتطوير إيثيريوم، مفيدة بشكل خاص لمن لديهم معرفة بلغة البرمجة ⁦Python⁩⁩
-author: مارك غارو
+title: "⁦مقدمة مطور ⁦Python⁩ إلى إيثيريوم، الجزء الأول⁩"
+description: "⁦مقدمة لتطوير إيثيريوم، مفيدة بشكل خاص لمن لديهم معرفة بلغة البرمجة ⁦Python⁩⁩"
+author: "مارك غارو"
 lang: ar
 tags:
   - python
   - web3.py
 skill: beginner
-breadcrumb: ⁦إيثيريوم مع ⁦Python⁩⁩
+breadcrumb: "⁦إيثيريوم مع ⁦Python⁩⁩"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

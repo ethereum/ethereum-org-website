@@ -1,9 +1,9 @@
 ---
-title: Cómo usar Slither para encontrar errores en contratos inteligentes
-description: Cómo usar Slither para encontrar errores automáticamente en contratos inteligentes
+title: "Cómo usar Slither para encontrar errores en contratos inteligentes"
+description: "Cómo usar Slither para encontrar errores automáticamente en contratos inteligentes"
 author: Trailofbits
 lang: es
-tags: ["solidity", "contratos inteligentes", "seguridad", "pruebas"]
+tags: ["Solidity", "contratos inteligentes", "seguridad", "pruebas"]
 skill: advanced
 breadcrumb: Slither
 published: 2020-06-09

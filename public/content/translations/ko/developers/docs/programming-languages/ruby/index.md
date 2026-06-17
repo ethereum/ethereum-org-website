@@ -1,6 +1,6 @@
 ---
-title: Ruby 개발자를 위한 이더리움
-description: Ruby 기반 프로젝트와 도구를 사용하여 이더리움용으로 개발하는 방법을 배워보세요.
+title: "Ruby 개발자를 위한 이더리움"
+description: "Ruby 기반 프로젝트와 도구를 사용하여 이더리움용으로 개발하는 방법을 배워보세요."
 lang: ko
 incomplete: false
 ---

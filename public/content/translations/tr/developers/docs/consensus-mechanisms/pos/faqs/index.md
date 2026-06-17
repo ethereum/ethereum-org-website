@@ -1,6 +1,6 @@
 ---
-title: Sıkça Sorulan Sorular
-description: Hisse kanıtı (PoS) Ethereum hakkında sıkça sorulan sorular.
+title: "Sıkça Sorulan Sorular"
+description: "Hisse kanıtı (PoS) Ethereum hakkında sıkça sorulan sorular."
 lang: tr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: ERC-223 Token Standardı
-description: ERC-223 misli Token standardına, nasıl çalıştığına ve ERC-20 ile karşılaştırmasına genel bir bakış.
+title: "ERC-223 Token Standardı"
+description: "ERC-223 misli Token standardına, nasıl çalıştığına ve ERC-20 ile karşılaştırmasına genel bir bakış."
 lang: tr
 ---
 

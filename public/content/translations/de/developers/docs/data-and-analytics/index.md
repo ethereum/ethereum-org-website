@@ -1,6 +1,6 @@
 ---
 title: Daten und Analysen
-description: Wie man Onchain-Analysen und -Daten für die Verwendung in eigenen Dapps erhält
+description: "Wie man Onchain-Analysen und -Daten für die Verwendung in eigenen Dapps erhält"
 lang: de
 ---
 

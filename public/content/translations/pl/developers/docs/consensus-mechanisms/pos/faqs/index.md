@@ -1,6 +1,6 @@
 ---
-title: Często zadawane pytania
-description: Często zadawane pytania dotyczące dowodu stawki (PoS) w Ethereum.
+title: "Często zadawane pytania"
+description: "Często zadawane pytania dotyczące dowodu stawki (PoS) w Ethereum."
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: स्मार्ट अनुबंध बग खोजने के लिए स्लिथर का उपयोग कैसे करें
-description: स्मार्ट अनुबंधों में स्वचालित रूप से बग खोजने के लिए स्लिथर का उपयोग कैसे करें
+title: "स्मार्ट अनुबंध बग खोजने के लिए स्लिथर का उपयोग कैसे करें"
+description: "स्मार्ट अनुबंधों में स्वचालित रूप से बग खोजने के लिए स्लिथर का उपयोग कैसे करें"
 author: Trailofbits
 lang: hi
 tags:
@@ -9,7 +9,7 @@ tags:
   - सुरक्षा
   - परीक्षण
 skill: advanced
-breadcrumb: स्लिथर
+breadcrumb: "स्लिथर"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

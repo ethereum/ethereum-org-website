@@ -1,6 +1,6 @@
 ---
 title: Blok
-description: Gambaran umum tentang blok dalam rantai blok Ethereum – struktur datanya, mengapa blok dibutuhkan, dan bagaimana blok dibuat.
+description: "Gambaran umum tentang blok dalam rantai blok Ethereum – struktur datanya, mengapa blok dibutuhkan, dan bagaimana blok dibuat."
 lang: id
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Veri ve analitik
-description: Merkeziyetsiz uygulamalarınızda (dapp'ler) kullanmak üzere zincir içi analitik ve verilerin nasıl elde edileceği
+description: "Merkeziyetsiz uygulamalarınızda (dapp'ler) kullanmak üzere zincir içi analitik ve verilerin nasıl elde edileceği"
 lang: tr
 ---
 

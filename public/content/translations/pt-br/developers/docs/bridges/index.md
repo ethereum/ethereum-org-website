@@ -1,6 +1,6 @@
 ---
 title: Pontes
-description: Uma visão geral sobre pontes para desenvolvedores
+description: "Uma visão geral sobre pontes para desenvolvedores"
 lang: pt-br
 ---
 
@@ -121,6 +121,7 @@ Para monitorar a atividade de contratos entre cadeias, os desenvolvedores podem 
 - [Tenderly](https://tenderly.co/)
 
 ## Leitura adicional {#further-reading}
+
 - [Pontes de Blockchain](/bridges/) – ethereum.org
 - [Estrutura de Risco de Pontes da L2BEAT](https://l2beat.com/bridges/summary)
 - [Pontes de Blockchain: Construindo Redes de Criptoredes](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 de setembro de 2021 – Dmitriy Berenzon

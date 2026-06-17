@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Giải thích về cơ chế bằng chứng cổ phần Gasper.
+description: "Giải thích về cơ chế bằng chứng cổ phần Gasper."
 lang: vi
 ---
 

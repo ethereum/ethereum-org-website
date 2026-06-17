@@ -1,6 +1,6 @@
 ---
-title: 데이터 및 분석
-description: dapp에서 사용할 온체인 분석 및 데이터를 얻는 방법
+title: "데이터 및 분석"
+description: "dapp에서 사용할 온체인 분석 및 데이터를 얻는 방법"
 lang: ko
 ---
 

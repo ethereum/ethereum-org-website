@@ -1,13 +1,13 @@
 ---
-title: قائمة التحقق من أمان العقود الذكية
-description: سير عمل مقترح لكتابة عقود ذكية آمنة
+title: "قائمة التحقق من أمان العقود الذكية"
+description: "سير عمل مقترح لكتابة عقود ذكية آمنة"
 author: Trailofbits
 tags:
   - العقود الذكية
   - الأمان
   - solidity
 skill: intermediate
-breadcrumb: قائمة التحقق من الأمان
+breadcrumb: "قائمة التحقق من الأمان"
 lang: ar
 published: 2020-09-07
 source: Building secure contracts

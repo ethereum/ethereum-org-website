@@ -1,6 +1,6 @@
 ---
-title: Subjetividad débil
-description: Una explicación de la subjetividad débil y su papel en la prueba de participación (PoS) de Ethereum.
+title: "Subjetividad débil"
+description: "Una explicación de la subjetividad débil y su papel en la prueba de participación (PoS) de Ethereum."
 lang: es
 ---
 

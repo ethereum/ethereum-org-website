@@ -1,11 +1,11 @@
 ---
-title: বাস্তব জগতের সম্পদ (RWAs)
-metaTitle: RWAs কী? | বাস্তব জগতের সম্পদের সুবিধা এবং ব্যবহার
-description: ইথেরিয়ামে বাস্তব জগতের সম্পদের একটি ওভারভিউ
+title: "বাস্তব জগতের সম্পদ (RWAs)"
+metaTitle: "RWAs কী? | বাস্তব জগতের সম্পদের সুবিধা এবং ব্যবহার"
+description: "ইথেরিয়ামে বাস্তব জগতের সম্পদের একটি ওভারভিউ"
 lang: bn
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: মানুষ এবং কুকুর খেলছে।
+alt: "মানুষ এবং কুকুর খেলছে।"
 sidebarDepth: 2
 summaryPoints:
   - "মূল্যবান পণ্যগুলোকে ডিজিটাল টোকেনে পরিণত করার একটি পদ্ধতি।"

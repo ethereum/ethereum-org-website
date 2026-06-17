@@ -1,6 +1,6 @@
 ---
-title: Ethereum dành cho nhà phát triển Go
-description: Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Go
+title: "Ethereum dành cho nhà phát triển Go"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Go"
 lang: vi
 incomplete: true
 ---

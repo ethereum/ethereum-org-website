@@ -1,6 +1,6 @@
 ---
 title: Integrierte Entwicklungsumgebungen (IDEs)
-description: Erfahren Sie mehr über webbasierte und Desktop-IDEs für die Ethereum-Entwicklung, einschließlich Remix, VS Code und beliebter Plugins.
+description: "Erfahren Sie mehr über webbasierte und Desktop-IDEs für die Ethereum-Entwicklung, einschließlich Remix, VS Code und beliebter Plugins."
 lang: de
 ---
 

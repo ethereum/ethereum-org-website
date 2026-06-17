@@ -1,6 +1,6 @@
 ---
-title: Decentralizovaná věda (DeSci)
-description: Přehled decentralizované vědy na Ethereu
+title: "Decentralizovaná věda (DeSci)"
+description: "Přehled decentralizované vědy na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2

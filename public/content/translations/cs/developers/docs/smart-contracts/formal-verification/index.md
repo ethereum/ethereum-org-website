@@ -1,6 +1,6 @@
 ---
-title: Formální verifikace chytrých kontraktů
-description: Přehled formální verifikace pro chytré kontrakty na Ethereu
+title: "Formální verifikace chytrých kontraktů"
+description: "Přehled formální verifikace pro chytré kontrakty na Ethereu"
 lang: cs
 ---
 

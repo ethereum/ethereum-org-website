@@ -1,11 +1,11 @@
 ---
-title: Как использовать Эхидну для тестирования смарт-контрактов
-description: Как использовать Эхидну для автоматического тестирования смарт-контрактов
+title: "Как использовать Эхидну для тестирования смарт-контрактов"
+description: "Как использовать Эхидну для автоматического тестирования смарт-контрактов"
 author: "Trailofbits"
 lang: ru
 tags: ["Solidity", "смарт-контракты", "безопасность", "тестирование", "фаззинг"]
 skill: advanced
-breadcrumb: Эхидна
+breadcrumb: "Эхидна"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

@@ -1,10 +1,10 @@
 ---
-title: スマートコントラクトのセキュリティガイドライン
-description: dappを構築する際に考慮すべきセキュリティガイドラインのチェックリスト
+title: "スマートコントラクトのセキュリティガイドライン"
+description: "dappを構築する際に考慮すべきセキュリティガイドラインのチェックリスト"
 author: "Trailofbits"
-tags: ["solidity", "スマートコントラクト", "セキュリティ"]
+tags: ["Solidity", "スマートコントラクト", "セキュリティ"]
 skill: intermediate
-breadcrumb: セキュリティガイドライン
+breadcrumb: "セキュリティガイドライン"
 lang: ja
 published: 2020-09-06
 source: Building secure contracts

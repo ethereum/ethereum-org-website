@@ -1,6 +1,6 @@
 ---
-title: 数据结构与编码
-description: 以太坊基础数据结构概述。
+title: "数据结构与编码"
+description: "以太坊基础数据结构概述。"
 lang: zh
 sidebarDepth: 2
 ---

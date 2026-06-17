@@ -1,6 +1,6 @@
 ---
-title: Schwache Subjektivität
-description: Eine Erklärung der schwachen Subjektivität und ihrer Rolle im PoS-Ethereum.
+title: "Schwache Subjektivität"
+description: "Eine Erklärung der schwachen Subjektivität und ihrer Rolle im PoS-Ethereum."
 lang: de
 ---
 

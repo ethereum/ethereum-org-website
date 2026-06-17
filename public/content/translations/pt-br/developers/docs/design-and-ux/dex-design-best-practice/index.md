@@ -1,6 +1,6 @@
 ---
-title: Melhores práticas de design para corretoras descentralizadas (DEX)
-description: Um guia que explica as decisões de UX/UI para a troca de tokens.
+title: "Melhores práticas de design para corretoras descentralizadas (DEX)"
+description: "Um guia que explica as decisões de UX/UI para a troca de tokens."
 lang: pt-br
 ---
 

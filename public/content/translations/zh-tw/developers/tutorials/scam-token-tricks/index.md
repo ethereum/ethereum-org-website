@@ -1,7 +1,7 @@
 ---
 title: "詐騙代幣使用的一些伎倆以及如何偵測它們"
-description: 在本教學中，我們將剖析一個詐騙代幣，看看詐騙者玩弄的一些伎倆、他們如何實作這些伎倆，以及我們如何偵測它們。
-author: 奧里·波梅蘭茨
+description: "在本教學中，我們將剖析一個詐騙代幣，看看詐騙者玩弄的一些伎倆、他們如何實作這些伎倆，以及我們如何偵測它們。"
+author: "奧里·波梅蘭茨"
 tags:
   - 詐騙
   - Solidity
@@ -9,7 +9,7 @@ tags:
   - JavaScript
   - TypeScript
 skill: intermediate
-breadcrumb: 詐騙代幣伎倆
+breadcrumb: "詐騙代幣伎倆"
 published: 2023-09-15
 lang: zh-tw
 ---

@@ -1,10 +1,10 @@
 ---
-title: Directives de sécurité des contrats intelligents
-description: Une liste de contrôle des directives de sécurité à prendre en compte lors de la création de votre dapp
+title: "Directives de sécurité des contrats intelligents"
+description: "Une liste de contrôle des directives de sécurité à prendre en compte lors de la création de votre dapp"
 author: "Trailofbits"
-tags: ["solidity", "contrats intelligents", "sécurité"]
+tags: ["Solidity", "contrats intelligents", "sécurité"]
 skill: intermediate
-breadcrumb: Directives de sécurité
+breadcrumb: "Directives de sécurité"
 lang: fr
 published: 2020-09-06
 source: Building secure contracts

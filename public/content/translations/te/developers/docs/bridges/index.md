@@ -1,6 +1,6 @@
 ---
-title: వారధులు
-description: డెవలపర్‌ల కోసం వారధుల (bridging) యొక్క అవలోకనం
+title: "వారధులు"
+description: "డెవలపర్‌ల కోసం వారధుల (bridging) యొక్క అవలోకనం"
 lang: te
 ---
 
@@ -121,6 +121,7 @@ lang: te
 - [Tenderly](https://tenderly.co/)
 
 ## మరింత చదవడానికి {#further-reading}
+
 - [బ్లాక్‌చైన్ వారధులు](/bridges/) – ethereum.org
 - [L2BEAT వారధి ప్రమాద ఫ్రేమ్‌వర్క్](https://l2beat.com/bridges/summary)
 - [బ్లాక్‌చైన్ వారధులు: క్రిప్టోనెట్‌వర్క్‌ల నెట్‌వర్క్‌లను నిర్మించడం](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - సెప్టెంబర్ 8, 2021 – Dmitriy Berenzon

@@ -1,10 +1,10 @@
 ---
 title: "Construindo uma interface de usuário para o seu contrato"
-description: Usando componentes modernos como TypeScript, React, Vite e Wagmi, analisaremos uma interface de usuário moderna, porém minimalista, e aprenderemos como conectar uma carteira à interface de usuário, chamar um contrato inteligente para ler informações, enviar uma transação para um contrato inteligente e monitorar eventos de um contrato inteligente para identificar alterações.
+description: "Usando componentes modernos como TypeScript, React, Vite e Wagmi, analisaremos uma interface de usuário moderna, porém minimalista, e aprenderemos como conectar uma carteira à interface de usuário, chamar um contrato inteligente para ler informações, enviar uma transação para um contrato inteligente e monitorar eventos de um contrato inteligente para identificar alterações."
 author: Ori Pomerantz
-tags: ["typescript", "react", "vite", "wagmi", "frontend"]
+tags: ["TypeScript", "React", "Vite", "Wagmi", "frontend"]
 skill: beginner
-breadcrumb: Interface de usuário com WAGMI
+breadcrumb: "Interface de usuário com WAGMI"
 published: 2023-11-01
 lang: pt-br
 sidebarDepth: 3
@@ -225,7 +225,8 @@ O JSX de um componente React _deve_ retornar um único componente HTML. Quando t
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 Forneça informações sobre a conexão atual. Dentro do JSX, `{<expression>}` significa avaliar a expressão como JavaScript.
@@ -252,7 +253,8 @@ Aqui temos duas dessas tags, `<Greeter />` (que na verdade contém o código HTM
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -293,7 +295,8 @@ Os botões do conector.
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

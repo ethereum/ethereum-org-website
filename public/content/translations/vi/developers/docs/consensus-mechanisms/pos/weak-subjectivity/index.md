@@ -1,6 +1,6 @@
 ---
-title: Tính chủ quan yếu
-description: Giải thích về tính chủ quan yếu và vai trò của nó trong Bằng chứng cổ phần (PoS) Ethereum.
+title: "Tính chủ quan yếu"
+description: "Giải thích về tính chủ quan yếu và vai trò của nó trong Bằng chứng cổ phần (PoS) Ethereum."
 lang: vi
 ---
 

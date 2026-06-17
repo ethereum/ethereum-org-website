@@ -1,6 +1,6 @@
 ---
-title: Web2 与 Web3
-description: 比较中心化的 Web2 服务与基于以太坊区块链技术构建的去中心化 Web3 应用。
+title: "Web2 与 Web3"
+description: "比较中心化的 Web2 服务与基于以太坊区块链技术构建的去中心化 Web3 应用。"
 lang: zh
 ---
 

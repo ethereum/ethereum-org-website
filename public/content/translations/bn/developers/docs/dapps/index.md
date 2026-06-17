@@ -1,5 +1,5 @@
 ---
-title: dapp-এর প্রযুক্তিগত পরিচিতি
+title: "dapp-এর প্রযুক্তিগত পরিচিতি"
 description:
 lang: bn
 ---

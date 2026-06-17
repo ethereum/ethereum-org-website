@@ -1,6 +1,6 @@
 ---
-title: JavaScript मधून स्मार्ट कॉन्ट्रॅक्ट कॉल करणे
-description: Dai टोकनचे उदाहरण वापरून JavaScript मधून स्मार्ट कॉन्ट्रॅक्ट फंक्शन कसे कॉल करावे
+title: "JavaScript मधून स्मार्ट कॉन्ट्रॅक्ट कॉल करणे"
+description: "Dai टोकनचे उदाहरण वापरून JavaScript मधून स्मार्ट कॉन्ट्रॅक्ट फंक्शन कसे कॉल करावे"
 author: jdourlens
 tags:
   - व्यवहार
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - web3.js
 skill: beginner
-breadcrumb: JS मधून कॉन्ट्रॅक्ट्स कॉल करा
+breadcrumb: "JS मधून कॉन्ट्रॅक्ट्स कॉल करा"
 lang: mr
 published: 2020-04-19
 source: EthereumDev

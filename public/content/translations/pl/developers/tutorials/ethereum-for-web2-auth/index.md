@@ -1,6 +1,6 @@
 ---
-title: Używanie Ethereum do uwierzytelniania w Web2
-description: Po przeczytaniu tego samouczka programista będzie w stanie zintegrować logowanie Ethereum (web3) z logowaniem SAML, standardem używanym w Web2 do zapewnienia jednokrotnego logowania (SSO) i innych powiązanych usług. Pozwala to na uwierzytelnianie dostępu do zasobów Web2 za pomocą podpisów Ethereum, przy czym atrybuty użytkownika pochodzą z poświadczeń.
+title: "Używanie Ethereum do uwierzytelniania w Web2"
+description: "Po przeczytaniu tego samouczka programista będzie w stanie zintegrować logowanie Ethereum (web3) z logowaniem SAML, standardem używanym w Web2 do zapewnienia jednokrotnego logowania (SSO) i innych powiązanych usług. Pozwala to na uwierzytelnianie dostępu do zasobów Web2 za pomocą podpisów Ethereum, przy czym atrybuty użytkownika pochodzą z poświadczeń."
 author: Ori Pomerantz
 tags:
   - Web2

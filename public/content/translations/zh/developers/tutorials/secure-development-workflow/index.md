@@ -1,13 +1,13 @@
 ---
-title: 智能合约安全检查清单
-description: 编写安全智能合约的建议工作流程
+title: "智能合约安全检查清单"
+description: "编写安全智能合约的建议工作流程"
 author: "Trailofbits"
 tags:
   - 智能合约
   - 安全
   - solidity
 skill: intermediate
-breadcrumb: 安全检查清单
+breadcrumb: "安全检查清单"
 lang: zh
 published: 2020-09-07
 source: Building secure contracts

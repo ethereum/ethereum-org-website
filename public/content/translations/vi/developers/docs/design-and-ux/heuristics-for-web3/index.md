@@ -1,6 +1,6 @@
 ---
-title: 7 nguyên tắc thiết kế giao diện Web3
-description: Các nguyên tắc để cải thiện khả năng sử dụng của Web3
+title: "7 nguyên tắc thiết kế giao diện Web3"
+description: "Các nguyên tắc để cải thiện khả năng sử dụng của Web3"
 lang: vi
 ---
 

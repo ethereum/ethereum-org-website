@@ -42,7 +42,7 @@ lang: ar
 
 إذا كان العقد الذكي ينفذ الطرق والأحداث التالية، فيمكن تسميته عقد رمز مميز <span dir="ltr">ERC-20</span>، وبمجرد نشره، سيكون مسؤولاً عن تتبع الرموز المميزة التي تم إنشاؤها على إيثيريوم.
 
-من [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
+من [<span dir="ltr">EIP-20</span>](https://eips.ethereum.org/EIPS/eip-20):
 
 ### الطرق {#methods}
 
@@ -166,25 +166,25 @@ print("Addr Balance:", addr_balance)
 - افترض دائمًا أن الرموز المميزة <span dir="ltr">ERC-20</span> يمكن أن ينتهي بها المطاف في عقدك حتى لو لم يكن من المفترض أن يتلقى عقدك أيًا منها. لا توجد طريقة لمنع أو رفض الإيداعات العرضية من جانب المستلم. يوصى بتنفيذ دالة تسمح باستخراج الرموز المميزة <span dir="ltr">ERC-20</span> المودعة عن طريق الخطأ.
 - فكر في استخدام معايير رموز مميزة بديلة.
 
-ظهرت بعض المعايير البديلة من هذه المشكلة مثل [ERC-223](/developers/docs/standards/tokens/erc-223) أو [ERC-1363](/developers/docs/standards/tokens/erc-1363).
+ظهرت بعض المعايير البديلة من هذه المشكلة مثل [<span dir="ltr">ERC-223</span>](/developers/docs/standards/tokens/erc-223) أو [<span dir="ltr">ERC-1363</span>](/developers/docs/standards/tokens/erc-1363).
 
 ## قراءة إضافية {#further-reading}
 
-- [EIP-20: معيار الرمز المميز ERC-20](https://eips.ethereum.org/EIPS/eip-20)
+- [<span dir="ltr">EIP-20</span>: معيار الرمز المميز <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20)
 - [أوبن زبلن - الرموز المميزة](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
-- [أوبن زبلن - تنفيذ ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [أوبن زبلن - تنفيذ <span dir="ltr">ERC-20</span>](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - دليل لرموز ERC20 في Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## معايير الرموز القابلة للاستبدال الأخرى {#fungible-token-standards}
 
-- [ERC-223](/developers/docs/standards/tokens/erc-223)
-- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
-- [ERC-777](/developers/docs/standards/tokens/erc-777)
-- [ERC-4626 - الخزائن المرمزة](/developers/docs/standards/tokens/erc-4626)
+- [<span dir="ltr">ERC-223</span>](/developers/docs/standards/tokens/erc-223)
+- [<span dir="ltr">ERC-1363</span>](/developers/docs/standards/tokens/erc-1363)
+- [<span dir="ltr">ERC-777</span>](/developers/docs/standards/tokens/erc-777)
+- [<span dir="ltr">ERC-4626</span> - الخزائن المرمزة](/developers/docs/standards/tokens/erc-4626)
 
 ## برامج تعليمية: البناء باستخدام <span dir="ltr">ERC-20</span> على إيثيريوم {#tutorials}
 
-- [جولة في عقد ERC-20](/developers/tutorials/erc20-annotated-code/) _– جولة مشروحة سطرًا بسطر لتنفيذ عقد أوبن زبلن ERC-20._
-- [ERC-20 مع حواجز الأمان](/developers/tutorials/erc20-with-safety-rails/) _– كيفية إضافة ضمانات إلى الرموز المميزة ERC-20 لمساعدة المستخدمين على تجنب الأخطاء الشائعة._
-- [إرسال الرموز المميزة باستخدام Ethers.js](/developers/tutorials/send-token-ethersjs/) _– دليل مناسب للمبتدئين لتحويل الرموز المميزة ERC-20 باستخدام Ethers.js._
-- [بعض الحيل التي تستخدمها الرموز المميزة الاحتيالية وكيفية اكتشافها](/developers/tutorials/scam-token-tricks/) _– استكشاف مفصل لأنماط الرموز المميزة ERC-20 الاحتيالية وكيفية التعرف عليها._
+- [جولة في عقد <span dir="ltr">ERC-20</span>](/developers/tutorials/erc20-annotated-code/) _– جولة مشروحة سطرًا بسطر لتنفيذ عقد أوبن زبلن <span dir="ltr">ERC-20</span>._
+- [<span dir="ltr">ERC-20</span> مع حواجز الأمان](/developers/tutorials/erc20-with-safety-rails/) _– كيفية إضافة ضمانات إلى الرموز المميزة <span dir="ltr">ERC-20</span> لمساعدة المستخدمين على تجنب الأخطاء الشائعة._
+- [إرسال الرموز المميزة باستخدام Ethers.js](/developers/tutorials/send-token-ethersjs/) _– دليل مناسب للمبتدئين لتحويل الرموز المميزة <span dir="ltr">ERC-20</span> باستخدام Ethers.js._
+- [بعض الحيل التي تستخدمها الرموز المميزة الاحتيالية وكيفية اكتشافها](/developers/tutorials/scam-token-tricks/) _– استكشاف مفصل لأنماط الرموز المميزة <span dir="ltr">ERC-20</span> الاحتيالية وكيفية التعرف عليها._

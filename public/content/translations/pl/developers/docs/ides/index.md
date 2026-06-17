@@ -1,6 +1,6 @@
 ---
-title: Zintegrowane środowiska programistyczne (IDE)
-description: Dowiedz się więcej o przeglądarkowych i desktopowych środowiskach IDE do programowania na Ethereum, w tym o Remix, VS Code i popularnych wtyczkach.
+title: "Zintegrowane środowiska programistyczne (IDE)"
+description: "Dowiedz się więcej o przeglądarkowych i desktopowych środowiskach IDE do programowania na Ethereum, w tym o Remix, VS Code i popularnych wtyczkach."
 lang: pl
 ---
 

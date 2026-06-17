@@ -1,12 +1,12 @@
 ---
-title: كيفية استخدام مانتيكور للعثور على الأخطاء في العقود الذكية
-description: كيفية استخدام مانتيكور للعثور تلقائيًا على الأخطاء في العقود الذكية
-author: تريل أوف بيتس
+title: "كيفية استخدام مانتيكور للعثور على الأخطاء في العقود الذكية"
+description: "كيفية استخدام مانتيكور للعثور تلقائيًا على الأخطاء في العقود الذكية"
+author: "تريل أوف بيتس"
 lang: ar
 tags:
   ["Solidity", "العقود الذكية", "الأمان", "الاختبار", "التحقق الرسمي"]
 skill: advanced
-breadcrumb: مانتيكور
+breadcrumb: "مانتيكور"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
@@ -16,7 +16,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 ## التثبيت {#installation}
 
-يتطلب مانتيكور إصدار <span dir="ltr">>= Python 3.6</span>. يمكن تثبيته من خلال <span dir="ltr">pip</span> أو باستخدام Docker.
+يتطلب مانتيكور إصدار <span dir="ltr">= Python 3.6</span>. يمكن تثبيته من خلال <span dir="ltr">pip</span> أو باستخدام Docker.
 
 ### مانتيكور من خلال Docker {#manticore-through-docker}
 

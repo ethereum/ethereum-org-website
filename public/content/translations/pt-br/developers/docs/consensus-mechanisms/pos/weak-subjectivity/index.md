@@ -1,6 +1,6 @@
 ---
 title: Subjetividade fraca
-description: Uma explicação sobre a subjetividade fraca e seu papel no Ethereum com PoS.
+description: "Uma explicação sobre a subjetividade fraca e seu papel no Ethereum com PoS."
 lang: pt-br
 ---
 

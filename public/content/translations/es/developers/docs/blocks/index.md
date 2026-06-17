@@ -1,6 +1,6 @@
 ---
 title: Bloques
-description: Una descripción general de los bloques en la cadena de bloques de Ethereum: su estructura de datos, por qué son necesarios y cómo se crean.
+description: "Una descripción general de los bloques en la cadena de bloques de Ethereum: su estructura de datos, por qué son necesarios y cómo se crean."
 lang: es
 ---
 

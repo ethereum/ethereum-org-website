@@ -3,7 +3,7 @@ title: Jinsi ya kutumia Slither kupata hitilafu za mikataba mahiri
 description: Jinsi ya kutumia Slither kupata hitilafu kiotomatiki kwenye mikataba mahiri
 author: Trailofbits
 lang: sw
-tags: ["solidity", "mikataba mahiri", "usalama", "upimaji"]
+tags: ["Solidity", "mikataba mahiri", "usalama", "upimaji"]
 skill: advanced
 breadcrumb: Slither
 published: 2020-06-09

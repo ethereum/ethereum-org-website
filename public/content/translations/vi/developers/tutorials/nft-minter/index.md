@@ -1,10 +1,10 @@
 ---
-title: Hướng dẫn tạo công cụ đúc NFT
-description: Trong hướng dẫn này, bạn sẽ xây dựng một công cụ đúc NFT và tìm hiểu cách tạo một dapp full stack bằng cách kết nối hợp đồng thông minh của bạn với giao diện người dùng React bằng MetaMask và các công cụ Web3.
+title: "Hướng dẫn tạo công cụ đúc NFT"
+description: "Trong hướng dẫn này, bạn sẽ xây dựng một công cụ đúc NFT và tìm hiểu cách tạo một dapp full stack bằng cách kết nối hợp đồng thông minh của bạn với giao diện người dùng React bằng MetaMask và các công cụ Web3."
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "hợp đồng thông minh", "frontend", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "hợp đồng thông minh", "frontend", "Pinata", "erc-721"]
 skill: intermediate
-breadcrumb: Dapp đúc NFT
+breadcrumb: "Dapp đúc NFT"
 lang: vi
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

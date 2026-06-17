@@ -1,14 +1,14 @@
 ---
 title: "కాంట్రాక్ట్ పరిమాణ పరిమితిని ఎదుర్కోవడానికి కాంట్రాక్ట్‌లను తగ్గించడం"
 description: "మీ స్మార్ట్ కాంట్రాక్ట్‌లు మరీ పెద్దవి కాకుండా నిరోధించడానికి మీరు ఏమి చేయవచ్చు?"
-author: మార్కస్ వాస్
+author: "మార్కస్ వాస్"
 lang: te
 tags:
   - solidity
   - స్మార్ట్ కాంట్రాక్ట్‌లు
   - నిల్వ
 skill: intermediate
-breadcrumb: కాంట్రాక్ట్‌లను తగ్గించడం
+breadcrumb: "కాంట్రాక్ట్‌లను తగ్గించడం"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

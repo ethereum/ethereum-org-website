@@ -1,6 +1,6 @@
 ---
 title: Web2 vs Web3
-description: Porównanie scentralizowanych usług Web2 ze zdecentralizowanymi aplikacjami Web3 zbudowanymi w oparciu o technologię blockchain Ethereum.
+description: "Porównanie scentralizowanych usług Web2 ze zdecentralizowanymi aplikacjami Web3 zbudowanymi w oparciu o technologię blockchain Ethereum."
 lang: pl
 ---
 

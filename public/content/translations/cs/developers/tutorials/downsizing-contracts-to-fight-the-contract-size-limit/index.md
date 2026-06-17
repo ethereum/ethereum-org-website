@@ -3,7 +3,7 @@ title: "Zmenšování kontraktů v boji proti limitu velikosti kontraktu"
 description: "Co můžete udělat, abyste zabránili tomu, že vaše chytré kontrakty budou příliš velké?"
 author: Markus Waas
 lang: cs
-tags: ["solidity", "chytré kontrakty", "úložiště"]
+tags: ["Solidity", "chytré kontrakty", "úložiště"]
 skill: intermediate
 breadcrumb: "Zmenšování kontraktů"
 published: 2020-06-26

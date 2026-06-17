@@ -1,11 +1,11 @@
 ---
-title: পরিষেবা হিসেবে স্টেকিং
-description: পরিষেবা হিসেবে স্টেকিং সম্পর্কে জানুন
+title: "পরিষেবা হিসেবে স্টেকিং"
+description: "পরিষেবা হিসেবে স্টেকিং সম্পর্কে জানুন"
 lang: bn
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: মেঘের মধ্যে ভাসমান গণ্ডার লেসলি।
+alt: "মেঘের মধ্যে ভাসমান গণ্ডার লেসলি।"
 sidebarDepth: 2
 summaryPoints:
   - থার্ড-পার্টি নোড অপারেটররা আপনার ভ্যালিডেটর ক্লায়েন্টের পরিচালনা সামলায়

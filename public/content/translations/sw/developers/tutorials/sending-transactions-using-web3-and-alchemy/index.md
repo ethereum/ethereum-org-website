@@ -2,7 +2,7 @@
 title: Kutuma Miamala Kwa Kutumia Web3
 description: "Huu ni mwongozo rafiki kwa wanaoanza kuhusu kutuma miamala ya Ethereum kwa kutumia Web3. Kuna hatua tatu kuu ili kutuma muamala kwenye mnyororo wa vitalu wa Ethereum: kuunda, kusaini, na kutangaza. Tutapitia zote tatu."
 author: "Elan Halpern"
-tags: ["miamala", "web3.js", "alchemy"]
+tags: ["miamala", "web3.js", "Alchemy"]
 skill: beginner
 breadcrumb: Tuma miamala
 lang: sw

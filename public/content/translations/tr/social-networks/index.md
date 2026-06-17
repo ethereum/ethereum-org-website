@@ -1,6 +1,6 @@
 ---
-title: Merkeziyetsiz sosyal ağlar
-description: Ethereum üzerindeki merkeziyetsiz sosyal ağlara genel bir bakış
+title: "Merkeziyetsiz sosyal ağlar"
+description: "Ethereum üzerindeki merkeziyetsiz sosyal ağlara genel bir bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2

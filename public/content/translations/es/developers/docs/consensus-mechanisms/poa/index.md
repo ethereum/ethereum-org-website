@@ -1,6 +1,6 @@
 ---
 title: Prueba de autoridad (PoA)
-description: Una explicación del protocolo de consenso de prueba de autoridad y su papel en el ecosistema de la cadena de bloques.
+description: "Una explicación del protocolo de consenso de prueba de autoridad y su papel en el ecosistema de la cadena de bloques."
 lang: es
 ---
 

@@ -3,7 +3,7 @@ title: "Reducción del tamaño de los contratos para combatir el límite de tama
 description: "¿Qué puede hacer para evitar que sus contratos inteligentes se vuelvan demasiado grandes?"
 author: Markus Waas
 lang: es
-tags: ["solidity", "contratos inteligentes", "almacenamiento"]
+tags: ["Solidity", "contratos inteligentes", "almacenamiento"]
 skill: intermediate
 breadcrumb: "Reducción del tamaño de los contratos"
 published: 2020-06-26

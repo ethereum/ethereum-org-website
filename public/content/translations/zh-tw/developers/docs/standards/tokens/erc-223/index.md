@@ -1,6 +1,6 @@
 ---
-title: ERC-223 代幣標準
-description: ERC-223 同質化代幣標準的概述、運作方式，以及與 ERC-20 的比較。
+title: "ERC-223 代幣標準"
+description: "ERC-223 同質化代幣標準的概述、運作方式，以及與 ERC-20 的比較。"
 lang: zh-tw
 ---
 

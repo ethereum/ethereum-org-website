@@ -1,5 +1,5 @@
 ---
-title: Techniczne wprowadzenie do dappów
+title: "Techniczne wprowadzenie do dappów"
 description:
 lang: pl
 ---

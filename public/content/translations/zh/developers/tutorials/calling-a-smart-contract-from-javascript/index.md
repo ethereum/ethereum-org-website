@@ -1,10 +1,10 @@
 ---
-title: 从 JavaScript 调用智能合约
-description: 如何使用 Dai 代币示例从 JavaScript 调用智能合约函数
+title: "从 JavaScript 调用智能合约"
+description: "如何使用 Dai 代币示例从 JavaScript 调用智能合约函数"
 author: jdourlens
 tags: ["交易", "前端", "JavaScript", "web3.js"]
 skill: beginner
-breadcrumb: 从 JS 调用合约
+breadcrumb: "从 JS 调用合约"
 lang: zh
 published: 2020-04-19
 source: EthereumDev

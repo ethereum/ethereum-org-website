@@ -1,6 +1,6 @@
 ---
 title: Web2 ve Web3
-description: Merkezi Web2 hizmetlerini, Ethereum blokzincir teknolojisi üzerine inşa edilmiş merkeziyetsiz Web3 uygulamalarıyla karşılaştırın.
+description: "Merkezi Web2 hizmetlerini, Ethereum blokzincir teknolojisi üzerine inşa edilmiş merkeziyetsiz Web3 uygulamalarıyla karşılaştırın."
 lang: tr
 ---
 

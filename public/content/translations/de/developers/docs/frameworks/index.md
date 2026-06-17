@@ -1,6 +1,6 @@
 ---
-title: Frameworks für die Dapp-Entwicklung
-description: Entdecken Sie die Vorteile von Frameworks und vergleichen Sie die verfügbaren Optionen.
+title: "Frameworks für die Dapp-Entwicklung"
+description: "Entdecken Sie die Vorteile von Frameworks und vergleichen Sie die verfügbaren Optionen."
 lang: de
 ---
 

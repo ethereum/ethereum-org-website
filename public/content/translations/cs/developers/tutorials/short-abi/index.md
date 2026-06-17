@@ -1,11 +1,11 @@
 ---
 title: "Krátká ABI pro optimalizaci dat volání"
-description: Optimalizace chytrých kontraktů pro optimistické rollupy
+description: "Optimalizace chytrých kontraktů pro optimistické rollupy"
 author: Ori Pomerantz
 lang: cs
 tags: ["vrstva 2 (l2)"]
 skill: intermediate
-breadcrumb: Krátká ABI
+breadcrumb: "Krátká ABI"
 published: 2022-04-01
 ---
 

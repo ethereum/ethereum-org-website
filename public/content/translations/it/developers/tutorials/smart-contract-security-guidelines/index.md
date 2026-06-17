@@ -2,7 +2,7 @@
 title: Linee guida per la sicurezza degli smart contract
 description: Una checklist di linee guida per la sicurezza da considerare quando si crea una dapp
 author: "Trailofbits"
-tags: ["solidity", "smart contract", "sicurezza"]
+tags: ["Solidity", "smart contract", "sicurezza"]
 skill: intermediate
 breadcrumb: Linee guida per la sicurezza
 lang: it

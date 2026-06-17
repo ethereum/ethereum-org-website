@@ -1,6 +1,6 @@
 ---
-title: Jak používat Manticore k hledání chyb v chytrých kontraktech
-description: Jak používat Manticore k automatickému hledání chyb v chytrých kontraktech
+title: "Jak používat Manticore k hledání chyb v chytrých kontraktech"
+description: "Jak používat Manticore k automatickému hledání chyb v chytrých kontraktech"
 author: Trailofbits
 lang: cs
 tags:

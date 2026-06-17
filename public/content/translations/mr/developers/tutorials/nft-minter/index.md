@@ -1,10 +1,10 @@
 ---
-title: NFT मिंटर ट्युटोरिअल
-description: या ट्युटोरिअलमध्ये, तुम्ही एक NFT मिंटर तयार कराल आणि मेटामास्क आणि Web3 टूल्स वापरून तुमच्या स्मार्ट कॉन्ट्रॅक्टला React फ्रंटएंडशी जोडून फुल स्टॅक विकेंद्रित ॲप्लिकेशन (dapp) कसे तयार करायचे ते शिकाल.
+title: "NFT मिंटर ट्युटोरिअल"
+description: "या ट्युटोरिअलमध्ये, तुम्ही एक NFT मिंटर तयार कराल आणि मेटामास्क आणि Web3 टूल्स वापरून तुमच्या स्मार्ट कॉन्ट्रॅक्टला React फ्रंटएंडशी जोडून फुल स्टॅक विकेंद्रित ॲप्लिकेशन (dapp) कसे तयार करायचे ते शिकाल."
 author: "smudgil"
 tags: ["Solidity", "NFT", "Alchemy", "स्मार्ट कॉन्ट्रॅक्ट्स", "फ्रंटएंड", "Pinata", "ERC-721"]
 skill: intermediate
-breadcrumb: NFT मिंटर dapp
+breadcrumb: "NFT मिंटर dapp"
 lang: mr
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

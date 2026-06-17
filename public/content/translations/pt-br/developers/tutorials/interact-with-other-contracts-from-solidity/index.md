@@ -2,9 +2,9 @@
 title: Interagir com outros contratos a partir do Solidity
 description: Como implantar um contrato inteligente a partir de um contrato existente e interagir com ele
 author: "jdourlens"
-tags: ["contratos inteligentes", "solidity", "remix", "implantação", "composabilidade"]
+tags: ["contratos inteligentes", "Solidity", "Remix", "implantação", "composabilidade"]
 skill: advanced
-breadcrumb: Interações de contrato
+breadcrumb: "Interações de contrato"
 lang: pt-br
 published: 2020-04-05
 source: EthereumDev

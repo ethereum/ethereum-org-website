@@ -1,7 +1,7 @@
 ---
-title: Reale Vermögenswerte (RWAs)
-metaTitle: Was sind RWAs? | Vorteile und Nutzung realer Vermögenswerte
-description: Ein Überblick über reale Vermögenswerte auf Ethereum
+title: "Reale Vermögenswerte (RWAs)"
+metaTitle: "Was sind RWAs? | Vorteile und Nutzung realer Vermögenswerte"
+description: "Ein Überblick über reale Vermögenswerte auf Ethereum"
 lang: de
 template: use-cases
 image: /images/man-and-dog-playing.png

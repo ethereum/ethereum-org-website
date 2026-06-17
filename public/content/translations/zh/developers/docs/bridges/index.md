@@ -1,6 +1,6 @@
 ---
-title: 跨链桥
-description: 面向开发者的跨链桥概述
+title: "跨链桥"
+description: "面向开发者的跨链桥概述"
 lang: zh
 ---
 
@@ -121,6 +121,7 @@ lang: zh
 - [Tenderly](https://tenderly.co/)
 
 ## 延伸阅读 {#further-reading}
+
 - [区块链跨链桥](/bridges/) – ethereum.org
 - [L2BEAT 跨链桥风险框架](https://l2beat.com/bridges/summary)
 - [区块链跨链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 2021 年 9 月 8 日 – Dmitriy Berenzon

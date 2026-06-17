@@ -1,6 +1,6 @@
 ---
-title: ERC-1363 Ödenebilir Token Standardı
-description: ERC-1363, transferlerden sonra bir alıcı sözleşmesinde veya onaylardan sonra bir harcayıcı sözleşmesinde özel mantık yürütmeyi tek bir işlem içinde destekleyen ERC-20 token'ları için bir uzantı arayüzüdür.
+title: "ERC-1363 Ödenebilir Token Standardı"
+description: "ERC-1363, transferlerden sonra bir alıcı sözleşmesinde veya onaylardan sonra bir harcayıcı sözleşmesinde özel mantık yürütmeyi tek bir işlem içinde destekleyen ERC-20 token'ları için bir uzantı arayüzüdür."
 lang: tr
 ---
 

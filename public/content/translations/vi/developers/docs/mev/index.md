@@ -1,6 +1,6 @@
 ---
-title: Giá trị có thể trích xuất tối đa (MEV)
-description: Giới thiệu về giá trị có thể trích xuất tối đa (MEV)
+title: "Giá trị có thể trích xuất tối đa (MEV)"
+description: "Giới thiệu về giá trị có thể trích xuất tối đa (MEV)"
 lang: vi
 ---
 

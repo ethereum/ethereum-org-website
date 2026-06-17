@@ -1,6 +1,6 @@
 ---
-title: 去中心化应用 (dapp) 开发框架
-description: 探索框架的优势并比较可用选项。
+title: "去中心化应用 (dapp) 开发框架"
+description: "探索框架的优势并比较可用选项。"
 lang: zh
 ---
 

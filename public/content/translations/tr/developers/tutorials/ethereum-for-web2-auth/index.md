@@ -1,13 +1,13 @@
 ---
-title: Web2 kimlik doğrulaması için Ethereum kullanmak
-description: Bu öğreticiyi okuduktan sonra bir geliştirici, Ethereum girişini (web3), tek oturum açma ve diğer ilgili hizmetleri sağlamak için Web2'de kullanılan bir standart olan SAML girişiyle entegre edebilecektir. Bu, kullanıcı özniteliklerinin onaylardan gelmesiyle, Web2 kaynaklarına erişimin Ethereum imzaları aracılığıyla doğrulanmasına olanak tanır.
+title: "Web2 kimlik doğrulaması için Ethereum kullanmak"
+description: "Bu öğreticiyi okuduktan sonra bir geliştirici, Ethereum girişini (web3), tek oturum açma ve diğer ilgili hizmetleri sağlamak için Web2'de kullanılan bir standart olan SAML girişiyle entegre edebilecektir. Bu, kullanıcı özniteliklerinin onaylardan gelmesiyle, Web2 kaynaklarına erişimin Ethereum imzaları aracılığıyla doğrulanmasına olanak tanır."
 author: Ori Pomerantz
 tags:
   - Web2
   - kimlik doğrulama
   - eas
 skill: beginner
-breadcrumb: Web2 kimlik doğrulaması için Ethereum
+breadcrumb: "Web2 kimlik doğrulaması için Ethereum"
 lang: tr
 published: 2025-04-30
 ---

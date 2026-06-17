@@ -1,11 +1,11 @@
 ---
-title: كيفية إعداد تيلور كأوراكل خاص بك
-description: دليل للبدء في دمج أوراكل تيلور في البروتوكول الخاص بك
+title: "كيفية إعداد تيلور كأوراكل خاص بك"
+description: "دليل للبدء في دمج أوراكل تيلور في البروتوكول الخاص بك"
 author: "تيلور"
 lang: ar
-tags: ["solidity", "العقود الذكية", "أوراكل"]
+tags: ["Solidity", "العقود الذكية", "أوراكل"]
 skill: beginner
-breadcrumb: أوراكل تيلور
+breadcrumb: "أوراكل تيلور"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

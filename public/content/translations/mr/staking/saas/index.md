@@ -1,11 +1,11 @@
 ---
-title: सेवा म्हणून स्टेकिंग
-description: सेवा म्हणून स्टेकिंगबद्दल जाणून घ्या
+title: "सेवा म्हणून स्टेकिंग"
+description: "सेवा म्हणून स्टेकिंगबद्दल जाणून घ्या"
 lang: mr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: ढगांमध्ये तरंगणारा लेस्ली गेंडा.
+alt: "ढगांमध्ये तरंगणारा लेस्ली गेंडा."
 sidebarDepth: 2
 summaryPoints:
   - तृतीय-पक्ष नोड ऑपरेटर तुमच्या प्रमाणक क्लायंटचे कार्य हाताळतात

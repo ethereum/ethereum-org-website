@@ -1,6 +1,6 @@
 ---
-title: Web3 arayüz tasarımı için 7 buluşsal yöntem
-description: Web3'ün kullanılabilirliğini artırmaya yönelik ilkeler
+title: "Web3 arayüz tasarımı için 7 buluşsal yöntem"
+description: "Web3'ün kullanılabilirliğini artırmaya yönelik ilkeler"
 lang: tr
 ---
 

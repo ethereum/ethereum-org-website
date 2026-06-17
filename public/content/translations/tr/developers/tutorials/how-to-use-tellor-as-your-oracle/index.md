@@ -1,11 +1,11 @@
 ---
-title: Tellor'u Kâhin Olarak Nasıl Kurarsınız
-description: Tellor kâhinini protokolünüze entegre etmeye başlamak için bir rehber
+title: "Tellor'u Kâhin Olarak Nasıl Kurarsınız"
+description: "Tellor kâhinini protokolünüze entegre etmeye başlamak için bir rehber"
 author: "Tellor"
 lang: tr
-tags: ["solidity", "akıllı sözleşmeler", "kâhinler"]
+tags: ["Solidity", "akıllı sözleşmeler", "kâhinler"]
 skill: beginner
-breadcrumb: Tellor kâhini
+breadcrumb: "Tellor kâhini"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

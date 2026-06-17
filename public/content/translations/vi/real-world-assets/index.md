@@ -1,11 +1,11 @@
 ---
-title: Tài sản thế giới thực (RWA)
-metaTitle: RWA là gì? | Lợi ích và Ứng dụng của Tài sản thế giới thực
-description: Tổng quan về Tài sản thế giới thực trên Ethereum
+title: "Tài sản thế giới thực (RWA)"
+metaTitle: "RWA là gì? | Lợi ích và Ứng dụng của Tài sản thế giới thực"
+description: "Tổng quan về Tài sản thế giới thực trên Ethereum"
 lang: vi
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: Người đàn ông và chú chó đang chơi đùa.
+alt: "Người đàn ông và chú chó đang chơi đùa."
 sidebarDepth: 2
 summaryPoints:
   - "Một phương pháp để biến các hàng hóa có giá trị thành token kỹ thuật số."

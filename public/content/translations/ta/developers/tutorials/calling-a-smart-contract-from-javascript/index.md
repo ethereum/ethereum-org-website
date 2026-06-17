@@ -1,6 +1,6 @@
 ---
-title: JavaScript-லிருந்து ஒரு திறன் ஒப்பந்தத்தை அழைப்பது
-description: Dai வில்லை உதாரணத்தைப் பயன்படுத்தி JavaScript-லிருந்து ஒரு திறன் ஒப்பந்தச் சார்பை (function) எவ்வாறு அழைப்பது
+title: "JavaScript-லிருந்து ஒரு திறன் ஒப்பந்தத்தை அழைப்பது"
+description: "Dai வில்லை உதாரணத்தைப் பயன்படுத்தி JavaScript-லிருந்து ஒரு திறன் ஒப்பந்தச் சார்பை (function) எவ்வாறு அழைப்பது"
 author: jdourlens
 tags:
   - பரிவர்த்தனைகள்
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - web3.js
 skill: beginner
-breadcrumb: JS-லிருந்து ஒப்பந்தங்களை அழைப்பது
+breadcrumb: "JS-லிருந்து ஒப்பந்தங்களை அழைப்பது"
 lang: ta
 published: 2020-04-19
 source: EthereumDev

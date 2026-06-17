@@ -1,13 +1,13 @@
 ---
-title: స్మార్ట్ కాంట్రాక్ట్ భద్రతా చెక్‌లిస్ట్
-description: సురక్షితమైన స్మార్ట్ కాంట్రాక్ట్‌లను రాయడానికి సూచించబడిన వర్క్‌ఫ్లో
+title: "స్మార్ట్ కాంట్రాక్ట్ భద్రతా చెక్‌లిస్ట్"
+description: "సురక్షితమైన స్మార్ట్ కాంట్రాక్ట్‌లను రాయడానికి సూచించబడిన వర్క్‌ఫ్లో"
 author: Trailofbits
 tags:
   - స్మార్ట్ కాంట్రాక్ట్‌లు
   - భద్రత
   - solidity
 skill: intermediate
-breadcrumb: భద్రతా చెక్‌లిస్ట్
+breadcrumb: "భద్రతా చెక్‌లిస్ట్"
 lang: te
 published: 2020-09-07
 source: Building secure contracts

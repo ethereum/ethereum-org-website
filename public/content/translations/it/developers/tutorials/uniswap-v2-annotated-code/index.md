@@ -1,8 +1,8 @@
 ---
 title: "Analisi dettagliata del contratto Uniswap-v2"
-description: Come funziona il contratto Uniswap-v2? Perché è scritto in questo modo?
+description: "Come funziona il contratto Uniswap-v2? Perché è scritto in questo modo?"
 author: Ori Pomerantz
-tags: ["solidity", "dapp"]
+tags: ["Solidity", "dapp"]
 skill: intermediate
 breadcrumb: Analisi dettagliata di Uniswap v2
 published: 2021-05-01
@@ -336,7 +336,7 @@ Questa funzione permette alla factory (e solo alla factory) di specificare i due
 
 #### Funzioni di aggiornamento interne {#pair-update-internal}
 
-##### \_update {#pair-external}
+##### \_update {#}
 
 ```solidity
     // aggiorna le riserve e, alla prima chiamata per blocco, gli accumulatori di prezzo
@@ -391,7 +391,7 @@ Questo calcolo del prezzo è il motivo per cui abbiamo bisogno di conoscere le v
 
 Infine, aggiorna le variabili globali ed emetti un evento `Sync`.
 
-##### \_mintFee {#uniswapv2factory}
+##### \_mintFee {#}
 
 ```solidity
     // se la commissione è attiva, conia liquidità equivalente a 1/6 della crescita in sqrt(k)
@@ -457,11 +457,11 @@ Usa la funzione `UniswapV2ERC20._mint` per creare effettivamente i token di liqu
 Se non c'è alcuna commissione imposta `kLast` a zero (se non lo è già). Quando questo contratto è stato scritto c'era una [funzionalità di rimborso del gas](https://eips.ethereum.org/EIPS/eip-3298) che incoraggiava i contratti a ridurre la dimensione complessiva dello stato di Ethereum azzerando lo spazio di archiviazione di cui non avevano bisogno.
 Questo codice ottiene quel rimborso quando possibile.
 
-#### Funzioni accessibili esternamente {#uniswapv2erc20}
+#### Funzioni accessibili esternamente {#pair-external}
 
 Nota che mentre qualsiasi transazione o contratto _può_ chiamare queste funzioni, sono progettate per essere chiamate dal contratto periferico. Se le chiami direttamente non sarai in grado di imbrogliare lo scambio della coppia, ma potresti perdere valore a causa di un errore.
 
-##### mint {#periphery-contracts}
+##### mint {#}
 
 ```solidity
     // questa funzione di basso livello dovrebbe essere chiamata da un contratto che esegue importanti controlli di sicurezza
@@ -547,7 +547,7 @@ Usa la funzione `UniswapV2ERC20._mint` per creare effettivamente i token di liqu
 
 Aggiorna le variabili di stato (`reserve0`, `reserve1` e, se necessario, `kLast`) ed emetti l'evento appropriato.
 
-##### burn {#uniswapv2router01}
+##### burn {#}
 
 ```solidity
     // questa funzione di basso livello dovrebbe essere chiamata da un contratto che esegue importanti controlli di sicurezza
@@ -594,7 +594,7 @@ Il fornitore di liquidità riceve un valore uguale di entrambi i token. In quest
 
 Il resto della funzione `burn` è l'immagine speculare della funzione `mint` sopra.
 
-##### swap {#uniswapv2router02}
+##### swap {#}
 
 ```solidity
     // questa funzione di basso livello dovrebbe essere chiamata da un contratto che esegue importanti controlli di sicurezza
@@ -662,7 +662,7 @@ Questo è un controllo di integrità per assicurarci di non perdere dallo swap. 
 
 Aggiorna `reserve0` e `reserve1` e, se necessario, gli accumulatori di prezzo e il timestamp ed emetti un evento.
 
-##### Sync o Skim {#add-liquidity}
+##### Sync o Skim {#}
 
 È possibile che i saldi reali perdano la sincronizzazione con le riserve che lo scambio della coppia pensa di avere.
 Non c'è modo di prelevare token senza il consenso del contratto, ma i depositi sono un'altra questione. Un account può trasferire token allo scambio senza chiamare né `mint` né `swap`.
@@ -690,7 +690,7 @@ In quel caso ci sono due soluzioni:
 }
 ```
 
-### UniswapV2Factory.sol {#remove-liquidity}
+### UniswapV2Factory.sol {#uniswapv2factory}
 
 [Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) crea gli scambi delle coppie.
 
@@ -812,7 +812,7 @@ Salva le informazioni della nuova coppia nelle variabili di stato ed emetti un e
 
 Queste due funzioni permettono a `feeSetter` di controllare il destinatario della commissione (se presente), e di cambiare `feeSetter` in un nuovo indirizzo.
 
-### UniswapV2ERC20.sol {#trade}
+### UniswapV2ERC20.sol {#uniswapv2erc20}
 
 [Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa il token di liquidità ERC-20. È simile al [contratto ERC-20 di OpenZeppelin](/developers/tutorials/erc20-annotated-code), quindi spiegherò solo la parte che è diversa, la funzionalità `permit`.
 
@@ -899,15 +899,15 @@ Dal digest e dalla firma possiamo ottenere l'indirizzo che l'ha firmato usando [
 
 Se tutto è OK, trattalo come [un'approvazione ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## I contratti periferici {#uniswapv2migrator}
+## I contratti periferici {#periphery-contracts}
 
 I contratti periferici sono l'API (interfaccia di programmazione delle applicazioni) per Uniswap. Sono disponibili per chiamate esterne, sia da altri contratti che da applicazioni decentralizzate. Potresti chiamare direttamente i contratti principali, ma è più complicato e potresti perdere valore se commetti un errore. I contratti principali contengono solo test per assicurarsi di non essere truffati, non controlli di validità per nessun altro. Questi si trovano nella periferia, in modo da poter essere aggiornati secondo necessità.
 
-### UniswapV2Router01.sol {#libraries}
+### UniswapV2Router01.sol {#uniswapv2router01}
 
 [Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) ha dei problemi e [non dovrebbe più essere utilizzato](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Fortunatamente, i contratti periferici sono senza stato e non detengono alcun asset, quindi è facile deprecarlo e suggerire alle persone di utilizzare invece il sostituto, `UniswapV2Router02`.
 
-### UniswapV2Router02.sol {#math}
+### UniswapV2Router02.sol {#uniswapv2router02}
 
 Nella maggior parte dei casi utilizzeresti Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
 Puoi vedere come utilizzarlo [qui](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
@@ -963,7 +963,7 @@ Il costruttore imposta semplicemente le variabili di stato immutabili.
 
 Questa funzione viene chiamata quando riscattiamo i token dal contratto WETH per farli tornare in ETH. Solo il contratto WETH che utilizziamo è autorizzato a farlo.
 
-#### Aggiungere liquidità {#fixedpoint}
+#### Aggiungere liquidità {#add-liquidity}
 
 Queste funzioni aggiungono token allo scambio della coppia, il che aumenta la pool di liquidità.
 
@@ -1148,7 +1148,7 @@ Per depositare l'ETH, il contratto prima lo incapsula in WETH e poi trasferisce 
 
 L'utente ci ha già inviato l'ETH, quindi se ne avanza un po' (perché l'altro token ha meno valore di quanto l'utente pensasse), dobbiamo emettere un rimborso.
 
-#### Rimuovere liquidità {#uniswapv2library}
+#### Rimuovere liquidità {#remove-liquidity}
 
 Queste funzioni rimuoveranno la liquidità e rimborseranno il fornitore di liquidità.
 
@@ -1309,7 +1309,7 @@ Questa funzione può essere utilizzata per i token che hanno commissioni di tras
 
 La funzione finale combina le commissioni di archiviazione con le meta-transazioni.
 
-#### Scambio {#transfer-helper}
+#### Scambio {#trade}
 
 ```solidity
     // **** SWAP ****
@@ -1667,15 +1667,15 @@ Queste sono le stesse varianti utilizzate per i token normali, ma chiamano invec
 
 Queste funzioni sono solo proxy che chiamano le [funzioni di UniswapV2Library](#uniswapv2library).
 
-### UniswapV2Migrator.sol {#conclusion}
+### UniswapV2Migrator.sol {#uniswapv2migrator}
 
 Questo contratto è stato utilizzato per migrare gli scambi dalla vecchia v1 alla v2. Ora che sono stati migrati, non è più rilevante.
 
-## Le librerie
+## Le librerie {#libraries}
 
 La [libreria SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) è ben documentata, quindi non c'è bisogno di documentarla qui.
 
-### Math
+### Math {#math}
 
 Questa libreria contiene alcune funzioni matematiche che normalmente non sono necessarie nel codice Solidity, quindi non fanno parte del linguaggio.
 
@@ -1720,7 +1720,7 @@ Non dovremmo mai aver bisogno della radice quadrata di zero. Le radici quadrate 
 }
 ```
 
-### Frazioni a virgola fissa (UQ112x112)
+### Frazioni a virgola fissa (UQ112x112) {#fixedpoint}
 
 Questa libreria gestisce le frazioni, che normalmente non fanno parte dell'aritmetica di Ethereum. Lo fa codificando il numero _x_ come _x\*2^112_. Questo ci permette di usare i codici operativi (opcode) originali di addizione e sottrazione senza modifiche.
 
@@ -1757,7 +1757,7 @@ Poiché y è `uint112`, il massimo che può essere è 2^112-1. Quel numero può 
 
 Se dividiamo due valori `UQ112x112`, il risultato non è più moltiplicato per 2^112. Quindi, invece, prendiamo un numero intero per il denominatore. Avremmo dovuto usare un trucco simile per fare la moltiplicazione, ma non abbiamo bisogno di fare la moltiplicazione di valori `UQ112x112`.
 
-### UniswapV2Library
+### UniswapV2Library {#uniswapv2library}
 
 Questa libreria è usata solo dai contratti periferici
 
@@ -1879,7 +1879,7 @@ Questa funzione fa all'incirca la stessa cosa, ma ottiene l'importo di output e 
 
 Queste due funzioni gestiscono l'identificazione dei valori quando è necessario passare attraverso diversi scambi di coppia.
 
-### Transfer Helper
+### Transfer Helper {#transfer-helper}
 
 [Questa libreria](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) aggiunge controlli di successo attorno ai trasferimenti ERC-20 ed Ethereum per trattare un revert e un valore di ritorno `false` allo stesso modo.
 
@@ -1964,7 +1964,7 @@ Questa funzione implementa la [funzionalità transferFrom di ERC-20](https://eip
 
 Questa funzione trasferisce ether a un account. Qualsiasi chiamata a un contratto diverso può tentare di inviare ether. Poiché non abbiamo bisogno di chiamare effettivamente alcuna funzione, non inviamo alcun dato con la chiamata.
 
-## Conclusione
+## Conclusione {#conclusion}
 
 Questo è un lungo articolo di circa 50 pagine. Se sei arrivato fin qui, congratulazioni! Speriamo che a questo punto tu abbia compreso le considerazioni necessarie per scrivere un'applicazione reale (al contrario di brevi programmi di esempio) e che tu sia maggiormente in grado di scrivere contratti per i tuoi casi d'uso.
 

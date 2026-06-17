@@ -1,10 +1,10 @@
 ---
-title: Danh sách kiểm tra bảo mật hợp đồng thông minh
-description: Quy trình làm việc được đề xuất để viết các hợp đồng thông minh bảo mật
+title: "Danh sách kiểm tra bảo mật hợp đồng thông minh"
+description: "Quy trình làm việc được đề xuất để viết các hợp đồng thông minh bảo mật"
 author: "Trailofbits"
-tags: ["hợp đồng thông minh", "bảo mật", "solidity"]
+tags: ["hợp đồng thông minh", "bảo mật", "Solidity"]
 skill: intermediate
-breadcrumb: Danh sách kiểm tra bảo mật
+breadcrumb: "Danh sách kiểm tra bảo mật"
 lang: vi
 published: 2020-09-07
 source: Building secure contracts

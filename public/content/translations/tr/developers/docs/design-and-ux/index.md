@@ -1,6 +1,6 @@
 ---
-title: Web3'te Tasarım ve Kullanıcı Deneyimi (UX)
-description: Web3 alanında ve Ethereum'da UX tasarımı ve araştırmasına giriş
+title: "Web3'te Tasarım ve Kullanıcı Deneyimi (UX)"
+description: "Web3 alanında ve Ethereum'da UX tasarımı ve araştırmasına giriş"
 lang: tr
 ---
 

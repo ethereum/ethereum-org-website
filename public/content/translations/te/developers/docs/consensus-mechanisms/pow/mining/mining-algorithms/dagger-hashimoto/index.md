@@ -1,6 +1,6 @@
 ---
 title: Dagger-Hashimoto
-description: Dagger-Hashimoto అల్గారిథమ్ గురించి ఒక వివరణాత్మక పరిశీలన.
+description: "Dagger-Hashimoto అల్గారిథమ్ గురించి ఒక వివరణాత్మక పరిశీలన."
 lang: te
 ---
 

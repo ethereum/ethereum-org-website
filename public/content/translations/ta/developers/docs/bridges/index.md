@@ -1,6 +1,6 @@
 ---
-title: பாலங்கள்
-description: டெவலப்பர்களுக்கான பாலங்கள் பற்றிய ஒரு கண்ணோட்டம்
+title: "பாலங்கள்"
+description: "டெவலப்பர்களுக்கான பாலங்கள் பற்றிய ஒரு கண்ணோட்டம்"
 lang: ta
 ---
 
@@ -121,6 +121,7 @@ lang: ta
 - [Tenderly](https://tenderly.co/)
 
 ## மேலும் படிக்க {#further-reading}
+
 - [தொகுதிச்சங்கிலி பாலங்கள்](/bridges/) – ethereum.org
 - [L2BEAT பாலம் அபாயக் கட்டமைப்பு](https://l2beat.com/bridges/summary)
 - [தொகுதிச்சங்கிலி பாலங்கள்: கிரிப்டோ பிணையங்களின் பிணையங்களை உருவாக்குதல்](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - செப் 8, 2021 – Dmitriy Berenzon

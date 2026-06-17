@@ -1,10 +1,10 @@
 ---
-title: Solidity'den diğer sözleşmelerle etkileşim kurun
-description: Mevcut bir sözleşmeden bir akıllı sözleşme nasıl dağıtılır ve onunla nasıl etkileşim kurulur
+title: "Solidity'den diğer sözleşmelerle etkileşim kurun"
+description: "Mevcut bir sözleşmeden bir akıllı sözleşme nasıl dağıtılır ve onunla nasıl etkileşim kurulur"
 author: "jdourlens"
-tags: ["akıllı sözleşmeler", "solidity", "remix", "dağıtma", "birleştirilebilirlik"]
+tags: ["akıllı sözleşmeler", "Solidity", "Remix", "dağıtma", "birleştirilebilirlik"]
 skill: advanced
-breadcrumb: Sözleşme etkileşimleri
+breadcrumb: "Sözleşme etkileşimleri"
 lang: tr
 published: 2020-04-05
 source: EthereumDev

@@ -1,6 +1,6 @@
 ---
-title: Použití Etherea pro autentizaci ve Web2
-description: Po přečtení tohoto tutoriálu bude vývojář schopen integrovat přihlášení přes Ethereum (web3) s přihlášením přes SAML, což je standard používaný ve Web2 k poskytování jednotného přihlášení (single sign-on) a dalších souvisejících služeb. To umožňuje autentizovat přístup k Web2 zdrojům pomocí podpisů na Ethereu, přičemž atributy uživatele pocházejí z atestací.
+title: "Použití Etherea pro autentizaci ve Web2"
+description: "Po přečtení tohoto tutoriálu bude vývojář schopen integrovat přihlášení přes Ethereum (web3) s přihlášením přes SAML, což je standard používaný ve Web2 k poskytování jednotného přihlášení (single sign-on) a dalších souvisejících služeb. To umožňuje autentizovat přístup k Web2 zdrojům pomocí podpisů na Ethereu, přičemž atributy uživatele pocházejí z atestací."
 author: Ori Pomerantz
 tags:
   - Web2

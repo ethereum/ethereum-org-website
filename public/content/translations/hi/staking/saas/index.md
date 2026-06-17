@@ -1,11 +1,11 @@
 ---
-title: सेवा के रूप में स्टेकिंग
-description: सेवा के रूप में स्टेकिंग के बारे में जानें
+title: "सेवा के रूप में स्टेकिंग"
+description: "सेवा के रूप में स्टेकिंग के बारे में जानें"
 lang: hi
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: बादलों में तैरता हुआ लेस्ली राइनो।
+alt: "बादलों में तैरता हुआ लेस्ली राइनो।"
 sidebarDepth: 2
 summaryPoints:
   - थर्ड-पार्टी नोड ऑपरेटर आपके सत्यापक क्लाइंट का संचालन संभालते हैं

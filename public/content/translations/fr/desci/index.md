@@ -1,6 +1,6 @@
 ---
-title: Science décentralisée (DeSci)
-description: Un aperçu de la science décentralisée sur Ethereum
+title: "Science décentralisée (DeSci)"
+description: "Un aperçu de la science décentralisée sur Ethereum"
 lang: fr
 template: use-cases
 sidebarDepth: 2

@@ -1,6 +1,6 @@
 ---
-title: Dapp Geliştirme Çerçeveleri
-description: Çerçevelerin avantajlarını keşfedin ve mevcut seçenekleri karşılaştırın.
+title: "Dapp Geliştirme Çerçeveleri"
+description: "Çerçevelerin avantajlarını keşfedin ve mevcut seçenekleri karşılaştırın."
 lang: tr
 ---
 

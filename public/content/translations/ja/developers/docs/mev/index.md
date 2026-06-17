@@ -1,6 +1,6 @@
 ---
-title: 最大抽出可能価値 (MEV)
-description: 最大抽出可能価値 (MEV) の概要
+title: "最大抽出可能価値 (MEV)"
+description: "最大抽出可能価値 (MEV) の概要"
 lang: ja
 ---
 

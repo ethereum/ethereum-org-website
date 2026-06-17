@@ -1,9 +1,9 @@
 ---
 title: "ایک ⁦Python⁩ ڈیولپر کا ایتھیریم سے تعارف، حصہ ۱"
 description: "ایتھیریم ڈیولپمنٹ کا ایک تعارف، خاص طور پر ان لوگوں کے لیے مفید ہے جو ⁦Python⁩ پروگرامنگ زبان کا علم رکھتے ہیں"
-author: مارک گیرو
+author: "مارک گیرو"
 lang: ur
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
 breadcrumb: "ایتھیریم ⁦Python⁩ کے ساتھ"
 published: 2020-09-08

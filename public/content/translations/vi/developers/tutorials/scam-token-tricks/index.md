@@ -1,10 +1,10 @@
 ---
 title: "Một số thủ thuật được sử dụng bởi các token lừa đảo và cách phát hiện chúng"
-description: Trong hướng dẫn này, chúng ta sẽ mổ xẻ một token lừa đảo để xem một số thủ thuật mà những kẻ lừa đảo sử dụng, cách chúng triển khai và cách chúng ta có thể phát hiện ra chúng.
+description: "Trong hướng dẫn này, chúng ta sẽ mổ xẻ một token lừa đảo để xem một số thủ thuật mà những kẻ lừa đảo sử dụng, cách chúng triển khai và cách chúng ta có thể phát hiện ra chúng."
 author: Ori Pomerantz
-tags: ["lừa đảo", "solidity", "erc-20", "javascript", "typescript"]
+tags: ["lừa đảo", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
-breadcrumb: Các thủ thuật của token lừa đảo
+breadcrumb: "Các thủ thuật của token lừa đảo"
 published: 2023-09-15
 lang: vi
 ---

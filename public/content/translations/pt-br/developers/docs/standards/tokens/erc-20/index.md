@@ -1,6 +1,6 @@
 ---
-title: Padrão de token ERC-20
-description: Aprenda sobre o ERC-20, o padrão para tokens fungíveis no Ethereum que permite aplicativos de tokens interoperáveis.
+title: "Padrão de token ERC-20"
+description: "Aprenda sobre o ERC-20, o padrão para tokens fungíveis no Ethereum que permite aplicativos de tokens interoperáveis."
 lang: pt-br
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: "逆向工程合约"
-description: 如何在没有源代码的情况下理解合约
-author: 奥里·波梅兰茨
+description: "如何在没有源代码的情况下理解合约"
+author: "奥里·波梅兰茨"
 lang: zh
 tags: ["evm", "操作码"]
 skill: advanced
-breadcrumb: 逆向工程
+breadcrumb: "逆向工程"
 published: 2021-12-30
 ---
 ## 简介 {#introduction}

@@ -1,6 +1,6 @@
 ---
-title: Volání chytrého kontraktu z JavaScriptu
-description: Jak zavolat funkci chytrého kontraktu z JavaScriptu na příkladu tokenu DAI
+title: "Volání chytrého kontraktu z JavaScriptu"
+description: "Jak zavolat funkci chytrého kontraktu z JavaScriptu na příkladu tokenu DAI"
 author: jdourlens
 tags:
   - transakce
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - web3.js
 skill: beginner
-breadcrumb: Volání kontraktů z JS
+breadcrumb: "Volání kontraktů z JS"
 lang: cs
 published: 2020-04-19
 source: EthereumDev

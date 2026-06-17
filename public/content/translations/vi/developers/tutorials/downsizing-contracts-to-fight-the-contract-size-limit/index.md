@@ -1,6 +1,6 @@
 ---
 title: "Thu gọn hợp đồng để đối phó với giới hạn kích thước hợp đồng"
-description: Bạn có thể làm gì để ngăn hợp đồng thông minh của mình trở nên quá lớn?
+description: "Bạn có thể làm gì để ngăn hợp đồng thông minh của mình trở nên quá lớn?"
 author: Markus Waas
 lang: vi
 tags:
@@ -8,7 +8,7 @@ tags:
   - hợp đồng thông minh
   - lưu trữ
 skill: intermediate
-breadcrumb: Thu gọn hợp đồng
+breadcrumb: "Thu gọn hợp đồng"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

@@ -1,10 +1,10 @@
 ---
-title: 이벤트로 스마트 컨트랙트의 데이터 로깅하기
-description: 스마트 컨트랙트 이벤트에 대한 소개 및 이를 사용하여 데이터를 로깅하는 방법
+title: "이벤트로 스마트 컨트랙트의 데이터 로깅하기"
+description: "스마트 컨트랙트 이벤트에 대한 소개 및 이를 사용하여 데이터를 로깅하는 방법"
 author: "jdourlens"
-tags: ["스마트 컨트랙트", "remix", "solidity", "이벤트"]
+tags: ["스마트 컨트랙트", "Remix", "Solidity", "이벤트"]
 skill: intermediate
-breadcrumb: 이벤트 로깅
+breadcrumb: "이벤트 로깅"
 lang: ko
 published: 2020-04-03
 source: EthereumDev

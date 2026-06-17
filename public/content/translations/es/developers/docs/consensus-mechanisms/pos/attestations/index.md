@@ -1,6 +1,6 @@
 ---
 title: Atestaciones
-description: Una descripción de las atestaciones en la prueba de participación (proof-of-stake) de Ethereum.
+description: "Una descripción de las atestaciones en la prueba de participación (proof-of-stake) de Ethereum."
 lang: es
 ---
 

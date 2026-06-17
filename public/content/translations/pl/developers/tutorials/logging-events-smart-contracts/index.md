@@ -1,10 +1,10 @@
 ---
-title: Logowanie danych z inteligentnych kontraktów za pomocą zdarzeń
-description: Wprowadzenie do zdarzeń w inteligentnych kontraktach i sposobów ich wykorzystania do logowania danych
+title: "Logowanie danych z inteligentnych kontraktów za pomocą zdarzeń"
+description: "Wprowadzenie do zdarzeń w inteligentnych kontraktach i sposobów ich wykorzystania do logowania danych"
 author: "jdourlens"
-tags: ["inteligentne kontrakty", "remix", "solidity", "zdarzenia"]
+tags: ["inteligentne kontrakty", "Remix", "Solidity", "zdarzenia"]
 skill: intermediate
-breadcrumb: Logowanie zdarzeń
+breadcrumb: "Logowanie zdarzeń"
 lang: pl
 published: 2020-04-03
 source: EthereumDev

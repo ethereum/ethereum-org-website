@@ -1,11 +1,11 @@
 ---
-title: エキドナを使用してスマート・コントラクトをテストする方法
-description: エキドナを使用してスマート・コントラクトを自動的にテストする方法
+title: "エキドナを使用してスマート・コントラクトをテストする方法"
+description: "エキドナを使用してスマート・コントラクトを自動的にテストする方法"
 author: "Trailofbits"
 lang: ja
-tags: ["solidity", "スマート・コントラクト", "セキュリティ", "テスト", "ファジング"]
+tags: ["Solidity", "スマート・コントラクト", "セキュリティ", "テスト", "ファジング"]
 skill: advanced
-breadcrumb: エキドナ
+breadcrumb: "エキドナ"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

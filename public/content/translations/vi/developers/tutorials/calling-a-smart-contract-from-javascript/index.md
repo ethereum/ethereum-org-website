@@ -1,6 +1,6 @@
 ---
-title: Gọi một hợp đồng thông minh từ JavaScript
-description: Cách gọi một hàm của hợp đồng thông minh từ JavaScript bằng cách sử dụng ví dụ về token Dai
+title: "Gọi một hợp đồng thông minh từ JavaScript"
+description: "Cách gọi một hàm của hợp đồng thông minh từ JavaScript bằng cách sử dụng ví dụ về token Dai"
 author: jdourlens
 tags:
   - giao dịch
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - web3.js
 skill: beginner
-breadcrumb: Gọi hợp đồng từ JS
+breadcrumb: "Gọi hợp đồng từ JS"
 lang: vi
 published: 2020-04-19
 source: EthereumDev

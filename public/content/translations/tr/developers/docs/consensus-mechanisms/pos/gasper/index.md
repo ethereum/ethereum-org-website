@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper Hisse Kanıtı (PoS) mekanizmasının bir açıklaması.
+description: "Gasper Hisse Kanıtı (PoS) mekanizmasının bir açıklaması."
 lang: tr
 ---
 

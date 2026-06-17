@@ -1,13 +1,13 @@
 ---
-title: স্মার্ট কন্ট্রাক্ট নিরাপত্তা চেকলিস্ট
-description: নিরাপদ স্মার্ট কন্ট্রাক্ট লেখার জন্য একটি প্রস্তাবিত ওয়ার্কফ্লো
+title: "স্মার্ট কন্ট্রাক্ট নিরাপত্তা চেকলিস্ট"
+description: "নিরাপদ স্মার্ট কন্ট্রাক্ট লেখার জন্য একটি প্রস্তাবিত ওয়ার্কফ্লো"
 author: "Trailofbits"
 tags:
   - স্মার্ট কন্ট্রাক্ট
   - নিরাপত্তা
   - solidity
 skill: intermediate
-breadcrumb: নিরাপত্তা চেকলিস্ট
+breadcrumb: "নিরাপত্তা চেকলিস্ট"
 lang: bn
 published: 2020-09-07
 source: Building secure contracts

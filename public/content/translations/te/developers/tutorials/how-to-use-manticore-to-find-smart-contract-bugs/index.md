@@ -1,12 +1,12 @@
 ---
-title: స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలి
-description: స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను స్వయంచాలకంగా కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలి
-author: ట్రైల్ఆఫ్‌బిట్స్
+title: "స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలి"
+description: "స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను స్వయంచాలకంగా కనుగొనడానికి మాంటికోర్‌ను ఎలా ఉపయోగించాలి"
+author: "ట్రైల్ఆఫ్‌బిట్స్"
 lang: te
 tags:
   ["Solidity", "స్మార్ట్ కాంట్రాక్ట్‌లు", "భద్రత", "పరీక్షించడం", "ఫార్మల్ వెరిఫికేషన్"]
 skill: advanced
-breadcrumb: మాంటికోర్
+breadcrumb: "మాంటికోర్"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

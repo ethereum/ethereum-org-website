@@ -1,6 +1,6 @@
 ---
-title: ERC-777 Token Standardı
-description: Güvenlik nedeniyle ERC-20 önerilse de, kancalara (hooks) sahip geliştirilmiş bir misli token standardı olan ERC-777 hakkında bilgi edinin.
+title: "ERC-777 Token Standardı"
+description: "Güvenlik nedeniyle ERC-20 önerilse de, kancalara (hooks) sahip geliştirilmiş bir misli token standardı olan ERC-777 hakkında bilgi edinin."
 lang: tr
 ---
 

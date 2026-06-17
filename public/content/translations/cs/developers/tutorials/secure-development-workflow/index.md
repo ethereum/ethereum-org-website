@@ -1,10 +1,10 @@
 ---
-title: Kontrolní seznam bezpečnosti chytrých kontraktů
-description: Doporučený pracovní postup pro psaní bezpečných chytrých kontraktů
+title: "Kontrolní seznam bezpečnosti chytrých kontraktů"
+description: "Doporučený pracovní postup pro psaní bezpečných chytrých kontraktů"
 author: "Trailofbits"
-tags: ["chytré kontrakty", "bezpečnost", "solidity"]
+tags: ["chytré kontrakty", "bezpečnost", "Solidity"]
 skill: intermediate
-breadcrumb: Kontrolní seznam bezpečnosti
+breadcrumb: "Kontrolní seznam bezpečnosti"
 lang: cs
 published: 2020-09-07
 source: Building secure contracts

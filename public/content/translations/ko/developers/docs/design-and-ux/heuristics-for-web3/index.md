@@ -1,6 +1,6 @@
 ---
-title: Web3 인터페이스 디자인을 위한 7가지 휴리스틱
-description: Web3의 사용성을 개선하기 위한 원칙
+title: "Web3 인터페이스 디자인을 위한 7가지 휴리스틱"
+description: "Web3의 사용성을 개선하기 위한 원칙"
 lang: ko
 ---
 

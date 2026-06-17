@@ -1,11 +1,11 @@
 ---
-title: Вступ до Етеріуму для Python-розробників, частина 1
-description: Вступ до розробки в Етеріумі, особливо корисний для тих, хто знає мову програмування Python
-author: Марк Гарро
+title: "Вступ до Етеріуму для Python-розробників, частина 1"
+description: "Вступ до розробки в Етеріумі, особливо корисний для тих, хто знає мову програмування Python"
+author: "Марк Гарро"
 lang: uk
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
-breadcrumb: Етеріум із Python
+breadcrumb: "Етеріум із Python"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

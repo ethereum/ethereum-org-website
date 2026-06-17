@@ -1,12 +1,12 @@
 ---
-title: स्मार्ट अनुबंधों में बग खोजने के लिए मैन्टिकोर का उपयोग कैसे करें
-description: स्मार्ट अनुबंधों में स्वचालित रूप से बग खोजने के लिए मैन्टिकोर का उपयोग कैसे करें
-author: ट्रेलऑफ़बिट्स
+title: "स्मार्ट अनुबंधों में बग खोजने के लिए मैन्टिकोर का उपयोग कैसे करें"
+description: "स्मार्ट अनुबंधों में स्वचालित रूप से बग खोजने के लिए मैन्टिकोर का उपयोग कैसे करें"
+author: "ट्रेलऑफ़बिट्स"
 lang: hi
 tags:
   ["Solidity", "स्मार्ट अनुबंध", "सुरक्षा", "परीक्षण", "औपचारिक सत्यापन"]
 skill: advanced
-breadcrumb: मैन्टिकोर
+breadcrumb: "मैन्टिकोर"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

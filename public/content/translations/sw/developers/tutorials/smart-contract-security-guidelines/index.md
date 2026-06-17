@@ -2,7 +2,7 @@
 title: Miongozo ya usalama wa mkataba mahiri
 description: Orodha ya miongozo ya usalama ya kuzingatia unapounda dapp yako
 author: "Trailofbits"
-tags: ["solidity", "mikataba mahiri", "usalama"]
+tags: ["Solidity", "mikataba mahiri", "usalama"]
 skill: intermediate
 breadcrumb: Miongozo ya usalama
 lang: sw

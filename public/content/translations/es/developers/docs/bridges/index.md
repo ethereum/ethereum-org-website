@@ -1,6 +1,6 @@
 ---
 title: Puentes
-description: Una descripción general de los puentes para desarrolladores
+description: "Una descripción general de los puentes para desarrolladores"
 lang: es
 ---
 
@@ -121,6 +121,7 @@ Para monitorear la actividad de los contratos en múltiples cadenas, los desarro
 - [Tenderly](https://tenderly.co/)
 
 ## Lecturas adicionales {#further-reading}
+
 - [Puentes de cadenas de bloques](/bridges/) – ethereum.org
 - [Marco de riesgo de puentes de L2BEAT](https://l2beat.com/bridges/summary)
 - [Puentes de cadenas de bloques: Construyendo redes de criptoredes](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 de septiembre de 2021 – Dmitriy Berenzon

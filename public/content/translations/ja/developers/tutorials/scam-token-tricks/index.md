@@ -1,7 +1,7 @@
 ---
 title: "詐欺トークンで使われる手口とその検出方法"
-description: このチュートリアルでは、詐欺トークンを解剖し、詐欺師が使う手口、その実装方法、そしてそれらを検出する方法について見ていきます。
-author: オリ・ポメランツ
+description: "このチュートリアルでは、詐欺トークンを解剖し、詐欺師が使う手口、その実装方法、そしてそれらを検出する方法について見ていきます。"
+author: "オリ・ポメランツ"
 tags:
   - 詐欺
   - solidity
@@ -9,7 +9,7 @@ tags:
   - javascript
   - typescript
 skill: intermediate
-breadcrumb: 詐欺トークンの手口
+breadcrumb: "詐欺トークンの手口"
 published: 2023-09-15
 lang: ja
 ---

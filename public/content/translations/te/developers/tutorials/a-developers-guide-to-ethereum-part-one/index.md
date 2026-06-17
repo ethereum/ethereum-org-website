@@ -1,11 +1,11 @@
 ---
-title: ఒక Python డెవలపర్‌కి ఎథీరియం పరిచయం, భాగం 1
-description: ఎథీరియం డెవలప్‌మెంట్ పరిచయం, ముఖ్యంగా Python ప్రోగ్రామింగ్ భాషపై అవగాహన ఉన్నవారికి ఉపయోగకరం
-author: మార్క్ గారో
+title: "ఒక Python డెవలపర్‌కి ఎథీరియం పరిచయం, భాగం 1"
+description: "ఎథీరియం డెవలప్‌మెంట్ పరిచయం, ముఖ్యంగా Python ప్రోగ్రామింగ్ భాషపై అవగాహన ఉన్నవారికి ఉపయోగకరం"
+author: "మార్క్ గారో"
 lang: te
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
-breadcrumb: Python తో ఎథీరియం
+breadcrumb: "Python తో ఎథీరియం"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

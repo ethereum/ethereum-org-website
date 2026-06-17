@@ -1,6 +1,6 @@
 ---
-title: Decentralizované sociální sítě
-description: Přehled decentralizovaných sociálních sítí na Ethereu
+title: "Decentralizované sociální sítě"
+description: "Přehled decentralizovaných sociálních sítí na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2

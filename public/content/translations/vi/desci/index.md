@@ -1,6 +1,6 @@
 ---
-title: Khoa học phi tập trung (DeSci)
-description: Tổng quan về khoa học phi tập trung trên Ethereum
+title: "Khoa học phi tập trung (DeSci)"
+description: "Tổng quan về khoa học phi tập trung trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2

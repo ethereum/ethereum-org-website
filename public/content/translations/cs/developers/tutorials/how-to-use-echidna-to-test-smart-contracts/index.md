@@ -1,9 +1,9 @@
 ---
-title: Jak používat Echidnu k testování chytrých kontraktů
-description: Jak používat Echidnu k automatickému testování chytrých kontraktů
+title: "Jak používat Echidnu k testování chytrých kontraktů"
+description: "Jak používat Echidnu k automatickému testování chytrých kontraktů"
 author: "Trailofbits"
 lang: cs
-tags: ["solidity", "chytré kontrakty", "bezpečnost", "testování", "fuzzing"]
+tags: ["Solidity", "chytré kontrakty", "bezpečnost", "testování", "fuzzing"]
 skill: advanced
 breadcrumb: Echidna
 published: 2020-04-10

@@ -1,5 +1,5 @@
 ---
-title: Introducción técnica a las dapps
+title: "Introducción técnica a las dapps"
 description:
 lang: es
 ---

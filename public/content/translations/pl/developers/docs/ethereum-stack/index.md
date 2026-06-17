@@ -1,6 +1,6 @@
 ---
 title: Wprowadzenie do stosu technologicznego Ethereum
-description: Przegląd różnych warstw stosu technologicznego Ethereum i tego, jak do siebie pasują.
+description: "Przegląd różnych warstw stosu technologicznego Ethereum i tego, jak do siebie pasują."
 lang: pl
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: Ethereum üzerinde kendi yapay zeka alım satım ajanınızı yapın
-description: Bu eğitimde basit bir yapay zeka alım satım ajanı yapmayı öğreneceksiniz. Bu ajan, Blokzincir'den bilgi okur, bu bilgiye dayanarak bir YDM'den (Büyük Dil Modeli) tavsiye ister, YDM'nin önerdiği alım satımı gerçekleştirir ve ardından bekleyip tekrarlar.
+title: "Ethereum üzerinde kendi yapay zeka alım satım ajanınızı yapın"
+description: "Bu eğitimde basit bir yapay zeka alım satım ajanı yapmayı öğreneceksiniz. Bu ajan, Blokzincir'den bilgi okur, bu bilgiye dayanarak bir YDM'den (Büyük Dil Modeli) tavsiye ister, YDM'nin önerdiği alım satımı gerçekleştirir ve ardından bekleyip tekrarlar."
 author: Ori Pomerantz
 tags: ["yapay zeka", "alım satım", "ajan", "Python"]
 skill: intermediate
-breadcrumb: Yapay zeka alım satım ajanı
+breadcrumb: "Yapay zeka alım satım ajanı"
 published: 2026-02-13
 lang: tr
 sidebarDepth: 3

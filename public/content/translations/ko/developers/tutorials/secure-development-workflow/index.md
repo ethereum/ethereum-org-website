@@ -1,13 +1,13 @@
 ---
-title: 스마트 컨트랙트 보안 체크리스트
-description: 안전한 스마트 컨트랙트 작성을 위해 권장되는 워크플로
+title: "스마트 컨트랙트 보안 체크리스트"
+description: "안전한 스마트 컨트랙트 작성을 위해 권장되는 워크플로"
 author: "Trailofbits"
 tags:
   - 스마트 컨트랙트
   - 보안
   - solidity
 skill: intermediate
-breadcrumb: 보안 체크리스트
+breadcrumb: "보안 체크리스트"
 lang: ko
 published: 2020-09-07
 source: Building secure contracts

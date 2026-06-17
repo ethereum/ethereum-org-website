@@ -1,6 +1,6 @@
 ---
 title: Portal Network
-description: Przegląd Portal Network – będącej w fazie rozwoju sieci zaprojektowanej do obsługi klientów o niskich zasobach.
+description: "Przegląd Portal Network – będącej w fazie rozwoju sieci zaprojektowanej do obsługi klientów o niskich zasobach."
 lang: pl
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: Staking như một dịch vụ
-description: Tìm hiểu về staking như một dịch vụ
+title: "Staking như một dịch vụ"
+description: "Tìm hiểu về staking như một dịch vụ"
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Tê giác Leslie lơ lửng trên những đám mây.
+alt: "Tê giác Leslie lơ lửng trên những đám mây."
 sidebarDepth: 2
 summaryPoints:
   - Các nhà điều hành nút bên thứ ba xử lý hoạt động của máy khách trình xác thực của bạn

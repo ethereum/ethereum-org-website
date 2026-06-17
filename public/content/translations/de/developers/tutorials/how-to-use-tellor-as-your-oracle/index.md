@@ -1,9 +1,9 @@
 ---
 title: So richten Sie Tellor als Ihr Orakel ein
-description: Ein Leitfaden für den Einstieg in die Integration des Tellor-Orakels in Ihr Protokoll
+description: "Ein Leitfaden für den Einstieg in die Integration des Tellor-Orakels in Ihr Protokoll"
 author: "Tellor"
 lang: de
-tags: ["solidity", "Smart Contracts", "Orakel"]
+tags: ["Solidity", "Smart Contracts", "Orakel"]
 skill: beginner
 breadcrumb: Tellor-Orakel
 published: 2021-06-29

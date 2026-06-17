@@ -1,6 +1,6 @@
 ---
-title: JavaScript से स्मार्ट अनुबंध को कॉल करना
-description: Dai टोकन उदाहरण का उपयोग करके JavaScript से स्मार्ट अनुबंध फ़ंक्शन को कैसे कॉल करें
+title: "JavaScript से स्मार्ट अनुबंध को कॉल करना"
+description: "Dai टोकन उदाहरण का उपयोग करके JavaScript से स्मार्ट अनुबंध फ़ंक्शन को कैसे कॉल करें"
 author: jdourlens
 tags:
   - लेन-देन
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - web3.js
 skill: beginner
-breadcrumb: JS से अनुबंधों को कॉल करें
+breadcrumb: "JS से अनुबंधों को कॉल करें"
 lang: hi
 published: 2020-04-19
 source: EthereumDev

@@ -1,6 +1,6 @@
 ---
-title: Ciência descentralizada (desci)
-description: Uma visão geral da ciência descentralizada no Ethereum
+title: "Ciência descentralizada (desci)"
+description: "Uma visão geral da ciência descentralizada no Ethereum"
 lang: pt-br
 template: use-cases
 sidebarDepth: 2

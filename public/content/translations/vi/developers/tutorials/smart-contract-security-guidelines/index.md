@@ -1,10 +1,10 @@
 ---
-title: Hướng dẫn bảo mật hợp đồng thông minh
-description: Một danh sách kiểm tra các hướng dẫn bảo mật cần xem xét khi xây dựng dapp của bạn
+title: "Hướng dẫn bảo mật hợp đồng thông minh"
+description: "Một danh sách kiểm tra các hướng dẫn bảo mật cần xem xét khi xây dựng dapp của bạn"
 author: "Trailofbits"
-tags: ["solidity", "hợp đồng thông minh", "bảo mật"]
+tags: ["Solidity", "hợp đồng thông minh", "bảo mật"]
 skill: intermediate
-breadcrumb: Hướng dẫn bảo mật
+breadcrumb: "Hướng dẫn bảo mật"
 lang: vi
 published: 2020-09-06
 source: Building secure contracts

@@ -1,6 +1,6 @@
 ---
-title: Úvod do chytrých kontraktů
-description: Přehled chytrých kontraktů se zaměřením na jejich jedinečné vlastnosti a omezení.
+title: "Úvod do chytrých kontraktů"
+description: "Přehled chytrých kontraktů se zaměřením na jejich jedinečné vlastnosti a omezení."
 lang: cs
 ---
 

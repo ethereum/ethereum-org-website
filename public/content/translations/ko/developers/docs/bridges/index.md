@@ -1,6 +1,6 @@
 ---
-title: 브릿지
-description: 개발자를 위한 브릿징 개요
+title: "브릿지"
+description: "개발자를 위한 브릿징 개요"
 lang: ko
 ---
 
@@ -121,6 +121,7 @@ lang: ko
 - [Tenderly](https://tenderly.co/)
 
 ## 더 읽어보기 {#further-reading}
+
 - [블록체인 브릿지](/bridges/) – ethereum.org
 - [L2BEAT 브릿지 위험 프레임워크](https://l2beat.com/bridges/summary)
 - [블록체인 브릿지: 암호화폐 네트워크의 네트워크 구축(Blockchain Bridges: Building Networks of Cryptonetworks)](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 2021년 9월 8일 – Dmitriy Berenzon

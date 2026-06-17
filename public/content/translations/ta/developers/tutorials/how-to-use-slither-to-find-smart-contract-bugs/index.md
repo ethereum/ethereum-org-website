@@ -1,11 +1,11 @@
 ---
-title: ஸ்மார்ட் ஒப்பந்தப் பிழைகளைக் கண்டறிய ஸ்லித்தர் (Slither) கருவியை எவ்வாறு பயன்படுத்துவது
-description: ஸ்மார்ட் ஒப்பந்தங்களில் உள்ள பிழைகளைத் தானாகவே கண்டறிய ஸ்லித்தர் (Slither) கருவியை எவ்வாறு பயன்படுத்துவது
-author: ட்ரெயில்ஆஃப்பிட்ஸ்
+title: "ஸ்மார்ட் ஒப்பந்தப் பிழைகளைக் கண்டறிய ஸ்லித்தர் (Slither) கருவியை எவ்வாறு பயன்படுத்துவது"
+description: "ஸ்மார்ட் ஒப்பந்தங்களில் உள்ள பிழைகளைத் தானாகவே கண்டறிய ஸ்லித்தர் (Slither) கருவியை எவ்வாறு பயன்படுத்துவது"
+author: "ட்ரெயில்ஆஃப்பிட்ஸ்"
 lang: ta
-tags: ["solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு", "சோதனை"]
+tags: ["Solidity", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு", "சோதனை"]
 skill: advanced
-breadcrumb: ஸ்லித்தர்
+breadcrumb: "ஸ்லித்தர்"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

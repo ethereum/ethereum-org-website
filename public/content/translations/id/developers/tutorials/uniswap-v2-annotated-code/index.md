@@ -2,7 +2,7 @@
 title: "Panduan Kontrak Uniswap-v2"
 description: Bagaimana cara kerja kontrak Uniswap-v2? Mengapa ditulis seperti itu?
 author: Ori Pomerantz
-tags: ["solidity", "dapps"]
+tags: ["Solidity", "dapps"]
 skill: intermediate
 breadcrumb: Panduan Uniswap v2
 published: 2021-05-01
@@ -336,7 +336,7 @@ Fungsi ini memungkinkan pabrik (dan hanya pabrik) untuk menentukan dua token ERC
 
 #### Fungsi Pembaruan Internal {#pair-update-internal}
 
-##### \_update {#pair-external}
+##### \_update {#}
 
 ```solidity
     // memperbarui cadangan dan, pada panggilan pertama per blok, akumulator harga
@@ -391,7 +391,7 @@ Perhitungan harga ini adalah alasan kita perlu mengetahui ukuran cadangan lama.
 
 Terakhir, perbarui variabel global dan pancarkan peristiwa `Sync`.
 
-##### \_mintFee {#uniswapv2factory}
+##### \_mintFee {#}
 
 ```solidity
     // jika biaya aktif, cetak likuiditas yang setara dengan 1/6 dari pertumbuhan sqrt(k)
@@ -457,11 +457,11 @@ Gunakan fungsi `UniswapV2ERC20._mint` untuk benar-benar mencetak token likuidita
 Jika tidak ada biaya, atur `kLast` menjadi nol (jika belum). Ketika kontrak ini ditulis, ada [fitur pengembalian dana gas](https://eips.ethereum.org/EIPS/eip-3298) yang mendorong kontrak untuk mengurangi ukuran keseluruhan state Ethereum dengan mengosongkan penyimpanan yang tidak mereka butuhkan.
 Kode ini mendapatkan pengembalian dana tersebut jika memungkinkan.
 
-#### Fungsi yang Dapat Diakses Secara Eksternal {#uniswapv2erc20}
+#### Fungsi yang Dapat Diakses Secara Eksternal {#pair-external}
 
 Perhatikan bahwa meskipun transaksi atau kontrak apa pun _dapat_ memanggil fungsi-fungsi ini, mereka dirancang untuk dipanggil dari kontrak pinggiran (periphery). Jika Anda memanggilnya secara langsung, Anda tidak akan dapat menipu pertukaran pasangan, tetapi Anda mungkin kehilangan nilai karena kesalahan.
 
-##### mint {#periphery-contracts}
+##### mint {#}
 
 ```solidity
     // fungsi tingkat rendah ini harus dipanggil dari kontrak yang melakukan pemeriksaan keamanan penting
@@ -547,7 +547,7 @@ Gunakan fungsi `UniswapV2ERC20._mint` untuk benar-benar mencetak token likuidita
 
 Perbarui variabel state (`reserve0`, `reserve1`, dan jika perlu `kLast`) dan pancarkan peristiwa yang sesuai.
 
-##### burn {#uniswapv2router01}
+##### burn {#}
 
 ```solidity
     // fungsi tingkat rendah ini harus dipanggil dari kontrak yang melakukan pemeriksaan keamanan penting
@@ -594,7 +594,7 @@ Penyedia likuiditas menerima nilai yang sama dari kedua token. Dengan cara ini k
 
 Sisa dari fungsi `burn` adalah cerminan dari fungsi `mint` di atas.
 
-##### swap {#uniswapv2router02}
+##### swap {#}
 
 ```solidity
     // fungsi tingkat rendah ini harus dipanggil dari kontrak yang melakukan pemeriksaan keamanan penting
@@ -662,7 +662,7 @@ Ini adalah pemeriksaan kewarasan (sanity check) untuk memastikan kita tidak rugi
 
 Perbarui `reserve0` dan `reserve1`, dan jika perlu akumulator harga dan stempel waktu serta pancarkan peristiwa.
 
-##### Sinkronisasi atau Skim {#add-liquidity}
+##### Sinkronisasi atau Skim {#}
 
 Ada kemungkinan saldo riil menjadi tidak sinkron dengan cadangan yang dianggap dimiliki oleh pertukaran pasangan.
 Tidak ada cara untuk melakukan penarikan token tanpa persetujuan kontrak, tetapi setoran adalah masalah yang berbeda. Sebuah akun dapat mentransfer token ke pertukaran tanpa memanggil `mint` atau `swap`.
@@ -690,7 +690,7 @@ Dalam hal ini ada dua solusi:
 }
 ```
 
-### UniswapV2Factory.sol {#remove-liquidity}
+### UniswapV2Factory.sol {#uniswapv2factory}
 
 [Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) membuat pertukaran pasangan.
 
@@ -812,7 +812,7 @@ Simpan informasi pasangan baru dalam variabel state dan pancarkan peristiwa untu
 
 Kedua fungsi ini memungkinkan `feeSetter` untuk mengontrol penerima biaya (jika ada), dan untuk mengubah `feeSetter` ke alamat baru.
 
-### UniswapV2ERC20.sol {#trade}
+### UniswapV2ERC20.sol {#uniswapv2erc20}
 
 [Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) mengimplementasikan token likuiditas ERC-20. Ini mirip dengan [kontrak ERC-20 OpenZeppelin](/developers/tutorials/erc20-annotated-code), jadi saya hanya akan menjelaskan bagian yang berbeda, yaitu fungsionalitas `permit`.
 
@@ -899,15 +899,15 @@ Dari intisari (digest) dan tanda tangan, kita bisa mendapatkan alamat yang menan
 
 Jika semuanya baik-baik saja, perlakukan ini sebagai [persetujuan ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## Kontrak Periphery {#uniswapv2migrator}
+## Kontrak Periphery {#periphery-contracts}
 
 Kontrak periphery adalah API (antarmuka program aplikasi) untuk Uniswap. Kontrak ini tersedia untuk panggilan eksternal, baik dari kontrak lain maupun aplikasi terdesentralisasi. Anda dapat memanggil kontrak inti secara langsung, tetapi itu lebih rumit dan Anda mungkin kehilangan nilai jika melakukan kesalahan. Kontrak inti hanya berisi pengujian untuk memastikan mereka tidak dicurangi, bukan pemeriksaan kewarasan (sanity check) untuk orang lain. Pemeriksaan tersebut ada di periphery sehingga dapat diperbarui sesuai kebutuhan.
 
-### UniswapV2Router01.sol {#libraries}
+### UniswapV2Router01.sol {#uniswapv2router01}
 
 [Kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) memiliki masalah, dan [seharusnya tidak lagi digunakan](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Untungnya, kontrak periphery bersifat stateless (tidak menyimpan state) dan tidak menahan aset apa pun, sehingga mudah untuk menghentikan penggunaannya dan menyarankan orang-orang untuk menggunakan penggantinya, yaitu `UniswapV2Router02`.
 
-### UniswapV2Router02.sol {#math}
+### UniswapV2Router02.sol {#uniswapv2router02}
 
 Dalam kebanyakan kasus, Anda akan menggunakan Uniswap melalui [kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
 Anda dapat melihat cara menggunakannya [di sini](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
@@ -963,7 +963,7 @@ Konstruktor hanya mengatur variabel state yang tidak dapat diubah.
 
 Fungsi ini dipanggil ketika kita menebus token dari kontrak WETH kembali menjadi ETH. Hanya kontrak WETH yang kita gunakan yang berwenang untuk melakukan itu.
 
-#### Tambah Likuiditas {#fixedpoint}
+#### Tambah Likuiditas {#add-liquidity}
 
 Fungsi-fungsi ini menambahkan token ke pertukaran pasangan, yang meningkatkan kolam likuiditas.
 
@@ -1148,7 +1148,7 @@ Untuk menyetorkan ETH, kontrak pertama-tama membungkusnya menjadi WETH dan kemud
 
 Pengguna telah mengirimi kita ETH, jadi jika ada sisa (karena token lainnya kurang berharga daripada yang diperkirakan pengguna), kita perlu mengeluarkan pengembalian dana.
 
-#### Hapus Likuiditas {#uniswapv2library}
+#### Hapus Likuiditas {#remove-liquidity}
 
 Fungsi-fungsi ini akan menghapus likuiditas dan membayar kembali penyedia likuiditas.
 
@@ -1309,7 +1309,7 @@ Fungsi ini dapat digunakan untuk token yang memiliki biaya transfer atau penyimp
 
 Fungsi terakhir menggabungkan biaya penyimpanan dengan transaksi meta.
 
-#### Perdagangan {#transfer-helper}
+#### Perdagangan {#trade}
 
 ```solidity
     // **** TUKAR ****
@@ -1667,15 +1667,15 @@ Ini adalah varian yang sama yang digunakan untuk token normal, tetapi mereka mem
 
 Fungsi-fungsi ini hanyalah proksi yang memanggil [fungsi UniswapV2Library](#uniswapv2library).
 
-### UniswapV2Migrator.sol {#conclusion}
+### UniswapV2Migrator.sol {#uniswapv2migrator}
 
 Kontrak ini digunakan untuk memigrasikan pertukaran dari v1 lama ke v2. Sekarang setelah mereka dimigrasikan, kontrak ini tidak lagi relevan.
 
-## Pustaka
+## Pustaka {#libraries}
 
 [Pustaka SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) sudah didokumentasikan dengan baik, jadi tidak perlu didokumentasikan di sini.
 
-### Math
+### Math {#math}
 
 Pustaka ini berisi beberapa fungsi matematika yang biasanya tidak diperlukan dalam kode Solidity, sehingga tidak menjadi bagian dari bahasa tersebut.
 
@@ -1720,7 +1720,7 @@ Kita seharusnya tidak pernah membutuhkan akar kuadrat dari nol. Akar kuadrat dar
 }
 ```
 
-### Pecahan Titik Tetap (UQ112x112)
+### Pecahan Titik Tetap (UQ112x112) {#fixedpoint}
 
 Pustaka ini menangani pecahan, yang biasanya bukan bagian dari aritmatika Ethereum. Pustaka ini melakukannya dengan menyandikan angka _x_ sebagai _x\*2^112_. Hal ini memungkinkan kita menggunakan opcode penambahan dan pengurangan asli tanpa perubahan.
 
@@ -1757,7 +1757,7 @@ Karena y adalah `uint112`, nilai maksimumnya adalah 2^112-1. Angka tersebut masi
 
 Jika kita membagi dua nilai `UQ112x112`, hasilnya tidak lagi dikalikan dengan 2^112. Jadi sebagai gantinya, kita mengambil bilangan bulat untuk penyebutnya. Kita akan membutuhkan trik serupa untuk melakukan perkalian, tetapi kita tidak perlu melakukan perkalian nilai `UQ112x112`.
 
-### UniswapV2Library
+### UniswapV2Library {#uniswapv2library}
 
 Pustaka ini hanya digunakan oleh kontrak-kontrak periferal
 
@@ -1879,7 +1879,7 @@ Fungsi ini melakukan hal yang kurang lebih sama, tetapi fungsi ini mendapatkan j
 
 Kedua fungsi ini menangani identifikasi nilai ketika perlu melalui beberapa pertukaran pasangan.
 
-### Transfer Helper
+### Transfer Helper {#transfer-helper}
 
 [Pustaka ini](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) menambahkan pemeriksaan keberhasilan di sekitar transfer ERC-20 dan Ethereum untuk memperlakukan pengembalian dan nilai kembalian `false` dengan cara yang sama.
 
@@ -1964,7 +1964,7 @@ Fungsi ini mengimplementasikan [fungsionalitas transferFrom ERC-20](https://eips
 
 Fungsi ini mentransfer Ether ke sebuah akun. Panggilan apa pun ke kontrak yang berbeda dapat mencoba mengirim Ether. Karena kita tidak perlu benar-benar memanggil fungsi apa pun, kita tidak mengirim data apa pun bersama panggilan tersebut.
 
-## Kesimpulan
+## Kesimpulan {#conclusion}
 
 Ini adalah artikel panjang sekitar 50 halaman. Jika Anda berhasil sampai di sini, selamat! Semoga sekarang Anda telah memahami berbagai pertimbangan dalam menulis aplikasi di dunia nyata (dibandingkan dengan program sampel yang singkat) dan lebih mampu menulis kontrak untuk kasus penggunaan Anda sendiri.
 

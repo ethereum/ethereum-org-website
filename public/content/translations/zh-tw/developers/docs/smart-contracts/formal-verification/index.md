@@ -1,6 +1,6 @@
 ---
-title: 智能合約的形式化驗證
-description: 以太坊智能合約形式化驗證概覽
+title: "智能合約的形式化驗證"
+description: "以太坊智能合約形式化驗證概覽"
 lang: zh-tw
 ---
 

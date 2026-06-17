@@ -1,6 +1,6 @@
 ---
 title: Mining
-description: Eine Erklärung, wie Mining auf Ethereum funktionierte.
+description: "Eine Erklärung, wie Mining auf Ethereum funktionierte."
 lang: de
 ---
 

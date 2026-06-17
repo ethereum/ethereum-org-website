@@ -1,6 +1,6 @@
 ---
-title: Как использовать Слизер для поиска ошибок в смарт-контрактах
-description: Как использовать Слизер для автоматического поиска ошибок в смарт-контрактах
+title: "Как использовать Слизер для поиска ошибок в смарт-контрактах"
+description: "Как использовать Слизер для автоматического поиска ошибок в смарт-контрактах"
 author: Trailofbits
 lang: ru
 tags:
@@ -9,7 +9,7 @@ tags:
   - безопасность
   - тестирование
 skill: advanced
-breadcrumb: Слизер
+breadcrumb: "Слизер"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

@@ -1,6 +1,6 @@
 ---
-title: Ethereum dla programistów Go
-description: Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na Go
+title: "Ethereum dla programistów Go"
+description: "Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na Go"
 lang: pl
 incomplete: true
 ---

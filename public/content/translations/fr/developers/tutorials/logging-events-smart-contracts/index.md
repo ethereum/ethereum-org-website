@@ -1,10 +1,10 @@
 ---
-title: Journaliser les données des contrats intelligents avec les événements
-description: Une introduction aux événements des contrats intelligents et comment vous pouvez les utiliser pour journaliser des données
+title: "Journaliser les données des contrats intelligents avec les événements"
+description: "Une introduction aux événements des contrats intelligents et comment vous pouvez les utiliser pour journaliser des données"
 author: "jdourlens"
-tags: ["contrats intelligents", "remix", "solidity", "événements"]
+tags: ["contrats intelligents", "Remix", "Solidity", "événements"]
 skill: intermediate
-breadcrumb: Journalisation des événements
+breadcrumb: "Journalisation des événements"
 lang: fr
 published: 2020-04-03
 source: EthereumDev

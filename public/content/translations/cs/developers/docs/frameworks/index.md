@@ -1,6 +1,6 @@
 ---
-title: Frameworky pro vývoj dapp
-description: Prozkoumejte výhody frameworků a porovnejte dostupné možnosti.
+title: "Frameworky pro vývoj dapp"
+description: "Prozkoumejte výhody frameworků a porovnejte dostupné možnosti."
 lang: cs
 ---
 

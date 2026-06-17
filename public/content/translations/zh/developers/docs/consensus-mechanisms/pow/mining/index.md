@@ -1,6 +1,6 @@
 ---
-title: 挖矿
-description: 解释以太坊上的挖矿是如何运作的。
+title: "挖矿"
+description: "解释以太坊上的挖矿是如何运作的。"
 lang: zh
 ---
 

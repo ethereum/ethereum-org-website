@@ -1,6 +1,6 @@
 ---
 title: Dezentrale soziale Netzwerke
-description: Ein Überblick über dezentrale soziale Netzwerke auf Ethereum
+description: "Ein Überblick über dezentrale soziale Netzwerke auf Ethereum"
 lang: de
 template: use-cases
 sidebarDepth: 2

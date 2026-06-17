@@ -1,6 +1,6 @@
 ---
-title: Delphi開発者のためのイーサリアム
-description: Delphiプログラミング言語を使用してイーサリアム向けに開発する方法を学ぶ
+title: "Delphi開発者のためのイーサリアム"
+description: "Delphiプログラミング言語を使用してイーサリアム向けに開発する方法を学ぶ"
 lang: ja
 incomplete: true
 ---

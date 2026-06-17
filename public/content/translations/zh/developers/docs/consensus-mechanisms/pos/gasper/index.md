@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper 权益证明机制的解释。
+description: "Gasper 权益证明机制的解释。"
 lang: zh
 ---
 

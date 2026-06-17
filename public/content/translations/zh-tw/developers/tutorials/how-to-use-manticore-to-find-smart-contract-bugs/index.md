@@ -1,6 +1,6 @@
 ---
-title: 如何使用曼蒂科爾尋找智能合約中的錯誤
-description: 如何使用曼蒂科爾自動尋找智能合約中的錯誤
+title: "如何使用曼蒂科爾尋找智能合約中的錯誤"
+description: "如何使用曼蒂科爾自動尋找智能合約中的錯誤"
 author: Trailofbits
 lang: zh-tw
 tags:
@@ -10,7 +10,7 @@ tags:
   - 測試
   - 形式化驗證
 skill: advanced
-breadcrumb: 曼蒂科爾
+breadcrumb: "曼蒂科爾"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

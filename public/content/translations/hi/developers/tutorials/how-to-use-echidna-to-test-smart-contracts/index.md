@@ -1,11 +1,11 @@
 ---
-title: स्मार्ट अनुबंधों का परीक्षण करने के लिए एकिड्ना (Echidna) का उपयोग कैसे करें
-description: स्मार्ट अनुबंधों का स्वचालित रूप से परीक्षण करने के लिए एकिड्ना का उपयोग कैसे करें
+title: "स्मार्ट अनुबंधों का परीक्षण करने के लिए एकिड्ना (Echidna) का उपयोग कैसे करें"
+description: "स्मार्ट अनुबंधों का स्वचालित रूप से परीक्षण करने के लिए एकिड्ना का उपयोग कैसे करें"
 author: "Trailofbits"
 lang: hi
 tags: ["Solidity", "स्मार्ट अनुबंध", "सुरक्षा", "परीक्षण", "फ़ज़िंग"]
 skill: advanced
-breadcrumb: एकिड्ना
+breadcrumb: "एकिड्ना"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

@@ -1,10 +1,10 @@
 ---
-title: Wywoływanie inteligentnego kontraktu z poziomu JavaScript
-description: Jak wywołać funkcję inteligentnego kontraktu z poziomu JavaScript na przykładzie tokena DAI
+title: "Wywoływanie inteligentnego kontraktu z poziomu JavaScript"
+description: "Jak wywołać funkcję inteligentnego kontraktu z poziomu JavaScript na przykładzie tokena DAI"
 author: jdourlens
 tags: ["transakcje", "frontend", "JavaScript", "web3.js"]
 skill: beginner
-breadcrumb: Wywoływanie kontraktów z JS
+breadcrumb: "Wywoływanie kontraktów z JS"
 lang: pl
 published: 2020-04-19
 source: EthereumDev

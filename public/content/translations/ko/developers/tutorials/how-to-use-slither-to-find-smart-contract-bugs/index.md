@@ -1,11 +1,11 @@
 ---
-title: 슬리더를 사용하여 스마트 컨트랙트 버그를 찾는 방법
-description: 슬리더를 사용하여 스마트 컨트랙트에서 자동으로 버그를 찾는 방법
+title: "슬리더를 사용하여 스마트 컨트랙트 버그를 찾는 방법"
+description: "슬리더를 사용하여 스마트 컨트랙트에서 자동으로 버그를 찾는 방법"
 author: Trailofbits
 lang: ko
-tags: ["solidity", "스마트 컨트랙트", "보안", "테스트"]
+tags: ["Solidity", "스마트 컨트랙트", "보안", "테스트"]
 skill: advanced
-breadcrumb: 슬리더
+breadcrumb: "슬리더"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -179,7 +179,7 @@ for(uint i; i < range; ++){
 }
 ```
 
-분석은 언제 중지해야 하는지 알아야 합니다. 여기에는 두 가지 주요 전략이 있습니다. (1) 각 노드에서 유한한 횟수만큼 반복합니다. (2) 이른바 _고정점(fixpoint)_을 계산합니다. 고정점은 기본적으로 이 노드를 분석해도 의미 있는 정보가 제공되지 않음을 의미합니다.
+분석은 언제 중지해야 하는지 알아야 합니다. 여기에는 두 가지 주요 전략이 있습니다. (1) 각 노드에서 유한한 횟수만큼 반복합니다. (2) 이른바 <em>고정점(fixpoint)</em>을 계산합니다. 고정점은 기본적으로 이 노드를 분석해도 의미 있는 정보가 제공되지 않음을 의미합니다.
 
 고정점이 사용된 예는 재진입 탐지기에서 찾을 수 있습니다. 슬리더는 노드를 탐색하고 외부 호출, 스토리지 쓰기 및 읽기를 찾습니다. 고정점에 도달하면([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131)) 탐색을 중지하고 결과를 분석하여 다양한 재진입 패턴([reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py), [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py), [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py))을 통해 재진입이 존재하는지 확인합니다.
 

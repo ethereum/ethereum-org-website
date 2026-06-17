@@ -1,6 +1,6 @@
 ---
 title: Dagger-Hashimoto
-description: Dagger-Hashimoto एल्गोरिदम पर एक विस्तृत नज़र।
+description: "Dagger-Hashimoto एल्गोरिदम पर एक विस्तृत नज़र।"
 lang: hi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Web3 界面设计的 7 个启发式原则
-description: 提升 Web3 可用性的原则
+title: "Web3 界面设计的 7 个启发式原则"
+description: "提升 Web3 可用性的原则"
 lang: zh
 ---
 

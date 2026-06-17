@@ -1,6 +1,6 @@
 ---
 title: Algorithmes de minage
-description: Un aperçu détaillé des algorithmes utilisés pour le minage sur Ethereum.
+description: "Un aperçu détaillé des algorithmes utilisés pour le minage sur Ethereum."
 lang: fr
 ---
 

@@ -3,7 +3,7 @@ title: Come usare Echidna per testare gli smart contract
 description: Come usare Echidna per testare automaticamente gli smart contract
 author: "Trailofbits"
 lang: it
-tags: ["solidity", "smart contract", "sicurezza", "testing", "fuzzing"]
+tags: ["Solidity", "smart contract", "sicurezza", "testing", "fuzzing"]
 skill: advanced
 breadcrumb: Echidna
 published: 2020-04-10

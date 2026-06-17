@@ -1,10 +1,10 @@
 ---
-title: 智能合約安全指南
-description: 構建去中心化應用程式 (dapp) 時應考慮的安全指南清單
+title: "智能合約安全指南"
+description: "構建去中心化應用程式 (dapp) 時應考慮的安全指南清單"
 author: "Trailofbits"
-tags: ["solidity", "智能合約", "安全"]
+tags: ["Solidity", "智能合約", "安全"]
 skill: intermediate
-breadcrumb: 安全指南
+breadcrumb: "安全指南"
 lang: zh-tw
 published: 2020-09-06
 source: Building secure contracts

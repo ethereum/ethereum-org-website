@@ -1,6 +1,6 @@
 ---
 title: Dagger-Hashimoto
-description: Dagger-Hashimoto অ্যালগরিদমের একটি বিস্তারিত রূপ।
+description: "Dagger-Hashimoto অ্যালগরিদমের একটি বিস্তারিত রূপ।"
 lang: bn
 ---
 

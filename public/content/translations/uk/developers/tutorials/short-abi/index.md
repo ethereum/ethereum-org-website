@@ -1,11 +1,11 @@
 ---
 title: "Короткі ABI для оптимізації даних виклику"
-description: Оптимізація смарт-контрактів для Optimistic-ролапів
-author: Орі Померанц
+description: "Оптимізація смарт-контрактів для Optimistic-ролапів"
+author: "Орі Померанц"
 lang: uk
 tags: ["рівень 2 (l2)"]
 skill: intermediate
-breadcrumb: Короткі ABI
+breadcrumb: "Короткі ABI"
 published: 2022-04-01
 ---
 

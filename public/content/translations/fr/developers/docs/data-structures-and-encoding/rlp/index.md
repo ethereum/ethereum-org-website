@@ -1,6 +1,6 @@
 ---
-title: Sérialisation par préfixe de longueur récursif (RLP)
-description: Une définition de l'encodage RLP dans la couche d'exécution d'Ethereum.
+title: "Sérialisation par préfixe de longueur récursif (RLP)"
+description: "Une définition de l'encodage RLP dans la couche d'exécution d'Ethereum."
 lang: fr
 sidebarDepth: 2
 ---

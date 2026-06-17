@@ -1,6 +1,6 @@
 ---
-title: 채굴
-description: 이더리움에서 채굴이 어떻게 작동했는지에 대한 설명입니다.
+title: "채굴"
+description: "이더리움에서 채굴이 어떻게 작동했는지에 대한 설명입니다."
 lang: ko
 ---
 

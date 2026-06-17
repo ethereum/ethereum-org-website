@@ -1,6 +1,6 @@
 ---
-title: Recursive-length prefix (RLP) シリアライゼーション
-description: イーサリアムの実行レイヤーにおける RLP エンコーディングの定義。
+title: "Recursive-length prefix (RLP) シリアライゼーション"
+description: "イーサリアムの実行レイヤーにおける RLP エンコーディングの定義。"
 lang: ja
 sidebarDepth: 2
 ---

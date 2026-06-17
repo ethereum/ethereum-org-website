@@ -1,12 +1,12 @@
 ---
-title: マンティコアを使用してスマート・コントラクトのバグを見つける方法
-description: マンティコアを使用してスマート・コントラクトのバグを自動的に見つける方法
+title: "マンティコアを使用してスマート・コントラクトのバグを見つける方法"
+description: "マンティコアを使用してスマート・コントラクトのバグを自動的に見つける方法"
 author: Trailofbits
 lang: ja
 tags:
-  ["solidity", "スマート・コントラクト", "セキュリティ", "テスト", "形式的検証"]
+  ["Solidity", "スマート・コントラクト", "セキュリティ", "テスト", "形式的検証"]
 skill: advanced
-breadcrumb: マンティコア
+breadcrumb: "マンティコア"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

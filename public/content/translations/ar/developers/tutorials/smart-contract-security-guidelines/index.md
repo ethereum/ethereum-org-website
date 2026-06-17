@@ -1,10 +1,10 @@
 ---
-title: إرشادات أمان العقود الذكية
-description: قائمة مرجعية بإرشادات الأمان التي يجب مراعاتها عند بناء تطبيقك اللامركزي (⁦dapp⁩)
+title: "إرشادات أمان العقود الذكية"
+description: "قائمة مرجعية بإرشادات الأمان التي يجب مراعاتها عند بناء تطبيقك اللامركزي (⁦dapp⁩)"
 author: "Trailofbits"
-tags: ["solidity", "العقود الذكية", "الأمان"]
+tags: ["Solidity", "العقود الذكية", "الأمان"]
 skill: intermediate
-breadcrumb: إرشادات الأمان
+breadcrumb: "إرشادات الأمان"
 lang: ar
 published: 2020-09-06
 source: Building secure contracts

@@ -1,13 +1,13 @@
 ---
-title: 使用 Web3 发送交易
-description: 这是一份对初学者友好的指南，介绍如何使用 Web3 发送以太坊交易。向以太坊区块链发送交易主要有三个步骤：创建、签名和广播。我们将逐一介绍这三个步骤。
-author: 埃兰·哈尔彭
+title: "使用 Web3 发送交易"
+description: "这是一份对初学者友好的指南，介绍如何使用 Web3 发送以太坊交易。向以太坊区块链发送交易主要有三个步骤：创建、签名和广播。我们将逐一介绍这三个步骤。"
+author: "埃兰·哈尔彭"
 tags:
   - 交易
   - web3.js
   - alchemy
 skill: beginner
-breadcrumb: 发送交易
+breadcrumb: "发送交易"
 lang: zh
 published: 2020-11-04
 source: Alchemy docs

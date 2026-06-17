@@ -1,6 +1,6 @@
 ---
-title: 適合 Delphi 開發者的以太坊
-description: 學習如何使用 Delphi 程式語言在以太坊上進行開發
+title: "適合 Delphi 開發者的以太坊"
+description: "學習如何使用 Delphi 程式語言在以太坊上進行開發"
 lang: zh-tw
 incomplete: true
 ---

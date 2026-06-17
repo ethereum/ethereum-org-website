@@ -1,6 +1,6 @@
 ---
-title: Häufig gestellte Fragen
-description: Häufig gestellte Fragen zu Proof-of-Stake (PoS) bei Ethereum.
+title: "Häufig gestellte Fragen"
+description: "Häufig gestellte Fragen zu Proof-of-Stake (PoS) bei Ethereum."
 lang: de
 ---
 

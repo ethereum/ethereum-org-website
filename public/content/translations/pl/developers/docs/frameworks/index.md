@@ -1,6 +1,6 @@
 ---
 title: Frameworki do tworzenia dapp
-description: Poznaj zalety frameworków i porównaj dostępne opcje.
+description: "Poznaj zalety frameworków i porównaj dostępne opcje."
 lang: pl
 ---
 

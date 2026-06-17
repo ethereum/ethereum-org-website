@@ -1,6 +1,6 @@
 ---
 title: Perguntas frequentes
-description: Perguntas frequentes sobre a Prova de Participação (PoS) do Ethereum.
+description: "Perguntas frequentes sobre a Prova de Participação (PoS) do Ethereum."
 lang: pt-br
 ---
 

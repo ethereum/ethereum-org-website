@@ -1,6 +1,6 @@
 ---
-title: Ethereum Proof-of-Stake: Angriff und Verteidigung
-description: Erfahren Sie mehr über die bekannten Angriffsvektoren auf das Proof-of-Stake-Ethereum und wie diese abgewehrt werden.
+title: "Ethereum Proof-of-Stake: Angriff und Verteidigung"
+description: "Erfahren Sie mehr über die bekannten Angriffsvektoren auf das Proof-of-Stake-Ethereum und wie diese abgewehrt werden."
 lang: de
 ---
 

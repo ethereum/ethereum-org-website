@@ -1,6 +1,6 @@
 ---
-title: Introdução aos contratos inteligentes
-description: Uma visão geral dos contratos inteligentes, com foco em suas características e limitações únicas.
+title: "Introdução aos contratos inteligentes"
+description: "Uma visão geral dos contratos inteligentes, com foco em suas características e limitações únicas."
 lang: pt-br
 ---
 

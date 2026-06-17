@@ -1,6 +1,6 @@
 ---
-title: Mineração
-description: Uma explicação de como a mineração funcionava no Ethereum.
+title: "Mineração"
+description: "Uma explicação de como a mineração funcionava no Ethereum."
 lang: pt-br
 ---
 

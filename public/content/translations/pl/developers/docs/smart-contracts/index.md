@@ -1,6 +1,6 @@
 ---
-title: Wprowadzenie do inteligentnych kontraktów
-description: Przegląd inteligentnych kontraktów, skupiający się na ich unikalnych cechach i ograniczeniach.
+title: "Wprowadzenie do inteligentnych kontraktów"
+description: "Przegląd inteligentnych kontraktów, skupiający się na ich unikalnych cechach i ograniczeniach."
 lang: pl
 ---
 

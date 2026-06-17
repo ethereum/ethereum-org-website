@@ -1,8 +1,8 @@
 ---
 title: "Alguns truques usados por tokens fraudulentos e como detectá-los"
-description: Neste tutorial, dissecamos um token fraudulento para ver alguns dos truques que os golpistas usam, como eles os implementam e como podemos detectá-los.
+description: "Neste tutorial, dissecamos um token fraudulento para ver alguns dos truques que os golpistas usam, como eles os implementam e como podemos detectá-los."
 author: Ori Pomerantz
-tags: ["fraude", "solidity", "erc-20", "javascript", "typescript"]
+tags: ["fraude", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
 breadcrumb: Truques de tokens fraudulentos
 published: 2023-09-15

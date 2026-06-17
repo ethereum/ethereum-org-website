@@ -1,6 +1,6 @@
 ---
-title: 使用事件记录智能合约数据
-description: 智能合约事件简介以及如何使用它们记录数据
+title: "使用事件记录智能合约数据"
+description: "智能合约事件简介以及如何使用它们记录数据"
 author: "jdourlens"
 tags:
   - 智能合约
@@ -8,7 +8,7 @@ tags:
   - solidity
   - 事件
 skill: intermediate
-breadcrumb: 事件记录
+breadcrumb: "事件记录"
 lang: zh
 published: 2020-04-03
 source: EthereumDev

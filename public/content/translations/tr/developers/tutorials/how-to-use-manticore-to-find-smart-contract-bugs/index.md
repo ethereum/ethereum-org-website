@@ -1,10 +1,10 @@
 ---
-title: Akıllı sözleşmelerdeki hataları bulmak için Manticore nasıl kullanılır
-description: Akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Manticore nasıl kullanılır
+title: "Akıllı sözleşmelerdeki hataları bulmak için Manticore nasıl kullanılır"
+description: "Akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Manticore nasıl kullanılır"
 author: Trailofbits
 lang: tr
 tags:
-  ["solidity", "akıllı sözleşmeler", "güvenlik", "test etme", "biçimsel doğrulama"]
+  ["Solidity", "akıllı sözleşmeler", "güvenlik", "test etme", "biçimsel doğrulama"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13

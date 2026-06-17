@@ -1,11 +1,11 @@
 ---
-title: Python डेवलपर के लिए इथेरियम का परिचय, भाग 1
-description: इथेरियम विकास का एक परिचय, विशेष रूप से उन लोगों के लिए उपयोगी जिन्हें Python प्रोग्रामिंग भाषा का ज्ञान है
-author: मार्क गैरो
+title: "Python डेवलपर के लिए इथेरियम का परिचय, भाग 1"
+description: "इथेरियम विकास का एक परिचय, विशेष रूप से उन लोगों के लिए उपयोगी जिन्हें Python प्रोग्रामिंग भाषा का ज्ञान है"
+author: "मार्क गैरो"
 lang: hi
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
-breadcrumb: Python के साथ इथेरियम
+breadcrumb: "Python के साथ इथेरियम"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

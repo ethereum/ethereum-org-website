@@ -1,6 +1,6 @@
 ---
-title: Słaba subiektywność
-description: Wyjaśnienie słabej subiektywności i jej roli w Ethereum opartym na dowodzie stawki (PoS).
+title: "Słaba subiektywność"
+description: "Wyjaśnienie słabej subiektywności i jej roli w Ethereum opartym na dowodzie stawki (PoS)."
 lang: pl
 ---
 

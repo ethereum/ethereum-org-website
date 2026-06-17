@@ -1,10 +1,10 @@
 ---
-title: Lista kontrolna bezpieczeństwa inteligentnych kontraktów
-description: Sugerowany przepływ pracy przy pisaniu bezpiecznych inteligentnych kontraktów
+title: "Lista kontrolna bezpieczeństwa inteligentnych kontraktów"
+description: "Sugerowany przepływ pracy przy pisaniu bezpiecznych inteligentnych kontraktów"
 author: "Trailofbits"
-tags: ["inteligentne kontrakty", "bezpieczeństwo", "solidity"]
+tags: ["inteligentne kontrakty", "bezpieczeństwo", "Solidity"]
 skill: intermediate
-breadcrumb: Lista kontrolna bezpieczeństwa
+breadcrumb: "Lista kontrolna bezpieczeństwa"
 lang: pl
 published: 2020-09-07
 source: Building secure contracts

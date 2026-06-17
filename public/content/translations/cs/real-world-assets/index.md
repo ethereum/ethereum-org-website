@@ -1,11 +1,11 @@
 ---
-title: Aktiva reálného světa (RWA)
-metaTitle: Co jsou RWA? | Výhody a využití aktiv reálného světa
-description: Přehled aktiv reálného světa na Ethereu
+title: "Aktiva reálného světa (RWA)"
+metaTitle: "Co jsou RWA? | Výhody a využití aktiv reálného světa"
+description: "Přehled aktiv reálného světa na Ethereu"
 lang: cs
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: Muž a pes si hrají.
+alt: "Muž a pes si hrají."
 sidebarDepth: 2
 summaryPoints:
   - "Metoda přeměny cenných komodit na digitální tokeny."

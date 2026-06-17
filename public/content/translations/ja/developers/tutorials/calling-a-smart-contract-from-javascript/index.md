@@ -1,6 +1,6 @@
 ---
-title: JavaScriptからスマート・コントラクトを呼び出す
-description: Daiトークンの例を使用してJavaScriptからスマート・コントラクトの関数を呼び出す方法
+title: "JavaScriptからスマート・コントラクトを呼び出す"
+description: "Daiトークンの例を使用してJavaScriptからスマート・コントラクトの関数を呼び出す方法"
 author: jdourlens
 tags:
   - トランザクション
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - web3.js
 skill: beginner
-breadcrumb: JSからコントラクトを呼び出す
+breadcrumb: "JSからコントラクトを呼び出す"
 lang: ja
 published: 2020-04-19
 source: EthereumDev

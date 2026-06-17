@@ -1,13 +1,13 @@
 ---
-title: स्मार्ट अनुबंध सुरक्षा दिशानिर्देश
-description: अपना डैप (dapp) बनाते समय विचार करने के लिए सुरक्षा दिशानिर्देशों की एक चेकलिस्ट
+title: "स्मार्ट अनुबंध सुरक्षा दिशानिर्देश"
+description: "अपना डैप (dapp) बनाते समय विचार करने के लिए सुरक्षा दिशानिर्देशों की एक चेकलिस्ट"
 author: Trailofbits
 tags:
   - solidity
   - स्मार्ट अनुबंध
   - सुरक्षा
 skill: intermediate
-breadcrumb: सुरक्षा दिशानिर्देश
+breadcrumb: "सुरक्षा दिशानिर्देश"
 lang: hi
 published: 2020-09-06
 source: Building secure contracts

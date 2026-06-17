@@ -1,13 +1,13 @@
 ---
-title: سمارٹ کنٹریکٹ سیکیورٹی چیک لسٹ
-description: محفوظ سمارٹ کنٹریکٹس لکھنے کے لیے ایک تجویز کردہ ورک فلو
+title: "سمارٹ کنٹریکٹ سیکیورٹی چیک لسٹ"
+description: "محفوظ سمارٹ کنٹریکٹس لکھنے کے لیے ایک تجویز کردہ ورک فلو"
 author: "Trailofbits"
 tags:
   - سمارٹ کنٹریکٹس
   - سیکیورٹی
   - solidity
 skill: intermediate
-breadcrumb: سیکیورٹی چیک لسٹ
+breadcrumb: "سیکیورٹی چیک لسٹ"
 lang: ur
 published: 2020-09-07
 source: Building secure contracts

@@ -1,6 +1,6 @@
 ---
-title: Stwórz własnego agenta AI do tradingu na Ethereum
-description: W tym samouczku dowiesz się, jak stworzyć prostego agenta AI do tradingu. Agent ten odczytuje informacje z blockchaina, prosi model LLM o rekomendację na podstawie tych informacji, wykonuje transakcję zaleconą przez LLM, a następnie czeka i powtarza proces.
+title: "Stwórz własnego agenta AI do tradingu na Ethereum"
+description: "W tym samouczku dowiesz się, jak stworzyć prostego agenta AI do tradingu. Agent ten odczytuje informacje z blockchaina, prosi model LLM o rekomendację na podstawie tych informacji, wykonuje transakcję zaleconą przez LLM, a następnie czeka i powtarza proces."
 author: Ori Pomerantz
 tags:
   - AI

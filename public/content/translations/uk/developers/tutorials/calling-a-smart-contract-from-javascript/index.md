@@ -1,10 +1,10 @@
 ---
-title: Виклик смарт-контракту з JavaScript
-description: Як викликати функцію смарт-контракту з JavaScript на прикладі токена DAI
+title: "Виклик смарт-контракту з JavaScript"
+description: "Як викликати функцію смарт-контракту з JavaScript на прикладі токена DAI"
 author: jdourlens
 tags: ["транзакції", "фронтенд", "JavaScript", "web3.js"]
 skill: beginner
-breadcrumb: Виклик контрактів з JS
+breadcrumb: "Виклик контрактів з JS"
 lang: uk
 published: 2020-04-19
 source: EthereumDev

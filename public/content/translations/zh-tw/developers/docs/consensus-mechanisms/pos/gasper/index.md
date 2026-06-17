@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper 權益證明機制的說明。
+description: "Gasper 權益證明機制的說明。"
 lang: zh-tw
 ---
 

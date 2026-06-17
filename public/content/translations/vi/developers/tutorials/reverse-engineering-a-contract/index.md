@@ -1,11 +1,11 @@
 ---
 title: "Dịch ngược một hợp đồng"
-description: Cách để hiểu một hợp đồng khi bạn không có mã nguồn
+description: "Cách để hiểu một hợp đồng khi bạn không có mã nguồn"
 author: Ori Pomerantz
 lang: vi
 tags: ["evm", "mã lệnh"]
 skill: advanced
-breadcrumb: Dịch ngược
+breadcrumb: "Dịch ngược"
 published: 2021-12-30
 ---
 ## Giới thiệu {#introduction}

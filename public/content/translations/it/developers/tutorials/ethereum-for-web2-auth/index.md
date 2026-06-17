@@ -1,6 +1,6 @@
 ---
 title: Usare Ethereum per l'autenticazione Web2
-description: Dopo aver letto questo tutorial, uno sviluppatore sarà in grado di integrare il login di Ethereum (web3) con il login SAML, uno standard utilizzato nel Web2 per fornire il single sign-on e altri servizi correlati. Questo permette di autenticare l'accesso alle risorse Web2 tramite le firme di Ethereum, con gli attributi dell'utente provenienti dalle attestazioni.
+description: "Dopo aver letto questo tutorial, uno sviluppatore sarà in grado di integrare il login di Ethereum (web3) con il login SAML, uno standard utilizzato nel Web2 per fornire il single sign-on e altri servizi correlati. Questo permette di autenticare l'accesso alle risorse Web2 tramite le firme di Ethereum, con gli attributi dell'utente provenienti dalle attestazioni."
 author: Ori Pomerantz
 tags:
   - Web2

@@ -1,6 +1,6 @@
 ---
-title: 证明
-description: 权益证明以太坊上的证明说明。
+title: "证明"
+description: "权益证明以太坊上的证明说明。"
 lang: zh
 ---
 

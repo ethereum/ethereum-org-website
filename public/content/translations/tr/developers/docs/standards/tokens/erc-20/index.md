@@ -1,6 +1,6 @@
 ---
-title: ERC-20 Token Standardı
-description: Ethereum üzerinde birlikte çalışabilir Token uygulamalarına olanak tanıyan misli token standardı ERC-20 hakkında bilgi edinin.
+title: "ERC-20 Token Standardı"
+description: "Ethereum üzerinde birlikte çalışabilir Token uygulamalarına olanak tanıyan misli token standardı ERC-20 hakkında bilgi edinin."
 lang: tr
 ---
 

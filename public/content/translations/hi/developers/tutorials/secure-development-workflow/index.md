@@ -1,13 +1,13 @@
 ---
-title: स्मार्ट अनुबंध सुरक्षा चेकलिस्ट
-description: सुरक्षित स्मार्ट अनुबंध लिखने के लिए एक सुझाई गई कार्यप्रणाली
+title: "स्मार्ट अनुबंध सुरक्षा चेकलिस्ट"
+description: "सुरक्षित स्मार्ट अनुबंध लिखने के लिए एक सुझाई गई कार्यप्रणाली"
 author: "Trailofbits"
 tags:
   - स्मार्ट अनुबंध
   - सुरक्षा
   - solidity
 skill: intermediate
-breadcrumb: सुरक्षा चेकलिस्ट
+breadcrumb: "सुरक्षा चेकलिस्ट"
 lang: hi
 published: 2020-09-07
 source: Building secure contracts

@@ -1,11 +1,11 @@
 ---
 title: "ABI ngắn để tối ưu hóa dữ liệu lệnh gọi"
-description: Tối ưu hóa hợp đồng thông minh cho bản cuộn Optimistic
+description: "Tối ưu hóa hợp đồng thông minh cho bản cuộn Optimistic"
 author: Ori Pomerantz
 lang: vi
 tags: ["lớp 2 (l2)"]
 skill: intermediate
-breadcrumb: ABI ngắn
+breadcrumb: "ABI ngắn"
 published: 2022-04-01
 ---
 

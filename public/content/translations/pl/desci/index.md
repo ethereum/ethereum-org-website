@@ -1,6 +1,6 @@
 ---
 title: Zdecentralizowana nauka (DeSci)
-description: Przegląd zdecentralizowanej nauki w Ethereum
+description: "Przegląd zdecentralizowanej nauki w Ethereum"
 lang: pl
 template: use-cases
 sidebarDepth: 2

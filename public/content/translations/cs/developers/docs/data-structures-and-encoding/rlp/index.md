@@ -1,6 +1,6 @@
 ---
-title: Serializace pomocí Recursive-length prefix (RLP)
-description: Definice kódování RLP v exekuční vrstvě Etherea.
+title: "Serializace pomocí Recursive-length prefix (RLP)"
+description: "Definice kódování RLP v exekuční vrstvě Etherea."
 lang: cs
 sidebarDepth: 2
 ---

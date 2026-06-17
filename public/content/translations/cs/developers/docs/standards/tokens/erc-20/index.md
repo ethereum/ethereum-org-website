@@ -1,6 +1,6 @@
 ---
 title: Standard tokenu ERC-20
-description: Přečtěte si o ERC-20, standardu pro zaměnitelné tokeny na Ethereu, který umožňuje interoperabilní tokenové aplikace.
+description: "Přečtěte si o ERC-20, standardu pro zaměnitelné tokeny na Ethereu, který umožňuje interoperabilní tokenové aplikace."
 lang: cs
 ---
 

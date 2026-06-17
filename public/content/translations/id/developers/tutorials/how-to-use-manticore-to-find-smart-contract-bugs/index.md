@@ -4,7 +4,7 @@ description: Cara menggunakan Manticore untuk secara otomatis menemukan bug dala
 author: Trailofbits
 lang: id
 tags:
-  ["solidity", "kontrak pintar", "keamanan", "pengujian", "verifikasi formal"]
+  ["Solidity", "kontrak pintar", "keamanan", "pengujian", "verifikasi formal"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13

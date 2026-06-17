@@ -1,6 +1,6 @@
 ---
-title: Yerel, çok istemcili bir test ağında bir dapp nasıl geliştirilir ve test edilir
-description: Bu rehber, bir dapp'i dağıtmak ve test etmek için test ağını kullanmadan önce çok istemcili yerel bir Ethereum test ağının nasıl başlatılacağı ve yapılandırılacağı konusunda size yol gösterecektir.
+title: "Yerel, çok istemcili bir test ağında bir dapp nasıl geliştirilir ve test edilir"
+description: "Bu rehber, bir dapp'i dağıtmak ve test etmek için test ağını kullanmadan önce çok istemcili yerel bir Ethereum test ağının nasıl başlatılacağı ve yapılandırılacağı konusunda size yol gösterecektir."
 author: "Tedi Mitiku"
 tags:
   [
@@ -13,7 +13,7 @@ tags:
     "test etme",
   ]
 skill: intermediate
-breadcrumb: Çok istemcili test ağı
+breadcrumb: "Çok istemcili test ağı"
 lang: tr
 published: 2023-04-11
 ---

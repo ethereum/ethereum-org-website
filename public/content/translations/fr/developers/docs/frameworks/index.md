@@ -1,5 +1,5 @@
 ---
-title: Frameworks de développement de dapps
+title: "Frameworks de développement de dapps"
 description: Explorez les avantages des frameworks et comparez les options disponibles.
 lang: fr
 ---

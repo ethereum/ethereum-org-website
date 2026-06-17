@@ -1,11 +1,11 @@
 ---
-title: 质押即服务
-description: 了解质押即服务
+title: "质押即服务"
+description: "了解质押即服务"
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: 犀牛 Leslie 漂浮在云端。
+alt: "犀牛 Leslie 漂浮在云端。"
 sidebarDepth: 2
 summaryPoints:
   - 第三方节点运营商负责运行你的验证者客户端

@@ -1,6 +1,6 @@
 ---
-title: Réseaux sociaux décentralisés
-description: Un aperçu des réseaux sociaux décentralisés sur Ethereum
+title: "Réseaux sociaux décentralisés"
+description: "Un aperçu des réseaux sociaux décentralisés sur Ethereum"
 lang: fr
 template: use-cases
 sidebarDepth: 2

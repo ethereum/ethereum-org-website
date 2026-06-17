@@ -1,6 +1,6 @@
 ---
-title: विकेन्द्रीकृत विज्ञान (DeSci)
-description: इथेरियम पर विकेन्द्रीकृत विज्ञान का अवलोकन
+title: "विकेन्द्रीकृत विज्ञान (DeSci)"
+description: "इथेरियम पर विकेन्द्रीकृत विज्ञान का अवलोकन"
 lang: hi
 template: use-cases
 sidebarDepth: 2

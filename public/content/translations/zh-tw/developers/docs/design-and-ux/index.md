@@ -1,6 +1,6 @@
 ---
-title: Web3 中的設計與使用者體驗 (UX)
-description: Web3 領域與以太坊中的使用者體驗 (UX) 設計與研究簡介
+title: "Web3 中的設計與使用者體驗 (UX)"
+description: "Web3 領域與以太坊中的使用者體驗 (UX) 設計與研究簡介"
 lang: zh-tw
 ---
 

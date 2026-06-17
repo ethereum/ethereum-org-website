@@ -1,6 +1,6 @@
 ---
-title: Důkaz podílem (PoS) vs. důkaz prací (PoW)
-description: Srovnání mechanismů konsensu Etherea založených na důkazu podílem (PoS) a důkazu prací (PoW)
+title: "Důkaz podílem (PoS) vs. důkaz prací (PoW)"
+description: "Srovnání mechanismů konsensu Etherea založených na důkazu podílem (PoS) a důkazu prací (PoW)"
 lang: cs
 ---
 

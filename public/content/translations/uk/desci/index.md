@@ -1,6 +1,6 @@
 ---
-title: Децентралізована наука (DeSci)
-description: Огляд децентралізованої науки на Етеріумі
+title: "Децентралізована наука (DeSci)"
+description: "Огляд децентралізованої науки на Етеріумі"
 lang: uk
 template: use-cases
 sidebarDepth: 2

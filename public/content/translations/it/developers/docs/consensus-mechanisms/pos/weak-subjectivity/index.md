@@ -1,6 +1,6 @@
 ---
-title: Soggettività debole
-description: Una spiegazione della soggettività debole e del suo ruolo in Ethereum Proof-of-Stake.
+title: "Soggettività debole"
+description: "Una spiegazione della soggettività debole e del suo ruolo in Ethereum Proof-of-Stake."
 lang: it
 ---
 

@@ -1,13 +1,13 @@
 ---
-title: Sử dụng Ethereum để xác thực Web2
-description: Sau khi đọc hướng dẫn này, nhà phát triển sẽ có thể tích hợp đăng nhập Ethereum (web3) với đăng nhập SAML, một tiêu chuẩn được sử dụng trong Web2 để cung cấp đăng nhập một lần và các dịch vụ liên quan khác. Điều này cho phép quyền truy cập vào các tài nguyên Web2 được xác thực thông qua chữ ký Ethereum, với các thuộc tính người dùng đến từ các chứng thực.
+title: "Sử dụng Ethereum để xác thực Web2"
+description: "Sau khi đọc hướng dẫn này, nhà phát triển sẽ có thể tích hợp đăng nhập Ethereum (web3) với đăng nhập SAML, một tiêu chuẩn được sử dụng trong Web2 để cung cấp đăng nhập một lần và các dịch vụ liên quan khác. Điều này cho phép quyền truy cập vào các tài nguyên Web2 được xác thực thông qua chữ ký Ethereum, với các thuộc tính người dùng đến từ các chứng thực."
 author: Ori Pomerantz
 tags:
   - Web2
   - xác thực
   - eas
 skill: beginner
-breadcrumb: Ethereum cho xác thực Web2
+breadcrumb: "Ethereum cho xác thực Web2"
 lang: vi
 published: 2025-04-30
 ---

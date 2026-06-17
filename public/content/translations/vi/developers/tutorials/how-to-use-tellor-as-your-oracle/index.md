@@ -1,11 +1,11 @@
 ---
-title: Cách thiết lập Tellor làm nguồn cấp dữ liệu của bạn
-description: Hướng dẫn bắt đầu tích hợp nguồn cấp dữ liệu Tellor vào giao thức của bạn
+title: "Cách thiết lập Tellor làm nguồn cấp dữ liệu của bạn"
+description: "Hướng dẫn bắt đầu tích hợp nguồn cấp dữ liệu Tellor vào giao thức của bạn"
 author: "Tellor"
 lang: vi
-tags: ["solidity", "hợp đồng thông minh", "nguồn cấp dữ liệu"]
+tags: ["Solidity", "hợp đồng thông minh", "nguồn cấp dữ liệu"]
 skill: beginner
-breadcrumb: Nguồn cấp dữ liệu Tellor
+breadcrumb: "Nguồn cấp dữ liệu Tellor"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

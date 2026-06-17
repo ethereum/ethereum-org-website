@@ -1,11 +1,11 @@
 ---
-title: சேவையாக ஸ்டேக்கிங்
-description: சேவையாக ஸ்டேக்கிங் பற்றி அறிக
+title: "சேவையாக ஸ்டேக்கிங்"
+description: "சேவையாக ஸ்டேக்கிங் பற்றி அறிக"
 lang: ta
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: லெஸ்லி காண்டாமிருகம் மேகங்களில் மிதக்கிறது.
+alt: "லெஸ்லி காண்டாமிருகம் மேகங்களில் மிதக்கிறது."
 sidebarDepth: 2
 summaryPoints:
   - மூன்றாம் தரப்பு கணு ஆபரேட்டர்கள் உங்கள் சரிபார்ப்பான் கிளையண்டின் செயல்பாட்டைக் கையாளுகின்றனர்

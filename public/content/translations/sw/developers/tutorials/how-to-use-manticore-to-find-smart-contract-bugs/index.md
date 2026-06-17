@@ -4,7 +4,7 @@ description: Jinsi ya kutumia Manticore kupata hitilafu kiotomatiki kwenye mikat
 author: Trailofbits
 lang: sw
 tags:
-  ["solidity", "mikataba mahiri", "usalama", "upimaji", "uthibitishaji rasmi"]
+  ["Solidity", "mikataba mahiri", "usalama", "upimaji", "uthibitishaji rasmi"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13

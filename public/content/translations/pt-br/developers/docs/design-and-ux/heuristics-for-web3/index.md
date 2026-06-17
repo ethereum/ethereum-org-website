@@ -1,6 +1,6 @@
 ---
-title: 7 heurísticas para o design de interfaces da Web3
-description: Princípios para melhorar a usabilidade da Web3
+title: "7 heurísticas para o design de interfaces da Web3"
+description: "Princípios para melhorar a usabilidade da Web3"
 lang: pt-br
 ---
 

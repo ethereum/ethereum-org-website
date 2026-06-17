@@ -1,8 +1,8 @@
 ---
 title: Tutoriel de frappe de NFT
-description: Dans ce tutoriel, vous allez construire une application de frappe de NFT et apprendre à créer une dapp full stack en connectant votre contrat intelligent à une interface React à l'aide de MetaMask et d'outils Web3.
+description: "Dans ce tutoriel, vous allez construire une application de frappe de NFT et apprendre à créer une dapp full stack en connectant votre contrat intelligent à une interface React à l'aide de MetaMask et d'outils Web3."
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "contrats intelligents", "frontend", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "contrats intelligents", "frontend", "Pinata", "erc-721"]
 skill: intermediate
 breadcrumb: Dapp de frappe de NFT
 lang: fr
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

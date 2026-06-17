@@ -1,6 +1,6 @@
 ---
-title: ERC-777 代币标准
-description: 了解 ERC-777，这是一种带有钩子（hook）的改进型同质化代币标准，但出于安全考虑，建议使用 ERC-20。
+title: "ERC-777 代币标准"
+description: "了解 ERC-777，这是一种带有钩子（hook）的改进型同质化代币标准，但出于安全考虑，建议使用 ERC-20。"
 lang: zh
 ---
 

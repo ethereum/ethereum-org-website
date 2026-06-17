@@ -1,11 +1,11 @@
 ---
-title: 오라클로 텔러를 설정하는 방법
-description: 프로토콜에 텔러 오라클을 통합하여 시작하기 위한 가이드
+title: "오라클로 텔러를 설정하는 방법"
+description: "프로토콜에 텔러 오라클을 통합하여 시작하기 위한 가이드"
 author: "텔러"
 lang: ko
-tags: ["솔리디티", "스마트 컨트랙트", "오라클"]
+tags: ["Solidity", "스마트 컨트랙트", "오라클"]
 skill: beginner
-breadcrumb: 텔러 오라클
+breadcrumb: "텔러 오라클"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

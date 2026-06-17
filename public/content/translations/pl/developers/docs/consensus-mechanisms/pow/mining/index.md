@@ -1,6 +1,6 @@
 ---
 title: Kopanie
-description: Wyjaśnienie, jak działało kopanie w Ethereum.
+description: "Wyjaśnienie, jak działało kopanie w Ethereum."
 lang: pl
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: "Explication détaillée du contrat Uniswap-v2"
-description: Comment fonctionne le contrat Uniswap-v2 ? Pourquoi est-il écrit de cette façon ?
+description: "Comment fonctionne le contrat Uniswap-v2 ? Pourquoi est-il écrit de cette façon ?"
 author: Ori Pomerantz
-tags: ["solidity", "dapps"]
+tags: ["Solidity", "dapps"]
 skill: intermediate
-breadcrumb: Explication détaillée d'Uniswap v2
+breadcrumb: "Explication détaillée d'Uniswap v2"
 published: 2021-05-01
 lang: fr
 ---
@@ -336,7 +336,7 @@ Cette fonction permet à l'usine (et uniquement à l'usine) de spécifier les de
 
 #### Fonctions de mise à jour internes {#pair-update-internal}
 
-##### \_update {#pair-external}
+##### \_update {#}
 
 ```solidity
     // mettre à jour les réserves et, lors du premier appel par bloc, les accumulateurs de prix
@@ -391,7 +391,7 @@ Ce calcul de prix est la raison pour laquelle nous devons connaître les ancienn
 
 Enfin, mettre à jour les variables globales et émettre un événement `Sync`.
 
-##### \_mintFee {#uniswapv2factory}
+##### \_mintFee {#}
 
 ```solidity
     // si les frais sont activés, frapper une liquidité équivalente à 1/6 de la croissance de sqrt(k)
@@ -457,11 +457,11 @@ Utiliser la fonction `UniswapV2ERC20._mint` pour créer réellement les jetons d
 S'il n'y a pas de frais, définir `kLast` à zéro (si ce n'est pas déjà le cas). Lorsque ce contrat a été écrit, il y avait une [fonctionnalité de remboursement de gaz](https://eips.ethereum.org/EIPS/eip-3298) qui encourageait les contrats à réduire la taille globale de l'état d'Ethereum en remettant à zéro le stockage dont ils n'avaient pas besoin.
 Ce code obtient ce remboursement lorsque cela est possible.
 
-#### Fonctions accessibles de l'extérieur {#uniswapv2erc20}
+#### Fonctions accessibles de l'extérieur {#pair-external}
 
 Notez que bien que n'importe quelle transaction ou contrat _puisse_ appeler ces fonctions, elles sont conçues pour être appelées depuis le contrat périphérique. Si vous les appelez directement, vous ne pourrez pas tromper l'échange de paires, mais vous pourriez perdre de la valeur à cause d'une erreur.
 
-##### mint {#periphery-contracts}
+##### mint {#}
 
 ```solidity
     // cette fonction de bas niveau doit être appelée depuis un contrat qui effectue des vérifications de sécurité importantes
@@ -547,7 +547,7 @@ Utiliser la fonction `UniswapV2ERC20._mint` pour créer réellement les jetons d
 
 Mettre à jour les variables d'état (`reserve0`, `reserve1`, et si nécessaire `kLast`) et émettre l'événement approprié.
 
-##### burn {#uniswapv2router01}
+##### burn {#}
 
 ```solidity
     // cette fonction de bas niveau doit être appelée depuis un contrat qui effectue des vérifications de sécurité importantes
@@ -594,7 +594,7 @@ Le fournisseur de liquidité reçoit une valeur égale des deux jetons. De cette
 
 Le reste de la fonction `burn` est l'image miroir de la fonction `mint` ci-dessus.
 
-##### swap {#uniswapv2router02}
+##### swap {#}
 
 ```solidity
     // cette fonction de bas niveau doit être appelée depuis un contrat qui effectue des vérifications de sécurité importantes
@@ -662,7 +662,7 @@ C'est une vérification de cohérence pour s'assurer que nous ne perdons pas lor
 
 Mettre à jour `reserve0` et `reserve1`, et si nécessaire les accumulateurs de prix et l'horodatage, et émettre un événement.
 
-##### Sync ou Skim {#add-liquidity}
+##### Sync ou Skim {#}
 
 Il est possible que les soldes réels se désynchronisent des réserves que l'échange de paires pense avoir.
 Il n'y a aucun moyen de retirer des jetons sans le consentement du contrat, mais les dépôts sont une autre affaire. Un compte peut transférer des jetons à l'échange sans appeler ni `mint` ni `swap`.
@@ -690,7 +690,7 @@ Dans ce cas, il y a deux solutions :
 }
 ```
 
-### UniswapV2Factory.sol {#remove-liquidity}
+### UniswapV2Factory.sol {#uniswapv2factory}
 
 [Ce contrat](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) crée les échanges de paires.
 
@@ -812,7 +812,7 @@ Enregistrer les informations de la nouvelle paire dans les variables d'état et 
 
 Ces deux fonctions permettent à `feeSetter` de contrôler le destinataire des frais (le cas échéant), et de changer `feeSetter` pour une nouvelle adresse.
 
-### UniswapV2ERC20.sol {#trade}
+### UniswapV2ERC20.sol {#uniswapv2erc20}
 
 [Ce contrat](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implémente le jeton de liquidité ERC-20. Il est similaire au [contrat ERC-20 d'OpenZeppelin](/developers/tutorials/erc20-annotated-code), je n'expliquerai donc que la partie qui est différente, la fonctionnalité `permit`.
 
@@ -899,15 +899,15 @@ L'algorithme de signature d'Ethereum s'attend à recevoir 256 bits à signer, no
 
 Si tout est correct, traiter cela comme [un approuver (approve) ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## Les contrats périphériques {#uniswapv2migrator}
+## Les contrats périphériques {#periphery-contracts}
 
 Les contrats périphériques constituent l'API (interface de programmation d'application) d'Uniswap. Ils sont disponibles pour des appels externes, que ce soit depuis d'autres contrats ou des applications décentralisées. Vous pourriez appeler les contrats principaux directement, mais c'est plus compliqué et vous pourriez perdre de la valeur si vous faites une erreur. Les contrats principaux ne contiennent que des tests pour s'assurer qu'ils ne sont pas trompés, et non des vérifications de cohérence pour qui que ce soit d'autre. Celles-ci se trouvent dans la périphérie afin de pouvoir être mises à jour selon les besoins.
 
-### UniswapV2Router01.sol {#libraries}
+### UniswapV2Router01.sol {#uniswapv2router01}
 
 [Ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) présente des problèmes et [ne devrait plus être utilisé](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Heureusement, les contrats périphériques sont sans état et ne détiennent aucun actif, il est donc facile de le déprécier et de suggérer aux gens d'utiliser son remplaçant, `UniswapV2Router02`, à la place.
 
-### UniswapV2Router02.sol {#math}
+### UniswapV2Router02.sol {#uniswapv2router02}
 
 Dans la plupart des cas, vous utiliseriez Uniswap via [ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
 Vous pouvez voir comment l'utiliser [ici](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
@@ -963,7 +963,7 @@ Le constructeur se contente de définir les variables d'état immuables.
 
 Cette fonction est appelée lorsque nous rachetons des jetons du contrat WETH pour les reconvertir en ETH. Seul le contrat WETH que nous utilisons est autorisé à le faire.
 
-#### Ajouter de la liquidité {#fixedpoint}
+#### Ajouter de la liquidité {#add-liquidity}
 
 Ces fonctions ajoutent des jetons à l'échange de paires, ce qui augmente la réserve de liquidité.
 
@@ -1148,7 +1148,7 @@ Pour déposer l'ETH, le contrat l'enveloppe d'abord en WETH, puis transfère le 
 
 L'utilisateur nous a déjà envoyé l'ETH, donc s'il en reste un excédent (parce que l'autre jeton a moins de valeur que ce que l'utilisateur pensait), nous devons émettre un remboursement.
 
-#### Retirer de la liquidité {#uniswapv2library}
+#### Retirer de la liquidité {#remove-liquidity}
 
 Ces fonctions retireront de la liquidité et rembourseront le fournisseur de liquidité.
 
@@ -1309,7 +1309,7 @@ Cette fonction peut être utilisée pour les jetons qui ont des frais de transfe
 
 La fonction finale combine les frais de stockage avec les méta-transactions.
 
-#### Échanger {#transfer-helper}
+#### Échanger {#trade}
 
 ```solidity
     // **** ÉCHANGE ****
@@ -1667,15 +1667,15 @@ Ce sont les mêmes variantes utilisées pour les jetons normaux, mais elles appe
 
 Ces fonctions ne sont que des proxys qui appellent les [fonctions UniswapV2Library](#uniswapv2library).
 
-### UniswapV2Migrator.sol {#conclusion}
+### UniswapV2Migrator.sol {#uniswapv2migrator}
 
 Ce contrat a été utilisé pour migrer les échanges de l'ancienne v1 vers la v2. Maintenant qu'ils ont été migrés, il n'est plus pertinent.
 
-## Les bibliothèques
+## Les bibliothèques {#libraries}
 
 La [bibliothèque SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) est bien documentée, il n'est donc pas nécessaire de la documenter ici.
 
-### Math
+### Math {#math}
 
 Cette bibliothèque contient des fonctions mathématiques qui ne sont normalement pas nécessaires dans le code Solidity, elles ne font donc pas partie du langage.
 
@@ -1720,7 +1720,7 @@ Nous ne devrions jamais avoir besoin de la racine carrée de zéro. Les racines 
 }
 ```
 
-### Fractions à virgule fixe (UQ112x112)
+### Fractions à virgule fixe (UQ112x112) {#fixedpoint}
 
 Cette bibliothèque gère les fractions, qui ne font normalement pas partie de l'arithmétique d'Ethereum. Elle le fait en encodant le nombre _x_ sous la forme _x\*2^112_. Cela nous permet d'utiliser les codes d'opération d'addition et de soustraction d'origine sans modification.
 
@@ -1757,7 +1757,7 @@ Puisque y est `uint112`, sa valeur maximale est 2^112-1. Ce nombre peut toujours
 
 Si nous divisons deux valeurs `UQ112x112`, le résultat n'est plus multiplié par 2^112. À la place, nous prenons donc un entier pour le dénominateur. Nous aurions dû utiliser une astuce similaire pour faire une multiplication, mais nous n'avons pas besoin de multiplier des valeurs `UQ112x112`.
 
-### UniswapV2Library
+### UniswapV2Library {#uniswapv2library}
 
 Cette bibliothèque est utilisée uniquement par les contrats périphériques
 
@@ -1879,7 +1879,7 @@ Cette fonction fait à peu près la même chose, mais elle obtient le montant de
 
 Ces deux fonctions gèrent l'identification des valeurs lorsqu'il est nécessaire de passer par plusieurs échanges de paires.
 
-### Transfer Helper
+### Transfer Helper {#transfer-helper}
 
 [Cette bibliothèque](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) ajoute des vérifications de succès autour des transferts ERC-20 et Ethereum pour traiter une annulation et un retour de valeur `false` de la même manière.
 
@@ -1964,7 +1964,7 @@ Cette fonction implémente [la fonctionnalité transferFrom d'ERC-20](https://ei
 
 Cette fonction transfère de l'ether vers un compte. Tout appel à un contrat différent peut tenter d'envoyer de l'ether. Comme nous n'avons pas besoin d'appeler réellement une fonction, nous n'envoyons aucune donnée avec l'appel.
 
-## Conclusion
+## Conclusion {#conclusion}
 
 Il s'agit d'un long article d'environ 50 pages. Si vous êtes arrivé jusqu'ici, félicitations ! J'espère que vous avez maintenant compris les enjeux liés à la création d'une application concrète (par opposition aux courts programmes d'exemple) et que vous êtes mieux préparé pour écrire des contrats pour vos propres cas d'utilisation.
 

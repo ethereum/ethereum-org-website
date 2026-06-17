@@ -1,14 +1,14 @@
 ---
-title: 在以太坊上打造你自己的 AI 交易代理
-description: 在本教學中，你將學習如何製作一個簡單的 AI 交易代理。該代理會從區塊鏈讀取資訊，根據這些資訊向大型語言模型 (LLM) 尋求建議，執行 LLM 建議的交易，然後等待並重複此過程。
-author: 奧里·波梅蘭茨
+title: "在以太坊上打造你自己的 AI 交易代理"
+description: "在本教學中，你將學習如何製作一個簡單的 AI 交易代理。該代理會從區塊鏈讀取資訊，根據這些資訊向大型語言模型 (LLM) 尋求建議，執行 LLM 建議的交易，然後等待並重複此過程。"
+author: "奧里·波梅蘭茨"
 tags:
   - AI
   - 交易
   - 代理
   - Python
 skill: intermediate
-breadcrumb: AI 交易代理
+breadcrumb: "AI 交易代理"
 published: 2026-02-13
 lang: zh-tw
 sidebarDepth: 3

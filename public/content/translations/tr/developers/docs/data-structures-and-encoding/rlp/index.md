@@ -1,6 +1,6 @@
 ---
-title: Özyinelemeli uzunluk ön eki (RLP) serileştirmesi
-description: Ethereum'un yürütme katmanındaki rlp kodlamasının bir tanımı.
+title: "Özyinelemeli uzunluk ön eki (RLP) serileştirmesi"
+description: "Ethereum'un yürütme katmanındaki rlp kodlamasının bir tanımı."
 lang: tr
 sidebarDepth: 2
 ---

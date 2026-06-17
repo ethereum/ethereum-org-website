@@ -2,7 +2,7 @@
 title: "Mwongozo wa Mkataba wa Uniswap-v2"
 description: Mkataba wa Uniswap-v2 unafanyaje kazi? Kwa nini umeandikwa kwa njia hiyo?
 author: Ori Pomerantz
-tags: ["solidity", "dapps"]
+tags: ["Solidity", "dapps"]
 skill: intermediate
 breadcrumb: Mwongozo wa Uniswap v2
 published: 2021-05-01
@@ -336,7 +336,7 @@ Kazi hii inaruhusu kiwanda (na kiwanda pekee) kubainisha tokeni mbili za ERC-20 
 
 #### Kazi za Ndani za Usasishaji {#pair-update-internal}
 
-##### \_update {#pair-external}
+##### \_update {#}
 
 ```solidity
     // sasisha akiba na, kwenye wito wa kwanza kwa kila kitalu, vilimbikizi vya bei
@@ -391,7 +391,7 @@ Ukotoaji huu wa bei ndio sababu tunahitaji kujua ukubwa wa akiba za zamani.
 
 Hatimaye, sasisha vigezo vya kimataifa na utoe tukio la `Sync`.
 
-##### \_mintFee {#uniswapv2factory}
+##### \_mintFee {#}
 
 ```solidity
     // kama ada imewashwa, fua ukwasi sawa na 1/6 ya ukuaji katika sqrt(k)
@@ -457,11 +457,11 @@ Tumia kazi ya `UniswapV2ERC20._mint` kuunda haswa tokeni za ziada za ukwasi na k
 Ikiwa hakuna ada weka `kLast` kuwa sifuri (ikiwa haiko hivyo tayari). Wakati mkataba huu uliandikwa kulikuwa na [kipengele cha kurejesha gesi](https://eips.ethereum.org/EIPS/eip-3298) ambacho kilihimiza mikataba kupunguza ukubwa wa jumla wa hali ya Ethereum kwa kuweka sifuri hifadhi ambayo hawakuhitaji.
 Msimbo huu unapata urejeshaji huo inapowezekana.
 
-#### Kazi Zinazofikika kwa Nje {#uniswapv2erc20}
+#### Kazi Zinazofikika kwa Nje {#pair-external}
 
 Kumbuka kwamba ingawa muamala au mkataba wowote _unaweza_ kuita kazi hizi, zimeundwa kuitwa kutoka kwa mkataba wa pembezoni. Ikiwa utaziita moja kwa moja hutaweza kudanganya badilishano la jozi, lakini unaweza kupoteza thamani kupitia kosa.
 
-##### mint {#periphery-contracts}
+##### mint {#}
 
 ```solidity
     // kazi hii ya kiwango cha chini inapaswa kuitwa kutoka kwenye mkataba ambao unafanya ukaguzi muhimu wa usalama
@@ -547,7 +547,7 @@ Tumia kazi ya `UniswapV2ERC20._mint` kuunda haswa tokeni za ziada za ukwasi na k
 
 Sasisha vigezo vya hali (`reserve0`, `reserve1`, na ikihitajika `kLast`) na utoe tukio linalofaa.
 
-##### burn {#uniswapv2router01}
+##### burn {#}
 
 ```solidity
     // kazi hii ya kiwango cha chini inapaswa kuitwa kutoka kwenye mkataba ambao unafanya ukaguzi muhimu wa usalama
@@ -594,7 +594,7 @@ Mtoa ukwasi anapokea thamani sawa ya tokeni zote mbili. Kwa njia hii hatubadilis
 
 Sehemu iliyobaki ya kazi ya `burn` ni picha ya kioo ya kazi ya `mint` hapo juu.
 
-##### swap {#uniswapv2router02}
+##### swap {#}
 
 ```solidity
     // kazi hii ya kiwango cha chini inapaswa kuitwa kutoka kwenye mkataba ambao unafanya ukaguzi muhimu wa usalama
@@ -662,7 +662,7 @@ Huu ni ukaguzi wa kiakili ili kuhakikisha hatupotezi kutokana na badilishano. Ha
 
 Sasisha `reserve0` na `reserve1`, na ikihitajika vilimbikizi vya bei na mhuri wa muda na utoe tukio.
 
-##### Usawazishaji au Skim {#add-liquidity}
+##### Usawazishaji au Skim {#}
 
 Inawezekana kwa salio halisi kutoka nje ya usawazishaji na akiba ambazo badilishano la jozi linafikiri linazo.
 Hakuna njia ya kutoa tokeni bila idhini ya mkataba, lakini uwekaji ni jambo tofauti. Akaunti inaweza kuhamisha tokeni kwa badilishano bila kuita `mint` au `swap`.
@@ -690,7 +690,7 @@ Katika hali hiyo kuna suluhisho mbili:
 }
 ```
 
-### UniswapV2Factory.sol {#remove-liquidity}
+### UniswapV2Factory.sol {#uniswapv2factory}
 
 [Mkataba huu](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) unaunda mabadilishano ya jozi.
 
@@ -811,7 +811,7 @@ Hifadhi taarifa mpya ya jozi katika vigezo vya hali na utoe tukio ili kuujulisha
 
 Kazi hizi mbili zinaruhusu `feeSetter` kudhibiti mpokeaji wa ada (ikiwa yupo), na kubadilisha `feeSetter` kwa anwani mpya.
 
-### UniswapV2ERC20.sol {#trade}
+### UniswapV2ERC20.sol {#uniswapv2erc20}
 
 [Mkataba huu](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) unatekeleza tokeni ya ukwasi ya ERC-20. Inafanana na [mkataba wa ERC-20 wa OpenZeppelin](/developers/tutorials/erc20-annotated-code), kwa hivyo nitaelezea tu sehemu ambayo ni tofauti, utendaji wa `permit`.
 
@@ -898,15 +898,15 @@ Kutoka kwa muhtasari na sahihi tunaweza kupata anwani iliyotia sahihi kwa kutumi
 
 Ikiwa kila kitu kiko Sawa, chukulia hii kama [idhinisha ya ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## Mikataba ya Pembezoni {#uniswapv2migrator}
+## Mikataba ya Pembezoni {#periphery-contracts}
 
 Mikataba ya pembezoni ni API (kiolesura cha programu ya matumizi) cha Uniswap. Inapatikana kwa miito ya nje, iwe kutoka kwa mikataba mingine au programu zilizogatuliwa. Unaweza kuita mikataba mikuu moja kwa moja, lakini hiyo ni ngumu zaidi na unaweza kupoteza thamani ukifanya kosa. Mikataba mikuu ina majaribio tu ya kuhakikisha haidanganywi, si ukaguzi wa usahihi kwa mtu mwingine yeyote. Hiyo ipo pembezoni ili iweze kusasishwa inapohitajika.
 
-### UniswapV2Router01.sol {#libraries}
+### UniswapV2Router01.sol {#uniswapv2router01}
 
 [Mkataba huu](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) una matatizo, na [hupaswi kutumiwa tena](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Kwa bahati nzuri, mikataba ya pembezoni haina hali na haishikilii rasilimali zozote, kwa hivyo ni rahisi kuiondoa na kupendekeza watu watumie mbadala wake, `UniswapV2Router02`, badala yake.
 
-### UniswapV2Router02.sol {#math}
+### UniswapV2Router02.sol {#uniswapv2router02}
 
 Katika hali nyingi ungetumia Uniswap kupitia [mkataba huu](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
 Unaweza kuona jinsi ya kuutumia [hapa](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
@@ -962,7 +962,7 @@ Konstrukta inaweka tu vigezo vya hali isiyobadilika.
 
 Kazi hii inaitwa tunapokomboa tokeni kutoka kwenye mkataba wa WETH kurudi kwenye ETH. Ni mkataba wa WETH pekee tunaoutumia ndio ulioidhinishwa kufanya hivyo.
 
-#### Ongeza Ukwasi {#fixedpoint}
+#### Ongeza Ukwasi {#add-liquidity}
 
 Kazi hizi zinaongeza tokeni kwenye mabadilishano ya jozi, ambayo huongeza bwawa la ukwasi.
 
@@ -1147,7 +1147,7 @@ Ili kuweka ETH mkataba kwanza unaifunga kuwa WETH na kisha kuhamisha WETH kwenye
 
 Mtumiaji tayari ametutumia ETH, kwa hivyo ikiwa kuna ziada yoyote iliyobaki (kwa sababu tokeni nyingine ina thamani ndogo kuliko mtumiaji alivyofikiri), tunahitaji kutoa marejesho.
 
-#### Ondoa Ukwasi {#uniswapv2library}
+#### Ondoa Ukwasi {#remove-liquidity}
 
 Kazi hizi zitaondoa ukwasi na kumlipa mtoa ukwasi.
 
@@ -1308,7 +1308,7 @@ Kazi hii inaweza kutumika kwa tokeni ambazo zina ada za hamisho au uhifadhi. Wak
 
 Kazi ya mwisho inachanganya ada za uhifadhi na miamala-meta.
 
-#### Biashara {#transfer-helper}
+#### Biashara {#trade}
 
 ```solidity
     // **** BADILISHANO ****
@@ -1666,15 +1666,15 @@ Hizi ni tofauti zile zile zinazotumika kwa tokeni za kawaida, lakini zinaita `_s
 
 Kazi hizi ni proksi tu zinazoita [kazi za UniswapV2Library](#uniswapv2library).
 
-### UniswapV2Migrator.sol {#conclusion}
+### UniswapV2Migrator.sol {#uniswapv2migrator}
 
 Mkataba huu ulitumika kuhamisha mabadilishano kutoka v1 ya zamani hadi v2. Kwa kuwa sasa yamehamishwa, hauhusiki tena.
 
-## Maktaba
+## Maktaba {#libraries}
 
 [Maktaba ya SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) imeandikwa vizuri, kwa hivyo hakuna haja ya kuiandika hapa.
 
-### Hisabati
+### Hisabati {#math}
 
 Maktaba hii ina baadhi ya kazi za hisabati ambazo kwa kawaida hazihitajiki katika msimbo wa Solidity, kwa hivyo si sehemu ya lugha.
 
@@ -1719,7 +1719,7 @@ Hatupaswi kamwe kuhitaji kipeo cha pili cha sifuri. Vipeo vya pili vya moja, mbi
 }
 ```
 
-### Sehemu za Nukta Zisizobadilika (UQ112x112)
+### Sehemu za Nukta Zisizobadilika (UQ112x112) {#fixedpoint}
 
 Maktaba hii inashughulikia sehemu, ambazo kwa kawaida si sehemu ya hesabu za Ethereum. Inafanya hivi kwa kusimba nambari _x_ kama _x\*2^112_. Hii inaturuhusu kutumia misimbo ya operesheni ya asili ya kujumlisha na kutoa bila mabadiliko.
 
@@ -1756,7 +1756,7 @@ Kwa sababu y ni `uint112`, kiwango chake cha juu zaidi kinaweza kuwa 2^112-1. Na
 
 Ikiwa tutagawa thamani mbili za `UQ112x112`, matokeo hayazidishwi tena na 2^112. Kwa hivyo badala yake tunachukua nambari kamili kwa asili. Tungehitaji kutumia mbinu sawa kufanya kuzidisha, lakini hatuhitaji kufanya kuzidisha kwa thamani za `UQ112x112`.
 
-### UniswapV2Library
+### UniswapV2Library {#uniswapv2library}
 
 Maktaba hii inatumika tu na mikataba ya pembezoni
 
@@ -1878,7 +1878,7 @@ Kazi hii inafanya takriban kitu kile kile, lakini inapata kiasi cha pato na kuto
 
 Kazi hizi mbili zinashughulikia kutambua thamani wakati ni lazima kupitia mabadilishano kadhaa ya jozi.
 
-### Msaidizi wa Hamisho
+### Msaidizi wa Hamisho {#transfer-helper}
 
 [Maktaba hii](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) inaongeza ukaguzi wa mafanikio karibu na mahamisho ya ERC-20 na Ethereum ili kushughulikia tengua na urejeshaji wa thamani ya `false` kwa njia sawa.
 
@@ -1963,7 +1963,7 @@ Kazi hii inatekeleza [utendaji wa transferFrom wa ERC-20](https://eips.ethereum.
 
 Kazi hii inahamisha Etha kwenye akaunti. Mwito wowote kwa mkataba tofauti unaweza kujaribu kutuma Etha. Kwa sababu hatuhitaji kuita kazi yoyote, hatutumi data yoyote na mwito huo.
 
-## Hitimisho
+## Hitimisho {#conclusion}
 
 Hii ni makala ndefu ya takriban kurasa 50. Kama umefika hapa, hongera! Tunatumai kufikia sasa umeelewa mambo ya kuzingatia katika kuandika programu halisi (tofauti na programu fupi za mfano) na una uwezo mzuri zaidi wa kuandika mikataba kwa ajili ya matumizi yako mwenyewe.
 

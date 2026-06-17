@@ -1,6 +1,6 @@
 ---
 title: Ponts
-description: Un aperçu des ponts pour les développeurs
+description: "Un aperçu des ponts pour les développeurs"
 lang: fr
 ---
 
@@ -121,6 +121,7 @@ Pour surveiller l'activité des contrats sur plusieurs chaînes, les développeu
 - [Tenderly](https://tenderly.co/)
 
 ## Complément d'information {#further-reading}
+
 - [Ponts de chaînes de blocs](/bridges/) – ethereum.org
 - [Cadre de risque des ponts L2BEAT](https://l2beat.com/bridges/summary)
 - [Ponts de chaînes de blocs : Construire des réseaux de cryptoréseaux](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 sept. 2021 – Dmitriy Berenzon

@@ -2,7 +2,7 @@
 title: Tengeneza ajenti wako wa akili bandia wa kufanya biashara kwenye Ethereum
 description: Katika mafunzo haya utajifunza jinsi ya kutengeneza ajenti rahisi wa akili bandia wa kufanya biashara. Ajenti huyu anasoma taarifa kutoka kwenye mnyororo wa vitalu, anauliza LLM kwa mapendekezo kulingana na taarifa hizo, anafanya biashara ambayo LLM inapendekeza, na kisha anasubiri na kurudia.
 author: Ori Pomerantz
-tags: ["AI", "biashara", "ajenti", "python"]
+tags: ["AI", "biashara", "ajenti", "Python"]
 skill: intermediate
 breadcrumb: Ajenti wa akili bandia wa kufanya biashara
 published: 2026-02-13

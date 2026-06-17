@@ -1,6 +1,6 @@
 ---
-title: ⁦الجسور⁩
-description: ⁦نظرة عامة على الجسور للمطورين⁩
+title: "⁦الجسور⁩"
+description: "⁦نظرة عامة على الجسور للمطورين⁩"
 lang: ar
 ---
 
@@ -121,6 +121,7 @@ lang: ar
 - [Tenderly](https://tenderly.co/)
 
 ## قراءة إضافية {#further-reading}
+
 - [جسور سلسلة الكتل](/bridges/) – ethereum.org
 - [إطار عمل مخاطر الجسور من L2BEAT](https://l2beat.com/bridges/summary)
 - [جسور سلسلة الكتل: بناء شبكات من شبكات الكريبتو](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 سبتمبر 2021 – Dmitriy Berenzon

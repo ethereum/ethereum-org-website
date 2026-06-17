@@ -1,8 +1,8 @@
 ---
 title: Tutorial de Cunhador de NFT
-description: Neste tutorial, você construirá um cunhador de NFT e aprenderá a criar um aplicativo descentralizado (dapp) full stack conectando seu contrato inteligente a um frontend React usando MetaMask e ferramentas Web3.
+description: "Neste tutorial, você construirá um cunhador de NFT e aprenderá a criar um aplicativo descentralizado (dapp) full stack conectando seu contrato inteligente a um frontend React usando MetaMask e ferramentas Web3."
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "contratos inteligentes", "frontend", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "contratos inteligentes", "frontend", "Pinata", "erc-721"]
 skill: intermediate
 breadcrumb: Dapp cunhador de NFT
 lang: pt-br
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

@@ -5,7 +5,7 @@ lang: fr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Leslie le rhinocéros flottant dans les nuages.
+alt: "Leslie le rhinocéros flottant dans les nuages."
 sidebarDepth: 2
 summaryPoints:
   - Des opérateurs de nœuds tiers gèrent le fonctionnement de votre client validateur

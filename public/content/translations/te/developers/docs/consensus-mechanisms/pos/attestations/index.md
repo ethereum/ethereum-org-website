@@ -1,6 +1,6 @@
 ---
-title: ధృవీకరణలు
-description: ప్రూఫ్-ఆఫ్-స్టేక్ Ethereumలో ధృవీకరణల వివరణ.
+title: "ధృవీకరణలు"
+description: "ప్రూఫ్-ఆఫ్-స్టేక్ Ethereumలో ధృవీకరణల వివరణ."
 lang: te
 ---
 

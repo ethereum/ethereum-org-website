@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn token ERC-20
-description: Tìm hiểu về ERC-20, tiêu chuẩn cho các token có thể thay thế trên Ethereum, cho phép các ứng dụng token có khả năng tương tác.
+title: "Tiêu chuẩn token ERC-20"
+description: "Tìm hiểu về ERC-20, tiêu chuẩn cho các token có thể thay thế trên Ethereum, cho phép các ứng dụng token có khả năng tương tác."
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Datos y análisis
-description: Cómo obtener análisis y datos en cadena para usarlos en sus aplicaciones descentralizadas (dapps)
+title: "Datos y análisis"
+description: "Cómo obtener análisis y datos en cadena para usarlos en sus aplicaciones descentralizadas (dapps)"
 lang: es
 ---
 

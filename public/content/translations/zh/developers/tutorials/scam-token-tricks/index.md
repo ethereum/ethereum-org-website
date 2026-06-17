@@ -1,10 +1,10 @@
 ---
 title: "诈骗代币使用的一些伎俩以及如何检测它们"
-description: 在本教程中，我们将剖析一个诈骗代币，看看诈骗者玩弄的一些伎俩、他们是如何实现这些伎俩的，以及我们如何检测它们。
-author: 奥里·波梅兰茨
+description: "在本教程中，我们将剖析一个诈骗代币，看看诈骗者玩弄的一些伎俩、他们是如何实现这些伎俩的，以及我们如何检测它们。"
+author: "奥里·波梅兰茨"
 tags: ["诈骗", "Solidity", "ERC-20", "JavaScript", "TypeScript"]
 skill: intermediate
-breadcrumb: 诈骗代币伎俩
+breadcrumb: "诈骗代币伎俩"
 published: 2023-09-15
 lang: zh
 ---

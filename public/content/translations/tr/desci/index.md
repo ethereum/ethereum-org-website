@@ -1,6 +1,6 @@
 ---
 title: Merkeziyetsiz bilim (DeSci)
-description: Ethereum üzerinde merkeziyetsiz bilime genel bir bakış
+description: "Ethereum üzerinde merkeziyetsiz bilime genel bir bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2

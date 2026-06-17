@@ -1,9 +1,9 @@
 ---
-title: Jak používat Slither k hledání chyb v chytrých kontraktech
-description: Jak používat Slither k automatickému hledání chyb v chytrých kontraktech
+title: "Jak používat Slither k hledání chyb v chytrých kontraktech"
+description: "Jak používat Slither k automatickému hledání chyb v chytrých kontraktech"
 author: Trailofbits
 lang: cs
-tags: ["solidity", "chytré kontrakty", "bezpečnost", "testování"]
+tags: ["Solidity", "chytré kontrakty", "bezpečnost", "testování"]
 skill: advanced
 breadcrumb: Slither
 published: 2020-06-09

@@ -1,6 +1,6 @@
 ---
-title: Các phương pháp thiết kế sàn giao dịch phi tập trung (DEX) tốt nhất
-description: Hướng dẫn giải thích các quyết định UX/UI cho việc hoán đổi token.
+title: "Các phương pháp thiết kế sàn giao dịch phi tập trung (DEX) tốt nhất"
+description: "Hướng dẫn giải thích các quyết định UX/UI cho việc hoán đổi token."
 lang: vi
 ---
 

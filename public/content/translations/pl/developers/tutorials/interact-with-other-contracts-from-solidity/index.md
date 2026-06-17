@@ -1,10 +1,10 @@
 ---
 title: Interakcja z innymi kontraktami z poziomu Solidity
-description: Jak wdrożyć inteligentny kontrakt z istniejącego kontraktu i wejść z nim w interakcję
+description: "Jak wdrożyć inteligentny kontrakt z istniejącego kontraktu i wejść z nim w interakcję"
 author: "jdourlens"
-tags: ["inteligentne kontrakty", "solidity", "remix", "wdrażanie", "kompozycyjność"]
+tags: ["inteligentne kontrakty", "Solidity", "Remix", "wdrażanie", "kompozycyjność"]
 skill: advanced
-breadcrumb: Interakcje kontraktów
+breadcrumb: "Interakcje kontraktów"
 lang: pl
 published: 2020-04-05
 source: EthereumDev

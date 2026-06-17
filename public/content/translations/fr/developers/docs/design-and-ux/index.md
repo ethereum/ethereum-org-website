@@ -1,6 +1,6 @@
 ---
 title: Design et UX dans le Web3
-description: Introduction au design et à la recherche UX dans l'espace Web3 et Ethereum
+description: "Introduction au design et à la recherche UX dans l'espace Web3 et Ethereum"
 lang: fr
 ---
 

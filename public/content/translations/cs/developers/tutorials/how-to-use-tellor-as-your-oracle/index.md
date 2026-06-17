@@ -1,11 +1,11 @@
 ---
-title: Jak nastavit Tellor jako vaše orákulum
-description: Průvodce pro začátek s integrací orákula Tellor do vašeho protokolu
+title: "Jak nastavit Tellor jako vaše orákulum"
+description: "Průvodce pro začátek s integrací orákula Tellor do vašeho protokolu"
 author: "Tellor"
 lang: cs
-tags: ["solidity", "chytré kontrakty", "orákula"]
+tags: ["Solidity", "chytré kontrakty", "orákula"]
 skill: beginner
-breadcrumb: Orákulum Tellor
+breadcrumb: "Orákulum Tellor"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

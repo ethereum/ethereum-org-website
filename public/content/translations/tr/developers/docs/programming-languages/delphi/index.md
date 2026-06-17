@@ -1,6 +1,6 @@
 ---
-title: Delphi geliştiricileri için Ethereum
-description: Delphi programlama dilini kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin
+title: "Delphi geliştiricileri için Ethereum"
+description: "Delphi programlama dilini kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin"
 lang: tr
 incomplete: true
 ---

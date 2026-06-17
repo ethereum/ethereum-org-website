@@ -1,6 +1,6 @@
 ---
-title: Tạo tác nhân AI giao dịch của riêng bạn trên Ethereum
-description: Trong hướng dẫn này, bạn sẽ học cách tạo một tác nhân AI giao dịch đơn giản. Tác nhân này đọc thông tin từ Chuỗi khối, yêu cầu LLM đưa ra đề xuất dựa trên thông tin đó, thực hiện giao dịch mà LLM đề xuất, sau đó chờ và lặp lại.
+title: "Tạo tác nhân AI giao dịch của riêng bạn trên Ethereum"
+description: "Trong hướng dẫn này, bạn sẽ học cách tạo một tác nhân AI giao dịch đơn giản. Tác nhân này đọc thông tin từ Chuỗi khối, yêu cầu LLM đưa ra đề xuất dựa trên thông tin đó, thực hiện giao dịch mà LLM đề xuất, sau đó chờ và lặp lại."
 author: Ori Pomerantz
 tags:
   - AI
@@ -8,7 +8,7 @@ tags:
   - tác nhân
   - python
 skill: intermediate
-breadcrumb: Tác nhân AI giao dịch
+breadcrumb: "Tác nhân AI giao dịch"
 published: 2026-02-13
 lang: vi
 sidebarDepth: 3

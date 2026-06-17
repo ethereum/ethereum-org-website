@@ -1,6 +1,6 @@
 ---
-title: Často kladené dotazy
-description: Často kladené dotazy ohledně Etherea s důkazem podílem (PoS).
+title: "Často kladené dotazy"
+description: "Často kladené dotazy ohledně Etherea s důkazem podílem (PoS)."
 lang: cs
 ---
 

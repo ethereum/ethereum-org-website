@@ -1,10 +1,10 @@
 ---
 title: "Některé triky používané podvodnými tokeny a jak je odhalit"
-description: V tomto tutoriálu rozebereme podvodný token, abychom viděli některé triky, které podvodníci používají, jak je implementují a jak je můžeme odhalit.
+description: "V tomto tutoriálu rozebereme podvodný token, abychom viděli některé triky, které podvodníci používají, jak je implementují a jak je můžeme odhalit."
 author: Ori Pomerantz
 tags: ["podvod", "Solidity", "ERC-20", "JavaScript", "TypeScript"]
 skill: intermediate
-breadcrumb: Triky podvodných tokenů
+breadcrumb: "Triky podvodných tokenů"
 published: 2023-09-15
 lang: cs
 ---

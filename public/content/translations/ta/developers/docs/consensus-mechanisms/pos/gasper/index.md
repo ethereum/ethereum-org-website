@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper உரிமைச் சான்று (PoS) வழிமுறையின் விளக்கம்.
+description: "Gasper உரிமைச் சான்று (PoS) வழிமுறையின் விளக்கம்."
 lang: ta
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper প্রুফ-অফ-স্টেক (PoS) মেকানিজমের একটি ব্যাখ্যা।
+description: "Gasper প্রুফ-অফ-স্টেক (PoS) মেকানিজমের একটি ব্যাখ্যা।"
 lang: bn
 ---
 

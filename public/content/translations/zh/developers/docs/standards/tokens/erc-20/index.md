@@ -1,6 +1,6 @@
 ---
-title: ERC-20 代币标准
-description: 了解 ERC-20，这是以太坊上的同质化代币标准，支持可互操作的代币应用程序。
+title: "ERC-20 代币标准"
+description: "了解 ERC-20，这是以太坊上的同质化代币标准，支持可互操作的代币应用程序。"
 lang: zh
 ---
 

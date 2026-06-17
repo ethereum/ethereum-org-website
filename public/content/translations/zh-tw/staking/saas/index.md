@@ -1,11 +1,11 @@
 ---
-title: 質押即服務
-description: 了解質押即服務
+title: "質押即服務"
+description: "了解質押即服務"
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: 犀牛 Leslie 漂浮在雲端。
+alt: "犀牛 Leslie 漂浮在雲端。"
 sidebarDepth: 2
 summaryPoints:
   - 第三方節點營運商負責營運你的驗證者客戶端

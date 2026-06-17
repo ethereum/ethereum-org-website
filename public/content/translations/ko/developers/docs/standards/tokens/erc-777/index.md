@@ -1,6 +1,6 @@
 ---
-title: ERC-777 토큰 표준
-description: 훅(hook)을 갖춘 개선된 대체 가능 토큰 표준인 ERC-777에 대해 알아봅니다. 단, 보안을 위해 ERC-20 사용이 권장됩니다.
+title: "ERC-777 토큰 표준"
+description: "훅(hook)을 갖춘 개선된 대체 가능 토큰 표준인 ERC-777에 대해 알아봅니다. 단, 보안을 위해 ERC-20 사용이 권장됩니다."
 lang: ko
 ---
 

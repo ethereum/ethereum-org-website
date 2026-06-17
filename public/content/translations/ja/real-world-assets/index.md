@@ -1,11 +1,11 @@
 ---
-title: リアル・ワールド・アセット (RWA)
-metaTitle: RWAとは？ | リアル・ワールド・アセットの利点と用途
-description: イーサリアム上のリアル・ワールド・アセットの概要
+title: "リアル・ワールド・アセット (RWA)"
+metaTitle: "RWAとは？ | リアル・ワールド・アセットの利点と用途"
+description: "イーサリアム上のリアル・ワールド・アセットの概要"
 lang: ja
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: 遊んでいる男性と犬。
+alt: "遊んでいる男性と犬。"
 sidebarDepth: 2
 summaryPoints:
   - "価値ある商品をデジタルなトークンに変換する方法。"

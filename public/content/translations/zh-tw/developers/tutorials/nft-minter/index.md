@@ -1,10 +1,10 @@
 ---
-title: NFT 鑄造程式教學
-description: 在本教學中，你將建立一個 NFT 鑄造程式，並學習如何使用梅塔馬斯克與 Web3 工具將智能合約連接到 React 前端，從而建立一個全端去中心化應用程式 (dapp)。
+title: "NFT 鑄造程式教學"
+description: "在本教學中，你將建立一個 NFT 鑄造程式，並學習如何使用梅塔馬斯克與 Web3 工具將智能合約連接到 React 前端，從而建立一個全端去中心化應用程式 (dapp)。"
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "智能合約", "前端", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "智能合約", "前端", "Pinata", "erc-721"]
 skill: intermediate
-breadcrumb: NFT 鑄造程式 dapp
+breadcrumb: "NFT 鑄造程式 dapp"
 lang: zh-tw
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

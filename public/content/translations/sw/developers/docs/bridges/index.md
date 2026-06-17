@@ -121,6 +121,7 @@ Ili kufuatilia shughuli za mkataba kwenye minyororo, wasanidi programu wanaweza 
 - [Tenderly](https://tenderly.co/)
 
 ## Usomaji zaidi {#further-reading}
+
 - [Madaraja ya Mnyororo wa Vitalu](/bridges/) – ethereum.org
 - [Mfumo wa Hatari wa Daraja la L2BEAT](https://l2beat.com/bridges/summary)
 - [Madaraja ya Mnyororo wa Vitalu: Kujenga Mitandao ya Mitandao ya Kripto](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - Sep 8, 2021 – Dmitriy Berenzon

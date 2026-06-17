@@ -1,6 +1,6 @@
 ---
 title: Mosty
-description: Przegląd mostów dla deweloperów
+description: "Przegląd mostów dla deweloperów"
 lang: pl
 ---
 
@@ -121,6 +121,7 @@ Aby monitorować aktywność kontraktów w różnych łańcuchach, deweloperzy m
 - [Tenderly](https://tenderly.co/)
 
 ## Dalsza lektura {#further-reading}
+
 - [Mosty blockchain](/bridges/) – ethereum.org
 - [Ramy ryzyka mostów L2BEAT](https://l2beat.com/bridges/summary)
 - [Mosty blockchain: Budowanie sieci kryptosieci](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 września 2021 r. – Dmitriy Berenzon

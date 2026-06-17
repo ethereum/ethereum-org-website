@@ -1,6 +1,6 @@
 ---
-title: JavaScript থেকে একটি স্মার্ট কন্ট্রাক্ট কল করা
-description: একটি DAI টোকেনের উদাহরণ ব্যবহার করে কীভাবে JavaScript থেকে একটি স্মার্ট কন্ট্রাক্ট ফাংশন কল করতে হয়
+title: "JavaScript থেকে একটি স্মার্ট কন্ট্রাক্ট কল করা"
+description: "একটি DAI টোকেনের উদাহরণ ব্যবহার করে কীভাবে JavaScript থেকে একটি স্মার্ট কন্ট্রাক্ট ফাংশন কল করতে হয়"
 author: jdourlens
 tags:
   - ট্রানজ্যাকশন
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - web3.js
 skill: beginner
-breadcrumb: JS থেকে কন্ট্রাক্ট কল করুন
+breadcrumb: "JS থেকে কন্ট্রাক্ট কল করুন"
 lang: bn
 published: 2020-04-19
 source: EthereumDev

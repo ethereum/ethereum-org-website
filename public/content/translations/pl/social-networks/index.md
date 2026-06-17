@@ -1,6 +1,6 @@
 ---
-title: Zdecentralizowane sieci społecznościowe
-description: Przegląd zdecentralizowanych sieci społecznościowych na Ethereum
+title: "Zdecentralizowane sieci społecznościowe"
+description: "Przegląd zdecentralizowanych sieci społecznościowych na Ethereum"
 lang: pl
 template: use-cases
 sidebarDepth: 2

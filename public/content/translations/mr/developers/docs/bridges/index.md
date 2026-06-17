@@ -1,6 +1,6 @@
 ---
-title: सेतू
-description: डेव्हलपर्ससाठी ब्रिजिंगचा (सेतूंचा) आढावा
+title: "सेतू"
+description: "डेव्हलपर्ससाठी ब्रिजिंगचा (सेतूंचा) आढावा"
 lang: mr
 ---
 
@@ -121,6 +121,7 @@ lang: mr
 - [Tenderly](https://tenderly.co/)
 
 ## पुढील वाचन {#further-reading}
+
 - [ब्लॉकचेन सेतू](/bridges/) – ethereum.org
 - [L2BEAT सेतू धोका फ्रेमवर्क](https://l2beat.com/bridges/summary)
 - [ब्लॉकचेन सेतू: क्रिप्टोनटवर्क्सचे नेटवर्क्स तयार करणे](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - ८ सप्टेंबर २०२१ – Dmitriy Berenzon

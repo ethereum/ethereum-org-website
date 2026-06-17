@@ -1,6 +1,6 @@
 ---
-title: Weryfikacja formalna inteligentnych kontraktów
-description: Przegląd weryfikacji formalnej dla inteligentnych kontraktów Ethereum
+title: "Weryfikacja formalna inteligentnych kontraktów"
+description: "Przegląd weryfikacji formalnej dla inteligentnych kontraktów Ethereum"
 lang: pl
 ---
 

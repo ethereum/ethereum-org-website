@@ -121,6 +121,7 @@ lang: ur
 - [Tenderly](https://tenderly.co/)
 
 ## مزید مطالعہ {#further-reading}
+
 - [بلاک چین کے پل](/bridges/) – ethereum.org
 - [L2BEAT برج رسک فریم ورک](https://l2beat.com/bridges/summary)
 - [بلاک چین کے پل: کرپٹو نیٹ ورکس کے نیٹ ورکس بنانا](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - <span dir="ltr">Sep 8, 2021</span> – دمتری بیرینزون (Dmitriy Berenzon)

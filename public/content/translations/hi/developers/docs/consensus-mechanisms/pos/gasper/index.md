@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper प्रूफ-ऑफ़-स्टेक (PoS) तंत्र की व्याख्या।
+description: "Gasper प्रूफ-ऑफ़-स्टेक (PoS) तंत्र की व्याख्या।"
 lang: hi
 ---
 

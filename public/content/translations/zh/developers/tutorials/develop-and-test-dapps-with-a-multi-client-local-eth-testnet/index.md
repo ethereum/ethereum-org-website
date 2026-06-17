@@ -1,6 +1,6 @@
 ---
-title: 如何在本地多客户端测试网上开发和测试去中心化应用 (dapp)
-description: 本指南将首先引导你如何实例化和配置多客户端本地以太坊测试网，然后再使用该测试网部署和测试去中心化应用 (dapp)。
+title: "如何在本地多客户端测试网上开发和测试去中心化应用 (dapp)"
+description: "本指南将首先引导你如何实例化和配置多客户端本地以太坊测试网，然后再使用该测试网部署和测试去中心化应用 (dapp)。"
 author: "泰迪·米蒂库"
 tags:
   [
@@ -13,7 +13,7 @@ tags:
     "测试",
   ]
 skill: intermediate
-breadcrumb: 多客户端测试网
+breadcrumb: "多客户端测试网"
 lang: zh
 published: 2023-04-11
 ---

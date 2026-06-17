@@ -1,14 +1,14 @@
 ---
-title: 이더리움에서 나만의 AI 트레이딩 에이전트 만들기
-description: 이 튜토리얼에서는 간단한 AI 트레이딩 에이전트를 만드는 방법을 배웁니다. 이 에이전트는 블록체인에서 정보를 읽고, 해당 정보를 바탕으로 LLM에 추천을 요청하며, LLM이 추천하는 거래를 수행한 후 대기하고 반복합니다.
-author: 오리 포메란츠
+title: "이더리움에서 나만의 AI 트레이딩 에이전트 만들기"
+description: "이 튜토리얼에서는 간단한 AI 트레이딩 에이전트를 만드는 방법을 배웁니다. 이 에이전트는 블록체인에서 정보를 읽고, 해당 정보를 바탕으로 LLM에 추천을 요청하며, LLM이 추천하는 거래를 수행한 후 대기하고 반복합니다."
+author: "오리 포메란츠"
 tags:
   - AI
   - 트레이딩
   - 에이전트
   - Python
 skill: intermediate
-breadcrumb: AI 트레이딩 에이전트
+breadcrumb: "AI 트레이딩 에이전트"
 published: 2026-02-13
 lang: ko
 sidebarDepth: 3

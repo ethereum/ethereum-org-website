@@ -2,7 +2,7 @@
 title: Kuweka logi za data kutoka kwenye mikataba mahiri kwa kutumia matukio
 description: Utangulizi wa matukio ya mkataba mahiri na jinsi unavyoweza kuyatumia kuweka logi za data
 author: "jdourlens"
-tags: ["mikataba mahiri", "remix", "solidity", "matukio"]
+tags: ["mikataba mahiri", "Remix", "Solidity", "matukio"]
 skill: intermediate
 breadcrumb: Uwekaji logi wa matukio
 lang: sw

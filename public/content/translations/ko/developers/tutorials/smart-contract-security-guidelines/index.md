@@ -1,10 +1,10 @@
 ---
-title: 스마트 컨트랙트 보안 가이드라인
-description: dapp을 빌드할 때 고려해야 할 보안 가이드라인 체크리스트
+title: "스마트 컨트랙트 보안 가이드라인"
+description: "dapp을 빌드할 때 고려해야 할 보안 가이드라인 체크리스트"
 author: "Trailofbits"
-tags: ["solidity", "스마트 컨트랙트", "보안"]
+tags: ["Solidity", "스마트 컨트랙트", "보안"]
 skill: intermediate
-breadcrumb: 보안 가이드라인
+breadcrumb: "보안 가이드라인"
 lang: ko
 published: 2020-09-06
 source: Building secure contracts
@@ -80,7 +80,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 - **0.4 및 0.6보다 Solidity 0.5를 선호하세요.** 우리의 의견으로는 Solidity 0.5가 0.4보다 더 안전하고 더 나은 내장 사례를 가지고 있습니다. Solidity 0.6은 프로덕션 환경에서 사용하기에는 너무 불안정하며 성숙할 시간이 필요합니다.
 - **컴파일에는 안정적인 릴리스를 사용하고, 경고를 확인하려면 최신 릴리스를 사용하세요.** 최신 컴파일러 버전에서 코드에 보고된 문제가 없는지 확인하세요. 그러나 Solidity는 릴리스 주기가 빠르고 컴파일러 버그의 역사가 있으므로 배포에 최신 버전을 권장하지 않습니다(슬리더의 [solc 버전 권장 사항](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) 참조).
-- **인라인 어셈블리를 사용하지 마세요.** 어셈블리에는 EVM 전문 지식이 필요합니다. 황서를 _마스터_하지 않았다면 EVM 코드를 작성하지 마세요.
+- **인라인 어셈블리를 사용하지 마세요.** 어셈블리에는 EVM 전문 지식이 필요합니다. 황서를 <em>마스터</em>하지 않았다면 EVM 코드를 작성하지 마세요.
 
 ## 배포 가이드라인 {#deployment-guidelines}
 

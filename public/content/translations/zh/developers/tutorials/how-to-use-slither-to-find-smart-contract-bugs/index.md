@@ -1,11 +1,11 @@
 ---
-title: 如何使用斯莱瑟寻找智能合约漏洞
-description: 如何使用斯莱瑟自动寻找智能合约中的漏洞
+title: "如何使用斯莱瑟寻找智能合约漏洞"
+description: "如何使用斯莱瑟自动寻找智能合约中的漏洞"
 author: Trailofbits
 lang: zh
-tags: ["solidity", "智能合约", "安全", "测试"]
+tags: ["Solidity", "智能合约", "安全", "测试"]
 skill: advanced
-breadcrumb: 斯莱瑟
+breadcrumb: "斯莱瑟"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

@@ -1,6 +1,6 @@
 ---
-title: غیر مرکزی سائنس (ڈی سائی)
-description: ایتھیریم پر غیر مرکزی سائنس کا جائزہ
+title: "غیر مرکزی سائنس (ڈی سائی)"
+description: "ایتھیریم پر غیر مرکزی سائنس کا جائزہ"
 lang: ur
 template: use-cases
 sidebarDepth: 2

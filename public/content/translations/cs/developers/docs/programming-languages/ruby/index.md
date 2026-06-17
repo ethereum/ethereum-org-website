@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro vývojáře v Ruby
-description: Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Ruby.
+title: "Ethereum pro vývojáře v Ruby"
+description: "Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Ruby."
 lang: cs
 incomplete: false
 ---

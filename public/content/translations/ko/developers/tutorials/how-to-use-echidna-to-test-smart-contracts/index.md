@@ -1,11 +1,11 @@
 ---
-title: 에키드나를 사용하여 스마트 컨트랙트를 테스트하는 방법
-description: 에키드나를 사용하여 스마트 컨트랙트를 자동으로 테스트하는 방법
+title: "에키드나를 사용하여 스마트 컨트랙트를 테스트하는 방법"
+description: "에키드나를 사용하여 스마트 컨트랙트를 자동으로 테스트하는 방법"
 author: "Trailofbits"
 lang: ko
-tags: ["solidity", "스마트 컨트랙트", "보안", "테스트", "퍼징"]
+tags: ["Solidity", "스마트 컨트랙트", "보안", "테스트", "퍼징"]
 skill: advanced
-breadcrumb: 에키드나
+breadcrumb: "에키드나"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
@@ -47,7 +47,7 @@ cd /home/training
 
 - 각 실행에서 피드백을 얻고 이를 사용하여 생성을 유도합니다. 예를 들어, 새로 생성된 입력이 새로운 경로의 디스커버리로 이어진다면, 그와 가까운 새로운 입력을 생성하는 것이 합리적일 수 있습니다.
 - 구조적 제약 조건을 준수하여 입력을 생성합니다. 예를 들어, 입력에 체크섬이 포함된 헤더가 있는 경우, 퍼저가 체크섬을 검증하는 입력을 생성하도록 하는 것이 합리적입니다.
-- 알려진 입력을 사용하여 새로운 입력을 생성합니다. 유효한 입력의 대규모 데이터 세트에 접근할 수 있는 경우, 퍼저는 처음부터 생성을 시작하는 대신 이를 기반으로 새로운 입력을 생성할 수 있습니다. 이를 보통 _시드(seed)_라고 부릅니다.
+- 알려진 입력을 사용하여 새로운 입력을 생성합니다. 유효한 입력의 대규모 데이터 세트에 접근할 수 있는 경우, 퍼저는 처음부터 생성을 시작하는 대신 이를 기반으로 새로운 입력을 생성할 수 있습니다. 이를 보통 <em>시드(seed)</em>라고 부릅니다.
 
 ### 속성 기반 퍼징 {#property-based-fuzzing}
 

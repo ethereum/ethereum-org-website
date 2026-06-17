@@ -1,8 +1,8 @@
 ---
 title: Pautas de seguridad para contratos inteligentes
-description: Una lista de verificación de pautas de seguridad a considerar al construir tu dapp
+description: "Una lista de verificación de pautas de seguridad a considerar al construir tu dapp"
 author: "Trailofbits"
-tags: ["solidity", "contratos inteligentes", "seguridad"]
+tags: ["Solidity", "contratos inteligentes", "seguridad"]
 skill: intermediate
 breadcrumb: Pautas de seguridad
 lang: es

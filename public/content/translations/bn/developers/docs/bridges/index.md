@@ -1,6 +1,6 @@
 ---
-title: ⁨সেতু⁩
-description: ⁨ডেভেলপারদের জন্য ব্রিজিং বা সেতুর একটি ওভারভিউ⁩
+title: "⁨সেতু⁩"
+description: "⁨ডেভেলপারদের জন্য ব্রিজিং বা সেতুর একটি ওভারভিউ⁩"
 lang: bn
 ---
 
@@ -121,6 +121,7 @@ lang: bn
 - [Tenderly](https://tenderly.co/)
 
 ## আরও পড়ুন {#further-reading}
+
 - [ব্লকচেইন সেতু](/bridges/) – ethereum.org
 - [L2BEAT ব্রিজ রিস্ক ফ্রেমওয়ার্ক](https://l2beat.com/bridges/summary)
 - [ব্লকচেইন সেতু: ক্রিপ্টোনেটওয়ার্কের নেটওয়ার্ক তৈরি করা](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - ৮ সেপ্টেম্বর, ২০২১ – Dmitriy Berenzon

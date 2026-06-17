@@ -1,6 +1,6 @@
 ---
 title: Portal Network
-description: Tổng quan về Portal Network - một mạng lưới đang được phát triển được thiết kế để hỗ trợ các máy khách có tài nguyên thấp.
+description: "Tổng quan về Portal Network - một mạng lưới đang được phát triển được thiết kế để hỗ trợ các máy khách có tài nguyên thấp."
 lang: vi
 ---
 

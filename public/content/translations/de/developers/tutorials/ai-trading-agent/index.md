@@ -1,6 +1,6 @@
 ---
 title: Erstellen Sie Ihren eigenen KI-Trading-Agenten auf Ethereum
-description: In diesem Tutorial lernen Sie, wie Sie einen einfachen KI-Trading-Agenten erstellen. Dieser Agent liest Informationen aus der Blockchain, bittet ein LLM um eine Empfehlung basierend auf diesen Informationen, führt den vom LLM empfohlenen Trade aus und wartet dann, um den Vorgang zu wiederholen.
+description: "In diesem Tutorial lernen Sie, wie Sie einen einfachen KI-Trading-Agenten erstellen. Dieser Agent liest Informationen aus der Blockchain, bittet ein LLM um eine Empfehlung basierend auf diesen Informationen, führt den vom LLM empfohlenen Trade aus und wartet dann, um den Vorgang zu wiederholen."
 author: Ori Pomerantz
 tags:
   - KI

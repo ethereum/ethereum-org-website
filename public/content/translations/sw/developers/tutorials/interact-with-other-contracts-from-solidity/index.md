@@ -2,7 +2,7 @@
 title: Kuingiliana na mikataba mingine kutoka Solidity
 description: Jinsi ya kusambaza mkataba mahiri kutoka kwenye mkataba uliopo na kuingiliana nao
 author: "jdourlens"
-tags: ["mikataba mahiri", "solidity", "remix", "kusambaza", "utunzi"]
+tags: ["mikataba mahiri", "Solidity", "Remix", "kusambaza", "utunzi"]
 skill: advanced
 breadcrumb: Mwingiliano wa mikataba
 lang: sw

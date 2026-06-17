@@ -1,11 +1,11 @@
 ---
-title: స్మార్ట్ కాంట్రాక్ట్ బగ్‌లను కనుగొనడానికి స్లిదర్‌ను ఎలా ఉపయోగించాలి
-description: స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను ఆటోమేటిక్‌గా కనుగొనడానికి స్లిదర్‌ను ఎలా ఉపయోగించాలి
-author: ట్రైల్ఆఫ్‌బిట్స్
+title: "స్మార్ట్ కాంట్రాక్ట్ బగ్‌లను కనుగొనడానికి స్లిదర్‌ను ఎలా ఉపయోగించాలి"
+description: "స్మార్ట్ కాంట్రాక్ట్‌లలో బగ్‌లను ఆటోమేటిక్‌గా కనుగొనడానికి స్లిదర్‌ను ఎలా ఉపయోగించాలి"
+author: "ట్రైల్ఆఫ్‌బిట్స్"
 lang: te
 tags: ["Solidity", "స్మార్ట్ కాంట్రాక్ట్‌లు", "భద్రత", "టెస్టింగ్"]
 skill: advanced
-breadcrumb: స్లిదర్
+breadcrumb: "స్లిదర్"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

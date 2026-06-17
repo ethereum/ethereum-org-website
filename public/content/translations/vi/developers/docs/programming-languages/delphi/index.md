@@ -1,6 +1,6 @@
 ---
-title: Ethereum dành cho nhà phát triển Delphi
-description: Tìm hiểu cách phát triển cho Ethereum bằng ngôn ngữ lập trình Delphi
+title: "Ethereum dành cho nhà phát triển Delphi"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng ngôn ngữ lập trình Delphi"
 lang: vi
 incomplete: true
 ---

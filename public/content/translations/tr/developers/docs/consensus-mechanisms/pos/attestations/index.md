@@ -1,6 +1,6 @@
 ---
 title: Onaylar
-description: Hisse kanıtı (proof-of-stake) Ethereum'daki onayların bir açıklaması.
+description: "Hisse kanıtı (proof-of-stake) Ethereum'daki onayların bir açıklaması."
 lang: tr
 ---
 

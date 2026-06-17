@@ -1,11 +1,11 @@
 ---
-title: ఒక సేవగా స్టాకింగ్
-description: ఒక సేవగా స్టాకింగ్ గురించి తెలుసుకోండి
+title: "ఒక సేవగా స్టాకింగ్"
+description: "ఒక సేవగా స్టాకింగ్ గురించి తెలుసుకోండి"
 lang: te
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: మబ్బుల్లో తేలుతున్న లెస్లీ అనే ఖడ్గమృగం.
+alt: "మబ్బుల్లో తేలుతున్న లెస్లీ అనే ఖడ్గమృగం."
 sidebarDepth: 2
 summaryPoints:
   - మూడవ పక్ష నోడ్ ఆపరేటర్లు మీ ధృవీకర్త క్లయింట్ యొక్క ఆపరేషన్‌ను నిర్వహిస్తారు

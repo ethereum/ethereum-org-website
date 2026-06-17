@@ -1,8 +1,8 @@
 ---
 title: "جولة تفصيلية في عقد ⁦Uniswap-v2⁩"
 description: "كيف يعمل عقد ⁦Uniswap-v2⁩؟ ولماذا كُتب بهذه الطريقة؟"
-author: أوري بوميرانتس
-tags: ["solidity", "التطبيقات اللامركزية"]
+author: "أوري بوميرانتس"
+tags: ["Solidity", "التطبيقات اللامركزية"]
 skill: intermediate
 breadcrumb: "جولة تفصيلية في ⁦Uniswap v2⁩"
 published: 2021-05-01
@@ -336,7 +336,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 #### وظائف التحديث الداخلية {#pair-update-internal}
 
-##### \_update {#pair-external}
+##### \_update {#}
 
 ```solidity
     // تحديث الاحتياطيات، وفي أول استدعاء لكل كتلة، مجمعات الأسعار
@@ -391,7 +391,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 أخيرًا، قم بتحديث المتغيرات العامة وإصدار حدث `Sync`.
 
-##### \_mintFee {#uniswapv2factory}
+##### \_mintFee {#}
 
 ```solidity
     // إذا كانت الرسوم مفعلة، سك سيولة تعادل سدس النمو في sqrt(k)
@@ -457,11 +457,11 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 إذا لم تكن هناك رسوم، فقم بتعيين `kLast` إلى الصفر (إذا لم يكن كذلك بالفعل). عندما تمت كتابة هذا العقد، كانت هناك [ميزة استرداد الغاز](https://eips.ethereum.org/EIPS/eip-3298) التي شجعت العقود على تقليل الحجم الإجمالي لحالة إيثيريوم عن طريق تصفير التخزين الذي لا يحتاجون إليه.
 يحصل هذا الرمز على هذا الاسترداد عندما يكون ذلك ممكنًا.
 
-#### الوظائف التي يمكن الوصول إليها خارجيًا {#uniswapv2erc20}
+#### الوظائف التي يمكن الوصول إليها خارجيًا {#pair-external}
 
 لاحظ أنه بينما _يمكن_ لأي معاملة أو عقد استدعاء هذه الوظائف، إلا أنها مصممة ليتم استدعاؤها من العقد المحيطي (periphery contract). إذا قمت باستدعائها مباشرة، فلن تتمكن من خداع مبادلة الزوج، ولكنك قد تفقد القيمة من خلال خطأ.
 
-##### mint {#periphery-contracts}
+##### mint {#}
 
 ```solidity
     // يجب استدعاء هذه الدالة منخفضة المستوى من عقد يُجري فحوصات أمان مهمة
@@ -526,8 +526,8 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 | الإعداد الأولي | <span dir="ltr">8.000</span> | <span dir="ltr">8.000</span> | 64 | <span dir="ltr">16.000</span> | 8 | 8 | <span dir="ltr">2.000</span> |
 | إيداع أربعة من كل نوع | <span dir="ltr">12.000</span> | <span dir="ltr">12.000</span> | 144 | <span dir="ltr">24.000</span> | 4 | 12 | <span dir="ltr">2.000</span> |
 | إيداع اثنين من كل نوع | <span dir="ltr">14.000</span> | <span dir="ltr">14.000</span> | 196 | <span dir="ltr">28.000</span> | 2 | 14 | <span dir="ltr">2.000</span> |
-| إيداع بقيمة غير متساوية | <span dir="ltr">18.000</span> | <span dir="ltr">14.000</span> | 252 | <span dir="ltr">32.000</span> | 0 | 14 | <span dir="ltr">~2.286</span> |
-| بعد المراجحة | <span dir="ltr">~15.874</span> | <span dir="ltr">~15.874</span> | 252 | <span dir="ltr">~31.748</span> | 0 | 14 | <span dir="ltr">~2.267</span> |
+| إيداع بقيمة غير متساوية | <span dir="ltr">18.000</span> | <span dir="ltr">14.000</span> | 252 | <span dir="ltr">32.000</span> | 0 | 14 | <span dir="ltr">\~2.286</span> |
+| بعد المراجحة | <span dir="ltr">\~15.874</span> | <span dir="ltr">\~15.874</span> | 252 | <span dir="ltr">\~31.748</span> | 0 | 14 | <span dir="ltr">\~2.267</span> |
 
 ```solidity
         }
@@ -547,7 +547,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 قم بتحديث متغيرات الحالة (`reserve0`، و `reserve1`، وإذا لزم الأمر `kLast`) وإصدار الحدث المناسب.
 
-##### burn {#uniswapv2router01}
+##### burn {#}
 
 ```solidity
     // يجب استدعاء هذه الدالة منخفضة المستوى من عقد يُجري فحوصات أمان مهمة
@@ -594,7 +594,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 بقية وظيفة `burn` هي صورة طبق الأصل لوظيفة `mint` أعلاه.
 
-##### swap {#uniswapv2router02}
+##### swap {#}
 
 ```solidity
     // يجب استدعاء هذه الدالة منخفضة المستوى من عقد يُجري فحوصات أمان مهمة
@@ -662,7 +662,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 قم بتحديث `reserve0` و `reserve1`، وإذا لزم الأمر مجمعات الأسعار والطابع الزمني وإصدار حدث.
 
-##### المزامنة أو الكشط (Sync or Skim) {#add-liquidity}
+##### المزامنة أو الكشط (Sync or Skim) {#}
 
 من الممكن أن تخرج الأرصدة الحقيقية عن المزامنة مع الاحتياطيات التي تعتقد مبادلة الزوج أنها تمتلكها.
 لا توجد طريقة لسحب الرموز المميزة دون موافقة العقد، لكن الإيداعات مسألة مختلفة. يمكن لحساب تحويل الرموز المميزة إلى المبادلة دون استدعاء إما `mint` أو `swap`.
@@ -690,7 +690,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 }
 ```
 
-### UniswapV2Factory.sol {#remove-liquidity}
+### UniswapV2Factory.sol {#uniswapv2factory}
 
 [هذا العقد](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) ينشئ مبادلات الأزواج.
 
@@ -811,9 +811,9 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 تسمح هاتان الوظيفتان لـ `feeSetter` بالتحكم في مستلم الرسوم (إن وجد)، وتغيير `feeSetter` إلى عنوان جديد.
 
-### UniswapV2ERC20.sol {#trade}
+### UniswapV2ERC20.sol {#uniswapv2erc20}
 
-[هذا العقد](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) ينفذ رمز السيولة <span dir="ltr">ERC-20</span>. إنه مشابه لـ [عقد أوبن زبلن ERC-20](/developers/tutorials/erc20-annotated-code)، لذلك سأشرح فقط الجزء المختلف، وهو وظيفة `permit`.
+[هذا العقد](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) ينفذ رمز السيولة <span dir="ltr">ERC-20</span>. إنه مشابه لـ [عقد أوبن زبلن <span dir="ltr">ERC-20</span>](/developers/tutorials/erc20-annotated-code)، لذلك سأشرح فقط الجزء المختلف، وهو وظيفة `permit`.
 
 تكلف المعاملات على إيثيريوم إيثر (ETH)، وهو ما يعادل أموالاً حقيقية. إذا كان لديك رموز <span dir="ltr">ERC-20</span> ولكن ليس لديك ETH، فلا يمكنك إرسال معاملات، لذلك لا يمكنك فعل أي شيء بها. أحد الحلول لتجنب هذه المشكلة هو [المعاملات الوصفية (meta-transactions)](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
 يوقع مالك الرموز المميزة على معاملة تسمح لشخص آخر بسحب الرموز المميزة خارج السلسلة ويرسلها باستخدام الإنترنت إلى المستلم. ثم يقوم المستلم، الذي يمتلك ETH، بتقديم التصريح نيابة عن المالك.
@@ -855,7 +855,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
     }
 ```
 
-احسب [فاصل النطاق](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) لـ EIP-712.
+احسب [فاصل النطاق](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) لـ <span dir="ltr">EIP-712</span>.
 
 ```solidity
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
@@ -896,17 +896,17 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ```
 
-إذا كان كل شيء على ما يرام، فتعامل مع هذا على أنه [موافقة ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
+إذا كان كل شيء على ما يرام، فتعامل مع هذا على أنه [موافقة <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## العقود المحيطية {#uniswapv2migrator}
+## العقود المحيطية {#periphery-contracts}
 
 العقود المحيطية هي واجهة برمجة التطبيقات (<span dir="ltr">API</span>) لبروتوكول يونيسواب. وهي متاحة للاستدعاءات الخارجية، سواء من عقود أخرى أو تطبيقات لامركزية (<span dir="ltr">dapps</span>). يمكنك استدعاء العقود الأساسية مباشرة، ولكن هذا أكثر تعقيدًا وقد تفقد القيمة إذا ارتكبت خطأ. تحتوي العقود الأساسية فقط على اختبارات للتأكد من عدم تعرضها للاحتيال، وليس فحوصات سلامة لأي شخص آخر. توجد هذه الفحوصات في العقود المحيطية بحيث يمكن تحديثها حسب الحاجة.
 
-### UniswapV2Router01.sol {#libraries}
+### UniswapV2Router01.sol {#uniswapv2router01}
 
 [هذا العقد](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) به مشاكل، و[يجب ألا يُستخدم بعد الآن](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). لحسن الحظ، العقود المحيطية عديمة الحالة ولا تحتفظ بأي أصول، لذلك من السهل إيقاف استخدامها واقتراح استخدام البديل، `UniswapV2Router02`، بدلاً منها.
 
-### UniswapV2Router02.sol {#math}
+### UniswapV2Router02.sol {#uniswapv2router02}
 
 في معظم الحالات، ستستخدم يونيسواب من خلال [هذا العقد](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
 يمكنك معرفة كيفية استخدامه [هنا](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
@@ -962,7 +962,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 يتم استدعاء هذه الدالة عندما نسترد الرموز المميزة من عقد <span dir="ltr">WETH</span> مرة أخرى إلى <span dir="ltr">ETH</span>. فقط عقد <span dir="ltr">WETH</span> الذي نستخدمه هو المصرح له بالقيام بذلك.
 
-#### إضافة سيولة {#fixedpoint}
+#### إضافة سيولة {#add-liquidity}
 
 تضيف هذه الدوال الرموز المميزة إلى مبادلة الزوج، مما يزيد من مجمع السيولة.
 
@@ -1147,7 +1147,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 لقد أرسل لنا المستخدم بالفعل <span dir="ltr">ETH</span>، لذلك إذا كان هناك أي فائض متبقي (لأن الرمز المميز الآخر أقل قيمة مما اعتقده المستخدم)، فنحن بحاجة إلى إصدار استرداد.
 
-#### إزالة السيولة {#uniswapv2library}
+#### إزالة السيولة {#remove-liquidity}
 
 ستقوم هذه الدوال بإزالة السيولة وسداد مزود السيولة.
 
@@ -1308,7 +1308,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 تجمع الدالة النهائية بين رسوم التخزين والمعاملات الوصفية.
 
-#### التداول {#transfer-helper}
+#### التداول {#trade}
 
 ```solidity
     // **** مبادلة ****
@@ -1666,15 +1666,15 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 هذه الدوال هي مجرد وكلاء (<span dir="ltr">proxies</span>) تستدعي [دوال UniswapV2Library](#uniswapv2library).
 
-### UniswapV2Migrator.sol {#conclusion}
+### UniswapV2Migrator.sol {#uniswapv2migrator}
 
 تم استخدام هذا العقد لترحيل المبادلات من الإصدار الأول القديم (<span dir="ltr">v1</span>) إلى الإصدار الثاني (<span dir="ltr">v2</span>). الآن بعد أن تم ترحيلها، لم يعد ذا صلة.
 
-## المكتبات
+## المكتبات {#libraries}
 
 إن [مكتبة SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) موثقة جيدًا، لذا لا حاجة لتوثيقها هنا.
 
-### الرياضيات
+### الرياضيات {#math}
 
 تحتوي هذه المكتبة على بعض الدوال الرياضية التي لا يُحتاج إليها عادةً في كود Solidity، لذا فهي ليست جزءًا من اللغة.
 
@@ -1719,7 +1719,7 @@ library Math {
 }
 ```
 
-### كسور النقطة الثابتة (<span dir="ltr">UQ112x112</span>)
+### كسور النقطة الثابتة (<span dir="ltr">UQ112x112</span>) {#fixedpoint}
 
 تتعامل هذه المكتبة مع الكسور، والتي لا تكون عادةً جزءًا من العمليات الحسابية في إيثيريوم. وتقوم بذلك عن طريق تشفير الرقم _<span dir="ltr">x</span>_ كـ _<span dir="ltr">x\*2^112</span>_. يتيح لنا هذا استخدام رموز التشغيل الأصلية للجمع والطرح دون تغيير.
 
@@ -1756,7 +1756,7 @@ library UQ112x112 {
 
 إذا قسمنا قيمتين من نوع `UQ112x112`، فلن يتم ضرب النتيجة في <span dir="ltr">2^112</span>. لذا بدلاً من ذلك نأخذ عددًا صحيحًا للمقام. كنا سنحتاج إلى استخدام حيلة مشابهة لإجراء عملية الضرب، لكننا لا نحتاج إلى إجراء عملية ضرب لقيم `UQ112x112`.
 
-### مكتبة UniswapV2Library
+### مكتبة UniswapV2Library {#uniswapv2library}
 
 تُستخدم هذه المكتبة فقط بواسطة العقود المحيطية
 
@@ -1878,9 +1878,9 @@ library UniswapV2Library {
 
 تتعامل هاتان الدالتان مع تحديد القيم عندما يكون من الضروري المرور عبر عدة تبادلات للأزواج.
 
-### مساعد التحويل
+### مساعد التحويل {#transfer-helper}
 
-تضيف [هذه المكتبة](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) فحوصات نجاح حول تحويلات ERC-20 وإيثيريوم للتعامل مع التراجع وإرجاع قيمة `false` بنفس الطريقة.
+تضيف [هذه المكتبة](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) فحوصات نجاح حول تحويلات <span dir="ltr">ERC-20</span> وإيثيريوم للتعامل مع التراجع وإرجاع قيمة `false` بنفس الطريقة.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -1912,7 +1912,7 @@ library TransferHelper {
     }
 ```
 
-من أجل التوافق مع الإصدارات السابقة للرموز المميزة التي تم إنشاؤها قبل معيار ERC-20، يمكن أن يفشل استدعاء ERC-20 إما عن طريق التراجع (وفي هذه الحالة يكون `success` هو `false`) أو من خلال كونه ناجحًا وإرجاع قيمة `false` (وفي هذه الحالة توجد بيانات مخرجات، وإذا قمت بفك تشفيرها كقيمة منطقية ستحصل على `false`).
+من أجل التوافق مع الإصدارات السابقة للرموز المميزة التي تم إنشاؤها قبل معيار <span dir="ltr">ERC-20</span>، يمكن أن يفشل استدعاء <span dir="ltr">ERC-20</span> إما عن طريق التراجع (وفي هذه الحالة يكون `success` هو `false`) أو من خلال كونه ناجحًا وإرجاع قيمة `false` (وفي هذه الحالة توجد بيانات مخرجات، وإذا قمت بفك تشفيرها كقيمة منطقية ستحصل على `false`).
 
 ```solidity
 
@@ -1931,7 +1931,7 @@ library TransferHelper {
     }
 ```
 
-تنفذ هذه الدالة [وظيفة التحويل الخاصة بـ ERC-20](https://eips.ethereum.org/EIPS/eip-20#transfer)، والتي تسمح لحساب بإنفاق السماحية المقدمة من حساب مختلف.
+تنفذ هذه الدالة [وظيفة التحويل الخاصة بـ <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20#transfer)، والتي تسمح لحساب بإنفاق السماحية المقدمة من حساب مختلف.
 
 ```solidity
 
@@ -1950,7 +1950,7 @@ library TransferHelper {
     }
 ```
 
-تنفذ هذه الدالة [وظيفة transferFrom الخاصة بـ ERC-20](https://eips.ethereum.org/EIPS/eip-20#transferfrom)، والتي تسمح لحساب بإنفاق السماحية المقدمة من حساب مختلف.
+تنفذ هذه الدالة [وظيفة transferFrom الخاصة بـ <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20#transferfrom)، والتي تسمح لحساب بإنفاق السماحية المقدمة من حساب مختلف.
 
 ```solidity
 
@@ -1963,7 +1963,7 @@ library TransferHelper {
 
 تقوم هذه الدالة بتحويل إيثر إلى حساب. يمكن لأي استدعاء لعقد مختلف أن يحاول إرسال إيثر. نظرًا لأننا لا نحتاج فعليًا إلى استدعاء أي دالة، فإننا لا نرسل أي بيانات مع الاستدعاء.
 
-## الخاتمة
+## الخاتمة {#conclusion}
 
 هذا مقال طويل يتكون من حوالي 50 صفحة. إذا وصلت إلى هنا، فتهانينا! نأمل أن تكون قد فهمت الآن الاعتبارات الخاصة بكتابة تطبيق على أرض الواقع (على عكس البرامج النموذجية القصيرة) وأن تكون أكثر قدرة على كتابة العقود لحالات الاستخدام الخاصة بك.
 

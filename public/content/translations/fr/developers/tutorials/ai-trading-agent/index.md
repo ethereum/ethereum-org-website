@@ -1,6 +1,6 @@
 ---
-title: Créez votre propre agent IA de trading sur Ethereum
-description: Dans ce tutoriel, vous apprendrez à créer un agent IA de trading simple. Cet agent lit les informations de la chaîne de blocs, demande une recommandation à un LLM basée sur ces informations, effectue l'échange recommandé par le LLM, puis attend et répète l'opération.
+title: "Créez votre propre agent IA de trading sur Ethereum"
+description: "Dans ce tutoriel, vous apprendrez à créer un agent IA de trading simple. Cet agent lit les informations de la chaîne de blocs, demande une recommandation à un LLM basée sur ces informations, effectue l'échange recommandé par le LLM, puis attend et répète l'opération."
 author: Ori Pomerantz
 tags: ["IA", "trading", "agent", "Python"]
 skill: intermediate

@@ -1,10 +1,10 @@
 ---
-title: 使用事件記錄智能合約的資料
-description: 智能合約事件簡介以及如何使用它們來記錄資料
+title: "使用事件記錄智能合約的資料"
+description: "智能合約事件簡介以及如何使用它們來記錄資料"
 author: "jdourlens"
-tags: ["智能合約", "remix", "solidity", "事件"]
+tags: ["智能合約", "Remix", "Solidity", "事件"]
 skill: intermediate
-breadcrumb: 事件日誌記錄
+breadcrumb: "事件日誌記錄"
 lang: zh-tw
 published: 2020-04-03
 source: EthereumDev

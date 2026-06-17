@@ -1,11 +1,11 @@
 ---
-title: Staking jako usługa
-description: Dowiedz się więcej o stakingu jako usłudze
+title: "Staking jako usługa"
+description: "Dowiedz się więcej o stakingu jako usłudze"
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Nosorożec Leslie unoszący się w chmurach.
+alt: "Nosorożec Leslie unoszący się w chmurach."
 sidebarDepth: 2
 summaryPoints:
   - Zewnętrzni operatorzy węzłów zajmują się obsługą Twojego klienta walidatora

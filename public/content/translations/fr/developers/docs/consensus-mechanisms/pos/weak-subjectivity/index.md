@@ -1,6 +1,6 @@
 ---
-title: Subjectivité faible
-description: Une explication de la subjectivité faible et de son rôle dans la preuve d'enjeu (PoS) d'Ethereum.
+title: "Subjectivité faible"
+description: "Une explication de la subjectivité faible et de son rôle dans la preuve d'enjeu (PoS) d'Ethereum."
 lang: fr
 ---
 

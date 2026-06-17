@@ -1,10 +1,10 @@
 ---
-title: JavaScript에서 스마트 컨트랙트 호출하기
-description: DAI 토큰 예제를 사용하여 JavaScript에서 스마트 컨트랙트 함수를 호출하는 방법
+title: "JavaScript에서 스마트 컨트랙트 호출하기"
+description: "DAI 토큰 예제를 사용하여 JavaScript에서 스마트 컨트랙트 함수를 호출하는 방법"
 author: jdourlens
 tags: ["트랜잭션", "프론트엔드", "JavaScript", "web3.js"]
 skill: beginner
-breadcrumb: JS에서 컨트랙트 호출하기
+breadcrumb: "JS에서 컨트랙트 호출하기"
 lang: ko
 published: 2020-04-19
 source: EthereumDev

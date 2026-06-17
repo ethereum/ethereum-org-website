@@ -1,6 +1,6 @@
 ---
-title: 약한 주관성
-description: 약한 주관성에 대한 설명과 지분 증명(PoS) 이더리움에서의 역할.
+title: "약한 주관성"
+description: "약한 주관성에 대한 설명과 지분 증명(PoS) 이더리움에서의 역할."
 lang: ko
 ---
 

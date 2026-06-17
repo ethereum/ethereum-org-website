@@ -1,10 +1,10 @@
 ---
-title: Solidityから他のコントラクトと対話する
-description: 既存のコントラクトからスマート・コントラクトをデプロイし、対話する方法
+title: "Solidityから他のコントラクトと対話する"
+description: "既存のコントラクトからスマート・コントラクトをデプロイし、対話する方法"
 author: "jdourlens"
-tags: ["スマート・コントラクト", "solidity", "remix", "デプロイ", "コンポーザビリティ"]
+tags: ["スマート・コントラクト", "Solidity", "Remix", "デプロイ", "コンポーザビリティ"]
 skill: advanced
-breadcrumb: コントラクトの対話
+breadcrumb: "コントラクトの対話"
 lang: ja
 published: 2020-04-05
 source: EthereumDev

@@ -1,6 +1,6 @@
 ---
 title: Vitalu
-description: Muhtasari wa vitalu katika mnyororo wa vitalu wa Ethereum – muundo wao wa data, kwa nini vinahitajika, na jinsi vinavyotengenezwa.
+description: "Muhtasari wa vitalu katika mnyororo wa vitalu wa Ethereum – muundo wao wa data, kwa nini vinahitajika, na jinsi vinavyotengenezwa."
 lang: sw
 ---
 

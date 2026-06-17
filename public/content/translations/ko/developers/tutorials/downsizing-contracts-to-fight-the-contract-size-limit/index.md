@@ -3,7 +3,7 @@ title: "컨트랙트 크기 제한에 맞서 컨트랙트 축소하기"
 description: "스마트 컨트랙트가 너무 커지는 것을 방지하려면 어떻게 해야 할까요?"
 author: "마르쿠스 바스"
 lang: ko
-tags: ["solidity", "스마트 컨트랙트", "저장소"]
+tags: ["Solidity", "스마트 컨트랙트", "저장소"]
 skill: intermediate
 breadcrumb: "컨트랙트 축소하기"
 published: 2020-06-26
@@ -65,7 +65,7 @@ function get(uint id) returns (address,address) {
 }
 ```
 
-이러한 간단한 변경만으로도 **0.28kb**의 차이가 발생합니다. 컨트랙트에서 이와 유사한 상황을 많이 찾을 수 있으며, 이것들이 모이면 상당한 양이 될 수 있습니다.
+이러한 간단한 변경만으로도 <strong>0.28kb</strong>의 차이가 발생합니다. 컨트랙트에서 이와 유사한 상황을 많이 찾을 수 있으며, 이것들이 모이면 상당한 양이 될 수 있습니다.
 
 ### 오류 메시지 줄이기 {#shorten-error-message}
 
@@ -93,13 +93,13 @@ if (msg.sender != owner) {
 
 ### 최적화 도구에서 낮은 실행 값 고려하기 {#consider-a-low-run-value-in-the-optimizer}
 
-최적화 도구(optimizer) 설정을 변경할 수도 있습니다. 기본값인 200은 함수가 200번 호출되는 것처럼 바이트코드를 최적화하려고 시도한다는 의미입니다. 이 값을 1로 변경하면 기본적으로 각 함수가 한 번만 실행되는 경우에 맞춰 최적화하도록 최적화 도구에 지시하는 것입니다. 한 번만 실행되도록 최적화된 함수는 배포 자체에 최적화되어 있음을 의미합니다. **이로 인해 함수 실행에 대한 [가스 비용](/developers/docs/gas/)이 증가**하므로, 이 방법을 원하지 않을 수도 있다는 점에 유의하세요.
+최적화 도구(optimizer) 설정을 변경할 수도 있습니다. 기본값인 200은 함수가 200번 호출되는 것처럼 바이트코드를 최적화하려고 시도한다는 의미입니다. 이 값을 1로 변경하면 기본적으로 각 함수가 한 번만 실행되는 경우에 맞춰 최적화하도록 최적화 도구에 지시하는 것입니다. 한 번만 실행되도록 최적화된 함수는 배포 자체에 최적화되어 있음을 의미합니다. <strong>이로 인해 함수 실행에 대한 [가스 비용](/developers/docs/gas/)이 증가</strong>하므로, 이 방법을 원하지 않을 수도 있다는 점에 유의하세요.
 
 ## 작은 영향 {#small-impact}
 
 ### 함수에 구조체 전달 피하기 {#avoid-passing-structs-to-functions}
 
-[ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2)를 사용하는 경우, 함수에 구조체를 전달하지 않는 것이 도움이 될 수 있습니다. 매개변수를 구조체로 전달하는 대신, 필요한 매개변수를 직접 전달하세요. 이 예제에서는 추가로 **0.1kb**를 절약했습니다.
+[ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2)를 사용하는 경우, 함수에 구조체를 전달하지 않는 것이 도움이 될 수 있습니다. 매개변수를 구조체로 전달하는 대신, 필요한 매개변수를 직접 전달하세요. 이 예제에서는 추가로 <strong>0.1kb</strong>를 절약했습니다.
 
 ```solidity
 function get(uint id) returns (address,address) {

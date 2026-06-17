@@ -1,11 +1,11 @@
 ---
 title: "用于优化调用数据的简短 ABI"
-description: 为 Optimistic 汇总优化智能合约
-author: 奥里·波梅兰茨
+description: "为 Optimistic 汇总优化智能合约"
+author: "奥里·波梅兰茨"
 lang: zh
 tags: ["二层网络 (l2)"]
 skill: intermediate
-breadcrumb: 简短 ABI
+breadcrumb: "简短 ABI"
 published: 2022-04-01
 ---
 

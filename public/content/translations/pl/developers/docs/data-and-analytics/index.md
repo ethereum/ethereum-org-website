@@ -1,6 +1,6 @@
 ---
 title: Dane i analityka
-description: Jak uzyskać analitykę i dane onchain do wykorzystania w twoich zdecentralizowanych aplikacjach (dapp)
+description: "Jak uzyskać analitykę i dane onchain do wykorzystania w twoich zdecentralizowanych aplikacjach (dapp)"
 lang: pl
 ---
 

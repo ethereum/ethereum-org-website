@@ -1,11 +1,11 @@
 ---
-title: التحصيص كخدمة
-description: تعرف على التحصيص كخدمة
+title: "التحصيص كخدمة"
+description: "تعرف على التحصيص كخدمة"
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: وحيد القرن ليزلي يطفو في السحاب.
+alt: "وحيد القرن ليزلي يطفو في السحاب."
 sidebarDepth: 2
 summaryPoints:
   - يتولى مشغلو العقد التابعون لجهات خارجية تشغيل عميل المُدَقِّق الخاص بك

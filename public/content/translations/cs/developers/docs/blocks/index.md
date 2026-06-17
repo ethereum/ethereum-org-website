@@ -1,6 +1,6 @@
 ---
 title: Bloky
-description: Přehled bloků v blockchainu Etherea – jejich datová struktura, proč jsou potřeba a jak vznikají.
+description: "Přehled bloků v blockchainu Etherea – jejich datová struktura, proč jsou potřeba a jak vznikají."
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Dezentralisierte Wissenschaft (DeSci)
-description: Ein Überblick über dezentralisierte Wissenschaft auf Ethereum
+description: "Ein Überblick über dezentralisierte Wissenschaft auf Ethereum"
 lang: de
 template: use-cases
 sidebarDepth: 2

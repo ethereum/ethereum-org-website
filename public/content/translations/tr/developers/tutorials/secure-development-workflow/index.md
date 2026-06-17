@@ -1,13 +1,13 @@
 ---
-title: Akıllı sözleşme güvenlik kontrol listesi
-description: Güvenli akıllı sözleşmeler yazmak için önerilen bir iş akışı
+title: "Akıllı sözleşme güvenlik kontrol listesi"
+description: "Güvenli akıllı sözleşmeler yazmak için önerilen bir iş akışı"
 author: "Trailofbits"
 tags:
   - akıllı sözleşmeler
   - güvenlik
   - solidity
 skill: intermediate
-breadcrumb: Güvenlik kontrol listesi
+breadcrumb: "Güvenlik kontrol listesi"
 lang: tr
 published: 2020-09-07
 source: Building secure contracts

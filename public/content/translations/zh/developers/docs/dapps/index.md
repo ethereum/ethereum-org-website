@@ -1,5 +1,5 @@
 ---
-title: 去中心化应用 (dapp) 技术简介
+title: "去中心化应用 (dapp) 技术简介"
 description:
 lang: zh
 ---

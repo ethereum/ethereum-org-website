@@ -1,13 +1,13 @@
 ---
-title: سمارٹ کنٹریکٹ سیکیورٹی کے رہنما اصول
-description: اپنی ⁦dapp⁩ بناتے وقت غور کرنے کے لیے سیکیورٹی رہنما اصولوں کی ایک چیک لسٹ
+title: "سمارٹ کنٹریکٹ سیکیورٹی کے رہنما اصول"
+description: "اپنی ⁦dapp⁩ بناتے وقت غور کرنے کے لیے سیکیورٹی رہنما اصولوں کی ایک چیک لسٹ"
 author: Trailofbits
 tags:
   - solidity
   - سمارٹ کنٹریکٹس
   - سیکیورٹی
 skill: intermediate
-breadcrumb: سیکیورٹی کے رہنما اصول
+breadcrumb: "سیکیورٹی کے رہنما اصول"
 lang: ur
 published: 2020-09-06
 source: Building secure contracts

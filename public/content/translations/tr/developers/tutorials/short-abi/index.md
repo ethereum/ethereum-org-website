@@ -1,11 +1,11 @@
 ---
 title: "Çağrı Verisi Optimizasyonu için Kısa ABI'ler"
-description: İyimser Toplamalar (Optimistic Rollups) için akıllı sözleşmeleri optimize etme
+description: "İyimser Toplamalar (Optimistic Rollups) için akıllı sözleşmeleri optimize etme"
 author: Ori Pomerantz
 lang: tr
 tags: ["katman 2 (l2)"]
 skill: intermediate
-breadcrumb: Kısa ABI'ler
+breadcrumb: "Kısa ABI'ler"
 published: 2022-04-01
 ---
 

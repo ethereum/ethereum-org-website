@@ -1,6 +1,6 @@
 ---
-title: Мосты
-description: Обзор мостов для разработчиков
+title: "Мосты"
+description: "Обзор мостов для разработчиков"
 lang: ru
 ---
 
@@ -121,6 +121,7 @@ lang: ru
 - [Tenderly](https://tenderly.co/)
 
 ## Дополнительная литература {#further-reading}
+
 - [Блокчейн-мосты](/bridges/) — ethereum.org
 - [Структура рисков мостов от L2BEAT](https://l2beat.com/bridges/summary)
 - [Блокчейн-мосты: создание сетей криптосетей](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) — 8 сентября 2021 г., Дмитрий Берензон (Dmitriy Berenzon)

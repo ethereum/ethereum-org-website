@@ -1,11 +1,11 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्टमधील बग्स शोधण्यासाठी स्लिदर कसे वापरावे
-description: स्मार्ट कॉन्ट्रॅक्ट्समध्ये स्वयंचलितपणे बग्स शोधण्यासाठी स्लिदर कसे वापरावे
-author: ट्रेलऑफबिट्स
+title: "स्मार्ट कॉन्ट्रॅक्टमधील बग्स शोधण्यासाठी स्लिदर कसे वापरावे"
+description: "स्मार्ट कॉन्ट्रॅक्ट्समध्ये स्वयंचलितपणे बग्स शोधण्यासाठी स्लिदर कसे वापरावे"
+author: "ट्रेलऑफबिट्स"
 lang: mr
 tags: ["Solidity", "स्मार्ट कॉन्ट्रॅक्ट्स", "सुरक्षा", "चाचणी"]
 skill: advanced
-breadcrumb: स्लिदर
+breadcrumb: "स्लिदर"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

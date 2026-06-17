@@ -1,6 +1,6 @@
 ---
-title: Dữ liệu và phân tích
-description: Cách lấy dữ liệu và phân tích trên chuỗi để sử dụng trong các ứng dụng phi tập trung (dapp) của bạn
+title: "Dữ liệu và phân tích"
+description: "Cách lấy dữ liệu và phân tích trên chuỗi để sử dụng trong các ứng dụng phi tập trung (dapp) của bạn"
 lang: vi
 ---
 

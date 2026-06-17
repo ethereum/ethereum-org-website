@@ -1,6 +1,6 @@
 ---
-title: Ethereum Hisse Kanıtı (PoS) saldırı ve savunması
-description: Hisse Kanıtı (PoS) Ethereum üzerindeki bilinen saldırı vektörleri ve bunlara karşı nasıl savunma yapıldığı hakkında bilgi edinin.
+title: "Ethereum Hisse Kanıtı (PoS) saldırı ve savunması"
+description: "Hisse Kanıtı (PoS) Ethereum üzerindeki bilinen saldırı vektörleri ve bunlara karşı nasıl savunma yapıldığı hakkında bilgi edinin."
 lang: tr
 ---
 

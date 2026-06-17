@@ -1,6 +1,6 @@
 ---
 title: "Engenharia reversa de um contrato"
-description: Como entender um contrato quando você não tem o código-fonte
+description: "Como entender um contrato quando você não tem o código-fonte"
 author: Ori Pomerantz
 lang: pt-br
 tags: ["evm", "opcodes"]

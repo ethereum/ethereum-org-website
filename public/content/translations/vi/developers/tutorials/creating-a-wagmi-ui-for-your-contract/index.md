@@ -9,7 +9,7 @@ tags:
   - wagmi
   - giao diện người dùng
 skill: beginner
-breadcrumb: Giao diện người dùng với WAGMI
+breadcrumb: "Giao diện người dùng với WAGMI"
 published: 2023-11-01
 lang: vi
 sidebarDepth: 3
@@ -230,7 +230,8 @@ JSX của một thành phần React _phải_ trả về một thành phần HTML
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 Cung cấp thông tin về kết nối hiện tại. Trong JSX, `{<expression>}` có nghĩa là đánh giá biểu thức dưới dạng JavaScript.
@@ -257,7 +258,8 @@ JSX tuân theo tiêu chuẩn XML, nghiêm ngặt hơn HTML. Nếu một thẻ kh
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -298,7 +300,8 @@ Các nút trình kết nối.
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

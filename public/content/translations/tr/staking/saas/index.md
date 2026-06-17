@@ -1,11 +1,11 @@
 ---
 title: Hizmet olarak staking
-description: Hizmet olarak staking hakkında bilgi edinin
+description: "Hizmet olarak staking hakkında bilgi edinin"
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Gergedan Leslie bulutların üzerinde süzülüyor.
+alt: "Gergedan Leslie bulutların üzerinde süzülüyor."
 sidebarDepth: 2
 summaryPoints:
   - Üçüncü taraf düğüm operatörleri, doğrulayıcı istemcinizin operasyonunu yönetir

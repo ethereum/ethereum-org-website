@@ -1,6 +1,6 @@
 ---
-title: 지분 증명(PoS) 대 작업증명(PoW)
-description: 이더리움의 지분 증명 및 작업증명 기반 합의 메커니즘 비교
+title: "지분 증명(PoS) 대 작업증명(PoW)"
+description: "이더리움의 지분 증명 및 작업증명 기반 합의 메커니즘 비교"
 lang: ko
 ---
 

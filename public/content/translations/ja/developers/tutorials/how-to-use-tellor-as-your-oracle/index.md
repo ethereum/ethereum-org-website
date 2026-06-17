@@ -1,11 +1,11 @@
 ---
-title: テラーをオラクルとして設定する方法
-description: テラーのオラクルをプロトコルに統合するためのスタートガイド
+title: "テラーをオラクルとして設定する方法"
+description: "テラーのオラクルをプロトコルに統合するためのスタートガイド"
 author: "テラー"
 lang: ja
-tags: ["solidity", "スマートコントラクト", "オラクル"]
+tags: ["Solidity", "スマートコントラクト", "オラクル"]
 skill: beginner
-breadcrumb: テラーのオラクル
+breadcrumb: "テラーのオラクル"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

@@ -1,12 +1,12 @@
 ---
-title: 스마트 컨트랙트에서 버그를 찾기 위해 맨티코어(Manticore)를 사용하는 방법
-description: 맨티코어를 사용하여 스마트 컨트랙트에서 자동으로 버그를 찾는 방법
-author: 트레일오브비츠
+title: "스마트 컨트랙트에서 버그를 찾기 위해 맨티코어(Manticore)를 사용하는 방법"
+description: "맨티코어를 사용하여 스마트 컨트랙트에서 자동으로 버그를 찾는 방법"
+author: "트레일오브비츠"
 lang: ko
 tags:
-  ["솔리디티", "스마트 컨트랙트", "보안", "테스트", "정형 검증"]
+  ["Solidity", "스마트 컨트랙트", "보안", "테스트", "정형 검증"]
 skill: advanced
-breadcrumb: 맨티코어
+breadcrumb: "맨티코어"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
@@ -120,7 +120,7 @@ function safe_add(uint a, uint b) returns(uint c){
 
 - `c = a + b AND (c >= a) AND (c=>b) AND (c < a OR c < b)`
 
-이 공식은 풀 수 없습니다. 다시 말해 이는 `safe_add`에서 `c`가 항상 증가한다는 **증명**입니다.
+이 공식은 풀 수 없습니다. 다시 말해 이는 `safe_add`에서 `c`가 항상 증가한다는 <strong>증명</strong>입니다.
 
 따라서 DSE는 코드에 대한 임의의 제약 조건을 검증할 수 있는 강력한 도구입니다.
 

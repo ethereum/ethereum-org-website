@@ -1,10 +1,10 @@
 ---
-title: NFT मिंटर ट्यूटोरियल
-description: इस ट्यूटोरियल में, आप एक NFT मिंटर बनाएंगे और सीखेंगे कि मेटामास्क (MetaMask) और Web3 टूल का उपयोग करके अपने स्मार्ट अनुबंध को React फ्रंटएंड से जोड़कर एक फुल स्टैक विकेंद्रीकृत एप्लिकेशन (dapp) कैसे बनाया जाए।
+title: "NFT मिंटर ट्यूटोरियल"
+description: "इस ट्यूटोरियल में, आप एक NFT मिंटर बनाएंगे और सीखेंगे कि मेटामास्क (MetaMask) और Web3 टूल का उपयोग करके अपने स्मार्ट अनुबंध को React फ्रंटएंड से जोड़कर एक फुल स्टैक विकेंद्रीकृत एप्लिकेशन (dapp) कैसे बनाया जाए।"
 author: "smudgil"
 tags: ["Solidity", "NFT", "Alchemy", "स्मार्ट अनुबंध", "फ्रंटएंड", "Pinata", "ERC-721"]
 skill: intermediate
-breadcrumb: NFT मिंटर dapp
+breadcrumb: "NFT मिंटर dapp"
 lang: hi
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

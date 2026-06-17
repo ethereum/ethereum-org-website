@@ -1,11 +1,11 @@
 ---
-title: Staking jako služba
-description: Zjistěte více o stakingu jako službě
+title: "Staking jako služba"
+description: "Zjistěte více o stakingu jako službě"
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Nosorožec Leslie vznášející se v oblacích.
+alt: "Nosorožec Leslie vznášející se v oblacích."
 sidebarDepth: 2
 summaryPoints:
   - Provozovatelé uzlů třetích stran se starají o provoz vašeho klienta validátoru

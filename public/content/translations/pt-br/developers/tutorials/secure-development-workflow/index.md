@@ -1,10 +1,10 @@
 ---
-title: Lista de verificação de segurança de contratos inteligentes
+title: "Lista de verificação de segurança de contratos inteligentes"
 description: Um fluxo de trabalho sugerido para escrever contratos inteligentes seguros
 author: "Trailofbits"
-tags: ["contratos inteligentes", "segurança", "solidity"]
+tags: ["contratos inteligentes", "segurança", "Solidity"]
 skill: intermediate
-breadcrumb: Lista de verificação de segurança
+breadcrumb: "Lista de verificação de segurança"
 lang: pt-br
 published: 2020-09-07
 source: Building secure contracts

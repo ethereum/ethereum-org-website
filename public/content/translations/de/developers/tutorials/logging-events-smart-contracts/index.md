@@ -1,8 +1,8 @@
 ---
 title: Daten aus Smart Contracts mit Ereignissen loggen
-description: Eine Einführung in Smart-Contract-Ereignisse und wie man sie zum Loggen von Daten verwenden kann
+description: "Eine Einführung in Smart-Contract-Ereignisse und wie man sie zum Loggen von Daten verwenden kann"
 author: "jdourlens"
-tags: ["Smart Contracts", "remix", "solidity", "Ereignisse"]
+tags: ["Smart Contracts", "Remix", "Solidity", "Ereignisse"]
 skill: intermediate
 breadcrumb: Ereignis-Logging
 lang: de

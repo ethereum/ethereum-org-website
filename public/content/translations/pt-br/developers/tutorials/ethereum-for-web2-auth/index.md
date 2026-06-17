@@ -1,10 +1,10 @@
 ---
-title: Usando o Ethereum para autenticação na Web2
-description: Após ler este tutorial, um desenvolvedor será capaz de integrar o login do Ethereum (web3) com o login SAML, um padrão usado na Web2 para fornecer logon único (single sign-on) e outros serviços relacionados. Isso permite que o acesso a recursos da Web2 seja autenticado por meio de assinaturas do Ethereum, com os atributos do usuário provenientes de atestações.
+title: "Usando o Ethereum para autenticação na Web2"
+description: "Após ler este tutorial, um desenvolvedor será capaz de integrar o login do Ethereum (web3) com o login SAML, um padrão usado na Web2 para fornecer logon único (single sign-on) e outros serviços relacionados. Isso permite que o acesso a recursos da Web2 seja autenticado por meio de assinaturas do Ethereum, com os atributos do usuário provenientes de atestações."
 author: Ori Pomerantz
 tags: ["web2", "autenticação", "eas"]
 skill: beginner
-breadcrumb: Ethereum para autenticação na Web2
+breadcrumb: "Ethereum para autenticação na Web2"
 lang: pt-br
 published: 2025-04-30
 ---

@@ -1,6 +1,6 @@
 ---
 title: Standard tokena ERC-223
-description: Przegląd standardu tokenów zamiennych ERC-223, jak działa i porównanie z ERC-20.
+description: "Przegląd standardu tokenów zamiennych ERC-223, jak działa i porównanie z ERC-20."
 lang: pl
 ---
 

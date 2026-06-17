@@ -2,7 +2,7 @@
 title: Interagire con altri contratti da Solidity
 description: Come distribuire uno smart contract da un contratto esistente e interagirvi
 author: "jdourlens"
-tags: ["smart contract", "solidity", "remix", "distribuzione", "componibilità"]
+tags: ["smart contract", "Solidity", "Remix", "distribuzione", "componibilità"]
 skill: advanced
 breadcrumb: Interazioni tra contratti
 lang: it

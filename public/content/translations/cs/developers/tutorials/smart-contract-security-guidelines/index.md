@@ -1,10 +1,10 @@
 ---
-title: Pokyny pro bezpečnost chytrých kontraktů
-description: Kontrolní seznam bezpečnostních pokynů, které je třeba zvážit při tvorbě vaší dapp
+title: "Pokyny pro bezpečnost chytrých kontraktů"
+description: "Kontrolní seznam bezpečnostních pokynů, které je třeba zvážit při tvorbě vaší dapp"
 author: "Trailofbits"
 tags: ["Solidity", "chytré kontrakty", "bezpečnost"]
 skill: intermediate
-breadcrumb: Bezpečnostní pokyny
+breadcrumb: "Bezpečnostní pokyny"
 lang: cs
 published: 2020-09-06
 source: Building secure contracts

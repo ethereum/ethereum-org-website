@@ -1,11 +1,11 @@
 ---
-title: Cómo configurar Tellor como tu oráculo
-description: Una guía para empezar a integrar el oráculo de Tellor en tu protocolo
+title: "Cómo configurar Tellor como tu oráculo"
+description: "Una guía para empezar a integrar el oráculo de Tellor en tu protocolo"
 author: "Tellor"
 lang: es
-tags: ["solidity", "contratos inteligentes", "oráculos"]
+tags: ["Solidity", "contratos inteligentes", "oráculos"]
 skill: beginner
-breadcrumb: Oráculo de Tellor
+breadcrumb: "Oráculo de Tellor"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

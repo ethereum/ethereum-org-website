@@ -1,6 +1,6 @@
 ---
 title: Design a UX ve Web3
-description: Úvod do UX designu a výzkumu v prostoru Web3 a Etherea
+description: "Úvod do UX designu a výzkumu v prostoru Web3 a Etherea"
 lang: cs
 ---
 

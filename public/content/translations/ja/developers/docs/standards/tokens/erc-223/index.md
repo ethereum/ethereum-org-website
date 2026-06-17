@@ -1,6 +1,6 @@
 ---
-title: ERC-223 トークン標準
-description: ERC-223代替性トークン標準の概要、その仕組み、およびERC-20との比較。
+title: "ERC-223 トークン標準"
+description: "ERC-223代替性トークン標準の概要、その仕組み、およびERC-20との比較。"
 lang: ja
 ---
 

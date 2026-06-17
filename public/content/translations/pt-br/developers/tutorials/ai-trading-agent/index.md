@@ -1,10 +1,10 @@
 ---
-title: Crie seu próprio agente de IA de negociação no Ethereum
-description: Neste tutorial, você aprenderá a criar um agente de IA de negociação simples. Este agente lê informações da blockchain, pede a um LLM uma recomendação com base nessas informações, realiza a negociação que o LLM recomenda, e então aguarda e repete.
+title: "Crie seu próprio agente de IA de negociação no Ethereum"
+description: "Neste tutorial, você aprenderá a criar um agente de IA de negociação simples. Este agente lê informações da blockchain, pede a um LLM uma recomendação com base nessas informações, realiza a negociação que o LLM recomenda, e então aguarda e repete."
 author: Ori Pomerantz
 tags: ["IA", "negociação", "agente", "Python"]
 skill: intermediate
-breadcrumb: Agente de IA de negociação
+breadcrumb: "Agente de IA de negociação"
 published: 2026-02-13
 lang: pt-br
 sidebarDepth: 3

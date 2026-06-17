@@ -1,10 +1,10 @@
 ---
-title: Diretrizes de segurança para contratos inteligentes
-description: Uma lista de verificação de diretrizes de segurança a considerar ao construir seu aplicativo descentralizado (dapp)
+title: "Diretrizes de segurança para contratos inteligentes"
+description: "Uma lista de verificação de diretrizes de segurança a considerar ao construir seu aplicativo descentralizado (dapp)"
 author: "Trailofbits"
-tags: ["solidity", "contratos inteligentes", "segurança"]
+tags: ["Solidity", "contratos inteligentes", "segurança"]
 skill: intermediate
-breadcrumb: Diretrizes de segurança
+breadcrumb: "Diretrizes de segurança"
 lang: pt-br
 published: 2020-09-06
 source: Building secure contracts

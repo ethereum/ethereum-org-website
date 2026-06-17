@@ -1,6 +1,6 @@
 ---
-title: विकेंद्रित विज्ञान (डीसाय)
-description: इथेरियमवरील विकेंद्रित विज्ञानाचा आढावा
+title: "विकेंद्रित विज्ञान (डीसाय)"
+description: "इथेरियमवरील विकेंद्रित विज्ञानाचा आढावा"
 lang: mr
 template: use-cases
 sidebarDepth: 2

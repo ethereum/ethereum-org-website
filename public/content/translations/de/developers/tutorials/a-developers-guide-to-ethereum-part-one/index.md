@@ -1,9 +1,9 @@
 ---
-title: Einführung in Ethereum für Python-Entwickler, Teil 1
-description: Eine Einführung in die Ethereum-Entwicklung, besonders nützlich für Personen mit Kenntnissen in der Programmiersprache Python
+title: "Einführung in Ethereum für Python-Entwickler, Teil 1"
+description: "Eine Einführung in die Ethereum-Entwicklung, besonders nützlich für Personen mit Kenntnissen in der Programmiersprache Python"
 author: Marc Garreau
 lang: de
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
 breadcrumb: Ethereum mit Python
 published: 2020-09-08

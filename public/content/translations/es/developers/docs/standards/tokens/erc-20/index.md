@@ -1,6 +1,6 @@
 ---
-title: Estándar de token ERC-20
-description: Aprenda sobre el ERC-20, el estándar para tokens fungibles en Ethereum que permite aplicaciones de tokens interoperables.
+title: "Estándar de token ERC-20"
+description: "Aprenda sobre el ERC-20, el estándar para tokens fungibles en Ethereum que permite aplicaciones de tokens interoperables."
 lang: es
 ---
 

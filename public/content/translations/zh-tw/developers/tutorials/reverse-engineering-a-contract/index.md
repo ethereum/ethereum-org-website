@@ -1,11 +1,11 @@
 ---
 title: "逆向工程合約"
-description: 如何在沒有原始碼的情況下理解合約
-author: 奧里·波梅蘭茨
+description: "如何在沒有原始碼的情況下理解合約"
+author: "奧里·波梅蘭茨"
 lang: zh-tw
 tags: ["evm", "操作碼"]
 skill: advanced
-breadcrumb: 逆向工程
+breadcrumb: "逆向工程"
 published: 2021-12-30
 ---
 ## 簡介 {#introduction}

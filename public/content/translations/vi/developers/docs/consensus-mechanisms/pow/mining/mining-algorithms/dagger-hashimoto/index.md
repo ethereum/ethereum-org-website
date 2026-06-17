@@ -1,6 +1,6 @@
 ---
 title: Dagger-Hashimoto
-description: Cái nhìn chi tiết về thuật toán Dagger-Hashimoto.
+description: "Cái nhìn chi tiết về thuật toán Dagger-Hashimoto."
 lang: vi
 ---
 

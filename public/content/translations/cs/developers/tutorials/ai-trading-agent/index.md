@@ -1,6 +1,6 @@
 ---
-title: Vytvořte si vlastního obchodního AI agenta na Ethereu
-description: V tomto tutoriálu se naučíte, jak vytvořit jednoduchého obchodního AI agenta. Tento agent čte informace z blockchainu, požádá LLM o doporučení na základě těchto informací, provede obchod, který LLM doporučí, a poté čeká a proces opakuje.
+title: "Vytvořte si vlastního obchodního AI agenta na Ethereu"
+description: "V tomto tutoriálu se naučíte, jak vytvořit jednoduchého obchodního AI agenta. Tento agent čte informace z blockchainu, požádá LLM o doporučení na základě těchto informací, provede obchod, který LLM doporučí, a poté čeká a proces opakuje."
 author: Ori Pomerantz
 tags:
   - AI
@@ -8,7 +8,7 @@ tags:
   - agent
   - Python
 skill: intermediate
-breadcrumb: Obchodní AI agent
+breadcrumb: "Obchodní AI agent"
 published: 2026-02-13
 lang: cs
 sidebarDepth: 3

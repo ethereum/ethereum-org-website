@@ -1,6 +1,6 @@
 ---
 title: Blocs
-description: Un aperçu des blocs dans la chaîne de blocs Ethereum – leur structure de données, pourquoi ils sont nécessaires et comment ils sont créés.
+description: "Un aperçu des blocs dans la chaîne de blocs Ethereum – leur structure de données, pourquoi ils sont nécessaires et comment ils sont créés."
 lang: fr
 ---
 

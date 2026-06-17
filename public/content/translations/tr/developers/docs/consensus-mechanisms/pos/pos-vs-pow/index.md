@@ -1,6 +1,6 @@
 ---
-title: Hisse Kanıtı (PoS) ve İş Kanıtı (PoW)
-description: Ethereum'un Hisse Kanıtı ve İş Kanıtı tabanlı mutabakat mekanizmalarının bir karşılaştırması
+title: "Hisse Kanıtı (PoS) ve İş Kanıtı (PoW)"
+description: "Ethereum'un Hisse Kanıtı ve İş Kanıtı tabanlı mutabakat mekanizmalarının bir karşılaştırması"
 lang: tr
 ---
 

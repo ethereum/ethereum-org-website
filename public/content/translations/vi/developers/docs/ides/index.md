@@ -1,6 +1,6 @@
 ---
-title: Môi trường phát triển tích hợp (IDE)
-description: Tìm hiểu về các IDE trên nền tảng web và máy tính để bàn dành cho phát triển Ethereum, bao gồm Remix, VS Code và các plugin phổ biến.
+title: "Môi trường phát triển tích hợp (IDE)"
+description: "Tìm hiểu về các IDE trên nền tảng web và máy tính để bàn dành cho phát triển Ethereum, bao gồm Remix, VS Code và các plugin phổ biến."
 lang: vi
 ---
 

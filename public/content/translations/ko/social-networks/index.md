@@ -1,6 +1,6 @@
 ---
-title: 탈중앙화 소셜 네트워크
-description: 이더리움의 탈중앙화 소셜 네트워크 개요
+title: "탈중앙화 소셜 네트워크"
+description: "이더리움의 탈중앙화 소셜 네트워크 개요"
 lang: ko
 template: use-cases
 sidebarDepth: 2
@@ -37,15 +37,15 @@ summaryPoints:
 
 1. 탈중앙화 소셜 네트워크는 검열에 저항하며 모두에게 열려 있습니다. 이는 **사용자가 임의로 차단되거나**, 플랫폼에서 퇴출당하거나, 제한될 수 없음을 의미합니다.
 
-2. 탈중앙화 소셜 네트워크는 **오픈 소스 이상을 바탕으로 구축**되며 애플리케이션의 소스 코드를 공개하여 누구나 검토할 수 있게 합니다. 기존 소셜 미디어에서 흔히 볼 수 있는 불투명한 알고리즘의 구현을 제거함으로써, 블록체인 기반 소셜 네트워크는 사용자와 플랫폼 제작자의 이익을 일치시킬 수 있습니다.
+2. 탈중앙화 소셜 네트워크는 <strong>오픈 소스 이상을 바탕으로 구축</strong>되며 애플리케이션의 소스 코드를 공개하여 누구나 검토할 수 있게 합니다. 기존 소셜 미디어에서 흔히 볼 수 있는 불투명한 알고리즘의 구현을 제거함으로써, 블록체인 기반 소셜 네트워크는 사용자와 플랫폼 제작자의 이익을 일치시킬 수 있습니다.
 
-3. 탈중앙화 소셜 네트워크는 "중개자"를 제거합니다. 콘텐츠 **크리에이터는 자신의 콘텐츠에 대한 직접적인 소유권**을 가지며, 스마트 컨트랙트만을 매개로 팔로워, 팬, 구매자 및 기타 당사자와 직접 소통합니다.
+3. 탈중앙화 소셜 네트워크는 "중개자"를 제거합니다. 콘텐츠 <strong>크리에이터는 자신의 콘텐츠에 대한 직접적인 소유권</strong>을 가지며, 스마트 컨트랙트만을 매개로 팔로워, 팬, 구매자 및 기타 당사자와 직접 소통합니다.
 
-4. 전 세계적인 피어 투 피어 노드 네트워크에 의해 유지되는 이더리움 네트워크에서 실행되는 탈중앙화 애플리케이션(dapp)으로서, 탈중앙화 소셜 네트워크는 **서버 다운타임 및 중단에 덜 취약**합니다.
+4. 전 세계적인 피어 투 피어 노드 네트워크에 의해 유지되는 이더리움 네트워크에서 실행되는 탈중앙화 애플리케이션(dapp)으로서, 탈중앙화 소셜 네트워크는 <strong>서버 다운타임 및 중단에 덜 취약</strong>합니다.
 
 5. 탈중앙화 소셜 플랫폼은 [대체 불가능한 토큰(NFT)](/glossary/#nft), 인앱 암호화폐 결제 등을 통해 콘텐츠 크리에이터에게 **개선된 수익 창출** 프레임워크를 제공합니다.
 
-6. 탈중앙화 소셜 네트워크는 사용자에게 **높은 수준의 프라이버시와 익명성**을 제공합니다. 예를 들어, 개인은 이름, 이메일 주소 등과 같은 개인 식별 정보(PII)를 공유할 필요 없이 [ENS](/glossary/#ens) 프로필이나 [지갑](/glossary/#wallet)을 사용하여 이더리움 기반 소셜 네트워크에 로그인할 수 있습니다.
+6. 탈중앙화 소셜 네트워크는 사용자에게 <strong>높은 수준의 프라이버시와 익명성</strong>을 제공합니다. 예를 들어, 개인은 이름, 이메일 주소 등과 같은 개인 식별 정보(PII)를 공유할 필요 없이 [ENS](/glossary/#ens) 프로필이나 [지갑](/glossary/#wallet)을 사용하여 이더리움 기반 소셜 네트워크에 로그인할 수 있습니다.
 
 7. 탈중앙화 소셜 네트워크는 중앙화된 데이터베이스가 아닌 탈중앙화 스토리지에 의존하며, 이는 사용자 데이터를 보호하는 데 훨씬 더 유리합니다.
 
@@ -86,29 +86,29 @@ Mirror에 게시된 글은 탈중앙화 스토리지 플랫폼인 Arweave에 영
 
 ### Brave Browser {#brave}
 
-- Brave는 디지털 광고 및 콘텐츠 크리에이터 지원을 혁신하기 위해 이더리움 기반의 ERC-20 토큰인 **[BAT(Basic Attention Token)](https://basicattentiontoken.org/)**를 브라우저 생태계에 통합했습니다.
+- Brave는 디지털 광고 및 콘텐츠 크리에이터 지원을 혁신하기 위해 이더리움 기반의 ERC-20 토큰인 <strong>[BAT(Basic Attention Token)](https://basicattentiontoken.org/)</strong>를 브라우저 생태계에 통합했습니다.
 
-- **[Brave Rewards 프로그램](https://brave.com/brave-rewards/)**을 통해 사용자는 프라이버시를 존중하는 광고를 시청하여 BAT를 얻을 수 있으며, 주목 시간(attention time)에 따라 유튜브, 트위터, GitHub 등 다양한 플랫폼의 웹사이트와 콘텐츠 크리에이터에게 자동으로 기여할 수 있습니다.
+- <strong>[Brave Rewards 프로그램](https://brave.com/brave-rewards/)</strong>을 통해 사용자는 프라이버시를 존중하는 광고를 시청하여 BAT를 얻을 수 있으며, 주목 시간(attention time)에 따라 유튜브, 트위터, GitHub 등 다양한 플랫폼의 웹사이트와 콘텐츠 크리에이터에게 자동으로 기여할 수 있습니다.
 
-- 콘텐츠 크리에이터는 **[Brave 인증 크리에이터](https://creators.brave.com/)**로 등록하여 이러한 기여금을 자신의 이더리움 지갑으로 직접 받을 수 있으며, 이는 기존 웹 플랫폼과 블록체인 기반 수익 창출 사이의 브릿지 역할을 합니다.
+- 콘텐츠 크리에이터는 <strong>[Brave 인증 크리에이터](https://creators.brave.com/)</strong>로 등록하여 이러한 기여금을 자신의 이더리움 지갑으로 직접 받을 수 있으며, 이는 기존 웹 플랫폼과 블록체인 기반 수익 창출 사이의 브릿지 역할을 합니다.
 
 - BAT 토큰은 이더리움 블록체인에 독립적으로 존재하므로, 사용자는 획득한 토큰을 개인 지갑이나 거래소로 전송할 수 있습니다.
 
 ### Audius Music Platform {#audius}
 
-- **[Audius](https://audius.co/)**는 이더리움 블록체인 기술을 사용하여 아티스트와 팬을 직접 연결하는 음악 스트리밍 플랫폼입니다.
+- <strong>[Audius](https://audius.co/)</strong>는 이더리움 블록체인 기술을 사용하여 아티스트와 팬을 직접 연결하는 음악 스트리밍 플랫폼입니다.
 
-- 이 플랫폼은 콘텐츠를 IPFS에 저장하는 동시에 소유권 및 **[AUDIO 토큰](https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)**을 위해 블록체인을 활용하는 하이브리드 탈중앙화 아키텍처를 특징으로 합니다.
+- 이 플랫폼은 콘텐츠를 IPFS에 저장하는 동시에 소유권 및 <strong>[AUDIO 토큰](https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)</strong>을 위해 블록체인을 활용하는 하이브리드 탈중앙화 아키텍처를 특징으로 합니다.
 
-- Audius는 **[틱톡(TikTok)과 파트너십](https://audius.co/tiktok)**을 맺어 주류 대중에게 Web3 기능을 제공하고 아티스트가 블록체인 기술을 통해 콘텐츠로 수익을 창출할 수 있도록 지원합니다.
+- Audius는 <strong>[틱톡(TikTok)과 파트너십](https://audius.co/tiktok)</strong>을 맺어 주류 대중에게 Web3 기능을 제공하고 아티스트가 블록체인 기술을 통해 콘텐츠로 수익을 창출할 수 있도록 지원합니다.
 
-- 플랫폼의 기술적 세부 사항은 **[백서](https://whitepaper.audius.co/)**에서 확인할 수 있으며, 이더리움 인프라를 기반으로 어떻게 구축되었는지 보여줍니다.
+- 플랫폼의 기술적 세부 사항은 <strong>[백서](https://whitepaper.audius.co/)</strong>에서 확인할 수 있으며, 이더리움 인프라를 기반으로 어떻게 구축되었는지 보여줍니다.
 
 ### Sorare Fantasy Sports {#sorare}
 
-- **[Sorare](https://sorare.com/)**는 사용자가 공식 NFT 선수 카드를 수집, 거래 및 플레이할 수 있는 **[이더리움 기반 판타지 스포츠 플랫폼](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)**입니다.
+- <strong>[Sorare](https://sorare.com/)</strong>는 사용자가 공식 NFT 선수 카드를 수집, 거래 및 플레이할 수 있는 <strong>[이더리움 기반 판타지 스포츠 플랫폼](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)</strong>입니다.
 
-- 선수 카드는 이더리움 블록체인에서 검증 가능한 NFT이며, 플랫폼의 스마트 컨트랙트는 **[Etherscan](https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract)**에서 확인할 수 있습니다.
+- 선수 카드는 이더리움 블록체인에서 검증 가능한 NFT이며, 플랫폼의 스마트 컨트랙트는 <strong>[Etherscan](https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract)</strong>에서 확인할 수 있습니다.
 
 - Sorare는 전통적인 판타지 스포츠 게임 플레이와 디지털 자산의 블록체인 소유권을 결합하여 주류 스포츠 팬들에게 **[이더리움 펀딩](https://sorare.com/help/a/10969733392797/what-network-should-i-use-to-fund-my-eth-wallet)** 기능을 제공합니다.
 

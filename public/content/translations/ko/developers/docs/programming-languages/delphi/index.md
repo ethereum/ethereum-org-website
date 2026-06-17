@@ -1,6 +1,6 @@
 ---
-title: Delphi 개발자를 위한 이더리움
-description: Delphi 프로그래밍 언어를 사용하여 이더리움용으로 개발하는 방법을 배워보세요
+title: "Delphi 개발자를 위한 이더리움"
+description: "Delphi 프로그래밍 언어를 사용하여 이더리움용으로 개발하는 방법을 배워보세요"
 lang: ko
 incomplete: true
 ---

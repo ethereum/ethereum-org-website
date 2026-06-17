@@ -1,6 +1,6 @@
 ---
-title: Introduction à la pile Ethereum
-description: Une présentation des différentes couches de la pile Ethereum et de la manière dont elles s'articulent.
+title: "Introduction à la pile Ethereum"
+description: "Une présentation des différentes couches de la pile Ethereum et de la manière dont elles s'articulent."
 lang: fr
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "ABI cortas para la optimización de datos de llamada"
-description: Optimización de contratos inteligentes para rollups optimistas
+description: "Optimización de contratos inteligentes para rollups optimistas"
 author: Ori Pomerantz
 lang: es
 tags: ["capa 2 (l2)"]

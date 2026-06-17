@@ -1,6 +1,6 @@
 ---
-title: Como desenvolver e testar um dapp em uma rede de teste local com múltiplos clientes
-description: Este guia mostrará primeiro como instanciar e configurar uma rede de teste local do Ethereum com múltiplos clientes antes de usar a rede de teste para implantar e testar um dapp.
+title: "Como desenvolver e testar um dapp em uma rede de teste local com múltiplos clientes"
+description: "Este guia mostrará primeiro como instanciar e configurar uma rede de teste local do Ethereum com múltiplos clientes antes de usar a rede de teste para implantar e testar um dapp."
 author: "Tedi Mitiku"
 tags:
   [
@@ -10,10 +10,10 @@ tags:
     "compunibilidade",
     "camada de consenso",
     "camada de execução",
-    "testes",
+    "tes",
   ]
 skill: intermediate
-breadcrumb: Rede de teste com múltiplos clientes
+breadcrumb: "Rede de teste com múltiplos clientes"
 lang: pt-br
 published: 2023-04-11
 ---

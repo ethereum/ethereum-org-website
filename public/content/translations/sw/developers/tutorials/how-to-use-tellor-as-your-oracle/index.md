@@ -3,7 +3,7 @@ title: Jinsi ya Kuweka Tellor kama Orakeli yako
 description: Mwongozo wa kuanza kuunganisha orakeli ya Tellor kwenye itifaki yako
 author: "Tellor"
 lang: sw
-tags: ["solidity", "mikataba mahiri", "orakeli"]
+tags: ["Solidity", "mikataba mahiri", "orakeli"]
 skill: beginner
 breadcrumb: Orakeli ya Tellor
 published: 2021-06-29

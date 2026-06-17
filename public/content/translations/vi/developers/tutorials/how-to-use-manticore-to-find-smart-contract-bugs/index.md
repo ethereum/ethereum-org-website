@@ -1,10 +1,10 @@
 ---
-title: Cách sử dụng Manticore để tìm lỗi trong hợp đồng thông minh
-description: Cách sử dụng Manticore để tự động tìm lỗi trong hợp đồng thông minh
+title: "Cách sử dụng Manticore để tìm lỗi trong hợp đồng thông minh"
+description: "Cách sử dụng Manticore để tự động tìm lỗi trong hợp đồng thông minh"
 author: Trailofbits
 lang: vi
 tags:
-  ["solidity", "hợp đồng thông minh", "bảo mật", "kiểm thử", "xác minh chính thức"]
+  ["Solidity", "hợp đồng thông minh", "bảo mật", "kiểm thử", "xác minh chính thức"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13

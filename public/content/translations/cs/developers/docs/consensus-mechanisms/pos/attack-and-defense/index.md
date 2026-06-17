@@ -1,6 +1,6 @@
 ---
-title: Útok a obrana důkazu podílem (PoS) na Ethereu
-description: Přečtěte si o známých vektorech útoků na Ethereum s důkazem podílem (PoS) a o tom, jak se proti nim bránit.
+title: "Útok a obrana důkazu podílem (PoS) na Ethereu"
+description: "Přečtěte si o známých vektorech útoků na Ethereum s důkazem podílem (PoS) a o tom, jak se proti nim bránit."
 lang: cs
 ---
 

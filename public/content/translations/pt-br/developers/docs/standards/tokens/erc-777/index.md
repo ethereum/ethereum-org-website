@@ -1,6 +1,6 @@
 ---
-title: Padrão de token ERC-777
-description: Aprenda sobre o ERC-777, um padrão de token fungível aprimorado com hooks, embora o ERC-20 seja recomendado por segurança.
+title: "Padrão de token ERC-777"
+description: "Aprenda sobre o ERC-777, um padrão de token fungível aprimorado com hooks, embora o ERC-20 seja recomendado por segurança."
 lang: pt-br
 ---
 

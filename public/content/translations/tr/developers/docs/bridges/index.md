@@ -1,6 +1,6 @@
 ---
-title: Köprüler
-description: Geliştiriciler için köprülemeye genel bir bakış
+title: "Köprüler"
+description: "Geliştiriciler için köprülemeye genel bir bakış"
 lang: tr
 ---
 
@@ -121,6 +121,7 @@ Zincirler arası sözleşme faaliyetlerini izlemek için geliştiriciler, akıll
 - [Tenderly](https://tenderly.co/)
 
 ## Daha fazla bilgi {#further-reading}
+
 - [Blokzincir Köprüleri](/bridges/) – ethereum.org
 - [L2BEAT Köprü Risk Çerçevesi](https://l2beat.com/bridges/summary)
 - [Blokzincir Köprüleri: Kripto Ağlarının Ağlarını Kurmak](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 Eyl 2021 – Dmitriy Berenzon

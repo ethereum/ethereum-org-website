@@ -1,11 +1,11 @@
 ---
 title: "அழைப்புத் தரவு (Calldata) உகப்பாக்கத்திற்கான குறுகிய ABI-கள்"
-description: ஆப்டிமிஸ்டிக் ரோலப்களுக்காக (Optimistic Rollups) திறன்மிகு ஒப்பந்தங்களை உகப்பாக்குதல்
-author: ஓரி பொமரன்ட்ஸ்
+description: "ஆப்டிமிஸ்டிக் ரோலப்களுக்காக (Optimistic Rollups) திறன்மிகு ஒப்பந்தங்களை உகப்பாக்குதல்"
+author: "ஓரி பொமரன்ட்ஸ்"
 lang: ta
 tags: ["அடுக்கு 2 (l2)"]
 skill: intermediate
-breadcrumb: குறுகிய ABI-கள்
+breadcrumb: "குறுகிய ABI-கள்"
 published: 2022-04-01
 ---
 

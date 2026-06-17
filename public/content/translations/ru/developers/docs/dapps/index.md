@@ -1,5 +1,5 @@
 ---
-title: Техническое введение в dapps
+title: "Техническое введение в dapps"
 description:
 lang: ru
 ---

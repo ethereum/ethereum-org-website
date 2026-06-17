@@ -1,6 +1,6 @@
 ---
-title: Bằng chứng cổ phần so với bằng chứng công việc
-description: So sánh giữa cơ chế đồng thuận dựa trên bằng chứng cổ phần và bằng chứng công việc của Ethereum
+title: "Bằng chứng cổ phần so với bằng chứng công việc"
+description: "So sánh giữa cơ chế đồng thuận dựa trên bằng chứng cổ phần và bằng chứng công việc của Ethereum"
 lang: vi
 ---
 

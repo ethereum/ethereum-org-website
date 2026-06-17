@@ -1,10 +1,10 @@
 ---
-title: 從 Solidity 與其他合約互動
-description: 如何從現有合約部署智能合約並與之互動
+title: "從 Solidity 與其他合約互動"
+description: "如何從現有合約部署智能合約並與之互動"
 author: "jdourlens"
 tags: ["智能合約", "Solidity", "Remix", "部署", "可組合性"]
 skill: advanced
-breadcrumb: 合約互動
+breadcrumb: "合約互動"
 lang: zh-tw
 published: 2020-04-05
 source: EthereumDev

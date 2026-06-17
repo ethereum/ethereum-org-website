@@ -1,6 +1,6 @@
 ---
-title: Ataque e defesa da Prova de Participação (PoS) do Ethereum
-description: Aprenda sobre os vetores de ataque conhecidos na Prova de Participação (PoS) do Ethereum e como eles são defendidos.
+title: "Ataque e defesa da Prova de Participação (PoS) do Ethereum"
+description: "Aprenda sobre os vetores de ataque conhecidos na Prova de Participação (PoS) do Ethereum e como eles são defendidos."
 lang: pt-br
 ---
 

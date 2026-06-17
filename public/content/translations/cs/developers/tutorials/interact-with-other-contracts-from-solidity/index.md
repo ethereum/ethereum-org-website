@@ -1,10 +1,10 @@
 ---
-title: Interakce s jinými kontrakty ze Solidity
-description: Jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním
+title: "Interakce s jinými kontrakty ze Solidity"
+description: "Jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním"
 author: "jdourlens"
 tags: ["chytré kontrakty", "Solidity", "Remix", "nasazování", "skládatelnost"]
 skill: advanced
-breadcrumb: Interakce kontraktů
+breadcrumb: "Interakce kontraktů"
 lang: cs
 published: 2020-04-05
 source: EthereumDev

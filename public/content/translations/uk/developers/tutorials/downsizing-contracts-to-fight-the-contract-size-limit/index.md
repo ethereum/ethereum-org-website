@@ -1,14 +1,14 @@
 ---
 title: "Зменшення розміру контрактів для боротьби з лімітом розміру контракту"
-description: Що можна зробити, щоб запобігти надмірному збільшенню розміру смарт-контрактів?
-author: Маркус Ваас
+description: "Що можна зробити, щоб запобігти надмірному збільшенню розміру смарт-контрактів?"
+author: "Маркус Ваас"
 lang: uk
 tags:
   - solidity
   - смарт-контракти
   - зберігання
 skill: intermediate
-breadcrumb: Зменшення розміру контрактів
+breadcrumb: "Зменшення розміру контрактів"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

@@ -1,6 +1,6 @@
 ---
-title: مقدمة عن العقود الذكية
-description: نظرة عامة على العقود الذكية، مع التركيز على خصائصها الفريدة والقيود الخاصة بها.
+title: "مقدمة عن العقود الذكية"
+description: "نظرة عامة على العقود الذكية، مع التركيز على خصائصها الفريدة والقيود الخاصة بها."
 lang: ar
 ---
 
@@ -111,6 +111,6 @@ contract VendingMachine {
 - [فيديو: شرح مبسط - العقود الذكية](https://youtu.be/ZE2HxTmxfrI)
 - [Cyfrin Updraft: منصة تعلم وتدقيق Web3](https://updraft.cyfrin.io)
 
-## برامج تعليمية: توقيعات العقود الذكية (EIP-1271) على إيثيريوم {#tutorials}
+## برامج تعليمية: توقيعات العقود الذكية (<span dir="ltr">EIP-1271</span>) على إيثيريوم {#tutorials}
 
-- [EIP-1271: توقيع والتحقق من توقيعات العقود الذكية](/developers/tutorials/eip-1271-smart-contract-signatures/) _– كيف يُمكّن EIP-1271 العقود الذكية من التحقق من التوقيعات، مع شرح تفصيلي لتنفيذ Safe._
+- [<span dir="ltr">EIP-1271</span>: توقيع والتحقق من توقيعات العقود الذكية](/developers/tutorials/eip-1271-smart-contract-signatures/) _– كيف يُمكّن <span dir="ltr">EIP-1271</span> العقود الذكية من التحقق من التوقيعات، مع شرح تفصيلي لتنفيذ Safe._

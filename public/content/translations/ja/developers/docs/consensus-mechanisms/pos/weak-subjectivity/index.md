@@ -1,6 +1,6 @@
 ---
-title: 弱い主観性
-description: 弱い主観性と、PoSイーサリアムにおけるその役割についての説明。
+title: "弱い主観性"
+description: "弱い主観性と、PoSイーサリアムにおけるその役割についての説明。"
 lang: ja
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: 如何將泰勒設定為你的預言機
-description: 將泰勒預言機整合到你的協定中的入門指南
+title: "如何將泰勒設定為你的預言機"
+description: "將泰勒預言機整合到你的協定中的入門指南"
 author: "泰勒"
 lang: zh-tw
-tags: ["solidity", "智能合約", "預言機"]
+tags: ["Solidity", "智能合約", "預言機"]
 skill: beginner
-breadcrumb: 泰勒預言機
+breadcrumb: "泰勒預言機"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

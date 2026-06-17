@@ -1,11 +1,11 @@
 ---
-title: స్మార్ట్ కాంట్రాక్ట్‌లను పరీక్షించడానికి ఎకిడ్నాను ఎలా ఉపయోగించాలి
-description: స్మార్ట్ కాంట్రాక్ట్‌లను స్వయంచాలకంగా పరీక్షించడానికి ఎకిడ్నాను ఎలా ఉపయోగించాలి
+title: "స్మార్ట్ కాంట్రాక్ట్‌లను పరీక్షించడానికి ఎకిడ్నాను ఎలా ఉపయోగించాలి"
+description: "స్మార్ట్ కాంట్రాక్ట్‌లను స్వయంచాలకంగా పరీక్షించడానికి ఎకిడ్నాను ఎలా ఉపయోగించాలి"
 author: "ట్రైల్ఆఫ్‌బిట్స్"
 lang: te
 tags: ["Solidity", "స్మార్ట్ కాంట్రాక్ట్‌లు", "భద్రత", "పరీక్షించడం", "ఫజ్జింగ్"]
 skill: advanced
-breadcrumb: ఎకిడ్నా
+breadcrumb: "ఎకిడ్నా"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

@@ -1,6 +1,6 @@
 ---
-title: 遞迴長度前綴 (RLP) 序列化
-description: 以太坊執行層中 RLP 編碼的定義。
+title: "遞迴長度前綴 (RLP) 序列化"
+description: "以太坊執行層中 RLP 編碼的定義。"
 lang: zh-tw
 sidebarDepth: 2
 ---

@@ -2,7 +2,7 @@
 title: Mencatat data dari kontrak pintar dengan peristiwa
 description: Pengantar tentang peristiwa kontrak pintar dan bagaimana Anda dapat menggunakannya untuk mencatat data
 author: "jdourlens"
-tags: ["kontrak pintar", "remix", "solidity", "peristiwa"]
+tags: ["kontrak pintar", "Remix", "Solidity", "peristiwa"]
 skill: intermediate
 breadcrumb: Pencatatan peristiwa
 lang: id

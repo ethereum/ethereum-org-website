@@ -1,9 +1,9 @@
 ---
-title: Jak używać Echidny do testowania inteligentnych kontraktów
-description: Jak używać Echidny do automatycznego testowania inteligentnych kontraktów
+title: "Jak używać Echidny do testowania inteligentnych kontraktów"
+description: "Jak używać Echidny do automatycznego testowania inteligentnych kontraktów"
 author: "Trailofbits"
 lang: pl
-tags: ["solidity", "inteligentne kontrakty", "bezpieczeństwo", "testowanie", "fuzzing"]
+tags: ["Solidity", "inteligentne kontrakty", "bezpieczeństwo", "testowanie", "fuzzing"]
 skill: advanced
 breadcrumb: Echidna
 published: 2020-04-10

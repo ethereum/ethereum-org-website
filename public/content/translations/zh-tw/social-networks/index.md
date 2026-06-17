@@ -1,6 +1,6 @@
 ---
-title: 去中心化社群網路
-description: 以太坊上的去中心化社群網路概覽
+title: "去中心化社群網路"
+description: "以太坊上的去中心化社群網路概覽"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2

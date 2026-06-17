@@ -1,6 +1,6 @@
 ---
-title: Estruturas de dados e codificação
-description: Uma visão geral das estruturas de dados fundamentais do Ethereum.
+title: "Estruturas de dados e codificação"
+description: "Uma visão geral das estruturas de dados fundamentais do Ethereum."
 lang: pt-br
 sidebarDepth: 2
 ---

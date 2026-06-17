@@ -1,6 +1,6 @@
 ---
-title: Těžba
-description: Vysvětlení, jak fungovala těžba na Ethereu.
+title: "Těžba"
+description: "Vysvětlení, jak fungovala těžba na Ethereu."
 lang: cs
 ---
 

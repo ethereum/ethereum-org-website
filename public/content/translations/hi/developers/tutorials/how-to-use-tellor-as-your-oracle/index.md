@@ -1,11 +1,11 @@
 ---
-title: अपने ऑरेकल के रूप में टेलर को कैसे सेट अप करें
-description: अपने प्रोटोकॉल में टेलर ऑरेकल को एकीकृत करने की शुरुआत करने के लिए एक मार्गदर्शिका
+title: "अपने ऑरेकल के रूप में टेलर को कैसे सेट अप करें"
+description: "अपने प्रोटोकॉल में टेलर ऑरेकल को एकीकृत करने की शुरुआत करने के लिए एक मार्गदर्शिका"
 author: "टेलर"
 lang: hi
-tags: ["solidity", "स्मार्ट अनुबंध", "ऑरेकल"]
+tags: ["Solidity", "स्मार्ट अनुबंध", "ऑरेकल"]
 skill: beginner
-breadcrumb: टेलर ऑरेकल
+breadcrumb: "टेलर ऑरेकल"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

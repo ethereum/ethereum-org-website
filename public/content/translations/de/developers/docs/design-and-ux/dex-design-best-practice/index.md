@@ -1,6 +1,6 @@
 ---
-title: Best Practices für das Design dezentraler Börsen (DEX)
-description: Ein Leitfaden, der UX/UI-Entscheidungen für den Tausch von Token erklärt.
+title: "Best Practices für das Design dezentraler Börsen (DEX)"
+description: "Ein Leitfaden, der UX/UI-Entscheidungen für den Tausch von Token erklärt."
 lang: de
 ---
 

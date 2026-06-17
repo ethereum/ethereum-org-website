@@ -2,7 +2,7 @@
 title: Tutorial per coniare NFT
 description: In questo tutorial, costruirai un minter di NFT e imparerai a creare una dapp full stack collegando il tuo smart contract a un frontend React utilizzando MetaMask e strumenti Web3.
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "smart contract", "frontend", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "smart contract", "frontend", "Pinata", "erc-721"]
 skill: intermediate
 breadcrumb: Dapp per coniare NFT
 lang: it
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

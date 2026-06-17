@@ -1,6 +1,6 @@
 ---
 title: "Verträge verkleinern, um das Limit der Vertragsgröße zu bekämpfen"
-description: Was können Sie tun, um zu verhindern, dass Ihre Smart Contracts zu groß werden?
+description: "Was können Sie tun, um zu verhindern, dass Ihre Smart Contracts zu groß werden?"
 author: Markus Waas
 lang: de
 tags:
@@ -8,7 +8,7 @@ tags:
   - Smart Contracts
   - Speicher
 skill: intermediate
-breadcrumb: Verträge verkleinern
+breadcrumb: "Verträge verkleinern"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

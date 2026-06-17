@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Una explicación del mecanismo de prueba de participación (PoS) Gasper.
+description: "Una explicación del mecanismo de prueba de participación (PoS) Gasper."
 lang: es
 ---
 

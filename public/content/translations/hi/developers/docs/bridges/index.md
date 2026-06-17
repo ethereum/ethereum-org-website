@@ -1,6 +1,6 @@
 ---
-title: सेतु
-description: डेवलपर्स के लिए ब्रिजिंग का अवलोकन
+title: "सेतु"
+description: "डेवलपर्स के लिए ब्रिजिंग का अवलोकन"
 lang: hi
 ---
 
@@ -121,6 +121,7 @@ lang: hi
 - [Tenderly](https://tenderly.co/)
 
 ## आगे की पढ़ाई {#further-reading}
+
 - [ब्लॉकचेन सेतु](/bridges/) – ethereum.org
 - [L2BEAT सेतु जोखिम ढांचा](https://l2beat.com/bridges/summary)
 - [ब्लॉकचेन सेतु: क्रिप्टोनेटवर्क के नेटवर्क का निर्माण](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 सितंबर, 2021 – Dmitriy Berenzon

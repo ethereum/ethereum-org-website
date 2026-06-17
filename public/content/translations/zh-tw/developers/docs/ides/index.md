@@ -1,6 +1,6 @@
 ---
-title: 整合開發環境 (IDE)
-description: 了解用於以太坊開發的網頁版與桌面版 IDE，包含 Remix、VS Code 以及熱門的外掛程式。
+title: "整合開發環境 (IDE)"
+description: "了解用於以太坊開發的網頁版與桌面版 IDE，包含 Remix、VS Code 以及熱門的外掛程式。"
 lang: zh-tw
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: "Sözleşmeniz için bir kullanıcı arayüzü oluşturma"
-description: TypeScript, React, Vite ve Wagmi gibi modern bileşenleri kullanarak modern ancak minimal bir kullanıcı arayüzünü inceleyecek ve bir cüzdanı kullanıcı arayüzüne nasıl bağlayacağımızı, bilgi okumak için bir akıllı sözleşmeyi nasıl çağıracağımızı, bir akıllı sözleşmeye nasıl işlem göndereceğimizi ve değişiklikleri belirlemek için bir akıllı sözleşmedeki olayları nasıl izleyeceğimizi öğreneceğiz.
+description: "TypeScript, React, Vite ve Wagmi gibi modern bileşenleri kullanarak modern ancak minimal bir kullanıcı arayüzünü inceleyecek ve bir cüzdanı kullanıcı arayüzüne nasıl bağlayacağımızı, bilgi okumak için bir akıllı sözleşmeyi nasıl çağıracağımızı, bir akıllı sözleşmeye nasıl işlem göndereceğimizi ve değişiklikleri belirlemek için bir akıllı sözleşmedeki olayları nasıl izleyeceğimizi öğreneceğiz."
 author: Ori Pomerantz
-tags: ["typescript", "react", "vite", "wagmi", "ön yüz"]
+tags: ["TypeScript", "React", "Vite", "Wagmi", "ön yüz"]
 skill: beginner
-breadcrumb: WAGMI ile Kullanıcı Arayüzü
+breadcrumb: "WAGMI ile Kullanıcı Arayüzü"
 published: 2023-11-01
 lang: tr
 sidebarDepth: 3
@@ -225,7 +225,8 @@ Bir React bileşeninin JSX'i tek bir HTML bileşeni döndürmek _zorundadır_. B
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 Mevcut bağlantı hakkında bilgi sağlayın. JSX içinde `{<expression>}`, ifadeyi JavaScript olarak değerlendirmek anlamına gelir.
@@ -252,7 +253,8 @@ Burada bu tür iki etiketimiz var: `<Greeter />` (aslında sözleşmeyle konuşa
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -293,7 +295,8 @@ Bağlayıcı düğmeleri.
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

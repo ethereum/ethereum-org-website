@@ -3,7 +3,7 @@ title: Utangulizi wa Ethereum kwa msanidi wa Python, sehemu ya 1
 description: Utangulizi wa uundaji wa Ethereum, muhimu hasa kwa wale walio na ujuzi wa lugha ya programu ya Python
 author: Marc Garreau
 lang: sw
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
 breadcrumb: Ethereum na Python
 published: 2020-09-08

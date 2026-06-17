@@ -1,6 +1,6 @@
 ---
-title: Dados e análises
-description: Como obter análises e dados onchain para usar em seus dapps
+title: "Dados e análises"
+description: "Como obter análises e dados onchain para usar em seus dapps"
 lang: pt-br
 ---
 

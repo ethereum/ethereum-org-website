@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Wyjaśnienie mechanizmu dowodu stawki (PoS) Gasper.
+description: "Wyjaśnienie mechanizmu dowodu stawki (PoS) Gasper."
 lang: pl
 ---
 

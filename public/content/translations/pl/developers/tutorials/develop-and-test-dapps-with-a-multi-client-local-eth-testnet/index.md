@@ -1,6 +1,6 @@
 ---
-title: Jak rozwijać i testować zdecentralizowaną aplikację (dapp) w lokalnej, wieloklienckiej sieci testowej
-description: Ten przewodnik najpierw pokaże Ci, jak utworzyć i skonfigurować wielokliencką lokalną sieć testową Ethereum, a następnie jak użyć jej do wdrożenia i przetestowania zdecentralizowanej aplikacji (dapp).
+title: "Jak rozwijać i testować zdecentralizowaną aplikację (dapp) w lokalnej, wieloklienckiej sieci testowej"
+description: "Ten przewodnik najpierw pokaże Ci, jak utworzyć i skonfigurować wielokliencką lokalną sieć testową Ethereum, a następnie jak użyć jej do wdrożenia i przetestowania zdecentralizowanej aplikacji (dapp)."
 author: "Tedi Mitiku"
 tags:
   [
@@ -13,7 +13,7 @@ tags:
     "testowanie",
   ]
 skill: intermediate
-breadcrumb: Wielokliencka sieć testowa
+breadcrumb: "Wielokliencka sieć testowa"
 lang: pl
 published: 2023-04-11
 ---

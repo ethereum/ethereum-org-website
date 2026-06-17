@@ -1,6 +1,6 @@
 ---
-title: Các câu hỏi thường gặp
-description: Các câu hỏi thường gặp về Bằng chứng cổ phần (PoS) của Ethereum.
+title: "Các câu hỏi thường gặp"
+description: "Các câu hỏi thường gặp về Bằng chứng cổ phần (PoS) của Ethereum."
 lang: vi
 ---
 

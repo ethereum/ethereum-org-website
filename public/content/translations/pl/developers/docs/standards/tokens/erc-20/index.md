@@ -1,6 +1,6 @@
 ---
 title: Standard tokena ERC-20
-description: Dowiedz się o ERC-20, standardzie dla tokenów zamiennych na Ethereum, który umożliwia tworzenie interoperacyjnych aplikacji opartych na tokenach.
+description: "Dowiedz się o ERC-20, standardzie dla tokenów zamiennych na Ethereum, który umożliwia tworzenie interoperacyjnych aplikacji opartych na tokenach."
 lang: pl
 ---
 

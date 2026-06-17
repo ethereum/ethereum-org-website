@@ -3,7 +3,7 @@ title: Comment utiliser Echidna pour tester des contrats intelligents
 description: Comment utiliser Echidna pour tester automatiquement des contrats intelligents
 author: "Trailofbits"
 lang: fr
-tags: ["solidity", "contrats intelligents", "sécurité", "test", "fuzzing"]
+tags: ["Solidity", "contrats intelligents", "sécurité", "test", "fuzzing"]
 skill: advanced
 breadcrumb: Echidna
 published: 2020-04-10

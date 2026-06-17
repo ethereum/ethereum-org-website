@@ -1,10 +1,10 @@
 ---
-title: Výukový program: Ražení NFT
-description: V tomto návodu si vytvoříte aplikaci pro ražení NFT a naučíte se, jak vytvořit full-stack decentralizovanou aplikaci (dapp) propojením chytrého kontraktu s frontendem v Reactu pomocí MetaMasku a nástrojů Web3.
+title: "Výukový program: Ražení NFT"
+description: "V tomto návodu si vytvoříte aplikaci pro ražení NFT a naučíte se, jak vytvořit full-stack decentralizovanou aplikaci (dapp) propojením chytrého kontraktu s frontendem v Reactu pomocí MetaMasku a nástrojů Web3."
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "chytré kontrakty", "frontend", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "chytré kontrakty", "frontend", "Pinata", "erc-721"]
 skill: intermediate
-breadcrumb: Dapp pro ražení NFT
+breadcrumb: "Dapp pro ražení NFT"
 lang: cs
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

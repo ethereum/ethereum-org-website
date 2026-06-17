@@ -1,11 +1,11 @@
 ---
 title: "Bir Sözleşmeye Tersine Mühendislik Uygulamak"
-description: Kaynak koduna sahip olmadığınızda bir sözleşmeyi nasıl anlarsınız
+description: "Kaynak koduna sahip olmadığınızda bir sözleşmeyi nasıl anlarsınız"
 author: Ori Pomerantz
 lang: tr
 tags: ["evm", "işlem kodları"]
 skill: advanced
-breadcrumb: Tersine mühendislik
+breadcrumb: "Tersine mühendislik"
 published: 2021-12-30
 ---
 ## Giriş {#introduction}

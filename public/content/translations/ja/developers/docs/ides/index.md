@@ -1,6 +1,6 @@
 ---
-title: 統合開発環境 (IDE)
-description: Remix、VS Code、人気のプラグインなど、イーサリアム開発向けのウェブベースおよびデスクトップIDEについて学びます。
+title: "統合開発環境 (IDE)"
+description: "Remix、VS Code、人気のプラグインなど、イーサリアム開発向けのウェブベースおよびデスクトップIDEについて学びます。"
 lang: ja
 ---
 

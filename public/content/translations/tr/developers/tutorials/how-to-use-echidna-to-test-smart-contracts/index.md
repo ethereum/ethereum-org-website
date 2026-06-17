@@ -1,9 +1,9 @@
 ---
-title: Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır
-description: Akıllı sözleşmeleri otomatik olarak test etmek için Echidna nasıl kullanılır
+title: "Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır"
+description: "Akıllı sözleşmeleri otomatik olarak test etmek için Echidna nasıl kullanılır"
 author: "Trailofbits"
 lang: tr
-tags: ["solidity", "akıllı sözleşmeler", "güvenlik", "test etme", "fuzzing"]
+tags: ["Solidity", "akıllı sözleşmeler", "güvenlik", "test etme", "fuzzing"]
 skill: advanced
 breadcrumb: Echidna
 published: 2020-04-10

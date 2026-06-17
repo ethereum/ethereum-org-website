@@ -1,12 +1,12 @@
 ---
-title: Як використовувати Мантікору для пошуку помилок у смарт-контрактах
-description: Як використовувати Мантікору для автоматичного пошуку помилок у смарт-контрактах
-author: Трейлофбітс
+title: "Як використовувати Мантікору для пошуку помилок у смарт-контрактах"
+description: "Як використовувати Мантікору для автоматичного пошуку помилок у смарт-контрактах"
+author: "Трейлофбітс"
 lang: uk
 tags:
-  ["solidity", "смарт-контракти", "безпека", "тестування", "формальна верифікація"]
+  ["Solidity", "смарт-контракти", "безпека", "тестування", "формальна верифікація"]
 skill: advanced
-breadcrumb: Мантікора
+breadcrumb: "Мантікора"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

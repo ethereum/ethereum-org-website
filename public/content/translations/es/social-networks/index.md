@@ -1,6 +1,6 @@
 ---
 title: Redes sociales descentralizadas
-description: Una descripción general de las redes sociales descentralizadas en Ethereum
+description: "Una descripción general de las redes sociales descentralizadas en Ethereum"
 lang: es
 template: use-cases
 sidebarDepth: 2

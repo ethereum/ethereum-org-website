@@ -1,11 +1,11 @@
 ---
 title: "コールデータ最適化のための短いABI"
-description: オプティミスティック・ロールアップ向けのスマートコントラクトの最適化
-author: オリ・ポメランツ
+description: "オプティミスティック・ロールアップ向けのスマートコントラクトの最適化"
+author: "オリ・ポメランツ"
 lang: ja
 tags: ["レイヤー2"]
 skill: intermediate
-breadcrumb: 短いABI
+breadcrumb: "短いABI"
 published: 2022-04-01
 ---
 

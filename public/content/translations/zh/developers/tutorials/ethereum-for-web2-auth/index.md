@@ -1,13 +1,13 @@
 ---
-title: 使用以太坊进行 Web2 身份验证
-description: 阅读本教程后，开发者将能够把以太坊登录 (Web3) 与 SAML 登录（Web2 中用于提供单点登录及其他相关服务的标准）集成。这允许通过以太坊签名对 Web2 资源的访问进行身份验证，而用户属性则来自证明。
-author: 奥里·波梅兰茨
+title: "使用以太坊进行 Web2 身份验证"
+description: "阅读本教程后，开发者将能够把以太坊登录 (Web3) 与 SAML 登录（Web2 中用于提供单点登录及其他相关服务的标准）集成。这允许通过以太坊签名对 Web2 资源的访问进行身份验证，而用户属性则来自证明。"
+author: "奥里·波梅兰茨"
 tags:
   - Web2
   - 身份验证
   - eas
 skill: beginner
-breadcrumb: 以太坊用于 Web2 身份验证
+breadcrumb: "以太坊用于 Web2 身份验证"
 lang: zh
 published: 2025-04-30
 ---

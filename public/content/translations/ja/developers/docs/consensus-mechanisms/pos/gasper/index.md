@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasperプルーフ・オブ・ステーク・メカニズムの解説。
+description: "Gasperプルーフ・オブ・ステーク・メカニズムの解説。"
 lang: ja
 ---
 

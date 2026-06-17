@@ -1,10 +1,10 @@
 ---
 title: "Tworzenie interfejsu użytkownika dla twojego kontraktu"
-description: Używając nowoczesnych komponentów, takich jak TypeScript, React, Vite i Wagmi, omówimy nowoczesny, ale minimalistyczny interfejs użytkownika i dowiemy się, jak podłączyć portfel do interfejsu, wywołać inteligentny kontrakt w celu odczytania informacji, wysłać transakcję do inteligentnego kontraktu oraz monitorować zdarzenia z inteligentnego kontraktu w celu identyfikacji zmian.
+description: "Używając nowoczesnych komponentów, takich jak TypeScript, React, Vite i Wagmi, omówimy nowoczesny, ale minimalistyczny interfejs użytkownika i dowiemy się, jak podłączyć portfel do interfejsu, wywołać inteligentny kontrakt w celu odczytania informacji, wysłać transakcję do inteligentnego kontraktu oraz monitorować zdarzenia z inteligentnego kontraktu w celu identyfikacji zmian."
 author: Ori Pomerantz
-tags: ["typescript", "react", "vite", "wagmi", "frontend"]
+tags: ["TypeScript", "React", "Vite", "Wagmi", "frontend"]
 skill: beginner
-breadcrumb: Interfejs użytkownika z WAGMI
+breadcrumb: "Interfejs użytkownika z WAGMI"
 published: 2023-11-01
 lang: pl
 sidebarDepth: 3
@@ -225,7 +225,8 @@ JSX komponentu React _musi_ zwracać pojedynczy komponent HTML. Kiedy mamy wiele
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 Dostarczamy informacje o bieżącym połączeniu. W JSX `{<expression>}` oznacza ewaluację wyrażenia jako JavaScript.
@@ -252,7 +253,8 @@ Tutaj mamy dwa takie znaczniki: `<Greeter />` (który w rzeczywistości zawiera 
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -293,7 +295,8 @@ Przyciski konektorów.
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

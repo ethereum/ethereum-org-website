@@ -1,10 +1,10 @@
 ---
-title: スマート・コントラクトのセキュリティ・チェックリスト
-description: セキュアなスマート・コントラクトを記述するための推奨ワークフロー
+title: "スマート・コントラクトのセキュリティ・チェックリスト"
+description: "セキュアなスマート・コントラクトを記述するための推奨ワークフロー"
 author: "Trailofbits"
-tags: ["スマート・コントラクト", "セキュリティ", "solidity"]
+tags: ["スマート・コントラクト", "セキュリティ", "Solidity"]
 skill: intermediate
-breadcrumb: セキュリティ・チェックリスト
+breadcrumb: "セキュリティ・チェックリスト"
 lang: ja
 published: 2020-09-07
 source: Building secure contracts

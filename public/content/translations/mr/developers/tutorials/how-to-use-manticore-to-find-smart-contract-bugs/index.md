@@ -1,12 +1,12 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्ट्समधील बग्स शोधण्यासाठी मॅन्टिकोर कसे वापरावे
-description: स्मार्ट कॉन्ट्रॅक्ट्समधील बग्स स्वयंचलितपणे शोधण्यासाठी मॅन्टिकोर कसे वापरावे
-author: ट्रेलऑफबिट्स
+title: "स्मार्ट कॉन्ट्रॅक्ट्समधील बग्स शोधण्यासाठी मॅन्टिकोर कसे वापरावे"
+description: "स्मार्ट कॉन्ट्रॅक्ट्समधील बग्स स्वयंचलितपणे शोधण्यासाठी मॅन्टिकोर कसे वापरावे"
+author: "ट्रेलऑफबिट्स"
 lang: mr
 tags:
   ["Solidity", "स्मार्ट कॉन्ट्रॅक्ट्स", "सुरक्षा", "चाचणी", "औपचारिक पडताळणी"]
 skill: advanced
-breadcrumb: मॅन्टिकोर
+breadcrumb: "मॅन्टिकोर"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

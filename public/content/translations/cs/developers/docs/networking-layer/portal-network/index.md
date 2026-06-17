@@ -1,6 +1,6 @@
 ---
 title: Portal Network
-description: Přehled sítě Portal Network – sítě ve vývoji, která je navržena pro podporu klientů s nízkými nároky na zdroje.
+description: "Přehled sítě Portal Network – sítě ve vývoji, která je navržena pro podporu klientů s nízkými nároky na zdroje."
 lang: cs
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: 如何使用斯立瑟尋找智能合約錯誤
-description: 如何使用斯立瑟自動尋找智能合約中的錯誤
+title: "如何使用斯立瑟尋找智能合約錯誤"
+description: "如何使用斯立瑟自動尋找智能合約中的錯誤"
 author: Trailofbits
 lang: zh-tw
-tags: ["solidity", "智能合約", "安全性", "測試"]
+tags: ["Solidity", "智能合約", "安全性", "測試"]
 skill: advanced
-breadcrumb: 斯立瑟
+breadcrumb: "斯立瑟"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

@@ -1,6 +1,6 @@
 ---
-title: Аттестации
-description: Описание аттестаций в Ethereum на основе Proof-of-Stake.
+title: "Аттестации"
+description: "Описание аттестаций в Ethereum на основе Proof-of-Stake."
 lang: ru
 ---
 

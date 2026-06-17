@@ -1,10 +1,10 @@
 ---
 title: "Niektóre sztuczki stosowane przez fałszywe tokeny i jak je wykryć"
-description: W tym samouczku analizujemy fałszywy token, aby zobaczyć niektóre sztuczki stosowane przez oszustów, sposób ich implementacji oraz jak możemy je wykryć.
+description: "W tym samouczku analizujemy fałszywy token, aby zobaczyć niektóre sztuczki stosowane przez oszustów, sposób ich implementacji oraz jak możemy je wykryć."
 author: Ori Pomerantz
-tags: ["oszustwo", "solidity", "erc-20", "javascript", "typescript"]
+tags: ["oszustwo", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
-breadcrumb: Sztuczki fałszywych tokenów
+breadcrumb: "Sztuczki fałszywych tokenów"
 published: 2023-09-15
 lang: pl
 ---

@@ -1,11 +1,11 @@
 ---
-title: Aktywa świata rzeczywistego (RWA)
-metaTitle: Czym są RWA? | Korzyści i zastosowanie aktywów świata rzeczywistego
-description: Przegląd aktywów świata rzeczywistego na Ethereum
+title: "Aktywa świata rzeczywistego (RWA)"
+metaTitle: "Czym są RWA? | Korzyści i zastosowanie aktywów świata rzeczywistego"
+description: "Przegląd aktywów świata rzeczywistego na Ethereum"
 lang: pl
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: Mężczyzna bawiący się z psem.
+alt: "Mężczyzna bawiący się z psem."
 sidebarDepth: 2
 summaryPoints:
   - "Metoda przekształcania wartościowych towarów w cyfrowe tokeny."

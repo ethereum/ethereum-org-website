@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmelere giriş
-description: Akıllı sözleşmelerin benzersiz özelliklerine ve sınırlamalarına odaklanan bir genel bakış.
+title: "Akıllı sözleşmelere giriş"
+description: "Akıllı sözleşmelerin benzersiz özelliklerine ve sınırlamalarına odaklanan bir genel bakış."
 lang: tr
 ---
 

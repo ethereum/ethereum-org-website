@@ -1,6 +1,6 @@
 ---
-title: Maksymalna wartość do wyodrębnienia (MEV)
-description: Wprowadzenie do maksymalnej wartości do wyodrębnienia (MEV)
+title: "Maksymalna wartość do wyodrębnienia (MEV)"
+description: "Wprowadzenie do maksymalnej wartości do wyodrębnienia (MEV)"
 lang: pl
 ---
 

@@ -3,7 +3,7 @@ title: Como usar o Slither para encontrar bugs em contratos inteligentes
 description: Como usar o Slither para encontrar bugs automaticamente em contratos inteligentes
 author: Trailofbits
 lang: pt-br
-tags: ["solidity", "contratos inteligentes", "segurança", "testes"]
+tags: ["Solidity", "contratos inteligentes", "segurança", "tes"]
 skill: advanced
 breadcrumb: Slither
 published: 2020-06-09

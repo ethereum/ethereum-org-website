@@ -1,7 +1,7 @@
 ---
 title: "உங்கள் ஒப்பந்தத்திற்கான பயனர் இடைமுகத்தை உருவாக்குதல்"
 description: "TypeScript, React, Vite மற்றும் Wagmi போன்ற நவீன கூறுகளைப் பயன்படுத்தி, நவீனமான, ஆனால் எளிமையான பயனர் இடைமுகத்தை நாங்கள் ஆராய்வோம். மேலும், பயனர் இடைமுகத்துடன் பணப்பையை எவ்வாறு இணைப்பது, தகவலைப் படிக்க ஸ்மார்ட் ஒப்பந்தத்தை அழைப்பது, ஸ்மார்ட் ஒப்பந்தத்திற்கு பரிவர்த்தனையை அனுப்புவது மற்றும் மாற்றங்களைக் கண்டறிய ஸ்மார்ட் ஒப்பந்தத்திலிருந்து நிகழ்வுகளைக் கண்காணிப்பது எப்படி என்பதைக் கற்றுக்கொள்வோம்."
-author: ஓரி பொமரன்ட்ஸ்
+author: "ஓரி பொமரன்ட்ஸ்"
 tags:
   - typescript
   - react
@@ -9,7 +9,7 @@ tags:
   - wagmi
   - முன்பக்கம்
 skill: beginner
-breadcrumb: WAGMI உடன் UI
+breadcrumb: "WAGMI உடன் UI"
 published: 2023-11-01
 lang: ta
 sidebarDepth: 3
@@ -230,7 +230,8 @@ function App() {
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 தற்போதைய இணைப்பு பற்றிய தகவலை வழங்கவும். JSX-க்குள், `{<expression>}` என்பது கோவையை JavaScript ஆக மதிப்பிடுவதைக் குறிக்கிறது.
@@ -257,7 +258,8 @@ JSX ஆனது HTML-ஐ விடக் கடுமையான XML தரந
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -298,7 +300,8 @@ JSX-இல் "உடன்பிறப்பு" குறிச்சொற்
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

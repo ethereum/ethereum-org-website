@@ -1,6 +1,6 @@
 ---
 title: "Samouczek: Minter NFT"
-description: W tym samouczku zbudujesz minter NFT i dowiesz się, jak stworzyć zdecentralizowaną aplikację (dapp) typu full stack, łącząc swój inteligentny kontrakt z frontendem w React za pomocą MetaMask i narzędzi Web3.
+description: "W tym samouczku zbudujesz minter NFT i dowiesz się, jak stworzyć zdecentralizowaną aplikację (dapp) typu full stack, łącząc swój inteligentny kontrakt z frontendem w React za pomocą MetaMask i narzędzi Web3."
 author: "smudgil"
 tags: ["Solidity", "NFT", "Alchemy", "inteligentne kontrakty", "frontend", "Pinata", "ERC-721"]
 skill: intermediate
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

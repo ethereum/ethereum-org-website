@@ -1,6 +1,6 @@
 ---
-title: Giới thiệu về ngăn xếp Ethereum
-description: Hướng dẫn chi tiết về các lớp khác nhau của ngăn xếp Ethereum và cách chúng kết hợp với nhau.
+title: "Giới thiệu về ngăn xếp Ethereum"
+description: "Hướng dẫn chi tiết về các lớp khác nhau của ngăn xếp Ethereum và cách chúng kết hợp với nhau."
 lang: vi
 ---
 

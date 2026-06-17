@@ -1,7 +1,7 @@
 ---
 title: "스캠 토큰이 사용하는 몇 가지 속임수와 이를 탐지하는 방법"
-description: 이 튜토리얼에서는 스캠 토큰을 해부하여 스캐머들이 사용하는 속임수와 그 구현 방식, 그리고 이를 탐지하는 방법을 알아봅니다.
-author: 오리 포메란츠
+description: "이 튜토리얼에서는 스캠 토큰을 해부하여 스캐머들이 사용하는 속임수와 그 구현 방식, 그리고 이를 탐지하는 방법을 알아봅니다."
+author: "오리 포메란츠"
 tags:
   - 스캠
   - solidity
@@ -9,7 +9,7 @@ tags:
   - javascript
   - typescript
 skill: intermediate
-breadcrumb: 스캠 토큰 속임수
+breadcrumb: "스캠 토큰 속임수"
 published: 2023-09-15
 lang: ko
 ---
@@ -236,7 +236,7 @@ ERC-20 컨트랙트에는 허용량을 위한 [`approve` 함수](/developers/tut
 
 ### 코드 품질 문제 {#code-quality-issues}
 
-이러한 코드 품질 문제가 이 코드가 스캠이라는 것을 _증명_하는 것은 아니지만, 의심스럽게 만듭니다. 아비트럼과 같이 체계적인 회사는 보통 이렇게 형편없는 코드를 배포하지 않습니다.
+이러한 코드 품질 문제가 이 코드가 스캠이라는 것을 <em>증명</em>하는 것은 아니지만, 의심스럽게 만듭니다. 아비트럼과 같이 체계적인 회사는 보통 이렇게 형편없는 코드를 배포하지 않습니다.
 
 #### `mount` 함수 {#the-mount-function}
 
@@ -267,7 +267,7 @@ ERC-20 컨트랙트에는 허용량을 위한 [`approve` 함수](/developers/tut
         require(msg.sender == contract_owner, "ERC20: mint to the zero address");
 ```
 
-`require`를 보면 컨트랙트 소유자만 발행할 수 있음을 알 수 있습니다. 이는 합법적입니다. 하지만 오류 메시지는 _소유자만 발행할 수 있습니다(only owner is allowed to mint)_ 등과 같아야 합니다. 대신, 무관한 _ERC20: 제로 주소로 발행(ERC20: mint to the zero address)_이라는 메시지가 표시됩니다. 제로 주소로의 발행에 대한 올바른 테스트는 `require(account != address(0), "<error message>")`인데, 이 컨트랙트는 이를 전혀 확인하지 않습니다.
+`require`를 보면 컨트랙트 소유자만 발행할 수 있음을 알 수 있습니다. 이는 합법적입니다. 하지만 오류 메시지는 _소유자만 발행할 수 있습니다(only owner is allowed to mint)_ 등과 같아야 합니다. 대신, 무관한 <em>ERC20: 제로 주소로 발행(ERC20: mint to the zero address)</em>이라는 메시지가 표시됩니다. 제로 주소로의 발행에 대한 올바른 테스트는 `require(account != address(0), "<error message>")`인데, 이 컨트랙트는 이를 전혀 확인하지 않습니다.
 
 ```solidity
         _totalSupply = _totalSupply.add(amount);
@@ -306,7 +306,7 @@ ERC-20 컨트랙트에는 허용량을 위한 [`approve` 함수](/developers/tut
     }
 ```
 
-`auth`와 `approver`는 컨트랙트가 `contract_owner`에 의해 호출되었는지 확인하므로 더 타당합니다. 발행과 같은 특정 권한이 필요한 작업은 해당 계정으로 제한될 것으로 예상할 수 있습니다. 하지만 _정확히 동일한 작업_을 수행하는 두 개의 별도 함수를 두는 이유는 무엇일까요?
+`auth`와 `approver`는 컨트랙트가 `contract_owner`에 의해 호출되었는지 확인하므로 더 타당합니다. 발행과 같은 특정 권한이 필요한 작업은 해당 계정으로 제한될 것으로 예상할 수 있습니다. 하지만 <em>정확히 동일한 작업</em>을 수행하는 두 개의 별도 함수를 두는 이유는 무엇일까요?
 
 ## 무엇을 자동으로 탐지할 수 있을까? {#what-can-we-detect-automatically}
 

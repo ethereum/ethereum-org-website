@@ -1,6 +1,6 @@
 ---
-title: Preuve d'autorité (PoA)
-description: Une explication du protocole de consensus de preuve d'autorité et de son rôle dans l'écosystème de la chaîne de blocs.
+title: "Preuve d'autorité (PoA)"
+description: "Une explication du protocole de consensus de preuve d'autorité et de son rôle dans l'écosystème de la chaîne de blocs."
 lang: fr
 ---
 

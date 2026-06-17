@@ -1,12 +1,12 @@
 ---
 title: "واجهات ⁦ABIs⁩ القصيرة لتحسين بيانات الاستدعاء"
 description: "تحسين العقود الذكية لتجميعات ⁦Optimistic⁩"
-author: أوري بوميرانتس
+author: "أوري بوميرانتس"
 lang: ar
 tags:
   - طبقة 2 (L2)
 skill: intermediate
-breadcrumb: واجهات ⁦ABIs⁩ القصيرة
+breadcrumb: "واجهات ⁦ABIs⁩ القصيرة"
 published: 2022-04-01
 ---
 
@@ -85,9 +85,9 @@ published: 2022-04-01
 ### Token.sol {#token-sol}
 
 [هذا هو عقد الوجهة](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
-إنه عقد ERC-20 قياسي، مع ميزة إضافية واحدة.
+إنه عقد <span dir="ltr">ERC-20</span> قياسي، مع ميزة إضافية واحدة.
 تتيح دالة `faucet` هذه لأي مستخدم الحصول على بعض الرموز المميزة لاستخدامها.
-من شأن ذلك أن يجعل عقد ERC-20 الإنتاجي عديم الفائدة، ولكنه يسهل الأمور عندما يكون عقد ERC-20 موجودًا فقط لتسهيل الاختبار.
+من شأن ذلك أن يجعل عقد <span dir="ltr">ERC-20</span> الإنتاجي عديم الفائدة، ولكنه يسهل الأمور عندما يكون عقد <span dir="ltr">ERC-20</span> موجودًا فقط لتسهيل الاختبار.
 
 ```solidity
     /**
@@ -202,7 +202,7 @@ import { OrisUselessToken } from "./Token.sol";
 2. الدوال التي تعتمد على [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
    ستكون قيمة `msg.sender` هي عنوان `CalldataInterpreter`، وليس المستدعي.
 
-لسوء الحظ، [بالنظر إلى مواصفات ERC-20](https://eips.ethereum.org/EIPS/eip-20)، يترك هذا دالة واحدة فقط، وهي `transfer`.
+لسوء الحظ، [بالنظر إلى مواصفات <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20)، يترك هذا دالة واحدة فقط، وهي `transfer`.
 هذا يترك لنا دالتين فقط: `transfer` (لأنه يمكننا استدعاء `transferFrom`) و `faucet` (لأنه يمكننا تحويل الرموز المميزة مرة أخرى إلى من استدعانا).
 
 ```solidity
@@ -373,7 +373,7 @@ const transferTx = {
 
 إذا كان العقد يستجيب فقط للمعاملات الخارجية، فيمكننا الاكتفاء بوجود عقد واحد فقط.
 ومع ذلك، فإن ذلك من شأنه أن يكسر [قابلية التركيب](/developers/docs/smart-contracts/composability/).
-من الأفضل بكثير أن يكون لديك عقد يستجيب لاستدعاءات ERC-20 العادية، وعقد آخر يستجيب للمعاملات ذات بيانات الاستدعاء القصيرة.
+من الأفضل بكثير أن يكون لديك عقد يستجيب لاستدعاءات <span dir="ltr">ERC-20</span> العادية، وعقد آخر يستجيب للمعاملات ذات بيانات الاستدعاء القصيرة.
 
 ### Token.sol {#token-sol-2}
 
@@ -389,7 +389,7 @@ const transferTx = {
     address proxy = address(0);
 ```
 
-يحتاج عقد ERC-20 إلى معرفة هوية الوكيل المعتمد.
+يحتاج عقد <span dir="ltr">ERC-20</span> إلى معرفة هوية الوكيل المعتمد.
 ومع ذلك، لا يمكننا تعيين هذا المتغير في المُنشئ، لأننا لا نعرف القيمة بعد.
 يتم إنشاء مثيل لهذا العقد أولاً لأن الوكيل يتوقع عنوان الرمز المميز في المُنشئ الخاص به.
 
@@ -526,7 +526,7 @@ await cdi.deployed()
 await token.setProxy(cdi.address)
 ```
 
-نحتاج إلى إخبار عقد ERC-20 بالوكيل الذي يجب الوثوق به
+نحتاج إلى إخبار عقد <span dir="ltr">ERC-20</span> بالوكيل الذي يجب الوثوق به
 
 ```js
 console.log("CalldataInterpreter addr:", cdi.address)
@@ -550,7 +550,7 @@ const transferTx = {
 await (await signer.sendTransaction(transferTx)).wait()
 ```
 
-نظرًا لأن عقد ERC-20 يثق في الوكيل (`cdi`)، فإننا لا نحتاج إلى سماحية لترحيل التحويلات.
+نظرًا لأن عقد <span dir="ltr">ERC-20</span> يثق في الوكيل (`cdi`)، فإننا لا نحتاج إلى سماحية لترحيل التحويلات.
 
 ```js
 // الموافقة و transferFrom

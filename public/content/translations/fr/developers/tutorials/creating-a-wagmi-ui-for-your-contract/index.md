@@ -1,8 +1,8 @@
 ---
 title: "Créer une interface utilisateur pour votre contrat"
-description: En utilisant des composants modernes tels que TypeScript, React, Vite et Wagmi, nous allons examiner une interface utilisateur moderne, mais minimale, et apprendre à connecter un portefeuille à l'interface utilisateur, appeler un contrat intelligent pour lire des informations, envoyer une transaction à un contrat intelligent et surveiller les événements d'un contrat intelligent pour identifier les changements.
+description: "En utilisant des composants modernes tels que TypeScript, React, Vite et Wagmi, nous allons examiner une interface utilisateur moderne, mais minimale, et apprendre à connecter un portefeuille à l'interface utilisateur, appeler un contrat intelligent pour lire des informations, envoyer une transaction à un contrat intelligent et surveiller les événements d'un contrat intelligent pour identifier les changements."
 author: Ori Pomerantz
-tags: ["typescript", "react", "vite", "wagmi", "frontend"]
+tags: ["TypeScript", "React", "Vite", "Wagmi", "frontend"]
 skill: beginner
 breadcrumb: Interface utilisateur avec WAGMI
 published: 2023-11-01
@@ -225,7 +225,8 @@ Le JSX d'un composant React _doit_ renvoyer un seul composant HTML. Lorsque nous
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 Fournissez des informations sur la connexion actuelle. Dans JSX, `{<expression>}` signifie évaluer l'expression en tant que JavaScript.
@@ -252,7 +253,8 @@ Ici, nous avons deux de ces balises, `<Greeter />` (qui contient en fait le code
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -293,7 +295,8 @@ Les boutons de connecteur.
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Come sviluppare e testare una dapp su una testnet locale multi-client
-description: Questa guida ti illustrerà prima come istanziare e configurare una testnet Ethereum locale multi-client prima di utilizzare la testnet per distribuire e testare un'applicazione decentralizzata (dapp).
+description: "Questa guida ti illustrerà prima come istanziare e configurare una testnet Ethereum locale multi-client prima di utilizzare la testnet per distribuire e testare un'applicazione decentralizzata (dapp)."
 author: "Tedi Mitiku"
 tags:
   [

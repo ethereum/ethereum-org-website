@@ -1,6 +1,6 @@
 ---
-title: Tấn công và phòng thủ Bằng chứng cổ phần (PoS) của Ethereum
-description: Tìm hiểu về các hướng tấn công đã biết trên Bằng chứng cổ phần (PoS) của Ethereum và cách phòng thủ.
+title: "Tấn công và phòng thủ Bằng chứng cổ phần (PoS) của Ethereum"
+description: "Tìm hiểu về các hướng tấn công đã biết trên Bằng chứng cổ phần (PoS) của Ethereum và cách phòng thủ."
 lang: vi
 ---
 

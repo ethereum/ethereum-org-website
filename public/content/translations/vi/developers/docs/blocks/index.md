@@ -1,6 +1,6 @@
 ---
-title: Khối
-description: Tổng quan về các khối trong Chuỗi khối Ethereum – cấu trúc dữ liệu của chúng, lý do tại sao chúng cần thiết và cách chúng được tạo ra.
+title: "Khối"
+description: "Tổng quan về các khối trong Chuỗi khối Ethereum – cấu trúc dữ liệu của chúng, lý do tại sao chúng cần thiết và cách chúng được tạo ra."
 lang: vi
 ---
 

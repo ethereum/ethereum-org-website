@@ -1,6 +1,6 @@
 ---
-title: Web3におけるデザインとUX
-description: Web3スペースとイーサリアムにおけるUXデザインとリサーチの紹介
+title: "Web3におけるデザインとUX"
+description: "Web3スペースとイーサリアムにおけるUXデザインとリサーチの紹介"
 lang: ja
 ---
 

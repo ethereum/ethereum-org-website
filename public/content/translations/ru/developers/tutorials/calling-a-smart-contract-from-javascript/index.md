@@ -1,6 +1,6 @@
 ---
-title: Вызов смарт-контракта из JavaScript
-description: Как вызвать функцию смарт-контракта из JavaScript на примере токена DAI
+title: "Вызов смарт-контракта из JavaScript"
+description: "Как вызвать функцию смарт-контракта из JavaScript на примере токена DAI"
 author: jdourlens
 tags:
   - транзакции
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - web3.js
 skill: beginner
-breadcrumb: Вызов контрактов из JS
+breadcrumb: "Вызов контрактов из JS"
 lang: ru
 published: 2020-04-19
 source: EthereumDev

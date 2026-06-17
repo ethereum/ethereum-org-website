@@ -1,6 +1,6 @@
 ---
-title: Мости
-description: Огляд мостів для розробників
+title: "Мости"
+description: "Огляд мостів для розробників"
 lang: uk
 ---
 
@@ -121,6 +121,7 @@ lang: uk
 - [Tenderly](https://tenderly.co/)
 
 ## Додаткові матеріали {#further-reading}
+
 - [Блокчейн-мости](/bridges/) – ethereum.org
 - [Система оцінки ризиків мостів від L2BEAT](https://l2beat.com/bridges/summary)
 - [Блокчейн-мости: створення мереж криптомереж](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 вересня 2021 р. – Dmitriy Berenzon

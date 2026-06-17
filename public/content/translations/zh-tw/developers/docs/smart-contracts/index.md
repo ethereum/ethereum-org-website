@@ -1,6 +1,6 @@
 ---
-title: 智能合約簡介
-description: 智能合約的概述，重點介紹其獨特的特徵與限制。
+title: "智能合約簡介"
+description: "智能合約的概述，重點介紹其獨特的特徵與限制。"
 lang: zh-tw
 ---
 

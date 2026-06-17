@@ -1,10 +1,10 @@
 ---
-title: 智能合约安全指南
-description: 构建去中心化应用程序 (dapp) 时需要考虑的安全指南清单
+title: "智能合约安全指南"
+description: "构建去中心化应用程序 (dapp) 时需要考虑的安全指南清单"
 author: "Trailofbits"
-tags: ["solidity", "智能合约", "安全"]
+tags: ["Solidity", "智能合约", "安全"]
 skill: intermediate
-breadcrumb: 安全指南
+breadcrumb: "安全指南"
 lang: zh
 published: 2020-09-06
 source: Building secure contracts

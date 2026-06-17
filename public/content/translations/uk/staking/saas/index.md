@@ -1,11 +1,11 @@
 ---
-title: Стейкінг як послуга
-description: Дізнайтеся про стейкінг як послугу
+title: "Стейкінг як послуга"
+description: "Дізнайтеся про стейкінг як послугу"
 lang: uk
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Носоріг Леслі ширяє у хмарах.
+alt: "Носоріг Леслі ширяє у хмарах."
 sidebarDepth: 2
 summaryPoints:
   - Сторонні оператори вузлів керують роботою вашого клієнта валідатора

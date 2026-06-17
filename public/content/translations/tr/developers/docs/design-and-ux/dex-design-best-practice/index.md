@@ -1,6 +1,6 @@
 ---
-title: Merkeziyetsiz borsa (DEX) tasarımı en iyi uygulamaları
-description: Token takası için UX/UI kararlarını açıklayan bir rehber.
+title: "Merkeziyetsiz borsa (DEX) tasarımı en iyi uygulamaları"
+description: "Token takası için UX/UI kararlarını açıklayan bir rehber."
 lang: tr
 ---
 

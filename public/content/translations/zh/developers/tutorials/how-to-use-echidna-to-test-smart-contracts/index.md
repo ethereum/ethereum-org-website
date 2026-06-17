@@ -1,6 +1,6 @@
 ---
-title: 如何使用埃基德纳 (Echidna) 测试智能合约
-description: 如何使用埃基德纳自动测试智能合约
+title: "如何使用埃基德纳 (Echidna) 测试智能合约"
+description: "如何使用埃基德纳自动测试智能合约"
 author: Trailofbits
 lang: zh
 tags:
@@ -10,7 +10,7 @@ tags:
   - 测试
   - 模糊测试
 skill: advanced
-breadcrumb: 埃基德纳
+breadcrumb: "埃基德纳"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

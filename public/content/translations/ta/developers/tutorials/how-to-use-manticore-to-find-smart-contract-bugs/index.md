@@ -1,7 +1,7 @@
 ---
-title: திறன் ஒப்பந்தங்களில் உள்ள பிழைகளைக் கண்டறிய மேண்டிகோர் (Manticore) கருவியை எவ்வாறு பயன்படுத்துவது
-description: திறன் ஒப்பந்தங்களில் உள்ள பிழைகளைத் தானாகவே கண்டறிய மேண்டிகோர் கருவியை எவ்வாறு பயன்படுத்துவது
-author: ட்ரெயில்ஆஃப்பிட்ஸ்
+title: "திறன் ஒப்பந்தங்களில் உள்ள பிழைகளைக் கண்டறிய மேண்டிகோர் (Manticore) கருவியை எவ்வாறு பயன்படுத்துவது"
+description: "திறன் ஒப்பந்தங்களில் உள்ள பிழைகளைத் தானாகவே கண்டறிய மேண்டிகோர் கருவியை எவ்வாறு பயன்படுத்துவது"
+author: "ட்ரெயில்ஆஃப்பிட்ஸ்"
 lang: ta
 tags:
   - solidity
@@ -10,7 +10,7 @@ tags:
   - சோதனை
   - முறையான சரிபார்ப்பு
 skill: advanced
-breadcrumb: மேண்டிகோர்
+breadcrumb: "மேண்டிகோர்"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

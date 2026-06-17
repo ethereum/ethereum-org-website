@@ -1,6 +1,6 @@
 ---
 title: Norme de jeton ERC-20
-description: Découvrez l'ERC-20, la norme pour les jetons fongibles sur Ethereum qui permet de créer des applications de jetons interopérables.
+description: "Découvrez l'ERC-20, la norme pour les jetons fongibles sur Ethereum qui permet de créer des applications de jetons interopérables."
 lang: fr
 ---
 

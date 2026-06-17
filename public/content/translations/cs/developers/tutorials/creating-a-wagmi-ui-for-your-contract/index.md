@@ -1,8 +1,8 @@
 ---
 title: "Vytvoření uživatelského rozhraní pro váš kontrakt"
-description: Pomocí moderních komponent, jako jsou TypeScript, React, Vite a Wagmi, si projdeme moderní, ale minimalistické uživatelské rozhraní a naučíme se, jak k němu připojit peněženku, volat chytrý kontrakt pro čtení informací, odeslat transakci do chytrého kontraktu a sledovat události z chytrého kontraktu pro identifikaci změn.
+description: "Pomocí moderních komponent, jako jsou TypeScript, React, Vite a Wagmi, si projdeme moderní, ale minimalistické uživatelské rozhraní a naučíme se, jak k němu připojit peněženku, volat chytrý kontrakt pro čtení informací, odeslat transakci do chytrého kontraktu a sledovat události z chytrého kontraktu pro identifikaci změn."
 author: Ori Pomerantz
-tags: ["typescript", "react", "vite", "wagmi", "frontend"]
+tags: ["TypeScript", "React", "Vite", "Wagmi", "frontend"]
 skill: beginner
 breadcrumb: UI s WAGMI
 published: 2023-11-01
@@ -225,7 +225,8 @@ JSX komponenty React _musí_ vracet jedinou HTML komponentu. Když máme více k
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 Poskytněte informace o aktuálním připojení. V rámci JSX znamená `{<expression>}` vyhodnotit výraz jako JavaScript.
@@ -252,7 +253,8 @@ Zde máme dvě takové značky, `<Greeter />` (která ve skutečnosti obsahuje H
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -293,7 +295,8 @@ Tlačítka konektorů.
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

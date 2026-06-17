@@ -4,7 +4,7 @@ description: Comment utiliser Manticore pour trouver automatiquement des bugs da
 author: Trailofbits
 lang: fr
 tags:
-  ["solidity", "contrats intelligents", "sécurité", "tests", "vérification formelle"]
+  ["Solidity", "contrats intelligents", "sécurité", "tests", "vérification formelle"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13

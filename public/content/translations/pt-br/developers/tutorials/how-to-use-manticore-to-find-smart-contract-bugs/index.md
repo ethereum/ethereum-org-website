@@ -4,7 +4,7 @@ description: Como usar o Manticore para encontrar bugs automaticamente em contra
 author: Trailofbits
 lang: pt-br
 tags:
-  ["solidity", "contratos inteligentes", "segurança", "testes", "verificação formal"]
+  ["Solidity", "contratos inteligentes", "segurança", "tes", "verificação formal"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13
@@ -80,7 +80,7 @@ Como ``f()`` contém dois caminhos, uma DSE construirá dois predicados de camin
 - Caminho 1: ``a == 65``
 - Caminho 2: ``Not (a == 65)``
 
-Cada predicado de caminho é uma fórmula matemática que pode ser fornecida a um chamado `[solucionador SMT](https://wikipedia.org/wiki/Satisfiability_modulo_theories)`, que tentará resolver a equação. Para ``Path 1``, o solucionador dirá que o caminho pode ser explorado com ``a = 65``. Para ``Path 2``, o solucionador pode dar a ``a`` qualquer valor diferente de 65, por exemplo ``a = 0``.
+Cada predicado de caminho é uma fórmula matemática que pode ser fornecida a um chamado [solucionador SMT](https://wikipedia.org/wiki/Satisfiability_modulo_theories), que tentará resolver a equação. Para ``Path 1``, o solucionador dirá que o caminho pode ser explorado com ``a = 65``. Para ``Path 2``, o solucionador pode dar a ``a`` qualquer valor diferente de 65, por exemplo ``a = 0``.
 
 ### Verificando propriedades {#verifying-properties}
 
@@ -126,7 +126,7 @@ A DSE é, portanto, uma ferramenta poderosa, que pode verificar restrições arb
 
 ## Executando sob o Manticore {#running-under-manticore}
 
-Veremos como explorar um contrato inteligente com a API do Manticore. O alvo é o seguinte contrato inteligente `[`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol)`:
+Veremos como explorar um contrato inteligente com a API do Manticore. O alvo é o seguinte contrato inteligente [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -203,13 +203,13 @@ from manticore.ethereum import ManticoreEVM
 m = ManticoreEVM()
 ```
 
-Uma conta que não é de contrato é criada usando `[m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account)`:
+Uma conta que não é de contrato é criada usando [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-Um contrato Solidity pode ser implantado usando `[m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract)`:
+Um contrato Solidity pode ser implantado usando [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
 
 ```solidity
 source_code = '''
@@ -228,7 +228,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### Resumo {#summary}
 
-- Você pode criar contas de usuário e de contrato com `[m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account)` e `[m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract)`.
+- Você pode criar contas de usuário e de contrato com [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) e [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
 ### Executando transações {#executing-transactions}
 
@@ -239,7 +239,7 @@ O Manticore suporta dois tipos de transação:
 
 #### Transação bruta {#raw-transaction}
 
-Uma transação bruta é executada usando `[m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction)`:
+Uma transação bruta é executada usando [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
 
 ```python
 m.transaction(caller=user_account,
@@ -250,8 +250,8 @@ m.transaction(caller=user_account,
 
 O chamador, o endereço, os dados ou o valor da transação podem ser concretos ou simbólicos:
 
-- `[m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value)` cria um valor simbólico.
-- `[m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer)` cria um array de bytes simbólico.
+- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) cria um valor simbólico.
+- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) cria um array de bytes simbólico.
 
 Por exemplo:
 
@@ -264,7 +264,7 @@ m.transaction(caller=user_account,
               value=symbolic_value)
 ```
 
-Se os dados forem simbólicos, o Manticore explorará todas as funções do contrato durante a execução da transação. Será útil ver a explicação da Função de Fallback no artigo `[Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/)` para entender como a seleção de funções funciona.
+Se os dados forem simbólicos, o Manticore explorará todas as funções do contrato durante a execução da transação. Será útil ver a explicação da Função de Fallback no artigo [Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) para entender como a seleção de funções funciona.
 
 #### Transação nomeada {#named-transaction}
 
@@ -294,7 +294,7 @@ print("Results are in {}".format(m.workspace))
 
 ### Encerrar a Exploração {#terminate-the-exploration}
 
-Para interromper a exploração, use `[m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize)`. Nenhuma transação adicional deve ser enviada depois que este método for chamado e o Manticore gerar casos de teste para cada um dos caminhos explorados.
+Para interromper a exploração, use [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). Nenhuma transação adicional deve ser enviada depois que este método for chamado e o Manticore gerar casos de teste para cada um dos caminhos explorados.
 
 ### Resumo: Executando sob o Manticore {#summary-running-under-manticore}
 
@@ -318,11 +318,11 @@ print("Results are in {}".format(m.workspace))
 m.finalize() # parar a exploração
 ```
 
-Todo o código acima você pode encontrar no `[`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)`
+Todo o código acima você pode encontrar no [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
 
 ## Obtendo caminhos que lançam exceções {#getting-throwing-paths}
 
-Agora geraremos entradas específicas para os caminhos que levantam uma exceção em ``f()``. O alvo ainda é o seguinte contrato inteligente `[`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol)`:
+Agora geraremos entradas específicas para os caminhos que levantam uma exceção em ``f()``. O alvo ainda é o seguinte contrato inteligente [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -339,9 +339,9 @@ contract Simple {
 
 Cada caminho executado tem seu estado da blockchain. Um estado está pronto (ready) ou é morto (killed), o que significa que ele atinge uma instrução THROW ou REVERT:
 
-- `[m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing)`: a lista de estados que estão prontos (eles não executaram um REVERT/INVALID)
-- `[m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)`: a lista de estados que foram mortos
-- `[m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)`: todos os estados
+- [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): a lista de estados que estão prontos (eles não executaram um REVERT/INVALID)
+- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): a lista de estados que foram mortos
+- [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): todos os estados
 
 ```python
 for state in m.all_states:
@@ -363,7 +363,7 @@ data = ABI.deserialize("uint", data)
 
 ### Como gerar um caso de teste {#how-to-generate-testcase}
 
-Use `[m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase)` para gerar um caso de teste:
+Use [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) para gerar um caso de teste:
 
 ```python
 m.generate_testcase(state, 'BugFound')
@@ -401,13 +401,13 @@ for state in m.terminated_states:
         m.generate_testcase(state, 'ThrowFound')
 ```
 
-Todo o código acima você pode encontrar no `[`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)`
+Todo o código acima você pode encontrar no [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
 
 _Observe que poderíamos ter gerado um script muito mais simples, pois todos os estados retornados por terminated_state têm REVERT ou INVALID em seus resultados: este exemplo serviu apenas para demonstrar como manipular a API._
 
 ## Adicionando restrições {#adding-constraints}
 
-Veremos como restringir a exploração. Faremos a suposição de que a documentação de ``f()`` afirma que a função nunca é chamada com ``a == 65``, portanto, qualquer bug com ``a == 65`` não é um bug real. O alvo ainda é o seguinte contrato inteligente `[`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol)`:
+Veremos como restringir a exploração. Faremos a suposição de que a documentação de ``f()`` afirma que a função nunca é chamada com ``a == 65``, portanto, qualquer bug com ``a == 65`` não é um bug real. O alvo ainda é o seguinte contrato inteligente [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -422,7 +422,7 @@ contract Simple {
 
 ### Operadores {#operators}
 
-O módulo `[Operators](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py)` facilita a manipulação de restrições, entre outros, ele fornece:
+O módulo [Operators](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py) facilita a manipulação de restrições, entre outros, ele fornece:
 
 - Operators.AND,
 - Operators.OR,
@@ -463,7 +463,7 @@ m.transaction(caller=user_account,
 
 #### Restrição de estado {#state-constraint-3}
 
-Use `[state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain)` para adicionar uma restrição a um estado específico.
+Use [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) para adicionar uma restrição a um estado específico.
 Pode ser usado para restringir o estado após sua exploração para verificar alguma propriedade nele.
 
 ### Verificando Restrição {#checking-constraint}
@@ -514,4 +514,4 @@ if no_bug_found:
     print(f'No bug found')
 ```
 
-Todo o código acima você pode encontrar no `[`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)`
+Todo o código acima você pode encontrar no [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)

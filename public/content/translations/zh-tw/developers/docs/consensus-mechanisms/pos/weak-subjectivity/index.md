@@ -1,6 +1,6 @@
 ---
-title: 弱主觀性
-description: 弱主觀性的解釋及其在以太坊權益證明 (PoS) 中的作用。
+title: "弱主觀性"
+description: "弱主觀性的解釋及其在以太坊權益證明 (PoS) 中的作用。"
 lang: zh-tw
 ---
 

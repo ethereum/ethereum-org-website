@@ -1,6 +1,6 @@
 ---
-title: Serialização de prefixo de comprimento recursivo (RLP)
-description: Uma definição da codificação RLP na camada de execução do Ethereum.
+title: "Serialização de prefixo de comprimento recursivo (RLP)"
+description: "Uma definição da codificação RLP na camada de execução do Ethereum."
 lang: pt-br
 sidebarDepth: 2
 ---

@@ -1,8 +1,8 @@
 ---
 title: Log de dados de contratos inteligentes com eventos
-description: Uma introdução aos eventos de contratos inteligentes e como você pode usá-los para fazer log de dados
+description: "Uma introdução aos eventos de contratos inteligentes e como você pode usá-los para fazer log de dados"
 author: "jdourlens"
-tags: ["contratos inteligentes", "remix", "solidity", "eventos"]
+tags: ["contratos inteligentes", "Remix", "Solidity", "eventos"]
 skill: intermediate
 breadcrumb: Log de eventos
 lang: pt-br

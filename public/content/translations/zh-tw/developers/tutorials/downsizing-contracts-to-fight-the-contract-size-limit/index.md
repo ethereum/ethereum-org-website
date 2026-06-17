@@ -3,7 +3,7 @@ title: "縮減合約以應對合約大小限制"
 description: "你可以做些什麼來防止智能合約變得過大？"
 author: "馬庫斯·瓦斯"
 lang: zh-tw
-tags: ["solidity", "智能合約", "儲存"]
+tags: ["Solidity", "智能合約", "儲存"]
 skill: intermediate
 breadcrumb: "縮減合約"
 published: 2020-06-26

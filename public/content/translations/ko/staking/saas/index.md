@@ -1,11 +1,11 @@
 ---
-title: 서비스형 스테이킹
-description: 서비스형 스테이킹에 대해 알아보기
+title: "서비스형 스테이킹"
+description: "서비스형 스테이킹에 대해 알아보기"
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: 구름 위를 떠다니는 코뿔소 레슬리.
+alt: "구름 위를 떠다니는 코뿔소 레슬리."
 sidebarDepth: 2
 summaryPoints:
   - 제3자 노드 운영자가 검증자 클라이언트의 운영을 처리합니다.

@@ -1,10 +1,10 @@
 ---
 title: "Dolandırıcı token'ların kullandığı bazı hileler ve bunları tespit etme yöntemleri"
-description: Bu eğitimde, dolandırıcıların oynadığı bazı hileleri, bunları nasıl uyguladıklarını ve nasıl tespit edebileceğimizi görmek için dolandırıcı bir token'ı inceliyoruz.
+description: "Bu eğitimde, dolandırıcıların oynadığı bazı hileleri, bunları nasıl uyguladıklarını ve nasıl tespit edebileceğimizi görmek için dolandırıcı bir token'ı inceliyoruz."
 author: Ori Pomerantz
-tags: ["dolandırıcılık", "solidity", "erc-20", "javascript", "typescript"]
+tags: ["dolandırıcılık", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
-breadcrumb: Dolandırıcı token hileleri
+breadcrumb: "Dolandırıcı token hileleri"
 published: 2023-09-15
 lang: tr
 ---

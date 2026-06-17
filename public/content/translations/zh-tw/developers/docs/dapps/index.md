@@ -1,5 +1,5 @@
 ---
-title: 去中心化應用程式 (dapp) 技術簡介
+title: "去中心化應用程式 (dapp) 技術簡介"
 description:
 lang: zh-tw
 ---

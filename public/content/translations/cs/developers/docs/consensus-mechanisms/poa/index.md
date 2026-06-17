@@ -1,6 +1,6 @@
 ---
-title: Důkaz autority (PoA)
-description: Vysvětlení protokolu konsensu důkazu autority a jeho role v ekosystému blockchainu.
+title: "Důkaz autority (PoA)"
+description: "Vysvětlení protokolu konsensu důkazu autority a jeho role v ekosystému blockchainu."
 lang: cs
 ---
 

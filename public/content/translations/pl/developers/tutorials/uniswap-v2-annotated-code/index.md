@@ -1,8 +1,8 @@
 ---
 title: "Przewodnik po kontrakcie Uniswap-v2"
-description: Jak działa kontrakt Uniswap-v2? Dlaczego został napisany w ten sposób?
+description: "Jak działa kontrakt Uniswap-v2? Dlaczego został napisany w ten sposób?"
 author: Ori Pomerantz
-tags: ["solidity", "dapps"]
+tags: ["Solidity", "dapps"]
 skill: intermediate
 breadcrumb: Przewodnik po Uniswap v2
 published: 2021-05-01

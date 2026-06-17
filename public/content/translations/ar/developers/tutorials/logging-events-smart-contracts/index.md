@@ -1,6 +1,6 @@
 ---
-title: تسجيل البيانات من العقود الذكية باستخدام الأحداث
-description: مقدمة عن أحداث العقود الذكية وكيفية استخدامها لتسجيل البيانات
+title: "تسجيل البيانات من العقود الذكية باستخدام الأحداث"
+description: "مقدمة عن أحداث العقود الذكية وكيفية استخدامها لتسجيل البيانات"
 author: "jdourlens"
 tags:
   - العقود الذكية
@@ -8,7 +8,7 @@ tags:
   - solidity
   - الأحداث
 skill: intermediate
-breadcrumb: تسجيل الأحداث
+breadcrumb: "تسجيل الأحداث"
 lang: ar
 published: 2020-04-03
 source: EthereumDev

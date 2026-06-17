@@ -1,10 +1,10 @@
 ---
-title: NFTミントチュートリアル
-description: このチュートリアルでは、NFTミンターを構築し、メタマスクとWeb3ツールを使用してスマート・コントラクトをReactフロントエンドに接続することで、フルスタックの分散型アプリケーション (dapp) を作成する方法を学びます。
+title: "NFTミントチュートリアル"
+description: "このチュートリアルでは、NFTミンターを構築し、メタマスクとWeb3ツールを使用してスマート・コントラクトをReactフロントエンドに接続することで、フルスタックの分散型アプリケーション (dapp) を作成する方法を学びます。"
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "スマート・コントラクト", "フロントエンド", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "スマート・コントラクト", "フロントエンド", "Pinata", "erc-721"]
 skill: intermediate
-breadcrumb: NFTミンターdapp
+breadcrumb: "NFTミンターdapp"
 lang: ja
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

@@ -1,13 +1,13 @@
 ---
-title: Python開発者のためのイーサリアム入門 パート1
-description: イーサリアム開発の入門。特にPythonプログラミング言語の知識がある方に役立ちます。
-author: マーク・ガロー
+title: "Python開発者のためのイーサリアム入門 パート1"
+description: "イーサリアム開発の入門。特にPythonプログラミング言語の知識がある方に役立ちます。"
+author: "マーク・ガロー"
 lang: ja
 tags:
   - python
   - web3.py
 skill: beginner
-breadcrumb: Pythonを使ったイーサリアム
+breadcrumb: "Pythonを使ったイーサリアム"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

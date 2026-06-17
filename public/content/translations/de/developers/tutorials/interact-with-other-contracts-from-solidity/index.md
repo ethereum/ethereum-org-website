@@ -1,5 +1,5 @@
 ---
-title: Mit anderen Verträgen aus Solidity interagieren
+title: "Mit anderen Verträgen aus Solidity interagieren"
 description: Wie man einen Smart Contract aus einem bestehenden Vertrag bereitstellt und mit ihm interagiert
 author: "jdourlens"
 tags: ["Smart Contracts", "Solidity", "Remix", "Bereitstellung", "Zusammensetzbarkeit"]

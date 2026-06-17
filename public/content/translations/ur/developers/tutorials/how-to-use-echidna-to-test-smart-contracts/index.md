@@ -1,6 +1,6 @@
 ---
-title: سمارٹ کنٹریکٹس کو ٹیسٹ کرنے کے لیے ایکڈنا کا استعمال کیسے کریں
-description: سمارٹ کنٹریکٹس کو خودکار طور پر ٹیسٹ کرنے کے لیے ایکڈنا کا استعمال کیسے کریں
+title: "سمارٹ کنٹریکٹس کو ٹیسٹ کرنے کے لیے ایکڈنا کا استعمال کیسے کریں"
+description: "سمارٹ کنٹریکٹس کو خودکار طور پر ٹیسٹ کرنے کے لیے ایکڈنا کا استعمال کیسے کریں"
 author: Trailofbits
 lang: ur
 tags:
@@ -10,7 +10,7 @@ tags:
   - ٹیسٹنگ
   - فزنگ
 skill: advanced
-breadcrumb: ایکڈنا
+breadcrumb: "ایکڈنا"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

@@ -230,7 +230,8 @@ JSX ya kijenzi cha React _lazima_ irudishe kijenzi kimoja cha HTML. Tunapokuwa n
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 Toa taarifa kuhusu muunganisho wa sasa. Ndani ya JSX, `{<expression>}` inamaanisha kutathmini usemi kama JavaScript.
@@ -257,7 +258,8 @@ Hapa tuna lebo mbili kama hizo, `<Greeter />` (ambayo kwa kweli ina kodi ya HTML
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -298,7 +300,8 @@ Vitufe vya kiunganishi.
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

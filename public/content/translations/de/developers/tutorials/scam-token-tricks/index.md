@@ -1,8 +1,8 @@
 ---
 title: "Einige Tricks von Scam-Token und wie man sie erkennt"
-description: In diesem Tutorial analysieren wir einen Scam-Token, um einige der Tricks von Betrügern zu sehen, wie sie diese implementieren und wie wir sie erkennen können.
+description: "In diesem Tutorial analysieren wir einen Scam-Token, um einige der Tricks von Betrügern zu sehen, wie sie diese implementieren und wie wir sie erkennen können."
 author: Ori Pomerantz
-tags: ["Betrug", "solidity", "erc-20", "javascript", "typescript"]
+tags: ["Betrug", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
 breadcrumb: Tricks von Scam-Token
 published: 2023-09-15

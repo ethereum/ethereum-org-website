@@ -1,6 +1,6 @@
 ---
-title: 常見問題
-description: 關於以太坊權益證明 (PoS) 的常見問題。
+title: "常見問題"
+description: "關於以太坊權益證明 (PoS) 的常見問題。"
 lang: zh-tw
 ---
 

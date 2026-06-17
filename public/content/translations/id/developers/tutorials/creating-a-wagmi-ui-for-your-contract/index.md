@@ -2,7 +2,7 @@
 title: "Membangun antarmuka pengguna untuk kontrak Anda"
 description: Menggunakan komponen modern seperti TypeScript, React, Vite, dan Wagmi, kita akan membahas antarmuka pengguna yang modern namun minimalis, dan mempelajari cara menghubungkan dompet ke antarmuka pengguna, memanggil kontrak pintar untuk membaca informasi, mengirim transaksi ke kontrak pintar, dan memantau peristiwa dari kontrak pintar untuk mengidentifikasi perubahan.
 author: Ori Pomerantz
-tags: ["typescript", "react", "vite", "wagmi", "frontend"]
+tags: ["TypeScript", "React", "Vite", "Wagmi", "frontend"]
 skill: beginner
 breadcrumb: Antarmuka Pengguna dengan WAGMI
 published: 2023-11-01
@@ -225,7 +225,8 @@ JSX dari komponen React _harus_ mengembalikan satu komponen HTML. Ketika kita me
         addresses: {JSON.stringify(connection.addresses)}
         <br />
         chainId: {connection.chainId}
-      </div>
+ 
+</div>
 ```
 
 Berikan informasi tentang koneksi saat ini. Di dalam JSX, `{<expression>}` berarti mengevaluasi ekspresi sebagai JavaScript.
@@ -252,7 +253,8 @@ Di sini kita memiliki dua tag semacam itu, `<Greeter />` (yang sebenarnya berisi
           <button type="button" onClick={disconnect}>
             Disconnect
           </button>
-        </div>
+ 
+</div>
       )}
 ```
 
@@ -293,7 +295,8 @@ Tombol konektor.
 ```tsx
           <div>{status}</div>
           <div>{error?.message}</div>
-        </div>
+ 
+</div>
       )}
 ```
 

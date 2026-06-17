@@ -1,10 +1,10 @@
 ---
-title: Tutorial de acuñador de NFT
-description: En este tutorial, construirás un acuñador de NFT y aprenderás a crear una aplicación descentralizada (dapp) full stack conectando tu contrato inteligente a un frontend en React usando MetaMask y herramientas Web3.
+title: "Tutorial de acuñador de NFT"
+description: "En este tutorial, construirás un acuñador de NFT y aprenderás a crear una aplicación descentralizada (dapp) full stack conectando tu contrato inteligente a un frontend en React usando MetaMask y herramientas Web3."
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "contratos inteligentes", "frontend", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "contratos inteligentes", "frontend", "Pinata", "erc-721"]
 skill: intermediate
-breadcrumb: Dapp acuñadora de NFT
+breadcrumb: "Dapp acuñadora de NFT"
 lang: es
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

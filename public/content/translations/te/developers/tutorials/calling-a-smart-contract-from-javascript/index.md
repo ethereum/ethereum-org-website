@@ -1,10 +1,10 @@
 ---
-title: JavaScript నుండి స్మార్ట్ కాంట్రాక్ట్‌ను కాల్ చేయడం
-description: Dai టోకెన్ ఉదాహరణను ఉపయోగించి JavaScript నుండి స్మార్ట్ కాంట్రాక్ట్ ఫంక్షన్‌ను ఎలా కాల్ చేయాలి
+title: "JavaScript నుండి స్మార్ట్ కాంట్రాక్ట్‌ను కాల్ చేయడం"
+description: "Dai టోకెన్ ఉదాహరణను ఉపయోగించి JavaScript నుండి స్మార్ట్ కాంట్రాక్ట్ ఫంక్షన్‌ను ఎలా కాల్ చేయాలి"
 author: jdourlens
 tags: ["లావాదేవీలు", "ఫ్రంటెండ్", "JavaScript", "web3.js"]
 skill: beginner
-breadcrumb: JS నుండి కాంట్రాక్ట్‌లను కాల్ చేయండి
+breadcrumb: "JS నుండి కాంట్రాక్ట్‌లను కాల్ చేయండి"
 lang: te
 published: 2020-04-19
 source: EthereumDev

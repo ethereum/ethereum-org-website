@@ -1,11 +1,11 @@
 ---
 title: "Reverzní inženýrství kontraktu"
-description: Jak porozumět kontraktu, když nemáte zdrojový kód
+description: "Jak porozumět kontraktu, když nemáte zdrojový kód"
 author: Ori Pomerantz
 lang: cs
 tags: ["evm", "operační kódy"]
 skill: advanced
-breadcrumb: Reverzní inženýrství
+breadcrumb: "Reverzní inženýrství"
 published: 2021-12-30
 ---
 ## Úvod {#introduction}

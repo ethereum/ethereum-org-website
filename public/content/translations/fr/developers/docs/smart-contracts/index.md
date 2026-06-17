@@ -1,6 +1,6 @@
 ---
 title: Introduction aux contrats intelligents
-description: Un aperçu des contrats intelligents, en se concentrant sur leurs caractéristiques uniques et leurs limites.
+description: "Un aperçu des contrats intelligents, en se concentrant sur leurs caractéristiques uniques et leurs limites."
 lang: fr
 ---
 

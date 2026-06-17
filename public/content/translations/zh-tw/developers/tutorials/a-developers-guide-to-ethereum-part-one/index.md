@@ -1,11 +1,11 @@
 ---
-title: Python 開發者以太坊指南（第一部分）
-description: 以太坊開發簡介，特別適合具備 Python 程式語言知識的開發者
-author: 馬克·加羅
+title: "Python 開發者以太坊指南（第一部分）"
+description: "以太坊開發簡介，特別適合具備 Python 程式語言知識的開發者"
+author: "馬克·加羅"
 lang: zh-tw
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
-breadcrumb: 使用 Python 開發以太坊
+breadcrumb: "使用 Python 開發以太坊"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

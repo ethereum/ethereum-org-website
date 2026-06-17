@@ -1,11 +1,11 @@
 ---
-title: Gerçek dünya varlıkları (RWA'lar)
-metaTitle: RWA'lar nedir? | Gerçek Dünya Varlıklarının Faydaları ve Kullanımı
-description: Ethereum'daki gerçek dünya varlıklarına genel bir bakış
+title: "Gerçek dünya varlıkları (RWA'lar)"
+metaTitle: "RWA'lar nedir? | Gerçek Dünya Varlıklarının Faydaları ve Kullanımı"
+description: "Ethereum'daki gerçek dünya varlıklarına genel bir bakış"
 lang: tr
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: Oynayan adam ve köpek.
+alt: "Oynayan adam ve köpek."
 sidebarDepth: 2
 summaryPoints:
   - "Değerli emtiaları dijital tokenlara dönüştürmek için bir yöntem."

@@ -1,6 +1,6 @@
 ---
 title: Standard tokenu ERC-223
-description: Přehled standardu zaměnitelného tokenu ERC-223, jak funguje a srovnání s ERC-20.
+description: "Přehled standardu zaměnitelného tokenu ERC-223, jak funguje a srovnání s ERC-20."
 lang: cs
 ---
 

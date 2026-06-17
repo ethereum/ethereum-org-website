@@ -1,10 +1,10 @@
 ---
-title: Wytyczne dotyczące bezpieczeństwa inteligentnych kontraktów
-description: Lista kontrolna wytycznych dotyczących bezpieczeństwa, które należy wziąć pod uwagę podczas tworzenia zdecentralizowanej aplikacji (dapp)
+title: "Wytyczne dotyczące bezpieczeństwa inteligentnych kontraktów"
+description: "Lista kontrolna wytycznych dotyczących bezpieczeństwa, które należy wziąć pod uwagę podczas tworzenia zdecentralizowanej aplikacji (dapp)"
 author: "Trailofbits"
-tags: ["solidity", "inteligentne kontrakty", "bezpieczeństwo"]
+tags: ["Solidity", "inteligentne kontrakty", "bezpieczeństwo"]
 skill: intermediate
-breadcrumb: Wytyczne dotyczące bezpieczeństwa
+breadcrumb: "Wytyczne dotyczące bezpieczeństwa"
 lang: pl
 published: 2020-09-06
 source: Building secure contracts

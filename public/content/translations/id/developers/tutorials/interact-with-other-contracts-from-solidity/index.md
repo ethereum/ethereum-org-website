@@ -2,7 +2,7 @@
 title: Berinteraksi dengan kontrak lain dari Solidity
 description: Cara menyebarkan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengannya
 author: "jdourlens"
-tags: ["kontrak pintar", "solidity", "remix", "menyebarkan", "komposabilitas"]
+tags: ["kontrak pintar", "Solidity", "Remix", "menyebarkan", "komposabilitas"]
 skill: advanced
 breadcrumb: Interaksi kontrak
 lang: id

@@ -1,11 +1,11 @@
 ---
-title: سمارٹ کنٹریکٹ کے بگز تلاش کرنے کے لیے سلدر کا استعمال کیسے کریں
-description: سمارٹ کنٹریکٹس میں خودکار طریقے سے بگز تلاش کرنے کے لیے سلدر کا استعمال کیسے کریں
-author: ٹریل آف بٹس
+title: "سمارٹ کنٹریکٹ کے بگز تلاش کرنے کے لیے سلدر کا استعمال کیسے کریں"
+description: "سمارٹ کنٹریکٹس میں خودکار طریقے سے بگز تلاش کرنے کے لیے سلدر کا استعمال کیسے کریں"
+author: "ٹریل آف بٹس"
 lang: ur
-tags: ["solidity", "سمارٹ کنٹریکٹس", "سیکیورٹی", "ٹیسٹنگ"]
+tags: ["Solidity", "سمارٹ کنٹریکٹس", "سیکیورٹی", "ٹیسٹنگ"]
 skill: advanced
-breadcrumb: سلدر
+breadcrumb: "سلدر"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

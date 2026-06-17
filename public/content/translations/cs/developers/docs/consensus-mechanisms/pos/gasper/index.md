@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Vysvětlení mechanismu Gasper v rámci důkazu podílem (PoS).
+description: "Vysvětlení mechanismu Gasper v rámci důkazu podílem (PoS)."
 lang: cs
 ---
 

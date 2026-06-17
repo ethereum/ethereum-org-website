@@ -1,6 +1,6 @@
 ---
 title: Preuve d'enjeu (PoS) contre preuve de travail (PoW)
-description: Une comparaison entre les mécanismes de consensus basés sur la preuve d'enjeu et la preuve de travail d'Ethereum
+description: "Une comparaison entre les mécanismes de consensus basés sur la preuve d'enjeu et la preuve de travail d'Ethereum"
 lang: fr
 ---
 

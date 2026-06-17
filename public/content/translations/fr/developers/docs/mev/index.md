@@ -1,6 +1,6 @@
 ---
 title: Valeur maximale extractible (MEV)
-description: Une introduction à la valeur maximale extractible (MEV)
+description: "Une introduction à la valeur maximale extractible (MEV)"
 lang: fr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Tuần tự hóa tiền tố độ dài đệ quy (RLP)
-description: Định nghĩa về mã hóa rlp trong lớp thực thi của Ethereum.
+title: "Tuần tự hóa tiền tố độ dài đệ quy (RLP)"
+description: "Định nghĩa về mã hóa rlp trong lớp thực thi của Ethereum."
 lang: vi
 sidebarDepth: 2
 ---

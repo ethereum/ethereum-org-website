@@ -1,6 +1,6 @@
 ---
-title: Dowód stawki (PoS) a dowód pracy (PoW)
-description: Porównanie mechanizmów konsensusu Ethereum opartych na dowodzie stawki i dowodzie pracy
+title: "Dowód stawki (PoS) a dowód pracy (PoW)"
+description: "Porównanie mechanizmów konsensusu Ethereum opartych na dowodzie stawki i dowodzie pracy"
 lang: pl
 ---
 

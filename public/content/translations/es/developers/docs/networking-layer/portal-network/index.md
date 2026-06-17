@@ -1,6 +1,6 @@
 ---
 title: Portal Network
-description: Una descripción general de Portal Network: una red en desarrollo diseñada para admitir clientes de bajos recursos.
+description: "Una descripción general de Portal Network: una red en desarrollo diseñada para admitir clientes de bajos recursos."
 lang: es
 ---
 

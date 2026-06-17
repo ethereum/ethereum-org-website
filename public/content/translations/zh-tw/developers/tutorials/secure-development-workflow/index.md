@@ -1,13 +1,13 @@
 ---
-title: 智能合約安全檢查清單
-description: 撰寫安全智能合約的建議工作流程
+title: "智能合約安全檢查清單"
+description: "撰寫安全智能合約的建議工作流程"
 author: "Trailofbits"
 tags:
   - 智能合約
   - 安全
   - solidity
 skill: intermediate
-breadcrumb: 安全檢查清單
+breadcrumb: "安全檢查清單"
 lang: zh-tw
 published: 2020-09-07
 source: Building secure contracts

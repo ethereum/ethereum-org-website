@@ -1,11 +1,11 @@
 ---
-title: Як налаштувати Теллор як ваш оракул
-description: Посібник для початку інтеграції оракула Теллор у ваш протокол
+title: "Як налаштувати Теллор як ваш оракул"
+description: "Посібник для початку інтеграції оракула Теллор у ваш протокол"
 author: "Теллор"
 lang: uk
-tags: ["solidity", "смарт-контракти", "оракули"]
+tags: ["Solidity", "смарт-контракти", "оракули"]
 skill: beginner
-breadcrumb: Оракул Теллор
+breadcrumb: "Оракул Теллор"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

@@ -1,6 +1,6 @@
 ---
-title: 如何在本地多客戶端測試網上開發與測試去中心化應用程式 (dapp)
-description: 本指南將首先引導您如何實例化並設定多客戶端本地以太坊測試網，然後使用該測試網部署與測試去中心化應用程式 (dapp)。
+title: "如何在本地多客戶端測試網上開發與測試去中心化應用程式 (dapp)"
+description: "本指南將首先引導您如何實例化並設定多客戶端本地以太坊測試網，然後使用該測試網部署與測試去中心化應用程式 (dapp)。"
 author: "泰迪·米提庫"
 tags:
   [
@@ -13,7 +13,7 @@ tags:
     "測試",
   ]
 skill: intermediate
-breadcrumb: 多客戶端測試網
+breadcrumb: "多客戶端測試網"
 lang: zh-tw
 published: 2023-04-11
 ---

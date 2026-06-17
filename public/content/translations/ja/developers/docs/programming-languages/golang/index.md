@@ -1,6 +1,6 @@
 ---
-title: Go開発者のためのイーサリアム
-description: Goベースのプロジェクトとツールを使用してイーサリアム向けに開発する方法を学ぶ
+title: "Go開発者のためのイーサリアム"
+description: "Goベースのプロジェクトとツールを使用してイーサリアム向けに開発する方法を学ぶ"
 lang: ja
 incomplete: true
 ---

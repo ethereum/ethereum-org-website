@@ -2,7 +2,7 @@
 title: Mafunzo ya Kufua NFT
 description: Katika mafunzo haya, utaunda kifua NFT na kujifunza jinsi ya kuunda programu tumizi iliyogatuliwa (dapp) kamili kwa kuunganisha mkataba mahiri wako kwenye mbele ya React ukitumia MetaMask na zana za Web3.
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "mikataba mahiri", "mbele", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "mikataba mahiri", "mbele", "Pinata", "erc-721"]
 skill: intermediate
 breadcrumb: dapp ya kufua NFT
 lang: sw
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

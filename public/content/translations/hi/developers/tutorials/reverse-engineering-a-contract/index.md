@@ -1,11 +1,11 @@
 ---
 title: "एक अनुबंध की रिवर्स इंजीनियरिंग"
 description: "जब आपके पास सोर्स कोड न हो तो किसी अनुबंध को कैसे समझें"
-author: ओरी पोमेरेंट्ज़
+author: "ओरी पोमेरेंट्ज़"
 lang: hi
 tags: ["evm", "ऑपकोड"]
 skill: advanced
-breadcrumb: रिवर्स इंजीनियरिंग
+breadcrumb: "रिवर्स इंजीनियरिंग"
 published: 2021-12-30
 ---
 ## परिचय {#introduction}

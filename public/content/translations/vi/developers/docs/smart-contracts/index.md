@@ -1,6 +1,6 @@
 ---
-title: Giới thiệu về hợp đồng thông minh
-description: Tổng quan về hợp đồng thông minh, tập trung vào các đặc điểm và hạn chế độc đáo của chúng.
+title: "Giới thiệu về hợp đồng thông minh"
+description: "Tổng quan về hợp đồng thông minh, tập trung vào các đặc điểm và hạn chế độc đáo của chúng."
 lang: vi
 ---
 

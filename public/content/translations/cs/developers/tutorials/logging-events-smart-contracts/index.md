@@ -1,6 +1,6 @@
 ---
-title: Logování dat z chytrých kontraktů pomocí událostí
-description: Úvod do událostí chytrých kontraktů a jak je můžete využít k logování dat
+title: "Logování dat z chytrých kontraktů pomocí událostí"
+description: "Úvod do událostí chytrých kontraktů a jak je můžete využít k logování dat"
 author: "jdourlens"
 tags:
   - chytré kontrakty
@@ -8,7 +8,7 @@ tags:
   - solidity
   - události
 skill: intermediate
-breadcrumb: Logování událostí
+breadcrumb: "Logování událostí"
 lang: cs
 published: 2020-04-03
 source: EthereumDev

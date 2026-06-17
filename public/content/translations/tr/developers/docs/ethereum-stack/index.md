@@ -1,6 +1,6 @@
 ---
-title: Ethereum yığınına giriş
-description: Ethereum yığınının farklı katmanlarına ve bunların birbirine nasıl uyduğuna dair bir rehber.
+title: "Ethereum yığınına giriş"
+description: "Ethereum yığınının farklı katmanlarına ve bunların birbirine nasıl uyduğuna dair bir rehber."
 lang: tr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Mạng xã hội phi tập trung
-description: Tổng quan về các mạng xã hội phi tập trung trên Ethereum
+title: "Mạng xã hội phi tập trung"
+description: "Tổng quan về các mạng xã hội phi tập trung trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2

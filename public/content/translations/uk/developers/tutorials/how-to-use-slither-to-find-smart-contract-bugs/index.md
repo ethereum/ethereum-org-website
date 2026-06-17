@@ -1,7 +1,7 @@
 ---
-title: Як використовувати Слізер для пошуку помилок у смартконтрактах
-description: Як використовувати Слізер для автоматичного пошуку помилок у смартконтрактах
-author: Трейлофбітс
+title: "Як використовувати Слізер для пошуку помилок у смартконтрактах"
+description: "Як використовувати Слізер для автоматичного пошуку помилок у смартконтрактах"
+author: "Трейлофбітс"
 lang: uk
 tags:
   - solidity
@@ -9,7 +9,7 @@ tags:
   - безпека
   - тестування
 skill: advanced
-breadcrumb: Слізер
+breadcrumb: "Слізер"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

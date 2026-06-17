@@ -1,6 +1,6 @@
 ---
 title: Mosty
-description: Přehled přemostění pro vývojáře
+description: "Přehled přemostění pro vývojáře"
 lang: cs
 ---
 
@@ -121,6 +121,7 @@ Ke sledování aktivity kontraktů napříč řetězci mohou vývojáři použí
 - [Tenderly](https://tenderly.co/)
 
 ## Další čtení {#further-reading}
+
 - [Blockchainové mosty](/bridges/) – ethereum.org
 - [Rámec rizik mostů L2BEAT](https://l2beat.com/bridges/summary)
 - [Blockchainové mosty: Budování sítí kryptosítí](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8. září 2021 – Dmitriy Berenzon

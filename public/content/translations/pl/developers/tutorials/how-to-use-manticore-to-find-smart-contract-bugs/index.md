@@ -1,10 +1,10 @@
 ---
-title: Jak używać Manticore do znajdowania błędów w inteligentnych kontraktach
-description: Jak używać Manticore do automatycznego znajdowania błędów w inteligentnych kontraktach
+title: "Jak używać Manticore do znajdowania błędów w inteligentnych kontraktach"
+description: "Jak używać Manticore do automatycznego znajdowania błędów w inteligentnych kontraktach"
 author: Trailofbits
 lang: pl
 tags:
-  ["solidity", "inteligentne kontrakty", "bezpieczeństwo", "testowanie", "weryfikacja formalna"]
+  ["Solidity", "inteligentne kontrakty", "bezpieczeństwo", "testowanie", "weryfikacja formalna"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13

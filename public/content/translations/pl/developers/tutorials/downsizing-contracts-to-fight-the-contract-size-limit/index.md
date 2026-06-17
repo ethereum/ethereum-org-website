@@ -3,7 +3,7 @@ title: "Zmniejszanie kontraktów w celu walki z limitem rozmiaru kontraktu"
 description: "Co możesz zrobić, aby zapobiec nadmiernemu rozrostowi swoich inteligentnych kontraktów?"
 author: Markus Waas
 lang: pl
-tags: ["solidity", "inteligentne kontrakty", "przechowywanie"]
+tags: ["Solidity", "inteligentne kontrakty", "przechowywanie"]
 skill: intermediate
 breadcrumb: "Zmniejszanie kontraktów"
 published: 2020-06-26

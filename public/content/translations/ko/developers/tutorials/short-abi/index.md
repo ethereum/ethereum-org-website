@@ -1,11 +1,11 @@
 ---
 title: "콜 데이터 최적화를 위한 짧은 ABI"
-description: 옵티미스틱 롤업을 위한 스마트 컨트랙트 최적화
-author: 오리 포메란츠
+description: "옵티미스틱 롤업을 위한 스마트 컨트랙트 최적화"
+author: "오리 포메란츠"
 lang: ko
 tags: ["레이어 2 (l2)"]
 skill: intermediate
-breadcrumb: 짧은 ABI
+breadcrumb: "짧은 ABI"
 published: 2022-04-01
 ---
 

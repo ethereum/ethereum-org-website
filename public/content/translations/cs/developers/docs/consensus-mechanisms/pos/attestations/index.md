@@ -1,6 +1,6 @@
 ---
 title: Atestace
-description: Popis atestací v síti Ethereum s mechanismem proof-of-stake.
+description: "Popis atestací v síti Ethereum s mechanismem proof-of-stake."
 lang: cs
 ---
 

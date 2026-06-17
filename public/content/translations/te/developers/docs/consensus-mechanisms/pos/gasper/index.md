@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper ప్రూఫ్-ఆఫ్-స్టేక్ (PoS) ఏకాభిప్రాయ యంత్రాంగం యొక్క వివరణ.
+description: "Gasper ప్రూఫ్-ఆఫ్-స్టేక్ (PoS) ఏకాభిప్రాయ యంత్రాంగం యొక్క వివరణ."
 lang: te
 ---
 

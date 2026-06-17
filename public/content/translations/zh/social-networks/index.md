@@ -1,6 +1,6 @@
 ---
-title: 去中心化社交网络
-description: 以太坊上的去中心化社交网络概述
+title: "去中心化社交网络"
+description: "以太坊上的去中心化社交网络概述"
 lang: zh
 template: use-cases
 sidebarDepth: 2
@@ -88,7 +88,7 @@ summaryPoints:
 
 - Brave 已将建立在以太坊上的 ERC-20 代币**[基本注意力代币 (BAT)](https://basicattentiontoken.org/)** 整合到其浏览器生态系统中，以彻底改变数字广告和对内容创作者的支持。
 
-- **[Brave 奖励计划](https://brave.com/brave-rewards/)**允许用户通过观看尊重隐私的广告来赚取 BAT，然后根据注意力时间自动向 YouTube、推特和 GitHub 等各种平台上的网站和内容创作者提供捐助。
+- <strong>[Brave 奖励计划](https://brave.com/brave-rewards/)</strong>允许用户通过观看尊重隐私的广告来赚取 BAT，然后根据注意力时间自动向 YouTube、推特和 GitHub 等各种平台上的网站和内容创作者提供捐助。
 
 - 内容创作者可以注册为 **[Brave 认证创作者](https://creators.brave.com/)**，直接在他们的以太坊钱包中接收这些捐助，从而在传统网络平台和基于区块链的变现之间建立一座桥梁。
 

@@ -1,6 +1,6 @@
 ---
-title: Datové struktury a kódování
-description: Přehled základních datových struktur Etherea.
+title: "Datové struktury a kódování"
+description: "Přehled základních datových struktur Etherea."
 lang: cs
 sidebarDepth: 2
 ---

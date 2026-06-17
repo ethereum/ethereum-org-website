@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: شرح لآلية إثبات الحصة (PoS) الخاصة بـ Gasper.
+description: "شرح لآلية إثبات الحصة (PoS) الخاصة بـ Gasper."
 lang: ar
 ---
 

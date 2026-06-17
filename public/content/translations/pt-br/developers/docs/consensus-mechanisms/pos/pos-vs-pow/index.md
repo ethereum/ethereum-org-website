@@ -1,6 +1,6 @@
 ---
-title: Prova de Participação (PoS) vs Prova de Trabalho (PoW)
-description: Uma comparação entre o mecanismo de consenso baseado em Prova de Participação e o baseado em Prova de Trabalho do Ethereum
+title: "Prova de Participação (PoS) vs Prova de Trabalho (PoW)"
+description: "Uma comparação entre o mecanismo de consenso baseado em Prova de Participação e o baseado em Prova de Trabalho do Ethereum"
 lang: pt-br
 ---
 

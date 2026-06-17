@@ -1,6 +1,6 @@
 ---
-title: Các framework phát triển dapp
-description: Khám phá những lợi thế của các framework và so sánh các tùy chọn có sẵn.
+title: "Các framework phát triển dapp"
+description: "Khám phá những lợi thế của các framework và so sánh các tùy chọn có sẵn."
 lang: vi
 ---
 

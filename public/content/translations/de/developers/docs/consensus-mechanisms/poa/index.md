@@ -1,6 +1,6 @@
 ---
-title: Autoritätsnachweis (PoA)
-description: Eine Erklärung des Konsensprotokolls Autoritätsnachweis (PoA) und seiner Rolle im Blockchain-Ökosystem.
+title: "Autoritätsnachweis (PoA)"
+description: "Eine Erklärung des Konsensprotokolls Autoritätsnachweis (PoA) und seiner Rolle im Blockchain-Ökosystem."
 lang: de
 ---
 

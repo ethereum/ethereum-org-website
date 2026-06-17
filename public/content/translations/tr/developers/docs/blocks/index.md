@@ -1,6 +1,6 @@
 ---
 title: Bloklar
-description: Ethereum blokzincirindeki bloklara genel bir bakış – veri yapıları, neden gerekli oldukları ve nasıl oluşturuldukları.
+description: "Ethereum blokzincirindeki bloklara genel bir bakış – veri yapıları, neden gerekli oldukları ve nasıl oluşturuldukları."
 lang: tr
 ---
 

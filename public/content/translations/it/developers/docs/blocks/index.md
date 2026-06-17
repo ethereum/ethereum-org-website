@@ -1,6 +1,6 @@
 ---
 title: Blocchi
-description: Una panoramica dei blocchi nella blockchain di Ethereum: la loro struttura dei dati, perché sono necessari e come vengono creati.
+description: "Una panoramica dei blocchi nella blockchain di Ethereum: la loro struttura dei dati, perché sono necessari e come vengono creati."
 lang: it
 ---
 

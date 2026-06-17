@@ -1,9 +1,9 @@
 ---
-title: Cách sử dụng Slither để tìm lỗi hợp đồng thông minh
-description: Cách sử dụng Slither để tự động tìm lỗi trong các hợp đồng thông minh
+title: "Cách sử dụng Slither để tìm lỗi hợp đồng thông minh"
+description: "Cách sử dụng Slither để tự động tìm lỗi trong các hợp đồng thông minh"
 author: Trailofbits
 lang: vi
-tags: ["solidity", "hợp đồng thông minh", "bảo mật", "kiểm thử"]
+tags: ["Solidity", "hợp đồng thông minh", "bảo mật", "kiểm thử"]
 skill: advanced
 breadcrumb: Slither
 published: 2020-06-09

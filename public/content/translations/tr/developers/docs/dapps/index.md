@@ -1,5 +1,5 @@
 ---
-title: Merkeziyetsiz uygulamalara (dapp) teknik giriş
+title: "Merkeziyetsiz uygulamalara (dapp) teknik giriş"
 description:
 lang: tr
 ---

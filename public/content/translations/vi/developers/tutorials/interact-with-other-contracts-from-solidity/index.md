@@ -1,10 +1,10 @@
 ---
-title: Tương tác với các hợp đồng khác từ Solidity
-description: Cách triển khai một hợp đồng thông minh từ một hợp đồng hiện có và tương tác với nó
+title: "Tương tác với các hợp đồng khác từ Solidity"
+description: "Cách triển khai một hợp đồng thông minh từ một hợp đồng hiện có và tương tác với nó"
 author: "jdourlens"
-tags: ["hợp đồng thông minh", "solidity", "remix", "triển khai", "khả năng kết hợp"]
+tags: ["hợp đồng thông minh", "Solidity", "Remix", "triển khai", "khả năng kết hợp"]
 skill: advanced
-breadcrumb: Tương tác hợp đồng
+breadcrumb: "Tương tác hợp đồng"
 lang: vi
 published: 2020-04-05
 source: EthereumDev

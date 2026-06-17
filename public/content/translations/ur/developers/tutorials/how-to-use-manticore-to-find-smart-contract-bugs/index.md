@@ -1,12 +1,12 @@
 ---
-title: سمارٹ کنٹریکٹس میں بگز تلاش کرنے کے لیے مینٹیکور کا استعمال کیسے کریں
-description: سمارٹ کنٹریکٹس میں خودکار طور پر بگز تلاش کرنے کے لیے مینٹیکور کا استعمال کیسے کریں
-author: ٹریل آف بٹس
+title: "سمارٹ کنٹریکٹس میں بگز تلاش کرنے کے لیے مینٹیکور کا استعمال کیسے کریں"
+description: "سمارٹ کنٹریکٹس میں خودکار طور پر بگز تلاش کرنے کے لیے مینٹیکور کا استعمال کیسے کریں"
+author: "ٹریل آف بٹس"
 lang: ur
 tags:
-  ["solidity", "سمارٹ کنٹریکٹس", "سیکیورٹی", "ٹیسٹنگ", "رسمی تصدیق"]
+  ["Solidity", "سمارٹ کنٹریکٹس", "سیکیورٹی", "ٹیسٹنگ", "رسمی تصدیق"]
 skill: advanced
-breadcrumb: مینٹیکور
+breadcrumb: "مینٹیکور"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
@@ -16,7 +16,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 ## انسٹالیشن {#installation}
 
-مینٹیکور کے لیے <span dir="ltr">>= python 3.6</span> درکار ہے۔ اسے pip کے ذریعے یا Docker کا استعمال کرتے ہوئے انسٹال کیا جا سکتا ہے۔
+مینٹیکور کے لیے <span dir="ltr">= python 3.6</span> درکار ہے۔ اسے pip کے ذریعے یا Docker کا استعمال کرتے ہوئے انسٹال کیا جا سکتا ہے۔
 
 ### Docker کے ذریعے مینٹیکور {#manticore-through-docker}
 

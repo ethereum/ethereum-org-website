@@ -1,10 +1,10 @@
 ---
-title: Web3 Kullanarak İşlem Gönderme
+title: "Web3 Kullanarak İşlem Gönderme"
 description: "Bu, Web3 kullanarak Ethereum işlemleri göndermeye yönelik başlangıç dostu bir rehberdir. Ethereum blokzincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Bu üçünü de inceleyeceğiz."
 author: "Elan Halpern"
-tags: ["işlemler", "web3.js", "alchemy"]
+tags: ["işlemler", "web3.js", "Alchemy"]
 skill: beginner
-breadcrumb: İşlem gönder
+breadcrumb: "İşlem gönder"
 lang: tr
 published: 2020-11-04
 source: Alchemy docs

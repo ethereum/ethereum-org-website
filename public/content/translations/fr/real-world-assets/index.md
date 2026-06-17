@@ -1,7 +1,7 @@
 ---
-title: Actifs du monde réel (RWA)
-metaTitle: Que sont les RWA ? | Avantages et utilisation des actifs du monde réel
-description: Un aperçu des actifs du monde réel sur Ethereum
+title: "Actifs du monde réel (RWA)"
+metaTitle: "Que sont les RWA ? | Avantages et utilisation des actifs du monde réel"
+description: "Un aperçu des actifs du monde réel sur Ethereum"
 lang: fr
 template: use-cases
 image: /images/man-and-dog-playing.png

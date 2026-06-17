@@ -1,9 +1,9 @@
 ---
-title: Cách sử dụng Echidna để kiểm thử hợp đồng thông minh
-description: Cách sử dụng Echidna để tự động kiểm thử hợp đồng thông minh
+title: "Cách sử dụng Echidna để kiểm thử hợp đồng thông minh"
+description: "Cách sử dụng Echidna để tự động kiểm thử hợp đồng thông minh"
 author: "Trailofbits"
 lang: vi
-tags: ["solidity", "hợp đồng thông minh", "bảo mật", "kiểm thử", "fuzzing"]
+tags: ["Solidity", "hợp đồng thông minh", "bảo mật", "kiểm thử", "fuzzing"]
 skill: advanced
 breadcrumb: Echidna
 published: 2020-04-10

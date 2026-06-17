@@ -1,7 +1,7 @@
 ---
 title: "کال ڈیٹا کی بہتری کے لیے مختصر ⁦ABIs⁩"
 description: "آپٹیمسٹک رول اپس کے لیے سمارٹ کنٹریکٹس کو بہتر بنانا"
-author: اوری پومرانٹز
+author: "اوری پومرانٹز"
 lang: ur
 tags: ["لیئر ۲ (l2)"]
 skill: intermediate

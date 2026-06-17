@@ -1,8 +1,8 @@
 ---
 title: Interactuar con otros contratos desde Solidity
-description: Cómo desplegar un contrato inteligente desde un contrato existente e interactuar con él
+description: "Cómo desplegar un contrato inteligente desde un contrato existente e interactuar con él"
 author: "jdourlens"
-tags: ["contratos inteligentes", "solidity", "remix", "despliegue", "composabilidad"]
+tags: ["contratos inteligentes", "Solidity", "Remix", "despliegue", "composabilidad"]
 skill: advanced
 breadcrumb: Interacciones de contratos
 lang: es

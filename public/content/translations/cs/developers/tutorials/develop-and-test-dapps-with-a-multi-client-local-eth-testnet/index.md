@@ -1,6 +1,6 @@
 ---
-title: Jak vyvíjet a testovat dApp na lokálním testnetu s více klienty
-description: Tento průvodce vás nejprve provede tím, jak vytvořit a nakonfigurovat lokální testnet Etherea s více klienty, a poté tento testnet použijete k nasazení a testování dApp.
+title: "Jak vyvíjet a testovat dApp na lokálním testnetu s více klienty"
+description: "Tento průvodce vás nejprve provede tím, jak vytvořit a nakonfigurovat lokální testnet Etherea s více klienty, a poté tento testnet použijete k nasazení a testování dApp."
 author: "Tedi Mitiku"
 tags:
   [
@@ -13,7 +13,7 @@ tags:
     "testování",
   ]
 skill: intermediate
-breadcrumb: Testnet s více klienty
+breadcrumb: "Testnet s více klienty"
 lang: cs
 published: 2023-04-11
 ---

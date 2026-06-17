@@ -4,7 +4,7 @@ description: Come usare Manticore per trovare automaticamente bug negli smart co
 author: Trailofbits
 lang: it
 tags:
-  ["solidity", "smart contract", "sicurezza", "testing", "verifica formale"]
+  ["Solidity", "smart contract", "sicurezza", "testing", "verifica formale"]
 skill: advanced
 breadcrumb: Manticore
 published: 2020-01-13

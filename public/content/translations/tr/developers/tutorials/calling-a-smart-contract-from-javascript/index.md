@@ -1,6 +1,6 @@
 ---
-title: JavaScript'ten bir akıllı sözleşme çağırmak
-description: Bir Dai token örneği kullanarak JavaScript'ten bir akıllı sözleşme işlevinin nasıl çağrılacağı
+title: "JavaScript'ten bir akıllı sözleşme çağırmak"
+description: "Bir Dai token örneği kullanarak JavaScript'ten bir akıllı sözleşme işlevinin nasıl çağrılacağı"
 author: jdourlens
 tags:
   - işlemler
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - web3.js
 skill: beginner
-breadcrumb: JS'den sözleşmeleri çağırın
+breadcrumb: "JS'den sözleşmeleri çağırın"
 lang: tr
 published: 2020-04-19
 source: EthereumDev

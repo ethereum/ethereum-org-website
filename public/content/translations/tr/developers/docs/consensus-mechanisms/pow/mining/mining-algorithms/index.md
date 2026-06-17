@@ -1,6 +1,6 @@
 ---
-title: Madencilik algoritmaları
-description: Ethereum madenciliği için kullanılan algoritmalara detaylı bir bakış.
+title: "Madencilik algoritmaları"
+description: "Ethereum madenciliği için kullanılan algoritmalara detaylı bir bakış."
 lang: tr
 ---
 

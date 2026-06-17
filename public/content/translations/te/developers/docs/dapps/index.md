@@ -1,5 +1,5 @@
 ---
-title: dapps కు సాంకేతిక పరిచయం
+title: "dapps కు సాంకేతిక పరిచయం"
 description:
 lang: te
 ---

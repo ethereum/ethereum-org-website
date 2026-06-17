@@ -121,6 +121,7 @@ Untuk memantau aktivitas kontrak lintas rantai, pengembang dapat menggunakan sub
 - [Tenderly](https://tenderly.co/)
 
 ## Bacaan lebih lanjut {#further-reading}
+
 - [Jembatan Rantai Blok](/bridges/) – ethereum.org
 - [Kerangka Kerja Risiko Jembatan L2BEAT](https://l2beat.com/bridges/summary)
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 Sep 2021 – Dmitriy Berenzon

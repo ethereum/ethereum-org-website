@@ -1,10 +1,10 @@
 ---
-title: 從 JavaScript 呼叫智能合約
-description: 如何使用 DAI 代幣範例從 JavaScript 呼叫智能合約函式
+title: "從 JavaScript 呼叫智能合約"
+description: "如何使用 DAI 代幣範例從 JavaScript 呼叫智能合約函式"
 author: jdourlens
 tags: ["交易", "前端", "JavaScript", "web3.js"]
 skill: beginner
-breadcrumb: 從 JS 呼叫合約
+breadcrumb: "從 JS 呼叫合約"
 lang: zh-tw
 published: 2020-04-19
 source: EthereumDev

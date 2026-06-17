@@ -1,6 +1,6 @@
 ---
 title: Data a analytika
-description: Jak získat onchain analytiku a data pro použití ve vašich decentralizovaných aplikacích (dapp)
+description: "Jak získat onchain analytiku a data pro použití ve vašich decentralizovaných aplikacích (dapp)"
 lang: cs
 ---
 

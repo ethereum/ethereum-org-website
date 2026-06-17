@@ -1,7 +1,7 @@
 ---
-title: স্মার্ট কন্ট্রাক্ট বাগ খুঁজতে কীভাবে স্লিদার (Slither) ব্যবহার করবেন
-description: স্মার্ট কন্ট্রাক্টে স্বয়ংক্রিয়ভাবে বাগ খুঁজতে কীভাবে স্লিদার ব্যবহার করবেন
-author: ট্রেইলঅফবিটস
+title: "স্মার্ট কন্ট্রাক্ট বাগ খুঁজতে কীভাবে স্লিদার (Slither) ব্যবহার করবেন"
+description: "স্মার্ট কন্ট্রাক্টে স্বয়ংক্রিয়ভাবে বাগ খুঁজতে কীভাবে স্লিদার ব্যবহার করবেন"
+author: "ট্রেইলঅফবিটস"
 lang: bn
 tags:
   - solidity
@@ -9,7 +9,7 @@ tags:
   - নিরাপত্তা
   - টেস্টিং
 skill: advanced
-breadcrumb: স্লিদার
+breadcrumb: "স্লিদার"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

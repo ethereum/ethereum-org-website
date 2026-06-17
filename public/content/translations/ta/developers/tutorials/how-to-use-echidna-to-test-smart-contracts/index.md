@@ -1,7 +1,7 @@
 ---
-title: திறன் ஒப்பந்தங்களைச் சோதிக்க எக்கிட்னாவை எவ்வாறு பயன்படுத்துவது
-description: திறன் ஒப்பந்தங்களைத் தானாகச் சோதிக்க எக்கிட்னாவை எவ்வாறு பயன்படுத்துவது
-author: ட்ரைல்ஆஃப்பிட்ஸ்
+title: "திறன் ஒப்பந்தங்களைச் சோதிக்க எக்கிட்னாவை எவ்வாறு பயன்படுத்துவது"
+description: "திறன் ஒப்பந்தங்களைத் தானாகச் சோதிக்க எக்கிட்னாவை எவ்வாறு பயன்படுத்துவது"
+author: "ட்ரைல்ஆஃப்பிட்ஸ்"
 lang: ta
 tags:
   - Solidity
@@ -10,7 +10,7 @@ tags:
   - சோதனை
   - ஃபஸ்ஸிங்
 skill: advanced
-breadcrumb: எக்கிட்னா
+breadcrumb: "எக்கிட்னா"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

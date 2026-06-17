@@ -1,9 +1,9 @@
 ---
-title: Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılır
-description: Akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Slither nasıl kullanılır
+title: "Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılır"
+description: "Akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Slither nasıl kullanılır"
 author: Trailofbits
 lang: tr
-tags: ["solidity", "akıllı sözleşmeler", "güvenlik", "test etme"]
+tags: ["Solidity", "akıllı sözleşmeler", "güvenlik", "test etme"]
 skill: advanced
 breadcrumb: Slither
 published: 2020-06-09

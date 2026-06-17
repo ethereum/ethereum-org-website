@@ -1,11 +1,11 @@
 ---
 title: "Krótkie ABI do optymalizacji danych wywołania"
-description: Optymalizacja inteligentnych kontraktów dla rollupów optymistycznych
+description: "Optymalizacja inteligentnych kontraktów dla rollupów optymistycznych"
 author: Ori Pomerantz
 lang: pl
 tags: ["warstwa 2 (L2)"]
 skill: intermediate
-breadcrumb: Krótkie ABI
+breadcrumb: "Krótkie ABI"
 published: 2022-04-01
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: Python டெவலப்பர்களுக்கான எத்திரியம் அறிமுகம், பகுதி 1
-description: எத்திரியம் மேம்பாடு குறித்த அறிமுகம், குறிப்பாக Python நிரலாக்க மொழி தெரிந்தவர்களுக்கு மிகவும் பயனுள்ளதாக இருக்கும்
-author: மார்க் கரோ
+title: "Python டெவலப்பர்களுக்கான எத்திரியம் அறிமுகம், பகுதி 1"
+description: "எத்திரியம் மேம்பாடு குறித்த அறிமுகம், குறிப்பாக Python நிரலாக்க மொழி தெரிந்தவர்களுக்கு மிகவும் பயனுள்ளதாக இருக்கும்"
+author: "மார்க் கரோ"
 lang: ta
-tags: ["python", "web3.py"]
+tags: ["Python", "web3.py"]
 skill: beginner
-breadcrumb: Python உடன் எத்திரியம்
+breadcrumb: "Python உடன் எத்திரியம்"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

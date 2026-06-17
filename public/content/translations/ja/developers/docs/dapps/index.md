@@ -1,5 +1,5 @@
 ---
-title: dappの技術的概要
+title: "dappの技術的概要"
 description:
 lang: ja
 ---

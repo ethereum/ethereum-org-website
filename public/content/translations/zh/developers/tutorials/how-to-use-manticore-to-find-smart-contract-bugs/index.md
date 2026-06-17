@@ -1,12 +1,12 @@
 ---
-title: 如何使用曼蒂科尔发现智能合约中的漏洞
-description: 如何使用曼蒂科尔自动发现智能合约中的漏洞
+title: "如何使用曼蒂科尔发现智能合约中的漏洞"
+description: "如何使用曼蒂科尔自动发现智能合约中的漏洞"
 author: Trailofbits
 lang: zh
 tags:
-  ["solidity", "智能合约", "安全", "测试", "形式化验证"]
+  ["Solidity", "智能合约", "安全", "测试", "形式化验证"]
 skill: advanced
-breadcrumb: 曼蒂科尔
+breadcrumb: "曼蒂科尔"
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

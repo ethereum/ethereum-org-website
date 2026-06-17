@@ -1,11 +1,11 @@
 ---
-title: 真實世界資產 (RWA)
-metaTitle: 什麼是 RWA？ | 真實世界資產的優勢與用途
-description: 以太坊上的真實世界資產概覽
+title: "真實世界資產 (RWA)"
+metaTitle: "什麼是 RWA？ | 真實世界資產的優勢與用途"
+description: "以太坊上的真實世界資產概覽"
 lang: zh-tw
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: 男人與狗在玩耍。
+alt: "男人與狗在玩耍。"
 sidebarDepth: 2
 summaryPoints:
   - "將有價值的商品轉化為數位代幣的方法。"

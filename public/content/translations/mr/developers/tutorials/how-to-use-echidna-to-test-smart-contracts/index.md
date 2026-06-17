@@ -1,11 +1,11 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्ट्सची चाचणी करण्यासाठी एकिडना कसे वापरावे
-description: स्मार्ट कॉन्ट्रॅक्ट्सची स्वयंचलितपणे चाचणी करण्यासाठी एकिडना कसे वापरावे
+title: "स्मार्ट कॉन्ट्रॅक्ट्सची चाचणी करण्यासाठी एकिडना कसे वापरावे"
+description: "स्मार्ट कॉन्ट्रॅक्ट्सची स्वयंचलितपणे चाचणी करण्यासाठी एकिडना कसे वापरावे"
 author: "Trailofbits"
 lang: mr
 tags: ["Solidity", "स्मार्ट कॉन्ट्रॅक्ट्स", "सुरक्षा", "चाचणी", "फझिंग"]
 skill: advanced
-breadcrumb: एकिडना
+breadcrumb: "एकिडना"
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

@@ -1,6 +1,6 @@
 ---
-title: Těžební algoritmy
-description: Detailní pohled na algoritmy používané pro těžbu Etherea.
+title: "Těžební algoritmy"
+description: "Detailní pohled na algoritmy používané pro těžbu Etherea."
 lang: cs
 ---
 

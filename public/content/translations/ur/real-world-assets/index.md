@@ -1,11 +1,11 @@
 ---
-title: حقیقی دنیا کے اثاثے ⁦(RWAs)⁩
-metaTitle: ⁦RWAs⁩ کیا ہیں؟ | حقیقی دنیا کے اثاثوں کے فوائد اور استعمال
-description: ایتھیریم پر حقیقی دنیا کے اثاثوں کا جائزہ
+title: "حقیقی دنیا کے اثاثے ⁦(RWAs)⁩"
+metaTitle: "⁦RWAs⁩ کیا ہیں؟ | حقیقی دنیا کے اثاثوں کے فوائد اور استعمال"
+description: "ایتھیریم پر حقیقی دنیا کے اثاثوں کا جائزہ"
 lang: ur
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: آدمی اور کتا کھیل رہے ہیں۔
+alt: "آدمی اور کتا کھیل رہے ہیں۔"
 sidebarDepth: 2
 summaryPoints:
   - "قیمتی اشیاء کو ڈیجیٹل ٹوکنز میں تبدیل کرنے کا ایک طریقہ۔"

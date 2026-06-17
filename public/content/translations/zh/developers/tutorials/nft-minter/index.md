@@ -1,10 +1,10 @@
 ---
-title: NFT 铸造器教程
-description: 在本教程中，你将构建一个 NFT 铸造器，并学习如何使用梅塔马斯克和 Web3 工具将智能合约连接到 React 前端，从而创建一个全栈去中心化应用 (dapp)。
+title: "NFT 铸造器教程"
+description: "在本教程中，你将构建一个 NFT 铸造器，并学习如何使用梅塔马斯克和 Web3 工具将智能合约连接到 React 前端，从而创建一个全栈去中心化应用 (dapp)。"
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "智能合约", "前端", "Pinata", "erc-721"]
+tags: ["Solidity", "NFT", "Alchemy", "智能合约", "前端", "Pinata", "erc-721"]
 skill: intermediate
-breadcrumb: NFT 铸造器 dapp
+breadcrumb: "NFT 铸造器 dapp"
 lang: zh
 published: 2021-10-06
 ---
@@ -178,7 +178,8 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 

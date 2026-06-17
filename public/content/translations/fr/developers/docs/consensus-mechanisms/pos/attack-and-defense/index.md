@@ -1,6 +1,6 @@
 ---
-title: Attaque et défense de la preuve d'enjeu d'Ethereum
-description: Découvrez les vecteurs d'attaque connus sur la preuve d'enjeu d'Ethereum et comment ils sont défendus.
+title: "Attaque et défense de la preuve d'enjeu d'Ethereum"
+description: "Découvrez les vecteurs d'attaque connus sur la preuve d'enjeu d'Ethereum et comment ils sont défendus."
 lang: fr
 ---
 

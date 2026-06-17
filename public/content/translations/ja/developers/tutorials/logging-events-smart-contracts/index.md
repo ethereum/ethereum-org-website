@@ -1,10 +1,10 @@
 ---
-title: イベントを使用したスマート・コントラクトからのデータロギング
-description: スマート・コントラクトのイベントと、それを使用してデータをログに記録する方法の紹介
+title: "イベントを使用したスマート・コントラクトからのデータロギング"
+description: "スマート・コントラクトのイベントと、それを使用してデータをログに記録する方法の紹介"
 author: "jdourlens"
 tags: ["スマート・コントラクト", "Remix", "Solidity", "イベント"]
 skill: intermediate
-breadcrumb: イベントのロギング
+breadcrumb: "イベントのロギング"
 lang: ja
 published: 2020-04-03
 source: EthereumDev

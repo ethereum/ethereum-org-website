@@ -1,6 +1,6 @@
 ---
-title: Yetki Kanıtı (PoA)
-description: Yetki kanıtı mutabakat protokolünün ve blokzincir ekosistemindeki rolünün bir açıklaması.
+title: "Yetki Kanıtı (PoA)"
+description: "Yetki kanıtı mutabakat protokolünün ve blokzincir ekosistemindeki rolünün bir açıklaması."
 lang: tr
 ---
 
