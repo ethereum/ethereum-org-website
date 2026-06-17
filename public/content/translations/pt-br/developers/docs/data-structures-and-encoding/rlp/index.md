@@ -1,48 +1,62 @@
 ---
-title: "Serialização do prefixo de comprimento recursivo (RLP)"
-description: "Uma definição da codificação RLP na camada de execução do Ethereum"
+title: Serialização de prefixo de comprimento recursivo (RLP)
+description: Uma definição da codificação RLP na camada de execução do Ethereum.
 lang: pt-br
 sidebarDepth: 2
 ---
 
-A Serialização do prefixo de comprimento recursivo (RLP) é usado extensivamente nos clientes de execução Ethereum. RLP padroniza a transferência de dados entre nós em um formato eficiente em espaço. O objetivo do RLP é codificar arbitrariamente arrays de dados binários aninhados, e o RLP é o principal método de codificação usado para serializar objetos na camada de execução do Ethereum. O objetivo principal do RLP é codificar a estrutura; com exceção de números inteiros positivos, o RLP delega a codificação de tipos de dados específicos (por exemplo, strings, floats) para protocolos de ordem superior. Os inteiros positivos devem ser representados no formato binário big-endian, sem zeros à esquerda (tornando assim o valor inteiro zero equivalente ao array de bytes vazio). Inteiros positivos desserializados com zeros à esquerda devem ser tratados como inválidos por qualquer protocolo de ordem superior que use RLP.
+A serialização de Prefixo de Comprimento Recursivo (RLP - Recursive Length Prefix) é amplamente usada nos clientes de execução do Ethereum. O RLP padroniza a transferência de dados entre nós em um formato eficiente em termos de espaço. O objetivo do RLP é codificar matrizes (arrays) de dados binários aninhados arbitrariamente, e o RLP é o principal método de codificação usado para serializar objetos na camada de execução do Ethereum. O principal objetivo do RLP é codificar a estrutura; com exceção de números inteiros positivos, o RLP delega a codificação de tipos de dados específicos (por exemplo, strings, floats) para protocolos de ordem superior. Inteiros positivos devem ser representados em formato binário big-endian sem zeros à esquerda (tornando assim o valor inteiro zero equivalente à matriz de bytes vazia). Inteiros positivos desserializados com zeros à esquerda devem ser tratados como inválidos por qualquer protocolo de ordem superior que use RLP.
 
-Mais informações em [o yellow paper do Ethereum (Apêndice B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
+Mais informações no [yellow paper do Ethereum (Apêndice B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
-Para usar o RLP para codificar um dicionário, as duas formas canônicas são:
+Para usar o RLP para codificar um dicionário, as duas formas canônicas sugeridas são:
 
-- use `[[k1,v1],[k2,v2]...]` com chaves em ordem lexicográfica
-- usar a codificação da Árvore Patricia de nível superior como Ethereum faz
+- usar `[[k1,v1],[k2,v2]...]` com chaves em ordem lexicográfica
+- usar a codificação de Árvore Patricia de nível superior, como o [Ethereum](/) faz
 
 ## Definição {#definition}
 
-A função de codificação RLP recebe um item. Um item é definido como abaixo：
+A função de codificação RLP recebe um item. Um item é definido da seguinte forma:
 
 - uma string (ou seja, matriz de bytes) é um item
 - uma lista de itens é um item
-- um inteiro positivo é um item
+- um número inteiro positivo é um item
 
 Por exemplo, todos os seguintes são itens:
 
 - uma string vazia;
-- a string que contém a palavra "cat";
+- a string contendo a palavra "cat";
 - uma lista contendo qualquer número de strings;
 - e estruturas de dados mais complexas como `["cat", ["puppy", "cow"], "horse", [[]], "pig", [""], "sheep"]`.
 - o número `100`
 
-Observe que, no contexto do restante desta página, 'string' significa "um certo número de bytes de dados binários"; nenhuma codificação especial é usada, e nenhum conhecimento sobre o conteúdo das strings é implícito (exceto conforme exigido pela regra contra inteiros positivos não mínimos).
+Observe que, no contexto do restante desta página, 'string' significa "um certo número de bytes de dados binários"; nenhuma codificação especial é usada e nenhum conhecimento sobre o conteúdo das strings está implícito (exceto conforme exigido pela regra contra inteiros positivos não mínimos).
 
 A codificação RLP é definida da seguinte forma:
 
-- Para um número inteiro positivo, ele é convertido para o menor array de bytes cuja interpretação big-endian é o número inteiro e, então, codificado como uma string de acordo com as regras abaixo.
+- Para um número inteiro positivo, ele é convertido na matriz de bytes mais curta cuja interpretação big-endian é o número inteiro e, em seguida, codificado como uma string de acordo com as regras abaixo.
 - Para um único byte cujo valor está no intervalo `[0x00, 0x7f]` (decimal `[0, 127]`), esse byte é sua própria codificação RLP.
-- Caso contrário, se uma string tiver de 0 a 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0x80** (dec. 128) mais o comprimento da string, seguido pela string. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[128, 183]`).
-- Se uma string tiver mais de 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0xb7** (dec. 183) mais o comprimento em bytes do comprimento da string em forma binária, seguido pelo comprimento da string, seguido pela string. Por exemplo, uma string de 1024 bytes de comprimento seria codificada como `\xb9\x04\x00` (dec. `185, 4, 0`) seguida pela string. Aqui, `0xb9` (183 + 2 = 185) como o primeiro byte, seguido pelos 2 bytes `0x0400` (dec. 1024) que indicam o comprimento da string real. O intervalo do primeiro byte é, portanto, `[0xb8, 0xbf]` (dec. `[184, 191]`).
-- Se uma string tiver 2^64 bytes de comprimento ou mais, ela poderá não ser codificada.
-- Se o payload total de uma lista (ou seja, o comprimento combinado de todos os seus itens codificados em RLP) tiver de 0 a 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0xc0** mais o comprimento do payload, seguido pela concatenação das codificações RLP dos itens. O intervalo do primeiro byte é, portanto, `[0xc0, 0xf7]` (dec. `[192, 247]`).
-- Se o payload total de uma lista tiver mais de 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0xf7** mais o comprimento em bytes do comprimento do payload em forma binária, seguido pelo comprimento do payload, seguido pela concatenação das codificações RLP dos itens. O intervalo do primeiro byte é, portanto, `[0xf8, 0xff]` (dec. `[248, 255]`).
+- Caso contrário, se uma string tiver de 0 a 55 bytes de comprimento, a codificação RLP consistirá em um único byte com valor **0x80** (dec. 128) mais o comprimento da string seguido pela string. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[128, 183]`).
+- Se uma string tiver mais de 55 bytes de comprimento, a codificação RLP consistirá em um único byte com valor **0xb7** (dec. 183) mais o comprimento em bytes do comprimento da string em formato binário, seguido pelo comprimento da string, seguido pela string. Por exemplo, uma string de 1024 bytes de comprimento seria codificada como `\xb9\x04\x00` (dec. `185, 4, 0`) seguida pela string. Aqui, `0xb9` (183 + 2 = 185) como o primeiro byte, seguido pelos 2 bytes `0x0400` (dec. 1024) que denotam o comprimento da string real. O intervalo do primeiro byte é, portanto, `[0xb8, 0xbf]` (dec. `[184, 191]`).
+- Se uma string tiver 2^64 bytes de comprimento ou mais, ela não poderá ser codificada.
+- Se a carga útil (payload) total de uma lista (ou seja, o comprimento combinado de todos os seus itens sendo codificados em RLP) tiver de 0 a 55 bytes de comprimento, a codificação RLP consistirá em um único byte com valor **0xc0** mais o comprimento da carga útil seguido pela concatenação das codificações RLP dos itens. O intervalo do primeiro byte é, portanto, `[0xc0, 0xf7]` (dec. `[192, 247]`).
+- Se a carga útil total de uma lista tiver mais de 55 bytes de comprimento, a codificação RLP consistirá em um único byte com valor **0xf7** mais o comprimento em bytes do comprimento da carga útil em formato binário, seguido pelo comprimento da carga útil, seguido pela concatenação das codificações RLP dos itens. O intervalo do primeiro byte é, portanto, `[0xf8, 0xff]` (dec. `[248, 255]`).
 
-Em código, isto é:
+De forma sucinta:
+
+| Intervalo | Byte 1 | Byte 2 | ... | Byte 9 | Byte 10 | Significado |
+| ----------- | ---------- | ---------- | ---------- | --------------------- | ---------- | ----------------------------------------- |
+| `0x00-0x7f` | `0ppppppp` |            |            |                       |            | string de byte único                        |
+| `0x80-0xb7` | `10nnnnnn` | `pppppppp` | `...`      |                       |            | string curta (0-55 bytes)                 |
+| `0xb8-0xbf` | `10111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | string longa, N+1 bytes para o comprimento, depois a carga útil |
+| `0xc0-0xf7` | `11nnnnnn` | `pppppppp` | `...`      |                       |            | lista curta (0-55 bytes)                   |
+| `0xf8-0xff` | `11111NNN` | `nnnnnnnn` | `...`      | `nnnnnnnn`/`pppppppp` | `pppppppp` | lista longa, N+1 bytes para o comprimento, depois a carga útil |
+
+- `p` = carga útil (payload)
+- `n` = comprimento (número de bytes da carga útil)
+- `N` = deslocamento do comprimento do comprimento (seguem N+1 bytes de `n`)
+
+Em código, isso é:
 
 ```python
 def rlp_encode(input):
@@ -76,36 +90,36 @@ def to_binary(x):
 - a lista [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
 - a string vazia ('null') = `[ 0x80 ]`
 - a lista vazia = `[ 0xc0 ]`
-- o inteiro 0 = `[ 0x80 ]`
-- o byte '\\x00' = `[ 0x00 ]`
-- o byte '\\x0f' = `[ 0x0f ]`
-- os bytes '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
+- o número inteiro 0 = `[ 0x80 ]`
+- o byte '\x00' = `[ 0x00 ]`
+- o byte '\x0f' = `[ 0x0f ]`
+- os bytes '\x04\x00' = `[ 0x82, 0x04, 0x00 ]`
 - a [representação teórica de conjuntos](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) de três, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - a string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
 ## Decodificação RLP {#rlp-decoding}
 
-De acordo com as regras e o processo de codificação RLP, a entrada da decodificação RLP é considerada uma matriz de dados binários. O processo de decodificação do RLP é o seguinte:
+De acordo com as regras e o processo de codificação RLP, a entrada da decodificação RLP é considerada uma matriz de dados binários. O processo de decodificação RLP é o seguinte:
 
-1. de acordo com o primeiro byte (ou seja, prefixo) dos dados de entrada e decodificando o tipo de dados, o comprimento dos dados reais e o deslocamento;
+1.  de acordo com o primeiro byte (ou seja, prefixo) dos dados de entrada e decodificando o tipo de dados, o comprimento dos dados reais e o deslocamento (offset);
 
-2. de acordo com o tipo e deslocamento dos dados, decodificar os dados de maneira correspondente, respeitando a regra de codificação mínima para inteiros positivos;
+2.  de acordo com o tipo e o deslocamento dos dados, decodificar os dados de forma correspondente, respeitando a regra de codificação mínima para números inteiros positivos;
 
-3. continue a decodificar o resto da entrada;
+3.  continuar a decodificar o restante da entrada;
 
-Entre elas, as regras de decodificação de tipos de dados e deslocamento são as seguintes:
+Entre eles, as regras de decodificação de tipos de dados e deslocamento são as seguintes:
 
-1. os dados são uma string se o intervalo do primeiro byte (ou seja, prefixo) for [0x00, 0x7f], e a string for exatamente o primeiro byte;
+1.  os dados são uma string se o intervalo do primeiro byte (ou seja, prefixo) for [0x00, 0x7f], e a string for exatamente o próprio primeiro byte;
 
-2. o dado é uma string se o intervalo do primeiro byte é [0x80, 0xb7], e a string cujo comprimento é igual ao primeiro byte menos 0x80 segue o primeiro byte;
+2.  os dados são uma string se o intervalo do primeiro byte for [0x80, 0xb7], e a string cujo comprimento é igual ao primeiro byte menos 0x80 seguir o primeiro byte;
 
-3. os dados são uma string se o intervalo do primeiro byte é [0xb8, 0xbf] e o comprimento da string cujo comprimento em bytes é igual ao primeiro byte menos 0xb7 segue primeiro byte, e a cadeia de caracteres segue o comprimento da string;
+3.  os dados são uma string se o intervalo do primeiro byte for [0xb8, 0xbf], e o comprimento da string cujo comprimento em bytes é igual ao primeiro byte menos 0xb7 seguir o primeiro byte, e a string seguir o comprimento da string;
 
-4. os dados são uma lista se o intervalo do primeiro byte é [0xc0, 0xf7], e a concatenação das codificações RLP de todos os itens da lista que a carga total é igual ao primeiro byte menos 0xc0 e segue o primeiro byte;
+4.  os dados são uma lista se o intervalo do primeiro byte for [0xc0, 0xf7], e a concatenação das codificações RLP de todos os itens da lista cuja carga útil total é igual ao primeiro byte menos 0xc0 seguir o primeiro byte;
 
-5. os dados são uma string se o intervalo do primeiro byte é [0xb8, 0xbf], e o payload total da lista cujo comprimento é igual ao primeiro byte menos 0xf7 segue o primeiro byte, e a concatenação das codificações RLP de todos os itens da lista segue o payload total da lista;
+5.  os dados são uma lista se o intervalo do primeiro byte for [0xf8, 0xff], e a carga útil total da lista cujo comprimento é igual ao primeiro byte menos 0xf7 seguir o primeiro byte, e a concatenação das codificações RLP de todos os itens da lista seguir a carga útil total da lista;
 
-Em código, isto é:
+Em código, isso é:
 
 ```python
 def rlp_decode(input):
@@ -156,8 +170,8 @@ def to_integer(b):
 
 - [RLP no Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [Ethereum por baixo dos panos: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
-- [Coglio, A. (2020). Prefixo de comprimento recursivo do Ethereum em ACL2. arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
+- [Coglio, A. (2020). Ethereum's Recursive Length Prefix in ACL2. arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
 ## Tópicos relacionados {#related-topics}
 
-- [Patricia Merkle trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
+- [Trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
