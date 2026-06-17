@@ -3,9 +3,9 @@ title: Cara menggunakan Echidna untuk menguji kontrak pintar
 description: Cara menggunakan Echidna untuk menguji kontrak pintar secara otomatis
 author: "Trailofbits"
 lang: id
-tags: ["Solidity", "kontrak pintar", "keamanan", "pengujian", "fuzzing"]
+tags: ["solidity", "kontrak pintar", "keamanan", "pengujian", "fuzzing"]
 skill: advanced
-breadcrumb: "Echidna"
+breadcrumb: Echidna
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
@@ -13,18 +13,18 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 ## Instalasi {#installation}
 
-Echidna dapat diinstal melalui docker atau menggunakan biner yang telah dikompilasi sebelumnya.
+Echidna dapat diinstal melalui Docker atau menggunakan biner yang telah dikompilasi sebelumnya.
 
-### Echidna melalui docker {#echidna-through-docker}
+### Echidna melalui Docker {#echidna-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_Perintah terakhir menjalankan eth-security-toolbox di dalam docker yang memiliki akses ke direktori Anda saat ini. Anda dapat mengubah file dari host Anda, dan menjalankan alat pada file dari docker_
+_Perintah terakhir menjalankan eth-security-toolbox di dalam Docker yang memiliki akses ke direktori Anda saat ini. Anda dapat mengubah file dari host Anda, dan menjalankan alat pada file dari dalam Docker_
 
-Di dalam docker, jalankan:
+Di dalam Docker, jalankan:
 
 ```bash
 solc-select 0.5.11
@@ -41,22 +41,22 @@ Echidna adalah fuzzer berbasis properti, yang telah kami jelaskan di postingan b
 
 ### Fuzzing {#fuzzing}
 
-[Fuzzing](https://wikipedia.org/wiki/Fuzzing) adalah teknik yang terkenal di komunitas keamanan. Teknik ini terdiri dari menghasilkan input yang kurang lebih acak untuk menemukan bug dalam program. Fuzzer untuk perangkat lunak tradisional (seperti [AFL](http://lcamtuf.coredump.cx/afl/) atau [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) dikenal sebagai alat yang efisien untuk menemukan bug.
+[Fuzzing](https://wikipedia.org/wiki/Fuzzing) adalah teknik yang terkenal di komunitas keamanan. Teknik ini terdiri dari pembuatan input yang kurang lebih acak untuk menemukan bug dalam program. Fuzzer untuk perangkat lunak tradisional (seperti [AFL](http://lcamtuf.coredump.cx/afl/) atau [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) dikenal sebagai alat yang efisien untuk menemukan bug.
 
 Selain pembuatan input yang murni acak, ada banyak teknik dan strategi untuk menghasilkan input yang baik, termasuk:
 
-- Mendapatkan umpan balik dari setiap eksekusi dan memandu pembuatan menggunakan umpan balik tersebut. Misalnya, jika input yang baru dibuat mengarah pada penemuan jalur baru, masuk akal untuk membuat input baru yang dekat dengannya.
-- Menghasilkan input dengan memperhatikan batasan struktural. Misalnya, jika input Anda berisi header dengan checksum, masuk akal untuk membiarkan fuzzer menghasilkan input yang memvalidasi checksum tersebut.
-- Menggunakan input yang diketahui untuk menghasilkan input baru: jika Anda memiliki akses ke kumpulan data besar dari input yang valid, fuzzer Anda dapat menghasilkan input baru dari data tersebut, daripada memulai pembuatannya dari awal. Ini biasanya disebut _seed_.
+- Mendapatkan umpan balik dari setiap eksekusi dan memandu pembuatan menggunakan umpan balik tersebut. Misalnya, jika input yang baru dibuat mengarah pada penemuan jalur baru, masuk akal untuk membuat input baru yang mendekatinya.
+- Membuat input dengan memperhatikan batasan struktural. Misalnya, jika input Anda berisi header dengan checksum, masuk akal untuk membiarkan fuzzer membuat input yang memvalidasi checksum tersebut.
+- Menggunakan input yang diketahui untuk membuat input baru: jika Anda memiliki akses ke kumpulan data besar dari input yang valid, fuzzer Anda dapat membuat input baru dari data tersebut, daripada memulai pembuatannya dari awal. Ini biasanya disebut _seeds_ (benih).
 
 ### Fuzzing berbasis properti {#property-based-fuzzing}
 
 Echidna termasuk dalam keluarga fuzzer tertentu: fuzzing berbasis properti yang sangat terinspirasi oleh [QuickCheck](https://wikipedia.org/wiki/QuickCheck). Berbeda dengan fuzzer klasik yang akan mencoba menemukan kerusakan (crash), Echidna akan mencoba memecahkan invarian yang ditentukan pengguna.
 
-Dalam kontrak pintar, invarian adalah fungsi Solidity, yang dapat mewakili status yang salah atau tidak valid yang dapat dicapai oleh kontrak, termasuk:
+Dalam kontrak pintar, invarian adalah fungsi Solidity, yang dapat mewakili state yang salah atau tidak valid yang dapat dicapai oleh kontrak, termasuk:
 
 - Kontrol akses yang salah: penyerang menjadi pemilik kontrak.
-- Mesin status yang salah: token dapat ditransfer saat kontrak dijeda.
+- Mesin state yang salah: token dapat ditransfer saat kontrak dijeda.
 - Aritmatika yang salah: pengguna dapat melakukan underflow pada saldonya dan mendapatkan token gratis tanpa batas.
 
 ### Menguji properti dengan Echidna {#testing-a-property-with-echidna}
@@ -96,7 +96,7 @@ Echidna akan:
 
 - Secara otomatis menghasilkan transaksi arbitrer untuk menguji properti.
 - Melaporkan setiap transaksi yang menyebabkan properti mengembalikan `false` atau memunculkan kesalahan.
-- Membuang efek samping saat memanggil properti (yaitu, jika properti mengubah variabel status, itu akan dibuang setelah pengujian)
+- Membuang efek samping saat memanggil properti (yaitu, jika properti mengubah variabel state, perubahan tersebut dibuang setelah pengujian)
 
 Properti berikut memeriksa bahwa pemanggil tidak memiliki lebih dari 1000 token:
 
@@ -118,16 +118,16 @@ contract TestToken is Token{
 
 [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) mengimplementasikan properti dan mewarisi dari token.
 
-### Memulai kontrak {#initiate-a-contract}
+### Menginisiasi kontrak {#initiate-a-contract}
 
-Echidna membutuhkan [konstruktor](/developers/docs/smart-contracts/anatomy/#constructor-functions) tanpa argumen. Jika kontrak Anda memerlukan inisialisasi tertentu, Anda harus melakukannya di konstruktor.
+Echidna membutuhkan [konstruktor](/developers/docs/smart-contracts/anatomy/#constructor-functions) tanpa argumen. Jika kontrak Anda memerlukan inisialisasi khusus, Anda perlu melakukannya di dalam konstruktor.
 
-Ada beberapa alamat tertentu di Echidna:
+Ada beberapa alamat khusus di Echidna:
 
 - `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` yang memanggil konstruktor.
 - `0x10000`, `0x20000`, dan `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` yang secara acak memanggil fungsi lainnya.
 
-Kita tidak memerlukan inisialisasi khusus dalam contoh kita saat ini, sebagai hasilnya konstruktor kita kosong.
+Kita tidak memerlukan inisialisasi khusus dalam contoh kita saat ini, sehingga konstruktor kita kosong.
 
 ### Menjalankan Echidna {#run-echidna}
 
@@ -145,7 +145,7 @@ echidna-test contract.sol --contract MyContract
 
 ### Ringkasan: Menguji properti {#summary-testing-a-property}
 
-Berikut ini merangkum jalannya echidna pada contoh kita:
+Berikut ini merangkum jalannya Echidna pada contoh kita:
 
 ```solidity
 contract TestToken is Token{
@@ -224,7 +224,7 @@ contract C {
 }
 ```
 
-Contoh kecil ini memaksa Echidna untuk menemukan urutan transaksi tertentu untuk mengubah variabel status.
+Contoh kecil ini memaksa Echidna untuk menemukan urutan transaksi tertentu untuk mengubah variabel state.
 Ini sulit bagi fuzzer (disarankan untuk menggunakan alat eksekusi simbolik seperti [Manticore](https://github.com/trailofbits/manticore)).
 Kita dapat menjalankan Echidna untuk memverifikasi ini:
 
@@ -237,9 +237,9 @@ Seed: -3684648582249875403
 
 ### Memfilter fungsi {#filtering-functions}
 
-Echidna kesulitan menemukan urutan yang benar untuk menguji kontrak ini karena dua fungsi reset (`reset1` dan `reset2`) akan mengatur semua variabel status menjadi `false`.
+Echidna kesulitan menemukan urutan yang benar untuk menguji kontrak ini karena dua fungsi reset (`reset1` dan `reset2`) akan mengatur semua variabel state menjadi `false`.
 Namun, kita dapat menggunakan fitur khusus Echidna untuk memasukkan fungsi reset ke daftar hitam (blacklist) atau hanya memasukkan fungsi `f`, `g`,
-`h`, dan `i` ke daftar putih (whitelist).
+`h` dan `i` ke daftar putih (whitelist).
 
 Untuk memasukkan fungsi ke daftar hitam, kita dapat menggunakan file konfigurasi ini:
 
@@ -255,8 +255,8 @@ filterBlacklist: false
 filterFunctions: ["f", "g", "h", "i"]
 ```
 
-- `filterBlacklist` bernilai `true` secara default.
-- Pemfilteran akan dilakukan berdasarkan nama saja (tanpa parameter). Jika Anda memiliki `f()` dan `f(uint256)`, filter `"f"` akan cocok dengan kedua fungsi tersebut.
+- `filterBlacklist` secara default adalah `true`.
+- Pemfilteran hanya akan dilakukan berdasarkan nama (tanpa parameter). Jika Anda memiliki `f()` dan `f(uint256)`, filter `"f"` akan cocok dengan kedua fungsi tersebut.
 
 ### Menjalankan Echidna {#run-echidna-1}
 
@@ -289,10 +289,9 @@ echidna-test contract.sol --config config.yaml
 ...
 ```
 
-Echidna memulai kampanye fuzzing dengan memasukkan `f1`, `f2`, dan `f3` ke daftar hitam atau hanya memanggil fungsi-fungsi ini, sesuai
-dengan nilai boolean `filterBlacklist`.
+Echidna memulai kampanye fuzzing dengan memasukkan `f1`, `f2` dan `f3` ke daftar hitam atau hanya memanggil fungsi-fungsi ini, sesuai dengan nilai boolean `filterBlacklist`.
 
-## Cara menguji assert Solidity dengan Echidna {#how-to-test-soliditys-assert-with-echidna}
+## Cara menguji asersi Solidity dengan Echidna {#how-to-test-soliditys-assert-with-echidna}
 
 Dalam tutorial singkat ini, kita akan menunjukkan cara menggunakan Echidna untuk menguji pemeriksaan asersi dalam kontrak. Misalkan kita memiliki kontrak seperti ini:
 
@@ -303,7 +302,7 @@ contract Incrementor {
   function inc(uint val) public returns (uint){
     uint tmp = counter;
     counter += val;
-    // tmp <= counter // tmp <= counter
+    // tmp <= counter
     return (counter - tmp);
   }
 }
@@ -311,8 +310,7 @@ contract Incrementor {
 
 ### Menulis asersi {#write-an-assertion}
 
-Kita ingin memastikan bahwa `tmp` kurang dari atau sama dengan `counter` setelah mengembalikan selisihnya. Kita bisa menulis properti
-Echidna, tetapi kita perlu menyimpan nilai `tmp` di suatu tempat. Sebagai gantinya, kita bisa menggunakan asersi seperti ini:
+Kita ingin memastikan bahwa `tmp` kurang dari atau sama dengan `counter` setelah mengembalikan selisihnya. Kita bisa menulis properti Echidna, tetapi kita perlu menyimpan nilai `tmp` di suatu tempat. Sebagai gantinya, kita bisa menggunakan asersi seperti ini:
 
 ```solidity
 contract Incrementor {
@@ -353,11 +351,11 @@ Seperti yang Anda lihat, Echidna melaporkan beberapa kegagalan asersi dalam fung
 
 ### Kapan dan bagaimana menggunakan asersi {#when-and-how-use-assertions}
 
-Asersi dapat digunakan sebagai alternatif untuk properti eksplisit, terutama jika kondisi yang akan diperiksa terkait langsung dengan penggunaan yang benar dari beberapa operasi `f`. Menambahkan asersi setelah beberapa kode akan memastikan bahwa pemeriksaan akan terjadi segera setelah dieksekusi:
+Asersi dapat digunakan sebagai alternatif untuk properti eksplisit, terutama jika kondisi yang akan diperiksa terkait langsung dengan penggunaan yang benar dari beberapa operasi `f`. Menambahkan asersi setelah beberapa kode akan memastikan bahwa pemeriksaan akan terjadi segera setelah kode tersebut dieksekusi:
 
 ```solidity
 function f(..) public {
-    // some complex code // beberapa kode kompleks
+    // beberapa kode kompleks
     ...
     assert (condition);
     ...
@@ -365,7 +363,7 @@ function f(..) public {
 
 ```
 
-Sebaliknya, menggunakan properti echidna eksplisit akan mengeksekusi transaksi secara acak dan tidak ada cara mudah untuk memastikan kapan tepatnya itu akan diperiksa. Masih mungkin untuk melakukan solusi ini:
+Sebaliknya, menggunakan properti Echidna eksplisit akan mengeksekusi transaksi secara acak dan tidak ada cara mudah untuk memastikan kapan tepatnya properti tersebut akan diperiksa. Masih dimungkinkan untuk melakukan solusi ini:
 
 ```solidity
 function echidna_assert_after_f() public returns (bool) {
@@ -378,18 +376,18 @@ Namun, ada beberapa masalah:
 
 - Ini gagal jika `f` dideklarasikan sebagai `internal` atau `external`.
 - Tidak jelas argumen mana yang harus digunakan untuk memanggil `f`.
-- Jika `f` dikembalikan (revert), properti akan gagal.
+- Jika `f` mengembalikan (revert), properti akan gagal.
 
 Secara umum, kami menyarankan untuk mengikuti [rekomendasi John Regehr](https://blog.regehr.org/archives/1091) tentang cara menggunakan asersi:
 
 - Jangan memaksakan efek samping apa pun selama pemeriksaan asersi. Misalnya: `assert(ChangeStateAndReturn() == 1)`
-- Jangan menegaskan pernyataan yang sudah jelas. Misalnya `assert(var >= 0)` di mana `var` dideklarasikan sebagai `uint`.
+- Jangan mengasersi pernyataan yang sudah jelas. Misalnya `assert(var >= 0)` di mana `var` dideklarasikan sebagai `uint`.
 
-Terakhir, tolong **jangan gunakan** `require` sebagai pengganti `assert`, karena Echidna tidak akan dapat mendeteksinya (tetapi kontrak akan tetap dikembalikan).
+Terakhir, harap **jangan gunakan** `require` sebagai pengganti `assert`, karena Echidna tidak akan dapat mendeteksinya (tetapi kontrak akan tetap mengembalikan (revert)).
 
 ### Ringkasan: Pemeriksaan Asersi {#summary-assertion-checking}
 
-Berikut ini merangkum jalannya echidna pada contoh kita:
+Berikut ini merangkum jalannya Echidna pada contoh kita:
 
 ```solidity
 contract Incrementor {
@@ -440,7 +438,7 @@ contract C {
 }
 ```
 
-Contoh kecil ini memaksa Echidna untuk menemukan nilai tertentu untuk mengubah variabel status. Ini sulit bagi fuzzer
+Contoh kecil ini memaksa Echidna untuk menemukan nilai tertentu untuk mengubah variabel state. Ini sulit bagi fuzzer
 (disarankan untuk menggunakan alat eksekusi simbolik seperti [Manticore](https://github.com/trailofbits/manticore)).
 Kita dapat menjalankan Echidna untuk memverifikasi ini:
 
@@ -522,12 +520,11 @@ Misalnya, salah satu file ini adalah:
 ]
 ```
 
-Jelas, input ini tidak akan memicu kegagalan di properti kita. Namun, pada langkah berikutnya, kita akan melihat cara memodifikasinya untuk itu.
+Jelas, input ini tidak akan memicu kegagalan pada properti kita. Namun, pada langkah berikutnya, kita akan melihat cara memodifikasinya untuk itu.
 
 ### Menyemai korpus {#seeding-a-corpus}
 
-Echidna membutuhkan bantuan untuk menangani fungsi `magic`. Kita akan menyalin dan memodifikasi input untuk menggunakan parameter
-yang sesuai untuknya:
+Echidna membutuhkan bantuan untuk menangani fungsi `magic`. Kita akan menyalin dan memodifikasi input untuk menggunakan parameter yang sesuai untuknya:
 
 ```bash
 cp corpus/2712688662897926208.txt corpus/new.txt
@@ -549,11 +546,11 @@ Seed: -7293830866560616537
 
 ```
 
-Kali ini, ia menemukan bahwa properti tersebut segera dilanggar.
+Kali ini, ia menemukan bahwa properti tersebut langsung dilanggar.
 
 ## Menemukan transaksi dengan konsumsi gas tinggi {#finding-transactions-with-high-gas-consumption}
 
-Kita akan melihat cara menemukan transaksi dengan konsumsi gas tinggi dengan Echidna. Targetnya adalah kontrak pintar berikut:
+Kita akan melihat cara menemukan transaksi dengan konsumsi gas tinggi menggunakan Echidna. Targetnya adalah kontrak pintar berikut:
 
 ```solidity
 contract C {
@@ -658,7 +655,7 @@ contract C {
 }
 ```
 
-Jika Echidna dapat memanggil semua fungsi, ia tidak akan mudah menemukan transaksi dengan biaya gas tinggi:
+Jika Echidna dapat memanggil semua fungsi, ia tidak akan dengan mudah menemukan transaksi dengan biaya gas tinggi:
 
 ```
 echidna-test pushpop.sol --config config.yaml

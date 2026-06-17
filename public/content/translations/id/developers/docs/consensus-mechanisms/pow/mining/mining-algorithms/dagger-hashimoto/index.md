@@ -1,29 +1,29 @@
 ---
 title: Dagger-Hashimoto
-description: Tinjauan terperinci tentang algoritma Dagger-Hashimoto.
+description: Tinjauan mendetail tentang algoritma Dagger-Hashimoto.
 lang: id
 ---
 
-Dagger-Hashimoto adalah implementasi penelitian dan spesifikasi asli untuk algoritma penambangan Ethereum. Dagger-Hashimoto digantikan oleh [Ethash](#ethash). Penambangan dimatikan sepenuhnya pada [The Merge](/roadmap/merge/) pada tanggal 15 September 2022. Sejak saat itu, Ethereum telah diamankan menggunakan mekanisme [proof-of-stake](/developers/docs/consensus-mechanisms/pos) sebagai gantinya. Halaman ini ditujukan untuk kepentingan sejarah - informasi di sini tidak lagi relevan untuk Ethereum pasca-Merge.
+Dagger-Hashimoto adalah implementasi riset dan spesifikasi asli untuk algoritma penambangan Ethereum. Dagger-Hashimoto digantikan oleh [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/#ethash). Penambangan dimatikan sepenuhnya pada [The Merge](/roadmap/merge/) tanggal 15 September 2022. Sejak saat itu, Ethereum diamankan menggunakan mekanisme [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos) sebagai gantinya. Halaman ini ditujukan untuk kepentingan sejarah - informasi di sini tidak lagi relevan untuk Ethereum pasca-Merge.
 
 ## Prasyarat {#prerequisites}
 
-Untuk lebih memahami halaman ini, kami sarankan Anda terlebih dahulu membaca tentang [konsensus proof-of-work](/developers/docs/consensus-mechanisms/pow), [penambangan](/developers/docs/consensus-mechanisms/pow/mining), dan [algoritma penambangan](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
+Untuk lebih memahami halaman ini, kami sarankan Anda membaca terlebih dahulu tentang [konsensus Bukti Kerja (PoW)](/developers/docs/consensus-mechanisms/pow), [penambangan](/developers/docs/consensus-mechanisms/pow/mining), dan [algoritma penambangan](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto bertujuan untuk memenuhi dua tujuan:
 
-1.  **Tahan ASIC**: keuntungan dari membuat perangkat keras khusus untuk algoritma ini harus sekecil mungkin
+1.  **Ketahanan ASIC**: keuntungan dari pembuatan perangkat keras khusus untuk algoritma ini harus sekecil mungkin
 2.  **Verifiabilitas klien ringan**: sebuah blok harus dapat diverifikasi secara efisien oleh klien ringan.
 
-Dengan modifikasi tambahan, kami juga menentukan cara untuk memenuhi tujuan ketiga jika diinginkan, tetapi dengan mengorbankan kompleksitas tambahan:
+Dengan modifikasi tambahan, kami juga menentukan cara memenuhi tujuan ketiga jika diinginkan, tetapi dengan mengorbankan kompleksitas tambahan:
 
-**Penyimpanan rantai penuh**: penambangan harus memerlukan penyimpanan status blockchain yang lengkap (karena struktur trie status Ethereum yang tidak teratur, kami mengantisipasi bahwa beberapa pemangkasan akan dimungkinkan, terutama dari beberapa kontrak yang sering digunakan, tetapi kami ingin meminimalkan hal ini).
+**Penyimpanan rantai penuh**: penambangan harus mewajibkan penyimpanan state rantai blok yang lengkap (karena struktur trie keadaan Ethereum yang tidak teratur, kami mengantisipasi bahwa beberapa pemangkasan akan dimungkinkan, terutama pada beberapa kontrak yang sering digunakan, tetapi kami ingin meminimalkan hal ini).
 
 ## Pembuatan DAG {#dag-generation}
 
-Kode untuk algoritma ini akan didefinisikan dalam Python di bawah ini. Pertama, kami memberikan `encode_int` untuk menyusun int tak bertanda (unsigned int) dengan presisi tertentu menjadi string. Kebalikannya juga diberikan:
+Kode untuk algoritma ini akan didefinisikan dalam Python di bawah ini. Pertama, kami memberikan `encode_int` untuk menyusun (marshaling) unsigned int dengan presisi tertentu menjadi string. Kebalikannya juga diberikan:
 
 ```python
 NUM_BITS = 512
@@ -65,28 +65,28 @@ def dbl_sha3(x):
 Parameter yang digunakan untuk algoritma ini adalah:
 
 ```python
-SAFE_PRIME_512 = 2**512 - 38117     # Largest Safe Prime less than 2**512 # Bilangan prima aman terbesar yang kurang dari 2**512
+SAFE_PRIME_512 = 2**512 - 38117     # Bilangan Prima Aman Terbesar yang kurang dari 2**512
 
 params = {
-      "n": 4000055296 * 8 // NUM_BITS,  # Size of the dataset (4 Gigabytes); MUST BE MULTIPLE OF 65536 # Ukuran dataset (4 Gigabita); HARUS KELIPATAN 65536
-      "n_inc": 65536,                   # Increment in value of n per period; MUST BE MULTIPLE OF 65536 # Peningkatan nilai n per periode; HARUS KELIPATAN 65536
-                                        # with epochtime=20000 gives 882 MB growth per year # dengan epochtime=20000 memberikan pertumbuhan 882 MB per tahun
-      "cache_size": 2500,               # Size of the light client's cache (can be chosen by light # Ukuran cache klien ringan (dapat dipilih oleh klien
-                                        # client; not part of the algo spec) # ringan; bukan bagian dari spesifikasi algoritma)
-      "diff": 2**14,                    # Difficulty (adjusted during block evaluation) # Tingkat kesulitan (disesuaikan selama evaluasi blok)
-      "epochtime": 100000,              # Length of an epoch in blocks (how often the dataset is updated) # Panjang epoch dalam blok (seberapa sering dataset diperbarui)
-      "k": 1,                           # Number of parents of a node # Jumlah induk dari sebuah node
-      "w": w,                          # Used for modular exponentiation hashing # Digunakan untuk hash eksponensiasi modular
-      "accesses": 200,                  # Number of dataset accesses during hashimoto # Jumlah akses dataset selama hashimoto
-      "P": SAFE_PRIME_512               # Safe Prime for hashing and random number generation # Bilangan prima aman untuk hash dan pembuatan angka acak
+      "n": 4000055296 * 8 // NUM_BITS,  # Ukuran dataset (4 Gigabyte); WAJIB KELIPATAN DARI 65536
+      "n_inc": 65536,                   # Peningkatan nilai n per periode; WAJIB KELIPATAN DARI 65536
+                                        # dengan epochtime=20000 memberikan pertumbuhan 882 MB per tahun
+      "cache_size": 2500,               # Ukuran cache klien ringan (dapat dipilih oleh klien
+                                        # ringan; bukan bagian dari spesifikasi algoritma)
+      "diff": 2**14,                    # Tingkat kesulitan (disesuaikan selama evaluasi blok)
+      "epochtime": 100000,              # Panjang epoch dalam blok (seberapa sering dataset diperbarui)
+      "k": 1,                           # Jumlah induk dari sebuah node
+      "w": w,                          # Digunakan untuk proses hash eksponensial modular
+      "accesses": 200,                  # Jumlah akses dataset selama hashimoto
+      "P": SAFE_PRIME_512               # Bilangan Prima Aman untuk proses hash dan pembuatan angka acak
 }
 ```
 
-`P` dalam hal ini adalah bilangan prima yang dipilih sedemikian rupa sehingga `log₂(P)` hanya sedikit kurang dari 512, yang sesuai dengan 512 bit yang telah kami gunakan untuk merepresentasikan angka-angka kami. Perhatikan bahwa hanya paruh kedua dari DAG yang sebenarnya perlu disimpan, sehingga kebutuhan RAM de-facto dimulai pada 1 GB dan tumbuh sebesar 441 MB per tahun.
+`P` dalam hal ini adalah bilangan prima yang dipilih sedemikian rupa sehingga `log₂(P)` hanya sedikit kurang dari 512, yang sesuai dengan 512 bit yang telah kami gunakan untuk merepresentasikan angka-angka kami. Perhatikan bahwa hanya paruh kedua dari DAG yang sebenarnya perlu disimpan, sehingga kebutuhan RAM de-facto dimulai dari 1 GB dan bertambah sebesar 441 MB per tahun.
 
 ### Pembuatan grafik Dagger {#dagger-graph-building}
 
-Primitif pembuatan grafik dagger didefinisikan sebagai berikut:
+Primitif pembuatan grafik Dagger didefinisikan sebagai berikut:
 
 ```python
 def produce_dag(params, seed, length):
@@ -101,7 +101,7 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-Pada dasarnya, ini memulai grafik sebagai node tunggal, `sha3(seed)`, dan dari sana mulai menambahkan node lain secara berurutan berdasarkan node sebelumnya yang acak. Ketika node baru dibuat, pangkat modular dari seed dihitung untuk memilih secara acak beberapa indeks yang kurang dari `i` (menggunakan `x % i` di atas), dan nilai node pada indeks tersebut digunakan dalam perhitungan untuk menghasilkan nilai baru untuk `x`, yang kemudian dimasukkan ke dalam fungsi proof-of-work kecil (berdasarkan XOR) untuk pada akhirnya menghasilkan nilai grafik pada indeks `i`. Alasan di balik desain khusus ini adalah untuk memaksa akses berurutan dari DAG; nilai DAG berikutnya yang akan diakses tidak dapat ditentukan sampai nilai saat ini diketahui. Terakhir, eksponensiasi modular melakukan hash pada hasilnya lebih lanjut.
+Pada dasarnya, ini memulai grafik sebagai node tunggal, `sha3(seed)`, dan dari sana mulai menambahkan node lain secara berurutan berdasarkan node sebelumnya yang acak. Ketika node baru dibuat, pangkat modular dari seed dihitung untuk memilih secara acak beberapa indeks yang kurang dari `i` (menggunakan `x % i` di atas), dan nilai node pada indeks tersebut digunakan dalam perhitungan untuk menghasilkan nilai baru bagi `x`, yang kemudian dimasukkan ke dalam fungsi bukti kerja kecil (berdasarkan XOR) untuk pada akhirnya menghasilkan nilai grafik pada indeks `i`. Alasan di balik desain khusus ini adalah untuk memaksa akses berurutan dari DAG; nilai DAG berikutnya yang akan diakses tidak dapat ditentukan sampai nilai saat ini diketahui. Terakhir, eksponensiasi modular melakukan proses hash pada hasilnya lebih lanjut.
 
 Algoritma ini bergantung pada beberapa hasil dari teori bilangan. Lihat lampiran di bawah ini untuk pembahasannya.
 
@@ -135,9 +135,9 @@ Pada dasarnya, ini hanyalah penulisan ulang dari algoritma di atas yang menghapu
 
 ## Buffer ganda DAG {#double-buffer}
 
-Dalam klien penuh, [_buffer ganda_](https://wikipedia.org/wiki/Multiple_buffering) dari 2 DAG yang dihasilkan oleh rumus di atas digunakan. Idenya adalah bahwa DAG diproduksi setiap jumlah blok `epochtime` sesuai dengan parameter di atas. Alih-alih klien menggunakan DAG terbaru yang diproduksi, klien menggunakan yang sebelumnya. Manfaat dari hal ini adalah memungkinkan DAG diganti seiring waktu tanpa perlu memasukkan langkah di mana penambang harus tiba-tiba menghitung ulang semua data. Jika tidak, ada potensi perlambatan sementara yang tiba-tiba dalam pemrosesan rantai pada interval reguler dan secara dramatis meningkatkan sentralisasi. Dengan demikian, risiko serangan 51% dalam beberapa menit sebelum semua data dihitung ulang.
+Dalam klien penuh, [_buffer ganda_](https://wikipedia.org/wiki/Multiple_buffering) dari 2 DAG yang dihasilkan oleh rumus di atas digunakan. Idenya adalah bahwa DAG diproduksi setiap sejumlah `epochtime` blok sesuai dengan parameter di atas. Alih-alih klien menggunakan DAG terbaru yang diproduksi, klien menggunakan DAG sebelumnya. Manfaat dari hal ini adalah memungkinkan DAG diganti seiring waktu tanpa perlu memasukkan langkah di mana penambang harus tiba-tiba menghitung ulang semua data. Jika tidak, ada potensi perlambatan sementara yang tiba-tiba dalam pemrosesan rantai pada interval reguler dan secara dramatis meningkatkan sentralisasi. Dengan demikian, risiko serangan 51% muncul dalam beberapa menit tersebut sebelum semua data dihitung ulang.
 
-Algoritma yang digunakan untuk menghasilkan kumpulan DAG yang digunakan untuk menghitung pekerjaan untuk sebuah blok adalah sebagai berikut:
+Algoritma yang digunakan untuk menghasilkan kumpulan DAG yang digunakan untuk menghitung pekerjaan bagi sebuah blok adalah sebagai berikut:
 
 ```python
 def get_prevhash(n):
@@ -164,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # No back buffer is possible, just make front buffer # Tidak memungkinkan adanya back buffer, cukup buat front buffer
+        # Tidak memungkinkan adanya back buffer, cukup buat front buffer
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:
@@ -176,7 +176,7 @@ def get_daggerset(params, block):
 
 ## Hashimoto {#hashimoto}
 
-Ide di balik Hashimoto asli adalah menggunakan blockchain sebagai kumpulan data, melakukan komputasi yang memilih N indeks dari blockchain, mengumpulkan transaksi pada indeks tersebut, melakukan XOR dari data ini, dan mengembalikan hash dari hasilnya. Algoritma asli Thaddeus Dryja, yang diterjemahkan ke Python untuk konsistensi, adalah sebagai berikut:
+Ide di balik Hashimoto asli adalah menggunakan rantai blok sebagai kumpulan data, melakukan komputasi yang memilih N indeks dari rantai blok, mengumpulkan transaksi pada indeks tersebut, melakukan XOR dari data ini, dan mengembalikan hash dari hasilnya. Algoritma asli Thaddeus Dryja, yang diterjemahkan ke Python untuk konsistensi, adalah sebagai berikut:
 
 ```python
 def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
@@ -189,7 +189,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
     return txid_mix ^ (nonce << 192)
 ```
 
-Sayangnya, meskipun Hashimoto dianggap sulit secara RAM, ia bergantung pada aritmatika 256-bit, yang memiliki overhead komputasi yang cukup besar. Namun, Dagger-Hashimoto hanya menggunakan 64 bit paling tidak signifikan saat mengindeks kumpulan datanya untuk mengatasi masalah ini.
+Sayangnya, meskipun Hashimoto dianggap sulit secara RAM (RAM hard), ia bergantung pada aritmatika 256-bit, yang memiliki overhead komputasi yang cukup besar. Namun, Dagger-Hashimoto hanya menggunakan 64 bit paling tidak signifikan saat mengindeks kumpulan datanya untuk mengatasi masalah ini.
 
 ```python
 def hashimoto(dag, dagsize, params, header, nonce):
@@ -200,7 +200,7 @@ def hashimoto(dag, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-Penggunaan SHA3 ganda memungkinkan bentuk pra-verifikasi tanpa data yang hampir instan, hanya memverifikasi bahwa nilai perantara yang benar telah diberikan. Lapisan luar proof-of-work ini sangat ramah ASIC dan cukup lemah, tetapi ada untuk membuat DDoS menjadi lebih sulit karena sejumlah kecil pekerjaan tersebut harus dilakukan untuk menghasilkan blok yang tidak akan langsung ditolak. Berikut adalah versi klien ringan:
+Penggunaan double SHA3 memungkinkan bentuk pra-verifikasi tanpa data yang hampir instan, hanya memverifikasi bahwa nilai perantara yang benar telah diberikan. Lapisan luar dari bukti kerja ini sangat ramah ASIC dan cukup lemah, tetapi ada untuk membuat DDoS menjadi lebih sulit karena sejumlah kecil pekerjaan tersebut harus dilakukan untuk menghasilkan blok yang tidak akan langsung ditolak. Berikut adalah versi klien ringannya:
 
 ```python
 def quick_hashimoto(seed, dagsize, params, header, nonce):
@@ -252,7 +252,7 @@ def light_verify(params, header, nonce):
 Selain itu, perhatikan bahwa Dagger-Hashimoto memberlakukan persyaratan tambahan pada header blok:
 
 - Agar verifikasi dua lapis berfungsi, header blok harus memiliki nonce dan nilai tengah pra-sha3
-- Di suatu tempat, header blok harus menyimpan sha3 dari seedset saat ini
+- Di suatu tempat, header blok harus menyimpan sha3 dari kumpulan seed (seedset) saat ini
 
 ## Bacaan lebih lanjut {#further-reading}
 
@@ -260,16 +260,16 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 
 ## Lampiran {#appendix}
 
-Seperti yang dicatat di atas, RNG yang digunakan untuk pembuatan DAG bergantung pada beberapa hasil dari teori bilangan. Pertama, kami memberikan jaminan bahwa Lehmer RNG yang menjadi dasar untuk variabel `picker` memiliki periode yang luas. Kedua, kami menunjukkan bahwa `pow(x,3,P)` tidak akan memetakan `x` ke `1` atau `P-1` asalkan `x ∈ [2,P-2]` untuk memulai. Terakhir, kami menunjukkan bahwa `pow(x,3,P)` memiliki tingkat tabrakan yang rendah ketika diperlakukan sebagai fungsi hashing.
+Seperti yang dicatat di atas, RNG yang digunakan untuk pembuatan DAG bergantung pada beberapa hasil dari teori bilangan. Pertama, kami memberikan jaminan bahwa Lehmer RNG yang menjadi dasar untuk variabel `picker` memiliki periode yang luas. Kedua, kami menunjukkan bahwa `pow(x,3,P)` tidak akan memetakan `x` ke `1` atau `P-1` asalkan `x ∈ [2,P-2]` untuk memulai. Terakhir, kami menunjukkan bahwa `pow(x,3,P)` memiliki tingkat tabrakan (collision rate) yang rendah ketika diperlakukan sebagai fungsi hash.
 
 ### Generator angka acak Lehmer {#lehmer-random-number}
 
 Meskipun fungsi `produce_dag` tidak perlu menghasilkan angka acak yang tidak bias, potensi ancamannya adalah bahwa `seed**i % P` hanya mengambil segelintir nilai. Hal ini dapat memberikan keuntungan bagi penambang yang mengenali pola tersebut dibandingkan dengan mereka yang tidak.
 
-Untuk menghindari hal ini, hasil dari teori bilangan digunakan. Sebuah [_Safe Prime_](https://en.wikipedia.org/wiki/Safe_prime) didefinisikan sebagai bilangan prima `P` sedemikian rupa sehingga `(P-1)/2` juga merupakan bilangan prima. _Orde_ dari anggota `x` dari [grup perkalian](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` didefinisikan sebagai `m` minimal sedemikian rupa sehingga <pre>xᵐ mod P ≡ 1</pre>
-Mengingat definisi ini, kita memiliki:
+Untuk menghindari hal ini, hasil dari teori bilangan digunakan. [_Safe Prime_](https://en.wikipedia.org/wiki/Safe_prime) didefinisikan sebagai bilangan prima `P` sedemikian rupa sehingga `(P-1)/2` juga merupakan bilangan prima. _Orde_ dari anggota `x` dari [grup perkalian](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` didefinisikan sebagai `m` minimal sedemikian rupa sehingga <pre>xᵐ mod P ≡ 1</pre>
+Berdasarkan definisi ini, kita memiliki:
 
-> Pengamatan 1. Misalkan `x` menjadi anggota grup perkalian `ℤ/Pℤ` untuk safe prime `P`. Jika `x mod P ≠ 1 mod P` dan `x mod P ≠ P-1 mod P`, maka orde dari `x` adalah `P-1` atau `(P-1)/2`.
+> Pengamatan 1. Misalkan `x` adalah anggota dari grup perkalian `ℤ/Pℤ` untuk safe prime `P`. Jika `x mod P ≠ 1 mod P` dan `x mod P ≠ P-1 mod P`, maka orde dari `x` adalah `P-1` atau `(P-1)/2`.
 
 _Bukti_. Karena `P` adalah safe prime, maka berdasarkan [Teorema Lagrange][lagrange] kita memiliki bahwa orde dari `x` adalah `1`, `2`, `(P-1)/2`, atau `P-1`.
 
@@ -281,23 +281,23 @@ Oleh karena itu `x` harus menjadi identitas perkalian dari `ℤ/nℤ`, yang mana
 
 Orde dari `x` tidak bisa `2` kecuali `x = P-1`, karena ini akan melanggar bahwa `P` adalah bilangan prima.
 
-Dari proposisi di atas, kita dapat mengenali bahwa mengulangi `(picker * init) % P` akan memiliki panjang siklus setidaknya `(P-1)/2`. Ini karena kita memilih `P` sebagai safe prime yang kira-kira sama dengan pangkat dua yang lebih tinggi, dan `init` berada dalam interval `[2,2**256+1]`. Mengingat besarnya `P`, kita seharusnya tidak pernah mengharapkan siklus dari eksponensiasi modular.
+Dari proposisi di atas, kita dapat mengenali bahwa mengiterasi `(picker * init) % P` akan memiliki panjang siklus setidaknya `(P-1)/2`. Ini karena kita memilih `P` sebagai safe prime yang kira-kira sama dengan pangkat dua yang lebih tinggi, dan `init` berada dalam interval `[2,2**256+1]`. Mengingat besarnya `P`, kita seharusnya tidak pernah mengharapkan siklus dari eksponensiasi modular.
 
-Ketika kita menetapkan sel pertama dalam DAG (variabel berlabel `init`), kita menghitung `pow(sha3(seed) + 2, 3, P)`. Sekilas, ini tidak menjamin bahwa hasilnya bukan `1` maupun `P-1`. Namun, karena `P-1` adalah safe prime, kita memiliki jaminan tambahan berikut, yang merupakan akibat wajar dari Pengamatan 1:
+Saat kita menetapkan sel pertama dalam DAG (variabel berlabel `init`), kita menghitung `pow(sha3(seed) + 2, 3, P)`. Sekilas, ini tidak menjamin bahwa hasilnya bukan `1` maupun `P-1`. Namun, karena `P-1` adalah safe prime, kita memiliki jaminan tambahan berikut, yang merupakan akibat wajar dari Pengamatan 1:
 
-> Pengamatan 2. Misalkan `x` menjadi anggota grup perkalian `ℤ/Pℤ` untuk safe prime `P`, dan misalkan `w` menjadi bilangan asli. Jika `x mod P ≠ 1 mod P` dan `x mod P ≠ P-1 mod P`, serta `w mod P ≠ P-1 mod P` dan `w mod P ≠ 0 mod P`, maka `xʷ mod P ≠ 1 mod P` dan `xʷ mod P ≠ P-1 mod P`
+> Pengamatan 2. Misalkan `x` adalah anggota dari grup perkalian `ℤ/Pℤ` untuk safe prime `P`, dan misalkan `w` adalah bilangan asli. Jika `x mod P ≠ 1 mod P` dan `x mod P ≠ P-1 mod P`, serta `w mod P ≠ P-1 mod P` dan `w mod P ≠ 0 mod P`, maka `xʷ mod P ≠ 1 mod P` dan `xʷ mod P ≠ P-1 mod P`
 
 ### Eksponensiasi modular sebagai fungsi hash {#modular-exponentiation}
 
 Untuk nilai `P` dan `w` tertentu, fungsi `pow(x, w, P)` mungkin memiliki banyak tabrakan. Misalnya, `pow(x,9,19)` hanya mengambil nilai `{1,18}`.
 
-Mengingat bahwa `P` adalah bilangan prima, maka `w` yang sesuai untuk fungsi hashing eksponensiasi modular dapat dipilih menggunakan hasil berikut:
+Mengingat bahwa `P` adalah bilangan prima, maka `w` yang sesuai untuk fungsi hash eksponensiasi modular dapat dipilih menggunakan hasil berikut:
 
 > Pengamatan 3. Misalkan `P` adalah bilangan prima; `w` dan `P-1` relatif prima jika dan hanya jika untuk semua `a` dan `b` dalam `ℤ/Pℤ`:<center>`aʷ mod P ≡ bʷ mod P` jika dan hanya jika `a mod P ≡ b mod P`</center>
 
-Dengan demikian, mengingat bahwa `P` adalah bilangan prima dan `w` relatif prima terhadap `P-1`, kita memiliki bahwa `|{pow(x, w, P) : x ∈ ℤ}| = P`, yang menyiratkan bahwa fungsi hashing memiliki tingkat tabrakan minimal yang mungkin.
+Dengan demikian, mengingat bahwa `P` adalah bilangan prima dan `w` relatif prima terhadap `P-1`, kita memiliki bahwa `|{pow(x, w, P) : x ∈ ℤ}| = P`, yang menyiratkan bahwa fungsi hash memiliki tingkat tabrakan minimal yang mungkin.
 
-Dalam kasus khusus bahwa `P` adalah safe prime seperti yang telah kita pilih, maka `P-1` hanya memiliki faktor 1, 2, `(P-1)/2` dan `P-1`. Karena `P` > 7, kita tahu bahwa 3 relatif prima terhadap `P-1`, oleh karena itu `w=3` memenuhi proposisi di atas.
+Dalam kasus khusus di mana `P` adalah safe prime seperti yang telah kita pilih, maka `P-1` hanya memiliki faktor 1, 2, `(P-1)/2` dan `P-1`. Karena `P` > 7, kita tahu bahwa 3 relatif prima terhadap `P-1`, oleh karena itu `w=3` memenuhi proposisi di atas.
 
 ## Algoritma evaluasi berbasis cache yang lebih efisien {#cache-based-evaluation}
 
