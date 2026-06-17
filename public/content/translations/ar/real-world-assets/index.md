@@ -28,12 +28,12 @@ summaryPoints:
 ## ما هي فوائد أصول العالم الحقيقي (<span dir="ltr">RWAs</span>)؟ {#rwas-benefits}
 
 <Grid>
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="الملكية الجزئية" emoji=":house_buildings:" description="تضفي أصول العالم الحقيقي الديمقراطية على الاستثمار. إذا كنت محروماً من الاستثمار في أنواع معينة من الأصول لأنك لا تستطيع تحمل تكلفة دخول تلك الأسواق، يمكنك الآن القيام بذلك كمالك جزئي."/>
+  <Card title="تنويع الاستثمار" emoji="🛒" description="يمكنك الاستثمار في أنواع متعددة من الأصول، مما يتيح لك تنويع محفظتك دون إنفاق مبالغ ضخمة تضاهي أموال صناديق التحوط." />
+  <Card title="فرص عالمية" emoji="🌏" description="تزيل أصول العالم الحقيقي الحواجز الجغرافية أمام الاستثمار. يمكنك شراء رموز مميزة لأصول تقع في أي مكان في العالم." />
+  <Card title="جعل الأصول سائلة" emoji="🖼️" description="العديد من الأصول غير سائلة. إنها ذات قيمة، ولكن هذا لا يماثل امتلاك نقود يمكنك إنفاقها. من خلال ترميز الأصل، يمكن للمالكين تحويل جزء منه أو كله إلى قيمة يمكنهم استخدامها."/>
+  <Card title="سوق عالمية" emoji="💰" description="يمكن للمالكين الذين يتطلعون إلى رسملة أصولهم الوصول إلى نطاق أوسع من المستثمرين—وليس فقط الأشخاص الذين يستطيعون عادةً تحمل تكلفة شراء الأراضي أو الأسهم أو الأعمال الفنية أو الأدوات المالية التقليدية." />
+  <Card title="تخطي الوسطاء" emoji="👩‍💻" description="تعمل الرموز المميزة على العقود الذكية، مما يعني أنه يمكن تداول الرموز المميزة من شخص لآخر دون الحاجة إلى وسطاء والرسوم المرتبطة بهم." />
 </Grid>
 
 ## كيف تعمل أصول العالم الحقيقي (<span dir="ltr">RWAs</span>)؟ {#how-rwas-work}

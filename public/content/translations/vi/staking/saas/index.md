@@ -22,9 +22,9 @@ Staking như một dịch vụ (“SaaS") đại diện cho một danh mục cá
 Giao thức [Ethereum](/) không hỗ trợ sẵn sự ủy quyền đặt cọc, vì vậy các dịch vụ này đã được xây dựng để đáp ứng nhu cầu này. Nếu bạn có 32 ETH để đặt cọc, nhưng không cảm thấy thoải mái khi xử lý phần cứng, các dịch vụ SaaS cho phép bạn ủy quyền phần khó khăn trong khi bạn kiếm được phần thưởng khối gốc.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Trình xác thực của riêng bạn" emoji=":desktop_computer:" description="Nạp 32 ETH của riêng bạn để kích hoạt bộ khóa ký của riêng bạn, bộ khóa này sẽ tham gia vào đồng thuận Ethereum. Theo dõi tiến trình của bạn bằng các bảng điều khiển để xem các phần thưởng ETH đó tích lũy." />
+  <Card title="Dễ dàng bắt đầu" emoji="🏁" description="Quên đi các thông số kỹ thuật phần cứng, thiết lập, bảo trì nút và nâng cấp. Các nhà cung cấp SaaS cho phép bạn thuê ngoài phần khó bằng cách tải lên thông tin xác thực ký của riêng bạn, cho phép họ chạy một trình xác thực thay cho bạn, với một khoản phí nhỏ." />
+  <Card title="Hạn chế rủi ro của bạn" emoji=":shield:" description="Trong nhiều trường hợp, người dùng không phải từ bỏ quyền truy cập vào các khóa cho phép rút tiền hoặc chuyển các khoản tiền đã đặt cọc. Chúng khác với các khóa ký và có thể được lưu trữ riêng biệt để hạn chế (nhưng không loại bỏ) rủi ro của bạn với tư cách là người đặt cọc." />
 </Grid>
 
 <StakingComparison page="saas" />

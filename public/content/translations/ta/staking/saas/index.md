@@ -22,9 +22,9 @@ summaryPoints:
 [எத்திரியம்](/) நெறிமுறையானது பங்குவைப்பின் பிரதிநிதித்துவத்தை இயல்பாக ஆதரிக்காது, எனவே இந்தத் தேவையப் பூர்த்தி செய்ய இந்தச் சேவைகள் உருவாக்கப்பட்டுள்ளன. உங்களிடம் பங்குவைக்க 32 ETH இருந்தால், ஆனால் வன்பொருளைக் கையாள்வதில் வசதியாக இல்லை என்றால், நீங்கள் சொந்த தொகுதி வெகுமதிகளைப் பெறும்போது கடினமான பகுதியைப் பிரதிநிதித்துவப்படுத்த SaaS சேவைகள் உங்களை அனுமதிக்கின்றன.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="உங்களுடைய சொந்த சரிபார்ப்பான்" emoji=":desktop_computer:" description="எத்திரியம் ஒருமித்த கருத்தில் பங்கேற்கும் உங்களுடைய சொந்த கையொப்பமிடும் திறவுகோல்களின் தொகுப்பைச் செயல்படுத்த, உங்களுடைய சொந்த 32 ETH-ஐ வைப்புச் செய்யுங்கள். அந்த ETH வெகுமதிகள் குவிவதைப் பார்க்க, கட்டுப்பாட்டுப் பலகங்கள் மூலம் உங்கள் முன்னேற்றத்தைக் கண்காணிக்கவும்." />
+  <Card title="தொடங்குவதற்கு எளிதானது" emoji="🏁" description="வன்பொருள் விவரக்குறிப்புகள், அமைவு, கணு பராமரிப்பு மற்றும் மேம்படுத்தல்களை மறந்துவிடுங்கள். உங்களுடைய சொந்த கையொப்பமிடும் சான்றுகளைப் பதிவேற்றுவதன் மூலம், ஒரு சிறிய செலவில் உங்கள் சார்பாக ஒரு சரிபார்ப்பானை இயக்க அவர்களை அனுமதித்து, கடினமான பகுதியை அவுட்சோர்ஸ் செய்ய SaaS வழங்குநர்கள் உங்களை அனுமதிக்கிறார்கள்." />
+  <Card title="உங்கள் அபாயத்தைக் கட்டுப்படுத்துங்கள்" emoji=":shield:" description="பல சந்தர்ப்பங்களில், பங்குவைக்கப்பட்ட நிதியைத் திரும்பப் பெற அல்லது பரிமாற்றம் செய்ய உதவும் திறவுகோல்களுக்கான அணுகலை பயனர்கள் விட்டுக்கொடுக்க வேண்டியதில்லை. இவை கையொப்பமிடும் திறவுகோல்களிலிருந்து வேறுபட்டவை, மேலும் ஒரு ஸ்டேக்கராக உங்கள் அபாயத்தைக் கட்டுப்படுத்த (ஆனால் அகற்ற அல்ல) தனித்தனியாக சேமிக்கப்படலாம்." />
 </Grid>
 
 <StakingComparison page="saas" />

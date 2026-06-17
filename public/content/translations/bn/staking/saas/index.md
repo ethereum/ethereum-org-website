@@ -22,9 +22,9 @@ summaryPoints:
 [ইথেরিয়াম](/) প্রোটোকল স্থানীয়ভাবে স্টেক অর্পণ সমর্থন করে না, তাই এই চাহিদা মেটাতে এই পরিষেবাগুলো তৈরি করা হয়েছে। আপনার কাছে স্টেক করার জন্য 32 ETH থাকলে, কিন্তু হার্ডওয়্যার নিয়ে কাজ করতে স্বাচ্ছন্দ্যবোধ না করলে, SaaS পরিষেবাগুলো আপনাকে কঠিন অংশটি অর্পণ করার সুযোগ দেয়, আর আপনি নেটিভ ব্লক পুরস্কার উপার্জন করতে পারেন।
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="আপনার নিজস্ব ভ্যালিডেটর" emoji=":desktop_computer:" description="ইথেরিয়াম ঐক্যমতে অংশগ্রহণ করবে এমন আপনার নিজস্ব স্বাক্ষরকরণ কী-এর সেট সক্রিয় করতে আপনার নিজস্ব 32 ETH জমা দিন। সেই ETH পুরস্কারগুলো জমা হওয়া দেখতে ড্যাশবোর্ডের মাধ্যমে আপনার অগ্রগতি পর্যবেক্ষণ করুন।" />
+  <Card title="শুরু করা সহজ" emoji="🏁" description="হার্ডওয়্যার স্পেকস, সেটআপ, নোড রক্ষণাবেক্ষণ এবং আপগ্রেডের কথা ভুলে যান। SaaS প্রদানকারীরা আপনাকে আপনার নিজস্ব স্বাক্ষরকরণ প্রমাণপত্র আপলোড করার মাধ্যমে কঠিন অংশটি আউটসোর্স করতে দেয়, যা তাদেরকে অল্প খরচে আপনার পক্ষে একটি ভ্যালিডেটর চালানোর অনুমতি দেয়।" />
+  <Card title="আপনার ঝুঁকি সীমিত করুন" emoji=":shield:" description="অনেক ক্ষেত্রে ব্যবহারকারীদের সেই কী-গুলোর অ্যাক্সেস ছেড়ে দিতে হয় না যা স্টেক করা তহবিল উত্তোলন বা হস্তান্তর করতে সক্ষম করে। এগুলো স্বাক্ষরকরণ কী-গুলো থেকে আলাদা, এবং একজন স্টেকার হিসেবে আপনার ঝুঁকি সীমিত (তবে নির্মূল নয়) করতে আলাদাভাবে সংরক্ষণ করা যেতে পারে।" />
 </Grid>
 
 <StakingComparison page="saas" />

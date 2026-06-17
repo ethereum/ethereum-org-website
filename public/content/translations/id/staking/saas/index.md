@@ -22,9 +22,9 @@ Staking sebagai layanan ("SaaS") mewakili kategori layanan staking di mana Anda 
 Protokol [Ethereum](/) secara bawaan tidak mendukung pendelegasian stake, sehingga layanan ini telah dibangun untuk memenuhi permintaan ini. Jika Anda memiliki 32 ETH untuk di-stake, tetapi tidak merasa nyaman berurusan dengan perangkat keras, layanan SaaS memungkinkan Anda untuk mendelegasikan bagian yang sulit sementara Anda mendapatkan imbalan blok bawaan.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Validator Anda sendiri" emoji=":desktop_computer:" description="Setorkan 32 ETH Anda sendiri untuk mengaktifkan kumpulan kunci penandatanganan Anda sendiri yang akan berpartisipasi dalam konsensus Ethereum. Pantau kemajuan Anda dengan dasbor untuk melihat imbalan ETH tersebut terakumulasi." />
+  <Card title="Mudah untuk memulai" emoji="🏁" description="Lupakan tentang spesifikasi perangkat keras, penyiapan, pemeliharaan node, dan peningkatan. Penyedia SaaS memungkinkan Anda mengalihdayakan bagian yang sulit dengan mengunggah kredensial penandatanganan Anda sendiri, yang memungkinkan mereka menjalankan validator atas nama Anda, dengan biaya yang kecil." />
+  <Card title="Batasi risiko Anda" emoji=":shield:" description="Dalam banyak kasus, pengguna tidak perlu menyerahkan akses ke kunci yang memungkinkan penarikan atau transfer dana yang di-stake. Kunci ini berbeda dari kunci penandatanganan, dan dapat disimpan secara terpisah untuk membatasi (tetapi tidak menghilangkan) risiko Anda sebagai staker." />
 </Grid>
 
 <StakingComparison page="saas" />

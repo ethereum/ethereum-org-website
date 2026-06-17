@@ -22,9 +22,9 @@ Staking jako služba („SaaS“) představuje kategorii služeb pro staking, kd
 Protokol [Ethereum](/) nativně nepodporuje delegaci staku, takže tyto služby byly vytvořeny, aby tuto poptávku uspokojily. Pokud máte 32 ETH ke stakování, ale necítíte se na práci s hardwarem, služby SaaS vám umožní delegovat tu těžší část, zatímco vy získáváte nativní odměny za bloky.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Váš vlastní validátor" emoji=":desktop_computer:" description="Vložte svých vlastních 32 ETH a aktivujte si vlastní sadu podepisovacích klíčů, které se budou podílet na konsensu Etherea. Sledujte svůj pokrok na řídicích panelech a pozorujte, jak se vám hromadí odměny v ETH." />
+  <Card title="Snadný začátek" emoji="🏁" description="Zapomeňte na hardwarové specifikace, nastavení, údržbu uzlu a upgrady. Poskytovatelé SaaS vám umožní outsourcovat tu těžkou část nahráním vašich vlastních podepisovacích pověření, což jim umožní provozovat validátor vaším jménem za malý poplatek." />
+  <Card title="Omezte své riziko" emoji=":shield:" description="V mnoha případech se uživatelé nemusí vzdávat přístupu ke klíčům, které umožňují výběr nebo převod stakovaných prostředků. Ty se liší od podepisovacích klíčů a lze je uložit odděleně, abyste omezili (ale ne zcela eliminovali) své riziko jako staker." />
 </Grid>
 
 <StakingComparison page="saas" />

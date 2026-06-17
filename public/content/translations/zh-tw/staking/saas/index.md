@@ -22,9 +22,9 @@ summaryPoints:
 [以太坊](/)協定原生並不支援質押委託，因此這些服務應運而生以滿足此需求。如果你有 32 ETH 可以質押，但不想處理硬體問題，SaaS 服務允許你將困難的部分委託出去，同時賺取原生的區塊獎勵。
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="你自己的驗證者" emoji=":desktop_computer:" description="存入你自己的 32 ETH 以啟用你專屬的一組簽署金鑰來參與以太坊共識。透過儀表板監控你的進度，看著這些 ETH 獎勵不斷累積。" />
+  <Card title="輕鬆上手" emoji="🏁" description="忘掉硬體規格、設定、節點維護與升級吧。SaaS 供應商讓你將困難的部分外包，只需上傳你自己的簽署憑證，就能讓他們代你執行驗證者，且只需支付少許費用。" />
+  <Card title="限制你的風險" emoji=":shield:" description="在許多情況下，使用者不必放棄對金鑰的存取權，這些金鑰可用於提款或轉帳質押資金。這些金鑰與簽署金鑰不同，可以分開儲存，以限制（但不能消除）你身為質押者的風險。" />
 </Grid>
 
 <StakingComparison page="saas" />

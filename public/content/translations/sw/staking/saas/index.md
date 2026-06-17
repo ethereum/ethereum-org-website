@@ -22,9 +22,9 @@ Kuweka hisa kama huduma (“SaaS") inawakilisha kategoria ya huduma za uwekaji d
 Itifaki ya [Ethereum](/) haiauni asili ukaimishaji wa dhamana, kwa hivyo huduma hizi zimejengwa ili kukidhi hitaji hili. Ikiwa una 32 ETH za kuweka dhamana, lakini hujisikii vizuri kushughulika na maunzi, huduma za SaaS zinakuruhusu kukaimisha sehemu ngumu huku ukipata tuzo za asili za kitalu.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Mthibitishaji wako mwenyewe" emoji=":desktop_computer:" description="Weka 32 ETH yako mwenyewe ili kuwezesha seti yako ya funguo za kusaini zitakazoshiriki katika mwafaka wa Ethereum. Fuatilia maendeleo yako kwa kutumia dashibodi ili kutazama tuzo hizo za ETH zikijilimbikiza." />
+  <Card title="Rahisi kuanza" emoji="🏁" description="Sahau kuhusu vipimo vya maunzi, usanidi, matengenezo ya nodi na uboreshaji. Watoa huduma za SaaS wanakuruhusu kutoa sehemu ngumu kwa kupakia vitambulisho vyako vya kusaini, na kuwaruhusu kuendesha mthibitishaji kwa niaba yako, kwa gharama ndogo." />
+  <Card title="Weka kikomo cha hatari yako" emoji=":shield:" description="Katika matukio mengi watumiaji hawalazimiki kupeana ufikiaji wa funguo zinazowezesha kutoa au kuhamisha fedha zilizowekwa dhamana. Hizi ni tofauti na funguo za kusaini, na zinaweza kuhifadhiwa kando ili kuweka kikomo (lakini si kuondoa) hatari yako kama mweka dhamana." />
 </Grid>
 
 <StakingComparison page="saas" />

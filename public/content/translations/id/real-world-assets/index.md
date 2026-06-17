@@ -28,12 +28,12 @@ Token RWA tidak memiliki nilai intrinsik apa pun. Sebaliknya, token tersebut men
 ## Apa saja manfaat RWA? {#rwas-benefits}
 
 <Grid>
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="Kepemilikan Fraksional" emoji=":house_buildings:" description="RWA mendemokratisasi investasi. Jika Anda terhalang untuk berinvestasi pada jenis aset tertentu karena tidak mampu membeli di pasar tersebut, kini Anda dapat melakukannya sebagai pemilik sebagian."/>
+  <Card title="Diversifikasi investasi" emoji="🛒" description="Anda dapat berinvestasi di berbagai jenis aset, yang memungkinkan Anda untuk mendiversifikasi portofolio tanpa harus mengeluarkan uang dalam jumlah besar layaknya dana lindung nilai." />
+  <Card title="Peluang global" emoji="🌏" description="RWA menghilangkan hambatan geografis untuk investasi. Anda dapat membeli token untuk aset yang berlokasi di mana saja di seluruh dunia." />
+  <Card title="Jadikan aset likuid" emoji="🖼️" description="Banyak aset yang tidak likuid. Aset tersebut berharga, tetapi tidak sama dengan memiliki uang tunai yang dapat Anda belanjakan. Dengan mentokenisasi aset, pemilik dapat mengubah sebagian atau seluruhnya menjadi nilai yang dapat mereka gunakan."/>
+  <Card title="Pasar di seluruh dunia" emoji="💰" description="Pemilik yang ingin mengkapitalisasi asetnya dapat menjangkau lebih banyak investor—bukan hanya orang-orang yang biasanya mampu membeli tanah, ekuitas, karya seni, atau instrumen keuangan tradisional." />
+  <Card title="Lewati perantara" emoji="👩‍💻" description="Token berjalan di atas kontrak pintar, yang berarti token dapat diperdagangkan antarindividu tanpa memerlukan perantara dan biaya terkaitnya." />
 </Grid>
 
 ## Bagaimana cara kerja RWA? {#how-rwas-work}

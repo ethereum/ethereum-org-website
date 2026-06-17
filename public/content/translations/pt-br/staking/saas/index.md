@@ -22,9 +22,9 @@ O staking como serviço ("SaaS") representa uma categoria de serviços de stakin
 O protocolo [Ethereum](/) não suporta nativamente a delegação de stake, então esses serviços foram criados para atender a essa demanda. Se você tem 32 ETH para fazer staking, mas não se sente confortável em lidar com hardware, os serviços SaaS permitem que você delegue a parte difícil enquanto ganha recompensas de bloco nativas.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Seu próprio validador" emoji=":desktop_computer:" description="Deposite seus próprios 32 ETH para ativar seu próprio conjunto de chaves de assinatura que participarão do consenso do Ethereum. Monitore seu progresso com painéis para ver essas recompensas em ETH se acumularem." />
+  <Card title="Fácil de começar" emoji="🏁" description="Esqueça as especificações de hardware, configuração, manutenção de nós e atualizações. Os provedores de SaaS permitem que você terceirize a parte difícil fazendo o upload de suas próprias credenciais de assinatura, permitindo que eles executem um validador em seu nome, por um pequeno custo." />
+  <Card title="Limite seu risco" emoji=":shield:" description="Em muitos casos, os usuários não precisam abrir mão do acesso às chaves que permitem sacar ou transferir fundos em stake. Elas são diferentes das chaves de assinatura e podem ser armazenadas separadamente para limitar (mas não eliminar) seu risco como staker." />
 </Grid>
 
 <StakingComparison page="saas" />

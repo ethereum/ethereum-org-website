@@ -22,9 +22,9 @@ summaryPoints:
 [이더리움](/) 프로토콜은 기본적으로 스테이크 위임을 지원하지 않으므로, 이러한 수요를 충족하기 위해 이러한 서비스가 구축되었습니다. 스테이킹할 32 ETH가 있지만 하드웨어를 다루는 것이 부담스럽다면, SaaS 서비스를 통해 어려운 부분을 위임하고 기본 블록 보상을 얻을 수 있습니다.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="나만의 검증자" emoji=":desktop_computer:" description="32 ETH를 예치하여 이더리움 합의에 참여할 나만의 서명 키 세트를 활성화하세요. 대시보드로 진행 상황을 모니터링하며 ETH 보상이 쌓이는 것을 확인하세요." />
+  <Card title="간편한 시작" emoji="🏁" description="하드웨어 사양, 설정, 노드 유지보수 및 업그레이드는 잊어버리세요. SaaS 제공업체를 이용하면 서명 자격 증명을 업로드하여 어려운 부분을 아웃소싱하고, 적은 비용으로 대신 검증자를 실행하도록 할 수 있습니다." />
+  <Card title="위험 제한" emoji=":shield:" description="많은 경우 사용자는 스테이킹된 자금을 인출하거나 전송할 수 있는 키에 대한 접근 권한을 포기할 필요가 없습니다. 이 키는 서명 키와 다르며, 스테이커로서의 위험을 제한(제거는 아님)하기 위해 별도로 보관할 수 있습니다." />
 </Grid>
 
 <StakingComparison page="saas" />

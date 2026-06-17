@@ -22,9 +22,9 @@ summaryPoints:
 [इथेरियम](/) प्रोटोकॉल मूळतः स्टेकच्या अधिकारप्रदानाला (delegation) समर्थन देत नाही, त्यामुळे ही मागणी पूर्ण करण्यासाठी या सेवा तयार केल्या गेल्या आहेत. जर तुमच्याकडे स्टेक करण्यासाठी 32 ETH असतील, परंतु हार्डवेअर हाताळणे तुम्हाला सोयीचे वाटत नसेल, तर SaaS सेवा तुम्हाला कठीण भाग अधिकारप्रदान करण्याची अनुमती देतात आणि त्याच वेळी तुम्ही मूळ ब्लॉक बक्षिसे मिळवू शकता.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="तुमचा स्वतःचा प्रमाणक" emoji=":desktop_computer:" description="इथेरियम एकमतामध्ये सहभागी होणाऱ्या तुमच्या स्वतःच्या स्वाक्षरी की चा संच सक्रिय करण्यासाठी तुमचे स्वतःचे 32 ETH जमा करा. ते ETH बक्षीस जमा होताना पाहण्यासाठी डॅशबोर्डच्या मदतीने तुमच्या प्रगतीवर लक्ष ठेवा." />
+  <Card title="सुरू करण्यास सोपे" emoji="🏁" description="हार्डवेअर स्पेक्स, सेटअप, नोड देखभाल आणि अपग्रेड्सबद्दल विसरून जा. SaaS प्रदाते तुम्हाला तुमची स्वतःची स्वाक्षरी क्रेडेन्शियल्स अपलोड करून कठीण काम आउटसोर्स करू देतात, ज्यामुळे त्यांना तुमच्या वतीने थोड्या खर्चात प्रमाणक चालवण्याची परवानगी मिळते." />
+  <Card title="तुमची जोखीम मर्यादित करा" emoji=":shield:" description="बऱ्याच प्रकरणांमध्ये वापरकर्त्यांना स्टेक केलेल्या निधीची रक्कम काढणे किंवा हस्तांतरण करणे शक्य करणाऱ्या की चा अ‍ॅक्सेस सोडावा लागत नाही. या स्वाक्षरी की पेक्षा वेगळ्या असतात, आणि स्टेकर म्हणून तुमची जोखीम मर्यादित करण्यासाठी (परंतु पूर्णपणे नष्ट करण्यासाठी नाही) स्वतंत्रपणे संचयित केल्या जाऊ शकतात." />
 </Grid>
 
 <StakingComparison page="saas" />

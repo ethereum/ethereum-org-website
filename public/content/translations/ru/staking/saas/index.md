@@ -22,9 +22,9 @@ summaryPoints:
 [Протокол Эфириума](/) изначально не поддерживает делегирование стейка, поэтому эти сервисы были созданы для удовлетворения этого спроса. Если у вас есть 32 ETH для стейкинга, но вы не хотите возиться с оборудованием, SaaS-сервисы позволяют вам делегировать сложную часть, пока вы получаете нативные вознаграждения за блоки.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Ваш собственный валидатор" emoji=":desktop_computer:" description="Внесите свои 32 ETH, чтобы активировать собственный набор ключей подписания, которые будут участвовать в консенсусе Эфириума. Отслеживайте свой прогресс с помощью панелей управления, чтобы наблюдать за накоплением вознаграждений в ETH." />
+  <Card title="Легко начать" emoji="🏁" description="Забудьте о требованиях к оборудованию, настройке, обслуживании узла и обновлениях. Провайдеры SaaS позволяют передать сложную часть работы на аутсорсинг: вы загружаете свои реквизиты для подписания, позволяя им запускать валидатор от вашего имени за небольшую плату." />
+  <Card title="Ограничьте свои риски" emoji=":shield:" description="Во многих случаях пользователям не нужно передавать доступ к ключам, которые позволяют выводить или переводить застейканные средства. Они отличаются от ключей подписания и могут храниться отдельно, чтобы ограничить (но не исключить) ваши риски как стейкера." />
 </Grid>
 
 <StakingComparison page="saas" />

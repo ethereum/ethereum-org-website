@@ -22,9 +22,9 @@ summaryPoints:
 [ایتھیریم](/) پروٹوکول مقامی طور پر اسٹیک کی تفویض کی حمایت نہیں کرتا ہے، لہذا یہ سروسز اس مانگ کو پورا کرنے کے لیے بنائی گئی ہیں۔ اگر آپ کے پاس اسٹیک کرنے کے لیے <span dir="ltr">32 ETH</span> ہیں، لیکن ہارڈ ویئر سے نمٹنے میں راحت محسوس نہیں کرتے ہیں، تو <span dir="ltr">SaaS</span> سروسز آپ کو مشکل حصہ تفویض کرنے کی اجازت دیتی ہیں جبکہ آپ مقامی بلاک کے انعامات کماتے ہیں۔
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="آپ کا اپنا توثیق کار" emoji=":desktop_computer:" description="ایتھیریم کے اتفاق رائے میں حصہ لینے والی اپنی دستخطی کلیدوں کے سیٹ کو فعال کرنے کے لیے اپنے ۳۲ ETH جمع کریں۔ ان ETH انعامات کو جمع ہوتا دیکھنے کے لیے ڈیش بورڈز کے ساتھ اپنی پیشرفت کی نگرانی کریں۔" />
+  <Card title="شروع کرنے میں آسان" emoji="🏁" description="ہارڈویئر کی خصوصیات، سیٹ اپ، نوڈ کی دیکھ بھال اور اپ گریڈ کے بارے میں بھول جائیں۔ SaaS فراہم کنندگان آپ کو اپنی دستخطی اسناد اپ لوڈ کر کے مشکل کام آؤٹ سورس کرنے دیتے ہیں، جس سے وہ تھوڑی سی قیمت پر آپ کی جانب سے توثیق کار چلا سکتے ہیں۔" />
+  <Card title="اپنے خطرے کو محدود کریں" emoji=":shield:" description="بہت سے معاملات میں صارفین کو ان کلیدوں تک رسائی ترک نہیں کرنی پڑتی جو اسٹیک کردہ فنڈز کے انخلا یا منتقلی کو فعال کرتی ہیں۔ یہ دستخطی کلیدوں سے مختلف ہیں، اور بطور اسٹیکر آپ کے خطرے کو محدود (لیکن ختم نہیں) کرنے کے لیے انہیں الگ سے محفوظ کیا جا سکتا ہے۔" />
 </Grid>
 
 <StakingComparison page="saas" />

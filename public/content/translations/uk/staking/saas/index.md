@@ -22,9 +22,9 @@ summaryPoints:
 Протокол [Етеріуму](/) не підтримує делегування стейку на базовому рівні, тому ці сервіси були створені для задоволення цього попиту. Якщо у вас є 32 ETH для стейкінгу, але ви не хочете мати справу з обладнанням, послуги SaaS дозволяють вам делегувати складну частину, поки ви отримуєте нативні винагороди за блоки.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Ваш власний валідатор" emoji=":desktop_computer:" description="Внесіть власні 32 ETH, щоб активувати власний набір ключів підписання, які братимуть участь у консенсусі Етеріуму. Відстежуйте свій прогрес за допомогою інформаційних панелей, щоб спостерігати за накопиченням винагород в ETH." />
+  <Card title="Легко почати" emoji="🏁" description="Забудьте про характеристики обладнання, налаштування, обслуговування та оновлення вузла. SaaS-провайдери дозволяють передати складну частину на аутсорс, завантаживши власні облікові дані для підписання, що дозволяє їм запускати валідатор від вашого імені за невелику плату." />
+  <Card title="Обмежте свій ризик" emoji=":shield:" description="У багатьох випадках користувачам не потрібно відмовлятися від доступу до ключів, які дають змогу виводити або переказувати застейкані кошти. Вони відрізняються від ключів підписання і можуть зберігатися окремо, щоб обмежити (але не усунути) ваш ризик як стейкера." />
 </Grid>
 
 <StakingComparison page="saas" />

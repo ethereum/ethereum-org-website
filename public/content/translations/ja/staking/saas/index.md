@@ -22,9 +22,9 @@ summaryPoints:
 [イーサリアム](/)プロトコルはネイティブでステークの委任をサポートしていないため、この需要を満たすためにこれらのサービスが構築されました。ステークするための32 ETHを持っているが、ハードウェアの扱いに不安がある場合、SaaSサービスを利用すれば、難しい部分をデリゲートしながらネイティブのブロック報酬を得ることができます。
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="ご自身のバリデータ" emoji=":desktop_computer:" description="ご自身の32 ETHをデポジットして、イーサリアムのコンセンサスに参加するご自身の署名鍵のセットを有効化します。ダッシュボードで進捗を監視し、ETHの報酬が蓄積していくのを確認しましょう。" />
+  <Card title="簡単に始められる" emoji="🏁" description="ハードウェアのスペック、セットアップ、ノードのメンテナンスやアップグレードについて心配する必要はありません。SaaSプロバイダーを利用すれば、ご自身の署名クレデンシャルをアップロードすることで難しい部分をアウトソーシングし、わずかな費用でバリデータの運用を代行させることができます。" />
+  <Card title="リスクを抑える" emoji=":shield:" description="多くの場合、ユーザーはステークした資金の引き出しや送金を可能にする鍵へのアクセスを手放す必要はありません。これらは署名鍵とは異なり、別々に保管できるため、ステーカーとしてのリスクを（完全に排除することはできませんが）抑えることができます。" />
 </Grid>
 
 <StakingComparison page="saas" />

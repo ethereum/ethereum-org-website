@@ -22,9 +22,9 @@ summaryPoints:
 [इथेरियम](/) प्रोटोकॉल मूल रूप से स्टेक के प्रत्यायोजन का समर्थन नहीं करता है, इसलिए इस मांग को पूरा करने के लिए इन सेवाओं का निर्माण किया गया है। यदि आपके पास स्टेक करने के लिए 32 ETH हैं, लेकिन आप हार्डवेयर से निपटने में सहज महसूस नहीं करते हैं, तो SaaS सेवाएँ आपको कठिन हिस्से को प्रत्यायोजित करने की अनुमति देती हैं जबकि आप मूल ब्लॉक पुरस्कार अर्जित करते हैं।
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="आपका अपना सत्यापक" emoji=":desktop_computer:" description="इथेरियम सर्वसम्मति में भाग लेने वाली अपनी हस्ताक्षर कुंजियों के सेट को सक्रिय करने के लिए अपने 32 ETH जमा करें। उन ETH पुरस्कारों को जमा होते देखने के लिए डैशबोर्ड के साथ अपनी प्रगति की निगरानी करें।" />
+  <Card title="शुरू करने में आसान" emoji="🏁" description="हार्डवेयर स्पेक्स, सेटअप, नोड रखरखाव और अपग्रेड के बारे में भूल जाएं। SaaS प्रदाता आपको अपने स्वयं के हस्ताक्षर क्रेडेंशियल्स अपलोड करके कठिन हिस्से को आउटसोर्स करने देते हैं, जिससे वे एक छोटी सी कीमत पर आपकी ओर से एक सत्यापक चला सकते हैं।" />
+  <Card title="अपने जोखिम को सीमित करें" emoji=":shield:" description="कई मामलों में उपयोगकर्ताओं को उन कुंजियों तक पहुंच नहीं छोड़नी पड़ती है जो स्टेक किए गए फंड की निकासी या ट्रांसफर को सक्षम करती हैं। ये हस्ताक्षर कुंजियों से अलग होती हैं, और एक स्टेकर के रूप में आपके जोखिम को सीमित (लेकिन समाप्त नहीं) करने के लिए अलग से संग्रहीत की जा सकती हैं।" />
 </Grid>
 
 <StakingComparison page="saas" />

@@ -22,9 +22,9 @@ summaryPoints:
 لا يدعم بروتوكول [إيثيريوم](/) تفويض حصة التخزين بشكل أصلي، لذلك تم بناء هذه الخدمات لتلبية هذا الطلب. إذا كان لديك <span dir="ltr">32 ETH</span> للتخزين، ولكنك لا تشعر بالراحة في التعامل مع الأجهزة، فإن خدمات التحصيص كخدمة (<span dir="ltr">SaaS</span>) تتيح لك تفويض الجزء الصعب بينما تكسب مكافآت الكتلة الأصلية.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="المُدَقِّق الخاص بك" emoji=":desktop_computer:" description="أودع 32 ETH الخاصة بك لتفعيل مجموعة مفاتيح التوقيع الخاصة بك التي ستشارك في إجماع إيثيريوم. راقب تقدمك باستخدام لوحات المعلومات لمشاهدة تراكم مكافآت ETH تلك." />
+  <Card title="من السهل البدء" emoji="🏁" description="انسَ أمر مواصفات الأجهزة والإعداد وصيانة العقدة والترقيات. يتيح لك مقدمو التحصيص كخدمة (SaaS) الاستعانة بمصادر خارجية للجزء الصعب عن طريق رفع بيانات اعتماد التوقيع الخاصة بك، مما يسمح لهم بتشغيل مُدَقِّق بالنيابة عنك، مقابل تكلفة بسيطة." />
+  <Card title="الحد من مخاطرك" emoji=":shield:" description="في العديد من الحالات، لا يضطر المستخدمون إلى التخلي عن إمكانية الوصول إلى المفاتيح التي تتيح سحب أو تحويل الأموال المخزنة. تختلف هذه عن مفاتيح التوقيع، ويمكن تخزينها بشكل منفصل للحد من (وليس القضاء على) مخاطرك كمُخزِّن." />
 </Grid>
 
 <StakingComparison page="saas" />

@@ -22,9 +22,9 @@ summaryPoints:
 [ఎథీరియం](/) ప్రోటోకాల్ స్థానికంగా స్టేక్ యొక్క ప్రాతినిధ్యం అప్పగింతకు మద్దతు ఇవ్వదు, కాబట్టి ఈ డిమాండ్‌ను తీర్చడానికి ఈ సేవలు నిర్మించబడ్డాయి. మీకు స్టేక్ చేయడానికి 32 ETH ఉంటే, కానీ హార్డ్‌వేర్‌తో వ్యవహరించడానికి ఇబ్బంది పడుతుంటే, మీరు స్థానిక బ్లాక్ ప్రతిఫలాలను పొందుతూనే కష్టమైన భాగాన్ని అప్పగించడానికి SaaS సేవలు మిమ్మల్ని అనుమతిస్తాయి.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="మీ స్వంత ధృవీకర్త" emoji=":desktop_computer:" description="ఎథీరియం ఏకాభిప్రాయంలో పాల్గొనే మీ స్వంత సంతకం చేసే కీలను సక్రియం చేయడానికి మీ స్వంత 32 ETH ని డిపాజిట్ చేయండి. ఆ ETH ప్రతిఫలాలు పోగుపడటాన్ని చూడటానికి డ్యాష్‌బోర్డ్‌లతో మీ పురోగతిని పర్యవేక్షించండి." />
+  <Card title="ప్రారంభించడం సులభం" emoji="🏁" description="హార్డ్‌వేర్ స్పెక్స్, సెటప్, నోడ్ నిర్వహణ మరియు అప్‌గ్రేడ్‌ల గురించి మరచిపోండి. SaaS ప్రొవైడర్లు మీ స్వంత సంతకం చేసే ఆధారాలను అప్‌లోడ్ చేయడం ద్వారా కష్టమైన భాగాన్ని అవుట్‌సోర్స్ చేయడానికి మిమ్మల్ని అనుమతిస్తారు, తక్కువ ఖర్చుతో మీ తరపున ధృవీకర్తను అమలు చేయడానికి వారిని అనుమతిస్తుంది." />
+  <Card title="మీ ప్రమాదాన్ని పరిమితం చేయండి" emoji=":shield:" description="చాలా సందర్భాలలో వినియోగదారులు స్టేక్ చేసిన నిధులను ఉపసంహరించుకోవడానికి లేదా బదిలీ చేయడానికి వీలు కల్పించే కీల యాక్సెస్‌ను వదులుకోవాల్సిన అవసరం లేదు. ఇవి సంతకం చేసే కీల నుండి భిన్నంగా ఉంటాయి మరియు స్టేకర్‌గా మీ ప్రమాదాన్ని పరిమితం చేయడానికి (కానీ తొలగించకుండా) విడిగా నిల్వ చేయబడతాయి." />
 </Grid>
 
 <StakingComparison page="saas" />

@@ -22,9 +22,9 @@ Hizmet olarak staking ("SaaS"), bir doğrulayıcı için kendi 32 ETH'nizi yatı
 [Ethereum](/) protokolü yerel olarak stake yetki devrini desteklemez, bu nedenle bu hizmetler bu talebi karşılamak için oluşturulmuştur. Stake etmek için 32 ETH'niz varsa ancak donanımla uğraşma konusunda rahat hissetmiyorsanız, SaaS hizmetleri yerel blok ödülleri kazanırken zor kısmı devretmenize olanak tanır.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Kendi doğrulayıcınız" emoji=":desktop_computer:" description="Ethereum mutabakatına katılacak kendi imzalama anahtarı setinizi etkinleştirmek için kendi 32 ETH'nizi yatırın. Bu ETH ödüllerinin birikmesini izlemek için ilerlemenizi kontrol panelleriyle takip edin." />
+  <Card title="Başlaması kolay" emoji="🏁" description="Donanım özelliklerini, kurulumu, düğüm bakımını ve yükseltmeleri unutun. SaaS sağlayıcıları, kendi imzalama kimlik bilgilerinizi yükleyerek zor kısmı devretmenize olanak tanır ve küçük bir maliyet karşılığında sizin adınıza bir doğrulayıcı çalıştırmalarını sağlar." />
+  <Card title="Riskinizi sınırlayın" emoji=":shield:" description="Çoğu durumda kullanıcılar, stake edilen fonların çekimini veya transferini sağlayan anahtarlara erişimden vazgeçmek zorunda kalmazlar. Bunlar imzalama anahtarlarından farklıdır ve bir staker olarak riskinizi sınırlamak (ancak ortadan kaldırmamak) için ayrı olarak saklanabilir." />
 </Grid>
 
 <StakingComparison page="saas" />

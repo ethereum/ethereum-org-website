@@ -22,9 +22,9 @@ Staking jako usługa (ang. staking as a service – SaaS) to kategoria usług st
 Protokół [Ethereum](/) nie obsługuje natywnie delegowania stawki, dlatego usługi te zostały stworzone, aby zaspokoić to zapotrzebowanie. Jeśli masz 32 ETH do stakowania, ale nie czujesz się komfortowo w pracy ze sprzętem, usługi SaaS pozwalają na delegowanie trudniejszej części, podczas gdy Ty zdobywasz natywne nagrody za bloki.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Twój własny walidator" emoji=":desktop_computer:" description="Zdeponuj własne 32 ETH, aby aktywować swój własny zestaw kluczy do podpisywania, które będą uczestniczyć w konsensusie Ethereum. Monitoruj swoje postępy za pomocą pulpitów nawigacyjnych, aby obserwować, jak gromadzą się te nagrody w ETH." />
+  <Card title="Łatwy start" emoji="🏁" description="Zapomnij o specyfikacjach sprzętowych, konfiguracji, konserwacji węzła i aktualizacjach. Dostawcy SaaS pozwalają na zlecenie najtrudniejszej części na zewnątrz poprzez przesłanie własnych danych uwierzytelniających do podpisywania, co pozwala im na uruchomienie walidatora w Twoim imieniu za niewielką opłatą." />
+  <Card title="Ogranicz swoje ryzyko" emoji=":shield:" description="W wielu przypadkach użytkownicy nie muszą rezygnować z dostępu do kluczy, które umożliwiają wypłatę lub transfer stakowanych środków. Różnią się one od kluczy do podpisywania i mogą być przechowywane oddzielnie, aby ograniczyć (ale nie wyeliminować) Twoje ryzyko jako stakującego." />
 </Grid>
 
 <StakingComparison page="saas" />

@@ -22,9 +22,9 @@ Lo staking as a service ("SaaS") rappresenta una categoria di servizi di staking
 Il protocollo di [Ethereum](/) non supporta nativamente la delega dello stake, quindi questi servizi sono stati creati per soddisfare questa domanda. Se hai 32 ETH da mettere in staking, ma non ti senti a tuo agio nel gestire l'hardware, i servizi SaaS ti consentono di delegare la parte difficile mentre guadagni le ricompense dei blocchi native.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Il tuo validatore personale" emoji=":desktop_computer:" description="Deposita i tuoi 32 ETH per attivare il tuo set di chiavi di firma che parteciperanno al consenso di Ethereum. Monitora i tuoi progressi con le dashboard per vedere accumularsi quelle ricompense in ETH." />
+  <Card title="Facile da iniziare" emoji="🏁" description="Dimentica le specifiche hardware, la configurazione, la manutenzione del nodo e gli aggiornamenti. I fornitori SaaS ti permettono di esternalizzare la parte difficile caricando le tue credenziali di firma, consentendo loro di eseguire un validatore per tuo conto, a un costo ridotto." />
+  <Card title="Limita il tuo rischio" emoji=":shield:" description="In molti casi gli utenti non devono rinunciare all'accesso alle chiavi che consentono di prelevare o trasferire i fondi in staking. Queste sono diverse dalle chiavi di firma e possono essere conservate separatamente per limitare (ma non eliminare) il tuo rischio come staker." />
 </Grid>
 
 <StakingComparison page="saas" />

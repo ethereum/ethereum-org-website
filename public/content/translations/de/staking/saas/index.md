@@ -22,9 +22,9 @@ Staking as a Service („SaaS“) stellt eine Kategorie von Staking-Diensten dar
 Das [Ethereum](/)-Protokoll unterstützt von Haus aus keine Delegation von Stakes, daher wurden diese Dienste entwickelt, um diese Nachfrage zu decken. Wenn du 32 ETH zum Staken hast, dich aber nicht mit Hardware auseinandersetzen möchtest, ermöglichen dir SaaS-Dienste, den schwierigen Teil zu delegieren, während du native Block-Belohnungen verdienst.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Dein eigener Validator" emoji=":desktop_computer:" description="Hinterlege deine eigenen 32 ETH, um dein eigenes Set an Signierschlüsseln zu aktivieren, die am Ethereum-Konsens teilnehmen werden. Verfolge deinen Fortschritt mit Dashboards, um zu beobachten, wie sich diese ETH-Belohnungen ansammeln." />
+  <Card title="Einfacher Einstieg" emoji="🏁" description="Vergiss Hardware-Spezifikationen, Einrichtung, Knoten-Wartung und Upgrades. SaaS-Anbieter ermöglichen es dir, den schwierigen Teil auszulagern, indem du deine eigenen Signier-Zugangsdaten hochlädst, sodass sie gegen eine geringe Gebühr einen Validator in deinem Namen betreiben können." />
+  <Card title="Begrenze dein Risiko" emoji=":shield:" description="In vielen Fällen müssen Nutzer den Zugriff auf die Schlüssel nicht aufgeben, die die Abhebung oder den Transfer von gestakten Mitteln ermöglichen. Diese unterscheiden sich von den Signierschlüsseln und können separat aufbewahrt werden, um dein Risiko als Staker zu begrenzen (aber nicht zu eliminieren)." />
 </Grid>
 
 <StakingComparison page="saas" />

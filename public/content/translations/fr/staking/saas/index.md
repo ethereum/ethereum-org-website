@@ -22,9 +22,9 @@ Le staking en tant que service (« SaaS ») représente une catégorie de servic
 Le protocole [Ethereum](/) ne prend pas en charge nativement la délégation de mise, ces services ont donc été développés pour répondre à cette demande. Si vous avez 32 ETH à staker, mais que vous ne vous sentez pas à l'aise avec le matériel, les services SaaS vous permettent de déléguer la partie difficile tout en gagnant des récompenses de bloc natives.
 
 <Grid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Votre propre validateur" emoji=":desktop_computer:" description="Déposez vos propres 32 ETH pour activer votre propre ensemble de clés de signature qui participeront au consensus Ethereum. Suivez votre progression avec des tableaux de bord pour voir ces récompenses en ETH s'accumuler." />
+  <Card title="Facile à démarrer" emoji="🏁" description="Oubliez les spécifications matérielles, la configuration, la maintenance des nœuds et les mises à niveau. Les fournisseurs SaaS vous permettent d'externaliser la partie difficile en téléversant vos propres identifiants de signature, leur permettant d'exécuter un validateur en votre nom, pour un coût modique." />
+  <Card title="Limitez votre risque" emoji=":shield:" description="Dans de nombreux cas, les utilisateurs n'ont pas à renoncer à l'accès aux clés qui permettent de retirer ou de transférer les fonds stakés. Celles-ci sont différentes des clés de signature et peuvent être stockées séparément pour limiter (mais non éliminer) votre risque en tant que staker." />
 </Grid>
 
 <StakingComparison page="saas" />
