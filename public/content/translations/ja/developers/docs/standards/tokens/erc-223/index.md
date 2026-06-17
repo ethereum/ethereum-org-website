@@ -1,43 +1,43 @@
 ---
-title: "ERC-223 トークン規格"
-description: "ERC-223 ファンジブルトークン規格の概要、その仕組み、およびERC-20との比較。"
+title: ERC-223 トークン標準
+description: ERC-223代替性トークン標準の概要、その仕組み、およびERC-20との比較。
 lang: ja
 ---
 
 ## はじめに {#introduction}
 
-### ERC-223とは何か？ {#what-is-erc223}
+### ERC-223とは？ {#what-is-erc223}
 
-ERC-223は、ファンジブルトークンのための規格であり、ERC-20規格に似ています。 主な違いは、ERC-223がトークンAPIだけでなく、送信者から受信者へのトークン転送のロジックも定義している点です。 ERC-223は、トークン転送を受信者側で処理できる通信モデルを導入しています。
+ERC-223は、ERC-20標準と同様の代替性トークンのための標準です。主な違いは、ERC-223がトークンのAPIだけでなく、送信者から受信者へトークンを送金するロジックも定義している点です。これにより、トークンの送金を受信者側で処理できる通信モデルが導入されています。
 
 ### ERC-20との違い {#erc20-differences}
 
-ERC-223は、ERC-20のいくつかの制限を解決し、トークンコントラクトとトークンを受け取る可能性のあるコントラクトとの新しい相互作用方法を導入しています。 ERC-223では可能で、ERC-20ではできないことがいくつかあります。
+ERC-223はERC-20のいくつかの制限に対処し、トークンコントラクトとトークンを受信する可能性のあるコントラクトとの間の新しい相互作用の方法を導入しています。ERC-20では不可能ですが、ERC-223では可能ないくつかの点があります。
 
-- 受信者側でのトークン転送処理：受信者は、ERC-223トークンが入金されていることを検出できます。
-- 誤って送信されたトークンの拒否：ユーザーがトークンを受け取るべきではないコントラクトにERC-223トークンを送信した場合、そのコントラクトはトランザクションを拒否し、トークンの損失を防ぐことができます。
-- 転送時のメタデータ：ERC-223トークンはメタデータを含めることができ、トークントランザクションに任意の情報を添付することが可能です。
+- 受信者側でのトークン送金処理: 受信者は、ERC-223トークンが入金されていることを検知できます。
+- 不適切に送信されたトークンの拒否: ユーザーがトークンを受信することを想定していないコントラクトにERC-223トークンを送信した場合、コントラクトはトランザクションを拒否し、トークンの喪失を防ぐことができます。
+- 送金時のメタデータ: ERC-223トークンにはメタデータを含めることができ、トークンのトランザクションに任意の情報を添付できます。
 
-## 前提条件 {#prerequisites}
+## 前提知識 {#prerequisites}
 
 - [アカウント](/developers/docs/accounts)
-- [スマートコントラクト](/developers/docs/smart-contracts/)
-- [トークン規格](/developers/docs/standards/tokens/)
+- [スマート・コントラクト](/developers/docs/smart-contracts/)
+- [トークン標準](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
-## 規格の概要 {#body}
+## 本文 {#body}
 
-ERC-223は、スマートコントラクト内でトークンを操作するためのAPIを実装したトークン規格です。 また、ERC-223トークンを受け取ることを想定したコントラクト用のAPIも定義しています。 ERC-223 Receiver APIをサポートしないコントラクトはERC-223トークンを受け取ることができないため、ユーザーのミスを防ぐことができます。
+ERC-223は、スマート・コントラクト内のトークン用APIを実装するトークン標準です。また、ERC-223トークンを受信することを想定したコントラクト用のAPIも宣言しています。ERC-223 Receiver APIをサポートしていないコントラクトはERC-223トークンを受信できないため、ユーザーのエラーを防ぐことができます。
 
-以下のメソッドとイベントを実装するスマートコントラクトは、ERC-223互換のトークンコントラクトと呼ぶことができます。 デプロイされると、イーサリアム上で作成されたトークンの追跡を行います。
+スマート・コントラクトが以下のメソッドとイベントを実装している場合、それはERC-223互換のトークンコントラクトと呼ぶことができます。デプロイされると、イーサリアム上で作成されたトークンを追跡する役割を担います。
 
-コントラクトはこれらの機能のみを持つ必要はなく、デベロッパーは他のトークン規格からの機能を追加することができます。 たとえば、 `approve` や `transferFrom` 機能はERC-223規格には含まれていませんが、必要に応じてこれらの機能を実装することも可能です。
+コントラクトはこれらの関数のみを持つ義務はなく、開発者は他のトークン標準から任意の機能を追加することができます。例えば、`approve`や`transferFrom`関数はERC-223標準の一部ではありませんが、必要であればこれらの関数を実装することができます。
 
-[EIP-223](https://eips.ethereum.org/EIPS/eip-223) から引用：
+[EIP-223](https://eips.ethereum.org/EIPS/eip-223)より:
 
 ### メソッド {#methods}
 
-ERC-223トークンは、以下のメソッドを実装する必要があります：
+ERC-223トークンは以下のメソッドを実装する必要があります。
 
 ```solidity
 function name() public view returns (string)
@@ -49,13 +49,13 @@ function transfer(address _to, uint256 _value) public returns (bool success)
 function transfer(address _to, uint256 _value, bytes calldata _data) public returns (bool success)
 ```
 
-ERC-223トークンを受け取ることを想定しているコントラクトは、以下のメソッドを実装する必要があります：
+ERC-223トークンを受信することを想定しているコントラクトは、以下のメソッドを実装する必要があります。
 
 ```solidity
 function tokenReceived(address _from, uint _value, bytes calldata _data)
 ```
 
-もし、ERC-223トークンが `tokenReceived(..)` 関数を実装していないコントラクトに送信された場合、その転送は失敗し、トークンは送信者の残高から移動しません。
+ERC-223トークンが`tokenReceived(..)`関数を実装していないコントラクトに送信された場合、送金は失敗し、送信者の残高からトークンが移動してはなりません。
 
 ### イベント {#events}
 
@@ -63,13 +63,13 @@ function tokenReceived(address _from, uint _value, bytes calldata _data)
 event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes calldata _data)
 ```
 
-### 実例 {#examples}
+### 例 {#examples}
 
-ERC-223トークンのAPIはERC-20トークンのAPIと似ているため、UI開発の観点からは違いはほとんどありません。 ただし例外として、ERC-223では `approve` や `transferFrom` 関数がオプションであるため、ERC-223トークンはこれらを持たない場合があります。
+ERC-223トークンのAPIはERC-20のAPIと似ているため、UI開発の観点からは違いはありません。唯一の例外は、ERC-223トークンには`approve`および`transferFrom`関数がない場合があることです。これらはこの標準ではオプションであるためです。
 
-#### Solidityの実例 {#solidity-example}
+#### Solidityの例 {#solidity-example}
 
-以下の例は、基本的なERC-223トークンコントラクトがどのように動作するかを示しています：
+以下の例は、基本的なERC-223トークンコントラクトがどのように動作するかを示しています。
 
 ```solidity
 pragma solidity ^0.8.19;
@@ -115,22 +115,22 @@ contract VeryBasicERC223Token {
 }
 ```
 
-次に、tokenAがERC-223トークンであると仮定し、別のコントラクトがtokenAのデポジットを受け入れるようにしたいとします。 このコントラクトはtokenAのみを受け入れ、他のトークンは拒否する必要があります。 コントラクトがtokenAを受け取ると、 `Deposit()` イベントを発生させ、内部の `deposits` 変数の値を増加させます。
+次に、tokenAがERC-223トークンであると仮定して、別のコントラクトが`tokenA`の入金を受け付けるようにします。このコントラクトはtokenAのみを受け付け、他のトークンは拒否しなければなりません。コントラクトがtokenAを受け取ったとき、`Deposit()`イベントを発行し、内部の`deposits`変数の値を増加させる必要があります。
 
-以下がそのコードです：
+コードは以下の通りです。
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
-    address tokenA; // 受け入れたい唯一のトークン
+    address tokenA; // 受け入れる唯一のトークン。
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // この関数内で理解するべき重要な点：
-        // msg.senderは、受け取っているトークンのアドレスです。
-        // msg.valueは常に0です。なぜなら、通常トークンコントラクトはetherを保有したり送信したりしないためです。
-        // _from      はトークン転送の送信者です。
-        // _value     は預け入れられたトークンの量です。
+        // この関数内では以下のことを理解しておくことが重要です。
+        // msg.sender は受信しているトークンのアドレスであり、
+        // ほとんどの場合、トークンコントラクトはイーサを所有または送信しないため、msg.value は常に 0 であり、
+        // _from はトークン送金の送信者であり、
+        // _value は預け入れられたトークンの量です。
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -140,31 +140,31 @@ contract RecipientContract is IERC223Recipient {
 
 ## よくある質問 {#faq}
 
-### 他のトークン（tokenB）をこのコントラクトに送信した場合、どうなりますか？ {#sending-tokens}
+### コントラクトにtokenBを送信するとどうなりますか？ {#sending-tokens}
 
-トランザクションは失敗し、トークンの転送は行われません。 トークンは送信者のアドレスに返却されます。
+トランザクションは失敗し、トークンの送金は行われません。トークンは送信者のアドレスに返還されます。
 
-### どうやってこのコントラクトにデポジットを行うことができますか？ {#contract-deposits}
+### このコントラクトにどうやって入金できますか？ {#contract-deposits}
 
-`RecipientContract` のアドレスを指定して、ERC-223トークンの `transfer(address,uint256)` または `transfer(address,uint256,bytes)` 関数を呼び出します。
+`RecipientContract`のアドレスを指定して、ERC-223トークンの`transfer(address,uint256)`または`transfer(address,uint256,bytes)`関数を呼び出します。
 
-### ERC-20トークンをこのコントラクトに送信した場合、どうなりますか？ {#erc-20-transfers}
+### このコントラクトにERC-20トークンを送金するとどうなりますか？ {#erc-20-transfers}
 
-ERC-20トークンが `RecipientContract` に送信されると、トークンは転送されますが、その転送は認識されません（ `Deposit()` イベントは発行されず、depositsの値も変わりません）。 不要なERC-20トークンのデポジットはフィルタリングや防止ができません。
+ERC-20トークンが`RecipientContract`に送信された場合、トークンは送金されますが、その送金は認識されません（`Deposit()`イベントは発行されず、入金値も変更されません）。望まないERC-20の入金をフィルタリングしたり防いだりすることはできません。
 
-### トークンのデポジット完了後に関数を実行したい場合、どうすればよいですか？ {#function-execution}
+### トークンの入金完了後に何らかの関数を実行したい場合はどうすればよいですか？ {#function-execution}
 
-これには複数の方法があります。 この例では、ERC-223の転送をイーサの転送と同じように処理する方法を紹介します：
+これを行うには複数の方法があります。この例では、ERC-223の送金をイーサの送金と同じにする方法に従います。
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
     event Foo();
     event Bar(uint256 someNumber);
-    address tokenA; // 受け入れたい唯一のトークン
+    address tokenA; // 受け入れる唯一のトークン。
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
         require(msg.sender == tokenA);
-        address(this).call(_data); // トランザクションを処理し、その後の関数呼び出しを実行
+        address(this).call(_data); // 受信したトランザクションを処理し、後続の関数呼び出しを実行します。
     }
     function foo() public
     {
@@ -177,21 +177,21 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-`RecipientContract`がERC-223トークンを受け取ると、そのコントラクトは、トークン取引の`_data`ラメーターとしてエンコードされた関数を実行します。これは、イーサリアムの取引が、取引の`data`として関数呼び出しをエンコードするのと全く同じです。 詳細については [dataフィールド](/developers/docs/transactions/#the-data-field) を参照してください。
+`RecipientContract`がERC-223トークンを受け取ると、コントラクトはトークントランザクションの`_data`パラメータとしてエンコードされた関数を実行します。これは、イーサのトランザクションが関数呼び出しをトランザクションの`data`としてエンコードするのと同じです。詳細については、[データフィールド](/developers/docs/transactions/#the-data-field)をお読みください。
 
-上記の例では、ERC-223トークンは `transfer(address,uin256,bytes calldata _data)` 関数を使用して `RecipientContract` のアドレスに転送される必要があります。 dataパラメータが `0xc2985578` （ `foo()` 関数のシグネチャ）である場合、トークンデポジットが完了した後にfoo()関数が呼び出され、Foo()イベントが発行されます。
+上記の例では、ERC-223トークンは`transfer(address,uin256,bytes calldata _data)`関数を使用して`RecipientContract`のアドレスに送金される必要があります。データパラメータが`0xc2985578`（`foo()`関数の署名）である場合、トークンの入金を受け取った後にfoo()関数が呼び出され、Foo()イベントが発行されます。
 
-パラメータはトークン転送の `data` にエンコードすることもできます。例えば、`_someNumber` に 12345 を指定して bar() 関数を呼び出すことができます。 その場合の `data` は `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2` となる必要があります。 `0x0423a132` は `bar(uint256)` 関数のシグネチャであり、 `00000000000000000000000000000000000000000000000000000000000004d2` は uint256 としての 12345 を表しています。
+パラメータはトークン送金の`data`にエンコードすることもできます。例えば、`_someNumber`に12345の値を指定してbar()関数を呼び出すことができます。この場合、`data`は`0x0423a13200000000000000000000000000000000000000000000000000000000000004d2`でなければなりません。ここで、`0x0423a132`は`bar(uint256)`関数の署名であり、`00000000000000000000000000000000000000000000000000000000000004d2`はuint256としての12345です。
 
-## 制約事項 {#limitations}
+## 制限事項 {#limitations}
 
-ERC-223は、ERC-20規格で見られるいくつかの問題に対処していますが、独自の制約があります：
+ERC-223はERC-20標準に見られるいくつかの問題に対処していますが、独自の制限がないわけではありません。
 
-- 普及と互換性：ERC-223はまだ広く普及していないため、既存のツールやプラットフォームとの互換性が制限される可能性があります。
-- 後方互換性：ERC-223はERC-20と後方互換性がないため、既存のERC-20コントラクトやツールは、修正なしではERC-223トークンと連携できません。
-- ガス代：ERC-223の転送には追加のチェックや機能が含まれるため、ERC-20トランザクションに比べてガス代が高くなる可能性があります。
+- 普及と互換性: ERC-223はまだ広く普及していないため、既存のツールやプラットフォームとの互換性が制限される可能性があります。
+- 下位互換性: ERC-223はERC-20との下位互換性がありません。つまり、既存のERC-20コントラクトやツールは、変更を加えない限りERC-223トークンでは機能しません。
+- ガス代: ERC-223の送金における追加のチェックや機能により、ERC-20のトランザクションと比較してガス代が高くなる可能性があります。
 
-## 参考リンク {#further-reading}
+## 参考文献 {#further-reading}
 
-- [EIP-223: ERC-223トークン規格](https://eips.ethereum.org/EIPS/eip-223)
+- [EIP-223: ERC-223 トークン標準](https://eips.ethereum.org/EIPS/eip-223)
 - [初期のERC-223提案](https://github.com/ethereum/eips/issues/223)

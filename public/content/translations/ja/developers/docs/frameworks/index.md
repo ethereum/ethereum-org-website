@@ -1,153 +1,151 @@
 ---
-title: "Dapp開発フレームワーク"
-description: "フレームワークの利点を調査し、利用可能なオプションを比較します。"
+title: 分散型アプリケーション (dapp) 開発フレームワーク
+description: フレームワークの利点を探り、利用可能なオプションを比較します。
 lang: ja
 ---
 
-## フレームワーク入門 {#introduction-to-frameworks}
+## フレームワークの概要 {#introduction-to-frameworks}
 
-本格的なdappを構築するには、
-さまざまな技術が必要になります。 ソフトウェアフレームワークには、必要な機能の多くが含まれています。
-あるいは、好きなツールで作業できるように簡単なプラグインシステムが備わっています。
+本格的な分散型アプリケーション (dapp) を構築するには、さまざまなテクノロジーが必要です。ソフトウェアフレームワークには、必要な機能の多くが含まれており、希望するツールを選択するための簡単なプラグインシステムが提供されています。
 
-フレームワークには、すぐに使用できる機能が数多く用意されています。例えば、以下のようなものです。
+フレームワークには、以下のようなすぐに使える機能が多数用意されています。
 
-- ローカルブロックチェーンのインスタンスをスピンアップする機能
-- スマートコントラクトをコンパイルしてテストするためのユーティリティ
-- ユーザー向けのアプリケーションを、同じプロジェクト/リポジトリ内で構築するための
-  クライアント開発アドオン。
-- Ethereumネットワークに接続しコントラクトをデプロイするための設定。
-  ローカル実行インスタンス、またはEthereumの
-  パブリックネットワークのいずれかで使用。
-- 分散型アプリの配布 - IPFSなどのストレージ
-  オプションとの統合。
+- ローカルのブロックチェーンインスタンスを立ち上げる機能。
+- スマート・コントラクトをコンパイルしてテストするためのユーティリティ。
+- 同じプロジェクト/リポジトリ内でユーザー向けアプリケーションを構築するためのクライアント開発アドオン。
+- ローカルで実行されているインスタンスであれ、イーサリアムのパブリックネットワークのいずれかであれ、イーサリアムネットワークに接続してコントラクトをデプロイするための構成。
+- 分散型アプリの配信 - IPFSなどのストレージオプションとの統合。
 
 ## 前提条件 {#prerequisites}
 
-フレームワークを深く掘り下げる前に、まず[dapps](/developers/docs/dapps/)と[Ethereumスタック](/developers/docs/ethereum-stack/)の入門ガイドに目を通すことをお勧めします。
+フレームワークについて深く掘り下げる前に、まずは[分散型アプリケーション (dapp)](/developers/docs/dapps/)と[イーサリアムスタック](/developers/docs/ethereum-stack/)の概要を一読することをお勧めします。
 
 ## 利用可能なフレームワーク {#available-frameworks}
 
-**Foundry** - **_Foundryは、Ethereumアプリケーション開発のための、超高速でポータブルなモジュラーツールキットです_**
+**Foundry** - **_Foundryは、イーサリアムアプリケーション開発のための、非常に高速でポータブルかつモジュール式のツールキットです。_**
 
 - [Foundryのインストール](https://book.getfoundry.sh/)
-- [Foundryブック](https://book.getfoundry.sh/)
-- [Foundryコミュニティチャット (Telegram)](https://t.me/foundry_support)
+- [Foundry Book](https://book.getfoundry.sh/)
+- [テレグラムのFoundryコミュニティチャット](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**Hardhat -** **_プロフェッショナル向けのEthereum開発環境。_**
+**Hardhat -** **_プロフェッショナル向けのイーサリアム開発環境です。_**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Pythonista、データサイエンティスト、セキュリティプロフェッショナル向けのスマートコントラクト開発ツール。_**
+**Ape -** **_Pythonユーザー、データサイエンティスト、セキュリティ専門家向けのスマート・コントラクト開発ツールです。_**
 
 - [ドキュメント](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_JVM上でブロックチェーンアプリケーションを開発するためのプラットフォーム。_**
+**Web3j -** **_JVM上でブロックチェーンアプリケーションを開発するためのプラットフォームです。_**
 
 - [ホームページ](https://www.web3labs.com/web3j-sdk)
 - [ドキュメント](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_EVMベースのブロックチェーン向けの、非同期で高性能なKotlin/Java/Androidライブラリ。_**
+**ethers-kt -** **_EVMベースのブロックチェーン向けの、非同期で高性能なKotlin/Java/Androidライブラリです。_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
-- [サンプル](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
-- [Discord](https://discord.gg/rx35NzQGSb)
+- [例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [ディスコード](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_単一のコマンドでEthereumを利用したアプリを作成。 豊富なUIフレームワークとDeFiテンプレートから選択できます。_**
+**Create Eth App -** **_1つのコマンドでイーサリアムを活用したアプリを作成できます。選択可能なUIフレームワークとDeFiテンプレートが豊富に用意されています。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [テンプレート](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Ethers.js + Hardhat + web3用Reactコンポーネントとフック：スマートコントラクトを搭載した分散型アプリケーションの構築を始めるために必要なすべてが揃っています。_**
+**Scaffold-ETH -** **_Web3向けのEthers.js + Hardhat + Reactコンポーネントとフック。スマート・コントラクトを活用した分散型アプリケーション (dapp) の構築を開始するために必要なものがすべて揃っています。_**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_ブロックチェーンデベロッパーがスマートコントラクトの構築、テスト、デバッグ、監視、運用を行い、dappのUXを向上させることを可能にするWeb3開発プラットフォーム。_**
+**Tenderly -** **_ブロックチェーン開発者がスマート・コントラクトを構築、テスト、デバッグ、監視、運用し、dappのUXを向上させることを可能にするWeb3開発プラットフォームです。_**
 
 - [ウェブサイト](https://tenderly.co/)
 - [ドキュメント](https://docs.tenderly.co/)
 
-**The Graph -** **_ブロックチェーンデータを効率的にクエリするためのThe Graph。_**
+**The Graph -** **_ブロックチェーンデータを効率的にクエリするためのThe Graphです。_**
 
 - [ウェブサイト](https://thegraph.com/)
 - [チュートリアル](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
-**Alchemy -** **_Ethereum開発プラットフォーム。_**
+**Alchemy -** **_イーサリアム開発プラットフォームです。_**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/alchemyplatform)
+- [ディスコード](https://discord.com/invite/alchemyplatform)
 
-**NodeReal -** **_Ethereum開発プラットフォーム。_**
+**NodeReal -** **_イーサリアム開発プラットフォームです。_**
 
 - [Nodereal.io](https://nodereal.io/)
 - [GitHub](https://github.com/node-real)
-- [Discord](https://discord.gg/V5k5gsuE)
+- [ディスコード](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_強力なSDKとCLIを使用して、スマートコントラクトと対話できるweb3アプリケーションを構築します。_**
+**thirdweb SDK -** **_強力なSDKとCLIを使用して、スマート・コントラクトと対話できるWeb3アプリケーションを構築します。_**
 
 - [ドキュメント](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_Web3 (Ethereumなど) 開発プラットフォーム。_**
+**Chainstack -** **_Web3 (イーサリアムおよびその他) 開発プラットフォームです。_**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
-- [Discord](https://discord.gg/BSb5zfp9AT)
+- [ディスコード](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_エンタープライズグレードのweb3開発プラットフォームで、すべての主要なEVMチェーン (およびその他) でNFTアプリケーションを構築できます。_**
+**Crossmint -** **_エンタープライズグレードのWeb3開発プラットフォームであり、すべての主要なチェーン、EVMチェーン (およびその他) 上でNFTアプリケーションを構築できます。_**
 
 - [ウェブサイト](https://www.crossmint.com)
 - [ドキュメント](https://docs.crossmint.com)
-- [Discord](https://discord.com/invite/crossmint)
+- [ディスコード](https://discord.com/invite/crossmint)
 
-**Brownie -** **_Pythonベースの開発環境およびテストフレームワーク。_**
+**Brownie -** **_Pythonベースの開発環境およびテストフレームワークです。_**
 
 - [ドキュメント](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-- **Brownieのメンテナンス終了**
+- **Brownieは現在メンテナンスされていません**
 
-**OpenZeppelin SDK -** **_究極のスマートコントラクトツールキット：スマートコントラクトの開発、コンパイル、アップグレード、デプロイ、操作を支援する一連のツール。_**
+**オープンツェッペリン SDK -** **_究極のスマート・コントラクトツールキット: スマート・コントラクトの開発、コンパイル、アップグレード、デプロイ、および対話を支援するツールのスイートです。_**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
+- [オープンツェッペリン Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [コミュニティフォーラム](https://forum.openzeppelin.com/c/support/17)
-- **OpenZeppelin SDK開発の終了**
+- **オープンツェッペリン SDKの開発は終了しました**
 
-**Catapulta -** **_マルチチェーンのスマートコントラクトデプロイツール。ブロックエクスプローラーでの検証の自動化、デプロイ済みスマートコントラクトの追跡、デプロイレポートの共有、FoundryおよびHardhatプロジェクトへのプラグアンドプレイに対応。_**
+**Catapulta -** **_マルチチェーンのスマート・コントラクトデプロイツールです。ブロックエクスプローラーでの検証を自動化し、デプロイされたスマート・コントラクトを追跡してデプロイレポートを共有します。FoundryおよびHardhatプロジェクトでプラグアンドプレイが可能です。_**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (powered by Covalent) -** **_GoldRushは、デベロッパー、アナリスト、企業向けに、最も包括的なブロックチェーンデータAPIスイートを提供します。 DeFiダッシュボード、ウォレット、取引ボット、AIエージェント、コンプライアンスプラットフォームのいずれを構築している場合でも、データAPIは、必要不可欠なオンチェーンデータへの高速で正確、かつデベロッパーフレンドリーなアクセスを提供します_**
+**GoldRush (powered by Covalent) -** **_GoldRushは、開発者、アナリスト、企業向けに最も包括的なブロックチェーンデータAPIスイートを提供します。DeFiダッシュボード、ウォレット、トレーディングボット、AI・エージェント、コンプライアンスプラットフォームのいずれを構築している場合でも、データAPIは必要な不可欠なオンチェーンデータへの高速で正確かつ開発者フレンドリーなアクセスを提供します。_**
 
 - [ウェブサイト](https://goldrush.dev/)
 - [ドキュメント](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
-- [Discord](https://www.covalenthq.com/discord/)
+- [ディスコード](https://www.covalenthq.com/discord/)
 
-**Wake -** **_コントラクトのテスト、ファジング、デプロイ、脆弱性スキャン、コードナビゲーションのためのオールインワンPythonフレームワーク。_**
+**Wake -** **_コントラクトのテスト、ファジング、デプロイ、脆弱性スキャン、コードナビゲーションのためのオールインワンPythonフレームワークです。_**
 
 - [ホームページ](https://getwake.io/)
 - [ドキュメント](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code拡張機能](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_分散型アプリケーションのデベロッパーが、分散型アイデンティティと検証可能なクレデンシャルをアプリケーションに簡単に組み込むことができる、オープンソースでモジュール式の、特定のテクノロジーに依存しないフレームワーク。_**
+**Veramo -** **_分散型アプリケーション開発者が分散型IDと検証可能なクレデンシャルをアプリケーションに簡単に組み込めるようにする、オープンソースでモジュール式の非依存型フレームワークです。_**
 
 - [ホームページ](https://veramo.io/)
 - [ドキュメント](https://veramo.io/docs/basics/introduction)
 - [GitHub](https://github.com/uport-project/veramo)
-- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [ディスコード](https://discord.com/invite/FRRBdjemHV)
 - [NPMパッケージ](https://www.npmjs.com/package/@veramo/core)
 
-## 参考リンク {#further-reading}
+## 参考文献 {#further-reading}
 
-_役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
+_役に立ったコミュニティリソースをご存知ですか？このページを編集して追加してください！_
 
 ## 関連トピック {#related-topics}
 
-- [ローカル開発環境をセットアップする](/developers/local-environment/)
+- [ローカル開発環境のセットアップ](/developers/local-environment/)
+
+## チュートリアル: イーサリアムの開発フレームワーク {#tutorials}
+
+- [初心者のためのHello Worldスマート・コントラクト – フルスタック](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Hardhatを使用してHello Worldスマート・コントラクトを構築およびデプロイし、フロントエンドに接続します。_

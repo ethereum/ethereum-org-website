@@ -1,53 +1,53 @@
 ---
-title: "スマートコントラクトのセキュリティ・チェックリスト"
-description: "セキュアなスマートコントラクトを作成するための推奨ワークフロー"
+title: スマート・コントラクトのセキュリティ・チェックリスト
+description: セキュアなスマート・コントラクトを記述するための推奨ワークフロー
 author: "Trailofbits"
-tags: [ "スマートコントラクト", "セキュリティ", "Solidity" ]
+tags: ["スマート・コントラクト", "セキュリティ", "solidity"]
 skill: intermediate
-breadcrumb: "セキュリティチェックリスト"
+breadcrumb: セキュリティ・チェックリスト
 lang: ja
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## スマートコントラクト開発チェックリスト {#smart-contract-development-checklist}
+## スマート・コントラクト開発のチェックリスト {#smart-contract-development-checklist}
 
-スマートコントラクトを作成する際には、以下に挙げる大まかなプロセスに従って行うことをお勧めします。
+スマート・コントラクトを記述する際に推奨される、大まかなプロセスは以下の通りです。
 
-既知のセキュリティ関連の問題点について確認します：
+既知のセキュリティ問題の確認:
 
-- [Slither](https://github.com/crytic/slither)でコントラクトをレビューする。 Slitherには、40種類以上のよくある脆弱性を対象とする検出機能が搭載されています。 新しいコードが追加されるたびにレビューを実行して、クリーンな報告になるようにします（特定の問題を無視する必要がある場合は、トリアージモードを使用します）。
-- [Crytic](https://crytic.io/)でコントラクトをレビューする。 Cryticでは、Slitherでは検出できな50種類の問題点を確認できます。 さらに、GitHubのプルリクエストに含まれるセキュリティ関連の問題点を簡単に発見できるので、チーム内の問題把握に役立ちます。
+- [スリザー](https://github.com/crytic/slither)を使用してコントラクトをレビューします。一般的な脆弱性に対する40以上の検出機能が組み込まれています。新しいコードをチェックインするたびに実行し、クリーンなレポートが得られることを確認します（または、トリアージモードを使用して特定の問題を非表示にします）。
+- [Crytic](https://crytic.io/)を使用してコントラクトをレビューします。スリザーでは検出できない50の問題をチェックします。また、CryticはGitHubのプルリクエストでセキュリティ問題を簡単に表面化させるため、チームメンバーが互いの状況を把握するのにも役立ちます。
 
-あなたのコントラクトに含まれる特別な機能について検討する：
+コントラクトの特別な機能の検討:
 
-- コントラクトがアップグレード可能かどうか： [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks)または[Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/)で、アップグレード可能性コードの欠陥をレビューする。 当チームでは、アップグレードの失敗につながる17のケースを文書化しています。
-- コントラクトは、ERC準拠を謳っていますか？ [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)でそれらをチェックする。 このツールでは、6種類の一般的な仕様に準拠していない場合、ただちに指摘されます。
-- サードパーティのトークンと統合予定ですか？ 外部コントラクトに依存する前に、[トークン統合チェックリスト](/developers/tutorials/token-integration-checklist/)をレビューする。
+- コントラクトはアップグレード可能ですか？[`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks)または[Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/)を使用して、アップグレード機能のコードに欠陥がないかレビューします。アップグレードが失敗する17のパターンを文書化しています。
+- コントラクトはERCに準拠することを意図していますか？[`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)を使用してチェックします。このツールは、6つの一般的な仕様からの逸脱を即座に特定します。
+- サードパーティのトークンと統合しますか？外部のコントラクトに依存する前に、[トークン統合チェックリスト](/developers/tutorials/token-integration-checklist/)をレビューしてください。
 
-コードにおける重要なセキュリティ関連の機能を、視覚的にチェックします。
+コードの重要なセキュリティ機能の目視検査:
 
-- Slitherの[inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph)プリンターをレビューする。 不注意によるシャドーイングやC3 linearizationにまつわる問題を回避してください。
-- Slitherの[function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary)プリンターをレビューする。 機能の可視性およびアクセス管理のレポートが作成されます。
-- Slitherの[vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization)プリンターをレビューする。 状態変数に対するアクセス管理のレポートが作成されます。
+- スリザーの[inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph)プリンターをレビューします。意図しないシャドウイングやC3線形化の問題を回避します。
+- スリザーの[function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary)プリンターをレビューします。関数の可視性とアクセス制御を報告します。
+- スリザーの[vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization)プリンターをレビューします。状態変数に対するアクセス制御を報告します。
 
-セキュリティ関連の重要な属性を文書化し、自動化されたテスト生成機能を用いて評価します：
+重要なセキュリティ特性の文書化と、自動テストジェネレーターを使用した評価:
 
-- [コードのセキュリティプロパティを文書化する](/developers/tutorials/guide-to-smart-contract-security-tools/)方法を学ぶ。 最初は大変ですが、最良の結果を得る上で最も重要な作業です。 また、このチュートリアルのより高度なテクニックを活用する上でも、必須の作業です。
-- [Echidna](https://github.com/crytic/echidna)および[Manticore](https://manticore.readthedocs.io/en/latest/verifier.html)で使用するために、Solidityでセキュリティプロパティを定義する。 状態マシン、アクセス管理、算術演算、外部とのやりとり、および標準の遵守に焦点を当ててください。
-- [SlitherのPython API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)でセキュリティプロパティを定義する。 継承、変数の依存関係、アクセス管理、およびその他の構造上の問題に焦点を当ててください。
-- [Crytic](https://crytic.io)で、コミットごとにプロパティテストを実行する。 Cryticでは、セキュリティ属性に関するテストを実行、評価できるため、チーム全員がGitHubで合格したかどうか簡単に確認できます。 テストが不合格だった場合、コミットをブロックできます。
+- [コードのセキュリティ特性を文書化する](/developers/tutorials/guide-to-smart-contract-security-tools/)方法を学びます。最初は難しいかもしれませんが、良い結果を得るために最も重要な活動です。また、このチュートリアルの高度なテクニックを使用するための前提条件でもあります。
+- [エキドナ](https://github.com/crytic/echidna)および[マンティコア](https://manticore.readthedocs.io/en/latest/verifier.html)で使用するために、Solidityでセキュリティ特性を定義します。状態マシン、アクセス制御、算術演算、外部との相互作用、および標準への準拠に焦点を当てます。
+- [スリザーのPython API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)を使用してセキュリティ特性を定義します。継承、変数の依存関係、アクセス制御、およびその他の構造的な問題に焦点を当てます。
+- [Crytic](https://crytic.io)を使用して、コミットごとにプロパティテストを実行します。Cryticはセキュリティプロパティテストを読み込んで評価できるため、チームの全員がGitHub上でテストに合格したことを簡単に確認できます。失敗したテストはコミットをブロックできます。
 
-最後に、自動化ツールでは容易に特定できない以下のような問題についても注意してください：
+最後に、自動化ツールでは簡単に見つけられない問題に注意してください:
 
-- プライバシーの欠如：トランザクションがプールでキューに入った場合、すべてのユーザーがトランザクションを確認できなければなりません。
+- プライバシーの欠如: トランザクションがプールで待機している間、他の全員がそれを見ることができます
 - トランザクションのフロントランニング
-- 秘匿化された操作
-- 外部DeFiコンポーネントとの危険なやりとり
+- 暗号化操作
+- 外部の分散型金融 (DeFi) コンポーネントとのリスクを伴う相互作用
 
-## ヘルプを求める {#ask-for-help}
+## サポートを求める {#ask-for-help}
 
-[イーサリアムオフィスアワー](https://calendly.com/dan-trailofbits/office-hours)は毎週火曜日の午後に開催されます。 この1対1の1時間のセッションで、セキュリティに関する質問をしたり、ツールを使ってトラブルシューティングをしたり、現在のアプローチについて専門家からフィードバックを得ることができます。 私たちが、このガイドに基づいてサポートします。
+[イーサリアムのオフィスアワー](https://calendly.com/dan-trailofbits/office-hours)は、毎週火曜日の午後に開催されています。この1時間の1対1のセッションは、セキュリティに関する質問、私たちのツールを使用したトラブルシューティング、および現在のアプローチに関する専門家からのフィードバックを得る機会です。このガイドを進めるためのサポートを提供します。
 
-Slackに参加する：[Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw)。 質問があれば、いつでも#cryticチャンネルと#ethereumチャンネルにお問い合わせください。
+Slackに参加してください: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw)。質問がある場合は、#cryticおよび#ethereumチャンネルでいつでも対応可能です。
