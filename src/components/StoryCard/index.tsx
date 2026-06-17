@@ -6,6 +6,7 @@ import type { Story } from "@/lib/types"
 
 import Twitter from "@/components/icons/twitter.svg"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { Card, CardContent } from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -46,14 +47,9 @@ const StoryCard = ({ story, className, expandable = true }: StoryCardProps) => {
   }
 
   return (
-    <div
-      className={cn(
-        "relative w-full rounded-2xl border bg-background p-6 transition-all duration-500",
-        hasOriginal && "cursor-pointer",
-        className
-      )}
-    >
-      <div
+    <Card variant="nested" className={cn("border", className)}>
+      <CardContent
+        spacing="none"
         className={cn(
           "transition-opacity duration-200",
           isFading ? "opacity-0" : "opacity-100"
@@ -67,7 +63,7 @@ const StoryCard = ({ story, className, expandable = true }: StoryCardProps) => {
               </p>
             </div>
             <div>
-              <p className="text-md font-bold">{story.name}</p>
+              <p className="text-md font-bold text-body">{story.name}</p>
               <p className="text-sm text-body-medium">{story.country}</p>
             </div>
           </div>
@@ -89,7 +85,7 @@ const StoryCard = ({ story, className, expandable = true }: StoryCardProps) => {
           <div className="flex flex-col">
             <p
               className={cn(
-                "mb-1",
+                "mb-1 text-body",
                 expandable && !isExpanded && "line-clamp-3"
               )}
             >
@@ -139,8 +135,8 @@ const StoryCard = ({ story, className, expandable = true }: StoryCardProps) => {
 
           <p className="mt-2 text-sm text-body-medium">{story.date}</p>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   )
 }
 

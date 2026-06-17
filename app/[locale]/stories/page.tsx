@@ -51,6 +51,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="mx-auto w-full max-w-screen-2xl space-y-16 pb-16 md:space-y-24">
         <PageHero
+          variant="no-divider"
           breadcrumbs={{ slug: "stories" }}
           title={t("page-stories-hero-title")}
           description={t("page-stories-hero-description")}

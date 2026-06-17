@@ -11,6 +11,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 
 import { FEATURED_STORIES } from "../utils"
 
@@ -37,7 +38,7 @@ const DiscoverStories = async () => {
         </p>
       </div>
 
-      <div className="mx-auto grid max-w-screen-lg grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <Grid columns={3} className="mx-auto max-w-screen-lg">
         {FEATURED_STORIES.map((story) => (
           <Card
             key={story.slug}
@@ -67,7 +68,7 @@ const DiscoverStories = async () => {
             </CardFooter>
           </Card>
         ))}
-      </div>
+      </Grid>
     </div>
   )
 }

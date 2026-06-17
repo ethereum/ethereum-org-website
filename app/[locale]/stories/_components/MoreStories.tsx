@@ -10,6 +10,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 
 type MoreStoriesProps = {
   videos: VideoCardData[]
@@ -20,7 +21,7 @@ const MoreStories = ({ videos }: MoreStoriesProps) => {
   if (videos.length === 0) return null
 
   return (
-    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <Grid columns={3}>
       {videos.map((video) => (
         <Card
           key={video.slug}
@@ -54,7 +55,7 @@ const MoreStories = ({ videos }: MoreStoriesProps) => {
           </CardContent>
         </Card>
       ))}
-    </div>
+    </Grid>
   )
 }
 
