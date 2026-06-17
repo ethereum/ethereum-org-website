@@ -1,168 +1,163 @@
 ---
-title: Je tovuti ya tatu (Web3) ni nini na kwanini ni muhimu?
-description: Utangulizi wa tovuti ya tatu mageuzi yajayo ya tovuti ulimwenguni na kwanini ni muhimu.
+title: Utangulizi wa Web3
+metaTitle: Web3 ni nini na kwa nini ni muhimu?
+description: Utangulizi wa Web3—mabadiliko yanayofuata ya Wavuti ya Ulimwenguni Pote (World Wide Web)—na kwa nini ni muhimu.
 lang: sw
 ---
 
-# Utangulizi wa Web3 {#introduction}
+Uwekaji kati umesaidia kuingiza mabilioni ya watu kwenye Wavuti ya Ulimwenguni Pote (World Wide Web) na kuunda miundombinu thabiti na imara inayoitegemea. Wakati huo huo, mashirika machache yaliyowekwa kati yana udhibiti mkubwa wa sehemu kubwa za Wavuti ya Ulimwenguni Pote, yakiamua kwa upande mmoja kile kinachopaswa na kisichopaswa kuruhusiwa.
 
-<div className="mt-4">
-<ListenToPlayer slug="/web3/" />
-</div>
-
-Uwekaji kati umesaidia mabilioni ya watukwenye wavuti ya ulimwenguni kote na kuunda miundombinu thabiti inayoishi. Wakati huo huo mashirika machache ya jumuiya kuu yana ngome katika maeneo makubwa ya wavuti ya ulimwenguni kote, yenye kuamua kipi kuruhusiwe na kipi kisiruhusiwe.
-
-Tovuti ya tatu ni suluhisho la shida hii. Badala ya mtandao uliohodhiwa na makampuni makubwa ya teknolojia, tovuti ya 3 inakumbatia ugatuaji na inajengwa kuendeshwa na kumilikiwa na watumiaji wake. Tovuti ya tatu inaweka mamlaka au nguvu katika mikono ya watu binafsi badala ya taasisi au mashirika binafsi.
-Kabla ya kuongelea tovuti ya tatu, tuangalie namna tulivyofika hapa.
+Web3 ndilo jibu la utata huu. Badala ya Wavuti kuhodhiwa na kampuni kubwa za teknolojia, Web3 inakumbatia ugatuzi na inajengwa, kuendeshwa, na kumilikiwa na watumiaji wake. Web3 inaweka nguvu mikononi mwa watu binafsi badala ya mashirika.
+Kabla hatujazungumzia Web3, hebu tuchunguze jinsi tulivyofika hapa.
 
 <Divider />
 
 ## Wavuti ya awali {#early-internet}
 
-Watu wengi hufikiria mtandao kama nguzo yenye kuendelea ya maisha ya kisasa iligunduliwa na ikawepo tangu wakati huo. Ingawa, mtandao/wavuti wengi wetu tunavyoufahamu sasa ni tofauti na ilivyofikiriwa awali. Ili kuelewa hili vizuri ni vyema ni kuvunja historia fupi ya mtandao/tovuti katika vipindi huru tovuti 1.0 na tovuti 2.0.
+Watu wengi wanafikiria Wavuti kama nguzo inayoendelea ya maisha ya kisasa—iligunduliwa na imekuwepo tangu wakati huo. Hata hivyo, Wavuti ambayo wengi wetu tunaifahamu leo ni tofauti kabisa na ilivyofikiriwa awali. Ili kuelewa hili vizuri zaidi, inasaidia kugawanya historia fupi ya Wavuti katika vipindi visivyo rasmi—Wavuti 1.0 na Wavuti 2.0.
 
-### Web 1.0: Kusoma Pekee (1990-2004) {#web1}
+### Wavuti 1.0: Kusoma-Tu (1990-2004) {#web1}
 
-Mwaka 1989 huko CERN, Geneva Tim Berner-lee alikuwa bize kutengeneza itifaki ambayo ingekuwa wavuti ya mtandao wa ulimwengu. Wazo lake? Kutengeneza itifaki zilizo wazi zilizoruhusiwa kushiriki taarifa kote ulimwenguni.
+Mnamo 1989, huko CERN, Geneva, Tim Berners-Lee alikuwa na shughuli nyingi za kutengeneza itifaki ambazo zingekuwa Wavuti ya Ulimwenguni Pote. Wazo lake? Kuunda itifaki wazi, zilizogatuliwa ambazo ziliruhusu ushiriki wa habari kutoka mahali popote Duniani.
 
-Uanzishwaji wa kwanza wa uundaji wa Berners-Lee ambao kwa sasa unajulikana kama 'tovuti 1.0', ulitokea takribani kati ya mwaka 1990 hadi 2004. Tovuti 1.0 ilikuwa tovuti zilizotulia ambazo zilimilikiwa na makampuni, na hakukuwa na muingiliano kati ya watumiaji watu binafsi mara chache walitoa maudhui - na kusababisha kujulikana kama wavuti ya kusoma tu.
+Kuanzishwa kwa mara ya kwanza kwa ubunifu wa Berners-Lee, ambao sasa unajulikana kama 'Wavuti 1.0', kulitokea takriban kati ya 1990 hadi 2004. Wavuti 1.0 ilikuwa hasa tovuti tuli zilizomilikiwa na kampuni, na kulikuwa na mwingiliano karibu na sifuri kati ya watumiaji - watu binafsi mara chache walizalisha maudhui - na kusababisha ijulikane kama wavuti ya kusoma-tu.
 
-![Muundo wa mteja-seva, unaowakilisha Web 1.0](./web1.png)
+![Client-server architecture, representing Web 1.0](./web1.png)
 
 ### Web 2.0: Kusoma-Kuandika (2004-sasa) {#web2}
 
-Kipindi cha tovuti 2.0 kilianza mnamo mwaka 2004 ikiwa ni pamoja na kuibuka kwa majukwaa ya mitandao ya kijamii. Badala ya Kusoma tu, wavuti hii ilibadilika na kuwa ya kusoma-kuandika. Badala ya makampuni kutoa maudhui kwa watumiaji, walianza pia kutoa majukwaa ya kushiriki maudhui yanayotokana na mtumiaji na kujihusisha na mwingiliano kati ya mtumiaji na mtumiaji. Kadiri watu wengi walivyoingia mtandaoni, makampuni machache maarufu yalianza kudhibiti idadi isiyo na uwiano pamoja na thamani inayozalishwa kwenye wavuti. Tovuti 2.0 pia ilizalisha mtindo wa mapato unaoendeshwa na utangazaji. Ingawa watumiaji wanaweza kuunda maudhui, hawakuyamiliki au kunufaika nayo kutokana na uchumaji wake wa mapato.
+Kipindi cha Web 2.0 kilianza mwaka wa 2004 kwa kuibuka kwa majukwaa ya mitandao ya kijamii. Badala ya kusoma-tu, wavuti ilibadilika na kuwa ya kusoma-kuandika. Badala ya kampuni kutoa maudhui kwa watumiaji, zilianza pia kutoa majukwaa ya kushiriki maudhui yanayozalishwa na watumiaji na kushiriki katika mwingiliano kati ya mtumiaji na mtumiaji. Kadiri watu wengi walivyoingia mtandaoni, kampuni chache kuu zilianza kudhibiti kiasi kisicho na uwiano cha trafiki na thamani inayozalishwa kwenye wavuti. Web 2.0 pia ilizaa mtindo wa mapato unaoendeshwa na matangazo. Ingawa watumiaji wangeweza kuunda maudhui, hawakumiliki au kufaidika na uchumaji wake wa mapato.
 
-![Muundo wa mteja-seva, unaowakilisha Web 2.0](./web2.png)
+![Client-server architecture, representing Web 2.0](./web2.png)
 
 <Divider />
 
-## Web 3.0: Kusoma-Kuandika-Kumiliki {#web3}
+## Wavuti 3.0: Kusoma-Kuandika-Kumiliki {#web3}
 
-Dhana ya 'Web 3.0' ilibuniwa na mwanzilishi mwenza wa [Ethereum](/what-is-ethereum/) Gavin Wood muda mfupi baada ya Ethereum kuzinduliwa mwaka 2014. Gavin aliweka kwa maneno suluhisho la tatizo ambalo watumiaji wengi wakwanza wa sarafu za kidijitali walihisi: Mtandao ulihitaji uaminifu mkubwa. Huo ni, Mtandao mkubwa ambao watu wanaujua na kutumia leo unategemea kuamini makampuni machache ya kibinafsi kufanya kazi kwa manufaa ya umma.
+Wazo la 'Wavuti 3.0' lilibuniwa na mwanzilishi mwenza wa [Ethereum](/) Gavin Wood muda mfupi baada ya Ethereum kuzinduliwa mnamo 2014. Gavin alielezea kwa maneno suluhisho la tatizo ambalo waasisi wengi wa mapema wa kripto walilihisi: Wavuti ilihitaji uaminifu mwingi sana. Yaani, sehemu kubwa ya Wavuti ambayo watu wanaifahamu na kuitumia leo inategemea kuamini kampuni chache za kibinafsi kutenda kwa maslahi bora ya umma.
 
-![Muundo wa nodi uliogatuliwa, unaowakilisha Web3](./web3.png)
+![Decentralized node architecture, representing Web3](./web3.png)
 
-### Je, Web3 ni nini? {#what-is-web3}
+### Web3 ni nini? {#what-is-web3}
 
-Tovuti ya tatu imekuwa muda wa kuvutia watu wote kwa maono ya mtandao mpya, bora zaidi. Kwa msingi wake, tovuti ya tatu hutumia mnyororo wa bloku, cryptocurrensets, na NFTs kurejesha nguvu kwa watumiaji katika mfumo wa umiliki. [Chapisho la mwaka 2020 kwenye Twitter](https://twitter.com/himgajria/status/1266415636789334016) lilisema vyema zaidi: Web1 ilikuwa ya kusoma-pekee, Web2 ni ya kusoma-kuandika, Web3 itakuwa ya kusoma-kuandika-kumiliki.
+Web3 imekuwa neno linalojumuisha yote kwa maono ya intaneti mpya na bora zaidi. Kimsingi, Web3 inatumia minyororo ya vitalu, sarafu-fiche, na NFT kurudisha nguvu kwa watumiaji katika mfumo wa umiliki. [Chapisho la 2020 kwenye Twitter](https://twitter.com/himgajria/status/1266415636789334016) lilisema vyema zaidi: Web1 ilikuwa ya kusoma-tu, Web2 ni ya kusoma-kuandika, Web3 itakuwa ya kusoma-kuandika-kumiliki.
 
-#### Mawazo ya msingi ya Web3 {#core-ideas}
+#### Mawazo makuu ya Web3 {#core-ideas}
 
-Ingawa ni changamoto kutoa ufafanuzi wa tovuti ya tatu ni nini, kanuni chache za msingi huongoza uundaji wake.
+Ingawa ni changamoto kutoa ufafanuzi thabiti wa Web3 ni nini, kanuni chache za msingi zinaongoza uundaji wake.
 
-- **Web3 imegatuliwa:** badala ya sehemu kubwa za mtandao kudhibitiwa na kumilikiwa na huluki za kati, umiliki unasambazwa miongoni mwa wajenzi na watumiaji wake.
-- **Web3 haina ruhusa:** kila mtu ana ufikiaji sawa wa kushiriki katika Web3, na hakuna anayetengwa.
-- **Web3 ina malipo ya asili:** inatumia sarafu ya kidigitali kwa matumizi na kutuma pesa mtandaoni badala ya kutegemea miundombinu iliyopitwa na wakati ya benki na wasindikaji wa malipo.
-- **Web3 haiitaji uaminifu:** inafanya kazi kwa kutumia vivutio na mifumo ya kiuchumi badala ya kutegemea wahusika wengine wanaoaminika.
+- **Web3 imegatuliwa:** badala ya sehemu kubwa za intaneti kudhibitiwa na kumilikiwa na mashirika yaliyowekwa kati, umiliki unasambazwa miongoni mwa wajenzi na watumiaji wake.
+- **Web3 ni bila ruhusa:** kila mtu ana ufikiaji sawa wa kushiriki katika Web3, na hakuna anayetengwa.
+- **Web3 ina malipo ya asili:** inatumia sarafu-fiche kwa matumizi na kutuma pesa mtandaoni badala ya kutegemea miundombinu iliyopitwa na wakati ya benki na wasindikaji wa malipo.
+- **Web3 ni bila hitaji la uaminifu:** inafanya kazi kwa kutumia vivutio na mifumo ya kiuchumi badala ya kutegemea wahusika wengine wanaoaminika.
 
-### Kwanini tovuti ya tatu ni muhimu? {#why-is-web3-important}
+### Kwa nini Web3 ni muhimu? {#why-is-web3-important}
 
-Ingawa vipengele vikuu vya tovuti ya tatu havijatengwa na havitoshi katika kategoria nadhifu, kwa urahisi tumejaribu kuvitenganisha ili kurahisisha kueleweka.
+Ingawa vipengele bora vya Web3 havijatengwa na haviingii katika kategoria nadhifu, kwa urahisi tumejaribu kuvitenganisha ili kurahisisha kueleweka.
 
 #### Umiliki {#ownership}
 
-Tovuti ya tatu inakupa umiliki wa mali zako za kidijitali kwa njia ambayo haijawahi kushuhudiwa. Kwa mfano, unacheza mchezo wa wa tovuti ya pili. Kama ukinunua bidhaa ya ndani ya mchezo, inahusishwa moja kwa moja na akaunti yako. Kama mtengenezaji wa gemu au mchezo akifuta akaunti yako, utapoteza vitu hivi. Au, kama ukiacha kucheza mchezo, utapoteza thamani uliyowekeza kwenye bidhaa zako za ndani ya mchezo.
+Web3 inakupa umiliki wa mali zako za kidijitali kwa njia ambayo haijawahi kushuhudiwa. Kwa mfano, tuseme unacheza mchezo wa Web2. Ukinunua bidhaa ya ndani ya mchezo, inafungamanishwa moja kwa moja na akaunti yako. Ikiwa waundaji wa mchezo watafuta akaunti yako, utapoteza bidhaa hizi. Au, ukiacha kucheza mchezo, unapoteza thamani uliyowekeza kwenye bidhaa zako za ndani ya mchezo.
 
-Web3 inaruhusu umiliki wa moja kwa moja kupitia [tokeni zisizoweza kubadilishwa (NFTs)](/glossary/#nft). Hakuna mtu yeyote, hata watayarishaji wa mchezo, aliye na uwezo wa kukunyang'anya umiliki. Na, kama ukiacha kucheza, unaweza kuuza au kubadilishana bidhaa zako za ndani ya mchezo kwenye soko huria na kurudisha thamani yake. Gundua [michezo ya onchain](/gaming/) ili kuona hili likifanyika.
+Web3 inaruhusu umiliki wa moja kwa moja kupitia [ishara zisizoweza kuvunjika (NFTs)](/glossary/#nft). Hakuna mtu, hata waundaji wa mchezo, aliye na uwezo wa kukunyang'anya umiliki wako. Na, ukiacha kucheza, unaweza kuuza au kufanya biashara ya bidhaa zako za ndani ya mchezo kwenye masoko ya wazi na kurejesha thamani yake. Chunguza [michezo ya mnyororoni](/gaming/) ili kuona hili likitenda kazi.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Pata maelezo zaidi kuhusu NFT</div>
+  <div>Jifunze zaidi kuhusu NFT</div>
   <ButtonLink href="/nft/">
-    Zaidi kuhusu NFTs
+    Zaidi kuhusu NFT
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-#### Ukinzani dhidi ya udhibiti {#censorship-resistance}
+#### Ukinzani wa udhibiti {#censorship-resistance}
 
-Nguvu kubwa inayobadilika kati ya majukwaa na waundaji maudhui haijasawazishwa kwa kiasi kikubwa.
+Mienendo ya nguvu kati ya majukwaa na waundaji wa maudhui haina usawa mkubwa.
 
-OnlyFans pekee ndio tovuti ya maudhui ya watu wazima inayozalishwa na watumiaji na waundaji maudhui zaidi ya milioni 1, wengi wao wakitumia jukwaa kama chanzo chao kikuu cha mapato. Mnamo Agosti 2021, OnlyFans ilitangaza mipango ya kupiga marufuku maudhui ya ngono waziwazi. Tangazo hilo lilizua hasira miongoni mwa watayarishaji kwenye jukwaa, ambao walihisi kuwa walikuwa wakiibiwa mapato kwenye jukwaa ambalo walisaidia kuunda. Mara baada ya mzozo huo, uamuzi ulibadilishwa haraka. Licha ya waundaji kushinda vita hii, inaonyesha tatizo la waundaji la wavuti ya 2.0: unapoteza sifa na wafuasi uliowapata kwenye jukwaa kama utaondoka.
+OnlyFans ni tovuti ya maudhui ya watu wazima yanayozalishwa na watumiaji yenye zaidi ya waundaji maudhui milioni 1, ambao wengi wao hutumia jukwaa hili kama chanzo chao kikuu cha mapato. Mnamo Agosti 2021, OnlyFans ilitangaza mipango ya kupiga marufuku maudhui ya ngono waziwazi. Tangazo hilo lilizua hasira miongoni mwa waundaji kwenye jukwaa, ambao walihisi walikuwa wanaibiwa mapato kwenye jukwaa walilosaidia kuunda. Baada ya upinzani mkali, uamuzi huo ulibatilishwa haraka. Licha ya waundaji kushinda vita hivi, inaangazia tatizo kwa waundaji wa Web 2.0: unapoteza sifa na wafuasi uliowakusanya ukiondoka kwenye jukwaa.
 
-Kwenye wavuti wa 3, taarifa zako zinaishi kwenye kiambajengo. Ukiamua kuondoka kwenye jukwaa, unaweza chukua sifa zako, ukazieka kwenye kiunganishi kingine kinachoendana na maadili yako.
+Kwenye Web3, data yako inaishi kwenye mnyororo wa vitalu. Unapoamua kuondoka kwenye jukwaa, unaweza kuchukua sifa yako, na kuiunganisha kwenye kiolesura kingine ambacho kinalingana wazi zaidi na maadili yako.
 
-Wavuti wa 2 inamuhitaji muunda maudhui kuamini jukwa kutokubadilisha sheria zao, lakini kuzuia uthibiti ni kipengele cha asili cha jukwa la wavuti wa 3.
+Web 2.0 inahitaji waundaji wa maudhui kuamini majukwaa kutobadilisha sheria, lakini ukinzani wa udhibiti ni kipengele cha asili cha jukwaa la Web3.
 
-#### Mashirika huru yaliyogatuliwa (DAOs) {#daos}
+#### Mashirika yanayojitegemea yaliyogatuliwa (DAOs) {#daos}
 
-Kama kumiliki taarifa zako kwenye wavuti wa 3, unaweza kumiiki jukwaa kwa ujumla, kwa kutumia tokeni zinazokuwa kama hisa kwenye kampuni. Mashirika gatuzi yanakuwezesha kuendesha umiliki wa jukwaa na kufanya maamuzi kuhusu baadae yake.
+Pamoja na kumiliki data yako katika Web3, unaweza kumiliki jukwaa kama kikundi, ukitumia ishara ambazo hufanya kazi kama hisa katika kampuni. DAO hukuruhusu kuratibu umiliki uliogatuliwa wa jukwaa na kufanya maamuzi kuhusu mustakabali wake.
 
-DAOs zinafafanuliwa kitaalamu kama [mikataba-erevu](/glossary/#smart-contract) iliyokubaliwa ambayo hufanya maamuzi yaliyogatuliwa kiotomatiki juu ya hazina ya rasilimali (tokeni). Watumiaji wenye tokeni wanapiga kura jinsi rasilimali itakavyo tumika, na msimbo automatiki unafanya mrejesho wa kura.
+DAO hufafanuliwa kitaalamu kama [mikataba mahiri](/glossary/#smart-contract) iliyokubaliwa ambayo hubinafsisha ufanyaji maamuzi uliogatuliwa juu ya kundi la rasilimali (ishara). Watumiaji walio na ishara hupiga kura kuhusu jinsi rasilimali zinavyotumika, na msimbo hutekeleza kiotomatiki matokeo ya kura.
 
-Hata hivyo, watu wengi hueleza jamii nyingi za wavuti wa 3 kama mashirika gatuzi. Jamii hizi zina viwango tofauti vya ugatuzi na automatiki kwa kutumia msimbo. Sasa ivi, tuna chunguza nini ni mashirika gatuzi na jinsi gani yatakavyo kuwepo siku zijazo.
+Hata hivyo, watu hufafanua jumuiya nyingi za Web3 kama DAO. Jumuiya hizi zote zina viwango tofauti vya ugatuzi na uwekaji otomatiki kwa msimbo. Kwa sasa, tunachunguza DAO ni nini na jinsi zinavyoweza kubadilika katika siku zijazo.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Pata maelezo zaidi kuhusu DAO</div>
+  <div>Jifunze zaidi kuhusu DAO</div>
   <ButtonLink href="/dao/">
-    Zaidi kuhusu DAOs
+    Zaidi kuhusu DAO
   </ButtonLink>
 </AlertContent>
 </Alert>
 
 ### Utambulisho {#identity}
 
-Kiasilia, ungeunda akaunti kwa kila jukwaa utakalotumia. Kwa mfano, unaweza ukawa na akaunti ya Twitter, akaunti ya YouTube, na akaunti ya Reddit. Unataka kubadilisha uonekanaji wako au wasifu picha? Utatakiwa kufanya kwa kila akaunti. Unaweza kuingia kwa kutumia jamii nyinginezo, lakini hii inaleta shida inayojuliakna ya uthibiti. Kwa kubonyeza mara moja, jukwaa hili linaweza kukufungia nje maisha yako ya mtandaoni. Hata vibaya zaidi, majukwaa mengi yanahitaji uwaamini wao na taarifa za utambulisho binafsi kutengeneza akaunti.
+Kijadi, ungeunda akaunti kwa kila jukwaa unalotumia. Kwa mfano, unaweza kuwa na akaunti ya Twitter, akaunti ya YouTube, na akaunti ya Reddit. Unataka kubadilisha jina lako la kuonyesha au picha ya wasifu? Inabidi ufanye hivyo kwenye kila akaunti. Unaweza kutumia kuingia kwa mitandao ya kijamii katika baadhi ya matukio, lakini hii inaleta tatizo linalofahamika—udhibiti. Kwa kubofya mara moja, majukwaa haya yanaweza kukufungia nje ya maisha yako yote ya mtandaoni. Mbaya zaidi, majukwaa mengi yanakuhitaji uyaamini na taarifa zinazoweza kukutambulisha binafsi ili kuunda akaunti.
 
-Web3 hutatua matatizo haya kwa kukuruhusu kudhibiti utambulisho wako wa kidijitali na anwani ya Ethereum na wasifu wa [Huduma ya Majina ya Ethereum (ENS)](/glossary/#ens). Kutumia anwani ya Ethereum unakuwezesha kuingia kwa mara moja kwenye majukwaa ambayo ni salama, yanazuia uthibiti kutoka kwa mtu mwingine, na kutokujulikana.
+Web3 inatatua matatizo haya kwa kukuruhusu kudhibiti utambulisho wako wa kidijitali kwa anwani ya Ethereum na wasifu wa [Huduma ya Jina la Ethereum (ENS)](/glossary/#ens). Kutumia anwani ya Ethereum hutoa kuingia mara moja kwenye majukwaa yote ambayo ni salama, yanayokinza udhibiti, na yasiyojulikana.
 
 ### Malipo ya asili {#native-payments}
 
-Miundombinu ya malipo ya wavuti wa 2 unategemea mabenki na wachakata miamala, ikitoa watu bila akaunti za benki au hao ambao imetokea wanaishi kwenye mipaka ya nchi isiyo sahihi.
-Web3 hutumia tokeni kama [ETH](/glossary/#ether) kutuma pesa moja kwa moja kwenye kivinjari na haihitaji mhusika mwingine anayeaminika.
+Miundombinu ya malipo ya Web2 inategemea benki na wasindikaji wa malipo, isipokuwa watu wasio na akaunti za benki au wale ambao wanaishi ndani ya mipaka ya nchi isiyofaa.
+Web3 inatumia ishara kama [ETH](/glossary/#ether) kutuma pesa moja kwa moja kwenye kivinjari na haihitaji mhusika mwingine anayeaminika.
 
-<ButtonLink href="/eth/">
+<ButtonLink href="/what-is-ether/">
   Zaidi kuhusu ETH
 </ButtonLink>
 
 ## Mapungufu ya Web3 {#web3-limitations}
 
-Licha ya manufaa mengi ya Web3 katika hali yake ya sasa, bado kuna vikwazo vingi ambavyo mfumo wa ikolojia lazima ushughulikie ili uweze kustawi.
+Licha ya faida nyingi za Web3 katika muundo wake wa sasa, bado kuna mapungufu mengi ambayo mfumo wa ikolojia lazima ushughulikie ili ustawi.
 
-### Upatikanaji {#accessibility}
+### Ufikiaji {#accessibility}
 
-Vipengele muhimu vya Web3, kama vile Kuingia kwa kutumia Ethereum, tayari vinapatikana kwa mtu yeyote kutumia kwa gharama sifuri. Lakini, gharama ya miamala bado ni kubwa kwa wengi. Web3 ina uwezekano mdogo wa kutumiwa katika mataifa maskini, yanayoendelea kutokana na ada za juu za ununuzi. Kwenye Ethereum, changamoto hizi zinatatuliwa kupitia [ramani](/roadmap/) na [suluhu za kuongeza za safu ya 2](/glossary/#layer-2). Teknolojia iko tayari, lakini tunahitaji viwango vya juu zaidi vya kupitishwa kwenye safu ya 2 ili kufanya Web3 ipatikane na kila mtu.
+Vipengele muhimu vya Web3, kama vile Kuingia na Ethereum, tayari vinapatikana kwa mtu yeyote kutumia bila gharama yoyote. Lakini, gharama ya kiasi ya miamala bado inazuia wengi. Web3 ina uwezekano mdogo wa kutumiwa katika mataifa yasiyo na utajiri, yanayoendelea kutokana na ada kubwa za miamala. Kwenye Ethereum, changamoto hizi zinatatuliwa kupitia [ramani ya njia](/roadmap/) na [suluhu za kuongeza viwango za tabaka la 2 (l2)](/glossary/#layer-2). Teknolojia iko tayari, lakini tunahitaji viwango vya juu vya upitishaji kwenye tabaka la 2 (l2) ili kufanya Web3 ipatikane kwa kila mtu.
 
 ### Uzoefu wa mtumiaji {#user-experience}
 
-Kizuizi cha kiufundi cha kuingia kwa kutumia Web3 kwa sasa kiko juu sana. Watumiaji lazima waelewe maswala ya usalama, waelewe nyaraka ngumu za kiufundi,, na waelekeze miingiliano ya violesura. [Watoa huduma za mkoba](/wallets/find-wallet/), hasa, wanafanya kazi kutatua hili, lakini maendeleo zaidi yanahitajika kabla ya Web3 kupitishwa kwa wingi.
+Kizuizi cha kiufundi cha kuingia ili kutumia Web3 kwa sasa kiko juu sana. Watumiaji lazima waelewe masuala ya usalama, waelewe nyaraka changamano za kiufundi, na wapitie violesura vya watumiaji visivyoeleweka. [Watoa huduma za mkoba](/wallets/find-wallet/), hasa, wanafanya kazi kutatua hili, lakini maendeleo zaidi yanahitajika kabla ya Web3 kupitishwa kwa wingi.
 
 ### Elimu {#education}
 
-Web3 inaleta dhana mpya zinazohitaji kujifunza miundo tofauti ya kiakili kuliko ile inayotumika katika Web2.0. Msukumo kama huo wa elimu ulitokea wakati Web1.0 ilipokuwa ikipata umaarufu mwishoni mwa miaka ya 1990; wafuasi wa wavuti wa ulimwengu mzima walitumia mbinu nyingi za kielimu kuelimisha umma kutoka kwa sitiari rahisi (barabara kuu ya habari, vivinjari, kuvinjari wavuti) hadi [matangazo ya televisheni](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 sio ngumu, lakini ni tofauti. Mipango ya kielimu kuwafahamisha watumiaji wa Web2 kuhusu dhana hizi za Web3 ni muhimu kwa mafanikio yake.
+Web3 inaleta dhana mpya zinazohitaji kujifunza miundo tofauti ya kiakili kuliko ile inayotumika katika Web 2.0. Msukumo sawa wa elimu ulitokea wakati Wavuti 1.0 ilipokuwa ikipata umaarufu mwishoni mwa miaka ya 1990; watetezi wa wavuti ya ulimwenguni pote walitumia mbinu nyingi za kuelimisha umma kuanzia mafumbo rahisi (barabara kuu ya habari, vivinjari, kuvinjari wavuti) hadi [matangazo ya televisheni](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 si ngumu, lakini ni tofauti. Mipango ya elimu inayowajulisha watumiaji wa Web2 kuhusu dhana hizi za Web3 ni muhimu kwa mafanikio yake.
 
-Ethereum.org inachangia elimu ya Web3 kupitia [Programu yetu ya Tafsiri](/contributing/translation-program/), ikilenga kutafsiri maudhui muhimu ya Ethereum katika lugha nyingi iwezekanavyo.
+Ethereum.org inachangia katika elimu ya Web3 kupitia [Mpango wetu wa Kutafsiri](/contributing/translation-program/), ikilenga kutafsiri maudhui muhimu ya Ethereum kwa lugha nyingi iwezekanavyo.
 
-### Miundombinu ya kati {#centralized-infrastructure}
+### Miundombinu iliyowekwa kati {#centralized-infrastructure}
 
-Mfumo ikolojia wa Web3 ni mchanga na unabadilika haraka. Kama matokeo, kwa sasa inategemea sana miundombinu ya mfumo mkusanyo (GitHub, Twitter, Discord, nk). Makampuni mengi ya Web3 yanaharakisha kujaza mapengo haya, lakini kujenga miundombinu ya ubora wa juu na ya kuaminika inachukua muda.
+Mfumo wa ikolojia wa Web3 ni mchanga na unabadilika haraka. Kutokana na hili, kwa sasa unategemea hasa miundombinu iliyowekwa kati (GitHub, Twitter, Discord, n.k.). Kampuni nyingi za Web3 zinakimbilia kuziba mapengo haya, lakini kujenga miundombinu ya ubora wa juu na inayotegemewa huchukua muda.
 
 ## Mustakabali uliogatuliwa {#decentralized-future}
 
-Web3 ni mfumo mchanga na unaoendelea. Gavin Wood aliunda neno hilo mnamo 2014, lakini mengi ya maoni haya yamekuwa ukweli hivi karibuni. Katika mwaka uliopita pekee, kumekuwa na ongezeko kubwa la maslahi ya sarafu-fiche, kuboreshwa kwa ufumbuzi wa safu ya 2, majaribio makubwa ya aina mpya za utawala na mapinduzi katika utambulisho wa kidijitali.
+Web3 ni mfumo wa ikolojia mchanga na unaobadilika. Gavin Wood alibuni neno hili mnamo 2014, lakini mengi ya mawazo haya yamekuwa ukweli hivi karibuni. Katika mwaka uliopita pekee, kumekuwa na ongezeko kubwa la nia katika sarafu-fiche, maboresho ya suluhu za kuongeza viwango za tabaka la 2 (l2), majaribio makubwa ya aina mpya za utawala, na mapinduzi katika utambulisho wa kidijitali.
 
-Tuko mwanzoni tu wa kuunda Wavuti bora na Web3, lakini tunapoendelea kuboresha miundombinu ambayo itaiunga mkono, mustakabali wa Wavuti unaonekana mzuri.
+Tuko mwanzoni tu mwa kuunda Wavuti bora na Web3, lakini tunapoendelea kuboresha miundombinu itakayoisaidia, mustakabali wa Wavuti unaonekana mzuri.
 
 ## Ninawezaje kushiriki {#get-involved}
 
 - [Pata mkoba](/wallets/)
 - [Tafuta jumuiya](/community/)
-- [Gundua programu za Web3](/apps/)
+- [Chunguza programu za Web3](/apps/)
 - [Jiunge na DAO](/dao/)
 - [Jenga kwenye Web3](/developers/)
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-Web3 haijafafanuliwa kwa ukali. Washiriki mbalimbali wa jumuiya wana mitazamo tofauti juu yake. ''Hapa kuna baadhi yao.'':
+Web3 haijafafanuliwa kwa uthabiti. Washiriki mbalimbali wa jumuiya wana mitazamo tofauti kuihusu. Hapa kuna baadhi yao:
 
-- [What is Web3? Mtandao Uliogatuliwa wa Baadaye Umefafanuliwa](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
+- [Web3 ni nini? Intaneti Iliyogatuliwa ya Baadaye Imefafanuliwa](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Kuielewa Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
-- [Kwa nini Web3 ni Muhimu](https://a16zcrypto.com/posts/article/why-web3-matters/) — _Chris Dixon_
-- [Kwa nini Ugatuzi ni Muhimu](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
+- [Kwa Nini Web3 ni Muhimu](https://a16zcrypto.com/posts/article/why-web3-matters/) — _Chris Dixon_
+- [Kwa Nini Ugatuzi ni Muhimu](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Mandhari ya Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [Mjadala wa Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 

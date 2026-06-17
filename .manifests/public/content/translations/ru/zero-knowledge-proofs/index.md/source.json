@@ -1,0 +1,880 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/zero-knowledge-proofs/index.md",
+  "generatedAt": "2026-06-08T11:32:26.352Z",
+  "rootHash": "6c246dd9ea73",
+  "tree": {
+    "contentHash": "9c3cbdae5790",
+    "anchorHash": "6d5433400300",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "b27a6a2ef1a6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ae5bb240b17e"
+      },
+      "frontmatter:description": {
+        "contentHash": "1a3be5504777",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "fd41bb4c7331",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "c834fc866169",
+        "anchorHash": "91dec02939d2"
+      },
+      "prose:2": {
+        "contentHash": "ac86a031d658",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "component:7": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "7605bfdb3580",
+        "children": {
+          "attr:slug": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c6df51cc4f1c"
+          }
+        }
+      },
+      "why-zero-knowledge-proofs-are-important": {
+        "contentHash": "f0e68ea10345",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "126dd80203e9",
+        "children": {
+          "_label": {
+            "contentHash": "126dd80203e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9359b6ae5af0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "use-cases-for-zero-knowledge-proofs": {
+        "contentHash": "2b07ea77f0ae",
+        "anchorHash": "16dba280f33a",
+        "labelHash": "9f204ca88f42",
+        "children": {
+          "_label": {
+            "contentHash": "9f204ca88f42",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "anonymous-payments": {
+            "contentHash": "2bb891878401",
+            "anchorHash": "12cccd6f99e7",
+            "labelHash": "ec4bbba69351",
+            "children": {
+              "_label": {
+                "contentHash": "ec4bbba69351",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "8418e6431fda",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "ef7797e13d3a",
+                "anchorHash": "312433dbc1b2"
+              },
+              "prose:6": {
+                "contentHash": "17e3e48afa1d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "45978ecb2996",
+                "anchorHash": "7738661d8492"
+              },
+              "prose:7": {
+                "contentHash": "5b23df90a0d1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "36c28a691616",
+                "anchorHash": "42210aebf116"
+              },
+              "prose:8": {
+                "contentHash": "7152ba9e3eef",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "a13bebeb57e1",
+                "anchorHash": "8a5edab28263"
+              },
+              "prose:9": {
+                "contentHash": "d470d390dca7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "0836c947e597",
+                "anchorHash": "0d1b773b2e06"
+              },
+              "prose:10": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          },
+          "identity-protection": {
+            "contentHash": "08ebcb0651c7",
+            "anchorHash": "495af8c43f1a",
+            "labelHash": "5eb9c296993e",
+            "children": {
+              "_label": {
+                "contentHash": "5eb9c296993e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "9d836ea7e457",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "640c3b4d4840",
+                "anchorHash": "4f3b0b1bc8bc"
+              },
+              "prose:2": {
+                "contentHash": "0984b2eeffa5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:4": {
+                "contentHash": "c32c63cfbcc5",
+                "anchorHash": "adbe9524a655",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "06271baf4953"
+                  },
+                  "html-tag:0": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:3": {
+                    "contentHash": "5de0fd9ae091",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "html-tag:1": {
+                    "contentHash": "58812aa8e2bf",
+                    "anchorHash": "f87260a9e514"
+                  },
+                  "prose:4": {
+                    "contentHash": "8d0a5ef2fe84",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "html-tag:2": {
+                    "contentHash": "1544a74efd34",
+                    "anchorHash": "12aa8639cc99"
+                  },
+                  "prose:5": {
+                    "contentHash": "edb981e4faa3",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "html-tag:0",
+                  "prose:3",
+                  "html-tag:1",
+                  "prose:4",
+                  "html-tag:2",
+                  "prose:5"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2",
+              "component:4"
+            ]
+          },
+          "proof-of-humanity": {
+            "contentHash": "72c54cc4fbe5",
+            "anchorHash": "e682f70ae6e7",
+            "labelHash": "425da9b6c8b1",
+            "children": {
+              "_label": {
+                "contentHash": "425da9b6c8b1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "67d516db8fd3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "0cd55ccced85",
+                "anchorHash": "540873efea28"
+              },
+              "prose:4": {
+                "contentHash": "b04e33902bf4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "1641d71937e4",
+                "anchorHash": "526a5280eafd"
+              },
+              "prose:5": {
+                "contentHash": "6115ed4b7d80",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "8ab2742fb26f",
+                "anchorHash": "1f1a53cbf0ed"
+              },
+              "prose:6": {
+                "contentHash": "7909e90e4903",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "authentication": {
+            "contentHash": "b4b58d7c6cc1",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "66880d2d8216",
+            "children": {
+              "_label": {
+                "contentHash": "66880d2d8216",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "ead5ac85f3ad",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "verifiable-computation": {
+            "contentHash": "9b800b26137d",
+            "anchorHash": "99d8b25c8f31",
+            "labelHash": "356f7c80a225",
+            "children": {
+              "_label": {
+                "contentHash": "356f7c80a225",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:6": {
+                "contentHash": "c117a77d1e32",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "28b02382f819",
+                "anchorHash": "c256c4609327"
+              },
+              "prose:7": {
+                "contentHash": "bd9352cae1ff",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "803bb64dcee6",
+                "anchorHash": "ff4e7ce5aa25"
+              },
+              "prose:8": {
+                "contentHash": "35d520bf56fd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "b3e9bcaad0e3",
+                "anchorHash": "a4a2d84f7d3b"
+              },
+              "prose:9": {
+                "contentHash": "bc8203ef2043",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "f72c38cd19cf",
+                "anchorHash": "7eb4e888e306"
+              },
+              "prose:10": {
+                "contentHash": "6201111b83a0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "64d3e9f252a1",
+                "anchorHash": "73493728a640"
+              },
+              "prose:11": {
+                "contentHash": "b9c4c38ac4e1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "0b66605f93f8",
+                "anchorHash": "864ffba16f54"
+              },
+              "prose:12": {
+                "contentHash": "17e0743dc39e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:6",
+              "link:0",
+              "prose:7",
+              "link:1",
+              "prose:8",
+              "link:2",
+              "prose:9",
+              "link:3",
+              "prose:10",
+              "link:4",
+              "prose:11",
+              "link:5",
+              "prose:12"
+            ]
+          },
+          "secure-blockchain-voting": {
+            "contentHash": "4d0062d788c6",
+            "anchorHash": "f67adc7986d4",
+            "labelHash": "ae486534ca94",
+            "children": {
+              "_label": {
+                "contentHash": "ae486534ca94",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "c499cf4f18ee",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e19c3884882c"
+              },
+              "prose:4": {
+                "contentHash": "26fa6df9a485",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "643d8113949d"
+              },
+              "prose:5": {
+                "contentHash": "4d86cda65951",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "cca340a17d66",
+                "anchorHash": "e786bb71c6d8"
+              },
+              "prose:6": {
+                "contentHash": "a6fd058b31c0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "how-maci-works-with-zk-proofs": {
+                "contentHash": "031bd5fee3ba",
+                "anchorHash": "14d024d198f5",
+                "labelHash": "2e04b43be3a1",
+                "children": {
+                  "_label": {
+                    "contentHash": "2e04b43be3a1",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:8": {
+                    "contentHash": "3fbbdce16758",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:0": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e19c3884882c"
+                  },
+                  "prose:9": {
+                    "contentHash": "124a65c1d74c",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:1": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e19c3884882c"
+                  },
+                  "prose:10": {
+                    "contentHash": "518612723ec7",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:2": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "643d8113949d"
+                  },
+                  "prose:11": {
+                    "contentHash": "fac4425cf032",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:3": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e19c3884882c"
+                  },
+                  "prose:12": {
+                    "contentHash": "1886a88a5e43",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:4": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e19c3884882c"
+                  },
+                  "prose:13": {
+                    "contentHash": "624b14a5db7a",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:5": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "643d8113949d"
+                  },
+                  "prose:14": {
+                    "contentHash": "786f04bc3c6b",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:6": {
+                    "contentHash": "ae685ab6651b",
+                    "anchorHash": "520145760043"
+                  },
+                  "prose:15": {
+                    "contentHash": "b5001eebae04",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:7": {
+                    "contentHash": "d38d3aa83e9c",
+                    "anchorHash": "0ab19efda16e"
+                  },
+                  "prose:16": {
+                    "contentHash": "cdb4ee2aea69",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:8",
+                  "inline-code:0",
+                  "prose:9",
+                  "inline-code:1",
+                  "prose:10",
+                  "inline-code:2",
+                  "prose:11",
+                  "inline-code:3",
+                  "prose:12",
+                  "inline-code:4",
+                  "prose:13",
+                  "inline-code:5",
+                  "prose:14",
+                  "link:6",
+                  "prose:15",
+                  "link:7",
+                  "prose:16"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "inline-code:0",
+              "prose:4",
+              "inline-code:1",
+              "prose:5",
+              "link:2",
+              "prose:6",
+              "how-maci-works-with-zk-proofs"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "anonymous-payments",
+          "identity-protection",
+          "proof-of-humanity",
+          "authentication",
+          "verifiable-computation",
+          "secure-blockchain-voting"
+        ]
+      },
+      "how-do-zero-knowledge-proofs-work": {
+        "contentHash": "78723b5298ac",
+        "anchorHash": "7e780439dbba",
+        "labelHash": "8ea220041d30",
+        "children": {
+          "_label": {
+            "contentHash": "8ea220041d30",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "ce7a8e55dce4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c9722a7ad2a0",
+            "anchorHash": "d219fc4c7c0b"
+          },
+          "prose:2": {
+            "contentHash": "e4c3ae017e69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "non-interactive-zero-knowledge-proofs": {
+            "contentHash": "74244911c0af",
+            "anchorHash": "70b4f373f5ff",
+            "labelHash": "5fe79c39631e",
+            "children": {
+              "_label": {
+                "contentHash": "5fe79c39631e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "a0ac90ae62e2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "450f9eb0b227",
+                "anchorHash": "96cd7a1f838d"
+              },
+              "prose:2": {
+                "contentHash": "6fb0aeacd702",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "types-of-zero-knowledge-proofs": {
+            "contentHash": "d5629e2b51a3",
+            "anchorHash": "fbcabcede25f",
+            "labelHash": "a77c69e0e1c0",
+            "children": {
+              "_label": {
+                "contentHash": "a77c69e0e1c0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "zk-snarks": {
+                "contentHash": "11757864ca73",
+                "anchorHash": "25ff91f34a17",
+                "labelHash": "a9589f27f711",
+                "children": {
+                  "_label": {
+                    "contentHash": "a9589f27f711",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:2": {
+                    "contentHash": "ce31c372ae48",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "b7e2ef180349",
+                    "anchorHash": "65cbf40d601f"
+                  },
+                  "prose:3": {
+                    "contentHash": "b2ace8dbe381",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "1a168c63c505",
+                    "anchorHash": "d9bf42e2db1b"
+                  },
+                  "prose:4": {
+                    "contentHash": "4e1cfba4ef03",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:2",
+                  "link:0",
+                  "prose:3",
+                  "link:1",
+                  "prose:4"
+                ]
+              },
+              "zk-starks": {
+                "contentHash": "299165663e74",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "45bb9671e845",
+                "children": {
+                  "_label": {
+                    "contentHash": "45bb9671e845",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "567efe1e8650",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "zk-snarks",
+              "zk-starks"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "non-interactive-zero-knowledge-proofs",
+          "types-of-zero-knowledge-proofs"
+        ]
+      },
+      "drawbacks-of-using-zero-knowledge-proofs": {
+        "contentHash": "f04909dc7b26",
+        "anchorHash": "a38519008361",
+        "labelHash": "70a695b0825a",
+        "children": {
+          "_label": {
+            "contentHash": "70a695b0825a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "hardware-costs": {
+            "contentHash": "f32dd8e3ed00",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "3ba234905e1b",
+            "children": {
+              "_label": {
+                "contentHash": "3ba234905e1b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "9c57e7903400",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "proof-verification-costs": {
+            "contentHash": "8e51c2932df8",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "2d836aa67555",
+            "children": {
+              "_label": {
+                "contentHash": "2d836aa67555",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "61cd9aa7c50e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "trust-assumptions": {
+            "contentHash": "ffbdbf727e61",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "8da6df7fc94c",
+            "children": {
+              "_label": {
+                "contentHash": "8da6df7fc94c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "3aabeab62b4c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "quantum-computing-threats": {
+            "contentHash": "78a1e2041204",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "9786505c09a5",
+            "children": {
+              "_label": {
+                "contentHash": "9786505c09a5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e5a61f44acf4",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "hardware-costs",
+          "proof-verification-costs",
+          "trust-assumptions",
+          "quantum-computing-threats"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "a1446963f370",
+        "anchorHash": "131ac3c12ffa",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "05abc38665f2",
+            "anchorHash": "42904d138f43"
+          },
+          "prose:10": {
+            "contentHash": "031f300f0c0e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "7ec0deee706c",
+            "anchorHash": "8ccae44ca594"
+          },
+          "prose:11": {
+            "contentHash": "ee529620fe65",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "077b6148f050",
+            "anchorHash": "fa95ef5d21da"
+          },
+          "prose:12": {
+            "contentHash": "46e9d38eba2a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "dd053af5b9ef",
+            "anchorHash": "4902a6df8d9c"
+          },
+          "prose:13": {
+            "contentHash": "2e36d11c28e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "e7d357425b01",
+            "anchorHash": "6a9dd391866a"
+          },
+          "prose:14": {
+            "contentHash": "2e36d11c28e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "872359724225",
+            "anchorHash": "3c1b206b862d"
+          },
+          "prose:15": {
+            "contentHash": "76b9c026896c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "cd9047ca27dd",
+            "anchorHash": "da24158ca5f6"
+          },
+          "prose:16": {
+            "contentHash": "bdb715274536",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "7729339381a5",
+            "anchorHash": "28ba10a4b434"
+          },
+          "prose:17": {
+            "contentHash": "3e59208ebe19",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "90db05c3e9e1",
+            "anchorHash": "fa277a4e97a0"
+          },
+          "prose:18": {
+            "contentHash": "60adc101dd9a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:9",
+          "link:0",
+          "prose:10",
+          "link:1",
+          "prose:11",
+          "link:2",
+          "prose:12",
+          "link:3",
+          "prose:13",
+          "link:4",
+          "prose:14",
+          "link:5",
+          "prose:15",
+          "link:6",
+          "prose:16",
+          "link:7",
+          "prose:17",
+          "link:8",
+          "prose:18"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "component:7",
+      "why-zero-knowledge-proofs-are-important",
+      "use-cases-for-zero-knowledge-proofs",
+      "how-do-zero-knowledge-proofs-work",
+      "drawbacks-of-using-zero-knowledge-proofs",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

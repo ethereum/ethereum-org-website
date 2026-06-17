@@ -35,9 +35,7 @@ const DownloadAWallet = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl">
-            {t("page-start-download-wallet-title")}
-          </h2>
+          <h2 className="text-3xl">{t("page-start-download-wallet-title")}</h2>
           <p>{t("page-start-download-wallet-description")}</p>
         </div>
         <div className="hidden flex-col gap-8 lg:flex">

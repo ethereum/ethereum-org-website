@@ -1,54 +1,51 @@
 ---
-title: "新增資源"
-description: "向 ethereum.org 新增資源時使用的政策"
+title: 新增資源
+description: 我們在 ethereum.org 新增資源時所使用的政策
 lang: zh-tw
 ---
 
-# 新增資源{#adding-resources}
+我們希望確保列出盡可能最好的資源，同時讓使用者感到安全和放心。
 
-我們想要確保上架最佳的資源，讓使用者能夠安全放心。
+任何人都可以自由建議將新資源新增至 ethereum.org 的資源儀表板，目前位於 [ethereum.org/resources](/resources/)。
 
-任何人都可以向ethereum.org的資源儀表板建議新的資源，該儀表板位於：ethereum.org/resources/
+雖然我們歡迎新增資源，但目前的資源是根據我們試圖為使用者創造的體驗所挑選的。這些是基於我們的一些設計原則：
 
-雖然我們歡迎新增新的資源，但目前的資源是我們為了創造使用者體驗而選擇的。 此使用體驗基於下方一些設計原則：
+- _具啟發性_：ethereum.org 上的任何內容都應該為使用者提供新事物
+- _好故事_：列出的內容應該能帶來「原來如此」的頓悟時刻
+- _可信度_：所有內容都應該是合法的企業/專案，以將使用者的風險降至最低
 
-- _具啟發性：ethereum.org 上的任何事物都應該讓使用者耳目一新
-- _好故事：列出的內容應該讓人感到驚嘆
-- _可信：所有業務/專案都應該是合法的，以最大程度降低使用者面臨的風險
+總體而言，**ethereum.org 旨在為新使用者提供無縫的入門引導體驗**。因此，我們根據以下條件新增資源：
 
-整體而言，ethereum.org 想為新的使用者提供「無縫加入體驗」。 為此，我們會根據下列條件來新增資源：
-
-- 方便使用
+- 易用性
 - 準確性
-- 維護
+- 維護狀態
 
-## 決策框架
+## 決策框架 {#decision-framework}
 
-### 標準
+### 準則 {#criteria}
 
-- 上架資訊真實準確 - 任何提議上架資源都應包含真實準確的資訊。 包含不實資訊的資源將會被移除
-- 持續性專案 - 為了確保品質以及對使用者的支援，資源應該由活躍團隊維護。 過時的資源可能會被移除。
+- **誠實且準確的列表資訊** - 任何建議的列表都必須附帶誠實且準確的資訊。偽造資訊的產品將被移除。
+- **活躍的專案** – 資源應由活躍的團隊維護，以確保品質和對使用者的支援。過時的資源可能會被移除。
 
-### 產品訂購{#product-ordering}
+### 產品排序 {#product-ordering}
 
-根據產品的影響力，我們保留訂購順序的權利。 除非另有載明，否則新的產品通常會新增在列表底部。
+我們保留根據產品影響力對其進行排序的權利。除非另有說明，否則新產品通常會新增至列表底部。
 
-## 維護{#maintenance}
+## 維護 {#maintenance}
 
-隨著以太坊生態系的發展，我們會定期檢查內容：
+隨著以太坊生態系統的發展，我們將定期檢查我們的內容以：
 
-- 確保列出的所有資源仍符合我們的標準
-- 驗證建議的產品不比目前列出的產品更符合我們的標準
+- 確保列出的所有資源仍然符合我們的準則
+- 驗證是否有其他被建議的產品比目前列出的產品更符合我們的準則
 
-你可以查驗上述兩項，並告知我們查驗結果，以此提供幫助。 提交議題
-https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml 或是寄信至mailto:website@ethereum.org
+您可以透過檢查並告知我們來提供協助。[建立問題 (Issue)](https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml) 或發送電子郵件至 [website@ethereum.org](mailto:website@ethereum.org)。
 
 ---
 
-## 新增您的資源
+## 新增您的資源 {#add-your-resource}
 
-如果你想將資源新增至 ethereum.org 並且它符合標準，請在 GitHub 上建立一個議題。
+如果您想將資源新增至 ethereum.org 且該資源符合準則，請在 GitHub 上建立問題 (Issue)。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=resource+📚&template=suggest_resource.yaml">
-提交一個議題
+  建立問題 (Issue)
 </ButtonLink>

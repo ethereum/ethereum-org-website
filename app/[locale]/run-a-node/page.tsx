@@ -30,6 +30,7 @@ import MainArticle from "@/components/MainArticle"
 import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Center, Flex, Stack, VStack } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
@@ -174,10 +175,6 @@ const BuildContainer = (props: ChildOnlyProp) => (
     className="flex-col rounded-none border-none bg-inherit px-0 py-8 md:px-8"
     {...props}
   />
-)
-
-const StakingCalloutContainer = (props: ChildOnlyProp) => (
-  <SplitContent className="bg-gradient-main p-8" {...props} />
 )
 
 const H2 = (props: ChildOnlyProp) => (
@@ -714,26 +711,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <Divider />
 
-        <StakingCalloutContainer>
-          <Column>
-            <Image
-              className="-translate-y-12 -scale-x-100 transform lg:-translate-x-8 lg:translate-y-0 lg:-scale-x-[115%] lg:scale-[115%]"
-              src={leslie}
-              alt=""
-              sizes="(max-width: 480px) calc(100vw - 64px), (max-width: 1280px) calc((100vw - 96px) / 2), 624px"
-              style={{ width: "624px", height: "auto" }}
-            />
-          </Column>
-          <Column>
-            <H2>{t("page-run-a-node-staking-title")}</H2>
-            <Text>{t("page-run-a-node-staking-description")}</Text>
-            <ButtonContainer>
-              <ButtonLink href="/staking/">
-                {t("page-run-a-node-staking-link")}
-              </ButtonLink>
-            </ButtonContainer>
-          </Column>
-        </StakingCalloutContainer>
+        <Content>
+          <Callout
+            image={leslie}
+            title={t("page-run-a-node-staking-title")}
+            description={t("page-run-a-node-staking-description")}
+          >
+            <ButtonLink href="/staking/">
+              {t("page-run-a-node-staking-link")}
+            </ButtonLink>
+          </Callout>
+        </Content>
 
         <Content>
           <H3 id="plan-on-staking" className="flex items-center">

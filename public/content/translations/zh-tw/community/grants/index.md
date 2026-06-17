@@ -23,6 +23,7 @@ lang: zh-tw
 - [ESP 資助瀏覽器](https://esp.ethereum.foundation/funded-projects) - _可搜尋的目錄，包含超過 1,000 個由生態系支援計畫支持的專案_
 - [學術資助](https://esp.ethereum.foundation/academic-grants) - _支持以太坊相關學術研究的資助_
 
+
 ## 資助列表聚合器與平台 {#grant-list-aggregators}
 
 這些資源彙整並組織了以太坊生態系中的各種資助機會，讓您更容易發現符合專案需求的資金機會。我們根據使用者角色對它們進行了分類，以幫助您根據特定的資金需求，開始尋找最相關的資源。
@@ -61,6 +62,7 @@ lang: zh-tw
 - [Giveth](https://giveth.io/) - _加密貨幣捐款平台，實現對公益專案的直接捐款且零附加費用_
 - [Artizen](https://artizen.fund/) - _協助創作者在藝術、科學、科技與文化的邊境為新專案獲取配對資金_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _使用二次方融資來支持造福公共財專案的新創加速器計畫_
+
 
 ## 在以太坊工作 {#work-in-ethereum}
 

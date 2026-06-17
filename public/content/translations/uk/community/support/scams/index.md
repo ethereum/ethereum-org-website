@@ -1,159 +1,159 @@
 ---
-title: Scam help & reporting
-description: What to do if you have been scammed, how to secure your remaining assets, and where to report fraud.
+title: Мене ошукали або я втратив кошти
+metaTitle: Допомога та звітування про шахрайство
+description: Що робити, якщо вас ошукали, як захистити активи, що залишилися, і куди повідомляти про шахрайство.
 lang: uk
 ---
 
-# I was scammed or lost funds {#scam-help}
-
-Cryptocurrency scams target people of all experience levels, including professionals in finance and technology. You are not alone, and being here is the right first step.
+Шахрайство з криптовалютою націлене на людей будь-якого рівня досвіду, включно з професіоналами у сфері фінансів і технологій. Ви не самотні, і те, що ви тут — це правильний перший крок.
 
 <Alert variant="error">
 <AlertEmoji text=":rotating_light:"/>
 <AlertContent>
 <AlertDescription>
 
-**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
+**Ніхто не може скасувати транзакції в блокчейні.** Якщо хтось зв'язується з вами, стверджуючи, що може повернути ваші кошти за певну плату, це майже напевно ще одне шахрайство. Див. [шахрайство з відновленням](#scam-types) нижче.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Secure your remaining assets {#secure-assets}
+## Захистіть активи, що залишилися {#secure-assets}
 
-If you interacted with a scammer or suspect your wallet is compromised, take these steps immediately:
+Якщо ви взаємодіяли з шахраєм або підозрюєте, що ваш гаманець скомпрометовано, негайно виконайте такі дії:
 
-1. **Move remaining funds** to a new, secure wallet that the scammer does not have access to
-2. **Revoke token approvals.** Scammers often trick you into approving unlimited token spending. Revoking these permissions prevents further draining of your wallet
-3. **Change passwords** on any exchange accounts that may be linked
-4. **Enable two-factor authentication (2FA)** on all crypto-related accounts
+1. **Перекажіть кошти, що залишилися,** на новий безпечний гаманець, до якого шахрай не має доступу
+2. **Скасуйте дозволи на використання токенів.** Шахраї часто обманом змушують вас схвалити необмежене витрачання токенів. Скасування цих дозволів запобігає подальшому спустошенню вашого гаманця
+3. **Змініть паролі** на всіх акаунтах бірж, які можуть бути пов'язані
+4. **Увімкніть двофакторну автентифікацію (2FA)** на всіх криптоакаунтах
 
-### How to revoke token approvals {#revoke-approvals}
+### Як скасувати дозволи на використання токенів {#revoke-approvals}
 
-When you interact with a dapp or smart contract, you may have granted it permission to spend your tokens. If a scammer tricked you into approving a malicious contract, they can continue draining your tokens even after the initial scam.
+Коли ви взаємодієте з децентралізованим застосунком (dapp) або смарт-контрактом, ви могли надати йому дозвіл на витрачання ваших токенів. Якщо шахрай обманом змусив вас схвалити шкідливий контракт, він може продовжувати виводити ваші токени навіть після початкового шахрайства.
 
-Use these tools to check and revoke approvals:
+Використовуйте ці інструменти для перевірки та скасування дозволів:
 
-- [Revoke.cash](https://revoke.cash/): connect your wallet to see all active approvals and revoke them
-- [Revokescout](https://revoke.blockscout.com/): check and revoke approvals via Blockscout
-- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): check and revoke approvals via Etherscan
+- [Revoke.cash](https://revoke.cash/): підключіть свій гаманець, щоб побачити всі активні дозволи та скасувати їх
+- [Revokescout](https://revoke.blockscout.com/): перевіряйте та скасовуйте дозволи через Blockscout
+- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): перевіряйте та скасовуйте дозволи через Etherscan
 
 <DocLink href="/guides/how-to-revoke-token-access/">
-  Step-by-step guide: How to revoke token access
+  Покроковий посібник: Як скасувати доступ до токенів
 </DocLink>
 
-## Report scam addresses and websites {#report}
+## Повідомляйте про шахрайські адреси та вебсайти {#report}
 
-Reporting helps warn other users and may assist law enforcement investigations. Document everything: transaction hashes, wallet addresses, screenshots, and any communication with the scammer.
+Звітування допомагає попередити інших користувачів і може сприяти розслідуванням правоохоронних органів. Документуйте все: хеші транзакцій, адреси гаманців, знімки екрана та будь-яке спілкування з шахраєм.
 
-### Report a scam address {#report-address}
+### Повідомити про шахрайську адресу {#report-address}
 
-- [Chainabuse](https://www.chainabuse.com/): community-driven scam and fraud reporting database. Submit reports and search for known scam addresses
-- [Etherscan report](https://info.etherscan.com/report-address/): flag an address on the most-used Ethereum block explorer
-- [CryptoScamDB](https://cryptoscamdb.org/): open-source database tracking cryptocurrency scams
+- [Chainabuse](https://www.chainabuse.com/): керована спільнотою база даних для повідомлень про шахрайство. Надсилайте звіти та шукайте відомі шахрайські адреси
+- [Звіт Etherscan](https://info.etherscan.com/report-address/): позначте адресу в найпопулярнішому оглядачі блоків Етеріуму
+- [CryptoScamDB](https://cryptoscamdb.org/): база даних з відкритим вихідним кодом, що відстежує шахрайства з криптовалютою
 
-### Report a scam website or social media account {#report-website}
+### Повідомити про шахрайський вебсайт або акаунт у соціальних мережах {#report-website}
 
-- [PhishTank](https://phishtank.org/): submit and verify phishing URLs
-- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): report phishing sites to Google so they get blocked in Chrome and other browsers
-- [Netcraft](https://report.netcraft.com/report/mistake): report malicious and fraudulent websites
-- Report directly on the social media platform where the scam occurred (Twitter/X, Discord, Telegram all have reporting features)
+- [PhishTank](https://phishtank.org/): надсилайте та перевіряйте фішингові URL-адреси
+- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): повідомляйте про фішингові сайти в Google, щоб їх заблокували в Chrome та інших браузерах
+- [Netcraft](https://report.netcraft.com/report/mistake): повідомляйте про шкідливі та шахрайські вебсайти
+- Повідомляйте безпосередньо на платформі соціальної мережі, де сталося шахрайство (Twitter/X, Discord, Telegram мають функції звітування)
 
-### Report to law enforcement {#report-law-enforcement}
+### Повідомити правоохоронним органам {#report-law-enforcement}
 
-- **United States:** [FBI Internet Crime Complaint Center (IC3)](https://www.ic3.gov/)
-- **United Kingdom:** [Action Fraud](https://www.actionfraud.police.uk/)
-- **European Union:** [Europol](https://www.europol.europa.eu/report-a-crime)
-- **Other countries:** file a report with your local police. Cryptocurrency fraud is a crime in most jurisdictions
+- **США:** [Центр скарг на інтернет-злочини ФБР (IC3)](https://www.ic3.gov/)
+- **Велика Британія:** [Action Fraud](https://www.actionfraud.police.uk/)
+- **Європейський Союз:** [Європол](https://www.europol.europa.eu/report-a-crime)
+- **Інші країни:** подайте заяву до місцевої поліції. Шахрайство з криптовалютою є злочином у більшості юрисдикцій
 
-## Analyze what happened {#analyze}
+## Проаналізуйте, що сталося {#analyze}
 
-Understanding where your funds went can help with reports and may support recovery efforts if the funds land on a centralized exchange.
+Розуміння того, куди пішли ваші кошти, може допомогти зі звітами та сприяти зусиллям з їх повернення, якщо кошти потраплять на централізовану біржу.
 
-- [Blockscout](https://eth.blockscout.com/): open-source block explorer to look up any transaction hash or wallet address to see where funds were sent
-- [Etherscan](https://etherscan.io/): look up any transaction hash or wallet address to see where funds were sent
-- [Chainabuse lookup](https://www.chainabuse.com/): check if an address has already been reported by other victims
-- [MetaSleuth](https://metasleuth.io/) by BlockSec: visual transaction tracing tool that maps fund flows
+- [Blockscout](https://eth.blockscout.com/): оглядач блоків з відкритим вихідним кодом для пошуку будь-якого хешу транзакції або адреси гаманця, щоб побачити, куди були надіслані кошти
+- [Etherscan](https://etherscan.io/): шукайте будь-який хеш транзакції або адресу гаманця, щоб побачити, куди були надіслані кошти
+- [Пошук Chainabuse](https://www.chainabuse.com/): перевірте, чи повідомляли про адресу інші жертви
+- [MetaSleuth](https://metasleuth.io/) від BlockSec: інструмент візуального відстеження транзакцій, який відображає потоки коштів
 
-**If funds were sent to a centralized exchange** (like Coinbase, Binance, Kraken), contact their support team immediately with the transaction details. Exchanges can sometimes freeze accounts flagged for fraud.
+**Якщо кошти були надіслані на централізовану біржу** (наприклад, Coinbase, Binance, Kraken), негайно зв'яжіться з їхньою службою підтримки та надайте деталі транзакції. Біржі іноді можуть заморожувати акаунти, позначені як шахрайські.
 
-## The hard truth {#hard-truth}
+## Гірка правда {#hard-truth}
 
-Because Ethereum is decentralized, no central authority can reverse transactions or recover stolen funds. Once a transaction is confirmed on the blockchain, it is final.
+Оскільки Етеріум децентралізований, жоден центральний орган не може скасувати транзакції або повернути вкрадені кошти. Щойно транзакція підтверджена в блокчейні, вона є остаточною.
 
-Reporting is still valuable. Reports help law enforcement track organized fraud rings, and flagging addresses on Chainabuse and Etherscan warns future potential victims.
+Звітування все одно є цінним. Звіти допомагають правоохоронним органам відстежувати організовані шахрайські мережі, а позначення адрес на Chainabuse та Etherscan попереджає майбутніх потенційних жертв.
 
-## Types of scams to watch for {#scam-types}
+## Типи шахрайства, на які слід звернути увагу {#scam-types}
 
 <ExpandableCard
-title="Шахрайські роздачі та ейрдропи"
-contentPreview="Ніхто не роздає ETH безкоштовно. Це завжди шахрайство."
+title="Giveaway and airdrop scams"
+contentPreview="No one is giving away free ETH. These offers are always scams."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
-
 >
 
-Scammers create fake giveaways promising to multiply your ETH or give you free tokens. They often impersonate well-known figures like Vitalik Buterin. If you send ETH to a "giveaway" address, you will not receive anything back.
+Шахраї створюють фейкові розіграші, обіцяючи примножити ваші ETH або дати вам безкоштовні токени. Вони часто видають себе за відомих осіб, таких як Віталік Бутерін. Якщо ви надішлете ETH на адресу «розіграшу», ви нічого не отримаєте назад.
 
-**Remember:** Vitalik and other prominent figures will never ask you to send them ETH.
+**Пам'ятайте:** Віталік та інші видатні особи ніколи не проситимуть вас надіслати їм ETH.
 
-[More on common scams](/security/#common-scams)
+[Більше про поширені шахрайства](/security/#common-scams)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Самозванці та фейкова підтримка"
-contentPreview="Ніхто з Ethereum чи ethereum.org ніколи не зв'яжеться з вами першим."
+title="Impersonation and fake support"
+contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
-
 >
 
-Scammers impersonate Ethereum team members, moderators, or support agents on Discord, Telegram, and social media. They may send you direct messages offering help or claiming there is a problem with your account.
+Шахраї видають себе за членів команди Етеріуму, модераторів або агентів служби підтримки в Discord, Telegram та соціальних мережах. Вони можуть надсилати вам особисті повідомлення з пропозицією допомоги або стверджувати, що з вашим акаунтом виникла проблема.
 
-**Remember:**
+**Пам'ятайте:**
 
-- There is no "Ethereum support team"
-- Real moderators will never DM you first
-- Never share your seed phrase or private keys with anyone, for any reason
-- Never click links sent in unsolicited messages
+- Не існує «команди підтримки Етеріуму»
+- Справжні модератори ніколи не напишуть вам в особисті повідомлення першими
+- Ніколи ні з ким і за жодних обставин не діліться своєю сід-фразою або приватними ключами
+- Ніколи не переходьте за посиланнями, надісланими в небажаних повідомленнях
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Шахрайство з відновленням коштів"
-contentPreview="Якщо вас ошукали, остерігайтеся фейкових «експертів з відновлення криптовалюти»."
+title="Recovery scams"
+contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
-
 >
 
-Recovery scams specifically target people who have already lost funds. Scammers monitor social media for people talking about being scammed, then reach out posing as "blockchain investigators" or "crypto recovery experts."
+Шахрайство з відновленням спеціально націлене на людей, які вже втратили кошти. Шахраї моніторять соціальні мережі в пошуках людей, які розповідають про те, що їх ошукали, а потім звертаються до них, видаючи себе за «блокчейн-слідчих» або «експертів з відновлення крипто».
 
-They promise to trace and recover your stolen crypto for an upfront fee. After you pay, they disappear.
+Вони обіцяють відстежити та повернути ваше вкрадене крипто за попередню плату. Після того, як ви заплатите, вони зникають.
 
-**No legitimate service can reverse blockchain transactions.** Anyone promising this is lying. This is one of the most common follow-up scams.
+**Жоден легітимний сервіс не може скасувати транзакції в блокчейні.** Будь-хто, хто обіцяє це, бреше. Це одне з найпоширеніших повторних шахрайств.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Фішингові сайти та фейкові застосунки"
-contentPreview="Шахрайські сайти маскуються під справжні гаманці та біржі, щоб вкрасти ваші дані для входу."
+title="Phishing websites and fake apps"
+contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
-
 >
 
-Phishing sites look identical to real wallet apps, exchanges, or DeFi platforms. They trick you into entering your seed phrase or connecting your wallet, then drain your funds.
+Фішингові сайти виглядають ідентично справжнім застосункам гаманців, біржам або платформам децентралізованих фінансів (DeFi). Вони обманом змушують вас ввести свою сід-фразу або підключити гаманець, а потім виводять ваші кошти.
 
-**Protect yourself:**
+**Захистіть себе:**
 
-- Always verify the URL before connecting your wallet
-- Bookmark the official sites you use regularly
-- Never enter your seed phrase on any website. Legitimate apps never ask for it
-- Use [PhishTank](https://phishtank.org/) to check suspicious URLs
+- Завжди перевіряйте URL-адресу перед підключенням гаманця
+- Додавайте в закладки офіційні сайти, якими ви регулярно користуєтеся
+- Ніколи не вводьте свою сід-фразу на жодному вебсайті. Легітимні застосунки ніколи її не просять
+- Використовуйте [PhishTank](https://phishtank.org/) для перевірки підозрілих URL-адрес
 
 <DocLink href="/guides/how-to-id-scam-tokens/">
-  How to identify scam tokens
+  Як розпізнати шахрайські токени
 </DocLink>
+
 </ExpandableCard>
 
 <DocLink href="/security/">
-  Full guide to Ethereum security and scam prevention
+  Повний посібник з безпеки Етеріуму та запобігання шахрайству
 </DocLink>

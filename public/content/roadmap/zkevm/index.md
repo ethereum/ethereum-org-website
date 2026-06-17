@@ -4,8 +4,6 @@ description: Learn how zero-knowledge proofs can verify Ethereum block execution
 lang: en
 ---
 
-# zkEVM for L1 block verification {#zkevm-l1}
-
 zkEVM is a technology that uses [zero-knowledge proofs](/zero-knowledge-proofs/) to verify Ethereum block execution. Instead of requiring every [validator](/glossary/#validator) to re-execute all transactions in a block, a single specialized actor (called a "prover") executes the block and generates a cryptographic proof that the execution was correct. Any node can then verify this proof—a process that is orders of magnitude cheaper than re-executing all the transactions.
 
 <Alert variant="info">

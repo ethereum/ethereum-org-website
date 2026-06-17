@@ -18,6 +18,7 @@ Ethereum.org tarafsız, eğitici bir kaynaktır. Video galerisi şunlar için de
 
 Site, öncelikli olarak belirli bir ürünü, Token'ı veya ticari hizmeti tanıtan videoları listelemez.
 
+
 ## Dahil edilme kriterleri {#criteria-for-inclusion}
 
 ### Olmazsa olmazlar {#must-haves}
@@ -33,6 +34,7 @@ Site, öncelikli olarak belirli bir ürünü, Token'ı veya ticari hizmeti tanı
 - **Transkripti olması** – Transkripti olan videolar erişilebilirliği ve SEO'yu iyileştirir. Eğer bir transkriptiniz yoksa, ethereum.org ekibi bir tane oluşturmanıza yardımcı olabilir.
 - **Güvenilir bir kaynaktan olması** – Köklü eğitimcilerden, araştırmacılardan ve kaynaklardan gelen içeriklere öncelik verilir.
 - **Zamanında ve her zaman geçerli** – Zaman içinde geçerliliğini koruyan içerikler, zamana duyarlı materyallere tercih edilir.
+
 
 ## Nasıl video eklenir {#how-to-add-a-video}
 
@@ -141,6 +143,7 @@ Ayrıca yeni etiketler de kullanabilirsiniz; bunlar gelecekteki kategori gruplan
 
 Değişikliklerinizle birlikte `dev` dalına (branch) bir çekme isteği (pull request) açın. Ekip gönderiminizi inceleyecek ve geri bildirim sağlayacaktır.
 
+
 ## Bakım {#maintenance}
 
 Listelenen videolar, aşağıdakilerden emin olmak için düzenli olarak incelenir:
@@ -150,6 +153,7 @@ Listelenen videolar, aşağıdakilerden emin olmak için düzenli olarak incelen
 - Çalışan barındırma/YouTube bağlantılarına sahip olduğundan
 
 Listelenen bir videoyla ilgili bir sorun fark ederseniz, [bir sorun (issue) oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) veya [website@ethereum.org](mailto:website@ethereum.org) adresine bir e-posta gönderin.
+
 
 ## Kullanım koşulları {#terms-of-use}
 

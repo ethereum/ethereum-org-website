@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/roadmap/pbs/index.md",
+  "generatedAt": "2026-06-08T10:26:34.462Z",
+  "rootHash": "a3432d6ece40",
+  "tree": {
+    "contentHash": "8b7bf485dda1",
+    "anchorHash": "6e95382398a4",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "f04af9b1aa1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "4199ed765db5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "b57d2effa5bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:2": {
+        "contentHash": "5987a379dafd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "pbs-and-censorship-resistance": {
+        "contentHash": "517eb731d509",
+        "anchorHash": "16d2cd1b41d9",
+        "labelHash": "e16b56c60970",
+        "children": {
+          "_label": {
+            "contentHash": "e16b56c60970",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "6b80f3bf71a5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "b745a778ea9b",
+            "anchorHash": "a73d98bd7d05"
+          },
+          "prose:2": {
+            "contentHash": "aa3b66c95d39",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "7c77e6ae0025",
+            "anchorHash": "43dd3b031b37",
+            "children": {
+              "attr:title": {
+                "contentHash": "c11c19890113",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "37d03505f1ea"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3c82afa22c9a"
+              },
+              "prose:0": {
+                "contentHash": "64a995bb1dc8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "component:4"
+        ]
+      },
+      "pbs-and-mev": {
+        "contentHash": "96ef73b93043",
+        "anchorHash": "6be2a6aa2d4e",
+        "labelHash": "f00b59dbc545",
+        "children": {
+          "_label": {
+            "contentHash": "f00b59dbc545",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b6e56ac9a131",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "45c193c56e62",
+            "anchorHash": "125be10a188f",
+            "children": {
+              "attr:title": {
+                "contentHash": "20e3afaa3dab",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "37d03505f1ea"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3a72efdc70dd"
+              },
+              "prose:0": {
+                "contentHash": "d26d986497cb",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "pbs-and-danksharding": {
+        "contentHash": "54ce9816a542",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ee545c241a0f",
+        "children": {
+          "_label": {
+            "contentHash": "ee545c241a0f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9373a745e8cd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "current-progress": {
+        "contentHash": "4de640072240",
+        "anchorHash": "01f119203375",
+        "labelHash": "46814fcae9de",
+        "children": {
+          "_label": {
+            "contentHash": "46814fcae9de",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "7f0c59c22cc9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "91fe29c75219",
+            "anchorHash": "148cb2b9524f"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "91aeffafff1b",
+        "anchorHash": "0a90888ede9a",
+        "labelHash": "bd2e42f237b3",
+        "children": {
+          "_label": {
+            "contentHash": "bd2e42f237b3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "10a6100971f8",
+            "anchorHash": "148cb2b9524f"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "c723192b02a7",
+            "anchorHash": "5e45446ca68f"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "e16b56c60970",
+            "anchorHash": "92cac19b9303"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "fa8138bca0b0",
+            "anchorHash": "e1711b71b43d"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "pbs-and-censorship-resistance",
+      "pbs-and-mev",
+      "pbs-and-danksharding",
+      "current-progress",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

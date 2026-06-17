@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "locale": "sw",
+  "translatedAt": "2026-06-11T18:07:26.846Z",
+  "englishManifestHash": "7d74933d617c",
+  "placeholderOrder": [
+    "LINK-dafcc6",
+    "LINK-ef9617",
+    "LINK-5b036f",
+    "CODE-5cf7d7",
+    "CODE-dbd3a4",
+    "CODE-c0bc1e",
+    "CODE-b5ec03"
+  ],
+  "placeholderMap": {
+    "CODE-5cf7d7": {
+      "type": "inline-code",
+      "values": {
+        "content": "lang"
+      }
+    },
+    "CODE-dbd3a4": {
+      "type": "inline-code",
+      "values": {
+        "content": "en"
+      }
+    },
+    "CODE-c0bc1e": {
+      "type": "inline-code",
+      "values": {
+        "content": "es"
+      }
+    },
+    "CODE-b5ec03": {
+      "type": "inline-code",
+      "values": {
+        "content": "## Further reading"
+      }
+    },
+    "LINK-dafcc6": {
+      "type": "link",
+      "values": {
+        "url": "/latest/"
+      }
+    },
+    "LINK-ef9617": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/#plagiarism"
+      }
+    },
+    "LINK-5b036f": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-11T18:07:26.846Z",
+      "status": "success"
+    }
+  }
+}

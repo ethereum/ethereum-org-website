@@ -1,48 +1,46 @@
 ---
-title: Dodawanie warstwy 2
-description: "Polityka, którą stosujemy przy dodawaniu warstwy 2 do ethereum.org"
+title: Dodawanie warstw 2
+description: Zasady, którymi kierujemy się przy dodawaniu warstwy 2 do ethereum.org
 lang: pl
 ---
 
-# Dodawanie warstw 2 {#adding-layer-2}
+Chcemy mieć pewność, że wymieniamy najlepsze możliwe zasoby, aby użytkownicy mogli bezpiecznie i pewnie poruszać się w przestrzeni warstwy 2.
 
-Chcemy mieć pewność, że wymieniamy najlepsze możliwe zasoby, aby użytkownicy mogli poruszać się w przestrzeni warstwy 2 w bezpieczny i pewny sposób.
-
-Każdy może zaproponować dodanie warstwy 2 na ethereum.org. Jeśli pominęliśmy jakąś warstwę 2, **[zaproponuj ją](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
+Każdy może zasugerować dodanie warstwy 2 na ethereum.org. Jeśli pominęliśmy jakąś warstwę 2, **[zasugeruj ją](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
 Obecnie wymieniamy L2 na następujących stronach:
 
-- [Rollupy optymistyczne](/developers/docs/scaling/optimistic-rollups/)
-- [Rollupy o zerowej wiedzy](/developers/docs/scaling/zk-rollups/)
+- [Optymistyczne rollupy](/developers/docs/scaling/optimistic-rollups/)
+- [Rollupy wiedzy zerowej](/developers/docs/scaling/zk-rollups/)
 - [Warstwa 2](/layer-2/)
 
-Warstwa 2 to stosunkowo nowy i ekscytujący paradygmat dla Ethereum. Staraliśmy się stworzyć sprawiedliwe ramy do rozpatrywania na ethereum.org, ale kryteria umieszczania na liście będą się zmieniać i ewoluować z czasem.
+Warstwa 2 to stosunkowo nowy i ekscytujący paradygmat dla Ethereum. Staraliśmy się stworzyć uczciwe ramy oceny na ethereum.org, ale kryteria umieszczania na liście będą się zmieniać i ewoluować z czasem.
 
 ## Ramy decyzyjne {#decision-framework}
 
-### Kryteria włączenia: wymagania konieczne {#criteria-for-inclusion-the-must-haves}
+### Kryteria włączenia: wymagania obowiązkowe {#criteria-for-inclusion-the-must-haves}
 
-**Notowanie na L2BEAT**
+**Obecność na L2BEAT**
 
-- Aby projekt został wzięty pod uwagę, musi być notowany na [L2BEAT](https://l2beat.com). L2BEAT zapewnia solidną ocenę ryzyka projektów warstwy 2, na której opieramy się przy ocenie projektów L2. **Jeśli projekt nie jest prezentowany na L2BEAT, nie umieścimy go jako L2 na ethereum.org.**
+- Aby projekt mógł zostać wzięty pod uwagę, musi znajdować się na liście [L2BEAT](https://l2beat.com). L2BEAT zapewnia solidną ocenę ryzyka projektów warstwy 2, na której opieramy się przy ocenie projektów L2. **Jeśli projekt nie jest uwzględniony na L2BEAT, nie umieścimy go jako L2 na ethereum.org.**
 - [Dowiedz się, jak dodać swój projekt L2 do L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
-**Otwarte źródło**
+**Otwarte oprogramowanie (open source)**
 
 - Twój kod musi być dostępny i powinieneś akceptować PR-y od szerszej społeczności.
 
 **Kategoria warstwy 2**
 
-Obecnie za rozwiązania warstwy 2 uważamy:
+Obecnie za rozwiązania warstwy 2 uznajemy:
 
-- Optymistyczny pakiet zbiorczy
-- pakiet zbiorczy o wiedzy zerowej
+- Optymistyczny rollup
+- Rollup wiedzy zerowej
 
-_Nie uważamy innych rozwiązań skalujących, które nie wykorzystują Ethereum do zapewnienia dostępności danych lub bezpieczeństwa, za warstwę 2._
+_Nie uznajemy za warstwę 2 innych rozwiązań skalujących, które nie wykorzystują Ethereum do dostępności danych lub bezpieczeństwa._
 
 **Ethereum dla dostępności danych**
 
-- Dostępność danych jest ważnym czynnikiem odróżniającym inne rozwiązania skalujące od warstwy 2. Aby projekt został wzięty pod uwagę przy umieszczaniu na liście, **musi** korzystać z sieci głównej Ethereum w celu zapewnienia dostępności danych.
+- Dostępność danych jest ważnym czynnikiem odróżniającym inne rozwiązania skalujące od warstwy 2. Projekt **musi** wykorzystywać sieć główną Ethereum do dostępności danych, aby mógł zostać wzięty pod uwagę.
 
 **Mosty**
 
@@ -50,47 +48,47 @@ _Nie uważamy innych rozwiązań skalujących, które nie wykorzystują Ethereum
 
 **Data uruchomienia projektu**
 
-- Warstwa 2, która jest "uruchomiona" w sieci głównej od ponad 6 miesięcy
+- Warstwa 2, która działa w Sieci głównej od ponad 6 miesięcy
 
-- Nowsze projekty, które nie zostały przetestowane w praktyce przez użytkowników, mają mniejsze szanse na umieszczenie na liście.
+- Nowsze projekty, które nie zostały przetestowane w boju przez użytkowników, mają mniejsze szanse na znalezienie się na liście.
 
 **Zewnętrzny audyt bezpieczeństwa**
 
-- Bezpieczeństwo Twojego produktu musi być rzetelnie przetestowane, czy to poprzez audyt, wewnętrzny zespół ds. bezpieczeństwa, czy też inną metodą. Zmniejsza to ryzyko dla naszych użytkowników i pokazuje nam, że poważnie podchodzisz do kwestii bezpieczeństwa.
+- Niezależnie od tego, czy poprzez audyt, wewnętrzny zespół ds. bezpieczeństwa, czy inną metodę, bezpieczeństwo Twojego produktu musi być rzetelnie przetestowane. Zmniejsza to ryzyko dla naszych użytkowników i pokazuje nam, że traktujesz bezpieczeństwo poważnie.
 
 **Utrzymująca się baza użytkowników**
 
-- Będziemy brać pod uwagę takie wskaźniki, jak historia TVL, statystyki transakcji oraz to, czy jest on używany przez znane firmy lub projekty
+- Weźmiemy pod uwagę wskaźniki takie jak historia całkowitej wartości zablokowanej (TVL), statystyki transakcji oraz to, czy jest używany przez znane firmy lub projekty
 
 **Aktywny zespół programistów**
 
-- Nie umieścimy na liście warstwy 2, nad którą nie pracuje aktywny zespół.
+- Nie umieścimy na liście warstwy 2, która nie ma aktywnego zespołu pracującego nad projektem.
 
 **Eksplorator bloków**
 
-- Projekty umieszczone na liście wymagają działającego eksploratora bloków, aby umożliwić użytkownikom łatwe poruszanie się po łańcuchu.
+- Wymienione projekty wymagają działającego eksploratora bloków, aby umożliwić użytkownikom łatwe poruszanie się po łańcuchu.
 
-### Inne kryteria: mile widziane dodatki {#nice-to-haves}
+### Inne kryteria: mile widziane {#nice-to-haves}
 
 **Wsparcie giełd dla projektu**
 
 - Czy użytkownicy mogą wpłacać i/lub wypłacać środki bezpośrednio z giełdy?
 
-**Linki do dapek w ekosystemie warstwy 2**
+**Linki do zdecentralizowanych aplikacji (dapp) w ekosystemie warstwy 2**
 
-- Chcemy być w stanie zapewnić informacje o tym, czego użytkownicy mogą się spodziewać na tej warstwie 2. (np. https://portal.arbitrum.io/, https://www.optimism.io/apps)
+- Chcemy móc dostarczać informacje o tym, czego użytkownicy mogą oczekiwać w tej warstwie 2. (np. https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Listy kontraktów tokenów**
 
-- Ponieważ aktywa będą miały nowy adres na warstwie 2, jeśli dostępny jest zasób z listą tokenów, udostępnij go.
+- Ponieważ aktywa będą miały nowy adres w warstwie 2, jeśli dostępne są zasoby z listą tokenów, prosimy o ich udostępnienie.
 
 **Natywne wsparcie portfeli**
 
-- Czy któreś portfele natywnie obsługują L2?
+- Czy jakieś portfele natywnie obsługują L2?
 
 ## Dodaj swoją warstwę 2 {#add-exchange}
 
-Jeśli chcesz dodać warstwę 2 do ethereum.org, utwórz zgłoszenie na GitHub.
+Jeśli chcesz dodać warstwę 2 do ethereum.org, utwórz zgłoszenie na GitHubie.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Utwórz zgłoszenie

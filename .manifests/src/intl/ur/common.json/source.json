@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-06-02T09:59:17.910Z",
-  "rootHash": "f6744960f9ba",
+  "generatedAt": "2026-06-11T18:13:51.556Z",
+  "rootHash": "37e3e90aabf2",
   "tree": {
-    "contentHash": "d0599bca3752",
-    "anchorHash": "9073bb8b8520",
+    "contentHash": "68ced947acb6",
+    "anchorHash": "2b0750c7dab9",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -43,8 +43,16 @@
         "contentHash": "6d923239d710",
         "anchorHash": "e3b0c44298fc"
       },
+      "adding-articles": {
+        "contentHash": "329a25cac231",
+        "anchorHash": "e3b0c44298fc"
+      },
       "adding-products": {
         "contentHash": "2b0088c852a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-reports": {
+        "contentHash": "8ece37aa3045",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-staking-products": {
@@ -172,6 +180,42 @@
       },
       "copy": {
         "contentHash": "e21f935f11d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy-page": {
+        "contentHash": "62d9b9487f59",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy-page-aria-label": {
+        "contentHash": "c1188f922b2d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy-page-options": {
+        "contentHash": "66c1ae393307",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy-page-markdown-title": {
+        "contentHash": "17d36a505f97",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy-page-markdown-description": {
+        "contentHash": "28cded2269c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy-page-chatgpt-title": {
+        "contentHash": "c27a47a5c24f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy-page-chatgpt-description": {
+        "contentHash": "babab9a22ef4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy-page-claude-title": {
+        "contentHash": "9512e37d4a15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy-page-claude-description": {
+        "contentHash": "babab9a22ef4",
         "anchorHash": "e3b0c44298fc"
       },
       "danksharding": {
@@ -2213,7 +2257,9 @@
       "adding-exchanges",
       "adding-glossary-terms",
       "adding-layer-2s",
+      "adding-articles",
       "adding-products",
+      "adding-reports",
       "adding-staking-products",
       "adding-wallets",
       "ai-agents",
@@ -2241,6 +2287,15 @@
       "cookie-policy",
       "copied",
       "copy",
+      "copy-page",
+      "copy-page-aria-label",
+      "copy-page-options",
+      "copy-page-markdown-title",
+      "copy-page-markdown-description",
+      "copy-page-chatgpt-title",
+      "copy-page-chatgpt-description",
+      "copy-page-claude-title",
+      "copy-page-claude-description",
       "danksharding",
       "dao-page",
       "dark-mode",
@@ -2739,5 +2794,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "9c8ec781d111c9802b6d9677f581d21a46bedcb4"
+  "sourceCommitSha": "2e0bedf904a21d6a5283f6df5a7894ec4f4b54c3"
 }

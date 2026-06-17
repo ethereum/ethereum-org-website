@@ -244,7 +244,6 @@ Some state channels solve this problem by using a "full-duplex" design that sepa
 Multiple projects provide implementations of state channels that you can integrate into your dapps:
 
 - [Connext](https://connext.network/)
-- [Kchannels](https://www.kchannels.io/)
 - [Perun](https://perun.network/)
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)

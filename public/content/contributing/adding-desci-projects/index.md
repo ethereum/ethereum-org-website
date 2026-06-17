@@ -4,8 +4,6 @@ description: The policy we use when adding a link to projects on the DeSci page 
 lang: en
 ---
 
-# Adding projects {#adding-projects}
-
 We want to make sure we show a variety of projects and give a good snapshot of the DeSci landscape.
 
 Anyone is free to suggest a project to list on the DeSci page on ethereum.org. Equally, anyone who notices a project that is no longer relevant or no longer meets our eligibility criteria is free to suggest its removal.

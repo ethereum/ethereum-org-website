@@ -9,6 +9,7 @@ import { _testOnly } from "@/scripts/intl-pipeline/intl-sanitizer"
 
 const {
   fixDuplicatedHeadings,
+  fixDuplicateHeadingBlocks,
   fixBrokenMarkdownLinks,
   fixEscapedBoldAndItalic,
   fixAsciiGuillemets,
@@ -3013,6 +3014,58 @@ author: Ori Pomerantz
       const { content, fixCount } = fixMisalignedCodeFences(input)
       expect(content).toBe("    ~~~sh\n    cmd\n    ~~~")
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixDuplicateHeadingBlocks", () => {
+    test("removes an anchor-less ghost heading block before its anchored twin", () => {
+      const input =
+        "Intro paragraph.\n\n## Skalierung\n\nGhost paragraph.\n\n## Skalierung neu {#scale}\n\nReal paragraph."
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(
+        "Intro paragraph.\n\n## Skalierung neu {#scale}\n\nReal paragraph."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles a ghost heading directly followed by the anchored twin", () => {
+      const input = "## FAQ\n## Häufig gestellte Fragen {#faq}\n\nBody."
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe("## Häufig gestellte Fragen {#faq}\n\nBody.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves clean anchored headings unchanged", () => {
+      const input =
+        "## One {#one}\n\nA paragraph.\n\n## Two {#two}\n\nAnother paragraph."
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a lone anchor-less heading untouched (no anchored same-level twin)", () => {
+      // Next heading is a different level -> not a ghost twin; needs an anchor
+      // ADDED by syncHeaderIdsWithEnglish, not removal here.
+      const input = "## Lonely\n\npara\n\n### Sub {#sub}\n\nmore"
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("ignores heading-like lines inside code fences", () => {
+      const input =
+        "## Real {#real}\n\npara\n\n```md\n## not a heading\nmore\n```"
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not delete across a code fence between ghost and twin", () => {
+      const input =
+        "## Ghost\n\n```text\n## fake\n```\n\n## Ghost real {#ghost}\n\nbody"
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 })

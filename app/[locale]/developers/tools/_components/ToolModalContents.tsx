@@ -5,7 +5,6 @@ import type { MDXRemoteProps } from "next-mdx-remote/rsc"
 import GitHub from "@/components/icons/github.svg"
 import NpmJs from "@/components/icons/npmjs.svg"
 import { Image } from "@/components/Image"
-import { htmlElements } from "@/components/MdComponents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
@@ -37,8 +36,10 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
 
   const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
 
-  const BoldedParagraph = (props: { children?: React.ReactNode }) => (
-    <htmlElements.p className="font-bold" {...props} />
+  const BoldedParagraph = ({ children }: { children?: React.ReactNode }) => (
+    <p>
+      <strong>{children}</strong>
+    </p>
   )
 
   const mdComponentOverrides = {

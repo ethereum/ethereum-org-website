@@ -196,15 +196,15 @@ The `useColorModeValue` hook (Chakra leftover) is **deprecated**. Don't introduc
 
 `<body>` automatically gets `bg-background font-body leading-base text-body`. You don't need to repeat these on top-level page wrappers.
 
-Headings (`<h1>` through `<h6>`) get sizing and `font-black` from `base.css`:
-- `<h1>`: `text-4xl lg:text-5xl`
-- `<h2>`: `text-3xl lg:text-4xl`
-- `<h3>`: `text-2xl lg:text-3xl`
-- `<h4>`: `text-xl lg:text-2xl`
-- `<h5>`: `text-lg`
-- `<h6>`: `text-base`
+Headings (`<h1>` through `<h6>`) get sizing and `font-black` from `base.css`. Sizing comes from the `text-h1`-`text-h6` utilities in `src/styles/utilities.css`, which `base.css` `@apply`s to each tag (size + line-height only -- the `font-black` is applied separately):
+- `<h1>` -> `text-h1` (`text-4xl lg:text-5xl`)
+- `<h2>` -> `text-h2` (`text-3xl lg:text-4xl`)
+- `<h3>` -> `text-h3` (`text-2xl lg:text-3xl`)
+- `<h4>` -> `text-h4` (`text-xl lg:text-2xl`)
+- `<h5>` -> `text-h5` (`text-md lg:text-xl`)
+- `<h6>` -> `text-h6` (`text-sm lg:text-md`)
 
-This means `<h1>Hello</h1>` already looks correct. Writing `<div className="text-5xl font-bold">Hello</div>` is reinventing -- and it loses semantics.
+This means `<h1>Hello</h1>` already looks correct. Writing `<div className="text-5xl font-bold">Hello</div>` is reinventing -- and it loses semantics. To make any element match a heading level's size, apply the `text-h*` utility (e.g. `text-h2`) rather than hand-reconstructing the responsive pair -- see `references/spacing-typography.md` "Heading Sizes."
 
 `<a>` tags get `text-primary` + underline + `focus-visible` outline.
 

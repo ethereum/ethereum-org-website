@@ -106,7 +106,10 @@ const StartWithEthereumFlow = ({
             "w-screen",
             "max-w-screen-2xl",
             "px-4 sm:px-8",
-            "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl",
+            // Cards effect requires overflow-hidden on slides: the maxHeight
+            // stacking trick (getStyleFromIndex) only hides inactive-slide
+            // content if it's clipped
+            "[&_.swiper-slide]:overflow-hidden [&_.swiper-slide]:rounded-2xl",
             "[&_.swiper-slide]:min-h-[386px]",
             "[&_.swiper-slide-shadow]:!bg-transparent",
             "[&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:w-full [&_.swiper]:flex-col [&_.swiper]:items-center"

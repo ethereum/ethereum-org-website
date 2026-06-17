@@ -23,6 +23,7 @@ lang: ja
 - [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Ecosystem Support Programが支援する1,000以上のプロジェクトを検索できるディレクトリ_
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _イーサリアム関連の学術研究を支援する助成金_
 
+
 ## 助成金リストのアグリゲーターとプラットフォーム {#grant-list-aggregators}
 
 これらのリソースは、イーサリアムエコシステム全体におけるさまざまな助成金の機会を収集・整理しており、プロジェクトのニーズに合った資金提供の機会を見つけやすくしています。特定の資金ニーズに基づいて最も関連性の高いリソースを見つけやすくするため、ペルソナ別に整理しました。
@@ -61,6 +62,7 @@ lang: ja
 - [Giveth](https://giveth.io/) - _追加手数料なしで、社会貢献プロジェクトへの直接寄付を可能にする暗号資産寄付プラットフォーム_
 - [Artizen](https://artizen.fund/) - _アート、科学、テクノロジー、文化のフロンティアにおける新しいプロジェクトの資金調達をクリエイターがマッチングできるよう支援します_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _クアドラティック・ファンディングを使用して、公共財に利益をもたらすプロジェクトを支援するスタートアップ・アクセラレーター・プログラム_
+
 
 ## イーサリアムで働く {#work-in-ethereum}
 

@@ -1,10 +1,9 @@
 ---
-title: Cancun-Deneb (Dencun) FAQ
+title: Cancun-Deneb (Dencun)
+metaTitle: Cancun-Deneb (Dencun) FAQ
 description: Frequently asked questions regarding the Cancun-Deneb (Dencun) network upgrade
 lang: en
 ---
-
-# Cancun-Deneb (Dencun) {#dencun}
 
 Cancun-Deneb (Dencun) is an upgrade to the Ethereum network, which activates **Proto-Danksharding (EIP-4844)**, introducing temporary data **blobs** for cheaper [layer 2 (L2)](/glossary/#layer-2) rollup storage.
 

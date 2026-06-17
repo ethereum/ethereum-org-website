@@ -1,10 +1,10 @@
 ---
-title: "Глоссарий Ethereum"
-description: "Неполный глоссарий технических и нетехнических терминов, связанных с Ethereum"
+title: Глоссарий
+metaTitle: Глоссарий Эфириума
+description: Неполный глоссарий технических и нетехнических терминов, связанных с Эфириумом
 lang: ru
+authors: ["Андреас Антонопулос"]
 ---
-
-# Глоссарий {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: ru
 
 ## Источники {#sources}
 
-_Частично основано на книге [«Осваиваем Ethereum»](https://github.com/ethereumbook/ethereumbook) авторов [Андреаса М. Антонопулоса и Гэвина Вуда](https://aantonop.com/books/mastering-ethereum) по лицензии CC-BY-SA_
+_Материалы частично взяты из книги [Освоение Эфириума](https://github.com/ethereumbook/ethereumbook), авторы: [Андреас М. Антонопулос, Гэвин Вуд](https://aantonop.com/books/mastering-ethereum), по лицензии CC-BY-SA_
 
 <Divider />
 
-## Внесите свой вклад в эту страницу {#contribute-to-this-page}
+## Внесите вклад в эту страницу {#contribute-to-this-page}
 
-Мы что-то пропустили? Что-то неправильно? Помогите нам стать лучше, внеся свой вклад в этот глоссарий на GitHub!
+Мы что-то упустили? Есть неточности? Помогите нам стать лучше, внеся свой вклад в этот глоссарий на GitHub!
 
 [Узнайте больше о том, как внести свой вклад](/contributing/adding-glossary-terms)

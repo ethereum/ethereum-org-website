@@ -1,121 +1,119 @@
 ---
-title: Maswali Yanayoulizwa Mara kwa Mara ya Cancun-Deneb (Dencun)
-description: Maswali yanayoulizwa mara kwa mara kuhusu uboreshaji wa mtandao wa Cancun-Deneb (Dencun)
+title: Cancun-Deneb (Dencun)
+metaTitle: Maswali Yanayoulizwa Mara kwa Mara kuhusu Cancun-Deneb (Dencun)
+description: Maswali yanayoulizwa mara kwa mara kuhusu sasisho la mtandao la Cancun-Deneb (Dencun)
 lang: sw
 ---
 
-# Cancun-Deneb (Dencun) {#dencun}
+Cancun-Deneb (Dencun) ni sasisho la mtandao wa Ethereum, ambalo huwezesha **Proto-Danksharding (EIP-4844)**, na kuanzisha **mablobu** ya data ya muda kwa ajili ya hifadhi ya bei nafuu ya rollup ya [tabaka la 2 (l2)](/glossary/#layer-2).
 
-Cancun-Deneb (Dencun) ni sasisha wa mtandao wa Ethereum, unaowasha Proto-Danksharding (EIP-4844). Uboreshaji huu unaleta data ya muda inayojulikana kama blobs kwa ajili ya hifadhi ya bei nafuu ya 'unda-mpya' (unda-mpya) za tabaka la 2 (L2).
+Aina mpya ya muamala huwezesha watoa huduma wa rollup kuhifadhi data kwa gharama nafuu zaidi katika kile kinachojulikana kama "mablobu." Mablobu yanahakikishiwa kupatikana kwenye mtandao kwa takriban siku 18 (kwa usahihi zaidi, [vipindi](/glossary/#epoch) 4096). Baada ya kipindi hiki, mablobu huondolewa kwenye mtandao, lakini programu bado zinaweza kuthibitisha uhalali wa data zake kwa kutumia uthibitisho. 
 
-Aina mpya ya muamala inawawezesha watoa huduma wa unda-mpya kuhifadhi data kwa gharama nafuu zaidi katika kile kinachojulikana kama "blobs." 'Blobs' zinahakikishiwa kupatikana kwenye mtandao kwa takriban siku 18 (kwa usahihi zaidi, 'epochs' 4096). Baada ya kipindi hiki, 'blobs' huondolewa kwenye mtandao, lakini programu bado zinaweza kuthibitisha uhalali wa data zao kwa kutumia ithibati.
+Hili hupunguza kwa kiasi kikubwa gharama za mikusanyiko, hudhibiti ukuaji wa mnyororo, na husaidia kusaidia watumiaji wengi zaidi huku likidumisha usalama na kundi lililogatuliwa la waendeshaji wa nodi.
 
-Hii inapunguza kwa kiasi kikubwa gharama za unda-mpya, inapunguza ukuaji wa chaini, na inasaidia kuhudumia watumiaji wengi zaidi huku ikidumisha usalama na seti ya waendeshaji nodi iliyogatuliwa.
+## Ni lini tunatarajia mikusanyiko kuonyesha ada za chini kutokana na Proto-Danksharding? {#when}
 
-## Ni lini tunatarajia unda-mpya zionyeshe ada za chini kutokana na Proto-Danksharding? {#when}
+- Sasisho hili liliwezeshwa katika kipindi cha 269568, mnamo **13-Mac-2024 saa 13:55 Mchana (UTC)**
+- Watoa huduma wote wakuu wa rollup, kama vile Arbitrum au Optimism, wameashiria kuwa mablobu yatatumika mara tu baada ya sasisho
+- Ratiba ya usaidizi wa kila rollup inaweza kutofautiana, kwa kuwa kila mtoa huduma lazima asasishe mifumo yake ili kunufaika na nafasi mpya ya blobu
 
-- Sasisha huu uliwashwa kwenye 'epoch' ya 269568, tarehe 13-Machi-2024 saa 13:55 (UTC)
-- Watoa huduma wote wakuu wa 'unda-mpya', kama vile Arbitrum au Optimism, wameashiria kwamba 'blobs' zitaungwa mkono mara tu baada ya uboreshaji.
-- Muda wa usaidizi kwa kila 'unda-mpya' unaweza kutofautiana, kwani kila mtoa huduma lazima asasishwe mifumo yake ili kunufaika na nafasi mpya ya 'blob'.
+## Je, ETH inawezaje kubadilishwa baada ya mchepuo mgumu? {#scam-alert}
 
-## Je, ETH inawezaje kubadilishwa baada ya 'hard fork'? {#scam-alert}
+- **Hakuna Hatua Inayohitajika kwa ETH Yako**: Kufuatia sasisho la Dencun la Ethereum, hakuna haja ya kubadilisha au kusasisha ETH yako. Salio la akaunti yako litasalia vile vile, na ETH unayomiliki kwa sasa itaendelea kufikiwa katika muundo wake uliopo baada ya mchepuo mgumu.
+- **Jihadhari na Matapeli!** <Emoji text="⚠️" /> **mtu yeyote anayekuelekeza "kusasisha" ETH yako anajaribu kukutapeli.** Hakuna unachohitaji kufanya kuhusiana na sasisho hili. Mali zako zitasalia bila kuathiriwa kabisa. Kumbuka, kuwa na taarifa ni ulinzi bora dhidi ya matapeli.
 
-- **Hakuna Hatua Inayohitajika kwa ETH Yako**: Kufuatia uboreshaji wa Dencun wa Ethereum, hakuna haja ya kubadilisha au kuboresha ETH yako. Salio la akaunti yako litabaki kama lilivyo, na ETH unayomiliki sasa itaendelea kupatikana katika hali yake ya sasa baada ya 'hard fork'.
-- **Jihadhari na Ulaghai!** <Emoji text="⚠️" /> **mtu yeyote anayekuelekeza "kuboresha" ETH yako anajaribu kukuibia.** Hakuna unachohitaji kufanya kuhusiana na uboreshaji huu.
-  Rasilimali zako hazitaathirika kabisa. Kumbuka, kuwa na taarifa ndiyo njia bora ya kujilinda dhidi ya ulaghai.
+[Zaidi kuhusu kutambua na kuepuka matapeli](/security/)
 
-[Zaidi kuhusu kutambua na kuepuka ulaghai](/security/)
+## Je, sasisho la mtandao la Dencun linatatua tatizo gani? {#network-impact}
 
-## Uboreshaji wa mtandao wa Dencun unatatua tatizo gani? {#network-impact}
+Dencun kimsingi inashughulikia **uwezo wa kuongezeka** (kushughulikia watumiaji wengi zaidi na miamala mingi zaidi) kwa **ada nafuu**, huku **ikidumisha ugatuzi** wa mtandao.
 
-Dencun kimsingi inashughulikia uwezo wa kupanuka (kuhudumia watumiaji wengi na miamala mingi zaidi) kwa ada nafuu, huku ikidumisha ugatuzi wa mtandao.
+Jamii ya Ethereum imekuwa ikichukua mbinu ya "kuzingatia rollup" kwa ukuaji wake, ambayo inaweka mikusanyiko ya tabaka la 2 (l2) kama njia kuu ya kusaidia watumiaji wengi zaidi kwa usalama.
 
-Jamii ya Ethereum imekuwa ikichukua mbinu inayozingatia unda-mpya katika ukuaji wake, ambayo inaweka unda-mpya za tabaka la 2 kama njia kuu ya kuwahudumia watumiaji wengi zaidi kwa usalama.
+Mitandao ya rollup hushughulikia _uchakataji_ (au "utekelezaji") wa miamala tofauti na Mtandao Mkuu na kisha kuchapisha uthibitisho wa kificho na/au data iliyobanwa ya muamala ya matokeo kurudi kwenye Mtandao Mkuu kwa ajili ya utunzaji wa kumbukumbu. Kuhifadhi uthibitisho huu hubeba gharama (kwa njia ya [gesi](/glossary/#gas)), ambayo, kabla ya Proto-Danksharding, ilibidi ihifadhiwe kabisa na waendeshaji wote wa nodi za mtandao, na kuifanya kuwa kazi ya gharama kubwa.
 
-Mitandao ya unda-mpya hushughulikia uchakataji (au "utekelezaji") wa miamala kando na Mtandao Mkuu (Mainnet) na kisha huchapisha ithibati ya kriptografia na/au data ya muamala iliyobanwa na kuirudisha kwenye Mtandao Mkuu kwa ajili ya utunzaji wa kumbukumbu. Kuhifadhi ithibati hizi kuna gharama (kwa njia ya 'gesi'), ambayo, kabla ya Proto-Danksharding, ililazimika kuhifadhiwa milele na waendeshaji wote wa nodi za mtandao, na kuifanya kuwa kazi ya gharama kubwa.
+Kuanzishwa kwa Proto-Danksharding katika sasisho la Dencun kunaongeza hifadhi ya data ya bei nafuu kwa uthibitisho huu kwa kuhitaji tu waendeshaji wa nodi kuhifadhi data hii kwa takriban siku 18, baada ya hapo data inaweza kuondolewa kwa usalama ili kuzuia upanuzi wa mahitaji ya maunzi. Kwa sababu mikusanyiko kwa kawaida huwa na kipindi cha utoaji cha siku 7, muundo wao wa usalama haubadiliki mradi tu mablobu yanapatikana kwenye tabaka la 1 (l1) kwa muda huu. Dirisha la uondoaji la siku 18 hutoa kinga kubwa kwa kipindi hiki.
 
-Kuanzishwa kwa Proto-Danksharding katika uboreshaji wa Dencun kunaongeza hifadhi ya data ya bei nafuu kwa ithibati hizi. Hii inahitaji waendeshaji wa nodi kuhifadhi data hii kwa takriban siku 18 tu, ambapo baada ya hapo data inaweza kuondolewa kwa usalama ili kuzuia upanuzi wa mahitaji ya maunzi.  Kwa sababu unda-mpya kwa kawaida huwa na muda wa kutoa fedha wa siku 7, mfumo wao wa usalama haubadiliki mradi tu 'blobs' zinapatikana kwenye L1 kwa muda huu. Dirisha la uondoaji la siku 18 linatoa muda wa ziada wa kutosha kwa kipindi hiki.
+[Zaidi kuhusu kuongeza uwezo wa Ethereum](/roadmap/scaling/)
 
-[Zaidi kuhusu kupanua uwezo wa Ethereum](/roadmap/scaling/)
+## Je, data ya zamani ya blobu inafikiwaje? {#historical-access}
 
-## Data ya zamani ya 'blob' inapatikanaje? {#historical-access}
+Ingawa nodi za kawaida za Ethereum zitashikilia _hali ya sasa_ ya mtandao kila wakati, data ya kihistoria ya blobu inaweza kutupwa takriban siku 18 baada ya kuanzishwa kwake. Kabla ya kutupa data hii, Ethereum inahakikisha kuwa imepatikana kwa washiriki wote wa mtandao, ikiruhusu muda wa:
 
-Wakati nodi za kawaida za Ethereum zitahifadhi daima hali ya sasa ya mtandao, data ya kihistoria ya 'blob' inaweza kuondolewa takriban siku 18 baada ya kuanzishwa kwake. Kabla ya kuondoa data hii, Ethereum inahakikisha kuwa imepatikana kwa washiriki wote wa mtandao, ikitoa muda kwa ajili ya:
+- Wahusika wanaovutiwa kupakua na kuhifadhi data.
+- Kukamilika kwa vipindi vyote vya changamoto vya rollup.
+- Kukamilishwa kwa miamala ya rollup.
 
-- Wahusika wenye nia kupakua na kuhifadhi data.
-- Kukamilika kwa vipindi vyote vya changamoto vya unda-mpya.
-- Kukamilishwa kwa miamala ya unda-mpya.
+Data ya _kihistoria_ ya blobu inaweza kuhitajika kwa sababu mbalimbali na inaweza kuhifadhiwa na kufikiwa kwa kutumia itifaki kadhaa zilizogatuliwa:
 
-Data ya kihistoria ya 'blob' inaweza kuhitajika kwa sababu mbalimbali na inaweza kuhifadhiwa na kupatikana kwa kutumia itifaki kadhaa zilizogatuliwa:
-
-- **Itifaki za upangaji za wahusika wengine**, kama vile The Graph, huhifadhi data hii kupitia mtandao uliogatuliwa wa waendeshaji nodi wanaohamasishwa na mifumo ya kiuchumi ya kripto.
+- **Itifaki za faharisi za wahusika wengine**, kama vile The Graph, huhifadhi data hii kupitia mtandao uliogatuliwa wa waendeshaji wa nodi wanaohamasishwa na mifumo ya kiuchumi ya kripto.
 - **BitTorrent** ni itifaki iliyogatuliwa ambapo watu wa kujitolea wanaweza kushikilia na kusambaza data hii kwa wengine.
-- **[Mtandao wa lango la Ethereum](/developers/docs/networking-layer/portal-network/)** unalenga kutoa ufikiaji wa data yote ya Ethereum kupitia mtandao uliogatuliwa wa waendeshaji nodi kwa kusambaza data miongoni mwa washiriki sawa na BitTorrent.
-- **Watumiaji binafsi** daima wako huru kuhifadhi nakala zao za data yoyote wanayotaka kwa ajili ya marejeleo ya kihistoria.
-- **Watoa huduma wa unda-mpya** wanahamasishwa kuhifadhi data hii ili kuboresha uzoefu wa mtumiaji wa unda-mpya zao.
-- **Vichunguzi vya bloku** kwa kawaida huendesha nodi za kumbukumbu zinazopanga na kuhifadhi taarifa hizi zote kwa marejeleo rahisi ya kihistoria, yanayopatikana kwa watumiaji kupitia kiolesura cha wavuti.
+- **[Potal Netwoki ya Ethereum](/developers/docs/networking-layer/portal-network/)** inalenga kutoa ufikiaji wa data zote za Ethereum kupitia mtandao uliogatuliwa wa waendeshaji wa nodi kwa kusambaza data miongoni mwa washiriki sawa na BitTorrent.
+- **Watumiaji binafsi** wako huru kila wakati kuhifadhi nakala zao wenyewe za data yoyote wanayotaka kwa marejeleo ya kihistoria.
+- **Watoa huduma wa rollup** wanahamasishwa kuhifadhi data hii ili kuboresha matumizi ya mtumiaji wa rollup yao.
+- **Wachunguzi wa kitalu** kwa kawaida huendesha nodi za kumbukumbu ambazo huweka faharisi na kuhifadhi taarifa hizi zote kwa marejeleo rahisi ya kihistoria, zinazofikiwa na watumiaji kupitia kiolesura cha wavuti.
 
-Ni muhimu kutambua kwamba urejeshaji wa hali ya kihistoria unafanya kazi kwa mfumo wa uaminifu wa **1-kati-ya-N**. Hii inamaanisha unahitaji data kutoka kwa chanzo kimoja tu cha kuaminika ili kuthibitisha usahihi wake kwa kutumia hali ya sasa ya mtandao.
+Ni muhimu kutambua kwamba kurejesha hali ya kihistoria hufanya kazi kwenye **muundo wa uaminifu wa 1-kati-ya-N**. Hii inamaanisha kuwa unahitaji tu data kutoka kwa _chanzo kimoja cha kuaminika_ ili kuthibitisha usahihi wake kwa kutumia hali ya sasa ya mtandao.
 
-## Sasisha hii inachangiaje katika mkakati mpana wa maendeleo ya Ethereum? {#roadmap-impact}
+## Je, sasisho hili linachangia vipi katika ramani pana ya njia ya Ethereum? {#roadmap-impact}
 
-[Proto-Danksharding inaandaa jukwaa la utekelezaji kamili wa [Danksharding].](/roadmap/danksharding/). Danksharding imebuniwa kusambaza ghala la data ya unda-mpya kwa waendeshaji wa nodi, ili kila mwendeshaji ahitaji kushughulikia sehemu ndogo tu ya data yote. Usambazaji huu utaongeza idadi ya 'blobs' za data kwa kila bloku, jambo ambalo ni muhimu kwa kupanua uwezo wa Ethereum ili kuhudumia watumiaji na miamala mingi zaidi.
+Proto-Danksharding huweka msingi wa utekelezaji kamili wa [danksharding](/roadmap/danksharding/). Danksharding imeundwa kusambaza hifadhi ya data ya rollup kwa waendeshaji wa nodi, kwa hivyo kila mwendeshaji anahitaji tu kushughulikia sehemu ndogo ya data yote. Usambazaji huu utaongeza idadi ya mablobu ya data kwa kila kitalu, ambayo ni muhimu kwa kuongeza uwezo wa Ethereum kushughulikia watumiaji na miamala mingi zaidi.
 
-Uwezo huu wa kupanuka ni muhimu ili [kuhudumia mabilioni ya watumiaji kwenye Ethereum](/roadmap/scaling/) kwa ada nafuu na programu za hali ya juu zaidi, huku ukidumisha mtandao uliogatuliwa. Bila mabadiliko haya, mahitaji ya maunzi kwa waendeshaji nodi yangeongezeka, na kusababisha hitaji la vifaa vya gharama kubwa zaidi. Hii inaweza kuwaondoa waendeshaji wadogo sokoni, na kusababisha udhibiti wa mtandao kujilimbikizia kwa waendeshaji wachache wakubwa, jambo ambalo lingeenda kinyume na kanuni ya ugatuzi.
+Uwezo huu wa kuongezeka ni muhimu katika [kusaidia mabilioni ya watumiaji kwenye Ethereum](/roadmap/scaling/) kwa ada nafuu na programu za hali ya juu zaidi, huku ukidumisha mtandao uliogatuliwa. Bila mabadiliko haya, mahitaji ya maunzi kwa waendeshaji wa nodi yangeongezeka, na kusababisha hitaji la vifaa vya gharama kubwa zaidi. Hili linaweza kuwatoa waendeshaji wadogo, na kusababisha mkusanyiko wa udhibiti wa mtandao miongoni mwa waendeshaji wachache wakubwa, jambo ambalo lingeenda kinyume na kanuni ya ugatuzi.
 
-## Je, uboreshaji huu unaathiri wateja wote wa makubaliano na wathibitishaji wa Ethereum? {#client-impact}
+## Je, sasisho hili linaathiri wateja wote wa mwafaka na mthibitishaji wa Ethereum? {#client-impact}
 
-Ndio, Proto-Danksharding (EIP-4844) inahitaji masasisho kwa wateja wa utekelezaji na wateja wa makubaliano. Wateja wote wakuu wa Ethereum wametoa matoleo yanayounga mkono uboreshaji huo. Ili kudumisha usawazishaji na mtandao wa Ethereum baada ya uboreshaji, waendeshaji nodi lazima wahakikishe kuwa wanatumia toleo la mteja linaloungwa mkono. Kumbuka kwamba taarifa kuhusu matoleo ya wateja hubadilika kulingana na wakati, na watumiaji wanapaswa kurejelea masasisho ya hivi punde kwa maelezo ya sasa zaidi. [Angalia maelezo kuhusu matoleo ya wateja yanayoungwa mkono.](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
+Ndiyo, Proto-Danksharding (EIP-4844) inahitaji masasisho kwa wateja wa utekelezaji na wateja wa mwafaka. Wateja wote wakuu wa Ethereum wametoa matoleo yanayounga mkono sasisho. Ili kudumisha usawazishaji na mtandao wa Ethereum baada ya sasisho, waendeshaji wa nodi lazima wahakikishe kuwa wanaendesha toleo la mteja linalotumika. Kumbuka kwamba taarifa kuhusu matoleo ya mteja inategemea wakati, na watumiaji wanapaswa kurejelea masasisho ya hivi punde kwa maelezo ya sasa zaidi. [Tazama maelezo kuhusu matoleo ya mteja yanayotumika](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
 
-Wateja wa makubaliano hushughulikia programu ya Mthibitishaji, ambayo yote imesasishwa ili kuendana na uboreshaji huo.
+Wateja wa mwafaka hushughulikia programu ya _Mthibitishaji_, ambayo yote imesasishwa ili kushughulikia sasisho.
 
-## Cancun-Deneb (Dencun) inaathirije mitandao ya majaribio ya Ethereum? {#testnet-impact}
+## Je, Cancun-Deneb (Dencun) inaathiri vipi mitandao ya majaribio ya Ethereum? {#testnet-impact}
 
-- Devnets, Sepolia na Holesky zote zimefanyiwa uboreshaji wa Dencun na zina Proto-Danksharding inayofanya kazi kikamilifu.
-- Waendelezaji wa unda-mpya wanaweza kutumia mitandao hii kwa majaribio ya EIP-4844.
-- Watumiaji wengi hawataathirika kabisa na mabadiliko haya kwa kila mtandao wa majaribio.
+- Devnets, Sepolia na Holesky zote zimepitia sasisho la Dencun na zina Proto-Danksharding inayofanya kazi kikamilifu
+- Wasanidi wa rollup wanaweza kutumia mitandao hii kwa majaribio ya EIP-4844
+- Watumiaji wengi hawataathiriwa kabisa na mabadiliko haya kwa kila mtandao wa majaribio
 
-## Je, miamala yote kwenye L2 sasa itatumia nafasi ya muda ya 'blob', au utaweza kuchagua? {#calldata-vs-blobs}
+## Je, miamala yote kwenye tabaka la 2 (l2) sasa itatumia nafasi ya muda ya blobu, au utaweza kuchagua? {#calldata-vs-blobs}
 
-Miamala ya unda-mpya kwenye Tabaka la 2 (L2) la Ethereum ina fursa ya kutumia aina mbili za hifadhi ya data: nafasi ya muda ya 'blob' au 'calldata' ya kudumu ya mkataba janja. Nafasi ya 'blob' ni chaguo la kiuchumi, inayotoa hifadhi ya muda kwa gharama ya chini. Inahakikisha upatikanaji wa data kwa vipindi vyote muhimu vya changamoto. Kwa upande mwingine, 'calldata' ya mkataba janja inatoa hifadhi ya kudumu lakini ni ya gharama kubwa zaidi.
+Miamala ya rollup kwenye tabaka la 2 (l2) la Ethereum ina chaguo la kutumia aina mbili za hifadhi ya data: nafasi ya muda ya blobu au data za mwito za kudumu za mkataba mahiri. Nafasi ya blobu ni chaguo la kiuchumi, kutoa hifadhi ya muda kwa gharama ya chini. Inahakikisha upatikanaji wa data kwa vipindi vyote muhimu vya changamoto. Kwa upande mwingine, data za mwito za mkataba mahiri hutoa hifadhi ya kudumu lakini ni ghali zaidi.
 
-Uamuzi kati ya kutumia nafasi ya 'blob' au 'calldata' hufanywa hasa na watoa huduma wa 'unda-mpya'. Wanafanya uamuzi huu kulingana na mahitaji ya sasa ya nafasi ya 'blob'. Ikiwa nafasi ya 'blob' ina mahitaji makubwa, unda-mpya zinaweza kuchagua 'calldata' ili kuhakikisha data inachapishwa kwa wakati unaofaa.
+Uamuzi kati ya kutumia nafasi ya blobu au data za mwito kimsingi hufanywa na watoa huduma wa rollup. Wanaweka uamuzi huu kwenye mahitaji ya sasa ya nafasi ya blobu. Ikiwa nafasi ya blobu inahitajika sana, mikusanyiko inaweza kuchagua data za mwito ili kuhakikisha data inachapishwa kwa wakati.
 
-Ingawa kinadharia inawezekana kwa watumiaji kuchagua aina wanayopendelea ya hifadhi, watoa huduma wa unda-mpya ndio kwa kawaida husimamia chaguo hili. Kutoa fursa hii kwa watumiaji kungeongeza ugumu, hasa katika kuunganisha miamala kwa gharama nafuu. Kwa maelezo maalum kuhusu chaguo hili, watumiaji wanapaswa kurejelea nyaraka zinazotolewa na watoa huduma binafsi wa unda-mpya.
+Ingawa kinadharia inawezekana kwa watumiaji kuchagua aina ya hifadhi wanayopendelea, watoa huduma wa rollup kwa kawaida husimamia chaguo hili. Kutoa chaguo hili kwa watumiaji kungeongeza utata, hasa katika miamala ya kuunganisha ya gharama nafuu. Kwa maelezo mahususi kuhusu chaguo hili, watumiaji wanapaswa kurejelea nyaraka zinazotolewa na watoa huduma binafsi wa rollup.
 
-## Je, 4844 itapunguza gesi ya L1? {#l1-fee-impact}
+## Je, 4844 itapunguza gesi ya tabaka la 1 (l1)? {#l1-fee-impact}
 
-Si kwa kiasi kikubwa. Soko jipya la gesi linaanzishwa kwa ajili ya nafasi ya 'blob' pekee, kwa matumizi ya watoa huduma wa 'unda-mpya'. Ingawa ada kwenye L1 zinaweza kupunguzwa kwa kuhamishia data ya unda-mpya kwenye 'blobs', sasisha hii inalenga hasa upunguzaji wa ada za L2. Upunguzaji wa ada kwenye L1 (Mainnet) unaweza kutokea kama athari ya pili kwa kiwango kidogo.
+Sio kwa kiasi kikubwa. Soko jipya la gesi linaanzishwa pekee kwa nafasi ya blobu, kwa matumizi ya watoa huduma wa rollup. _Ingawa ada kwenye tabaka la 1 (l1) zinaweza kupunguzwa kwa kuhamisha data ya rollup kwenye mablobu, sasisho hili kimsingi linalenga kupunguza ada za tabaka la 2 (l2). Kupunguzwa kwa ada kwenye tabaka la 1 (l1) (Mtandao Mkuu) kunaweza kutokea kama athari ya daraja la pili kwa kiwango kidogo._
 
-- Upunguzaji wa gesi ya L1 utalingana na jinsi watoa huduma wa 'unda-mpya' watakavyotumia data ya 'blob'.
-- 'Gas' ya L1 inawezekana itaendelea kuwa na ushindani kutokana na shughuli zisizohusiana na 'unda-mpya'.
-- Unda-mpya zinazotumia nafasi ya 'blob' zitadai 'gas' kidogo ya L1, na kusaidia kushusha ada za 'gas' za L1 kwa muda mfupi.
-- Nafasi ya 'blob' bado ni chache, kwa hivyo ikiwa 'blobs' ndani ya bloku zimejaa, basi 'unda-mpya' zinaweza kulazimika kuchapisha data zao kama data ya kudumu kwa muda, jambo ambalo lingeongeza bei za gesi za L1 na L2.
+- Kupunguzwa kwa gesi ya tabaka la 1 (l1) kutalingana na upitishaji/matumizi ya data ya blobu na watoa huduma wa rollup
+- Gesi ya tabaka la 1 (l1) ina uwezekano wa kusalia yenye ushindani kutokana na shughuli zisizohusiana na rollup
+- Mikusanyiko inayopitisha matumizi ya nafasi ya blobu itahitaji gesi kidogo ya tabaka la 1 (l1), kusaidia kusukuma ada za gesi za tabaka la 1 (l1) chini katika muda mfupi
+- Nafasi ya blobu bado ina kikomo, kwa hivyo ikiwa mablobu ndani ya kitalu yamejaa/kujazwa, basi mikusanyiko inaweza kuhitajika kuchapisha data zao kama data ya kudumu kwa wakati huo, jambo ambalo lingepandisha bei za gesi za tabaka la 1 (l1) na tabaka la 2 (l2) juu
 
-## Je, hii itapunguza ada kwenye blockchain zingine za tabaka la 1 za EVM? {#alt-l1-fee-impact}
+## Je, hili litapunguza ada kwenye misururu mingine ya vizuizi ya tabaka la 1 (l1) ya EVM? {#alt-l1-fee-impact}
 
-Hapana. Manufaa ya Proto-Danksharding ni maalum kwa unda-mpya za tabaka la 2 za Ethereum zinazohifadhi ithibati zao kwenye tabaka la 1 (Mainnet).
+Hapana. Faida za Proto-Danksharding ni mahususi kwa mikusanyiko ya tabaka la 2 (l2) ya Ethereum ambayo huhifadhi uthibitisho wao kwenye tabaka la 1 (l1) (Mtandao Mkuu).
 
-Kuwa na uwezo wa kufanya kazi na Mashine Pepe ya Ethereum (EVM) pekee haimaanishi kuwa mtandao utaona manufaa yoyote kutoka kwa uboreshaji huu. Mitandao inayofanya kazi kwa kujitegemea kutoka kwa Ethereum (iwe inaendana na EVM au la) haihifadhi data yake kwenye Ethereum na haitaona manufaa yoyote kutoka kwa uboreshaji huu.
+Kuwa tu sambamba na Mashine Pepe ya Ethereum (EVM) haimaanishi kwamba mtandao utaona faida yoyote kutokana na sasisho hili. Mitandao inayofanya kazi kwa kujitegemea na Ethereum (iwe inaoana na EVM au la) haihifadhi data zao kwenye Ethereum na haitaona faida yoyote kutokana na sasisho hili.
 
-[Zaidi kuhusu unda-mpya za tabaka la 2](/layer-2/)
+[Zaidi kuhusu mikusanyiko ya tabaka la 2 (l2)](/layer-2/)
 
-## Wewe ni mwanafunzi wa kuona zaidi? {#visual-learner}
+## Je, unapendelea kujifunza kwa kuona? {#visual-learner}
 
-<YouTube id="HT9PHWloIiU" />
+<VideoWatch slug="eip-4844-dencun-explained" />
 
-_Kufungua Uongezwaji wa Ethereum, EIP-4844 — Finematics _
+_Kufungua Uongezaji Uwezo wa Ethereum, EIP-4844 — Finematics _
 
-<YouTube id="dFjyUY3e53Q" />
+<VideoWatch slug="blobspace-101-dencun" />
 
 _Blobspace 101 na Domothy — Bankless_
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
 - [EIP4844.com](https://www.eip4844.com/)
-- [EIP-4844: Miamala ya shard blob (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
-- [Tangazo la Mtandao Mkuu wa Dencun](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _blogu ya Msingi wa Ethereum_
-- [Mwongozo wa Msafiri kwa Ethereum: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) - _Jon Charbonneau_
-- [Maswali Yanayoulizwa Mara kwa Mara ya Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
-- [Maelezo ya Kina ya EIP-4844: Kiini cha Usasishaji wa Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
+- [EIP-4844: Miamala ya blobu ya shadi (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
+- [Tangazo la Mtandao Mkuu la Dencun](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _Blogu ya Ethereum Foundation_
+- [Mwongozo wa Hitchhiker kwa Ethereum: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) - _Jon Charbonneau_
+- [Maswali Yanayoulizwa Mara kwa Mara kuhusu Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
+- [Maelezo ya Kina ya EIP-4844: Msingi wa Sasisho la Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
 - [Sasisho la AllCoreDevs 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) - _Tim Beiko_

@@ -1,10 +1,10 @@
 ---
-title: "以太坊词汇表"
-description: "以太坊相关的技术性和非技术性术语的不完全清单"
+title: 术语表
+metaTitle: 以太坊术语表
+description: 与以太坊相关的技术和非技术术语的不完整术语表
 lang: zh
+authors: ["安德烈亚斯·安东诺普洛斯"]
 ---
-
-# 术语表 {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -492,14 +492,14 @@ lang: zh
 
 <Divider />
 
-## 参考资料 {#sources}
+## 来源 {#sources}
 
-_部分内容由 [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) 所著的[《精通以太坊》](https://github.com/ethereumbook/ethereumbook)提供，并遵循 CC-BY-SA 许可。_
+_部分内容摘自 [安德烈亚斯·M·安东诺普洛斯、加文·伍德](https://aantonop.com/books/mastering-ethereum) 编写的 [《精通以太坊》(Mastering Ethereum)](https://github.com/ethereumbook/ethereumbook)，遵循 CC-BY-SA 许可协议_
 
 <Divider />
 
-## 为本页面做贡献 {#contribute-to-this-page}
+## 参与贡献 {#contribute-to-this-page}
 
-我们是否还有所遗漏？ 是否存在谬误？ 请在 GitHub 上完善此词汇表，帮助我们改进！
+我们遗漏了什么吗？有不正确的地方吗？欢迎在 GitHub 上为本术语表做出贡献，帮助我们改进！
 
-[详细了解如何贡献](/contributing/adding-glossary-terms)
+[了解有关如何贡献的更多信息](/contributing/adding-glossary-terms)

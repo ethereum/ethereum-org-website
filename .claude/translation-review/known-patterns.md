@@ -1,7 +1,7 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-03-16 (updated with Gemini-confirmed transliteration policy from Hindi PR #17101)
+> Last updated: 2026-06-09 (PR #18375: added MDX duplicated-closer / dropped-`>` breakers, the duplicate ghost-heading migration artifact, and the ETHGlossary authority hierarchy for unlisted terms)
 
 ## Issue Categories
 
@@ -70,6 +70,12 @@ flag phonetic transliterations.
 
 **Transliteration authority:** ETHGlossary (https://ethglossary.visual-20-hoists.workers.dev) is the canonical source for term translations, including per-language transliterated forms for non-Latin scripts. The pipeline queries ETHGlossary directly; reviewers verify against the per-term `script_rule` returned by the API. The previous local bank at `.claude/translation-review/transliterations/` has been removed as of ETHGlossary v0.3.0.
 
+**Authority hierarchy — terms ETHGlossary covers vs. items it doesn't (READ THIS before flagging a transliteration/calque/keep-Latin "error"):**
+
+1. **For any term ETHGlossary covers, its per-term `script_rule` is the ONLY authority** for the transliterate / calque / keep-latin / always-latin decision. Query the API (`/filter` per file, or `/translations/{lang}/{termId}`); never assume.
+2. **For items ETHGlossary does NOT cover** (author names, brand-new product names not yet in the glossary, etc.), apply the script-aware fallback above: **transliterate** into non-Latin target scripts, **keep as-is** for Latin scripts.
+3. **Never infer a "default" `script_rule` for an unlisted term.** An absent glossary entry means "fall back to the script-aware policy," **NOT** "keep Latin." Example caught in PR #18375 review: a `te` author name "Mario Havel" rendered as "మారియో హావెల్" is **CORRECT** per the fallback — a reviewer flagging it as "should stay Latin" by assuming an `always_latin` default was a **false positive**. When ETHGlossary and a reviewer's instinct disagree, ETHGlossary (or, for unlisted items, this documented fallback) wins — there is one source of truth.
+
 ### 2. Cross-Script Contamination (CRITICAL)
 
 Crowdin translation memory leaks content from other language translations.
@@ -82,7 +88,7 @@ Crowdin translation memory leaks content from other language translations.
 
 ### 3. MDX Syntax Errors (CRITICAL — breaks builds)
 
-Four predictable categories that appear in every import:
+Predictable categories that appear in nearly every import:
 
 | Pattern | Example | Fix |
 |---------|---------|-----|
@@ -90,8 +96,20 @@ Four predictable categories that appear in every import:
 | Missing closing backtick | `` `<contract>.<function>() `` | Add closing backtick |
 | Misplaced backtick exposing JSX | ``(`<> ...` </>`)`` | Fix backtick placement |
 | Orphaned HTML closing tags | `</a>` from sentence restructuring | Remove orphaned tag |
+| Duplicated inner closer over a wrapper | `<ExpandableCard>…<ButtonLink>x</ButtonLink></ButtonLink>` (2nd should close the wrapper) | Restore the wrapper's real closing tag from the English source (`</ExpandableCard>`, `</Callout>`, …) |
+| Dropped `>` in angle-bracket link whose URL has parens | `[t](<https://en.wikipedia.org/wiki/Electra_(star))` | Restore the `>` before the final `)`: `…_(star)>)` |
 
-**Pattern:** These same 4 patterns recur in every Crowdin import. The first two are most common.
+**Pattern:** The first two are most common. The last two were the entire cause of the failing build in **PR #18375** (77 files, all 24 langs). **Detect deterministically** by compiling each changed file through `@mdx-js/mdx` (the parser `next-mdx-remote` uses) — strip frontmatter and `{#id}` heading anchors first (else every file false-positives on the custom heading-id syntax), and confirm the English sources compile clean as a control before trusting the run.
+
+### 3b. Duplicate "Ghost" Headings (CRITICAL — structural-migration artifact)
+
+When a base-branch change shifts page block structure — e.g. the h1 → `frontmatter.title` migration that removed leading `#` headings — the pipeline's incremental block-matching can mis-align and emit a section **twice**: an anchor-less "ghost" copy (often an older or differently-worded translation, sometimes a different formality register) immediately followed by the correct `{#anchor}` copy. The reader sees the section rendered twice in a row.
+
+**Signature:** a translated `h2`–`h4` heading **without** `{#id}` immediately followed (after blank lines and/or one duplicate paragraph) by a **same-level** heading **with** `{#id}`. English requires `{#id}` on every heading, so any anchor-less translated heading is the tell.
+
+**Fix:** delete the ghost block (the anchor-less heading + its duplicate paragraph) up to the anchored twin; keep the anchored version that matches the English source. Observed in **PR #18375** at **254 occurrences across 69 files** (24 langs × `community/grants`, `contributing/adding-videos`, `roadmap/glamsterdam`).
+
+**Detection:** scan changed translated files for `^#{2,4} ` lines lacking `{#` (outside code fences); classify each as ghost-twin (next same-level heading is anchored → safe to delete) vs. lone-missing-anchor (needs the anchor *added* from English) before fixing. **The durable fix belongs in the sanitizer** (collapse adjacent duplicate headings during sanitization) so future structural changes self-heal rather than shipping duplicates.
 
 ### 4. Semantic Inversions (CRITICAL)
 
@@ -270,6 +288,16 @@ ETHGlossary frequently has multiple entries for one base term that differ by sur
 
 ## Per-Language Notes
 
+### All 24 languages -- page-stablecoins.json, Reviewed PR #18353 (stablecoins-2026-redesign)
+- Single 124-key UI-strings JSON per language (one new redesigned page). Fleet avg ~9.7/10, **0 critical issues across all 24 languages**.
+- Only objective fix: tr `page-stablecoins-algorithmic` heading typo `Algormitik` -> `Algoritmik` (body already correct). Hand-fixed.
+- Notable warning: ta `page-stablecoins-types-intro` rendered "trade-offs" as "exchanges/transfers" (பரிமாற்றங்கள்) -- see new polysemy note below.
+- es and ja scored clean 10.0; cs/ja had 0 warnings. vi's historical untranslated-chunk failure mode was ABSENT (big improvement on prior 7.2/10).
+- Confirmed clean across the fleet: all 6 internal hrefs byte-identical, all tickers (ETH/USDS/USDC/GHO/GLO/USDGLO/DAI/USDT/TUSD/PYUSD/COMP) Latin, no semantic inversions in the overcollateralization / fiat-redemption / algorithmic-supply / Bitcoin-pizza passages, smart contract correct (智能合约/智能合約, not 智慧), no cross-script contamination, 124/124 key coverage everywhere.
+
+### 21. "Trade-offs" Polysemy -- Exchange/Transfer vs Compromise (MEDIUM)
+"trade-offs" (compromises/downsides) mistranslated as the financial/transfer sense of "trade" (exchange/swap). Seen in ta `page-stablecoins-types-intro` (PR #18353): "their benefits, and trade-offs" -> "...exchanges" (பரிமாற்றங்கள்), which also collides with swap=பரிமாற்றம். High-risk in languages where "trade" maps to a swap/exchange term. Not automatable -- requires the pros/cons sense. Check any "trade-off(s)" occurrence in pro/con or comparison contexts.
+
 ### Czech (cs) & Traditional Chinese (zh-tw) -- latest/ blog, Reviewed PR #18344
 - cs 8.8/10: 1 real critical fixed -- "gas" rendered as literal "plyn" (4x in building-on-ethereum-in-2026); ETHGlossary note mandates the loanword "gas" (same file already used "gasu"). zero-knowledge flag was a false positive (see pattern 20).
 - zh-tw 9.5/10: 1 real critical fixed -- "smart contract" as 智慧合約 -> 智能合約 (glossary: 智慧 is the smartphone sense, 智能 is the crypto term).
@@ -321,6 +349,24 @@ ETHGlossary frequently has multiple entries for one base term that differ by sur
 - "validator" as "consensus client", "block" as "barrier" in glossary files
 - "liquid staking" as "liquid mortgage" in community/research
 - Tone/register: formal MSA consistently maintained where translated
+
+### 22. Leaked HTML Placeholder Tokens in JSON Restore (CRITICAL -- pipeline artifact)
+
+The intl-pipeline extracts attributed HTML tags (`<a href>`, `<img>`) from JSON string values into content-addressed wrappers `<HTML-PLACEHOLDER-HTMLTAG-{hash}>text</...>` before translation, then restores them. A restore bug let a placeholder token ship verbatim into shipped files (reader-visible junk).
+
+**Signature:** literal `HTML-PLACEHOLDER-HTMLTAG-<6hex>` (or `-CODE-`/`-LINK-`/`-IMAGE-`/`-COMPONENT-`) text inside a translated JSON value.
+
+**Root cause (PR #18418):** the translated value contained a placeholder hash MORE times than the English source had the tag (LLM/TM reused a linked phrase); the old restore rebuilt only the first occurrence per source entry, and the surplus leaked silently (the single entry restored fine, so no failure was logged). The hash is content-addressed from the English tag, so the SAME hash leaks across every affected locale -- a fleet-wide tell.
+
+**Detection (deterministic):** `grep -rl "HTML-PLACEHOLDER" src/intl/` -- EN source is always clean, so any hit is a translation-side leak. **Run this grep on every JSON import as a backstop, regardless of agent findings.**
+
+**Fix:** restore by global token replacement (a hash always maps to one original tag) + residual-placeholder guard (`json-batcher.ts`), and a hard throw on any placeholder reaching merged output (`gemini.ts`). Full writeup: `docs/solutions/logic-errors/intl-pipeline-html-placeholder-leak.md`.
+
+### All 22 languages -- glossary-tooltip + 20 page JSONs, Reviewed PR #18418 (intl/pending-dev)
+- 22 langs x 21 UI-string JSONs (it: 20; `page-history.json` failed upstream, excluded). Fleet avg **~9.7/10**.
+- **Only critical fleet-wide: pattern 22** -- 7 langs leaked one placeholder in `glossary-tooltip.json` (`ar` wei-definition `#wei`; `cs/ja/ko/pl/uk/zh` ommer-definition `#pow`). All hand-fixed to the correct anchor; pipeline fixed to prevent recurrence.
+- Scores: fr/it/vi 10.0; de/es/hi/id/pl/ru/ur 9.8; tr 9.7; ar/bn/ja/ko/sw/ta/uk/zh 9.6; cs 9.5; mr/te 9.4.
+- Confirmed clean across the fleet: no semantic inversions (PoW/PoS, validator/miner, mainnet/testnet), no translated internal hrefs, no transliterated domains, no cross-script contamination, ICU placeholders + rich-text tags intact, brand/script policy correct per group. zh `智能合约` correct (not `智慧`). Historically weak ar/vi/tr clean of prior failure modes.
 
 ## Agent Architecture Notes
 
