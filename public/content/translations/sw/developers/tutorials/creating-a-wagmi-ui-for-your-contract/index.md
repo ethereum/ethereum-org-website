@@ -1,58 +1,61 @@
 ---
-title: "Kutengeneza kiolesura cha mtumiaji kwa ajili ya mkataba wako"
-description: Kwa kutumia vipengele vya kisasa kama vile TypeScript, React, Vite, na Wagmi, tutapitia kiolesura cha kisasa, lakini kidogo, cha mtumiaji na kujifunza jinsi ya kuunganisha mkoba kwenye kiolesura cha mtumiaji, kupiga simu mkataba-erevu ili kusoma habari, kutuma muamala kwenye mkataba-erevu, na kufuatilia matukio kutoka kwenye mkataba-erevu ili kubaini mabadiliko.
+title: "Kujenga kiolesura cha mtumiaji kwa ajili ya mkataba wako"
+description: Kwa kutumia vijenzi vya kisasa kama vile TypeScript, React, Vite, na Wagmi, tutapitia kiolesura cha mtumiaji cha kisasa, lakini kidogo, na kujifunza jinsi ya kuunganisha mkoba kwenye kiolesura cha mtumiaji, kuita mkataba mahiri ili kusoma taarifa, kutuma muamala kwenye mkataba mahiri, na kufuatilia matukio kutoka kwenye mkataba mahiri ili kutambua mabadiliko.
 author: Ori Pomerantz
-tags: [ "TypeScript", "React", "Vite", "Wagmi", "frontend" ]
+tags:
+  - typescript
+  - react
+  - vite
+  - wagmi
+  - kiolesura cha mbele
 skill: beginner
+breadcrumb: Kiolesura cha Mtumiaji (UI) na WAGMI
 published: 2023-11-01
 lang: sw
 sidebarDepth: 3
 ---
 
-Umepata kipengele tunachohitaji katika mfumo ikolojia wa Ethereum. Uliandika mikataba-erevu ili kuitekeleza, na labda hata msimbo fulani unaohusiana unaoendeshwa nje ya mnyororo. Hii ni nzuri! Kwa bahati mbaya, bila kiolesura cha mtumiaji hutapata watumiaji wowote, na mara ya mwisho ulipoandika tovuti watu walitumia modemu za kupiga simu na JavaScript ilikuwa mpya.
+Umepata kipengele tunachohitaji katika mfumo wa ikolojia wa Ethereum. Umeandika mikataba mahiri ili kukitekeleza, na labda hata baadhi ya kodi zinazohusiana zinazoendeshwa nje ya mnyororo. Hili ni jambo zuri! Kwa bahati mbaya, bila kiolesura cha mtumiaji hutakuwa na watumiaji wowote, na mara ya mwisho ulipoandika tovuti watu walitumia modemu za kupiga simu na JavaScript ilikuwa mpya.
 
-Makala hii ni kwa ajili yako. Nadhani unajua programu, na labda kidogo ya JavaScript na HTML, lakini ujuzi wako wa kiolesura cha mtumiaji umeshuka na umepitwa na wakati. Kwa pamoja tutapitia programu rahisi ya kisasa ili uone jinsi inavyofanywa siku hizi.
+Makala haya ni kwa ajili yako. Ninachukulia kuwa unajua upangaji programu, na labda kidogo JavaScript na HTML, lakini ujuzi wako wa kiolesura cha mtumiaji umepitwa na wakati. Pamoja tutapitia programu rahisi ya kisasa ili uone jinsi inavyofanywa siku hizi.
 
 ## Kwa nini hii ni muhimu {#why-important}
 
-Kinadharia, unaweza tu kuwa na watu wanaotumia [Etherscan](https://holesky.etherscan.io/address/0x432d810484add7454ddb3b5311f0ac2e95cecea8#writeContract) au [Blockscout](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=write_contract) kuingiliana na mikataba yako. Hiyo itakuwa nzuri kwa WanaEthereum wenye uzoefu. Lakini tunajaribu kuwahudumia [watu wengine bilioni moja](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). Hili halitatokea bila uzoefu mzuri wa mtumiaji, na kiolesura rafiki cha mtumiaji ni sehemu kubwa ya hiyo.
+Kinadharia, unaweza tu kuwafanya watu watumie [Etherscan](https://sepolia.etherscan.io/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA#readContract) au [Blockscout](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_write_contract) ili kuingiliana na mikataba yako. Hiyo ni nzuri kwa Waethereans wenye uzoefu. Lakini tunajaribu kuhudumia [watu wengine bilioni moja](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). Hili halitafanyika bila uzoefu mzuri wa mtumiaji, na kiolesura rafiki cha mtumiaji ni sehemu kubwa ya hilo.
 
 ## Programu ya Greeter {#greeter-app}
 
-Kuna nadharia nyingi nyuma ya jinsi UI ya kisasa inavyofanya kazi, na [tovuti nyingi nzuri](https://react.dev/learn/thinking-in-react) [zinazoelezea](https://wagmi.sh/core/getting-started). Badala ya kurudia kazi nzuri iliyofanywa na tovuti hizo, nitachukulia unapendelea kujifunza kwa kufanya na kuanza na programu unayoweza kucheza nayo. Bado unahitaji nadharia ili kufanikisha mambo, na tutaifikia - tutapitia faili chanzo kwa faili chanzo, na kujadili mambo tunapoyafikia.
+Kuna nadharia nyingi nyuma ya jinsi UI ya kisasa inavyofanya kazi, na [tovuti nyingi nzuri](https://react.dev/learn/thinking-in-react) [zinazoelezea hilo](https://wagmi.sh/core/getting-started). Badala ya kurudia kazi nzuri iliyofanywa na tovuti hizo, nitachukulia kuwa unapendelea kujifunza kwa kufanya na kuanza na programu unayoweza kucheza nayo. Bado unahitaji nadharia ili kufanya mambo, na tutaifikia - tutaenda tu faili la chanzo kwa faili la chanzo, na kujadili mambo tunapoyafikia.
 
 ### Usakinishaji {#installation}
 
-1. Ikibidi, ongeza [blockchain ya Holesky](https://chainlist.org/?search=holesky&testnets=true) kwenye mkoba wako na [pata ETH ya majaribio](https://www.holeskyfaucet.io/).
+1. Programu inatumia mtandao wa majaribio wa [Sepolia](https://sepolia.dev/). Ikiwa ni lazima, [pata ETH ya majaribio ya Sepolia](/developers/docs/networks/#sepolia) na [uongeze Sepolia kwenye mkoba wako](https://chainlist.org/chain/11155111).
 
-2. Fanya clone ya hazina ya github.
-
-   ```sh
-   git clone https://github.com/qbzzt/20230801-modern-ui.git
-   ```
-
-3. Sakinisha vifurushi vinavyohitajika.
+2. Nakili hazina ya GitHub na usakinishe vifurushi vinavyohitajika.
 
    ```sh
-   cd 20230801-modern-ui
-   pnpm install
+   git clone https://github.com/qbzzt/260301-modern-ui-web3.git
+   cd 260301-modern-ui-web3
+   npm install
    ```
+
+3. Programu inatumia vituo vya ufikiaji vya bure, ambavyo vina mapungufu ya utendaji. Ikiwa unataka kutumia mtoa huduma wa [Nodi kama huduma](/developers/docs/nodes-and-clients/nodes-as-a-service/), badilisha URL katika [`src/wagmi.ts`](#wagmi-ts).
 
 4. Anzisha programu.
 
    ```sh
-   pnpm dev
+   npm run dev
    ```
 
-5. Vinjari hadi kwenye URL inayoonyeshwa na programu. Katika hali nyingi, hiyo ni [http://localhost:5173/](http://localhost:5173/).
+5. Vinjari kwenye URL inayoonyeshwa na programu. Katika hali nyingi, hiyo ni [http://localhost:5173/](http://localhost:5173/).
 
-6. Unaweza kuona msimbo chanzo wa mkataba, toleo lililobadilishwa kidogo la Greeter ya Hardhat, [kwenye kichunguzi cha blockchain](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contract).
+6. Unaweza kuona kodi ya chanzo ya mkataba, toleo lililobadilishwa la Greeter ya Hardhat, [kwenye kichunguzi cha mnyororo wa vitalu](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code).
 
-### Mapitio ya faili {#file-walk-through}
+### Kupitia faili {#file-walk-through}
 
 #### `index.html` {#index-html}
 
-Faili hii ni kiolezo cha kawaida cha HTML isipokuwa kwa mstari huu, unaoingiza faili ya hati.
+Faili hili ni kiolezo cha kawaida cha HTML isipokuwa kwa mstari huu, ambao unaingiza faili la hati.
 
 ```html
 <script type="module" src="/src/main.tsx"></script>
@@ -60,131 +63,268 @@ Faili hii ni kiolezo cha kawaida cha HTML isipokuwa kwa mstari huu, unaoingiza f
 
 #### `src/main.tsx` {#main-tsx}
 
-Kiendelezi cha faili kinatuambia kuwa faili hii ni [kipengele cha React](https://www.w3schools.com/react/react_components.asp) kilichoandikwa kwa [TypeScript](https://www.typescriptlang.org/), kiendelezi cha JavaScript kinachosaidia [ukaguzi wa aina](https://en.wikipedia.org/wiki/Type_system#Type_checking). TypeScript inakusanywa kuwa JavaScript, kwa hivyo tunaweza kuitumia kwa utekelezaji upande wa mteja.
+Kiendelezi cha faili kinaonyesha kuwa hiki ni [kijenzi cha React](https://www.w3schools.com/react/react_components.asp) kilichoandikwa katika [TypeScript](https://www.typescriptlang.org/), kiendelezi cha JavaScript kinachounga mkono [ukaguzi wa aina](https://en.wikipedia.org/wiki/Type_system#Type_checking). TypeScript inakusanywa kuwa JavaScript, kwa hivyo tunaweza kuitumia upande wa mteja.
+
+Faili hili linaelezwa zaidi ikiwa una nia. Kawaida hubadilishi faili hili, bali [`src/App.tsx`](#app-tsx) na faili inazoingiza.
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css'
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-import * as React from 'react'
-import * as ReactDOM from 'react-dom/client'
-import { WagmiConfig } from 'wagmi'
-import { chains, config } from './wagmi'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { WagmiProvider } from 'wagmi'
 ```
 
-Ingiza msimbo wa maktaba tunaouhitaji.
+Ingiza kodi ya maktaba tunayohitaji.
 
 ```tsx
-import { App } from './App'
+import App from './App.tsx'
 ```
 
-Ingiza kipengele cha React kinachotekeleza programu (tazama hapa chini).
+Ingiza kijenzi cha React kinachotekeleza programu (tazama hapa chini).
+
+```tsx
+import { config } from './wagmi.ts'
+```
+
+Ingiza usanidi wa [wagmi](https://wagmi.sh/), ambao unajumuisha usanidi wa mnyororo wa vitalu.
+
+```tsx
+const queryClient = new QueryClient()
+```
+
+Inaunda mfano mpya wa meneja wa kache wa [React Query](https://tanstack.com/query/latest/docs/framework/react/overview). Kitu hiki kitahifadhi:
+
+- Wito wa RPC uliowekwa kwenye kache
+- Usomaji wa mkataba
+- Hali ya kuchukua tena chinichini
+
+Tunahitaji meneja wa kache kwa sababu wagmi v3 inatumia React Query kwa ndani.
 
 ```tsx
 ReactDOM.createRoot(document.getElementById('root')!).render(
 ```
 
-Tengeneza kipengele cha msingi cha React. Kigezo cha `render` ni [JSX](https://www.w3schools.com/react/react_jsx.asp), lugha ya kiendelezi inayotumia HTML na JavaScript/TypeScript. Alama ya mshangao hapa inakiambia kipengele cha TypeScript: "hujui kama `document.getElementById('root')` itakuwa kigezo halali kwa `ReactDOM.createRoot`, lakini usijali - mimi ni msanidi programu na ninakuambia itakuwa hivyo".
+Unda kijenzi cha msingi cha React. Kigezo cha `render` ni [JSX](https://www.w3schools.com/react/react_jsx.asp), lugha ya kiendelezi inayotumia HTML na JavaScript/TypeScript. Alama ya mshangao hapa inaiambia kijenzi cha TypeScript: "hujui kwamba `document.getElementById('root')` itakuwa kigezo halali kwa `ReactDOM.createRoot`, lakini usijali - mimi ni msanidi programu na ninakuambia kutakuwa na".
 
 ```tsx
   <React.StrictMode>
 ```
 
-Programu inaingia ndani ya [kipengele cha `React.StrictMode`](https://react.dev/reference/react/StrictMode). Kipengele hiki kinaambia maktaba ya React kuingiza ukaguzi wa ziada wa utatuzi, ambao ni muhimu wakati wa usanidi.
+Programu inaingia ndani ya [kijenzi cha `React.StrictMode`](https://react.dev/reference/react/StrictMode). Kijenzi hiki kinaiambia maktaba ya React kuingiza ukaguzi wa ziada wa utatuzi, ambao ni muhimu wakati wa usanidi.
 
 ```tsx
-    <WagmiConfig config={config}>
+    <WagmiProvider config={config}>
 ```
 
-Programu pia iko ndani ya [kipengele cha `WagmiConfig`](https://wagmi.sh/react/api/WagmiProvider). [Maktaba ya wagmi (we are going to make it)](https://wagmi.sh/) inaunganisha ufafanuzi wa UI wa React na [maktaba ya viem](https://viem.sh/) kwa ajili ya kuandika mfumo uliotawanywa wa Ethereum.
+Programu pia iko ndani ya [kijenzi cha `WagmiProvider`](https://wagmi.sh/react/api/WagmiProvider). [Maktaba ya wagmi (tutaifanya)](https://wagmi.sh/) inaunganisha ufafanuzi wa UI wa React na [maktaba ya viem](https://viem.sh/) kwa ajili ya kuandika programu tumizi iliyogatuliwa (dapp) ya Ethereum.
 
 ```tsx
-      <RainbowKitProvider chains={chains}>
+      <QueryClientProvider client={queryClient}>
 ```
 
-Na mwishowe, [kipengele cha `RainbowKitProvider`](https://www.rainbowkit.com/). Kipengele hiki hushughulikia kuingia na mawasiliano kati ya mkoba na programu.
+Na hatimaye, ongeza mtoa huduma wa React Query ili kijenzi chochote cha programu kiweze kutumia hoja zilizowekwa kwenye kache.
 
 ```tsx
         <App />
 ```
 
-Sasa tunaweza kuwa na kipengele cha programu, ambacho kinatengeneza UI. Ile `/>` mwishoni mwa kipengele inaiambia React kwamba kipengele hiki hakina ufafanuzi wowote ndani yake, kulingana na kiwango cha XML.
+Sasa tunaweza kuwa na kijenzi cha programu, ambacho kwa kweli kinatekeleza UI. `/>` mwishoni mwa kijenzi inaiambia React kwamba kijenzi hiki hakina ufafanuzi wowote ndani yake, kulingana na kiwango cha XML.
 
 ```tsx
-      </RainbowKitProvider>
-    </WagmiConfig>
+      </QueryClientProvider>
+    </WagmiProvider>
   </React.StrictMode>,
 )
 ```
 
-Bila shaka, tunapaswa kufunga vipengele vingine.
+Bila shaka, tunapaswa kufunga vijenzi vingine.
 
 #### `src/App.tsx` {#app-tsx}
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { useAccount } from 'wagmi'
-import { Greeter } from './components/Greeter'
+import {
+  useConnect,
+  useConnection,
+  useDisconnect,
+  useSwitchChain
+} from 'wagmi'
 
-export function App() {
+import { useEffect } from 'react'
+import { Greeter } from './Greeter'
 ```
 
-Hii ndiyo njia ya kawaida ya kuunda kipengele cha React - fafanua chaguo la kukokotoa ambalo huitwa kila wakati linapohitaji kutolewa. Chaguo hili la kukokotoa kwa kawaida huwa na msimbo fulani wa TypeScript au JavaScript juu, ikifuatiwa na taarifa ya `return` inayorejesha msimbo wa JSX.
+Ingiza maktaba tunazohitaji, pamoja na [kijenzi cha `Greeter`](#greeter-tsx).
 
 ```tsx
-  const { isConnected } = useAccount()
+const SEPOLIA_CHAIN_ID = 11155111
 ```
 
-Hapa tunatumia [`useAccount`](https://wagmi.sh/react/api/hooks/useAccount) kuangalia kama tumeunganishwa kwenye blockchain kupitia mkoba au la.
+Kitambulisho cha mnyororo wa Sepolia.
 
-Kwa kimkataba, katika chaguo za kukokotoa za React zinazoitwa `use...` ni [hooks](https://www.w3schools.com/react/react_hooks.asp) zinazorejesha aina fulani ya data. Unapotumia ndoano kama hizo, si tu kwamba kipengele chako kinapata data, lakini data hiyo inapobadilika kipengele hutolewa upya na maelezo yaliyosasishwa.
+```
+function App() {
+```
+
+Hii ndiyo njia ya kawaida ya kuunda kijenzi cha React: fafanua chaguo la kukokotoa ambalo linaitwa wakati wowote linapohitaji kutolewa. Chaguo hili la kukokotoa kwa kawaida lina kodi ya TypeScript au JavaScript, ikifuatiwa na taarifa ya `return` inayorudisha kodi ya JSX.
+
+```tsx
+  const connection = useConnection()
+```
+
+Tumia [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) kupata taarifa zinazohusiana na muunganisho wa sasa, kama vile anwani na `chainId`.
+
+Kwa kawaida, katika React chaguo za kukokotoa zinazoitwa `use...` ni [ndoano (hooks)](https://www.w3schools.com/react/react_hooks.asp). Chaguo hizi za kukokotoa hazirudishi tu data kwenye kijenzi; pia zinahakikisha inatolewa tena (chaguo la kukokotoa la kijenzi linatekelezwa tena, na pato lake linachukua nafasi ya lile la awali katika HTML) wakati data hiyo inabadilika.
+
+```tsx
+  const { connectors, connect, status, error } = useConnect()
+```
+
+Tumia [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect) kupata taarifa kuhusu muunganisho wa mkoba.
+
+```tsx
+  const { disconnect } = useDisconnect()
+```
+
+[Ndoano hii](https://wagmi.sh/react/api/hooks/useDisconnect) inatupa chaguo la kukokotoa la kukata muunganisho kutoka kwenye mkoba.
+
+```tsx
+  const { switchChain } = useSwitchChain()
+```
+
+[Ndoano hii](https://wagmi.sh/react/api/hooks/useSwitchChain) inaturuhusu kubadili minyororo.
+
+```tsx
+  useEffect(() => {
+```
+
+Ndoano ya React [`useEffect`](https://react.dev/reference/react/useEffect) inakuruhusu kuendesha chaguo la kukokotoa wakati wowote thamani ya kigezo inabadilika ili kusawazisha mfumo wa nje.
+
+```tsx
+    if (connection.status === 'connected' &&
+        connection.chainId !== SEPOLIA_CHAIN_ID
+    ) {
+      switchChain({ chainId: SEPOLIA_CHAIN_ID })
+    }
+```
+
+Ikiwa tumeunganishwa, lakini si kwenye mnyororo wa vitalu wa Sepolia, badili kwenda Sepolia.
+
+```tsx
+  }, [connection.status, connection.chainId])
+```
+
+Endesha tena chaguo la kukokotoa kila wakati hali ya muunganisho au chainId ya muunganisho inabadilika.
 
 ```tsx
   return (
     <>
 ```
 
-JSX ya kipengele cha React _lazima_ irudishe kipengele kimoja. Tunapokuwa na vipengele vingi na hatuna chochote kinachomaliza "kawaida" tunatumia kipengele tupu (`<> ... </>`) ili kuzifanya kuwa sehemu moja.
+JSX ya kijenzi cha React _lazima_ irudishe kijenzi kimoja cha HTML. Tunapokuwa na vijenzi vingi na hatuhitaji kontena la kuvifunga vyote, tunatumia kijenzi kitupu (`<> ... </>`) kuviunganisha kuwa kijenzi kimoja.
 
 ```tsx
-      <h1>Greeter</h1>
-      <ConnectButton />
+      <h2>Connection</h2>
+      <div>
+        status: {connection.status}
+        <br />
+        addresses: {JSON.stringify(connection.addresses)}
+        <br />
+        chainId: {connection.chainId}
+      </div>
 ```
 
-Tunapata [kipengele cha `ConnectButton`](https://www.rainbowkit.com/docs/connect-button) kutoka kwa RainbowKit. Wakati hatujaunganishwa, inatupa kitufe cha `Connect Wallet` ambacho hufungua modali inayoelezea pochi na kukuruhusu kuchagua ni ipi unayotumia. Tunapounganishwa, inaonyesha blockchain tunayotumia, anwani ya akaunti yetu, na salio letu la ETH. Tunaweza kutumia maonyesho haya kubadili mtandao au kukata muunganisho.
+Toa taarifa kuhusu muunganisho wa sasa. Ndani ya JSX, `{<expression>}` inamaanisha kutathmini usemi kama JavaScript.
 
 ```tsx
-      {isConnected && (
+      {connection.status === 'connected' && (
 ```
 
-Tunapohitaji kuingiza JavaScript halisi (au TypeScript ambayo itakusanywa kwa JavaScript) kwenye JSX, tunatumia mabano (`{}`).
+Sintaksia `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
 
-Sintaksia `a && b` ni fupi kwa [`a ? b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Yaani, ikiwa `a` ni kweli inatathmini kuwa `b` na vinginevyo inatathmini `a` (ambayo inaweza kuwa `false`, `0`, n.k). Hii ni njia rahisi ya kuiambia React kwamba kipengele kinapaswa kuonyeshwa tu ikiwa sharti fulani limetimizwa.
-
-Katika hali hii, tunataka tu kumwonyesha mtumiaji `Greeter` ikiwa mtumiaji ameunganishwa kwenye blockchain.
+Hii ndiyo njia ya kawaida ya kuweka taarifa za if ndani ya JSX.
 
 ```tsx
+        <div>
           <Greeter />
-      )}
-    </>
-  )
-}
+          <hr />
 ```
 
-#### `src/components/Greeter.tsx` {#greeter-tsx}
+JSX inafuata kiwango cha XML, ambacho ni kikali zaidi kuliko HTML. Ikiwa lebo haina lebo ya mwisho inayolingana, _lazima_ iwe na mkwaju (`/`) mwishoni ili kuikomesha.
 
-Faili hii ina utendakazi mwingi wa UI. Inajumuisha ufafanuzi ambao kwa kawaida ungekuwa katika faili nyingi, lakini kwa kuwa hii ni mafunzo, programu imeboreshwa ili iwe rahisi kuelewa kwa mara ya kwanza, badala ya utendakazi au urahisi wa matengenezo.
+Hapa tuna lebo mbili kama hizo, `<Greeter />` (ambayo kwa kweli ina kodi ya HTML inayozungumza na mkataba) na [`<HTML-PLACEHOLDER-HTMLTAG-8d9513 />` kwa ajili ya mstari wa mlalo](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
-import { useState, ChangeEventHandler } from 'react'
-import {  useNetwork,
-          useReadContract,
-          usePrepareContractWrite,
-          useContractWrite,
-          useContractEvent
-        } from 'wagmi'
+          <button type="button" onClick={disconnect}>
+            Disconnect
+          </button>
+        </div>
+      )}
 ```
 
-Tunatumia vitendaji hivi vya maktaba. Tena, zimeelezwa hapa chini zinapotumiwa.
+Ikiwa mtumiaji atabofya kitufe hiki, ita chaguo la kukokotoa la `disconnect`.
+
+```tsx
+      {connection.status !== 'connected' && (
+```
+
+Ikiwa _hatujaunganishwa_, onyesha chaguo zinazohitajika ili kuunganisha kwenye mkoba.
+
+```tsx
+        <div>
+          <h2>Connect</h2>
+          {connectors.map((connector) => (
+```
+
+Katika `connectors` tuna orodha ya viunganishi. Tunatumia [`map`](https://www.w3schools.com/jsref/jsref_map.asp) kuigeuza kuwa orodha ya vitufe vya JSX vya kuonyesha.
+
+```tsx
+            <button
+              key={connector.uid}
+```
+
+Katika JSX ni lazima kwa lebo "ndugu" (lebo zinazotoka kwa mzazi mmoja) kuwa na vitambulisho tofauti.
+
+```tsx
+              onClick={() => connect({ connector })}
+              type="button"
+            >
+              {connector.name}
+            </button>
+          ))}
+```
+
+Vitufe vya kiunganishi.
+
+```tsx
+          <div>{status}</div>
+          <div>{error?.message}</div>
+        </div>
+      )}
+```
+
+Toa taarifa za ziada. Sintaksia ya usemi `<variable>?.<field>` inaiambia JavaScript kwamba ikiwa kigezo kimefafanuliwa, tathmini kwenye uwanja huo. Ikiwa kigezo hakijafafanuliwa, basi usemi huu unatathminiwa kuwa `undefined`.
+
+Usemi `error.message`, wakati hakuna hitilafu, ungeibua ubaguzi. Kutumia `error?.message` kunaturuhusu kuepuka suala hilo.
+
+#### `src/Greeter.tsx` {#greeter-tsx}
+
+Faili hili lina utendaji mwingi wa UI. Linajumuisha ufafanuzi ambao kwa kawaida ungekuwa katika faili nyingi, lakini kwa kuwa huu ni mafunzo, programu imeboreshwa ili iwe rahisi kueleweka mara ya kwanza, badala ya utendaji au urahisi wa matengenezo.
+
+```tsx
+import {
+          useState,
+          useEffect,
+       } from 'react'
+import {  useChainId,
+          useAccount,
+          useReadContract,
+          useWriteContract,
+          useWatchContractEvent,
+          useSimulateContract
+       } from 'wagmi'
+```
+
+Tunatumia chaguo hizi za kukokotoa za maktaba. Tena, zinaelezwa hapa chini zinapotumika.
 
 ```tsx
 import { AddressType } from 'abitype'
@@ -194,14 +334,16 @@ import { AddressType } from 'abitype'
 
 ```tsx
 let greeterABI = [
-  .
-  .
-  .
+  { "type": "function", "name": "greet", ... },
+  { "type": "function", "name": "setGreeting", ... },
+  { "type": "event", "name": "SetGreeting", ... },
 ] as const   // greeterABI
 ```
 
-ABI kwa mkataba wa `Greeter`.
-Ikiwa unasanidi mikataba na UI kwa wakati mmoja, kwa kawaida unaweza kuziweka katika hazina moja na kutumia ABI iliyotolewa na mkusanyaji wa Solidity kama faili katika programu yako. Hata hivyo, hii si lazima hapa kwa sababu mkataba tayari umesanidiwa na hautabadilika.
+ABI kwa ajili ya mkataba wa `Greeter`.
+Ikiwa unaunda mikataba na UI kwa wakati mmoja, kwa kawaida ungeziweka katika hazina moja na kutumia ABI inayozalishwa na kikusanyaji cha Solidity kama faili katika programu yako. Hata hivyo, hii si lazima hapa kwa sababu mkataba tayari umeundwa na hautabadilika.
+
+Tunatumia [`as const`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions) kuiambia TypeScript kwamba hii ni konstanti _halisi_. Kwa kawaida, unapobainisha katika JavaScript `const x = {"a": 1}`, unaweza kubadilisha thamani katika `x`, huwezi tu kuikabidhi.
 
 ```tsx
 type AddressPerBlockchainType = {
@@ -209,114 +351,202 @@ type AddressPerBlockchainType = {
 }
 ```
 
-TypeScript imeandikwa kwa nguvu. Tunatumia ufafanuzi huu kubainisha anwani ambamo mkataba wa `Greeter` umetumwa kwenye minyororo tofauti. Ufunguo ni nambari (chainId), na thamani ni `AddressType` (anwani).
+TypeScript ina aina kali. Tunatumia ufafanuzi huu kubainisha anwani ambapo mkataba wa `Greeter` umesambazwa kwenye minyororo tofauti. Ufunguo ni nambari (chainId), na thamani ni `AddressType` (anwani).
 
 ```tsx
-const contractAddrs: AddressPerBlockchainType = {
-  // Holesky
-  17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
-
+const contractAddrs : AddressPerBlockchainType = {
   // Sepolia
-  11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
+    11155111: '0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA'
 }
 ```
 
-Anwani ya mkataba kwenye mitandao miwili inayotumika: [Holesky](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contact_code) na [Sepolia](https://eth-sepolia.blockscout.com/address/0x7143d5c190F048C8d19fe325b748b081903E3BF0?tab=contact_code).
+Anwani ya mkataba kwenye [Sepolia](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract).
 
-Kumbuka: Kwa kweli kuna ufafanuzi wa tatu, kwa Redstone Holesky, utaelezwa hapa chini.
+##### Kijenzi cha `Timer` {#timer-component}
+
+Kijenzi cha `Timer` kinaonyesha idadi ya sekunde tangu wakati fulani. Hii ni muhimu kwa madhumuni ya utumiaji. Watumiaji wanapofanya jambo, wanatarajia majibu ya haraka. Katika minyororo ya vitalu, hii mara nyingi haiwezekani kwa sababu hakuna kinachotokea hadi muamala uwekwe kwenye kitalu. Suluhisho moja ni kuonyesha muda ambao umepita tangu mtumiaji afanye kitendo, ili mtumiaji aweze kuamua ikiwa muda unaohitajika ni wa kuridhisha.
 
 ```tsx
-type ShowObjectAttrsType = {
-  name: string,
-  object: any
+type TimerProps = {
+  lastUpdate: Date
 }
 ```
 
-Aina hii hutumiwa kama kigezo kwa sehemu ya `ShowObject` (iliyoelezwa baadaye). Inajumuisha jina la kitu na thamani yake, ambayo huonyeshwa kwa madhumuni ya utatuzi.
+Kijenzi cha `Timer` kinachukua kigezo kimoja, `lastUpdate`, ambacho ni wakati wa kitendo cha mwisho.
 
 ```tsx
-type ShowGreetingAttrsType = {
-  greeting: string | undefined
+const Timer = ({ lastUpdate }: TimerProps) => {
+  const [_, setNow] = useState(new Date())
+```
+
+Tunahitaji kuwa na hali (kigezo kilichofungwa kwenye kijenzi) na kuisasisha ili kijenzi kifanye kazi kwa usahihi. Lakini hatuhitaji kamwe kuisoma, kwa hivyo usijisumbue kufanya kigezo.
+
+```tsx
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000)
+    return () => clearInterval(id)
+  }, [])
+```
+
+Chaguo la kukokotoa la [`setInterval`](https://www.w3schools.com/jsref/met_win_setinterval.asp) linaturuhusu kupanga chaguo la kukokotoa kuendeshwa mara kwa mara. Katika kesi hii, kila sekunde. Chaguo la kukokotoa linaita `setNow` ili kusasisha hali, kwa hivyo kijenzi cha `Timer` kitatolewa tena. Tunafunga hii ndani ya [`useEffect`](https://react.dev/reference/react/useEffect) na orodha tupu ya utegemezi ili itokee mara moja tu, badala ya kila wakati kijenzi kinapotolewa.
+
+```tsx
+  const secondsSinceUpdate = Math.floor(
+    (Date.now() - lastUpdate.getTime()) / 1000
+  )
+
+  return (
+    <span>{secondsSinceUpdate} seconds ago</span>
+  )
 }
 ```
 
-Wakati wowote tunaweza kujua salamu ni nini (kwa sababu tuliisoma kutoka kwa blockchain) au hatujui (kwa sababu bado hatujaipokea). Kwa hivyo ni muhimu kuwa na aina ambayo inaweza kuwa mfuatano au chochote.
+Kokotoa idadi ya sekunde tangu sasisho la mwisho na uirudishe.
 
-##### Kipengele cha `Greeter` {#greeter-component}
+##### Kijenzi cha `Greeter` {#greeter-component}
 
 ```tsx
 const Greeter = () => {
 ```
 
-Hatimaye, tunapata kufafanua kipengele.
+Hatimaye, tunapata kufafanua kijenzi.
 
 ```tsx
-  const { chain } = useNetwork()
+  const chainId = useChainId()
+  const account = useAccount()
 ```
 
-Taarifa kuhusu msururu tunaotumia, kwa hisani ya [wagmi](https://wagmi.sh/react/hooks/useNetwork).
-Kwa sababu hii ni ndoano (`use...`), kila wakati habari hii inapobadilika sehemu hiyo huchorwa upya.
+Taarifa kuhusu mnyororo na akaunti tunayotumia, kwa hisani ya [wagmi](https://wagmi.sh/). Kwa sababu hii ni ndoano (`use...`), kijenzi kinatolewa tena wakati wowote taarifa hii inabadilika.
 
 ```tsx
-  const greeterAddr = chain && contractAddrs[chain.id]
+  const greeterAddr = chainId && contractAddrs[chainId] 
 ```
 
-Anwani ya mkataba wa Greeter, ambayo hutofautiana kulingana na mnyororo (na ambayo ni `undefined` ikiwa hatuna maelezo ya mnyororo au tuko kwenye mnyororo bila mkataba huo).
+Anwani ya mkataba wa Greeter, ambayo ni `undefined` ikiwa hatuna taarifa za mnyororo, au tuko kwenye mnyororo usio na mkataba huo.
 
 ```tsx
   const readResults = useReadContract({
     address: greeterAddr,
     abi: greeterABI,
-    functionName: "greet" , // No arguments
-    watch: true
+    functionName: "greet", // Hakuna hoja
   })
 ```
 
-[Ndoano ya `useReadContract`](https://wagmi.sh/react/api/hooks/useReadContract) inasoma habari kutoka kwa mkataba. Unaweza kuona hasa ni taarifa gani inarejesha panua `readResults` katika UI. Katika kesi hii tunataka iendelee kutafuta ili tujulishwe salamu itakapobadilika.
-
-**Kumbuka:** Tunaweza kusikiliza [matukio ya `setGreeting`](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=logs) ili kujua salamu inapobadilika na kusasisha kwa njia hiyo. Hata hivyo, ingawa inaweza kuwa na ufanisi zaidi, haitatumika katika hali zote. Mtumiaji anapobadilisha hadi msururu tofauti, salamu pia hubadilika, lakini mabadiliko hayo hayaambatani na tukio. Tunaweza kuwa na sehemu moja ya msimbo inayosikiliza matukio na nyingine ya kutambua mabadiliko ya msururu, lakini hilo lingekuwa gumu zaidi kuliko kuweka tu [kigezo cha `watch`](https://wagmi.sh/react/api/hooks/useReadContract#watch-optional).
+[Ndoano ya `useReadContract`](https://wagmi.sh/react/api/hooks/useReadContract) inaita chaguo la kukokotoa la `greet` la [mkataba](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract).
 
 ```tsx
+  const [ currentGreeting, setCurrentGreeting ] = 
+    useState("Please wait while we fetch the greeting from the blockchain...")
   const [ newGreeting, setNewGreeting ] = useState("")
 ```
 
-[Ndoano ya `useState` ya React](https://www.w3schools.com/react/react_usestate.asp) inaturuhusu kubainisha tofauti ya hali, ambayo thamani yake hudumu kutoka uwasilishaji mmoja wa sehemu hadi nyingine. Thamani ya awali ni kigezo, katika kesi hii mfuatano tupu.
+Ndoano ya React ya [`useState`](https://www.w3schools.com/react/react_usestate.asp) inaturuhusu kubainisha kigezo cha hali, ambacho thamani yake inadumu kutoka utoaji mmoja wa kijenzi hadi mwingine. Thamani ya awali ni kigezo, katika kesi hii mfuatano mtupu.
 
 Ndoano ya `useState` inarudisha orodha yenye thamani mbili:
 
-1. Thamani ya sasa ya tofauti ya hali.
-2. Chaguo la kukokotoa la kurekebisha tofauti ya hali inapohitajika. Kwa kuwa hii ni ndoano, kila wakati inapoitwa sehemu hutolewa tena.
+1. Thamani ya sasa ya kigezo cha hali.
+2. Chaguo la kukokotoa la kurekebisha kigezo cha hali inapohitajika. Kwa kuwa hii ni ndoano, kila wakati inapoitwa kijenzi kinatolewa tena.
 
-Katika kesi hii, tunatumia tofauti ya hali kwa salamu mpya ambayo mtumiaji anataka kuweka.
+Katika kesi hii, tunatumia kigezo cha hali kwa ajili ya salamu mpya ambayo mtumiaji anataka kuweka.
 
 ```tsx
-  const greetingChange : ChangeEventHandler<HTMLInputElement> = (evt) =>
+  const [ lastSetterAddress, setLastSetterAddress ] = useState("")
+```
+
+Ikiwa watumiaji wengi wanatumia mkataba mmoja kwa wakati mmoja, wanaweza kufuta salamu za kila mmoja. Hii ingeonekana kwa watumiaji kana kwamba programu haifanyi kazi vizuri. Ikiwa programu inaonyesha ni nani aliyeweka salamu mwisho, mtumiaji atajua alikuwa mtu mwingine na kwamba programu inafanya kazi kwa usahihi.
+
+```tsx
+  const [ status, setStatus ] = useState("")
+  const [ statusTime, setStatusTime ] = useState(new Date())
+```
+
+Watumiaji wanapenda kuona kwamba vitendo vyao vina athari ya haraka. Hata hivyo, kwenye mnyororo wa vitalu, hii sivyo. Vigezo hivi vya hali vinaturuhusu angalau kuonyesha kitu kwa watumiaji ili wajue kitendo chao kinaendelea.
+
+```tsx
+  useEffect(() => {
+    if (readResults.data) {
+      setCurrentGreeting(readResults.data)
+      setStatus("Greeting fetched from blockchain")
+    }
+  }, [readResults.data])
+```
+
+Ikiwa `readResults` hapo juu inabadilisha data na haijawekwa kwa thamani ya uongo (kwa mfano, `undefined`), sasisha salamu ya sasa kwa ile iliyosomwa kutoka kwenye mnyororo wa vitalu. Pia, sasisha hali.
+
+```tsx
+  useWatchContractEvent({
+    address: greeterAddr,
+    abi: greeterABI,
+    eventName: 'SetGreeting',
+    chainId,
+```
+
+Sikiliza matukio ya `SetGreeting`.
+
+```tsx
+    enabled: !!greeterAddr,
+```
+
+`!!<value>` inamaanisha kwamba ikiwa thamani ni `false`, au thamani inayotathminiwa kama uongo, kama vile `undefined`, `0`, au mfuatano mtupu, usemi kwa ujumla ni `false`. Kwa thamani nyingine yoyote, ni `true`. Ni njia ya kubadilisha thamani kuwa boolean, kwa sababu ikiwa hakuna `greeterAddr`, hatutaki kusikiliza matukio.
+
+```tsx
+    onLogs: logs => {
+      const greetingFromContract = logs[0].args.greeting
+      setCurrentGreeting(greetingFromContract)
+      setLastSetterAddress(logs[0].args.sender)
+      updateStatus("Greeting updated by event")
+    },
+  })
+```
+
+Tunapoona kumbukumbu (ambayo hutokea tunapoona tukio jipya), inamaanisha kwamba salamu imebadilishwa. Katika kesi hiyo, tunaweza kusasisha `currentGreeting` na `lastSetterAddress` kwa thamani mpya. Pia, tunataka kusasisha onyesho la hali.
+
+```tsx
+  const updateStatus = (newStatus: string) => {
+    setStatus(newStatus)
+    setStatusTime(new Date())
+  }
+```
+
+Tunaposasisha hali tunataka kufanya mambo mawili:
+
+1. Sasisha mfuatano wa hali (`status`)
+2. Sasisha wakati wa sasisho la mwisho la hali (`statusTime`) kuwa sasa.
+
+```tsx
+  const greetingChange = (evt) =>
     setNewGreeting(evt.target.value)
 ```
 
-Hiki ndicho kishughulikia tukio wakati sehemu mpya ya kuingiza salamu inapobadilika. Aina, [`ChangeEventHandler<HTMLInputElement>`](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events/), inabainisha kuwa huyu ni mshughulikiaji wa mabadiliko ya thamani ya kipengele cha ingizo cha HTML. Sehemu ya `<HTMLInputElement>` inatumika kwa sababu hii ni [aina ya jumla](https://www.w3schools.com/typescript/typescript_basic_generics.php).
+Hiki ni kidhibiti cha tukio kwa mabadiliko kwenye uwanja mpya wa kuingiza salamu. Tungeweza kubainisha aina ya kigezo cha `evt`, lakini TypeScript ni lugha ya hiari ya aina. Kwa kuwa chaguo hili la kukokotoa linaitwa mara moja tu, katika kidhibiti cha tukio cha HTML, sidhani kama ni lazima.
 
 ```tsx
-  const preparedTx = usePrepareContractWrite({
+  const { writeContractAsync } = useWriteContract()
+```
+
+Chaguo la kukokotoa la kuandika kwenye mkataba. Inafanana na [`writeContracts`](https://wagmi.sh/core/api/actions/writeContracts#writecontracts), lakini inawezesha masasisho bora ya hali.
+
+```tsx
+  const simulation = useSimulateContract({
     address: greeterAddr,
     abi: greeterABI,
     functionName: 'setGreeting',
-    args: [ newGreeting ]
+    args: [newGreeting],
+    account: account.address    
   })
-  const workingTx = useContractWrite(preparedTx.config)
 ```
 
-Huu ndio mchakato wa kuwasilisha muamala wa blockchain kutoka kwa mtazamo wa mteja:
+Huu ndio mchakato wa kuwasilisha muamala wa mnyororo wa vitalu kutoka kwa mtazamo wa mteja:
 
-1. Tuma muamala kwa nodi katika blockchain kwa kutumia [`eth_estimateGas`](https://docs.alchemy.com/reference/eth-estimategas).
-2. Subiri jibu kutoka kwa nodi.
-3. Jibu linapopokewa, mwombe mtumiaji asaini muamala kupitia mkoba. Hatua hii _lazima_ itokee baada ya jibu la nodi kupokelewa kwa sababu mtumiaji anaonyeshwa gharama ya gesi ya muamala kabla ya kuusaini.
-4. Subiri mtumiaji akubali.
+1. Tuma muamala kwenye nodi katika mnyororo wa vitalu ukitumia [`eth_estimateGas`](https://docs.alchemy.com/reference/eth-estimategas).
+2. Subiri majibu kutoka kwenye nodi.
+3. Majibu yanapopokelewa, muombe mtumiaji atie saini muamala kupitia mkoba. Hatua hii _lazima_ ifanyike baada ya majibu ya nodi kupokelewa kwa sababu mtumiaji anaonyeshwa gharama ya gesi ya muamala kabla ya kuutia saini.
+4. Subiri mtumiaji aidhinishe.
 5. Tuma muamala tena, wakati huu ukitumia [`eth_sendRawTransaction`](https://docs.alchemy.com/reference/eth-sendrawtransaction).
 
-Hatua ya 2 inaweza kuchukua muda unaoonekana, ambapo watumiaji wangeshangaa kama amri yao ilipokelewa na kiolesura cha mtumiaji na kwa nini hawaombwi kutia saini muamala tayari. Hiyo inafanya uzoefu mbaya wa mtumiaji (UX).
+Hatua ya 2 ina uwezekano wa kuchukua muda unaoonekana, ambapo watumiaji wanaweza kujiuliza ikiwa amri yao ilipokelewa na kiolesura cha mtumiaji na kwa nini hawajaombwa kutia saini muamala bado. Hiyo inaunda uzoefu mbaya wa mtumiaji (UX).
 
-Suluhisho ni kutumia [ndoano za kuandaa](https://wagmi.sh/react/prepare-hooks). Kila wakati kigezo kinapobadilika, tuma ombi la `eth_estimateGas` kwa nodi mara moja. Kisha, mtumiaji anapotaka kutuma muamala (katika kesi hii kwa kubonyeza **Sasisha salamu**), gharama ya gesi inajulikana na mtumiaji anaweza kuona ukurasa wa mkoba mara moja.
+Suluhisho moja ni kutuma `eth_estimateGas` kila wakati kigezo kinapobadilika. Kisha, wakati mtumiaji anataka kutuma muamala (katika kesi hii kwa kubonyeza **Sasisha salamu**), gharama ya gesi inajulikana, na mtumiaji anaweza kuona ukurasa wa mkoba mara moja.
 
 ```tsx
   return (
@@ -327,259 +557,213 @@ Sasa hatimaye tunaweza kuunda HTML halisi ya kurudisha.
 ```tsx
     <>
       <h2>Greeter</h2>
-      {
-        !readResults.isError && !readResults.isLoading &&
-          <ShowGreeting greeting={readResults.data} />
-      }
-      <hr />
+      {currentGreeting}
 ```
 
-Unda sehemu ya `ShowGreeting` (iliyoelezwa hapa chini), lakini tu ikiwa salamu ilisomwa kwa mafanikio kutoka kwa blockchain.
+Onyesha salamu ya sasa.
 
 ```tsx
+      {lastSetterAddress && (
+        <p>Last updated by {
+          lastSetterAddress === account.address ? "you" : lastSetterAddress
+        }</p>
+      )}
+```
+
+Ikiwa tunajua ni nani aliyeweka salamu mwisho, onyesha taarifa hiyo. `Greeter` haifuatilii taarifa hii, na hatutaki kuangalia nyuma kwa matukio ya `SetGreeting`, kwa hivyo tunaipata tu mara tu salamu inapobadilishwa wakati tunaendesha.
+
+```tsx
+      <hr />      
       <input type="text"
         value={newGreeting}
         onChange={greetingChange}
-      />
+      />      
+      <br />
 ```
 
-Hiki ndicho sehemu ya maandishi ya kuingiza ambapo mtumiaji anaweza kuweka salamu mpya. Kila wakati mtumiaji anapobonyeza kitufe, tunaita `greetingChange` ambayo huita `setNewGreeting`. Kwa vile `setNewGreeting` inatoka kwa `useState` ndoano, inasababisha `Greeter` sehemu kutolewa tena. Hii inamaanisha kuwa:
+Huu ni uwanja wa maandishi wa kuingiza ambapo mtumiaji anaweza kuweka salamu mpya. Kila wakati mtumiaji anapobonyeza kitufe, tunaita `greetingChange`, ambayo inaita `setNewGreeting`. Kwa kuwa `setNewGreeting` inatoka kwa `useState`, inasababisha kijenzi cha `Greeter` kutolewa tena. Hii inamaanisha kwamba:
 
-- Tunahitaji kubainisha `value` ili kuweka thamani ya salamu mpya, kwa sababu vinginevyo ingerejea kuwa chaguo-msingi, mfuatano tupu.
-- `usePrepareContractWrite` inaitwa kila wakati `newGreeting` inapobadilika, ambayo ina maana kwamba daima itakuwa na `newGreeting` ya hivi karibuni zaidi katika muamala ulioandaliwa.
+- Tunahitaji kubainisha `value` ili kuweka thamani ya salamu mpya, kwa sababu vinginevyo ingerudi kwenye chaguo-msingi, mfuatano mtupu.
+- `simulation` pia inasasishwa kila wakati `newGreeting` inabadilika, ambayo inamaanisha kwamba tutapata uigaji na salamu sahihi. Hii inaweza kuwa muhimu kwa sababu gharama ya gesi inategemea ukubwa wa data ya wito, ambayo inategemea urefu wa mfuatano.
 
 ```tsx
-      <button disabled={!workingTx.write}
-              onClick={workingTx.write}
+      <button disabled={!simulation.data}
+```
+
+Wezesha kitufe tu mara tu tunapokuwa na taarifa tunayohitaji kutuma muamala.
+
+```tsx
+        onClick={async () => {
+          updateStatus("Please confirm in wallet...")
+```
+
+Sasisha hali. Katika hatua hii, mtumiaji anahitaji kuthibitisha kwenye mkoba.
+
+```tsx
+          await writeContractAsync(simulation.data.request)
+          updateStatus("Transaction sent, waiting for greeting to change...")
+        }}
       >
-        Sasisha salamu
+        Update greeting
       </button>
+
 ```
 
-Ikiwa hakuna `workingTx.write` basi bado tunasubiri maelezo muhimu kwa kutuma sasisho la salamu, kwa hivyo kitufe kimezimwa. Ikiwa kuna thamani ya `workingTx.write` basi hiyo ndiyo kazi ya kuita ili kutuma muamala.
+`writeContractAsync` inarudi tu baada ya muamala kutumwa kwa kweli. Hii inaturuhusu kumuonyesha mtumiaji muda ambao muamala umekuwa ukisubiri kujumuishwa kwenye mnyororo wa vitalu.
 
 ```tsx
-      <hr />
-      <ShowObject name="readResults" object={readResults} />
-      <ShowObject name="preparedTx" object={preparedTx} />
-      <ShowObject name="workingTx" object={workingTx} />
+      <h4>Status: {status}</h4>
+      <p>Updated <Timer lastUpdate={statusTime} /> </p>
     </>
   )
 }
 ```
 
-Mwishowe, kukusaidia kuona tunachofanya, onyesha vitu vitatu tunavyotumia:
+Onyesha hali na muda ambao umepita tangu isasishwe.
 
-- `readResults`
-- `preparedTx`
-- `workingTx`
-
-##### Kipengele cha `ShowGreeting` {#showgreeting-component}
-
-Sehemu hii inaonyesha
-
-```tsx
-const ShowGreeting = (attrs : ShowGreetingAttrsType) => {
+```
+export {Greeter}
 ```
 
-Chaguo la kukokotoa la sehemu hupokea kigezo chenye sifa zote za sehemu.
-
-```tsx
-  return <b>{attrs.greeting}</b>
-}
-```
-
-##### Kipengele cha `ShowObject` {#showobject-component}
-
-Kwa madhumuni ya habari, tunatumia `ShowObject` sehemu kuonyesha vitu muhimu (`readResults` kwa kusoma salamu na `preparedTx` na `workingTx` kwa miamala tunayounda).
-
-```tsx
-const ShowObject = (attrs: ShowObjectAttrsType ) => {
-  const keys = Object.keys(attrs.object)
-  const funs = keys.filter(k => typeof attrs.object[k] == "function")
-  return <>
-    <details>
-```
-
-Hatutaki kubandika UI na habari zote, kwa hivyo ili iwezekane kuzitazama au kuzifunga, tunatumia lebo ya [`details`](https://www.w3schools.com/tags/tag_details.asp).
-
-```tsx
-      <summary>{attrs.name}</summary>
-      <pre>
-        {JSON.stringify(attrs.object, null, 2)}
-```
-
-Sehemu nyingi huonyeshwa kwa kutumia [`JSON.stringify`](https://www.w3schools.com/js/js_json_stringify.asp).
-
-```tsx
-      </pre>
-      { funs.length > 0 &&
-        <>
-          Functions:
-          <ul>
-```
-
-Isipokuwa ni vitendaji, ambavyo si sehemu ya [kiwango cha JSON](https://www.json.org/json-en.html), kwa hivyo lazima zionyeshwe kando.
-
-```tsx
-          {funs.map((f, i) =>
-```
-
-Ndani ya JSX, msimbo ndani ya `{` mabano ya curly `}` hutafsiriwa kama JavaScript. Kisha, msimbo ndani ya `(` mabano ya kawaida `)`, hutafsiriwa tena kama JSX.
-
-```tsx
-           (<li key={i}>{f}</li>)
-                )}
-```
-
-React inahitaji lebo katika [DOM Tree](https://www.w3schools.com/js/js_htmldom.asp) ili kuwa na vitambulisho tofauti. Hii inamaanisha kuwa watoto wa lebo moja (katika kesi hii, [orodha isiyopangwa](https://www.w3schools.com/tags/tag_ul.asp)), wanahitaji sifa tofauti za `key`.
-
-```tsx
-          </ul>
-        </>
-      }
-    </details>
-  </>
-}
-```
-
-Maliza lebo mbalimbali za HTML.
-
-##### Uuzaji wa mwisho {#the-final-export}
-
-```tsx
-export { Greeter }
-```
-
-Kipengele cha `Greeter` ndicho tunachohitaji kuhamisha kwa ajili ya programu.
+Hamisha kijenzi.
 
 #### `src/wagmi.ts` {#wagmi-ts}
 
-Hatimaye, ufafanuzi mbalimbali unaohusiana na WAGMI uko katika `src/wagmi.ts`. Sitaeleza kila kitu hapa, kwa sababu sehemu kubwa yake ni kiolezo ambacho huenda huhitaji kubadilisha.
-
-Msimbo hapa si sawa kabisa na [kwenye github](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) kwa sababu baadaye katika makala tunaongeza mnyororo mwingine ([Redstone Holesky](https://redstone.xyz/docs/network-info)).
+Hatimaye, ufafanuzi mbalimbali unaohusiana na wagmi uko katika `src/wagmi.ts`. Sitaelezea kila kitu hapa, kwa sababu mengi yake ni kiolezo ambacho huenda hutahitaji kubadilisha.
 
 ```ts
-import { getDefaultWallets } from '@rainbow-me/rainbowkit'
-import { configureChains, createConfig } from 'wagmi'
-import { holesky, sepolia } from 'wagmi/chains'
-```
-
-Ingiza blockchains ambazo programu inasaidia. Unaweza kuona orodha ya minyororo inayotumika [kwenye github ya viem](https://github.com/wagmi-dev/viem/tree/main/src/chains/definitions).
-
-```ts
-import { publicProvider } from 'wagmi/providers/public'
-
-const walletConnectProjectId = 'c96e690bb92b6311e8e9b2a6a22df575'
-```
-
-Ili uweze kutumia [WalletConnect](https://walletconnect.com/) unahitaji kitambulisho cha mradi kwa ajili ya programu yako. Unaweza kuipata [kwenye cloud.walletconnect.com](https://cloud.walletconnect.com/sign-in).
-
-```ts
-const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [ holesky, sepolia ],
-  [
-    publicProvider(),
-  ],
-)
-
-const { connectors } = getDefaultWallets({
-  appName: 'My wagmi + RainbowKit App',
-  chains,
-  projectId: walletConnectProjectId,
-})
+import { http, webSocket, createConfig, fallback } from 'wagmi'
+import { sepolia } from 'wagmi/chains'
+import { injected } from 'wagmi/connectors'
 
 export const config = createConfig({
-  autoConnect: true,
-  connectors,
-  publicClient,
-  webSocketPublicClient,
-})
-
-export { chains }
+  chains: [sepolia],
 ```
 
-### Kuongeza blockchain nyingine {#add-blockchain}
+Usanidi wa wagmi unajumuisha minyororo inayoungwa mkono na programu hii. Unaweza kuona [orodha ya minyororo inayopatikana](https://wagmi.sh/core/api/chains).
 
-Siku hizi kuna suluhisho nyingi za [uongezaji wa L2](/layer-2/), na unaweza kutaka kusaidia baadhi ambazo viem bado haizisaidii. Ili kuifanya, unarekebisha `src/wagmi.ts`. Maagizo haya yanaelezea jinsi ya kuongeza [Redstone Holesky](https://redstone.xyz/docs/network-info).
+```ts
+  connectors: [
+    injected(),
+  ],
+```
 
-1. Ingiza aina ya `defineChain` kutoka kwa viem.
+[Kiunganishi hiki](https://wagmi.sh/core/api/connectors/injected) kinaturuhusu kuzungumza na mkoba uliosakinishwa kwenye kivinjari.
 
-   ```ts
-   import { defineChain } from 'viem'
-   ```
+```ts
+  transports: {
+    [sepolia.id]: http()
+```
 
-2. Ongeza ufafanuzi wa mtandao.
+Mwisho wa HTTP wa chaguo-msingi unaokuja na Viem ni mzuri vya kutosha. Ikiwa tunataka URL tofauti, tunaweza kutumia `http("https:// hostname ")` au `webSocket("wss:// hostname ")`.
 
-   ```ts
-   const redstoneHolesky = defineChain({
-      id: 17_001,
-      name: 'Redstone Holesky',
-      network: 'redstone-holesky',
-      nativeCurrency: {
-        decimals: 18,
-        name: 'Ether',
-        symbol: 'ETH',
-      },
-      rpcUrls: {
-        default: {
-          http: ['https://rpc.holesky.redstone.xyz'],
-          webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
-      },
-      public: {
-          http: ['https://rpc.holesky.redstone.xyz'],
-          webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
-        },
-      },
-      blockExplorers: {
-        default: { name: 'Explorer', url: 'https://explorer.holesky.redstone.xyz' },
-      },
-   })
-   ```
+```ts
+  },
+  multiInjectedProviderDiscovery: false,
+})
+```
 
-3. Ongeza mnyororo mpya kwenye simu ya `configureChains`.
+## Kuongeza mnyororo mwingine wa vitalu {#add-blockchain}
 
-   ```ts
-    const { chains, publicClient, webSocketPublicClient } = configureChains(
-      [ holesky, sepolia, redstoneHolesky ],
-      [ publicProvider(), ],
-    )
-   ```
+Siku hizi kuna [suluhu nyingi za kuongeza ukubwa za L2](https://ethereum.org/layer-2/), na unaweza kutaka kuunga mkono baadhi ambazo viem haiungi mkono bado. Ili kufanya hivyo, unarekebisha `src/wagmi.ts`. Maagizo haya yanaelezea jinsi ya kuongeza [Optimism Sepolia](https://chainlist.org/chain/11155420).
 
-4. Hakikisha kwamba programu inajua anwani ya mikataba yako kwenye mtandao mpya. Katika kesi hii, tunarekebisha `src/components/Greeter.tsx`:
+1.  Hariri `src/wagmi.ts`
+
+    A. Ingiza aina ya `defineChain` kutoka viem.
+
+          ```ts
+          import { defineChain } from 'viem'
+          ```
+
+    B. Ongeza ufafanuzi wa mtandao. Huhitaji kufanya hivi kwa Optimism Sepolia, [tayari iko katika `viem`](https://github.com/wevm/viem/blob/main/src/chains/definitions/optimismSepolia.ts), lakini kwa njia hii unajifunza jinsi ya kuongeza mnyororo wa vitalu ambao hauko katika `viem`.
+
+          ```ts
+          const optimismSepolia = defineChain({
+              id: 11_155_420,
+              name: 'OP Sepolia',
+              nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
+              rpcUrls: {
+                default: {
+                  http: ['https://sepolia.optimism.io'],
+                  webSocket: ['wss://optimism-sepolia.drpc.org'],
+                },
+              },
+              blockExplorers: {
+                default: {
+                  name: 'Blockscout',
+                  url: 'https://optimism-sepolia.blockscout.com',
+                  apiUrl: 'https://optimism-sepolia.blockscout.com/api',
+                }
+              },
+          })
+          ```
+
+    C. Ongeza mnyororo mpya kwenye wito wa `createConfig`.
+
+          ```ts
+          export const config = createConfig({
+            chains: [sepolia, optimismSepolia],
+            connectors: [
+              injected(),
+            ],
+            transports: {
+              [optimismSepolia.id]: http(),
+              [sepolia.id]: http()
+            },
+            multiInjectedProviderDiscovery: false,
+          })
+          ```
+
+2.  Hariri `src/App.tsx` ili kutoa maoni kuhusu ubadilishaji wa kiotomatiki kwenda Sepolia. Kwenye mfumo wa uzalishaji, labda ungeonyesha vitufe vilivyo na viungo kwa kila mnyororo wa vitalu unaounga mkono.
 
     ```ts
-    const contractAddrs : AddressPerBlockchainType = {
-      // Holesky
-      17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
-    
-      // Redstone Holesky
-      17001: '0x4919517f82a1B89a32392E1BF72ec827ba9986D3',
-    
+    /*
+    useEffect(() => {
+      if (connection.status === 'connected' &&
+          connection.chainId !== SEPOLIA_CHAIN_ID
+      ) {
+        switchChain({ chainId: SEPOLIA_CHAIN_ID })
+      }
+    }, [connection.status, connection.chainId])
+    */
+    ```
+
+3.  Hariri `src/Greeter.tsx` ili kuhakikisha kwamba programu inajua anwani ya mikataba yako kwenye mtandao mpya.
+
+    ```ts
+    const contractAddrs: AddressPerBlockchainType = {
+      // Optimism Sepolia
+      11155420: "0x4dd85791923E9294E934271522f63875EAe5806f",
+
       // Sepolia
-      11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
+      11155111: "0x7143d5c190F048C8d19fe325b748b081903E3BF0",
     }
     ```
 
+4.  Kwenye kivinjari chako.
+
+    A. Vinjari kwenye [ChainList](https://chainlist.org/chain/11155420?testnets=true) na ubofye mojawapo ya vitufe upande wa kulia wa jedwali ili kuongeza mnyororo kwenye mkoba wako.
+
+    B. Katika programu, **Kata muunganisho** na kisha uunganishe tena ili kubadilisha mnyororo wa vitalu. Kuna njia nzuri zaidi za kushughulikia hili, lakini zingehitaji mabadiliko ya programu.
+
 ## Hitimisho {#conclusion}
 
-Bila shaka, hujali sana kuhusu kutoa kiolesura cha mtumiaji kwa ajili ya `Greeter`. Unataka kuunda kiolesura cha mtumiaji kwa mikataba yako mwenyewe. Ili kuunda programu yako mwenyewe, fuata hatua hizi:
+Bila shaka, hujali sana kuhusu kutoa kiolesura cha mtumiaji kwa ajili ya `Greeter`. Unataka kuunda kiolesura cha mtumiaji kwa ajili ya mikataba yako mwenyewe. Ili kuunda programu yako mwenyewe, endesha hatua hizi:
 
 1. Bainisha kuunda programu ya wagmi.
 
    ```sh copy
-   pnpm create wagmi
+   npm create wagmi
    ```
 
-2. Taja jina la programu.
+2. Andika `y` ili kuendelea.
 
-3. Chagua mfumo wa **React**.
+3. Taja programu.
 
-4. Chagua lahaja ya **Vite**.
+4. Chagua mfumo wa **React**.
 
-5. Unaweza [kuongeza kit cha Rainbow](https://www.rainbowkit.com/docs/installation#manual-setup).
+5. Chagua lahaja ya **Vite**.
 
-Sasa nenda ukafanye mikataba yako itumike kwa ulimwengu wote.
+Sasa nenda na ufanye mikataba yako itumike kwa ulimwengu mpana.
 
 [Tazama hapa kwa kazi zangu zaidi](https://cryptodocguy.pro/).
-
