@@ -30,7 +30,7 @@ const AdoptionSwiper = ({
           return (
             <SwiperSlide key={title}>
               <div
-                className={cn("h-full rounded-2xl p-8", adoptionStyles[index])}
+                className={cn("h-full rounded-base p-8", adoptionStyles[index])}
               >
                 <Image
                   src={image}

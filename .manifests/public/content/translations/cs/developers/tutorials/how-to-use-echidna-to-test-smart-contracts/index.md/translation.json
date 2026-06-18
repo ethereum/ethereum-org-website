@@ -1,0 +1,651 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-17T00:08:37.330Z",
+  "englishManifestHash": "56b73dd2dc80",
+  "placeholderOrder": [
+    "CODEBLOCK-6f62d4",
+    "CODEBLOCK-f815b3",
+    "LINK-8c3d27",
+    "LINK-825fa2",
+    "LINK-8ea6f1",
+    "LINK-2775e4",
+    "LINK-684db4",
+    "LINK-04bde7",
+    "LINK-9831ec",
+    "LINK-e56dda",
+    "LINK-a4597d",
+    "CODE-5a1c25",
+    "CODEBLOCK-aeee09",
+    "CODE-b5bea4",
+    "CODE-aeb5c3",
+    "CODE-fcbcf1",
+    "CODEBLOCK-956212",
+    "CODEBLOCK-7a4ac3",
+    "LINK-a4597d",
+    "CODE-5a1c25",
+    "LINK-792a9c",
+    "CODE-b323c3",
+    "CODE-493965",
+    "CODE-422f29",
+    "CODE-e3a5de",
+    "CODEBLOCK-b1d4fb",
+    "CODEBLOCK-c9fb47",
+    "CODEBLOCK-478c4b",
+    "CODEBLOCK-da73e9",
+    "CODE-32783c",
+    "CODEBLOCK-a6bb9a",
+    "LINK-c9b84d",
+    "CODEBLOCK-941e37",
+    "CODE-a03f50",
+    "CODE-b22d23",
+    "CODE-fcbcf1",
+    "CODE-252f10",
+    "CODE-cd0aa9",
+    "CODE-aaa940",
+    "CODE-de7d1b",
+    "CODEBLOCK-699536",
+    "CODEBLOCK-d61588",
+    "CODE-c62f19",
+    "CODE-b5bea4",
+    "CODE-19c104",
+    "CODE-eba78c",
+    "CODE-30f8b1",
+    "CODE-533646",
+    "CODEBLOCK-6f9a9f",
+    "CODEBLOCK-fc6824",
+    "CODEBLOCK-c4c1e0",
+    "CODE-3f524c",
+    "CODE-e4ab4e",
+    "CODE-625e0f",
+    "CODE-c62f19",
+    "CODEBLOCK-117fc7",
+    "CODE-cf10d3",
+    "CODE-efe899",
+    "CODE-cf10d3",
+    "CODEBLOCK-a5e7f4",
+    "LINK-0f11ff",
+    "CODE-d8d042",
+    "CODEBLOCK-b2888e",
+    "CODEBLOCK-124ef5",
+    "CODE-fa9383",
+    "CODE-252f10",
+    "CODEBLOCK-9d4175",
+    "CODEBLOCK-84b7fe",
+    "CODE-252f10",
+    "CODE-3bed2c",
+    "CODE-3c4623",
+    "CODE-252f10",
+    "CODE-252f10",
+    "LINK-55899f",
+    "CODE-fa66c0",
+    "CODE-063094",
+    "CODE-c86872",
+    "CODE-c3f202",
+    "CODE-c4d0cf",
+    "CODE-254506",
+    "CODEBLOCK-a5e7f4",
+    "CODEBLOCK-124ef5",
+    "CODE-fa9383",
+    "LINK-b3deb2",
+    "CODE-60a0af",
+    "CODEBLOCK-11b26e",
+    "LINK-c9b84d",
+    "CODEBLOCK-0d81f2",
+    "CODEBLOCK-d060fd",
+    "LINK-0f11ff",
+    "CODE-d8d042",
+    "CODEBLOCK-d8e0fc",
+    "CODEBLOCK-cdc5dc",
+    "CODEBLOCK-9451d3",
+    "CODE-3be7a5",
+    "CODEBLOCK-0e58a3",
+    "CODE-11f8ad",
+    "CODE-d14add",
+    "CODEBLOCK-6db595",
+    "CODEBLOCK-f19bfb",
+    "CODE-f3cca5",
+    "CODE-ff4240",
+    "CODE-b5bea4",
+    "CODEBLOCK-c64b15",
+    "CODE-d8d042",
+    "CODEBLOCK-ea0395",
+    "CODEBLOCK-1f0639",
+    "CODEBLOCK-420164",
+    "LINK-7f0f23",
+    "CODEBLOCK-b18a40",
+    "CODEBLOCK-4013a8",
+    "CODE-c4f386",
+    "CODE-de70fa",
+    "CODE-913a4c",
+    "CODEBLOCK-509ed4",
+    "CODEBLOCK-741cae",
+    "CODE-4bc53b",
+    "CODEBLOCK-ea0395",
+    "CODEBLOCK-c4c1e0"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-6f62d4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f815b3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-aeee09": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-956212": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7a4ac3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b1d4fb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c9fb47": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-478c4b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-da73e9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a6bb9a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-941e37": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-699536": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d61588": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6f9a9f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fc6824": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c4c1e0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-117fc7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a5e7f4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b2888e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-124ef5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9d4175": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-84b7fe": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-11b26e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0d81f2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d060fd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d8e0fc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cdc5dc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9451d3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0e58a3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6db595": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f19bfb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c64b15": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ea0395": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1f0639": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-420164": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b18a40": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4013a8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-509ed4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-741cae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-5a1c25": {
+      "type": "inline-code",
+      "values": {
+        "content": "token.sol"
+      }
+    },
+    "CODE-b5bea4": {
+      "type": "inline-code",
+      "values": {
+        "content": "true"
+      }
+    },
+    "CODE-aeb5c3": {
+      "type": "inline-code",
+      "values": {
+        "content": "echidna"
+      }
+    },
+    "CODE-fcbcf1": {
+      "type": "inline-code",
+      "values": {
+        "content": "false"
+      }
+    },
+    "CODE-b323c3": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x00a329c0648769A73afAc7F9381E08FB43dBEA72"
+      }
+    },
+    "CODE-493965": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x10000"
+      }
+    },
+    "CODE-422f29": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x20000"
+      }
+    },
+    "CODE-e3a5de": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x00a329C0648769a73afAC7F9381e08fb43DBEA70"
+      }
+    },
+    "CODE-32783c": {
+      "type": "inline-code",
+      "values": {
+        "content": "backdoor"
+      }
+    },
+    "CODE-a03f50": {
+      "type": "inline-code",
+      "values": {
+        "content": "reset1"
+      }
+    },
+    "CODE-b22d23": {
+      "type": "inline-code",
+      "values": {
+        "content": "reset2"
+      }
+    },
+    "CODE-252f10": {
+      "type": "inline-code",
+      "values": {
+        "content": "f"
+      }
+    },
+    "CODE-cd0aa9": {
+      "type": "inline-code",
+      "values": {
+        "content": "g"
+      }
+    },
+    "CODE-aaa940": {
+      "type": "inline-code",
+      "values": {
+        "content": "h"
+      }
+    },
+    "CODE-de7d1b": {
+      "type": "inline-code",
+      "values": {
+        "content": "i"
+      }
+    },
+    "CODE-c62f19": {
+      "type": "inline-code",
+      "values": {
+        "content": "filterBlacklist"
+      }
+    },
+    "CODE-19c104": {
+      "type": "inline-code",
+      "values": {
+        "content": "f()"
+      }
+    },
+    "CODE-eba78c": {
+      "type": "inline-code",
+      "values": {
+        "content": "f(uint256)"
+      }
+    },
+    "CODE-30f8b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"f\""
+      }
+    },
+    "CODE-533646": {
+      "type": "inline-code",
+      "values": {
+        "content": "blacklist.yaml"
+      }
+    },
+    "CODE-3f524c": {
+      "type": "inline-code",
+      "values": {
+        "content": "f1"
+      }
+    },
+    "CODE-e4ab4e": {
+      "type": "inline-code",
+      "values": {
+        "content": "f2"
+      }
+    },
+    "CODE-625e0f": {
+      "type": "inline-code",
+      "values": {
+        "content": "f3"
+      }
+    },
+    "CODE-cf10d3": {
+      "type": "inline-code",
+      "values": {
+        "content": "tmp"
+      }
+    },
+    "CODE-efe899": {
+      "type": "inline-code",
+      "values": {
+        "content": "counter"
+      }
+    },
+    "CODE-d8d042": {
+      "type": "inline-code",
+      "values": {
+        "content": "config.yaml"
+      }
+    },
+    "CODE-fa9383": {
+      "type": "inline-code",
+      "values": {
+        "content": "inc"
+      }
+    },
+    "CODE-3bed2c": {
+      "type": "inline-code",
+      "values": {
+        "content": "internal"
+      }
+    },
+    "CODE-3c4623": {
+      "type": "inline-code",
+      "values": {
+        "content": "external"
+      }
+    },
+    "CODE-fa66c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "assert(ChangeStateAndReturn() == 1)"
+      }
+    },
+    "CODE-063094": {
+      "type": "inline-code",
+      "values": {
+        "content": "assert(var >= 0)"
+      }
+    },
+    "CODE-c86872": {
+      "type": "inline-code",
+      "values": {
+        "content": "var"
+      }
+    },
+    "CODE-c3f202": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint"
+      }
+    },
+    "CODE-c4d0cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "require"
+      }
+    },
+    "CODE-254506": {
+      "type": "inline-code",
+      "values": {
+        "content": "assert"
+      }
+    },
+    "CODE-60a0af": {
+      "type": "inline-code",
+      "values": {
+        "content": "magic.sol"
+      }
+    },
+    "CODE-3be7a5": {
+      "type": "inline-code",
+      "values": {
+        "content": "magic"
+      }
+    },
+    "CODE-11f8ad": {
+      "type": "inline-code",
+      "values": {
+        "content": "new.txt"
+      }
+    },
+    "CODE-d14add": {
+      "type": "inline-code",
+      "values": {
+        "content": "magic(42,129,333,0)"
+      }
+    },
+    "CODE-f3cca5": {
+      "type": "inline-code",
+      "values": {
+        "content": "expensive"
+      }
+    },
+    "CODE-ff4240": {
+      "type": "inline-code",
+      "values": {
+        "content": "echidna_test"
+      }
+    },
+    "CODE-c4f386": {
+      "type": "inline-code",
+      "values": {
+        "content": "addrs"
+      }
+    },
+    "CODE-de70fa": {
+      "type": "inline-code",
+      "values": {
+        "content": "pop"
+      }
+    },
+    "CODE-913a4c": {
+      "type": "inline-code",
+      "values": {
+        "content": "clear"
+      }
+    },
+    "CODE-4bc53b": {
+      "type": "inline-code",
+      "values": {
+        "content": "estimateGas"
+      }
+    },
+    "LINK-8c3d27": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/echidna/releases/tag/v1.4.0.0"
+      }
+    },
+    "LINK-825fa2": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/"
+      }
+    },
+    "LINK-8ea6f1": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/"
+      }
+    },
+    "LINK-2775e4": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/"
+      }
+    },
+    "LINK-684db4": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Fuzzing"
+      }
+    },
+    "LINK-04bde7": {
+      "type": "link",
+      "values": {
+        "url": "http://lcamtuf.coredump.cx/afl/"
+      }
+    },
+    "LINK-9831ec": {
+      "type": "link",
+      "values": {
+        "url": "https://llvm.org/docs/LibFuzzer.html"
+      }
+    },
+    "LINK-e56dda": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/QuickCheck"
+      }
+    },
+    "LINK-a4597d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol"
+      }
+    },
+    "LINK-792a9c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/#constructor-functions"
+      }
+    },
+    "LINK-c9b84d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/manticore"
+      }
+    },
+    "LINK-0f11ff": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/echidna/wiki/Config"
+      }
+    },
+    "LINK-55899f": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.regehr.org/archives/1091"
+      }
+    },
+    "LINK-b3deb2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol"
+      }
+    },
+    "LINK-7f0f23": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:08:37.330Z",
+      "status": "success"
+    }
+  }
+}

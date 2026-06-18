@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-16T22:50:05.291Z",
+  "englishManifestHash": "eeca84d74004",
+  "placeholderOrder": [
+    "LINK-1e4854",
+    "LINK-8fc374",
+    "LINK-61accd",
+    "LINK-96b7f1",
+    "LINK-db228f",
+    "LINK-273099",
+    "LINK-3a5e7c",
+    "LINK-973dea",
+    "LINK-a6335c",
+    "LINK-5ab525",
+    "LINK-623e13",
+    "LINK-7b78fd",
+    "LINK-85560e",
+    "LINK-62e2b6",
+    "LINK-1a5c7f",
+    "LINK-9544db",
+    "LINK-78e8f8",
+    "LINK-bdcaf5",
+    "LINK-396254",
+    "LINK-8c287d",
+    "LINK-93b566",
+    "LINK-29689c",
+    "LINK-56c44a",
+    "LINK-0534d3",
+    "LINK-38b3d5",
+    "LINK-d408d2",
+    "LINK-ea56bb",
+    "LINK-3eebfe",
+    "LINK-e0dcc3",
+    "LINK-18b71f",
+    "LINK-88193e",
+    "LINK-754df2",
+    "LINK-1e5b00",
+    "LINK-871f0d",
+    "LINK-d26b3f",
+    "LINK-fa1d80",
+    "LINK-f97824",
+    "LINK-4a612e",
+    "LINK-a94c74",
+    "LINK-1d235f",
+    "LINK-da4ab9",
+    "LINK-81c29b",
+    "LINK-91942e",
+    "LINK-5787ea",
+    "LINK-6ec716",
+    "LINK-f7cf1c",
+    "LINK-406d98",
+    "LINK-d5e30b",
+    "LINK-4f7465",
+    "LINK-eda56f",
+    "LINK-74a853",
+    "LINK-671183",
+    "LINK-200c77",
+    "LINK-34a4f9",
+    "LINK-9f5b55",
+    "LINK-bda017",
+    "LINK-a0e518",
+    "LINK-7b564f"
+  ],
+  "placeholderMap": {
+    "LINK-1e4854": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps/"
+      }
+    },
+    "LINK-8fc374": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/ethereum-stack/"
+      }
+    },
+    "LINK-61accd": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/"
+      }
+    },
+    "LINK-96b7f1": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/"
+      }
+    },
+    "LINK-db228f": {
+      "type": "link",
+      "values": {
+        "url": "https://t.me/foundry_support"
+      }
+    },
+    "LINK-273099": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crisgarner/awesome-foundry"
+      }
+    },
+    "LINK-3a5e7c": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org"
+      }
+    },
+    "LINK-973dea": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/nomiclabs/hardhat"
+      }
+    },
+    "LINK-a6335c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.apeworx.io/ape/stable/"
+      }
+    },
+    "LINK-5ab525": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ApeWorX/ape"
+      }
+    },
+    "LINK-623e13": {
+      "type": "link",
+      "values": {
+        "url": "https://www.web3labs.com/web3j-sdk"
+      }
+    },
+    "LINK-7b78fd": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3j.io"
+      }
+    },
+    "LINK-85560e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/web3j/web3j"
+      }
+    },
+    "LINK-62e2b6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Kr1ptal/ethers-kt"
+      }
+    },
+    "LINK-1a5c7f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Kr1ptal/ethers-kt/tree/master/examples"
+      }
+    },
+    "LINK-9544db": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/rx35NzQGSb"
+      }
+    },
+    "LINK-78e8f8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/paulrberg/create-eth-app"
+      }
+    },
+    "LINK-bdcaf5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/PaulRBerg/create-eth-app/tree/develop/templates"
+      }
+    },
+    "LINK-396254": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/scaffold-eth/scaffold-eth-2"
+      }
+    },
+    "LINK-8c287d": {
+      "type": "link",
+      "values": {
+        "url": "https://tenderly.co/"
+      }
+    },
+    "LINK-93b566": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.tenderly.co/"
+      }
+    },
+    "LINK-29689c": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/"
+      }
+    },
+    "LINK-56c44a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/the-graph-fixing-web3-data-querying/"
+      }
+    },
+    "LINK-0534d3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/"
+      }
+    },
+    "LINK-38b3d5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform"
+      }
+    },
+    "LINK-d408d2": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/alchemyplatform"
+      }
+    },
+    "LINK-ea56bb": {
+      "type": "link",
+      "values": {
+        "url": "https://nodereal.io/"
+      }
+    },
+    "LINK-3eebfe": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/node-real"
+      }
+    },
+    "LINK-e0dcc3": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/V5k5gsuE"
+      }
+    },
+    "LINK-18b71f": {
+      "type": "link",
+      "values": {
+        "url": "https://portal.thirdweb.com/sdk/"
+      }
+    },
+    "LINK-88193e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/thirdweb-dev/"
+      }
+    },
+    "LINK-754df2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.chainstack.com/"
+      }
+    },
+    "LINK-1e5b00": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/chainstack"
+      }
+    },
+    "LINK-871f0d": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/BSb5zfp9AT"
+      }
+    },
+    "LINK-d26b3f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.crossmint.com"
+      }
+    },
+    "LINK-fa1d80": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.crossmint.com"
+      }
+    },
+    "LINK-f97824": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/crossmint"
+      }
+    },
+    "LINK-4a612e": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-brownie.readthedocs.io/en/latest/"
+      }
+    },
+    "LINK-a94c74": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/eth-brownie/brownie"
+      }
+    },
+    "LINK-1d235f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/defender/sdk"
+      }
+    },
+    "LINK-da4ab9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-sdk"
+      }
+    },
+    "LINK-81c29b": {
+      "type": "link",
+      "values": {
+        "url": "https://forum.openzeppelin.com/c/support/17"
+      }
+    },
+    "LINK-91942e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/catapulta-sh"
+      }
+    },
+    "LINK-5787ea": {
+      "type": "link",
+      "values": {
+        "url": "https://goldrush.dev/"
+      }
+    },
+    "LINK-6ec716": {
+      "type": "link",
+      "values": {
+        "url": "https://goldrush.dev/docs/chains/ethereum"
+      }
+    },
+    "LINK-f7cf1c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/covalenthq"
+      }
+    },
+    "LINK-406d98": {
+      "type": "link",
+      "values": {
+        "url": "https://www.covalenthq.com/discord/"
+      }
+    },
+    "LINK-d5e30b": {
+      "type": "link",
+      "values": {
+        "url": "https://getwake.io/"
+      }
+    },
+    "LINK-4f7465": {
+      "type": "link",
+      "values": {
+        "url": "https://ackeeblockchain.com/wake/docs/latest/"
+      }
+    },
+    "LINK-eda56f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Ackee-Blockchain/wake"
+      }
+    },
+    "LINK-74a853": {
+      "type": "link",
+      "values": {
+        "url": "https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity"
+      }
+    },
+    "LINK-671183": {
+      "type": "link",
+      "values": {
+        "url": "https://veramo.io/"
+      }
+    },
+    "LINK-200c77": {
+      "type": "link",
+      "values": {
+        "url": "https://veramo.io/docs/basics/introduction"
+      }
+    },
+    "LINK-34a4f9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/uport-project/veramo"
+      }
+    },
+    "LINK-9f5b55": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/FRRBdjemHV"
+      }
+    },
+    "LINK-bda017": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/@veramo/core"
+      }
+    },
+    "LINK-a0e518": {
+      "type": "link",
+      "values": {
+        "url": "/developers/local-environment/"
+      }
+    },
+    "LINK-7b564f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/hello-world-smart-contract-fullstack/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:50:05.291Z",
+      "status": "success"
+    }
+  }
+}

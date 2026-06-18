@@ -157,8 +157,8 @@ const TranslationLeaderboard = ({
           )}
         </RadioCard>
       </Flex>
-      <div className="mb-8 w-full bg-background-highlight shadow-md">
-        <Flex className="bg-muted text-foreground mb-[1px] w-full items-center justify-between p-4">
+      <div className="mb-8 w-full overflow-hidden rounded-base bg-background-highlight shadow-md">
+        <Flex className="mb-px w-full items-center justify-between border-b p-4">
           <Flex>
             <div className="w-10 opacity-40">#</div>
             <Flex className="me-8 flex-row items-center break-words">
@@ -196,7 +196,7 @@ const TranslationLeaderboard = ({
             return (
               <Flex
                 key={idx}
-                className="text-foreground hover:rounded-base hover:bg-accent/50 mb-[1px] w-full items-center justify-between px-4 py-2 shadow-xs hover:shadow-md"
+                className="mb-px w-full items-center justify-between px-4 py-2 shadow-xs hover:bg-background/50 hover:shadow-md"
               >
                 <Flex>
                   <div className="flex w-10 items-center">

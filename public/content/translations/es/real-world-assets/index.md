@@ -1,95 +1,93 @@
 ---
 title: Activos del mundo real (RWA)
-metaTitle: "¿Qué son los activos del mundo real (RWA)? | Beneficios y uso de activos del mundo real"
-description: "Visión general de los activos del mundo real en Ethereum"
+metaTitle: "¿Qué son los RWA? | Beneficios y uso de los activos del mundo real"
+description: "Una descripción general de los activos del mundo real en Ethereum"
 lang: es
 template: use-cases
 image: /images/man-and-dog-playing.png
 alt: Hombre y perro jugando.
 sidebarDepth: 2
 summaryPoints:
-  - "Un método para convertir valiosos productos básicos en tókenes digitales."
-  - "Ahora puede poseer partes de activos u objetos de la vida real, en vez de tener que comprar una propiedad o un objeto en su totalidad."
+  - "Un método para convertir materias primas valiosas en tokens digitales."
+  - "Ahora puedes poseer porciones de objetos o activos de la vida real, en lugar de tener que comprar una propiedad o artículo completo."
   - "Conecta las finanzas tradicionales con el ecosistema de la cadena de bloques."
 ---
 
-Los activos del mundo real (RWA) son tókenes que representan formas existentes de riqueza, como bienes inmuebles, oro, acciones, arte, maquinarias o coleccionables. La tokenización de estos objetos los transforma en digitales, lo que permite dividirlos entre varios propietarios y facilita su comercialización.
+Los activos del mundo real (RWA) son tokens que representan formas de riqueza existentes, como bienes raíces, oro, acciones, arte, maquinaria o artículos de colección. La tokenización de estos artículos los traduce a formato digital, lo que permite dividirlos entre múltiples propietarios y facilita su comercio.
 
-## ¿Qué son los activos del mundo real (RWA)? {#what-are-rwas}
+## ¿Qué son los RWA? {#what-are-rwas}
 
-Algunos RWAs son tangibles, es decir, son objetos que se pueden ver y tocar, como lingotes de oro o edificios empresariales. Otros son intangibles, como la deuda pública, la propiedad intelectual o el capital de una empresa.
+Algunos RWA son tangibles: artículos que puedes ver y tocar, como lingotes de oro o edificios comerciales. Otros son intangibles, como la deuda pública, la propiedad intelectual o el capital de una empresa.
+ 
+Cuando se tokenizan, estos activos se convierten en unidades de valor. El oro tokenizado es un buen ejemplo de cómo funciona esto. La empresa [Paxos](https://www.paxos.com/) traduce lingotes de oro de 400 onzas en 400 tokens en la cadena de bloques de Ethereum, cada uno respaldado por una onza de oro. Los poseedores de tokens pueden canjear sus tokens por oro en cualquier momento. Ese también es el caso de los tokens comprados a otra empresa de RWA, [Tether Gold](https://gold.tether.to/).
 
-Al ser tokenizados, estos activos se convierten en unidades de valor. El oro tokenizado es un buen ejemplo de cómo esto funciona. La empresa [Paxos](https://www.paxos.com/) convierte lingotes de oro de 400 onzas en 400 tókenes en la red de bloques Ethereum, cada uno de ellos respaldado por una onza de oro. Los titulares de tókenes pueden canjearlos por oro en cualquier momento. Esto también se aplica a los tókenes adquiridos de otra empresa de activos del mundo real, [Tether Gold](https://gold.tether.to/).
+Cada token se puede dividir en fracciones aún más pequeñas. Los tokens de Tether Gold, por ejemplo, se pueden dividir en partes tan pequeñas como 0.000001.
+ 
+Los tokens RWA no tienen ningún valor intrínseco. Más bien, reflejan el valor del artículo que representan, por lo que el valor del token cambia junto con el valor del artículo.
 
-Cada token puede dividirse en fracciones aún más pequeñas. Por ejemplo, los tókenes de Tether Gold pueden fraccionarse en partes tan pequeñas como 0,000001.
-
-Los tókenes RWA no tienen un valor intrínseco. Por el contrario, reflejan el valor del objeto que representan, por eso el valor del token fluctúa en función del valor del objeto.
-
-## ¿Qué beneficios presentan los RWA? {#rwas-benefits}
+## ¿Cuáles son los beneficios de los RWA? {#rwas-benefits}
 
 <Grid>
-  <Card title="Propiedad fraccionada" emoji=":house_buildings:" description="Los RWA democratizan la inversión. Si no puedes invertir en ciertos tipos de activos porque no te alcanza para entrar en esos mercados, ahora puedes hacerlo como propietario parcial."/>
-  <Card title="Diversificación de la inversión" emoji="🛒" description="Puedes invertir en múltiples tipos de activos, lo que te permite diversificar tu portafolio sin gastar las enormes sumas de un fondo de cobertura." />
+  <Card title="Propiedad fraccionada" emoji=":house_buildings:" description="Los RWA democratizan la inversión. Si estás excluido de invertir en ciertos tipos de activos porque no puedes permitirte entrar en esos mercados, ahora puedes hacerlo como propietario parcial."/>
+  <Card title="Diversificación de la inversión" emoji="🛒" description="Puedes invertir en múltiples tipos de activos, lo que te permite diversificar tu cartera sin gastar sumas de dinero propias de un fondo de cobertura." />
   <Card title="Oportunidades globales" emoji="🌏" description="Los RWA eliminan las barreras geográficas para la inversión. Puedes comprar tokens de activos ubicados en cualquier parte del mundo." />
-  <Card title="Dar liquidez a los activos" emoji="🖼️" description="Muchos activos no son líquidos. Son valiosos, pero eso no es lo mismo que tener efectivo para gastar. Al tokenizar un activo, los propietarios pueden convertir una parte o su totalidad en valor que pueden usar."/>
-  <Card title="Mercado mundial" emoji="💰" description="Los propietarios que buscan capitalizar sus activos pueden llegar a un abanico más amplio de inversores, no solo a quienes suelen poder comprar terrenos, acciones, obras de arte o instrumentos financieros tradicionales." />
-  <Card title="Sin intermediarios" emoji="👩‍💻" description="Los tokens funcionan con contratos inteligentes, lo que significa que pueden intercambiarse de persona a persona sin necesidad de intermediarios ni de sus comisiones asociadas." />
+  <Card title="Hacer líquidos los activos" emoji="🖼️" description="Muchos activos son ilíquidos. Son valiosos, pero eso no es lo mismo que tener efectivo que puedas gastar. Al tokenizar un activo, los propietarios pueden convertir parte o la totalidad del mismo en valor que pueden utilizar."/>
+  <Card title="Mercado mundial" emoji="💰" description="Los propietarios que buscan capitalizar sus activos pueden llegar a una gama más amplia de inversores, no solo a las personas que normalmente pueden permitirse comprar terrenos, acciones, obras de arte o instrumentos financieros tradicionales." />
+  <Card title="Evitar intermediarios" emoji="👩‍💻" description="Los tokens funcionan mediante contratos inteligentes, lo que significa que se pueden intercambiar de persona a persona sin necesidad de intermediarios ni de sus comisiones asociadas." />
 </Grid>
 
-## ¿Cómo funcionan los RWAs? {#how-rwas-work}
+## ¿Cómo funcionan los RWA? {#how-rwas-work}
 
-Observemos algunos ejemplos en todo el ecosistema de los activos del mundo real: el sector inmobiliario, los productos financieros tradicionales y las bellas artes.
+Veamos algunos ejemplos de todo el ecosistema de los RWA: bienes raíces, productos financieros tradicionales y bellas artes.
 
-### Invertir en el sector inmobiliario {#investing-in-real-estate}
+### Invertir en bienes raíces {#investing-in-real-estate}
 
-Imaginemos que le gustaría invertir en bienes inmuebles, pero la compra de una propiedad entera está fuera de su alcance. En su lugar, podría comprar RWAs a través de un proyecto como [RealT](https://realt.co/). Sus tókenes representan acciones en una sociedad de responsabilidad limitada (SRL) creada para custodiar los títulos de una propiedad. Los titulares de tókenes reciben ingresos por alquiler en forma de monedas estables de acuerdo con la fracción que poseen; RealT afirma que, hasta ahora, ha devuelto 15 millones de $ en ingresos netos por alquiler a los inversionistas.
+Supongamos que te gustaría invertir en bienes raíces, pero comprar una propiedad completa está fuera de tu alcance. En su lugar, podrías comprar RWA a través de un proyecto como [RealT](https://realt.co/). Sus tokens representan acciones en una sociedad de responsabilidad limitada (LLC) creada para mantener la escritura de una propiedad. Los poseedores de tokens reciben ingresos por alquiler en forma de monedas estables (stablecoins) según la fracción que posean; RealT dice que hasta ahora ha devuelto 15 millones de dólares estadounidenses en ingresos netos por alquiler a los inversores. 
 
-Otro proyecto similar, [LABS Group](https://x.com/labsgroupio), permite a las personas comprar bienes inmuebles tokenizados por cuantías de tan solo 100 $.
+Otro proyecto en la misma línea, [LABS Group](https://x.com/labsgroupio), permite a las personas comprar bienes raíces tokenizados con cantidades tan pequeñas como 100 dólares estadounidenses.
 
 ### Invertir en productos financieros {#investing-in-financial-products}
 
-Diversos proyectos unen el mundo de las finanzas tradicionales y las finanzas descentralizadas (DeFi) trasladando valores, acciones, bonos y otros instrumentos financieros a la cadena de bloques.
+Varios proyectos sirven de puente entre el mundo de las finanzas tradicionales y las finanzas descentralizadas (DeFi) al llevar valores, acciones, bonos y otros instrumentos financieros a la cadena de bloques.
 
-Por ejemplo, la empresa basada en Ethereum [Securitize](https://securitize.io/) se especializa en tokenizar productos financieros tradicionales. En 2024, se asoció a BlackRock para lanzar un fondo de activos del mundo real. BlackRock asegura que planea tokenizar 10 billones de sus activos en dólares estadounidenses. Su CEO, Larry Fink, calificó la tokenización como «la próxima generación para los mercados».
+Por ejemplo, la empresa basada en Ethereum [Securitize](https://securitize.io/) se especializa en la tokenización de productos financieros tradicionales. En 2024, se asoció con BlackRock para lanzar un fondo de RWA. BlackRock dice que planea tokenizar eventualmente 10 billones de dólares estadounidenses de sus activos: su director ejecutivo, Larry Fink, llamó a la tokenización "la próxima generación para los mercados".
 
 ### Invertir en bellas artes {#investing-in-fine-art}
 
-Existe una pequeña variedad de mecanismos para invertir en bellas artes. [Masterworks](https://www.masterworks.com/) compra obras de arte, titulariza cada pieza y vende participaciones en forma de tókenes. Posteriormente, planea la venta de las obras de arte y la distribución de los beneficios entre los titulares de los tókenes.
+Existen algunos mecanismos diferentes para la inversión en bellas artes. [Masterworks](https://www.masterworks.com/) compra obras de arte, tituliza cada pieza y vende acciones en forma de tokens. Planea vender posteriormente las obras de arte y distribuir las ganancias a los poseedores de tokens.
 
-Los propietarios de obras de arte que buscan capitalizar su colección pueden vender hasta el 49 % del valor de una obra en la plataforma [Maecenas](https://www.maecenas.co/), siempre que esta esté valorada en más de 1 millón de $.
+Los poseedores de tokens no controlan el almacenamiento ni la venta futura de las obras de arte. Más bien, están a cargo de cuánto tiempo conservan sus tokens, que suben y bajan con el valor del arte.
+ 
+Mientras tanto, el registro de arte digital basado en la cadena de bloques [Artory](https://www.artory.com/) verifica la autenticidad de las obras de arte y registra la propiedad pasada.
 
-En ambos casos, los titulares de los tókenes no controlan el almacenamiento ni la futura venta de las obras de arte. En su lugar, ellos deciden cuánto tiempo conservan sus tókenes, qué suben y qué bajan junto con el valor de la obra de arte.
+### Invertir en artículos de colección {#investing-in-collectibles}
 
-Por su parte, el registro digital de arte basado en la cadena de bloques [Artory](https://www.artory.com/) verifica la autenticidad de las obras y registra la titularidad anterior.
+Hasta ahora, la mayoría de estos ejemplos demuestran cómo la tokenización permite la propiedad parcial de varios tipos de riqueza. Otro beneficio de la tokenización es que permite el comercio de artículos valiosos, como los artículos de colección, en el mercado global.
 
-### Invertir en objetos coleccionables {#investing-in-collectibles}
+Un ejemplo de esto es [Courtyard](https://courtyard.io/), que tokeniza cartas coleccionables (piensa en cartas de béisbol, fútbol o Pokémon). Los propietarios de las cartas las envían a una instalación de almacenamiento seguro en los EE. UU. Las cartas se acuñan como tokens digitales y se agregan a las billeteras de los propietarios para su comercio en el mercado de Courtyard. Courtyard solo acepta cartas calificadas: es decir, donde un tercero ha certificado la autenticidad de una carta y le ha otorgado una puntuación basada en su condición, ya sea deteriorada o impecable.
 
-Hasta ahora la mayoría de los ejemplos citados demuestran cómo la tokenización permite la propiedad parcial de diversos tipos de riqueza. Pero otra ventaja de la tokenización es que permite el comercio de objetos valiosos, como los objetos coleccionables, en el mercado mundial.
+Courtyard también ofrece un tipo de esquema de regalías. Cada vez que se vende una carta, la persona que la tokenizó recibe el uno por ciento de los ingresos. Solo los creadores originales de las cartas son recompensados de esta manera. En cualquier momento, un propietario puede intercambiar sus cartas digitales por cartas físicas, sin importar en qué parte del mundo se encuentren. 
 
-Un ejemplo de lo anterior es [Courtyard](https://courtyard.io/), que convierte en tókenes las tarjetas coleccionables, ya sean de béisbol, fútbol o de Pokemon. Los dueños de las tarjetas las envían a un almacén seguro en Estados Unidos. Las tarjetas se acuñan como tókenes digitales y se añaden a las carteras de los dueños para intercambiarlas en el marketplace de Courtyard. Courtyard solo acepta tarjetas calificadas; es decir, cuando un tercero certifica la autenticidad de una tarjeta y le otorga una puntuación en función de su estado de conservación, ya esté tocado o sea impecable.
+## ¿Cuáles son las limitaciones de los RWA? {#rwas-limitations}
 
-Courtyard también ofrece una especie de sistema de regalías. Cada vez que una tarjeta se vende, la persona que la tokenizó recibe el 1 % de los ingresos. Únicamente los emisores de tarjetas reciben recompensa de esta forma. En cualquier momento, el dueño puede intercambiar sus tarjetas digitales por tarjetas físicas, sin importar en qué parte del mundo se encuentre.
+Uno de los desafíos de los RWA, en esta etapa inicial, implica asegurar la conexión entre los objetos de la vida real y sus representaciones digitales.
 
-## ¿Qué limitaciones tienen los RWA? {#rwas-limitations}
+Una señal positiva es cuando los proyectos de RWA proporcionan a los inversores una prueba de reservas: la garantía de que son los propietarios legales de los objetos físicos que respaldan los tokens digitales. Piensa en Paxos, Tether Gold o Courtyard, mencionados anteriormente, todos los cuales mantienen sus activos en almacenamiento seguro y ofrecen a los propietarios la opción de intercambiar un token por su equivalente físico en cualquier momento.
 
-Uno de los retos de los activos del mundo real, en esta fase inicial, consiste en garantizar la conexión entre los objetos de la vida real y sus representaciones digitales.
+Otra limitación es si la propiedad de los tokens es reconocida por los sistemas legales de todo el mundo. En otras palabras, ¿son los contratos inteligentes exigibles en un tribunal de justicia, o puede el poseedor de un token RWA reclamar la propiedad del artículo de la vida real?
 
-Una señal positiva se produce cuando los proyectos de RWA proporcionan a los inversionistas una prueba de reservas; o sea, la garantía de que son los propietarios jurídicos de los objetos físicos que respaldan los tókenes digitales. Piense en Paxos, Tether Gold o Courtyard, mencionados anteriormente. Todos ellos mantienen sus activos en un almacenamiento seguro y ofrecen a los propietarios la opción de intercambiar un token por su equivalente físico en cualquier momento.
-
-Otra limitación consiste en saber si los sistemas jurídicos de todo el mundo reconocen la propiedad de los tókenes. En otras palabras, ¿los contratos inteligentes son ejecutables ante un tribunal, o el titular de un token RWA puede reclamar la propiedad del objeto real?
-
-Algunos de los pioneros en términos de establecimiento de marcos legales específicamente para reconocer la tokenización son Singapur, Emiratos Árabes Unidos, Hong Kong y Suiza, países que en 2021 introdujeron una legislación apodada «Ley Blockchain» para regular tecnologías como la tokenización. La Unión Europea ha comenzado el proceso de regulación de los RWA, mientras que en Estados Unidos se espera que la Comisión de Bolsa y Valores (SEC) emita una orientación sobre los RWA en algún momento.
+Algunos de los pioneros en términos de establecer marcos legales específicamente para reconocer la tokenización incluyen a Singapur, los Emiratos Árabes Unidos, Hong Kong y Suiza, que introdujo una legislación en 2021 apodada la 'Ley de la Cadena de Bloques' (Blockchain Act) para regular tecnologías como la tokenización. La Unión Europea ha comenzado el proceso de regulación de los RWA, mientras que en los Estados Unidos, se espera que la Comisión de Bolsa y Valores emita directrices sobre los RWA en algún momento.
 
 ## Más información {#learn-more}
 
-Conozca los [contratos inteligentes](/smart-contracts/) o infórmese sobre otro tipo de tókenes, los [tókenes no fungibles (NFT)](/nft/).
+Sumérgete en los [contratos inteligentes](/smart-contracts/) o descubre más sobre una clase de token diferente, los [tokens no fungibles (NFT)](/nft/).
 
 ## Lecturas adicionales {#further-reading}
 
 - [¿Qué es la tokenización de activos?](https://www.britannica.com/money/real-world-asset-tokenization) en Britannica
-- [Cómo la tokenización está transformando las finanzas e inversiones en el mundo](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/) en el Foro Económico Mundial
-- [Lo que los inversores en criptomoneda deben saber sobre la tokenización de activos del mundo real](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/) en Forbes
-- [Cómo funcionan los contratos inteligentes con cadenas de bloques](https://www.britannica.com/money/how-smart-contracts-work) en Britannica
+- [Cómo la tokenización está transformando las finanzas y la inversión globales](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/) en el Foro Económico Mundial
+- [Lo que los inversores cripto necesitan saber sobre la tokenización de activos del mundo real](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/) en Forbes
+- [Cómo funcionan los contratos inteligentes con la cadena de bloques](https://www.britannica.com/money/how-smart-contracts-work) en Britannica
 - [Cómo los activos del mundo real tokenizados están transformando las DeFi](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a) en Medium
-- [¿Qué son los RWA en criptografía? Su papel en la cadena de bloques explicado](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) en BitDegree
-- Principales monedas de activos del mundo real (RWA) por capitalización bursátil en la actualidad](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/) en Forbes
+- [¿Qué son los RWA en cripto? Su papel en la cadena de bloques explicado](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) en BitDegree
+- [Las principales monedas de activos del mundo real (RWA) hoy por capitalización de mercado](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/) en Forbes

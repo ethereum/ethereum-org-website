@@ -1,0 +1,352 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-06-16T22:44:34.916Z",
+  "englishManifestHash": "7aa2e490f8f6",
+  "placeholderOrder": [
+    "LINK-cf2442",
+    "LINK-9fd9da",
+    "LINK-01ebaf",
+    "LINK-480f20",
+    "LINK-964bdb",
+    "LINK-26db8f",
+    "LINK-b84671",
+    "LINK-f948fd",
+    "LINK-d662f7",
+    "LINK-c3ce94",
+    "LINK-55f039",
+    "LINK-2b5ea3",
+    "LINK-3400fa",
+    "LINK-b82bb1",
+    "LINK-4fdf65",
+    "LINK-0d8bf0",
+    "LINK-d8ea43",
+    "LINK-39438e",
+    "LINK-bf2e88",
+    "LINK-4f0305",
+    "LINK-c05ca5",
+    "LINK-ec2130",
+    "LINK-f16951",
+    "LINK-5283b6",
+    "LINK-02babd",
+    "LINK-c9d83c",
+    "LINK-62fa6c",
+    "LINK-0ce5b6",
+    "LINK-9b94e7",
+    "LINK-349100",
+    "LINK-9f6152",
+    "LINK-d1077b",
+    "LINK-fbeea2",
+    "LINK-cb740b",
+    "LINK-e3f3bd",
+    "LINK-a6e391",
+    "LINK-1f9ddf",
+    "LINK-908e33",
+    "LINK-3021fa",
+    "LINK-488d2d",
+    "LINK-cc9553",
+    "LINK-243a8d",
+    "LINK-c342e0",
+    "LINK-a7949a",
+    "LINK-23ad71",
+    "LINK-3f55bf",
+    "LINK-6430dc",
+    "LINK-e16628"
+  ],
+  "placeholderMap": {
+    "LINK-cf2442": {
+      "type": "link",
+      "values": {
+        "url": "/learn/"
+      }
+    },
+    "LINK-9fd9da": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model"
+      }
+    },
+    "LINK-01ebaf": {
+      "type": "link",
+      "values": {
+        "url": "https://ethux.design/"
+      }
+    },
+    "LINK-480f20": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers"
+      }
+    },
+    "LINK-964bdb": {
+      "type": "link",
+      "values": {
+        "url": "https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1"
+      }
+    },
+    "LINK-26db8f": {
+      "type": "link",
+      "values": {
+        "url": "https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/"
+      }
+    },
+    "LINK-b84671": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849"
+      }
+    },
+    "LINK-f948fd": {
+      "type": "link",
+      "values": {
+        "url": "https://reown.com/blog/unveiling-walletconnects-consumer-crypto-report"
+      }
+    },
+    "LINK-d662f7": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing"
+      }
+    },
+    "LINK-c3ce94": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing"
+      }
+    },
+    "LINK-55f039": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/patestevao/BitcoinUX-report/blob/master/report.md"
+      }
+    },
+    "LINK-2b5ea3": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.io/insight-report/web3-and-crypto-global-survey-2023"
+      }
+    },
+    "LINK-3400fa": {
+      "type": "link",
+      "values": {
+        "url": "https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view"
+      }
+    },
+    "LINK-b82bb1": {
+      "type": "link",
+      "values": {
+        "url": "https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf"
+      }
+    },
+    "LINK-4fdf65": {
+      "type": "link",
+      "values": {
+        "url": "https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo"
+      }
+    },
+    "LINK-0d8bf0": {
+      "type": "link",
+      "values": {
+        "url": "<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS"
+      }
+    },
+    "LINK-d8ea43": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.aragon.org/2022-dao-research-update/"
+      }
+    },
+    "LINK-39438e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool"
+      }
+    },
+    "LINK-bf2e88": {
+      "type": "link",
+      "values": {
+        "url": "https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf"
+      }
+    },
+    "LINK-4f0305": {
+      "type": "link",
+      "values": {
+        "url": "https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000"
+      }
+    },
+    "LINK-c05ca5": {
+      "type": "link",
+      "values": {
+        "url": "https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube"
+      }
+    },
+    "LINK-ec2130": {
+      "type": "link",
+      "values": {
+        "url": "https://learnweb3.design/"
+      }
+    },
+    "LINK-f16951": {
+      "type": "link",
+      "values": {
+        "url": "https://web3ux.design/"
+      }
+    },
+    "LINK-5283b6": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1"
+      }
+    },
+    "LINK-02babd": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e"
+      }
+    },
+    "LINK-c9d83c": {
+      "type": "link",
+      "values": {
+        "url": "https://neueux.com/apps"
+      }
+    },
+    "LINK-62fa6c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=oBSXT_6YDzg"
+      }
+    },
+    "LINK-0ce5b6": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/design-and-ux/heuristics-for-web3/"
+      }
+    },
+    "LINK-9b94e7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/design-and-ux/dex-design-best-practice/"
+      }
+    },
+    "LINK-349100": {
+      "type": "link",
+      "values": {
+        "url": "https://www.deepwork.studio/case-studies"
+      }
+    },
+    "LINK-9f6152": {
+      "type": "link",
+      "values": {
+        "url": "https://builtformars.com/case-studies/opensea"
+      }
+    },
+    "LINK-d1077b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver"
+      }
+    },
+    "LINK-fbeea2": {
+      "type": "link",
+      "values": {
+        "url": "https://app.dework.xyz/bounties"
+      }
+    },
+    "LINK-cb740b": {
+      "type": "link",
+      "values": {
+        "url": "https://app.buidlbox.io/"
+      }
+    },
+    "LINK-e3f3bd": {
+      "type": "link",
+      "values": {
+        "url": "https://ethglobal.com/"
+      }
+    },
+    "LINK-a6e391": {
+      "type": "link",
+      "values": {
+        "url": "https://vectordao.com/"
+      }
+    },
+    "LINK-1f9ddf": {
+      "type": "link",
+      "values": {
+        "url": "https://www.deepwork.studio/"
+      }
+    },
+    "LINK-908e33": {
+      "type": "link",
+      "values": {
+        "url": "https://we3.co/"
+      }
+    },
+    "LINK-3021fa": {
+      "type": "link",
+      "values": {
+        "url": "https://openux.xyz/"
+      }
+    },
+    "LINK-488d2d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figma.com/@optimism"
+      }
+    },
+    "LINK-cc9553": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figma.com/@ethdotorg"
+      }
+    },
+    "LINK-243a8d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figma.com/community/file/1073921725197233598/finity-design-system"
+      }
+    },
+    "LINK-c342e0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figma.com/community/file/999852250110186964/kleros-design-system"
+      }
+    },
+    "LINK-a7949a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figma.com/community/file/1337417127407098506/safe-design-system"
+      }
+    },
+    "LINK-23ad71": {
+      "type": "link",
+      "values": {
+        "url": "https://thorin.ens.domains/"
+      }
+    },
+    "LINK-3f55bf": {
+      "type": "link",
+      "values": {
+        "url": "https://degen-xyz.vercel.app/"
+      }
+    },
+    "LINK-6430dc": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/design/adding-design-resources"
+      }
+    },
+    "LINK-e16628": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/public/content/developers/docs/design-and-ux/index.md"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:44:34.916Z",
+      "status": "success"
+    }
+  }
+}

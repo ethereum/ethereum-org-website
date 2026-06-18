@@ -1,449 +1,317 @@
 ---
 title: "Web2認証にイーサリアムを使用する"
-description: "このチュートリアルを読むことで、デベロッパーはイーサリアムログイン (Web3) をSAMLログインと統合できるようになります。SAMLは、Web2でシングルサインオンやその他の関連サービスを提供するために使用される標準です。 これにより、Web2リソースへのアクセスをイーサリアム署名を通じて認証できるようになり、ユーザー属性はアテステーションから取得されます。"
-author: Ori Pomerantz
-tags: [ "web2", "認証", "eas" ]
+description: "このチュートリアルを読むと、開発者はイーサリアムログイン（Web3）を、シングルサインオンやその他の関連サービスを提供するためにWeb2で使用される標準であるSAMLログインと統合できるようになります。これにより、イーサリアムの署名を通じてWeb2リソースへのアクセスを認証し、ユーザー属性をアテステーションから取得できるようになります。"
+author: "オリ・ポメランツ"
+tags:
+  - Web2
+  - 認証
+  - EAS
 skill: beginner
-breadcrumb: "Ethereum web2認証"
+breadcrumb: "Web2認証のためのイーサリアム"
 lang: ja
 published: 2025-04-30
 ---
 
 ## はじめに {#introduction}
 
-[SAML](https://www.onelogin.com/learn/saml)は、Web2で[IDプロバイダー (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) が[サービスプロバイダー (SP)](https://en.wikipedia.org/wiki/Service_provider_\(SAML\))にユーザー情報を提供するために使用される標準です。
+[SAML](https://www.onelogin.com/learn/saml)は、[アイデンティティプロバイダー（IdP）](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider)が[サービスプロバイダー（SP）](https://en.wikipedia.org/wiki/Service_provider_(SAML)にユーザー情報を提供できるようにするためにWeb2で使用される標準です。
 
-このチュートリアルでは、イーサリアム署名をSAMLと統合し、まだイーサリアムをネイティブにサポートしていないWeb2サービスに対して、ユーザーがイーサリアムウォレットを使用して認証できるようにする方法を学びます。
+このチュートリアルでは、イーサリアムの署名をSAMLと統合し、ユーザーがイーサリアムウォレットを使用して、まだイーサリアムをネイティブにサポートしていないWeb2サービスで自分自身を認証できるようにする方法を学びます。
 
-このチュートリアルは、2つの異なる読者を対象に書かれていることに注意してください。
+なお、このチュートリアルは2つの異なる読者層に向けて書かれています。
 
-- イーサリアムを理解していて、SAMLを学ぶ必要があるイーサリアム関係者
-- SAMLとWeb2認証を理解していて、イーサリアムを学ぶ必要があるWeb2関係者
+- イーサリアムを理解しており、SAMLを学ぶ必要があるイーサリアム関係者
+- SAMLとWeb2認証を理解しており、イーサリアムを学ぶ必要があるWeb2関係者
 
-そのため、すでにご存知の入門的な内容が多く含まれています。 適宜読み飛ばしてください。
+その結果、すでに知っている入門的な内容が多く含まれることになります。必要に応じて読み飛ばしてください。
 
 ### イーサリアム関係者向けのSAML {#saml-for-ethereum-people}
 
-SAMLは中央集権型のプロトコルです。 サービスプロバイダー (SP) は、IDプロバイダー (IdP) との間、またはそのIdPの証明書に署名した[証明書認証局](https://www.ssl.com/article/what-is-a-certificate-authority-ca/)との間に、既存の信頼関係がある場合にのみ、IdPからのアサーション (「これは私のユーザーJohnで、A、B、Cを行う権限を持つべきである」など) を受け入れます。
+SAMLは中央集権型のプロトコルです。サービスプロバイダー（SP）は、アイデンティティプロバイダー（IdP）との間、またはそのIdPの証明書に署名した[認証局](https://www.ssl.com/article/what-is-a-certificate-authority-ca/)との間に既存の信頼関係がある場合にのみ、IdPからのアサーション（「これは私のユーザーであるJohnであり、A、B、Cを行う権限を持つべきである」など）を受け入れます。
 
-たとえば、SPは企業に旅行サービスを提供する旅行代理店、IdPは企業の社内ウェブサイトであるとします。 従業員が出張の予約をする際、旅行代理店は、実際に旅行の予約を許可する前に、従業員を会社の認証に送ります。
+例えば、SPは企業に旅行サービスを提供する旅行代理店であり、IdPは企業の社内ウェブサイトである場合があります。従業員が出張を予約する必要がある場合、旅行代理店は実際に旅行を予約させる前に、企業による認証のために従業員を送信します。
 
-![SAMLプロセスのステップバイステップ](./fig-01-saml.png)
+![Step by step SAML process](./fig-01-saml.png)
 
-これが、ブラウザ、SP、IdPの3つのエンティティがアクセスを交渉する方法です。 SPは、ブラウザを使用しているユーザーについて事前に何も知る必要はなく、IdPを信頼するだけで済みます。
+これは、ブラウザ、SP、IdPの3つのエンティティがアクセスを交渉する方法です。SPは、ブラウザを使用しているユーザーについて事前に何も知る必要はなく、IdPを信頼するだけで済みます。
 
 ### SAML関係者向けのイーサリアム {#ethereum-for-saml-people}
 
 イーサリアムは分散型システムです。
 
-![イーサリアムのログオン](./fig-02-eth-logon.png)
+![Ethereum logon](./fig-02-eth-logon.png)
 
-ユーザーは秘密鍵を持っています (通常はブラウザ拡張機能に保存されています)。 秘密鍵から公開鍵を導出し、そこから20バイトのアドレスを導出できます。 ユーザーがシステムにログインする必要がある場合、ノンス (1回限りの値) を持つメッセージに署名するよう要求されます。 サーバーは、署名がそのアドレスによって作成されたことを検証できます。
+ユーザーは秘密鍵（通常はブラウザ拡張機能に保持されます）を持っています。秘密鍵から公開鍵を導出でき、そこから20バイトのアドレスを導出できます。ユーザーがシステムにログインする必要がある場合、ナンス（1回限りの値）を含むメッセージに署名するよう求められます。サーバーは、その署名がそのアドレスによって作成されたことを検証できます。
 
-![アテステーションから追加データを取得](./fig-03-eas-data.png)
+![Getting extra data from attestations](./fig-03-eas-data.png)
 
-署名はイーサリアムアドレスを検証するだけです。 他のユーザー属性を取得するには、通常[アテステーション](https://attest.org/)を使用します。 アテステーションには通常、以下のフィールドがあります。
+署名はイーサリアムのアドレスのみを検証します。他のユーザー属性を取得するには、通常[アテステーション](https://attest.org/)を使用します。アテステーションには通常、以下のフィールドがあります。
 
-- **証明者**、アテステーションを行ったアドレス
-- **受取人**、アテステーションが適用されるアドレス
-- **データ**、名前や権限など、証明されるデータ
-- **スキーマ**、データの解釈に使用されるスキーマのID。
+- **Attestor**（アテスター）: アテステーションを行ったアドレス
+- **Recipient**（受信者）: アテステーションが適用されるアドレス
+- **Data**（データ）: 名前、権限など、証明されるデータ
+- **Schema**（スキーマ）: データを解釈するために使用されるスキーマのID
 
-イーサリアムの分散型の性質により、どのユーザーでもアテステーションを作成できます。 どのアテステーションが信頼できるかを判断するには、証明者のIDが重要です。
+イーサリアムの分散型の性質により、どのユーザーでもアテステーションを行うことができます。どのアテステーションを信頼できると見なすかを特定するためには、アテスターの身元が重要です。
 
 ## セットアップ {#setup}
 
-最初のステップは、SAML SPとSAML IdPが互いに通信できるようにすることです。
+最初のステップは、SAML SPとSAML IdPが相互に通信できるようにすることです。
 
-1. ソフトウェアをダウンロードします。 この記事のサンプルソフトウェアは、[github](https://github.com/qbzzt/250420-saml-ethereum)にあります。 異なるステージは異なるブランチに保存されています。このステージでは `saml-only` を使用します。
+1. ソフトウェアをダウンロードします。この記事のサンプルソフトウェアは[GitHub上](https://github.com/qbzzt/250420-saml-ethereum)にあります。異なるステージは異なるブランチに保存されており、このステージでは`saml-only`が必要です。
 
-    ```sh
-    git clone https://github.com/qbzzt/250420-saml-ethereum -b saml-only
-    cd 250420-saml-ethereum
-    pnpm install
-    ```
+```
+git clone https://github.com/qbzzt/saml-eth-idp.git
+cd saml-eth-idp
+git checkout stage-1
+yarn
+```
 
-2. 自己署名証明書でキーを作成します。 これは、キーがそれ自体の証明書認証局であることを意味し、サービスプロバイダーに手動でインポートする必要があります。 詳細については、[OpenSSLのドキュメント](https://docs.openssl.org/master/man1/openssl-req/)を参照してください。
+2. 自己署名証明書を使用して鍵を作成します。これは、鍵がそれ自身の認証局であることを意味し、サービスプロバイダーに手動でインポートする必要があります。詳細については、[OpenSSLのドキュメント](https://docs.openssl.org/master/man1/openssl-req/)を参照してください。
 
-    ```sh
-    mkdir keys
-    cd keys
-    openssl req -new -x509 -days 365 -nodes -sha256 -out saml-sp.crt -keyout saml-sp.pem -subj /CN=sp/
-    openssl req -new -x509 -days 365 -nodes -sha256 -out saml-idp.crt -keyout saml-idp.pem -subj /CN=idp/
-    cd ..
-    ```
+```
+openssl req -x509 -newkey rsa:4096 -keyout src/idp-private-key.pem -out src/idp-public-cert.pem -days 365 -nodes
+openssl req -x509 -newkey rsa:4096 -keyout src/sp-private-key.pem -out src/sp-public-cert.pem -days 365 -nodes
+```
 
-3. サーバー (SPとIdPの両方) を起動します。
+3. サーバー（SPとIdPの両方）を起動します。
 
-    ```sh
-    pnpm start
-    ```
+```
+yarn start
+```
 
-4. URL [http://localhost:3000/](http://localhost:3000/)でSPにアクセスし、ボタンをクリックしてIdP (ポート3001) にリダイレクトします。
+4. URL [http://localhost:3000/](http://localhost:3000/) でSPにアクセスし、ボタンをクリックしてIdP（ポート3001）にリダイレクトされます。
 
-5. IdPにメールアドレスを入力し、**サービスプロバイダーにログイン**をクリックします。 サービスプロバイダー (ポート3000) にリダイレクトされ、メールアドレスで認識されていることを確認します。
+5. IdPにメールアドレスを提供し、**Login to the service provider**をクリックします。サービスプロバイダー（ポート3000）にリダイレクトされ、メールアドレスによってあなたが認識されていることを確認します。
 
 ### 詳細な説明 {#detailed-explanation}
 
-ステップバイステップで起こることは次のとおりです。
+ステップバイステップで何が起こるかを説明します。
 
-![イーサリアムを使用しない通常のSAMLログオン](./fig-04-saml-no-eth.png)
+![Normal SAML logon without Ethereum](./fig-04-saml-no-eth.png)
 
 #### src/config.mts {#srcconfigmts}
 
-このファイルには、IDプロバイダーとサービスプロバイダー両方の設定が含まれています。 通常、これら2つは異なるエンティティですが、ここでは簡潔にするためにコードを共有します。
+このファイルには、アイデンティティプロバイダーとサービスプロバイダーの両方の設定が含まれています。通常、これら2つは異なるエンティティですが、ここでは簡略化のためにコードを共有できます。
 
-```typescript
-const fs = await import("fs")
+```
+// 簡略化のために、SPとIdPの両方の設定をここに置きます。
+// 実際のシステムでは、これらは別々のエンティティになります。
 
-const protocol="http"
+import fs from "fs"
+
+// テスト中なので、HTTPを使用しても問題ありません。
+const spUrl = "http://localhost:3000"
+const idpUrl = "http://localhost:3001"
 ```
 
-今のところテストだけなので、HTTPを使用して問題ありません。
+今のところテスト中なので、HTTPを使用しても問題ありません。
 
-```typescript
-export const spCert = fs.readFileSync("keys/saml-sp.crt").toString()
-export const idpCert = fs.readFileSync("keys/saml-idp.crt").toString()
+```
+// 公開鍵を読み込みます。これらは通常、両方のコンポーネントで利用可能です
+// （直接信頼されるか、信頼できる認証局によって署名されています）。
+const idpPubKey = fs.readFileSync("src/idp-public-cert.pem", "utf8")
+const spPubKey = fs.readFileSync("src/sp-public-cert.pem", "utf8")
 ```
 
-通常は両方のコンポーネントで利用可能な公開鍵 (直接信頼されるか、信頼された証明書認証局によって署名される) を読み取ります。
+公開鍵を読み込みます。これは通常、両方のコンポーネントで利用可能です（直接信頼されるか、信頼できる認証局によって署名されています）。
 
-```typescript
-export const spPort = 3000
-export const spHostname = "localhost"
-export const spDir = "sp"
-
-export const idpPort = 3001
-export const idpHostname = "localhost"
-export const idpDir = "idp"
-
-export const spUrl = `${protocol}://${spHostname}:${spPort}/${spDir}`
-export const idpUrl = `${protocol}://${idpHostname}:${idpPort}/${idpDir}`
 ```
-
-両コンポーネントのURLです。
-
-```typescript
+// サービスプロバイダーの公開データ
 export const spPublicData = {
+  entityID: `${spUrl}/sp/metadata`,
+  assertionConsumerService: [
+    {
+      Binding: "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
+      Location: `${spUrl}/sp/acs`,
+    },
+  ],
+  signingCertificates: [spPubKey],
+}
+```
+
+両方のコンポーネントのURLです。
+
+```
+// サービスプロバイダーの公開データ
+export const spPublicData = {
+  entityID: `${spUrl}/sp/metadata`,
+  assertionConsumerService: [
+    {
+      Binding: "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
+      Location: `${spUrl}/sp/acs`,
+    },
+  ],
+  signingCertificates: [spPubKey],
+}
 ```
 
 サービスプロバイダーの公開データです。
 
-```typescript
-    entityID: `${spUrl}/metadata`,
+```
+  entityID: `${spUrl}/sp/metadata`,
 ```
 
-慣例的に、SAMLでは`entityID`はエンティティのメタデータが利用可能なURLです。 このメタデータはここの公開データに対応しますが、XML形式である点が異なります。
+慣例として、SAMLでは`entityID`はエンティティのメタデータが利用可能なURLです。このメタデータは、XML形式であることを除いて、ここでの公開データに対応します。
 
-```typescript
-    wantAssertionsSigned: true,
-    authnRequestsSigned: false,
-    signingCert: spCert,
-    allowCreate: true,
-    assertionConsumerService: [{
-        Binding: 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
-        Location: `${spUrl}/assertion`,
-    }]
-  }
+```
+  assertionConsumerService: [
+    {
+      Binding: "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
+      Location: `${spUrl}/sp/acs`,
+    },
+  ],
 ```
 
-私たちの目的にとって最も重要な定義は `assertionConsumerServer` です。 これは、サービスプロバイダーに何かをアサートする (例えば、「この情報を送信するユーザーは somebody@example.com です」) ためには、URL `http://localhost:3000/sp/assertion` に [HTTP POST](https://www.w3schools.com/tags/ref_httpmethods.asp) を使用する必要があることを意味します。
+私たちの目的において最も重要な定義は`assertionConsumerServer`です。これは、サービスプロバイダーに何かをアサートする（例えば、「この情報を送信するユーザーはsomebody@example.comである」）には、URL `http://localhost:3000/sp/assertion`に対して[HTTP POST](https://www.w3schools.com/tags/ref_httpmethods.asp)を使用する必要があることを意味します。
 
-```typescript
+```
+// アイデンティティプロバイダーの公開データ
 export const idpPublicData = {
-    entityID: `${idpUrl}/metadata`,
-    signingCert: idpCert,
-    wantAuthnRequestsSigned: false,
-    singleSignOnService: [{
+  entityID: `${idpUrl}/idp/metadata`,
+  singleSignOnService: [
+    {
       Binding: "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
-      Location: `${idpUrl}/login`
-    }],
-    singleLogoutService: [{
+      Location: `${idpUrl}/idp/sso`,
+    },
+  ],
+  singleLogoutService: [
+    {
       Binding: "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
-      Location: `${idpUrl}/logout`
-    }],
-  }
+      Location: `${idpUrl}/idp/slo`,
+    },
+  ],
+  signingCertificates: [idpPubKey],
+}
 ```
 
-IDプロバイダーの公開データも同様です。 これは、ユーザーをログインさせるには `http://localhost:3001/idp/login` にPOSTし、ユーザーをログアウトさせるには `http://localhost:3001/idp/logout` にPOSTすることを指定しています。
+アイデンティティプロバイダーの公開データも同様です。ユーザーをログインさせるには`http://localhost:3001/idp/login`にPOSTし、ユーザーをログアウトさせるには`http://localhost:3001/idp/logout`にPOSTすることを指定しています。
 
 #### src/sp.mts {#srcspmts}
 
 これはサービスプロバイダーを実装するコードです。
 
-```typescript
-import * as config from "./config.mts"
-const fs = await import("fs")
-const saml = await import("samlify")
+```
+import * as samlify from "samlify"
 ```
 
-SAMLを実装するために [`samlify`](https://www.npmjs.com/package/samlify) ライブラリを使用します。
+SAMLを実装するために[`samlify`](https://www.npmjs.com/package/samlify)ライブラリを使用します。
 
-```typescript
+```
 import * as validator from "@authenio/samlify-node-xmllint"
-saml.setSchemaValidator(validator)
+
+samlify.setSchemaValidator(validator)
 ```
 
-`samlify` ライブラリは、XMLが正しいこと、期待される公開鍵で署名されていることなどを検証するパッケージを必要とします。 この目的のために [`@authenio/samlify-node-xmllint`](https://www.npmjs.com/package/@authenio/samlify-node-xmllint) を使用します。
+`samlify`ライブラリは、XMLが正しいこと、期待される公開鍵で署名されていることなどを検証するパッケージがあることを想定しています。この目的のために[`@authenio/samlify-node-xmllint`](https://www.npmjs.com/package/@authenio/samlify-node-xmllint)を使用します。
 
-```typescript
-const express = (await import("express")).default
+```
+import express from "express"
 const spRouter = express.Router()
-const app = express()
 ```
 
-[`express`](https://expressjs.com/)の [`Router`](https://expressjs.com/en/5x/api.html#router)は、ウェブサイト内にマウントできる「ミニウェブサイト」です。 この場合、すべてのサービスプロバイダーの定義をグループ化するために使用します。
+[`express`](https://expressjs.com/)の[`Router`](https://expressjs.com/en/5x/api.html#router)は、ウェブサイト内にマウントできる「ミニウェブサイト」です。この場合、すべてのサービスプロバイダーの定義をグループ化するために使用します。
 
-```typescript
-const spPrivateKey = fs.readFileSync("keys/saml-sp.pem").toString()
+```
+import fs from "fs"
+import { spPublicData, idpPublicData } from "./config.mjs"
 
-const sp = saml.ServiceProvider({
-  privateKey: spPrivateKey,  
-  ...config.spPublicData
+const sp = samlify.ServiceProvider({
+  ...spPublicData,
+  privateKey: fs.readFileSync("src/sp-private-key.pem", "utf8"),
 })
 ```
 
 サービスプロバイダー自身の表現は、すべての公開データと、情報に署名するために使用する秘密鍵です。
 
-```typescript
-const idp = saml.IdentityProvider(config.idpPublicData);
+```
+const idp = samlify.IdentityProvider(idpPublicData)
 ```
 
-公開データには、サービスプロバイダーがIDプロバイダーについて知る必要があるすべてのものが含まれています。
+公開データには、サービスプロバイダーがアイデンティティプロバイダーについて知る必要があるすべてが含まれています。
 
-```typescript
-spRouter.get(`/metadata`, 
-  (req, res) => res.header("Content-Type", "text/xml").send(sp.getMetadata())
-)
+```
+spRouter.get("/metadata", (req, res) => {
+  res.header("Content-Type", "text/xml").send(sp.getMetadata())
+})
 ```
 
-他のSAMLコンポーネントとの相互運用性を確保するため、サービスプロバイダーとIDプロバイダーは、公開データ (メタデータと呼ばれる) をXML形式で `/metadata` にて利用可能にする必要があります。
+他のSAMLコンポーネントとのインターオペラビリティを可能にするために、サービスプロバイダーとアイデンティティプロバイダーは、公開データ（メタデータと呼ばれます）をXML形式で`/metadata`で利用できるようにする必要があります。
 
-```typescript
-spRouter.post(`/assertion`,
+```
+spRouter.post("/acs", async (req, res) => {
+  try {
+    // console.log(Buffer.from(req.body.SAMLResponse, 'base64').toString('utf8'))
 ```
 
-これは、ブラウザが自身を識別するためにアクセスするページです。 アサーションにはユーザー識別子 (ここではメールアドレスを使用) が含まれ、追加の属性を含めることもできます。 これは、上記のシーケンス図のステップ7のハンドラです。
+これは、ブラウザが自身を識別するためにアクセスするページです。アサーションにはユーザー識別子（ここではメールアドレスを使用）が含まれ、追加の属性を含めることができます。これは、上記のシーケンス図のステップ7のハンドラーです。
 
-```typescript
-  async (req, res) => {
-    // console.log(`SAML response:\n${Buffer.from(req.body.SAMLResponse, 'base64').toString('utf-8')}`)
+```
+    // console.log(Buffer.from(req.body.SAMLResponse, 'base64').toString('utf8'))
 ```
 
-コメントアウトされたコマンドを使用して、アサーションで提供されるXMLデータを確認できます。 これは[base64でエンコード](https://en.wikipedia.org/wiki/Base64)されています。
+コメントアウトされたコマンドを使用して、アサーションで提供されたXMLデータを確認できます。これは[Base64エンコード](https://en.wikipedia.org/wiki/Base64)されています。
 
-```typescript
-    try {
-      const loginResponse = await sp.parseLoginResponse(idp, 'post', req);
+```
+    const { extract } = await sp.parseLoginResponse(idp, "post", req)
 ```
 
-IDサーバーからのログインリクエストを解析します。
+アイデンティティサーバーからのログインリクエストを解析します。
 
-```typescript
-      res.send(`
-        <html>
-          <body>
-            <h2>Hello ${loginResponse.extract.nameID}</h2>
-          </body>
-        </html>
-      `)
-      res.send();
+```
+    res.send(`
+      <html>
+        <body>
+          <h1>Login successful</h1>
+          <p>Welcome, ${extract.nameID}</p>
+        </body>
+      </html>
+    `)
 ```
 
-ユーザーにログインが成功したことを示すために、HTMLレスポンスを送信します。
+ログインを受け取ったことをユーザーに示すために、HTMLレスポンスを送信します。
 
-```typescript
-    } catch (err) {
-      console.error('Error processing SAML response:', err);
-      res.status(400).send('SAML authentication failed');
-    }
+```
+  } catch (e) {
+    console.error(e)
+    res.status(500).send("Login failed")
   }
-)
+})
 ```
 
-失敗した場合は、ユーザーに通知します。
+失敗した場合はユーザーに通知します。
 
-```typescript
-spRouter.get('/login',
+```
+spRouter.get("/login", (req, res) => {
 ```
 
-ブラウザがこのページを取得しようとするときに、ログインリクエストを作成します。 これは、上記のシーケンス図のステップ1のハンドラです。
+ブラウザがこのページを取得しようとしたときにログインリクエストを作成します。これは、上記のシーケンス図のステップ1のハンドラーです。
 
-```typescript
-  async (req, res) => {
-    const loginRequest = await sp.createLoginRequest(idp, "post")
+```
+  const { id, context } = sp.createLoginRequest(idp, "redirect")
 ```
 
 ログインリクエストをPOSTするための情報を取得します。
 
-```typescript
-    res.send(`
-      <html>
-        <body>
-          <script>
-            window.onload = function () { document.forms[0].submit(); }            
-          </script>
 ```
-
-このページは、フォーム (下記参照) を自動的に送信します。 これにより、ユーザーはリダイレクトされるために何もする必要がありません。 これは、上記のシーケンス図のステップ2です。
-
-```typescript
-          <form method="post" action="${loginRequest.entityEndpoint}">
-```
-
-`loginRequest.entityEndpoint` (IDプロバイダーエンドポイントのURL) にPOSTします。
-
-```typescript
-            <input type="hidden" name="${loginRequest.type}" value="${loginRequest.context}" />
-```
-
-入力名は `loginRequest.type` (`SAMLRequest`) です。 そのフィールドのコンテンツは `loginRequest.context` で、これもbase64エンコードされたXMLです。
-
-```typescript
-          </form>
-        </body>
-      </html>
-    `)    
-  }
-)
-
-app.use(express.urlencoded({extended: true}))
-```
-
-[このミドルウェア](https://expressjs.com/en/5x/api.html#express.urlencoded) は [HTTPリクエスト](https://www.tutorialspoint.com/http/http_requests.htm)のボディを読み取ります。 ほとんどのリクエストはそれを必要としないため、Expressはデフォルトでそれを無視します。 POSTはボディを使用するため、これが必要です。
-
-```typescript
-app.use(`/${config.spDir}`, spRouter)
-```
-
-サービスプロバイダーディレクトリ (`/sp`) にルーターをマウントします。
-
-```typescript
-app.get("/", (req, res) => {
   res.send(`
     <html>
-      <body>
-        <button onClick="document.location.href='${config.spUrl}/login'">
-           ここをクリックしてログオン
-        </button>
-      </body>
-    </html>
-  `)
-})
+      <body onload="document.forms[0].submit()">
 ```
 
-ブラウザがルートディレクトリを取得しようとした場合は、ログインページへのリンクを提供します。
+このページはフォーム（下記参照）を自動的に送信します。これにより、ユーザーはリダイレクトされるために何もする必要がありません。これは、上記のシーケンス図のステップ2です。
 
-```typescript
-app.listen(config.spPort, () => {
-  console.log(`service provider is running on http://${config.spHostname}:${config.spPort}`)
-})
+```
+        <form method="post" action="${context.split("?")[0]}">
 ```
 
-このExpressアプリケーションで `spPort` をリッスンします。
+`loginRequest.entityEndpoint`（アイデンティティプロバイダーのエンドポイントのURL）にPOSTします。
 
-#### src/idp.mts {#srcidpmts}
-
-これはIDプロバイダーです。 これはサービスプロバイダーと非常によく似ており、以下の説明は異なる部分についてです。
-
-```typescript
-const xmlParser = new (await import("fast-xml-parser")).XMLParser(
-  {
-    ignoreAttributes: false, // Preserve attributes
-    attributeNamePrefix: "@_", // Prefix for attributes
-  }
-)
 ```
-
-サービスプロバイダーから受け取ったXMLリクエストを読み取り、理解する必要があります。
-
-```typescript
-const getLoginPage = requestId => `
-```
-
-この関数は、上記のシーケンス図のステップ4で返される、自動送信フォーム付きのページを作成します。
-
-```typescript
-<html>
-  <head>
-    <title>ログインページ</title>
-  </head>
-  <body>
-    <h2>ログインページ</h2>
-    <form method="post" action="./loginSubmitted">
-      <input type="hidden" name="requestId" value="${requestId}" />
-      メールアドレス: <input name="email" />
-      <br />
-      <button type="Submit">
-        サービスプロバイダーにログイン
-      </button>
-```
-
-サービスプロバイダーに送信するフィールドは2つあります。
-
-1. 応答する `requestId`。
-2. ユーザー識別子 (ここではユーザーが提供するメールアドレスを使用)。
-
-```typescript
-    </form>
-  </body>
-</html>
-
-const idpRouter = express.Router()
-
-idpRouter.post("/loginSubmitted", async (req, res) => {
-  const loginResponse = await idp.createLoginResponse(
-```
-
-これは、上記のシーケンス図のステップ5のハンドラです。 [`idp.createLoginResponse`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L73-L125)はログインレスポンスを作成します。
-
-```typescript
-    sp, 
-    {
-      authnContextClassRef: 'urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport',
-      audience: sp.entityID,
-```
-
-オーディエンスはサービスプロバイダーです。
-
-```typescript
-      extract: {
-        request: {
-          id: req.body.requestId
-        }
-      },
-```
-
-リクエストから抽出された情報です。 リクエストで重要なパラメータはrequestIdで、これによりサービスプロバイダーはリクエストとそのレスポンスを一致させることができます。
-
-```typescript
-      signingKey: { privateKey: idpPrivateKey, publicKey: config.idpCert }  // Ensure signing
-```
-
-レスポンスに署名するためのデータを持つために `signingKey` が必要です。 サービスプロバイダーは署名されていないリクエストを信頼しません。
-
-```typescript
-    },
-    "post",
-    {
-      email: req.body.email
-```
-
-これは、サービスプロバイダーに送り返すユーザー情報を持つフィールドです。
-
-```typescript
-    }
-  );
-
-  res.send(`
-    <html>
-      <body>
-        <script>
-          window.onload = function () { document.forms[0].submit(); }
-        </script>
-        
-        <form method="post" action="${loginResponse.entityEndpoint}">
-          <input type="hidden" name="${loginResponse.type}" value="${loginResponse.context}" />
+          <input type="hidden" name="SAMLRequest" value="${
+            context.split("=")[1]
+          }" />
+          <input type="submit" value="Login" />
         </form>
       </body>
     </html>
@@ -451,260 +319,352 @@ idpRouter.post("/loginSubmitted", async (req, res) => {
 })
 ```
 
-ここでも、自動送信フォームを使用します。 これは、上記のシーケンス図のステップ6です。
+入力名は`loginRequest.type`（`SAMLRequest`）です。そのフィールドのコンテンツは`loginRequest.context`であり、これもBase64エンコードされたXMLです。
 
-```typescript
-
-// ログインリクエスト用のIdPエンドポイント
-idpRouter.post(`/login`,
+```
+const app = express()
+app.use(express.urlencoded({ extended: true }))
 ```
 
-これはサービスプロバイダーからログインリクエストを受け取るエンドポイントです。 これは、上記のシーケンス図のステップ3のハンドラです。
+[このミドルウェア](https://expressjs.com/en/5x/api.html#express.urlencoded)は、[HTTPリクエスト](https://www.tutorialspoint.com/http/http_requests.htm)のボディを読み取ります。ほとんどのリクエストでは必要ないため、デフォルトではExpressはこれを無視します。POSTはボディを使用するため、これが必要です。
 
-```typescript
-  async (req, res) => {
-    try {
-      // parseLoginRequestが動作しなかったための回避策
-      // const loginRequest = await idp.parseLoginRequest(sp, 'post', req)
-      const samlRequest = xmlParser.parse(Buffer.from(req.body.SAMLRequest, 'base64').toString('utf-8'))
-      res.send(getLoginPage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
+```
+app.use("/sp", spRouter)
 ```
 
-[`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144)を使用して認証リクエストのIDを読み取ることができるはずです。 しかし、動作させることができず、それに多くの時間を費やす価値もなかったので、[汎用XMLパーサー](https://www.npmjs.com/package/fast-xml-parser)を使用します。 必要な情報は、XMLのトップレベルにある `<samlp:AuthnRequest>` タグ内の `ID` 属性です。
+サービスプロバイダーのディレクトリ（`/sp`）にルーターをマウントします。
 
-## イーサリアム署名の使用 {#using-ethereum-signatures}
-
-ユーザーIDをサービスプロバイダーに送信できるようになったので、次のステップは信頼できる方法でユーザーIDを取得することです。 Viemを使用すると、ウォレットにユーザーアドレスを尋ねるだけで済みますが、これはブラウザに情報を要求することを意味します。 私たちはブラウザを制御していないため、そこから得られる応答を自動的に信頼することはできません。
-
-代わりに、IdPはブラウザに署名するための文字列を送信します。 ブラウザのウォレットがこの文字列に署名すれば、それが本当にそのアドレスであること (つまり、そのアドレスに対応する秘密鍵を知っていること) を意味します。
-
-これを実際に確認するには、既存のIdPとSPを停止し、次のコマンドを実行します。
-
-```sh
-git checkout eth-signatures
-pnpm install
-pnpm start
+```
+app.get("/", (req, res) => {
+  res.send(`
+    <html>
+      <body>
+        <h1>Service Provider</h1>
+        <a href="/sp/login">Login</a>
+      </body>
+    </html>
+  `)
+})
 ```
 
-次に、[SP](http://localhost:3000)にアクセスし、指示に従ってください。
+ブラウザがルートディレクトリを取得しようとした場合、ログインページへのリンクを提供します。
 
-この時点では、イーサリアムアドレスからメールアドレスを取得する方法がわからないため、代わりに `<イーサリアムアドレス>@bad.email.address` をSPに報告します。
+```
+app.listen(3000, () => {
+  console.log("SP listening on port 3000")
+})
+```
+
+このExpressアプリケーションで`spPort`をリッスンします。
+
+#### src/idp.mts {#srcidpmts}
+
+これはアイデンティティプロバイダーです。サービスプロバイダーと非常に似ており、以下の説明は異なる部分に関するものです。
+
+```
+import { XMLParser } from "fast-xml-parser"
+const parser = new XMLParser({ ignoreAttributes: false })
+```
+
+サービスプロバイダーから受け取るXMLリクエストを読み取り、理解する必要があります。
+
+```
+const loginPage = (reqId: string) => `
+  <html>
+    <body>
+      <h1>Identity Provider</h1>
+      <form method="post" action="/idp/login">
+```
+
+この関数は、上記のシーケンス図のステップ4で返される、自動送信フォームを含むページを作成します。
+
+```
+        <input type="hidden" name="reqId" value="${reqId}" />
+        <input type="text" name="email" placeholder="Email" />
+```
+
+サービスプロバイダーに送信するフィールドは2つあります。
+
+1. 応答している`requestId`。
+2. ユーザー識別子（今のところ、ユーザーが提供するメールアドレスを使用します）。
+
+```
+idpRouter.post("/login", async (req, res) => {
+```
+
+これは、上記のシーケンス図のステップ5のハンドラーです。[`idp.createLoginResponse`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L73-L125)はログインレスポンスを作成します。
+
+```
+  const { id, context } = await idp.createLoginResponse(
+    sp,
+```
+
+オーディエンスはサービスプロバイダーです。
+
+```
+    {
+      extract: {
+        request: {
+          id: req.body.reqId,
+        },
+      },
+    },
+```
+
+リクエストから抽出された情報です。リクエストで私たちが気にする唯一のパラメーターはrequestIdであり、これによりサービスプロバイダーはリクエストとそのレスポンスを一致させることができます。
+
+```
+    "post",
+```
+
+レスポンスに署名するためのデータを持つために`signingKey`が必要です。サービスプロバイダーは署名されていないリクエストを信頼しません。
+
+```
+    {
+      nameID: req.body.email,
+    }
+  )
+```
+
+これは、サービスプロバイダーに送り返すユーザー情報を含むフィールドです。
+
+```
+  res.send(`
+    <html>
+      <body onload="document.forms[0].submit()">
+        <form method="post" action="${context.split("?")[0]}">
+          <input type="hidden" name="SAMLResponse" value="${
+            context.split("=")[1]
+          }" />
+          <input type="submit" value="Login" />
+        </form>
+      </body>
+    </html>
+  `)
+})
+```
+
+ここでも、自動送信フォームを使用します。これは、上記のシーケンス図のステップ6です。
+
+```
+idpRouter.post("/sso", async (req, res) => {
+```
+
+これは、サービスプロバイダーからログインリクエストを受け取るエンドポイントです。これは、上記のシーケンス図のステップ3のハンドラーです。
+
+```
+  const xml = Buffer.from(req.body.SAMLRequest, "base64").toString("utf8")
+  const parsed = parser.parse(xml)
+  const reqId = parsed["samlp:AuthnRequest"]["@_ID"]
+  res.send(loginPage(reqId))
+})
+```
+
+認証リクエストのIDを読み取るために[`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144)を使用できるはずです。しかし、私はそれを機能させることができず、多くの時間を費やす価値がなかったため、単に[汎用のXMLパーサー](https://www.npmjs.com/package/fast-xml-parser)を使用しています。必要な情報は、XMLのトップレベルにある`<samlp:AuthnRequest>`タグ内の`ID`属性です。
+
+## イーサリアムの署名を使用する {#using-ethereum-signatures}
+
+ユーザーのアイデンティティをサービスプロバイダーに送信できるようになったので、次のステップは信頼できる方法でユーザーのアイデンティティを取得することです。Viemを使用すると、ウォレットにユーザーのアドレスを尋ねるだけで済みますが、これはブラウザに情報を尋ねることを意味します。私たちはブラウザを制御していないため、ブラウザから得られるレスポンスを自動的に信頼することはできません。
+
+代わりに、IdPはブラウザに署名するための文字列を送信します。ブラウザ内のウォレットがこの文字列に署名した場合、それは本当にそのアドレスである（つまり、そのアドレスに対応する秘密鍵を知っている）ことを意味します。
+
+これを実際に確認するには、既存のIdPとSPを停止し、以下のコマンドを実行します。
+
+```
+git checkout stage-2
+yarn
+yarn start
+```
+
+次に、[SPにアクセス](http://localhost:3000)し、指示に従います。
+
+現時点では、イーサリアムのアドレスからメールアドレスを取得する方法がわからないため、代わりに`<ethereum address>@bad.email.address`をSPに報告することに注意してください。
 
 ### 詳細な説明 {#detailed-explanation-2}
 
-変更点は、前の図のステップ4-5にあります。
+変更点は、前の図のステップ4〜5にあります。
 
-![イーサリアム署名付きSAML](./fig-05-saml-w-signature.png)
+![SAML with an Ethereum signature](./fig-05-saml-w-signature.png)
 
-変更したファイルは `idp.mts` だけです。 以下が変更された部分です。
+変更したファイルは`idp.mts`のみです。変更された部分は以下の通りです。
 
-```typescript
-import { v4 as uuidv4 } from 'uuid'
-import { verifyMessage } from 'viem'
+```
+import { v4 as uuidv4 } from "uuid"
+import { verifyMessage } from "viem"
 ```
 
-これら2つの追加ライブラリが必要です。 [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce)値を作成するために [`uuid`](https://www.npmjs.com/package/uuid) を使用します。 値自体は問題ではなく、一度しか使用されないという事実が重要です。
+これら2つの追加ライブラリが必要です。[ナンス](https://en.wikipedia.org/wiki/Cryptographic_nonce)値を作成するために[`uuid`](https://www.npmjs.com/package/uuid)を使用します。値自体は重要ではなく、1回だけ使用されるという事実が重要です。
 
-[`viem`](https://viem.sh/) ライブラリを使用すると、イーサリアムの定義を使用できます。 ここでは、署名が実際に有効であることを検証するためにこれが必要です。
+[`viem`](https://viem.sh/)ライブラリを使用すると、イーサリアムの定義を使用できます。ここでは、署名が実際に有効であることを検証するために必要です。
 
-```typescript
-const loginPrompt = "サービスプロバイダーにアクセスするには、このノンスに署名してください: "
+```
+const loginPage = (nonce: string) => `
+  <html>
+    <body>
+      <h1>Identity Provider</h1>
+      <p>Please sign the message in your wallet to log in.</p>
 ```
 
-ウォレットは、ユーザーにメッセージに署名する許可を求めます。 ノンスだけのメッセージはユーザーを混乱させる可能性があるため、このプロンプトを含めます。
+ウォレットは、メッセージに署名する許可をユーザーに求めます。単なるナンスであるメッセージはユーザーを混乱させる可能性があるため、このプロンプトを含めます。
 
-```typescript
-// ここにrequestIDを保持する
-let nonces = {}
+```
+const reqIds: Record<string, string> = {}
 ```
 
-応答するためには、リクエスト情報が必要です。 リクエストと一緒に送信し (ステップ4)、それを受け取る (ステップ5) こともできます。 しかし、潜在的に敵対的なユーザーの制御下にあるブラウザから得られる情報は信頼できません。 したがって、ノンスをキーとしてここに保存する方が良いでしょう。
+リクエストに応答できるようにするために、リクエスト情報が必要です。リクエストと一緒に送信し（ステップ4）、送り返してもらう（ステップ5）こともできます。しかし、潜在的に悪意のあるユーザーの制御下にあるブラウザから得られる情報を信頼することはできません。そのため、ナンスをキーとしてここに保存する方が良いでしょう。
 
-簡潔さのために、ここでは変数としてこれを行っていることに注意してください。 ただし、これにはいくつかの欠点があります。
+簡略化のために、ここでは変数として行っていることに注意してください。ただし、これにはいくつかの欠点があります。
 
-- サービス拒否攻撃に対して脆弱です。 悪意のあるユーザーが複数回ログオンを試み、メモリを使い果たす可能性があります。
+- サービス拒否攻撃に対して脆弱です。悪意のあるユーザーが複数回ログオンを試み、メモリをいっぱいに埋め尽くす可能性があります。
 - IdPプロセスを再起動する必要がある場合、既存の値を失います。
-- 各プロセスが独自の変数を持つため、複数のプロセス間で負荷分散を行うことはできません。
+- それぞれが独自の変数を持つことになるため、複数のプロセス間で負荷分散を行うことはできません。
 
 本番システムでは、データベースを使用し、何らかの有効期限メカニズムを実装します。
 
-```typescript
-const getSignaturePage = requestId => {
+```
+idpRouter.post("/sso", async (req, res) => {
+  const xml = Buffer.from(req.body.SAMLRequest, "base64").toString("utf8")
+  const parsed = parser.parse(xml)
+  const reqId = parsed["samlp:AuthnRequest"]["@_ID"]
   const nonce = uuidv4()
-  nonces[nonce] = requestId
+  reqIds[nonce] = reqId
+  res.send(loginPage(nonce))
+})
 ```
 
-ノンスを作成し、後で使用するために `requestId` を保存します。
+ナンスを作成し、将来の使用のために`requestId`を保存します。
 
-```typescript
-  return `
-<html>
-  <head>
-    <script type="module">
+```
+      <script type="module">
 ```
 
-このJavaScriptは、ページが読み込まれると自動的に実行されます。
+このJavaScriptは、ページが読み込まれたときに自動的に実行されます。
 
-```typescript
-      import { createWalletClient, custom, getAddress } from 'https://esm.sh/viem'
+```
+        import { createWalletClient, custom } from 'https://esm.sh/viem'
 ```
 
 `viem`からいくつかの関数が必要です。
 
-```typescript
-      if (!window.ethereum) {
-          alert("MetaMaskまたは互換性のあるウォレットをインストールしてからリロードしてください")
-      }
+```
+        if (!window.ethereum) {
+          alert('Please install a wallet to log in.')
+          window.location.reload()
+        }
 ```
 
 ブラウザにウォレットがある場合にのみ機能します。
 
-```typescript
-      const [account] = await window.ethereum.request({method: 'eth_requestAccounts'})
+```
+        const [account] = await window.ethereum.request({ method: 'eth_requestAccounts' })
 ```
 
-ウォレット (`window.ethereum`) からアカウントのリストを要求します。 少なくとも1つあると仮定し、最初のものだけを保存します。
+ウォレットからアカウントのリストをリクエストします（`window.ethereum`）。少なくとも1つあると仮定し、最初のものだけを保存します。
 
-```typescript
-      const walletClient = createWalletClient({
+```
+        const client = createWalletClient({
           account,
           transport: custom(window.ethereum)
-      })
-```
-
-ブラウザウォレットとやり取りするための[ウォレットクライアント](https://viem.sh/docs/clients/wallet)を作成します。
-
-```typescript
-      window.goodSignature = () => {
-        walletClient.signMessage({
-            message: "${loginPrompt}${nonce}"
-```
-
-ユーザーにメッセージへの署名を依頼します。 このHTML全体が[テンプレート文字列](https://viem.sh/docs/clients/wallet)内にあるため、idpプロセスで定義された変数を使用できます。 これはシーケンス図のステップ4.5です。
-
-```typescript
-        }).then(signature => {
-            const path= "/${config.idpDir}/signature/${nonce}/" + account + "/" + signature
-            window.location.href = path
         })
-      }
 ```
 
-`/idp/signature/<nonce>/<address>/<signature>` にリダイレクトします。 これはシーケンス図のステップ5です。
+ブラウザのウォレットと対話するための[ウォレットクライアント](https://viem.sh/docs/clients/wallet)を作成します。
 
-```typescript
-      window.badSignature = () => {
-        const path= "/${config.idpDir}/signature/${nonce}/" + 
-          getAddress("0x" + "BAD060A7".padEnd(40, "0")) + 
-          "/0x" + "BAD0516".padStart(130, "0")
-        window.location.href = path
-      }
+```
+        const signature = await client.signMessage({ message: "${nonce}" })
 ```
 
-署名はブラウザから返送されますが、これは潜在的に悪意のある可能性があります (ブラウザで `http://localhost:3001/idp/signature/bad-nonce/bad-address/bad-signature` を開くのを止めるものは何もありません)。 したがって、IdPプロセスが不正な署名を正しく処理することを確認することが重要です。
+ユーザーにメッセージへの署名を求めます。このHTML全体が[テンプレート文字列](https://viem.sh/docs/clients/wallet)内にあるため、idpプロセスで定義された変数を使用できます。これはシーケンス図のステップ4.5です。
 
-```typescript
-    </script>
-  </head>
-  <body>
-    <h2>署名してください</h2>
-    <button onClick="window.goodSignature()">
-      良好な (有効な) 署名を送信
-    </button>
-    <br/>
-    <button onClick="window.badSignature()">
-      不正な (無効な) 署名を送信
-    </button>
-  </body>
-</html>  
+```
+        window.location.href = \`/idp/login?nonce=${nonce}&signature=\${signature}&account=\${account}\`
+```
+
+`/idp/signature/<nonce>/<address>/<signature>`にリダイレクトします。これはシーケンス図のステップ5です。
+
+```
+      </script>
+```
+
+署名はブラウザによって送り返されますが、ブラウザは潜在的に悪意がある可能性があります（ブラウザで単に`http://localhost:3001/idp/signature/bad-nonce/bad-address/bad-signature`を開くことを止めるものは何もありません）。したがって、IdPプロセスが不正な署名を正しく処理することを検証することが重要です。
+
+```
+    </body>
+  </html>
 `
-}
 ```
 
-残りは標準のHTMLです。
+残りは単なる標準的なHTMLです。
 
-```typescript
-idpRouter.get("/signature/:nonce/:account/:signature", async (req, res) => {
+```
+idpRouter.get("/login", async (req, res) => {
 ```
 
-これはシーケンス図のステップ5のハンドラです。
+これはシーケンス図のステップ5のハンドラーです。
 
-```typescript
-  const requestId = nonces[req.params.nonce]
-  if (requestId === undefined) {
-    res.send("Bad nonce")
-    return ;
-  }  
-  
-  nonces[req.params.nonce] = undefined
+```
+  const nonce = req.query.nonce as string
+  const reqId = reqIds[nonce]
+  delete reqIds[nonce]
 ```
 
-リクエストIDを取得し、再利用されないように `nonces` からノンスを削除します。
+リクエストIDを取得し、再利用できないように`nonces`からナンスを削除します。
 
-```typescript
+```
   try {
 ```
 
-署名が無効になる方法が非常に多いため、これを `try ...` でラップします。 catch`ブロックで、スローされたエラーをキャッチします。
+署名が無効になる可能性のある方法は非常に多いため、スローされたエラーをキャッチするためにこれを`try ... catch`ブロックでラップします。
 
-```typescript
-    const validSignature = await verifyMessage({
-      address: req.params.account,
-      message: `${loginPrompt}${req.params.nonce}`,
-      signature: req.params.signature
+```
+    const valid = await verifyMessage({
+      address: req.query.account as `0x${string}`,
+      message: nonce,
+      signature: req.query.signature as `0x${string}`,
     })
-```
-
-シーケンス図のステップ5.5を実装するには、[`verifyMessage`](https://viem.sh/docs/actions/public/verifyMessage#verifymessage) を使用します。
-
-```typescript
-    if (!validSignature)
-      throw("Bad signature")
-  } catch (err) {
-    res.send("Error:" + err)
-    return ;
-  }
-```
-
-ハンドラの残りの部分は、1つの小さな変更を除いて、以前に `/loginSubmitted` ハンドラで行ったことと同等です。
-
-```typescript
-  const loginResponse = await idp.createLoginResponse(
-      .
-      .
-      .
-    {
-      email: req.params.account + "@bad.email.address"
+    if (!valid) {
+      throw new Error("Invalid signature")
     }
-  );
 ```
 
-実際のメールアドレスは持っていないので (次のセクションで取得します)、今のところはイーサリアムアドレスを返し、それがメールアドレスではないことを明確にマークします。
+シーケンス図のステップ5.5を実装するために[`verifyMessage`](https://viem.sh/docs/actions/public/verifyMessage#verifymessage)を使用します。
 
-```typescript
-// ログインリクエスト用のIdPエンドポイント
-idpRouter.post(`/login`,
-  async (req, res) => {
-    try {
-      // parseLoginRequestが動作しなかったための回避策
-      // const loginRequest = await idp.parseLoginRequest(sp, 'post', req)
-      const samlRequest = xmlParser.parse(Buffer.from(req.body.SAMLRequest, 'base64').toString('utf-8'))
-      res.send(getSignaturePage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
-    } catch (err) {
-      console.error('SAMLレスポンスの処理中にエラーが発生しました:', err);
-      res.status(400).send('SAML認証に失敗しました');
-    }
-  }
-)
+```
+    const { id, context } = await idp.createLoginResponse(
+      sp,
+      {
+        extract: {
+          request: {
+            id: reqId,
+          },
+        },
+      },
+      "post",
+      {
+        nameID: `${req.query.account} (not an email)`,
+      }
+    )
 ```
 
-ステップ3のハンドラでは、`getLoginPage` の代わりに `getSignaturePage` を使用します。
+ハンドラーの残りの部分は、1つの小さな変更を除いて、以前に`/loginSubmitted`ハンドラーで行ったことと同等です。
+
+```
+        nameID: `${req.query.account} (not an email)`,
+```
+
+実際のメールアドレスは持っていないため（次のセクションで取得します）、今のところはイーサリアムのアドレスを返し、それがメールアドレスではないことを明確にマークします。
+
+```
+idpRouter.post("/sso", async (req, res) => {
+```
+
+ステップ3のハンドラーで、`getLoginPage`の代わりに`getSignaturePage`を使用するようになりました。
 
 ## メールアドレスの取得 {#getting-the-email-address}
 
-次のステップは、サービスプロバイダーによって要求された識別子であるメールアドレスを取得することです。 そのためには、[Ethereum Attestation Service (EAS)](https://attest.org/) を使用します。
+次のステップは、サービスプロバイダーから要求された識別子であるメールアドレスを取得することです。そのために、[Ethereum Attestation Service（EAS）](https://attest.org/)を使用します。
 
-アテステーションを取得する最も簡単な方法は、[GraphQL API](https://docs.attest.org/docs/developer-tools/api)を使用することです。 このクエリを使用します。
+アテステーションを取得する最も簡単な方法は、[GraphQL API](https://docs.attest.org/docs/developer-tools/api)を使用することです。以下のクエリを使用します。
 
 ```
 query GetAttestationsByRecipient {
@@ -722,166 +682,159 @@ query GetAttestationsByRecipient {
 }
 ```
 
-この[`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977)には、メールアドレスのみが含まれます。 このクエリは、このスキーマのアテステーションを要求します。 アテステーションのサブジェクトは `recipient` と呼ばれます。 これは常にイーサリアムアドレスです。
+この[`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977)にはメールアドレスのみが含まれています。このクエリは、このスキーマのアテステーションを要求します。アテステーションの対象は`recipient`と呼ばれます。これは常にイーサリアムのアドレスです。
 
 警告：ここでアテステーションを取得する方法には、2つのセキュリティ上の問題があります。
 
-- 中央集権的なコンポーネントであるAPIエンドポイント `https://optimism.easscan.org/graphql` にアクセスしています。 `id`属性を取得し、オンチェーンでルックアップしてアテステーションが本物であることを確認できますが、APIエンドポイントは、アテステーションについて通知しないことで、依然としてアテステーションを検閲できます。
+- APIエンドポイントである`https://optimism.easscan.org/graphql`にアクセスしていますが、これは中央集権型のコンポーネントです。`id`属性を取得し、オンチェーンでルックアップを行ってアテステーションが本物であることを検証することはできますが、APIエンドポイントはアテステーションについて私たちに伝えないことで、依然としてアテステーションを検閲することができます。
 
-  この問題は解決不可能ではありません。独自のGraphQLエンドポイントを実行し、チェーンログからアテステーションを取得できますが、私たちの目的には過剰です。
+  この問題は解決不可能ではありません。独自のGraphQLエンドポイントを実行し、チェーンのログからアテステーションを取得することもできますが、私たちの目的には過剰です。
 
-- 私たちは証明者のIDを見ていません。 誰でも偽の情報を私たちに与えることができます。 実際の環境では、信頼できる証明者のセットを持ち、彼らのアテステーションのみを参照します。
+- アテスターの身元を確認していません。誰でも私たちに偽の情報を与えることができます。現実世界の実装では、信頼できるアテスターのセットを用意し、彼らのアテステーションのみを確認します。
 
-これを実際に確認するには、既存のIdPとSPを停止し、次のコマンドを実行します。
+これを実際に確認するには、既存のIdPとSPを停止し、以下のコマンドを実行します。
 
-```sh
-git checkout email-address
-pnpm install
-pnpm start
+```
+git checkout stage-3
+yarn
+yarn start
 ```
 
-次に、メールアドレスを入力します。 これを行うには2つの方法があります。
+次に、メールアドレスを提供します。これを行うには2つの方法があります。
 
-- 秘密鍵を使用してウォレットをインポートし、テスト用の秘密鍵 `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80` を使用します。
+- 秘密鍵を使用してウォレットをインポートし、テスト用の秘密鍵`0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`を使用します。
 
-- 自分のメールアドレスにアテステーションを追加します。
+- 自分のメールアドレスのアテステーションを追加します。
 
-  1. アテステーションエクスプローラーの[スキーマ](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977)に移動します。
+  1. [アテステーションエクスプローラーのスキーマ](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977)にアクセスします。
 
-  2. **スキーマで証明**をクリックします。
+  2. **Attest with Schema**をクリックします。
 
-  3. 受信者としてイーサリアムアドレスを入力し、メールアドレスとしてメールアドレスを入力し、**オンチェーン**を選択します。 次に、**アテステーションを作成**をクリックします。
+  3. 受信者としてイーサリアムのアドレス、メールアドレスとしてメールアドレスを入力し、**Onchain**を選択します。次に、**Make Attestation**をクリックします。
 
-  4. ウォレットでトランザクションを承認します。 ガスを支払うために、[Optimism Blockchain](https://app.optimism.io/bridge/deposit)にETHが必要です。
+  4. ウォレットでトランザクションを承認する。ガスの支払いには、[オプティミズムブロックチェーン](https://app.optimism.io/bridge/deposit)上のETHがいくらか必要になります。
 
-どちらの場合も、これを行った後、[http://localhost:3000](http://localhost:3000) にアクセスして指示に従ってください。 テスト用の秘密鍵をインポートした場合、受け取るメールは `test_addr_0@example.com` です。 独自のアドレスを使用した場合は、証明した内容になります。
+いずれにせよ、これを行った後、[http://localhost:3000](http://localhost:3000) にアクセスし、指示に従います。テスト用の秘密鍵をインポートした場合、受け取るメールアドレスは`test_addr_0@example.com`です。自分のアドレスを使用した場合、それはあなたがアテステーションした内容になります。
 
 ### 詳細な説明 {#detailed-explanation-3}
 
-![イーサリアムアドレスからメールアドレスへの変換](./fig-06-saml-sig-n-email.png)
+![Getting from Ethereum address to e-mail](./fig-06-saml-sig-n-email.png)
 
-新しいステップはGraphQL通信、ステップ5.6と5.7です。
+新しいステップは、GraphQL通信であるステップ5.6と5.7です。
 
-再度、`idp.mts`の変更部分を示します。
+繰り返しになりますが、`idp.mts`の変更された部分は以下の通りです。
 
-```typescript
-import { GraphQLClient } from 'graphql-request'
-import { SchemaEncoder } from '@ethereum-attestation-service/eas-sdk'
+```
+import { GraphQLClient, gql } from "graphql-request"
+import { SchemaEncoder } from "@ethereum-attestation-service/eas-sdk"
+import { getAddress } from "viem"
 ```
 
 必要なライブラリをインポートします。
 
-```typescript
-const graphqlEndpointUrl = "https://optimism.easscan.org/graphql"
+```
+const EAS_GRAPHQL_URL = "https://optimism.easscan.org/graphql"
 ```
 
 [各ブロックチェーンに個別のエンドポイント](https://docs.attest.org/docs/developer-tools/api)があります。
 
-```typescript
-const graphqlClient = new GraphQLClient(graphqlEndpointUrl, { fetch })
+```
+const graphQLClient = new GraphQLClient(EAS_GRAPHQL_URL)
 ```
 
 エンドポイントのクエリに使用できる新しい`GraphQLClient`クライアントを作成します。
 
-```typescript
-const graphqlSchema = 'string emailAddress'
-const graphqlEncoder = new SchemaEncoder(graphqlSchema)
+```
+const schemaEncoder = new SchemaEncoder("string email")
 ```
 
-GraphQLは、バイトを持つ不透明なデータオブジェクトのみを提供します。 それを理解するためにはスキーマが必要です。
+GraphQLは、バイトを含む不透明なデータオブジェクトのみを提供します。それを理解するにはスキーマが必要です。
 
-```typescript
-const ethereumAddressToEmail = async ethAddr => {
+```
+const getEmail = async (ethAddr: string) => {
 ```
 
-イーサリアムアドレスからメールアドレスを取得する関数です。
+イーサリアムのアドレスからメールアドレスを取得する関数です。
 
-```typescript
-  const query = `
-    query GetAttestationsByRecipient {
+```
+  const query = gql`
 ```
 
 これはGraphQLクエリです。
 
-```typescript
-      アテステーション(
+```
+    query GetAttestationsByRecipient {
+      attestations(
 ```
 
 アテステーションを探しています。
 
-```typescript
+```
         where: { 
           recipient: { equals: "${getAddress(ethAddr)}" }
           schemaId: { equals: "0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977" }
         }
 ```
 
-必要なアテステーションは、私たちのスキーマにあり、受信者が`getAddress(ethAddr)`であるものです。 [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress)関数は、アドレスが正しい[チェックサム](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md)を持つことを保証します。 GraphQLは大文字と小文字を区別するため、これは必要です。 「0xBAD060A7」、「0xBad060A7」、および「0xbad060a7」は異なる値です。
+必要なアテステーションは、受信者が`getAddress(ethAddr)`であるスキーマ内のものです。[`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress)関数は、アドレスが正しい[チェックサム](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md)を持っていることを確認します。GraphQLは大文字と小文字を区別するため、これが必要です。「0xBAD060A7」、「0xBad060A7」、および「0xbad060a7」は異なる値です。
 
-```typescript
+```
         take: 1
 ```
 
 見つかったアテステーションの数に関係なく、最初のものだけが必要です。
 
-```typescript
-      ) {
+```
+      ) { 
         data
         id
         attester
       }
-    }`
+    }
+  `
 ```
 
 受け取りたいフィールドです。
 
-- `attester`: アテステーションを送信したアドレス。 通常、これはアテステーションを信頼するかどうかを決定するために使用されます。
-- `id`: アテステーションID。 この値を使用して、[アテステーションをオンチェーンで読み取り](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64)、GraphQLクエリからの情報が正しいことを確認できます。
-- `data`: スキーマデータ (この場合はメールアドレス)。
+- `attester`: アテステーションを送信したアドレス。通常、これはアテステーションを信頼するかどうかを決定するために使用されます。
+- `id`: アテステーションID。この値を使用して[オンチェーンでアテステーションを読み取り](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64)、GraphQLクエリからの情報が正しいことを検証できます。
+- `data`: スキーマデータ（この場合はメールアドレス）。
 
-```typescript
-  const queryResult = await graphqlClient.request(query)
+```
+  const response: any = await graphQLClient.request(query)
 
-  if (queryResult.attestations.length == 0)
-    return "no_address@available.is"
+  if (response.attestations.length === 0) {
+    return `${ethAddr} (no email attestation)`
+  }
 ```
 
-アテステーションがない場合は、明らかに不正であるが、サービスプロバイダーには有効に見える値を返します。
+アテステーションがない場合は、明らかに間違っているが、サービスプロバイダーには有効に見える値を返します。
 
-```typescript
-  const attestationDataFields = graphqlEncoder.decodeData(queryResult.attestations[0].data)
-  return attestationDataFields[0].value.value
+```
+  const decodedData = schemaEncoder.decodeData(response.attestations[0].data)
+  return decodedData[0].value.value
 }
 ```
 
-値がある場合は、`decodeData`を使用してデータをデコードします。 提供されるメタデータは不要で、値自体のみが必要です。
+値がある場合は、`decodeData`を使用してデータをデコードします。それが提供するメタデータは必要なく、値自体だけが必要です。
 
-```typescript
-  const loginResponse = await idp.createLoginResponse(
-    sp, 
-    {
-      .
-      .
-      .
-    },
-    "post",
-    {
-      email: await ethereumAddressToEmail(req.params.account)
-    }
-  );
+```
+      {
+        nameID: await getEmail(req.query.account as string),
+      }
 ```
 
 新しい関数を使用してメールアドレスを取得します。
 
-## 分散化については？ {#what-about-decentralization}
+## 分散化についてはどうですか？ {#what-about-decentralization}
 
-この構成では、イーサリアムとメールアドレスのマッピングに信頼できる証明者に依存している限り、ユーザーは他人になりすますことはできません。 しかし、私たちのIDプロバイダーは依然として中央集権的なコンポーネントです。 IDプロバイダーの秘密鍵を持っている人は誰でも、サービスプロバイダーに偽の情報を送信できます。
+この構成では、イーサリアムからメールアドレスへのマッピングについて信頼できるアテスターに依存している限り、ユーザーは自分以外の誰かになりすますことはできません。しかし、私たちのアイデンティティプロバイダーは依然として中央集権型のコンポーネントです。アイデンティティプロバイダーの秘密鍵を持っている人は誰でも、サービスプロバイダーに偽の情報を送信できます。
 
-[マルチパーティ計算 (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) を使用した解決策があるかもしれません。 将来のチュートリアルでそれについて書きたいと思っています。
+[マルチパーティ計算（MPC）](https://en.wikipedia.org/wiki/Secure_multi-party_computation)を使用した解決策があるかもしれません。将来のチュートリアルでそれについて書きたいと思います。
 
 ## まとめ {#conclusion}
 
-イーサリアム署名のようなログオン標準の採用は、鶏が先か卵が先かの問題に直面します。 サービスプロバイダーは、可能な限り広い市場にアピールしたいと考えています。 ユーザーは、ログオン標準のサポートを心配することなく、サービスにアクセスできることを望んでいます。
-イーサリアムIdPなどのアダプターを作成することは、このハードルを乗り越えるのに役立ちます。
+イーサリアムの署名などのログオン標準の採用は、鶏と卵の問題に直面しています。サービスプロバイダーは、可能な限り幅広い市場にアピールしたいと考えています。ユーザーは、自分のログオン標準のサポートを心配することなくサービスにアクセスできることを望んでいます。
+イーサリアムIdPなどのアダプターを作成することで、このハードルを乗り越えることができます。
 
-[私の他の作品はこちらでご覧いただけます](https://cryptodocguy.pro/).
+[私の他の作品についてはこちらをご覧ください](https://cryptodocguy.pro/)。

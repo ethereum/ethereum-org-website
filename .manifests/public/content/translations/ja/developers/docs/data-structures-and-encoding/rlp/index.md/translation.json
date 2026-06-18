@@ -1,0 +1,375 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-16T22:30:54.709Z",
+  "englishManifestHash": "769571525205",
+  "placeholderOrder": [
+    "LINK-83aa8c",
+    "CODE-a78d54",
+    "LINK-a21a82",
+    "CODE-18fd57",
+    "CODE-ad5736",
+    "CODE-dc3c74",
+    "CODE-2929fa",
+    "CODE-a2e690",
+    "CODE-c07654",
+    "CODE-0dc2cc",
+    "CODE-2c2fb2",
+    "CODE-24a37a",
+    "CODE-2983e6",
+    "CODE-030d85",
+    "CODE-7c549b",
+    "CODE-d06c37",
+    "CODE-f13f6b",
+    "CODE-0129b9",
+    "CODE-6763a5",
+    "CODE-274975",
+    "CODE-2ff63f",
+    "CODE-e07d7f",
+    "CODE-26da6d",
+    "CODE-46b09f",
+    "CODE-ab5df6",
+    "CODE-ca7c6b",
+    "CODE-5a7833",
+    "CODE-127f11",
+    "CODE-ab5df6",
+    "CODE-127f11",
+    "CODE-46b09f",
+    "CODE-46b09f",
+    "CODE-a1b85f",
+    "CODE-12ccd2",
+    "CODE-46b09f",
+    "CODE-ab5df6",
+    "CODE-1dde5b",
+    "CODE-5f5886",
+    "CODE-127f11",
+    "CODE-ab5df6",
+    "CODE-127f11",
+    "CODE-46b09f",
+    "CODE-46b09f",
+    "CODE-148de9",
+    "CODE-1b16b1",
+    "CODE-8ce86a",
+    "CODE-1b16b1",
+    "CODEBLOCK-60a2e6",
+    "CODE-39014a",
+    "CODE-edda9d",
+    "CODE-b6eb13",
+    "CODE-edda9d",
+    "CODE-5f7c6c",
+    "CODE-f42e81",
+    "CODE-956f40",
+    "LINK-816e46",
+    "CODE-d509a0",
+    "CODE-684d9f",
+    "CODEBLOCK-b1f66b",
+    "LINK-45c5ed",
+    "LINK-ac845a",
+    "LINK-342dc2",
+    "LINK-f03e54"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-60a2e6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b1f66b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-a78d54": {
+      "type": "inline-code",
+      "values": {
+        "content": "[[k1,v1],[k2,v2]...]"
+      }
+    },
+    "CODE-18fd57": {
+      "type": "inline-code",
+      "values": {
+        "content": "[\"cat\", [\"puppy\", \"cow\"], \"horse\", [[]], \"pig\", [\"\"], \"sheep\"]"
+      }
+    },
+    "CODE-ad5736": {
+      "type": "inline-code",
+      "values": {
+        "content": "100"
+      }
+    },
+    "CODE-dc3c74": {
+      "type": "inline-code",
+      "values": {
+        "content": "[0x00, 0x7f]"
+      }
+    },
+    "CODE-2929fa": {
+      "type": "inline-code",
+      "values": {
+        "content": "[0, 127]"
+      }
+    },
+    "CODE-a2e690": {
+      "type": "inline-code",
+      "values": {
+        "content": "[0x80, 0xb7]"
+      }
+    },
+    "CODE-c07654": {
+      "type": "inline-code",
+      "values": {
+        "content": "[128, 183]"
+      }
+    },
+    "CODE-0dc2cc": {
+      "type": "inline-code",
+      "values": {
+        "content": "\\xb9\\x04\\x00"
+      }
+    },
+    "CODE-2c2fb2": {
+      "type": "inline-code",
+      "values": {
+        "content": "185, 4, 0"
+      }
+    },
+    "CODE-24a37a": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xb9"
+      }
+    },
+    "CODE-2983e6": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x0400"
+      }
+    },
+    "CODE-030d85": {
+      "type": "inline-code",
+      "values": {
+        "content": "[0xb8, 0xbf]"
+      }
+    },
+    "CODE-7c549b": {
+      "type": "inline-code",
+      "values": {
+        "content": "[184, 191]"
+      }
+    },
+    "CODE-d06c37": {
+      "type": "inline-code",
+      "values": {
+        "content": "[0xc0, 0xf7]"
+      }
+    },
+    "CODE-f13f6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "[192, 247]"
+      }
+    },
+    "CODE-0129b9": {
+      "type": "inline-code",
+      "values": {
+        "content": "[0xf8, 0xff]"
+      }
+    },
+    "CODE-6763a5": {
+      "type": "inline-code",
+      "values": {
+        "content": "[248, 255]"
+      }
+    },
+    "CODE-274975": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x00-0x7f"
+      }
+    },
+    "CODE-2ff63f": {
+      "type": "inline-code",
+      "values": {
+        "content": "0ppppppp"
+      }
+    },
+    "CODE-e07d7f": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x80-0xb7"
+      }
+    },
+    "CODE-26da6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "10nnnnnn"
+      }
+    },
+    "CODE-46b09f": {
+      "type": "inline-code",
+      "values": {
+        "content": "pppppppp"
+      }
+    },
+    "CODE-ab5df6": {
+      "type": "inline-code",
+      "values": {
+        "content": "..."
+      }
+    },
+    "CODE-ca7c6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xb8-0xbf"
+      }
+    },
+    "CODE-5a7833": {
+      "type": "inline-code",
+      "values": {
+        "content": "10111NNN"
+      }
+    },
+    "CODE-127f11": {
+      "type": "inline-code",
+      "values": {
+        "content": "nnnnnnnn"
+      }
+    },
+    "CODE-a1b85f": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xc0-0xf7"
+      }
+    },
+    "CODE-12ccd2": {
+      "type": "inline-code",
+      "values": {
+        "content": "11nnnnnn"
+      }
+    },
+    "CODE-1dde5b": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xf8-0xff"
+      }
+    },
+    "CODE-5f5886": {
+      "type": "inline-code",
+      "values": {
+        "content": "11111NNN"
+      }
+    },
+    "CODE-148de9": {
+      "type": "inline-code",
+      "values": {
+        "content": "p"
+      }
+    },
+    "CODE-1b16b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "n"
+      }
+    },
+    "CODE-8ce86a": {
+      "type": "inline-code",
+      "values": {
+        "content": "N"
+      }
+    },
+    "CODE-39014a": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]"
+      }
+    },
+    "CODE-edda9d": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ 0x80 ]"
+      }
+    },
+    "CODE-b6eb13": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ 0xc0 ]"
+      }
+    },
+    "CODE-5f7c6c": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ 0x00 ]"
+      }
+    },
+    "CODE-f42e81": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ 0x0f ]"
+      }
+    },
+    "CODE-956f40": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ 0x82, 0x04, 0x00 ]"
+      }
+    },
+    "CODE-d509a0": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]"
+      }
+    },
+    "CODE-684d9f": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]"
+      }
+    },
+    "LINK-83aa8c": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf#page=19"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-816e46": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers"
+      }
+    },
+    "LINK-45c5ed": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919"
+      }
+    },
+    "LINK-ac845a": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58"
+      }
+    },
+    "LINK-342dc2": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2009.13769"
+      }
+    },
+    "LINK-f03e54": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/patricia-merkle-trie"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:30:54.709Z",
+      "status": "success"
+    }
+  }
+}

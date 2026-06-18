@@ -10,7 +10,7 @@ import Emoji, { type EmojiProps } from "../Emoji"
 import { Button } from "./buttons/Button"
 
 const alertVariants = cva(
-  "flex gap-4 items-center rounded-lg border p-4 text-body/80 **:[:is(h2,h3,h4,h5,h6,strong)]:text-body",
+  "flex gap-4 items-center rounded-base border p-4 text-body/80 **:[:is(h2,h3,h4,h5,h6,strong)]:text-body",
   {
     variants: {
       variant: {

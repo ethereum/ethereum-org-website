@@ -31,7 +31,7 @@ const WhitepaperBridge = async () => {
   ] as const
 
   return (
-    <Section className="my-8 space-y-6 rounded-2xl border border-primary-low-contrast bg-radial-a p-6 md:p-8">
+    <Section className="my-8 space-y-6 rounded-base border border-primary-low-contrast bg-radial-a p-6 md:p-8">
       {/* Eyebrow tag - uses warning status for attention */}
       <Tag status="warning" variant="outline" size="small" className="gap-1.5">
         <Info className="size-3.5" />

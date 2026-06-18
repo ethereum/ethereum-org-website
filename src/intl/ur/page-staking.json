@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "مین نیٹ",
   "page-staking-launchpad-widget-start": "{network} پر اسٹیکنگ شروع کریں",
   "page-staking-launchpad-widget-span": "نیٹ ورک کا انتخاب کریں",
-  "page-staking-launchpad-widget-p1": "سولو توثیق کاروں سے توقع کی جاتی ہے کہ وہ فنڈز کو خطرے میں ڈالنے سے پہلے {{network}} آزمائشی نیٹ ورک پر <strong>اپنے سیٹ اپ</strong> اور آپریشنل مہارتوں کی جانچ کریں۔ یاد رکھیں کہ <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">اقلیتی کلائنٹ</a> کا انتخاب کرنا اہم ہے کیونکہ یہ نیٹ ورک کی سیکیورٹی کو بہتر بناتا ہے اور آپ کے خطرے کو محدود کرتا ہے۔",
+  "page-staking-launchpad-widget-p1": "سولو توثیق کاروں سے توقع کی جاتی ہے کہ وہ فنڈز کو خطرے میں ڈالنے سے پہلے {network} آزمائشی نیٹ ورک پر <strong>اپنے سیٹ اپ کو آزمائیں</strong> اور آپریشنل مہارتوں کی جانچ کریں۔ یاد رکھیں کہ ایک <link>اقلیتی کلائنٹ</link> کا انتخاب کرنا اہم ہے کیونکہ یہ نیٹ ورک کی سیکیورٹی کو بہتر بناتا ہے اور آپ کے خطرے کو محدود کرتا ہے۔",
   "page-staking-launchpad-widget-p2": "اگر آپ اس کے ساتھ آرام دہ ہیں، تو آپ صرف Staking Launchpad کا استعمال کرتے ہوئے کمانڈ لائن سے درکار ہر چیز سیٹ اپ کر سکتے ہیں۔",
   "page-staking-launchpad-widget-p3": "چیزوں کو آسان بنانے کے لیے، ذیل میں کچھ ٹولز اور گائیڈز دیکھیں جو آپ کے کلائنٹس کو آسانی سے سیٹ اپ کرنے کے لیے Staking Launchpad کے ساتھ آپ کی مدد کر سکتے ہیں۔",
   "page-staking-launchpad-widget-link": "سافٹ ویئر ٹولز اور گائیڈ",

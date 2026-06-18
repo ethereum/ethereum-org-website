@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "主网",
   "page-staking-launchpad-widget-start": "在 {network} 上开始质押",
   "page-staking-launchpad-widget-span": "选择网络",
-  "page-staking-launchpad-widget-p1": "独立验证者在拿资金冒险之前，应该在 {{network}} 测试网上<strong>测试他们的设置</strong>和操作技能。请记住，选择<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">少数客户端</a>非常重要，因为这可以提高网络的安全性并限制你的风险。",
+  "page-staking-launchpad-widget-p1": "独立验证者在拿资金冒险之前，应在 {network} 测试网上<strong>测试其设置</strong>和操作技能。请记住，选择<link>少数派客户端</link>非常重要，因为这能提高网络的安全性并限制您的风险。",
   "page-staking-launchpad-widget-p2": "如果你对此感到得心应手，你可以仅使用 Staking Launchpad 从命令行设置所需的一切。",
   "page-staking-launchpad-widget-p3": "为了让事情变得更简单，请查看下面的一些工具和指南，它们可以与 Staking Launchpad 一起帮助你轻松设置客户端。",
   "page-staking-launchpad-widget-link": "软件工具和指南",

@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "locale": "sw",
+  "translatedAt": "2026-06-17T00:03:13.186Z",
+  "englishManifestHash": "523100f0188f",
+  "placeholderOrder": [
+    "LINK-100107",
+    "LINK-1b170b",
+    "CODE-30ff3d",
+    "LINK-e45e23",
+    "LINK-b195ad",
+    "LINK-4fbcfe",
+    "LINK-981f15",
+    "CODE-8ed840",
+    "LINK-354269",
+    "CODEBLOCK-e7b068",
+    "CODEBLOCK-0bcecb",
+    "CODEBLOCK-cc7bc5",
+    "CODEBLOCK-fa7024",
+    "LINK-ec74c0",
+    "CODEBLOCK-f06abb",
+    "LINK-70edb1",
+    "LINK-17123d",
+    "CODEBLOCK-add42b",
+    "CODEBLOCK-32c208",
+    "CODE-3c4623",
+    "CODE-efa1f3",
+    "CODE-715dc8",
+    "CODE-3bed2c",
+    "CODE-efa1f3",
+    "CODEBLOCK-1e8bfa",
+    "CODEBLOCK-ff4b25"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-e7b068": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0bcecb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cc7bc5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fa7024": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f06abb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-add42b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-32c208": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1e8bfa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ff4b25": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-30ff3d": {
+      "type": "inline-code",
+      "values": {
+        "content": "Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low \"runs\" value!), turning off revert strings, or using libraries."
+      }
+    },
+    "CODE-8ed840": {
+      "type": "inline-code",
+      "values": {
+        "content": "DELEGATECALL"
+      }
+    },
+    "CODE-3c4623": {
+      "type": "inline-code",
+      "values": {
+        "content": "external"
+      }
+    },
+    "CODE-efa1f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "public"
+      }
+    },
+    "CODE-715dc8": {
+      "type": "inline-code",
+      "values": {
+        "content": "private"
+      }
+    },
+    "CODE-3bed2c": {
+      "type": "inline-code",
+      "values": {
+        "content": "internal"
+      }
+    },
+    "LINK-100107": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon"
+      }
+    },
+    "LINK-1b170b": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-170"
+      }
+    },
+    "LINK-e45e23": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#london"
+      }
+    },
+    "LINK-b195ad": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries"
+      }
+    },
+    "LINK-4fbcfe": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking"
+      }
+    },
+    "LINK-981f15": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for"
+      }
+    },
+    "LINK-354269": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2"
+      }
+    },
+    "LINK-ec74c0": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.soliditylang.org/2021/04/21/custom-errors/"
+      }
+    },
+    "LINK-70edb1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-17123d": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:03:13.186Z",
+      "status": "success"
+    }
+  }
+}
