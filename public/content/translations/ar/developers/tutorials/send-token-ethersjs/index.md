@@ -1,25 +1,26 @@
 ---
-title: "إرسال الرموز باستخدام ethers.js"
-description: "دليل سهل للمبتدئين لإرسال الرموز باستخدام ethers.js."
-author: "كيم يونغ جون"
-tags: [ "ETHERS.JS", "ايه آر سي-20", "الرموز" ]
+title: "إرسال الرموز المميزة باستخدام ⁦ethers.js⁩"
+description: "دليل مبسط للمبتدئين لإرسال الرموز المميزة باستخدام ⁦ethers.js⁩."
+author: كيم يونغ جون
+tags: ["ETHERS.JS", "ERC-20", "رموز مميزة"]
 skill: beginner
+breadcrumb: "إرسال الرموز المميزة"
 lang: ar
 published: 2021-04-06
 ---
 
-## إرسال الرمز باستخدام ethers.js(5.0) {#send-token}
+## إرسال رمز مميز باستخدام <span dir="ltr">ethers.js(5.0)</span> {#send-token}
 
-### في هذا البرنامج التعليمي سوف تتعلم كيفية {#you-learn-about}
+### في هذا البرنامج التعليمي ستتعلم كيفية {#you-learn-about}
 
-- استيراد ethers.js
-- تحويل الرمز
-- تحديد سعر الغاز وفقاً لحالة ازدحام الشبكة
+- استيراد <span dir="ltr">ethers.js</span>
+- تحويل رمز مميز
+- تعيين سعر الغاز وفقًا لحالة حركة المرور في الشبكة
 
 ### للبدء {#to-get-started}
 
-للبدء، يجب علينا أولاً استيراد مكتبة ethers.js إلى جافا سكريبت الخاص بنا
-تضمين ethers.js(5.0)
+للبدء، يجب علينا أولاً استيراد مكتبة <span dir="ltr">ethers.js</span> في <span dir="ltr">JavaScript</span> الخاصة بنا
+تضمين <span dir="ltr">ethers.js(5.0)</span>
 
 ### التثبيت {#install-ethersjs}
 
@@ -27,16 +28,16 @@ published: 2021-04-06
 /home/ricmoo> npm install --save ethers
 ```
 
-ES6 in the Browser
+<span dir="ltr">ES6</span> في المتصفح
 
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // أدخل الكود الخاص بك هنا...
+  // الكود الخاص بك هنا...
 </script>
 ```
 
-ES3(UMD) in the Browser
+<span dir="ltr">ES3(UMD)</span> في المتصفح
 
 ```html
 <script
@@ -47,29 +48,29 @@ ES3(UMD) in the Browser
 
 ### المعلمات {#param}
 
-1. **`contract_address`**: عنوان عقد الرمز (يلزم عنوان العقد عندما لا يكون الرمز الذي تريد تحويله هو إيثر)
+1. **`contract_address`**: عنوان عقد الرمز المميز (عنوان العقد مطلوب عندما يكون الرمز المميز الذي تريد تحويله ليس إيثر)
 2. **`send_token_amount`**: المبلغ الذي تريد إرساله إلى المستلم
 3. **`to_address`**: عنوان المستلم
 4. **`send_account`**: عنوان المرسل
-5. **`private_key`**: المفتاح الخاص للمرسل لتوقيع المعاملة وتحويل الرموز فعليًا
+5. **`private_key`**: مفتاح خاص للمرسل لتوقيع المعاملة وتحويل الرموز المميزة فعليًا
 
 ## ملاحظة {#notice}
 
-تمت إزالة `signTransaction(tx)` لأن `sendTransaction()` تقوم بذلك داخلياً.
+تمت إزالة `signTransaction(tx)` لأن `sendTransaction()` يقوم بذلك داخليًا.
 
 ## إجراءات الإرسال {#procedure}
 
-### ١. الاتصال بالشبكة (شبكة الاختبار) {#connect-to-network}
+### 1. الاتصال بالشبكة (شبكة اختبار) {#connect-to-network}
 
-#### تعيين الموفر (إنفيورا) {#set-provider}
+#### تعيين المزود (Infura) {#set-provider}
 
-الاتصال بشبكة الاختبار روبستين
+الاتصال بشبكة اختبار روبستن
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### ٢. إنشاء محفظة {#create-wallet}
+### 2. إنشاء محفظة {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
@@ -89,13 +90,13 @@ window.ethersProvider.getGasPrice() // سعر الغاز
 
 ### 5. تحديد المعاملة {#define-transaction}
 
-المتغيرات المحددة أدناه تعتمد على `send_token()`
+تعتمد هذه المتغيرات المحددة أدناه على `send_token()`
 
 ### معلمات المعاملة {#transaction-params}
 
-1. **`send_account`**: عنوان مرسل الرمز
-2. **`to_address`**: عنوان مستلم الرمز
-3. **`send_token_amount`**: كمية الرموز المراد إرسالها
+1. **`send_account`**: عنوان مرسل الرمز المميز
+2. **`to_address`**: عنوان مستلم الرمز المميز
+3. **`send_token_amount`**: كمية الرموز المميزة المراد إرسالها
 4. **`gas_limit`**: حد الغاز
 5. **`gas_price`**: سعر الغاز
 
@@ -112,16 +113,16 @@ const tx = {
 }
 ```
 
-### 6. تحويل {#transfer}
+### 6. التحويل {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("اكتمل الإرسال!")
+  alert("Send finished!")
 })
 ```
 
-## كيفية استخدامه {#how-to-use}
+## كيفية الاستخدام {#how-to-use}
 
 ```javascript
 let private_key =
@@ -146,9 +147,9 @@ send_token(
 
 ### نجاح! {#success}
 
-![صورة معاملة تمت بنجاح](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
-## send_token() {#send-token-method}
+## <span dir="ltr">send_token()</span> {#send-token-method}
 
 ```javascript
 function send_token(
@@ -166,21 +167,21 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // إرسال رمز عام
+      // إرسال عام للرمز المميز
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // كم عدد الرموز؟
+      // كم عدد الرموز المميزة؟
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // إرسال الرموز
+      // إرسال الرموز المميزة
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("تم إرسال الرمز")
+        alert("sent token")
       })
     } // إرسال إيثر
     else {
@@ -199,10 +200,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("اكتمل الإرسال!")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("فشل الإرسال!!")
+        alert("failed to send!!")
       }
     }
   })

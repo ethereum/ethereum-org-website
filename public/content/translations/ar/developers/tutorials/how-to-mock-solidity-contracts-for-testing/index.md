@@ -1,26 +1,27 @@
 ---
-title: "How to mock سوليديتي smart contracts for testing"
-description: Why you should make fun of your contracts when testing
-author: "ماركوس واس"
+title: "كيفية محاكاة العقود الذكية في ⁦Solidity⁩ للاختبار"
+description: "لماذا يجب عليك السخرية من عقودك عند الاختبار"
+author: ماركوس واس
 lang: ar
-tags: [ "Solidity", "العقود الذكيه ", "الاختبار", "mocking" ]
+tags: ["solidity", "العقود الذكية", "الاختبار", "المحاكاة"]
 skill: intermediate
+breadcrumb: "محاكاة العقود"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
 
-[الكائنات الوهمية](https://wikipedia.org/wiki/Mock_object) هي نمط تصميم شائع في البرمجة كائنية التوجه. Coming from the old French word 'mocquer' with the meaning of 'making fun of', it evolved to 'imitating something real' which is actually what we are doing in programming. Please only make fun of your smart contracts if you want to, but mock them whenever you can. It makes your life easier.
+تُعد [الكائنات الوهمية (Mock objects)](https://wikipedia.org/wiki/Mock_object) نمط تصميم شائع في البرمجة كائنية التوجه. تأتي من الكلمة الفرنسية القديمة "mocquer" والتي تعني "السخرية من"، وتطورت لتعني "تقليد شيء حقيقي" وهو في الواقع ما نفعله في البرمجة. يرجى السخرية من عقودك الذكية فقط إذا كنت ترغب في ذلك، ولكن قم بمحاكاتها كلما استطعت. فهذا يجعل حياتك أسهل.
 
-## اختبار الوحدات للعقود باستخدام الكائنات الوهمية {#unit-testing-contracts-with-mocks}
+## اختبار الوحدة للعقود باستخدام المحاكاة {#unit-testing-contracts-with-mocks}
 
-يعني محاكاة (Mocking) العقد بشكل أساسي إنشاء نسخة ثانية من ذلك العقد تتصرف بشكل مشابه جداً للأصلي، ولكن بطريقة يمكن للمطور التحكم فيها بسهولة. غالباً ما ينتهي بك الأمر بعقود معقدة حيث تريد فقط [اختبار أجزاء صغيرة من العقد](/developers/docs/smart-contracts/testing/). المشكلة هي ماذا لو كان اختبار هذا الجزء الصغير يتطلب حالة عقد محددة للغاية يصعب الوصول إليها؟
+تعني محاكاة العقد بشكل أساسي إنشاء إصدار ثانٍ من ذلك العقد يتصرف بشكل مشابه جدًا للإصدار الأصلي، ولكن بطريقة يمكن للمطور التحكم فيها بسهولة. غالبًا ما ينتهي بك الأمر بعقود معقدة حيث تريد فقط [إجراء اختبار الوحدة لأجزاء صغيرة من العقد](/developers/docs/smart-contracts/testing/). تكمن المشكلة في ماذا لو كان اختبار هذا الجزء الصغير يتطلب حالة عقد محددة للغاية يصعب الوصول إليها؟
 
-يمكنك كتابة منطق إعداد اختبار معقد في كل مرة يجلب العقد في الحالة المطلوبة أو يمكنك كتابة Mock. محاكاة العقد سهلة باستخدام الوراثة (Inheritance). ببساطة أنشئ عقد Mock ثانياً يرث من العقد الأصلي. يمكنك الآن تجاوز الوظائف (Override) في الـ Mock الخاص بك. دعنا نرى ذلك من خلال مثال.
+يمكنك كتابة منطق إعداد اختبار معقد في كل مرة يضع العقد في الحالة المطلوبة أو يمكنك كتابة محاكاة. محاكاة العقد أمر سهل باستخدام الوراثة. ما عليك سوى إنشاء عقد محاكاة ثانٍ يرث من العقد الأصلي. الآن يمكنك تجاوز (override) الدوال في محاكاتك. دعونا نرى ذلك بمثال.
 
-## مثال: PrivateERC20 {#example-private-erc20}
+## مثال: <span dir="ltr">ERC-20</span> خاص {#example-private-erc20}
 
-نحن نستخدم مثال لعقد ERC-20 له فترة خصوصية أولية. يمكن للمالك إدارة المستخدمين الخاصين والذين سيُسمح لهم فقط بتلقي التوكنات في البداية. بمجرد مرور وقت معين، سيُسمح للجميع باستخدام التوكنات. إذا كنت مهتماً، فنحن نستخدم Hook الـ [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) من عقود OpenZeppelin الجديدة الإصدار 3.
+نستخدم مثالًا لعقد <span dir="ltr">ERC-20</span> يحتوي على وقت خاص أولي. يمكن للمالك إدارة المستخدمين الخاصين وسيُسمح لهؤلاء فقط بتلقي الرموز في البداية. بمجرد مرور وقت معين، سيُسمح للجميع باستخدام الرموز. إذا كنت مهتمًا، فنحن نستخدم الخطاف (hook) [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) من عقود أوبن زبلن (OpenZeppelin) الجديدة الإصدار الثالث (<span dir="ltr">v3</span>).
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -47,7 +48,7 @@ contract PrivateERC20 is ERC20, Ownable {
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override {
         super._beforeTokenTransfer(from, to, amount);
 
-        require(_validRecipient(to), "PrivateERC20: مستلم غير صالح");
+        require(_validRecipient(to), "PrivateERC20: invalid recipient");
     }
 
     function _validRecipient(address to) private view returns (bool) {
@@ -60,7 +61,7 @@ contract PrivateERC20 is ERC20, Ownable {
 }
 ```
 
-And now let's mock it.
+والآن دعونا نقوم بمحاكاته.
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -81,22 +82,22 @@ contract PrivateERC20Mock is PrivateERC20 {
 }
 ```
 
-ستتلقى إحدى رسائل الخطأ التالية:
+ستحصل على إحدى رسائل الخطأ التالية:
 
 - `PrivateERC20Mock.sol: TypeError: Overriding function is missing "override" specifier.`
 - `PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.`
 
-بما أننا نستخدم إصدار سوليديتي 0.6 الجديد، علينا إضافة الكلمة المفتاحية `virtual` للدوال التي يمكن تجاوزها و `override` للدالة التي تقوم بالتجاوز. لذا دعنا نضيفهما إلى كلتا الدالتين `isPublic`.
+نظرًا لأننا نستخدم إصدار Solidity الجديد <span dir="ltr">0.6</span>، يجب علينا إضافة الكلمة المفتاحية `virtual` للدوال التي يمكن تجاوزها، وكلمة `override` للدالة التي تقوم بالتجاوز. لذا دعونا نضيفها إلى كلتا دالتي `isPublic`.
 
-الآن في اختبارات الوحدات الخاصة بك، يمكنك استخدام `PrivateERC20Mock` بدلاً من ذلك. عندما تريد اختبار السلوك أثناء وقت الاستخدام الخاص، استخدم `setIsPublic(false)`، وبالمثل استخدم `setIsPublic(true)` لاختبار وقت الاستخدام العام. بالطبع في مثالنا، يمكننا ببساطة استخدام [مساعدات الوقت](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) لتغيير الأوقات وفقًا لذلك أيضًا. But the idea of mocking should be clear now and you can imagine scenarios where it is not as easy as simply advancing the time.
+الآن في اختبارات الوحدة الخاصة بك، يمكنك استخدام `PrivateERC20Mock` بدلاً من ذلك. عندما تريد اختبار السلوك خلال وقت الاستخدام الخاص، استخدم `setIsPublic(false)` وبالمثل `setIsPublic(true)` لاختبار وقت الاستخدام العام. بالطبع في مثالنا، يمكننا فقط استخدام [مساعدات الوقت (time helpers)](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) لتغيير الأوقات وفقًا لذلك أيضًا. لكن فكرة المحاكاة يجب أن تكون واضحة الآن ويمكنك تخيل سيناريوهات حيث لا يكون الأمر سهلاً مثل مجرد تقديم الوقت.
 
 ## محاكاة العديد من العقود {#mocking-many-contracts}
 
-يمكن أن يصبح الأمر فوضوياً إذا اضطررت لإنشاء عقد آخر لكل Mock مفرد. إذا كان هذا يزعجك، فيمكنك إلقاء نظرة على مكتبة [MockContract](https://github.com/gnosis/mock-contract). إنها تسمح لك بتجاوز وتغيير سلوكيات العقود بسرعة. ومع ذلك، فهي تعمل فقط لمحاكاة الاستدعاءات لعقد آخر، لذا لن تعمل في مثالنا.
+قد يصبح الأمر فوضويًا إذا كان عليك إنشاء عقد آخر لكل محاكاة على حدة. إذا كان هذا يزعجك، يمكنك إلقاء نظرة على مكتبة [MockContract](https://github.com/gnosis/mock-contract). إنها تسمح لك بتجاوز وتغيير سلوكيات العقود بسرعة (on-the-fly). ومع ذلك، فهي تعمل فقط لمحاكاة الاستدعاءات لعقد آخر، لذلك لن تعمل مع مثالنا.
 
 ## يمكن أن تكون المحاكاة أكثر قوة {#mocking-can-be-even-more-powerful}
 
-The powers of mocking do not end there.
+لا تنتهي قوى المحاكاة عند هذا الحد.
 
-- Adding functions: Not only overriding a specific function is useful, but also just adding additional functions. من الأمثلة الجيدة للرموز وجود دالة `mint` إضافية للسماح لأي مستخدم بالحصول على رموز جديدة مجانًا.
-- الاستخدام في شبكات الاختبار (Testnets): عندما تنشر وتختبر عقودك على شبكات الاختبار مع تطبيقك اللامركزي، فكر في استخدام نسخة Mock. تجنب تجاوز الوظائف ما لم تضطر حقاً لذلك. فأنت تريد اختبار المنطق الحقيقي في النهاية. ولكن إضافة دالة إعادة تعيين (Reset) مثلاً يمكن أن يكون مفيداً بحيث يعيد تعيين حالة العقد ببساطة إلى البداية، دون الحاجة إلى نشر جديد. من الواضح أنك لن ترغب في وجود ذلك في عقد على الشبكة الرئيسية (Mainnet).
+- إضافة دوال: ليس فقط تجاوز دالة معينة هو المفيد، بل أيضًا مجرد إضافة دوال إضافية. من الأمثلة الجيدة للرموز هو مجرد وجود دالة `mint` إضافية للسماح لأي مستخدم بالحصول على رموز جديدة مجانًا.
+- الاستخدام في شبكات الاختبار (testnets): عندما تقوم بنشر واختبار عقودك على شبكات الاختبار مع تطبيقك اللامركزي (dapp)، فكر في استخدام إصدار محاكى. تجنب تجاوز الدوال إلا إذا كنت مضطرًا لذلك حقًا. فأنت تريد اختبار المنطق الحقيقي في النهاية. لكن إضافة دالة إعادة تعيين (reset) على سبيل المثال يمكن أن يكون مفيدًا حيث تقوم ببساطة بإعادة تعيين حالة العقد إلى البداية، دون الحاجة إلى نشر جديد. من الواضح أنك لن ترغب في وجود ذلك في عقد على الشبكة الرئيسية (Mainnet).
