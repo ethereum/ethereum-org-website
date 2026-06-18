@@ -291,9 +291,9 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         </MainArticle>
 
         {/* End-of-page actions */}
-        <Section className="px-page">
+        <div className="px-page">
           <ContentFeedback />
-        </Section>
+        </div>
       </main>
     </>
   )
