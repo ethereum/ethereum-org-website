@@ -6,10 +6,10 @@ import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
 import { dateToString } from "@/lib/utils/date"
+import { getStorySlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import SlugJsonLD from "../../[...slug]/page-jsonld"
-import { getStorySlugs } from "../utils"
 
 import { componentsMapping, TutorialLayout } from "@/layouts"
 import { getPageData } from "@/lib/md/data"

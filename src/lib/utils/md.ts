@@ -236,20 +236,16 @@ export const getBlogPostsData = async (locale: string): Promise<BlogPost[]> => {
 }
 
 /**
- * Reads every story under public/content/stories/{slug}/index.md and returns
- * its card preview (title, description, cover image) straight from frontmatter,
- * newest first. The /stories Discover section is rendered from this -- no
- * hardcoded copy or image imports.
+ * Lists the story slugs under public/content/stories/, skipping the
+ * `translations` directory the intl pipeline writes into. Returns an empty
+ * array when the directory doesn't exist yet.
  */
-export const getStoriesData = async (
-  locale: string
-): Promise<StoryPreview[]> => {
+export const getStorySlugs = async (): Promise<string[]> => {
   const storiesRoot = join(getContentRoot(), "stories")
 
-  let slugs: string[] = []
   try {
     const entries = await fsp.readdir(storiesRoot, { withFileTypes: true })
-    slugs = entries
+    return entries
       .filter((entry) => entry.isDirectory() && entry.name !== "translations")
       .map((entry) => entry.name)
   } catch (error) {
@@ -261,6 +257,18 @@ export const getStoriesData = async (
     }
     throw error
   }
+}
+
+/**
+ * Reads every story under public/content/stories/{slug}/index.md and returns
+ * its card preview (title, description, cover image) straight from frontmatter,
+ * newest first. The /stories Discover section is rendered from this -- no
+ * hardcoded copy or image imports.
+ */
+export const getStoriesData = async (
+  locale: string
+): Promise<StoryPreview[]> => {
+  const slugs = await getStorySlugs()
 
   const stories = await getContentListData(
     locale,
