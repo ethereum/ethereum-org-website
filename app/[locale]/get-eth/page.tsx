@@ -153,8 +153,8 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         </div>
       </Section>
 
-      <main className="pb-page **:[section]:px-page">
-        <MainArticle className="flow">
+      <main className="pb-page">
+        <MainArticle className="flow *:[section]:px-page">
           <Section id="ways">
             <h2 className="sr-only select-none">
               {t("page-get-eth-ways-to-get")}
@@ -324,9 +324,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               <div className="flow">
                 <Image
                   src={wallet}
-                  // className="mx-auto h-auto w-full self-center sm:w-[60%] md:w-1/2"
                   className="mx-auto h-auto w-full max-w-sm"
-                  // className="h-auto"
                   sizes={`(max-width: ${screens.sm}) 100vw, (max-width: ${screens.md}) 60vw, calc(${screens["2xl"]} / 2)`}
                   alt=""
                 />
@@ -399,7 +397,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           </Section>
         </MainArticle>
 
-        <Section>
+        <Section className="px-page">
           <ContentFeedback />
         </Section>
       </main>
