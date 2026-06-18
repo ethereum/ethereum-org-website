@@ -46,7 +46,7 @@ const ConnectYourWallet = ({
           <h2 className="text-3xl">{t("page-start-connect-wallet-title")}</h2>
           <p>{t("page-start-connect-wallet-description")}</p>
         </div>
-        <div className="hidden flex-col items-center justify-center gap-4 lg:flex">
+        <div className="hidden flex-col items-start justify-center gap-4 lg:flex">
           {isConnected && <Emoji text="🎉" className="text-[72px]" />}
           {isConnected && (
             <p className="text-center text-md font-bold">
