@@ -1,137 +1,137 @@
 ---
 title: "Ethereum hesapları"
-description: "Ethereum hesaplarının bir açıklaması: Hesapların veri yapıları ve anahtar çifti kriptografisi ile ilişkileri."
+description: "Ethereum hesaplarının bir açıklaması – veri yapıları ve anahtar çifti kriptografisi ile ilişkileri."
 lang: tr
 ---
 
-Bir Ethereum hesabı, Ethereum'da mesaj gönderebilen, ether (ETH) bakiyesine sahip bir varlıktır. Hesaplar kullanıcılar tarafından kontrol edilebilir veya akıllı sözleşme olarak dağıtılabilirler.
+Bir [Ethereum](/) hesabı, Ethereum üzerinde mesajlar gönderebilen ve bir Ether (ETH) bakiyesine sahip olan bir varlıktır. Hesaplar kullanıcı kontrollü olabilir veya akıllı sözleşmeler olarak dağıtılabilir.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamanıza yardımcı olmak için, öncelikle [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) yazımızı okumanızı öneriyoruz.
+Bu sayfayı daha iyi anlamanıza yardımcı olmak için öncelikle [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) bölümümüzü okumanızı öneririz.
 
 ## Hesap türleri {#types-of-account}
 
-Ethereum'da iki tür hesap bulunur:
+Ethereum'un iki hesap türü vardır:
 
-- Harici olarak sahiplenilmiş hesaplar (EOA) - özel anahtarı olan herhangi biri tarafından kontrol edilir
-- Sözleşme hesabı - kod tarafından kontrol edilen, ağ içine yayılmış bir akıllı sözleşme. [Akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında bilgi edinin
+- Harici olarak sahip olunan hesap (EOA) – özel anahtarlara sahip olan herkes tarafından kontrol edilir
+- Kontrat hesabı – ağa dağıtılmış, kod tarafından kontrol edilen bir akıllı sözleşme. [Akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında bilgi edinin
 
-İki hesap türü de şunları yapabilir:
+Her iki hesap türü de şu yeteneklere sahiptir:
 
-- ETH ve token alma, tutma ve gönderme
-- Dağıtılmış akıllı sözleşmelerle etkileşime girme
+- ETH ve Token almak, tutmak ve göndermek
+- Dağıtılmış akıllı sözleşmelerle etkileşime girmek
 
-### Temel farklılıklar {#key-differences}
+### Temel farklar {#key-differences}
 
-**Harici olarak sahiplenilmiş**
+**Harici olarak sahip olunan**
 
-- Hesap oluşturmak tamamen ücretsizdir
-- İşlem başlatabilir
-- Harici olarak sahiplenilmiş hesaplar arası işlemler sadece ETH/token transferleri olabilir
-- Kriptografik bir anahtar çiftinden oluşur: hesap aktivitelerini kontrol eden herkese açık ve özel anahtarlar
+- Bir hesap oluşturmanın hiçbir maliyeti yoktur
+- İşlemleri başlatabilir
+- Harici olarak sahip olunan hesaplar arasındaki işlemler yalnızca ETH/Token transferleri olabilir
+- Hesap etkinliklerini kontrol eden kriptografik bir anahtar çiftinden oluşur: açık ve özel anahtarlar
 
 **Sözleşme**
 
-- Ağ depolaması kullandığınız için sözleşme oluşturmanın bir ücreti vardır
-- Yalnızca bir işlemin alınmasına yanıt olarak mesaj gönderebilir
-- Harici bir hesaptan bir sözleşme hesabına yapılan işlemler, token'ları aktarmak ve hatta yeni bir sözleşme oluşturmak gibi birçok farklı eylemi gerçekleştirebilen kodları tetikleyebilir
-- Sözleşme hesaplarının özel anahtarları yoktur. Bunun yerine, akıllı sözleşmenin kodunun mantığı tarafından kontrol edilirler
+- Ağ depolama alanını kullandığınız için bir sözleşme oluşturmanın bir maliyeti vardır
+- Yalnızca bir işlem almaya yanıt olarak mesaj gönderebilir
+- Harici bir hesaptan bir kontrat hesabına yapılan işlemler, Token transferi veya hatta yeni bir sözleşme oluşturma gibi birçok farklı eylemi yürütebilen kodu tetikleyebilir
+- Kontrat hesaplarının özel anahtarları yoktur. Bunun yerine, akıllı sözleşme kodunun mantığı tarafından kontrol edilirler
 
 ## Bir hesabın incelenmesi {#an-account-examined}
 
 Ethereum hesaplarının dört alanı vardır:
 
-- `nonce` – Harici olarak sahiplenilmiş bir hesaptan gönderilen işlem sayısını veya bir sözleşme hesabı tarafından oluşturulan sözleşme sayısını gösteren bir sayaç. Verilen tek seferlik sayı ile her bir hesap için sadece bir işlem yürütülebilir, bu imzalanmış işlemlerin tekrarlı şekilde yayınlandığı ve yürütüldüğü tekrar saldırılarına karşı koruma sağlar.
-- `balance` – Bu adrese ait wei sayısı. Wei, ETH'nin bir birimidir ve ETH başına 1e+18 wei bulunur.
-- `codeHash` – Bu hash, Ethereum sanal makinesindeki (EVM) bir hesabın _koduna_ atıfta bulunur. Sözleşme hesaplarına, farklı işlemler gerçekleştirebilen kod parçacıkları programlanmıştır. Hesap bir mesaj çağrısı aldıysa bu EVM kodu çalıştırılır. Diğer hesap alanlarının aksine değiştirilemez. Bu türdeki tüm kod parçaları, daha sonra geri alınmak üzere durum veri tabanında karşılık gelen hash'leri altında bulunur. Bu hash değeri codeHash olarak bilinir. Harici olarak sahiplenilmiş hesaplar için codeHash alanı, boş bir dizenin hash değeridir.
-- `storageRoot` – Bazen depolama karması olarak da bilinir. Hesabın depolama içeriğini kodlayan bir [Merkle Patricia Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) kök düğümünün 256 bitlik karmasıdır. Bu depolama içeriği (256 bitlik tamsayı değerleri arasındaki bir eşleme), 256 bitlik tamsayı anahtarlarının Keccak 256 bitlik karmasından RLP ile kodlanmış 256 bitlik tamsayı değerlerine bir eşleme olarak trie'ye kodlanır. Bu ağaç, bu hesabın depolama içeriğinin hash değerini kodlar ve varsayılan olarak boştur.
+- `nonce` – Harici olarak sahip olunan bir hesaptan gönderilen işlem sayısını veya bir kontrat hesabı tarafından oluşturulan sözleşme sayısını gösteren bir sayaç. İmzalı işlemlerin tekrar tekrar yayınlandığı ve yeniden yürütüldüğü tekrarlama saldırılarına karşı koruma sağlamak için her hesap için belirli bir nonce ile yalnızca bir işlem yürütülebilir.
+- `balance` – Bu adresin sahip olduğu Wei miktarı. Wei, ETH'nin bir alt birimidir ve her ETH için 1e+18 Wei vardır.
+- `codeHash` – Bu hash, Ethereum sanal makinesindeki (EVM) bir hesabın _kodunu_ ifade eder. Kontrat hesapları, farklı işlemleri gerçekleştirebilen programlanmış kod parçalarına sahiptir. Bu EVM kodu, hesap bir mesaj çağrısı alırsa yürütülür. Diğer hesap alanlarının aksine değiştirilemez. Tüm bu tür kod parçaları, daha sonra alınmak üzere ilgili hash'leri altında durum veritabanında bulunur. Bu hash değeri codeHash olarak bilinir. Harici olarak sahip olunan hesaplar için codeHash alanı boş bir dizenin hash'idir.
+- `storageRoot` – Bazen depolama hash'i olarak da bilinir. Hesabın depolama içeriğini (256 bitlik tam sayı değerleri arasındaki bir eşleme) kodlayan bir [Merkle Patricia Ağacı](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) kök düğümünün 256 bitlik hash'idir; bu, 256 bitlik tam sayı anahtarlarının Keccak 256 bitlik hash'inden RLP kodlu 256 bitlik tam sayı değerlerine bir eşleme olarak ağaca kodlanmıştır. Bu ağaç, bu hesabın depolama içeriğinin hash'ini kodlar ve varsayılan olarak boştur.
 
-![Bir hesabın yapısını gösteren bir şema](./accounts.png)
-_Şema, [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
+![A diagram showing the make up of an account](./accounts.png)
+_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
 
-## Harici olarak sahiplenilmiş hesaplar ve anahtar çiftleri {#externally-owned-accounts-and-key-pairs}
+## Harici olarak sahip olunan hesaplar ve anahtar çiftleri {#externally-owned-accounts-and-key-pairs}
 
-Bir hesap, genel ve özel olmak üzere bir çift kriptografik anahtardan oluşur. Bir işlemin gerçekten gönderen tarafından imzalandığını kanıtlamaya yardımcı olurlar ve sahteciliği önlerler. Özel anahtarınız, işlemleri imzalamak için kullandığınız anahtar olduğu için hesabınızla ilişkili fonların velayetini size verir. Kripto para aslında hiçbir zaman sizde durmaz, sizde özel anahtarlar bulunur: Fonlar her zaman Ethereum'un defterindedir.
+Bir hesap, açık ve özel olmak üzere bir çift kriptografik anahtardan oluşur. Bunlar, bir işlemin gerçekten gönderen tarafından imzalandığını kanıtlamaya yardımcı olur ve sahteciliği önler. Özel anahtarınız işlemleri imzalamak için kullandığınız şeydir, bu nedenle hesabınızla ilişkili fonların velayetini size verir. Aslında hiçbir zaman kripto para tutmazsınız, özel anahtarları tutarsınız – fonlar her zaman Ethereum'un defterindedir.
 
-Bu, bir işlemin gönderenini her zaman doğrulayabileceğiniz için kötü niyetli kişilerin sahte işlemler yayınlamasını önler.
+Bu, kötü niyetli aktörlerin sahte işlemler yayınlamasını önler çünkü bir işlemin göndericisini her zaman doğrulayabilirsiniz.
 
-Alice, kendi hesabından Bob'un hesabına ether göndermek isterse, Alice'in bir işlem talebi oluşturması ve doğrulama için ağa göndermesi gerekir. Ethereum'un açık anahtarlı kriptografi kullanımı, Alice'in işlem talebini ilk olarak kendisinin başlattığını kanıtlayabilmesini sağlar. Kriptografik mekanizmalar olmasaydı kötü niyetli bir saldırgan olan Eve, "Alice'in hesabından Havva'nın hesabına 5 ETH gönder" gibi görünen bir talebi herkese açık bir şekilde yayınlayabilir ve hiç kimse bunun Alice'den gelmediğini doğrulayamazdı.
+Alice kendi hesabından Bob'un hesabına Ether göndermek isterse, Alice'in bir işlem isteği oluşturması ve doğrulama için ağa göndermesi gerekir. Ethereum'un açık anahtar kriptografisi kullanımı, Alice'in işlem isteğini başlangıçta kendisinin başlattığını kanıtlayabilmesini sağlar. Kriptografik mekanizmalar olmadan, kötü niyetli bir düşman olan Eve, "Alice'in hesabından Eve'in hesabına 5 ETH gönder" gibi görünen bir isteği herkese açık olarak yayınlayabilir ve hiç kimse bunun Alice'ten gelmediğini doğrulayamazdı.
 
 ## Hesap oluşturma {#account-creation}
 
-Bir hesap oluşturmak istediğinizde, çoğu kütüphane sizin için rastgele bir özel anahtar üretir.
+Bir hesap oluşturmak istediğinizde, çoğu kütüphane size rastgele bir özel anahtar üretecektir.
 
-Bir özel anahtar, 64 hex karakterinden oluşur ve şifrelenebilir.
+Bir özel anahtar 64 onaltılık (hex) karakterden oluşur ve bir parolayla şifrelenebilir.
 
 Örnek:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-Açık anahtar, özel anahtardan [Eliptik Eğri Dijital İmza Algoritması](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) kullanılarak üretilir. Açık anahtarın Keccak-256 karmasının son 20 baytını alıp başına `0x` ekleyerek hesabınız için bir açık adres elde edersiniz.
+Açık anahtar, [Eliptik Eğri Dijital İmza Algoritması](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) kullanılarak özel anahtardan üretilir. Açık anahtarın Keccak-256 hash'inin son 20 baytını alıp başına `0x` ekleyerek hesabınız için açık bir adres elde edersiniz.
 
-Bu, bir Harici Olarak Sahiplenilmiş Hesabın (EOA) 42 karakterli bir adrese sahip olduğu anlamına gelir (40 onaltılık karakterden ve `0x` önekinden oluşan 20 baytlık bölüm).
+Bu, Harici olarak sahip olunan bir hesabın (EOA) 42 karakterlik bir adrese (40 onaltılık karakter olan 20 baytlık bölüm artı `0x` öneki) sahip olduğu anlamına gelir.
 
 Örnek:
 
 `0x5e97870f263700f46aa00d967821199b9bc5a120`
 
-Aşağıdaki örnek, yeni bir hesap oluşturmak için [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) adlı bir imzalama aracının nasıl kullanılacağını gösterir. Clef, Ethereum istemcisi [Geth](https://geth.ethereum.org) ile birlikte gelen bir hesap yönetimi ve imzalama aracıdır. `clef newaccount` komutu yeni bir anahtar çifti oluşturur ve bunları şifrelenmiş bir anahtar depolama dosyasına kaydeder.
+Aşağıdaki örnek, yeni bir hesap oluşturmak için [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) adlı bir imzalama aracının nasıl kullanılacağını göstermektedir. Clef, Ethereum istemcisi [Geth](https://geth.ethereum.org) ile birlikte gelen bir hesap yönetimi ve imzalama aracıdır. `clef newaccount` komutu yeni bir anahtar çifti oluşturur ve bunları şifrelenmiş bir anahtar deposuna kaydeder.
 
 ```
-> clef newaccount --keystore <yol>
+> clef newaccount --keystore <path>
 
-Lütfen oluşturulacak yeni hesap için bir parola girin:
-> <parola>
+Oluşturulacak yeni hesap için lütfen bir parola girin:
+> <password>
 
 ------------
-BİLGİ [10-28|16:19:09.156] Yeni anahtarınız oluşturuldu       adres=0x5e97870f263700f46aa00d967821199b9bc5a120
-UYARI [10-28|16:19:09.306] Lütfen anahtar dosyanızı yedekleyin      yol=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-UYARI [10-28|16:19:09.306] Lütfen parolanızı unutmayın!
+INFO [10-28|16:19:09.156] Yeni anahtarınız oluşturuldu       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Lütfen anahtar dosyanızı yedekleyin      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Lütfen parolanızı unutmayın!
 Oluşturulan hesap 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth belgeleri](https://geth.ethereum.org/docs)
 
-Özel anahtarınızdan yeni açık anahtarlar türetebilirsiniz, ancak açık anahtarlardan bir özel anahtar türetemezsiniz. Özel anahtarlarınızı güvende ve adından da anlaşılacağı gibi **ÖZEL** tutmanız hayati önem taşır.
+Özel anahtarınızdan yeni açık anahtarlar türetmek mümkündür, ancak açık anahtarlardan bir özel anahtar türetemezsiniz. Özel anahtarlarınızı güvende tutmanız ve adından da anlaşılacağı gibi **ÖZEL (GİZLİ)** tutmanız hayati önem taşır.
 
-Bir imza çıktısı veren mesajları ve işlemleri imzalamak için özel bir anahtara ihtiyacınız vardır. Diğerleri daha sonra ortak anahtarınızı türetmek için imzayı alabilir ve mesajın yazarını kanıtlayabilir. Uygulamanızda, ağa işlem göndermek için JavaScript kütüphanesini kullanabilirsiniz.
+Bir imza çıktısı veren mesajları ve işlemleri imzalamak için bir özel anahtara ihtiyacınız vardır. Başkaları daha sonra açık anahtarınızı türetmek için imzayı alabilir ve mesajın yazarını kanıtlayabilir. Uygulamanızda, ağa işlemler göndermek için bir JavaScript kütüphanesi kullanabilirsiniz.
 
-## Sözleşme hesapları {#contract-accounts}
+## Kontrat hesapları {#contract-accounts}
 
-Sözleşme hesaplarında ayrıca 42 karakterlik bir onaltılık adres bulunur:
+Kontrat hesapları da 42 karakterlik onaltılık bir adrese sahiptir:
 
 Örnek:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Sözleşme adresi genellikle Ethereum Blok Zincirine bir sözleşme dağıtıldığında verilir. Adres, içerik oluşturucunun adresinden ve bu adresten gönderilen işlem ("nonce" değeri) sayısından gelir.
+Sözleşme adresi genellikle bir sözleşme Ethereum Blokzinciri'ne dağıtıldığında verilir. Adres, oluşturucunun adresinden ve o adresten gönderilen işlem sayısından ("nonce") gelir.
 
 ## Doğrulayıcı anahtarları {#validators-keys}
 
-Ethereumda bir anahtar türü daha var ve ilk kez Ethereum iş ispatından mutabakata dayalı olan hisse ispatına geçtiğinde tanıtıldı. Bunlar doğrulayıcıları tanımlamak için kullanılan BLS anahtarları. Bu anahtarlar ağın mutabakata varabilmesi için gereken bant genişliğini kısmak için etkili bir şekilde birleşebilirler. Bu anahtar toplama süreci olmazsa bir doğrulayıcıya düşen minimum hisse çok daha fazla olurdu.
+Ethereum'da, Ethereum İş Kanıtı'ndan (PoW) Hisse Kanıtı (PoS) tabanlı mutabakata geçtiğinde tanıtılan başka bir anahtar türü daha vardır. Bunlar 'BLS' anahtarlarıdır ve doğrulayıcıları tanımlamak için kullanılırlar. Bu anahtarlar, ağın mutabakata varması için gereken bant genişliğini azaltmak amacıyla verimli bir şekilde birleştirilebilir. Bu anahtar birleştirme olmadan, bir doğrulayıcı için minimum stake çok daha yüksek olurdu.
 
 [Doğrulayıcı anahtarları hakkında daha fazlası](/developers/docs/consensus-mechanisms/pos/keys/).
 
 ## Cüzdanlar hakkında bir not {#a-note-on-wallets}
 
-Hesap, cüzdan demek değildir. Cüzdan, ister harici olarak sahiplenilmiş bir hesap ister bir sözleşme hesabı olsun, Ethereum hesabınızla etkileşim kurmanıza olanak sağlayan bir arayüz veya uygulamadır.
+Bir hesap bir cüzdan değildir. Cüzdan, harici olarak sahip olunan bir hesap veya bir kontrat hesabı fark etmeksizin Ethereum hesabınızla etkileşime girmenizi sağlayan bir arayüz veya uygulamadır.
 
 ## Görsel bir demo {#a-visual-demo}
 
-Austin'in karma fonksiyonlarını ve anahtar çiftlerini açıklamasını izleyin.
+Austin'in hash fonksiyonları ve anahtar çiftleri hakkındaki anlatımını izleyin.
 
-<YouTube id="QJ010l-pBpE" />
+<VideoWatch slug="hash-function-eth-build" />
 
-<YouTube id="9LtBDy67Tho" />
+<VideoWatch slug="key-pair-eth-build" />
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla okuma {#further-reading}
 
-- [Ethereum Hesaplarını Anlamak](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
+- [Ethereum Hesaplarını Anlamak](https://info.etherscan.com/understanding-ethereum-accounts/) - Etherscan
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## Alakalı başlıklar {#related-topics}
+## İlgili konular {#related-topics}
 
 - [Akıllı sözleşmeler](/developers/docs/smart-contracts/)
 - [İşlemler](/developers/docs/transactions/)

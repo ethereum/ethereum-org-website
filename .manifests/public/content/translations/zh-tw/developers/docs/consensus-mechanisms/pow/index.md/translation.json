@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-18T21:19:01.152Z",
+  "englishManifestHash": "a3878d8d2dea",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-909e8a",
+    "LINK-c705fb",
+    "LINK-2655ce",
+    "LINK-b8c021",
+    "LINK-ab55fe",
+    "LINK-08a3d2",
+    "LINK-540746",
+    "LINK-5b5d4e",
+    "LINK-1d8aa9",
+    "CODE-a19c63",
+    "CODE-f3400f",
+    "LINK-d45bd7",
+    "CODE-8ce86a",
+    "CODE-8ce86a",
+    "LINK-9a980f",
+    "LINK-2655ce",
+    "LINK-2673e3",
+    "LINK-da782e",
+    "LINK-840cdb",
+    "LINK-f1add4",
+    "LINK-f6ae0c",
+    "LINK-97a89d",
+    "LINK-110521"
+  ],
+  "placeholderMap": {
+    "CODE-a19c63": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29"
+      }
+    },
+    "CODE-f3400f": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xd3ee432b4fb3d26b"
+      }
+    },
+    "CODE-8ce86a": {
+      "type": "inline-code",
+      "values": {
+        "content": "N"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-909e8a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow"
+      }
+    },
+    "LINK-c705fb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-b8c021": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-08a3d2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-540746": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-5b5d4e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/gasper/"
+      }
+    },
+    "LINK-1d8aa9": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/"
+      }
+    },
+    "LINK-d45bd7": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#constantinople"
+      }
+    },
+    "LINK-9a980f": {
+      "type": "link",
+      "values": {
+        "url": "https://digiconomist.net/"
+      }
+    },
+    "LINK-2673e3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-da782e": {
+      "type": "link",
+      "values": {
+        "url": "https://en.bitcoin.it/wiki/Majority_attack"
+      }
+    },
+    "LINK-840cdb": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2016/05/09/on-settlement-finality"
+      }
+    },
+    "LINK-f1add4": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/9V1bipPkCTU"
+      }
+    },
+    "LINK-f6ae0c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/"
+      }
+    },
+    "LINK-97a89d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-110521": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/poa/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:19:01.152Z",
+      "status": "success"
+    }
+  }
+}

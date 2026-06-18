@@ -1,26 +1,26 @@
 ---
-title: "Thư viên Backend API"
-description: "Một giới thiệu về các API của client Ethereum cho phép bạn tương tác với blockchain từ ứng dụng của mình."
+title: "Các thư viện API backend"
+description: "Giới thiệu về các API của client Ethereum cho phép bạn tương tác với chuỗi khối từ ứng dụng của mình."
 lang: vi
 ---
 
-Để một ứng dụng phần mềm có thể tương tác với chuỗi khối Ethereum (tức là đọc dữ liệu chuỗi khối và/hoặc gửi giao dịch đến mạng), nó phải kết nối với một nút Ethereum.
+Để một ứng dụng phần mềm có thể tương tác với chuỗi khối [Ethereum](/) (tức là đọc dữ liệu chuỗi khối và/hoặc gửi giao dịch đến mạng lưới), nó phải kết nối với một nút Ethereum.
 
-Vì mục đích này, mọi client Ethereum đều triển khai đặc tả [JSON-RPC](/developers/docs/apis/json-rpc/), do đó có một bộ [phương thức](/developers/docs/apis/json-rpc/#json-rpc-methods) thống nhất mà các ứng dụng có thể tin cậy.
+Vì mục đích này, mọi client Ethereum đều triển khai đặc tả [JSON-RPC](/developers/docs/apis/json-rpc/), do đó có một tập hợp các [phương thức](/developers/docs/apis/json-rpc/#json-rpc-methods) đồng nhất mà các ứng dụng có thể dựa vào.
 
-Nếu bạn muốn sử dụng một ngôn ngữ lập trình cụ thể để kết nối với nút Ethereum, có rất nhiều thư viện tiện lợi trong hệ sinh thái giúp việc này trở nên dễ dàng hơn rất nhiều. Với các thư viện này, các nhà phát triển có thể viết các phương thức trực quan, chỉ với một dòng mã để khởi tạo các yêu cầu JSON-RPC (dưới lớp ngoài) tương tác với Ethereum.
+Nếu bạn muốn sử dụng một ngôn ngữ lập trình cụ thể để kết nối với một nút Ethereum, có rất nhiều thư viện tiện ích trong hệ sinh thái giúp việc này trở nên dễ dàng hơn nhiều. Với các thư viện này, các nhà phát triển có thể viết các phương thức trực quan, chỉ với một dòng mã để khởi tạo các yêu cầu JSON-RPC (ở bên trong) tương tác với Ethereum.
 
 ## Điều kiện tiên quyết {#prerequisites}
 
-Sẽ rất hữu ích nếu bạn tìm hiểu về [Ethereum stack](/developers/docs/ethereum-stack/) và [các client Ethereum](/developers/docs/nodes-and-clients/).
+Sẽ rất hữu ích nếu bạn hiểu về [ngăn xếp Ethereum](/developers/docs/ethereum-stack/) và [các client Ethereum](/developers/docs/nodes-and-clients/).
 
-## Tại sao lại sử dụng thư viện {#why-use-a-library}
+## Tại sao nên sử dụng thư viện? {#why-use-a-library}
 
-Những thư viện này giúp đơn giản hóa nhiều phần phức tạp khi bạn tương tác trực tiếp với một nút Ethereum. Chúng cũng cung cấp các hàm tiện ích (ví dụ: chuyển đổi ETH sang Gwei) để với tư cách là nhà phát triển, bạn có thể tốn ít thời gian hơn để xử lý những phức tạp của các client Ethereum và tập trung nhiều thời gian hơn vào chức năng độc đáo của ứng dụng.
+Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi tương tác trực tiếp với một nút Ethereum. Chúng cũng cung cấp các hàm tiện ích (ví dụ: chuyển đổi ETH sang Gwei) để với tư cách là một nhà phát triển, bạn có thể dành ít thời gian hơn để giải quyết những sự phức tạp của các client Ethereum và dành nhiều thời gian hơn để tập trung vào chức năng độc đáo của ứng dụng của bạn.
 
-## Các thư viện hiện có {#available-libraries}
+## Các thư viện có sẵn {#available-libraries}
 
-### Dịch vụ cơ sở hạ tầng và nút {#infrastructure-and-node-services}
+### Cơ sở hạ tầng và dịch vụ nút {#infrastructure-and-node-services}
 
 **Alchemy -** **_Nền tảng phát triển Ethereum._**
 
@@ -28,72 +28,70 @@ Những thư viện này giúp đơn giản hóa nhiều phần phức tạp khi
 - [Tài liệu](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
-
-**All That Node -** **_Nút dưới dạng Dịch vụ._**
+  
+**All That Node -** **_Nút dưới dạng Dịch vụ (Node-as-a-Service)._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Tài liệu](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast by Bware Labs -** **_Các API phi tập trung cho Mạng chính Ethereum và các Mạng thử nghiệm._**
+**Blast bởi Bware Labs -** **_Các API phi tập trung cho Mạng chính Ethereum và các Testnet._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Tài liệu](https://docs.blastapi.io)
 - [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_Cung cấp các dịch vụ RPC hiệu quả và nhanh hơn_**
+**BlockPi -** **_Cung cấp các dịch vụ RPC hiệu quả và nhanh chóng hơn_**
 
 - [blockpi.io](https://blockpi.io/)
 - [Tài liệu](https://docs.blockpi.io/)
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
-**Cổng kết nối Ethereum Cloudflare.**
+**Cloudflare Ethereum Gateway.**
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Block Explorer và Giao dịch API**
-
+**Etherscan - Trình khám phá khối và API giao dịch**
 - [Tài liệu](https://docs.etherscan.io/)
 
-**Blockscout - Trình phá khối mã nguồn mở**
-
+**Blockscout - Trình khám phá khối mã nguồn mở**
 - [Tài liệu](https://docs.blockscout.com/)
 
-**GetBlock -** **_Chuỗi khối dưới dạng dịch vụ để phát triển Web3_**
+**GetBlock-** **_Chuỗi khối dưới dạng dịch vụ (Blockchain-as-a-service) cho phát triển Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Tài liệu](https://docs.getblock.io/)
 
-**Infura -** **_API Ethereum dưới dạng một dịch vụ._**
+**Infura -** **_API Ethereum dưới dạng dịch vụ._**
 
 - [infura.io](https://infura.io)
 - [Tài liệu](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC -** **_Nhà cung cấp JSON-RPC EVM hiệu quả về chi phí_**
+**Node RPC - _Nhà cung cấp EVM JSON-RPC tiết kiệm chi phí_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Tài liệu](https://docs.noderpc.xyz/node-rpc)
 
-**NOWNodes -** **_Các nút đầy đủ và Trình khám phá khối._**
+**NOWNodes - _Các nút đầy đủ và trình khám phá khối._**
 
 - [NOWNodes.io](https://nownodes.io/)
 - [Tài liệu](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_Cơ sở hạ tầng Chuỗi khối dưới dạng Dịch vụ._**
+**QuickNode -** **_Cơ sở hạ tầng chuỗi khối dưới dạng Dịch vụ._**
 
 - [quicknode.com](https://quicknode.com)
 - [Tài liệu](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet -** **_Các API Ethereum và Ethereum Classic dưới dạng dịch vụ được cung cấp bởi phần mềm mã nguồn mở._**
+**Rivet -** **_Các API Ethereum và Ethereum Classic dưới dạng dịch vụ được hỗ trợ bởi phần mềm mã nguồn mở._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Tài liệu](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_Các nút Ethereum tập trung vào tốc độ qua API JSON-RPC/WebSockets._**
+**Zmok -** **_Các nút Ethereum định hướng tốc độ dưới dạng API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -102,23 +100,23 @@ Những thư viện này giúp đơn giản hóa nhiều phần phức tạp khi
 
 ### Công cụ phát triển {#development-tools}
 
-**ethers-kt -** **_Thư viện Kotlin/Java/Android không đồng bộ, hiệu suất cao cho các chuỗi khối dựa trên EVM._**
+**ethers-kt -** **_Thư viện Kotlin/Java/Android bất đồng bộ, hiệu suất cao cho các chuỗi khối dựa trên EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
-- [Các ví dụ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Ví dụ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
 **Nethereum -** **_Một thư viện tích hợp .NET mã nguồn mở cho chuỗi khối._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Tài liệu](https://docs.nethereum.com/en/latest/)
+- [Tài liệu](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Bộ công cụ Python -** **_Nhiều thư viện để tương tác với Ethereum qua Python._**
+**Công cụ Python -** **_Nhiều thư viện khác nhau để tương tác với Ethereum thông qua Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [web3.py GitHub](https://github.com/ethereum/web3.py)
-- [web3.py Chat](https://gitter.im/ethereum/web3.py)
+- [GitHub của Web3.py](https://github.com/ethereum/web3.py)
+- [Trò chuyện Web3.py](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_Nền tảng phát triển chuỗi khối tối ưu._**
 
@@ -127,20 +125,20 @@ Những thư viện này giúp đơn giản hóa nhiều phần phức tạp khi
 - [Tài liệu](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**web3j -** **_Thư viện tích hợp Java/Android/Kotlin/Scala cho Ethereum._**
+**Web3j -** **_Một thư viện tích hợp Java/Android/Kotlin/Scala cho Ethereum._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Tài liệu](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-### Các dịch vụ chuỗi khối {#blockchain-services}
+### Dịch vụ chuỗi khối {#blockchain-services}
 
-**BlockCypher -** **_Các API Web của Ethereum._**
+**BlockCypher -** **_Các Web API của Ethereum._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Tài liệu](https://www.blockcypher.com/dev/ethereum/)
 
-**Chainbase -** **_Cơ sở hạ tầng dữ liệu web3 toàn diện cho Ethereum._**
+**Chainbase -** **_Cơ sở hạ tầng dữ liệu Web3 tất cả trong một cho Ethereum._**
 
 - [chainbase.com](https://chainbase.com/)
 - [Tài liệu](https://docs.chainbase.com/)
@@ -152,12 +150,12 @@ Những thư viện này giúp đơn giản hóa nhiều phần phức tạp khi
 - [Tài liệu](https://docs.chainstack.com/)
 - [Tài liệu tham khảo API Ethereum](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node -** **_API Cơ sở hạ tầng Chuỗi khối._**
+**Coinbase Cloud Node -** **_API cơ sở hạ tầng chuỗi khối._**
 
 - [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [Tài liệu](https://docs.cdp.coinbase.com/)
 
-**DataHub by Figment -** **_Các dịch vụ API Web3 với Mạng chính Ethereum và các mạng thử nghiệm._**
+**DataHub bởi Figment -** **_Các dịch vụ API Web3 với Mạng chính Ethereum và các testnet._**
 
 - [DataHub](https://www.figment.io/)
 - [Tài liệu](https://docs.figment.io/)
@@ -170,14 +168,14 @@ Những thư viện này giúp đơn giản hóa nhiều phần phức tạp khi
 - [Discord](https://moralis.io/joindiscord/)
 - [Diễn đàn](https://forum.moralis.io/)
 
-**NFTPort -** **_Các API Dữ liệu và Đúc của Ethereum._**
+**NFTPort -** **_Các API dữ liệu và đúc của Ethereum._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Tài liệu](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_Nền tảng API chuỗi khối đa tiền mã hóa chung._**
+**Tokenview -** **_Nền tảng API chuỗi khối đa tiền mã hóa tổng hợp._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Tài liệu](https://services.tokenview.io/docs?type=api)
@@ -189,23 +187,32 @@ Những thư viện này giúp đơn giản hóa nhiều phần phức tạp khi
 - [Tài liệu](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Covalent -** **_Các API chuỗi khối nâng cao cho hơn 200 chuỗi._**
+**Codex -** **_API dữ liệu chuỗi khối phong phú, theo thời gian thực trên hàng chục chuỗi._**
+
+- [codex.io](https://www.codex.io/)
+- [Tài liệu](https://docs.codex.io)
+- [Trình khám phá](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
+
+**Covalent -** **_Các API chuỗi khối phong phú cho hơn 200 chuỗi._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
 - [Tài liệu](https://www.covalenthq.com/docs/api/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
+
 ## Đọc thêm {#further-reading}
 
-_Biết về nguồn lực cộng đồng đã giúp đỡ bạn? Chỉnh sửa trang này và bổ sung!_
+_Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho bạn? Hãy chỉnh sửa trang này và thêm nó vào!_
 
 ## Các chủ đề liên quan {#related-topics}
 
 - [Các nút và client](/developers/docs/nodes-and-clients/)
-- [Các khung phát triển](/developers/docs/frameworks/)
+- [Các framework phát triển](/developers/docs/frameworks/)
 
 ## Các hướng dẫn liên quan {#related-tutorials}
 
-- [Thiết lập Web3js để sử dụng chuỗi khối Ethereum trong JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Hướng dẫn thiết lập web3.js trong dự án của bạn._
-- [Gọi một hợp đồng thông minh từ JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Sử dụng token DAI, hãy xem cách gọi hàm hợp đồng bằng JavaScript._
+- [Thiết lập Web3.js để sử dụng chuỗi khối Ethereum trong JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Hướng dẫn thiết lập Web3.js trong dự án của bạn._
+- [Gọi một hợp đồng thông minh từ JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Sử dụng token DAI, xem cách gọi hàm của hợp đồng bằng JavaScript._
