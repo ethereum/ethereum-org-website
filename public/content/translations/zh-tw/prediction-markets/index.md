@@ -32,8 +32,8 @@ buttons:
 與傳統預測不同，基於區塊鏈的預測市場具有以下特點：
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="參與者質押真實資金，這意味著高品質的預測。"/>
-  <Card title="Decentralization" emoji="🌎" description="使用區塊鏈與智能合約可確保透明且自動化的支付。" />
+  <Card title="激勵機制" emoji=":money_with_wings:" description="參與者質押真實資金，這意味著高品質的預測。"/>
+  <Card title="去中心化" emoji="🌎" description="使用區塊鏈與智能合約可確保透明且自動化的支付。" />
   <Card title="市場驅動的賠率" emoji="🤝" description="價格由買賣結果份額的交易者決定，而非由中心化莊家預先設定。" />
 </Grid>
 

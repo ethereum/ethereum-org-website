@@ -32,8 +32,8 @@ En théorie, parce que les parieurs ont tout à gagner à avoir raison, les marc
 Contrairement aux prévisions traditionnelles, les marchés de prédiction basés sur la chaîne de blocs sont :
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Les participants stakent des fonds réels, ce qui implique des prédictions de haute qualité."/>
-  <Card title="Decentralization" emoji="🌎" description="L'utilisation de la chaîne de blocs et des contrats intelligents garantit des paiements transparents et automatisés." />
+  <Card title="Incitatif" emoji=":money_with_wings:" description="Les participants stakent des fonds réels, ce qui implique des prédictions de haute qualité."/>
+  <Card title="Décentralisation" emoji="🌎" description="L'utilisation de la chaîne de blocs et des contrats intelligents garantit des paiements transparents et automatisés." />
   <Card title="Cotes déterminées par le marché" emoji="🤝" description="Les prix sont fixés par les traders qui achètent et vendent des parts de résultat, plutôt que d'être prédéfinis par un bookmaker centralisé." />
 </Grid>
 

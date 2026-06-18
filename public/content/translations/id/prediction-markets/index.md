@@ -32,8 +32,8 @@ Secara teori, karena petaruh akan mendapat untung jika benar, pasar prediksi dap
 Berbeda dengan prakiraan tradisional, pasar prediksi berbasis rantai blok bersifat:
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Peserta melakukan stake dana nyata, yang menghasilkan prediksi berkualitas tinggi."/>
-  <Card title="Decentralization" emoji="🌎" description="Penggunaan rantai blok dan kontrak pintar memastikan pembayaran yang transparan dan otomatis." />
+  <Card title="Berinsentif" emoji=":money_with_wings:" description="Peserta melakukan stake dana nyata, yang menghasilkan prediksi berkualitas tinggi."/>
+  <Card title="Desentralisasi" emoji="🌎" description="Penggunaan rantai blok dan kontrak pintar memastikan pembayaran yang transparan dan otomatis." />
   <Card title="Peluang yang ditentukan pasar" emoji="🤝" description="Harga ditetapkan oleh pedagang yang membeli dan menjual saham hasil, bukan ditentukan sebelumnya oleh bandar terpusat." />
 </Grid>
 

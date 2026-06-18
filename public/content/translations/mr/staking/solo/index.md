@@ -57,7 +57,7 @@ summaryPoints:
 [इथेरियम सुरक्षा आणि घोटाळा प्रतिबंध](/security/)
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="देखभाल" eventCategory="SoloStaking" eventName="clicked maintenance">
 हार्डवेअर कधीकधी निकामी होते, नेटवर्क कनेक्शनमध्ये त्रुटी येतात आणि क्लायंट सॉफ्टवेअरला कधीकधी अपग्रेड करण्याची आवश्यकता असते. नोड देखभाल अपरिहार्य आहे आणि कधीकधी तुमच्या लक्ष देण्याची आवश्यकता असेल. तुम्हाला कोणत्याही अपेक्षित नेटवर्क अपग्रेड्स किंवा इतर महत्त्वपूर्ण क्लायंट अपग्रेड्सबद्दल माहिती असल्याची खात्री करायची असेल.
 </ExpandableCard>
 

@@ -32,8 +32,8 @@ Em teoria, como os apostadores podem lucrar por estarem corretos, os mercados de
 Ao contrário das previsões tradicionais, os mercados de previsão baseados em blockchain são:
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Os participantes fazem stake de fundos reais, o que indica previsões de alta qualidade."/>
-  <Card title="Decentralization" emoji="🌎" description="O uso da blockchain e de contratos inteligentes garante pagamentos transparentes e automatizados." />
+  <Card title="Incentivado" emoji=":money_with_wings:" description="Os participantes fazem stake de fundos reais, o que indica previsões de alta qualidade."/>
+  <Card title="Descentralização" emoji="🌎" description="O uso da blockchain e de contratos inteligentes garante pagamentos transparentes e automatizados." />
   <Card title="Probabilidades definidas pelo mercado" emoji="🤝" description="Os preços são definidos por traders que compram e vendem cotas de resultados, em vez de serem predefinidos por uma casa de apostas centralizada." />
 </Grid>
 

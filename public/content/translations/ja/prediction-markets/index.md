@@ -32,8 +32,8 @@ buttons:
 従来の予測とは異なり、ブロックチェーンベースの予測市場には以下の特徴があります。
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="参加者が実際の資金をステークすることで、質の高い予測が導き出されます。"/>
-  <Card title="Decentralization" emoji="🌎" description="ブロックチェーンとスマートコントラクトを利用することで、透明性の高い自動化された支払いが保証されます。" />
+  <Card title="インセンティブ付き" emoji=":money_with_wings:" description="参加者が実際の資金をステークすることで、質の高い予測が導き出されます。"/>
+  <Card title="分散化" emoji="🌎" description="ブロックチェーンとスマートコントラクトを利用することで、透明性の高い自動化された支払いが保証されます。" />
   <Card title="市場主導のオッズ" emoji="🤝" description="価格は中央集権的なブックメーカーによって事前に設定されるのではなく、結果のシェアを売買するトレーダーによって決定されます。" />
 </Grid>
 

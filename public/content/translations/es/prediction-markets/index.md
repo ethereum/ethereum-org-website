@@ -32,8 +32,8 @@ En teoría, debido a que los apostadores pueden obtener ganancias si aciertan, l
 A diferencia de los pronósticos tradicionales, los mercados de predicción basados en la cadena de bloques son:
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Los participantes depositan fondos reales en garantía, lo que implica predicciones de alta calidad."/>
-  <Card title="Decentralization" emoji="🌎" description="El uso de la cadena de bloques y los contratos inteligentes garantiza pagos transparentes y automatizados." />
+  <Card title="Incentivado" emoji=":money_with_wings:" description="Los participantes depositan fondos reales en garantía, lo que implica predicciones de alta calidad."/>
+  <Card title="Descentralización" emoji="🌎" description="El uso de la cadena de bloques y los contratos inteligentes garantiza pagos transparentes y automatizados." />
   <Card title="Cuotas determinadas por el mercado" emoji="🤝" description="Los precios los establecen los operadores que compran y venden participaciones de resultados, en lugar de ser preestablecidos por una casa de apuestas centralizada." />
 </Grid>
 

@@ -57,7 +57,7 @@ summaryPoints:
 [इथेरियम सुरक्षा और घोटाला रोकथाम](/security/)
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="रखरखाव" eventCategory="SoloStaking" eventName="clicked maintenance">
 हार्डवेयर कभी-कभी विफल हो जाता है, नेटवर्क कनेक्शन में त्रुटि आ जाती है, और क्लाइंट सॉफ़्टवेयर को कभी-कभी अपग्रेड करने की आवश्यकता होती है। नोड रखरखाव अपरिहार्य है और कभी-कभी आपके ध्यान की आवश्यकता होगी। आप यह सुनिश्चित करना चाहेंगे कि आप किसी भी प्रत्याशित नेटवर्क अपग्रेड, या अन्य महत्वपूर्ण क्लाइंट अपग्रेड के बारे में जागरूक रहें।
 </ExpandableCard>
 

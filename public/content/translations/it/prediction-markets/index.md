@@ -32,8 +32,8 @@ In teoria, poiché gli scommettitori traggono profitto dall'avere ragione, i mer
 A differenza delle previsioni tradizionali, i mercati predittivi basati su blockchain sono:
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="I partecipanti vincolano fondi reali, il che implica previsioni di alta qualità."/>
-  <Card title="Decentralization" emoji="🌎" description="L'utilizzo della blockchain e degli smart contract garantisce pagamenti trasparenti e automatizzati." />
+  <Card title="Incentivato" emoji=":money_with_wings:" description="I partecipanti vincolano fondi reali, il che implica previsioni di alta qualità."/>
+  <Card title="Decentralizzazione" emoji="🌎" description="L'utilizzo della blockchain e degli smart contract garantisce pagamenti trasparenti e automatizzati." />
   <Card title="Quote determinate dal mercato" emoji="🤝" description="I prezzi sono stabiliti dai trader che acquistano e vendono quote sui risultati, anziché essere prefissati da un bookmaker centralizzato." />
 </Grid>
 
