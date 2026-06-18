@@ -42,7 +42,7 @@ const Stories = ({ stories }: StoriesProps) => {
             }}
             variant="outline"
           >
-            {t("page-10-year-stories-show-more")}
+            {t("common:show-more")}
           </Button>
         </div>
       )}

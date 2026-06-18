@@ -40,7 +40,7 @@ const StoryCard = ({
   expandable = true,
   showDate = true,
 }: StoryCardProps) => {
-  const { t } = useTranslation("page-10-year-anniversary")
+  const { t } = useTranslation("common")
   const [isFlipped, setIsFlipped] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
   const [isFading, setIsFading] = useState(false)
@@ -68,7 +68,7 @@ const StoryCard = ({
         <div className="mb-4 flex flex-row items-center justify-between">
           <div className="flex flex-row items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-hover">
-              <p aria-hidden className="font-bold text-white">
+              <p aria-hidden className="font-bold text-body-inverse">
                 {story.name?.slice(0, 1) || "?"}
               </p>
             </div>
@@ -113,7 +113,7 @@ const StoryCard = ({
                     eventCategory: "community-stories",
                   }}
                 >
-                  {t("page-10-year-stories-read-more")}
+                  {t("story-card-read-more")}
                 </Button>
               </div>
             )}
@@ -123,8 +123,8 @@ const StoryCard = ({
             <div>
               <p className="text-xs text-body-medium">
                 {showOriginal
-                  ? t("page-10-year-stories-original-language")
-                  : t("page-10-year-stories-english-translation")}
+                  ? t("story-card-original-language")
+                  : t("story-card-english-translation")}
               </p>
               <Button
                 onClick={handleFlip}
@@ -137,8 +137,8 @@ const StoryCard = ({
                 }}
               >
                 {showOriginal
-                  ? t("page-10-year-stories-show-english")
-                  : t("page-10-year-stories-show-original")}
+                  ? t("story-card-show-english")
+                  : t("story-card-show-original")}
               </Button>
             </div>
           )}

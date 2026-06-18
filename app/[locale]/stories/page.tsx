@@ -14,6 +14,7 @@ import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section } from "@/components/ui/section"
 
+import { getStoriesData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getVideos } from "@/lib/utils/videos"
@@ -28,7 +29,7 @@ import DiscoverStories from "./_components/DiscoverStories"
 import MoreStories from "./_components/MoreStories"
 
 import { routing } from "@/i18n/routing"
-import storiesHero from "@/public/images/stories/hero.png"
+import storiesHero from "@/public/images/heroes/stories-hero.png"
 
 const SHARE_STORY_URL = "https://ethereumstory.paperform.co/"
 
@@ -42,6 +43,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
   const videos = await getVideos(locale)
   const storyVideos = getVideosByCategory(videos, ["community-stories"])
   const communityStories: Story[] = parseStoryDates(tenYearStories, locale)
+  const featuredStories = await getStoriesData(locale)
 
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/stories/")
@@ -64,7 +66,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
         />
 
         <Section id="discover" className="px-4 md:px-8">
-          <DiscoverStories />
+          <DiscoverStories stories={featuredStories} />
         </Section>
 
         <Section id="more-stories" className="space-y-8 px-4 md:px-8">

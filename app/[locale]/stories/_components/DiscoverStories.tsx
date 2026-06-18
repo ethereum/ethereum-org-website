@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server"
 
+import type { StoryPreview } from "@/lib/types"
+
 import { Image } from "@/components/Image"
 import {
   Card,
@@ -13,21 +15,14 @@ import {
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 
-import { FEATURED_STORIES } from "../utils"
+type DiscoverStoriesProps = {
+  stories: StoryPreview[]
+}
 
-import argentinianBuildersCover from "@/public/content/stories/argentinian-builders/placeholder-ar-flag-hero.png"
-import digitalFeudalismCover from "@/public/content/stories/digital-feudalism/tarrence-cover-image.jpeg"
-import fundingCultureCover from "@/public/content/stories/funding-culture/pplpleasr-hero.png"
-
-// Cover imagery, keyed by featured slug.
-const placeholderImages = {
-  "argentinian-builders": argentinianBuildersCover,
-  "funding-culture": fundingCultureCover,
-  "digital-feudalism": digitalFeudalismCover,
-} as const
-
-const DiscoverStories = async () => {
+const DiscoverStories = async ({ stories }: DiscoverStoriesProps) => {
   const t = await getTranslations("page-stories")
+
+  if (stories.length === 0) return null
 
   return (
     <div className="rounded-4xl bg-radial-a px-4 py-12 md:px-8 md:py-16">
@@ -39,7 +34,7 @@ const DiscoverStories = async () => {
       </div>
 
       <Grid columns={3} className="mx-auto max-w-screen-lg">
-        {FEATURED_STORIES.map((story) => (
+        {stories.map((story) => (
           <Card
             key={story.slug}
             href={`/stories/${story.slug}/`}
@@ -49,16 +44,18 @@ const DiscoverStories = async () => {
             <CardHeader>
               <CardBanner className="h-40">
                 <Image
-                  src={placeholderImages[story.slug]}
+                  src={story.image}
                   alt=""
+                  width={640}
+                  height={360}
                   sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                 />
               </CardBanner>
             </CardHeader>
             <CardContent>
-              <CardTitle>{t(story.titleKey)}</CardTitle>
+              <CardTitle>{story.title}</CardTitle>
               <CardParagraph size="sm" className="line-clamp-3">
-                {t(story.descriptionKey)}
+                {story.description}
               </CardParagraph>
             </CardContent>
             <CardFooter>

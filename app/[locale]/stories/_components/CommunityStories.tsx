@@ -122,7 +122,7 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
               eventCategory: "community-stories",
             }}
           >
-            {t("page-10-year-anniversary:page-10-year-stories-show-more")}
+            {t("common:show-more")}
           </Button>
         </div>
       )}
