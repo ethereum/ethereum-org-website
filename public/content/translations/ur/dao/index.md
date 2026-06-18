@@ -1,12 +1,12 @@
 ---
-title: ڈاؤ (DAO) کیا ہے؟
-metaTitle: ڈاؤ (DAO) کیا ہے؟ | ⁦Decentralized Autonomous Organization⁩
-description: ⁦Ethereum⁩ پر ڈاؤز (DAOs) کا ایک جائزہ
+title: "ڈاؤ (DAO) کیا ہے؟"
+metaTitle: "ڈاؤ (DAO) کیا ہے؟ | ⁦Decentralized Autonomous Organization⁩"
+description: "⁦Ethereum⁩ پر ڈاؤز (DAOs) کا ایک جائزہ"
 lang: ur
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: ایک ⁦DAO⁩ کی نمائندگی جو کسی تجویز پر ووٹ دے رہی ہے۔
+alt: "ایک ⁦DAO⁩ کی نمائندگی جو کسی تجویز پر ووٹ دے رہی ہے۔"
 summaryPoints:
   - "مرکزی قیادت کے بغیر ممبران کی ملکیت والی کمیونٹیز۔"
   - "انٹرنیٹ پر اجنبیوں کے ساتھ تعاون کرنے کا ایک محفوظ طریقہ۔"

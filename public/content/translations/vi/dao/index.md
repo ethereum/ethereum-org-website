@@ -1,12 +1,12 @@
 ---
-title: DAO là gì?
-metaTitle: DAO là gì? | Tổ chức tự trị phi tập trung
-description: Tổng quan về các DAO trên Ethereum
+title: "DAO là gì?"
+metaTitle: "DAO là gì? | Tổ chức tự trị phi tập trung"
+description: "Tổng quan về các DAO trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Hình ảnh minh họa một DAO đang bỏ phiếu cho một đề xuất.
+alt: "Hình ảnh minh họa một DAO đang bỏ phiếu cho một đề xuất."
 summaryPoints:
   - "Các cộng đồng do thành viên sở hữu mà không có sự lãnh đạo tập trung."
   - "Một cách an toàn để cộng tác với những người lạ trên internet."

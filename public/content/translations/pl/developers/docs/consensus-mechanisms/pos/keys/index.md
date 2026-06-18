@@ -1,6 +1,6 @@
 ---
 title: Klucze w Ethereum opartym na dowodzie stawki (PoS)
-description: Wyjaśnienie kluczy używanych w mechanizmie konsensusu dowodu stawki (PoS) w Ethereum
+description: "Wyjaśnienie kluczy używanych w mechanizmie konsensusu dowodu stawki (PoS) w Ethereum"
 lang: pl
 ---
 

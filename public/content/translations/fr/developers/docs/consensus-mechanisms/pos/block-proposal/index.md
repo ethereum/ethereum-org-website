@@ -1,6 +1,6 @@
 ---
 title: Proposition de bloc
-description: Explication de la façon dont les blocs sont proposés dans la preuve d'enjeu d'Ethereum.
+description: "Explication de la façon dont les blocs sont proposés dans la preuve d'enjeu d'Ethereum."
 lang: fr
 ---
 

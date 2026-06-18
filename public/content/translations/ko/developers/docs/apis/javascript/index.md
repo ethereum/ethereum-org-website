@@ -1,6 +1,6 @@
 ---
-title: JavaScript API 라이브러리
-description: 애플리케이션에서 블록체인과 상호 작용할 수 있게 해주는 JavaScript 클라이언트 라이브러리에 대한 소개입니다.
+title: "JavaScript API 라이브러리"
+description: "애플리케이션에서 블록체인과 상호 작용할 수 있게 해주는 JavaScript 클라이언트 라이브러리에 대한 소개입니다."
 lang: ko
 ---
 

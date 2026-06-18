@@ -1,6 +1,6 @@
 ---
 title: Blok gezginleri
-description: İşlemler, hesaplar, sözleşmeler ve daha fazlası hakkında bilgi sorgulayabileceğiniz, blokzincir verileri dünyasına açılan portalınız olan blok gezginlerine bir giriş.
+description: "İşlemler, hesaplar, sözleşmeler ve daha fazlası hakkında bilgi sorgulayabileceğiniz, blokzincir verileri dünyasına açılan portalınız olan blok gezginlerine bir giriş."
 lang: tr
 sidebarDepth: 3
 ---

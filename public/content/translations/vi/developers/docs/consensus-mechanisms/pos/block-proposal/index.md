@@ -1,6 +1,6 @@
 ---
-title: Đề xuất khối
-description: Giải thích về cách các khối được đề xuất trong Ethereum bằng chứng cổ phần.
+title: "Đề xuất khối"
+description: "Giải thích về cách các khối được đề xuất trong Ethereum bằng chứng cổ phần."
 lang: vi
 ---
 

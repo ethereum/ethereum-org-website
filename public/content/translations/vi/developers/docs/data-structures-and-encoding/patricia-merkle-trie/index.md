@@ -1,6 +1,6 @@
 ---
-title: Cây tiền tố Merkle Patricia
-description: Giới thiệu về cây tiền tố Merkle Patricia.
+title: "Cây tiền tố Merkle Patricia"
+description: "Giới thiệu về cây tiền tố Merkle Patricia."
 lang: vi
 sidebarDepth: 2
 ---

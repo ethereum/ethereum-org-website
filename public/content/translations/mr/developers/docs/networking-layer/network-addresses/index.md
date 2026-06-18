@@ -1,6 +1,6 @@
 ---
-title: नेटवर्क पत्ते
-description: नेटवर्क पत्त्यांची ओळख.
+title: "नेटवर्क पत्ते"
+description: "नेटवर्क पत्त्यांची ओळख."
 lang: mr
 sidebarDepth: 2
 ---

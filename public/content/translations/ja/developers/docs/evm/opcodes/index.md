@@ -1,6 +1,6 @@
 ---
-title: EVMのオペコード
-description: イーサリアム仮想マシン（EVM）で利用可能なすべてのオペコードのリスト。
+title: "EVMのオペコード"
+description: "イーサリアム仮想マシン（EVM）で利用可能なすべてのオペコードのリスト。"
 lang: ja
 ---
 

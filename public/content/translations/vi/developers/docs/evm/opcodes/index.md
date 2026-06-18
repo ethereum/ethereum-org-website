@@ -1,6 +1,6 @@
 ---
-title: Mã lệnh cho EVM
-description: Danh sách tất cả các mã lệnh có sẵn cho máy ảo Ethereum.
+title: "Mã lệnh cho EVM"
+description: "Danh sách tất cả các mã lệnh có sẵn cho máy ảo Ethereum."
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 以太坊技術簡介
-description: 專為 dapp 開發者編寫的以太坊核心概念簡介。
+title: "以太坊技術簡介"
+description: "專為 dapp 開發者編寫的以太坊核心概念簡介。"
 lang: zh-tw
 ---
 

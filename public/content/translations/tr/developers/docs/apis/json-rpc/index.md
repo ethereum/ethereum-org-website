@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: Ethereum istemcileri için durumsuz, hafif bir uzak prosedür çağrısı (RPC) protokolü.
+description: "Ethereum istemcileri için durumsuz, hafif bir uzak prosedür çağrısı (RPC) protokolü."
 lang: tr
 ---
 
@@ -1393,7 +1393,7 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 Ayrıca _şunlardan birini_ döndürür:
 
 - `root` : `DATA` 32 baytlık işlem sonrası durum kökü (Bizans öncesi)
-- `status`: `QUANTITY` `1` (başarılı) veya `0` (başarısız)
+- `status`: `QUANTITY `1` (başarılı) veya `0` (başarısız)
 
 **Örnek**
 

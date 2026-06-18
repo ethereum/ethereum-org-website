@@ -1,7 +1,7 @@
 ---
 title: Gas y tarifas
 metaTitle: "Gas y tarifas de Ethereum: descripción técnica general"
-description: Aprenda sobre las tarifas de gas de Ethereum, cómo se calculan y su papel en la seguridad de la red y el procesamiento de transacciones.
+description: "Aprenda sobre las tarifas de gas de Ethereum, cómo se calculan y su papel en la seguridad de la red y el procesamiento de transacciones."
 lang: es
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Couche réseau
-description: Une introduction à la couche réseau d'Ethereum.
+title: "Couche réseau"
+description: "Une introduction à la couche réseau d'Ethereum."
 lang: fr
 sidebarDepth: 2
 ---

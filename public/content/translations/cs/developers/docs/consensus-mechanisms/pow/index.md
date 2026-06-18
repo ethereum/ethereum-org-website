@@ -1,6 +1,6 @@
 ---
-title: Důkaz prací (PoW)
-description: Vysvětlení protokolu konsensu důkaz prací (PoW) a jeho role v Ethereu.
+title: "Důkaz prací (PoW)"
+description: "Vysvětlení protokolu konsensu důkaz prací (PoW) a jeho role v Ethereu."
 lang: cs
 ---
 

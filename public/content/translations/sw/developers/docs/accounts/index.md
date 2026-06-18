@@ -1,6 +1,6 @@
 ---
 title: Akaunti za Ethereum
-description: Maelezo ya akaunti za Ethereum – miundo ya data zake na uhusiano wake na kriptografia ya jozi ya funguo.
+description: "Maelezo ya akaunti za Ethereum – miundo ya data zake na uhusiano wake na kriptografia ya jozi ya funguo."
 lang: sw
 ---
 

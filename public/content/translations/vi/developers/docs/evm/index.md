@@ -1,6 +1,6 @@
 ---
-title: Máy ảo Ethereum (EVM)
-description: Giới thiệu về máy ảo Ethereum và cách nó liên quan đến trạng thái, giao dịch và hợp đồng thông minh.
+title: "Máy ảo Ethereum (EVM)"
+description: "Giới thiệu về máy ảo Ethereum và cách nó liên quan đến trạng thái, giao dịch và hợp đồng thông minh."
 lang: vi
 ---
 

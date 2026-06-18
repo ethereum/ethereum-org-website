@@ -1,6 +1,6 @@
 ---
-title: JavaScript API 函式庫
-description: 介紹可讓您從應用程式與區塊鏈互動的 JavaScript 客戶端函式庫。
+title: "JavaScript API 函式庫"
+description: "介紹可讓您從應用程式與區塊鏈互動的 JavaScript 客戶端函式庫。"
 lang: zh-tw
 ---
 

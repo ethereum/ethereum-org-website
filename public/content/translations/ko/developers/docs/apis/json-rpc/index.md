@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: 이더리움 클라이언트를 위한 무상태(stateless) 경량 원격 프로시저 호출(RPC) 프로토콜입니다.
+description: "이더리움 클라이언트를 위한 무상태(stateless) 경량 원격 프로시저 호출(RPC) 프로토콜입니다."
 lang: ko
 ---
 
@@ -95,7 +95,7 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 
 ## 가십, 상태, 기록 {#gossip-state-history}
 
-소수의 핵심 JSON-RPC 메서드는 이더리움 네트워크의 데이터를 필요로 하며, 크게 세 가지 주요 범주인 _가십(Gossip), 상태(State), 기록(History)_으로 나뉩니다. 각 메서드로 이동하려면 이 섹션의 링크를 사용하거나, 전체 메서드 목록을 살펴보려면 목차를 사용하세요.
+소수의 핵심 JSON-RPC 메서드는 이더리움 네트워크의 데이터를 필요로 하며, 크게 세 가지 주요 범주인 <em>가십(Gossip), 상태(State), 기록(History)</em>으로 나뉩니다. 각 메서드로 이동하려면 이 섹션의 링크를 사용하거나, 전체 메서드 목록을 살펴보려면 목차를 사용하세요.
 
 ### 가십 메서드 {#gossip-methods}
 
@@ -394,7 +394,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
   플레이그라운드에서 엔드포인트 사용해 보기
 </ButtonLink>
 
-> **참고:** 이 메서드는 **v1.14.0**부터 더 이상 사용되지 않으며 지원되지 않습니다. 이 메서드를 사용하려고 시도하면 "Method not supported" 오류가 발생합니다.
+> **참고:** 이 메서드는 <strong>v1.14.0</strong>부터 더 이상 사용되지 않으며 지원되지 않습니다. 이 메서드를 사용하려고 시도하면 "Method not supported" 오류가 발생합니다.
 
 **매개변수**
 
@@ -1390,10 +1390,10 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 - `logsBloom`: `DATA`, 256바이트 - 경량 클라이언트가 관련 로그를 빠르게 검색할 수 있도록 하는 블룸 필터(Bloom filter).
 - `type`: `QUANTITY` - 트랜잭션 유형을 나타내는 정수. 레거시 트랜잭션의 경우 `0x0`, 액세스 목록 유형의 경우 `0x1`, 동적 수수료의 경우 `0x2`입니다.
 
-또한 다음 중 _하나_를 반환합니다:
+또한 다음 중 <em>하나</em>를 반환합니다:
 
 - `root` : `DATA` 트랜잭션 후 상태 루트의 32바이트 (비잔티움 이전)
-- `status`: `QUANTITY` `1` (성공) 또는 `0` (실패)
+- `status`: `QUANTITY `1` (성공) 또는 `0` (실패)
 
 **예시**
 
@@ -1657,8 +1657,8 @@ params: [
   - `blockHash`: `DATA`, 32바이트 - 이 로그가 포함된 블록의 해시입니다. 대기 중일 경우 `null`입니다. 대기 중인 로그일 경우 `null`입니다.
   - `blockNumber`: `QUANTITY` - 이 로그가 포함된 블록 번호입니다. 대기 중일 경우 `null`입니다. 대기 중인 로그일 경우 `null`입니다.
   - `address`: `DATA`, 20바이트 - 이 로그가 발생한 주소입니다.
-  - `data`: `DATA` - 가변 길이의 인덱싱되지 않은 로그 데이터입니다. (_Solidity_의 경우: 0개 이상의 32바이트 인덱싱되지 않은 로그 인수입니다.)
-  - `topics`: `Array of DATA` - 인덱싱된 로그 인수의 0~4개 32바이트 `DATA` 배열입니다. (_Solidity_의 경우: 이벤트를 `anonymous` 지정자로 선언하지 않은 이상, 첫 번째 주제는 이벤트 서명의 _해시_입니다(예: `Deposit(address,bytes32,uint256)`).)
+  - `data`: `DATA` - 가변 길이의 인덱싱되지 않은 로그 데이터입니다. (<em>Solidity</em>의 경우: 0개 이상의 32바이트 인덱싱되지 않은 로그 인수입니다.)
+  - `topics`: `Array of DATA` - 인덱싱된 로그 인수의 0\~4개 32바이트 `DATA` 배열입니다. (<em>Solidity</em>의 경우: 이벤트를 `anonymous` 지정자로 선언하지 않은 이상, 첫 번째 주제는 이벤트 서명의 <em>해시</em>입니다(예: `Deposit(address,bytes32,uint256)`).)
 
 - **예시**
 

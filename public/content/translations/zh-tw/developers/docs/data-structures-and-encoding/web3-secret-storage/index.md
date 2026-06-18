@@ -1,6 +1,6 @@
 ---
-title: Web3 機密儲存定義
-description: Web3 機密儲存的正式定義
+title: "Web3 機密儲存定義"
+description: "Web3 機密儲存的正式定義"
 lang: zh-tw
 sidebarDepth: 2
 ---

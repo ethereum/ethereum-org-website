@@ -1,6 +1,6 @@
 ---
-title: Ethereum'a teknik giriş
-description: Bir merkeziyetsiz uygulama (dapp) geliştiricisinin Ethereum'un temel kavramlarına girişi.
+title: "Ethereum'a teknik giriş"
+description: "Bir merkeziyetsiz uygulama (dapp) geliştiricisinin Ethereum'un temel kavramlarına girişi."
 lang: tr
 ---
 

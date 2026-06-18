@@ -1,6 +1,6 @@
 ---
-title: Geliştirme Ağları
-description: Geliştirme ağlarına ve Ethereum uygulamaları oluşturmaya yardımcı olan mevcut araçlara genel bir bakış.
+title: "Geliştirme Ağları"
+description: "Geliştirme ağlarına ve Ethereum uygulamaları oluşturmaya yardımcı olan mevcut araçlara genel bir bakış."
 lang: tr
 ---
 

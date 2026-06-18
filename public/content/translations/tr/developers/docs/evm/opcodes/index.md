@@ -1,6 +1,6 @@
 ---
-title: EVM için İşlem Kodları
-description: Ethereum sanal makinesi için mevcut tüm işlem kodlarının bir listesi.
+title: "EVM için İşlem Kodları"
+description: "Ethereum sanal makinesi için mevcut tüm işlem kodlarının bir listesi."
 lang: tr
 ---
 

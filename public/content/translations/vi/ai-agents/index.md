@@ -1,12 +1,12 @@
 ---
-title: Các tác nhân AI
-metaTitle: Các tác nhân AI | Các tác nhân AI trên Ethereum
-description: Tổng quan về các tác nhân AI trên Ethereum
+title: "Các tác nhân AI"
+metaTitle: "Các tác nhân AI | Các tác nhân AI trên Ethereum"
+description: "Tổng quan về các tác nhân AI trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: Mọi người tụ tập tại bàn thiết bị đầu cuối
+alt: "Mọi người tụ tập tại bàn thiết bị đầu cuối"
 summaryPoints:
   - "AI tương tác với chuỗi khối và giao dịch độc lập"
   - "Kiểm soát ví và quỹ trên chuỗi"
@@ -108,7 +108,7 @@ Trong chiến dịch xã hội X của Luna mang tên #LunaMuralChallenge, Luna 
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Thông tin hữu ích</strong></strong>
+<p className="mt-0"><strong>Thông tin hữu ích</strong>
 <p className="mt-2">Các tác nhân AI và các công cụ liên quan vẫn đang trong giai đoạn phát triển ban đầu và mang tính thử nghiệm cao—hãy thận trọng khi sử dụng.</p>
 </AlertContent>
 </Alert>

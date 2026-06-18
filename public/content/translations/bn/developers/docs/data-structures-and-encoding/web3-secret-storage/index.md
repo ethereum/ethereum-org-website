@@ -1,6 +1,6 @@
 ---
-title: Web3 সিক্রেট স্টোরেজ সংজ্ঞা
-description: Web3 সিক্রেট স্টোরেজের আনুষ্ঠানিক সংজ্ঞা
+title: "Web3 সিক্রেট স্টোরেজ সংজ্ঞা"
+description: "Web3 সিক্রেট স্টোরেজের আনুষ্ঠানিক সংজ্ঞা"
 lang: bn
 sidebarDepth: 2
 ---

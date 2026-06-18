@@ -1,6 +1,6 @@
 ---
-title: Návrh bloku
-description: Vysvětlení, jak jsou navrhovány bloky v Ethereu s důkazem podílem (PoS).
+title: "Návrh bloku"
+description: "Vysvětlení, jak jsou navrhovány bloky v Ethereu s důkazem podílem (PoS)."
 lang: cs
 ---
 

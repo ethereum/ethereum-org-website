@@ -108,7 +108,7 @@ Wakati wa kampeni ya kijamii ya X ya Luna #LunaMuralChallenge, Luna alichagua na
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Ni vyema kujua</strong></strong>
+<p className="mt-0"><strong>Ni vyema kujua</strong>
 <p className="mt-2">Ajenti wa akili bandia na zana zinazohusiana bado ziko katika maendeleo ya awali na ni za majaribio sana—tumia kwa tahadhari.</p>
 </AlertContent>
 </Alert>

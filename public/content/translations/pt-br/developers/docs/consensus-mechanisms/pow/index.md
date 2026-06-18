@@ -1,6 +1,6 @@
 ---
 title: Prova de Trabalho (PoW)
-description: Uma explicação do protocolo de consenso de Prova de Trabalho (PoW) e seu papel no Ethereum.
+description: "Uma explicação do protocolo de consenso de Prova de Trabalho (PoW) e seu papel no Ethereum."
 lang: pt-br
 ---
 

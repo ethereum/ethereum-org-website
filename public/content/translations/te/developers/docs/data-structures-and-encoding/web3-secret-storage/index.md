@@ -1,6 +1,6 @@
 ---
-title: Web3 రహస్య నిల్వ నిర్వచనం
-description: Web3 రహస్య నిల్వ కోసం అధికారిక నిర్వచనం
+title: "Web3 రహస్య నిల్వ నిర్వచనం"
+description: "Web3 రహస్య నిల్వ కోసం అధికారిక నిర్వచనం"
 lang: te
 sidebarDepth: 2
 ---

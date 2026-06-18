@@ -1,12 +1,12 @@
 ---
 title: Agents IA
 metaTitle: Agents IA | Agents IA sur Ethereum
-description: Un aperçu des agents IA sur Ethereum
+description: "Un aperçu des agents IA sur Ethereum"
 lang: fr
 template: use-cases
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: Des personnes rassemblées autour d'une table avec un terminal
+alt: "Des personnes rassemblées autour d'une table avec un terminal"
 summaryPoints:
   - "Une IA qui interagit avec la chaîne de blocs et trade de manière indépendante"
   - "Contrôle des portefeuilles et des fonds onchain"
@@ -108,7 +108,7 @@ Lors de la campagne sociale de Luna sur X, #LunaMuralChallenge, Luna a sélectio
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Bon à savoir</strong></strong>
+<p className="mt-0"><strong>Bon à savoir</strong>
 <p className="mt-2">Les agents IA et les outils associés sont encore à un stade de développement précoce et très expérimentaux — à utiliser avec prudence.</p>
 </AlertContent>
 </Alert>

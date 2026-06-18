@@ -1,12 +1,12 @@
 ---
-title: AI・エージェント
-metaTitle: AI・エージェント | イーサリアム上のAI・エージェント
-description: イーサリアム上のAI・エージェントの概要
+title: "AI・エージェント"
+metaTitle: "AI・エージェント | イーサリアム上のAI・エージェント"
+description: "イーサリアム上のAI・エージェントの概要"
 lang: ja
 template: use-cases
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: 端末のテーブルに集まる人々
+alt: "端末のテーブルに集まる人々"
 summaryPoints:
   - "ブロックチェーンとやり取りし、独立して取引を行うAI"
   - "オンチェーンのウォレットと資金を管理"
@@ -108,7 +108,7 @@ LunaのXソーシャルキャンペーン #LunaMuralChallenge の期間中、Lun
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>知っておくべきこと</strong></strong>
+<p className="mt-0"><strong>知っておくべきこと</strong>
 <p className="mt-2">AI・エージェントおよび関連ツールはまだ開発の初期段階にあり、非常に実験的です。注意して使用してください。</p>
 </AlertContent>
 </Alert>

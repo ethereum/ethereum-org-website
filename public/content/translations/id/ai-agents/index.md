@@ -108,7 +108,7 @@ Selama kampanye sosial X Luna #LunaMuralChallenge, Luna memilih dan memberikan i
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Perlu diketahui</strong></strong>
+<p className="mt-0"><strong>Perlu diketahui</strong>
 <p className="mt-2">Agen AI dan alat terkait masih dalam tahap awal pengembangan dan sangat eksperimental—gunakan dengan hati-hati.</p>
 </AlertContent>
 </Alert>

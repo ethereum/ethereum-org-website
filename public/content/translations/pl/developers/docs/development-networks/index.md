@@ -1,6 +1,6 @@
 ---
 title: Sieci deweloperskie
-description: Przegląd sieci deweloperskich i narzędzi dostępnych do pomocy w budowaniu aplikacji Ethereum.
+description: "Przegląd sieci deweloperskich i narzędzi dostępnych do pomocy w budowaniu aplikacji Ethereum."
 lang: pl
 ---
 

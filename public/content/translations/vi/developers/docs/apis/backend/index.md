@@ -1,6 +1,6 @@
 ---
-title: Các thư viện API backend
-description: Giới thiệu về các API của client Ethereum cho phép bạn tương tác với chuỗi khối từ ứng dụng của mình.
+title: "Các thư viện API backend"
+description: "Giới thiệu về các API của client Ethereum cho phép bạn tương tác với chuỗi khối từ ứng dụng của mình."
 lang: vi
 ---
 

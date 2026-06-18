@@ -1,6 +1,6 @@
 ---
-title: JavaScript API लायब्ररीज्
-description: तुमच्या ॲप्लिकेशनमधून ब्लॉकचेनशी संवाद साधू देणाऱ्या JavaScript क्लायंट लायब्ररीजची ओळख.
+title: "JavaScript API लायब्ररीज्"
+description: "तुमच्या ॲप्लिकेशनमधून ब्लॉकचेनशी संवाद साधू देणाऱ्या JavaScript क्लायंट लायब्ररीजची ओळख."
 lang: mr
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Gaz et frais
 metaTitle: "Gaz et frais sur Ethereum : aperçu technique"
-description: Découvrez les frais de gaz sur Ethereum, comment ils sont calculés et leur rôle dans la sécurité du réseau et le traitement des transactions.
+description: "Découvrez les frais de gaz sur Ethereum, comment ils sont calculés et leur rôle dans la sécurité du réseau et le traitement des transactions."
 lang: fr
 ---
 

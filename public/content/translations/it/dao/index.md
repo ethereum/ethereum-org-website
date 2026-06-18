@@ -1,6 +1,6 @@
 ---
-title: Cos'è una DAO?
-metaTitle: Cos'è una DAO? | Organizzazione Autonoma Decentralizzata
+title: "Cos'è una DAO?"
+metaTitle: "Cos'è una DAO? | Organizzazione Autonoma Decentralizzata"
 description: Una panoramica sulle DAO su Ethereum
 lang: it
 template: use-cases

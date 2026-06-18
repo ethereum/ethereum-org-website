@@ -1,12 +1,12 @@
 ---
-title: ИИ-агенты
-metaTitle: ИИ-агенты | ИИ-агенты в Эфириуме
-description: Обзор ИИ-агентов в Эфириуме
+title: "ИИ-агенты"
+metaTitle: "ИИ-агенты | ИИ-агенты в Эфириуме"
+description: "Обзор ИИ-агентов в Эфириуме"
 lang: ru
 template: use-cases
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: Люди собрались за столом с терминалом
+alt: "Люди собрались за столом с терминалом"
 summaryPoints:
   - "ИИ, который взаимодействует с блокчейном и торгует самостоятельно"
   - "Управляет ончейн-кошельками и средствами"
@@ -108,7 +108,7 @@ ERC-8004 упрощает для агентов обнаружение, пров
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Полезно знать</strong></strong>
+<p className="mt-0"><strong>Полезно знать</strong>
 <p className="mt-2">ИИ-агенты и связанные с ними инструменты все еще находятся на ранней стадии разработки и являются весьма экспериментальными — используйте их с осторожностью.</p>
 </AlertContent>
 </Alert>

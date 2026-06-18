@@ -1,6 +1,6 @@
 ---
-title: Síťové adresy
-description: Úvod do síťových adres.
+title: "Síťové adresy"
+description: "Úvod do síťových adres."
 lang: cs
 sidebarDepth: 2
 ---

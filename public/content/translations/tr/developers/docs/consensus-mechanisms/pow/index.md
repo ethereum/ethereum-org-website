@@ -1,6 +1,6 @@
 ---
-title: İş Kanıtı (PoW)
-description: İş kanıtı mutabakat protokolünün ve Ethereum'daki rolünün bir açıklaması.
+title: "İş Kanıtı (PoW)"
+description: "İş kanıtı mutabakat protokolünün ve Ethereum'daki rolünün bir açıklaması."
 lang: tr
 ---
 

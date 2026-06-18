@@ -1,7 +1,7 @@
 ---
-title: Gaz i opłaty
+title: "Gaz i opłaty"
 metaTitle: "Gaz i opłaty w Ethereum: przegląd techniczny"
-description: Dowiedz się o opłatach za gaz w Ethereum, jak są obliczane i jaka jest ich rola w bezpieczeństwie sieci oraz przetwarzaniu transakcji.
+description: "Dowiedz się o opłatach za gaz w Ethereum, jak są obliczane i jaka jest ich rola w bezpieczeństwie sieci oraz przetwarzaniu transakcji."
 lang: pl
 ---
 

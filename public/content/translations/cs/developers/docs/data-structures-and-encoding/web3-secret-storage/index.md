@@ -1,6 +1,6 @@
 ---
-title: Definice tajného úložiště Web3
-description: Formální definice pro tajné úložiště Web3
+title: "Definice tajného úložiště Web3"
+description: "Formální definice pro tajné úložiště Web3"
 lang: cs
 sidebarDepth: 2
 ---

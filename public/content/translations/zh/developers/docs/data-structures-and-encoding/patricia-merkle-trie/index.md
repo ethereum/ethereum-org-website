@@ -1,6 +1,6 @@
 ---
-title: 默克尔帕特里夏树
-description: 默克尔帕特里夏树简介。
+title: "默克尔帕特里夏树"
+description: "默克尔帕特里夏树简介。"
 lang: zh
 sidebarDepth: 2
 ---

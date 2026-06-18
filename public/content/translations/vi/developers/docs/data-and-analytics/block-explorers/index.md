@@ -1,6 +1,6 @@
 ---
-title: Trình khám phá khối
-description: Giới thiệu về trình khám phá khối, cổng thông tin của bạn vào thế giới dữ liệu Chuỗi khối, nơi bạn có thể truy vấn thông tin về các giao dịch, tài khoản, hợp đồng và nhiều thứ khác.
+title: "Trình khám phá khối"
+description: "Giới thiệu về trình khám phá khối, cổng thông tin của bạn vào thế giới dữ liệu Chuỗi khối, nơi bạn có thể truy vấn thông tin về các giao dịch, tài khoản, hợp đồng và nhiều thứ khác."
 lang: vi
 sidebarDepth: 3
 ---

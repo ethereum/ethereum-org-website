@@ -1,12 +1,12 @@
 ---
-title: DAOとは？
-metaTitle: DAOとは？ | 分散型自律組織 (Decentralized Autonomous Organization)
-description: イーサリアム上のDAOの概要
+title: "DAOとは？"
+metaTitle: "DAOとは？ | 分散型自律組織 (Decentralized Autonomous Organization)"
+description: "イーサリアム上のDAOの概要"
 lang: ja
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: 提案に投票するDAOの表現。
+alt: "提案に投票するDAOの表現。"
 summaryPoints:
   - "中央集権的なリーダーシップを持たない、メンバー所有のコミュニティ。"
   - "インターネット上の見知らぬ人々と安全に協力する方法。"

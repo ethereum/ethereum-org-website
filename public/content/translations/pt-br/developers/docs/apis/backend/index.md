@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas de API de back-end
-description: Uma introdução às APIs de cliente Ethereum que permitem interagir com a blockchain a partir do seu aplicativo.
+description: "Uma introdução às APIs de cliente Ethereum que permitem interagir com a blockchain a partir do seu aplicativo."
 lang: pt-br
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Dowód pracy (PoW)
-description: Wyjaśnienie protokołu konsensusu dowodu pracy i jego roli w Ethereum.
+title: "Dowód pracy (PoW)"
+description: "Wyjaśnienie protokołu konsensusu dowodu pracy i jego roli w Ethereum."
 lang: pl
 ---
 

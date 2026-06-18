@@ -1,6 +1,6 @@
 ---
-title: 工作量证明 (PoW)
-description: 解释工作量证明共识协议及其在以太坊中的作用。
+title: "工作量证明 (PoW)"
+description: "解释工作量证明共识协议及其在以太坊中的作用。"
 lang: zh
 ---
 

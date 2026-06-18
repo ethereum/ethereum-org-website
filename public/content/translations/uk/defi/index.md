@@ -1,11 +1,11 @@
 ---
-title: Децентралізовані фінанси (DeFi)
-metaTitle: Що таке DeFi? | Переваги та використання децентралізованих фінансів
-description: Огляд DeFi на Етеріумі
+title: "Децентралізовані фінанси (DeFi)"
+metaTitle: "Що таке DeFi? | Переваги та використання децентралізованих фінансів"
+description: "Огляд DeFi на Етеріумі"
 lang: uk
 template: use-cases
 image: /images/use-cases/defi.png
-alt: Логотип Етеріуму, зроблений з кубиків Lego.
+alt: "Логотип Етеріуму, зроблений з кубиків Lego."
 sidebarDepth: 2
 summaryPoints:
   - "Глобальна, відкрита альтернатива поточній фінансовій системі."

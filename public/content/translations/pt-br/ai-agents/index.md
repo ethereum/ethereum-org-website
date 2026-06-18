@@ -1,7 +1,7 @@
 ---
 title: Agentes de IA
 metaTitle: Agentes de IA | Agentes de IA no Ethereum
-description: Uma visão geral dos agentes de IA no Ethereum
+description: "Uma visão geral dos agentes de IA no Ethereum"
 lang: pt-br
 template: use-cases
 sidebarDepth: 2
@@ -108,7 +108,7 @@ Durante a campanha social da Luna no X, #LunaMuralChallenge, a Luna selecionou e
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Bom saber</strong></strong>
+<p className="mt-0"><strong>Bom saber</strong>
 <p className="mt-2">Os agentes de IA e as ferramentas relacionadas ainda estão em desenvolvimento inicial e são muito experimentais — use com cautela.</p>
 </AlertContent>
 </Alert>

@@ -1,11 +1,11 @@
 ---
-title: Tài chính phi tập trung (DeFi)
-metaTitle: DeFi là gì? | Lợi ích và Ứng dụng của Tài chính phi tập trung
-description: Tổng quan về DeFi trên Ethereum
+title: "Tài chính phi tập trung (DeFi)"
+metaTitle: "DeFi là gì? | Lợi ích và Ứng dụng của Tài chính phi tập trung"
+description: "Tổng quan về DeFi trên Ethereum"
 lang: vi
 template: use-cases
 image: /images/use-cases/defi.png
-alt: Logo Eth được làm từ các khối lego.
+alt: "Logo Eth được làm từ các khối lego."
 sidebarDepth: 2
 summaryPoints:
   - "Một giải pháp thay thế toàn cầu, mở cho hệ thống tài chính hiện tại."

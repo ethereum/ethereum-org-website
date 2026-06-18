@@ -1,6 +1,6 @@
 ---
-title: Hisse Kanıtı (PoS) Ethereum'da Anahtarlar
-description: Ethereum'un Hisse Kanıtı (PoS) mutabakat mekanizmasında kullanılan anahtarların açıklaması
+title: "Hisse Kanıtı (PoS) Ethereum'da Anahtarlar"
+description: "Ethereum'un Hisse Kanıtı (PoS) mutabakat mekanizmasında kullanılan anahtarların açıklaması"
 lang: tr
 ---
 

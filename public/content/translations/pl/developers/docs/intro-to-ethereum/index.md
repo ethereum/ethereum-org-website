@@ -1,6 +1,6 @@
 ---
 title: Techniczne wprowadzenie do Ethereum
-description: Wprowadzenie do podstawowych koncepcji Ethereum dla programistów zdecentralizowanych aplikacji (dapp).
+description: "Wprowadzenie do podstawowych koncepcji Ethereum dla programistów zdecentralizowanych aplikacji (dapp)."
 lang: pl
 ---
 

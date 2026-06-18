@@ -1,6 +1,6 @@
 ---
-title: نیٹ ورک کے پتے
-description: نیٹ ورک کے پتوں کا تعارف۔
+title: "نیٹ ورک کے پتے"
+description: "نیٹ ورک کے پتوں کا تعارف۔"
 lang: ur
 sidebarDepth: 2
 ---

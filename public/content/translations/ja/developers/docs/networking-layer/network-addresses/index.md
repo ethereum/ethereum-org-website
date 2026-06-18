@@ -1,6 +1,6 @@
 ---
-title: ネットワークアドレス
-description: ネットワークアドレスの概要。
+title: "ネットワークアドレス"
+description: "ネットワークアドレスの概要。"
 lang: ja
 sidebarDepth: 2
 ---

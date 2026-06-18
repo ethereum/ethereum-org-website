@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: 適用於以太坊客戶端的無狀態、輕量級遠端程序呼叫 (RPC) 協定。
+description: "適用於以太坊客戶端的無狀態、輕量級遠端程序呼叫 (RPC) 協定。"
 lang: zh-tw
 ---
 

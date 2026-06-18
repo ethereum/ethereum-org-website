@@ -1,6 +1,6 @@
 ---
 title: Comptes Ethereum
-description: Une explication des comptes Ethereum – leurs structures de données et leur relation avec la cryptographie à paires de clés.
+description: "Une explication des comptes Ethereum – leurs structures de données et leur relation avec la cryptographie à paires de clés."
 lang: fr
 ---
 

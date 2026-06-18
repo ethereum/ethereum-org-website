@@ -1,6 +1,6 @@
 ---
-title: Klíče v Ethereu s důkazem podílem (PoS)
-description: Vysvětlení klíčů používaných v mechanismu konsensu důkazu podílem (PoS) v Ethereu
+title: "Klíče v Ethereu s důkazem podílem (PoS)"
+description: "Vysvětlení klíčů používaných v mechanismu konsensu důkazu podílem (PoS) v Ethereu"
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Capa de red
-description: Una introducción a la capa de red de Ethereum.
+description: "Una introducción a la capa de red de Ethereum."
 lang: es
 sidebarDepth: 2
 ---

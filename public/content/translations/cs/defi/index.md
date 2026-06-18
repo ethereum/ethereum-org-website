@@ -1,11 +1,11 @@
 ---
-title: Decentralizované finance (DeFi)
-metaTitle: Co je DeFi? | Výhody a využití decentralizovaných financí
-description: Přehled DeFi na Ethereu
+title: "Decentralizované finance (DeFi)"
+metaTitle: "Co je DeFi? | Výhody a využití decentralizovaných financí"
+description: "Přehled DeFi na Ethereu"
 lang: cs
 template: use-cases
 image: /images/use-cases/defi.png
-alt: Logo Eth vytvořené z kostek lega.
+alt: "Logo Eth vytvořené z kostek lega."
 sidebarDepth: 2
 summaryPoints:
   - "Globální a otevřená alternativa k současnému finančnímu systému."

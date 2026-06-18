@@ -1,6 +1,6 @@
 ---
 title: Ethereum-Konten
-description: Eine Erklärung von Ethereum-Konten – ihre Datenstrukturen und ihre Beziehung zur Schlüsselpaar-Kryptographie.
+description: "Eine Erklärung von Ethereum-Konten – ihre Datenstrukturen und ihre Beziehung zur Schlüsselpaar-Kryptographie."
 lang: de
 ---
 

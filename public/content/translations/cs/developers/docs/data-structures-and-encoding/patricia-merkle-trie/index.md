@@ -1,6 +1,6 @@
 ---
 title: Merkle-Patricia trie
-description: Úvod do Merkle-Patricia trie.
+description: "Úvod do Merkle-Patricia trie."
 lang: cs
 sidebarDepth: 2
 ---

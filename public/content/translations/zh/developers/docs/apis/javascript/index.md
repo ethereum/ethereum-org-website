@@ -1,6 +1,6 @@
 ---
-title: JavaScript API 库
-description: 介绍允许你从应用程序与区块链交互的 JavaScript 客户端库。
+title: "JavaScript API 库"
+description: "介绍允许你从应用程序与区块链交互的 JavaScript 客户端库。"
 lang: zh
 ---
 

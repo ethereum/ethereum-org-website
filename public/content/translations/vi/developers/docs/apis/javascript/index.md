@@ -1,6 +1,6 @@
 ---
-title: Các thư viện API JavaScript
-description: Giới thiệu về các thư viện máy khách JavaScript cho phép bạn tương tác với chuỗi khối từ ứng dụng của mình.
+title: "Các thư viện API JavaScript"
+description: "Giới thiệu về các thư viện máy khách JavaScript cho phép bạn tương tác với chuỗi khối từ ứng dụng của mình."
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Technický úvod do Etherea
-description: Úvod do základních konceptů Etherea pro vývojáře dapp.
+title: "Technický úvod do Etherea"
+description: "Úvod do základních konceptů Etherea pro vývojáře dapp."
 lang: cs
 ---
 

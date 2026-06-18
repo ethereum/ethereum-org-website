@@ -1,11 +1,11 @@
 ---
-title: বিকেন্দ্রীভূত অর্থব্যবস্থা (⁦DeFi⁩)
-metaTitle: ⁦DeFi⁩ কী? | বিকেন্দ্রীভূত অর্থব্যবস্থার সুবিধা এবং ব্যবহার
-description: ইথেরিয়ামে ⁦DeFi⁩-এর একটি ওভারভিউ
+title: "বিকেন্দ্রীভূত অর্থব্যবস্থা (⁦DeFi⁩)"
+metaTitle: "⁦DeFi⁩ কী? | বিকেন্দ্রীভূত অর্থব্যবস্থার সুবিধা এবং ব্যবহার"
+description: "ইথেরিয়ামে ⁦DeFi⁩-এর একটি ওভারভিউ"
 lang: bn
 template: use-cases
 image: /images/use-cases/defi.png
-alt: লেগো ইট দিয়ে তৈরি একটি ⁦Eth⁩ লোগো।
+alt: "লেগো ইট দিয়ে তৈরি একটি ⁦Eth⁩ লোগো।"
 sidebarDepth: 2
 summaryPoints:
   - "বর্তমান আর্থিক ব্যবস্থার একটি বৈশ্বিক, উন্মুক্ত বিকল্প।"

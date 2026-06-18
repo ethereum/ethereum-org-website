@@ -1,11 +1,11 @@
 ---
-title: 分散型金融 (DeFi)
-metaTitle: DeFiとは？ | 分散型金融のメリットと用途
-description: イーサリアム上のDeFiの概要
+title: "分散型金融 (DeFi)"
+metaTitle: "DeFiとは？ | 分散型金融のメリットと用途"
+description: "イーサリアム上のDeFiの概要"
 lang: ja
 template: use-cases
 image: /images/use-cases/defi.png
-alt: レゴブロックで作られたEthロゴ。
+alt: "レゴブロックで作られたEthロゴ。"
 sidebarDepth: 2
 summaryPoints:
   - "現在の金融システムに代わる、グローバルでオープンな選択肢。"

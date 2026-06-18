@@ -1,6 +1,6 @@
 ---
 title: Contas na Ethereum
-description: Uma explicação sobre as contas na Ethereum – suas estruturas de dados e sua relação com a criptografia de par de chaves.
+description: "Uma explicação sobre as contas na Ethereum – suas estruturas de dados e sua relação com a criptografia de par de chaves."
 lang: pt-br
 ---
 

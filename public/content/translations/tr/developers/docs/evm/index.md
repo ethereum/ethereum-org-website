@@ -1,6 +1,6 @@
 ---
 title: Ethereum Sanal Makinesi (EVM)
-description: Ethereum sanal makinesine ve bunun durum, işlemler ve akıllı sözleşmelerle nasıl ilişkili olduğuna dair bir giriş.
+description: "Ethereum sanal makinesine ve bunun durum, işlemler ve akıllı sözleşmelerle nasıl ilişkili olduğuna dair bir giriş."
 lang: tr
 ---
 

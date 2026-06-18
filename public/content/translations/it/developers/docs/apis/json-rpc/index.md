@@ -1394,7 +1394,7 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 Restituisce inoltre _uno dei seguenti_ :
 
 - `root` : `DATA` 32 byte della radice di stato post-transazione (pre-Byzantium)
-- `status`: `QUANTITY` `1` (successo) oppure `0` (fallimento)
+- `status`: `QUANTITY `1` (successo) oppure `0` (fallimento)
 
 **Esempio**
 

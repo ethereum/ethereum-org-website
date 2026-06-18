@@ -1,6 +1,6 @@
 ---
-title: Knihovny backendového API
-description: Úvod do API klientů Etherea, které vám umožní komunikovat s blockchainem z vaší aplikace.
+title: "Knihovny backendového API"
+description: "Úvod do API klientů Etherea, které vám umožní komunikovat s blockchainem z vaší aplikace."
 lang: cs
 ---
 

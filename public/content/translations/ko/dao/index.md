@@ -1,12 +1,12 @@
 ---
-title: DAO란 무엇인가요?
-metaTitle: DAO란 무엇인가요? | 탈중앙화 자율 조직 (DAO)
-description: 이더리움의 DAO 개요
+title: "DAO란 무엇인가요?"
+metaTitle: "DAO란 무엇인가요? | 탈중앙화 자율 조직 (DAO)"
+description: "이더리움의 DAO 개요"
 lang: ko
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: 제안에 투표하는 DAO의 모습.
+alt: "제안에 투표하는 DAO의 모습."
 summaryPoints:
   - "중앙화된 리더십 없이 구성원이 소유하는 커뮤니티입니다."
   - "인터넷에서 만난 낯선 사람들과 안전하게 협업할 수 있는 방법입니다."
@@ -84,7 +84,7 @@ DAO를 거버넌스할 때는 투표와 제안이 어떻게 작동하는지 등 
 
 ### 다중서명 거버넌스 {#governance-example-4}
 
-DAO에는 수천 명의 투표 구성원이 있을 수 있지만, 자금은 신뢰할 수 있고 일반적으로 신원이 공개된(커뮤니티에 알려진 공개 신원) 5~20명의 활성 커뮤니티 구성원이 공유하는 [지갑](/glossary/#wallet)에 보관될 수 있습니다. 투표 후 [다중서명](/glossary/#multisig) 서명자는 커뮤니티의 뜻을 실행합니다.
+DAO에는 수천 명의 투표 구성원이 있을 수 있지만, 자금은 신뢰할 수 있고 일반적으로 신원이 공개된(커뮤니티에 알려진 공개 신원) 5\~20명의 활성 커뮤니티 구성원이 공유하는 [지갑](/glossary/#wallet)에 보관될 수 있습니다. 투표 후 [다중서명](/glossary/#multisig) 서명자는 커뮤니티의 뜻을 실행합니다.
 
 ## DAO 법률 {#dao-laws}
 

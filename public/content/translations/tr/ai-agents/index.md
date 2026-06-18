@@ -1,12 +1,12 @@
 ---
-title: Yapay zeka ajanları
-metaTitle: Yapay zeka ajanları | Ethereum'da yapay zeka ajanları
-description: Ethereum'daki yapay zeka ajanlarına genel bir bakış
+title: "Yapay zeka ajanları"
+metaTitle: "Yapay zeka ajanları | Ethereum'da yapay zeka ajanları"
+description: "Ethereum'daki yapay zeka ajanlarına genel bir bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: Terminal masasında toplanmış insanlar
+alt: "Terminal masasında toplanmış insanlar"
 summaryPoints:
   - "Blokzincir ile etkileşime giren ve bağımsız olarak alım satım yapan yapay zeka"
   - "Zincir içi cüzdanları ve fonları kontrol eder"
@@ -108,7 +108,7 @@ Luna'nın X sosyal kampanyası #LunaMuralChallenge sırasında Luna, kazananlar�
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Bilmenizde fayda var</strong></strong>
+<p className="mt-0"><strong>Bilmenizde fayda var</strong>
 <p className="mt-2">Yapay zeka ajanları ve ilgili araçlar hala erken geliştirme aşamasındadır ve oldukça deneyseldir; dikkatli kullanın.</p>
 </AlertContent>
 </Alert>

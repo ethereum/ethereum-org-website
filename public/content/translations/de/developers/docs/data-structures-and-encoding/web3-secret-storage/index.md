@@ -1,6 +1,6 @@
 ---
 title: Web3-Secret-Storage-Definition
-description: Formale Definition für den Web3-Secret-Storage
+description: "Formale Definition für den Web3-Secret-Storage"
 lang: de
 sidebarDepth: 2
 ---

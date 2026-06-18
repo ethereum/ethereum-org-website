@@ -1,10 +1,10 @@
 ---
-title: 작업증명 (PoW)
-description: 작업증명 합의 프로토콜과 이더리움에서의 역할에 대한 설명입니다.
+title: "작업증명 (PoW)"
+description: "작업증명 합의 프로토콜과 이더리움에서의 역할에 대한 설명입니다."
 lang: ko
 ---
 
-[이더리움](/) 네트워크는 **[작업증명 (PoW)](/developers/docs/consensus-mechanisms/pow)**이 포함된 합의 메커니즘을 사용하는 것으로 시작되었습니다. 이를 통해 이더리움 네트워크의 노드들은 이더리움 블록체인에 기록된 모든 정보의 상태에 대해 합의할 수 있었고, 특정 종류의 경제적 공격을 방지할 수 있었습니다. 하지만 이더리움은 2022년에 작업증명 (PoW)을 종료하고 대신 [지분 증명 (PoS)](/developers/docs/consensus-mechanisms/pos)을 사용하기 시작했습니다.
+[이더리움](/) 네트워크는 <strong>[작업증명 (PoW)](/developers/docs/consensus-mechanisms/pow)</strong>이 포함된 합의 메커니즘을 사용하는 것으로 시작되었습니다. 이를 통해 이더리움 네트워크의 노드들은 이더리움 블록체인에 기록된 모든 정보의 상태에 대해 합의할 수 있었고, 특정 종류의 경제적 공격을 방지할 수 있었습니다. 하지만 이더리움은 2022년에 작업증명 (PoW)을 종료하고 대신 [지분 증명 (PoS)](/developers/docs/consensus-mechanisms/pos)을 사용하기 시작했습니다.
 
 <Alert variant="update">
 <AlertEmoji text=":wave:"/>

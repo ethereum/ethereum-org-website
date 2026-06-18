@@ -1,6 +1,6 @@
 ---
-title: Arka uç API kütüphaneleri
-description: Uygulamanızdan blokzincir ile etkileşime girmenizi sağlayan Ethereum istemci API'lerine giriş.
+title: "Arka uç API kütüphaneleri"
+description: "Uygulamanızdan blokzincir ile etkileşime girmenizi sağlayan Ethereum istemci API'lerine giriş."
 lang: tr
 ---
 

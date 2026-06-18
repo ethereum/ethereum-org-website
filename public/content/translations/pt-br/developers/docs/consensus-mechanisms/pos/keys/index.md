@@ -1,6 +1,6 @@
 ---
-title: Chaves no Ethereum de Prova de Participação (PoS)
-description: Uma explicação das chaves usadas no mecanismo de consenso de Prova de Participação (PoS) do Ethereum
+title: "Chaves no Ethereum de Prova de Participação (PoS)"
+description: "Uma explicação das chaves usadas no mecanismo de consenso de Prova de Participação (PoS) do Ethereum"
 lang: pt-br
 ---
 

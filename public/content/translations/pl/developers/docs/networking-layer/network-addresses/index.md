@@ -1,6 +1,6 @@
 ---
 title: Adresy sieciowe
-description: Wprowadzenie do adresów sieciowych.
+description: "Wprowadzenie do adresów sieciowych."
 lang: pl
 sidebarDepth: 2
 ---

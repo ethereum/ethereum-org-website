@@ -1,12 +1,12 @@
 ---
 title: AI agenti
 metaTitle: AI agenti | AI agenti na Ethereu
-description: Přehled AI agentů na Ethereu
+description: "Přehled AI agentů na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: Lidé shromáždění u stolu s terminálem
+alt: "Lidé shromáždění u stolu s terminálem"
 summaryPoints:
   - "Umělá inteligence, která interaguje s blockchainem a nezávisle obchoduje"
   - "Ovládá onchain peněženky a prostředky"
@@ -108,7 +108,7 @@ Během sociální kampaně Luny na síti X #LunaMuralChallenge Luna vybrala a od
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Dobré vědět</strong></strong>
+<p className="mt-0"><strong>Dobré vědět</strong>
 <p className="mt-2">AI agenti a související nástroje jsou stále v raném stádiu vývoje a jsou velmi experimentální – používejte je s opatrností.</p>
 </AlertContent>
 </Alert>

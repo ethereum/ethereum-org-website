@@ -1,6 +1,6 @@
 ---
-title: 以太坊技术简介
-description: 面向去中心化应用 (dapp) 开发者的以太坊核心概念简介。
+title: "以太坊技术简介"
+description: "面向去中心化应用 (dapp) 开发者的以太坊核心概念简介。"
 lang: zh
 ---
 

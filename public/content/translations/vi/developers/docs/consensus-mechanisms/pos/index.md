@@ -1,6 +1,6 @@
 ---
-title: Bằng chứng cổ phần (PoS)
-description: Giải thích về giao thức đồng thuận bằng chứng cổ phần và vai trò của nó trong Ethereum.
+title: "Bằng chứng cổ phần (PoS)"
+description: "Giải thích về giao thức đồng thuận bằng chứng cổ phần và vai trò của nó trong Ethereum."
 lang: vi
 ---
 
@@ -43,7 +43,7 @@ Một giao dịch có "tính chung cuộc" trong các mạng lưới phân tán 
 
 Chạy một trình xác thực là một cam kết. Trình xác thực được kỳ vọng sẽ duy trì đủ phần cứng và kết nối để tham gia vào việc xác thực khối và đề xuất. Đổi lại, trình xác thực được trả bằng ETH (số dư đã đặt cọc của họ tăng lên). Mặt khác, việc tham gia với tư cách là một trình xác thực cũng mở ra những con đường mới cho người dùng tấn công mạng lưới vì lợi ích cá nhân hoặc phá hoại. Để ngăn chặn điều này, các trình xác thực sẽ bỏ lỡ phần thưởng ETH nếu họ không tham gia khi được yêu cầu và khoản đặt cọc hiện tại của họ có thể bị phá hủy nếu họ hành xử không trung thực. Hai hành vi chính có thể được coi là không trung thực: đề xuất nhiều khối trong một khe duy nhất (nói nước đôi) và gửi các chứng thực mâu thuẫn.
 
-Số lượng ETH bị phạt cắt giảm phụ thuộc vào việc có bao nhiêu trình xác thực cũng đang bị phạt cắt giảm vào khoảng cùng thời điểm. Điều này được gọi là ["hình phạt tương quan"](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), và nó có thể là nhỏ (~1% khoản đặt cọc đối với một trình xác thực duy nhất bị phạt cắt giảm) hoặc có thể dẫn đến 100% khoản đặt cọc của trình xác thực bị phá hủy (sự kiện phạt cắt giảm hàng loạt). Nó được áp dụng vào giữa khoảng thời gian buộc phải thoát, bắt đầu bằng một hình phạt ngay lập tức (lên đến 1 ETH) vào Ngày 1, hình phạt tương quan vào Ngày 18 và cuối cùng là bị loại khỏi mạng lưới vào Ngày 36. Họ nhận các hình phạt chứng thực nhỏ mỗi ngày vì họ có mặt trên mạng lưới nhưng không gửi phiếu bầu. Tất cả những điều này có nghĩa là một cuộc tấn công phối hợp sẽ rất tốn kém đối với kẻ tấn công.
+Số lượng ETH bị phạt cắt giảm phụ thuộc vào việc có bao nhiêu trình xác thực cũng đang bị phạt cắt giảm vào khoảng cùng thời điểm. Điều này được gọi là ["hình phạt tương quan"](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), và nó có thể là nhỏ (\~1% khoản đặt cọc đối với một trình xác thực duy nhất bị phạt cắt giảm) hoặc có thể dẫn đến 100% khoản đặt cọc của trình xác thực bị phá hủy (sự kiện phạt cắt giảm hàng loạt). Nó được áp dụng vào giữa khoảng thời gian buộc phải thoát, bắt đầu bằng một hình phạt ngay lập tức (lên đến 1 ETH) vào Ngày 1, hình phạt tương quan vào Ngày 18 và cuối cùng là bị loại khỏi mạng lưới vào Ngày 36. Họ nhận các hình phạt chứng thực nhỏ mỗi ngày vì họ có mặt trên mạng lưới nhưng không gửi phiếu bầu. Tất cả những điều này có nghĩa là một cuộc tấn công phối hợp sẽ rất tốn kém đối với kẻ tấn công.
 
 ## Lựa chọn phân nhánh {#fork-choice}
 

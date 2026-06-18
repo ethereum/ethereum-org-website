@@ -1,6 +1,6 @@
 ---
-title: 以太坊虛擬機 (EVM)
-description: 以太坊虛擬機簡介，及其與狀態、交易和智能合約的關係。
+title: "以太坊虛擬機 (EVM)"
+description: "以太坊虛擬機簡介，及其與狀態、交易和智能合約的關係。"
 lang: zh-tw
 ---
 

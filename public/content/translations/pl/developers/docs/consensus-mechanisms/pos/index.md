@@ -1,6 +1,6 @@
 ---
-title: Dowód stawki (PoS)
-description: Wyjaśnienie protokołu konsensusu dowodu stawki (PoS) i jego roli w Ethereum.
+title: "Dowód stawki (PoS)"
+description: "Wyjaśnienie protokołu konsensusu dowodu stawki (PoS) i jego roli w Ethereum."
 lang: pl
 ---
 
@@ -43,7 +43,7 @@ Aby wycofać sfinalizowany blok, atakujący musiałby podjąć zobowiązanie utr
 
 Prowadzenie walidatora to zobowiązanie. Oczekuje się, że walidator utrzyma wystarczający sprzęt i łączność, aby uczestniczyć w walidacji bloku i propozycji. W zamian walidator otrzymuje wynagrodzenie w ETH (jego stakowane saldo rośnie). Z drugiej strony, uczestnictwo jako walidator otwiera również nowe drogi dla użytkowników do atakowania sieci w celu uzyskania osobistych korzyści lub sabotażu. Aby temu zapobiec, walidatory tracą nagrody w ETH, jeśli nie wezmą udziału, gdy zostaną do tego wezwane, a ich istniejąca stawka może zostać zniszczona, jeśli zachowają się nieuczciwie. Dwa główne zachowania można uznać za nieuczciwe: proponowanie wielu bloków w jednym slocie (dwuznaczność) i przesyłanie sprzecznych poświadczeń.
 
-Ilość ciętego ETH zależy od tego, ile walidatorów jest również ciętych w tym samym czasie. Jest to znane jako [„kara za korelację”](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty) i może być niewielka (~1% stawki dla pojedynczego walidatora ciętego samodzielnie) lub może skutkować zniszczeniem 100% stawki walidatora (masowe zdarzenie cięcia). Jest ona nakładana w połowie okresu przymusowego wyjścia, który rozpoczyna się natychmiastową karą (do 1 ETH) w 1. dniu, karą za korelację w 18. dniu i wreszcie wyrzuceniem z sieci w 36. dniu. Otrzymują oni drobne kary za poświadczenia każdego dnia, ponieważ są obecni w sieci, ale nie przesyłają głosów. Wszystko to oznacza, że skoordynowany atak byłby bardzo kosztowny dla atakującego.
+Ilość ciętego ETH zależy od tego, ile walidatorów jest również ciętych w tym samym czasie. Jest to znane jako [„kara za korelację”](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty) i może być niewielka (\~1% stawki dla pojedynczego walidatora ciętego samodzielnie) lub może skutkować zniszczeniem 100% stawki walidatora (masowe zdarzenie cięcia). Jest ona nakładana w połowie okresu przymusowego wyjścia, który rozpoczyna się natychmiastową karą (do 1 ETH) w 1. dniu, karą za korelację w 18. dniu i wreszcie wyrzuceniem z sieci w 36. dniu. Otrzymują oni drobne kary za poświadczenia każdego dnia, ponieważ są obecni w sieci, ale nie przesyłają głosów. Wszystko to oznacza, że skoordynowany atak byłby bardzo kosztowny dla atakującego.
 
 ## Wybór rozwidlenia {#fork-choice}
 

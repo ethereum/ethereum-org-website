@@ -1,6 +1,6 @@
 ---
-title: EVM 연산 코드
-description: 이더리움 가상 머신에서 사용할 수 있는 모든 연산 코드 목록입니다.
+title: "EVM 연산 코드"
+description: "이더리움 가상 머신에서 사용할 수 있는 모든 연산 코드 목록입니다."
 lang: ko
 ---
 

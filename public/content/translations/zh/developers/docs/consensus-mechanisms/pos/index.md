@@ -1,6 +1,6 @@
 ---
-title: 权益证明 (PoS)
-description: 解释权益证明共识协议及其在以太坊中的作用。
+title: "权益证明 (PoS)"
+description: "解释权益证明共识协议及其在以太坊中的作用。"
 lang: zh
 ---
 

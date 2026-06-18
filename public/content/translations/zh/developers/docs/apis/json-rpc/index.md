@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: 适用于以太坊客户端的无状态、轻量级远程过程调用 (RPC) 协议。
+description: "适用于以太坊客户端的无状态、轻量级远程过程调用 (RPC) 协议。"
 lang: zh
 ---
 
@@ -394,7 +394,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
   在演练场中尝试端点
 </ButtonLink>
 
-> **注意：**此方法自 **v1.14.0** 起已被弃用，且不再受支持。尝试使用此方法将导致“Method not supported”错误。
+> <strong>注意：</strong>此方法自 **v1.14.0** 起已被弃用，且不再受支持。尝试使用此方法将导致“Method not supported”错误。
 
 **参数**
 
@@ -1393,7 +1393,7 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 它还会返回以下_其中之一_：
 
 - `root` : `DATA` 32 字节的交易后状态根（拜占庭升级前）
-- `status`: `QUANTITY` `1`（成功）或 `0`（失败）
+- `status`: `QUANTITY `1`（成功）或 `0`（失败）
 
 **示例**
 

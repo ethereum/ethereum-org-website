@@ -1,6 +1,6 @@
 ---
-title: ⁦EVM⁩ کے لیے آپ کوڈز
-description: ایتھیریم ورچوئل مشین کے لیے تمام دستیاب آپ کوڈز کی فہرست۔
+title: "⁦EVM⁩ کے لیے آپ کوڈز"
+description: "ایتھیریم ورچوئل مشین کے لیے تمام دستیاب آپ کوڈز کی فہرست۔"
 lang: ur
 ---
 
@@ -74,8 +74,8 @@ lang: ur
 | <span dir="ltr">46</span> | <span dir="ltr">CHAINID</span> | 2 | `.` | `chain_id` | | موجودہ [چین کی شناخت (chain id)](https://eips.ethereum.org/EIPS/eip-155) کو اسٹیک پر پش کریں |
 | <span dir="ltr">47</span> | <span dir="ltr">SELFBALANCE</span> | 5 | `.` | `address(this).balance` | | عمل درآمد کرنے والے کنٹریکٹ کا بیلنس، <span dir="ltr">Wei</span> میں |
 | <span dir="ltr">48</span> | <span dir="ltr">BASEFEE</span> | 2 | `.` | `block.basefee` | | موجودہ بلاک کی بنیادی فیس |
-| <span dir="ltr">49</span> | <span dir="ltr">BLOBHASH</span> | 3 | `idx` | `tx.blob_versioned_hashes[idx]` | | [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) |
-| <span dir="ltr">4A</span> | <span dir="ltr">BLOBBASEFEE</span> | 2 | `.` | `block.blobbasefee` | | موجودہ بلاک کی بلاب بنیادی فیس ([EIP-7516](https://eips.ethereum.org/EIPS/eip-7516)) |
+| <span dir="ltr">49</span> | <span dir="ltr">BLOBHASH</span> | 3 | `idx` | `tx.blob_versioned_hashes[idx]` | | [<span dir="ltr">EIP-4844</span>](https://eips.ethereum.org/EIPS/eip-4844) |
+| <span dir="ltr">4A</span> | <span dir="ltr">BLOBBASEFEE</span> | 2 | `.` | `block.blobbasefee` | | موجودہ بلاک کی بلاب بنیادی فیس ([<span dir="ltr">EIP-7516</span>](https://eips.ethereum.org/EIPS/eip-7516)) |
 | <span dir="ltr">4B-4F</span> | _غیر معتبر_ |
 | <span dir="ltr">50</span> | <span dir="ltr">POP</span> | 2 | `_anon` | `.` | | اسٹیک کے اوپری حصے سے آئٹم ہٹائیں اور اسے ضائع کریں |
 | <span dir="ltr">51</span> | <span dir="ltr">MLOAD</span> | 3[\*](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a0-1-memory-expansion) | `ost` | `mem[ost:ost+32]` | | آفسیٹ `ost` پر میموری سے لفظ پڑھیں |
@@ -89,9 +89,9 @@ lang: ur
 | <span dir="ltr">59</span> | <span dir="ltr">MSIZE</span> | 2 | `.` | `len(mem)` | | موجودہ عمل درآمد کے سیاق و سباق میں میموری کا سائز، بائٹس میں |
 | <span dir="ltr">5A</span> | <span dir="ltr">GAS</span> | 2 | `.` | `gasRemaining` | | |
 | <span dir="ltr">5B</span> | <span dir="ltr">JUMPDEST</span> | 1 | | | | ایک درست جمپ کی منزل، مثال کے طور پر ایک جمپ کی منزل جو پش ڈیٹا کے اندر نہ ہو |
-| <span dir="ltr">5C</span> | <span dir="ltr">TLOAD</span> | 100 | `key` | `tstorage[key]` | | عارضی اسٹوریج سے لفظ پڑھیں ([EIP-1153](https://eips.ethereum.org/EIPS/eip-1153)) |
-| <span dir="ltr">5D</span> | <span dir="ltr">TSTORE</span> | 100 | `key, val` | `.` | <span dir="ltr">tstorage[key] := val</span> | عارضی اسٹوریج میں لفظ لکھیں ([EIP-1153](https://eips.ethereum.org/EIPS/eip-1153)) |
-| <span dir="ltr">5E</span> | <span dir="ltr">MCOPY</span> | <span dir="ltr">3+3\*words+</span>[A0](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a0-1-memory-expansion) | `dstOst, ost, len` | `.` | <span dir="ltr">mem[dstOst] := mem[ost:ost+len]</span> | میموری کو ایک جگہ سے دوسری جگہ کاپی کریں ([EIP-5656](https://eips.ethereum.org/EIPS/eip-5656)) |
+| <span dir="ltr">5C</span> | <span dir="ltr">TLOAD</span> | 100 | `key` | `tstorage[key]` | | عارضی اسٹوریج سے لفظ پڑھیں ([<span dir="ltr">EIP-1153</span>](https://eips.ethereum.org/EIPS/eip-1153)) |
+| <span dir="ltr">5D</span> | <span dir="ltr">TSTORE</span> | 100 | `key, val` | `.` | <span dir="ltr">tstorage[key] := val</span> | عارضی اسٹوریج میں لفظ لکھیں ([<span dir="ltr">EIP-1153</span>](https://eips.ethereum.org/EIPS/eip-1153)) |
+| <span dir="ltr">5E</span> | <span dir="ltr">MCOPY</span> | <span dir="ltr">3+3\*words+</span>[A0](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a0-1-memory-expansion) | `dstOst, ost, len` | `.` | <span dir="ltr">mem[dstOst] := mem[ost:ost+len]</span> | میموری کو ایک جگہ سے دوسری جگہ کاپی کریں ([<span dir="ltr">EIP-5656</span>](https://eips.ethereum.org/EIPS/eip-5656)) |
 | <span dir="ltr">5F</span> | <span dir="ltr">PUSH0</span> | 2 | `.` | `uint8` | | مستقل قدر <span dir="ltr">0</span> کو اسٹیک پر پش کریں |
 | <span dir="ltr">60</span> | <span dir="ltr">PUSH1</span> | 3 | `.` | `uint8` | | <span dir="ltr">1</span>-بائٹ کی قدر کو اسٹیک پر پش کریں |
 | <span dir="ltr">61</span> | <span dir="ltr">PUSH2</span> | 3 | `.` | `uint16` | | <span dir="ltr">2</span>-بائٹ کی قدر کو اسٹیک پر پش کریں |
@@ -173,5 +173,5 @@ lang: ur
 | <span dir="ltr">FA</span> | <span dir="ltr">STATICCALL</span> | [AA](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#aa-call-operations) | `gas, addr, argOst, argLen, retOst, retLen` | `success` | <span dir="ltr">mem[retOst:retOst+retLen-1] := returndata</span> | |
 | <span dir="ltr">FB-FC</span> | _غیر معتبر_ |
 | <span dir="ltr">FD</span> | <span dir="ltr">REVERT</span> | 0[\*](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a0-1-memory-expansion) | `ost, len` | `.` | | <span dir="ltr">revert(mem[ost:ost+len-1])</span> |
-| <span dir="ltr">FE</span> | <span dir="ltr">INVALID</span> | [AF](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#af-invalid) | | | | نامزد کردہ غیر معتبر آپ کوڈ - [EIP-141](https://eips.ethereum.org/EIPS/eip-141) |
+| <span dir="ltr">FE</span> | <span dir="ltr">INVALID</span> | [AF](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#af-invalid) | | | | نامزد کردہ غیر معتبر آپ کوڈ - [<span dir="ltr">EIP-141</span>](https://eips.ethereum.org/EIPS/eip-141) |
 | <span dir="ltr">FF</span> | <span dir="ltr">SELFDESTRUCT</span> | [AB](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#ab-selfdestruct) | `addr` | `.` | | تمام <span dir="ltr">ETH</span> کو `addr` پر بھیجتا ہے؛ اگر اسی ٹرانزیکشن میں عمل درآمد کیا جائے جس میں کنٹریکٹ بنایا گیا تھا تو یہ کنٹریکٹ کو تباہ کر دیتا ہے |

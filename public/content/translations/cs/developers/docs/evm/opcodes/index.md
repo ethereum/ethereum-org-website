@@ -1,6 +1,6 @@
 ---
-title: Operační kódy pro EVM
-description: Seznam všech dostupných operačních kódů pro virtuální stroj Ethereum.
+title: "Operační kódy pro EVM"
+description: "Seznam všech dostupných operačních kódů pro virtuální stroj Ethereum."
 lang: cs
 ---
 

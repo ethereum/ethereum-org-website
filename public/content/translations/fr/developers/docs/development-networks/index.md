@@ -1,6 +1,6 @@
 ---
-title: Réseaux de développement
-description: Un aperçu des réseaux de développement et des outils disponibles pour aider à créer des applications Ethereum.
+title: "Réseaux de développement"
+description: "Un aperçu des réseaux de développement et des outils disponibles pour aider à créer des applications Ethereum."
 lang: fr
 ---
 

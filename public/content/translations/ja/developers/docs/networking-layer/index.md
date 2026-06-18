@@ -1,6 +1,6 @@
 ---
-title: ネットワーキング・レイヤー
-description: イーサリアムのネットワーキング・レイヤーの紹介。
+title: "ネットワーキング・レイヤー"
+description: "イーサリアムのネットワーキング・レイヤーの紹介。"
 lang: ja
 sidebarDepth: 2
 ---

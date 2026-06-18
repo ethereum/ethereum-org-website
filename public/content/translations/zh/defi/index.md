@@ -1,11 +1,11 @@
 ---
-title: 去中心化金融 (DeFi)
-metaTitle: 什么是 DeFi？| 去中心化金融的优势与应用
-description: 以太坊上的去中心化金融 (DeFi) 概述
+title: "去中心化金融 (DeFi)"
+metaTitle: "什么是 DeFi？| 去中心化金融的优势与应用"
+description: "以太坊上的去中心化金融 (DeFi) 概述"
 lang: zh
 template: use-cases
 image: /images/use-cases/defi.png
-alt: 用乐高积木拼成的以太坊徽标。
+alt: "用乐高积木拼成的以太坊徽标。"
 sidebarDepth: 2
 summaryPoints:
   - "当前金融系统的全球性、开放式替代方案。"

@@ -1,7 +1,7 @@
 ---
 title: Gas a poplatky
 metaTitle: "Ethereum gas a poplatky: technický přehled"
-description: Přečtěte si o poplatcích za plyn (gas) na Ethereu, jak se počítají a jakou roli hrají v zabezpečení sítě a zpracování transakcí.
+description: "Přečtěte si o poplatcích za plyn (gas) na Ethereu, jak se počítají a jakou roli hrají v zabezpečení sítě a zpracování transakcí."
 lang: cs
 ---
 

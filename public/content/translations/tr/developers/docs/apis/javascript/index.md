@@ -1,6 +1,6 @@
 ---
-title: JavaScript API kütüphaneleri
-description: Uygulamanızdan blokzincir ile etkileşime girmenizi sağlayan JavaScript istemci kütüphanelerine giriş.
+title: "JavaScript API kütüphaneleri"
+description: "Uygulamanızdan blokzincir ile etkileşime girmenizi sağlayan JavaScript istemci kütüphanelerine giriş."
 lang: tr
 ---
 

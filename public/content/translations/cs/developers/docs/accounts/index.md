@@ -1,6 +1,6 @@
 ---
-title: Účty na Ethereu
-description: Vysvětlení účtů na Ethereu – jejich datové struktury a vztah ke kryptografii párů klíčů.
+title: "Účty na Ethereu"
+description: "Vysvětlení účtů na Ethereu – jejich datové struktury a vztah ke kryptografii párů klíčů."
 lang: cs
 ---
 

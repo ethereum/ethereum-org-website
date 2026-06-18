@@ -1,6 +1,6 @@
 ---
-title: Códigos de operação para a EVM
-description: Uma lista de todos os códigos de operação disponíveis para a máquina virtual Ethereum.
+title: "Códigos de operação para a EVM"
+description: "Uma lista de todos os códigos de operação disponíveis para a máquina virtual Ethereum."
 lang: pt-br
 ---
 

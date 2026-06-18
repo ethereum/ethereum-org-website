@@ -1,6 +1,6 @@
 ---
-title: Bằng chứng công việc (PoW)
-description: Giải thích về giao thức đồng thuận bằng chứng công việc và vai trò của nó trong Ethereum.
+title: "Bằng chứng công việc (PoW)"
+description: "Giải thích về giao thức đồng thuận bằng chứng công việc và vai trò của nó trong Ethereum."
 lang: vi
 ---
 

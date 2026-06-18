@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: Bezstavový, odlehčený protokol pro vzdálené volání procedur (RPC) pro klienty Etherea.
+description: "Bezstavový, odlehčený protokol pro vzdálené volání procedur (RPC) pro klienty Etherea."
 lang: cs
 ---
 

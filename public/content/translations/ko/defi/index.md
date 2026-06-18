@@ -1,11 +1,11 @@
 ---
-title: 탈중앙화 금융 (DeFi)
-metaTitle: DeFi란 무엇인가요? | 탈중앙화 금융의 이점과 활용
-description: 이더리움의 탈중앙화 금융(DeFi) 개요
+title: "탈중앙화 금융 (DeFi)"
+metaTitle: "DeFi란 무엇인가요? | 탈중앙화 금융의 이점과 활용"
+description: "이더리움의 탈중앙화 금융(DeFi) 개요"
 lang: ko
 template: use-cases
 image: /images/use-cases/defi.png
-alt: 레고 브릭으로 만든 이더리움 로고.
+alt: "레고 브릭으로 만든 이더리움 로고."
 sidebarDepth: 2
 summaryPoints:
   - "현재 금융 시스템을 대체할 수 있는 글로벌하고 개방적인 대안입니다."

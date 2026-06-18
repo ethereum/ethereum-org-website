@@ -1,6 +1,6 @@
 ---
-title: Tài khoản Ethereum
-description: Giải thích về các tài khoản Ethereum – cấu trúc dữ liệu và mối quan hệ của chúng với mật mã học cặp khóa.
+title: "Tài khoản Ethereum"
+description: "Giải thích về các tài khoản Ethereum – cấu trúc dữ liệu và mối quan hệ của chúng với mật mã học cặp khóa."
 lang: vi
 ---
 

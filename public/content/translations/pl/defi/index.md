@@ -1,11 +1,11 @@
 ---
 title: Zdecentralizowane finanse (DeFi)
-metaTitle: Czym jest DeFi? | Korzyści i zastosowanie zdecentralizowanych finansów
-description: Przegląd DeFi na Ethereum
+metaTitle: "Czym jest DeFi? | Korzyści i zastosowanie zdecentralizowanych finansów"
+description: "Przegląd DeFi na Ethereum"
 lang: pl
 template: use-cases
 image: /images/use-cases/defi.png
-alt: Logo Eth zbudowane z klocków lego.
+alt: "Logo Eth zbudowane z klocków lego."
 sidebarDepth: 2
 summaryPoints:
   - "Globalna, otwarta alternatywa dla obecnego systemu finansowego."

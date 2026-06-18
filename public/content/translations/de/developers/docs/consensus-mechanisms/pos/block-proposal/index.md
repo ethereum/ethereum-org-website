@@ -1,6 +1,6 @@
 ---
 title: Block-Vorschlag
-description: Erklärung, wie Blöcke im Proof-of-Stake-Ethereum vorgeschlagen werden.
+description: "Erklärung, wie Blöcke im Proof-of-Stake-Ethereum vorgeschlagen werden."
 lang: de
 ---
 

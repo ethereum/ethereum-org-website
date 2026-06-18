@@ -1,6 +1,6 @@
 ---
-title: Schlüssel im Proof-of-Stake-Ethereum
-description: Eine Erklärung der Schlüssel, die im Proof-of-Stake-Konsensmechanismus von Ethereum verwendet werden
+title: "Schlüssel im Proof-of-Stake-Ethereum"
+description: "Eine Erklärung der Schlüssel, die im Proof-of-Stake-Konsensmechanismus von Ethereum verwendet werden"
 lang: de
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Gas 与费用
+title: "Gas 与费用"
 metaTitle: "以太坊 Gas 与费用：技术概述"
-description: 了解以太坊 gas 费、其计算方式以及它们在网络安全和交易处理中的作用。
+description: "了解以太坊 gas 费、其计算方式以及它们在网络安全和交易处理中的作用。"
 lang: zh
 ---
 

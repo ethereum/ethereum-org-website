@@ -1,6 +1,6 @@
 ---
-title: Hisse Kanıtı (PoS)
-description: Hisse kanıtı mutabakat protokolünün ve Ethereum'daki rolünün bir açıklaması.
+title: "Hisse Kanıtı (PoS)"
+description: "Hisse kanıtı mutabakat protokolünün ve Ethereum'daki rolünün bir açıklaması."
 lang: tr
 ---
 

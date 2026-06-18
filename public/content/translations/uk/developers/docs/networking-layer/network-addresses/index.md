@@ -1,6 +1,6 @@
 ---
-title: Мережеві адреси
-description: Вступ до мережевих адрес.
+title: "Мережеві адреси"
+description: "Вступ до мережевих адрес."
 lang: uk
 sidebarDepth: 2
 ---

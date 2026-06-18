@@ -1,6 +1,6 @@
 ---
-title: 權益證明 (PoS)
-description: 權益證明共識協定及其在以太坊中作用的解釋。
+title: "權益證明 (PoS)"
+description: "權益證明共識協定及其在以太坊中作用的解釋。"
 lang: zh-tw
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: 去中心化金融 (DeFi)
-metaTitle: 什麼是 DeFi？ | 去中心化金融的優勢與用途
-description: 以太坊上的去中心化金融 (DeFi) 概覽
+title: "去中心化金融 (DeFi)"
+metaTitle: "什麼是 DeFi？ | 去中心化金融的優勢與用途"
+description: "以太坊上的去中心化金融 (DeFi) 概覽"
 lang: zh-tw
 template: use-cases
 image: /images/use-cases/defi.png
-alt: 用樂高積木拼成的以太坊標誌。
+alt: "用樂高積木拼成的以太坊標誌。"
 sidebarDepth: 2
 summaryPoints:
   - "當前金融體系的全球化、開放式替代方案。"

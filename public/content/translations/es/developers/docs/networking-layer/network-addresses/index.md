@@ -1,6 +1,6 @@
 ---
 title: Direcciones de red
-description: Una introducción a las direcciones de red.
+description: "Una introducción a las direcciones de red."
 lang: es
 sidebarDepth: 2
 ---

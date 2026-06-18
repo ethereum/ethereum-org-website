@@ -1,12 +1,12 @@
 ---
 title: Co je to DAO?
-metaTitle: Co je to DAO? | Decentralizovaná autonomní organizace
-description: Přehled DAO na Ethereu
+metaTitle: "Co je to DAO? | Decentralizovaná autonomní organizace"
+description: "Přehled DAO na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Znázornění DAO hlasující o návrhu.
+alt: "Znázornění DAO hlasující o návrhu."
 summaryPoints:
   - "Komunity vlastněné členy bez centralizovaného vedení."
   - "Bezpečný způsob spolupráce s cizími lidmi na internetu."

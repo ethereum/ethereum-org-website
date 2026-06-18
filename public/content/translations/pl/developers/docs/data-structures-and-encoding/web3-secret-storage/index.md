@@ -1,6 +1,6 @@
 ---
-title: Definicja przechowywania sekretów Web3
-description: Formalna definicja przechowywania sekretów Web3
+title: "Definicja przechowywania sekretów Web3"
+description: "Formalna definicja przechowywania sekretów Web3"
 lang: pl
 sidebarDepth: 2
 ---

@@ -1,11 +1,11 @@
 ---
-title: विकेंद्रीकृत वित्त (DeFi)
-metaTitle: DeFi क्या है? | विकेंद्रीकृत वित्त के लाभ और उपयोग
-description: इथेरियम पर DeFi का अवलोकन
+title: "विकेंद्रीकृत वित्त (DeFi)"
+metaTitle: "DeFi क्या है? | विकेंद्रीकृत वित्त के लाभ और उपयोग"
+description: "इथेरियम पर DeFi का अवलोकन"
 lang: hi
 template: use-cases
 image: /images/use-cases/defi.png
-alt: लेगो ईंटों से बना एक Eth लोगो।
+alt: "लेगो ईंटों से बना एक Eth लोगो।"
 sidebarDepth: 2
 summaryPoints:
   - "वर्तमान वित्तीय प्रणाली का एक वैश्विक, खुला विकल्प।"

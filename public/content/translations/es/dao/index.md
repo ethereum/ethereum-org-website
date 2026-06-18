@@ -1,12 +1,12 @@
 ---
-title: ¿Qué es una DAO?
-metaTitle: ¿Qué es una DAO? | Organización Autónoma Descentralizada
-description: Una descripción general de las DAO en Ethereum
+title: "¿Qué es una DAO?"
+metaTitle: "¿Qué es una DAO? | Organización Autónoma Descentralizada"
+description: "Una descripción general de las DAO en Ethereum"
 lang: es
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Una representación de una DAO votando una propuesta.
+alt: "Una representación de una DAO votando una propuesta."
 summaryPoints:
   - "Comunidades propiedad de sus miembros sin liderazgo centralizado."
   - "Una forma segura de colaborar con desconocidos en internet."

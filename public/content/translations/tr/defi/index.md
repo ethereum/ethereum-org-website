@@ -1,11 +1,11 @@
 ---
 title: Merkeziyetsiz finans (DeFi)
-metaTitle: DeFi Nedir? | Merkeziyetsiz Finansın Faydaları ve Kullanımı
-description: Ethereum'daki DeFi'ye genel bir bakış
+metaTitle: "DeFi Nedir? | Merkeziyetsiz Finansın Faydaları ve Kullanımı"
+description: "Ethereum'daki DeFi'ye genel bir bakış"
 lang: tr
 template: use-cases
 image: /images/use-cases/defi.png
-alt: Lego parçalarından yapılmış bir Eth logosu.
+alt: "Lego parçalarından yapılmış bir Eth logosu."
 sidebarDepth: 2
 summaryPoints:
   - "Mevcut finansal sisteme küresel, açık bir alternatif."

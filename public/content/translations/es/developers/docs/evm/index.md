@@ -1,6 +1,6 @@
 ---
-title: Máquina Virtual de Ethereum (EVM)
-description: Una introducción a la máquina virtual de Ethereum y cómo se relaciona con el estado, las transacciones y los contratos inteligentes.
+title: "Máquina Virtual de Ethereum (EVM)"
+description: "Una introducción a la máquina virtual de Ethereum y cómo se relaciona con el estado, las transacciones y los contratos inteligentes."
 lang: es
 ---
 

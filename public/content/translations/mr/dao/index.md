@@ -1,12 +1,12 @@
 ---
-title: DAO म्हणजे काय?
-metaTitle: DAO म्हणजे काय? | विकेंद्रित स्वायत्त संस्था (Decentralized Autonomous Organization)
-description: इथेरियमवरील DAOs चा आढावा
+title: "DAO म्हणजे काय?"
+metaTitle: "DAO म्हणजे काय? | विकेंद्रित स्वायत्त संस्था (Decentralized Autonomous Organization)"
+description: "इथेरियमवरील DAOs चा आढावा"
 lang: mr
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: प्रस्तावावर मतदान करणाऱ्या DAO चे सादरीकरण.
+alt: "प्रस्तावावर मतदान करणाऱ्या DAO चे सादरीकरण."
 summaryPoints:
   - "केंद्रीकृत नेतृत्वाशिवाय सदस्यांच्या मालकीचे समुदाय."
   - "इंटरनेटवरील अनोळखी लोकांशी सहयोग करण्याचा एक सुरक्षित मार्ग."

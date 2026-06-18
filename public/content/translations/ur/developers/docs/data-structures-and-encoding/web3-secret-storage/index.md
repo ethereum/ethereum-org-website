@@ -1,6 +1,6 @@
 ---
-title: ⁦Web3⁩ خفیہ اسٹوریج کی تعریف
-description: ⁦Web3⁩ خفیہ اسٹوریج کی باقاعدہ تعریف
+title: "⁦Web3⁩ خفیہ اسٹوریج کی تعریف"
+description: "⁦Web3⁩ خفیہ اسٹوریج کی باقاعدہ تعریف"
 lang: ur
 sidebarDepth: 2
 ---
@@ -44,7 +44,7 @@ fs.readFile("keyfile.json", (err, data) => {
 - `prf`: `hmac-sha256` ہونا چاہیے (مستقبل میں اس میں توسیع کی جا سکتی ہے)؛
 - `c`: تکرار کی تعداد؛
 - `salt`: <span dir="ltr">PBKDF</span> کو پاس کیا گیا سالٹ (salt)؛
-- `dklen`: اخذ کردہ کلید کی لمبائی۔ <span dir="ltr">>= 32</span> ہونی چاہیے۔
+- `dklen`: اخذ کردہ کلید کی لمبائی۔ <span dir="ltr">= 32</span> ہونی چاہیے۔
 
 ایک بار جب فائل کی کلید اخذ کر لی جائے، تو اسے <span dir="ltr">MAC</span> کے اخذ کے ذریعے تصدیق کیا جانا چاہیے۔ <span dir="ltr">MAC</span> کا حساب اخذ کردہ کلید کے بائیں سے دوسرے <span dir="ltr">16 bytes</span> اور `ciphertext` کلید کے مندرجات کے ملاپ سے بننے والے بائٹ ایرے کے <span dir="ltr">SHA3</span> (کیچاک-۲۵۶) ہیش کے طور پر کیا جانا چاہیے، یعنی:
 

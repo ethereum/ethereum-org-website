@@ -1,6 +1,6 @@
 ---
-title: Introducción técnica a Ethereum
-description: Una introducción a los conceptos básicos de Ethereum para desarrolladores de dapps.
+title: "Introducción técnica a Ethereum"
+description: "Una introducción a los conceptos básicos de Ethereum para desarrolladores de dapps."
 lang: es
 ---
 

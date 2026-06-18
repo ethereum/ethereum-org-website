@@ -1,6 +1,6 @@
 ---
 title: Propozycja bloku
-description: Wyjaśnienie, w jaki sposób proponowane są bloki w Ethereum opartym na dowodzie stawki (PoS).
+description: "Wyjaśnienie, w jaki sposób proponowane są bloki w Ethereum opartym na dowodzie stawki (PoS)."
 lang: pl
 ---
 

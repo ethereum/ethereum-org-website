@@ -1,6 +1,6 @@
 ---
 title: Proposta de bloco
-description: Explicação de como os blocos são propostos na Prova de Participação (PoS) do Ethereum.
+description: "Explicação de como os blocos são propostos na Prova de Participação (PoS) do Ethereum."
 lang: pt-br
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: وكلاء الذكاء الاصطناعي
-metaTitle: وكلاء الذكاء الاصطناعي | وكلاء الذكاء الاصطناعي على إيثيريوم
-description: نظرة عامة على وكلاء الذكاء الاصطناعي على إيثيريوم
+title: "وكلاء الذكاء الاصطناعي"
+metaTitle: "وكلاء الذكاء الاصطناعي | وكلاء الذكاء الاصطناعي على إيثيريوم"
+description: "نظرة عامة على وكلاء الذكاء الاصطناعي على إيثيريوم"
 lang: ar
 template: use-cases
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: أشخاص مجتمعون حول طاولة محطة عمل
+alt: "أشخاص مجتمعون حول طاولة محطة عمل"
 summaryPoints:
   - "ذكاء اصطناعي يتفاعل مع سلسلة الكتل ويتداول بشكل مستقل"
   - "يتحكم في المحافظ والأموال على السلسلة"
@@ -108,7 +108,7 @@ buttons:
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>من الجيد معرفة ذلك</strong></strong>
+<p className="mt-0"><strong>من الجيد معرفة ذلك</strong>
 <p className="mt-2">لا يزال وكلاء الذكاء الاصطناعي والأدوات ذات الصلة في مراحل التطوير المبكرة وتجريبية للغاية — استخدمها بحذر.</p>
 </AlertContent>
 </Alert>

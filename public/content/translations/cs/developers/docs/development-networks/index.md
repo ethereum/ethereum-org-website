@@ -1,6 +1,6 @@
 ---
-title: Vývojové sítě
-description: Přehled vývojových sítí a dostupných nástrojů, které pomáhají při tvorbě aplikací na Ethereu.
+title: "Vývojové sítě"
+description: "Přehled vývojových sítí a dostupných nástrojů, které pomáhají při tvorbě aplikací na Ethereu."
 lang: cs
 ---
 

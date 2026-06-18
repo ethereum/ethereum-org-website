@@ -1,12 +1,12 @@
 ---
-title: DAO क्या है?
-metaTitle: DAO क्या है? | विकेंद्रीकृत स्वायत्त संगठन (DAO)
-description: इथेरियम पर DAO का अवलोकन
+title: "DAO क्या है?"
+metaTitle: "DAO क्या है? | विकेंद्रीकृत स्वायत्त संगठन (DAO)"
+description: "इथेरियम पर DAO का अवलोकन"
 lang: hi
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: एक प्रस्ताव पर वोट करते हुए DAO का प्रतिनिधित्व।
+alt: "एक प्रस्ताव पर वोट करते हुए DAO का प्रतिनिधित्व।"
 summaryPoints:
   - "केंद्रीकृत नेतृत्व के बिना सदस्य-स्वामित्व वाले समुदाय।"
   - "इंटरनेट पर अजनबियों के साथ सहयोग करने का एक सुरक्षित तरीका।"

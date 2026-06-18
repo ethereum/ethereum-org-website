@@ -1,12 +1,12 @@
 ---
-title: 什么是 DAO？
-metaTitle: 什么是 DAO？| 去中心化自治组织
-description: 以太坊上的 DAO 概览
+title: "什么是 DAO？"
+metaTitle: "什么是 DAO？| 去中心化自治组织"
+description: "以太坊上的 DAO 概览"
 lang: zh
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: DAO 对提案进行投票的示意图。
+alt: "DAO 对提案进行投票的示意图。"
 summaryPoints:
   - "没有中心化领导的成员所有制社区。"
   - "与互联网上的陌生人安全协作的方式。"

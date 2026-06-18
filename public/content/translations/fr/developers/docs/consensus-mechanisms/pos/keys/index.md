@@ -1,6 +1,6 @@
 ---
-title: Les clés dans la preuve d'enjeu (PoS) d'Ethereum
-description: Une explication des clés utilisées dans le mécanisme de consensus par preuve d'enjeu d'Ethereum
+title: "Les clés dans la preuve d'enjeu (PoS) d'Ethereum"
+description: "Une explication des clés utilisées dans le mécanisme de consensus par preuve d'enjeu d'Ethereum"
 lang: fr
 ---
 

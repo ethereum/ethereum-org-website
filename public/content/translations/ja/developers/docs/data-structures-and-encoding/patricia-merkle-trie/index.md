@@ -1,6 +1,6 @@
 ---
-title: マークル・パトリシア・トライ
-description: マークル・パトリシア・トライの紹介。
+title: "マークル・パトリシア・トライ"
+description: "マークル・パトリシア・トライの紹介。"
 lang: ja
 sidebarDepth: 2
 ---

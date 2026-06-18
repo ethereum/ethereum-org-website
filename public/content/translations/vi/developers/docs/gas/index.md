@@ -1,7 +1,7 @@
 ---
-title: Gas và phí
+title: "Gas và phí"
 metaTitle: "Gas và phí trên Ethereum: tổng quan kỹ thuật"
-description: Tìm hiểu về phí gas trên Ethereum, cách tính phí và vai trò của chúng trong bảo mật mạng lưới và xử lý giao dịch.
+description: "Tìm hiểu về phí gas trên Ethereum, cách tính phí và vai trò của chúng trong bảo mật mạng lưới và xử lý giao dịch."
 lang: vi
 ---
 

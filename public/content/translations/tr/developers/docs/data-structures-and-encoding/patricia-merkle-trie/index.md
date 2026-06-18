@@ -1,6 +1,6 @@
 ---
-title: Merkle Patricia Ağacı
-description: Merkle Patricia Ağacına giriş.
+title: "Merkle Patricia Ağacı"
+description: "Merkle Patricia Ağacına giriş."
 lang: tr
 sidebarDepth: 2
 ---

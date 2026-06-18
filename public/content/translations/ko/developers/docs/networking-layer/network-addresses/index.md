@@ -1,6 +1,6 @@
 ---
-title: 네트워크 주소
-description: 네트워크 주소에 대한 소개입니다.
+title: "네트워크 주소"
+description: "네트워크 주소에 대한 소개입니다."
 lang: ko
 sidebarDepth: 2
 ---

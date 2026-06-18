@@ -1,6 +1,6 @@
 ---
-title: Důkaz podílem (PoS)
-description: Vysvětlení protokolu konsensu důkaz podílem (PoS) a jeho role v Ethereu.
+title: "Důkaz podílem (PoS)"
+description: "Vysvětlení protokolu konsensu důkaz podílem (PoS) a jeho role v Ethereu."
 lang: cs
 ---
 
@@ -43,7 +43,7 @@ Ke zvrácení finalizovaného bloku by se útočník zavázal ke ztrátě alespo
 
 Provozování validátora je závazek. Očekává se, že validátor bude udržovat dostatečný hardware a konektivitu, aby se mohl účastnit validace bloku a návrhu. Na oplátku je validátor placen v ETH (jejich stakovaný zůstatek se zvyšuje). Na druhou stranu účast jako validátor také otevírá uživatelům nové cesty k útoku na síť za účelem osobního zisku nebo sabotáže. Aby se tomu zabránilo, validátoři přicházejí o odměny v ETH, pokud se nezúčastní, když jsou k tomu vyzváni, a jejich stávající stake může být zničen, pokud se chovají nečestně. Dvě primární chování lze považovat za nečestná: navrhování více bloků v jednom slotu (equivocation) a předkládání protichůdných atestací.
 
-Množství penalizovaného ETH závisí na tom, kolik validátorů je také penalizováno přibližně ve stejnou dobu. To je známé jako [„korelační penalizace“](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty) a může být menší (~1 % staku pro jednoho validátora penalizovaného samostatně) nebo může vést ke zničení 100 % staku validátora (událost hromadné penalizace). Ukládá se v polovině období nuceného výstupu, které začíná okamžitou penalizací (až 1 ETH) v den 1, korelační penalizací v den 18 a nakonec vyloučením ze sítě v den 36. Každý den dostávají menší penalizace za atestace, protože jsou přítomni v síti, ale neodesílají hlasy. To vše znamená, že koordinovaný útok by byl pro útočníka velmi nákladný.
+Množství penalizovaného ETH závisí na tom, kolik validátorů je také penalizováno přibližně ve stejnou dobu. To je známé jako [„korelační penalizace“](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty) a může být menší (\~1 % staku pro jednoho validátora penalizovaného samostatně) nebo může vést ke zničení 100 % staku validátora (událost hromadné penalizace). Ukládá se v polovině období nuceného výstupu, které začíná okamžitou penalizací (až 1 ETH) v den 1, korelační penalizací v den 18 a nakonec vyloučením ze sítě v den 36. Každý den dostávají menší penalizace za atestace, protože jsou přítomni v síti, ale neodesílají hlasy. To vše znamená, že koordinovaný útok by byl pro útočníka velmi nákladný.
 
 ## Volba forku {#fork-choice}
 

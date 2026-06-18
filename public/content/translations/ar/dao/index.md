@@ -1,12 +1,12 @@
 ---
-title: ما هي ⁦DAO⁩؟
-metaTitle: ما هي ⁦DAO⁩؟ | منظمة مستقلة لامركزية
-description: نظرة عامة على منظمات ⁦DAO⁩ على إيثيريوم
+title: "ما هي ⁦DAO⁩؟"
+metaTitle: "ما هي ⁦DAO⁩؟ | منظمة مستقلة لامركزية"
+description: "نظرة عامة على منظمات ⁦DAO⁩ على إيثيريوم"
 lang: ar
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: تمثيل لمنظمة ⁦DAO⁩ تصوت على مقترح.
+alt: "تمثيل لمنظمة ⁦DAO⁩ تصوت على مقترح."
 summaryPoints:
   - "مجتمعات مملوكة للأعضاء بدون قيادة مركزية."
   - "طريقة آمنة للتعاون مع الغرباء على الإنترنت."

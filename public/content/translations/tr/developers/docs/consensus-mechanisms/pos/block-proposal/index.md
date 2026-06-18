@@ -1,6 +1,6 @@
 ---
 title: Blok teklifi
-description: Hisse kanıtı (PoS) Ethereum'da blokların nasıl teklif edildiğinin açıklaması.
+description: "Hisse kanıtı (PoS) Ethereum'da blokların nasıl teklif edildiğinin açıklaması."
 lang: tr
 ---
 

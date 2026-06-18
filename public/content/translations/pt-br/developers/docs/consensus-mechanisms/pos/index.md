@@ -1,6 +1,6 @@
 ---
-title: Prova de Participação (PoS)
-description: Uma explicação do protocolo de consenso de Prova de Participação (PoS) e seu papel no Ethereum.
+title: "Prova de Participação (PoS)"
+description: "Uma explicação do protocolo de consenso de Prova de Participação (PoS) e seu papel no Ethereum."
 lang: pt-br
 ---
 
@@ -43,7 +43,7 @@ Para reverter um bloco finalizado, um invasor se comprometeria a perder pelo men
 
 Executar um validador é um compromisso. Espera-se que o validador mantenha hardware e conectividade suficientes para participar da validação de bloco e da proposta. Em troca, o validador é pago em ETH (seu saldo em stake aumenta). Por outro lado, participar como um validador também abre novos caminhos para os usuários atacarem a rede para ganho pessoal ou sabotagem. Para evitar isso, os validadores perdem recompensas em ETH se não participarem quando chamados, e seu stake existente pode ser destruído se eles se comportarem de forma desonesta. Dois comportamentos principais podem ser considerados desonestos: propor vários blocos em um único slot (equivocação) e enviar atestações contraditórias.
 
-A quantidade de ETH penalizada depende de quantos validadores também estão sendo penalizados quase ao mesmo tempo. Isso é conhecido como a ["penalidade de correlação"](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), e pode ser pequena (~1% do stake para um único validador penalizado sozinho) ou pode resultar na destruição de 100% do stake do validador (evento de penalização em massa). Ela é imposta na metade de um período de saída forçada que começa com uma penalidade imediata (até 1 ETH) no Dia 1, a penalidade de correlação no Dia 18 e, finalmente, a ejeção da rede no Dia 36. Eles recebem pequenas penalidades de atestação todos os dias porque estão presentes na rede, mas não estão enviando votos. Tudo isso significa que um ataque coordenado seria muito caro para o invasor.
+A quantidade de ETH penalizada depende de quantos validadores também estão sendo penalizados quase ao mesmo tempo. Isso é conhecido como a ["penalidade de correlação"](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), e pode ser pequena (\~1% do stake para um único validador penalizado sozinho) ou pode resultar na destruição de 100% do stake do validador (evento de penalização em massa). Ela é imposta na metade de um período de saída forçada que começa com uma penalidade imediata (até 1 ETH) no Dia 1, a penalidade de correlação no Dia 18 e, finalmente, a ejeção da rede no Dia 36. Eles recebem pequenas penalidades de atestação todos os dias porque estão presentes na rede, mas não estão enviando votos. Tudo isso significa que um ataque coordenado seria muito caro para o invasor.
 
 ## Escolha de bifurcação {#fork-choice}
 

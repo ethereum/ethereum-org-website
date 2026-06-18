@@ -1,6 +1,6 @@
 ---
-title: Các khóa trong Bằng chứng cổ phần (PoS) của Ethereum
-description: Giải thích về các khóa được sử dụng trong cơ chế đồng thuận Bằng chứng cổ phần (PoS) của Ethereum
+title: "Các khóa trong Bằng chứng cổ phần (PoS) của Ethereum"
+description: "Giải thích về các khóa được sử dụng trong cơ chế đồng thuận Bằng chứng cổ phần (PoS) của Ethereum"
 lang: vi
 ---
 

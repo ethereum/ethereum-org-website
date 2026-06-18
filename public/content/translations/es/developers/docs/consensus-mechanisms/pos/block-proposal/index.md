@@ -1,6 +1,6 @@
 ---
 title: Propuesta de bloques
-description: Explicación de cómo se proponen los bloques en la prueba de participación (PoS) de Ethereum.
+description: "Explicación de cómo se proponen los bloques en la prueba de participación (PoS) de Ethereum."
 lang: es
 ---
 

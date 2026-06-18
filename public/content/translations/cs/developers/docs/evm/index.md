@@ -1,6 +1,6 @@
 ---
-title: Virtuální stroj Etherea (EVM)
-description: Úvod do virtuálního stroje Etherea a jeho vztahu ke stavu, transakcím a chytrým kontraktům.
+title: "Virtuální stroj Etherea (EVM)"
+description: "Úvod do virtuálního stroje Etherea a jeho vztahu ke stavu, transakcím a chytrým kontraktům."
 lang: cs
 ---
 

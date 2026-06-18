@@ -1,6 +1,6 @@
 ---
-title: Endereços de rede
-description: Uma introdução aos endereços de rede.
+title: "Endereços de rede"
+description: "Uma introdução aos endereços de rede."
 lang: pt-br
 sidebarDepth: 2
 ---

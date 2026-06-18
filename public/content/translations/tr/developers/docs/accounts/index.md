@@ -1,6 +1,6 @@
 ---
-title: Ethereum hesapları
-description: Ethereum hesaplarının bir açıklaması – veri yapıları ve anahtar çifti kriptografisi ile ilişkileri.
+title: "Ethereum hesapları"
+description: "Ethereum hesaplarının bir açıklaması – veri yapıları ve anahtar çifti kriptografisi ile ilişkileri."
 lang: tr
 ---
 

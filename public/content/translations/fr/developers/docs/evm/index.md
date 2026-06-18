@@ -1,6 +1,6 @@
 ---
 title: Machine virtuelle Ethereum (EVM)
-description: Une introduction à la machine virtuelle Ethereum et à sa relation avec l'état, les transactions et les contrats intelligents.
+description: "Une introduction à la machine virtuelle Ethereum et à sa relation avec l'état, les transactions et les contrats intelligents."
 lang: fr
 ---
 

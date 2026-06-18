@@ -1,6 +1,6 @@
 ---
-title: Prohlížeče bloků
-description: Úvod do prohlížečů bloků, vašeho portálu do světa blockchainových dat, kde můžete dotazovat informace o transakcích, účtech, kontraktech a dalším.
+title: "Prohlížeče bloků"
+description: "Úvod do prohlížečů bloků, vašeho portálu do světa blockchainových dat, kde můžete dotazovat informace o transakcích, účtech, kontraktech a dalším."
 lang: cs
 sidebarDepth: 3
 ---

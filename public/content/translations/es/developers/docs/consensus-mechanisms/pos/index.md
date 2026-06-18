@@ -1,6 +1,6 @@
 ---
-title: Prueba de participación (PoS)
-description: Una explicación del protocolo de consenso de prueba de participación y su papel en Ethereum.
+title: "Prueba de participación (PoS)"
+description: "Una explicación del protocolo de consenso de prueba de participación y su papel en Ethereum."
 lang: es
 ---
 
@@ -43,7 +43,7 @@ Para revertir un bloque finalizado, un atacante se comprometería a perder al me
 
 Ejecutar un validador es un compromiso. Se espera que el validador mantenga suficiente hardware y conectividad para participar en la validación de bloques y en la propuesta. A cambio, el validador recibe un pago en ETH (su saldo en staking aumenta). Por otro lado, participar como validador también abre nuevas vías para que los usuarios ataquen la red para beneficio personal o sabotaje. Para evitar esto, los validadores pierden las recompensas de ETH si no participan cuando se les solicita, y su participación existente puede ser destruida si se comportan de forma deshonesta. Dos comportamientos principales pueden considerarse deshonestos: proponer múltiples bloques en un solo slot (equivocación) y enviar atestaciones contradictorias.
 
-La cantidad de ETH recortado depende de cuántos validadores también estén sufriendo un recorte casi al mismo tiempo. Esto se conoce como la ["penalización por correlación"](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), y puede ser menor (~1% de la participación para un solo validador recortado por su cuenta) o puede resultar en la destrucción del 100% de la participación del validador (evento de recorte masivo). Se impone a la mitad de un período de salida forzada que comienza con una penalización inmediata (hasta 1 ETH) en el Día 1, la penalización por correlación en el Día 18 y, finalmente, la expulsión de la red en el Día 36. Reciben penalizaciones menores de atestación todos los días porque están presentes en la red pero no envían votos. Todo esto significa que un ataque coordinado sería muy costoso para el atacante.
+La cantidad de ETH recortado depende de cuántos validadores también estén sufriendo un recorte casi al mismo tiempo. Esto se conoce como la ["penalización por correlación"](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), y puede ser menor (\~1% de la participación para un solo validador recortado por su cuenta) o puede resultar en la destrucción del 100% de la participación del validador (evento de recorte masivo). Se impone a la mitad de un período de salida forzada que comienza con una penalización inmediata (hasta 1 ETH) en el Día 1, la penalización por correlación en el Día 18 y, finalmente, la expulsión de la red en el Día 36. Reciben penalizaciones menores de atestación todos los días porque están presentes en la red pero no envían votos. Todo esto significa que un ataque coordinado sería muy costoso para el atacante.
 
 ## Elección de bifurcación {#fork-choice}
 
