@@ -1,85 +1,85 @@
 ---
-title: "Библиотеки JavaScript API"
-description: "Введение в клиентские библиотеки JavaScript, позволяющие взаимодействовать с блокчейном из Вашего приложения."
+title: Библиотеки JavaScript API
+description: Введение в клиентские библиотеки JavaScript, которые позволяют взаимодействовать с блокчейном из вашего приложения.
 lang: ru
 ---
 
-Чтобы веб-приложение могло взаимодействовать с блокчейном Ethereum (т. е. читать данные блокчейна и/или отправлять транзакции в сеть), оно должно подключиться к узлу Ethereum.
+Чтобы веб-приложение могло взаимодействовать с блокчейном Эфириума (т. е. читать данные блокчейна и/или отправлять транзакции в сеть), оно должно подключиться к узлу Эфириума.
 
-Для этой цели каждый клиент Ethereum реализует спецификацию [JSON-RPC](/developers/docs/apis/json-rpc/), так что существует единый набор [методов](/developers/docs/apis/json-rpc/#json-rpc-methods), на которые могут полагаться приложения.
+Для этой цели каждый клиент Эфириума реализует спецификацию [JSON-RPC](/developers/docs/apis/json-rpc/), поэтому существует единый набор [методов](/developers/docs/apis/json-rpc/#json-rpc-methods), на которые могут опираться приложения.
 
-Если вы используете JavaScript для того чтобы подключиться к узлу Ethereum, можно воспользоваться vanilla JavaScript, но существует также несколько удобных библиотек внутри экосистемы которые упрощают эту задачу. С помощью этих библиотек разработчики могут писать интуитивные, однострочные методы для инициализации запросов JSON-RPC (под капотом), которые взаимодействуют с Ethereum.
+Если вы хотите использовать JavaScript для подключения к узлу Эфириума, можно использовать чистый JavaScript, но в экосистеме существует несколько удобных библиотек, которые значительно упрощают эту задачу. С помощью этих библиотек разработчики могут писать интуитивно понятные однострочные методы для инициализации запросов JSON-RPC (внутренне), которые взаимодействуют с Эфириумом.
 
-Обратите внимание, что после [Слияния](/roadmap/merge/) для запуска узла требуются две связанные части программного обеспечения Ethereum — клиент исполнения и клиент консенсуса. Убедитесь, что у вашего узла есть как клиент исполнения, так и клиент консенсуса. Если ваш узел находится не на локальном компьютере (например, работает на инстансе AWS), соответственно обновите IP-адреса в руководстве. Для получения дополнительной информации см. нашу страницу о [запуске узла](/developers/docs/nodes-and-clients/run-a-node/).
+Обратите внимание, что после [Слияния](/roadmap/merge/) для запуска узла требуются две связанные части программного обеспечения Эфириума — клиент исполнения и клиент консенсуса. Убедитесь, что ваш узел включает как клиент исполнения, так и клиент консенсуса. Если ваш узел находится не на локальном компьютере (например, ваш узел работает на экземпляре AWS), соответствующим образом обновите IP-адреса в руководстве. Для получения дополнительной информации посетите нашу страницу о [запуске узла](/developers/docs/nodes-and-clients/run-a-node/).
 
-## Предварительные условия {#prerequisites}
+## Предварительные требования {#prerequisites}
 
-Помимо понимания JavaScript, может быть полезно разобраться в [стеке Ethereum](/developers/docs/ethereum-stack/) и [клиентах Ethereum](/developers/docs/nodes-and-clients/).
+Помимо понимания JavaScript, может быть полезно понимать [стек Эфириума](/developers/docs/ethereum-stack/) и [клиенты Эфириума](/developers/docs/nodes-and-clients/).
 
-## Зачем использовать библиотеки? {#why-use-a-library}
+## Зачем использовать библиотеку? {#why-use-a-library}
 
-Использование библиотеки помогает абстрагироваться от сложности при общении с узлом Ethereum напрямую. Они также предоставляют полезные функции (например, конвертирование ETH в Gwei), позволяя вам, как разработчику, тратить меньше времени на тонкости работы с клиентами Ethereum, и сосредоточиться на уникальных функциях своего приложения.
+Эти библиотеки скрывают большую часть сложности прямого взаимодействия с узлом Эфириума. Они также предоставляют служебные функции (например, преобразование ETH в Gwei), поэтому как разработчик вы можете тратить меньше времени на изучение тонкостей клиентов Эфириума и больше времени уделять уникальной функциональности вашего приложения.
 
-## Функции библиотеки {#library-features}
+## Особенности библиотек {#library-features}
 
-### Подключение к узлам Ethereum {#connect-to-ethereum-nodes}
+### Подключение к узлам Эфириума {#connect-to-ethereum-nodes}
 
-Используя провайдеров, эти библиотеки позволяют вам подключаться к Ethereum и считывать его данные, будь то через JSON-RPC, INFURA, Etherscan, Alchemy или MetaMask.
+Используя провайдеров, эти библиотеки позволяют вам подключаться к Эфириуму и читать его данные, будь то через JSON-RPC, Infura, Etherscan, Alchemy или МетаМаск.
 
-> **Предупреждение:** Web3.js был заархивирован 4 марта 2025 г. [Прочтите объявление](https://blog.chainsafe.io/web3-js-sunset/). Для новых проектов рассмотрите возможность использования альтернативных библиотек, таких как [ethers.js](https://ethers.org) или [viem](https://viem.sh).
+> **Предупреждение:** Web3.js был отправлен в архив 4 марта 2025 года. [Прочитайте объявление](https://blog.chainsafe.io/web3-js-sunset/). Рассмотрите возможность использования альтернативных библиотек, таких как [ethers.js](https://ethers.илиg) или [viem](https://viem.sh), для новых проектов.
 
-**Пример эфиров**
+**Пример Ethers**
 
 ```js
-// BrowserProvider является оболочкой для стандартного провайдера Web3, который
-// MetaMask внедряет в каждую страницу как window.ethereum
+// BrowserProvider оборачивает стандартный провайдер Web3, который
+// МетаМаск внедряет как window.ethereum на каждую страницу
 const provider = new ethers.BrowserProvider(window.ethereum)
 
-// Плагин MetaMask также позволяет подписывать транзакции для
-// отправки эфира и оплаты для изменения состояния в блокчейне.
+// Плагин МетаМаск также позволяет подписывать транзакции, чтобы
+// отправлять эфир и платить за изменение состояния в Блокчейне.
 // Для этого нам нужен подписант аккаунта...
 const signer = provider.getSigner()
 ```
 
-**Web3js примеры**
+**Пример Web3js**
 
 ```js
 var web3 = new Web3("http://localhost:8545")
-// or
+// или
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
-// change provider
+// изменить провайдера
 web3.setProvider("ws://localhost:8546")
-// or
+// или
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
-// Using the IPC provider in node.js
+// Использование IPC-провайдера в node.js
 var net = require("net")
-var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // mac os path
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // путь в mac os
 // or
 var web3 = new Web3(
   new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
-) // mac os path
-// on windows the path is: "\\\\.\\pipe\\geth.ipc"
-// on linux the path is: "/users/myuser/.ethereum/geth.ipc"
+) // путь в mac os
+// в windows путь: "\\\\.\\pipe\\geth.ipc"
+// в linux путь: "/users/myuser/.ethereum/geth.ipc"
 ```
 
-После настройки вы сможете запросить блокчейн для:
+После настройки вы сможете запрашивать у блокчейна:
 
-- номер блока
-- прогноз газа
-- события смарт-контракта
+- номера блоков
+- оценки Газа
+- события смарт-контрактов
 - идентификатор сети
 - и многое другое...
 
 ### Функциональность кошелька {#wallet-functionality}
 
-Эти библиотеки позволяют создавать кошельки, управлять ключами и подписывать транзакции.
+Эти библиотеки предоставляют вам функциональность для создания кошельков, управления ключами и подписания транзакций.
 
-Вот примеры с эфиров
+Пример из Ethers:
 
 ```js
-// Создание экземпляра кошелька из мнемонической фразы...
+// Создать экземпляр Кошелька из мнемонической фразы...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
 walletMnemonic = Wallet.fromPhrase(mnemonic)
@@ -90,11 +90,11 @@ walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// Адрес в виде Promise согласно API подписывающей стороны (Signer)
+// Адрес в виде Promise согласно API Signer
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// Адрес кошелька также доступен синхронно
+// Адрес Кошелька также доступен синхронно
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
@@ -104,7 +104,7 @@ walletMnemonic.privateKey
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// Мнемоника кошелька
+// Мнемоническая фраза Кошелька
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -112,8 +112,8 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// Примечание: кошелек, созданный с помощью приватного ключа, не
-//       имеет мнемоники (это предотвращается выводом)
+// Примечание: Кошелек, созданный с помощью приватного ключа, не
+//       имеет мнемонической фразы (деривация предотвращает это)
 walletPrivateKey.mnemonic
 // null
 
@@ -131,7 +131,7 @@ walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
 // Метод connect возвращает новый экземпляр
-// кошелька, подключенного к провайдеру
+// Кошелька, подключенного к провайдеру
 wallet = walletMnemonic.connect(provider)
 
 // Запрос к сети
@@ -144,22 +144,22 @@ wallet.getTransactionCount()
 wallet.sendTransaction(tx)
 ```
 
-[Прочесть полную документацию](https://docs.ethers.io/v5/api/signer/#Wallet)
+[Прочитать полную документацию](https://docs.ethers.io/v5/api/signer/#Wallet)
 
 После настройки вы сможете:
 
-- создать аккаунт
-- отправить Транзакцию
-- подписать транзакцию
+- создавать аккаунты
+- отправлять транзакции
+- подписывать транзакции
 - и многое другое...
 
 ### Взаимодействие с функциями смарт-контрактов {#interact-with-smart-contract-functions}
 
-Клиентские библиотеки JavaScript позволяют Вашему приложению вызывать функции смарт-контрактов, считывая двоичный интерфейс приложения (ABI) скомпилированного контракта.
+Клиентские библиотеки JavaScript позволяют вашему приложению вызывать функции смарт-контрактов путем чтения двоичного интерфейса приложения (ABI) скомпилированного контракта.
 
-ABI, по сути, объясняет функции контракта в формате JSON и позволяет использовать его как обычный объект JavaScript.
+ABI по сути описывает функции контракта в формате JSON и позволяет использовать его как обычный объект JavaScript.
 
-Таким образом, выглядит Solidity контракт:
+Таким образом, следующий контракт на Solidity:
 
 ```solidity
 contract Test {
@@ -208,82 +208,93 @@ contract Test {
 }]
 ```
 
-Вы сможете:
+Это означает, что вы можете:
 
-- Отправить транзакцию к умному контракту и выполнить его метод
-- Сделать вызов для оценки газа, который будет выполняться при запуске в EVM
+- Отправить транзакцию в смарт-контракт и выполнить его метод
+- Вызвать оценку Газа, которая потребуется для выполнения метода в EVM
 - Развернуть контракт
-- И другое...
+- И многое другое...
 
-### Вспомогательные функции {#utility-functions}
+### Служебные функции {#utility-functions}
 
-Утилитные функции дают вам удобные shortcuts, которые делают строительство с Ethereum немного проще.
+Служебные функции предоставляют удобные ярлыки, которые немного упрощают разработку на Эфириуме.
 
-Значения ETH находятся в Wei по умолчанию. 1 ETH = 1,000,000,000,000,000,000 WEI – это означает, что вы имеете дело с большим количеством чисел! `web3.utils.toWei` конвертирует для вас эфир в Wei.
+Значения ETH по умолчанию указываются в Wei. 1 ETH = 1 000 000 000 000 000 000 Wei — это означает, что вы имеете дело с огромными числами! `web3.utils.toWei` конвертирует эфир в Wei за вас.
 
-И в эфире он выглядит так:
+А в Ethers это выглядит так:
 
 ```js
-// Get the balance of an account (by address or ENS name)
+// Получить баланс аккаунта (по адресу или имени ENS)
 balance = await provider.getBalance("ethers.eth")
 // { BigNumber: "2337132817842795605" }
 
-// Often you will need to format the output for the user
-// which prefer to see values in ether (instead of wei)
+// Часто вам нужно будет отформатировать вывод для пользователя,
+// который предпочитает видеть значения в эфире (вместо Wei)
 ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Вспомогательные функции Web3js](https://docs.web3js.org/api/web3-utils)
-- [Вспомогательные функции Ethers](https://docs.ethers.org/v6/api/utils/)
+- [Служебные функции Web3js](https://docs.web3js.org/api/web3-utils)
+- [Служебные функции Ethers](https://docs.ethers.org/v6/api/utils/)
 
 ## Доступные библиотеки {#available-libraries}
 
-**Web3.js -** **_API Ethereum для JavaScript._**
+**Web3.js —** **_JavaScript API для Эфириума._**
 
 - [Документация](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_Полная реализация кошелька Ethereum и утилиты на JavaScript и TypeScript._**
+**Ethers.js —** **_Полная реализация кошелька Эфириума и утилиты на JavaScript и TypeScript._**
 
-- [Домашняя страница Ethers.js](https://ethers.org/)
+- [Главная страница Ethers.js](https://ethers.org/)
 - [Документация](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_Протокол для индексирования данных Ethereum и IPFS и их запроса с помощью GraphQL._**
+**The Graph —** **_Протокол для индексирования данных Эфириума и IPFS и их запроса с использованием GraphQL._**
 
 - [The Graph](https://thegraph.com)
 - [Обозреватель Graph](https://thegraph.com/explorer)
 - [Документация](https://thegraph.com/docs)
 - [GitHub](https://github.com/graphprotocol)
-- [Discord](https://thegraph.com/discord)
+- [Дискорд](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_Оболочка для Ethers.js с расширенными API._**
+**Alchemy SDK —** **_Обертка вокруг Ethers.js с расширенными API._**
 
 - [Документация](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**viem -** **_Интерфейс TypeScript для Ethereum._**
+**Viem —** **_Интерфейс TypeScript для Эфириума._**
 
 - [Документация](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Drift -** **_Метабиблиотека TypeScript со встроенным кешированием, хуками и тестовыми заглушками._**
+**Codex —** **_API обогащенных данных блокчейна в реальном времени для десятков сетей._**
+
+- [Документация](https://docs.codex.io)
+- [Обозреватель](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Дискорд](https://discord.com/invite/mFpUhT3vAq)
+
+**Drift —** **_Мета-библиотека TypeScript со встроенным кэшированием, хуками и тестовыми моками._**
 
 - [Документация](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
 
-## Дополнительные материалы {#further-reading}
+## Дополнительная литература {#further-reading}
 
-_Знаете ресурс сообщества, который вам пригодился? Измените эту страницу и добавьте его!_
+_Знаете ресурс сообщества, который вам помог? Отредактируйте эту страницу и добавьте его!_
 
-## Смежные темы {#related-topics}
+## Связанные темы {#related-topics}
 
 - [Узлы и клиенты](/developers/docs/nodes-and-clients/)
 - [Фреймворки для разработки](/developers/docs/frameworks/)
 
 ## Связанные руководства {#related-tutorials}
 
-- [Настройка Web3js для использования блокчейна Ethereum в JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _— инструкции по настройке Web3js в вашем проекте._
-- [Вызов умного контракта из JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _— на примере токена DAI вы увидите, как вызывать функции контрактов с помощью JavaScript._
-- [Отправка транзакций с помощью web3 и Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– пошаговое руководство по отправке транзакций с бэкенда._
+- [Настройка Web3js для использования блокчейна Эфириума в JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _— Инструкции по настройке Web3.js в вашем проекте._
+- [Вызов смарт-контракта из JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _— На примере токена DAI узнайте, как вызывать функции контрактов с помощью JavaScript._
+- [Отправка транзакций с использованием Web3 и Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _— Пошаговое руководство по отправке транзакций из бэкенда._
+
+## Руководства: JavaScript API и WebSockets в Эфириуме {#tutorials}
+
+- [Использование WebSockets](/developers/tutorials/using-websockets/) _— Как использовать WebSockets с Alchemy для подписки на события Эфириума и выполнения запросов JSON-RPC в реальном времени._
