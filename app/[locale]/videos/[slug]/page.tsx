@@ -10,7 +10,7 @@ import {
 import type { VideoData } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { htmlElements } from "@/components/MdComponents"
@@ -103,7 +103,7 @@ const VideoLandingPage = async (props: {
           </Accordion>
         )}
 
-        <FeedbackCard />
+        <ContentFeedback />
       </MainArticle>
     </I18nProvider>
   )

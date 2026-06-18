@@ -6,9 +6,9 @@ import type { ChildOnlyProp, Lang, Params } from "@/lib/types"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import CardList, { CardProps } from "@/components/CardList"
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
@@ -840,7 +840,7 @@ export default async function Page(props: { params: Promise<Params> }) {
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
         </div>
-        <FeedbackCard />
+        <ContentFeedback />
       </MainArticle>
     </>
   )

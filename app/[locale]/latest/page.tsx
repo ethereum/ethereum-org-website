@@ -7,8 +7,8 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -122,7 +122,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             )}
           </div>
 
-          <FeedbackCard />
+          <ContentFeedback />
         </MainArticle>
       </I18nProvider>
     </>

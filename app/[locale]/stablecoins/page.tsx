@@ -15,7 +15,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import PathwayCard from "@/components/cards/pathway-card"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import { CheckCircle } from "@/components/icons/CheckCircle"
@@ -862,7 +862,7 @@ async function Page(props: { params: Promise<PageParams> }) {
         </Section>
 
         <Section>
-          <FeedbackCard />
+          <ContentFeedback />
         </Section>
       </MainArticle>
     </I18nProvider>

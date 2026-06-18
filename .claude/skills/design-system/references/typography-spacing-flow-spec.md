@@ -1,6 +1,6 @@
 # Typography & Spacing Flow -- Spec
 
-Status: Shipped on the `ui-headers` branch. The opt-in `.flow` system lives in `base.css` and is applied to markdown content (`ContentContainer`, plus the `MainArticle` in the `Docs`/`Static`/`Tutorial` layouts) and to migrated React pages, with a Storybook kitchen-sink. The `<Section>` component refactor remains a separate follow-up. The durable rules are now distilled into `spacing-typography.md` (canonical); this doc holds the design rationale and edge cases.
+Status: Shipped on the `ui-headers` branch. The opt-in `.flow` system lives in `base.css` and is applied to markdown content (the `MainArticle` in the `ContentLayout`, `Docs`, `Static`, and `Tutorial` layouts) and to migrated React pages, with a Storybook kitchen-sink. The `<Section>` component refactor remains a separate follow-up. The durable rules are now distilled into `spacing-typography.md` (canonical); this doc holds the design rationale and edge cases.
 
 This document defines the target model for how headings, paragraphs, lists, and the vertical spacing between them work site-wide. It replaces the current mess -- per-layout heading wrappers, commented-out overrides, ad-hoc `mt-*/mb-*` on individual elements, two competing list-spacing sources, and arbitrary `text-[2.5rem]` values -- with a single, default-driven system.
 
@@ -117,7 +117,7 @@ Only the presentational noise was removed: `my-8`, `leading-xs`, `text-[2.5rem]`
 
 ## Where `.flow` is applied
 
-- **Markdown content:** `.flow` is on the content container -- `ContentContainer` (the `ContentLayout` body) and the `MainArticle` in the `Docs`/`Static`/`Tutorial` layouts. All MDX prose gets the rhythm, and the `MdComponents` element wrappers carry no spacing of their own -- only id + anchor + scroll-margin.
+- **Markdown content:** `.flow` is on the `MainArticle` in the `ContentLayout`, `Docs`, `Static`, and `Tutorial` layouts. All MDX prose gets the rhythm, and the `MdComponents` element wrappers carry no spacing of their own -- only id + anchor + scroll-margin.
 - **App pages (`page.tsx`):** wrap prose-like regions in `.flow`; use `Stack` / `gap` / `Section` for component composition. Prose-like = a sequence of mixed headings/paragraphs/lists; composition = repeated like-shaped blocks (cards, grid items).
 
 ## Section component (open / planned)

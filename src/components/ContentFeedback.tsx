@@ -18,18 +18,23 @@ import { useSurvey } from "@/hooks/useSurvey"
 import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
 
-type FeedbackCardProps = {
+type ContentFeedbackProps = {
   prompt?: string
   isArticle?: boolean
 }
 
-const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
+const ContentFeedback = ({
+  prompt,
+  isArticle,
+  ...props
+}: ContentFeedbackProps) => {
   const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
   const locale = useLocale()
   const pathname = usePathname()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
+  const headingId = "feedback-card-heading"
 
   const isTutorial = pathname?.includes("tutorials")
 
@@ -67,9 +72,12 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
     <aside
       className="mt-8 mb-4 flex w-full max-w-3xl flex-col gap-4"
       {...props}
+      aria-labelledby={headingId}
       dir={dir}
     >
-      <h2 className="text-h3">{getTitle(feedbackSubmitted)}</h2>
+      <h2 id={headingId} className="text-h3">
+        {getTitle(feedbackSubmitted)}
+      </h2>
 
       <div
         className={cn("flex gap-x-4 gap-y-8", feedbackSubmitted && "flex-col")}
@@ -106,4 +114,4 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   )
 }
 
-export default FeedbackCard
+export default ContentFeedback

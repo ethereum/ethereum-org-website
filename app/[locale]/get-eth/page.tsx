@@ -11,9 +11,9 @@ import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 import CardList, {
   type CardProps as CardListCardProps,
 } from "@/components/CardList"
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -385,7 +385,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               lastEditLocaleTimestamp={lastEditLocaleTimestamp}
             />
 
-            <FeedbackCard />
+            <ContentFeedback />
           </Stack>
         </MainArticle>
       </I18nProvider>

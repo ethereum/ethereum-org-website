@@ -1,7 +1,7 @@
 "use client"
 
+import ContentFeedback from "@/components/ContentFeedback"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import {
@@ -247,7 +247,7 @@ const RoadmapPage = () => {
             </div>
           </div>
 
-          <FeedbackCard />
+          <ContentFeedback />
         </div>
       </MainArticle>
     </>

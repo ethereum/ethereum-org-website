@@ -14,8 +14,8 @@ import type {
 } from "@/lib/types"
 
 import { type List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import ContentFeedback from "@/components/ContentFeedback"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -509,7 +509,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               />
             </div>
             <div>
-              <FeedbackCard />
+              <ContentFeedback />
             </div>
           </Flex>
         </ContentContainer>

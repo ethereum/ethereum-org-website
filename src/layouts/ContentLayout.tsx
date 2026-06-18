@@ -2,9 +2,9 @@ import type { HTMLAttributes } from "react"
 
 import { FileContributor } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import FileContributors from "@/components/FileContributors"
-import { ContentContainer, Page } from "@/components/MdComponents"
+import MainArticle from "@/components/MainArticle"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import TableOfContents, {
   type TableOfContentsProps,
@@ -33,7 +33,7 @@ export const ContentLayout = ({
     <div {...props}>
       {heroSection}
 
-      <Page>
+      <div className="mx-auto mb-16 flex w-full flex-col justify-between lg:flex-row lg:pt-16">
         <TableOfContents
           items={tocItems}
           dropdownLinks={dropdownLinks}
@@ -41,20 +41,26 @@ export const ContentLayout = ({
           showDropdown={showDropdown}
           variant="left"
         />
-        <ContentContainer>
-          {children}
 
-          <FileContributors
-            className="my-10 border-t"
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          />
-          <FeedbackCard />
-        </ContentContainer>
+        <main className="min-w-0 flex-[1_1_992px] px-8 pb-8 max-lg:pt-12">
+          <MainArticle className="flow">
+            {children}
+
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          </MainArticle>
+
+          {/* End-of-page actions */}
+          <ContentFeedback />
+        </main>
+
         {showDropdown && dropdownLinks && (
           <MobileButtonDropdown list={dropdownLinks} />
         )}
-      </Page>
+      </div>
     </div>
   )
 }
