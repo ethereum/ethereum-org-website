@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-17T21:51:38.843Z",
+  "englishManifestHash": "c2825647d0fb",
+  "placeholderOrder": [
+    "LINK-b6a334",
+    "CODEBLOCK-1c16e2",
+    "CODE-8b20c1",
+    "CODE-6da88c",
+    "CODEBLOCK-50ceea",
+    "CODEBLOCK-c372c6",
+    "CODE-d86ac4",
+    "CODE-a6cdf9",
+    "CODE-b0d51c",
+    "CODE-cd6c20",
+    "CODE-b0d51c",
+    "CODEBLOCK-0e0328",
+    "CODE-d86ac4",
+    "CODE-a6cdf9",
+    "CODE-b0d51c",
+    "CODE-cd6c20",
+    "CODE-277089",
+    "CODE-4d074e",
+    "LINK-fcd8b2",
+    "LINK-010331",
+    "CODEBLOCK-fa81c2",
+    "CODE-6427cb",
+    "CODE-fec69d",
+    "CODEBLOCK-ec82ce",
+    "LINK-58a162",
+    "CODEBLOCK-3f1b04",
+    "LINK-de4d7c",
+    "LINK-cb4ffe",
+    "LINK-868021",
+    "LINK-7017b9",
+    "LINK-b8c7de"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-1c16e2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-50ceea": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c372c6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-d86ac4": {
+      "type": "inline-code",
+      "values": {
+        "content": "number1"
+      }
+    },
+    "CODE-a6cdf9": {
+      "type": "inline-code",
+      "values": {
+        "content": "number2"
+      }
+    },
+    "CODE-b0d51c": {
+      "type": "inline-code",
+      "values": {
+        "content": "vector"
+      }
+    },
+    "CODE-cd6c20": {
+      "type": "inline-code",
+      "values": {
+        "content": "number3"
+      }
+    },
+    "CODEBLOCK-0e0328": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-277089": {
+      "type": "inline-code",
+      "values": {
+        "content": "bytes"
+      }
+    },
+    "CODEBLOCK-fa81c2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ec82ce": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3f1b04": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-8b20c1": {
+      "type": "inline-code",
+      "values": {
+        "content": "serialized"
+      }
+    },
+    "CODE-6da88c": {
+      "type": "inline-code",
+      "values": {
+        "content": "int"
+      }
+    },
+    "CODE-4d074e": {
+      "type": "inline-code",
+      "values": {
+        "content": "BitList"
+      }
+    },
+    "CODE-6427cb": {
+      "type": "inline-code",
+      "values": {
+        "content": "2**depth + idx"
+      }
+    },
+    "CODE-fec69d": {
+      "type": "inline-code",
+      "values": {
+        "content": "2 ** depth + index in row"
+      }
+    },
+    "LINK-b6a334": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/rlp/"
+      }
+    },
+    "LINK-fcd8b2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md"
+      }
+    },
+    "LINK-010331": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ssz.dev/overview"
+      }
+    },
+    "LINK-58a162": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs"
+      }
+    },
+    "LINK-de4d7c": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/altair/part2/building_blocks/ssz"
+      }
+    },
+    "LINK-cb4ffe": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/altair/part2/building_blocks/merkleization"
+      }
+    },
+    "LINK-868021": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/issues/2138"
+      }
+    },
+    "LINK-7017b9": {
+      "type": "link",
+      "values": {
+        "url": "https://simpleserialize.com/"
+      }
+    },
+    "LINK-b8c7de": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ssz.dev/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T21:51:38.843Z",
+      "status": "success"
+    }
+  }
+}

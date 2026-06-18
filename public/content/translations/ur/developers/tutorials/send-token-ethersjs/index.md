@@ -1,26 +1,26 @@
 ---
-title: "ethers.js کا استعمال کرتے ہوئے ٹوکنز بھیجنا"
-description: "ethers.js کا استعمال کرتے ہوئے ٹوکنز بھیجنے کے لیے ابتدائی افراد کے لیے گائیڈ۔"
-author: "کم یونگ جون"
+title: "⁦ethers.js⁩ کا استعمال کرتے ہوئے ٹوکنز بھیجنا"
+description: "⁦ethers.js⁩ کا استعمال کرتے ہوئے ٹوکنز بھیجنے کے لیے ابتدائی افراد کے لیے گائیڈ۔"
+author: کم یونگ جن
 tags: ["ETHERS.JS", "ERC-20", "ٹوکنز"]
 skill: beginner
-breadcrumb: "ٹوکنز بھیجیں"
+breadcrumb: ٹوکنز بھیجیں
 lang: ur
 published: 2021-04-06
 ---
 
-## ethers.js(5.0) کا استعمال کرتے ہوئے ٹوکن بھیجیں {#send-token}
+## <span dir="ltr">ethers.js(5.0)</span> کا استعمال کرتے ہوئے ٹوکن بھیجیں {#send-token}
 
 ### اس ٹیوٹوریل میں آپ سیکھیں گے کہ کیسے {#you-learn-about}
 
-- ethers.js کو امپورٹ کریں
-- ٹوکن ٹرانسفر کریں
+- <span dir="ltr">ethers.js</span> کو امپورٹ کریں
+- ٹوکن کی منتقلی کریں
 - نیٹ ورک ٹریفک کی صورتحال کے مطابق گیس کی قیمت مقرر کریں
 
 ### شروع کرنے کے لیے {#to-get-started}
 
-شروع کرنے کے لیے، ہمیں سب سے پہلے ethers.js لائبریری کو اپنی جاوا اسکرپٹ میں امپورٹ کرنا ہوگا۔
-ethers.js(5.0) شامل کریں
+شروع کرنے کے لیے، ہمیں سب سے پہلے <span dir="ltr">ethers.js</span> لائبریری کو اپنی <span dir="ltr">JavaScript</span> میں امپورٹ کرنا ہوگا۔
+<span dir="ltr">ethers.js(5.0)</span> شامل کریں
 
 ### انسٹال کرنا {#install-ethersjs}
 
@@ -28,7 +28,7 @@ ethers.js(5.0) شامل کریں
 /home/ricmoo> npm install --save ethers
 ```
 
-براؤزر میں ES6
+براؤزر میں <span dir="ltr">ES6</span>
 
 ```html
 <script type="module">
@@ -37,7 +37,7 @@ ethers.js(5.0) شامل کریں
 </script>
 ```
 
-براؤزر میں ES3(UMD)
+براؤزر میں <span dir="ltr">ES3(UMD)</span>
 
 ```html
 <script
@@ -48,11 +48,11 @@ ethers.js(5.0) شامل کریں
 
 ### پیرامیٹرز {#param}
 
-1. **`contract_address`**: ٹوکن کانٹریکٹ ایڈریس (جب آپ جو ٹوکن ٹرانسفر کرنا چاہتے ہیں وہ ایتھر نہ ہو تو کانٹریکٹ ایڈریس کی ضرورت ہوتی ہے)
+1. **`contract_address`**: ٹوکن کنٹریکٹ کا پتہ (جب آپ جو ٹوکن منتقل کرنا چاہتے ہیں وہ ایتھر نہ ہو تو کنٹریکٹ کا پتہ درکار ہوتا ہے)
 2. **`send_token_amount`**: وہ رقم جو آپ وصول کنندہ کو بھیجنا چاہتے ہیں
-3. **`to_address`**: وصول کنندہ کا ایڈریس
-4. **`send_account`**: بھیجنے والے کا ایڈریس
-5. **`private_key`**: ٹرانزیکشن پر دستخط کرنے اور اصل میں ٹوکنز ٹرانسفر کرنے کے لیے بھیجنے والے کی پرائیویٹ کی (private key)
+3. **`to_address`**: وصول کنندہ کا پتہ
+4. **`send_account`**: بھیجنے والے کا پتہ
+5. **`private_key`**: ٹرانزیکشن پر دستخط کرنے اور درحقیقت ٹوکنز کی منتقلی کے لیے بھیجنے والے کی نجی کلید
 
 ## نوٹس {#notice}
 
@@ -60,11 +60,11 @@ ethers.js(5.0) شامل کریں
 
 ## بھیجنے کا طریقہ کار {#procedure}
 
-### 1. نیٹ ورک (ٹیسٹ نیٹ) سے جڑیں {#connect-to-network}
+### 1. نیٹ ورک (آزمائشی نیٹ ورک) سے جڑیں {#connect-to-network}
 
-#### پرووائیڈر سیٹ کریں (Infura) {#set-provider}
+#### پرووائیڈر سیٹ کریں (<span dir="ltr">Infura</span>) {#set-provider}
 
-Ropsten ٹیسٹ نیٹ سے جڑیں
+روپسٹن آزمائشی نیٹ ورک سے جڑیں
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
@@ -76,7 +76,7 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. والیٹ کو نیٹ سے جڑیں {#connect-wallet-to-net}
+### 3. والیٹ کو نیٹ ورک سے جوڑیں {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
@@ -90,15 +90,15 @@ window.ethersProvider.getGasPrice() // گیس کی قیمت
 
 ### 5. ٹرانزیکشن کی وضاحت کریں {#define-transaction}
 
-نیچے بیان کیے گئے یہ متغیرات (variables) `send_token()` پر منحصر ہیں
+نیچے بیان کردہ یہ متغیرات `send_token()` پر منحصر ہیں
 
 ### ٹرانزیکشن کے پیرامیٹرز {#transaction-params}
 
-1. **`send_account`**: ٹوکن بھیجنے والے کا ایڈریس
-2. **`to_address`**: ٹوکن وصول کنندہ کا ایڈریس
+1. **`send_account`**: ٹوکن بھیجنے والے کا پتہ
+2. **`to_address`**: ٹوکن وصول کنندہ کا پتہ
 3. **`send_token_amount`**: بھیجے جانے والے ٹوکنز کی مقدار
-4. **`gas_limit`**: گیس کی حد (gas limit)
-5. **`gas_price`**: گیس کی قیمت (gas price)
+4. **`gas_limit`**: گیس کی حد
+5. **`gas_price`**: گیس کی قیمت
 
 [استعمال کرنے کا طریقہ جاننے کے لیے نیچے دیکھیں](#how-to-use)
 
@@ -113,7 +113,7 @@ const tx = {
 }
 ```
 
-### 6. ٹرانسفر {#transfer}
+### 6. منتقلی {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -147,9 +147,9 @@ send_token(
 
 ### کامیابی! {#success}
 
-![کامیابی سے مکمل ہونے والی ٹرانزیکشن کی تصویر](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
-## send_token() {#send-token-method}
+## <span dir="ltr">send_token()</span> {#send-token-method}
 
 ```javascript
 function send_token(
@@ -167,7 +167,7 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // عام ٹوکن بھیجیں
+      // عام ٹوکن بھیجنا
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
@@ -183,7 +183,7 @@ function send_token(
         console.dir(transferResult)
         alert("sent token")
       })
-    } // ایتھر بھیجیں
+    } // ایتھر بھیجنا
     else {
       const tx = {
         from: send_account,
