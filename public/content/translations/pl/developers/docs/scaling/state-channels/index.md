@@ -1,261 +1,260 @@
 ---
-title: "Kanały uzyskiwania informacji"
-description: "Wprowadzenie do kanałów uzyskiwania informacji i kanałów płatności jako rozwiązania skalowania obecnie wykorzystywanego przez społeczność Ethereum."
+title: Kanały stanu
+description: Wprowadzenie do kanałów stanu i kanałów płatności jako rozwiązania skalującego obecnie wykorzystywanego przez społeczność Ethereum.
 lang: pl
 sidebarDepth: 3
 ---
 
-Kanały stanu pozwalają uczestnikom bezpiecznie przeprowadzać transakcje poza łańcuchem, ograniczając interakcję z siecią główną Ethereum do minimum. Uczestnicy kanału mogą przeprowadzić dowolną liczbę transakcji poza łańcuchem, przesyłając tylko dwie transakcje w łańcuchu, aby otworzyć i zamknąć kanał. Pozwala to na uzyskanie bardzo wysokiej przepustowości transakcji i skutkuje niższymi kosztami dla użytkowników.
+Kanały stanu pozwalają uczestnikom na bezpieczne przeprowadzanie transakcji pozałańcuchowo, ograniczając do minimum interakcję z [siecią główną](/) Ethereum. Węzły równorzędne kanału mogą przeprowadzać dowolną liczbę transakcji pozałańcuchowych, przesyłając tylko dwie transakcje onchain w celu otwarcia i zamknięcia kanału. Pozwala to na niezwykle wysoką przepustowość transakcji i skutkuje niższymi kosztami dla użytkowników.
 
 ## Wymagania wstępne {#prerequisites}
 
-Należy przeczytać i zrozumieć nasze strony na temat [skalowania Ethereum](/developers/docs/scaling/) i [warstwy 2](/layer-2/).
+Powinieneś przeczytać i zrozumieć nasze strony o [skalowaniu Ethereum](/developers/docs/scaling/) oraz [warstwie 2 (L2)](/layer-2/).
 
 ## Czym są kanały? {#what-are-channels}
 
-Publiczne łańcuchy bloków, takie jak Ethereum, borykają się z wyzwaniami w zakresie skalowalności ze względu na swoją rozproszoną architekturę: transakcje w łańcuchu muszą być wykonywane przez wszystkie węzły. Węzły muszą być w stanie obsłużyć wolumen transakcji w bloku przy użyciu skromnego sprzętu, co narzuca limit przepustowości transakcji w celu utrzymania decentralizacji sieci. Kanały blockchain rozwiązują ten problem, pozwalając użytkownikom na interakcję poza łańcuchem, jednocześnie opierając się na bezpieczeństwie głównego łańcucha w celu ostatecznego rozliczenia.
+Publiczne blockchainy, takie jak Ethereum, stoją przed wyzwaniami związanymi ze skalowalnością ze względu na swoją rozproszoną architekturę: transakcje onchain muszą być wykonywane przez wszystkie węzły. Węzły muszą być w stanie obsłużyć wolumen transakcji w bloku przy użyciu skromnego sprzętu, co nakłada limit na przepustowość transakcji, aby utrzymać zdecentralizowany charakter sieci. Kanały blockchain rozwiązują ten problem, pozwalając użytkownikom na interakcję pozałańcuchową, jednocześnie polegając na bezpieczeństwie głównego łańcucha w celu ostatecznego rozrachunku.
 
-Kanały to proste protokoły peer-to-peer, które pozwalają dwóm stronom na dokonywanie wielu transakcji między sobą, a następnie publikowanie tylko ostatecznych wyników w blockchainie. Kanał wykorzystuje kryptografię, aby udowodnić, że generowane przez niego dane podsumowujące są rzeczywiście wynikiem prawidłowego zestawu transakcji pośrednich. Inteligentny kontrakt [„multisig”](/developers/docs/smart-contracts/#multisig) zapewnia, że transakcje są podpisywane przez właściwe strony.
+Kanały to proste protokoły peer-to-peer, które pozwalają dwóm stronom na zawieranie wielu transakcji między sobą, a następnie publikowanie tylko ostatecznych wyników na blockchainie. Kanał wykorzystuje kryptografię, aby udowodnić, że generowane przez nie dane podsumowujące są w rzeczywistości wynikiem prawidłowego zestawu transakcji pośrednich. Inteligentny kontrakt typu [„multisig”](/developers/docs/smart-contracts/#multisig) zapewnia, że transakcje są podpisywane przez właściwe strony.
 
-Dzięki kanałom zmiany stanu są wykonywane i zatwierdzane przez zainteresowane strony, co minimalizuje obliczenia na warstwie wykonawczej Ethereum. Zmniejsza to przeciążenie w Ethereum, a także zwiększa szybkość przetwarzania transakcji dla użytkowników.
+Dzięki kanałom zmiany stanu są wykonywane i weryfikowane przez zainteresowane strony, co minimalizuje obliczenia w warstwie wykonawczej Ethereum. Zmniejsza to zatory w sieci Ethereum, a także zwiększa prędkość przetwarzania transakcji dla użytkowników.
 
-Każdy kanał jest zarządzany przez [inteligentny kontrakt multisig](/developers/docs/smart-contracts/#multisig) działający na Ethereum. Aby otworzyć kanał, uczestnicy wdrażają kontrakt kanału w łańcuchu i wpłacają na niego środki. Obie strony wspólnie podpisują aktualizację stanu w celu zainicjowania stanu kanału, po czym mogą szybko i swobodnie dokonywać transakcji poza łańcuchem.
+Każdy kanał jest zarządzany przez [inteligentny kontrakt multisig](/developers/docs/smart-contracts/#multisig) działający na Ethereum. Aby otworzyć kanał, uczestnicy wdrażają kontrakt kanału onchain i wpłacają do niego środki. Obie strony wspólnie podpisują aktualizację stanu, aby zainicjować stan kanału, po czym mogą szybko i swobodnie przeprowadzać transakcje pozałańcuchowo.
 
-Aby zamknąć kanał, uczestnicy przesyłają ostatni uzgodniony stan kanału w łańcuchu. Następnie inteligentny kontrakt rozdziela zablokowane środki zgodnie z saldem każdego uczestnika w końcowym stanie kanału.
+Aby zamknąć kanał, uczestnicy przesyłają ostatni uzgodniony stan kanału onchain. Następnie inteligentny kontrakt rozdziela zablokowane środki zgodnie z saldem każdego uczestnika w ostatecznym stanie kanału.
 
-Kanały peer-to-peer są szczególnie przydatne w sytuacjach, w których niektórzy predefiniowani uczestnicy chcą dokonywać transakcji z dużą częstotliwością bez ponoszenia widocznych kosztów ogólnych. Kanały blockchain dzielą się na dwie kategorie: **kanały płatności** i **kanały stanu**.
+Kanały peer-to-peer są szczególnie przydatne w sytuacjach, w których niektórzy z góry określeni uczestnicy chcą przeprowadzać transakcje z dużą częstotliwością bez ponoszenia widocznych kosztów ogólnych. Kanały blockchain dzielą się na dwie kategorie: **kanały płatności** i **kanały stanu**.
 
 ## Kanały płatności {#payment-channels}
 
-Kanał płatności najlepiej opisać jako „dwukierunkowy rejestr” wspólnie prowadzony przez dwóch użytkowników. Początkowe saldo rejestru to suma depozytów zablokowanych w kontrakcie w łańcuchu podczas fazy otwierania kanału. Transfery w kanale płatności mogą być wykonywane natychmiastowo i bez udziału samego blockchaina, z wyjątkiem jednorazowego początkowego utworzenia w łańcuchu i ewentualnego zamknięcia kanału.
+Kanał płatności najlepiej opisać jako „dwukierunkową księgę” wspólnie prowadzoną przez dwóch użytkowników. Początkowe saldo księgi to suma depozytów zablokowanych w kontrakcie onchain podczas fazy otwierania kanału. Transfery w kanale płatności mogą być wykonywane natychmiastowo i bez udziału samego blockchaina, z wyjątkiem początkowego, jednorazowego utworzenia onchain i ostatecznego zamknięcia kanału.
 
-Aktualizacje salda rejestru (tj. stanu kanału płatności) wymagają zgody wszystkich stron w kanale. Aktualizacja kanału, podpisana przez wszystkich jego uczestników, jest uważana za sfinalizowaną, podobnie jak transakcja w Ethereum.
+Aktualizacje salda księgi (tj. stanu kanału płatności) wymagają zatwierdzenia przez wszystkie strony w kanale. Aktualizacja kanału, podpisana przez wszystkich uczestników kanału, jest uważana za sfinalizowaną, podobnie jak transakcja na Ethereum.
 
-Kanały płatności były jednymi z najwcześniejszych rozwiązań skalujących, zaprojektowanych w celu zminimalizowania kosztownej aktywności w łańcuchu prostych interakcji użytkownika (np. transferów ETH, swapów atomowych, mikropłatności). Uczestnicy kanału mogą przeprowadzać między sobą nieograniczoną liczbę natychmiastowych, bezpłatnych transakcji, o ile suma netto ich transferów nie przekracza zdeponowanych tokenów.
+Kanały płatności były jednymi z najwcześniejszych rozwiązań skalujących zaprojektowanych w celu zminimalizowania kosztownej aktywności onchain dla prostych interakcji użytkowników (np. transferów ETH, swapów atomowych, mikropłatności). Uczestnicy kanału mogą przeprowadzać między sobą nieograniczoną liczbę natychmiastowych, bezprowizyjnych transakcji, o ile suma netto ich transferów nie przekracza zdeponowanych tokenów.
 
 ## Kanały stanu {#state-channels}
 
-Oprócz obsługi płatności poza łańcuchem, kanały płatności nie okazały się przydatne do obsługi logiki ogólnych przejść stanów. Kanały stanu zostały stworzone, aby rozwiązać ten problem i uczynić kanały użytecznymi do skalowania obliczeń ogólnego przeznaczenia.
+Oprócz obsługi płatności pozałańcuchowych, kanały płatności nie okazały się przydatne do obsługi ogólnej logiki przejścia stanu. Kanały stanu zostały stworzone, aby rozwiązać ten problem i uczynić kanały użytecznymi do skalowania obliczeń ogólnego przeznaczenia.
 
-Kanały stanu wciąż mają wiele wspólnego z kanałami płatności. Na przykład użytkownicy wchodzą w interakcje, wymieniając kryptograficznie podpisane komunikaty (transakcje), które pozostali uczestnicy kanału również muszą podpisać. Jeśli proponowana aktualizacja stanu nie zostanie podpisana przez wszystkich uczestników, jest ona uważana za nieważną.
+Kanały stanu nadal mają wiele wspólnego z kanałami płatności. Na przykład użytkownicy wchodzą w interakcje, wymieniając kryptograficznie podpisane wiadomości (transakcje), które inni uczestnicy kanału również muszą podpisać. Jeśli proponowana aktualizacja stanu nie zostanie podpisana przez wszystkich uczestników, jest uważana za nieważną.
 
 Jednak oprócz przechowywania sald użytkowników, kanał śledzi również bieżący stan pamięci kontraktu (tj. wartości zmiennych kontraktu).
 
-Umożliwia to wykonanie inteligentnego kontraktu poza łańcuchem pomiędzy dwoma użytkownikami. W tym scenariuszu aktualizacje stanu wewnętrznego inteligentnego kontraktu wymagają jedynie zgody partnerów, którzy utworzyli kanał.
+Dzięki temu możliwe jest wykonanie inteligentnego kontraktu pozałańcuchowo między dwoma użytkownikami. W tym scenariuszu aktualizacje wewnętrznego stanu inteligentnego kontraktu wymagają jedynie zatwierdzenia przez węzły równorzędne, które utworzyły kanał.
 
-Chociaż rozwiązuje to opisany wcześniej problem skalowalności, ma to również implikacje dla bezpieczeństwa. W Ethereum ważność przejść stanów jest egzekwowana przez protokół konsensusu sieci. Uniemożliwia to zaproponowanie nieprawidłowej aktualizacji stanu inteligentnego kontraktu lub zmianę jego wykonania.
+Chociaż rozwiązuje to opisany wcześniej problem skalowalności, ma to implikacje dla bezpieczeństwa. Na Ethereum ważność przejść stanu jest egzekwowana przez protokół konsensusu sieci. Uniemożliwia to zaproponowanie nieprawidłowej aktualizacji stanu inteligentnego kontraktu lub zmianę jego wykonania.
 
-Kanały stanu nie posiadają takich samych gwarancji bezpieczeństwa. W pewnym stopniu kanał stanu jest miniaturową wersją sieci głównej. Przy ograniczonym zestawie uczestników egzekwujących zasady wzrasta możliwość złośliwego zachowania (np. proponowania nieprawidłowych aktualizacji stanu). Kanały stanu czerpią swoje bezpieczeństwo z systemu rozstrzygania sporów opartego na [dowodach oszustwa](/glossary/#fraud-proof).
+Kanały stanu nie mają takich samych gwarancji bezpieczeństwa. W pewnym stopniu kanał stanu jest miniaturową wersją Sieci głównej. Przy ograniczonej grupie uczestników egzekwujących zasady, wzrasta prawdopodobieństwo złośliwego zachowania (np. proponowania nieprawidłowych aktualizacji stanu). Kanały stanu czerpią swoje bezpieczeństwo z systemu arbitrażu sporów opartego na [dowodach oszustwa](/glossary/#fraud-proof).
 
 ## Jak działają kanały stanu {#how-state-channels-work}
 
-Zasadniczo, aktywność w kanale stanu jest sesją interakcji obejmujących użytkowników i system blockchain. Użytkownicy komunikują się głównie ze sobą poza łańcuchem i wchodzą w interakcję z podstawowym blockchainem tylko w celu otwarcia kanału, zamknięcia kanału lub rozstrzygnięcia potencjalnych sporów między uczestnikami.
+Zasadniczo aktywność w kanale stanu to sesja interakcji obejmująca użytkowników i system blockchain. Użytkownicy komunikują się ze sobą głównie pozałańcuchowo i wchodzą w interakcję z bazowym blockchainem tylko w celu otwarcia kanału, zamknięcia kanału lub rozstrzygnięcia potencjalnych sporów między uczestnikami.
 
-Poniższa sekcja przedstawia podstawowy przepływ pracy w kanale stanu:
+Poniższa sekcja przedstawia podstawowy przepływ pracy kanału stanu:
 
 ### Otwieranie kanału {#opening-the-channel}
 
-Otwarcie kanału wymaga od uczestników zdeponowania środków w inteligentnym kontrakcie w sieci głównej. Depozyt funkcjonuje również jako wirtualny rachunek, dzięki czemu uczestnicy mogą swobodnie dokonywać transakcji bez konieczności natychmiastowego regulowania płatności. Dopiero gdy kanał zostanie sfinalizowany w łańcuchu, strony rozliczają się nawzajem i wypłacają to, co pozostało z ich rachunku.
+Otwarcie kanału wymaga od uczestników zablokowania środków w inteligentnym kontrakcie w Sieci głównej. Depozyt działa również jako wirtualny rachunek, dzięki czemu uczestniczące podmioty mogą swobodnie przeprowadzać transakcje bez konieczności natychmiastowego rozliczania płatności. Dopiero gdy kanał zostanie sfinalizowany onchain, strony rozliczają się ze sobą i wypłacają to, co zostało z ich rachunku.
 
-Depozyt ten służy również jako zabezpieczenie gwarantujące uczciwe zachowanie każdego z uczestników. Jeśli depozytariusze zostaną uznani za winnych złośliwych działań w fazie rozstrzygania sporów, kontrakt redukuje (ang. slashing) ich depozyt.
+Depozyt ten służy również jako kaucja gwarantująca uczciwe zachowanie każdego uczestnika. Jeśli deponenci zostaną uznani za winnych złośliwych działań podczas fazy rozwiązywania sporów, kontrakt tnie (slashing) ich depozyt.
 
-Partnerzy kanału muszą podpisać stan początkowy, na który wszyscy się zgadzają. Służy to jako geneza kanału stanu, po której użytkownicy mogą rozpocząć dokonywanie transakcji.
+Węzły równorzędne kanału muszą podpisać stan początkowy, na który wszyscy się zgadzają. Służy to jako geneza kanału stanu, po której użytkownicy mogą rozpocząć przeprowadzanie transakcji.
 
 ### Korzystanie z kanału {#using-the-channel}
 
-Po zainicjowaniu stanu kanału, partnerzy wchodzą w interakcje, podpisując transakcje i wysyłając je sobie nawzajem do zatwierdzenia. Uczestnicy inicjują aktualizacje stanu za pomocą tych transakcji i podpisują aktualizacje stanu od innych. Każda transakcja zawiera:
+Po zainicjowaniu stanu kanału, węzły równorzędne wchodzą w interakcje, podpisując transakcje i wysyłając je do siebie nawzajem w celu zatwierdzenia. Uczestnicy inicjują aktualizacje stanu za pomocą tych transakcji i podpisują aktualizacje stanu od innych. Każda transakcja składa się z następujących elementów:
 
-- **Nonce**, który działa jako unikalny identyfikator transakcji i zapobiega atakom typu replay. Identyfikuje również kolejność, w jakiej nastąpiły aktualizacje stanu (co jest ważne przy rozstrzyganiu sporów)
+- **Nonce**, który działa jako unikalny identyfikator transakcji i zapobiega atakom typu replay. Identyfikuje również kolejność, w jakiej wystąpiły aktualizacje stanu (co jest ważne dla rozwiązywania sporów)
 
 - Stary stan kanału
 
 - Nowy stan kanału
 
-- Transakcja, która wyzwala przejście stanu (np. Alicja wysyła 5 ETH do Boba)
+- Transakcja, która wyzwala przejście stanu (np. Alice wysyła 5 ETH do Boba)
 
-Aktualizacje stanu w kanale nie są rozgłaszane w łańcuchu, jak to zwykle bywa, gdy użytkownicy wchodzą w interakcje w sieci głównej, co jest zgodne z celem kanałów stanu, jakim jest zminimalizowanie śladu w łańcuchu. Dopóki uczestnicy zgadzają się na aktualizacje stanu, są one tak samo ostateczne jak transakcja w Ethereum. Uczestnicy muszą polegać na konsensusie sieci głównej tylko w przypadku powstania sporu.
+Aktualizacje stanu w kanale nie są rozgłaszane onchain, jak ma to zwykle miejsce, gdy użytkownicy wchodzą w interakcje w Sieci głównej, co jest zgodne z celem kanałów stanu, jakim jest zminimalizowanie śladu onchain. Dopóki uczestnicy zgadzają się co do aktualizacji stanu, są one równie ostateczne jak transakcja Ethereum. Uczestnicy muszą polegać na konsensusie Sieci głównej tylko w przypadku sporu.
 
 ### Zamykanie kanału {#closing-the-channel}
 
-Zamknięcie kanału stanu wymaga przesłania ostatecznego, uzgodnionego stanu kanału do inteligentnego kontraktu w łańcuchu. Szczegóły zawarte w aktualizacji stanu obejmują liczbę ruchów każdego uczestnika oraz listę zatwierdzonych transakcji.
+Zamknięcie kanału stanu wymaga przesłania ostatecznego, uzgodnionego stanu kanału do inteligentnego kontraktu onchain. Szczegóły, do których odnosi się aktualizacja stanu, obejmują liczbę ruchów każdego uczestnika oraz listę zatwierdzonych transakcji.
 
-Po zweryfikowaniu, że aktualizacja stanu jest ważna (tzn. jest podpisana przez wszystkie strony), inteligentny kontrakt finalizuje kanał i rozdziela zablokowane środki zgodnie z wynikiem kanału. Płatności dokonane poza łańcuchem są stosowane do stanu Ethereum, a każdy z uczestników otrzymuje pozostałą część zablokowanych środków.
+Po zweryfikowaniu, że aktualizacja stanu jest ważna (tj. jest podpisana przez wszystkie strony), inteligentny kontrakt finalizuje kanał i rozdziela zablokowane środki zgodnie z wynikiem kanału. Płatności dokonane pozałańcuchowo są stosowane do stanu Ethereum, a każdy uczestnik otrzymuje swoją pozostałą część zablokowanych środków.
 
-Opisany powyżej scenariusz przedstawia to, co dzieje się w przypadku pomyślnym. Czasami użytkownicy mogą nie być w stanie osiągnąć porozumienia i sfinalizować kanału (przypadek niepomyślny). Możliwe, że zachodzi jedna z następujących sytuacji:
+Opisany powyżej scenariusz przedstawia to, co dzieje się w optymistycznym przypadku. Czasami użytkownicy mogą nie być w stanie osiągnąć porozumienia i sfinalizować kanału (pesymistyczny przypadek). W takiej sytuacji może wystąpić dowolna z poniższych okoliczności:
 
-- Uczestnicy przechodzą w tryb offline i nie proponują przejść stanów
+- Uczestnicy przechodzą w tryb offline i nie proponują przejść stanu
 
-- Uczestnicy odmawiają współpodpisania prawidłowych aktualizacji stanu
+- Uczestnicy odmawiają współpodpisania ważnych aktualizacji stanu
 
-- Uczestnicy próbują sfinalizować kanał, proponując starą aktualizację stanu do kontraktu w łańcuchu
+- Uczestnicy próbują sfinalizować kanał, proponując starą aktualizację stanu do kontraktu onchain
 
-- Uczestnicy proponują nieprawidłowe przejścia stanów do podpisania przez innych
+- Uczestnicy proponują nieprawidłowe przejścia stanu do podpisania przez innych
 
-W przypadku załamania konsensusu między uczestnikami kanału ostatnią opcją jest oparcie się na konsensusie sieci głównej w celu wyegzekwowania ostatecznego, ważnego stanu kanału. W tym przypadku zamknięcie kanału stanu wymaga rozstrzygnięcia sporów w łańcuchu.
+Ilekroć konsensus między uczestniczącymi podmiotami w kanale załamuje się, ostatnią opcją jest poleganie na konsensusie Sieci głównej w celu wyegzekwowania ostatecznego, ważnego stanu kanału. W tym przypadku zamknięcie kanału stanu wymaga rozstrzygnięcia sporów onchain.
 
 ### Rozstrzyganie sporów {#settling-disputes}
 
-Zazwyczaj strony w kanale z góry zgadzają się na jego zamknięcie i wspólnie podpisują ostatnie przejście stanu, które przesyłają do inteligentnego kontraktu. Gdy aktualizacja zostanie zatwierdzona w łańcuchu, wykonanie inteligentnego kontraktu poza łańcuchem kończy się, a uczestnicy opuszczają kanał ze swoimi pieniędzmi.
+Zazwyczaj strony w kanale zgadzają się na wcześniejsze zamknięcie kanału i współpodpisują ostatnie przejście stanu, które przesyłają do inteligentnego kontraktu. Gdy aktualizacja zostanie zatwierdzona onchain, wykonywanie inteligentnego kontraktu pozałańcuchowego kończy się, a uczestnicy wychodzą z kanału ze swoimi pieniędzmi.
 
-Jednakże jedna ze stron może złożyć wniosek w łańcuchu o zakończenie wykonywania inteligentnego kontraktu i sfinalizowanie kanału — bez czekania na zgodę drugiej strony. Jeśli wystąpi którakolwiek z opisanych wcześniej sytuacji zagrażających konsensusowi, każda ze stron może uruchomić kontrakt w łańcuchu, aby zamknąć kanał i rozdysponować środki. Zapewnia to **brak konieczności zaufania**, gwarantując, że uczciwe strony mogą w dowolnym momencie wycofać swoje depozyty, niezależnie od działań drugiej strony.
+Jednak jedna ze stron może złożyć żądanie onchain o zakończenie wykonywania inteligentnego kontraktu i sfinalizowanie kanału — bez czekania na zatwierdzenie przez drugą stronę. Jeśli wystąpi którakolwiek z opisanych wcześniej sytuacji łamiących konsensus, każda ze stron może wyzwolić kontrakt onchain, aby zamknąć kanał i rozdzielić środki. Zapewnia to **bezzaufaniowość**, gwarantując, że uczciwe strony mogą wycofać swoje depozyty w dowolnym momencie, niezależnie od działań drugiej strony.
 
-Aby przetworzyć wyjście z kanału, użytkownik musi przesłać ostatnią ważną aktualizację stanu aplikacji do kontraktu w łańcuchu. Jeśli to się zgadza (tzn. jest to opatrzone podpisem wszystkich stron), wówczas środki są redystrybuowane na ich korzyść.
+Aby przetworzyć wyjście z kanału, użytkownik musi przesłać ostatnią ważną aktualizację stanu aplikacji do kontraktu onchain. Jeśli to się zgadza (tj. nosi podpis wszystkich stron), środki są redystrybuowane na ich korzyść.
 
-Istnieje jednak opóźnienie w realizacji wniosków o wyjście złożonych przez jednego użytkownika. Jeśli wniosek o zamknięcie kanału został jednomyślnie zatwierdzony, transakcja wyjścia w łańcuchu jest wykonywana natychmiast.
+Istnieje jednak opóźnienie w wykonywaniu żądań wyjścia pojedynczego użytkownika. Jeśli żądanie zakończenia kanału zostało jednogłośnie zatwierdzone, transakcja wyjścia onchain jest wykonywana natychmiast.
 
-Opóźnienie pojawia się w przypadku wyjść inicjowanych przez jednego użytkownika ze względu na możliwość oszukańczych działań. Na przykład uczestnik kanału może spróbować sfinalizować kanał w Ethereum, przesyłając starszą aktualizację stanu w łańcuchu.
+Opóźnienie wchodzi w grę w przypadku wyjść pojedynczego użytkownika ze względu na możliwość oszukańczych działań. Na przykład uczestnik kanału może próbować sfinalizować kanał na Ethereum, przesyłając starszą aktualizację stanu onchain.
 
-Jako środek zaradczy, kanały stanu pozwalają uczciwym użytkownikom na kwestionowanie nieprawidłowych aktualizacji stanu poprzez przesłanie najnowszego, ważnego stanu kanału w łańcuchu. Kanały stanu są tak zaprojektowane, że nowsze, uzgodnione aktualizacje stanu mają pierwszeństwo przed starszymi aktualizacjami stanu.
+Jako środek zaradczy, kanały stanu pozwalają uczciwym użytkownikom na kwestionowanie nieprawidłowych aktualizacji stanu poprzez przesłanie najnowszego, ważnego stanu kanału onchain. Kanały stanu są zaprojektowane tak, aby nowsze, uzgodnione aktualizacje stanu miały pierwszeństwo przed starszymi aktualizacjami stanu.
 
-Gdy partner uruchomi system rozstrzygania sporów w łańcuchu, druga strona jest zobowiązana do odpowiedzi w określonym terminie (zwanym oknem na zakwestionowanie). Pozwala to użytkownikom na zakwestionowanie transakcji wyjścia, zwłaszcza jeśli druga strona stosuje nieaktualną aktualizację.
+Gdy węzeł równorzędny uruchomi system rozwiązywania sporów onchain, druga strona jest zobowiązana do udzielenia odpowiedzi w określonym czasie (zwanym oknem wyzwania). Pozwala to użytkownikom na zakwestionowanie transakcji wyjścia, zwłaszcza jeśli druga strona stosuje nieaktualną aktualizację.
 
-Niezależnie od przypadku, użytkownicy kanału zawsze mają silne gwarancje nieodwołalności: jeśli posiadane przez nich przejście stanu zostało podpisane przez wszystkich członków i jest najnowszą aktualizacją, ma ono taką samą nieodwołalność jak zwykła transakcja w łańcuchu. Nadal muszą kwestionować drugą stronę w łańcuchu, ale jedynym możliwym wynikiem jest sfinalizowanie ostatniego ważnego stanu, który posiadają.
+Niezależnie od przypadku, użytkownicy kanału zawsze mają silne gwarancje ostateczności: jeśli posiadane przez nich przejście stanu zostało podpisane przez wszystkich członków i jest najnowszą aktualizacją, to ma ono taką samą ostateczność jak zwykła transakcja onchain. Nadal muszą zakwestionować drugą stronę onchain, ale jedynym możliwym wynikiem jest sfinalizowanie ostatniego ważnego stanu, który posiadają.
 
 ### Jak kanały stanu wchodzą w interakcję z Ethereum? {#how-do-state-channels-interact-with-ethereum}
 
-Chociaż istnieją jako protokoły poza łańcuchem, kanały stanu mają komponent w łańcuchu: inteligentny kontrakt wdrożony na Ethereum podczas otwierania kanału. Kontrakt ten kontroluje aktywa zdeponowane w kanale, weryfikuje aktualizacje stanu i rozstrzyga spory między uczestnikami.
+Chociaż istnieją jako protokoły pozałańcuchowe, kanały stanu mają komponent onchain: inteligentny kontrakt wdrożony na Ethereum podczas otwierania kanału. Kontrakt ten kontroluje aktywa zdeponowane w kanale, weryfikuje aktualizacje stanu i rozstrzyga spory między uczestnikami.
 
-Kanały stanu nie publikują danych transakcyjnych ani zobowiązań dotyczących stanu w sieci głównej, w przeciwieństwie do rozwiązań skalujących [warstwy 2](/layer-2/). Są one jednak bardziej powiązane z siecią główną niż na przykład [łańcuchy poboczne](/developers/docs/scaling/sidechains/), co czyni je nieco bezpieczniejszymi.
+Kanały stanu nie publikują danych transakcji ani zobowiązań stanu w Sieci głównej, w przeciwieństwie do rozwiązań skalujących [warstwy 2 (L2)](/layer-2/). Są one jednak bardziej powiązane z Siecią główną niż na przykład [łańcuchy poboczne](/developers/docs/scaling/sidechains/), co czyni je nieco bezpieczniejszymi.
 
-Kanały stanu opierają się na głównym protokole Ethereum w następujących kwestiach:
+Kanały stanu polegają na głównym protokole Ethereum w następujących kwestiach:
 
-#### 1. Żywotność {#liveness}
+#### 1. Żywotność (Liveness) {#liveness}
 
-Kontrakt w łańcuchu wdrożony podczas otwierania kanału jest odpowiedzialny za jego funkcjonalność. Jeśli kontrakt działa na Ethereum, kanał jest zawsze dostępny do użytku. I odwrotnie, łańcuch poboczny zawsze może ulec awarii, nawet jeśli sieć główna działa, narażając środki użytkowników na ryzyko.
+Kontrakt onchain wdrożony podczas otwierania kanału jest odpowiedzialny za funkcjonalność kanału. Jeśli kontrakt działa na Ethereum, kanał jest zawsze dostępny do użytku. Z kolei łańcuch poboczny zawsze może ulec awarii, nawet jeśli Sieć główna działa, narażając środki użytkowników na ryzyko.
 
 #### 2. Bezpieczeństwo {#security}
 
-W pewnym stopniu kanały stanu polegają na Ethereum, aby zapewnić bezpieczeństwo i chronić użytkowników przed złośliwymi partnerami. Jak omówiono w późniejszych sekcjach, kanały wykorzystują mechanizm dowodu oszustwa, który pozwala użytkownikom kwestionować próby sfinalizowania kanału z nieprawidłową lub nieaktualną aktualizacją.
+W pewnym stopniu kanały stanu polegają na Ethereum w celu zapewnienia bezpieczeństwa i ochrony użytkowników przed złośliwymi węzłami równorzędnymi. Jak omówiono w dalszych sekcjach, kanały wykorzystują mechanizm dowodu oszustwa, który pozwala użytkownikom kwestionować próby sfinalizowania kanału za pomocą nieprawidłowej lub nieaktualnej aktualizacji.
 
-W tym przypadku uczciwa strona dostarcza najnowszy ważny stan kanału jako dowód oszustwa do kontraktu w łańcuchu w celu weryfikacji. Dowody oszustwa umożliwiają stronom, które sobie nie ufają, przeprowadzanie transakcji poza łańcuchem bez ryzykowania przy tym swoich środków.
+W tym przypadku uczciwa strona dostarcza najnowszy ważny stan kanału jako dowód oszustwa do kontraktu onchain w celu weryfikacji. Dowody oszustwa umożliwiają wzajemnie nieufnym stronom przeprowadzanie transakcji pozałańcuchowych bez ryzykowania swoich środków w tym procesie.
 
-#### 3. Nieodwołalność {#finality}
+#### 3. Ostateczność {#finality}
 
-Aktualizacje stanu wspólnie podpisane przez użytkowników kanału są uważane za tak samo dobre jak transakcje w łańcuchu. Mimo to cała aktywność wewnątrz kanału osiąga prawdziwą nieodwołalność dopiero po zamknięciu kanału na Ethereum.
+Aktualizacje stanu wspólnie podpisane przez użytkowników kanału są uważane za równie dobre jak transakcje onchain. Mimo to cała aktywność w kanale osiąga prawdziwą ostateczność dopiero po zamknięciu kanału na Ethereum.
 
-W optymistycznym przypadku obie strony mogą współpracować, podpisać ostateczną aktualizację stanu i przesłać ją do łańcucha w celu zamknięcia kanału, po czym środki są rozdzielane zgodnie z ostatecznym stanem kanału. W pesymistycznym przypadku, gdy ktoś próbuje oszukać, publikując w łańcuchu nieprawidłową aktualizację stanu, jego transakcja nie jest finalizowana, dopóki nie upłynie okno na zakwestionowanie.
+W optymistycznym przypadku obie strony mogą współpracować i podpisać ostateczną aktualizację stanu oraz przesłać ją onchain, aby zamknąć kanał, po czym środki są rozdzielane zgodnie z ostatecznym stanem kanału. W pesymistycznym przypadku, w którym ktoś próbuje oszukiwać, publikując nieprawidłową aktualizację stanu onchain, jego transakcja nie jest sfinalizowana, dopóki nie upłynie okno wyzwania.
 
 ## Wirtualne kanały stanu {#virtual-state-channels}
 
-Naiwną implementacją kanału stanu byłoby wdrożenie nowego kontraktu, gdy dwóch użytkowników chce wykonać aplikację poza łańcuchem. Jest to nie tylko niewykonalne, ale także niweczy opłacalność kanałów stanu (koszty transakcji w łańcuchu mogą szybko wzrosnąć).
+Naiwną implementacją kanału stanu byłoby wdrożenie nowego kontraktu, gdy dwóch użytkowników chce wykonać aplikację pozałańcuchowo. Jest to nie tylko niewykonalne, ale także neguje opłacalność kanałów stanu (koszty transakcji onchain mogą szybko rosnąć).
 
-Aby rozwiązać ten problem, stworzono „kanały wirtualne”. W przeciwieństwie do zwykłych kanałów, które wymagają transakcji w łańcuchu do otwarcia i zamknięcia, kanał wirtualny można otworzyć, wykonać i sfinalizować bez interakcji z głównym łańcuchem. Za pomocą tej metody możliwe jest nawet rozstrzyganie sporów poza łańcuchem.
+Aby rozwiązać ten problem, stworzono „kanały wirtualne”. W przeciwieństwie do zwykłych kanałów, które wymagają transakcji onchain do otwarcia i zakończenia, kanał wirtualny może zostać otwarty, wykonany i sfinalizowany bez interakcji z głównym łańcuchem. Za pomocą tej metody możliwe jest nawet rozstrzyganie sporów pozałańcuchowo.
 
-System ten opiera się na istnieniu tak zwanych „kanałów rejestru”, które zostały sfinansowane w łańcuchu. Wirtualne kanały między dwiema stronami mogą być budowane na bazie istniejącego kanału rejestru, przy czym właściciel(e) kanału rejestru pełnią rolę pośrednika.
+System ten opiera się na istnieniu tak zwanych „kanałów księgi” (ledger channels), które zostały zasilone onchain. Wirtualne kanały między dwiema stronami mogą być budowane na wierzchu istniejącego kanału księgi, przy czym właściciel(e) kanału księgi pełni(ą) rolę pośrednika.
 
-Użytkownicy w każdym kanale wirtualnym wchodzą w interakcję za pośrednictwem nowej instancji kontraktu, przy czym kanał rejestru może obsługiwać wiele instancji kontraktów. Stan kanału rejestru zawiera również więcej niż jeden stan przechowywania kontraktu, co pozwala na równoległe wykonywanie aplikacji poza łańcuchem między różnymi użytkownikami.
+Użytkownicy w każdym wirtualnym kanale wchodzą w interakcje za pośrednictwem nowej instancji kontraktu, a kanał księgi może obsługiwać wiele instancji kontraktu. Stan kanału księgi zawiera również więcej niż jeden stan pamięci kontraktu, co pozwala na równoległe wykonywanie aplikacji pozałańcuchowo między różnymi użytkownikami.
 
-Podobnie jak w przypadku zwykłych kanałów, użytkownicy wymieniają aktualizacje stanu, aby rozwijać maszynę stanu. O ile nie powstanie spór, z pośrednikiem trzeba się kontaktować tylko przy otwieraniu lub zamykaniu kanału.
+Podobnie jak w przypadku zwykłych kanałów, użytkownicy wymieniają aktualizacje stanu, aby posuwać maszynę stanu do przodu. O ile nie dojdzie do sporu, z pośrednikiem należy się kontaktować tylko podczas otwierania lub zamykania kanału.
 
 ### Wirtualne kanały płatności {#virtual-payment-channels}
 
-Wirtualne kanały płatności działają na tej samej zasadzie co wirtualne kanały stanu: uczestnicy podłączeni do tej samej sieci mogą przesyłać komunikaty bez konieczności otwierania nowego kanału w łańcuchu. W wirtualnych kanałach płatności transfery wartości są kierowane przez jednego lub więcej pośredników, z gwarancją, że tylko zamierzony odbiorca może otrzymać przelane środki.
+Wirtualne kanały płatności działają w oparciu o ten sam pomysł co wirtualne kanały stanu: uczestnicy podłączeni do tej samej sieci mogą przekazywać wiadomości bez konieczności otwierania nowego kanału onchain. W wirtualnych kanałach płatności transfery wartości są kierowane przez jednego lub więcej pośredników, z gwarancją, że tylko zamierzony odbiorca może otrzymać przetransferowane środki.
 
 ## Zastosowania kanałów stanu {#applications-of-state-channels}
 
 ### Płatności {#payments}
 
-Wczesne kanały blockchain były prostymi protokołami, które pozwalały dwóm uczestnikom na przeprowadzanie szybkich, tanich transferów poza łańcuchem bez konieczności ponoszenia wysokich opłat transakcyjnych w sieci głównej. Obecnie kanały płatności są nadal przydatne w aplikacjach przeznaczonych do wymiany i deponowania etheru i tokenów.
+Wczesne kanały blockchain były prostymi protokołami, które pozwalały dwóm uczestnikom na przeprowadzanie szybkich transferów z niskimi opłatami pozałańcuchowo, bez konieczności płacenia wysokich opłat transakcyjnych w Sieci głównej. Obecnie kanały płatności są nadal przydatne w aplikacjach przeznaczonych do wymiany i deponowania etheru oraz tokenów.
 
 Płatności oparte na kanałach mają następujące zalety:
 
-1. **Przepustowość**: Liczba transakcji poza łańcuchem na kanał nie jest powiązana z przepustowością Ethereum, na którą wpływają różne czynniki, zwłaszcza rozmiar bloku i czas bloku. Wykonując transakcje poza łańcuchem, kanały blockchain mogą osiągnąć wyższą przepustowość.
+1. **Przepustowość**: Ilość transakcji pozałańcuchowych na kanał nie jest powiązana z przepustowością Ethereum, na którą wpływają różne czynniki, zwłaszcza rozmiar bloku i czas bloku. Wykonując transakcje pozałańcuchowo, kanały blockchain mogą osiągnąć wyższą przepustowość.
 
-2. **Prywatność**: Ponieważ kanały istnieją poza łańcuchem, szczegóły interakcji między uczestnikami nie są rejestrowane w publicznym blockchainie Ethereum. Użytkownicy kanałów muszą wchodzić w interakcję w łańcuchu tylko podczas finansowania i zamykania kanałów lub rozstrzygania sporów. Dlatego kanały są przydatne dla osób, które pragną bardziej prywatnych transakcji.
+2. **Prywatność**: Ponieważ kanały istnieją pozałańcuchowo, szczegóły interakcji między uczestnikami nie są rejestrowane na publicznym blockchainie Ethereum. Użytkownicy kanałów muszą wchodzić w interakcje onchain tylko podczas zasilania i zamykania kanałów lub rozstrzygania sporów. W związku z tym kanały są przydatne dla osób, które pragną bardziej prywatnych transakcji.
 
-3. **Opóźnienie**: Transakcje poza łańcuchem przeprowadzane między uczestnikami kanału mogą być rozliczane natychmiast, jeśli obie strony współpracują, co zmniejsza opóźnienia. W przeciwieństwie do tego, wysłanie transakcji w sieci głównej wymaga oczekiwania na przetworzenie transakcji przez węzły, wyprodukowanie nowego bloku z transakcją i osiągnięcie konsensusu. Użytkownicy mogą również potrzebować poczekać na więcej potwierdzeń bloków, zanim uznają transakcję za sfinalizowaną.
+3. **Opóźnienie**: Transakcje pozałańcuchowe przeprowadzane między uczestnikami kanału mogą być rozliczane natychmiastowo, jeśli obie strony współpracują, co zmniejsza opóźnienia. W przeciwieństwie do tego, wysłanie transakcji w Sieci głównej wymaga oczekiwania na przetworzenie transakcji przez węzły, wyprodukowanie nowego bloku z transakcją i osiągnięcie konsensusu. Użytkownicy mogą również musieć poczekać na więcej potwierdzeń bloków, zanim uznają transakcję za sfinalizowaną.
 
-4. **Koszt**: Kanały stanu są szczególnie przydatne w sytuacjach, w których zestaw uczestników będzie wymieniał wiele aktualizacji stanu przez długi okres. Jedyne poniesione koszty to otwarcie i zamknięcie inteligentnego kontraktu kanału stanu; każda zmiana stanu między otwarciem a zamknięciem kanału będzie tańsza od poprzedniej, ponieważ koszt rozliczenia jest odpowiednio rozłożony.
+4. **Koszt**: Kanały stanu są szczególnie przydatne w sytuacjach, w których grupa uczestników będzie wymieniać wiele aktualizacji stanu przez długi czas. Jedyne ponoszone koszty to otwarcie i zamknięcie inteligentnego kontraktu kanału stanu; każda zmiana stanu między otwarciem a zamknięciem kanału będzie tańsza niż poprzednia, ponieważ koszt rozrachunku jest odpowiednio rozkładany.
 
-Implementacja kanałów stanu na rozwiązaniach warstwy 2, takich jak [rollupy](/developers/docs/scaling/#rollups), może uczynić je jeszcze bardziej atrakcyjnymi dla płatności. Chociaż kanały oferują tanie płatności, koszty utworzenia kontraktu w łańcuchu w sieci głównej podczas fazy otwierania mogą być wysokie — zwłaszcza gdy gwałtownie rosną opłaty za gaz. Rollupy oparte na Ethereum oferują [niższe opłaty transakcyjne](https://l2fees.info/) i mogą zmniejszyć koszty ogólne dla uczestników kanału poprzez obniżenie opłat instalacyjnych.
+Wdrożenie kanałów stanu w rozwiązaniach warstwy 2 (L2), takich jak [rollupy](/developers/docs/scaling/#rollups), mogłoby uczynić je jeszcze bardziej atrakcyjnymi dla płatności. Chociaż kanały oferują tanie płatności, koszty konfiguracji kontraktu onchain w Sieci głównej podczas fazy otwierania mogą być wysokie — zwłaszcza gdy opłaty za gaz gwałtownie rosną. Rollupy oparte na Ethereum oferują [niższe opłaty transakcyjne](https://l2fees.info/) i mogą zmniejszyć koszty ogólne dla uczestników kanału poprzez obniżenie opłat konfiguracyjnych.
 
 ### Mikrotransakcje {#microtransactions}
 
-Mikrotransakcje to płatności o niskiej wartości (np. niższej niż ułamek dolara), których firmy nie mogą przetwarzać bez ponoszenia strat. Podmioty te muszą płacić dostawcom usług płatniczych, czego nie mogą zrobić, jeśli marża na płatnościach od klientów jest zbyt niska, aby osiągnąć zysk.
+Mikrotransakcje to płatności o niskiej wartości (np. niższe niż ułamek dolara), których firmy nie mogą przetwarzać bez ponoszenia strat. Podmioty te muszą płacić dostawcom usług płatniczych, czego nie mogą zrobić, jeśli marża na płatnościach klientów jest zbyt niska, aby wygenerować zysk.
 
-Kanały płatności rozwiązują ten problem, zmniejszając koszty ogólne związane z mikrotransakcjami. Na przykład dostawca usług internetowych (ISP) może otworzyć kanał płatności z klientem, umożliwiając mu przesyłanie strumieniowe małych płatności za każdym razem, gdy korzysta z usługi.
+Kanały płatności rozwiązują ten problem, zmniejszając koszty ogólne związane z mikrotransakcjami. Na przykład dostawca usług internetowych (ISP) może otworzyć kanał płatności z klientem, umożliwiając mu strumieniowe przesyłanie małych płatności za każdym razem, gdy korzysta z usługi.
 
-Poza kosztem otwarcia i zamknięcia kanału, uczestnicy nie ponoszą dalszych kosztów z tytułu mikrotransakcji (brak opłat za gaz). Jest to sytuacja korzystna dla obu stron, ponieważ klienci mają większą elastyczność w zakresie tego, ile płacą za usługi, a firmy nie tracą na dochodowych mikrotransakcjach.
+Poza kosztem otwarcia i zamknięcia kanału, uczestnicy nie ponoszą dalszych kosztów mikrotransakcji (brak opłat za gaz). Jest to sytuacja korzystna dla obu stron, ponieważ klienci mają większą elastyczność w zakresie tego, ile płacą za usługi, a firmy nie tracą na zyskownych mikrotransakcjach.
 
-### Zdecentralizowane aplikacje {#decentralized-applications}
+### Zdecentralizowane aplikacje (dapps) {#decentralized-applications}
 
-Podobnie jak kanały płatności, kanały stanu mogą dokonywać płatności warunkowych zgodnie z ostatecznymi stanami maszyny stanu. Kanały stanu mogą również obsługiwać dowolną logikę przejścia stanu, co czyni je użytecznymi do wykonywania ogólnych aplikacji poza łańcuchem.
+Podobnie jak kanały płatności, kanały stanu mogą dokonywać płatności warunkowych zgodnie z ostatecznymi stanami maszyny stanu. Kanały stanu mogą również obsługiwać dowolną logikę przejścia stanu, co czyni je użytecznymi do wykonywania ogólnych aplikacji pozałańcuchowo.
 
-Kanały stanu są często ograniczone do prostych aplikacji turowych, ponieważ ułatwia to zarządzanie środkami zdeponowanymi w kontrakcie w łańcuchu. Ponadto, przy ograniczonej liczbie stron aktualizujących stan aplikacji poza łańcuchem w odstępach czasu, karanie nieuczciwego zachowania jest stosunkowo proste.
+Kanały stanu są często ograniczone do prostych aplikacji turowych, ponieważ ułatwia to zarządzanie środkami zablokowanymi w kontrakcie onchain. Ponadto, przy ograniczonej liczbie stron aktualizujących stan aplikacji pozałańcuchowej w odstępach czasu, karanie nieuczciwego zachowania jest stosunkowo proste.
 
-Wydajność aplikacji kanału stanu zależy również od jej projektu. Na przykład deweloper może jednorazowo wdrożyć kontrakt kanału aplikacji w łańcuchu i pozwolić innym graczom na ponowne korzystanie z aplikacji bez konieczności przechodzenia do łańcucha. W tym przypadku początkowy kanał aplikacji służy jako kanał rejestru obsługujący wiele kanałów wirtualnych, z których każdy uruchamia nową instancję inteligentnego kontraktu aplikacji poza łańcuchem.
+Wydajność aplikacji kanału stanu zależy również od jej projektu. Na przykład programista może wdrożyć kontrakt kanału aplikacji onchain raz i pozwolić innym graczom na ponowne korzystanie z aplikacji bez konieczności wchodzenia onchain. W tym przypadku początkowy kanał aplikacji służy jako kanał księgi obsługujący wiele wirtualnych kanałów, z których każdy uruchamia nową instancję inteligentnego kontraktu aplikacji pozałańcuchowo.
 
-Potencjalnym zastosowaniem aplikacji kanałów stanu są proste gry dwuosobowe, w których środki są rozdzielane na podstawie wyniku gry. Zaletą jest to, że gracze nie muszą sobie ufać (brak konieczności zaufania), a kontrakt w łańcuchu, a nie gracze, kontroluje alokację środków i rozstrzyganie sporów (decentralizacja).
+Potencjalnym przypadkiem użycia aplikacji kanałów stanu są proste gry dla dwóch graczy, w których środki są rozdzielane na podstawie wyniku gry. Korzyścią jest to, że gracze nie muszą sobie ufać (bezzaufaniowość), a kontrakt onchain, a nie gracze, kontroluje alokację środków i rozstrzyganie sporów (decentralizacja).
 
-Inne możliwe zastosowania aplikacji kanałów stanu obejmują własność nazw ENS, rejestry NFT i wiele innych.
+Inne możliwe przypadki użycia aplikacji kanałów stanu obejmują własność nazw ENS, księgi NFT i wiele innych.
 
 ### Transfery atomowe {#atomic-transfers}
 
-Wczesne kanały płatności były ograniczone do transferów między dwiema stronami, co ograniczało ich użyteczność. Jednak wprowadzenie kanałów wirtualnych pozwoliło poszczególnym osobom na kierowanie transferów przez pośredników (tj. wiele kanałów p2p) bez konieczności otwierania nowego kanału w łańcuchu.
+Wczesne kanały płatności były ograniczone do transferów między dwiema stronami, co ograniczało ich użyteczność. Jednak wprowadzenie kanałów wirtualnych pozwoliło osobom fizycznym na kierowanie transferów przez pośredników (tj. wiele kanałów p2p) bez konieczności otwierania nowego kanału onchain.
 
-Powszechnie opisywane jako „transfery wieloskokowe”, płatności kierowane są atomowe (tzn. albo wszystkie części transakcji kończą się powodzeniem, albo cała transakcja kończy się niepowodzeniem). Transfery atomowe wykorzystują [kontrakty Hashed Timelock (HTLC)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts), aby zapewnić, że płatność zostanie zwolniona tylko wtedy, gdy zostaną spełnione określone warunki, zmniejszając w ten sposób ryzyko kontrahenta.
+Powszechnie określane jako „transfery wieloskokowe” (multi-hop transfers), kierowane płatności są atomowe (tj. albo wszystkie części transakcji kończą się sukcesem, albo cała transakcja kończy się niepowodzeniem). Transfery atomowe wykorzystują [kontrakty HTLC (Hashed Timelock Contracts)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts), aby zapewnić, że płatność zostanie zwolniona tylko po spełnieniu określonych warunków, zmniejszając w ten sposób ryzyko kontrahenta.
 
 ## Wady korzystania z kanałów stanu {#drawbacks-of-state-channels}
 
 ### Założenia dotyczące żywotności {#liveness-assumptions}
 
-Aby zapewnić wydajność, kanały stanu nakładają ograniczenia czasowe na zdolność uczestników kanału do reagowania na spory. Zasada ta zakłada, że partnerzy będą zawsze online, aby monitorować aktywność kanału i w razie potrzeby kwestionować zakwestionowania.
+Aby zapewnić wydajność, kanały stanu nakładają limity czasowe na zdolność uczestników kanału do reagowania na spory. Zasada ta zakłada, że węzły równorzędne będą zawsze online, aby monitorować aktywność kanału i w razie potrzeby kwestionować wyzwania.
 
-W rzeczywistości użytkownicy mogą przejść w tryb offline z przyczyn od nich niezależnych (np. słabe połączenie internetowe, awaria mechaniczna itp.). Jeśli uczciwy użytkownik przejdzie w tryb offline, złośliwy partner może wykorzystać sytuację, przedstawiając stare stany pośrednie do kontraktu rozstrzygającego i kradnąc zdeponowane środki.
+W rzeczywistości użytkownicy mogą przejść w tryb offline z przyczyn od nich niezależnych (np. słabe połączenie internetowe, awaria mechaniczna itp.). Jeśli uczciwy użytkownik przejdzie w tryb offline, złośliwy węzeł równorzędny może wykorzystać sytuację, przedstawiając stare stany pośrednie kontraktowi orzekającemu i kradnąc zablokowane środki.
 
-Niektóre kanały wykorzystują „wieże strażnicze” — podmioty odpowiedzialne za obserwowanie zdarzeń sporów w łańcuchu w imieniu innych i podejmowanie niezbędnych działań, takich jak powiadamianie zainteresowanych stron. Może to jednak zwiększyć koszty korzystania z kanału stanu.
+Niektóre kanały używają „wież strażniczych” (watchtowers) — podmiotów odpowiedzialnych za obserwowanie zdarzeń spornych onchain w imieniu innych i podejmowanie niezbędnych działań, takich jak ostrzeganie zainteresowanych stron. Może to jednak zwiększyć koszty korzystania z kanału stanu.
 
 ### Niedostępność danych {#data-unavailability}
 
 Jak wyjaśniono wcześniej, zakwestionowanie nieprawidłowego sporu wymaga przedstawienia najnowszego, ważnego stanu kanału stanu. Jest to kolejna zasada oparta na założeniu — że użytkownicy mają dostęp do najnowszego stanu kanału.
 
-Chociaż oczekiwanie, że użytkownicy kanału będą przechowywać kopie stanu aplikacji poza łańcuchem, jest rozsądne, dane te mogą zostać utracone z powodu błędu lub awarii mechanicznej. Jeśli użytkownik nie ma kopii zapasowej danych, może jedynie mieć nadzieję, że druga strona nie sfinalizuje nieprawidłowego wniosku o wyjście, używając starych przejść stanów będących w jej posiadaniu.
+Chociaż oczekiwanie, że użytkownicy kanału będą przechowywać kopie stanu aplikacji pozałańcuchowej, jest rozsądne, dane te mogą zostać utracone z powodu błędu lub awarii mechanicznej. Jeśli użytkownik nie ma kopii zapasowej danych, może tylko mieć nadzieję, że druga strona nie sfinalizuje nieprawidłowego żądania wyjścia przy użyciu starych przejść stanu, które posiada.
 
-Użytkownicy Ethereum nie muszą radzić sobie z tym problemem, ponieważ sieć egzekwuje zasady dotyczące dostępności danych. Dane transakcyjne są przechowywane i propagowane przez wszystkie węzły i dostępne dla użytkowników do pobrania w razie potrzeby.
+Użytkownicy Ethereum nie muszą borykać się z tym problemem, ponieważ sieć egzekwuje zasady dotyczące dostępności danych. Dane transakcji są przechowywane i propagowane przez wszystkie węzły oraz dostępne dla użytkowników do pobrania w razie potrzeby.
 
 ### Problemy z płynnością {#liquidity-issues}
 
-Aby utworzyć kanał blockchain, uczestnicy muszą zablokować środki w inteligentnym kontrakcie w łańcuchu na czas życia kanału. Zmniejsza to płynność użytkowników kanału, a także ogranicza kanały do tych, którzy mogą sobie pozwolić na utrzymywanie zablokowanych środków w sieci głównej.
+Aby ustanowić kanał blockchain, uczestnicy muszą zablokować środki w inteligentnym kontrakcie onchain na czas cyklu życia kanału. Zmniejsza to płynność użytkowników kanału, a także ogranicza kanały do tych, których stać na utrzymywanie zablokowanych środków w Sieci głównej.
 
-Jednak kanały rejestru — obsługiwane przez dostawcę usług poza łańcuchem (OSP) — mogą zmniejszyć problemy z płynnością dla użytkowników. Dwóch partnerów podłączonych do kanału rejestru może utworzyć kanał wirtualny, który mogą otworzyć i sfinalizować całkowicie poza łańcuchem, kiedy tylko zechcą.
+Jednak kanały księgi — obsługiwane przez dostawcę usług pozałańcuchowych (OSP) — mogą zmniejszyć problemy z płynnością dla użytkowników. Dwa węzły równorzędne podłączone do kanału księgi mogą utworzyć kanał wirtualny, który mogą otworzyć i sfinalizować całkowicie pozałańcuchowo, w dowolnym momencie.
 
-Dostawcy usług poza łańcuchem mogą również otwierać kanały z wieloma partnerami, co czyni ich przydatnymi do kierowania płatności. Oczywiście, użytkownicy muszą płacić opłaty OSP za ich usługi, co dla niektórych może być niepożądane.
+Dostawcy usług pozałańcuchowych mogliby również otwierać kanały z wieloma węzłami równorzędnymi, co czyni je użytecznymi do kierowania płatności. Oczywiście użytkownicy muszą uiszczać opłaty na rzecz OSP za ich usługi, co dla niektórych może być niepożądane.
 
 ### Ataki typu griefing {#griefing-attacks}
 
-Ataki typu griefing są częstą cechą systemów opartych na dowodach oszustwa. Atak typu griefing nie przynosi bezpośredniej korzyści atakującemu, ale powoduje szkodę (ang. grief) u ofiary, stąd nazwa.
+Ataki typu griefing są powszechną cechą systemów opartych na dowodach oszustwa. Atak typu griefing nie przynosi bezpośrednich korzyści atakującemu, ale powoduje żal (tj. szkodę) ofiary, stąd nazwa.
 
-Dowody oszustwa są podatne na ataki typu griefing, ponieważ uczciwa strona musi reagować na każdy spór, nawet nieprawidłowy, w przeciwnym razie ryzykuje utratę swoich środków. Złośliwy uczestnik może zdecydować się na wielokrotne publikowanie nieaktualnych przejść stanów w łańcuchu, zmuszając uczciwą stronę do odpowiedzi ważnym stanem. Koszt tych transakcji w łańcuchu może szybko wzrosnąć, powodując straty dla uczciwych stron.
+Dowodzenie oszustwa jest podatne na ataki typu griefing, ponieważ uczciwa strona musi reagować na każdy spór, nawet ten nieważny, w przeciwnym razie ryzykuje utratę swoich środków. Złośliwy uczestnik może zdecydować się na wielokrotne publikowanie nieaktualnych przejść stanu onchain, zmuszając uczciwą stronę do odpowiedzi z ważnym stanem. Koszty tych transakcji onchain mogą szybko rosnąć, powodując, że uczciwe strony tracą w tym procesie.
 
-### Predefiniowane zestawy uczestników {#predefined-participant-sets}
+### Z góry określone zestawy uczestników {#predefined-participant-sets}
 
-Z założenia liczba uczestników tworzących kanał stanu pozostaje stała przez cały okres jego istnienia. Dzieje się tak, ponieważ aktualizacja zestawu uczestników skomplikowałaby działanie kanału, zwłaszcza przy jego finansowaniu lub rozstrzyganiu sporów. Dodawanie lub usuwanie uczestników wymagałoby również dodatkowej aktywności w łańcuchu, co zwiększa koszty ogólne dla użytkowników.
+Z założenia liczba uczestników tworzących kanał stanu pozostaje stała przez cały okres jego istnienia. Wynika to z faktu, że aktualizacja zestawu uczestników skomplikowałaby działanie kanału, zwłaszcza podczas zasilania kanału lub rozstrzygania sporów. Dodawanie lub usuwanie uczestników wymagałoby również dodatkowej aktywności onchain, co zwiększa koszty ogólne dla użytkowników.
 
-Chociaż ułatwia to analizę kanałów stanu, ogranicza to użyteczność projektów kanałów dla deweloperów aplikacji. Częściowo wyjaśnia to, dlaczego kanały stanu zostały porzucone na rzecz innych rozwiązań skalujących, takich jak rollupy.
+Chociaż ułatwia to wnioskowanie o kanałach stanu, ogranicza to użyteczność projektów kanałów dla twórców aplikacji. Częściowo wyjaśnia to, dlaczego zrezygnowano z kanałów stanu na rzecz innych rozwiązań skalujących, takich jak rollupy.
 
 ### Równoległe przetwarzanie transakcji {#parallel-transaction-processing}
 
-Uczestnicy kanału stanu wysyłają aktualizacje stanu na zmianę, dlatego najlepiej sprawdzają się w „aplikacjach turowych” (np. dwuosobowej partii szachów). Eliminuje to potrzebę obsługi jednoczesnych aktualizacji stanu i zmniejsza pracę, jaką kontrakt w łańcuchu musi wykonać, aby ukarać publikujących nieaktualne aktualizacje. Jednak efektem ubocznym tego projektu jest to, że transakcje są od siebie zależne, co zwiększa opóźnienia i pogarsza ogólne wrażenia użytkownika.
+Uczestnicy w kanale stanu wysyłają aktualizacje stanu na zmianę, dlatego najlepiej sprawdzają się one w „aplikacjach turowych” (np. gra w szachy dla dwóch graczy). Eliminuje to potrzebę obsługi jednoczesnych aktualizacji stanu i zmniejsza pracę, jaką musi wykonać kontrakt onchain, aby ukarać osoby publikujące nieaktualne aktualizacje. Jednak efektem ubocznym tego projektu jest to, że transakcje są od siebie zależne, co zwiększa opóźnienia i pogarsza ogólne wrażenia użytkownika.
 
-Niektóre kanały stanu rozwiązują ten problem, stosując projekt „pełnego dupleksu”, który rozdziela stan poza łańcuchem na dwa jednokierunkowe stany „simpleks”, co pozwala na jednoczesne aktualizacje stanu. Takie projekty poprawiają przepustowość poza łańcuchem i zmniejszają opóźnienia transakcji.
+Niektóre kanały stanu rozwiązują ten problem, stosując projekt „pełnego dupleksu” (full-duplex), który dzieli stan pozałańcuchowy na dwa jednokierunkowe stany „simplex”, umożliwiając jednoczesne aktualizacje stanu. Takie projekty poprawiają przepustowość pozałańcuchową i zmniejszają opóźnienia transakcji.
 
-## Użyj kanałów stanu {#use-state-channels}
+## Korzystaj z kanałów stanu {#use-state-channels}
 
-Wiele projektów dostarcza implementacje kanałów uzyskiwania informacji, które można zintegrować z własnymi aplikacjami zdecentralizowanymi:
+Wiele projektów zapewnia implementacje kanałów stanu, które można zintegrować ze swoimi zdecentralizowanymi aplikacjami (dapps):
 
 - [Connext](https://connext.network/)
-- [Kchannels](https://www.kchannels.io/)
 - [Perun](https://perun.network/)
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
 ## Dalsza lektura {#further-reading}
 
-**Kanały uzyskiwania informacji**
+**Kanały stanu**
 
-- [Zrozumieć rozwiązania skalujące warstwy 2 Ethereum: kanały stanu, Plasma i Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 lutego 2018_
-- [Kanały stanu — wyjaśnienie](https://www.jeffcoleman.ca/state-channels/) _6 listopada 2015 – Jeff Coleman_
-- [Podstawy kanałów stanu](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
-- [Kanały stanu blockchain: stan wiedzy](https://ieeexplore.ieee.org/document/9627997)
+- [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 lutego 2018 r._
+- [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _6 listopada 2015 r. - Jeff Coleman_
+- [Basics of State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
+- [Blockchain State Channels: A State of the Art](https://ieeexplore.ieee.org/document/9627997)
 
-_Znasz jakieś zasoby społeczności, które Ci pomogły? Edytuj tę stronę i dodaj je!_
+_Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!_

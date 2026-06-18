@@ -1,82 +1,81 @@
 ---
-title: "Łańcuch śledzący"
-description: "Dowiedz się więcej o łańcuchu śledzącym — uaktualnieniu, które wprowadziło mechanizm proof-of-stake w sieci Ethereum."
+title: Beacon Chain
+description: Dowiedz się więcej o Beacon Chain – aktualizacji, która wprowadziła dowód stawki (PoS) w Ethereum.
 lang: pl
 template: upgrade
 image: /images/upgrades/core.png
-alt:
+alt: 
 summaryPoints:
-  - "Łańcuch śledzący wprowadził mechanizm proof-of-stake do ekosystemu Ethereum."
-  - "Został on połączony z pierwotnym łańcuchem proof-of-work Ethereum we wrześniu 2022."
-  - "Łańcuch śledzący wprowadził logikę konsensusu i protokół uzgadniania bloków, który obecnie zabezpiecza Ethereum."
+  - "Beacon Chain wprowadził dowód stawki (PoS) do ekosystemu Ethereum."
+  - "Został połączony z oryginalnym łańcuchem dowodu pracy (PoW) Ethereum we wrześniu 2022 roku."
+  - "Beacon Chain wprowadził logikę konsensusu i protokół propagacji bloków (gossip protocol), które obecnie zabezpieczają Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  Łańcuch śledzący, wdrożony 1 grudnia 2020 r., sformalizował proof-of-stake jako mechanizm konsensusu Ethereum wraz z aktualizacją Połączenie 15 września 2022 r.
+  Beacon Chain został uruchomiony 1 grudnia 2020 r. i sformalizował dowód stawki (PoS) jako mechanizm konsensusu Ethereum wraz z aktualizacją The Merge 15 września 2022 r.
 </UpgradeStatus>
 
-## Czym jest łańcuch śledzący? {#what-is-the-beacon-chain}
+## Czym jest Beacon Chain? {#what-is-the-beacon-chain}
 
-Łańcuch śledzący to nazwa oryginalnego blockchainu proof-of-stake, który został uruchomiony w 2020 r. Został on stworzony w celu upewnienia się, że logika konsensusu proof-of-stake jest solidna i zrównoważona przed jej uruchomieniem w sieci głównej Ethereum. W związku z tym działał on równolegle z pierwotnym mechanizmem proof-of-work Ethereum. Łańcuch śledzący był łańcuchem „pustych” bloków, ale wyłączenie proof-of-work i włączenie proof-of-stake na Ethereum wymagało poinstruowania łańcucha śledzącego, aby akceptował dane transakcji od klientów wykonawczych, grupował je w bloki, a następnie organizował je w blockchain przy użyciu mechanizmu konsensusu opartego na proof-of-stake. W tym samym momencie pierwotni klienci Ethereum wyłączyli wydobywanie, propagację bloków i logikę konsensusu, przekazując je w całości łańcuchowi śledzącemu. Wydarzenie to było znane jako [Połączenie](/roadmap/merge/). Gdy doszło do Połączenia, nie było już dwóch blockchainów. Zamiast tego istniał tylko jeden proof-of-stake Ethereum, który teraz wymaga dwóch różnych klientów na węzeł. Łańcuch śledzący jest teraz warstwą konsensusu, siecią peer-to-peer klientów konsensusu, która obsługuje plotki blokowe i logikę konsensusu, podczas gdy oryginalni klienci tworzą warstwę wykonawczą, która jest odpowiedzialna za plotkowanie i wykonywanie transakcji oraz zarządzanie stanem Ethereum. Obie warstwy mogą komunikować się ze sobą za pomocą Engine API.
+Beacon Chain to nazwa oryginalnego blockchaina opartego na dowodzie stawki (PoS), który został uruchomiony w 2020 roku. Został stworzony, aby upewnić się, że logika konsensusu dowodu stawki jest solidna i zrównoważona przed włączeniem jej w sieci głównej [Ethereum](/). Dlatego działał on równolegle do oryginalnego Ethereum opartego na dowodzie pracy (PoW). Beacon Chain był łańcuchem „pustych” bloków, ale wyłączenie dowodu pracy i włączenie dowodu stawki w Ethereum wymagało poinstruowania Beacon Chain, aby akceptował dane transakcji od klientów warstwy wykonawczej, łączył je w bloki, a następnie organizował w blockchain przy użyciu mechanizmu konsensusu opartego na dowodzie stawki. W tym samym momencie oryginalni klienci Ethereum wyłączyli swoje kopanie, propagację bloku i logikę konsensusu, przekazując to wszystko do Beacon Chain. Wydarzenie to było znane jako [The Merge](/roadmap/merge/). Gdy nastąpił The Merge, nie było już dwóch blockchainów. Zamiast tego powstało jedno Ethereum oparte na dowodzie stawki, które teraz wymaga dwóch różnych klientów na węzeł. Beacon Chain jest teraz warstwą konsensusu, siecią peer-to-peer klientów konsensusu, która obsługuje propagację bloków (gossip) i logikę konsensusu, podczas gdy oryginalni klienci tworzą warstwę wykonawczą, która jest odpowiedzialna za propagację i wykonywanie transakcji oraz zarządzanie stanem Ethereum. Obie warstwy mogą komunikować się ze sobą za pomocą Engine API.
 
-## Co robi łańcuch śledzący? {#what-does-the-beacon-chain-do}
+## Co robi Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Łańcuch śledzący to nazwa nadana rejestrowi kont, który prowadził i koordynował sieć [stakerów](/staking/) Ethereum, zanim ci stakerzy zaczęli walidować prawdziwe bloki Ethereum. Nie przetwarza on jednak transakcji ani nie obsługuje interakcji inteligentnych kontraktów, ponieważ odbywa się to w warstwie wykonawczej.
-Łańcuch śledzący jest odpowiedzialny za takie rzeczy jak obsługa bloków i poświadczeń, uruchamianie algorytmu wyboru forka oraz zarządzanie nagrodami i karami.
-Przeczytaj więcej na naszej [stronie o architekturze węzłów](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
+Beacon Chain to nazwa nadana księdze rachunkowej, która prowadziła i koordynowała sieć [stakujących](/staking/) w Ethereum, zanim zaczęli oni walidować prawdziwe bloki Ethereum. Nie przetwarza on jednak transakcji ani nie obsługuje interakcji z inteligentnymi kontraktami, ponieważ odbywa się to w warstwie wykonawczej.
+Beacon Chain jest odpowiedzialny za takie rzeczy, jak obsługa bloków i poświadczeń, uruchamianie algorytmu wyboru rozwidlenia oraz zarządzanie nagrodami i karami.
+Przeczytaj więcej na naszej [stronie o architekturze węzła](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-## Wpływ Łańcucha śledzącego {#beacon-chain-features}
+## Wpływ Beacon Chain {#beacon-chain-features}
 
-### Wprowadzenie do stakowania {#introducing-staking}
+### Wprowadzenie stakingu {#introducing-staking}
 
-Łańcuch śledzący wprowadził [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) do Ethereum. Zapewnia to bezpieczeństwo Ethereum, a walidatorzy zarabiają więcej ETH. W praktyce stakowanie polega na stakowaniu ETH w celu aktywowania oprogramowania walidatora. Jako staker używasz oprogramowania, które tworzy i waliduje nowe bloki w łańcuchu.
+Beacon Chain wprowadził [dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos/) do Ethereum. Zapewnia to bezpieczeństwo Ethereum, a walidatorom pozwala zarabiać więcej ETH w tym procesie. W praktyce staking polega na stakowaniu ETH w celu aktywacji oprogramowania walidatora. Jako stakujący uruchamiasz oprogramowanie, które tworzy i waliduje nowe bloki w łańcuchu.
 
-Stakowanie służy podobnym celom, co kiedyś [wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/), ale różni się pod wieloma względami. Wydobywanie wymagało dużych nakładów początkowych w postaci potężnego sprzętu i zużycia energii, co skutkowało ekonomią skali i promowało centralizację. Wydobywanie nie wiązało się również z żadnym wymogiem blokowania aktywów jako zabezpieczenia, co ograniczało zdolność protokołu do karania złych podmiotów po ataku.
+Staking służy podobnemu celowi, co kiedyś [kopanie](/developers/docs/consensus-mechanisms/pow/mining/), ale różni się od niego pod wieloma względami. Kopanie wymagało dużych nakładów początkowych w postaci potężnego sprzętu i zużycia energii, co prowadziło do korzyści skali i promowało centralizację. Kopanie nie wiązało się również z żadnym wymogiem blokowania aktywów jako zabezpieczenia, co ograniczało zdolność protokołu do karania złych aktorów po ataku.
 
-Przejście na proof-of-stake sprawiło, że sieć Ethereum stała się znacznie bezpieczniejsza i zdecentralizowana w porównaniu z proof-of-work. Im więcej osób uczestniczy w sieci, tym bardziej staję się ona zdecentralizowana i lepiej zabezpieczona przed atakami.
+Przejście na dowód stawki sprawiło, że Ethereum stało się znacznie bezpieczniejsze i bardziej zdecentralizowane w porównaniu do dowodu pracy. Im więcej osób uczestniczy w sieci, tym bardziej staje się ona zdecentralizowana i bezpieczna przed atakami.
 
-Stosowanie proof-of-stake jako mechanizmu konsensusu jest fundamentalnym elementem [bezpiecznego, przyjaznego dla środowiska i skalowalnego Ethereum, które mamy teraz](/roadmap/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Jeśli interesuje Cię zostanie walidatorem i pomoc w zabezpieczaniu Ethereum, [dowiedz się więcej o stakowaniu](/staking/).
+  Jeśli jesteś zainteresowany zostaniem walidatorem i pomocą w zabezpieczaniu Ethereum, [dowiedz się więcej o stakingu](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ### Przygotowanie do shardingu {#setting-up-for-sharding}
 
-Odkąd łańcuch śledzący połączył się z pierwotną siecią główną Ethereum, społeczność Ethereum zaczęła przymierzać się do skalowania sieci.
+Odkąd Beacon Chain połączył się z oryginalną siecią główną Ethereum, społeczność Ethereum zaczęła szukać sposobów na skalowanie sieci.
 
-Zaletą proof-of-stake jest posiadanie rejestru wszystkich zatwierdzonych producentów bloków w danym momencie, z których każdy stakuje ETH. Rejestr ten stwarza możliwość dzielenia i podbijania, ale niezawodnie rozdziela konkretne obowiązki sieciowe.
+Dowód stawki ma tę zaletę, że posiada rejestr wszystkich zatwierdzonych producentów bloków w danym momencie, z których każdy ma stakowane ETH. Rejestr ten przygotowuje grunt pod możliwość zastosowania zasady „dziel i rządź”, pozwalając na niezawodne rozdzielenie konkretnych obowiązków w sieci.
 
-Ta odpowiedzialność jest przeciwieństwem proof-of-work, gdzie górnicy nie mają żadnych zobowiązań wobec sieci i mogą w jednej chwili zaprzestać wydobycia i wyłączyć oprogramowanie swojego węzła bez żadnych konsekwencji. Nie istnieje też rejestr znanych proponentów bloków ani niezawodny sposób na bezpieczny podział obowiązków sieciowych.
+Ta odpowiedzialność kontrastuje z dowodem pracy, w którym kopiący nie mają żadnych zobowiązań wobec sieci i mogą w każdej chwili przestać kopać i na stałe wyłączyć oprogramowanie swojego węzła bez żadnych konsekwencji. Nie ma również rejestru znanych proponujących bloki (block proposers) ani niezawodnego sposobu na bezpieczne podzielenie obowiązków w sieci.
 
 [Więcej o shardingu](/roadmap/danksharding/)
 
 ## Związek między aktualizacjami {#relationship-between-upgrades}
 
-Wszystkie uaktualnienia Ethereum są w pewnym stopniu wzajemnie powiązane. Podsumujmy zatem, jak łańcuch śledzący wpływa na inne uaktualnienia.
+Wszystkie aktualizacje Ethereum są ze sobą w pewien sposób powiązane. Podsumujmy więc, jak Beacon Chain wpływa na inne aktualizacje.
 
-### Łańcuch śledzący i Połączenie {#merge-and-beacon-chain}
+### Beacon Chain i The Merge {#merge-and-beacon-chain}
 
-Na początku łańcuch śledzący istniał oddzielnie od sieci głównej Ethereum, ale zostały one połączone w 2022 r.
+Początkowo Beacon Chain istniał oddzielnie od sieci głównej Ethereum, ale zostały one połączone w 2022 roku.
 
 <ButtonLink href="/roadmap/merge/">
-  Połączenie
+  The Merge
 </ButtonLink>
 
-### Odłamki i Łańcuch śledzący {#shards-and-beacon-chain}
+### Shardy i Beacon Chain {#shards-and-beacon-chain}
 
-Sharding może bezpiecznie wejść do ekosystemu Ethereum tylko z mechanizmem konsensusu proof-of-stake. Łańcuch śledzący wprowadził staking, który „połączył się” z siecią główną, umożliwiając shardingowi pomoc w dalszym skalowaniu Ethereum.
+Sharding może bezpiecznie wejść do ekosystemu Ethereum tylko wtedy, gdy wdrożony jest mechanizm konsensusu oparty na dowodzie stawki. Beacon Chain wprowadził staking, który „połączył się” z siecią główną, torując drogę dla shardingu, aby pomóc w dalszym skalowaniu Ethereum.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Łańcuchy odłamkowe
+  Łańcuchy shardów
 </ButtonLink>
 
-## Czytaj Dalej
+## Dalsza lektura {#further-reading}
 
-- [Więcej o architekturze węzłów](/developers/docs/nodes-and-clients/node-architecture)
-- [Więcej o proof-of-stake](/developers/docs/consensus-mechanisms/pos)
+- [Więcej o architekturze węzła](/developers/docs/nodes-and-clients/node-architecture)
+- [Więcej o dowodzie stawki (PoS)](/developers/docs/consensus-mechanisms/pos)

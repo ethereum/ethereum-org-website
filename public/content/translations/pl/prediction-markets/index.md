@@ -1,52 +1,53 @@
 ---
-title: Rynki prognostyczne
+title: Rynki predykcyjne
 lang: pl
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoints:
-  - "Otrzymuj zachęty finansowe za tworzenie trafnych prognoz"
-  - "Wysokiej jakości prognozy dotyczące przyszłych wydarzeń"
-buttons:
+  - "Otrzymuj zachęty finansowe za generowanie trafnych prognoz"
+  - "Wysokiej jakości prognozy dotyczące przyszłych zdarzeń"
+buttons: 
   - content: Dowiedz się więcej
     toId: how-prediction-markets-work
-  - content: Odkryj aplikacje
+  - content: Przeglądaj aplikacje
     toId: find-a-prediction-market
     isSecondary: false
 ---
 
-Rynki prognostyczne wykorzystują mądrość tłumu i zachęty finansowe do prognozowania wydarzeń. Oferują różnorodne, wysokiej jakości dane i zyskały popularność podczas wyborów w USA w 2024 roku.
+Rynki predykcyjne wykorzystują mądrość tłumu i zachęty finansowe do prognozowania zdarzeń. Oferują różnorodne, wysokiej jakości dane i zyskały na popularności podczas wyborów w USA w 2024 roku.
 
-## Jak działają rynki prognostyczne {#how-prediction-markets-work}
+## Jak działają rynki predykcyjne {#how-prediction-markets-work}
 
-W przeciwieństwie do tradycyjnych metod prognozowania, które opierają się na opiniach ekspertów, limitowanych próbkach ankietowych czy danych historycznych, rynki prognostyczne wykorzystują **zachęty finansowe w czasie rzeczywistym** oraz **mądrość tłumu**, aby generować wnioski dotyczące konkretnego wydarzenia — wyborów, cen kryptowalut, wyników sportowych — czegokolwiek.
+W przeciwieństwie do tradycyjnych metod prognozowania, które opierają się na opiniach ekspertów, ograniczonych próbach ankietowych lub danych historycznych, rynki predykcyjne wykorzystują **zachęty finansowe w czasie rzeczywistym** oraz **mądrość tłumu** do generowania wniosków dotyczących konkretnego zdarzenia — wyborów, cen krypto, wyników sportowych — czegokolwiek. 
 
-Pozwala to każdemu udzielić poparcia dla określonego wyniku poprzez zobowiązanie finansowe.
-Dzięki możliwości obstawiania rzeczywistych wydarzeń i dostosowywania cen w miarę pojawiania się nowych informacji bardziej cenione są opinie oparte na wiedzy, a dokładność może zostać nagrodzona.
+Pozwala to każdemu zasygnalizować poparcie dla określonego wyniku za pomocą finansowego zobowiązania.
+ 
+Umożliwiając obstawianie rzeczywistych zdarzeń i dostosowując ceny w miarę pojawiania się nowych informacji, świadome opinie są wyżej cenione, a trafność może być nagradzana. 
 
-Teoretycznie, ponieważ obstawiający mogą czerpać zyski z trafnych prognoz, rynki prognostyczne mogą przewidywać wyniki z dużą precyzją. Rynki prognostyczne oparte na blockchainie są jeszcze bardziej ekscytujące, ponieważ praktycznie każdy może wziąć udział w prognozowaniu, aby zdobyć nagrody w stablecoinach lub kryptowalutach.
+W teorii, ponieważ obstawiający mogą zyskać na trafności, rynki predykcyjne mogą prognozować wyniki z dużą precyzją. Rynki predykcyjne oparte na blockchainie są jeszcze bardziej ekscytujące, ponieważ praktycznie każdy może wziąć udział w prognozowaniu i zdobywać nagrody w postaci stablecoinów lub kryptowalut.
 
 ## Dlaczego ma to znaczenie? {#why-does-this-matter}
 
-W przeciwieństwie do tradycyjnych prognoz, rynki prognostyczne oparte na blockchainie są:
+W przeciwieństwie do tradycyjnego prognozowania, rynki predykcyjne oparte na blockchainie są:
 
 <Grid>
-  <Card title="System zachęt" emoji=":money_with_wings:" description="Uczestnicy stakują prawdziwe środki, co przekłada się na wysoką jakość prognoz."/>
-  <Card title="Decentralizacja" emoji="🌎" description="Użycie blockchaina i smart kontraktów zapewnia przejrzyste i zautomatyzowane wypłaty." />
-  <Card title="Kursy rynkowe" emoji="🤝" description="Ceny ustalają traderzy handlujący udziałami w wynikach, a nie scentralizowany bukmacher." />
+  <Card title="Incentivized" emoji=":money_with_wings:" description="Uczestnicy stakują prawdziwe środki, co przekłada się na wysoką jakość przewidywań."/>
+  <Card title="Decentralization" emoji="🌎" description="Wykorzystanie blockchaina i inteligentnych kontraktów zapewnia przejrzyste i zautomatyzowane wypłaty." />
+  <Card title="Kursy kształtowane przez rynek" emoji="🤝" description="Ceny są ustalane przez traderów kupujących i sprzedających udziały w wynikach, a nie z góry określane przez scentralizowanego bukmachera." />
 </Grid>
 
-Nawet jako obserwator rynku możesz uzyskać dostęp do wartościowych danych, które w innym przypadku byłyby niedostępne. Pomyśl o tym w ten sposób:
+Nawet jako obserwator rynku możesz oceniać cenne dane, które w przeciwnym razie byłyby niedostępne. Pomyśl o tym w ten sposób:
 
-1. Prognozy są powiązane z konkretnym wydarzeniem (np. Czy Beam Chain zostanie wdrożony do 2030 roku?).
-2. Uczestnicy rynku kupują i sprzedają udziały w zależności od swojej pewności co do danego wyniku.
-3. Ceny dostosowują się wraz z większą liczbą uczestników obstawiających swoje przekonania, odzwierciedlając wgląd w czasie rzeczywistym.
-4. Każdy, kto obstawi poprawnie, zarabia proporcjonalnie do obstawionej kwoty.
-5. Obserwatorzy rynku mogą wykorzystywać otwarte dane do badań lub dyskusji.
+1. Prognozy są powiązane z konkretnym zdarzeniem (np. czy Beam Chain zostanie wdrożony do 2030 roku?).
+2. Uczestnicy rynku kupują i sprzedają udziały w oparciu o swoją pewność co do danego wyniku.
+3. Ceny dostosowują się, gdy coraz więcej uczestników stakuje swoje przekonania, odzwierciedlając spostrzeżenia w czasie rzeczywistym.
+4. Każdy, kto obstawi poprawnie, zarabia proporcjonalnie do wniesionej stawki. 
+5. Obserwatorzy rynku mogą wykorzystywać otwarte dane do wspierania badań lub dyskusji.
 
-## Znajdź rynek prognostyczny {#find-a-prediction-market}
+## Znajdź rynek predykcyjny {#find-a-prediction-market}
 
-Dostępnych jest kilka rynków prognostycznych opartych na Ethereum. Oto niektóre z najbardziej znanych dzisiaj rynków prognostycznych:
+Dostępnych jest kilka rynków predykcyjnych opartych na Ethereum. Oto niektóre z najbardziej znanych obecnie rynków predykcyjnych:
 
 <PredictionMarketLists />
 
@@ -54,34 +55,32 @@ Dostępnych jest kilka rynków prognostycznych opartych na Ethereum. Oto niektó
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Bądź świadomy ryzyka</strong></p>
-  <p className="mt-2">Obstawiaj tylko tyle, na ile Cię stać, i miej świadomość o potencjalnych zachowaniach uzależniających.</p>
+  <p className="mt-0"><strong>Pamiętaj o ryzyku</strong></strong>
+  <p className="mt-2">Obstawiaj tylko tyle, ile możesz stracić, i bądź świadomy potencjalnych zachowań uzależniających.</p>
 </AlertDescription>
-
 </AlertContent>
-
 </Alert>
 
-## Wyzwania i ryzyka {#challenges-and-risks}
+## Wyzwania i ryzyko {#challenges-and-risks}
 
-Rynki prognostyczne na blockchainie napotykają kilka wyzwań, które mogą wpłynąć na uczciwość, legalność oraz dokładność.
+Rynki predykcyjne na blockchainie stoją przed kilkoma wyzwaniami, które mogą wpływać na uczciwość, legalność i dokładność.
 
-⚠️ **Manipulacja rynkiem** — bogaci gracze mogą zniekształcać wyniki poprzez tzw. wash trading.  
-💧 **Problemy z płynnością** — niskie uczestnictwo ([niska płynność](https://www.investopedia.com/terms/t/thinmarket.asp)) może zmniejszyć wiarygodność rynku.  
-🏛 **Niepewność regulacyjna** — rządy wprowadziły ograniczenia na niektórych platformach.
+⚠️ **Manipulacja rynkiem** – Bogaci gracze mogą zniekształcać wyniki poprzez wash trading.  
+💧 **Problemy z płynnością** – Niskie uczestnictwo ([niska płynność](https://www.investopedia.com/terms/t/thinmarket.asp)) może zmniejszyć wiarygodność rynku.  
+🏛 **Niepewność regulacyjna** – Rządy nałożyły ograniczenia na niektóre platformy.
 
-Aby złagodzić te problemy, deweloperzy Ethereum eksperymentują z rozwiązaniami takimi jak futarchia (zarządzanie przez rynki prognostyczne) i zdecentralizowana weryfikacja tożsamości.
+Aby złagodzić te problemy, programiści Ethereum eksperymentują z rozwiązaniami takimi jak futarchia (zarządzanie przez rynki predykcyjne) oraz weryfikacja zdecentralizowanej tożsamości.
 
-## Eksperymentowanie z rynkami prognostycznymi {#experimenting-with-prediction-markets}
+## Eksperymentowanie z rynkami predykcyjnymi {#experimenting-with-prediction-markets}
 
-Rynki prognostyczne przekształcają podejmowanie decyzji w obecnej erze cyfrowej. Wykorzystując Ethereum, oferują **uczciwe, otwarte i nagradzające sposoby przewidywania przyszłości.**
+Rynki predykcyjne zmieniają sposób podejmowania decyzji w epoce cyfrowej. Wykorzystując Ethereum, oferują **uczciwe, otwarte i satysfakcjonujące sposoby przewidywania przyszłości.**
 
-Istnieje wiele sposobów wykorzystania narzędzi prognostycznych poza korzyściami finansowymi. Na przykład, w [propozycji ulepszenia DevCon'u](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) zasugerowano, aby organizatorzy DevCon'u korzystali z rynków prognostycznych, aby przewidzieć frekwencję na przyszłych wydarzeniach.
+Istnieje wiele sposobów wykorzystania narzędzi prognostycznych poza korzyściami finansowymi. Na przykład w [Propozycji Ulepszenia DevCon](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) zasugerowano, aby organizatorzy DevCon wykorzystali rynki predykcyjne do przewidywania frekwencji na przyszłych zdarzeniach. 
 
-Pomogłoby to organizatorom określić, która lokalizacja przyciągnęłaby największą liczbę uczestników, a która będzie najbardziej dostępna z międzynarodowego punktu widzenia. Korzyści z tego są takie, że organizatorzy DevCon'u mogliby skrócić czas potrzebny na sprawdzenie wielu polityk wizowych, dostępu do lotnisk oraz kosztów życia w danym obszarze, a jednocześnie zebrać dane o tym, dokąd potencjalni uczestnicy chcieliby się udać.
+Pomogłoby to organizatorom ustalić, która lokalizacja doprowadziłaby do największego zdarzenia, w porównaniu z tym, która lokalizacja byłaby najbardziej dostępna na arenie międzynarodowej. Korzyści z tego płynące oznaczają, że organizatorzy DevCon mogą skrócić czas potrzebny na sprawdzenie wielu polityk wizowych, dostępu do lotnisk i kosztów utrzymania w danym obszarze, jednocześnie gromadząc dane o tym, dokąd potencjalni uczestnicy chętnie by się udali.
 
 ## Dalsza lektura {#further-reading}
 
-[Od rynków prognostycznych po info finanse](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) — Vitalik Buterin  
-[Rozwój zdecentralizowanych rynków prognostycznych na Ethereum](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  
+[Od rynków predykcyjnych do info finance](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) – Vitalik Buterin  
+[Rozwój zdecentralizowanych rynków predykcyjnych na Ethereum](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  
 [Biała księga projektu Augur](https://github.com/AugurProject/whitepaper)
