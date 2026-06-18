@@ -1,26 +1,26 @@
 ---
-title: "Jednoduchá serializace"
-description: "Vysvětlení formátu SSZ Etherea."
+title: Simple serialize
+description: Vysvětlení formátu SSZ na Ethereu.
 lang: cs
 sidebarDepth: 2
 ---
 
-**Jednoduchá serializace (SSZ)** je metoda serializace používaná na Beacon Chainu. Nahrazuje RLP serializaci, která je používána na exekuční vrstvě a všude v rámci konsensuální vrstvy kromě protokolu pro objevování peerů. Více informací o serializaci RLP naleznete v článku [Recursive-length prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ je navržena tak, aby byla deterministická a také efektivně merkelizovatelná. Na SSZ můžeme pohlížet jako na dvě složky: Schéma serializace a schéma merkelizace, které je navrženo tak, aby efektivně fungovalo se serializovanou datovou strukturou.
+**Simple serialize (SSZ)** je metoda serializace používaná na Beacon chainu. Nahrazuje RLP serializaci používanou na exekuční vrstvě všude napříč vrstvou konsensu s výjimkou protokolu pro objevování peerů (peer discovery protocol). Chcete-li se dozvědět více o RLP serializaci, podívejte se na [Recursive-length prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ je navržena tak, aby byla deterministická a také aby se dala efektivně převádět do Merkleova stromu (merkleizovat). SSZ si lze představit jako systém se dvěma komponentami: schématem pro serializaci a schématem pro merkleizaci, které je navrženo tak, aby efektivně pracovalo se serializovanou datovou strukturou.
 
 ## Jak SSZ funguje? {#how-does-ssz-work}
 
 ### Serializace {#serialization}
 
-SSZ je schéma serializace, které není samo o sobě popisné - spíše spoléhá na schéma, které musí být předem známo. Cílem SSZ serializace je reprezentovat objekty libovolné složitosti jako řetězce bajtů. Tento proces je velmi jednoduchý pro "základní typy". Element je jednoduše převeden na hexadecimální bajty. Mezi základní typy patří:
+SSZ je schéma serializace, které není samopopisné – spoléhá se na schéma, které musí být známo předem. Cílem SSZ serializace je reprezentovat objekty libovolné složitosti jako řetězce bajtů. Pro „základní typy“ jde o velmi jednoduchý proces. Prvek je jednoduše převeden na hexadecimální bajty. Mezi základní typy patří:
 
-- celá čísla bez znaménka
+- celá čísla bez znaménka (unsigned integers)
 - booleovské hodnoty
 
-Pro složité "kompozitní" typy je serializace složitější, protože kompozitní typ obsahuje více prvků, které mohou mít různé typy nebo různé velikosti, nebo obojí. V případech, kdy mají všechny tyto objekty pevnou délku (tj. velikost prvků bude vždy konstantní bez ohledu na jejich skutečné hodnoty), je serializace jednoduše konverzí každého prvku ve složeném typu, seřazeného do little-endian bajtových řetězců. Tyto bajtové řetězce jsou spojeny dohromady. Serializovaný objekt má bytelistovou reprezentaci prvků s pevnou délkou ve stejném pořadí, v jakém se objevují v deserializovaném objektu.
+Pro složité „složené“ typy je serializace komplikovanější, protože složený typ obsahuje více prvků, které mohou mít různé typy, různé velikosti, nebo obojí. Tam, kde mají všechny tyto objekty pevnou délku (tj. velikost prvků bude vždy konstantní bez ohledu na jejich skutečné hodnoty), je serializace jednoduše převodem každého prvku ve složeném typu, seřazeného do bajtových řetězců ve formátu little-endian. Tyto bajtové řetězce jsou spojeny dohromady. Serializovaný objekt má reprezentaci prvků s pevnou délkou ve formě seznamu bajtů ve stejném pořadí, v jakém se objevují v deserializovaném objektu.
 
-Pro typy s proměnlivou délkou se skutečná data nahrazují hodnotou "offsetu" na pozici toho prvku v serializovaném objektu. Skutečná data se přidávají do zásobníku na konci serializovaného objektu. Hodnota offsetu je indexem pro začátek skutečných dat v zásobníku, což funguje jako ukazatel na příslušné bajty.
+U typů s proměnnou délkou jsou skutečná data nahrazena hodnotou „offsetu“ (posunu) na pozici daného prvku v serializovaném objektu. Skutečná data se přidají na haldu (heap) na konec serializovaného objektu. Hodnota offsetu je index začátku skutečných dat na haldě a funguje jako ukazatel na příslušné bajty.
 
-Následující příklad ilustruje, jak funguje offsetování pro kontejner s prvky s pevnou i proměnlivou délkou:
+Níže uvedený příklad ilustruje, jak funguje offsetování pro kontejner s prvky s pevnou i proměnnou délkou:
 
 ```Rust
 
@@ -44,92 +44,90 @@ Následující příklad ilustruje, jak funguje offsetování pro kontejner s pr
 
 ```
 
-`serialized` by mělo následující strukturu (zde pouze doplněno na 4 bity, ve skutečnosti doplněno na 32 bitů a pro přehlednost je zachována reprezentace `int`):
+`serialized` by měl následující strukturu (zde je pro přehlednost doplněn pouze na 4 bity, ve skutečnosti se doplňuje na 32 bitů, a zachovává reprezentaci `int`):
 
 ```
 [37, 0, 0, 0, 55, 0, 0, 0, 16, 0, 0, 0, 22, 0, 0, 0, 1, 2, 3, 4]
 ------------  -----------  -----------  -----------  ----------
       |             |            |           |            |
-   number1       number2    posun pro    number 3    hodnota pro
+   number1       number2    offset pro    number 3   hodnota pro
                               vektor                   vektor
-
 ```
 
-pro přehlednost je rozdělíme do řádků:
+rozděleno do řádků pro přehlednost:
 
 ```
 [
-  37, 0, 0, 0,  # kódování `number1` v pořadí little-endian.
-  55, 0, 0, 0,  # kódování `number2` v pořadí little-endian.
-  16, 0, 0, 0,  # „Posun“, který udává, kde začíná hodnota `vector` (little-endian 16).
-  22, 0, 0, 0,  # kódování `number3` v pořadí little-endian.
-  1, 2, 3, 4,   # Skutečné hodnoty ve `vector`.
+  37, 0, 0, 0,  # kódování little-endian pro `number1`.
+  55, 0, 0, 0,  # kódování little-endian pro `number2`.
+  16, 0, 0, 0,  # „Offset“, který ukazuje, kde začíná hodnota `vector` (little-endian 16).
+  22, 0, 0, 0,  # kódování little-endian pro `number3`.
+  1, 2, 3, 4,   # Skutečné hodnoty v `vector`.
 ]
 ```
 
-Toto je stále zjednodušení - celá čísla a nuly ve schématech výše by ve skutečnosti byly uloženy bytelisty, jako je tento:
+Toto je stále zjednodušení – celá čísla a nuly ve výše uvedených schématech by ve skutečnosti byly uloženy jako seznamy bajtů, takto:
 
 ```
 [
-  10100101000000000000000000000000  # kódování `number1` v pořadí little-endian
-  10110111000000000000000000000000  # kódování `number2` v pořadí little-endian.
-  10010000000000000000000000000000  # „Posun“, který udává, kde začíná hodnota `vector` (little-endian 16).
-  10010110000000000000000000000000  # kódování `number3` v pořadí little-endian.
+  10100101000000000000000000000000  # kódování little-endian pro `number1`
+  10110111000000000000000000000000  # kódování little-endian pro `number2`.
+  10010000000000000000000000000000  # „Offset“, který ukazuje, kde začíná hodnota `vector` (little-endian 16).
+  10010110000000000000000000000000  # kódování little-endian pro `number3`.
   10000001100000101000001110000100   # Skutečná hodnota pole `bytes`.
 ]
 ```
 
-Takže skutečné hodnoty pro typy s proměnlivou délkou jsou uloženy v zásobníku na konci serializovaného objektu, přičemž jejich offsety jsou uloženy na správných pozicích v uspořádaném seznamu polí.
+Skutečné hodnoty pro typy s proměnnou délkou jsou tedy uloženy na haldě na konci serializovaného objektu a jejich offsety jsou uloženy na správných pozicích v seřazeném seznamu polí.
 
-Existují také některé speciální případy, které vyžadují specifické zacházení, například typ `BitList`, který vyžaduje přidání délkového limitu během serializace a jeho odstranění během deserializace. Veškeré podrobnosti jsou k dispozici ve [specifikaci SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
+Existují také některé speciální případy, které vyžadují specifické zacházení, jako je typ `BitList`, který vyžaduje přidání omezení délky během serializace a jeho odstranění během deserializace. Úplné podrobnosti jsou k dispozici ve [specifikaci SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
 ### Deserializace {#deserialization}
 
-K deserializaci tohoto objektu je zapotřebí <b>schéma</b>. Schéma definuje přesné uspořádání serializovaných dat tak, aby každý konkrétní prvek mohl být deserializován z blobu bajtů do nějakého smysluplného objektu s prvky majícími správný typ, hodnotu, velikost a pozici. Je to právě schéma, které říká deserializátoru, které hodnoty jsou skutečné hodnoty a které jsou offsety. Všechny názvy polí zmizí, když je objekt serializován, ale při deserializaci se podle schématu znovu vytvoří.
+K deserializaci tohoto objektu je potřeba <b>schéma</b>. Schéma definuje přesné rozložení serializovaných dat tak, aby každý konkrétní prvek mohl být deserializován z blobu bajtů do nějakého smysluplného objektu, jehož prvky mají správný typ, hodnotu, velikost a pozici. Je to právě schéma, které deserializátoru říká, které hodnoty jsou skutečné hodnoty a které jsou offsety. Všechny názvy polí při serializaci objektu zmizí, ale při deserializaci jsou podle schématu znovu obnoveny.
 
-Pro interaktivní vysvětlení se podívejte na [ssz.dev](https://www.ssz.dev/overview).
+Interaktivní vysvětlení tohoto procesu najdete na [ssz.dev](https://www.ssz.dev/overview).
 
 ## Merkleizace {#merkleization}
 
-Tento SSZ serializovaný objekt pak může být merkelizován - to znamená transformován do Merkleova stromu reprezentujícího stejná data. Nejprve se určí počet 32bajtových bloků v serializovaném objektu. Tyto bloky tvoří „listy“ stromu. Celkový počet listů musí být mocnina dvou, aby hašování listů nakonec vytvořilo jediný hašový kořen stromu. Pokud tomu tak přirozeně není, jsou přidány další listy obsahující 32 bajtů nul. Schématicky:
+Tento SSZ serializovaný objekt pak může být merkleizován – to znamená transformován do reprezentace stejných dat ve formě Merkleova stromu. Nejprve se určí počet 32bajtových bloků v serializovaném objektu. To jsou „listy“ stromu. Celkový počet listů musí být mocninou čísla 2, aby hashování listů dohromady nakonec vytvořilo jediný kořen hashovacího stromu (hash-tree-root). Pokud tomu tak přirozeně není, přidají se další listy obsahující 32 bajtů nul. Schematicky:
 
 ```
-        kořen hašového stromu
+kořen hashovacího stromu
             /     \
            /       \
           /         \
          /           \
-   haš listů     haš listů
-     1 a 2           3 a 4
+     hash listů      hash listů
+       1 a 2           3 a 4
       /   \            /  \
      /     \          /    \
     /       \        /      \
  list1     list2  list3     list4
 ```
 
-Existují také případy, kdy se listy stromu přirozeně nerozdělují rovnoměrně, jako tomu bylo v předchozím příkladu. Například list 4 by mohl být kontejner s více prvky, které vyžadují přidání další "hloubky" do Merkle tree, čímž se vytvoří nerovnoměrný strom.
+Existují také případy, kdy se listy stromu přirozeně nerozdělují rovnoměrně tak, jak je tomu ve výše uvedeném příkladu. Například list 4 by mohl být kontejner s více prvky, které vyžadují přidání další „hloubky“ do Merkleova stromu, čímž vznikne nerovnoměrný strom.
 
-Místo toho, abychom tyto prvky stromu označovali jako list X, uzel X atd., můžeme jim přiřadit zobecněné indexy, počínaje kořenem = 1 a číslováním zleva doprava na každé úrovni. Toto je zobecněný index, který jsme vysvětlili výše. Každý prvek v serializovaném seznamu má zobecněný index rovný `2**depth + idx`, kde idx je jeho pozice s indexem nula v serializovaném objektu a hloubka je počet úrovní v Merkle tree, který lze určit jako logaritmus počtu prvků (listů) při základu 2.
+Místo toho, abychom tyto prvky stromu označovali jako list X, uzel X atd., můžeme jim přiřadit zobecněné indexy, počínaje kořenem = 1 a počítáním zleva doprava v každé úrovni. Toto je zobecněný index vysvětlený výše. Každý prvek v serializovaném seznamu má zobecněný index rovný `2**depth + idx`, kde idx je jeho pozice v serializovaném objektu (indexováno od nuly) a hloubka (depth) je počet úrovní v Merkleově stromu, který lze určit jako logaritmus o základu dva z počtu prvků (listů).
 
 ## Zobecněné indexy {#generalized-indices}
 
-Zobecněný index je celé číslo, které představuje uzel v binárním Merkle tree, kde každý uzel má zobecněný index `2 ** depth + index in row`.
+Zobecněný index je celé číslo, které reprezentuje uzel v binárním Merkleově stromu, kde má každý uzel zobecněný index `2 ** depth + index in row`.
 
 ```
-        1           --hloubka = 0  2**0 + 0 = 1
+1           --hloubka = 0  2**0 + 0 = 1
     2       3       --hloubka = 1  2**1 + 0 = 2, 2**1+1 = 3
   4   5   6   7     --hloubka = 2  2**2 + 0 = 4, 2**2 + 1 = 5...
-
 ```
 
-Toto zobrazení poskytuje index uzlu pro každý datový prvek v Merkletree.
+Tato reprezentace poskytuje index uzlu pro každou část dat v Merkleově stromu.
 
-## Multiproofy {#multiproofs}
+## Multiproofs {#multiproofs}
 
-Poskytnutí seznamu zobecněných indexů představujících konkrétní prvek nám umožňuje jej ověřit vůči hašovému kořenovému stromu. Tento kořen je naším přijatým zobrazením reality. Jakákoli data, která nám jsou poskytnuta, mohou být ověřena vůči této realitě vložením do správného místa v Merkle tree (určeného jeho zobecněným indexem) a pozorováním, zda kořen zůstává konstantní. Ve specifikaci [zde](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) jsou funkce, které ukazují, jak vypočítat minimální sadu uzlů potřebnou k ověření obsahu konkrétní sady zobecněných indexů.
+Poskytnutí seznamu zobecněných indexů reprezentujících konkrétní prvek nám umožňuje ověřit jej vůči kořeni hashovacího stromu (hash-tree-root). Tento kořen je naší přijímanou verzí reality. Jakákoli data, která obdržíme, lze vůči této realitě ověřit tak, že je vložíme na správné místo v Merkleově stromu (určené jejich zobecněným indexem) a budeme sledovat, zda kořen zůstane konstantní. Ve specifikaci [zde](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) jsou funkce, které ukazují, jak vypočítat minimální sadu uzlů potřebnou k ověření obsahu konkrétní sady zobecněných indexů.
 
-Například k ověření dat na indexu 9 v níže uvedeném stromu potřebujeme haš dat na indexech 8, 9, 5, 3, 1.
-Haš (8,9) by měl být roven haši (4), který se hašuje s 5 a vytváří 2, který se hašuje s 3 a vytváří kořen stromu 1. Pokud by byla poskytnuta nesprávná data pro 9, kořen by se změnil – to bychom zjistili a ověření větve by selhalo.
+Například k ověření dat na indexu 9 ve stromu níže potřebujeme hash dat na indexech 8, 9, 5, 3, 1.
+Hash (8,9) by se měl rovnat hashi (4), který se hashuje s 5 a vytvoří 2, což se hashuje s 3 a vytvoří kořen stromu 1. Pokud by byla pro 9 poskytnuta nesprávná data, kořen by se změnil – zjistili bychom to a větev by se nepodařilo ověřit.
 
 ```
 * = data potřebná k vygenerování důkazu
@@ -138,13 +136,12 @@ Haš (8,9) by měl být roven haši (4), který se hašuje s 5 a vytváří 2, k
           2                      3*
     4          5*          6          7
 8*     9*   10    11   12    13    14    15
-
 ```
 
 ## Další čtení {#further-reading}
 
-- [Vylepšení Etherea: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-- [Vylepšení Etherea: Merkleizace](https://eth2book.info/altair/part2/building_blocks/merkleization)
+- [Aktualizace Etherea: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
+- [Aktualizace Etherea: Merkleizace](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Implementace SSZ](https://github.com/ethereum/consensus-specs/issues/2138)
 - [Kalkulačka SSZ](https://simpleserialize.com/)
 - [SSZ.dev](https://www.ssz.dev/)

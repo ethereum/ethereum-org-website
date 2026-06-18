@@ -1,78 +1,78 @@
 ---
-title: "Technický úvod do etheru"
-description: "Úvod ke kryptoměně ether pro vývojáře."
+title: Technický úvod do etheru
+description: Úvod do kryptoměny ether pro vývojáře.
 lang: cs
 ---
 
 ## Předpoklady {#prerequisites}
 
-Pro lepší porozumění této stránce vám doporučujeme si nejprve přečíst [Úvod do Etherea](/developers/docs/intro-to-ethereum/).
+Abychom vám pomohli lépe porozumět této stránce, doporučujeme si nejprve přečíst [Úvod do Etherea](/developers/docs/intro-to-ethereum/).
 
-## Co je kryptoměna? {#what-is-a-cryptocurrency}
+## Co je to kryptoměna? {#what-is-a-cryptocurrency}
 
-Kryptoměna je médium směny, které je zajištěno účetní knihou založenou na blockchainové technologii.
+Kryptoměna je prostředek směny zabezpečený účetní knihou založenou na blockchainu.
 
-Médium směny je cokoliv, co je široce přijímáno jako platba za zboží a služby, a účetní kniha je datové úložiště, které sleduje transakce. Blockchainová technologie umožňuje uživatelům provádět transakce v účetní knize bez nutnosti spoléhat se na důvěryhodnou třetí stranu, která by účetní knihu udržovala.
+Prostředek směny je cokoliv, co je široce přijímáno jako platba za zboží a služby, a účetní kniha je úložiště dat, které uchovává záznamy o transakcích. Technologie blockchain umožňuje uživatelům provádět transakce v účetní knize bez spoléhání se na důvěryhodnou třetí stranu, která by účetní knihu spravovala.
 
-První kryptoměnou byl Bitcoin, který vytvořil Satoshi Nakamoto. Od spuštění Bitcoinu v roce 2009 lidé vytvořili tisíce kryptoměn na různých blockchainech.
+První kryptoměnou byl Bitcoin, který vytvořil Satoshi Nakamoto. Od vydání Bitcoinu v roce 2009 lidé vytvořili tisíce kryptoměn na mnoha různých blockchainech.
 
-## Co je to ether? {#what-is-ether}
+## Co je ether? {#what-is-ether}
 
-**Ether (ETH)** je kryptoměna používaná k mnoha věcem v síti Ethereum. V zásadě je to jediná přijatelná forma platby za transakční poplatky a po [Sloučení](/roadmap/merge) je ether vyžadován k ověřování a navrhování bloků na hlavní síti. Ether se také používá jako primární forma kolaterálu na úvěrových trzích [DeFi](/defi), jako zúčtovací jednotka na NFT tržištích, jako platba za poskytnuté služby nebo prodej reálného zboží a tak dále.
+**Ether (ETH)** je kryptoměna používaná pro mnoho věcí v síti Ethereum. V zásadě je to jediná přijatelná forma platby za transakční poplatky a po [Merge](/roadmap/merge) je ether vyžadován k validaci a navrhování bloků na Mainnetu. Ether se také používá jako primární forma zajištění na trzích pro půjčování v rámci [decentralizovaných financí (DeFi)](/defi), jako zúčtovací jednotka na tržištích s NFT, jako platba získaná za poskytování služeb nebo prodej reálného zboží a další.
 
-Ethereum umožňuje vývojářům vytvářet [**decentralizované aplikace (dapps)**](/developers/docs/dapps), které všechny sdílejí společný výpočetní výkon. Tento sdílený fond je omezený, takže Ethereum potřebuje mechanismus, který určí, kdo ho může používat. Jinak by mohla dappka omylem nebo záměrně spotřebovat všechny síťové zdroje, což by znemožnilo přístup ostatním.
+Ethereum umožňuje vývojářům vytvářet [**decentralizované aplikace (dapp)**](/developers/docs/dapps), které všechny sdílejí fond výpočetního výkonu. Tento sdílený fond je konečný, takže Ethereum potřebuje mechanismus, který určí, kdo jej může využívat. Jinak by nějaká dapp mohla náhodně nebo zlomyslně spotřebovat všechny síťové zdroje, což by ostatním zablokovalo přístup.
 
-Kryptoměna ether podporuje mechanismus stanovení cen pro výpočetní výkon Etherea. Když uživatelé chtějí provést transakci, musí zaplatit etherem, aby byla jejich transakce na blockchainu uznána. Tyto náklady na použití jsou známé jako [poplatky za gas](/developers/docs/gas/) a poplatek za gas závisí na množství výpočetního výkonu potřebného k provedení transakce a na celosíťové poptávce po výpočetním výkonu v daném okamžiku.
+Kryptoměna ether podporuje cenový mechanismus pro výpočetní výkon Etherea. Když chtějí uživatelé provést transakci, musí zaplatit ether, aby byla jejich transakce na blockchainu uznána. Tyto náklady na používání jsou známé jako [poplatky za plyn](/developers/docs/gas/) a poplatek za plyn závisí na množství výpočetního výkonu potřebného k provedení transakce a na celosíťové poptávce po výpočetním výkonu v daném okamžiku.
 
-Proto, i když by škodlivá dappka odeslala nekonečnou smyčku, transakci by nakonec došel ether a byla by ukončena, což by umožnilo síti vrátit se do normálu.
+Proto i kdyby škodlivá dapp odeslala nekonečnou smyčku, transakci by nakonec došel ether a byla by ukončena, což by síti umožnilo vrátit se do normálu.
 
-Je [běžné zaměňovat](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum a ether — když lidé mluví o „ceně Etherea“, popisují cenu etheru.
+Je [běžné zaměňovat](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum a ether – když lidé mluví o „ceně Etherea“, popisují tím cenu etheru.
 
-## Ražba etheru {#minting-ether}
+## Ražení etheru {#minting-ether}
 
-Ražba je proces, při kterém je vytvořen nový ether v účetní knize Etherea. Základní protokol Etherea vytváří nový ether a není možné, aby ether vytvořil uživatel.
+Ražení je proces, při kterém se v účetní knize Etherea vytváří nový ether. Nový ether vytváří samotný protokol Ethereum a uživatel ether vytvořit nemůže.
 
-Ether se razí jako odměna za každý navržený blok a při každém epochálním kontrolním bodu za další činnosti validátorů související s dosažením konsenzu. Celkový počet vydaných etherů závisí na počtu validátorů a na tom, kolik etheru mají uzamčeno. Tento celkový výdej se rovnoměrně rozděluje mezi validátory v ideálním případě, kdy jsou všichni validátoři poctiví a online, ale ve skutečnosti se liší podle výkonu validátorů. Asi 1/8 celkového vydaného etheru jde navrhovateli bloku. Zbytek je rozdělen mezi ostatní validátory. Navrhovatelé bloků také dostávají spropitné z transakčních poplatků a příjmy související s MEV, ale tyto příjmy pocházejí z recyklovaného etheru, nikoli z nově vydaného.
+Ether se razí jako odměna za každý navržený blok a při každém kontrolním bodu epochy za další aktivitu validátorů související s dosahováním konsensu. Celková emitovaná částka závisí na počtu validátorů a na tom, kolik etheru mají ve staku. Tato celková emise se dělí rovným dílem mezi validátory v ideálním případě, kdy jsou všichni validátoři poctiví a online, ale ve skutečnosti se liší na základě výkonu validátorů. Přibližně 1/8 celkové emise jde navrhovateli bloku; zbytek se rozdělí mezi ostatní validátory. Navrhovatelé bloků také dostávají spropitné z transakčních poplatků a příjmů souvisejících s MEV, ale ty pocházejí z recyklovaného etheru, nikoli z nové emise.
 
-## Pálení etheru {#burning-ether}
+## Spalování etheru {#burning-ether}
 
-Kromě vytváření etheru prostřednictvím odměn za bloky může být ether také zničen procesem zvaným „pálení“. Když se ether spálí, je trvale odstraněn z oběhu.
+Stejně jako lze ether vytvářet prostřednictvím odměn za bloky, může být ether zničen procesem zvaným „spalování“. Když se ether spálí, je trvale stažen z oběhu.
 
-K pálení etheru dochází při každé transakci na Ethereu. Když uživatelé platí za transakce, základní poplatek za palivo, který je stanoven sítí podle poptávky po transakcích, je zničen. Tento proces, ve spojení s proměnlivými velikostmi bloků a maximálním poplatkem za palivo, zjednodušuje odhad poplatků za transakce na Ethereu. Když je poptávka v síti vysoká, mohou [bloky](https://eth.blockscout.com/block/22580057) spálit více etheru, než kolik vyrazí, což efektivně kompenzuje vydávání etheru.
+Ke spalování etheru dochází při každé transakci na Ethereu. Když uživatelé platí za své transakce, základní poplatek za plyn, který síť stanoví podle transakční poptávky, je zničen. To ve spojení s proměnlivými velikostmi bloků a maximálním poplatkem za plyn zjednodušuje odhad transakčních poplatků na Ethereu. Když je poptávka v síti vysoká, [bloky](https://eth.blockscout.com/block/22580057) mohou spálit více etheru, než kolik ho vyrazí, což efektivně kompenzuje emisi etheru.
 
-Pálení základního poplatku omezuje schopnost producenta bloku manipulovat s transakcemi. Např. kdyby producenti bloků dostávali základní poplatek, mohli by zahrnout své vlastní transakce zdarma a zvýšit základní poplatek pro všechny ostatní. Alternativně by mohli vrátit základní poplatek některým uživatelům mimo blockchain, což by vedlo k méně transparentnímu a složitějšímu trhu s transakčními poplatky.
+Spálení základního poplatku ztěžuje tvůrcům bloků možnost manipulovat s transakcemi. Pokud by například tvůrci bloků dostávali základní poplatek, mohli by zahrnout své vlastní transakce zdarma a zvýšit základní poplatek pro všechny ostatní. Alternativně by mohli základní poplatek některým uživatelům vrátit offchain, což by vedlo k neprůhlednějšímu a složitějšímu trhu s transakčními poplatky.
 
-## Jednotky etheru {#denominations}
+## Nominální hodnoty etheru {#denominations}
 
-Protože hodnota mnoha transakcí na Ethereu je malá, ether má několik denominací, které mohou být použity jako menší účetní jednotky. Z těchto denominací jsou obzvláště důležité wei a gwei.
+Vzhledem k tomu, že hodnota mnoha transakcí na Ethereu je malá, má ether několik nominálních hodnot, které mohou být označovány jako menší zúčtovací jednotky. Z těchto nominálních hodnot jsou obzvláště důležité Wei a Gwei.
 
-Wei je nejmenší možná částka etheru a v důsledku toho budou mnohé technické implementace, jako například [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), zakládat všechny výpočty na wei.
+Wei je nejmenší možné množství etheru, a proto mnoho technických implementací, jako je [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), zakládá všechny výpočty na Wei.
 
-Gwei, zkratka pro giga-wei, se často používá k popisu nákladů na palivo na Ethereu.
+Gwei, zkratka pro giga-wei, se často používá k popisu nákladů na gas na Ethereu.
 
-| Denominace | Hodnota v etheru | Běžné použití                   |
-| ---------- | ---------------- | ------------------------------- |
-| Wei        | 10<sup>-18</sup> | Technické implementace          |
-| Gwei       | 10<sup>-9</sup>  | Srozumitelné poplatky za palivo |
+| Nominální hodnota | Hodnota v etheru | Běžné použití |
+| ------------ | ---------------- | ------------------------- |
+| Wei          | 10<sup>-18</sup> | Technické implementace |
+| Gwei         | 10<sup>-9</sup>  | Lidsky čitelné poplatky za plyn |
 
-## Převádění etheru {#transferring-ether}
+## Převod etheru {#transferring-ether}
 
-Každá transakce na Ethereu obsahuje pole `value`, které určuje množství etheru k převodu, denominované ve wei, k odeslání z adresy odesílatele na adresu příjemce.
+Každá transakce na Ethereu obsahuje pole `value`, které specifikuje množství etheru k převodu, vyjádřené ve Wei, které se má odeslat z adresy odesílatele na adresu příjemce.
 
-Pokud je adresa příjemce [chytrý kontrakt](/developers/docs/smart-contracts/), může být tento převedený ether použit k zaplacení gasu, když chytrý kontrakt spouští svůj kód.
+Pokud je adresou příjemce [chytrý kontrakt](/developers/docs/smart-contracts/), může být tento převedený ether použit k zaplacení za gas, když chytrý kontrakt spouští svůj kód.
 
 [Více o transakcích](/developers/docs/transactions/)
 
-## Zjišťování zůstatku etheru {#querying-ether}
+## Dotazování na ether {#querying-ether}
 
-Uživatelé mohou zjistit zůstatek etheru na jakémkoli [účtu](/developers/docs/accounts/) nahlédnutím do pole `balance` daného účtu, které ukazuje držený ether v nominální hodnotě wei.
+Uživatelé se mohou dotázat na zůstatek etheru na jakémkoli [účtu](/developers/docs/accounts/) prozkoumáním pole `balance` daného účtu, které ukazuje držbu etheru vyjádřenou ve Wei.
 
-[Etherscan](https://etherscan.io) a [Blockscout](https://eth.blockscout.com) jsou populární nástroje pro kontrolu zůstatků na adresách prostřednictvím webových aplikací. Například [tato stránka Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) ukazuje zůstatek Nadace Ethereum. Zůstatky účtů lze také zjistit pomocí peněženek nebo přímo pomocí vyslání požadavku na uzly.
+[Etherscan](https://etherscan.io) a [Blockscout](https://eth.blockscout.com) jsou oblíbené nástroje pro kontrolu zůstatků na adresách prostřednictvím webových aplikací. Například [tato stránka na Blockscoutu](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) ukazuje zůstatek pro Nadaci Ethereum. Zůstatky na účtech lze také zjišťovat pomocí peněženek nebo přímo odesíláním požadavků na uzly.
 
 ## Další čtení {#further-reading}
 
 - [Definice etheru a Etherea](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
-- [Bílá kniha Etherea](/whitepaper/): Původní návrh Etherea. Tento dokument obsahuje popis etheru a motivaci za jeho vytvořením.
-- [Kalkulačka gwei](https://www.alchemy.com/gwei-calculator): Použijte tuto kalkulačku gwei pro snadný převod mezi wei, gwei a etherem. Stačí zadat jakoukoliv částku ve wei, gwei nebo ETH a automaticky vypočítat konverzi.
+- [Bílá kniha Etherea](/whitepaper/): Původní návrh Etherea. Tento dokument obsahuje popis etheru a motivace k jeho vytvoření.
+- [Kalkulačka Gwei](https://www.alchemy.com/gwei-calculator): Použijte tuto kalkulačku Gwei ke snadnému převodu Wei, Gwei a etheru. Jednoduše zadejte jakékoli množství Wei, Gwei nebo ETH a automaticky vypočítejte převod.
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_

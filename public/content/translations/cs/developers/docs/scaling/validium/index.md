@@ -1,157 +1,157 @@
 ---
 title: Validium
-description: "Úvod do Validia jako škálovacího řešení, které v současné době využívá komunita Etherea."
+description: Úvod do Validia jako řešení škálování, které v současnosti využívá komunita Etherea.
 lang: cs
 sidebarDepth: 3
 ---
 
-Validium je [škálovací řešení](/developers/docs/scaling/), které zajišťuje integritu transakcí pomocí důkazů o platnosti, podobně jako [ZK-rollupy](/developers/docs/scaling/zk-rollups/), ale neukládá transakční data na Ethereum Mainnet. Ačkoli dostupnost dat off-chain přináší kompromisy, může vést k masivnímu zlepšení škálovatelnosti (validia mohou zpracovat [~9 000 transakcí za sekundu nebo více](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium je [řešení škálování](/developers/docs/scaling/), které vynucuje integritu transakcí pomocí důkazů platnosti podobně jako [ZK-rollupy](/developers/docs/scaling/zk-rollups/), ale neukládá transakční data na [Ethereum](/) Mainnet. Ačkoli offchain dostupnost dat přináší určité kompromisy, může vést k masivnímu zlepšení škálovatelnosti (Validia mohou zpracovat [~9 000 transakcí nebo více za sekundu](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Předpoklady {#prerequisites}
 
-Měli byste si přečíst a pochopit naši stránku o [škálování Etherea](/developers/docs/scaling/) a [vrstvě 2](/layer-2).
+Měli byste si přečíst a porozumět naší stránce o [škálování Etherea](/developers/docs/scaling/) a [vrstvě 2 (l2)](/layer-2).
 
-## Co je to validium? {#what-is-validium}
+## Co je Validium? {#what-is-validium}
 
-Validia jsou škálovací řešení, která využívají off-chain dostupnost dat a výpočty navržené ke zlepšení propustnosti zpracováním transakcí mimo Ethereum Mainnet. Stejně jako rollupy s nulovou znalostí (ZK-rollupy), validia zveřejňují [důkazy s nulovou znalostí](/glossary/#zk-proof) k ověření off-chain transakcí na Ethereu. Tím se zabraňuje neplatným změnám stavu a zvyšují se bezpečnostní záruky řetězce typu validium.
+Validia jsou řešení škálování, která využívají offchain dostupnost dat a výpočty navržené ke zlepšení propustnosti zpracováním transakcí mimo Ethereum Mainnet. Stejně jako rollupy s nulovým vědomím (ZK-rollupy), Validia publikují [důkazy s nulovou znalostí](/glossary/#zk-proof) k ověření offchain transakcí na Ethereu. To zabraňuje neplatným přechodům stavu a zvyšuje bezpečnostní záruky řetězce Validia.
 
-Tyto „důkazy o platnosti“ mohou mít podobu ZK-SNARKů (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) nebo ZK-STARKů (Zero-Knowledge Scalable Transparent Argument of Knowledge). Více o [důkazech s nulovou znalostí](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
+Tyto „důkazy platnosti“ mohou mít podobu ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) nebo ZK-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge). Více o [důkazech s nulovou znalostí](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
 
-Prostředky patřící uživatelům validia jsou spravovány smart kontraktem na Ethereu. Validia nabízejí téměř okamžité výběry, podobně jako ZK-rollupy; jakmile je důkaz o platnosti žádosti o výběr ověřen na Mainnetu, uživatelé mohou vybrat prostředky poskytnutím [Merkleho důkazů](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). Merkleho důkaz ověřuje zahrnutí výběrové transakce uživatele do ověřeného balíku transakcí, což umožňuje on-chain kontraktu zpracovat výběr.
+Prostředky patřící uživatelům Validia jsou řízeny chytrým kontraktem na Ethereu. Validia nabízejí téměř okamžité výběry, podobně jako ZK-rollupy; jakmile je důkaz platnosti pro žádost o výběr ověřen na Mainnetu, uživatelé mohou vybrat prostředky poskytnutím [Merkleových důkazů](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). Merkleův důkaz ověřuje zahrnutí uživatelovy transakce výběru do ověřené dávky transakcí, což umožňuje onchain kontraktu zpracovat výběr.
 
-Nicméně uživatelé validia mohou mít své prostředky zmrazené a výběry omezené. To se může stát, pokud správci dostupnosti dat na validiovém řetězci zadrží off-chain stavová data od uživatelů. Bez přístupu k transakčním datům nemohou uživatelé vytvořit Merkle důkaz potřebný k prokázání vlastnictví prostředků a k provedení výběru.
+Uživatelům Validia však mohou být jejich prostředky zmrazeny a výběry omezeny. K tomu může dojít, pokud správci dostupnosti dat v řetězci Validia zatají uživatelům offchain data o stavu. Bez přístupu k transakčním datům nemohou uživatelé vypočítat Merkleův důkaz potřebný k prokázání vlastnictví prostředků a provedení výběrů.
 
-Toto je hlavní rozdíl mezi validiem a ZK-rollupy – jejich pozice na spektru dostupnosti dat. Obě řešení přistupují k ukládání dat odlišně, což má dopady na bezpečnost a nezávislost na důvěře.
+To je hlavní rozdíl mezi Validii a ZK-rollupy – jejich pozice ve spektru dostupnosti dat. Obě řešení přistupují k ukládání dat odlišně, což má důsledky pro bezpečnost a bezdůvěrnost.
 
-## Jak validia interagují s Ethereem? {#how-do-validiums-interact-with-ethereum}
+## Jak Validia interagují s Ethereem? {#how-do-validiums-interact-with-ethereum}
 
-Validia jsou škálovací protokoly postavené na stávajícím řetězci Etherea. Ačkoli provádí transakce off-chain, validiový řetězec je spravován sadou chytrých kontraktů nasazených na Mainnetu, včetně:
+Validia jsou protokoly pro škálování postavené nad existujícím řetězcem Etherea. Ačkoli provádí transakce offchain, řetězec Validia je spravován sadou chytrých kontraktů nasazených na Mainnetu, včetně:
 
-1. **Ověřovací kontrakt**: Ověřovací kontrakt ověřuje platnost důkazů předložených operátorem validia při provádění aktualizací stavu. To zahrnuje důkazy o platnosti potvrzující správnost off-chain transakcí a důkazy o dostupnosti dat, které ověřují existenci off-chain transakčních dat.
+1. **Kontrakt ověřovatele**: Kontrakt ověřovatele ověřuje platnost důkazů předložených operátorem Validia při provádění aktualizací stavu. To zahrnuje důkazy platnosti potvrzující správnost offchain transakcí a důkazy dostupnosti dat ověřující existenci offchain transakčních dat.
 
-2. **Hlavní kontrakt**: Hlavní kontrakt ukládá závazky ke stavu (Merkleho kořeny) předložené producenty bloků a aktualizuje stav validia, jakmile je on-chain ověřen důkaz o platnosti. Tento kontrakt také zpracovává vklady a výběry z validiového řetězce.
+2. **Hlavní kontrakt**: Hlavní kontrakt ukládá závazky stavu (Merkleho kořeny) předložené producenty bloků a aktualizuje stav Validia, jakmile je důkaz platnosti ověřen onchain. Tento kontrakt také zpracovává vklady do řetězce Validia a výběry z něj.
 
-Validia se spoléhají na hlavní vrstvu Etherea v následujících bodech:
+Validia se také spoléhají na hlavní řetězec Etherea v následujících ohledech:
 
 ### Vypořádání {#settlement}
 
-Transakce provedené na validiu nemohou být plně potvrzeny, dokud rodičovský řetězec neověří jejich platnost. Veškeré obchodní transakce provedené na validiu musí být nakonec vypořádány na Mainnetu. Blockchain Etherea také poskytuje „záruky vypořádání“ pro uživatele validia, což znamená, že off-chain transakce nemohou být zvráceny nebo změněny, jakmile jsou potvrzeny on-chain.
+Transakce provedené ve Validiu nemohou být plně potvrzeny, dokud nadřazený řetězec neověří jejich platnost. Veškerá činnost prováděná ve Validiu musí být nakonec vypořádána na Mainnetu. Blockchain Etherea také poskytuje uživatelům Validia „záruky vypořádání“, což znamená, že offchain transakce nemohou být zvráceny nebo změněny, jakmile jsou zapsány onchain.
 
 ### Bezpečnost {#security}
 
-Ethereum, které funguje jako vrstva sloužící k vypořádání, také zaručuje platnost přechodů stavu na validiu. Off-chain transakce provedené na validiovém řetězci jsou ověřovány prostřednictvím chytrého kontraktu na základní vrstvě Etherea.
+Ethereum, fungující jako vrstva vypořádání, také zaručuje platnost přechodů stavu ve Validiu. Offchain transakce provedené v řetězci Validia jsou ověřovány prostřednictvím chytrého kontraktu na základní vrstvě Etherea.
 
-Pokud on-chain ověřovací kontrakt shledá důkaz neplatným, jsou transakce zamítnuty. To znamená, že operátoři musí splnit podmínky platnosti vynucené protokolem Etherea před aktualizací stavu validia.
+Pokud onchain kontrakt ověřovatele vyhodnotí důkaz jako neplatný, transakce jsou zamítnuty. To znamená, že operátoři musí splnit podmínky platnosti vynucované protokolem Etherea před aktualizací stavu Validia.
 
-## Jak validium funguje? {#how-does-validium-work}
+## Jak Validium funguje? {#how-does-validium-work}
 
 ### Transakce {#transactions}
 
-Uživatelé předkládají transakce operátorovi, což je síťový uzel zodpovědný za provádění transakcí na validiu. Některá validia mohou používat k exekuci řetězce jediného operátora nebo se pro rotaci operátorů spoléhat na mechanismus [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos/).
+Uživatelé odesílají transakce operátorovi, což je uzel zodpovědný za provádění transakcí v řetězci Validia. Některá Validia mohou k provádění řetězce používat jediného operátora nebo se spoléhat na mechanismus [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos/) pro střídání operátorů.
 
-Operátor agreguje transakce do balíku a odešle je do ověřovacího okruhu k potvrzení. Ověřovací okruh přijme balík transakcí (a další relevantní data) jako vstupy a výstupem je důkaz o platnosti, který ověřuje, že operace byly provedeny správně.
+Operátor agreguje transakce do dávky a odešle ji do dokazovacího obvodu k prokázání. Dokazovací obvod přijme dávku transakcí (a další relevantní data) jako vstupy a na výstupu vygeneruje důkaz platnosti ověřující, že operace byly provedeny správně.
 
 ### Závazky stavu {#state-commitments}
 
-Stav validia je hašován jako Merkle tree s kořenem uloženým v hlavním kontraktu na Ethereu. Merkle kořen, známý také jako kořen stavu, funguje jako kryptografický závazek k aktuálnímu stavu účtů a zůstatků na validiu.
+Stav Validia je zahašován jako Merkleův strom s kořenem uloženým v hlavním kontraktu na Ethereu. Merkleho kořen, známý také jako kořen stavu, funguje jako kryptografický závazek k aktuálnímu stavu účtů a zůstatků ve Validiu.
 
-Pro provedení aktualizace stavu musí operátor vypočítat nový kořen stavu (po provedení transakcí) a předložit ho on-chain kontraktu. Pokud je důkaz o platnosti ověřen, navrhovaný stav je přijat a validium přepne na nový kořen stavu.
+K provedení aktualizace stavu musí operátor vypočítat nový kořen stavu (po provedení transakcí) a odeslat jej do onchain kontraktu. Pokud je důkaz platnosti v pořádku, navrhovaný stav je přijat a Validium přejde na nový kořen stavu.
 
 ### Vklady a výběry {#deposits-and-withdrawals}
 
-Uživatelé přesouvají prostředky z Etherea na validium vložením ETH (nebo jakéhokoli tokenu kompatibilního s ERC) do on-chain kontraktu. Kontrakt přenese událost vkladu na validium off-chain, kde je na adresu uživatele připsána částka odpovídající jeho vkladu. Operátor také zahrne tuto vkladovou transakci do nového balíku.
+Uživatelé přesouvají prostředky z Etherea do Validia vložením ETH (nebo jakéhokoli ERC kompatibilního tokenu) do onchain kontraktu. Kontrakt předá událost vkladu do Validia offchain, kde je na adresu uživatele připsána částka rovnající se jeho vkladu. Operátor také zahrne tuto transakci vkladu do nové dávky.
 
-Pro přesun prostředků zpět na Mainnet zahájí uživatel validia transakci výběru a předloží ji operátorovi, který ověří žádost o výběr a zahrne ji do balíku. Aktiva uživatele na validiu jsou zničena, dříve než mohou opustit systém. Jakmile je důkaz o platnosti spojený s balíkem ověřen, uživatel může zavolat hlavní kontrakt a vybrat zbytek svého původního vkladu.
+Pro přesun prostředků zpět na Mainnet iniciuje uživatel Validia transakci výběru a odešle ji operátorovi, který žádost o výběr ověří a zahrne ji do dávky. Aktiva uživatele v řetězci Validia jsou také zničena, než mohou opustit systém. Jakmile je důkaz platnosti spojený s dávkou ověřen, uživatel může zavolat hlavní kontrakt a vybrat zbytek svého původního vkladu.
 
-Jako mechanismus proti cenzuře umožňuje validiový protokol uživatelům vybírat přímo z validiového kontraktu bez použití operátora. V tomto případě musí uživatelé poskytnout Merkle důkaz ověřovacímu kontraktu, který prokazuje zahrnutí účtu do kořene stavu. Pokud je důkaz přijat, uživatel může zavolat funkci pro výběr z hlavního kontraktu a vybrat své prostředky z validia.
+Jako mechanismus proti cenzuře umožňuje protokol Validia uživatelům vybírat přímo z kontraktu Validia, aniž by museli jít přes operátora. V tomto případě musí uživatelé poskytnout Merkleův důkaz kontraktu ověřovatele, který prokazuje zahrnutí účtu do kořene stavu. Pokud je důkaz přijat, uživatel může zavolat funkci výběru hlavního kontraktu a vybrat své prostředky z Validia.
 
-### Dávkové odesílání {#batch-submission}
+### Odeslání dávky {#batch-submission}
 
-Po exekuci balíčku transakcí předloží operátor přidružený důkaz o platnosti ověřovacímu kontraktu a navrhne nový kořen stavu hlavnímu kontraktu. Pokud je důkaz platný, hlavní kontrakt aktualizuje stav validia a finalizuje výsledky transakcí v balíku.
+Po provedení dávky transakcí operátor odešle přidružený důkaz platnosti kontraktu ověřovatele a navrhne nový kořen stavu hlavnímu kontraktu. Pokud je důkaz platný, hlavní kontrakt aktualizuje stav Validia a finalizuje výsledky transakcí v dávce.
 
-Na rozdíl od ZK-rollupu nejsou producenti bloků na validiu povinni zveřejňovat transakční data pro balíky transakcí (pouze záhlaví bloků). To dělá z validia čistě off-chain škálovací protokol, na rozdíl od „hybridních“ škálovacích protokolů (tj. [vrstva 2](/layer-2/)), které zveřejňují stavová data na hlavním řetězci Etherea pomocí dat typu blob, `calldata`, nebo jejich kombinací.
+Na rozdíl od ZK-rollupu nejsou producenti bloků ve Validiu povinni publikovat transakční data pro dávky transakcí (pouze hlavičky bloků). To dělá z Validia čistě offchain protokol pro škálování, na rozdíl od „hybridních“ protokolů pro škálování (tj. [vrstva 2 (l2)](/layer-2/)), které publikují data o stavu na hlavním řetězci Etherea pomocí blob dat, `calldata` nebo kombinace obojího.
 
 ### Dostupnost dat {#data-availability}
 
-Jak už jsme zmínili, validia využívají off-chain model dostupnosti dat, kde operátoři ukládají veškerá transakční data mimo Ethereum Mainnet. Nízká on-chain datová stopa validia zlepšuje škálovatelnost (propustnost není omezena kapacitou zpracování dat Etherea) a snižuje poplatky uživatelů (náklady na publikování dat on-chain jsou nižší).
+Jak již bylo zmíněno, Validia využívají model offchain dostupnosti dat, kde operátoři ukládají všechna transakční data mimo Ethereum Mainnet. Nízká onchain datová stopa Validia zlepšuje škálovatelnost (propustnost není omezena kapacitou zpracování dat Etherea) a snižuje uživatelské poplatky (náklady na publikování dat onchain jsou nižší).
 
-Off-chain dostupnost dat však představuje problém: data nezbytná k vytvoření nebo ověření Merkleho důkazů mohou být nedostupná. To znamená, že uživatelé nemusí být schopni vybrat prostředky z on-chain kontraktu, pokud by operátoři jednali se zlým úmyslem.
+Offchain dostupnost dat však představuje problém: data nezbytná pro vytvoření nebo ověření Merkleových důkazů mohou být nedostupná. To znamená, že uživatelé by nemuseli být schopni vybrat prostředky z onchain kontraktu, pokud by operátoři jednali zlomyslně.
 
-Různá řešení validií se pokoušejí tento problém vyřešit decentralizací úložiště stavových dat. Spočívá to v donucení producentů bloků posílat podkladová data „správcům dostupnosti dat“, kteří jsou odpovědní za ukládání off-chain dat a jejich zpřístupnění uživatelům na vyžádání.
+Různá řešení Validia se pokoušejí tento problém vyřešit decentralizací ukládání dat o stavu. To zahrnuje donucení producentů bloků odesílat podkladová data „správcům dostupnosti dat“, kteří jsou zodpovědní za ukládání offchain dat a jejich zpřístupnění uživatelům na vyžádání.
 
-Správci dostupnosti dat ve validiu potvrzují dostupnost dat pro off-chain transakce tím, že podepisují každý balík validia. Tyto podpisy představují formu „důkazu dostupnosti“, který on-chain ověřovací kontrakt kontroluje před schválením aktualizací stavu.
+Správci dostupnosti dat ve Validiu potvrzují dostupnost dat pro offchain transakce podepisováním každé dávky Validia. Tyto podpisy tvoří formu „důkazu dostupnosti“, kterou onchain kontrakt ověřovatele kontroluje před schválením aktualizací stavu.
 
-Validia se liší v přístupu ke správě dostupnosti dat. Některá se spoléhají na důvěryhodné strany pro ukládání stavových dat, zatímco jiná využívají náhodně přidělené validátory.
+Validia se liší ve svém přístupu ke správě dostupnosti dat. Některá se spoléhají na důvěryhodné strany při ukládání dat o stavu, zatímco jiná k tomuto úkolu používají náhodně přiřazené validátory.
 
-#### Komise pro dostupnost dat (DAC) {#data-availability-committee}
+#### Výbor pro dostupnost dat (DAC) {#data-availability-committee}
 
-Pro zajištění dostupnosti off-chain dat jmenují některá validiová řešení skupinu důvěryhodných subjektů, společně známou jako komise pro dostupnost dat (DAC), která ukládá kopie stavu a poskytuje důkazy o dostupnosti dat. DAC jsou snazší na implementaci a vyžadují méně koordinace, protože členství je omezené.
+K zaručení dostupnosti offchain dat některá řešení Validia jmenují skupinu důvěryhodných subjektů, souhrnně známou jako výbor pro dostupnost dat (DAC), aby ukládala kopie stavu a poskytovala důkaz o dostupnosti dat. DAC se snáze implementují a vyžadují méně koordinace, protože počet členů je nízký.
 
-Uživatelé však musí věřit DAC, že data budou k dispozici, když budou potřeba (např. pro generování Merkle důkazů). Existuje možnost, že členové komisí pro dostupnost dat [budou kompromitováni útočníkem](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view), který pak může zadržovat off-chain data.
+Uživatelé však musí důvěřovat DAC, že data zpřístupní, když to bude potřeba (např. pro generování Merkleových důkazů). Existuje možnost, že členové výborů pro dostupnost dat [budou kompromitováni zlomyslným aktérem](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view), který pak může zatajit offchain data.
 
-[Více o komisích pro dostupnost dat ve validiích](https://medium.com/starkware/data-availability-e5564c416424).
+[Více o výborech pro dostupnost dat ve Validiích](https://medium.com/starkware/data-availability-e5564c416424).
 
-#### Vázaná dostupnost dat {#bonded-data-availability}
+#### Dostupnost dat s kaucí {#bonded-data-availability}
 
-Jiná validia vyžadují, aby účastníci zodpovědní za ukládání offline dat před převzetím své role zastavili (tj. uzamkli) tokeny ve smart kontraktu. Tento stake slouží jako „závazek“ k zajištění čestného chování mezi správci dostupnosti dat a snižuje potřebu důvěry. Pokud tito účastníci nedokážou prokázat dostupnost dat, jejich záloha se zmenší.
+Jiná Validia vyžadují, aby účastníci pověření ukládáním offline dat vložili stake (tj. uzamkli) tokeny v chytrém kontraktu, než převezmou své role. Tento stake slouží jako „kauce“ k zaručení poctivého chování mezi správci dostupnosti dat a snižuje předpoklady důvěry. Pokud tito účastníci neprokážou dostupnost dat, kauce je penalizována.
 
-V rámci schématu vázané dostupnosti dat může být kdokoli pověřen držením off-chain dat, pokud poskytne požadovaný stake. To rozšiřuje okruh způsobilých správců dostupnosti dat a snižuje centralizaci, která ovlivňuje komisi pro dostupnost dat (DAC). Důležitější je, že tento přístup spoléhá na kryptoekonomické incentivy, které brání podvodné aktivitě, což je podstatně bezpečnější než jmenování důvěryhodných stran pro zajištění offline dat ve validiu.
+Ve schématu dostupnosti dat s kaucí může být kdokoli pověřen uchováváním offchain dat, jakmile poskytne požadovaný stake. To rozšiřuje okruh způsobilých správců dostupnosti dat a snižuje centralizaci, která ovlivňuje výbory pro dostupnost dat (DAC). A co je důležitější, tento přístup se spoléhá na kryptoekonomické pobídky k prevenci zlomyslné aktivity, což je podstatně bezpečnější než jmenování důvěryhodných stran k zabezpečení offline dat ve Validiu.
 
-[Více o vázané dostupnosti dat ve validiích](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
+[Více o dostupnosti dat s kaucí ve Validiích](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
 
-## Volitions a validium {#volitions-and-validium}
+## Volitions a Validium {#volitions-and-validium}
 
-Validium nabízí mnoho výhod, ale přináší i kompromisy (nejvýrazněji v oblasti dostupnosti dat). Stejně jako u mnoha škálovacích řešení je validium vhodné pro specifické případy použití – právě proto byla vytvořena volitia.
+Validia nabízejí mnoho výhod, ale přinášejí s sebou kompromisy (nejvýrazněji dostupnost dat). Ale stejně jako u mnoha řešení škálování jsou Validia vhodná pro specifické případy použití – a proto byly vytvořeny volitions.
 
-Volitia kombinují ZK-rollup a validiový řetězec a umožňují uživatelům přepínat mezi těmito dvěma škálovacími řešeními. S volitiemi mohou uživatelé využívat off-chain dostupnosti dat validia pro určité transakce a přitom si zachovat možnost přepnout na on-chain dostupnost dat (ZK-rollup), pokud je to potřeba. To v podstatě dává uživatelům svobodu volby kompromisů, které odpovídají jejich jedinečným okolnostem.
+Volitions kombinují ZK-rollup a řetězec Validia a umožňují uživatelům přepínat mezi těmito dvěma řešeními škálování. S volitions mohou uživatelé využít offchain dostupnost dat Validia pro určité transakce, přičemž si zachovávají svobodu přepnout na řešení s onchain dostupností dat (ZK-rollup), pokud je to potřeba. To v podstatě dává uživatelům svobodu zvolit si kompromisy tak, jak to diktují jejich jedinečné okolnosti.
 
-Decentralizovaná burza (DEX) může preferovat použití škálovatelné a soukromé infrastruktury validia pro transakce s vysokou hodnotou. Může také použít ZK-rollup pro uživatele, kteří chtějí vyšší bezpečnostní záruky a nezávislost na důvěře, které ZK-rollup nabízí.
+Decentralizovaná burza (DEX) může preferovat použití škálovatelné a soukromé infrastruktury Validia pro obchody s vysokou hodnotou. Může také použít ZK-rollup pro uživatele, kteří chtějí vyšší bezpečnostní záruky a bezdůvěrnost ZK-rollupu.
 
 ## Validia a kompatibilita s EVM {#validiums-and-evm-compatibility}
 
-Stejně jako ZK-rollupy jsou validia většinou vhodná pro jednoduché aplikace, jako jsou směny tokenů a platby. Podpora obecných výpočtů a provádění chytrých kontraktů na validiích je obtížně implementovatelná vzhledem ke značné režii při dokazování instrukcí [EVM](/developers/docs/evm/) v důkazním okruhu s nulovou znalostí.
+Stejně jako ZK-rollupy jsou Validia většinou vhodná pro jednoduché aplikace, jako jsou swapy tokenů a platby. Podpora obecných výpočtů a provádění chytrých kontraktů mezi Validii je obtížně implementovatelná vzhledem ke značné režii dokazování instrukcí [EVM](/developers/docs/evm/) v obvodu důkazu s nulovou znalostí.
 
-Některé validiové projekty se pokoušejí tento problém obejít kompilací jazyků kompatibilních s EVM (např. Solidity, Vyper) do vytváření vlastního bytecode optimalizovaného pro efektivní ověřování. Nevýhodou tohoto přístupu je, že nové virtuální stroje přátelské k důkazům s nulovou znalostí nemusí podporovat důležité opkódy EVM a vývojáři musí psát přímo v high-level jazyce. To vytváří ještě více problémů: Nutí vývojáře stavět dappky s úplně novým vývojovým stackem a narušuje kompatibilitu se stávající infrastrukturou Etherea.
+Některé projekty Validia se pokoušejí tento problém obejít kompilací jazyků kompatibilních s EVM (např. Solidity, Vyper) do vlastního bajtkódu optimalizovaného pro efektivní dokazování. Nevýhodou tohoto přístupu je, že nové virtuální stroje (VM) přátelské k důkazům s nulovou znalostí nemusí podporovat důležité EVM opkódy a vývojáři musí psát přímo ve vysokoúrovňovém jazyce pro optimální zážitek. To vytváří ještě více problémů: nutí to vývojáře budovat decentralizované aplikace (dapps) se zcela novým vývojovým stackem a narušuje to kompatibilitu se současnou infrastrukturou Etherea.
 
-Některé týmy se však pokoušejí optimalizovat stávající opkódy EVM pro ZK-důkazní kruhy. To povede k vývoji virtuálního stroje Etherea s nulovou znalostí (zkEVM), virtuálního stroje kompatibilního s EVM, který generuje důkazy pro ověření správnosti exekuce programů. Se zkEVM mohou validiové řetězce provádět chytré kontrakty off-chain a předkládat důkazy o platnosti k ověření off-chain výpočtů (bez nutnosti je znovu provádět) na Ethereu.
+Některé týmy se však pokoušejí optimalizovat stávající EVM opkódy pro ZK dokazovací obvody. To povede k vývoji virtuálního stroje Etherea s nulovým vědomím (zkEVM), virtuálního stroje kompatibilního s EVM, který produkuje důkazy k ověření správnosti provádění programu. S zkEVM mohou řetězce Validia provádet chytré kontrakty offchain a odesílat důkazy platnosti k ověření offchain výpočtu (aniž by jej musely znovu provádět) na Ethereu.
 
 [Více o zkEVM](https://www.alchemy.com/overviews/zkevm).
 
-## Jak validia škálují Ethereum? {#scaling-ethereum-with-validiums}
+## Jak Validia škálují Ethereum? {#scaling-ethereum-with-validiums}
 
-### 1. Off-chain úložiště dat {#offchain-data-storage}
+### 1. Offchain ukládání dat {#offchain-data-storage}
 
-Škálovací projekty vrstvy 2, jako jsou optimistické rollupy a ZK-rollupy, vyměňují nekonečnou škálovatelnost čistě off-chain škálovacích protokolů (např. [Plasma](/developers/docs/scaling/plasma/)) za bezpečnost tím, že publikují některá transakční data na L1. To však znamená, že škálovatelnost rollupů je omezena šířkou pásma dat na Ethereum Mainnetu ([sharding dat](/roadmap/danksharding/) si z tohoto důvodu klade za cíl zlepšit kapacitu úložiště dat Etherea).
+Projekty škálování na vrstvě 2 (l2), jako jsou optimistické rollupy a ZK-rollupy, vyměňují nekonečnou škálovatelnost čistě offchain protokolů pro škálování (např. [Plasma](/developers/docs/scaling/plasma/)) za bezpečnost tím, že publikují některá transakční data na vrstvě 1 (l1). To ale znamená, že vlastnosti škálovatelnosti rollupů jsou omezeny datovou propustností na Ethereum Mainnetu (z tohoto důvodu navrhuje [datový sharding](/roadmap/danksharding/) zlepšit kapacitu ukládání dat Etherea).
 
-Validia dosahují škálovatelnosti tím, že udržují všechna transakční data off-chain a publikují pouze závazky stavu (a důkazy o platnosti) při přenosu aktualizací stavu na hlavní řetězec Etherea. Existence důkazů o platnosti však dává validiím vyšší bezpečnostní záruky než jiná čistě off-chain škálovací řešení, včetně Plasmy a [sidechainů](/developers/docs/scaling/sidechains/). Snížením množství dat, která musí Ethereum zpracovat před ověřením off-chain transakcí, validiové návrhy výrazně zvyšují propustnost na Mainnetu.
+Validia dosahují škálovatelnosti tím, že udržují všechna transakční data offchain a zveřejňují pouze závazky stavu (a důkazy platnosti) při předávání aktualizací stavu do hlavního řetězce Etherea. Existence důkazů platnosti však dává Validiím vyšší bezpečnostní záruky než jiným čistě offchain řešením škálování, včetně Plasmy a [postranních řetězců (sidechains)](/developers/docs/scaling/sidechains/). Snížením množství dat, která musí Ethereum zpracovat před ověřením offchain transakcí, návrhy Validia výrazně rozšiřují propustnost na Mainnetu.
 
 ### 2. Rekurzivní důkazy {#recursive-proofs}
 
-Rekurzivní důkaz je důkaz o platnosti, který ověřuje platnost jiných důkazů. Tyto „důkazy důkazů“ jsou generovány rekurzivním agregováním více důkazů, dokud není vytvořen jeden konečný důkaz, který ověřuje všechny předchozí důkazy. Rekurzivní důkazy škálují rychlost zpracování blockchainu tím, že zvyšují počet transakcí, které mohou být ověřeny na jeden důkaz o platnosti.
+Rekurzivní důkaz je důkaz platnosti, který ověřuje platnost jiných důkazů. Tyto „důkazy důkazů“ jsou generovány rekurzivní agregací více důkazů, dokud není vytvořen jeden konečný důkaz ověřující všechny předchozí důkazy. Rekurzivní důkazy škálují rychlost zpracování blockchainu zvýšením počtu transakcí, které lze ověřit na jeden důkaz platnosti.
 
-Obvykle každý důkaz o platnosti, který operátor validia předloží k ověření Ethereu, ověřuje integritu jednoho bloku. Na druhou stranu lze jeden rekurzivní důkaz použít k potvrzení platnosti několika bloků validia současně – je to možné, protože ověřovací okruh může rekurzivně agregovat několik blokových důkazů do jednoho konečného důkazu. Pokud on-chain ověřovací kontrakt přijme rekurzivní důkaz, všechny podkladové bloky jsou okamžitě finalizovány.
+Typicky každý důkaz platnosti, který operátor Validia odešle Ethereu k ověření, ověřuje integritu jednoho bloku. Zatímco jeden rekurzivní důkaz lze použít k potvrzení platnosti několika bloků Validia současně – to je možné, protože dokazovací obvod může rekurzivně agregovat několik důkazů bloků do jednoho konečného důkazu. Pokud onchain kontrakt ověřovatele přijme rekurzivní důkaz, všechny podkladové bloky jsou okamžitě finalizovány.
 
-## Výhody a nevýhody validia {#pros-and-cons-of-validium}
+## Výhody a nevýhody Validia {#pros-and-cons-of-validium}
 
-| Plusy                                                                                                                                                       | Minusy                                                                                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Důkazy o platnosti zajišťují integritu off-chain transakcí a zabraňují operátorům finalizovat neplatné aktualizace stavu.                   | Výroba důkazů o platnosti vyžaduje speciální hardware, což představuje riziko centralizace.                                                                              |
-| Zvyšuje efektivitu kapitálu pro uživatele (žádné zpoždění při výběru prostředků zpět na Ethereum).                       | Omezená podpora pro obecné výpočty a smart kontrakty; pro vývoj jsou nutné specializované jazyky.                                                                        |
-| Není náchylné k určitým ekonomickým útokům, kterým čelí systémy založené na důkazech podvodu u aplikací s vysokou hodnotou.                 | Vyžaduje vysoký výpočetní výkon pro generování ZK důkazů; není nákladově efektivní pro aplikace s nízkou propustností.                                                   |
-| Snižuje poplatky za palivo pro uživatele tím, že neposílá calldata na Ethereum Mainnet.                                                     | Pomalejší subjektivní finálnost (10–30 minut na vytvoření ZK důkazu), ale rychlejší k úplné finálnosti, protože při řešení sporů není žádné zpoždění. |
-| Vhodné pro specifické případy použití, jako je obchodování nebo blockchainové hry, které upřednostňují soukromí transakcí a škálovatelnost. | Uživatelé mohou mít zablokovaný výběr prostředků, protože generování Merkleho důkazů o vlastnictví vyžaduje, aby off-chain data byla dostupná po celou dobu.             |
-| Dostupnost dat off-chain poskytuje vyšší úroveň propustnosti a zvyšuje škálovatelnost.                                                      | Bezpečnostní model spoléhá na důvěru a kryptoekonomické incentivy, na rozdíl od ZK-rollupů, které se spoléhají čistě na kryptografické bezpečnostní mechanismy.          |
+| Výhody                                                                                                                     | Nevýhody                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Důkazy platnosti vynucují integritu offchain transakcí a brání operátorům ve finalizaci neplatných aktualizací stavu. | Vytváření důkazů platnosti vyžaduje speciální hardware, což představuje riziko centralizace.                                                              |
+| Zvyšuje kapitálovou efektivitu pro uživatele (žádná zpoždění při výběru prostředků zpět do Etherea).                                 | Omezená podpora pro obecné výpočty / chytré kontrakty; pro vývoj jsou vyžadovány specializované jazyky.                                             |
+| Není zranitelné vůči určitým ekonomickým útokům, kterým čelí systémy založené na důkazech podvodu v aplikacích s vysokou hodnotou.                | Vysoký výpočetní výkon potřebný ke generování ZK důkazů; není nákladově efektivní pro aplikace s nízkou propustností.                                         |
+| Snižuje poplatky za gas pro uživatele tím, že neodesílá data volání na Ethereum Mainnet.                                                  | Pomalejší doba subjektivní finality (10-30 min na vygenerování ZK důkazu), ale rychlejší dosažení plné finality, protože nedochází k časovému zpoždění kvůli sporům.               |
+| Vhodné pro specifické případy použití, jako je obchodování nebo blockchainové hry, které upřednostňují soukromí transakcí a škálovatelnost.  | Uživatelům může být zabráněno ve výběru prostředků, protože generování Merkleových důkazů vlastnictví vyžaduje, aby byla offchain data neustále k dispozici.      |
+| Offchain dostupnost dat poskytuje vyšší úroveň propustnosti a zvyšuje škálovatelnost.                              | Bezpečnostní model se spoléhá na předpoklady důvěry a kryptoekonomické pobídky, na rozdíl od ZK-rollupů, které se spoléhají čistě na kryptografické bezpečnostní mechanismy. |
 
-### Použití Validium/Volitions {#use-validium-and-volitions}
+### Použití Validia / Volitions {#use-validium-and-volitions}
 
-Několik projektů poskytuje implementace validia a volitia, které můžete integrovat do svých dapp:
+Více projektů poskytuje implementace Validia a volitions, které můžete integrovat do svých decentralizovaných aplikací (dapps):
 
-**StarkWare StarkEx** - _StarkEx je škálovací řešení pro Ethereum vrstvy 2 (L2), které je založeno na důkazech o platnosti. Může fungovat buď v ZK-Rollup, nebo validium režimu dostupnosti dat._
+**StarkWare StarkEx** - _StarkEx je řešení škálovatelnosti Etherea na vrstvě 2 (l2), které je založeno na důkazech platnosti. Může fungovat v režimech dostupnosti dat ZK-Rollup nebo Validium._
 
 - [Dokumentace](https://docs.starkware.co/starkex-v4/starkex-deep-dive/data-availability-modes#validium)
 - [Webové stránky](https://starkware.co/starkex/)
 
-**Matter Labs zkPorter**- _zkPorter je škálovací protokol vrstvy 2, který řeší dostupnost dat hybridním přístupem, který kombinuje myšlenky zkRollupu a shardingu. Může podporovat libovolný počet shardů, každý s vlastní politikou dostupnosti dat._
+**Matter Labs zkPorter** - _zkPorter je protokol pro škálování na vrstvě 2 (l2), který řeší dostupnost dat hybridním přístupem kombinujícím myšlenky zkRollupu a shardingu. Může podporovat libovolně mnoho shardů, z nichž každý má svou vlastní politiku dostupnosti dat._
 
 - [Blog](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
 - [Dokumentace](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
@@ -159,8 +159,7 @@ Několik projektů poskytuje implementace validia a volitia, které můžete int
 
 ## Další čtení {#further-reading}
 
-- [Validium a matice 2x2 vrstvy 2 — vydání č. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- [ZK-rollupy vs. Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
+- [Validium a vrstva 2 (l2) Two-By-Two — Vydání č. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
+- [ZK-rollupy vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volition a vznikající spektrum dostupnosti dat](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [Rollupy, validia a volitions: Poznejte nejžhavější řešení pro škálování Etherea](https://medium.com/coinmonks/rollups-vs-validiums-vs-volitions-d76300170f4a)
 - [Praktický průvodce rollupy na Ethereu](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

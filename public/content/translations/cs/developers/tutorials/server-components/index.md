@@ -1,56 +1,56 @@
 ---
 title: "Serverové komponenty a agenti pro web3 aplikace"
-description: "Po přečtení tohoto tutoriálu budete schopni psát TypeScript servery, které naslouchají událostem na blockchainu a odpovídajícím způsobem reagují vlastními transakcemi. To vám umožní psát centralizované aplikace (protože server je bodem selhání), které ale mohou interagovat s web3 entitami. Stejné techniky lze také použít k napsání agenta, který reaguje na události na blockchainu bez zásahu člověka."
+description: Po přečtení tohoto tutoriálu budete schopni psát servery v TypeScriptu, které naslouchají událostem na blockchainu a odpovídají na ně vlastními transakcemi. To vám umožní psát centralizované aplikace (protože server představuje bod selhání), které ale mohou komunikovat s web3 entitami. Stejné techniky lze použít i k napsání agenta, který reaguje na onchain události bez zásahu člověka.
 
 author: Ori Pomerantz
 lang: cs
-tags: [ "agent", "server", "offchain" ]
+tags: ["agent", "server", "offchain", "dapps"]
 skill: beginner
-breadcrumb: "Serverové komponenty"
+breadcrumb: Serverové komponenty
 published: 2024-07-15
 ---
 
 ## Úvod {#introduction}
 
-Ve většině případů decentralizovaná aplikace používá server k distribuci softwaru, ale veškerá skutečná interakce probíhá mezi klientem (obvykle webovým prohlížečem) a blockchainem.
+Ve většině případů používá decentralizovaná aplikace (dapp) server k distribuci softwaru, ale veškerá skutečná interakce probíhá mezi klientem (obvykle webovým prohlížečem) a blockchainem.
 
-![Normální interakce mezi webovým serverem, klientem a blockchainem](./fig-1.svg)
+![Normal interaction between web server, client, and blockchain](./fig-1.svg)
 
-Existují však případy, kdy by aplikaci prospěla serverová komponenta, která běží nezávisle. Takový server by byl schopen reagovat na události a na požadavky, které přicházejí z jiných zdrojů, jako je API, vydáváním transakcí.
+Existují však případy, kdy by pro aplikaci bylo přínosné mít serverovou komponentu, která běží nezávisle. Takový server by byl schopen reagovat na události a na požadavky z jiných zdrojů, jako je například API, vydáváním transakcí.
 
-![Interakce s přidaným serverem](./fig-2.svg)
+![The interaction with the addition of a server](./fig-2.svg)
 
 Existuje několik možných úkolů, které by takový server mohl plnit.
 
-- Držitel tajného stavu. Při hraní je často užitečné, aby hráči neměli k dispozici všechny informace, které hra zná. Nicméně, _na blockchainu neexistují žádná tajemství_, jakoukoli informaci, která je v blockchainu, může kdokoli snadno zjistit. Proto, pokud má být část stavu hry utajena, musí být uložena jinde (a případně nechat účinky tohoto stavu ověřit pomocí [důkazů s nulovou znalostí](/zero-knowledge-proofs)).
+- Držitel tajného stavu. Ve hrách je často užitečné, aby hráči neměli k dispozici všechny informace, které hra zná. Nicméně _na blockchainu neexistují žádná tajemství_, jakoukoli informaci, která je v blockchainu, může kdokoli snadno zjistit. Proto, pokud má být část herního stavu utajena, musí být uložena jinde (a případně mohou být účinky tohoto stavu ověřeny pomocí [důkazů s nulovým vědomím](/zero-knowledge-proofs)).
 
-- Centralizované orákulum. Pokud jsou sázky dostatečně nízké, externí server, který čte některé informace online a poté je zveřejňuje na řetězci, může být dostatečně dobrý na to, aby byl použit jako [orákulum](/developers/docs/oracles/).
+- Centralizované orákulum. Pokud jsou sázky dostatečně nízké, externí server, který čte nějaké informace online a poté je odesílá do řetězce, může být dostatečně dobrý pro použití jako [orákulum](/developers/docs/oracles/).
 
-- Agent. Na blockchainu se nic nestane bez transakce, která by to aktivovala. Server může jednat jménem uživatele a provádět akce, jako je [arbitráž](/developers/docs/mev/#mev-examples-dex-arbitrage), když se naskytne příležitost.
+- Agent. Na blockchainu se nic nestane bez transakce, která to aktivuje. Server může jednat jménem uživatele a provádět akce, jako je [arbitráž](/developers/docs/mev/#mev-examples-dex-arbitrage), když se naskytne příležitost.
 
 ## Ukázkový program {#sample-program}
 
-Ukázkový server si můžete prohlédnout [na GitHubu](https://github.com/qbzzt/20240715-server-component). Tento server naslouchá událostem pocházejícím z [tohoto kontraktu](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), upravené verze Hardhat Greeteru. Když se pozdrav změní, změní ho zpět.
+Ukázkový server si můžete prohlédnout [na GitHubu](https://github.com/qbzzt/20240715-server-component). Tento server naslouchá událostem přicházejícím z [tohoto kontraktu](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), což je upravená verze Greeteru z nástroje Hardhat. Když se pozdrav změní, změní ho zpět.
 
-Spustíte ho takto:
+Jak jej spustit:
 
-1. Naklonujte repozitář.
+1. Naklonujte si repozitář.
 
    ```sh copy
    git clone https://github.com/qbzzt/20240715-server-component.git
    cd 20240715-server-component
    ```
 
-2. Nainstalujte potřebné balíčky. Pokud jej ještě nemáte, [nainstalujte nejprve Node](https://nodejs.org/en/download/package-manager).
+2. Nainstalujte potřebné balíčky. Pokud jej ještě nemáte, [nainstalujte si nejprve Node.js](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Upravte soubor `.env` a zadejte soukromý klíč účtu, který má ETH na testnetu Holesky. Pokud nemáte ETH na Holesky, můžete [použít tento faucet](https://holesky-faucet.pk910.de/).
+3. Upravte `.env` a zadejte soukromý klíč účtu, který má ETH na testnetu Holesky. Pokud nemáte ETH na síti Holesky, můžete [použít tento faucet](https://holesky-faucet.pk910.de/).
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <zde vložte soukromý klíč>
+   PRIVATE_KEY=0x <private key goes here>
    ```
 
 4. Spusťte server.
@@ -59,17 +59,17 @@ Spustíte ho takto:
    npm start
    ```
 
-5. Přejděte do [prohlížeče bloků](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract) a pomocí jiné adresy, než je ta, ke které máte soukromý klíč, upravte pozdrav. Uvidíte, že pozdrav je automaticky změněn zpět.
+5. Přejděte do [prohlížeče bloků](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract) a pomocí jiné adresy, než je ta, která má soukromý klíč, upravte pozdrav. Uvidíte, že se pozdrav automaticky změní zpět.
 
-### Jak to funguje? Jak to funguje {#how-it-works}
+### Jak to funguje? {#how-it-works}
 
-Nejjednodušší způsob, jak pochopit, jak napsat serverovou komponentu, je projít si ukázku řádek po řádku.
+Nejjednodušší způsob, jak pochopit psaní serverové komponenty, je projít si ukázku řádek po řádku.
 
 #### `src/app.ts` {#src-app-ts}
 
-Drtivá většina programu je obsažena v [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
+Převážná většina programu je obsažena v [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Vytvoření nezbytných objektů
+##### Vytvoření nezbytných objektů {#package-json}
 
 ```typescript
 import {
@@ -81,19 +81,19 @@ import {
 } from "viem"
 ```
 
-Toto jsou entity [Viem](https://viem.sh/), které potřebujeme, funkce a [typ `Address`](https://viem.sh/docs/glossary/types#address). Tento server je napsán v [TypeScriptu](https://www.typescriptlang.org/), což je rozšíření JavaScriptu, které ho činí [silně typovaným](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
+Toto jsou entity [Viem](https://viem.sh/), které potřebujeme, funkce a [typ `Address`](https://viem.sh/docs/glossary/types#address). Tento server je napsán v jazyce [TypeScript](https://www.typescriptlang.org/), což je rozšíření jazyka JavaScript, které jej činí [silně typovaným](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
 ```
 
-[Tato funkce](https://viem.sh/docs/accounts/privateKey) nám umožňuje generovat informace o peněžence, včetně adresy, odpovídající soukromému klíči.
+[Tato funkce](https://viem.sh/docs/accounts/privateKey) nám umožňuje vygenerovat informace o peněžence, včetně adresy, odpovídající soukromému klíči.
 
 ```typescript
 import { holesky } from "viem/chains"
 ```
 
-Abyste mohli v Viem používat blockchain, musíte importovat jeho definici. V tomto případě se chceme připojit k testovacímu blockchainu [Holesky](https://github.com/eth-clients/holesky).
+Chcete-li ve Viem použít blockchain, musíte importovat jeho definici. V tomto případě se chceme připojit k testovacímu blockchainu [Holesky](https://github.com/eth-clients/holesky).
 
 ```typescript
 // Takto přidáváme definice z .env do process.env.
@@ -101,7 +101,7 @@ import * as dotenv from "dotenv"
 dotenv.config()
 ```
 
-Takto načítáme `.env` do prostředí. Potřebujeme to pro soukromý klíč (viz dále).
+Tímto způsobem načteme `.env` do prostředí. Potřebujeme to pro soukromý klíč (viz dále).
 
 ```typescript
 const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
@@ -136,9 +136,9 @@ const greeterABI = [
 ] as const
 ```
 
-Pro použití kontraktu potřebujeme jeho adresu a [ABI](/glossary/#abi). Obojí zde uvádíme.
+K použití kontraktu potřebujeme jeho adresu a [ABI](/glossary/#abi). Obojí poskytujeme zde.
 
-V JavaScriptu (a tedy i v TypeScriptu) nemůžete konstantě přiřadit novou hodnotu, ale _můžete_ upravit objekt, který je v ní uložen. Použitím přípony `as const` říkáme TypeScriptu, že seznam samotný je konstantní a nesmí být změněn.
+V JavaScriptu (a tedy i v TypeScriptu) nemůžete konstantě přiřadit novou hodnotu, ale _můžete_ upravit objekt, který je v ní uložen. Použitím přípony `as const` říkáme TypeScriptu, že samotný seznam je konstantní a nesmí být měněn.
 
 ```typescript
 const publicClient = createPublicClient({
@@ -147,15 +147,15 @@ const publicClient = createPublicClient({
 })
 ```
 
-Vytvořte Viem [veřejného klienta](https://viem.sh/docs/clients/public.html). Veřejní klienti nemají připojený soukromý klíč, a proto nemohou odesílat transakce. Mohou volat [`view` funkce](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), číst zůstatky na účtech atd.
+Vytvořte [veřejného klienta](https://viem.sh/docs/clients/public.html) Viem. Veřejní klienti nemají připojený soukromý klíč, a proto nemohou odesílat transakce. Mohou volat [funkce `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), číst zůstatky účtů atd.
 
 ```typescript
-const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`) 
+const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-Proměnné prostředí jsou k dispozici v [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). TypeScript je však silně typovaný. Proměnná prostředí může být jakýkoli řetězec, nebo prázdná, takže typem pro proměnnou prostředí je `string | undefined`. Klíč je však v Viem definován jako `0x${string}` (`0x` následované řetězcem). Zde říkáme TypeScriptu, že proměnná prostředí `PRIVATE_KEY` bude tohoto typu. Pokud ne, dojde k chybě za běhu.
+Proměnné prostředí jsou dostupné v [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). TypeScript je však silně typovaný. Proměnná prostředí může být jakýkoli řetězec, nebo může být prázdná, takže typ pro proměnnou prostředí je `string | undefined`. Klíč je však ve Viem definován jako `0x${string}` (`0x` následované řetězcem). Zde říkáme TypeScriptu, že proměnná prostředí `PRIVATE_KEY` bude tohoto typu. Pokud není, dostaneme chybu za běhu (runtime error).
 
-Funkce [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) pak použije tento soukromý klíč k vytvoření úplného objektu účtu.
+Funkce [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) pak používá tento soukromý klíč k vytvoření plnohodnotného objektu účtu.
 
 ```typescript
 const walletClient = createWalletClient({
@@ -175,19 +175,19 @@ const greeter = getContract({
 })
 ```
 
-Nyní, když máme všechny předpoklady, můžeme konečně vytvořit [instanci kontraktu](https://viem.sh/docs/contract/getContract). Tuto instanci kontraktu použijeme ke komunikaci s on-chain kontraktem.
+Nyní, když máme všechny předpoklady, můžeme konečně vytvořit [instanci kontraktu](https://viem.sh/docs/contract/getContract). Tuto instanci kontraktu použijeme ke komunikaci s onchain kontraktem.
 
-##### Čtení z blockchainu
+##### Čtení z blockchainu {#conclusion}
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-Funkce kontraktu, které jsou pouze pro čtení ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) a [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)), jsou dostupné pod `read`. V tomto případě ji používáme pro přístup k funkci [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217), která vrací pozdrav.
+Funkce kontraktu, které jsou pouze pro čtení ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) a [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)), jsou dostupné pod `read`. V tomto případě to použijeme pro přístup k funkci [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217), která vrací pozdrav.
 
-JavaScript je jednovláknový, takže když spouštíme dlouhotrvající proces, musíme [specifikovat, že to děláme asynchronně](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Volání blockchainu, i pro operaci pouze pro čtení, vyžaduje obousměrnou komunikaci mezi počítačem a uzlem blockchainu. To je důvod, proč zde specifikujeme, že kód musí na výsledek `await` (počkat).
+JavaScript je jednovláknový, takže když spustíme dlouho běžící proces, musíme [specifikovat, že to děláme asynchronně](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Volání blockchainu, a to i pro operaci pouze pro čtení, vyžaduje obousměrnou komunikaci mezi počítačem a uzlem blockchainu. To je důvod, proč zde specifikujeme, že kód musí na výsledek počkat pomocí `await`.
 
-Pokud vás zajímá, jak to funguje, můžete si [o tom přečíst zde](https://www.w3schools.com/js/js_promise.asp), ale v praxi vše, co potřebujete vědět, je, že `await` (čekáte na) výsledky, pokud spustíte operaci, která trvá dlouho, a že jakákoli funkce, která to dělá, musí být deklarována jako `async`.
+Pokud vás zajímá, jak to funguje, můžete si o tom [přečíst zde](https://www.w3schools.com/js/js_promise.asp), ale z praktického hlediska vám stačí vědět, že pokud spustíte operaci, která trvá dlouho, použijete na výsledky `await`, a že každá funkce, která to dělá, musí být deklarována jako `async`.
 
 ##### Vydávání transakcí
 
@@ -195,13 +195,13 @@ Pokud vás zajímá, jak to funguje, můžete si [o tom přečíst zde](https://
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-Toto je funkce, kterou voláte pro vydání transakce, která mění pozdrav. Jelikož se jedná o dlouhou operaci, funkce je deklarována jako `async`. Kvůli interní implementaci musí každá `async` funkce vracet objekt `Promise`. V tomto případě `Promise<any>` znamená, že nespecifikujeme, co přesně bude v `Promise` vráceno.
+Toto je funkce, kterou voláte k vydání transakce, jež změní pozdrav. Vzhledem k tomu, že se jedná o dlouhou operaci, je funkce deklarována jako `async`. Kvůli vnitřní implementaci musí každá funkce `async` vracet objekt `Promise`. V tomto případě `Promise<any>` znamená, že nespecifikujeme, co přesně bude v `Promise` vráceno.
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-Pole `write` instance kontraktu obsahuje všechny funkce, které zapisují do stavu blockchainu (ty, které vyžadují odeslání transakce), jako je [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). Parametry, pokud nějaké jsou, jsou poskytnuty jako seznam a funkce vrací haš transakce.
+Pole `write` instance kontraktu obsahuje všechny funkce, které zapisují do stavu blockchainu (ty, které vyžadují odeslání transakce), jako je [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). Parametry, pokud nějaké jsou, se poskytují jako seznam a funkce vrací hash transakce.
 
 ```typescript
     console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
@@ -210,7 +210,7 @@ Pole `write` instance kontraktu obsahuje všechny funkce, které zapisují do st
 }
 ```
 
-Nahlaste haš transakce (jako součást adresy URL do prohlížeče bloků pro její zobrazení) a vraťte jej.
+Nahlaste hash transakce (jako součást URL adresy do prohlížeče bloků pro její zobrazení) a vraťte jej.
 
 ##### Reakce na události
 
@@ -218,32 +218,32 @@ Nahlaste haš transakce (jako součást adresy URL do prohlížeče bloků pro j
 greeter.watchEvent.SetGreeting({
 ```
 
-[Funkce `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) umožňuje specifikovat, že se má funkce spustit, když je emitována událost. Pokud vás zajímá pouze jeden typ události (v tomto případě `SetGreeting`), můžete použít tuto syntaxi k omezení se na tento typ události.
+[Funkce `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) umožňuje určit, že se má funkce spustit při vyvolání události. Pokud vás zajímá pouze jeden typ události (v tomto případě `SetGreeting`), můžete použít tuto syntaxi a omezit se pouze na tento typ události.
 
 ```typescript
     onLogs: logs => {
 ```
 
-Funkce `onLogs` je volána, když existují záznamy protokolu (logy). V Ethereu jsou pojmy „log“ a „událost“ obvykle zaměnitelné.
+Funkce `onLogs` se volá, když existují záznamy v logu. V Ethereu jsou pojmy „log“ a „událost“ obvykle zaměnitelné.
 
 ```typescript
 console.log(
-  `Adresa ${logs[0].args.sender} změnila pozdrav na ${logs[0].args.greeting}`
+  `Address ${logs[0].args.sender} changed the greeting to ${logs[0].args.greeting}`
 )
 ```
 
-Mohlo by zde být více událostí, ale pro jednoduchost nás zajímá pouze ta první. `logs[0].args` jsou argumenty události, v tomto případě `sender` a `greeting`.
+Může existovat více událostí, ale pro jednoduchost nás zajímá pouze ta první. `logs[0].args` jsou argumenty události, v tomto případě `sender` a `greeting`.
 
 ```typescript
         if (logs[0].args.sender != account.address)
-            setGreeting(`${account.address} trvá na tom, aby to bylo Hello!`)
+            setGreeting(`${account.address} insists on it being Hello!`)
     }
 })
 ```
 
-Pokud odesílatel _není_ tento server, použijte `setGreeting` ke změně pozdravu.
+Pokud odesílatelem _není_ tento server, použijte `setGreeting` ke změně pozdravu.
 
-#### `package.json` {#package-json}
+#### `package.json`
 
 [Tento soubor](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) řídí konfiguraci [Node.js](https://nodejs.org/en). Tento článek vysvětluje pouze důležité definice.
 
@@ -252,7 +252,7 @@ Pokud odesílatel _není_ tento server, použijte `setGreeting` ke změně pozdr
   "main": "dist/index.js",
 ```
 
-Tato definice určuje, který soubor JavaScriptu se má spustit.
+Tato definice určuje, který soubor JavaScript se má spustit.
 
 ```json
   "scripts": {
@@ -260,13 +260,13 @@ Tato definice určuje, který soubor JavaScriptu se má spustit.
   },
 ```
 
-Skripty jsou různé akce aplikace. V tomto případě máme pouze jeden, `start`, který kompiluje a poté spouští server. Příkaz `tsc` je součástí balíčku `typescript` a kompiluje TypeScript do JavaScriptu. Pokud jej chcete spustit ručně, nachází se v `node_modules/.bin`. Druhý příkaz spouští server.
+Skripty představují různé akce aplikace. V tomto případě máme pouze `start`, který zkompiluje a poté spustí server. Příkaz `tsc` je součástí balíčku `typescript` a kompiluje TypeScript do JavaScriptu. Pokud jej chcete spustit ručně, nachází se v `node_modules/.bin`. Druhý příkaz spustí server.
 
 ```json
   "type": "module",
 ```
 
-Existuje více typů JavaScriptových node aplikací. Typ `module` nám umožňuje mít `await` v kódu nejvyšší úrovně, což je důležité, když provádíte pomalé (a tedy asynchronní) operace.
+Existuje více typů aplikací v Node.js. Typ `module` nám umožňuje mít `await` v kódu na nejvyšší úrovni, což je důležité, když provádíte pomalé (a tedy asynchronní) operace.
 
 ```json
   "devDependencies": {
@@ -275,7 +275,7 @@ Existuje více typů JavaScriptových node aplikací. Typ `module` nám umožňu
   },
 ```
 
-Toto jsou balíčky, které jsou vyžadovány pouze pro vývoj. Zde potřebujeme `typescript` a protože ho používáme s Node.js, získáváme také typy pro node proměnné a objekty, jako je `process`. [Zápis `^<verze>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) znamená danou verzi nebo vyšší verzi, která neobsahuje zásadní změny. Více informací o významu čísel verzí naleznete [zde](https://semver.org).
+Toto jsou balíčky, které jsou vyžadovány pouze pro vývoj. Zde potřebujeme `typescript` a protože jej používáme s Node.js, získáváme také typy pro proměnné a objekty Node, jako je `process`. [Zápis `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) znamená danou verzi nebo vyšší verzi, která neobsahuje změny narušující zpětnou kompatibilitu (breaking changes). Více informací o významu čísel verzí naleznete [zde](https://semver.org).
 
 ```json
   "dependencies": {
@@ -285,12 +285,12 @@ Toto jsou balíčky, které jsou vyžadovány pouze pro vývoj. Zde potřebujeme
 }
 ```
 
-Toto jsou balíčky, které jsou vyžadovány za běhu, při spouštění `dist/app.js`.
+Toto jsou balíčky, které jsou vyžadovány za běhu, při spuštění `dist/app.js`.
 
-## Závěr {#conclusion}
+## Závěr
 
-Centralizovaný server, který jsme zde vytvořili, plní svůj úkol, kterým je jednat jako agent pro uživatele. Kdokoli jiný, kdo chce, aby dapp nadále fungoval a je ochoten utratit palivo, může spustit novou instanci serveru s vlastní adresou.
+Centralizovaný server, který jsme zde vytvořili, plní svůj úkol, kterým je fungovat jako agent pro uživatele. Kdokoli jiný, kdo chce, aby dapp nadále fungovala, a je ochoten utratit gas, může spustit novou instanci serveru s vlastní adresou.
 
-To však funguje pouze tehdy, když lze akce centralizovaného serveru snadno ověřit. Pokud má centralizovaný server nějaké tajné stavové informace nebo provádí složité výpočty, je to centralizovaná entita, které musíte důvěřovat, abyste mohli aplikaci používat, což je přesně to, čemu se blockchainy snaží vyhnout. V budoucím článku plánuji ukázat, jak tento problém obejít pomocí [důkazů s nulovou znalostí](/zero-knowledge-proofs).
+To však funguje pouze tehdy, když lze akce centralizovaného serveru snadno ověřit. Pokud má centralizovaný server nějaké tajné informace o stavu nebo provádí složité výpočty, jedná se o centralizovanou entitu, které musíte při používání aplikace důvěřovat, což je přesně to, čemu se blockchainy snaží vyhnout. V budoucím článku plánuji ukázat, jak tento problém obejít pomocí [důkazů s nulovým vědomím](/zero-knowledge-proofs).
 
-[Více z mé práce najdete zde](https://cryptodocguy.pro/).
+[Zde najdete více z mé práce](https://cryptodocguy.pro/).

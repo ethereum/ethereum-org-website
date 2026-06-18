@@ -1,250 +1,249 @@
 ---
-title: "Stavové kanály"
-description: "Úvod do stavových kanálů a platebních kanálů jako škálovacího řešení, které v současné době využívá komunita Etherea."
+title: Stavové kanály
+description: Úvod do stavových a platebních kanálů jako řešení škálování, které v současnosti využívá komunita Etherea.
 lang: cs
 sidebarDepth: 3
 ---
 
-Stavové kanály umožňují účastníkům bezpečně provádět transakce mimo řetězec a zároveň omezují interakci s hlavní sítí Ethereum na minimum. Partneři v tomto kanálu mohou provést libovolný počet transakcí mimo řetězec, přičemž na řetězec se zapisují pouze dvě transakce – jedna pro otevření kanálu a druhá pro jeho uzavření. Tím je dosaženo extrémně vysoké propustnosti transakcí a nižších nákladů pro uživatele.
+Stavové kanály umožňují účastníkům bezpečně provádět transakce offchain a zároveň udržovat interakci se sítí [Ethereum](/) Mainnet na minimu. Peery v kanálu mohou provádět libovolný počet offchain transakcí, přičemž odesílají pouze dvě onchain transakce k otevření a zavření kanálu. To umožňuje extrémně vysokou propustnost transakcí a vede k nižším nákladům pro uživatele.
 
 ## Předpoklady {#prerequisites}
 
-Měli byste mít přečteny naše stránky o [škálování Etherea](/developers/docs/scaling/) a [vrstvě 2](/layer-2/).
+Měli byste si přečíst a porozumět našim stránkám o [škálování Etherea](/developers/docs/scaling/) a [vrstvě 2 (l2)](/layer-2/).
 
-## Co to jsou kanály? {#what-are-channels}
+## Co jsou kanály? {#what-are-channels}
 
-Veřejné blockchainy, jako je Ethereum, čelí výzvám v oblasti škálovatelnosti kvůli své distribuované architektuře: transakce na řetězci musí být vykonány všemi síťovými uzly. Ty musí být schopny zpracovat objem transakcí v bloku s použitím běžného hardwaru, což omezuje propustnost transakcí za účelem zachování decentralizace sítě. Blockchainové kanály tento problém řeší tím, že uživatelům umožňují komunikovat mimo řetězec a přitom se při konečném vypořádání stále spoléhat na bezpečnost hlavního řetězce.
+Veřejné blockchainy, jako je Ethereum, čelí výzvám v oblasti škálovatelnosti kvůli své distribuované architektuře: onchain transakce musí být provedeny všemi uzly. Uzly musí být schopny zvládnout objem transakcí v bloku pomocí skromného hardwaru, což omezuje propustnost transakcí, aby síť zůstala decentralizovaná. Blockchainové kanály tento problém řeší tím, že umožňují uživatelům interagovat offchain, přičemž se pro konečné vypořádání stále spoléhají na bezpečnost hlavního řetězce.
 
-Kanály jsou jednoduché peer-to-peer protokoly, které umožňují dvěma stranám provést mnoho transakcí mezi sebou a poté na blockchain zveřejnit pouze konečné výsledky. Kanál využívá kryptografii k prokázání, že souhrnná data, která generují, jsou skutečně výsledkem platné sady mezitransakcí. Chytrý kontrakt typu [„multisig“](/developers/docs/smart-contracts/#multisig) zajišťuje, že transakce jsou podepsány správnými stranami.
+Kanály jsou jednoduché peer-to-peer protokoly, které umožňují dvěma stranám provádět mezi sebou mnoho transakcí a poté na blockchain odeslat pouze konečné výsledky. Kanál využívá kryptografii k prokázání, že souhrnná data, která generují, jsou skutečně výsledkem platné sady průběžných transakcí. Chytrý kontrakt typu [„multisig“](/developers/docs/smart-contracts/#multisig) zajišťuje, že transakce jsou podepsány správnými stranami.
 
-Ve stavových kanálech jsou změny stavu prováděny a ověřovány zainteresovanými stranami, což minimalizuje výpočty na exekuční vrstvě Etherea. To snižuje přetížení na Ethereu a zároveň zvyšuje rychlost zpracování transakcí uživatelů.
+Díky kanálům jsou změny stavu prováděny a ověřovány zúčastněnými stranami, což minimalizuje výpočty na exekuční vrstvě Etherea. To snižuje přetížení Etherea a také zvyšuje rychlost zpracování transakcí pro uživatele.
 
-Každý kanál je spravován [chytrým kontraktem typu multisig](/developers/docs/smart-contracts/#multisig) běžícím na Ethereu. K otevření kanálu účastníci nasadí kontrakt kanálu na řetězec a vloží do něj prostředky. Obě strany společně podepíší aktualizaci stavu, aby inicializovaly stav kanálu, po čemž mohou rychle a volně provádět transakce mimo řetězec.
+Každý kanál je spravován [multisig chytrým kontraktem](/developers/docs/smart-contracts/#multisig) běžícím na Ethereu. Pro otevření kanálu účastníci nasadí kontrakt kanálu onchain a vloží do něj prostředky. Obě strany společně podepíší aktualizaci stavu pro inicializaci stavu kanálu, po které mohou rychle a volně provádět transakce offchain.
 
-K uzavření kanálu účastníci předloží na řetězec poslední dohodnutý stav kanálu. Poté chytrý kontrakt rozdělí uzamčené prostředky podle zůstatku každého účastníka v konečném stavu kanálu.
+Pro zavření kanálu účastníci odešlou poslední dohodnutý stav kanálu onchain. Poté chytrý kontrakt rozdělí uzamčené prostředky podle zůstatku každého účastníka v konečném stavu kanálu.
 
-Peer-to-peer kanály jsou užitečné zejména v situacích, kdy někteří účastníci chtějí provádět transakce s vysokou frekvencí bez viditelné režie. Blockchainové kanály spadají do dvou kategorií: **platební kanály** a **stavové kanály**.
+Peer-to-peer kanály jsou obzvláště užitečné pro situace, kdy si někteří předem definovaní účastníci přejí provádět transakce s vysokou frekvencí bez viditelné režie. Blockchainové kanály spadají do dvou kategorií: **platební kanály** a **stavové kanály**.
 
 ## Platební kanály {#payment-channels}
 
-Platební kanál je nejlépe popsán jako „obousměrná účetní kniha“, kterou společně spravují dva uživatelé. Počáteční zůstatek účetní knihy je součtem vkladů uzamčených v on-chain kontraktu během fáze otevření kanálu. Převody v platebním kanálu mohou být prováděny okamžitě a bez zapojení samotného blockchainu, s výjimkou počátečního jednorázového vytvoření kanálu na řetězci a jeho pozdějšího uzavření.
+Platební kanál lze nejlépe popsat jako „obousměrnou účetní knihu“ společně spravovanou dvěma uživateli. Počáteční zůstatek účetní knihy je součtem vkladů uzamčených v onchain kontraktu během fáze otevírání kanálu. Převody v platebním kanálu lze provádět okamžitě a bez zapojení samotného blockchainu, s výjimkou počátečního jednorázového onchain vytvoření a případného uzavření kanálu.
 
-Aktualizace zůstatku účetní knihy (tj. stavu platebního kanálu) vyžaduje souhlas všech stran v kanálu. Aktualizace kanálu, podepsaná všemi účastníky kanálu, je považována za konečnou, podobně jako transakce na Ethereu.
+Aktualizace zůstatku účetní knihy (tj. stavu platebního kanálu) vyžadují schválení všech stran v kanálu. Aktualizace kanálu podepsaná všemi účastníky kanálu je považována za finalizovanou, podobně jako transakce na Ethereu.
 
-Platební kanály patřily mezi první škálovací řešení navržená k minimalizaci nákladné on-chain aktivity jednoduchých uživatelských interakcí (např. převody ETH, atomické směny, mikroplatby). Účastníci kanálu mohou mezi sebou provádět neomezené množství okamžitých, bezpoplatkových transakcí, dokud čistá suma jejich převodů nepřekročí vložené tokeny.
+Platební kanály patřily mezi první řešení škálování navržená k minimalizaci drahé onchain aktivity u jednoduchých uživatelských interakcí (např. převody ETH, atomické swapy, mikroplatby). Účastníci kanálu mohou mezi sebou provádět neomezené množství okamžitých transakcí bez poplatků, pokud čistý součet jejich převodů nepřesáhne vložené tokeny.
 
 ## Stavové kanály {#state-channels}
 
-Kromě podpory plateb mimo řetězec (offchain) se platební kanály neosvědčily pro zpracování obecné logiky přechodu stavu. Stavové kanály byly vytvořeny k vyřešení tohoto problému a ke zpřístupnění kanálů pro škálování obecného výpočtu.
+Kromě podpory offchain plateb se platební kanály neukázaly jako užitečné pro zpracování obecné logiky přechodu stavu. Stavové kanály byly vytvořeny k vyřešení tohoto problému a k tomu, aby byly kanály užitečné pro škálování obecných výpočtů.
 
-Stavové kanály mají stále mnoho společného s platebními kanály. Například uživatelé komunikují výměnou kryptograficky podepsaných zpráv (transakcí), které musí podepsat i ostatní účastníci kanálu. Pokud navrhovaná aktualizace stavu není podepsána všemi účastníky, je považována za neplatnou.
+Stavové kanály mají s platebními kanály stále mnoho společného. Například uživatelé interagují výměnou kryptograficky podepsaných zpráv (transakcí), které musí podepsat i ostatní účastníci kanálu. Pokud navrhovaná aktualizace stavu není podepsána všemi účastníky, je považována za neplatnou.
 
-Nicméně kromě držení zůstatků uživatelů kanál také sleduje aktuální stav úložiště kontraktu (tj. hodnoty proměnných kontraktu).
+Kromě držení zůstatků uživatelů však kanál také sleduje aktuální stav úložiště kontraktu (tj. hodnoty proměnných kontraktu).
 
-To umožňuje spustit chytrý kontrakt mimo řetězec mezi dvěma uživateli. V tomto scénáři vyžadují aktualizace interního stavu chytrého kontraktu pouze souhlas partnerů, kteří kanál vytvořili.
+To umožňuje provádět chytrý kontrakt offchain mezi dvěma uživateli. V tomto scénáři vyžadují aktualizace vnitřního stavu chytrého kontraktu pouze schválení peerů, kteří kanál vytvořili.
 
-I když toto řeší dříve popsaný problém se škálovatelností, má to vliv na bezpečnost. Na Ethereu je platnost přechodů stavu vynucována konsensuálním protokolem sítě. To znemožňuje navrhnout neplatnou aktualizaci stavu chytrého kontraktu nebo změnit exekuci chytrého kontraktu.
+Ačkoli to řeší dříve popsaný problém se škálovatelností, má to důsledky pro bezpečnost. Na Ethereu je platnost přechodů stavu vynucována protokolem konsensu sítě. To znemožňuje navrhnout neplatnou aktualizaci stavu chytrého kontraktu nebo změnit provádění chytrého kontraktu.
 
-Stavové kanály nemají stejné bezpečnostní záruky. Do určité míry je stavový kanál miniaturou Mainnetu. S omezeným počtem účastníků, kteří vynucují pravidla, se zvyšuje možnost podvodů (např. návrhu neplatných aktualizací stavu). Stavové kanály odvozují svoji bezpečnost z arbitrážního systému založeného na [důkazech podvodu](/glossary/#fraud-proof).
+Stavové kanály nemají stejné bezpečnostní záruky. Do jisté míry je stavový kanál miniaturní verzí Mainnetu. S omezenou skupinou účastníků vynucujících pravidla se zvyšuje možnost škodlivého chování (např. navrhování neplatných aktualizací stavu). Stavové kanály odvozují svou bezpečnost ze systému rozhodování sporů založeného na [důkazech o podvodu](/glossary/#fraud-proof).
 
-## Jak stavové kanály fungují {#how-state-channels-work}
+## Jak fungují stavové kanály {#how-state-channels-work}
 
-V podstatě je aktivita ve stavovém kanálu relací interakcí zahrnujících uživatele a blockchainový systém. Uživatelé většinou komunikují mezi sebou mimo řetězec a s podkladovým blockchainem interagují pouze k otevření kanálu, uzavření kanálu nebo k řešení potenciálních sporů mezi účastníky.
+V zásadě je aktivita ve stavovém kanálu relací interakcí zahrnujících uživatele a blockchainový systém. Uživatelé spolu většinou komunikují offchain a s podkladovým blockchainem interagují pouze za účelem otevření kanálu, zavření kanálu nebo vypořádání případných sporů mezi účastníky.
 
-Následující část popisuje základní pracovní tok stavového kanálu:
+Následující část nastiňuje základní pracovní postup stavového kanálu:
 
 ### Otevření kanálu {#opening-the-channel}
 
-Otevření kanálu vyžaduje, aby účastníci vložili prostředky do chytrého kontraktu na Mainnetu. Tento vklad také funguje jako virtuální účet, takže účastníci mohou volně transakčně komunikovat bez potřeby okamžitého vypořádání plateb. Strany se vzájemně vyrovnají a vyberou si zbytek svých prostředků až poté, co je kanál finalizován na řetězci.
+Otevření kanálu vyžaduje, aby účastníci vložili prostředky do chytrého kontraktu na Mainnetu. Vklad funguje také jako virtuální účet, takže zúčastnění aktéři mohou volně provádět transakce, aniž by museli platby okamžitě vypořádat. Teprve když je kanál finalizován onchain, strany se navzájem vypořádají a vyberou si to, co zbylo na jejich účtu.
 
-Tento vklad také slouží jako záruka čestného chování každého účastníka. Pokud jsou vkladatelé během fáze řešení sporů shledáni vinnými z nekalých praktik, kontrakt jim jejich vklad sníží.
+Tento vklad slouží také jako kauce zaručující poctivé chování každého účastníka. Pokud jsou vkladatelé během fáze řešení sporů shledáni vinnými ze škodlivých akcí, kontrakt jejich vklad zabaví (slashing).
 
-Partneři v kanálu musí podepsat počáteční stav, na kterém se všichni shodnou. Tento stav slouží jako geneze stavového kanálu a poté mohou uživatelé začít transakčně komunikovat.
+Peery v kanálu musí podepsat počáteční stav, na kterém se všichni shodnou. To slouží jako geneze stavového kanálu, po které mohou uživatelé začít provádět transakce.
 
 ### Používání kanálu {#using-the-channel}
 
-Po inicializaci stavu kanálu partneři komunikují podepisováním transakcí a jejich zasíláním ostatním ke schválení. Účastníci pomocí těchto transakcí zahajují aktualizace stavu a podepisují aktualizace stavu od ostatních. Každá transakce obsahuje následující:
+Po inicializaci stavu kanálu peery interagují podepisováním transakcí a jejich vzájemným odesíláním ke schválení. Účastníci těmito transakcemi iniciují aktualizace stavu a podepisují aktualizace stavu od ostatních. Každá transakce se skládá z následujícího:
 
-- **Nonce**, tedy jedinečné číslo, které funguje jako unikátní ID transakcí a zabraňuje útokům opětovným opakováním transakcí. Také identifikuje pořadí, ve kterém došlo k aktualizacím stavu (což je důležité pro řešení sporů)
+- **Nonce**, která funguje jako jedinečné ID pro transakce a zabraňuje útokům typu replay. Identifikuje také pořadí, ve kterém k aktualizacím stavu došlo (což je důležité pro řešení sporů).
 
 - Starý stav kanálu
 
 - Nový stav kanálu
 
-- Transakce, která spouští změnu stavu (např. Alice pošle Bobovi 5 ETH)
+- Transakce, která spouští přechod stavu (např. Alice pošle 5 ETH Bobovi)
 
-Aktualizace stavu v kanálu se neposílají na řetězec, jak se to obvykle dělá, když uživatelé interagují na Mainnetu, což je v souladu s cílem stavových kanálů minimalizovat stopu na řetězci. Pokud účastníci souhlasí s aktualizacemi stavu, jsou stejně závazné jako transakce na Ethereu. Účastníci se musí spoléhat na konsenzuální mechanismus Mainnetu pouze v případě sporu.
+Aktualizace stavu v kanálu nejsou vysílány onchain, jak je tomu běžně při interakci uživatelů na Mainnetu, což je v souladu s cílem stavových kanálů minimalizovat onchain stopu. Dokud se účastníci shodnou na aktualizacích stavu, jsou stejně konečné jako transakce na Ethereu. Účastníci se musí spoléhat na konsensus Mainnetu pouze v případě, že dojde ke sporu.
 
-### Zavírání kanálu {#closing-the-channel}
+### Zavření kanálu {#closing-the-channel}
 
-Uzavření stavového kanálu vyžaduje předložení konečného, dohodnutého stavu kanálu on-chain chytrého kontraktu. Podrobnosti uvedené v aktualizaci stavu zahrnují počet kroků každého účastníka a seznam schválených transakcí.
+Zavření stavového kanálu vyžaduje odeslání konečného, dohodnutého stavu kanálu do onchain chytrého kontraktu. Podrobnosti odkazované v aktualizaci stavu zahrnují počet tahů každého účastníka a seznam schválených transakcí.
 
-Po ověření, že je aktualizace stavu platná (tj. je podepsána všemi stranami), chytrý kontrakt kanálu uzavře a rozdělí uzamčené prostředky podle výsledku kanálu. Platby provedené mimo řetězec se aplikují na stav Etherea a každý účastník obdrží svou zbývající část uzamčených prostředků.
+Po ověření, že je aktualizace stavu platná (tj. je podepsána všemi stranami), chytrý kontrakt finalizuje kanál a rozdělí uzamčené prostředky podle výsledku kanálu. Platby provedené offchain jsou aplikovány na stav Etherea a každý účastník obdrží svou zbývající část uzamčených prostředků.
 
-Výše popsaný scénář představuje, co se děje v ideálním případě. Někdy se však může stát, že uživatelé nedosáhnou dohody a kanál neuzavřou (takzvaný „nešťastný případ“). Může nastat některá z následujících situací:
+Výše popsaný scénář představuje to, co se stane v ideálním případě. Někdy uživatelé nemusí být schopni dosáhnout dohody a finalizovat kanál (horší případ). V takové situaci může platit kterákoli z následujících možností:
 
-- Účastníci přestanou být online a nepodaří se jim navrhnout přechody stavu
+- Účastníci se odpojí (jsou offline) a nenavrhnou přechody stavu
 
 - Účastníci odmítnou spolupodepsat platné aktualizace stavu
 
-- Účastníci se pokusí kanál finalizovat tím, že on-chain kontraktu navrhnou starou aktualizaci stavu.
+- Účastníci se snaží finalizovat kanál navržením staré aktualizace stavu onchain kontraktu
 
-- Účastníci navrhnou neplatné přechody stavu k podepsání ostatním
+- Účastníci navrhují neplatné přechody stavu, aby je ostatní podepsali
 
-Kdykoliv dojde k rozpadu konsenzu mezi účastníky kanálu, poslední možností je spolehnout se na konsenzuální mechanismus Mainnetu k vynucení konečného, platného stavu kanálu. V tomto případě vyžaduje uzavření stavového kanálu vyřešení sporů on-chain.
+Kdykoli se konsensus mezi zúčastněnými aktéry v kanálu zhroutí, poslední možností je spolehnout se na konsensus Mainnetu k vynucení konečného, platného stavu kanálu. V tomto případě vyžaduje zavření stavového kanálu vypořádání sporů onchain.
 
-### Řešení sporů {#settling-disputes}
+### Vypořádání sporů {#settling-disputes}
 
-Obvykle se strany v kanálu předem dohodnou na uzavření kanálu a spolupodepíší poslední přechod stavu, který předloží chytrému kontraktu. Jakmile je aktualizace on-chain schválena, exekuce off-chain chytrého kontraktu končí a účastníci vystoupí z kanálu se svými prostředky.
+Strany v kanálu se obvykle předem dohodnou na zavření kanálu a spolupodepíší poslední přechod stavu, který odešlou do chytrého kontraktu. Jakmile je aktualizace schválena onchain, provádění offchain chytrého kontraktu končí a účastníci provedou výstup z kanálu se svými penězi.
 
-Jedna strana však může podat on-chain žádost o ukončení provádění chytrého kontraktu a finalizaci kanálu – aniž by čekala na schválení od protistrany. Pokud nastane některá z výše popsaných situací narušujících konsenzus, může kterákoli ze stran aktivovat on-chain kontrakt k uzavření kanálu a distribuci finančních prostředků. Tím je zajištěna **nezávislost na důvěře**, což zaručuje, že poctivé strany mohou kdykoliv vybrat své vklady, bez ohledu na akce druhé strany.
+Jedna strana však může odeslat onchain žádost o ukončení provádění chytrého kontraktu a finalizaci kanálu – aniž by čekala na schválení svého protějšku. Pokud nastane některá z dříve popsaných situací narušujících konsensus, může kterákoli ze stran spustit onchain kontrakt k zavření kanálu a rozdělení prostředků. To poskytuje **bezdůvěrnost**, což zajišťuje, že poctivé strany mohou kdykoli vybrat své vklady, bez ohledu na kroky druhé strany.
 
-Pro zpracování výstupu z kanálu musí uživatel předložit on-chain kontraktu poslední platnou aktualizaci stavu aplikace. Pokud je tato aktualizace schválena (tj. nese podpis všech stran), prostředky jsou přerozděleny v jejich prospěch.
+Pro zpracování výstupu z kanálu musí uživatel odeslat poslední platnou aktualizaci stavu aplikace do onchain kontraktu. Pokud je to v pořádku (tj. nese to podpis všech stran), pak jsou prostředky přerozděleny v jejich prospěch.
 
-Existuje však zpoždění při provádění žádostí o výstup od jediné strany. Pokud byla žádost o uzavření kanálu jednomyslně schválena, pak je on-chain výstupní transakce provedena okamžitě.
+Při provádění žádostí o výstup jednoho uživatele však dochází ke zpoždění. Pokud byla žádost o uzavření kanálu jednomyslně schválena, pak je onchain transakce výstupu provedena okamžitě.
 
-Zpoždění nastává při žádosti o výstup jen od jediné strany a to z důvodu možnosti podvodných akcí. Například účastník kanálu se může pokusit finalizovat kanál na Ethereu předložením starší aktualizace stavu on-chain.
+Zpoždění vstupuje do hry u výstupů jednoho uživatele kvůli možnosti podvodných akcí. Například účastník kanálu se může pokusit finalizovat kanál na Ethereu odesláním starší aktualizace stavu onchain.
 
-Jako protiopatření umožňují stavové kanály poctivým uživatelům napadnout neplatné aktualizace stavu předložením nejnovějšího platného stavu kanálu on-chain. Stavové kanály jsou navrženy tak, že novější, domluvené aktualizace stavu mají přednost před staršími aktualizacemi stavu.
+Jako protiopatření umožňují stavové kanály poctivým uživatelům zpochybnit neplatné aktualizace stavu odesláním nejnovějšího, platného stavu kanálu onchain. Stavové kanály jsou navrženy tak, že novější, dohodnuté aktualizace stavu přebíjejí starší aktualizace stavu.
 
-Jakmile některá ze stran vyvolá on-chain systém řešení sporů, druhá strana je povinna odpovědět v časovém limitu (tzv. „okno pro výzvy“). To umožňuje uživatelům napadnout výstupní transakci, zejména pokud druhá strana uplatňuje zastaralou aktualizaci.
+Jakmile peer spustí onchain systém řešení sporů, druhá strana je povinna odpovědět v časovém limitu (nazývaném okno pro zpochybnění). To umožňuje uživatelům zpochybnit transakci výstupu, zejména pokud druhá strana aplikuje zastaralou aktualizaci.
 
-Ať už je situace jakákoliv, uživatelé kanálu mají vždy silné záruky finality: Pokud je přechod stavu, který mají k dispozici, podepsán všemi členy a je to nejnovější aktualizace, má stejnou finalitu jako běžná on-chain transakce. Stále musí na řetězci vyzvat druhou stranu, ale jediným možným výsledkem je finalizace posledního platného stavu, který drží.
+Ať už je případ jakýkoli, uživatelé kanálu mají vždy silné záruky finality: pokud byl přechod stavu v jejich držení podepsán všemi členy a je nejnovější aktualizací, pak má stejnou finalitu jako běžná onchain transakce. Stále musí zpochybnit druhou stranu onchain, ale jediným možným výsledkem je finalizace posledního platného stavu, který drží.
 
 ### Jak stavové kanály interagují s Ethereem? {#how-do-state-channels-interact-with-ethereum}
 
-Ačkoli existují jako off-chain protokoly, stavové kanály mají on-chain komponentu: chytrý kontrakt nasazený na Ethereu při otevření kanálu. Tento kontrakt kontroluje aktiva vložená do kanálu, ověřuje aktualizace stavu a řeší spory mezi účastníky.
+Ačkoli existují jako offchain protokoly, stavové kanály mají onchain komponentu: chytrý kontrakt nasazený na Ethereu při otevírání kanálu. Tento kontrakt kontroluje aktiva vložená do kanálu, ověřuje aktualizace stavu a rozhoduje spory mezi účastníky.
 
-Stavové kanály nepublikují transakční data ani závazky stavu na Mainnetu, na rozdíl od škálovacích řešení [vrstvy 2](/layer-2/). Jsou však více propojeny s Mainnetem než například [postranní řetězce](/developers/docs/scaling/sidechains/), takže jsou o něco bezpečnější.
+Stavové kanály nepublikují transakční data ani závazky stavu na Mainnet, na rozdíl od řešení škálování na [vrstvě 2 (l2)](/layer-2/). Jsou však více propojeny s Mainnetem než například [postranní řetězce](/developers/docs/scaling/sidechains/), což je činí o něco bezpečnějšími.
 
-Stavové kanály se spoléhají na hlavní protokol Etherea v následujících bodech:
+Stavové kanály se spoléhají na hlavní protokol Etherea v následujícím:
 
-#### 1. Dostupnost {#liveness}
+#### 1. Liveness {#liveness}
 
-On-chain kontrakt nasazený při otevření kanálu je zodpovědný za funkčnost kanálu. Pokud kontrakt běží na Ethereu, pak je kanál vždy dostupný k použití. Naopak postranní řetězec může kdykoliv selhat, i když je Mainnet funkční, čímž jsou ohroženy prostředky uživatelů.
+Onchain kontrakt nasazený při otevírání kanálu je zodpovědný za funkčnost kanálu. Pokud kontrakt běží na Ethereu, pak je kanál vždy k dispozici pro použití. Naopak postranní řetězec může vždy selhat, i když je Mainnet funkční, což ohrožuje prostředky uživatelů.
 
-#### 2. Bezpečnost {#security}
+#### 2. Security {#security}
 
-Do určité míry se stavové kanály pro zajištění bezpečnosti a ochranu uživatelů před podvodníky spoléhají na Ethereum. Kanály používají mechanismus důkazu podvodu, který umožňuje uživatelům napadnout pokusy o uzavření kanálu s neplatnou nebo zastaralou aktualizací, což více rozebereme níže.
+Do jisté míry se stavové kanály spoléhají na Ethereum, že poskytne bezpečnost a ochrání uživatele před škodlivými peery. Jak je diskutováno v pozdějších částech, kanály používají mechanismus důkazu o podvodu, který umožňuje uživatelům zpochybnit pokusy o finalizaci kanálu s neplatnou nebo zastaralou aktualizací.
 
-V takovém případě poskytuje poctivá strana nejnovější platný stav kanálu on-chain kontraktu k ověření jako důkaz podvodu. Důkazy podvodu umožňují vzájemně nedůvěřivým stranám provádět transakce mimo řetězec, aniž by při tom riskovaly své prostředky.
+V tomto případě poctivá strana poskytne nejnovější platný stav kanálu jako důkaz o podvodu onchain kontraktu k ověření. Důkazy o podvodu umožňují vzájemně nedůvěřivým stranám provádět offchain transakce, aniž by přitom riskovaly své prostředky.
 
-#### 3. Konečnost {#finality}
+#### 3. Finality {#finality}
 
-Aktualizace stavu, které společně podepsali uživatelé kanálu, jsou považovány za rovnocenné on-chain transakcím. Přesto veškerá aktivita v kanálu dosáhne skutečné finálnosti až tehdy, když je kanál uzavřen na Ethereu.
+Aktualizace stavu společně podepsané uživateli kanálu jsou považovány za stejně dobré jako onchain transakce. Přesto veškerá aktivita v kanálu dosáhne skutečné finality až po zavření kanálu na Ethereu.
 
-V optimistickém případě mohou obě strany spolupracovat, podepsat konečnou aktualizaci stavu a předložit ji on-chain, aby uzavřely kanál, po čemž jsou prostředky rozděleny podle konečného stavu kanálu. V pesimistickém případě, kdy se někdo pokusí podvádět tím, že zveřejní nesprávnou aktualizaci stavu on-chain, jeho transakce nebude finalizována, dokud neuplyne časové okno pro výzvy.
+V optimistickém případě mohou obě strany spolupracovat, podepsat konečnou aktualizaci stavu a odeslat ji onchain k zavření kanálu, po čemž jsou prostředky rozděleny podle konečného stavu kanálu. V pesimistickém případě, kdy se někdo pokusí podvádět odesláním nesprávné aktualizace stavu onchain, není jeho transakce finalizována, dokud neuplyne okno pro zpochybnění.
 
 ## Virtuální stavové kanály {#virtual-state-channels}
 
-Naivní implementace stavového kanálu by spočívala v nasazení nového kontraktu, když si dva uživatelé přejí spustit aplikaci mimo řetězec. To je nejen neproveditelné, ale také to popírá nákladovou efektivitu stavových kanálů (náklady na on-chain transakce se mohou rychle sčítat).
+Naivní implementací stavového kanálu by bylo nasadit nový kontrakt, když si dva uživatelé přejí spustit aplikaci offchain. To je nejen neproveditelné, ale také to popírá nákladovou efektivitu stavových kanálů (náklady na onchain transakce se mohou rychle sčítat).
 
-K vyřešení tohoto problému byly vytvořeny „virtuální kanály“. Na rozdíl od běžných kanálů, které k otevření a ukončení vyžadují on-chain transakce, lze virtuální kanál otevřít, provést a finalizovat bez interakce s hlavním řetězcem. Pomocí této metody je dokonce možné řešit spory mimo řetězec.
+K vyřešení tohoto problému byly vytvořeny „virtuální kanály“. Na rozdíl od běžných kanálů, které k otevření a ukončení vyžadují onchain transakce, lze virtuální kanál otevřít, provést a finalizovat bez interakce s hlavním řetězcem. Pomocí této metody je dokonce možné řešit spory offchain.
 
-Tento systém spoléhá na existenci tzv. „účetních kanálů“, které byly financovány on-chain. Virtuální kanály mezi dvěma stranami mohou být vytvořeny na vrcholu existujícího účetního kanálu, přičemž vlastník (či vlastníci) účetního kanálu slouží jako prostředník.
+Tento systém se spoléhá na existenci takzvaných „kanálů účetní knihy“ (ledger channels), které byly financovány onchain. Virtuální kanály mezi dvěma stranami mohou být postaveny na existujícím kanálu účetní knihy, přičemž vlastník (vlastníci) kanálu účetní knihy slouží jako zprostředkovatel.
 
-Uživatelé v každém virtuálním kanálu interagují prostřednictvím nové instance kontraktu, přičemž účetní kanál je schopen podporovat více instancí kontraktů. Stav účetního kanálu také obsahuje více než jeden stav úložiště kontraktu, což umožňuje paralelní provádění aplikací mimo řetězec mezi různými uživateli.
+Uživatelé v každém virtuálním kanálu interagují prostřednictvím nové instance kontraktu, přičemž kanál účetní knihy je schopen podporovat více instancí kontraktu. Stav kanálu účetní knihy také obsahuje více než jeden stav úložiště kontraktu, což umožňuje paralelní provádění aplikací offchain mezi různými uživateli.
 
-Stejně jako u běžných kanálů si uživatelé vyměňují aktualizace stavu za účelem rozvoje stavového stroje. Pokud nedojde ke sporu, prostředník musí být kontaktován pouze při otevírání nebo ukončování kanálu.
+Stejně jako u běžných kanálů si uživatelé vyměňují aktualizace stavu, aby posunuli stavový automat. Pokud nedojde ke sporu, zprostředkovatele je nutné kontaktovat pouze při otevírání nebo ukončování kanálu.
 
 ### Virtuální platební kanály {#virtual-payment-channels}
 
-Virtuální platební kanály fungují na stejném principu jako virtuální stavové kanály: účastníci propojení ve stejné síti si mohou předávat zprávy, aniž by museli otevírat nový kanál on-chain. Ve virtuálních platebních kanálech jsou převody hodnot směrovány prostřednictvím jednoho nebo více prostředníků, přičemž je zaručeno, že pouze zamýšlený příjemce může obdržet převedené prostředky.
+Virtuální platební kanály fungují na stejném principu jako virtuální stavové kanály: účastníci připojení ke stejné síti si mohou předávat zprávy, aniž by museli otevírat nový kanál onchain. Ve virtuálních platebních kanálech jsou převody hodnot směrovány přes jednoho nebo více zprostředkovatelů se zárukami, že převedené prostředky může přijmout pouze zamýšlený příjemce.
 
-## Využití stavových kanálů {#applications-of-state-channels}
+## Aplikace stavových kanálů {#applications-of-state-channels}
 
 ### Platby {#payments}
 
-První blockchainové kanály byly jednoduché protokoly, které umožňovaly dvěma účastníkům provádět rychlé, nízkonákladové převody mimo řetězec, aniž by museli platit vysoké transakční poplatky na Mainnetu. Platební kanály jsou dodnes užitečné pro aplikace navržené ke směně a vkladům etheru a tokenů.
+Rané blockchainové kanály byly jednoduché protokoly, které umožňovaly dvěma účastníkům provádět rychlé převody s nízkými poplatky offchain, aniž by museli platit vysoké transakční poplatky na Mainnetu. Dnes jsou platební kanály stále užitečné pro aplikace určené k výměně a vkladům etheru a tokenů.
 
 Platby založené na kanálech mají následující výhody:
 
-1. **Propustnost**: Počet transakcí mimo řetězec na kanál nesouvisí s propustností sítě Ethereum, která je ovlivněna různými faktory, zejména velikostí bloku a časem bloku. Prováděním transakcí mimo řetězec mohou blockchainové kanály dosáhnout vyšší propustnosti.
+1. **Propustnost**: Množství offchain transakcí na kanál nesouvisí s propustností Etherea, která je ovlivněna různými faktory, zejména velikostí bloku a časem bloku. Prováděním transakcí offchain mohou blockchainové kanály dosáhnout vyšší propustnosti.
 
-2. **Soukromí**: Protože kanály existují mimo řetězec, podrobnosti o interakcích mezi účastníky nejsou zaznamenány na veřejném blockchainu Etherea. Uživatelé kanálu musí interagovat on-chain pouze při financování a uzavírání kanálů nebo řešení sporů. Proto jsou kanály užitečné pro jednotlivce, kteří si přejí více soukromí při provádění transakcí.
+2. **Soukromí**: Protože kanály existují offchain, podrobnosti o interakcích mezi účastníky nejsou zaznamenávány na veřejném blockchainu Etherea. Uživatelé kanálu musí interagovat onchain pouze při financování a zavírání kanálů nebo při řešení sporů. Kanály jsou tedy užitečné pro jednotlivce, kteří touží po soukromějších transakcích.
 
-3. **Latence**: Transakce mimo řetězec prováděné mezi účastníky kanálu mohou být vypořádány okamžitě, pokud obě strany spolupracují, což snižuje zpoždění. Naproti tomu odeslání transakce na Mainnetu vyžaduje počkat, až síťové uzly zpracují transakci, vytvoří nový blok s transakcí a dosáhnou konsenzu. Uživatelé také mohou chtít čekat na potvrzení dalších bloků, než budou transakci považovat za finální.
+3. **Latence**: Offchain transakce prováděné mezi účastníky kanálu mohou být vypořádány okamžitě, pokud obě strany spolupracují, což snižuje zpoždění. Naproti tomu odeslání transakce na Mainnet vyžaduje čekání, až uzly transakci zpracují, vytvoří nový blok s transakcí a dosáhnou konsensu. Uživatelé mohou také muset počkat na více potvrzení bloku, než budou považovat transakci za finalizovanou.
 
-4. **Náklady**: Stavové kanály jsou obzvláště užitečné v situacích, kdy si bude skupina účastníků vyměňovat mnoho aktualizací stavu po delší dobu. Jediné náklady, které vzniknou, jsou na otevření a uzavření chytrého kontraktu stavového kanálu; každá změna stavu mezi otevřením a uzavřením kanálu bude levnější než ta předchozí, protože se náklady na vypořádání rozdělí.
+4. **Náklady**: Stavové kanály jsou obzvláště užitečné v situacích, kdy si skupina účastníků bude vyměňovat mnoho aktualizací stavu po dlouhou dobu. Jedinými vzniklými náklady jsou otevření a zavření chytrého kontraktu stavového kanálu; každá změna stavu mezi otevřením a zavřením kanálu bude levnější než ta předchozí, protože náklady na vypořádání se odpovídajícím způsobem rozloží.
 
-Implementace stavových kanálů v řešeních vrstvy 2, jako jsou [rollupy](/developers/docs/scaling/#rollups), by mohla učinit platby ještě atraktivnějšími. Zatímco kanály nabízejí levné platby, náklady na nastavení on-chain kontraktu na Mainnetu během fáze otevření mohou být drahé – zejména když se zvýší poplatky za gas. Rollupy založené na Ethereu nabízejí [nižší transakční poplatky](https://l2fees.info/) a mohou snížit režii pro účastníky kanálů tím, že snižují náklady na jejich nastavení.
+Implementace stavových kanálů na řešeních vrstvy 2 (l2), jako jsou [rollupy](/developers/docs/scaling/#rollups), by je mohla učinit ještě atraktivnějšími pro platby. Ačkoli kanály nabízejí levné platby, náklady na nastavení onchain kontraktu na Mainnetu během fáze otevírání se mohou prodražit – zejména když poplatky za gas prudce stoupnou. Rollupy založené na Ethereu nabízejí [nižší transakční poplatky](https://l2fees.info/) a mohou snížit režii pro účastníky kanálu snížením poplatků za nastavení.
 
 ### Mikrotransakce {#microtransactions}
 
-Mikrotransakce jsou platby s nízkou hodnotou (např. nižší než zlomek dolaru), které firmy nemohou zpracovávat a zároveň u toho generovat zisk. Tyto subjekty musí platit poskytovatelům platebních služeb, což nemohou udělat, pokud je marže na platbách zákazníků příliš nízká na to, aby dosáhly zisku.
+Mikrotransakce jsou platby nízké hodnoty (např. nižší než zlomek dolaru), které podniky nemohou zpracovat, aniž by utrpěly ztráty. Tyto subjekty musí platit poskytovatelům platebních služeb, což nemohou udělat, pokud je marže na platbách zákazníků příliš nízká na to, aby vytvořila zisk.
 
-Platební kanály tento problém řeší tím, že snižují režii spojenou s mikrotransakcemi. Například poskytovatel internetových služeb (ISP) může otevřít platební kanál se zákazníkem, což mu umožní provádět malé platby pokaždé, když zákazník službu využívá.
+Platební kanály tento problém řeší snížením režie spojené s mikrotransakcemi. Například poskytovatel internetových služeb (ISP) může se zákazníkem otevřít platební kanál, což mu umožní streamovat malé platby pokaždé, když službu použije.
 
-Kromě nákladů na otevření a uzavření kanálu účastníkům nevznikají žádné další náklady na mikrotransakce (žádné poplatky za palivo). Je to výhodná situace pro obě strany, protože zákazníci mají větší flexibilitu v tom, kolik za služby platí, a podniky nepřicházejí o ziskové mikrotransakce.
+Kromě nákladů na otevření a zavření kanálu nevznikají účastníkům žádné další náklady na mikrotransakce (žádné poplatky za gas). Je to oboustranně výhodná situace, protože zákazníci mají větší flexibilitu v tom, kolik platí za služby, a podniky nepřicházejí o ziskové mikrotransakce.
 
 ### Decentralizované aplikace {#decentralized-applications}
 
-Stejně jako platební kanály mohou stavové kanály dělat podmíněné platby podle konečných stavů stavového stroje. Stavové kanály mohou také podporovat libovolnou logiku přechodu stavu, což je činí užitečnými pro spouštění obecných aplikací mimo řetězec.
+Stejně jako platební kanály mohou stavové kanály provádět podmíněné platby podle konečných stavů stavového automatu. Stavové kanály mohou také podporovat libovolnou logiku přechodu stavu, což je činí užitečnými pro provádění obecných aplikací offchain.
 
-Stavové kanály jsou často omezeny na jednoduché tahové aplikace, protože to usnadňuje správu finančních prostředků vázaných na on-chain kontrakt. S omezeným počtem stran, které v intervalech aktualizují stav aplikace mimo řetězec, je také relativně snadné potrestat nečestné chování.
+Stavové kanály jsou často omezeny na jednoduché tahové aplikace, protože to usnadňuje správu prostředků vložených do onchain kontraktu. Také s omezeným počtem stran, které v intervalech aktualizují stav offchain aplikace, je potrestání nepoctivého chování poměrně přímočaré.
 
-Efektivita aplikace stavového kanálu také závisí na jejím návrhu. Například vývojář může nasadit kontrakt kanálu aplikace on-chain jen jednou a umožnit ostatním hráčům znovu používat tuto aplikaci, aniž by museli na řetězec. V tomto případě slouží počáteční kanál aplikace jako účetní kanál podporující více virtuálních kanálů, z nichž každý provozuje novou instanci chytrého kontraktu aplikace mimo řetězec.
+Efektivita aplikace stavového kanálu závisí také na jejím návrhu. Například vývojář může nasadit kontrakt kanálu aplikace onchain jednou a umožnit ostatním hráčům aplikaci znovu použít, aniž by museli jít onchain. V tomto případě slouží počáteční kanál aplikace jako kanál účetní knihy podporující více virtuálních kanálů, z nichž každý spouští novou instanci chytrého kontraktu aplikace offchain.
 
-Potenciálním příkladem použití stavových kanálů jsou jednoduché hry pro dva hráče, kde jsou prostředky rozděleny na základě výsledku hry. Výhodou je, že hráči si nemusí důvěřovat (nedůvěryhodnost) a alokaci prostředků a řešení sporů (decentralizace) řídí on-chain kontrakt, nikoli hráči.
+Potenciálním případem použití pro aplikace stavových kanálů jsou jednoduché hry pro dva hráče, kde jsou prostředky rozdělovány na základě výsledku hry. Výhodou zde je, že si hráči nemusí navzájem důvěřovat (bezdůvěrnost) a onchain kontrakt, nikoli hráči, řídí alokaci prostředků a řešení sporů (decentralizace).
 
-Další možná využití stavových kanálů zahrnují vlastnictví názvů v ENS, NFT účetní knihy a mnoho dalších.
+Další možné případy použití pro aplikace stavových kanálů zahrnují vlastnictví jmen ENS, účetní knihy NFT a mnoho dalších.
 
 ### Atomické převody {#atomic-transfers}
 
-První platební kanály byly omezeny na převody mezi dvěma stranami, což omezovalo jejich použitelnost. Zavedení virtuálních kanálů však jednotlivcům umožnilo směrovat převody přes prostředníky (tj. více p2p kanálů), aniž by museli otevírat nový kanál on-chain.
+Rané platební kanály byly omezeny na převody mezi dvěma stranami, což omezovalo jejich použitelnost. Zavedení virtuálních kanálů však umožnilo jednotlivcům směrovat převody přes zprostředkovatele (tj. více p2p kanálů), aniž by museli otevírat nový kanál onchain.
 
-Běžně popisované jako „multi-hop převody“, směrované platby jsou atomické (tj. buď všechny části transakce uspějí, nebo transakce selže jako celek). Atomické převody využívají [hashované timelock kontrakty (HTLC)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts) k zajištění toho, že platba bude uvolněna pouze tehdy, pokud jsou splněny určité podmínky, což snižuje riziko podvodu protistrany.
+Směrované platby, běžně označované jako „víceskokové převody“ (multi-hop transfers), jsou atomické (tj. buď jsou všechny části transakce úspěšné, nebo transakce zcela selže). Atomické převody používají [Hashed Timelock Contracts (HTLCs)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts), aby zajistily, že platba bude uvolněna pouze při splnění určitých podmínek, čímž se snižuje riziko protistrany.
 
 ## Nevýhody používání stavových kanálů {#drawbacks-of-state-channels}
 
-### Předpoklady dostupnosti {#liveness-assumptions}
+### Předpoklady dostupnosti (Liveness) {#liveness-assumptions}
 
-Aby byla zajištěna efektivita, stavové kanály stanovují časové limity, během kterých mohou účastníci kanálu reagovat na spory. Toto pravidlo předpokládá, že partneři budou vždy online, aby sledovali aktivitu kanálu a v případě potřeby zpochybnili výzvy.
+Pro zajištění efektivity stanovují stavové kanály časové limity na schopnost účastníků kanálu reagovat na spory. Toto pravidlo předpokládá, že peery budou vždy online, aby mohly sledovat aktivitu kanálu a v případě potřeby zpochybnit výzvy.
 
-Ve skutečnosti mohou uživatelé zůstat offline z důvodů mimo jejich kontrolu (např. špatné internetové připojení, mechanická porucha atd.). Pokud poctivý uživatel zůstane offline, může škodlivý partner situace využít tím, že předloží soudci staré mezistavy kontraktu a tak si přisvojí cizí prostředky.
+Ve skutečnosti se uživatelé mohou odpojit z důvodů, které nemohou ovlivnit (např. špatné připojení k internetu, mechanická závada atd.). Pokud se poctivý uživatel odpojí, může škodlivý peer situaci zneužít tím, že předloží staré průběžné stavy rozhodčímu kontraktu a ukradne vložené prostředky.
 
-Některé kanály používají „strážní věže“ (watchtowers) – entity odpovědné za sledování on-chain sporů jménem ostatních a za podnikání nezbytných kroků, jako je upozornění zúčastněných stran. To však může zvýšit náklady na používání stavového kanálu.
+Některé kanály používají „strážní věže“ (watchtowers) – subjekty odpovědné za sledování onchain událostí sporů jménem ostatních a přijímání nezbytných opatření, jako je upozornění dotčených stran. To však může zvýšit náklady na používání stavového kanálu.
 
 ### Nedostupnost dat {#data-unavailability}
 
-Jak jsme vysvětlili dříve, napadení neplatného sporu vyžaduje předložení nejnovějšího platného stavu stavového kanálu. Toto pravidlo je dalším pravidlem založeným na předpokladu, že uživatelé mají přístup k nejnovějšímu stavu kanálu.
+Jak bylo vysvětleno dříve, zpochybnění neplatného sporu vyžaduje předložení nejnovějšího, platného stavu stavového kanálu. Toto je další pravidlo založené na předpokladu – že uživatelé mají přístup k nejnovějšímu stavu kanálu.
 
-Ačkoli je rozumné očekávat, že uživatelé kanálu budou uchovávat kopie stavu aplikace mimo řetězec, tato data mohou být ztracena v důsledku chyby nebo mechanické poruchy. Pokud uživatel nemá data zálohovaná, může jen doufat, že druhá strana nefinalizuje neplatnou žádost o výstup pomocí starých změn stavu, které má k dispozici.
+Ačkoli je rozumné očekávat, že uživatelé kanálu budou ukládat kopie stavu offchain aplikace, tato data mohou být ztracena v důsledku chyby nebo mechanické závady. Pokud uživatel nemá data zálohovaná, může jen doufat, že druhá strana nefinalizuje neplatnou žádost o výstup pomocí starých přechodů stavu, které má ve svém držení.
 
-Uživatelé Etherea se s tímto problémem nemusí potýkat, protože síť vynucuje pravidla o dostupnosti dat. Transakční data jsou uchovávána a šířena všemi síťovými uzly a jsou dostupná uživatelům ke stažení, kdykoli je to potřeba.
+Uživatelé Etherea se s tímto problémem nemusí potýkat, protože síť vynucuje pravidla pro dostupnost dat. Transakční data jsou ukládána a šířena všemi uzly a jsou uživatelům k dispozici ke stažení, pokud a kdy je to nutné.
 
 ### Problémy s likviditou {#liquidity-issues}
 
-Pro založení blockchainového kanálu musí účastníci uzamknout finanční prostředky v on-chain chytrém kontraktu po dobu životního cyklu kanálu. To snižuje likviditu uživatelů kanálu a také omezuje kanály na ty, které si mohou dovolit držet prostředky uzamčené na Mainnetu.
+K vytvoření blockchainového kanálu musí účastníci uzamknout prostředky v onchain chytrém kontraktu po dobu životního cyklu kanálu. To snižuje likviditu uživatelů kanálu a také omezuje kanály na ty, kteří si mohou dovolit udržovat prostředky uzamčené na Mainnetu.
 
-Problémy s likviditou uživatelů však mohou snížit účetní kanály – provozované off-chain poskytovatelem služeb (OSP). Dva partneři připojení k účetnímu kanálu mohou vytvořit virtuální kanál, který mohou kdykoli otevřít a finalizovat zcela mimo řetězec.
+Kanály účetní knihy – provozované poskytovatelem offchain služeb (OSP) – však mohou snížit problémy s likviditou pro uživatele. Dva peery připojené ke kanálu účetní knihy mohou vytvořit virtuální kanál, který mohou otevřít a finalizovat zcela offchain, kdykoli budou chtít.
 
-Poskytovatelé služeb mimo řetězec by také mohli otevřít kanály s více partnery, což je činí užitečnými pro směrování plateb. Uživatelé samozřejmě musí za služby OSP platit poplatky, což pro některé může být nežádoucí.
+Poskytovatelé offchain služeb by také mohli otevírat kanály s více peery, což by je učinilo užitečnými pro směrování plateb. Uživatelé samozřejmě musí platit poplatky OSP za jejich služby, což může být pro některé nežádoucí.
 
-### Smuteční útoky {#griefing-attacks}
+### Griefing útoky {#griefing-attacks}
 
-Smuteční útoky jsou běžným rysem systémů založených na důkazech podvodu. Takový útok nepřináší přímý prospěch útočníkovi, ale způsobuje „smutek“ (tj. újmu) oběti, což dává název tomuto útoku.
+Griefing útoky jsou běžným rysem systémů založených na důkazech o podvodu. Griefing útok nepřináší útočníkovi přímý prospěch, ale způsobuje oběti zármutek (tj. škodu), odtud ten název.
 
-Důkazní systém podvodu je ke smutečním útokům náchylný, protože poctivá strana musí reagovat na každý spor, i neplatný, nebo riskovat ztrátu svých prostředků. Zlomyslný účastník se může rozhodnout opakovaně zveřejňovat zastaralé přechody stavu on-chain, což nutí poctivou stranu reagovat platným stavem. Náklady na tyto on-chain transakce se mohou rychle sčítat, což způsobuje, že poctivé strany v tomto procesu tratí.
+Prokazování podvodu je náchylné ke griefing útokům, protože poctivá strana musí reagovat na každý spor, dokonce i na ten neplatný, jinak riskuje ztrátu svých prostředků. Škodlivý účastník se může rozhodnout opakovaně odesílat zastaralé přechody stavu onchain, čímž nutí poctivou stranu reagovat platným stavem. Náklady na tyto onchain transakce se mohou rychle sčítat, což způsobuje, že poctivé strany v tomto procesu tratí.
 
-### Předdefinované sestavy účastníků {#predefined-participant-sets}
+### Předem definované sady účastníků {#predefined-participant-sets}
 
-Z povahy návrhu zůstává počet účastníků, kteří tvoří stavový kanál, pevně stanoven po celou dobu jeho životnosti. Je to proto, že aktualizace sady účastníků by komplikovala provoz kanálu, zejména při financování kanálu nebo řešení sporů. Přidání nebo odebrání účastníků by také vyžadovalo další on-chain aktivitu, což uživatelům zvyšuje režii.
+Z podstaty návrhu zůstává počet účastníků, kteří tvoří stavový kanál, po celou dobu jeho životnosti pevný. Je to proto, že aktualizace sady účastníků by zkomplikovala provoz kanálu, zejména při financování kanálu nebo řešení sporů. Přidání nebo odebrání účastníků by také vyžadovalo další onchain aktivitu, což zvyšuje režii pro uživatele.
 
-I když to usnadňuje úvahy o stavových kanálech, omezuje to užitečnost návrhů kanálů pro vývojáře aplikací. To částečně vysvětluje, proč bylo od stavových kanálů upuštěno ve prospěch jiných škálovacích řešení, jako jsou rollupy.
+Ačkoli to usnadňuje uvažování o stavových kanálech, omezuje to užitečnost návrhů kanálů pro vývojáře aplikací. To částečně vysvětluje, proč byly stavové kanály opuštěny ve prospěch jiných řešení škálování, jako jsou rollupy.
 
-### Zpracování paralelních transakcí {#parallel-transaction-processing}
+### Paralelní zpracování transakcí {#parallel-transaction-processing}
 
-Účastníci stavového kanálu posílají aktualizace stavu postupně, což je důvod, proč nejlépe fungují pro „aplikace založené na střídání tahů“ (např. šachová hra pro dva hráče). To eliminuje potřebu zpracovávat současné aktualizace stavu a snižuje práci, kterou musí on-chain kontrakt vykonat, aby potrestal ty, kteří zveřejňují zastaralé aktualizace. Vedlejším efektem tohoto návrhu však je, že transakce jsou na sobě závislé, což zvyšuje latenci a zhoršuje celkový uživatelský zážitek.
+Účastníci ve stavovém kanálu odesílají aktualizace stavu střídavě, a proto fungují nejlépe pro „tahové aplikace“ (např. šachová partie pro dva hráče). To eliminuje potřebu zpracovávat současné aktualizace stavu a snižuje práci, kterou musí onchain kontrakt vykonat k potrestání těch, kteří odesílají zastaralé aktualizace. Vedlejším účinkem tohoto návrhu však je, že transakce jsou na sobě závislé, což zvyšuje latenci a zhoršuje celkový uživatelský zážitek.
 
-Některé stavové kanály řeší tento problém pomocí „full-duplex“ návrhu, který rozděluje off-chain stav na dva jednosměrné „simplexní“ stavy, což umožňuje souběžné aktualizace stavu. Takové návrhy zlepšují propustnost mimo řetězec a snižují zpoždění transakcí.
+Některé stavové kanály tento problém řeší použitím „plně duplexního“ (full-duplex) návrhu, který rozděluje offchain stav na dva jednosměrné „simplexní“ stavy, což umožňuje souběžné aktualizace stavu. Takové návrhy zlepšují offchain propustnost a snižují zpoždění transakcí.
 
-## Využijte stavové kanály {#use-state-channels}
+## Použití stavových kanálů {#use-state-channels}
 
-Několik projektů poskytuje implementace stavových kanálů, které můžete integrovat do svých dappek:
+Několik projektů poskytuje implementace stavových kanálů, které můžete integrovat do svých decentralizovaných aplikací (dapp):
 
 - [Connext](https://connext.network/)
-- [Kchannels](https://www.kchannels.io/)
 - [Perun](https://perun.network/)
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
@@ -253,9 +252,9 @@ Několik projektů poskytuje implementace stavových kanálů, které můžete i
 
 **Stavové kanály**
 
-- [Porozumění škálovacím řešením na vrstvě 2 Etherea: Stavové kanály, Plasma a Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12. února 2018_
-- [Stavové kanály - vysvětlení](https://www.jeffcoleman.ca/state-channels/) _6. listopadu 2015 – Jeff Coleman_
+- [Jak porozumět řešením škálování vrstvy 2 na Ethereu: Stavové kanály, Plasma a Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12. února 2018_
+- [Stavové kanály - vysvětlení](https://www.jeffcoleman.ca/state-channels/) _6. listopadu 2015 - Jeff Coleman_
 - [Základy stavových kanálů](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
-- [Stavové kanály na blockchainu: Špička blockchainu](https://ieeexplore.ieee.org/document/9627997)
+- [Blockchainové stavové kanály: Současný stav](https://ieeexplore.ieee.org/document/9627997)
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_

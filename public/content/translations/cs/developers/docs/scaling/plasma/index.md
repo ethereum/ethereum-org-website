@@ -1,176 +1,180 @@
 ---
-title: "Plazmové řetězce"
-description: "Úvod do plazmových řetězců jako škálovacího řešení, které v současnosti využívá komunita Etherea."
+title: Řetězce Plasma
+description: Úvod do řetězců Plasma jako řešení škálování, které v současnosti využívá komunita Etherea.
 lang: cs
 incomplete: true
 sidebarDepth: 3
 ---
 
-Plazmový řetězec je samostatný blockchain ukotvený na hlavní síti Ethereum, ale provádějící transakce mimo řetězec s vlastním mechanismem pro validaci bloků. Plazmové řetězce jsou někdy označovány jako „dceřiné“ řetězce, což jsou v podstatě menší kopie Ethereum Mainnetu. Plasma řetězce používají [důkazy podvodu](/glossary/#fraud-proof) (jako [optimistické rollupy](/developers/docs/scaling/optimistic-rollups/)) k řešení sporů.
+Řetězec Plasma je samostatný blockchain ukotvený k [Ethereum](/) Mainnetu, který ale provádí transakce offchain s vlastním mechanismem pro validaci bloku. Řetězce Plasma se někdy označují jako „dceřiné“ řetězce, což jsou v podstatě menší kopie Ethereum Mainnetu. Řetězce Plasma používají k řešení sporů [důkazy o podvodu](/glossary/#fraud-proof) (podobně jako [optimistické rollupy](/developers/docs/scaling/optimistic-rollups/)).
 
-Merkle trees umožňují vytvoření nekonečného počtu těchto řetězců, které mohou posloužit k odlehčení šířky pásma mateřských řetězců (včetně Ethereum Mainnetu). Nicméně zatímco tyto řetězce odvozují část své bezpečnosti od Etherea (prostřednictvím důkazů podvodů), jejich bezpečnost a efektivita jsou ovlivněny několika konstrukčními omezeními.
+Merkleovy stromy umožňují vytvoření nekonečného zásobníku těchto řetězců, které mohou fungovat tak, aby odlehčily šířku pásma mateřským řetězcům (včetně Ethereum Mainnetu). Ačkoli však tyto řetězce odvozují určitou bezpečnost z Etherea (prostřednictvím důkazů o podvodu), jejich bezpečnost a efektivita jsou ovlivněny několika konstrukčními omezeními.
 
 ## Předpoklady {#prerequisites}
 
 Měli byste dobře rozumět všem základním tématům a mít obecný přehled o [škálování Etherea](/developers/docs/scaling/).
 
-## Co je Plasma?
+## Co je Plasma? {#what-is-plasma}
 
-Plasma je vývojová platforma pro zlepšení škálovatelnosti na veřejných blockchainech, jako je Ethereum. Jak je popsáno v původní [bílé knize Plasma](https://plasma.io/plasma.pdf), jsou plasma řetězce postaveny na jiném blockchainu (nazývaném „kořenový řetězec“). Každý „dceřiný řetězec“ se rozšiřuje z kořenového řetězce a je obecně spravován smart kontraktem nasazeným na mateřském řetězci.
+Plasma je framework pro zlepšení škálovatelnosti ve veřejných blockchainech, jako je Ethereum. Jak je popsáno v původní [bílé knize Plasmy](https://plasma.io/plasma.pdf), řetězce Plasma jsou postaveny na jiném blockchainu (nazývaném „kořenový řetězec“). Každý „dceřiný řetězec“ vychází z kořenového řetězce a je obecně spravován chytrým kontraktem nasazeným na mateřském řetězci.
 
-Kontrakt Plasma funguje mimo jiné jako [přemostění](/developers/docs/bridges/), které umožňuje uživatelům přesouvat aktiva mezi hlavní sítí Ethereum a plazmovým řetězcem. Ačkoli je to činí podobnými [sidechainům](/developers/docs/scaling/sidechains/), plazmové řetězce těží – alespoň do určité míry – z bezpečnosti hlavní sítě Ethereum. A tím se od postranních řetězců, které jsou zodpovědné za svou bezpečnost samy, odlišují.
+Kontrakt Plasmy funguje mimo jiné jako [most](/developers/docs/bridges/), který uživatelům umožňuje přesouvat aktiva mezi Ethereum Mainnetem a řetězcem Plasma. Ačkoli jsou díky tomu podobné [postranním řetězcům](/developers/docs/scaling/sidechains/), řetězce Plasma těží – alespoň do určité míry – z bezpečnosti Ethereum Mainnetu. To je rozdíl oproti postranním řetězcům, které jsou za svou bezpečnost zodpovědné samy.
 
-## Jak Plasma funguje?
+## Jak Plasma funguje? {#how-does-plasma-work}
 
-Základními komponentami vývojového rámce Plasma jsou:
+Základní komponenty frameworku Plasma jsou:
 
-### Výpočty mimo řetězec {#offchain-computation}
+### Výpočty offchain {#offchain-computation}
 
-Současná rychlost zpracování Etherea je omezena na přibližně 15–20 transakcí za sekundu, což snižuje krátkodobou možnost škálování pro obsloužení většího počtu uživatelů. Tento problém existuje hlavně proto, že [mechanismus konsenzu](/developers/docs/consensus-mechanisms/) Etherea vyžaduje, aby mnoho peer-to-peer uzlů ověřilo každou aktualizaci stavu blockchainu.
+Současná rychlost zpracování Etherea je omezena na ~ 15–20 transakcí za sekundu, což snižuje krátkodobou možnost škálování pro zvládnutí více uživatelů. Tento problém existuje hlavně proto, že [mechanismus konsensu](/developers/docs/consensus-mechanisms/) Etherea vyžaduje, aby mnoho peer-to-peer uzlů ověřilo každou aktualizaci stavu blockchainu.
 
-Ačkoli je konsensuální mechanismus Etherea nezbytný pro bezpečnost, nemusí se vztahovat na každý případ použití. Například Alice možná nepotřebuje, aby její denní platby Bobovi za šálek kávy ověřila celá síť Etherea, protože mezi oběma stranami existuje určitá míra důvěry.
+Ačkoli je mechanismus konsensu Etherea nezbytný pro bezpečnost, nemusí se vztahovat na každý případ použití. Například Alice možná nepotřebuje, aby její každodenní platby Bobovi za šálek kávy ověřovala celá síť Etherea, protože mezi oběma stranami existuje určitá důvěra.
 
-Plasma předpokládá, že Ethereum Mainnet nemusí ověřovat všechny transakce. Místo toho můžeme zpracovávat transakce mimo Mainnet, čímž se usnadní práce síťovým uzlům, které tak nebudou muset validovat každou transakci.
+Plasma předpokládá, že Ethereum Mainnet nemusí ověřovat všechny transakce. Místo toho můžeme transakce zpracovávat mimo Mainnet, čímž uzly osvobodíme od nutnosti validovat každou transakci.
 
-Výpočty mimo řetězec jsou nezbytné, protože plazmové řetězce mohou optimalizovat rychlost a náklady. Například plazmový řetězec může – a nejčastěji také používá – jediného „operátora“ pro správu pořadí a exekuci transakcí. S jediným subjektem ověřujícím transakce jsou doby zpracování na plazmovém řetězci rychlejší než na Ethereum Mainnetu.
+Výpočty offchain jsou nezbytné, protože řetězce Plasma mohou optimalizovat rychlost a náklady. Například řetězec Plasma může – a nejčastěji to tak dělá – používat jediného „operátora“ ke správě řazení a provádění transakcí. S jedinou entitou ověřující transakce jsou doby zpracování na řetězci Plasma rychlejší než na Ethereum Mainnetu.
 
-### Závazky stavu {#state-commitments}
+### Stavové závazky {#state-commitments}
 
-I když Plasma provádí transakce mimo řetězec, jsou vypořádány na hlavní exekuční vrstvě Etherea – jinak by plazmové řetězce nemohly těžit z bezpečnostních záruk Etherea. Ale finalizace transakcí mimo řetězec bez znalosti stavu plazmového řetězce by narušila bezpečnostní model a umožnila rozšíření neplatných transakcí. Proto je operátor, subjekt odpovědný za produkci bloků na plazmovém řetězci, povinen pravidelně zveřejňovat „závazky stavu“ na Ethereu.
+Zatímco Plasma provádí transakce offchain, jsou vypořádány na hlavní exekuční vrstvě Etherea – jinak by řetězce Plasma nemohly těžit z bezpečnostních záruk Etherea. Ale finalizace offchain transakcí bez znalosti stavu řetězce Plasma by narušila bezpečnostní model a umožnila šíření neplatných transakcí. Proto je operátor, entita zodpovědná za produkci bloků na řetězci Plasma, povinen pravidelně publikovat „stavové závazky“ na Ethereu.
 
-[Schéma závazků](https://en.wikipedia.org/wiki/Commitment_scheme) je kryptografická technika pro zavázání se k hodnotě nebo výroku, aniž by tato hodnota nebo výrok byly odhaleny jiné straně. Závazky jsou „závazné“ v tom smyslu, že nemůžete změnit hodnotu nebo tvrzení, jakmile jste se k němu zavázali. Závazky stavu v Plasmě mají podobu „Merkle kořenů“ (odvozených od [Merkle tree](/whitepaper/#merkle-trees)), které operátor v pravidelných intervalech zasílá do plazmového kontraktu na Ethereu.
+[Závazkové schéma](https://en.wikipedia.org/wiki/Commitment_scheme) je kryptografická technika pro zavázání se k hodnotě nebo tvrzení, aniž by byla odhalena druhé straně. Závazky jsou „závazné“ v tom smyslu, že jakmile se k hodnotě nebo tvrzení zavážete, nemůžete je změnit. Stavové závazky v Plasmě mají podobu „Merkleho kořenů“ (odvozených z [Merkleova stromu](/whitepaper/#merkle-trees)), které operátor v intervalech odesílá do kontraktu Plasmy na řetězci Etherea.
 
-Kořeny Merkle jsou kryptografické prvky, které umožňují kompresi velkého množství informací. Merkle kořen (v tomto případě také nazývaný „kořen bloku“) může reprezentovat všechny transakce v bloku. Merkle kořeny také usnadňují ověření, že malý kousek dat je součástí většího datového souboru. Uživatel může například vytvořit [Merkleův důkaz](/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content) pro prokázání zahrnutí transakce do konkrétního bloku.
+Merkleho kořeny jsou kryptografická primitiva, která umožňují kompresi velkého množství informací. Merkleho kořen (v tomto případě nazývaný také „kořen bloku“) by mohl představovat všechny transakce v bloku. Merkleho kořeny také usnadňují ověření, že malý kousek dat je součástí většího datového souboru. Například uživatel může vytvořit [Merkleův důkaz](/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content), aby prokázal zahrnutí transakce do konkrétního bloku.
 
-Merkle kořeny jsou důležité pro poskytování informací o stavu mimo řetězec Ethereu. Merkle kořeny si můžete představit jako „ukládací body“ – operátor říká: „Toto je stav plazmového řetězce v bodě času x a toto je Merkle kořen jako důkaz.“ Operátor se zavazuje k aktuálnímu stavu plazmového řetězce pomocí Merkle kořene, což je důvod, proč se tomu říká „závazek stavu“.
+Merkleho kořeny jsou důležité pro poskytování informací o stavu offchainu Ethereu. Merkleho kořeny si můžete představit jako „body uložení“: operátor říká: „Toto je stav řetězce Plasma v čase x a toto je Merkleho kořen jako důkaz.“ Operátor se zavazuje k _aktuálnímu stavu_ řetězce Plasma pomocí Merkleho kořene, a proto se tomu říká „stavový závazek“.
 
 ### Vstupy a výstupy {#entries-and-exits}
 
-Aby uživatelé Etherea mohli využívat výhody Plasmy, musí existovat mechanismus pro přesun prostředků mezi Mainnetem a plazmovými řetězci. Nemůžeme však svévolně poslat ether na adresu na plazmovém řetězci – tyto řetězce nejsou kompatibilní, takže by transakce buď selhala, nebo by vedla ke ztrátě prostředků.
+Aby uživatelé Etherea mohli využívat Plasmu, musí existovat mechanismus pro přesun prostředků mezi Mainnetem a řetězci Plasma. Nemůžeme však libovolně posílat ether na adresu na řetězci Plasma – tyto řetězce jsou nekompatibilní, takže by transakce buď selhala, nebo by vedla ke ztrátě prostředků.
 
-Plasma využívá hlavní kontrakt běžící na Ethereu ke zpracování vstupů a výstupů uživatelů. Tento hlavní kontrakt je také odpovědný za sledování závazků stavu (vysvětleno dříve) a za trestání nepoctivého chování pomocí důkazů podvodů (více o tom později).
+Plasma používá hlavní kontrakt běžící na Ethereu ke zpracování uživatelských vstupů a výstupů. Tento hlavní kontrakt je také zodpovědný za sledování stavových závazků (vysvětleno dříve) a trestání nečestného chování prostřednictvím důkazů o podvodu (více o tom později).
 
-#### Vstup na plazmový řetězec {#entering-the-plasma-chain}
+#### Vstup do řetězce Plasma {#entering-the-plasma-chain}
 
-Aby Alice (uživatel) mohla vstoupit do plazmového řetězce, musí vložit ETH nebo jakýkoli ERC-20 token do plazmového kontraktu. Operátor plazmy, který sleduje vklady do kontraktu, znovu vytvoří částku rovnající se původnímu vkladu Alice a pošle ji na její adresu na plazmovém řetězci. Alice musí potvrdit přijetí prostředků na dceřiném řetězci a poté může tyto prostředky použít pro transakce.
+Pro vstup do řetězce Plasma bude muset Alice (uživatelka) vložit ETH nebo jakýkoli ERC-20 token do kontraktu Plasmy. Operátor Plasmy, který sleduje vklady do kontraktu, znovu vytvoří částku rovnající se počátečnímu vkladu Alice a uvolní ji na její adresu na řetězci Plasma. Alice je povinna potvrdit přijetí prostředků na dceřiném řetězci a poté může tyto prostředky použít pro transakce.
 
-#### Opuštění plazmového řetězce {#exiting-the-plasma-chain}
+#### Výstup z řetězce Plasma {#exiting-the-plasma-chain}
 
-Výstup z plazmového řetězce je složitější než vstup, a to hned z několika důvodů. Největším je, že zatímco Ethereum má informace o stavu plazmového řetězce, nemůže ověřit, zda jsou tyto informace pravdivé. Podvodník by mohl učinit nesprávné tvrzení („mám 1 000 ETH“) a utéct bez postihu, kdyby poskytl falešné důkazy na podporu tohoto tvrzení.
+Výstup z řetězce Plasma je z několika důvodů složitější než vstup do něj. Tím největším je, že ačkoli má Ethereum informace o stavu řetězce Plasma, nemůže ověřit, zda jsou tyto informace pravdivé, či nikoli. Zlomyslný uživatel by mohl učinit nesprávné tvrzení („Mám 1000 ETH“) a projít mu to poskytnutím falešných důkazů na podporu tohoto nároku.
 
-Aby se předešlo podvodným výběrům, zavádí se „období výzvy“. Během období výzvy (obvykle týden) může kdokoli zpochybnit žádost o výběr pomocí důkazu podvodu. Pokud je výzva úspěšná, žádost o výběr je zamítnuta.
+Aby se zabránilo zlomyslným výběrům, je zavedeno „období pro zpochybnění“ (challenge period). Během období pro zpochybnění (obvykle týden) může kdokoli zpochybnit žádost o výběr pomocí důkazu o podvodu. Pokud je zpochybnění úspěšné, žádost o výběr je zamítnuta.
 
-Obvykle jsou však uživatelé poctiví a o prostředcích, které vlastní, mluví pravdu. V tomto scénáři Alice zahájí žádost o výběr na kořenovém řetězci (Ethereum) odesláním transakce do plazmového kontraktu.
+Obvykle je však situace taková, že uživatelé jsou čestní a vznášejí správné nároky na prostředky, které vlastní. V tomto scénáři Alice iniciuje žádost o výběr na kořenovém řetězci (Ethereu) odesláním transakce do kontraktu Plasmy.
 
-Alice musí také poskytnout Merkle důkaz ověřující, že transakce, která vytvořila její prostředky na plazmovém řetězci, byla zahrnuta do bloku. To je nezbytné pro iterace Plasma, jako je [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), které používají model [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+Musí také poskytnout Merkleův důkaz ověřující, že transakce vytvářející její prostředky na řetězci Plasma byla zahrnuta do bloku. To je nezbytné pro iterace Plasmy, jako je [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), které používají model [nevyužitých transakčních výstupů (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Jiné, jako [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), představují prostředky jako [nezaměnitelné tokeny](/developers/docs/standards/tokens/erc-721/) místo UTXO. V tomto případě je pro výběr nutné předložit důkaz o vlastnictví tokenů na plazmovém řetězci. Toho je možné docílit předložením dvou nejnovějších transakcí zahrnujících token a poskytnutím Merkle důkazu ověřujícího zahrnutí těchto transakcí do bloku.
+Jiné, jako [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), představují prostředky jako [nezaměnitelné tokeny](/developers/docs/standards/tokens/erc-721/) namísto UTXO. Výběr v tomto případě vyžaduje důkaz o vlastnictví tokenů na řetězci Plasma. To se provádí odesláním dvou nejnovějších transakcí týkajících se tokenu a poskytnutím Merkleova důkazu ověřujícího zahrnutí těchto transakcí do bloku.
 
-Uživatel musí také přidat k žádosti o výběr zástavu jako záruku poctivého chování. Pokud vyzyvatel prokáže neplatnost žádosti o výběr Alice, její záloha je penalizována a část z ní jde vyzyvateli jako odměna.
+Uživatel musí k žádosti o výběr také přidat kauci jako záruku čestného chování. Pokud vyzyvatel prokáže, že žádost Alice o výběr je neplatná, její kauce je penalizována a část z ní připadne vyzyvateli jako odměna.
 
-Pokud uplyne období výzvy, aniž by kdokoli poskytl důkaz podvodu, žádost Alice o výběr je považována za platnou, což jí umožňuje vybrat vklady z plazmového kontraktu na Ethereu.
+Pokud období pro zpochybnění uplyne, aniž by kdokoli poskytl důkaz o podvodu, žádost Alice o výběr je považována za platnou, což jí umožní získat vklady z kontraktu Plasmy na Ethereu.
 
 ### Řešení sporů {#dispute-arbitration}
 
-Stejně jako u jakéhokoli jiného blockchainu, plazmové řetězce potřebují mechanismus pro vynucení integrity transakcí v případě, že se účastníci chovají podvodně (např. dvojité utrácení prostředků). Za tímto účelem plazmové řetězce používají důkazy podvodů k arbitráži sporů týkajících se platnosti přechodů stavu a k trestání podvodného chování. Důkazy podvodů jsou použity jako mechanismus, kterým plazmový dceřiný řetězec podává stížnost svému mateřskému řetězci nebo kořenovému řetězci.
+Jako každý blockchain, i řetězce Plasma potřebují mechanismus pro prosazování integrity transakcí pro případ, že by účastníci jednali zlomyslně (např. dvojí útrata prostředků). Za tímto účelem používají řetězce Plasma důkazy o podvodu k řešení sporů týkajících se platnosti přechodů stavu a k penalizaci špatného chování. Důkazy o podvodu se používají jako mechanismus, jehož prostřednictvím dceřiný řetězec Plasma podává stížnost svému mateřskému řetězci nebo kořenovému řetězci.
 
-Důkaz podvodu je jednoduše tvrzení, že určitá změna stavu je neplatná. Příkladem je, když se uživatel (Alice) pokusí utratit stejné prostředky dvakrát. Možná utratila UTXO v transakci s Bobem a chce utratit stejné UTXO (které je nyní Bobovo) v jiné transakci.
+Důkaz o podvodu je jednoduše tvrzení, že konkrétní přechod stavu je neplatný. Příkladem je, když se uživatel (Alice) pokusí utratit stejné prostředky dvakrát. Možná utratila UTXO v transakci s Bobem a chce utratit stejné UTXO (které je nyní Bobovo) v jiné transakci.
 
-Aby zabránil výběru, Bob sestaví důkaz podvodu poskytnutím důkazu o tom, že Alice utratila uvedené UTXO v předchozí transakci, a Merkle důkazu o zahrnutí transakce do bloku. Stejný postup funguje v Plasma Cash – Bob by musel poskytnout důkaz, že Alice dříve převedla tokeny, které se nyní pokouší vybrat.
+Aby Bob zabránil výběru, zkonstruuje důkaz o podvodu poskytnutím důkazu o tom, že Alice utratila zmíněné UTXO v předchozí transakci, a Merkleova důkazu o zahrnutí transakce do bloku. Stejný proces funguje v Plasma Cash – Bob by musel poskytnout důkaz, že Alice dříve převedla tokeny, které se snaží vybrat.
 
-Pokud je Bobova výzva úspěšná, žádost Alice o výběr je zrušena. Tento přístup však spoléhá na Bobovu schopnost sledovat řetězec. Pokud je Bob offline, může Alice zpracovat zlovolný výběr, jakmile uplyne období výzvy.
+Pokud je Bobovo zpochybnění úspěšné, žádost Alice o výběr je zrušena. Tento přístup však spoléhá na Bobovu schopnost sledovat řetězec kvůli žádostem o výběr. Pokud je Bob offline, pak může Alice zpracovat zlomyslný výběr, jakmile uplyne období pro zpochybnění.
 
-## Problém hromadného odchodu v Plasma {#the-mass-exit-problem-in-plasma}
+## Problém hromadného výstupu v Plasmě {#the-mass-exit-problem-in-plasma}
 
-Problém hromadného výběru nastává, když se velký počet uživatelů naráz pokusí vybrat prostředky z plazmového řetězce. Tento problém existuje kvůli jednomu z největších problémů Plasmy: **nedostupnosti dat**.
+Problém hromadného výstupu nastává, když se velké množství uživatelů pokusí vybrat prostředky z řetězce Plasma ve stejnou dobu. Důvod existence tohoto problému souvisí s jedním z největších problémů Plasmy: **nedostupností dat**.
 
-Dostupnost dat je schopnost ověřit, že informace pro navrhovaný blok byly skutečně zveřejněny na blockchainové síti. Blok je „nedostupný“, pokud producent zveřejní samotný blok, ale zadrží data použitá k vytvoření bloku.
+Dostupnost dat je schopnost ověřit, že informace pro navrhovaný blok byly skutečně publikovány na blockchainové síti. Blok je „nedostupný“, pokud producent publikuje samotný blok, ale zadrží data použitá k vytvoření bloku.
 
-Bloky musí být dostupné, pokud mají být síťové uzly schopny stáhnout blok a ověřit platnost transakcí. Blockchainy zajišťují dostupnost dat tím, že nutí producenty bloků zveřejnit všechna data transakcí na blockchainu.
+Bloky musí být dostupné, aby uzly mohly blok stáhnout a ověřit platnost transakcí. Blockchainy zajišťují dostupnost dat tím, že nutí producenty bloků zveřejňovat všechna transakční data onchain.
 
-Dostupnost dat také pomáhá zabezpečit škálovací protokoly mimo řetězec, které staví na základní vrstvě Etherea. Tím, že nutí operátory na těchto řetězcích zveřejnit data transakcí na Ethereu, může kdokoli zpochybnit neplatné bloky sestavením důkazů podvodu odkazujících na správný stav řetězce.
+Dostupnost dat také pomáhá se zabezpečením offchain škálovacích protokolů, které staví na základní vrstvě Etherea. Tím, že jsou operátoři na těchto řetězcích nuceni publikovat transakční data na Ethereu, může kdokoli zpochybnit neplatné bloky zkonstruováním důkazů o podvodu odkazujících na správný stav řetězce.
 
-Plazmové řetězce primárně ukládají data o transakcích u operátora a **nezveřejňují žádná data na hlavní síti** (tj. kromě pravidelných závazků stavu). To znamená, že uživatelé se musí spoléhat na to, že operátor poskytne data bloků, pokud potřebují vytvořit důkazy podvodu a zpochybnit neplatné transakce. Pokud tento systém funguje, mohou uživatelé vždy využít důkazů podvodu k ochraně svých prostředků.
+Řetězce Plasma primárně ukládají transakční data u operátora a **nepublikují žádná data na Mainnetu** (tj. kromě pravidelných stavových závazků). To znamená, že uživatelé se musí spoléhat na operátora, že poskytne data bloku, pokud potřebují vytvořit důkazy o podvodu zpochybňující neplatné transakce. Pokud tento systém funguje, pak uživatelé mohou vždy použít důkazy o podvodu k zabezpečení prostředků.
 
-Problém nastává, když podvodníkem není běžný uživatel, ale přímo operátor. Protože operátor má plnou kontrolu nad blockchainem, má větší motivaci prosazovat neplatné změny stavu ve větším měřítku, například krást prostředky uživatelů na plazmovém řetězci.
+Problém začíná, když je operátor, a ne jen tak ledajaký uživatel, stranou jednající zlomyslně. Protože má operátor výhradní kontrolu nad blockchainem, má větší motivaci prosazovat neplatné přechody stavu ve větším měřítku, jako je krádež prostředků patřících uživatelům na řetězci Plasma.
 
-V tomto případě klasický systém důkazů podvodu nefunguje. Operátor by mohl snadno provést neplatnou transakci, která převede prostředky Alice a Boba do jeho peněženky, a skrýt data potřebná pro vytvoření důkazu podvodu. To je možné, protože operátor není povinen zpřístupnit data uživatelům nebo Mainnetu.
+V tomto případě použití klasického systému důkazů o podvodu nefunguje. Operátor by mohl snadno provést neplatnou transakci převádějící prostředky Alice a Boba do své peněženky a skrýt data nezbytná pro vytvoření důkazu o podvodu. To je možné, protože operátor není povinen zpřístupnit data uživatelům nebo Mainnetu.
 
-Nejoptimističtějším řešením v této situaci je pokus o „hromadný výběr“ uživatelů z plazmového řetězce. Hromadný výběr zpomalí podvodný plán operátora na krádež prostředků a poskytne uživatelům určitou míru ochrany. Žádosti o výběr jsou seřazeny podle toho, kdy bylo vytvořeno každé UTXO (nebo token), čímž se zabrání tomu, aby podvodní operátoři předběhli poctivé uživatele.
+Proto je nejoptimističtějším řešením pokusit se o „hromadný výstup“ uživatelů z řetězce Plasma. Hromadný výstup zpomaluje plán zlomyslného operátora na krádež prostředků a poskytuje uživatelům určitou míru ochrany. Žádosti o výběr jsou seřazeny na základě toho, kdy bylo každé UTXO (nebo token) vytvořeno, což brání zlomyslným operátorům v předbíhání čestných uživatelů.
 
-Nicméně stále potřebujeme způsob, jak ověřit platnost žádostí o výběr během hromadného výběru, aby se zabránilo tomu, že by oportunističtí jednotlivci využili chaosu a neplatně vybrali prostředky. Řešení je jednoduché: vyžadovat od uživatelů, aby pro výběr svých peněz zveřejnili poslední **platný stav řetězce**.
+Nicméně stále potřebujeme způsob, jak ověřit platnost žádostí o výběr během hromadného výstupu – abychom zabránili oportunistickým jednotlivcům vydělat na chaosu zpracováním neplatných výstupů. Řešení je jednoduché: požadovat po uživatelích, aby zveřejnili poslední **platný stav řetězce**, aby mohli vybrat své peníze.
 
-Tento přístup má však stále své mouchy. Například pokud všichni uživatelé na plazmovém řetězci potřebují provést výběr (což je možné v případě podvodného operátora), pak musí být celý platný stav plazmového řetězce naráz přenesen na základní vrstvu Etherea. Vzhledem k arbitrární velikosti plazmových řetězců (vyšší propustnost = více dat) a omezením rychlosti zpracování Ethereem to není ideální řešení.
+Tento přístup má však stále problémy. Například pokud potřebují vystoupit všichni uživatelé na řetězci Plasma (což je v případě zlomyslného operátora možné), pak musí být celý platný stav řetězce Plasma naráz vyklopen na základní vrstvu Etherea. Vzhledem k libovolné velikosti řetězců Plasma (vysoká propustnost = více dat) a omezením rychlosti zpracování Etherea to není ideální řešení.
 
-Ačkoli výstupní strategie zní teoreticky dobře, skutečné hromadné výběry pravděpodobně vyvolají přetížení sítě na samotném Ethereu. Kromě poškození funkčnosti Etherea může špatně koordinovaný hromadný výběr znamenat, že uživatelé nebudou schopni vybrat své prostředky dříve, než operátor odčerpá prostředky ze všech účtů na plazmovém řetězci.
+Ačkoli výstupní hry znějí teoreticky hezky, hromadné výstupy v reálném životě pravděpodobně vyvolají celosíťové přetížení na samotném Ethereu. Kromě poškození funkčnosti Etherea znamená špatně koordinovaný hromadný výstup, že uživatelé možná nebudou moci vybrat prostředky dříve, než operátor vysaje každý účet na řetězci Plasma.
 
-## Výhody a nevýhody Plasma {#pros-and-cons-of-plasma}
+## Výhody a nevýhody Plasmy {#pros-and-cons-of-plasma}
 
-| Plusy                                                                                                                                                                                                                                                                                 | Minusy                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nabízí vysokou propustnost a nízké náklady na transakci.                                                                                                                                                                                                              | Nepodporuje obecné výpočty (nemůže spouštět smart kontrakty). Podporuje pouze základní tokenové transakce, směnu a několik dalších typů transakcí prostřednictvím predikátové logiky. |
-| Vhodné pro transakce mezi libovolnými uživateli (bez režie páru uživatelů, pokud jsou oba etablováni na plazmovém řetězci)                                                                                                                                         | Nutnost pravidelně sledovat síť (je třeba být připojen) nebo tuto odpovědnost delegovat na někoho jiného, aby byla zajištěna bezpečnost vašich prostředků.                                            |
-| Plazmové řetězce lze přizpůsobit specifickým případům použití, které nesouvisejí s hlavním řetězcem. Každý, včetně firem, si může plazmové smart kontrakty přizpůsobit a poskytnout škálovatelnou infrastrukturu, která funguje v různých kontextech. | Spoléhá na jednoho nebo více operátorů, aby uchovávali data a na požádání je poskytovali.                                                                                                                                |
-| Snižuje zatížení hlavní sítě Ethereum přesunem výpočtů a úložiště mimo řetězec.                                                                                                                                                                                       | Výběry jsou zpožděny o několik dní, aby bylo možné podávat výzvy. U zaměnitelných aktiv to mohou zmírnit poskytovatelé likvidity, ale s tím jsou spojeny kapitálové náklady.                             |
-|                                                                                                                                                                                                                                                                                       | Pokud se příliš mnoho uživatelů pokusí o výběr současně, může se Ethereum Mainnet přetížit.                                                                                                                              |
+| Výhody                                                                                                                                                                                                                             | Nevýhody                                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nabízí vysokou propustnost a nízké náklady na transakci.                                                                                                                                                                             | Nepodporuje obecné výpočty (nemůže spouštět chytré kontrakty). Prostřednictvím predikátové logiky jsou podporovány pouze základní převody tokenů, swapy a několik dalších typů transakcí.    |
+| Dobré pro transakce mezi libovolnými uživateli (žádná režie na pár uživatelů, pokud jsou oba etablováni na řetězci Plasma).                                                                                                            | Je nutné pravidelně sledovat síť (požadavek na živost) nebo delegovat tuto odpovědnost na někoho jiného, aby byla zajištěna bezpečnost vašich prostředků.                          |
+| Řetězce Plasma lze přizpůsobit konkrétním případům použití, které nesouvisejí s hlavním řetězcem. Kdokoli, včetně podniků, si může přizpůsobit chytré kontrakty Plasmy tak, aby poskytovaly škálovatelnou infrastrukturu, která funguje v různých kontextech. | Spoléhá na jednoho nebo více operátorů, kteří ukládají data a poskytují je na vyžádání.                                                                                                     |
+| Snižuje zátěž Ethereum Mainnetu přesunem výpočtů a úložiště offchain.                                                                                                                                                    | Výběry jsou zpožděny o několik dní, aby bylo možné provést zpochybnění. U zaměnitelných aktiv to mohou zmírnit poskytovatelé likvidity, ale je s tím spojen kapitálový náklad. |
+|                                                                                                                                                                                                                                  | Pokud se příliš mnoho uživatelů pokusí vystoupit současně, Ethereum Mainnet by se mohl přetížit.                                                                                          |
 
-## Plasma versus škálovací protokoly druhé vrstvy {#plasma-vs-layer-2}
+## Plasma vs. protokoly škálování vrstvy 2 (l2) {#plasma-vs-layer-2}
 
-Ačkoli byla Plasma kdysi považována za užitečné škálovací řešení pro Ethereum, od tohoto názoru bylo časem upuštěno ve prospěch škálovacích protokolů druhé vrstvy (L2). Řešení škálování na druhé vrstvě napravují několik problémů Plasmy:
+Zatímco Plasma byla kdysi považována za užitečné řešení škálování pro Ethereum, od té doby byla opuštěna ve prospěch [protokolů škálování vrstvy 2 (l2)](/layer-2/). Řešení škálování L2 napravují několik problémů Plasmy:
 
 ### Efektivita {#efficiency}
 
-[Rollupy s nulovou znalostí](/developers/docs/scaling/zk-rollups) generují kryptografické důkazy o platnosti každé dávky transakcí zpracovaných mimo řetězec. To brání uživatelům (a operátorům) v prosazování neplatných změn stavu, čímž se eliminuje potřeba výzev a výstupních strategií. Také to znamená, že uživatelé nemusí pravidelně sledovat řetězec, aby zabezpečili své prostředky.
+[Rollupy s nulovým vědomím](/developers/docs/scaling/zk-rollups) generují kryptografické důkazy o platnosti každé dávky transakcí zpracovaných offchain. To brání uživatelům (a operátorům) v prosazování neplatných přechodů stavu, čímž se eliminuje potřeba období pro zpochybnění a výstupních her. Znamená to také, že uživatelé nemusí pravidelně sledovat řetězec, aby zabezpečili své prostředky.
 
-### Podpora pro chytré kontrakty {#support-for-smart-contracts}
+### Podpora chytrých kontraktů {#support-for-smart-contracts}
 
-Dalším problémem plasma frameworku byla [neschopnost podporovat provádění chytrých kontraktů Etherea](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4). V důsledku toho byla většina implementací Plasmy vytvořena především pro jednoduché platby nebo směnu tokenů ERC-20.
+Dalším problémem frameworku Plasma byla [neschopnost podporovat provádění chytrých kontraktů Etherea](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4). V důsledku toho byla většina implementací Plasmy většinou postavena pro jednoduché platby nebo výměnu ERC-20 tokenů.
 
-Naopak, optimistické rollupy jsou kompatibilní s [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) a mohou spouštět nativní [chytré kontrakty](/developers/docs/smart-contracts/) Etherea, což z nich dělá užitečné a _bezpečné_ řešení pro škálování [decentralizovaných aplikací](/developers/docs/dapps/). Podobně se připravují plány na [vytvoření implementace EVM s nulovou znalostí (zkEVM)](https://ethresear.ch/t/a-zk-evm-specification/11549), která by umožnila ZK-rollupům zpracovávat libovolnou logiku a provádět chytré kontrakty.
+Naopak optimistické rollupy jsou kompatibilní s [Ethereum Virtual Machine](/developers/docs/evm/) a mohou spouštět nativní [chytré kontrakty](/developers/docs/smart-contracts/) Etherea, což z nich činí užitečné a _bezpečné_ řešení pro škálování [decentralizovaných aplikací (dapp)](/developers/docs/dapps/). Podobně probíhají plány na [vytvoření implementace EVM s nulovým vědomím (zkEVM)](https://ethresear.ch/t/a-zk-evm-specification/11549), která by umožnila ZK-rollupům zpracovávat libovolnou logiku a spouštět chytré kontrakty.
 
 ### Nedostupnost dat {#data-unavailability}
 
-Jak bylo vysvětleno dříve, Plasma trpí problémem nedostupnosti dat. Pokud by zlovolný operátor prosadil neplatnou změnu na plazmovém řetězci, uživatelé by ji nemohli zpochybnit, protože operátor může zadržet data potřebná k vytvoření důkazu podvodu. Rollupy tento problém řeší tím, že nutí operátory zveřejnit data transakcí na Ethereu, což umožňuje komukoli ověřit stav řetězce a v případě potřeby vytvořit důkazy podvodu.
+Jak bylo vysvětleno dříve, Plasma trpí problémem dostupnosti dat. Pokud by zlomyslný operátor prosadil neplatný přechod na řetězci Plasma, uživatelé by jej nemohli zpochybnit, protože operátor může zadržet data potřebná k vytvoření důkazu o podvodu. Rollupy tento problém řeší tím, že nutí operátory zveřejňovat transakční data na Ethereu, což komukoli umožňuje ověřit stav řetězce a v případě potřeby vytvořit důkazy o podvodu.
 
-### Problém hromadného odchodu {#mass-exit-problem}
+### Problém hromadného výstupu {#mass-exit-problem}
 
-ZK-rollupy i optimistické rollupy řeší problém hromadného výběru v Plasmě různými způsoby. Například ZK-rollup spoléhá na kryptografické mechanismy, které zajišťují, že operátoři nemohou za žádných okolností ukrást prostředky uživatelů.
+ZK-rollupy i optimistické rollupy řeší problém hromadného výstupu Plasmy různými způsoby. Například ZK-rollup spoléhá na kryptografické mechanismy, které zajišťují, že operátoři nemohou za žádného scénáře ukrást prostředky uživatelů.
 
-Podobně optimistické rollupy zavádějí období zpoždění u výběrů, během něhož může kdokoli zahájit výzvu a zabránit podvodným žádostem o výběr. Ačkoli je to podobné jako v Plasmě, rozdíl spočívá v tom, že ověřovatelé mají přístup k datům potřebným k vytvoření důkazů podvodu. Proto není nutné, aby uživatelé rollupu podstupovali zběsilou migraci „kdo dřív přijde, ten dřív mele“ na Ethereum Mainnet.
+Podobně optimistické rollupy ukládají na výběry období zpoždění, během kterého může kdokoli iniciovat zpochybnění a zabránit zlomyslným žádostem o výběr. Ačkoli je to podobné Plasmě, rozdíl je v tom, že ověřovatelé mají přístup k datům potřebným k vytvoření důkazů o podvodu. Uživatelé rollupů se tedy nemusí zapojovat do zběsilé migrace na Ethereum Mainnet ve stylu „kdo dřív přijde, ten dřív mele“.
 
 ## Jak se Plasma liší od postranních řetězců a shardingu? {#plasma-sidechains-sharding}
 
-Plasma, postranní řetězce a sharding jsou si poměrně podobné, protože se všechny nějakým způsobem připojují k Ethereum Mainnetu. Úroveň a síla těchto propojení se však liší, což ovlivňuje bezpečnostní vlastnosti každého škálovacího řešení.
+Plasma, postranní řetězce a sharding jsou si docela podobné, protože se všechny nějakým způsobem připojují k Ethereum Mainnetu. Úroveň a síla těchto spojení se však liší, což ovlivňuje bezpečnostní vlastnosti každého řešení škálování.
 
-### Plasma vs. sidechainy {#plasma-vs-sidechains}
+### Plasma vs. postranní řetězce {#plasma-vs-sidechains}
 
-[Sidechain](/developers/docs/scaling/sidechains/) je nezávisle provozovaný blockchain připojený k hlavní síti Ethereum prostřednictvím obousměrného přemostění. [Přemostění](/bridges/) umožňují uživatelům směňovat tokeny mezi oběma blockchainy, aby mohli provádět transakce na sidechainu, což snižuje přetížení hlavní sítě Ethereum a zlepšuje škálovatelnost.
-Postranní řetězce používají samostatný konsensuální mechanismus a jsou obvykle mnohem menší než Ethereum Mainnet. V důsledku toho je přesun aktiv na tyto řetězce spojen s vyšším rizikem; vzhledem k nedostatku bezpečnostních záruk, které se dědí z Ethereum Mainnetu v modelu postranního řetězce, hrozí uživatelům při útoku na postranní řetězec ztráta prostředků.
+[Postranní řetězec](/developers/docs/scaling/sidechains/) je nezávisle provozovaný blockchain připojený k Ethereum Mainnetu prostřednictvím obousměrného mostu. [Mosty](/bridges/) umožňují uživatelům vyměňovat tokeny mezi dvěma blockchainy za účelem provádění transakcí na postranním řetězci, což snižuje přetížení na Ethereum Mainnetu a zlepšuje škálovatelnost.
+Postranní řetězce používají samostatný mechanismus konsensu a jsou obvykle mnohem menší než Ethereum Mainnet. V důsledku toho přemostění aktiv na tyto řetězce zahrnuje zvýšené riziko; vzhledem k nedostatku bezpečnostních záruk zděděných z Ethereum Mainnetu v modelu postranního řetězce riskují uživatelé ztrátu prostředků při útoku na postranní řetězec.
 
-Naopak plazmové řetězce odvozují svou bezpečnost od Mainnetu. To je činí měřitelně bezpečnějšími než postranní řetězce. Oba typy řetězců mohou mít různé konsensuální protokoly, ale rozdíl je v tom, že plazmové řetězce zveřejňují Merkle kořeny pro každý blok na Ethereum Mainnetu. Kořeny bloků jsou malé části informací, které můžeme použít k ověření informací o transakcích, které se odehrávají na plazmovém řetězci. Pokud dojde k útoku na plazmový řetězec, uživatelé mohou bezpečně vybrat své prostředky zpět na Mainnet pomocí příslušných důkazů.
+Naopak řetězce Plasma odvozují svou bezpečnost z Mainnetu. Díky tomu jsou měřitelně bezpečnější než postranní řetězce. Jak postranní řetězce, tak řetězce Plasma mohou mít různé protokoly konsensu, ale rozdíl je v tom, že řetězce Plasma publikují Merkleho kořeny pro každý blok na Ethereum Mainnetu. Kořeny bloků jsou malé kousky informací, které můžeme použít k ověření informací o transakcích, ke kterým dochází na řetězci Plasma. Pokud dojde k útoku na řetězec Plasma, uživatelé mohou bezpečně vybrat své prostředky zpět na Mainnet pomocí příslušných důkazů.
 
-### Plasma vs. tříštění {#plasma-vs-sharding}
+### Plasma vs. sharding {#plasma-vs-sharding}
 
-Jak plazmové řetězce, tak i shardovací řetězce pravidelně zveřejňují kryptografické důkazy na Ethereum Mainnet. Oba však mají různé bezpečnostní vlastnosti.
+Jak řetězce Plasma, tak shardové řetězce pravidelně publikují kryptografické důkazy na Ethereum Mainnet. Oba však mají odlišné bezpečnostní vlastnosti.
 
-Shardovací řetězce odesílají na Mainnet „srovnávací hlavičky“, které obsahují podrobné informace o každém datovém shardu. Síťový uzel na Mainnetu ověřuje a vynucuje platnost datových shardů, čímž snižuje možnost neplatných změn shardů a chrání síť před podvodnými aktivitami.
+Shardové řetězce odesílají na Mainnet „hlavičky kolací“ (collation headers) obsahující podrobné informace o každém datovém shardu. Uzly na Mainnetu ověřují a prosazují platnost datových shardů, čímž snižují možnost neplatných přechodů shardů a chrání síť před zlomyslnou aktivitou.
 
-Plasma se liší v tom, že Mainnet přijímá pouze minimální informace o stavu dceřiných řetězců. To znamená, že Mainnet nemůže účinně ověřovat transakce provedené na dceřiných řetězcích, což je činí méně bezpečnými.
+Plasma je odlišná, protože Mainnet dostává pouze minimální informace o stavu dceřiných řetězců. To znamená, že Mainnet nemůže efektivně ověřovat transakce prováděné na dceřiných řetězcích, což je činí méně bezpečnými.
 
-**Poznámka**: Tříštění blockchainu Ethereum již není v plánu. Bylo nahrazeno škálováním pomocí rollupů a [Dankshardingu](/roadmap/danksharding).
+**Poznámka:** Sharding blockchainu Etherea již není v plánu (roadmap). Byl nahrazen škálováním pomocí rollupů a [dankshardingu](/roadmap/danksharding).
 
-### Použití Plasma {#use-plasma}
+### Použití Plasmy {#use-plasma}
 
-Několik projektů poskytuje implementace Plasmy, které můžete integrovat do svých dappek:
+Několik projektů poskytuje implementace Plasmy, které můžete integrovat do svých decentralizovaných aplikací (dapp):
 
 - [Polygon](https://polygon.technology/) (dříve Matic Network)
 
 ## Další čtení {#further-reading}
 
-- [Zjistěte více o Plasma](https://www.learnplasma.org/en/)
-- [Rychlé připomenutí, co znamená „sdílená bezpečnost“ a proč je tak důležitá](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Sidechainy vs. Plasma vs. tříštění](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
-- [Pochopení Plasma, část 1: Základy](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
-- [Život a smrt Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
+- [Naučte se Plasmu](https://www.learnplasma.org/en/)
+- [Rychlé připomenutí toho, co znamená „sdílená bezpečnost“ a proč je tak důležitá](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
+- [Postranní řetězce vs. Plasma vs. Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
+- [Porozumění Plasmě, část 1: Základy](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
+- [Život a smrt Plasmy](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
+
+## Návody: Řetězce Plasma na Ethereu {#tutorials}
+
+- [Napište Plasmu specifickou pro aplikaci, která zachovává soukromí](/developers/tutorials/app-plasma/) _– Vytvořte aplikaci Plasma zachovávající soukromí pomocí důkazů s nulovou znalostí a offchain komponent._

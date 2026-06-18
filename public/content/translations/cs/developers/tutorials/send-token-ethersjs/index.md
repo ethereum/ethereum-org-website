@@ -1,26 +1,26 @@
 ---
-title: "Posílání tokenů pomocí ethers.js"
-description: "Návod pro začátečníky k posílání tokenů pomocí ethers.js."
+title: Odesílání tokenů pomocí ethers.js
+description: Průvodce pro začátečníky odesíláním tokenů pomocí ethers.js.
 author: Kim YongJun
-tags: [ "ETHERS.JS", "ERC-20", "TOKENY" ]
+tags: ["ETHERS.JS", "ERC-20", "tokeny"]
 skill: beginner
-breadcrumb: "Odeslání tokenů"
+breadcrumb: Odesílání tokenů
 lang: cs
 published: 2021-04-06
 ---
 
-## Odeslání tokenu pomocí ethers.js(5.0) {#send-token}
+## Odesílání tokenů pomocí ethers.js(5.0) {#send-token}
 
-### V tomto tutoriálu se naučíte {#you-learn-about}
+### V tomto tutoriálu se naučíte, jak {#you-learn-about}
 
 - Importovat ethers.js
 - Převést token
-- Nastavit cenu transakčních poplatků podle situace v síti
+- Nastavit cenu plynu podle vytížení sítě
 
-### Než začnete {#to-get-started}
+### Jak začít {#to-get-started}
 
-Abyste mohli začít, musíme nejprve importovat knihovnu ethers.js do našeho javascriptu
-Zahrňte ethers.js(5.0)
+Abychom mohli začít, musíme nejprve importovat knihovnu ethers.js do našeho JavaScriptu.
+Zahrnutí ethers.js(5.0)
 
 ### Instalace {#install-ethersjs}
 
@@ -48,59 +48,59 @@ ES3(UMD) v prohlížeči
 
 ### Parametry {#param}
 
-1. **`contract_address`**: Adresa kontraktu tokenu (adresa kontraktu je potřeba, když token, který chcete převést, není ether)
-2. **`send_token_amount`**: Částka, kterou chcete poslat příjemci
+1. **`contract_address`**: Adresa kontraktu tokenu (adresa kontraktu je nutná, pokud token, který chcete převést, není ether)
+2. **`send_token_amount`**: Částka, kterou chcete odeslat příjemci
 3. **`to_address`**: Adresa příjemce
 4. **`send_account`**: Adresa odesílatele
-5. **`private_key`**: Soukromý klíč odesílatele k podepsání transakce a skutečnému převodu tokenů
+5. **`private_key`**: Soukromý klíč odesílatele k podepsání transakce a samotnému převodu tokenů
 
 ## Upozornění {#notice}
 
-`signTransaction(tx)` je odstraněno, protože `sendTransaction()` to dělá interně.
+`signTransaction(tx)` je odstraněno, protože `sendTransaction()` to provádí interně.
 
-## Postupy odesílání {#procedure}
+## Postup odesílání {#procedure}
 
-### 1. Připojit se k síti (testnet) {#connect-to-network}
+### 1. Připojení k síti (testnet) {#connect-to-network}
 
-#### Nastavit poskytovatele (Infura) {#set-provider}
+#### Nastavení poskytovatele (Infura) {#set-provider}
 
-Připojit se k Ropsten testnetu
+Připojení k testnetu Ropsten
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Vytvořit peněženku {#create-wallet}
+### 2. Vytvoření peněženky {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Připojit peněženku k síti {#connect-wallet-to-net}
+### 3. Připojení peněženky k síti {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Získat aktuální cenu transakčních poplatků {#get-gas}
+### 4. Získání aktuální ceny plynu {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // cena transakčních poplatků
+window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. Definovat transakci {#define-transaction}
+### 5. Definování transakce {#define-transaction}
 
-Níže definované proměnné jsou závislé na `send_token()`
+Níže definované proměnné závisí na `send_token()`
 
 ### Parametry transakce {#transaction-params}
 
 1. **`send_account`**: adresa odesílatele tokenu
 2. **`to_address`**: adresa příjemce tokenu
-3. **`send_token_amount`**: počet tokenů k odeslání
-4. **`gas_limit`**: limit transakčních poplatků
-5. **`gas_price`**: cena transakčních poplatků
+3. **`send_token_amount`**: množství tokenů k odeslání
+4. **`gas_limit`**: limit plynu
+5. **`gas_price`**: cena plynu
 
-[Jak používat, viz níže](#how-to-use)
+[Níže naleznete návod k použití](#how-to-use)
 
 ```javascript
 const tx = {
@@ -147,7 +147,7 @@ send_token(
 
 ### Úspěch! {#success}
 
-![obrázek úspěšně dokončené transakce](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 

@@ -1,61 +1,62 @@
 ---
 title: Aplikace na Ethereu
-metaTitle: "Aplikace Etherea | Decentralizované aplikace na Ethereu"
-description: "Aplikace na Ethereu jsou volně dostupné, globální a využívají veřejný blockchain namísto serverů soukromých společností. To znamená, že můžete používat stejný účet ve všech projektech a zároveň si zachovat své soukromí."
+metaTitle: Aplikace na Ethereu | Decentralizované aplikace na Ethereu
+description: Aplikace na Ethereu jsou svobodné, globální a místo serverů soukromých společností využívají veřejný blockchain. To znamená, že můžete používat stejný účet v každém projektu a zachovat si své soukromí.
 lang: cs
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: "Aplikace na Ethereu jsou volně dostupné, globální a využívají veřejný blockchain namísto serverů soukromých společností. To znamená, že můžete používat stejný účet ve všech projektech a zároveň si zachovat své soukromí."
+summary: Aplikace na Ethereu jsou svobodné, globální a místo serverů soukromých společností využívají veřejný blockchain. To znamená, že můžete používat stejný účet v každém projektu a zachovat si své soukromí.
 ---
 
-## Aplikace s nadpřirozenými schopnostmi {#apps-with-superpowers}
+## Aplikace se superschopnostmi {#apps-with-superpowers}
 
-Ethereum aplikace mohou působit jako běžné aplikace. Ale na pozadí mají některé speciální vlastnosti.
+Aplikace na Ethereu mohou působit jako běžné aplikace. Ale pod povrchem mají některé speciální vlastnosti.
 
-Jakmile je aplikace publikována na blockchainu Etherea, stává se nezastavitelnou. Je to proto, že síť Etherea je decentralizovaná mezi tisíce počítačů po celém světě. Nikdo nemůže aplikace běžící na Ethereu vypnout, protože neexistuje žádný centrální server, na který by bylo možné zaútočit. Ethereum je navíc neutrální, takže jej může používat kdokoli kdekoliv na světě, nebo se k němu připojit a stavět na něm své vlastní modifikace.
+Jakmile je aplikace zveřejněna na blockchainu Etherea, stává se nezastavitelnou. Je to proto, že síť Ethereum je decentralizovaná napříč tisíci počítači po celém světě. Nikdo nemůže aplikace běžící na Ethereu vypnout, protože neexistuje žádný jediný server, na který by se dalo zacílit. Ethereum je také neutrální, a tak ho může kdokoli kdekoli na světě používat, nebo se k němu dokonce připojit a stavět na něm své vlastní úpravy.
 
-## Co je dappka? {#what-is-a-dapp}
+## Co je to dapp? {#what-is-a-dapp}
 
-Aplikace na Ethereu mají svou logiku spuštěnou na blockchainu Etherea namísto na centralizovaných serverech. Proto se jim často říká decentralizované aplikace neboli zkráceně dappky.
+Aplikace na Ethereu mají svou logiku spuštěnou na blockchainu Etherea namísto na centralizovaných serverech. Proto se jim často říká decentralizované aplikace (dapp).
 
 <Grid>
-  <Card title="Více soukromí" emoji=":detective:" description="K používání jakékoli dapp vám stačí jen peněženka Ethereum. Vaše osobní údaje nejsou potřeba. Přesně takhle měl internet vždycky vypadat."/>
-  <Card title="Dostupné po celém světě" emoji="🌍" description="Dapps se neřídí pravidly regionů a obchodů s aplikacemi. Váš přístup závisí na připojení k internetu – ne na tom, kde žijete." />
-  <Card title="Levnější služby" emoji=":handshake:" description="Dapps jsou peer-to-peer. Bez prostředníků, kteří si berou podíl, jsou služby levnější." />
+  <Card title="Soukromější" emoji=":detective:" description="K používání jakékoli dapp potřebujete pouze Ethereum peněženku. Vaše osobní údaje nejsou vyžadovány. Toto je internet, jaký měl vždy být."/>
+  <Card title="Globálně dostupné" emoji="🌍" description="Dapp se neřídí pravidly regionů a obchodů s aplikacemi. Váš přístup závisí na připojení k internetu – ne na tom, kde žijete." />
+  <Card title="Levnější služby" emoji=":handshake:" description="Dapp fungují na principu peer-to-peer. Absence zprostředkovatelů, kteří by si brali provizi, znamená levnější služby." />
 </Grid>
 
-## Proč je to důležité {#why-does-this-matter}
+## Proč na tom záleží {#why-does-this-matter}
 
-Ethereum aplikace dokážou věci, které s tradičními aplikacemi prostě nejsou možné. Například půjčit peníze úplnému cizinci s jistotou, že dostanete své peníze zpět i s úroky. A to bez nutnosti platit „důvěryhodného“ prostředníka, jako je právník, aby transakci zajistil.
+Aplikace na Ethereu dokážou věci, které s tradičními aplikacemi prostě nejsou možné. Například půjčit peníze úplnému cizinci se zárukou, že své peníze dostanete zpět, a to i s úroky. A to bez placení „důvěryhodného“ zprostředkovatele, jako je právník, za vyřízení transakce.
 
-Existují aplikace na všechno: hraní her, finance, práci, komunikaci, ukládání dat a mnoho dalšího. Ve většině aplikací nejste vystaveni reklamám ani omezováni restrikcemi přístupu.
+Existují aplikace pro všechno: hraní her, finance, práci, zasílání zpráv, ukládání dat a další. U většiny aplikací nejste vystaveni reklamám ani omezováni omezeným přístupem.
 
-Vše, co potřebujete, abyste mohli začít používat jakoukoli Ethereum aplikaci, je peněženka na blockchainu Ethereu a trochu ETH.
+Vše, co potřebujete, je peněženka pro Ethereum a trochu ETH, abyste mohli začít používat jakoukoli aplikaci na Ethereu.
 
 ## Jak to funguje {#how-does-it-work}
 
-Aplikace fungují díky chytrým kontraktům — úsekům kódu, které běží na blockchainu Etherea. Na rozdíl od tradičních aplikací nepotřebují žádnou firmu, aby je provozovala.
+Aplikace jsou poháněny chytrými kontrakty – kousky kódu, které žijí na blockchainu Etherea. Na rozdíl od tradičních aplikací nepotřebují ke svému běhu žádnou společnost.
 
-| Funkce                     | Tradiční aplikace            | Ethereum aplikace           |
-| -------------------------- | ---------------------------- | --------------------------- |
-| **Kdo je ovládá?**         | Firma                        | Nikdo                       |
-| **Na čem běží**            | Servery soukromé společnosti | Veřejný Ethereum blockchain |
-| **Může být cenzurována?**  | Ano                          | Ne                          |
-| **Kdo vlastní vaše data?** | Většinou ne vy               | Vy vlastníte svá data       |
+| Vlastnost | Tradiční aplikace | Aplikace na Ethereu |
+| ------- | ---------------- | ------------- |
+| **Kdo to ovládá?** | Společnost | Nikdo |
+| **Běží na** | Soukromých serverech společnosti | Veřejném blockchainu Etherea |
+| **Může to být cenzurováno?** | Ano | Ne |
+| **Kdo vlastní vaše data?** | Většinou ne vy | Svá data vlastníte vy |
 
 <WhatAreAppsStories />
 
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
-![](./developers-eth-blocks.png)
+![Illustration of Ethereum developer block building](./developers-eth-blocks.png)
+
 </div>
 
-## Ethereum aplikace jsou jako lego {#ethereum-apps-are-like-legos}
+## Aplikace na Ethereu jsou jako lego {#ethereum-apps-are-like-legos}
 
-Když jsou aplikace postavené na Ethereu, jsou navzájem kompatibilní. Token z jedné aplikace může fungovat i v úplně jiné. Je to jako kdybyste mohli zveřejnit tweety přímo na svou facebookovou zeď. Ve skutečnosti často můžete stejný profil používat v mnoha různých aplikacích na Ethereu, aniž byste se museli všude znovu registrovat.
+Když jsou všechny aplikace postaveny na Ethereu, jsou navzájem kompatibilní. Token pro jednu aplikaci bude fungovat v úplně jiné. Je to jako byste mohli publikovat tweety na svou zeď na Facebooku. Ve skutečnosti můžete často znovu použít stejný profil v mnoha různých aplikacích na Ethereu, aniž byste se museli všude registrovat zvlášť.
 
 <BrowseApps />
 
@@ -63,18 +64,18 @@ Když jsou aplikace postavené na Ethereu, jsou navzájem kompatibilní. Token z
 
 - [Ethereum pro začátečníky](/what-is-ethereum)
 - [Co je to chytrý kontrakt?](/developers/docs/smart-contracts/)
-- [Technická dokumentace k dapps](/developers/docs/dapps/)
+- [Technická dokumentace k dapp](/developers/docs/dapps/)
 
 ## Často kladené dotazy {#faq}
 
-<ExpandableCard title="Co znamená dapp?" visible>
-  <p>Dappky znamená decentralizované aplikace. Jsou to aplikace postavené na blockchainových sítích, jako je Ethereum. Říká se jim decentralizované, protože samotná síť je decentralizovaná.</p>
+<ExpandableCard title="Co znamená zkratka dapp?" visible>
+  <p>Dapp je zkratka pro decentralizované aplikace. To jsou aplikace postavené na blockchainových sítích, jako je Ethereum. Nazývají se decentralizované, protože podkladová síť je decentralizovaná.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Můžu na dapp nakoupit mince?" visible>
-  <p>Některé aplikace vám umožňují obchodovat nebo nakupovat krypto tokeny, ale ne všechny aplikace slouží k tomuto účelu. Pokud si chcete koupit své první tokeny, navštivte stránku [Koupit ETH](/get-eth).</p>
+<ExpandableCard title="Kupuji si v dapp mince?" visible>
+  <p>Některé aplikace vám sice umožňují obchodovat nebo kupovat krypto tokeny, ale ne všechny aplikace k tomu slouží. Pokud si chcete koupit své první tokeny, navštivte [Získat ETH](/get-eth).</p>
 </ExpandableCard>
 
 <ExpandableCard title="Jaká je nejlepší krypto peněženka?" visible>
-  <p>Krypto peněženka vám umožňuje držet tokeny a spravovat váš účet na Ethereu. Existuje mnoho skvělých peněženek, z nichž každá slouží jinému účelu. Abyste zjistili, která peněženka je pro vás nejlepší, navštivte náš [seznam peněženek](/wallets/find-wallet).</p>
+  <p>Krypto peněženka vám umožňuje držet vaše tokeny a spravovat váš účet na Ethereu. Existuje mnoho skvělých peněženek, z nichž každá slouží k jinému účelu. Chcete-li zjistit, která peněženka je pro vás nejlepší, navštivte náš [seznam peněženek](/wallets/find-wallet).</p>
 </ExpandableCard>

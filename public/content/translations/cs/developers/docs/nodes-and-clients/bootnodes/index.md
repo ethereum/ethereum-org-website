@@ -1,31 +1,31 @@
 ---
-title: "Úvod do Ethereum bootnodů"
-description: "Základní informace, které potřebujete k pochopení bootnodů"
+title: Úvod do zaváděcích uzlů Etherea
+description: Základní informace, které potřebujete k pochopení zaváděcích uzlů
 lang: cs
 ---
 
-Když se nový uzel připojí k síti Ethereum, musí se spojit s uzly, které již v síti jsou, aby mohl objevit další peery. Těmto vstupním bodům do sítě Ethereum se říká bootnody. Klienti v sobě mají obvykle pevně zakódovaný seznam bootnodů. Tyto bootnody jsou obvykle provozovány devops týmem nadace Ethereum nebo samotnými týmy klientů. Všimněte si, že bootnody nejsou totéž co statické uzly. Statické uzly jsou volány stále dokola, zatímco bootnody jsou volány pouze v případě, že není dostatek peerů pro připojení a uzel potřebuje navázat některá nová spojení.
+Když se nový uzel připojí do sítě Ethereum, musí se připojit k uzlům, které již v síti jsou, aby mohl následně objevit nové peery. Tyto vstupní body do sítě Ethereum se nazývají zaváděcí uzly. Klienti mají obvykle seznam zaváděcích uzlů pevně zakódovaný. Tyto zaváděcí uzly obvykle provozuje devops tým Nadace Ethereum nebo samotné týmy klientů. Všimněte si, že zaváděcí uzly nejsou totéž co statické uzly. Statické uzly jsou volány znovu a znovu, zatímco zaváděcí uzly jsou volány pouze tehdy, pokud není k dispozici dostatek peerů pro připojení a uzel potřebuje navázat nějaká nová spojení.
 
-## Připojení k bootnodu {#connect-to-a-bootnode}
+## Připojení k zaváděcímu uzlu {#connect-to-a-bootnode}
 
-Většina klientů má v sobě zabudovaný seznam bootnodů, ale možná budete chtít provozovat vlastní bootnode nebo použít takový, který není součástí pevně zakódovaného seznamu klienta. V takovém případě je můžete určit při spouštění vašeho klienta následujícím způsobem (příklad je pro Geth, podívejte se prosím do dokumentace vašeho klienta):
+Většina klientů má seznam zaváděcích uzlů zabudovaný, ale možná budete chtít provozovat svůj vlastní zaváděcí uzel nebo použít takový, který není součástí pevně zakódovaného seznamu klienta. V takovém případě je můžete specifikovat při spouštění klienta následovně (příklad je pro Geth, zkontrolujte prosím dokumentaci vašeho klienta):
 
 ```
-geth --bootnodes "enode://<node ID>@<IP address>:<port>"
+geth --bootnodes "enode://<ID uzlu>@<IP adresa>:<port>"
 ```
 
-## Provozování bootnodu {#run-a-bootnode}
+## Provozování zaváděcího uzlu {#run-a-bootnode}
 
-Bootnody jsou plnohodnotné uzly, které nejsou za NAT ([překlad síťových adres](https://www.geeksforgeeks.org/network-address-translation-nat/)). Každý plnohodnotný uzel může fungovat jako bootnode, pokud je veřejně dostupný.
+Zaváděcí uzly jsou plné uzly, které nejsou za NAT ([Network Address Translation](https://www.geeksforgeeks.org/network-address-translation-nat/)). Každý plný uzel může fungovat jako zaváděcí uzel, pokud je veřejně dostupný.
 
-Když spustíte uzel, měl by se vám zobrazit váš [enode](/developers/docs/networking-layer/network-addresses/#enode), což je veřejný identifikátor, který mohou ostatní použít k připojení k vašemu uzlu.
+Když spustíte uzel, měl by do logu zaznamenat váš [enode](/developers/docs/networking-layer/network-addresses/#enode), což je veřejný identifikátor, který mohou ostatní použít k připojení k vašemu uzlu.
 
-Enode se obvykle regeneruje při každém restartu, takže se podívejte do dokumentace vašeho klienta, jak vygenerovat trvalý enode pro váš bootnode.
+Enode se obvykle při každém restartu generuje znovu, takže se nezapomeňte podívat do dokumentace vašeho klienta, jak vygenerovat trvalý enode pro váš zaváděcí uzel.
 
-Abyste byli dobrým bootnodem, je dobré navýšit maximální počet peerů, kteří se k němu mohou připojit. Provozování bootnodu s mnoha peery výrazně zvýší nároky na šířku pásma.
+Aby byl zaváděcí uzel dobrý, je vhodné zvýšit maximální počet peerů, kteří se k němu mohou připojit. Provozování zaváděcího uzlu s mnoha peery významně zvýší nároky na šířku pásma.
 
-## Dostupné bootnody {#available-bootnodes}
+## Dostupné zaváděcí uzly {#available-bootnodes}
 
-Seznam vestavěných bootnodů v go-ethereum naleznete [zde](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Tyto bootnody jsou spravovány nadací Ethereum a týmem go-ethereum.
+Seznam zabudovaných zaváděcích uzlů v rámci go-ethereum naleznete [zde](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Tyto zaváděcí uzly spravuje Nadace Ethereum a tým go-ethereum.
 
-K dispozici jsou i další seznamy bootnodů spravované dobrovolníky. Ujistěte se prosím, že vždy zahrnete alespoň jeden oficiální bootnode, jinak byste se mohli stát obětí eclipse útoku.
+K dispozici jsou i další seznamy zaváděcích uzlů spravované dobrovolníky. Ujistěte se prosím, že vždy zahrnete alespoň jeden oficiální zaváděcí uzel, jinak byste se mohli stát obětí eclipse útoku.

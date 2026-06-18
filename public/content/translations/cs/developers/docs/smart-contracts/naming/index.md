@@ -1,99 +1,99 @@
 ---
-title: "Pojmenování chytrých kontraktů"
-description: "Osvědčené postupy pro pojmenování chytrých kontraktů Ethereum pomocí ENS"
+title: Pojmenování chytrých kontraktů
+description: Osvědčené postupy pro pojmenování chytrých kontraktů na Ethereu pomocí ENS
 lang: cs
 ---
 
-Chytré kontrakty jsou základním kamenem decentralizované infrastruktury Etherea, umožňující autonomní aplikace a protokoly. Ale i když se schopnosti kontraktů vyvíjejí, uživatelé a vývojáři se stále spoléhají na nezpracované hexadecimální adresy, aby tyto kontrakty identifikovali a odkazovali na ně.
+Chytré kontrakty jsou základním kamenem decentralizované infrastruktury Etherea a umožňují fungování autonomních aplikací a protokolů. Ale i když se schopnosti kontraktů vyvíjejí, uživatelé a vývojáři se při jejich identifikaci a odkazování na ně stále spoléhají na surové hexadecimální adresy.
 
-Pojmenování chytrých kontraktů pomocí [Služby Ethereum Name Service (ENS)](https://ens.domains/) zlepšuje uživatelskou zkušenost tím, že odstraňuje hexadecimální adresy kontraktů a snižuje riziko útoků, jako je otrava adresy (address poisoning) a podvržení (spoofing). Tato příručka vysvětluje, proč je pojmenování chytrých kontraktů důležité, jak jej lze implementovat a jaké nástroje jsou k dispozici, jako například [Enscribe](https://www.enscribe.xyz), pro zjednodušení procesu a pomoc vývojářům při osvojení si této praxe.
+Pojmenování chytrých kontraktů pomocí [Ethereum Name Service (ENS)](https://ens.domains/) zlepšuje uživatelský zážitek tím, že eliminuje hexadecimální adresy kontraktů, a snižuje riziko útoků, jako je otrava adres (address poisoning) a podvržení (spoofing). Tento průvodce vysvětluje, proč na pojmenování chytrých kontraktů záleží, jak jej lze implementovat a jaké nástroje jsou k dispozici, jako například [Enscribe](https://www.enscribe.xyz), které tento proces zjednodušují a pomáhají vývojářům tuto praxi osvojit.
 
 ## Proč pojmenovávat chytré kontrakty? {#why-name-contracts}
 
-### Člověkem čitelné identifikátory {#human-readable-identifiers}
+### Lidsky čitelné identifikátory {#human-readable-identifiers}
 
-Namísto interakce s nečitelnými adresami kontraktů, jako je `0x8f8e...f9e3`, mohou vývojáři a uživatelé používat lidsky čitelná jména jako `v2.myapp.eth`. To zjednodušuje interakce s chytrými kontrakty.
+Místo interakce s neprůhlednými adresami kontraktů, jako je `0x8f8e...f9e3`, mohou vývojáři a uživatelé používat lidsky čitelná jména, jako je `v2.myapp.eth`. To zjednodušuje interakce s chytrými kontrakty.
 
-Umožňuje to [Služba Ethereum Name Service](https://ens.domains/), která poskytuje decentralizovanou službu pro pojmenování ethereových adres. Je to analogické tomu, jak Služba doménových jmen (DNS) umožňuje uživatelům internetu přistupovat k síťovým adresám pomocí jména, jako je ethereum.org, namísto prostřednictvím IP adresy, jako je `104.18.176.152`.
+To umožňuje [Ethereum Name Service](https://ens.domains/), která poskytuje decentralizovanou službu pojmenování pro adresy na Ethereu. Je to analogické k tomu, jak Domain Name Service (DNS) umožňuje uživatelům internetu přistupovat k síťovým adresám pomocí jména, jako je ethereum.org, místo přes IP adresu, jako je `104.18.176.152`.
 
-### Zvýšená bezpečnost a důvěra {#improved-security-and-trust}
+### Zlepšená bezpečnost a důvěra {#improved-security-and-trust}
 
-Pojmenované kontrakty pomáhají omezit neúmyslné transakce na nesprávnou adresu. Také pomáhají uživatelům identifikovat kontrakty spojené s konkrétními aplikacemi nebo značkami. To přidává vrstvu reputační důvěry, zejména když jsou jména připojena k dobře známým nadřazeným doménám, jako je `uniswap.eth`.
+Pojmenované kontrakty pomáhají snížit počet náhodných transakcí na nesprávnou adresu. Pomáhají také uživatelům identifikovat kontrakty spojené s konkrétními aplikacemi nebo značkami. To přidává vrstvu reputační důvěry, zejména když jsou jména připojena ke známým nadřazeným doménám, jako je `uniswap.eth`.
 
-Kvůli 42znakové délce ethereové adresy je pro uživatele velmi těžké identifikovat malé změny v adresách, kde bylo upraveno několik znaků. Například adresa jako `0x58068646C148E313CB414E85d2Fe89dDc3426870` by normálně byla zkrácena na `0x580...870` v uživatelských aplikacích, jako jsou peněženky. Uživatel si pravděpodobně nevšimne škodlivé adresy, kde bylo změněno několik znaků.
+Vzhledem k délce adresy na Ethereu, která činí 42 znaků, je pro uživatele velmi obtížné identifikovat malé změny v adresách, kde bylo upraveno jen několik znaků. Například adresa jako `0x58068646C148E313CB414E85d2Fe89dDc3426870` by byla běžně zkrácena na `0x580...870` aplikacemi určenými pro uživatele, jako jsou peněženky. Je nepravděpodobné, že by si uživatel všiml škodlivé adresy, kde bylo změněno jen pár znaků.
 
-Tento typ techniky se používá při útocích podvržením (spoofing) a otravou adres (address poisoning), kdy jsou uživatelé vedeni k domněnce, že komunikují se správnou adresou nebo na ni posílají finanční prostředky, přičemž ve skutečnosti adresa správnou adresu pouze připomíná, ale není stejná.
+Tento typ techniky se používá při útocích typu podvržení (spoofing) a otravy adres (poisoning), kdy jsou uživatelé vedeni k přesvědčení, že interagují se správnou adresou nebo na ni posílají prostředky, i když ve skutečnosti se adresa té správné pouze podobá, ale není stejná.
 
-Jména ENS pro peněženky a kontrakty chrání proti těmto typům útoků. Podobně jako u útoků podvržením DNS (DNS spoofing) se mohou objevit i útoky podvržením ENS (ENS spoofing), nicméně uživatel si pravděpodobněji všimne překlepu ve jméně ENS než malé úpravy v hexadecimální adrese.
+Jména ENS pro peněženky a kontrakty chrání před těmito typy útoků. Stejně jako u útoků typu DNS spoofing se mohou vyskytnout i útoky typu ENS spoofing, nicméně je pravděpodobnější, že si uživatel všimne překlepu ve jméně ENS než malé úpravy v hexadecimální adrese.
 
-### Lepší UX pro peněženky a průzkumníky {#better-ux}
+### Lepší UX pro peněženky a prohlížeče {#better-ux}
 
-Pokud byl chytrý kontrakt nakonfigurován s názvem ENS, je možné, aby aplikace jako peněženky a průzkumníci blockchainu zobrazovaly názvy ENS pro chytré kontrakty, namísto hexadecimálních adres. To přináší uživatelům výrazné zlepšení uživatelské zkušenosti (UX).
+Když je chytrý kontrakt nakonfigurován se jménem ENS, je možné, aby aplikace, jako jsou peněženky a blockchainové prohlížeče, zobrazovaly pro chytré kontrakty jména ENS místo hexadecimálních adres. To uživatelům přináší významné zlepšení uživatelského zážitku (UX).
 
-Například při interakci s aplikací, jako je Uniswap, uživatelé obvykle uvidí, že aplikace, se kterou pracují, je hostována na webové stránce `uniswap.org`, ale pokud Uniswap nepojmenoval své chytré kontrakty pomocí ENS, zobrazí se jim hexadecimální adresa kontraktu. Pokud je kontrakt pojmenován, mohli by místo toho vidět `v4.contracts.uniswap.eth`, což je mnohem užitečnější.
+Například při interakci s aplikací, jako je Uniswap, uživatelé obvykle uvidí, že aplikace, se kterou interagují, je hostována na webové stránce `uniswap.org`, ale pokud by Uniswap nepojmenoval své chytré kontrakty pomocí ENS, zobrazila by se jim hexadecimální adresa kontraktu. Pokud je kontrakt pojmenován, mohli by místo toho vidět `v4.contracts.uniswap.eth`, což je mnohem užitečnější.
 
 ## Pojmenování při nasazení vs. po nasazení {#when-to-name}
 
-Existují dva body, ve kterých lze pojmenovat chytré kontrakty:
+Existují dva okamžiky, kdy lze chytré kontrakty pojmenovat:
 
-- **V době nasazení**: přiřazení jména ENS kontraktu při jeho nasazování.
-- **Po nasazení**: namapování stávající adresy kontraktu na nové jméno ENS.
+- **Při nasazení**: přiřazení jména ENS kontraktu v okamžiku jeho nasazení.
+- **Po nasazení**: mapování existující adresy kontraktu na nové jméno ENS.
 
-Oba přístupy se spoléhají na to, že máte vlastnický nebo manažerský přístup k doméně ENS, abyste mohli vytvářet a nastavovat záznamy ENS.
+Oba přístupy spoléhají na to, že máte přístup vlastníka nebo správce k doméně ENS, abyste mohli vytvářet a nastavovat záznamy ENS.
 
-## Jak funguje pojmenování kontraktů pomocí ENS {#how-ens-naming-works}
+## Jak funguje pojmenování ENS pro kontrakty {#how-ens-naming-works}
 
-Jména ENS jsou uložena na blockchainu a převádějí se na ethereové adresy prostřednictvím resolverů ENS. Jak pojmenovat chytrý kontrakt:
+Jména ENS jsou uložena onchain a překládají se na adresy na Ethereu prostřednictvím resolverů ENS. Chcete-li pojmenovat chytrý kontrakt:
 
 1. Zaregistrujte nebo ovládejte nadřazenou doménu ENS (např. `myapp.eth`)
 2. Vytvořte subdoménu (např. `v1.myapp.eth`)
 3. Nastavte záznam `address` subdomény na adresu kontraktu
-4. Nastavte reverzní záznam kontraktu na ENS, aby bylo možné jméno nalézt pomocí jeho adresy
+4. Nastavte reverzní záznam kontraktu v ENS, aby bylo možné jméno najít prostřednictvím jeho adresy
 
-Jména ENS jsou hierarchická a podporují neomezený počet podjmen. Nastavení těchto záznamů obvykle zahrnuje interakci s registrem ENS a veřejnými resolver kontrakty.
+Jména ENS jsou hierarchická a podporují neomezený počet podřízených jmen. Nastavení těchto záznamů obvykle zahrnuje interakci s registrem ENS a veřejnými kontrakty resolverů.
 
 ## Nástroje pro pojmenování kontraktů {#tools}
 
-Existují dva přístupy k pojmenování chytrých kontraktů. Buď pomocí [aplikace ENS](https://app.ens.domains) s několika manuálními kroky, nebo pomocí [Enscribe](https://www.enscribe.xyz). Ty jsou popsány níže.
+Existují dva přístupy k pojmenování chytrých kontraktů. Buď pomocí [aplikace ENS](https://app.ens.domains) s několika manuálními kroky, nebo pomocí [Enscribe](https://www.enscribe.xyz). Ty jsou nastíněny níže.
 
-### Ruční nastavení ENS {#manual-ens-setup}
+### Manuální nastavení ENS {#manual-ens-setup}
 
-Pomocí [aplikace ENS](https://app.ens.domains/) mohou vývojáři ručně vytvářet podjména a nastavovat dopředné záznamy adres. Nemohou však nastavit primární název pro chytrý kontrakt nastavením reverzního záznamu pro název prostřednictvím aplikace ENS. Je třeba provést manuální kroky, které jsou popsány v [dokumentaci ENS](https://docs.ens.domains/web/naming-contracts/).
+Pomocí [aplikace ENS](https://app.ens.domains/) mohou vývojáři manuálně vytvářet podřízená jména a nastavovat dopředné záznamy adres. Nemohou však nastavit primární jméno pro chytrý kontrakt nastavením reverzního záznamu pro jméno prostřednictvím aplikace ENS. Je nutné provést manuální kroky, které jsou popsány v [dokumentaci ENS](https://docs.ens.domains/web/naming-contracts/).
 
 ### Enscribe {#enscribe}
 
 [Enscribe](https://www.enscribe.xyz) zjednodušuje pojmenování chytrých kontraktů pomocí ENS a zvyšuje důvěru uživatelů v chytré kontrakty. Poskytuje:
 
-- **Atomické nasazení a pojmenování**: Přiřaďte jméno ENS při nasazování nového kontraktu
-- **Pojmenování po nasazení**: Připojte jména k již nasazeným kontraktům
-- **Podpora více řetězců**: Funguje napříč sítěmi Ethereum a L2, kde je podporována služba ENS.
-- **Údaje o ověření kontraktu**: Zahrnuje údaje o ověření kontraktu získané z více zdrojů pro zvýšení důvěry uživatelů
+- **Atomické nasazení a pojmenování**: Přiřazení jména ENS při nasazení nového kontraktu
+- **Pojmenování po nasazení**: Připojení jmen k již nasazeným kontraktům
+- **Podpora více řetězců**: Funguje napříč Ethereem a sítěmi vrstvy 2 (l2), kde je podporováno ENS
+- **Data o ověření kontraktu**: Zahrnuje data o ověření kontraktu stažená z více zdrojů pro zvýšení důvěry uživatelů
 
-Enscribe podporuje jména ENS poskytnutá uživateli, nebo vlastní domény, pokud uživatel nemá jméno ENS.
+Enscribe podporuje jména ENS poskytnutá uživateli, nebo své vlastní domény, pokud uživatel nemá jméno ENS.
 
 Můžete přistoupit k [aplikaci Enscribe](https://app.enscribe.xyz) a začít pojmenovávat a prohlížet chytré kontrakty.
 
 ## Osvědčené postupy {#best-practices}
 
-- **Používejte jasná, verzovaná jména** jako `v1.myapp.eth`, aby byly aktualizace kontraktů transparentní
-- **Nastavte reverzní záznamy** pro propojení kontraktů s názvy ENS pro viditelnost v aplikacích, jako jsou peněženky a průzkumníci blockchainu.
-- **Pečlivě sledujte data expirace**, pokud chcete zabránit nechtěným změnám vlastnictví
-- **Ověřte zdrojový kód kontraktu**, aby uživatelé mohli věřit, že se pojmenovaný kontrakt chová podle očekávání
+- **Používejte jasná, verzovaná jména** jako `v1.myapp.eth`, aby byly upgrady kontraktů transparentní
+- **Nastavte reverzní záznamy** pro propojení kontraktů se jmény ENS kvůli viditelnosti v aplikacích, jako jsou peněženky a blockchainové prohlížeče.
+- **Pečlivě sledujte expirace**, pokud chcete zabránit náhodným změnám ve vlastnictví
+- **Ověřte zdrojový kód kontraktu**, aby uživatelé mohli důvěřovat, že se pojmenovaný kontrakt chová podle očekávání
 
 ## Rizika {#risks}
 
-Pojmenování chytrých kontraktů přináší uživatelům Etherea značné výhody, nicméně vlastníci domén ENS musí být při jejich správě ostražití. Mezi významná rizika patří:
+Pojmenování chytrých kontraktů poskytuje uživatelům Etherea významné výhody, nicméně vlastníci domén ENS musí být ohledně jejich správy ostražití. Mezi významná rizika patří:
 
-- **Expirace**: Stejně jako názvy DNS mají i registrace názvů ENS konečnou platnost. Je proto životně důležité, aby majitelé sledovali data expirace svých domén a obnovovali je v dostatečném předstihu před jejich vypršením. Jak aplikace ENS, tak Enscribe poskytují majitelům domén vizuální indikátory, když se blíží datum expirace.
-- **Změna vlastnictví**: Záznamy ENS jsou na Ethereu reprezentovány jako NFT, kde vlastník konkrétní domény `.eth` drží přidružené NFT. Pokud by tedy vlastnictví tohoto NFT převzal jiný účet, nový vlastník může libovolně upravovat jakékoli záznamy ENS.
+- **Expirace**: Stejně jako u jmen DNS mají registrace jmen ENS omezenou dobu platnosti. Proto je nezbytné, aby vlastníci sledovali data expirace svých domén a obnovovali je s dostatečným předstihem před jejich vypršením. Aplikace ENS i Enscribe poskytují vlastníkům domén vizuální indikátory, když se blíží expirace.
+- **Změna vlastnictví**: Záznamy ENS jsou na Ethereu reprezentovány jako NFT, kde vlastník konkrétní domény `.eth` má příslušné NFT ve svém držení. Pokud by tedy vlastnictví tohoto NFT převzal jiný účet, nový vlastník může upravit jakékoli záznamy ENS podle svého uvážení.
 
-Pro zmírnění těchto rizik by měl být vlastnický účet pro domény 2. úrovně `.eth` (2LD) zabezpečen pomocí peněženky s více podpisy, přičemž pro správu pojmenování kontraktů by měly být vytvořeny subdomény. Tímto způsobem, v případě jakýchkoli náhodných nebo škodlivých změn ve vlastnictví na úrovni subdomény, je může vlastník 2LD přepsat.
+Ke zmírnění takových rizik by měl být účet vlastníka pro domény 2. úrovně (2LD) `.eth` zabezpečen pomocí multi-sig peněženky, přičemž pro správu pojmenování kontraktů by se měly vytvářet subdomény. Tímto způsobem mohou být v případě jakýchkoli náhodných nebo škodlivých změn vlastnictví na úrovni subdomény tyto změny přepsány vlastníkem 2LD.
 
-## Budoucnost pojmenovávání kontraktů {#future}
+## Budoucnost pojmenování kontraktů {#future}
 
-Pojmenovávání kontraktů se stává osvědčeným postupem pro vývoj dapp, podobně jako doménová jména nahradila IP adresy na webu. S tím, jak více infrastruktury, jako jsou peněženky, průzkumníci a dashboardy, integruje řešení ENS pro kontrakty, pojmenované kontrakty zlepší bezpečnost a sníží počet chyb v celém ekosystému.
+Pojmenování kontraktů se stává osvědčeným postupem pro vývoj decentralizovaných aplikací (dapp), podobně jako doménová jména nahradila IP adresy na webu. Jak bude více infrastruktury, jako jsou peněženky, prohlížeče a řídicí panely, integrovat překlad ENS pro kontrakty, pojmenované kontrakty zlepší bezpečnost a sníží chybovost napříč ekosystémem.
 
-Tím, že pojmenování usnadňuje rozpoznávání a chápání chytrých kontraktů, pomáhá překlenout propast mezi uživateli a aplikacemi na Ethereu a zlepšuje bezpečnost i UX pro uživatele.
+Tím, že usnadňuje rozpoznávání a pochopení chytrých kontraktů, pomáhá pojmenování překlenout propast mezi uživateli a aplikacemi na Ethereu, čímž zlepšuje bezpečnost i UX pro uživatele.
 
 ## Další čtení {#further-reading}
 
