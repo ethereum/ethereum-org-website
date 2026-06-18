@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import { getTranslations } from "next-intl/server"
 import { Tweet } from "react-tweet"
 
 import { cn } from "@/lib/utils/cn"
@@ -21,13 +22,15 @@ type TweetEmbedProps = {
   className?: string
 }
 
-const TweetEmbed = ({ id, className }: TweetEmbedProps) => {
+const TweetEmbed = async ({ id, className }: TweetEmbedProps) => {
+  const t = await getTranslations("common")
+
   return (
     <figure className={cn("not-prose my-8", className)}>
       <Suspense
         fallback={
           <div className="flex justify-center rounded-xl border p-8 text-body-medium">
-            Loading tweet…
+            {t("loading")}
           </div>
         }
       >
