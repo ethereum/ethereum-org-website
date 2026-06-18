@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-18T00:09:45.407Z",
+  "englishManifestHash": "3e0972fea410",
+  "placeholderOrder": [
+    "LINK-1f241e",
+    "LINK-e1d92b",
+    "LINK-ba7012",
+    "LINK-a9df85",
+    "LINK-4e59bc",
+    "LINK-28cc7f",
+    "CODEBLOCK-ab7749",
+    "CODE-834c8b",
+    "CODE-d30a57",
+    "CODE-750d99",
+    "LINK-2b3919",
+    "LINK-8801c9",
+    "LINK-1fd6df",
+    "CODE-88da14",
+    "LINK-fa3b9e",
+    "CODE-e8c178",
+    "LINK-7aaeab",
+    "LINK-0d74ed",
+    "LINK-eca35c",
+    "LINK-37866e",
+    "CODE-22c23d",
+    "LINK-971adf",
+    "LINK-098da2",
+    "LINK-927403",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-ab7749": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-834c8b": {
+      "type": "inline-code",
+      "values": {
+        "content": "https://ipfs.io/ipfs/QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ"
+      }
+    },
+    "CODE-d30a57": {
+      "type": "inline-code",
+      "values": {
+        "content": "http://127.0.0.1:8080"
+      }
+    },
+    "CODE-750d99": {
+      "type": "inline-code",
+      "values": {
+        "content": "http://127.0.0.1:8080/ipfs/QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ"
+      }
+    },
+    "CODE-88da14": {
+      "type": "inline-code",
+      "values": {
+        "content": "Qm"
+      }
+    },
+    "CODE-e8c178": {
+      "type": "inline-code",
+      "values": {
+        "content": "QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ"
+      }
+    },
+    "CODE-22c23d": {
+      "type": "inline-code",
+      "values": {
+        "content": "<CID>"
+      }
+    },
+    "LINK-1f241e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
+      }
+    },
+    "LINK-e1d92b": {
+      "type": "link",
+      "values": {
+        "url": "https://ipfs.tech/developers/"
+      }
+    },
+    "LINK-ba7012": {
+      "type": "link",
+      "values": {
+        "url": "https://resources.fleek.xyz/docs/"
+      }
+    },
+    "LINK-a9df85": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ipfs.tech/how-to/work-with-pinning-services/#use-a-third-party-pinning-service"
+      }
+    },
+    "LINK-4e59bc": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ipfs.tech/install/ipfs-desktop/#install-instructions"
+      }
+    },
+    "LINK-28cc7f": {
+      "type": "link",
+      "values": {
+        "url": "https://vite.dev/"
+      }
+    },
+    "LINK-2b3919": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ipfs.tech/concepts/persistence/#pinning-services"
+      }
+    },
+    "LINK-8801c9": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.4everland.org/storage/4ever-pin/guides"
+      }
+    },
+    "LINK-1fd6df": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.4everland.org/overview"
+      }
+    },
+    "LINK-fa3b9e": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/bootdotdev/base64-vs-base58-encoding-c25553ff4524"
+      }
+    },
+    "LINK-7aaeab": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1"
+      }
+    },
+    "LINK-0d74ed": {
+      "type": "link",
+      "values": {
+        "url": "https://bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im.ipfs.dweb.link/"
+      }
+    },
+    "LINK-eca35c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ipfs.tech/install/ipfs-companion/#prerequisites"
+      }
+    },
+    "LINK-37866e": {
+      "type": "link",
+      "values": {
+        "url": "https://any.site/ipfs/bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im"
+      }
+    },
+    "LINK-971adf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs"
+      }
+    },
+    "LINK-098da2": {
+      "type": "link",
+      "values": {
+        "url": "https://dweb3.wtf"
+      }
+    },
+    "LINK-927403": {
+      "type": "link",
+      "values": {
+        "url": "https://web3compass.net"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:09:45.407Z",
+      "status": "success"
+    }
+  }
+}

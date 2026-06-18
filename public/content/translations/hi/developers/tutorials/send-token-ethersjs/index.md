@@ -1,24 +1,25 @@
 ---
-title: "ethers.js का उपयोग करके टोकन भेजना"
-description: "ethers.js का उपयोग करके टोकन भेजने के लिए शुरुआती लोगों के लिए अनुकूल गाइड।"
-author: किम योंग-जुन
-tags: [ "ETHERS.JS", "ERC-20", "टोकन" ]
+title: ethers.js का उपयोग करके टोकन भेजना
+description: ethers.js का उपयोग करके टोकन भेजने के लिए शुरुआती लोगों के अनुकूल मार्गदर्शिका।
+author: किम योंगजून
+tags: ["ETHERS.JS", "ERC-20", "टोकन"]
 skill: beginner
+breadcrumb: टोकन भेजें
 lang: hi
 published: 2021-04-06
 ---
 
 ## ethers.js(5.0) का उपयोग करके टोकन भेजें {#send-token}
 
-### इस ट्यूटोरियल में आप जानेंगे कि कैसे {#you-learn-about}
+### इस ट्यूटोरियल में आप सीखेंगे कि कैसे {#you-learn-about}
 
-- ethers.js आयात करें
+- ethers.js को इंपोर्ट करें
 - टोकन ट्रांसफर करें
-- नेटवर्क ट्रैफिक स्थिति के अनुसार गैस मूल्य सेट करें
+- नेटवर्क ट्रैफ़िक की स्थिति के अनुसार गैस मूल्य सेट करें
 
-### शुरू करने के लिए {#to-get-started}
+### शुरुआत करने के लिए {#to-get-started}
 
-शुरू करने के लिए, हमें सबसे पहले अपने जावास्क्रिप्ट में ethers.js लाइब्रेरी को आयात करना होगा
+शुरुआत करने के लिए, हमें सबसे पहले अपने JavaScript में ethers.js लाइब्रेरी को इंपोर्ट करना होगा
 ethers.js(5.0) शामिल करें
 
 ### इंस्टॉल करना {#install-ethersjs}
@@ -45,31 +46,31 @@ ethers.js(5.0) शामिल करें
 ></script>
 ```
 
-### पैरामीटर्स {#param}
+### पैरामीटर {#param}
 
-1. **`contract_address`**: टोकन कॉन्ट्रैक्ट पता (जब आप जिस टोकन को ट्रांसफर करना चाहते हैं, वह ईथर नहीं है, तो कॉन्ट्रैक्ट पता की आवश्यकता होती है)
-2. **`send_token_amount`**: वह राशि जो आप रिसीवर को भेजना चाहते हैं
-3. **`to_address`**: रिसीवर का पता
+1. **`contract_address`**: टोकन अनुबंध पता (जब आप जो टोकन ट्रांसफर करना चाहते हैं वह ईथर नहीं है, तो अनुबंध पता आवश्यक है)
+2. **`send_token_amount`**: वह राशि जो आप प्राप्तकर्ता को भेजना चाहते हैं
+3. **`to_address`**: प्राप्तकर्ता का पता
 4. **`send_account`**: प्रेषक का पता
-5. **`private_key`**: लेनदेन पर हस्ताक्षर करने और वास्तव में टोकन ट्रांसफर करने के लिए प्रेषक की निजी कुंजी
+5. **`private_key`**: लेन-देन पर हस्ताक्षर करने और वास्तव में टोकन ट्रांसफर करने के लिए प्रेषक की निजी कुंजी
 
-## सूचना {#notice}
+## ध्यान दें {#notice}
 
 `signTransaction(tx)` को हटा दिया गया है क्योंकि `sendTransaction()` इसे आंतरिक रूप से करता है।
 
-## भेजने की प्रक्रिया {#procedure}
+## भेजने की प्रक्रियाएं {#procedure}
 
-### 1. नेटवर्क से कनेक्ट करें (टेस्टनेट) {#connect-to-network}
+### 1. नेटवर्क (टेस्टनेट) से कनेक्ट करें {#connect-to-network}
 
-#### प्रोवाइडर सेट करें (इन्फ्यूरा) {#set-provider}
+#### प्रदाता सेट करें (Infura) {#set-provider}
 
-रोपस्टेन टेस्टनेट से कनेक्ट करें
+रॉप्स्टन टेस्टनेट से कनेक्ट करें
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### २. वॉलेट बनाएँ {#create-wallet}
+### 2. वॉलेट बनाएं {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
@@ -87,19 +88,19 @@ let walletSigner = wallet.connect(window.ethersProvider)
 window.ethersProvider.getGasPrice() // गैस मूल्य
 ```
 
-### 5. लेनदेन को परिभाषित करें {#define-transaction}
+### 5. लेन-देन परिभाषित करें {#define-transaction}
 
 नीचे परिभाषित ये चर `send_token()` पर निर्भर हैं
 
-### लेनदेन पैरामीटर्स {#transaction-params}
+### लेन-देन पैरामीटर {#transaction-params}
 
 1. **`send_account`**: टोकन प्रेषक का पता
-2. **`to_address`**: टोकन रिसीवर का पता
+2. **`to_address`**: टोकन प्राप्तकर्ता का पता
 3. **`send_token_amount`**: भेजे जाने वाले टोकन की राशि
 4. **`gas_limit`**: गैस सीमा
 5. **`gas_price`**: गैस मूल्य
 
-[कैसे उपयोग करें इसके लिए नीचे देखें](#how-to-use)
+[उपयोग करने का तरीका नीचे देखें](#how-to-use)
 
 ```javascript
 const tx = {
@@ -112,12 +113,12 @@ const tx = {
 }
 ```
 
-### 6. ट्रांसफर करें {#transfer}
+### 6. ट्रांसफर {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("भेजना समाप्त!")
+  alert("Send finished!")
 })
 ```
 
@@ -146,7 +147,7 @@ send_token(
 
 ### सफलता! {#success}
 
-![सफलतापूर्वक किए गए लेनदेन की छवि](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -180,9 +181,9 @@ function send_token(
       // टोकन भेजें
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("टोकन भेज दिया गया")
+        alert("sent token")
       })
-    } // ईथर भेजें
+    } // ईथर भेजना
     else {
       const tx = {
         from: send_account,
@@ -199,10 +200,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("भेजना समाप्त!")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("भेजने में विफल!!")
+        alert("failed to send!!")
       }
     }
   })
