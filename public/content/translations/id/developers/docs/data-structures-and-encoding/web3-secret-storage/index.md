@@ -1,11 +1,11 @@
 ---
 title: Definisi penyimpanan rahasia Web3
-description: Definisi formal untuk penyimpanan rahasia web3
+description: Definisi formal untuk penyimpanan rahasia Web3
 lang: id
 sidebarDepth: 2
 ---
 
-Untuk membuat aplikasi Anda berfungsi di Ethereum, Anda dapat menggunakan objek web3 yang disediakan oleh pustaka web3.js. Di balik layar, ini berkomunikasi dengan node lokal melalui panggilan RPC. [web3](https://github.com/ethereum/web3.js/) berfungsi dengan node Ethereum mana pun yang mengekspos lapisan RPC.
+Untuk membuat aplikasi Anda berfungsi di Ethereum, Anda dapat menggunakan objek Web3 yang disediakan oleh pustaka Web3.js. Secara internal, objek ini berkomunikasi dengan node lokal melalui panggilan RPC. [Web3](https://github.com/ethereum/web3.js/) berfungsi dengan node Ethereum mana pun yang mengekspos lapisan RPC.
 
 `web3` berisi objek `eth` - web3.eth.
 
@@ -18,14 +18,10 @@ fs.readFile("keyfile.json", (err, data) => {
   var result = recognizer(json)
 })
 
-/* * hasil
- *               [ 'web3', 3 ]   file kunci web3 (v3)
+/** hasil
+ *               [ 'web3', 3 ]   file kunci Web3 (v3)
  *  [ 'ethersale', undefined ]   file kunci Ethersale
- *                        null     file kunci tidak valid */
-/** result
- *               [ 'web3', 3 ]   web3 (v3) keyfile
- *  [ 'ethersale', undefined ]   Ethersale keyfile
- *                        null     invalid keyfile
+ *                        null     file kunci tidak valid
  */
 ```
 
@@ -33,24 +29,24 @@ Ini mendokumentasikan **versi 3** dari Definisi Penyimpanan Rahasia Web3.
 
 ## Definisi {#definition}
 
-Pengodean dan pendekodean file yang sebenarnya sebagian besar tetap tidak berubah dari versi 1, kecuali bahwa algoritma kripto tidak lagi ditetapkan ke AES-128-CBC (AES-128-CTR sekarang menjadi persyaratan minimal). Sebagian besar arti/algoritma mirip dengan versi 1, kecuali `mac`, yang diberikan sebagai SHA3 (keccak-256) dari penggabungan 16 byte kedua paling kiri dari kunci turunan bersama dengan `ciphertext` lengkap.
+Pengodean dan pendekodean file yang sebenarnya sebagian besar tetap tidak berubah dari versi 1, kecuali bahwa algoritma kripto tidak lagi ditetapkan ke AES-128-CBC (AES-128-CTR sekarang menjadi persyaratan minimum). Sebagian besar makna/algoritma mirip dengan versi 1, kecuali `mac`, yang diberikan sebagai SHA3 (Keccak-256) dari penggabungan 16 byte kedua paling kiri dari kunci turunan bersama dengan `ciphertext` secara penuh.
 
-File kunci rahasia disimpan langsung di `~/.web3/keystore` (untuk sistem mirip Unix) dan `~/AppData/Web3/keystore` (untuk Windows). File-file tersebut dapat dinamai apa saja, tetapi konvensi yang baik adalah `<uuid>.json`, di mana `<uuid>` adalah UUID 128-bit yang diberikan ke kunci rahasia (proksi yang menjaga privasi untuk alamat kunci rahasia).
+File kunci rahasia disimpan langsung di `~/.web3/keystore` (untuk sistem mirip Unix) dan `~/AppData/Web3/keystore` (untuk Windows). File-file tersebut dapat dinamai apa saja, tetapi konvensi yang baik adalah `<uuid>.json`, di mana `<uuid>` adalah UUID 128-bit yang diberikan ke kunci rahasia (proksi yang menjaga privasi untuk alamat kunci rahasia tersebut).
 
-Semua file tersebut memiliki kata sandi terkait. Untuk mendapatkan kunci rahasia file `.json` tertentu, pertama-tama dapatkan kunci enkripsi file; ini dilakukan dengan mengambil kata sandi file dan meneruskannya melalui fungsi turunan kunci seperti yang dijelaskan oleh kunci `kdf`. Parameter statis dan dinamis yang bergantung pada KDF untuk fungsi KDF dijelaskan dalam kunci `kdfparams`.
+Semua file semacam itu memiliki kata sandi yang terkait. Untuk menurunkan kunci rahasia dari file `.json` tertentu, pertama-tama turunkan kunci enkripsi file tersebut; ini dilakukan dengan mengambil kata sandi file dan meneruskannya melalui fungsi turunan kunci seperti yang dijelaskan oleh kunci `kdf`. Parameter statis dan dinamis yang bergantung pada KDF untuk fungsi KDF dijelaskan dalam kunci `kdfparams`.
 
-PBKDF2 harus didukung oleh semua implementasi yang memenuhi standar minimal, yang dilambangkan dengan:
+PBKDF2 harus didukung oleh semua implementasi yang memenuhi standar minimum, yang ditunjukkan melalui:
 
 - `kdf`: `pbkdf2`
 
 Untuk PBKDF2, kdfparams mencakup:
 
-- `prf`: Harus `hmac-sha256` (dapat diperluas di masa mendatang);
+- `prf`: Harus berupa `hmac-sha256` (dapat diperluas di masa mendatang);
 - `c`: jumlah iterasi;
 - `salt`: salt yang diteruskan ke PBKDF;
 - `dklen`: panjang untuk kunci turunan. Harus >= 32.
 
-Setelah kunci file diturunkan, kunci tersebut harus diverifikasi melalui turunan MAC. MAC harus dihitung sebagai hash SHA3 (keccak-256) dari array byte yang dibentuk sebagai penggabungan 16 byte kedua paling kiri dari kunci turunan dengan konten kunci `ciphertext`, yaitu:
+Setelah kunci file diturunkan, kunci tersebut harus diverifikasi melalui turunan MAC. MAC harus dihitung sebagai hash SHA3 (Keccak-256) dari array byte yang dibentuk sebagai penggabungan 16 byte kedua paling kiri dari kunci turunan dengan konten kunci `ciphertext`, yaitu:
 
 ```js
 KECCAK(DK[16..31] ++ <ciphertext>)
@@ -60,9 +56,9 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 Nilai ini harus dibandingkan dengan konten kunci `mac`; jika berbeda, kata sandi alternatif harus diminta (atau operasi dibatalkan).
 
-Setelah kunci file diverifikasi, teks sandi (kunci `ciphertext` dalam file) dapat didekripsi menggunakan algoritma enkripsi simetris yang ditentukan oleh kunci `cipher` dan diparameterisasi melalui kunci `cipherparams`. Jika ukuran kunci turunan dan ukuran kunci algoritma tidak cocok, byte paling kanan yang diisi nol dari kunci turunan harus digunakan sebagai kunci untuk algoritma.
+Setelah kunci file diverifikasi, teks sandi (kunci `ciphertext` dalam file) dapat didekripsi menggunakan algoritma enkripsi simetris yang ditentukan oleh kunci `cipher` dan diparameterisasi melalui kunci `cipherparams`. Jika ukuran kunci turunan dan ukuran kunci algoritma tidak cocok, byte paling kanan dari kunci turunan yang diisi nol (zero padded) harus digunakan sebagai kunci untuk algoritma tersebut.
 
-Semua implementasi yang memenuhi standar minimal harus mendukung algoritma AES-128-CTR, yang dilambangkan dengan:
+Semua implementasi yang memenuhi standar minimum harus mendukung algoritma AES-128-CTR, yang ditunjukkan melalui:
 
 - `cipher: aes-128-ctr`
 
@@ -74,21 +70,21 @@ Kunci untuk sandi adalah 16 byte paling kiri dari kunci turunan, yaitu, `DK[0..1
 
 Pembuatan/enkripsi kunci rahasia pada dasarnya harus merupakan kebalikan dari instruksi ini. Pastikan `uuid`, `salt`, dan `iv` benar-benar acak.
 
-Selain bidang `version`, yang harus bertindak sebagai pengidentifikasi "keras" dari versi, implementasi juga dapat menggunakan `minorversion` untuk melacak perubahan yang lebih kecil dan tidak merusak pada format.
+Selain bidang `version`, yang harus bertindak sebagai pengidentifikasi "keras" dari versi, implementasi juga dapat menggunakan `minorversion` untuk melacak perubahan format yang lebih kecil dan tidak merusak (non-breaking).
 
-## Vektor Uji {#test-vectors}
+## Vektor Pengujian {#test-vectors}
 
 Detail:
 
-- `Alamat`: `008aeeda4d805471df9b2a5b0f38a0c3bcba786b`
+- `Address`: `008aeeda4d805471df9b2a5b0f38a0c3bcba786b`
 - `ICAP`: `XE542A5PZHH8PYIZUBEJEO0MFWRAPPIL67`
 - `UUID`: `3198bc9c-6672-5ab3-d9954942343ae5b6`
-- `Kata Sandi`: `testpassword`
-- `Rahasia`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
+- `Password`: `testpassword`
+- `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 {#pbkdf2-sha-256}
 
-Vektor uji menggunakan `AES-128-CTR` dan `PBKDF2-SHA-256`:
+Vektor pengujian menggunakan `AES-128-CTR` dan `PBKDF2-SHA-256`:
 
 Konten file dari `~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json`:
 
@@ -116,14 +112,14 @@ Konten file dari `~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json`:
 
 **Perantara**:
 
-`Kunci turunan`: `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551`
-`Badan MAC`: `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46`
+`Derived key`: `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551`
+`MAC Body`: `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46`
 `MAC`: `517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2`
-`Kunci sandi`: `f06d69cdc7da0faffb1008270bca38f5`
+`Cipher key`: `f06d69cdc7da0faffb1008270bca38f5`
 
 ### Scrypt {#scrypt}
 
-Vektor uji menggunakan AES-128-CTR dan Scrypt:
+Vektor pengujian menggunakan AES-128-CTR dan Scrypt:
 
 ```json
 {
@@ -150,23 +146,23 @@ Vektor uji menggunakan AES-128-CTR dan Scrypt:
 
 **Perantara**:
 
-`Kunci turunan`: `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d`
-`Badan MAC`: `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2`
+`Derived key`: `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d`
+`MAC Body`: `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2`
 `MAC`: `337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c`
-`Kunci sandi`: `7446f59ecc301d2d79bc3302650d8a5c`
+`Cipher key`: `7446f59ecc301d2d79bc3302650d8a5c`
 
 ## Perubahan dari Versi 1 {#alterations-from-v2}
 
-Versi ini memperbaiki beberapa ketidakkonsistenan dengan versi 1 yang dipublikasikan [di sini](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst). Secara singkat ini adalah:
+Versi ini memperbaiki beberapa ketidakkonsistenan dengan versi 1 yang dipublikasikan [di sini](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst). Secara singkat, ini adalah:
 
-- Penggunaan huruf kapital tidak dapat dibenarkan dan tidak konsisten (scrypt huruf kecil, Kdf huruf campuran, MAC huruf besar).
+- Penggunaan huruf kapital tidak beralasan dan tidak konsisten (scrypt huruf kecil, Kdf huruf campuran, MAC huruf besar).
 - Alamat tidak diperlukan dan membahayakan privasi.
 - `Salt` secara intrinsik merupakan parameter dari fungsi turunan kunci dan layak untuk dikaitkan dengannya, bukan dengan kripto secara umum.
 - _SaltLen_ tidak diperlukan (cukup turunkan dari Salt).
 - Fungsi turunan kunci diberikan, namun algoritma kripto ditentukan secara kaku.
 - `Version` secara intrinsik bersifat numerik namun berupa string (pembuatan versi terstruktur akan dimungkinkan dengan string, tetapi dapat dianggap di luar cakupan untuk format file konfigurasi yang jarang berubah).
-- `KDF` dan `cipher` secara nosional adalah konsep saudara namun diatur secara berbeda.
-- `MAC` dihitung melalui sepotong data yang agnostik terhadap spasi putih(!)
+- `KDF` dan `cipher` secara nosional adalah konsep yang bersaudara namun diatur secara berbeda.
+- `MAC` dihitung melalui sepotong data yang agnostik terhadap spasi putih (!)
 
 Perubahan telah dilakukan pada format untuk memberikan file berikut, yang secara fungsional setara dengan contoh yang diberikan pada halaman yang ditautkan sebelumnya:
 
@@ -194,6 +190,6 @@ Perubahan telah dilakukan pada format untuk memberikan file berikut, yang secara
 }
 ```
 
-## Perubahan dari Versi 2 {#alterations-from-v2}
+## Perubahan dari Versi 2 {#alterations-from-v2-2}
 
-Versi 2 adalah implementasi C++ awal dengan sejumlah bug. Semua hal penting tetap tidak berubah darinya.
+Versi 2 adalah implementasi awal C++ dengan sejumlah bug. Semua hal penting tetap tidak berubah darinya.
