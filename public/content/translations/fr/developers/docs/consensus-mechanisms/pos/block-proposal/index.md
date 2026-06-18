@@ -1,32 +1,32 @@
 ---
 title: Proposition de bloc
-description: "Comment les blocs sont proposés en preuve d'enjeu sur Ethereum."
+description: Explication de la façon dont les blocs sont proposés dans la preuve d'enjeu d'Ethereum.
 lang: fr
 ---
 
-Les blocs sont les unités de base de la blockchain. Ce sont des paquets d'informations distincts qui sont transmis entre les nœuds, acceptés puis ajoutée à la base de données de chaque nœud. Cette page explique comment ils sont construits.
+Les blocs sont les unités fondamentales de la chaîne de blocs. Les blocs sont des unités discrètes d'informations qui sont transmises entre les nœuds, convenues et ajoutées à la base de données de chaque nœud. Cette page explique comment ils sont produits.
 
 ## Prérequis {#prerequisites}
 
-La proposition de blocs fait partie du protocole de preuve d'enjeu. Pour vous aider à comprendre cette page, nous vous recommandons de lire les articles sur la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) et [l'architecture des blocs](/developers/docs/blocks/).
+La proposition de bloc fait partie du protocole de preuve d'enjeu. Pour vous aider à comprendre cette page, nous vous recommandons de lire sur la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) et l'[architecture des blocs](/developers/docs/blocks/).
 
 ## Qui produit les blocs ? {#who-produces-blocks}
 
-Les comptes de validateurs proposent les blocs. Les validateurs sont gérés par des opérateurs de nœuds qui exécutent un logiciel de validation avec leurs clients d'exécution et de consensus, et qui ont déposé au moins 32 ETH dans le contrat de dépôt. Cependant, chaque validateur est occasionnellement responsable de la proposition d'un bloc. Ethereum mesure le temps en créneaux et en périodes. Chaque créneau dure douze secondes, et 32 créneaux (6,4 minutes) forment une période. Chaque créneau est une occasion d'ajouter un nouveau bloc sur Ethereum.
+Les comptes de validateur proposent des blocs. Les comptes de validateur sont gérés par des opérateurs de nœuds qui exécutent un logiciel de validateur dans le cadre de leurs clients d'exécution et de consensus et qui ont déposé au moins 32 ETH dans le contrat de dépôt. Cependant, chaque validateur n'est qu'occasionnellement responsable de la proposition d'un bloc. [Ethereum](/) mesure le temps en créneaux et en époques. Chaque créneau dure douze secondes, et 32 créneaux (6,4 minutes) constituent une époque. Chaque créneau est une opportunité d'ajouter un nouveau bloc sur Ethereum.
 
 ### Sélection aléatoire {#random-selection}
 
-Un seul validateur est choisi de manière pseudo-aléatoire pour proposer un bloc à chaque créneau. Il n'existe pas de véritable aléa dans une blockchain, car si chaque nœud générait des nombres véritablement aléatoires, ils ne pourraient pas parvenir à atteindre un consensus. Au lieu de cela, l'objectif est de rendre le processus de sélection des validateurs imprévisible. Le pseudo-aléa est réalisé sur Ethereum à l'aide d'un algorithme appelé RANDAO, qui mélange un hachage du validateur qui propose le bloc avec une graine qui est mise à jour à chaque bloc. Cette valeur est utilisée pour sélectionner un validateur spécifique parmi l'ensemble total des validateurs. La sélection des validateurs est fixée deux périodes à l'avance afin de se protéger contre certains types de manipulation de la graine utilisée.
+Un seul validateur est choisi de manière pseudo-aléatoire pour proposer un bloc dans chaque créneau. Il n'y a pas de véritable caractère aléatoire dans une chaîne de blocs, car si chaque nœud générait des nombres véritablement aléatoires, ils ne pourraient pas parvenir à un consensus. L'objectif est plutôt de rendre le processus de sélection des validateurs imprévisible. Le caractère aléatoire est obtenu sur Ethereum à l'aide d'un algorithme appelé RANDAO qui mélange un hash du proposeur de bloc avec une graine qui est mise à jour à chaque bloc. Cette valeur est utilisée pour sélectionner un validateur spécifique parmi l'ensemble total des validateurs. La sélection des validateurs est fixée deux époques à l'avance afin de se protéger contre certains types de manipulation de la graine.
 
-Bien que les validateurs ajoutent des données à RANDAO à chaque créneau, la valeur globale de RANDAO est mise à jour une seule fois par période. Pour calculer l'indice du prochain validateur choisi, la valeur de RANDAO est mélangée avec le numéro du créneau pour donner une valeur unique à chaque créneau. La probabilité qu'un validateur individuel soit sélectionné n'est pas simplement de `1/N` (où `N` = le nombre total de validateurs actifs). Elle est plutôt pondérée par le solde effectif d'ETH de chaque validateur. Le solde effectif maximal est de 32 ETH (cela signifie qu'un `balance < 32 ETH` conduit à une pondération inférieure à `balance == 32 ETH`, mais `balance > 32 ETH` ne conduit pas à une pondération supérieure à `balance == 32 ETH`).
+Bien que les validateurs ajoutent au RANDAO à chaque créneau, la valeur globale du RANDAO n'est mise à jour qu'une fois par époque. Pour calculer l'indice du prochain proposeur de bloc, la valeur du RANDAO est mélangée avec le numéro du créneau pour donner une valeur unique à chaque créneau. La probabilité qu'un validateur individuel soit sélectionné n'est pas simplement `1/N` (où `N` = total des validateurs actifs). Au lieu de cela, elle est pondérée par le solde effectif en ETH de chaque validateur. Le solde effectif maximum est de 32 ETH (cela signifie que `balance < 32 ETH` conduit à un poids inférieur à `balance == 32 ETH`, mais `balance > 32 ETH` ne conduit pas à une pondération supérieure à `balance == 32 ETH`).
 
-Un seul validateur est sélectionné à chaque créneau pour proposer un bloc. Dans des conditions normales, un seul producteur de bloc crée et publie un unique bloc dans son créneau dédié. Créer deux blocs pour le même créneau est une infraction passible de sanction, souvent appelée « équivoque ».
+Un seul proposeur de bloc est sélectionné dans chaque créneau. Dans des conditions normales, un seul producteur de bloc crée et publie un seul bloc dans son créneau dédié. Créer deux blocs pour le même créneau est une infraction passible de réduction, souvent connue sous le nom d'« équivoque ».
 
 ## Comment le bloc est-il créé ? {#how-is-a-block-created}
 
-Le proposeur de bloc est censé diffuser un bloc phare signé qui s'appuie sur la tête de la chaîne la plus récente selon son propre algorithme de choix de fourche exécuté localement. L'algorithme de choix entre les possibles fourches regroupe toutes les attestations restantes du créneau précédent en une file d'attente, puis trouve le bloc avec le plus grand poids cumulé d'attestations dans son historique. Ce bloc est le parent du nouveau bloc créé par le proposeur.
+Le proposeur de bloc est censé diffuser un bloc phare signé qui s'appuie sur la tête la plus récente de la chaîne selon la vue de son propre algorithme de choix de fourche exécuté localement. L'algorithme de choix de fourche applique toutes les attestations en file d'attente restantes du créneau précédent, puis trouve le bloc avec le plus grand poids cumulé d'attestations dans son historique. Ce bloc est le parent du nouveau bloc créé par le proposant.
 
-Le proposeur du bloc crée un bloc en collectant des données de sa base de données locale et de son point de vue de la chaîne. Le contenu du bloc est présenté dans l'extrait ci-dessous :
+Le proposeur de bloc crée un bloc en collectant des données à partir de sa propre base de données locale et de sa vue de la chaîne. Le contenu du bloc est présenté dans l'extrait ci-dessous :
 
 ```rust
 class BeaconBlockBody(Container):
@@ -42,28 +42,28 @@ class BeaconBlockBody(Container):
     execution_payload: ExecutionPayload
 ```
 
-Le champ `randao_reveal` prend une valeur aléatoire vérifiable que le proposeur de bloc crée en signant le numéro de l'époque actuelle. `eth1_data` est un vote du point de vue du proposeur du bloc sur le contrat de dépôt, incluant la racine de l'arbre de Merkle des dépôts et le nombre total de dépôts, permettant ainsi de vérifier les nouveaux dépôts. `graffiti` est un champ facultatif qui peut être utilisé pour ajouter un message au bloc. `proposer_slashings` et `attester_slashings` sont des champs qui contiennent la preuve que certains validateurs ont commis des infractions passibles de slashing selon la vue du proposeur sur l'état de la chaîne. `deposits` est une liste de nouveaux dépôts de validateurs dont le proposeur de bloc a connaissance, et `voluntary_exits` est une liste de validateurs souhaitant quitter le réseau, dont le proposeur de bloc a entendu parler sur le réseau de diffusion (gossip network) de la couche de consensus. `sync_aggregate` est un vecteur montrant quels validateurs ont été précédemment affectés à un comité de synchronisation (un sous-ensemble de validateurs servant des données aux clients légers) et ont participé à la signature de données.
+Le champ `randao_reveal` prend une valeur aléatoire vérifiable que le proposeur de bloc crée en signant le numéro de l'époque actuelle. `eth1_data` est un vote pour la vue du proposeur de bloc sur le contrat de dépôt, y compris la racine du trie de Merkle des dépôts et le nombre total de dépôts qui permettent de vérifier les nouveaux dépôts. `graffiti` est un champ facultatif qui peut être utilisé pour ajouter un message au bloc. `proposer_slashings` et `attester_slashings` sont des champs qui contiennent la preuve que certains validateurs ont commis des infractions passibles de réduction selon la vue de la chaîne du proposant. `deposits` est une liste de nouveaux dépôts de validateurs dont le proposeur de bloc a connaissance, et `voluntary_exits` est une liste de validateurs qui souhaitent effectuer une sortie dont le proposeur de bloc a entendu parler sur le réseau de diffusion de la couche de consensus. Le `sync_aggregate` est un vecteur indiquant quels validateurs ont été précédemment assignés à un comité de synchronisation (un sous-ensemble de validateurs qui servent des données de client léger) et ont participé à la signature des données.
 
-La `execution_payload` permet aux informations des transactions d'être transmises entre les clients d'exécution et les clients de consensus. La `execution_payload` est un bloc de données d'exécution qui est imbriqué à l'intérieur d'un bloc balise. Les champs à l'intérieur de la `execution_payload` reflètent la structure de bloc décrite dans le livre jaune d'Ethereum, à l'exception qu'il n'y a pas d'ommers (blocs oncles) et que `prev_randao` existe à la place de `difficulty`. Le client d'exécution a accès à un pool local de transactions qu'il a reçues sur son propre réseau de diffusion d'informations. Ces transactions sont exécutées localement pour générer un état mis à jour connu sous le nom d'état final. Les transactions sont incluses dans la `execution_payload` sous forme de liste appelée `transactions` et l'état final est fourni dans le champ `state-root`.
+Le `execution_payload` permet de transmettre des informations sur les transactions entre les clients d'exécution et de consensus. Le `execution_payload` est un bloc de données d'exécution qui est imbriqué à l'intérieur d'un bloc phare. Les champs à l'intérieur du `execution_payload` reflètent la structure de bloc décrite dans le livre jaune d'Ethereum, à l'exception du fait qu'il n'y a pas d'ommers et que `prev_randao` existe à la place de `difficulty`. Le client d'exécution a accès à un pool local de transactions dont il a entendu parler sur son propre réseau de diffusion. Ces transactions sont exécutées localement pour générer un trie d'état mis à jour connu sous le nom de post-état. Les transactions sont incluses dans le `execution_payload` sous forme de liste appelée `transactions` et le post-état est fourni dans le champ `state-root`.
 
-Toutes ces données sont collectées dans un bloc phare, signées, puis diffusées aux pairs du proposeur de bloc, qui les propagent à leurs propres pairs, et ainsi de suite.
+Toutes ces données sont collectées dans un bloc phare, signées et diffusées aux pairs du proposeur de bloc, qui les propagent à leurs pairs, etc.
 
-En savoir plus sur [l'anatomie des blocs](/developers/docs/blocks).
+En savoir plus sur l'[anatomie des blocs](/developers/docs/blocks).
 
-## Qu'arrive-t-il au block ? {#what-happens-to-blocks}
+## Qu'arrive-t-il au bloc ? {#what-happens-to-blocks}
 
-Le bloc est ajouté à la base de données locale du proposeur de bloc puis diffusé aux pairs via le réseau de communication de la couche de consensus. Lorsqu'un validateur reçoit le bloc, il vérifie les données qu'il contient, notamment en vérifiant que le bloc a le bon bloc parent, correspond au créneau actuel, que l'index du proposeur est bien celui attendu, que RANDAO est valide et enfin que le proposeur n'a pas été sanctionné. La `execution_payload` est dégroupée et le client d'exécution du validateur ré-exécute les transactions de la liste pour vérifier le changement d'état proposé. Si le bloc passe toutes ces vérifications, chaque validateur ajoute le bloc à sa propre chaîne canonique. Le processus recommence ensuite lors du créneau suivant.
+Le bloc est ajouté à la base de données locale du proposeur de bloc et diffusé aux pairs sur le réseau de diffusion de la couche de consensus. Lorsqu'un validateur reçoit le bloc, il vérifie les données qu'il contient, notamment en s'assurant que le bloc a le bon parent, correspond au bon créneau, que l'indice du proposant est celui attendu, que la révélation RANDAO est valide et que le proposant n'a pas subi de réduction. Le `execution_payload` est dégroupé, et le client d'exécution du validateur réexécute les transactions de la liste pour vérifier le changement d'état proposé. En supposant que le bloc passe toutes ces vérifications, chaque validateur ajoute le bloc à sa propre chaîne canonique. Le processus recommence ensuite au créneau suivant.
 
 ## Récompenses de bloc {#block-rewards}
 
-Le proposeur de bloc reçoit une rémunération pour son travail. Il existe une `base_reward` (récompense de base) calculée en fonction du nombre de validateurs actifs et de leurs soldes effectifs. Le proposeur de bloc reçoit alors une fraction de la `base_reward` pour chaque attestation valide incluse dans le bloc ; plus il y a de validateurs qui attestent du bloc, plus la récompense du proposeur de bloc est importante. Il existe également une récompense pour le signalement des validateurs qui devraient être slashés, égale à `1/512 * effective balance` pour chaque validateur slashé.
+Le proposeur de bloc reçoit un paiement pour son travail. Il y a une `base_reward` calculée en fonction du nombre de validateurs actifs et de leurs soldes effectifs. Le proposeur de bloc reçoit ensuite une fraction de la `base_reward` pour chaque attestation valide incluse dans le bloc ; plus il y a de validateurs qui attestent le bloc, plus la récompense du proposeur de bloc est importante. Il y a également une récompense pour le signalement des validateurs qui devraient subir une réduction, égale à `1/512 * effective balance` pour chaque validateur sanctionné.
 
 [En savoir plus sur les récompenses et les pénalités](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
 
-## En savoir plus {#further-reading}
+## Complément d'information {#further-reading}
 
 - [Introduction aux blocs](/developers/docs/blocks/)
-- Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+- [Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
 - [Spécifications du consensus Ethereum](https://github.com/ethereum/consensus-specs)
 - [Introduction à Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 - [Mise à niveau d'Ethereum](https://eth2book.info/)

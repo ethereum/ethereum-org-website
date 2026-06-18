@@ -1,11 +1,11 @@
 ---
-title: "Définition du stockage secret Web3"
-description: "Définition formelle du stockage secret Web3"
+title: Définition du stockage de secrets Web3
+description: Définition formelle du stockage de secrets Web3
 lang: fr
 sidebarDepth: 2
 ---
 
-Pour que votre application fonctionne sur Ethereum, vous pouvez utiliser l'objet web3 fourni par la bibliothèque web3.js. Il communique à un nœud local par le biais des appels RPC. [web3](https://github.com/ethereum/web3.js/) fonctionne avec n'importe quel nœud Ethereum qui expose une couche RPC.
+Pour faire fonctionner votre application sur Ethereum, vous pouvez utiliser l'objet web3 fourni par la bibliothèque Web3.js. En interne, il communique avec un nœud local via des appels RPC. [web3](https://github.com/ethereum/web3.js/) fonctionne avec n'importe quel nœud Ethereum qui expose une couche RPC.
 
 `web3` contient l'objet `eth` - web3.eth.
 
@@ -19,34 +19,34 @@ fs.readFile("keyfile.json", (err, data) => {
 })
 
 /** résultat
- *               [ 'web3', 3 ]   fichier de clés web3 (v3)
- *  [ 'ethersale', undefined ]   fichier de clés Ethersale
- *                        null     fichier de clés invalide
+ *               [ 'web3', 3 ]   fichier de clé Web3 (v3)
+ *  [ 'ethersale', undefined ]   fichier de clé Ethersale
+ *                        null     fichier de clé invalide
  */
 ```
 
-Ce document présente la **version 3** de la Définition du Stockage Secret Web3.
+Ce document décrit la **version 3** de la définition du stockage de secrets Web3.
 
 ## Définition {#definition}
 
-L'encodage et le décodage du fichier restent en grande partie inchangés depuis la version 1, sauf que l'algorithme de cryptage n'est plus fixé à AES-128-CBC (AES-128-CTR est maintenant le minimum requis). La plupart des significations/algorithmes sont similaires à la version 1, à l'exception du `mac`, qui correspond au SHA3 (keccak-256) de la concaténation du deuxième bloc de 16 octets de la clé dérivée avec le `ciphertext` complet.
+L'encodage et le décodage réels du fichier restent en grande partie inchangés par rapport à la version 1, à l'exception de l'algorithme crypto qui n'est plus fixé à AES-128-CBC (AES-128-CTR est désormais l'exigence minimale). La plupart des significations/algorithmes sont similaires à la version 1, à l'exception de `mac`, qui est donné comme le SHA3 (Keccak-256) des concaténations du deuxième bloc de 16 octets en partant de la gauche de la clé dérivée avec l'intégralité de `ciphertext`.
 
-Les fichiers de clés secrètes sont stockés directement dans `~/.web3/keystore` (pour les systèmes de type Unix) et `~/AppData/Web3/keystore` (pour Windows). Leur nom est libre, mais une bonne convention est d'utiliser `<uuid>.json`, où `<uuid>` est l'UUID de 128 bits attribué à la clé secrète (un proxy qui préserve la confidentialité pour l'adresse de la clé secrète).
+Les fichiers de clé secrète sont stockés directement dans `~/.web3/keystore` (pour les systèmes de type Unix) et `~/AppData/Web3/keystore` (pour Windows). Ils peuvent porter n'importe quel nom, mais une bonne convention est `<uuid>.json`, où `<uuid>` est l'UUID de 128 bits attribué à la clé secrète (un proxy préservant la confidentialité pour l'adresse de la clé secrète).
 
-Tous ces fichiers ont un mot de passe associé. Pour dériver la clé secrète d'un fichier `.json` donné, dérivez d'abord la clé de chiffrement du fichier. Pour ce faire, prenez le mot de passe du fichier et passez-le dans une fonction de dérivation de clé, comme le décrit la clé `kdf`. Les paramètres statiques et dynamiques, dépendants de KDF, de la fonction KDF sont décrits dans la clé `kdfparams`.
+Tous ces fichiers ont un mot de passe associé. Pour dériver la clé secrète d'un fichier `.json` donné, dérivez d'abord la clé de chiffrement du fichier ; cela se fait en prenant le mot de passe du fichier et en le passant par une fonction de dérivation de clé telle que décrite par la clé `kdf`. Les paramètres statiques et dynamiques dépendant de la KDF pour la fonction KDF sont décrits dans la clé `kdfparams`.
 
-PBKDF2 doit cependant être pris en charge par toutes les implémentations minimalement conformes, désignées par :
+PBKDF2 doit être pris en charge par toutes les implémentations minimalement conformes, indiqué par :
 
-- `kdf` : `pbkdf2`
+- `kdf` : `pbkdf2`
 
 Pour PBKDF2, les kdfparams incluent :
 
-- `prf` : Doit être `hmac-sha256` (pourra être étendu à l'avenir) ;
-- `c` : nombre d'itérations ;
-- `salt` : sel passé à PBKDF ;
-- `dklen` : longueur de la clé dérivée. Doit être >= 32.
+- `prf` : Doit être `hmac-sha256` (peut être étendu à l'avenir) ;
+- `c` : nombre d'itérations ;
+- `salt` : sel passé à PBKDF ;
+- `dklen` : longueur de la clé dérivée. Doit être >= 32.
 
-Une fois que la clé du fichier a été dérivée, elle doit être vérifiée par la dérivation du MAC. Le MAC doit être calculé comme le hachage SHA3 (keccak-256) du tableau d'octets formé par la concaténation du deuxième bloc de 16 octets de la clé dérivée avec le contenu de la clé `ciphertext`, c'est-à-dire :
+Une fois la clé du fichier dérivée, elle doit être vérifiée par la dérivation du MAC. Le MAC doit être calculé comme le hash SHA3 (Keccak-256) du tableau d'octets formé par les concaténations du deuxième bloc de 16 octets en partant de la gauche de la clé dérivée avec le contenu de la clé `ciphertext`, c'est-à-dire :
 
 ```js
 KECCAK(DK[16..31] ++ <ciphertext>)
@@ -54,39 +54,39 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 (où `++` est l'opérateur de concaténation)
 
-Cette valeur doit être comparée au contenu de la clé `mac` ; si elles sont différentes, un autre mot de passe doit être demandé (ou l'opération annulée).
+Cette valeur doit être comparée au contenu de la clé `mac` ; si elles sont différentes, un mot de passe alternatif doit être demandé (ou l'opération annulée).
 
-Une fois la clé du fichier vérifiée, le texte chiffré (la clé `ciphertext` dans le fichier) peut être déchiffré à l'aide de l'algorithme de chiffrement symétrique spécifié par la clé `cipher` et paramétré par la clé `cipherparams`. Si la taille de la clé dérivée et la taille de la clé de l'algorithme ne correspondent pas, les octets zéro les plus à droite de la clé dérivée doivent être utilisés comme clé de l'algorithme.
+Après que la clé du fichier a été vérifiée, le texte chiffré (la clé `ciphertext` dans le fichier) peut être déchiffré en utilisant l'algorithme de chiffrement symétrique spécifié par la clé `cipher` et paramétré via la clé `cipherparams`. Si la taille de la clé dérivée et la taille de la clé de l'algorithme ne correspondent pas, les octets les plus à droite de la clé dérivée, complétés par des zéros, doivent être utilisés comme clé pour l'algorithme.
 
-Toutes les implémentations minimalement conformes doivent supporter l'algorithme AES-128-CTR, désigné par :
+Toutes les implémentations minimalement conformes doivent prendre en charge l'algorithme AES-128-CTR, indiqué par :
 
-- `cipher` : `aes-128-ctr`
+- `cipher: aes-128-ctr`
 
-Ce procédé de chiffrement prend les paramètres suivants, donnés comme clés de la clé des paramètres de chiffrement :
+Ce chiffrement prend les paramètres suivants, donnés comme clés à la clé cipherparams :
 
-- `iv` : vecteur d'initialisation de 128 bits pour le chiffrement.
+- `iv` : vecteur d'initialisation de 128 bits pour le chiffrement.
 
-La clé pour le chiffrement correspond aux 16 premiers octets de la clé dérivée, c'est-à-dire `DK[0..15]`.
+La clé pour le chiffrement correspond aux 16 octets les plus à gauche de la clé dérivée, c'est-à-dire `DK[0..15]`
 
-La création/Le cryptage d'une clé secrète doit être essentiellement l'inverse de ces instructions. Assurez-vous que l'`uuid`, le `salt` et l'`iv` sont bien aléatoires.
+La création/le chiffrement d'une clé secrète doit être essentiellement l'inverse de ces instructions. Assurez-vous que `uuid`, `salt` et `iv` sont réellement aléatoires.
 
-En plus du champ `version`, qui doit servir d'identifiant « en dur » de la version, les implémentations peuvent également utiliser `minorversion` pour suivre les modifications plus petites et sans rupture de compatibilité du format.
+En plus du champ `version`, qui doit agir comme un identifiant « strict » de version, les implémentations peuvent également utiliser `minorversion` pour suivre les modifications mineures et non bloquantes du format.
 
 ## Vecteurs de test {#test-vectors}
 
 Détails :
 
-- `Adresse` : `008aeeda4d805471df9b2a5b0f38a0c3bcba786b`
-- `ICAP` : `XE542A5PZHH8PYIZUBEJEO0MFWRAPPIL67`
-- `UUID` : `3198bc9c-6672-5ab3-d9954942343ae5b6`
-- `Mot de passe` : `testpassword`
-- `Secret` : `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
+- `Address` : `008aeeda4d805471df9b2a5b0f38a0c3bcba786b`
+- `ICAP` : `XE542A5PZHH8PYIZUBEJEO0MFWRAPPIL67`
+- `UUID` : `3198bc9c-6672-5ab3-d9954942343ae5b6`
+- `Password` : `testpassword`
+- `Secret` : `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 {#pbkdf2-sha-256}
 
-Vecteur de test utilisant `AES-128-CTR` et `PBKDF2-SHA-256` :
+Vecteur de test utilisant `AES-128-CTR` et `PBKDF2-SHA-256` :
 
-Contenu du fichier `~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json` :
+Contenu du fichier `~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json` :
 
 ```json
 {
@@ -110,16 +110,16 @@ Contenu du fichier `~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json` 
 }
 ```
 
-**Intermédiaires** :
+**Intermédiaires** :
 
-`Clé dérivée` : `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551`
-`Corps MAC` : `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46`
-`MAC` : `517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2`
-`Clé de chiffrement` : `f06d69cdc7da0faffb1008270bca38f5`
+`Derived key` : `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551`
+`MAC Body` : `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46`
+`MAC` : `517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2`
+`Cipher key` : `f06d69cdc7da0faffb1008270bca38f5`
 
 ### Scrypt {#scrypt}
 
-Test de vecteur en utilisant AES-128-CTR et Scrypt :
+Vecteur de test utilisant AES-128-CTR et Scrypt :
 
 ```json
 {
@@ -144,27 +144,27 @@ Test de vecteur en utilisant AES-128-CTR et Scrypt :
 }
 ```
 
-**Intermédiaires** :
+**Intermédiaires** :
 
-`Clé dérivée` : `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d`
-`Corps MAC` : `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2`
-`MAC` : `337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c`
-`Clé de chiffrement` : `7446f59ecc301d2d79bc3302650d8a5c`
+`Derived key` : `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d`
+`MAC Body` : `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2`
+`MAC` : `337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c`
+`Cipher key` : `7446f59ecc301d2d79bc3302650d8a5c`
 
-## Modifications par rapport à la version 1 {#alterations-from-v2}
+## Modifications par rapport à la version 1 {#alterations-from-v2}
 
-Cette version corrige plusieurs incohérences avec la version 1 publiée [ici](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst). En bref, il s'agit de :
+Cette version corrige plusieurs incohérences avec la version 1 publiée [ici](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst). En résumé, ce sont :
 
-- La capitalisation est injustifiée et incohérente (Scrypt minuscule, Kdf mixte, Mac majuscule).
-- Adresse inutile et compromettant la vie privée.
+- La capitalisation est injustifiée et incohérente (scrypt en minuscules, Kdf en casse mixte, MAC en majuscules).
+- L'adresse est inutile et compromet la confidentialité.
 - `Salt` est intrinsèquement un paramètre de la fonction de dérivation de clé et mérite d'y être associé, et non à la crypto en général.
-- _SaltLen_ inutile (il suffit de le dériver de Salt).
-- La fonction de dérivation de clé est donnée, mais l'algorithme de crypto n'est pas spécifié.
-- `Version` est intrinsèquement numérique, mais c'est une chaîne de caractères (la gestion de versions structurée serait possible avec une chaîne, mais peut être considérée comme hors de portée pour un format de fichier de configuration qui change rarement).
-- `KDF` et `cipher` sont théoriquement des concepts frères, mais ils sont organisés différemment.
-- Le `MAC` est calculé à l'aide d'une donnée insensible aux espaces ( !).
+- _SaltLen_ est inutile (il suffit de le dériver de Salt).
+- La fonction de dérivation de clé est donnée, pourtant l'algorithme crypto est spécifié en dur.
+- `Version` est intrinsèquement numérique mais est une chaîne de caractères (le versionnage structuré serait possible avec une chaîne, mais peut être considéré comme hors de portée pour un format de fichier de configuration qui change rarement).
+- `KDF` et `cipher` sont théoriquement des concepts frères, mais sont organisés différemment.
+- `MAC` est calculé à partir d'une donnée insensible aux espaces (!)
 
-Des modifications ont été apportées au format pour donner le fichier suivant, équivalent sur le plan fonctionnel à l'exemple donné sur la page précédemment citée :
+Des modifications ont été apportées au format pour donner le fichier suivant, fonctionnellement équivalent à l'exemple donné sur la page liée précédemment :
 
 ```json
 {
@@ -190,6 +190,6 @@ Des modifications ont été apportées au format pour donner le fichier suivant,
 }
 ```
 
-## Modifications par rapport à la version 2 {#alterations-from-v2}
+## Modifications par rapport à la version 2 {#alterations-from-v2-2}
 
-La version 2 était une implémentation précoce C++ comportant un certain nombre d'anomalies. Tous les éléments essentiels restent inchangés.
+La version 2 était une première implémentation en C++ comportant un certain nombre de bugs. Tous les éléments essentiels restent inchangés par rapport à celle-ci.
