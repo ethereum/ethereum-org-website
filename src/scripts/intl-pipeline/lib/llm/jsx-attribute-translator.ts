@@ -204,7 +204,10 @@ export function applyAttributeTranslations(
     )
     if (dqPattern.test(result)) {
       const escaped = newValue.replace(/"/g, "&quot;")
-      result = result.replace(dqPattern, `$1${escaped}"`)
+      // Function replacer: the translated value may contain `$` sequences
+      // (e.g. "$14"), which a string replacement would misinterpret as
+      // capture-group refs ($1 -> group 1). A function replacer is literal.
+      result = result.replace(dqPattern, (_m, p1) => `${p1}${escaped}"`)
       applied++
       continue
     }
@@ -215,7 +218,7 @@ export function applyAttributeTranslations(
     )
     if (sqPattern.test(result)) {
       const escaped = newValue.replace(/'/g, "&apos;")
-      result = result.replace(sqPattern, `$1${escaped}'`)
+      result = result.replace(sqPattern, (_m, p1) => `${p1}${escaped}'`)
       applied++
       continue
     }
