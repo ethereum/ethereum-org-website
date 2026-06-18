@@ -1,31 +1,31 @@
 ---
-title: "Giới thiệu về các bootnode Ethereum"
-description: "Thông tin cơ bản bạn cần biết để hiểu về các bootnode"
+title: Giới thiệu về các nút khởi động Ethereum
+description: Thông tin cơ bản bạn cần để hiểu về các nút khởi động
 lang: vi
 ---
 
-Khi một nút mới tham gia mạng Ethereum, nó cần kết nối với các nút đã có trên mạng để sau đó khám phá các nút ngang hàng mới. Các điểm vào mạng Ethereum này được gọi là bootnode. Các ứng dụng thường có một danh sách các bootnode được mã hóa cứng vào chúng. Các bootnode này thường được vận hành bởi đội ngũ devops của Ethereum Foundation hoặc chính các đội ngũ phát triển ứng dụng. Lưu ý rằng bootnode không giống như các nút tĩnh. Các nút tĩnh được gọi lặp đi lặp lại, trong khi các bootnode chỉ được gọi khi không có đủ nút ngang hàng để kết nối và một nút cần khởi tạo một số kết nối mới.
+Khi một nút mới tham gia vào mạng lưới Ethereum, nó cần kết nối với các nút đã có trên mạng lưới để từ đó khám phá các peer (nút ngang hàng) mới. Các điểm truy cập này vào mạng lưới Ethereum được gọi là các nút khởi động. Các client thường có một danh sách các nút khởi động được mã hóa cứng (hardcoded) bên trong chúng. Các nút khởi động này thường được chạy bởi đội ngũ devops của Tổ chức Ethereum hoặc chính các đội ngũ phát triển client. Lưu ý rằng các nút khởi động không giống như các nút tĩnh (static nodes). Các nút tĩnh được gọi đi gọi lại nhiều lần, trong khi các nút khởi động chỉ được gọi đến nếu không có đủ các peer để kết nối và một nút cần thiết lập (bootstrap) một số kết nối mới.
 
-## Kết nối với một bootnode {#connect-to-a-bootnode}
+## Kết nối với một nút khởi động {#connect-to-a-bootnode}
 
-Hầu hết các ứng dụng đều có danh sách các bootnode được tích hợp sẵn, nhưng bạn cũng có thể muốn chạy bootnode của riêng mình hoặc sử dụng một bootnode không có trong danh sách được mã hóa cứng của ứng dụng. Trong trường hợp này, bạn có thể chỉ định chúng khi khởi động ứng dụng của mình, như sau (ví dụ dành cho Geth, vui lòng kiểm tra tài liệu tham khảo của ứng dụng của bạn):
+Hầu hết các client đều có sẵn một danh sách các nút khởi động được tích hợp, nhưng bạn cũng có thể muốn chạy nút khởi động của riêng mình, hoặc sử dụng một nút không nằm trong danh sách được mã hóa cứng của client. Trong trường hợp này, bạn có thể chỉ định chúng khi khởi động client của mình, như sau (ví dụ dành cho Geth, vui lòng kiểm tra tài liệu client của bạn):
 
 ```
 geth --bootnodes "enode://<node ID>@<IP address>:<port>"
 ```
 
-## Chạy một bootnode {#run-a-bootnode}
+## Chạy một nút khởi động {#run-a-bootnode}
 
-Bootnode là các nút đầy đủ không nằm sau NAT ([Dịch địa chỉ mạng](https://www.geeksforgeeks.org/network-address-translation-nat/)). Mọi nút đầy đủ đều có thể hoạt động như một bootnode miễn là nó có sẵn công khai.
+Các nút khởi động là các nút đầy đủ không nằm sau NAT ([Network Address Translation - Biên dịch Địa chỉ Mạng](https://www.geeksforgeeks.org/network-address-translation-nat/)). Mọi nút đầy đủ đều có thể hoạt động như một nút khởi động miễn là nó có thể truy cập công khai.
 
-Khi bạn khởi động một nút, nó sẽ ghi lại [enode](/developers/docs/networking-layer/network-addresses/#enode) của bạn, đây là một mã định danh công khai mà những người khác có thể sử dụng để kết nối với nút của bạn.
+Khi bạn khởi động một nút, nó sẽ ghi nhật ký [enode](/developers/docs/networking-layer/network-addresses/#enode) của bạn, đây là một định danh công khai mà những người khác có thể sử dụng để kết nối với nút của bạn.
 
-Enode thường được tạo lại sau mỗi lần khởi động lại, vì vậy hãy đảm bảo xem tài liệu tham khảo của ứng dụng để biết cách tạo enode cố định cho bootnode của bạn.
+Enode thường được tạo lại sau mỗi lần khởi động lại, vì vậy hãy đảm bảo xem tài liệu client của bạn về cách tạo một enode cố định cho nút khởi động của bạn.
 
-Để trở thành một bootnode tốt, bạn nên tăng số lượng nút ngang hàng tối đa có thể kết nối với nó. Việc chạy một bootnode với nhiều nút ngang hàng sẽ làm tăng đáng kể yêu cầu về băng thông.
+Để trở thành một nút khởi động tốt, bạn nên tăng số lượng peer tối đa có thể kết nối với nó. Việc chạy một nút khởi động với nhiều peer sẽ làm tăng đáng kể yêu cầu về băng thông.
 
-## Các bootnode có sẵn {#available-bootnodes}
+## Các nút khởi động có sẵn {#available-bootnodes}
 
-Bạn có thể tìm thấy một danh sách các bootnode tích hợp sẵn trong go-ethereum [tại đây](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Các bootnode này được duy trì bởi Ethereum Foundation và đội ngũ go-ethereum.
+Bạn có thể tìm thấy danh sách các nút khởi động được tích hợp sẵn trong go-ethereum [tại đây](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Các nút khởi động này được duy trì bởi Tổ chức Ethereum và đội ngũ go-ethereum.
 
-Có các danh sách bootnode khác được duy trì bởi các tình nguyện viên. Vui lòng đảm bảo luôn bao gồm ít nhất một bootnode chính thức, nếu không bạn có thể bị tấn công che khuất.
+Ngoài ra còn có các danh sách nút khởi động khác do các tình nguyện viên duy trì. Vui lòng đảm bảo luôn bao gồm ít nhất một nút khởi động chính thức, nếu không bạn có thể bị tấn công nhật thực (eclipse attack).

@@ -1,113 +1,118 @@
 ---
-title: "Thay đổi quy mô"
-description: "Một giới thiệu về các tùy chọn mở rộng khác nhau đang được cộng đồng Ethereum phát triển."
+title: Mở rộng quy mô
+description: Giới thiệu về các tùy chọn mở rộng quy mô khác nhau hiện đang được cộng đồng Ethereum phát triển.
 lang: vi
 sidebarDepth: 3
 ---
 
-## Tổng quan về việc thay đổi quy mô {#scaling-overview}
+## Tổng quan về mở rộng quy mô {#scaling-overview}
 
-Khi số lượng người sử dụng Ethereum tăng lên, blockchain đã đạt đến những giới hạn nhất định về khả năng. Điều này đã làm tăng chi phí sử dụng mạng, tạo ra nhu cầu về 'giải pháp mở rộng'. Có nhiều giải pháp đang được nghiên cứu, thử nghiệm và triển khai, áp dụng các phương pháp khác nhau để đạt được những mục tiêu tương tự.
+Khi số lượng người sử dụng [Ethereum](/) tăng lên, Chuỗi khối đã đạt đến những giới hạn công suất nhất định. Điều này đã làm tăng chi phí sử dụng mạng lưới, tạo ra nhu cầu về các "giải pháp mở rộng quy mô". Có nhiều giải pháp đang được nghiên cứu, thử nghiệm và triển khai với các cách tiếp cận khác nhau để đạt được những mục tiêu tương tự.
 
-Mục tiêu chính của khả năng mở rộng là tăng tốc độ giao dịch (tính kết luận cuối cùng nhanh hơn) và thông lượng giao dịch (số lượng giao dịch mỗi giây cao hơn) mà không phải hy sinh tính phi tập trung hay tính bảo mật. Trên chuỗi khối Ethereum lớp 1, nhu cầu cao dẫn đến các giao dịch chậm hơn và [giá gas](/developers/docs/gas/) không khả thi. Việc tăng cường khả năng mạng về tốc độ và băng thông là điều cơ bản đối với việc chấp nhận Ethereum một cách có ý nghĩa và rộng rãi.
+Mục tiêu chính của khả năng mở rộng là tăng tốc độ giao dịch (tính chung cuộc nhanh hơn) và thông lượng giao dịch (số lượng giao dịch mỗi giây cao hơn) mà không hy sinh sự phi tập trung hoặc tính bảo mật. Trên Chuỗi khối Ethereum lớp 1 (l1), nhu cầu cao dẫn đến các giao dịch chậm hơn và [giá Gas](/developers/docs/gas/) không khả thi. Việc tăng công suất mạng lưới về tốc độ và thông lượng là nền tảng cho sự chấp nhận rộng rãi và có ý nghĩa đối với Ethereum.
 
-Trong khi tốc độ và thông lượng là quan trọng, việc các giải pháp mở rộng nhằm đạt được những mục tiêu này vẫn phải duy trì tính phân cấp và an toàn là điều thiết yếu. Giữ cho rào cản gia nhập thấp cho các nhà điều hành nút là rất quan trọng để ngăn chặn sự tiến triển hướng tới sức mạnh tính toán tập trung và không an toàn.
+Mặc dù tốc độ và thông lượng là quan trọng, nhưng điều thiết yếu là các giải pháp mở rộng quy mô hỗ trợ các mục tiêu này vẫn phải phi tập trung và bảo mật. Việc giữ rào cản gia nhập thấp cho các nhà điều hành nút là rất quan trọng trong việc ngăn chặn sự tiến triển hướng tới sức mạnh tính toán tập trung và không an toàn.
 
-Về mặt khái niệm, chúng ta đầu tiên phân loại việc mở rộng thành hai loại: mở rộng trên chuỗi và mở rộng ngoài chuỗi.
+Về mặt khái niệm, trước tiên chúng tôi phân loại việc mở rộng quy mô thành mở rộng quy mô trên chuỗi hoặc mở rộng quy mô ngoài chuỗi.
 
 ## Điều kiện tiên quyết {#prerequisites}
 
-Bạn nên có sự hiểu biết vững chắc về tất cả các chủ đề cơ bản. Việc triển khai các giải pháp mở rộng là một bước tiến cao, vì công nghệ này chưa được thử nghiệm nhiều trong thực tế và vẫn đang được nghiên cứu và phát triển.
+Bạn nên có hiểu biết tốt về tất cả các chủ đề nền tảng. Việc triển khai các giải pháp mở rộng quy mô là nâng cao vì công nghệ này ít được thử nghiệm thực tế hơn, và vẫn tiếp tục được nghiên cứu và phát triển.
 
-## Thay đổi quy mô trên chuỗi {#onchain-scaling}
+## Mở rộng quy mô trên chuỗi {#onchain-scaling}
 
-Thay đổi quy mô trên chuỗi yêu cầu thay đổi đối với giao thức Ethereum (lớp 1 [Mainnet](/glossary/#mainnet)). Trong một thời gian dài, việc chia nhỏ blockchain được kỳ vọng sẽ mở rộng quy mô cho Ethereum. Điều này sẽ liên quan đến việc chia nhỏ chuỗi khối thành các phần riêng biệt (shard) để được xác thực bởi các tập hợp validator. Tuy nhiên, việc mở rộng bằng các lớp cuộn thứ hai đã trở thành kỹ thuật mở rộng chính. Điều này được hỗ trợ bởi việc bổ sung một dạng dữ liệu mới với chi phí thấp gắn liền với các khối Ethereum, được thiết kế đặc biệt để làm cho việc sử dụng rollup trở nên rẻ hơn cho người dùng.
+Mở rộng quy mô trên chuỗi yêu cầu các thay đổi đối với Giao thức Ethereum ([Mạng chính](/glossary/#mainnet) lớp 1 (l1)). Trong một thời gian dài, việc phân mảnh Chuỗi khối được kỳ vọng sẽ mở rộng quy mô Ethereum. Điều này sẽ liên quan đến việc chia Chuỗi khối thành các phần riêng biệt (phân mảnh) để được xác minh bởi các nhóm nhỏ trình xác thực. Tuy nhiên, việc mở rộng quy mô bằng các bản cuộn lớp 2 (l2) đã chiếm ưu thế như là kỹ thuật mở rộng quy mô chính. Điều này được hỗ trợ bởi việc bổ sung một dạng dữ liệu mới rẻ hơn được đính kèm vào các khối Ethereum, được thiết kế đặc biệt để làm cho các bản cuộn trở nên rẻ hơn cho người dùng.
 
-### Phân mảnh dữ liệu {#sharding}
+### Phân mảnh {#sharding}
 
-Sharding là quá trình phân chia cơ sở dữ liệu. Các tập con của các trình xác thực sẽ chịu trách nhiệm cho từng shard riêng lẻ thay vì theo dõi toàn bộ Ethereum. Sharding đã nằm trong [lộ trình](/roadmap/) của Ethereum một thời gian dài, và từng được dự định sẽ ra mắt trước The Merge để chuyển sang bằng chứng cổ phần. Tuy nhiên, sự phát triển nhanh chóng của [rollup lớp 2](#layer-2-scaling) và sự ra đời của [Danksharding](/roadmap/danksharding) (thêm các blob dữ liệu rollup vào khối Ethereum mà người xác thực có thể xác minh rất hiệu quả) đã khiến cộng đồng Ethereum ủng hộ việc thay đổi quy mô lấy rollup làm trung tâm thay vì thay đổi quy mô bằng sharding. Điều này cũng sẽ giúp giữ cho logic đồng thuận của Ethereum đơn giản hơn.
+Phân mảnh là quá trình chia nhỏ một cơ sở dữ liệu. Các nhóm nhỏ trình xác thực sẽ chịu trách nhiệm cho từng phân mảnh riêng lẻ thay vì theo dõi toàn bộ Ethereum. Phân mảnh đã nằm trên [lộ trình](/roadmap/) Ethereum trong một thời gian dài, và từng được dự định sẽ ra mắt trước The Merge sang Bằng chứng cổ phần (PoS). Tuy nhiên, sự phát triển nhanh chóng của [các bản cuộn lớp 2 (l2)](#layer-2-scaling) và việc phát minh ra [danksharding](/roadmap/danksharding) (thêm các blob dữ liệu Rollup vào các khối Ethereum có thể được xác minh rất hiệu quả bởi các trình xác thực) đã khiến cộng đồng Ethereum ưu tiên việc mở rộng quy mô tập trung vào Rollup thay vì mở rộng quy mô bằng phân mảnh. Điều này cũng sẽ giúp giữ cho logic đồng thuận của Ethereum đơn giản hơn.
 
-## Thay đổi quy mô ngoài chuỗi {#offchain-scaling}
+## Mở rộng quy mô ngoài chuỗi {#offchain-scaling}
 
-Giải pháp ngoại chuỗi được triển khai tách biệt với Mainnet layer 1 - chúng không yêu cầu thay đổi nào đối với giao thức Ethereum hiện tại. Một số giải pháp, được gọi là giải pháp "lớp 2", có được tính bảo mật trực tiếp từ sự đồng thuận của Ethereum lớp 1, chẳng hạn như [gộp giao dịch lạc quan](/developers/docs/scaling/optimistic-rollups/), [Rollup không kiến thức](/developers/docs/scaling/zk-rollups/) hoặc [kênh trạng thái](/developers/docs/scaling/state-channels/). Các giải pháp khác liên quan đến việc tạo ra các chuỗi mới dưới nhiều hình thức khác nhau có được tính bảo mật riêng biệt với Mainnet, chẳng hạn như [chuỗi bên](#sidechains), [validium](#validium) hoặc [chuỗi plasma](#plasma). Các giải pháp này giao tiếp với Mainnet nhưng thu được an ninh theo cách khác nhau để đạt được nhiều mục tiêu.
+Các giải pháp ngoài chuỗi được triển khai tách biệt với Mạng chính lớp 1 (l1) - chúng không yêu cầu thay đổi đối với Giao thức Ethereum hiện tại. Một số giải pháp, được gọi là các giải pháp "lớp 2 (l2)", lấy tính bảo mật trực tiếp từ sự đồng thuận Ethereum lớp 1 (l1), chẳng hạn như [các bản cuộn optimistic](/developers/docs/scaling/optimistic-rollups/), [các bản cuộn không tri thức](/developers/docs/scaling/zk-rollups/) hoặc [kênh trạng thái](/developers/docs/scaling/state-channels/). Các giải pháp khác liên quan đến việc tạo ra các Chuỗi mới dưới nhiều hình thức khác nhau lấy tính bảo mật tách biệt với Mạng chính, chẳng hạn như [chuỗi phụ](#sidechains), [Validium](#validium), hoặc [chuỗi Plasma](#plasma). Các giải pháp này giao tiếp với Mạng chính nhưng lấy tính bảo mật theo những cách khác nhau để đạt được nhiều mục tiêu.
 
-### Thay đổi quy mô lớp 2 {#layer-2-scaling}
+### Mở rộng quy mô lớp 2 (l2) {#layer-2-scaling}
 
-Danh mục giải pháp offchain này có được sự bảo mật từ mạng chính Ethereum.
+Danh mục các giải pháp ngoài chuỗi này lấy tính bảo mật từ Mạng chính Ethereum.
 
-Lớp 2 là thuật ngữ tổng hợp chỉ các giải pháp được thiết kế nhằm giúp mở rộng ứng dụng của bạn bằng cách xử lý giao dịch ngoài mạng chính Ethereum (lớp 1) trong khi tận dụng mô hình bảo mật phi tập trung mạnh mẽ của mạng chính. Tốc độ giao dịch bị ảnh hưởng khi mạng bận, khiến trải nghiệm người dùng trở nên kém cho một số loại dapps. Và khi mạng lưới trở nên bận rộn hơn, giá gas sẽ tăng lên khi những người gửi giao dịch nỗ lực để đưa ra giá đấu thầu cao hơn nhau. Điều này có thể khiến việc sử dụng Ethereum trở nên rất tốn kém.
+Lớp 2 (l2) là một thuật ngữ chung cho các giải pháp được thiết kế để giúp mở rộng quy mô ứng dụng của bạn bằng cách xử lý các giao dịch bên ngoài Mạng chính Ethereum (lớp 1 (l1)) trong khi tận dụng mô hình bảo mật phi tập trung mạnh mẽ của Mạng chính. Tốc độ giao dịch bị ảnh hưởng khi mạng lưới bận rộn, làm cho trải nghiệm người dùng trở nên kém đối với một số loại ứng dụng phi tập trung (dapp). Và khi mạng lưới trở nên bận rộn hơn, giá Gas tăng lên do những người gửi giao dịch cố gắng trả giá cao hơn nhau. Điều này có thể làm cho việc sử dụng Ethereum trở nên rất đắt đỏ.
 
-Hầu hết các giải pháp lớp 2 đều tập trung vào một máy chủ hoặc một cụm máy chủ, mỗi máy chủ có thể được gọi là nút, trình xác thực, nhà điều hành, trình tuần tự, nhà sản xuất khối, hoặc thuật ngữ tương tự. Tùy thuộc vào việc triển khai, các nút lớp 2 này có thể được vận hành bởi các cá nhân, doanh nghiệp hoặc tổ chức sử dụng chúng, hoặc bởi một nhà điều hành bên thứ ba, hoặc bởi một nhóm lớn các cá nhân (tương tự như Mainnet). Nói chung, các giao dịch được gửi đến các nút layer 2 này thay vì được gửi trực tiếp đến layer 1 (Mainnet). Đối với một số giải pháp, thực thể layer 2 sẽ kết hợp chúng thành các nhóm trước khi gán chúng vào layer 1, sau đó chúng được bảo mật bởi layer 1 và không thể bị thay đổi. Chi tiết về cách thức thực hiện điều này khác nhau đáng kể giữa các công nghệ và triển khai lớp 2 khác nhau.
+Hầu hết các giải pháp lớp 2 (l2) đều tập trung xung quanh một máy chủ hoặc cụm máy chủ, mỗi máy chủ có thể được gọi là một nút, trình xác thực, nhà điều hành, bộ sắp xếp, nhà sản xuất khối, hoặc thuật ngữ tương tự. Tùy thuộc vào việc triển khai, các nút lớp 2 (l2) này có thể được điều hành bởi các cá nhân, doanh nghiệp hoặc tổ chức sử dụng chúng, hoặc bởi một nhà điều hành bên thứ 3, hoặc bởi một nhóm lớn các cá nhân (tương tự như Mạng chính). Nói chung, các giao dịch được gửi đến các nút lớp 2 (l2) này thay vì được gửi trực tiếp đến lớp 1 (l1) (Mạng chính). Đối với một số giải pháp, phiên bản lớp 2 (l2) sau đó sẽ gom chúng thành các nhóm trước khi neo chúng vào lớp 1 (l1), sau đó chúng được bảo mật bởi lớp 1 (l1) và không thể bị thay đổi. Chi tiết về cách thực hiện điều này khác nhau đáng kể giữa các công nghệ và triển khai lớp 2 (l2) khác nhau.
 
-Một trường hợp cụ thể của Layer 2 có thể được thiết kế để mở và chia sẻ cho nhiều ứng dụng khác nhau sử dụng chung, hoặc có thể được triển khai bởi một dự án cụ thể và chỉ phục vụ riêng cho ứng dụng của dự án đó.
+Một phiên bản lớp 2 (l2) cụ thể có thể mở và được chia sẻ bởi nhiều ứng dụng, hoặc có thể được triển khai bởi một dự án và dành riêng để chỉ hỗ trợ ứng dụng của họ.
 
-#### Tại sao Layer 2 lại cần thiết? {#why-is-layer-2-needed}
+#### Tại sao cần lớp 2 (l2)? {#why-is-layer-2-needed}
 
-- Số giao dịch mỗi giây tăng lên rất nhiều cải thiện trải nghiệm người dùng và giảm tắc nghẽn mạng trên Mainnet Ethereum.
-- Các giao dịch được tổng hợp thành một giao dịch duy nhất trên Mainnet Ethereum, giảm phí gas cho người dùng và làm cho Ethereum trở nên toàn diện và dễ tiếp cận hơn với mọi người ở khắp nơi.
-- Mọi cập nhật về khả năng mở rộng không nên được thực hiện với cái giá phải trả cho sự phân cấp hoặc an ninh – layer 2 được xây dựng trên nền tảng Ethereum.
-- Có những mạng layer 2 cụ thể cho ứng dụng mang lại bộ hiệu quả riêng khi làm việc với tài sản quy mô lớn.
+- Việc tăng số lượng giao dịch mỗi giây cải thiện đáng kể trải nghiệm người dùng và giảm tắc nghẽn mạng lưới trên Mạng chính Ethereum.
+- Các giao dịch được cuộn lại thành một giao dịch duy nhất lên Mạng chính Ethereum, giảm phí Gas cho người dùng và làm cho Ethereum trở nên toàn diện và dễ tiếp cận hơn đối với mọi người ở khắp mọi nơi.
+- Bất kỳ bản cập nhật nào về khả năng mở rộng đều không được đánh đổi bằng sự phi tập trung hoặc tính bảo mật – lớp 2 (l2) được xây dựng trên nền tảng của Ethereum.
+- Có các mạng lưới lớp 2 (l2) dành riêng cho ứng dụng mang lại những hiệu quả riêng khi làm việc với các tài sản ở quy mô lớn.
 
-[Thêm về lớp 2](/layer-2/).
+[Tìm hiểu thêm về lớp 2 (l2)](/layer-2/).
 
-#### Rollup {#rollups}
+#### Bản cuộn {#rollups}
 
-Rollups thực hiện việc thực thi giao dịch ngoài layer 1 và sau đó dữ liệu được đăng lên layer 1 nơi đạt được sự đồng thuận. Khi dữ liệu giao dịch được bao gồm trong các khối layer 1, điều này cho phép các rollup được bảo vệ bởi tính bảo mật gốc của Ethereum.
+Các bản cuộn thực hiện việc thực thi giao dịch bên ngoài lớp 1 (l1) và sau đó dữ liệu được đăng lên lớp 1 (l1) nơi đạt được sự đồng thuận. Vì dữ liệu giao dịch được bao gồm trong các khối lớp 1 (l1), điều này cho phép các bản cuộn được bảo mật bằng tính bảo mật gốc của Ethereum.
 
-Có hai loại rollup với các mô hình bảo mật khác nhau:
+Có hai loại bản cuộn với các mô hình bảo mật khác nhau:
 
-- **Gộp giao dịch lạc quan**: giả định rằng các giao dịch là hợp lệ theo mặc định và chỉ chạy tính toán, thông qua [**bằng chứng gian lận**](/glossary/#fraud-proof), trong trường hợp có thách thức. [Thêm về gộp giao dịch lạc quan](/developers/docs/scaling/optimistic-rollups/).
-- **Rollup không kiến thức**: chạy tính toán ngoài chuỗi và gửi [**bằng chứng hợp lệ**](/glossary/#validity-proof) cho chuỗi. [Thêm về Rollup không kiến thức](/developers/docs/scaling/zk-rollups/).
+- **Bản cuộn Optimistic**: giả định các giao dịch là hợp lệ theo mặc định và chỉ chạy tính toán, thông qua một [**bằng chứng gian lận**](/glossary/#fraud-proof), trong trường hợp có tranh chấp. [Tìm hiểu thêm về bản cuộn Optimistic](/developers/docs/scaling/optimistic-rollups/).
+- **Bản cuộn không tri thức**: chạy tính toán ngoài chuỗi và gửi một [**bằng chứng tính hợp lệ**](/glossary/#validity-proof) lên Chuỗi. [Tìm hiểu thêm về bản cuộn không tri thức](/developers/docs/scaling/zk-rollups/).
 
 #### Kênh trạng thái {#channels}
 
-Các kênh nhà nước sử dụng hợp đồng đa chữ ký để cho phép các bên tham gia giao dịch nhanh chóng và tự do ngoài chuỗi, sau đó thanh toán cuối cùng với mạng chính. Điều này giảm thiểu tắc nghẽn mạng, phí tổn và thời gian trễ. Hai loại kênh này hiện tại là kênh nhà nước và kênh thanh toán.
+Kênh trạng thái sử dụng các hợp đồng đa chữ ký để cho phép những người tham gia giao dịch nhanh chóng và tự do ngoài chuỗi, sau đó giải quyết tính chung cuộc với Mạng chính. Điều này giảm thiểu tắc nghẽn mạng lưới, phí và sự chậm trễ. Hai loại kênh hiện tại là kênh trạng thái và kênh thanh toán.
 
 Tìm hiểu thêm về [kênh trạng thái](/developers/docs/scaling/state-channels/).
 
-### Chuỗi bên {#sidechains}
+### Chuỗi phụ {#sidechains}
 
-Một sidechain là một blockchain độc lập tương thích với EVM chạy song song với Mainnet. Những cái này tương thích với Ethereum thông qua các cầu hai chiều và hoạt động theo các quy tắc đồng thuận và tham số khối mà họ đã chọn.
+Chuỗi phụ là một Chuỗi khối độc lập tương thích với EVM chạy song song với Mạng chính. Chúng tương thích với Ethereum thông qua các cầu nối hai chiều và chạy theo các quy tắc đồng thuận và tham số khối do chính chúng chọn.
 
-Tìm hiểu thêm về [Chuỗi bên](/developers/docs/scaling/sidechains/).
+Tìm hiểu thêm về [Chuỗi phụ](/developers/docs/scaling/sidechains/).
 
 ### Plasma {#plasma}
 
-Chuỗi plasma là một chuỗi khối riêng biệt được neo vào chuỗi Ethereum chính và sử dụng bằng chứng gian lận (như [gộp giao dịch lạc quan](/developers/docs/scaling/optimistic-rollups/)) để phân xử các tranh chấp.
+Chuỗi Plasma là một Chuỗi khối riêng biệt được neo vào Chuỗi Ethereum chính và sử dụng bằng chứng gian lận (giống như [các bản cuộn optimistic](/developers/docs/scaling/optimistic-rollups/)) để phân xử các tranh chấp.
 
 Tìm hiểu thêm về [Plasma](/developers/docs/scaling/plasma/).
 
 ### Validium {#validium}
 
-Một chuỗi Validium sử dụng chứng minh tính hợp lệ giống như các rollup không biết nhưng dữ liệu không được lưu trữ trên chuỗi Ethereum lớp 1 chính. Điều này có thể dẫn đến 10.000 giao dịch mỗi giây cho mỗi chuỗi Validium và có thể chạy nhiều chuỗi song song.
+Chuỗi Validium sử dụng bằng chứng tính hợp lệ giống như các bản cuộn không tri thức nhưng dữ liệu không được lưu trữ trên Chuỗi Ethereum lớp 1 (l1) chính. Điều này có thể dẫn đến 10 nghìn giao dịch mỗi giây trên mỗi chuỗi Validium và nhiều Chuỗi có thể được chạy song song.
 
 Tìm hiểu thêm về [Validium](/developers/docs/scaling/validium/).
 
-## Tại sao cần nhiều giải pháp mở rộng đến vậy? {#why-do-we-need-these}
+## Tại sao cần quá nhiều giải pháp mở rộng quy mô? {#why-do-we-need-these}
 
-- Nhiều giải pháp có thể giúp giảm tình trạng tắc nghẽn tổng thể ở bất kỳ phần nào của mạng và cũng ngăn chặn các điểm thất bại đơn lẻ.
-- Toàn thể lớn hơn tổng của các phần của nó. Các giải pháp khác nhau có thể tồn tại và hoạt động hài hòa, cho phép tạo ra hiệu ứng bùng nổ đối với tốc độ giao dịch và lưu lượng trong tương lai.
-- Không phải tất cả các giải pháp đều yêu cầu sử dụng trực tiếp thuật toán đồng thuận Ethereum, và các phương án thay thế có thể mang lại những lợi ích mà nếu không có sẽ khó có được.
+- Nhiều giải pháp có thể giúp giảm tắc nghẽn tổng thể trên bất kỳ phần nào của mạng lưới và cũng ngăn chặn các điểm lỗi duy nhất.
+- Tổng thể lớn hơn tổng các phần của nó. Các giải pháp khác nhau có thể tồn tại và hoạt động hài hòa, cho phép tạo ra hiệu ứng cấp số nhân đối với tốc độ và thông lượng giao dịch trong tương lai.
+- Không phải tất cả các giải pháp đều yêu cầu sử dụng trực tiếp thuật toán đồng thuận Ethereum, và các giải pháp thay thế có thể mang lại những lợi ích mà nếu không thì sẽ khó đạt được.
 
-## Tìm hiểu thêm từ video trực quan? Người học qua hình ảnh {#visual-learner}
+## Bạn thích học qua hình ảnh hơn? {#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+<VideoWatch slug="layer-2-scaling-explained" />
 
-_Lưu ý rằng lời giải thích trong video sử dụng thuật ngữ "Layer 2" để chỉ tất cả các giải pháp mở rộng ngoài chuỗi, trong khi chúng tôi phân biệt "Layer 2" như một giải pháp ngoài chuỗi mà có được độ an toàn thông qua sự đồng thuận của Mainnet lớp 1._
+_Lưu ý rằng lời giải thích trong video sử dụng thuật ngữ "Lớp 2" để chỉ tất cả các giải pháp mở rộng quy mô ngoài chuỗi, trong khi chúng tôi phân biệt "Lớp 2 (l2)" là một giải pháp ngoài chuỗi lấy tính bảo mật thông qua sự đồng thuận của Mạng chính lớp 1 (l1)._
 
-<YouTube id="7pWxCklcNsU" />
+<VideoWatch slug="rollups-scaling-strategy" />
 
 ## Đọc thêm {#further-reading}
 
-- [Lộ trình Ethereum lấy rollup làm trung tâm](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
-- [Phân tích cập nhật về các giải pháp thay đổi quy mô Lớp 2 cho Ethereum](https://www.l2beat.com/)
-- [Đánh giá các Giải pháp Thay đổi quy mô lớp 2 của Ethereum: Khung so sánh](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Hướng dẫn chưa đầy đủ về Rollup](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
-- [ZK-Rollup được Ethereum hỗ trợ: Dẫn đầu thế giới](https://hackmd.io/@canti/rkUT0BD8K)
-- [Gộp giao dịch lạc quan và ZK Rollup](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Tại sao rollup + phân đoạn dữ liệu là giải pháp bền vững duy nhất cho khả năng mở rộng cao](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [Lộ trình Ethereum tập trung vào Rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
+- [Phân tích cập nhật về các giải pháp mở rộng quy mô Lớp 2 cho Ethereum](https://www.l2beat.com/)
+- [Đánh giá các giải pháp mở rộng quy mô lớp 2 của Ethereum: Một khuôn khổ so sánh](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Hướng dẫn chưa hoàn chỉnh về các bản cuộn](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
+- [ZK-Rollups được hỗ trợ bởi Ethereum: Những người dẫn đầu thế giới](https://hackmd.io/@canti/rkUT0BD8K)
+- [Bản cuộn Optimistic so với Bản cuộn ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
+- [Tại sao các bản cuộn + phân mảnh dữ liệu là giải pháp bền vững duy nhất cho khả năng mở rộng cao](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Loại Lớp 3 nào là hợp lý?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
-- [Tính sẵn sàng của dữ liệu hoặc: Các rollup đã học cách ngừng lo lắng và yêu Ethereum như thế nào](https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
-- [Hướng dẫn thực tế về Rollup của Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Tính khả dụng của dữ liệu hay: Cách các bản cuộn học cách ngừng lo lắng và yêu Ethereum](https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
+- [Hướng dẫn thực tế về các bản cuộn Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 
-_Biết về nguồn lực cộng đồng đã giúp đỡ bạn? Chỉnh sửa trang này và bổ sung!_
+_Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho bạn? Hãy chỉnh sửa trang này và thêm nó vào!_
+
+## Hướng dẫn: Xây dựng Lớp 2 (l2) có thể mở rộng trên Ethereum {#tutorials}
+
+- [Tất cả những gì bạn có thể lưu trữ đệm](/developers/tutorials/all-you-can-cache/) _– Cách xây dựng và sử dụng hợp đồng lưu trữ đệm để giảm chi phí dữ liệu lệnh gọi trên các bản cuộn._
+- [ABI ngắn để tối ưu hóa dữ liệu lệnh gọi](/developers/tutorials/short-abi/) _– Cách sử dụng các ABI ngắn hơn để giảm chi phí dữ liệu lệnh gọi cho các giao dịch lớp 2 (l2)._

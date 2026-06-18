@@ -1,47 +1,47 @@
 ---
-title: "Đa máy khách"
-description: "Giải thích chuyên sâu về tầm quan trọng của đa máy khách trên Ethereum."
+title: Sự đa dạng máy khách
+description: Giải thích tổng quan về tầm quan trọng của sự đa dạng máy khách Ethereum.
 lang: vi
 sidebarDepth: 2
 ---
 
-Hành vi của một node Ethereum được kiểm soát bởi phần mềm máy khách mà nó chạy. Có một số máy khách Ethereum cấp độ sản xuất đang tồn tại, mỗi loại được phát triển và duy trì bằng những ngôn ngữ khác nhau bởi những đội ngũ riêng biệt. Máy khách được xây dựng đến một thông số kỹ thuật cụ thể để đảm bảo chúng tương tác liền mạch với nhau và có cùng chức năng cũng như cung cấp trải nghiệm người dùng cân xứng. Tuy nhiên, hiện nay, việc phân phối máy khách trên các node không đủ đồng đều để phát huy hết tiềm năng của việc củng cố mạng. Lí tưởng nhất, người dùng được phân chia đồng đều để sử dụng các máy khách khác nhau với mục đích làm đa dạng máy khách nhất có thể.
+Hành vi của một nút [Ethereum](/) được kiểm soát bởi phần mềm máy khách mà nó chạy. Có một số máy khách Ethereum cấp độ sản xuất, mỗi máy khách được phát triển và duy trì bằng các ngôn ngữ khác nhau bởi các nhóm riêng biệt. Các máy khách được xây dựng theo một thông số kỹ thuật chung để đảm bảo chúng giao tiếp liền mạch với nhau, có cùng chức năng và cung cấp trải nghiệm người dùng tương đương. Tuy nhiên, hiện tại sự phân bổ của các máy khách trên các nút chưa đủ đồng đều để nhận ra tiềm năng củng cố mạng lưới này một cách tối đa. Lý tưởng nhất là người dùng phân chia tương đối đồng đều trên các máy khách khác nhau để mang lại sự đa dạng máy khách lớn nhất có thể cho mạng lưới.
 
 ## Điều kiện tiên quyết {#prerequisites}
 
-Nếu bạn chưa hiểu nút và máy khách là gì, hãy xem [nút và máy khách](/developers/docs/nodes-and-clients/). [Lớp thực thi](/glossary/#execution-layer) và [lớp đồng thuận](/glossary/#consensus-layer) được định nghĩa trong bảng thuật ngữ.
+Nếu bạn chưa hiểu nút và máy khách là gì, hãy xem [nút và máy khách](/developers/docs/nodes-and-clients/). Lớp [thực thi](/glossary/#execution-layer) và lớp [đồng thuận](/glossary/#consensus-layer) được định nghĩa trong thuật ngữ.
 
-## Tại sao nên có nhiều loại máy khách? {#why-multiple-clients}
+## Tại sao lại có nhiều máy khách? {#why-multiple-clients}
 
-Nhiều máy khách được phát triển và duy trì độc lập tồn tại vì tính đa dạng của máy khách giúp mạng trở nên linh hoạt hơn trước lỗi hệ thống và các cuộc tấn công. Đa máy khách là thế mạnh độc nhất của Ethereum - các blockchain khác phải đánh cược rằng một máy khách duy nhất sẽ không sụp đổ. Tuy nhiên, việc có sẵn nhiều máy khách là chưa đủ, chúng phải được cộng đồng chấp nhận và tổng số nút đang hoạt động phải được phân bổ tương đối đồng đều giữa chúng.
+Nhiều máy khách được phát triển và duy trì độc lập tồn tại vì sự đa dạng máy khách làm cho mạng lưới có khả năng chống chịu tốt hơn trước các cuộc tấn công và lỗi. Nhiều máy khách là một thế mạnh độc nhất của Ethereum - các blockchain khác dựa vào sự không thể sai lầm của một máy khách duy nhất. Tuy nhiên, chỉ có sẵn nhiều máy khách là chưa đủ, chúng phải được cộng đồng áp dụng và tổng số nút hoạt động phải được phân bổ tương đối đồng đều giữa chúng.
 
-## Tại sao đa máy khách quan trọng? {#client-diversity-importance}
+## Tại sao sự đa dạng máy khách lại quan trọng? {#client-diversity-importance}
 
-Có nhiều loại máy khách được phát triển và duy trì độc lập là rất quan trọng đối với sức khỏe của mạng phi tập trung. Hãy cùng tìm hiểu lí do vì sao.
+Việc có nhiều máy khách được phát triển và duy trì độc lập là rất quan trọng đối với sức khỏe của một mạng lưới phi tập trung. Hãy cùng khám phá những lý do tại sao.
 
 ### Lỗi {#bugs}
 
-Một lỗi trong một loại máy khách riêng lẻ sẽ gây ít rủi ro đến mạng lưới hơn khi chỉ đại diện một số ít nodes Ethereum. Với sự phân bố gần như đồng đều của các nodes trên nhiều loại máy khách, khả năng hầu hết các máy khách gặp phải sự cố chung là nhỏ và kết quả là mạng sẽ mạnh mẽ hơn.
+Một lỗi trong một máy khách riêng lẻ sẽ ít gây rủi ro hơn cho mạng lưới khi nó đại diện cho một thiểu số các nút Ethereum. Với sự phân bổ tương đối đồng đều của các nút trên nhiều máy khách, khả năng hầu hết các máy khách gặp phải một vấn đề chung là rất nhỏ, và kết quả là mạng lưới trở nên mạnh mẽ hơn.
 
-### Khả năng chống lại các cuộc tấn công {#resilience}
+### Khả năng chống chịu các cuộc tấn công {#resilience}
 
-Sự đa dạng của máy khách cũng giúp chống lại các cuộc tấn công. Ví dụ: một cuộc tấn công [lừa một máy khách cụ thể](https://twitter.com/vdWijden/status/1437712249926393858) vào một nhánh cụ thể của chuỗi khó có thể thành công vì các máy khách khác khó có thể bị khai thác theo cùng một cách và chuỗi chính tắc vẫn không bị tổn hại. Sự đa dạng máy khách thấp làm tăng rủi ro liên quan đến các vụ hack trên máy khách chiếm ưu thế. Tính đa dạng của máy khách đã được chứng minh là một biện pháp phòng thủ quan trọng chống lại các cuộc tấn công độc hại trên mạng. Ví dụ, cuộc tấn công từ chối dịch vụ Thượng Hải năm 2016 có thể xảy ra vì những kẻ tấn công đã có thể lừa máy khách chiếm ưu thế (Geth) thực hiện một thao tác I/O đĩa chậm hàng chục nghìn lần mỗi khối. Vì các máy khách thay thế đang trực tuyến không gặp phải lỗ hổng tương tự, Ethereum đã có thể chống lại cuộc tấn công và tiếp tục hoạt động trong khi lỗ hổng tại Geth đã được khắc phục.
+Sự đa dạng máy khách cũng mang lại khả năng chống chịu các cuộc tấn công. Ví dụ, một cuộc tấn công [đánh lừa một máy khách cụ thể](https://twitter.com/vdWijden/status/1437712249926393858) vào một nhánh cụ thể của chuỗi khó có khả năng thành công vì các máy khách khác khó có thể bị khai thác theo cùng một cách và chuỗi chính tắc vẫn không bị hỏng. Sự đa dạng máy khách thấp làm tăng rủi ro liên quan đến một vụ hack trên máy khách thống trị. Sự đa dạng máy khách đã được chứng minh là một hàng phòng thủ quan trọng chống lại các cuộc tấn công độc hại trên mạng lưới, ví dụ như cuộc tấn công từ chối dịch vụ Thượng Hải vào năm 2016 có thể xảy ra vì những kẻ tấn công đã có thể lừa máy khách thống trị (Geth) thực hiện một thao tác i/o đĩa chậm hàng chục nghìn lần mỗi khối. Bởi vì các máy khách thay thế không có chung lỗ hổng cũng đang trực tuyến, Ethereum đã có thể chống lại cuộc tấn công và tiếp tục hoạt động trong khi lỗ hổng trong Geth được khắc phục.
 
-### Tính hoàn tất của bằng chứng cổ phần {#finality}
+### Tính chung cuộc của Bằng chứng cổ phần (PoS) {#finality}
 
-Một lỗi trong phần mềm Client đồng thuận mà hơn 33% nút xác thực của Ethereum có thể ngăn chặn lớp đồng thuận chốt kết quả, nghĩa là người dùng có thể không tin tưởng rằng các giao dịch sẽ không thể bị đảo ngược thay thay đổi vào một thời điểm nào đó. Điều này sẽ rất rắc rối với nhiều ứng dụng được xây dựng trên Ethereum, đặc biệt là DeFi.
+Một lỗi trong một ứng dụng khách đồng thuận chiếm hơn 33% số nút Ethereum có thể ngăn lớp đồng thuận đạt được tính chung cuộc, nghĩa là người dùng không thể tin tưởng rằng các giao dịch sẽ không bị hoàn tác hoặc thay đổi vào một thời điểm nào đó. Điều này sẽ rất rắc rối đối với nhiều ứng dụng được xây dựng trên Ethereum, đặc biệt là tài chính phi tập trung (DeFi).
 
-<Emoji text="🚨" className="me-4" /> Tệ hơn nữa, một lỗi nghiêm trọng trong một máy khách chiếm đa số hai phần ba có thể khiến chuỗi <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">bị phân tách và hoàn tất không chính xác</a>, dẫn đến một nhóm lớn các trình xác thực bị kẹt trên một chuỗi không hợp lệ. Nếu họ muốn quay trở lại chuỗi hợp lệ, những người xác thực này sẽ phải đối mặt với slashing hoặc việc rút tiền tự nguyện và khởi động lại chậm chạp tốn kém. Mức độ của một lần slashing tăng lên theo số lượng nodes mắc lỗi với 2/3 đa số bị cắt giảm tối đa (32 ETH).
+<Emoji text="🚨" className="me-4" /> Tệ hơn nữa, một lỗi nghiêm trọng trong một máy khách chiếm đa số hai phần ba có thể khiến chuỗi <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">bị chia tách và đạt tính chung cuộc một cách không chính xác</a>, dẫn đến một tập hợp lớn các trình xác thực bị mắc kẹt trên một chuỗi không hợp lệ. Nếu muốn tham gia lại chuỗi chính xác, các trình xác thực này phải đối mặt với việc bị phạt cắt giảm hoặc một quá trình rút tiền tự nguyện và kích hoạt lại chậm chạp và tốn kém. Mức độ của một khoản phạt cắt giảm tỷ lệ thuận với số lượng các nút có lỗi, với đa số hai phần ba bị phạt cắt giảm tối đa (32 ETH).
 
-Mặc dù đây là những tình huống khó xảy ra, nhưng hệ sinh thái Ethereum có thể giảm thiểu rủi ro bằng cách cân bằng việc phân phối máy khách trên các nodes đang hoạt động. Lý tưởng nhất là không có máy khách đồng thuận nào đạt được 33% thị phần trong tổng số nodes.
+Mặc dù đây là những kịch bản khó xảy ra, hệ sinh thái Ethereum có thể giảm thiểu rủi ro của chúng bằng cách san bằng sự phân bổ của các máy khách trên các nút hoạt động. Lý tưởng nhất là không có ứng dụng khách đồng thuận nào đạt tới 33% thị phần của tổng số nút.
 
 ### Trách nhiệm chung {#responsibility}
 
-Chi phí con người cũng xảy ra khi sở hữu đa số máy khách. Nó đặt quá nhiều căng thẳng và trách nhiệm lên một đội ngũ phát triển nhỏ. Sự đa dạng của máy khách càng ít thì gánh nặng trách nhiệm đối với các nhà phát triển duy trì đa số máy khách càng lớn. Phân bổ trách nhiệm này cho nhiều nhóm sẽ tốt cho cả sức khỏe của mạng lưới các nodes của Ethereum và cả mạng lưới con người.
+Cũng có một cái giá phải trả về mặt con người khi có các máy khách chiếm đa số. Nó đặt áp lực và trách nhiệm quá mức lên một nhóm phát triển nhỏ. Sự đa dạng máy khách càng ít, gánh nặng trách nhiệm đối với các nhà phát triển duy trì máy khách chiếm đa số càng lớn. Việc phân bổ trách nhiệm này cho nhiều nhóm là tốt cho cả sức khỏe của mạng lưới các nút của Ethereum và mạng lưới con người của nó.
 
-## Tính đa dạng của máy khách hiện tại {#current-client-diversity}
+## Sự đa dạng máy khách hiện tại {#current-client-diversity}
 
-### Các máy khách thực thi {#execution-clients-breakdown}
+### Máy khách thực thi {#execution-clients-breakdown}
 
 <PieChart
 data={[
@@ -53,7 +53,7 @@ data={[
 ]}
 />
 
-### Các máy khách đồng thuận {#consensus-clients-breakdown}
+### Ứng dụng khách đồng thuận {#consensus-clients-breakdown}
 
 <PieChart
 data={[
@@ -63,27 +63,27 @@ data={[
 { name: "Nimbus", value: 8.74},
 { name: "Lodestar", value: 2.67 },
 { name: "Grandine", value: 1.04 },
-{ name: "Khác", value: 0.07 }
+{ name: "Other", value: 0.07 }
 ]}
 />
 
-Sơ đồ này có thể đã lỗi thời — truy cập [ethernodes.org](https://ethernodes.org) và [clientdiversity.org](https://clientdiversity.org) để có thông tin mới nhất.
+Biểu đồ này có thể đã lỗi thời — hãy truy cập [ethernodes.org](https://ethernodes.org) và [clientdiversity.org](https://clientdiversity.org) để biết thông tin cập nhật.
 
-Hai biểu đồ hình tròn ở trên hiển thị ảnh chụp nhanh về tính đa dạng của máy khách hiện tại cho lớp thực thi và lớp đồng thuận (tại thời điểm viết vào tháng 10 năm 2025). Tính đa dạng của máy khách đã được cải thiện trong những năm qua, và lớp thực thi đã chứng kiến sự sụt giảm trong sự thống trị của [Geth](https://geth.ethereum.org/), theo sau là [Nethermind](https://www.nethermind.io/nethermind-client) ở vị trí thứ hai, [Besu](https://besu.hyperledger.org/) thứ ba và [Erigon](https://github.com/ledgerwatch/erigon) thứ tư, trong khi các máy khách khác chiếm dưới 3% mạng lưới. Máy khách được sử dụng phổ biến nhất trên lớp đồng thuận—[Lighthouse](https://lighthouse.sigmaprime.io/)—có thị phần khá gần với máy khách phổ biến thứ hai. [Prysm](https://prysmaticlabs.com/#projects) và [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) chiếm lần lượt khoảng 31% và 14%, và các máy khách khác hiếm khi được sử dụng.
+Hai biểu đồ tròn ở trên hiển thị ảnh chụp nhanh về sự đa dạng máy khách hiện tại cho lớp thực thi và lớp đồng thuận (tại thời điểm viết bài vào tháng 10 năm 2025). Sự đa dạng máy khách đã được cải thiện qua nhiều năm và lớp thực thi đã chứng kiến sự sụt giảm trong sự thống trị của [Geth](https://geth.ethereum.org/), với [Nethermind](https://www.nethermind.io/nethermind-client) bám sát ở vị trí thứ hai, [Besu](https://besu.hyperledger.org/) thứ ba và [Erigon](https://github.com/ledgerwatch/erigon) thứ tư, với các máy khách khác chiếm chưa đến 3% mạng lưới. Máy khách được sử dụng phổ biến nhất trên lớp đồng thuận—[Lighthouse](https://lighthouse.sigmaprime.io/)—khá sát với máy khách được sử dụng nhiều thứ hai. [Prysm](https://prysmaticlabs.com/#projects) và [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) lần lượt chiếm ~31% và ~14%, và các máy khách khác hiếm khi được sử dụng.
 
-Dữ liệu lớp thực thi được lấy từ [supermajority.info](https://supermajority.info/) vào ngày 26 tháng 10 năm 2025. Dữ liệu cho các máy khách đồng thuận được lấy từ [Michael Sproul](https://github.com/sigp/blockprint). Dữ liệu Client đồng thuận khó thu thập hơn, vì các Client đồng thuận không phải lúc nào cũng để lại dấu vết rõ ràng để dùng nhận diện chúng. Dữ liệu được tạo bằng một thuật toán phân loại mà đôi khi nhầm lẫn một số máy khách thiểu số (xem [tại đây](https://twitter.com/sproulM_/status/1440512518242197516) để biết thêm chi tiết). Trong sơ đồ trên, những phân loại không rõ ràng này được gán nhãn dạng hoặc/hoặc (ví dụ: Nimbus/Teku). Tuy nhiên, rõ ràng là phần lớn mạng đang vận hành Prysm. Mặc dù chỉ là snapshot, nhưng các giá trị từ sơ đồ cung cấp ý một cái nhìn chung về trạng thái đa dạng của máy khách hiện nay.
+Dữ liệu lớp thực thi được lấy từ [supermajority.info](https://supermajority.info/) vào ngày 26 tháng 10 năm 2025. Dữ liệu cho các ứng dụng khách đồng thuận được lấy từ [Michael Sproul](https://github.com/sigp/blockprint). Dữ liệu ứng dụng khách đồng thuận khó thu thập hơn vì các máy khách lớp đồng thuận không phải lúc nào cũng có các dấu vết rõ ràng có thể được sử dụng để xác định chúng. Dữ liệu được tạo ra bằng cách sử dụng một thuật toán phân loại đôi khi nhầm lẫn một số máy khách thiểu số (xem thêm chi tiết [tại đây](https://twitter.com/sproulM_/status/1440512518242197516)). Trong biểu đồ trên, các phân loại mơ hồ này được xử lý bằng nhãn hoặc/hoặc (ví dụ: Nimbus/Teku). Tuy nhiên, rõ ràng là phần lớn mạng lưới đang chạy Prysm. Mặc dù chỉ là những ảnh chụp nhanh, các giá trị trong biểu đồ cung cấp một cái nhìn tổng quan tốt về trạng thái hiện tại của sự đa dạng máy khách.
 
-Dữ liệu mới nhất về tính đa dạng của máy khách cho lớp đồng thuận hiện có tại [clientdiversity.org](https://clientdiversity.org/).
+Dữ liệu cập nhật về sự đa dạng máy khách cho lớp đồng thuận hiện có sẵn tại [clientdiversity.org](https://clientdiversity.org/).
 
 ## Lớp thực thi {#execution-layer}
 
-Cho đến nay, cuộc trò chuyện xung quanh sự đa dạng máy khách chủ yếu tập trung vào lớp đồng thuận. Tuy nhiên, máy khách thực thi [Geth](https://geth.ethereum.org) hiện chiếm khoảng 85% tổng số nút. Tỷ lệ này có vấn đề vì những lý do tương tự như đối máy khách đồng thuận. Ví dụ: một lỗi trong Geth ảnh hưởng đến việc xử lý giao dịch hoặc xây dựng tải trọng thực thi có thể dẫn đến việc máy khách đồng thuận hoàn thiện các giao dịch có vấn đề hoặc bị lỗi. Do đó, Ethereum sẽ lành mạnh hơn với sự phân phối máy khách thực thi đồng đều, lý tưởng nhất là không có máy khách nào chiếm hơn 33% mạng.
+Cho đến nay, cuộc trò chuyện xung quanh sự đa dạng máy khách chủ yếu tập trung vào lớp đồng thuận. Tuy nhiên, máy khách thực thi [Geth](https://geth.ethereum.org) hiện chiếm khoảng 85% tổng số nút. Tỷ lệ phần trăm này có vấn đề vì những lý do tương tự như đối với các ứng dụng khách đồng thuận. Ví dụ, một lỗi trong Geth ảnh hưởng đến việc xử lý giao dịch hoặc xây dựng các tải trọng thực thi có thể dẫn đến việc các ứng dụng khách đồng thuận đạt tính chung cuộc cho các giao dịch có vấn đề hoặc bị lỗi. Do đó, Ethereum sẽ khỏe mạnh hơn với sự phân bổ đồng đều hơn của các máy khách thực thi, lý tưởng nhất là không có máy khách nào chiếm hơn 33% mạng lưới.
 
-## Sử dụng máy khách thiểu số {#use-minority-client}
+## Sử dụng một máy khách thiểu số {#use-minority-client}
 
-Giải quyết vấn đề đa dạng Client không chỉ đòi hỏi người dùng cá nhận chọn Client ít phổ biến - mà còn cần nhóm nút xác thực hoặc tổ chức như dApp lớn cùng sàn giao dịch cũng đa dạng các Client. Tuy nhiên, tất cả người dùng có thể góp phần khắc phục sự mất cân bằng hiện tại và bình thường hóa việc sử dụng tất cả các phần mềm Ethereum có sẵn. Sau sự kiện hợp nhất, tất cả người vận hành node sẽ được yêu cầu chạy máy khách thực thi và máy khách đồng thuận. Chọn tổ hợp các máy khách được gợi ý bên dưới sẽ giúp gia tăng sự đa dạng máy khách.
+Việc giải quyết sự đa dạng máy khách đòi hỏi nhiều hơn là việc người dùng cá nhân chọn các máy khách thiểu số - nó cũng đòi hỏi các nhóm trình xác thực và các tổ chức như các ứng dụng phi tập trung (dapp) lớn và các sàn giao dịch phải chuyển đổi máy khách. Tuy nhiên, tất cả người dùng đều có thể đóng góp phần của mình trong việc khắc phục sự mất cân bằng hiện tại và bình thường hóa việc sử dụng tất cả các phần mềm Ethereum có sẵn. Sau The Merge, tất cả các nhà điều hành nút sẽ được yêu cầu chạy một máy khách thực thi và một ứng dụng khách đồng thuận. Việc chọn các kết hợp của các máy khách được đề xuất dưới đây sẽ giúp tăng cường sự đa dạng máy khách.
 
-### Các ứng dụng thực thi {#execution-clients}
+### Máy khách thực thi {#execution-clients}
 
 - [Besu](https://www.hyperledger.org/use/besu)
 - [Nethermind](https://downloads.nethermind.io/)
@@ -91,7 +91,7 @@ Giải quyết vấn đề đa dạng Client không chỉ đòi hỏi người d
 - [Go-Ethereum](https://geth.ethereum.org/)
 - [Reth](https://reth.rs/)
 
-### Các ứng dụng đồng thuận {#consensus-clients}
+### Ứng dụng khách đồng thuận {#consensus-clients}
 
 - [Nimbus](https://nimbus.team/)
 - [Lighthouse](https://github.com/sigp/lighthouse)
@@ -100,11 +100,11 @@ Giải quyết vấn đề đa dạng Client không chỉ đòi hỏi người d
 - [Prysm](https://prysm.offchainlabs.com/docs/)
 - [Grandine](https://docs.grandine.io/)
 
-Người dùng am hiểu kĩ thuật có thể giúp đẩy nhanh quá trình này bằng cách viết các hướng dẫn và tài liệu dành cho các máy khách thiểu số và khuyến khích các đồng nghiệp vận hành nút của họ di chuyển khỏi các máy khách chiếm ưu thế. Hướng dẫn chuyển sang một máy khách đồng thuận thiểu số có sẵn trên [clientdiversity.org](https://clientdiversity.org/).
+Người dùng kỹ thuật có thể giúp đẩy nhanh quá trình này bằng cách viết thêm các hướng dẫn và tài liệu cho các máy khách thiểu số và khuyến khích các đồng nghiệp điều hành nút của họ chuyển khỏi các máy khách thống trị. Các hướng dẫn để chuyển sang một ứng dụng khách đồng thuận thiểu số có sẵn trên [clientdiversity.org](https://clientdiversity.org/).
 
-## Bảng điều khiển tính đa dạng của máy khách {#client-diversity-dashboards}
+## Bảng điều khiển sự đa dạng máy khách {#client-diversity-dashboards}
 
-Một số bảng thông tin cung cấp số liệu thống kê về tính đa dạng của máy khách theo thời gian thực cho lớp thực thi và đồng thuận.
+Một số bảng điều khiển cung cấp số liệu thống kê về sự đa dạng máy khách theo thời gian thực cho lớp thực thi và lớp đồng thuận.
 
 **Lớp đồng thuận:**
 
@@ -118,15 +118,15 @@ Một số bảng thông tin cung cấp số liệu thống kê về tính đa d
 
 ## Đọc thêm {#further-reading}
 
-- [Tính đa dạng của máy khách trên lớp đồng thuận của Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
-- [Bản nâng cấp The Merge của Ethereum: Tự chịu rủi ro khi chạy máy khách đa số!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, ngày 24 tháng 3 năm 2022_
-- [Tầm quan trọng của tính đa dạng của máy khách](https://our.status.im/the-importance-of-client-diversity/)
+- [Sự đa dạng máy khách trên lớp đồng thuận của Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
+- [Ethereum Merge: Chạy máy khách chiếm đa số và tự chịu rủi ro!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, ngày 24 tháng 3 năm 2022_
+- [Tầm quan trọng của sự đa dạng máy khách](https://our.status.im/the-importance-of-client-diversity/)
 - [Danh sách các dịch vụ nút Ethereum](https://ethereumnodes.com/)
-- ["Five Whys" về vấn đề đa dạng máy khách](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
-- [Tính đa dạng của Ethereum và cách giải quyết (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
+- ["Năm câu hỏi tại sao" của vấn đề đa dạng máy khách](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
+- [Sự đa dạng của Ethereum và cách giải quyết (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
-## Các chủ đề liên quan {#related-topics}
+## Chủ đề liên quan {#related-topics}
 
 - [Chạy một nút Ethereum](/run-a-node/)
-- [Các nút và client](/developers/docs/nodes-and-clients/)
+- [Nút và máy khách](/developers/docs/nodes-and-clients/)
