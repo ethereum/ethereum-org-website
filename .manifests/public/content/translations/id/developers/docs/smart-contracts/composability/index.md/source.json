@@ -1,0 +1,470 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/smart-contracts/composability/index.md",
+  "generatedAt": "2026-06-17T22:51:17.628Z",
+  "rootHash": "59ad22d4fa1f",
+  "tree": {
+    "contentHash": "39e81d0d2913",
+    "anchorHash": "fa9d1ea2a7a5",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "190cdd12dad1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "729a4ca8d5a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:incomplete": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "a-brief-introduction": {
+        "contentHash": "53d037a4e12f",
+        "anchorHash": "451c828bb350",
+        "labelHash": "2342daf94777",
+        "children": {
+          "_label": {
+            "contentHash": "2342daf94777",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "034e6afbcde5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a14e93e8f764",
+            "anchorHash": "6a7da7379bd8"
+          },
+          "prose:4": {
+            "contentHash": "b30748dfa49e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "fb04dcb6970e",
+            "anchorHash": "c0e6b6a95f15"
+          },
+          "prose:5": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "e0d2747b9ab7",
+            "anchorHash": "b9c5010dbc65"
+          },
+          "prose:6": {
+            "contentHash": "203fe55e82c0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "what-is-composability": {
+        "contentHash": "7a911be7607c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "96cbb9a10c2c",
+        "children": {
+          "_label": {
+            "contentHash": "96cbb9a10c2c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fc376570163d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-does-composability-work": {
+        "contentHash": "352495ef52a3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "33416fc7a923",
+        "children": {
+          "_label": {
+            "contentHash": "33416fc7a923",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "00f1e8ac171a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "benefits-of-composability": {
+        "contentHash": "5f579ff1609f",
+        "anchorHash": "49a802ffb0d3",
+        "labelHash": "777434fe9124",
+        "children": {
+          "_label": {
+            "contentHash": "777434fe9124",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "shorter-development-cycle": {
+            "contentHash": "353431f740d5",
+            "anchorHash": "231ef50b39a4",
+            "labelHash": "f9576fe286c8",
+            "children": {
+              "_label": {
+                "contentHash": "f9576fe286c8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "150f4528f7bd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c40cc25b38bd",
+                "anchorHash": "345082bd971c"
+              },
+              "prose:3": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "860972a8fdae",
+                "anchorHash": "6474490e6930"
+              },
+              "prose:4": {
+                "contentHash": "8e18004b2d7d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "greater-innovation": {
+            "contentHash": "5b44b074b14d",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "bb5e9547c971",
+            "children": {
+              "_label": {
+                "contentHash": "bb5e9547c971",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "cb55556517a8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "better-user-experience": {
+            "contentHash": "cedbe2055386",
+            "anchorHash": "1002f0e085a1",
+            "labelHash": "7e9c787bf519",
+            "children": {
+              "_label": {
+                "contentHash": "7e9c787bf519",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:7": {
+                "contentHash": "ff2323a797fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "cd41a65e97fe"
+              },
+              "prose:8": {
+                "contentHash": "7383711c1b05",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e62a020f6051"
+              },
+              "prose:9": {
+                "contentHash": "43139a01b714",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e62a020f6051"
+              },
+              "prose:10": {
+                "contentHash": "b6a2e11b6a5d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "cd41a65e97fe"
+              },
+              "prose:11": {
+                "contentHash": "919c54220e3d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "35260d5ace6c",
+                "anchorHash": "fc157ca6f95e"
+              },
+              "prose:12": {
+                "contentHash": "05364e862465",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e62a020f6051"
+              },
+              "prose:13": {
+                "contentHash": "9f9119a1e3d2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:6": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "cd41a65e97fe"
+              },
+              "prose:14": {
+                "contentHash": "49c7724255d2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:7",
+              "inline-code:0",
+              "prose:8",
+              "inline-code:1",
+              "prose:9",
+              "inline-code:2",
+              "prose:10",
+              "inline-code:3",
+              "prose:11",
+              "link:4",
+              "prose:12",
+              "inline-code:5",
+              "prose:13",
+              "inline-code:6",
+              "prose:14"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "shorter-development-cycle",
+          "greater-innovation",
+          "better-user-experience"
+        ]
+      },
+      "composability-in-ethereum": {
+        "contentHash": "186258428180",
+        "anchorHash": "b81b62c87d7d",
+        "labelHash": "b01332d08e99",
+        "children": {
+          "_label": {
+            "contentHash": "b01332d08e99",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "token-swaps": {
+            "contentHash": "e2fb4b292d5d",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "b54ef708f2d5",
+            "children": {
+              "_label": {
+                "contentHash": "b54ef708f2d5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "2196d5a5b68d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "governance": {
+            "contentHash": "a0e9681a969d",
+            "anchorHash": "6266a9d352e3",
+            "labelHash": "86f8a694159b",
+            "children": {
+              "_label": {
+                "contentHash": "86f8a694159b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "e1e84d5279fd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "74421bd4bcec",
+                "anchorHash": "d1d1f4395a5a"
+              },
+              "prose:3": {
+                "contentHash": "450a458919fa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "b60db94095fc",
+                "anchorHash": "69cb63eb854d"
+              },
+              "prose:4": {
+                "contentHash": "1fbf5d675c18",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "identity-management": {
+            "contentHash": "2b0f6ea4338b",
+            "anchorHash": "7b1bf11e67d9",
+            "labelHash": "ab6bb2c1a0ee",
+            "children": {
+              "_label": {
+                "contentHash": "ab6bb2c1a0ee",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "d8e3497892e6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c76078133f26",
+                "anchorHash": "9fe5d377662d"
+              },
+              "prose:2": {
+                "contentHash": "a8e057e1ccaa",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "token-swaps",
+          "governance",
+          "identity-management"
+        ]
+      },
+      "related-tutorials": {
+        "contentHash": "2e750ff46e91",
+        "anchorHash": "f9f5eef1b3d7",
+        "labelHash": "7f2933b822cc",
+        "children": {
+          "_label": {
+            "contentHash": "7f2933b822cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7c015001fcbe",
+            "anchorHash": "01be9d11d1d6"
+          },
+          "prose:2": {
+            "contentHash": "412230789f60",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "42c0cc35c949",
+        "anchorHash": "d4cfaf24634a",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "dca9bdeada40",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a08d333465c2",
+            "anchorHash": "5dcedf899738"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "da58d8f90f68",
+            "anchorHash": "1f11ad82b3f6"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "31055fa34ded",
+            "anchorHash": "19197fb50ec8"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:incomplete",
+      "a-brief-introduction",
+      "what-is-composability",
+      "how-does-composability-work",
+      "benefits-of-composability",
+      "composability-in-ethereum",
+      "related-tutorials",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

@@ -1,53 +1,96 @@
 ---
-title: "Preparação do Ethereum para o futuro"
-description: Essas melhorias consolidam o Ethereum como a camada de base resiliente e descentralizada para o futuro, seja ele qual for.
+title: "Preparando o Ethereum para o futuro e a segurança quântica da criptografia"
+description: "Essas atualizações consolidam o Ethereum como a camada base resiliente e descentralizada para o futuro, seja ele qual for."
 lang: pt-br
 image: /images/roadmap/roadmap-future.png
-alt: "Planejamento Ethereum"
+alt: Roteiro do Ethereum
 template: roadmap
+summaryPoints:
+  - A criptografia pós-quântica garante que o Ethereum possa sobreviver a ameaças avançadas de hardware à medida que a computação quântica avança
+  - A simplificação do protocolo torna o Ethereum mais fácil de manter, auditar e proteger
+  - Atualizações recentes já entregaram melhorias significativas de eficiência
 ---
 
-Algumas partes do planejamento não são necessariamente obrigatórias para dimensionar ou proteger o Ethereum no curto prazo, mas preparam o Ethereum para a estabilidade e a confiabilidade no futuro.
+Algumas partes do roteiro não são sobre escalar ou proteger o Ethereum agora. Elas são sobre tornar o Ethereum **estável e confiável no longo prazo**. Isso significa preparar-se para novos tipos de ameaças e remover a complexidade desnecessária do protocolo.
 
 ## Resistência quântica {#quantum-resistance}
 
-Parte da [criptografia](/glossary/#cryptography) que protege o Ethereum atualmente será comprometida quando a computação quântica se tornar uma realidade. Embora os computadores quânticos estejam provavelmente a décadas de se tornarem uma ameaça genuína à criptografia moderna, o Ethereum tem sido desenvolvido para ser seguro nos próximos séculos. Isso significa tornar o [Ethereum resistente à computação quântica](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) o mais rápido possível.
+O Ethereum usa a [criptografia](/glossary/#cryptography) para manter a rede segura e proteger os fundos dos usuários. Eventualmente, alguns desses métodos criptográficos estarão **vulneráveis a computadores quânticos**, que podem resolver problemas matemáticos específicos exponencialmente mais rápido do que as máquinas clássicas.
 
-O desafio enfrentado pelos desenvolvedores do Ethereum é que o protocolo atual de [prova de participação](/glossary/#pos) depende de um esquema de assinatura muito eficiente, conhecido como BLS, para agregar votos em [blocos](/glossary/#block) válidos. Esse esquema de assinatura é quebrado por computadores quânticos, mas as alternativas quânticas resistentes não são tão eficientes.
+**Nenhum computador quântico pode quebrar a criptografia do Ethereum hoje.** O hardware necessário ainda não existe em escala. Mas pesquisas recentes sugerem que a lacuna está se fechando mais rápido do que o esperado anteriormente. Em março de 2026, o Google Quantum AI publicou um artigo estimando que quebrar a criptografia de curva elíptica de 256 bits (o tipo que o Ethereum usa para assinaturas de conta) poderia exigir cerca de 1.200 qubits lógicos, cerca de 20 vezes menos do que as estimativas anteriores. O Google definiu um prazo interno até 2029 para migrar seus próprios sistemas para uma criptografia segura contra ameaças quânticas.
 
-Os esquemas de compromisso [“KZG”](/roadmap/danksharding/#what-is-kzg) utilizados em diversos lugares no Ethereum para gerar segredos criptográficos são conhecidos por serem vulneráveis à computação quântica. Atualmente, isso é contornado usando “configurações confiáveis” (cuja cerimônia de configuração principal foi concluída com sucesso em 2023), onde muitos usuários geraram aleatoriedade que não pode ser revertida por um computador quântico. Entretanto, a solução ideal a longo prazo seria incorporar criptografia quântica segura. Existem duas abordagens principais que podem se tornar substitutos eficientes para o esquema BLS: assinaturas [baseadas em STARK](https://hackmd.io/@vbuterin/stark_aggregation) e [baseadas em lattice](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Eles ainda estão sendo ativamente pesquisados ​​e prototipados**.
+Transições criptográficas levam anos para serem planejadas e executadas com segurança. Como o modelo de segurança do Ethereum foi projetado para durar décadas, a preparação pós-quântica estava no roteiro do Ethereum antes de chegar às manchetes principais. A preparação da rede está acontecendo agora para garantir uma transição perfeita, não como uma reação a uma emergência.
 
-[Leia sobre KZG e configurações confiáveis](/roadmap/danksharding#what-is-kzg)
+### O que está em risco? {#what-is-at-risk}
+
+Quatro áreas principais da criptografia do Ethereum foram identificadas como necessitando de atualizações pós-quânticas:
+
+1. **Assinaturas de consenso (BLS)**: Os [validadores](/glossary/#validator) usam assinaturas BLS para votar em [blocos](/glossary/#block) válidos. Um computador quântico poderia forjar essas assinaturas.
+2. **Disponibilidade de dados (compromissos KZG)**: Os [esquemas de compromisso](/roadmap/danksharding/#what-is-kzg) que ajudam o Ethereum a escalar dependem de matemática (especificamente, emparelhamento de curva elíptica) que é vulnerável a ataques quânticos.
+3. **Assinaturas de conta (ECDSA)**: O esquema de assinatura que protege contas individuais do Ethereum. Quando uma conta envia uma transação, sua chave pública é exposta onchain. Um computador quântico poderia derivar a chave privada a partir dessa chave pública exposta, permitindo potencialmente o roubo de fundos.
+4. **Provas ZK na camada de aplicação**: Os sistemas de prova de conhecimento zero usados por rollups e outras aplicações dependem de suposições criptográficas que os computadores quânticos poderiam comprometer.
+
+<ExpandableCard title="Computadores quânticos podem roubar meu ETH hoje?" eventCategory="/roadmap/future-proofing" eventName="clicked can quantum computers steal my ETH today?">
+
+Não. Nenhum computador quântico hoje pode quebrar a criptografia do Ethereum. O trabalho descrito nesta página é uma preparação para o futuro, não uma resposta a uma ameaça ativa. Quando as carteiras pós-quânticas estiverem disponíveis, o software da carteira guiará você pela migração. Por enquanto, não há nada que você precise fazer.
+
+</ExpandableCard>
+
+### O que está sendo feito? {#what-is-being-done}
+
+O Ethereum é atualmente o defensor mais proativo contra ameaças quânticas no ecossistema blockchain. A Fundação Ethereum formou uma **equipe de Segurança Pós-Quântica** dedicada em janeiro de 2026, e o trabalho ativo se estende por várias equipes de clientes e grupos de pesquisa. O trabalho da equipe Pós-Quântica da EF é acompanhado publicamente em [pq.ethereum.org](https://pq.ethereum.org).
+
+O trabalho ativo inclui:
+
+- **Assinaturas baseadas em hash (leanXMSS)**: Um substituto seguro contra ameaças quânticas para assinaturas de validador, construído em funções de hash que os computadores quânticos não podem quebrar com eficiência.
+- **zkVM mínima (leanVM)**: Como as assinaturas seguras contra ameaças quânticas são maiores do que as assinaturas usadas atualmente, o leanXMSS é emparelhado com uma zkVM mínima (leanVM). Esse mecanismo agrega assinaturas seguras contra ameaças quânticas de forma eficiente, comprimindo os dados em 250x, para que a rede permaneça rápida após a transição.
+- **Testes semanais de interoperabilidade**: Mais de 10 equipes de clientes participam de devnets pós-quânticas regulares.
+- **Disponibilidade de dados:** Atualizar a criptografia subjacente usada para lidar com grandes quantidades de dados da rede garantirá que o Ethereum permaneça rápido e acessível para uso sem arriscar futuras vulnerabilidades quânticas.
+- **Prêmio Poseidon**: Um prêmio de pesquisa de US$ 1 milhão voltado para melhorias em primitivas criptográficas baseadas em hash.
+- **Padrões do NIST**: O Instituto Nacional de Padrões e Tecnologia dos EUA finalizou três padrões de criptografia pós-quântica em agosto de 2024 (ML-KEM, ML-DSA, SLH-DSA). O trabalho do Ethereum se baseia nessas fundações.
+
+Uma parte fundamental da estratégia de transição é a **EIP-8141**, que introduz a [abstração de conta](/roadmap/account-abstraction/) nativa. Isso permite que contas individuais escolham sua própria verificação de assinatura, o que significa que os usuários poderiam mudar para assinaturas seguras contra ameaças quânticas **sem esperar por uma única migração em todo o protocolo**. A EIP-8141 está sendo considerada para a bifurcação rígida Hegotá (planejada para o segundo semestre de 2026).
+
+A Fundação Ethereum delineou marcos estruturados de bifurcação visando a conclusão da infraestrutura pós-quântica principal até aproximadamente 2029. Estes são alvos de planejamento, não compromissos garantidos.
+
+[Leia nosso guia detalhado sobre criptografia pós-quântica no Ethereum](/roadmap/future-proofing/quantum-resistance/)
 
 ## Um Ethereum mais simples e eficiente {#simpler-more-efficient-ethereum}
 
-A complexidade cria oportunidades para bugs ou vulnerabilidades que podem ser exploradas por invasores. Portanto, parte do roadmap é simplificar o Ethereum e remover ou modificar o código que ficou para trás em várias atualizações, mas que não é mais necessário ou agora pode ser melhorado. Uma base de código mais enxuta e simples é mais fácil para os desenvolvedores manterem e analisarem.
+A complexidade cria oportunidades para bugs e vulnerabilidades. Parte do roteiro se concentra em **simplificar o Ethereum e remover a dívida técnica** para que o protocolo seja mais fácil de manter, auditar e compreender.
 
-Para tornar a [Máquina Virtual Ethereum (EVM)](/developers/docs/evm) mais simples e eficiente, melhorias são continuamente pesquisadas e implementadas. Isso envolve abordar componentes legados e introduzir otimizações.
+### O que foi entregue {#what-has-been-delivered}
 
-**Mudanças recentes implementadas:**
+Várias atualizações recentes tornaram o Ethereum mais simples e eficiente:
 
-- **Revisão do cálculo de gás:** a forma como o [gás](/glossary/#gas) é calculado foi significativamente melhorada com o **EIP-1559 (implementado na atualização London, 2021)**, introduzindo uma taxa base e um mecanismo de queima para uma precificação de transação mais previsível.
-- **Restrição do `SELFDESTRUCT`:** o opcode `SELFDESTRUCT`, embora raramente usado, apresentava riscos potenciais. Sua funcionalidade foi fortemente **restringida na atualização Dencun (março de 2024) via EIP-6780** para mitigar perigos, especialmente no que diz respeito ao gerenciamento de estado.
-- **Tipos de transação modernizados:** novos formatos de transação foram introduzidos (por exemplo, via **EIP-2718** e **EIP-4844** para blobs na atualização Dencun) para oferecer suporte a novos recursos e melhorar a eficiência em relação aos tipos legados.
+- **[Pectra (maio de 2025)](/roadmap/pectra/)**: Introduziu a EIP-7702, que permite que contas de propriedade externa deleguem temporariamente para o código de um contrato inteligente, um trampolim em direção à [abstração de conta](/roadmap/account-abstraction/) completa. Também adicionou o pré-compilado BLS12-381 (EIP-2537), o tratamento de depósitos onchain (EIP-6110), o acesso ao hash de bloco histórico na EVM (EIP-2935) e aumentou o saldo efetivo máximo para validadores (EIP-7251).
+- **[Fusaka (dezembro de 2025)](/roadmap/fusaka/)**: Implantou o PeerDAS (EIP-7594), um sistema de amostragem de disponibilidade de dados ponto a ponto que distribui a carga de trabalho de disponibilidade de dados pela rede. Também aumentou os parâmetros de blob, expandindo a vazão de dados para [rollups](/glossary/#rollups).
+- **[Dencun (março de 2024)](/roadmap/dencun/)**: Introduziu transações de blob (EIP-4844) para dados de rollup mais baratos e restringiu o `SELFDESTRUCT` (EIP-6780) para remover uma fonte de complexidade de longa data.
+- **[London (agosto de 2021)](/ethereum-forks/#london)**: Reformulou a precificação do [gás](/glossary/#gas) com a EIP-1559, introduzindo uma taxa básica e um mecanismo de queima para custos de transação mais previsíveis.
 
-**Metas atuais e futuras:**
+### O que está em andamento {#what-is-in-progress}
 
-- **Tratamento adicional do `SELFDESTRUCT`:** embora restrito, a **possível remoção completa** do opcode `SELFDESTRUCT` ainda é considerada para atualizações futuras para simplificar ainda mais o estado da EVM. ([Mais contexto sobre os problemas do SELFDESTRUCT](https://hackmd.io/@vbuterin/selfdestruct)).
-- **Eliminação gradual de transações legadas:** embora os [clientes Ethereum](/glossary/#consensus-client) ainda suportem tipos de transação mais antigos para compatibilidade com versões anteriores, o objetivo é incentivar a migração para tipos mais novos e **potencialmente descontinuar ou remover totalmente o suporte para os formatos mais antigos** no futuro.
-- **Pesquisa contínua de eficiência de gás:** a exploração continua em **refinamentos adicionais para o cálculo de gás**, incluindo potencialmente conceitos como gás multidimensional para refletir melhor o uso de recursos.
-- **Operações criptográficas otimizadas:** estão em andamento esforços para trazer métodos mais eficientes para a aritmética que sustenta as operações criptográficas usadas na EVM.
-
-Da mesma forma, há atualizações que podem ser feitas em outras partes dos clientes Ethereum atuais. Um exemplo é que os clientes atuais de execução e consenso usam um tipo diferente de compressão de dados. Será muito mais fácil e intuitivo compartilhar dados entre clientes quando o esquema de compactação for unificado em toda a rede. Esta segue sendo uma área de exploração.
+- **[Glamsterdam (planejada para o primeiro semestre de 2026)](/roadmap/glamsterdam/)**: Sendo considerado para inclusão: separação propositor-construtor (PBS) consagrada (EIP-7732), listas de acesso no nível do bloco (EIP-7928) e reprecificação do gás para alinhar melhor os custos com o uso real de recursos.
+- **Hegotá (planejada para o segundo semestre de 2026)**: Sendo considerado para inclusão: [árvores Verkle](/roadmap/verkle-trees/), substituindo a estrutura de dados atual por uma mais eficiente que permite clientes sem estado. Também direcionada para a EIP-8141 (abstração de conta nativa).
+- **Em andamento**: Esforços para simplificar a [EVM](/developers/docs/evm/), harmonizar as implementações de clientes e descontinuar gradualmente recursos obsoletos continuam em toda a comunidade de desenvolvimento do Ethereum.
 
 ## Progresso atual {#current-progress}
 
-Muitas das atualizações de preparação para o futuro a longo prazo, particularmente a **resistência quântica total para protocolos principais, ainda estão em fase de pesquisa e podem levar vários anos** para serem implementadas.
+No início de 2026:
 
-No entanto, **um progresso significativo já foi feito nos esforços de simplificação.** Por exemplo, alterações importantes como a **restrição do `SELFDESTRUCT` (EIP-6780)** e a introdução de **transações portadoras de blob (EIP-4844)** foram implementadas na **atualização Dencun (março de 2024)**. O trabalho de harmonização dos esquemas de compressão de clientes e outras melhorias de eficiência também continua.
+**Simplificação e eficiência**: Pectra e Fusaka entregaram melhorias reais na flexibilidade de contas, disponibilidade de dados e operações de validadores. Glamsterdam e Hegotá estão em desenvolvimento ativo com alvos claros para tornar a rede mais resiliente e eficiente, ao mesmo tempo em que removem dependências externas.
 
-**Leitura Adicional**
+**Criptografia pós-quântica**: Pesquisas ativas e implementações iniciais estão em andamento. O ecossistema financiou prêmios de pesquisa e executa devnets semanais de interoperabilidade em vários clientes, além da pesquisa feita pela equipe dedicada de Segurança Pós-Quântica da Fundação Ethereum. Embora os marcos estruturados de bifurcação visem aproximadamente 2029 para a conclusão, as pesquisas iniciais estão produzindo pontos de prova tangíveis demonstrando que a execução pós-quântica é viável hoje.
 
-- [Gás](/developers/docs/gas)
-- [EVM](/developers/docs/evm)
-- [Estruturas de dados](/developers/docs/data-structures-and-encoding)
+**Abstração de conta e agilidade de assinatura**: A EIP-7702 foi lançada na Pectra. A EIP-8141, sendo considerada para a Hegotá, permitirá que as contas usem qualquer esquema de assinatura, dando aos usuários um caminho para adotar assinaturas seguras contra ameaças quânticas antes que a transição completa do protocolo seja concluída.
+
+Nenhuma parte deste trabalho está concluída. Os cronogramas são alvos, não garantias. Mas o escopo e o ritmo do desenvolvimento ativo representam um compromisso claro em manter o Ethereum seguro e eficiente a longo prazo.
+
+**Leitura adicional**
+
+- [Criptografia pós-quântica no Ethereum](/roadmap/future-proofing/quantum-resistance/)
+- [strawmap.org](https://strawmap.org/) - _Arquitetura da EF_
+- [pq.ethereum.org](https://pq.ethereum.org)
+- [Gás](/developers/docs/gas/)
+- [EVM](/developers/docs/evm/)
+- [Estruturas de dados](/developers/docs/data-structures-and-encoding/)

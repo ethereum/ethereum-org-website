@@ -1,0 +1,441 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-17T22:20:15.935Z",
+  "englishManifestHash": "251f37a1862f",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-9f466b",
+    "LINK-540746",
+    "LINK-6c4cfe",
+    "LINK-adc8d3",
+    "LINK-59bc42",
+    "LINK-1d8b3d",
+    "LINK-1fd751",
+    "LINK-1db875",
+    "LINK-0bdcff",
+    "CODE-5c43f8",
+    "LINK-f2ceab",
+    "CODEBLOCK-e075c9",
+    "LINK-a7052a",
+    "LINK-6fd725",
+    "LINK-6e2c85",
+    "LINK-eeb4d2",
+    "LINK-fbb01a",
+    "LINK-cd0dda",
+    "LINK-ee9948",
+    "LINK-a280a8",
+    "LINK-35f649",
+    "LINK-3cc23d",
+    "LINK-14cb98",
+    "LINK-4f4f2e",
+    "LINK-a80640",
+    "LINK-839b2d",
+    "LINK-6f3805",
+    "LINK-99a72f",
+    "CODEBLOCK-23e7b7",
+    "CODE-395bf7",
+    "LINK-31d4ce",
+    "LINK-5dc4fa",
+    "CODE-395bf7",
+    "LINK-4fb95f",
+    "LINK-698627",
+    "CODE-56f489",
+    "LINK-237932",
+    "LINK-085bd3",
+    "LINK-6830c1",
+    "LINK-14eb81",
+    "LINK-80fe03",
+    "LINK-35f649",
+    "LINK-27fffa",
+    "LINK-dec6af",
+    "LINK-240944",
+    "LINK-a39a9b",
+    "LINK-5b9cd4",
+    "LINK-4a8a80",
+    "LINK-3dcbc3",
+    "LINK-292b45",
+    "LINK-50ae07",
+    "LINK-a5135f",
+    "LINK-13fe56",
+    "LINK-47a0ac",
+    "LINK-fd9868",
+    "LINK-92add3",
+    "LINK-7a0e68",
+    "LINK-6eea07",
+    "LINK-f3327b",
+    "LINK-a6afb8",
+    "LINK-43b64c",
+    "LINK-d79353"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-e075c9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-23e7b7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-5c43f8": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_subscribe"
+      }
+    },
+    "CODE-395bf7": {
+      "type": "inline-code",
+      "values": {
+        "content": "blockhash"
+      }
+    },
+    "CODE-56f489": {
+      "type": "inline-code",
+      "values": {
+        "content": "mintERC721Token()"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-9f466b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-540746": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-59bc42": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/"
+      }
+    },
+    "LINK-1d8b3d": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#events"
+      }
+    },
+    "LINK-1fd751": {
+      "type": "link",
+      "values": {
+        "url": "/smart-contracts/"
+      }
+    },
+    "LINK-1db875": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Deterministic_algorithm"
+      }
+    },
+    "LINK-0bdcff": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/#events-and-logs"
+      }
+    },
+    "LINK-f2ceab": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e"
+      }
+    },
+    "LINK-a7052a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3schools.com/tags/ref_httpmethods.asp"
+      }
+    },
+    "LINK-6fd725": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Trusted_execution_environment"
+      }
+    },
+    "LINK-6e2c85": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#sybil-attack"
+      }
+    },
+    "LINK-eeb4d2": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/Focal_point_(game_theory"
+      }
+    },
+    "LINK-fbb01a": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed"
+      }
+    },
+    "LINK-cd0dda": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Percentile"
+      }
+    },
+    "LINK-ee9948": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.makerdao.com/smart-contract-modules/oracle-module"
+      }
+    },
+    "LINK-a280a8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chain.link/architecture-overview/off-chain-reporting"
+      }
+    },
+    "LINK-35f649": {
+      "type": "link",
+      "values": {
+        "url": "https://witnet.io/"
+      }
+    },
+    "LINK-3cc23d": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Byzantine_fault"
+      }
+    },
+    "LINK-14cb98": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system"
+      }
+    },
+    "LINK-4f4f2e": {
+      "type": "link",
+      "values": {
+        "url": "/defi/"
+      }
+    },
+    "LINK-a80640": {
+      "type": "link",
+      "values": {
+        "url": "https://compound.finance/docs/prices"
+      }
+    },
+    "LINK-839b2d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles"
+      }
+    },
+    "LINK-6f3805": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.makerdao.com/smart-contract-modules/oracle-module"
+      }
+    },
+    "LINK-99a72f": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/"
+      }
+    },
+    "LINK-31d4ce": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players."
+      }
+    },
+    "LINK-5dc4fa": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-4fb95f": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/altair/part2/building_blocks/randomness"
+      }
+    },
+    "LINK-698627": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chain.link/docs/chainlink-vrf/"
+      }
+    },
+    "LINK-237932": {
+      "type": "link",
+      "values": {
+        "url": "https://chain.link/keepers"
+      }
+    },
+    "LINK-085bd3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chain.link/docs/chainlink-keepers/introduction/"
+      }
+    },
+    "LINK-6830c1": {
+      "type": "link",
+      "values": {
+        "url": "https://chain.link/"
+      }
+    },
+    "LINK-14eb81": {
+      "type": "link",
+      "values": {
+        "url": "https://redstone.finance/"
+      }
+    },
+    "LINK-80fe03": {
+      "type": "link",
+      "values": {
+        "url": "https://chroniclelabs.org/"
+      }
+    },
+    "LINK-27fffa": {
+      "type": "link",
+      "values": {
+        "url": "https://uma.xyz"
+      }
+    },
+    "LINK-dec6af": {
+      "type": "link",
+      "values": {
+        "url": "https://tellor.io/"
+      }
+    },
+    "LINK-240944": {
+      "type": "link",
+      "values": {
+        "url": "https://bandprotocol.com/"
+      }
+    },
+    "LINK-a39a9b": {
+      "type": "link",
+      "values": {
+        "url": "https://pyth.network/"
+      }
+    },
+    "LINK-5b9cd4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.api3.org/"
+      }
+    },
+    "LINK-4a8a80": {
+      "type": "link",
+      "values": {
+        "url": "https://supra.com/"
+      }
+    },
+    "LINK-3dcbc3": {
+      "type": "link",
+      "values": {
+        "url": "https://gas.network/"
+      }
+    },
+    "LINK-292b45": {
+      "type": "link",
+      "values": {
+        "url": "https://www.diadata.org/"
+      }
+    },
+    "LINK-50ae07": {
+      "type": "link",
+      "values": {
+        "url": "https://stork.network"
+      }
+    },
+    "LINK-a5135f": {
+      "type": "link",
+      "values": {
+        "url": "https://chain.link/education/blockchain-oracles"
+      }
+    },
+    "LINK-13fe56": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/better-programming/what-is-a-blockchain-oracle-f5ccab8dbd72"
+      }
+    },
+    "LINK-47a0ac": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841"
+      }
+    },
+    "LINK-fd9868": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e"
+      }
+    },
+    "LINK-92add3": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls"
+      }
+    },
+    "LINK-7a0e68": {
+      "type": "link",
+      "values": {
+        "url": "https://samczsun.com/so-you-want-to-use-a-price-oracle/"
+      }
+    },
+    "LINK-6eea07": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/BVUZpWa8vpw"
+      }
+    },
+    "LINK-f3327b": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.chain.link/fetch-current-crypto-price-data-solidity/"
+      }
+    },
+    "LINK-a6afb8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chroniclelabs.org/Developers/tutorials/Remix"
+      }
+    },
+    "LINK-43b64c": {
+      "type": "link",
+      "values": {
+        "url": "https://speedrunethereum.com/challenge/oracles"
+      }
+    },
+    "LINK-d79353": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/hackbg/chainlink-fullstack"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:20:15.935Z",
+      "status": "success"
+    }
+  }
+}

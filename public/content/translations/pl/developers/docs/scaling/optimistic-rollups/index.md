@@ -1,265 +1,269 @@
 ---
-title: Optymistyczne pakiety zbiorcze
-description: "Wprowadzenie do optymistycznych pakietów zbiorczych — rozwiązania skalowania używanego przez społeczność Ethereum."
+title: Optymistyczne rollupy
+description: "Wprowadzenie do optymistycznych rollupów — rozwiązania skalującego używanego przez społeczność Ethereum."
 lang: pl
 ---
 
-Optymistyczne pakiety zbiorcze to protokoły warstwy 2 (L2) zaprojektowane w celu zwiększenia przepustowości warstwy bazowej Ethereum. Redukują obciążenie obliczeniowe w głównym łańcuchu Ethereum poprzez przetwarzanie transakcji poza łańcuchem, oferując znaczną poprawę szybkości przetwarzania. W przeciwieństwie do innych rozwiązań skalujących, takich jak [łańcuchy poboczne](/developers/docs/scaling/sidechains/), rollupy optymistyczne czerpią bezpieczeństwo z sieci Mainnet, publikując wyniki transakcji w łańcuchu, lub [łańcuchy plasma](/developers/docs/scaling/plasma/), które również weryfikują transakcje w Ethereum za pomocą dowodów oszustwa, ale przechowują dane transakcji w innym miejscu.
+Optymistyczne rollupy to protokoły warstwy 2 (L2) zaprojektowane w celu zwiększenia przepustowości warstwy bazowej Ethereum. Zmniejszają one ilość obliczeń w głównym łańcuchu [Ethereum](/) poprzez przetwarzanie transakcji pozałańcuchowo (offchain), oferując znaczną poprawę szybkości przetwarzania. W przeciwieństwie do innych rozwiązań skalujących, takich jak [łańcuchy poboczne (sidechains)](/developers/docs/scaling/sidechains/), optymistyczne rollupy czerpią bezpieczeństwo z Sieci głównej (Mainnet), publikując wyniki transakcji onchain, lub [łańcuchów Plasma](/developers/docs/scaling/plasma/), które również weryfikują transakcje w Ethereum za pomocą dowodów oszustwa, ale przechowują dane transakcji w innym miejscu.
 
-Ponieważ obliczenia są powolną, kosztowną częścią korzystania z Ethereum, optymistyczne pakiety zbiorcze mogą oferować nawet 10-100 krotną poprawę skalowalności. Rollupy optymistyczne zapisują również transakcje do Ethereum jako `calldata` lub w [blobach](/roadmap/danksharding/), zmniejszając koszty gazu dla użytkowników.
+Ponieważ obliczenia są powolną i kosztowną częścią korzystania z Ethereum, optymistyczne rollupy mogą zaoferować od 10 do 100-krotnej poprawy skalowalności. Optymistyczne rollupy zapisują również transakcje w Ethereum jako `calldata` lub w [blobach](/roadmap/danksharding/), zmniejszając koszty gazu dla użytkowników.
 
 ## Wymagania wstępne {#prerequisites}
 
-Należy przeczytać i zrozumieć nasze strony na temat [skalowania Ethereum](/developers/docs/scaling/) i [warstwy 2](/layer-2/).
+Powinieneś przeczytać i zrozumieć nasze strony o [skalowaniu Ethereum](/developers/docs/scaling/) i [warstwie 2](/layer-2/).
 
-## Czym jest optymistyczny pakiet zbiorczy? {#what-is-an-optimistic-rollup}
+## Czym jest optymistyczny rollup? {#what-is-an-optimistic-rollup}
 
-Rollup optymistyczny to podejście do skalowania Ethereum, które polega na przeniesieniu obliczeń i przechowywania stanu poza łańcuch. Rollupy optymistyczne wykonują transakcje poza Ethereum, ale publikują dane transakcji w sieci Mainnet jako `calldata` lub w [blobach](/roadmap/danksharding/).
+Optymistyczny rollup to podejście do skalowania Ethereum, które polega na przeniesieniu obliczeń i przechowywania stanu pozałańcuchowo. Optymistyczne rollupy wykonują transakcje poza Ethereum, ale przesyłają dane transakcji do Sieci głównej jako `calldata` lub w [blobach](/roadmap/danksharding/).
 
-Operatorzy rollupów optymistycznych łączą wiele transakcji poza łańcuchem w duże partie przed przesłaniem ich do Ethereum. Takie podejście umożliwia rozłożenie stałych kosztów na wiele transakcji w każdej partii, zmniejszając opłaty dla użytkowników końcowych. Optymistyczne pakiety zbiorcze wykorzystują również techniki kompresji w celu zmniejszenia ilości danych publikowanych w Ethereum.
+Operatorzy optymistycznych rollupów łączą wiele transakcji pozałańcuchowych w duże partie (wsady) przed przesłaniem ich do Ethereum. Takie podejście umożliwia rozłożenie stałych kosztów na wiele transakcji w każdym wsadzie, zmniejszając opłaty dla użytkowników końcowych. Optymistyczne rollupy wykorzystują również techniki kompresji w celu zmniejszenia ilości danych przesyłanych do Ethereum.
 
-Rollupy optymistyczne są uważane za „optymistyczne”, ponieważ zakładają, że transakcje poza łańcuchem są ważne i nie publikują dowodów ważności dla partii transakcji opublikowanych w łańcuchu. To odróżnia rollupy optymistyczne od [rollupów zerowej wiedzy](/developers/docs/scaling/zk-rollups), które publikują kryptograficzne [dowody ważności](/glossary/#validity-proof) dla transakcji poza łańcuchem.
+Optymistyczne rollupy są uważane za „optymistyczne”, ponieważ zakładają, że transakcje pozałańcuchowe są ważne i nie publikują dowodów ważności dla partii transakcji przesyłanych onchain. Odróżnia to optymistyczne rollupy od [rollupów z wiedzą zerową](/developers/docs/scaling/zk-rollups), które publikują kryptograficzne [dowody ważności](/glossary/#validity-proof) dla transakcji pozałańcuchowych.
 
-Optymistyczne pakiety zbiorcze zamiast tego polegają na schemacie sprawdzania oszustw w celu wykrycia przypadków, w których transakcje nie są obliczane poprawnie. Po przesłaniu partii rollupu na Ethereum istnieje okno czasowe (zwane okresem wyzwania), w którym każdy może zakwestionować wyniki transakcji rollupu poprzez obliczenie [dowodu oszustwa](/glossary/#fraud-proof).
+Zamiast tego optymistyczne rollupy opierają się na schemacie dowodzenia oszustw w celu wykrywania przypadków, w których transakcje nie są obliczane poprawnie. Po przesłaniu partii rollupa do Ethereum następuje okno czasowe (zwane okresem wyzwania), podczas którego każdy może zakwestionować wyniki transakcji rollupa, obliczając [dowód oszustwa](/glossary/#fraud-proof).
 
-Jeśli dowód oszustwa się powiedzie, protokół pakietu zbiorczego ponownie wykonuje transakcję i odpowiednio aktualizuje stan pakietu zbiorczego. Innym skutkiem udanego dowodu oszustwa jest to, że sekwencer odpowiedzialny za włączenie nieprawidłowo wykonanej transakcji do bloku otrzymuje karę.
+Jeśli dowód oszustwa się powiedzie, protokół rollupa ponownie wykonuje transakcję (lub transakcje) i odpowiednio aktualizuje stan rollupa. Innym skutkiem udanego dowodu oszustwa jest to, że sekwenser odpowiedzialny za włączenie niepoprawnie wykonanej transakcji do bloku otrzymuje karę.
 
-Jeśli partia pakietu zbiorczego pozostaje niekwestionowana (tj. wszystkie transakcje są poprawnie wykonane) po upływie okresu wyzwania, jest ona uznawana za ważną i akceptowaną w Ethereum. Inni mogą nadal budować na niepotwierdzonym bloku pakietu zbiorczego, ale z zastrzeżeniem: wyniki transakcji zostaną cofnięte, jeśli opierają się na nieprawidłowo wykonanej transakcji opublikowanej wcześniej.
+Jeśli partia rollupa pozostanie niezakwestionowana (tj. wszystkie transakcje zostaną wykonane poprawnie) po upływie okresu wyzwania, zostaje uznana za ważną i zaakceptowana w Ethereum. Inni mogą kontynuować budowanie na niepotwierdzonym bloku rollupa, ale z pewnym zastrzeżeniem: wyniki transakcji zostaną cofnięte, jeśli będą oparte na niepoprawnie wykonanej transakcji opublikowanej wcześniej.
 
-## Jak optymistyczne pakiety zbiorcze wchodzą w interakcje z Ethereum? Rollupy optymistyczne a Ethereum {#optimistic-rollups-and-Ethereum}
+## Jak optymistyczne rollupy wchodzą w interakcję z Ethereum? {#optimistic-rollups-and-ethereum}
 
-Rollupy optymistyczne to [rozwiązania skalowania poza łańcuchem](/developers/docs/scaling/#offchain-scaling) zbudowane do działania na Ethereum. Każdy optymistyczny pakiet zbiorczy jest zarządzany przez zestaw inteligentnych kontraktów wdrożonych w sieci Ethereum. Rollupy optymistyczne przetwarzają transakcje poza głównym łańcuchem Ethereum, ale publikują transakcje poza łańcuchem (w partiach) do kontraktu rollupu w łańcuchu. Podobnie jak blockchain Ethereum, ten rejestr transakcji jest niezmienny i tworzy „łańcuch optymistycznych pakietów zbiorczych”
+Optymistyczne rollupy to [pozałańcuchowe rozwiązania skalujące](/developers/docs/scaling/#offchain-scaling) zbudowane do działania na wierzchu Ethereum. Każdy optymistyczny rollup jest zarządzany przez zestaw inteligentnych kontraktów wdrożonych w sieci Ethereum. Optymistyczne rollupy przetwarzają transakcje poza głównym łańcuchem Ethereum, ale przesyłają transakcje pozałańcuchowe (w partiach) do kontraktu rollupa onchain. Podobnie jak blockchain Ethereum, ten zapis transakcji jest niezmienny i tworzy „łańcuch optymistycznego rollupa”.
 
-Architektura optymistycznego pakietu zbiorczego składa się z następujących części:
+Architektura optymistycznego rollupa składa się z następujących części:
 
-**Kontrakty w łańcuchu**: Działanie rollupów optymistycznych jest kontrolowane przez smart kontrakty działające na Ethereum. Obejmuje to kontrakty, które przechowują bloki pakietu zbiorczego, monitorują aktualizacje stanu pakietu zbiorczego i śledzą depozyty użytkownika. W tym sensie Ethereum służy jako warstwa podstawowa lub „warstwa 1” dla optymistycznych pakietów zbiorczych.
+**Kontrakty onchain**: Działanie optymistycznego rollupa jest kontrolowane przez inteligentne kontrakty działające w Ethereum. Obejmuje to kontrakty, które przechowują bloki rollupa, monitorują aktualizacje stanu w rollupie i śledzą depozyty użytkowników. W tym sensie Ethereum służy jako warstwa bazowa lub „warstwa 1 (L1)” dla optymistycznych rollupów.
 
-**Maszyna wirtualna poza łańcuchem (VM)**: Chociaż kontrakty zarządzające protokołem rollupu optymistycznego działają na Ethereum, protokół rollupu wykonuje obliczenia i przechowuje stan na innej maszynie wirtualnej, oddzielonej od [Wirtualnej Maszyny Ethereum](/developers/docs/evm/). Maszyna wirtualna poza łańcuchem jest miejscem, w którym działają aplikacje i wykonywane są zmiany stanu; służy jako górna warstwa lub „warstwa 2” dla rollupu optymistycznego.
+**Pozałańcuchowa maszyna wirtualna (VM)**: Chociaż kontrakty zarządzające protokołem optymistycznego rollupa działają w Ethereum, protokół rollupa wykonuje obliczenia i przechowuje stan na innej maszynie wirtualnej, oddzielnej od [Maszyny Wirtualnej Ethereum (EVM)](/developers/docs/evm/). Pozałańcuchowa maszyna wirtualna to miejsce, w którym żyją aplikacje i wykonywane są zmiany stanu; służy jako górna warstwa lub „warstwa 2 (L2)” dla optymistycznego rollupa.
 
-Ponieważ rollupy optymistyczne są zaprojektowane do uruchamiania programów napisanych lub skompilowanych dla EVM, maszyna wirtualna poza łańcuchem zawiera wiele specyfikacji projektowych EVM. Dodatkowo, dowody oszustwa obliczone w łańcuchu pozwalają sieci Ethereum egzekwować ważność zmian stanu obliczonych w maszynie wirtualnej poza łańcuchem.
+Ponieważ optymistyczne rollupy są zaprojektowane do uruchamiania programów napisanych lub skompilowanych dla EVM, pozałańcuchowa maszyna wirtualna zawiera wiele specyfikacji projektowych EVM. Dodatkowo, dowody oszustwa obliczane onchain pozwalają sieci Ethereum egzekwować ważność zmian stanu obliczonych w pozałańcuchowej maszynie wirtualnej.
 
-Optymistyczne pakiety zbiorcze są opisywane jako „hybrydowe rozwiązania skalowania”, ponieważ chociaż istnieją jako oddzielne protokoły, ich właściwości bezpieczeństwa pochodzą z Ethereum. Ethereum gwarantuje między innymi poprawność obliczeń rollupu poza łańcuchem i dostępność danych stojących za obliczeniami. To sprawia, że rollupy optymistyczne są bezpieczniejsze niż czyste protokoły skalowania poza łańcuchem (np. [łańcuchy poboczne](/developers/docs/scaling/sidechains/)), które nie opierają się na Ethereum w zakresie bezpieczeństwa.
+Optymistyczne rollupy są opisywane jako „hybrydowe rozwiązania skalujące”, ponieważ chociaż istnieją jako oddzielne protokoły, ich właściwości bezpieczeństwa wywodzą się z Ethereum. Między innymi Ethereum gwarantuje poprawność pozałańcuchowych obliczeń rollupa i dostępność danych stojących za tymi obliczeniami. Czyni to optymistyczne rollupy bezpieczniejszymi niż czysto pozałańcuchowe protokoły skalujące (np. [łańcuchy poboczne](/developers/docs/scaling/sidechains/)), które nie polegają na Ethereum w kwestii bezpieczeństwa.
 
-Optymistyczne pakiety zbiorcze opierają się na głównym protokole Ethereum w następujących kwestiach:
+Optymistyczne rollupy polegają na głównym protokole Ethereum w następujących kwestiach:
 
 ### Dostępność danych {#data-availability}
 
-Jak wspomniano, rollupy optymistyczne wysyłają dane transakcji do Ethereum jako `calldata` lub w [blobach](/roadmap/danksharding/). Ponieważ wykonanie łańcucha pakietów zbiorczych opiera się na przesłanych transakcjach, każdy może wykorzystać te informacje — zakotwiczone w warstwie bazowej Ethereum — do wykonania stanu pakietu zbiorczego i zweryfikowania poprawności przejść stanu.
+Jak wspomniano, optymistyczne rollupy przesyłają dane transakcji do Ethereum jako `calldata` lub [bloby](/roadmap/danksharding/). Ponieważ wykonanie łańcucha rollupa opiera się na przesłanych transakcjach, każdy może użyć tych informacji — zakotwiczonych w warstwie bazowej Ethereum — do wykonania stanu rollupa i zweryfikowania poprawności przejść stanu.
 
-[Dostępność danych](/developers/docs/data-availability/) jest kluczowa, ponieważ bez dostępu do danych o stanie, podmioty zgłaszające zastrzeżenia nie mogą konstruować dowodów oszustwa w celu zakwestionowania nieprawidłowych operacji rollupu. Ponieważ Ethereum zapewnia dostępność danych, ryzyko, że operatorzy pakietu zbiorczego uciekną od swoich złośliwych działań jest zmniejszone (np. przesyłania nieprawidłowych bloków).
+[Dostępność danych (DA)](/developers/docs/data-availability/) jest krytyczna, ponieważ bez dostępu do danych stanu, rzucający wyzwanie nie mogą konstruować dowodów oszustwa, aby kwestionować nieprawidłowe operacje rollupa. Dzięki temu, że Ethereum zapewnia dostępność danych, ryzyko, że operatorom rollupów ujdą na sucho złośliwe działania (np. przesyłanie nieprawidłowych bloków), jest zmniejszone.
 
 ### Odporność na cenzurę {#censorship-resistance}
 
-Optymistyczne pakiety zbiorcze opierają się również na Ethereum w zakresie odporności na cenzurę. W optymistycznym pakiecie zbiorczym scentralizowany podmiot (operator) jest odpowiedzialny za przetwarzanie transakcji i przesyłanie bloków pakietu zbiorczego do Ethereum. Ma to pewne konsekwencje:
+Optymistyczne rollupy polegają również na Ethereum w kwestii odporności na cenzurę. W optymistycznym rollupie scentralizowany podmiot (operator) jest odpowiedzialny za przetwarzanie transakcji i przesyłanie bloków rollupa do Ethereum. Ma to pewne implikacje:
 
-- Operatorzy pakietów zbiorczych mogą cenzurować użytkowników, przechodząc całkowicie w tryb offline lub odmawiając tworzenia bloków zawierających określone transakcje.
+- Operatorzy rollupów mogą cenzurować użytkowników, całkowicie przechodząc w tryb offline lub odmawiając tworzenia bloków, które zawierają określone transakcje.
 
-- Operatorzy pakietów zbiorczych mogą uniemożliwić użytkownikom wypłacanie środków zdeponowanych do kontraktu pakietu zbiorczego poprzez ukrywanie danych o stanie niezbędnych do przeprowadzenia dowodu własności Merkle. Ukrycie danych o stanie może również ukryć stan pakietu zbiorczego przed użytkownikami i uniemożliwić im interakcję z pakietem zbiorczym.
+- Operatorzy rollupów mogą uniemożliwić użytkownikom wypłatę środków zdeponowanych w kontrakcie rollupa, zatajając dane stanu niezbędne do dowodów Merkle'a potwierdzających własność. Zatajanie danych stanu może również ukryć stan rollupa przed użytkownikami i uniemożliwić im interakcję z rollupem.
 
-Optymistyczne pakiety zbiorcze rozwiązują ten problem, zmuszając operatorów do publikowania danych związanych z aktualizacjami stanu na Ethereum. Publikowanie danych rollupów w łańcuchu ma następujące zalety:
+Optymistyczne rollupy rozwiązują ten problem, zmuszając operatorów do publikowania danych związanych z aktualizacjami stanu w Ethereum. Publikowanie danych rollupa onchain ma następujące korzyści:
 
-- Jeśli operator optymistycznego pakietu zbiorczego przejdzie w tryb offline lub przestanie produkować partie transakcji, inny węzeł może wykorzystać dostępne dane do odtworzenia ostatniego stanu pakietu zbiorczego i kontynuowania produkcji bloków.
+- Jeśli operator optymistycznego rollupa przejdzie w tryb offline lub przestanie tworzyć partie transakcji, inny węzeł może użyć dostępnych danych do odtworzenia ostatniego stanu rollupa i kontynuowania produkcji bloków.
 
-- Użytkownicy mogą wykorzystywać dane transakcyjne do tworzenia dowodów Merkle potwierdzających własność środków i wypłacać swoje aktywa z pakietu zbiorczego.
+- Użytkownicy mogą użyć danych transakcji do tworzenia dowodów Merkle'a potwierdzających własność środków i wypłacić swoje aktywa z rollupa.
 
-- Użytkownicy mogą również przesyłać swoje transakcje do warstwy 1 zamiast do sekwencera, w którym to przypadku sekwencer musi uwzględnić transakcję w określonym limicie czasu, aby kontynuować produkcję ważnych bloków.
+- Użytkownicy mogą również przesyłać swoje transakcje w warstwie 1 (L1) zamiast do sekwensera, w którym to przypadku sekwenser musi uwzględnić transakcję w określonym limicie czasu, aby kontynuować tworzenie ważnych bloków.
 
-### Rozliczenie {#settlement}
+### Rozrachunek {#settlement}
 
-Inną rolą Ethereum w kontekście optymistycznych pakietów zbiorczych jest warstwa rozliczeniowa. Warstwa rozliczeniowa zakotwicza cały ekosystem blockchainu, ustanawia bezpieczeństwo i zapewnia obiektywną finalizację w przypadku wystąpienia sporu w innym łańcuchu (w tym przypadku optymistycznych pakietów zbiorczych), który wymaga arbitrażu.
+Inną rolą, jaką Ethereum odgrywa w kontekście optymistycznych rollupów, jest rola warstwy rozrachunku. Warstwa rozrachunku zakotwicza cały ekosystem blockchain, ustanawia bezpieczeństwo i zapewnia obiektywną ostateczność, jeśli na innym łańcuchu (w tym przypadku w optymistycznych rollupach) wystąpi spór wymagający arbitrażu.
 
-Sieć główna Ethereum zapewnia centrum dla optymistycznych pakietów zbiorczych w celu weryfikacji dowodów oszustwa i rozstrzygania sporów. Co więcej, transakcje przeprowadzone w rollupie są finalne dopiero _po_ zaakceptowaniu bloku rollupu na Ethereum. Gdy transakcja pakietu zbiorczego zostanie zatwierdzona w warstwie bazowej Ethereum, nie można jej wycofać (z wyjątkiem bardzo mało prawdopodobnego przypadku reorganizacji łańcucha).
+Sieć główna Ethereum stanowi centrum dla optymistycznych rollupów do weryfikacji dowodów oszustwa i rozwiązywania sporów. Co więcej, transakcje przeprowadzane w rollupie są ostateczne dopiero _po_ zaakceptowaniu bloku rollupa w Ethereum. Gdy transakcja rollupa zostanie zatwierdzona w warstwie bazowej Ethereum, nie można jej cofnąć (z wyjątkiem wysoce nieprawdopodobnego przypadku reorganizacji łańcucha).
 
-## Jak działają optymistyczne pakiety zbiorcze? {#how-optimistic-rollups-work}
+## Jak działają optymistyczne rollupy? {#how-optimistic-rollups-work}
 
 ### Wykonywanie i agregacja transakcji {#transaction-execution-and-aggregation}
 
-Użytkownicy przesyłają transakcje do „operatorów”, które są węzłami odpowiedzialnymi za przetwarzanie transakcji w optymistycznym pakiecie zbiorczym. Znany również jako „walidator” lub „agregator”, operator agreguje transakcje, kompresuje dane bazowe i publikuje blok w Ethereum.
+Użytkownicy przesyłają transakcje do „operatorów”, którymi są węzły odpowiedzialne za przetwarzanie transakcji w optymistycznym rollupie. Znany również jako „walidator” lub „agregator”, operator agreguje transakcje, kompresuje podstawowe dane i publikuje blok w Ethereum.
 
-Chociaż każdy może zostać walidatorem, walidatorzy rollupów optymistycznych muszą zapewnić zabezpieczenie (bond) przed produkcją bloków, podobnie jak w [systemie proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Zabezpieczenie to może zostać odcięte, jeśli walidator opublikuje nieprawidłowy blok lub buduje na starym, ale nieprawidłowym bloku (nawet jeśli jego blok jest ważny). W ten sposób optymistyczne pakiety zbiorcze wykorzystują zachęty kryptoekonomiczne, aby zapewnić, że walidatorzy działają uczciwie.
+Chociaż każdy może zostać walidatorem, walidatory optymistycznych rollupów muszą wnieść kaucję przed wyprodukowaniem bloków, podobnie jak w [systemie dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos/). Ta kaucja może zostać ukarana cięciem, jeśli walidator opublikuje nieprawidłowy blok lub będzie budował na starym, ale nieprawidłowym bloku (nawet jeśli jego blok jest prawidłowy). W ten sposób optymistyczne rollupy wykorzystują zachęty kryptoekonomiczne, aby zapewnić uczciwe działanie walidatorów.
 
-Oczekuje się, że inne walidatory w łańcuchu optymistycznego pakietu zbiorczego wykonają przesłane transakcje przy użyciu swojej kopii stanu pakietu zbiorczego. Jeśli stan końcowy walidatora różni się od stanu zaproponowanego przez operatora, może on rozpocząć wyzwanie i obliczyć dowód oszustwa.
+Oczekuje się, że inne walidatory w łańcuchu optymistycznego rollupa wykonają przesłane transakcje przy użyciu swojej kopii stanu rollupa. Jeśli stan końcowy walidatora różni się od stanu zaproponowanego przez operatora, może on rozpocząć wyzwanie i obliczyć dowód oszustwa.
 
-Niektóre optymistyczne pakiety zbiorcze mogą zrezygnować z systemu walidatora bez uprawnień i użyć pojedynczego „sekwencera” do wykonania łańcucha. Podobnie jak walidator, sekwencer przetwarza transakcje, tworzy bloki pakietu zbiorczego i przesyła transakcje pakietu zbiorczego do łańcucha warstwy 1 (Ethereum).
+Niektóre optymistyczne rollupy mogą zrezygnować z niewymagającego pozwoleń systemu walidatorów i używać pojedynczego „sekwensera” do wykonywania łańcucha. Podobnie jak walidator, sekwenser przetwarza transakcje, tworzy bloki rollupa i przesyła transakcje rollupa do łańcucha L1 (Ethereum).
 
-Sekwencer różni się od zwykłego operatora pakietu zbiorczego, ponieważ ma większą kontrolę nad porządkowaniem kolejnością transakcji. Ponadto sekwencer ma priorytetowy dostęp do łańcucha rollupu i jest jedynym podmiotem upoważnionym do przesyłania transakcji do kontraktu w łańcuchu. Transakcje od węzłów innych niż sekwencer lub zwykłych użytkowników są po prostu umieszczane w kolejce w oddzielnej skrzynce odbiorczej, dopóki sekwencer nie włączy ich do nowej partii.
+Sekwenser różni się od zwykłego operatora rollupa tym, że ma większą kontrolę nad kolejnością transakcji. Ponadto sekwenser ma priorytetowy dostęp do łańcucha rollupa i jest jedynym podmiotem upoważnionym do przesyłania transakcji do kontraktu onchain. Transakcje z węzłów niebędących sekwenserami lub od zwykłych użytkowników są po prostu kolejkowane w oddzielnej skrzynce odbiorczej, dopóki sekwenser nie włączy ich do nowej partii.
 
-#### Przesyłanie bloków rollupów do Ethereum {#submitting-blocks-to-ethereum}
+#### Przesyłanie bloków rollupa do Ethereum {#submitting-blocks-to-ethereum}
 
-Jak wspomniano, operator rollupu optymistycznego łączy transakcje poza łańcuchem w partię i wysyła ją do Ethereum w celu notarialnego poświadczenia. Proces ten obejmuje kompresję danych związanych z transakcjami i publikowanie ich w Ethereum jako `calldata` lub w blobach.
+Jak wspomniano, operator optymistycznego rollupa łączy transakcje pozałańcuchowe w partię i wysyła ją do Ethereum w celu notaryzacji. Proces ten obejmuje kompresję danych związanych z transakcjami i publikowanie ich w Ethereum jako `calldata` lub w blobach.
 
-`calldata` to niemodyfikowalny, nietrwały obszar w smart kontrakcie, który zachowuje się głównie jak [pamięć](/developers/docs/smart-contracts/anatomy/#memory). Chociaż `calldata` pozostaje w łańcuchu jako część [logów historycznych](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) blockchaina, nie jest przechowywana jako część stanu Ethereum. Ponieważ `calldata` nie dotyka żadnej części stanu Ethereum, jest tańsza niż stan do przechowywania danych w łańcuchu.
+`calldata` to niemodyfikowalny, nietrwały obszar w inteligentnym kontrakcie, który zachowuje się w dużej mierze jak [pamięć](/developers/docs/smart-contracts/anatomy/#memory). Chociaż `calldata` utrzymuje się onchain jako część [dzienników historii](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) blockchaina, nie jest przechowywane jako część stanu Ethereum. Ponieważ `calldata` nie dotyka żadnej części stanu Ethereum, jest tańsze niż stan do przechowywania danych onchain.
 
-Słowo kluczowe `calldata` jest również używane w Solidity do przekazywania argumentów do funkcji smart kontraktu w czasie wykonywania. `calldata` identyfikuje funkcję wywoływaną podczas transakcji i przechowuje dane wejściowe do funkcji w postaci dowolnej sekwencji bajtów.
+Słowo kluczowe `calldata` jest również używane w języku Solidity do przekazywania argumentów do funkcji inteligentnego kontraktu w czasie wykonywania. `calldata` identyfikuje funkcję wywoływaną podczas transakcji i przechowuje dane wejściowe do funkcji w postaci dowolnej sekwencji bajtów.
 
-W kontekście rollupów optymistycznych, `calldata` jest używana do wysyłania skompresowanych danych transakcyjnych do kontraktu w łańcuchu. Operator pakietu zbiorczego dodaje nową partię poprzez wywołanie wymaganej funkcji w kontrakcie pakietu zbiorczego i przekazanie skompresowanych danych jako argumentów funkcji. Używanie `calldata` zmniejsza opłaty użytkownika, ponieważ większość kosztów ponoszonych przez rollupy pochodzi z przechowywania danych w łańcuchu.
+W kontekście optymistycznych rollupów `calldata` służy do wysyłania skompresowanych danych transakcji do kontraktu onchain. Operator rollupa dodaje nową partię, wywołując wymaganą funkcję w kontrakcie rollupa i przekazując skompresowane dane jako argumenty funkcji. Użycie `calldata` zmniejsza opłaty dla użytkowników, ponieważ większość kosztów ponoszonych przez rollupy wynika z przechowywania danych onchain.
 
-Oto [przykład](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) przesłania partii rollupu, aby pokazać, jak działa ta koncepcja. Sekwencer wywołał metodę `appendSequencerBatch()` i przekazał skompresowane dane transakcji jako dane wejściowe za pomocą `calldata`.
+Oto [przykład](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) przesłania partii rollupa, aby pokazać, jak działa ta koncepcja. Sekwenser wywołał metodę `appendSequencerBatch()` i przekazał skompresowane dane transakcji jako dane wejściowe za pomocą `calldata`.
 
-Niektóre rollupy używają teraz blobów do publikowania partii transakcji w Ethereum.
+Niektóre rollupy używają teraz blobów do przesyłania partii transakcji do Ethereum.
 
-Bloby są niemodyfikowalne i nietrwałe (podobnie jak `calldata`), ale są usuwane z historii po ~18 dniach. Więcej informacji na temat blobów można znaleźć w [Danksharding](/roadmap/danksharding).
+Bloby są niemodyfikowalne i nietrwałe (podobnie jak `calldata`), ale są usuwane z historii po około 18 dniach. Więcej informacji na temat blobów można znaleźć w sekcji [danksharding](/roadmap/danksharding).
 
-### Zobowiązania dotyczące stanu {#state-commitments}
+### Zobowiązania stanu {#state-commitments}
 
-W dowolnym momencie stan rollupu optymistycznego (konta, salda, kod kontraktu itp.) jest zorganizowany jako [drzewo Merklego](/whitepaper/#merkle-trees) zwane „drzewem stanu”. Korzeń tego drzewa Merkle (korzeń stanu), który odwołuje się do najnowszego stanu pakietu zbiorczego, jest zahashowany i przechowywany w kontrakcie pakietu zbiorczego. Każde przejście stanu w łańcuchu tworzy nowy stan pakietu zbiorczego, do którego operator zobowiązuje się poprzez obliczenie nowego korzenia stanu.
+W dowolnym momencie stan optymistycznego rollupa (konta, salda, kod kontraktu itp.) jest zorganizowany jako [drzewo Merklego](/whitepaper/#merkle-trees) zwane „drzewem stanu”. Korzeń tego drzewa Merklego (korzeń stanu), który odnosi się do najnowszego stanu rollupa, jest hashowany i przechowywany w kontrakcie rollupa. Każde przejście stanu w łańcuchu tworzy nowy stan rollupa, do którego operator zobowiązuje się, obliczając nowy korzeń stanu.
 
-Operator jest zobowiązany do przesłania zarówno starych, jak i nowych korzeni stanu podczas publikowania partii. Jeśli stary korzeń stanu pasuje do istniejącego korzenia stanu w kontrakcie w łańcuchu, ten ostatni jest odrzucany i zastępowany nowym korzeniem stanu.
+Operator jest zobowiązany do przesłania zarówno starych, jak i nowych korzeni stanu podczas publikowania partii. Jeśli stary korzeń stanu pasuje do istniejącego korzenia stanu w kontrakcie onchain, ten drugi jest odrzucany i zastępowany nowym korzeniem stanu.
 
-Operator pakietu zbiorczego jest również zobowiązany do zatwierdzenia korzenia Merkle dla samej partii transakcji. Pozwala to każdemu udowodnić włączenie transakcji do partii (na L1) poprzez przedstawienie [dowodu Merklego](/developers/tutorials/merkle-proofs-for-offline-data-integrity/).
+Operator rollupa jest również zobowiązany do zatwierdzenia korzenia Merklego dla samej partii transakcji. Pozwala to każdemu udowodnić włączenie transakcji do partii (w L1) poprzez przedstawienie [dowodu Merkle'a](/developers/tutorials/merkle-proofs-for-offline-data-integrity/).
 
-Zobowiązania stanu, w szczególności korzenie stanu, są niezbędne do udowodnienia poprawności zmian stanu w optymistycznym pakiecie zbiorczym. Kontrakt pakietu zbiorczego akceptuje nowe korzenie stanu od operatorów natychmiast po ich przesłaniu, ale może później usunąć nieprawidłowe korzenie stanu, aby przywrócić pakiet zbiorczy do jego prawidłowego stanu.
+Zobowiązania stanu, zwłaszcza korzenie stanu, są niezbędne do udowodnienia poprawności zmian stanu w optymistycznym rollupie. Kontrakt rollupa akceptuje nowe korzenie stanu od operatorów natychmiast po ich opublikowaniu, ale może później usunąć nieprawidłowe korzenie stanu, aby przywrócić rollup do jego prawidłowego stanu.
 
-### Dowodzenie oszustwa {#fraud-proving}
+### Dowodzenie oszustw {#fraud-proving}
 
-Jak wyjaśniono, rollupy optymistyczne pozwalają każdemu publikować bloki bez dostarczania dowodów ważności. Jednakże, aby zapewnić bezpieczeństwo łańcucha, rollupy optymistyczne określają okno czasowe, w którym każdy może zakwestionować przejście stanu. Dlatego bloki rollupu są nazywane „asercjami”, ponieważ każdy może zakwestionować ich ważność.
+Jak wyjaśniono, optymistyczne rollupy pozwalają każdemu publikować bloki bez dostarczania dowodów ważności. Jednak aby zapewnić bezpieczeństwo łańcucha, optymistyczne rollupy określają okno czasowe, w którym każdy może zakwestionować przejście stanu. Dlatego bloki rollupa nazywane są „twierdzeniami” (asercjami), ponieważ każdy może zakwestionować ich ważność.
 
-Jeśli ktoś zakwestionuje asercję, protokół rollupu zainicjuje obliczanie dowodu oszustwa. Każdy rodzaj dowodu oszustwa jest interaktywny — ktoś musi opublikować asercję, zanim inna osoba będzie mogła ją zakwestionować. Różnica polega na tym, ile rund interakcji jest wymaganych do obliczenia dowodu oszustwa.
+Jeśli ktoś zakwestionuje twierdzenie, protokół rollupa zainicjuje obliczanie dowodu oszustwa. Każdy rodzaj dowodu oszustwa jest interaktywny — ktoś musi opublikować twierdzenie, zanim inna osoba będzie mogła je zakwestionować. Różnica polega na tym, ile rund interakcji jest wymaganych do obliczenia dowodu oszustwa.
 
-Jednorundowe interaktywne schematy dowodzenia odtwarzają sporne transakcje na L1 w celu wykrycia nieprawidłowych asercji. Protokół rollupu emuluje ponowne wykonanie spornej transakcji na L1 (Ethereum) przy użyciu kontraktu weryfikującego, a obliczony korzeń stanu decyduje o tym, kto wygra wyzwanie. Jeśli roszczenie podmiotu zgłaszającego zastrzeżenia co do prawidłowego stanu rollupu jest poprawne, operator jest karany poprzez obcięcie (slashing) jego zabezpieczenia (bondu).
+Jednorundowe interaktywne schematy dowodzenia odtwarzają sporne transakcje w L1 w celu wykrycia nieprawidłowych twierdzeń. Protokół rollupa emuluje ponowne wykonanie spornej transakcji w L1 (Ethereum) przy użyciu kontraktu weryfikatora, a obliczony korzeń stanu określa, kto wygrywa wyzwanie. Jeśli roszczenie rzucającego wyzwanie dotyczące prawidłowego stanu rollupa jest poprawne, operator zostaje ukarany cięciem swojej kaucji.
 
-Jednak ponowne wykonywanie transakcji na L1 w celu wykrycia oszustwa wymaga publikowania zobowiązań stanu dla poszczególnych transakcji i zwiększa ilość danych, które rollupy muszą publikować w łańcuchu. Odtwarzanie transakcji wiąże się również ze znacznymi kosztami gazu. Z tych powodów rollupy optymistyczne przechodzą na wielorundowe dowodzenie interaktywne, które osiąga ten sam cel (tj. wykrywanie nieprawidłowych operacji rollupu) z większą wydajnością.
+Jednak ponowne wykonywanie transakcji w L1 w celu wykrycia oszustwa wymaga publikowania zobowiązań stanu dla poszczególnych transakcji i zwiększa ilość danych, które rollupy muszą publikować onchain. Odtwarzanie transakcji wiąże się również ze znacznymi kosztami gazu. Z tych powodów optymistyczne rollupy przechodzą na wielorundowe interaktywne dowodzenie, które osiąga ten sam cel (tj. wykrywanie nieprawidłowych operacji rollupa) z większą wydajnością.
 
-#### Wielorundowe dowodzenie interaktywne {#multi-round-interactive-proving}
+#### Wielorundowe interaktywne dowodzenie {#multi-round-interactive-proving}
 
-Wielorundowe dowodzenie interaktywne obejmuje protokół wymiany informacji między stroną zgłaszającą asercję a stroną ją kwestionującą, nadzorowany przez kontrakt weryfikujący L1, który ostatecznie decyduje, która strona kłamie. Gdy węzeł L2 zakwestionuje asercję, strona zgłaszająca asercję jest zobowiązana do podzielenia spornej asercji na dwie równe połowy. Każda pojedyncza asercja w tym przypadku będzie zawierać tyle samo kroków obliczeniowych co druga.
+Wielorundowe interaktywne dowodzenie obejmuje protokół wymiany informacji między twierdzącym a rzucającym wyzwanie, nadzorowany przez kontrakt weryfikatora L1, który ostatecznie decyduje, która strona kłamie. Po tym, jak węzeł L2 zakwestionuje twierdzenie, twierdzący jest zobowiązany do podzielenia spornego twierdzenia na dwie równe połowy. Każde pojedyncze twierdzenie w tym przypadku będzie zawierało tyle samo kroków obliczeniowych, co drugie.
 
-Strona kwestionująca wybierze następnie, którą asercję chce zakwestionować. Proces dzielenia (zwany „protokołem bisekcji”) jest kontynuowany, dopóki obie strony nie spierają się o asercję dotyczącą _pojedynczego_ kroku wykonania. W tym momencie kontrakt L1 rozstrzygnie spór, oceniając instrukcję (i jej wynik) w celu wykrycia oszukującej strony.
+Rzucający wyzwanie wybierze następnie, które twierdzenie chce zakwestionować. Proces podziału (zwany „protokołem bisekcji”) trwa do momentu, aż obie strony będą kwestionować twierdzenie dotyczące _pojedynczego_ kroku wykonania. W tym momencie kontrakt L1 rozwiąże spór, oceniając instrukcję (i jej wynik), aby złapać oszukującą stronę.
 
-Strona zgłaszająca asercję jest zobowiązana do dostarczenia „dowodu jednokrokowego” weryfikującego ważność spornego obliczenia jednokrokowego. Jeśli strona zgłaszająca asercję nie dostarczy dowodu jednokrokowego lub weryfikator L1 uzna dowód za nieważny, przegrywa wyzwanie.
+Twierdzący jest zobowiązany do dostarczenia „dowodu jednokrokowego” weryfikującego ważność spornych obliczeń jednokrokowych. Jeśli twierdzący nie dostarczy dowodu jednokrokowego lub weryfikator L1 uzna dowód za nieważny, przegrywa on wyzwanie.
 
-Kilka uwag na temat tego rodzaju dowodu oszustwa:
+Kilka uwag na temat tego typu dowodu oszustwa:
 
-1. Wielorundowe interaktywne dowodzenie oszustwa jest uważane za wydajne, ponieważ minimalizuje pracę, jaką łańcuch L1 musi wykonać w arbitrażu sporów. Zamiast odtwarzać całą transakcję, łańcuch L1 musi jedynie ponownie wykonać jeden krok w wykonaniu rollupu.
+1. Wielorundowe interaktywne dowodzenie oszustw jest uważane za wydajne, ponieważ minimalizuje pracę, jaką łańcuch L1 musi wykonać w arbitrażu sporów. Zamiast odtwarzać całą transakcję, łańcuch L1 musi jedynie ponownie wykonać jeden krok w wykonaniu rollupa.
 
-2. Protokoły bisekcji zmniejszają ilość danych publikowanych w łańcuchu (nie ma potrzeby publikowania zatwierdzeń stanu dla każdej transakcji). Ponadto transakcje rollupów optymistycznych nie są ograniczone limitem gazu Ethereum. Odwrotnie, rollupy optymistyczne ponownie wykonujące transakcje muszą upewnić się, że transakcja L2 ma niższy limit gazu, aby emulować jej wykonanie w ramach pojedynczej transakcji Ethereum.
+2. Protokoły bisekcji zmniejszają ilość danych publikowanych onchain (nie ma potrzeby publikowania zobowiązań stanu dla każdej transakcji). Ponadto transakcje optymistycznego rollupa nie są ograniczone przez limit gazu Ethereum. Z kolei optymistyczne rollupy ponownie wykonujące transakcje muszą upewnić się, że transakcja L2 ma niższy limit gazu, aby emulować jej wykonanie w ramach pojedynczej transakcji Ethereum.
 
-3. Część zabezpieczenia (bondu) złośliwej strony zgłaszającej asercję jest przyznawana stronie kwestionującej, podczas gdy druga część jest spalana. Spalanie zapobiega zmowie między walidatorami; jeśli dwóch walidatorów zmówi się w celu zainicjowania fałszywych wyzwań, nadal stracą znaczną część całej stawki (stake).
+3. Część kaucji złośliwego twierdzącego jest przyznawana rzucającemu wyzwanie, podczas gdy druga część jest spalana. Spalanie zapobiega zmowie między walidatorami; jeśli dwa walidatory wejdą w zmowę w celu zainicjowania fałszywych wyzwań, i tak stracą znaczną część całej stawki.
 
-4. Wielorundowe dowodzenie interaktywne wymaga, aby obie strony (zgłaszająca asercję i kwestionująca ją) wykonały ruchy w określonym oknie czasowym. Niewykonanie działania przed upływem terminu powoduje, że strona, która się go nie dotrzymała, przegrywa wyzwanie.
+4. Wielorundowe interaktywne dowodzenie wymaga od obu stron (twierdzącego i rzucającego wyzwanie) wykonania ruchów w określonym oknie czasowym. Brak działania przed upływem terminu powoduje, że strona zwlekająca przegrywa wyzwanie.
 
-#### Dlaczego dowody oszustwa mają znaczenie dla rollupów optymistycznych {#fraud-proof-benefits}
+#### Dlaczego dowody oszustwa mają znaczenie dla optymistycznych rollupów {#fraud-proof-benefits}
 
-Dowody oszustwa są ważne, ponieważ ułatwiają _finalizację niewymagającą zaufania_ w rollupach optymistycznych. Finalizacja niewymagająca zaufania to cecha rollupów optymistycznych, która gwarantuje, że transakcja — o ile jest ważna — zostanie ostatecznie potwierdzona.
+Dowody oszustwa są ważne, ponieważ ułatwiają _ostateczność niewymagającą zaufania_ w optymistycznych rollupach. Ostateczność niewymagająca zaufania to cecha optymistycznych rollupów, która gwarantuje, że transakcja — o ile jest ważna — zostanie ostatecznie potwierdzona.
 
-Złośliwe węzły mogą próbować opóźnić potwierdzenie prawidłowego bloku rollupu, rozpoczynając fałszywe wyzwania. Jednakże, dowody oszustwa ostatecznie udowodnią ważność bloku rollupu i spowodują jego potwierdzenie.
+Złośliwe węzły mogą próbować opóźnić potwierdzenie ważnego bloku rollupa, rozpoczynając fałszywe wyzwania. Jednak dowody oszustwa ostatecznie udowodnią ważność bloku rollupa i spowodują jego potwierdzenie.
 
-Jest to również związane z inną właściwością bezpieczeństwa rollupów optymistycznych: ważność łańcucha zależy od istnienia _jednego_ uczciwego węzła. Uczciwy węzeł może prawidłowo rozwijać łańcuch, publikując prawidłowe asercje lub kwestionując nieprawidłowe asercje. W każdym przypadku złośliwe węzły, które wejdą w spór z uczciwym węzłem, stracą swoje stawki (stake) podczas procesu dowodzenia oszustwa.
+Wiąże się to również z inną właściwością bezpieczeństwa optymistycznych rollupów: ważność łańcucha opiera się na istnieniu _jednego_ uczciwego węzła. Uczciwy węzeł może poprawnie posuwać łańcuch do przodu, publikując ważne twierdzenia lub kwestionując nieważne twierdzenia. W każdym przypadku złośliwe węzły, które wejdą w spór z uczciwym węzłem, stracą swoje stawki podczas procesu dowodzenia oszustwa.
 
 ### Interoperacyjność L1/L2 {#l1-l2-interoperability}
 
-Rollupy optymistyczne są zaprojektowane pod kątem interoperacyjności z siecią Mainnet Ethereum i pozwalają użytkownikom przekazywać wiadomości i dowolne dane między L1 a L2. Są one również kompatybilne z EVM, więc można przenieść istniejące [dapki](/developers/docs/dapps/) do rollupów optymistycznych lub tworzyć nowe dapki za pomocą narzędzi deweloperskich Ethereum.
+Optymistyczne rollupy są zaprojektowane z myślą o interoperacyjności z siecią główną Ethereum i pozwalają użytkownikom na przekazywanie wiadomości i dowolnych danych między L1 a L2. Są one również kompatybilne z EVM, więc możesz przenieść istniejące [zdecentralizowane aplikacje (dapp)](/developers/docs/dapps/) do optymistycznych rollupów lub tworzyć nowe dappy przy użyciu narzędzi programistycznych Ethereum.
 
-#### 1. Przenoszenie aktywów {#asset-movement}
+#### 1. Przemieszczanie aktywów {#asset-movement}
 
-##### Wejście do rollupu
+##### Wejście do rollupa
 
-Aby użyć rollupu optymistycznego, użytkownicy wpłacają ETH, tokeny ERC-20 i inne akceptowane aktywa do kontraktu [mostu](/developers/docs/bridges/) rollupu na L1. Kontrakt mostu przekaże transakcję do L2, gdzie równoważna ilość aktywów jest mintowana i wysyłana na wybrany adres użytkownika w rollupie optymistycznym.
+Aby skorzystać z optymistycznego rollupa, użytkownicy deponują ETH, tokeny ERC-20 i inne akceptowane aktywa w kontrakcie [mostu](/developers/docs/bridges/) rollupa w L1. Kontrakt mostu przekaże transakcję do L2, gdzie równoważna ilość aktywów jest wybijana i wysyłana na wybrany przez użytkownika adres w optymistycznym rollupie.
 
-Transakcje generowane przez użytkownika (jak depozyt z L1 do L2) są zwykle kolejkowane, dopóki sekwencer nie prześle ich ponownie do kontraktu rollupu. Jednakże, w celu zachowania odporności na cenzurę, rollupy optymistyczne pozwalają użytkownikom przesyłać transakcje bezpośrednio do kontraktu rollupu w łańcuchu, jeśli zostały one opóźnione poza maksymalny dozwolony czas.
+Transakcje generowane przez użytkowników (takie jak depozyt L1 > L2) są zazwyczaj kolejkowane, dopóki sekwenser nie prześle ich ponownie do kontraktu rollupa. Jednak aby zachować odporność na cenzurę, optymistyczne rollupy pozwalają użytkownikom na przesłanie transakcji bezpośrednio do kontraktu rollupa onchain, jeśli została ona opóźniona powyżej maksymalnego dozwolonego czasu.
 
-Niektóre rollupy optymistyczne stosują bardziej bezpośrednie podejście, aby zapobiec cenzurowaniu użytkowników przez sekwencery. W tym przypadku blok jest definiowany przez wszystkie transakcje przesłane do kontraktu L1 od poprzedniego bloku (np. depozyty) oprócz transakcji przetwarzanych w łańcuchu rollupu. Jeśli sekwencer zignoruje transakcję L1, opublikuje (w sposób dający się udowodnić) niewłaściwy korzeń stanu; dlatego sekwencery nie mogą opóźniać wiadomości generowanych przez użytkowników po ich opublikowaniu na L1.
+Niektóre optymistyczne rollupy przyjmują bardziej bezpośrednie podejście, aby zapobiec cenzurowaniu użytkowników przez sekwensery. Tutaj blok jest definiowany przez wszystkie transakcje przesłane do kontraktu L1 od poprzedniego bloku (np. depozyty) oprócz transakcji przetwarzanych w łańcuchu rollupa. Jeśli sekwenser zignoruje transakcję L1, opublikuje (możliwy do udowodnienia) błędny korzeń stanu; dlatego sekwensery nie mogą opóźniać wiadomości generowanych przez użytkowników po ich opublikowaniu w L1.
 
-##### Wyjście z rollupu
+##### Wyjście z rollupa
 
-Wycofanie się z rollupu optymistycznego do Ethereum jest trudniejsze ze względu na schemat dowodzenia oszustwa. Jeśli użytkownik inicjuje transakcję z L2 do L1 w celu wypłaty środków zdeponowanych na L1, musi poczekać, aż upłynie okres wyzwania — trwający około siedmiu dni. Niemniej jednak, sam proces wypłaty jest dość prosty.
+Wypłata z optymistycznego rollupa do Ethereum jest trudniejsza ze względu na schemat dowodzenia oszustw. Jeśli użytkownik zainicjuje transakcję L2 > L1 w celu wypłaty środków zdeponowanych w L1, musi poczekać, aż upłynie okres wyzwania — trwający około siedmiu dni. Niemniej jednak sam proces wypłaty jest dość prosty.
 
-Po zainicjowaniu żądania wypłaty w rollupie L2, transakcja jest włączana do następnej partii, podczas gdy aktywa użytkownika w rollupie są spalane. Gdy partia zostanie opublikowana na Ethereum, użytkownik może obliczyć dowód Merklego weryfikujący włączenie jego transakcji wyjścia do bloku. Następnie pozostaje kwestia odczekania okresu opóźnienia w celu sfinalizowania transakcji na L1 i wypłaty środków do sieci Mainnet.
+Po zainicjowaniu żądania wypłaty w rollupie L2, transakcja jest włączana do następnej partii, podczas gdy aktywa użytkownika w rollupie są spalane. Po opublikowaniu partii w Ethereum użytkownik może obliczyć dowód Merkle'a weryfikujący włączenie jego transakcji wyjścia do bloku. Następnie pozostaje tylko przeczekać okres opóźnienia, aby sfinalizować transakcję w L1 i wypłacić środki do Sieci głównej.
 
-Aby uniknąć tygodniowego oczekiwania przed wypłatą środków do Ethereum, użytkownicy rollupów optymistycznych mogą skorzystać z usług **dostawcy płynności** (LP). Dostawca płynności przejmuje własność oczekującej wypłaty z L2 i płaci użytkownikowi na L1 (w zamian za opłatę).
+Aby uniknąć czekania tygodnia przed wypłatą środków do Ethereum, użytkownicy optymistycznego rollupa mogą skorzystać z usług **dostawcy płynności** (LP). Dostawca płynności przejmuje własność oczekującej wypłaty L2 i płaci użytkownikowi w L1 (w zamian za opłatę).
 
-Dostawcy płynności mogą sprawdzić ważność żądania wypłaty użytkownika (samodzielnie wykonując łańcuch) przed zwolnieniem środków. W ten sposób mają pewność, że transakcja zostanie ostatecznie potwierdzona (tj. finalizacja niewymagająca zaufania).
+Dostawcy płynności mogą sprawdzić ważność żądania wypłaty użytkownika (samodzielnie wykonując łańcuch) przed uwolnieniem środków. W ten sposób mają pewność, że transakcja zostanie ostatecznie potwierdzona (tj. ostateczność niewymagająca zaufania).
 
 #### 2. Kompatybilność z EVM {#evm-compatibility}
 
-Dla deweloperów zaletą rollupów optymistycznych jest ich kompatybilność — lub, co jeszcze lepsze, równoważność — z [Wirtualną Maszyną Ethereum (EVM)](/developers/docs/evm/). Rollupy kompatybilne z EVM są zgodne ze specyfikacjami zawartymi w [Żółtej Księdze Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf) i obsługują EVM na poziomie kodu bajtowego.
+Dla programistów zaletą optymistycznych rollupów jest ich kompatybilność — a jeszcze lepiej, równoważność — z [Maszyną Wirtualną Ethereum (EVM)](/developers/docs/evm/). Rollupy kompatybilne z EVM są zgodne ze specyfikacjami zawartymi w [żółtej księdze Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf) i obsługują EVM na poziomie kodu bajtowego.
 
-Kompatybilność z EVM w rollupach optymistycznych ma następujące zalety:
+Kompatybilność z EVM w optymistycznych rollupach ma następujące korzyści:
 
-i. Deweloperzy mogą migrować istniejące smart kontrakty z Ethereum do łańcuchów rollupów optymistycznych bez konieczności obszernego modyfikowania baz kodu. Może to zaoszczędzić czas zespołów deweloperskich podczas wdrażania smart kontraktów Ethereum na L2.
+i. Programiści mogą migrować istniejące inteligentne kontrakty w Ethereum do łańcuchów optymistycznych rollupów bez konieczności wprowadzania rozległych modyfikacji w bazach kodu. Może to zaoszczędzić zespołom programistycznym czas podczas wdrażania inteligentnych kontraktów Ethereum w L2.
 
-ii. Deweloperzy i zespoły projektowe używające rollupów optymistycznych mogą korzystać z infrastruktury Ethereum. Obejmuje to języki programowania, biblioteki kodu, narzędzia testowe, oprogramowanie klienckie, infrastrukturę wdrożeniową i tak dalej.
+ii. Programiści i zespoły projektowe korzystające z optymistycznych rollupów mogą korzystać z infrastruktury Ethereum. Obejmuje to języki programowania, biblioteki kodu, narzędzia testowe, oprogramowanie klienckie, infrastrukturę wdrożeniową i tak dalej.
 
-Korzystanie z istniejących narzędzi jest ważne, ponieważ narzędzia te zostały gruntownie poddane audytowi, debugowaniu i ulepszaniu na przestrzeni lat. Eliminuje to również potrzebę uczenia się przez deweloperów Ethereum, jak budować z całkowicie nowym stosem deweloperskim.
+Korzystanie z istniejących narzędzi jest ważne, ponieważ narzędzia te były przez lata intensywnie audytowane, debugowane i ulepszane. Eliminuje to również potrzebę uczenia się przez programistów Ethereum, jak budować przy użyciu całkowicie nowego stosu technologicznego.
 
-#### 3. Wywołania kontraktów międzyłańcuchowych {#cross-chain-contract-calls}
+#### 3. Międzyłańcuchowe wywołania kontraktów {#cross-chain-contract-calls}
 
-Użytkownicy (konta posiadane zewnętrznie) wchodzą w interakcję z kontraktami L2, przesyłając transakcję do kontraktu rollupu lub zlecając to sekwencerowi lub walidatorowi. Rollupy optymistyczne pozwalają również kontom kontraktowym na Ethereum wchodzić w interakcję z kontraktami L2 przy użyciu kontraktów pomostowych do przekazywania wiadomości i danych między L1 a L2. Oznacza to, że można zaprogramować kontrakt L1 na sieci Mainnet Ethereum, aby wywoływał funkcje należące do kontraktów na rollupie optymistycznym L2.
+Użytkownicy (konta posiadane zewnętrznie) wchodzą w interakcję z kontraktami L2, przesyłając transakcję do kontraktu rollupa lub zlecając to sekwenserowi lub walidatorowi. Optymistyczne rollupy pozwalają również kontom kontraktów w Ethereum na interakcję z kontraktami L2 za pomocą kontraktów mostujących do przekazywania wiadomości i danych między L1 a L2. Oznacza to, że możesz zaprogramować kontrakt L1 w sieci głównej Ethereum, aby wywoływał funkcje należące do kontraktów w optymistycznym rollupie L2.
 
-Wywołania kontraktów międzyłańcuchowych odbywają się asynchronicznie, co oznacza, że wywołanie jest najpierw inicjowane, a następnie wykonywane w późniejszym czasie. Różni się to od wywołań między dwoma kontraktami na Ethereum, gdzie wywołanie daje natychmiastowe rezultaty.
+Międzyłańcuchowe wywołania kontraktów odbywają się asynchronicznie — co oznacza, że wywołanie jest najpierw inicjowane, a następnie wykonywane w późniejszym czasie. Różni się to od wywołań między dwoma kontraktami w Ethereum, gdzie wywołanie natychmiast przynosi rezultaty.
 
-Przykładem wywołania kontraktu międzyłańcuchowego jest opisany wcześniej depozyt tokenów. Kontrakt na L1 deponuje tokeny użytkownika i wysyła wiadomość do sparowanego kontraktu L2, aby wyemitować równoważną ilość tokenów w rollupie.
+Przykładem międzyłańcuchowego wywołania kontraktu jest opisany wcześniej depozyt tokenów. Kontrakt w L1 deponuje tokeny użytkownika i wysyła wiadomość do sparowanego kontraktu L2, aby wybić równą ilość tokenów w rollupie.
 
-Ponieważ wywołania wiadomości międzyłańcuchowych skutkują wykonaniem kontraktu, nadawca jest zwykle zobowiązany do pokrycia [kosztów gazu](/developers/docs/gas/) za obliczenia. Zaleca się ustawienie wysokiego limitu gazu, aby zapobiec niepowodzeniu transakcji w docelowym łańcuchu. Scenariusz mostkowania tokenów jest dobrym przykładem; jeśli strona L1 transakcji (deponowanie tokenów) działa, ale strona L2 (mintowanie nowych tokenów) zawodzi z powodu niskiego gazu, depozyt staje się nieodwracalny.
+Ponieważ międzyłańcuchowe wywołania wiadomości skutkują wykonaniem kontraktu, nadawca jest zazwyczaj zobowiązany do pokrycia [kosztów gazu](/developers/docs/gas/) za obliczenia. Zaleca się ustawienie wysokiego limitu gazu, aby zapobiec niepowodzeniu transakcji w łańcuchu docelowym. Scenariusz mostowania tokenów jest dobrym przykładem; jeśli strona L1 transakcji (deponowanie tokenów) zadziała, ale strona L2 (wybijanie nowych tokenów) nie powiedzie się z powodu małej ilości gazu, depozyt staje się nie do odzyskania.
 
-Na koniec należy zauważyć, że wywołania wiadomości z L2 do L1 między kontraktami muszą uwzględniać opóźnienia (wywołania z L1 do L2 są zazwyczaj wykonywane po kilku minutach). Dzieje się tak, ponieważ wiadomości wysyłane do sieci Mainnet z rollupu optymistycznego nie mogą być wykonane, dopóki nie upłynie okno wyzwania.
+Na koniec należy zauważyć, że wywołania wiadomości L2 > L1 między kontraktami muszą uwzględniać opóźnienia (wywołania L1 > L2 są zazwyczaj wykonywane po kilku minutach). Dzieje się tak, ponieważ wiadomości wysyłane do Sieci głównej z optymistycznego rollupa nie mogą zostać wykonane, dopóki nie wygaśnie okno wyzwania.
 
-## Jak działają opłaty za rollupy optymistyczne? {#how-do-optimistic-rollup-fees-work}
+## Jak działają opłaty w optymistycznych rollupach? {#how-do-optimistic-rollup-fees-work}
 
-Rollupy optymistyczne używają schematu opłat za gaz, podobnie jak Ethereum, do określenia, ile użytkownicy płacą za transakcję. Opłaty pobierane w rollupach optymistycznych zależą od następujących składników:
+Optymistyczne rollupy wykorzystują schemat opłat za gaz, podobnie jak Ethereum, aby określić, ile użytkownicy płacą za transakcję. Opłaty pobierane w optymistycznych rollupach zależą od następujących elementów:
 
-1. **Zapis stanu**: Rollupy optymistyczne publikują dane transakcji i nagłówki bloków (składające się z haszu nagłówka poprzedniego bloku, korzenia stanu, korzenia partii) w Ethereum jako `blob`, czyli „duży obiekt binarny”. [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) wprowadził opłacalne rozwiązanie do dołączania danych w łańcuchu. `blob` to nowe pole transakcji, które pozwala rollupom publikować skompresowane dane o przejściu stanu do warstwy L1 Ethereum. W przeciwieństwie do `calldata`, które pozostaje na stałe w łańcuchu, bloby są krótkotrwałe i mogą być usuwane z klientów po [4096 epokach](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (około 18 dni). Używając blobów do publikowania partii skompresowanych transakcji, rollupy optymistyczne mogą znacznie obniżyć koszt zapisywania transakcji na L1.
+1. **Zapis stanu**: Optymistyczne rollupy publikują dane transakcji i nagłówki bloków (składające się z hasha poprzedniego nagłówka bloku, korzenia stanu, korzenia partii) w Ethereum jako `blob` lub „duży obiekt binarny” (binary large object). [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) wprowadziło opłacalne rozwiązanie do włączania danych onchain. `blob` to nowe pole transakcji, które pozwala rollupom na przesyłanie skompresowanych danych przejścia stanu do Ethereum L1. W przeciwieństwie do `calldata`, które pozostaje na stałe onchain, bloby są krótkotrwałe i mogą zostać usunięte z klientów po [4096 epokach](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (około 18 dni). Używając blobów do przesyłania partii skompresowanych transakcji, optymistyczne rollupy mogą znacznie obniżyć koszt zapisywania transakcji w L1.
 
-2. **Zużyty gaz za bloby**: Transakcje przenoszące bloby wykorzystują dynamiczny mechanizm opłat podobny do tego wprowadzonego przez [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). Opłata za gaz dla transakcji typu 3 uwzględnia podstawową opłatę za bloby, która jest określana przez sieć na podstawie zapotrzebowania na przestrzeń dla blobów i wykorzystania przestrzeni dla blobów przez wysyłaną transakcję.
+2. **Zużyty gaz bloba**: Transakcje przenoszące bloby wykorzystują mechanizm dynamicznych opłat podobny do tego wprowadzonego przez [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). Opłata za gaz dla transakcji typu 3 uwzględnia opłatę podstawową za bloby, która jest określana przez sieć na podstawie popytu na przestrzeń blobów i wykorzystania przestrzeni blobów przez wysyłaną transakcję.
 
-3. **Opłaty dla operatorów L2**: Jest to kwota płacona węzłom rollupu jako rekompensata za koszty obliczeniowe poniesione przy przetwarzaniu transakcji, podobnie jak opłaty za gaz na Ethereum. Węzły rollupów pobierają niższe opłaty transakcyjne, ponieważ warstwy L2 mają wyższą zdolność przetwarzania i nie borykają się z przeciążeniami sieci, które zmuszają walidatorów na Ethereum do priorytetowego traktowania transakcji z wyższymi opłatami.
+3. **Opłaty operatora L2**: Jest to kwota płacona węzłom rollupa jako rekompensata za koszty obliczeniowe poniesione podczas przetwarzania transakcji, podobnie jak opłaty za gaz w Ethereum. Węzły rollupa pobierają niższe opłaty transakcyjne, ponieważ L2 mają wyższe możliwości przetwarzania i nie borykają się z przeciążeniami sieci, które zmuszają walidatory w Ethereum do priorytetyzowania transakcji z wyższymi opłatami.
 
-Rollupy optymistyczne stosują kilka mechanizmów w celu obniżenia opłat dla użytkowników, w tym grupowanie transakcji i kompresowanie `calldata` w celu zmniejszenia kosztów publikacji danych. Możesz sprawdzić [narzędzie do śledzenia opłat L2](https://l2fees.info/), aby uzyskać przegląd w czasie rzeczywistym, ile kosztuje korzystanie z rollupów optymistycznych opartych na Ethereum.
+Optymistyczne rollupy stosują kilka mechanizmów w celu obniżenia opłat dla użytkowników, w tym wsadowanie transakcji i kompresję `calldata` w celu zmniejszenia kosztów publikacji danych. Możesz sprawdzić [narzędzie do śledzenia opłat L2](https://l2fees.info/), aby uzyskać wgląd w czasie rzeczywistym w to, ile kosztuje korzystanie z optymistycznych rollupów opartych na Ethereum.
 
-## Jak rollupy optymistyczne skalują Ethereum? {#scaling-ethereum-with-optimistic-rollups}
+## Jak optymistyczne rollupy skalują Ethereum? {#scaling-ethereum-with-optimistic-rollups}
 
-Jak wyjaśniono, rollupy optymistyczne publikują skompresowane dane transakcji na Ethereum, aby zagwarantować dostępność danych. Możliwość kompresji danych publikowanych w łańcuchu jest kluczowa dla skalowania przepustowości na Ethereum za pomocą rollupów optymistycznych.
+Jak wyjaśniono, optymistyczne rollupy publikują skompresowane dane transakcji w Ethereum, aby zagwarantować dostępność danych. Zdolność do kompresji danych publikowanych onchain ma kluczowe znaczenie dla skalowania przepustowości w Ethereum za pomocą optymistycznych rollupów.
 
-Główny łańcuch Ethereum nakłada limity na to, ile danych mogą pomieścić bloki, wyrażone w jednostkach gazu ([średni rozmiar bloku](/developers/docs/blocks/#block-size) to 15 milionów gazu). Chociaż ogranicza to ilość gazu, jaką może zużyć każda transakcja, oznacza to również, że możemy zwiększyć liczbę transakcji przetwarzanych w bloku poprzez zmniejszenie ilości danych związanych z transakcjami — co bezpośrednio poprawia skalowalność.
+Główny łańcuch Ethereum nakłada limity na to, ile danych mogą pomieścić bloki, wyrażone w jednostkach gazu ([średni rozmiar bloku](/developers/docs/blocks/#block-size) to 15 milionów gazu). Chociaż ogranicza to ilość gazu, jaką może zużyć każda transakcja, oznacza to również, że możemy zwiększyć liczbę transakcji przetwarzanych na blok poprzez zmniejszenie danych związanych z transakcjami — bezpośrednio poprawiając skalowalność.
 
-Rollupy optymistyczne wykorzystują kilka technik w celu osiągnięcia kompresji danych transakcyjnych i poprawy wskaźników TPS. Na przykład, ten [artykuł](https://vitalik.eth.limo/general/2021/01/05/rollup.html) porównuje dane generowane przez podstawową transakcję użytkownika (wysyłanie etheru) w sieci Mainnet z ilością danych generowanych przez tę samą transakcję w rollupie:
+Optymistyczne rollupy wykorzystują kilka technik w celu osiągnięcia kompresji danych transakcji i poprawy wskaźników TPS. Na przykład ten [artykuł](https://vitalik.eth.limo/general/2021/01/05/rollup.html) porównuje dane, które podstawowa transakcja użytkownika (wysyłanie etheru) generuje w Sieci głównej, z tym, ile danych ta sama transakcja generuje w rollupie:
 
-| Parametr | Ethereum (L1)                     | Rollup (L2) |
-| -------- | ---------------------------------------------------- | ------------------------------ |
-| Nonce    | ~3                                   | 0                              |
-| Gasprice | ~8                                   | 0-0.5          |
-| Gaz      | 3                                                    | 0-0.5          |
-| To       | 21                                                   | 4                              |
-| Wartość  | 9                                                    | ~3             |
-| Podpis   | ~68 (2 + 33 + 33) | ~0,5           |
-| From     | 0 (odzyskane z sig)               | 4                              |
-| **Suma** | **~112 bajtów**                      | **~12 bajtów** |
+| Parametr | Ethereum (L1) | Rollup (L2) |
+| --------- | ---------------------- | ------------- |
+| Nonce | ~3 | 0 |
+| Cena gazu | ~8 | 0-0.5 |
+| Gaz | 3 | 0-0.5 |
+| Do | 21 | 4 |
+| Wartość | 9 | ~3 |
+| Podpis | ~68 (2 + 33 + 33) | ~0.5 |
+| Od | 0 (odzyskane z podpisu) | 4 |
+| **Razem** | **\~112 bajtów** | **\~12 bajtów** |
 
-Wykonanie przybliżonych obliczeń na podstawie tych danych może pomóc pokazać ulepszenia skalowalności, jakie oferuje rollup optymistyczny:
+Wykonanie zgrubnych obliczeń na tych liczbach może pomóc pokazać poprawę skalowalności zapewnianą przez optymistyczny rollup:
 
 1. Docelowy rozmiar każdego bloku to 15 milionów gazu, a weryfikacja jednego bajtu danych kosztuje 16 gazu. Podzielenie średniego rozmiaru bloku przez 16 gazu (15 000 000/16) pokazuje, że średni blok może pomieścić **937 500 bajtów danych**.
-2. Jeśli podstawowa transakcja rollupu zużywa 12 bajtów, to średni blok Ethereum może przetworzyć **78 125 transakcji rollupu** (937 500/12) lub **39 partii rollupu** (jeśli każda partia zawiera średnio 2000 transakcji).
-3. Jeśli nowy blok jest produkowany na Ethereum co 15 sekund, to szybkość przetwarzania rollupu wyniosłaby około **5 208 transakcji na sekundę**. Osiąga się to, dzieląc liczbę podstawowych transakcji rollupu, które może pomieścić blok Ethereum (**78 125**), przez średni czas bloku (**15 sekund**).
+2. Jeśli podstawowa transakcja rollupa zużywa 12 bajtów, to średni blok Ethereum może przetworzyć **78 125 transakcji rollupa** (937 500/12) lub **39 partii rollupa** (jeśli każda partia zawiera średnio 2000 transakcji).
+3. Jeśli nowy blok jest produkowany w Ethereum co 15 sekund, to prędkość przetwarzania rollupa wyniosłaby około **5208 transakcji na sekundę**. Oblicza się to, dzieląc liczbę podstawowych transakcji rollupa, które może pomieścić blok Ethereum (**78 125**), przez średni czas bloku (**15 sekund**).
 
-Jest to dość optymistyczne oszacowanie, biorąc pod uwagę, że transakcje rollupów optymistycznych nie mogą w całości wypełnić bloku na Ethereum. Może to jednak dać przybliżone pojęcie o tym, jak duże zyski w skalowalności mogą zapewnić rollupy optymistyczne użytkownikom Ethereum (obecne implementacje oferują do 2000 TPS).
+Jest to dość optymistyczne oszacowanie, biorąc pod uwagę, że transakcje optymistycznego rollupa nie mogą stanowić całego bloku w Ethereum. Może to jednak dać ogólne pojęcie o tym, jak duże zyski w zakresie skalowalności optymistyczne rollupy mogą zapewnić użytkownikom Ethereum (obecne implementacje oferują do 2000 TPS).
 
-Oczekuje się, że wprowadzenie [data shardingu](/roadmap/danksharding/) na Ethereum poprawi skalowalność w rollupach optymistycznych. Ponieważ transakcje rollupów muszą dzielić przestrzeń blokową z innymi transakcjami niebędącymi rollupami, ich zdolność przetwarzania jest ograniczona przez przepustowość danych w głównym łańcuchu Ethereum. Danksharding zwiększy dostępną przestrzeń dla łańcuchów L2 do publikowania danych na blok, używając tańszej, nietrwałej pamięci masowej „blob” zamiast drogiej, trwałej `CALLDATA`.
+Oczekuje się, że wprowadzenie [shardingu danych](/roadmap/danksharding/) w Ethereum poprawi skalowalność w optymistycznych rollupach. Ponieważ transakcje rollupa muszą dzielić przestrzeń bloku z innymi transakcjami niebędącymi rollupami, ich zdolność przetwarzania jest ograniczona przepustowością danych w głównym łańcuchu Ethereum. Danksharding zwiększy przestrzeń dostępną dla łańcuchów L2 do publikowania danych na blok, wykorzystując tańsze, nietrwałe przechowywanie w „blobach” zamiast drogiego, trwałego `CALLDATA`.
 
-### Zalety i wady rollupów optymistycznych {#optimistic-rollups-pros-and-cons}
+### Plusy i minusy optymistycznych rollupów {#optimistic-rollups-pros-and-cons}
 
-| Zalety                                                                                                                                                                                                    | Wady                                                                                                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Oferuje ogromne ulepszenia w skalowalności bez poświęcania bezpieczeństwa lub braku konieczności zaufania.                                                                                | Opóźnienia w finalizacji transakcji z powodu potencjalnych wyzwań związanych z oszustwami.                                                                                                 |
-| Dane transakcji są przechowywane w łańcuchu warstwy 1, co poprawia przejrzystość, bezpieczeństwo, odporność na cenzurę i decentralizację.                                                 | Scentralizowani operatorzy rollupów (sekwencery) mogą wpływać na kolejność transakcji.                                                                                  |
-| Dowodzenie oszustwa gwarantuje finalizację niewymagającą zaufania i pozwala uczciwym mniejszościom zabezpieczyć łańcuch.                                                                  | Jeśli nie ma uczciwych węzłów, złośliwy operator może ukraść środki, publikując nieprawidłowe bloki i zatwierdzenia stanu.                                                                 |
-| Obliczanie dowodów oszustwa jest otwarte dla zwykłych węzłów L2, w przeciwieństwie do dowodów ważności (używanych w rollupach ZK), które wymagają specjalnego sprzętu. | Model bezpieczeństwa opiera się na co najmniej jednym uczciwym węźle wykonującym transakcje rollupu i przesyłającym dowody oszustwa w celu zakwestionowania nieprawidłowych przejść stanu. |
-| Rollupy korzystają z „żywotności niewymagającej zaufania” (każdy może zmusić łańcuch do postępu, wykonując transakcje i publikując asercje)                                            | Użytkownicy muszą czekać na wygaśnięcie tygodniowego okresu wyzwania, zanim wypłacą środki z powrotem do Ethereum.                                                                         |
-| Rollupy optymistyczne opierają się na dobrze zaprojektowanych zachętach kryptoekonomicznych w celu zwiększenia bezpieczeństwa w łańcuchu.                                                 | Rollupy muszą publikować wszystkie dane transakcji w łańcuchu, co może zwiększyć koszty.                                                                                                   |
-| Zgodność z EVM i Solidity pozwala programistom przenosić natywne smart kontrakty Ethereum do rollupów lub używać istniejących narzędzi do tworzenia nowych dapek.                         |                                                                                                                                                                                                            |
+| Plusy | Minusy |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Oferuje ogromną poprawę skalowalności bez poświęcania bezpieczeństwa ani bezzaufaniowości. | Opóźnienia w ostateczności transakcji z powodu potencjalnych wyzwań dotyczących oszustw. |
+| Dane transakcji są przechowywane w łańcuchu warstwy 1, co poprawia przejrzystość, bezpieczeństwo, odporność na cenzurę i decentralizację. | Scentralizowani operatorzy rollupów (sekwensery) mogą wpływać na kolejność transakcji. |
+| Dowodzenie oszustw gwarantuje ostateczność niewymagającą zaufania i pozwala uczciwym mniejszościom zabezpieczyć łańcuch. | Jeśli nie ma uczciwych węzłów, złośliwy operator może ukraść środki, publikując nieprawidłowe bloki i zobowiązania stanu. |
+| Obliczanie dowodów oszustwa jest otwarte dla zwykłych węzłów L2, w przeciwieństwie do dowodów ważności (używanych w ZK-rollupach), które wymagają specjalnego sprzętu. | Model bezpieczeństwa opiera się na co najmniej jednym uczciwym węźle wykonującym transakcje rollupa i przesyłającym dowody oszustwa w celu zakwestionowania nieprawidłowych przejść stanu. |
+| Rollupy korzystają z „żywotności niewymagającej zaufania” (każdy może wymusić postęp łańcucha, wykonując transakcje i publikując twierdzenia). | Użytkownicy muszą poczekać na wygaśnięcie tygodniowego okresu wyzwania przed wypłatą środków z powrotem do Ethereum. |
+| Optymistyczne rollupy opierają się na dobrze zaprojektowanych zachętach kryptoekonomicznych w celu zwiększenia bezpieczeństwa w łańcuchu. | Rollupy muszą publikować wszystkie dane transakcji onchain, co może zwiększyć koszty. |
+| Kompatybilność z EVM i Solidity pozwala programistom na przenoszenie natywnych inteligentnych kontraktów Ethereum do rollupów lub korzystanie z istniejących narzędzi do tworzenia nowych dappów. |
 
-### Wizualne wyjaśnienie rollupów optymistycznych {#optimistic-video}
+### Wizualne wyjaśnienie optymistycznych rollupów {#optimistic-video}
 
-Jesteś raczej wzrokowcem? Zobacz, jak Finematics wyjaśnia rollupy optymistyczne:
+Wolisz uczyć się wzrokowo? Zobacz, jak Finematics wyjaśnia optymistyczne rollupy:
 
-<YouTube id="7pWxCklcNsU" start="263" />
+<VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Dalsze informacje na temat rollupów optymistycznych
+## Dalsza lektura na temat optymistycznych rollupów {#further-reading-on-optimistic-rollups}
 
-- [Jak działają rollupy optymistyczne (Kompletny przewodnik)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Czym jest rollup blockchain? Wprowadzenie techniczne](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
+- [Jak działają optymistyczne rollupy (Kompletny przewodnik)](https://www.alchemy.com/overviews/optimistic-rollups)
+- [Czym jest rollup blockchaina? Wprowadzenie techniczne](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Niezbędny przewodnik po Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Praktyczny przewodnik po rollupach Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [Stan dowodów oszustwa w L2 Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [Jak naprawdę działa rollup Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Dogłębna analiza OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
-- [Czym jest optymistyczna maszyna wirtualna?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
+- [Szczegółowe omówienie OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Czym jest Optymistyczna Maszyna Wirtualna?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
+
+## Samouczki: Optymistyczne rollupy i mosty w Ethereum {#tutorials}
+
+- [Przewodnik po standardowym kontrakcie mostu Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Przewodnik po kodzie z adnotacjami dla standardowego mostu Optimism do przenoszenia aktywów między L1 a L2._

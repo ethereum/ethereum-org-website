@@ -1,6 +1,6 @@
 ---
 title: "ERC-721 非同质化代币标准"
-description: "了解 ERC-721，非同质化代币 (NTF) 的标准，用于表示以太坊上的独特数字资产。"
+description: "了解 ERC-721，这是在以太坊上代表独特数字资产的非同质化代币 (NFT) 标准。"
 lang: zh
 ---
 
@@ -8,32 +8,27 @@ lang: zh
 
 **什么是非同质化代币？**
 
-非同质化代币（NFT）用于以唯一的方式标识某人或者某物。 此类型的代币可以被完美地用于出售下列物品的平台：收藏品、密钥、彩票、音乐会座位编号、体育比赛等。 这种类型的代币有着惊人的潜力，因此它需要一个适当的标准。ERC-721
-就是为解决这个问题而来！
+非同质化代币 (NFT) 用于以独特的方式标识某物或某人。这种类型的代币非常适合用于提供收藏品、访问密钥、彩票、音乐会和体育比赛的编号座位等平台。这种特殊类型的代币具有惊人的潜力，因此它值得拥有一个适当的标准，而 ERC-721 就是为了解决这个问题而诞生的！
 
-**ERC-721 是什么？**
+**什么是 ERC-721？**
 
-ERC-721 为 NFT 引入了一个标准，换言之，这种类型的代币是独一无二的，并且可能与来自同一智能合约的另一代币有不同的价值，也许是因为它的年份、稀有性、甚至是它的观感。
-稍等，看起来怎么样呢？
+ERC-721 引入了 NFT 的标准，换句话说，这种类型的代币是独一无二的，并且可以与来自同一个智能合约的另一个代币具有不同的价值，这可能是由于它的年龄、稀有度，甚至像它的外观等其他因素。等等，外观？
 
-可以！ 所有 NFT 都有一个名为 `tokenId` 的 `uint256` 变量，因此对于任何 ERC-721 合约，该配对
-`contract address, uint256 tokenId` 必须是全局唯一的。 也就是说，一个去中心化应用程序可以有一个“转换器”，它
-使用 `tokenId` 作为输入并输出一些很酷的东西的图像，比如僵尸、武器、技能或超棒的猫咪！
+是的！所有的 NFT 都有一个名为 `tokenId` 的 `uint256` 变量，因此对于任何 ERC-721 合约，`contract address, uint256 tokenId` 对必须是全局唯一的。也就是说，去中心化应用 (dapp) 可以有一个“转换器”，它使用 `tokenId` 作为输入，并输出一些很酷的东西的图像，比如僵尸、武器、技能或令人惊叹的猫咪！
 
 ## 前提条件 {#prerequisites}
 
-- [帐户](/developers/docs/accounts/)
+- [账户](/developers/docs/accounts/)
 - [智能合约](/developers/docs/smart-contracts/)
 - [代币标准](/developers/docs/standards/tokens/)
 
 ## 正文 {#body}
 
-ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter Shirley、Jacob Evans、Nastassia Sachs 在 2018 年 1 月提出，是一个在智能合约中实现代币 API 的非同质化代币标准。
+ERC-721（[以太坊](/)征求意见稿 721）由 William Entriken、Dieter Shirley、Jacob Evans 和 Nastassia Sachs 于 2018 年 1 月提出，是一个非同质化代币标准，它在智能合约中实现了代币的 API。
 
-它提供了一些功能，例如将代币从一个帐户转移到另一个帐户，获取帐户的当前代币余额，获取代币的所有者，以及整个网络的可用代币总供应量。
-除此之外，它还具有其他功能，例如批准帐户中一定数量的代币可以被第三方帐户转移。
+它提供了诸如将代币从一个账户转账到另一个账户、获取账户的当前代币余额、获取特定代币的所有者以及网络上可用代币的总供应量等功能。除此之外，它还有一些其他功能，例如授权第三方账户可以转移某个账户中的一定数量的代币。
 
-如果一个智能合约实现了下列方法和事件，它就可以被称为 ERC-721 非同质化代币合约。 一旦被部署，它将负责跟踪在以太坊上创建的代币。
+如果一个智能合约实现了以下方法和事件，它就可以被称为 ERC-721 非同质化代币合约，并且一旦部署，它将负责跟踪在以太坊上创建的代币。
 
 来自 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)：
 
@@ -61,12 +56,11 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 ### 示例 {#web3py-example}
 
-让我们看看一个标准是多么重要，它使我们能够简单地在以太坊上检查任何 ERC-721 代币合约。
-我们只需要合约的应用程序二进制接口（ABI）就可以创造任何 ERC-721 代币的接口。 下面我们将使用一个简化的应用程序二进制接口，让例子变得更为简单。
+让我们看看标准为何如此重要，它使我们能够轻松检查以太坊上的任何 ERC-721 代币合约。我们只需要合约应用程序二进制接口 (ABI) 即可创建任何 ERC-721 代币的接口。正如你在下面看到的，我们将使用一个简化的 ABI，使其成为一个低门槛的示例。
 
-#### Web3.py 示例 {#web3py-example}
+#### Web3.py 示例 {#web3py-example-2}
 
-首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 程序库：
+首先，确保你已经安装了 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
 
 ```
 pip install web3
@@ -79,12 +73,12 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties 合约
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # 加密猫合约
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties 销售拍卖
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # 加密猫销售拍卖
 
-# 这是一个 ERC-721 NFT 合约的简化版合约应用程序二进制接口 (ABI)。
-# 它只会公开以下方法：balanceOf(address)、name()、ownerOf(tokenId)、symbol()、totalSupply()
+# 这是一个 ERC-721 NFT 合约的简化版合约应用程序二进制接口（ABI）。
+# 它将仅暴露以下方法：balanceOf(address)、name()、ownerOf(tokenId)、symbol()、totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -137,12 +131,12 @@ ck_contract = w3.eth.contract(address=w3.to_checksum_address(ck_token_addr), abi
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
 kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
-print(f"{name} [{symbol}] 在拍卖中的 NFT：{kitties_auctions}")
+print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
-print(f"{name} [{symbol}] 怀孕的 NFT：{pregnant_kitties}")
+print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# 使用 Transfer 事件 ABI 获取已转移的 Kitties 的信息。
+# 使用转账事件 ABI 获取有关已转账加密猫的信息。
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -153,7 +147,7 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# 我们需要事件签名来筛选日志
+# 我们需要事件的签名来过滤日志
 event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.get_logs({
@@ -163,24 +157,24 @@ logs = w3.eth.get_logs({
 })
 
 # 注意：
-#   - 如果没有返回 Transfer 事件，请将区块数从 120 调高。
-#   - 如果没有找到任何 Transfer 事件，你也可以尝试在此处获取一个 tokenId：
+#   - 如果没有返回转账事件，请将区块数量从 120 开始增加。
+#   - 如果你没有找到任何转账事件，你也可以尝试在以下地址获取 tokenId：
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-#       点击展开事件日志并复制其 "tokenId" 参数
+#       点击展开事件的日志并复制其 "tokenId" 参数
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 if recent_tx:
-    kitty_id = recent_tx[0]['tokenId'] # 从上面的链接在此处粘贴 "tokenId"
+    kitty_id = recent_tx[0]['tokenId'] # 将上面链接中的 "tokenId" 粘贴到此处
     is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
-    print(f"{name} [{symbol}] NFT {kitty_id} 是否怀孕：{is_pregnant}")
+    print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
-除了标准事件之外，CryptoKitties 合约还有其它一些有趣的事件。
+加密猫合约除了标准事件外，还有一些有趣的事件。
 
-我们来看看其中的两个：`Pregnant` 和 `Birth`。
+让我们检查其中的两个，`Pregnant` 和 `Birth`。
 
 ```python
-# 使用 Pregnant 和 Birth 事件 ABI 获取关于新 Kitties 的信息。
+# 使用怀孕和出生事件 ABI 获取有关新加密猫的信息。
 ck_extra_events_abi = [
     {
         'anonymous': False,
@@ -204,13 +198,13 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# 我们需要事件签名来筛选日志
+# 我们需要事件的签名来过滤日志
 ck_event_signatures = [
     w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
     w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-# 这是一个 Pregnant 事件：
+# 这是一个怀孕事件：
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
 pregnant_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -220,7 +214,7 @@ pregnant_logs = w3.eth.get_logs({
 
 recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
-# 这是一个 Birth 事件：
+# 这是一个出生事件：
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -231,26 +225,28 @@ birth_logs = w3.eth.get_logs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## 热门 NFT {#popular-nfts}
+## 流行的 NFT {#popular-nfts}
 
-- [Etherscan NFT Tracker](https://etherscan.io/nft-top-contracts) 按转账量列出了以太坊上的顶尖 NFT。
-- [CryptoKitties](https://www.cryptokitties.co/) 是一款游戏，围绕着我们称之为“加密猫”的、可繁殖、可收藏且非常可爱的
-  生物。
-- [Sorare](https://sorare.com/) 是一款全球性的梦幻足球游戏，你可以在其中收集限量版收藏品、
-  管理你的球队并参加比赛以赢取奖品。
-- [以太坊域名服务 (ENS)](https://ens.domains/) 提供了一种安全和去中心化的方式，可以使用简单的、人类可读的名称来定位
-  链上和链下的资源。
-- [POAP](https://poap.xyz) 向参加活动或完成特定操作的人免费发放 NFT。 POAP 的创建和分发是免费的。
-- [Unstoppable Domains](https://unstoppabledomains.com/) 是一家总部位于旧金山的公司，在
-  区块链上构建域名。 区块链域名将加密货币地址替换为人类可读的名称，并可用于启用
-  抗审查网站。
-- [Gods Unchained Cards](https://godsunchained.com/) 是以太坊区块链上的一款集换式卡牌游戏 (TCG)，它使用 NFT 为
-  游戏内资产带来真正的所有权。
-- [Bored Ape Yacht Club](https://boredapeyachtclub.com) 是一个由 10,000 个独特 NFT 组成的收藏系列。它既是可证明其稀有性的艺术品，也充当俱乐部的会员代币，可为成员提供多种特权和福利，而且在社区的努力下，这些特权和福利还会随着时间的推移不断增加。
+- [Etherscan NFT 追踪器](https://etherscan.io/nft-top-contracts) 按转账量列出了以太坊上的顶级 NFT。
+- [加密猫](https://www.cryptokitties.co/) 是一款围绕可繁殖、可收藏且非常可爱的生物（我们称之为加密猫）为中心的游戏。
+- [Sorare](https://sorare.com/) 是一款全球梦幻足球游戏，你可以在其中收集限量版收藏品，管理你的球队并竞争赢取奖品。
+- [以太坊域名服务 (ENS)](https://ens.domains/) 提供了一种安全且去中心化的方式，使用简单、人类可读的名称来寻址区块链内外的资源。
+- [POAP](https://poap.xyz) 向参加活动或完成特定操作的人提供免费的 NFT。POAP 可以免费创建和分发。
+- [Unstoppable Domains](https://unstoppabledomains.com/) 是一家总部位于旧金山的公司，在区块链上构建域名。区块链域名用人类可读的名称取代了加密货币地址，并可用于启用抗审查的网站。
+- [Gods Unchained Cards](https://godsunchained.com/) 是以太坊区块链上的一款集换式卡牌游戏 (TCG)，它使用 NFT 为游戏内资产带来真正的所有权。
+- [无聊猿游艇俱乐部 (Bored Ape Yacht Club)](https://boredapeyachtclub.com) 是 10,000 个独特 NFT 的集合，它不仅是一件可证明稀有的艺术品，还充当俱乐部的会员代币，提供随着社区努力而随时间增加的会员特权和福利。
 
-## 扩展阅读{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [EIP-721：ERC-721 非同质化代币标准](https://eips.ethereum.org/EIPS/eip-721)
-- [OpenZeppelin - ERC-721 文档](https://docs.openzeppelin.com/contracts/3.x/erc721)
-- [OpenZeppelin - ERC-721 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [欧本齐柏林 - ERC-721 文档](https://docs.openzeppelin.com/contracts/3.x/erc721)
+- [欧本齐柏林 - ERC-721 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
+
+## 教程：在以太坊上使用非同质化代币 (ERC-721) 进行构建 {#tutorials}
+
+- [Vyper ERC-721 合约演练](/developers/tutorials/erc-721-vyper-annotated-code/) _– 用 Vyper 编写的完整 ERC-721 NFT 合约的带注释演练。_
+- [如何编写和部署 NFT（第 1/3 部分）](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 编写和部署你的第一个 ERC-721 智能合约的分步指南。_
+- [如何铸造 NFT（第 2/3 部分）](/developers/tutorials/how-to-mint-an-nft/) _– 如何使用你部署的智能合约和 Web3 铸造 ERC-721 NFT。_
+- [如何在钱包中查看你的 NFT（第 3/3 部分）](/developers/tutorials/how-to-view-nft-in-metamask/) _– 部署后如何在梅塔马斯克中显示你铸造的 NFT。_
+- [NFT 铸造器教程](/developers/tutorials/nft-minter/) _– 使用 React 前端、梅塔马斯克和 Alchemy 构建全栈 NFT 铸造去中心化应用 (dapp)。_

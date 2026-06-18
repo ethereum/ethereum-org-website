@@ -1,0 +1,604 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-17T23:33:11.018Z",
+  "englishManifestHash": "faab58f04eb3",
+  "placeholderOrder": [
+    "LINK-b5355b",
+    "LINK-fb2e62",
+    "LINK-61e707",
+    "LINK-a2080c",
+    "LINK-9e8f9d",
+    "CODEBLOCK-441fd7",
+    "CODE-334359",
+    "CODE-b17784",
+    "LINK-900adb",
+    "CODEBLOCK-781784",
+    "LINK-671fe7",
+    "CODEBLOCK-3ea1ad",
+    "CODE-b7f373",
+    "CODE-9177aa",
+    "CODE-9177aa",
+    "CODE-38652a",
+    "CODEBLOCK-12d6be",
+    "CODE-fcd38a",
+    "CODE-3c3209",
+    "CODEBLOCK-a2e507",
+    "CODEBLOCK-fe7c51",
+    "CODEBLOCK-1a8af6",
+    "CODE-2bcb43",
+    "LINK-97efb8",
+    "CODEBLOCK-02f444",
+    "CODE-ea15d8",
+    "CODEBLOCK-349c2e",
+    "CODEBLOCK-5cadbd",
+    "CODE-2687f8",
+    "CODE-774aac",
+    "LINK-ee3332",
+    "CODEBLOCK-3e64ee",
+    "CODEBLOCK-948aaf",
+    "CODE-dde8be",
+    "CODEBLOCK-884bf3",
+    "CODE-774aac",
+    "CODE-860e34",
+    "CODE-60a33e",
+    "CODE-3cbc87",
+    "CODEBLOCK-1434da",
+    "CODE-be9677",
+    "CODEBLOCK-e0b0b6",
+    "LINK-18b278",
+    "CODEBLOCK-f93acf",
+    "CODE-759f8d",
+    "CODEBLOCK-1ec30a",
+    "CODE-b6d267",
+    "LINK-900adb",
+    "CODEBLOCK-b2e8ef",
+    "CODE-dadf6e",
+    "CODEBLOCK-718afc",
+    "CODE-c3641f",
+    "CODE-1f9976",
+    "CODE-8b12c3",
+    "CODEBLOCK-885353",
+    "LINK-528519",
+    "LINK-65fdd0",
+    "CODE-71d982",
+    "LINK-149ae7",
+    "CODE-d2e2ad",
+    "CODEBLOCK-8fb1e1",
+    "CODE-9cf97f",
+    "CODE-759f8d",
+    "CODEBLOCK-198e46",
+    "CODEBLOCK-542ae0",
+    "LINK-a32206",
+    "CODE-a0bcfd",
+    "CODEBLOCK-4de76b",
+    "CODE-d31984",
+    "CODE-02de6d",
+    "CODEBLOCK-6a7181",
+    "CODE-0b59df",
+    "CODE-d954ea",
+    "CODEBLOCK-10e49e",
+    "CODE-3c3209",
+    "CODE-a0bcfd",
+    "CODEBLOCK-4ffd78",
+    "CODE-021f35",
+    "CODE-d2e2ad",
+    "CODEBLOCK-91d8be",
+    "CODEBLOCK-3da986",
+    "CODEBLOCK-4833aa",
+    "LINK-9c1fcb",
+    "CODEBLOCK-12531d",
+    "CODEBLOCK-ca1cee",
+    "CODE-836ff1",
+    "LINK-cc7e6b",
+    "CODEBLOCK-621454",
+    "CODEBLOCK-3ef7bc",
+    "CODEBLOCK-c07531",
+    "CODE-9177aa",
+    "CODEBLOCK-52cb8d",
+    "CODEBLOCK-5efdda",
+    "CODEBLOCK-e7f975",
+    "CODEBLOCK-975b6c",
+    "CODEBLOCK-9414b7",
+    "CODE-be9677",
+    "CODEBLOCK-6fb554",
+    "CODE-3cbc87",
+    "CODEBLOCK-0c46ec",
+    "CODEBLOCK-2bbcba",
+    "CODEBLOCK-34cd99",
+    "LINK-f15e64",
+    "CODE-38652a",
+    "CODE-079132",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-441fd7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-781784": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3ea1ad": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-12d6be": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a2e507": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fe7c51": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1a8af6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-02f444": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-349c2e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5cadbd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3e64ee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-948aaf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-884bf3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1434da": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e0b0b6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f93acf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1ec30a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b2e8ef": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-718afc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-885353": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8fb1e1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-198e46": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-542ae0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4de76b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6a7181": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-10e49e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4ffd78": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-91d8be": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3da986": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4833aa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-12531d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ca1cee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-621454": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3ef7bc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c07531": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-52cb8d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5efdda": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e7f975": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-975b6c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9414b7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6fb554": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0c46ec": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2bbcba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-34cd99": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-334359": {
+      "type": "inline-code",
+      "values": {
+        "content": "#"
+      }
+    },
+    "CODE-b17784": {
+      "type": "inline-code",
+      "values": {
+        "content": "@<keyword>"
+      }
+    },
+    "CODE-b7f373": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom"
+      }
+    },
+    "CODE-9177aa": {
+      "type": "inline-code",
+      "values": {
+        "content": "safeTransferFrom"
+      }
+    },
+    "CODE-38652a": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC721Receiver"
+      }
+    },
+    "CODE-fcd38a": {
+      "type": "inline-code",
+      "values": {
+        "content": "_from"
+      }
+    },
+    "CODE-3c3209": {
+      "type": "inline-code",
+      "values": {
+        "content": "_operator"
+      }
+    },
+    "CODE-2bcb43": {
+      "type": "inline-code",
+      "values": {
+        "content": "view"
+      }
+    },
+    "CODE-ea15d8": {
+      "type": "inline-code",
+      "values": {
+        "content": "tokenId"
+      }
+    },
+    "CODE-2687f8": {
+      "type": "inline-code",
+      "values": {
+        "content": "approved"
+      }
+    },
+    "CODE-774aac": {
+      "type": "inline-code",
+      "values": {
+        "content": "HashMap"
+      }
+    },
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-860e34": {
+      "type": "inline-code",
+      "values": {
+        "content": "HashMap[address, bool]"
+      }
+    },
+    "CODE-60a33e": {
+      "type": "inline-code",
+      "values": {
+        "content": "False"
+      }
+    },
+    "CODE-3cbc87": {
+      "type": "inline-code",
+      "values": {
+        "content": "True"
+      }
+    },
+    "CODE-be9677": {
+      "type": "inline-code",
+      "values": {
+        "content": "minter"
+      }
+    },
+    "CODE-759f8d": {
+      "type": "inline-code",
+      "values": {
+        "content": "__init__"
+      }
+    },
+    "CODE-b6d267": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"\"\""
+      }
+    },
+    "CODE-dadf6e": {
+      "type": "inline-code",
+      "values": {
+        "content": "self.<variable name>"
+      }
+    },
+    "CODE-c3641f": {
+      "type": "inline-code",
+      "values": {
+        "content": "@"
+      }
+    },
+    "CODE-1f9976": {
+      "type": "inline-code",
+      "values": {
+        "content": "@view"
+      }
+    },
+    "CODE-8b12c3": {
+      "type": "inline-code",
+      "values": {
+        "content": "@external"
+      }
+    },
+    "CODE-71d982": {
+      "type": "inline-code",
+      "values": {
+        "content": "bytes32"
+      }
+    },
+    "CODE-d2e2ad": {
+      "type": "inline-code",
+      "values": {
+        "content": "_"
+      }
+    },
+    "CODE-9cf97f": {
+      "type": "inline-code",
+      "values": {
+        "content": "self.supportedInterfaces"
+      }
+    },
+    "CODE-a0bcfd": {
+      "type": "inline-code",
+      "values": {
+        "content": "_owner"
+      }
+    },
+    "CODE-d31984": {
+      "type": "inline-code",
+      "values": {
+        "content": "_tokenId"
+      }
+    },
+    "CODE-02de6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "self.idToOwner[_tokenId]"
+      }
+    },
+    "CODE-0b59df": {
+      "type": "inline-code",
+      "values": {
+        "content": "getApproved"
+      }
+    },
+    "CODE-d954ea": {
+      "type": "inline-code",
+      "values": {
+        "content": "self.idToApprovals[_tokenId]"
+      }
+    },
+    "CODE-021f35": {
+      "type": "inline-code",
+      "values": {
+        "content": "@internal"
+      }
+    },
+    "CODE-836ff1": {
+      "type": "inline-code",
+      "values": {
+        "content": "log"
+      }
+    },
+    "CODE-079132": {
+      "type": "inline-code",
+      "values": {
+        "content": "revert"
+      }
+    },
+    "LINK-b5355b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-721/"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-61e707": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptokitties.co/"
+      }
+    },
+    "LINK-a2080c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy"
+      }
+    },
+    "LINK-9e8f9d": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io/en/latest/index.html"
+      }
+    },
+    "LINK-900adb": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io/en/latest/natspec.html"
+      }
+    },
+    "LINK-671fe7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py"
+      }
+    },
+    "LINK-97efb8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/#events-and-logs"
+      }
+    },
+    "LINK-ee3332": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io/en/latest/types.html#mappings"
+      }
+    },
+    "LINK-18b278": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-165"
+      }
+    },
+    "LINK-528519": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Type_system#Static_type_checking"
+      }
+    },
+    "LINK-65fdd0": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io/en/latest/types.html"
+      }
+    },
+    "LINK-149ae7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-a32206": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io/en/latest/statements.html#assert"
+      }
+    },
+    "LINK-9c1fcb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-cc7e6b": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging"
+      }
+    },
+    "LINK-f15e64": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:33:11.018Z",
+      "status": "success"
+    }
+  }
+}

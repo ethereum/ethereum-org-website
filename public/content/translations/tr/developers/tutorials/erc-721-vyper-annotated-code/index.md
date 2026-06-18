@@ -1,9 +1,9 @@
 ---
-title: "Vyper ERC-721 Sözleşmesine Genel Bakış"
+title: "Vyper ERC-721 Sözleşmesi İncelemesi"
 description: "Ryuya Nakamura'nın ERC-721 sözleşmesi ve nasıl çalıştığı"
 author: Ori Pomerantz
 lang: tr
-tags: [ "vyper", "erc-721", "python" ]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: "Vyper ERC-721"
 published: 2021-04-01
@@ -11,23 +11,22 @@ published: 2021-04-01
 
 ## Giriş {#introduction}
 
-[ERC-721](/developers/docs/standards/tokens/erc-721/) standardı, Değiştirilemez Jetonların (NFT) sahipliğini tutmak için kullanılır.
-[ERC-20](/developers/docs/standards/tokens/erc-20/) jetonları, bireysel jetonlar arasında bir fark olmadığı için bir emtia gibi davranır.
-Bunun aksine, ERC-721 jetonları, farklı kedi
-çizgi filmleri veya farklı gayrimenkullerin tapuları gibi benzer ancak birebir aynı olmayan varlıklar için tasarlanmıştır.
+[ERC-721](/developers/docs/standards/tokens/erc-721/) standardı, Değiştirilemez Token'ların (NFT) sahipliğini tutmak için kullanılır.
+[ERC-20](/developers/docs/standards/tokens/erc-20/) token'ları bir emtia gibi davranır, çünkü bireysel token'lar arasında hiçbir fark yoktur.
+Buna karşılık, ERC-721 token'ları, farklı [kedi karikatürleri](https://www.cryptokitties.co/) veya farklı gayrimenkul tapuları gibi benzer ancak aynı olmayan varlıklar için tasarlanmıştır.
 
-Bu makalede [Ryuya Nakamura'nın ERC-721 sözleşmesini](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) analiz edeceğiz.
-Bu sözleşme, güvensiz kod yazmayı Solidity'de olduğundan daha zorlaştırmak için tasarlanmış Python benzeri bir sözleşme dili olan [Vyper](https://vyper.readthedocs.io/en/latest/index.html) ile yazılmıştır.
+Bu makalede [Ryuya Nakamura'nın ERC-721 sözleşmesini](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) inceleyeceğiz.
+Bu sözleşme, güvensiz kod yazmayı Solidity'ye kıyasla daha zor hale getirmek için tasarlanmış Python benzeri bir sözleşme dili olan [Vyper](https://vyper.readthedocs.io/en/latest/index.html) ile yazılmıştır.
 
 ## Sözleşme {#contract}
 
 ```python
-# @dev ERC-721 değiştirilemez jeton standardının uygulaması.
-# @yazar Ryuya Nakamura (@nrryuya)
+# @dev ERC-721 değiştirilemez Token standardının uygulaması.
+# @author Ryuya Nakamura (@nrryuya)
 # Şuradan değiştirildi: https://github.com/vyperlang/vyper/blob/de74722bf2d8718cca46902be165f9fe0e3641dd/examples/tokens/ERC721.vy
 ```
 
-Python'da olduğu gibi Vyper'da da yorumlar bir kare işareti (`#`) ile başlar ve satırın sonuna kadar devam eder. `@<anahtar kelime>` içeren yorumlar, [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) tarafından insanlar tarafından okunabilir belgeler oluşturmak için kullanılır.
+Vyper'daki yorumlar, Python'da olduğu gibi bir hash (`#`) ile başlar ve satır sonuna kadar devam eder. `@<keyword>` içeren yorumlar, insanlar tarafından okunabilir belgeler üretmek için [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) tarafından kullanılır.
 
 ```python
 from vyper.interfaces import ERC721
@@ -35,82 +34,80 @@ from vyper.interfaces import ERC721
 implements: ERC721
 ```
 
-ERC-721 arayüzü, Vyper dilinde yerleşiktir.
-[Kod tanımını burada görebilirsiniz](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py).
-Arayüz tanımı Vyper yerine Python'da yazılmıştır, çünkü arayüzler yalnızca blokzincir içinde değil, blokzincire Python ile yazılabilen harici bir istemciden bir işlem gönderilirken de kullanılır.
+ERC-721 arayüzü Vyper diline yerleşiktir.
+[Kod tanımını buradan görebilirsiniz](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py).
+Arayüz tanımı Vyper yerine Python ile yazılmıştır, çünkü arayüzler yalnızca blokzincir içinde değil, aynı zamanda blokzincire Python ile yazılmış olabilecek harici bir istemciden bir işlem gönderilirken de kullanılır.
 
-İlk satır, arayüzü içe aktarır ve ikincisi onu burada uyguladığımızı belirtir.
+İlk satır arayüzü içe aktarır ve ikinci satır onu burada uyguladığımızı belirtir.
 
 ### ERC721Receiver Arayüzü {#receiver-interface}
 
 ```python
-# safeTransferFrom() tarafından çağrılan sözleşme için arayüz
+# safeTransferFrom() tarafından çağrılan Sözleşme için arayüz
 interface ERC721Receiver:
     def onERC721Received(
 ```
 
-ERC-721 iki tür aktarımı destekler:
+ERC-721 iki tür transferi destekler:
 
-- `transferFrom`, göndericinin herhangi bir hedef adresi belirtmesine olanak tanır ve aktarım sorumluluğunu göndericiye yükler. Bu, geçersiz bir adrese aktarım yapabileceğiniz anlamına gelir, bu durumda
-  NFT tamamen kaybolur.
-- `safeTransferFrom`, hedef adresin bir sözleşme olup olmadığını kontrol eder. Eğer öyleyse, ERC-721 sözleşmesi alıcı sözleşmeye NFT'yi almak isteyip istemediğini sorar.
+- Gönderenin herhangi bir hedef adresi belirlemesine izin veren ve transfer sorumluluğunu gönderene yükleyen `transferFrom`. Bu, geçersiz bir adrese transfer yapabileceğiniz anlamına gelir; bu durumda NFT tamamen kaybolur.
+- Hedef adresin bir sözleşme olup olmadığını kontrol eden `safeTransferFrom`. Eğer öyleyse, ERC-721 sözleşmesi alıcı sözleşmeye NFT'yi almak isteyip istemediğini sorar.
 
-`safeTransferFrom` isteklerine yanıt vermek için alıcı bir sözleşmenin `ERC721Receiver`'ı uygulaması gerekir.
+`safeTransferFrom` isteklerine yanıt vermek için alıcı bir sözleşmenin `ERC721Receiver` uygulaması gerekir.
 
 ```python
             _operator: address,
             _from: address,
 ```
 
-`_from` adresi jetonun mevcut sahibidir. `_operator` adresi, aktarımı talep eden adrestir (ödenekler nedeniyle bu ikisi aynı olmayabilir).
+`_from` adresi, token'ın mevcut sahibidir. `_operator` adresi ise transferi talep eden adrestir (harcama izinleri nedeniyle bu ikisi aynı olmayabilir).
 
 ```python
             _tokenId: uint256,
 ```
 
-ERC-721 jeton ID'leri 256 bittir. Tipik olarak, jetonun temsil ettiği şeyin bir açıklamasının hash edilmesiyle oluşturulurlar.
+ERC-721 token kimlikleri (ID) 256 bittir. Genellikle token'ın temsil ettiği şeyin bir açıklamasının hashlenmesiyle oluşturulurlar.
 
 ```python
             _data: Bytes[1024]
 ```
 
-İstek, 1024 bayta kadar kullanıcı verisine sahip olabilir.
+İstek, 1024 bayta kadar kullanıcı verisi içerebilir.
 
 ```python
         ) -> bytes32: view
 ```
 
-Bir sözleşmenin yanlışlıkla bir aktarımı kabul ettiği durumları önlemek için, dönüş değeri bir boole değil, belirli bir değere sahip 256 bittir.
+Bir sözleşmenin yanlışlıkla bir transferi kabul ettiği durumları önlemek için dönüş değeri bir boolean değil, belirli bir değere sahip 256 bittir.
 
-Bu işlev bir `view`'dur, yani blokzincirin durumunu okuyabilir, ancak değiştiremez.
+Bu fonksiyon bir `view`'dur, yani blokzincirin durumunu okuyabilir ancak değiştiremez.
 
 ### Olaylar {#events}
 
-[Olaylar](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) blokzincir dışındaki kullanıcıları ve sunucuları olaylar hakkında bilgilendirmek için yayınlanır. Olayların içeriğinin blokzincirdeki sözleşmeler için mevcut olmadığını unutmayın.
+[Olaylar](/developers/docs/smart-contracts/anatomy/#events-and-logs), blokzincir dışındaki kullanıcıları ve sunucuları olaylar hakkında bilgilendirmek için yayınlanır. Olayların içeriğinin blokzincirdeki sözleşmeler tarafından kullanılamayacağını unutmayın.
 
 ```python
-# @dev Herhangi bir NFT'nin mülkiyeti herhangi bir mekanizma ile değiştiğinde yayınlanır. Bu olay, NFT'ler
-#      oluşturulduğunda (`from` == 0) ve yok edildiğinde (`to` == 0) yayınlanır. İstisna: sözleşme oluşturma sırasında, herhangi
-#      bir sayıda NFT, Transfer yayınlanmadan oluşturulabilir ve atanabilir. Herhangi bir
-#      aktarım sırasında, o NFT için onaylanmış adres (varsa) sıfırlanır.
-# @param _from NFT'nin göndericisi (adres sıfır adresi ise jeton oluşturmayı belirtir).
-# @param _to NFT'nin alıcısı (adres sıfır adresi ise jeton yok etmeyi belirtir).
-# @param _tokenId Aktarılan NFT.
+# @dev Herhangi bir NFT'nin sahipliği herhangi bir mekanizma ile değiştiğinde tetiklenir. Bu olay, NFT'ler
+#      oluşturulduğunda (`from` == 0) ve yok edildiğinde (`to` == 0) tetiklenir. İstisna: Sözleşme oluşturulması sırasında, herhangi bir
+#      sayıda NFT, transfer tetiklenmeden oluşturulabilir ve atanabilir. Herhangi bir
+#      transfer sırasında, o NFT için onaylanmış Adres (varsa) sıfırlanır.
+# @param _from NFT'nin göndericisi (eğer Adres sıfır adresi ise Token oluşturulmasını belirtir).
+# @param _to NFT'nin alıcısı (eğer Adres sıfır adresi ise Token yok edilmesini belirtir).
+# @param _tokenId transfer edilen NFT.
 event Transfer:
     sender: indexed(address)
     receiver: indexed(address)
     tokenId: indexed(uint256)
 ```
 
-Bu, bir miktar yerine bir `tokenId` bildirmemiz dışında, ERC-20 Transfer olayına benzer.
-Hiç kimse sıfır adresine sahip değildir, bu nedenle geleneksel olarak onu jetonların oluşturulmasını ve yok edilmesini bildirmek için kullanırız.
+Bu, bir miktar yerine bir `tokenId` bildirmemiz dışında ERC-20 Transfer olayına benzer. Sıfır adresine kimse sahip değildir, bu nedenle geleneksel olarak onu token'ların oluşturulmasını ve yok edilmesini bildirmek için kullanırız.
 
 ```python
-# @dev Bu, bir NFT için onaylanmış adres değiştirildiğinde veya yeniden onaylandığında yayınlanır. Sıfır
-#      adresi, onaylanmış bir adres olmadığını gösterir. Bir Transfer olayı yayınlandığında, bu aynı zamanda
-#      o NFT için onaylanmış adresin (varsa) sıfırlandığını gösterir.
+# @dev Bu, bir NFT için onaylanmış Adres değiştirildiğinde veya yeniden onaylandığında tetiklenir. Sıfır
+#      adresi, onaylanmış bir Adres olmadığını belirtir. Bir transfer olayı tetiklendiğinde, bu aynı zamanda
+#      o NFT için onaylanmış Adresin (varsa) sıfırlandığını belirtir.
 # @param _owner NFT'nin sahibi.
-# @param _approved Onayladığımız adres.
+# @param _approved Onayladığımız Adres.
 # @param _tokenId Onayladığımız NFT.
 event Approval:
     owner: indexed(address)
@@ -118,17 +115,15 @@ event Approval:
     tokenId: indexed(uint256)
 ```
 
-ERC-721 onayı, ERC-20 ödeneğine benzer. Belirli bir adresin belirli bir
-jetonu aktarmasına izin verilir. Bu, sözleşmelerin bir jetonu kabul ettiklerinde yanıt vermeleri için bir mekanizma sağlar. Sözleşmeler olayları
-dinleyemez, bu nedenle jetonu onlara aktarırsanız bunu "bilmezler". Bu şekilde, mal sahibi önce bir onay gönderir ve ardından sözleşmeye bir istek gönderir: "X jetonunu aktarmanız için onay verdim, lütfen yapın ...".
+Bir ERC-721 onayı, bir ERC-20 harcama iznine benzer. Belirli bir adresin belirli bir token'ı transfer etmesine izin verilir. Bu, sözleşmelerin bir token'ı kabul ettiklerinde yanıt vermeleri için bir mekanizma sağlar. Sözleşmeler olayları dinleyemez, bu yüzden token'ı onlara sadece transfer ederseniz bundan "haberleri" olmaz. Bu şekilde sahip önce bir onay sunar ve ardından sözleşmeye bir istek gönderir: "X token'ını transfer etmenizi onayladım, lütfen yapın...".
 
-Bu, ERC-721 standardını ERC-20 standardına benzer kılmak için yapılmış bir tasarım tercihidir. ERC-721 jetonları değiştirilemez olduğundan, bir sözleşme, jetonun mülkiyetine bakarak belirli bir jeton aldığını da belirleyebilir.
+Bu, ERC-721 standardını ERC-20 standardına benzer hale getirmek için bir tasarım seçimidir. ERC-721 token'ları değiştirilemez olduğundan, bir sözleşme token'ın sahipliğine bakarak belirli bir token'ı aldığını da belirleyebilir.
 
 ```python
-# @dev Bu, bir operatör bir sahip için etkinleştirildiğinde veya devre dışı bırakıldığında yayınlanır. Operatör, sahibinin tüm NFT'lerini
-#      yönetebilir.
+# @dev Bu, bir sahip için bir operatör etkinleştirildiğinde veya devre dışı bırakıldığında tetiklenir. Operatör,
+#      sahibinin tüm NFT'lerini yönetebilir.
 # @param _owner NFT'nin sahibi.
-# @param _operator Operatör haklarını ayarladığımız adres.
+# @param _operator Operatör haklarını ayarladığımız Adres.
 # @param _approved Operatör haklarının durumu (operatör hakları verilmişse true, geri alınmışsa
 # false).
 event ApprovalForAll:
@@ -137,81 +132,80 @@ event ApprovalForAll:
     approved: bool
 ```
 
-Bir hesabın, adeta bir vekaletname gibi belirli bir türdeki (belirli bir sözleşmeyle yönetilenler) tüm jetonlarını yönetebilen bir _operatöre_ sahip olmak bazen yararlıdır. Örneğin, altı aydır temas kurup kurmadığımı kontrol eden ve kurmadıysam varlıklarımı mirasçılarıma dağıtan bir sözleşmeye böyle bir yetki vermek isteyebilirim (mirasçılardan biri talep ederse, sözleşmeler bir işlemle çağrılmadan hiçbir şey yapamaz). ERC-20'de bir miras sözleşmesine sadece yüksek bir ödenek verebiliriz ancak bu, ERC-721 için işe yaramaz çünkü jetonlar değiştirilemezdir. Bu, bunun dengidir.
+Bazen, bir vekaletnameye benzer şekilde, bir hesabın belirli bir türdeki (belirli bir sözleşme tarafından yönetilen) tüm token'larını yönetebilen bir _operatör_ (operator) olması yararlıdır. Örneğin, altı ay boyunca onunla iletişime geçip geçmediğimi kontrol eden ve eğer geçmediysem varlıklarımı mirasçılarıma dağıtan bir sözleşmeye böyle bir yetki vermek isteyebilirim (eğer onlardan biri bunu isterse, sözleşmeler bir işlem tarafından çağrılmadan hiçbir şey yapamaz). ERC-20'de bir miras sözleşmesine yüksek bir harcama izni verebiliriz, ancak bu ERC-721 için işe yaramaz çünkü token'lar değiştirilemez. Bu onun eşdeğeridir.
 
-`approved` değeri bize etkinliğin bir onay için mi yoksa bir onayın geri çekilmesi için mi olduğunu söyler.
+`approved` değeri, olayın bir onay için mi yoksa bir onayın geri alınması için mi olduğunu bize söyler.
 
 ### Durum Değişkenleri {#state-vars}
 
-Bu değişkenler, jetonların mevcut durumunu içerir: hangilerinin mevcut olduğu ve onlara kimin sahip olduğu. Bunların çoğu, [iki tür arasında var olan tek yönlü eşlemeler](https://vyper.readthedocs.io/en/latest/types.html#mappings) olan `HashMap` nesneleridir.
+Bu değişkenler token'ların mevcut durumunu içerir: hangilerinin mevcut olduğu ve kime ait oldukları. Bunların çoğu `HashMap` nesneleridir, yani [iki tür arasında var olan tek yönlü eşlemelerdir](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
 ```python
-# @dev NFT ID'sinden sahibinin adresine eşleme.
+# @dev NFT ID'sinden ona sahip olan Adrese eşleme.
 idToOwner: HashMap[uint256, address]
 
-# @dev NFT ID'sinden onaylanan adrese eşleme.
+# @dev NFT ID'sinden onaylanmış Adrese eşleme.
 idToApprovals: HashMap[uint256, address]
 ```
 
-Ethereum'daki kullanıcı ve sözleşme kimlikleri 160 bitlik adreslerle temsil edilir. Bu iki değişken, jeton ID'lerinden sahiplerine ve bunları aktarmak için onaylananlara eşleştirilir (her biri için en fazla bir tane). Ethereum'da, başlatılmamış veriler her zaman sıfırdır, bu nedenle herhangi bir sahip veya onaylanmış aktarıcı yoksa, o jetonun değeri sıfırdır.
+Ethereum'daki kullanıcı ve sözleşme kimlikleri 160 bitlik adreslerle temsil edilir. Bu iki değişken, token kimliklerinden sahiplerine ve onları transfer etmesi onaylananlara (her biri için en fazla bir tane) eşleme yapar. Ethereum'da başlatılmamış veriler her zaman sıfırdır, bu nedenle bir sahip veya onaylanmış transfer eden yoksa o token için değer sıfırdır.
 
 ```python
-# @dev Sahip adresinden sahip olduğu jeton sayısına eşleme.
+# @dev Sahip Adresinden Token sayısına eşleme.
 ownerToNFTokenCount: HashMap[address, uint256]
 ```
 
-Bu değişken, her sahip için jeton sayısını tutar. Sahiplerden jetonlara eşleştirme yoktur, bu nedenle belirli bir sahibin sahip olduğu jetonları tanımlamanın tek yolu blokzincirin olay geçmişine bakmak ve uygun `Transfer` olaylarını görmektir. Bu değişkeni, tüm NFT'lere ne zaman sahip olduğumuzu ve zamanda daha fazla aramamıza gerek olmadığını bilmek için kullanabiliriz.
+Bu değişken, her sahip için token sayısını tutar. Sahiplerden token'lara bir eşleme yoktur, bu nedenle belirli bir sahibin sahip olduğu token'ları belirlemenin tek yolu blokzincirin olay geçmişine dönüp bakmak ve uygun `Transfer` olaylarını görmektir. Tüm NFT'lere ne zaman sahip olduğumuzu bilmek ve zamanda daha da geriye bakmaya gerek kalmaması için bu değişkeni kullanabiliriz.
 
-Bu algoritmanın yalnızca kullanıcı arayüzleri ve harici sunucular için çalıştığını unutmayın. Blokzincirinin
-kendisinde çalışan kod geçmiş olayları okuyamaz.
+Bu algoritmanın yalnızca kullanıcı arayüzleri ve harici sunucular için çalıştığını unutmayın. Blokzincirin kendisinde çalışan kod geçmiş olayları okuyamaz.
 
 ```python
-# @dev Sahip adresinden operatör adreslerinin eşlemesine eşleme.
+# @dev Sahip Adresinden operatör Adreslerinin eşlemesine eşleme.
 ownerToOperators: HashMap[address, HashMap[address, bool]]
 ```
 
-Bir hesap birden fazla operatöre sahip olabilir. Basit bir `HashMap` onları takip etmek için yetersizdir, çünkü her anahtar tek bir değere bağlıdır. Bunun yerine, değer olarak `HashMap[address, bool]` kullanabilirsiniz. Varsayılan olarak, her adresin değeri `False`'dur, bu da bir operatör olmadığı anlamına gelir. Değerleri gerektiği gibi `True` olarak ayarlayabilirsiniz.
+Bir hesabın birden fazla operatörü olabilir. Basit bir `HashMap` onları takip etmek için yetersizdir, çünkü her anahtar tek bir değere yönlendirir. Bunun yerine, değer olarak `HashMap[address, bool]` kullanabilirsiniz. Varsayılan olarak her adres için değer `False`'dur, bu da onun bir operatör olmadığı anlamına gelir. Değerleri gerektiği gibi `True` olarak ayarlayabilirsiniz.
 
 ```python
-# @dev Bir jeton basabilen minter'ın adresi
+# @dev Token basabilen basıcının Adresi
 minter: address
 ```
 
-Yeni jetonlar bir şekilde oluşturulmalıdır. Bu sözleşmede bunu yapmasına izin verilen tek bir varlık vardır, `minter`. Bu, örneğin bir oyun için yeterli olabilir. Diğer amaçlar için daha karmaşık bir iş mantığı oluşturmak gerekebilir.
+Yeni token'ların bir şekilde oluşturulması gerekir. Bu sözleşmede bunu yapmasına izin verilen tek bir varlık vardır, o da `minter`'dır. Bu, örneğin bir oyun için muhtemelen yeterli olacaktır. Diğer amaçlar için daha karmaşık bir iş mantığı oluşturmak gerekebilir.
 
 ```python
-# @dev Arayüz kimliğinden desteklenip desteklenmediğine dair bool'a eşleme
+# @dev Arayüz kimliğinden desteklenip desteklenmediğine dair bool değerine eşleme
 supportedInterfaces: HashMap[bytes32, bool]
 
-# @dev ERC165'in ERC165 arayüzü ID'si
+# @dev ERC-165'in ERC-165 arayüz kimliği
 ERC165_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000001ffc9a7
 
-# @dev ERC721'in ERC165 arayüzü ID'si
+# @dev ERC-721'in ERC-165 arayüz kimliği
 ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000080ac58cd
 ```
 
-[ERC-165](https://eips.ethereum.org/EIPS/eip-165) bir sözleşmenin, uygulamaların onunla nasıl iletişim kurabileceğini, yani hangi ERC'lere uyduğunu açıklaması için bir mekanizma belirtir. Bu durumda sözleşme ERC-165 ve ERC-721'e uygundur.
+[ERC-165](https://eips.ethereum.org/EIPS/eip-165), bir sözleşmenin uygulamaların onunla nasıl iletişim kurabileceğini, hangi ERC'lere uyduğunu açıklaması için bir mekanizma belirtir. Bu durumda, sözleşme ERC-165 ve ERC-721'e uyar.
 
 ### Fonksiyonlar {#functions}
 
-Bunlar, ERC-721'i gerçekten uygulayan fonksiyonlardır.
+Bunlar, ERC-721'i fiilen uygulayan fonksiyonlardır.
 
-#### Yapıcı {#constructor}
+#### Kurucu {#constructor}
 
 ```python
 @external
 def __init__():
 ```
 
-Vyper'da, Python'da olduğu gibi, yapıcı fonksiyona `__init__` adı verilir.
+Vyper'da, Python'da olduğu gibi, kurucu fonksiyon `__init__` olarak adlandırılır.
 
 ```python
     """
-    @dev Sözleşme yapıcısı.
+    @dev Sözleşme kurucu.
     """
 ```
 
-Python'da ve Vyper'da, çok satırlı bir dize (`"""` ile başlayan ve biten) belirterek ve onu hiçbir şekilde kullanmayarak bir yorum oluşturabilirsiniz. Bu yorumlar [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) de içerebilir.
+Python'da ve Vyper'da, çok satırlı bir dize belirterek (`"""` ile başlayıp biten) ve bunu hiçbir şekilde kullanmayarak da bir yorum oluşturabilirsiniz. Bu yorumlar [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) de içerebilir.
 
 ```python
     self.supportedInterfaces[ERC165_INTERFACE_ID] = True
@@ -219,135 +213,129 @@ Python'da ve Vyper'da, çok satırlı bir dize (`"""` ile başlayan ve biten) be
     self.minter = msg.sender
 ```
 
-Durum değişkenlerine erişmek için `self.<değişken adı>` kullanırsınız` (yine Python'daki gibi).
+Durum değişkenlerine erişmek için `self.<variable name>` kullanırsınız (yine Python'daki gibi).
 
-#### Görünüm Fonksiyonları {#views}
+#### Görünüm (View) Fonksiyonları {#views}
 
-Bunlar blokzincirin durumunu değiştirmeyen fonksiyonlardır ve bu nedenle dışarıdan çağrıldıklarında ücretsiz olarak yürütülebilirler. Görünüm fonksiyonları bir sözleşme ile çağrılırsa, yine de her düğümde yürütülmeleri gerekir ve bu nedenle gaz harcarlar.
+Bunlar blokzincirin durumunu değiştirmeyen ve bu nedenle harici olarak çağrılırlarsa ücretsiz olarak yürütülebilen fonksiyonlardır. Görünüm fonksiyonları bir sözleşme tarafından çağrılırsa, yine de her düğüm üzerinde yürütülmeleri gerekir ve bu nedenle gaz maliyeti oluştururlar.
 
 ```python
 @view
 @external
 ```
 
-Bir at işareti (`@`) ile başlayan bir fonksiyon tanımından önceki bu anahtar kelimelere _dekoratörler_ denir. Bir fonksiyonun çağrılabileceği durumları belirtirler.
+Bir fonksiyon tanımından önce gelen ve at işareti (`@`) ile başlayan bu anahtar kelimelere _dekorasyonlar_ (decorations) denir. Bir fonksiyonun hangi koşullarda çağrılabileceğini belirtirler.
 
-- `@view` bu fonksiyonun bir görünüm olduğunu belirtir.
-- `@external` bu fonksiyonun işlemler ve diğer sözleşmeler tarafından çağrılabileceğini belirtir.
+- `@view`, bu fonksiyonun bir görünüm olduğunu belirtir.
+- `@external`, bu belirli fonksiyonun işlemler ve diğer sözleşmeler tarafından çağrılabileceğini belirtir.
 
 ```python
 def supportsInterface(_interfaceID: bytes32) -> bool:
 ```
 
-Python'un aksine Vyper [statik tipli bir dildir](https://wikipedia.org/wiki/Type_system#Static_type_checking).
-[veri türünü](https://vyper.readthedocs.io/en/latest/types.html) belirtmeden bir değişken veya fonksiyon parametresi bildiremezsiniz. Bu durumda giriş parametresi, 256 bitlik bir değer olan `bytes32`'dir
-(256 bit, [Ethereum Sanal Makinesi'nin](/developers/docs/evm/) doğal kelime boyutudur). Çıktı bir boole
-değeridir. Kural olarak, fonksiyon parametrelerinin adları bir alt çizgi (`_`) ile başlar.
+Python'un aksine, Vyper [statik tipli bir dildir](https://wikipedia.org/wiki/Type_system#Static_type_checking). [Veri tipini](https://vyper.readthedocs.io/en/latest/types.html) tanımlamadan bir değişken veya fonksiyon parametresi bildiremezsiniz. Bu durumda girdi parametresi 256 bitlik bir değer olan `bytes32`'dir (256 bit, [Ethereum Sanal Makinesi](/developers/docs/evm/)'nin yerel kelime boyutudur). Çıktı bir boolean değeridir. Geleneksel olarak, fonksiyon parametrelerinin adları bir alt çizgi (`_`) ile başlar.
 
 ```python
     """
-    @dev Arayüz kimliği ERC-165'te belirtilmiştir.
+    @dev Arayüz tanımlaması ERC-165'te belirtilmiştir.
     @param _interfaceID Arayüzün kimliği
     """
     return self.supportedInterfaces[_interfaceID]
 ```
 
-Değeri, yapıcıda (`__init__`) belirlenmiş olan `self.supportedInterfaces` HashMap'inden döndürün.
+Kurucuda (`__init__`) ayarlanan `self.supportedInterfaces` HashMap'inden değeri döndürün.
 
 ```python
-### GÖRÜNÜM FONKSİYONLARI ###
-
+### GÖRÜNTÜLEME FONKSİYONLARI ###
 ```
 
-Bunlar, jetonlar hakkında bilgileri kullanıcılara ve diğer sözleşmelere sunan görünüm fonksiyonlarıdır.
+Bunlar, token'lar hakkındaki bilgileri kullanıcılara ve diğer sözleşmelere sunan görünüm fonksiyonlarıdır.
 
 ```python
 @view
 @external
 def balanceOf(_owner: address) -> uint256:
     """
-    @dev `_owner`'ın sahip olduğu NFT sayısını döndürür.
-         `_owner` sıfır adresi ise hata verir. Sıfır adresine atanan NFT'ler geçersiz kabul edilir.
-    @param _owner Bakiyenin sorgulanacağı adres.
+    @dev `_owner` tarafından sahip olunan NFT sayısını döndürür.
+         `_owner` sıfır adresi ise hata fırlatır. Sıfır adresine atanan NFT'ler geçersiz kabul edilir.
+    @param _owner Bakiyesi sorgulanacak Adres.
     """
     assert _owner != ZERO_ADDRESS
 ```
 
-Bu satır, `_owner`'ın sıfır olmadığını [denetler](https://vyper.readthedocs.io/en/latest/statements.html#assert). Eğer öyleyse, bir hata vardır ve işlem geri alınır.
+Bu satır, `_owner`'nin sıfır olmadığını [doğrular](https://vyper.readthedocs.io/en/latest/statements.html#assert). Eğer sıfırsa, bir hata vardır ve işlem geri alınır.
 
 ```python
+    return self.ownerToNFTokenCount[_owner]
+
 @view
 @external
 def ownerOf(_tokenId: uint256) -> address:
     """
-    @dev NFT'nin sahibinin adresini döndürür.
-         `_tokenId` geçerli bir NFT değilse hata verir.
-    @param _tokenId Bir NFT'nin tanımlayıcısı.
+    @dev NFT sahibinin Adresini döndürür.
+         `_tokenId` geçerli bir NFT değilse hata fırlatır.
+    @param _tokenId Bir NFT için tanımlayıcı.
     """
     owner: address = self.idToOwner[_tokenId]
-    # `_tokenId` geçerli bir NFT değilse hata verir
+    # `_tokenId` geçerli bir NFT değilse hata fırlatır
     assert owner != ZERO_ADDRESS
     return owner
 ```
 
-Ethereum Sanal Makinesinde (EVM) içinde depolanmış bir değeri olmayan herhangi bir depolama sıfırdır.
-Eğer `_tokenId` yerinde bir jeton yoksa `self.idToOwner[_tokenId]` değeri sıfırdır. Bu
-durumda fonksiyon geri alınır.
+Ethereum Sanal Makinesi'nde (EVM) içinde bir değer saklanmayan herhangi bir depolama alanı sıfırdır. Eğer `_tokenId`'te bir token yoksa, `self.idToOwner[_tokenId]` değeri sıfırdır. Bu durumda fonksiyon geri alınır.
 
 ```python
 @view
 @external
 def getApproved(_tokenId: uint256) -> address:
     """
-    @dev Tek bir NFT için onaylanmış adresi alın.
-         `_tokenId` geçerli bir NFT değilse hata verir.
-    @param _tokenId Onayını sorgulamak için NFT'nin ID'si.
+    @dev Tek bir NFT için onaylanmış Adresi getirir.
+         `_tokenId` geçerli bir NFT değilse hata fırlatır.
+    @param _tokenId Onayı sorgulanacak NFT'nin kimliği.
     """
-    # `_tokenId` geçerli bir NFT değilse hata verir
+    # `_tokenId` geçerli bir NFT değilse hata fırlatır
     assert self.idToOwner[_tokenId] != ZERO_ADDRESS
     return self.idToApprovals[_tokenId]
 ```
 
-`getApproved`'un sıfır _döndürebileceğini_ unutmayın. Eğer jeton geçerliyse `self.idToApprovals[_tokenId]` döndürür.
-Onaylayan yoksa bu değer sıfırdır.
+`getApproved`'nin sıfır döndürebileceğini unutmayın. Token geçerliyse `self.idToApprovals[_tokenId]` döndürür. Eğer bir onaylayan yoksa bu değer sıfırdır.
 
 ```python
 @view
 @external
 def isApprovedForAll(_owner: address, _operator: address) -> bool:
     """
-    @dev `_operator`'ın `_owner` için onaylı bir operatör olup olmadığını kontrol eder.
-    @param _owner NFT'lerin sahibi olan adres.
-    @param _operator Sahip adına hareket eden adres.
+    @dev `_operator`'ün `_owner` için onaylanmış bir operatör olup olmadığını kontrol eder.
+    @param _owner NFT'lere sahip olan Adres.
+    @param _operator Sahibi adına hareket eden Adres.
     """
     return (self.ownerToOperators[_owner])[_operator]
 ```
 
-Bu fonksiyon, `_operator`'un bu sözleşmedeki tüm `_owner` jetonlarını yönetmesine izin verilip verilmediğini kontrol eder.
-Birden fazla operatör olabileceğinden, bu iki seviyeli bir HashMap'tir.
+Bu fonksiyon, `_operator`'ün bu sözleşmedeki tüm `_owner` token'larını yönetmesine izin verilip verilmediğini kontrol eder. Birden fazla operatör olabileceğinden, bu iki seviyeli bir HashMap'tir.
 
-#### Aktarım Yardımcı Fonksiyonları {#transfer-helpers}
+#### Transfer Yardımcı Fonksiyonları {#transfer-helpers}
 
-Bu fonksiyonlar, jetonları aktarmanın veya yönetmenin parçası olan işlemleri uygular.
+Bu fonksiyonlar, token'ları transfer etmenin veya yönetmenin bir parçası olan işlemleri uygular.
 
 ```python
 
-### AKTARIM FONKSİYONU YARDIMCILARI ###
+### TRANSFER FONKSİYONU YARDIMCILARI ###
 
 @view
 @internal
 ```
 
-Bu dekoratör, `@internal`, fonksiyonun yalnızca aynı sözleşme içindeki diğer fonksiyonlardan erişilebilir olduğu anlamına gelir. Kural olarak, bu fonksiyon adları ayrıca bir alt çizgi (`_`) ile başlar.
+Bu dekorasyon, `@internal`, fonksiyonun yalnızca aynı sözleşme içindeki diğer fonksiyonlardan erişilebilir olduğu anlamına gelir. Geleneksel olarak, bu fonksiyon adları da bir alt çizgi (`_`) ile başlar.
 
 ```python
 def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
     """
-    @dev Verilen harcayıcının belirli bir jeton kimliğini aktarıp aktaramayacağını döndürür
-    @param spender sorgulanacak harcayıcının adresi
-    @param tokenId aktarılacak jetonun uint256 ID'si
-    @return bool msg.sender'ın verilen jeton ID'si için onaylanıp onaylanmadığını,
-        sahibin bir operatörü olup olmadığını veya jetonun sahibi olup olmadığını belirtir
+    @dev Belirtilen harcayıcının belirli bir Token kimliğini transfer edip edemeyeceğini döndürür
+    @param spender sorgulanacak harcayıcının Adresi
+    @param tokenId transfer edilecek Token'ın uint256 kimliği
+    @return bool msg.sender'ın belirtilen Token kimliği için onaylı olup olmadığı,
+        sahibinin bir operatörü olup olmadığı veya Token'ın sahibi olup olmadığı
     """
     owner: address = self.idToOwner[_tokenId]
     spenderIsOwner: bool = owner == _spender
@@ -356,117 +344,117 @@ def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
     return (spenderIsOwner or spenderIsApproved) or spenderIsApprovedForAll
 ```
 
-Bir adresin bir jetonu aktarmasına izin verilmesinin üç yolu vardır:
+Bir adresin bir token'ı transfer etmesine izin verilmesinin üç yolu vardır:
 
-1. Adres, jetonun sahibidir
-2. Adresin bu jetonu harcaması onaylanmıştır
-3. Adres, jetonun sahibi için bir operatördür
+1. Adres, token'ın sahibidir
+2. Adresin o token'ı harcaması onaylanmıştır
+3. Adres, token sahibinin bir operatörüdür
 
-Durumu değiştirmediği için yukarıdaki fonksiyon bir görünüm olabilir. İşletim maliyetlerini azaltmak için, görünüm _olabilen_ herhangi bir fonksiyon görünüm _olmalıdır_.
+Yukarıdaki fonksiyon durumu değiştirmediği için bir görünüm olabilir. İşletme maliyetlerini azaltmak için, bir görünüm _olabilen_ herhangi bir fonksiyon bir görünüm _olmalıdır_.
 
 ```python
 @internal
 def _addTokenTo(_to: address, _tokenId: uint256):
     """
-    @dev Belirli bir adrese bir NFT ekle
-         `_tokenId`'nin bir sahibi varsa hata verir.
+    @dev Belirli bir Adrese bir NFT ekler
+         `_tokenId` birine aitse hata fırlatır.
     """
-    # `_tokenId`'nin bir sahibi varsa hata verir
+    # `_tokenId` birine aitse hata fırlatır
     assert self.idToOwner[_tokenId] == ZERO_ADDRESS
-    # Change the owner
+    # Sahibi değiştir
     self.idToOwner[_tokenId] = _to
-    # Change count tracking
+    # Sayı takibini değiştir
     self.ownerToNFTokenCount[_to] += 1
 
 
 @internal
 def _removeTokenFrom(_from: address, _tokenId: uint256):
     """
-    @dev Belirli bir adresten bir NFT'yi kaldır
-         `_from` mevcut sahip değilse hata verir.
+    @dev Belirli bir Adresten bir NFT'yi kaldırır
+         `_from` mevcut sahip değilse hata fırlatır.
     """
-    # `_from` mevcut sahip değilse hata verir
+    # `_from` mevcut sahip değilse hata fırlatır
     assert self.idToOwner[_tokenId] == _from
-    # Change the owner
+    # Sahibi değiştir
     self.idToOwner[_tokenId] = ZERO_ADDRESS
-    # Change count tracking
+    # Sayı takibini değiştir
     self.ownerToNFTokenCount[_from] -= 1
 ```
 
-Aktarım ile ilgili bir sorun olduğunda çağrıyı geri alırız.
+Bir transferle ilgili bir sorun olduğunda çağrıyı geri alırız.
 
 ```python
 @internal
 def _clearApproval(_owner: address, _tokenId: uint256):
     """
-    @dev Belirli bir adresin onayını temizle
-         `_owner` mevcut sahip değilse hata verir.
+    @dev Belirli bir Adresin onayını temizler
+         `_owner` mevcut sahip değilse hata fırlatır.
     """
-    # `_owner` mevcut sahip değilse hata verir
+    # `_owner` mevcut sahip değilse hata fırlatır
     assert self.idToOwner[_tokenId] == _owner
     if self.idToApprovals[_tokenId] != ZERO_ADDRESS:
-        # Reset approvals
+        # Onayları sıfırla
         self.idToApprovals[_tokenId] = ZERO_ADDRESS
 ```
 
-Değeri sadece gerekirse değiştirin. Durum değişkenleri depolamada yaşar. Depolama alanına yazmak, EVM'nin (Ethereum Sanal Makinesi) gerçekleştirdiği en pahalı işlemlerden biridir ([gaz](/developers/docs/gas/) açısından). Bu nedenle en aza indirmek iyi bir fikirdir, mevcut değeri yazmanın bile maliyeti yüksektir.
+Değeri yalnızca gerekliyse değiştirin. Durum değişkenleri depolamada yaşar. Depolamaya yazmak, EVM'nin (Ethereum Sanal Makinesi) yaptığı en pahalı işlemlerden biridir ([gaz](/developers/docs/gas/) açısından). Bu nedenle, bunu en aza indirmek iyi bir fikirdir, mevcut değeri yazmanın bile yüksek bir maliyeti vardır.
 
 ```python
 @internal
 def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: address):
     """
-    @dev Bir NFT'nin aktarımını gerçekleştirin.
+    @dev Bir NFT'nin transfer işlemini gerçekleştirir.
          `msg.sender` mevcut sahip, yetkili bir operatör veya bu NFT için onaylanmış
-         adres değilse hata verir. (NOT: `msg.sender`'a özel fonksiyonda izin verilmez, bu yüzden `_sender`'ı geçin.)
-         `_to` sıfır adresi ise hata verir.
-         `_from` mevcut sahip değilse hata verir.
-         `_tokenId` geçerli bir NFT değilse hata verir.
+         Adres değilse hata fırlatır. (NOT: `msg.sender` özel fonksiyonda izin verilmez, bu yüzden `_sender` geçin.)
+         `_to` sıfır adresi ise hata fırlatır.
+         `_from` mevcut sahip değilse hata fırlatır.
+         `_tokenId` geçerli bir NFT değilse hata fırlatır.
     """
 ```
 
-Jetonları aktarmanın iki yolu olduğu için (normal ve güvenli) bu dahili fonksiyona sahibiz ancak denetimi kolaylaştırmak için kodda yalnızca tek bir konum istiyoruz.
+Bu dahili fonksiyona sahibiz çünkü token'ları transfer etmenin iki yolu vardır (normal ve güvenli), ancak denetimi kolaylaştırmak için kodda bunu yaptığımız tek bir yer olmasını istiyoruz.
 
 ```python
-    # Check requirements
+    # Gereksinimleri kontrol et
     assert self._isApprovedOrOwner(_sender, _tokenId)
-    # Throws if `_to` is the zero address
+    # `_to` sıfır adresi ise hata fırlatır
     assert _to != ZERO_ADDRESS
-    # Clear approval. Throws if `_from` is not the current owner
+    # Onayı temizle. `_from` mevcut sahip değilse hata fırlatır
     self._clearApproval(_from, _tokenId)
-    # Remove NFT. Throws if `_tokenId` is not a valid NFT
+    # NFT'yi kaldır. `_tokenId` geçerli bir NFT değilse hata fırlatır
     self._removeTokenFrom(_from, _tokenId)
-    # Add NFT
+    # NFT ekle
     self._addTokenTo(_to, _tokenId)
-    # Log the transfer
+    # transfer işlemini kaydet
     log Transfer(_from, _to, _tokenId)
 ```
 
 Vyper'da bir olay yayınlamak için bir `log` ifadesi kullanırsınız ([daha fazla ayrıntı için buraya bakın](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 
-#### Aktarım Fonksiyonları {#transfer-funs}
+#### Transfer Fonksiyonları {#transfer-funs}
 
 ```python
 
-### AKTARIM FONKSİYONLARI ###
+### TRANSFER FONKSİYONLARI ###
 
 @external
 def transferFrom(_from: address, _to: address, _tokenId: uint256):
     """
     @dev `msg.sender` mevcut sahip, yetkili bir operatör veya bu NFT için onaylanmış
-         adres değilse hata verir.
-         `_from` mevcut sahip değilse hata verir.
-         `_to` sıfır adresi ise hata verir.
-         `_tokenId` geçerli bir NFT değilse hata verir.
-    @notice Çağıran, `_to`'nun NFT'leri alabileceğinden emin olmaktan sorumludur, aksi takdirde
+         Adres değilse hata fırlatır.
+         `_from` mevcut sahip değilse hata fırlatır.
+         `_to` sıfır adresi ise hata fırlatır.
+         `_tokenId` geçerli bir NFT değilse hata fırlatır.
+    @notice Çağırıcı, `_to` adresinin NFT'leri alabileceğinden emin olmakla sorumludur, aksi takdirde
             kalıcı olarak kaybolabilirler.
     @param _from NFT'nin mevcut sahibi.
     @param _to Yeni sahip.
-    @param _tokenId Aktarılacak NFT.
+    @param _tokenId transfer edilecek NFT.
     """
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
 
-Bu fonksiyon, isteğe bağlı bir adrese aktarım yapmanızı sağlar. Adres bir kullanıcı veya jetonların nasıl aktarılacağını bilen bir sözleşme olmadığı sürece, aktardığınız herhangi bir jeton o adreste takılıp kalır ve işe yaramaz hale gelir.
+Bu fonksiyon, rastgele bir adrese transfer yapmanızı sağlar. Adres bir kullanıcı veya token'ları nasıl transfer edeceğini bilen bir sözleşme olmadığı sürece, transfer ettiğiniz herhangi bir token o adreste sıkışıp kalacak ve işe yaramaz hale gelecektir.
 
 ```python
 @external
@@ -477,77 +465,75 @@ def safeTransferFrom(
         _data: Bytes[1024]=b""
     ):
     """
-    @dev Bir NFT'nin mülkiyetini bir adresten başka bir adrese aktarır.
+    @dev Bir NFT'nin sahipliğini bir Adresten başka bir Adrese transfer eder.
          `msg.sender` mevcut sahip, yetkili bir operatör veya bu NFT için
-         onaylanmış adres değilse hata verir.
-         `_from` mevcut sahip değilse hata verir.
-         `_to` sıfır adresi ise hata verir.
-         `_tokenId` geçerli bir NFT değilse hata verir.
-         `_to` bir akıllı sözleşme ise, `_to` üzerinde `onERC721Received`'ı çağırır ve
-         dönüş değeri `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` değilse hata verir.
-         NOT: bytes4, dolgu ile bytes32 ile temsil edilir
+         onaylanmış Adres değilse hata fırlatır.
+         `_from` mevcut sahip değilse hata fırlatır.
+         `_to` sıfır adresi ise hata fırlatır.
+         `_tokenId` geçerli bir NFT değilse hata fırlatır.
+         Eğer `_to` bir akıllı Sözleşme ise, `_to` üzerinde `onERC721Received` çağırır ve
+         dönüş değeri `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` değilse hata fırlatır.
+         NOT: bytes4, dolgulu bytes32 ile temsil edilir
     @param _from NFT'nin mevcut sahibi.
     @param _to Yeni sahip.
-    @param _tokenId Aktarılacak NFT.
-    @param _data Belirtilen bir formatı olmayan, `_to`'ya yapılan çağrıda gönderilen ek veriler.
+    @param _tokenId transfer edilecek NFT.
+    @param _data Belirli bir formatı olmayan, `_to` çağrısında gönderilen ek veri.
     """
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
 
-Önce transferi yapmakta bir sakınca yok çünkü bir sorun olursa yine de geri döneceğiz, bu yüzden çağrıda yapılan her şey iptal edilecek.
+Önce transferi yapmak sorun değildir çünkü bir sorun olursa zaten geri alacağız, bu nedenle çağrıda yapılan her şey iptal edilecektir.
 
 ```python
-    if _to.is_contract: # `_to`'nun bir sözleşme adresi olup olmadığını kontrol et
+    if _to.is_contract: # `_to` adresinin bir Sözleşme Adresi olup olmadığını kontrol et
 ```
 
-İlk önce adresin bir sözleşme olup olmadığını kontrol edin (kodu varsa). Değilse, bunun bir kullanıcı adresi olduğunu
-varsayın ve kullanıcı jetonu kullanabilecek veya aktarabilecektir. Ama bunun yüzünden yalancı bir
-güvenlik duygusuna kapılmayın. Jetonları, özel anahtarı kimsenin bilmediği bir adrese aktarırsanız `safeTransferFrom` ile bile kaybedebilirsiniz.
+Önce adresin bir sözleşme olup olmadığını (kodu olup olmadığını) kontrol edin. Değilse, bunun bir kullanıcı adresi olduğunu ve kullanıcının token'ı kullanabileceğini veya transfer edebileceğini varsayın. Ancak bunun sizi sahte bir güvenlik hissine kaptırmasına izin vermeyin. Token'ları, kimsenin özel anahtarını bilmediği bir adrese transfer ederseniz, `safeTransferFrom` ile bile kaybedebilirsiniz.
 
 ```python
         returnValue: bytes32 = ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
 ```
 
-ERC-721 jetonlarını alıp alamayacağını görmek için hedef sözleşmeyi çağırın.
+ERC-721 token'larını alıp alamayacağını görmek için hedef sözleşmeyi çağırın.
 
 ```python
-        # Aktarım hedefi 'onERC721Received' uygulamayan bir sözleşme ise hata verir
+        # transfer hedefi 'onERC721Received' uygulamayan bir Sözleşme ise hata fırlatır
         assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes32)
 ```
 
-Hedef bir sözleşmeyse, ancak ERC-721 jetonlarını kabul etmeyen (veya bu özel aktarımı kabul etmemeye karar veren) bir sözleşmeyse, işlemi geri alın.
+Hedef bir sözleşmeyse, ancak ERC-721 token'larını kabul etmeyen (veya bu belirli transferi kabul etmemeye karar veren) bir sözleşmeyse, geri alın.
 
 ```python
 @external
 def approve(_approved: address, _tokenId: uint256):
     """
-    @dev Bir NFT için onaylanmış adresi ayarlayın veya yeniden onaylayın. Sıfır adresi, onaylanmış bir adres olmadığını gösterir.
-         `msg.sender` mevcut NFT sahibi veya mevcut sahibin yetkili bir operatörü değilse hata verir.
-         `_tokenId` geçerli bir NFT değilse hata verir. (NOT: Bu, EIP'de yazılmamıştır)
-         `_approved` mevcut sahip ise hata verir. (NOT: Bu, EIP'de yazılmamıştır)
-    @param _approved Verilen NFT ID'si için onaylanacak adres.
-    @param _tokenId Onaylanacak jetonun ID'si.
+    @dev Bir NFT için onaylanmış Adresi ayarlar veya yeniden onaylar. Sıfır adresi, onaylanmış bir Adres olmadığını belirtir.
+         `msg.sender` mevcut NFT sahibi veya mevcut sahibin yetkili bir operatörü değilse hata fırlatır.
+         `_tokenId` geçerli bir NFT değilse hata fırlatır. (NOT: Bu EIP'de yazılı değildir)
+         `_approved` mevcut sahipse hata fırlatır. (NOT: Bu EIP'de yazılı değildir)
+    @param _approved Belirtilen NFT kimliği için onaylanacak Adres.
+    @param _tokenId Onaylanacak Token'ın kimliği.
     """
     owner: address = self.idToOwner[_tokenId]
-    # `_tokenId` geçerli bir NFT değilse hata verir
+    # `_tokenId` geçerli bir NFT değilse hata fırlatır
     assert owner != ZERO_ADDRESS
-    # `_approved` mevcut sahip ise hata verir
+    # `_approved` mevcut sahipse hata fırlatır
     assert _approved != owner
 ```
 
-Geleneksel olarak, bir onaylayıcınız olmasını istemiyorsanız, kendinizi değil, sıfır adresini atarsınız.
+Geleneksel olarak, bir onaylayana sahip olmak istemiyorsanız, kendinizi değil sıfır adresini atarsınız.
 
 ```python
-    # Check requirements
+    # Gereksinimleri kontrol et
     senderIsOwner: bool = self.idToOwner[_tokenId] == msg.sender
     senderIsApprovedForAll: bool = (self.ownerToOperators[owner])[msg.sender]
     assert (senderIsOwner or senderIsApprovedForAll)
 ```
 
-Bir onay ayarlamak için, sahibi veya sahibi tarafından yetkilendirilmiş bir operatör olabilirsiniz.
+Bir onay ayarlamak için ya sahip ya da sahip tarafından yetkilendirilmiş bir operatör olabilirsiniz.
 
 ```python
-    # Set the approval
+    # Onayı ayarla
     self.idToApprovals[_tokenId] = _approved
     log Approval(owner, _approved, _tokenId)
 
@@ -555,25 +541,25 @@ Bir onay ayarlamak için, sahibi veya sahibi tarafından yetkilendirilmiş bir o
 @external
 def setApprovalForAll(_operator: address, _approved: bool):
     """
-    @dev Üçüncü bir taraf ("operatör") için `msg.sender`'ın tüm varlıklarını yönetme onayını etkinleştirir veya devre dışı bırakır.
-         Ayrıca ApprovalForAll olayını da yayınlar.
-         `_operator`'ın `msg.sender` olması durumunda hata verir. (NOT: Bu, EIP'de yazılmamıştır)
-    @notice Bu, göndericinin o anda hiçbir jetona sahip olmasa bile çalışır.
-    @param _operator Yetkili operatörler kümesine eklenecek adres.
-    @param _approved Operatör onaylanmışsa True, onayı iptal etmek için false.
+    @dev Üçüncü bir tarafın ("operatör") `msg.sender`'ın tüm varlıklarını yönetmesi için onayı etkinleştirir veya devre dışı bırakır.
+         Ayrıca ApprovalForAll olayını tetikler.
+         `_operator` `msg.sender` ise hata fırlatır. (NOT: Bu EIP'de yazılı değildir)
+    @notice Bu, gönderici o anda herhangi bir Token'a sahip olmasa bile çalışır.
+    @param _operator Yetkili operatörler kümesine eklenecek Adres.
+    @param _approved Operatörler onaylanmışsa true, onayı iptal etmek için false.
     """
-    # `_operator`'ın `msg.sender` olması durumunda hata verir
+    # `_operator` `msg.sender` ise hata fırlatır
     assert _operator != msg.sender
     self.ownerToOperators[msg.sender][_operator] = _approved
     log ApprovalForAll(msg.sender, _operator, _approved)
 ```
 
-#### Yeni Jetonlar Basma ve Mevcut Olanları Yok Etme {#mint-burn}
+#### Yeni Token'lar Basmak ve Mevcut Olanları Yok Etmek {#mint-burn}
 
-Sözleşmeyi oluşturan hesap, yeni NFT'leri basmaya yetkili süper kullanıcı olan `minter`'dır. Ancak, onun bile mevcut jetonları yakmasına izin verilmez. Bunu yalnızca mal sahibi veya mal sahibi tarafından yetkilendirilmiş bir varlık yapabilir.
+Sözleşmeyi oluşturan hesap, yeni NFT'ler basmaya yetkili süper kullanıcı olan `minter`'dır. Ancak, onun bile mevcut token'ları yakmasına izin verilmez. Bunu yalnızca sahip veya sahip tarafından yetkilendirilmiş bir varlık yapabilir.
 
 ```python
-### BASMA VE YAKMA FONKSİYONLARI ###
+### BASMAK VE YAKIM FONKSİYONLARI ###
 
 @external
 def mint(_to: address, _tokenId: uint256) -> bool:
@@ -583,72 +569,69 @@ Bu fonksiyon her zaman `True` döndürür, çünkü işlem başarısız olursa g
 
 ```python
     """
-    @dev Jeton basma fonksiyonu
-         `msg.sender` minter değilse hata verir.
-         `_to` sıfır adresi ise hata verir.
-         `_tokenId`'nin bir sahibi varsa hata verir.
-    @param _to Basılan jetonları alacak olan adres.
-    @param _tokenId Basılacak jeton kimliği.
-    @return İşlemin başarılı olup olmadığını gösteren bir boole değeri.
+    @dev Token basmak için fonksiyon
+         `msg.sender` basıcı değilse hata fırlatır.
+         `_to` sıfır adresi ise hata fırlatır.
+         `_tokenId` birine aitse hata fırlatır.
+    @param _to Basılan Token'ları alacak Adres.
+    @param _tokenId Basılacak Token kimliği.
+    @return İşlemin başarılı olup olmadığını belirten bir bool.
     """
-    # `msg.sender` minter değilse hata verir
+    # `msg.sender` basıcı değilse hata fırlatır
     assert msg.sender == self.minter
 ```
 
-Yalnızca minter (ERC-721 sözleşmesini oluşturan hesap) yeni jetonlar basabilir. Bu, gelecekte minter'ın kimliğini değiştirmek istersek bir sorun yaratabilir. Bir üretim sözleşmesinde, muhtemelen minter'ın minter ayrıcalıklarını başka birine devretmesine izin veren bir fonksiyonun olmasını istersiniz.
+Yalnızca basıcı (ERC-721 sözleşmesini oluşturan hesap) yeni token'lar basabilir. Gelecekte basıcının kimliğini değiştirmek istersek bu bir sorun olabilir. Bir üretim sözleşmesinde muhtemelen basıcının basım ayrıcalıklarını başka birine devretmesine izin veren bir fonksiyon istersiniz.
 
 ```python
-    # `_to` sıfır adresi ise hata verir
+    # `_to` sıfır adresi ise hata fırlatır
     assert _to != ZERO_ADDRESS
-    # Add NFT. Throws if `_tokenId` is owned by someone
+    # NFT ekle. `_tokenId` birine aitse hata fırlatır
     self._addTokenTo(_to, _tokenId)
     log Transfer(ZERO_ADDRESS, _to, _tokenId)
     return True
 ```
 
-Geleneksel olarak, yeni jetonların basımı sıfır adresinden bir aktarım olarak sayılır.
+Geleneksel olarak, yeni token'ların basımı sıfır adresinden bir transfer olarak sayılır.
 
 ```python
 
 @external
 def burn(_tokenId: uint256):
     """
-    @dev Belirli bir ERC721 jetonunu yakar.
+    @dev Belirli bir ERC-721 Token'ı için yakım işlemi yapar.
          `msg.sender` mevcut sahip, yetkili bir operatör veya bu NFT için onaylanmış
-         adres değilse hata verir.
-         `_tokenId` geçerli bir NFT değilse hata verir.
-    @param _tokenId Yakılacak ERC721 jetonunun uint256 id'si.
+         Adres değilse hata fırlatır.
+         `_tokenId` geçerli bir NFT değilse hata fırlatır.
+    @param _tokenId yakım işlemi yapılacak ERC-721 Token'ının uint256 kimliği.
     """
-    # Check requirements
+    # Gereksinimleri kontrol et
     assert self._isApprovedOrOwner(msg.sender, _tokenId)
     owner: address = self.idToOwner[_tokenId]
-    # `_tokenId` geçerli bir NFT değilse hata verir
+    # `_tokenId` geçerli bir NFT değilse hata fırlatır
     assert owner != ZERO_ADDRESS
     self._clearApproval(owner, _tokenId)
     self._removeTokenFrom(owner, _tokenId)
     log Transfer(owner, ZERO_ADDRESS, _tokenId)
 ```
 
-Bir jetonu aktarmasına izin verilen herkesin onu yakmasına izin verilir. Bir yakma işlemi, sıfır adresine aktarıma eş değer görünse de, sıfır adresi aslında jetonu almaz. Bu, jeton için kullanılan tüm depolama alanını boşaltmamızı sağlar ve bu da işlemin gaz maliyetini azaltabilir.
+Bir token'ı transfer etmesine izin verilen herkes onu yakabilir. Bir yakım işlemi sıfır adresine transfere eşdeğer görünse de, sıfır adresi aslında token'ı almaz. Bu, token için kullanılan tüm depolama alanını boşaltmamızı sağlar, bu da işlemin gaz maliyetini azaltabilir.
 
-## Bu Sözleşmeyi Kullanma {#using-contract}
+## Bu Sözleşmeyi Kullanmak {#using-contract}
 
-Solidity'nin aksine, Vyper'ın kalıtımı yoktur. Bu, kodu daha net hâle getirmek ve dolayısıyla güvenliğini sağlamak için bilinçli bir tasarım seçimidir. Yani kendi Vyper ERC-721 sözleşmenizi oluşturmak için bu
-sözleşmeyi alır ve istediğiniz iş mantığını uygulamak için değiştirirsiniz.
+Solidity'nin aksine, Vyper'da kalıtım yoktur. Bu, kodu daha net ve dolayısıyla güvenliğini sağlamayı daha kolay hale getirmek için kasıtlı bir tasarım seçimidir. Bu nedenle kendi Vyper ERC-721 sözleşmenizi oluşturmak için [bu sözleşmeyi](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) alır ve istediğiniz iş mantığını uygulamak üzere değiştirirsiniz.
 
 ## Sonuç {#conclusion}
 
-İnceleme için, bu sözleşmedeki en önemli fikirlerden bazıları şunlardır:
+Gözden geçirmek gerekirse, bu sözleşmedeki en önemli fikirlerden bazıları şunlardır:
 
-- ERC-721 jetonlarını güvenli bir aktarımla almak için sözleşmelerin `ERC721Receiver` arayüzünü uygulaması gerekir.
-- Güvenli aktarım kullansanız bile, özel anahtarı bilinmeyen bir adrese gönderirseniz jetonlar takılıp kalabilir.
-- Bir işlemle ilgili bir sorun olduğunda yalnızca bir hata değeri döndürmek yerine çağrıyı `geri almak` iyi bir fikirdir.
-- ERC-721 jetonları, bir sahibi olduğunda var olurlar.
-- Bir NFT'yi aktarma yetkisine sahip olmanın üç yolu vardır. Sahibi olabilir, belirli bir jeton için onay alabilir
-  veya sahibinin tüm jetonları için operatör olabilirsiniz.
-- Geçmiş olaylar sadece blokzincirin dışında görülebilir. Blokzincirin içinde çalışan kod onları göremez.
+- Güvenli bir transferle ERC-721 token'larını almak için sözleşmelerin `ERC721Receiver` arayüzünü uygulaması gerekir.
+- Güvenli transfer kullansanız bile, token'ları özel anahtarı bilinmeyen bir adrese gönderirseniz yine de sıkışıp kalabilirler.
+- Bir işlemle ilgili bir sorun olduğunda, sadece bir başarısızlık değeri döndürmek yerine çağrıyı `revert` (geri almak) iyi bir fikirdir.
+- ERC-721 token'ları bir sahipleri olduğunda var olurlar.
+- Bir NFT'yi transfer etmeye yetkili olmanın üç yolu vardır. Sahip olabilirsiniz, belirli bir token için onaylanmış olabilirsiniz veya sahibin tüm token'ları için bir operatör olabilirsiniz.
+- Geçmiş olaylar yalnızca blokzincirin dışında görülebilir. Blokzincir içinde çalışan kod bunları görüntüleyemez.
 
-Artık güvenli Vyper sözleşmelerini uygulayabilirsiniz.
+Şimdi gidin ve güvenli Vyper sözleşmeleri uygulayın.
 
-[Çalışmalarımdan daha fazlası için buraya bakın](https://cryptodocguy.pro/).
-
+[Çalışmalarımın daha fazlası için buraya bakın](https://cryptodocguy.pro/).

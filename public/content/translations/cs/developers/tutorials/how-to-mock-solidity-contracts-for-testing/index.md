@@ -1,33 +1,31 @@
 ---
-title: "Jak vytvořit maketu chytrých kontraktů Solidity pro testování"
+title: "Jak mockovat chytré kontrakty v Solidity pro testování"
 description: "Proč byste si při testování měli dělat legraci ze svých kontraktů"
 author: Markus Waas
 lang: cs
 tags:
-  [
-    "solidity",
-    "smart kontrakt účty",
-    "testování",
-    "mocking"
-  ]
+  - solidity
+  - chytré kontrakty
+  - testování
+  - mockování
 skill: intermediate
-breadcrumb: "Mockování kontraktu"
+breadcrumb: "Mockování kontraktů"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
 
-[Mock objekty](https://wikipedia.org/wiki/Mock_object) jsou běžným návrhovým vzorem v objektově orientovaném programování. Pochází ze starého francouzského slova „mocquer“ s významem „dělat si legraci“ a vyvinulo se ve význam „napodobování něčeho skutečného“, což je vlastně to, co v programování děláme. Dělejte si prosím legraci ze svých chytrých kontraktů, jen pokud chcete, ale vytvářejte pro ně makety, kdykoli můžete. Usnadní vám to život.
+[Mock objekty](https://wikipedia.org/wiki/Mock_object) jsou běžným návrhovým vzorem v objektově orientovaném programování. Slovo pochází ze starofrancouzského „mocquer“, což znamená „dělat si legraci“, a postupně se vyvinulo ve význam „napodobovat něco skutečného“, což je přesně to, co děláme v programování. Dělejte si ze svých chytrých kontraktů legraci jen tehdy, když opravdu chcete, ale mockujte je, kdykoli můžete. Usnadní vám to život.
 
-## Unit testování kontraktů pomocí maket {#unit-testing-contracts-with-mocks}
+## Unit testování kontraktů pomocí mocků {#unit-testing-contracts-with-mocks}
 
-Vytvoření makety kontraktu v podstatě znamená vytvoření druhé verze tohoto kontraktu, která se chová velmi podobně jako původní, ale způsobem, který může vývojář snadno ovládat. Často skončíte u složitých kontraktů, kde chcete pouze [testovat malé části kontraktu](/developers/docs/smart-contracts/testing/). Problém je, co když testování této malé části vyžaduje velmi specifický stav kontraktu, do kterého je obtížné se dostat?
+Mockování kontraktu v podstatě znamená vytvoření jeho druhé verze, která se chová velmi podobně jako ta původní, ale způsobem, který může vývojář snadno ovládat. Často skončíte u složitých kontraktů, kde chcete pouze [unit testovat malé části kontraktu](/developers/docs/smart-contracts/testing/). Problém je v tom, co když testování této malé části vyžaduje velmi specifický stav kontraktu, do kterého je obtížné se dostat?
 
-Pokaždé byste mohli napsat složitou logiku nastavení testu, která kontrakt uvede do požadovaného stavu, nebo napíšete maketu. Vytvoření makety kontraktu je s dědičností snadné. Jednoduše vytvořte druhý mock kontrakt, který dědí z původního. Nyní můžete do své makety přepsat funkce. Ukažme si to na příkladu.
+Pokaždé byste mohli psát složitou logiku pro nastavení testu, která kontrakt uvede do požadovaného stavu, nebo napíšete mock. Mockování kontraktu je snadné díky dědičnosti. Jednoduše vytvořte druhý mock kontrakt, který dědí z toho původního. Nyní můžete ve svém mocku přepisovat (override) funkce. Pojďme si to ukázat na příkladu.
 
-## Příklad: Privátní ERC20 {#example-private-erc20}
+## Příklad: Privátní ERC-20 {#example-private-erc20}
 
-Použijeme příklad kontraktu ERC-20, který má počáteční soukromé období. Vlastník může spravovat soukromé uživatele a pouze ti budou moci na začátku přijímat tokeny. Jakmile uplyne určitá doba, bude moci tokeny používat každý. Pokud vás to zajímá, používáme hook [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) z nových kontraktů OpenZeppelin v3.
+Použijeme ukázkový ERC-20 kontrakt, který má počáteční privátní období. Vlastník může spravovat privátní uživatele a pouze ti budou moci na začátku přijímat tokeny. Jakmile uplyne určitá doba, budou moci tokeny používat všichni. Pokud vás to zajímá, používáme hook [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) z nových kontraktů OpenZeppelin v3.
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -67,7 +65,7 @@ contract PrivateERC20 is ERC20, Ownable {
 }
 ```
 
-A teď si vytvoříme maketu.
+A teď si ho namockujeme.
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -93,17 +91,17 @@ Dostanete jednu z následujících chybových zpráv:
 - `PrivateERC20Mock.sol: TypeError: Overriding function is missing "override" specifier.`
 - `PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.`
 
-Protože používáme novou verzi Solidity 0.6, musíme přidat klíčové slovo `virtual` pro funkce, které lze přepsat, a `override` pro přepisující funkci. Přidejme je tedy k oběma funkcím `isPublic`.
+Vzhledem k tomu, že používáme novou verzi Solidity 0.6, musíme přidat klíčové slovo `virtual` pro funkce, které lze přepsat, a override pro přepisující funkci. Pojďme je tedy přidat do obou funkcí `isPublic`.
 
-Nyní ve svých unit testech můžete místo toho použít `PrivateERC20Mock`. Pokud chcete testovat chování během doby soukromého používání, použijte `setIsPublic(false)` a podobně `setIsPublic(true)` pro testování doby veřejného používání. V našem příkladu bychom samozřejmě mohli také použít [pomocné funkce pro čas](https://docs.openzeppelin.com/test-helpers/0.5/api#increase), abychom odpovídajícím způsobem změnili časy. Ale myšlenka mockingu by teď měla být jasná a dokážete si představit scénáře, kde to není tak snadné jako pouhé posunutí času.
+Nyní můžete ve svých unit testech místo toho použít `PrivateERC20Mock`. Když chcete testovat chování během doby privátního používání, použijte `setIsPublic(false)` a podobně `setIsPublic(true)` pro testování doby veřejného používání. V našem příkladu bychom samozřejmě mohli k odpovídající změně časů použít také [časové pomocníky (time helpers)](https://docs.openzeppelin.com/test-helpers/0.5/api#increase). Myšlenka mockování by však nyní měla být jasná a jistě si dokážete představit scénáře, kde to není tak snadné jako pouhé posunutí času.
 
-## Vytváření maket mnoha kontraktů {#mocking-many-contracts}
+## Mockování mnoha kontraktů {#mocking-many-contracts}
 
-Může to být nepřehledné, pokud musíte pro každou jednu maketu vytvářet další kontrakt. Pokud vám to vadí, můžete se podívat na knihovnu [MockContract](https://github.com/gnosis/mock-contract). Umožňuje přepisovat a měnit chování kontraktů za chodu. Funguje to však pouze pro mockování volání jiného kontraktu, takže by to pro náš příklad nefungovalo.
+Může to začít být nepřehledné, pokud musíte pro každý jednotlivý mock vytvořit další kontrakt. Pokud vám to vadí, můžete se podívat na knihovnu [MockContract](https://github.com/gnosis/mock-contract). Umožňuje vám přepisovat a měnit chování kontraktů za běhu (on-the-fly). Funguje však pouze pro mockování volání jiného kontraktu, takže pro náš příklad by to nefungovalo.
 
-## Mocking může být ještě mocnější {#mocking-can-be-even-more-powerful}
+## Mockování může být ještě mocnější {#mocking-can-be-even-more-powerful}
 
-Možnosti mockingu tím nekončí.
+Možnosti mockování tím nekončí.
 
-- Přidávání funkcí: Užitečné je nejen přepsání konkrétní funkce, ale také pouhé přidání dalších funkcí. Dobrým příkladem pro tokeny je mít pouze dodatečnou funkci `mint`, která umožní každému uživateli získat zdarma nové tokeny.
-- Použití na testnetech: Když nasazujete a testujete své kontrakty na testnetech společně s vaší dapp, zvažte použití mock verze. Vyhněte se přepisování funkcí, pokud to opravdu nemusíte. Koneckonců chcete testovat skutečnou logiku. Ale přidání například resetovací funkce může být užitečné, která jednoduše resetuje stav kontraktu na začátek, není vyžadováno žádné nové nasazení. To byste samozřejmě nechtěli mít v kontraktu na hlavní síti.
+- Přidávání funkcí: Užitečné není jen přepisování konkrétní funkce, ale také pouhé přidávání dalších funkcí. Dobrým příkladem u tokenů je přidání funkce `mint`, která umožní jakémukoli uživateli získat nové tokeny zdarma.
+- Použití v testnetech: Když nasazujete a testujete své kontrakty na testnetech společně s vaší decentralizovanou aplikací (dapp), zvažte použití mockované verze. Vyhněte se přepisování funkcí, pokud opravdu nemusíte. Koneckonců chcete testovat skutečnou logiku. Ale přidání například funkce reset, která jednoduše resetuje stav kontraktu na začátek, může být užitečné, aniž by bylo nutné nové nasazení. Je zřejmé, že v kontraktu na Mainnetu byste něco takového mít nechtěli.

@@ -1,31 +1,31 @@
 ---
-title: "EthereumEthereum Başlangıç Düğümüne Giriş"
-description: "Başlangıç düğümlerini anlamak için ihtiyacın olan temel bilgiler"
+title: "Ethereum Başlatma Düğümlerine Giriş"
+description: "Başlatma düğümlerini anlamak için ihtiyacınız olan temel bilgiler"
 lang: tr
 ---
 
-Yeni bir düğüm Ethereum ağına katıldığında, yeni düğümler keşfetmek için halihazırda ağda bulunan düğümlerle bağlantı kurmaya ihtiyaç duyar. Ethereum ağındaki bu giriş noktaları başlangıç düğümü olarak adlandırılır. İstemciler genellikle kodlanmış bir başlangıç düğümleri listesi içerir. Bu başlangıç düğümleri tipik olarak Ethereum Foundation geliştirici takımı ya da istemci takımı tarafından çalıştırılır. Başlangıç düğümlerinin statik düğümler ile aynı olmadığını unutmayın. Statik düğümler tekrar tekrar çağırılırken, başlangıç düğümleri yalnızca, bağlantı için yeterli düğüm olmadığında ve bir düğümün yeni bağlantılar başlatması gerektiğinde çağırılır.
+Yeni bir düğüm Ethereum ağına katıldığında, daha sonra yeni eşler keşfedebilmek için ağda halihazırda bulunan düğümlere bağlanması gerekir. Ethereum ağına olan bu giriş noktalarına başlatma düğümleri denir. İstemciler genellikle içlerine kodlanmış bir başlatma düğümleri listesine sahiptir. Bu başlatma düğümleri tipik olarak Ethereum Vakfı'nın devops ekibi veya istemci ekiplerinin kendileri tarafından çalıştırılır. Başlatma düğümlerinin statik düğümlerle aynı şey olmadığını unutmayın. Statik düğümler tekrar tekrar çağrılırken, başlatma düğümleri yalnızca bağlanacak yeterli eş yoksa ve bir düğümün bazı yeni bağlantıları başlatması gerekiyorsa çağrılır.
 
-## Bir bootnode'a bağlanın {#connect-to-a-bootnode}
+## Bir başlatma düğümüne bağlanın {#connect-to-a-bootnode}
 
-Çoğu istemcinin yerleşik bir bootnode listesi vardır, ancak kendi bootnode'unuzu çalıştırmak veya istemcinin sabit kodlanmış listesinde olmayan birini kullanmak da isteyebilirsiniz. Böyle bir durumda, istemcinize başlarken bunu belirtebilirsiniz (Geth için bir örnek: lütfen istemci dokümanlarınızı kontrol edin):
+Çoğu istemcinin yerleşik bir başlatma düğümleri listesi vardır, ancak kendi başlatma düğümünüzü çalıştırmak veya istemcinin kodlanmış listesinin bir parçası olmayan birini kullanmak da isteyebilirsiniz. Bu durumda, istemcinizi başlatırken bunları aşağıdaki gibi belirtebilirsiniz (örnek Geth içindir, lütfen istemcinizin belgelerini kontrol edin):
 
 ```
-geth --bootnodes "enode://<node ID>@<IP address>:<port>"
+geth --bootnodes "enode://<düğüm kimliği>@<IP adresi>:<port>"
 ```
 
-## Bir bootnode çalıştırın {#run-a-bootnode}
+## Bir başlatma düğümü çalıştırın {#run-a-bootnode}
 
-Bootnode'lar, bir NAT'ın ([Ağ Adresi Çevirisi](https://www.geeksforgeeks.org/network-address-translation-nat/)) arkasında olmayan tam düğümlerdir. Her tam düğüm halka açık olduğu taktirde, bir başlangıç düğümü gibi hareket edebilir.
+Başlatma düğümleri, bir NAT ([Ağ Adresi Çevirisi](https://www.geeksforgeeks.org/network-address-translation-nat/)) arkasında olmayan tam düğümlerdir. Herkese açık olduğu sürece her tam düğüm bir başlatma düğümü olarak işlev görebilir.
 
-Bir düğüm başlattığınızda, başkalarının düğümünüze bağlanmak için kullanabileceği, herkese açık bir tanımlayıcı olan [enode](/developers/docs/networking-layer/network-addresses/#enode) kimliğiniz kaydedilmelidir.
+Bir düğümü başlattığınızda, başkalarının düğümünüze bağlanmak için kullanabileceği genel bir tanımlayıcı olan [enode](/developers/docs/networking-layer/network-addresses/#enode)'unuzu günlüğe kaydetmelidir.
 
-Enode genellikle her yeniden başlatmada yeniden oluşur, bu yüzden kendi başlangıç düğümünüz için kalıcı bir enode oluşturmak üzere istemci dokümanlarınıza baktığınızdan emin olun.
+Enode genellikle her yeniden başlatmada yeniden oluşturulur, bu nedenle başlatma düğümünüz için kalıcı bir enode'un nasıl oluşturulacağı konusunda istemcinizin belgelerine baktığınızdan emin olun.
 
-Iyi bir başlangıç düğümü olmak için, kendisine bağlanabilecek maksimum eş düğüm sayısını arttırmak iyi bir fikirdir. Çok sayıda eş düğüm ile başlangıç düğümünü çalıştırmak, bant genişliği gereksinimini önemli ölçüde arttırır.
+İyi bir başlatma düğümü olmak için, ona bağlanabilecek maksimum eş sayısını artırmak iyi bir fikirdir. Bir başlatma düğümünü çok sayıda eşle çalıştırmak, bant genişliği gereksinimini önemli ölçüde artıracaktır.
 
-## Mevcut bootnode'lar {#available-bootnodes}
+## Mevcut başlatma düğümleri {#available-bootnodes}
 
-go-ethereum'daki yerleşik bootnode'ların listesini [burada](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23) bulabilirsiniz. Bu başlangıç düğümleri, Ethereum Foundation ve go-ethereum ekibi tarafından korunur.
+go-ethereum içindeki yerleşik başlatma düğümlerinin bir listesi [burada](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23) bulunabilir. Bu başlatma düğümleri Ethereum Vakfı ve go-ethereum ekibi tarafından sürdürülmektedir.
 
-Gönüllüler tarafından tutulan başka başlangıç düğümü listeleri de mevcuttur. Lütfen en az bir resmi başlangıç düğümüne sahip olduğunuzdan emin olun, aksi tadirde "tutulma" saldırısına maruz kalabilirsiniz.
+Gönüllüler tarafından sürdürülen başka başlatma düğümü listeleri de mevcuttur. Lütfen her zaman en az bir resmi başlatma düğümü eklediğinizden emin olun, aksi takdirde tutulma saldırısına uğrayabilirsiniz.

@@ -1,59 +1,59 @@
 ---
-title: Usanifu wa Nodi
-description: Utangulizi wa jinsi Nodi za Ethereum zinavyopangwa.
+title: Usanifu wa nodi
+description: Utangulizi wa jinsi nodi za Ethereum zinavyopangwa.
 lang: sw
 ---
 
-Nodi ya Ethereum inaundwa na wateja wawili: [mteja wa utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) na [mteja wa makubaliano](/developers/docs/nodes-and-clients/#consensus-clients). Ili nodi ipendekeze kitalu kipya, lazima pia iendeshe [mteja wa mthibitishaji](#validators).
+Nodi ya Ethereum inaundwa na wateja wawili: [kiteja cha utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) na [mteja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients). Ili nodi iweze kupendekeza kitalu kipya, lazima pia iendeshe [kiteja cha mthibitishaji](#validators).
 
-Wakati Ethereum ilipokuwa ikitumia [uthibitishaji wa kazi](/developers/docs/consensus-mechanisms/pow/), mteja wa utekelezaji alitosha kuendesha nodi kamili ya Ethereum. Hata hivyo, tangu kutekeleza [uthibitishaji wa dhamana](/developers/docs/consensus-mechanisms/pos/), mteja wa utekelezaji lazima atumike pamoja na programu nyingine inayoitwa [mteja wa makubaliano](/developers/docs/nodes-and-clients/#consensus-clients).
+Wakati Ethereum ilipokuwa ikitumia [Uthibitisho wa Kazi (PoW)](/developers/docs/consensus-mechanisms/pow/), kiteja cha utekelezaji kilitosha kuendesha nodi kamili ya Ethereum. Hata hivyo, tangu kutekelezwa kwa [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos/), kiteja cha utekelezaji lazima kitumike pamoja na programu nyingine inayoitwa [mteja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients).
 
-Mchoro hapa chini unaonyesha uhusiano kati ya wateja wawili wa Ethereum. Wateja hao wawili huunganishwa kwenye mitandao yao ya rika-kwa-rika (P2P). Mitandao tofauti ya P2P inahitajika kwani wateja wa utekelezaji husambaza miamala kwenye mtandao wao wa P2P, na kuwawezesha kusimamia bwawa lao la miamala la ndani, wakati wateja wa makubaliano husambaza bloku kwenye mtandao wao wa P2P, kuwezesha makubaliano na ukuaji wa mnyororo.
+Mchoro ulio hapa chini unaonyesha uhusiano kati ya wateja wawili wa Ethereum. Wateja hao wawili huunganishwa kwenye mitandao yao husika ya rika-kwa-rika (P2P). Mitandao tofauti ya P2P inahitajika kwa kuwa viteja vya utekelezaji husambaza miamala kwenye mtandao wao wa P2P, na kuviwezesha kudhibiti kusanyiko la miamala la ndani, huku wateja wa mwafaka wakisambaza vitalu kwenye mtandao wao wa P2P, na kuwezesha mwafaka na ukuaji wa mnyororo.
 
-![Mchoro wa usanifu wa nodi ya Ethereum unaoonyesha safu ya utekelezaji na safu ya makubaliano](node-architecture-text-background.png)
+![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
 
-_Kuna chaguzi kadhaa kwa mteja wa utekelezaji ikiwa ni pamoja na Erigon, Nethermind, na Besu_.
+_Kuna chaguzi kadhaa za kiteja cha utekelezaji ikiwa ni pamoja na Erigon, Nethermind, na Besu_.
 
-Ili muundo huu wa wateja wawili ufanye kazi, wateja wa makubaliano lazima wapitishe vifurushi vya miamala kwa mteja wa utekelezaji. Mteja wa utekelezaji hutekeleza miamala ndani ya mfumo ili kuthibitisha kuwa miamala haikiuki sheria zozote za Ethereum na kwamba sasisho lililopendekezwa kwa hali ya Ethereum ni sahihi. Wakati nodi inachaguliwa kuwa mzalishaji wa kitalu, mfano wake wa mteja wa makubaliano huomba vifurushi vya miamala kutoka kwa mteja wa utekelezaji ili kujumuisha katika kitalu kipya na kuzitekeleza ili kusasisha hali ya kimataifa. Mteja wa makubaliano huendesha mteja wa utekelezaji kupitia muunganisho wa ndani wa RPC kwa kutumia [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Ili muundo huu wa wateja wawili ufanye kazi, wateja wa mwafaka lazima wapitishe vifurushi vya miamala kwa kiteja cha utekelezaji. Kiteja cha utekelezaji hutekeleza miamala ndani ya mfumo ili kuthibitisha kuwa miamala haikiuki sheria zozote za Ethereum na kwamba sasisho lililopendekezwa kwa hali ya Ethereum ni sahihi. Wakati nodi inapochaguliwa kuwa mzalishaji wa kitalu, mfano wake wa mteja wa mwafaka huomba vifurushi vya miamala kutoka kwa kiteja cha utekelezaji ili kuvijumuisha kwenye kitalu kipya na kuvitekeleza ili kusasisha hali ya kimataifa. Mteja wa mwafaka huendesha kiteja cha utekelezaji kupitia muunganisho wa ndani wa RPC kwa kutumia [API ya Injini](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
-## Mteja wa utekelezaji anafanya nini? {#execution-client}
+## Kiteja cha utekelezaji hufanya nini? {#execution-client}
 
-Mteja wa utekelezaji anawajibika kwa uthibitishaji wa muamala, ushughulikiaji, na usambazaji, pamoja na usimamizi wa hali na kusaidia mashine halisi ya ethereum ([EVM](/developers/docs/evm/)). **Hahusiki** na ujenzi wa kitalu, usambazaji wa kitalu au kushughulikia mantiki ya makubaliano. Haya yapo chini ya jukumu la mteja wa makubaliano.
+Kiteja cha utekelezaji kinawajibika kwa uthibitishaji, ushughulikiaji, na usambazaji wa miamala, pamoja na usimamizi wa hali na kusaidia Mashine Pepe ya Ethereum ([EVM](/developers/docs/evm/)). **Hakiwajibiki** kwa ujenzi wa kitalu, usambazaji wa kitalu au kushughulikia mantiki ya mwafaka. Haya yako chini ya jukumu la mteja wa mwafaka.
 
-Mteja wa utekelezaji huunda mizigo ya utekelezaji - orodha ya miamala, trie ya hali iliyosasishwa, na data nyingine zinazohusiana na utekelezaji. Wateja wa makubaliano hujumuisha mzigo wa utekelezaji katika kila kitalu. Mteja wa utekelezaji pia anawajibika kwa kutekeleza tena miamala katika bloku mpya ili kuhakikisha ni halali. Kutekeleza miamala hufanywa kwenye kompyuta iliyopachikwa ya mteja wa utekelezaji, inayojulikana kama [mashine halisi ya ethereum (EVM)](/developers/docs/evm).
+Kiteja cha utekelezaji huunda mizigo ya utekelezaji - orodha ya miamala, trie ya hali iliyosasishwa, na data nyingine zinazohusiana na utekelezaji. Wateja wa mwafaka hujumuisha mzigo wa utekelezaji katika kila kitalu. Kiteja cha utekelezaji pia kinawajibika kwa kutekeleza upya miamala katika vitalu vipya ili kuhakikisha ni halali. Utekelezaji wa miamala hufanywa kwenye kompyuta iliyopachikwa ya kiteja cha utekelezaji, inayojulikana kama [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm).
 
-Mteja wa utekelezaji pia hutoa kiolesura cha mtumiaji kwa Ethereum kupitia [njia za RPC](/developers/docs/apis/json-rpc) zinazowezesha watumiaji kuuliza kiambajengo cha Ethereum, kuwasilisha miamala na kupeleka mikataba mahiri. Ni kawaida kwa simu za RPC kushughulikiwa na maktaba kama [Web3js](https://docs.web3js.org/), [Web3py](https://web3py.readthedocs.io/en/v5/), au na kiolesura cha mtumiaji kama vile mkoba wa kivinjari.
+Kiteja cha utekelezaji pia hutoa kiolesura cha mtumiaji kwa Ethereum kupitia [mbinu za RPC](/developers/docs/apis/json-rpc) zinazowezesha watumiaji kuuliza mnyororo wa vitalu wa Ethereum, kuwasilisha miamala na kusambaza mikataba mahiri. Ni kawaida kwa miito ya RPC kushughulikiwa na maktaba kama [Web3js](https://docs.web3js.org/), [Web3py](https://web3py.readthedocs.io/en/v5/), au na kiolesura cha mtumiaji kama vile mkoba wa kivinjari.
 
-Kwa muhtasari, mteja wa utekelezaji ni:
+Kwa muhtasari, kiteja cha utekelezaji ni:
 
 - lango la mtumiaji kwa Ethereum
-- nyumbani kwa mashine halisi ya ethereum, hali ya Ethereum na bwawa la miamala.
+- nyumbani kwa Mashine Pepe ya Ethereum, hali ya Ethereum na kusanyiko la miamala.
 
-## Mteja wa makubaliano anafanya nini? {#consensus-client}
+## Mteja wa mwafaka hufanya nini? {#consensus-client}
 
-Mteja wa makubaliano hushughulikia mantiki yote inayowezesha nodi kukaa sawa na mtandao wa Ethereum. Hii inajumuisha kupokea bloku kutoka kwa wenzao na kuendesha algoriti ya uchaguzi wa uma ili kuhakikisha nodi daima inafuata mnyororo wenye mkusanyiko mkubwa zaidi wa uthibitisho (uliopimwa na salio bora la mthibitishaji). Sawa na mteja wa utekelezaji, wateja wa makubaliano wana mtandao wao wa P2P ambao kupitia huo wanashiriki bloku na uthibitisho.
+Mteja wa mwafaka hushughulikia mantiki yote inayowezesha nodi kusalia katika usawazishaji na mtandao wa Ethereum. Hii inajumuisha kupokea vitalu kutoka kwa rika na kuendesha algoriti ya kuchagua mchepuko ili kuhakikisha nodi inafuata mnyororo wenye mkusanyiko mkubwa zaidi wa uthibitisho (uliopimwa kwa salio tendaji la mthibitishaji). Sawa na kiteja cha utekelezaji, wateja wa mwafaka wana mtandao wao wa P2P ambao kupitia huo wanashiriki vitalu na uthibitisho.
 
-Mteja wa makubaliano hashiriki katika kuthibitisha au kupendekeza bloku - hii inafanywa na mthibitishaji, nyongeza ya hiari kwa mteja wa makubaliano. Mteja wa makubaliano asiye na mthibitishaji huendelea tu na kichwa cha mnyororo, kuruhusu nodi kukaa sawa. Hii inamwezesha mtumiaji kufanya muamala na Ethereum akitumia mteja wake wa utekelezaji, akiwa na uhakika kwamba yuko kwenye mnyororo sahihi.
+Mteja wa mwafaka hashiriki katika kuthibitisha au kupendekeza vitalu - hili hufanywa na mthibitishaji, nyongeza ya hiari kwa mteja wa mwafaka. Mteja wa mwafaka asiye na mthibitishaji huenda sambamba tu na kichwa cha mnyororo, kuruhusu nodi kusalia imesawazishwa. Hii inamwezesha mtumiaji kufanya muamala na Ethereum akitumia kiteja chake cha utekelezaji, akiwa na uhakika kwamba yuko kwenye mnyororo sahihi.
 
 ## Wathibitishaji {#validators}
 
-Kuweka dhamana na kuendesha programu ya mthibitishaji hufanya nodi istahiki kuchaguliwa kupendekeza kitalu kipya. Waendeshaji wa nodi wanaweza kuongeza mthibitishaji kwa wateja wao wa makubaliano kwa kuweka amana ya 32 ETH katika mkataba wa amana. Mteja wa mthibitishaji huja akiwa ameunganishwa na mteja wa makubaliano na anaweza kuongezwa kwenye nodi wakati wowote. Mthibitishaji hushughulikia uthibitisho na mapendekezo ya kitalu. Pia inawezesha nodi kukusanya zawadi au kupoteza ETH kupitia adhabu au kupunguzwa kwa dhamana.
+Kuweka dhamana na kuendesha programu ya mthibitishaji hufanya nodi ifae kuchaguliwa kupendekeza kitalu kipya. Waendeshaji wa nodi wanaweza kuongeza mthibitishaji kwa wateja wao wa mwafaka kwa kuweka amana ya 32 ETH katika mkataba wa amana. Kiteja cha mthibitishaji huja kikiwa kimeunganishwa na mteja wa mwafaka na kinaweza kuongezwa kwenye nodi wakati wowote. Mthibitishaji hushughulikia uthibitisho na mapendekezo ya kitalu. Pia huwezesha nodi kukusanya zawadi au kupoteza ETH kupitia adhabu au ukataji.
 
-[Zaidi kuhusu kuweka dhamana](/staking/).
+[Zaidi kuhusu uwekaji dhamana](/staking/).
 
 ## Ulinganisho wa vipengele vya nodi {#node-comparison}
 
-| Mteja wa Utekelezaji                               | Mteja wa Makubaliano                                                                                                                                      | Mthibitishaji                |
+| Kiteja cha Utekelezaji                             | Mteja wa Mwafaka                                                                                                                                          | Mthibitishaji                |
 | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| Husambaza miamala kwenye mtandao wake wa P2P       | Husambaza bloku na uthibitisho kwenye mtandao wake wa P2P                                                                                                 | Hupendekeza bloku            |
-| Hutekeleza/hutekeleza tena miamala                 | Huendesha algoriti ya uchaguzi wa uma                                                                                                                     | Hukusanya zawadi/adhabu      |
-| Huthibitisha mabadiliko ya hali yanayoingia        | Hufuatilia kichwa cha mnyororo                                                                                                                            | Hutoa uthibitisho            |
-| Husimamia hali na trie za risiti                   | Husimamia hali ya Beacon (ina taarifa za makubaliano na utekelezaji)                                                                                      | Inahitaji 32 ETH kuwekwa dhamana |
-| Huunda mzigo wa utekelezaji                        | Hufuatilia nasibu iliyokusanywa katika RANDAO (algoriti inayotoa nasibu inayoweza kuthibitishwa kwa uchaguzi wa mthibitishaji na shughuli nyingine za makubaliano) | Inaweza kupunguzwa kwa dhamana |
-| Hufichua JSON-RPC API kwa ajili ya kuingiliana na Ethereum | Hufuatilia uhalali na kufikia mwisho                                                                                                                      |                              |
+| Husambaza miamala kwenye mtandao wake wa P2P       | Husambaza vitalu na uthibitisho kwenye mtandao wake wa P2P                                                                                                | Hupendekeza vitalu           |
+| Hutekeleza/hutekeleza upya miamala                 | Huendesha algoriti ya kuchagua mchepuko                                                                                                                   | Hukusanya zawadi/adhabu      |
+| Huthibitisha mabadiliko ya hali yanayoingia        | Hufuatilia kichwa cha mnyororo                                                                                                                            | Hufanya uthibitisho          |
+| Husimamia trie za hali na stakabadhi               | Husimamia hali ya Beacon (ina maelezo ya mwafaka na utekelezaji)                                                                                          | Inahitaji 32 ETH kuwekwa dhamana |
+| Huunda mzigo wa utekelezaji                        | Hufuatilia unasibu uliokusanywa katika RANDAO (algoriti inayotoa unasibu unaothibitishwa kwa uteuzi wa mthibitishaji na shughuli nyingine za mwafaka) | Inaweza kukatwa              |
+| Hufichua API ya JSON-RPC kwa kuingiliana na Ethereum | Hufuatilia uhalali na ukamilishaji                                                                                                                        |                              |
 
-## Kusoma zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-- [Uthibitishaji wa dhamana](/developers/docs/consensus-mechanisms/pos)
+- [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos)
 - [Pendekezo la kitalu](/developers/docs/consensus-mechanisms/pos/block-proposal)
 - [Zawadi na adhabu za mthibitishaji](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)

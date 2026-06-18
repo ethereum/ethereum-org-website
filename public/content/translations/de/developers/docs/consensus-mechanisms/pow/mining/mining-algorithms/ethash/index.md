@@ -8,23 +8,23 @@ lang: de
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash war Ethereums Proof-of-Work-Mining-Algorithmus. Proof-of-Work wurde nun **vollständig abgeschaltet** und Ethereum wird stattdessen durch [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) gesichert. Lesen Sie mehr über [The Merge](/roadmap/merge/), [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) und [Staking](/staking/). Diese Seite ist von historischem Interesse!  
+   Ethash war Ethereums Proof-of-Work-Mining-Algorithmus. Proof-of-Work wurde nun **vollständig abgeschaltet** und Ethereum wird stattdessen durch [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) gesichert. Lesen Sie mehr über [den Merge](/roadmap/merge/), [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) und [Staking](/staking/). Diese Seite ist von historischem Interesse!  
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Ethash ist eine modifizierte Version des [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)-Algorithmus. Ethash-Proof-of-Work ist [speicherintensiv (memory hard)](https://wikipedia.org/wiki/Memory-hard_function), was den Algorithmus ASIC-resistent machen sollte. Ethash-ASICs wurden schließlich entwickelt, aber GPU-Mining war immer noch eine praktikable Option, bis Proof-of-Work abgeschaltet wurde. Ethash wird weiterhin verwendet, um andere Coins in anderen Nicht-Ethereum-Proof-of-Work-Netzwerken zu minen.
+Ethash ist eine modifizierte Version des [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)-Algorithmus. Ethash-Proof-of-Work ist [speicherintensiv (memory hard)](https://wikipedia.org/wiki/Memory-hard_function), was den Algorithmus ASIC-resistent machen sollte. Ethash-ASICs wurden schließlich entwickelt, aber GPU-Mining war bis zur Abschaltung von Proof-of-Work weiterhin eine praktikable Option. Ethash wird immer noch verwendet, um andere Coins in anderen Nicht-Ethereum-Proof-of-Work-Netzwerken zu minen.
 
 ## Wie funktioniert Ethash? {#how-does-ethash-work}
 
-Speicherintensität wird mit einem Proof-of-Work-Algorithmus erreicht, der die Auswahl von Teilmengen einer festen Ressource in Abhängigkeit von der Nonce und dem Block-Header erfordert. Diese Ressource (einige Gigabyte groß) wird als DAG bezeichnet. Der DAG wird alle 30000 Blöcke geändert, ein ~125-Stunden-Fenster, das als Epoche (etwa 5,2 Tage) bezeichnet wird, und dessen Generierung eine Weile dauert. Da der DAG nur von der Blockhöhe abhängt, kann er im Voraus generiert werden. Wenn dies jedoch nicht der Fall ist, muss die Anwendung bis zum Ende dieses Prozesses warten, um einen Block zu produzieren. Wenn Anwendungen DAGs nicht im Voraus generieren und zwischenspeichern, kann das Netzwerk bei jedem Epochenübergang eine massive Blockverzögerung erfahren. Beachten Sie, dass der DAG nicht für die Verifizierung des Proof-of-Work generiert werden muss, was im Wesentlichen eine Verifizierung mit geringer CPU- und Speicherleistung ermöglicht.
+Speicherintensität wird durch einen Proof-of-Work-Algorithmus erreicht, der die Auswahl von Teilmengen einer festen Ressource in Abhängigkeit von der Nonce und dem Block-Header erfordert. Diese Ressource (einige Gigabyte groß) wird als DAG bezeichnet. Der DAG wird alle 30000 Blöcke geändert, ein Zeitfenster von ca. 125 Stunden, das als Epoche bezeichnet wird (etwa 5,2 Tage), und dessen Generierung eine Weile dauert. Da der DAG nur von der Blockhöhe abhängt, kann er im Voraus generiert werden. Ist dies jedoch nicht der Fall, muss der Client bis zum Ende dieses Prozesses warten, um einen Block zu produzieren. Wenn Clients DAGs nicht im Voraus generieren und zwischenspeichern, kann es im Netzwerk bei jedem Epochenübergang zu massiven Blockverzögerungen kommen. Beachten Sie, dass der DAG nicht für die Verifizierung des Proof-of-Work generiert werden muss, was im Wesentlichen eine Verifizierung mit geringer CPU-Leistung und wenig Speicher ermöglicht.
 
 Der allgemeine Ablauf des Algorithmus ist wie folgt:
 
 1. Es gibt einen **Seed**, der für jeden Block berechnet werden kann, indem die Block-Header bis zu diesem Punkt durchsucht werden.
-2. Aus dem Seed kann man einen **16 MB großen pseudozufälligen Cache** berechnen. Light-Anwendungen speichern den Cache.
-3. Aus dem Cache können wir einen **1 GB großen Datensatz** generieren, mit der Eigenschaft, dass jedes Element im Datensatz nur von einer kleinen Anzahl von Elementen aus dem Cache abhängt. Vollständige Anwendungen und Miner speichern den Datensatz. Der Datensatz wächst linear mit der Zeit.
-4. Beim Mining werden zufällige Teile des Datensatzes entnommen und zusammen gehasht. Die Verifizierung kann mit wenig Speicherplatz durchgeführt werden, indem der Cache verwendet wird, um die spezifischen Teile des Datensatzes, die Sie benötigen, neu zu generieren, sodass Sie nur den Cache speichern müssen.
+2. Aus dem Seed kann man einen **16 MB großen pseudozufälligen Cache** berechnen. Light-Clients speichern den Cache.
+3. Aus dem Cache können wir einen **1 GB großen Datensatz** generieren, mit der Eigenschaft, dass jedes Element im Datensatz nur von einer kleinen Anzahl von Elementen aus dem Cache abhängt. Full-Clients und Miner speichern den Datensatz. Der Datensatz wächst linear mit der Zeit.
+4. Beim Mining werden zufällige Abschnitte des Datensatzes entnommen und zusammen gehasht. Die Verifizierung kann mit wenig Speicher durchgeführt werden, indem der Cache verwendet wird, um die spezifischen Teile des Datensatzes, die Sie benötigen, neu zu generieren, sodass Sie nur den Cache speichern müssen.
 
 Der große Datensatz wird alle 30000 Blöcke aktualisiert, sodass der Großteil der Arbeit eines Miners darin besteht, den Datensatz zu lesen und nicht, Änderungen daran vorzunehmen.
 
@@ -33,29 +33,29 @@ Der große Datensatz wird alle 30000 Blöcke aktualisiert, sodass der Großteil 
 Wir verwenden die folgenden Definitionen:
 
 ```
-WORD_BYTES = 4                    # bytes in word
-DATASET_BYTES_INIT = 2**30        # bytes in dataset at genesis
-DATASET_BYTES_GROWTH = 2**23      # dataset growth per epoch
-CACHE_BYTES_INIT = 2**24          # bytes in cache at genesis
-CACHE_BYTES_GROWTH = 2**17        # cache growth per epoch
-CACHE_MULTIPLIER=1024             # Size of the DAG relative to the cache
-EPOCH_LENGTH = 30000              # blocks per epoch
-MIX_BYTES = 128                   # width of mix
-HASH_BYTES = 64                   # hash length in bytes
-DATASET_PARENTS = 256             # number of parents of each dataset element
-CACHE_ROUNDS = 3                  # number of rounds in cache production
-ACCESSES = 64                     # number of accesses in hashimoto loop
+WORD_BYTES = 4                    # Bytes im Wort
+DATASET_BYTES_INIT = 2**30        # Bytes im Datensatz bei Genesis
+DATASET_BYTES_GROWTH = 2**23      # Datensatzwachstum pro Epoche
+CACHE_BYTES_INIT = 2**24          # Bytes im Cache bei Genesis
+CACHE_BYTES_GROWTH = 2**17        # Cache-Wachstum pro Epoche
+CACHE_MULTIPLIER=1024             # Größe des DAG relativ zum Cache
+EPOCH_LENGTH = 30000              # Blöcke pro Epoche
+MIX_BYTES = 128                   # Breite des Mixes
+HASH_BYTES = 64                   # Hash-Länge in Bytes
+DATASET_PARENTS = 256             # Anzahl der Eltern jedes Datensatzelements
+CACHE_ROUNDS = 3                  # Anzahl der Runden bei der Cache-Erstellung
+ACCESSES = 64                     # Anzahl der Zugriffe in der Hashimoto-Schleife
 ```
 
 ### Die Verwendung von 'SHA3' {#sha3}
 
-Die Entwicklung von Ethereum fiel mit der Entwicklung des SHA3-Standards zusammen, und der Standardisierungsprozess nahm eine späte Änderung am Padding des finalisierten Hash-Algorithmus vor, sodass Ethereums "sha3_256"- und "sha3_512"-Hashes keine Standard-SHA3-Hashes sind, sondern eine Variante, die in anderen Kontexten oft als "Keccak-256" und "Keccak-512" bezeichnet wird. Siehe Diskussion z. B. [hier](https://eips.ethereum.org/EIPS/eip-1803), [hier](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) oder [hier](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Die Entwicklung von Ethereum fiel mit der Entwicklung des SHA3-Standards zusammen, und der Standardisierungsprozess nahm eine späte Änderung am Padding des endgültigen Hash-Algorithmus vor, sodass Ethereums "sha3_256"- und "sha3_512"-Hashes keine Standard-SHA3-Hashes sind, sondern eine Variante, die in anderen Kontexten oft als "Keccak-256" und "Keccak-512" bezeichnet wird. Siehe Diskussion, z. B. [hier](https://eips.ethereum.org/EIPS/eip-1803), [hier](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) oder [hier](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
-Bitte behalten Sie dies im Hinterkopf, da in der unten stehenden Beschreibung des Algorithmus auf "sha3"-Hashes verwiesen wird.
+Bitte behalten Sie dies im Hinterkopf, da in der folgenden Beschreibung des Algorithmus auf "sha3"-Hashes Bezug genommen wird.
 
 ## Parameter {#parameters}
 
-Die Parameter für den Cache und den Datensatz von Ethash hängen von der Blocknummer ab. Die Cache-Größe und die Datensatzgröße wachsen beide linear; wir nehmen jedoch immer die höchste Primzahl unter dem linear wachsenden Schwellenwert, um das Risiko versehentlicher Regelmäßigkeiten zu verringern, die zu zyklischem Verhalten führen.
+Die Parameter für den Cache und den Datensatz von Ethash hängen von der Blocknummer ab. Die Cache-Größe und die Datensatzgröße wachsen beide linear; wir nehmen jedoch immer die höchste Primzahl unterhalb des linear wachsenden Schwellenwerts, um das Risiko versehentlicher Regelmäßigkeiten zu verringern, die zu zyklischem Verhalten führen könnten.
 
 ```python
 def get_cache_size(block_number):
@@ -110,7 +110,7 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-Bitte beachten Sie, dass selbst das Yellow Paper `fnv` als `v1*(FNV_PRIME ^ v2)` spezifiziert, alle aktuellen Implementierungen jedoch konsequent die obige Definition verwenden.
+Bitte beachten Sie, dass selbst das Yellow Paper fnv als v1\*(FNV_PRIME ^ v2) spezifiziert, alle aktuellen Implementierungen jedoch durchgängig die obige Definition verwenden.
 
 ## Berechnung des vollständigen Datensatzes {#full-dataset-calculation}
 
@@ -124,7 +124,7 @@ def calc_dataset_item(cache, i):
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # Mit vielen zufälligen Cache-Knoten basierend auf i fnv-hashen
+    # Mit vielen zufälligen Cache-Knoten basierend auf i über FNV verknüpfen
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
@@ -176,9 +176,9 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-Im Wesentlichen pflegen wir einen "Mix" von 128 Bytes Breite und rufen wiederholt sequentiell 128 Bytes aus dem vollständigen Datensatz ab und verwenden die `fnv`-Funktion, um sie mit dem Mix zu kombinieren. Es werden 128 Bytes sequentieller Zugriff verwendet, sodass jede Runde des Algorithmus immer eine vollständige Seite aus dem RAM abruft, wodurch Translation-Lookaside-Buffer-Fehlschläge minimiert werden, die ASICs theoretisch vermeiden könnten.
+Im Wesentlichen pflegen wir einen "Mix" von 128 Bytes Breite und rufen wiederholt sequentiell 128 Bytes aus dem vollständigen Datensatz ab und verwenden die Funktion `fnv`, um sie mit dem Mix zu kombinieren. Es werden 128 Bytes sequentieller Zugriff verwendet, damit jede Runde des Algorithmus immer eine vollständige Seite aus dem RAM abruft, wodurch Translation-Lookaside-Buffer-Fehlschläge minimiert werden, die ASICs theoretisch vermeiden könnten.
 
-Wenn die Ausgabe dieses Algorithmus unter dem gewünschten Ziel liegt, ist die Nonce gültig. Beachten Sie, dass die zusätzliche Anwendung von `sha3_256` am Ende sicherstellt, dass eine Zwischen-Nonce existiert, die bereitgestellt werden kann, um zu beweisen, dass zumindest ein kleiner Teil der Arbeit erledigt wurde; diese schnelle äußere PoW-Verifizierung kann für Anti-DDoS-Zwecke verwendet werden. Sie dient auch dazu, statistisch sicherzustellen, dass das Ergebnis eine unverzerrte 256-Bit-Zahl ist.
+Wenn die Ausgabe dieses Algorithmus unter dem gewünschten Ziel liegt, ist die Nonce gültig. Beachten Sie, dass die zusätzliche Anwendung von `sha3_256` am Ende sicherstellt, dass eine Zwischen-Nonce existiert, die bereitgestellt werden kann, um zu beweisen, dass zumindest ein kleiner Teil der Arbeit erledigt wurde; diese schnelle äußere PoW-Verifizierung kann für Anti-DDoS-Zwecke verwendet werden. Sie dient auch dazu, statistische Sicherheit zu bieten, dass das Ergebnis eine unverzerrte 256-Bit-Zahl ist.
 
 ## Mining {#mining}
 
@@ -186,7 +186,7 @@ Der Mining-Algorithmus ist wie folgt definiert:
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # Ziel mit Nullen auffüllen, um es mit dem Hash auf derselben Stelle zu vergleichen
+    # Ziel mit Nullen auffüllen, um es mit dem Hash an derselben Stelle zu vergleichen
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -207,7 +207,7 @@ Um den Seed-Hash zu berechnen, der verwendet werden würde, um auf einem bestimm
      return s
 ```
 
-Beachten Sie, dass wir für ein reibungsloses Mining und Verifizieren empfehlen, zukünftige Seed-Hashes und Datensätze in einem separaten Thread im Voraus zu berechnen.
+Beachten Sie, dass wir für reibungsloses Mining und Verifizieren empfehlen, zukünftige Seed-Hashes und Datensätze in einem separaten Thread im Voraus zu berechnen.
 
 ## Weiterführende Literatur {#further-reading}
 
@@ -220,7 +220,7 @@ Der folgende Code sollte vorangestellt werden, wenn Sie daran interessiert sind,
 ```python
 import sha3, copy
 
-# Setzt Little-Endian-Bitreihenfolge voraus (wie bei Intel-Architekturen)
+# Geht von Little-Endian-Bitreihenfolge aus (wie bei Intel-Architekturen)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
