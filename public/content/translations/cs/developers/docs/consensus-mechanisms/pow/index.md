@@ -1,106 +1,106 @@
 ---
-title: Proof-of-work (PoW)
-description: "Vysvětlení konsensuálního protokolu proof of work a jeho role v Ethereum síti."
+title: Důkaz prací (PoW)
+description: Vysvětlení protokolu konsensu důkaz prací (PoW) a jeho role v Ethereu.
 lang: cs
 ---
 
-Síť Ethereum začala používat mechanismus konsenzu, který zahrnoval **[důkaz prací (PoW)](/developers/docs/consensus-mechanisms/pow)**. Tento mechanismus umožňoval uzlům sítě Ethereum shodnout se na stavu všech informací zaznamenaných na blockchainu Etherea a bránil určitým druhům ekonomických útoků. V roce 2022 však Ethereum přešlo z důkazu prací na [důkaz podílem](/developers/docs/consensus-mechanisms/pos).
+Síť [Ethereum](/) začala používat mechanismus konsensu, který zahrnoval **[důkaz prací (PoW)](/developers/docs/consensus-mechanisms/pow)**. To umožnilo uzlům sítě Ethereum shodnout se na stavu všech informací zaznamenaných na blockchainu Etherea a zabránilo určitým druhům ekonomických útoků. Ethereum však v roce 2022 důkaz prací (PoW) vypnulo a místo něj začalo používat [důkaz podílem (PoS)](/developers/docs/consensus-mechanisms/pos).
 
 <Alert variant="update">
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    Proof-of-work je nyní zastaralý. Ethereum už proof-of-work nepoužívá jako součást svého konsensuálního mechanismu. Místo toho používá proof-of-stake. Přečtěte si více o [důkazu podílem](/developers/docs/consensus-mechanisms/pos/) a [uzamčení](/staking/).
+    Důkaz prací (PoW) je nyní zastaralý. Ethereum již nepoužívá důkaz prací jako součást svého mechanismu konsensu. Místo toho používá důkaz podílem (PoS). Přečtěte si více o [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos/) a [stakingu](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Předpoklady {#prerequisites}
 
-Abyste lépe porozuměli této stránce, doporučujeme vám si nejprve přečíst o [transakcích](/developers/docs/transactions/), [blocích](/developers/docs/blocks/) a [mechanismech konsenzu](/developers/docs/consensus-mechanisms/).
+Pro lepší pochopení této stránky doporučujeme nejprve si přečíst o [transakcích](/developers/docs/transactions/), [blocích](/developers/docs/blocks/) a [mechanismech konsensu](/developers/docs/consensus-mechanisms/).
 
 ## Co je důkaz prací (PoW)? {#what-is-pow}
 
-Nakamotův konsensus, který využívá důkaz prací, je mechanismus, který kdysi umožňoval decentralizované síti Ethereum dosáhnout konsenzu (tj. shody všech uzlů) na věcech, jako jsou zůstatky na účtech a pořadí transakcí. Tento mechanismus zabránil uživatelům v „dvojím utracení“ prostředků a zajistil, že Ethereum blockchain bylo mimořádně obtížné napadnout nebo s ním manipulovat. Tyto bezpečnostní vlastnosti nyní pocházejí z důkazu podílem za použití mechanismu konsenzu známého jako [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+Nakamotův konsensus, který využívá důkaz prací (PoW), je mechanismus, který kdysi umožňoval decentralizované síti Ethereum dosáhnout konsensu (tj. shody všech uzlů) na věcech, jako jsou zůstatky na účtech a pořadí transakcí. To bránilo uživatelům v „dvojím útracení“ (double spending) jejich mincí a zajišťovalo, že řetězec Etherea bylo nesmírně obtížné napadnout nebo s ním manipulovat. Tyto bezpečnostní vlastnosti nyní pocházejí z důkazu podílem (PoS) pomocí mechanismu konsensu známého jako [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## Důkaz prací a těžba {#pow-and-mining}
 
-Proof-of-work je základní algoritmus, který stanovuje obtížnost a pravidla pro práci těžařů na proof-of-work blockchainech. Těžba je samotná "práce". Těžbou je myšleno přidávání platných bloků do řetězce. To je důležité, protože délka řetězce pomáhá síti sledovat správnou větev blockchainu. Čím více "práce" je vykonáno, tím delší je řetězec a čím vyšší je číslo bloku, tím jistější si síť může být aktuálním stavem věcí.
+Důkaz prací (PoW) je základní algoritmus, který nastavuje obtížnost a pravidla pro práci, kterou těžaři vykonávají na PoW blockchainech. Těžba je samotná „práce“. Je to akt přidávání platných bloků do řetězce. To je důležité, protože délka řetězce pomáhá síti sledovat správný fork blockchainu. Čím více „práce“ je odvedeno, tím delší je řetězec a čím vyšší je číslo bloku, tím jistější si síť může být aktuálním stavem věcí.
 
 [Více o těžbě](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## Jak funguje proof-of-work na Ethereu? Jak to funguje {#how-it-works}
+## Jak fungoval důkaz prací na Ethereu? {#how-it-works}
 
-Transakce na Ethereu se zpracovávají do bloků. Na nyní zastaralém proof-of-work Ethereu každý blok obsahoval:
+Transakce na Ethereu jsou zpracovávány do bloků. V nyní zastaralém Ethereu s důkazem prací (PoW) každý blok obsahoval:
 
-- obtížnost bloku - například: 3,324,092,183,262,715
+- obtížnost bloku (block difficulty) – například: 3,324,092,183,262,715
 - mixHash – například: `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`
 - nonce – například: `0xd3ee432b4fb3d26b`
 
-Tato data bloku byla přímo spojena s proof-of-work.
+Tato data bloku přímo souvisela s důkazem prací.
 
 ### Práce v důkazu prací {#the-work}
 
-Protokol proof-of-work, Ethash, vyžadoval, aby těžaři prošli intenzivním závodem sestávajícím z pokusů a omylů, aby našli jednorázové číslo bloku. Pouze bloky s platným jednorázovým číslem mohly být přidány do řetězce.
+Protokol důkazu prací, Ethash, vyžadoval, aby těžaři prošli intenzivním závodem pokusů a omylů, aby našli nonce pro blok. Do řetězce mohly být přidány pouze bloky s platnou nonce.
 
-Při závodě o vytvoření bloku těžař opakovaně procházel datovou sadu, kterou bylo možné získat pouze stažením a provozováním celého řetězce (což těžaři dělají), pomocí matematické funkce. Tato datová sada byla použita k vygenerování mixHashe, který byl pod cílovou hodnotou určenou obtížností bloku. Nejlepší způsob, jak toho dosáhnout, je metoda pokusů a omylů.
+Při závodě o vytvoření bloku těžař opakovaně proháněl matematickou funkcí datovou sadu, kterou bylo možné získat pouze stažením a spuštěním celého řetězce (jak to těžař dělá). Datová sada se používala k vygenerování mixHash pod cílovou hodnotou, která je diktována obtížností bloku. Nejlepší způsob, jak toho dosáhnout, je metoda pokus-omyl.
 
-Obtížnost určovala cíl pro hash. Čím nižší je cílová hodnota, tím menší je množina platných hashů. Jakmile byl hash vygenerován, bylo pro ostatní těžaře a klienty velmi snadné jej ověřit. I malá změna v transakci by vedla k úplně jinému hashi, což by signalizovalo podvod.
+Obtížnost určovala cíl pro hash. Čím nižší byl cíl, tím menší byla množina platných hashů. Jakmile byl hash vygenerován, bylo pro ostatní těžaře a klienty neuvěřitelně snadné jej ověřit. I kdyby se změnila jen jedna transakce, hash by byl úplně jiný, což by signalizovalo podvod.
 
-Díky hashování je podvod snadno odhalitelný. Ale proof-of-work jako proces byl také velkým odrazujícím prvkem proti útokům na řetězec.
+Hashování usnadňuje odhalení podvodu. Ale důkaz prací jako proces byl také velkým odstrašujícím prostředkem proti útokům na řetězec.
 
 ### Důkaz prací a bezpečnost {#security}
 
-Těžaři byli motivováni vykonávat tuto práci na Ethereum Mainnetu. Podskupina těžařů měla jen malou motivaci k tomu, aby si založila vlastní řetězec - podkopává to celý systém. Blockchainy se spoléhají na to, že mají jediný stav jako zdroj pravdy.
+Těžaři byli motivováni k tomu, aby tuto práci vykonávali na hlavním řetězci Etherea. Pro podmnožinu těžařů existovala jen malá motivace k založení vlastního řetězce – podkopává to systém. Blockchainy spoléhají na to, že mají jediný stav jako zdroj pravdy.
 
-Cílem proof-of-work bylo prodloužit řetězec. Nejdelší řetězec byl považován za nejvěrohodnější, protože na něm bylo provedeno nejvíce výpočetní práce. V rámci Ethereum systému PoW bylo téměř nemožné vytvářet nové bloky, které by vymazaly transakce, vytvořily falešné bloky nebo udržovaly druhý řetězec. To proto, že by těžař s úmyslem poškodit blockchain musel vždy vypočítat jedinečné číslo bloku rychleji než ostatní.
+Cílem důkazu prací bylo prodloužit řetězec. Nejdelší řetězec byl nejvíce uvěřitelný jako ten platný, protože na jeho vygenerování bylo vynaloženo nejvíce výpočetní práce. V rámci PoW systému Etherea bylo téměř nemožné vytvářet nové bloky, které by mazaly transakce, vytvářely falešné nebo udržovaly druhý řetězec. To proto, že by zlomyslný těžař musel vždy vyřešit nonce bloku rychleji než všichni ostatní.
 
-Aby zlý těžař mohl konzistentně vytvářet škodlivé, ale platné bloky, musel by mít více než 51 % výpočetní síly sítě, aby porazil ostatní těžaře. Takové množství „práce“ vyžaduje značné množství drahé výpočetní síly a náklady na energii by mohly dokonce převýšit zisky útoku.
+Aby mohl zlomyslný těžař konzistentně vytvářet škodlivé, ale platné bloky, potřeboval by více než 51 % těžebního výkonu sítě, aby porazil všechny ostatní. Takové množství „práce“ vyžaduje spoustu drahého výpočetního výkonu a vynaložená energie by mohla dokonce převýšit zisky z útoku.
 
 ### Ekonomika důkazu prací {#economics}
 
-Proof-of-work byl také zodpovědný za vytváření nové měny v systému a za motivaci těžařů k vykonávání práce.
+Důkaz prací byl také zodpovědný za vydávání nové měny do systému a motivaci těžařů k práci.
 
-Od [upgradu Constantinople](/ethereum-forks/#constantinople) byli těžaři, kteří úspěšně vytvořili blok, odměněni dvěma nově vyraženými ETH a částí transakčních poplatků. Ommer bloky byly také kompenzovány částkou 1,75 ETH. Ommer bloky byly platné bloky vytvořené těžařem prakticky ve stejnou dobu jako jiný těžař vytvořil kanonický blok, přičemž rozhodující bylo, který blok byl přidán ke stávajícímu řetězci jako první. Ommer bloky se obvykle objevovaly kvůli latenci sítě.
+Od upgradu [Konstantinopol](/ethereum-forks/#constantinople) byli těžaři, kteří úspěšně vytvořili blok, odměněni dvěma nově vyraženými ETH a částí transakčních poplatků. Ommer bloky (tzv. strýčkovské bloky) byly také kompenzovány 1,75 ETH. Ommer bloky byly platné bloky vytvořené těžařem prakticky ve stejnou dobu, kdy jiný těžař vytvořil kanonický blok, což bylo nakonec určeno tím, na kterém řetězci se stavělo dříve. K ommer blokům obvykle docházelo kvůli latenci sítě.
 
-## Konečnost {#finality}
+## Finalita {#finality}
 
-Transakce má na Ethereu „konečnost“, když je součástí bloku, který se nemůže změnit.
+Transakce má na Ethereu „finalitu“, když je součástí bloku, který se nemůže změnit.
 
-Protože těžaři pracovali decentralizovaným způsobem, mohly být současně vytěženy dva platné bloky. To vedlo k dočasnémuu větvení řetězce. Nakonec se jeden z těchto řetězců stal přijatým řetězcem poté, co byly vytěženy a přidány další bloky, čímž se stal delším.
+Protože těžaři pracovali decentralizovaným způsobem, mohly být vytěženy dva platné bloky současně. To vytváří dočasný fork. Nakonec se jeden z těchto řetězců stal přijatým řetězcem poté, co byly vytěženy a přidány další bloky, čímž se stal delším.
 
-Aby se věci ještě více zkomplikovaly, transakce, které byly zamítnuty na dočasné větvi, nemusely být zahrnuty v přijatém řetězci. To znamená, že mohlo dojít k jejich zrušení. Konečnost se tedy týká doby, po kterou byste měli vyčkat, než lze transakci považovat za nevratnou. V předchozím Ethereu s důkazem prací platilo, že čím více bloků bylo vytěženo nad konkrétním blokem `N`, tím vyšší byla důvěra, že transakce v `N` byly úspěšné a nebudou zrušeny. Nyní, s proof-of-stake, je konečnost explicitní vlastností bloku, nikoli probabilistickou.
+Aby to bylo ještě složitější, transakce odmítnuté na dočasném forku nemusely být zahrnuty do přijatého řetězce. To znamená, že by mohly být zvráceny. Finalita tedy odkazuje na dobu, kterou byste měli počkat, než budete transakci považovat za nevratnou. V předchozím Ethereu s důkazem prací platilo, že čím více bloků bylo vytěženo na konkrétním bloku `N`, tím vyšší byla jistota, že transakce v `N` byly úspěšné a nebudou vráceny zpět. Nyní, s důkazem podílem (PoS), je finalizace explicitní, nikoli pravděpodobnostní vlastností bloku.
 
-## Spotřeba energie u důkazu prací {#energy}
+## Spotřeba energie důkazu prací {#energy}
 
-Hlavní kritikou proof-of-work je množství energie potřebné k udržení bezpečnosti sítě. Aby si Ethereum udrželo míru bezpečnosti a decentralizace, spotřebovávalo velké množství energie. Krátce před přechodem na důkaz podílem těžaři Etherea kolektivně spotřebovávali přibližně 70 TWh/rok (přibližně stejně jako Česká republika – podle [digiconomist](https://digiconomist.net/) k 18. červenci 2022).
+Hlavní kritikou důkazu prací je množství vydané energie potřebné k udržení bezpečnosti sítě. K udržení bezpečnosti a decentralizace spotřebovávalo Ethereum na důkazu prací velké množství energie. Krátce před přechodem na důkaz podílem spotřebovávali těžaři Etherea společně asi 70 TWh/rok (zhruba stejně jako Česká republika – podle [digiconomist](https://digiconomist.net/) k 18. červenci 2022).
 
 ## Výhody a nevýhody {#pros-and-cons}
 
-| Plusy                                                                                                                                                                                                                                                                  | Minusy                                                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Proof-of-work je neutrální. Pro začátek nepotřebujete ETH a odměny za bloky vám umožní přejít z 0ETH do kladného zůstatku. U [důkazu podílem](/developers/docs/consensus-mechanisms/pos/) potřebujete pro začátek ETH. | Proof-of-work spotřebovává tolik energie, že je škodlivý pro životní prostředí.                                                              |
-| Proof-of-work je osvědčený a vyzkoušený konsensuální mechanismus, který udržoval Bitcoin a Ethereum bezpečné a decentralizované po mnoho let.                                                                                                          | Pokud chcete těžit, potřebujete tak specializované vybavení, že je to pro začátek velká investice.                                           |
-| Ve srovnání s proof-of-stake je jeho implementace relativně snadná.                                                                                                                                                                                    | Vzhledem k rostoucí potřebě výpočtů by těžební pooly mohly potenciálně ovládnout těžbu, což by vedlo k centralizaci a bezpečnostním rizikům. |
+| Výhody                                                                                                                                                                                                                         | Nevýhody                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Důkaz prací (PoW) je neutrální. K začátku nepotřebujete ETH a odměny za bloky vám umožní přejít z 0 ETH na kladný zůstatek. U [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos/) potřebujete ETH do začátku. | Důkaz prací spotřebovává tolik energie, že je to špatné pro životní prostředí.                                                                      |
+| Důkaz prací je vyzkoušený a otestovaný mechanismus konsensu, který udržoval Bitcoin a Ethereum bezpečné a decentralizované po mnoho let.                                                                                          | Pokud chcete těžit, potřebujete tak specializované vybavení, že je to do začátku velká investice.                                                |
+| Ve srovnání s důkazem podílem je relativně snadné jej implementovat.                                                                                                                                                                | Kvůli rostoucí potřebě výpočtů by těžební pooly mohly potenciálně ovládnout těžební hru, což by vedlo k centralizaci a bezpečnostním rizikům. |
 
 ## Srovnání s důkazem podílem {#compared-to-pos}
 
-Z obecného pohledu má proof-of-stake stejný cíl jako proof-of-work: Pomoci decentralizované síti bezpečně dosáhnout konsensu. Má však některé rozdíly v procesu a personálu:
+Z celkového pohledu má důkaz podílem (PoS) stejný konečný cíl jako důkaz prací (PoW): pomoci decentralizované síti bezpečně dosáhnout konsensu. Má však určité rozdíly v procesu a obsazení:
 
-- Proof-of-stake nahrazuje důležitost výpočetní síly stakovaným ETH.
-- Proof-of-stake nahrazuje těžaře validátory. Validátoři uzamikají své ETH, aby aktivovali schopnost vytvářet nové bloky.
+- Důkaz podílem vyměňuje důležitost výpočetního výkonu za stakované ETH.
+- Důkaz podílem nahrazuje těžaře validátory. Validátoři stakují své ETH, aby aktivovali schopnost vytvářet nové bloky.
 - Validátoři nesoutěží o vytváření bloků, místo toho jsou náhodně vybíráni algoritmem.
-- Konečnost je jasnější: pokud se v určitých kontrolních bodech 2/3 validátorů shodnou na stavu bloku, je považován za konečný. Validátoři na to musí vsadit celý svůj vklad, takže pokud se pokusí o tajnou dohodu bokem, přijdou o celý svůj vklad.
+- Finalita je jasnější: v určitých kontrolních bodech (checkpoints), pokud se 2/3 validátorů shodnou na stavu bloku, je považován za finální. Validátoři na to musí vsadit celý svůj stake, takže pokud se pokusí o tajnou dohodu, přijdou o celý svůj stake.
 
 [Více o důkazu podílem](/developers/docs/consensus-mechanisms/pos/)
 
-## Učíte se spíše vizuálně? Vizuální výuka {#visual-learner}
+## Učíte se raději vizuálně? {#visual-learner}
 
-<YouTube id="3EUAcxhuoU4" />
+<VideoWatch slug="proof-of-work-explained" />
 
 ## Další čtení {#further-reading}
 
-- [Většinový útok](https://en.bitcoin.it/wiki/Majority_attack)
+- [Útok většiny (Majority attack)](https://en.bitcoin.it/wiki/Majority_attack)
 - [O finalitě vypořádání](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Videa {#videos}
@@ -110,5 +110,5 @@ Z obecného pohledu má proof-of-stake stejný cíl jako proof-of-work: Pomoci d
 ## Související témata {#related-topics}
 
 - [Těžba](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Důkaz podílem](/developers/docs/consensus-mechanisms/pos/)
-- [Důkaz autoritou](/developers/docs/consensus-mechanisms/poa/)
+- [Důkaz podílem (PoS)](/developers/docs/consensus-mechanisms/pos/)
+- [Důkaz autority](/developers/docs/consensus-mechanisms/poa/)
