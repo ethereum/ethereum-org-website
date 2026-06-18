@@ -1,4 +1,3 @@
-import { type BaseHTMLAttributes } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -9,10 +8,8 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import ContentFeedback from "@/components/ContentFeedback"
-import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FileContributors from "@/components/FileContributors"
-import GhostCard from "@/components/GhostCard"
 import PageHero from "@/components/Hero/PageHero"
 import HorizontalCard from "@/components/HorizontalCard"
 import I18nProvider from "@/components/I18nProvider"
@@ -26,10 +23,10 @@ import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
-import { Flex, type FlexProps } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
+import { Section } from "@/components/ui/section"
 import {
   Table,
   TableBody,
@@ -41,48 +38,17 @@ import {
 } from "@/components/ui/table"
 import { Tag } from "@/components/ui/tag"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import GasPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import ethImg from "@/public/images/eth.png"
 import heroImg from "@/public/images/infrastructure_transparent.png"
-import walletImg from "@/public/images/wallet.png"
-import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
-
-const Content = ({
-  className,
-  ...props
-}: BaseHTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("w-full px-8", className)} {...props} />
-)
-
-const PageContainer = ({ className, ...props }: FlexProps) => (
-  <Flex
-    asChild
-    className={cn("mx-auto my-0 w-full flex-col items-center", className)}
-  >
-    <MainArticle {...props} />
-  </Flex>
-)
-
-const H2 = ({
-  className,
-  ...props
-}: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className={cn("mt-12 mb-8 text-2xl md:text-3xl", className)} {...props} />
-)
-
-const H3 = ({
-  className,
-  ...props
-}: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h3 className={cn("mt-10 mb-8 text-xl md:text-2xl", className)} {...props} />
-)
+import robotImg from "@/public/images/wallet.png"
+import bazaarImg from "@/public/images/what-is-ethereum.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -118,14 +84,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ]
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <GasPageJsonLD
+    <>
+      <PageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />
+
       <PageHero
-        header={t("page-gas-hero-title")}
+        breadcrumbs={{ slug: "gas" }}
         heroImg={heroImg}
         title={t("page-gas-hero-header")}
         description={
@@ -147,49 +114,49 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           },
         ]}
       />
-      <PageContainer>
-        <Content className="mt-16 mb-16 lg:mb-32">
-          <Flex className="w-full flex-col items-center lg:flex-row lg:items-start">
-            <div className="me-auto w-full flex-[60%] lg:me-2">
-              <Alert variant="update" className="mb-8">
-                <AlertContent>
-                  <AlertTitle className="mb-6">
-                    {t("page-gas-summary-title")}
-                  </AlertTitle>
-                  <UnorderedList className="mb-0">
-                    <ListItem>{t("page-gas-summary-item-1")}</ListItem>
-                    <ListItem>{t("page-gas-summary-item-2")}</ListItem>
-                    <ListItem>{t("page-gas-summary-item-3")}</ListItem>
-                  </UnorderedList>
-                </AlertContent>
-              </Alert>
-              <H2 className="mt-0" id="what-is-gas">
-                {t("page-gas-what-are-gas-fees-header")}
-              </H2>
-              <p className="mb-6">{t("page-gas-what-are-gas-fees-text-1")}</p>
-              <p className="mb-6">
-                <Translation id="page-gas:page-gas-what-are-gas-fees-text-2" />
-              </p>
-            </div>
 
-            <div className="hidden max-h-[450px] flex-[50%] justify-center lg:flex">
-              <Image
-                src={walletImg}
-                alt="A robot"
-                className="object-contain"
-                sizes="(max-width: 991px) 1px, (max-width: 1536px) 50vw, 768px"
-              />
-            </div>
-          </Flex>
-        </Content>
-        <Content className="mb-16 lg:mb-32">
-          <Flex className="w-full flex-col items-center justify-center lg:flex-row">
-            <div className="w-full">
-              <H2 className="mt-0">
-                {t("page-gas-how-do-i-pay-less-gas-header")}
-              </H2>
-              <p className="mb-6">{t("page-gas-how-do-i-pay-less-gas-text")}</p>
-              <Grid columns={3} className="my-4 lg:my-0">
+      <main className="px-page pt-page-2x pb-page">
+        <I18nProvider locale={locale} messages={messages}>
+          <MainArticle className="flow *:[section]:py-space">
+            {/* What is gas */}
+            <Section
+              id="what-is-gas"
+              data-flow="skip"
+              className="flex gap-space-2x *:flex-1 max-lg:flex-col"
+            >
+              <div className="flow">
+                <Alert variant="update">
+                  <AlertContent className="flow">
+                    <AlertTitle>{t("page-gas-summary-title")}</AlertTitle>
+                    <UnorderedList className="mb-0">
+                      <ListItem>{t("page-gas-summary-item-1")}</ListItem>
+                      <ListItem>{t("page-gas-summary-item-2")}</ListItem>
+                      <ListItem>{t("page-gas-summary-item-3")}</ListItem>
+                    </UnorderedList>
+                  </AlertContent>
+                </Alert>
+                <h2>{t("page-gas-what-are-gas-fees-header")}</h2>
+                <p>{t("page-gas-what-are-gas-fees-text-1")}</p>
+                <p>
+                  <Translation id="page-gas:page-gas-what-are-gas-fees-text-2" />
+                </p>
+              </div>
+
+              <div className="relative hidden lg:block">
+                <Image
+                  src={robotImg}
+                  alt=""
+                  className="absolute inset-0 size-full object-contain"
+                  sizes="(max-width: 991px) 1px, (max-width: 1536px) 50vw, 768px"
+                />
+              </div>
+            </Section>
+
+            {/* How do I pay less gas */}
+            <Section id="optimize">
+              <h2>{t("page-gas-how-do-i-pay-less-gas-header")}</h2>
+              <p>{t("page-gas-how-do-i-pay-less-gas-text")}</p>
+              <Grid columns={3}>
                 <MarkdownCard
                   emoji=":alarm_clock:"
                   title={t("page-gas-how-do-i-pay-less-gas-card-1-title")}
@@ -214,210 +181,208 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   href="/layer-2/"
                 />
               </Grid>
-            </div>
-          </Flex>
-        </Content>
-        <Content className="mb-16 lg:mb-32">
-          <Flex className="w-full flex-col items-start lg:flex-row">
-            <div className="ms-auto me-auto w-full flex-[60%] lg:ms-0 lg:me-16">
-              <H3 className="mt-0">
-                {t("page-gas-what-causes-high-gas-fees-header")}
-              </H3>
-              <p className="mb-6">
-                {t("page-gas-what-causes-high-gas-fees-text-1")}
-              </p>
-              <p className="mb-6">
-                <Translation id="page-gas:page-gas-what-causes-high-gas-fees-text-2" />
-              </p>
-              <p className="mb-6">
-                {t("page-gas-what-causes-high-gas-fees-text-3")}
-              </p>
-              <p className="mb-6">
-                {t("page-gas-want-to-dive-deeper")}{" "}
-                <InlineLink href="/developers/docs/gas/">
-                  {t("page-gas-check-out-the-developer-docs")}
-                </InlineLink>
-              </p>
-            </div>
-            <GhostCard className="mt-16 max-w-[640px] self-center md:w-2/5 lg:mt-2">
-              <Emoji text=":cat:" className="text-5xl" />
-              <H3>{t("page-gas-attack-of-the-cryptokitties-header")}</H3>
-              <p className="mb-6">
-                {t("page-gas-attack-of-the-cryptokitties-text")}
-              </p>
-            </GhostCard>
-          </Flex>
-        </Content>
-        <Content className="mb-16 lg:mb-32">
-          <Flex className="me-0 w-full flex-col items-start lg:me-8 lg:flex-row">
-            <div className="me-auto w-full lg:me-8">
-              <div>
-                <H2 className="mt-0">
-                  {t("page-gas-why-do-we-need-gas-header")}
-                </H2>
-                <p className="mb-6">{t("page-gas-why-do-we-need-gas-text")}</p>
-              </div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className="my-2 min-w-full">
+
+              {/* What causes high gas fees */}
+              <Section
+                id="gas-spike-cause"
+                data-flow="skip"
+                className="flex gap-space-2x max-lg:flex-col"
+              >
+                <div className="flow flex-1">
+                  <h3>{t("page-gas-what-causes-high-gas-fees-header")}</h3>
+                  <p>{t("page-gas-what-causes-high-gas-fees-text-1")}</p>
+                  <p>
+                    <Translation id="page-gas:page-gas-what-causes-high-gas-fees-text-2" />
+                  </p>
+                  <p>{t("page-gas-what-causes-high-gas-fees-text-3")}</p>
+                  <p>
+                    {t("page-gas-want-to-dive-deeper")}{" "}
+                    <InlineLink href="/developers/docs/gas/">
+                      {t("page-gas-check-out-the-developer-docs")}
+                    </InlineLink>
+                  </p>
+                </div>
+                <MarkdownCard
+                  className="lg:max-w-md"
+                  emoji=":cat:"
+                  title={t("page-gas-attack-of-the-cryptokitties-header")}
+                  description={t("page-gas-attack-of-the-cryptokitties-text")}
+                />
+              </Section>
+            </Section>
+
+            {/* Why do we need gas */}
+            <Section
+              data-flow="skip"
+              className="flex gap-space-2x *:flex-1 max-lg:flex-col-reverse"
+            >
+              <div className="flow">
+                <h2>{t("page-gas-why-do-we-need-gas-header")}</h2>
+                <p>{t("page-gas-why-do-we-need-gas-text")}</p>
+                {benefits.map((benefit) => (
                   <HorizontalCard
                     key={benefit.emoji}
                     emoji={benefit.emoji}
                     description={benefit.description}
                   />
-                </div>
-              ))}
-            </div>
-            <div className="w-full">
-              <Image
-                className="object-contain"
-                src={ethImg}
-                alt=""
-                width={600}
-              />
-            </div>
-          </Flex>
-        </Content>
-        <Content className="mb-16 lg:mb-32">
-          <Flex className="flex-col items-start lg:flex-row">
-            <div className="me-auto w-full lg:me-8">
-              <Flex className="items-start">
-                <H2 className="mt-0">
-                  {t("page-gas-how-is-gas-calculated-header")}
-                </H2>
+                ))}
+              </div>
+              <div className="relative max-lg:min-h-64">
+                <Image
+                  className="absolute inset-0 size-full object-contain"
+                  src={ethImg}
+                  alt=""
+                />
+              </div>
+            </Section>
 
-                <Tag className="ms-4 mt-0.5" status="warning">
-                  {t("page-gas-advanced")}
-                </Tag>
-              </Flex>
-              <p className="mb-6">
-                {t("page-gas-how-is-gas-calculated-text-1")}
-              </p>
-              <UnorderedList className="ms-6 gap-3">
-                <ListItem>
-                  <Translation id="page-gas:page-gas-how-is-gas-calculated-item-1" />
-                </ListItem>
-                <ListItem>
-                  <Translation id="page-gas:page-gas-how-is-gas-calculated-item-2" />
-                </ListItem>
-                <ListItem>
-                  <Translation id="page-gas:page-gas-how-is-gas-calculated-item-3" />
-                  <UnorderedList className="ms-6 list-none gap-3">
-                    <ListItem className="text-sm text-body-medium">
-                      <Translation id="page-gas:page-gas-how-is-gas-calculated-list-item-1" />
-                    </ListItem>
-                  </UnorderedList>
-                </ListItem>
-              </UnorderedList>
-              <p className="mb-6">
-                <Translation id="page-gas:page-gas-how-is-gas-calculated-text-2" />
-              </p>
-            </div>
-            <Table className="max-w-full min-w-[auto]">
-              <TableCaption className="caption-bottom">
-                <Translation id="page-gas:page-gas-table-figure" />
-              </TableCaption>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>{t("page-gas-table-header-1")}</TableHead>
-                  <TableHead>{t("page-gas-table-header-2")}</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell>
-                    {t("page-gas-table-item-1-transaction-type")}
-                  </TableCell>
-                  <TableCell>21,000</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    {t("page-gas-table-item-2-transaction-type")}
-                  </TableCell>
-                  <TableCell>65,000</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    {t("page-gas-table-item-3-transaction-type")}
-                  </TableCell>
-                  <TableCell>84,904</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    {t("page-gas-table-item-4-transaction-type")}
-                  </TableCell>
-                  <TableCell>184,523</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </Flex>
-        </Content>
-        <Content>
-          <H2 className="mt-0">{t("page-gas-faq-header")}</H2>
-          <AccordionContainer>
-            <ExpandableCard title={t("page-gas-faq-question-1-q")}>
-              <p>
-                <Translation id="page-gas:page-gas-faq-question-1-a-1" />
-              </p>
-              <p>
-                <Translation id="page-gas:page-gas-faq-question-1-a-2" />
-              </p>
-            </ExpandableCard>
-            <ExpandableCard title={t("page-gas-faq-question-2-q")}>
-              <p>
-                <Translation id="page-gas:page-gas-faq-question-2-a-1" />
-              </p>
-              <BaseLink href="/eth/">
-                <Translation id="page-gas:page-gas-faq-question-2-a-2" />
-              </BaseLink>
-            </ExpandableCard>
-            <ExpandableCard title={t("page-gas-faq-question-3-q")}>
-              <p>
-                <Translation id="page-gas:page-gas-faq-question-3-a-1" />
-              </p>
-              <p>{t("page-gas-faq-question-3-a-2")}</p>
-            </ExpandableCard>
-          </AccordionContainer>
-        </Content>
-        <Divider />
-        <Content>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <Callout
-              title={t("page-gas-how-do-i-pay-less-gas-card-3-title")}
-              description={t(
-                "page-gas-how-do-i-pay-less-gas-card-3-description"
-              )}
-              image={whatIsEthereumImg}
+            {/* How is gas calculated */}
+            <Section
+              data-flow="skip"
+              className="flex gap-space-2x *:flex-1 max-lg:flex-col"
             >
-              <ButtonLink href="/layer-2/">
-                {t("page-gas-use-layer-2")}
-              </ButtonLink>
-            </Callout>
-            <Callout
-              title={tCommunity("page-community-explore-dapps-title")}
-              description={tCommunity(
-                "page-community-explore-dapps-description"
-              )}
-              image={dogeComputerImg}
-            >
-              <ButtonLink href="/apps/">
-                {tCommunity("page-community-explore-dapps")}
-              </ButtonLink>
-            </Callout>
-          </div>
-        </Content>
-        <Content>
-          <StandaloneQuizWidget quizKey="gas" />
-        </Content>
-        <Content>
-          <FileContributors
-            className="my-10 border-t"
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          />
-          <ContentFeedback />
-        </Content>
-      </PageContainer>
-    </I18nProvider>
+              <div className="flow">
+                <div className="flex items-start gap-4">
+                  <h2>{t("page-gas-how-is-gas-calculated-header")}</h2>
+                  <Tag className="mt-0.5" status="warning">
+                    {t("page-gas-advanced")}
+                  </Tag>
+                </div>
+                <p>{t("page-gas-how-is-gas-calculated-text-1")}</p>
+                <UnorderedList>
+                  <ListItem>
+                    <Translation id="page-gas:page-gas-how-is-gas-calculated-item-1" />
+                  </ListItem>
+                  <ListItem>
+                    <Translation id="page-gas:page-gas-how-is-gas-calculated-item-2" />
+                  </ListItem>
+                  <ListItem>
+                    <Translation id="page-gas:page-gas-how-is-gas-calculated-item-3" />
+                    <UnorderedList className="list-none">
+                      <ListItem className="text-sm text-body-medium">
+                        <Translation id="page-gas:page-gas-how-is-gas-calculated-list-item-1" />
+                      </ListItem>
+                    </UnorderedList>
+                  </ListItem>
+                </UnorderedList>
+                <p>
+                  <Translation id="page-gas:page-gas-how-is-gas-calculated-text-2" />
+                </p>
+              </div>
+              <Table variant="minimal" className="max-w-full min-w-auto">
+                <TableCaption className="caption-bottom">
+                  <Translation id="page-gas:page-gas-table-figure" />
+                </TableCaption>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>{t("page-gas-table-header-1")}</TableHead>
+                    <TableHead>{t("page-gas-table-header-2")}</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>
+                      {t("page-gas-table-item-1-transaction-type")}
+                    </TableCell>
+                    <TableCell>21,000</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      {t("page-gas-table-item-2-transaction-type")}
+                    </TableCell>
+                    <TableCell>65,000</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      {t("page-gas-table-item-3-transaction-type")}
+                    </TableCell>
+                    <TableCell>84,904</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      {t("page-gas-table-item-4-transaction-type")}
+                    </TableCell>
+                    <TableCell>184,523</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </Section>
+
+            {/* FAQ */}
+            <Section id="faq">
+              <h2>{t("page-gas-faq-header")}</h2>
+              <AccordionContainer>
+                <ExpandableCard title={t("page-gas-faq-question-1-q")}>
+                  <p>
+                    <Translation id="page-gas:page-gas-faq-question-1-a-1" />
+                  </p>
+                  <p>
+                    <Translation id="page-gas:page-gas-faq-question-1-a-2" />
+                  </p>
+                </ExpandableCard>
+                <ExpandableCard title={t("page-gas-faq-question-2-q")}>
+                  <p>
+                    <Translation id="page-gas:page-gas-faq-question-2-a-1" />
+                  </p>
+                  <BaseLink href="/eth/">
+                    <Translation id="page-gas:page-gas-faq-question-2-a-2" />
+                  </BaseLink>
+                </ExpandableCard>
+                <ExpandableCard title={t("page-gas-faq-question-3-q")}>
+                  <p>
+                    <Translation id="page-gas:page-gas-faq-question-3-a-1" />
+                  </p>
+                  <p>{t("page-gas-faq-question-3-a-2")}</p>
+                </ExpandableCard>
+              </AccordionContainer>
+            </Section>
+
+            <Divider className="mx-auto" />
+
+            {/* Next steps */}
+            <Section id="callouts">
+              <Grid columns={2} size="wide">
+                <Callout
+                  title={t("page-gas-how-do-i-pay-less-gas-card-3-title")}
+                  description={t(
+                    "page-gas-how-do-i-pay-less-gas-card-3-description"
+                  )}
+                  image={bazaarImg}
+                >
+                  <ButtonLink href="/layer-2/">
+                    {t("page-gas-use-layer-2")}
+                  </ButtonLink>
+                </Callout>
+                <Callout
+                  title={tCommunity("page-community-explore-dapps-title")}
+                  description={tCommunity(
+                    "page-community-explore-dapps-description"
+                  )}
+                  image={dogeComputerImg}
+                >
+                  <ButtonLink href="/apps/">
+                    {tCommunity("page-community-explore-dapps")}
+                  </ButtonLink>
+                </Callout>
+              </Grid>
+            </Section>
+
+            <Section id="quiz-section">
+              <StandaloneQuizWidget quizKey="gas" />
+            </Section>
+
+            <FileContributors
+              className="border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          </MainArticle>
+        </I18nProvider>
+
+        {/* End-of-page actions */}
+        <ContentFeedback />
+      </main>
+    </>
   )
 }
 
