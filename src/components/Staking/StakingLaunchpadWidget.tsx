@@ -55,7 +55,7 @@ const StakingLaunchpadWidget = () => {
   return (
     <div
       className={cn(
-        "flow rounded-base p-4 md:p-8",
+        "flow rounded-base p-page",
         "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
       )}
     >
