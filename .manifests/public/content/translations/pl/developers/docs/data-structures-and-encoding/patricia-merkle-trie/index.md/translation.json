@@ -1,0 +1,581 @@
+{
+  "version": 1,
+  "locale": "pl",
+  "translatedAt": "2026-06-18T21:24:47.764Z",
+  "englishManifestHash": "142140850ac3",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "CODE-eb0844",
+    "LINK-11e518",
+    "LINK-a37647",
+    "LINK-d0b4af",
+    "LINK-f5832e",
+    "LINK-ef26a6",
+    "LINK-9ce03a",
+    "CODEBLOCK-37034b",
+    "CODE-65e9a2",
+    "CODE-cd4240",
+    "CODE-4d1e2f",
+    "CODE-fb3290",
+    "CODE-71766b",
+    "CODE-cd6357",
+    "CODE-cd6357",
+    "CODE-d5bce6",
+    "CODE-e7f6c0",
+    "CODE-4b2277",
+    "CODE-e7f6c0",
+    "CODE-b8ece4",
+    "CODE-a0af9f",
+    "CODEBLOCK-52c60f",
+    "CODE-31122f",
+    "CODE-6dfa62",
+    "CODE-cd4240",
+    "CODE-6dfa62",
+    "CODE-71d982",
+    "CODE-fb3290",
+    "CODE-f38c76",
+    "CODE-293285",
+    "CODE-9f9116",
+    "CODE-cef67b",
+    "CODE-26f1de",
+    "CODE-7c5f70",
+    "CODE-fb3290",
+    "CODE-26f1de",
+    "CODE-7c5f70",
+    "CODE-f987a2",
+    "CODE-2c70e1",
+    "CODE-9f9116",
+    "CODE-f987a2",
+    "CODE-cd4240",
+    "CODE-277089",
+    "CODE-6b86b2",
+    "CODE-938db8",
+    "CODE-90be63",
+    "CODE-5feceb",
+    "CODE-d4735e",
+    "CODE-5feceb",
+    "CODEBLOCK-fd4e2d",
+    "CODEBLOCK-85e197",
+    "CODEBLOCK-282117",
+    "CODE-eafe91",
+    "CODE-be1f14",
+    "CODE-d328ea",
+    "CODE-d9163a",
+    "CODE-277089",
+    "CODE-24295a",
+    "CODE-6f49cd",
+    "CODE-277089",
+    "CODEBLOCK-d352dc",
+    "CODEBLOCK-f5da1f",
+    "CODE-6c4326",
+    "CODE-a59715",
+    "CODE-545ea5",
+    "CODE-5b5549",
+    "LINK-312cbd",
+    "CODE-606771",
+    "CODE-a0af9f",
+    "CODE-3c99df",
+    "CODE-cd4240",
+    "CODE-e08d5f",
+    "CODE-9af211",
+    "CODE-db74af",
+    "CODE-79bd67",
+    "CODE-e073c2",
+    "CODE-185117",
+    "CODEBLOCK-84b0b8",
+    "CODE-07b72b",
+    "CODE-cbb5fe",
+    "CODEBLOCK-0c0688",
+    "CODEBLOCK-040a01",
+    "CODE-a0af9f",
+    "CODE-51e9d2",
+    "CODEBLOCK-10ac87",
+    "CODE-79bd67",
+    "CODE-71766b",
+    "CODE-902e04",
+    "CODEBLOCK-5a482f",
+    "LINK-452c4b",
+    "CODE-a0af9f",
+    "CODE-902e04",
+    "CODE-504dea",
+    "CODE-dad5a9",
+    "CODE-b0945e",
+    "CODE-d08d6d",
+    "CODE-481b44",
+    "CODE-d99aec",
+    "LINK-452c4b",
+    "LINK-8804a5",
+    "LINK-16fda3",
+    "LINK-136e77"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-37034b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-52c60f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fd4e2d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-85e197": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-282117": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d352dc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f5da1f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-84b0b8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0c0688": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-040a01": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-10ac87": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5a482f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-eb0844": {
+      "type": "inline-code",
+      "values": {
+        "content": "O(log(n))"
+      }
+    },
+    "CODE-65e9a2": {
+      "type": "inline-code",
+      "values": {
+        "content": "i_0 ... i_n"
+      }
+    },
+    "CODE-cd4240": {
+      "type": "inline-code",
+      "values": {
+        "content": "value"
+      }
+    },
+    "CODE-4d1e2f": {
+      "type": "inline-code",
+      "values": {
+        "content": "i_0, i_1 ... i_n"
+      }
+    },
+    "CODE-fb3290": {
+      "type": "inline-code",
+      "values": {
+        "content": "NULL"
+      }
+    },
+    "CODE-71766b": {
+      "type": "inline-code",
+      "values": {
+        "content": "(key, value)"
+      }
+    },
+    "CODE-cd6357": {
+      "type": "inline-code",
+      "values": {
+        "content": "dog"
+      }
+    },
+    "CODE-d5bce6": {
+      "type": "inline-code",
+      "values": {
+        "content": "64 6f 67"
+      }
+    },
+    "CODE-e7f6c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "6"
+      }
+    },
+    "CODE-4b2277": {
+      "type": "inline-code",
+      "values": {
+        "content": "4"
+      }
+    },
+    "CODE-b8ece4": {
+      "type": "inline-code",
+      "values": {
+        "content": "root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7"
+      }
+    },
+    "CODE-a0af9f": {
+      "type": "inline-code",
+      "values": {
+        "content": "path"
+      }
+    },
+    "CODE-31122f": {
+      "type": "inline-code",
+      "values": {
+        "content": "key == keccak256(rlp(value))"
+      }
+    },
+    "CODE-6dfa62": {
+      "type": "inline-code",
+      "values": {
+        "content": "(path, value)"
+      }
+    },
+    "CODE-71d982": {
+      "type": "inline-code",
+      "values": {
+        "content": "bytes32"
+      }
+    },
+    "CODE-f38c76": {
+      "type": "inline-code",
+      "values": {
+        "content": "branch"
+      }
+    },
+    "CODE-293285": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ v0 ... v15, vt ]"
+      }
+    },
+    "CODE-9f9116": {
+      "type": "inline-code",
+      "values": {
+        "content": "leaf"
+      }
+    },
+    "CODE-cef67b": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ encodedPath, value ]"
+      }
+    },
+    "CODE-26f1de": {
+      "type": "inline-code",
+      "values": {
+        "content": "extension"
+      }
+    },
+    "CODE-7c5f70": {
+      "type": "inline-code",
+      "values": {
+        "content": "[ encodedPath, key ]"
+      }
+    },
+    "CODE-f987a2": {
+      "type": "inline-code",
+      "values": {
+        "content": "encodedPath"
+      }
+    },
+    "CODE-2c70e1": {
+      "type": "inline-code",
+      "values": {
+        "content": "key"
+      }
+    },
+    "CODE-277089": {
+      "type": "inline-code",
+      "values": {
+        "content": "bytes"
+      }
+    },
+    "CODE-6b86b2": {
+      "type": "inline-code",
+      "values": {
+        "content": "1"
+      }
+    },
+    "CODE-938db8": {
+      "type": "inline-code",
+      "values": {
+        "content": "01"
+      }
+    },
+    "CODE-90be63": {
+      "type": "inline-code",
+      "values": {
+        "content": "<01>"
+      }
+    },
+    "CODE-5feceb": {
+      "type": "inline-code",
+      "values": {
+        "content": "0"
+      }
+    },
+    "CODE-d4735e": {
+      "type": "inline-code",
+      "values": {
+        "content": "2"
+      }
+    },
+    "CODE-eafe91": {
+      "type": "inline-code",
+      "values": {
+        "content": "('do', 'verb')"
+      }
+    },
+    "CODE-be1f14": {
+      "type": "inline-code",
+      "values": {
+        "content": "('dog', 'puppy')"
+      }
+    },
+    "CODE-d328ea": {
+      "type": "inline-code",
+      "values": {
+        "content": "('doge', 'coins')"
+      }
+    },
+    "CODE-d9163a": {
+      "type": "inline-code",
+      "values": {
+        "content": "('horse', 'stallion')"
+      }
+    },
+    "CODE-24295a": {
+      "type": "inline-code",
+      "values": {
+        "content": "<>"
+      }
+    },
+    "CODE-6f49cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "''"
+      }
+    },
+    "CODE-6c4326": {
+      "type": "inline-code",
+      "values": {
+        "content": "keccak256(rlp.encode(node))"
+      }
+    },
+    "CODE-a59715": {
+      "type": "inline-code",
+      "values": {
+        "content": "len(rlp.encode(node)) >= 32"
+      }
+    },
+    "CODE-545ea5": {
+      "type": "inline-code",
+      "values": {
+        "content": "node"
+      }
+    },
+    "CODE-5b5549": {
+      "type": "inline-code",
+      "values": {
+        "content": "rlp.encode"
+      }
+    },
+    "CODE-606771": {
+      "type": "inline-code",
+      "values": {
+        "content": "(keccak256(x), x)"
+      }
+    },
+    "CODE-3c99df": {
+      "type": "inline-code",
+      "values": {
+        "content": "keccak256(ethereumAddress)"
+      }
+    },
+    "CODE-e08d5f": {
+      "type": "inline-code",
+      "values": {
+        "content": "rlp(ethereumAccount)"
+      }
+    },
+    "CODE-9af211": {
+      "type": "inline-code",
+      "values": {
+        "content": "account"
+      }
+    },
+    "CODE-db74af": {
+      "type": "inline-code",
+      "values": {
+        "content": "[nonce,balance,storageRoot,codeHash]"
+      }
+    },
+    "CODE-79bd67": {
+      "type": "inline-code",
+      "values": {
+        "content": "storageRoot"
+      }
+    },
+    "CODE-e073c2": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_getStorageAt"
+      }
+    },
+    "CODE-185117": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x295a70b2de5e3953354a6a8344e616ed314d7251"
+      }
+    },
+    "CODE-07b72b": {
+      "type": "inline-code",
+      "values": {
+        "content": "keccak256"
+      }
+    },
+    "CODE-cbb5fe": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x391694e7e0b0cce554cb130d723a9d27458f9298"
+      }
+    },
+    "CODE-51e9d2": {
+      "type": "inline-code",
+      "values": {
+        "content": "keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)"
+      }
+    },
+    "CODE-902e04": {
+      "type": "inline-code",
+      "values": {
+        "content": "rlp(transactionIndex)"
+      }
+    },
+    "CODE-504dea": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactionIndex"
+      }
+    },
+    "CODE-dad5a9": {
+      "type": "inline-code",
+      "values": {
+        "content": "Receipt"
+      }
+    },
+    "CODE-b0945e": {
+      "type": "inline-code",
+      "values": {
+        "content": "TransactionType"
+      }
+    },
+    "CODE-d08d6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "ReceiptPayload"
+      }
+    },
+    "CODE-481b44": {
+      "type": "inline-code",
+      "values": {
+        "content": "LegacyReceipt"
+      }
+    },
+    "CODE-d99aec": {
+      "type": "inline-code",
+      "values": {
+        "content": "rlp([status, cumulativeGasUsed, logsBloom, logs])"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-11e518": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/verkle-trees"
+      }
+    },
+    "LINK-a37647": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Hash_function"
+      }
+    },
+    "LINK-d0b4af": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Merkle_tree"
+      }
+    },
+    "LINK-f5832e": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Trie"
+      }
+    },
+    "LINK-ef26a6": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Serialization"
+      }
+    },
+    "LINK-9ce03a": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Radix_tree"
+      }
+    },
+    "LINK-312cbd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/rlp"
+      }
+    },
+    "LINK-452c4b": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2718"
+      }
+    },
+    "LINK-8804a5": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd"
+      }
+    },
+    "LINK-16fda3": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2015/11/15/merkling-in-ethereum"
+      }
+    },
+    "LINK-136e77": {
+      "type": "link",
+      "values": {
+        "url": "https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:24:47.764Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,124 +1,132 @@
 ---
-title: "Wstęp techniczny do Ethereum"
-description: "Wprowadzenie programisty aplikacji zdecentralizowanych do podstawowych pojęć Ethereum."
+title: Techniczne wprowadzenie do Ethereum
+description: Wprowadzenie do podstawowych koncepcji Ethereum dla programistów zdecentralizowanych aplikacji (dapp).
 lang: pl
 ---
 
 ## Czym jest blockchain? {#what-is-a-blockchain}
 
-Blockchain to publiczna baza danych, która jest aktualizowana i udostępniana na wielu komputerach w sieci.
+Blockchain to publiczna baza danych, która jest aktualizowana i współdzielona przez wiele komputerów w sieci.
 
-„Blok” odnosi się do faktu, że dane i stan są przechowywane w sekwencyjnych partiach lub „blokach”. Jeśli wysyłasz ETH do kogoś innego, dane transakcji muszą zostać dodane do bloku, aby zakończyła się ona powodzeniem.
+"Blok" odnosi się do danych i stanu przechowywanych w kolejnych grupach znanych jako "bloki". Jeśli wysyłasz ETH do kogoś innego, dane transakcji muszą zostać dodane do bloku, aby zakończyła się ona sukcesem.
 
-„Chain” odnosi się do faktu, że każdy blok kryptograficznie odwołuje się do swojego rodzica (nadrzędnego elementu). Innymi słowy, bloki są łączone w łańcuchy. Dane w bloku nie mogą ulec zmianie bez zmiany wszystkich kolejnych bloków, co wymagałoby konsensusu całej sieci.
+"Łańcuch" odnosi się do faktu, że każdy blok kryptograficznie odwołuje się do swojego rodzica. Innymi słowy, bloki są ze sobą połączone w łańcuch. Dane w bloku nie mogą ulec zmianie bez zmiany wszystkich kolejnych bloków, co wymagałoby konsensusu całej sieci.
 
-Każdy komputer w sieci musi zgodzić się na każdy nowy blok i łańcuch jako całość. Te komputery nazywane są „węzłami”. Węzły zapewniają, że każda osoba wchodząca w interakcję z blockchainem ma te same dane. Aby osiągnąć to rozproszone porozumienie, blockchainy potrzebują mechanizmu konsensusu.
+Każdy komputer w sieci musi wyrazić zgodę na każdy nowy blok i łańcuch jako całość. Te komputery są znane jako "węzły". Węzły zapewniają, że każdy wchodzący w interakcję z blockchainem ma te same dane. Aby osiągnąć to rozproszone porozumienie, blockchainy potrzebują mechanizmu konsensusu.
 
-Ethereum używa [mechanizmu konsensusu opartego na proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Każdy, kto chce dodać nowe bloki do łańcucha, musi stakować ETH — natywną walutę Ethereum — jako zabezpieczenie i uruchomić oprogramowanie walidatora. Te „walidatory” mogą być następnie losowo wybierane do proponowania bloków, które inne walidatory sprawdzają i dodają do blockchainu. Istnieje system nagród i kar, który silnie motywuje uczestników do bycia uczciwymi i dostępnymi online tak długo, jak to możliwe.
+[Ethereum](/) wykorzystuje [mechanizm konsensusu oparty na dowodzie stawki (PoS)](/developers/docs/consensus-mechanisms/pos/). Każdy, kto chce dodawać nowe bloki do łańcucha, musi stakować ETH – natywną walutę w Ethereum – jako zabezpieczenie i uruchomić oprogramowanie walidatora. Ci "walidatorzy" mogą być następnie losowo wybierani do proponowania bloków, które inni walidatorzy sprawdzają i dodają do blockchaina. Istnieje system nagród i kar, który silnie motywuje uczestników do bycia uczciwymi i dostępnymi online tak często, jak to możliwe.
 
-Jeśli chcesz zobaczyć, jak dane blockchaina są haszowane, a następnie dołączane do historii odwołań do bloków, koniecznie sprawdź [to demo](https://andersbrownworth.com/blockchain/blockchain) autorstwa Andersa Brownwortha i obejrzyj towarzyszący mu film poniżej.
+Jeśli chcesz zobaczyć, jak dane blockchaina są hashowane, a następnie dołączane do historii odniesień do bloków, koniecznie sprawdź [to demo](https://andersbrownworth.com/blockchain/blockchain) autorstwa Andersa Brownwortha i obejrzyj poniższy film.
 
-Zobacz, jak Anders wyjaśnia hashe w blockchainach:
+Obejrzyj, jak Anders wyjaśnia hashe w blockchainach:
 
-<YouTube id="_160oMzblY8" />
+<VideoWatch slug="blockchain-101-visual-demo" />
 
-## Co to jest Ethereum? {#what-is-ethereum}
+## Czym jest Ethereum? {#what-is-ethereum}
 
-Ethereum to blockchain z wbudowanym komputerem. Jest on podstawą do tworzenia zdecentralizowanych aplikacji i organizacji w sposób zdecentralizowany, niewymagający uprawnień i odporny na cenzurę.
+Ethereum to blockchain z wbudowanym komputerem. Jest to fundament do budowania aplikacji i organizacji w sposób zdecentralizowany, niewymagający pozwoleń i odporny na cenzurę.
 
-We wszechświecie Ethereum istnieje jeden, kanoniczny komputer (zwany maszyną wirtualną Ethereum lub EVM), z którego stanem zgadzają się wszyscy w sieci Ethereum. Każdy uczestnik sieci Ethereum (każdy węzeł Ethereum) przechowuje kopię stanu tego komputera. Ponadto każdy uczestnik może przesłać do tego komputera żądanie wykonania dowolnych obliczeń. Za każdym razem, gdy takie żądanie jest przesyłane, inni uczestnicy sieci weryfikują, zatwierdzają i przeprowadzają („wykonują”) obliczenia. To wykonanie powoduje zmianę stanu EVM, która jest zatwierdzana i rozpowszechniana w całej sieci.
+W świecie Ethereum istnieje jeden, kanoniczny komputer (zwany Maszyną Wirtualną Ethereum, ang. Ethereum Virtual Machine lub EVM), co do którego stanu zgadzają się wszyscy w sieci Ethereum. Każdy, kto uczestniczy w sieci Ethereum (każdy węzeł Ethereum), przechowuje kopię stanu tego komputera. Dodatkowo, każdy uczestnik może rozgłosić żądanie, aby ten komputer wykonał dowolne obliczenia. Za każdym razem, gdy takie żądanie jest rozgłaszane, inni uczestnicy w sieci weryfikują, walidują i przeprowadzają ("wykonują") te obliczenia. To wykonanie powoduje zmianę stanu w EVM, która jest zatwierdzana i propagowana w całej sieci.
 
-Żądania o wykonanie obliczeń są nazywane żądaniami transakcji; zapis wszystkich transakcji oraz aktualny stan EVM jest przechowywany w blockchainie, który z kolei jest przechowywany i uzgadniany przez wszystkie węzły.
+Żądania obliczeń nazywane są żądaniami transakcji; zapis wszystkich transakcji i obecny stan EVM są przechowywane na blockchainie, który z kolei jest przechowywany i uzgadniany przez wszystkie węzły.
 
-Mechanizmy kryptograficzne gwarantują, że po zweryfikowaniu transakcji jako poprawnych i dodaniu ich do blockchainu nie można ich później modyfikować. Te same mechanizmy zapewniają również, że wszystkie transakcje są podpisywane i wykonywane z odpowiednimi „uprawnieniami” (nikt nie powinien być w stanie wysyłać zasobów cyfrowych z konta Alice, z wyjątkiem samej Alice).
+Mechanizmy kryptograficzne zapewniają, że po zweryfikowaniu transakcji jako ważnych i dodaniu ich do blockchaina, nie można przy nich później manipulować. Te same mechanizmy zapewniają również, że wszystkie transakcje są podpisywane i wykonywane z odpowiednimi "uprawnieniami" (nikt nie powinien móc wysyłać aktywów cyfrowych z konta Alice, z wyjątkiem samej Alice).
 
 ## Czym jest ether? {#what-is-ether}
 
-**Ether (ETH)** to natywna kryptowaluta Ethereum. Celem ETH jest umożliwienie rynku obliczeń. Taki rynek stanowi ekonomiczną zachętę dla uczestników do weryfikowania i wykonywania żądań transakcji oraz dostarczania zasobów obliczeniowych do sieci.
+**Ether (ETH)** to natywna kryptowaluta Ethereum. Celem ETH jest umożliwienie istnienia rynku obliczeń. Taki rynek zapewnia zachętę ekonomiczną dla uczestników do weryfikowania i wykonywania żądań transakcji oraz dostarczania zasobów obliczeniowych do sieci.
 
-Każdy uczestnik, który wysyła żądanie transakcji, musi również zaoferować pewną ilość ETH do sieci jako nagrodę. Sieć spali część tej nagrody, a resztę przyzna temu, kto ostatecznie wykona pracę polegającą na weryfikacji transakcji, wykonaniu jej, zatwierdzeniu jej w blockchainie i rozesłaniu jej do sieci.
+Każdy uczestnik, który rozgłasza żądanie transakcji, musi również zaoferować sieci pewną ilość ETH jako nagrodę. Sieć spali część tej nagrody, a resztę przyzna temu, kto ostatecznie wykona pracę polegającą na weryfikacji transakcji, jej wykonaniu, zatwierdzeniu w blockchainie i rozgłoszeniu w sieci.
 
-Ilość zapłaconych ETH odpowiada zasobom wymaganym do wykonania obliczeń. Nagrody te zapobiegają również celowemu zatykaniu sieci przez złośliwych uczestników poprzez żądanie wykonania nieskończonych obliczeń lub innych skryptów wymagających dużej ilości zasobów, ponieważ uczestnicy ci muszą zapłacić za zasoby obliczeniowe.
+Ilość zapłaconego ETH odpowiada zasobom wymaganym do wykonania obliczeń. Te nagrody zapobiegają również celowemu zapychaniu sieci przez złośliwych uczestników poprzez żądanie wykonania nieskończonych obliczeń lub innych skryptów wymagających dużych zasobów, ponieważ uczestnicy ci muszą płacić za zasoby obliczeniowe.
 
-ETH jest również wykorzystywane do zapewnienia bezpieczeństwa kryptoekonomicznego sieci na trzy główne sposoby: 1) jest wykorzystywane jako środek do nagradzania walidatorów, którzy proponują bloki lub ujawniają nieuczciwe zachowanie innych walidatorów; 2) jest stakowane przez walidatorów, działając jako zabezpieczenie przed nieuczciwym zachowaniem — jeśli walidatory próbują niewłaściwie postępować, ich ETH mogą zostać zniszczone; 3) jest wykorzystywane do ważenia „głosów” dla nowo proponowanych bloków, zasilając część mechanizmu konsensusu dotyczącą wyboru forka.
+ETH jest również wykorzystywane do zapewnienia kryptoekonomicznego bezpieczeństwa sieci na trzy główne sposoby: 1) służy jako środek do nagradzania walidatorów, którzy proponują bloki lub demaskują nieuczciwe zachowanie innych walidatorów; 2) jest stakowane przez walidatorów, działając jako zabezpieczenie przed nieuczciwym zachowaniem – jeśli walidatorzy spróbują zachować się niewłaściwie, ich ETH może zostać zniszczone; 3) służy do ważenia "głosów" na nowo proponowane bloki, co stanowi część mechanizmu konsensusu odpowiedzialną za wybór rozwidlenia (fork-choice).
 
 ## Czym są inteligentne kontrakty? {#what-are-smart-contracts}
 
-W praktyce uczestnicy nie piszą nowego kodu za każdym razem, gdy chcą zażądać obliczeń na EVM. Jest raczej tak, że programiści aplikacji przesyłają programy (fragmenty kodu wielokrotnego użytku) do stanu EVM, a użytkownicy wysyłają żądania wykonania tych fragmentów kodu z różnymi parametrami. Programy przesyłane do sieci i przez nią wykonywane nazywamy "inteligentnymi kontraktami".
+W praktyce uczestnicy nie piszą nowego kodu za każdym razem, gdy chcą zażądać obliczeń w EVM. Zamiast tego programiści aplikacji wdrażają programy (fragmenty kodu wielokrotnego użytku) do stanu EVM, a użytkownicy zgłaszają żądania wykonania tych fragmentów kodu z różnymi parametrami. Programy wdrożone do sieci i przez nią wykonywane nazywamy "inteligentnymi kontraktami".
 
-Na bardzo podstawowym poziomie można myśleć o inteligentnym kontrakcie jak o swego rodzaju automacie: skrypcie, który po wywołaniu z określonymi parametrami wykonuje pewne czynności lub obliczenia, jeśli spełnione są określone warunki. Na przykład, prosty inteligentny kontrakt sprzedawcy może utworzyć i przypisać własność cyfrowego zasobu, jeśli wywołujący wyśle ETH do określonego odbiorcy.
+Na bardzo podstawowym poziomie można myśleć o inteligentnym kontrakcie jak o automacie sprzedającym: skrypcie, który po wywołaniu z określonymi parametrami wykonuje pewne działania lub obliczenia, jeśli spełnione są określone warunki. Na przykład prosty inteligentny kontrakt sprzedawcy mógłby utworzyć i przypisać własność aktywa cyfrowego, jeśli wywołujący wyśle ETH do określonego odbiorcy.
 
-Każdy programista może stworzyć inteligentny kontrakt i upublicznić go w sieci, z użyciem blockchainu jako swojej warstwy danych, za opłatą uiszczoną na rzecz sieci. Każdy użytkownik może następnie wywołać inteligentny kontrakt, aby wykonał jego kod, ponownie za opłatą uiszczoną na rzecz sieci.
+Każdy programista może utworzyć inteligentny kontrakt i udostępnić go publicznie w sieci, wykorzystując blockchain jako warstwę danych, za opłatą uiszczaną na rzecz sieci. Każdy użytkownik może następnie wywołać inteligentny kontrakt, aby wykonać jego kod, ponownie za opłatą uiszczaną na rzecz sieci.
 
-Dzięki inteligentnym kontraktom deweloperzy mogą tworzyć i wdrażać dowolnie złożone aplikacje i usługi skierowane do użytkowników, takie jak: rynki, instrumenty finansowe, gry itp.
+Dzięki inteligentnym kontraktom programiści mogą budować i wdrażać dowolnie złożone aplikacje i usługi skierowane do użytkowników, takie jak: rynki, instrumenty finansowe, gry itp.
 
 ## Terminologia {#terminology}
 
 ### Blockchain {#blockchain}
 
-Sekwencja wszystkich bloków, które zostały zatwierdzone w sieci Ethereum w historii sieci. Nazwa pochodzi od tego, że każdy blok zawiera odniesienie do poprzedniego bloku, co pomaga nam zachować porządek we wszystkich blokach (a tym samym w dokładnej historii).
+Sekwencja wszystkich bloków, które zostały zatwierdzone w sieci Ethereum w historii sieci. Nazwa wzięła się stąd, że każdy blok zawiera odniesienie do poprzedniego bloku, co pomaga nam utrzymać porządek wszystkich bloków (a tym samym dokładną historię).
 
 ### ETH {#eth}
 
-**Ether (ETH)** to natywna kryptowaluta Ethereum. Użytkownicy płacą ETH innym użytkownikom, aby ich żądania wykonania kodu zostały spełnione.
+**Ether (ETH)** to natywna kryptowaluta Ethereum. Użytkownicy płacą ETH innym użytkownikom za realizację ich żądań wykonania kodu.
 
 [Więcej o ETH](/developers/docs/intro-to-ether/)
 
 ### EVM {#evm}
 
-Maszyna wirtualna Ethereum to globalny komputer wirtualny, którego stan przechowuje i akceptuje każdy uczestnik sieci Ethereum. Każdy uczestnik może zażądać wykonania dowolnego kodu na EVM; wykonanie kodu zmienia stan EVM.
+Maszyna Wirtualna Ethereum (EVM) to globalny wirtualny komputer, którego stan przechowuje i uzgadnia każdy uczestnik sieci Ethereum. Każdy uczestnik może zażądać wykonania dowolnego kodu w EVM; wykonanie kodu zmienia stan EVM.
 
 [Więcej o EVM](/developers/docs/evm/)
 
 ### Węzły {#nodes}
 
-Rzeczywiste maszyny, które przechowują stan EVM. Węzły komunikują się ze sobą w celu rozpowszechniania informacji o stanie EVM i nowych zmianach stanu. Każdy użytkownik może również zażądać wykonania kodu, wysyłając żądanie wykonania kodu z węzła. Sama sieć Ethereum jest sumą wszystkich węzłów Ethereum i ich komunikacji.
+Rzeczywiste maszyny, które przechowują stan EVM. Węzły komunikują się ze sobą w celu propagowania informacji o stanie EVM i nowych zmianach stanu. Każdy użytkownik może również zażądać wykonania kodu, rozgłaszając żądanie wykonania kodu z węzła. Sama sieć Ethereum jest zbiorem wszystkich węzłów Ethereum i ich komunikacji.
 
 [Więcej o węzłach](/developers/docs/nodes-and-clients/)
 
 ### Konta {#accounts}
 
-Gdzie przechowywane jest ETH. Użytkownicy mogą inicjować konta, wpłacać ETH na konta i przesyłać ETH ze swoich kont do innych użytkowników. Konta i salda kont są przechowywane w dużej tabeli w EVM; są one częścią ogólnego stanu EVM.
+Miejsce, w którym przechowywane jest ETH. Użytkownicy mogą inicjować konta, wpłacać na nie ETH i transferować ETH ze swoich kont do innych użytkowników. Konta i ich salda są przechowywane w dużej tabeli w EVM; są one częścią ogólnego stanu EVM.
 
 [Więcej o kontach](/developers/docs/accounts/)
 
 ### Transakcje {#transactions}
 
-„Żądanie transakcji” to formalny termin oznaczający żądanie wykonania kodu na EVM, a „transakcja” to spełnione żądanie transakcji i związana z nim zmiana stanu EVM. Każdy użytkownik może wysłać żądanie transakcji do sieci z węzła. Aby żądanie transakcji mogło wpłynąć na uzgodniony stan EVM, musi zostać zatwierdzone, wykonane i „zatwierdzone do sieci” przez inny węzeł. Wykonanie dowolnego kodu powoduje zmianę stanu EVM; po zatwierdzeniu ta zmiana stanu jest przesyłana do wszystkich węzłów w sieci. Przykładowe transakcje:
+"Żądanie transakcji" to formalne określenie żądania wykonania kodu w EVM, a "transakcja" to zrealizowane żądanie transakcji i powiązana z nim zmiana stanu EVM. Każdy użytkownik może rozgłosić żądanie transakcji do sieci z węzła. Aby żądanie transakcji wpłynęło na uzgodniony stan EVM, musi zostać zwalidowane, wykonane i "zatwierdzone w sieci" przez inny węzeł. Wykonanie dowolnego kodu powoduje zmianę stanu w EVM; po zatwierdzeniu ta zmiana stanu jest rozgłaszana do wszystkich węzłów w sieci. Kilka przykładów transakcji:
 
 - Wyślij X ETH z mojego konta na konto Alice.
-- Opublikuj kod inteligentnego kontraktu do stanu EVM.
+- Opublikuj kod inteligentnego kontraktu w stanie EVM.
 - Wykonaj kod inteligentnego kontraktu pod adresem X w EVM, z argumentami Y.
 
 [Więcej o transakcjach](/developers/docs/transactions/)
 
 ### Bloki {#blocks}
 
-Wolumen transakcji jest bardzo wysoki, więc transakcje są „zatwierdzane” w partiach lub blokach. Bloki zazwyczaj zawierają od kilkudziesięciu do kilkuset transakcji.
+Wolumen transakcji jest bardzo wysoki, więc transakcje są "zatwierdzane" w partiach, czyli blokach. Bloki zazwyczaj zawierają od kilkudziesięciu do kilkuset transakcji.
 
 [Więcej o blokach](/developers/docs/blocks/)
 
 ### Inteligentne kontrakty {#smart-contracts}
 
-Fragment kodu wielokrotnego użytku (program), który programista umieszcza w stanie EVM. Każdy może zażądać wykonania kodu inteligentnego kontraktu składając żądanie transakcji. Ponieważ programiści mogą pisać dowolne aplikacje wykonywalne w EVM (gry, rynki, instrumenty finansowe itp.) poprzez publikowanie inteligentnych kontraktów, są one często nazywane także [dapkami lub aplikacjami zdecentralizowanymi](/developers/docs/dapps/).
+Fragment kodu wielokrotnego użytku (program), który programista publikuje w stanie EVM. Każdy może zażądać wykonania kodu inteligentnego kontraktu, składając żądanie transakcji. Ponieważ programiści mogą pisać dowolne aplikacje wykonywalne w EVM (gry, rynki, instrumenty finansowe itp.) poprzez publikowanie inteligentnych kontraktów, są one często nazywane [zdecentralizowanymi aplikacjami (dapp)](/developers/docs/dapps/).
 
 [Więcej o inteligentnych kontraktach](/developers/docs/smart-contracts/)
+
+## Co dalej {#where-to-go-next}
+
+Większość czytelników czyta dokumentację po kolei, ale najkrótsza ścieżka zależy od tego, co próbujesz zbudować:
+
+- **Zdecentralizowane aplikacje (dapp) wchodzące w interakcję z Ethereum:** [konta](/developers/docs/accounts/) i [transakcje](/developers/docs/transactions/), a następnie wybierz [framework](/developers/docs/frameworks/).
+- **Tworzenie inteligentnych kontraktów:** [inteligentne kontrakty](/developers/docs/smart-contracts/) i [języki programowania](/developers/docs/programming-languages/).
+- **Węzły i staking:** [węzły i klienci](/developers/docs/nodes-and-clients/), a następnie [mechanizmy konsensusu](/developers/docs/consensus-mechanisms/).
 
 ## Dalsza lektura {#further-reading}
 
 - [Biała księga Ethereum](/whitepaper/)
-- [Jak w ogóle działa Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) – _Preethi Kasireddy_ (**UWAGA:** ten zasób jest wciąż wartościowy, ale należy pamiętać, że pochodzi on sprzed [Połączenia](/roadmap/merge) i w związku z tym nadal odnosi się do mechanizmu proof-of-work Ethereum – Ethereum jest obecnie zabezpieczone za pomocą [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
+- [Jak właściwie działa Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) – _Preethi Kasireddy_ (**Uwaga:** ten zasób jest nadal wartościowy, ale pamiętaj, że powstał przed [The Merge](/roadmap/merge) i dlatego nadal odnosi się do mechanizmu dowodu pracy (PoW) w Ethereum – obecnie Ethereum jest zabezpieczone za pomocą [dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos))
 
-### Jesteś raczej wzrokowcem? Dla wzrokowców {#visual-learner}
+### Wolisz uczyć się wzrokowo? {#visual-learner}
 
-Ta seria filmów oferuje dogłębne omówienie podstawowych zagadnień:
+Ta seria filmów oferuje dokładne omówienie podstawowych tematów:
 
-<YouTube id="j78ZcIIpi0Q"/>
+<VideoWatch slug="ethereum-basics-intro" />
 
-[Playlista: podstawy Ethereum](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
+[Playlista z podstawami Ethereum](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
 
-_Znasz jakieś zasoby społeczności, które Ci pomogły? Edytuj tę stronę i dodaj je!_
+_Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!_
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Przewodnik programisty po Ethereum, część 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Bardzo przyjazne dla początkujących odkrywanie Ethereum przy użyciu Pythona i web3.py_
+- [Przewodnik po Ethereum dla programistów, część 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Bardzo przyjazne dla początkujących wprowadzenie do Ethereum z użyciem języka Python i biblioteki web3.py_
