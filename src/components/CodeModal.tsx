@@ -33,7 +33,7 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetContent
         side="bottom"
-        className="flex h-[50vh] flex-col rounded-t-2xl"
+        className="flex h-[50vh] flex-col rounded-t-base"
       >
         <SheetHeader className="flex-row items-center justify-between space-y-0 p-4 ps-8 pt-6">
           <SheetTitle className="text-2xl font-bold">{title}</SheetTitle>

@@ -26,3 +26,10 @@
 - None of the historical tr failure modes recurred: no brand translation (DeFi->MeFi, katillik), no ticker transposition (ETH->EHT, BLS->BSL), no Mainnet->Markette. All brands/tickers preserved in Latin.
 - Glossary-driven mid-sentence capitalization of common nouns (Token, Cuzdan, Hesap) follows ETHGlossary `translation` casing -- consistent, non-idiomatic but not flagged as error.
 - Big improvement over the PR #17182 baseline (7.7/10): this single new page is clean apart from the one heading typo.
+
+---
+
+## PR #18418 (intl/pending-dev) -- 2026-06-16 -- Score 9.7/10
+
+- 21 UI-string JSONs reviewed. 0 critical. None of the historical tr failure modes recurred: client=istemci (not musteri), mainnet=Ana Ag (not market), no ETH/BLS ticker typos, no brand mistranslation, no Devanagari cross-script contamination.
+- Comma decimals (%99,99) and Western numerals correct. ICU/tags/hrefs intact.

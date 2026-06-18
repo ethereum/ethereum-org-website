@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-16T23:19:40.840Z",
+  "englishManifestHash": "53270e34d67e",
+  "placeholderOrder": [
+    "LINK-c3cad3",
+    "LINK-3923cd",
+    "LINK-5717a5",
+    "LINK-fb2e62",
+    "CODE-74e216",
+    "CODE-b7f373",
+    "LINK-23b89a",
+    "CODEBLOCK-857422",
+    "CODEBLOCK-b91cf5",
+    "CODE-9e1183",
+    "CODEBLOCK-4915ad",
+    "CODE-74e216",
+    "CODE-b7f373",
+    "CODEBLOCK-6a28ae",
+    "CODE-60e831",
+    "CODE-597d5a",
+    "CODE-a68005",
+    "CODEBLOCK-a46676",
+    "CODE-3b88ef",
+    "CODE-1b6b12",
+    "CODE-b52b1c",
+    "CODE-b52b1c",
+    "CODE-597d5a",
+    "CODEBLOCK-2a5eb9",
+    "CODE-b52b1c",
+    "CODE-a75e18",
+    "CODE-3a6eb0",
+    "LINK-2a376b",
+    "CODE-0d35cb",
+    "CODE-b52b1c",
+    "CODE-106f4d",
+    "CODE-b91cd0",
+    "CODE-3a6eb0",
+    "CODE-2d13a9",
+    "CODE-3a6eb0",
+    "CODE-a58454",
+    "CODE-742222",
+    "CODE-3a64bd",
+    "CODE-6c78cb",
+    "LINK-a9af06",
+    "LINK-050f38"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-857422": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b91cf5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4915ad": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6a28ae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a46676": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2a5eb9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-74e216": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve"
+      }
+    },
+    "CODE-b7f373": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom"
+      }
+    },
+    "CODE-9e1183": {
+      "type": "inline-code",
+      "values": {
+        "content": "tokenReceived(..)"
+      }
+    },
+    "CODE-60e831": {
+      "type": "inline-code",
+      "values": {
+        "content": "tokenA"
+      }
+    },
+    "CODE-597d5a": {
+      "type": "inline-code",
+      "values": {
+        "content": "Deposit()"
+      }
+    },
+    "CODE-a68005": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposits"
+      }
+    },
+    "CODE-3b88ef": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer(address,uint256)"
+      }
+    },
+    "CODE-1b6b12": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer(address,uint256,bytes)"
+      }
+    },
+    "CODE-b52b1c": {
+      "type": "inline-code",
+      "values": {
+        "content": "RecipientContract"
+      }
+    },
+    "CODE-a75e18": {
+      "type": "inline-code",
+      "values": {
+        "content": "_data"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-0d35cb": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer(address,uin256,bytes calldata _data)"
+      }
+    },
+    "CODE-106f4d": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xc2985578"
+      }
+    },
+    "CODE-b91cd0": {
+      "type": "inline-code",
+      "values": {
+        "content": "foo()"
+      }
+    },
+    "CODE-2d13a9": {
+      "type": "inline-code",
+      "values": {
+        "content": "_someNumber"
+      }
+    },
+    "CODE-a58454": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x0423a13200000000000000000000000000000000000000000000000000000000000004d2"
+      }
+    },
+    "CODE-742222": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x0423a132"
+      }
+    },
+    "CODE-3a64bd": {
+      "type": "inline-code",
+      "values": {
+        "content": "bar(uint256)"
+      }
+    },
+    "CODE-6c78cb": {
+      "type": "inline-code",
+      "values": {
+        "content": "00000000000000000000000000000000000000000000000000000000000004d2"
+      }
+    },
+    "LINK-c3cad3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts"
+      }
+    },
+    "LINK-3923cd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-5717a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-23b89a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-223"
+      }
+    },
+    "LINK-2a376b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/#the-data-field"
+      }
+    },
+    "LINK-a9af06": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-223"
+      }
+    },
+    "LINK-050f38": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/eips/issues/223"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:19:40.840Z",
+      "status": "success"
+    }
+  }
+}

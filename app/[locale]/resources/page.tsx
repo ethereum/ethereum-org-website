@@ -132,7 +132,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     {boxes.map(({ title, metric, items, className }) => (
                       <div
                         className={cn(
-                          "overflow-hidden rounded-2xl border shadow-lg",
+                          "overflow-hidden rounded-base border shadow-lg",
                           className
                         )}
                         key={title}

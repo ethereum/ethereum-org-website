@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-history.json",
+  "generatedAt": "2026-06-16T15:39:34.755Z",
+  "rootHash": "bfac535d7dac",
+  "tree": {
+    "contentHash": "b0f3c68b9970",
+    "anchorHash": "58df6e0693de",
+    "children": {
+      "page-history-slot-number": {
+        "contentHash": "d136f480b569",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-history-block-number": {
+        "contentHash": "8f70563783f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-history-epoch-number": {
+        "contentHash": "4a98fd9c75d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-history-ethereum-org-wayback": {
+        "contentHash": "b41cdf8692c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-history-eth-price": {
+        "contentHash": "db1e46981997",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-history-slot-number",
+      "page-history-block-number",
+      "page-history-epoch-number",
+      "page-history-ethereum-org-wayback",
+      "page-history-eth-price"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

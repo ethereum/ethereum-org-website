@@ -1,7 +1,7 @@
 {
   "comp-tutorial-metadata-minute-read": "menit baca",
   "page-tutorial-listing-policy-intro": "Sebelum Anda mengirimkan tutorial, silakan <a href=\"/contributing/content-resources/\">baca kebijakan pencantuman kami</a>.",
-  "comp-tutorial-metadata-tip-author": "Beri tip kepada penulis",
+  "comp-tutorial-metadata-tip-author": "Tip penulis",
   "page-tutorial-create-an-issue": "Buat issue",
   "page-tutorial-create-an-issue-desc": "Isi templat issue yang menguraikan tutorial Anda.",
   "page-tutorial-raise-issue-btn": "Ajukan issue",
@@ -19,7 +19,7 @@
   "page-tutorial-advanced": "Lanjutan",
   "page-find-wallet-try-removing": "Coba hapus satu atau dua fitur",
   "page-find-wallet-clear": "Hapus filter",
-  "page-tutorials-env-banner": "Jangan commit <code>.env</code>! Pastikan untuk tidak pernah membagikan atau mengekspos file <code>.env</code> Anda kepada siapa pun, karena Anda membahayakan rahasia Anda dengan melakukannya. Jika Anda menggunakan kontrol versi, tambahkan <code>.env</code> Anda ke file <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>.",
+  "page-tutorials-env-banner": "Jangan commit <code>.env</code>! Pastikan untuk tidak pernah membagikan atau mengekspos file <code>.env</code> Anda kepada siapa pun, karena Anda akan membahayakan rahasia Anda jika melakukannya. Jika Anda menggunakan version control, tambahkan <code>.env</code> Anda ke file <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>.",
   "page-tutorial-all": "Semua",
   "page-tutorial-topics": "Topik",
   "page-tutorial-search-placeholder": "Cari tutorial...",

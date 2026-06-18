@@ -26,3 +26,10 @@
 
 - Tone/register consistent, natural professional Czech. No MDX/href/inversion/contamination issues.
 - One cosmetic consensus-term variation (konsensuální klient vs vrstva konsensu) -- warning only.
+
+---
+
+## PR #18418 (intl/pending-dev) -- 2026-06-16 -- Score 9.5/10
+
+- 21 UI-string JSONs reviewed. 1 critical fixed: `glossary-tooltip.json` `ommer-definition` leaked `<HTML-PLACEHOLDER-HTMLTAG-7ff424>` -> restored to `<a href="/glossary/#pow">` (pattern 22).
+- gas=gas loanword honored (not "plyn"); zero-knowledge compound-form correct. No semantic inversions, hrefs/tickers intact.

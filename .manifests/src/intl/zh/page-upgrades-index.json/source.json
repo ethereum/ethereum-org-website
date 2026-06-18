@@ -1,0 +1,1045 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-upgrades-index.json",
+  "generatedAt": "2026-06-16T16:16:02.695Z",
+  "rootHash": "ac5c36e7cf3b",
+  "tree": {
+    "contentHash": "b841290a18f9",
+    "anchorHash": "576fa95fa626",
+    "children": {
+      "consensus-client-besu-logo-alt": {
+        "contentHash": "21ea71975913",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-client-erigon-logo-alt": {
+        "contentHash": "ebd67296f6d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-client-geth-logo-alt": {
+        "contentHash": "256b5449246f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-client-lighthouse-logo-alt": {
+        "contentHash": "4b277dd735aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-client-lodestar-logo-alt": {
+        "contentHash": "375f2f39914f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-client-nethermind-logo-alt": {
+        "contentHash": "80fd6b3b6390",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-client-nimbus-logo-alt": {
+        "contentHash": "b8b2c8154975",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-client-prysm-logo-alt": {
+        "contentHash": "e15ccdbad31e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-client-teku-logo-alt": {
+        "contentHash": "713711398e6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-answer-1": {
+        "contentHash": "fa9576b10247",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-answer-2": {
+        "contentHash": "a3e975bab76a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-answer-4": {
+        "contentHash": "4359f4bae061",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-author-status": {
+        "contentHash": "920e413c7d41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-author-ethmerge": {
+        "contentHash": "0431d297478e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-author-alchemy": {
+        "contentHash": "2805fc43d2b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-author-consensys": {
+        "contentHash": "407eb30a82ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-author-delphi-digital": {
+        "contentHash": "772d29b939be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-author-eip-4844": {
+        "contentHash": "91e37545b608",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-author-ethereum-foundation": {
+        "contentHash": "b1cc2e711844",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-author-vitalik-buterin": {
+        "contentHash": "48b4f92b82f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-author-ethos-dev": {
+        "contentHash": "a6ca69993aac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-two-point-oh": {
+        "contentHash": "4c8a1b58d78b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-beacon-chain-explainer": {
+        "contentHash": "55098097eab5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-sharding-consensus": {
+        "contentHash": "cf83fda8719f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-sharding-is-great": {
+        "contentHash": "944d2a22cce9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-rollup-roadmap": {
+        "contentHash": "dc637b066f90",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-hitchhikers-guide-to-ethereum": {
+        "contentHash": "da85e48e32f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-eip-4844": {
+        "contentHash": "0b23ab28761d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-proto-danksharding-faq": {
+        "contentHash": "47af5b38f943",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-sharding-das": {
+        "contentHash": "f1e59c878d47",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-ethmerge": {
+        "contentHash": "0431d297478e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-merge-is-coming": {
+        "contentHash": "b60eb6411602",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-state-of-the-merge": {
+        "contentHash": "03b8559504fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-ropsten-merge-testnet": {
+        "contentHash": "df11ee4170d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-execution-layer-specs": {
+        "contentHash": "5581952c95d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-consensus-layer-specs": {
+        "contentHash": "1976b825adbf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrade-article-title-engine-api-specs": {
+        "contentHash": "5b446b493d69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-beacon-chain-date": {
+        "contentHash": "8fa06a11e379",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-beacon-chain-desc": {
+        "contentHash": "c6f15564934b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-beacon-chain-estimate": {
+        "contentHash": "10c197f56e8f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-beacon-chain-title": {
+        "contentHash": "b752f00630a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty": {
+        "contentHash": "88d84d921ee6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-clients": {
+        "contentHash": "1659ac76d2d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-title": {
+        "contentHash": "0d61707a01a6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-dive": {
+        "contentHash": "9a00b5ba98ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-dive-desc": {
+        "contentHash": "bfc57bfa0e4d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-docking": {
+        "contentHash": "c09500586c2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-merge-answer-1": {
+        "contentHash": "991c4ce16f14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-merge-btn": {
+        "contentHash": "45d5bc5b7135",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-merge-desc": {
+        "contentHash": "a6af95869c45",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-merge-estimate": {
+        "contentHash": "09092b59b952",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-merge-mainnet": {
+        "contentHash": "99f02c61016c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-eth-blog": {
+        "contentHash": "ee375166d4f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-explore-btn": {
+        "contentHash": "06571af2d5e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved": {
+        "contentHash": "aeccedf389f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-2": {
+        "contentHash": "2cba40c2541b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-head-to-ethresearch": {
+        "contentHash": "14689ea89ed2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-help": {
+        "contentHash": "55d9fa2770ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-help-desc": {
+        "contentHash": "62831b6c32b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking": {
+        "contentHash": "b4f226efc1ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-desc": {
+        "contentHash": "c8d760387ef0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-learn": {
+        "contentHash": "c2bb80e4a7eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-learn-desc": {
+        "contentHash": "a1c99c1d68d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-step-1": {
+        "contentHash": "3aa28539c83c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-step-1-btn": {
+        "contentHash": "985652e66b48",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-step-1-desc": {
+        "contentHash": "a5d3d698a6c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-step-2": {
+        "contentHash": "0569e2ec73b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-step-2-btn": {
+        "contentHash": "f291532edde2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-step-2-desc": {
+        "contentHash": "e2a711a79343",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-index-staking-sustainability": {
+        "contentHash": "1f7f5dcbf927",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-meta-desc": {
+        "contentHash": "81b07512b857",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-meta-title": {
+        "contentHash": "9645b58ede5e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-proof-stake-link": {
+        "contentHash": "4678ab97ea1d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-1-title": {
+        "contentHash": "7273c638d63f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-1-desc": {
+        "contentHash": "6f0cccd50cbc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-2-title": {
+        "contentHash": "946934ad22c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-2-desc": {
+        "contentHash": "3d8df7fd3f3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-3-answer-2a": {
+        "contentHash": "fa4c51ed53b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-3-answer-2a-link": {
+        "contentHash": "204c6c1491c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-3-answer-2b": {
+        "contentHash": "a6f0888b56e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-layer-2-rollups": {
+        "contentHash": "d04f5d797139",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-3-answer-3-link": {
+        "contentHash": "1f0c777595c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-3-desc": {
+        "contentHash": "dacce915a7cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-3-title": {
+        "contentHash": "a3a9dd832ed9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-4-answer-1": {
+        "contentHash": "e259d005d42a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-4-answer-3": {
+        "contentHash": "3f45d2a82a5a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-4-answer-6": {
+        "contentHash": "85afa2a362b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-4-answer-7": {
+        "contentHash": "69d6e676fc84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-4-title": {
+        "contentHash": "2978634ebd9f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-4-desc": {
+        "contentHash": "0e4e380e4074",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-5-answer-1": {
+        "contentHash": "1d0a4a728069",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-5-desc": {
+        "contentHash": "7fdf7ffb37ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-5-title": {
+        "contentHash": "c936f1455d77",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-6-answer-3": {
+        "contentHash": "00922469ca64",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-6-answer-4": {
+        "contentHash": "64a121eeb79f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-6-answer-5": {
+        "contentHash": "9646f435dbcd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-6-title": {
+        "contentHash": "1cbf82e1290e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-6-desc": {
+        "contentHash": "15775e0c2180",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-6-answer-1": {
+        "contentHash": "9b5ac41ec83f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-6-answer-1-link": {
+        "contentHash": "478d5d84068b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-6-answer-2": {
+        "contentHash": "b93776737831",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-desc": {
+        "contentHash": "4adcb7b6423d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-lighthouse": {
+        "contentHash": "68bd571fcc5b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-lighthouse-lang": {
+        "contentHash": "ed7de99a2d01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-lodestar": {
+        "contentHash": "ebcd9aca2aa3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-lodestar-lang": {
+        "contentHash": "e7c804095f8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-nimbus": {
+        "contentHash": "1d85cd9ea3cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-nimbus-lang": {
+        "contentHash": "f2249b54e9d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-prysm": {
+        "contentHash": "b5204215a327",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-prysm-lang": {
+        "contentHash": "47a52ff814a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-teams": {
+        "contentHash": "f114cba0663a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-teku": {
+        "contentHash": "1a7f7dc5ab04",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-teku-lang": {
+        "contentHash": "6d63c027a2ca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-title": {
+        "contentHash": "5addf287907f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-7-clients": {
+        "contentHash": "7fd922666b77",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-8-answer-1": {
+        "contentHash": "2ce2295ba380",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-8-answer-2": {
+        "contentHash": "e0a1a135826e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-8-answer-3": {
+        "contentHash": "ead6a1efc762",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-8-answer-4": {
+        "contentHash": "eaa29d5298e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-8-answer-6": {
+        "contentHash": "6c6789221b86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-8-desc": {
+        "contentHash": "16ac46d15a22",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-8-title": {
+        "contentHash": "afd0fd89bdcb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-9-answer-1": {
+        "contentHash": "874d4b332f76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-9-answer-2": {
+        "contentHash": "6dba7d0d5a95",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-9-answer-3": {
+        "contentHash": "58e3a0137976",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-9-answer-4": {
+        "contentHash": "a834d3daa9e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-9-desc": {
+        "contentHash": "e2fc42993813",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-9-stake-eth": {
+        "contentHash": "e53a7b6de046",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-9-title": {
+        "contentHash": "37215f1bcf45",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-9-more": {
+        "contentHash": "4656217fd5bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-title": {
+        "contentHash": "f89f60338be2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-desc": {
+        "contentHash": "1e6c16006544",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-answer-0": {
+        "contentHash": "f4979913d6eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-answer-1": {
+        "contentHash": "9ea24eab8a2d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-answer-1-link": {
+        "contentHash": "0914f895ba59",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-answer-2": {
+        "contentHash": "879722bfc025",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-answer-3": {
+        "contentHash": "792edb032bae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-answer-5": {
+        "contentHash": "4face2a1d580",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-answer-6": {
+        "contentHash": "333f1c4a3993",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-answer-7": {
+        "contentHash": "37f675216b54",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-10-answer-8": {
+        "contentHash": "f85ba3459362",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-11-title": {
+        "contentHash": "8ee154447081",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-11-desc": {
+        "contentHash": "01a89fde55d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-11-answer-1": {
+        "contentHash": "543f40f9106b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-11-answer-2": {
+        "contentHash": "a410ba22dfe1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-title": {
+        "contentHash": "e956a9404b46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question3-answer-1": {
+        "contentHash": "6ca55ec088de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-scalable": {
+        "contentHash": "8746aa3b6e7a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-scalable-desc": {
+        "contentHash": "29850c0bf2c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-secure": {
+        "contentHash": "362df53ebb6a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-secure-desc": {
+        "contentHash": "88db42ebdffb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-shard-date": {
+        "contentHash": "e6776b467019",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-shard-desc": {
+        "contentHash": "4e0c3015e21a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-shard-estimate": {
+        "contentHash": "2bbdc3a4cc7a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-shard-lower": {
+        "contentHash": "b60a966f435b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-shard-title": {
+        "contentHash": "18d5c3346922",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-stay-up-to-date": {
+        "contentHash": "3fea642185ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-stay-up-to-date-desc": {
+        "contentHash": "fae937f75934",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-sustainable-desc": {
+        "contentHash": "c2e29d75441b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-take-part": {
+        "contentHash": "7be42ecae861",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-take-part-desc": {
+        "contentHash": "6226bb2de8fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-the-upgrades": {
+        "contentHash": "80c1a3c4f9c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-the-upgrades-desc": {
+        "contentHash": "caec63c7284b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-unofficial-roadmap": {
+        "contentHash": "da34887716ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrade-desc": {
+        "contentHash": "9b6c81251667",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades": {
+        "contentHash": "80c1a3c4f9c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-aria-label": {
+        "contentHash": "97431ddda4a4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-beacon-chain": {
+        "contentHash": "b752f00630a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-guide": {
+        "contentHash": "7e4f8471d638",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-docking": {
+        "contentHash": "c09500586c2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-energy-consumption": {
+        "contentHash": "a5496aeb8a4b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrading": {
+        "contentHash": "5814ffa6a9dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-vision": {
+        "contentHash": "82ba1419d647",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-vision-btn": {
+        "contentHash": "2b8db9d621e6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-vision-desc": {
+        "contentHash": "840d37b846d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-happened-to-eth2-title": {
+        "contentHash": "538623f5901c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-happened-to-eth2-1": {
+        "contentHash": "eada557ac71e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-happened-to-eth2-1-more": {
+        "contentHash": "ff4bf517ef49",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-happened-to-eth2-2": {
+        "contentHash": "d2c58c77af89",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-happened-to-eth2-3": {
+        "contentHash": "935d3a1b7378",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-happened-to-eth2-3-1": {
+        "contentHash": "740be9d3ef89",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-happened-to-eth2-3-2": {
+        "contentHash": "df737dc4411f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-happened-to-eth2-4": {
+        "contentHash": "e0143f99e479",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-happened-to-eth2-5": {
+        "contentHash": "c1702993e319",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-why-cant-we-just-use-eth2-title": {
+        "contentHash": "0e8f88c981ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-why-cant-we-just-use-eth2-mental-models-title": {
+        "contentHash": "9609a7b2c363",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-why-cant-we-just-use-eth2-mental-models-description": {
+        "contentHash": "bacde088e337",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-why-cant-we-just-use-eth2-inclusivity-title": {
+        "contentHash": "e94e209caa27",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-why-cant-we-just-use-eth2-inclusivity-description": {
+        "contentHash": "d8b7662cf321",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-why-cant-we-just-use-eth2-scam-prevention-title": {
+        "contentHash": "6acdcdfed991",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-why-cant-we-just-use-eth2-scam-prevention-description": {
+        "contentHash": "c3d945cdb0a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-why-cant-we-just-use-eth2-staking-clarity-title": {
+        "contentHash": "14c8d32b429e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-why-cant-we-just-use-eth2-staking-clarity-description": {
+        "contentHash": "d02ef27f4cdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-to-do": {
+        "contentHash": "60c08ecacb31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-what-to-do-desc": {
+        "contentHash": "ee2d2a8e1627",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-whats-next": {
+        "contentHash": "1030a3096467",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-whats-next-desc": {
+        "contentHash": "4fbde77f9a8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-whats-next-history": {
+        "contentHash": "3a35cdf05b52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-whats-ethereum": {
+        "contentHash": "ff2f180a07fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-whats-new": {
+        "contentHash": "d6457b7f8bd9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-security-link": {
+        "contentHash": "de037f99dfb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-staking-deposit-contract-staking-more-link": {
+        "contentHash": "69d6e676fc84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-proof-of-stake": {
+        "contentHash": "c7a6db281618",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-proof-of-work": {
+        "contentHash": "735f891366e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-ethresearch-1": {
+        "contentHash": "18d5c3346922",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-get-involved-ethresearch-2": {
+        "contentHash": "c09500586c2c",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "consensus-client-besu-logo-alt",
+      "consensus-client-erigon-logo-alt",
+      "consensus-client-geth-logo-alt",
+      "consensus-client-lighthouse-logo-alt",
+      "consensus-client-lodestar-logo-alt",
+      "consensus-client-nethermind-logo-alt",
+      "consensus-client-nimbus-logo-alt",
+      "consensus-client-prysm-logo-alt",
+      "consensus-client-teku-logo-alt",
+      "page-upgrades-answer-1",
+      "page-upgrades-answer-2",
+      "page-upgrades-answer-4",
+      "page-upgrade-article-author-status",
+      "page-upgrade-article-author-ethmerge",
+      "page-upgrade-article-author-alchemy",
+      "page-upgrade-article-author-consensys",
+      "page-upgrade-article-author-delphi-digital",
+      "page-upgrade-article-author-eip-4844",
+      "page-upgrade-article-author-ethereum-foundation",
+      "page-upgrade-article-author-vitalik-buterin",
+      "page-upgrade-article-author-ethos-dev",
+      "page-upgrade-article-title-two-point-oh",
+      "page-upgrade-article-title-beacon-chain-explainer",
+      "page-upgrade-article-title-sharding-consensus",
+      "page-upgrade-article-title-sharding-is-great",
+      "page-upgrade-article-title-rollup-roadmap",
+      "page-upgrade-article-title-hitchhikers-guide-to-ethereum",
+      "page-upgrade-article-title-eip-4844",
+      "page-upgrade-article-title-proto-danksharding-faq",
+      "page-upgrade-article-title-sharding-das",
+      "page-upgrade-article-title-ethmerge",
+      "page-upgrade-article-title-merge-is-coming",
+      "page-upgrade-article-title-state-of-the-merge",
+      "page-upgrade-article-title-ropsten-merge-testnet",
+      "page-upgrade-article-title-execution-layer-specs",
+      "page-upgrade-article-title-consensus-layer-specs",
+      "page-upgrade-article-title-engine-api-specs",
+      "page-upgrades-beacon-chain-date",
+      "page-upgrades-beacon-chain-desc",
+      "page-upgrades-beacon-chain-estimate",
+      "page-upgrades-beacon-chain-title",
+      "page-upgrades-bug-bounty",
+      "page-upgrades-clients",
+      "page-staking-deposit-contract-title",
+      "page-upgrades-dive",
+      "page-upgrades-dive-desc",
+      "page-upgrades-docking",
+      "page-upgrades-merge-answer-1",
+      "page-upgrades-merge-btn",
+      "page-upgrades-merge-desc",
+      "page-upgrades-merge-estimate",
+      "page-upgrades-merge-mainnet",
+      "page-upgrades-eth-blog",
+      "page-upgrades-explore-btn",
+      "page-upgrades-get-involved",
+      "page-upgrades-get-involved-2",
+      "page-upgrades-head-to-ethresearch",
+      "page-upgrades-help",
+      "page-upgrades-help-desc",
+      "page-upgrades-index-staking",
+      "page-upgrades-index-staking-desc",
+      "page-upgrades-index-staking-learn",
+      "page-upgrades-index-staking-learn-desc",
+      "page-upgrades-index-staking-step-1",
+      "page-upgrades-index-staking-step-1-btn",
+      "page-upgrades-index-staking-step-1-desc",
+      "page-upgrades-index-staking-step-2",
+      "page-upgrades-index-staking-step-2-btn",
+      "page-upgrades-index-staking-step-2-desc",
+      "page-upgrades-index-staking-sustainability",
+      "page-upgrades-meta-desc",
+      "page-upgrades-meta-title",
+      "page-upgrades-proof-stake-link",
+      "page-upgrades-question-1-title",
+      "page-upgrades-question-1-desc",
+      "page-upgrades-question-2-title",
+      "page-upgrades-question-2-desc",
+      "page-upgrades-question-3-answer-2a",
+      "page-upgrades-question-3-answer-2a-link",
+      "page-upgrades-question-3-answer-2b",
+      "page-upgrades-layer-2-rollups",
+      "page-upgrades-question-3-answer-3-link",
+      "page-upgrades-question-3-desc",
+      "page-upgrades-question-3-title",
+      "page-upgrades-question-4-answer-1",
+      "page-upgrades-question-4-answer-3",
+      "page-upgrades-question-4-answer-6",
+      "page-upgrades-question-4-answer-7",
+      "page-upgrades-question-4-title",
+      "page-upgrades-question-4-desc",
+      "page-upgrades-question-5-answer-1",
+      "page-upgrades-question-5-desc",
+      "page-upgrades-question-5-title",
+      "page-upgrades-question-6-answer-3",
+      "page-upgrades-question-6-answer-4",
+      "page-upgrades-question-6-answer-5",
+      "page-upgrades-question-6-title",
+      "page-upgrades-question-6-desc",
+      "page-upgrades-question-6-answer-1",
+      "page-upgrades-question-6-answer-1-link",
+      "page-upgrades-question-6-answer-2",
+      "page-upgrades-question-7-desc",
+      "page-upgrades-question-7-lighthouse",
+      "page-upgrades-question-7-lighthouse-lang",
+      "page-upgrades-question-7-lodestar",
+      "page-upgrades-question-7-lodestar-lang",
+      "page-upgrades-question-7-nimbus",
+      "page-upgrades-question-7-nimbus-lang",
+      "page-upgrades-question-7-prysm",
+      "page-upgrades-question-7-prysm-lang",
+      "page-upgrades-question-7-teams",
+      "page-upgrades-question-7-teku",
+      "page-upgrades-question-7-teku-lang",
+      "page-upgrades-question-7-title",
+      "page-upgrades-question-7-clients",
+      "page-upgrades-question-8-answer-1",
+      "page-upgrades-question-8-answer-2",
+      "page-upgrades-question-8-answer-3",
+      "page-upgrades-question-8-answer-4",
+      "page-upgrades-question-8-answer-6",
+      "page-upgrades-question-8-desc",
+      "page-upgrades-question-8-title",
+      "page-upgrades-question-9-answer-1",
+      "page-upgrades-question-9-answer-2",
+      "page-upgrades-question-9-answer-3",
+      "page-upgrades-question-9-answer-4",
+      "page-upgrades-question-9-desc",
+      "page-upgrades-question-9-stake-eth",
+      "page-upgrades-question-9-title",
+      "page-upgrades-question-9-more",
+      "page-upgrades-question-10-title",
+      "page-upgrades-question-10-desc",
+      "page-upgrades-question-10-answer-0",
+      "page-upgrades-question-10-answer-1",
+      "page-upgrades-question-10-answer-1-link",
+      "page-upgrades-question-10-answer-2",
+      "page-upgrades-question-10-answer-3",
+      "page-upgrades-question-10-answer-5",
+      "page-upgrades-question-10-answer-6",
+      "page-upgrades-question-10-answer-7",
+      "page-upgrades-question-10-answer-8",
+      "page-upgrades-question-11-title",
+      "page-upgrades-question-11-desc",
+      "page-upgrades-question-11-answer-1",
+      "page-upgrades-question-11-answer-2",
+      "page-upgrades-question-title",
+      "page-upgrades-question3-answer-1",
+      "page-upgrades-scalable",
+      "page-upgrades-scalable-desc",
+      "page-upgrades-secure",
+      "page-upgrades-secure-desc",
+      "page-upgrades-shard-date",
+      "page-upgrades-shard-desc",
+      "page-upgrades-shard-estimate",
+      "page-upgrades-shard-lower",
+      "page-upgrades-shard-title",
+      "page-upgrades-stay-up-to-date",
+      "page-upgrades-stay-up-to-date-desc",
+      "page-upgrades-sustainable-desc",
+      "page-upgrades-take-part",
+      "page-upgrades-take-part-desc",
+      "page-upgrades-the-upgrades",
+      "page-upgrades-the-upgrades-desc",
+      "page-upgrades-unofficial-roadmap",
+      "page-upgrades-upgrade-desc",
+      "page-upgrades-upgrades",
+      "page-upgrades-upgrades-aria-label",
+      "page-upgrades-upgrades-beacon-chain",
+      "page-upgrades-upgrades-guide",
+      "page-upgrades-upgrades-docking",
+      "page-upgrades-energy-consumption",
+      "page-upgrades-upgrading",
+      "page-roadmap-vision",
+      "page-roadmap-vision-btn",
+      "page-roadmap-vision-desc",
+      "page-upgrades-what-happened-to-eth2-title",
+      "page-upgrades-what-happened-to-eth2-1",
+      "page-upgrades-what-happened-to-eth2-1-more",
+      "page-upgrades-what-happened-to-eth2-2",
+      "page-upgrades-what-happened-to-eth2-3",
+      "page-upgrades-what-happened-to-eth2-3-1",
+      "page-upgrades-what-happened-to-eth2-3-2",
+      "page-upgrades-what-happened-to-eth2-4",
+      "page-upgrades-what-happened-to-eth2-5",
+      "page-upgrades-why-cant-we-just-use-eth2-title",
+      "page-upgrades-why-cant-we-just-use-eth2-mental-models-title",
+      "page-upgrades-why-cant-we-just-use-eth2-mental-models-description",
+      "page-upgrades-why-cant-we-just-use-eth2-inclusivity-title",
+      "page-upgrades-why-cant-we-just-use-eth2-inclusivity-description",
+      "page-upgrades-why-cant-we-just-use-eth2-scam-prevention-title",
+      "page-upgrades-why-cant-we-just-use-eth2-scam-prevention-description",
+      "page-upgrades-why-cant-we-just-use-eth2-staking-clarity-title",
+      "page-upgrades-why-cant-we-just-use-eth2-staking-clarity-description",
+      "page-upgrades-what-to-do",
+      "page-upgrades-what-to-do-desc",
+      "page-upgrades-whats-next",
+      "page-upgrades-whats-next-desc",
+      "page-upgrades-whats-next-history",
+      "page-upgrades-whats-ethereum",
+      "page-upgrades-whats-new",
+      "page-upgrades-security-link",
+      "page-staking-deposit-contract-staking-more-link",
+      "docs-nav-proof-of-stake",
+      "docs-nav-proof-of-work",
+      "page-upgrades-get-involved-ethresearch-1",
+      "page-upgrades-get-involved-ethresearch-2"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

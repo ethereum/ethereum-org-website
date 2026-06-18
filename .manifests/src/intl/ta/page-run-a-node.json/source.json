@@ -1,0 +1,824 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-run-a-node.json",
+  "generatedAt": "2026-06-16T15:51:15.175Z",
+  "rootHash": "4c02db7f6bb0",
+  "tree": {
+    "contentHash": "5162bc007278",
+    "anchorHash": "bec48c9a9d99",
+    "children": {
+      "page-run-a-node-build-your-own-title": {
+        "contentHash": "8887e9d916d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-hardware-title": {
+        "contentHash": "c87e0368409a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-minimum-specs": {
+        "contentHash": "d656edfa3639",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-min-ram": {
+        "contentHash": "d4cf25938f03",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-ram-note-1": {
+        "contentHash": "d3ed182f880b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-ram-note-2": {
+        "contentHash": "c17195136a1d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-min-ssd": {
+        "contentHash": "c5ee18948447",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-ssd-note": {
+        "contentHash": "eb6a27bd02ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-recommended": {
+        "contentHash": "d70604e84304",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-nuc": {
+        "contentHash": "cd4557c63d39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-nuc-small": {
+        "contentHash": "82b284c47d61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-connection": {
+        "contentHash": "fb2fb1765ff3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-connection-small": {
+        "contentHash": "134a2f607813",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-peripherals": {
+        "contentHash": "b1e72fd64035",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-peripherals-small": {
+        "contentHash": "0b3f5382088c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-software": {
+        "contentHash": "ff4da52126d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-software-option-1-title": {
+        "contentHash": "ac0ba904d353",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-software-option-1-description": {
+        "contentHash": "b9641adb690d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-software-option-1-button": {
+        "contentHash": "cd21642bb62e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-software-option-2-title": {
+        "contentHash": "a052373cc397",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-software-option-2-description-1": {
+        "contentHash": "9718c8284c9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-software-option-2-description-2": {
+        "contentHash": "4ed997ab57e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-build-your-own-software-option-2-button": {
+        "contentHash": "f3c940d1efe7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-buy-fully-loaded-title": {
+        "contentHash": "e63a43d49528",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-buy-fully-loaded-description": {
+        "contentHash": "059c603f9e91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-buy-fully-loaded-note-1": {
+        "contentHash": "ad62b06d997a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-buy-fully-loaded-note-2": {
+        "contentHash": "b586717c1859",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-buy-fully-loaded-note-3": {
+        "contentHash": "345c47409287",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-censorship-resistance-title": {
+        "contentHash": "236f3aafc904",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-censorship-resistance-preview": {
+        "contentHash": "c4b0703cfa52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-censorship-resistance-1": {
+        "contentHash": "fc79bef4e8e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-censorship-resistance-2": {
+        "contentHash": "3e8cc437b637",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-community-title": {
+        "contentHash": "18351297060b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-community-description-1": {
+        "contentHash": "06e35c5521bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-community-description-2": {
+        "contentHash": "3e8b6c21efe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-community-link-1": {
+        "contentHash": "03a614f39a7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-community-link-2": {
+        "contentHash": "9e993eecab4b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-choose-your-adventure-title": {
+        "contentHash": "14a0633afd84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-choose-your-adventure-1": {
+        "contentHash": "0e519a064a07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-choose-your-adventure-2": {
+        "contentHash": "205bf7830e52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-choose-your-adventure-build-1": {
+        "contentHash": "afdfd73fdff1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-choose-your-adventure-build-bullet-1": {
+        "contentHash": "a36fa62dceaf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-choose-your-adventure-build-bullet-2": {
+        "contentHash": "324434d7acad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-choose-your-adventure-build-bullet-3": {
+        "contentHash": "664f95d08859",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-choose-your-adventure-build-start": {
+        "contentHash": "c5d0453e23e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-decentralized-title": {
+        "contentHash": "e8492d3e2f90",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-decentralized-preview": {
+        "contentHash": "bdc0fe0b386d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-decentralized-1": {
+        "contentHash": "e60df04f21b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-decentralized-2": {
+        "contentHash": "0ad5549b1a11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-further-reading-title": {
+        "contentHash": "4082f515b2f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-further-reading-1-link": {
+        "contentHash": "a77acf0f0558",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-further-reading-1-author": {
+        "contentHash": "a332a5df7559",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-further-reading-2-link": {
+        "contentHash": "1ab552c4b093",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-further-reading-3-link": {
+        "contentHash": "59aeb3b249bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-further-reading-3-author": {
+        "contentHash": "48b4f92b82f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-getting-started-title": {
+        "contentHash": "831d0f72d242",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-getting-started-software-section-1": {
+        "contentHash": "0c79de06e688",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-getting-started-software-section-1-alert": {
+        "contentHash": "56ba40124473",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-getting-started-software-section-1-link": {
+        "contentHash": "9a3c23a98d51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-getting-started-software-section-2": {
+        "contentHash": "d413f38623c3",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "768f91adcdb9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-run-a-node-getting-started-software-section-3a": {
+        "contentHash": "f0965c07545f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-getting-started-software-section-3b": {
+        "contentHash": "294125082b97",
+        "anchorHash": "3dcca71f7e86",
+        "children": {
+          "prose:2": {
+            "contentHash": "cf7468241b2a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "c40cc25b38bd",
+            "anchorHash": "f36193b8f637"
+          },
+          "prose:3": {
+            "contentHash": "5a2135ef761c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "195ad4475713",
+            "anchorHash": "4c5b3c91c421"
+          },
+          "prose:4": {
+            "contentHash": "85d7c0c7230c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "html-tag:0",
+          "prose:3",
+          "html-tag:1",
+          "prose:4"
+        ]
+      },
+      "page-run-a-node-getting-started-software-title": {
+        "contentHash": "249b69e2a727",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-terminal": {
+        "contentHash": "d4f32c9628a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-phone": {
+        "contentHash": "663dc06d6743",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-dappnode": {
+        "contentHash": "40d8b7eb84cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-pnp": {
+        "contentHash": "0765ccfa32dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-hardware": {
+        "contentHash": "568403ff5aaa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-software": {
+        "contentHash": "d7f4e7e4630d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-privacy": {
+        "contentHash": "d6850e9aafd6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-censorship-resistance": {
+        "contentHash": "f78fae1b90c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-earth": {
+        "contentHash": "7269bc8d834a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-decentralization": {
+        "contentHash": "989e52e47fe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-vote": {
+        "contentHash": "3ccea4ee666c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-glyph-alt-sovereignty": {
+        "contentHash": "155b88f93ca5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-hero-alt": {
+        "contentHash": "65a5a2d7344b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-hero-header": {
+        "contentHash": "b6a84ac24e58",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "prose:1": {
+            "contentHash": "43754a30e558",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "42cd45d24f1d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-run-a-node-hero-subtitle": {
+        "contentHash": "7c06f15256d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-hero-cta-1": {
+        "contentHash": "1445799c033a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-install-manually-title": {
+        "contentHash": "2a0c284a95f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-install-manually-1": {
+        "contentHash": "cc7167f4dd90",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-meta-description": {
+        "contentHash": "32cf69d37a73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-participate-title": {
+        "contentHash": "38301e6935f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-participate-preview": {
+        "contentHash": "55fc45da6306",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7f3791f9443d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-run-a-node-participate-1": {
+        "contentHash": "2bc896c5d4e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-participate-2": {
+        "contentHash": "875638787fd6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-privacy-title": {
+        "contentHash": "5ae2ada52650",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-privacy-preview": {
+        "contentHash": "d1ec6f35a71a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-privacy-1": {
+        "contentHash": "20cbeeb0391e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-privacy-2": {
+        "contentHash": "dd303b3493f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-privacy-3": {
+        "contentHash": "a1e71204b5a6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-rasp-pi-title": {
+        "contentHash": "7cae14bee2ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-rasp-pi-description": {
+        "contentHash": "731cff517dc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-rasp-pi-note-2-link": {
+        "contentHash": "2b5470dce1e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-rasp-pi-note-2-description": {
+        "contentHash": "b009d1ca241d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-rasp-pi-note-3-link": {
+        "contentHash": "4b62a2570e25",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-rasp-pi-note-3-description": {
+        "contentHash": "fb5cd68747ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-shop": {
+        "contentHash": "d00aae6b7fbf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-shop-avado": {
+        "contentHash": "f669bd2fd2f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-shop-dappnode": {
+        "contentHash": "08b46df9a6cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-staking-title": {
+        "contentHash": "406ac3dd5da0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-staking-description": {
+        "contentHash": "152bcdc1ca7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-staking-link": {
+        "contentHash": "e53a7b6de046",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-staking-plans-title": {
+        "contentHash": "1a51a5ecd71d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-staking-plans-description": {
+        "contentHash": "cc502344aeaa",
+        "anchorHash": "00caa5053021",
+        "children": {
+          "prose:1": {
+            "contentHash": "e193e378bcd0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "a681e4fc13c7",
+            "anchorHash": "b612e26ffe51"
+          },
+          "prose:2": {
+            "contentHash": "2c695e2c19ac",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-run-a-node-staking-plans-ethstaker-link-label": {
+        "contentHash": "84d4a85b3500",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-staking-plans-ethstaker-link-description": {
+        "contentHash": "ac51f035da24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-sovereignty-title": {
+        "contentHash": "8e3b1dc3e341",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-sovereignty-preview": {
+        "contentHash": "b353d51d5f7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-sovereignty-1": {
+        "contentHash": "321d2ad49ee8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-sovereignty-2": {
+        "contentHash": "9bf9c6a3d180",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-title": {
+        "contentHash": "37a70eebd3a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-meta-title": {
+        "contentHash": "3ebdba982c80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-voice-your-choice-title": {
+        "contentHash": "6c495e3080ab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-voice-your-choice-preview": {
+        "contentHash": "4912b3d00ace",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-voice-your-choice-1": {
+        "contentHash": "f402aef15bbd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-voice-your-choice-2": {
+        "contentHash": "5342cbb0c106",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-what-title": {
+        "contentHash": "853c9d4ec015",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "64925ea7622d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-run-a-node-what-1-subtitle": {
+        "contentHash": "7003babd4e11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-what-1-text": {
+        "contentHash": "64290de55ee6",
+        "anchorHash": "412732583c71",
+        "children": {
+          "prose:1": {
+            "contentHash": "c37f5c60b726",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "b85cbdfd493e"
+          },
+          "prose:2": {
+            "contentHash": "93391edf04fb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-run-a-node-what-2-subtitle": {
+        "contentHash": "101f368de285",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-what-2-text": {
+        "contentHash": "30ed3b571e76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-what-3-subtitle": {
+        "contentHash": "6e1beb8e3bbb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-what-3-text": {
+        "contentHash": "a5a3d7a5d324",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-who-title": {
+        "contentHash": "aa5f5a038d0b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "48cce1766a07",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-run-a-node-who-preview": {
+        "contentHash": "be3eb308627a",
+        "anchorHash": "d1aec64aea70",
+        "children": {
+          "prose:1": {
+            "contentHash": "9fe57fe1820a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "769e0b8515e3",
+            "anchorHash": "bc37315e1cad"
+          },
+          "prose:2": {
+            "contentHash": "5dca8acdc063",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-run-a-node-who-copy-1": {
+        "contentHash": "eae630f945e2",
+        "anchorHash": "beb2fc6bc05a",
+        "children": {
+          "prose:1": {
+            "contentHash": "c53e0aeeda71",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "f4caf4ff9573",
+            "anchorHash": "29be7673603a"
+          },
+          "prose:2": {
+            "contentHash": "607c42f48c32",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-run-a-node-who-copy-2": {
+        "contentHash": "76f7f81b90ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-who-copy-3": {
+        "contentHash": "128502cdfc0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-who-copy-bold": {
+        "contentHash": "a243a55d7052",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-run-a-node-why-title": {
+        "contentHash": "71c43cbf37b8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a87fa4449711",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      }
+    },
+    "childrenOrder": [
+      "page-run-a-node-build-your-own-title",
+      "page-run-a-node-build-your-own-hardware-title",
+      "page-run-a-node-build-your-own-minimum-specs",
+      "page-run-a-node-build-your-own-min-ram",
+      "page-run-a-node-build-your-own-ram-note-1",
+      "page-run-a-node-build-your-own-ram-note-2",
+      "page-run-a-node-build-your-own-min-ssd",
+      "page-run-a-node-build-your-own-ssd-note",
+      "page-run-a-node-build-your-own-recommended",
+      "page-run-a-node-build-your-own-nuc",
+      "page-run-a-node-build-your-own-nuc-small",
+      "page-run-a-node-build-your-own-connection",
+      "page-run-a-node-build-your-own-connection-small",
+      "page-run-a-node-build-your-own-peripherals",
+      "page-run-a-node-build-your-own-peripherals-small",
+      "page-run-a-node-build-your-own-software",
+      "page-run-a-node-build-your-own-software-option-1-title",
+      "page-run-a-node-build-your-own-software-option-1-description",
+      "page-run-a-node-build-your-own-software-option-1-button",
+      "page-run-a-node-build-your-own-software-option-2-title",
+      "page-run-a-node-build-your-own-software-option-2-description-1",
+      "page-run-a-node-build-your-own-software-option-2-description-2",
+      "page-run-a-node-build-your-own-software-option-2-button",
+      "page-run-a-node-buy-fully-loaded-title",
+      "page-run-a-node-buy-fully-loaded-description",
+      "page-run-a-node-buy-fully-loaded-note-1",
+      "page-run-a-node-buy-fully-loaded-note-2",
+      "page-run-a-node-buy-fully-loaded-note-3",
+      "page-run-a-node-censorship-resistance-title",
+      "page-run-a-node-censorship-resistance-preview",
+      "page-run-a-node-censorship-resistance-1",
+      "page-run-a-node-censorship-resistance-2",
+      "page-run-a-node-community-title",
+      "page-run-a-node-community-description-1",
+      "page-run-a-node-community-description-2",
+      "page-run-a-node-community-link-1",
+      "page-run-a-node-community-link-2",
+      "page-run-a-node-choose-your-adventure-title",
+      "page-run-a-node-choose-your-adventure-1",
+      "page-run-a-node-choose-your-adventure-2",
+      "page-run-a-node-choose-your-adventure-build-1",
+      "page-run-a-node-choose-your-adventure-build-bullet-1",
+      "page-run-a-node-choose-your-adventure-build-bullet-2",
+      "page-run-a-node-choose-your-adventure-build-bullet-3",
+      "page-run-a-node-choose-your-adventure-build-start",
+      "page-run-a-node-decentralized-title",
+      "page-run-a-node-decentralized-preview",
+      "page-run-a-node-decentralized-1",
+      "page-run-a-node-decentralized-2",
+      "page-run-a-node-further-reading-title",
+      "page-run-a-node-further-reading-1-link",
+      "page-run-a-node-further-reading-1-author",
+      "page-run-a-node-further-reading-2-link",
+      "page-run-a-node-further-reading-3-link",
+      "page-run-a-node-further-reading-3-author",
+      "page-run-a-node-getting-started-title",
+      "page-run-a-node-getting-started-software-section-1",
+      "page-run-a-node-getting-started-software-section-1-alert",
+      "page-run-a-node-getting-started-software-section-1-link",
+      "page-run-a-node-getting-started-software-section-2",
+      "page-run-a-node-getting-started-software-section-3a",
+      "page-run-a-node-getting-started-software-section-3b",
+      "page-run-a-node-getting-started-software-title",
+      "page-run-a-node-glyph-alt-terminal",
+      "page-run-a-node-glyph-alt-phone",
+      "page-run-a-node-glyph-alt-dappnode",
+      "page-run-a-node-glyph-alt-pnp",
+      "page-run-a-node-glyph-alt-hardware",
+      "page-run-a-node-glyph-alt-software",
+      "page-run-a-node-glyph-alt-privacy",
+      "page-run-a-node-glyph-alt-censorship-resistance",
+      "page-run-a-node-glyph-alt-earth",
+      "page-run-a-node-glyph-alt-decentralization",
+      "page-run-a-node-glyph-alt-vote",
+      "page-run-a-node-glyph-alt-sovereignty",
+      "page-run-a-node-hero-alt",
+      "page-run-a-node-hero-header",
+      "page-run-a-node-hero-subtitle",
+      "page-run-a-node-hero-cta-1",
+      "page-run-a-node-install-manually-title",
+      "page-run-a-node-install-manually-1",
+      "page-run-a-node-meta-description",
+      "page-run-a-node-participate-title",
+      "page-run-a-node-participate-preview",
+      "page-run-a-node-participate-1",
+      "page-run-a-node-participate-2",
+      "page-run-a-node-privacy-title",
+      "page-run-a-node-privacy-preview",
+      "page-run-a-node-privacy-1",
+      "page-run-a-node-privacy-2",
+      "page-run-a-node-privacy-3",
+      "page-run-a-node-rasp-pi-title",
+      "page-run-a-node-rasp-pi-description",
+      "page-run-a-node-rasp-pi-note-2-link",
+      "page-run-a-node-rasp-pi-note-2-description",
+      "page-run-a-node-rasp-pi-note-3-link",
+      "page-run-a-node-rasp-pi-note-3-description",
+      "page-run-a-node-shop",
+      "page-run-a-node-shop-avado",
+      "page-run-a-node-shop-dappnode",
+      "page-run-a-node-staking-title",
+      "page-run-a-node-staking-description",
+      "page-run-a-node-staking-link",
+      "page-run-a-node-staking-plans-title",
+      "page-run-a-node-staking-plans-description",
+      "page-run-a-node-staking-plans-ethstaker-link-label",
+      "page-run-a-node-staking-plans-ethstaker-link-description",
+      "page-run-a-node-sovereignty-title",
+      "page-run-a-node-sovereignty-preview",
+      "page-run-a-node-sovereignty-1",
+      "page-run-a-node-sovereignty-2",
+      "page-run-a-node-title",
+      "page-run-a-node-meta-title",
+      "page-run-a-node-voice-your-choice-title",
+      "page-run-a-node-voice-your-choice-preview",
+      "page-run-a-node-voice-your-choice-1",
+      "page-run-a-node-voice-your-choice-2",
+      "page-run-a-node-what-title",
+      "page-run-a-node-what-1-subtitle",
+      "page-run-a-node-what-1-text",
+      "page-run-a-node-what-2-subtitle",
+      "page-run-a-node-what-2-text",
+      "page-run-a-node-what-3-subtitle",
+      "page-run-a-node-what-3-text",
+      "page-run-a-node-who-title",
+      "page-run-a-node-who-preview",
+      "page-run-a-node-who-copy-1",
+      "page-run-a-node-who-copy-2",
+      "page-run-a-node-who-copy-3",
+      "page-run-a-node-who-copy-bold",
+      "page-run-a-node-why-title"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

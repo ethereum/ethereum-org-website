@@ -59,7 +59,7 @@ const WhatAreAppsStories = () => {
       {stories.map((story, index) => (
         <div
           key={story.name}
-          className="flex flex-col gap-4 rounded-2xl border bg-background p-6"
+          className="flex flex-col gap-4 rounded-base border bg-background p-6"
         >
           <div className="flex flex-row items-center justify-between gap-2">
             <div className="flex flex-row items-center gap-2">

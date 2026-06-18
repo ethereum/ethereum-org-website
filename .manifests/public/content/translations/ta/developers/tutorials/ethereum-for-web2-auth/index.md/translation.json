@@ -1,0 +1,1050 @@
+{
+  "version": 1,
+  "locale": "ta",
+  "translatedAt": "2026-06-17T00:09:10.123Z",
+  "englishManifestHash": "f4583f8400b1",
+  "placeholderOrder": [
+    "LINK-4c52c1",
+    "LINK-d8c0a6",
+    "LINK-ec894e",
+    "LINK-fa3b35",
+    "IMAGE-1533b2",
+    "IMAGE-9f87a1",
+    "IMAGE-1cbe24",
+    "LINK-b44f9a",
+    "LINK-cee962",
+    "CODE-abd542",
+    "CODEBLOCK-0d06f2",
+    "LINK-265870",
+    "CODEBLOCK-dd0c06",
+    "CODEBLOCK-b529d2",
+    "LINK-d7c214",
+    "IMAGE-941194",
+    "CODEBLOCK-bdbdcd",
+    "CODEBLOCK-8434af",
+    "CODEBLOCK-844139",
+    "CODEBLOCK-44646b",
+    "CODEBLOCK-32634d",
+    "CODE-f27c85",
+    "CODEBLOCK-fb27cf",
+    "CODE-acb517",
+    "CODE-15d16a",
+    "LINK-1a3eb0",
+    "CODEBLOCK-49d264",
+    "CODE-50129b",
+    "CODE-24da5a",
+    "CODEBLOCK-c33ecb",
+    "LINK-dd9278",
+    "CODE-89ce17",
+    "CODEBLOCK-512f04",
+    "CODE-89ce17",
+    "LINK-78068a",
+    "CODE-30e535",
+    "CODEBLOCK-c21825",
+    "LINK-a69799",
+    "CODE-008231",
+    "LINK-680281",
+    "CODE-065d8e",
+    "CODEBLOCK-35bd89",
+    "CODEBLOCK-622d64",
+    "CODEBLOCK-97a6ea",
+    "CODE-0a72ee",
+    "CODEBLOCK-443d45",
+    "CODEBLOCK-a4ff9a",
+    "LINK-c95041",
+    "CODEBLOCK-0bebb4",
+    "CODEBLOCK-5e64b2",
+    "CODEBLOCK-1c7539",
+    "CODEBLOCK-82c7f3",
+    "CODEBLOCK-bf195e",
+    "CODEBLOCK-995827",
+    "CODEBLOCK-bc73e1",
+    "CODE-5fde58",
+    "CODEBLOCK-98e356",
+    "CODE-c48d00",
+    "CODE-ea0fd8",
+    "CODE-20153e",
+    "CODEBLOCK-c69100",
+    "LINK-4d24fd",
+    "LINK-deafb5",
+    "CODEBLOCK-f23133",
+    "CODE-49fef6",
+    "CODEBLOCK-5328af",
+    "CODEBLOCK-fce654",
+    "CODE-0c2432",
+    "CODEBLOCK-fc9d79",
+    "CODEBLOCK-8b41ef",
+    "CODEBLOCK-8c32a0",
+    "CODE-216375",
+    "CODEBLOCK-84a97a",
+    "LINK-e6f781",
+    "CODE-e44cc9",
+    "CODEBLOCK-b37d97",
+    "CODEBLOCK-e1adfc",
+    "CODEBLOCK-7983d5",
+    "CODE-5ae8fb",
+    "CODEBLOCK-b3b32c",
+    "CODEBLOCK-19c7e6",
+    "CODEBLOCK-5ea2d2",
+    "CODEBLOCK-71d6a8",
+    "LINK-db7189",
+    "CODE-6b05ad",
+    "LINK-2786fe",
+    "CODE-6789a6",
+    "CODE-384397",
+    "CODEBLOCK-0f544f",
+    "LINK-a8a000",
+    "CODE-6234b6",
+    "IMAGE-d38719",
+    "CODE-e81644",
+    "CODEBLOCK-7a27cc",
+    "LINK-0527ac",
+    "LINK-8d5892",
+    "CODE-756666",
+    "LINK-9e3f00",
+    "CODE-54dd31",
+    "CODEBLOCK-8eaf8a",
+    "CODEBLOCK-42b5e3",
+    "CODEBLOCK-08cb7a",
+    "CODE-216375",
+    "CODEBLOCK-a44764",
+    "CODEBLOCK-7321fb",
+    "CODE-54dd31",
+    "CODEBLOCK-aadfd4",
+    "CODEBLOCK-6fc23d",
+    "CODE-b08881",
+    "CODEBLOCK-02ba6e",
+    "LINK-b38f83",
+    "CODEBLOCK-a744de",
+    "LINK-d1a2bd",
+    "CODEBLOCK-6be23b",
+    "CODE-f5d7e0",
+    "CODEBLOCK-c02327",
+    "CODE-e82e50",
+    "CODEBLOCK-cc675c",
+    "CODEBLOCK-d6317a",
+    "CODEBLOCK-cedfd8",
+    "CODE-212cce",
+    "CODEBLOCK-5dc2c9",
+    "CODE-109bc4",
+    "CODEBLOCK-71a7b9",
+    "LINK-f0579b",
+    "CODE-01cf44",
+    "CODEBLOCK-908a1c",
+    "CODE-68263a",
+    "CODEBLOCK-0f1ccb",
+    "CODEBLOCK-7cfcfb",
+    "CODE-3c3f0c",
+    "CODE-f395e8",
+    "LINK-addf9b",
+    "LINK-0d2e4a",
+    "CODEBLOCK-1f4448",
+    "LINK-ae38f4",
+    "CODE-dbc693",
+    "CODE-665d06",
+    "CODE-d2bd34",
+    "CODE-a56145",
+    "CODEBLOCK-c52af0",
+    "CODE-60a09e",
+    "LINK-896655",
+    "LINK-14992e",
+    "LINK-adb6d3",
+    "CODE-71f659",
+    "IMAGE-fa85d3",
+    "CODE-e81644",
+    "CODEBLOCK-c27b33",
+    "CODEBLOCK-db2ac2",
+    "LINK-fcc101",
+    "CODEBLOCK-1c3199",
+    "CODE-1107b1",
+    "CODEBLOCK-9ddcdf",
+    "CODEBLOCK-834653",
+    "CODEBLOCK-ae4fab",
+    "CODEBLOCK-b8fe95",
+    "CODEBLOCK-b0af67",
+    "CODE-b4a6ee",
+    "LINK-17c625",
+    "CODE-d88ab1",
+    "LINK-b6305f",
+    "CODEBLOCK-613f0c",
+    "CODEBLOCK-556c29",
+    "CODE-4acc74",
+    "CODE-a56145",
+    "LINK-8bd07d",
+    "CODE-3a6eb0",
+    "CODEBLOCK-36c109",
+    "CODEBLOCK-76a6da",
+    "CODE-0f15e9",
+    "CODEBLOCK-94ca7d",
+    "LINK-337278",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-0d06f2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dd0c06": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b529d2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bdbdcd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8434af": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-844139": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-44646b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-32634d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fb27cf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-49d264": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c33ecb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-512f04": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c21825": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-35bd89": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-622d64": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-97a6ea": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-443d45": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a4ff9a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0bebb4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5e64b2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1c7539": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-82c7f3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bf195e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-995827": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bc73e1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-98e356": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c69100": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f23133": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5328af": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fce654": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fc9d79": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8b41ef": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8c32a0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-84a97a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b37d97": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e1adfc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7983d5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b3b32c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-19c7e6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5ea2d2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-71d6a8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0f544f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7a27cc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8eaf8a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-42b5e3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-08cb7a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a44764": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7321fb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-aadfd4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6fc23d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-02ba6e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a744de": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6be23b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c02327": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cc675c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d6317a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cedfd8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5dc2c9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-71a7b9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-908a1c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0f1ccb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7cfcfb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1f4448": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c52af0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c27b33": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-db2ac2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1c3199": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9ddcdf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-834653": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ae4fab": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b8fe95": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b0af67": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-613f0c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-556c29": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-36c109": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-76a6da": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-94ca7d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-abd542": {
+      "type": "inline-code",
+      "values": {
+        "content": "saml-only"
+      }
+    },
+    "CODE-f27c85": {
+      "type": "inline-code",
+      "values": {
+        "content": "entityID"
+      }
+    },
+    "CODE-acb517": {
+      "type": "inline-code",
+      "values": {
+        "content": "assertionConsumerServer"
+      }
+    },
+    "CODE-15d16a": {
+      "type": "inline-code",
+      "values": {
+        "content": "http://localhost:3000/sp/assertion"
+      }
+    },
+    "CODE-50129b": {
+      "type": "inline-code",
+      "values": {
+        "content": "http://localhost:3001/idp/login"
+      }
+    },
+    "CODE-24da5a": {
+      "type": "inline-code",
+      "values": {
+        "content": "http://localhost:3001/idp/logout"
+      }
+    },
+    "CODE-89ce17": {
+      "type": "inline-code",
+      "values": {
+        "content": "samlify"
+      }
+    },
+    "CODE-30e535": {
+      "type": "inline-code",
+      "values": {
+        "content": "@authenio/samlify-node-xmllint"
+      }
+    },
+    "CODE-008231": {
+      "type": "inline-code",
+      "values": {
+        "content": "express"
+      }
+    },
+    "CODE-065d8e": {
+      "type": "inline-code",
+      "values": {
+        "content": "Router"
+      }
+    },
+    "CODE-0a72ee": {
+      "type": "inline-code",
+      "values": {
+        "content": "/metadata"
+      }
+    },
+    "CODE-5fde58": {
+      "type": "inline-code",
+      "values": {
+        "content": "loginRequest.entityEndpoint"
+      }
+    },
+    "CODE-c48d00": {
+      "type": "inline-code",
+      "values": {
+        "content": "loginRequest.type"
+      }
+    },
+    "CODE-ea0fd8": {
+      "type": "inline-code",
+      "values": {
+        "content": "SAMLRequest"
+      }
+    },
+    "CODE-20153e": {
+      "type": "inline-code",
+      "values": {
+        "content": "loginRequest.context"
+      }
+    },
+    "CODE-49fef6": {
+      "type": "inline-code",
+      "values": {
+        "content": "/sp"
+      }
+    },
+    "CODE-0c2432": {
+      "type": "inline-code",
+      "values": {
+        "content": "spPort"
+      }
+    },
+    "CODE-216375": {
+      "type": "inline-code",
+      "values": {
+        "content": "requestId"
+      }
+    },
+    "CODE-e44cc9": {
+      "type": "inline-code",
+      "values": {
+        "content": "idp.createLoginResponse"
+      }
+    },
+    "CODE-5ae8fb": {
+      "type": "inline-code",
+      "values": {
+        "content": "signingKey"
+      }
+    },
+    "CODE-6b05ad": {
+      "type": "inline-code",
+      "values": {
+        "content": "idp.parseLoginRequest"
+      }
+    },
+    "CODE-384397": {
+      "type": "inline-code",
+      "values": {
+        "content": "ID"
+      }
+    },
+    "CODE-6789a6": {
+      "type": "inline-code",
+      "values": {
+        "content": "<samlp:AuthnRequest>"
+      }
+    },
+    "CODE-6234b6": {
+      "type": "inline-code",
+      "values": {
+        "content": "<ethereum address>@bad.email.address"
+      }
+    },
+    "CODE-e81644": {
+      "type": "inline-code",
+      "values": {
+        "content": "idp.mts"
+      }
+    },
+    "CODE-756666": {
+      "type": "inline-code",
+      "values": {
+        "content": "uuid"
+      }
+    },
+    "CODE-54dd31": {
+      "type": "inline-code",
+      "values": {
+        "content": "viem"
+      }
+    },
+    "CODE-b08881": {
+      "type": "inline-code",
+      "values": {
+        "content": "window.ethereum"
+      }
+    },
+    "CODE-f5d7e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "/idp/signature/<nonce>/<address>/<signature>"
+      }
+    },
+    "CODE-e82e50": {
+      "type": "inline-code",
+      "values": {
+        "content": "http://localhost:3001/idp/signature/bad-nonce/bad-address/bad-signature"
+      }
+    },
+    "CODE-212cce": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonces"
+      }
+    },
+    "CODE-109bc4": {
+      "type": "inline-code",
+      "values": {
+        "content": "try ... catch"
+      }
+    },
+    "CODE-01cf44": {
+      "type": "inline-code",
+      "values": {
+        "content": "verifyMessage"
+      }
+    },
+    "CODE-68263a": {
+      "type": "inline-code",
+      "values": {
+        "content": "/loginSubmitted"
+      }
+    },
+    "CODE-3c3f0c": {
+      "type": "inline-code",
+      "values": {
+        "content": "getLoginPage"
+      }
+    },
+    "CODE-f395e8": {
+      "type": "inline-code",
+      "values": {
+        "content": "getSignaturePage"
+      }
+    },
+    "CODE-dbc693": {
+      "type": "inline-code",
+      "values": {
+        "content": "schemaId"
+      }
+    },
+    "CODE-665d06": {
+      "type": "inline-code",
+      "values": {
+        "content": "recipient"
+      }
+    },
+    "CODE-d2bd34": {
+      "type": "inline-code",
+      "values": {
+        "content": "https://optimism.easscan.org/graphql"
+      }
+    },
+    "CODE-a56145": {
+      "type": "inline-code",
+      "values": {
+        "content": "id"
+      }
+    },
+    "CODE-60a09e": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+      }
+    },
+    "CODE-71f659": {
+      "type": "inline-code",
+      "values": {
+        "content": "test_addr_0@example.com"
+      }
+    },
+    "CODE-1107b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "GraphQLClient"
+      }
+    },
+    "CODE-b4a6ee": {
+      "type": "inline-code",
+      "values": {
+        "content": "getAddress(ethAddr)"
+      }
+    },
+    "CODE-d88ab1": {
+      "type": "inline-code",
+      "values": {
+        "content": "getAddress"
+      }
+    },
+    "CODE-4acc74": {
+      "type": "inline-code",
+      "values": {
+        "content": "attester"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-0f15e9": {
+      "type": "inline-code",
+      "values": {
+        "content": "decodeData"
+      }
+    },
+    "IMAGE-1533b2": {
+      "type": "image",
+      "values": {
+        "path": "./fig-01-saml.png"
+      }
+    },
+    "IMAGE-9f87a1": {
+      "type": "image",
+      "values": {
+        "path": "./fig-02-eth-logon.png"
+      }
+    },
+    "IMAGE-1cbe24": {
+      "type": "image",
+      "values": {
+        "path": "./fig-03-eas-data.png"
+      }
+    },
+    "IMAGE-941194": {
+      "type": "image",
+      "values": {
+        "path": "./fig-04-saml-no-eth.png"
+      }
+    },
+    "IMAGE-d38719": {
+      "type": "image",
+      "values": {
+        "path": "./fig-05-saml-w-signature.png"
+      }
+    },
+    "IMAGE-fa85d3": {
+      "type": "image",
+      "values": {
+        "path": "./fig-06-saml-sig-n-email.png"
+      }
+    },
+    "LINK-4c52c1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.onelogin.com/learn/saml"
+      }
+    },
+    "LINK-ec894e": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider"
+      }
+    },
+    "LINK-d8c0a6": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Service_provider_(SAML"
+      }
+    },
+    "LINK-fa3b35": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ssl.com/article/what-is-a-certificate-authority-ca/"
+      }
+    },
+    "LINK-b44f9a": {
+      "type": "link",
+      "values": {
+        "url": "https://attest.org/"
+      }
+    },
+    "LINK-cee962": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/250420-saml-ethereum"
+      }
+    },
+    "LINK-265870": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openssl.org/master/man1/openssl-req/"
+      }
+    },
+    "LINK-d7c214": {
+      "type": "link",
+      "values": {
+        "url": "http://localhost:3000/"
+      }
+    },
+    "LINK-1a3eb0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3schools.com/tags/ref_httpmethods.asp"
+      }
+    },
+    "LINK-dd9278": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/samlify"
+      }
+    },
+    "LINK-78068a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/@authenio/samlify-node-xmllint"
+      }
+    },
+    "LINK-a69799": {
+      "type": "link",
+      "values": {
+        "url": "https://expressjs.com/"
+      }
+    },
+    "LINK-680281": {
+      "type": "link",
+      "values": {
+        "url": "https://expressjs.com/en/5x/api.html#router"
+      }
+    },
+    "LINK-c95041": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Base64"
+      }
+    },
+    "LINK-4d24fd": {
+      "type": "link",
+      "values": {
+        "url": "https://expressjs.com/en/5x/api.html#express.urlencoded"
+      }
+    },
+    "LINK-deafb5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/http/http_requests.htm"
+      }
+    },
+    "LINK-e6f781": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L73-L125"
+      }
+    },
+    "LINK-db7189": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144"
+      }
+    },
+    "LINK-2786fe": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/fast-xml-parser"
+      }
+    },
+    "LINK-a8a000": {
+      "type": "link",
+      "values": {
+        "url": "http://localhost:3000"
+      }
+    },
+    "LINK-8d5892": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/uuid"
+      }
+    },
+    "LINK-0527ac": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Cryptographic_nonce"
+      }
+    },
+    "LINK-9e3f00": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/"
+      }
+    },
+    "LINK-b38f83": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/clients/wallet"
+      }
+    },
+    "LINK-d1a2bd": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/clients/wallet"
+      }
+    },
+    "LINK-f0579b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/actions/public/verifyMessage#verifymessage"
+      }
+    },
+    "LINK-addf9b": {
+      "type": "link",
+      "values": {
+        "url": "https://attest.org/"
+      }
+    },
+    "LINK-0d2e4a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.attest.org/docs/developer-tools/api"
+      }
+    },
+    "LINK-ae38f4": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977"
+      }
+    },
+    "LINK-896655": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977"
+      }
+    },
+    "LINK-14992e": {
+      "type": "link",
+      "values": {
+        "url": "https://app.optimism.io/bridge/deposit"
+      }
+    },
+    "LINK-adb6d3": {
+      "type": "link",
+      "values": {
+        "url": "http://localhost:3000"
+      }
+    },
+    "LINK-fcc101": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.attest.org/docs/developer-tools/api"
+      }
+    },
+    "LINK-17c625": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/utilities/getAddress#getaddress"
+      }
+    },
+    "LINK-b6305f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md"
+      }
+    },
+    "LINK-8bd07d": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64"
+      }
+    },
+    "LINK-337278": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Secure_multi-party_computation"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:09:10.123Z",
+      "status": "success"
+    }
+  }
+}

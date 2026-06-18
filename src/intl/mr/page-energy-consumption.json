@@ -1,12 +1,12 @@
 {
-  "energy-consumption-chart-airbnb-label": "एअर बीएनबी",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
   "energy-consumption-chart-btc-pow-label": "BTC PoW",
   "energy-consumption-chart-eth-pos-label": "ETH PoS",
   "energy-consumption-chart-eth-pow-label": "ETH PoW",
-  "energy-consumption-chart-gaming-us-label": "यूएस मध्ये गेमिंग",
-  "energy-consumption-chart-global-data-centers-label": "जागतिक डेटा केंद्रे",
-  "energy-consumption-chart-netflix-label": "Netflix",
-  "energy-consumption-chart-paypal-label": "PayPal",
-  "energy-consumption-gold-mining-cbeci-label": "गोल्ड माइनिंग",
+  "energy-consumption-chart-gaming-us-label": "अमेरिकेतील गेमिंग",
+  "energy-consumption-chart-global-data-centers-label": "जागतिक डेटा सेंटर्स",
+  "energy-consumption-chart-netflix-label": "नेटफ्लिक्स्",
+  "energy-consumption-chart-paypal-label": "पेपल्",
+  "energy-consumption-gold-mining-cbeci-label": "सोन्याचे खनन",
   "energy-consumption-chart-legend": "TWh/yr मध्ये वार्षिक ऊर्जा वापर"
 }

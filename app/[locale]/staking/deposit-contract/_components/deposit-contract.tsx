@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { Clipboard, ClipboardCheck } from "lucide-react"
+import { useLocale } from "next-intl"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -104,6 +105,7 @@ const CHUNKED_ADDRESS =
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
 const DepositContractPage = () => {
+  const locale = useLocale()
   const pathname = usePathname()
 
   const { t } = useTranslation("page-staking-deposit-contract")
@@ -131,8 +133,8 @@ const DepositContractPage = () => {
     if (!browserHasTextToSpeechSupport) return
     // Create textToSpeechRequest
     const speech = new SpeechSynthesisUtterance()
-    speech.lang = "en-US"
-    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(",")
+    speech.lang = locale
+    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(", ")
     speech.volume = 1
     speech.rate = 1
     speech.pitch = 1

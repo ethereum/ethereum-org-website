@@ -1,0 +1,484 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/staking/saas/index.md",
+  "generatedAt": "2026-06-17T01:16:05.594Z",
+  "rootHash": "85b7a2955ed8",
+  "tree": {
+    "contentHash": "d85936f333a9",
+    "anchorHash": "d529df3fcd3e",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "6561796cd0de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b6f8fec878fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d9a998cac660"
+      },
+      "frontmatter:emoji": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "cfe6e3139bc8"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dd96e0dc4eec"
+      },
+      "frontmatter:alt": {
+        "contentHash": "563701e8903e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-staking-as-a-service": {
+        "contentHash": "0118a8a927b6",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "bd1e4a0cd443",
+        "children": {
+          "_label": {
+            "contentHash": "bd1e4a0cd443",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "01ff4a682135",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-stake-with-a-service": {
+        "contentHash": "17115d5cc035",
+        "anchorHash": "1e64e959f133",
+        "labelHash": "622021a15ebc",
+        "children": {
+          "_label": {
+            "contentHash": "622021a15ebc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b344d80e24a3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:2": {
+            "contentHash": "1c82d9f79271",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "918e1f78a588",
+            "anchorHash": "918e1f78a588",
+            "children": {
+              "html-tag:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "html-tag:0",
+              "html-tag:1",
+              "html-tag:2"
+            ]
+          },
+          "component:5": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "c6872618fd7e",
+            "children": {
+              "attr:page": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "98650c35cd5e"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "component:4",
+          "component:5"
+        ]
+      },
+      "what-to-consider": {
+        "contentHash": "7b074fc3273d",
+        "anchorHash": "2d1223bfd3c9",
+        "labelHash": "33595b218818",
+        "children": {
+          "_label": {
+            "contentHash": "33595b218818",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f2d9254df3df",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "c6872618fd7e",
+            "children": {
+              "attr:page": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "98650c35cd5e"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "saas-providers": {
+        "contentHash": "965635c6961d",
+        "anchorHash": "6283809e2cc5",
+        "labelHash": "f9303e336f93",
+        "children": {
+          "_label": {
+            "contentHash": "f9303e336f93",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4a4eeaec85c5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "saas-providers-2": {
+            "contentHash": "20080aa65a18",
+            "anchorHash": "1c9228f0719a",
+            "labelHash": "026d93dc6709",
+            "children": {
+              "_label": {
+                "contentHash": "026d93dc6709",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:1": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "c6872618fd7e",
+                "children": {
+                  "attr:category": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "98650c35cd5e"
+                  }
+                }
+              },
+              "prose:3": {
+                "contentHash": "91ca34ca237f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "8ce04ec9d1a0",
+                "anchorHash": "63aedaf4407d"
+              },
+              "prose:4": {
+                "contentHash": "3c8794ed6885",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:1": {
+                "contentHash": "08cc36794621",
+                "anchorHash": "eaa33fb6a698"
+              },
+              "prose:5": {
+                "contentHash": "6201111b83a0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:2": {
+                "contentHash": "c60f13d769b9",
+                "anchorHash": "eaa33fb6a698"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "component:1",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "html-tag:1",
+              "prose:5",
+              "html-tag:2"
+            ]
+          },
+          "key-generators": {
+            "contentHash": "96ca551b3aa8",
+            "anchorHash": "fa33ce14650b",
+            "labelHash": "1fac9567b8f1",
+            "children": {
+              "_label": {
+                "contentHash": "1fac9567b8f1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:1": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "5e5ba37d7793",
+                "children": {
+                  "attr:category": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "388241df0a5c"
+                  }
+                }
+              },
+              "prose:1": {
+                "contentHash": "9ab3d664a845",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "6c4943d4d337",
+                "anchorHash": "abba9ba57319"
+              },
+              "prose:2": {
+                "contentHash": "89a73ffd8e7a",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "component:1",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "saas-providers-2",
+          "key-generators"
+        ]
+      },
+      "faq": {
+        "contentHash": "089ac3171cf0",
+        "anchorHash": "01c6f6432a48",
+        "labelHash": "e956a9404b46",
+        "children": {
+          "_label": {
+            "contentHash": "e956a9404b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "d19fc0760001",
+            "anchorHash": "87e585e56fe3",
+            "children": {
+              "attr:title": {
+                "contentHash": "9f9863dbae78",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "05f0cb2dc6c0"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "b00e6f46376b"
+              },
+              "prose:0": {
+                "contentHash": "e07991068ce6",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          },
+          "component:2": {
+            "contentHash": "367f5aa6eb06",
+            "anchorHash": "3d276136efe7",
+            "children": {
+              "attr:title": {
+                "contentHash": "92eb12b407eb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "05f0cb2dc6c0"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "b149ce530c51"
+              },
+              "prose:0": {
+                "contentHash": "8932380f7ee2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          },
+          "component:3": {
+            "contentHash": "b3e00540e9ad",
+            "anchorHash": "51f6070d8eb6",
+            "children": {
+              "attr:title": {
+                "contentHash": "3d749bcf15c5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "05f0cb2dc6c0"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "93e38c6dde3f"
+              },
+              "prose:1": {
+                "contentHash": "6662fe3e48ef",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:0": {
+                "contentHash": "3a1fb0864f52",
+                "anchorHash": "119224e9c252"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:1",
+              "html-tag:0"
+            ]
+          },
+          "component:4": {
+            "contentHash": "b657002c0602",
+            "anchorHash": "8b3b684d9c21",
+            "children": {
+              "attr:title": {
+                "contentHash": "d9fedac6a011",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "05f0cb2dc6c0"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "9f36a286864c"
+              },
+              "prose:1": {
+                "contentHash": "5312615776fb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "a8d5cf3ca183",
+                "anchorHash": "5dd929c34d64"
+              },
+              "prose:2": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1",
+          "component:2",
+          "component:3",
+          "component:4"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "95fc0f6f0b49",
+        "anchorHash": "e7968d3b4d6c",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3a1a9744e21c",
+            "anchorHash": "00a776608398"
+          },
+          "prose:3": {
+            "contentHash": "b534ceaa146a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "777355ec8c49",
+            "anchorHash": "6465e226960a"
+          },
+          "prose:4": {
+            "contentHash": "021c388682d1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:emoji",
+      "frontmatter:image",
+      "frontmatter:alt",
+      "frontmatter:sidebarDepth",
+      "frontmatter:summaryPoints",
+      "what-is-staking-as-a-service",
+      "why-stake-with-a-service",
+      "what-to-consider",
+      "saas-providers",
+      "faq",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

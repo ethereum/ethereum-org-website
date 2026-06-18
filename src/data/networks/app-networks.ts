@@ -4,6 +4,7 @@ import { AppOnlyChainName, ChainName } from "@/lib/types"
 
 import AbstractLogo from "@/public/images/layer-2/abstract.png"
 import ImmutableZkEvmLogo from "@/public/images/layer-2/immutablezkevm.png"
+import RoninLogo from "@/public/images/layer-2/ronin.png"
 
 export interface AppNetwork {
   name: string
@@ -24,5 +25,10 @@ export const appOnlyNetworks: AppNetwork[] = [
     name: "Immutable zkEVM",
     chainName: "Immutable zkEVM",
     logo: ImmutableZkEvmLogo,
+  },
+  {
+    name: "Ronin",
+    chainName: "Ronin",
+    logo: RoninLogo,
   },
 ]

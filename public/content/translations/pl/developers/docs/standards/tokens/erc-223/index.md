@@ -1,6 +1,6 @@
 ---
-title: "Standard tokenów ERC-223"
-description: "Przegląd standardu tokenów wymienialnych ERC-223, tego, jak działa wraz z porównaniem z ERC-20."
+title: Standard tokena ERC-223
+description: "Przegląd standardu tokenów zamiennych ERC-223, jak działa i porównanie z ERC-20."
 lang: pl
 ---
 
@@ -8,15 +8,15 @@ lang: pl
 
 ### Czym jest ERC-223? {#what-is-erc223}
 
-ERC-223 jest standardem dla tokenów wymienialnych, podobnie jak standard ERC-20. Kluczową różnicą jest to, że ERC-223 określa nie tylko API tokena, ale również logikę odpowiedzialną za transfer tokenów od nadawcy do odbiorcy. Wprowadza model komunikacji, który zezwala na obsługę transferów tokenów po stronie odbiorcy.
+ERC-223 to standard tokenów zamiennych, podobny do standardu ERC-20. Główną różnicą jest to, że ERC-223 definiuje nie tylko API tokena, ale także logikę transferu tokenów od nadawcy do odbiorcy. Wprowadza model komunikacji, który pozwala na obsługę transferów tokenów po stronie odbiorcy.
 
 ### Różnice w stosunku do ERC-20 {#erc20-differences}
 
-ERC-223 rozwiązuje pewne ograniczenia ERC-20 oraz wprowadza nową metodę interakcji między kontraktem tokena, a kontraktem, które może otrzymać tokeny. Istnieje kilka rzeczy, które są możliwe z ERC-223, ale nie z ERC-20:
+ERC-223 rozwiązuje niektóre ograniczenia ERC-20 i wprowadza nową metodę interakcji między kontraktem tokena a kontraktem, który może otrzymywać tokeny. Istnieje kilka rzeczy, które są możliwe w przypadku ERC-223, ale nie w przypadku ERC-20:
 
-- Obsługa transferu tokenów po stronie odbiorcy: odbiorcy mogą wykryć, że token ERC-223 zostaje wpłacony.
-- Odrzucenie nieprawidłowo wysłanych tokenów: jeśli użytkownik wyśle tokeny ERC-223 do kontraktu, który nie powinien otrzymać tokenów, to kontrakt może odrzucić transakcję, zapobiegając utracie tokenów.
-- Metadane w transferach: tokeny ERC-223 mogą zawierać metadane zezwalające na dołączenie dowolnych informacji do transakcji tokenowych.
+- Obsługa transferu tokenów po stronie odbiorcy: Odbiorcy mogą wykryć, że token ERC-223 jest deponowany.
+- Odrzucanie nieprawidłowo wysłanych tokenów: Jeśli użytkownik wyśle tokeny ERC-223 do kontraktu, który nie powinien ich otrzymywać, kontrakt może odrzucić transakcję, zapobiegając utracie tokenów.
+- Metadane w transferach: Tokeny ERC-223 mogą zawierać metadane, co pozwala na dołączanie dowolnych informacji do transakcji tokenów.
 
 ## Wymagania wstępne {#prerequisites}
 
@@ -27,17 +27,17 @@ ERC-223 rozwiązuje pewne ograniczenia ERC-20 oraz wprowadza nową metodę inter
 
 ## Treść {#body}
 
-ERC-223 to standard tokenów, który implementuje API dla tokenów w inteligentnych kontraktach. Deklaruje również API dla kontraktów, które miałyby otrzymywać tokeny ERC-223. Kontrakty, które nie wspierają API odbiorcy ERC-223, nie mogą otrzymać tokenów ERC-223, co zapobiega przed błędami użytkownika.
+ERC-223 to standard tokena, który implementuje API dla tokenów w ramach inteligentnych kontraktów. Deklaruje również API dla kontraktów, które mają otrzymywać tokeny ERC-223. Kontrakty, które nie obsługują API odbiorcy ERC-223, nie mogą otrzymywać tokenów ERC-223, co zapobiega błędom użytkowników.
 
-Jeśli inteligentny kontrakt implementuje następujące metody i zdarzenia to może zostać nazwanym kontraktem tokena zgodnym z ERC-223. Po wdrożeniu będzie on odpowiedzialny za monitorowanie stworzonym tokenów na Ethereum.
+Jeśli inteligentny kontrakt implementuje następujące metody i zdarzenia, można go nazwać kontraktem tokena zgodnym z ERC-223. Po wdrożeniu będzie on odpowiedzialny za śledzenie utworzonych tokenów w sieci Ethereum.
 
-Kontrakt nie jest zobowiązany, aby mieć tylko te funkcje, a deweloper może dodać każdą inną funkcję od innego standardu tokenów to tego kontraktu. Dla przykładu, funkcje `approve` oraz `transferFrom` nie są częścią standardu ERC-223, ale mogą zostać zaimplementowane, jeśli tylko zajdzie taka potrzeba.
+Kontrakt nie jest zobowiązany do posiadania tylko tych funkcji, a programista może dodać do niego dowolną inną funkcję z różnych standardów tokenów. Na przykład funkcje `approve` i `transferFrom` nie są częścią standardu ERC-223, ale mogą zostać zaimplementowane, jeśli zajdzie taka potrzeba.
 
-Na podstawie [EIP-223](https://eips.ethereum.org/EIPS/eip-223):
+Z [EIP-223](https://eips.ethereum.org/EIPS/eip-223):
 
 ### Metody {#methods}
 
-Token ERC-223 musi zaimplementować następujące metody:
+Token ERC-223 musi implementować następujące metody:
 
 ```solidity
 function name() public view returns (string)
@@ -49,13 +49,13 @@ function transfer(address _to, uint256 _value) public returns (bool success)
 function transfer(address _to, uint256 _value, bytes calldata _data) public returns (bool success)
 ```
 
-A kontrakt, który miałby otrzymać tokeny ERC-223 musi zaimplementować następującą metodę:
+Kontrakt, który ma otrzymywać tokeny ERC-223, musi implementować następującą metodę:
 
 ```solidity
 function tokenReceived(address _from, uint _value, bytes calldata _data)
 ```
 
-Jeśli tokeny ERC-223 zostaną wysłane do kontraktu, który nie zaimplementował funkcji `tokenReceived(..)`, to transfer musi się zakończyć niepowodzeniem, a tokeny nie mogą zostać przeniesione z konta nadawcy.
+Jeśli tokeny ERC-223 zostaną wysłane do kontraktu, który nie implementuje funkcji `tokenReceived(..)`, transfer musi się nie powieść, a tokeny nie mogą zostać pobrane z salda nadawcy.
 
 ### Zdarzenia {#events}
 
@@ -65,11 +65,11 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 ### Przykłady {#examples}
 
-API tokena ERC-223 jest podobne do tego z ERC-20, więc z punktu widzenia rozwoju UI, nie ma różnicy. Jedynym wyjątkiem tutaj jest to, że tokeny ERC-223 mogą nie mieć funkcji `approve` i `transferFrom`, ponieważ te są opcjonalne dla tego standardu.
+API tokena ERC-223 jest podobne do API ERC-20, więc z punktu widzenia tworzenia interfejsu użytkownika nie ma żadnej różnicy. Jedynym wyjątkiem jest to, że tokeny ERC-223 mogą nie posiadać funkcji `approve` + `transferFrom`, ponieważ są one opcjonalne dla tego standardu.
 
 #### Przykłady w Solidity {#solidity-example}
 
-Poniższy przykład pokazuje, w jaki sposób działa podstawowy kontrakt tokena ERC-223:
+Poniższy przykład ilustruje, jak działa podstawowy kontrakt tokena ERC-223:
 
 ```solidity
 pragma solidity ^0.8.19;
@@ -115,7 +115,7 @@ contract VeryBasicERC223Token {
 }
 ```
 
-Teraz chcemy, aby inny kontrakt zaakceptował wpłaty tokena o nazwie `tokenA` zakładając, że tokenA jest tokenem ERC-223. Kontrakt musi akceptować tylko tokenA oraz odrzucać wszystkie inne tokeny. Kiedy kontrakt otrzyma tokenA, music wyemitować zdarzenie `Deposit()` oraz zwiększyć wartość wewnętrznej zmiennej `deposits`.
+Teraz chcemy, aby inny kontrakt akceptował depozyty `tokenA`, zakładając, że tokenA jest tokenem ERC-223. Kontrakt musi akceptować tylko tokenA i odrzucać wszelkie inne tokeny. Kiedy kontrakt otrzyma tokenA, musi wyemitować zdarzenie `Deposit()` i zwiększyć wartość wewnętrznej zmiennej `deposits`.
 
 Oto kod:
 
@@ -123,14 +123,14 @@ Oto kod:
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
-    address tokenA; // Jedyny token, który chcemy akceptować.
+    address tokenA; // Jedyny token, który chcemy zaakceptować.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // Ważne jest, aby zrozumieć, że w ramach tej funkcji
-        // msg.sender to adres otrzymywanego tokenu,
-        // msg.value ma zawsze wartość 0, ponieważ kontrakt tokenu w większości przypadków nie posiada ani nie wysyła etheru,
-        // _from      to nadawca transferu tokenu,
-        // _value     to kwota tokenów, które zostały zdeponowane.
+        // Ważne jest, aby zrozumieć, że wewnątrz tej funkcji
+        // msg.sender to adres odbieranego tokena,
+        // msg.value wynosi zawsze 0, ponieważ kontrakt tokena w większości przypadków nie posiada ani nie wysyła etheru,
+        // _from to nadawca transferu tokenów,
+        // _value to ilość tokenów, która została zdeponowana.
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -140,31 +140,31 @@ contract RecipientContract is IERC223Recipient {
 
 ## Często zadawane pytania {#faq}
 
-### Co się stanie, jeśli wyślę tokenB do kontraktu? {#sending-tokens}
+### Co się stanie, jeśli wyślemy jakiś tokenB do kontraktu? {#sending-tokens}
 
-Transakcja się nie powiedzie, a transfer tokenów się nie wydarzy. Tokeny zostają zwrócone na adres nadawcy.
+Transakcja zakończy się niepowodzeniem, a transfer tokenów nie dojdzie do skutku. Tokeny zostaną zwrócone na adres nadawcy.
 
-### Jak mogę dokonać wpłaty na ten kontrakt? {#contract-deposits}
+### Jak możemy złożyć depozyt w tym kontrakcie? {#contract-deposits}
 
 Wywołaj funkcję `transfer(address,uint256)` lub `transfer(address,uint256,bytes)` tokena ERC-223, określając adres `RecipientContract`.
 
-### Co się stanie, jeśli wyślę token ERC-20 do tego kontraktu? {#erc-20-transfers}
+### Co się stanie, jeśli przetransferujemy token ERC-20 do tego kontraktu? {#erc-20-transfers}
 
-Jeśli token ERC-20 zostanie wysłany do `RecipientContract`, to tokeny zostaną przesłane, ale transfer nie zostanie rozpoznany (nie zostanie uruchomione żadnego zdarzenie `Deposit()`, a wartość depozytów nie zostanie zmieniona). Niechcianych wpłat ERC-20 nie można filtrować ani im zapobiegać.
+Jeśli token ERC-20 zostanie wysłany do `RecipientContract`, tokeny zostaną przetransferowane, ale transfer nie zostanie rozpoznany (nie zostanie wyemitowane zdarzenie `Deposit()`, a wartość depozytów nie ulegnie zmianie). Niechcianych depozytów ERC-20 nie można filtrować ani im zapobiegać.
 
-### Co, jeśli chcę wykonać jakąś funkcję po zakończeniu wpłaty tokena? {#function-execution}
+### Co jeśli chcemy wykonać jakąś funkcję po zakończeniu deponowania tokena? {#function-execution}
 
-Istnieje kilka sposobów na zrobienie tego. W tym przykładzie zastosujemy metodę, która sprawia, że transfery ERC-223 są identyczne, jak transfery etheru:
+Istnieje na to wiele sposobów. W tym przykładzie zastosujemy metodę, która sprawia, że transfery ERC-223 są identyczne z transferami etheru:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
     event Foo();
     event Bar(uint256 someNumber);
-    address tokenA; // The only token that we want to accept.
+    address tokenA; // Jedyny token, który chcemy zaakceptować.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
         require(msg.sender == tokenA);
-        address(this).call(_data); // Handle incoming transaction and perform a subsequent function call.
+        address(this).call(_data); // Obsłuż przychodzącą transakcję i wykonaj kolejne wywołanie funkcji.
     }
     function foo() public
     {
@@ -177,24 +177,21 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Kiedy `RecipientContract` otrzyma token ERC-223, kontrakt wykona funkcję zakodowaną jako parametr `_data` transakcji tokena, identycznie do tego, jak transakcje etheru kodują wywołania funkcji jako `data` transakcji. Przeczytaj o [polu danych](/developers/docs/transactions/#the-data-field) po więcej informacji.
+Kiedy `RecipientContract` otrzyma token ERC-223, kontrakt wykona funkcję zakodowaną jako parametr `_data` transakcji tokena, identycznie jak transakcje etheru kodują wywołania funkcji jako `data` transakcji. Przeczytaj o [polu danych](/developers/docs/transactions/#the-data-field), aby uzyskać więcej informacji.
 
-W powyższym przykładzie token ERC-223 musi zostać przeniesiony na adres `RecipientContract` przy użyciu funkcji `transfer(address,uin256,bytes calldata _data)`. Jeśli parametr danych będzie wynosił `0xc2985578` (podpis funkcji `foo()`), to funkcja foo() zostanie wywołana po otrzymaniu wpłaty tokena oraz zostanie uruchomione zdarzenie Foo().
+W powyższym przykładzie token ERC-223 musi zostać przetransferowany na adres `RecipientContract` za pomocą funkcji `transfer(address,uin256,bytes calldata _data)`. Jeśli parametrem danych będzie `0xc2985578` (podpis funkcji `foo()`), to funkcja foo() zostanie wywołana po otrzymaniu depozytu tokena i zostanie wyemitowane zdarzenie Foo().
 
-Parametry mogą również zostać zakodowane w `data` transferu tokena, dla przykładu możemy wywołać funkcję bar() z wartością 12345 dla `_someNumber`. W tym przypadku `data` musi wynosić
-`0x0423a13200000000000000000000000000000000000000000000000000000000000004d2`, gdzie
-`0x0423a132` to podpis funkcji `bar(uint256)`, a
-`00000000000000000000000000000000000000000000000000000000000004d2` to 12345 w formie uint256.
+Parametry mogą być również zakodowane w `data` transferu tokena, na przykład możemy wywołać funkcję bar() z wartością 12345 dla `_someNumber`. W tym przypadku `data` musi wynosić `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2`, gdzie `0x0423a132` to podpis funkcji `bar(uint256)`, a `00000000000000000000000000000000000000000000000000000000000004d2` to 12345 jako uint256.
 
 ## Ograniczenia {#limitations}
 
-Chociaż ERC-223 rozwiązuje parę problemów znalezionych w standardzie ERC-20, to nie jest pozbawiony on własnych ograniczeń:
+Chociaż ERC-223 rozwiązuje kilka problemów występujących w standardzie ERC-20, nie jest pozbawiony własnych ograniczeń:
 
-- Przyjęcie i kompatybilność: ERC-223 nie jest jeszcze powszechnie przyjęty, co może ograniczać jego kompatybilność z istniejącymi narzędziami i platformami.
-- Kompatybilność wsteczna: ERC-223 nie jest wstecznie kompatybilny z ERC-20, co oznacza, że istniejące kontrakty ERC-20 i narzędzia nie będą działać z tokenami ERC-223 bez modyfikacji.
-- Koszty gazu: dodatkowe kontrole i funkcje w transferach ERC-223 mogą powodować większe koszta gazu w porównaniu z transakcjami ERC-20.
+- Adopcja i kompatybilność: ERC-223 nie jest jeszcze powszechnie zaadoptowany, co może ograniczać jego kompatybilność z istniejącymi narzędziami i platformami.
+- Kompatybilność wsteczna: ERC-223 nie jest wstecznie kompatybilny z ERC-20, co oznacza, że istniejące kontrakty i narzędzia ERC-20 nie będą działać z tokenami ERC-223 bez modyfikacji.
+- Koszty gazu: Dodatkowe kontrole i funkcjonalności w transferach ERC-223 mogą skutkować wyższymi kosztami gazu w porównaniu do transakcji ERC-20.
 
 ## Dalsza lektura {#further-reading}
 
-- [EIP-223: standard tokenów ERC-223](https://eips.ethereum.org/EIPS/eip-223)
-- [Wstępna propozycja ERC-223](https://github.com/ethereum/eips/issues/223)
+- [EIP-223: Standard tokena ERC-223](https://eips.ethereum.org/EIPS/eip-223)
+- [Początkowa propozycja ERC-223](https://github.com/ethereum/eips/issues/223)
