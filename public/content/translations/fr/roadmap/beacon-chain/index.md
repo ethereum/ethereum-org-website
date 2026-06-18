@@ -1,81 +1,81 @@
 ---
-title: "La Chaîne phare"
-description: "En savoir plus sur la chaîne phare - la mise à niveau qui a introduit la preuve d'enjeu d'Ethereum."
+title: La chaîne balise
+description: Découvrez la chaîne balise, la mise à jour qui a introduit la preuve d'enjeu sur Ethereum.
 lang: fr
 template: upgrade
 image: /images/upgrades/core.png
-alt:
+alt: 
 summaryPoints:
-  - "La Chaîne phare a introduit la preuve d'enjeu dans l'écosystème Ethereum."
-  - "Elle a été fusionnée avec la chaîne originale de preuve de travail Ethereum en septembre 2022."
-  - "La Chaîne phare a introduit la logique de consensus et le protocole de commutation de bloc qui sécurise désormais Ethereum."
+  - La chaîne balise a introduit la preuve d'enjeu dans l'écosystème Ethereum.
+  - Elle a été fusionnée avec la chaîne de preuve de travail originale d'Ethereum en septembre 2022.
+  - La chaîne balise a introduit la logique de consensus et le protocole de diffusion des blocs qui sécurisent désormais Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  La Chaîne phare a été lancée le 1er décembre 2020 et a formalisé la preuve d'enjeu comme mécanisme de consensus d'Ethereum avec la mise à niveau The Merge le 15 septembre 2022.
+  La chaîne balise a été déployée le 1er décembre 2020 et a officialisé la preuve d'enjeu comme mécanisme de consensus d'Ethereum avec la mise à jour de La Fusion le 15 septembre 2022.
 </UpgradeStatus>
 
-## Qu'est-ce que la chaîne phare Beacon ? {#what-is-the-beacon-chain}
+## Qu'est-ce que la chaîne balise ? {#what-is-the-beacon-chain}
 
-La chaîne phare Beacon est le nom donné à la chaîne originelle à preuve d'enjeu, lancée en 2020. Elle a été crée pour s'assurer que la logique de consensus par preuve d'enjeu était saine et durable avant de l'activer sur le réseau principal Ethereum. Par conséquent, elle a fonctionné aux côtés de l'Ethereum original de preuve de travail. La chaîne Beacon était une chaîne de blocs « vides », mais désactiver la preuve de travail et activer la preuve d'enjeu sur Ethereum nécessitait de demander à la Beacon Chain d'accepter les données de transaction des clients d'exécution, de les regrouper en blocs, puis de les organiser dans une blockchain en utilisant un mécanisme de consensus basé sur la preuve d'enjeu. Au même moment, les clients originaux d'Ethereum ont arrêté leur minage, la propagation du bloc et la logique de consensus, regroupant tout ceci sur la Chaîne phare. Cet événement était connu sous le nom de [La Fusion](/roadmap/merge/). Une fois La Fusion effectuée, il n'y avait plus deux blockchains. Au lieu de cela, il n’y avait qu’une seule preuve d'enjeu Ethereum, qui nécessite désormais deux clients différents par nœud. La chaîne Beacon est désormais la couche de consensus, un réseau de pair à pair de clients de consensus qui gère le gossip des blocs et la logique de consensus, tandis que les clients d'origine forment la couche d'exécution, qui est responsable de l'échange d'informations et de l'exécution des transactions, ainsi que de la gestion de l'état d'Ethereum. Les deux couches peuvent communiquer entre elles en utilisant l'API Engine.
+La chaîne balise est le nom de la chaîne de blocs à preuve d'enjeu originale qui a été lancée en 2020. Elle a été créée pour s'assurer que la logique de consensus de la preuve d'enjeu était solide et durable avant de l'activer sur le réseau principal [Ethereum](/). Par conséquent, elle a fonctionné en parallèle de l'Ethereum original à preuve de travail. La chaîne balise était une chaîne de blocs « vides », mais désactiver la preuve de travail et activer la preuve d'enjeu sur Ethereum nécessitait de donner l'instruction à la chaîne balise d'accepter les données de transaction des clients d'exécution, de les regrouper en blocs, puis de les organiser en une chaîne de blocs à l'aide d'un mécanisme de consensus basé sur la preuve d'enjeu. Au même moment, les clients Ethereum originaux ont désactivé leur minage, leur propagation des blocs et leur logique de consensus, transférant tout cela à la chaîne balise. Cet événement a été connu sous le nom de [La Fusion](/roadmap/merge/). Une fois La Fusion réalisée, il n'y avait plus deux chaînes de blocs. À la place, il n'y avait plus qu'un seul Ethereum à preuve d'enjeu, qui nécessite désormais deux clients différents par nœud. La chaîne balise est désormais la couche de consensus, un réseau pair à pair de clients de consensus qui gère la diffusion des blocs et la logique de consensus, tandis que les clients originaux forment la couche d'exécution, qui est responsable de la diffusion et de l'exécution des transactions, ainsi que de la gestion de l'état d'Ethereum. Les deux couches peuvent communiquer entre elles à l'aide de l'API Engine.
 
-## Que fait la chaîne Beacon ? {#what-does-the-beacon-chain-do}
+## Que fait la chaîne balise ? {#what-does-the-beacon-chain-do}
 
-La Chaîne phare est le nom donné à un registre de comptes qui a géré et coordonné le réseau des [validateurs](/staking/) d'Ethereum avant que ces derniers ne commencent à valider les blocs réels d'Ethereum. Elle n'exécute pas les transactions ou gère les interactions des contrats intelligents puisque cela est assuré au niveau de la couche d'exécution.
-La chaîne Beacon est responsable des éléments comme la gestion des blocs et de leur attestation, en accord avec l'algorithme de choix de fourche, tout en gérant les récompenses et les pénalités.
-En savoir plus sur notre [page sur l'architecture des nœuds](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
+La chaîne balise est le nom donné à un registre de comptes qui a dirigé et coordonné le réseau de [stakers](/staking/) Ethereum avant que ces stakers ne commencent à valider de vrais blocs Ethereum. Cependant, elle ne traite pas les transactions ni ne gère les interactions avec les contrats intelligents, car cela est effectué dans la couche d'exécution.
+La chaîne balise est responsable de tâches telles que la gestion des blocs et des attestations, l'exécution de l'algorithme de choix de fourche, et la gestion des récompenses et des pénalités.
+Pour en savoir plus, consultez notre [page sur l'architecture des nœuds](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-## Impact de la Chaîne phare {#beacon-chain-features}
+## Impact de la chaîne balise {#beacon-chain-features}
 
-### Introduction à la mise en jeu {#introducing-staking}
+### Introduction du staking {#introducing-staking}
 
-La Chaîne phare a introduit la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) dans Ethereum. Cela permet de sécuriser Ethereum et pour les validateurs de gagner plus d'ETH au cours du processus. En pratique, le staking implique de miser des ETH pour activer le logiciel de validation. En tant que validateur, vous exécutez le logiciel qui créé et valide de nouveaux blocs dans la chaîne.
+La chaîne balise a introduit la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) sur Ethereum. Cela permet de maintenir la sécurité d'Ethereum et de faire gagner plus d'ETH aux validateurs au passage. En pratique, le staking implique de staker des ETH afin d'activer le logiciel de validateur. En tant que staker, vous exécutez le logiciel qui crée et valide de nouveaux blocs dans la chaîne.
 
-La mise en jeu a un objectif similaire à celui du [minage](/developers/docs/consensus-mechanisms/pow/mining/), mais en diffère à bien des égards. Le minage nécessitait d’importantes dépenses initiales sous la forme d’une puissante consommation en matériel et énergie, entraînant des économies d’échelle et promouvant la centralisation. Le minage n'impliquait pas non plus l'obligation de bloquer les actifs en tant que garantie, ce qui limite la capacité du protocole à punir les mauvais acteurs après une attaque.
+Le staking remplit un objectif similaire à celui que le [minage](/developers/docs/consensus-mechanisms/pow/mining/) remplissait auparavant, mais il est différent à bien des égards. Le minage nécessitait d'importantes dépenses initiales sous la forme de matériel puissant et de consommation d'énergie, ce qui entraînait des économies d'échelle et favorisait la centralisation. Le minage n'imposait pas non plus de verrouiller des actifs en tant que collatéral, ce qui limitait la capacité du protocole à punir les acteurs malveillants après une attaque.
 
-La transition vers la preuve d'enjeu a rendu Ethereum nettement plus sûr et décentralisé par comparaison avec la preuve de travail. Plus le nombre de participants sera élevé sur le réseau, plus celui-ci sera décentralisé et à l'abri des attaques.
+La transition vers la preuve d'enjeu a rendu Ethereum considérablement plus sécurisé et décentralisé par rapport à la preuve de travail. Plus il y a de personnes qui participent au réseau, plus il devient décentralisé et à l'abri des attaques.
+
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Si vous souhaitez devenir validateur et contribuer à sécuriser Ethereum, [apprenez-en plus sur la mise en jeu](/staking/).
+  Si vous souhaitez devenir validateur et aider à sécuriser Ethereum, [apprenez-en plus sur le staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-### Préparation à la fragmentation {#setting-up-for-sharding}
+### Préparation pour la fragmentation {#setting-up-for-sharding}
 
-Depuis que la Chaîne phare a fusionné avec le réseau principal Ethereum d'origine, la communauté Ethereum a commencé à chercher à mettre le réseau à niveau.
+Depuis que la chaîne balise a fusionné avec le réseau principal Ethereum original, la communauté Ethereum a commencé à chercher à mettre le réseau à l'échelle.
 
-La preuve d’enjeu présente l’avantage d’avoir un registre de tous les producteurs de blocs approuvés à un moment donné, chacun avec l’ETH en jeu. Ce registre ouvre la voie à la possibilité de diviser et de conquérir mais de manière fiable et de séparer les responsabilités spécifiques des réseaux.
+La preuve d'enjeu présente l'avantage de disposer d'un registre de tous les producteurs de blocs approuvés à tout moment, chacun ayant des ETH mis en jeu. Ce registre prépare le terrain pour la capacité de diviser pour mieux régner, mais de répartir de manière fiable les responsabilités spécifiques du réseau.
 
-Cette responsabilité contraste avec la preuve de travail, où les mineurs n'ont aucune obligation à l'égard du réseau et pourraient arrêter de miner et fermer définitivement leur logiciel de nœud en un instant et sans répercussion. Il n'y a pas non plus de registre des soumissionnaires de blocs connus et aucun moyen fiable de séparer en toute sécurité les responsabilités des réseaux.
+Cette responsabilité contraste avec la preuve de travail, où les mineurs n'ont aucune obligation envers le réseau et pourraient arrêter de miner et éteindre définitivement leur logiciel de nœud en un instant sans répercussion. Il n'y a pas non plus de registre des proposeurs de blocs connus ni de moyen fiable de répartir les responsabilités du réseau en toute sécurité.
 
 [En savoir plus sur la fragmentation](/roadmap/danksharding/)
 
-## Relation entre les mises à niveau {#relationship-between-upgrades}
+## Relation entre les mises à jour {#relationship-between-upgrades}
 
-Les mises à niveau Ethereum sont plus ou moins interdépendantes. Récapitulons donc comment la chaîne phare affecte les autres mises à niveau.
+Les mises à jour d'Ethereum sont toutes plus ou moins liées entre elles. Récapitulons donc comment la chaîne balise affecte les autres mises à jour.
 
-### La Chaîne phare et La Fusion {#merge-and-beacon-chain}
+### La chaîne balise et La Fusion {#merge-and-beacon-chain}
 
-Au début, la Chaîne phare existait séparément du réseau principal Ethereum, mais ils ont été fusionnés en 2022.
+Au début, la chaîne balise existait séparément du réseau principal Ethereum, mais elles ont été fusionnées en 2022.
 
 <ButtonLink href="/roadmap/merge/">
   La Fusion
 </ButtonLink>
 
-### Les fragments et la Chaîne phare {#shards-and-beacon-chain}
+### Les fragments et la chaîne balise {#shards-and-beacon-chain}
 
-La fragmentation ne peut s'ajouter en toute sécurité dans l'écosystème Ethereum que s'il existe un mécanisme de consensus sur la preuve d'enjeu.
-La Chaîne phare a introduit la mise en jeu qui a « fusionné » avec le réseau principal et a ouvert la voie à la fragmentation pour favoriser une plus grande évolutivité d'Ethereum.
+La fragmentation ne peut entrer en toute sécurité dans l'écosystème Ethereum qu'avec un mécanisme de consensus de preuve d'enjeu en place. La chaîne balise a introduit le staking, qui a « fusionné » avec le réseau principal, ouvrant la voie à la fragmentation pour aider à mettre davantage Ethereum à l'échelle.
 
 <ButtonLink href="/roadmap/danksharding/">
   Chaînes de fragments
 </ButtonLink>
 
-## Complément d'information
+## Complément d'information {#further-reading}
 
 - [En savoir plus sur l'architecture des nœuds](/developers/docs/nodes-and-clients/node-architecture)
 - [En savoir plus sur la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos)

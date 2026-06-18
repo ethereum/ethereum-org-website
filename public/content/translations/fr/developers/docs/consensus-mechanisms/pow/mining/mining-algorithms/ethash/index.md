@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: "Un aperçu en détail de l'algorithme Ethash."
+description: Un regard détaillé sur l'algorithme Ethash.
 lang: fr
 ---
 
@@ -8,54 +8,54 @@ lang: fr
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash était l'algorithme de minage par preuve de travail d'Ethereum. La preuve de travail a maintenant été **entièrement désactivée** et Ethereum est désormais sécurisé par la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). En savoir plus sur [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) et [staking](/staking/). Cette page n'a qu'un intérêt historique !
+   Ethash était l'algorithme de minage par preuve de travail (PoW) d'Ethereum. La preuve de travail a maintenant été **entièrement désactivée** et Ethereum est désormais sécurisé en utilisant la [preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos/) à la place. Pour en savoir plus, consultez [La Fusion](/roadmap/merge/), la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) et le [staking](/staking/). Cette page est conservée à des fins historiques !  
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Ethash est une version modifiée de l'algorithme [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). La preuve de travail Ethash est [à mémoire difficile](https://wikipedia.org/wiki/Memory-hard_function), ce qui était censé rendre l'algorithme résistant aux ASIC. Les Ethash ASIC ont finalement été développés, mais le minage via GPU restait encore une option viable jusqu’à ce que la preuve de travail soit désactivée. Ethash est toujours utilisé pour miner d'autres jetons sur des réseaux autres qu'Ethereum fonctionnant avec la preuve de travail.
+Ethash est une version modifiée de l'algorithme [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). La preuve de travail d'Ethash est [difficile en mémoire](https://wikipedia.org/wiki/Memory-hard_function) (memory hard), ce qui était censé rendre l'algorithme résistant aux ASIC. Des ASIC Ethash ont finalement été développés, mais le minage par GPU est resté une option viable jusqu'à ce que la preuve de travail soit désactivée. Ethash est toujours utilisé pour miner d'autres cryptomonnaies sur d'autres réseaux à preuve de travail non-Ethereum.
 
 ## Comment fonctionne Ethash ? {#how-does-ethash-work}
 
-La complexité de la mémoire est obtenue avec un algorithme de preuve de travail qui nécessite de choisir des sous-ensembles d'une ressource donnée dépendant de l'en-tête du nonce et du bloc. Cette ressource (quelques gigaoctets de taille) est appelée DAG. Le DAG change tous les 30 000 blocs, une fenêtre de 125 heures appelée une époque (soit environ 5,2 jours) et prend un certain temps à se générer. Comme le DAG ne dépend que de la taille du bloc, il peut être pré-généré, mais si ce n'est pas le cas, le client doit attendre la fin de ce processus pour produire un bloc. Si les clients ne génèrent pas et ne mettent pas en cache les DAG à l'avance, le réseau peut rencontrer un retard dans la création de blocs pour chaque transition d'epoch. Notez que le DAG n'a pas besoin d'être généré pour vérifier la preuve de travail essentiellement en permettant la vérification à la fois avec un CPU lent et avec une mémoire réduite.
+La difficulté en mémoire est obtenue grâce à un algorithme de preuve de travail qui nécessite de choisir des sous-ensembles d'une ressource fixe dépendant du nonce et de l'en-tête de bloc. Cette ressource (d'une taille de quelques gigaoctets) est appelée un DAG. Le DAG est modifié tous les 30 000 blocs, une fenêtre d'environ 125 heures appelée une époque (environ 5,2 jours) et prend un certain temps à générer. Puisque le DAG ne dépend que de la hauteur du bloc, il peut être pré-généré, mais s'il ne l'est pas, le client doit attendre la fin de ce processus pour produire un bloc. Si les clients ne pré-génèrent pas et ne mettent pas en cache les DAG à l'avance, le réseau peut subir un retard massif de blocs à chaque transition d'époque. Notez que le DAG n'a pas besoin d'être généré pour vérifier la preuve de travail, ce qui permet essentiellement une vérification avec un faible processeur (CPU) et une petite mémoire.
 
-Le parcours habituel de l'algorithme est le suivant :
+Le cheminement général que suit l'algorithme est le suivant :
 
-1. Il existe une **graine** qui peut être calculée pour chaque bloc en scannant les en-têtes de bloc jusqu'à ce point.
+1. Il existe une **graine** (seed) qui peut être calculée pour chaque bloc en parcourant les en-têtes de bloc jusqu'à ce point.
 2. À partir de la graine, on peut calculer un **cache pseudo-aléatoire de 16 Mo**. Les clients légers stockent le cache.
-3. À partir du cache, nous pouvons générer un **jeu de données de 1 Go**, avec la propriété que chaque élément du jeu de données ne dépend que d'un petit nombre d'éléments du cache. Les clients et les mineurs au complet stockent le jeu de données. Le jeu de données croît linéairement avec le temps.
-4. Le minage consiste à saisir des tranches aléatoires de l'ensemble des données et à les hacher ensemble. La vérification peut être faite avec peu de mémoire en utilisant le cache pour régénérer les morceaux spécifiques du jeu de données dont vous avez besoin, ainsi, vous avez uniquement besoin de stocker le cache.
+3. À partir du cache, nous pouvons générer un **ensemble de données de 1 Go**, avec la propriété que chaque élément de l'ensemble de données ne dépend que d'un petit nombre d'éléments du cache. Les clients complets et les mineurs stockent l'ensemble de données. L'ensemble de données croît de manière linéaire avec le temps.
+4. Le minage implique de récupérer des tranches aléatoires de l'ensemble de données et de les hacher ensemble. La vérification peut être effectuée avec peu de mémoire en utilisant le cache pour régénérer les morceaux spécifiques de l'ensemble de données dont vous avez besoin, vous n'avez donc besoin de stocker que le cache.
 
-Le grand ensemble de données est mis à jour une fois tous les 30 000 blocs, de sorte que la grande majorité des efforts d'un mineur sera de lire l'ensemble des données, et non d'y apporter des modifications.
+Le grand ensemble de données est mis à jour une fois tous les 30 000 blocs, de sorte que la grande majorité des efforts d'un mineur consistera à lire l'ensemble de données, et non à y apporter des modifications.
 
 ## Définitions {#definitions}
 
-Nous utilisons les définitions suivantes :
+Nous employons les définitions suivantes :
 
 ```
 WORD_BYTES = 4                    # octets dans un mot
-DATASET_BYTES_INIT = 2**30        # octets dans le jeu de données à la genèse
-DATASET_BYTES_GROWTH = 2**23      # croissance du jeu de données par époque
+DATASET_BYTES_INIT = 2**30        # octets dans l'ensemble de données à la genèse
+DATASET_BYTES_GROWTH = 2**23      # croissance de l'ensemble de données par époque
 CACHE_BYTES_INIT = 2**24          # octets dans le cache à la genèse
 CACHE_BYTES_GROWTH = 2**17        # croissance du cache par époque
 CACHE_MULTIPLIER=1024             # Taille du DAG par rapport au cache
 EPOCH_LENGTH = 30000              # blocs par époque
-MIX_BYTES = 128                   # largeur du mix
-HASH_BYTES = 64                   # longueur du hachage en octets
-DATASET_PARENTS = 256             # nombre de parents de chaque élément du jeu de données
+MIX_BYTES = 128                   # largeur du mélange
+HASH_BYTES = 64                   # longueur du hash en octets
+DATASET_PARENTS = 256             # nombre de parents de chaque élément de l'ensemble de données
 CACHE_ROUNDS = 3                  # nombre de tours dans la production du cache
 ACCESSES = 64                     # nombre d'accès dans la boucle hashimoto
 ```
 
 ### L'utilisation de 'SHA3' {#sha3}
 
-Le développement d'Ethereum a coïncidé avec le développement de la norme SHA3, et le processus de normes a réalisé un changement tardif dans le remplissage de l'algorithme de hachage finalisé de sorte que les hachages Ethereum "sha3_256" et "sha3_512" ne soient pas des hashs sha3 standard, mais une variante appelée souvent « Keccak-256 » et « Keccak-512 » dans d'autres contextes. Voir la discussion, par exemple, [ici](https://eips.ethereum.org/EIPS/eip-1803), [ici](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), ou [ici](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Le développement d'Ethereum a coïncidé avec le développement de la norme SHA3, et le processus de normalisation a apporté une modification tardive au remplissage (padding) de l'algorithme de hash finalisé, de sorte que les hashs "sha3_256" et "sha3_512" d'Ethereum ne sont pas des hashs sha3 standards, mais une variante souvent appelée "Keccak-256" et "Keccak-512" dans d'autres contextes. Voir la discussion, par exemple, [ici](https://eips.ethereum.org/EIPS/eip-1803), [ici](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), ou [ici](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
-Veuillez garder cela à l'esprit, car les hachages « sha3 » sont mentionnés dans la description de l'algorithme ci-dessous.
+Veuillez garder cela à l'esprit car les hashs "sha3" sont mentionnés dans la description de l'algorithme ci-dessous.
 
 ## Paramètres {#parameters}
 
-Les paramètres du cache et du jeu de données d'Ethash dépendent du numéro du bloc. La taille du cache et de la taille de l'ensemble des données augmentent linéairement ; cependant, nous prenons toujours le nombre premier le plus haut en dessous du seuil de croissance linéaire afin de réduire le risque de régularités accidentelles conduisant à un comportement cyclique.
+Les paramètres pour le cache et l'ensemble de données d'Ethash dépendent du numéro de bloc. La taille du cache et la taille de l'ensemble de données croissent toutes deux de manière linéaire ; cependant, nous prenons toujours le nombre premier le plus élevé en dessous du seuil de croissance linéaire afin de réduire le risque de régularités accidentelles conduisant à un comportement cyclique.
 
 ```python
 def get_cache_size(block_number):
@@ -73,7 +73,7 @@ def get_full_size(block_number):
     return sz
 ```
 
-Les tables de jeu de données et les valeurs de taille de cache sont fournies dans l'annexe.
+Des tableaux des valeurs de taille de l'ensemble de données et du cache sont fournis en annexe.
 
 ## Génération du cache {#cache-generation}
 
@@ -83,12 +83,12 @@ Maintenant, nous spécifions la fonction pour produire un cache :
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Sequentially produce the initial dataset
+    # Produire séquentiellement le jeu de données initial
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Use a low-round version of randmemohash
+    # Utiliser une version à faible nombre de tours de randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,11 +97,11 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Le processus de production du cache implique d'abord de remplir séquentiellement 32 Mo de mémoire, puis d'effectuer deux passes de l'algorithme _RandMemoHash_ de Sergio Demian Lerner, tiré de [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). La sortie est un ensemble de valeurs de 524288 de 64 octets.
+Le processus de production du cache implique d'abord de remplir séquentiellement 32 Mo de mémoire, puis d'effectuer deux passages de l'algorithme _RandMemoHash_ de Sergio Demian Lerner issu de [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). La sortie est un ensemble de 524 288 valeurs de 64 octets.
 
 ## Fonction d'agrégation de données {#date-aggregation-function}
 
-Nous utilisons un algorithme inspiré du [hachage FNV](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) dans certains cas comme substitut non associatif pour XOR. Notez que nous multiplions le premier par l'entrée 32 bits, contrairement à la spécification FNV-1 qui multiplie le premier avec un octet à son tour.
+Nous utilisons un algorithme inspiré du [hash FNV](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) dans certains cas comme substitut non associatif au XOR. Notez que nous multiplions le nombre premier avec l'entrée complète de 32 bits, contrairement à la spécification FNV-1 qui multiplie le nombre premier avec un octet à la fois.
 
 ```python
 FNV_PRIME = 0x01000193
@@ -110,28 +110,28 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-Veuillez noter que même le papier jaune spécifie fnv comme v1\*(FNV_PRIME ^ v2), toutes les implémentations actuelles utilisent systématiquement la définition ci-dessus.
+Veuillez noter que, même si le livre jaune spécifie fnv comme v1\*(FNV_PRIME ^ v2), toutes les implémentations actuelles utilisent systématiquement la définition ci-dessus.
 
-## Calcul du jeu de données complet {#full-dataset-calculation}
+## Calcul de l'ensemble de données complet {#full-dataset-calculation}
 
-Chaque élément de 64 octets dans le jeu de données complet de 1 Go est calculé comme suit :
+Chaque élément de 64 octets dans l'ensemble de données complet de 1 Go est calculé comme suit :
 
 ```python
 def calc_dataset_item(cache, i):
     n = len(cache)
     r = HASH_BYTES // WORD_BYTES
-    # initialize the mix
+    # Initialiser le mélange
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # fnv it with a lot of random cache nodes based on i
+    # Lui appliquer fnv avec beaucoup de nœuds de cache aléatoires basés sur i
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
     return sha3_512(mix)
 ```
 
-Essentiellement, nous combinons des données à partir de 256 nœuds de cache sélectionnés de façon pseudologique, et de hachage pour calculer le noeud de l'ensemble de données. L'ensemble du jeu de données est ensuite généré par :
+Essentiellement, nous combinons les données de 256 nœuds de cache sélectionnés de manière pseudo-aléatoire, et nous hachons cela pour calculer le nœud de l'ensemble de données. L'ensemble de données complet est ensuite généré par :
 
 ```python
 def calc_dataset(full_size, cache):
@@ -140,27 +140,27 @@ def calc_dataset(full_size, cache):
 
 ## Boucle principale {#main-loop}
 
-Maintenant, nous spécifions la boucle principale « hashimoto », où nous agrégeons les données du jeu de données complet, afin de produire notre valeur finale pour un en-tête et un nonce. Dans le code ci-dessous, `header` représente le _hachage_ SHA3-256 de la représentation RLP d'un en-tête de bloc _tronqué_, c'est-à-dire d'un en-tête excluant les champs **mixHash** et **nonce**. `nonce` représente les huit octets d'un entier non signé de 64 bits dans l'ordre big-endian. Ainsi, `nonce[::-1]` est la représentation little-endian sur huit octets de cette valeur :
+Maintenant, nous spécifions la boucle principale de type "hashimoto", où nous agrégeons les données de l'ensemble de données complet afin de produire notre valeur finale pour un en-tête et un nonce particuliers. Dans le code ci-dessous, `header` représente le _hash_ SHA3-256 de la représentation RLP d'un en-tête de bloc _tronqué_, c'est-à-dire d'un en-tête excluant les champs **mixHash** et **nonce**. `nonce` correspond aux huit octets d'un entier non signé de 64 bits dans l'ordre grand-boutiste (big-endian). Ainsi, `nonce[::-1]` est la représentation petit-boutiste (little-endian) de huit octets de cette valeur :
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # combine l'en-tête et le nonce en une graine de 64 octets
+    # Combiner en-tête+nonce en une graine de 64 octets
     s = sha3_512(header + nonce[::-1])
-    # initialise le mix avec s répliqué
+    # Démarrer le mélange avec s répliqué
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # mélange avec des nœuds aléatoires du jeu de données
+    # Incorporer des nœuds de jeu de données aléatoires au mélange
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
         for j in range(MIX_BYTES / HASH_BYTES):
             newdata.extend(dataset_lookup(p + j))
         mix = map(fnv, mix, newdata)
-    # compresse le mix
+    # Compresser le mélange
     cmix = []
     for i in range(0, len(mix), 4):
         cmix.append(fnv(fnv(fnv(mix[i], mix[i+1]), mix[i+2]), mix[i+3]))
@@ -176,9 +176,9 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-Essentiellement, nous maintenons un "mix" de 128 octets de large, et récupérons de manière répétée et séquentielle 128 octets du jeu de données complet pour les combiner avec le mix à l'aide de la fonction `fnv`. 128 octets d'accès séquentiel sont utilisés de sorte que chaque tour de l'algorithme récupère toujours une page complète de la RAM. Minimiser le tampon de lecture de la traduction loupe ce que l'ASIC serait théoriquement en mesure d'éviter.
+Essentiellement, nous maintenons un "mélange" (mix) de 128 octets de large, et nous récupérons de manière répétée et séquentielle 128 octets de l'ensemble de données complet et utilisons la fonction `fnv` pour le combiner avec le mélange. 128 octets d'accès séquentiel sont utilisés afin que chaque tour de l'algorithme récupère toujours une page complète de la RAM, minimisant ainsi les échecs du répertoire des pages (translation lookaside buffer misses) que les ASIC seraient théoriquement capables d'éviter.
 
-Si la sortie de cet algorithme est en dessous de la cible souhaitée, alors le nonce est valide. Notez que l'application supplémentaire de `sha3_256` à la fin garantit qu'il existe un nonce intermédiaire qui peut être fourni pour prouver qu'au moins une petite quantité de travail a été effectuée ; cette vérification PoW externe rapide peut être utilisée à des fins d'anti-DDoS. Cela sert également à fournir une assurance statistique que le résultat est un nombre non biaisé de 256 bits.
+Si la sortie de cet algorithme est inférieure à la cible souhaitée, alors le nonce est valide. Notez que l'application supplémentaire de `sha3_256` à la fin garantit qu'il existe un nonce intermédiaire qui peut être fourni pour prouver qu'au moins une petite quantité de travail a été effectuée ; cette vérification rapide de la PoW externe peut être utilisée à des fins anti-DDoS. Cela sert également à fournir une assurance statistique que le résultat est un nombre non biaisé de 256 bits.
 
 ## Minage {#mining}
 
@@ -186,7 +186,7 @@ L'algorithme de minage est défini comme suit :
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # remplissage par des zéros de la cible pour la comparer au hachage sur le même chiffre
+    # Compléter la cible avec des zéros pour la comparer avec le hash sur le même chiffre
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -195,9 +195,9 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## Définition du hachage de la graine {#seed-hash}
+## Définition du hash de la graine {#seed-hash}
 
-Afin de calculer le hachage de la graine qui serait utilisé pour miner au-dessus d'un bloc donné, nous utilisons l'algorithme suivant :
+Afin de calculer le hash de la graine qui serait utilisé pour miner au-dessus d'un bloc donné, nous utilisons l'algorithme suivant :
 
 ```python
  def get_seedhash(block):
@@ -207,20 +207,20 @@ Afin de calculer le hachage de la graine qui serait utilisé pour miner au-dessu
      return s
 ```
 
-Notez que pour un minage et une vérification en douceur, nous recommandons de calculer au préalable les futures semences et les jeux de données dans un fil séparé.
+Notez que pour un minage et une vérification fluides, nous recommandons de pré-calculer les futurs hashs de graine (seedhashes) et ensembles de données dans un thread séparé.
 
-## En savoir plus {#further-reading}
+## Lectures complémentaires {#further-reading}
 
-_Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
+_Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Annexe {#appendix}
 
-Le code suivant devrait être préfixé si vous souhaitez exécuter la spécification python ci-dessus en tant que code.
+Le code suivant doit être ajouté au début si vous souhaitez exécuter la spécification Python ci-dessus en tant que code.
 
 ```python
 import sha3, copy
 
-# Suppose un ordre des bits little-endian (identique aux architectures Intel)
+# Suppose un ordre des bits petit-boutiste (comme les architectures Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# fonction de hachage sha3, génère 64 octets en sortie
+# Fonction de hash sha3, produit 64 octets
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -267,7 +267,7 @@ def isprime(x):
 
 ### Tailles des données {#data-sizes}
 
-Les tables de recherche suivantes fournissent environ 2048 epochs tabulées de la taille des données et de la taille des caches.
+Les tables de correspondance suivantes fournissent environ 2048 époques tabulées de tailles de données et de tailles de cache.
 
 ```python
 def get_datasize(block_number):

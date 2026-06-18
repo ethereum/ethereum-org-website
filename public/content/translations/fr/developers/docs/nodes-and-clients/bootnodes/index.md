@@ -1,32 +1,31 @@
 ---
-title: "Introduction aux nœuds de démarrage d'Ethereum"
-description: "Informations de base dont vous avez besoin pour comprendre les nœuds de démarrage"
+title: Introduction aux nœuds d'amorçage Ethereum
+description: Les informations de base dont vous avez besoin pour comprendre les nœuds d'amorçage
 lang: fr
 ---
 
-Lorsqu'un nouveau nœud rejoint le réseau Ethereum, il doit se connecter aux nœuds déjà présents sur ledit réseau dans le but de découvrir de nouveaux pairs. Ces points d'entrée dans le réseau Ethereum sont appelés bootnodes ou nœuds de démarrage. Les clients disposent généralement d'une liste de nœuds de démarrage codée en dur. Ces « bootnodes » sont généralement gérés par l'équipe de développement de l'Ethereum Foundation ou via les équipes clients elles-mêmes. À noter que ces nœuds de démarrage sont bien distincts des nœuds statiques. Les nœuds statiques sont appelés maintes et maintes fois, tandis que les nœuds de démarrage ne sont sollicités que dans le cas où il n'y a pas assez de pairs auxquels se connecter, et qu'un nœud se trouve dans le besoin d'amorcer de nouvelles connexions.
+Lorsqu'un nouveau nœud rejoint le réseau Ethereum, il doit se connecter à des nœuds qui sont déjà sur le réseau afin de découvrir ensuite de nouveaux pairs. Ces points d'entrée dans le réseau Ethereum sont appelés nœuds d'amorçage. Les clients ont généralement une liste de nœuds d'amorçage codée en dur. Ces nœuds d'amorçage sont généralement gérés par l'équipe devops de la Fondation Ethereum ou par les équipes clientes elles-mêmes. Notez que les nœuds d'amorçage ne sont pas la même chose que les nœuds statiques. Les nœuds statiques sont appelés encore et encore, tandis que les nœuds d'amorçage ne sont sollicités que s'il n'y a pas assez de pairs auxquels se connecter et qu'un nœud a besoin d'amorcer de nouvelles connexions.
 
-## Se connecter à un bootnode {#connect-to-a-bootnode}
+## Se connecter à un nœud d'amorçage {#connect-to-a-bootnode}
 
-La plupart des clients ont une liste de bootnodes intégrée, mais vous pouvez également vouloir exécuter votre propre bootnode, ou en utiliser un qui ne fait pas partie de la liste codée en dur du client. Dans ce cas, vous pouvez les mentionner comme suit au démarrage de votre client (exemple pour Geth, veuillez vérifier la documentation de votre client) :
+La plupart des clients ont une liste de nœuds d'amorçage intégrée, mais vous pourriez également vouloir exécuter votre propre nœud d'amorçage, ou en utiliser un qui ne fait pas partie de la liste codée en dur du client. Dans ce cas, vous pouvez les spécifier lors du démarrage de votre client, comme suit (l'exemple est pour Geth, veuillez vérifier la documentation de votre client) :
 
 ```
-geth --bootnodes "enode://<node ID>@<IP address>:<port>"
+geth --bootnodes "enode://<ID du nœud>@<adresse IP>:<port>"
 ```
 
-## Exécuter un bootnode {#run-a-bootnode}
+## Exécuter un nœud d'amorçage {#run-a-bootnode}
 
-Les bootnodes sont des nœuds complets qui ne se trouvent pas derrière un NAT ([Traduction d'adresse réseau](https://www.geeksforgeeks.org/network-address-translation-nat/)). Tout nœud complet peut servir de nœud de démarrage tant qu'il reste accessible au public.
+Les nœuds d'amorçage sont des nœuds complets qui ne sont pas derrière un NAT ([Traduction d'adresse réseau](https://www.geeksforgeeks.org/network-address-translation-nat/)). Tout nœud complet peut agir comme un nœud d'amorçage tant qu'il est accessible publiquement.
 
-Lorsque vous démarrez un nœud, il doit enregistrer votre [enode](/developers/docs/networking-layer/network-addresses/#enode), qui est un identifiant public que d'autres peuvent utiliser pour se connecter à votre nœud.
+Lorsque vous démarrez un nœud, il devrait afficher dans le journal votre [enode](/developers/docs/networking-layer/network-addresses/#enode), qui est un identifiant public que d'autres peuvent utiliser pour se connecter à votre nœud.
 
-L'enode est généralement régénéré lors de chaque redémarrage, alors assurez-vous de consulter la documentation de votre client pour savoir comment produire un enode persistant pour votre nœud de démarrage.
+L'enode est généralement régénéré à chaque redémarrage, assurez-vous donc de consulter la documentation de votre client sur la façon de générer un enode persistant pour votre nœud d'amorçage.
 
-Afin d'être un nœud de démarrage performant, il est de bon augure d'augmenter le nombre maximum d'homologues qui peuvent se connecter à ce nœud. L'exécution d'un nœud de démarrage accompagné par de nombreux pairs, augmentera considérablement les besoins en bande passante.
+Afin d'être un bon nœud d'amorçage, il est judicieux d'augmenter le nombre maximum de pairs qui peuvent s'y connecter. L'exécution d'un nœud d'amorçage avec de nombreux pairs augmentera considérablement les besoins en bande passante.
 
-## Bootnodes disponibles {#available-bootnodes}
+## Nœuds d'amorçage disponibles {#available-bootnodes}
 
-Une liste de bootnodes intégrés dans go-ethereum peut être trouvée [ici](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Ces nœuds de démarrage sont gérés par l'Ethereum Foundation et l'équipe go-ethereum.
+Une liste des nœuds d'amorçage intégrés dans go-ethereum peut être trouvée [ici](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Ces nœuds d'amorçage sont maintenus par la Fondation Ethereum et l'équipe go-ethereum.
 
-Il existe aussi d'autres listes de nœuds de démarrage maintenues par des bénévoles. Veillez à toujours inclure au moins un nœud de démarrage officiel, sinon vous risquez d'être attaqué par \*Eclipse.
-\*Une attaque par éclipse est une attaque par laquelle un acteur malveillant isole un nœud au sein d'un réseau peer-to-peer (P2P) afin d'obscurcir la vue d'un utilisateur sur le réseau et de perturber le réseau en général. Similaires aux attaques Sybil, excepté que dans ce cas, seul un nœud est visé contrairement à une attaque Sybil qui vise l'ensemble du réseau.
+Il existe d'autres listes de nœuds d'amorçage maintenues par des bénévoles. Veuillez vous assurer de toujours inclure au moins un nœud d'amorçage officiel, sinon vous pourriez subir une attaque par éclipse.

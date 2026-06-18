@@ -1,16 +1,10 @@
 ---
 title: Comprendre le contrat intelligent de jeton ERC-20
-description: "Apprenez à mettre en œuvre la norme de jeton ERC-20 avec un exemple complet de contrat intelligent Solidity et son explication."
+description: Apprenez à implémenter le standard de jeton ERC-20 avec un exemple complet de contrat intelligent Solidity et des explications.
 author: "jdourlens"
-tags:
-  [
-    "contrats intelligents",
-    "jetons",
-    "Solidity",
-    "erc-20"
-  ]
+tags: ["contrats intelligents", "jetons", "solidity", "erc-20"]
 skill: beginner
-breadcrumb: "Bases ERC-20"
+breadcrumb: Bases des jetons ERC-20
 lang: fr
 published: 2020-04-05
 source: EthereumDev
@@ -18,11 +12,11 @@ sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-L'une des [normes de contrat intelligent](/developers/docs/standards/) les plus importantes sur Ethereum est connue sous le nom d'[ERC-20](/developers/docs/standards/tokens/erc-20/). Elle s'est imposée comme la norme technique utilisée pour tous les contrats intelligents sur la blockchain Ethereum pour les implémentations de jetons fongibles.
+L'un des [standards de contrats intelligents](/developers/docs/standards/) les plus importants sur Ethereum est connu sous le nom d'[ERC-20](/developers/docs/standards/tokens/erc-20/), qui s'est imposé comme le standard technique utilisé pour tous les contrats intelligents sur la chaîne de blocs Ethereum pour les implémentations de jetons fongibles.
 
-L'ERC-20 définit une liste commune de règles auxquelles tous les jetons Ethereum fongibles doivent adhérer. Par conséquent, cette norme de jeton permet aux développeurs de tous types de prédire avec précision comment les nouveaux jetons fonctionneront au sein du système Ethereum. Cela simplifie et facilite la tâche des développeurs, car ils peuvent poursuivre leur travail, sachant que les projets n'auront pas besoin d'être refaits à chaque sortie d'un nouveau jeton, tant que ce dernier respecte les règles.
+L'ERC-20 définit une liste commune de règles auxquelles tous les jetons fongibles Ethereum doivent se conformer. Par conséquent, ce standard de jeton permet aux développeurs de tous types de prédire avec précision comment les nouveaux jetons fonctionneront au sein du système Ethereum dans son ensemble. Cela simplifie et facilite les tâches des développeurs, car ils peuvent poursuivre leur travail en sachant que chaque nouveau projet n'aura pas besoin d'être refait à chaque fois qu'un nouveau jeton est publié, tant que le jeton respecte les règles.
 
-Voici, présentées sous forme d'interface, les fonctions qu'un ERC-20 doit mettre en œuvre. Si vous n'êtes pas sûr de ce qu'est une interface, consultez notre article sur [la programmation orientée objet dans Solidity](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/).
+Voici, présentées sous forme d'interface, les fonctions qu'un ERC-20 doit implémenter. Si vous n'êtes pas sûr de ce qu'est une interface : consultez notre article sur la [programmation orientée objet (POO) en Solidity](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/).
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -43,7 +37,7 @@ interface IERC20 {
 }
 ```
 
-Voici une explication ligne par ligne de ce à quoi sert chaque fonction. Après cela, nous présenterons une implémentation simple du jeton ERC-20.
+Voici une explication ligne par ligne de l'utilité de chaque fonction. Après cela, nous présenterons une implémentation simple du jeton ERC-20.
 
 ## Getters {#getters}
 
@@ -51,19 +45,19 @@ Voici une explication ligne par ligne de ce à quoi sert chaque fonction. Après
 function totalSupply() external view returns (uint256);
 ```
 
-Renvoie le nombre total de jetons existants. Cette fonction est un getter et ne modifie pas l'état du contrat. Gardez à l'esprit qu'il n'y a pas de nombres à virgule flottante dans Solidity. Par conséquent, la plupart des jetons adoptent 18 décimales et renvoient l'offre totale et d'autres résultats sous la forme 1000000000000000000 pour 1 jeton. Tous les jetons n'ont pas 18 décimales, et c'est un point auquel vous devez vraiment faire attention lorsque vous manipulez des jetons.
+Renvoie la quantité de jetons existants. Cette fonction est un getter et ne modifie pas l'état du contrat. Gardez à l'esprit qu'il n'y a pas de nombres à virgule flottante (floats) en Solidity. Par conséquent, la plupart des jetons adoptent 18 décimales et renverront l'offre totale (total supply) et d'autres résultats comme suit : 1000000000000000000 pour 1 jeton. Tous les jetons n'ont pas 18 décimales et c'est une chose à laquelle vous devez vraiment faire attention lorsque vous manipulez des jetons.
 
 ```solidity
 function balanceOf(address account) external view returns (uint256);
 ```
 
-Renvoie la quantité de jetons détenus par une adresse (`compte`). Cette fonction est un getter et ne modifie pas l'état du contrat.
+Renvoie la quantité de jetons possédés par une adresse (`account`). Cette fonction est un getter et ne modifie pas l'état du contrat.
 
 ```solidity
 function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-La norme ERC-20 permet à une adresse de donner une allocation (« allowance ») à une autre adresse afin que cette dernière puisse en retirer des jetons. Ce getter renvoie le nombre de jetons restants que le `spender` sera autorisé à dépenser au nom du `owner`. Cette fonction est un getter, ne modifie pas l'état du contrat et doit renvoyer 0 par défaut.
+Le standard ERC-20 permet à une adresse de donner une allocation à une autre adresse pour pouvoir en retirer des jetons. Ce getter renvoie le nombre restant de jetons que le `spender` sera autorisé à dépenser au nom du `owner`. Cette fonction est un getter, ne modifie pas l'état du contrat et devrait renvoyer 0 par défaut.
 
 ## Fonctions {#functions}
 
@@ -71,19 +65,19 @@ La norme ERC-20 permet à une adresse de donner une allocation (« allowance �
 function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-Déplace la quantité (`amount`) de jetons de l'adresse de l'appelant de la fonction (`msg.sender`) à l'adresse du destinataire. Cette fonction émet l'événement `Transfer` défini plus loin. Elle renvoie `true` si le transfert a été possible.
+Déplace le montant (`amount`) de jetons de l'adresse de l'appelant de la fonction (`msg.sender`) vers l'adresse du destinataire. Cette fonction émet l'événement `Transfer` défini plus loin. Elle renvoie true si le transfert a été possible.
 
 ```solidity
 function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-Définit le montant de l'`allowance` que le `spender` est autorisé à transférer depuis le solde de l'appelant de la fonction (`msg.sender`). Cette fonction émet l'événement `Approval`. La fonction renvoie une valeur indiquant si l'allocation a été définie avec succès.
+Définit le montant (`allowance`) que le `spender` est autorisé à transférer depuis le solde de l'appelant de la fonction (`msg.sender`). Cette fonction émet l'événement Approval. La fonction renvoie si l'allocation a été définie avec succès.
 
 ```solidity
 function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-Déplace la quantité (`amount`) de jetons de `sender` à `recipient` en utilisant le mécanisme d'allocation. La quantité `amount` est ensuite déduite de l'allocation de l'appelant. Cette fonction émet l'événement `Transfer`.
+Déplace le montant (`amount`) de jetons de `sender` vers `recipient` en utilisant le mécanisme d'allocation. Le montant est ensuite déduit de l'allocation de l'appelant. Cette fonction émet l'événement `Transfer`.
 
 ## Événements {#events}
 
@@ -91,17 +85,17 @@ Déplace la quantité (`amount`) de jetons de `sender` à `recipient` en utilisa
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-Cet événement est émis lorsque la quantité de jetons (`value`) est envoyée de l'adresse `from` à l'adresse `to`.
+Cet événement est émis lorsque le montant de jetons (value) est envoyé de l'adresse `from` à l'adresse `to`.
 
-En cas de frappe de nouveaux jetons, le transfert est généralement `from` l'adresse 0x00..0000, tandis qu'en cas de destruction (« burn ») de jetons, le transfert est `to` l'adresse 0x00..0000.
+Dans le cas de la frappe de nouveaux jetons, le transfert se fait généralement depuis (`from`) l'adresse 0x00..0000, tandis que dans le cas où l'on vient brûler des jetons, le transfert se fait vers (`to`) 0x00..0000.
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
 ```
 
-Cet événement est émis lorsque la quantité de jetons (`value`) est approuvée par le `owner` pour être utilisée par le `spender`.
+Cet événement est émis lorsque le montant de jetons (`value`) est approuvé par le `owner` pour être utilisé par le `spender`.
 
-## Une implémentation basique des jetons ERC-20 {#a-basic-implementation-of-erc-20-tokens}
+## Une implémentation de base des jetons ERC-20 {#a-basic-implementation-of-erc-20-tokens}
 
 Voici le code le plus simple sur lequel baser votre jeton ERC-20 :
 
@@ -181,4 +175,4 @@ contract ERC20Basic is IERC20 {
 }
 ```
 
-Une autre excellente implémentation de la norme de jeton ERC-20 est l'[implémentation ERC-20 d'OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
+Une autre excellente implémentation du standard de jeton ERC-20 est l'[implémentation ERC-20 d'OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
