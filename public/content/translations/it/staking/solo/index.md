@@ -57,7 +57,7 @@ Proprio come le chiavi private proteggono il tuo indirizzo Ethereum, dovrai gene
 [Sicurezza di Ethereum e prevenzione delle truffe](/security/)
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="Manutenzione" eventCategory="SoloStaking" eventName="clicked maintenance">
 L'hardware a volte si guasta, le connessioni di rete generano errori e il software client occasionalmente necessita di aggiornamenti. La manutenzione del nodo è inevitabile e richiederà occasionalmente la tua attenzione. Vorrai assicurarti di rimanere informato su eventuali aggiornamenti di rete previsti o altri aggiornamenti critici del client.
 </ExpandableCard>
 

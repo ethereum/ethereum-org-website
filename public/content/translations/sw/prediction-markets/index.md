@@ -32,8 +32,8 @@ Kinadharia, kwa sababu waweka dau wanaweza kupata faida kwa kuwa sahihi, masoko 
 Tofauti na utabiri wa kitamaduni, masoko ya ubashiri yanayotegemea mnyororo wa vitalu ni:
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Washiriki huweka dhamana ya fedha halisi, jambo ambalo linaashiria ubashiri wa ubora wa juu."/>
-  <Card title="Decentralization" emoji="🌎" description="Kutumia mnyororo wa vitalu na mikataba mahiri huhakikisha malipo ya wazi na ya kiotomatiki." />
+  <Card title="Yenye motisha" emoji=":money_with_wings:" description="Washiriki huweka dhamana ya fedha halisi, jambo ambalo linaashiria ubashiri wa ubora wa juu."/>
+  <Card title="Ugatuzi" emoji="🌎" description="Kutumia mnyororo wa vitalu na mikataba mahiri huhakikisha malipo ya wazi na ya kiotomatiki." />
   <Card title="Uwezekano unaoongozwa na soko" emoji="🤝" description="Bei huwekwa na wafanyabiashara wanaonunua na kuuza hisa za matokeo, badala ya kuwekwa mapema na mweka dau wa kati." />
 </Grid>
 

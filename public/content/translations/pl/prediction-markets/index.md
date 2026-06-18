@@ -32,8 +32,8 @@ W teorii, ponieważ obstawiający mogą zyskać na trafności, rynki predykcyjne
 W przeciwieństwie do tradycyjnego prognozowania, rynki predykcyjne oparte na blockchainie są:
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Uczestnicy stakują prawdziwe środki, co przekłada się na wysoką jakość przewidywań."/>
-  <Card title="Decentralization" emoji="🌎" description="Wykorzystanie blockchaina i inteligentnych kontraktów zapewnia przejrzyste i zautomatyzowane wypłaty." />
+  <Card title="Z systemem zachęt" emoji=":money_with_wings:" description="Uczestnicy stakują prawdziwe środki, co przekłada się na wysoką jakość przewidywań."/>
+  <Card title="Decentralizacja" emoji="🌎" description="Wykorzystanie blockchaina i inteligentnych kontraktów zapewnia przejrzyste i zautomatyzowane wypłaty." />
   <Card title="Kursy kształtowane przez rynek" emoji="🤝" description="Ceny są ustalane przez traderów kupujących i sprzedających udziały w wynikach, a nie z góry określane przez scentralizowanego bukmachera." />
 </Grid>
 

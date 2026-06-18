@@ -32,8 +32,8 @@ buttons:
 전통적인 예측과 달리, 블록체인 기반 예측 시장은 다음과 같은 특징을 가집니다:
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="참가자들은 실제 자금을 스테이킹하며, 이는 고품질의 예측을 의미합니다."/>
-  <Card title="Decentralization" emoji="🌎" description="블록체인과 스마트 컨트랙트를 사용하면 투명하고 자동화된 지급이 보장됩니다." />
+  <Card title="인센티브 제공" emoji=":money_with_wings:" description="참가자들은 실제 자금을 스테이킹하며, 이는 고품질의 예측을 의미합니다."/>
+  <Card title="탈중앙화" emoji="🌎" description="블록체인과 스마트 컨트랙트를 사용하면 투명하고 자동화된 지급이 보장됩니다." />
   <Card title="시장 주도 배당률" emoji="🤝" description="가격은 중앙화된 북메이커가 미리 설정하는 대신, 결과 지분을 사고파는 트레이더들에 의해 결정됩니다." />
 </Grid>
 

@@ -57,7 +57,7 @@ summaryPoints:
 [எத்திரியம் பாதுகாப்பு மற்றும் மோசடி தடுப்பு](/security/)
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="பராமரிப்பு" eventCategory="SoloStaking" eventName="clicked maintenance">
 வன்பொருள் எப்போதாவது செயலிழக்கலாம், பிணைய இணைப்புகளில் பிழை ஏற்படலாம், மற்றும் கிளையண்ட் மென்பொருளை எப்போதாவது மேம்படுத்த வேண்டியிருக்கும். கணு பராமரிப்பு தவிர்க்க முடியாதது மற்றும் எப்போதாவது உங்கள் கவனம் தேவைப்படும். எதிர்பார்க்கப்படும் பிணைய மேம்படுத்தல்கள் அல்லது பிற முக்கியமான கிளையண்ட் மேம்படுத்தல்கள் குறித்து நீங்கள் விழிப்புடன் இருப்பதை உறுதிசெய்ய வேண்டும்.
 </ExpandableCard>
 

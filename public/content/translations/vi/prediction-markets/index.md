@@ -32,8 +32,8 @@ Về lý thuyết, vì người đặt cược có thể kiếm lời từ việ
 Khác với dự báo truyền thống, các thị trường dự đoán dựa trên Chuỗi khối có tính:
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Người tham gia đặt cọc tiền thật, từ đó mang lại những dự đoán chất lượng cao."/>
-  <Card title="Decentralization" emoji="🌎" description="Việc sử dụng chuỗi khối và hợp đồng thông minh đảm bảo các khoản thanh toán minh bạch và tự động." />
+  <Card title="Được khuyến khích" emoji=":money_with_wings:" description="Người tham gia đặt cọc tiền thật, từ đó mang lại những dự đoán chất lượng cao."/>
+  <Card title="Sự phi tập trung" emoji="🌎" description="Việc sử dụng chuỗi khối và hợp đồng thông minh đảm bảo các khoản thanh toán minh bạch và tự động." />
   <Card title="Tỷ lệ cược do thị trường quyết định" emoji="🤝" description="Giá được định đoạt bởi các nhà giao dịch mua và bán cổ phần kết quả, thay vì được định sẵn bởi một nhà cái tập trung." />
 </Grid>
 

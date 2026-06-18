@@ -32,8 +32,8 @@ Teorik olarak, bahisçiler haklı çıkmaktan kâr elde edecekleri için tahmin 
 Geleneksel tahminlerin aksine, Blokzincir tabanlı tahmin piyasaları şöyledir:
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Katılımcılar gerçek fonları stake eder, bu da yüksek kaliteli tahminler anlamına gelir."/>
-  <Card title="Decentralization" emoji="🌎" description="Blokzincir ve akıllı sözleşmeler kullanmak, şeffaf ve otomatik ödemeler sağlar." />
+  <Card title="Teşvikli" emoji=":money_with_wings:" description="Katılımcılar gerçek fonları stake eder, bu da yüksek kaliteli tahminler anlamına gelir."/>
+  <Card title="Merkeziyetsizlik" emoji="🌎" description="Blokzincir ve akıllı sözleşmeler kullanmak, şeffaf ve otomatik ödemeler sağlar." />
   <Card title="Piyasa odaklı oranlar" emoji="🤝" description="Fiyatlar, merkezi bir bahisçi tarafından önceden belirlenmek yerine, sonuç hisseleri alıp satan yatırımcılar tarafından belirlenir." />
 </Grid>
 

@@ -57,7 +57,7 @@ Giống như cách các khóa riêng tư bảo mật địa chỉ Ethereum của
 [Bảo mật Ethereum và phòng chống lừa đảo](/security/)
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="Bảo trì" eventCategory="SoloStaking" eventName="clicked maintenance">
 Phần cứng đôi khi bị lỗi, kết nối mạng bị lỗi và phần mềm máy khách đôi khi cần nâng cấp. Việc bảo trì nút là không thể tránh khỏi và đôi khi sẽ cần sự chú ý của bạn. Bạn sẽ muốn đảm bảo rằng mình luôn nắm rõ mọi bản nâng cấp mạng lưới dự kiến hoặc các bản nâng cấp máy khách quan trọng khác.
 </ExpandableCard>
 

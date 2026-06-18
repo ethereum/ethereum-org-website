@@ -32,8 +32,8 @@ buttons:
 与传统预测不同，基于区块链的预测市场具有以下特点：
 
 <Grid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="参与者质押真实资金，从而得出高质量的预测。"/>
-  <Card title="Decentralization" emoji="🌎" description="使用区块链和智能合约可确保透明且自动化的赔付。" />
+  <Card title="激励" emoji=":money_with_wings:" description="参与者质押真实资金，从而得出高质量的预测。"/>
+  <Card title="去中心化" emoji="🌎" description="使用区块链和智能合约可确保透明且自动化的赔付。" />
   <Card title="市场驱动的赔率" emoji="🤝" description="价格由买卖结果份额的交易者决定，而不是由中心化庄家预先设定。" />
 </Grid>
 
