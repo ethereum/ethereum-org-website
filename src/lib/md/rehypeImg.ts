@@ -1,4 +1,3 @@
-import { execSync } from "child_process"
 import fs from "fs"
 import path from "path"
 
@@ -53,36 +52,12 @@ type PlaceholderData = Record<Path, Placeholder>
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
+// Video clips authored as `![](./x.mp4)` are standardized to fixed aspect
+// ratios at authoring time, so the pipeline doesn't measure them — orientation
+// is chosen by the renderer from a `-portrait` filename suffix. We only need to
+// recognize video here to skip image-only steps (dimension probing, blur
+// placeholders).
 const VIDEO_EXTENSIONS = [".mp4", ".webm", ".mov"]
-
-/**
- * Get video dimensions using ffprobe. Falls back gracefully if ffprobe
- * is not installed or the file cannot be probed.
- */
-const getVideoSize = (
-  src: string,
-  dir: string
-): { width: number; height: number } | undefined => {
-  if (absolutePathRegex.exec(src)) {
-    return
-  }
-  const shouldJoin = !path.isAbsolute(src) || src.startsWith("/")
-  let filePath = src
-  if (dir && shouldJoin) {
-    filePath = path.join(dir, src)
-  }
-  try {
-    const output = execSync(
-      `ffprobe -v quiet -select_streams v:0 -show_entries stream=width,height -of csv=p=0:s=x "${filePath}"`,
-      { encoding: "utf8", timeout: 5000 }
-    ).trim()
-    const [w, h] = output.split("x").map(Number)
-    if (w && h) return { width: w, height: h }
-  } catch {
-    // ffprobe not available or failed — dimensions will be omitted
-  }
-  return undefined
-}
 
 const getImageSize = (src: string, dir: string) => {
   if (absolutePathRegex.exec(src)) {
@@ -198,9 +173,9 @@ const rehypeImg = (options: Options) => {
         const ext = path.extname(src).toLowerCase()
         const isVideo = VIDEO_EXTENSIONS.includes(ext)
 
-        const dimensions = isVideo
-          ? getVideoSize(src, dir)
-          : getImageSize(src, dir)
+        // Videos are sized by the renderer (fixed aspect ratio), so they're not
+        // probed here; they still flow through for src rewriting.
+        const dimensions = isVideo ? undefined : getImageSize(src, dir)
 
         // Skip non-video files that have no detectable dimensions
         if (!dimensions && !isVideo) {

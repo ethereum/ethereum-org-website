@@ -3,6 +3,7 @@ import { extname } from "path"
 import NextLink from "next/link"
 
 import { Image, type ImageProps } from "@/components/Image"
+import MarkdownVideo from "@/components/Image/MarkdownVideo"
 
 import { toPosixPath } from "@/lib/utils/relativePath"
 
@@ -40,20 +41,13 @@ const MarkdownImage = ({
   const isVideo = [".mp4", ".webm", ".mov"].includes(fileExt)
 
   if (isVideo) {
+    // Orientation opt-in: a `-portrait` filename suffix (e.g. `clip-portrait.mp4`)
+    // selects the portrait ratio; everything else is landscape.
+    const orientation = /-portrait\.[^.]+$/.test(transformedSrc)
+      ? "portrait"
+      : "landscape"
     return (
-      <span className="flex justify-center">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          width={isNaN(imageWidth) ? undefined : imageWidth}
-          height={isNaN(imageHeight) ? undefined : imageHeight}
-          className="h-auto max-w-full"
-          aria-label={alt || undefined}
-          src={transformedSrc}
-        />
-      </span>
+      <MarkdownVideo src={transformedSrc} alt={alt} orientation={orientation} />
     )
   }
 
