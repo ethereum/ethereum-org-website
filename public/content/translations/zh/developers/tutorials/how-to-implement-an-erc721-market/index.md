@@ -1,86 +1,86 @@
 ---
-title: "如何实现ERC-721市场 "
-description: "如何在一个去中心化的分类信息板上销售代币化的物品。"
-author: "Alberto Cuesta Cañada "
-tags: [ "智能合同", "erc-721", "Solidity", "通证" ]
+title: 如何实现一个 ERC-721 市场
+description: 如何在去中心化分类广告板上出售代币化物品
+author: "阿尔贝托·奎斯塔·卡尼亚达"
+tags: ["智能合约", "erc-721", "solidity", "代币"]
 skill: intermediate
-breadcrumb: "ERC-721市场"
+breadcrumb: ERC-721 市场
 lang: zh
 published: 2020-03-19
 source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---
 
-在这篇文章中，我要向你展示如何针对以太坊区块链来开发一个类似于Craigslist的 物品分类信息网站。
+在本文中，我将向你展示如何为以太坊区块链编写一个类似 Craigslist 的程序。
 
-在Gumtree、Ebay和Craigslist等网站没有出现的时候，分类信息板大多是由软木或纸制成的。 学校走廊、报纸、路灯、店面周围都有这种分类信息板。
+在 Gumtree、Ebay 和 Craigslist 出现之前，分类广告板大多由软木或纸制成。学校走廊、报纸、路灯和店面里都有分类广告板。
 
-所有这一切都随着互联网的出现而被改变了。 能够看到某种特殊的分类信息板的人数增加了许多数量级。 随着互联网技术的发展，这些信息板背后所代表的市场也变得更加有效率，同时也更容易扩展到全球范围。 Ebay作为一个庞大的业务，其商业模式的源头就是这些实际存在的分类信息板。
+互联网改变了这一切。能够看到特定分类广告板的人数呈指数级增长。随之而来的是，它们所代表的市场变得更加高效，并扩展到了全球规模。Ebay 是一家庞大的企业，其起源就可以追溯到这些实体分类广告板。
 
-区块链技术可以再一次重塑这种商业市场的形态，接下来让我来向你展示这一点是如何发生的。
+随着区块链的出现，这些市场将再次发生改变，让我来告诉你如何实现。
 
-## 货币化 {#monetization}
+## 盈利模式 {#monetization}
 
-基于公共区块链技术的分类信息板的商业模式和Ebay及普通的公司有显著的不同。
+公共区块链分类广告板的商业模式将需要与 Ebay 等公司有所不同。
 
-首先，要考虑[去中心化角度](/developers/docs/web2-vs-web3/)。 目前现存的平台都需要维护自己的服务器。 去中心化的平台是由其用户来维护的，因此其核心平台的成本从平台所有者的角度来讲会降至零。
+首先是[去中心化角度](/developers/docs/web2-vs-web3/)。现有平台需要维护自己的服务器。而去中心化的平台由其用户维护，因此对于平台所有者来说，运行核心平台的成本降至零。
 
-中心化平台有前端界面，后台网站或者可以访问该去中心化平台的接口。 它同时也会有许多其他选择。 平台所有者可以限制客户的访问并强制每个人使用他们的接口，并收取费用。 平台所有者也可以决定开放访问权限（权力归于人民！） 并允许任何人构建该平台的界面。 或者平台所有者可以在这些极端情况中决定任何方法。
+其次是前端，即提供平台访问权限的网站或界面。这里有很多选择。平台所有者可以限制访问，强制每个人使用他们的界面并收取费用。平台所有者也可以决定开放访问权限（将权力交还给人民！），让任何人都能为平台构建界面。或者，所有者可以决定采取介于这两个极端之间的任何方法。
 
-_比我更有远见的商业领袖知道如何将其货币化。 我所看到的是，这与现状不同，并且可能是有利可图的。_
+_比我更有远见的商业领袖会知道如何从中盈利。我所看到的只是这与现状不同，并且可能有利可图。_
 
-此外，还可以从自动化和支付的角度来看问题。 有些东西可以非常[有效地代币化](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com)并在分类广告板中交易。 代币化的资产很容易在区块链中转移。 高度复杂的支付方式可以在区块链中被轻松实现。
+此外，还有自动化和支付角度。有些东西可以非常[有效地被代币化](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com)并在分类广告板上进行交易。代币化资产在区块链中很容易转移。高度复杂的支付方式也可以在区块链中轻松实现。
 
-我在这里嗅到了一个商机。 通过区块链技术，可以轻松实现一个无需运行成本的分类信息板。复杂的支付路径被包含到了每笔交易里。 我相信有人会想出一个关于如何使用它的创意。
+我只是在这里嗅到了商机。一个没有运行成本的分类广告板可以很容易地实现，并且每笔交易中都可以包含复杂的支付路径。我相信有人会想出如何利用它的好主意。
 
-我很高兴来建造它。 接下来，让我们来看看代码。
+我只是很乐意去构建它。让我们来看看代码。
 
 ## 实现 {#implementation}
 
-不久前，我们启动了一个[开源代码库](https://github.com/HQ20/contracts?ref=hackernoon.com)，其中包含业务案例示例实现和其他好东西，请看一看。
+不久前，我们启动了一个[开源代码库](https://github.com/HQ20/contracts?ref=hackernoon.com)，其中包含商业案例的示例实现和其他好东西，请看一看。
 
-这个[以太坊分类广告板](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com)的代码就在那里，请随意使用。 请注意，这个项目的代码尚未经过审核，你在把资金投入这个项目之前需要进行代码的尽职审查。
+这个[以太坊分类广告板](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com)的代码就在那里，请随意使用和测试。只需注意，该代码尚未经过审计，在投入资金之前，你需要做好自己的尽职调查。
 
-这个项目的基础并不复杂。 分类信息板中的所有广告是一个包含几个字段的结构体：
+广告板的基础并不复杂。广告板中的所有广告都只是一个包含几个字段的结构体：
 
 ```solidity
 struct Trade {
   address poster;
   uint256 item;
   uint256 price;
-  bytes32 status; // Open, Executed, Cancelled
+  bytes32 status; // 开启，已执行，已取消
 }
 ```
 
-因此，字段“Poster”是指发布这个广告的人。 “Item”是指需要售卖的物品。 “Price”字段是指该物品的价格。 “Status”字段是指这笔交易的执行状态，可以是“open”、“executed”、“cancelled”。
+因此，有人发布广告。一件待售物品。物品的价格。交易的状态（可以是开放、已执行或已取消）。
 
-所有的这些交易将被报存到一个映射中。 因为Solidity中的一切事物似乎都是映射。 也是因为这种方式比较方便。
+所有这些交易都将保存在一个映射中。因为在 Solidity 中，似乎一切都是映射。也因为这样很方便。
 
 ```solidity
 mapping(uint256 => Trade) public trades;
 ```
 
-使用映射是因为我们需要在广告发布前，给每个广告赋予一个id，同时在我们操作广告前，也需要知道广告的id。 在智能合约或前端有多种处理方法。 请询问你是否需要一些提示。
+使用映射只是意味着我们必须在发布每个广告之前为其生成一个 ID，并且在对其进行操作之前，我们需要知道该广告的 ID。在智能合约或前端中，有多种方法可以处理这个问题。如果你需要一些指导，请随时提问。
 
-接下来的问题是我们需要处理哪些物品，以及用于支付交易的货币是什么。
+接下来要解决的问题是，我们处理的这些物品是什么，以及用于支付交易的货币是什么。
 
-对于这些物品，我们只要求它们实现 [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com) 接口，这实际上只是在区块链中表示现实世界物品的一种方式，尽管它[最适用于数字资产](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com)。 我们将在构造函数中定制化我们自己的ERC721合约，这意味着我们分类信息板中的任何资产都需要事先被代币化。
+对于物品，我们只要求它们实现 [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com) 接口，这实际上只是在区块链中表示现实世界物品的一种方式，尽管它[最适合数字资产](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com)。我们将在构造函数中指定我们自己的 ERC721 合约，这意味着我们分类广告板中的任何资产都需要事先被代币化。
 
-对于付款，我们将做类似的事情。 大多数区块链项目都定义了自己的 [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) 加密货币。 其他一些人更喜欢使用像DAI这样的主流技术。 在这个分类信息板的应用中，你只需要在构造函数里决定你构建的货币是什么。 很容易。
+对于支付，我们将采取类似的做法。大多数区块链项目都定义了自己的 [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) 加密货币。其他一些项目则更喜欢使用像 DAI 这样的主流加密货币。在这个分类广告板中，你只需要在构造时决定你的货币是什么。非常简单。
 
 ```solidity
 constructor (
-address _currencyTokenAddress, address _itemTokenAddress
-) public { 
- currencyToken = IERC20(_currencyTokenAddress);
-itemToken = IERC721(_itemTokenAddress);
-tradeCounter = 0;
+  address _currencyTokenAddress, address _itemTokenAddress
+) public {
+  currencyToken = IERC20(_currencyTokenAddress);
+  itemToken = IERC721(_itemTokenAddress);
+  tradeCounter = 0;
 }
 ```
 
-目前我们到达这里了。 我们有广告、用于交易的商品和用来付款的货币。 制作一个广告意味着将同一个物品放在托管中，以表明你拥有它并且你没有发布它两次，可能是在不同的分类信息板上。
+我们快完成了。我们有了广告、用于交易的物品和用于支付的货币。制作广告意味着将物品放入托管中，以证明你拥有它，并且你没有将其重复发布（可能在不同的广告板上）。
 
-下面的代码正是这样做的。 将物品放在托管中，制作广告，做一些记账操作。
+下面的代码正是这样做的。将物品放入托管，创建广告，并执行一些清理工作。
 
 ```solidity
 function openTrade(uint256 _item, uint256 _price)
@@ -98,7 +98,7 @@ function openTrade(uint256 _item, uint256 _price)
 }
 ```
 
-接受交易意味着选择某个广告（交易）、支付价格、接收物品。 以下的代码用来获取交易。 检查它是否可用。 支付该物品的费用。 获取物品。 更新广告信息。
+接受交易意味着选择一个广告（交易），支付价格，接收物品。下面的代码检索一笔交易。检查其是否可用。支付物品。检索物品。更新广告。
 
 ```solidity
 function executeTrade(uint256 _trade)
@@ -113,9 +113,9 @@ function executeTrade(uint256 _trade)
 }
 ```
 
-最后，我们可以选择让卖家在买家接受之前退出交易。 在某些模型中，广告会在过期前保留一段时间。 你的选择，具体取决于你的市场设计。
+最后，我们为卖家提供了一个选项，可以在买家接受交易之前退出交易。在某些模式中，广告会在一段时间内有效，然后过期。这取决于你对市场的设计。
 
-该代码与用于执行交易的代码非常相似，只是没有货币交换。同时该物品返回到广告的发行方。
+这段代码与用于执行交易的代码非常相似，只是没有货币易手，物品会退还给广告发布者。
 
 ```solidity
 function cancelTrade(uint256 _trade)
@@ -124,23 +124,23 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "交易只能由发布者取消。"
+    "Trade can be cancelled only by poster."
   );
-  require(trade.status == "Open", "交易未开放。");
+  require(trade.status == "Open", "Trade is not Open.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Cancelled";
   emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-就是这样。 你已经浏览到了该代码实现的末尾。 令人惊讶的是，一些业务概念在用代码表达时是多么紧凑，这就是其中一个例子。 在我们的[代码库](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol)中查看完整的合约。
+就是这样。你已经完成了实现的最后一步。令人惊讶的是，一些商业概念在用代码表达时是如此紧凑，这就是其中一个例子。请[在我们的代码库中](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol)查看完整的合约。
 
 ## 结论 {#conclusion}
 
-分类信息板是一种易于在互联网技术的帮助下大规模扩张的常见市场结构，也是一种容易形成少数垄断赢家的非常流行的商业模式。
+分类广告板是一种常见的市场配置，随着互联网的发展而大规模扩展，成为一种非常受欢迎的商业模式，并产生了一些垄断性的赢家。
 
-分类信息板也恰好是在区块链环境中容易进行复制的一种简单工具，具有可以挑战现有的巨头的非常具体的功能。
+分类广告板碰巧也是一种很容易在区块链环境中复制的工具，其非常具体的特性将使挑战现有巨头成为可能。
 
-在本文中，我尝试将分类信息板的商业业务与技术实现结合起来进行讲解。 如果你拥有合适的技能，这些知识应该可以帮助你创建愿景和实施路线图。
+在本文中，我尝试将分类广告板业务的商业现实与技术实现联系起来。如果你具备相应的技能，这些知识应该能帮助你制定愿景和实施路线图。
 
-与往常一样，如果你想构建任何有趣的东西并希望得到一些建议，请[给我留言](https://albertocuesta.es/)！ 我总是很乐意为你提供帮助。
+一如既往，如果你打算构建任何有趣的东西并希望得到一些建议，请[给我留言](https://albertocuesta.es/)！我总是很乐意提供帮助。

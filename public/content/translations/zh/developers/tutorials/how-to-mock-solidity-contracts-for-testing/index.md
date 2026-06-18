@@ -1,27 +1,27 @@
 ---
-title: "如何在测试中模拟 Solidity 智能合约"
-description: "为什么应该在测试时模拟合约"
-author: Markus Waas
+title: 如何在测试中模拟 Solidity 智能合约
+description: 为什么在测试时应该模拟（mock）你的合约
+author: 马库斯·瓦斯
 lang: zh
-tags: [ "Solidity", "智能合同", "测试", "模拟" ]
+tags: ["solidity", "智能合约", "测试", "模拟"]
 skill: intermediate
-breadcrumb: "模拟合约"
+breadcrumb: 模拟合约
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
 
-[模拟对象](https://wikipedia.org/wiki/Mock_object)是面向对象编程中的一种常见设计模式。 Mock 一词来源于古法语词“mocquer”，意为“嘲笑，取笑”，但它渐渐拥有了“模拟真实事物”的含义，这实际上也是我们在编程时所做的事情。 不要随意拿你的智能合约开玩笑，但一定要尽可能多地模拟它们。 这将使你的工作更轻松。
+[模拟对象（Mock objects）](https://wikipedia.org/wiki/Mock_object)是面向对象编程中常见的设计模式。它源于古法语单词“mocquer”，意为“取笑”，后来演变为“模仿真实事物”，这实际上就是我们在编程中所做的事情。请只在你想取笑你的智能合约时才去取笑它们，但只要可能，就尽量模拟（mock）它们。这会让你的生活更轻松。
 
-## 用模拟对象进行合约单元测试 {#unit-testing-contracts-with-mocks}
+## 使用模拟进行合约单元测试 {#unit-testing-contracts-with-mocks}
 
-对合约进行模拟，本质上是创建一个与该合约行为类似的副本，但开发者可以轻易控制这个副本。 通常你会遇到复杂的合约，而你只想[对合约的一小部分进行单元测试](/developers/docs/smart-contracts/testing/)。 问题在于，如果测试这一小部分需要合约进入一个非常特别但又难以进入的状态，会怎样？
+模拟合约本质上意味着创建该合约的第二个版本，其行为与原始版本非常相似，但开发者可以轻松控制它。你经常会遇到复杂的合约，而你只想[对合约的一小部分进行单元测试](/developers/docs/smart-contracts/testing/)。问题是，如果测试这一小部分需要一个很难达到的特定合约状态，该怎么办？
 
-可以每次都编写将合约带入所需状态的复杂测试设置逻辑，也可以写一个模拟合约。 利用继承，对合约进行模拟比较容易。 只需创建继承原始合约的另一个模拟合约即可。 这时，你就可以重写模拟合约中的函数。 让我们通过一个例子来理解它。
+你可以每次都编写复杂的测试设置逻辑，使合约进入所需的状态，或者你可以编写一个模拟（mock）。通过继承来模拟合约非常简单。只需创建一个继承自原始合约的第二个模拟合约即可。现在你可以在模拟合约中重写（override）函数。让我们通过一个例子来看看。
 
-## 示例：私有 ERC20 {#example-private-erc20}
+## 示例：私有 ERC-20 {#example-private-erc20}
 
-本文使用一个在开始时提供私密时间的示例 ERC-20 合约。 合约所有者可以管理私密用户，而且只有这些用户才能在开始时接收代币。 经过特定一段时间后，所有人就都可以使用代币了。 如果你好奇，我们使用的是新的 OpenZeppelin 合约 v3 中的 [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) 钩子。
+我们使用一个带有初始私有时间的 ERC-20 合约示例。所有者可以管理私有用户，一开始只有这些用户才被允许接收代币。一旦经过特定时间，所有人都将被允许使用代币。如果你好奇的话，我们使用的是新版欧本齐柏林（OpenZeppelin）合约 v3 中的 [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) 钩子。
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -48,7 +48,7 @@ contract PrivateERC20 is ERC20, Ownable {
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override {
         super._beforeTokenTransfer(from, to, amount);
 
-        require(_validRecipient(to), "PrivateERC20：无效的接收者");
+        require(_validRecipient(to), "PrivateERC20: invalid recipient");
     }
 
     function _validRecipient(address to) private view returns (bool) {
@@ -61,7 +61,7 @@ contract PrivateERC20 is ERC20, Ownable {
 }
 ```
 
-现在我们对此合约进行模拟。
+现在让我们来模拟它。
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -82,22 +82,22 @@ contract PrivateERC20Mock is PrivateERC20 {
 }
 ```
 
-你将得到以下错误消息之一：
+你将收到以下错误消息之一：
 
-- `PrivateERC20Mock.sol：类型错误：重写函数缺少“override”说明符。`
-- `PrivateERC20.sol：类型错误：试图重写非虚函数。 您是否忘记添加“virtual”？`
+- `PrivateERC20Mock.sol: TypeError: Overriding function is missing "override" specifier.`
+- `PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.`
 
-由于使用的是新的 Solidity 0.6 版本，所以必须为可被重写的函数添加 `virtual` 关键字，为执行重写的函数添加 override。 因此，我们为两个 `isPublic` 函数添加这些关键字。
+由于我们使用的是新的 0.6 Solidity 版本，我们必须为可以被重写的函数添加 `virtual` 关键字，并为重写函数添加 override 关键字。因此，让我们将它们添加到这两个 `isPublic` 函数中。
 
-现在，在单元测试中，你就可以使用 `PrivateERC20Mock` 了。 想要在私密使用期间测试合约的行为时，请使用 `setIsPublic(false)`；同样，可以使用 `setIsPublic(true)` 在公共使用期间测试。 当然，在我们的示例中，我们也可以使用[时间帮助器](https://docs.openzeppelin.com/test-helpers/0.5/api#increase)来相应地更改时间。 但至此，模拟合约的概念应该已经清楚了，并且你也可以想象一下不仅仅需要修改时间的复杂场景。
+现在在你的单元测试中，你可以改用 `PrivateERC20Mock`。当你想测试私有使用时间内的行为时，使用 `setIsPublic(false)`，同样地，使用 `setIsPublic(true)` 来测试公共使用时间。当然，在我们的示例中，我们也可以直接使用[时间辅助工具](https://docs.openzeppelin.com/test-helpers/0.5/api#increase)来相应地更改时间。但是现在模拟的概念应该很清楚了，你可以想象在某些场景下，事情并不像简单地推进时间那么容易。
 
 ## 模拟多个合约 {#mocking-many-contracts}
 
-如果每进行一次模拟都要创建另一个合约，那将是一件很麻烦的事。 如果这困扰到你，可以看看 [MockContract](https://github.com/gnosis/mock-contract) 程序库。 它允许你实时重写和更改合约的行为。 但是，该库只能用来模拟对另一个合约的调用，因此对于上面的示例并不适用。
+如果你必须为每一个模拟创建一个单独的合约，事情可能会变得一团糟。如果这让你感到困扰，你可以看看 [MockContract](https://github.com/gnosis/mock-contract) 库。它允许你动态地重写和更改合约的行为。然而，它仅适用于模拟对另一个合约的调用，因此它不适用于我们的示例。
 
-## 模拟可以更强大 {#mocking-can-be-even-more-powerful}
+## 模拟可以更加强大 {#mocking-can-be-even-more-powerful}
 
-模拟技术的强大之处远不仅于此。
+模拟的强大之处不止于此。
 
-- 增加函数：不只是重写某个特定函数的功能很有用，额外增加函数的功能也有其用武之地。 对于代币来说，一个很好的示例是增加 `mint` 函数，让任何用户都可以免费获得新代币。
-- 在测试网上使用：当你在测试网上部署和测试你的合约以及去中心化应用程序时，请考虑使用模拟合约。 如非必须，请尽量避免重写函数。 毕竟你想要测试真实的逻辑。 然而，举例来说，添加重置函数是有用的，它只是将合约状态重置为初始状态，而无需再部署一个新合约。 显然，你不想在主网合约中添加这样的函数。
+- 添加函数：不仅重写特定函数很有用，仅仅添加额外的函数也很有用。对于代币来说，一个很好的例子就是添加一个额外的 `mint` 函数，允许任何用户免费获取新代币。
+- 在测试网中的使用：当你在测试网上将合约与你的去中心化应用 (dapp) 一起部署和测试时，考虑使用模拟版本。除非万不得已，否则避免重写函数。毕竟你想测试的是真实的逻辑。但是，例如添加一个重置函数可能会很有用，它只需将合约状态重置为初始状态，而无需重新部署。显然，你不会希望在主网（Mainnet）合约中包含该功能。

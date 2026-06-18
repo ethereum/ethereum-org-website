@@ -1,42 +1,42 @@
 ---
-title: "ERC-4626 代币化资金库标准"
-description: "收益资金库的标准"
+title: ERC-4626 代币化金库标准
+description: 生息金库的标准。
 lang: zh
 ---
 
 ## 简介 {#introduction}
 
-ERC-4626 是优化和统一收益资金库技术参数的标准。 它为表示单个底层 ERC-20 代币的份额的代币化收益资金库提供标准应用程序接口。 ERC-4626 还概述了使用 ERC-20 的代币化资金库的可选扩展，提供存款、提取代币和读取余额的基本功能。
+ERC-4626 是一个旨在优化和统一生息金库技术参数的标准。它为代表单一基础 ERC-20 代币份额的代币化生息金库提供了一个标准 API。ERC-4626 还概述了利用 ERC-20 的代币化金库的可选扩展，提供了存入、提取代币和读取余额的基本功能。
 
-**ERC-4626 在收益资金库中的作用**
+**ERC-4626 在生息金库中的作用**
 
-借贷市场、聚合器和本质上计息的代币可以帮助用户通过执行不同的策略来找到他们的加密代币的最佳收益。 这些策略的完成方式略有不同，这可能容易出错或浪费开发资源。
+借贷市场、聚合器和本质上生息的代币通过执行不同的策略，帮助用户为其加密货币代币找到最佳收益。这些策略的执行方式略有不同，这可能容易出错或浪费开发资源。
 
-收益资金库的 ERC-4626 标准通过创建更加一致和健壮的实现模式，无需开发者提供专门的工作，就能减少集成工作量并解锁在各种应用程序中获取收益的途径。
+生息金库中的 ERC-4626 将通过创建更一致和稳健的实现模式，降低集成工作量，并使开发者无需花费太多专门精力即可在各种应用中解锁收益获取途径。
 
 ERC-4626 代币在 [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) 中有完整描述。
 
-**异步资金库扩展 (ERC-7540)**
+**异步金库扩展 (ERC-7540)**
 
-ERC-4626 针对原子存款和赎回上限进行了优化。 如果达到上限，则无法提交新的存款或赎回。 此限制不适用于任何将异步操作或延迟作为与资金库交互先决条件的智能合约系统（例如，真实世界资产协议、非足额抵押借贷协议、跨链借贷协议、流动性质押代币或保险安全模块）。
+ERC-4626 针对达到上限的原子存款和赎回进行了优化。如果达到上限，则无法提交新的存款或赎回。这种限制对于任何将异步操作或延迟作为与金库交互先决条件的智能合约系统（例如，现实世界资产协议、抵押不足借贷协议、跨链借贷协议、流动性质押代币 (LST) 或保险安全模块）来说效果不佳。
 
-ERC-7540 拓展了 ERC-4626 资金库在异步用例中的实用性。 充分利用现有的资金库接口（`deposit`/`withdraw`/`mint`/`redeem`）来声明异步请求。
+ERC-7540 扩展了 ERC-4626 金库在异步用例中的实用性。现有的金库接口（`deposit`/`withdraw`/`mint`/`redeem`）被充分利用来申领异步请求。
 
 ERC-7540 扩展在 [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) 中有完整描述。
 
-**多资产资金库扩展 (ERC-7575)**
+**多资产金库扩展 (ERC-7575)**
 
-ERC-4626 不支持的一个缺失用例是具有多种资产或入口点的资金库，例如流动性提供商 (LP) 代币。 由于 ERC-4626 要求其本身是 ERC-20，这些用例通常难以操作或不兼容。
+ERC-4626 不支持的一个缺失用例是具有多种资产或入口点（例如流动性提供者 (LP) 代币）的金库。由于 ERC-4626 要求其本身必须是 ERC-20，这些金库通常显得笨重或不合规。
 
-ERC-7575 通过从 ERC-4626 实现外部化 ERC-20 代币实现，增加了对多资产资金库的支持。
+ERC-7575 通过将 ERC-20 代币实现从 ERC-4626 实现中外部化，增加了对多资产金库的支持。
 
 ERC-7575 扩展在 [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) 中有完整描述。
 
 ## 前提条件 {#prerequisites}
 
-为了更好地理解本页内容，我们建议您先阅读有关[代币标准](/developers/docs/standards/tokens/)和 [ERC-20](/developers/docs/standards/tokens/erc-20/) 的内容。
+为了更好地理解本页面，我们建议你首先阅读有关[代币标准](/developers/docs/standards/tokens/)和 [ERC-20](/developers/docs/standards/tokens/erc-20/) 的内容。
 
-## ERC-4626 函数和功能：{#body}
+## ERC-4626 功能与特性： {#body}
 
 ### 方法 {#methods}
 
@@ -46,7 +46,7 @@ ERC-7575 扩展在 [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) 中有完
 function asset() public view returns (address assetTokenAddress)
 ```
 
-此函数返回用于资金库记帐、存款和取款的标的代币的地址。
+此函数返回金库用于记账、存款和提款的基础代币的地址。
 
 #### totalAssets {#totalassets}
 
@@ -54,7 +54,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-此函数返回资金库持有的标的资产总量。
+此函数返回金库持有的基础资产总额。
 
 #### convertToShares {#convertoshares}
 
@@ -62,7 +62,7 @@ function totalAssets() public view returns (uint256)
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-此函数返回 `shares` 的数量，该数量将由资金库兑换为提供的 `assets` 数量。
+此函数返回金库将为所提供的 `assets` 数量兑换的 `shares` 数量。
 
 #### convertToAssets {#convertoassets}
 
@@ -70,7 +70,7 @@ function convertToShares(uint256 assets) public view returns (uint256 shares)
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-此函数返回 `assets` 的数量，该数量将由资金库兑换为提供的 `shares` 数量。
+此函数返回金库将为所提供的 `shares` 数量兑换的 `assets` 数量。
 
 #### maxDeposit {#maxdeposit}
 
@@ -78,7 +78,7 @@ function convertToAssets(uint256 shares) public view returns (uint256 assets)
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-此函数返回在单次 [`deposit`](#deposit) 调用中可存入的最大底层资产数量，这些份额将为 `receiver` 铸造。
+此函数返回在单次 [`deposit`](#deposit) 调用中可以存入的最大基础资产数量，并为 `receiver` 铸造份额。
 
 #### previewDeposit {#previewdeposit}
 
@@ -86,7 +86,7 @@ function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
-此函数允许用户模拟他们在当前区块的存款效果。
+此函数允许用户模拟其在当前区块存款的效果。
 
 #### deposit {#deposit}
 
@@ -94,7 +94,7 @@ function previewDeposit(uint256 assets) public view returns (uint256 shares)
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-此函数将底层代币的 `assets` 存入资金库，并将 `shares` 的所有权授予 `receiver`。
+此函数将 `assets` 数量的基础代币存入金库，并将 `shares` 的所有权授予 `receiver`。
 
 #### maxMint {#maxmint}
 
@@ -102,15 +102,15 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-此函数返回在单次 [`mint`](#mint) 调用中可铸造的最大份额数量，这些份额将为 `receiver` 铸造。
+此函数返回在单次 [`mint`](#mint) 调用中可以铸造的最大份额数量，并为 `receiver` 铸造份额。
 
 #### previewMint {#previewmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256 maxShares)
+function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
-此函数允许用户在当前区块模拟他们的铸币效果。
+此函数允许用户模拟其在当前区块铸造的效果。
 
 #### mint {#mint}
 
@@ -118,7 +118,7 @@ function maxMint(address receiver) public view returns (uint256 maxShares)
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-此函数通过存入底层代币的 `assets`，将 `shares` 数量的资金库份额精确地铸造给 `receiver`。
+此函数通过存入 `assets` 数量的基础代币，向 `receiver` 铸造恰好 `shares` 数量的金库份额。
 
 #### maxWithdraw {#maxwithdraw}
 
@@ -126,7 +126,7 @@ function mint(uint256 shares, address receiver) public returns (uint256 assets)
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-此函数返回通过单次 [`withdraw`](#withdraw) 调用可从 `owner` 余额中提取的最大底层资产数量。
+此函数返回通过单次 [`withdraw`](#withdraw) 调用可以从 `owner` 余额中提取的最大基础资产数量。
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -134,7 +134,7 @@ function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
-此函数允许用户模拟他们在当前区块取款的效果。
+此函数允许用户模拟其在当前区块提款的效果。
 
 #### withdraw {#withdraw}
 
@@ -142,7 +142,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-此函数从 `owner` 处销毁 `shares`，并从资金库向 `receiver` 准确发送 `assets` 数量的代币。
+此函数从 `owner` 销毁 `shares`，并从金库向 `receiver` 发送恰好 `assets` 数量的代币。
 
 #### maxRedeem {#maxredeem}
 
@@ -150,7 +150,7 @@ function withdraw(uint256 assets, address receiver, address owner) public return
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-此函数返回通过 [`redeem`](#redeem) 调用可从 `owner` 余额中赎回的最大份额数量。
+此函数返回通过 [`redeem`](#redeem) 调用可以从 `owner` 余额中赎回的最大份额数量。
 
 #### previewRedeem {#previewredeem}
 
@@ -158,7 +158,7 @@ function maxRedeem(address owner) public view returns (uint256 maxShares)
 function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
-此函数允许用户在当前区块模拟他们的赎回效果。
+此函数允许用户模拟其在当前区块赎回的效果。
 
 #### redeem {#redeem}
 
@@ -166,7 +166,7 @@ function previewRedeem(uint256 shares) public view returns (uint256 assets)
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-此函数从 `owner` 赎回特定数量的 `shares`，并将底层代币的 `assets` 从资金库发送到 `receiver`。
+此函数从 `owner` 赎回特定数量的 `shares`，并从金库向 `receiver` 发送 `assets` 数量的基础代币。
 
 #### totalSupply {#totalsupply}
 
@@ -174,7 +174,7 @@ function redeem(uint256 shares, address receiver, address owner) public returns 
 function totalSupply() public view returns (uint256)
 ```
 
-返回流通中未赎回的资金库份额总数。
+返回流通中未赎回的金库份额总数。
 
 #### balanceOf {#balanceof}
 
@@ -182,17 +182,17 @@ function totalSupply() public view returns (uint256)
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-返回 `owner` 当前拥有的资金库份额总量。
+返回 `owner` 当前拥有的金库份额总额。
 
-### 接口图 {#mapOfTheInterface}
+### 接口映射 {#mapoftheinterface}
 
-![ERC-4626 接口图](./map-of-erc-4626.png)
+![Map of the ERC-4626 interface](./map-of-erc-4626.png)
 
 ### 事件 {#events}
 
-#### Deposit 事件
+#### Deposit 事件 {#deposit-event}
 
-**必须**在通过 [`mint`](#mint) 和 [`deposit`](#deposit) 方法将代币存入资金库时发出。
+当通过 [`mint`](#mint) 和 [`deposit`](#deposit) 方法将代币存入金库时，**必须**触发此事件。
 
 ```solidity
 event Deposit(
@@ -203,11 +203,11 @@ event Deposit(
 )
 ```
 
-其中 `sender` 是用 `assets` 兑换 `shares`，并将这些 `shares` 转移给 `owner` 的用户。
+其中 `sender` 是将 `assets` 兑换为 `shares`，并将这些 `shares` 转移给 `owner` 的用户。
 
-#### 提款事件
+#### Withdraw 事件 {#withdraw-event}
 
-**必须**在存款人使用 [`redeem`](#redeem) 或 [`withdraw`](#withdraw) 方法从资金库提取份额时发出。
+当存款人通过 [`redeem`](#redeem) 或 [`withdraw`](#withdraw) 方法从金库中提取份额时，**必须**触发此事件。
 
 ```solidity
 event Withdraw(
@@ -219,9 +219,9 @@ event Withdraw(
 )
 ```
 
-其中 `sender` 是触发取款并将 `owner` 拥有的 `shares` 兑换为 `assets` 的用户。 `receiver` 是收到提取的 `assets` 的用户。
+其中 `sender` 是触发提款并将 `owner` 拥有的 `shares` 兑换为 `assets` 的用户。`receiver` 是接收提取的 `assets` 的用户。
 
-## 扩展阅读{#further-reading}
+## 延伸阅读 {#further-reading}
 
-- [EIP-4626：代币化资金库标准](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626：GitHub 代码库](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [EIP-4626：代币化金库标准](https://eips.ethereum.org/EIPS/eip-4626)
+- [ERC-4626：GitHub 仓库](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
