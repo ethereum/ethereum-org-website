@@ -1,35 +1,32 @@
-import { type BaseHTMLAttributes } from "react"
-import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { StaticImageData } from "next/image"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
-import type { ICard, IGetInvolvedCard } from "@/lib/interfaces"
+import type { Lang, PageParams } from "@/lib/types"
 
-import ActionCard from "@/components/ActionCard"
 import ContentFeedback from "@/components/ContentFeedback"
 import { HubHero } from "@/components/Hero"
-import type { HubHeroProps } from "@/components/Hero/HubHero"
-import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import MarkdownCard from "@/components/MarkdownCard"
+import MarkdownCard, { MarkdownCardProps } from "@/components/MarkdownCard"
 import Translation from "@/components/Translation"
-import { ButtonLink, ButtonLinkProps } from "@/components/ui/buttons/Button"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import { Divider } from "@/components/ui/divider"
-import { Flex } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
+import { Section } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import CommunityJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import developersEthBlockImg from "@/public/images/developers-eth-blocks.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -37,72 +34,15 @@ import ethImg from "@/public/images/eth.png"
 import financeTransparentImg from "@/public/images/finance_transparent.png"
 import futureTransparentImg from "@/public/images/future_transparent.png"
 import hackathonTransparentImg from "@/public/images/hackathon_transparent.png"
-import communityHeroImg from "@/public/images/heroes/community-hero.png"
+import heroImg from "@/public/images/heroes/community-hero.png"
 import upgradesCoreImg from "@/public/images/upgrades/core.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
-
-const Content = ({ children }: ChildOnlyProp) => (
-  <div className="w-full px-8 py-4">{children}</div>
-)
-
-const PageContainer = ({ children }: ChildOnlyProp) => (
-  <Flex asChild className="mx-auto w-full flex-col items-center">
-    <MainArticle>{children}</MainArticle>
-  </Flex>
-)
-
-const ButtonRow = ({ children }: ChildOnlyProp) => (
-  <Flex className="flex-col items-start md:flex-row">{children}</Flex>
-)
-
-const StyledButtonLink = ({ children, ...props }: ButtonLinkProps) => (
-  <ButtonLink
-    className="ms-0 mt-4 flex items-center md:ms-2 md:mt-0"
-    {...props}
-  >
-    {children}
-  </ButtonLink>
-)
-
-const RowReverse = ({ children }: ChildOnlyProp) => (
-  <Flex className="flex-col-reverse items-center lg:flex-row-reverse lg:items-stretch">
-    {children}
-  </Flex>
-)
-
-const ImageContainer = ({ children }: ChildOnlyProp) => (
-  <Flex className="h-full w-3/4 lg:w-full">{children}</Flex>
-)
-
-const Subtitle = ({ children }: ChildOnlyProp) => (
-  <p className="mb-8 text-md sm:text-xl">{children}</p>
-)
-
-const FeatureContent = ({ children }: ChildOnlyProp) => (
-  <Flex className="h-full w-full flex-col justify-center p-8 lg:p-24">
-    {children}
-  </Flex>
-)
-
-const H2 = ({
-  children,
-  className,
-  ...props
-}: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className={cn("mt-0 mb-8 text-2xl md:text-3xl", className)} {...props}>
-    {children}
-  </h2>
-)
 
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
-
-  const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage("/community")
-  const pickedMessages = pick(allMessages, requiredNamespaces)
 
   const { contributors } = await getAppPageContributorInfo(
     "community",
@@ -111,38 +51,39 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   const t = await getTranslations("page-community")
 
-  const cards: ICard[] = [
+  const cards: {
+    image: StaticImageData
+    title: string
+    description: string
+    href: string
+  }[] = [
     {
       image: upgradesCoreImg,
       title: t("page-community-card-1-title"),
       description: t("page-community-card-1-description"),
-      alt: t("page-index-get-started-wallet-image-alt"),
       href: "/community/online/",
     },
     {
       image: ethImg,
       title: t("page-community-card-2-title"),
       description: t("page-community-card-2-description"),
-      alt: t("page-index-get-started-eth-image-alt"),
       href: "/community/events/",
     },
     {
       image: dogeComputerImg,
       title: t("page-community-card-3-title"),
       description: t("page-community-card-3-description"),
-      alt: t("page-index-get-started-dapps-image-alt"),
       href: "/community/get-involved/",
     },
     {
       image: futureTransparentImg,
       title: t("page-community-card-4-title"),
       description: t("page-community-card-4-description"),
-      alt: t("page-index-get-started-dapps-image-alt"),
       href: "/community/grants/",
     },
   ]
 
-  const whyGetInvolvedCards: IGetInvolvedCard[] = [
+  const whyGetInvolvedCards: MarkdownCardProps[] = [
     {
       emoji: ":mage:",
       title: t("page-community-why-get-involved-card-1-title"),
@@ -160,168 +101,173 @@ export default async function Page(props: { params: Promise<PageParams> }) {
     },
   ]
 
-  const heroContent: HubHeroProps = {
-    title: t("page-community-hero-title"),
-    header: t("page-community-hero-header"),
-    description: t("page-community-hero-subtitle"),
-    heroImg: communityHeroImg,
-  }
-
   return (
     <>
-      <CommunityJsonLD locale={locale} contributors={contributors} />
-      <I18nProvider locale={locale} messages={pickedMessages}>
-        <PageContainer>
-          <HubHero {...heroContent} />
-          <Divider />
-          <Flex className="-mt-px w-full flex-row-reverse items-center border-b border-b-border-high-contrast py-8 ps-0 lg:py-0 lg:ps-8">
-            <div className="mb-12 w-full px-8 py-4">
-              <Flex className="flex-col items-center">
-                <H2 className="lg:text-4xl">
-                  {t("page-community-why-get-involved-title")}
-                </H2>
-              </Flex>
-              <Grid columns={3}>
-                {whyGetInvolvedCards.map((card, idx) => (
-                  <MarkdownCard
-                    key={idx}
-                    emoji={card.emoji}
-                    title={card.title}
-                    description={card.description}
-                  />
-                ))}
-              </Grid>
-            </div>
-          </Flex>
-          <div className="w-full bg-background-highlight pb-16 shadow-table-item-box">
-            <div className="w-full px-4 py-4 lg:px-8">
-              <Flex className="mt-0 mb-0 flex-col-reverse items-center md:m-12 md:mt-4 md:flex-row">
-                <div className="h-full w-full p-0 sm:p-8 lg:p-24">
-                  <H2 id="get-involved">
-                    {t("page-community-get-involved-title")}
-                  </H2>
-                  <Subtitle>
-                    <Translation id="page-community:page-community-get-involved-description" />
-                  </Subtitle>
-                </div>
-                <ImageContainer>
-                  <Image
-                    className="-my-4 object-cover"
-                    src={developersEthBlockImg}
-                    alt={t("page-community-get-involved-image-alt")}
-                    sizes="(max-width: 992px) 75vw, 50vw"
-                  />
-                </ImageContainer>
-              </Flex>
-              <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0">
-                {cards.map((card, idx) => (
-                  <ActionCard
-                    className="m-0 flex-col rounded-xs border lg:m-4"
-                    key={idx}
-                    title={card.title}
-                    description={card.description}
-                    href={card.href}
-                    image={card.image}
-                    imageWidth={320}
-                    alt={card.alt}
-                  />
-                ))}
+      <PageJsonLD locale={locale} contributors={contributors} />
+
+      <HubHero
+        heroImg={heroImg}
+        title={t("page-community-hero-title")}
+        header={t("page-community-hero-header")}
+        description={t("page-community-hero-subtitle")}
+      />
+
+      <Divider className="mx-auto" />
+
+      <main className="pb-page">
+        <MainArticle className="flow **:data-[label=button-link]:max-md:w-full *:[section]:px-page *:[section]:py-space-2x">
+          {/* Why get involved */}
+          <Section>
+            <h2 className="md:text-center">
+              {t("page-community-why-get-involved-title")}
+            </h2>
+            <Grid columns={3}>
+              {whyGetInvolvedCards.map((card, idx) => (
+                <MarkdownCard
+                  key={idx}
+                  emoji={card.emoji}
+                  title={card.title}
+                  description={card.description}
+                />
+              ))}
+            </Grid>
+          </Section>
+
+          {/* Get involved */}
+          <Section
+            id="get-involved"
+            className="space-y-space-2x bg-background-highlight"
+          >
+            <div className="flex gap-space-3x *:first:flex-2 *:last:flex-1 max-lg:flex-col-reverse lg:items-center">
+              <div className="flow max-w-3xl">
+                <h2>{t("page-community-get-involved-title")}</h2>
+                <p>
+                  <Translation id="page-community:page-community-get-involved-description" />
+                </p>
+              </div>
+              <div className="grid place-items-center">
+                <Image
+                  className="max-h-64 w-auto object-contain"
+                  src={developersEthBlockImg}
+                  alt={t("page-community-get-involved-image-alt")}
+                  sizes="360px"
+                />
               </div>
             </div>
-          </div>
-          <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#293233]">
-            <RowReverse>
-              <FeatureContent>
-                <H2>{t("page-community-open-source")}</H2>
-                <Subtitle>
-                  {t("page-community-open-source-description")}
-                </Subtitle>
-                <ButtonRow>
-                  <ButtonLink href="/community/get-involved#ethereum-jobs">
-                    {t("page-community-find-a-job")}
-                  </ButtonLink>
-                  <StyledButtonLink
-                    variant="outline"
-                    href="/community/grants/"
-                    isSecondary
-                  >
-                    {t("page-community-explore-grants")}
-                  </StyledButtonLink>
-                </ButtonRow>
-              </FeatureContent>
-              <ImageContainer>
-                <Image
-                  className="object-cover"
-                  src={whatIsEthereumImg}
-                  alt={t("page-community-open-source-image-alt")}
-                  sizes="(max-width: 992px) 75vw, 50vw"
-                />
-              </ImageContainer>
-            </RowReverse>
-          </Flex>
-          <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ffe5f9] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#332027]">
-            <Flex className="flex-col-reverse items-center lg:flex-row">
-              <FeatureContent>
-                <Flex className="flex-col justify-center">
-                  <H2>{t("page-community-contribute")}</H2>
-                  <Subtitle>
-                    {t("page-community-contribute-description")}
-                  </Subtitle>
-                  <ButtonRow>
-                    <ButtonLink href="/contributing/">
-                      {t("page-community-contribute-button")}
-                    </ButtonLink>
-                    <StyledButtonLink
-                      variant="outline"
-                      href="https://github.com/ethereum/ethereum-org-website/"
-                      isSecondary
-                    >
-                      {t("page-community-contribute-secondary-button")}
-                    </StyledButtonLink>
-                  </ButtonRow>
-                </Flex>
-              </FeatureContent>
-              <ImageContainer>
-                <Image
-                  className="object-cover"
-                  src={financeTransparentImg}
-                  alt={t("page-index-internet-image-alt")}
-                  sizes="(max-width: 992px) 75vw, 50vw"
-                />
-              </ImageContainer>
-            </Flex>
-          </Flex>
-          <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#e8e8ff] lg:h-[720px] lg:flex-row dark:bg-[#212131]">
-            <RowReverse>
-              <FeatureContent>
-                <H2>{t("page-community-support")}</H2>
-                <Subtitle>{t("page-community-support-description")}</Subtitle>
-                <div>
-                  <ButtonLink href="/community/support/">
-                    {t("page-community-support-button")}
-                  </ButtonLink>
-                </div>
-              </FeatureContent>
-              <ImageContainer>
-                <Image
-                  className="object-cover"
-                  src={hackathonTransparentImg}
-                  alt={t("page-community-support-alt")}
-                  sizes="(max-width: 992px) 75vw, 50vw"
-                />
-              </ImageContainer>
-            </RowReverse>
-          </Flex>
-          <Divider />
-          <Flex className="w-full flex-col items-start px-8 py-4 lg:flex-row lg:items-center">
-            <div className="mb-6 max-w-full flex-[0_0_50%] md:max-w-[75%]">
-              <h2 className="mt-12 mb-8 text-2xl md:text-3xl">
-                {t("page-community-try-ethereum")}
-              </h2>
+            <Grid balanced={4}>
+              {cards.map((card, idx) => (
+                <Card
+                  key={idx}
+                  href={card.href}
+                  variant="nested"
+                  hoverEffect="lift"
+                >
+                  <CardHeader>
+                    <CardBanner background="none" fit="contain" zoom={false}>
+                      <Image
+                        src={card.image}
+                        alt=""
+                        sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+                      />
+                    </CardBanner>
+                  </CardHeader>
+                  <CardContent>
+                    <CardTitle>{card.title}</CardTitle>
+                    <CardParagraph>{card.description}</CardParagraph>
+                  </CardContent>
+                </Card>
+              ))}
+            </Grid>
+          </Section>
+
+          {/* Open source */}
+          <Section
+            data-flow="skip"
+            className="flex items-center gap-space-3x *:first:flex-2 *:last:flex-1 max-lg:flex-col-reverse lg:flex-row-reverse"
+          >
+            <div className="flow max-w-3xl">
+              <h2>{t("page-community-open-source")}</h2>
+              <p>{t("page-community-open-source-description")}</p>
+              <div className="flex gap-4 max-md:flex-col max-md:items-start">
+                <ButtonLink href="/community/get-involved#ethereum-jobs">
+                  {t("page-community-find-a-job")}
+                </ButtonLink>
+                <ButtonLink
+                  variant="outline"
+                  href="/community/grants/"
+                  isSecondary
+                >
+                  {t("page-community-explore-grants")}
+                </ButtonLink>
+              </div>
             </div>
-          </Flex>
-          <Content>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="grid place-items-center">
+              <Image
+                className="max-h-64 w-auto object-contain"
+                src={whatIsEthereumImg}
+                alt={t("page-community-open-source-image-alt")}
+                sizes="360px"
+              />
+            </div>
+          </Section>
+
+          {/* Contribute */}
+          <Section
+            data-flow="skip"
+            className="flex items-center gap-space-3x *:first:flex-2 *:last:flex-1 max-lg:flex-col-reverse lg:flex-row"
+          >
+            <div className="flow max-w-3xl">
+              <h2>{t("page-community-contribute")}</h2>
+              <p>{t("page-community-contribute-description")}</p>
+              <div className="flex gap-4 max-md:flex-col max-md:items-start">
+                <ButtonLink href="/contributing/">
+                  {t("page-community-contribute-button")}
+                </ButtonLink>
+                <ButtonLink
+                  variant="outline"
+                  href="https://github.com/ethereum/ethereum-org-website/"
+                  isSecondary
+                >
+                  {t("page-community-contribute-secondary-button")}
+                </ButtonLink>
+              </div>
+            </div>
+            <div className="grid place-items-center">
+              <Image
+                className="max-h-64 w-auto object-contain"
+                src={financeTransparentImg}
+                alt={t("page-index-internet-image-alt")}
+                sizes="360px"
+              />
+            </div>
+          </Section>
+
+          {/* Support */}
+          <Section
+            data-flow="skip"
+            className="flex items-center gap-space-3x *:first:flex-2 *:last:flex-1 max-lg:flex-col-reverse lg:flex-row-reverse"
+          >
+            <div className="flow max-w-3xl">
+              <h2>{t("page-community-support")}</h2>
+              <p>{t("page-community-support-description")}</p>
+              <ButtonLink href="/community/support/">
+                {t("page-community-support-button")}
+              </ButtonLink>
+            </div>
+            <div className="grid place-items-center">
+              <Image
+                className="max-h-64 w-auto object-contain"
+                src={hackathonTransparentImg}
+                alt={t("page-community-support-alt")}
+                sizes="360px"
+              />
+            </div>
+          </Section>
+
+          {/* Try Ethereum */}
+          <Section>
+            <h2>{t("page-community-try-ethereum")}</h2>
+            <Grid columns={2} size="wide">
               <Callout
                 title={t("page-community-get-eth-title")}
                 description={t("page-community-get-eth-description")}
@@ -340,11 +286,15 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   {t("page-community-explore-dapps")}
                 </ButtonLink>
               </Callout>
-            </div>
-          </Content>
+            </Grid>
+          </Section>
+        </MainArticle>
+
+        {/* End-of-page actions */}
+        <Section className="px-page">
           <ContentFeedback />
-        </PageContainer>
-      </I18nProvider>
+        </Section>
+      </main>
     </>
   )
 }
