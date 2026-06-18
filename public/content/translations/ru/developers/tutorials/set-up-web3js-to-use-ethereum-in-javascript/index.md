@@ -1,12 +1,12 @@
 ---
-title: Настройка Web3.js для использования блокчейна Эфириума в JavaScript
-description: Узнайте, как установить и настроить библиотеку Web3.js для взаимодействия с блокчейном Эфириума из приложений на JavaScript.
+title: "Настройка Web3.js для использования блокчейна Эфириума в JavaScript"
+description: "Узнайте, как установить и настроить библиотеку Web3.js для взаимодействия с блокчейном Эфириума из приложений на JavaScript."
 author: "jdourlens"
 tags:
   - "web3.js"
   - "javascript"
 skill: beginner
-breadcrumb: настройка Web3.js
+breadcrumb: "настройка Web3.js"
 lang: ru
 published: 2020-04-11
 source: EthereumDev

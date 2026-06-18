@@ -1,13 +1,13 @@
 ---
 title: "Gazsız kullanıcılarınızın token tutmasına ve sözleşmeleri çağırmasına izin vermek"
-description: Hesap soyutlama kullanarak, belirli bir EOA tarafından gönderilen veya o EOA tarafından imzalanan işlemleri kabul eden akıllı sözleşme cüzdanları oluşturabiliriz. Bu akıllı sözleşmeler daha sonra EOA'nın kontrolü altında olan token'lara sahip olabilir.
+description: "Hesap soyutlama kullanarak, belirli bir EOA tarafından gönderilen veya o EOA tarafından imzalanan işlemleri kabul eden akıllı sözleşme cüzdanları oluşturabiliriz. Bu akıllı sözleşmeler daha sonra EOA'nın kontrolü altında olan token'lara sahip olabilir."
 author: Ori Pomerantz
 tags:
   - gazsız
   - erc-20
   - hesap soyutlama
 skill: intermediate
-breadcrumb: Gazsız token
+breadcrumb: "Gazsız token"
 lang: tr
 published: 2026-04-01
 ---
@@ -749,7 +749,8 @@ Kullanıcının ERC-20 transfer işlemleri düzenlemesine izin verin.
 Son bir işlem hash'i varsa, kullanıcının bunu bir blok gezgininde görüntüleyebilmesi için bir bağlantı gösterin.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

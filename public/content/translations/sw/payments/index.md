@@ -62,7 +62,7 @@ Katika nchi ambazo njia zao za malipo zimetenganishwa na ulimwengu wote, suluhis
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Fungua akaunti yako ya Ethereum ukitumia programu ya mkoba leo.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Anza
   </ButtonLink>
 </AlertContent>

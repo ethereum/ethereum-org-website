@@ -1,6 +1,6 @@
 ---
-title: Proof-of-stake ödülleri ve cezaları
-description: Proof-of-stake Ethereum'daki protokol içi teşvikler hakkında bilgi edinin.
+title: "Proof-of-stake ödülleri ve cezaları"
+description: "Proof-of-stake Ethereum'daki protokol içi teşvikler hakkında bilgi edinin."
 lang: tr
 ---
 

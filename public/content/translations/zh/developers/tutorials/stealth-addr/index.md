@@ -1,7 +1,7 @@
 ---
 title: "使用隐形地址"
 description: "隐形地址允许用户匿名转账资产。阅读本文后，你将能够：解释什么是隐形地址及其工作原理，了解如何以保护隐私的方式使用隐形地址，并编写一个使用隐形地址的基于 Web 的应用程序。"
-author: 奥里·波梅兰茨
+author: "奥里·波梅兰茨"
 tags:
   - 隐形地址
   - 隐私
@@ -9,7 +9,7 @@ tags:
   - Rust
   - Wasm
 skill: intermediate
-breadcrumb: 隐形地址
+breadcrumb: "隐形地址"
 published: 2025-11-30
 lang: zh
 sidebarDepth: 3

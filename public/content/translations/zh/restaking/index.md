@@ -1,11 +1,11 @@
 ---
-title: 再质押
-metaTitle: 什么是再质押？ | 再质押的优势与用途
-description: 使用已质押的 ETH 来保护其他去中心化服务并赚取额外奖励。
+title: "再质押"
+metaTitle: "什么是再质押？ | 再质押的优势与用途"
+description: "使用已质押的 ETH 来保护其他去中心化服务并赚取额外奖励。"
 lang: zh
 template: use-cases
 image: /images/use-cases/restaking.png
-alt: 以太坊上再质押的视觉展示。
+alt: "以太坊上再质押的视觉展示。"
 sidebarDepth: 2
 summaryPoints:
   - "使用已质押的 ETH 来保护其他去中心化服务并赚取额外奖励。"
@@ -39,7 +39,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>温馨提示</strong></strong>
+ <p className="mt-0"><strong>温馨提示</strong>
   <p className="mt-2">虽然“主动验证服务 (AVS)”是最常见的名称，但不同的再质押平台可能会使用其他名称来称呼它们帮助保护的去中心化服务，例如“自主验证服务 (Autonomously Validated Services)”、“分布式安全服务 (Distributed Secure Services)”或“网络 (Networks)”。</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>再质押的额外好处</strong></strong>
+ <p className="mt-0"><strong>再质押的额外好处</strong>
   <p className="mt-2">AVS 可以将所有资源投入到构建和营销其服务中，而不必因去中心化和安全性而分心。</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>温馨提示</strong></strong>
+ <p className="mt-0"><strong>温馨提示</strong>
   <p className="mt-2">原生和流动性再质押者通常将其质押的 ETH 委托给运营商，而不是自己运行软件来保护 AVS。</p>
   <p className="mt-2">这样他们就不必担心 AVS 复杂的技术要求，尽管他们获得的奖励率低于运营商。</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>名称误区提示</strong></strong>
+ <p className="mt-0"><strong>名称误区提示</strong>
   <p className="mt-2">有些人将“再质押”与去中心化金融 (DeFi) 中借贷 LST 混为一谈。两者都让已质押的 ETH 发挥作用，但再质押意味着保护 AVS，而不仅仅是在 LST 上赚取收益。</p>
 </AlertDescription>
 </AlertContent>
@@ -139,10 +139,10 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>以太坊联合创始人正在输入…</strong></strong>
+ <p className="mt-0"><strong>以太坊联合创始人正在输入…</strong>
   <p className="mt-2">
     以太坊联合创始人维塔利克·布特林在 2021 年一篇名为<a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">《不要让共识超载》(Don't Overload Consensus)</a>的博客文章中警告了再质押的潜在风险。
-  </a>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -161,7 +161,7 @@ buttons:
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>以太坊质押：</strong>它是如何运作的？</strong>
+ <p className="mt-0"><strong>以太坊质押：</strong>它是如何运作的？
   <ButtonLink href="/staking/">
     了解更多
   </ButtonLink>

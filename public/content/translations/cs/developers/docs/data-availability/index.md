@@ -1,6 +1,6 @@
 ---
 title: Dostupnost dat
-description: Přehled problémů a řešení týkajících se dostupnosti dat v Ethereu
+description: "Přehled problémů a řešení týkajících se dostupnosti dat v Ethereu"
 lang: cs
 ---
 

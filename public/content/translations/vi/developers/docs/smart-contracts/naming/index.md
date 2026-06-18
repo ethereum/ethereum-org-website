@@ -1,6 +1,6 @@
 ---
-title: Đặt tên cho hợp đồng thông minh
-description: Các phương pháp hay nhất để đặt tên cho hợp đồng thông minh Ethereum bằng ENS
+title: "Đặt tên cho hợp đồng thông minh"
+description: "Các phương pháp hay nhất để đặt tên cho hợp đồng thông minh Ethereum bằng ENS"
 lang: vi
 ---
 

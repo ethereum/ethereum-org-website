@@ -1,10 +1,10 @@
 ---
-title: Comment écrire et déployer un NFT (Partie 1/3 de la série de tutoriels sur les NFT)
-description: Ce tutoriel est la première partie d'une série sur les NFT qui vous guidera étape par étape sur la façon d'écrire et de déployer un contrat intelligent de jeton non fongible (jeton ERC-721) en utilisant Ethereum et Inter Planetary File System (IPFS).
+title: "Comment écrire et déployer un NFT (Partie 1/3 de la série de tutoriels sur les NFT)"
+description: "Ce tutoriel est la première partie d'une série sur les NFT qui vous guidera étape par étape sur la façon d'écrire et de déployer un contrat intelligent de jeton non fongible (jeton ERC-721) en utilisant Ethereum et Inter Planetary File System (IPFS)."
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "contrats intelligents"]
 skill: beginner
-breadcrumb: Écrire et déployer un NFT
+breadcrumb: "Écrire et déployer un NFT"
 lang: fr
 published: 2021-04-22
 ---

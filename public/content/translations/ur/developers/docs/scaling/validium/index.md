@@ -5,7 +5,7 @@ lang: ur
 sidebarDepth: 3
 ---
 
-ویلیڈیم ایک [اسکیلنگ حل](/developers/docs/scaling/) ہے جو [<span dir="ltr">ZK-rollups</span>](/developers/docs/scaling/zk-rollups/) کی طرح درستگی کا ثبوت استعمال کرتے ہوئے ٹرانزیکشنز کی سالمیت کو نافذ کرتا ہے، لیکن ٹرانزیکشن کا ڈیٹا [ایتھیریم](/) مین نیٹ پر محفوظ نہیں کرتا۔ اگرچہ آف چین ڈیٹا کی دستیابی کچھ سمجھوتے (trade-offs) متعارف کراتی ہے، لیکن یہ اسکیل ایبلٹی میں بڑے پیمانے پر بہتری لا سکتی ہے (ویلیڈیمز فی سیکنڈ [<span dir="ltr">~9,000</span> ٹرانزیکشنز، یا اس سے زیادہ](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263) پروسیس کر سکتے ہیں)۔
+ویلیڈیم ایک [اسکیلنگ حل](/developers/docs/scaling/) ہے جو [<span dir="ltr">ZK-rollups</span>](/developers/docs/scaling/zk-rollups/) کی طرح درستگی کا ثبوت استعمال کرتے ہوئے ٹرانزیکشنز کی سالمیت کو نافذ کرتا ہے، لیکن ٹرانزیکشن کا ڈیٹا [ایتھیریم](/) مین نیٹ پر محفوظ نہیں کرتا۔ اگرچہ آف چین ڈیٹا کی دستیابی کچھ سمجھوتے (trade-offs) متعارف کراتی ہے، لیکن یہ اسکیل ایبلٹی میں بڑے پیمانے پر بہتری لا سکتی ہے (ویلیڈیمز فی سیکنڈ [<span dir="ltr">\~9,000</span> ٹرانزیکشنز، یا اس سے زیادہ](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263) پروسیس کر سکتے ہیں)۔
 
 ## شرائط {#prerequisites}
 

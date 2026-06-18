@@ -1,10 +1,10 @@
 ---
-title: ethers.js를 사용하여 토큰 전송하기
-description: ethers.js를 사용하여 토큰을 전송하는 초보자용 가이드입니다.
-author: 김용준
+title: "ethers.js를 사용하여 토큰 전송하기"
+description: "ethers.js를 사용하여 토큰을 전송하는 초보자용 가이드입니다."
+author: "김용준"
 tags: ["ETHERS.JS", "ERC-20", "토큰"]
 skill: beginner
-breadcrumb: 토큰 전송
+breadcrumb: "토큰 전송"
 lang: ko
 published: 2021-04-06
 ---

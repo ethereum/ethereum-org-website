@@ -1,11 +1,11 @@
 ---
 title: "Análisis detallado del contrato ERC-20"
-description: ¿Qué contiene el contrato ERC-20 de OpenZeppelin y por qué está ahí?
+description: "¿Qué contiene el contrato ERC-20 de OpenZeppelin y por qué está ahí?"
 author: Ori Pomerantz
 lang: es
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: Análisis de ERC-20
+breadcrumb: "Análisis de ERC-20"
 published: 2021-03-09
 ---
 

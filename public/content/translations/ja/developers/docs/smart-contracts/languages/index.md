@@ -1,6 +1,6 @@
 ---
-title: スマート・コントラクト言語
-description: 2つの主要なスマート・コントラクト言語であるSolidityとVyperの概要と機能比較。
+title: "スマート・コントラクト言語"
+description: "2つの主要なスマート・コントラクト言語であるSolidityとVyperの概要と機能比較。"
 lang: ja
 ---
 

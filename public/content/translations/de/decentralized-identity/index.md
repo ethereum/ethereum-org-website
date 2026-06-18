@@ -1,6 +1,6 @@
 ---
-title: Dezentrale Identität
-description: Was ist dezentrale Identität und warum ist sie wichtig?
+title: "Dezentrale Identität"
+description: "Was ist dezentrale Identität und warum ist sie wichtig?"
 lang: de
 template: use-cases
 sidebarDepth: 2

@@ -1,6 +1,6 @@
 ---
-title: Introducción a los nodos de arranque de Ethereum
-description: La información básica que necesita para entender los nodos de arranque
+title: "Introducción a los nodos de arranque de Ethereum"
+description: "La información básica que necesita para entender los nodos de arranque"
 lang: es
 ---
 

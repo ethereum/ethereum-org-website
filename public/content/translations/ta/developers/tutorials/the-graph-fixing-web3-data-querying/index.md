@@ -3,7 +3,7 @@ title: "The Graph: Web3 தரவு வினவலைச் சரிசெய
 description: "தொகுதிச்சங்கிலி என்பது SQL இல்லாத தரவுத்தளத்தைப் போன்றது. எல்லா தரவும் அங்கு உள்ளது, ஆனால் அதை அணுக வழி இல்லை. The Graph மற்றும் GraphQL மூலம் இதை எவ்வாறு சரிசெய்வது என்பதை நான் உங்களுக்குக் காட்டுகிறேன்."
 author: "மார்கஸ் வாஸ்"
 lang: ta
-tags: ["solidity", "திறன் ஒப்பந்தங்கள்", "வினவுதல்", "the graph", "react"]
+tags: ["Solidity", "திறன் ஒப்பந்தங்கள்", "வினவுதல்", "the graph", "React"]
 skill: intermediate
 breadcrumb: "The Graph"
 published: 2020-09-06

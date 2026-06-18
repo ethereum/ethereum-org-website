@@ -1,9 +1,9 @@
 ---
 title: "The Graph: Web3 ডেটা কোয়েরিং ঠিক করা"
 description: "ব্লকচেইন হলো SQL ছাড়া একটি ডেটাবেসের মতো। সব ডেটা সেখানে আছে, কিন্তু অ্যাক্সেস করার কোনো উপায় নেই। চলুন দেখি কীভাবে The Graph এবং GraphQL দিয়ে এটি ঠিক করা যায়।"
-author: মার্কাস ওয়াস
+author: "মার্কাস ওয়াস"
 lang: bn
-tags: ["solidity", "স্মার্ট কন্ট্রাক্ট", "কোয়েরিং", "the graph", "react"]
+tags: ["Solidity", "স্মার্ট কন্ট্রাক্ট", "কোয়েরিং", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

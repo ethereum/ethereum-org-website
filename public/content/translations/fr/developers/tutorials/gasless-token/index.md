@@ -1,6 +1,6 @@
 ---
 title: "Permettre à vos utilisateurs sans gaz de détenir des jetons et d'appeler des contrats"
-description: Grâce à l'abstraction de compte, nous pouvons créer des portefeuilles de contrats intelligents qui acceptent les transactions envoyées par un EOA spécifique ou signées par cet EOA. Ces contrats intelligents peuvent ensuite posséder des jetons, qui sont sous le contrôle de l'EOA.
+description: "Grâce à l'abstraction de compte, nous pouvons créer des portefeuilles de contrats intelligents qui acceptent les transactions envoyées par un EOA spécifique ou signées par cet EOA. Ces contrats intelligents peuvent ensuite posséder des jetons, qui sont sous le contrôle de l'EOA."
 author: Ori Pomerantz
 tags: ["sans gaz", "erc-20", "abstraction de compte"]
 skill: intermediate
@@ -746,7 +746,8 @@ Laisser l'utilisateur émettre des transactions de transfert ERC-20.
 S'il y a un hachage de la dernière transaction, afficher un lien pour que l'utilisateur puisse le voir dans un explorateur de blocs.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

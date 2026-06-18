@@ -1,6 +1,6 @@
 ---
 title: Atualizando contratos inteligentes
-description: Uma visão geral dos padrões de atualização para contratos inteligentes do Ethereum
+description: "Uma visão geral dos padrões de atualização para contratos inteligentes do Ethereum"
 lang: pt-br
 ---
 

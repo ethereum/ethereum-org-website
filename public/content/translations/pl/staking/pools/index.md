@@ -1,11 +1,11 @@
 ---
 title: Staking grupowy
-description: Dowiedz się więcej o pulach stakingowych
+description: "Dowiedz się więcej o pulach stakingowych"
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Nosorożec Leslie pływający w basenie.
+alt: "Nosorożec Leslie pływający w basenie."
 sidebarDepth: 2
 summaryPoints:
   - Stakuj i zdobywaj nagrody z dowolną ilością ETH, łącząc siły z innymi

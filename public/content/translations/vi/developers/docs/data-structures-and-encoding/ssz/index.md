@@ -1,6 +1,6 @@
 ---
-title: Tuần tự hóa đơn giản
-description: Giải thích về định dạng SSZ của Ethereum.
+title: "Tuần tự hóa đơn giản"
+description: "Giải thích về định dạng SSZ của Ethereum."
 lang: vi
 sidebarDepth: 2
 ---

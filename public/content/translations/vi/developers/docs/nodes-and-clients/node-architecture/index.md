@@ -1,6 +1,6 @@
 ---
-title: Kiến trúc nút
-description: Giới thiệu về cách các nút Ethereum được tổ chức.
+title: "Kiến trúc nút"
+description: "Giới thiệu về cách các nút Ethereum được tổ chức."
 lang: vi
 ---
 

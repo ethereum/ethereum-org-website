@@ -1,6 +1,6 @@
 ---
-title: وثائق تطوير إيثيريوم
-description: مقدمة عن وثائق المطورين الخاصة بموقع ⁦ethereum.org⁩.
+title: "وثائق تطوير إيثيريوم"
+description: "مقدمة عن وثائق المطورين الخاصة بموقع ⁦ethereum.org⁩."
 lang: ar
 ---
 

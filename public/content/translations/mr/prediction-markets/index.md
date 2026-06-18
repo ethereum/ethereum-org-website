@@ -1,5 +1,5 @@
 ---
-title: पूर्वानुमान बाजार
+title: "पूर्वानुमान बाजार"
 lang: mr
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>धोक्यांची जाणीव ठेवा</strong></strong>
+ <p className="mt-0"><strong>धोक्यांची जाणीव ठेवा</strong>
   <p className="mt-2">तुम्हाला परवडेल तेवढाच सट्टा लावा आणि संभाव्य व्यसनाधीन वर्तनांबद्दल जागरूक रहा.</p>
 </AlertDescription>
 </AlertContent>

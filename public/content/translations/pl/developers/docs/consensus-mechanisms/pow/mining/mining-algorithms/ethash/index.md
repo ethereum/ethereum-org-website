@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Szczegółowe spojrzenie na algorytm Ethash.
+description: "Szczegółowe spojrzenie na algorytm Ethash."
 lang: pl
 ---
 

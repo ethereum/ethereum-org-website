@@ -1,9 +1,9 @@
 ---
 title: "Vyper ERC-721コントラクトの解説"
-description: Ryuya NakamuraのERC-721コントラクトとその仕組み
-author: オリ・ポメランツ
+description: "Ryuya NakamuraのERC-721コントラクトとその仕組み"
+author: "オリ・ポメランツ"
 lang: ja
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: Vyper ERC-721
 published: 2021-04-01

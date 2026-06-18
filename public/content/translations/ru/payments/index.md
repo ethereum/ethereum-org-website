@@ -1,12 +1,12 @@
 ---
-title: Платежи в Эфириуме
-metaTitle: Платежи в Эфириуме
-description: Обзор платежей в Эфириуме
+title: "Платежи в Эфириуме"
+metaTitle: "Платежи в Эфириуме"
+description: "Обзор платежей в Эфириуме"
 lang: ru
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Логотип Эфириума и дающие руки.
+alt: "Логотип Эфириума и дающие руки."
 summaryPoints:
   - "Мир, в котором деньги перемещаются так же свободно, как и информация"
   - "Открытая и глобальная система, обеспечивающая транзакции без границ для каждого"
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Создайте свой аккаунт в Эфириуме с помощью приложения-кошелька уже сегодня.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Начать
   </ButtonLink>
 </AlertContent>

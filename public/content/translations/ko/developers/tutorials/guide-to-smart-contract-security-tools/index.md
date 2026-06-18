@@ -1,11 +1,11 @@
 ---
-title: 스마트 컨트랙트 보안 도구 가이드
-description: 세 가지 다른 테스트 및 프로그램 분석 기법에 대한 개요
+title: "스마트 컨트랙트 보안 도구 가이드"
+description: "세 가지 다른 테스트 및 프로그램 분석 기법에 대한 개요"
 author: "Trailofbits"
 lang: ko
-tags: ["solidity", "스마트 컨트랙트", "보안"]
+tags: ["Solidity", "스마트 컨트랙트", "보안"]
 skill: intermediate
-breadcrumb: 보안 도구
+breadcrumb: "보안 도구"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
@@ -27,11 +27,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 \* 시간 초과 없이 모든 경로를 탐색한 경우
 
-**슬리더**는 수 초 내에 컨트랙트를 분석하지만, 정적 분석은 오탐을 유발할 수 있으며 복잡한 검사(예: 산술 검사)에는 덜 적합합니다. 내장된 탐지기에 버튼 하나로 접근하거나 사용자 정의 검사를 수행하려면 API를 통해 슬리더를 실행하세요.
+<strong>슬리더</strong>는 수 초 내에 컨트랙트를 분석하지만, 정적 분석은 오탐을 유발할 수 있으며 복잡한 검사(예: 산술 검사)에는 덜 적합합니다. 내장된 탐지기에 버튼 하나로 접근하거나 사용자 정의 검사를 수행하려면 API를 통해 슬리더를 실행하세요.
 
-**에키드나**는 실행하는 데 몇 분이 걸리며 실제 버그(true positives)만 찾아냅니다. 에키드나는 사용자가 제공한 Solidity로 작성된 보안 속성을 검사합니다. 무작위 탐색을 기반으로 하기 때문에 버그를 놓칠 수도 있습니다.
+<strong>에키드나</strong>는 실행하는 데 몇 분이 걸리며 실제 버그(true positives)만 찾아냅니다. 에키드나는 사용자가 제공한 Solidity로 작성된 보안 속성을 검사합니다. 무작위 탐색을 기반으로 하기 때문에 버그를 놓칠 수도 있습니다.
 
-**맨티코어**는 가장 "무거운" 분석을 수행합니다. 에키드나와 마찬가지로 맨티코어는 사용자가 제공한 속성을 검증합니다. 실행하는 데 더 많은 시간이 필요하지만, 속성의 유효성을 증명할 수 있으며 오탐을 보고하지 않습니다.
+<strong>맨티코어</strong>는 가장 "무거운" 분석을 수행합니다. 에키드나와 마찬가지로 맨티코어는 사용자가 제공한 속성을 검증합니다. 실행하는 데 더 많은 시간이 필요하지만, 속성의 유효성을 증명할 수 있으며 오탐을 보고하지 않습니다.
 
 ## 권장 워크플로 {#suggested-workflow}
 

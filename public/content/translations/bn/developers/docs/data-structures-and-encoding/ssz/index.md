@@ -1,6 +1,6 @@
 ---
-title: সিম্পল সিরিয়ালাইজ
-description: ইথেরিয়ামের SSZ ফরম্যাটের ব্যাখ্যা।
+title: "সিম্পল সিরিয়ালাইজ"
+description: "ইথেরিয়ামের SSZ ফরম্যাটের ব্যাখ্যা।"
 lang: bn
 sidebarDepth: 2
 ---

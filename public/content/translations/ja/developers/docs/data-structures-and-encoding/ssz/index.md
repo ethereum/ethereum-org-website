@@ -1,6 +1,6 @@
 ---
-title: シンプル・シリアライズ (Simple serialize)
-description: イーサリアムのSSZフォーマットの解説。
+title: "シンプル・シリアライズ (Simple serialize)"
+description: "イーサリアムのSSZフォーマットの解説。"
 lang: ja
 sidebarDepth: 2
 ---

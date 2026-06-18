@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: 深入了解 Ethash 演算法。
+description: "深入了解 Ethash 演算法。"
 lang: zh-tw
 ---
 

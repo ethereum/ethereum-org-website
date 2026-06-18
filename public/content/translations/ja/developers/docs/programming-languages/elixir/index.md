@@ -1,6 +1,6 @@
 ---
-title: Elixir開発者のためのイーサリアム
-description: Elixirベースのプロジェクトやツールを使用して、イーサリアム向けに開発する方法を学びます。
+title: "Elixir開発者のためのイーサリアム"
+description: "Elixirベースのプロジェクトやツールを使用して、イーサリアム向けに開発する方法を学びます。"
 lang: ja
 incomplete: false
 ---

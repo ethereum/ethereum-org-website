@@ -1,13 +1,13 @@
 ---
-title: Hợp đồng thông minh Hello World cho người mới bắt đầu - Fullstack
-description: Hướng dẫn nhập môn về cách viết và triển khai một hợp đồng thông minh đơn giản trên Ethereum.
+title: "Hợp đồng thông minh Hello World cho người mới bắt đầu - Fullstack"
+description: "Hướng dẫn nhập môn về cách viết và triển khai một hợp đồng thông minh đơn giản trên Ethereum."
 author: "nstrike2"
 breadcrumb: Hello World fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "hợp đồng thông minh",
     "triển khai",
     "trình khám phá khối",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

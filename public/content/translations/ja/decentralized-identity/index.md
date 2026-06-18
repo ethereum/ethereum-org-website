@@ -1,6 +1,6 @@
 ---
-title: 分散型アイデンティティ
-description: 分散型アイデンティティとは何か、そしてなぜ重要なのか？
+title: "分散型アイデンティティ"
+description: "分散型アイデンティティとは何か、そしてなぜ重要なのか？"
 lang: ja
 template: use-cases
 sidebarDepth: 2

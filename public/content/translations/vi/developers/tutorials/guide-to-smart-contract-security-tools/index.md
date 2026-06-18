@@ -1,11 +1,11 @@
 ---
-title: Hướng dẫn về các công cụ bảo mật hợp đồng thông minh
-description: Tổng quan về ba kỹ thuật kiểm thử và phân tích chương trình khác nhau
+title: "Hướng dẫn về các công cụ bảo mật hợp đồng thông minh"
+description: "Tổng quan về ba kỹ thuật kiểm thử và phân tích chương trình khác nhau"
 author: "Trailofbits"
 lang: vi
-tags: ["solidity", "hợp đồng thông minh", "bảo mật"]
+tags: ["Solidity", "hợp đồng thông minh", "bảo mật"]
 skill: intermediate
-breadcrumb: Công cụ bảo mật
+breadcrumb: "Công cụ bảo mật"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

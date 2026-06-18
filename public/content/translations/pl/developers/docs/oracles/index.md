@@ -1,6 +1,6 @@
 ---
 title: Wyrocznie
-description: Wyrocznie zapewniają inteligentnym kontraktom Ethereum dostęp do danych ze świata rzeczywistego, odblokowując więcej przypadków użycia i większą wartość dla użytkowników.
+description: "Wyrocznie zapewniają inteligentnym kontraktom Ethereum dostęp do danych ze świata rzeczywistego, odblokowując więcej przypadków użycia i większą wartość dla użytkowników."
 lang: pl
 authors: ["Patrick Collins"]
 ---
@@ -269,7 +269,7 @@ Scentralizowane wyrocznie opierają się na jednym źródle prawdy podczas dosta
 
 Zdecentralizowane wyrocznie muszą jednak radzić sobie z rozbieżnościami w informacjach pobieranych z wielu źródeł pozałańcuchowych. Aby zminimalizować różnice w informacjach i upewnić się, że dane przekazywane do kontraktu wyroczni odzwierciedlają zbiorową opinię węzłów wyroczni, zdecentralizowane wyrocznie wykorzystują następujące mechanizmy:
 
-##### Głosowanie/staking na dokładność danych {#availability}
+##### Głosowanie/staking na dokładność danych {#}
 
 Niektóre zdecentralizowane sieci wyroczni wymagają od uczestników głosowania lub stakowania na dokładność odpowiedzi na zapytania o dane (np. „Kto wygrał wybory w USA w 2020 r.?”) przy użyciu natywnego tokena sieci. Protokół agregacji następnie agreguje głosy i stawki i przyjmuje odpowiedź popieraną przez większość jako ważną.
 
@@ -277,7 +277,7 @@ Węzły, których odpowiedzi odbiegają od odpowiedzi większości, są karane p
 
 Staking/głosowanie chroni również zdecentralizowane wyrocznie przed [atakami Sybil](/glossary/#sybil-attack), w których złośliwi aktorzy tworzą wiele tożsamości, aby oszukać system konsensusu. Jednak staking nie może zapobiec „jeździe na gapę” (węzły wyroczni kopiujące informacje od innych) i „leniwej walidacji” (węzły wyroczni podążające za większością bez samodzielnej weryfikacji informacji).
 
-##### Mechanizmy punktu Schellinga {#good-incentive-compatibility}
+##### Mechanizmy punktu Schellinga {#}
 
 [Punkt Schellinga](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) to koncepcja z teorii gier, która zakłada, że wiele podmiotów zawsze domyślnie wybierze wspólne rozwiązanie problemu w przypadku braku jakiejkolwiek komunikacji. Mechanizmy punktu Schellinga są często używane w zdecentralizowanych sieciach wyroczni, aby umożliwić węzłom osiągnięcie konsensusu w sprawie odpowiedzi na żądania danych.
 
@@ -289,7 +289,7 @@ Inne przykłady wyroczni, które wykorzystują mechanizmy punktu Schellinga, to 
 
 Mechanizmy punktu Schellinga są atrakcyjne, ponieważ minimalizują ślad onchain (wystarczy wysłać tylko jedną transakcję), jednocześnie gwarantując decentralizację. To drugie jest możliwe, ponieważ węzły muszą podpisać listę przesłanych odpowiedzi, zanim zostanie ona wprowadzona do algorytmu, który generuje wartość średnią/medianę.
 
-### Dostępność {#applications-of-oracles-in-smart-contracts}
+### Dostępność {#availability}
 
 Zdecentralizowane usługi wyroczni zapewniają wysoką dostępność danych pozałańcuchowych dla inteligentnych kontraktów. Osiąga się to poprzez decentralizację zarówno źródła informacji pozałańcuchowych, jak i węzłów odpowiedzialnych za przesyłanie informacji onchain.
 
@@ -297,7 +297,7 @@ Zapewnia to odporność na błędy, ponieważ kontrakt wyroczni może polegać n
 
 Możliwe jest również, aby wyrocznie oparte na stawkach dokonywały cięcia operatorów węzłów, którzy nie reagują szybko na żądania danych. To znacznie zachęca węzły wyroczni do inwestowania w infrastrukturę odporną na błędy i dostarczania danych w odpowiednim czasie.
 
-### Dobra zgodność zachęt {#retrieving-financial-data}
+### Dobra zgodność zachęt {#good-incentive-compatibility}
 
 Zdecentralizowane wyrocznie wdrażają różne projekty zachęt, aby zapobiec zachowaniom [bizantyjskim](https://en.wikipedia.org/wiki/Byzantine_fault) wśród węzłów wyroczni. W szczególności osiągają one _przypisywalność_ i _rozliczalność_:
 
@@ -305,11 +305,11 @@ Zdecentralizowane wyrocznie wdrażają różne projekty zachęt, aby zapobiec za
 
 2. Zdecentralizowane wyrocznie – jak wyjaśniono wcześniej – mogą wymagać od węzłów wniesienia stawki na ich pewność co do prawdziwości przesyłanych danych. Jeśli roszczenie się potwierdzi, stawka ta może zostać zwrócona wraz z nagrodami za uczciwą obsługę. Ale może również zostać poddana cięciu w przypadku, gdy informacje są nieprawidłowe, co zapewnia pewną miarę rozliczalności.
 
-## Zastosowania wyroczni w inteligentnych kontraktach {#generating-verifiable-randomness}
+## Zastosowania wyroczni w inteligentnych kontraktach {#applications-of-oracles-in-smart-contracts}
 
 Poniżej przedstawiono typowe przypadki użycia wyroczni w Ethereum:
 
-### Pobieranie danych finansowych {#getting-outcomes-for-events}
+### Pobieranie danych finansowych {#retrieving-financial-data}
 
 Aplikacje [zdecentralizowanych finansów](/defi/) (DeFi) pozwalają na pożyczanie, zaciąganie pożyczek i handel aktywami peer-to-peer. Często wymaga to uzyskania różnych informacji finansowych, w tym danych o kursach wymiany (do obliczania wartości fiducjarnej kryptowalut lub porównywania cen tokenów) oraz danych z rynków kapitałowych (do obliczania wartości stokenizowanych aktywów, takich jak złoto lub dolar amerykański).
 
@@ -355,7 +355,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Generowanie weryfikowalnej losowości {#automating-smart-contracts}
+### Generowanie weryfikowalnej losowości {#generating-verifiable-randomness}
 
 Niektóre aplikacje blockchainowe, takie jak gry oparte na blockchainie lub systemy loterii, wymagają wysokiego poziomu nieprzewidywalności i losowości, aby działać skutecznie. Jednak deterministyczne wykonanie blockchainów eliminuje losowość.
 
@@ -365,13 +365,13 @@ Możliwe jest wygenerowanie losowej wartości pozałańcuchowo i wysłanie jej o
 
 Wyrocznie zaprojektowane do obliczeń pozałańcuchowych rozwiązują ten problem, bezpiecznie generując losowe wyniki pozałańcuchowo, które transmitują onchain wraz z dowodami kryptograficznymi poświadczającymi nieprzewidywalność procesu. Przykładem jest [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), który jest weryfikowalnie uczciwym i odpornym na manipulacje generatorem liczb losowych (RNG) przydatnym do budowania niezawodnych inteligentnych kontraktów dla aplikacji, które opierają się na nieprzewidywalnych wynikach.
 
-### Uzyskiwanie wyników dla zdarzeń {#use-blockchain-oracles}
+### Uzyskiwanie wyników dla zdarzeń {#getting-outcomes-for-events}
 
 Dzięki wyroczniom tworzenie inteligentnych kontraktów, które reagują na zdarzenia ze świata rzeczywistego, jest łatwe. Usługi wyroczni umożliwiają to, pozwalając kontraktom na łączenie się z zewnętrznymi API za pośrednictwem komponentów pozałańcuchowych i konsumowanie informacji z tych źródeł danych. Na przykład wspomniany wcześniej dapp predykcyjny może zażądać od wyroczni zwrócenia wyników wyborów z zaufanego źródła pozałańcuchowego (np. Associated Press).
 
 Używanie wyroczni do pobierania danych na podstawie wyników ze świata rzeczywistego umożliwia inne nowatorskie przypadki użycia; na przykład zdecentralizowany produkt ubezpieczeniowy potrzebuje dokładnych informacji o pogodzie, katastrofach itp., aby działać skutecznie.
 
-### Automatyzacja inteligentnych kontraktów {#further-reading}
+### Automatyzacja inteligentnych kontraktów {#automating-smart-contracts}
 
 Inteligentne kontrakty nie uruchamiają się automatycznie; raczej konto posiadane zewnętrznie (EOA) lub inne konto kontraktu musi wyzwolić odpowiednie funkcje, aby wykonać kod kontraktu. W większości przypadków większość funkcji kontraktu jest publiczna i może być wywoływana przez EOA i inne kontrakty.
 
@@ -383,7 +383,7 @@ Niektóre zdecentralizowane sieci wyroczni oferują usługi automatyzacji, któr
 
 [Sieć Keeper](https://chain.link/keepers) Chainlink zapewnia inteligentnym kontraktom opcje zlecania regularnych zadań konserwacyjnych na zewnątrz w sposób zdecentralizowany i minimalizujący potrzebę zaufania. Przeczytaj oficjalną [dokumentację Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/), aby uzyskać informacje na temat tego, jak sprawić, by Twój kontrakt był kompatybilny z Keeper i jak korzystać z usługi Upkeep.
 
-## Jak korzystać z wyroczni blockchainowych
+## Jak korzystać z wyroczni blockchainowych {#use-blockchain-oracles}
 
 Istnieje wiele aplikacji wyroczni, które możesz zintegrować ze swoim dappem Ethereum:
 
@@ -413,7 +413,7 @@ Istnieje wiele aplikacji wyroczni, które możesz zintegrować ze swoim dappem E
 
 **[Stork](https://stork.network)** - Stork dostarcza dane cenowe z bardzo niskimi opóźnieniami, obsługując szeroki zakres przypadków użycia, w tym rynki kontraktów perpetual, protokoły pożyczkowe i ekosystemy DeFi, z nowymi aktywami obsługiwanymi szybko po wejściu na giełdę.
 
-## Dalsza lektura
+## Dalsza lektura {#further-reading}
 
 **Artykuły**
 

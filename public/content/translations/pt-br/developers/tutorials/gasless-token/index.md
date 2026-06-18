@@ -1,10 +1,10 @@
 ---
 title: "Permitindo que seus usuários sem gás mantenham tokens e chamem contratos"
-description: Usando a abstração de conta, podemos criar carteiras de contratos inteligentes que aceitam transações enviadas por uma EOA específica ou assinadas por essa EOA. Esses contratos inteligentes podem então possuir tokens, que estão sob o controle da EOA.
+description: "Usando a abstração de conta, podemos criar carteiras de contratos inteligentes que aceitam transações enviadas por uma EOA específica ou assinadas por essa EOA. Esses contratos inteligentes podem então possuir tokens, que estão sob o controle da EOA."
 author: Ori Pomerantz
 tags: ["sem gás", "erc-20", "abstração de conta"]
 skill: intermediate
-breadcrumb: Token sem gás
+breadcrumb: "Token sem gás"
 lang: pt-br
 published: 2026-04-01
 ---
@@ -746,7 +746,8 @@ Permita que o usuário emita transações de transferência ERC-20.
 Se houver um hash da última transação, mostre um link para que o usuário possa visualizá-lo em um explorador de blocos.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

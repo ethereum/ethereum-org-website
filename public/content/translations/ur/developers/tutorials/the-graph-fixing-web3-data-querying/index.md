@@ -1,9 +1,9 @@
 ---
 title: "⁦The Graph⁩: ⁦Web3⁩ ڈیٹا کیوری کو ٹھیک کرنا"
 description: "بلاک چین ایک ڈیٹا بیس کی طرح ہے لیکن ⁦SQL⁩ کے بغیر۔ تمام ڈیٹا وہاں موجود ہے، لیکن اس تک رسائی کا کوئی طریقہ نہیں ہے۔ آئیے میں آپ کو دکھاتا ہوں کہ اسے ⁦The Graph⁩ اور ⁦GraphQL⁩ کے ساتھ کیسے ٹھیک کیا جائے۔"
-author: مارکس واس
+author: "مارکس واس"
 lang: ur
-tags: ["solidity", "سمارٹ کنٹریکٹس", "کیوری کرنا", "the graph", "react"]
+tags: ["Solidity", "سمارٹ کنٹریکٹس", "کیوری کرنا", "the graph", "React"]
 skill: intermediate
 breadcrumb: "⁦The Graph⁩"
 published: 2020-09-06

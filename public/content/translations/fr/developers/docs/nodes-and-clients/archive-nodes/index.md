@@ -1,6 +1,6 @@
 ---
-title: Nœud d'archive Ethereum
-description: Un aperçu des nœuds d'archive
+title: "Nœud d'archive Ethereum"
+description: "Un aperçu des nœuds d'archive"
 lang: fr
 sidebarDepth: 2
 ---

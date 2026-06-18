@@ -1,13 +1,13 @@
 ---
-title: Contrat intelligent Hello World pour les débutants - Fullstack
-description: Tutoriel d'introduction sur l'écriture et le déploiement d'un contrat intelligent simple sur Ethereum.
+title: "Contrat intelligent Hello World pour les débutants - Fullstack"
+description: "Tutoriel d'introduction sur l'écriture et le déploiement d'un contrat intelligent simple sur Ethereum."
 author: "nstrike2"
 breadcrumb: Hello World fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "contrats intelligents",
     "déploiement",
     "explorateur de blocs",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

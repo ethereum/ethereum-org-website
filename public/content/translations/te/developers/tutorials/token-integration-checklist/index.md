@@ -1,6 +1,6 @@
 ---
-title: టోకెన్ ఇంటిగ్రేషన్ చెక్‌లిస్ట్
-description: టోకెన్‌లతో ఇంటరాక్ట్ అవుతున్నప్పుడు పరిగణించవలసిన విషయాల చెక్‌లిస్ట్
+title: "టోకెన్ ఇంటిగ్రేషన్ చెక్‌లిస్ట్"
+description: "టోకెన్‌లతో ఇంటరాక్ట్ అవుతున్నప్పుడు పరిగణించవలసిన విషయాల చెక్‌లిస్ట్"
 author: Trailofbits
 lang: te
 tags:
@@ -9,7 +9,7 @@ tags:
   - భద్రత
   - టోకెన్‌లు
 skill: intermediate
-breadcrumb: టోకెన్ ఇంటిగ్రేషన్
+breadcrumb: "టోకెన్ ఇంటిగ్రేషన్"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

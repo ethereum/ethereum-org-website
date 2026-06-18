@@ -1,6 +1,6 @@
 ---
 title: Bahasa kontrak pintar
-description: Gambaran umum dan perbandingan dua bahasa kontrak pintar utama – Solidity dan Vyper.
+description: "Gambaran umum dan perbandingan dua bahasa kontrak pintar utama – Solidity dan Vyper."
 lang: id
 ---
 

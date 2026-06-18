@@ -1,10 +1,10 @@
 ---
-title: ethers.jsを使用したトークンの送金
-description: ethers.jsを使用してトークンを送金するための初心者向けガイド。
-author: キム・ヨンジュン
+title: "ethers.jsを使用したトークンの送金"
+description: "ethers.jsを使用してトークンを送金するための初心者向けガイド。"
+author: "キム・ヨンジュン"
 tags: ["ETHERS.JS", "ERC-20", "トークン"]
 skill: beginner
-breadcrumb: トークンの送金
+breadcrumb: "トークンの送金"
 lang: ja
 published: 2021-04-06
 ---

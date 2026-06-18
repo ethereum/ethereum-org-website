@@ -1,6 +1,6 @@
 ---
-title: इथेरियम विकास दस्तावेज़
-description: ethereum.org डेवलपर दस्तावेज़ का परिचय।
+title: "इथेरियम विकास दस्तावेज़"
+description: "ethereum.org डेवलपर दस्तावेज़ का परिचय।"
 lang: hi
 ---
 

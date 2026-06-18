@@ -1,11 +1,11 @@
 ---
-title: Đặt cọc ETH của bạn tại nhà
-description: Tổng quan về cách bắt đầu đặt cọc ETH của bạn tại nhà
+title: "Đặt cọc ETH của bạn tại nhà"
+description: "Tổng quan về cách bắt đầu đặt cọc ETH của bạn tại nhà"
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Tê giác Leslie trên con chip máy tính của riêng cô ấy.
+alt: "Tê giác Leslie trên con chip máy tính của riêng cô ấy."
 sidebarDepth: 2
 summaryPoints:
   - Nhận phần thưởng tối đa trực tiếp từ giao thức nhờ việc giữ cho trình xác thực của bạn hoạt động bình thường và trực tuyến

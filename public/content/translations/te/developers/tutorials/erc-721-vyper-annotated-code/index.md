@@ -1,9 +1,9 @@
 ---
 title: "Vyper ERC-721 కాంట్రాక్ట్ వాక్‌త్రూ"
-description: Ryuya Nakamura యొక్క ERC-721 కాంట్రాక్ట్ మరియు అది ఎలా పనిచేస్తుంది
-author: ఓరి పోమెరాంట్జ్
+description: "Ryuya Nakamura యొక్క ERC-721 కాంట్రాక్ట్ మరియు అది ఎలా పనిచేస్తుంది"
+author: "ఓరి పోమెరాంట్జ్"
 lang: te
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: Vyper ERC-721
 published: 2021-04-01

@@ -1,6 +1,6 @@
 ---
-title: Ethereum geliştirme belgeleri
-description: ethereum.org geliştirici belgelerine giriş.
+title: "Ethereum geliştirme belgeleri"
+description: "ethereum.org geliştirici belgelerine giriş."
 lang: tr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Винагороди та штрафи у Proof-of-Stake
-description: Дізнайтеся про стимули протоколу в Етеріумі на базі Proof-of-Stake.
+title: "Винагороди та штрафи у Proof-of-Stake"
+description: "Дізнайтеся про стимули протоколу в Етеріумі на базі Proof-of-Stake."
 lang: uk
 ---
 

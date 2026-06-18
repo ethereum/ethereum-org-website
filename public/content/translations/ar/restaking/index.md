@@ -1,11 +1,11 @@
 ---
-title: إعادة التخزين
-metaTitle: ما هي إعادة التخزين؟ | فوائد واستخدامات إعادة التخزين
-description: استخدم ⁦ETH⁩ المخزن لتأمين خدمات لامركزية أخرى وكسب مكافآت إضافية.
+title: "إعادة التخزين"
+metaTitle: "ما هي إعادة التخزين؟ | فوائد واستخدامات إعادة التخزين"
+description: "استخدم ⁦ETH⁩ المخزن لتأمين خدمات لامركزية أخرى وكسب مكافآت إضافية."
 lang: ar
 template: use-cases
 image: /images/use-cases/restaking.png
-alt: تمثيل مرئي لإعادة التخزين على إيثيريوم.
+alt: "تمثيل مرئي لإعادة التخزين على إيثيريوم."
 sidebarDepth: 2
 summaryPoints:
   - "استخدم ⁦ETH⁩ المخزن لتأمين خدمات لامركزية أخرى وكسب مكافآت إضافية."
@@ -39,7 +39,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>من الجيد معرفة ذلك</strong></strong>
+ <p className="mt-0"><strong>من الجيد معرفة ذلك</strong>
   <p className="mt-2">في حين أن "الخدمات الموثقة نشطًا" (<span dir="ltr">AVSs</span>) هي الأكثر شيوعًا، قد تستخدم منصات إعادة التخزين المختلفة أسماء أخرى للخدمات اللامركزية التي تساعد في تأمينها، مثل "الخدمات الموثقة ذاتيًا" أو "الخدمات الآمنة الموزعة" أو "الشبكات".</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>فائدة إضافية لإعادة التخزين</strong></strong>
+ <p className="mt-0"><strong>فائدة إضافية لإعادة التخزين</strong>
   <p className="mt-2">يمكن لـ <span dir="ltr">AVSs</span> صب جميع مواردها في بناء وتسويق خدماتها، بدلاً من التشتت باللامركزية والأمان.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>من الجيد معرفة ذلك</strong></strong>
+ <p className="mt-0"><strong>من الجيد معرفة ذلك</strong>
   <p className="mt-2">غالبًا ما يقوم القائمون بإعادة التخزين الأصليون والسائلون بتفويض <span dir="ltr">ETH</span> المخزن الخاص بهم إلى مشغل، بدلاً من تشغيل البرنامج لتأمين <span dir="ltr">AVSs</span> بأنفسهم.</p>
   <p className="mt-2">بهذه الطريقة لا يحتاجون إلى القلق بشأن المتطلبات الفنية المعقدة من <span dir="ltr">AVSs</span>، على الرغم من أنهم يتلقون معدل مكافأة أقل من المشغلين.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>تنبيه بشأن تسمية خاطئة</strong></strong>
+ <p className="mt-0"><strong>تنبيه بشأن تسمية خاطئة</strong>
   <p className="mt-2">يخلط بعض الأشخاص بين "إعادة التخزين" وإقراض واقتراض <span dir="ltr">LSTs</span> في التمويل اللامركزي (<span dir="ltr">DeFi</span>). كلاهما يضع <span dir="ltr">ETH</span> المخزن في العمل، لكن إعادة التخزين تعني تأمين <span dir="ltr">AVSs</span>، وليس مجرد كسب عائد على <span dir="ltr">LSTs</span>.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,10 +139,10 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>المؤسس المشارك لإيثيريوم يكتب…</strong></strong>
+ <p className="mt-0"><strong>المؤسس المشارك لإيثيريوم يكتب…</strong>
   <p className="mt-2">
     حذر فيتاليك، المؤسس المشارك لإيثيريوم، من المخاطر المحتملة لإعادة التخزين في منشور مدونة عام <span dir="ltr">2021</span> بعنوان <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">لا تفرط في تحميل الإجماع.</a>
-  </a>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -161,7 +161,7 @@ buttons:
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>تخزين إيثيريوم:</strong> كيف يعمل؟</strong>
+ <p className="mt-0"><strong>تخزين إيثيريوم:</strong> كيف يعمل؟
   <ButtonLink href="/staking/">
     معرفة المزيد
   </ButtonLink>

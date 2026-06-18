@@ -1,6 +1,6 @@
 ---
-title: ERC-4626 Tokenleştirilmiş Kasa Standardı
-description: Getiri sağlayan kasalar için bir standart.
+title: "ERC-4626 Tokenleştirilmiş Kasa Standardı"
+description: "Getiri sağlayan kasalar için bir standart."
 lang: tr
 ---
 

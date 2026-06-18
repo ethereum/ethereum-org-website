@@ -1,6 +1,6 @@
 ---
-title: 以太坊引導節點簡介
-description: 了解引導節點所需的基本資訊
+title: "以太坊引導節點簡介"
+description: "了解引導節點所需的基本資訊"
 lang: zh-tw
 ---
 

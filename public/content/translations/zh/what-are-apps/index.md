@@ -1,14 +1,14 @@
 ---
-title: 以太坊应用
-metaTitle: 以太坊应用 | 以太坊上的去中心化应用
-description: 以太坊上的应用是免费且全球化的，它们使用公共区块链而不是私有公司服务器。这意味着你可以在每个项目中使用同一个账户并保护你的隐私。
+title: "以太坊应用"
+metaTitle: "以太坊应用 | 以太坊上的去中心化应用"
+description: "以太坊上的应用是免费且全球化的，它们使用公共区块链而不是私有公司服务器。这意味着你可以在每个项目中使用同一个账户并保护你的隐私。"
 lang: zh
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: 以太坊上的应用是免费且全球化的，它们使用公共区块链而不是私有公司服务器。这意味着你可以在每个项目中使用同一个账户并保护你的隐私。
+summary: "以太坊上的应用是免费且全球化的，它们使用公共区块链而不是私有公司服务器。这意味着你可以在每个项目中使用同一个账户并保护你的隐私。"
 ---
 
 ## 拥有超能力的应用 {#apps-with-superpowers}

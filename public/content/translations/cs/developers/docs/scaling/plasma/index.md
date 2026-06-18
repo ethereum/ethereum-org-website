@@ -1,6 +1,6 @@
 ---
-title: Řetězce Plasma
-description: Úvod do řetězců Plasma jako řešení škálování, které v současnosti využívá komunita Etherea.
+title: "Řetězce Plasma"
+description: "Úvod do řetězců Plasma jako řešení škálování, které v současnosti využívá komunita Etherea."
 lang: cs
 incomplete: true
 sidebarDepth: 3

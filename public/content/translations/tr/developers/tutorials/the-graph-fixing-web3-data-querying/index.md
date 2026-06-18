@@ -1,9 +1,9 @@
 ---
 title: "The Graph: Web3 veri sorgulamasını düzeltmek"
-description: Blokzincir, SQL'i olmayan bir veritabanı gibidir. Tüm veriler oradadır ancak bunlara erişmenin bir yolu yoktur. The Graph ve GraphQL ile bunu nasıl düzelteceğinizi göstereyim.
+description: "Blokzincir, SQL'i olmayan bir veritabanı gibidir. Tüm veriler oradadır ancak bunlara erişmenin bir yolu yoktur. The Graph ve GraphQL ile bunu nasıl düzelteceğinizi göstereyim."
 author: Markus Waas
 lang: tr
-tags: ["solidity", "akıllı sözleşmeler", "sorgulama", "the graph", "react"]
+tags: ["Solidity", "akıllı sözleşmeler", "sorgulama", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

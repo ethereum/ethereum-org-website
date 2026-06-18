@@ -1,6 +1,6 @@
 ---
-title: 네트워크
-description: 이더리움 네트워크에 대한 개요와 애플리케이션 테스트를 위해 테스트넷 이더(ETH)를 얻을 수 있는 곳을 알아봅니다.
+title: "네트워크"
+description: "이더리움 네트워크에 대한 개요와 애플리케이션 테스트를 위해 테스트넷 이더(ETH)를 얻을 수 있는 곳을 알아봅니다."
 lang: ko
 ---
 
@@ -40,7 +40,7 @@ lang: ko
 
 **Sepolia는 애플리케이션 개발을 위해 권장되는 기본 테스트넷입니다**. Sepolia 네트워크는 클라이언트 및 테스트 팀이 제어하는 허가형 검증자 세트를 사용합니다.
 
-##### 리소스 {#hoodi}
+##### 리소스 {#} {#}
 
 - [웹사이트](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: ko
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### 퍼싯 {#ephemery}
+##### 퍼싯 {#} {#}
 
 - [Alchemy Sepolia 퍼싯](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia 퍼싯](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -61,7 +61,7 @@ lang: ko
 - [PoW 퍼싯](https://sepolia-faucet.pk910.de/)
 - [QuickNode Sepolia 퍼싯](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Hoodi {#faucets}
+#### Hoodi {#hoodi}
 
 Hoodi는 검증 및 스테이킹을 테스트하기 위한 테스트넷입니다. Hoodi 네트워크는 테스트넷 검증자를 실행하고자 하는 사용자에게 열려 있습니다. 따라서 메인넷에 배포되기 전에 프로토콜 업그레이드를 테스트하려는 스테이커는 Hoodi를 사용해야 합니다.
 
@@ -69,7 +69,7 @@ Hoodi는 검증 및 스테이킹을 테스트하기 위한 테스트넷입니다
 - 대규모 상태, 복잡한 스마트 컨트랙트 상호작용을 테스트하는 데 유용함
 - 동기화에 더 오랜 시간이 걸리며 노드를 실행하는 데 더 많은 스토리지가 필요함
 
-##### 리소스 {#holesky}
+##### 리소스 {#}
 
 - [웹사이트](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,13 +78,13 @@ Hoodi는 검증 및 스테이킹을 테스트하기 위한 테스트넷입니다
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### 퍼싯 {#layer-2-testnets}
+##### 퍼싯 {#}
 
 - [Chain Platform Hoodi 퍼싯](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi 퍼싯](https://hoodi.ethpandaops.io/)
 - [PoW 퍼싯](https://hoodi-faucet.pk910.de/)
 
-#### Ephemery {#arbitrum-sepolia}
+#### Ephemery {#ephemery}
 
 Ephemery는 매달 완전히 초기화되는 독특한 종류의 테스트넷입니다. 실행 및 합의 상태가 28일마다 제네시스로 되돌아가므로, 테스트넷에서 일어나는 모든 일은 일시적입니다. 따라서 단기 테스트, 빠른 노드 부트스트랩, 영구성이 필요 없는 'hello world' 종류의 애플리케이션에 이상적입니다.
 
@@ -93,7 +93,7 @@ Ephemery는 매달 완전히 초기화되는 독특한 종류의 테스트넷입
 - 개방형 검증자 세트 및 대량의 자금에 쉽게 접근 가능
 - 최소한의 노드 요구 사항 및 가장 빠른 동기화, 평균 5GB 미만
 
-##### 리소스 {#optimistic-sepolia}
+##### 리소스 {#}
 
 - [웹사이트](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -104,55 +104,55 @@ Ephemery는 매달 완전히 초기화되는 독특한 종류의 테스트넷입
 - [체크포인트 동기화](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [런치패드](https://launchpad.ephemery.dev/)
 
-#### 퍼싯 {#starknet-sepolia}
+#### 퍼싯 {#faucets}
 
 - [Bordel 퍼싯](https://faucet.bordel.wtf/)
 - [Pk910 PoW 퍼싯](https://ephemery-faucet.pk910.de/)
 
-#### 홀스카이 (사용 중단됨) {#private-networks}
+#### 홀스카이 (사용 중단됨) {#holesky}
 
 홀스카이 테스트넷은 2025년 9월부로 사용이 중단되었습니다. 스테이킹 운영자와 인프라 제공자는 검증자 테스트를 위해 대신 Hoodi를 사용해야 합니다.
 
 - [홀스카이 테스트넷 종료 공지](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF 블로그, 2025년 9월 1일_
 - [홀스카이 및 Hoodi 테스트넷 업데이트](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EF 블로그, 2025년 3월 18일_
 
-### 레이어 2 테스트넷 {#development-networks}
+### 레이어 2 테스트넷 {#layer-2-testnets}
 
 [레이어 2 (l2)](/layer-2/)는 특정 이더리움 확장 솔루션 세트를 설명하는 총칭입니다. 레이어 2는 이더리움을 확장하고 이더리움의 보안 보장을 상속받는 별도의 블록체인입니다. 레이어 2 테스트넷은 일반적으로 퍼블릭 이더리움 테스트넷과 밀접하게 결합되어 있습니다.
 
-#### 아비트럼 Sepolia {#consortium-networks}
+#### 아비트럼 Sepolia {#arbitrum-sepolia}
 
 [아비트럼](https://arbitrum.io/)을 위한 테스트넷입니다.
 
-##### 리소스 {#why-naming}
+##### 리소스 {#}
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### 퍼싯 {#common-and-legacy-testnets}
+##### 퍼싯 {#}
 
 - [Alchemy 아비트럼 Sepolia 퍼싯](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [체인링크 아비트럼 Sepolia 퍼싯](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com 아비트럼 Sepolia 퍼싯](https://ethfaucet.com/networks/arbitrum)
 - [QuickNode 아비트럼 Sepolia 퍼싯](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### 옵티미스틱 Sepolia {#other-testnets}
+#### 옵티미스틱 Sepolia {#optimistic-sepolia}
 
 [옵티미즘](https://www.optimism.io/)을 위한 테스트넷입니다.
 
-##### 리소스 {#related-tools}
+##### 리소스 {#}
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### 퍼싯 {#further-reading}
+##### 퍼싯 {#}
 
 - [Alchemy 퍼싯](https://www.alchemy.com/faucets/optimism-sepolia)
 - [체인링크 퍼싯](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com 옵티미즘 Sepolia 퍼싯](https://ethfaucet.com/networks/optimism)
 - [테스트넷 퍼싯](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### 스타크넷 Sepolia
+#### 스타크넷 Sepolia {#starknet-sepolia}
 
 [스타크넷](https://www.starknet.io)을 위한 테스트넷입니다.
 
@@ -166,27 +166,27 @@ Ephemery는 매달 완전히 초기화되는 독특한 종류의 테스트넷입
 - [Blast 스타크넷 Sepolia 퍼싯](https://blastapi.io/faucets/starknet-sepolia-eth)
 - [스타크넷 퍼싯](https://starknet-faucet.vercel.app/)
 
-## 프라이빗 네트워크
+## 프라이빗 네트워크 {#private-networks}
 
 이더리움 네트워크의 노드가 퍼블릭 네트워크(예: 메인넷 또는 테스트넷)에 연결되어 있지 않다면 이는 프라이빗 네트워크입니다. 이 문맥에서 프라이빗은 보호되거나 안전하다는 의미보다는 예약되거나 격리되어 있다는 의미에 가깝습니다.
 
-### 개발 네트워크
+### 개발 네트워크 {#development-networks}
 
 이더리움 애플리케이션을 개발할 때, 배포하기 전에 프라이빗 네트워크에서 실행하여 어떻게 작동하는지 확인하는 것이 좋습니다. 웹 개발을 위해 컴퓨터에 로컬 서버를 만드는 것과 유사하게, 로컬 블록체인 인스턴스를 생성하여 탈중앙화 애플리케이션(dapp)을 테스트할 수 있습니다. 이를 통해 퍼블릭 테스트넷보다 훨씬 빠른 반복 작업이 가능합니다.
 
 이를 지원하는 전용 프로젝트와 도구들이 있습니다. [개발 네트워크](/developers/docs/development-networks/)에 대해 자세히 알아보세요.
 
-### 컨소시엄 네트워크
+### 컨소시엄 네트워크 {#consortium-networks}
 
 합의 프로세스는 신뢰할 수 있는 사전 정의된 노드 세트에 의해 제어됩니다. 예를 들어, 알려진 학술 기관들이 각각 단일 노드를 관리하는 프라이빗 네트워크가 있으며, 블록은 네트워크 내 서명자의 임계값에 의해 검증됩니다.
 
 퍼블릭 이더리움 네트워크가 퍼블릭 인터넷과 같다면, 컨소시엄 네트워크는 프라이빗 인트라넷과 같습니다.
 
-## <Emoji text="🚉" /> 이더리움 테스트넷의 이름은 왜 지하철역 이름에서 따왔나요?
+## <Emoji text="🚉" /> 이더리움 테스트넷의 이름은 왜 지하철역 이름에서 따왔나요? {#why-naming}
 
 많은 이더리움 테스트넷은 실제 지하철역이나 기차역의 이름을 따서 명명되었습니다. 이러한 명명 전통은 일찍부터 시작되었으며 기여자들이 거주하거나 일했던 글로벌 도시들을 반영합니다. 이는 상징적이고 기억하기 쉬우며 실용적입니다. 테스트넷이 이더리움 메인넷과 격리되어 있는 것처럼, 지하철 노선도 지상 교통과 분리되어 운행됩니다.
 
-### <Emoji text="🚧" /> 일반적으로 사용되는 테스트넷 및 레거시 테스트넷
+### <Emoji text="🚧" /> 일반적으로 사용되는 테스트넷 및 레거시 테스트넷 {#common-and-legacy-testnets}
 
 - **Sepolia** - 그리스 아테네의 지하철과 연결된 지역입니다. 현재 스마트 컨트랙트 및 탈중앙화 애플리케이션(dapp) 테스트에 사용됩니다.
 - **Hoodi** - 인도 벵갈루루의 Hoodi 지하철역 이름을 따서 명명되었습니다. 검증자 및 프로토콜 업그레이드 테스트에 사용됩니다.
@@ -196,7 +196,7 @@ Ephemery는 매달 완전히 초기화되는 독특한 종류의 테스트넷입
 - **Kovan** _(사용 중단됨)_ - 싱가포르 MRT 역 이름을 따서 명명되었습니다.
 - **Morden** _(사용 중단됨)_ - 런던 지하철역 이름을 따서 명명되었습니다. 이더리움의 첫 번째 퍼블릭 테스트넷입니다.
 
-### <Emoji text="🧪" /> 기타 특수 테스트넷
+### <Emoji text="🧪" /> 기타 특수 테스트넷 {#other-testnets}
 
 일부 테스트넷은 단기 또는 특정 업그레이드 테스트를 위해 생성되었으며 반드시 지하철을 테마로 하지는 않습니다.
 
@@ -205,12 +205,12 @@ Ephemery는 매달 완전히 초기화되는 독특한 종류의 테스트넷입
 
 지하철역 이름을 사용하면 개발자가 숫자 체인 ID에 의존할 필요 없이 테스트넷을 빠르게 식별하고 기억하는 데 도움이 됩니다. 이는 또한 실용적이고 글로벌하며 인간 중심적인 이더리움의 문화를 반영합니다.
 
-## 관련 도구
+## 관련 도구 {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _지갑과 제공자를 적절한 체인 ID 및 네트워크 ID에 연결하기 위한 EVM 네트워크 목록_
 - [EVM 기반 체인](https://github.com/ethereum-lists/chains) _Chainlist를 구동하는 체인 메타데이터의 GitHub 리포지토리_
 
-## 더 읽을거리
+## 더 읽을거리 {#further-reading}
 
 - [제안: 예측 가능한 이더리움 테스트넷 수명 주기](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [이더리움 테스트넷의 진화](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

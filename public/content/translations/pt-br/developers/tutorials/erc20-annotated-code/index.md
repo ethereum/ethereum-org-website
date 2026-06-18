@@ -1,9 +1,9 @@
 ---
 title: "Passo a passo do contrato ERC-20"
-description: O que há no contrato ERC-20 da OpenZeppelin e por que está lá?
+description: "O que há no contrato ERC-20 da OpenZeppelin e por que está lá?"
 author: Ori Pomerantz
 lang: pt-br
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
 breadcrumb: Passo a passo do ERC-20
 published: 2021-03-09

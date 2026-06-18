@@ -1,11 +1,11 @@
 ---
-title: プール・ステーキング
-description: ステーキング・プールについて学ぶ
+title: "プール・ステーキング"
+description: "ステーキング・プールについて学ぶ"
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: プールで泳ぐサイのレスリー。
+alt: "プールで泳ぐサイのレスリー。"
 sidebarDepth: 2
 summaryPoints:
   - 他のユーザーと協力して、任意の額のETHをステークし、報酬を獲得する

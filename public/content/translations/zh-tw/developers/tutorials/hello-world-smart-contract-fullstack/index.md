@@ -1,13 +1,13 @@
 ---
-title: 初學者 Hello World 智能合約 - 全端
-description: 在以太坊上撰寫與部署簡單智能合約的入門教學。
+title: "初學者 Hello World 智能合約 - 全端"
+description: "在以太坊上撰寫與部署簡單智能合約的入門教學。"
 author: "nstrike2"
-breadcrumb: Hello World 全端
+breadcrumb: "Hello World 全端"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "智能合約",
     "部署",
     "區塊瀏覽器",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

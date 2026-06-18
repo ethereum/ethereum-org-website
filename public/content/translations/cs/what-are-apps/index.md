@@ -1,14 +1,14 @@
 ---
 title: Aplikace na Ethereu
-metaTitle: Aplikace na Ethereu | Decentralizované aplikace na Ethereu
-description: Aplikace na Ethereu jsou svobodné, globální a místo serverů soukromých společností využívají veřejný blockchain. To znamená, že můžete používat stejný účet v každém projektu a zachovat si své soukromí.
+metaTitle: "Aplikace na Ethereu | Decentralizované aplikace na Ethereu"
+description: "Aplikace na Ethereu jsou svobodné, globální a místo serverů soukromých společností využívají veřejný blockchain. To znamená, že můžete používat stejný účet v každém projektu a zachovat si své soukromí."
 lang: cs
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: Aplikace na Ethereu jsou svobodné, globální a místo serverů soukromých společností využívají veřejný blockchain. To znamená, že můžete používat stejný účet v každém projektu a zachovat si své soukromí.
+summary: "Aplikace na Ethereu jsou svobodné, globální a místo serverů soukromých společností využívají veřejný blockchain. To znamená, že můžete používat stejný účet v každém projektu a zachovat si své soukromí."
 ---
 
 ## Aplikace se superschopnostmi {#apps-with-superpowers}

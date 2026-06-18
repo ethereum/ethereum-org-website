@@ -1,6 +1,6 @@
 ---
-title: 智能合約語言
-description: 兩種主要智能合約語言（Solidity 與 Vyper）的概述與比較。
+title: "智能合約語言"
+description: "兩種主要智能合約語言（Solidity 與 Vyper）的概述與比較。"
 lang: zh-tw
 ---
 

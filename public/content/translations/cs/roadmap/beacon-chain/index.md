@@ -1,6 +1,6 @@
 ---
 title: Beacon chain
-description: Přečtěte si o Beacon chainu – aktualizaci, která do Etherea přinesla důkaz podílem (PoS).
+description: "Přečtěte si o Beacon chainu – aktualizaci, která do Etherea přinesla důkaz podílem (PoS)."
 lang: cs
 template: upgrade
 image: /images/upgrades/core.png

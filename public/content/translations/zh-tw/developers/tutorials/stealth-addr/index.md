@@ -1,7 +1,7 @@
 ---
 title: "使用隱形地址"
 description: "隱形地址允許使用者匿名轉帳資產。閱讀本文後，您將能夠：解釋什麼是隱形地址及其運作方式，了解如何以保護隱私的方式使用隱形地址，並編寫一個使用隱形地址的網頁應用程式。"
-author: 奧里·波梅蘭茨
+author: "奧里·波梅蘭茨"
 tags:
   - 隱形地址
   - 隱私
@@ -9,7 +9,7 @@ tags:
   - rust
   - wasm
 skill: intermediate
-breadcrumb: 隱形地址
+breadcrumb: "隱形地址"
 published: 2025-11-30
 lang: zh-tw
 sidebarDepth: 3

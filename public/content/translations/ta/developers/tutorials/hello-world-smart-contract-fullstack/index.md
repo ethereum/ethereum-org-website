@@ -1,13 +1,13 @@
 ---
-title: தொடக்கநிலையாளர்களுக்கான Hello World திறன் ஒப்பந்தம் - முழு அடுக்கு (Fullstack)
-description: எத்திரியத்தில் ஒரு எளிய திறன் ஒப்பந்தத்தை எழுதி நிலைநிறுத்துவது குறித்த அறிமுகப் பயிற்சி.
+title: "தொடக்கநிலையாளர்களுக்கான Hello World திறன் ஒப்பந்தம் - முழு அடுக்கு (Fullstack)"
+description: "எத்திரியத்தில் ஒரு எளிய திறன் ஒப்பந்தத்தை எழுதி நிலைநிறுத்துவது குறித்த அறிமுகப் பயிற்சி."
 author: "nstrike2"
-breadcrumb: Hello World முழு அடுக்கு (fullstack)
+breadcrumb: "Hello World முழு அடுக்கு (fullstack)"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "திறன் ஒப்பந்தங்கள்",
     "நிலைநிறுத்துதல்",
     "தொகுதி உலாவி",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

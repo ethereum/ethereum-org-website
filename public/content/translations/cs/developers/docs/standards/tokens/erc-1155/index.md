@@ -1,6 +1,6 @@
 ---
-title: Standard pro více tokenů ERC-1155
-description: Přečtěte si o ERC-1155, standardu pro více tokenů, který kombinuje zaměnitelné a nezaměnitelné tokeny v jediném kontraktu.
+title: "Standard pro více tokenů ERC-1155"
+description: "Přečtěte si o ERC-1155, standardu pro více tokenů, který kombinuje zaměnitelné a nezaměnitelné tokeny v jediném kontraktu."
 lang: cs
 ---
 

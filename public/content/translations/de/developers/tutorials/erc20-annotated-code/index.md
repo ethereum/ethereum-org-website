@@ -3,7 +3,7 @@ title: "ERC-20-Vertrag im Detail"
 description: Was steht im ERC-20-Vertrag von OpenZeppelin und warum ist es dort?
 author: Ori Pomerantz
 lang: de
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
 breadcrumb: ERC-20-Durchlauf
 published: 2021-03-09

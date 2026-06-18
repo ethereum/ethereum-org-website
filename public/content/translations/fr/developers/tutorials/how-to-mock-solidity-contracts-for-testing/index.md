@@ -3,7 +3,7 @@ title: Comment simuler (mock) des contrats intelligents Solidity pour les tests
 description: Pourquoi vous devriez simuler vos contrats lors des tests
 author: Markus Waas
 lang: fr
-tags: ["solidity", "contrats intelligents", "tests", "mocking"]
+tags: ["Solidity", "contrats intelligents", "tests", "mocking"]
 skill: intermediate
 breadcrumb: Simuler des contrats
 published: 2020-05-02

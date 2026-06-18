@@ -1,6 +1,6 @@
 ---
-title: Węzły jako usługa
-description: Podstawowy przegląd usług węzłów, ich wady i zalety oraz popularni dostawcy.
+title: "Węzły jako usługa"
+description: "Podstawowy przegląd usług węzłów, ich wady i zalety oraz popularni dostawcy."
 lang: pl
 sidebarDepth: 2
 ---
@@ -54,7 +54,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum, śmia
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentacja](https://www.alchemy.com/docs/)
   - Funkcje
-    - Największy darmowy plan z 300 mln jednostek obliczeniowych miesięcznie (~30 mln żądań getLatestBlock)
+    - Największy darmowy plan z 300 mln jednostek obliczeniowych miesięcznie (\~30 mln żądań getLatestBlock)
     - Obsługa wielu łańcuchów dla Polygon, Starknet, Optimism, Arbitrum
     - Obsługuje ~70% największych zdecentralizowanych aplikacji (dapp) Ethereum i wolumenu transakcji zdecentralizowanych finansów (DeFi)
     - Alerty webhook w czasie rzeczywistym za pośrednictwem Alchemy Notify

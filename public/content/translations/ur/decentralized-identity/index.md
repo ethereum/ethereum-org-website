@@ -183,7 +183,7 @@ summaryPoints:
 ### مضامین {#articles}
 
 - [بلاک چین کے استعمال کے کیسز: ڈیجیٹل شناخت میں بلاک چین](https://consensys.net/blockchain-use-cases/digital-identity/) — _<span dir="ltr">ConsenSys</span>_
-- [ایتھیریم ERC-725 کیا ہے؟ بلاک چین پر خود مختار شناختی انتظام](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _<span dir="ltr">Sam Town</span>_
+- [ایتھیریم <span dir="ltr">ERC-725</span> کیا ہے؟ بلاک چین پر خود مختار شناختی انتظام](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _<span dir="ltr">Sam Town</span>_
 - [بلاک چین ڈیجیٹل شناخت کا مسئلہ کیسے حل کر سکتی ہے](https://time.com/6142810/proof-of-humanity/) — _<span dir="ltr">Andrew R. Chow</span>_
 - [غیر مرکزی شناخت کیا ہے اور آپ کو کیوں پرواہ کرنی چاہیے؟](https://web3.hashnode.com/what-is-decentralized-identity) — _<span dir="ltr">Emmanuel Awosika</span>_
 - [غیر مرکزی شناخت کا تعارف](https://walt.id/white-paper/digital-identity) — _<span dir="ltr">Dominik Beron</span>_
@@ -198,7 +198,7 @@ summaryPoints:
 
 ### کمیونٹیز {#communities}
 
-- [<span dir="ltr">GitHub</span> پر ERC-725 الائنس](https://github.com/erc725alliance) — _ایتھیریم بلاک چین پر شناخت کے انتظام کے لیے ERC-725 معیار کے حامی_
+- [<span dir="ltr">GitHub</span> پر <span dir="ltr">ERC-725</span> الائنس](https://github.com/erc725alliance) — _ایتھیریم بلاک چین پر شناخت کے انتظام کے لیے <span dir="ltr">ERC-725</span> معیار کے حامی_
 - [<span dir="ltr">EthID</span> ڈسکارڈ سرور](https://discord.com/invite/ZUyG3mSXFD) — _<span dir="ltr">Sign-in with Ethereum</span>، اور ایتھیریم فالو پروٹوکول پر کام کرنے والے شائقین اور ڈویلپرز کے لیے کمیونٹی_
 - [<span dir="ltr">Veramo Labs</span>](https://discord.gg/sYBUXpACh4) — _ایپلی کیشنز کے لیے قابلِ تصدیق ڈیٹا کا فریم ورک بنانے میں تعاون کرنے والے ڈویلپرز کی ایک کمیونٹی_
 - [<span dir="ltr">walt.id</span>](https://discord.com/invite/AW8AgqJthZ) — _مختلف صنعتوں میں غیر مرکزی شناخت کے استعمال کے کیسز پر کام کرنے والے ڈویلپرز اور بلڈرز کی ایک کمیونٹی_

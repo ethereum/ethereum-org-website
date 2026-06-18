@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn Token không thể thay thế ERC-721
-description: Tìm hiểu về ERC-721, tiêu chuẩn cho các token không thể thay thế (NFT) đại diện cho các tài sản kỹ thuật số độc nhất trên Ethereum.
+title: "Tiêu chuẩn Token không thể thay thế ERC-721"
+description: "Tìm hiểu về ERC-721, tiêu chuẩn cho các token không thể thay thế (NFT) đại diện cho các tài sản kỹ thuật số độc nhất trên Ethereum."
 lang: vi
 ---
 

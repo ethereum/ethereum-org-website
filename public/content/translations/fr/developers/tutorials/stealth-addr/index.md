@@ -2,7 +2,7 @@
 title: "Utiliser les adresses furtives"
 description: "Les adresses furtives permettent aux utilisateurs de transférer des actifs de manière anonyme. Après avoir lu cet article, vous serez en mesure de : d'expliquer ce que sont les adresses furtives et comment elles fonctionnent, de comprendre comment utiliser les adresses furtives de manière à préserver l'anonymat, et d'écrire une application web qui utilise des adresses furtives."
 author: Ori Pomerantz
-tags: ["Adresse furtive", "confidentialité", "cryptographie", "rust", "wasm"]
+tags: ["Adresse furtive", "confidentialité", "cryptographie", "Rust", "wasm"]
 skill: intermediate
 breadcrumb: Adresses furtives
 published: 2025-11-30

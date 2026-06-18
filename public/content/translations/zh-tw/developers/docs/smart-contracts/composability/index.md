@@ -1,6 +1,6 @@
 ---
-title: 智能合約可組合性
-description: 了解如何像樂高積木一樣組合智能合約，透過重複使用現有元件來建立複雜的去中心化應用程式 (dapp)。
+title: "智能合約可組合性"
+description: "了解如何像樂高積木一樣組合智能合約，透過重複使用現有元件來建立複雜的去中心化應用程式 (dapp)。"
 lang: zh-tw
 incomplete: true
 ---

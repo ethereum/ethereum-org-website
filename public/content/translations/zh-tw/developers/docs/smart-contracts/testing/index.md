@@ -1,6 +1,6 @@
 ---
-title: 測試智能合約
-description: 測試以太坊智能合約的技術與注意事項總覽。
+title: "測試智能合約"
+description: "測試以太坊智能合約的技術與注意事項總覽。"
 lang: zh-tw
 ---
 
@@ -52,7 +52,7 @@ lang: zh-tw
 
 #### 智能合約單元測試準則 {#unit-testing-guidelines}
 
-##### 1. 了解合約的商業邏輯和工作流程 {#integration-testing-for-smart-contracts}
+##### 1. 了解合約的商業邏輯和工作流程 {#}
 
 在編寫單元測試之前，了解智能合約提供哪些功能以及使用者將如何存取和使用這些功能會很有幫助。這對於執行[快樂路徑測試 (happy path tests)](https://en.m.wikipedia.org/wiki/Happy_path) 特別有用，該測試可確定合約中的函式是否針對有效的使用者輸入回傳正確的輸出。我們將使用這個（簡化的）[拍賣合約](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)範例來解釋這個概念：
 
@@ -114,7 +114,7 @@ function auctionEnd() external {
 
 了解合約的運作流程也有助於編寫單元測試，以檢查執行是否符合要求。例如，拍賣合約規定使用者在拍賣結束時（即當 `auctionEndTime` 低於 `block.timestamp` 時）不能出價。因此，開發人員可能會執行一個單元測試，檢查在拍賣結束時（即當 `auctionEndTime` > `block.timestamp` 時），對 `bid()` 函式的呼叫是成功還是失敗。
 
-##### 2. 評估與合約執行相關的所有假設 {#property-based-testing-for-smart-contracts}
+##### 2. 評估與合約執行相關的所有假設 {#}
 
 記錄有關合約執行的任何假設並編寫單元測試以驗證這些假設的有效性非常重要。除了提供防止意外執行的保護之外，測試斷言還會迫使你思考可能破壞智能合約安全模型的操作。一個有用的提示是超越「快樂使用者測試」，並編寫負面測試來檢查函式是否因錯誤的輸入而失敗。
 
@@ -128,11 +128,11 @@ function auctionEnd() external {
 
 **注意**：測試假設的另一種方法是編寫觸發合約中[函式修飾符](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers)的測試，特別是 `require`、`assert` 和 `if…else` 陳述式。
 
-##### 3. 測量程式碼覆蓋率 {#static-analysis}
+##### 3. 測量程式碼覆蓋率 {#}
 
 [程式碼覆蓋率](https://en.m.wikipedia.org/wiki/Code_coverage)是一種測試指標，用於追蹤在測試期間執行的程式碼中的分支、行和陳述式的數量。測試應具有良好的程式碼覆蓋率，以盡量減少未測試漏洞的風險。如果沒有足夠的覆蓋率，你可能會錯誤地認為你的合約是安全的，因為所有測試都通過了，而漏洞仍然存在於未測試的程式碼路徑中。然而，記錄高程式碼覆蓋率可以確保智能合約中的所有陳述式/函式都經過了充分的正確性測試。
 
-##### 4. 使用發展完善的測試框架 {#dynamic-analysis}
+##### 4. 使用發展完善的測試框架 {#}
 
 用於執行智能合約單元測試的工具品質至關重要。理想的測試框架是定期維護的；提供有用的功能（例如，日誌記錄和報告功能）；並且必須被其他開發人員廣泛使用和審查。
 
@@ -146,7 +146,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 - **[使用 Hardhat 執行單元測試](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 - **[使用 Wake 執行單元測試](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
-### 整合測試 {#running-property-based-tests}
+### 整合測試 {#integration-testing-for-smart-contracts}
 
 雖然單元測試會獨立對合約函式進行除錯，但整合測試會將智能合約的元件作為一個整體進行評估。整合測試可以檢測由跨合約呼叫或同一智能合約中不同函式之間的互動所引起的問題。例如，整合測試可以幫助檢查[繼承](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance)和依賴注入等功能是否正常運作。
 
@@ -154,13 +154,13 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 分叉的區塊鏈行為將類似於主網，並具有帶有關聯狀態和餘額的帳戶。但它僅作為沙盒式的本機開發環境，這意味著你不需要真實的 ETH 來進行交易，你的更改也不會影響真實的以太坊協定。
 
-### 基於屬性的測試 {#manual-testing-for-smart-contracts}
+### 基於屬性的測試 {#property-based-testing-for-smart-contracts}
 
 基於屬性的測試是檢查智能合約是否滿足某些定義屬性的過程。屬性斷言了關於合約行為的事實，這些事實預期在不同場景中保持為真——智能合約屬性的一個例子可能是「合約中的算術運算永遠不會溢位或下溢」。
 
-**靜態分析**和**動態分析**是執行基於屬性測試的兩種常見技術，兩者都可以驗證程式（在此情況下為智能合約）的程式碼是否滿足某些預定義的屬性。一些基於屬性的測試工具帶有關於預期合約屬性的預定義規則，並根據這些規則檢查程式碼，而其他工具則允許你為智能合約建立自訂屬性。
+<strong>靜態分析</strong>和**動態分析**是執行基於屬性測試的兩種常見技術，兩者都可以驗證程式（在此情況下為智能合約）的程式碼是否滿足某些預定義的屬性。一些基於屬性的測試工具帶有關於預期合約屬性的預定義規則，並根據這些規則檢查程式碼，而其他工具則允許你為智能合約建立自訂屬性。
 
-#### 靜態分析 {#testing-on-local-blockchain}
+#### 靜態分析 {#static-analysis}
 
 靜態分析器將智能合約的原始碼作為輸入，並輸出宣告合約是否滿足屬性的結果。與動態分析不同，靜態分析不涉及執行合約來分析其正確性。相反，靜態分析會推論智能合約在執行期間可能採取的所有路徑（即透過檢查原始碼的結構來確定它在執行階段對合約運作的意義）。
 
@@ -168,7 +168,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 在大多數情況下，靜態分析有助於檢測安全問題，例如在合約程式碼中使用不安全的結構、語法錯誤或違反編碼標準。然而，眾所周知，靜態分析器在檢測更深層次的漏洞時通常不夠完善，並且可能會產生過多的偽陽性。
 
-#### 動態分析 {#testing-contracts-on-testnets}
+#### 動態分析 {#dynamic-analysis}
 
 動態分析會產生符號輸入（例如，在[符號執行](https://en.m.wikipedia.org/wiki/Symbolic_execution)中）或具體輸入（例如，在[模糊測試](https://owasp.org/www-community/Fuzzing)中）給智能合約函式，以查看是否有任何執行軌跡違反了特定屬性。這種形式的基於屬性測試與單元測試的不同之處在於，測試案例涵蓋多個場景，並且由程式處理測試案例的產生。
 
@@ -182,7 +182,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 3. **單元測試證明合約對樣本資料執行正確，但合約對樣本外輸入是否執行正確仍然未知。** 屬性測試使用給定輸入值的多種變體來執行目標合約，以尋找導致斷言失敗的執行軌跡。因此，屬性測試提供了更多保證，確保合約對廣泛類別的輸入資料執行正確。
 
-### 執行智能合約基於屬性測試的準則 {#testing-vs-formal-verification}
+### 執行智能合約基於屬性測試的準則 {#running-property-based-tests}
 
 執行基於屬性的測試通常從定義一個屬性（例如，沒有[整數溢位](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)）或你想在智能合約中驗證的屬性集合開始。在編寫屬性測試時，你可能還需要定義一個值範圍，程式可以在該範圍內產生交易輸入的資料。
 
@@ -197,11 +197,11 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 - **[使用曼蒂科爾 (Manticore) 對智能合約進行符號執行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[使用 Mythril 對智能合約進行符號執行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-## 智能合約的手動測試 {#testing-vs-audits-bug-bounties}
+## 智能合約的手動測試 {#manual-testing-for-smart-contracts}
 
 智能合約的手動測試通常在執行自動化測試之後的開發週期後期進行。這種形式的測試將智能合約作為一個完全整合的產品進行評估，以查看其效能是否符合技術要求中的規定。
 
-### 在本機區塊鏈上測試合約 {#testing-tools-and-libraries}
+### 在本機區塊鏈上測試合約 {#testing-on-local-blockchain}
 
 雖然在本機開發環境中執行的自動化測試可以提供有用的除錯資訊，但你會想知道你的智能合約在生產環境中的行為。然而，部署到以太坊主鏈會產生燃料 (Gas) 費用——更不用說如果你的智能合約仍然有錯誤，你或你的使用者可能會損失真金白銀。
 
@@ -211,7 +211,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 [更多關於開發網路的資訊。](/developers/docs/development-networks/)
 
-### 在測試網上測試合約 {#unit-testing-tools}
+### 在測試網上測試合約 {#testing-contracts-on-testnets}
 
 測試網路或測試網的運作方式與以太坊主網完全相同，只是它使用的以太幣 (ETH) 沒有現實世界的價值。將你的合約部署在[測試網](/developers/docs/networks/#ethereum-testnets)上意味著任何人都可以與之互動（例如，透過去中心化應用程式 (dapp) 的前端），而不會使資金面臨風險。
 
@@ -221,7 +221,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 [更多關於以太坊測試網的資訊。](/developers/docs/development-networks/#public-beacon-testchains)
 
-## 測試與形式化驗證 {#property-based-testing-tools}
+## 測試與形式化驗證 {#testing-vs-formal-verification}
 
 雖然測試有助於確認合約對某些資料輸入回傳預期結果，但它無法最終證明在測試期間未使用的輸入也是如此。因此，測試智能合約不能保證「功能正確性」（即它不能證明程式對_所有_輸入值集合的行為都符合要求）。
 
@@ -233,7 +233,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 [更多關於智能合約形式化驗證的資訊。](/developers/docs/smart-contracts/formal-verification)
 
-## 測試與稽核和漏洞賞金 {#static-analysis-tools}
+## 測試與稽核和漏洞賞金 {#testing-vs-audits-bug-bounties}
 
 如前所述，嚴格的測試很少能保證合約中沒有錯誤；形式化驗證方法可以提供更強的正確性保證，但目前難以使用且會產生可觀的成本。
 
@@ -245,9 +245,9 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 主要區別在於，漏洞賞金計畫向更廣泛的開發人員/駭客社群開放，並吸引了具有獨特技能和經驗的廣泛道德駭客和獨立安全專業人員。與主要依賴可能擁有有限或狹窄專業知識的團隊的智能合約稽核相比，這可能是一個優勢。
 
-## 測試工具和函式庫 {#dynamic-analysis-tools}
+## 測試工具和函式庫 {#testing-tools-and-libraries}
 
-### 單元測試工具 {#related-tutorials}
+### 單元測試工具 {#unit-testing-tools}
 
 - **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _用於以 Solidity 編寫的智能合約的程式碼覆蓋率工具。_
 
@@ -267,9 +267,9 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _基於 Python 的單元測試和模糊測試框架，具有強大的除錯功能和跨鏈測試支援，利用 pytest 和 Anvil 提供最佳的使用者體驗和效能。_
 
-### 基於屬性的測試工具 {#further-reading}
+### 基於屬性的測試工具 {#property-based-testing-tools}
 
-#### 靜態分析工具 {#tutorials}
+#### 靜態分析工具 {#static-analysis-tools}
 
 - **[斯立瑟 (Slither)](https://github.com/crytic/slither)** - _基於 Python 的 Solidity 靜態分析框架，用於尋找漏洞、增強程式碼理解以及為智能合約編寫自訂分析。_
 
@@ -281,7 +281,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 - **[Slippy](https://github.com/fvictorio/slippy)** - _一個簡單而強大的 Solidity Linter。_
 
-#### 動態分析工具
+#### 動態分析工具 {#dynamic-analysis-tools}
 
 - **[埃奇德納 (Echidna)](https://github.com/crytic/echidna/)** - _快速的合約模糊測試器，透過基於屬性的測試來檢測智能合約中的漏洞。_
 
@@ -293,7 +293,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble 是一種規範語言和執行階段驗證工具，允許你使用屬性註解智能合約，從而允許你使用 Diligence Fuzzing 或 MythX 等工具自動測試合約。_
 
-## 相關教學
+## 相關教學 {#related-tutorials}
 
 - [不同測試產品的總覽與比較](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [如何使用埃奇德納 (Echidna) 測試智能合約](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
@@ -302,14 +302,14 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 - [如何模擬 Solidity 合約進行測試](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [如何使用 Foundry 在 Solidity 中執行單元測試](https://www.rareskills.io/post/foundry-testing-solidity)
 
-## 延伸閱讀
+## 延伸閱讀 {#further-reading}
 
 - [測試以太坊智能合約的深入指南](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [如何測試以太坊智能合約](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
 - [MolochDAO 的開發人員單元測試指南](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
 - [如何像搖滾明星一樣測試智能合約](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)
 
-## 教學：以太坊上的智能合約測試
+## 教學：以太坊上的智能合約測試 {#tutorials}
 
 - [如何在本地多客戶端測試網上開發和測試 dApp](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– 將智能合約部署到本地測試網並執行測試的演練。_
 - [如何模擬 Solidity 智能合約進行測試](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/) _– 關於如何使用模擬資料和實作單元測試的中階教學。_

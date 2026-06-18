@@ -1,6 +1,6 @@
 ---
 title: Validium
-description: 介紹目前以太坊社群所使用的擴容解決方案 Validium。
+description: "介紹目前以太坊社群所使用的擴容解決方案 Validium。"
 lang: zh-tw
 sidebarDepth: 3
 ---

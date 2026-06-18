@@ -1,6 +1,6 @@
 ---
 title: Enviar tokens usando ethers.js
-description: Guía para principiantes sobre cómo enviar tokens usando ethers.js.
+description: "Guía para principiantes sobre cómo enviar tokens usando ethers.js."
 author: Kim YongJun
 tags: ["ETHERS.JS", "ERC-20", "TOKENS"]
 skill: beginner

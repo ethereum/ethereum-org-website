@@ -1,11 +1,11 @@
 ---
-title: 离线数据完整性的默克尔证明
-description: 确保主要存储在链下的数据的链上数据完整性
-author: 奥里·波梅兰茨
+title: "离线数据完整性的默克尔证明"
+description: "确保主要存储在链下的数据的链上数据完整性"
+author: "奥里·波梅兰茨"
 tags:
   - 存储
 skill: advanced
-breadcrumb: 默克尔证明
+breadcrumb: "默克尔证明"
 lang: zh
 published: 2021-12-30
 ---

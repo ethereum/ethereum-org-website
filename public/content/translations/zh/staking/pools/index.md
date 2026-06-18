@@ -1,11 +1,11 @@
 ---
-title: 联合质押
-description: 了解质押池
+title: "联合质押"
+description: "了解质押池"
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: 犀牛 Leslie 在池中游泳。
+alt: "犀牛 Leslie 在池中游泳。"
 sidebarDepth: 2
 summaryPoints:
   - 与他人联合，使用任意数量的 ETH 进行质押并赚取奖励

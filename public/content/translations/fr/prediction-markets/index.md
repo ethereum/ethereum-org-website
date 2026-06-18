@@ -1,5 +1,5 @@
 ---
-title: Marchés de prédiction
+title: "Marchés de prédiction"
 lang: fr
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ Il existe plusieurs marchés de prédiction basés sur Ethereum. Voici quelques-
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Restez conscient des risques</strong></strong>
+ <p className="mt-0"><strong>Restez conscient des risques</strong>
   <p className="mt-2">Ne pariez que ce que vous pouvez vous permettre de perdre et soyez conscient des comportements addictifs potentiels.</p>
 </AlertDescription>
 </AlertContent>

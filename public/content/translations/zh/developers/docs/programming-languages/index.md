@@ -1,6 +1,6 @@
 ---
-title: 编程语言
-description: 探索适用于各种编程语言（包括 JavaScript、Python、Go、Rust 等）的以太坊开发资源。
+title: "编程语言"
+description: "探索适用于各种编程语言（包括 JavaScript、Python、Go、Rust 等）的以太坊开发资源。"
 lang: zh
 ---
 

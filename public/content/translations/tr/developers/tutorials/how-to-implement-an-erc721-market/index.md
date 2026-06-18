@@ -1,10 +1,10 @@
 ---
-title: Bir ERC-721 piyasası nasıl uygulanır
-description: Tokenlaştırılmış öğeler merkeziyetsiz bir ilan panosunda nasıl satışa çıkarılır
+title: "Bir ERC-721 piyasası nasıl uygulanır"
+description: "Tokenlaştırılmış öğeler merkeziyetsiz bir ilan panosunda nasıl satışa çıkarılır"
 author: "Alberto Cuesta Cañada"
-tags: ["akıllı sözleşmeler", "erc-721", "solidity", "token'lar"]
+tags: ["akıllı sözleşmeler", "erc-721", "Solidity", "token'lar"]
 skill: intermediate
-breadcrumb: ERC-721 piyasası
+breadcrumb: "ERC-721 piyasası"
 lang: tr
 published: 2020-03-19
 source: Hackernoon

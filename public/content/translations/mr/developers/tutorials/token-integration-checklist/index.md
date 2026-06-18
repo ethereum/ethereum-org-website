@@ -1,11 +1,11 @@
 ---
-title: टोकन एकत्रीकरण चेकलिस्ट
-description: टोकन्सशी संवाद साधताना विचारात घेण्याच्या गोष्टींची चेकलिस्ट
+title: "टोकन एकत्रीकरण चेकलिस्ट"
+description: "टोकन्सशी संवाद साधताना विचारात घेण्याच्या गोष्टींची चेकलिस्ट"
 author: "ट्रेलऑफबिट्स"
 lang: mr
-tags: ["solidity", "स्मार्ट कॉन्ट्रॅक्ट्स", "सुरक्षा", "टोकन्स"]
+tags: ["Solidity", "स्मार्ट कॉन्ट्रॅक्ट्स", "सुरक्षा", "टोकन्स"]
 skill: intermediate
-breadcrumb: टोकन एकत्रीकरण
+breadcrumb: "टोकन एकत्रीकरण"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

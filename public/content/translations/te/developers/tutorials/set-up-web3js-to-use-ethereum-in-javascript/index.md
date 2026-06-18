@@ -1,12 +1,12 @@
 ---
-title: JavaScriptలో ఎథీరియం బ్లాక్‌చైన్‌ను ఉపయోగించడానికి web3.jsని సెటప్ చేయండి
-description: JavaScript అప్లికేషన్‌ల నుండి ఎథీరియం బ్లాక్‌చైన్‌తో ఇంటరాక్ట్ అవ్వడానికి web3.js లైబ్రరీని ఎలా సెటప్ చేయాలో మరియు కాన్ఫిగర్ చేయాలో తెలుసుకోండి.
+title: "JavaScriptలో ఎథీరియం బ్లాక్‌చైన్‌ను ఉపయోగించడానికి web3.jsని సెటప్ చేయండి"
+description: "JavaScript అప్లికేషన్‌ల నుండి ఎథీరియం బ్లాక్‌చైన్‌తో ఇంటరాక్ట్ అవ్వడానికి web3.js లైబ్రరీని ఎలా సెటప్ చేయాలో మరియు కాన్ఫిగర్ చేయాలో తెలుసుకోండి."
 author: "jdourlens"
 tags:
   - "web3.js"
   - "javascript"
 skill: beginner
-breadcrumb: web3.js సెటప్
+breadcrumb: "web3.js సెటప్"
 lang: te
 published: 2020-04-11
 source: EthereumDev

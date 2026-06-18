@@ -5,9 +5,9 @@ author: "nstrike2"
 breadcrumb: Hello World fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "smart contract",
     "distribuzione",
     "esploratore di blocchi",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

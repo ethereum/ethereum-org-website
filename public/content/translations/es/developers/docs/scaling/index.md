@@ -1,6 +1,6 @@
 ---
 title: Escalabilidad
-description: Una introducción a las diferentes opciones de escalabilidad que la comunidad de Ethereum está desarrollando actualmente.
+description: "Una introducción a las diferentes opciones de escalabilidad que la comunidad de Ethereum está desarrollando actualmente."
 lang: es
 sidebarDepth: 3
 ---

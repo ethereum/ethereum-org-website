@@ -1,11 +1,11 @@
 ---
-title: Đặt cọc chung
-description: Tìm hiểu về các nhóm đặt cọc
+title: "Đặt cọc chung"
+description: "Tìm hiểu về các nhóm đặt cọc"
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Tê giác Leslie đang bơi trong hồ bơi.
+alt: "Tê giác Leslie đang bơi trong hồ bơi."
 sidebarDepth: 2
 summaryPoints:
   - Đặt cọc và kiếm phần thưởng với bất kỳ số lượng ETH nào bằng cách hợp tác với những người khác

@@ -1,11 +1,11 @@
 ---
-title: Staking mutualisé
+title: "Staking mutualisé"
 description: En savoir plus sur les pools de staking
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Leslie le rhinocéros nageant dans la piscine.
+alt: "Leslie le rhinocéros nageant dans la piscine."
 sidebarDepth: 2
 summaryPoints:
   - Stakez et gagnez des récompenses avec n'importe quel montant d'ETH en unissant vos forces à celles d'autres personnes

@@ -1,10 +1,10 @@
 ---
-title: 分散型ユーザーインターフェースのためのIPFS
-description: このチュートリアルでは、IPFSを使用してdappのユーザーインターフェースを保存する方法を説明します。アプリケーションのデータとビジネスロジックが分散化されていても、検閲耐性のあるユーザーインターフェースがなければ、ユーザーはアクセスを失う可能性があります。
-author: オリ・ポメランツ
+title: "分散型ユーザーインターフェースのためのIPFS"
+description: "このチュートリアルでは、IPFSを使用してdappのユーザーインターフェースを保存する方法を説明します。アプリケーションのデータとビジネスロジックが分散化されていても、検閲耐性のあるユーザーインターフェースがなければ、ユーザーはアクセスを失う可能性があります。"
+author: "オリ・ポメランツ"
 tags: ["ipfs", "dapps", "フロントエンド"]
 skill: beginner
-breadcrumb: dapp UIのためのIPFS
+breadcrumb: "dapp UIのためのIPFS"
 lang: ja
 published: 2024-06-29
 ---
@@ -31,7 +31,7 @@ published: 2024-06-29
 
 5. もう一度選択し、**Share link**をクリックします。URLをクリップボードにコピーします。リンクは`https://ipfs.io/ipfs/QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`のようになります。
 
-6. **Status**をクリックします。**Advanced**タブを展開して、ゲートウェイアドレスを確認します。たとえば、私のシステムではアドレスは`http://127.0.0.1:8080`です。
+6. <strong>Status</strong>をクリックします。**Advanced**タブを展開して、ゲートウェイアドレスを確認します。たとえば、私のシステムではアドレスは`http://127.0.0.1:8080`です。
 
 7. リンクの手順で取得したパスとゲートウェイアドレスを組み合わせて、自分のアドレスを見つけます。たとえば、上記の例の場合、URLは`http://127.0.0.1:8080/ipfs/QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`になります。ブラウザでそのURLを開いて、サイトを確認します。
 
@@ -47,7 +47,7 @@ published: 2024-06-29
 
 2. 左側のサイドバーで**Storage > 4EVER Pin**をクリックします。
 
-3. **Upload > Selected CID**をクリックします。コンテンツに名前を付け、IPFS DesktopからCIDを提供します。現在、CIDは`Qm`で始まり、その後に`QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`のような[Base58エンコード](https://medium.com/bootdotdev/base64-vs-base58-encoding-c25553ff4524)されたハッシュを表す44文字の英数字が続く文字列ですが、[これは変更される可能性があります](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1)。
+3. <strong>Upload > Selected CID</strong>をクリックします。コンテンツに名前を付け、IPFS DesktopからCIDを提供します。現在、CIDは`Qm`で始まり、その後に`QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`のような[Base58エンコード](https://medium.com/bootdotdev/base64-vs-base58-encoding-c25553ff4524)されたハッシュを表す44文字の英数字が続く文字列ですが、[これは変更される可能性があります](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1)。
 
 4. 初期ステータスは**Queued**です。**Pinned**に変わるまでリロードします。
 

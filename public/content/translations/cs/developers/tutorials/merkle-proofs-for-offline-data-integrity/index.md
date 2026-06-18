@@ -1,10 +1,10 @@
 ---
-title: Merkleovy důkazy pro integritu offline dat
-description: Zajištění onchain integrity dat pro data, která jsou uložena převážně offchain
+title: "Merkleovy důkazy pro integritu offline dat"
+description: "Zajištění onchain integrity dat pro data, která jsou uložena převážně offchain"
 author: Ori Pomerantz
 tags: ["úložiště"]
 skill: advanced
-breadcrumb: Merkleovy důkazy
+breadcrumb: "Merkleovy důkazy"
 lang: cs
 published: 2021-12-30
 ---

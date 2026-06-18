@@ -1,6 +1,6 @@
 ---
-title: Mở rộng quy mô
-description: Giới thiệu về các tùy chọn mở rộng quy mô khác nhau hiện đang được cộng đồng Ethereum phát triển.
+title: "Mở rộng quy mô"
+description: "Giới thiệu về các tùy chọn mở rộng quy mô khác nhau hiện đang được cộng đồng Ethereum phát triển."
 lang: vi
 sidebarDepth: 3
 ---

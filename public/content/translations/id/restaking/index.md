@@ -39,7 +39,7 @@ Sama seperti banyak staker ETH yang menjalankan perangkat lunak validasi Ethereu
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Senang untuk diketahui</strong></strong>
+ <p className="mt-0"><strong>Senang untuk diketahui</strong>
   <p className="mt-2">Meskipun "Actively Validated Services" (AVS) adalah yang paling umum, platform staking ulang yang berbeda mungkin menggunakan nama lain untuk layanan terdesentralisasi yang mereka bantu amankan, seperti "Autonomously Validated Services," "Distributed Secure Services," atau "Networks."</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ Di dunia dengan staking ulang ini, baik AVS maupun staker mendapat manfaat karen
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Manfaat tambahan dari staking ulang</strong></strong>
+ <p className="mt-0"><strong>Manfaat tambahan dari staking ulang</strong>
   <p className="mt-2">AVS dapat mencurahkan seluruh sumber daya mereka untuk membangun dan memasarkan layanan mereka, alih-alih terganggu dengan desentralisasi dan keamanan.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ Ada beberapa entitas yang terlibat dalam staking ulang — masing-masing memaink
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Senang untuk diketahui</strong></strong>
+ <p className="mt-0"><strong>Senang untuk diketahui</strong>
   <p className="mt-2">Pelaku staking ulang asli dan likuid sering kali mendelegasikan ETH yang mereka stake kepada operator, alih-alih menjalankan perangkat lunak untuk mengamankan AVS sendiri.</p>
   <p className="mt-2">Dengan cara ini mereka tidak perlu khawatir tentang persyaratan teknis yang rumit dari AVS, meskipun mereka menerima tingkat imbalan yang lebih rendah daripada operator.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ Meskipun merupakan ide baru, beberapa proyek telah muncul untuk mengeksplorasi k
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Peringatan salah kaprah</strong></strong>
+ <p className="mt-0"><strong>Peringatan salah kaprah</strong>
   <p className="mt-2">Beberapa orang mengacaukan "staking ulang" dengan peminjaman LST di keuangan terdesentralisasi (DeFi). Keduanya mempekerjakan ETH yang di-stake, tetapi staking ulang berarti mengamankan AVS, bukan sekadar mendapatkan hasil dari LST.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,10 +139,10 @@ Meskipun AVS menawarkan tingkat yang berbeda, Token Staking Ulang Likuid (LRT) s
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Salah satu pendiri Ethereum sedang mengetik…</strong></strong>
+ <p className="mt-0"><strong>Salah satu pendiri Ethereum sedang mengetik…</strong>
   <p className="mt-2">
     Vitalik, salah satu pendiri Ethereum, memperingatkan tentang potensi risiko staking ulang dalam postingan blog tahun 2021 yang berjudul <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus.</a>
-  </a>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -161,7 +161,7 @@ Meskipun AVS menawarkan tingkat yang berbeda, Token Staking Ulang Likuid (LRT) s
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Staking Ethereum :</strong> Bagaimana cara kerjanya?</strong>
+ <p className="mt-0"><strong>Staking Ethereum :</strong> Bagaimana cara kerjanya?
   <ButtonLink href="/staking/">
     Pelajari Lebih Lanjut
   </ButtonLink>

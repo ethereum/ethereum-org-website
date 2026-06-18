@@ -1,6 +1,6 @@
 ---
-title: Mise à l'échelle
-description: Une introduction aux différentes options de mise à l'échelle actuellement développées par la communauté Ethereum.
+title: "Mise à l'échelle"
+description: "Une introduction aux différentes options de mise à l'échelle actuellement développées par la communauté Ethereum."
 lang: fr
 sidebarDepth: 3
 ---

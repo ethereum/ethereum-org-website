@@ -1,12 +1,12 @@
 ---
-title: ఎథీరియం చెల్లింపులు
-metaTitle: ఎథీరియంపై చెల్లింపులు
-description: ఎథీరియంపై చెల్లింపుల యొక్క అవలోకనం
+title: "ఎథీరియం చెల్లింపులు"
+metaTitle: "ఎథీరియంపై చెల్లింపులు"
+description: "ఎథీరియంపై చెల్లింపుల యొక్క అవలోకనం"
 lang: te
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: ఇచ్చే చేతులతో పాటు ప్రదర్శించబడుతున్న Eth లోగో.
+alt: "ఇచ్చే చేతులతో పాటు ప్రదర్శించబడుతున్న Eth లోగో."
 summaryPoints:
   - "సమాచారం వలె డబ్బు స్వేచ్ఛగా కదిలే ప్రపంచం"
   - "ఓపెన్ మరియు గ్లోబల్, ప్రతి ఒక్కరికీ సరిహద్దులు లేని లావాదేవీలను అనుమతిస్తుంది"
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>ఈరోజే వాలెట్ యాప్‌తో మీ ఎథీరియం ఖాతాను సృష్టించండి.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     ప్రారంభించండి
   </ButtonLink>
 </AlertContent>

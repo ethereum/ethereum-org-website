@@ -1,10 +1,10 @@
 ---
-title: Cách xem NFT trong ví của bạn (Phần 3/3 của Chuỗi hướng dẫn về NFT)
-description: Hướng dẫn này mô tả cách xem một NFT hiện có trên MetaMask!
+title: "Cách xem NFT trong ví của bạn (Phần 3/3 của Chuỗi hướng dẫn về NFT)"
+description: "Hướng dẫn này mô tả cách xem một NFT hiện có trên MetaMask!"
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
-breadcrumb: Xem NFT trong ví
+breadcrumb: "Xem NFT trong ví"
 lang: vi
 published: 2021-04-22
 ---

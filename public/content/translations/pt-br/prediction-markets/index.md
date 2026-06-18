@@ -1,5 +1,5 @@
 ---
-title: Mercados de previsão
+title: "Mercados de previsão"
 lang: pt-br
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ Existem vários mercados de previsão baseados no Ethereum disponíveis. Estes s
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Esteja ciente dos riscos</strong></strong>
+ <p className="mt-0"><strong>Esteja ciente dos riscos</strong>
   <p className="mt-2">Aposte apenas o que você pode perder e esteja ciente de possíveis comportamentos viciantes.</p>
 </AlertDescription>
 </AlertContent>

@@ -1,10 +1,10 @@
 ---
-title: ERC-20 टोकन स्मार्ट अनुबंध को समझें
-description: एक संपूर्ण Solidity स्मार्ट अनुबंध उदाहरण और स्पष्टीकरण के साथ ERC-20 टोकन मानक को लागू करना सीखें।
+title: "ERC-20 टोकन स्मार्ट अनुबंध को समझें"
+description: "एक संपूर्ण Solidity स्मार्ट अनुबंध उदाहरण और स्पष्टीकरण के साथ ERC-20 टोकन मानक को लागू करना सीखें।"
 author: "jdourlens"
-tags: ["स्मार्ट अनुबंध", "टोकन", "solidity", "erc-20"]
+tags: ["स्मार्ट अनुबंध", "टोकन", "Solidity", "erc-20"]
 skill: beginner
-breadcrumb: ERC-20 टोकन की मूल बातें
+breadcrumb: "ERC-20 टोकन की मूल बातें"
 lang: hi
 published: 2020-04-05
 source: EthereumDev

@@ -1,11 +1,11 @@
 ---
-title: रीस्टेकिंग
-metaTitle: रीस्टेकिंग क्या है? | रीस्टेकिंग के लाभ और उपयोग
-description: अन्य विकेंद्रीकृत सेवाओं को सुरक्षित करने और अतिरिक्त पुरस्कार अर्जित करने के लिए स्टेक किए गए ETH का उपयोग करें।
+title: "रीस्टेकिंग"
+metaTitle: "रीस्टेकिंग क्या है? | रीस्टेकिंग के लाभ और उपयोग"
+description: "अन्य विकेंद्रीकृत सेवाओं को सुरक्षित करने और अतिरिक्त पुरस्कार अर्जित करने के लिए स्टेक किए गए ETH का उपयोग करें।"
 lang: hi
 template: use-cases
 image: /images/use-cases/restaking.png
-alt: इथेरियम पर रीस्टेकिंग का एक दृश्य प्रतिनिधित्व।
+alt: "इथेरियम पर रीस्टेकिंग का एक दृश्य प्रतिनिधित्व।"
 sidebarDepth: 2
 summaryPoints:
   - "अन्य विकेंद्रीकृत सेवाओं को सुरक्षित करने और अतिरिक्त पुरस्कार अर्जित करने के लिए स्टेक किए गए ETH का उपयोग करें।"
@@ -39,7 +39,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>जानने योग्य बातें</strong></strong>
+ <p className="mt-0"><strong>जानने योग्य बातें</strong>
   <p className="mt-2">हालांकि "सक्रिय रूप से मान्य सेवाएँ" (AVSs) सबसे आम है, विभिन्न रीस्टेकिंग प्लेटफ़ॉर्म उन विकेंद्रीकृत सेवाओं के लिए अन्य नामों का उपयोग कर सकते हैं जिन्हें वे सुरक्षित करने में मदद करते हैं, जैसे "स्वायत्त रूप से मान्य सेवाएँ" (Autonomously Validated Services), "वितरित सुरक्षित सेवाएँ" (Distributed Secure Services), या "नेटवर्क" (Networks)।</p>
 </AlertDescription>
 </AlertContent>
@@ -69,8 +69,8 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>रीस्टेकिंग का अतिरिक्त लाभ</strong></strong>
-  <p className="mt-2">AVSs विकेंद्रीकरण और सुरक्षा के साथ विचलित होने के बजाय, अपने सभी संसाधनों को अपनी सेवाओं के निर्माण और विपणन में लगा सकते हैं。</p>
+ <p className="mt-0"><strong>रीस्टेकिंग का अतिरिक्त लाभ</strong>
+  <p className="mt-2">AVSs विकेंद्रीकरण और सुरक्षा के साथ विचलित होने के बजाय, अपने सभी संसाधनों को अपनी सेवाओं के निर्माण और विपणन में लगा सकते हैं।</p>
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -93,7 +93,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>जानने योग्य बातें</strong></strong>
+ <p className="mt-0"><strong>जानने योग्य बातें</strong>
   <p className="mt-2">नेटिव और लिक्विड रीस्टेकर्स अक्सर AVSs को सुरक्षित करने के लिए स्वयं सॉफ़्टवेयर चलाने के बजाय, अपने स्टेक किए गए ETH को किसी ऑपरेटर को प्रत्यायोजित (delegate) करते हैं।</p>
   <p className="mt-2">इस तरह उन्हें AVSs की जटिल तकनीकी आवश्यकताओं के बारे में चिंता करने की आवश्यकता नहीं होती है, हालांकि उन्हें ऑपरेटरों की तुलना में कम पुरस्कार दर प्राप्त होती है।</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>भ्रांति की चेतावनी</strong></strong>
+ <p className="mt-0"><strong>भ्रांति की चेतावनी</strong>
   <p className="mt-2">कुछ लोग विकेंद्रीकृत वित्त (DeFi) में LSTs को ऋण देने और उधार लेने को "रीस्टेकिंग" समझने की भूल करते हैं। दोनों स्टेक किए गए ETH को काम पर लगाते हैं, लेकिन रीस्टेकिंग का मतलब AVSs को सुरक्षित करना है, न कि केवल LSTs पर प्रतिफल (yield) अर्जित करना।</p>
 </AlertDescription>
 </AlertContent>
@@ -139,10 +139,10 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>इथेरियम के सह-संस्थापक लिख रहे हैं…</strong></strong>
+ <p className="mt-0"><strong>इथेरियम के सह-संस्थापक लिख रहे हैं…</strong>
   <p className="mt-2">
     इथेरियम के सह-संस्थापक विटालिक ने 2021 के एक ब्लॉग पोस्ट में रीस्टेकिंग के संभावित जोखिमों के बारे में चेतावनी दी थी, जिसका नाम था <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus.</a>
-  </a>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -161,7 +161,7 @@ buttons:
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>इथेरियम स्टेकिंग :</strong> यह कैसे काम करता है?</strong>
+ <p className="mt-0"><strong>इथेरियम स्टेकिंग :</strong> यह कैसे काम करता है?
   <ButtonLink href="/staking/">
     अधिक जानें
   </ButtonLink>

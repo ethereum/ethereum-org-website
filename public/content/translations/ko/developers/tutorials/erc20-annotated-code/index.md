@@ -1,11 +1,11 @@
 ---
 title: "ERC-20 컨트랙트 살펴보기"
-description: 오픈제플린 ERC-20 컨트랙트에는 무엇이 포함되어 있으며, 그 이유는 무엇일까요?
-author: 오리 포메란츠
+description: "오픈제플린 ERC-20 컨트랙트에는 무엇이 포함되어 있으며, 그 이유는 무엇일까요?"
+author: "오리 포메란츠"
 lang: ko
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: ERC-20 살펴보기
+breadcrumb: "ERC-20 살펴보기"
 published: 2021-03-09
 ---
 
@@ -197,7 +197,7 @@ import "../../math/SafeMath.sol";
 ```
 
 - `GSN/Context.sol`는 이더가 없는 사용자도 블록체인을 사용할 수 있게 해주는 시스템인 [OpenGSN](https://www.opengsn.org/)을 사용하는 데 필요한 정의입니다. 이것은 이전 버전이므로 OpenGSN과 통합하려면 [이 튜토리얼을 사용하세요](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [SafeMath 라이브러리](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)는 Solidity 버전 **&lt;0.8.0**에서 산술 오버플로/언더플로를 방지합니다. Solidity ≥0.8.0에서는 산술 연산이 오버플로/언더플로 시 자동으로 되돌리기(revert)를 수행하므로 SafeMath가 필요하지 않습니다. 이 컨트랙트는 이전 컴파일러 버전과의 이전 버전 호환성을 위해 SafeMath를 사용합니다.
+- [SafeMath 라이브러리](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)는 Solidity 버전 <strong>&lt;0.8.0</strong>에서 산술 오버플로/언더플로를 방지합니다. Solidity ≥0.8.0에서는 산술 연산이 오버플로/언더플로 시 자동으로 되돌리기(revert)를 수행하므로 SafeMath가 필요하지 않습니다. 이 컨트랙트는 이전 컴파일러 버전과의 이전 버전 호환성을 위해 SafeMath를 사용합니다.
 
 &nbsp;
 
@@ -284,7 +284,7 @@ contract ERC20 is Context, IERC20 {
 
 해결책은 정수를 추적하되, 실제 토큰 대신 거의 가치가 없는 분수 토큰을 세는 것입니다. 이더의 경우 분수 토큰을 Wei라고 하며, 10^18 Wei는 1 ETH와 같습니다. 작성 당시 10,000,000,000,000 Wei는 약 1 미국 센트 또는 유로 센트입니다.
 
-애플리케이션은 토큰 잔액을 표시하는 방법을 알아야 합니다. 사용자가 3,141,000,000,000,000,000 Wei를 가지고 있다면, 그것은 3.14 ETH일까요? 31.41 ETH일까요? 3,141 ETH일까요? 이더의 경우 1 ETH당 10^18 Wei로 정의되지만, 여러분의 토큰에 대해서는 다른 값을 선택할 수 있습니다. 토큰을 나누는 것이 의미가 없다면 `_decimals` 값을 0으로 사용할 수 있습니다. ETH와 동일한 표준을 사용하려면 **18**이라는 값을 사용하세요.
+애플리케이션은 토큰 잔액을 표시하는 방법을 알아야 합니다. 사용자가 3,141,000,000,000,000,000 Wei를 가지고 있다면, 그것은 3.14 ETH일까요? 31.41 ETH일까요? 3,141 ETH일까요? 이더의 경우 1 ETH당 10^18 Wei로 정의되지만, 여러분의 토큰에 대해서는 다른 값을 선택할 수 있습니다. 토큰을 나누는 것이 의미가 없다면 `_decimals` 값을 0으로 사용할 수 있습니다. ETH와 동일한 표준을 사용하려면 <strong>18</strong>이라는 값을 사용하세요.
 
 ### 생성자 {#the-constructor}
 
@@ -391,7 +391,7 @@ contract ERC20 is Context, IERC20 {
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
 ```
 
-`transfer` 함수는 발신자의 계정에서 다른 계정으로 토큰을 전송하기 위해 호출됩니다. 불리언(boolean) 값을 반환하지만 그 값은 항상 **true**라는 점에 유의하세요. 전송이 실패하면 컨트랙트는 호출을 되돌리기(revert)합니다.
+`transfer` 함수는 발신자의 계정에서 다른 계정으로 토큰을 전송하기 위해 호출됩니다. 불리언(boolean) 값을 반환하지만 그 값은 항상 <strong>true</strong>라는 점에 유의하세요. 전송이 실패하면 컨트랙트는 호출을 되돌리기(revert)합니다.
 
 &nbsp;
 
@@ -754,7 +754,7 @@ B:
 
 - _블록체인에는 비밀이 없습니다_. 스마트 컨트랙트가 접근할 수 있는 모든 정보는 전 세계 누구나 사용할 수 있습니다.
 - 자신의 트랜잭션 순서는 제어할 수 있지만 다른 사람의 트랜잭션이 언제 발생하는지는 제어할 수 없습니다. 이것이 허용량을 변경하는 것이 위험할 수 있는 이유인데, 사용자가 두 허용량의 합계를 사용할 수 있게 되기 때문입니다.
-- `uint256` 타입의 값은 래핑(wrap around)됩니다. 즉, _0-1=2^256-1_입니다. 이것이 원하는 동작이 아니라면 이를 확인해야 합니다(또는 이를 대신 수행해 주는 SafeMath 라이브러리를 사용해야 합니다). 이는 [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html)에서 변경되었다는 점에 유의하세요.
+- `uint256` 타입의 값은 래핑(wrap around)됩니다. 즉, <em>0-1=2^256-1</em>입니다. 이것이 원하는 동작이 아니라면 이를 확인해야 합니다(또는 이를 대신 수행해 주는 SafeMath 라이브러리를 사용해야 합니다). 이는 [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html)에서 변경되었다는 점에 유의하세요.
 - 감사를 더 쉽게 만들기 위해 특정 타입의 모든 상태 변경을 특정 위치에서 수행하세요. 이것이 예를 들어 `approve`, `transferFrom`, `increaseAllowance`, `decreaseAllowance`에 의해 호출되는 `_approve`가 있는 이유입니다.
 - 상태 변경은 중간에 다른 작업 없이 원자적(atomic)이어야 합니다(`_transfer`에서 볼 수 있듯이). 상태 변경 중에는 일관성 없는 상태가 되기 때문입니다. 예를 들어, 발신자의 잔액에서 차감하는 시점과 수신자의 잔액에 추가하는 시점 사이에는 존재해야 하는 것보다 적은 토큰이 존재합니다. 그 사이에 연산이 있는 경우, 특히 다른 컨트랙트에 대한 호출이 있는 경우 잠재적으로 악용될 수 있습니다.
 

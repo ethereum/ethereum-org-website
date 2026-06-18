@@ -1,6 +1,6 @@
 ---
-title: Mécanismes de consensus
-description: Une explication des protocoles de consensus dans les systèmes distribués et de leur rôle dans Ethereum.
+title: "Mécanismes de consensus"
+description: "Une explication des protocoles de consensus dans les systèmes distribués et de leur rôle dans Ethereum."
 lang: fr
 authors: ["Patrick Collins"]
 ---

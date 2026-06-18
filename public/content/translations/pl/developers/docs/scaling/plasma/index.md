@@ -1,6 +1,6 @@
 ---
-title: Łańcuchy Plasma
-description: Wprowadzenie do łańcuchów Plasma jako rozwiązania skalującego obecnie wykorzystywanego przez społeczność Ethereum.
+title: "Łańcuchy Plasma"
+description: "Wprowadzenie do łańcuchów Plasma jako rozwiązania skalującego obecnie wykorzystywanego przez społeczność Ethereum."
 lang: pl
 incomplete: true
 sidebarDepth: 3

@@ -1,11 +1,11 @@
 ---
-title: Çevrim dışı veri bütünlüğü için Merkle kanıtları
-description: Çoğunlukla zincir dışı depolanan veriler için zincir içi veri bütünlüğünü sağlama
+title: "Çevrim dışı veri bütünlüğü için Merkle kanıtları"
+description: "Çoğunlukla zincir dışı depolanan veriler için zincir içi veri bütünlüğünü sağlama"
 author: Ori Pomerantz
 tags:
   - depolama
 skill: advanced
-breadcrumb: Merkle kanıtları
+breadcrumb: "Merkle kanıtları"
 lang: tr
 published: 2021-12-30
 ---

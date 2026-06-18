@@ -1,11 +1,11 @@
 ---
-title: Domácí staking ETH
-description: Přehled toho, jak začít se stakingem ETH z domova
+title: "Domácí staking ETH"
+description: "Přehled toho, jak začít se stakingem ETH z domova"
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Nosorožec Leslie na svém vlastním počítačovém čipu.
+alt: "Nosorožec Leslie na svém vlastním počítačovém čipu."
 sidebarDepth: 2
 summaryPoints:
   - Získejte maximální odměny přímo z protokolu za to, že udržujete svůj validátor správně fungující a online

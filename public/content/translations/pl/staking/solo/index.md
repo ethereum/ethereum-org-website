@@ -1,11 +1,11 @@
 ---
 title: Stakuj swoje ETH w domu
-description: Przegląd informacji, jak zacząć stakować swoje ETH w domu
+description: "Przegląd informacji, jak zacząć stakować swoje ETH w domu"
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Nosorożec Leslie na własnym chipie komputerowym.
+alt: "Nosorożec Leslie na własnym chipie komputerowym."
 sidebarDepth: 2
 summaryPoints:
   - Otrzymuj maksymalne nagrody bezpośrednio z protokołu za utrzymywanie prawidłowego działania i dostępności swojego walidatora

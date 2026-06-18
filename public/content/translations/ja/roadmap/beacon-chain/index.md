@@ -1,6 +1,6 @@
 ---
-title: ビーコン・チェーン
-description: ビーコン・チェーンについて学びましょう。これはイーサリアムにプルーフ・オブ・ステークを導入したアップグレードです。
+title: "ビーコン・チェーン"
+description: "ビーコン・チェーンについて学びましょう。これはイーサリアムにプルーフ・オブ・ステークを導入したアップグレードです。"
 lang: ja
 template: upgrade
 image: /images/upgrades/core.png

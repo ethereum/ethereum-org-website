@@ -1,12 +1,12 @@
 ---
 title: Pagamentos na Ethereum
 metaTitle: Pagamentos na Ethereum
-description: Uma visão geral dos pagamentos na Ethereum
+description: "Uma visão geral dos pagamentos na Ethereum"
 lang: pt-br
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Um logotipo do Eth sendo exibido junto com mãos doando.
+alt: "Um logotipo do Eth sendo exibido junto com mãos doando."
 summaryPoints:
   - "Um mundo onde o dinheiro se move tão livremente quanto a informação"
   - "Aberto e global, permitindo transações sem fronteiras para todos"
@@ -62,7 +62,7 @@ Em países onde seus meios de pagamento foram desconectados do resto do mundo, a
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Crie sua conta Ethereum com um aplicativo de carteira hoje mesmo.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Começar
   </ButtonLink>
 </AlertContent>

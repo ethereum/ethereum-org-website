@@ -1,6 +1,6 @@
 ---
-title: 状态通道
-description: 介绍状态通道和支付通道，这是以太坊社区目前使用的一种扩容解决方案。
+title: "状态通道"
+description: "介绍状态通道和支付通道，这是以太坊社区目前使用的一种扩容解决方案。"
 lang: zh
 sidebarDepth: 3
 ---

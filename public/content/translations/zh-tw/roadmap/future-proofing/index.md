@@ -1,6 +1,6 @@
 ---
-title: 確保以太坊與加密貨幣量子安全的未來防護
-description: 這些升級鞏固了以太坊作為未來具備韌性、去中心化基礎層的地位，無論未來將面臨什麼挑戰。
+title: "確保以太坊與加密貨幣量子安全的未來防護"
+description: "這些升級鞏固了以太坊作為未來具備韌性、去中心化基礎層的地位，無論未來將面臨什麼挑戰。"
 lang: zh-tw
 image: /images/roadmap/roadmap-future.png
 alt: "以太坊路線圖"

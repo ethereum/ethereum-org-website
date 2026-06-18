@@ -1,6 +1,6 @@
 ---
-title: Úvod do zaváděcích uzlů Etherea
-description: Základní informace, které potřebujete k pochopení zaváděcích uzlů
+title: "Úvod do zaváděcích uzlů Etherea"
+description: "Základní informace, které potřebujete k pochopení zaváděcích uzlů"
 lang: cs
 ---
 

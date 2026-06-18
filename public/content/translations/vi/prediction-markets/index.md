@@ -1,5 +1,5 @@
 ---
-title: Thị trường dự đoán
+title: "Thị trường dự đoán"
 lang: vi
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ Có một số thị trường dự đoán dựa trên Ethereum hiện có sẵn
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Hãy lưu tâm đến các rủi ro</strong></strong>
+ <p className="mt-0"><strong>Hãy lưu tâm đến các rủi ro</strong>
   <p className="mt-2">Chỉ đặt cược những gì bạn có thể chi trả và nhận thức được các hành vi gây nghiện tiềm ẩn.</p>
 </AlertDescription>
 </AlertContent>

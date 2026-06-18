@@ -1,11 +1,11 @@
 ---
-title: Liste de contrôle pour l'intégration de jetons
-description: Une liste de contrôle des éléments à prendre en compte lors de l'interaction avec des jetons
+title: "Liste de contrôle pour l'intégration de jetons"
+description: "Une liste de contrôle des éléments à prendre en compte lors de l'interaction avec des jetons"
 author: "Trailofbits"
 lang: fr
-tags: ["solidity", "contrats intelligents", "sécurité", "jetons"]
+tags: ["Solidity", "contrats intelligents", "sécurité", "jetons"]
 skill: intermediate
-breadcrumb: Intégration de jetons
+breadcrumb: "Intégration de jetons"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

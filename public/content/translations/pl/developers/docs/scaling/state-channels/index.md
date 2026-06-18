@@ -1,6 +1,6 @@
 ---
-title: Kanały stanu
-description: Wprowadzenie do kanałów stanu i kanałów płatności jako rozwiązania skalującego obecnie wykorzystywanego przez społeczność Ethereum.
+title: "Kanały stanu"
+description: "Wprowadzenie do kanałów stanu i kanałów płatności jako rozwiązania skalującego obecnie wykorzystywanego przez społeczność Ethereum."
 lang: pl
 sidebarDepth: 3
 ---

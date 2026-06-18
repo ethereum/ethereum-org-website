@@ -1,6 +1,6 @@
 ---
-title: Простая сериализация
-description: Объяснение формата SSZ Эфириума.
+title: "Простая сериализация"
+description: "Объяснение формата SSZ Эфириума."
 lang: ru
 sidebarDepth: 2
 ---

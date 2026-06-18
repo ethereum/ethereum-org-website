@@ -62,7 +62,7 @@ Nei paesi in cui i mezzi di pagamento sono stati disconnessi dal resto del mondo
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Crea oggi stesso il tuo account Ethereum con un'app portafoglio.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Inizia
   </ButtonLink>
 </AlertContent>

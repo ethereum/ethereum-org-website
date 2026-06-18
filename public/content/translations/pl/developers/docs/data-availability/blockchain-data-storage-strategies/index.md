@@ -1,6 +1,6 @@
 ---
 title: Strategie przechowywania danych na blockchainie
-description: Istnieje kilka sposobów przechowywania danych przy użyciu blockchaina. Ten artykuł porównuje różne strategie, ich koszty i kompromisy, a także wymagania dotyczące bezpiecznego korzystania z nich.
+description: "Istnieje kilka sposobów przechowywania danych przy użyciu blockchaina. Ten artykuł porównuje różne strategie, ich koszty i kompromisy, a także wymagania dotyczące bezpiecznego korzystania z nich."
 lang: pl
 ---
 
@@ -110,7 +110,7 @@ Poniższa tabela podsumowuje różne opcje, ich zalety i wady.
 
 | Typ przechowywania                | Źródło danych      | Gwarancja dostępności                                                                                                             | Dostępność onchain                                             | Dodatkowe ograniczenia                                                  |
 | --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Bloby EIP-4844              | Pozałańcuchowe            | Gwarancja Ethereum na [~18 dni](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Dostępny jest tylko hash                                           |                                                                         |
+| Bloby EIP-4844              | Pozałańcuchowe            | Gwarancja Ethereum na [\~18 dni](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Dostępny jest tylko hash                                           |                                                                         |
 | Dane wywołania                    | Pozałańcuchowe            | Gwarancja Ethereum na zawsze (część blockchaina)                                                                                | Dostępne tylko w przypadku zapisania w kontrakcie i w tej konkretnej transakcji |
 | Pozałańcuchowo z mechanizmami L1 | Pozałańcuchowe            | Gwarancja „jednego uczciwego weryfikatora” w okresie wyzwania                                                                        | Tylko hash                                                        | Gwarantowane przez mechanizm wyzwania, tylko w okresie wyzwania |
 | Kod kontraktu               | Onchain lub pozałańcuchowe | Gwarancja Ethereum na zawsze (część blockchaina)                                                                                | Tak                                                              | Zapisywane pod „losowym” adresem, nie może zaczynać się od `0xEF`                 |

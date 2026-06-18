@@ -1,10 +1,10 @@
 ---
-title: ethers.js Kullanarak Token Gönderme
-description: ethers.js kullanarak token göndermeye yönelik başlangıç dostu rehber.
+title: "ethers.js Kullanarak Token Gönderme"
+description: "ethers.js kullanarak token göndermeye yönelik başlangıç dostu rehber."
 author: Kim YongJun
 tags: ["ETHERS.JS", "ERC-20", "TOKENLAR"]
 skill: beginner
-breadcrumb: Token gönder
+breadcrumb: "Token gönder"
 lang: tr
 published: 2021-04-06
 ---

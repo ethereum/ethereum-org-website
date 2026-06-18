@@ -1,6 +1,6 @@
 ---
-title: イーサリアムのアーカイブ・ノード
-description: アーカイブ・ノードの概要
+title: "イーサリアムのアーカイブ・ノード"
+description: "アーカイブ・ノードの概要"
 lang: ja
 sidebarDepth: 2
 ---

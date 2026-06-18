@@ -1,6 +1,6 @@
 ---
-title: Języki programowania
-description: Odkryj zasoby programistyczne Ethereum dla różnych języków programowania, w tym JavaScript, Python, Go, Rust i innych.
+title: "Języki programowania"
+description: "Odkryj zasoby programistyczne Ethereum dla różnych języków programowania, w tym JavaScript, Python, Go, Rust i innych."
 lang: pl
 ---
 

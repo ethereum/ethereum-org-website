@@ -3,7 +3,7 @@ title: Mwongozo wa zana za usalama za mkataba mahiri
 description: Muhtasari wa mbinu tatu tofauti za majaribio na uchanganuzi wa programu
 author: "Trailofbits"
 lang: sw
-tags: ["solidity", "mikataba mahiri", "usalama"]
+tags: ["Solidity", "mikataba mahiri", "usalama"]
 skill: intermediate
 breadcrumb: Zana za usalama
 published: 2020-09-07

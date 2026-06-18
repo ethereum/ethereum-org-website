@@ -3,7 +3,7 @@ title: "جولة تفصيلية في عقد ⁦ERC-721⁩ بلغة ⁦Vyper⁩"
 description: "عقد ⁦ERC-721⁩ الخاص بـ ريويا ناكامورا وكيفية عمله"
 author: "أوري بوميرانتس"
 lang: ar
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: "⁦Vyper ERC-721⁩"
 published: 2021-04-01

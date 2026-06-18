@@ -1,6 +1,6 @@
 ---
 title: Simple serialize
-description: Vysvětlení formátu SSZ na Ethereu.
+description: "Vysvětlení formátu SSZ na Ethereu."
 lang: cs
 sidebarDepth: 2
 ---

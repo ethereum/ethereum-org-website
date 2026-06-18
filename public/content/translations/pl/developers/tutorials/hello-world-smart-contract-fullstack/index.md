@@ -1,13 +1,13 @@
 ---
-title: Inteligentny kontrakt Hello World dla początkujących – Fullstack
-description: Wprowadzający samouczek dotyczący pisania i wdrażania prostego inteligentnego kontraktu w sieci Ethereum.
+title: "Inteligentny kontrakt Hello World dla początkujących – Fullstack"
+description: "Wprowadzający samouczek dotyczący pisania i wdrażania prostego inteligentnego kontraktu w sieci Ethereum."
 author: "nstrike2"
 breadcrumb: Hello World fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "inteligentne kontrakty",
     "wdrażanie",
     "eksplorator bloków",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

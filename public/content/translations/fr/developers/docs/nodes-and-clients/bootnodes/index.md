@@ -1,6 +1,6 @@
 ---
-title: Introduction aux nœuds d'amorçage Ethereum
-description: Les informations de base dont vous avez besoin pour comprendre les nœuds d'amorçage
+title: "Introduction aux nœuds d'amorçage Ethereum"
+description: "Les informations de base dont vous avez besoin pour comprendre les nœuds d'amorçage"
 lang: fr
 ---
 

@@ -2,7 +2,7 @@
 title: Memahami kontrak pintar token ERC-20
 description: Pelajari cara mengimplementasikan standar token ERC-20 dengan contoh dan penjelasan kontrak pintar Solidity yang lengkap.
 author: "jdourlens"
-tags: ["kontrak pintar", "token", "solidity", "erc-20"]
+tags: ["kontrak pintar", "token", "Solidity", "erc-20"]
 skill: beginner
 breadcrumb: Dasar-dasar token ERC-20
 lang: id

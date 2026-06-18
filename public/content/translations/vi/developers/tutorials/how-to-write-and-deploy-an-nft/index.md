@@ -1,10 +1,10 @@
 ---
-title: Cách viết & triển khai một NFT (Phần 1/3 của Chuỗi hướng dẫn về NFT)
-description: Hướng dẫn này là Phần 1 của chuỗi bài về NFT, sẽ đưa bạn đi từng bước về cách viết và triển khai hợp đồng thông minh Non Fungible Token (token ERC-721) bằng Ethereum và Inter Planetary File System (IPFS).
+title: "Cách viết & triển khai một NFT (Phần 1/3 của Chuỗi hướng dẫn về NFT)"
+description: "Hướng dẫn này là Phần 1 của chuỗi bài về NFT, sẽ đưa bạn đi từng bước về cách viết và triển khai hợp đồng thông minh Non Fungible Token (token ERC-721) bằng Ethereum và Inter Planetary File System (IPFS)."
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "hợp đồng thông minh"]
 skill: beginner
-breadcrumb: Viết và triển khai NFT
+breadcrumb: "Viết và triển khai NFT"
 lang: vi
 published: 2021-04-22
 ---

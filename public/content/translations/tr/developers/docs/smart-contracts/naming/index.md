@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmeleri isimlendirme
-description: ENS ile Ethereum akıllı sözleşmelerini isimlendirmek için en iyi uygulamalar
+title: "Akıllı sözleşmeleri isimlendirme"
+description: "ENS ile Ethereum akıllı sözleşmelerini isimlendirmek için en iyi uygulamalar"
 lang: tr
 ---
 

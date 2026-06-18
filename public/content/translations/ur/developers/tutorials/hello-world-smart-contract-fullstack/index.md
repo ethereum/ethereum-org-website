@@ -1,13 +1,13 @@
 ---
-title: ابتدائی افراد کے لیے ہیلو ورلڈ سمارٹ کنٹریکٹ - فل اسٹیک
-description: ایتھیریم پر ایک سادہ سمارٹ کنٹریکٹ لکھنے اور تعینات کرنے کے بارے میں تعارفی ٹیوٹوریل۔
+title: "ابتدائی افراد کے لیے ہیلو ورلڈ سمارٹ کنٹریکٹ - فل اسٹیک"
+description: "ایتھیریم پر ایک سادہ سمارٹ کنٹریکٹ لکھنے اور تعینات کرنے کے بارے میں تعارفی ٹیوٹوریل۔"
 author: "nstrike2"
-breadcrumb: ہیلو ورلڈ فل اسٹیک
+breadcrumb: "ہیلو ورلڈ فل اسٹیک"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "سمارٹ کنٹریکٹس",
     "تعیناتی",
     "بلاک ایکسپلورر",
@@ -288,7 +288,7 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`0x${PRIVATE_KEY}`],
+      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
     },
   },
 }
@@ -631,7 +631,7 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`0x${PRIVATE_KEY}`],
+      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
     },
   },
   etherscan: {
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

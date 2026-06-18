@@ -1,6 +1,6 @@
 ---
-title: Ověřování chytrých kontraktů
-description: Přehled ověřování zdrojového kódu pro chytré kontrakty na Ethereu
+title: "Ověřování chytrých kontraktů"
+description: "Přehled ověřování zdrojového kódu pro chytré kontrakty na Ethereu"
 lang: cs
 ---
 

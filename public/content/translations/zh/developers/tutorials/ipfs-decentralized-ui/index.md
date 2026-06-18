@@ -1,13 +1,13 @@
 ---
-title: 用于去中心化用户界面的 IPFS
-description: 本教程向读者介绍如何使用 IPFS 存储去中心化应用 (dapp) 的用户界面。尽管应用的数据和业务逻辑是去中心化的，但如果没有抗审查的用户界面，用户仍然可能失去对它的访问权限。
-author: 奥里·波梅兰茨
+title: "用于去中心化用户界面的 IPFS"
+description: "本教程向读者介绍如何使用 IPFS 存储去中心化应用 (dapp) 的用户界面。尽管应用的数据和业务逻辑是去中心化的，但如果没有抗审查的用户界面，用户仍然可能失去对它的访问权限。"
+author: "奥里·波梅兰茨"
 tags:
   - ipfs
   - dapps
   - 前端
 skill: beginner
-breadcrumb: 用于 dapp UI 的 IPFS
+breadcrumb: "用于 dapp UI 的 IPFS"
 lang: zh
 published: 2024-06-29
 ---

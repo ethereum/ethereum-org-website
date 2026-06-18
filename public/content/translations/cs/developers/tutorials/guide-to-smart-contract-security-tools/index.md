@@ -1,11 +1,11 @@
 ---
-title: Průvodce bezpečnostními nástroji pro chytré kontrakty
-description: Přehled tří různých technik testování a analýzy programů
+title: "Průvodce bezpečnostními nástroji pro chytré kontrakty"
+description: "Přehled tří různých technik testování a analýzy programů"
 author: "Trailofbits"
 lang: cs
-tags: ["solidity", "chytré kontrakty", "bezpečnost"]
+tags: ["Solidity", "chytré kontrakty", "bezpečnost"]
 skill: intermediate
-breadcrumb: Bezpečnostní nástroje
+breadcrumb: "Bezpečnostní nástroje"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

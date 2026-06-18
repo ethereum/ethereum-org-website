@@ -1,6 +1,6 @@
 ---
 title: So zeigen Sie Ihr NFT in Ihrer Wallet an (Teil 3/3 der NFT-Tutorial-Reihe)
-description: Dieses Tutorial beschreibt, wie Sie ein bestehendes NFT in MetaMask anzeigen können!
+description: "Dieses Tutorial beschreibt, wie Sie ein bestehendes NFT in MetaMask anzeigen können!"
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner

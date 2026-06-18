@@ -1,12 +1,12 @@
 ---
-title: JavaScript에서 이더리움 블록체인을 사용하기 위한 Web3.js 설정
-description: JavaScript 애플리케이션에서 이더리움 블록체인과 상호작용하기 위해 Web3.js 라이브러리를 설정하고 구성하는 방법을 배워보세요.
+title: "JavaScript에서 이더리움 블록체인을 사용하기 위한 Web3.js 설정"
+description: "JavaScript 애플리케이션에서 이더리움 블록체인과 상호작용하기 위해 Web3.js 라이브러리를 설정하고 구성하는 방법을 배워보세요."
 author: "jdourlens"
 tags:
   - "web3.js"
   - "javascript"
 skill: beginner
-breadcrumb: Web3.js 설정
+breadcrumb: "Web3.js 설정"
 lang: ko
 published: 2020-04-11
 source: EthereumDev

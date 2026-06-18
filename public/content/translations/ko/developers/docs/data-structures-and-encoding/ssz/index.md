@@ -1,11 +1,11 @@
 ---
-title: 단순 직렬화
-description: 이더리움의 SSZ 형식에 대한 설명입니다.
+title: "단순 직렬화"
+description: "이더리움의 SSZ 형식에 대한 설명입니다."
 lang: ko
 sidebarDepth: 2
 ---
 
-**단순 직렬화(SSZ)**는 비콘 체인에서 사용되는 직렬화 방법입니다. 이 방법은 피어 디스커버리 프로토콜을 제외한 합의 레이어 전체에서 실행 계층에 사용되는 RLP 직렬화를 대체합니다. RLP 직렬화에 대해 자세히 알아보려면 [RLP(Recursive-length prefix)](/developers/docs/data-structures-and-encoding/rlp/)를 참조하세요. SSZ는 결정론적이며 효율적으로 머클화(Merkleize)되도록 설계되었습니다. SSZ는 직렬화 체계와 직렬화된 데이터 구조에서 효율적으로 작동하도록 설계된 머클화 체계라는 두 가지 구성 요소를 가지고 있다고 볼 수 있습니다.
+<strong>단순 직렬화(SSZ)</strong>는 비콘 체인에서 사용되는 직렬화 방법입니다. 이 방법은 피어 디스커버리 프로토콜을 제외한 합의 레이어 전체에서 실행 계층에 사용되는 RLP 직렬화를 대체합니다. RLP 직렬화에 대해 자세히 알아보려면 [RLP(Recursive-length prefix)](/developers/docs/data-structures-and-encoding/rlp/)를 참조하세요. SSZ는 결정론적이며 효율적으로 머클화(Merkleize)되도록 설계되었습니다. SSZ는 직렬화 체계와 직렬화된 데이터 구조에서 효율적으로 작동하도록 설계된 머클화 체계라는 두 가지 구성 요소를 가지고 있다고 볼 수 있습니다.
 
 ## SSZ는 어떻게 작동하나요? {#how-does-ssz-work}
 

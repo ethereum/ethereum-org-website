@@ -1,6 +1,6 @@
 ---
-title: Datenverfügbarkeit
-description: Ein Überblick über Probleme und Lösungen im Zusammenhang mit der Datenverfügbarkeit bei Ethereum
+title: "Datenverfügbarkeit"
+description: "Ein Überblick über Probleme und Lösungen im Zusammenhang mit der Datenverfügbarkeit bei Ethereum"
 lang: de
 ---
 

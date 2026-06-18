@@ -1,12 +1,12 @@
 ---
-title: எத்திரியம் கொடுப்பனவுகள்
-metaTitle: எத்திரியத்தில் கொடுப்பனவுகள்
-description: எத்திரியத்தில் கொடுப்பனவுகள் பற்றிய ஒரு கண்ணோட்டம்
+title: "எத்திரியம் கொடுப்பனவுகள்"
+metaTitle: "எத்திரியத்தில் கொடுப்பனவுகள்"
+description: "எத்திரியத்தில் கொடுப்பனவுகள் பற்றிய ஒரு கண்ணோட்டம்"
 lang: ta
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: கொடுக்கும் கைகளுடன் காட்டப்படும் ஒரு Eth லோகோ.
+alt: "கொடுக்கும் கைகளுடன் காட்டப்படும் ஒரு Eth லோகோ."
 summaryPoints:
   - "தகவல்களைப் போலவே பணமும் தடையின்றி நகரும் ஒரு உலகம்"
   - "திறந்த மற்றும் உலகளாவிய, அனைவருக்கும் எல்லையற்ற பரிவர்த்தனைகளை செயல்படுத்துகிறது"
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>இன்றே ஒரு பணப்பை (wallet) செயலி மூலம் உங்கள் எத்திரியம் கணக்கை (account) உருவாக்குங்கள்.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     தொடங்குங்கள்
   </ButtonLink>
 </AlertContent>

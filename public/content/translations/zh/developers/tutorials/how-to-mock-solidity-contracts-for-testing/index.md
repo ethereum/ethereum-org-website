@@ -1,11 +1,11 @@
 ---
-title: 如何在测试中模拟 Solidity 智能合约
-description: 为什么在测试时应该模拟（mock）你的合约
-author: 马库斯·瓦斯
+title: "如何在测试中模拟 Solidity 智能合约"
+description: "为什么在测试时应该模拟（mock）你的合约"
+author: "马库斯·瓦斯"
 lang: zh
-tags: ["solidity", "智能合约", "测试", "模拟"]
+tags: ["Solidity", "智能合约", "测试", "模拟"]
 skill: intermediate
-breadcrumb: 模拟合约
+breadcrumb: "模拟合约"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

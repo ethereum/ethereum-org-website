@@ -1,11 +1,11 @@
 ---
-title: Danh sách kiểm tra tích hợp token
-description: Danh sách kiểm tra những điều cần lưu ý khi tương tác với token
+title: "Danh sách kiểm tra tích hợp token"
+description: "Danh sách kiểm tra những điều cần lưu ý khi tương tác với token"
 author: "Trailofbits"
 lang: vi
-tags: ["solidity", "hợp đồng thông minh", "bảo mật", "token"]
+tags: ["Solidity", "hợp đồng thông minh", "bảo mật", "token"]
 skill: intermediate
-breadcrumb: Tích hợp token
+breadcrumb: "Tích hợp token"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

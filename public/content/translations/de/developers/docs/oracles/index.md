@@ -1,6 +1,6 @@
 ---
 title: Orakel
-description: Orakel bieten Ethereum-Smart-Contracts Zugang zu realen Daten, was mehr Anwendungsfälle und einen größeren Mehrwert für die Nutzer erschließt.
+description: "Orakel bieten Ethereum-Smart-Contracts Zugang zu realen Daten, was mehr Anwendungsfälle und einen größeren Mehrwert für die Nutzer erschließt."
 lang: de
 authors: ["Patrick Collins"]
 ---
@@ -269,7 +269,7 @@ Zentralisierte Orakel verlassen sich bei der Bereitstellung von Daten für Smart
 
 Dezentrale Orakel müssen jedoch mit Diskrepanzen bei Informationen umgehen, die aus mehreren offchain Quellen abgerufen wurden. Um Informationsunterschiede zu minimieren und sicherzustellen, dass die an den Orakel-Vertrag weitergegebenen Daten die kollektive Meinung der Orakel-Knoten widerspiegeln, verwenden dezentrale Orakel die folgenden Mechanismen:
 
-##### Abstimmen/Staking über die Genauigkeit von Daten {#availability}
+##### Abstimmen/Staking über die Genauigkeit von Daten {#}
 
 Einige dezentrale Orakel-Netzwerke verlangen von den Teilnehmern, dass sie mit dem nativen Token des Netzwerks über die Genauigkeit von Antworten auf Datenabfragen (z. B. „Wer hat die US-Wahl 2020 gewonnen?“) abstimmen oder staken. Ein Aggregationsprotokoll aggregiert dann die Stimmen und Stakes und nimmt die von der Mehrheit unterstützte Antwort als die gültige an.
 
@@ -277,7 +277,7 @@ Knoten, deren Antworten von der Mehrheitsantwort abweichen, werden bestraft, ind
 
 Staking/Abstimmen schützt dezentrale Orakel auch vor [Sybil-Angriffen](/glossary/#sybil-attack), bei denen böswillige Akteure mehrere Identitäten erstellen, um das Konsenssystem auszutricksen. Staking kann jedoch „Trittbrettfahren“ (Orakel-Knoten kopieren Informationen von anderen) und „faule Validierung“ (Orakel-Knoten folgen der Mehrheit, ohne die Informationen selbst zu überprüfen) nicht verhindern.
 
-##### Schelling-Punkt-Mechanismen {#good-incentive-compatibility}
+##### Schelling-Punkt-Mechanismen {#}
 
 Ein [Schelling-Punkt](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) ist ein spieltheoretisches Konzept, das davon ausgeht, dass mehrere Entitäten in Abwesenheit jeglicher Kommunikation immer auf eine gemeinsame Lösung für ein Problem zurückgreifen. Schelling-Punkt-Mechanismen werden häufig in dezentralen Orakel-Netzwerken verwendet, um es Knoten zu ermöglichen, einen Konsens über Antworten auf Datenanfragen zu erzielen.
 
@@ -289,7 +289,7 @@ Weitere Beispiele für Orakel, die Schelling-Punkt-Mechanismen verwenden, sind [
 
 Schelling-Punkt-Mechanismen sind attraktiv, weil sie den Onchain-Fußabdruck minimieren (es muss nur eine Transaktion gesendet werden) und gleichzeitig Dezentralisierung garantieren. Letzteres ist möglich, weil Knoten die Liste der eingereichten Antworten abzeichnen müssen, bevor sie in den Algorithmus eingespeist wird, der den Mittelwert/Medianwert erzeugt.
 
-### Verfügbarkeit {#applications-of-oracles-in-smart-contracts}
+### Verfügbarkeit {#availability}
 
 Dezentrale Orakel-Dienste gewährleisten eine hohe Verfügbarkeit von offchain Daten für Smart Contracts. Dies wird erreicht, indem sowohl die Quelle der offchain Informationen als auch die Knoten, die für die Übertragung der Informationen Onchain verantwortlich sind, dezentralisiert werden.
 
@@ -297,7 +297,7 @@ Dies gewährleistet Fehlertoleranz, da sich der Orakel-Vertrag auf mehrere Knote
 
 Es ist auch möglich, dass Stake-basierte Orakel Knotenbetreiber durch Slashing bestrafen, die nicht schnell auf Datenanfragen reagieren. Dies schafft einen erheblichen Anreiz für Orakel-Knoten, in fehlertolerante Infrastruktur zu investieren und Daten zeitnah bereitzustellen.
 
-### Gute Anreizkompatibilität {#retrieving-financial-data}
+### Gute Anreizkompatibilität {#good-incentive-compatibility}
 
 Dezentrale Orakel implementieren verschiedene Anreizdesigns, um [byzantinisches](https://en.wikipedia.org/wiki/Byzantine_fault) Verhalten unter Orakel-Knoten zu verhindern. Insbesondere erreichen sie _Zurechenbarkeit_ und _Verantwortlichkeit_:
 
@@ -305,11 +305,11 @@ Dezentrale Orakel implementieren verschiedene Anreizdesigns, um [byzantinisches]
 
 2. Dezentrale Orakel können – wie bereits erläutert – von Knoten verlangen, einen Stake auf ihr Vertrauen in die Wahrheit der von ihnen übermittelten Daten zu platzieren. Wenn sich die Behauptung als richtig erweist, kann dieser Stake zusammen mit Belohnungen für ehrlichen Dienst zurückgegeben werden. Er kann jedoch auch durch Slashing bestraft werden, falls die Informationen falsch sind, was ein gewisses Maß an Verantwortlichkeit bietet.
 
-## Anwendungen von Orakeln in Smart Contracts {#generating-verifiable-randomness}
+## Anwendungen von Orakeln in Smart Contracts {#applications-of-oracles-in-smart-contracts}
 
 Im Folgenden sind häufige Anwendungsfälle für Orakel in Ethereum aufgeführt:
 
-### Abrufen von Finanzdaten {#getting-outcomes-for-events}
+### Abrufen von Finanzdaten {#retrieving-financial-data}
 
 [Dezentralisierte Finanzen](/defi/) (DeFi)-Anwendungen ermöglichen Peer-to-Peer-Kreditvergabe, Kreditaufnahme und den Handel mit Vermögenswerten. Dies erfordert häufig die Beschaffung verschiedener Finanzinformationen, einschließlich Wechselkursdaten (zur Berechnung des Fiat-Werts von Kryptowährungen oder zum Vergleich von Token-Preisen) und Kapitalmarktdaten (zur Berechnung des Werts von tokenisierten Vermögenswerten wie Gold oder dem US-Dollar).
 
@@ -355,7 +355,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Generierung verifizierbarer Zufälligkeit {#automating-smart-contracts}
+### Generierung verifizierbarer Zufälligkeit {#generating-verifiable-randomness}
 
 Bestimmte Blockchain-Anwendungen, wie Blockchain-basierte Spiele oder Lotteriesysteme, erfordern ein hohes Maß an Unvorhersehbarkeit und Zufälligkeit, um effektiv zu funktionieren. Die deterministische Ausführung von Blockchains eliminiert jedoch die Zufälligkeit.
 
@@ -365,13 +365,13 @@ Es ist möglich, den Zufallswert offchain zu generieren und ihn Onchain zu sende
 
 Orakel, die für offchain Berechnungen entwickelt wurden, lösen dieses Problem, indem sie sicher zufällige Ergebnisse offchain generieren, die sie zusammen mit kryptografischen Nachweisen, die die Unvorhersehbarkeit des Prozesses attestieren, Onchain übertragen. Ein Beispiel ist [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), ein nachweislich fairer und manipulationssicherer Zufallszahlengenerator (RNG), der nützlich ist, um zuverlässige Smart Contracts für Anwendungen zu erstellen, die auf unvorhersehbare Ergebnisse angewiesen sind.
 
-### Ergebnisse für Ereignisse abrufen {#use-blockchain-oracles}
+### Ergebnisse für Ereignisse abrufen {#getting-outcomes-for-events}
 
 Mit Orakeln ist es einfach, Smart Contracts zu erstellen, die auf reale Ereignisse reagieren. Orakel-Dienste machen dies möglich, indem sie es Verträgen ermöglichen, sich über offchain Komponenten mit externen APIs zu verbinden und Informationen aus diesen Datenquellen zu nutzen. Zum Beispiel kann die zuvor erwähnte Prognose-Dapp ein Orakel anfordern, um Wahlergebnisse aus einer vertrauenswürdigen offchain Quelle (z. B. der Associated Press) zurückzugeben.
 
 Die Verwendung von Orakeln zum Abrufen von Daten basierend auf realen Ergebnissen ermöglicht weitere neuartige Anwendungsfälle; beispielsweise benötigt ein dezentrales Versicherungsprodukt genaue Informationen über Wetter, Katastrophen usw., um effektiv zu funktionieren.
 
-### Automatisierung von Smart Contracts {#further-reading}
+### Automatisierung von Smart Contracts {#automating-smart-contracts}
 
 Smart Contracts laufen nicht automatisch; vielmehr muss ein Externally Owned Account (EOA) oder ein anderes Contract-Konto die richtigen Funktionen auslösen, um den Code des Vertrags auszuführen. In den meisten Fällen ist der Großteil der Funktionen des Vertrags öffentlich und kann von EOAs und anderen Verträgen aufgerufen werden.
 
@@ -383,7 +383,7 @@ Einige dezentrale Orakel-Netzwerke bieten Automatisierungsdienste an, die es off
 
 Das [Keeper-Netzwerk](https://chain.link/keepers) von Chainlink bietet Optionen für Smart Contracts, um regelmäßige Wartungsaufgaben auf vertrauensminimierte und dezentrale Weise auszulagern. Lesen Sie die offizielle [Keeper-Dokumentation](https://docs.chain.link/docs/chainlink-keepers/introduction/) für Informationen darüber, wie Sie Ihren Vertrag Keeper-kompatibel machen und den Upkeep-Dienst nutzen können.
 
-## Wie man Blockchain-Orakel verwendet
+## Wie man Blockchain-Orakel verwendet {#use-blockchain-oracles}
 
 Es gibt mehrere Orakel-Anwendungen, die Sie in Ihre Ethereum-Dapp integrieren können:
 
@@ -413,7 +413,7 @@ Es gibt mehrere Orakel-Anwendungen, die Sie in Ihre Ethereum-Dapp integrieren k�
 
 **[Stork](https://stork.network)** - Stork liefert Preisdaten mit extrem niedriger Latenz und unterstützt eine Vielzahl von Anwendungsfällen, einschließlich Perpetuals-Märkten, Kreditvergabeprotokollen und DeFi-Ökosystemen, wobei neue Vermögenswerte bei der Listung schnell unterstützt werden.
 
-## Weiterführende Literatur
+## Weiterführende Literatur {#further-reading}
 
 **Artikel**
 

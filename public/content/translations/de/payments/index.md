@@ -1,12 +1,12 @@
 ---
 title: Ethereum-Zahlungen
 metaTitle: Zahlungen auf Ethereum
-description: Ein Überblick über Zahlungen auf Ethereum
+description: "Ein Überblick über Zahlungen auf Ethereum"
 lang: de
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Ein ETH-Logo wird zusammen mit gebenden Händen angezeigt.
+alt: "Ein ETH-Logo wird zusammen mit gebenden Händen angezeigt."
 summaryPoints:
   - "Eine Welt, in der sich Geld so frei bewegt wie Informationen"
   - "Offen und global, ermöglicht grenzenlose Transaktionen für alle"
@@ -62,7 +62,7 @@ In Ländern, in denen die Zahlungsmittel vom Rest der Welt abgeschnitten wurden,
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Erstellen Sie noch heute Ihr Ethereum-Konto mit einer Wallet-App.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Loslegen
   </ButtonLink>
 </AlertContent>

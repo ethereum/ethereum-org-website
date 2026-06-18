@@ -1,11 +1,11 @@
 ---
-title: 離線資料完整性的默克爾證明
-description: 確保主要儲存於鏈下的資料在鏈上的完整性
-author: 奧里·波梅蘭茨
+title: "離線資料完整性的默克爾證明"
+description: "確保主要儲存於鏈下的資料在鏈上的完整性"
+author: "奧里·波梅蘭茨"
 tags:
   - 儲存
 skill: advanced
-breadcrumb: 默克爾證明
+breadcrumb: "默克爾證明"
 lang: zh-tw
 published: 2021-12-30
 ---

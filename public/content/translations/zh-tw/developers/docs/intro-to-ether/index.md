@@ -1,6 +1,6 @@
 ---
-title: 以太幣技術簡介
-description: 寫給開發者的以太幣（加密貨幣）簡介。
+title: "以太幣技術簡介"
+description: "寫給開發者的以太幣（加密貨幣）簡介。"
 lang: zh-tw
 ---
 

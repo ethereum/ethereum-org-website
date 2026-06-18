@@ -1,6 +1,6 @@
 ---
 title: Knoten als Dienstleistung
-description: Ein grundlegender Überblick über Knoten-Dienste, deren Vor- und Nachteile sowie beliebte Anbieter.
+description: "Ein grundlegender Überblick über Knoten-Dienste, deren Vor- und Nachteile sowie beliebte Anbieter."
 lang: de
 sidebarDepth: 2
 ---
@@ -54,7 +54,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentation](https://www.alchemy.com/docs/)
   - Funktionen
-    - Größte kostenlose Stufe mit 300 Mio. Recheneinheiten pro Monat (~30 Mio. getLatestBlock-Anfragen)
+    - Größte kostenlose Stufe mit 300 Mio. Recheneinheiten pro Monat (\~30 Mio. getLatestBlock-Anfragen)
     - Multichain-Unterstützung für Polygon, Starknet, Optimism, Arbitrum
     - Betreibt ~70 % der größten dezentralen Anwendungen (Dapps) auf Ethereum und des Transaktionsvolumens im Bereich der dezentralisierten Finanzen (DeFi)
     - Echtzeit-Webhook-Benachrichtigungen über Alchemy Notify

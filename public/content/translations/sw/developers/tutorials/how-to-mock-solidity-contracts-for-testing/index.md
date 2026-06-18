@@ -3,7 +3,7 @@ title: Jinsi ya kuiga mikataba mahiri ya Solidity kwa ajili ya majaribio
 description: Kwa nini unapaswa kuifanyia mzaha mikataba yako wakati wa majaribio
 author: Markus Waas
 lang: sw
-tags: ["solidity", "mikataba mahiri", "majaribio", "kuiga"]
+tags: ["Solidity", "mikataba mahiri", "majaribio", "kuiga"]
 skill: intermediate
 breadcrumb: Kuiga mikataba
 published: 2020-05-02

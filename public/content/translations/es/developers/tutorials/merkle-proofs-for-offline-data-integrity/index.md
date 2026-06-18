@@ -1,6 +1,6 @@
 ---
 title: Pruebas de Merkle para la integridad de datos fuera de la cadena
-description: Garantizar la integridad de los datos en cadena para los datos que se almacenan, en su mayoría, fuera de la cadena
+description: "Garantizar la integridad de los datos en cadena para los datos que se almacenan, en su mayoría, fuera de la cadena"
 author: Ori Pomerantz
 tags: ["almacenamiento"]
 skill: advanced

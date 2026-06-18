@@ -1,14 +1,14 @@
 ---
-title: 如何撰寫與部署 NFT（NFT 教學系列 1/3）
-description: 本教學為 NFT 系列的第一部分，將帶您逐步了解如何使用以太坊與星際檔案系統 (IPFS) 撰寫並部署非同質化代幣（ERC-721 代幣）智能合約。
-author: 蘇米·穆吉爾
+title: "如何撰寫與部署 NFT（NFT 教學系列 1/3）"
+description: "本教學為 NFT 系列的第一部分，將帶您逐步了解如何使用以太坊與星際檔案系統 (IPFS) 撰寫並部署非同質化代幣（ERC-721 代幣）智能合約。"
+author: "蘇米·穆吉爾"
 tags:
   - ERC-721
   - Alchemy
   - Solidity
   - 智能合約
 skill: beginner
-breadcrumb: 撰寫與部署 NFT
+breadcrumb: "撰寫與部署 NFT"
 lang: zh-tw
 published: 2021-04-22
 ---

@@ -1,6 +1,6 @@
 ---
-title: 测试智能合约
-description: 测试以太坊智能合约的技术和注意事项概述。
+title: "测试智能合约"
+description: "测试以太坊智能合约的技术和注意事项概述。"
 lang: zh
 ---
 
@@ -52,7 +52,7 @@ lang: zh
 
 #### 智能合约单元测试准则 {#unit-testing-guidelines}
 
-##### 1. 了解合约的业务逻辑和工作流程 {#integration-testing-for-smart-contracts}
+##### 1. 了解合约的业务逻辑和工作流程 {#}
 
 在编写单元测试之前，了解智能合约提供哪些功能以及用户将如何访问和使用这些功能会很有帮助。这对于运行[正常路径测试](https://en.m.wikipedia.org/wiki/Happy_path)特别有用，该测试确定合约中的函数是否对有效的用户输入返回正确的输出。我们将使用这个（删减版的）[拍卖合约](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)示例来解释这个概念
 
@@ -114,7 +114,7 @@ function auctionEnd() external {
 
 了解合约的操作工作流程也有助于编写检查执行是否满足要求的单元测试。例如，拍卖合约规定用户在拍卖结束时（即当 `auctionEndTime` 低于 `block.timestamp` 时）不能出价。因此，开发人员可能会运行一个单元测试，检查在拍卖结束时（即当 `auctionEndTime` > `block.timestamp` 时）对 `bid()` 函数的调用是成功还是失败。
 
-##### 2. 评估与合约执行相关的所有假设 {#property-based-testing-for-smart-contracts}
+##### 2. 评估与合约执行相关的所有假设 {#}
 
 记录有关合约执行的任何假设并编写单元测试以验证这些假设的有效性非常重要。除了提供防止意外执行的保护之外，测试断言还迫使你思考可能破坏智能合约安全模型的操作。一个有用的提示是超越“正常用户测试”，编写负面测试来检查函数是否因错误的输入而失败。
 
@@ -128,11 +128,11 @@ function auctionEnd() external {
 
 **注意**：测试假设的另一种方法是编写触发合约中[函数修饰符](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers)的测试，特别是 `require`、`assert` 和 `if…else` 语句。
 
-##### 3. 测量代码覆盖率 {#static-analysis}
+##### 3. 测量代码覆盖率 {#}
 
 [代码覆盖率](https://en.m.wikipedia.org/wiki/Code_coverage)是一个测试指标，用于跟踪测试期间执行的代码中的分支、行和语句的数量。测试应该具有良好的代码覆盖率，以最大程度地降低未测试漏洞的风险。如果没有足够的覆盖率，你可能会错误地认为你的合约是安全的，因为所有测试都通过了，而未测试的代码路径中仍然存在漏洞。然而，记录高代码覆盖率可以确保智能合约中的所有语句/函数都经过了充分的正确性测试。
 
-##### 4. 使用成熟的测试框架 {#dynamic-analysis}
+##### 4. 使用成熟的测试框架 {#}
 
 用于运行智能合约单元测试的工具的质量至关重要。理想的测试框架是定期维护的；提供有用的功能（例如，日志记录和报告功能）；并且必须被其他开发人员广泛使用和审查过。
 
@@ -146,7 +146,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 - **[使用 Hardhat 运行单元测试](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 - **[使用 Wake 运行单元测试](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
-### 集成测试 {#running-property-based-tests}
+### 集成测试 {#integration-testing-for-smart-contracts}
 
 虽然单元测试隔离地调试合约函数，但集成测试将智能合约的组件作为一个整体进行评估。集成测试可以检测由跨合约调用或同一智能合约中不同函数之间的交互引起的问题。例如，集成测试可以帮助检查[继承](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance)和依赖注入等功能是否正常工作。
 
@@ -154,13 +154,13 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 分叉的区块链的行为将类似于主网，并具有带有相关状态和余额的帐户。但它仅充当沙盒化的本地开发环境，这意味着你不需要真实的 ETH 进行交易，你的更改也不会影响真实的以太坊协议。
 
-### 基于属性的测试 {#manual-testing-for-smart-contracts}
+### 基于属性的测试 {#property-based-testing-for-smart-contracts}
 
 基于属性的测试是检查智能合约是否满足某些已定义属性的过程。属性断言了关于合约行为的事实，这些事实在不同场景下都有望保持为真——智能合约属性的一个例子可能是“合约中的算术运算永远不会溢出或下溢”。
 
-**静态分析**和**动态分析**是执行基于属性的测试的两种常见技术，两者都可以验证程序（在本例中为智能合约）的代码是否满足某些预定义的属性。一些基于属性的测试工具带有关于预期合约属性的预定义规则，并根据这些规则检查代码，而其他工具则允许你为智能合约创建自定义属性。
+<strong>静态分析</strong>和**动态分析**是执行基于属性的测试的两种常见技术，两者都可以验证程序（在本例中为智能合约）的代码是否满足某些预定义的属性。一些基于属性的测试工具带有关于预期合约属性的预定义规则，并根据这些规则检查代码，而其他工具则允许你为智能合约创建自定义属性。
 
-#### 静态分析 {#testing-on-local-blockchain}
+#### 静态分析 {#static-analysis}
 
 静态分析器将智能合约的源代码作为输入，并输出声明合约是否满足属性的结果。与动态分析不同，静态分析不涉及执行合约来分析其正确性。相反，静态分析推理智能合约在执行期间可能采取的所有可能路径（即，通过检查源代码的结构来确定它在运行时的合约操作意味着什么）。
 
@@ -168,7 +168,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 在大多数情况下，静态分析有助于检测安全问题，例如在合约代码中使用不安全的结构、语法错误或违反编码标准。然而，众所周知，静态分析器在检测更深层次的漏洞时通常不够完善，并且可能会产生过多的误报。
 
-#### 动态分析 {#testing-contracts-on-testnets}
+#### 动态分析 {#dynamic-analysis}
 
 动态分析生成符号输入（例如，在[符号执行](https://en.m.wikipedia.org/wiki/Symbolic_execution)中）或具体输入（例如，在[模糊测试](https://owasp.org/www-community/Fuzzing)中）到智能合约函数，以查看是否有任何执行跟踪违反了特定属性。这种形式的基于属性的测试与单元测试的不同之处在于，测试用例涵盖多个场景，并且由程序处理测试用例的生成。
 
@@ -182,7 +182,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 3. **单元测试证明合约对样本数据执行正确，但合约对样本外输入是否执行正确仍然未知。** 属性测试使用给定输入值的多种变体执行目标合约，以查找导致断言失败的执行跟踪。因此，属性测试为合约对广泛的输入数据类别的正确执行提供了更多保证。
 
-### 运行智能合约基于属性的测试的准则 {#testing-vs-formal-verification}
+### 运行智能合约基于属性的测试的准则 {#running-property-based-tests}
 
 运行基于属性的测试通常从定义要在智能合约中验证的属性（例如，不存在[整数溢出](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)）或属性集合开始。在编写属性测试时，你可能还需要定义一个值范围，程序可以在该范围内为交易输入生成数据。
 
@@ -197,11 +197,11 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 - **[使用曼蒂科尔 (Manticore) 对智能合约进行符号执行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[使用 Mythril 对智能合约进行符号执行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-## 智能合约的手动测试 {#testing-vs-audits-bug-bounties}
+## 智能合约的手动测试 {#manual-testing-for-smart-contracts}
 
 智能合约的手动测试通常在运行自动化测试之后的开发周期后期进行。这种形式的测试将智能合约作为一个完全集成的产品进行评估，以查看其是否按照技术要求中的规定执行。
 
-### 在本地区块链上测试合约 {#testing-tools-and-libraries}
+### 在本地区块链上测试合约 {#testing-on-local-blockchain}
 
 虽然在本地开发环境中执行的自动化测试可以提供有用的调试信息，但你会想知道你的智能合约在生产环境中的表现如何。然而，部署到以太坊主链会产生 Gas 费用——更不用说如果你的智能合约仍然存在错误，你或你的用户可能会损失真金白银。
 
@@ -211,7 +211,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 [更多关于开发网络的信息。](/developers/docs/development-networks/)
 
-### 在测试网上测试合约 {#unit-testing-tools}
+### 在测试网上测试合约 {#testing-contracts-on-testnets}
 
 测试网络或测试网的工作方式与以太坊主网完全相同，只是它使用没有现实世界价值的以太币 (ETH)。在[测试网](/developers/docs/networks/#ethereum-testnets)上部署你的合约意味着任何人都可以与之交互（例如，通过去中心化应用 (dapp) 的前端），而不会使资金面临风险。
 
@@ -221,7 +221,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 [更多关于以太坊测试网的信息。](/developers/docs/development-networks/#public-beacon-testchains)
 
-## 测试与形式化验证 {#property-based-testing-tools}
+## 测试与形式化验证 {#testing-vs-formal-verification}
 
 虽然测试有助于确认合约对某些数据输入返回预期结果，但它无法最终证明测试期间未使用的输入也是如此。因此，测试智能合约不能保证“功能正确性”（即，它不能表明程序对*所有*输入值集都按要求运行）。
 
@@ -233,7 +233,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 [更多关于智能合约形式化验证的信息。](/developers/docs/smart-contracts/formal-verification)
 
-## 测试与审计和漏洞赏金 {#static-analysis-tools}
+## 测试与审计和漏洞赏金 {#testing-vs-audits-bug-bounties}
 
 如前所述，严格的测试很少能保证合约中没有错误；形式化验证方法可以提供更强的正确性保证，但目前难以使用且会产生相当大的成本。
 
@@ -245,9 +245,9 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 主要区别在于，漏洞赏金计划向更广泛的开发人员/黑客社区开放，并吸引了具有独特技能和经验的广泛类别的道德黑客和独立安全专业人员。与主要依赖可能拥有有限或狭窄专业知识的团队的智能合约审计相比，这可能是一个优势。
 
-## 测试工具和库 {#dynamic-analysis-tools}
+## 测试工具和库 {#testing-tools-and-libraries}
 
-### 单元测试工具 {#related-tutorials}
+### 单元测试工具 {#unit-testing-tools}
 
 - **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - *用于 Solidity 编写的智能合约的代码覆盖率工具。*
 
@@ -267,9 +267,9 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - *基于 Python 的单元测试和模糊测试框架，具有强大的调试功能和跨链测试支持，利用 pytest 和 Anvil 提供最佳的用户体验和性能。*
 
-### 基于属性的测试工具 {#further-reading}
+### 基于属性的测试工具 {#property-based-testing-tools}
 
-#### 静态分析工具 {#tutorials}
+#### 静态分析工具 {#static-analysis-tools}
 
 - **[斯莱瑟 (Slither)](https://github.com/crytic/slither)** - *基于 Python 的 Solidity 静态分析框架，用于查找漏洞、增强代码理解以及为智能合约编写自定义分析。*
 
@@ -281,7 +281,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 - **[Slippy](https://github.com/fvictorio/slippy)** - *一个简单而强大的 Solidity 代码检查工具。*
 
-#### 动态分析工具
+#### 动态分析工具 {#dynamic-analysis-tools}
 
 - **[埃基德纳 (Echidna)](https://github.com/crytic/echidna/)** - *快速的合约模糊测试器，用于通过基于属性的测试检测智能合约中的漏洞。*
 
@@ -293,7 +293,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - *Scribble 是一种规范语言和运行时验证工具，允许你使用属性注释智能合约，从而允许你使用 Diligence Fuzzing 或 MythX 等工具自动测试合约。*
 
-## 相关教程
+## 相关教程 {#related-tutorials}
 
 - [不同测试产品的概述和比较](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [如何使用埃基德纳 (Echidna) 测试智能合约](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
@@ -302,14 +302,14 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 - [如何模拟 Solidity 合约进行测试](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [如何使用 Foundry 在 Solidity 中运行单元测试](https://www.rareskills.io/post/foundry-testing-solidity)
 
-## 延伸阅读
+## 延伸阅读 {#further-reading}
 
 - [测试以太坊智能合约的深入指南](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [如何测试以太坊智能合约](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
 - [MolochDAO 的开发者单元测试指南](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
 - [如何像摇滚明星一样测试智能合约](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)
 
-## 教程：以太坊上的智能合约测试
+## 教程：以太坊上的智能合约测试 {#tutorials}
 
 - [如何在本地多客户端测试网上开发和测试 dApp](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– 将智能合约部署到本地测试网并执行测试的演练。_
 - [如何模拟 Solidity 智能合约进行测试](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/) _– 关于如何使用模拟数据和实现单元测试的中级教程。_

@@ -1,6 +1,6 @@
 ---
-title: IPFS pour les interfaces utilisateur décentralisées
-description: Ce tutoriel apprend au lecteur comment utiliser IPFS pour stocker l'interface utilisateur d'une dapp. Bien que les données et la logique métier de l'application soient décentralisées, sans une interface utilisateur résistante à la censure, les utilisateurs pourraient tout de même en perdre l'accès.
+title: "IPFS pour les interfaces utilisateur décentralisées"
+description: "Ce tutoriel apprend au lecteur comment utiliser IPFS pour stocker l'interface utilisateur d'une dapp. Bien que les données et la logique métier de l'application soient décentralisées, sans une interface utilisateur résistante à la censure, les utilisateurs pourraient tout de même en perdre l'accès."
 author: Ori Pomerantz
 tags:
   - ipfs

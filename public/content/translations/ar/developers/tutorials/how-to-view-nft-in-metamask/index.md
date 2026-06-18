@@ -25,7 +25,7 @@ published: 2021-04-22
 
 بمجرد أن تكون على شبكة <span dir="ltr">Sepolia</span>، حدد علامة التبويب "المقتنيات" (Collectibles) على اليمين وأضف عنوان العقد الذكي لـ <span dir="ltr">NFT</span> ومعرف الرمز المميز <span dir="ltr">ERC-721</span> الخاص بـ <span dir="ltr">NFT</span> الخاص بك — والذي يجب أن تكون قادرًا على العثور عليه على <span dir="ltr">Etherscan</span> بناءً على تجزئة المعاملة من <span dir="ltr">NFT</span> الخاص بك الذي تم نشره في الجزء الثاني من برنامجنا التعليمي.
 
-![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
+![How to find your transaction hash and <span dir="ltr">ERC-721</span> token ID](./findNFTEtherscan.png)
 
 قد تحتاج إلى التحديث بضع مرات لعرض <span dir="ltr">NFT</span> الخاص بك — ولكنه سيكون هناك <Emoji text="😄" size={1} />!
 

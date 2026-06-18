@@ -1,6 +1,6 @@
 ---
-title: ERC-4626 代币化金库标准
-description: 生息金库的标准。
+title: "ERC-4626 代币化金库标准"
+description: "生息金库的标准。"
 lang: zh
 ---
 

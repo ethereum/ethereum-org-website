@@ -1,10 +1,10 @@
 ---
-title: Comment implémenter un marché ERC-721
-description: Comment mettre en vente des articles sous forme de jetons sur un site de petites annonces décentralisé
+title: "Comment implémenter un marché ERC-721"
+description: "Comment mettre en vente des articles sous forme de jetons sur un site de petites annonces décentralisé"
 author: "Alberto Cuesta Cañada"
-tags: ["contrats intelligents", "erc-721", "solidity", "jetons"]
+tags: ["contrats intelligents", "erc-721", "Solidity", "jetons"]
 skill: intermediate
-breadcrumb: Marché ERC-721
+breadcrumb: "Marché ERC-721"
 lang: fr
 published: 2020-03-19
 source: Hackernoon

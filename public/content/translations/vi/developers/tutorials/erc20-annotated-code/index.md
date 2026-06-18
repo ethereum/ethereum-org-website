@@ -1,11 +1,11 @@
 ---
 title: "Hướng dẫn chi tiết hợp đồng ERC-20"
-description: Có gì trong hợp đồng ERC-20 của OpenZeppelin và tại sao nó lại ở đó?
+description: "Có gì trong hợp đồng ERC-20 của OpenZeppelin và tại sao nó lại ở đó?"
 author: Ori Pomerantz
 lang: vi
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: Hướng dẫn chi tiết ERC-20
+breadcrumb: "Hướng dẫn chi tiết ERC-20"
 published: 2021-03-09
 ---
 

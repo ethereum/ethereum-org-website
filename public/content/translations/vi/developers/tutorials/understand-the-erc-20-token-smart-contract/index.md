@@ -1,10 +1,10 @@
 ---
-title: Hiểu về hợp đồng thông minh token ERC-20
-description: Tìm hiểu cách triển khai tiêu chuẩn token ERC-20 với một ví dụ và giải thích đầy đủ về hợp đồng thông minh Solidity.
+title: "Hiểu về hợp đồng thông minh token ERC-20"
+description: "Tìm hiểu cách triển khai tiêu chuẩn token ERC-20 với một ví dụ và giải thích đầy đủ về hợp đồng thông minh Solidity."
 author: "jdourlens"
-tags: ["hợp đồng thông minh", "token", "solidity", "erc-20"]
+tags: ["hợp đồng thông minh", "token", "Solidity", "erc-20"]
 skill: beginner
-breadcrumb: Cơ bản về token ERC-20
+breadcrumb: "Cơ bản về token ERC-20"
 lang: vi
 published: 2020-04-05
 source: EthereumDev

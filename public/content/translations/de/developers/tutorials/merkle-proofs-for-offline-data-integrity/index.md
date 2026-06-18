@@ -1,6 +1,6 @@
 ---
-title: Merkle-Nachweise für die Integrität von Offline-Daten
-description: Sicherstellung der Datenintegrität Onchain für Daten, die größtenteils offchain gespeichert sind
+title: "Merkle-Nachweise für die Integrität von Offline-Daten"
+description: "Sicherstellung der Datenintegrität Onchain für Daten, die größtenteils offchain gespeichert sind"
 author: Ori Pomerantz
 tags: ["Speicher"]
 skill: advanced

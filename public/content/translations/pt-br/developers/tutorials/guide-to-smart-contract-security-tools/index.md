@@ -1,11 +1,11 @@
 ---
-title: Um guia para ferramentas de segurança de contratos inteligentes
-description: Uma visão geral de três diferentes técnicas de teste e análise de programas
+title: "Um guia para ferramentas de segurança de contratos inteligentes"
+description: "Uma visão geral de três diferentes técnicas de teste e análise de programas"
 author: "Trailofbits"
 lang: pt-br
-tags: ["solidity", "contratos inteligentes", "segurança"]
+tags: ["Solidity", "contratos inteligentes", "segurança"]
 skill: intermediate
-breadcrumb: Ferramentas de segurança
+breadcrumb: "Ferramentas de segurança"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

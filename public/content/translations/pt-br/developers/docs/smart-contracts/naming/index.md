@@ -1,6 +1,6 @@
 ---
 title: Nomeando contratos inteligentes
-description: Melhores práticas para nomear contratos inteligentes do Ethereum com o ENS
+description: "Melhores práticas para nomear contratos inteligentes do Ethereum com o ENS"
 lang: pt-br
 ---
 

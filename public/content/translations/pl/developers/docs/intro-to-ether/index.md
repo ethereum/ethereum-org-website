@@ -1,6 +1,6 @@
 ---
 title: Techniczne wprowadzenie do etheru
-description: Wprowadzenie do kryptowaluty ether dla deweloperów.
+description: "Wprowadzenie do kryptowaluty ether dla deweloperów."
 lang: pl
 ---
 

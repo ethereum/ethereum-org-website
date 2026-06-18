@@ -3,7 +3,7 @@ title: "Průvodce kontraktem ERC-721 ve Vyperu"
 description: "Kontrakt ERC-721 od Ryuyi Nakamury a jak funguje"
 author: Ori Pomerantz
 lang: cs
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: "Vyper ERC-721"
 published: 2021-04-01

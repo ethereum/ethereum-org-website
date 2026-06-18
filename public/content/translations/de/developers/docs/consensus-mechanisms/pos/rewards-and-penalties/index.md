@@ -1,6 +1,6 @@
 ---
 title: Proof-of-Stake-Belohnungen und -Strafen
-description: Erfahren Sie mehr über die protokollinternen Anreize im Proof-of-Stake-Ethereum.
+description: "Erfahren Sie mehr über die protokollinternen Anreize im Proof-of-Stake-Ethereum."
 lang: de
 ---
 

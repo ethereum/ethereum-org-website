@@ -1,6 +1,6 @@
 ---
-title: 信标链
-description: 了解信标链——为以太坊引入权益证明 (PoS) 的升级。
+title: "信标链"
+description: "了解信标链——为以太坊引入权益证明 (PoS) 的升级。"
 lang: zh
 template: upgrade
 image: /images/upgrades/core.png

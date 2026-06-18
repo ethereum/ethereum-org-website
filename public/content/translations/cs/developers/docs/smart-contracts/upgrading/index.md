@@ -1,6 +1,6 @@
 ---
-title: Aktualizace chytrých kontraktů
-description: Přehled vzorů pro aktualizaci chytrých kontraktů na Ethereu
+title: "Aktualizace chytrých kontraktů"
+description: "Přehled vzorů pro aktualizaci chytrých kontraktů na Ethereu"
 lang: cs
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: "⁦ethers.js⁩ کا استعمال کرتے ہوئے ٹوکنز بھیجنا"
 description: "⁦ethers.js⁩ کا استعمال کرتے ہوئے ٹوکنز بھیجنے کے لیے ابتدائی افراد کے لیے گائیڈ۔"
-author: کم یونگ جن
+author: "کم یونگ جن"
 tags: ["ETHERS.JS", "ERC-20", "ٹوکنز"]
 skill: beginner
-breadcrumb: ٹوکنز بھیجیں
+breadcrumb: "ٹوکنز بھیجیں"
 lang: ur
 published: 2021-04-06
 ---

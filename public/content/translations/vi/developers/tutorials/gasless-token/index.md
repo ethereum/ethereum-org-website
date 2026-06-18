@@ -1,13 +1,13 @@
 ---
 title: "Cho phép người dùng không cần Gas của bạn nắm giữ token và gọi hợp đồng"
-description: Sử dụng trừu tượng hóa tài khoản, chúng ta có thể tạo các ví hợp đồng thông minh chấp nhận các giao dịch được gửi bởi một EOA cụ thể hoặc được ký bởi EOA đó. Các hợp đồng thông minh này sau đó có thể sở hữu token, nằm dưới sự kiểm soát của EOA.
+description: "Sử dụng trừu tượng hóa tài khoản, chúng ta có thể tạo các ví hợp đồng thông minh chấp nhận các giao dịch được gửi bởi một EOA cụ thể hoặc được ký bởi EOA đó. Các hợp đồng thông minh này sau đó có thể sở hữu token, nằm dưới sự kiểm soát của EOA."
 author: Ori Pomerantz
 tags:
   - không cần gas
   - erc-20
   - trừu tượng hóa tài khoản
 skill: intermediate
-breadcrumb: Token không cần Gas
+breadcrumb: "Token không cần Gas"
 lang: vi
 published: 2026-04-01
 ---
@@ -749,7 +749,8 @@ Cho phép người dùng phát hành các giao dịch chuyển ERC-20.
 Nếu có mã băm giao dịch cuối cùng, hãy hiển thị một liên kết để người dùng có thể xem nó trong một trình khám phá khối.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

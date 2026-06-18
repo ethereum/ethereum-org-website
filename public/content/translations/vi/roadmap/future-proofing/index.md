@@ -1,6 +1,6 @@
 ---
-title: Bảo vệ Ethereum trong tương lai và bảo mật lượng tử mật mã
-description: Những bản nâng cấp này củng cố Ethereum như một lớp cơ sở phi tập trung, kiên cường cho tương lai, bất kể điều gì có thể xảy ra.
+title: "Bảo vệ Ethereum trong tương lai và bảo mật lượng tử mật mã"
+description: "Những bản nâng cấp này củng cố Ethereum như một lớp cơ sở phi tập trung, kiên cường cho tương lai, bất kể điều gì có thể xảy ra."
 lang: vi
 image: /images/roadmap/roadmap-future.png
 alt: "Lộ trình Ethereum"

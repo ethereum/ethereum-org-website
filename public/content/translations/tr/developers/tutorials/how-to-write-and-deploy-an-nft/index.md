@@ -1,10 +1,10 @@
 ---
-title: Bir NFT Nasıl Yazılır ve Dağıtılır (NFT Eğitim Serisi Bölüm 1/3)
-description: Bu eğitim, Ethereum ve Gezegenlerarası Dosya Sistemi (IPFS) kullanarak bir Non Fungible Token (ERC-721 token) akıllı sözleşmesinin nasıl yazılacağı ve dağıtılacağı konusunda sizi adım adım yönlendirecek olan NFT'ler hakkındaki bir serinin 1. Bölümüdür.
+title: "Bir NFT Nasıl Yazılır ve Dağıtılır (NFT Eğitim Serisi Bölüm 1/3)"
+description: "Bu eğitim, Ethereum ve Gezegenlerarası Dosya Sistemi (IPFS) kullanarak bir Non Fungible Token (ERC-721 token) akıllı sözleşmesinin nasıl yazılacağı ve dağıtılacağı konusunda sizi adım adım yönlendirecek olan NFT'ler hakkındaki bir serinin 1. Bölümüdür."
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "akıllı sözleşmeler"]
 skill: beginner
-breadcrumb: NFT yazın ve dağıtın
+breadcrumb: "NFT yazın ve dağıtın"
 lang: tr
 published: 2021-04-22
 ---

@@ -1,6 +1,6 @@
 ---
-title: Khả năng kết hợp của hợp đồng thông minh
-description: Tìm hiểu cách các hợp đồng thông minh có thể được kết hợp như những khối Lego để xây dựng các dapp phức tạp bằng cách tái sử dụng các thành phần hiện có.
+title: "Khả năng kết hợp của hợp đồng thông minh"
+description: "Tìm hiểu cách các hợp đồng thông minh có thể được kết hợp như những khối Lego để xây dựng các dapp phức tạp bằng cách tái sử dụng các thành phần hiện có."
 lang: vi
 incomplete: true
 ---

@@ -30,7 +30,7 @@ lang: ur
 
 اگر کوئی سمارٹ کنٹریکٹ درج ذیل طریقوں اور ایونٹس کو نافذ کرتا ہے تو اسے <span dir="ltr">ERC-721</span> غیر قابل تبادلہ ٹوکن کنٹریکٹ کہا جا سکتا ہے اور، ایک بار تعینات کرنے کے بعد، یہ ایتھیریم پر بنائے گئے ٹوکنز کا ریکارڈ رکھنے کا ذمہ دار ہوگا۔
 
-[EIP-721](https://eips.ethereum.org/EIPS/eip-721) سے:
+[<span dir="ltr">EIP-721</span>](https://eips.ethereum.org/EIPS/eip-721) سے:
 
 ### طریقے (Methods) {#methods}
 
@@ -238,14 +238,14 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## مزید مطالعہ {#further-reading}
 
-- [EIP-721: ERC-721 غیر قابل تبادلہ ٹوکن سٹینڈرڈ](https://eips.ethereum.org/EIPS/eip-721)
-- [اوپن زیپلن - ERC-721 دستاویزات](https://docs.openzeppelin.com/contracts/3.x/erc721)
-- [اوپن زیپلن - ERC-721 کا نفاذ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [<span dir="ltr">EIP-721</span>: <span dir="ltr">ERC-721</span> غیر قابل تبادلہ ٹوکن سٹینڈرڈ](https://eips.ethereum.org/EIPS/eip-721)
+- [اوپن زیپلن - <span dir="ltr">ERC-721</span> دستاویزات](https://docs.openzeppelin.com/contracts/3.x/erc721)
+- [اوپن زیپلن - <span dir="ltr">ERC-721</span> کا نفاذ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
 
-## ٹیوٹوریلز: ایتھیریم پر غیر قابل تبادلہ ٹوکنز (ERC-721) کے ساتھ تعمیر کریں {#tutorials}
+## ٹیوٹوریلز: ایتھیریم پر غیر قابل تبادلہ ٹوکنز (<span dir="ltr">ERC-721</span>) کے ساتھ تعمیر کریں {#tutorials}
 
-- [Vyper ERC-721 کنٹریکٹ واک تھرو](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper میں لکھے گئے ایک مکمل <span dir="ltr">ERC-721 NFT</span> کنٹریکٹ کا تشریحی جائزہ۔_
+- [Vyper <span dir="ltr">ERC-721</span> کنٹریکٹ واک تھرو](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper میں لکھے گئے ایک مکمل <span dir="ltr">ERC-721 NFT</span> کنٹریکٹ کا تشریحی جائزہ۔_
 - [ایک NFT کیسے لکھیں اور تعینات کریں (حصہ 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– اپنا پہلا <span dir="ltr">ERC-721</span> سمارٹ کنٹریکٹ لکھنے اور تعینات کرنے کے لیے مرحلہ وار گائیڈ۔_
 - [ایک NFT کیسے ڈھالیں (حصہ 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– اپنے تعینات کردہ سمارٹ کنٹریکٹ اور Web3 کا استعمال کرتے ہوئے <span dir="ltr">ERC-721 NFT</span> کو ڈھالنے کا طریقہ۔_
 - [اپنے والیٹ میں اپنا NFT کیسے دیکھیں (حصہ 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– تعیناتی کے بعد میٹاماسک میں اپنے ڈھالے گئے <span dir="ltr">NFT</span> کو دکھانے کا طریقہ۔_

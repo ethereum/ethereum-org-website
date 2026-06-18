@@ -1,12 +1,12 @@
 ---
-title: JavaScriptでイーサリアムブロックチェーンを使用するためのweb3.jsのセットアップ
-description: JavaScriptアプリケーションからイーサリアムブロックチェーンと対話するためのweb3.jsライブラリのセットアップおよび構成方法を学びます。
+title: "JavaScriptでイーサリアムブロックチェーンを使用するためのweb3.jsのセットアップ"
+description: "JavaScriptアプリケーションからイーサリアムブロックチェーンと対話するためのweb3.jsライブラリのセットアップおよび構成方法を学びます。"
 author: "jdourlens"
 tags:
   - web3.js
   - javascript
 skill: beginner
-breadcrumb: web3.jsのセットアップ
+breadcrumb: "web3.jsのセットアップ"
 lang: ja
 published: 2020-04-11
 source: EthereumDev

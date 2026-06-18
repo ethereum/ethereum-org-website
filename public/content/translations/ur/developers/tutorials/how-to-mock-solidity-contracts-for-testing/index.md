@@ -1,9 +1,9 @@
 ---
 title: "ٹیسٹنگ کے لیے ⁦Solidity⁩ سمارٹ کنٹریکٹس کو موک (mock) کیسے کریں"
 description: "ٹیسٹنگ کے دوران آپ کو اپنے کنٹریکٹس کا مذاق کیوں اڑانا چاہیے"
-author: مارکس واس
+author: "مارکس واس"
 lang: ur
-tags: ["solidity", "سمارٹ کنٹریکٹس", "ٹیسٹنگ", "موکنگ"]
+tags: ["Solidity", "سمارٹ کنٹریکٹس", "ٹیسٹنگ", "موکنگ"]
 skill: intermediate
 breadcrumb: "کنٹریکٹس کی موکنگ"
 published: 2020-05-02

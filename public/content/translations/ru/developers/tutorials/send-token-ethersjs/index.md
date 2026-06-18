@@ -1,10 +1,10 @@
 ---
-title: Отправка токенов с помощью ethers.js
-description: Руководство для начинающих по отправке токенов с помощью ethers.js.
-author: Ким Ёнджун
+title: "Отправка токенов с помощью ethers.js"
+description: "Руководство для начинающих по отправке токенов с помощью ethers.js."
+author: "Ким Ёнджун"
 tags: ["ETHERS.JS", "ERC-20", "токены"]
 skill: beginner
-breadcrumb: Отправка токенов
+breadcrumb: "Отправка токенов"
 lang: ru
 published: 2021-04-06
 ---

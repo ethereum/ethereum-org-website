@@ -25,7 +25,7 @@ published: 2021-04-22
 
 ایک بار جب آپ <span dir="ltr">Sepolia</span> نیٹ ورک پر آ جائیں، تو دائیں جانب "Collectibles" ٹیب کو منتخب کریں اور اپنے <span dir="ltr">NFT</span> کا سمارٹ کنٹریکٹ پتہ اور <span dir="ltr">ERC-721</span> ٹوکن <span dir="ltr">ID</span> شامل کریں — جسے آپ ہمارے ٹیوٹوریل کے حصہ دوم میں تعینات کیے گئے اپنے <span dir="ltr">NFT</span> کے ٹرانزیکشن ہیش کی بنیاد پر <span dir="ltr">Etherscan</span> پر تلاش کر سکتے ہیں۔
 
-![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
+![How to find your transaction hash and <span dir="ltr">ERC-721</span> token ID](./findNFTEtherscan.png)
 
 اپنا <span dir="ltr">NFT</span> دیکھنے کے لیے آپ کو چند بار ریفریش کرنے کی ضرورت پڑ سکتی ہے — لیکن یہ وہاں موجود ہوگا <Emoji text="😄" size={1} />!
 

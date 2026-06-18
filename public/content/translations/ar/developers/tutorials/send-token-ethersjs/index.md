@@ -1,7 +1,7 @@
 ---
 title: "إرسال الرموز المميزة باستخدام ⁦ethers.js⁩"
 description: "دليل مبسط للمبتدئين لإرسال الرموز المميزة باستخدام ⁦ethers.js⁩."
-author: كيم يونغ جون
+author: "كيم يونغ جون"
 tags: ["ETHERS.JS", "ERC-20", "رموز مميزة"]
 skill: beginner
 breadcrumb: "إرسال الرموز المميزة"

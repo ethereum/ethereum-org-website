@@ -1,6 +1,6 @@
 ---
-title: सिम्पल सीरियलाइज
-description: इथेरियमच्या SSZ फॉरमॅटचे स्पष्टीकरण.
+title: "सिम्पल सीरियलाइज"
+description: "इथेरियमच्या SSZ फॉरमॅटचे स्पष्टीकरण."
 lang: mr
 sidebarDepth: 2
 ---

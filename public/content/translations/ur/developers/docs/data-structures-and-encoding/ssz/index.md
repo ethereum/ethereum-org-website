@@ -1,6 +1,6 @@
 ---
-title: سادہ سلسلہ بندی
-description: ایتھیریم کے ⁦SSZ⁩ فارمیٹ کی وضاحت۔
+title: "سادہ سلسلہ بندی"
+description: "ایتھیریم کے ⁦SSZ⁩ فارمیٹ کی وضاحت۔"
 lang: ur
 sidebarDepth: 2
 ---

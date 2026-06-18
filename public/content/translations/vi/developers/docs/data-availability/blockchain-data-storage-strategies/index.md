@@ -1,6 +1,6 @@
 ---
-title: Các chiến lược lưu trữ dữ liệu chuỗi khối
-description: Có một số cách để lưu trữ dữ liệu bằng chuỗi khối. Bài viết này sẽ so sánh các chiến lược khác nhau, chi phí và sự đánh đổi của chúng, cũng như các yêu cầu để sử dụng chúng một cách an toàn.
+title: "Các chiến lược lưu trữ dữ liệu chuỗi khối"
+description: "Có một số cách để lưu trữ dữ liệu bằng chuỗi khối. Bài viết này sẽ so sánh các chiến lược khác nhau, chi phí và sự đánh đổi của chúng, cũng như các yêu cầu để sử dụng chúng một cách an toàn."
 lang: vi
 ---
 
@@ -110,7 +110,7 @@ Bảng này tóm tắt các tùy chọn khác nhau, ưu điểm và nhược đi
 
 | Loại lưu trữ                | Nguồn dữ liệu       | Đảm bảo tính khả dụng                                                                                                              | Tính khả dụng trên chuỗi                                         | Các giới hạn bổ sung                                                    |
 | --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Các blob EIP-4844              | Ngoài chuỗi            | Ethereum đảm bảo trong [~18 ngày](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Chỉ có mã băm                                           |                                                                         |
+| Các blob EIP-4844              | Ngoài chuỗi            | Ethereum đảm bảo trong [\~18 ngày](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Chỉ có mã băm                                           |                                                                         |
 | Dữ liệu lệnh gọi                    | Ngoài chuỗi            | Ethereum đảm bảo vĩnh viễn (một phần của chuỗi khối)                                                                                | Chỉ khả dụng nếu được ghi vào một hợp đồng và tại giao dịch đó |
 | Ngoài chuỗi với các cơ chế L1 | Ngoài chuỗi            | Đảm bảo "một trình xác minh trung thực" trong thời gian thử thách                                                                        | Chỉ mã băm                                                        | Được đảm bảo bởi cơ chế thử thách, chỉ trong thời gian thử thách |
 | Mã hợp đồng               | Trên chuỗi hoặc ngoài chuỗi | Ethereum đảm bảo vĩnh viễn (một phần của chuỗi khối)                                                                                | Có                                                              | Được ghi vào một địa chỉ "ngẫu nhiên", không thể bắt đầu bằng `0xEF`                 |

@@ -1,6 +1,6 @@
 ---
-title: Porozumění chytrému kontraktu ERC-20 tokenu
-description: Naučte se, jak implementovat standard ERC-20 tokenu s kompletním příkladem chytrého kontraktu v Solidity a jeho vysvětlením.
+title: "Porozumění chytrému kontraktu ERC-20 tokenu"
+description: "Naučte se, jak implementovat standard ERC-20 tokenu s kompletním příkladem chytrého kontraktu v Solidity a jeho vysvětlením."
 author: "jdourlens"
 tags:
   - chytré kontrakty
@@ -8,7 +8,7 @@ tags:
   - solidity
   - erc-20
 skill: beginner
-breadcrumb: Základy ERC-20 tokenu
+breadcrumb: "Základy ERC-20 tokenu"
 lang: cs
 published: 2020-04-05
 source: EthereumDev

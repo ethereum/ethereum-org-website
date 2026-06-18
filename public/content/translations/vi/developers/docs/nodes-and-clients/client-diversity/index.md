@@ -1,6 +1,6 @@
 ---
-title: Sự đa dạng máy khách
-description: Giải thích tổng quan về tầm quan trọng của sự đa dạng máy khách Ethereum.
+title: "Sự đa dạng máy khách"
+description: "Giải thích tổng quan về tầm quan trọng của sự đa dạng máy khách Ethereum."
 lang: vi
 sidebarDepth: 2
 ---

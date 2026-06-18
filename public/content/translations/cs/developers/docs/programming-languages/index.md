@@ -1,6 +1,6 @@
 ---
-title: Programovací jazyky
-description: Objevte zdroje pro vývoj na Ethereu pro různé programovací jazyky, včetně JavaScriptu, Pythonu, Go, Rustu a dalších.
+title: "Programovací jazyky"
+description: "Objevte zdroje pro vývoj na Ethereu pro různé programovací jazyky, včetně JavaScriptu, Pythonu, Go, Rustu a dalších."
 lang: cs
 ---
 

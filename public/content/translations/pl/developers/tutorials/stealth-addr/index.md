@@ -2,7 +2,7 @@
 title: "Korzystanie z ukrytych adresów"
 description: "Ukryte adresy pozwalają użytkownikom na anonimowy transfer aktywów. Po przeczytaniu tego artykułu będziesz w stanie: wyjaśnić, czym są ukryte adresy i jak działają, zrozumieć, jak z nich korzystać w sposób zachowujący prywatność, oraz napisać aplikację internetową wykorzystującą ukryte adresy."
 author: Ori Pomerantz
-tags: ["ukryty adres", "prywatność", "kryptografia", "rust", "wasm"]
+tags: ["ukryty adres", "prywatność", "kryptografia", "Rust", "wasm"]
 skill: intermediate
 breadcrumb: Ukryte adresy
 published: 2025-11-30

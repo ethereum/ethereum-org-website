@@ -1,6 +1,6 @@
 ---
-title: イーサの技術入門
-description: 開発者向けの暗号資産イーサの紹介。
+title: "イーサの技術入門"
+description: "開発者向けの暗号資産イーサの紹介。"
 lang: ja
 ---
 

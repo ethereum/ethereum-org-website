@@ -2,7 +2,7 @@
 title: Wie man einen ERC-721-Markt implementiert
 description: Wie man tokenisierte Artikel auf einem dezentralen Anzeigenportal zum Verkauf anbietet
 author: "Alberto Cuesta Cañada"
-tags: ["Smart Contracts", "erc-721", "solidity", "Tokens"]
+tags: ["Smart Contracts", "erc-721", "Solidity", "Tokens"]
 skill: intermediate
 breadcrumb: ERC-721-Markt
 lang: de

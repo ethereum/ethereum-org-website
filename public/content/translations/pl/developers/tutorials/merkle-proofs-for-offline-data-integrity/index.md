@@ -1,6 +1,6 @@
 ---
-title: Dowody Merkle'a dla integralności danych offline
-description: Zapewnienie integralności danych onchain dla danych, które są przechowywane głównie pozałańcuchowo
+title: "Dowody Merkle'a dla integralności danych offline"
+description: "Zapewnienie integralności danych onchain dla danych, które są przechowywane głównie pozałańcuchowo"
 author: Ori Pomerantz
 tags: ["przechowywanie"]
 skill: advanced

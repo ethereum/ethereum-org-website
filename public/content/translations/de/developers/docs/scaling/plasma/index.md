@@ -1,6 +1,6 @@
 ---
 title: Plasma-Chains
-description: Eine Einführung in Plasma-Chains als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
+description: "Eine Einführung in Plasma-Chains als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird."
 lang: de
 incomplete: true
 sidebarDepth: 3

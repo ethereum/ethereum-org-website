@@ -1,11 +1,11 @@
 ---
 title: "EIP-1271: スマート・コントラクトの署名の作成と検証"
-description: EIP-1271を使用したスマート・コントラクトの署名生成と検証の概要。また、スマート・コントラクト開発者が構築するための具体的な例として、Safe（旧Gnosis Safe）で使用されているEIP-1271の実装についても解説します。
-author: ネイサン・H・リョン
+description: "EIP-1271を使用したスマート・コントラクトの署名生成と検証の概要。また、スマート・コントラクト開発者が構築するための具体的な例として、Safe（旧Gnosis Safe）で使用されているEIP-1271の実装についても解説します。"
+author: "ネイサン・H・リョン"
 lang: ja
 tags: ["eip-1271", "スマート・コントラクト", "検証", "署名"]
 skill: intermediate
-breadcrumb: EIP-1271の署名
+breadcrumb: "EIP-1271の署名"
 published: 2023-01-12
 ---
 

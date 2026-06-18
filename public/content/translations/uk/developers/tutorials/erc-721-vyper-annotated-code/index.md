@@ -3,7 +3,7 @@ title: "Огляд контракту ERC-721 на Vyper"
 description: "Контракт ERC-721 від Рюї Накамури та як він працює"
 author: "Орі Померанц"
 lang: uk
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: "Vyper ERC-721"
 published: 2021-04-01

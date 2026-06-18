@@ -1,6 +1,6 @@
 ---
-title: Documentation de développement d'Ethereum
-description: Présentation de la documentation pour les développeurs d'ethereum.org.
+title: "Documentation de développement d'Ethereum"
+description: "Présentation de la documentation pour les développeurs d'ethereum.org."
 lang: fr
 ---
 

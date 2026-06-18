@@ -1,6 +1,6 @@
 ---
-title: Dokumentacja dla deweloperów Ethereum
-description: Wprowadzenie do dokumentacji dla deweloperów na ethereum.org.
+title: "Dokumentacja dla deweloperów Ethereum"
+description: "Wprowadzenie do dokumentacji dla deweloperów na ethereum.org."
 lang: pl
 ---
 

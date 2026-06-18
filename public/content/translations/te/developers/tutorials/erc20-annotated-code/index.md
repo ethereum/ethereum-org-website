@@ -1,13 +1,13 @@
 ---
 title: "ERC-20 కాంట్రాక్ట్ వాక్‌త్రూ"
-description: ఓపెన్‌జెప్పెలిన్ ERC-20 కాంట్రాక్ట్‌లో ఏముంది మరియు అది ఎందుకు ఉంది?
-author: ఓరి పోమెరాంట్జ్
+description: "ఓపెన్‌జెప్పెలిన్ ERC-20 కాంట్రాక్ట్‌లో ఏముంది మరియు అది ఎందుకు ఉంది?"
+author: "ఓరి పోమెరాంట్జ్"
 lang: te
 tags:
   - solidity
   - erc-20
 skill: beginner
-breadcrumb: ERC-20 వాక్‌త్రూ
+breadcrumb: "ERC-20 వాక్‌త్రూ"
 published: 2021-03-09
 ---
 

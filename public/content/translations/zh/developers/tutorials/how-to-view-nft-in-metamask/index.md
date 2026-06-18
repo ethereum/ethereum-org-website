@@ -1,10 +1,10 @@
 ---
-title: 如何在钱包中查看你的 NFT（NFT 教程系列第 3/3 部分）
-description: 本教程介绍如何在梅塔马斯克上查看现有的 NFT！
+title: "如何在钱包中查看你的 NFT（NFT 教程系列第 3/3 部分）"
+description: "本教程介绍如何在梅塔马斯克上查看现有的 NFT！"
 author: "苏米·穆吉尔"
 tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
-breadcrumb: 在钱包中查看 NFT
+breadcrumb: "在钱包中查看 NFT"
 lang: zh
 published: 2021-04-22
 ---

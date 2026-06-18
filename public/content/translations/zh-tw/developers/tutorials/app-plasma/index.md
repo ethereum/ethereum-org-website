@@ -1,10 +1,10 @@
 ---
-title: 撰寫一個保護隱私的特定應用程式電漿
-description: 在本教學中，我們將建立一個用於存款的半機密銀行。該銀行是一個中心化元件；它知道每個使用者的餘額。然而，這些資訊並未儲存在鏈上。相反地，銀行會發布狀態的雜湊值。每次發生交易時，銀行都會發布新的雜湊值，以及一個零知識證明，證明它擁有一個已簽署的交易，該交易將雜湊狀態更改為新的狀態。閱讀本教學後，您不僅會了解如何使用零知識證明，還會了解為什麼要使用它們以及如何安全地進行操作。
-author: 奧里·波梅蘭茨
+title: "撰寫一個保護隱私的特定應用程式電漿"
+description: "在本教學中，我們將建立一個用於存款的半機密銀行。該銀行是一個中心化元件；它知道每個使用者的餘額。然而，這些資訊並未儲存在鏈上。相反地，銀行會發布狀態的雜湊值。每次發生交易時，銀行都會發布新的雜湊值，以及一個零知識證明，證明它擁有一個已簽署的交易，該交易將雜湊狀態更改為新的狀態。閱讀本教學後，您不僅會了解如何使用零知識證明，還會了解為什麼要使用它們以及如何安全地進行操作。"
+author: "奧里·波梅蘭茨"
 tags: ["零知識", "伺服器", "鏈下", "隱私"]
 skill: advanced
-breadcrumb: 特定應用程式電漿
+breadcrumb: "特定應用程式電漿"
 lang: zh-tw
 published: 2025-10-15
 ---
@@ -160,7 +160,7 @@ ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
-   ```
+      ```
 
 10. 將最後兩個值與你在網頁瀏覽器上看到的雜湊進行比較，以查看訊息是否被正確雜湊。
 
@@ -858,7 +858,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
@@ -1029,7 +1029,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 

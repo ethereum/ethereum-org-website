@@ -40,7 +40,7 @@ Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mante
 
 **Sepolia è la testnet predefinita consigliata per lo sviluppo di applicazioni**. La rete Sepolia utilizza un set di validatori autorizzato controllato dai team dei client e di test.
 
-##### Risorse {#hoodi}
+##### Risorse {#} {#}
 
 - [Sito web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mante
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucet {#ephemery}
+##### Faucet {#} {#}
 
 - [Faucet di Sepolia di Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet di Sepolia di Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -61,7 +61,7 @@ Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mante
 - [Faucet PoW](https://sepolia-faucet.pk910.de/)
 - [Faucet di Sepolia di QuickNode](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Hoodi {#faucets}
+#### Hoodi {#hoodi}
 
 Hoodi è una testnet per testare la convalida e lo staking. La rete Hoodi è aperta agli utenti che desiderano eseguire un validatore della testnet. Gli staker che desiderano testare gli aggiornamenti del protocollo prima che vengano distribuiti sulla Mainnet dovrebbero quindi utilizzare Hoodi.
 
@@ -69,7 +69,7 @@ Hoodi è una testnet per testare la convalida e lo staking. La rete Hoodi è ape
 - Stato di grandi dimensioni, utile per testare interazioni complesse di smart contract
 - Sincronizzazione più lunga e richiede più spazio di archiviazione per eseguire un nodo
 
-##### Risorse {#holesky}
+##### Risorse {#}
 
 - [Sito web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,13 +78,13 @@ Hoodi è una testnet per testare la convalida e lo staking. La rete Hoodi è ape
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucet {#layer-2-testnets}
+##### Faucet {#}
 
 - [Faucet di Hoodi di Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Faucet di Hoodi](https://hoodi.ethpandaops.io/)
 - [Faucet PoW](https://hoodi-faucet.pk910.de/)
 
-#### Ephemery {#arbitrum-sepolia}
+#### Ephemery {#ephemery}
 
 Ephemery è un tipo unico di testnet che si ripristina completamente ogni mese. Lo stato di esecuzione e di consenso ritorna alla genesi ogni 28 giorni, il che significa che tutto ciò che accade sulla testnet è effimero. Questo la rende ideale per test a breve termine, avvio rapido dei nodi e applicazioni di tipo "hello world" che non necessitano di permanenza.
 
@@ -93,7 +93,7 @@ Ephemery è un tipo unico di testnet che si ripristina completamente ogni mese. 
 - Set di validatori aperto e facile accesso a grandi quantità di fondi
 - Requisiti minimi per i nodi e sincronizzazione più rapida, in media &lt;5GB
 
-##### Risorse {#optimistic-sepolia}
+##### Risorse {#}
 
 - [Sito web](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -104,55 +104,55 @@ Ephemery è un tipo unico di testnet che si ripristina completamente ogni mese. 
 - [Sincronizzazione del checkpoint](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
-#### Faucet {#starknet-sepolia}
+#### Faucet {#faucets}
 
 - [Faucet di Bordel](https://faucet.bordel.wtf/)
 - [Faucet PoW di Pk910](https://ephemery-faucet.pk910.de/)
 
-#### Holesky (deprecata) {#private-networks}
+#### Holesky (deprecata) {#holesky}
 
 La testnet Holesky è deprecata da settembre 2025. Gli operatori di staking e i fornitori di infrastrutture dovrebbero invece utilizzare Hoodi per i test dei validatori.
 
 - [Annuncio della chiusura della testnet Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _Blog della EF, 1 settembre 2025_
 - [Aggiornamenti sulle testnet Holesky e Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _Blog della EF, 18 marzo 2025_
 
-### Testnet di layer 2 {#development-networks}
+### Testnet di layer 2 {#layer-2-testnets}
 
 Il [layer 2 (l2)](/layer-2/) è un termine collettivo per descrivere un insieme specifico di soluzioni di ridimensionamento di Ethereum. Un layer 2 è una blockchain separata che estende Ethereum ed eredita le garanzie di sicurezza di Ethereum. Le testnet di layer 2 sono solitamente strettamente accoppiate alle testnet pubbliche di Ethereum.
 
-#### Arbitrum Sepolia {#consortium-networks}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Una testnet per [Arbitrum](https://arbitrum.io/).
 
-##### Risorse {#why-naming}
+##### Risorse {#}
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucet {#common-and-legacy-testnets}
+##### Faucet {#}
 
 - [Faucet di Arbitrum Sepolia di Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Faucet di Arbitrum Sepolia di Chainlink](https://faucets.chain.link/arbitrum-sepolia)
 - [Faucet di Arbitrum Sepolia di ethfaucet.com](https://ethfaucet.com/networks/arbitrum)
 - [Faucet di Arbitrum Sepolia di QuickNode](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Sepolia {#other-testnets}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Una testnet per [Optimism](https://www.optimism.io/).
 
-##### Risorse {#related-tools}
+##### Risorse {#}
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucet {#further-reading}
+##### Faucet {#}
 
 - [Faucet di Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet di Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Faucet di Optimism Sepolia di ethfaucet.com](https://ethfaucet.com/networks/optimism)
 - [Faucet della testnet](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet Sepolia
+#### Starknet Sepolia {#starknet-sepolia}
 
 Una testnet per [Starknet](https://www.starknet.io).
 
@@ -166,27 +166,27 @@ Una testnet per [Starknet](https://www.starknet.io).
 - [Faucet di Starknet Sepolia di Blast](https://blastapi.io/faucets/starknet-sepolia-eth)
 - [Faucet di Starknet](https://starknet-faucet.vercel.app/)
 
-## Reti private
+## Reti private {#private-networks}
 
 Una rete Ethereum è una rete privata se i suoi nodi non sono connessi a una rete pubblica (ovvero, la Mainnet o una testnet). In questo contesto, privato significa solo riservato o isolato, piuttosto che protetto o sicuro.
 
-### Reti di sviluppo
+### Reti di sviluppo {#development-networks}
 
 Per sviluppare un'applicazione Ethereum, vorrai eseguirla su una rete privata per vedere come funziona prima di distribuirla. Similmente a come crei un server locale sul tuo computer per lo sviluppo web, puoi creare un'istanza blockchain locale per testare la tua dapp. Ciò consente un'iterazione molto più rapida rispetto a una testnet pubblica.
 
 Esistono progetti e strumenti dedicati per assistere in questo. Scopri di più sulle [reti di sviluppo](/developers/docs/development-networks/).
 
-### Reti di consorzio
+### Reti di consorzio {#consortium-networks}
 
 Il processo di consenso è controllato da un insieme predefinito di nodi considerati attendibili. Ad esempio, una rete privata di istituzioni accademiche note che governano ciascuna un singolo nodo e i blocchi vengono convalidati da una soglia di firmatari all'interno della rete.
 
 Se una rete pubblica di Ethereum è come l'Internet pubblico, una rete di consorzio è come una intranet privata.
 
-## <Emoji text="🚉" /> Perché le testnet di Ethereum prendono il nome dalle stazioni della metropolitana?
+## <Emoji text="🚉" /> Perché le testnet di Ethereum prendono il nome dalle stazioni della metropolitana? {#why-naming}
 
 Molte testnet di Ethereum prendono il nome da stazioni della metropolitana o dei treni del mondo reale. Questa tradizione di denominazione è iniziata presto e riflette le città globali in cui i contributori hanno vissuto o lavorato. È simbolica, memorabile e pratica. Proprio come le testnet sono isolate dalla Mainnet di Ethereum, le linee della metropolitana corrono separatamente dal traffico di superficie.
 
-### <Emoji text="🚧" /> Testnet comunemente usate e legacy
+### <Emoji text="🚧" /> Testnet comunemente usate e legacy {#common-and-legacy-testnets}
 
 - **Sepolia** - Un quartiere collegato alla metropolitana ad Atene, in Grecia. Attualmente utilizzata per i test di smart contract e dapp.
 - **Hoodi** - Prende il nome dalla stazione della metropolitana di Hoodi a Bengaluru, in India. Utilizzata per i test dei validatori e degli aggiornamenti del protocollo.
@@ -196,7 +196,7 @@ Molte testnet di Ethereum prendono il nome da stazioni della metropolitana o dei
 - **Kovan** _(deprecata)_ - Prende il nome da una stazione MRT di Singapore.
 - **Morden** _(deprecata)_ - Prende il nome da una stazione della metropolitana di Londra. La prima testnet pubblica di Ethereum.
 
-### <Emoji text="🧪" /> Altre testnet specializzate
+### <Emoji text="🧪" /> Altre testnet specializzate {#other-testnets}
 
 Alcune testnet sono state create per test a breve termine o specifici per gli aggiornamenti e non sono necessariamente a tema metropolitana:
 
@@ -205,12 +205,12 @@ Alcune testnet sono state create per test a breve termine o specifici per gli ag
 
 L'utilizzo dei nomi delle stazioni della metropolitana aiuta gli sviluppatori a identificare e ricordare rapidamente le testnet senza dover fare affidamento su ID di catena numerici. Riflette anche la cultura di Ethereum: pratica, globale e incentrata sull'uomo.
 
-## Strumenti correlati
+## Strumenti correlati {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _elenco di reti EVM per connettere portafogli e provider all'ID di catena e all'ID di rete appropriati_
 - [Catene basate su EVM](https://github.com/ethereum-lists/chains) _repository GitHub di metadati della catena che alimenta Chainlist_
 
-## Letture consigliate
+## Letture consigliate {#further-reading}
 
 - [Proposta: ciclo di vita prevedibile delle testnet di Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [L'evoluzione delle testnet di Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

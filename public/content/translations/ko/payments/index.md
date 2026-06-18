@@ -1,12 +1,12 @@
 ---
-title: 이더리움 결제
-metaTitle: 이더리움에서의 결제
-description: 이더리움 결제에 대한 개요
+title: "이더리움 결제"
+metaTitle: "이더리움에서의 결제"
+description: "이더리움 결제에 대한 개요"
 lang: ko
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: 베푸는 손과 함께 표시된 이더리움 로고.
+alt: "베푸는 손과 함께 표시된 이더리움 로고."
 summaryPoints:
   - "돈이 정보만큼 자유롭게 이동하는 세상"
   - "모두를 위한 국경 없는 트랜잭션을 가능하게 하는 개방적이고 글로벌한 네트워크"
@@ -37,9 +37,9 @@ summaryPoints:
 
 많은 국가에서 인플레이션은 시급한 문제이며, 종종 외화에 대한 제한적인 접근성을 동반합니다. 이러한 상황에 처한 사람들은 빠르게 가치가 하락하는 저축을 보유할 수밖에 없어 자산을 보존하는 데 어려움을 겪습니다.
 
-이더리움 커뮤니티는 국가의 통화 정책이나 통제로부터 독립적인 **강력한 대안 금융 시스템**을 구축했습니다.
+이더리움 커뮤니티는 국가의 통화 정책이나 통제로부터 독립적인 <strong>강력한 대안 금융 시스템</strong>을 구축했습니다.
 
-이더리움 사용자는 **일반적으로 미국 달러와 같은 강력한 통화에 고정된 토큰인 스테이블코인**을 사용할 수 있습니다. 암호화폐로 수익을 얻고 저축함으로써 사람들은 자국의 높은 인플레이션으로부터 자신을 보호하고 구매력을 보존하거나 심지어 높일 수 있습니다. 이는 또한 지역 및 전 세계적으로 상품과 서비스에 대한 결제를 더 쉽게 만듭니다.
+이더리움 사용자는 <strong>일반적으로 미국 달러와 같은 강력한 통화에 고정된 토큰인 스테이블코인</strong>을 사용할 수 있습니다. 암호화폐로 수익을 얻고 저축함으로써 사람들은 자국의 높은 인플레이션으로부터 자신을 보호하고 구매력을 보존하거나 심지어 높일 수 있습니다. 이는 또한 지역 및 전 세계적으로 상품과 서비스에 대한 결제를 더 쉽게 만듭니다.
 
 <ButtonLink href="/stablecoins">
   스테이블코인에 대해 더 알아보기
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>오늘 지갑 앱으로 이더리움 계정을 만들어 보세요.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     시작하기
   </ButtonLink>
 </AlertContent>

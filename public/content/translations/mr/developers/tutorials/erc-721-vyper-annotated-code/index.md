@@ -3,7 +3,7 @@ title: "⁠Vyper⁠ ⁠ERC-721⁠ कॉन्ट्रॅक्ट वॉकथ
 description: "रयुया नाकामुरा यांचे ⁠ERC-721⁠ कॉन्ट्रॅक्ट आणि ते कसे कार्य करते"
 author: "ओरी पोमेरँट्झ"
 lang: mr
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: "⁠Vyper⁠ ⁠ERC-721⁠"
 published: 2021-04-01

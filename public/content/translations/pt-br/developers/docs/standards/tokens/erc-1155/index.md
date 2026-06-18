@@ -1,6 +1,6 @@
 ---
-title: Padrão de Múltiplos Tokens ERC-1155
-description: Aprenda sobre o ERC-1155, um padrão de múltiplos tokens que combina tokens fungíveis e não fungíveis em um único contrato.
+title: "Padrão de Múltiplos Tokens ERC-1155"
+description: "Aprenda sobre o ERC-1155, um padrão de múltiplos tokens que combina tokens fungíveis e não fungíveis em um único contrato."
 lang: pt-br
 ---
 

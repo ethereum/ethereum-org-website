@@ -2,7 +2,7 @@
 title: "Gizli Adresleri Kullanmak"
 description: "Gizli adresler, kullanıcıların varlıkları anonim olarak transfer etmelerini sağlar. Bu makaleyi okuduktan sonra şunları yapabileceksiniz: Gizli adreslerin ne olduğunu ve nasıl çalıştığını açıklamak, gizli adresleri anonimliği koruyacak şekilde nasıl kullanacağınızı anlamak ve gizli adresleri kullanan web tabanlı bir uygulama yazmak."
 author: Ori Pomerantz
-tags: ["Gizli adres", "gizlilik", "kriptografi", "rust", "wasm"]
+tags: ["Gizli adres", "gizlilik", "kriptografi", "Rust", "wasm"]
 skill: intermediate
 breadcrumb: Gizli adresler
 published: 2025-11-30

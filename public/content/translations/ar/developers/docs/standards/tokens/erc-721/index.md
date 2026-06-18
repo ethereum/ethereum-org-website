@@ -30,7 +30,7 @@ lang: ar
 
 إذا كان العقد الذكي ينفذ الطرق والأحداث التالية، فيمكن تسميته عقد رمز غير قابل للاستبدال <span dir="ltr">ERC-721</span>، وبمجرد نشره، سيكون مسؤولاً عن تتبع الرموز المميزة التي تم إنشاؤها على إيثيريوم.
 
-من [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
+من [<span dir="ltr">EIP-721</span>](https://eips.ethereum.org/EIPS/eip-721):
 
 ### الطرق {#methods}
 
@@ -238,15 +238,15 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## قراءة إضافية {#further-reading}
 
-- [EIP-721: معيار الرمز غير القابل للاستبدال ERC-721](https://eips.ethereum.org/EIPS/eip-721)
-- [أوبن زبلن - مستندات ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)
-- [أوبن زبلن - تنفيذ ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [<span dir="ltr">EIP-721</span>: معيار الرمز غير القابل للاستبدال <span dir="ltr">ERC-721</span>](https://eips.ethereum.org/EIPS/eip-721)
+- [أوبن زبلن - مستندات <span dir="ltr">ERC-721</span>](https://docs.openzeppelin.com/contracts/3.x/erc721)
+- [أوبن زبلن - تنفيذ <span dir="ltr">ERC-721</span>](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [واجهة برمجة تطبيقات (API) للرموز غير القابلة للاستبدال من Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)
 
-## برامج تعليمية: البناء باستخدام الرموز غير القابلة للاستبدال (ERC-721) على إيثيريوم {#tutorials}
+## برامج تعليمية: البناء باستخدام الرموز غير القابلة للاستبدال (<span dir="ltr">ERC-721</span>) على إيثيريوم {#tutorials}
 
-- [جولة إرشادية لعقد ERC-721 بلغة Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– جولة إرشادية مشروحة لعقد رمز غير قابل للاستبدال ERC-721 كامل مكتوب بلغة Vyper._
-- [كيفية كتابة ونشر رمز غير قابل للاستبدال (الجزء 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– دليل خطوة بخطوة لكتابة ونشر أول عقد ذكي ERC-721 لك._
-- [كيفية سك رمز غير قابل للاستبدال (الجزء 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– كيفية سك رمز غير قابل للاستبدال ERC-721 باستخدام عقدك الذكي المنشور وWeb3._
+- [جولة إرشادية لعقد <span dir="ltr">ERC-721</span> بلغة Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– جولة إرشادية مشروحة لعقد رمز غير قابل للاستبدال <span dir="ltr">ERC-721</span> كامل مكتوب بلغة Vyper._
+- [كيفية كتابة ونشر رمز غير قابل للاستبدال (الجزء 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– دليل خطوة بخطوة لكتابة ونشر أول عقد ذكي <span dir="ltr">ERC-721</span> لك._
+- [كيفية سك رمز غير قابل للاستبدال (الجزء 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– كيفية سك رمز غير قابل للاستبدال <span dir="ltr">ERC-721</span> باستخدام عقدك الذكي المنشور وWeb3._
 - [كيفية عرض الرمز غير القابل للاستبدال الخاص بك في محفظتك (الجزء 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– كيفية عرض الرمز غير القابل للاستبدال الذي تم سكه في ميتاماسك بعد النشر._
 - [برنامج تعليمي لسك الرموز غير القابلة للاستبدال](/developers/tutorials/nft-minter/) _– بناء تطبيق لامركزي (dapp) متكامل لسك الرموز غير القابلة للاستبدال مع واجهة أمامية باستخدام React، وميتاماسك، وAlchemy._

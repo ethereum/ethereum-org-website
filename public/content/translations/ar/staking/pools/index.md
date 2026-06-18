@@ -1,11 +1,11 @@
 ---
-title: التخزين المجمع
-description: تعرف على مجمعات التخزين
+title: "التخزين المجمع"
+description: "تعرف على مجمعات التخزين"
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: وحيد القرن ليزلي يسبح في المسبح.
+alt: "وحيد القرن ليزلي يسبح في المسبح."
 sidebarDepth: 2
 summaryPoints:
   - قم بتخزين ⁦ETH⁩ واكسب المكافآت بأي مبلغ من ⁦ETH⁩ من خلال توحيد الجهود مع الآخرين

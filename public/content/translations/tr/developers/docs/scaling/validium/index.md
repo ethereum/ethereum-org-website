@@ -1,6 +1,6 @@
 ---
 title: Validium
-description: Ethereum topluluğu tarafından şu anda kullanılan bir ölçeklendirme çözümü olan Validium'a giriş.
+description: "Ethereum topluluğu tarafından şu anda kullanılan bir ölçeklendirme çözümü olan Validium'a giriş."
 lang: tr
 sidebarDepth: 3
 ---

@@ -1,6 +1,6 @@
 ---
-title: Estándar de bóveda tokenizada ERC-4626
-description: Un estándar para bóvedas que generan rendimiento.
+title: "Estándar de bóveda tokenizada ERC-4626"
+description: "Un estándar para bóvedas que generan rendimiento."
 lang: es
 ---
 

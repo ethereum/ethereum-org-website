@@ -1,6 +1,6 @@
 ---
-title: 擴容
-description: 介紹以太坊社群目前正在開發的不同擴容選項。
+title: "擴容"
+description: "介紹以太坊社群目前正在開發的不同擴容選項。"
 lang: zh-tw
 sidebarDepth: 3
 ---

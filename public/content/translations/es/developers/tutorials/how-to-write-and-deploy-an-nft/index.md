@@ -1,6 +1,6 @@
 ---
-title: Cómo escribir y desplegar un NFT (Parte 1/3 de la serie de tutoriales sobre NFT)
-description: Este tutorial es la Parte 1 de una serie sobre NFT que le guiará paso a paso sobre cómo escribir y desplegar un contrato inteligente de token no fungible (token ERC-721) utilizando Ethereum y el Sistema de Archivos Interplanetario (IPFS).
+title: "Cómo escribir y desplegar un NFT (Parte 1/3 de la serie de tutoriales sobre NFT)"
+description: "Este tutorial es la Parte 1 de una serie sobre NFT que le guiará paso a paso sobre cómo escribir y desplegar un contrato inteligente de token no fungible (token ERC-721) utilizando Ethereum y el Sistema de Archivos Interplanetario (IPFS)."
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "contratos inteligentes"]
 skill: beginner

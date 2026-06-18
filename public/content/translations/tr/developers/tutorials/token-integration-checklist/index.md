@@ -1,9 +1,9 @@
 ---
 title: Token entegrasyon kontrol listesi
-description: Token'larla etkileşime girerken dikkate alınması gerekenlerin bir kontrol listesi
+description: "Token'larla etkileşime girerken dikkate alınması gerekenlerin bir kontrol listesi"
 author: "Trailofbits"
 lang: tr
-tags: ["solidity", "akıllı sözleşmeler", "güvenlik", "token'lar"]
+tags: ["Solidity", "akıllı sözleşmeler", "güvenlik", "token'lar"]
 skill: intermediate
 breadcrumb: Token entegrasyonu
 published: 2020-08-13

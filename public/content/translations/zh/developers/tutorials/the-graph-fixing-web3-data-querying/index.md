@@ -1,9 +1,9 @@
 ---
 title: "The Graph：修复 Web3 数据查询"
-description: 区块链就像一个没有 SQL 的数据库。所有数据都在那里，但无法访问。让我向你展示如何使用 The Graph 和 GraphQL 来解决这个问题。
-author: 马库斯·瓦斯
+description: "区块链就像一个没有 SQL 的数据库。所有数据都在那里，但无法访问。让我向你展示如何使用 The Graph 和 GraphQL 来解决这个问题。"
+author: "马库斯·瓦斯"
 lang: zh
-tags: ["solidity", "智能合约", "查询", "the graph", "react"]
+tags: ["Solidity", "智能合约", "查询", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

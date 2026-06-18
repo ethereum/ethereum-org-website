@@ -1,12 +1,12 @@
 ---
-title: ইথেরিয়াম পেমেন্ট
-metaTitle: ইথেরিয়ামে পেমেন্ট
-description: ইথেরিয়ামে পেমেন্টের একটি ওভারভিউ
+title: "ইথেরিয়াম পেমেন্ট"
+metaTitle: "ইথেরিয়ামে পেমেন্ট"
+description: "ইথেরিয়ামে পেমেন্টের একটি ওভারভিউ"
 lang: bn
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: একটি Eth লোগো এবং সাথে কিছু প্রদানকারী হাত প্রদর্শিত হচ্ছে।
+alt: "একটি Eth লোগো এবং সাথে কিছু প্রদানকারী হাত প্রদর্শিত হচ্ছে।"
 summaryPoints:
   - "এমন একটি বিশ্ব যেখানে তথ্য যেমন স্বাধীনভাবে চলাচল করে, অর্থও তেমনি স্বাধীনভাবে চলাচল করে"
   - "উন্মুক্ত এবং বৈশ্বিক, যা সবার জন্য সীমানাহীন ট্রানজ্যাকশন সক্ষম করে"
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>আজই একটি ওয়ালেট অ্যাপের মাধ্যমে আপনার ইথেরিয়াম অ্যাকাউন্ট তৈরি করুন।</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     শুরু করুন
   </ButtonLink>
 </AlertContent>

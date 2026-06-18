@@ -1,14 +1,14 @@
 ---
-title: 如何實作 ERC-721 市場
-description: 如何在去中心化分類廣告板上出售代幣化物品
-author: 阿爾貝托·庫埃斯塔·卡納達
+title: "如何實作 ERC-721 市場"
+description: "如何在去中心化分類廣告板上出售代幣化物品"
+author: "阿爾貝托·庫埃斯塔·卡納達"
 tags:
   - 智能合約
   - erc-721
   - solidity
   - 代幣
 skill: intermediate
-breadcrumb: ERC-721 市場
+breadcrumb: "ERC-721 市場"
 lang: zh-tw
 published: 2020-03-19
 source: Hackernoon

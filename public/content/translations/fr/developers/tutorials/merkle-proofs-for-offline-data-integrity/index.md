@@ -1,6 +1,6 @@
 ---
-title: Preuves de Merkle pour l'intégrité des données hors ligne
-description: Assurer l'intégrité des données onchain pour les données qui sont stockées, pour la plupart, hors chaîne
+title: "Preuves de Merkle pour l'intégrité des données hors ligne"
+description: "Assurer l'intégrité des données onchain pour les données qui sont stockées, pour la plupart, hors chaîne"
 author: Ori Pomerantz
 tags: ["stockage"]
 skill: advanced

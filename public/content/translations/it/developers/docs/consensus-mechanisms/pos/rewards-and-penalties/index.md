@@ -1,5 +1,5 @@
 ---
-title: Ricompense e penalità della proof-of-stake
+title: "Ricompense e penalità della proof-of-stake"
 description: Scopri gli incentivi integrati nel protocollo di Ethereum proof-of-stake.
 lang: it
 ---

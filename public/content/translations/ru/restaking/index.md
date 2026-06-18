@@ -1,11 +1,11 @@
 ---
-title: Рестейкинг
-metaTitle: Что такое рестейкинг? | Преимущества и использование рестейкинга
-description: Используйте ETH в стейкинге для защиты других децентрализованных сервисов и получения дополнительных вознаграждений.
+title: "Рестейкинг"
+metaTitle: "Что такое рестейкинг? | Преимущества и использование рестейкинга"
+description: "Используйте ETH в стейкинге для защиты других децентрализованных сервисов и получения дополнительных вознаграждений."
 lang: ru
 template: use-cases
 image: /images/use-cases/restaking.png
-alt: Визуальное представление рестейкинга в Эфириуме.
+alt: "Визуальное представление рестейкинга в Эфириуме."
 sidebarDepth: 2
 summaryPoints:
   - "Используйте ETH в стейкинге для защиты других децентрализованных сервисов и получения дополнительных вознаграждений."
@@ -39,7 +39,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Полезно знать</strong></strong>
+ <p className="mt-0"><strong>Полезно знать</strong>
   <p className="mt-2">Хотя термин «активно валидируемые сервисы» (AVS) является наиболее распространенным, различные платформы рестейкинга могут использовать другие названия для децентрализованных сервисов, безопасность которых они помогают обеспечивать, например, «автономно валидируемые сервисы», «распределенные безопасные сервисы» или «сети».</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Дополнительное преимущество рестейкинга</strong></strong>
+ <p className="mt-0"><strong>Дополнительное преимущество рестейкинга</strong>
   <p className="mt-2">AVS могут направить все свои ресурсы на создание и продвижение своих сервисов, вместо того чтобы отвлекаться на децентрализацию и безопасность.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Полезно знать</strong></strong>
+ <p className="mt-0"><strong>Полезно знать</strong>
   <p className="mt-2">Нативные и ликвидные рестейкеры часто делегируют свои ETH в стейкинге оператору, вместо того чтобы самостоятельно запускать программное обеспечение для обеспечения безопасности AVS.</p>
   <p className="mt-2">Таким образом, им не нужно беспокоиться о сложных технических требованиях со стороны AVS, хотя они получают более низкую ставку вознаграждения, чем операторы.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Осторожно, путаница в терминах</strong></strong>
+ <p className="mt-0"><strong>Осторожно, путаница в терминах</strong>
   <p className="mt-2">Некоторые люди путают «рестейкинг» с кредитованием и заимствованием LST в децентрализованных финансах (DeFi). Оба варианта заставляют ETH в стейкинге работать, но рестейкинг означает обеспечение безопасности AVS, а не просто получение дохода от LST.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,10 +139,10 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Соучредитель Эфириума пишет…</strong></strong>
+ <p className="mt-0"><strong>Соучредитель Эфириума пишет…</strong>
   <p className="mt-2">
     Виталик, соучредитель Эфириума, предупреждал о потенциальных рисках рестейкинга в своем блоге в 2021 году в статье под названием <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">«Не перегружайте консенсус» (Don't Overload Consensus).</a>
-  </a>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -161,7 +161,7 @@ buttons:
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Стейкинг в Эфириуме:</strong> Как это работает?</strong>
+ <p className="mt-0"><strong>Стейкинг в Эфириуме:</strong> Как это работает?
   <ButtonLink href="/staking/">
     Узнать больше
   </ButtonLink>

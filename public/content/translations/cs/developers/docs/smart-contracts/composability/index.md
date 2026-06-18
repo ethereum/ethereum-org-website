@@ -1,6 +1,6 @@
 ---
-title: Skládatelnost chytrých kontraktů
-description: Zjistěte, jak lze chytré kontrakty kombinovat jako kostky Lega a vytvářet tak složité decentralizované aplikace (dapp) opětovným použitím stávajících komponent.
+title: "Skládatelnost chytrých kontraktů"
+description: "Zjistěte, jak lze chytré kontrakty kombinovat jako kostky Lega a vytvářet tak složité decentralizované aplikace (dapp) opětovným použitím stávajících komponent."
 lang: cs
 incomplete: true
 ---

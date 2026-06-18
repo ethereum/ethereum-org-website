@@ -1,12 +1,12 @@
 ---
 title: "Serverové komponenty a agenti pro web3 aplikace"
-description: Po přečtení tohoto tutoriálu budete schopni psát servery v TypeScriptu, které naslouchají událostem na blockchainu a odpovídají na ně vlastními transakcemi. To vám umožní psát centralizované aplikace (protože server představuje bod selhání), které ale mohou komunikovat s web3 entitami. Stejné techniky lze použít i k napsání agenta, který reaguje na onchain události bez zásahu člověka.
+description: "Po přečtení tohoto tutoriálu budete schopni psát servery v TypeScriptu, které naslouchají událostem na blockchainu a odpovídají na ně vlastními transakcemi. To vám umožní psát centralizované aplikace (protože server představuje bod selhání), které ale mohou komunikovat s web3 entitami. Stejné techniky lze použít i k napsání agenta, který reaguje na onchain události bez zásahu člověka."
 
 author: Ori Pomerantz
 lang: cs
 tags: ["agent", "server", "offchain", "dapps"]
 skill: beginner
-breadcrumb: Serverové komponenty
+breadcrumb: "Serverové komponenty"
 published: 2024-07-15
 ---
 
@@ -69,7 +69,7 @@ Nejjednodušší způsob, jak pochopit psaní serverové komponenty, je projít 
 
 Převážná většina programu je obsažena v [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Vytvoření nezbytných objektů {#package-json}
+##### Vytvoření nezbytných objektů {#}
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 Nyní, když máme všechny předpoklady, můžeme konečně vytvořit [instanci kontraktu](https://viem.sh/docs/contract/getContract). Tuto instanci kontraktu použijeme ke komunikaci s onchain kontraktem.
 
-##### Čtení z blockchainu {#conclusion}
+##### Čtení z blockchainu {#}
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript je jednovláknový, takže když spustíme dlouho běžící proces, 
 
 Pokud vás zajímá, jak to funguje, můžete si o tom [přečíst zde](https://www.w3schools.com/js/js_promise.asp), ale z praktického hlediska vám stačí vědět, že pokud spustíte operaci, která trvá dlouho, použijete na výsledky `await`, a že každá funkce, která to dělá, musí být deklarována jako `async`.
 
-##### Vydávání transakcí
+##### Vydávání transakcí {#}
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ Pole `write` instance kontraktu obsahuje všechny funkce, které zapisují do st
 
 Nahlaste hash transakce (jako součást URL adresy do prohlížeče bloků pro její zobrazení) a vraťte jej.
 
-##### Reakce na události
+##### Reakce na události {#}
 
 ```typescript
 greeter.watchEvent.SetGreeting({
@@ -243,7 +243,7 @@ Může existovat více událostí, ale pro jednoduchost nás zajímá pouze ta p
 
 Pokud odesílatelem _není_ tento server, použijte `setGreeting` ke změně pozdravu.
 
-#### `package.json`
+#### `package.json` {#package-json}
 
 [Tento soubor](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) řídí konfiguraci [Node.js](https://nodejs.org/en). Tento článek vysvětluje pouze důležité definice.
 
@@ -287,7 +287,7 @@ Toto jsou balíčky, které jsou vyžadovány pouze pro vývoj. Zde potřebujeme
 
 Toto jsou balíčky, které jsou vyžadovány za běhu, při spuštění `dist/app.js`.
 
-## Závěr
+## Závěr {#conclusion}
 
 Centralizovaný server, který jsme zde vytvořili, plní svůj úkol, kterým je fungovat jako agent pro uživatele. Kdokoli jiný, kdo chce, aby dapp nadále fungovala, a je ochoten utratit gas, může spustit novou instanci serveru s vlastní adresou.
 

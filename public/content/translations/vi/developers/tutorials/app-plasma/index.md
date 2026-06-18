@@ -1,6 +1,6 @@
 ---
-title: Viết một Plasma dành riêng cho ứng dụng giúp bảo vệ quyền riêng tư
-description: Trong hướng dẫn này, chúng ta sẽ xây dựng một ngân hàng bán bí mật để gửi tiền. Ngân hàng là một thành phần tập trung; nó biết số dư của từng người dùng. Tuy nhiên, thông tin này không được lưu trữ trên chuỗi. Thay vào đó, ngân hàng đăng một mã băm của trạng thái. Mỗi khi một giao dịch xảy ra, ngân hàng đăng mã băm mới, cùng với một bằng chứng không kiến thức rằng nó có một giao dịch đã ký làm thay đổi trạng thái mã băm sang trạng thái mới. Sau khi đọc hướng dẫn này, bạn sẽ không chỉ hiểu cách sử dụng bằng chứng không kiến thức, mà còn hiểu tại sao bạn sử dụng chúng và cách thực hiện điều đó một cách an toàn.
+title: "Viết một Plasma dành riêng cho ứng dụng giúp bảo vệ quyền riêng tư"
+description: "Trong hướng dẫn này, chúng ta sẽ xây dựng một ngân hàng bán bí mật để gửi tiền. Ngân hàng là một thành phần tập trung; nó biết số dư của từng người dùng. Tuy nhiên, thông tin này không được lưu trữ trên chuỗi. Thay vào đó, ngân hàng đăng một mã băm của trạng thái. Mỗi khi một giao dịch xảy ra, ngân hàng đăng mã băm mới, cùng với một bằng chứng không kiến thức rằng nó có một giao dịch đã ký làm thay đổi trạng thái mã băm sang trạng thái mới. Sau khi đọc hướng dẫn này, bạn sẽ không chỉ hiểu cách sử dụng bằng chứng không kiến thức, mà còn hiểu tại sao bạn sử dụng chúng và cách thực hiện điều đó một cách an toàn."
 author: Ori Pomerantz
 tags:
   - không tri thức
@@ -8,7 +8,7 @@ tags:
   - ngoài chuỗi
   - quyền riêng tư
 skill: advanced
-breadcrumb: Plasma dành riêng cho ứng dụng
+breadcrumb: "Plasma dành riêng cho ứng dụng"
 lang: vi
 published: 2025-10-15
 ---
@@ -164,7 +164,7 @@ ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
-   ```
+      ```
 
 10. So sánh hai giá trị cuối cùng với mã băm bạn thấy trên trình duyệt web để xem liệu thông điệp có được băm chính xác hay không.
 
@@ -862,7 +862,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
@@ -1033,7 +1033,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 

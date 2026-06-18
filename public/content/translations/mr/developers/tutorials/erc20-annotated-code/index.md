@@ -1,11 +1,11 @@
 ---
 title: "ERC-20 कॉन्ट्रॅक्ट वॉक-थ्रू"
-description: ओपनझेपलिन ERC-20 कॉन्ट्रॅक्टमध्ये काय आहे आणि ते तिथे का आहे?
-author: ओरी पोमेरँट्झ
+description: "ओपनझेपलिन ERC-20 कॉन्ट्रॅक्टमध्ये काय आहे आणि ते तिथे का आहे?"
+author: "ओरी पोमेरँट्झ"
 lang: mr
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: ERC-20 वॉक-थ्रू
+breadcrumb: "ERC-20 वॉक-थ्रू"
 published: 2021-03-09
 ---
 

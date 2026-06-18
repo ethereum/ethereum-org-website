@@ -1,6 +1,6 @@
 ---
 title: Lenguajes de los contratos inteligentes
-description: Una descripción general y comparación de los dos principales lenguajes de contratos inteligentes: Solidity y Vyper.
+description: "Una descripción general y comparación de los dos principales lenguajes de contratos inteligentes: Solidity y Vyper."
 lang: es
 ---
 

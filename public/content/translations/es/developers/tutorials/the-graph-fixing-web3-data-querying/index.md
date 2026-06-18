@@ -1,9 +1,9 @@
 ---
 title: "The Graph: Solucionando la consulta de datos en Web3"
-description: La cadena de bloques es como una base de datos pero sin SQL. Todos los datos están ahí, pero no hay forma de acceder a ellos. Déjame mostrarte cómo solucionar esto con The Graph y GraphQL.
+description: "La cadena de bloques es como una base de datos pero sin SQL. Todos los datos están ahí, pero no hay forma de acceder a ellos. Déjame mostrarte cómo solucionar esto con The Graph y GraphQL."
 author: Markus Waas
 lang: es
-tags: ["solidity", "contratos inteligentes", "consultas", "the graph", "react"]
+tags: ["Solidity", "contratos inteligentes", "consultas", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

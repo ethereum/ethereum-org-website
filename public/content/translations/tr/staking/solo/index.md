@@ -1,11 +1,11 @@
 ---
 title: ETH'nizi evden stake edin
-description: ETH'nizi evden stake etmeye nasıl başlayacağınıza dair bir genel bakış
+description: "ETH'nizi evden stake etmeye nasıl başlayacağınıza dair bir genel bakış"
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Kendi bilgisayar çipinin üzerindeki gergedan Leslie.
+alt: "Kendi bilgisayar çipinin üzerindeki gergedan Leslie."
 sidebarDepth: 2
 summaryPoints:
   - Doğrulayıcınızı düzgün çalışır durumda ve çevrimiçi tuttuğunuz için doğrudan protokolden maksimum ödül alın

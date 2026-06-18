@@ -1,10 +1,10 @@
 ---
-title: 使用 ethers.js 發送代幣
-description: 適合初學者的使用 ethers.js 發送代幣指南。
-author: 金容俊
+title: "使用 ethers.js 發送代幣"
+description: "適合初學者的使用 ethers.js 發送代幣指南。"
+author: "金容俊"
 tags: ["ETHERS.JS", "ERC-20", "代幣"]
 skill: beginner
-breadcrumb: 發送代幣
+breadcrumb: "發送代幣"
 lang: zh-tw
 published: 2021-04-06
 ---

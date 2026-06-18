@@ -1,6 +1,6 @@
 ---
-title: Klientská diverzita
-description: Obecné vysvětlení důležitosti klientské diverzity Etherea.
+title: "Klientská diverzita"
+description: "Obecné vysvětlení důležitosti klientské diverzity Etherea."
 lang: cs
 sidebarDepth: 2
 ---

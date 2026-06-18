@@ -1,6 +1,6 @@
 ---
-title: Technický úvod do etheru
-description: Úvod do kryptoměny ether pro vývojáře.
+title: "Technický úvod do etheru"
+description: "Úvod do kryptoměny ether pro vývojáře."
 lang: cs
 ---
 

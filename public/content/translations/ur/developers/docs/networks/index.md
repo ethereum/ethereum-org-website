@@ -40,7 +40,7 @@ lang: ur
 
 **ایپلی کیشن کی ترقی کے لیے Sepolia تجویز کردہ ڈیفالٹ آزمائشی نیٹ ورک ہے**۔ Sepolia نیٹ ورک کلائنٹ اور ٹیسٹنگ ٹیموں کے زیر کنٹرول ایک اجازت یافتہ توثیق کار سیٹ استعمال کرتا ہے۔
 
-##### وسائل {#hoodi}
+##### وسائل {#} {#}
 
 - [ویب سائٹ](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: ur
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### فوسٹس {#ephemery}
+##### فوسٹس {#} {#}
 
 - [Alchemy Sepolia فوسٹ](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia فوسٹ](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -61,7 +61,7 @@ lang: ur
 - [PoW فوسٹ](https://sepolia-faucet.pk910.de/)
 - [QuickNode Sepolia فوسٹ](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Hoodi {#faucets}
+#### Hoodi {#hoodi}
 
 Hoodi توثیق اور اسٹیکنگ کی جانچ کے لیے ایک آزمائشی نیٹ ورک ہے۔ Hoodi نیٹ ورک ان صارفین کے لیے کھلا ہے جو آزمائشی نیٹ ورک توثیق کار چلانا چاہتے ہیں۔ لہذا، مین نیٹ پر تعینات ہونے سے پہلے پروٹوکول اپ گریڈز کی جانچ کرنے والے اسٹیکرز کو Hoodi استعمال کرنا چاہیے۔
 
@@ -69,7 +69,7 @@ Hoodi توثیق اور اسٹیکنگ کی جانچ کے لیے ایک آزما
 - بڑی حالت، پیچیدہ سمارٹ کنٹریکٹ کے تعاملات کی جانچ کے لیے مفید ہے
 - ہم آہنگی میں زیادہ وقت لگتا ہے اور نوڈ چلانے کے لیے زیادہ اسٹوریج کی ضرورت ہوتی ہے
 
-##### وسائل {#holesky}
+##### وسائل {#}
 
 - [ویب سائٹ](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,13 +78,13 @@ Hoodi توثیق اور اسٹیکنگ کی جانچ کے لیے ایک آزما
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### فوسٹس {#layer-2-testnets}
+##### فوسٹس {#}
 
 - [Chain Platform Hoodi فوسٹ](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi فوسٹ](https://hoodi.ethpandaops.io/)
 - [PoW فوسٹ](https://hoodi-faucet.pk910.de/)
 
-#### Ephemery {#arbitrum-sepolia}
+#### Ephemery {#ephemery}
 
 Ephemery ایک منفرد قسم کا آزمائشی نیٹ ورک ہے جو ہر ماہ مکمل طور پر ری سیٹ ہو جاتا ہے۔ عمل درآمد اور اتفاق رائے کی حالت ہر <span dir="ltr">28</span> دن بعد واپس ابتدا (genesis) پر چلی جاتی ہے، جس کا مطلب ہے کہ آزمائشی نیٹ ورک پر جو کچھ بھی ہوتا ہے وہ عارضی ہوتا ہے۔ یہ اسے قلیل مدتی جانچ، تیز نوڈ بوٹ اسٹریپ اور 'ہیلو ورلڈ' قسم کی ایپلی کیشنز کے لیے مثالی بناتا ہے جنہیں مستقل مزاجی کی ضرورت نہیں ہوتی ہے۔
 
@@ -93,7 +93,7 @@ Ephemery ایک منفرد قسم کا آزمائشی نیٹ ورک ہے جو ہ
 - کھلا توثیق کار سیٹ اور بڑی مقدار میں فنڈز تک رسائی آسان ہے
 - نوڈ کی سب سے کم ضروریات اور تیز ترین ہم آہنگی، اوسطاً <span dir="ltr">&lt;5GB</span>
 
-##### وسائل {#optimistic-sepolia}
+##### وسائل {#}
 
 - [ویب سائٹ](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -104,55 +104,55 @@ Ephemery ایک منفرد قسم کا آزمائشی نیٹ ورک ہے جو ہ
 - [چیک پوائنٹ ہم آہنگی](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [لانچ پیڈ](https://launchpad.ephemery.dev/)
 
-#### فوسٹس {#starknet-sepolia}
+#### فوسٹس {#faucets}
 
 - [Bordel فوسٹ](https://faucet.bordel.wtf/)
 - [Pk910 PoW فوسٹ](https://ephemery-faucet.pk910.de/)
 
-#### ہولسکی (متروک) {#private-networks}
+#### ہولسکی (متروک) {#holesky}
 
 ہولسکی آزمائشی نیٹ ورک ستمبر <span dir="ltr">2025</span> سے متروک ہو چکا ہے۔ اسٹیکنگ آپریٹرز اور انفراسٹرکچر فراہم کنندگان کو توثیق کار کی جانچ کے لیے اس کے بجائے Hoodi کا استعمال کرنا چاہیے۔
 
 - [ہولسکی آزمائشی نیٹ ورک کی بندش کا اعلان](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF بلاگ، <span dir="ltr">1-September-2025</span>_
 - [ہولسکی اور Hoodi آزمائشی نیٹ ورک کی اپ ڈیٹس](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EF بلاگ، <span dir="ltr">18-March-2025</span>_
 
-### لیئر ۲ (l2) آزمائشی نیٹ ورکس {#development-networks}
+### لیئر ۲ (l2) آزمائشی نیٹ ورکس {#layer-2-testnets}
 
 [لیئر ۲ (l2)](/layer-2/) ایتھیریم اسکیلنگ سلوشنز کے ایک مخصوص سیٹ کو بیان کرنے کے لیے ایک اجتماعی اصطلاح ہے۔ لیئر ۲ ایک الگ بلاک چین ہے جو ایتھیریم کو وسعت دیتی ہے اور ایتھیریم کی سیکیورٹی کی ضمانتیں وراثت میں حاصل کرتی ہے۔ لیئر ۲ آزمائشی نیٹ ورکس عام طور پر عوامی ایتھیریم آزمائشی نیٹ ورکس کے ساتھ مضبوطی سے جڑے ہوتے ہیں۔
 
-#### آربٹرم Sepolia {#consortium-networks}
+#### آربٹرم Sepolia {#arbitrum-sepolia}
 
 [آربٹرم](https://arbitrum.io/) کے لیے ایک آزمائشی نیٹ ورک۔
 
-##### وسائل {#why-naming}
+##### وسائل {#}
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### فوسٹس {#common-and-legacy-testnets}
+##### فوسٹس {#}
 
 - [Alchemy آربٹرم Sepolia فوسٹ](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [چین لنک آربٹرم Sepolia فوسٹ](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com آربٹرم Sepolia فوسٹ](https://ethfaucet.com/networks/arbitrum)
 - [QuickNode آربٹرم Sepolia فوسٹ](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Sepolia {#other-testnets}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 [آپٹیمزم](https://www.optimism.io/) کے لیے ایک آزمائشی نیٹ ورک۔
 
-##### وسائل {#related-tools}
+##### وسائل {#}
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### فوسٹس {#further-reading}
+##### فوسٹس {#}
 
 - [Alchemy فوسٹ](https://www.alchemy.com/faucets/optimism-sepolia)
 - [چین لنک فوسٹ](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com آپٹیمزم Sepolia فوسٹ](https://ethfaucet.com/networks/optimism)
 - [آزمائشی نیٹ ورک فوسٹ](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### سٹارک نیٹ Sepolia
+#### سٹارک نیٹ Sepolia {#starknet-sepolia}
 
 [سٹارک نیٹ](https://www.starknet.io) کے لیے ایک آزمائشی نیٹ ورک۔
 
@@ -166,27 +166,27 @@ Ephemery ایک منفرد قسم کا آزمائشی نیٹ ورک ہے جو ہ
 - [Blast سٹارک نیٹ Sepolia فوسٹ](https://blastapi.io/faucets/starknet-sepolia-eth)
 - [سٹارک نیٹ فوسٹ](https://starknet-faucet.vercel.app/)
 
-## نجی نیٹ ورکس
+## نجی نیٹ ورکس {#private-networks}
 
 ایک ایتھیریم نیٹ ورک نجی نیٹ ورک ہوتا ہے اگر اس کے نوڈز کسی عوامی نیٹ ورک (یعنی مین نیٹ یا آزمائشی نیٹ ورک) سے جڑے نہ ہوں۔ اس تناظر میں، نجی کا مطلب صرف مخصوص یا الگ تھلگ ہے، نہ کہ محفوظ یا پروٹیکٹڈ۔
 
-### ترقیاتی نیٹ ورکس
+### ترقیاتی نیٹ ورکس {#development-networks}
 
 ایتھیریم ایپلی کیشن تیار کرنے کے لیے، آپ اسے تعینات کرنے سے پہلے یہ دیکھنے کے لیے ایک نجی نیٹ ورک پر چلانا چاہیں گے کہ یہ کیسے کام کرتی ہے۔ جس طرح آپ ویب ڈویلپمنٹ کے لیے اپنے کمپیوٹر پر ایک مقامی سرور بناتے ہیں، اسی طرح آپ اپنی غیر مرکزی ایپلی کیشن (dapp) کی جانچ کے لیے ایک مقامی بلاک چین مثال (instance) بنا سکتے ہیں۔ یہ عوامی آزمائشی نیٹ ورک کی نسبت بہت تیز تکرار (iteration) کی اجازت دیتا ہے۔
 
 اس میں مدد کے لیے مخصوص پروجیکٹس اور ٹولز موجود ہیں۔ [ترقیاتی نیٹ ورکس](/developers/docs/development-networks/) کے بارے میں مزید جانیں۔
 
-### کنسورشیم نیٹ ورکس
+### کنسورشیم نیٹ ورکس {#consortium-networks}
 
 اتفاق رائے کا عمل نوڈز کے پہلے سے طے شدہ سیٹ کے ذریعے کنٹرول کیا جاتا ہے جن پر بھروسہ کیا جاتا ہے۔ مثال کے طور پر، معروف تعلیمی اداروں کا ایک نجی نیٹ ورک جو ہر ایک نوڈ کو کنٹرول کرتا ہے، اور بلاکس کی توثیق نیٹ ورک کے اندر دستخط کنندگان کی ایک حد (threshold) کے ذریعے کی جاتی ہے۔
 
 اگر ایک عوامی ایتھیریم نیٹ ورک عوامی انٹرنیٹ کی طرح ہے، تو ایک کنسورشیم نیٹ ورک ایک نجی انٹرانیٹ کی طرح ہے۔
 
-## <Emoji text="🚉" /> ایتھیریم آزمائشی نیٹ ورکس کے نام میٹرو اسٹیشنوں کے نام پر کیوں رکھے گئے ہیں؟
+## <Emoji text="🚉" /> ایتھیریم آزمائشی نیٹ ورکس کے نام میٹرو اسٹیشنوں کے نام پر کیوں رکھے گئے ہیں؟ {#why-naming}
 
 بہت سے ایتھیریم آزمائشی نیٹ ورکس کے نام حقیقی دنیا کے میٹرو یا ٹرین اسٹیشنوں کے نام پر رکھے گئے ہیں۔ نام رکھنے کی یہ روایت شروع میں ہی پڑ گئی تھی اور یہ ان عالمی شہروں کی عکاسی کرتی ہے جہاں تعاون کنندگان رہے ہیں یا کام کیا ہے۔ یہ علامتی، یادگار اور عملی ہے۔ جس طرح آزمائشی نیٹ ورکس ایتھیریم مین نیٹ سے الگ تھلگ ہوتے ہیں، اسی طرح میٹرو لائنیں سطح کی ٹریفک سے الگ چلتی ہیں۔
 
-### <Emoji text="🚧" /> عام طور پر استعمال ہونے والے اور پرانے آزمائشی نیٹ ورکس
+### <Emoji text="🚧" /> عام طور پر استعمال ہونے والے اور پرانے آزمائشی نیٹ ورکس {#common-and-legacy-testnets}
 
 - **Sepolia** - ایتھنز، یونان میں میٹرو سے جڑا ایک پڑوس۔ فی الحال سمارٹ کنٹریکٹ اور dApp کی جانچ کے لیے استعمال ہوتا ہے۔
 - **Hoodi** - بھارت کے شہر بنگلورو میں Hoodi میٹرو اسٹیشن کے نام پر رکھا گیا۔ توثیق کار اور پروٹوکول اپ گریڈ کی جانچ کے لیے استعمال ہوتا ہے۔
@@ -196,7 +196,7 @@ Ephemery ایک منفرد قسم کا آزمائشی نیٹ ورک ہے جو ہ
 - **Kovan** _(متروک)_ - سنگاپور کے ایک MRT اسٹیشن کے نام پر رکھا گیا۔
 - **Morden** _(متروک)_ - لندن انڈر گراؤنڈ اسٹیشن کے نام پر رکھا گیا۔ ایتھیریم کا پہلا عوامی آزمائشی نیٹ ورک۔
 
-### <Emoji text="🧪" /> دیگر خصوصی آزمائشی نیٹ ورکس
+### <Emoji text="🧪" /> دیگر خصوصی آزمائشی نیٹ ورکس {#other-testnets}
 
 کچھ آزمائشی نیٹ ورکس قلیل مدتی یا اپ گریڈ کے لیے مخصوص جانچ کے لیے بنائے گئے تھے اور ضروری نہیں کہ ان کا تھیم میٹرو پر مبنی ہو:
 
@@ -205,12 +205,12 @@ Ephemery ایک منفرد قسم کا آزمائشی نیٹ ورک ہے جو ہ
 
 میٹرو اسٹیشن کے ناموں کا استعمال ڈویلپرز کو عددی چین آئی ڈیز (chain IDs) پر انحصار کیے بغیر آزمائشی نیٹ ورکس کو تیزی سے پہچاننے اور یاد رکھنے میں مدد کرتا ہے۔ یہ ایتھیریم کی ثقافت کی بھی عکاسی کرتا ہے: عملی، عالمی، اور انسان پر مرکوز۔
 
-## متعلقہ ٹولز
+## متعلقہ ٹولز {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _والیٹس اور فراہم کنندگان کو مناسب چین آئی ڈی اور نیٹ ورک آئی ڈی سے جوڑنے کے لیے EVM نیٹ ورکس کی فہرست_
 - [EVM پر مبنی چینز](https://github.com/ethereum-lists/chains) _چین میٹا ڈیٹا کی GitHub ریپو جو Chainlist کو طاقت دیتی ہے_
 
-## مزید مطالعہ
+## مزید مطالعہ {#further-reading}
 
 - [تجویز: متوقع ایتھیریم آزمائشی نیٹ ورک لائف سائیکل](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [ایتھیریم آزمائشی نیٹ ورکس کا ارتقاء](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

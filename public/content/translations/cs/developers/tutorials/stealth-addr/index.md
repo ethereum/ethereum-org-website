@@ -2,9 +2,9 @@
 title: "Používání skrytých adres"
 description: "Skryté adresy umožňují uživatelům anonymní převod aktiv. Po přečtení tohoto článku budete schopni: vysvětlit, co jsou skryté adresy a jak fungují, pochopit, jak je používat způsobem, který zachovává anonymitu, a napsat webovou aplikaci, která skryté adresy využívá."
 author: Ori Pomerantz
-tags: ["Skrytá adresa", "soukromí", "kryptografie", "rust", "wasm"]
+tags: ["Skrytá adresa", "soukromí", "kryptografie", "Rust", "wasm"]
 skill: intermediate
-breadcrumb: Skryté adresy
+breadcrumb: "Skryté adresy"
 published: 2025-11-30
 lang: cs
 sidebarDepth: 3

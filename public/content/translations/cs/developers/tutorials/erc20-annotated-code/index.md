@@ -1,11 +1,11 @@
 ---
 title: "Průvodce kontraktem ERC-20"
-description: Co obsahuje kontrakt ERC-20 od OpenZeppelin a proč to tam je?
+description: "Co obsahuje kontrakt ERC-20 od OpenZeppelin a proč to tam je?"
 author: Ori Pomerantz
 lang: cs
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: Průvodce ERC-20
+breadcrumb: "Průvodce ERC-20"
 published: 2021-03-09
 ---
 

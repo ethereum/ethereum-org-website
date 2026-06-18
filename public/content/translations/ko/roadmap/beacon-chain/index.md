@@ -1,6 +1,6 @@
 ---
-title: 비콘 체인
-description: 지분 증명 이더리움을 도입한 업그레이드인 비콘 체인에 대해 알아보세요.
+title: "비콘 체인"
+description: "지분 증명 이더리움을 도입한 업그레이드인 비콘 체인에 대해 알아보세요."
 lang: ko
 template: upgrade
 image: /images/upgrades/core.png

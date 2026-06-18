@@ -1,6 +1,6 @@
 ---
-title: İşaret Zinciri
-description: İşaret Zinciri hakkında bilgi edinin - Ethereum'a Hisse Kanıtı'nı (PoS) getiren güncelleme.
+title: "İşaret Zinciri"
+description: "İşaret Zinciri hakkında bilgi edinin - Ethereum'a Hisse Kanıtı'nı (PoS) getiren güncelleme."
 lang: tr
 template: upgrade
 image: /images/upgrades/core.png

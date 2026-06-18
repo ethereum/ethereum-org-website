@@ -1,12 +1,12 @@
 ---
 title: "Web3 应用的服务器组件与代理"
-description: 阅读本教程后，你将能够编写 TypeScript 服务器，监听区块链上的事件并使用自己的交易做出相应响应。这将使你能够编写中心化应用（因为服务器是一个单点故障），但可以与 Web3 实体进行交互。同样的技术也可用于编写在无需人工干预的情况下响应链上事件的代理。
+description: "阅读本教程后，你将能够编写 TypeScript 服务器，监听区块链上的事件并使用自己的交易做出相应响应。这将使你能够编写中心化应用（因为服务器是一个单点故障），但可以与 Web3 实体进行交互。同样的技术也可用于编写在无需人工干预的情况下响应链上事件的代理。"
 
-author: 奥里·波梅兰茨
+author: "奥里·波梅兰茨"
 lang: zh
 tags: ["代理", "服务器", "链下", "dapp"]
 skill: beginner
-breadcrumb: 服务器组件
+breadcrumb: "服务器组件"
 published: 2024-07-15
 ---
 
@@ -69,7 +69,7 @@ published: 2024-07-15
 
 程序的绝大部分包含在 [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts) 中。
 
-##### 创建先决条件对象 {#package-json}
+##### 创建先决条件对象 {#}
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 现在我们已经具备了所有先决条件，终于可以创建一个[合约实例](https://viem.sh/docs/contract/getContract)了。我们将使用此合约实例与链上合约进行通信。
 
-##### 从区块链读取 {#conclusion}
+##### 从区块链读取 {#}
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript 是单线程的，因此当我们启动一个长时间运行的进程
 
 如果你对它的工作原理感兴趣，可以[在这里阅读相关内容](https://www.w3schools.com/js/js_promise.asp)，但实际上你只需要知道，如果你启动一个需要很长时间的操作，你需要 `await` 结果，并且任何执行此操作的函数都必须声明为 `async`。
 
-##### 发出交易
+##### 发出交易 {#}
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ const txHash = await greeter.write.setGreeting([greeting])
 
 报告交易的哈希（作为在区块浏览器中查看它的 URL 的一部分）并将其返回。
 
-##### 响应事件
+##### 响应事件 {#}
 
 ```typescript
 greeter.watchEvent.SetGreeting({
@@ -243,7 +243,7 @@ console.log(
 
 如果发送者_不是_此服务器，请使用 `setGreeting` 更改问候语。
 
-#### `package.json`
+#### `package.json` {#package-json}
 
 [此文件](https://github.com/qbzzt/20240715-server-component/blob/main/package.json)控制 [Node.js](https://nodejs.org/en) 配置。本文仅解释重要的定义。
 
@@ -287,7 +287,7 @@ console.log(
 
 这些是在运行时（运行 `dist/app.js` 时）所需的包。
 
-## 结论
+## 结论 {#conclusion}
 
 我们在这里创建的中心化服务器完成了它的工作，即充当用户的代理。任何其他希望 dapp 继续运行并愿意花费 Gas 的人都可以使用自己的地址运行服务器的新实例。
 

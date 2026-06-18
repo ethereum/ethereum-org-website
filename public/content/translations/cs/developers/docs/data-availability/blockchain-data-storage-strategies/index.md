@@ -1,6 +1,6 @@
 ---
-title: Strategie ukládání dat na blockchainu
-description: Existuje několik způsobů, jak ukládat data pomocí blockchainu. Tento článek porovná různé strategie, jejich náklady a kompromisy, stejně jako požadavky na jejich bezpečné používání.
+title: "Strategie ukládání dat na blockchainu"
+description: "Existuje několik způsobů, jak ukládat data pomocí blockchainu. Tento článek porovná různé strategie, jejich náklady a kompromisy, stejně jako požadavky na jejich bezpečné používání."
 lang: cs
 ---
 
@@ -110,7 +110,7 @@ Tato tabulka shrnuje různé možnosti, jejich výhody a nevýhody.
 
 | Typ úložiště                | Zdroj dat      | Záruka dostupnosti                                                                                                             | Onchain dostupnost                                             | Další omezení                                                  |
 | --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Bloby EIP-4844              | Offchain            | Záruka Etherea na [~18 dní](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | K dispozici je pouze hash                                           |                                                                         |
+| Bloby EIP-4844              | Offchain            | Záruka Etherea na [\~18 dní](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | K dispozici je pouze hash                                           |                                                                         |
 | Data volání                    | Offchain            | Záruka Etherea navždy (součást blockchainu)                                                                                | K dispozici pouze v případě zápisu do kontraktu a při dané transakci |
 | Offchain s mechanismy L1 | Offchain            | Záruka „jednoho poctivého ověřovatele“ během období pro zpochybnění                                                                        | Pouze hash                                                        | Zaručeno mechanismem zpochybnění, pouze během období pro zpochybnění |
 | Kód kontraktu               | Onchain nebo offchain | Záruka Etherea navždy (součást blockchainu)                                                                                | Ano                                                              | Zapsáno na „náhodnou“ adresu, nemůže začínat na `0xEF`                 |

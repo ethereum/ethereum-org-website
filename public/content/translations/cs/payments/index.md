@@ -1,12 +1,12 @@
 ---
 title: Platby na Ethereu
 metaTitle: Platby na Ethereu
-description: Přehled plateb na Ethereu
+description: "Přehled plateb na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Logo Etherea zobrazené spolu s dávajícíma rukama.
+alt: "Logo Etherea zobrazené spolu s dávajícíma rukama."
 summaryPoints:
   - "Svět, kde se peníze pohybují stejně volně jako informace"
   - "Otevřený a globální, umožňující transakce bez hranic pro každého"
@@ -62,7 +62,7 @@ V zemích, kde byly jejich platební prostředky odpojeny od zbytku světa, při
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Vytvořte si svůj účet na Ethereu pomocí aplikace peněženky ještě dnes.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Začít
   </ButtonLink>
 </AlertContent>

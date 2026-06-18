@@ -1,10 +1,10 @@
 ---
-title: Налаштування Web3.js для використання блокчейну Етеріум у JavaScript
-description: Дізнайтеся, як встановити та налаштувати бібліотеку Web3.js для взаємодії з блокчейном Етеріум із застосунків на JavaScript.
+title: "Налаштування Web3.js для використання блокчейну Етеріум у JavaScript"
+description: "Дізнайтеся, як встановити та налаштувати бібліотеку Web3.js для взаємодії з блокчейном Етеріум із застосунків на JavaScript."
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
-breadcrumb: Налаштування Web3.js
+breadcrumb: "Налаштування Web3.js"
 lang: uk
 published: 2020-04-11
 source: EthereumDev

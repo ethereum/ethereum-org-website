@@ -1,13 +1,13 @@
 ---
-title: IPFS cho các giao diện người dùng phi tập trung
-description: Hướng dẫn này dạy người đọc cách sử dụng IPFS để lưu trữ giao diện người dùng cho một dapp. Mặc dù dữ liệu và logic nghiệp vụ của ứng dụng là phi tập trung, nhưng nếu không có giao diện người dùng kháng kiểm duyệt, người dùng vẫn có thể mất quyền truy cập vào nó.
+title: "IPFS cho các giao diện người dùng phi tập trung"
+description: "Hướng dẫn này dạy người đọc cách sử dụng IPFS để lưu trữ giao diện người dùng cho một dapp. Mặc dù dữ liệu và logic nghiệp vụ của ứng dụng là phi tập trung, nhưng nếu không có giao diện người dùng kháng kiểm duyệt, người dùng vẫn có thể mất quyền truy cập vào nó."
 author: Ori Pomerantz
 tags:
   - ipfs
   - dapp
   - frontend
 skill: beginner
-breadcrumb: IPFS cho giao diện người dùng dapp
+breadcrumb: "IPFS cho giao diện người dùng dapp"
 lang: vi
 published: 2024-06-29
 ---

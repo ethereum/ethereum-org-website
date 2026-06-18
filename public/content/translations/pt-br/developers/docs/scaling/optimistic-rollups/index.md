@@ -1,6 +1,6 @@
 ---
 title: Rollups Otimistas
-description: Uma introdução aos rollups otimistas — uma solução de escalabilidade usada pela comunidade Ethereum.
+description: "Uma introdução aos rollups otimistas — uma solução de escalabilidade usada pela comunidade Ethereum."
 lang: pt-br
 ---
 
@@ -152,7 +152,7 @@ Os rollups otimistas são projetados para interoperabilidade com a Rede Principa
 
 #### 1. Movimentação de ativos {#asset-movement}
 
-##### Entrando no rollup {#evm-compatibility}
+##### Entrando no rollup {#}
 
 Para usar um rollup otimista, os usuários depositam ETH, tokens ERC-20 e outros ativos aceitos no contrato de [ponte](/developers/docs/bridges/) do rollup na l1. O contrato de ponte retransmitirá a transação para a l2, onde uma quantidade equivalente de ativos é cunhada e enviada para o endereço escolhido pelo usuário no rollup otimista.
 
@@ -160,7 +160,7 @@ Transações geradas pelo usuário (como um depósito l1 > l2) geralmente são e
 
 Alguns rollups otimistas adotam uma abordagem mais direta para evitar que os sequenciadores censurem os usuários. Aqui, um bloco é definido por todas as transações enviadas ao contrato da l1 desde o bloco anterior (por exemplo, depósitos), além das transações processadas na cadeia de rollup. Se um sequenciador ignorar uma transação da l1, ele publicará a raiz de estado (comprovadamente) errada; portanto, os sequenciadores não podem atrasar mensagens geradas pelo usuário uma vez publicadas na l1.
 
-##### Saindo do rollup {#cross-chain-contract-calls}
+##### Saindo do rollup {#}
 
 Sacar de um rollup otimista para o Ethereum é mais difícil devido ao esquema de prova de fraude. Se um usuário iniciar uma transação l2 > l1 para sacar fundos mantidos em garantia na l1, ele deve esperar até que o período de desafio — que dura cerca de sete dias — termine. No entanto, o processo de saque em si é bastante direto.
 
@@ -170,7 +170,7 @@ Para evitar esperar uma semana antes de sacar fundos para o Ethereum, os usuári
 
 Os provedores de liquidez podem verificar a validade da solicitação de saque do usuário (executando a cadeia eles mesmos) antes de liberar os fundos. Dessa forma, eles têm garantias de que a transação será confirmada eventualmente (ou seja, finalidade sem necessidade de confiança).
 
-#### 2. Compatibilidade com a EVM {#how-do-optimistic-rollup-fees-work}
+#### 2. Compatibilidade com a EVM {#evm-compatibility}
 
 Para os desenvolvedores, a vantagem dos rollups otimistas é sua compatibilidade — ou, melhor ainda, equivalência — com a [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). Rollups compatíveis com a EVM cumprem as especificações no [yellow paper do Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf) e suportam a EVM no nível do bytecode.
 
@@ -182,7 +182,7 @@ ii. Desenvolvedores e equipes de projeto que usam rollups otimistas podem aprove
 
 O uso de ferramentas existentes é importante porque essas ferramentas foram extensivamente auditadas, depuradas e aprimoradas ao longo dos anos. Isso também remove a necessidade de os desenvolvedores do Ethereum aprenderem a construir com uma pilha de desenvolvimento totalmente nova.
 
-#### 3. Chamadas de contrato cross-chain {#scaling-ethereum-with-optimistic-rollups}
+#### 3. Chamadas de contrato cross-chain {#cross-chain-contract-calls}
 
 Usuários (contas de propriedade externa) interagem com contratos da l2 enviando uma transação para o contrato de rollup ou fazendo com que um sequenciador ou validador faça isso por eles. Os rollups otimistas também permitem que contas de contrato no Ethereum interajam com contratos da l2 usando contratos de ponte para retransmitir mensagens e passar dados entre a l1 e a l2. Isso significa que você pode programar um contrato da l1 na Rede Principal do Ethereum para invocar funções pertencentes a contratos em um rollup otimista da l2.
 
@@ -194,7 +194,7 @@ Como as chamadas de mensagem cross-chain resultam na execução do contrato, o r
 
 Finalmente, devemos notar que as chamadas de mensagem l2 > l1 entre contratos precisam levar em conta os atrasos (as chamadas l1 > l2 são normalmente executadas após alguns minutos). Isso ocorre porque as mensagens enviadas para a Mainnet a partir do rollup otimista não podem ser executadas até que a janela de desafio expire.
 
-## Como funcionam as taxas de rollup otimista? {#optimistic-rollups-pros-and-cons}
+## Como funcionam as taxas de rollup otimista? {#how-do-optimistic-rollup-fees-work}
 
 Os rollups otimistas usam um esquema de taxa de gas, muito parecido com o Ethereum, para denotar quanto os usuários pagam por transação. As taxas cobradas em rollups otimistas dependem dos seguintes componentes:
 
@@ -206,7 +206,7 @@ Os rollups otimistas usam um esquema de taxa de gas, muito parecido com o Ethere
 
 Os rollups otimistas aplicam vários mecanismos para reduzir as taxas para os usuários, incluindo o processamento em lote de transações e a compressão de `calldata` para reduzir os custos de publicação de dados. Você pode verificar o [rastreador de taxas da l2](https://l2fees.info/) para uma visão geral em tempo real de quanto custa usar rollups otimistas baseados no Ethereum.
 
-## Como os rollups otimistas escalam o Ethereum? {#optimistic-video}
+## Como os rollups otimistas escalam o Ethereum? {#scaling-ethereum-with-optimistic-rollups}
 
 Como explicado, os rollups otimistas publicam dados de transações comprimidos no Ethereum para garantir a disponibilidade de dados. A capacidade de comprimir dados publicados onchain é crucial para escalar a vazão no Ethereum com rollups otimistas.
 
@@ -223,7 +223,7 @@ Os rollups otimistas usam várias técnicas para alcançar a compressão de dado
 | Valor | 9 | ~3 |
 | Assinatura | ~68 (2 + 33 + 33) | ~0.5 |
 | De | 0 (recuperado da assinatura) | 4 |
-| **Total** | **~112 bytes** | **~12 bytes** |
+| **Total** | **\~112 bytes** | **\~12 bytes** |
 
 Fazer alguns cálculos aproximados sobre esses números pode ajudar a mostrar as melhorias de escalabilidade proporcionadas por um rollup otimista:
 
@@ -235,7 +235,7 @@ Esta é uma estimativa bastante otimista, dado que as transações de rollup oti
 
 Espera-se que a introdução do [fragmentação de dados](/roadmap/danksharding/) no Ethereum melhore a escalabilidade em rollups otimistas. Como as transações de rollup devem compartilhar espaço de bloco com outras transações não rollup, sua capacidade de processamento é limitada pela vazão de dados na cadeia principal do Ethereum. O danksharding aumentará o espaço disponível para as cadeias l2 publicarem dados por bloco, usando armazenamento de "blob" mais barato e impermanente em vez de `CALLDATA` caro e permanente.
 
-### Prós e contras dos rollups otimistas {#further-reading-on-optimistic-rollups}
+### Prós e contras dos rollups otimistas {#optimistic-rollups-pros-and-cons}
 
 | Prós | Contras |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -247,13 +247,13 @@ Espera-se que a introdução do [fragmentação de dados](/roadmap/danksharding/
 | Os rollups otimistas dependem de incentivos criptoeconômicos bem projetados para aumentar a segurança na cadeia. | Os rollups devem publicar todos os dados de transações onchain, o que pode aumentar os custos. |
 | A compatibilidade com a EVM e Solidity permite que os desenvolvedores portem contratos inteligentes nativos do Ethereum para rollups ou usem ferramentas existentes para criar novos dapps. |
 
-### Uma explicação visual dos rollups otimistas {#tutorials}
+### Uma explicação visual dos rollups otimistas {#optimistic-video}
 
 Aprende melhor visualmente? Assista ao Finematics explicar os rollups otimistas:
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Leitura adicional sobre rollups otimistas
+## Leitura adicional sobre rollups otimistas {#further-reading-on-optimistic-rollups}
 
 - [Como funcionam os rollups otimistas (O guia completo)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [O que é um Rollup de Blockchain? Uma Introdução Técnica](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
@@ -264,6 +264,6 @@ Aprende melhor visualmente? Assista ao Finematics explicar os rollups otimistas:
 - [Mergulho Profundo na OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [O que é a Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 
-## Tutoriais: Rollups otimistas e pontes no Ethereum
+## Tutoriais: Rollups otimistas e pontes no Ethereum {#tutorials}
 
 - [Passo a passo do contrato de ponte padrão do Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Um passo a passo de código anotado da ponte padrão do Optimism para mover ativos entre a l1 e a l2._

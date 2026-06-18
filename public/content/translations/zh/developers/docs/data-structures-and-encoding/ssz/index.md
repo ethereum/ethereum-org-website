@@ -1,6 +1,6 @@
 ---
-title: 简单序列化
-description: 以太坊 SSZ 格式详解。
+title: "简单序列化"
+description: "以太坊 SSZ 格式详解。"
 lang: zh
 sidebarDepth: 2
 ---

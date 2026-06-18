@@ -1,6 +1,6 @@
 ---
-title: ERC-721 非同质化代币标准
-description: 了解 ERC-721，这是在以太坊上代表独特数字资产的非同质化代币 (NFT) 标准。
+title: "ERC-721 非同质化代币标准"
+description: "了解 ERC-721，这是在以太坊上代表独特数字资产的非同质化代币 (NFT) 标准。"
 lang: zh
 ---
 

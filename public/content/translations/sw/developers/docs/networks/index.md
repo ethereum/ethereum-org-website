@@ -40,7 +40,7 @@ Mitandao miwili ya majaribio ya umma ambayo wasanidi wa wateja wanaitunza kwa sa
 
 **Sepolia ni mtandao wa majaribio chaguomsingi unaopendekezwa kwa maendeleo ya programu**. Mtandao wa Sepolia unatumia seti ya wathibitishaji yenye ruhusa inayodhibitiwa na timu za wateja na majaribio.
 
-##### Rasilimali {#hoodi}
+##### Rasilimali {#} {#}
 
 - [Tovuti](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Mitandao miwili ya majaribio ya umma ambayo wasanidi wa wateja wanaitunza kwa sa
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Mabomba {#ephemery}
+##### Mabomba {#} {#}
 
 - [Bomba la Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Bomba la Chain Platform Sepolia](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -61,7 +61,7 @@ Mitandao miwili ya majaribio ya umma ambayo wasanidi wa wateja wanaitunza kwa sa
 - [Bomba la PoW](https://sepolia-faucet.pk910.de/)
 - [Bomba la QuickNode Sepolia](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Hoodi {#faucets}
+#### Hoodi {#hoodi}
 
 Hoodi ni mtandao wa majaribio kwa ajili ya kujaribu uthibitishaji na uwekaji dhamana. Mtandao wa Hoodi uko wazi kwa watumiaji wanaotaka kuendesha mthibitishaji wa mtandao wa majaribio. Waweka dhamana wanaotaka kujaribu uboreshaji wa itifaki kabla haujasambazwa kwenye Mtandao Mkuu wanapaswa kwa hivyo kutumia Hoodi.
 
@@ -69,7 +69,7 @@ Hoodi ni mtandao wa majaribio kwa ajili ya kujaribu uthibitishaji na uwekaji dha
 - Hali kubwa, muhimu kwa kujaribu mwingiliano changamano wa mikataba mahiri
 - Inachukua muda mrefu zaidi kufanya usawazishaji na inahitaji hifadhi zaidi ili kuendesha nodi
 
-##### Rasilimali {#holesky}
+##### Rasilimali {#}
 
 - [Tovuti](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,13 +78,13 @@ Hoodi ni mtandao wa majaribio kwa ajili ya kujaribu uthibitishaji na uwekaji dha
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Mabomba {#layer-2-testnets}
+##### Mabomba {#}
 
 - [Bomba la Chain Platform Hoodi](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Bomba la Hoodi](https://hoodi.ethpandaops.io/)
 - [Bomba la PoW](https://hoodi-faucet.pk910.de/)
 
-#### Ephemery {#arbitrum-sepolia}
+#### Ephemery {#ephemery}
 
 Ephemery ni aina ya kipekee ya mtandao wa majaribio ambayo huwekwa upya kikamilifu kila mwezi. Hali ya utekelezaji na mwafaka hurudi kwenye mwanzo kila baada ya siku 28, ambayo inamaanisha chochote kinachotokea kwenye mtandao wa majaribio ni cha muda mfupi. Hii inafanya iwe bora kwa majaribio ya muda mfupi, uanzishaji wa haraka wa nodi na aina ya programu za 'hello world' ambazo hazihitaji kudumu.
 
@@ -93,7 +93,7 @@ Ephemery ni aina ya kipekee ya mtandao wa majaribio ambayo huwekwa upya kikamili
 - Seti wazi ya wathibitishaji na rahisi kupata kiasi kikubwa cha fedha
 - Mahitaji madogo zaidi ya nodi na usawazishaji wa haraka zaidi, &lt;5GB kwa wastani
 
-##### Rasilimali {#optimistic-sepolia}
+##### Rasilimali {#}
 
 - [Tovuti](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -104,55 +104,55 @@ Ephemery ni aina ya kipekee ya mtandao wa majaribio ambayo huwekwa upya kikamili
 - [Usawazishaji wa Kituo cha Ukaguzi](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
-#### Mabomba {#starknet-sepolia}
+#### Mabomba {#faucets}
 
 - [Bomba la Bordel](https://faucet.bordel.wtf/)
 - [Bomba la Pk910 PoW](https://ephemery-faucet.pk910.de/)
 
-#### Holesky (imeachwa kutumika) {#private-networks}
+#### Holesky (imeachwa kutumika) {#holesky}
 
 Mtandao wa majaribio wa Holesky umeachwa kutumika kuanzia Septemba 2025. Waendeshaji wa uwekaji dhamana na watoa huduma za miundombinu wanapaswa kutumia Hoodi kwa majaribio ya wathibitishaji badala yake.
 
 - [Tangazo la Kufungwa kwa Mtandao wa Majaribio wa Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _Blogu ya EF, 1-Septemba-2025_
 - [Taarifa Mpya za Mtandao wa Majaribio wa Holesky na Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _Blogu ya EF, 18-Machi-2025_
 
-### Mitandao ya majaribio ya Tabaka la 2 {#development-networks}
+### Mitandao ya majaribio ya Tabaka la 2 {#layer-2-testnets}
 
 [Tabaka la 2 (l2)](/layer-2/) ni neno la pamoja kuelezea seti maalum ya suluhisho za kuongeza uwezo wa Ethereum. Tabaka la 2 ni mnyororo wa vitalu tofauti unaopanua Ethereum na kurithi dhamana za usalama za Ethereum. Mitandao ya majaribio ya tabaka la 2 kwa kawaida huunganishwa kwa karibu na mitandao ya majaribio ya umma ya Ethereum.
 
-#### Arbitrum Sepolia {#consortium-networks}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Mtandao wa majaribio kwa ajili ya [Arbitrum](https://arbitrum.io/).
 
-##### Rasilimali {#why-naming}
+##### Rasilimali {#}
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Mabomba {#common-and-legacy-testnets}
+##### Mabomba {#}
 
 - [Bomba la Alchemy Arbitrum Sepolia](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Bomba la Chainlink Arbitrum Sepolia](https://faucets.chain.link/arbitrum-sepolia)
 - [Bomba la ethfaucet.com Arbitrum Sepolia](https://ethfaucet.com/networks/arbitrum)
 - [Bomba la QuickNode Arbitrum Sepolia](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Sepolia {#other-testnets}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Mtandao wa majaribio kwa ajili ya [Optimism](https://www.optimism.io/).
 
-##### Rasilimali {#related-tools}
+##### Rasilimali {#}
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Mabomba {#further-reading}
+##### Mabomba {#}
 
 - [Bomba la Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Bomba la Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Bomba la ethfaucet.com Optimism Sepolia](https://ethfaucet.com/networks/optimism)
 - [Bomba la Mtandao wa Majaribio](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet Sepolia
+#### Starknet Sepolia {#starknet-sepolia}
 
 Mtandao wa majaribio kwa ajili ya [Starknet](https://www.starknet.io).
 
@@ -166,27 +166,27 @@ Mtandao wa majaribio kwa ajili ya [Starknet](https://www.starknet.io).
 - [Bomba la Blast Starknet Sepolia](https://blastapi.io/faucets/starknet-sepolia-eth)
 - [Bomba la Starknet](https://starknet-faucet.vercel.app/)
 
-## Mitandao ya kibinafsi
+## Mitandao ya kibinafsi {#private-networks}
 
 Mtandao wa Ethereum ni mtandao wa kibinafsi ikiwa nodi zake hazijaunganishwa kwenye mtandao wa umma (yaani, Mtandao Mkuu au mtandao wa majaribio). Katika muktadha huu, kibinafsi inamaanisha tu imehifadhiwa au imetengwa, badala ya kulindwa au kuwa salama.
 
-### Mitandao ya maendeleo
+### Mitandao ya maendeleo {#development-networks}
 
 Ili kuunda programu ya Ethereum, utataka kuiendesha kwenye mtandao wa kibinafsi ili kuona jinsi inavyofanya kazi kabla ya kuisambaza. Sawa na jinsi unavyounda seva ya ndani kwenye kompyuta yako kwa ajili ya maendeleo ya wavuti, unaweza kuunda mfano wa mnyororo wa vitalu wa ndani ili kujaribu programu tumizi iliyogatuliwa (dapp) yako. Hii inaruhusu urudiaji wa haraka zaidi kuliko mtandao wa majaribio wa umma.
 
 Kuna miradi na zana zilizojitolea kusaidia na hili. Jifunze zaidi kuhusu [mitandao ya maendeleo](/developers/docs/development-networks/).
 
-### Mitandao ya muungano
+### Mitandao ya muungano {#consortium-networks}
 
 Mchakato wa mwafaka unadhibitiwa na seti iliyofafanuliwa mapema ya nodi zinazoaminika. Kwa mfano, mtandao wa kibinafsi wa taasisi za kitaaluma zinazojulikana ambazo kila moja inasimamia nodi moja, na vitalu vinathibitishwa na kiwango cha watia saini ndani ya mtandao.
 
 Ikiwa mtandao wa umma wa Ethereum ni kama intaneti ya umma, mtandao wa muungano ni kama intraneti ya kibinafsi.
 
-## <Emoji text="🚉" /> Kwa nini mitandao ya majaribio ya Ethereum inapewa majina ya vituo vya metro?
+## <Emoji text="🚉" /> Kwa nini mitandao ya majaribio ya Ethereum inapewa majina ya vituo vya metro? {#why-naming}
 
 Mitandao mingi ya majaribio ya Ethereum inapewa majina ya vituo vya metro au treni vya ulimwengu halisi. Mila hii ya kutoa majina ilianza mapema na inaonyesha miji ya kimataifa ambapo wachangiaji wameishi au kufanya kazi. Ni ya kiishara, ya kukumbukwa, na ya vitendo. Kama tu mitandao ya majaribio inavyotengwa na Mtandao Mkuu wa Ethereum, njia za metro huendeshwa kando na trafiki ya juu ya ardhi.
 
-### <Emoji text="🚧" /> Mitandao ya majaribio inayotumika sana na ya zamani
+### <Emoji text="🚧" /> Mitandao ya majaribio inayotumika sana na ya zamani {#common-and-legacy-testnets}
 
 - **Sepolia** - Kitongoji kilichounganishwa na metro huko Athens, Ugiriki. Kwa sasa inatumika kwa majaribio ya mikataba mahiri na programu tumizi iliyogatuliwa (dapp).
 - **Hoodi** - Imepewa jina la kituo cha metro cha Hoodi huko Bengaluru, India. Inatumika kwa majaribio ya wathibitishaji na uboreshaji wa itifaki.
@@ -196,7 +196,7 @@ Mitandao mingi ya majaribio ya Ethereum inapewa majina ya vituo vya metro au tre
 - **Kovan** _(imeachwa kutumika)_ - Imepewa jina la kituo cha MRT cha Singapore.
 - **Morden** _(imeachwa kutumika)_ - Imepewa jina la kituo cha London Underground. Mtandao wa majaribio wa kwanza wa umma wa Ethereum.
 
-### <Emoji text="🧪" /> Mitandao mingine maalum ya majaribio
+### <Emoji text="🧪" /> Mitandao mingine maalum ya majaribio {#other-testnets}
 
 Baadhi ya mitandao ya majaribio iliundwa kwa ajili ya majaribio ya muda mfupi au maalum kwa uboreshaji na si lazima iwe na mandhari ya metro:
 
@@ -205,12 +205,12 @@ Baadhi ya mitandao ya majaribio iliundwa kwa ajili ya majaribio ya muda mfupi au
 
 Kutumia majina ya vituo vya metro husaidia wasanidi kutambua na kukumbuka haraka mitandao ya majaribio bila kuhitaji kutegemea vitambulisho vya nambari vya mnyororo. Pia inaonyesha utamaduni wa Ethereum: wa vitendo, wa kimataifa, na unaozingatia binadamu.
 
-## Zana zinazohusiana
+## Zana zinazohusiana {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _orodha ya mitandao ya EVM ya kuunganisha pochi na watoa huduma kwenye Kitambulisho cha Mnyororo na Kitambulisho cha Mtandao kinachofaa_
 - [Minyororo inayotegemea EVM](https://github.com/ethereum-lists/chains) _Hifadhi ya GitHub ya data fafanuzi ya mnyororo inayoendesha Chainlist_
 
-## Usomaji zaidi
+## Usomaji zaidi {#further-reading}
 
 - [Pendekezo: Mzunguko wa Maisha wa Mtandao wa Majaribio wa Ethereum Unaotabirika](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [Mageuzi ya Mitandao ya Majaribio ya Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

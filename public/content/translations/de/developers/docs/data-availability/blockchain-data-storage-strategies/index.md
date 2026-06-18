@@ -1,6 +1,6 @@
 ---
 title: Strategien zur Datenspeicherung auf der Blockchain
-description: Es gibt verschiedene Möglichkeiten, Daten mithilfe der Blockchain zu speichern. Dieser Artikel vergleicht die verschiedenen Strategien, ihre Kosten und Kompromisse sowie die Anforderungen für eine sichere Nutzung.
+description: "Es gibt verschiedene Möglichkeiten, Daten mithilfe der Blockchain zu speichern. Dieser Artikel vergleicht die verschiedenen Strategien, ihre Kosten und Kompromisse sowie die Anforderungen für eine sichere Nutzung."
 lang: de
 ---
 
@@ -110,7 +110,7 @@ Diese Tabelle fasst die verschiedenen Optionen, ihre Vorteile und Nachteile zusa
 
 | Speichertyp                 | Datenquelle         | Verfügbarkeitsgarantie                                                                                                             | Onchain-Verfügbarkeit                                            | Zusätzliche Einschränkungen                                             |
 | --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| EIP-4844-Blobs              | Offchain            | Ethereum-Garantie für [~18 Tage](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Nur Hash ist verfügbar                                           |                                                                         |
+| EIP-4844-Blobs              | Offchain            | Ethereum-Garantie für [\~18 Tage](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Nur Hash ist verfügbar                                           |                                                                         |
 | Calldata                    | Offchain            | Ethereum-Garantie für immer (Teil der Blockchain)                                                                                | Nur verfügbar, wenn in einen Vertrag geschrieben, und bei dieser Transaktion |                                                                         |
 | Offchain mit L1-Mechanismen | Offchain            | „Ein ehrlicher Verifizierer“-Garantie während der Anfechtungsfrist                                                                        | Nur Hash                                                        | Garantiert durch den Anfechtungsmechanismus, nur während der Anfechtungsfrist |
 | Vertragscode               | Onchain oder offchain | Ethereum-Garantie für immer (Teil der Blockchain)                                                                                | Ja                                                              | Wird an eine „zufällige“ Adresse geschrieben, darf nicht mit `0xEF` beginnen                 |

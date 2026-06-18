@@ -1,7 +1,7 @@
 ---
 title: "EIP-1271: 스마트 컨트랙트 서명 생성 및 검증"
-description: EIP-1271을 사용한 스마트 컨트랙트 서명 생성 및 검증에 대한 개요입니다. 또한 스마트 컨트랙트 개발자가 기반으로 삼을 수 있는 구체적인 예시를 제공하기 위해 Safe(이전의 Gnosis Safe)에서 사용된 EIP-1271 구현을 살펴봅니다.
-author: 네이선 H. 렁
+description: "EIP-1271을 사용한 스마트 컨트랙트 서명 생성 및 검증에 대한 개요입니다. 또한 스마트 컨트랙트 개발자가 기반으로 삼을 수 있는 구체적인 예시를 제공하기 위해 Safe(이전의 Gnosis Safe)에서 사용된 EIP-1271 구현을 살펴봅니다."
+author: "네이선 H. 렁"
 lang: ko
 tags:
   - eip-1271
@@ -9,7 +9,7 @@ tags:
   - 검증
   - 서명
 skill: intermediate
-breadcrumb: EIP-1271 서명
+breadcrumb: "EIP-1271 서명"
 published: 2023-01-12
 ---
 
@@ -39,9 +39,9 @@ published: 2023-01-12
 
 여러분의 이더리움 계정(즉, 외부 소유 계정(EOA))에는 개인 키가 연결되어 있으며, 웹사이트나 탈중앙화 애플리케이션(dapp)이 서명을 요청할 때(예: "이더리움으로 로그인") 일반적으로 사용되는 것이 바로 이 개인 키입니다.
 
-앱은 ethers.js와 같은 서드파티 라이브러리를 사용하여 [여러분의 개인 키를 몰라도](https://en.wikipedia.org/wiki/Public-key_cryptography) 여러분이 생성한 [서명을 검증](https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum)할 수 있으며, 서명을 생성한 사람이 _여러분_이라는 것을 확신할 수 있습니다.
+앱은 ethers.js와 같은 서드파티 라이브러리를 사용하여 [여러분의 개인 키를 몰라도](https://en.wikipedia.org/wiki/Public-key_cryptography) 여러분이 생성한 [서명을 검증](https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum)할 수 있으며, 서명을 생성한 사람이 <em>여러분</em>이라는 것을 확신할 수 있습니다.
 
-> 사실 EOA 디지털 서명은 공개 키 암호학을 사용하기 때문에 **오프체인**에서 생성하고 검증할 수 있습니다! 이것이 가스 없는 DAO 투표가 작동하는 방식입니다. 온체인에 투표를 제출하는 대신, 암호학 라이브러리를 사용하여 오프체인에서 디지털 서명을 생성하고 검증할 수 있습니다.
+> 사실 EOA 디지털 서명은 공개 키 암호학을 사용하기 때문에 <strong>오프체인</strong>에서 생성하고 검증할 수 있습니다! 이것이 가스 없는 DAO 투표가 작동하는 방식입니다. 온체인에 투표를 제출하는 대신, 암호학 라이브러리를 사용하여 오프체인에서 디지털 서명을 생성하고 검증할 수 있습니다.
 
 EOA 계정에는 개인 키가 있지만, 스마트 컨트랙트 계정에는 어떠한 종류의 개인 키나 비밀 키도 없습니다(따라서 "이더리움으로 로그인" 등은 스마트 컨트랙트 계정에서 기본적으로 작동할 수 없습니다).
 

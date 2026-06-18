@@ -1,6 +1,6 @@
 ---
-title: Ethereum'u geleceğe hazırlamak ve kripto kuantum güvenliği
-description: Bu güncellemeler, gelecekte ne olursa olsun Ethereum'u dayanıklı, merkeziyetsiz bir temel katman olarak sağlamlaştırır.
+title: "Ethereum'u geleceğe hazırlamak ve kripto kuantum güvenliği"
+description: "Bu güncellemeler, gelecekte ne olursa olsun Ethereum'u dayanıklı, merkeziyetsiz bir temel katman olarak sağlamlaştırır."
 lang: tr
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum yol haritası"

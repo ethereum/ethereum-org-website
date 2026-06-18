@@ -1,11 +1,11 @@
 ---
 title: "ERC-20 合约详解"
-description: 欧本齐柏林 ERC-20 合约中包含什么内容，为什么会包含这些内容？
-author: 奥里·波梅兰茨
+description: "欧本齐柏林 ERC-20 合约中包含什么内容，为什么会包含这些内容？"
+author: "奥里·波梅兰茨"
 lang: zh
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: ERC-20 详解
+breadcrumb: "ERC-20 详解"
 published: 2021-03-09
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Ethereum Başlatma Düğümlerine Giriş
-description: Başlatma düğümlerini anlamak için ihtiyacınız olan temel bilgiler
+title: "Ethereum Başlatma Düğümlerine Giriş"
+description: "Başlatma düğümlerini anlamak için ihtiyacınız olan temel bilgiler"
 lang: tr
 ---
 

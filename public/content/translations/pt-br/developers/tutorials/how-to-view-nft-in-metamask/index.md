@@ -1,5 +1,5 @@
 ---
-title: Como visualizar seu NFT na sua carteira (Parte 3/3 da série de tutoriais sobre NFT)
+title: "Como visualizar seu NFT na sua carteira (Parte 3/3 da série de tutoriais sobre NFT)"
 description: Este tutorial descreve como visualizar um NFT existente na MetaMask!
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity"]

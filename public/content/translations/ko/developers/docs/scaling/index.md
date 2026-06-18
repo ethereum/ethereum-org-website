@@ -1,6 +1,6 @@
 ---
-title: 스케일링
-description: 이더리움 커뮤니티에서 현재 개발 중인 다양한 스케일링 옵션에 대한 소개입니다.
+title: "스케일링"
+description: "이더리움 커뮤니티에서 현재 개발 중인 다양한 스케일링 옵션에 대한 소개입니다."
 lang: ko
 sidebarDepth: 3
 ---

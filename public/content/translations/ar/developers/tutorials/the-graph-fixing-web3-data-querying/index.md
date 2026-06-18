@@ -1,9 +1,9 @@
 ---
 title: "⁦The Graph⁩: إصلاح الاستعلام عن بيانات ⁦Web3⁩"
 description: "سلسلة الكتل تشبه قاعدة البيانات ولكن بدون ⁦SQL⁩. جميع البيانات موجودة، ولكن لا توجد طريقة للوصول إليها. دعني أوضح لك كيفية إصلاح ذلك باستخدام ⁦The Graph⁩ و⁦GraphQL⁩."
-author: ماركوس واس
+author: "ماركوس واس"
 lang: ar
-tags: ["solidity", "العقود الذكية", "الاستعلام", "the graph", "react"]
+tags: ["Solidity", "العقود الذكية", "الاستعلام", "the graph", "React"]
 skill: intermediate
 breadcrumb: "⁦The Graph⁩"
 published: 2020-09-06
@@ -11,9 +11,9 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---
 
-هذه المرة سنلقي نظرة فاحصة على `<span dir="ltr">The Graph</span>` والذي أصبح بشكل أساسي جزءًا من الحزمة القياسية لتطوير التطبيقات اللامركزية (dapps) في العام الماضي. دعونا نرى أولاً كيف كنا سنفعل الأشياء بالطريقة التقليدية...
+هذه المرة سنلقي نظرة فاحصة على `The Graph` والذي أصبح بشكل أساسي جزءًا من الحزمة القياسية لتطوير التطبيقات اللامركزية (dapps) في العام الماضي. دعونا نرى أولاً كيف كنا سنفعل الأشياء بالطريقة التقليدية...
 
-## بدون `<span dir="ltr">The Graph</span>`... {#without-the-graph}
+## بدون `The Graph`... {#without-the-graph}
 
 لذا دعونا نأخذ مثالاً بسيطاً لأغراض التوضيح. كلنا نحب الألعاب، لذا تخيل لعبة بسيطة يضع فيها المستخدمون الرهانات:
 
@@ -47,7 +47,7 @@ contract Game {
 2. جلب `totalGamesPlayerLost`.
 3. الاشتراك في أحداث `BetPlaced`.
 
-يمكننا الاستماع إلى [الحدث في `<span dir="ltr">Web3</span>`](https://docs.web3js.org/api/web3/class/Contract#events) كما هو موضح على اليمين، ولكنه يتطلب التعامل مع عدد غير قليل من الحالات.
+يمكننا الاستماع إلى [الحدث في `Web3`](https://docs.web3js.org/api/web3/class/Contract#events) كما هو موضح على اليمين، ولكنه يتطلب التعامل مع عدد غير قليل من الحالات.
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -78,25 +78,25 @@ GameContract.events.BetPlaced({
 
 الآن دعونا نلقي نظرة على حل أفضل.
 
-## دعني أقدم لك `<span dir="ltr">GraphQL</span>` {#let-me-introduce-to-you-graphql}
+## دعني أقدم لك `GraphQL` {#let-me-introduce-to-you-graphql}
 
-أولاً لنتحدث عن `<span dir="ltr">GraphQL</span>`، الذي تم تصميمه وتنفيذه في الأصل بواسطة فيسبوك. قد تكون على دراية بنموذج `<span dir="ltr">REST API</span>` التقليدي. الآن تخيل بدلاً من ذلك أنه يمكنك كتابة استعلام للحصول على البيانات التي تريدها بالضبط:
+أولاً لنتحدث عن `GraphQL`، الذي تم تصميمه وتنفيذه في الأصل بواسطة فيسبوك. قد تكون على دراية بنموذج `REST API` التقليدي. الآن تخيل بدلاً من ذلك أنه يمكنك كتابة استعلام للحصول على البيانات التي تريدها بالضبط:
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
 ![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
 
-تلتقط الصورتان إلى حد كبير جوهر `<span dir="ltr">GraphQL</span>`. باستخدام الاستعلام الموجود على اليمين، يمكننا تحديد البيانات التي نريدها بالضبط، لذلك نحصل على كل شيء في طلب واحد ولا شيء أكثر مما نحتاجه بالضبط. يتعامل خادم `<span dir="ltr">GraphQL</span>` مع جلب جميع البيانات المطلوبة، لذلك من السهل جداً على جانب المستهلك في الواجهة الأمامية استخدامه. [هذا شرح رائع](https://www.apollographql.com/blog/graphql-explained) لكيفية تعامل الخادم بالضبط مع الاستعلام إذا كنت مهتماً.
+تلتقط الصورتان إلى حد كبير جوهر `GraphQL`. باستخدام الاستعلام الموجود على اليمين، يمكننا تحديد البيانات التي نريدها بالضبط، لذلك نحصل على كل شيء في طلب واحد ولا شيء أكثر مما نحتاجه بالضبط. يتعامل خادم `GraphQL` مع جلب جميع البيانات المطلوبة، لذلك من السهل جداً على جانب المستهلك في الواجهة الأمامية استخدامه. [هذا شرح رائع](https://www.apollographql.com/blog/graphql-explained) لكيفية تعامل الخادم بالضبط مع الاستعلام إذا كنت مهتماً.
 
-الآن مع هذه المعرفة، دعونا نقفز أخيراً إلى مساحة سلسلة الكتل و `<span dir="ltr">The Graph</span>`.
+الآن مع هذه المعرفة، دعونا نقفز أخيراً إلى مساحة سلسلة الكتل و `The Graph`.
 
-## ما هو `<span dir="ltr">The Graph</span>`؟ {#what-is-the-graph}
+## ما هو `The Graph`؟ {#what-is-the-graph}
 
-سلسلة الكتل هي قاعدة بيانات لامركزية، ولكن على عكس ما هو معتاد، ليس لدينا لغة استعلام لقاعدة البيانات هذه. حلول استرداد البيانات مؤلمة أو مستحيلة تماماً. `<span dir="ltr">The Graph</span>` هو بروتوكول لامركزي لفهرسة بيانات سلسلة الكتل والاستعلام عنها. وكما خمنت على الأرجح، فإنه يستخدم `<span dir="ltr">GraphQL</span>` كلغة استعلام.
+سلسلة الكتل هي قاعدة بيانات لامركزية، ولكن على عكس ما هو معتاد، ليس لدينا لغة استعلام لقاعدة البيانات هذه. حلول استرداد البيانات مؤلمة أو مستحيلة تماماً. `The Graph` هو بروتوكول لامركزي لفهرسة بيانات سلسلة الكتل والاستعلام عنها. وكما خمنت على الأرجح، فإنه يستخدم `GraphQL` كلغة استعلام.
 
 ![The Graph](./thegraph.png)
 
-الأمثلة هي دائماً أفضل طريقة لفهم شيء ما، لذا دعونا نستخدم `<span dir="ltr">The Graph</span>` لمثال `<span dir="ltr">GameContract</span>` الخاص بنا.
+الأمثلة هي دائماً أفضل طريقة لفهم شيء ما، لذا دعونا نستخدم `The Graph` لمثال `GameContract` الخاص بنا.
 
 ## كيفية إنشاء رسم بياني فرعي {#how-to-create-a-subgraph}
 
@@ -110,14 +110,14 @@ GameContract.events.BetPlaced({
 
 البيان هو ملف التكوين الخاص بنا ويحدد:
 
-- العقود الذكية التي يجب فهرستها (العنوان، الشبكة، `<span dir="ltr">ABI</span>`...)
+- العقود الذكية التي يجب فهرستها (العنوان، الشبكة، `ABI`...)
 - الأحداث التي يجب الاستماع إليها
 - أشياء أخرى يجب الاستماع إليها مثل استدعاءات الدوال أو الكتل
 - دوال التعيين التي يتم استدعاؤها (انظر `mapping.ts` أدناه)
 
-يمكنك تحديد عقود ومعالجات متعددة هنا. سيحتوي الإعداد النموذجي على مجلد رسم بياني فرعي داخل مشروع `<span dir="ltr">Hardhat</span>` مع مستودعه الخاص. ثم يمكنك بسهولة الإشارة إلى `<span dir="ltr">ABI</span>`.
+يمكنك تحديد عقود ومعالجات متعددة هنا. سيحتوي الإعداد النموذجي على مجلد رسم بياني فرعي داخل مشروع `Hardhat` مع مستودعه الخاص. ثم يمكنك بسهولة الإشارة إلى `ABI`.
 
-لأسباب تتعلق بالراحة، قد ترغب أيضاً في استخدام أداة قوالب مثل `<span dir="ltr">mustache</span>`. ثم تقوم بإنشاء `subgraph.template.yaml` وإدراج العناوين بناءً على أحدث عمليات النشر. للحصول على مثال إعداد أكثر تقدماً، راجع على سبيل المثال [مستودع الرسم البياني الفرعي لآفي](https://github.com/aave/aave-protocol/tree/master/thegraph).
+لأسباب تتعلق بالراحة، قد ترغب أيضاً في استخدام أداة قوالب مثل `mustache`. ثم تقوم بإنشاء `subgraph.template.yaml` وإدراج العناوين بناءً على أحدث عمليات النشر. للحصول على مثال إعداد أكثر تقدماً، راجع على سبيل المثال [مستودع الرسم البياني الفرعي لآفي](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
 ويمكن الاطلاع على الوثائق الكاملة [هنا](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
@@ -152,15 +152,15 @@ dataSources:
 
 ### المخطط (`schema.graphql`) {#schema}
 
-المخطط هو تعريف بيانات `<span dir="ltr">GraphQL</span>`. سيسمح لك بتحديد الكيانات الموجودة وأنواعها. الأنواع المدعومة من `<span dir="ltr">The Graph</span>` هي
+المخطط هو تعريف بيانات `GraphQL`. سيسمح لك بتحديد الكيانات الموجودة وأنواعها. الأنواع المدعومة من `The Graph` هي
 
-- `<span dir="ltr">Bytes</span>`
-- `<span dir="ltr">ID</span>`
-- `<span dir="ltr">String</span>`
-- `<span dir="ltr">Boolean</span>`
-- `<span dir="ltr">Int</span>`
-- `<span dir="ltr">BigInt</span>`
-- `<span dir="ltr">BigDecimal</span>`
+- `Bytes`
+- `ID`
+- `String`
+- `Boolean`
+- `Int`
+- `BigInt`
+- `BigDecimal`
 
 يمكنك أيضاً استخدام الكيانات كنوع لتحديد العلاقات. في مثالنا، نحدد علاقة واحد إلى متعدد (1-to-many) من اللاعب إلى الرهانات. تعني علامة `!` أن القيمة لا يمكن أن تكون فارغة. يمكن الاطلاع على الوثائق الكاملة [هنا](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
@@ -183,13 +183,13 @@ type Player @entity {
 
 ### التعيين (`mapping.ts`) {#mapping}
 
-يحدد ملف التعيين في `<span dir="ltr">The Graph</span>` دوالنا التي تحول الأحداث الواردة إلى كيانات. تمت كتابته بلغة `<span dir="ltr">AssemblyScript</span>`، وهي مجموعة فرعية من `<span dir="ltr">TypeScript</span>`. هذا يعني أنه يمكن تجميعه في `<span dir="ltr">WASM</span>` (`<span dir="ltr">WebAssembly</span>`) لتنفيذ التعيين بشكل أكثر كفاءة وقابلية للنقل.
+يحدد ملف التعيين في `The Graph` دوالنا التي تحول الأحداث الواردة إلى كيانات. تمت كتابته بلغة `AssemblyScript`، وهي مجموعة فرعية من `TypeScript`. هذا يعني أنه يمكن تجميعه في `WASM` (`WebAssembly`) لتنفيذ التعيين بشكل أكثر كفاءة وقابلية للنقل.
 
-ستحتاج إلى تحديد كل دالة مسماة في ملف `subgraph.yaml`، لذلك في حالتنا نحتاج إلى دالة واحدة فقط: `handleNewBet`. نحاول أولاً تحميل كيان اللاعب (`<span dir="ltr">Player</span>`) من عنوان المرسل كمعرف (`<span dir="ltr">id</span>`). إذا لم يكن موجوداً، نقوم بإنشاء كيان جديد ونملأه بقيم البداية.
+ستحتاج إلى تحديد كل دالة مسماة في ملف `subgraph.yaml`، لذلك في حالتنا نحتاج إلى دالة واحدة فقط: `handleNewBet`. نحاول أولاً تحميل كيان اللاعب (`Player`) من عنوان المرسل كمعرف (`id`). إذا لم يكن موجوداً، نقوم بإنشاء كيان جديد ونملأه بقيم البداية.
 
-ثم نقوم بإنشاء كيان رهان (`<span dir="ltr">Bet</span>`) جديد. سيكون المعرف (`<span dir="ltr">id</span>`) لهذا هو `event.transaction.hash.toHex() + "-" + event.logIndex.toString()` مما يضمن دائماً قيمة فريدة. استخدام التجزئة فقط ليس كافياً لأن شخصاً ما قد يستدعي دالة `placeBet` عدة مرات في معاملة واحدة عبر عقد ذكي.
+ثم نقوم بإنشاء كيان رهان (`Bet`) جديد. سيكون المعرف (`id`) لهذا هو `event.transaction.hash.toHex() + "-" + event.logIndex.toString()` مما يضمن دائماً قيمة فريدة. استخدام التجزئة فقط ليس كافياً لأن شخصاً ما قد يستدعي دالة `placeBet` عدة مرات في معاملة واحدة عبر عقد ذكي.
 
-أخيراً يمكننا تحديث كيان اللاعب (`<span dir="ltr">Player</span>`) بجميع البيانات. لا يمكن الدفع إلى المصفوفات مباشرة، ولكن يجب تحديثها كما هو موضح هنا. نستخدم المعرف (`<span dir="ltr">id</span>`) للإشارة إلى الرهان. و `.save()` مطلوب في النهاية لتخزين كيان.
+أخيراً يمكننا تحديث كيان اللاعب (`Player`) بجميع البيانات. لا يمكن الدفع إلى المصفوفات مباشرة، ولكن يجب تحديثها كما هو موضح هنا. نستخدم المعرف (`id`) للإشارة إلى الرهان. و `.save()` مطلوب في النهاية لتخزين كيان.
 
 يمكن الاطلاع على الوثائق الكاملة هنا: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. يمكنك أيضاً إضافة مخرجات التسجيل إلى ملف التعيين، انظر [هنا](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
@@ -235,7 +235,7 @@ export function handleNewBet(event: PlacedBet): void {
 
 ## استخدامه في الواجهة الأمامية {#using-it-in-the-frontend}
 
-باستخدام شيء مثل `<span dir="ltr">Apollo Boost</span>`، يمكنك بسهولة دمج `<span dir="ltr">The Graph</span>` في تطبيق `<span dir="ltr">React</span>` اللامركزي الخاص بك (أو `<span dir="ltr">Apollo-Vue</span>`). خاصة عند استخدام خطافات `<span dir="ltr">React</span>` و `<span dir="ltr">Apollo</span>`، فإن جلب البيانات بسيط مثل كتابة استعلام `<span dir="ltr">GraphQL</span>` واحد في المكون الخاص بك. قد يبدو الإعداد النموذجي هكذا:
+باستخدام شيء مثل `Apollo Boost`، يمكنك بسهولة دمج `The Graph` في تطبيق `React` اللامركزي الخاص بك (أو `Apollo-Vue`). خاصة عند استخدام خطافات `React` و `Apollo`، فإن جلب البيانات بسيط مثل كتابة استعلام `GraphQL` واحد في المكون الخاص بك. قد يبدو الإعداد النموذجي هكذا:
 
 ```javascript
 // عرض جميع الرسوم البيانية الفرعية: https://thegraph.com/explorer/
@@ -257,7 +257,7 @@ ReactDOM.render(
 - كم مرة خسر المستخدم الحالي
 - قائمة بالطوابع الزمنية مع جميع رهاناته السابقة
 
-كل ذلك في طلب واحد لخادم `<span dir="ltr">GraphQL</span>`.
+كل ذلك في طلب واحد لخادم `GraphQL`.
 
 ```javascript
 const myGraphQlQuery = gql`
@@ -284,9 +284,9 @@ React.useEffect(() => {
 
 لكننا نفتقد قطعة أخيرة من اللغز وهي الخادم. يمكنك إما تشغيله بنفسك أو استخدام الخدمة المستضافة.
 
-## خادم `<span dir="ltr">The Graph</span>` {#the-graph-server}
+## خادم `The Graph` {#the-graph-server}
 
-### مستكشف `<span dir="ltr">Graph</span>`: الخدمة المستضافة {#graph-explorer-the-hosted-service}
+### مستكشف `Graph`: الخدمة المستضافة {#graph-explorer-the-hosted-service}
 
 أسهل طريقة هي استخدام الخدمة المستضافة. اتبع التعليمات [هنا](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) لنشر رسم بياني فرعي. بالنسبة للعديد من المشاريع، يمكنك في الواقع العثور على رسوم بيانية فرعية موجودة في [المستكشف](https://thegraph.com/explorer/).
 
@@ -298,11 +298,11 @@ React.useEffect(() => {
 
 ## المستقبل اللامركزي {#the-decentralized-future}
 
-يدعم `<span dir="ltr">GraphQL</span>` التدفقات أيضاً للأحداث الواردة حديثاً. هذه مدعومة على `<span dir="ltr">The Graph</span>` من خلال [التدفقات الفرعية (`<span dir="ltr">Substreams</span>`)](https://thegraph.com/docs/en/substreams/) والتي هي حالياً في مرحلة تجريبية مفتوحة.
+يدعم `GraphQL` التدفقات أيضاً للأحداث الواردة حديثاً. هذه مدعومة على `The Graph` من خلال [التدفقات الفرعية (`Substreams`)](https://thegraph.com/docs/en/substreams/) والتي هي حالياً في مرحلة تجريبية مفتوحة.
 
-في عام [2021](https://thegraph.com/blog/mainnet-migration/) بدأ `<span dir="ltr">The Graph</span>` انتقاله إلى شبكة فهرسة لامركزية. يمكنك قراءة المزيد عن بنية شبكة الفهرسة اللامركزية هذه [هنا](https://thegraph.com/docs/en/network/explorer/).
+في عام [2021](https://thegraph.com/blog/mainnet-migration/) بدأ `The Graph` انتقاله إلى شبكة فهرسة لامركزية. يمكنك قراءة المزيد عن بنية شبكة الفهرسة اللامركزية هذه [هنا](https://thegraph.com/docs/en/network/explorer/).
 
 هناك جانبان رئيسيان هما:
 
 1. يدفع المستخدمون للمفهرسين مقابل الاستعلامات.
-2. يقوم المفهرسون بتخزين حصة من رموز `<span dir="ltr">Graph</span>` (`<span dir="ltr">GRT</span>`).
+2. يقوم المفهرسون بتخزين حصة من رموز `Graph` (`GRT`).

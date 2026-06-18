@@ -1,9 +1,9 @@
 ---
 title: "The Graph：解決 Web3 資料查詢問題"
-description: 區塊鏈就像一個沒有 SQL 的資料庫。所有資料都在那裡，但無法存取。讓我向你展示如何使用 The Graph 和 GraphQL 來解決這個問題。
-author: 馬庫斯·瓦斯
+description: "區塊鏈就像一個沒有 SQL 的資料庫。所有資料都在那裡，但無法存取。讓我向你展示如何使用 The Graph 和 GraphQL 來解決這個問題。"
+author: "馬庫斯·瓦斯"
 lang: zh-tw
-tags: ["solidity", "智能合約", "查詢", "the graph", "react"]
+tags: ["Solidity", "智能合約", "查詢", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

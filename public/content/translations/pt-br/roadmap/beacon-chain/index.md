@@ -1,6 +1,6 @@
 ---
 title: A Beacon Chain
-description: Aprenda sobre a Beacon Chain - a atualização que introduziu a Prova de Participação (PoS) no Ethereum.
+description: "Aprenda sobre a Beacon Chain - a atualização que introduziu a Prova de Participação (PoS) no Ethereum."
 lang: pt-br
 template: upgrade
 image: /images/upgrades/core.png

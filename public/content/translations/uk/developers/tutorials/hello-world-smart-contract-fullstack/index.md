@@ -1,13 +1,13 @@
 ---
-title: Смарт-контракт Hello World для початківців — Fullstack
-description: Вступний посібник із написання та розгортання простого смарт-контракту в Етеріумі.
+title: "Смарт-контракт Hello World для початківців — Fullstack"
+description: "Вступний посібник із написання та розгортання простого смарт-контракту в Етеріумі."
 author: "nstrike2"
 breadcrumb: Hello World fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "смарт-контракти",
     "розгортання",
     "оглядач блоків",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

@@ -1,11 +1,11 @@
 ---
-title: Jak mockować inteligentne kontrakty w Solidity do testowania
-description: Dlaczego warto naśmiewać się ze swoich kontraktów podczas testowania
+title: "Jak mockować inteligentne kontrakty w Solidity do testowania"
+description: "Dlaczego warto naśmiewać się ze swoich kontraktów podczas testowania"
 author: Markus Waas
 lang: pl
-tags: ["solidity", "inteligentne kontrakty", "testowanie", "mockowanie"]
+tags: ["Solidity", "inteligentne kontrakty", "testowanie", "mockowanie"]
 skill: intermediate
-breadcrumb: Mockowanie kontraktów
+breadcrumb: "Mockowanie kontraktów"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

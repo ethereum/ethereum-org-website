@@ -1,6 +1,6 @@
 ---
 title: Plasma zincirleri
-description: Ethereum topluluğu tarafından şu anda kullanılan bir ölçeklendirme çözümü olan Plasma zincirlerine giriş.
+description: "Ethereum topluluğu tarafından şu anda kullanılan bir ölçeklendirme çözümü olan Plasma zincirlerine giriş."
 lang: tr
 incomplete: true
 sidebarDepth: 3

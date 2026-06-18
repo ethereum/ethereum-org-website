@@ -1,6 +1,6 @@
 ---
-title: 이더리움 개발 문서
-description: ethereum.org 개발자 문서를 소개합니다.
+title: "이더리움 개발 문서"
+description: "ethereum.org 개발자 문서를 소개합니다."
 lang: ko
 ---
 

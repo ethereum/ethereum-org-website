@@ -1,6 +1,6 @@
 ---
-title: बीकन साखळी
-description: बीकन साखळीबद्दल जाणून घ्या - हा अपग्रेड ज्याने इथेरियममध्ये प्रूफ-ऑफ-स्टेक (PoS) आणले.
+title: "बीकन साखळी"
+description: "बीकन साखळीबद्दल जाणून घ्या - हा अपग्रेड ज्याने इथेरियममध्ये प्रूफ-ऑफ-स्टेक (PoS) आणले."
 lang: mr
 template: upgrade
 image: /images/upgrades/core.png

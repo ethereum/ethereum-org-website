@@ -1,5 +1,5 @@
 ---
-title: Prognosemärkte
+title: "Prognosemärkte"
 lang: de
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ Es gibt mehrere Ethereum-basierte Prognosemärkte. Dies sind einige der heute be
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Behalte die Risiken im Hinterkopf</strong></strong>
+ <p className="mt-0"><strong>Behalte die Risiken im Hinterkopf</strong>
   <p className="mt-2">Wette nur, was du dir leisten kannst, und sei dir möglicher Suchtgefahren bewusst.</p>
 </AlertDescription>
 </AlertContent>

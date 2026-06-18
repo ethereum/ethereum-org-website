@@ -1,11 +1,11 @@
 ---
 title: Restaking
-metaTitle: ¿Qué es el restaking? | Beneficios y uso del restaking
+metaTitle: "¿Qué es el restaking? | Beneficios y uso del restaking"
 description: Usa ETH en staking para asegurar otros servicios descentralizados y ganar recompensas adicionales.
 lang: es
 template: use-cases
 image: /images/use-cases/restaking.png
-alt: Una representación visual del restaking en Ethereum.
+alt: "Una representación visual del restaking en Ethereum."
 sidebarDepth: 2
 summaryPoints:
   - "Usa ETH en staking para asegurar otros servicios descentralizados y ganar recompensas adicionales."
@@ -39,7 +39,7 @@ De la misma manera que muchos participantes de ETH ejecutan software de validaci
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Es bueno saberlo</strong></strong>
+ <p className="mt-0"><strong>Es bueno saberlo</strong>
   <p className="mt-2">Aunque "Servicios Validados Activamente" (AVS) es el término más común, diferentes plataformas de restaking pueden usar otros nombres para los servicios descentralizados que ayudan a asegurar, como "Servicios Validados Autónomamente", "Servicios Seguros Distribuidos" o "Redes".</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ En este mundo con restaking, tanto el AVS como el participante se benefician de 
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Beneficio adicional del restaking</strong></strong>
+ <p className="mt-0"><strong>Beneficio adicional del restaking</strong>
   <p className="mt-2">Los AVS pueden destinar todos sus recursos a construir y comercializar sus servicios, en lugar de distraerse con la descentralización y la seguridad.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ Hay varias entidades involucradas en el restaking; cada una de ellas juega un pa
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Es bueno saberlo</strong></strong>
+ <p className="mt-0"><strong>Es bueno saberlo</strong>
   <p className="mt-2">Los restakers nativos y líquidos a menudo delegan su ETH en staking a un operador, en lugar de ejecutar ellos mismos el software para asegurar los AVS.</p>
   <p className="mt-2">De esta manera, no necesitan preocuparse por los complicados requisitos técnicos de los AVS, aunque reciben una tasa de recompensa menor que los operadores.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ Aunque es una idea novedosa, han surgido algunos proyectos para explorar las pos
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Alerta de término incorrecto</strong></strong>
+ <p className="mt-0"><strong>Alerta de término incorrecto</strong>
   <p className="mt-2">Algunas personas confunden el "restaking" con los préstamos y la toma de préstamos de LST en las finanzas descentralizadas (DeFi). Ambos ponen a trabajar el ETH en staking, pero el restaking significa asegurar AVS, no solo ganar rendimiento sobre los LST.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,10 +139,10 @@ Aunque los AVS ofrecen diferentes tasas, los tokens de restaking líquido (LRT) 
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>El cofundador de Ethereum está escribiendo…</strong></strong>
+ <p className="mt-0"><strong>El cofundador de Ethereum está escribiendo…</strong>
   <p className="mt-2">
     Vitalik, el cofundador de Ethereum, advirtió sobre los riesgos potenciales del restaking en una publicación de blog de 2021 llamada <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus (No sobrecargues el consenso).</a>
-  </a>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -161,7 +161,7 @@ Aunque los AVS ofrecen diferentes tasas, los tokens de restaking líquido (LRT) 
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Staking de Ethereum:</strong> ¿Cómo funciona?</strong>
+ <p className="mt-0"><strong>Staking de Ethereum:</strong> ¿Cómo funciona?
   <ButtonLink href="/staking/">
     Más información
   </ButtonLink>

@@ -1,11 +1,11 @@
 ---
-title: 토큰 연동 체크리스트
-description: 토큰과 상호작용할 때 고려해야 할 사항들의 체크리스트
+title: "토큰 연동 체크리스트"
+description: "토큰과 상호작용할 때 고려해야 할 사항들의 체크리스트"
 author: "트레일오브비츠"
 lang: ko
-tags: ["solidity", "스마트 컨트랙트", "보안", "토큰"]
+tags: ["Solidity", "스마트 컨트랙트", "보안", "토큰"]
 skill: intermediate
-breadcrumb: 토큰 연동
+breadcrumb: "토큰 연동"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

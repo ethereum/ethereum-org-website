@@ -1,6 +1,6 @@
 ---
-title: సాధారణ శ్రేణీకరణ
-description: ఎథీరియం యొక్క ⁦SSZ⁩ ఫార్మాట్ వివరణ.
+title: "సాధారణ శ్రేణీకరణ"
+description: "ఎథీరియం యొక్క ⁦SSZ⁩ ఫార్మాట్ వివరణ."
 lang: te
 sidebarDepth: 2
 ---

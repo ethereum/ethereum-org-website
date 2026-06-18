@@ -1,6 +1,6 @@
 ---
-title: Norme de coffre-fort tokenisé ERC-4626
-description: Une norme pour les coffres-forts générateurs de rendement.
+title: "Norme de coffre-fort tokenisé ERC-4626"
+description: "Une norme pour les coffres-forts générateurs de rendement."
 lang: fr
 ---
 

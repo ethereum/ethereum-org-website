@@ -1,9 +1,9 @@
 ---
-title: Una guía sobre herramientas de seguridad para contratos inteligentes
-description: Una descripción general de tres técnicas diferentes de pruebas y análisis de programas
+title: "Una guía sobre herramientas de seguridad para contratos inteligentes"
+description: "Una descripción general de tres técnicas diferentes de pruebas y análisis de programas"
 author: "Trailofbits"
 lang: es
-tags: ["solidity", "contratos inteligentes", "seguridad"]
+tags: ["Solidity", "contratos inteligentes", "seguridad"]
 skill: intermediate
 breadcrumb: Herramientas de seguridad
 published: 2020-09-07

@@ -3,7 +3,7 @@ title: Lista di controllo per l'integrazione dei token
 description: Una lista di controllo delle cose da considerare quando si interagisce con i token
 author: "Trailofbits"
 lang: it
-tags: ["solidity", "smart contract", "sicurezza", "token"]
+tags: ["Solidity", "smart contract", "sicurezza", "token"]
 skill: intermediate
 breadcrumb: Integrazione dei token
 published: 2020-08-13

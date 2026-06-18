@@ -1,6 +1,6 @@
 ---
-title: 節點架構
-description: 介紹以太坊節點的組織方式。
+title: "節點架構"
+description: "介紹以太坊節點的組織方式。"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: बीकन चेन
-description: बीकन चेन के बारे में जानें - वह अपग्रेड जिसने प्रूफ-ऑफ़-स्टेक इथेरियम पेश किया।
+title: "बीकन चेन"
+description: "बीकन चेन के बारे में जानें - वह अपग्रेड जिसने प्रूफ-ऑफ़-स्टेक इथेरियम पेश किया।"
 lang: hi
 template: upgrade
 image: /images/upgrades/core.png

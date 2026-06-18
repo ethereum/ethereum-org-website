@@ -1,14 +1,14 @@
 ---
-title: 编写一个保护隐私的特定应用等离子体
-description: 在本教程中，我们将构建一个用于存款的半秘密银行。该银行是一个中心化组件；它知道每个用户的余额。然而，这些信息并不存储在链上。相反，银行会发布状态的哈希。每次发生交易时，银行都会发布新的哈希，以及一个零知识证明，证明它有一个已签名的交易将哈希状态更改为新状态。阅读本教程后，你不仅会了解如何使用零知识证明，还会了解为什么要使用它们以及如何安全地使用它们。
-author: 奥里·波梅兰茨
+title: "编写一个保护隐私的特定应用等离子体"
+description: "在本教程中，我们将构建一个用于存款的半秘密银行。该银行是一个中心化组件；它知道每个用户的余额。然而，这些信息并不存储在链上。相反，银行会发布状态的哈希。每次发生交易时，银行都会发布新的哈希，以及一个零知识证明，证明它有一个已签名的交易将哈希状态更改为新状态。阅读本教程后，你不仅会了解如何使用零知识证明，还会了解为什么要使用它们以及如何安全地使用它们。"
+author: "奥里·波梅兰茨"
 tags:
   - 零知识
   - 服务器
   - 链下
   - 隐私
 skill: advanced
-breadcrumb: 特定应用等离子体
+breadcrumb: "特定应用等离子体"
 lang: zh
 published: 2025-10-15
 ---
@@ -164,7 +164,7 @@ ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
-   ```
+      ```
 
 10. 将最后两个值与你在 Web 浏览器上看到的哈希进行比较，以查看消息是否被正确哈希。
 
@@ -862,7 +862,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
@@ -1033,7 +1033,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 

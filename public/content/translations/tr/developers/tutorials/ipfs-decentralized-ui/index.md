@@ -1,13 +1,13 @@
 ---
-title: Merkeziyetsiz kullanıcı arayüzleri için IPFS
-description: Bu eğitim, okuyucuya bir dapp'in kullanıcı arayüzünü depolamak için IPFS'nin nasıl kullanılacağını öğretir. Uygulamanın verileri ve iş mantığı merkeziyetsiz olsa da, sansüre dirençli bir kullanıcı arayüzü olmadan kullanıcılar uygulamaya erişimlerini yine de kaybedebilirler.
+title: "Merkeziyetsiz kullanıcı arayüzleri için IPFS"
+description: "Bu eğitim, okuyucuya bir dapp'in kullanıcı arayüzünü depolamak için IPFS'nin nasıl kullanılacağını öğretir. Uygulamanın verileri ve iş mantığı merkeziyetsiz olsa da, sansüre dirençli bir kullanıcı arayüzü olmadan kullanıcılar uygulamaya erişimlerini yine de kaybedebilirler."
 author: Ori Pomerantz
 tags:
   - ipfs
   - dapps
   - ön yüz
 skill: beginner
-breadcrumb: Dapp arayüzleri için IPFS
+breadcrumb: "Dapp arayüzleri için IPFS"
 lang: tr
 published: 2024-06-29
 ---

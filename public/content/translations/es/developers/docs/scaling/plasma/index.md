@@ -1,6 +1,6 @@
 ---
 title: Cadenas Plasma
-description: Una introducción a las cadenas Plasma como solución de escalabilidad utilizada actualmente por la comunidad de Ethereum.
+description: "Una introducción a las cadenas Plasma como solución de escalabilidad utilizada actualmente por la comunidad de Ethereum."
 lang: es
 incomplete: true
 sidebarDepth: 3

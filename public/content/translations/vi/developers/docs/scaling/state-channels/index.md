@@ -1,6 +1,6 @@
 ---
-title: Kênh trạng thái
-description: Giới thiệu về kênh trạng thái và kênh thanh toán như một giải pháp mở rộng quy mô hiện đang được cộng đồng Ethereum sử dụng.
+title: "Kênh trạng thái"
+description: "Giới thiệu về kênh trạng thái và kênh thanh toán như một giải pháp mở rộng quy mô hiện đang được cộng đồng Ethereum sử dụng."
 lang: vi
 sidebarDepth: 3
 ---

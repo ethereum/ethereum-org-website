@@ -1,13 +1,13 @@
 ---
-title: शुरुआती लोगों के लिए हैलो वर्ल्ड स्मार्ट अनुबंध - फुलस्टैक
-description: इथेरियम पर एक सरल स्मार्ट अनुबंध लिखने और तैनात करने पर परिचयात्मक ट्यूटोरियल।
+title: "शुरुआती लोगों के लिए हैलो वर्ल्ड स्मार्ट अनुबंध - फुलस्टैक"
+description: "इथेरियम पर एक सरल स्मार्ट अनुबंध लिखने और तैनात करने पर परिचयात्मक ट्यूटोरियल।"
 author: "nstrike2"
-breadcrumb: हैलो वर्ल्ड फुलस्टैक
+breadcrumb: "हैलो वर्ल्ड फुलस्टैक"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "स्मार्ट अनुबंध",
     "तैनाती",
     "ब्लॉक एक्सप्लोरर",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

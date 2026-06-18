@@ -1,6 +1,6 @@
 ---
 title: Estrategias de almacenamiento de datos en la cadena de bloques
-description: Existen varias formas de almacenar datos utilizando la cadena de bloques. Este artículo comparará las diferentes estrategias, sus costos y compensaciones, así como los requisitos para usarlas de manera segura.
+description: "Existen varias formas de almacenar datos utilizando la cadena de bloques. Este artículo comparará las diferentes estrategias, sus costos y compensaciones, así como los requisitos para usarlas de manera segura."
 lang: es
 ---
 
@@ -110,7 +110,7 @@ Esta tabla resume las diferentes opciones, sus ventajas y desventajas.
 
 | Tipo de almacenamiento      | Fuente de datos     | Garantía de disponibilidad                                                                                                         | Disponibilidad en cadena                                         | Limitaciones adicionales                                                |
 | --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Blobs de EIP-4844           | Fuera de la cadena  | Garantía de Ethereum por [~18 días](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Solo el hash está disponible                                     |                                                                         |
+| Blobs de EIP-4844           | Fuera de la cadena  | Garantía de Ethereum por [\~18 días](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Solo el hash está disponible                                     |                                                                         |
 | Datos de llamada (Calldata) | Fuera de la cadena  | Garantía de Ethereum para siempre (parte de la cadena de bloques)                                                                  | Solo disponible si se escribe en un contrato, y en esa transacción |                                                                         |
 | Fuera de la cadena con mecanismos de capa 1 (L1) | Fuera de la cadena  | Garantía de "un verificador honesto" durante el período de desafío                                                                 | Solo el hash                                                     | Garantizado por el mecanismo de desafío, solo durante el período de desafío |
 | Código de contrato          | En cadena o fuera de la cadena | Garantía de Ethereum para siempre (parte de la cadena de bloques)                                                                  | Sí                                                               | Escrito en una dirección "aleatoria", no puede comenzar con `0xEF` |

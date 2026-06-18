@@ -1,13 +1,13 @@
 ---
-title: Chytrý kontrakt Hello World pro začátečníky – Fullstack
-description: Úvodní tutoriál o psaní a nasazení jednoduchého chytrého kontraktu na Ethereu.
+title: "Chytrý kontrakt Hello World pro začátečníky – Fullstack"
+description: "Úvodní tutoriál o psaní a nasazení jednoduchého chytrého kontraktu na Ethereu."
 author: "nstrike2"
 breadcrumb: Hello World fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "chytré kontrakty",
     "nasazení",
     "průzkumník bloků",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

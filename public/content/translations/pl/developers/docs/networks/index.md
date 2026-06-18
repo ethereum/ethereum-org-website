@@ -1,6 +1,6 @@
 ---
 title: Sieci
-description: Przegląd sieci Ethereum oraz informacje, gdzie zdobyć testowe ethery (ETH) do testowania Twojej aplikacji.
+description: "Przegląd sieci Ethereum oraz informacje, gdzie zdobyć testowe ethery (ETH) do testowania Twojej aplikacji."
 lang: pl
 ---
 
@@ -40,7 +40,7 @@ Dwie publiczne sieci testowe, które są obecnie utrzymywane przez deweloperów 
 
 **Sepolia to zalecana domyślna sieć testowa do tworzenia aplikacji**. Sieć Sepolia wykorzystuje zestaw walidatorów wymagający zezwolenia, kontrolowany przez zespoły klienckie i testowe.
 
-##### Zasoby {#hoodi}
+##### Zasoby {#} {#}
 
 - [Strona internetowa](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Dwie publiczne sieci testowe, które są obecnie utrzymywane przez deweloperów 
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Kraniki {#ephemery}
+##### Kraniki {#} {#}
 
 - [Kranik Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Kranik Chain Platform Sepolia](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -61,7 +61,7 @@ Dwie publiczne sieci testowe, które są obecnie utrzymywane przez deweloperów 
 - [Kranik PoW](https://sepolia-faucet.pk910.de/)
 - [Kranik QuickNode Sepolia](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Hoodi {#faucets}
+#### Hoodi {#hoodi}
 
 Hoodi to sieć testowa do testowania walidacji i stakingu. Sieć Hoodi jest otwarta dla użytkowników chcących uruchomić walidator w sieci testowej. Stakerzy chcący przetestować aktualizacje protokołu przed ich wdrożeniem do sieci głównej powinni zatem korzystać z Hoodi.
 
@@ -69,7 +69,7 @@ Hoodi to sieć testowa do testowania walidacji i stakingu. Sieć Hoodi jest otwa
 - Duży stan, przydatny do testowania złożonych interakcji inteligentnych kontraktów
 - Dłuższa synchronizacja i wymaga więcej pamięci masowej do uruchomienia węzła
 
-##### Zasoby {#holesky}
+##### Zasoby {#}
 
 - [Strona internetowa](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,13 +78,13 @@ Hoodi to sieć testowa do testowania walidacji i stakingu. Sieć Hoodi jest otwa
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Kraniki {#layer-2-testnets}
+##### Kraniki {#}
 
 - [Kranik Chain Platform Hoodi](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Kranik Hoodi](https://hoodi.ethpandaops.io/)
 - [Kranik PoW](https://hoodi-faucet.pk910.de/)
 
-#### Ephemery {#arbitrum-sepolia}
+#### Ephemery {#ephemery}
 
 Ephemery to unikalny rodzaj sieci testowej, która w pełni resetuje się co miesiąc. Stan wykonania i konsensusu powraca do bloku genezy co 28 dni, co oznacza, że wszystko, co dzieje się w sieci testowej, jest ulotne. Dzięki temu jest idealna do krótkoterminowych testów, szybkiego uruchamiania węzłów i aplikacji typu „hello world”, które nie wymagają trwałości.
 
@@ -93,7 +93,7 @@ Ephemery to unikalny rodzaj sieci testowej, która w pełni resetuje się co mie
 - Otwarty zestaw walidatorów i łatwy dostęp do dużych ilości środków
 - Najmniejsze wymagania dla węzła i najszybsza synchronizacja, średnio &lt;5GB
 
-##### Zasoby {#optimistic-sepolia}
+##### Zasoby {#}
 
 - [Strona internetowa](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -104,55 +104,55 @@ Ephemery to unikalny rodzaj sieci testowej, która w pełni resetuje się co mie
 - [Synchronizacja punktu kontrolnego](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
-#### Kraniki {#starknet-sepolia}
+#### Kraniki {#faucets}
 
 - [Kranik Bordel](https://faucet.bordel.wtf/)
 - [Kranik Pk910 PoW](https://ephemery-faucet.pk910.de/)
 
-#### Holesky (przestarzała) {#private-networks}
+#### Holesky (przestarzała) {#holesky}
 
 Sieć testowa Holesky jest przestarzała od września 2025 r. Operatorzy stakingu i dostawcy infrastruktury powinni zamiast tego używać Hoodi do testowania walidatorów.
 
 - [Ogłoszenie o wyłączeniu sieci testowej Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _Blog EF, 1 września 2025 r._
 - [Aktualizacje sieci testowych Holesky i Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _Blog EF, 18 marca 2025 r._
 
-### Sieci testowe warstwy 2 {#development-networks}
+### Sieci testowe warstwy 2 {#layer-2-testnets}
 
 [Warstwa 2 (L2)](/layer-2/) to zbiorcze określenie opisujące określony zestaw rozwiązań skalujących Ethereum. Warstwa 2 to oddzielny blockchain, który rozszerza Ethereum i dziedziczy jego gwarancje bezpieczeństwa. Sieci testowe warstwy 2 są zazwyczaj ściśle powiązane z publicznymi sieciami testowymi Ethereum.
 
-#### Arbitrum Sepolia {#consortium-networks}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Sieć testowa dla [Arbitrum](https://arbitrum.io/).
 
-##### Zasoby {#why-naming}
+##### Zasoby {#}
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Kraniki {#common-and-legacy-testnets}
+##### Kraniki {#}
 
 - [Kranik Alchemy Arbitrum Sepolia](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Kranik Chainlink Arbitrum Sepolia](https://faucets.chain.link/arbitrum-sepolia)
 - [Kranik ethfaucet.com Arbitrum Sepolia](https://ethfaucet.com/networks/arbitrum)
 - [Kranik QuickNode Arbitrum Sepolia](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Sepolia {#other-testnets}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Sieć testowa dla [Optimism](https://www.optimism.io/).
 
-##### Zasoby {#related-tools}
+##### Zasoby {#}
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Kraniki {#further-reading}
+##### Kraniki {#}
 
 - [Kranik Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Kranik Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Kranik ethfaucet.com Optimism Sepolia](https://ethfaucet.com/networks/optimism)
 - [Kranik sieci testowej](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet Sepolia
+#### Starknet Sepolia {#starknet-sepolia}
 
 Sieć testowa dla [Starknet](https://www.starknet.io).
 
@@ -166,27 +166,27 @@ Sieć testowa dla [Starknet](https://www.starknet.io).
 - [Kranik Blast Starknet Sepolia](https://blastapi.io/faucets/starknet-sepolia-eth)
 - [Kranik Starknet](https://starknet-faucet.vercel.app/)
 
-## Sieci prywatne
+## Sieci prywatne {#private-networks}
 
 Sieć Ethereum jest siecią prywatną, jeśli jej węzły nie są połączone z siecią publiczną (tj. siecią główną lub siecią testową). W tym kontekście słowo „prywatna” oznacza jedynie zarezerwowana lub odizolowana, a nie chroniona czy bezpieczna.
 
-### Sieci deweloperskie
+### Sieci deweloperskie {#development-networks}
 
 Aby stworzyć aplikację Ethereum, będziesz chciał uruchomić ją w sieci prywatnej, aby zobaczyć, jak działa, przed jej wdrożeniem. Podobnie jak tworzysz lokalny serwer na swoim komputerze do tworzenia stron internetowych, możesz utworzyć lokalną instancję blockchaina, aby przetestować swoją zdecentralizowaną aplikację (dapp). Pozwala to na znacznie szybszą iterację niż w przypadku publicznej sieci testowej.
 
 Istnieją projekty i narzędzia dedykowane do pomocy w tym zakresie. Dowiedz się więcej o [sieciach deweloperskich](/developers/docs/development-networks/).
 
-### Sieci konsorcjum
+### Sieci konsorcjum {#consortium-networks}
 
 Proces konsensusu jest kontrolowany przez wstępnie zdefiniowany zestaw zaufanych węzłów. Na przykład prywatna sieć znanych instytucji akademickich, z których każda zarządza jednym węzłem, a bloki są walidowane przez próg sygnatariuszy w sieci.
 
 Jeśli publiczna sieć Ethereum przypomina publiczny internet, sieć konsorcjum przypomina prywatny intranet.
 
-## <Emoji text="🚉" /> Dlaczego sieci testowe Ethereum noszą nazwy stacji metra?
+## <Emoji text="🚉" /> Dlaczego sieci testowe Ethereum noszą nazwy stacji metra? {#why-naming}
 
 Wiele sieci testowych Ethereum nosi nazwy prawdziwych stacji metra lub pociągów. Ta tradycja nazewnictwa rozpoczęła się wcześnie i odzwierciedla globalne miasta, w których mieszkali lub pracowali współtwórcy. Jest to symboliczne, łatwe do zapamiętania i praktyczne. Podobnie jak sieci testowe są odizolowane od sieci głównej Ethereum, linie metra biegną oddzielnie od ruchu naziemnego.
 
-### <Emoji text="🚧" /> Powszechnie używane i starsze sieci testowe
+### <Emoji text="🚧" /> Powszechnie używane i starsze sieci testowe {#common-and-legacy-testnets}
 
 - **Sepolia** - Dzielnica w Atenach (Grecja) połączona z metrem. Obecnie używana do testowania inteligentnych kontraktów i zdecentralizowanych aplikacji (dapp).
 - **Hoodi** - Nazwana na cześć stacji metra Hoodi w Bengaluru (Indie). Używana do testowania walidatorów i aktualizacji protokołu.
@@ -196,7 +196,7 @@ Wiele sieci testowych Ethereum nosi nazwy prawdziwych stacji metra lub pociągó
 - **Kovan** _(przestarzała)_ - Nazwana na cześć stacji MRT w Singapurze.
 - **Morden** _(przestarzała)_ - Nazwana na cześć stacji londyńskiego metra. Pierwsza publiczna sieć testowa Ethereum.
 
-### <Emoji text="🧪" /> Inne specjalistyczne sieci testowe
+### <Emoji text="🧪" /> Inne specjalistyczne sieci testowe {#other-testnets}
 
 Niektóre sieci testowe zostały stworzone do krótkoterminowych testów lub testów specyficznych dla aktualizacji i niekoniecznie mają motyw metra:
 
@@ -205,12 +205,12 @@ Niektóre sieci testowe zostały stworzone do krótkoterminowych testów lub tes
 
 Używanie nazw stacji metra pomaga deweloperom szybko identyfikować i zapamiętywać sieci testowe bez konieczności polegania na numerycznych identyfikatorach łańcucha (chain ID). Odzwierciedla to również kulturę Ethereum: praktyczną, globalną i skoncentrowaną na człowieku.
 
-## Powiązane narzędzia
+## Powiązane narzędzia {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _lista sieci EVM do łączenia portfeli i dostawców z odpowiednim identyfikatorem łańcucha (Chain ID) i identyfikatorem sieci (Network ID)_
 - [Łańcuchy oparte na EVM](https://github.com/ethereum-lists/chains) _repozytorium GitHub z metadanymi łańcuchów, które zasila Chainlist_
 
-## Dalsza lektura
+## Dalsza lektura {#further-reading}
 
 - [Propozycja: Przewidywalny cykl życia sieci testowej Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [Ewolucja sieci testowych Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

@@ -1,6 +1,6 @@
 ---
 title: Standardy programowania w Ethereum
-description: Dowiedz się o standardach Ethereum, w tym o EIP, standardach tokenów, takich jak ERC-20 i ERC-721, oraz konwencjach programistycznych.
+description: "Dowiedz się o standardach Ethereum, w tym o EIP, standardach tokenów, takich jak ERC-20 i ERC-721, oraz konwencjach programistycznych."
 lang: pl
 incomplete: true
 ---

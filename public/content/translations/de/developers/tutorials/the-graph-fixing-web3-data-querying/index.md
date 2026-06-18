@@ -1,9 +1,9 @@
 ---
 title: "The Graph: Die Lösung für Web3-Datenabfragen"
-description: Eine Blockchain ist wie eine Datenbank, aber ohne SQL. Alle Daten sind vorhanden, aber es gibt keine Möglichkeit, darauf zuzugreifen. Lass mich dir zeigen, wie man das mit The Graph und GraphQL löst.
+description: "Eine Blockchain ist wie eine Datenbank, aber ohne SQL. Alle Daten sind vorhanden, aber es gibt keine Möglichkeit, darauf zuzugreifen. Lass mich dir zeigen, wie man das mit The Graph und GraphQL löst."
 author: Markus Waas
 lang: de
-tags: ["solidity", "Smart Contracts", "Abfragen", "the graph", "react"]
+tags: ["Solidity", "Smart Contracts", "Abfragen", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

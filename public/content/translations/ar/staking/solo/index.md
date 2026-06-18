@@ -5,7 +5,7 @@ lang: ar
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: وحيد القرن ليزلي على شريحة الكمبيوتر الخاصة بها.
+alt: "وحيد القرن ليزلي على شريحة الكمبيوتر الخاصة بها."
 sidebarDepth: 2
 summaryPoints:
   - احصل على أقصى المكافآت مباشرة من البروتوكول للحفاظ على عمل المُدَقِّق الخاص بك بشكل صحيح واتصاله بالإنترنت

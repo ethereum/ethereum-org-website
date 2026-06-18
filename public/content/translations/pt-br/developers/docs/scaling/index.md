@@ -1,6 +1,6 @@
 ---
 title: Escalonamento
-description: Uma introdução às diferentes opções de escalonamento atualmente em desenvolvimento pela comunidade Ethereum.
+description: "Uma introdução às diferentes opções de escalonamento atualmente em desenvolvimento pela comunidade Ethereum."
 lang: pt-br
 sidebarDepth: 3
 ---

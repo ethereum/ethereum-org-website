@@ -1,6 +1,6 @@
 ---
-title: Veri kullanılabilirliği
-description: Ethereum'daki veri kullanılabilirliği ile ilgili sorunlara ve çözümlere genel bir bakış
+title: "Veri kullanılabilirliği"
+description: "Ethereum'daki veri kullanılabilirliği ile ilgili sorunlara ve çözümlere genel bir bakış"
 lang: tr
 ---
 

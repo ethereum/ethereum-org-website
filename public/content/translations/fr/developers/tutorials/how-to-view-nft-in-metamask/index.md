@@ -1,6 +1,6 @@
 ---
-title: Comment afficher votre NFT dans votre portefeuille (Partie 3/3 de la série de tutoriels sur les NFT)
-description: Ce tutoriel décrit comment afficher un NFT existant sur MetaMask !
+title: "Comment afficher votre NFT dans votre portefeuille (Partie 3/3 de la série de tutoriels sur les NFT)"
+description: "Ce tutoriel décrit comment afficher un NFT existant sur MetaMask !"
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner

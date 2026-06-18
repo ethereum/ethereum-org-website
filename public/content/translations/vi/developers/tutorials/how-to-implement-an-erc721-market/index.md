@@ -1,10 +1,10 @@
 ---
-title: Cách triển khai một thị trường ERC-721
-description: Cách đăng bán các mặt hàng đã được mã hóa trên một bảng rao vặt phi tập trung
+title: "Cách triển khai một thị trường ERC-721"
+description: "Cách đăng bán các mặt hàng đã được mã hóa trên một bảng rao vặt phi tập trung"
 author: "Alberto Cuesta Cañada"
-tags: ["hợp đồng thông minh", "erc-721", "solidity", "token"]
+tags: ["hợp đồng thông minh", "erc-721", "Solidity", "token"]
 skill: intermediate
-breadcrumb: Thị trường ERC-721
+breadcrumb: "Thị trường ERC-721"
 lang: vi
 published: 2020-03-19
 source: Hackernoon

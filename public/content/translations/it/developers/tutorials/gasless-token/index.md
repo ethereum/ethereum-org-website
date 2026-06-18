@@ -746,7 +746,8 @@ Consenti all'utente di emettere transazioni di trasferimento ERC-20.
 Se c'è un hash dell'ultima transazione, mostra un link in modo che l'utente possa visualizzarlo in un block explorer.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

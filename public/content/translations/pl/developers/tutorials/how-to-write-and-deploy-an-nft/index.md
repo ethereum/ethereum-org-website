@@ -1,10 +1,10 @@
 ---
-title: Jak napisać i wdrożyć NFT (Część 1/3 serii samouczków o NFT)
-description: Ten samouczek to część 1 serii o NFT, która krok po kroku pokaże Ci, jak napisać i wdrożyć inteligentny kontrakt niewymiennego tokena (tokena ERC-721) przy użyciu Ethereum i Inter Planetary File System (IPFS).
+title: "Jak napisać i wdrożyć NFT (Część 1/3 serii samouczków o NFT)"
+description: "Ten samouczek to część 1 serii o NFT, która krok po kroku pokaże Ci, jak napisać i wdrożyć inteligentny kontrakt niewymiennego tokena (tokena ERC-721) przy użyciu Ethereum i Inter Planetary File System (IPFS)."
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "inteligentne kontrakty"]
 skill: beginner
-breadcrumb: Napisz i wdróż NFT
+breadcrumb: "Napisz i wdróż NFT"
 lang: pl
 published: 2021-04-22
 ---

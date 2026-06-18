@@ -1,9 +1,9 @@
 ---
 title: "Vyper ERC-721 अनुबंध वॉकथ्रू"
-description: Ryuya Nakamura का ERC-721 अनुबंध और यह कैसे काम करता है
-author: ओरी पोमेरेंट्ज़
+description: "Ryuya Nakamura का ERC-721 अनुबंध और यह कैसे काम करता है"
+author: "ओरी पोमेरेंट्ज़"
 lang: hi
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: Vyper ERC-721
 published: 2021-04-01

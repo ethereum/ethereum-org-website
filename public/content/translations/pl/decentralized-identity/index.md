@@ -1,6 +1,6 @@
 ---
-title: Zdecentralizowana tożsamość
-description: Czym jest zdecentralizowana tożsamość i dlaczego ma znaczenie?
+title: "Zdecentralizowana tożsamość"
+description: "Czym jest zdecentralizowana tożsamość i dlaczego ma znaczenie?"
 lang: pl
 template: use-cases
 sidebarDepth: 2

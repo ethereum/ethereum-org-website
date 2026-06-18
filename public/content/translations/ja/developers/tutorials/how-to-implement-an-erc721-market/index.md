@@ -1,14 +1,14 @@
 ---
-title: ERC-721マーケットの実装方法
-description: 分散型クラシファイド掲示板でトークン化されたアイテムを販売する方法
-author: アルベルト・クエスタ・カニャーダ
+title: "ERC-721マーケットの実装方法"
+description: "分散型クラシファイド掲示板でトークン化されたアイテムを販売する方法"
+author: "アルベルト・クエスタ・カニャーダ"
 tags:
   - スマート・コントラクト
   - ERC-721
   - Solidity
   - トークン
 skill: intermediate
-breadcrumb: ERC-721マーケット
+breadcrumb: "ERC-721マーケット"
 lang: ja
 published: 2020-03-19
 source: Hackernoon

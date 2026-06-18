@@ -1,8 +1,8 @@
 ---
 title: Como implementar um mercado ERC-721
-description: Como colocar itens tokenizados à venda em um quadro de classificados descentralizado
+description: "Como colocar itens tokenizados à venda em um quadro de classificados descentralizado"
 author: "Alberto Cuesta Cañada"
-tags: ["contratos inteligentes", "erc-721", "solidity", "tokens"]
+tags: ["contratos inteligentes", "erc-721", "Solidity", "tokens"]
 skill: intermediate
 breadcrumb: Mercado ERC-721
 lang: pt-br

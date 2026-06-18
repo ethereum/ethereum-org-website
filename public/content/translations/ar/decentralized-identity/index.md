@@ -1,6 +1,6 @@
 ---
-title: الهوية اللامركزية
-description: ما هي الهوية اللامركزية، ولماذا هي مهمة؟
+title: "الهوية اللامركزية"
+description: "ما هي الهوية اللامركزية، ولماذا هي مهمة؟"
 lang: ar
 template: use-cases
 sidebarDepth: 2
@@ -183,7 +183,7 @@ summaryPoints:
 ### مقالات {#articles}
 
 - [حالات استخدام سلسلة الكتل: سلسلة الكتل في الهوية الرقمية](https://consensys.net/blockchain-use-cases/digital-identity/) — _<span dir="ltr">ConsenSys</span>_
-- [ما هو إيثيريوم ERC-725؟ إدارة الهوية السيادية الذاتية على سلسلة الكتل](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _سام تاون_
+- [ما هو إيثيريوم <span dir="ltr">ERC-725</span>؟ إدارة الهوية السيادية الذاتية على سلسلة الكتل](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _سام تاون_
 - [كيف يمكن لسلسلة الكتل حل مشكلة الهوية الرقمية](https://time.com/6142810/proof-of-humanity/) — _أندرو آر. تشاو_
 - [ما هي الهوية اللامركزية ولماذا يجب أن تهتم؟](https://web3.hashnode.com/what-is-decentralized-identity) — _إيمانويل أوسيكا_
 - [مقدمة إلى الهوية اللامركزية](https://walt.id/white-paper/digital-identity) — _دومينيك بيرون_
@@ -198,7 +198,7 @@ summaryPoints:
 
 ### المجتمعات {#communities}
 
-- [تحالف ERC-725 على GitHub](https://github.com/erc725alliance) — _داعمو معيار ERC-725 لإدارة الهوية على سلسلة كتل إيثيريوم_
+- [تحالف <span dir="ltr">ERC-725</span> على GitHub](https://github.com/erc725alliance) — _داعمو معيار <span dir="ltr">ERC-725</span> لإدارة الهوية على سلسلة كتل إيثيريوم_
 - [خادم ديسكورد <span dir="ltr">EthID</span>](https://discord.com/invite/ZUyG3mSXFD) — _مجتمع للمتحمسين والمطورين الذين يعملون على تسجيل الدخول باستخدام إيثيريوم، وبروتوكول متابعة إيثيريوم_
 - [مختبرات <span dir="ltr">Veramo</span>](https://discord.gg/sYBUXpACh4) — _مجتمع من المطورين يساهمون في بناء إطار عمل للبيانات القابلة للتحقق للتطبيقات_
 - [<span dir="ltr">walt.id</span>](https://discord.com/invite/AW8AgqJthZ) — _مجتمع من المطورين والبناة يعملون على حالات استخدام الهوية اللامركزية عبر مختلف الصناعات_

@@ -1,6 +1,6 @@
 ---
 title: Nagrody i kary w proof-of-stake
-description: Dowiedz się o zachętach wewnątrz protokołu w Ethereum opartym na proof-of-stake.
+description: "Dowiedz się o zachętach wewnątrz protokołu w Ethereum opartym na proof-of-stake."
 lang: pl
 ---
 

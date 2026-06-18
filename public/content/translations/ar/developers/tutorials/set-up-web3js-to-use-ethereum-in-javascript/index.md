@@ -2,7 +2,7 @@
 title: "إعداد ⁦web3.js⁩ لاستخدام سلسلة كتل إيثيريوم في ⁦JavaScript⁩"
 description: "تعرف على كيفية إعداد وتكوين مكتبة ⁦web3.js⁩ للتفاعل مع سلسلة كتل إيثيريوم من تطبيقات ⁦JavaScript⁩."
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
 breadcrumb: "إعداد ⁦web3.js⁩"
 lang: ar

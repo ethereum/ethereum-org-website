@@ -1,9 +1,9 @@
 ---
 title: "كيفية محاكاة العقود الذكية في ⁦Solidity⁩ للاختبار"
 description: "لماذا يجب عليك السخرية من عقودك عند الاختبار"
-author: ماركوس واس
+author: "ماركوس واس"
 lang: ar
-tags: ["solidity", "العقود الذكية", "الاختبار", "المحاكاة"]
+tags: ["Solidity", "العقود الذكية", "الاختبار", "المحاكاة"]
 skill: intermediate
 breadcrumb: "محاكاة العقود"
 published: 2020-05-02

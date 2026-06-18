@@ -1,6 +1,6 @@
 ---
-title: Réseaux
-description: Un aperçu des réseaux d'Ethereum et où obtenir de l'ether (ETH) de réseau de test pour tester votre application.
+title: "Réseaux"
+description: "Un aperçu des réseaux d'Ethereum et où obtenir de l'ether (ETH) de réseau de test pour tester votre application."
 lang: fr
 ---
 
@@ -40,7 +40,7 @@ Les deux réseaux de test publics que les développeurs de clients maintiennent 
 
 **Sepolia est le réseau de test par défaut recommandé pour le développement d'applications**. Le réseau Sepolia utilise un ensemble de validateurs à permission contrôlé par les équipes de clients et de test.
 
-##### Ressources {#hoodi}
+##### Ressources {#} {#}
 
 - [Site web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Les deux réseaux de test publics que les développeurs de clients maintiennent 
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucets {#ephemery}
+##### Faucets {#} {#}
 
 - [Faucet Sepolia d'Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet Sepolia de Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -61,7 +61,7 @@ Les deux réseaux de test publics que les développeurs de clients maintiennent 
 - [Faucet PoW](https://sepolia-faucet.pk910.de/)
 - [Faucet Sepolia de QuickNode](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Hoodi {#faucets}
+#### Hoodi {#hoodi}
 
 Hoodi est un réseau de test pour tester la validation et le staking. Le réseau Hoodi est ouvert aux utilisateurs souhaitant exécuter un validateur de réseau de test. Les stakers souhaitant tester les mises à niveau du protocole avant qu'elles ne soient déployées sur le Réseau principal devraient donc utiliser Hoodi.
 
@@ -69,7 +69,7 @@ Hoodi est un réseau de test pour tester la validation et le staking. Le réseau
 - État volumineux, utile pour tester des interactions complexes de contrats intelligents
 - Plus long à synchroniser et nécessite plus de stockage pour exécuter un nœud
 
-##### Ressources {#holesky}
+##### Ressources {#}
 
 - [Site web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,13 +78,13 @@ Hoodi est un réseau de test pour tester la validation et le staking. Le réseau
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucets {#layer-2-testnets}
+##### Faucets {#}
 
 - [Faucet Hoodi de Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Faucet Hoodi](https://hoodi.ethpandaops.io/)
 - [Faucet PoW](https://hoodi-faucet.pk910.de/)
 
-#### Ephemery {#arbitrum-sepolia}
+#### Ephemery {#ephemery}
 
 Ephemery est un type unique de réseau de test qui se réinitialise complètement chaque mois. L'état d'exécution et de consensus revient à la genèse tous les 28 jours, ce qui signifie que tout ce qui se passe sur le réseau de test est éphémère. Cela le rend idéal pour des tests à court terme, un amorçage rapide de nœud et des applications de type « hello world » qui n'ont pas besoin de permanence.
 
@@ -93,7 +93,7 @@ Ephemery est un type unique de réseau de test qui se réinitialise complètemen
 - Ensemble de validateurs ouvert et accès facile à de grandes quantités de fonds
 - Exigences de nœud les plus faibles et synchronisation la plus rapide, &lt;5 Go en moyenne
 
-##### Ressources {#optimistic-sepolia}
+##### Ressources {#}
 
 - [Site web](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -104,55 +104,55 @@ Ephemery est un type unique de réseau de test qui se réinitialise complètemen
 - [Synchronisation de point de contrôle](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
-#### Faucets {#starknet-sepolia}
+#### Faucets {#faucets}
 
 - [Faucet Bordel](https://faucet.bordel.wtf/)
 - [Faucet PoW Pk910](https://ephemery-faucet.pk910.de/)
 
-#### Holesky (obsolète) {#private-networks}
+#### Holesky (obsolète) {#holesky}
 
 Le réseau de test Holesky est obsolète depuis septembre 2025. Les opérateurs de staking et les fournisseurs d'infrastructure devraient plutôt utiliser Hoodi pour les tests de validateurs.
 
 - [Annonce de l'arrêt du réseau de test Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _Blog de l'EF, 1er septembre 2025_
 - [Mises à jour des réseaux de test Holesky et Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _Blog de l'EF, 18 mars 2025_
 
-### Réseaux de test de couche 2 {#development-networks}
+### Réseaux de test de couche 2 {#layer-2-testnets}
 
 La [couche 2 (l2)](/layer-2/) est un terme collectif pour décrire un ensemble spécifique de solutions de mise à l'échelle d'Ethereum. Une couche 2 est une chaîne de blocs distincte qui étend Ethereum et hérite des garanties de sécurité d'Ethereum. Les réseaux de test de couche 2 sont généralement étroitement couplés aux réseaux de test publics d'Ethereum.
 
-#### Arbitrum Sepolia {#consortium-networks}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Un réseau de test pour [Arbitrum](https://arbitrum.io/).
 
-##### Ressources {#why-naming}
+##### Ressources {#}
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucets {#common-and-legacy-testnets}
+##### Faucets {#}
 
 - [Faucet Arbitrum Sepolia d'Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Faucet Arbitrum Sepolia de Chainlink](https://faucets.chain.link/arbitrum-sepolia)
 - [Faucet Arbitrum Sepolia d'ethfaucet.com](https://ethfaucet.com/networks/arbitrum)
 - [Faucet Arbitrum Sepolia de QuickNode](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Sepolia {#other-testnets}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Un réseau de test pour [Optimism](https://www.optimism.io/).
 
-##### Ressources {#related-tools}
+##### Ressources {#}
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucets {#further-reading}
+##### Faucets {#}
 
 - [Faucet d'Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet de Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Faucet Optimism Sepolia d'ethfaucet.com](https://ethfaucet.com/networks/optimism)
 - [Faucet de réseau de test](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet Sepolia
+#### Starknet Sepolia {#starknet-sepolia}
 
 Un réseau de test pour [Starknet](https://www.starknet.io).
 
@@ -166,27 +166,27 @@ Un réseau de test pour [Starknet](https://www.starknet.io).
 - [Faucet Starknet Sepolia de Blast](https://blastapi.io/faucets/starknet-sepolia-eth)
 - [Faucet Starknet](https://starknet-faucet.vercel.app/)
 
-## Réseaux privés
+## Réseaux privés {#private-networks}
 
 Un réseau Ethereum est un réseau privé si ses nœuds ne sont pas connectés à un réseau public (c'est-à-dire le Réseau principal ou un réseau de test). Dans ce contexte, privé signifie uniquement réservé ou isolé, plutôt que protégé ou sécurisé.
 
-### Réseaux de développement
+### Réseaux de développement {#development-networks}
 
 Pour développer une application Ethereum, vous voudrez l'exécuter sur un réseau privé pour voir comment elle fonctionne avant de la déployer. De la même manière que vous créez un serveur local sur votre ordinateur pour le développement web, vous pouvez créer une instance locale de chaîne de blocs pour tester votre dapp. Cela permet une itération beaucoup plus rapide qu'un réseau de test public.
 
 Il existe des projets et des outils dédiés pour vous y aider. Apprenez-en plus sur les [réseaux de développement](/developers/docs/development-networks/).
 
-### Réseaux de consortium
+### Réseaux de consortium {#consortium-networks}
 
 Le processus de consensus est contrôlé par un ensemble prédéfini de nœuds de confiance. Par exemple, un réseau privé d'institutions universitaires connues qui gouvernent chacune un seul nœud, et les blocs sont validés par un seuil de signataires au sein du réseau.
 
 Si un réseau Ethereum public est comme l'Internet public, un réseau de consortium est comme un intranet privé.
 
-## <Emoji text="🚉" /> Pourquoi les réseaux de test Ethereum portent-ils le nom de stations de métro ?
+## <Emoji text="🚉" /> Pourquoi les réseaux de test Ethereum portent-ils le nom de stations de métro ? {#why-naming}
 
 De nombreux réseaux de test Ethereum portent le nom de stations de métro ou de gares du monde réel. Cette tradition de nommage a commencé tôt et reflète les villes mondiales où les contributeurs ont vécu ou travaillé. C'est symbolique, mémorable et pratique. Tout comme les réseaux de test sont isolés du réseau principal Ethereum, les lignes de métro circulent séparément du trafic de surface.
 
-### <Emoji text="🚧" /> Réseaux de test couramment utilisés et obsolètes
+### <Emoji text="🚧" /> Réseaux de test couramment utilisés et obsolètes {#common-and-legacy-testnets}
 
 - **Sepolia** - Un quartier relié au métro à Athènes, en Grèce. Actuellement utilisé pour les tests de contrats intelligents et de dapps.
 - **Hoodi** - Nommé d'après la station de métro Hoodi à Bengaluru, en Inde. Utilisé pour les tests de validateurs et de mises à niveau du protocole.
@@ -196,7 +196,7 @@ De nombreux réseaux de test Ethereum portent le nom de stations de métro ou de
 - **Kovan** _(obsolète)_ - Nommé d'après une station de MRT de Singapour.
 - **Morden** _(obsolète)_ - Nommé d'après une station du métro de Londres. Le premier réseau de test public d'Ethereum.
 
-### <Emoji text="🧪" /> Autres réseaux de test spécialisés
+### <Emoji text="🧪" /> Autres réseaux de test spécialisés {#other-testnets}
 
 Certains réseaux de test ont été créés pour des tests à court terme ou spécifiques à une mise à niveau et n'ont pas nécessairement pour thème le métro :
 
@@ -205,12 +205,12 @@ Certains réseaux de test ont été créés pour des tests à court terme ou sp�
 
 L'utilisation de noms de stations de métro aide les développeurs à identifier et à mémoriser rapidement les réseaux de test sans avoir besoin de s'appuyer sur des identifiants de chaîne numériques. Cela reflète également la culture d'Ethereum : pratique, mondiale et centrée sur l'humain.
 
-## Outils connexes
+## Outils connexes {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _liste des réseaux EVM pour connecter les portefeuilles et les fournisseurs à l'identifiant de chaîne et à l'identifiant de réseau appropriés_
 - [Chaînes basées sur l'EVM](https://github.com/ethereum-lists/chains) _dépôt GitHub de métadonnées de chaîne qui alimente Chainlist_
 
-## Complément d'information
+## Complément d'information {#further-reading}
 
 - [Proposition : Cycle de vie prévisible des réseaux de test Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [L'évolution des réseaux de test Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

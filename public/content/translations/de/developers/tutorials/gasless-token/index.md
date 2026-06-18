@@ -1,6 +1,6 @@
 ---
 title: "Ihren gaslosen Nutzern ermöglichen, Token zu halten und Verträge aufzurufen"
-description: Mithilfe der Kontoabstraktion können wir Smart-Contract-Wallets erstellen, die Transaktionen akzeptieren, welche von einem bestimmten EOA gesendet oder von diesem EOA signiert wurden. Diese Smart Contracts können dann Token besitzen, die unter der Kontrolle des EOA stehen.
+description: "Mithilfe der Kontoabstraktion können wir Smart-Contract-Wallets erstellen, die Transaktionen akzeptieren, welche von einem bestimmten EOA gesendet oder von diesem EOA signiert wurden. Diese Smart Contracts können dann Token besitzen, die unter der Kontrolle des EOA stehen."
 author: Ori Pomerantz
 tags: ["gaslos", "ERC-20", "Kontoabstraktion"]
 skill: intermediate
@@ -746,7 +746,8 @@ Lassen Sie den Nutzer ERC-20-Transfer-Transaktionen ausgeben.
 Wenn es einen letzten Transaktions-Hash gibt, zeigen Sie einen Link an, damit der Nutzer ihn in einem Block-Explorer anzeigen kann.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

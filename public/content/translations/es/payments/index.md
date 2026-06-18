@@ -1,7 +1,7 @@
 ---
 title: Pagos en Ethereum
 metaTitle: Pagos en Ethereum
-description: Una descripción general de los pagos en Ethereum
+description: "Una descripción general de los pagos en Ethereum"
 lang: es
 template: use-cases
 sidebarDepth: 2
@@ -62,7 +62,7 @@ En países donde sus medios de pago han sido desconectados del resto del mundo, 
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Crea tu cuenta de Ethereum con una aplicación de billetera hoy mismo.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Comenzar
   </ButtonLink>
 </AlertContent>

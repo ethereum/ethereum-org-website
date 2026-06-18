@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşme dilleri
-description: İki ana akıllı sözleşme dili olan Solidity ve Vyper'a genel bakış ve karşılaştırma.
+title: "Akıllı sözleşme dilleri"
+description: "İki ana akıllı sözleşme dili olan Solidity ve Vyper'a genel bakış ve karşılaştırma."
 lang: tr
 ---
 

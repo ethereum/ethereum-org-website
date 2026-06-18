@@ -1,6 +1,6 @@
 ---
 title: "EIP-1271 : Signer et vérifier les signatures de contrats intelligents"
-description: Un aperçu de la génération et de la vérification de signatures de contrats intelligents avec l'EIP-1271. Nous parcourons également l'implémentation de l'EIP-1271 utilisée dans Safe (anciennement Gnosis Safe) pour fournir un exemple concret sur lequel les développeurs de contrats intelligents peuvent s'appuyer.
+description: "Un aperçu de la génération et de la vérification de signatures de contrats intelligents avec l'EIP-1271. Nous parcourons également l'implémentation de l'EIP-1271 utilisée dans Safe (anciennement Gnosis Safe) pour fournir un exemple concret sur lequel les développeurs de contrats intelligents peuvent s'appuyer."
 author: Nathan H. Leung
 lang: fr
 tags: ["eip-1271", "contrats intelligents", "vérification", "signature"]

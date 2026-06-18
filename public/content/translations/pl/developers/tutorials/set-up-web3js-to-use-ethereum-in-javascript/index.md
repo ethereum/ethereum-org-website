@@ -1,8 +1,8 @@
 ---
-title: Skonfiguruj Web3.js, aby korzystać z blockchaina Ethereum w JavaScript
-description: Dowiedz się, jak zainstalować i skonfigurować bibliotekę Web3.js do interakcji z blockchainem Ethereum z poziomu aplikacji JavaScript.
+title: "Skonfiguruj Web3.js, aby korzystać z blockchaina Ethereum w JavaScript"
+description: "Dowiedz się, jak zainstalować i skonfigurować bibliotekę Web3.js do interakcji z blockchainem Ethereum z poziomu aplikacji JavaScript."
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
 breadcrumb: Konfiguracja Web3.js
 lang: pl

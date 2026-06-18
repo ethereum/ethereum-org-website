@@ -1,6 +1,6 @@
 ---
 title: Zukunftssicherung von Ethereum und Krypto-Quantensicherheit
-description: Diese Upgrades festigen Ethereum als die widerstandsfähige, dezentrale Basisschicht für die Zukunft, was auch immer sie bringen mag.
+description: "Diese Upgrades festigen Ethereum als die widerstandsfähige, dezentrale Basisschicht für die Zukunft, was auch immer sie bringen mag."
 lang: de
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum-Roadmap"

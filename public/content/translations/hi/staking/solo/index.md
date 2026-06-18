@@ -1,11 +1,11 @@
 ---
-title: अपने ETH को होम स्टेक करें
-description: अपने ETH की होम स्टेकिंग शुरू करने के तरीके का अवलोकन
+title: "अपने ETH को होम स्टेक करें"
+description: "अपने ETH की होम स्टेकिंग शुरू करने के तरीके का अवलोकन"
 lang: hi
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: लेस्ली राइनो अपने स्वयं के कंप्यूटर चिप पर।
+alt: "लेस्ली राइनो अपने स्वयं के कंप्यूटर चिप पर।"
 sidebarDepth: 2
 summaryPoints:
   - अपने सत्यापक को ठीक से काम करने और ऑनलाइन रखने के लिए सीधे प्रोटोकॉल से अधिकतम पुरस्कार प्राप्त करें

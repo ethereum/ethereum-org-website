@@ -1,12 +1,12 @@
 ---
-title: イーサリアムでの支払い
-metaTitle: イーサリアムでの支払い
-description: イーサリアムでの支払いの概要
+title: "イーサリアムでの支払い"
+metaTitle: "イーサリアムでの支払い"
+description: "イーサリアムでの支払いの概要"
 lang: ja
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: 差し出された手とともに表示されるEthロゴ。
+alt: "差し出された手とともに表示されるEthロゴ。"
 summaryPoints:
   - "お金が情報と同じくらい自由に移動する世界"
   - "オープンかつグローバルで、誰もが国境のないトランザクションを行える"
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>今すぐウォレットアプリでイーサリアムのアカウントを作成しましょう。</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     始める
   </ButtonLink>
 </AlertContent>

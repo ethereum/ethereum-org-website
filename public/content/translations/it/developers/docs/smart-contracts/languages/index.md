@@ -1,6 +1,6 @@
 ---
 title: Linguaggi per gli smart contract
-description: Una panoramica e un confronto dei due principali linguaggi per gli smart contract: Solidity e Vyper.
+description: "Una panoramica e un confronto dei due principali linguaggi per gli smart contract: Solidity e Vyper."
 lang: it
 ---
 

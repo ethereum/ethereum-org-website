@@ -1,6 +1,6 @@
 ---
-title: Kompozycyjność inteligentnych kontraktów
-description: Dowiedz się, jak inteligentne kontrakty można łączyć jak klocki Lego, aby budować złożone zdecentralizowane aplikacje (dapp) poprzez ponowne wykorzystanie istniejących komponentów.
+title: "Kompozycyjność inteligentnych kontraktów"
+description: "Dowiedz się, jak inteligentne kontrakty można łączyć jak klocki Lego, aby budować złożone zdecentralizowane aplikacje (dapp) poprzez ponowne wykorzystanie istniejących komponentów."
 lang: pl
 incomplete: true
 ---

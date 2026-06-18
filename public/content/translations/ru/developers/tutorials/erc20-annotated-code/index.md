@@ -1,11 +1,11 @@
 ---
 title: "Разбор контракта ERC-20"
-description: Что находится в контракте ERC-20 от ОпенЗеппелин и зачем это нужно?
-author: Ори Померанц
+description: "Что находится в контракте ERC-20 от ОпенЗеппелин и зачем это нужно?"
+author: "Ори Померанц"
 lang: ru
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: Разбор ERC-20
+breadcrumb: "Разбор ERC-20"
 published: 2021-03-09
 ---
 

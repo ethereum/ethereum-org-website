@@ -1,13 +1,13 @@
 ---
-title: Yeni Başlayanlar İçin Merhaba Dünya Akıllı Sözleşmesi - Fullstack
-description: Ethereum üzerinde basit bir akıllı sözleşme yazma ve dağıtma üzerine giriş niteliğinde eğitim.
+title: "Yeni Başlayanlar İçin Merhaba Dünya Akıllı Sözleşmesi - Fullstack"
+description: "Ethereum üzerinde basit bir akıllı sözleşme yazma ve dağıtma üzerine giriş niteliğinde eğitim."
 author: "nstrike2"
-breadcrumb: Merhaba Dünya fullstack
+breadcrumb: "Merhaba Dünya fullstack"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "akıllı sözleşmeler",
     "dağıtım",
     "blok gezgini",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

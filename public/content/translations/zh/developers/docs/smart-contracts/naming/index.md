@@ -1,6 +1,6 @@
 ---
-title: 命名智能合约
-description: 使用 ENS 命名以太坊智能合约的最佳实践
+title: "命名智能合约"
+description: "使用 ENS 命名以太坊智能合约的最佳实践"
 lang: zh
 ---
 

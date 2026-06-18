@@ -1,11 +1,11 @@
 ---
-title: オフラインデータの完全性のためのマークル証明
-description: 主にオフチェーンに保存されるデータのオンチェーンでの完全性を確保する
-author: オリ・ポメランツ
+title: "オフラインデータの完全性のためのマークル証明"
+description: "主にオフチェーンに保存されるデータのオンチェーンでの完全性を確保する"
+author: "オリ・ポメランツ"
 tags:
   - ストレージ
 skill: advanced
-breadcrumb: マークル証明
+breadcrumb: "マークル証明"
 lang: ja
 published: 2021-12-30
 ---

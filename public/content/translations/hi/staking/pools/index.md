@@ -1,11 +1,11 @@
 ---
-title: पूल्ड स्टेकिंग
-description: स्टेकिंग पूल के बारे में जानें
+title: "पूल्ड स्टेकिंग"
+description: "स्टेकिंग पूल के बारे में जानें"
 lang: hi
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: लेस्ली गैंडा पूल में तैर रहा है।
+alt: "लेस्ली गैंडा पूल में तैर रहा है।"
 sidebarDepth: 2
 summaryPoints:
   - दूसरों के साथ मिलकर किसी भी मात्रा में ETH स्टेक करें और इनाम कमाएं

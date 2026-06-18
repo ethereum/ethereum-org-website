@@ -1,11 +1,11 @@
 ---
 title: "ERC-20コントラクトのウォークスルー"
-description: オープンツェッペリンのERC-20コントラクトには何が含まれており、なぜそれが存在するのでしょうか？
-author: オリ・ポメランツ
+description: "オープンツェッペリンのERC-20コントラクトには何が含まれており、なぜそれが存在するのでしょうか？"
+author: "オリ・ポメランツ"
 lang: ja
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: ERC-20ウォークスルー
+breadcrumb: "ERC-20ウォークスルー"
 published: 2021-03-09
 ---
 

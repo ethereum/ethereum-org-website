@@ -1,6 +1,6 @@
 ---
 title: Provas de Merkle para integridade de dados offline
-description: Garantindo a integridade de dados onchain para dados que são armazenados, em sua maioria, offchain
+description: "Garantindo a integridade de dados onchain para dados que são armazenados, em sua maioria, offchain"
 author: Ori Pomerantz
 tags: ["armazenamento"]
 skill: advanced

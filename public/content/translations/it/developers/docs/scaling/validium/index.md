@@ -5,7 +5,7 @@ lang: it
 sidebarDepth: 3
 ---
 
-Validium è una [soluzione di ridimensionamento](/developers/docs/scaling/) che fa rispettare l'integrità delle transazioni utilizzando prove di validità come i [rollup a conoscenza zero (ZK-rollup)](/developers/docs/scaling/zk-rollups/), ma non archivia i dati delle transazioni sulla [Mainnet di Ethereum](/). Sebbene la disponibilità dei dati offchain introduca dei compromessi, può portare a massicci miglioramenti nella scalabilità (i validium possono elaborare [~9.000 transazioni, o più, al secondo](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium è una [soluzione di ridimensionamento](/developers/docs/scaling/) che fa rispettare l'integrità delle transazioni utilizzando prove di validità come i [rollup a conoscenza zero (ZK-rollup)](/developers/docs/scaling/zk-rollups/), ma non archivia i dati delle transazioni sulla [Mainnet di Ethereum](/). Sebbene la disponibilità dei dati offchain introduca dei compromessi, può portare a massicci miglioramenti nella scalabilità (i validium possono elaborare [\~9.000 transazioni, o più, al secondo](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Prerequisiti {#prerequisites}
 

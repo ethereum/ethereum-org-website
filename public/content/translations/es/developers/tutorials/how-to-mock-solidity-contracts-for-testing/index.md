@@ -1,11 +1,11 @@
 ---
-title: Cómo crear mocks de contratos inteligentes de Solidity para pruebas
-description: Por qué deberías burlarte de tus contratos al hacer pruebas
+title: "Cómo crear mocks de contratos inteligentes de Solidity para pruebas"
+description: "Por qué deberías burlarte de tus contratos al hacer pruebas"
 author: Markus Waas
 lang: es
-tags: ["solidity", "contratos inteligentes", "pruebas", "mocking"]
+tags: ["Solidity", "contratos inteligentes", "pruebas", "mocking"]
 skill: intermediate
-breadcrumb: Creación de mocks de contratos
+breadcrumb: "Creación de mocks de contratos"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

@@ -1,5 +1,5 @@
 ---
-title: پیش گوئی کی مارکیٹیں
+title: "پیش گوئی کی مارکیٹیں"
 lang: ur
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>خطرات کو ذہن میں رکھیں</strong></strong>
+ <p className="mt-0"><strong>خطرات کو ذہن میں رکھیں</strong>
   <p className="mt-2">صرف وہی شرط لگائیں جو آپ برداشت کر سکتے ہیں، اور ممکنہ لت والے رویوں سے آگاہ رہیں۔</p>
 </AlertDescription>
 </AlertContent>

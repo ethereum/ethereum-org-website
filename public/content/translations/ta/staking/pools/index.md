@@ -1,11 +1,11 @@
 ---
-title: திரட்டப்பட்ட பங்குவைப்பு
-description: பங்குவைப்புக் குழுக்கள் பற்றி அறிக
+title: "திரட்டப்பட்ட பங்குவைப்பு"
+description: "பங்குவைப்புக் குழுக்கள் பற்றி அறிக"
 lang: ta
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: குளத்தில் நீந்தும் லெஸ்லி காண்டாமிருகம்.
+alt: "குளத்தில் நீந்தும் லெஸ்லி காண்டாமிருகம்."
 sidebarDepth: 2
 summaryPoints:
   - மற்றவர்களுடன் இணைந்து எந்தவொரு அளவு ETH-ஐயும் பங்குவைத்து வெகுமதிகளைப் பெறுங்கள்

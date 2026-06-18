@@ -1,10 +1,10 @@
 ---
-title: Écrire un Plasma spécifique à une application qui préserve la confidentialité
-description: Dans ce tutoriel, nous construisons une banque semi-secrète pour les dépôts. La banque est un composant centralisé ; elle connaît le solde de chaque utilisateur. Cependant, cette information n'est pas stockée onchain. Au lieu de cela, la banque publie un hash de l'état. Chaque fois qu'une transaction se produit, la banque publie le nouveau hash, ainsi qu'une preuve à divulgation nulle de connaissance attestant qu'elle possède une transaction signée qui modifie l'état du hash vers le nouveau. Après avoir lu ce tutoriel, vous comprendrez non seulement comment utiliser les preuves à divulgation nulle de connaissance, mais aussi pourquoi vous les utilisez et comment le faire de manière sécurisée.
+title: "Écrire un Plasma spécifique à une application qui préserve la confidentialité"
+description: "Dans ce tutoriel, nous construisons une banque semi-secrète pour les dépôts. La banque est un composant centralisé ; elle connaît le solde de chaque utilisateur. Cependant, cette information n'est pas stockée onchain. Au lieu de cela, la banque publie un hash de l'état. Chaque fois qu'une transaction se produit, la banque publie le nouveau hash, ainsi qu'une preuve à divulgation nulle de connaissance attestant qu'elle possède une transaction signée qui modifie l'état du hash vers le nouveau. Après avoir lu ce tutoriel, vous comprendrez non seulement comment utiliser les preuves à divulgation nulle de connaissance, mais aussi pourquoi vous les utilisez et comment le faire de manière sécurisée."
 author: Ori Pomerantz
 tags: ["à divulgation nulle de connaissance", "serveur", "hors chaîne", "confidentialité"]
 skill: advanced
-breadcrumb: Plasma spécifique à une application
+breadcrumb: "Plasma spécifique à une application"
 lang: fr
 published: 2025-10-15
 ---
@@ -160,7 +160,7 @@ ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
-   ```
+      ```
 
 10. Comparez les deux dernières valeurs au hash que vous voyez sur le navigateur web pour voir si le message est haché correctement.
 
@@ -858,7 +858,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
@@ -1029,7 +1029,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 

@@ -1,10 +1,10 @@
 ---
-title: JavaScript में इथेरियम ब्लॉकचेन का उपयोग करने के लिए web3.js सेट अप करें
-description: जानें कि JavaScript एप्लिकेशन से इथेरियम ब्लॉकचेन के साथ इंटरैक्ट करने के लिए web3.js लाइब्रेरी को कैसे सेट अप और कॉन्फ़िगर करें।
+title: "JavaScript में इथेरियम ब्लॉकचेन का उपयोग करने के लिए web3.js सेट अप करें"
+description: "जानें कि JavaScript एप्लिकेशन से इथेरियम ब्लॉकचेन के साथ इंटरैक्ट करने के लिए web3.js लाइब्रेरी को कैसे सेट अप और कॉन्फ़िगर करें।"
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
-breadcrumb: web3.js सेट अप
+breadcrumb: "web3.js सेट अप"
 lang: hi
 published: 2020-04-11
 source: EthereumDev

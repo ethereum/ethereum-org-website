@@ -1,18 +1,18 @@
 ---
-title: 탈중앙화 사용자 인터페이스를 위한 IPFS
-description: 이 튜토리얼에서는 IPFS를 사용하여 탈중앙화 애플리케이션 (dapp)의 사용자 인터페이스를 저장하는 방법을 설명합니다. 애플리케이션의 데이터와 비즈니스 로직이 탈중앙화되어 있더라도, 검열 저항적인 사용자 인터페이스가 없다면 사용자는 애플리케이션에 대한 접근 권한을 잃을 수 있습니다.
-author: 오리 포메란츠
+title: "탈중앙화 사용자 인터페이스를 위한 IPFS"
+description: "이 튜토리얼에서는 IPFS를 사용하여 탈중앙화 애플리케이션 (dapp)의 사용자 인터페이스를 저장하는 방법을 설명합니다. 애플리케이션의 데이터와 비즈니스 로직이 탈중앙화되어 있더라도, 검열 저항적인 사용자 인터페이스가 없다면 사용자는 애플리케이션에 대한 접근 권한을 잃을 수 있습니다."
+author: "오리 포메란츠"
 tags:
   - IPFS
   - dapps
   - 프론트엔드
 skill: beginner
-breadcrumb: dapp UI를 위한 IPFS
+breadcrumb: "dapp UI를 위한 IPFS"
 lang: ko
 published: 2024-06-29
 ---
 
-여러분은 놀랍고 새로운 탈중앙화 애플리케이션 (dapp)을 작성했습니다. 심지어 이를 위한 [사용자 인터페이스](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)도 작성했습니다. 하지만 이제 누군가 클라우드의 단일 서버에 불과한 사용자 인터페이스를 다운시켜 검열을 시도할까 봐 걱정될 수 있습니다. 이 튜토리얼에서는 사용자 인터페이스를 **[IPFS(Interplanetary File System)](https://ipfs.tech/developers/)**에 올려 검열을 피하는 방법을 배웁니다. 이를 통해 관심 있는 누구나 향후 접근을 위해 서버에 고정(pin)할 수 있습니다.
+여러분은 놀랍고 새로운 탈중앙화 애플리케이션 (dapp)을 작성했습니다. 심지어 이를 위한 [사용자 인터페이스](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)도 작성했습니다. 하지만 이제 누군가 클라우드의 단일 서버에 불과한 사용자 인터페이스를 다운시켜 검열을 시도할까 봐 걱정될 수 있습니다. 이 튜토리얼에서는 사용자 인터페이스를 <strong>[IPFS(Interplanetary File System)](https://ipfs.tech/developers/)</strong>에 올려 검열을 피하는 방법을 배웁니다. 이를 통해 관심 있는 누구나 향후 접근을 위해 서버에 고정(pin)할 수 있습니다.
 
 [Fleek](https://resources.fleek.xyz/docs/)과 같은 서드파티 서비스를 사용하여 모든 작업을 처리할 수도 있습니다. 이 튜토리얼은 작업량이 더 많더라도 자신이 무엇을 하고 있는지 충분히 이해하고 싶은 사람들을 위한 것입니다.
 
@@ -28,13 +28,13 @@ published: 2024-06-29
    pnpm vite build
    ```
 
-3. IPFS 데스크톱에서 **가져오기(Import) > 폴더(Folder)**를 클릭하고 이전 단계에서 생성한 디렉터리를 선택합니다.
+3. IPFS 데스크톱에서 <strong>가져오기(Import) > 폴더(Folder)</strong>를 클릭하고 이전 단계에서 생성한 디렉터리를 선택합니다.
 
-4. 방금 업로드한 폴더를 선택하고 **이름 바꾸기(Rename)**를 클릭합니다. 더 의미 있는 이름을 지정하세요.
+4. 방금 업로드한 폴더를 선택하고 <strong>이름 바꾸기(Rename)</strong>를 클릭합니다. 더 의미 있는 이름을 지정하세요.
 
-5. 폴더를 다시 선택하고 **링크 공유(Share link)**를 클릭합니다. URL을 클립보드에 복사합니다. 링크는 `https://ipfs.io/ipfs/QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`와 유사할 것입니다.
+5. 폴더를 다시 선택하고 <strong>링크 공유(Share link)</strong>를 클릭합니다. URL을 클립보드에 복사합니다. 링크는 `https://ipfs.io/ipfs/QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`와 유사할 것입니다.
 
-6. **상태(Status)**를 클릭합니다. **고급(Advanced)** 탭을 확장하여 게이트웨이 주소를 확인합니다. 예를 들어, 제 시스템의 주소는 `http://127.0.0.1:8080`입니다.
+6. <strong>상태(Status)</strong>를 클릭합니다. **고급(Advanced)** 탭을 확장하여 게이트웨이 주소를 확인합니다. 예를 들어, 제 시스템의 주소는 `http://127.0.0.1:8080`입니다.
 
 7. 링크 단계의 경로와 게이트웨이 주소를 결합하여 주소를 찾습니다. 예를 들어, 위 예시의 URL은 `http://127.0.0.1:8080/ipfs/QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`입니다. 브라우저에서 해당 URL을 열어 사이트를 확인하세요.
 
@@ -42,17 +42,17 @@ published: 2024-06-29
 
 이제 IPFS를 사용하여 로컬에서 파일을 제공할 수 있지만, 이것만으로는 그다지 흥미롭지 않습니다. 다음 단계는 오프라인 상태일 때도 전 세계에서 파일에 접근할 수 있도록 만드는 것입니다.
 
-잘 알려진 [피닝(pinning) 서비스](https://docs.ipfs.tech/concepts/persistence/#pinning-services)가 여러 개 있습니다. 그중 하나를 선택하세요. 어떤 서비스를 사용하든 계정을 생성하고 IPFS 데스크톱에 있는 **콘텐츠 식별자(CID)**를 제공해야 합니다.
+잘 알려진 [피닝(pinning) 서비스](https://docs.ipfs.tech/concepts/persistence/#pinning-services)가 여러 개 있습니다. 그중 하나를 선택하세요. 어떤 서비스를 사용하든 계정을 생성하고 IPFS 데스크톱에 있는 <strong>콘텐츠 식별자(CID)</strong>를 제공해야 합니다.
 
 개인적으로는 [4EVERLAND](https://docs.4everland.org/storage/4ever-pin/guides)가 가장 사용하기 쉬웠습니다. 사용 방법은 다음과 같습니다:
 
 1. [대시보드](https://dashboard.4everland.org/overview)로 이동하여 지갑으로 로그인합니다.
 
-2. 왼쪽 사이드바에서 **Storage > 4EVER Pin**을 클릭합니다.
+2. 왼쪽 사이드바에서 <strong>Storage > 4EVER Pin</strong>을 클릭합니다.
 
-3. **Upload > Selected CID**를 클릭합니다. 콘텐츠의 이름을 지정하고 IPFS 데스크톱에서 CID를 제공합니다. 현재 CID는 `Qm`로 시작하고 그 뒤에 [base-58로 인코딩된](https://medium.com/bootdotdev/base64-vs-base58-encoding-c25553ff4524) 해시를 나타내는 44개의 문자와 숫자가 이어지는 문자열(예: `QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`)이지만, [이는 변경될 가능성이 있습니다](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1).
+3. <strong>Upload > Selected CID</strong>를 클릭합니다. 콘텐츠의 이름을 지정하고 IPFS 데스크톱에서 CID를 제공합니다. 현재 CID는 `Qm`로 시작하고 그 뒤에 [base-58로 인코딩된](https://medium.com/bootdotdev/base64-vs-base58-encoding-c25553ff4524) 해시를 나타내는 44개의 문자와 숫자가 이어지는 문자열(예: `QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`)이지만, [이는 변경될 가능성이 있습니다](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1).
 
-4. 초기 상태는 **Queued(대기 중)**입니다. 상태가 **Pinned(고정됨)**로 변경될 때까지 새로고침합니다.
+4. 초기 상태는 <strong>Queued(대기 중)</strong>입니다. 상태가 <strong>Pinned(고정됨)</strong>로 변경될 때까지 새로고침합니다.
 
 5. CID를 클릭하여 링크를 가져옵니다. 제 애플리케이션은 [여기](https://bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im.ipfs.dweb.link/)에서 확인할 수 있습니다.
 

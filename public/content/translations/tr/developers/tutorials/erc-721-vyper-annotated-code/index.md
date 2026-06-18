@@ -3,7 +3,7 @@ title: "Vyper ERC-721 Sözleşmesi İncelemesi"
 description: "Ryuya Nakamura'nın ERC-721 sözleşmesi ve nasıl çalıştığı"
 author: Ori Pomerantz
 lang: tr
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: "Vyper ERC-721"
 published: 2021-04-01

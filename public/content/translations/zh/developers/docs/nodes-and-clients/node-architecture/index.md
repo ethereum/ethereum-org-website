@@ -1,6 +1,6 @@
 ---
-title: 节点架构
-description: 以太坊节点组织方式简介。
+title: "节点架构"
+description: "以太坊节点组织方式简介。"
 lang: zh
 ---
 

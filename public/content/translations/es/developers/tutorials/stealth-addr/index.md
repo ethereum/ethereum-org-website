@@ -2,7 +2,7 @@
 title: "Uso de direcciones sigilosas"
 description: "Las direcciones sigilosas permiten a los usuarios transferir activos de forma anónima. Después de leer este artículo, podrá: explicar qué son las direcciones sigilosas y cómo funcionan, comprender cómo usar las direcciones sigilosas de una manera que preserve el anonimato y escribir una aplicación web que use direcciones sigilosas."
 author: Ori Pomerantz
-tags: ["dirección sigilosa", "privacidad", "criptografía", "rust", "wasm"]
+tags: ["dirección sigilosa", "privacidad", "criptografía", "Rust", "wasm"]
 skill: intermediate
 breadcrumb: Direcciones sigilosas
 published: 2025-11-30

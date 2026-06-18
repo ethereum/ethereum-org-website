@@ -1,10 +1,10 @@
 ---
-title: JavaScript-এ ইথেরিয়াম ব্লকচেইন ব্যবহার করার জন্য web3.js সেট আপ করুন
-description: JavaScript অ্যাপ্লিকেশন থেকে ইথেরিয়াম ব্লকচেইনের সাথে ইন্টারঅ্যাক্ট করতে web3.js লাইব্রেরি কীভাবে সেট আপ এবং কনফিগার করতে হয় তা শিখুন।
+title: "JavaScript-এ ইথেরিয়াম ব্লকচেইন ব্যবহার করার জন্য web3.js সেট আপ করুন"
+description: "JavaScript অ্যাপ্লিকেশন থেকে ইথেরিয়াম ব্লকচেইনের সাথে ইন্টারঅ্যাক্ট করতে web3.js লাইব্রেরি কীভাবে সেট আপ এবং কনফিগার করতে হয় তা শিখুন।"
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
-breadcrumb: web3.js সেটআপ
+breadcrumb: "web3.js সেটআপ"
 lang: bn
 published: 2020-04-11
 source: EthereumDev

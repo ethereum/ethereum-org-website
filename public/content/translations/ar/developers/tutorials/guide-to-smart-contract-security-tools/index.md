@@ -1,11 +1,11 @@
 ---
-title: دليل لأدوات أمان العقود الذكية
-description: نظرة عامة على ثلاث تقنيات مختلفة للاختبار وتحليل البرامج
+title: "دليل لأدوات أمان العقود الذكية"
+description: "نظرة عامة على ثلاث تقنيات مختلفة للاختبار وتحليل البرامج"
 author: "Trailofbits"
 lang: ar
-tags: ["solidity", "العقود الذكية", "الأمان"]
+tags: ["Solidity", "العقود الذكية", "الأمان"]
 skill: intermediate
-breadcrumb: أدوات الأمان
+breadcrumb: "أدوات الأمان"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

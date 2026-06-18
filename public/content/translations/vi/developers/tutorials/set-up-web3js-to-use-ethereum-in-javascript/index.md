@@ -1,10 +1,10 @@
 ---
-title: Thiết lập web3.js để sử dụng chuỗi khối Ethereum trong JavaScript
-description: Tìm hiểu cách thiết lập và cấu hình thư viện web3.js để tương tác với chuỗi khối Ethereum từ các ứng dụng JavaScript.
+title: "Thiết lập web3.js để sử dụng chuỗi khối Ethereum trong JavaScript"
+description: "Tìm hiểu cách thiết lập và cấu hình thư viện web3.js để tương tác với chuỗi khối Ethereum từ các ứng dụng JavaScript."
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
-breadcrumb: Thiết lập web3.js
+breadcrumb: "Thiết lập web3.js"
 lang: vi
 published: 2020-04-11
 source: EthereumDev

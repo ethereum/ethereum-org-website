@@ -1,14 +1,14 @@
 ---
-title: 프라이버시를 보존하는 앱 전용 플라즈마 작성하기
-description: 이 튜토리얼에서는 예금을 위한 반비밀(semi-secret) 은행을 구축합니다. 이 은행은 중앙화된 구성 요소로, 각 사용자의 잔액을 알고 있습니다. 하지만 이 정보는 온체인에 저장되지 않습니다. 대신 은행은 상태의 해시를 게시합니다. 트랜잭션이 발생할 때마다 은행은 새로운 해시와 함께, 해시 상태를 새로운 상태로 변경하는 서명된 트랜잭션을 가지고 있다는 영지식 증명을 게시합니다. 이 튜토리얼을 읽고 나면 영지식 증명을 사용하는 방법뿐만 아니라, 이를 사용하는 이유와 안전하게 사용하는 방법도 이해하게 될 것입니다.
-author: 오리 포메란츠
+title: "프라이버시를 보존하는 앱 전용 플라즈마 작성하기"
+description: "이 튜토리얼에서는 예금을 위한 반비밀(semi-secret) 은행을 구축합니다. 이 은행은 중앙화된 구성 요소로, 각 사용자의 잔액을 알고 있습니다. 하지만 이 정보는 온체인에 저장되지 않습니다. 대신 은행은 상태의 해시를 게시합니다. 트랜잭션이 발생할 때마다 은행은 새로운 해시와 함께, 해시 상태를 새로운 상태로 변경하는 서명된 트랜잭션을 가지고 있다는 영지식 증명을 게시합니다. 이 튜토리얼을 읽고 나면 영지식 증명을 사용하는 방법뿐만 아니라, 이를 사용하는 이유와 안전하게 사용하는 방법도 이해하게 될 것입니다."
+author: "오리 포메란츠"
 tags:
   - 영지식
   - 서버
   - 오프체인
   - 프라이버시
 skill: advanced
-breadcrumb: 앱 전용 플라즈마
+breadcrumb: "앱 전용 플라즈마"
 lang: ko
 published: 2025-10-15
 ---
@@ -30,13 +30,13 @@ published: 2025-10-15
 
 ### 영지식 증명 {#zero-knowledge-proofs}
 
-기본적인 수준에서 영지식 증명은 증명자가 공개 데이터인 _Data<sub>public</sub>_과 비공개 데이터인 _Data<sub>private</sub>_ 사이에 _Relationship_(관계)이 성립하는 어떤 데이터 _Data<sub>private</sub>_를 알고 있음을 보여줍니다. 검증자는 _Relationship_과 _Data<sub>public</sub>_을 알고 있습니다.
+기본적인 수준에서 영지식 증명은 증명자가 공개 데이터인 <em>Data<sub>public</sub></em>과 비공개 데이터인 _Data<sub>private</sub>_ 사이에 _Relationship_(관계)이 성립하는 어떤 데이터 <em>Data<sub>private</sub></em>를 알고 있음을 보여줍니다. 검증자는 <em>Relationship</em>과 <em>Data<sub>public</sub></em>을 알고 있습니다.
 
 프라이버시를 보호하려면 상태와 트랜잭션이 비공개여야 합니다. 하지만 무결성을 보장하려면 상태의 [암호화 해시](https://en.wikipedia.org/wiki/Cryptographic_hash_function)가 공개되어야 합니다. 트랜잭션을 제출하는 사람들에게 해당 트랜잭션이 실제로 발생했음을 증명하기 위해 트랜잭션 해시도 게시해야 합니다.
 
-대부분의 경우 _Data<sub>private</sub>_는 영지식 증명 프로그램의 입력값이고, _Data<sub>public</sub>_은 출력값입니다.
+대부분의 경우 <em>Data<sub>private</sub></em>는 영지식 증명 프로그램의 입력값이고, <em>Data<sub>public</sub></em>은 출력값입니다.
 
-_Data<sub>private</sub>_의 필드는 다음과 같습니다:
+<em>Data<sub>private</sub></em>의 필드는 다음과 같습니다:
 
 - _State<sub>n</sub>_, 이전 상태
 - _State<sub>n+1</sub>_, 새로운 상태
@@ -47,11 +47,11 @@ _Data<sub>private</sub>_의 필드는 다음과 같습니다:
     출발지 주소는 서명에서 복구할 수 있으므로 트랜잭션에 포함될 필요가 없습니다.
 - _Signature_, 트랜잭션을 수행할 권한이 있는 서명. 이 경우 트랜잭션을 수행할 권한이 있는 유일한 주소는 출발지 주소입니다. 우리의 영지식 시스템이 작동하는 방식 때문에 이더리움 서명 외에도 계정의 공개키가 필요합니다.
 
-_Data<sub>public</sub>_의 필드는 다음과 같습니다:
+<em>Data<sub>public</sub></em>의 필드는 다음과 같습니다:
 
 - _Hash(State<sub>n</sub>)_, 이전 상태의 해시
 - _Hash(State<sub>n+1</sub>)_, 새로운 상태의 해시
-- _Hash(Transaction)_, 상태를 _State<sub>n</sub>_에서 _State<sub>n+1</sub>_로 변경하는 트랜잭션의 해시.
+- _Hash(Transaction)_, 상태를 <em>State<sub>n</sub></em>에서 <em>State<sub>n+1</sub></em>로 변경하는 트랜잭션의 해시.
 
 이 관계는 몇 가지 조건을 확인합니다:
 
@@ -145,7 +145,7 @@ noirup -v 1.0.0-beta.10
 
 6. 지갑에 연결하고 목적지 계정과 금액을 선택합니다.
 
-7. **Sign**을 클릭하고 트랜잭션에 서명합니다.
+7. <strong>Sign</strong>을 클릭하고 트랜잭션에 서명합니다.
 
 8. **Prover.toml** 제목 아래에 텍스트가 있습니다. `server/noir/Prover.toml`를 해당 텍스트로 바꿉니다.
 
@@ -164,7 +164,7 @@ ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
-   ```
+      ```
 
 10. 마지막 두 값을 웹 브라우저에 표시된 해시와 비교하여 메시지가 올바르게 해시되었는지 확인합니다.
 
@@ -824,15 +824,15 @@ fn main(
 
 5. [http://localhost:5173](http://localhost:5173)의 클라이언트 코드로 이동합니다.
 
-6. 트랜잭션을 발행하려면 전송할 수 있는 금액과 논스를 알아야 합니다. 이 정보를 얻으려면 **Update account data**를 클릭하고 메시지에 서명합니다.
+6. 트랜잭션을 발행하려면 전송할 수 있는 금액과 논스를 알아야 합니다. 이 정보를 얻으려면 <strong>Update account data</strong>를 클릭하고 메시지에 서명합니다.
 
    여기서 딜레마가 있습니다. 한편으로는 재사용될 수 있는 메시지([재전송 공격(replay attack)](https://en.wikipedia.org/wiki/Replay_attack))에 서명하고 싶지 않으며, 이것이 애초에 논스를 원하는 이유입니다. 그러나 아직 논스가 없습니다. 해결책은 현재 시간과 같이 한 번만 사용할 수 있고 양쪽 모두에 이미 있는 논스를 선택하는 것입니다.
 
    이 해결책의 문제는 시간이 완벽하게 동기화되지 않을 수 있다는 것입니다. 그래서 대신 매분 변경되는 값에 서명합니다. 이는 재전송 공격에 대한 취약성 창이 최대 1분임을 의미합니다. 프로덕션 환경에서는 서명된 요청이 TLS로 보호되고 터널의 반대편인 서버가 이미 잔액과 논스를 공개할 수 있다는 점(작동하려면 이를 알아야 함)을 고려할 때 이는 허용 가능한 위험입니다.
 
-7. 브라우저가 잔액과 논스를 반환받으면 전송 양식이 표시됩니다. 목적지 주소와 금액을 선택하고 **Transfer**를 클릭합니다. 이 요청에 서명합니다.
+7. 브라우저가 잔액과 논스를 반환받으면 전송 양식이 표시됩니다. 목적지 주소와 금액을 선택하고 <strong>Transfer</strong>를 클릭합니다. 이 요청에 서명합니다.
 
-8. 전송을 확인하려면 **Update account data**를 클릭하거나 서버를 실행하는 창을 확인합니다. 서버는 상태가 변경될 때마다 상태를 기록합니다.
+8. 전송을 확인하려면 <strong>Update account data</strong>를 클릭하거나 서버를 실행하는 창을 확인합니다. 서버는 상태가 변경될 때마다 상태를 기록합니다.
 
         ```
 ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -862,7 +862,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
@@ -1033,7 +1033,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-    ```
+        ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 

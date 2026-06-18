@@ -1,6 +1,6 @@
 ---
-title: イーサリアム開発標準
-description: EIP、ERC-20やERC-721などのトークン標準、開発の慣習など、イーサリアムの標準について学びます。
+title: "イーサリアム開発標準"
+description: "EIP、ERC-20やERC-721などのトークン標準、開発の慣習など、イーサリアムの標準について学びます。"
 lang: ja
 incomplete: true
 ---

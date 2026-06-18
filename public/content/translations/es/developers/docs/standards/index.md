@@ -1,6 +1,6 @@
 ---
-title: Estándares de desarrollo de Ethereum
-description: Aprenda sobre los estándares de Ethereum, incluyendo los EIP, los estándares de tokens como ERC-20 y ERC-721, y las convenciones de desarrollo.
+title: "Estándares de desarrollo de Ethereum"
+description: "Aprenda sobre los estándares de Ethereum, incluyendo los EIP, los estándares de tokens como ERC-20 y ERC-721, y las convenciones de desarrollo."
 lang: es
 incomplete: true
 ---

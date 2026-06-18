@@ -3,7 +3,7 @@ title: Cara melakukan mock pada smart contract Solidity untuk pengujian
 description: Mengapa Anda harus melakukan mock pada kontrak Anda saat pengujian
 author: Markus Waas
 lang: id
-tags: ["solidity", "smart contract", "pengujian", "mocking"]
+tags: ["Solidity", "smart contract", "pengujian", "mocking"]
 skill: intermediate
 breadcrumb: Melakukan mock pada kontrak
 published: 2020-05-02

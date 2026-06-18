@@ -1,6 +1,6 @@
 ---
-title: ERC-4626 Standard für tokenisierte Tresore
-description: Ein Standard für renditebringende Tresore.
+title: "ERC-4626 Standard für tokenisierte Tresore"
+description: "Ein Standard für renditebringende Tresore."
 lang: de
 ---
 

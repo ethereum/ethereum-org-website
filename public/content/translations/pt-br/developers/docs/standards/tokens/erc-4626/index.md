@@ -1,6 +1,6 @@
 ---
-title: Padrão de Cofre Tokenizado ERC-4626
-description: Um padrão para cofres geradores de rendimento.
+title: "Padrão de Cofre Tokenizado ERC-4626"
+description: "Um padrão para cofres geradores de rendimento."
 lang: pt-br
 ---
 

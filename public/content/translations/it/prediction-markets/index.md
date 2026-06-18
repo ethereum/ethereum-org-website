@@ -55,7 +55,7 @@ Sono disponibili diversi mercati predittivi basati su Ethereum. Questi sono alcu
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Tieni a mente i rischi</strong></strong>
+ <p className="mt-0"><strong>Tieni a mente i rischi</strong>
   <p className="mt-2">Scommetti solo ciò che puoi permetterti e fai attenzione ai potenziali comportamenti di dipendenza.</p>
 </AlertDescription>
 </AlertContent>

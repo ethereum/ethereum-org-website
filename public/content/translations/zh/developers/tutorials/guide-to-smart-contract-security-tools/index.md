@@ -1,11 +1,11 @@
 ---
-title: 智能合约安全工具指南
-description: 三种不同测试与程序分析技术概述
+title: "智能合约安全工具指南"
+description: "三种不同测试与程序分析技术概述"
 author: "Trailofbits"
 lang: zh
-tags: ["solidity", "智能合约", "安全"]
+tags: ["Solidity", "智能合约", "安全"]
 skill: intermediate
-breadcrumb: 安全工具
+breadcrumb: "安全工具"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
@@ -27,11 +27,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 \* 如果在未超时的情况下探索了所有路径
 
-**斯莱瑟**能在几秒钟内分析合约，然而，静态分析可能会导致误报，并且不太适合复杂的检查（例如算术检查）。通过 API 运行斯莱瑟，可以一键访问内置检测器，或者通过 API 进行用户自定义的检查。
+<strong>斯莱瑟</strong>能在几秒钟内分析合约，然而，静态分析可能会导致误报，并且不太适合复杂的检查（例如算术检查）。通过 API 运行斯莱瑟，可以一键访问内置检测器，或者通过 API 进行用户自定义的检查。
 
-**埃基德纳**需要运行几分钟，并且只会产生真正的阳性结果（无误报）。埃基德纳检查用户提供的、用 Solidity 编写的安全属性。由于它基于随机探索，因此可能会遗漏漏洞。
+<strong>埃基德纳</strong>需要运行几分钟，并且只会产生真正的阳性结果（无误报）。埃基德纳检查用户提供的、用 Solidity 编写的安全属性。由于它基于随机探索，因此可能会遗漏漏洞。
 
-**曼蒂科尔**执行“最重量级”的分析。与埃基德纳一样，曼蒂科尔验证用户提供的属性。它需要更多时间来运行，但它可以证明属性的有效性，并且不会报告误报。
+<strong>曼蒂科尔</strong>执行“最重量级”的分析。与埃基德纳一样，曼蒂科尔验证用户提供的属性。它需要更多时间来运行，但它可以证明属性的有效性，并且不会报告误报。
 
 ## 建议的工作流程 {#suggested-workflow}
 

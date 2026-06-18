@@ -1,14 +1,14 @@
 ---
-title: Các ứng dụng Ethereum
-metaTitle: Các ứng dụng Ethereum | Các ứng dụng phi tập trung trên Ethereum
-description: Các ứng dụng trên Ethereum là miễn phí, toàn cầu và sử dụng chuỗi khối công khai thay vì máy chủ của công ty tư nhân. Điều này có nghĩa là bạn có thể sử dụng cùng một tài khoản trong mọi dự án và duy trì quyền riêng tư của mình.
+title: "Các ứng dụng Ethereum"
+metaTitle: "Các ứng dụng Ethereum | Các ứng dụng phi tập trung trên Ethereum"
+description: "Các ứng dụng trên Ethereum là miễn phí, toàn cầu và sử dụng chuỗi khối công khai thay vì máy chủ của công ty tư nhân. Điều này có nghĩa là bạn có thể sử dụng cùng một tài khoản trong mọi dự án và duy trì quyền riêng tư của mình."
 lang: vi
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: Các ứng dụng trên Ethereum là miễn phí, toàn cầu và sử dụng chuỗi khối công khai thay vì máy chủ của công ty tư nhân. Điều này có nghĩa là bạn có thể sử dụng cùng một tài khoản trong mọi dự án và duy trì quyền riêng tư của mình.
+summary: "Các ứng dụng trên Ethereum là miễn phí, toàn cầu và sử dụng chuỗi khối công khai thay vì máy chủ của công ty tư nhân. Điều này có nghĩa là bạn có thể sử dụng cùng một tài khoản trong mọi dự án và duy trì quyền riêng tư của mình."
 ---
 
 ## Các ứng dụng với siêu năng lực {#apps-with-superpowers}

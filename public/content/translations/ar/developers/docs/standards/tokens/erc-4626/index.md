@@ -186,7 +186,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### خريطة الواجهة {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+![Map of the <span dir="ltr">ERC-4626</span> interface](./map-of-erc-4626.png)
 
 ### الأحداث {#events}
 

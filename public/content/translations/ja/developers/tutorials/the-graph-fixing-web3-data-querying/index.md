@@ -1,9 +1,9 @@
 ---
 title: "The Graph: Web3のデータクエリの改善"
-description: ブロックチェーンはSQLのないデータベースのようなものです。すべてのデータはそこにありますが、アクセスする方法がありません。The GraphとGraphQLを使ってこの問題を解決する方法を紹介します。
-author: マーカス・ワース
+description: "ブロックチェーンはSQLのないデータベースのようなものです。すべてのデータはそこにありますが、アクセスする方法がありません。The GraphとGraphQLを使ってこの問題を解決する方法を紹介します。"
+author: "マーカス・ワース"
 lang: ja
-tags: ["solidity", "スマート・コントラクト", "クエリ", "the graph", "react"]
+tags: ["Solidity", "スマート・コントラクト", "クエリ", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

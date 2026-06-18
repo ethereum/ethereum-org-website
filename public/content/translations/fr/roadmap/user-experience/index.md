@@ -1,6 +1,6 @@
 ---
-title: Améliorer l'expérience utilisateur
-description: Il est encore trop complexe d'utiliser Ethereum pour la plupart des gens. Pour encourager l'adoption massive, Ethereum doit réduire considérablement ses barrières à l'entrée - les utilisateurs doivent bénéficier d'un accès décentralisé, sans permission et résistant à la censure à Ethereum, mais cela doit être aussi fluide que l'utilisation d'une application Web2 traditionnelle.
+title: "Améliorer l'expérience utilisateur"
+description: "Il est encore trop complexe d'utiliser Ethereum pour la plupart des gens. Pour encourager l'adoption massive, Ethereum doit réduire considérablement ses barrières à l'entrée - les utilisateurs doivent bénéficier d'un accès décentralisé, sans permission et résistant à la censure à Ethereum, mais cela doit être aussi fluide que l'utilisation d'une application Web2 traditionnelle."
 lang: fr
 image: /images/roadmap/roadmap-ux.png
 alt: "Feuille de route d'Ethereum"

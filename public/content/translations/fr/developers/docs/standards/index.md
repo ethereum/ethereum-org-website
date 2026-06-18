@@ -1,6 +1,6 @@
 ---
-title: Normes de développement d'Ethereum
-description: Découvrez les normes d'Ethereum, y compris les EIP, les normes de jetons comme l'ERC-20 et l'ERC-721, et les conventions de développement.
+title: "Normes de développement d'Ethereum"
+description: "Découvrez les normes d'Ethereum, y compris les EIP, les normes de jetons comme l'ERC-20 et l'ERC-721, et les conventions de développement."
 lang: fr
 incomplete: true
 ---

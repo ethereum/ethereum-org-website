@@ -1,11 +1,11 @@
 ---
-title: तुमचे ETH होम स्टेक करा
-description: तुमचे ETH होम स्टेकिंग कसे सुरू करावे याचा आढावा
+title: "तुमचे ETH होम स्टेक करा"
+description: "तुमचे ETH होम स्टेकिंग कसे सुरू करावे याचा आढावा"
 lang: mr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: लेस्ली गेंडा तिच्या स्वतःच्या कॉम्प्युटर चिपवर.
+alt: "लेस्ली गेंडा तिच्या स्वतःच्या कॉम्प्युटर चिपवर."
 sidebarDepth: 2
 summaryPoints:
   - तुमचा प्रमाणक योग्यरित्या कार्यरत आणि ऑनलाइन ठेवल्याबद्दल प्रोटोकॉलकडून थेट जास्तीत जास्त बक्षीस मिळवा

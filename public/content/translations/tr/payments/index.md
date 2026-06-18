@@ -1,7 +1,7 @@
 ---
-title: Ethereum Ödemeleri
-metaTitle: Ethereum'da Ödemeler
-description: Ethereum'daki ödemelere genel bir bakış
+title: "Ethereum Ödemeleri"
+metaTitle: "Ethereum'da Ödemeler"
+description: "Ethereum'daki ödemelere genel bir bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
@@ -62,7 +62,7 @@ El Salvador ve Orta Afrika Cumhuriyeti gibi ülkeler kripto paraları yasal öde
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Bugün bir cüzdan uygulamasıyla Ethereum hesabınızı oluşturun.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Başlayın
   </ButtonLink>
 </AlertContent>
@@ -206,6 +206,7 @@ Hızlı afet yardımını kolaylaştırmaktan küresel çalışanları güçlend
   </ButtonLink>
 </AlertContent>
 </Alert>a varan ücretler alır. Ethereum işlemleri genellikle 0,01 />
+
   <Card title="Daha Hızlı Transferler" emoji="📶" description="Uluslararası banka transferlerinin gerçekleşmesi birkaç gün sürer. Ethereum işlemleri dakikalar içinde sonuçlanır." />
   <Card title="Herkese açık" emoji="🌎" description="Ether göndermek veya almak için yalnızca bir internet bağlantısına ve bir cüzdan uygulamasına ihtiyacınız var." />
 </Grid>
@@ -383,6 +384,7 @@ Hızlı afet yardımını kolaylaştırmaktan küresel çalışanları güçlend
   </ButtonLink>
 </AlertContent>
 </Alert>ın altında tamamlanabilir."/>
+
   <Card title="Daha Hızlı Transferler" emoji="📶" description="Uluslararası banka transferlerinin gerçekleşmesi birkaç gün sürer. Ethereum işlemleri dakikalar içinde sonuçlanır." />
   <Card title="Herkese açık" emoji="🌎" description="Ether göndermek veya almak için yalnızca bir internet bağlantısına ve bir cüzdan uygulamasına ihtiyacınız var." />
 </Grid>

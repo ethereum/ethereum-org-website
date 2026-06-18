@@ -1,6 +1,6 @@
 ---
-title: プログラミング言語
-description: JavaScript、Python、Go、Rustなど、さまざまなプログラミング言語向けのイーサリアム開発リソースを見つけましょう。
+title: "プログラミング言語"
+description: "JavaScript、Python、Go、Rustなど、さまざまなプログラミング言語向けのイーサリアム開発リソースを見つけましょう。"
 lang: ja
 ---
 

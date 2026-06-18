@@ -1,11 +1,11 @@
 ---
-title: Как создавать моки смарт-контрактов Solidity для тестирования
-description: Почему стоит «насмехаться» над своими контрактами при тестировании
-author: Маркус Ваас
+title: "Как создавать моки смарт-контрактов Solidity для тестирования"
+description: "Почему стоит «насмехаться» над своими контрактами при тестировании"
+author: "Маркус Ваас"
 lang: ru
-tags: ["solidity", "смарт-контракты", "тестирование", "мокирование"]
+tags: ["Solidity", "смарт-контракты", "тестирование", "мокирование"]
 skill: intermediate
-breadcrumb: Мокирование контрактов
+breadcrumb: "Мокирование контрактов"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

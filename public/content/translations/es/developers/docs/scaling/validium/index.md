@@ -1,11 +1,11 @@
 ---
 title: Validium
-description: Una introducción a Validium como solución de escalabilidad utilizada actualmente por la comunidad de Ethereum.
+description: "Una introducción a Validium como solución de escalabilidad utilizada actualmente por la comunidad de Ethereum."
 lang: es
 sidebarDepth: 3
 ---
 
-Validium es una [solución de escalabilidad](/developers/docs/scaling/) que impone la integridad de las transacciones utilizando pruebas de validez como los [ZK-rollups](/developers/docs/scaling/zk-rollups/), pero no almacena los datos de las transacciones en la [red principal de Ethereum](/). Aunque la disponibilidad de datos fuera de la cadena introduce ciertas concesiones, puede conducir a mejoras masivas en la escalabilidad (los Validium pueden procesar [~9.000 transacciones, o más, por segundo](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium es una [solución de escalabilidad](/developers/docs/scaling/) que impone la integridad de las transacciones utilizando pruebas de validez como los [ZK-rollups](/developers/docs/scaling/zk-rollups/), pero no almacena los datos de las transacciones en la [red principal de Ethereum](/). Aunque la disponibilidad de datos fuera de la cadena introduce ciertas concesiones, puede conducir a mejoras masivas en la escalabilidad (los Validium pueden procesar [\~9.000 transacciones, o más, por segundo](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Requisitos previos {#prerequisites}
 

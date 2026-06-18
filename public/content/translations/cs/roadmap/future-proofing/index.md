@@ -1,6 +1,6 @@
 ---
-title: Příprava Etherea a kryptografie na kvantovou budoucnost
-description: Tyto upgrady upevňují pozici Etherea jako odolné, decentralizované základní vrstvy pro budoucnost, ať už přinese cokoli.
+title: "Příprava Etherea a kryptografie na kvantovou budoucnost"
+description: "Tyto upgrady upevňují pozici Etherea jako odolné, decentralizované základní vrstvy pro budoucnost, ať už přinese cokoli."
 lang: cs
 image: /images/roadmap/roadmap-future.png
 alt: "Plán vývoje Etherea"

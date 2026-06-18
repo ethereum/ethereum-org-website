@@ -1,11 +1,11 @@
 ---
 title: Validium
-description: Une introduction au validium en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
+description: "Une introduction au validium en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum."
 lang: fr
 sidebarDepth: 3
 ---
 
-Le validium est une [solution de mise à l'échelle](/developers/docs/scaling/) qui garantit l'intégrité des transactions à l'aide de preuves de validité comme les [ZK-rollups](/developers/docs/scaling/zk-rollups/), mais qui ne stocke pas les données de transaction sur le [réseau principal Ethereum](/). Bien que la disponibilité des données hors chaîne introduise des compromis, elle peut conduire à des améliorations massives de la mise à l'échelle (les validiums peuvent traiter [~9 000 transactions, ou plus, par seconde](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Le validium est une [solution de mise à l'échelle](/developers/docs/scaling/) qui garantit l'intégrité des transactions à l'aide de preuves de validité comme les [ZK-rollups](/developers/docs/scaling/zk-rollups/), mais qui ne stocke pas les données de transaction sur le [réseau principal Ethereum](/). Bien que la disponibilité des données hors chaîne introduise des compromis, elle peut conduire à des améliorations massives de la mise à l'échelle (les validiums peuvent traiter [\~9 000 transactions, ou plus, par seconde](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Prérequis {#prerequisites}
 

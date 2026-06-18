@@ -1,13 +1,13 @@
 ---
-title: 초보자를 위한 Hello World 스마트 컨트랙트 - 풀스택
-description: 이더리움에서 간단한 스마트 컨트랙트를 작성하고 배포하는 방법에 대한 입문 튜토리얼입니다.
+title: "초보자를 위한 Hello World 스마트 컨트랙트 - 풀스택"
+description: "이더리움에서 간단한 스마트 컨트랙트를 작성하고 배포하는 방법에 대한 입문 튜토리얼입니다."
 author: "nstrike2"
-breadcrumb: Hello World 풀스택
+breadcrumb: "Hello World 풀스택"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "스마트 컨트랙트",
     "배포",
     "블록 탐색기",
@@ -36,17 +36,17 @@ published: 2021-10-25
 
 Alchemy 계정을 생성한 후, 앱을 만들어 API 키를 생성할 수 있습니다. 이를 통해 괴를리 테스트넷에 요청을 보낼 수 있습니다. 테스트넷에 익숙하지 않다면 [네트워크 선택에 대한 Alchemy의 가이드](https://www.alchemy.com/docs/choosing-a-web3-network)를 읽어보세요.
 
-Alchemy 대시보드의 내비게이션 바에서 **Apps** 드롭다운을 찾아 **Create App**을 클릭하세요.
+Alchemy 대시보드의 내비게이션 바에서 **Apps** 드롭다운을 찾아 <strong>Create App</strong>을 클릭하세요.
 
 ![Hello world create app](./hello-world-create-app.png)
 
-앱 이름에 '_Hello World_'를 입력하고 짧은 설명을 작성하세요. 환경(environment)으로 **Staging**을 선택하고 네트워크로 **Goerli**를 선택하세요.
+앱 이름에 '_Hello World_'를 입력하고 짧은 설명을 작성하세요. 환경(environment)으로 <strong>Staging</strong>을 선택하고 네트워크로 <strong>Goerli</strong>를 선택하세요.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_참고: 반드시 **괴를리**를 선택해야 합니다. 그렇지 않으면 이 튜토리얼이 제대로 작동하지 않습니다._
+_참고: 반드시 <strong>괴를리</strong>를 선택해야 합니다. 그렇지 않으면 이 튜토리얼이 제대로 작동하지 않습니다._
 
-**Create app**을 클릭하세요. 아래 표에 앱이 나타날 것입니다.
+<strong>Create app</strong>을 클릭하세요. 아래 표에 앱이 나타날 것입니다.
 
 ### 이더리움 계정 생성하기 {#create-an-ethereum-account}
 
@@ -850,8 +850,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

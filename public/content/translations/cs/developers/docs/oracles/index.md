@@ -1,6 +1,6 @@
 ---
-title: Orákula
-description: Orákula poskytují chytrým kontraktům na Ethereu přístup k datům z reálného světa, čímž odemykají více případů užití a větší hodnotu pro uživatele.
+title: "Orákula"
+description: "Orákula poskytují chytrým kontraktům na Ethereu přístup k datům z reálného světa, čímž odemykají více případů užití a větší hodnotu pro uživatele."
 lang: cs
 authors: ["Patrick Collins"]
 ---
@@ -269,7 +269,7 @@ Centralizovaná orákula spoléhají při poskytování dat chytrým kontraktům
 
 Decentralizovaná orákula se však musí vypořádat s nesrovnalostmi v informacích získaných z více offchain zdrojů. K minimalizaci rozdílů v informacích a zajištění toho, aby data předaná kontraktu orákula odrážela kolektivní názor uzlů orákula, používají decentralizovaná orákula následující mechanismy:
 
-##### Hlasování/staking o přesnosti dat {#availability}
+##### Hlasování/staking o přesnosti dat {#}
 
 Některé decentralizované sítě orákul vyžadují, aby účastníci hlasovali nebo prováděli staking ohledně přesnosti odpovědí na datové dotazy (např. „Kdo vyhrál volby v USA v roce 2020?“) pomocí nativního tokenu sítě. Agregační protokol pak agreguje hlasy a staky a bere odpověď podporovanou většinou jako platnou.
 
@@ -277,7 +277,7 @@ Uzly, jejichž odpovědi se odchylují od většinové odpovědi, jsou penalizov
 
 Staking/hlasování také chrání decentralizovaná orákula před [Sybil útoky](/glossary/#sybil-attack), kdy zlomyslní aktéři vytvářejí více identit, aby oklamali systém konsensu. Staking však nemůže zabránit „přiživování“ (uzly orákula kopírující informace od ostatních) a „líné validaci“ (uzly orákula následující většinu bez toho, aby samy ověřily informace).
 
-##### Mechanismy Schellingova bodu {#good-incentive-compatibility}
+##### Mechanismy Schellingova bodu {#}
 
 [Schellingův bod](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) je koncept teorie her, který předpokládá, že více subjektů se při absenci jakékoli komunikace vždy uchýlí ke společnému řešení problému. Mechanismy Schellingova bodu jsou často používány v decentralizovaných sítích orákul, aby umožnily uzlům dosáhnout konsensu o odpovědích na požadavky na data.
 
@@ -289,7 +289,7 @@ Další příklady orákul, která používají mechanismy Schellingova bodu, za
 
 Mechanismy Schellingova bodu jsou atraktivní, protože minimalizují onchain stopu (je třeba odeslat pouze jednu transakci) a zároveň zaručují decentralizaci. To druhé je možné, protože uzly musí podepsat seznam předložených odpovědí předtím, než je vložen do algoritmu, který produkuje průměrnou/mediánovou hodnotu.
 
-### Dostupnost {#applications-of-oracles-in-smart-contracts}
+### Dostupnost {#availability}
 
 Decentralizované služby orákula zajišťují vysokou dostupnost offchain dat pro chytré kontrakty. Toho je dosaženo decentralizací jak zdroje offchain informací, tak uzlů odpovědných za přenos informací onchain.
 
@@ -297,7 +297,7 @@ To zajišťuje odolnost proti chybám, protože kontrakt orákula se může spol
 
 U orákul založených na staku je také možné penalizovat provozovatele uzlů, kteří nedokážou rychle reagovat na požadavky na data. To významně motivuje uzly orákula k investicím do infrastruktury odolné proti chybám a k včasnému poskytování dat.
 
-### Dobrá kompatibilita pobídek {#retrieving-financial-data}
+### Dobrá kompatibilita pobídek {#good-incentive-compatibility}
 
 Decentralizovaná orákula implementují různé návrhy pobídek, aby zabránila [byzantskému](https://en.wikipedia.org/wiki/Byzantine_fault) chování mezi uzly orákula. Konkrétně dosahují _přiřaditelnosti_ a _odpovědnosti_:
 
@@ -305,11 +305,11 @@ Decentralizovaná orákula implementují různé návrhy pobídek, aby zabránil
 
 2. Decentralizovaná orákula – jak bylo vysvětleno dříve – mohou vyžadovat, aby uzly vložily stake na svou důvěru v pravdivost dat, která předkládají. Pokud se tvrzení potvrdí, může být tento stake vrácen spolu s odměnami za poctivou službu. Může však být také penalizován v případě, že jsou informace nesprávné, což poskytuje určitou míru odpovědnosti.
 
-## Aplikace orákul v chytrých kontraktech {#generating-verifiable-randomness}
+## Aplikace orákul v chytrých kontraktech {#applications-of-oracles-in-smart-contracts}
 
 Následují běžné případy užití orákul na Ethereu:
 
-### Získávání finančních dat {#getting-outcomes-for-events}
+### Získávání finančních dat {#retrieving-financial-data}
 
 Aplikace [decentralizovaných financí (DeFi)](/defi/) umožňují peer-to-peer půjčování, vypůjčování a obchodování s aktivy. To často vyžaduje získání různých finančních informací, včetně údajů o směnných kurzech (pro výpočet fiat hodnoty kryptoměn nebo porovnání cen tokenů) a údajů o kapitálových trzích (pro výpočet hodnoty tokenizovaných aktiv, jako je zlato nebo americký dolar).
 
@@ -355,7 +355,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Generování ověřitelné náhodnosti {#automating-smart-contracts}
+### Generování ověřitelné náhodnosti {#generating-verifiable-randomness}
 
 Určité blockchainové aplikace, jako jsou hry založené na blockchainu nebo loterijní schémata, vyžadují k efektivnímu fungování vysokou úroveň nepředvídatelnosti a náhodnosti. Deterministické provádění blockchainů však náhodnost eliminuje.
 
@@ -365,13 +365,13 @@ Je možné vygenerovat náhodnou hodnotu offchain a odeslat ji onchain, ale to k
 
 Orákula navržená pro offchain výpočty tento problém řeší bezpečným generováním náhodných výsledků offchain, které vysílají onchain spolu s kryptografickými důkazy potvrzujícími nepředvídatelnost procesu. Příkladem je [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), což je prokazatelně spravedlivý a proti manipulaci odolný generátor náhodných čísel (RNG) užitečný pro budování spolehlivých chytrých kontraktů pro aplikace, které spoléhají na nepředvídatelné výsledky.
 
-### Získávání výsledků událostí {#use-blockchain-oracles}
+### Získávání výsledků událostí {#getting-outcomes-for-events}
 
 S orákuly je vytváření chytrých kontraktů, které reagují na události v reálném světě, snadné. Služby orákula to umožňují tím, že dovolují kontraktům připojit se k externím API prostřednictvím offchain komponent a spotřebovávat informace z těchto zdrojů dat. Například dříve zmíněná predikční dapp může požádat orákulum o vrácení výsledků voleb z důvěryhodného offchain zdroje (např. Associated Press).
 
 Použití orákul k získávání dat na základě výsledků v reálném světě umožňuje další nové případy užití; například decentralizovaný pojistný produkt potřebuje k efektivnímu fungování přesné informace o počasí, katastrofách atd.
 
-### Automatizace chytrých kontraktů {#further-reading}
+### Automatizace chytrých kontraktů {#automating-smart-contracts}
 
 Chytré kontrakty se nespouštějí automaticky; spíše musí externě vlastněný účet (EOA) nebo jiný kontraktový účet spustit správné funkce k provedení kódu kontraktu. Ve většině případů je většina funkcí kontraktu veřejná a může být vyvolána EOA a jinými kontrakty.
 
@@ -383,7 +383,7 @@ Některé decentralizované sítě orákul nabízejí automatizační služby, k
 
 [Keeper Network](https://chain.link/keepers) od Chainlinku poskytuje chytrým kontraktům možnosti outsourcovat pravidelné úkoly údržby decentralizovaným způsobem s minimalizovanou potřebou důvěry. Přečtěte si oficiální [dokumentaci Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) pro informace o tom, jak učinit váš kontrakt kompatibilním s Keeperem a jak používat službu Upkeep.
 
-## Jak používat blockchainová orákula
+## Jak používat blockchainová orákula {#use-blockchain-oracles}
 
 Existuje několik aplikací orákul, které můžete integrovat do své dapp na Ethereu:
 
@@ -413,7 +413,7 @@ Existuje několik aplikací orákul, které můžete integrovat do své dapp na 
 
 **[Stork](https://stork.network)** - Stork dodává cenová data s ultra nízkou latencí, čímž podporuje širokou škálu případů užití včetně trhů s perpetuálními kontrakty, protokolů pro půjčování a ekosystémů DeFi, přičemž nová aktiva jsou podporována rychle po zalistování.
 
-## Další čtení
+## Další čtení {#further-reading}
 
 **Články**
 

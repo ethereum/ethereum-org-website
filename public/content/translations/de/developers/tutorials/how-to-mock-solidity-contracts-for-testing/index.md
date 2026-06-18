@@ -1,11 +1,11 @@
 ---
-title: Wie man Solidity-Smart-Contracts für Tests mockt
-description: Warum Sie sich beim Testen über Ihre Verträge lustig machen sollten
+title: "Wie man Solidity-Smart-Contracts für Tests mockt"
+description: "Warum Sie sich beim Testen über Ihre Verträge lustig machen sollten"
 author: Markus Waas
 lang: de
-tags: ["solidity", "Smart Contracts", "Testen", "Mocking"]
+tags: ["Solidity", "Smart Contracts", "Testen", "Mocking"]
 skill: intermediate
-breadcrumb: Verträge mocken
+breadcrumb: "Verträge mocken"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

@@ -1,6 +1,6 @@
 ---
-title: Ngôn ngữ hợp đồng thông minh
-description: Tổng quan và so sánh hai ngôn ngữ hợp đồng thông minh chính – Solidity và Vyper.
+title: "Ngôn ngữ hợp đồng thông minh"
+description: "Tổng quan và so sánh hai ngôn ngữ hợp đồng thông minh chính – Solidity và Vyper."
 lang: vi
 ---
 

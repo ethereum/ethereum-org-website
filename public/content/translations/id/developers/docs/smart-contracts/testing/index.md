@@ -52,7 +52,7 @@ Pengujian unit berguna untuk memeriksa bahwa fungsi mengembalikan nilai yang dih
 
 #### Panduan untuk pengujian unit kontrak pintar {#unit-testing-guidelines}
 
-##### 1. Pahami logika bisnis dan alur kerja kontrak Anda {#integration-testing-for-smart-contracts}
+##### 1. Pahami logika bisnis dan alur kerja kontrak Anda {#}
 
 Sebelum menulis pengujian unit, ada baiknya untuk mengetahui fungsionalitas apa yang ditawarkan kontrak pintar dan bagaimana pengguna akan mengakses dan menggunakan fungsi tersebut. Hal ini sangat berguna untuk menjalankan [pengujian jalur bahagia (happy path)](https://en.m.wikipedia.org/wiki/Happy_path) yang menentukan apakah fungsi dalam kontrak mengembalikan keluaran yang benar untuk masukan pengguna yang valid. Kami akan menjelaskan konsep ini menggunakan contoh (singkat) dari [kontrak lelang](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction) ini
 
@@ -114,7 +114,7 @@ Pengujian unit untuk kontrak seperti ini akan mencakup berbagai fungsi yang mung
 
 Memahami alur kerja operasional kontrak juga membantu dalam menulis pengujian unit yang memeriksa apakah eksekusi memenuhi persyaratan. Misalnya, kontrak lelang menentukan bahwa pengguna tidak dapat mengajukan tawaran saat lelang telah berakhir (yaitu, saat `auctionEndTime` lebih rendah dari `block.timestamp`). Dengan demikian, pengembang mungkin menjalankan pengujian unit yang memeriksa apakah panggilan ke fungsi `bid()` berhasil atau gagal saat lelang selesai (yaitu, saat `auctionEndTime` > `block.timestamp`).
 
-##### 2. Evaluasi semua asumsi yang terkait dengan eksekusi kontrak {#property-based-testing-for-smart-contracts}
+##### 2. Evaluasi semua asumsi yang terkait dengan eksekusi kontrak {#}
 
 Penting untuk mendokumentasikan setiap asumsi tentang eksekusi kontrak dan menulis pengujian unit untuk memverifikasi validitas asumsi tersebut. Selain menawarkan perlindungan terhadap eksekusi yang tidak terduga, menguji asersi memaksa Anda untuk memikirkan operasi yang dapat merusak model keamanan kontrak pintar. Tip yang berguna adalah melampaui "pengujian pengguna bahagia" dan menulis pengujian negatif yang memeriksa apakah suatu fungsi gagal untuk masukan yang salah.
 
@@ -128,11 +128,11 @@ Banyak kerangka kerja pengujian unit memungkinkan Anda membuat asersi—pernyata
 
 **Catatan**: Cara lain untuk menguji asumsi adalah dengan menulis pengujian yang memicu [pengubah fungsi (function modifier)](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) dalam kontrak, terutama pernyataan `require`, `assert`, dan `if…else`.
 
-##### 3. Ukur cakupan kode {#static-analysis}
+##### 3. Ukur cakupan kode {#}
 
 [Cakupan kode](https://en.m.wikipedia.org/wiki/Code_coverage) adalah metrik pengujian yang melacak jumlah cabang, baris, dan pernyataan dalam kode Anda yang dieksekusi selama pengujian. Pengujian harus memiliki cakupan kode yang baik untuk meminimalkan risiko kerentanan yang tidak teruji. Tanpa cakupan yang memadai, Anda mungkin salah berasumsi bahwa kontrak Anda aman karena semua pengujian lulus, sementara kerentanan masih ada di jalur kode yang tidak teruji. Namun, mencatat cakupan kode yang tinggi memberikan jaminan bahwa semua pernyataan/fungsi dalam kontrak pintar telah diuji kecukupannya untuk kebenaran.
 
-##### 4. Gunakan kerangka kerja pengujian yang dikembangkan dengan baik {#dynamic-analysis}
+##### 4. Gunakan kerangka kerja pengujian yang dikembangkan dengan baik {#}
 
 Kualitas alat yang digunakan dalam menjalankan pengujian unit untuk kontrak pintar Anda sangat penting. Kerangka kerja pengujian yang ideal adalah yang dipelihara secara teratur; menyediakan fitur yang berguna (misalnya, kemampuan pencatatan dan pelaporan); dan harus telah digunakan secara luas dan diperiksa oleh pengembang lain.
 
@@ -146,7 +146,7 @@ Kerangka kerja pengujian unit untuk kontrak pintar Solidity hadir dalam berbagai
 - **[Menjalankan pengujian unit dengan Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 - **[Menjalankan pengujian unit dengan Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
-### Pengujian integrasi {#running-property-based-tests}
+### Pengujian integrasi {#integration-testing-for-smart-contracts}
 
 Sementara pengujian unit men-debug fungsi kontrak secara terisolasi, pengujian integrasi mengevaluasi komponen kontrak pintar secara keseluruhan. Pengujian integrasi dapat mendeteksi masalah yang timbul dari panggilan lintas rantai atau interaksi antara berbagai fungsi dalam kontrak pintar yang sama. Misalnya, pengujian integrasi dapat membantu memeriksa apakah hal-hal seperti [pewarisan (inheritance)](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) dan injeksi dependensi berfungsi dengan baik.
 
@@ -154,13 +154,13 @@ Pengujian integrasi berguna jika kontrak Anda mengadopsi arsitektur modular atau
 
 Rantai blok yang dicabangkan akan berperilaku mirip dengan Mainnet dan memiliki akun dengan state dan saldo terkait. Namun, ini hanya bertindak sebagai lingkungan pengembangan lokal yang di-sandbox, yang berarti Anda tidak akan memerlukan ETH nyata untuk transaksi, misalnya, dan perubahan Anda tidak akan memengaruhi protokol Ethereum yang sebenarnya.
 
-### Pengujian berbasis properti {#manual-testing-for-smart-contracts}
+### Pengujian berbasis properti {#property-based-testing-for-smart-contracts}
 
 Pengujian berbasis properti adalah proses memeriksa bahwa kontrak pintar memenuhi beberapa properti yang ditentukan. Properti menegaskan fakta tentang perilaku kontrak yang diharapkan tetap benar dalam berbagai skenario—contoh properti kontrak pintar bisa berupa "Operasi aritmatika dalam kontrak tidak pernah mengalami limpahan (overflow) atau underflow."
 
 **Analisis statis** dan **analisis dinamis** adalah dua teknik umum untuk mengeksekusi pengujian berbasis properti, dan keduanya dapat memverifikasi bahwa kode untuk suatu program (kontrak pintar dalam hal ini) memenuhi beberapa properti yang telah ditentukan sebelumnya. Beberapa alat pengujian berbasis properti dilengkapi dengan aturan yang telah ditentukan sebelumnya tentang properti kontrak yang diharapkan dan memeriksa kode terhadap aturan tersebut, sementara yang lain memungkinkan Anda membuat properti kustom untuk kontrak pintar.
 
-#### Analisis statis {#testing-on-local-blockchain}
+#### Analisis statis {#static-analysis}
 
 Penganalisis statis mengambil kode sumber kontrak pintar sebagai masukan dan mengeluarkan hasil yang menyatakan apakah kontrak memenuhi properti atau tidak. Tidak seperti analisis dinamis, analisis statis tidak melibatkan eksekusi kontrak untuk menganalisis kebenarannya. Analisis statis sebaliknya menalar tentang semua kemungkinan jalur yang dapat diambil kontrak pintar selama eksekusi (yaitu, dengan memeriksa struktur kode sumber untuk menentukan apa artinya bagi operasi kontrak saat runtime).
 
@@ -168,7 +168,7 @@ Penganalisis statis mengambil kode sumber kontrak pintar sebagai masukan dan men
 
 Dalam kebanyakan kasus, analisis statis berguna untuk mendeteksi masalah keamanan seperti penggunaan konstruksi yang tidak aman, kesalahan sintaksis, atau pelanggaran standar pengkodean dalam kode kontrak. Namun, penganalisis statis diketahui umumnya tidak kuat dalam mendeteksi kerentanan yang lebih dalam, dan dapat menghasilkan positif palsu yang berlebihan.
 
-#### Analisis dinamis {#testing-contracts-on-testnets}
+#### Analisis dinamis {#dynamic-analysis}
 
 Analisis dinamis menghasilkan masukan simbolis (misalnya, dalam [eksekusi simbolis](https://en.m.wikipedia.org/wiki/Symbolic_execution)) atau masukan konkret (misalnya, dalam [fuzzing](https://owasp.org/www-community/Fuzzing)) ke fungsi kontrak pintar untuk melihat apakah ada jejak eksekusi yang melanggar properti tertentu. Bentuk pengujian berbasis properti ini berbeda dari pengujian unit karena kasus uji mencakup beberapa skenario dan program menangani pembuatan kasus uji.
 
@@ -182,7 +182,7 @@ Fuzzing berguna untuk mengevaluasi mekanisme validasi masukan kontrak pintar kar
 
 3. **Pengujian unit membuktikan kontrak dieksekusi dengan benar untuk data sampel, tetapi apakah kontrak dieksekusi dengan benar untuk masukan di luar sampel tetap tidak diketahui.** Pengujian properti mengeksekusi kontrak target dengan beberapa variasi nilai masukan yang diberikan untuk menemukan jejak eksekusi yang menyebabkan kegagalan asersi. Dengan demikian, pengujian properti memberikan lebih banyak jaminan bahwa kontrak dieksekusi dengan benar untuk kelas data masukan yang luas.
 
-### Panduan untuk menjalankan pengujian berbasis properti untuk kontrak pintar {#testing-vs-formal-verification}
+### Panduan untuk menjalankan pengujian berbasis properti untuk kontrak pintar {#running-property-based-tests}
 
 Menjalankan pengujian berbasis properti biasanya dimulai dengan menentukan properti (misalnya, tidak adanya [limpahan bilangan bulat (integer overflow)](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) atau kumpulan properti yang ingin Anda verifikasi dalam kontrak pintar. Anda mungkin juga perlu menentukan rentang nilai di mana program dapat menghasilkan data untuk masukan transaksi saat menulis pengujian properti.
 
@@ -197,11 +197,11 @@ Setelah dikonfigurasi dengan benar, alat pengujian properti akan mengeksekusi fu
 - **[Eksekusi simbolis kontrak pintar dengan Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Eksekusi simbolis kontrak pintar dengan Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-## Pengujian manual untuk kontrak pintar {#testing-vs-audits-bug-bounties}
+## Pengujian manual untuk kontrak pintar {#manual-testing-for-smart-contracts}
 
 Pengujian manual kontrak pintar sering kali dilakukan belakangan dalam siklus pengembangan setelah menjalankan pengujian otomatis. Bentuk pengujian ini mengevaluasi kontrak pintar sebagai satu produk yang terintegrasi penuh untuk melihat apakah kinerjanya sesuai dengan yang ditentukan dalam persyaratan teknis.
 
-### Menguji kontrak di rantai blok lokal {#testing-tools-and-libraries}
+### Menguji kontrak di rantai blok lokal {#testing-on-local-blockchain}
 
 Meskipun pengujian otomatis yang dilakukan di lingkungan pengembangan lokal dapat memberikan informasi debugging yang berguna, Anda pasti ingin mengetahui bagaimana perilaku kontrak pintar Anda di lingkungan produksi. Namun, menyebarkan ke rantai utama Ethereum menimbulkan biaya gas—belum lagi Anda atau pengguna Anda dapat kehilangan uang sungguhan jika kontrak pintar Anda masih memiliki bug.
 
@@ -211,7 +211,7 @@ Menjalankan kontrak di rantai blok lokal dapat berguna sebagai bentuk pengujian 
 
 [Lebih lanjut tentang jaringan pengembangan.](/developers/docs/development-networks/)
 
-### Menguji kontrak di testnet {#unit-testing-tools}
+### Menguji kontrak di testnet {#testing-contracts-on-testnets}
 
 Jaringan pengujian atau testnet bekerja persis seperti Mainnet Ethereum, kecuali bahwa ia menggunakan Ether (ETH) tanpa nilai dunia nyata. Menyebarkan kontrak Anda di [testnet](/developers/docs/networks/#ethereum-testnets) berarti siapa pun dapat berinteraksi dengannya (misalnya, melalui frontend dapp) tanpa membahayakan dana.
 
@@ -221,7 +221,7 @@ Menyebarkan di testnet setelah pengujian di rantai blok lokal sangat ideal karen
 
 [Lebih lanjut tentang testnet Ethereum.](/developers/docs/development-networks/#public-beacon-testchains)
 
-## Pengujian vs. verifikasi formal {#property-based-testing-tools}
+## Pengujian vs. verifikasi formal {#testing-vs-formal-verification}
 
 Meskipun pengujian membantu mengonfirmasi bahwa kontrak mengembalikan hasil yang diharapkan untuk beberapa masukan data, pengujian tidak dapat secara meyakinkan membuktikan hal yang sama untuk masukan yang tidak digunakan selama pengujian. Oleh karena itu, menguji kontrak pintar tidak dapat menjamin "kebenaran fungsional" (yaitu, tidak dapat menunjukkan bahwa program berperilaku seperti yang disyaratkan untuk _semua_ set nilai masukan).
 
@@ -233,7 +233,7 @@ Tidak seperti pengujian, verifikasi formal dapat digunakan untuk memverifikasi e
 
 [Lebih lanjut tentang verifikasi formal untuk kontrak pintar.](/developers/docs/smart-contracts/formal-verification)
 
-## Pengujian vs audit dan bug bounty {#static-analysis-tools}
+## Pengujian vs audit dan bug bounty {#testing-vs-audits-bug-bounties}
 
 Seperti yang disebutkan, pengujian yang ketat jarang dapat menjamin tidak adanya bug dalam kontrak; pendekatan verifikasi formal dapat memberikan jaminan kebenaran yang lebih kuat tetapi saat ini sulit digunakan dan menimbulkan biaya yang cukup besar.
 
@@ -245,9 +245,9 @@ Sebaliknya, program bug bounty biasanya melibatkan penawaran imbalan finansial k
 
 Perbedaan utamanya adalah bahwa program bug bounty terbuka untuk komunitas pengembang/peretas yang lebih luas dan menarik kelas peretas etis dan profesional keamanan independen yang luas dengan keterampilan dan pengalaman unik. Ini mungkin menjadi keuntungan dibandingkan audit kontrak pintar yang terutama bergantung pada tim yang mungkin memiliki keahlian terbatas atau sempit.
 
-## Alat dan pustaka pengujian {#dynamic-analysis-tools}
+## Alat dan pustaka pengujian {#testing-tools-and-libraries}
 
-### Alat pengujian unit {#related-tutorials}
+### Alat pengujian unit {#unit-testing-tools}
 
 - **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _Alat cakupan kode untuk kontrak pintar yang ditulis dalam Solidity._
 
@@ -267,9 +267,9 @@ Perbedaan utamanya adalah bahwa program bug bounty terbuka untuk komunitas penge
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Kerangka kerja berbasis Python untuk pengujian unit dan fuzzing dengan kemampuan debugging yang kuat dan dukungan pengujian lintas rantai, memanfaatkan pytest dan Anvil untuk pengalaman pengguna dan kinerja terbaik._
 
-### Alat pengujian berbasis properti {#further-reading}
+### Alat pengujian berbasis properti {#property-based-testing-tools}
 
-#### Alat analisis statis {#tutorials}
+#### Alat analisis statis {#static-analysis-tools}
 
 - **[Slither](https://github.com/crytic/slither)** - _Kerangka kerja analisis statis Solidity berbasis Python untuk menemukan kerentanan, meningkatkan pemahaman kode, dan menulis analisis kustom untuk kontrak pintar._
 
@@ -281,7 +281,7 @@ Perbedaan utamanya adalah bahwa program bug bounty terbuka untuk komunitas penge
 
 - **[Slippy](https://github.com/fvictorio/slippy)** - _Linter yang sederhana dan kuat untuk Solidity._
 
-#### Alat analisis dinamis
+#### Alat analisis dinamis {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Fuzzer kontrak cepat untuk mendeteksi kerentanan dalam kontrak pintar melalui pengujian berbasis properti._
 
@@ -293,7 +293,7 @@ Perbedaan utamanya adalah bahwa program bug bounty terbuka untuk komunitas penge
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble adalah bahasa spesifikasi dan alat verifikasi runtime yang memungkinkan Anda membuat anotasi kontrak pintar dengan properti yang memungkinkan Anda menguji kontrak secara otomatis dengan alat seperti Diligence Fuzzing atau MythX._
 
-## Tutorial terkait
+## Tutorial terkait {#related-tutorials}
 
 - [Gambaran umum dan perbandingan berbagai produk pengujian](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Cara menggunakan Echidna untuk menguji kontrak pintar](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
@@ -302,14 +302,14 @@ Perbedaan utamanya adalah bahwa program bug bounty terbuka untuk komunitas penge
 - [Cara membuat tiruan (mock) kontrak Solidity untuk pengujian](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Cara menjalankan pengujian unit di Solidity menggunakan Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
-## Bacaan lebih lanjut
+## Bacaan lebih lanjut {#further-reading}
 
 - [Panduan mendalam untuk menguji kontrak pintar Ethereum](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [Cara menguji kontrak pintar Ethereum](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
 - [Panduan pengujian unit MolochDAO untuk pengembang](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
 - [Cara menguji kontrak pintar seperti seorang rockstar](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)
 
-## Tutorial: Pengujian kontrak pintar di Ethereum
+## Tutorial: Pengujian kontrak pintar di Ethereum {#tutorials}
 
 - [Cara mengembangkan dan menguji dApp di testnet lokal multi-klien](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– Panduan menyebarkan kontrak pintar ke testnet lokal dan melakukan pengujian._
 - [Cara membuat tiruan (mock) kontrak pintar Solidity untuk pengujian](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/) _– Tutorial tingkat menengah tentang cara menggunakan data tiruan dan mengimplementasikan pengujian unit._

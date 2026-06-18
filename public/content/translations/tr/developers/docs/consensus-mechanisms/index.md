@@ -1,6 +1,6 @@
 ---
-title: Mutabakat mekanizmaları
-description: Dağıtık sistemlerdeki mutabakat protokollerinin ve Ethereum'da oynadıkları rolün bir açıklaması.
+title: "Mutabakat mekanizmaları"
+description: "Dağıtık sistemlerdeki mutabakat protokollerinin ve Ethereum'da oynadıkları rolün bir açıklaması."
 lang: tr
 authors: ["Patrick Collins"]
 ---

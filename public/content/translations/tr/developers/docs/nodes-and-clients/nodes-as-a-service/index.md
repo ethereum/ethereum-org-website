@@ -1,6 +1,6 @@
 ---
-title: Hizmet olarak düğümler
-description: Düğüm hizmetlerine, artıları ve eksilerine ve popüler sağlayıcılara giriş seviyesinde bir genel bakış.
+title: "Hizmet olarak düğümler"
+description: "Düğüm hizmetlerine, artıları ve eksilerine ve popüler sağlayıcılara giriş seviyesinde bir genel bakış."
 lang: tr
 sidebarDepth: 2
 ---
@@ -54,7 +54,7 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
 - [**Alchemy**](https://alchemy.com/)
   - [Belgeler](https://www.alchemy.com/docs/)
   - Özellikler
-    - Ayda 300 milyon işlem birimiyle (~30 milyon getLatestBlock isteği) en büyük ücretsiz katman
+    - Ayda 300 milyon işlem birimiyle (\~30 milyon getLatestBlock isteği) en büyük ücretsiz katman
     - Polygon, Starknet, Optimism, Arbitrum için çoklu zincir desteği
     - En büyük Ethereum dapp'lerinin ve DeFi işlem hacminin ~%70'ine güç sağlar
     - Alchemy Notify aracılığıyla gerçek zamanlı webhook uyarıları

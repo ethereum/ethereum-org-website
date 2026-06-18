@@ -1,6 +1,6 @@
 ---
-title: Ethereum Arşiv Düğümü
-description: Arşiv düğümlerine genel bir bakış
+title: "Ethereum Arşiv Düğümü"
+description: "Arşiv düğümlerine genel bir bakış"
 lang: tr
 sidebarDepth: 2
 ---

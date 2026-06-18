@@ -1,6 +1,6 @@
 ---
 title: Composabilidad de los contratos inteligentes
-description: Aprenda cómo los contratos inteligentes se pueden combinar como bloques de Lego para construir aplicaciones descentralizadas (dapps) complejas reutilizando componentes existentes.
+description: "Aprenda cómo los contratos inteligentes se pueden combinar como bloques de Lego para construir aplicaciones descentralizadas (dapps) complejas reutilizando componentes existentes."
 lang: es
 incomplete: true
 ---

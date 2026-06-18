@@ -1,11 +1,11 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्ट सुरक्षा टूल्ससाठी मार्गदर्शक
-description: तीन वेगवेगळ्या टेस्टिंग आणि प्रोग्राम विश्लेषण तंत्रांचा आढावा
+title: "स्मार्ट कॉन्ट्रॅक्ट सुरक्षा टूल्ससाठी मार्गदर्शक"
+description: "तीन वेगवेगळ्या टेस्टिंग आणि प्रोग्राम विश्लेषण तंत्रांचा आढावा"
 author: "Trailofbits"
 lang: mr
-tags: ["solidity", "स्मार्ट कॉन्ट्रॅक्ट्स", "सुरक्षा"]
+tags: ["Solidity", "स्मार्ट कॉन्ट्रॅक्ट्स", "सुरक्षा"]
 skill: intermediate
-breadcrumb: सुरक्षा टूल्स
+breadcrumb: "सुरक्षा टूल्स"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

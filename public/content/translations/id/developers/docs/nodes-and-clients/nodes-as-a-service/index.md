@@ -54,7 +54,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentasi](https://www.alchemy.com/docs/)
   - Fitur
-    - Tingkat gratis terbesar dengan 300 juta unit komputasi per bulan (~30 juta permintaan getLatestBlock)
+    - Tingkat gratis terbesar dengan 300 juta unit komputasi per bulan (\~30 juta permintaan getLatestBlock)
     - Dukungan multirantai untuk Polygon, Starknet, Optimism, Arbitrum
     - Mendukung ~70% dari aplikasi terdesentralisasi (dapp) Ethereum terbesar dan volume transaksi keuangan terdesentralisasi (DeFi)
     - Peringatan webhook waktu nyata melalui Alchemy Notify

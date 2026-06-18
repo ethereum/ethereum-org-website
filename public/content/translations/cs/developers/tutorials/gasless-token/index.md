@@ -1,6 +1,6 @@
 ---
 title: "Jak umožnit uživatelům bez gasu držet tokeny a volat kontrakty"
-description: Pomocí abstrakce účtu můžeme vytvořit peněženky ve formě chytrých kontraktů, které přijímají transakce odeslané konkrétním EOA nebo jím podepsané. Tyto chytré kontrakty pak mohou vlastnit tokeny, které jsou pod kontrolou EOA.
+description: "Pomocí abstrakce účtu můžeme vytvořit peněženky ve formě chytrých kontraktů, které přijímají transakce odeslané konkrétním EOA nebo jím podepsané. Tyto chytré kontrakty pak mohou vlastnit tokeny, které jsou pod kontrolou EOA."
 author: Ori Pomerantz
 tags: ["bez gasu", "ERC-20", "abstrakce účtu"]
 skill: intermediate
@@ -746,7 +746,8 @@ Umožníme uživateli vydávat transakce převodu ERC-20.
 Pokud existuje hash poslední transakce, zobrazíme odkaz, aby si jej uživatel mohl prohlédnout v prohlížeči bloků.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

@@ -3,7 +3,7 @@ title: "ERC-20 合約導覽"
 description: "歐本齊柏林 (OpenZeppelin) ERC-20 合約中包含什麼？為什麼要這樣設計？"
 author: "奧里·波梅蘭茨"
 lang: zh-tw
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
 breadcrumb: "ERC-20 導覽"
 published: 2021-03-09

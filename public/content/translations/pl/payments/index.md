@@ -1,12 +1,12 @@
 ---
-title: Płatności Ethereum
-metaTitle: Płatności na Ethereum
-description: Przegląd płatności na Ethereum
+title: "Płatności Ethereum"
+metaTitle: "Płatności na Ethereum"
+description: "Przegląd płatności na Ethereum"
 lang: pl
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Logo Eth wyświetlane wraz z dającymi dłońmi.
+alt: "Logo Eth wyświetlane wraz z dającymi dłońmi."
 summaryPoints:
   - "Świat, w którym pieniądze przemieszczają się równie swobodnie jak informacje"
   - "Otwarte i globalne, umożliwiające każdemu transakcje bez granic"
@@ -62,7 +62,7 @@ W krajach, w których środki płatnicze zostały odłączone od reszty świata,
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Utwórz swoje konto Ethereum za pomocą aplikacji portfela już dziś.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Zacznij
   </ButtonLink>
 </AlertContent>

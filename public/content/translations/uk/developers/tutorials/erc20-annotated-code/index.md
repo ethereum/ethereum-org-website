@@ -1,11 +1,11 @@
 ---
 title: "Огляд контракту ERC-20"
-description: Що міститься в контракті ERC-20 від ОупенЗеппелін і чому воно там?
-author: Орі Померанц
+description: "Що міститься в контракті ERC-20 від ОупенЗеппелін і чому воно там?"
+author: "Орі Померанц"
 lang: uk
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: Огляд ERC-20
+breadcrumb: "Огляд ERC-20"
 published: 2021-03-09
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 验证智能合约
-description: 以太坊智能合约源代码验证概述
+title: "验证智能合约"
+description: "以太坊智能合约源代码验证概述"
 lang: zh
 ---
 

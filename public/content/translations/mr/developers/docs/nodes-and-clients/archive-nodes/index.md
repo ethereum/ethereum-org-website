@@ -1,6 +1,6 @@
 ---
-title: इथेरियम अर्काईव्ह नोड
-description: अर्काईव्ह नोड्सचा आढावा
+title: "इथेरियम अर्काईव्ह नोड"
+description: "अर्काईव्ह नोड्सचा आढावा"
 lang: mr
 sidebarDepth: 2
 ---

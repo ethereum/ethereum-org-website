@@ -1,11 +1,11 @@
 ---
-title: 智能合約安全工具指南
-description: 三種不同測試與程式分析技術的概述
+title: "智能合約安全工具指南"
+description: "三種不同測試與程式分析技術的概述"
 author: "Trailofbits"
 lang: zh-tw
-tags: ["solidity", "智能合約", "安全"]
+tags: ["Solidity", "智能合約", "安全"]
 skill: intermediate
-breadcrumb: 安全工具
+breadcrumb: "安全工具"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
@@ -27,11 +27,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 \* 如果在未超時的情況下探索了所有路徑
 
-**斯立瑟**能在幾秒鐘內分析合約，然而，靜態分析可能會導致誤報，且較不適合複雜的檢查（例如算術檢查）。透過 API 執行斯立瑟，可以一鍵存取內建的偵測器，或透過 API 進行使用者自訂的檢查。
+<strong>斯立瑟</strong>能在幾秒鐘內分析合約，然而，靜態分析可能會導致誤報，且較不適合複雜的檢查（例如算術檢查）。透過 API 執行斯立瑟，可以一鍵存取內建的偵測器，或透過 API 進行使用者自訂的檢查。
 
-**埃奇德納**需要執行幾分鐘，且只會產生真正的漏洞。埃奇德納會檢查使用者提供、以 Solidity 撰寫的安全屬性。由於它是基於隨機探索，因此可能會遺漏錯誤。
+<strong>埃奇德納</strong>需要執行幾分鐘，且只會產生真正的漏洞。埃奇德納會檢查使用者提供、以 Solidity 撰寫的安全屬性。由於它是基於隨機探索，因此可能會遺漏錯誤。
 
-**曼蒂科爾**執行「最重量級」的分析。與埃奇德納一樣，曼蒂科爾會驗證使用者提供的屬性。它需要更多時間來執行，但它可以證明屬性的有效性，且不會報告誤報。
+<strong>曼蒂科爾</strong>執行「最重量級」的分析。與埃奇德納一樣，曼蒂科爾會驗證使用者提供的屬性。它需要更多時間來執行，但它可以證明屬性的有效性，且不會報告誤報。
 
 ## 建議的工作流程 {#suggested-workflow}
 

@@ -1,6 +1,6 @@
 ---
-title: सरल क्रमांकन
-description: इथेरियम के SSZ प्रारूप की व्याख्या।
+title: "सरल क्रमांकन"
+description: "इथेरियम के SSZ प्रारूप की व्याख्या।"
 lang: hi
 sidebarDepth: 2
 ---

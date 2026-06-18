@@ -1,5 +1,5 @@
 ---
-title: 예측 시장
+title: "예측 시장"
 lang: ko
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -19,7 +19,7 @@ buttons:
 
 ## 예측 시장의 작동 방식 {#how-prediction-markets-work}
 
-전문가의 의견, 제한된 설문조사 샘플 또는 과거 데이터에 의존하는 전통적인 예측 방법과 달리, 예측 시장은 **실시간 재정적 인센티브**와 **군중의 지혜**를 활용하여 선거, 암호화폐 가격, 스포츠 경기 결과 등 특정 이벤트와 관련된 통찰력을 생성합니다. 
+전문가의 의견, 제한된 설문조사 샘플 또는 과거 데이터에 의존하는 전통적인 예측 방법과 달리, 예측 시장은 <strong>실시간 재정적 인센티브</strong>와 <strong>군중의 지혜</strong>를 활용하여 선거, 암호화폐 가격, 스포츠 경기 결과 등 특정 이벤트와 관련된 통찰력을 생성합니다. 
 
 이를 통해 누구나 재정적 커밋먼트를 통해 특정 결과에 대한 지지를 나타낼 수 있습니다.
  
@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>위험에 유의하세요</strong></strong>
+ <p className="mt-0"><strong>위험에 유의하세요</strong>
   <p className="mt-2">감당할 수 있는 금액만 베팅하고, 잠재적인 중독성 행동에 주의하세요.</p>
 </AlertDescription>
 </AlertContent>
@@ -73,7 +73,7 @@ buttons:
 
 ## 예측 시장 실험하기 {#experimenting-with-prediction-markets}
 
-예측 시장은 디지털 시대의 의사 결정을 재편하고 있습니다. 이더리움을 활용함으로써, **미래를 예측하는 공정하고 개방적이며 보상이 따르는 방법**을 제공합니다.
+예측 시장은 디지털 시대의 의사 결정을 재편하고 있습니다. 이더리움을 활용함으로써, <strong>미래를 예측하는 공정하고 개방적이며 보상이 따르는 방법</strong>을 제공합니다.
 
 재정적 이득 외에도 예측 도구를 사용하는 방법은 다양합니다. 예를 들어, [데브콘 개선 제안](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305)(DIP)에서는 데브콘(DevCon) 주최자가 향후 이벤트의 참석자 수를 예상하기 위해 예측 시장을 사용할 것을 제안했습니다. 
 

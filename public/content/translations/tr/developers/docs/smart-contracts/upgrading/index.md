@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmeleri yükseltme
-description: Ethereum akıllı sözleşmeleri için yükseltme modellerine genel bir bakış
+title: "Akıllı sözleşmeleri yükseltme"
+description: "Ethereum akıllı sözleşmeleri için yükseltme modellerine genel bir bakış"
 lang: tr
 ---
 

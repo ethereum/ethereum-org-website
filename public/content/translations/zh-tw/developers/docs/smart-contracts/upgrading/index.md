@@ -1,6 +1,6 @@
 ---
-title: 升級智能合約
-description: 以太坊智能合約升級模式概述
+title: "升級智能合約"
+description: "以太坊智能合約升級模式概述"
 lang: zh-tw
 ---
 

@@ -62,7 +62,7 @@ Di negara-negara di mana alat pembayaran mereka telah terputus dari belahan duni
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Buat akun Ethereum Anda dengan aplikasi dompet hari ini.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Mulai
   </ButtonLink>
 </AlertContent>

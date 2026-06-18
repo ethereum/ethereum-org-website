@@ -1,6 +1,6 @@
 ---
-title: Stavové kanály
-description: Úvod do stavových a platebních kanálů jako řešení škálování, které v současnosti využívá komunita Etherea.
+title: "Stavové kanály"
+description: "Úvod do stavových a platebních kanálů jako řešení škálování, které v současnosti využívá komunita Etherea."
 lang: cs
 sidebarDepth: 3
 ---

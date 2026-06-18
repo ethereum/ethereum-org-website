@@ -1,6 +1,6 @@
 ---
-title: Oráculos
-description: Los oráculos proporcionan a los contratos inteligentes de Ethereum acceso a datos del mundo real, lo que desbloquea más casos de uso y un mayor valor para los usuarios.
+title: "Oráculos"
+description: "Los oráculos proporcionan a los contratos inteligentes de Ethereum acceso a datos del mundo real, lo que desbloquea más casos de uso y un mayor valor para los usuarios."
 lang: es
 authors: ["Patrick Collins"]
 ---
@@ -269,7 +269,7 @@ Los oráculos centralizados dependen de una única fuente de la verdad al propor
 
 Los oráculos descentralizados, sin embargo, deben lidiar con discrepancias en la información recuperada de múltiples fuentes fuera de la cadena. Para minimizar las diferencias en la información y garantizar que los datos pasados al contrato de oráculo reflejen la opinión colectiva de los nodos de oráculo, los oráculos descentralizados utilizan los siguientes mecanismos:
 
-##### Votación/staking sobre la precisión de los datos {#availability}
+##### Votación/staking sobre la precisión de los datos {#}
 
 Algunas redes de oráculos descentralizadas requieren que los participantes voten o hagan staking sobre la precisión de las respuestas a las consultas de datos (por ejemplo, «¿Quién ganó las elecciones estadounidenses de 2020?») utilizando el token nativo de la red. Un protocolo de agregación luego agrega los votos y las participaciones y toma la respuesta respaldada por la mayoría como la válida.
 
@@ -277,7 +277,7 @@ Los nodos cuyas respuestas se desvían de la respuesta de la mayoría son penali
 
 El staking/votación también protege a los oráculos descentralizados de los [ataques Sybil](/glossary/#sybil-attack) donde actores maliciosos crean múltiples identidades para manipular el sistema de consenso. Sin embargo, el staking no puede evitar el «aprovechamiento» (nodos de oráculo que copian información de otros) y la «validación perezosa» (nodos de oráculo que siguen a la mayoría sin verificar la información ellos mismos).
 
-##### Mecanismos de punto de Schelling {#good-incentive-compatibility}
+##### Mecanismos de punto de Schelling {#}
 
 El [punto de Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) es un concepto de la teoría de juegos que asume que múltiples entidades siempre optarán por una solución común a un problema en ausencia de cualquier comunicación. Los mecanismos de punto de Schelling se utilizan a menudo en redes de oráculos descentralizadas para permitir que los nodos alcancen un consenso sobre las respuestas a las solicitudes de datos.
 
@@ -289,7 +289,7 @@ Otros ejemplos de oráculos que utilizan mecanismos de punto de Schelling incluy
 
 Los mecanismos de punto de Schelling son atractivos porque minimizan la huella en cadena (solo se debe enviar una transacción) al tiempo que garantizan la descentralización. Esto último es posible porque los nodos deben aprobar la lista de respuestas enviadas antes de que se introduzca en el algoritmo que produce el valor medio/mediano.
 
-### Disponibilidad {#applications-of-oracles-in-smart-contracts}
+### Disponibilidad {#availability}
 
 Los servicios de oráculos descentralizados garantizan una alta disponibilidad de datos fuera de la cadena para los contratos inteligentes. Esto se logra descentralizando tanto la fuente de información fuera de la cadena como los nodos responsables de transferir la información en cadena.
 
@@ -297,7 +297,7 @@ Esto garantiza la tolerancia a fallas, ya que el contrato de oráculo puede depe
 
 También es posible que los oráculos basados en staking apliquen un recorte a los operadores de nodos que no responden rápidamente a las solicitudes de datos. Esto incentiva significativamente a los nodos de oráculo a invertir en infraestructura tolerante a fallas y proporcionar datos de manera oportuna.
 
-### Buena compatibilidad de incentivos {#retrieving-financial-data}
+### Buena compatibilidad de incentivos {#good-incentive-compatibility}
 
 Los oráculos descentralizados implementan varios diseños de incentivos para prevenir el comportamiento [bizantino](https://en.wikipedia.org/wiki/Byzantine_fault) entre los nodos de oráculo. Específicamente, logran _atribuibilidad_ y _responsabilidad_:
 
@@ -305,11 +305,11 @@ Los oráculos descentralizados implementan varios diseños de incentivos para pr
 
 2. Los oráculos descentralizados, como se explicó anteriormente, pueden requerir que los nodos hagan staking sobre su confianza en la veracidad de los datos que envían. Si el reclamo se verifica, esta participación se puede devolver junto con recompensas por un servicio honesto. Pero también puede sufrir un recorte en caso de que la información sea incorrecta, lo que proporciona cierta medida de responsabilidad.
 
-## Aplicaciones de los oráculos en los contratos inteligentes {#generating-verifiable-randomness}
+## Aplicaciones de los oráculos en los contratos inteligentes {#applications-of-oracles-in-smart-contracts}
 
 Los siguientes son casos de uso comunes para los oráculos en Ethereum:
 
-### Recuperación de datos financieros {#getting-outcomes-for-events}
+### Recuperación de datos financieros {#retrieving-financial-data}
 
 Las aplicaciones de [finanzas descentralizadas (DeFi)](/defi/) permiten el préstamo, la toma de préstamos y el comercio de activos entre pares. Esto a menudo requiere obtener diferente información financiera, incluidos datos de tipos de cambio (para calcular el valor fiduciario de las criptomonedas o comparar precios de tokens) y datos de mercados de capitales (para calcular el valor de los activos tokenizados, como el oro o el dólar estadounidense).
 
@@ -355,7 +355,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Generación de aleatoriedad verificable {#automating-smart-contracts}
+### Generación de aleatoriedad verificable {#generating-verifiable-randomness}
 
 Ciertas aplicaciones de la cadena de bloques, como los juegos basados en la cadena de bloques o los esquemas de lotería, requieren un alto nivel de imprevisibilidad y aleatoriedad para funcionar de manera efectiva. Sin embargo, la ejecución determinista de las cadenas de bloques elimina la aleatoriedad.
 
@@ -365,13 +365,13 @@ Es posible generar el valor aleatorio fuera de la cadena y enviarlo en cadena, p
 
 Los oráculos diseñados para el cálculo fuera de la cadena resuelven este problema generando de forma segura resultados aleatorios fuera de la cadena que transmiten en cadena junto con pruebas criptográficas que atestiguan la imprevisibilidad del proceso. Un ejemplo es [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (función aleatoria verificable), que es un generador de números aleatorios (RNG) demostrablemente justo y a prueba de manipulaciones, útil para crear contratos inteligentes confiables para aplicaciones que dependen de resultados impredecibles.
 
-### Obtención de resultados para eventos {#use-blockchain-oracles}
+### Obtención de resultados para eventos {#getting-outcomes-for-events}
 
 Con los oráculos, crear contratos inteligentes que respondan a eventos del mundo real es fácil. Los servicios de oráculos hacen esto posible al permitir que los contratos se conecten a API externas a través de componentes fuera de la cadena y consuman información de esas fuentes de datos. Por ejemplo, la aplicación descentralizada (dapp) de predicción mencionada anteriormente puede solicitar a un oráculo que devuelva los resultados de las elecciones de una fuente confiable fuera de la cadena (por ejemplo, Associated Press).
 
 El uso de oráculos para recuperar datos basados en resultados del mundo real permite otros casos de uso novedosos; por ejemplo, un producto de seguro descentralizado necesita información precisa sobre el clima, desastres, etc. para funcionar de manera efectiva.
 
-### Automatización de contratos inteligentes {#further-reading}
+### Automatización de contratos inteligentes {#automating-smart-contracts}
 
 Los contratos inteligentes no se ejecutan automáticamente; más bien, una cuenta de propiedad externa (EOA), u otra cuenta de contrato, debe activar las funciones correctas para ejecutar el código del contrato. En la mayoría de los casos, la mayor parte de las funciones del contrato son públicas y pueden ser invocadas por EOA y otros contratos.
 
@@ -383,7 +383,7 @@ Algunas redes de oráculos descentralizadas ofrecen servicios de automatización
 
 La [red Keeper](https://chain.link/keepers) de Chainlink proporciona opciones para que los contratos inteligentes subcontraten tareas de mantenimiento regulares de una manera descentralizada y con confianza minimizada. Lea la [documentación oficial de Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) para obtener información sobre cómo hacer que su contrato sea compatible con Keeper y usar el servicio Upkeep.
 
-## Cómo usar oráculos de blockchain
+## Cómo usar oráculos de blockchain {#use-blockchain-oracles}
 
 Hay múltiples aplicaciones de oráculos que puede integrar en su dapp de Ethereum:
 
@@ -413,7 +413,7 @@ Hay múltiples aplicaciones de oráculos que puede integrar en su dapp de Ethere
 
 **[Stork](https://stork.network)**: Stork ofrece datos de precios con una latencia ultrabaja, lo que admite una amplia gama de casos de uso, incluidos mercados perpetuos, protocolos de préstamos y ecosistemas DeFi, con nuevos activos admitidos rápidamente en el momento de su inclusión.
 
-## Lecturas adicionales
+## Lecturas adicionales {#further-reading}
 
 **Artículos**
 

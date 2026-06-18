@@ -1,6 +1,6 @@
 ---
-title: Sítě
-description: Přehled sítí Etherea a kde získat testnetový ether (ETH) pro testování vaší aplikace.
+title: "Sítě"
+description: "Přehled sítí Etherea a kde získat testnetový ether (ETH) pro testování vaší aplikace."
 lang: cs
 ---
 
@@ -40,7 +40,7 @@ Dva veřejné testnety, které vývojáři klientů v současné době udržují
 
 **Sepolia je doporučený výchozí testnet pro vývoj aplikací**. Síť Sepolia používá sadu validátorů s řízeným přístupem, kterou kontrolují klientské a testovací týmy.
 
-##### Zdroje {#hoodi}
+##### Zdroje {#} {#}
 
 - [Webové stránky](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Dva veřejné testnety, které vývojáři klientů v současné době udržují
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucety {#ephemery}
+##### Faucety {#} {#}
 
 - [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -61,7 +61,7 @@ Dva veřejné testnety, které vývojáři klientů v současné době udržují
 - [PoW Faucet](https://sepolia-faucet.pk910.de/)
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Hoodi {#faucets}
+#### Hoodi {#hoodi}
 
 Hoodi je testnet pro testování validace a stakingu. Síť Hoodi je otevřená pro uživatele, kteří chtějí provozovat testnetový validátor. Stakeři, kteří chtějí otestovat aktualizace protokolu před jejich nasazením na Mainnet, by proto měli používat Hoodi.
 
@@ -69,7 +69,7 @@ Hoodi je testnet pro testování validace a stakingu. Síť Hoodi je otevřená 
 - Velký stav, užitečný pro testování složitých interakcí chytrých kontraktů
 - Delší doba synchronizace a vyžaduje více úložného prostoru pro provoz uzlu
 
-##### Zdroje {#holesky}
+##### Zdroje {#}
 
 - [Webové stránky](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,13 +78,13 @@ Hoodi je testnet pro testování validace a stakingu. Síť Hoodi je otevřená 
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucety {#layer-2-testnets}
+##### Faucety {#}
 
 - [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 - [PoW Faucet](https://hoodi-faucet.pk910.de/)
 
-#### Ephemery {#arbitrum-sepolia}
+#### Ephemery {#ephemery}
 
 Ephemery je unikátní druh testnetu, který se každý měsíc plně resetuje. Stav provádění a konsensu se každých 28 dní vrací zpět do genesis, což znamená, že vše, co se na testnetu stane, je pomíjivé. Díky tomu je ideální pro krátkodobé testování, rychlé spuštění uzlu a aplikace typu „hello world“, které nepotřebují trvalost.
 
@@ -93,7 +93,7 @@ Ephemery je unikátní druh testnetu, který se každý měsíc plně resetuje. 
 - Otevřená sada validátorů a snadný přístup k velkému množství prostředků
 - Nejmenší požadavky na uzel a nejrychlejší synchronizace, v průměru &lt;5 GB
 
-##### Zdroje {#optimistic-sepolia}
+##### Zdroje {#}
 
 - [Webové stránky](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -104,55 +104,55 @@ Ephemery je unikátní druh testnetu, který se každý měsíc plně resetuje. 
 - [Synchronizace přes kontrolní bod](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
-#### Faucety {#starknet-sepolia}
+#### Faucety {#faucets}
 
 - [Bordel Faucet](https://faucet.bordel.wtf/)
 - [Pk910 PoW Faucet](https://ephemery-faucet.pk910.de/)
 
-#### Holesky (zastaralé) {#private-networks}
+#### Holesky (zastaralé) {#holesky}
 
 Testnet Holesky je od září 2025 zastaralý. Provozovatelé stakingu a poskytovatelé infrastruktury by měli k testování validátorů místo toho používat Hoodi.
 
 - [Oznámení o ukončení testnetu Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _Blog EF, 1. září 2025_
 - [Aktualizace testnetů Holesky a Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _Blog EF, 18. března 2025_
 
-### Testnety vrstvy 2 {#development-networks}
+### Testnety vrstvy 2 {#layer-2-testnets}
 
 [Vrstva 2 (l2)](/layer-2/) je souhrnný termín popisující specifickou sadu řešení pro škálování Etherea. Vrstva 2 je samostatný blockchain, který rozšiřuje Ethereum a dědí jeho bezpečnostní záruky. Testnety vrstvy 2 jsou obvykle úzce spjaty s veřejnými testnety Etherea.
 
-#### Arbitrum Sepolia {#consortium-networks}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Testnet pro [Arbitrum](https://arbitrum.io/).
 
-##### Zdroje {#why-naming}
+##### Zdroje {#}
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucety {#common-and-legacy-testnets}
+##### Faucety {#}
 
 - [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Chainlink Arbitrum Sepolia Faucet](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com Arbitrum Sepolia Faucet](https://ethfaucet.com/networks/arbitrum)
 - [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Sepolia {#other-testnets}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Testnet pro [Optimism](https://www.optimism.io/).
 
-##### Zdroje {#related-tools}
+##### Zdroje {#}
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucety {#further-reading}
+##### Faucety {#}
 
 - [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com Optimism Sepolia Faucet](https://ethfaucet.com/networks/optimism)
 - [Testnet Faucet](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet Sepolia
+#### Starknet Sepolia {#starknet-sepolia}
 
 Testnet pro [Starknet](https://www.starknet.io).
 
@@ -166,27 +166,27 @@ Testnet pro [Starknet](https://www.starknet.io).
 - [Blast Starknet Sepolia Faucet](https://blastapi.io/faucets/starknet-sepolia-eth)
 - [Starknet Faucet](https://starknet-faucet.vercel.app/)
 
-## Soukromé sítě
+## Soukromé sítě {#private-networks}
 
 Síť Etherea je soukromá síť, pokud její uzly nejsou připojeny k veřejné síti (tj. Mainnetu nebo testnetu). V tomto kontextu slovo soukromá znamená pouze vyhrazená nebo izolovaná, nikoli chráněná nebo bezpečná.
 
-### Vývojové sítě
+### Vývojové sítě {#development-networks}
 
 Při vývoji aplikace pro Ethereum ji budete chtít spustit na soukromé síti, abyste před jejím nasazením viděli, jak funguje. Podobně jako si při vývoji webu vytváříte lokální server na svém počítači, můžete si vytvořit lokální instanci blockchainu pro testování vaší decentralizované aplikace (dapp). To umožňuje mnohem rychlejší iteraci než na veřejném testnetu.
 
 Existují projekty a nástroje, které s tím pomáhají. Přečtěte si více o [vývojových sítích](/developers/docs/development-networks/).
 
-### Sítě konsorcia
+### Sítě konsorcia {#consortium-networks}
 
 Proces konsensu je řízen předem definovanou sadou důvěryhodných uzlů. Například soukromá síť známých akademických institucí, z nichž každá spravuje jeden uzel, a bloky jsou validovány prahovým počtem signatářů v rámci sítě.
 
 Pokud je veřejná síť Etherea jako veřejný internet, síť konsorcia je jako soukromý intranet.
 
-## <Emoji text="🚉" /> Proč jsou testnety Etherea pojmenovány po stanicích metra?
+## <Emoji text="🚉" /> Proč jsou testnety Etherea pojmenovány po stanicích metra? {#why-naming}
 
 Mnoho testnetů Etherea je pojmenováno po skutečných stanicích metra nebo vlaků. Tato tradice pojmenovávání začala brzy a odráží světová města, kde přispěvatelé žili nebo pracovali. Je to symbolické, zapamatovatelné a praktické. Stejně jako jsou testnety izolovány od Ethereum Mainnetu, linky metra jezdí odděleně od povrchové dopravy.
 
-### <Emoji text="🚧" /> Běžně používané a starší testnety
+### <Emoji text="🚧" /> Běžně používané a starší testnety {#common-and-legacy-testnets}
 
 - **Sepolia** - Čtvrť s napojením na metro v řeckých Aténách. V současné době se používá pro testování chytrých kontraktů a dApp.
 - **Hoodi** - Pojmenováno po stanici metra Hoodi v indickém Bengalúru. Používá se pro testování validátorů a aktualizací protokolu.
@@ -196,7 +196,7 @@ Mnoho testnetů Etherea je pojmenováno po skutečných stanicích metra nebo vl
 - **Kovan** _(zastaralé)_ - Pojmenováno po stanici singapurského metra MRT.
 - **Morden** _(zastaralé)_ - Pojmenováno po stanici londýnského metra. První veřejný testnet Etherea.
 
-### <Emoji text="🧪" /> Další specializované testnety
+### <Emoji text="🧪" /> Další specializované testnety {#other-testnets}
 
 Některé testnety byly vytvořeny pro krátkodobé testování nebo testování specifické pro aktualizace a nemusí mít nutně tématiku metra:
 
@@ -205,12 +205,12 @@ Některé testnety byly vytvořeny pro krátkodobé testování nebo testování
 
 Používání názvů stanic metra pomáhá vývojářům rychle identifikovat a zapamatovat si testnety, aniž by se museli spoléhat na číselná ID řetězců. Odráží to také kulturu Etherea: praktickou, globální a zaměřenou na lidi.
 
-## Související nástroje
+## Související nástroje {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _seznam EVM sítí pro připojení peněženek a poskytovatelů ke správnému ID řetězce a ID sítě_
 - [Řetězce založené na EVM](https://github.com/ethereum-lists/chains) _repozitář na GitHubu s metadaty řetězců, který pohání Chainlist_
 
-## Další čtení
+## Další čtení {#further-reading}
 
 - [Návrh: Předvídatelný životní cyklus testnetů Etherea](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [Evoluce testnetů Etherea](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

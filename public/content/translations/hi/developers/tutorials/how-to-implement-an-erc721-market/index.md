@@ -1,14 +1,14 @@
 ---
-title: ERC-721 मार्केट कैसे लागू करें
-description: विकेंद्रीकृत क्लासिफाइड बोर्ड पर बिक्री के लिए टोकनाइज़्ड आइटम कैसे रखें
-author: अल्बर्टो कुएस्टा कनाड़ा
+title: "ERC-721 मार्केट कैसे लागू करें"
+description: "विकेंद्रीकृत क्लासिफाइड बोर्ड पर बिक्री के लिए टोकनाइज़्ड आइटम कैसे रखें"
+author: "अल्बर्टो कुएस्टा कनाड़ा"
 tags:
   - स्मार्ट कॉन्ट्रैक्ट
   - erc-721
   - solidity
   - टोकन
 skill: intermediate
-breadcrumb: ERC-721 मार्केट
+breadcrumb: "ERC-721 मार्केट"
 lang: hi
 published: 2020-03-19
 source: Hackernoon

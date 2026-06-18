@@ -1,5 +1,5 @@
 ---
-title: भविष्यवाणी बाजार
+title: "भविष्यवाणी बाजार"
 lang: hi
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>जोखिमों के प्रति सचेत रहें</strong></strong>
+ <p className="mt-0"><strong>जोखिमों के प्रति सचेत रहें</strong>
   <p className="mt-2">केवल उतना ही सट्टा लगाएं जितना आप वहन कर सकते हैं, और संभावित व्यसनी व्यवहारों के प्रति जागरूक रहें।</p>
 </AlertDescription>
 </AlertContent>

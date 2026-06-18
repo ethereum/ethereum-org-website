@@ -3,7 +3,7 @@ title: "Mwongozo wa Mkataba wa ERC-20"
 description: Kuna nini katika mkataba wa ERC-20 wa OpenZeppelin na kwa nini kipo hapo?
 author: Ori Pomerantz
 lang: sw
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
 breadcrumb: Mwongozo wa ERC-20
 published: 2021-03-09

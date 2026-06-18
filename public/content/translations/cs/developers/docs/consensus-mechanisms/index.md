@@ -1,6 +1,6 @@
 ---
 title: Mechanismy konsensu
-description: Vysvětlení protokolů konsensu v distribuovaných systémech a jejich role v Ethereu.
+description: "Vysvětlení protokolů konsensu v distribuovaných systémech a jejich role v Ethereu."
 lang: cs
 authors: ["Patrick Collins"]
 ---

@@ -5,9 +5,9 @@ author: "nstrike2"
 breadcrumb: "⁦Hello World fullstack⁩"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "العقود الذكية",
     "النشر",
     "مستكشف الكتل",
@@ -288,7 +288,7 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`0x${PRIVATE_KEY}`],
+      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
     },
   },
 }
@@ -631,7 +631,7 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`0x${PRIVATE_KEY}`],
+      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
     },
   },
   etherscan: {
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

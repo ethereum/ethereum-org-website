@@ -1,11 +1,11 @@
 ---
-title: Test için Solidity akıllı sözleşmeleri nasıl mock'lanır
-description: Test yaparken sözleşmelerinizle neden dalga geçmelisiniz
+title: "Test için Solidity akıllı sözleşmeleri nasıl mock'lanır"
+description: "Test yaparken sözleşmelerinizle neden dalga geçmelisiniz"
 author: Markus Waas
 lang: tr
-tags: ["solidity", "akıllı sözleşmeler", "test etme", "mocking"]
+tags: ["Solidity", "akıllı sözleşmeler", "test etme", "mocking"]
 skill: intermediate
-breadcrumb: Sözleşmeleri mock'lamak
+breadcrumb: "Sözleşmeleri mock'lamak"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

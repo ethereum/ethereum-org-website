@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Uma visão detalhada do algoritmo Ethash.
+description: "Uma visão detalhada do algoritmo Ethash."
 lang: pt-br
 ---
 

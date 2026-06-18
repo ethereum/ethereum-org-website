@@ -1,6 +1,6 @@
 ---
 title: Simple serialize
-description: Wyjaśnienie formatu SSZ w Ethereum.
+description: "Wyjaśnienie formatu SSZ w Ethereum."
 lang: pl
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
 title: Mecanismos de consenso
-description: Una explicación de los protocolos de consenso en sistemas distribuidos y el papel que desempeñan en Ethereum.
+description: "Una explicación de los protocolos de consenso en sistemas distribuidos y el papel que desempeñan en Ethereum."
 lang: es
 authors: ["Patrick Collins"]
 ---

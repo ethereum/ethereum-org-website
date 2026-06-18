@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşme birleştirilebilirliği
-description: Mevcut bileşenleri yeniden kullanarak karmaşık merkeziyetsiz uygulamalar (dapp'ler) oluşturmak için akıllı sözleşmelerin Lego blokları gibi nasıl birleştirilebileceğini öğrenin.
+title: "Akıllı sözleşme birleştirilebilirliği"
+description: "Mevcut bileşenleri yeniden kullanarak karmaşık merkeziyetsiz uygulamalar (dapp'ler) oluşturmak için akıllı sözleşmelerin Lego blokları gibi nasıl birleştirilebileceğini öğrenin."
 lang: tr
 incomplete: true
 ---

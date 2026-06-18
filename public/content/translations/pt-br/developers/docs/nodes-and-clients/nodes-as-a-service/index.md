@@ -1,6 +1,6 @@
 ---
-title: Nós como serviço
-description: Uma visão geral de nível básico sobre serviços de nó, os prós e contras e provedores populares.
+title: "Nós como serviço"
+description: "Uma visão geral de nível básico sobre serviços de nó, os prós e contras e provedores populares."
 lang: pt-br
 sidebarDepth: 2
 ---
@@ -54,7 +54,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
 - [**Alchemy**](https://alchemy.com/)
   - [Documentação](https://www.alchemy.com/docs/)
   - Recursos
-    - Maior nível gratuito com 300 milhões de unidades de computação por mês (~30 milhões de solicitações getLatestBlock)
+    - Maior nível gratuito com 300 milhões de unidades de computação por mês (\~30 milhões de solicitações getLatestBlock)
     - Suporte multichain para Polygon, Starknet, Optimism, Arbitrum
     - Alimentando ~70% dos maiores aplicativos descentralizados (dapps) do Ethereum e volume de transações de finanças descentralizadas (DeFi)
     - Alertas de webhook em tempo real via Alchemy Notify

@@ -1,6 +1,6 @@
 ---
-title: Cách mock (giả lập) hợp đồng thông minh Solidity để thử nghiệm
-description: Tại sao bạn nên "trêu đùa" (mock) các hợp đồng của mình khi thử nghiệm
+title: "Cách mock (giả lập) hợp đồng thông minh Solidity để thử nghiệm"
+description: "Tại sao bạn nên \"trêu đùa\" (mock) các hợp đồng của mình khi thử nghiệm"
 author: Markus Waas
 lang: vi
 tags:
@@ -9,7 +9,7 @@ tags:
   - thử nghiệm
   - mocking
 skill: intermediate
-breadcrumb: Mock hợp đồng
+breadcrumb: "Mock hợp đồng"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

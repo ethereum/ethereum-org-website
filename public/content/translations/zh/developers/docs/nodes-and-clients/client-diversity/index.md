@@ -1,6 +1,6 @@
 ---
-title: 客户端多样性
-description: 关于以太坊客户端多样性重要性的高层次解释。
+title: "客户端多样性"
+description: "关于以太坊客户端多样性重要性的高层次解释。"
 lang: zh
 sidebarDepth: 2
 ---

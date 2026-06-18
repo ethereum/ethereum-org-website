@@ -1,11 +1,11 @@
 ---
-title: পুলড স্টেকিং
-description: স্টেকিং পুল সম্পর্কে জানুন
+title: "পুলড স্টেকিং"
+description: "স্টেকিং পুল সম্পর্কে জানুন"
 lang: bn
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: লেসলি গন্ডার পুলে সাঁতার কাটছে।
+alt: "লেসলি গন্ডার পুলে সাঁতার কাটছে।"
 sidebarDepth: 2
 summaryPoints:
   - অন্যদের সাথে যোগ দিয়ে যেকোনো পরিমাণ ETH স্টেক করুন এবং রিওয়ার্ড উপার্জন করুন

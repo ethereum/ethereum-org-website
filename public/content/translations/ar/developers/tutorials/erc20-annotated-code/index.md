@@ -1,17 +1,17 @@
 ---
 title: "جولة تفصيلية في عقد ⁦ERC-20⁩"
 description: "ما الذي يحتويه عقد ⁦ERC-20⁩ من أوبن زبلن ولماذا هو موجود؟"
-author: أوري بوميرانتس
+author: "أوري بوميرانتس"
 lang: ar
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: جولة تفصيلية في ⁦ERC-20⁩
+breadcrumb: "جولة تفصيلية في ⁦ERC-20⁩"
 published: 2021-03-09
 ---
 
 ## مقدمة {#introduction}
 
-أحد أكثر الاستخدامات شيوعًا لشبكة إيثيريوم هو قيام مجموعة بإنشاء رمز مميز قابل للتداول، وهو ما يمثل عملتهم الخاصة بمعنى ما. تتبع هذه الرموز المميزة عادةً معيارًا قياسيًا، وهو [ERC-20](/developers/docs/standards/tokens/erc-20/). يجعل هذا المعيار من الممكن كتابة أدوات، مثل مجمعات السيولة والمحافظ، تعمل مع جميع رموز <span dir="ltr">ERC-20</span> المميزة. في هذه المقالة، سنقوم بتحليل [تنفيذ ⁦ERC20⁩ بلغة Solidity من أوبن زبلن](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)، بالإضافة إلى [تعريف الواجهة](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+أحد أكثر الاستخدامات شيوعًا لشبكة إيثيريوم هو قيام مجموعة بإنشاء رمز مميز قابل للتداول، وهو ما يمثل عملتهم الخاصة بمعنى ما. تتبع هذه الرموز المميزة عادةً معيارًا قياسيًا، وهو [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/). يجعل هذا المعيار من الممكن كتابة أدوات، مثل مجمعات السيولة والمحافظ، تعمل مع جميع رموز <span dir="ltr">ERC-20</span> المميزة. في هذه المقالة، سنقوم بتحليل [تنفيذ ⁦ERC20⁩ بلغة Solidity من أوبن زبلن](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)، بالإضافة إلى [تعريف الواجهة](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 هذا كود مصدري مشروح. إذا كنت ترغب في تنفيذ <span dir="ltr">ERC-20</span>، [اقرأ هذا البرنامج التعليمي](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
@@ -19,11 +19,11 @@ published: 2021-03-09
 
 الغرض من معيار مثل <span dir="ltr">ERC-20</span> هو السماح بالعديد من تطبيقات الرموز المميزة القابلة للتشغيل البيني عبر التطبيقات، مثل المحافظ ومنصات التداول اللامركزية. لتحقيق ذلك، نقوم بإنشاء [واجهة](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). يمكن لأي كود يحتاج إلى استخدام عقد الرمز المميز استخدام نفس التعريفات في الواجهة ليكون متوافقًا مع جميع عقود الرموز المميزة التي تستخدمها، سواء كانت محفظة مثل ميتاماسك، أو تطبيق لامركزي (dapp) مثل Etherscan، أو عقدًا مختلفًا مثل مجمع سيولة.
 
-![Illustration of the ERC-20 interface](erc20_interface.png)
+![Illustration of the <span dir="ltr">ERC-20</span> interface](erc20_interface.png)
 
 إذا كنت مبرمجًا متمرسًا، فربما تتذكر رؤية بنيات مشابهة في [Java](https://www.w3schools.com/java/java_interface.asp) أو حتى في [ملفات ترويسة C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-هذا تعريف لـ [واجهة ⁦ERC-20⁩](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) من أوبن زبلن. إنها ترجمة لـ [المعيار القابل للقراءة من قبل البشر](https://eips.ethereum.org/EIPS/eip-20) إلى كود Solidity. بالطبع، الواجهة نفسها لا تحدد _كيفية_ القيام بأي شيء. يتم شرح ذلك في الكود المصدري للعقد أدناه.
+هذا تعريف لـ [واجهة ⁦<span dir="ltr">ERC-20</span>⁩](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) من أوبن زبلن. إنها ترجمة لـ [المعيار القابل للقراءة من قبل البشر](https://eips.ethereum.org/EIPS/eip-20) إلى كود Solidity. بالطبع، الواجهة نفسها لا تحدد _كيفية_ القيام بأي شيء. يتم شرح ذلك في الكود المصدري للعقد أدناه.
 
 &nbsp;
 
@@ -515,9 +515,9 @@ contract ERC20 is Context, IERC20 {
 | معاملة أليس | رقم أليس الفريد | معاملة بيل | رقم بيل الفريد | سماحية بيل | إجمالي دخل بيل من أليس |
 | ----------------- | ----------- | ----------------------------- | ---------- | ---------------- | ---------------------------- |
 | approve(Bill, 5)  | 10          |                               |            | 5                | 0                            |
-|                   |             | transferFrom(Alice, Bill, 5)  | 10,123     | 0                | 5                            |
+|                   |             | transferFrom(Alice, Bill, 5)  | <span dir="ltr">10,123</span>     | 0                | 5                            |
 | approve(Bill, 10) | 11          |                               |            | 10               | 5                            |
-|                   |             | transferFrom(Alice, Bill, 10) | 10,124     | 0                | 15                           |
+|                   |             | transferFrom(Alice, Bill, 10) | <span dir="ltr">10,124</span>     | 0                | 15                           |
 
 لتجنب هذه المشكلة، تتيح لك هاتان الدالتان (`increaseAllowance` و `decreaseAllowance`) تعديل السماحية بمقدار محدد. لذلك إذا كان بيل قد أنفق بالفعل خمسة رموز مميزة، فسيكون قادرًا فقط على إنفاق خمسة أخرى. اعتمادًا على التوقيت، هناك طريقتان يمكن أن يعمل بهما هذا، وكلاهما ينتهي بحصول بيل على عشرة رموز مميزة فقط:
 
@@ -526,17 +526,17 @@ contract ERC20 is Context, IERC20 {
 | معاملة أليس | رقم أليس الفريد | معاملة بيل | رقم بيل الفريد | سماحية بيل | إجمالي دخل بيل من أليس |
 | -------------------------- | ----------: | ---------------------------- | ---------: | ---------------: | ---------------------------- |
 | approve(Bill, 5)           |          10 |                              |            |                5 | 0                            |
-|                            |             | transferFrom(Alice, Bill, 5) |     10,123 |                0 | 5                            |
-| increaseAllowance(Bill, 5) |          11 |                              |            |          0+5 = 5 | 5                            |
-|                            |             | transferFrom(Alice, Bill, 5) |     10,124 |                0 | 10                           |
+|                            |             | transferFrom(Alice, Bill, 5) |     <span dir="ltr">10,123</span> |                0 | 5                            |
+| increaseAllowance(Bill, 5) |          11 |                              |            |          <span dir="ltr">0+5 = 5</span> | 5                            |
+|                            |             | transferFrom(Alice, Bill, 5) |     <span dir="ltr">10,124</span> |                0 | 10                           |
 
 ب:
 
 | معاملة أليس | رقم أليس الفريد | معاملة بيل | رقم بيل الفريد | سماحية بيل | إجمالي دخل بيل من أليس |
 | -------------------------- | ----------: | ----------------------------- | ---------: | ---------------: | ---------------------------: |
 | approve(Bill, 5)           |          10 |                               |            |                5 |                            0 |
-| increaseAllowance(Bill, 5) |          11 |                               |            |         5+5 = 10 |                            0 |
-|                            |             | transferFrom(Alice, Bill, 10) |     10,124 |                0 |                           10 |
+| increaseAllowance(Bill, 5) |          11 |                               |            |         <span dir="ltr">5+5 = 10</span> |                            0 |
+|                            |             | transferFrom(Alice, Bill, 10) |     <span dir="ltr">10,124</span> |                0 |                           10 |
 
 ```solidity
     /**

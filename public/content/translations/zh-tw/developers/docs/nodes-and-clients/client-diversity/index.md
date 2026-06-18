@@ -1,6 +1,6 @@
 ---
-title: 客戶端多樣性
-description: 關於以太坊客戶端多樣性重要性的高階說明。
+title: "客戶端多樣性"
+description: "關於以太坊客戶端多樣性重要性的高階說明。"
 lang: zh-tw
 sidebarDepth: 2
 ---

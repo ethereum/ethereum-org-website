@@ -1,6 +1,6 @@
 ---
-title: 智能合约可组合性
-description: 了解如何通过重用现有组件，像搭乐高积木一样组合智能合约来构建复杂的去中心化应用 (dapp)。
+title: "智能合约可组合性"
+description: "了解如何通过重用现有组件，像搭乐高积木一样组合智能合约来构建复杂的去中心化应用 (dapp)。"
 lang: zh
 incomplete: true
 ---

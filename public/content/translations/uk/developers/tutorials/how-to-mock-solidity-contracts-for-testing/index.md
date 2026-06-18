@@ -1,11 +1,11 @@
 ---
-title: Як створювати моки смарт-контрактів Solidity для тестування
-description: Чому варто створювати моки ваших контрактів під час тестування
-author: Маркус Ваас
+title: "Як створювати моки смарт-контрактів Solidity для тестування"
+description: "Чому варто створювати моки ваших контрактів під час тестування"
+author: "Маркус Ваас"
 lang: uk
-tags: ["solidity", "смарт-контракти", "тестування", "моки"]
+tags: ["Solidity", "смарт-контракти", "тестування", "моки"]
 skill: intermediate
-breadcrumb: Створення моків контрактів
+breadcrumb: "Створення моків контрактів"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

@@ -1,7 +1,7 @@
 ---
-title: टेस्टिंगसाठी Solidity स्मार्ट कॉन्ट्रॅक्ट्स मॉक कसे करावे
-description: टेस्टिंग करताना तुम्ही तुमच्या कॉन्ट्रॅक्ट्सची खिल्ली का उडवावी
-author: मार्कस वास
+title: "टेस्टिंगसाठी Solidity स्मार्ट कॉन्ट्रॅक्ट्स मॉक कसे करावे"
+description: "टेस्टिंग करताना तुम्ही तुमच्या कॉन्ट्रॅक्ट्सची खिल्ली का उडवावी"
+author: "मार्कस वास"
 lang: mr
 tags:
   - solidity
@@ -9,7 +9,7 @@ tags:
   - टेस्टिंग
   - मॉकिंग
 skill: intermediate
-breadcrumb: मॉकिंग कॉन्ट्रॅक्ट्स
+breadcrumb: "मॉकिंग कॉन्ट्रॅक्ट्स"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

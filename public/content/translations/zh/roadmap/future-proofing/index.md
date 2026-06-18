@@ -1,9 +1,9 @@
 ---
-title: 面向未来的以太坊与加密量子安全
-description: 这些升级巩固了以太坊作为未来具有弹性、去中心化基础层的地位，无论未来如何。
+title: "面向未来的以太坊与加密量子安全"
+description: "这些升级巩固了以太坊作为未来具有弹性、去中心化基础层的地位，无论未来如何。"
 lang: zh
 image: /images/roadmap/roadmap-future.png
-alt: 以太坊路线图
+alt: "以太坊路线图"
 template: roadmap
 summaryPoints:
   - 随着量子计算的发展，后量子密码学确保以太坊能够抵御高级硬件威胁

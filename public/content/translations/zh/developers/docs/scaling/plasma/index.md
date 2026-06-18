@@ -1,6 +1,6 @@
 ---
-title: 等离子体 (Plasma) 链
-description: 介绍等离子体 (Plasma) 链这一目前被以太坊社区使用的扩容解决方案。
+title: "等离子体 (Plasma) 链"
+description: "介绍等离子体 (Plasma) 链这一目前被以太坊社区使用的扩容解决方案。"
 lang: zh
 incomplete: true
 sidebarDepth: 3

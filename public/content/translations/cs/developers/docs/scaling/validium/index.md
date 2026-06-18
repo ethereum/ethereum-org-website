@@ -1,11 +1,11 @@
 ---
 title: Validium
-description: Úvod do Validia jako řešení škálování, které v současnosti využívá komunita Etherea.
+description: "Úvod do Validia jako řešení škálování, které v současnosti využívá komunita Etherea."
 lang: cs
 sidebarDepth: 3
 ---
 
-Validium je [řešení škálování](/developers/docs/scaling/), které vynucuje integritu transakcí pomocí důkazů platnosti podobně jako [ZK-rollupy](/developers/docs/scaling/zk-rollups/), ale neukládá transakční data na [Ethereum](/) Mainnet. Ačkoli offchain dostupnost dat přináší určité kompromisy, může vést k masivnímu zlepšení škálovatelnosti (Validia mohou zpracovat [~9 000 transakcí nebo více za sekundu](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium je [řešení škálování](/developers/docs/scaling/), které vynucuje integritu transakcí pomocí důkazů platnosti podobně jako [ZK-rollupy](/developers/docs/scaling/zk-rollups/), ale neukládá transakční data na [Ethereum](/) Mainnet. Ačkoli offchain dostupnost dat přináší určité kompromisy, může vést k masivnímu zlepšení škálovatelnosti (Validia mohou zpracovat [\~9 000 transakcí nebo více za sekundu](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Předpoklady {#prerequisites}
 

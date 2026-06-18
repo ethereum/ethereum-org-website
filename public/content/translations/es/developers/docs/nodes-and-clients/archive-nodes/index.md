@@ -1,6 +1,6 @@
 ---
 title: Nodo de archivo de Ethereum
-description: Una descripción general de los nodos de archivo
+description: "Una descripción general de los nodos de archivo"
 lang: es
 sidebarDepth: 2
 ---

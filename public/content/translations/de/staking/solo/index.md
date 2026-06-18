@@ -1,6 +1,6 @@
 ---
 title: Home-Staking Ihrer ETH
-description: Ein Überblick darüber, wie Sie mit dem Home-Staking Ihrer ETH beginnen können
+description: "Ein Überblick darüber, wie Sie mit dem Home-Staking Ihrer ETH beginnen können"
 lang: de
 template: staking
 emoji: ":money_with_wings:"

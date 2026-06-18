@@ -1,11 +1,11 @@
 ---
-title: 如何在測試中模擬 Solidity 智能合約
-description: 為什麼你應該在測試時「取笑」你的合約
-author: 馬庫斯·瓦斯
+title: "如何在測試中模擬 Solidity 智能合約"
+description: "為什麼你應該在測試時「取笑」你的合約"
+author: "馬庫斯·瓦斯"
 lang: zh-tw
-tags: ["solidity", "智能合約", "測試", "模擬"]
+tags: ["Solidity", "智能合約", "測試", "模擬"]
 skill: intermediate
-breadcrumb: 模擬合約
+breadcrumb: "模擬合約"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

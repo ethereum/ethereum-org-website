@@ -1,8 +1,8 @@
 ---
-title: Jak zaimplementować rynek ERC-721
-description: Jak wystawić stokenizowane przedmioty na sprzedaż na zdecentralizowanej tablicy ogłoszeń
+title: "Jak zaimplementować rynek ERC-721"
+description: "Jak wystawić stokenizowane przedmioty na sprzedaż na zdecentralizowanej tablicy ogłoszeń"
 author: "Alberto Cuesta Cañada"
-tags: ["inteligentne kontrakty", "erc-721", "solidity", "tokeny"]
+tags: ["inteligentne kontrakty", "erc-721", "Solidity", "tokeny"]
 skill: intermediate
 breadcrumb: Rynek ERC-721
 lang: pl

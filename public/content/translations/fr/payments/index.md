@@ -1,12 +1,12 @@
 ---
 title: Paiements sur Ethereum
 metaTitle: Paiements sur Ethereum
-description: Un aperçu des paiements sur Ethereum
+description: "Un aperçu des paiements sur Ethereum"
 lang: fr
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Un logo Eth affiché avec des mains qui donnent.
+alt: "Un logo Eth affiché avec des mains qui donnent."
 summaryPoints:
   - "Un monde où l'argent circule aussi librement que l'information"
   - "Ouvert et mondial, permettant des transactions sans frontières pour tous"
@@ -62,7 +62,7 @@ Dans les pays où les moyens de paiement ont été déconnectés du reste du mon
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Créez votre compte Ethereum avec une application de portefeuille dès aujourd'hui.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Commencer
   </ButtonLink>
 </AlertContent>

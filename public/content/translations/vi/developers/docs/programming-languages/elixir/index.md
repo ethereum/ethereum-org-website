@@ -1,6 +1,6 @@
 ---
-title: Ethereum cho các nhà phát triển Elixir
-description: Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Elixir.
+title: "Ethereum cho các nhà phát triển Elixir"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Elixir."
 lang: vi
 incomplete: false
 ---

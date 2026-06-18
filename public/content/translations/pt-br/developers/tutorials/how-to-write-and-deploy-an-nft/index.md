@@ -1,6 +1,6 @@
 ---
-title: Como escrever e implantar um NFT (Parte 1/3 da série de tutoriais sobre NFT)
-description: Este tutorial é a Parte 1 de uma série sobre NFTs que o guiará passo a passo sobre como escrever e implantar um contrato inteligente de Token Não Fungível (token ERC-721) usando Ethereum e o Inter Planetary File System (IPFS).
+title: "Como escrever e implantar um NFT (Parte 1/3 da série de tutoriais sobre NFT)"
+description: "Este tutorial é a Parte 1 de uma série sobre NFTs que o guiará passo a passo sobre como escrever e implantar um contrato inteligente de Token Não Fungível (token ERC-721) usando Ethereum e o Inter Planetary File System (IPFS)."
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "contratos inteligentes"]
 skill: beginner

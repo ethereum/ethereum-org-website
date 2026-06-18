@@ -1,6 +1,6 @@
 ---
-title: Jak mockovat chytré kontrakty v Solidity pro testování
-description: Proč byste si při testování měli dělat legraci ze svých kontraktů
+title: "Jak mockovat chytré kontrakty v Solidity pro testování"
+description: "Proč byste si při testování měli dělat legraci ze svých kontraktů"
 author: Markus Waas
 lang: cs
 tags:
@@ -9,7 +9,7 @@ tags:
   - testování
   - mockování
 skill: intermediate
-breadcrumb: Mockování kontraktů
+breadcrumb: "Mockování kontraktů"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

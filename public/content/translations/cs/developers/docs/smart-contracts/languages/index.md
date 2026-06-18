@@ -1,6 +1,6 @@
 ---
-title: Jazyky pro chytré kontrakty
-description: Přehled a srovnání dvou hlavních jazyků pro chytré kontrakty – Solidity a Vyper.
+title: "Jazyky pro chytré kontrakty"
+description: "Přehled a srovnání dvou hlavních jazyků pro chytré kontrakty – Solidity a Vyper."
 lang: cs
 ---
 

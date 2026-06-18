@@ -1,6 +1,6 @@
 ---
-title: ERC-1155 Çoklu Token Standardı
-description: Tek bir sözleşmede misli ve misli olmayan token'ları birleştiren çoklu token standardı ERC-1155 hakkında bilgi edinin.
+title: "ERC-1155 Çoklu Token Standardı"
+description: "Tek bir sözleşmede misli ve misli olmayan token'ları birleştiren çoklu token standardı ERC-1155 hakkında bilgi edinin."
 lang: tr
 ---
 

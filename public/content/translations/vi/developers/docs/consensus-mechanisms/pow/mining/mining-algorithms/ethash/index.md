@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Cái nhìn chi tiết về thuật toán Ethash.
+description: "Cái nhìn chi tiết về thuật toán Ethash."
 lang: vi
 ---
 

@@ -2,7 +2,7 @@
 title: Jinsi ya kutekeleza soko la ERC-721
 description: Jinsi ya kuweka bidhaa zilizofanywa kuwa tokeni kwa ajili ya kuuzwa kwenye ubao wa matangazo uliogatuliwa
 author: "Alberto Cuesta Cañada"
-tags: ["mikataba mahiri", "erc-721", "solidity", "tokeni"]
+tags: ["mikataba mahiri", "erc-721", "Solidity", "tokeni"]
 skill: intermediate
 breadcrumb: Soko la ERC-721
 lang: sw

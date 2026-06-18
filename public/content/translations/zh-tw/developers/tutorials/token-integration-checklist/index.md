@@ -1,11 +1,11 @@
 ---
-title: 代幣整合檢查清單
-description: 與代幣互動時應考慮的事項檢查清單
+title: "代幣整合檢查清單"
+description: "與代幣互動時應考慮的事項檢查清單"
 author: "Trailofbits"
 lang: zh-tw
-tags: ["solidity", "智能合約", "安全性", "代幣"]
+tags: ["Solidity", "智能合約", "安全性", "代幣"]
 skill: intermediate
-breadcrumb: 代幣整合
+breadcrumb: "代幣整合"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

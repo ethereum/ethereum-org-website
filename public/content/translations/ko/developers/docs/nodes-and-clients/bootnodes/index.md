@@ -1,6 +1,6 @@
 ---
-title: 이더리움 부트노드 소개
-description: 부트노드를 이해하는 데 필요한 기본 정보
+title: "이더리움 부트노드 소개"
+description: "부트노드를 이해하는 데 필요한 기본 정보"
 lang: ko
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Вознаграждения и штрафы в Proof-of-Stake
-description: Узнайте о внутрипротокольных стимулах в Эфириуме на базе Proof-of-Stake.
+title: "Вознаграждения и штрафы в Proof-of-Stake"
+description: "Узнайте о внутрипротокольных стимулах в Эфириуме на базе Proof-of-Stake."
 lang: ru
 ---
 

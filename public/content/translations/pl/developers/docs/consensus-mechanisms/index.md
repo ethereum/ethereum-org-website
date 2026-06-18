@@ -1,6 +1,6 @@
 ---
 title: Mechanizmy konsensusu
-description: Wyjaśnienie protokołów konsensusu w systemach rozproszonych i ich roli w Ethereum.
+description: "Wyjaśnienie protokołów konsensusu w systemach rozproszonych i ich roli w Ethereum."
 lang: pl
 authors: ["Patrick Collins"]
 ---

@@ -1,6 +1,6 @@
 ---
-title: Architektura węzła
-description: Wprowadzenie do tego, jak zorganizowane są węzły Ethereum.
+title: "Architektura węzła"
+description: "Wprowadzenie do tego, jak zorganizowane są węzły Ethereum."
 lang: pl
 ---
 

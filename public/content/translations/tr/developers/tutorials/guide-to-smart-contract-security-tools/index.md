@@ -1,11 +1,11 @@
 ---
-title: Akıllı sözleşme güvenlik araçları rehberi
-description: Üç farklı test ve program analizi tekniğine genel bir bakış
+title: "Akıllı sözleşme güvenlik araçları rehberi"
+description: "Üç farklı test ve program analizi tekniğine genel bir bakış"
 author: "Trailofbits"
 lang: tr
-tags: ["solidity", "akıllı sözleşmeler", "güvenlik"]
+tags: ["Solidity", "akıllı sözleşmeler", "güvenlik"]
 skill: intermediate
-breadcrumb: Güvenlik araçları
+breadcrumb: "Güvenlik araçları"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

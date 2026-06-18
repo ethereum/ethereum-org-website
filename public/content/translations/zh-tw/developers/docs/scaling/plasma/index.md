@@ -1,6 +1,6 @@
 ---
-title: 電漿鏈
-description: 介紹電漿鏈，這是以太坊社群目前使用的一種擴容解決方案。
+title: "電漿鏈"
+description: "介紹電漿鏈，這是以太坊社群目前使用的一種擴容解決方案。"
 lang: zh-tw
 incomplete: true
 sidebarDepth: 3

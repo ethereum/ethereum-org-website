@@ -1,10 +1,10 @@
 ---
-title: Bằng chứng Merkle cho tính toàn vẹn dữ liệu ngoại tuyến
-description: Đảm bảo tính toàn vẹn dữ liệu trên chuỗi cho dữ liệu chủ yếu được lưu trữ ngoài chuỗi
+title: "Bằng chứng Merkle cho tính toàn vẹn dữ liệu ngoại tuyến"
+description: "Đảm bảo tính toàn vẹn dữ liệu trên chuỗi cho dữ liệu chủ yếu được lưu trữ ngoài chuỗi"
 author: Ori Pomerantz
 tags: ["lưu trữ"]
 skill: advanced
-breadcrumb: Bằng chứng Merkle
+breadcrumb: "Bằng chứng Merkle"
 lang: vi
 published: 2021-12-30
 ---

@@ -1,6 +1,6 @@
 ---
-title: Estratégias de armazenamento de dados na blockchain
-description: Existem várias maneiras de armazenar dados usando a blockchain. Este artigo comparará as diferentes estratégias, seus custos e compensações, bem como os requisitos para usá-las com segurança.
+title: "Estratégias de armazenamento de dados na blockchain"
+description: "Existem várias maneiras de armazenar dados usando a blockchain. Este artigo comparará as diferentes estratégias, seus custos e compensações, bem como os requisitos para usá-las com segurança."
 lang: pt-br
 ---
 
@@ -110,7 +110,7 @@ Esta tabela resume as diferentes opções, suas vantagens e desvantagens.
 
 | Tipo de armazenamento                | Fonte de dados      | Garantia de disponibilidade                                                                                                             | Disponibilidade onchain                                             | Limitações adicionais                                                  |
 | --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Blobs da EIP-4844              | Offchain            | Garantia do Ethereum por [~18 dias](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Apenas o hash está disponível                                           |                                                                         |
+| Blobs da EIP-4844              | Offchain            | Garantia do Ethereum por [\~18 dias](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Apenas o hash está disponível                                           |                                                                         |
 | Dados de chamada                    | Offchain            | Garantia do Ethereum para sempre (parte da blockchain)                                                                                | Disponível apenas se gravado em um contrato e nessa transação |
 | Offchain com mecanismos da camada 1 (l1) | Offchain            | Garantia de "um verificador honesto" durante o período de desafio                                                                        | Apenas hash                                                        | Garantido pelo mecanismo de desafio, apenas durante o período de desafio |
 | Código do contrato               | Onchain ou offchain | Garantia do Ethereum para sempre (parte da blockchain)                                                                                | Sim                                                              | Gravado em um endereço "aleatório", não pode começar com `0xEF`                 |

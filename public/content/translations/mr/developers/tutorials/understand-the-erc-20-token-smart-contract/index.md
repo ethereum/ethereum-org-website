@@ -1,6 +1,6 @@
 ---
-title: ERC-20 टोकन स्मार्ट कॉन्ट्रॅक्ट समजून घ्या
-description: संपूर्ण Solidity स्मार्ट कॉन्ट्रॅक्ट उदाहरणासह आणि स्पष्टीकरणासह ERC-20 टोकन मानक कसे लागू करावे ते शिका.
+title: "ERC-20 टोकन स्मार्ट कॉन्ट्रॅक्ट समजून घ्या"
+description: "संपूर्ण Solidity स्मार्ट कॉन्ट्रॅक्ट उदाहरणासह आणि स्पष्टीकरणासह ERC-20 टोकन मानक कसे लागू करावे ते शिका."
 author: "jdourlens"
 tags:
   - स्मार्ट कॉन्ट्रॅक्ट्स
@@ -8,7 +8,7 @@ tags:
   - Solidity
   - ERC-20
 skill: beginner
-breadcrumb: ERC-20 टोकनच्या मूलभूत गोष्टी
+breadcrumb: "ERC-20 टोकनच्या मूलभूत गोष्टी"
 lang: mr
 published: 2020-04-05
 source: EthereumDev

@@ -1,8 +1,8 @@
 ---
-title: ERC-20 Token akıllı sözleşmesini anlamak
-description: Eksiksiz bir Solidity akıllı sözleşme örneği ve açıklamasıyla ERC-20 Token standardını nasıl uygulayacağınızı öğrenin.
+title: "ERC-20 Token akıllı sözleşmesini anlamak"
+description: "Eksiksiz bir Solidity akıllı sözleşme örneği ve açıklamasıyla ERC-20 Token standardını nasıl uygulayacağınızı öğrenin."
 author: "jdourlens"
-tags: ["akıllı sözleşmeler", "tokenlar", "solidity", "erc-20"]
+tags: ["akıllı sözleşmeler", "tokenlar", "Solidity", "erc-20"]
 skill: beginner
 breadcrumb: ERC-20 Token temelleri
 lang: tr

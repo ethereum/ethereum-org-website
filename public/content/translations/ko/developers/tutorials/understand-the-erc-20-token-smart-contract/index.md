@@ -1,6 +1,6 @@
 ---
-title: ERC-20 토큰 스마트 컨트랙트 이해하기
-description: 완전한 Solidity 스마트 컨트랙트 예제와 설명을 통해 ERC-20 토큰 표준을 구현하는 방법을 배워보세요.
+title: "ERC-20 토큰 스마트 컨트랙트 이해하기"
+description: "완전한 Solidity 스마트 컨트랙트 예제와 설명을 통해 ERC-20 토큰 표준을 구현하는 방법을 배워보세요."
 author: "jdourlens"
 tags:
   - "스마트 컨트랙트"
@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "erc-20"
 skill: beginner
-breadcrumb: ERC-20 토큰 기초
+breadcrumb: "ERC-20 토큰 기초"
 lang: ko
 published: 2020-04-05
 source: EthereumDev

@@ -1,6 +1,6 @@
 ---
 title: Merkeziyetsiz kimlik
-description: Merkeziyetsiz kimlik nedir ve neden önemlidir?
+description: "Merkeziyetsiz kimlik nedir ve neden önemlidir?"
 lang: tr
 template: use-cases
 sidebarDepth: 2

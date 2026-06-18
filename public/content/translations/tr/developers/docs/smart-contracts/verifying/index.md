@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmeleri doğrulama
-description: Ethereum akıllı sözleşmeleri için kaynak kodu doğrulamasına genel bir bakış
+title: "Akıllı sözleşmeleri doğrulama"
+description: "Ethereum akıllı sözleşmeleri için kaynak kodu doğrulamasına genel bir bakış"
 lang: tr
 ---
 

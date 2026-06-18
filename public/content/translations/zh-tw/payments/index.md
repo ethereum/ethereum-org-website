@@ -1,12 +1,12 @@
 ---
-title: 以太坊支付
-metaTitle: 以太坊上的支付
-description: 以太坊支付概覽
+title: "以太坊支付"
+metaTitle: "以太坊上的支付"
+description: "以太坊支付概覽"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: 顯示 ETH 標誌與給予的雙手。
+alt: "顯示 ETH 標誌與給予的雙手。"
 summaryPoints:
   - "一個金錢能像資訊一樣自由流動的世界"
   - "開放且全球化，讓每個人都能進行無國界交易"
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>立即使用錢包應用程式建立您的以太坊帳戶。</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     開始使用
   </ButtonLink>
 </AlertContent>

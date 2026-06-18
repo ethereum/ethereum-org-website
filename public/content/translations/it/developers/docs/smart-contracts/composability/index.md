@@ -1,5 +1,5 @@
 ---
-title: Componibilità degli smart contract
+title: "Componibilità degli smart contract"
 description: Scopri come gli smart contract possono essere combinati come blocchi Lego per creare dapp complesse riutilizzando componenti esistenti.
 lang: it
 incomplete: true

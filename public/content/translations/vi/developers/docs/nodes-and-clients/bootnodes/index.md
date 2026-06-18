@@ -1,6 +1,6 @@
 ---
-title: Giới thiệu về các nút khởi động Ethereum
-description: Thông tin cơ bản bạn cần để hiểu về các nút khởi động
+title: "Giới thiệu về các nút khởi động Ethereum"
+description: "Thông tin cơ bản bạn cần để hiểu về các nút khởi động"
 lang: vi
 ---
 

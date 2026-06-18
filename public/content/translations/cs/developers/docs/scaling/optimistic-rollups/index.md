@@ -1,6 +1,6 @@
 ---
-title: Optimistické rollupy
-description: Úvod do optimistických rollupů – řešení škálování, které používá komunita Etherea.
+title: "Optimistické rollupy"
+description: "Úvod do optimistických rollupů – řešení škálování, které používá komunita Etherea."
 lang: cs
 ---
 
@@ -152,7 +152,7 @@ Optimistické rollupy jsou navrženy pro interoperabilitu s Ethereum Mainnetem a
 
 #### 1. Pohyb aktiv {#asset-movement}
 
-##### Vstup do rollupu {#evm-compatibility}
+##### Vstup do rollupu {#}
 
 K použití optimistického rollupu uživatelé vkládají ETH, tokeny ERC-20 a další přijímaná aktiva do kontraktu [mostu](/developers/docs/bridges/) rollupu na L1. Kontrakt mostu předá transakci na L2, kde je vyraženo ekvivalentní množství aktiv a odesláno na uživatelem zvolenou adresu na optimistickém rollupu.
 
@@ -160,7 +160,7 @@ Transakce generované uživateli (jako vklad L1 > L2) jsou obvykle zařazeny do 
 
 Některé optimistické rollupy přijímají přímočařejší přístup, aby zabránily sekvencerům v cenzuře uživatelů. Zde je blok definován všemi transakcemi odeslanými do kontraktu L1 od předchozího bloku (např. vklady) navíc k transakcím zpracovaným na řetězci rollupu. Pokud sekvencer ignoruje transakci L1, publikuje (prokazatelně) nesprávný stavový kořen; proto sekvenceři nemohou zdržovat zprávy generované uživateli, jakmile jsou odeslány na L1.
 
-##### Výstup z rollupu {#cross-chain-contract-calls}
+##### Výstup z rollupu {#}
 
 Výběr z optimistického rollupu do Etherea je obtížnější kvůli schématu dokazování podvodů. Pokud uživatel iniciuje transakci L2 > L1 k výběru prostředků uložených v úschově na L1, musí počkat, dokud neuplyne období pro zpochybnění – trvající zhruba sedm dní. Nicméně samotný proces výběru je poměrně přímočarý.
 
@@ -170,7 +170,7 @@ Aby se uživatelé optimistického rollupu vyhnuli týdennímu čekání před v
 
 Poskytovatelé likvidity mohou před uvolněním prostředků zkontrolovat platnost požadavku uživatele na výběr (tím, že sami provedou řetězec). Tímto způsobem mají jistotu, že transakce bude nakonec potvrzena (tj. bezdůvěrná finalita).
 
-#### 2. Kompatibilita s EVM {#how-do-optimistic-rollup-fees-work}
+#### 2. Kompatibilita s EVM {#evm-compatibility}
 
 Pro vývojáře je výhodou optimistických rollupů jejich kompatibilita – nebo ještě lépe ekvivalence – s [virtuálním strojem Etherea (EVM)](/developers/docs/evm/). Rollupy kompatibilní s EVM splňují specifikace v [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) a podporují EVM na úrovni bajtkódu.
 
@@ -182,7 +182,7 @@ ii. Vývojáři a projektové týmy používající optimistické rollupy mohou 
 
 Používání stávajících nástrojů je důležité, protože tyto nástroje byly v průběhu let rozsáhle auditovány, laděny a vylepšovány. Odstraňuje to také nutnost, aby se vývojáři Etherea učili, jak stavět se zcela novým vývojovým stackem.
 
-#### 3. Meziřetězcová volání kontraktů {#scaling-ethereum-with-optimistic-rollups}
+#### 3. Meziřetězcová volání kontraktů {#cross-chain-contract-calls}
 
 Uživatelé (externě vlastněné účty) interagují s kontrakty L2 odesláním transakce do kontraktu rollupu nebo tím, že to za ně udělá sekvencer nebo validátor. Optimistické rollupy také umožňují účtům kontraktů na Ethereu interagovat s kontrakty L2 pomocí přemosťovacích kontraktů k předávání zpráv a dat mezi L1 a L2. To znamená, že můžete naprogramovat kontrakt L1 na Ethereum Mainnetu tak, aby vyvolával funkce patřící kontraktům na optimistickém rollupu L2.
 
@@ -194,7 +194,7 @@ Vzhledem k tomu, že meziřetězcová volání zpráv vedou k provedení kontrak
 
 Nakonec bychom měli poznamenat, že volání zpráv L2 > L1 mezi kontrakty musí počítat se zpožděním (volání L1 > L2 se obvykle provádějí po několika minutách). Je to proto, že zprávy odeslané na Mainnet z optimistického rollupu nelze provést, dokud nevyprší okno pro zpochybnění.
 
-## Jak fungují poplatky u optimistických rollupů? {#optimistic-rollups-pros-and-cons}
+## Jak fungují poplatky u optimistických rollupů? {#how-do-optimistic-rollup-fees-work}
 
 Optimistické rollupy používají schéma poplatků za plyn, podobně jako Ethereum, k označení toho, kolik uživatelé platí za transakci. Poplatky účtované na optimistických rollupech závisí na následujících součástech:
 
@@ -206,7 +206,7 @@ Optimistické rollupy používají schéma poplatků za plyn, podobně jako Ethe
 
 Optimistické rollupy uplatňují několik mechanismů ke snížení poplatků pro uživatele, včetně dávkování transakcí a komprese `calldata` ke snížení nákladů na publikování dat. Můžete se podívat na [sledovač poplatků L2](https://l2fees.info/), kde najdete přehled v reálném čase o tom, kolik stojí používání optimistických rollupů založených na Ethereu.
 
-## Jak optimistické rollupy škálují Ethereum? {#optimistic-video}
+## Jak optimistické rollupy škálují Ethereum? {#scaling-ethereum-with-optimistic-rollups}
 
 Jak bylo vysvětleno, optimistické rollupy publikují komprimovaná transakční data na Ethereu, aby zaručily dostupnost dat. Schopnost komprimovat data publikovaná onchain je klíčová pro škálování propustnosti na Ethereu pomocí optimistických rollupů.
 
@@ -223,7 +223,7 @@ Optimistické rollupy používají několik technik k dosažení komprese transa
 | Value     | 9                      | ~3            |
 | Signature | ~68 (2 + 33 + 33)      | ~0.5          |
 | From      | 0 (obnoveno z podpisu) | 4             |
-| **Celkem** | **~112 bajtů**         | **~12 bajtů** |
+| **Celkem** | **\~112 bajtů**         | **\~12 bajtů** |
 
 Provedení několika hrubých výpočtů na těchto číslech může pomoci ukázat zlepšení škálovatelnosti, které poskytuje optimistický rollup:
 
@@ -235,7 +235,7 @@ Jedná se o poměrně optimistický odhad vzhledem k tomu, že transakce optimis
 
 Očekává se, že zavedení [shardingu dat](/roadmap/danksharding/) na Ethereu zlepší škálovatelnost v optimistických rollupech. Protože transakce rollupu musí sdílet prostor v bloku s jinými transakcemi, které nepatří rollupu, je jejich zpracovatelská kapacita omezena propustností dat na hlavním řetězci Etherea. Danksharding zvětší prostor dostupný pro řetězce L2 k publikování dat na blok pomocí levnějšího, nepermanentního úložiště „blobů“ namísto drahé, trvalé `CALLDATA`.
 
-### Výhody a nevýhody optimistických rollupů {#further-reading-on-optimistic-rollups}
+### Výhody a nevýhody optimistických rollupů {#optimistic-rollups-pros-and-cons}
 
 | Výhody                                                                                                                                                  | Nevýhody                                                                                                                                                |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -247,13 +247,13 @@ Očekává se, že zavedení [shardingu dat](/roadmap/danksharding/) na Ethereu 
 | Optimistické rollupy se spoléhají na dobře navržené kryptoekonomické pobídky ke zvýšení bezpečnosti na řetězci.                                                 | Rollupy musí odesílat všechna transakční data onchain, což může zvýšit náklady.                                                                          |
 | Kompatibilita s EVM a Solidity umožňuje vývojářům přenášet chytré kontrakty nativní pro Ethereum na rollupy nebo používat stávající nástroje k vytváření nových dapps. |
 
-### Vizuální vysvětlení optimistických rollupů {#tutorials}
+### Vizuální vysvětlení optimistických rollupů {#optimistic-video}
 
 Učíte se raději vizuálně? Podívejte se, jak Finematics vysvětluje optimistické rollupy:
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Další čtení o optimistických rollupech
+## Další čtení o optimistických rollupech {#further-reading-on-optimistic-rollups}
 
 - [Jak fungují optimistické rollupy (Kompletní průvodce)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Co je to blockchainový rollup? Technický úvod](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
@@ -264,6 +264,6 @@ Učíte se raději vizuálně? Podívejte se, jak Finematics vysvětluje optimis
 - [Hluboký ponor do OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Co je to Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 
-## Návody: Optimistické rollupy a mosty na Ethereu
+## Návody: Optimistické rollupy a mosty na Ethereu {#tutorials}
 
 - [Průvodce standardním kontraktem mostu Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Komentovaný průvodce kódem standardního mostu Optimism pro přesun aktiv mezi L1 a L2._

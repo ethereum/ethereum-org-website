@@ -1,6 +1,6 @@
 ---
-title: Standard tokenizovaného trezoru ERC-4626
-description: Standard pro trezory nesoucí výnos.
+title: "Standard tokenizovaného trezoru ERC-4626"
+description: "Standard pro trezory nesoucí výnos."
 lang: cs
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: Come creare mock di smart contract in Solidity per i test
-description: Perché dovresti prendere in giro i tuoi contratti durante i test
+description: "Perché dovresti prendere in giro i tuoi contratti durante i test"
 author: Markus Waas
 lang: it
-tags: ["solidity", "smart contract", "test", "mocking"]
+tags: ["Solidity", "smart contract", "test", "mocking"]
 skill: intermediate
 breadcrumb: Creare mock di contratti
 published: 2020-05-02

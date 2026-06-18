@@ -1,6 +1,6 @@
 ---
-title: 밸리디움
-description: 현재 이더리움 커뮤니티에서 활용하고 있는 확장성 솔루션인 밸리디움(Validium)에 대한 소개입니다.
+title: "밸리디움"
+description: "현재 이더리움 커뮤니티에서 활용하고 있는 확장성 솔루션인 밸리디움(Validium)에 대한 소개입니다."
 lang: ko
 sidebarDepth: 3
 ---

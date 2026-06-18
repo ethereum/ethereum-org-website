@@ -1,6 +1,6 @@
 ---
-title: 給 Elixir 開發者的以太坊
-description: 學習如何使用基於 Elixir 的專案與工具在以太坊上進行開發。
+title: "給 Elixir 開發者的以太坊"
+description: "學習如何使用基於 Elixir 的專案與工具在以太坊上進行開發。"
 lang: zh-tw
 incomplete: false
 ---

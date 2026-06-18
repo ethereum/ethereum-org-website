@@ -1,6 +1,6 @@
 ---
-title: لغات البرمجة
-description: اكتشف موارد تطوير إيثيريوم لمختلف لغات البرمجة بما في ذلك ⁦JavaScript⁩ و⁦Python⁩ و⁦Go⁩ و⁦Rust⁩ والمزيد.
+title: "لغات البرمجة"
+description: "اكتشف موارد تطوير إيثيريوم لمختلف لغات البرمجة بما في ذلك ⁦JavaScript⁩ و⁦Python⁩ و⁦Go⁩ و⁦Rust⁩ والمزيد."
 lang: ar
 ---
 

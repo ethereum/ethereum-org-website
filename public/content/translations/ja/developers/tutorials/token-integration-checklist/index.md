@@ -1,6 +1,6 @@
 ---
-title: トークン統合チェックリスト
-description: トークンとやり取りする際に考慮すべき事項のチェックリスト
+title: "トークン統合チェックリスト"
+description: "トークンとやり取りする際に考慮すべき事項のチェックリスト"
 author: "Trailofbits"
 lang: ja
 tags:
@@ -9,7 +9,7 @@ tags:
   - セキュリティ
   - トークン
 skill: intermediate
-breadcrumb: トークン統合
+breadcrumb: "トークン統合"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

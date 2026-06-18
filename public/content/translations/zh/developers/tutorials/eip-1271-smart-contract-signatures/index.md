@@ -1,11 +1,11 @@
 ---
 title: "EIP-1271：签署和验证智能合约签名"
-description: 概述使用 EIP-1271 生成和验证智能合约签名。我们还将逐步介绍 Safe（原 Gnosis Safe）中使用的 EIP-1271 实现，为智能合约开发者提供一个可供参考的具体示例。
-author: 内森·H·梁
+description: "概述使用 EIP-1271 生成和验证智能合约签名。我们还将逐步介绍 Safe（原 Gnosis Safe）中使用的 EIP-1271 实现，为智能合约开发者提供一个可供参考的具体示例。"
+author: "内森·H·梁"
 lang: zh
 tags: ["eip-1271", "智能合约", "验证", "签名"]
 skill: intermediate
-breadcrumb: EIP-1271 签名
+breadcrumb: "EIP-1271 签名"
 published: 2023-01-12
 ---
 

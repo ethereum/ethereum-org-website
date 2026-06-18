@@ -1,13 +1,13 @@
 ---
-title: IPFS pro decentralizovaná uživatelská rozhraní
-description: Tento tutoriál učí čtenáře, jak používat IPFS k ukládání uživatelského rozhraní pro decentralizovanou aplikaci (dapp). Ačkoli jsou data a obchodní logika aplikace decentralizované, bez uživatelského rozhraní odolného vůči cenzuře by k ní uživatelé mohli stejně ztratit přístup.
+title: "IPFS pro decentralizovaná uživatelská rozhraní"
+description: "Tento tutoriál učí čtenáře, jak používat IPFS k ukládání uživatelského rozhraní pro decentralizovanou aplikaci (dapp). Ačkoli jsou data a obchodní logika aplikace decentralizované, bez uživatelského rozhraní odolného vůči cenzuře by k ní uživatelé mohli stejně ztratit přístup."
 author: Ori Pomerantz
 tags:
   - ipfs
   - dapps
   - frontend
 skill: beginner
-breadcrumb: IPFS pro uživatelská rozhraní dapp
+breadcrumb: "IPFS pro uživatelská rozhraní dapp"
 lang: cs
 published: 2024-06-29
 ---

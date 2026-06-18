@@ -1,6 +1,6 @@
 ---
-title: La chaîne balise
-description: Découvrez la chaîne balise, la mise à jour qui a introduit la preuve d'enjeu sur Ethereum.
+title: "La chaîne balise"
+description: "Découvrez la chaîne balise, la mise à jour qui a introduit la preuve d'enjeu sur Ethereum."
 lang: fr
 template: upgrade
 image: /images/upgrades/core.png

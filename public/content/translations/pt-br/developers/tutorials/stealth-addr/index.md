@@ -2,9 +2,9 @@
 title: "Usando endereços furtivos"
 description: "Endereços furtivos permitem que os usuários transfiram ativos anonimamente. Após ler este artigo, você será capaz de: explicar o que são endereços furtivos e como eles funcionam, entender como usar endereços furtivos de uma forma que preserve o anonimato e escrever um aplicativo baseado na web que use endereços furtivos."
 author: Ori Pomerantz
-tags: ["Endereço furtivo", "privacidade", "criptografia", "rust", "wasm"]
+tags: ["Endereço furtivo", "privacidade", "criptografia", "Rust", "wasm"]
 skill: intermediate
-breadcrumb: Endereços furtivos
+breadcrumb: "Endereços furtivos"
 published: 2025-11-30
 lang: pt-br
 sidebarDepth: 3

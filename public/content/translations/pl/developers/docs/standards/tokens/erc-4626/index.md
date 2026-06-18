@@ -1,6 +1,6 @@
 ---
 title: Standard stokenizowanego skarbca ERC-4626
-description: Standard dla skarbców przynoszących zysk.
+description: "Standard dla skarbców przynoszących zysk."
 lang: pl
 ---
 

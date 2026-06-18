@@ -1,12 +1,12 @@
 ---
 title: "웹3 앱을 위한 서버 컴포넌트 및 에이전트"
-description: 이 튜토리얼을 읽고 나면 블록체인의 이벤트를 수신하고 그에 따라 자체 트랜잭션으로 응답하는 TypeScript 서버를 작성할 수 있습니다. 이를 통해 중앙화된 애플리케이션(서버가 단일 장애점이기 때문)을 작성하면서도 웹3 엔티티와 상호작용할 수 있습니다. 동일한 기술을 사용하여 사람의 개입 없이 온체인 이벤트에 응답하는 에이전트를 작성할 수도 있습니다.
+description: "이 튜토리얼을 읽고 나면 블록체인의 이벤트를 수신하고 그에 따라 자체 트랜잭션으로 응답하는 TypeScript 서버를 작성할 수 있습니다. 이를 통해 중앙화된 애플리케이션(서버가 단일 장애점이기 때문)을 작성하면서도 웹3 엔티티와 상호작용할 수 있습니다. 동일한 기술을 사용하여 사람의 개입 없이 온체인 이벤트에 응답하는 에이전트를 작성할 수도 있습니다."
 
-author: 오리 포메란츠
+author: "오리 포메란츠"
 lang: ko
 tags: ["에이전트", "서버", "오프체인", "디앱"]
 skill: beginner
-breadcrumb: 서버 컴포넌트
+breadcrumb: "서버 컴포넌트"
 published: 2024-07-15
 ---
 
@@ -69,7 +69,7 @@ published: 2024-07-15
 
 프로그램의 대부분은 [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts)에 포함되어 있습니다.
 
-##### 필수 객체 생성하기 {#package-json}
+##### 필수 객체 생성하기 {#}
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 이제 모든 전제 조건을 갖추었으므로 마침내 [컨트랙트 인스턴스](https://viem.sh/docs/contract/getContract)를 생성할 수 있습니다. 이 컨트랙트 인스턴스를 사용하여 온체인 컨트랙트와 통신할 것입니다.
 
-##### 블록체인에서 읽기 {#conclusion}
+##### 블록체인에서 읽기 {#}
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript는 단일 스레드이므로 장기 실행 프로세스를 시작할 
 
 이것이 어떻게 작동하는지 관심이 있다면 [여기에서 읽어볼 수 있지만](https://www.w3schools.com/js/js_promise.asp), 실질적으로 알아야 할 것은 시간이 오래 걸리는 작업을 시작할 때 결과를 `await`해야 하며, 이를 수행하는 모든 함수는 `async`로 선언되어야 한다는 점입니다.
 
-##### 트랜잭션 발행하기
+##### 트랜잭션 발행하기 {#}
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ const txHash = await greeter.write.setGreeting([greeting])
 
 트랜잭션의 해시를 (블록 탐색기에서 볼 수 있는 URL의 일부로) 보고하고 반환합니다.
 
-##### 이벤트에 응답하기
+##### 이벤트에 응답하기 {#}
 
 ```typescript
 greeter.watchEvent.SetGreeting({
@@ -243,7 +243,7 @@ console.log(
 
 발신자가 이 서버가 _아닌_ 경우, `setGreeting`를 사용하여 인사말을 변경합니다.
 
-#### `package.json`
+#### `package.json` {#package-json}
 
 [이 파일](https://github.com/qbzzt/20240715-server-component/blob/main/package.json)은 [Node.js](https://nodejs.org/en) 구성을 제어합니다. 이 문서에서는 중요한 정의만 설명합니다.
 
@@ -287,7 +287,7 @@ JavaScript 노드 애플리케이션에는 여러 유형이 있습니다. `modul
 
 이것들은 `dist/app.js`를 실행할 때 런타임에 필요한 패키지입니다.
 
-## 결론
+## 결론 {#conclusion}
 
 여기서 만든 중앙화된 서버는 사용자를 위한 에이전트 역할을 하는 제 기능을 수행합니다. 탈중앙화 애플리케이션 (dapp)이 계속 작동하기를 원하고 가스를 기꺼이 지불할 의향이 있는 사람이라면 누구나 자신의 주소로 서버의 새 인스턴스를 실행할 수 있습니다.
 

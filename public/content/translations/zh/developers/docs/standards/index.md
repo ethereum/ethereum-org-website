@@ -1,6 +1,6 @@
 ---
-title: 以太坊开发标准
-description: 了解以太坊标准，包括以太坊改进提案 (EIP)、ERC-20 和 ERC-721 等代币标准以及开发约定。
+title: "以太坊开发标准"
+description: "了解以太坊标准，包括以太坊改进提案 (EIP)、ERC-20 和 ERC-721 等代币标准以及开发约定。"
 lang: zh
 incomplete: true
 ---
@@ -46,7 +46,7 @@ EIP 有 3 种类型：
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - 使用连续的代币标识符创建/转移一个或多个非同质化代币时发出的标准化事件。
   - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721 消费者角色的接口扩展。
   - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - 为 ERC-721 代币添加具有受限权限且有时间限制的角色。
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - **（不推荐）**对 ERC-20 进行改进的代币标准。
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - <strong>（不推荐）</strong>对 ERC-20 进行改进的代币标准。
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - 可同时包含同质化和非同质化资产的代币标准。
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - 一种代币化金库标准，旨在优化和统一生息金库的技术参数。
 

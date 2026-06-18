@@ -1,6 +1,6 @@
 ---
 title: Testando contratos inteligentes
-description: Uma visão geral das técnicas e considerações para testar contratos inteligentes no Ethereum.
+description: "Uma visão geral das técnicas e considerações para testar contratos inteligentes no Ethereum."
 lang: pt-br
 ---
 
@@ -52,7 +52,7 @@ Os testes de unidade são úteis para verificar se as funções retornam os valo
 
 #### Diretrizes para testes de unidade de contratos inteligentes {#unit-testing-guidelines}
 
-##### 1. Entenda a lógica de negócios e o fluxo de trabalho do seu contrato {#integration-testing-for-smart-contracts}
+##### 1. Entenda a lógica de negócios e o fluxo de trabalho do seu contrato {#}
 
 Antes de escrever testes de unidade, é útil saber quais funcionalidades um contrato inteligente oferece e como os usuários acessarão e usarão essas funções. Isso é particularmente útil para executar [testes de caminho feliz (happy path)](https://en.m.wikipedia.org/wiki/Happy_path) que determinam se as funções em um contrato retornam a saída correta para entradas de usuário válidas. Explicaremos esse conceito usando este exemplo (resumido) de [um contrato de leilão](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
@@ -114,7 +114,7 @@ Os testes de unidade para um contrato como este cobririam diferentes funções q
 
 Entender o fluxo de trabalho operacional de um contrato também ajuda a escrever testes de unidade que verificam se a execução atende aos requisitos. Por exemplo, o contrato de leilão especifica que os usuários não podem dar lances quando o leilão terminar (ou seja, quando `auctionEndTime` for menor que `block.timestamp`). Assim, um desenvolvedor pode executar um teste de unidade que verifica se as chamadas para a função `bid()` são bem-sucedidas ou falham quando o leilão termina (ou seja, quando `auctionEndTime` > `block.timestamp`).
 
-##### 2. Avalie todas as premissas relacionadas à execução do contrato {#property-based-testing-for-smart-contracts}
+##### 2. Avalie todas as premissas relacionadas à execução do contrato {#}
 
 É importante documentar quaisquer premissas sobre a execução de um contrato e escrever testes de unidade para verificar a validade dessas premissas. Além de oferecer proteção contra execuções inesperadas, testar asserções força você a pensar em operações que poderiam quebrar o modelo de segurança de um contrato inteligente. Uma dica útil é ir além dos "testes de usuário feliz" e escrever testes negativos que verificam se uma função falha para as entradas erradas.
 
@@ -128,11 +128,11 @@ Muitas estruturas de teste de unidade permitem que você crie asserções — de
 
 **Nota**: Outra maneira de testar premissas é escrever testes que acionam [modificadores de função](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) em um contrato, especialmente as instruções `require`, `assert` e `if…else`.
 
-##### 3. Meça a cobertura de código {#static-analysis}
+##### 3. Meça a cobertura de código {#}
 
 A [cobertura de código](https://en.m.wikipedia.org/wiki/Code_coverage) é uma métrica de teste que rastreia o número de ramificações, linhas e instruções em seu código executadas durante os testes. Os testes devem ter uma boa cobertura de código para minimizar o risco de vulnerabilidades não testadas. Sem cobertura suficiente, você pode presumir falsamente que seu contrato é seguro porque todos os testes passam, enquanto as vulnerabilidades ainda existem em caminhos de código não testados. Registrar uma alta cobertura de código, no entanto, dá a garantia de que todas as instruções/funções em um contrato inteligente foram suficientemente testadas quanto à correção.
 
-##### 4. Use estruturas de teste bem desenvolvidas {#dynamic-analysis}
+##### 4. Use estruturas de teste bem desenvolvidas {#}
 
 A qualidade das ferramentas usadas na execução de testes de unidade para seus contratos inteligentes é crucial. Uma estrutura de teste ideal é aquela que é mantida regularmente; fornece recursos úteis (por exemplo, recursos de registro e relatórios); e deve ter sido amplamente usada e avaliada por outros desenvolvedores.
 
@@ -146,7 +146,7 @@ As estruturas de teste de unidade para contratos inteligentes em Solidity vêm e
 - **[Executando testes de unidade com Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 - **[Executando testes de unidade com Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
-### Teste de integração {#running-property-based-tests}
+### Teste de integração {#integration-testing-for-smart-contracts}
 
 Enquanto o teste de unidade depura as funções do contrato isoladamente, os testes de integração avaliam os componentes de um contrato inteligente como um todo. O teste de integração pode detectar problemas decorrentes de chamadas entre contratos ou interações entre diferentes funções no mesmo contrato inteligente. Por exemplo, os testes de integração podem ajudar a verificar se coisas como [herança](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) e injeção de dependência funcionam corretamente.
 
@@ -154,13 +154,13 @@ O teste de integração é útil se o seu contrato adotar uma arquitetura modula
 
 A blockchain bifurcada se comportará de forma semelhante à Mainnet e terá contas com estados e saldos associados. Mas ela atua apenas como um ambiente de desenvolvimento local em sandbox, o que significa que você não precisará de ETH real para transações, por exemplo, nem suas alterações afetarão o protocolo Ethereum real.
 
-### Teste baseado em propriedades {#manual-testing-for-smart-contracts}
+### Teste baseado em propriedades {#property-based-testing-for-smart-contracts}
 
 O teste baseado em propriedades é o processo de verificar se um contrato inteligente satisfaz alguma propriedade definida. As propriedades afirmam fatos sobre o comportamento de um contrato que se espera que permaneçam verdadeiros em diferentes cenários — um exemplo de propriedade de contrato inteligente poderia ser "As operações aritméticas no contrato nunca sofrem overflow ou underflow".
 
 A **análise estática** e a **análise dinâmica** são duas técnicas comuns para executar testes baseados em propriedades, e ambas podem verificar se o código de um programa (um contrato inteligente, neste caso) satisfaz alguma propriedade predefinida. Algumas ferramentas de teste baseadas em propriedades vêm com regras predefinidas sobre as propriedades esperadas do contrato e verificam o código em relação a essas regras, enquanto outras permitem que você crie propriedades personalizadas para um contrato inteligente.
 
-#### Análise estática {#testing-on-local-blockchain}
+#### Análise estática {#static-analysis}
 
 Um analisador estático recebe como entrada o código-fonte de um contrato inteligente e gera resultados declarando se um contrato satisfaz uma propriedade ou não. Ao contrário da análise dinâmica, a análise estática não envolve a execução de um contrato para analisá-lo quanto à correção. Em vez disso, a análise estática raciocina sobre todos os caminhos possíveis que um contrato inteligente poderia seguir durante a execução (ou seja, examinando a estrutura do código-fonte para determinar o que isso significaria para a operação do contrato em tempo de execução).
 
@@ -168,7 +168,7 @@ Um analisador estático recebe como entrada o código-fonte de um contrato intel
 
 Na maioria dos casos, a análise estática é útil para detectar problemas de segurança, como o uso de construções inseguras, erros de sintaxe ou violações de padrões de codificação no código de um contrato. No entanto, sabe-se que os analisadores estáticos geralmente não são confiáveis para detectar vulnerabilidades mais profundas e podem produzir falsos positivos excessivos.
 
-#### Análise dinâmica {#testing-contracts-on-testnets}
+#### Análise dinâmica {#dynamic-analysis}
 
 A análise dinâmica gera entradas simbólicas (por exemplo, na [execução simbólica](https://en.m.wikipedia.org/wiki/Symbolic_execution)) ou entradas concretas (por exemplo, no [fuzzing](https://owasp.org/www-community/Fuzzing)) para as funções de um contrato inteligente para ver se algum traço de execução viola propriedades específicas. Essa forma de teste baseado em propriedades difere dos testes de unidade porque os casos de teste cobrem vários cenários e um programa lida com a geração de casos de teste.
 
@@ -182,7 +182,7 @@ O fuzzing é útil para avaliar o mecanismo de validação de entrada de um cont
 
 3. **Os testes de unidade provam que um contrato é executado corretamente para dados de amostra, mas se o contrato é executado corretamente para entradas fora da amostra permanece desconhecido.** Os testes de propriedade executam um contrato de destino com várias variações de um determinado valor de entrada para encontrar traços de execução que causam falhas de asserção. Assim, um teste de propriedade fornece mais garantias de que um contrato é executado corretamente para uma ampla classe de dados de entrada.
 
-### Diretrizes para executar testes baseados em propriedades para contratos inteligentes {#testing-vs-formal-verification}
+### Diretrizes para executar testes baseados em propriedades para contratos inteligentes {#running-property-based-tests}
 
 A execução de testes baseados em propriedades geralmente começa com a definição de uma propriedade (por exemplo, ausência de [overflows de inteiros](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) ou coleção de propriedades que você deseja verificar em um contrato inteligente. Você também pode precisar definir um intervalo de valores dentro do qual o programa pode gerar dados para entradas de transação ao escrever testes de propriedade.
 
@@ -197,11 +197,11 @@ Uma vez configurada corretamente, a ferramenta de teste de propriedade executar�
 - **[Execução simbólica de contratos inteligentes com Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Execução simbólica de contratos inteligentes com Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-## Testes manuais para contratos inteligentes {#testing-vs-audits-bug-bounties}
+## Testes manuais para contratos inteligentes {#manual-testing-for-smart-contracts}
 
 O teste manual de contratos inteligentes geralmente ocorre mais tarde no ciclo de desenvolvimento, após a execução de testes automatizados. Essa forma de teste avalia o contrato inteligente como um produto totalmente integrado para ver se ele funciona conforme especificado nos requisitos técnicos.
 
-### Testando contratos em uma blockchain local {#testing-tools-and-libraries}
+### Testando contratos em uma blockchain local {#testing-on-local-blockchain}
 
 Embora os testes automatizados realizados em um ambiente de desenvolvimento local possam fornecer informações úteis de depuração, você vai querer saber como seu contrato inteligente se comporta em um ambiente de produção. No entanto, a implantação na cadeia principal do Ethereum incorre em taxas de gas — sem mencionar que você ou seus usuários podem perder dinheiro real se o seu contrato inteligente ainda tiver bugs.
 
@@ -211,7 +211,7 @@ Executar contratos em uma blockchain local pode ser útil como uma forma de test
 
 [Mais sobre redes de desenvolvimento.](/developers/docs/development-networks/)
 
-### Testando contratos em redes de teste {#unit-testing-tools}
+### Testando contratos em redes de teste {#testing-contracts-on-testnets}
 
 Uma rede de teste (testnet) funciona exatamente como a Rede Principal do Ethereum (Mainnet), exceto que usa ether (ETH) sem valor no mundo real. Implantar seu contrato em uma [rede de teste](/developers/docs/networks/#ethereum-testnets) significa que qualquer pessoa pode interagir com ele (por exemplo, por meio do frontend do dapp) sem colocar fundos em risco.
 
@@ -221,7 +221,7 @@ Implantar em uma rede de teste após testar em uma blockchain local é o ideal, 
 
 [Mais sobre as redes de teste do Ethereum.](/developers/docs/development-networks/#public-beacon-testchains)
 
-## Testes vs. verificação formal {#property-based-testing-tools}
+## Testes vs. verificação formal {#testing-vs-formal-verification}
 
 Embora os testes ajudem a confirmar que um contrato retorna os resultados esperados para algumas entradas de dados, eles não podem provar conclusivamente o mesmo para entradas não usadas durante os testes. Testar um contrato inteligente, portanto, não pode garantir a "correção funcional" (ou seja, não pode mostrar que um programa se comporta conforme exigido para _todos_ os conjuntos de valores de entrada).
 
@@ -233,7 +233,7 @@ Ao contrário dos testes, a verificação formal pode ser usada para verificar s
 
 [Mais sobre verificação formal para contratos inteligentes.](/developers/docs/smart-contracts/formal-verification)
 
-## Testes vs. auditorias e recompensas por bugs (bug bounties) {#static-analysis-tools}
+## Testes vs. auditorias e recompensas por bugs (bug bounties) {#testing-vs-audits-bug-bounties}
 
 Como mencionado, testes rigorosos raramente podem garantir a ausência de bugs em um contrato; as abordagens de verificação formal podem fornecer garantias mais fortes de correção, mas atualmente são difíceis de usar e incorrem em custos consideráveis.
 
@@ -245,9 +245,9 @@ Por outro lado, um programa de recompensa por bugs geralmente envolve oferecer u
 
 A principal diferença é que os programas de recompensa por bugs são abertos à comunidade mais ampla de desenvolvedores/hackers e atraem uma ampla classe de hackers éticos e profissionais de segurança independentes com habilidades e experiências únicas. Isso pode ser uma vantagem sobre as auditorias de contratos inteligentes que dependem principalmente de equipes que podem possuir conhecimentos limitados ou restritos.
 
-## Ferramentas e bibliotecas de teste {#dynamic-analysis-tools}
+## Ferramentas e bibliotecas de teste {#testing-tools-and-libraries}
 
-### Ferramentas de teste de unidade {#related-tutorials}
+### Ferramentas de teste de unidade {#unit-testing-tools}
 
 - **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _Ferramenta de cobertura de código para contratos inteligentes escritos em Solidity._
 
@@ -267,9 +267,9 @@ A principal diferença é que os programas de recompensa por bugs são abertos �
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Estrutura baseada em Python para testes de unidade e fuzzing com fortes recursos de depuração e suporte a testes cross-chain, utilizando pytest e Anvil para a melhor experiência do usuário e desempenho._
 
-### Ferramentas de teste baseadas em propriedades {#further-reading}
+### Ferramentas de teste baseadas em propriedades {#property-based-testing-tools}
 
-#### Ferramentas de análise estática {#tutorials}
+#### Ferramentas de análise estática {#static-analysis-tools}
 
 - **[Slither](https://github.com/crytic/slither)** - _Estrutura de análise estática de Solidity baseada em Python para encontrar vulnerabilidades, aprimorar a compreensão do código e escrever análises personalizadas para contratos inteligentes._
 
@@ -281,7 +281,7 @@ A principal diferença é que os programas de recompensa por bugs são abertos �
 
 - **[Slippy](https://github.com/fvictorio/slippy)** - _Um linter simples e poderoso para Solidity._
 
-#### Ferramentas de análise dinâmica
+#### Ferramentas de análise dinâmica {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Fuzzer de contrato rápido para detectar vulnerabilidades em contratos inteligentes por meio de testes baseados em propriedades._
 
@@ -293,7 +293,7 @@ A principal diferença é que os programas de recompensa por bugs são abertos �
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _O Scribble é uma linguagem de especificação e ferramenta de verificação em tempo de execução que permite anotar contratos inteligentes com propriedades que permitem testar automaticamente os contratos com ferramentas como Diligence Fuzzing ou MythX._
 
-## Tutoriais relacionados
+## Tutoriais relacionados {#related-tutorials}
 
 - [Uma visão geral e comparação de diferentes produtos de teste](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Como usar o Echidna para testar contratos inteligentes](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
@@ -302,14 +302,14 @@ A principal diferença é que os programas de recompensa por bugs são abertos �
 - [Como simular (mock) contratos em Solidity para testes](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Como executar testes de unidade em Solidity usando o Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
-## Leitura adicional
+## Leitura adicional {#further-reading}
 
 - [Um guia detalhado para testar contratos inteligentes no Ethereum](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [Como testar contratos inteligentes no Ethereum](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
 - [Guia de testes de unidade da MolochDAO para desenvolvedores](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
 - [Como testar contratos inteligentes como um rockstar](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)
 
-## Tutoriais: Teste de contratos inteligentes no Ethereum
+## Tutoriais: Teste de contratos inteligentes no Ethereum {#tutorials}
 
 - [Como desenvolver e testar um dApp em uma rede de teste local com vários clientes](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– Passo a passo da implantação de um contrato inteligente em uma rede de teste local e execução de testes._
 - [Como simular (mock) contratos inteligentes em Solidity para testes](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/) _– Tutorial intermediário sobre como usar dados simulados e implementar testes de unidade._

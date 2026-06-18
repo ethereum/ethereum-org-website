@@ -1,6 +1,6 @@
 ---
-title: Архивная нода Эфириума
-description: Обзор архивных нод
+title: "Архивная нода Эфириума"
+description: "Обзор архивных нод"
 lang: ru
 sidebarDepth: 2
 ---

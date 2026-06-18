@@ -749,7 +749,8 @@ Ruhusu mtumiaji kutoa miamala ya hamisho la ERC-20.
 Ikiwa kuna heshi ya muamala wa mwisho, onyesha kiungo ili mtumiaji aweze kuitazama kwenye kichunguzi cha bloku.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

@@ -1,5 +1,5 @@
 ---
-title: Ринки передбачень
+title: "Ринки передбачень"
 lang: uk
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Пам'ятайте про ризики</strong></strong>
+ <p className="mt-0"><strong>Пам'ятайте про ризики</strong>
   <p className="mt-2">Ставте лише те, що можете дозволити собі втратити, і пам'ятайте про можливу залежність.</p>
 </AlertDescription>
 </AlertContent>

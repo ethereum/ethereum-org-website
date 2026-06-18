@@ -1,6 +1,6 @@
 ---
 title: Ethereum-Entwicklungsstandards
-description: Erfahre mehr über Ethereum-Standards, einschließlich EIPs, Token-Standards wie ERC-20 und ERC-721 sowie Entwicklungskonventionen.
+description: "Erfahre mehr über Ethereum-Standards, einschließlich EIPs, Token-Standards wie ERC-20 und ERC-721 sowie Entwicklungskonventionen."
 lang: de
 incomplete: true
 ---

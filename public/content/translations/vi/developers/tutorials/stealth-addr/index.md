@@ -4,7 +4,7 @@ description: "Địa chỉ ẩn danh cho phép người dùng chuyển tài sả
 author: Ori Pomerantz
 tags: ["địa chỉ ẩn danh", "quyền riêng tư", "mật mã học", "Rust", "wasm"]
 skill: intermediate
-breadcrumb: Địa chỉ ẩn danh
+breadcrumb: "Địa chỉ ẩn danh"
 published: 2025-11-30
 lang: vi
 sidebarDepth: 3

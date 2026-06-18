@@ -1,11 +1,11 @@
 ---
-title: टोकन एकीकरण चेकलिस्ट
-description: टोकन के साथ इंटरैक्ट करते समय ध्यान रखने योग्य बातों की एक चेकलिस्ट
+title: "टोकन एकीकरण चेकलिस्ट"
+description: "टोकन के साथ इंटरैक्ट करते समय ध्यान रखने योग्य बातों की एक चेकलिस्ट"
 author: "Trailofbits"
 lang: hi
-tags: ["solidity", "स्मार्ट अनुबंध", "सुरक्षा", "टोकन"]
+tags: ["Solidity", "स्मार्ट अनुबंध", "सुरक्षा", "टोकन"]
 skill: intermediate
-breadcrumb: टोकन एकीकरण
+breadcrumb: "टोकन एकीकरण"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

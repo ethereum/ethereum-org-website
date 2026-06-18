@@ -2,7 +2,7 @@
 title: Comprendere lo smart contract del token ERC-20
 description: Scopri come implementare lo standard dei token ERC-20 con un esempio completo e una spiegazione di uno smart contract in Solidity.
 author: "jdourlens"
-tags: ["smart contract", "token", "solidity", "erc-20"]
+tags: ["smart contract", "token", "Solidity", "erc-20"]
 skill: beginner
 breadcrumb: Basi dei token ERC-20
 lang: it

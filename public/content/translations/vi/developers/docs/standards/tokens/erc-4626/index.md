@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn kho tiền được token hóa ERC-4626
-description: Một tiêu chuẩn cho các kho tiền sinh lời.
+title: "Tiêu chuẩn kho tiền được token hóa ERC-4626"
+description: "Một tiêu chuẩn cho các kho tiền sinh lời."
 lang: vi
 ---
 

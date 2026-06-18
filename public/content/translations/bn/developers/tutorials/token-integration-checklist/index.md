@@ -1,11 +1,11 @@
 ---
-title: টোকেন ইন্টিগ্রেশন চেকলিস্ট
-description: টোকেনগুলোর সাথে ইন্টারঅ্যাক্ট করার সময় বিবেচনা করার মতো বিষয়গুলোর একটি চেকলিস্ট
+title: "টোকেন ইন্টিগ্রেশন চেকলিস্ট"
+description: "টোকেনগুলোর সাথে ইন্টারঅ্যাক্ট করার সময় বিবেচনা করার মতো বিষয়গুলোর একটি চেকলিস্ট"
 author: "ট্রেইলঅফবিটস"
 lang: bn
-tags: ["solidity", "স্মার্ট কন্ট্রাক্ট", "নিরাপত্তা", "টোকেন"]
+tags: ["Solidity", "স্মার্ট কন্ট্রাক্ট", "নিরাপত্তা", "টোকেন"]
 skill: intermediate
-breadcrumb: টোকেন ইন্টিগ্রেশন
+breadcrumb: "টোকেন ইন্টিগ্রেশন"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

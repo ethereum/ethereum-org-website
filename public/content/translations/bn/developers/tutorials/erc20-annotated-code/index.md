@@ -1,13 +1,13 @@
 ---
 title: "ERC-20 কন্ট্রাক্ট ওয়াক-থ্রু"
-description: ওপেনজেপেলিন ERC-20 কন্ট্রাক্টে কী আছে এবং কেন এটি সেখানে আছে?
-author: ওরি পোমেরান্টজ
+description: "ওপেনজেপেলিন ERC-20 কন্ট্রাক্টে কী আছে এবং কেন এটি সেখানে আছে?"
+author: "ওরি পোমেরান্টজ"
 lang: bn
 tags:
   - solidity
   - erc-20
 skill: beginner
-breadcrumb: ERC-20 ওয়াক-থ্রু
+breadcrumb: "ERC-20 ওয়াক-থ্রু"
 published: 2021-03-09
 ---
 

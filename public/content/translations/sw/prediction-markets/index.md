@@ -55,7 +55,7 @@ Kuna masoko kadhaa ya ubashiri yanayotegemea Ethereum yanayopatikana. Haya ni ba
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Zingatia hatari zilizopo</strong></strong>
+ <p className="mt-0"><strong>Zingatia hatari zilizopo</strong>
   <p className="mt-2">Weka dau tu kwa kiasi unachoweza kumudu kupoteza, na uwe mwangalifu na tabia zinazoweza kusababisha uraibu.</p>
 </AlertDescription>
 </AlertContent>

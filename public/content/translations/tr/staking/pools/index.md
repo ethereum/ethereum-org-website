@@ -1,11 +1,11 @@
 ---
 title: Havuzlu staking
-description: Staking havuzları hakkında bilgi edinin
+description: "Staking havuzları hakkında bilgi edinin"
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Havuzda yüzen gergedan Leslie.
+alt: "Havuzda yüzen gergedan Leslie."
 sidebarDepth: 2
 summaryPoints:
   - Başkalarıyla güçlerinizi birleştirerek herhangi bir miktarda ETH ile stake edin ve ödüller kazanın

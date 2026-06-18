@@ -269,7 +269,7 @@ Orakeli zilizowekwa kati hutegemea chanzo kimoja cha ukweli wakati wa kutoa data
 
 Orakeli zilizogatuliwa, hata hivyo, lazima zishughulikie tofauti katika taarifa iliyorejeshwa kutoka vyanzo vingi vya nje ya mnyororo. Ili kupunguza tofauti katika taarifa na kuhakikisha data iliyopitishwa kwenye mkataba wa orakeli inaonyesha maoni ya pamoja ya nodi za orakeli, orakeli zilizogatuliwa hutumia mbinu zifuatazo:
 
-##### Kupiga kura/kuweka dhamana juu ya usahihi wa data {#availability}
+##### Kupiga kura/kuweka dhamana juu ya usahihi wa data {#}
 
 Baadhi ya mitandao ya orakeli iliyogatuliwa inahitaji washiriki kupiga kura au kuweka dhamana juu ya usahihi wa majibu ya maswali ya data (k.m., "Nani alishinda uchaguzi wa Marekani wa 2020?") kwa kutumia tokeni asili ya mtandao. Itifaki ya ujumlishaji kisha hujumlisha kura na dhamana na kuchukua jibu linaloungwa mkono na wengi kama lile halali.
 
@@ -277,7 +277,7 @@ Nodi ambazo majibu yake yanatofautiana na jibu la wengi huadhibiwa kwa kusambaza
 
 Kuweka dhamana/kupiga kura pia hulinda orakeli zilizogatuliwa dhidi ya [mashambulizi ya Sybil](/glossary/#sybil-attack) ambapo wahusika wabaya huunda vitambulisho vingi ili kuchezea mfumo wa mwafaka. Hata hivyo, kuweka dhamana hakuwezi kuzuia “kudandia” (nodi za orakeli kunakili taarifa kutoka kwa wengine) na “uthibitishaji mvivu” (nodi za orakeli kufuata wengi bila kuthibitisha taarifa zenyewe).
 
-##### Mbinu za pointi ya Schelling {#good-incentive-compatibility}
+##### Mbinu za pointi ya Schelling {#}
 
 [Pointi ya Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) ni dhana ya nadharia ya mchezo inayochukulia kuwa huluki nyingi daima zitaelekea kwenye suluhu ya kawaida kwa tatizo bila mawasiliano yoyote. Mbinu za pointi ya Schelling mara nyingi hutumika katika mitandao ya orakeli iliyogatuliwa ili kuwezesha nodi kufikia mwafaka juu ya majibu ya maombi ya data.
 
@@ -289,7 +289,7 @@ Mifano mingine ya orakeli zinazotumia mbinu za pointi ya Schelling ni pamoja na 
 
 Mbinu za pointi ya Schelling zinavutia kwa sababu zinapunguza alama ya mnyororoni (muamala mmoja tu unahitaji kutumwa) huku zikihakikisha ugatuzi. Hili la mwisho linawezekana kwa sababu nodi lazima zisaini orodha ya majibu yaliyowasilishwa kabla ya kuingizwa kwenye algoriti inayozalisha thamani ya wastani/kati.
 
-### Upatikanaji {#applications-of-oracles-in-smart-contracts}
+### Upatikanaji {#availability}
 
 Huduma za orakeli zilizogatuliwa huhakikisha upatikanaji wa juu wa data ya nje ya mnyororo kwenye mikataba mahiri. Hili linafikiwa kwa kugatua chanzo cha taarifa za nje ya mnyororo na nodi zinazohusika na kuhamisha taarifa mnyororoni.
 
@@ -297,7 +297,7 @@ Hili huhakikisha uvumilivu wa makosa kwa kuwa mkataba wa orakeli unaweza kutegem
 
 Inawezekana pia kwa orakeli zinazotegemea dhamana kufanya ukataji kwa waendeshaji wa nodi wanaoshindwa kujibu haraka maombi ya data. Hili huhamasisha kwa kiasi kikubwa nodi za orakeli kuwekeza katika miundombinu inayostahimili makosa na kutoa data kwa wakati.
 
-### Utangamano mzuri wa motisha {#retrieving-financial-data}
+### Utangamano mzuri wa motisha {#good-incentive-compatibility}
 
 Orakeli zilizogatuliwa hutekeleza miundo mbalimbali ya motisha ili kuzuia tabia ya [Byzantine](https://en.wikipedia.org/wiki/Byzantine_fault) kati ya nodi za orakeli. Hasa, zinafikia _uwezo wa kuhusishwa_ na _uwajibikaji_:
 
@@ -305,11 +305,11 @@ Orakeli zilizogatuliwa hutekeleza miundo mbalimbali ya motisha ili kuzuia tabia 
 
 2. Orakeli zilizogatuliwa—kama ilivyoelezwa hapo awali—zinaweza kuhitaji nodi kuweka dhamana juu ya imani yao katika ukweli wa data wanayowasilisha. Ikiwa dai litathibitishwa, dhamana hii inaweza kurejeshwa pamoja na tuzo kwa huduma ya uaminifu. Lakini inaweza pia kukatwa ikiwa taarifa si sahihi, jambo ambalo hutoa kipimo fulani cha uwajibikaji.
 
-## Matumizi ya orakeli katika mikataba mahiri {#generating-verifiable-randomness}
+## Matumizi ya orakeli katika mikataba mahiri {#applications-of-oracles-in-smart-contracts}
 
 Yafuatayo ni matumizi ya kawaida ya orakeli katika Ethereum:
 
-### Kurejesha data ya kifedha {#getting-outcomes-for-events}
+### Kurejesha data ya kifedha {#retrieving-financial-data}
 
 Programu za [fedha zilizogatuliwa (DeFi)](/defi/) huruhusu ukopeshaji, ukopaji, na biashara ya mali ya rika-kwa-rika. Hili mara nyingi huhitaji kupata taarifa tofauti za kifedha, ikiwa ni pamoja na data ya kiwango cha ubadilishaji (kwa kukokotoa thamani ya fiat ya fedha za kripto au kulinganisha bei za tokeni) na data ya masoko ya mitaji (kwa kukokotoa thamani ya mali zilizofanywa tokeni, kama vile dhahabu au dola ya Marekani).
 
@@ -355,7 +355,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Kuzalisha unasibu unaothibitishwa {#automating-smart-contracts}
+### Kuzalisha unasibu unaothibitishwa {#generating-verifiable-randomness}
 
 Baadhi ya programu za mnyororo wa vitalu, kama vile michezo inayotegemea mnyororo wa vitalu au mipango ya bahati nasibu, zinahitaji kiwango cha juu cha kutotabirika na unasibu ili kufanya kazi kwa ufanisi. Hata hivyo, utekelezaji wa kiutabiri wa minyororo ya vitalu huondoa unasibu.
 
@@ -365,13 +365,13 @@ Inawezekana kuzalisha thamani ya unasibu nje ya mnyororo na kuituma mnyororoni, 
 
 Orakeli zilizoundwa kwa ajili ya ukokotoaji wa nje ya mnyororo hutatua tatizo hili kwa kuzalisha kwa usalama matokeo ya unasibu nje ya mnyororo ambayo zinasambaza mnyororoni pamoja na uthibitisho wa kificho unaoshuhudia kutotabirika kwa mchakato. Mfano ni [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Kipengele cha Unasibu Kinachothibitishwa), ambacho ni jenereta ya nambari ya unasibu (RNG) yenye haki inayothibitishwa na isiyoweza kuchezewa, muhimu kwa kujenga mikataba mahiri inayotegemewa kwa programu zinazotegemea matokeo yasiyotabirika.
 
-### Kupata matokeo ya matukio {#use-blockchain-oracles}
+### Kupata matokeo ya matukio {#getting-outcomes-for-events}
 
 Kwa orakeli, kuunda mikataba mahiri inayojibu matukio ya ulimwengu halisi ni rahisi. Huduma za orakeli hufanya hili liwezekane kwa kuruhusu mikataba kuunganishwa kwenye API za nje kupitia vipengele vya nje ya mnyororo na kutumia taarifa kutoka kwenye vyanzo hivyo vya data. Kwa mfano, dapp ya ubashiri iliyotajwa hapo awali inaweza kuomba orakeli kurejesha matokeo ya uchaguzi kutoka kwenye chanzo kinachoaminika cha nje ya mnyororo (k.m., Associated Press).
 
 Kutumia orakeli kurejesha data kulingana na matokeo ya ulimwengu halisi huwezesha matumizi mengine mapya; kwa mfano, bidhaa ya bima iliyogatuliwa inahitaji taarifa sahihi kuhusu hali ya hewa, majanga, n.k. ili kufanya kazi kwa ufanisi.
 
-### Kuendesha mikataba mahiri kiotomatiki {#further-reading}
+### Kuendesha mikataba mahiri kiotomatiki {#automating-smart-contracts}
 
 Mikataba mahiri haiendeshwi kiotomatiki; badala yake, akaunti inayomilikiwa na nje (EOA), au akaunti nyingine ya mkataba, lazima ianzishe vipengele sahihi ili kutekeleza msimbo wa mkataba. Katika hali nyingi, sehemu kubwa ya vipengele vya mkataba ni vya umma na vinaweza kuitwa na EOA na mikataba mingine.
 
@@ -383,7 +383,7 @@ Baadhi ya mitandao ya orakeli iliyogatuliwa hutoa huduma za kiotomatiki, ambazo 
 
 [Mtandao wa Keeper](https://chain.link/keepers) wa Chainlink hutoa chaguo kwa mikataba mahiri kutoa kazi za kawaida za matengenezo kwa njia iliyopunguzwa uaminifu na iliyogatuliwa. Soma [nyaraka rasmi za Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) kwa taarifa kuhusu kufanya mkataba wako uendane na Keeper na kutumia huduma ya Upkeep.
 
-## Jinsi ya kutumia orako za mnyororo wa vitalu
+## Jinsi ya kutumia orako za mnyororo wa vitalu {#use-blockchain-oracles}
 
 Kuna programu nyingi za orakeli unazoweza kuunganisha kwenye dapp yako ya Ethereum:
 
@@ -413,7 +413,7 @@ Kuna programu nyingi za orakeli unazoweza kuunganisha kwenye dapp yako ya Ethere
 
 **[Stork](https://stork.network)** - Stork inatoa data ya bei kwa ucheleweshaji wa chini sana, ikisaidia anuwai ya matumizi ikiwa ni pamoja na masoko ya kudumu, itifaki za ukopeshaji, na mifumo ikolojia ya DeFi, huku mali mpya zikisaidiwa haraka kwenye uorodheshaji.
 
-## Usomaji zaidi
+## Usomaji zaidi {#further-reading}
 
 **Makala**
 

@@ -55,7 +55,7 @@ Ada beberapa pasar prediksi berbasis Ethereum yang tersedia. Berikut adalah bebe
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Tetap waspadai risikonya</strong></strong>
+ <p className="mt-0"><strong>Tetap waspadai risikonya</strong>
   <p className="mt-2">Hanya bertaruh dengan jumlah yang Anda mampu, dan waspadai potensi perilaku adiktif.</p>
 </AlertDescription>
 </AlertContent>

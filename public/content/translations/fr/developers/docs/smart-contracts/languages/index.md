@@ -1,6 +1,6 @@
 ---
 title: Langages de contrats intelligents
-description: Un aperçu et une comparaison des deux principaux langages de contrats intelligents – Solidity et Vyper.
+description: "Un aperçu et une comparaison des deux principaux langages de contrats intelligents – Solidity et Vyper."
 lang: fr
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Diversidad de clientes
-description: Una explicación de alto nivel sobre la importancia de la diversidad de clientes de Ethereum.
+description: "Una explicación de alto nivel sobre la importancia de la diversidad de clientes de Ethereum."
 lang: es
 sidebarDepth: 2
 ---

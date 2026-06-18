@@ -2,7 +2,7 @@
 title: "فهم العقد الذكي للرمز المميز ⁦ERC-20⁩"
 description: "تعرف على كيفية تنفيذ معيار الرمز المميز ⁦ERC-20⁩ مع مثال وشرح كامل لعقد ذكي بلغة ⁦Solidity⁩."
 author: "jdourlens"
-tags: ["العقود الذكية", "الرموز المميزة", "solidity", "erc-20"]
+tags: ["العقود الذكية", "الرموز المميزة", "Solidity", "erc-20"]
 skill: beginner
 breadcrumb: "أساسيات الرمز المميز ⁦ERC-20⁩"
 lang: ar

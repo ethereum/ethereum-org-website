@@ -1,6 +1,6 @@
 ---
-title: Контрольний список інтеграції токенів
-description: Контрольний список речей, які слід враховувати під час взаємодії з токенами
+title: "Контрольний список інтеграції токенів"
+description: "Контрольний список речей, які слід враховувати під час взаємодії з токенами"
 author: Trailofbits
 lang: uk
 tags:
@@ -9,7 +9,7 @@ tags:
   - безпека
   - токени
 skill: intermediate
-breadcrumb: Інтеграція токенів
+breadcrumb: "Інтеграція токенів"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

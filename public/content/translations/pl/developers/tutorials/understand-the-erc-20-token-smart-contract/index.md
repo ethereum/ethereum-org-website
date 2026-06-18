@@ -1,8 +1,8 @@
 ---
 title: Zrozumienie inteligentnego kontraktu tokena ERC-20
-description: Dowiedz się, jak zaimplementować standard tokena ERC-20, korzystając z kompletnego przykładu inteligentnego kontraktu w języku Solidity i jego wyjaśnienia.
+description: "Dowiedz się, jak zaimplementować standard tokena ERC-20, korzystając z kompletnego przykładu inteligentnego kontraktu w języku Solidity i jego wyjaśnienia."
 author: "jdourlens"
-tags: ["inteligentne kontrakty", "tokeny", "solidity", "erc-20"]
+tags: ["inteligentne kontrakty", "tokeny", "Solidity", "erc-20"]
 skill: beginner
 breadcrumb: Podstawy tokena ERC-20
 lang: pl

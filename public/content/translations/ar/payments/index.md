@@ -1,12 +1,12 @@
 ---
-title: مدفوعات إيثيريوم
-metaTitle: المدفوعات على إيثيريوم
-description: نظرة عامة على المدفوعات على إيثيريوم
+title: "مدفوعات إيثيريوم"
+metaTitle: "المدفوعات على إيثيريوم"
+description: "نظرة عامة على المدفوعات على إيثيريوم"
 lang: ar
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: شعار إيثيريوم معروض مع أيدي معطاءة.
+alt: "شعار إيثيريوم معروض مع أيدي معطاءة."
 summaryPoints:
   - "عالم تتحرك فيه الأموال بحرية مثل المعلومات"
   - "مفتوح وعالمي، يتيح معاملات بلا حدود للجميع"
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>أنشئ حساب إيثيريوم الخاص بك باستخدام تطبيق محفظة اليوم.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     ابدأ الآن
   </ButtonLink>
 </AlertContent>

@@ -1,6 +1,6 @@
 ---
-title: Проста серіалізація
-description: Пояснення формату SSZ в Етеріумі.
+title: "Проста серіалізація"
+description: "Пояснення формату SSZ в Етеріумі."
 lang: uk
 sidebarDepth: 2
 ---

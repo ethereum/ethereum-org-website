@@ -1,6 +1,6 @@
 ---
-title: Identité décentralisée
-description: Qu'est-ce que l'identité décentralisée et pourquoi est-ce important ?
+title: "Identité décentralisée"
+description: "Qu'est-ce que l'identité décentralisée et pourquoi est-ce important ?"
 lang: fr
 template: use-cases
 sidebarDepth: 2

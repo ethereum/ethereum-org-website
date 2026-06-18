@@ -1,10 +1,10 @@
 ---
-title: Gửi token bằng ethers.js
-description: Hướng dẫn thân thiện với người mới bắt đầu về cách gửi token bằng ethers.js.
+title: "Gửi token bằng ethers.js"
+description: "Hướng dẫn thân thiện với người mới bắt đầu về cách gửi token bằng ethers.js."
 author: Kim YongJun
 tags: ["ETHERS.JS", "ERC-20", "TOKEN"]
 skill: beginner
-breadcrumb: Gửi token
+breadcrumb: "Gửi token"
 lang: vi
 published: 2021-04-06
 ---

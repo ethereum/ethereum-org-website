@@ -1,6 +1,6 @@
 ---
-title: سلسلة المنارة
-description: تعرف على سلسلة المنارة - الترقية التي قدمت إيثيريوم إثبات الحصة.
+title: "سلسلة المنارة"
+description: "تعرف على سلسلة المنارة - الترقية التي قدمت إيثيريوم إثبات الحصة."
 lang: ar
 template: upgrade
 image: /images/upgrades/core.png

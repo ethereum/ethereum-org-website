@@ -1,11 +1,11 @@
 ---
-title: 집에서 ETH 스테이킹하기
-description: ETH 홈 스테이킹을 시작하는 방법에 대한 개요
+title: "집에서 ETH 스테이킹하기"
+description: "ETH 홈 스테이킹을 시작하는 방법에 대한 개요"
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: 자신의 컴퓨터 칩 위에 있는 코뿔소 레슬리(Leslie).
+alt: "자신의 컴퓨터 칩 위에 있는 코뿔소 레슬리(Leslie)."
 sidebarDepth: 2
 summaryPoints:
   - 검증자가 제대로 작동하고 온라인 상태를 유지하도록 하여 프로토콜로부터 직접 최대 보상을 받으세요.

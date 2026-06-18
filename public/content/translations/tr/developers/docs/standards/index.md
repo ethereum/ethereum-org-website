@@ -1,6 +1,6 @@
 ---
-title: Ethereum Geliştirme Standartları
-description: EIP'ler, ERC-20 ve ERC-721 gibi Token standartları ve geliştirme kuralları dahil olmak üzere Ethereum standartları hakkında bilgi edinin.
+title: "Ethereum Geliştirme Standartları"
+description: "EIP'ler, ERC-20 ve ERC-721 gibi Token standartları ve geliştirme kuralları dahil olmak üzere Ethereum standartları hakkında bilgi edinin."
 lang: tr
 incomplete: true
 ---

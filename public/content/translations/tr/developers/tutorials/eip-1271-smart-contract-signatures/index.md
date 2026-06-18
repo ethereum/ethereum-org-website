@@ -1,11 +1,11 @@
 ---
 title: "EIP-1271: Akıllı Sözleşme İmzalarını İmzalamak ve Doğrulamak"
-description: EIP-1271 ile akıllı sözleşme imzası oluşturma ve doğrulamaya genel bir bakış. Ayrıca akıllı sözleşme geliştiricilerinin üzerine inşa edebileceği somut bir örnek sağlamak için Safe'te (eski adıyla Gnosis Safe) kullanılan EIP-1271 uygulamasına da göz atıyoruz.
+description: "EIP-1271 ile akıllı sözleşme imzası oluşturma ve doğrulamaya genel bir bakış. Ayrıca akıllı sözleşme geliştiricilerinin üzerine inşa edebileceği somut bir örnek sağlamak için Safe'te (eski adıyla Gnosis Safe) kullanılan EIP-1271 uygulamasına da göz atıyoruz."
 author: Nathan H. Leung
 lang: tr
 tags: ["eip-1271", "akıllı sözleşmeler", "doğrulama", "imzalama"]
 skill: intermediate
-breadcrumb: EIP-1271 imzaları
+breadcrumb: "EIP-1271 imzaları"
 published: 2023-01-12
 ---
 

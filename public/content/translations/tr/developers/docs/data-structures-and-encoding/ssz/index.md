@@ -1,6 +1,6 @@
 ---
-title: Basit serileştirme
-description: Ethereum'un SSZ formatının açıklaması.
+title: "Basit serileştirme"
+description: "Ethereum'un SSZ formatının açıklaması."
 lang: tr
 sidebarDepth: 2
 ---

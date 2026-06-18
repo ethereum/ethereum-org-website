@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Ethash algoritmasına detaylı bir bakış.
+description: "Ethash algoritmasına detaylı bir bakış."
 lang: tr
 ---
 

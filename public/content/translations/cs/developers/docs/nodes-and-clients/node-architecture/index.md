@@ -1,6 +1,6 @@
 ---
 title: Architektura uzlu
-description: Úvod do toho, jak jsou organizovány uzly Etherea.
+description: "Úvod do toho, jak jsou organizovány uzly Etherea."
 lang: cs
 ---
 

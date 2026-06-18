@@ -1,9 +1,9 @@
 ---
 title: "The Graph: Corrigindo a consulta de dados na Web3"
-description: A blockchain é como um banco de dados, mas sem SQL. Todos os dados estão lá, mas não há como acessá-los. Deixe-me mostrar como corrigir isso com The Graph e GraphQL.
+description: "A blockchain é como um banco de dados, mas sem SQL. Todos os dados estão lá, mas não há como acessá-los. Deixe-me mostrar como corrigir isso com The Graph e GraphQL."
 author: Markus Waas
 lang: pt-br
-tags: ["solidity", "contratos inteligentes", "consulta", "the graph", "react"]
+tags: ["Solidity", "contratos inteligentes", "consulta", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

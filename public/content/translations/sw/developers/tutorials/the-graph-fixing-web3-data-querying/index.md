@@ -3,7 +3,7 @@ title: "The Graph: Kurekebisha uuliziaji wa data wa Web3"
 description: Mnyororo wa vitalu ni kama hifadhidata lakini bila SQL. Data yote ipo, lakini hakuna njia ya kuifikia. Hebu nikuonyeshe jinsi ya kurekebisha hili kwa The Graph na GraphQL.
 author: Markus Waas
 lang: sw
-tags: ["solidity", "mikataba mahiri", "kuulizia", "the graph", "react"]
+tags: ["Solidity", "mikataba mahiri", "kuulizia", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

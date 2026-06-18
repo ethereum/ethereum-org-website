@@ -1,7 +1,7 @@
 ---
-title: 테스트를 위해 Solidity 스마트 컨트랙트를 모킹하는 방법
-description: 테스트할 때 컨트랙트를 모킹해야 하는 이유
-author: 마르쿠스 바스
+title: "테스트를 위해 Solidity 스마트 컨트랙트를 모킹하는 방법"
+description: "테스트할 때 컨트랙트를 모킹해야 하는 이유"
+author: "마르쿠스 바스"
 lang: ko
 tags:
   - solidity
@@ -9,7 +9,7 @@ tags:
   - 테스트
   - 모킹
 skill: intermediate
-breadcrumb: 컨트랙트 모킹
+breadcrumb: "컨트랙트 모킹"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

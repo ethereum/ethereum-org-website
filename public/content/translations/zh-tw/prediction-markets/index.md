@@ -1,5 +1,5 @@
 ---
-title: 預測市場
+title: "預測市場"
 lang: zh-tw
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>請留意風險</strong></strong>
+ <p className="mt-0"><strong>請留意風險</strong>
   <p className="mt-2">只下注你能負擔得起的金額，並注意潛在的成癮行為。</p>
 </AlertDescription>
 </AlertContent>

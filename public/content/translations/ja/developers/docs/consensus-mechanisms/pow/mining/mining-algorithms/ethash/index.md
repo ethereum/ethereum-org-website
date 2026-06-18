@@ -1,6 +1,6 @@
 ---
-title: イーサッシュ
-description: イーサッシュ・アルゴリズムの詳細な解説。
+title: "イーサッシュ"
+description: "イーサッシュ・アルゴリズムの詳細な解説。"
 lang: ja
 ---
 

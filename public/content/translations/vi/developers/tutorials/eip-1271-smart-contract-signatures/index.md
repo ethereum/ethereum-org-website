@@ -1,11 +1,11 @@
 ---
 title: "EIP-1271: Ký và xác minh chữ ký hợp đồng thông minh"
-description: Tổng quan về việc tạo và xác minh chữ ký hợp đồng thông minh với EIP-1271. Chúng tôi cũng sẽ đi sâu vào việc triển khai EIP-1271 được sử dụng trong Safe (trước đây là Gnosis Safe) để cung cấp một ví dụ cụ thể cho các nhà phát triển hợp đồng thông minh xây dựng dựa trên đó.
+description: "Tổng quan về việc tạo và xác minh chữ ký hợp đồng thông minh với EIP-1271. Chúng tôi cũng sẽ đi sâu vào việc triển khai EIP-1271 được sử dụng trong Safe (trước đây là Gnosis Safe) để cung cấp một ví dụ cụ thể cho các nhà phát triển hợp đồng thông minh xây dựng dựa trên đó."
 author: Nathan H. Leung
 lang: vi
 tags: ["eip-1271", "hợp đồng thông minh", "xác minh", "ký"]
 skill: intermediate
-breadcrumb: Chữ ký EIP-1271
+breadcrumb: "Chữ ký EIP-1271"
 published: 2023-01-12
 ---
 

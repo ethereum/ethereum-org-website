@@ -1,6 +1,6 @@
 ---
 title: La cadena de balizas
-description: Aprende sobre la cadena de balizas, la actualización que introdujo la prueba de participación en Ethereum.
+description: "Aprende sobre la cadena de balizas, la actualización que introdujo la prueba de participación en Ethereum."
 lang: es
 template: upgrade
 image: /images/upgrades/core.png

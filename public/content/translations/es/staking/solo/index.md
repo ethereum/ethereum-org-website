@@ -1,6 +1,6 @@
 ---
 title: Hacer staking de ETH desde casa
-description: Una descripción general de cómo empezar a hacer staking de ETH desde casa
+description: "Una descripción general de cómo empezar a hacer staking de ETH desde casa"
 lang: es
 template: staking
 emoji: ":money_with_wings:"

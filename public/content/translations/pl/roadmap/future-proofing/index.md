@@ -1,6 +1,6 @@
 ---
-title: Zabezpieczenie Ethereum na przyszłość i bezpieczeństwo kwantowe kryptografii
-description: Te aktualizacje ugruntowują pozycję Ethereum jako odpornej, zdecentralizowanej warstwy bazowej na przyszłość, niezależnie od tego, co ona przyniesie.
+title: "Zabezpieczenie Ethereum na przyszłość i bezpieczeństwo kwantowe kryptografii"
+description: "Te aktualizacje ugruntowują pozycję Ethereum jako odpornej, zdecentralizowanej warstwy bazowej na przyszłość, niezależnie od tego, co ona przyniesie."
 lang: pl
 image: /images/roadmap/roadmap-future.png
 alt: "Mapa drogowa Ethereum"

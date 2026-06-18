@@ -1,9 +1,9 @@
 ---
 title: "The Graph: Khắc phục vấn đề truy vấn dữ liệu Web3"
-description: Chuỗi khối giống như một cơ sở dữ liệu nhưng không có SQL. Tất cả dữ liệu đều ở đó, nhưng không có cách nào để truy cập. Hãy để tôi chỉ cho bạn cách khắc phục điều này với The Graph và GraphQL.
+description: "Chuỗi khối giống như một cơ sở dữ liệu nhưng không có SQL. Tất cả dữ liệu đều ở đó, nhưng không có cách nào để truy cập. Hãy để tôi chỉ cho bạn cách khắc phục điều này với The Graph và GraphQL."
 author: Markus Waas
 lang: vi
-tags: ["solidity", "hợp đồng thông minh", "truy vấn", "the graph", "react"]
+tags: ["Solidity", "hợp đồng thông minh", "truy vấn", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

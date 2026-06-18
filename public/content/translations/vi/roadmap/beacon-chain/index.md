@@ -1,6 +1,6 @@
 ---
-title: Chuỗi Beacon
-description: Tìm hiểu về Chuỗi Beacon - bản nâng cấp đã giới thiệu Bằng chứng cổ phần (PoS) cho Ethereum.
+title: "Chuỗi Beacon"
+description: "Tìm hiểu về Chuỗi Beacon - bản nâng cấp đã giới thiệu Bằng chứng cổ phần (PoS) cho Ethereum."
 lang: vi
 template: upgrade
 image: /images/upgrades/core.png

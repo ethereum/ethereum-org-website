@@ -1,12 +1,12 @@
 ---
-title: इथेरियम पेमेंट्स
-metaTitle: इथेरियमवरील पेमेंट्स
-description: इथेरियमवरील पेमेंट्सचा आढावा
+title: "इथेरियम पेमेंट्स"
+metaTitle: "इथेरियमवरील पेमेंट्स"
+description: "इथेरियमवरील पेमेंट्सचा आढावा"
 lang: mr
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: देणाऱ्या हातांसोबत प्रदर्शित केलेला Eth लोगो.
+alt: "देणाऱ्या हातांसोबत प्रदर्शित केलेला Eth लोगो."
 summaryPoints:
   - "असे जग जिथे पैसा माहितीइतक्याच मुक्तपणे फिरतो"
   - "खुले आणि जागतिक, प्रत्येकासाठी सीमारहित व्यवहार सक्षम करणारे"
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>आजच वॉलेट ॲपसह तुमचे इथेरियम खाते तयार करा.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     सुरुवात करा
   </ButtonLink>
 </AlertContent>

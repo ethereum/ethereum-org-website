@@ -1,9 +1,9 @@
 ---
 title: "ERC-20 अनुबंध वॉक-थ्रू"
 description: "ओपनजेपेलिन ERC-20 अनुबंध में क्या है और यह वहां क्यों है?"
-author: ओरी पोमेरेंट्ज़
+author: "ओरी पोमेरेंट्ज़"
 lang: hi
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
 breadcrumb: "ERC-20 वॉक-थ्रू"
 published: 2021-03-09

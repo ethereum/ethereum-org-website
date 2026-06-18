@@ -1,10 +1,10 @@
 ---
-title: 如何编写和部署 NFT（NFT 教程系列第 1/3 部分）
-description: 本教程是 NFT 系列的第 1 部分，将带你逐步了解如何使用以太坊和星际文件系统 (IPFS) 编写和部署非同质化代币（ERC-721 代币）智能合约。
+title: "如何编写和部署 NFT（NFT 教程系列第 1/3 部分）"
+description: "本教程是 NFT 系列的第 1 部分，将带你逐步了解如何使用以太坊和星际文件系统 (IPFS) 编写和部署非同质化代币（ERC-721 代币）智能合约。"
 author: "苏米·穆吉尔"
 tags: ["ERC-721", "Alchemy", "Solidity", "智能合约"]
 skill: beginner
-breadcrumb: 编写和部署 NFT
+breadcrumb: "编写和部署 NFT"
 lang: zh
 published: 2021-04-22
 ---

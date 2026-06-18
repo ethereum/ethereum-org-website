@@ -2,7 +2,7 @@
 title: Menyiapkan web3.js untuk menggunakan rantai blok Ethereum di JavaScript
 description: Pelajari cara menyiapkan dan mengonfigurasi pustaka web3.js untuk berinteraksi dengan rantai blok Ethereum dari aplikasi JavaScript.
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
 breadcrumb: penyiapan web3.js
 lang: id

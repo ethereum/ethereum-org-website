@@ -1,6 +1,6 @@
 ---
-title: Архівний вузол Етеріуму
-description: Огляд архівних вузлів
+title: "Архівний вузол Етеріуму"
+description: "Огляд архівних вузлів"
 lang: uk
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: 프로그래밍 언어
-description: JavaScript, Python, Go, Rust 등 다양한 프로그래밍 언어를 위한 이더리움 개발 리소스를 알아보세요.
+title: "프로그래밍 언어"
+description: "JavaScript, Python, Go, Rust 등 다양한 프로그래밍 언어를 위한 이더리움 개발 리소스를 알아보세요."
 lang: ko
 ---
 

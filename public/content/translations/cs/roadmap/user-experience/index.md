@@ -1,6 +1,6 @@
 ---
-title: Zlepšení uživatelské zkušenosti
-description: Používání Etherea je pro většinu lidí stále příliš složité. Aby Ethereum podpořilo masové přijetí, musí drasticky snížit bariéry vstupu – uživatelé musí získat výhody decentralizovaného přístupu k Ethereu, který nevyžaduje povolení a je odolný vůči cenzuře, ale musí to být stejně bezproblémové jako používání tradiční Web2 aplikace.
+title: "Zlepšení uživatelské zkušenosti"
+description: "Používání Etherea je pro většinu lidí stále příliš složité. Aby Ethereum podpořilo masové přijetí, musí drasticky snížit bariéry vstupu – uživatelé musí získat výhody decentralizovaného přístupu k Ethereu, který nevyžaduje povolení a je odolný vůči cenzuře, ale musí to být stejně bezproblémové jako používání tradiční Web2 aplikace."
 lang: cs
 image: /images/roadmap/roadmap-ux.png
 alt: "Plán vývoje Etherea"

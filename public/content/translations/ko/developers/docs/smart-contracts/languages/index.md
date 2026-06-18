@@ -1,6 +1,6 @@
 ---
-title: 스마트 컨트랙트 언어
-description: 두 가지 주요 스마트 컨트랙트 언어인 Solidity와 Vyper에 대한 개요 및 비교입니다.
+title: "스마트 컨트랙트 언어"
+description: "두 가지 주요 스마트 컨트랙트 언어인 Solidity와 Vyper에 대한 개요 및 비교입니다."
 lang: ko
 ---
 

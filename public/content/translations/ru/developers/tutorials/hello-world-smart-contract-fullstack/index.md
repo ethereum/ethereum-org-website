@@ -1,13 +1,13 @@
 ---
-title: Смарт-контракт Hello World для начинающих — Fullstack
-description: Вводное руководство по написанию и развертыванию простого смарт-контракта в Эфириуме.
+title: "Смарт-контракт Hello World для начинающих — Fullstack"
+description: "Вводное руководство по написанию и развертыванию простого смарт-контракта в Эфириуме."
 author: "nstrike2"
 breadcrumb: Hello World fullstack
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "смарт-контракты",
     "развертывание",
     "обозреватель блоков",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

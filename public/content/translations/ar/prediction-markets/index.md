@@ -1,5 +1,5 @@
 ---
-title: أسواق التوقعات
+title: "أسواق التوقعات"
 lang: ar
 template: use-cases
 image: /images/use-cases/prediction-markets.png
@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>كن على دراية بالمخاطر</strong></strong>
+ <p className="mt-0"><strong>كن على دراية بالمخاطر</strong>
   <p className="mt-2">راهن فقط بما يمكنك تحمل خسارته، وكن على دراية بالسلوكيات الإدمانية المحتملة.</p>
 </AlertDescription>
 </AlertContent>

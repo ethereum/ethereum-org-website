@@ -2,7 +2,7 @@
 title: Sanidi Web3.js ili kutumia mnyororo wa vitalu wa Ethereum katika JavaScript
 description: Jifunze jinsi ya kusanidi na kuweka maktaba ya Web3.js ili kuingiliana na mnyororo wa vitalu wa Ethereum kutoka kwenye programu za JavaScript.
 author: "jdourlens"
-tags: ["web3.js", "javascript"]
+tags: ["web3.js", "JavaScript"]
 skill: beginner
 breadcrumb: usanidi wa web3.js
 lang: sw

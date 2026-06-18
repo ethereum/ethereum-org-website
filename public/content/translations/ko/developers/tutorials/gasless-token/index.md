@@ -1,10 +1,10 @@
 ---
 title: "가스 없는 사용자가 토큰을 보유하고 컨트랙트를 호출할 수 있도록 하기"
-description: 계정 추상화를 사용하면 특정 EOA가 전송하거나 해당 EOA가 서명한 트랜잭션을 수락하는 스마트 컨트랙트 지갑을 만들 수 있습니다. 그런 다음 이 스마트 컨트랙트는 EOA의 통제하에 있는 토큰을 소유할 수 있습니다.
-author: 오리 포메란츠
+description: "계정 추상화를 사용하면 특정 EOA가 전송하거나 해당 EOA가 서명한 트랜잭션을 수락하는 스마트 컨트랙트 지갑을 만들 수 있습니다. 그런 다음 이 스마트 컨트랙트는 EOA의 통제하에 있는 토큰을 소유할 수 있습니다."
+author: "오리 포메란츠"
 tags: ["가스리스", "erc-20", "계정 추상화"]
 skill: intermediate
-breadcrumb: 가스리스 토큰
+breadcrumb: "가스리스 토큰"
 lang: ko
 published: 2026-04-01
 ---
@@ -48,21 +48,21 @@ ERC-20 및 관련 표준에서 계정 소유자는 토큰 컨트랙트를 호출
 
 5. URL [`http://localhost:5173`](http://localhost:5173)에서 애플리케이션에 접속합니다.
 
-6. **Connect with Injected**를 클릭하여 지갑에 연결합니다. 지갑에서 승인하고, 필요한 경우 Sepolia로의 변경을 승인합니다.
+6. <strong>Connect with Injected</strong>를 클릭하여 지갑에 연결합니다. 지갑에서 승인하고, 필요한 경우 Sepolia로의 변경을 승인합니다.
 
-7. 아래로 스크롤하여 **Deploy UserProxy (slow process)**를 클릭합니다.
+7. 아래로 스크롤하여 <strong>Deploy UserProxy (slow process)</strong>를 클릭합니다.
 
 8. **UserProxy access** 옆에 주소가 표시되므로 사용자 프록시가 언제 배포되었는지 확인할 수 있습니다. 24초(2 블록)를 기다렸는데도 여전히 표시되지 않는다면 변경 사항 감지에 문제가 있을 수 있습니다.
 
-   이 경우 [Sepolia 블록 탐색기](https://eth-sepolia.blockscout.com/)로 이동하여 `npm run dev`의 서버 출력에 표시된 배포 트랜잭션 해시를 입력합니다. 생성된 컨트랙트를 클릭하여 주소를 확인한 다음 복사합니다. _Or enter existing proxy address_ 필드에 주소를 붙여넣고 **Set proxy address**를 클릭합니다.
+   이 경우 [Sepolia 블록 탐색기](https://eth-sepolia.blockscout.com/)로 이동하여 `npm run dev`의 서버 출력에 표시된 배포 트랜잭션 해시를 입력합니다. 생성된 컨트랙트를 클릭하여 주소를 확인한 다음 복사합니다. _Or enter existing proxy address_ 필드에 주소를 붙여넣고 <strong>Set proxy address</strong>를 클릭합니다.
 
-9. **Request more tokens for proxy**를 클릭하여 ERC-20 컨트랙트의 [`faucet`](https://eth-sepolia.blockscout.com/address/0x4cBedDEDA88fDd9e116618a5cD71BB0E440C2A78?tab=read_write_contract#0xde5f72fd) 함수에 대한 호출을 제출하여 토큰을 받습니다. 지갑에서 서명을 **Confirm(확인)**합니다. 물론 토큰은 사용자의 주소가 아닌 프록시의 주소로 도착합니다.
+9. <strong>Request more tokens for proxy</strong>를 클릭하여 ERC-20 컨트랙트의 [`faucet`](https://eth-sepolia.blockscout.com/address/0x4cBedDEDA88fDd9e116618a5cD71BB0E440C2A78?tab=read_write_contract#0xde5f72fd) 함수에 대한 호출을 제출하여 토큰을 받습니다. 지갑에서 서명을 <strong>Confirm(확인)</strong>합니다. 물론 토큰은 사용자의 주소가 아닌 프록시의 주소로 도착합니다.
 
 10. 아래로 스크롤하여 _Last transaction:_ 아래의 링크를 클릭합니다. 그러면 브라우저가 열리고 `faucet` 트랜잭션이 표시됩니다.
 
-11. _amount to transfer_에 1에서 1,000 사이의 숫자를 입력합니다. **Transfer**를 클릭하여 토큰을 자신의 주소로 전송합니다. 요청에 대해 **Confirm(확인)**을 클릭하기 전에 서명되는 데이터가 불투명한지 확인하세요. 사용자는 자신이 무엇에 서명하고 있는지 이해하기 어려울 것입니다. 이에 대해서는 [아래](#vulnerabilities)에서 논의할 것임을 기억하세요.
+11. <em>amount to transfer</em>에 1에서 1,000 사이의 숫자를 입력합니다. <strong>Transfer</strong>를 클릭하여 토큰을 자신의 주소로 전송합니다. 요청에 대해 <strong>Confirm(확인)</strong>을 클릭하기 전에 서명되는 데이터가 불투명한지 확인하세요. 사용자는 자신이 무엇에 서명하고 있는지 이해하기 어려울 것입니다. 이에 대해서는 [아래](#vulnerabilities)에서 논의할 것임을 기억하세요.
 
-12. 트랜잭션이 확인된 후 _your balance_와 _proxy balance_ 모두에서 변경 사항이 나타날 때까지 기다립니다. Sepolia의 블록 타임은 12초이므로 이 작업에도 약간의 시간이 걸립니다.
+12. 트랜잭션이 확인된 후 <em>your balance</em>와 _proxy balance_ 모두에서 변경 사항이 나타날 때까지 기다립니다. Sepolia의 블록 타임은 12초이므로 이 작업에도 약간의 시간이 걸립니다.
 
 ## 작동 방식 {#how-work}
 
@@ -683,7 +683,7 @@ const Token = () => {
          </button>
 ```
 
-사용자가 합법적인 주소를 입력할 때만 **Set proxy address**를 클릭할 수 있도록 합니다. 이것이 해당 주소가 실제로 `UserProxy` 컨트랙트임을 보장하지는 않는다는 점에 유의하세요. 이러한 검사를 추가할 수는 있지만, 속도가 훨씬 느려지고(사용자 경험 악화) 보안이 향상되지도 않습니다(공격자는 항상 사용자 인터페이스에 자신의 코드를 사용할 수 있습니다).
+사용자가 합법적인 주소를 입력할 때만 <strong>Set proxy address</strong>를 클릭할 수 있도록 합니다. 이것이 해당 주소가 실제로 `UserProxy` 컨트랙트임을 보장하지는 않는다는 점에 유의하세요. 이러한 검사를 추가할 수는 있지만, 속도가 훨씬 느려지고(사용자 경험 악화) 보안이 향상되지도 않습니다(공격자는 항상 사용자 인터페이스에 자신의 코드를 사용할 수 있습니다).
 
 ```js
          <br /><br />
@@ -746,7 +746,8 @@ const Token = () => {
 마지막 트랜잭션 해시가 있는 경우 사용자가 블록 탐색기에서 볼 수 있도록 링크를 표시합니다.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }
@@ -764,7 +765,7 @@ export {Token}
 
 ![Screen capture with opaque calldata](./fig-1-opaque-calldata.png)
 
-_우리_는 이것이 사용자가 전송하고자 하는 토큰, 금액, 목적지 주소에 대한 합법적인 ERC-20 전송이라는 것을 알고 있습니다. 하지만 대부분의 사용자는 콜 데이터를 해석하는 방법을 모르며, 자신이 무엇에 서명하고 있는지 전혀 알지 못합니다. 이는 두 가지 이유에서 잘못된 설계입니다.
+<em>우리</em>는 이것이 사용자가 전송하고자 하는 토큰, 금액, 목적지 주소에 대한 합법적인 ERC-20 전송이라는 것을 알고 있습니다. 하지만 대부분의 사용자는 콜 데이터를 해석하는 방법을 모르며, 자신이 무엇에 서명하고 있는지 전혀 알지 못합니다. 이는 두 가지 이유에서 잘못된 설계입니다.
 
 - 일부 사용자는 우리가 서명하라고 지시하는 데이터를 신뢰하지 않기 때문에 우리 서비스를 사용하지 않을 것입니다.
 - 다른 사용자들은 우리를 신뢰_할 것이며_, 콜 데이터가 무엇인지 이해하지 못한 채 그냥 서명해야 한다고 학습하게 될 것입니다. 즉, 공격자 아담(Adam Attacker)이 그들을 자신의 웹사이트로 리디렉션하는 데 성공하면, 사용자가 소유한 모든 USDC(또는 DAI나 기타 ERC-20)를 자신에게 부여하는 트랜잭션에 서명하도록 만들 수 있습니다.

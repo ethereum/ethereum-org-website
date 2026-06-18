@@ -1,6 +1,6 @@
 ---
-title: Decentralizovaná identita
-description: Co je to decentralizovaná identita a proč na ní záleží?
+title: "Decentralizovaná identita"
+description: "Co je to decentralizovaná identita a proč na ní záleží?"
 lang: cs
 template: use-cases
 sidebarDepth: 2

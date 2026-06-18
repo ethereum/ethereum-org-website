@@ -1,10 +1,10 @@
 ---
-title: 如何实现一个 ERC-721 市场
-description: 如何在去中心化分类广告板上出售代币化物品
+title: "如何实现一个 ERC-721 市场"
+description: "如何在去中心化分类广告板上出售代币化物品"
 author: "阿尔贝托·奎斯塔·卡尼亚达"
-tags: ["智能合约", "erc-721", "solidity", "代币"]
+tags: ["智能合约", "erc-721", "Solidity", "代币"]
 skill: intermediate
-breadcrumb: ERC-721 市场
+breadcrumb: "ERC-721 市场"
 lang: zh
 published: 2020-03-19
 source: Hackernoon

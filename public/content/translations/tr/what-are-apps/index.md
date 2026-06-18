@@ -1,14 +1,14 @@
 ---
-title: Ethereum uygulamaları
-metaTitle: Ethereum uygulamaları | Ethereum Üzerindeki Merkeziyetsiz Uygulamalar
-description: Ethereum üzerindeki uygulamalar ücretsizdir, küreseldir ve özel şirket sunucuları yerine herkese açık blokzincir kullanır. Bu, her projede aynı hesabı kullanabileceğiniz ve gizliliğinizi koruyabileceğiniz anlamına gelir.
+title: "Ethereum uygulamaları"
+metaTitle: "Ethereum uygulamaları | Ethereum Üzerindeki Merkeziyetsiz Uygulamalar"
+description: "Ethereum üzerindeki uygulamalar ücretsizdir, küreseldir ve özel şirket sunucuları yerine herkese açık blokzincir kullanır. Bu, her projede aynı hesabı kullanabileceğiniz ve gizliliğinizi koruyabileceğiniz anlamına gelir."
 lang: tr
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: Ethereum üzerindeki uygulamalar ücretsizdir, küreseldir ve özel şirket sunucuları yerine herkese açık blokzincir kullanır. Bu, her projede aynı hesabı kullanabileceğiniz ve gizliliğinizi koruyabileceğiniz anlamına gelir.
+summary: "Ethereum üzerindeki uygulamalar ücretsizdir, küreseldir ve özel şirket sunucuları yerine herkese açık blokzincir kullanır. Bu, her projede aynı hesabı kullanabileceğiniz ve gizliliğinizi koruyabileceğiniz anlamına gelir."
 ---
 
 ## Süper güçleri olan uygulamalar {#apps-with-superpowers}

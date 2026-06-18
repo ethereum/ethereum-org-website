@@ -1,10 +1,10 @@
 ---
-title: ethers.js ఉపయోగించి టోకెన్లను పంపడం
-description: ethers.js ఉపయోగించి టోకెన్లను పంపడానికి ప్రారంభకులకు అనుకూలమైన గైడ్.
-author: కిమ్ యోంగ్‌జున్
+title: "ethers.js ఉపయోగించి టోకెన్లను పంపడం"
+description: "ethers.js ఉపయోగించి టోకెన్లను పంపడానికి ప్రారంభకులకు అనుకూలమైన గైడ్."
+author: "కిమ్ యోంగ్‌జున్"
 tags: ["ETHERS.JS", "ERC-20", "టోకెన్లు"]
 skill: beginner
-breadcrumb: టోకెన్లను పంపండి
+breadcrumb: "టోకెన్లను పంపండి"
 lang: te
 published: 2021-04-06
 ---

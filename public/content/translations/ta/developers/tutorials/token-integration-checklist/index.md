@@ -1,11 +1,11 @@
 ---
-title: வில்லை ஒருங்கிணைப்பு சரிபார்ப்புப் பட்டியல்
-description: வில்லைகளுடன் தொடர்பு கொள்ளும்போது கருத்தில் கொள்ள வேண்டியவைகளின் சரிபார்ப்புப் பட்டியல்
+title: "வில்லை ஒருங்கிணைப்பு சரிபார்ப்புப் பட்டியல்"
+description: "வில்லைகளுடன் தொடர்பு கொள்ளும்போது கருத்தில் கொள்ள வேண்டியவைகளின் சரிபார்ப்புப் பட்டியல்"
 author: "Trailofbits"
 lang: ta
-tags: ["solidity", "திறன் ஒப்பந்தங்கள்", "பாதுகாப்பு", "வில்லைகள்"]
+tags: ["Solidity", "திறன் ஒப்பந்தங்கள்", "பாதுகாப்பு", "வில்லைகள்"]
 skill: intermediate
-breadcrumb: வில்லை ஒருங்கிணைப்பு
+breadcrumb: "வில்லை ஒருங்கிணைப்பு"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

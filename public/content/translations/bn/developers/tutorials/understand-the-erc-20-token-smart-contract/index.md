@@ -1,6 +1,6 @@
 ---
-title: ERC-20 টোকেন স্মার্ট কন্ট্রাক্ট বোঝা
-description: একটি সম্পূর্ণ Solidity স্মার্ট কন্ট্রাক্ট উদাহরণ এবং ব্যাখ্যার মাধ্যমে কীভাবে ERC-20 টোকেন স্ট্যান্ডার্ড প্রয়োগ করতে হয় তা শিখুন।
+title: "ERC-20 টোকেন স্মার্ট কন্ট্রাক্ট বোঝা"
+description: "একটি সম্পূর্ণ Solidity স্মার্ট কন্ট্রাক্ট উদাহরণ এবং ব্যাখ্যার মাধ্যমে কীভাবে ERC-20 টোকেন স্ট্যান্ডার্ড প্রয়োগ করতে হয় তা শিখুন।"
 author: jdourlens
 tags:
   - স্মার্ট কন্ট্রাক্ট
@@ -8,7 +8,7 @@ tags:
   - solidity
   - erc-20
 skill: beginner
-breadcrumb: ERC-20 টোকেনের বেসিক
+breadcrumb: "ERC-20 টোকেনের বেসিক"
 lang: bn
 published: 2020-04-05
 source: EthereumDev

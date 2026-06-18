@@ -1,11 +1,11 @@
 ---
-title: స్మార్ట్ కాంట్రాక్ట్ భద్రతా సాధనాలకు ఒక మార్గదర్శి
-description: మూడు విభిన్న టెస్టింగ్ మరియు ప్రోగ్రామ్ విశ్లేషణ పద్ధతుల యొక్క అవలోకనం
+title: "స్మార్ట్ కాంట్రాక్ట్ భద్రతా సాధనాలకు ఒక మార్గదర్శి"
+description: "మూడు విభిన్న టెస్టింగ్ మరియు ప్రోగ్రామ్ విశ్లేషణ పద్ధతుల యొక్క అవలోకనం"
 author: "Trailofbits"
 lang: te
-tags: ["solidity", "స్మార్ట్ కాంట్రాక్ట్‌లు", "భద్రత"]
+tags: ["Solidity", "స్మార్ట్ కాంట్రాక్ట్‌లు", "భద్రత"]
 skill: intermediate
-breadcrumb: భద్రతా సాధనాలు
+breadcrumb: "భద్రతా సాధనాలు"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

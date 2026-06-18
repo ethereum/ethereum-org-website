@@ -1,6 +1,6 @@
 ---
 title: Cadeias Plasma
-description: Uma introdução às cadeias Plasma como uma solução de escalabilidade atualmente utilizada pela comunidade Ethereum.
+description: "Uma introdução às cadeias Plasma como uma solução de escalabilidade atualmente utilizada pela comunidade Ethereum."
 lang: pt-br
 incomplete: true
 sidebarDepth: 3

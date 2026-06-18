@@ -1,6 +1,6 @@
 ---
-title: Cải thiện trải nghiệm người dùng
-description: Việc sử dụng Ethereum vẫn còn quá phức tạp đối với hầu hết mọi người. Để khuyến khích sự chấp nhận rộng rãi, Ethereum phải giảm đáng kể rào cản gia nhập - người dùng phải nhận được những lợi ích của việc truy cập phi tập trung, không cần cấp phép và chống kiểm duyệt vào Ethereum nhưng nó phải trơn tru như việc sử dụng một ứng dụng Web2 truyền thống.
+title: "Cải thiện trải nghiệm người dùng"
+description: "Việc sử dụng Ethereum vẫn còn quá phức tạp đối với hầu hết mọi người. Để khuyến khích sự chấp nhận rộng rãi, Ethereum phải giảm đáng kể rào cản gia nhập - người dùng phải nhận được những lợi ích của việc truy cập phi tập trung, không cần cấp phép và chống kiểm duyệt vào Ethereum nhưng nó phải trơn tru như việc sử dụng một ứng dụng Web2 truyền thống."
 lang: vi
 image: /images/roadmap/roadmap-ux.png
 alt: "Lộ trình Ethereum"

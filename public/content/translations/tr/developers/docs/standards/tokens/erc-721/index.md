@@ -1,6 +1,6 @@
 ---
-title: ERC-721 Misli Olmayan Token Standardı
-description: Ethereum'da benzersiz dijital varlıkları temsil eden misli olmayan token'lar (NFT'ler) için standart olan ERC-721 hakkında bilgi edinin.
+title: "ERC-721 Misli Olmayan Token Standardı"
+description: "Ethereum'da benzersiz dijital varlıkları temsil eden misli olmayan token'lar (NFT'ler) için standart olan ERC-721 hakkında bilgi edinin."
 lang: tr
 ---
 

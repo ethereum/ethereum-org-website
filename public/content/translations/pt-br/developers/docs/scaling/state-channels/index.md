@@ -1,6 +1,6 @@
 ---
 title: Canais de estado
-description: Uma introdução aos canais de estado e canais de pagamento como uma solução de escalabilidade atualmente utilizada pela comunidade Ethereum.
+description: "Uma introdução aos canais de estado e canais de pagamento como uma solução de escalabilidade atualmente utilizada pela comunidade Ethereum."
 lang: pt-br
 sidebarDepth: 3
 ---

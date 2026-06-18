@@ -1,9 +1,9 @@
 ---
 title: "Vyper ERC-721 কন্ট্রাক্ট ওয়াকথ্রু"
-description: রিউয়া নাকামুরার ERC-721 কন্ট্রাক্ট এবং এটি কীভাবে কাজ করে
-author: ওরি পোমেরান্টজ
+description: "রিউয়া নাকামুরার ERC-721 কন্ট্রাক্ট এবং এটি কীভাবে কাজ করে"
+author: "ওরি পোমেরান্টজ"
 lang: bn
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: Vyper ERC-721
 published: 2021-04-01

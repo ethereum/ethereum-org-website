@@ -1,7 +1,7 @@
 ---
-title: ایتھیریم کی ادائیگیاں
-metaTitle: ایتھیریم پر ادائیگیاں
-description: ایتھیریم پر ادائیگیوں کا جائزہ
+title: "ایتھیریم کی ادائیگیاں"
+metaTitle: "ایتھیریم پر ادائیگیاں"
+description: "ایتھیریم پر ادائیگیوں کا جائزہ"
 lang: ur
 template: use-cases
 sidebarDepth: 2
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>آج ہی ایک والیٹ ایپ کے ساتھ اپنا ایتھیریم اکاؤنٹ بنائیں۔</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     شروع کریں
   </ButtonLink>
 </AlertContent>

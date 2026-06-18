@@ -1,13 +1,13 @@
 ---
-title: IPFS für dezentrale Benutzeroberflächen
-description: Dieses Tutorial zeigt, wie man IPFS verwendet, um die Benutzeroberfläche für eine Dapp zu speichern. Obwohl die Daten und die Geschäftslogik der Anwendung dezentral sind, könnten Benutzer ohne eine zensurresistente Benutzeroberfläche dennoch den Zugriff darauf verlieren.
+title: "IPFS für dezentrale Benutzeroberflächen"
+description: "Dieses Tutorial zeigt, wie man IPFS verwendet, um die Benutzeroberfläche für eine Dapp zu speichern. Obwohl die Daten und die Geschäftslogik der Anwendung dezentral sind, könnten Benutzer ohne eine zensurresistente Benutzeroberfläche dennoch den Zugriff darauf verlieren."
 author: Ori Pomerantz
 tags:
   - ipfs
   - dapps
   - frontend
 skill: beginner
-breadcrumb: IPFS für Dapp-UIs
+breadcrumb: "IPFS für Dapp-UIs"
 lang: de
 published: 2024-06-29
 ---

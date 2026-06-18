@@ -1,6 +1,6 @@
 ---
 title: Beacon Chain
-description: Dowiedz się więcej o Beacon Chain – aktualizacji, która wprowadziła dowód stawki (PoS) w Ethereum.
+description: "Dowiedz się więcej o Beacon Chain – aktualizacji, która wprowadziła dowód stawki (PoS) w Ethereum."
 lang: pl
 template: upgrade
 image: /images/upgrades/core.png

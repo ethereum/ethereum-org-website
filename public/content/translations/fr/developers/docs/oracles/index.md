@@ -1,6 +1,6 @@
 ---
 title: Oracles
-description: Les oracles fournissent aux contrats intelligents Ethereum un accès aux données du monde réel, débloquant ainsi davantage de cas d'utilisation et une plus grande valeur pour les utilisateurs.
+description: "Les oracles fournissent aux contrats intelligents Ethereum un accès aux données du monde réel, débloquant ainsi davantage de cas d'utilisation et une plus grande valeur pour les utilisateurs."
 lang: fr
 authors: ["Patrick Collins"]
 ---
@@ -269,7 +269,7 @@ Les oracles centralisés s'appuient sur une seule source de vérité lorsqu'ils 
 
 Les oracles décentralisés doivent cependant faire face aux divergences dans les informations récupérées à partir de multiples sources hors chaîne. Pour minimiser les différences d'informations et s'assurer que les données transmises au contrat d'oracle reflètent l'opinion collective des nœuds d'oracle, les oracles décentralisés utilisent les mécanismes suivants :
 
-##### Vote/staking sur l'exactitude des données {#availability}
+##### Vote/staking sur l'exactitude des données {#}
 
 Certains réseaux d'oracles décentralisés exigent que les participants votent ou fassent du staking sur l'exactitude des réponses aux requêtes de données (par exemple, « Qui a remporté l'élection américaine de 2020 ? ») en utilisant le jeton natif du réseau. Un protocole d'agrégation agrège ensuite les votes et les mises et prend la réponse soutenue par la majorité comme étant la réponse valide.
 
@@ -277,7 +277,7 @@ Les nœuds dont les réponses s'écartent de la réponse majoritaire sont pénal
 
 Le staking/vote protège également les oracles décentralisés des [attaques Sybil](/glossary/#sybil-attack) où des acteurs malveillants créent de multiples identités pour tromper le système de consensus. Cependant, le staking ne peut pas empêcher le « parasitisme » (les nœuds d'oracle copiant les informations des autres) et la « validation paresseuse » (les nœuds d'oracle suivant la majorité sans vérifier les informations eux-mêmes).
 
-##### Mécanismes de point de Schelling {#good-incentive-compatibility}
+##### Mécanismes de point de Schelling {#}
 
 Le [point de Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) est un concept de la théorie des jeux qui suppose que de multiples entités se rabattront toujours sur une solution commune à un problème en l'absence de toute communication. Les mécanismes de point de Schelling sont souvent utilisés dans les réseaux d'oracles décentralisés pour permettre aux nœuds de parvenir à un consensus sur les réponses aux demandes de données.
 
@@ -289,7 +289,7 @@ D'autres exemples d'oracles qui utilisent des mécanismes de point de Schelling 
 
 Les mécanismes de point de Schelling sont attrayants car ils minimisent l'empreinte onchain (une seule transaction doit être envoyée) tout en garantissant la décentralisation. Cette dernière est possible car les nœuds doivent approuver la liste des réponses soumises avant qu'elle ne soit introduite dans l'algorithme qui produit la valeur moyenne/médiane.
 
-### Disponibilité {#applications-of-oracles-in-smart-contracts}
+### Disponibilité {#availability}
 
 Les services d'oracles décentralisés assurent une haute disponibilité des données hors chaîne pour les contrats intelligents. Ceci est réalisé en décentralisant à la fois la source des informations hors chaîne et les nœuds responsables du transfert des informations onchain.
 
@@ -297,7 +297,7 @@ Cela garantit la tolérance aux pannes puisque le contrat d'oracle peut s'appuye
 
 Il est également possible pour les oracles basés sur le staking d'appliquer une réduction aux opérateurs de nœuds qui ne répondent pas rapidement aux demandes de données. Cela incite considérablement les nœuds d'oracle à investir dans une infrastructure tolérante aux pannes et à fournir des données en temps opportun.
 
-### Bonne compatibilité des incitations {#retrieving-financial-data}
+### Bonne compatibilité des incitations {#good-incentive-compatibility}
 
 Les oracles décentralisés mettent en œuvre diverses conceptions d'incitation pour empêcher les comportements [byzantins](https://en.wikipedia.org/wiki/Byzantine_fault) parmi les nœuds d'oracle. Plus précisément, ils atteignent l'_attribuabilité_ et la _responsabilité_ :
 
@@ -305,11 +305,11 @@ Les oracles décentralisés mettent en œuvre diverses conceptions d'incitation 
 
 2. Les oracles décentralisés — comme expliqué précédemment — peuvent exiger des nœuds qu'ils placent une mise sur leur confiance dans la véracité des données qu'ils soumettent. Si la réclamation est vérifiée, cette mise peut être retournée avec des récompenses pour un service honnête. Mais elle peut également subir une réduction au cas où les informations seraient incorrectes, ce qui fournit une certaine mesure de responsabilité.
 
-## Applications des oracles dans les contrats intelligents {#generating-verifiable-randomness}
+## Applications des oracles dans les contrats intelligents {#applications-of-oracles-in-smart-contracts}
 
 Voici des cas d'utilisation courants pour les oracles sur Ethereum :
 
-### Récupération de données financières {#getting-outcomes-for-events}
+### Récupération de données financières {#retrieving-financial-data}
 
 Les applications de [finance décentralisée](/defi/) (DeFi) permettent le prêt, l'emprunt et le trading d'actifs de pair à pair. Cela nécessite souvent d'obtenir différentes informations financières, y compris des données sur les taux de change (pour calculer la valeur fiduciaire des cryptomonnaies ou comparer les prix des jetons) et des données sur les marchés des capitaux (pour calculer la valeur des actifs tokenisés, tels que l'or ou le dollar américain).
 
@@ -355,7 +355,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Génération d'un caractère aléatoire vérifiable {#automating-smart-contracts}
+### Génération d'un caractère aléatoire vérifiable {#generating-verifiable-randomness}
 
 Certaines applications de chaîne de blocs, telles que les jeux basés sur la chaîne de blocs ou les systèmes de loterie, nécessitent un niveau élevé d'imprévisibilité et de caractère aléatoire pour fonctionner efficacement. Cependant, l'exécution déterministe des chaînes de blocs élimine le caractère aléatoire.
 
@@ -365,13 +365,13 @@ Il est possible de générer la valeur aléatoire hors chaîne et de l'envoyer o
 
 Les oracles conçus pour le calcul hors chaîne résolvent ce problème en générant de manière sécurisée des résultats aléatoires hors chaîne qu'ils diffusent onchain avec des preuves cryptographiques attestant de l'imprévisibilité du processus. Un exemple est [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), qui est un générateur de nombres aléatoires (RNG) manifestement équitable et inviolable, utile pour construire des contrats intelligents fiables pour les applications qui s'appuient sur des résultats imprévisibles.
 
-### Obtenir des résultats pour des événements {#use-blockchain-oracles}
+### Obtenir des résultats pour des événements {#getting-outcomes-for-events}
 
 Avec les oracles, créer des contrats intelligents qui répondent aux événements du monde réel est facile. Les services d'oracles rendent cela possible en permettant aux contrats de se connecter à des API externes via des composants hors chaîne et de consommer des informations provenant de ces sources de données. Par exemple, la dapp de marché de prédiction mentionnée précédemment peut demander à un oracle de renvoyer les résultats des élections à partir d'une source hors chaîne de confiance (par exemple, l'Associated Press).
 
 L'utilisation d'oracles pour récupérer des données basées sur des résultats du monde réel permet d'autres cas d'utilisation novateurs ; par exemple, un produit d'assurance décentralisé a besoin d'informations précises sur la météo, les catastrophes, etc. pour fonctionner efficacement.
 
-### Automatisation des contrats intelligents {#further-reading}
+### Automatisation des contrats intelligents {#automating-smart-contracts}
 
 Les contrats intelligents ne s'exécutent pas automatiquement ; un compte détenu par un tiers (EOA), ou un autre compte de contrat, doit plutôt déclencher les bonnes fonctions pour exécuter le code du contrat. Dans la plupart des cas, la majeure partie des fonctions du contrat sont publiques et peuvent être invoquées par des EOA et d'autres contrats.
 
@@ -383,7 +383,7 @@ Certains réseaux d'oracles décentralisés offrent des services d'automatisatio
 
 Le [réseau Keeper](https://chain.link/keepers) de Chainlink offre des options aux contrats intelligents pour externaliser les tâches de maintenance régulières de manière décentralisée et avec une confiance minimisée. Lisez la [documentation officielle de Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) pour obtenir des informations sur la façon de rendre votre contrat compatible avec Keeper et d'utiliser le service Upkeep.
 
-## Comment utiliser les oracles de blockchain
+## Comment utiliser les oracles de blockchain {#use-blockchain-oracles}
 
 Il existe de multiples applications d'oracle que vous pouvez intégrer dans votre dapp Ethereum :
 
@@ -413,7 +413,7 @@ Il existe de multiples applications d'oracle que vous pouvez intégrer dans votr
 
 **[Stork](https://stork.network)** - Stork fournit des données de prix à très faible latence, prenant en charge un large éventail de cas d'utilisation, y compris les marchés perpétuels, les protocoles de prêt et les écosystèmes DeFi, avec de nouveaux actifs pris en charge rapidement lors de leur cotation.
 
-## Lectures complémentaires
+## Lectures complémentaires {#further-reading}
 
 **Articles**
 

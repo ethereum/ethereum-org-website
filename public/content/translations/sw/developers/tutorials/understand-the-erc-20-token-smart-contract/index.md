@@ -2,7 +2,7 @@
 title: Kuelewa mkataba mahiri wa tokeni ya ERC-20
 description: Jifunze jinsi ya kutekeleza kiwango cha tokeni ya ERC-20 kwa mfano kamili wa mkataba mahiri wa Solidity na maelezo.
 author: "jdourlens"
-tags: ["mikataba mahiri", "tokeni", "solidity", "erc-20"]
+tags: ["mikataba mahiri", "tokeni", "Solidity", "erc-20"]
 skill: beginner
 breadcrumb: Misingi ya tokeni ya ERC-20
 lang: sw

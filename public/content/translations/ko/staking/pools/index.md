@@ -1,11 +1,11 @@
 ---
-title: 풀 스테이킹
-description: 스테이킹 풀에 대해 알아보기
+title: "풀 스테이킹"
+description: "스테이킹 풀에 대해 알아보기"
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: 수영장에서 수영하는 코뿔소 레슬리.
+alt: "수영장에서 수영하는 코뿔소 레슬리."
 sidebarDepth: 2
 summaryPoints:
   - 다른 사람들과 힘을 합쳐 원하는 금액의 ETH를 스테이킹하고 보상을 받으세요

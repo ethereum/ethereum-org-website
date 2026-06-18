@@ -1,6 +1,6 @@
 ---
-title: Odměny a penalizace v Proof-of-Stake
-description: Přečtěte si o pobídkách v protokolu Etherea s mechanismem Proof-of-Stake.
+title: "Odměny a penalizace v Proof-of-Stake"
+description: "Přečtěte si o pobídkách v protokolu Etherea s mechanismem Proof-of-Stake."
 lang: cs
 ---
 

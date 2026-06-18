@@ -1,11 +1,11 @@
 ---
-title: परीक्षण के लिए Solidity स्मार्ट अनुबंधों को मॉक कैसे करें
-description: परीक्षण करते समय आपको अपने अनुबंधों का मज़ाक क्यों उड़ाना चाहिए
-author: मार्कस वास
+title: "परीक्षण के लिए Solidity स्मार्ट अनुबंधों को मॉक कैसे करें"
+description: "परीक्षण करते समय आपको अपने अनुबंधों का मज़ाक क्यों उड़ाना चाहिए"
+author: "मार्कस वास"
 lang: hi
-tags: ["solidity", "स्मार्ट अनुबंध", "परीक्षण", "मॉकिंग"]
+tags: ["Solidity", "स्मार्ट अनुबंध", "परीक्षण", "मॉकिंग"]
 skill: intermediate
-breadcrumb: अनुबंधों को मॉक करना
+breadcrumb: "अनुबंधों को मॉक करना"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

@@ -1,11 +1,11 @@
 ---
 title: Restaking
-metaTitle: O que é restaking? | Benefícios e uso do restaking
-description: Use ETH em stake para proteger outros serviços descentralizados e ganhar recompensas extras.
+metaTitle: "O que é restaking? | Benefícios e uso do restaking"
+description: "Use ETH em stake para proteger outros serviços descentralizados e ganhar recompensas extras."
 lang: pt-br
 template: use-cases
 image: /images/use-cases/restaking.png
-alt: Uma representação visual do restaking no Ethereum.
+alt: "Uma representação visual do restaking no Ethereum."
 sidebarDepth: 2
 summaryPoints:
   - "Use ETH em stake para proteger outros serviços descentralizados e ganhar recompensas extras."
@@ -39,7 +39,7 @@ Da mesma forma que muitos stakers de ETH executam software de validação do Eth
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Bom saber</strong></strong>
+ <p className="mt-0"><strong>Bom saber</strong>
   <p className="mt-2">Embora "Serviços Validados Ativamente" (AVSs) seja o mais comum, diferentes plataformas de restaking podem usar outros nomes para os serviços descentralizados que ajudam a proteger, como "Serviços Validados Autonomamente", "Serviços Seguros Distribuídos" ou "Redes".</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ Neste mundo com restaking, tanto o AVS quanto o staker se beneficiam por poderem
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Benefício adicional do restaking</strong></strong>
+ <p className="mt-0"><strong>Benefício adicional do restaking</strong>
   <p className="mt-2">Os AVSs podem concentrar todos os seus recursos na construção e no marketing de seus serviços, em vez de se distraírem com a descentralização e a segurança.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ Existem várias entidades envolvidas no restaking — cada uma delas desempenha 
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Bom saber</strong></strong>
+ <p className="mt-0"><strong>Bom saber</strong>
   <p className="mt-2">Restakers nativos e líquidos frequentemente delegam seu ETH em stake a um operador, em vez de executarem eles mesmos o software para proteger os AVSs.</p>
   <p className="mt-2">Dessa forma, eles não precisam se preocupar com os complicados requisitos técnicos dos AVSs, embora recebam uma taxa de recompensa menor do que os operadores.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ Embora seja uma ideia nova, alguns projetos surgiram para explorar as possibilid
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Alerta de termo incorreto</strong></strong>
+ <p className="mt-0"><strong>Alerta de termo incorreto</strong>
   <p className="mt-2">Algumas pessoas confundem "restaking" com empréstimo de LSTs em finanças descentralizadas (DeFi). Ambos colocam o ETH em stake para trabalhar, mas restaking significa proteger AVSs, não apenas ganhar rendimento sobre LSTs.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,10 +139,10 @@ Embora os AVSs ofereçam taxas diferentes, os Tokens de Restaking Líquido (LRTs
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>O cofundador do Ethereum está digitando…</strong></strong>
+ <p className="mt-0"><strong>O cofundador do Ethereum está digitando…</strong>
   <p className="mt-2">
     Vitalik, o cofundador do Ethereum, alertou sobre os riscos potenciais do restaking em uma postagem de blog de 2021 chamada <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus.</a>
-  </a>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -161,7 +161,7 @@ Embora os AVSs ofereçam taxas diferentes, os Tokens de Restaking Líquido (LRTs
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Staking de Ethereum:</strong> Como funciona?</strong>
+ <p className="mt-0"><strong>Staking de Ethereum:</strong> Como funciona?
   <ButtonLink href="/staking/">
     Saiba mais
   </ButtonLink>

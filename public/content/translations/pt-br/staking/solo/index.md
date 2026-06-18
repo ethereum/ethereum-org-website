@@ -1,11 +1,11 @@
 ---
-title: Faça staking do seu ETH em casa
-description: Uma visão geral de como começar a fazer staking do seu ETH em casa
+title: "Faça staking do seu ETH em casa"
+description: "Uma visão geral de como começar a fazer staking do seu ETH em casa"
 lang: pt-br
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Leslie, o rinoceronte, em seu próprio chip de computador.
+alt: "Leslie, o rinoceronte, em seu próprio chip de computador."
 sidebarDepth: 2
 summaryPoints:
   - Receba recompensas máximas diretamente do protocolo por manter seu validador funcionando corretamente e online

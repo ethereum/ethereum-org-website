@@ -1,6 +1,6 @@
 ---
-title: Durum Kanalları
-description: Ethereum topluluğu tarafından şu anda kullanılan bir ölçeklendirme çözümü olarak durum kanallarına ve ödeme kanallarına giriş.
+title: "Durum Kanalları"
+description: "Ethereum topluluğu tarafından şu anda kullanılan bir ölçeklendirme çözümü olarak durum kanallarına ve ödeme kanallarına giriş."
 lang: tr
 sidebarDepth: 3
 ---

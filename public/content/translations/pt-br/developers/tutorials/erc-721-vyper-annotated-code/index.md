@@ -3,7 +3,7 @@ title: "Passo a passo do contrato ERC-721 em Vyper"
 description: "O contrato ERC-721 de Ryuya Nakamura e como ele funciona"
 author: Ori Pomerantz
 lang: pt-br
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: "ERC-721 em Vyper"
 published: 2021-04-01

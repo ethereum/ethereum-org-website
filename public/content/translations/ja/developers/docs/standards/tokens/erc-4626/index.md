@@ -1,6 +1,6 @@
 ---
-title: ERC-4626 トークン化ヴォールト標準
-description: 利回り付きヴォールトの標準。
+title: "ERC-4626 トークン化ヴォールト標準"
+description: "利回り付きヴォールトの標準。"
 lang: ja
 ---
 

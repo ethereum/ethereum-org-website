@@ -1,11 +1,11 @@
 ---
-title: स्मार्ट अनुबंध सुरक्षा टूल के लिए एक गाइड
-description: तीन अलग-अलग परीक्षण और प्रोग्राम विश्लेषण तकनीकों का अवलोकन
+title: "स्मार्ट अनुबंध सुरक्षा टूल के लिए एक गाइड"
+description: "तीन अलग-अलग परीक्षण और प्रोग्राम विश्लेषण तकनीकों का अवलोकन"
 author: "Trailofbits"
 lang: hi
-tags: ["solidity", "स्मार्ट अनुबंध", "सुरक्षा"]
+tags: ["Solidity", "स्मार्ट अनुबंध", "सुरक्षा"]
 skill: intermediate
-breadcrumb: सुरक्षा टूल
+breadcrumb: "सुरक्षा टूल"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

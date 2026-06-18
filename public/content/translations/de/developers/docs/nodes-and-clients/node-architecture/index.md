@@ -1,6 +1,6 @@
 ---
 title: Knotenarchitektur
-description: Einführung in die Organisation von Ethereum-Knoten.
+description: "Einführung in die Organisation von Ethereum-Knoten."
 lang: de
 ---
 

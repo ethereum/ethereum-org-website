@@ -1,6 +1,6 @@
 ---
-title: 스마트 컨트랙트 검증
-description: 이더리움 스마트 컨트랙트의 소스 코드 검증에 대한 개요
+title: "스마트 컨트랙트 검증"
+description: "이더리움 스마트 컨트랙트의 소스 코드 검증에 대한 개요"
 lang: ko
 ---
 
@@ -76,7 +76,7 @@ Etherscan을 사용하면 원본 데이터 페이로드(소스 코드, 라이브
 
 검증이 완료되면 컨트랙트의 소스 코드는 "Verified(검증됨)" 라벨을 받고 다른 사람들이 감사할 수 있도록 Etherscan에 게시됩니다. 또한 검증된 소스 코드가 있는 스마트 컨트랙트 저장소인 [검증된 컨트랙트(Verified Contracts)](https://etherscan.io/contractsVerified/) 섹션에 추가됩니다.
 
-Etherscan은 컨트랙 검증에 가장 많이 사용되는 도구입니다. 하지만 Etherscan의 컨트랙트 검증에는 한 가지 단점이 있습니다. 온체인 바이트코드와 다시 컴파일된 바이트코드의 **메타데이터 해시**를 비교하지 못한다는 것입니다. 따라서 Etherscan에서의 일치는 부분 일치입니다.
+Etherscan은 컨트랙 검증에 가장 많이 사용되는 도구입니다. 하지만 Etherscan의 컨트랙트 검증에는 한 가지 단점이 있습니다. 온체인 바이트코드와 다시 컴파일된 바이트코드의 <strong>메타데이터 해시</strong>를 비교하지 못한다는 것입니다. 따라서 Etherscan에서의 일치는 부분 일치입니다.
 
 [Etherscan에서 컨트랙트 검증에 대해 자세히 알아보기](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 

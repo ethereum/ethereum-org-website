@@ -269,7 +269,7 @@ Orakel tersentralisasi bergantung pada satu sumber kebenaran saat memberikan dat
 
 Namun, orakel terdesentralisasi harus berurusan dengan perbedaan informasi yang diambil dari beberapa sumber offchain. Untuk meminimalkan perbedaan informasi dan memastikan data yang diteruskan ke kontrak orakel mencerminkan pendapat kolektif node orakel, orakel terdesentralisasi menggunakan mekanisme berikut:
 
-##### Memberikan suara/staking pada keakuratan data {#availability}
+##### Memberikan suara/staking pada keakuratan data {#}
 
 Beberapa jaringan orakel terdesentralisasi mewajibkan peserta untuk memberikan suara atau melakukan staking pada keakuratan jawaban atas kueri data (mis., "Siapa yang memenangkan pemilu AS 2020?") menggunakan token asli jaringan. Protokol agregasi kemudian menggabungkan suara dan stake serta mengambil jawaban yang didukung oleh mayoritas sebagai jawaban yang valid.
 
@@ -277,7 +277,7 @@ Node yang jawabannya menyimpang dari jawaban mayoritas akan dihukum dengan mendi
 
 Staking/memberikan suara juga melindungi orakel terdesentralisasi dari [serangan Sybil](/glossary/#sybil-attack) di mana aktor jahat membuat banyak identitas untuk mempermainkan sistem konsensus. Namun, staking tidak dapat mencegah "freeloading" (node orakel menyalin informasi dari pihak lain) dan "validasi malas" (node orakel mengikuti mayoritas tanpa memverifikasi informasi itu sendiri).
 
-##### Mekanisme titik Schelling {#good-incentive-compatibility}
+##### Mekanisme titik Schelling {#}
 
 [Titik Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) adalah konsep teori permainan yang mengasumsikan beberapa entitas akan selalu menggunakan solusi umum untuk suatu masalah tanpa adanya komunikasi. Mekanisme titik Schelling sering digunakan dalam jaringan orakel terdesentralisasi untuk memungkinkan node mencapai konsensus pada jawaban atas permintaan data.
 
@@ -289,7 +289,7 @@ Contoh lain dari orakel yang menggunakan mekanisme titik Schelling termasuk [Pel
 
 Mekanisme titik Schelling menarik karena meminimalkan jejak onchain (hanya satu transaksi yang perlu dikirim) sambil menjamin desentralisasi. Hal yang terakhir ini dimungkinkan karena node harus menandatangani daftar respons yang dikirimkan sebelum dimasukkan ke dalam algoritma yang menghasilkan nilai rata-rata/median.
 
-### Ketersediaan {#applications-of-oracles-in-smart-contracts}
+### Ketersediaan {#availability}
 
 Layanan orakel terdesentralisasi memastikan ketersediaan data offchain yang tinggi untuk kontrak pintar. Hal ini dicapai dengan mendesentralisasikan sumber informasi offchain dan node yang bertanggung jawab untuk mentransfer informasi onchain.
 
@@ -297,7 +297,7 @@ Ini memastikan toleransi kesalahan karena kontrak orakel dapat mengandalkan bebe
 
 Orakel berbasis stake juga dimungkinkan untuk melakukan pemotongan terhadap operator node yang gagal merespons permintaan data dengan cepat. Hal ini secara signifikan memberi insentif kepada node orakel untuk berinvestasi dalam infrastruktur yang toleran terhadap kesalahan dan menyediakan data secara tepat waktu.
 
-### Kompatibilitas insentif yang baik {#retrieving-financial-data}
+### Kompatibilitas insentif yang baik {#good-incentive-compatibility}
 
 Orakel terdesentralisasi mengimplementasikan berbagai desain insentif untuk mencegah perilaku [Bizantium](https://en.wikipedia.org/wiki/Byzantine_fault) di antara node orakel. Secara khusus, mereka mencapai _atribusibilitas_ dan _akuntabilitas_:
 
@@ -305,11 +305,11 @@ Orakel terdesentralisasi mengimplementasikan berbagai desain insentif untuk menc
 
 2. Orakel terdesentralisasi—seperti yang dijelaskan sebelumnya—mungkin mewajibkan node untuk menempatkan stake pada keyakinan mereka terhadap kebenaran data yang mereka kirimkan. Jika klaim tersebut terbukti benar, stake ini dapat dikembalikan bersama dengan imbalan atas layanan yang jujur. Namun, stake ini juga dapat dipotong jika informasinya salah, yang memberikan ukuran akuntabilitas tertentu.
 
-## Aplikasi orakel dalam kontrak pintar {#generating-verifiable-randomness}
+## Aplikasi orakel dalam kontrak pintar {#applications-of-oracles-in-smart-contracts}
 
 Berikut ini adalah kasus penggunaan umum untuk orakel di Ethereum:
 
-### Mengambil data keuangan {#getting-outcomes-for-events}
+### Mengambil data keuangan {#retrieving-financial-data}
 
 Aplikasi [keuangan terdesentralisasi (DeFi)](/defi/) memungkinkan peminjaman, peminjaman, dan perdagangan aset peer-to-peer. Hal ini sering kali memerlukan perolehan informasi keuangan yang berbeda, termasuk data nilai tukar (untuk menghitung nilai fiat mata uang kripto atau membandingkan harga token) dan data pasar modal (untuk menghitung nilai aset yang ditokenisasi, seperti emas atau dolar AS).
 
@@ -355,7 +355,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Menghasilkan keacakan yang dapat diverifikasi {#automating-smart-contracts}
+### Menghasilkan keacakan yang dapat diverifikasi {#generating-verifiable-randomness}
 
 Aplikasi rantai blok tertentu, seperti game berbasis rantai blok atau skema lotre, memerlukan tingkat ketidakpastian dan keacakan yang tinggi agar dapat bekerja secara efektif. Namun, eksekusi deterministik dari rantai blok menghilangkan keacakan.
 
@@ -365,13 +365,13 @@ Dimungkinkan untuk menghasilkan nilai acak offchain dan mengirimkannya onchain, 
 
 Orakel yang dirancang untuk komputasi offchain memecahkan masalah ini dengan menghasilkan hasil acak secara aman offchain yang mereka siarkan onchain bersama dengan bukti kriptografi yang membuktikan ketidakpastian proses tersebut. Contohnya adalah [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Fungsi Acak yang Dapat Diverifikasi), yang merupakan generator angka acak (RNG) yang terbukti adil dan tahan kerusakan yang berguna untuk membangun kontrak pintar yang andal untuk aplikasi yang bergantung pada hasil yang tidak dapat diprediksi.
 
-### Mendapatkan hasil untuk peristiwa {#use-blockchain-oracles}
+### Mendapatkan hasil untuk peristiwa {#getting-outcomes-for-events}
 
 Dengan orakel, membuat kontrak pintar yang merespons peristiwa dunia nyata menjadi mudah. Layanan orakel memungkinkan hal ini dengan mengizinkan kontrak untuk terhubung ke API eksternal melalui komponen offchain dan mengonsumsi informasi dari sumber data tersebut. Misalnya, dapp pasar prediksi yang disebutkan sebelumnya dapat meminta orakel untuk mengembalikan hasil pemilu dari sumber offchain tepercaya (mis., Associated Press).
 
 Menggunakan orakel untuk mengambil data berdasarkan hasil dunia nyata memungkinkan kasus penggunaan baru lainnya; misalnya, produk asuransi terdesentralisasi membutuhkan informasi yang akurat tentang cuaca, bencana, dll. agar dapat bekerja secara efektif.
 
-### Mengotomatiskan kontrak pintar {#further-reading}
+### Mengotomatiskan kontrak pintar {#automating-smart-contracts}
 
 Kontrak pintar tidak berjalan secara otomatis; melainkan, akun yang dimiliki secara eksternal (EOA), atau akun kontrak lainnya, harus memicu fungsi yang tepat untuk mengeksekusi kode kontrak. Dalam kebanyakan kasus, sebagian besar fungsi kontrak bersifat publik dan dapat dipanggil oleh EOA dan kontrak lainnya.
 
@@ -383,7 +383,7 @@ Beberapa jaringan orakel terdesentralisasi menawarkan layanan otomatisasi, yang 
 
 [Jaringan Keeper](https://chain.link/keepers) Chainlink memberikan opsi bagi kontrak pintar untuk mengalihdayakan tugas pemeliharaan rutin dengan cara yang meminimalkan kepercayaan dan terdesentralisasi. Baca [dokumentasi resmi Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) untuk informasi tentang cara membuat kontrak Anda kompatibel dengan Keeper dan menggunakan layanan Upkeep.
 
-## Cara menggunakan oracle blockchain
+## Cara menggunakan oracle blockchain {#use-blockchain-oracles}
 
 Ada beberapa aplikasi orakel yang dapat Anda integrasikan ke dalam dapp Ethereum Anda:
 
@@ -413,7 +413,7 @@ Ada beberapa aplikasi orakel yang dapat Anda integrasikan ke dalam dapp Ethereum
 
 **[Stork](https://stork.network)** - Stork memberikan data harga dengan latensi sangat rendah, mendukung berbagai kasus penggunaan termasuk pasar perpetual, protokol peminjaman, dan ekosistem DeFi, dengan aset baru yang didukung dengan cepat saat pencatatan.
 
-## Bacaan lebih lanjut
+## Bacaan lebih lanjut {#further-reading}
 
 **Artikel**
 

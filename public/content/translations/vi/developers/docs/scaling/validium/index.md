@@ -1,11 +1,11 @@
 ---
 title: Validium
-description: Giới thiệu về Validium như một giải pháp mở rộng quy mô hiện đang được cộng đồng Ethereum sử dụng.
+description: "Giới thiệu về Validium như một giải pháp mở rộng quy mô hiện đang được cộng đồng Ethereum sử dụng."
 lang: vi
 sidebarDepth: 3
 ---
 
-Validium là một [giải pháp mở rộng quy mô](/developers/docs/scaling/) thực thi tính toàn vẹn của các giao dịch bằng cách sử dụng bằng chứng tính hợp lệ giống như [ZK-rollups](/developers/docs/scaling/zk-rollups/), nhưng không lưu trữ dữ liệu giao dịch trên Mạng chính [Ethereum](/). Mặc dù tính khả dụng của dữ liệu ngoài chuỗi mang lại một số đánh đổi, nó có thể dẫn đến những cải thiện lớn về khả năng mở rộng (các Validium có thể xử lý [~9.000 giao dịch, hoặc nhiều hơn, mỗi giây](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium là một [giải pháp mở rộng quy mô](/developers/docs/scaling/) thực thi tính toàn vẹn của các giao dịch bằng cách sử dụng bằng chứng tính hợp lệ giống như [ZK-rollups](/developers/docs/scaling/zk-rollups/), nhưng không lưu trữ dữ liệu giao dịch trên Mạng chính [Ethereum](/). Mặc dù tính khả dụng của dữ liệu ngoài chuỗi mang lại một số đánh đổi, nó có thể dẫn đến những cải thiện lớn về khả năng mở rộng (các Validium có thể xử lý [\~9.000 giao dịch, hoặc nhiều hơn, mỗi giây](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Điều kiện tiên quyết {#prerequisites}
 

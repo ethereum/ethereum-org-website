@@ -55,7 +55,7 @@ Dostępnych jest kilka rynków predykcyjnych opartych na Ethereum. Oto niektóre
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Pamiętaj o ryzyku</strong></strong>
+ <p className="mt-0"><strong>Pamiętaj o ryzyku</strong>
   <p className="mt-2">Obstawiaj tylko tyle, ile możesz stracić, i bądź świadomy potencjalnych zachowań uzależniających.</p>
 </AlertDescription>
 </AlertContent>

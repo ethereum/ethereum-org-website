@@ -1,6 +1,6 @@
 ---
-title: Prove di Merkle per l'integrità dei dati offline
-description: Garantire l'integrità dei dati onchain per i dati che sono archiviati, per lo più, offchain
+title: "Prove di Merkle per l'integrità dei dati offline"
+description: "Garantire l'integrità dei dati onchain per i dati che sono archiviati, per lo più, offchain"
 author: Ori Pomerantz
 tags: ["archiviazione"]
 skill: advanced

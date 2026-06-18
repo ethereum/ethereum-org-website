@@ -1,6 +1,6 @@
 ---
-title: Kâhinler
-description: Kâhinler, Ethereum akıllı sözleşmelerine gerçek dünya verilerine erişim sağlayarak kullanıcılar için daha fazla kullanım senaryosunun ve daha büyük değerin kilidini açar.
+title: "Kâhinler"
+description: "Kâhinler, Ethereum akıllı sözleşmelerine gerçek dünya verilerine erişim sağlayarak kullanıcılar için daha fazla kullanım senaryosunun ve daha büyük değerin kilidini açar."
 lang: tr
 authors: ["Patrick Collins"]
 ---
@@ -269,7 +269,7 @@ Merkezi kâhinler, akıllı sözleşmelere veri sağlarken tek bir doğruluk kay
 
 Ancak merkeziyetsiz kâhinler, birden fazla zincir dışı kaynaktan alınan bilgilerdeki tutarsızlıklarla başa çıkmalıdır. Bilgilerdeki farklılıkları en aza indirmek ve kâhin sözleşmesine aktarılan verilerin kâhin düğümlerinin ortak görüşünü yansıtmasını sağlamak için merkeziyetsiz kâhinler aşağıdaki mekanizmaları kullanır:
 
-##### Verilerin doğruluğu üzerine oylama/staking {#availability}
+##### Verilerin doğruluğu üzerine oylama/staking {#}
 
 Bazı merkeziyetsiz kâhin ağları, katılımcıların ağın yerel tokenini kullanarak veri sorgularına verilen yanıtların doğruluğu üzerine oy vermesini veya stake etmesini gerektirir (örneğin, "2020 ABD seçimlerini kim kazandı?"). Daha sonra bir toplama protokolü oyları ve stakeleri bir araya getirir ve çoğunluk tarafından desteklenen cevabı geçerli olarak kabul eder.
 
@@ -277,7 +277,7 @@ Cevapları çoğunluğun cevabından sapan düğümler, tokenlerinin daha doğru
 
 Staking/oylama ayrıca merkeziyetsiz kâhinleri, kötü niyetli aktörlerin mutabakat sistemini manipüle etmek için birden fazla kimlik oluşturduğu [Sybil saldırılarından](/glossary/#sybil-attack) korur. Ancak staking, "beleşçiliği" (kâhin düğümlerinin bilgileri başkalarından kopyalaması) ve "tembel doğrulamayı" (kâhin düğümlerinin bilgileri kendileri doğrulamadan çoğunluğu takip etmesi) engelleyemez.
 
-##### Schelling noktası mekanizmaları {#good-incentive-compatibility}
+##### Schelling noktası mekanizmaları {#}
 
 [Schelling noktası](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>), herhangi bir iletişim olmadığında birden fazla varlığın her zaman bir soruna ortak bir çözüm bulacağını varsayan bir oyun teorisi kavramıdır. Schelling noktası mekanizmaları, düğümlerin veri taleplerine verilen yanıtlar üzerinde mutabakata varmasını sağlamak için genellikle merkeziyetsiz kâhin ağlarında kullanılır.
 
@@ -289,7 +289,7 @@ Schelling noktası mekanizmalarını kullanan diğer kâhin örnekleri arasında
 
 Schelling noktası mekanizmaları caziptir çünkü merkeziyetsizliği garanti ederken zincir içi ayak izini en aza indirirler (yalnızca bir işlem gönderilmesi gerekir). İkincisi mümkündür çünkü düğümler, ortalama/medyan değeri üreten algoritmaya beslenmeden önce sunulan yanıtlar listesini imzalamalıdır.
 
-### Kullanılabilirlik {#applications-of-oracles-in-smart-contracts}
+### Kullanılabilirlik {#availability}
 
 Merkeziyetsiz kâhin hizmetleri, zincir dışı verilerin akıllı sözleşmeler için yüksek düzeyde kullanılabilirliğini sağlar. Bu, hem zincir dışı bilginin kaynağının hem de bilgiyi zincir içine aktarmaktan sorumlu düğümlerin merkeziyetsizleştirilmesiyle elde edilir.
 
@@ -297,7 +297,7 @@ Bu, kâhin sözleşmesinin diğer sözleşmelerden gelen sorguları yürütmek i
 
 Stake tabanlı kâhinlerin, veri taleplerine hızlı yanıt veremeyen düğüm operatörlerine ceza kesintisi uygulaması da mümkündür. Bu, kâhin düğümlerini hata toleranslı altyapıya yatırım yapmaya ve verileri zamanında sağlamaya önemli ölçüde teşvik eder.
 
-### İyi teşvik uyumluluğu {#retrieving-financial-data}
+### İyi teşvik uyumluluğu {#good-incentive-compatibility}
 
 Merkeziyetsiz kâhinler, kâhin düğümleri arasında [Bizans](https://en.wikipedia.org/wiki/Byzantine_fault) davranışını önlemek için çeşitli teşvik tasarımları uygular. Özellikle, _ilişkilendirilebilirlik_ ve _hesap verebilirlik_ sağlarlar:
 
@@ -305,11 +305,11 @@ Merkeziyetsiz kâhinler, kâhin düğümleri arasında [Bizans](https://en.wikip
 
 2. Merkeziyetsiz kâhinler, daha önce açıklandığı gibi, düğümlerin sundukları verilerin doğruluğuna olan güvenleri üzerine bir stake koymalarını gerektirebilir. Talep doğrulanırsa, bu stake dürüst hizmet ödülleriyle birlikte iade edilebilir. Ancak bilginin yanlış olması durumunda ceza kesintisine de uğrayabilir, bu da bir ölçüde hesap verebilirlik sağlar.
 
-## Akıllı sözleşmelerde kâhin uygulamaları {#generating-verifiable-randomness}
+## Akıllı sözleşmelerde kâhin uygulamaları {#applications-of-oracles-in-smart-contracts}
 
 Aşağıdakiler Ethereum'daki kâhinler için yaygın kullanım senaryolarıdır:
 
-### Finansal verileri alma {#getting-outcomes-for-events}
+### Finansal verileri alma {#retrieving-financial-data}
 
 [Merkeziyetsiz finans](/defi/) (DeFi) uygulamaları, eşler arası borç verme, borç alma ve varlık ticaretine olanak tanır. Bu genellikle, döviz kuru verileri (kripto para birimlerinin itibari değerini hesaplamak veya token fiyatlarını karşılaştırmak için) ve sermaye piyasaları verileri (altın veya ABD doları gibi tokenize edilmiş varlıkların değerini hesaplamak için) dâhil olmak üzere farklı finansal bilgilerin alınmasını gerektirir.
 
@@ -355,7 +355,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Doğrulanabilir rastgelelik üretme {#automating-smart-contracts}
+### Doğrulanabilir rastgelelik üretme {#generating-verifiable-randomness}
 
 Blokzincir tabanlı oyunlar veya piyango planları gibi belirli blokzincir uygulamaları, etkili bir şekilde çalışmak için yüksek düzeyde öngörülemezlik ve rastgelelik gerektirir. Ancak, blokzincirlerin deterministik yürütülmesi rastgeleliği ortadan kaldırır.
 
@@ -365,13 +365,13 @@ Rastgele değeri zincir dışında üretmek ve zincir içine göndermek mümkün
 
 Zincir dışı hesaplama için tasarlanan kâhinler, sürecin öngörülemezliğini onaylayan kriptografik kanıtlarla birlikte zincir içinde yayınladıkları rastgele sonuçları zincir dışında güvenli bir şekilde üreterek bu sorunu çözer. Buna bir örnek, öngörülemeyen sonuçlara dayanan uygulamalar için güvenilir akıllı sözleşmeler oluşturmada yararlı olan, kanıtlanabilir derecede adil ve kurcalamaya karşı korumalı bir rastgele sayı üreteci (RNG) olan [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/)'dir (Doğrulanabilir Rastgele İşlev).
 
-### Olaylar için sonuçlar alma {#use-blockchain-oracles}
+### Olaylar için sonuçlar alma {#getting-outcomes-for-events}
 
 Kâhinlerle, gerçek dünyadaki olaylara yanıt veren akıllı sözleşmeler oluşturmak kolaydır. Kâhin hizmetleri, sözleşmelerin zincir dışı bileşenler aracılığıyla harici API'lere bağlanmasına ve bu veri kaynaklarından gelen bilgileri tüketmesine olanak tanıyarak bunu mümkün kılar. Örneğin, daha önce bahsedilen tahmin merkeziyetsiz uygulaması (dapp), bir kâhinden seçim sonuçlarını güvenilir bir zincir dışı kaynaktan (örneğin Associated Press) döndürmesini talep edebilir.
 
 Gerçek dünya sonuçlarına dayalı verileri almak için kâhinleri kullanmak, diğer yeni kullanım senaryolarını mümkün kılar; örneğin, merkeziyetsiz bir sigorta ürününün etkili bir şekilde çalışması için hava durumu, felaketler vb. hakkında doğru bilgilere ihtiyacı vardır.
 
-### Akıllı sözleşmeleri otomatikleştirme {#further-reading}
+### Akıllı sözleşmeleri otomatikleştirme {#automating-smart-contracts}
 
 Akıllı sözleşmeler otomatik olarak çalışmaz; bunun yerine, harici olarak sahip olunan bir hesap (EOA) veya başka bir kontrat hesabı, sözleşmenin kodunu yürütmek için doğru işlevleri tetiklemelidir. Çoğu durumda, sözleşmenin işlevlerinin büyük bir kısmı herkese açıktır ve EOA'lar ile diğer sözleşmeler tarafından çağrılabilir.
 
@@ -383,7 +383,7 @@ Bazı merkeziyetsiz kâhin ağları, zincir dışı kâhin düğümlerinin kulla
 
 Chainlink'in [Keeper Ağı](https://chain.link/keepers), akıllı sözleşmelerin düzenli bakım görevlerini güveni en aza indirilmiş ve merkeziyetsiz bir şekilde dış kaynaklardan sağlaması için seçenekler sunar. Sözleşmenizi Keeper uyumlu hâle getirme ve Upkeep hizmetini kullanma hakkında bilgi için resmî [Keeper belgelerini](https://docs.chain.link/docs/chainlink-keepers/introduction/) okuyun.
 
-## Blokzincir kâhinleri nasıl kullanılır
+## Blokzincir kâhinleri nasıl kullanılır {#use-blockchain-oracles}
 
 Ethereum merkeziyetsiz uygulamanıza (dapp) entegre edebileceğiniz birden fazla kâhin uygulaması vardır:
 
@@ -413,7 +413,7 @@ Ethereum merkeziyetsiz uygulamanıza (dapp) entegre edebileceğiniz birden fazla
 
 **[Stork](https://stork.network)** - Stork, sürekli vadeli işlem piyasaları, borç verme protokolleri ve DeFi ekosistemleri dâhil olmak üzere çok çeşitli kullanım senaryolarını destekleyerek ultra düşük gecikme süresiyle fiyat verileri sunar ve yeni varlıklar listelendiğinde hızla desteklenir.
 
-## Daha fazla bilgi
+## Daha fazla bilgi {#further-reading}
 
 **Makaleler**
 

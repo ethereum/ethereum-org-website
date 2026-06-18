@@ -1,9 +1,9 @@
 ---
 title: "The Graph : Corriger l'interrogation des données Web3"
-description: La chaîne de blocs est comme une base de données, mais sans SQL. Toutes les données sont là, mais il n'y a aucun moyen d'y accéder. Laissez-moi vous montrer comment corriger cela avec The Graph et GraphQL.
+description: "La chaîne de blocs est comme une base de données, mais sans SQL. Toutes les données sont là, mais il n'y a aucun moyen d'y accéder. Laissez-moi vous montrer comment corriger cela avec The Graph et GraphQL."
 author: Markus Waas
 lang: fr
-tags: ["solidity", "contrats intelligents", "requêtes", "the graph", "react"]
+tags: ["Solidity", "contrats intelligents", "requêtes", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

@@ -1,6 +1,6 @@
 ---
-title: 權益證明獎勵與罰則
-description: 了解以太坊權益證明中的協定內誘因。
+title: "權益證明獎勵與罰則"
+description: "了解以太坊權益證明中的協定內誘因。"
 lang: zh-tw
 ---
 

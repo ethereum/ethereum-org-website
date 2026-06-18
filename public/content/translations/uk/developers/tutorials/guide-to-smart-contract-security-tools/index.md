@@ -1,11 +1,11 @@
 ---
-title: Посібник з інструментів безпеки смарт-контрактів
-description: Огляд трьох різних методів тестування та аналізу програм
+title: "Посібник з інструментів безпеки смарт-контрактів"
+description: "Огляд трьох різних методів тестування та аналізу програм"
 author: "Trailofbits"
 lang: uk
-tags: ["solidity", "смарт-контракти", "безпека"]
+tags: ["Solidity", "смарт-контракти", "безпека"]
 skill: intermediate
-breadcrumb: Інструменти безпеки
+breadcrumb: "Інструменти безпеки"
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

@@ -1,5 +1,5 @@
 ---
-title: Preparación de Ethereum para el futuro y seguridad cuántica de la criptografía
+title: "Preparación de Ethereum para el futuro y seguridad cuántica de la criptografía"
 description: Estas actualizaciones consolidan a Ethereum como la capa base resiliente y descentralizada para el futuro, depare lo que depare.
 lang: es
 image: /images/roadmap/roadmap-future.png

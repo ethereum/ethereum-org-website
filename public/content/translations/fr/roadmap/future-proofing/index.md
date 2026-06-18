@@ -1,6 +1,6 @@
 ---
-title: Pérenniser Ethereum et la sécurité quantique de la cryptographie
-description: Ces mises à jour consolident Ethereum en tant que couche de base résiliente et décentralisée pour l'avenir, quoi qu'il réserve.
+title: "Pérenniser Ethereum et la sécurité quantique de la cryptographie"
+description: "Ces mises à jour consolident Ethereum en tant que couche de base résiliente et décentralisée pour l'avenir, quoi qu'il réserve."
 lang: fr
 image: /images/roadmap/roadmap-future.png
 alt: "Feuille de route d'Ethereum"

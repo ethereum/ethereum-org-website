@@ -1,14 +1,14 @@
 ---
-title: 以太坊應用程式
-metaTitle: 以太坊應用程式 | 以太坊上的去中心化應用程式
-description: 以太坊上的應用程式是免費、全球性的，並且使用公共區塊鏈而非私人公司伺服器。這意味著您可以在每個專案中使用相同的帳戶並維護您的隱私。
+title: "以太坊應用程式"
+metaTitle: "以太坊應用程式 | 以太坊上的去中心化應用程式"
+description: "以太坊上的應用程式是免費、全球性的，並且使用公共區塊鏈而非私人公司伺服器。這意味著您可以在每個專案中使用相同的帳戶並維護您的隱私。"
 lang: zh-tw
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: 以太坊上的應用程式是免費、全球性的，並且使用公共區塊鏈而非私人公司伺服器。這意味著您可以在每個專案中使用相同的帳戶並維護您的隱私。
+summary: "以太坊上的應用程式是免費、全球性的，並且使用公共區塊鏈而非私人公司伺服器。這意味著您可以在每個專案中使用相同的帳戶並維護您的隱私。"
 ---
 
 ## 擁有超能力的應用程式 {#apps-with-superpowers}

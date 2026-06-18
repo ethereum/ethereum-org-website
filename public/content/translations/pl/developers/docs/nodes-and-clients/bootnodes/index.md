@@ -1,6 +1,6 @@
 ---
-title: Wprowadzenie do węzłów rozruchowych Ethereum
-description: Podstawowe informacje potrzebne do zrozumienia węzłów rozruchowych
+title: "Wprowadzenie do węzłów rozruchowych Ethereum"
+description: "Podstawowe informacje potrzebne do zrozumienia węzłów rozruchowych"
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Phần thưởng và hình phạt trong proof-of-stake
-description: Tìm hiểu về các ưu đãi trong giao thức của Ethereum proof-of-stake.
+title: "Phần thưởng và hình phạt trong proof-of-stake"
+description: "Tìm hiểu về các ưu đãi trong giao thức của Ethereum proof-of-stake."
 lang: vi
 ---
 

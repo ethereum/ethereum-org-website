@@ -1,11 +1,11 @@
 ---
-title: Lista de verificação de integração de tokens
-description: Uma lista de verificação de coisas a considerar ao interagir com tokens
+title: "Lista de verificação de integração de tokens"
+description: "Uma lista de verificação de coisas a considerar ao interagir com tokens"
 author: "Trailofbits"
 lang: pt-br
-tags: ["solidity", "contratos inteligentes", "segurança", "tokens"]
+tags: ["Solidity", "contratos inteligentes", "segurança", "tokens"]
 skill: intermediate
-breadcrumb: Integração de tokens
+breadcrumb: "Integração de tokens"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

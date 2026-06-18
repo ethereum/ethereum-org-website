@@ -1,6 +1,6 @@
 ---
-title: Standard wielu tokenów ERC-1155
-description: Dowiedz się więcej o ERC-1155, standardzie wielu tokenów, który łączy tokeny zamienne i niezamienne w jednym kontrakcie.
+title: "Standard wielu tokenów ERC-1155"
+description: "Dowiedz się więcej o ERC-1155, standardzie wielu tokenów, który łączy tokeny zamienne i niezamienne w jednym kontrakcie."
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Recompensas y penalizaciones de la prueba de participación
-description: Aprenda sobre los incentivos dentro del protocolo en la prueba de participación de Ethereum.
+title: "Recompensas y penalizaciones de la prueba de participación"
+description: "Aprenda sobre los incentivos dentro del protocolo en la prueba de participación de Ethereum."
 lang: es
 ---
 

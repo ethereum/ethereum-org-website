@@ -1,6 +1,6 @@
 ---
-title: 驗證智能合約
-description: 以太坊智能合約原始碼驗證概覽
+title: "驗證智能合約"
+description: "以太坊智能合約原始碼驗證概覽"
 lang: zh-tw
 ---
 

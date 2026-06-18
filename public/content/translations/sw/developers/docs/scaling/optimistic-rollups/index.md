@@ -1,6 +1,6 @@
 ---
 title: Mikusanyiko ya Optimistic
-description: Utangulizi wa mikusanyiko ya optimistic—suluhisho la kuongeza uwezo linalotumiwa na jamii ya Ethereum.
+description: "Utangulizi wa mikusanyiko ya optimistic—suluhisho la kuongeza uwezo linalotumiwa na jamii ya Ethereum."
 lang: sw
 ---
 
@@ -152,7 +152,7 @@ Mikusanyiko ya optimistic imeundwa kwa ajili ya mwingiliano na Mtandao Mkuu wa E
 
 #### 1. Usogezi wa mali {#asset-movement}
 
-##### Kuingia kwenye rollup {#evm-compatibility}
+##### Kuingia kwenye rollup {#}
 
 Ili kutumia rollup ya optimistic, watumiaji huweka ETH, tokeni za ERC-20, na mali nyingine zinazokubaliwa katika mkataba wa [daraja](/developers/docs/bridges/) la rollup kwenye tabaka la 1 (l1). Mkataba wa daraja utapitisha muamala kwenye tabaka la 2 (l2), ambapo kiasi sawa cha mali hufuliwa na kutumwa kwa anwani iliyochaguliwa na mtumiaji kwenye rollup ya optimistic.
 
@@ -160,7 +160,7 @@ Miamala inayozalishwa na mtumiaji (kama amana ya L1 > L2) kwa kawaida hupangwa k
 
 Baadhi ya mikusanyiko ya optimistic inachukua mbinu ya moja kwa moja zaidi ili kuzuia wapangaji kudhibiti watumiaji. Hapa, kitalu kinafafanuliwa na miamala yote iliyowasilishwa kwenye mkataba wa tabaka la 1 (l1) tangu kitalu kilichopita (k.m., amana) pamoja na miamala iliyochakatwa kwenye mnyororo wa rollup. Ikiwa mpangaji atapuuza muamala wa tabaka la 1 (l1), atachapisha mzizi wa hali usio sahihi (unaothibitishwa); kwa hivyo, wapangaji hawawezi kuchelewesha ujumbe unaozalishwa na mtumiaji pindi unapochapishwa kwenye tabaka la 1 (l1).
 
-##### Kutoka kwenye rollup {#cross-chain-contract-calls}
+##### Kutoka kwenye rollup {#}
 
 Kutoa kutoka kwenye rollup ya optimistic kwenda Ethereum ni vigumu zaidi kutokana na mpango wa kuthibitisha udanganyifu. Ikiwa mtumiaji ataanzisha muamala wa L2 > L1 ili kutoa fedha zilizowekwa kwenye tabaka la 1 (l1), lazima asubiri hadi kipindi cha changamoto—kinachodumu takriban siku saba—kipite. Hata hivyo, mchakato wa utoaji wenyewe ni wa moja kwa moja.
 
@@ -170,7 +170,7 @@ Ili kuepuka kusubiri wiki moja kabla ya kutoa fedha kwenye Ethereum, watumiaji w
 
 Watoa ukwasi wanaweza kuangalia uhalali wa ombi la utoaji la mtumiaji (kwa kutekeleza mnyororo wenyewe) kabla ya kutoa fedha. Kwa njia hii wana uhakika kwamba muamala utathibitishwa hatimaye (yaani, ukamilifu bila hitaji la uaminifu).
 
-#### 2. Utangamano wa EVM {#how-do-optimistic-rollup-fees-work}
+#### 2. Utangamano wa EVM {#evm-compatibility}
 
 Kwa wasanidi programu, faida ya mikusanyiko ya optimistic ni utangamano wao—au, bora zaidi, usawa—na [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm/). Mikusanyiko inayoendana na EVM inatii vipimo katika [waraka wa manjano wa Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf) na inasaidia EVM katika kiwango cha msimbo wa baiti.
 
@@ -182,7 +182,7 @@ ii. Wasanidi programu na timu za miradi zinazotumia mikusanyiko ya optimistic zi
 
 Kutumia zana zilizopo ni muhimu kwa sababu zana hizi zimekaguliwa kwa kina, kurekebishwa makosa, na kuboreshwa kwa miaka mingi. Pia huondoa hitaji la wasanidi programu wa Ethereum kujifunza jinsi ya kujenga kwa kutumia mrundikano mpya kabisa wa ukuzaji.
 
-#### 3. Wito wa mkataba wa mtambuko-mnyororo {#scaling-ethereum-with-optimistic-rollups}
+#### 3. Wito wa mkataba wa mtambuko-mnyororo {#cross-chain-contract-calls}
 
 Watumiaji (akaunti zinazomilikiwa na nje) huingiliana na mikataba ya tabaka la 2 (l2) kwa kuwasilisha muamala kwenye mkataba wa rollup au kuwa na mpangaji au mthibitishaji kuwafanyia. Mikusanyiko ya optimistic pia inaruhusu akaunti za mkataba kwenye Ethereum kuingiliana na mikataba ya tabaka la 2 (l2) kwa kutumia mikataba ya daraja kupitisha ujumbe na kupitisha data kati ya tabaka la 1 (l1) na tabaka la 2 (l2). Hii inamaanisha unaweza kupanga mkataba wa tabaka la 1 (l1) kwenye Mtandao Mkuu wa Ethereum ili kuita utendakazi wa mikataba kwenye rollup ya optimistic ya tabaka la 2 (l2).
 
@@ -194,7 +194,7 @@ Kwa kuwa wito wa ujumbe wa mtambuko-mnyororo husababisha utekelezaji wa mkataba,
 
 Hatimaye, tunapaswa kutambua kwamba wito wa ujumbe wa L2 > L1 kati ya mikataba unahitaji kuzingatia ucheleweshaji (wito wa L1 > L2 kwa kawaida hutekelezwa baada ya dakika chache). Hii ni kwa sababu ujumbe uliotumwa kwenye Mtandao Mkuu kutoka kwenye rollup ya optimistic hauwezi kutekelezwa hadi dirisha la changamoto liishe.
 
-## Ada za rollup ya optimistic zinafanyaje kazi? {#optimistic-rollups-pros-and-cons}
+## Ada za rollup ya optimistic zinafanyaje kazi? {#how-do-optimistic-rollup-fees-work}
 
 Mikusanyiko ya optimistic hutumia mpango wa ada ya gesi, sawa na Ethereum, kuashiria kiasi ambacho watumiaji wanalipa kwa kila muamala. Ada zinazotozwa kwenye mikusanyiko ya optimistic zinategemea vipengele vifuatavyo:
 
@@ -206,7 +206,7 @@ Mikusanyiko ya optimistic hutumia mpango wa ada ya gesi, sawa na Ethereum, kuash
 
 Mikusanyiko ya optimistic hutumia taratibu kadhaa kupunguza ada kwa watumiaji, ikiwa ni pamoja na ukusanyaji wa mafungu ya miamala na kubana `calldata` ili kupunguza gharama za uchapishaji wa data. Unaweza kuangalia [kifuatiliaji cha ada cha L2](https://l2fees.info/) kwa muhtasari wa wakati halisi wa kiasi gani inagharimu kutumia mikusanyiko ya optimistic inayotegemea Ethereum.
 
-## Mikusanyiko ya optimistic inaongezaje uwezo wa Ethereum? {#optimistic-video}
+## Mikusanyiko ya optimistic inaongezaje uwezo wa Ethereum? {#scaling-ethereum-with-optimistic-rollups}
 
 Kama ilivyoelezwa, mikusanyiko ya optimistic huchapisha data ya muamala iliyobanwa kwenye Ethereum ili kuhakikisha upatikanaji wa data. Uwezo wa kubana data iliyochapishwa mnyororoni ni muhimu kwa kuongeza uwezo wa upitishaji kwenye Ethereum kwa mikusanyiko ya optimistic.
 
@@ -223,7 +223,7 @@ Mikusanyiko ya optimistic hutumia mbinu kadhaa kufikia ubanaji wa data ya muamal
 | Thamani     | 9                      | ~3            |
 | Sahihi | ~68 (2 + 33 + 33)      | ~0.5          |
 | Kutoka      | 0 (iliyorejeshwa kutoka kwa sahihi) | 4             |
-| **Jumla** | **~baiti 112**         | **~baiti 12** |
+| **Jumla** | **\~baiti 112**         | **\~baiti 12** |
 
 Kufanya baadhi ya ukokotoaji wa makadirio kwenye takwimu hizi kunaweza kusaidia kuonyesha maboresho ya uwezo wa kuongezeka yanayotolewa na rollup ya optimistic:
 
@@ -235,7 +235,7 @@ Hili ni kadirio la matumaini kiasi, ikizingatiwa kwamba miamala ya rollup ya opt
 
 Kuanzishwa kwa [kugawanya data (data sharding)](/roadmap/danksharding/) kwenye Ethereum kunatarajiwa kuboresha uwezo wa kuongezeka katika mikusanyiko ya optimistic. Kwa sababu miamala ya rollup lazima ishiriki nafasi ya kitalu na miamala mingine isiyo ya rollup, uwezo wao wa kuchakata unazuiliwa na uwezo wa upitishaji wa data kwenye mnyororo mkuu wa Ethereum. Danksharding itaongeza nafasi inayopatikana kwa minyororo ya tabaka la 2 (l2) kuchapisha data kwa kila kitalu, kwa kutumia hifadhi ya "blobu" ya bei nafuu, isiyodumu badala ya `CALLDATA` ghali, ya kudumu.
 
-### Faida na hasara za mikusanyiko ya optimistic {#further-reading-on-optimistic-rollups}
+### Faida na hasara za mikusanyiko ya optimistic {#optimistic-rollups-pros-and-cons}
 
 | Faida                                                                                                                                                  | Hasara                                                                                                                                                |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -247,13 +247,13 @@ Kuanzishwa kwa [kugawanya data (data sharding)](/roadmap/danksharding/) kwenye E
 | Mikusanyiko ya optimistic inategemea motisha za kiuchumi za kificho zilizoundwa vizuri ili kuongeza usalama kwenye mnyororo.                                                 | Mikusanyiko lazima ichapishe data yote ya muamala mnyororoni, ambayo inaweza kuongeza gharama.                                                                          |
 | Utangamano na EVM na Solidity unaruhusu wasanidi programu kuhamisha mikataba mahiri asili ya Ethereum kwenye mikusanyiko au kutumia zana zilizopo kuunda dapps mpya. |
 
-### Maelezo ya kuona ya mikusanyiko ya optimistic {#tutorials}
+### Maelezo ya kuona ya mikusanyiko ya optimistic {#optimistic-video}
 
 Je, wewe ni mwanafunzi wa kuona zaidi? Tazama Finematics akielezea mikusanyiko ya optimistic:
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Usomaji zaidi kuhusu mikusanyiko ya optimistic
+## Usomaji zaidi kuhusu mikusanyiko ya optimistic {#further-reading-on-optimistic-rollups}
 
 - [Mikusanyiko ya optimistic inafanyaje kazi (Mwongozo Kamili)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Rollup ya Mnyororo wa Vitalu ni nini? Utangulizi wa Kiufundi](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
@@ -264,6 +264,6 @@ Je, wewe ni mwanafunzi wa kuona zaidi? Tazama Finematics akielezea mikusanyiko y
 - [Uchunguzi wa Kina wa OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Mashine Pepe ya Optimistic ni nini?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 
-## Mafunzo: Mikusanyiko ya optimistic na madaraja kwenye Ethereum
+## Mafunzo: Mikusanyiko ya optimistic na madaraja kwenye Ethereum {#tutorials}
 
 - [Mapitio ya mkataba wa daraja la kawaida la Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Mapitio ya msimbo yaliyofafanuliwa ya daraja la kawaida la Optimism kwa kusogeza mali kati ya tabaka la 1 (l1) na tabaka la 2 (l2)._

@@ -1,6 +1,6 @@
 ---
 title: "Các thành phần máy chủ và tác nhân cho ứng dụng web3"
-description: Sau khi đọc hướng dẫn này, bạn sẽ có thể viết các máy chủ TypeScript lắng nghe các sự kiện trên chuỗi khối và phản hồi tương ứng bằng các giao dịch của riêng chúng. Điều này sẽ cho phép bạn viết các ứng dụng tập trung (vì máy chủ là một điểm lỗi), nhưng có thể tương tác với các thực thể web3. Các kỹ thuật tương tự cũng có thể được sử dụng để viết một tác nhân phản hồi các sự kiện trên chuỗi mà không cần sự can thiệp của con người.
+description: "Sau khi đọc hướng dẫn này, bạn sẽ có thể viết các máy chủ TypeScript lắng nghe các sự kiện trên chuỗi khối và phản hồi tương ứng bằng các giao dịch của riêng chúng. Điều này sẽ cho phép bạn viết các ứng dụng tập trung (vì máy chủ là một điểm lỗi), nhưng có thể tương tác với các thực thể web3. Các kỹ thuật tương tự cũng có thể được sử dụng để viết một tác nhân phản hồi các sự kiện trên chuỗi mà không cần sự can thiệp của con người."
 author: Ori Pomerantz
 lang: vi
 tags:
@@ -9,7 +9,7 @@ tags:
   - ngoài chuỗi
   - dapps
 skill: beginner
-breadcrumb: Các thành phần máy chủ
+breadcrumb: "Các thành phần máy chủ"
 published: 2024-07-15
 ---
 
@@ -72,7 +72,7 @@ Cách dễ nhất để hiểu cách viết một thành phần máy chủ là x
 
 Phần lớn chương trình được chứa trong [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Tạo các đối tượng tiên quyết {#package-json}
+##### Tạo các đối tượng tiên quyết {#}
 
 ```typescript
 import {
@@ -180,7 +180,7 @@ const greeter = getContract({
 
 Bây giờ chúng ta đã có tất cả các điều kiện tiên quyết, cuối cùng chúng ta có thể tạo một [phiên bản hợp đồng](https://viem.sh/docs/contract/getContract). Chúng ta sẽ sử dụng phiên bản hợp đồng này để giao tiếp với hợp đồng trên chuỗi.
 
-##### Đọc từ chuỗi khối {#conclusion}
+##### Đọc từ chuỗi khối {#}
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -192,7 +192,7 @@ JavaScript là đơn luồng, vì vậy khi chúng ta kích hoạt một quá tr
 
 Nếu bạn quan tâm đến cách thức hoạt động của nó, bạn có thể [đọc về nó ở đây](https://www.w3schools.com/js/js_promise.asp), nhưng về mặt thực tế, tất cả những gì bạn cần biết là bạn `await` kết quả nếu bạn bắt đầu một thao tác mất nhiều thời gian và bất kỳ hàm nào thực hiện điều này đều phải được khai báo là `async`.
 
-##### Phát hành giao dịch
+##### Phát hành giao dịch {#}
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -215,7 +215,7 @@ Trường `write` của phiên bản hợp đồng có tất cả các hàm ghi 
 
 Báo cáo mã băm của giao dịch (như một phần của URL đến trình khám phá khối để xem nó) và trả về nó.
 
-##### Phản hồi các sự kiện
+##### Phản hồi các sự kiện {#}
 
 ```typescript
 greeter.watchEvent.SetGreeting({
@@ -246,7 +246,7 @@ Có thể có nhiều sự kiện, nhưng để đơn giản, chúng ta chỉ qu
 
 Nếu người gửi _không phải_ là máy chủ này, hãy sử dụng `setGreeting` để thay đổi lời chào.
 
-#### `package.json`
+#### `package.json` {#package-json}
 
 [Tệp này](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) kiểm soát cấu hình [Node.js](https://nodejs.org/en). Bài viết này chỉ giải thích các định nghĩa quan trọng.
 
@@ -290,7 +290,7 @@ Có nhiều loại ứng dụng nút JavaScript. Kiểu `module` cho phép chún
 
 Đây là các gói được yêu cầu trong thời gian chạy, khi chạy `dist/app.js`.
 
-## Kết luận
+## Kết luận {#conclusion}
 
 Máy chủ tập trung mà chúng ta đã tạo ở đây thực hiện công việc của nó, đó là hoạt động như một tác nhân cho người dùng. Bất kỳ ai khác muốn dapp tiếp tục hoạt động và sẵn sàng chi trả Gas đều có thể chạy một phiên bản mới của máy chủ với địa chỉ của riêng họ.
 

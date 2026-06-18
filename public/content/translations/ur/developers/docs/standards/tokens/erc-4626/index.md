@@ -1,6 +1,6 @@
 ---
 title: "⁦ERC-4626⁩ ٹوکنائزڈ تجوری کا معیار"
-description: منافع بخش تجوریوں کے لیے ایک معیار۔
+description: "منافع بخش تجوریوں کے لیے ایک معیار۔"
 lang: ur
 ---
 
@@ -186,7 +186,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### انٹرفیس کا نقشہ {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+![Map of the <span dir="ltr">ERC-4626</span> interface](./map-of-erc-4626.png)
 
 ### ایونٹس {#events}
 

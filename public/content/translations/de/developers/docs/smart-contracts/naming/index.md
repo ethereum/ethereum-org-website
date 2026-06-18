@@ -1,6 +1,6 @@
 ---
 title: Smart Contracts benennen
-description: Best Practices für die Benennung von Ethereum-Smart-Contracts mit ENS
+description: "Best Practices für die Benennung von Ethereum-Smart-Contracts mit ENS"
 lang: de
 ---
 

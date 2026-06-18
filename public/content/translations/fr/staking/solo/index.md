@@ -1,11 +1,11 @@
 ---
-title: Staker vos ETH à domicile
-description: Un aperçu de la façon de commencer à staker vos ETH à domicile
+title: "Staker vos ETH à domicile"
+description: "Un aperçu de la façon de commencer à staker vos ETH à domicile"
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Leslie le rhinocéros sur sa propre puce informatique.
+alt: "Leslie le rhinocéros sur sa propre puce informatique."
 sidebarDepth: 2
 summaryPoints:
   - Recevez un maximum de récompenses directement du protocole en maintenant votre validateur en ligne et en bon état de fonctionnement

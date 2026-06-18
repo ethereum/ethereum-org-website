@@ -1,7 +1,7 @@
 ---
 title: Restaking
 metaTitle: Was ist Restaking? | Vorteile und Nutzung von Restaking
-description: Nutze gestakte ETH, um andere dezentrale Dienste abzusichern und zusätzliche Belohnungen zu verdienen.
+description: "Nutze gestakte ETH, um andere dezentrale Dienste abzusichern und zusätzliche Belohnungen zu verdienen."
 lang: de
 template: use-cases
 image: /images/use-cases/restaking.png
@@ -39,7 +39,7 @@ Genauso wie viele ETH-Staker Ethereum-Validierungssoftware ausführen, führen v
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Gut zu wissen</strong></strong>
+ <p className="mt-0"><strong>Gut zu wissen</strong>
   <p className="mt-2">Während "Actively Validated Services" (AVSs) am gebräuchlichsten ist, verwenden verschiedene Restaking-Plattformen möglicherweise andere Namen für die dezentralen Dienste, die sie absichern helfen, wie "Autonomously Validated Services", "Distributed Secure Services" oder "Networks".</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ In dieser Welt mit Restaking profitieren sowohl der AVS als auch der Staker davo
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Zusätzlicher Vorteil von Restaking</strong></strong>
+ <p className="mt-0"><strong>Zusätzlicher Vorteil von Restaking</strong>
   <p className="mt-2">AVSs können all ihre Ressourcen in den Aufbau und die Vermarktung ihrer Dienste stecken, anstatt sich von Dezentralisierung und Sicherheit ablenken zu lassen.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ Am Restaking sind mehrere Entitäten beteiligt – jede von ihnen spielt eine wi
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Gut zu wissen</strong></strong>
+ <p className="mt-0"><strong>Gut zu wissen</strong>
   <p className="mt-2">Native und Liquid Restaker delegieren ihre gestakten ETH oft an einen Betreiber, anstatt die Software zur Absicherung von AVSs selbst auszuführen.</p>
   <p className="mt-2">Auf diese Weise müssen sie sich keine Sorgen um komplizierte technische Anforderungen von AVSs machen, obwohl sie eine niedrigere Belohnungsrate als Betreiber erhalten.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ Obwohl es sich um eine neuartige Idee handelt, sind bereits einige Projekte ents
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Achtung, falsche Bezeichnung</strong></strong>
+ <p className="mt-0"><strong>Achtung, falsche Bezeichnung</strong>
   <p className="mt-2">Einige Leute verwechseln "Restaking" mit der Kreditvergabe und Kreditaufnahme von LSTs in Dezentralisierten Finanzen (DeFi). Beides lässt gestakte ETH arbeiten, aber Restaking bedeutet die Absicherung von AVSs und nicht nur das Erzielen von Renditen auf LSTs.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,10 +139,10 @@ Während AVSs unterschiedliche Raten anbieten, geben dir Liquid Restaking Tokens
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Der Ethereum-Mitbegründer schreibt…</strong></strong>
+ <p className="mt-0"><strong>Der Ethereum-Mitbegründer schreibt…</strong>
   <p className="mt-2">
     Vitalik, der Mitbegründer von Ethereum, warnte in einem Blogbeitrag aus dem Jahr 2021 mit dem Titel <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a> vor den potenziellen Risiken des Restakings.
-  </a>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -161,7 +161,7 @@ Während AVSs unterschiedliche Raten anbieten, geben dir Liquid Restaking Tokens
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Ethereum-Staking:</strong> Wie funktioniert es?</strong>
+ <p className="mt-0"><strong>Ethereum-Staking:</strong> Wie funktioniert es?
   <ButtonLink href="/staking/">
     Mehr erfahren
   </ButtonLink>

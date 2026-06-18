@@ -3,9 +3,9 @@ title: "Examen détaillé du contrat ERC-20"
 description: Que contient le contrat ERC-20 d'OpenZeppelin et pourquoi ?
 author: Ori Pomerantz
 lang: fr
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: Examen détaillé de l'ERC-20
+breadcrumb: "Examen détaillé de l'ERC-20"
 published: 2021-03-09
 ---
 

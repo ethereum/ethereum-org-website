@@ -1,11 +1,11 @@
 ---
-title: పూల్డ్ స్టేకింగ్
-description: స్టేకింగ్ పూల్స్ గురించి తెలుసుకోండి
+title: "పూల్డ్ స్టేకింగ్"
+description: "స్టేకింగ్ పూల్స్ గురించి తెలుసుకోండి"
 lang: te
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: కొలనులో ఈదుతున్న లెస్లీ అనే ఖడ్గమృగం.
+alt: "కొలనులో ఈదుతున్న లెస్లీ అనే ఖడ్గమృగం."
 sidebarDepth: 2
 summaryPoints:
   - ఇతరులతో చేతులు కలపడం ద్వారా ఏదైనా మొత్తంలో ETHని స్టేక్ చేయండి మరియు రివార్డ్‌లను సంపాదించండి

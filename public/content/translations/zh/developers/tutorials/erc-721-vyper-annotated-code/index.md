@@ -1,9 +1,9 @@
 ---
 title: "Vyper ERC-721 合约演练"
-description: Ryuya Nakamura 的 ERC-721 合约及其工作原理
-author: 奥里·波梅兰茨
+description: "Ryuya Nakamura 的 ERC-721 合约及其工作原理"
+author: "奥里·波梅兰茨"
 lang: zh
-tags: ["vyper", "erc-721", "python"]
+tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
 breadcrumb: Vyper ERC-721
 published: 2021-04-01
@@ -298,7 +298,7 @@ def getApproved(_tokenId: uint256) -> address:
     return self.idToApprovals[_tokenId]
 ```
 
-请注意，`getApproved` _可以_返回零。如果代币有效，它将返回 `self.idToApprovals[_tokenId]`。如果没有授权人，则该值为零。
+请注意，`getApproved` <em>可以</em>返回零。如果代币有效，它将返回 `self.idToApprovals[_tokenId]`。如果没有授权人，则该值为零。
 
 ```python
 @view

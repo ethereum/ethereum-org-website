@@ -1,6 +1,6 @@
 ---
-title: विकेंद्रित ओळख
-description: विकेंद्रित ओळख म्हणजे काय आणि ती का महत्त्वाची आहे?
+title: "विकेंद्रित ओळख"
+description: "विकेंद्रित ओळख म्हणजे काय आणि ती का महत्त्वाची आहे?"
 lang: mr
 template: use-cases
 sidebarDepth: 2

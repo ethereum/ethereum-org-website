@@ -1,6 +1,6 @@
 ---
-title: Nœuds en tant que service
-description: Un aperçu de base des services de nœuds, de leurs avantages et inconvénients, et des fournisseurs populaires.
+title: "Nœuds en tant que service"
+description: "Un aperçu de base des services de nœuds, de leurs avantages et inconvénients, et des fournisseurs populaires."
 lang: fr
 sidebarDepth: 2
 ---
@@ -54,7 +54,7 @@ Voici une liste de certains des fournisseurs de nœuds Ethereum les plus populai
 - [**Alchemy**](https://alchemy.com/)
   - [Documentation](https://www.alchemy.com/docs/)
   - Fonctionnalités
-    - Le plus grand niveau gratuit avec 300 millions d'unités de calcul par mois (~30 millions de requêtes getLatestBlock)
+    - Le plus grand niveau gratuit avec 300 millions d'unités de calcul par mois (\~30 millions de requêtes getLatestBlock)
     - Prise en charge multicachaîne pour Polygon, Starknet, Optimism, Arbitrum
     - Alimente environ 70 % des plus grandes applications décentralisées (dapps) Ethereum et du volume de transactions de la finance décentralisée (DeFi)
     - Alertes webhook en temps réel via Alchemy Notify

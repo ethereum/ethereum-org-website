@@ -1,12 +1,12 @@
 ---
-title: Платежі в Етеріумі
-metaTitle: Платежі в Етеріумі
-description: Огляд платежів в Етеріумі
+title: "Платежі в Етеріумі"
+metaTitle: "Платежі в Етеріумі"
+description: "Огляд платежів в Етеріумі"
 lang: uk
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Логотип Етеріуму зображений разом із руками, що дають.
+alt: "Логотип Етеріуму зображений разом із руками, що дають."
 summaryPoints:
   - "Світ, де гроші рухаються так само вільно, як і інформація"
   - "Відкритий і глобальний, що забезпечує транзакції без кордонів для кожного"
@@ -62,7 +62,7 @@ summaryPoints:
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Створіть свій акаунт Етеріуму за допомогою додатка-гаманця вже сьогодні.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Почати
   </ButtonLink>
 </AlertContent>

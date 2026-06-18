@@ -1,6 +1,6 @@
 ---
 title: Rollup Optimistic
-description: Pengantar tentang rollup Optimistic—solusi penskalaan yang digunakan oleh komunitas Ethereum.
+description: "Pengantar tentang rollup Optimistic—solusi penskalaan yang digunakan oleh komunitas Ethereum."
 lang: id
 ---
 
@@ -152,7 +152,7 @@ Rollup Optimistic dirancang untuk interoperabilitas dengan Mainnet Ethereum dan 
 
 #### 1. Pergerakan aset {#asset-movement}
 
-##### Memasuki rollup {#evm-compatibility}
+##### Memasuki rollup {#}
 
 Untuk menggunakan rollup Optimistic, pengguna mendepositkan ETH, token ERC-20, dan aset lain yang diterima dalam kontrak [jembatan](/developers/docs/bridges/) rollup di l1. Kontrak jembatan akan meneruskan transaksi ke l2, di mana jumlah aset yang setara dicetak dan dikirim ke alamat pilihan pengguna di rollup Optimistic.
 
@@ -160,7 +160,7 @@ Transaksi yang dibuat pengguna (seperti deposit l1 > l2) biasanya diantrekan sam
 
 Beberapa rollup Optimistic mengadopsi pendekatan yang lebih lugas untuk mencegah sekuenser menyensor pengguna. Di sini, sebuah blok didefinisikan oleh semua transaksi yang dikirimkan ke kontrak l1 sejak blok sebelumnya (misalnya, deposit) di samping transaksi yang diproses pada rantai rollup. Jika sekuenser mengabaikan transaksi l1, ia akan memublikasikan akar state yang (terbukti) salah; oleh karena itu, sekuenser tidak dapat menunda pesan yang dibuat pengguna setelah diposting di l1.
 
-##### Keluar dari rollup {#cross-chain-contract-calls}
+##### Keluar dari rollup {#}
 
 Melakukan penarikan dari rollup Optimistic ke Ethereum lebih sulit karena skema pembuktian penipuan. Jika pengguna memulai transaksi l2 > l1 untuk menarik dana yang di-escrow di l1, mereka harus menunggu sampai periode tantangan—berlangsung sekitar tujuh hari—berlalu. Namun demikian, proses penarikan itu sendiri cukup mudah.
 
@@ -170,7 +170,7 @@ Untuk menghindari menunggu seminggu sebelum menarik dana ke Ethereum, pengguna r
 
 Penyedia likuiditas dapat memeriksa validitas permintaan penarikan pengguna (dengan mengeksekusi rantai itu sendiri) sebelum melepaskan dana. Dengan cara ini mereka memiliki jaminan bahwa transaksi pada akhirnya akan dikonfirmasi (yaitu, finalitas tanpa kepercayaan).
 
-#### 2. Kompatibilitas EVM {#how-do-optimistic-rollup-fees-work}
+#### 2. Kompatibilitas EVM {#evm-compatibility}
 
 Bagi pengembang, keuntungan dari rollup Optimistic adalah kompatibilitasnya—atau, lebih baik lagi, ekuivalensinya—dengan [Mesin Virtual Ethereum (EVM)](/developers/docs/evm/). Rollup yang kompatibel dengan EVM mematuhi spesifikasi dalam [kertas kuning Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf) dan mendukung EVM pada tingkat kode bita.
 
@@ -182,7 +182,7 @@ ii. Pengembang dan tim proyek yang menggunakan rollup Optimistic dapat memanfaat
 
 Menggunakan perkakas yang ada sangat penting karena alat-alat ini telah diaudit, di-debug, dan ditingkatkan secara ekstensif selama bertahun-tahun. Hal ini juga menghilangkan kebutuhan bagi pengembang Ethereum untuk mempelajari cara membangun dengan tumpukan pengembangan yang sama sekali baru.
 
-#### 3. Panggilan kontrak lintas rantai {#scaling-ethereum-with-optimistic-rollups}
+#### 3. Panggilan kontrak lintas rantai {#cross-chain-contract-calls}
 
 Pengguna (akun yang dimiliki secara eksternal) berinteraksi dengan kontrak l2 dengan mengirimkan transaksi ke kontrak rollup atau meminta sekuenser atau validator melakukannya untuk mereka. Rollup Optimistic juga memungkinkan akun kontrak di Ethereum untuk berinteraksi dengan kontrak l2 menggunakan kontrak jembatan untuk meneruskan pesan dan meneruskan data antara l1 dan l2. Ini berarti Anda dapat memprogram kontrak l1 di Mainnet Ethereum untuk memanggil fungsi milik kontrak pada rollup Optimistic l2.
 
@@ -194,7 +194,7 @@ Karena panggilan pesan lintas rantai menghasilkan eksekusi kontrak, pengirim bia
 
 Terakhir, kita harus mencatat bahwa panggilan pesan l2 > l1 antara kontrak perlu memperhitungkan penundaan (panggilan l1 > l2 biasanya dieksekusi setelah beberapa menit). Hal ini karena pesan yang dikirim ke Mainnet dari rollup Optimistic tidak dapat dieksekusi sampai jendela tantangan berakhir.
 
-## Bagaimana cara kerja biaya rollup Optimistic? {#optimistic-rollups-pros-and-cons}
+## Bagaimana cara kerja biaya rollup Optimistic? {#how-do-optimistic-rollup-fees-work}
 
 Rollup Optimistic menggunakan skema biaya gas, mirip dengan Ethereum, untuk menunjukkan berapa banyak yang dibayar pengguna per transaksi. Biaya yang dikenakan pada rollup Optimistic bergantung pada komponen berikut:
 
@@ -206,7 +206,7 @@ Rollup Optimistic menggunakan skema biaya gas, mirip dengan Ethereum, untuk menu
 
 Rollup Optimistic menerapkan beberapa mekanisme untuk mengurangi biaya bagi pengguna, termasuk pemrosesan batch transaksi dan mengompresi `calldata` untuk mengurangi biaya publikasi data. Anda dapat memeriksa [pelacak biaya l2](https://l2fees.info/) untuk gambaran umum waktu nyata tentang berapa biaya untuk menggunakan rollup Optimistic berbasis Ethereum.
 
-## Bagaimana rollup Optimistic menskalakan Ethereum? {#optimistic-video}
+## Bagaimana rollup Optimistic menskalakan Ethereum? {#scaling-ethereum-with-optimistic-rollups}
 
 Seperti yang dijelaskan, rollup Optimistic memublikasikan data transaksi terkompresi di Ethereum untuk menjamin ketersediaan data. Kemampuan untuk mengompresi data yang dipublikasikan secara onchain sangat penting untuk menskalakan laju pemrosesan di Ethereum dengan rollup Optimistic.
 
@@ -223,7 +223,7 @@ Rollup Optimistic menggunakan beberapa teknik untuk mencapai kompresi data trans
 | Value     | 9                      | ~3            |
 | Signature | ~68 (2 + 33 + 33)      | ~0.5          |
 | From      | 0 (dipulihkan dari sig)| 4             |
-| **Total** | **~112 bita**          | **~12 bita**  |
+| **Total** | **\~112 bita**          | **\~12 bita**  |
 
 Melakukan beberapa perhitungan kasar pada angka-angka ini dapat membantu menunjukkan peningkatan skalabilitas yang diberikan oleh rollup Optimistic:
 
@@ -235,7 +235,7 @@ Ini adalah perkiraan yang cukup optimistis, mengingat transaksi rollup Optimisti
 
 Pengenalan [sharding data](/roadmap/danksharding/) di Ethereum diharapkan dapat meningkatkan skalabilitas dalam rollup Optimistic. Karena transaksi rollup harus berbagi ruang blok dengan transaksi non-rollup lainnya, kapasitas pemrosesannya dibatasi oleh laju pemrosesan data pada rantai utama Ethereum. Danksharding akan meningkatkan ruang yang tersedia untuk rantai l2 untuk memublikasikan data per blok, menggunakan penyimpanan "blob" yang lebih murah dan tidak permanen alih-alih `CALLDATA` yang mahal dan permanen.
 
-### Kelebihan dan kekurangan rollup Optimistic {#further-reading-on-optimistic-rollups}
+### Kelebihan dan kekurangan rollup Optimistic {#optimistic-rollups-pros-and-cons}
 
 | Kelebihan                                                                                                                                             | Kekurangan                                                                                                                                          |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -247,13 +247,13 @@ Pengenalan [sharding data](/roadmap/danksharding/) di Ethereum diharapkan dapat 
 | Rollup Optimistic bergantung pada insentif kriptoekonomi yang dirancang dengan baik untuk meningkatkan keamanan pada rantai.                          | Rollup harus memposting semua data transaksi secara onchain, yang dapat meningkatkan biaya.                                                         |
 | Kompatibilitas dengan EVM dan Solidity memungkinkan pengembang untuk mem-porting kontrak pintar asli Ethereum ke rollup atau menggunakan perkakas yang ada untuk membuat dapp baru. |
 
-### Penjelasan visual tentang rollup Optimistic {#tutorials}
+### Penjelasan visual tentang rollup Optimistic {#optimistic-video}
 
 Lebih suka belajar secara visual? Tonton Finematics menjelaskan rollup Optimistic:
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Bacaan lebih lanjut tentang rollup Optimistic
+## Bacaan lebih lanjut tentang rollup Optimistic {#further-reading-on-optimistic-rollups}
 
 - [Bagaimana cara kerja rollup Optimistic (Panduan Lengkap)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Apa itu Rollup Rantai Blok? Pengantar Teknis](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
@@ -264,6 +264,6 @@ Lebih suka belajar secara visual? Tonton Finematics menjelaskan rollup Optimisti
 - [Eksplorasi Mendalam OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Apa itu Mesin Virtual Optimistic?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 
-## Tutorial: Rollup Optimistic dan jembatan di Ethereum
+## Tutorial: Rollup Optimistic dan jembatan di Ethereum {#tutorials}
 
 - [Panduan kontrak jembatan standar Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Panduan kode beranotasi dari jembatan standar Optimism untuk memindahkan aset antara l1 dan l2._

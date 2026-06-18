@@ -1,11 +1,11 @@
 ---
-title: テスト用にSolidityスマートコントラクトをモックする方法
-description: テスト時にコントラクトをモック（からかう）すべき理由
-author: マーカス・ワース
+title: "テスト用にSolidityスマートコントラクトをモックする方法"
+description: "テスト時にコントラクトをモック（からかう）すべき理由"
+author: "マーカス・ワース"
 lang: ja
-tags: ["solidity", "スマートコントラクト", "テスト", "モック"]
+tags: ["Solidity", "スマートコントラクト", "テスト", "モック"]
 skill: intermediate
-breadcrumb: コントラクトのモック
+breadcrumb: "コントラクトのモック"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

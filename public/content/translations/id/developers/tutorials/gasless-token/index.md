@@ -746,7 +746,8 @@ Biarkan pengguna menerbitkan transaksi transfer ERC-20.
 Jika ada hash transaksi terakhir, tampilkan tautan agar pengguna dapat melihatnya di penjelajah blok.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

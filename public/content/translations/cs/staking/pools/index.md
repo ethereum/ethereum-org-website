@@ -1,11 +1,11 @@
 ---
-title: Společný staking
-description: Zjistěte více o stakingových poolech
+title: "Společný staking"
+description: "Zjistěte více o stakingových poolech"
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Nosorožec Leslie plave v bazénu.
+alt: "Nosorožec Leslie plave v bazénu."
 sidebarDepth: 2
 summaryPoints:
   - Stakujte a získávejte odměny s jakýmkoli množstvím ETH tím, že spojíte síly s ostatními

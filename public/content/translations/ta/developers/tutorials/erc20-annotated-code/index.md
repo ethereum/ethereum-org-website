@@ -1,11 +1,11 @@
 ---
 title: "ERC-20 ஒப்பந்தம் குறித்த வழிகாட்டி"
-description: ஓப்பன்செப்பெலின் ERC-20 ஒப்பந்தத்தில் என்ன உள்ளது மற்றும் அது ஏன் அங்கு உள்ளது?
-author: ஓரி பொமரன்ட்ஸ்
+description: "ஓப்பன்செப்பெலின் ERC-20 ஒப்பந்தத்தில் என்ன உள்ளது மற்றும் அது ஏன் அங்கு உள்ளது?"
+author: "ஓரி பொமரன்ட்ஸ்"
 lang: ta
-tags: ["solidity", "erc-20"]
+tags: ["Solidity", "erc-20"]
 skill: beginner
-breadcrumb: ERC-20 வழிகாட்டி
+breadcrumb: "ERC-20 வழிகாட்டி"
 published: 2021-03-09
 ---
 

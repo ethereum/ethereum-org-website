@@ -1,11 +1,11 @@
 ---
 title: Restaking
-metaTitle: Co je restaking? | Výhody a využití restakingu
-description: Využijte stakované ETH k zabezpečení dalších decentralizovaných služeb a získejte extra odměny.
+metaTitle: "Co je restaking? | Výhody a využití restakingu"
+description: "Využijte stakované ETH k zabezpečení dalších decentralizovaných služeb a získejte extra odměny."
 lang: cs
 template: use-cases
 image: /images/use-cases/restaking.png
-alt: Vizuální znázornění restakingu na Ethereu.
+alt: "Vizuální znázornění restakingu na Ethereu."
 sidebarDepth: 2
 summaryPoints:
   - "Využijte stakované ETH k zabezpečení dalších decentralizovaných služeb a získejte extra odměny."
@@ -39,7 +39,7 @@ Stejně jako mnoho stakerů ETH provozuje validační software Etherea, mnoho re
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Dobré vědět</strong></strong>
+ <p className="mt-0"><strong>Dobré vědět</strong>
   <p className="mt-2">Ačkoli je termín „Aktivně validované služby“ (AVSs) nejběžnější, různé platformy pro restaking mohou pro decentralizované služby, které pomáhají zabezpečit, používat i jiné názvy, například „Autonomně validované služby“, „Distribuované bezpečné služby“ nebo „Sítě“.</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ V tomto světě s restakingem těží AVS i staker z toho, že se mohou navzáje
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Další výhoda restakingu</strong></strong>
+ <p className="mt-0"><strong>Další výhoda restakingu</strong>
   <p className="mt-2">AVS mohou vložit všechny své zdroje do budování a marketingu svých služeb, místo aby se rozptylovaly decentralizací a zabezpečením.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ Do restakingu je zapojeno několik subjektů – každý z nich hraje důležito
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Dobré vědět</strong></strong>
+ <p className="mt-0"><strong>Dobré vědět</strong>
   <p className="mt-2">Nativní a likvidní restakeři často delegují své stakované ETH na operátora, místo aby sami provozovali software k zabezpečení AVS.</p>
   <p className="mt-2">Tímto způsobem se nemusí starat o složité technické požadavky ze strany AVS, ačkoli dostávají nižší míru odměny než operátoři.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ Ačkoli jde o novou myšlenku, objevilo se již několik projektů, které zkoum
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Pozor na záměnu pojmů</strong></strong>
+ <p className="mt-0"><strong>Pozor na záměnu pojmů</strong>
   <p className="mt-2">Někteří lidé si pletou „restaking“ s půjčováním a vypůjčováním LST v decentralizovaných financích (DeFi). Obojí sice zapojuje stakované ETH do práce, ale restaking znamená zabezpečení AVS, nikoli jen získávání výnosu z LST.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,10 +139,10 @@ Ačkoli AVS nabízejí různé sazby, tokeny likvidního restakingu (Liquid Rest
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Spoluzakladatel Etherea píše…</strong></strong>
+ <p className="mt-0"><strong>Spoluzakladatel Etherea píše…</strong>
   <p className="mt-2">
     Vitalik, spoluzakladatel Etherea, varoval před potenciálními riziky restakingu v příspěvku na blogu z roku 2021 s názvem <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus.</a>
-  </a>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -161,7 +161,7 @@ Ačkoli AVS nabízejí různé sazby, tokeny likvidního restakingu (Liquid Rest
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Staking Etherea:</strong> Jak to funguje?</strong>
+ <p className="mt-0"><strong>Staking Etherea:</strong> Jak to funguje?
   <ButtonLink href="/staking/">
     Zjistit více
   </ButtonLink>

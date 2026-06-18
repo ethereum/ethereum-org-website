@@ -1,6 +1,6 @@
 ---
 title: Verificando contratos inteligentes
-description: Uma visão geral da verificação de código-fonte para contratos inteligentes do Ethereum
+description: "Uma visão geral da verificação de código-fonte para contratos inteligentes do Ethereum"
 lang: pt-br
 ---
 

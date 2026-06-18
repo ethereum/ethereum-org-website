@@ -1,6 +1,6 @@
 ---
-title: NFT 작성 및 배포 방법 (NFT 튜토리얼 시리즈 1/3부)
-description: 이 튜토리얼은 이더리움과 IPFS(Inter Planetary File System)를 사용하여 대체 불가능한 토큰(ERC-721 토큰) 스마트 컨트랙트를 작성하고 배포하는 방법을 단계별로 안내하는 NFT 시리즈의 1부입니다.
+title: "NFT 작성 및 배포 방법 (NFT 튜토리얼 시리즈 1/3부)"
+description: "이 튜토리얼은 이더리움과 IPFS(Inter Planetary File System)를 사용하여 대체 불가능한 토큰(ERC-721 토큰) 스마트 컨트랙트를 작성하고 배포하는 방법을 단계별로 안내하는 NFT 시리즈의 1부입니다."
 author: "수미 무드길"
 tags:
   - ERC-721
@@ -8,7 +8,7 @@ tags:
   - Solidity
   - 스마트 컨트랙트
 skill: beginner
-breadcrumb: NFT 작성 및 배포
+breadcrumb: "NFT 작성 및 배포"
 lang: ko
 published: 2021-04-22
 ---
@@ -152,7 +152,7 @@ my-nft 프로젝트 안에서 다음을 실행합니다.
 
 ## 10단계: 컨트랙트 작성하기 {#write-contract}
 
-이제 환경 설정이 완료되었으니 더 흥미로운 작업인 _스마트 컨트랙트 코드 작성_으로 넘어가 보겠습니다!
+이제 환경 설정이 완료되었으니 더 흥미로운 작업인 <em>스마트 컨트랙트 코드 작성</em>으로 넘어가 보겠습니다!
 
 선호하는 편집기(저희는 [VSCode](https://code.visualstudio.com/)를 추천합니다)에서 my-nft 프로젝트를 엽니다. 스마트 컨트랙트는 Solidity라는 언어로 작성되며, 이를 사용하여 MyNFT.sol 스마트 컨트랙트를 작성할 것입니다.‌
 
@@ -193,7 +193,7 @@ my-nft 프로젝트 안에서 다음을 실행합니다.
 
 3. 오픈제플린 컨트랙트 라이브러리에서 클래스를 상속받고 있으므로, 명령줄에서 `npm install @openzeppelin/contracts^4.0.0`를 실행하여 폴더에 라이브러리를 설치합니다.
 
-그렇다면 이 코드는 정확히 _어떤 역할_을 할까요? 한 줄씩 분석해 보겠습니다.
+그렇다면 이 코드는 정확히 <em>어떤 역할</em>을 할까요? 한 줄씩 분석해 보겠습니다.
 
 스마트 컨트랙트의 맨 위에서 세 개의 [오픈제플린](https://openzeppelin.com/) 스마트 컨트랙트 클래스를 가져옵니다(import).
 

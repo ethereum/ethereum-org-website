@@ -1,6 +1,6 @@
 ---
-title: Danh tính phi tập trung
-description: Danh tính phi tập trung là gì và tại sao nó lại quan trọng?
+title: "Danh tính phi tập trung"
+description: "Danh tính phi tập trung là gì và tại sao nó lại quan trọng?"
 lang: vi
 template: use-cases
 sidebarDepth: 2

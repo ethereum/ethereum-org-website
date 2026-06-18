@@ -1,6 +1,6 @@
 ---
 title: Pooled Staking
-description: Erfahre mehr über Staking-Pools
+description: "Erfahre mehr über Staking-Pools"
 lang: de
 template: staking
 emoji: ":money_with_wings:"

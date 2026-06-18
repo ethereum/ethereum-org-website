@@ -1,11 +1,11 @@
 ---
-title: 在家質押你的 ETH
-description: 如何開始在家質押 ETH 的概覽
+title: "在家質押你的 ETH"
+description: "如何開始在家質押 ETH 的概覽"
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: 犀牛 Leslie 站在她自己的電腦晶片上。
+alt: "犀牛 Leslie 站在她自己的電腦晶片上。"
 sidebarDepth: 2
 summaryPoints:
   - 保持你的驗證者正常運作並保持連線，直接從協定中獲得最大獎勵

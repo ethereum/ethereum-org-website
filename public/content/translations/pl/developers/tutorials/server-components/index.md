@@ -1,6 +1,6 @@
 ---
 title: "Komponenty serwerowe i agenci dla aplikacji web3"
-description: Po przeczytaniu tego samouczka będziesz w stanie pisać serwery w języku TypeScript, które nasłuchują zdarzeń na blockchainie i odpowiednio na nie reagują za pomocą własnych transakcji. Pozwoli to na pisanie scentralizowanych aplikacji (ponieważ serwer jest punktem awarii), które mogą wchodzić w interakcje z podmiotami web3. Te same techniki można również wykorzystać do napisania agenta, który reaguje na zdarzenia onchain bez udziału człowieka.
+description: "Po przeczytaniu tego samouczka będziesz w stanie pisać serwery w języku TypeScript, które nasłuchują zdarzeń na blockchainie i odpowiednio na nie reagują za pomocą własnych transakcji. Pozwoli to na pisanie scentralizowanych aplikacji (ponieważ serwer jest punktem awarii), które mogą wchodzić w interakcje z podmiotami web3. Te same techniki można również wykorzystać do napisania agenta, który reaguje na zdarzenia onchain bez udziału człowieka."
 
 author: Ori Pomerantz
 lang: pl
@@ -69,7 +69,7 @@ Najprostszym sposobem na zrozumienie, jak napisać komponent serwerowy, jest prz
 
 Zdecydowana większość programu znajduje się w pliku [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Tworzenie wymaganych obiektów {#package-json}
+##### Tworzenie wymaganych obiektów {#}
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 Teraz, gdy mamy już wszystkie wymagane elementy, możemy w końcu utworzyć [instancję kontraktu](https://viem.sh/docs/contract/getContract). Użyjemy tej instancji kontraktu do komunikacji z kontraktem onchain.
 
-##### Odczyt z blockchaina {#conclusion}
+##### Odczyt z blockchaina {#}
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript jest jednowątkowy, więc kiedy uruchamiamy długotrwały proces, mus
 
 Jeśli interesuje Cię, jak to działa, możesz [przeczytać o tym tutaj](https://www.w3schools.com/js/js_promise.asp), ale w praktyce wszystko, co musisz wiedzieć, to to, że używasz `await` dla wyników, jeśli rozpoczynasz operację, która zajmuje dużo czasu, a każda funkcja, która to robi, musi być zadeklarowana jako `async`.
 
-##### Wysyłanie transakcji
+##### Wysyłanie transakcji {#}
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ Pole `write` instancji kontraktu zawiera wszystkie funkcje, które zapisują do 
 
 Zgłoś hash transakcji (jako część adresu URL do eksploratora bloków, aby go wyświetlić) i zwróć go.
 
-##### Reagowanie na zdarzenia
+##### Reagowanie na zdarzenia {#}
 
 ```typescript
 greeter.watchEvent.SetGreeting({
@@ -243,7 +243,7 @@ Może wystąpić wiele zdarzeń, ale dla uproszczenia interesuje nas tylko pierw
 
 Jeśli nadawcą _nie_ jest ten serwer, użyj `setGreeting`, aby zmienić powitanie.
 
-#### `package.json`
+#### `package.json` {#package-json}
 
 [Ten plik](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) kontroluje konfigurację [Node.js](https://nodejs.org/en). Ten artykuł wyjaśnia tylko najważniejsze definicje.
 
@@ -287,7 +287,7 @@ Są to pakiety, które są wymagane tylko do programowania. Tutaj potrzebujemy `
 
 Są to pakiety, które są wymagane w czasie wykonywania, podczas uruchamiania `dist/app.js`.
 
-## Podsumowanie
+## Podsumowanie {#conclusion}
 
 Scentralizowany serwer, który tutaj stworzyliśmy, spełnia swoje zadanie, którym jest działanie jako agent dla użytkownika. Każdy inny, kto chce, aby dapp nadal funkcjonował i jest skłonny wydać gaz, może uruchomić nową instancję serwera z własnym adresem.
 

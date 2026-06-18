@@ -1,6 +1,6 @@
 ---
 title: Strategie di archiviazione dei dati della blockchain
-description: Esistono diversi modi per archiviare i dati utilizzando la blockchain. Questo articolo confronterà le diverse strategie, i loro costi e compromessi, nonché i requisiti per utilizzarle in modo sicuro.
+description: "Esistono diversi modi per archiviare i dati utilizzando la blockchain. Questo articolo confronterà le diverse strategie, i loro costi e compromessi, nonché i requisiti per utilizzarle in modo sicuro."
 lang: it
 ---
 
@@ -110,7 +110,7 @@ Questa tabella riassume le diverse opzioni, i loro vantaggi e svantaggi.
 
 | Tipo di archiviazione       | Fonte dei dati      | Garanzia di disponibilità                                                                                                          | Disponibilità onchain                                            | Limitazioni aggiuntive                                                  |
 | --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Blob EIP-4844               | Offchain            | Garanzia di Ethereum per [~18 giorni](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | È disponibile solo l'hash                                        |                                                                         |
+| Blob EIP-4844               | Offchain            | Garanzia di Ethereum per [\~18 giorni](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | È disponibile solo l'hash                                        |                                                                         |
 | Dati di chiamata            | Offchain            | Garanzia di Ethereum per sempre (parte della blockchain)                                                                           | Disponibile solo se scritti in un contratto e in quella transazione |
 | Offchain con meccanismi di L1 | Offchain            | Garanzia di "un verificatore onesto" durante il periodo di contestazione                                                           | Solo hash                                                        | Garantito dal meccanismo di contestazione, solo durante il periodo di contestazione |
 | Codice del contratto        | Onchain o offchain  | Garanzia di Ethereum per sempre (parte della blockchain)                                                                           | Sì                                                               | Scritto a un indirizzo "casuale", non può iniziare con `0xEF`                 |

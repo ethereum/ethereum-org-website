@@ -1,11 +1,11 @@
 ---
-title: ETHをホームステークする
-description: ETHのホームステーキングを始める方法の概要
+title: "ETHをホームステークする"
+description: "ETHのホームステーキングを始める方法の概要"
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: 自身のコンピューターチップに乗っているサイのレスリー。
+alt: "自身のコンピューターチップに乗っているサイのレスリー。"
 sidebarDepth: 2
 summaryPoints:
   - バリデータを適切に機能させ、オンラインに保つことで、プロトコルから直接最大の報酬を受け取ることができます

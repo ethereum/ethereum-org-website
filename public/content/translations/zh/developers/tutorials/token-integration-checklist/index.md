@@ -1,11 +1,11 @@
 ---
-title: 代币集成清单
-description: 与代币交互时需要考虑的检查清单
+title: "代币集成清单"
+description: "与代币交互时需要考虑的检查清单"
 author: "Trailofbits"
 lang: zh
-tags: ["solidity", "智能合约", "安全", "代币"]
+tags: ["Solidity", "智能合约", "安全", "代币"]
 skill: intermediate
-breadcrumb: 代币集成
+breadcrumb: "代币集成"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

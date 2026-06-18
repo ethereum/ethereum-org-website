@@ -1,6 +1,6 @@
 ---
-title: Uzly jako služba
-description: Základní přehled služeb pro uzly, jejich výhody a nevýhody a oblíbení poskytovatelé.
+title: "Uzly jako služba"
+description: "Základní přehled služeb pro uzly, jejich výhody a nevýhody a oblíbení poskytovatelé."
 lang: cs
 sidebarDepth: 2
 ---
@@ -54,7 +54,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentace](https://www.alchemy.com/docs/)
   - Funkce
-    - Největší bezplatná úroveň s 300 miliony výpočetních jednotek měsíčně (~30 milionů požadavků getLatestBlock)
+    - Největší bezplatná úroveň s 300 miliony výpočetních jednotek měsíčně (\~30 milionů požadavků getLatestBlock)
     - Podpora více řetězců pro Polygon, Starknet, Optimism, Arbitrum
     - Pohání ~70 % největších decentralizovaných aplikací (dapp) na Ethereu a objemu transakcí decentralizovaných financí (DeFi)
     - Upozornění webhooků v reálném čase prostřednictvím Alchemy Notify

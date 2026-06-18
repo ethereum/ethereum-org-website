@@ -1,11 +1,11 @@
 ---
 title: "EIP-1271：簽署與驗證智能合約簽章"
-description: 使用 EIP-1271 產生與驗證智能合約簽章的概述。我們還將探討 Safe（前身為 Gnosis Safe）中使用的 EIP-1271 實作，為智能合約開發人員提供一個具體的建構範例。
-author: 內森·H·梁
+description: "使用 EIP-1271 產生與驗證智能合約簽章的概述。我們還將探討 Safe（前身為 Gnosis Safe）中使用的 EIP-1271 實作，為智能合約開發人員提供一個具體的建構範例。"
+author: "內森·H·梁"
 lang: zh-tw
 tags: ["eip-1271", "智能合約", "驗證", "簽署"]
 skill: intermediate
-breadcrumb: EIP-1271 簽章
+breadcrumb: "EIP-1271 簽章"
 published: 2023-01-12
 ---
 

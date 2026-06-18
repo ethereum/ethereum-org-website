@@ -1,9 +1,9 @@
 ---
 title: "The Graph: Naprawa zapytań o dane w Web3"
-description: Blockchain jest jak baza danych, ale bez SQL. Wszystkie dane tam są, ale nie ma do nich dostępu. Pozwól, że pokażę Ci, jak to naprawić za pomocą The Graph i GraphQL.
+description: "Blockchain jest jak baza danych, ale bez SQL. Wszystkie dane tam są, ale nie ma do nich dostępu. Pozwól, że pokażę Ci, jak to naprawić za pomocą The Graph i GraphQL."
 author: Markus Waas
 lang: pl
-tags: ["solidity", "inteligentne kontrakty", "zapytania", "the graph", "react"]
+tags: ["Solidity", "inteligentne kontrakty", "zapytania", "the graph", "React"]
 skill: intermediate
 breadcrumb: The Graph
 published: 2020-09-06

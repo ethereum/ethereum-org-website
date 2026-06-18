@@ -1,6 +1,6 @@
 ---
 title: "Permitir que tus usuarios sin gas posean tokens y llamen a contratos"
-description: Usando la abstracción de cuentas, podemos crear billeteras de contratos inteligentes que acepten transacciones enviadas por una EOA específica o firmadas por esa EOA. Estos contratos inteligentes pueden entonces poseer tokens, que están bajo el control de la EOA.
+description: "Usando la abstracción de cuentas, podemos crear billeteras de contratos inteligentes que acepten transacciones enviadas por una EOA específica o firmadas por esa EOA. Estos contratos inteligentes pueden entonces poseer tokens, que están bajo el control de la EOA."
 author: Ori Pomerantz
 tags: ["sin gas", "erc-20", "abstracción de cuentas"]
 skill: intermediate
@@ -746,7 +746,8 @@ Permite al usuario emitir transacciones de transferencia ERC-20.
 Si hay un hash de la última transacción, muestra un enlace para que el usuario pueda verlo en un explorador de bloques.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

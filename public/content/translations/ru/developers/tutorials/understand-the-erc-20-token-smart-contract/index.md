@@ -1,6 +1,6 @@
 ---
-title: Понимание смарт-контракта токена ERC-20
-description: Узнайте, как реализовать стандарт токена ERC-20, с полным примером смарт-контракта на Solidity и объяснением.
+title: "Понимание смарт-контракта токена ERC-20"
+description: "Узнайте, как реализовать стандарт токена ERC-20, с полным примером смарт-контракта на Solidity и объяснением."
 author: jdourlens
 tags:
   - смарт-контракты
@@ -8,7 +8,7 @@ tags:
   - solidity
   - erc-20
 skill: beginner
-breadcrumb: Основы токена ERC-20
+breadcrumb: "Основы токена ERC-20"
 lang: ru
 published: 2020-04-05
 source: EthereumDev

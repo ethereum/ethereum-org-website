@@ -1,11 +1,11 @@
 ---
-title: एकत्रित स्टेकिंग
-description: स्टेकिंग पूल्सबद्दल जाणून घ्या
+title: "एकत्रित स्टेकिंग"
+description: "स्टेकिंग पूल्सबद्दल जाणून घ्या"
 lang: mr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: लेस्ली गेंडा पूलमध्ये पोहत आहे.
+alt: "लेस्ली गेंडा पूलमध्ये पोहत आहे."
 sidebarDepth: 2
 summaryPoints:
   - इतरांसोबत एकत्र येऊन कोणत्याही रकमेच्या ETH सह स्टेक करा आणि रिवॉर्ड्स मिळवा

@@ -2,7 +2,7 @@
 title: "⁦ERC-20⁩ ٹوکن سمارٹ کنٹریکٹ کو سمجھیں"
 description: "ایک مکمل ⁦Solidity⁩ سمارٹ کنٹریکٹ کی مثال اور وضاحت کے ساتھ ⁦ERC-20⁩ ٹوکن کے معیار کو نافذ کرنے کا طریقہ سیکھیں۔"
 author: "jdourlens"
-tags: ["سمارٹ کنٹریکٹس", "ٹوکنز", "solidity", "erc-20"]
+tags: ["سمارٹ کنٹریکٹس", "ٹوکنز", "Solidity", "erc-20"]
 skill: beginner
 breadcrumb: "⁦ERC-20⁩ ٹوکن کی بنیادی باتیں"
 lang: ur

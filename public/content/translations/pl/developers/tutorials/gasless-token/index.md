@@ -1,6 +1,6 @@
 ---
 title: "Pozwalanie użytkownikom bez gazu na przechowywanie tokenów i wywoływanie kontraktów"
-description: Wykorzystując abstrakcję konta, możemy tworzyć portfele w postaci inteligentnych kontraktów, które akceptują transakcje wysłane przez określone EOA lub przez nie podpisane. Te inteligentne kontrakty mogą następnie posiadać tokeny, które znajdują się pod kontrolą EOA.
+description: "Wykorzystując abstrakcję konta, możemy tworzyć portfele w postaci inteligentnych kontraktów, które akceptują transakcje wysłane przez określone EOA lub przez nie podpisane. Te inteligentne kontrakty mogą następnie posiadać tokeny, które znajdują się pod kontrolą EOA."
 author: Ori Pomerantz
 tags: ["bez gazu", "erc-20", "abstrakcja konta"]
 skill: intermediate
@@ -746,7 +746,8 @@ Pozwól użytkownikowi na wydawanie transakcji transferu ERC-20.
 Jeśli istnieje hash ostatniej transakcji, pokaż link, aby użytkownik mógł go wyświetlić w eksploratorze bloków.
 
 ```js
-      </div>
+ 
+</div>
     </>
   )
 }

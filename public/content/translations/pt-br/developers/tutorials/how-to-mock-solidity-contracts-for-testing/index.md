@@ -1,9 +1,9 @@
 ---
 title: Como fazer mock de contratos inteligentes em Solidity para testes
-description: Por que você deve fazer mock dos seus contratos ao testar
+description: "Por que você deve fazer mock dos seus contratos ao testar"
 author: Markus Waas
 lang: pt-br
-tags: ["solidity", "contratos inteligentes", "testes", "mocking"]
+tags: ["Solidity", "contratos inteligentes", "tes", "mocking"]
 skill: intermediate
 breadcrumb: Mocking de contratos
 published: 2020-05-02

@@ -1,6 +1,6 @@
 ---
-title: Pojmenování chytrých kontraktů
-description: Osvědčené postupy pro pojmenování chytrých kontraktů na Ethereu pomocí ENS
+title: "Pojmenování chytrých kontraktů"
+description: "Osvědčené postupy pro pojmenování chytrých kontraktů na Ethereu pomocí ENS"
 lang: cs
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: Спільний стейкінг
-description: Дізнайтеся про стейкінг-пули
+title: "Спільний стейкінг"
+description: "Дізнайтеся про стейкінг-пули"
 lang: uk
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Носоріг Леслі плаває в басейні.
+alt: "Носоріг Леслі плаває в басейні."
 sidebarDepth: 2
 summaryPoints:
   - Стейкайте та отримуйте винагороди з будь-якою кількістю ETH, об'єднавши зусилля з іншими

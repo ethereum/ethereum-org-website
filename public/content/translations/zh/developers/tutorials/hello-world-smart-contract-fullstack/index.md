@@ -1,13 +1,13 @@
 ---
-title: 适合初学者的 Hello World 智能合约 - 全栈
-description: 关于在以太坊上编写和部署简单智能合约的入门教程。
+title: "适合初学者的 Hello World 智能合约 - 全栈"
+description: "关于在以太坊上编写和部署简单智能合约的入门教程。"
 author: "nstrike2"
-breadcrumb: Hello World 全栈
+breadcrumb: "Hello World 全栈"
 tags:
   [
-    "solidity",
-    "hardhat",
-    "alchemy",
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
     "智能合约",
     "部署",
     "区块浏览器",
@@ -835,8 +835,10 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 

@@ -1,11 +1,11 @@
 ---
-title: టెస్టింగ్ కోసం Solidity స్మార్ట్ కాంట్రాక్ట్‌లను మాక్ చేయడం ఎలా
-description: టెస్టింగ్ చేసేటప్పుడు మీరు మీ కాంట్రాక్ట్‌లను ఎందుకు మాక్ చేయాలి
-author: మార్కస్ వాస్
+title: "టెస్టింగ్ కోసం Solidity స్మార్ట్ కాంట్రాక్ట్‌లను మాక్ చేయడం ఎలా"
+description: "టెస్టింగ్ చేసేటప్పుడు మీరు మీ కాంట్రాక్ట్‌లను ఎందుకు మాక్ చేయాలి"
+author: "మార్కస్ వాస్"
 lang: te
 tags: ["Solidity", "స్మార్ట్ కాంట్రాక్ట్‌లు", "టెస్టింగ్", "మాకింగ్"]
 skill: intermediate
-breadcrumb: కాంట్రాక్ట్‌లను మాక్ చేయడం
+breadcrumb: "కాంట్రాక్ట్‌లను మాక్ చేయడం"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

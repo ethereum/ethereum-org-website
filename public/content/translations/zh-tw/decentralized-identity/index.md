@@ -1,6 +1,6 @@
 ---
-title: 去中心化身分
-description: 什麼是去中心化身分？為什麼它很重要？
+title: "去中心化身分"
+description: "什麼是去中心化身分？為什麼它很重要？"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2

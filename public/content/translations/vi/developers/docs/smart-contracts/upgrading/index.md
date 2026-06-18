@@ -1,6 +1,6 @@
 ---
-title: Nâng cấp hợp đồng thông minh
-description: Tổng quan về các mẫu nâng cấp cho hợp đồng thông minh Ethereum
+title: "Nâng cấp hợp đồng thông minh"
+description: "Tổng quan về các mẫu nâng cấp cho hợp đồng thông minh Ethereum"
 lang: vi
 ---
 

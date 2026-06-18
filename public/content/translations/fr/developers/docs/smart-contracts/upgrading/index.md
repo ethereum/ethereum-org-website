@@ -1,6 +1,6 @@
 ---
-title: Mettre à niveau les contrats intelligents
-description: Un aperçu des modèles de mise à niveau pour les contrats intelligents Ethereum
+title: "Mettre à niveau les contrats intelligents"
+description: "Un aperçu des modèles de mise à niveau pour les contrats intelligents Ethereum"
 lang: fr
 ---
 

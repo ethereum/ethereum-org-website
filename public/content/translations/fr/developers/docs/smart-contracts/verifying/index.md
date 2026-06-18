@@ -1,6 +1,6 @@
 ---
-title: Vérification des contrats intelligents
-description: Un aperçu de la vérification du code source pour les contrats intelligents Ethereum
+title: "Vérification des contrats intelligents"
+description: "Un aperçu de la vérification du code source pour les contrats intelligents Ethereum"
 lang: fr
 ---
 

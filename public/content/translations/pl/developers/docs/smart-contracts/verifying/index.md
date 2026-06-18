@@ -1,6 +1,6 @@
 ---
-title: Weryfikacja inteligentnych kontraktów
-description: Przegląd weryfikacji kodu źródłowego dla inteligentnych kontraktów Ethereum
+title: "Weryfikacja inteligentnych kontraktów"
+description: "Przegląd weryfikacji kodu źródłowego dla inteligentnych kontraktów Ethereum"
 lang: pl
 ---
 
