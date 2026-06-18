@@ -14,7 +14,7 @@ export const fetchWithRetry = async (
   init?: RequestInit,
   options?: RetryOptions
 ) => {
-  const retries = options?.retries ?? 3
+  const retries = options?.retries ?? 5
   const timeoutMs = options?.timeoutMs ?? 30000
   const backoffMs = options?.backoffMs ?? 1000
   const retryOnStatuses = options?.retryOnStatuses ?? [
@@ -72,13 +72,38 @@ export const fetchWithRetry = async (
       return res
     } catch (err: unknown) {
       clearTimeout(id)
-      const errObj = err as { name?: string; code?: string }
+      const errObj = err as {
+        name?: string
+        code?: string
+        message?: string
+        cause?: { code?: string }
+      }
       const isAbort = errObj?.name === "AbortError"
-      const isConnectTimeout = errObj?.code === "UND_ERR_CONNECT_TIMEOUT"
-      if ((isAbort || isConnectTimeout) && attempt < retries) {
+      // Transient network failures. undici throws `TypeError: fetch failed`
+      // with the real error on err.cause.code (EPIPE/ECONNRESET/...). These
+      // killed large runs at the final commit/merge burst -- the previous
+      // logic only retried AbortError/connect-timeout and rethrew the rest.
+      const code = errObj?.code ?? errObj?.cause?.code
+      const NETWORK_CODES = new Set([
+        "UND_ERR_CONNECT_TIMEOUT",
+        "UND_ERR_SOCKET",
+        "ECONNRESET",
+        "ECONNREFUSED",
+        "EPIPE",
+        "ETIMEDOUT",
+        "ENOTFOUND",
+        "EAI_AGAIN",
+        "ENETUNREACH",
+      ])
+      const isFetchFailed =
+        errObj?.name === "TypeError" &&
+        /fetch failed|terminated|network/i.test(errObj?.message ?? "")
+      const isTransient =
+        isAbort || (code !== undefined && NETWORK_CODES.has(code)) || isFetchFailed
+      if (isTransient && attempt < retries) {
         const wait = backoffMs * Math.pow(2, attempt)
         console.warn(
-          `[RETRY] ${url} -> ${isAbort ? "AbortError" : errObj?.code}. Attempt ${
+          `[RETRY] ${url} -> ${errObj?.name ?? code ?? "network error"}. Attempt ${
             attempt + 1
           }/${retries}. Waiting ${wait}ms.`
         )
