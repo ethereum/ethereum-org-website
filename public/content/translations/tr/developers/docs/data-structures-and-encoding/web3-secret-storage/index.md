@@ -1,11 +1,11 @@
 ---
-title: "Web3 gizli depolama tanımı"
-description: "Web3 gizli depolamasının resmi tanımı"
+title: Web3 gizli depolama tanımı
+description: Web3 gizli depolaması için resmi tanım
 lang: tr
 sidebarDepth: 2
 ---
 
-Uygulamanızın Ethereum üzerinde çalışmasını sağlamak için web3.js kütüphanesi tarafından sağlanan web3 nesnesini kullanabilirsiniz. Bu nesne arka planda, RPC çağrıları vasıtasıyla yerel bir düğümle iletişim kurar. [web3](https://github.com/ethereum/web3.js/), bir RPC katmanını ortaya çıkaran herhangi bir Ethereum düğümüyle çalışır.
+Uygulamanızın Ethereum üzerinde çalışmasını sağlamak için, Web3.js kütüphanesi tarafından sağlanan Web3 nesnesini kullanabilirsiniz. Arka planda, RPC çağrıları aracılığıyla yerel bir düğüm ile iletişim kurar. [web3](https://github.com/ethereum/web3.js/), bir RPC katmanı sunan herhangi bir Ethereum düğümü ile çalışır.
 
 `web3`, `eth` nesnesini içerir - web3.eth.
 
@@ -19,23 +19,23 @@ fs.readFile("keyfile.json", (err, data) => {
 })
 
 /** sonuç
- *               [ 'web3', 3 ]   web3 (v3) anahtar dosyası
+ *               [ 'web3', 3 ]   Web3 (v3) anahtar dosyası
  *  [ 'ethersale', undefined ]   Ethersale anahtar dosyası
  *                        null     geçersiz anahtar dosyası
  */
 ```
 
-Bu belge, Web3 Gizli Depolama Tanımı'nın **3. sürümünü** belgeler.
+Bu belge, Web3 Gizli Depolama Tanımının **3. sürümünü** belgelendirmektedir.
 
 ## Tanım {#definition}
 
-Kripto algoritmasının artık AES-128-CBC'ye sabitlenmemesi dışında (Minimum gereksinim artık AES-128-CTR'dir), dosyanın kodlaması ve kod çözmesi büyük oranda versiyon 1 ile aynıdır. Çoğu anlam/algoritma sürüm 1 ile benzerdir; tek farkı `mac` değeridir, bu da türetilmiş anahtarın en soldan ikinci 16 baytının tam `ciphertext` ile birleştirilerek SHA3 (keccak-256) ile hesaplanmış halidir.
+Dosyanın asıl kodlanması ve kodunun çözülmesi, kripto algoritmasının artık AES-128-CBC'ye sabitlenmemiş olması (artık asgari gereksinim AES-128-CTR'dir) dışında, sürüm 1'den bu yana büyük ölçüde değişmeden kalmıştır. Anlamların/algoritmaların çoğu, türetilmiş anahtarın soldan ikinci 16 baytının tam `ciphertext` ile birleştirilmesinin SHA3 (Keccak-256) hash'i olarak verilen `mac` haricinde sürüm 1'e benzerdir.
 
-Gizli anahtar dosyaları doğrudan `~/.web3/keystore` (Unix benzeri sistemlerde) ve `~/AppData/Web3/keystore` (Windows'ta) dizinlerinde depolanır. Herhangi bir ad verilebilir, ancak iyi bir kural `<uuid>.json` kullanmaktır; burada `<uuid>`, gizli anahtara verilen 128 bitlik UUID'dir (gizli anahtarın adresi için gizliliği koruyan bir vekil).
+Gizli anahtar dosyaları doğrudan `~/.web3/keystore` (Unix benzeri sistemler için) ve `~/AppData/Web3/keystore` (Windows için) dizinlerinde depolanır. Herhangi bir şekilde adlandırılabilirler, ancak iyi bir kural `<uuid>.json` şeklindedir; burada `<uuid>`, gizli anahtara verilen 128 bitlik UUID'dir (gizli anahtarın adresi için gizliliği koruyan bir vekil).
 
-Bu tür dosyaların tamamının ilişkilendirilmiş bir parolası vardır. Belirli bir `.json` dosyasının gizli anahtarını türetmek için önce dosyanın şifreleme anahtarı türetilir; bunun için dosyanın parolası alınır ve `kdf` anahtarında açıklanan şekilde bir anahtar türetme işlevinden geçirilir. KDF işlevinin KDF'ye bağımlı statik ve dinamik parametreleri, `kdfparams` anahtarında açıklanmıştır.
+Tüm bu dosyaların ilişkili bir parolası vardır. Belirli bir `.json` dosyasının gizli anahtarını türetmek için, önce dosyanın şifreleme anahtarını türetin; bu, dosyanın parolasını alıp `kdf` anahtarı tarafından açıklandığı gibi bir anahtar türetme fonksiyonundan geçirilmesiyle yapılır. KDF fonksiyonuna yönelik KDF'ye bağlı statik ve dinamik parametreler `kdfparams` anahtarında açıklanmıştır.
 
-PBKDF2'nin minimum düzeyde uyumlu tüm uygulamalar tarafından desteklenmesi gerekir, bu durum şu şekilde belirtilir:
+PBKDF2, asgari düzeyde uyumlu tüm uygulamalar tarafından desteklenmelidir ve şu şekilde belirtilir:
 
 - `kdf`: `pbkdf2`
 
@@ -43,10 +43,10 @@ PBKDF2 için kdfparams şunları içerir:
 
 - `prf`: `hmac-sha256` olmalıdır (gelecekte genişletilebilir);
 - `c`: yineleme sayısı;
-- `salt`: PBKDF'ye aktarılan salt;
+- `salt`: PBKDF'ye geçirilen salt (tuz);
 - `dklen`: türetilen anahtarın uzunluğu. >= 32 olmalıdır.
 
-Dosyanın anahtarı, türetildikten sonra MAC türetilmesi yoluyla doğrulanmalıdır. MAC, türetilmiş anahtarın en soldan ikinci 16 baytının `ciphertext` anahtarının içeriğiyle birleştirilmesiyle oluşturulan bayt dizisinin SHA3 (keccak-256) karması olarak hesaplanmalıdır, yani:
+Dosyanın anahtarı türetildikten sonra, MAC türetilmesi yoluyla doğrulanmalıdır. MAC, türetilen anahtarın soldan ikinci 16 baytının `ciphertext` anahtarının içeriğiyle birleştirilmesiyle oluşturulan bayt dizisinin SHA3 (Keccak-256) hash'i olarak hesaplanmalıdır, yani:
 
 ```js
 KECCAK(DK[16..31] ++ <ciphertext>)
@@ -54,39 +54,39 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 (burada `++` birleştirme operatörüdür)
 
-Bu değer `mac` anahtarıyla karşılaştırılmalıdır; eğer farklı ise farklı bir parola istenmelidir (ya da işlem iptal edilmelidir).
+Bu değer `mac` anahtarının içeriğiyle karşılaştırılmalıdır; eğer farklılarsa, alternatif bir parola istenmelidir (veya işlem iptal edilmelidir).
 
-Dosyanın anahtarı onaylandıktan sonra, dosyanın içindeki şifreli metin (dosyadaki `ciphertext` anahtarı), `cipher` anahtarıyla belirtilen simetrik şifreleme algoritması kullanılarak çözülebilir ve metne `cipherparams` anahtarı aracılığıyla parametreler atanabilir. Türetilen anahtar boyutuyla algoritmanın anahtar boyutu uyuşmuyorsa türetilen anahtarın sıfırla doldurulmuş sağ tarafı, algoritmanın anahtarı olarak kullanılmalıdır.
+Dosyanın anahtarı doğrulandıktan sonra, şifreli metin (dosyadaki `ciphertext` anahtarı), `cipher` anahtarı tarafından belirtilen ve `cipherparams` anahtarı aracılığıyla parametrelendirilen simetrik şifreleme algoritması kullanılarak çözülebilir. Türetilen anahtar boyutu ile algoritmanın anahtar boyutu uyuşmuyorsa, türetilen anahtarın sıfır dolgulu, en sağdaki baytları algoritmanın anahtarı olarak kullanılmalıdır.
 
-Minimum düzeyde uyumlu tüm uygulamalar aşağıda belirtilen şekilde AES-128-CTR algoritmasını desteklemelidir:
+Asgari düzeyde uyumlu tüm uygulamalar, şu şekilde belirtilen AES-128-CTR algoritmasını desteklemelidir:
 
 - `cipher: aes-128-ctr`
 
-Cipherparams anahtarına verilen anahtarlar gibi bu şifre de aşağıdaki parametreleri alır:
+Bu şifre, cipherparams anahtarına anahtar olarak verilen aşağıdaki parametreleri alır:
 
-- `iv`: Şifreleme için 128 bitlik başlatma vektörü.
+- `iv`: Şifre için 128 bitlik başlatma vektörü.
 
-Şifreleme anahtarı, türetilmiş anahtarın en soldaki 16 baytıdır, yani `DK[0..15]`
+Şifre için anahtar, türetilen anahtarın en soldaki 16 baytıdır, yani `DK[0..15]`
 
-Bir gizli anahtarın oluşturulması/şifrelenmesi, bu talimatların tersi uygulanarak gerçekleştirilebilir. `uuid`, `salt` ve `iv` değerlerinin gerçekten rastgele olduğundan emin olun.
+Bir gizli anahtarın oluşturulması/şifrelenmesi temel olarak bu talimatların tersi olmalıdır. `uuid`, `salt` ve `iv` değerlerinin gerçekten rastgele olduğundan emin olun.
 
-Sürümün "kesin" bir tanımlayıcısı olarak işlev görmesi gereken `version` alanına ek olarak, uygulamalar biçimdeki daha küçük, bozucu olmayan değişiklikleri izlemek için `minorversion`'ı da kullanabilir.
+Sürümün "kesin" bir tanımlayıcısı olarak işlev görmesi gereken `version` alanına ek olarak, uygulamalar formattaki daha küçük, bozucu olmayan değişiklikleri izlemek için `minorversion` alanını da kullanabilir.
 
 ## Test Vektörleri {#test-vectors}
 
-Detaylar:
+Ayrıntılar:
 
-- `Adres`: `008aeeda4d805471df9b2a5b0f38a0c3bcba786b`
+- `Address`: `008aeeda4d805471df9b2a5b0f38a0c3bcba786b`
 - `ICAP`: `XE542A5PZHH8PYIZUBEJEO0MFWRAPPIL67`
 - `UUID`: `3198bc9c-6672-5ab3-d9954942343ae5b6`
-- `Parola`: `testpassword`
-- `Gizli`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
+- `Password`: `testpassword`
+- `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 {#pbkdf2-sha-256}
 
 `AES-128-CTR` ve `PBKDF2-SHA-256` kullanan test vektörü:
 
-`~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json` dosyasının içeriği:
+`~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json` dosya içerikleri:
 
 ```json
 {
@@ -112,14 +112,14 @@ Detaylar:
 
 **Ara Değerler**:
 
-`Türetilmiş anahtar`: `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551`
-`MAC Gövdesi`: `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46`
+`Derived key`: `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551`
+`MAC Body`: `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46`
 `MAC`: `517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2`
-`Şifreleme anahtarı`: `f06d69cdc7da0faffb1008270bca38f5`
+`Cipher key`: `f06d69cdc7da0faffb1008270bca38f5`
 
 ### Scrypt {#scrypt}
 
-AES-128-CTR ve Scrypt'i kullanarak vektörü test edin:
+AES-128-CTR ve Scrypt kullanan test vektörü:
 
 ```json
 {
@@ -146,25 +146,25 @@ AES-128-CTR ve Scrypt'i kullanarak vektörü test edin:
 
 **Ara Değerler**:
 
-`Türetilmiş anahtar`: `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d`
-`MAC Gövdesi`: `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2`
+`Derived key`: `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d`
+`MAC Body`: `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2`
 `MAC`: `337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c`
-`Şifreleme anahtarı`: `7446f59ecc301d2d79bc3302650d8a5c`
+`Cipher key`: `7446f59ecc301d2d79bc3302650d8a5c`
 
 ## Sürüm 1'den Değişiklikler {#alterations-from-v2}
 
-Bu sürüm, [burada](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst) yayımlanan sürüm 1'deki çeşitli tutarsızlıkları düzeltir. Bu düzeltmeler kısaca:
+Bu sürüm, [burada](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst) yayınlanan sürüm 1 ile ilgili çeşitli tutarsızlıkları düzeltir. Kısaca bunlar şunlardır:
 
-- Büyük harf kullanımı gereksiz ve tutarsızdır (scrypt küçük harfli, Kdf karışık harfli, MAC büyük harfli).
-- Adres gereksiz ve gizliliği tehlikeye atıyor.
-- `Salt`, özünde anahtar türetme işlevinin bir parametresidir ve genel olarak kripto ile değil, bu işlevle ilişkilendirilmelidir.
-- _SaltLen_ gereksizdir (Salt'tan türetilmesi yeterlidir).
-- Kripto algoritması sabit şekilde belirttiği halde anahtar türetme işlevi verilmiştir.
-- `Version`, özünde sayısal olsa da bir dizedir (bir dizeyle yapılandırılmış sürüm oluşturma mümkün olabilir, ancak nadiren değişen bir yapılandırma dosyası biçimi için kapsam dışı kabul edilebilir).
-- `KDF` ve `cipher` kavramsal olarak kardeş kavramlar olmalarına rağmen farklı şekilde düzenlenmişlerdir.
-- `MAC`, boşlukları dikkate almayan bir veri parçası üzerinden hesaplanır(!)
+- Büyük/küçük harf kullanımı haksız ve tutarsızdır (scrypt küçük harf, Kdf karışık harf, MAC büyük harf).
+- Adres gereksizdir ve gizliliği tehlikeye atar.
+- `Salt` özünde anahtar türetme fonksiyonunun bir parametresidir ve genel olarak kripto ile değil, onunla ilişkilendirilmeyi hak eder.
+- _SaltLen_ gereksizdir (sadece Salt'tan türetin).
+- Anahtar türetme fonksiyonu verilmiştir, ancak kripto algoritması kesin olarak belirtilmiştir.
+- `Version` özünde sayısaldır ancak bir dizedir (bir dize ile yapılandırılmış sürümleme mümkün olabilir, ancak nadiren değişen bir yapılandırma dosyası formatı için kapsam dışı kabul edilebilir).
+- `KDF` ve `cipher` kavramsal olarak kardeş kavramlardır ancak farklı şekilde düzenlenmişlerdir.
+- `MAC`, boşluktan bağımsız bir veri parçası aracılığıyla hesaplanır(!)
 
-Biçim üzerinde değişiklikler yapıldı ve aşağıdaki dosya elde edildi, bağlantı verilen önceki sayfada yer alan örnekle işlevsel açıdan eşdeğerdir:
+Daha önce bağlantısı verilen sayfadaki örneğe işlevsel olarak eşdeğer olan aşağıdaki dosyayı vermek için formatta değişiklikler yapılmıştır:
 
 ```json
 {
@@ -190,6 +190,6 @@ Biçim üzerinde değişiklikler yapıldı ve aşağıdaki dosya elde edildi, ba
 }
 ```
 
-## Sürüm 2'den Değişiklikler {#alterations-from-v2}
+## Sürüm 2'den Değişiklikler {#alterations-from-v2-2}
 
-Versiyon 2, çok sayıda hata içeren erken bir C++ uygulamasıydı. Bütün önemli kısımları aynı şekilde bırakıldı.
+Sürüm 2, bir dizi hata içeren erken bir C++ uygulamasıydı. Tüm temel unsurlar ondan değişmeden kalmıştır.
