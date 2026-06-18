@@ -1,9 +1,20 @@
 {
-  "page-latest-meta-description": "Builder resources, tools, and developments from the Ethereum ecosystem.",
-  "page-latest-title": "Builder updates",
-  "page-latest-subtitle": "A shared space for expert perspectives on the latest resources, tools, and developments across the Ethereum builder ecosystem.",
+  "page-latest-meta-description": "The latest blog posts, news, and updates from the Ethereum community, plus expert perspectives from across the builder ecosystem.",
+  "page-latest-title": "Latest Ethereum updates",
+  "page-latest-subtitle": "The latest blog posts, news, and updates from the community, plus expert perspectives on developments across the Ethereum builder ecosystem.",
   "page-latest-no-posts": "No posts found.",
   "page-latest-read-more": "Read more",
   "page-latest-minute-read": "{minutes} min read",
-  "page-latest-team-attribution": "EF Builder Growth"
+  "page-latest-team-attribution": "EF Builder Growth",
+  "page-latest-cta-submit-resource": "Submit a resource",
+  "page-latest-cta-propose-article": "Propose an article",
+  "page-latest-highlights-heading": "Highlights",
+  "page-latest-articles-heading": "Latest Ethereum articles",
+  "page-latest-sources-heading": "Read more on these websites",
+  "page-latest-filter-all": "All",
+  "page-latest-filter-more": "+{count} more",
+  "page-latest-see-more": "See more ({count})",
+  "page-latest-i18n-disclaimer": "Some articles are shown in their original language (English).",
+  "page-latest-suggest-heading": "Suggest a resource",
+  "page-latest-suggest-description": "Know an Ethereum newsletter or research publication that should be listed here, or have a builder article topic in mind? Open an issue to submit your resource."
 }
