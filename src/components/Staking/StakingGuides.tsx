@@ -1,9 +1,9 @@
+import { getTranslations } from "next-intl/server"
+
 import CardList, { type CardProps } from "@/components/CardList"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
-const StakingGuides = () => {
-  const { t } = useTranslation("page-staking")
+const StakingGuides = async () => {
+  const t = await getTranslations("page-staking")
 
   const guides: CardProps[] = [
     {

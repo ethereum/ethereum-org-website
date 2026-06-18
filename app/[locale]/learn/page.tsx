@@ -50,7 +50,7 @@ const AdditionalDocReading = ({
 }) => (
   <div className="mt-24 space-y-8">
     <h3 className="text-center text-md lg:text-xl">{heading}</h3>
-    <div className="flex flex-col gap-2 xl:mx-36">
+    <div className="flex flex-col gap-4 xl:mx-36">
       {docLinks.map(({ children, ...rest }) => (
         <DocLink key={rest.href} {...rest}>
           {children}

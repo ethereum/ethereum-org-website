@@ -3053,7 +3053,8 @@ author: Ori Pomerantz
     })
 
     test("ignores heading-like lines inside code fences", () => {
-      const input = "## Real {#real}\n\npara\n\n```md\n## not a heading\nmore\n```"
+      const input =
+        "## Real {#real}\n\npara\n\n```md\n## not a heading\nmore\n```"
       const { content, fixCount } = fixDuplicateHeadingBlocks(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
