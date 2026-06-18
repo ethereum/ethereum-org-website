@@ -1,6 +1,6 @@
 ---
 title: Ethereum-Konten
-description: "Eine Erklärung von Ethereum-Konten – ihre Datenstrukturen und ihre Beziehung zur Schlüsselpaar-Kryptografie."
+description: Eine Erklärung von Ethereum-Konten – ihre Datenstrukturen und ihre Beziehung zur Schlüsselpaar-Kryptographie.
 lang: de
 ---
 
@@ -14,8 +14,8 @@ Um Ihnen zu helfen, diese Seite besser zu verstehen, empfehlen wir Ihnen, zuerst
 
 Ethereum hat zwei Kontotypen:
 
-- Extern verwaltetes Konto (Externally-owned account, EOA) – kontrolliert von jedem, der die Private-Keys besitzt
-- Vertragskonto (Contract account) – ein im Netzwerk bereitgestellter Smart Contract, der durch Code gesteuert wird. Erfahren Sie mehr über [Smart Contracts](/developers/docs/smart-contracts/)
+- Externes Konto (Externally-owned account, EOA) – kontrolliert von jedem, der die privaten Schlüssel besitzt
+- Contract-Konto – ein im Netzwerk bereitgestellter Smart Contract, der durch Code kontrolliert wird. Erfahren Sie mehr über [Smart Contracts](/developers/docs/smart-contracts/)
 
 Beide Kontotypen haben die Fähigkeit:
 
@@ -24,82 +24,82 @@ Beide Kontotypen haben die Fähigkeit:
 
 ### Hauptunterschiede {#key-differences}
 
-**Extern verwaltet**
+**Externes Konto**
 
 - Die Erstellung eines Kontos kostet nichts
 - Kann Transaktionen initiieren
-- Transaktionen zwischen extern verwalteten Konten können nur ETH-/Token-Überweisungen sein
-- Besteht aus einem kryptografischen Schlüsselpaar: Public- und Private-Keys, die die Kontoaktivitäten steuern
+- Transaktionen zwischen externen Konten können nur ETH-/Token-Transfers sein
+- Besteht aus einem kryptographischen Schlüsselpaar: öffentliche und private Schlüssel, die die Kontoaktivitäten steuern
 
-**Vertrag (Contract)**
+**Contract-Konto**
 
 - Die Erstellung eines Vertrags ist mit Kosten verbunden, da Sie Netzwerkspeicherplatz nutzen
 - Kann Nachrichten nur als Reaktion auf den Empfang einer Transaktion senden
-- Transaktionen von einem externen Konto an ein Vertragskonto können Code auslösen, der viele verschiedene Aktionen ausführen kann, wie z. B. die Überweisung von Token oder sogar die Erstellung eines neuen Vertrags
-- Vertragskonten haben keine Private-Keys. Stattdessen werden sie durch die Logik des Smart-Contract-Codes gesteuert
+- Transaktionen von einem externen Konto an ein Contract-Konto können Code auslösen, der viele verschiedene Aktionen ausführen kann, wie z. B. das Übertragen von Token oder sogar das Erstellen eines neuen Vertrags
+- Contract-Konten haben keine privaten Schlüssel. Stattdessen werden sie durch die Logik des Smart-Contract-Codes gesteuert
 
 ## Ein Konto im Detail {#an-account-examined}
 
 Ethereum-Konten haben vier Felder:
 
-- `nonce` – Ein Zähler, der die Anzahl der von einem extern verwalteten Konto gesendeten Transaktionen oder die Anzahl der von einem Vertragskonto erstellten Verträge angibt. Für jedes Konto kann nur eine Transaktion mit einer bestimmten Nonce ausgeführt werden, was vor Replay-Angriffen schützt, bei denen signierte Transaktionen wiederholt gesendet und erneut ausgeführt werden.
-- `balance` – Die Anzahl der Wei, die dieser Adresse gehören. Wei ist eine Stückelung von ETH und es gibt 1e+18 Wei pro ETH.
-- `codeHash` – Dieser Hash bezieht sich auf den _Code_ eines Kontos auf der Ethereum Virtual Machine (EVM). In Vertragskonten sind Codefragmente einprogrammiert, die verschiedene Operationen ausführen können. Dieser EVM-Code wird ausgeführt, wenn das Konto einen Nachrichtenaufruf erhält. Er kann im Gegensatz zu den anderen Kontofeldern nicht geändert werden. Alle derartigen Codefragmente sind in der Zustandsdatenbank unter ihren entsprechenden Hashes zum späteren Abruf enthalten. Dieser Hash-Wert ist als codeHash bekannt. Bei extern verwalteten Konten ist das codeHash-Feld der Hash einer leeren Zeichenfolge.
-- `storageRoot` – Manchmal auch als Speicher-Hash (Storage Hash) bezeichnet. Ein 256-Bit-Hash des Wurzelknotens eines [Merkle Patricia Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), der den Speicherinhalt des Kontos codiert (eine Zuordnung zwischen 256-Bit-Ganzzahlwerten), codiert in den Trie als Zuordnung vom Keccak-256-Bit-Hash der 256-Bit-Ganzzahlschlüssel zu den RLP-codierten 256-Bit-Ganzzahlwerten. Dieser Trie codiert den Hash des Speicherinhalts dieses Kontos und ist standardmäßig leer.
+- `nonce` – Ein Zähler, der die Anzahl der von einem externen Konto gesendeten Transaktionen oder die Anzahl der von einem Contract-Konto erstellten Verträge angibt. Für jedes Konto kann nur eine Transaktion mit einer bestimmten Nonce ausgeführt werden, was vor Replay-Angriffen schützt, bei denen signierte Transaktionen wiederholt gesendet und erneut ausgeführt werden.
+- `balance` – Die Anzahl der Wei, die diese Adresse besitzt. Wei ist eine Stückelung von ETH und es gibt 1e+18 Wei pro ETH.
+- `codeHash` – Dieser Hash bezieht sich auf den _Code_ eines Kontos auf der Ethereum Virtual Machine (EVM). In Contract-Konten sind Codefragmente einprogrammiert, die verschiedene Operationen ausführen können. Dieser EVM-Code wird ausgeführt, wenn das Konto einen Nachrichtenaufruf erhält. Er kann im Gegensatz zu den anderen Kontofeldern nicht geändert werden. Alle derartigen Codefragmente sind in der Zustandsdatenbank unter ihren entsprechenden Hashes für den späteren Abruf enthalten. Dieser Hash-Wert ist als codeHash bekannt. Bei externen Konten ist das codeHash-Feld der Hash einer leeren Zeichenfolge.
+- `storageRoot` – Manchmal auch als Speicher-Hash (storage hash) bezeichnet. Ein 256-Bit-Hash des Wurzelknotens eines [Merkle-Patricia-Tries](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), der den Speicherinhalt des Kontos kodiert (eine Zuordnung zwischen 256-Bit-Ganzzahlwerten), kodiert in den Trie als Zuordnung vom Keccak-256-Bit-Hash der 256-Bit-Ganzzahlschlüssel zu den RLP-kodierten 256-Bit-Ganzzahlwerten. Dieser Trie kodiert den Hash des Speicherinhalts dieses Kontos und ist standardmäßig leer.
 
-![Ein Diagramm, das den Aufbau eines Kontos zeigt](./accounts.png)
+![A diagram showing the make up of an account](./accounts.png)
 _Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Extern verwaltete Konten und Schlüsselpaare {#externally-owned-accounts-and-key-pairs}
+## Externe Konten und Schlüsselpaare {#externally-owned-accounts-and-key-pairs}
 
-Ein Konto besteht aus einem Paar kryptografischer Schlüssel: Public- und Private-Key. Sie helfen zu beweisen, dass eine Transaktion tatsächlich vom Absender signiert wurde, und verhindern Fälschungen. Ihr Private-Key ist das, was Sie zum Signieren von Transaktionen verwenden, er gewährt Ihnen also die Verwahrung der mit Ihrem Konto verbundenen Gelder. Sie halten nie wirklich Kryptowährung, Sie halten Private-Keys – die Gelder befinden sich immer auf Ethereums Ledger.
+Ein Konto besteht aus einem kryptographischen Schlüsselpaar: öffentlich und privat. Sie helfen zu beweisen, dass eine Transaktion tatsächlich vom Absender signiert wurde, und verhindern Fälschungen. Ihr privater Schlüssel ist das, was Sie zum Signieren von Transaktionen verwenden, er gewährt Ihnen also die Verwahrung über die mit Ihrem Konto verbundenen Gelder. Sie halten nie wirklich Kryptowährung, Sie halten private Schlüssel – die Gelder befinden sich immer auf dem Ledger von Ethereum.
 
 Dies hindert böswillige Akteure daran, gefälschte Transaktionen zu senden, da Sie den Absender einer Transaktion immer verifizieren können.
 
-Wenn Alice Ether von ihrem eigenen Konto auf Bobs Konto senden möchte, muss Alice eine Transaktionsanfrage erstellen und diese zur Verifizierung an das Netzwerk senden. Ethereums Verwendung von Public-Key-Kryptografie stellt sicher, dass Alice beweisen kann, dass sie die Transaktionsanfrage ursprünglich initiiert hat. Ohne kryptografische Mechanismen könnte eine böswillige Angreiferin Eve einfach öffentlich eine Anfrage senden, die in etwa so aussieht: „Sende 5 ETH von Alices Konto an Eves Konto“, und niemand könnte verifizieren, dass sie nicht von Alice stammt.
+Wenn Alice Ether von ihrem eigenen Konto an Bobs Konto senden möchte, muss Alice eine Transaktionsanfrage erstellen und diese zur Verifizierung an das Netzwerk senden. Die Verwendung von Public-Key-Kryptographie durch Ethereum stellt sicher, dass Alice beweisen kann, dass sie die Transaktionsanfrage ursprünglich initiiert hat. Ohne kryptographische Mechanismen könnte eine böswillige Angreiferin Eve einfach öffentlich eine Anfrage senden, die in etwa so aussieht: „Sende 5 ETH von Alices Konto an Eves Konto“, und niemand könnte verifizieren, dass sie nicht von Alice stammt.
 
 ## Kontoerstellung {#account-creation}
 
-Wenn Sie ein Konto erstellen möchten, generieren die meisten Bibliotheken Ihnen einen zufälligen Private-Key.
+Wenn Sie ein Konto erstellen möchten, generieren Ihnen die meisten Bibliotheken einen zufälligen privaten Schlüssel.
 
-Ein Private-Key besteht aus 64 Hex-Zeichen und kann mit einem Passwort verschlüsselt werden.
+Ein privater Schlüssel besteht aus 64 Hex-Zeichen und kann mit einem Passwort verschlüsselt werden.
 
 Beispiel:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-Der Public-Key wird aus dem Private-Key unter Verwendung des [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) generiert. Sie erhalten eine öffentliche Adresse für Ihr Konto, indem Sie die letzten 20 Bytes des Keccak-256-Hashes des Public-Keys nehmen und `0x` an den Anfang setzen.
+Der öffentliche Schlüssel wird aus dem privaten Schlüssel unter Verwendung des [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) generiert. Sie erhalten eine öffentliche Adresse für Ihr Konto, indem Sie die letzten 20 Bytes des Keccak-256-Hashes des öffentlichen Schlüssels nehmen und `0x` an den Anfang setzen.
 
-Das bedeutet, dass ein extern verwaltetes Konto (EOA) eine 42-stellige Adresse hat (20-Byte-Segment, was 40 hexadezimalen Zeichen entspricht, plus das Präfix `0x`).
+Das bedeutet, dass ein externes Konto (EOA) eine 42-stellige Adresse hat (20-Byte-Segment, was 40 hexadezimalen Zeichen entspricht, plus das Präfix `0x`).
 
 Beispiel:
 
 `0x5e97870f263700f46aa00d967821199b9bc5a120`
 
-Das folgende Beispiel zeigt, wie man ein Signatur-Tool namens [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) verwendet, um ein neues Konto zu generieren. Clef ist ein Kontoverwaltungs- und Signatur-Tool, das mit der Ethereum-Anwendung [Geth](https://geth.ethereum.org) gebündelt ist. Der Befehl `clef newaccount` erstellt ein neues Schlüsselpaar und speichert es in einem verschlüsselten Keystore.
+Das folgende Beispiel zeigt, wie man ein Signier-Tool namens [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) verwendet, um ein neues Konto zu generieren. Clef ist ein Tool zur Kontoverwaltung und zum Signieren, das mit dem Ethereum-Client [Geth](https://geth.ethereum.org) gebündelt ist. Der Befehl `clef newaccount` erstellt ein neues Schlüsselpaar und speichert es in einem verschlüsselten Schlüsselspeicher.
 
 ```
 > clef newaccount --keystore <path>
 
-Please enter a password for the new account to be created:
+Bitte geben Sie ein Passwort für das neu zu erstellende Konto ein:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please remember your password!
-Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Ihr neuer Schlüssel wurde generiert       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Bitte sichern Sie Ihre Schlüsseldatei      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Bitte merken Sie sich Ihr Passwort!
+Generiertes Konto 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth-Dokumentation](https://geth.ethereum.org/docs)
 
-Es ist möglich, neue Public-Keys aus Ihrem Private-Key abzuleiten, aber Sie können keinen Private-Key aus Public-Keys ableiten. Es ist von entscheidender Bedeutung, Ihre Private-Keys sicher und, wie der Name schon sagt, **PRIVAT** zu halten.
+Es ist möglich, neue öffentliche Schlüssel aus Ihrem privaten Schlüssel abzuleiten, aber Sie können keinen privaten Schlüssel aus öffentlichen Schlüsseln ableiten. Es ist von entscheidender Bedeutung, Ihre privaten Schlüssel sicher und, wie der Name schon sagt, **PRIVAT** zu halten.
 
-Sie benötigen einen Private-Key, um Nachrichten und Transaktionen zu signieren, die eine Signatur ausgeben. Andere können dann die Signatur nehmen, um Ihren Public-Key abzuleiten und so den Autor der Nachricht zu beweisen. In Ihrer Anwendung können Sie eine JavaScript-Bibliothek verwenden, um Transaktionen an das Netzwerk zu senden.
+Sie benötigen einen privaten Schlüssel, um Nachrichten und Transaktionen zu signieren, die eine Signatur ausgeben. Andere können dann die Signatur nehmen, um Ihren öffentlichen Schlüssel abzuleiten und so den Autor der Nachricht zu beweisen. In Ihrer Anwendung können Sie eine JavaScript-Bibliothek verwenden, um Transaktionen an das Netzwerk zu senden.
 
-## Vertragskonten {#contract-accounts}
+## Contract-Konten {#contract-accounts}
 
-Vertragskonten haben ebenfalls eine 42-stellige hexadezimale Adresse:
+Contract-Konten haben ebenfalls eine 42-stellige hexadezimale Adresse:
 
 Beispiel:
 
@@ -109,25 +109,25 @@ Die Vertragsadresse wird normalerweise vergeben, wenn ein Vertrag auf der Ethere
 
 ## Validator-Schlüssel {#validators-keys}
 
-Es gibt auch eine andere Art von Schlüssel in Ethereum, die eingeführt wurde, als Ethereum vom Proof-of-Work- zum Proof-of-Stake-basierten Konsens wechselte. Dies sind „BLS“-Schlüssel und sie werden verwendet, um Validatoren zu identifizieren. Diese Schlüssel können effizient aggregiert werden, um die Bandbreite zu reduzieren, die das Netzwerk benötigt, um zu einem Konsens zu gelangen. Ohne diese Schlüsselaggregation wäre der Mindesteinsatz für einen Validator viel höher.
+Es gibt auch eine andere Art von Schlüssel in Ethereum, die eingeführt wurde, als Ethereum vom Proof-of-Work- zum Proof-of-Stake-basierten Konsens wechselte. Dies sind „BLS“-Schlüssel und sie werden verwendet, um Validatoren zu identifizieren. Diese Schlüssel können effizient aggregiert werden, um die Bandbreite zu reduzieren, die das Netzwerk benötigt, um zu einem Konsens zu gelangen. Ohne diese Schlüsselaggregation wäre der Mindest-Stake für einen Validator viel höher.
 
 [Mehr zu Validator-Schlüsseln](/developers/docs/consensus-mechanisms/pos/keys/).
 
 ## Eine Anmerkung zu Wallets {#a-note-on-wallets}
 
-Ein Konto ist kein Wallet. Ein Wallet ist eine Schnittstelle oder Anwendung, mit der Sie mit Ihrem Ethereum-Konto interagieren können, entweder einem extern verwalteten Konto oder einem Vertragskonto.
+Ein Konto ist keine Wallet. Eine Wallet ist eine Schnittstelle oder Anwendung, mit der Sie mit Ihrem Ethereum-Konto interagieren können, entweder mit einem externen Konto oder einem Contract-Konto.
 
 ## Eine visuelle Demo {#a-visual-demo}
 
 Sehen Sie sich an, wie Austin Sie durch Hash-Funktionen und Schlüsselpaare führt.
 
-<YouTube id="QJ010l-pBpE" />
+<VideoWatch slug="hash-function-eth-build" />
 
-<YouTube id="9LtBDy67Tho" />
+<VideoWatch slug="key-pair-eth-build" />
 
 ## Weiterführende Literatur {#further-reading}
 
-- [Ethereum-Konten verstehen](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
+- [Ethereum-Konten verstehen](https://info.etherscan.com/understanding-ethereum-accounts/) - Etherscan
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
