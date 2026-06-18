@@ -26,7 +26,7 @@ JavaScript کو سمجھنے کے ساتھ ساتھ، [ایتھیریم اسٹی
 
 پرووائیڈرز کا استعمال کرتے ہوئے، یہ لائبریریاں آپ کو ایتھیریم سے جڑنے اور اس کا ڈیٹا پڑھنے کی اجازت دیتی ہیں، چاہے وہ جے سن آر پی سی، Infura، Etherscan، Alchemy یا میٹاماسک کے ذریعے ہو۔
 
-> **انتباہ:** Web3.js کو <span dir="ltr">March 4, 2025</span> کو آرکائیو کر دیا گیا تھا۔ [اعلان پڑھیں](https://blog.chainsafe.io/web3-js-sunset/)۔ نئے پروجیکٹس کے لیے متبادل لائبریریوں جیسے [ethers.js](https://ethers.یاg) یا [viem](https://viem.sh) کے استعمال پر غور کریں۔
+> **انتباہ:** Web3.js کو <span dir="ltr">March 4, 2025</span> کو آرکائیو کر دیا گیا تھا۔ [اعلان پڑھیں](https://blog.chainsafe.io/web3-js-sunset/)۔ نئے پروجیکٹس کے لیے متبادل لائبریریوں جیسے [ethers.js](https://ethers.org) یا [viem](https://viem.sh) کے استعمال پر غور کریں۔
 
 **Ethers کی مثال**
 

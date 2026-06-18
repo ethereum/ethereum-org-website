@@ -629,9 +629,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 
 கொடுக்கப்பட்ட முகவரியில் உள்ள ஒரு சேமிப்பக இடத்திலிருந்து மதிப்பை வழங்குகிறது.
 
-<HTML-PLACEHOLDER-COMPONENT-000000>
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
   பிளேகிரவுண்டில் எண்ட்பாயிண்ட்டை முயற்சிக்கவும்
-</HTML-PLACEHOLDER-COMPONENT-000000>
+</ButtonLink>
 
 **அளவுருக்கள்**
 
@@ -806,9 +806,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 
 கொடுக்கப்பட்ட தொகுதி ஹாஷுடன் பொருந்தும் தொகுதியிலிருந்து, ஒரு தொகுதியில் உள்ள அங்கிள்களின் (uncles) எண்ணிக்கையைத் திருப்பித் தருகிறது.
 
-<HTML-PLACEHOLDER-COMPONENT-0>
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
   பிளேகிரவுண்டில் எண்ட்பாயிண்ட்டை முயற்சிக்கவும்
-</HTML-PLACEHOLDER-COMPONENT-0>
+</ButtonLink>
 
 **அளவுருக்கள்**
 

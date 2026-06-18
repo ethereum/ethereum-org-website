@@ -6,9 +6,9 @@ lang: es
 
 Para que una aplicación web interactúe con la cadena de bloques de Ethereum (es decir, lea datos de la cadena de bloques y/o envíe transacciones a la red), debe conectarse a un nodo de Ethereum.
 
-Para este propósito, cada cliente de Ethereum implementa la especificación [JSON-RPC](/developers/docs/apis/json-rpc/), po lo que hay un conjunto unifome de [métodos](/developers/docs/apis/json-rpc/#json-rpc-methods) en los que las aplicaciones pueden confiar.
+Para este propósito, cada cliente de Ethereum implementa la especificación [JSON-RPC](/developers/docs/apis/json-rpc/), por lo que hay un conjunto uniforme de [métodos](/developers/docs/apis/json-rpc/#json-rpc-methods) en los que las aplicaciones pueden confiar.
 
-Si quieres usar JavaScript para conectarte con un nodo de Ethereum, es posible usar JavaScript puro, pero existen varias bibliotecas de conveniencia dentro del ecosistema que lo hacen mucho más fácil. Con estas bibliotecas, los desarrolladoes pueden escribir métodos intuitivos de una sola línea para inicializar solicitudes JSON-RPC (internamente) que interactúan con Ethereum.
+Si quieres usar JavaScript para conectarte con un nodo de Ethereum, es posible usar JavaScript puro, pero existen varias bibliotecas de conveniencia dentro del ecosistema que lo hacen mucho más fácil. Con estas bibliotecas, los desarrolladores pueden escribir métodos intuitivos de una sola línea para inicializar solicitudes JSON-RPC (internamente) que interactúan con Ethereum.
 
 Ten en cuenta que desde [La Fusión](/roadmap/merge/), se requieren dos piezas de software de Ethereum conectadas (un cliente de ejecución y un cliente de consenso) para ejecutar un nodo. Asegúrate de que tu nodo incluya tanto un cliente de ejecución como uno de consenso. Si tu nodo no está en tu máquina local (por ejemplo, tu nodo se está ejecutando en una instancia de AWS), actualiza las direcciones IP en el tutorial en consecuencia. Para obtener más información, consulta nuestra página sobre [cómo ejecutar un nodo](/developers/docs/nodes-and-clients/run-a-node/).
 

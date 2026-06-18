@@ -6,9 +6,9 @@ lang: pt-br
 
 Para que um aplicativo web interaja com a blockchain do Ethereum (ou seja, leia dados da blockchain e/ou envie transações para a rede), ele deve se conectar a um nó do Ethereum.
 
-Para esse propósito, todo cliente Ethereum implementa a especificação [JSON-RPC](/developers/docs/apis/json-rpc/), poutanto, há um conjunto unifoume de [métodos](/developers/docs/apis/json-rpc/#json-rpc-methods) nos quais os aplicativos podem confiar.
+Para esse propósito, todo cliente Ethereum implementa a especificação [JSON-RPC](/developers/docs/apis/json-rpc/), portanto, há um conjunto uniforme de [métodos](/developers/docs/apis/json-rpc/#json-rpc-methods) nos quais os aplicativos podem confiar.
 
-Se você quiser usar JavaScript para se conectar a um nó do Ethereum, é possível usar JavaScript puro, mas existem várias bibliotecas de conveniência no ecossistema que tounam isso muito mais fácil. Com essas bibliotecas, os desenvolvedores podem escrever métodos intuitivos de uma linha para inicializar solicitações JSON-RPC (internamente) que interagem com o Ethereum.
+Se você quiser usar JavaScript para se conectar a um nó do Ethereum, é possível usar JavaScript puro, mas existem várias bibliotecas de conveniência no ecossistema que tornam isso muito mais fácil. Com essas bibliotecas, os desenvolvedores podem escrever métodos intuitivos de uma linha para inicializar solicitações JSON-RPC (internamente) que interagem com o Ethereum.
 
 Observe que, desde [The Merge](/roadmap/merge/), dois softwares do Ethereum conectados - um cliente de execução e um cliente de consenso - são necessários para executar um nó. Certifique-se de que seu nó inclua um cliente de execução e um de consenso. Se o seu nó não estiver na sua máquina local (por exemplo, seu nó está sendo executado em uma instância da AWS), atualize os endereços IP no tutorial de acordo. Para obter mais informações, consulte nossa página sobre [como executar um nó](/developers/docs/nodes-and-clients/run-a-node/).
 

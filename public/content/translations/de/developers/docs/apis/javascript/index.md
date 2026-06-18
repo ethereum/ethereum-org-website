@@ -10,7 +10,7 @@ Zu diesem Zweck implementiert jeder Ethereum-Client die [JSON-RPC](/developers/d
 
 Wenn Sie JavaScript verwenden möchten, um sich mit einem Ethereum-Knoten zu verbinden, ist es möglich, reines (Vanilla) JavaScript zu verwenden, aber es gibt im Ökosystem mehrere praktische Bibliotheken, die dies viel einfacher machen. Mit diesen Bibliotheken können Entwickler intuitive, einzeilige Methoden schreiben, um (intern) JSON-RPC-Anfragen zu initialisieren, die mit Ethereum interagieren.
 
-Bitte beachten Sie, dass seit [dem Merge](/roadmap/merge/) zwei verbundene Teile von Ethereum-Software – ein Ausführungsclient und ein Konsens-Client – erfoderderlich sind, um einen Knoten auszuführen. Bitte stellen Sie sicher, dass Ihr Knoten sowohl einen Ausführungs- als auch einen Konsens-Client enthält. Wenn sich Ihr Knoten nicht auf Ihrem lokalen Computer befindet (z. B. wenn Ihr Knoten auf einer AWS-Instanz läuft), aktualisieren Sie die IP-Adressen im Tutoderial entsprechend. Weitere Infodermationen finden Sie auf unserer Seite zum [Ausführen eines Knotens](/developers/docs/nodes-and-clients/run-a-node/).
+Bitte beachten Sie, dass seit [dem Merge](/roadmap/merge/) zwei verbundene Teile von Ethereum-Software – ein Ausführungsclient und ein Konsens-Client – erforderlich sind, um einen Knoten auszuführen. Bitte stellen Sie sicher, dass Ihr Knoten sowohl einen Ausführungs- als auch einen Konsens-Client enthält. Wenn sich Ihr Knoten nicht auf Ihrem lokalen Computer befindet (z. B. wenn Ihr Knoten auf einer AWS-Instanz läuft), aktualisieren Sie die IP-Adressen im Tutorial entsprechend. Weitere Informationen finden Sie auf unserer Seite zum [Ausführen eines Knotens](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Voraussetzungen {#prerequisites}
 

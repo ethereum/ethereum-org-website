@@ -6,11 +6,11 @@ lang: fr
 
 Pour qu'une application web puisse interagir avec la chaîne de blocs Ethereum (c'est-à-dire lire les données de la chaîne de blocs et/ou envoyer des transactions au réseau), elle doit se connecter à un nœud Ethereum.
 
-À cette fin, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/), il existe donc un ensemble unifoume de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
+À cette fin, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/), il existe donc un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
 
 Si vous souhaitez utiliser JavaScript pour vous connecter à un nœud Ethereum, il est possible d'utiliser du JavaScript pur, mais plusieurs bibliothèques pratiques existent au sein de l'écosystème pour rendre cela beaucoup plus facile. Avec ces bibliothèques, les développeurs peuvent écrire des méthodes intuitives en une seule ligne pour initialiser des requêtes JSON-RPC (en interne) qui interagissent avec Ethereum.
 
-Veuillez noter que depuis [La Fusion](/roadmap/merge/), deux logiciels Ethereum connectés - un client d'exécution et un client de consensus - sont nécessaires pour faire fonctionner un nœud. Veuillez vous assurer que votre nœud inclut à la fois un client d'exécution et un client de consensus. Si votre nœud ne se trouve pas sur votre machine locale (par exemple, votre nœud s'exécute sur une instance AWS), mettez à jour les adresses IP dans le tutouiel en conséquence. Pour plus d'infoumations, veuillez consulter notre page sur [l'exécution d'un nœud](/developers/docs/nodes-and-clients/run-a-node/).
+Veuillez noter que depuis [La Fusion](/roadmap/merge/), deux logiciels Ethereum connectés - un client d'exécution et un client de consensus - sont nécessaires pour faire fonctionner un nœud. Veuillez vous assurer que votre nœud inclut à la fois un client d'exécution et un client de consensus. Si votre nœud ne se trouve pas sur votre machine locale (par exemple, votre nœud s'exécute sur une instance AWS), mettez à jour les adresses IP dans le tutoriel en conséquence. Pour plus d'informations, veuillez consulter notre page sur [l'exécution d'un nœud](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Prérequis {#prerequisites}
 

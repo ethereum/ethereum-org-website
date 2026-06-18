@@ -81,14 +81,14 @@ Aşağıdaki örnek, yeni bir hesap oluşturmak için [Clef](https://geth.ethere
 ```
 > clef newaccount --keystore <path>
 
-Oluşturulacak yeni hesap için lütfen bir parola girin:
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] Yeni anahtarınız oluşturuldu       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Lütfen anahtar dosyanızı yedekleyin      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Lütfen parolanızı unutmayın!
-Oluşturulan hesap 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth belgeleri](https://geth.ethereum.org/docs)

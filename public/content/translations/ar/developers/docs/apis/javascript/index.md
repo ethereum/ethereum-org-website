@@ -26,7 +26,7 @@ lang: ar
 
 باستخدام المزودين، تتيح لك هذه المكتبات الاتصال بإيثيريوم وقراءة بياناته، سواء كان ذلك عبر <span dir="ltr">JSON-RPC</span> أو <span dir="ltr">Infura</span> أو <span dir="ltr">Etherscan</span> أو <span dir="ltr">Alchemy</span> أو ميتاماسك.
 
-> **تحذير:** تمت أرشفة <span dir="ltr">Web3.js</span> في <span dir="ltr">March 4, 2025</span>. [اقرأ الإعلان](https://blog.chainsafe.io/web3-js-sunset/). فكر في استخدام مكتبات بديلة مثل [<span dir="ltr">Ethers.js</span>](https://ethers.أوg) أو [<span dir="ltr">Viem</span>](https://viem.sh) للمشاريع الجديدة.
+> **تحذير:** تمت أرشفة <span dir="ltr">Web3.js</span> في <span dir="ltr">March 4, 2025</span>. [اقرأ الإعلان](https://blog.chainsafe.io/web3-js-sunset/). فكر في استخدام مكتبات بديلة مثل [<span dir="ltr">Ethers.js</span>](https://ethers.org) أو [<span dir="ltr">Viem</span>](https://viem.sh) للمشاريع الجديدة.
 
 **مثال <span dir="ltr">Ethers</span>**
 

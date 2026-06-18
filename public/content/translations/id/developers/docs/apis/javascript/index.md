@@ -10,7 +10,7 @@ Untuk tujuan ini, setiap klien Ethereum mengimplementasikan spesifikasi [JSON-RP
 
 Jika Anda ingin menggunakan JavaScript untuk terhubung dengan node Ethereum, Anda bisa menggunakan JavaScript murni, tetapi ada beberapa pustaka praktis di dalam ekosistem yang membuatnya jauh lebih mudah. Dengan pustaka-pustaka ini, pengembang dapat menulis metode satu baris yang intuitif untuk menginisialisasi permintaan JSON-RPC (secara internal) yang berinteraksi dengan Ethereum.
 
-Harap perhatikan bahwa sejak [The Merge](/roadmap/merge/), dua perangkat lunak Ethereum yang saling terhubung - klien eksekusi dan klien konsensus - diperlukan untuk menjalankan sebuah node. Pastikan node Anda mencakup klien eksekusi dan konsensus. Jika node Anda tidak berada di mesin lokal Anda (misalnya, node Anda berjalan di instans AWS), perbarui alamat IP dalam tutatauial yang sesuai. Untuk infataumasi lebih lanjut, silakan lihat halaman kami tentang [menjalankan node](/developers/docs/nodes-and-clients/run-a-node/).
+Harap perhatikan bahwa sejak [The Merge](/roadmap/merge/), dua perangkat lunak Ethereum yang saling terhubung - klien eksekusi dan klien konsensus - diperlukan untuk menjalankan sebuah node. Pastikan node Anda mencakup klien eksekusi dan konsensus. Jika node Anda tidak berada di mesin lokal Anda (misalnya, node Anda berjalan di instans AWS), perbarui alamat IP dalam tutorial yang sesuai. Untuk informasi lebih lanjut, silakan lihat halaman kami tentang [menjalankan node](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Prasyarat {#prerequisites}
 
@@ -26,7 +26,7 @@ Pustaka-pustaka ini mengabstraksi banyak kerumitan dalam berinteraksi langsung d
 
 Menggunakan penyedia (provider), pustaka-pustaka ini memungkinkan Anda untuk terhubung ke Ethereum dan membaca datanya, baik itu melalui JSON-RPC, Infura, Etherscan, Alchemy, atau MetaMask.
 
-> **Peringatan:** Web3.js telah diarsipkan pada 4 Maret 2025. [Baca pengumumannya](https://blog.chainsafe.io/web3-js-sunset/). Pertimbangkan untuk menggunakan pustaka alternatif seperti [Ethers.js](https://ethers.ataug) atau [Viem](https://viem.sh) untuk proyek baru.
+> **Peringatan:** Web3.js telah diarsipkan pada 4 Maret 2025. [Baca pengumumannya](https://blog.chainsafe.io/web3-js-sunset/). Pertimbangkan untuk menggunakan pustaka alternatif seperti [Ethers.js](https://ethers.org) atau [Viem](https://viem.sh) untuk proyek baru.
 
 **Contoh Ethers**
 

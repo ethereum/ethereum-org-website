@@ -771,9 +771,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 
 প্রদত্ত ব্লক নম্বরের সাথে মিলে যাওয়া একটি ব্লকের ট্রানজ্যাকশনের সংখ্যা প্রদান করে।
 
-<HTML-PLACEHOLDER-COMPONENT-000000>
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
   প্লেগ্রাউন্ডে এন্ডপয়েন্টটি ব্যবহার করে দেখুন
-</HTML-PLACEHOLDER-COMPONENT-000000>
+</ButtonLink>
 
 **প্যারামিটার**
 

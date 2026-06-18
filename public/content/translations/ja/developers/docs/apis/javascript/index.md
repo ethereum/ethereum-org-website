@@ -26,7 +26,7 @@ JavaScriptを理解することに加えて、[イーサリアムスタック](/
 
 プロバイダーを使用することで、これらのライブラリはイーサリアムに接続し、JSON-RPC、Infura、Etherscan、Alchemy、メタマスクのいずれを経由する場合でも、そのデータを読み取ることができます。
 
-> **警告:** Web3.jsは2025年3月4日にアーカイブされました。[発表を読む](https://blog.chainsafe.io/web3-js-sunset/)。新しいプロジェクトでは、[ethers.js](https://ethers.またはg)や[viem](https://viem.sh)などの代替ライブラリの使用を検討してください。
+> **警告:** Web3.jsは2025年3月4日にアーカイブされました。[発表を読む](https://blog.chainsafe.io/web3-js-sunset/)。新しいプロジェクトでは、[ethers.js](https://ethers.org)や[viem](https://viem.sh)などの代替ライブラリの使用を検討してください。
 
 **Ethersの例**
 

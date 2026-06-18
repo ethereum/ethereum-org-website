@@ -8,9 +8,9 @@ Bir web uygulamasının Ethereum blokzinciri ile etkileşime girebilmesi (yani b
 
 Bu amaçla, her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) spesifikasyonunu uygular, böylece uygulamaların güvenebileceği tek tip bir [yöntemler](/developers/docs/apis/json-rpc/#json-rpc-methods) seti bulunur.
 
-Bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyveyasanız, saf (vanilla) JavaScript kullanmak mümkündür ancak ekosistemde bunu çok daha kolaylaştıran çeşitli kolaylık kütüphaneleri mevcuttur. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON-RPC isteklerini (arka planda) başlatmak için sezgisel, tek satırlık yöntemler yazabilirler.
+Bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyorsanız, saf (vanilla) JavaScript kullanmak mümkündür ancak ekosistemde bunu çok daha kolaylaştıran çeşitli kolaylık kütüphaneleri mevcuttur. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON-RPC isteklerini (arka planda) başlatmak için sezgisel, tek satırlık yöntemler yazabilirler.
 
-Lütfen [Birleşme](/roadmap/merge/)'den bu yana, bir düğümü çalıştırmak için birbirine bağlı iki Ethereum yazılımı parçasının (bir yürütme istemcisi ve bir fikir birliği istemcisi) gerekli olduğunu unutmayın. Lütfen düğümünüzün hem bir yürütme hem de fikir birliği istemcisi içerdiğinden emin olun. Düğümünüz yerel makinenizde değilse (örneğin, düğümünüz bir AWS bulut sunucusunda çalışıyveyasa) eğitimdeki IP adreslerini buna göre güncelleyin. Daha fazla bilgi için lütfen [bir düğüm çalıştırma](/developers/docs/nodes-and-clients/run-a-node/) sayfamıza bakın.
+Lütfen [Birleşme](/roadmap/merge/)'den bu yana, bir düğümü çalıştırmak için birbirine bağlı iki Ethereum yazılımı parçasının (bir yürütme istemcisi ve bir fikir birliği istemcisi) gerekli olduğunu unutmayın. Lütfen düğümünüzün hem bir yürütme hem de fikir birliği istemcisi içerdiğinden emin olun. Düğümünüz yerel makinenizde değilse (örneğin, düğümünüz bir AWS bulut sunucusunda çalışıyorsa) eğitimdeki IP adreslerini buna göre güncelleyin. Daha fazla bilgi için lütfen [bir düğüm çalıştırma](/developers/docs/nodes-and-clients/run-a-node/) sayfamıza bakın.
 
 ## Ön koşullar {#prerequisites}
 
@@ -26,7 +26,7 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 
 Sağlayıcıları kullanarak bu kütüphaneler, ister JSON-RPC, ister INFURA, Etherscan, Alchemy veya MetaMask üzerinden olsun, Ethereum'a bağlanmanıza ve verilerini okumanıza olanak tanır.
 
-> **Uyarı:** Web3.js, 4 Mart 2025'te arşivlendi. [Duyuruyu okuyun](https://blog.chainsafe.io/web3-js-sunset/). Yeni projeler için [ethers.js](https://ethers.veyag) veya [viem](https://viem.sh) gibi alternatif kütüphaneler kullanmayı düşünün.
+> **Uyarı:** Web3.js, 4 Mart 2025'te arşivlendi. [Duyuruyu okuyun](https://blog.chainsafe.io/web3-js-sunset/). Yeni projeler için [ethers.js](https://ethers.org) veya [viem](https://viem.sh) gibi alternatif kütüphaneler kullanmayı düşünün.
 
 **Ethers örneği**
 

@@ -81,14 +81,14 @@ _आरेख [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads
 ```
 > clef newaccount --keystore <path>
 
-बनाए जाने वाले नए खाते के लिए कृपया एक पासवर्ड दर्ज करें:
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] आपकी नई कुंजी उत्पन्न हो गई है       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] कृपया अपनी कुंजी फ़ाइल का बैकअप लें      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] कृपया अपना पासवर्ड याद रखें!
-उत्पन्न खाता 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth दस्तावेज़](https://geth.ethereum.org/docs)

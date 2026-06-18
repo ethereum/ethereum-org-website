@@ -1,10 +1,10 @@
 ---
 title: Maktaba za API za JavaScript
-description: Utangulizi wa maktaba za kiteja za JavaScript zinazokuruhusu kuingiliana na mnyauauo wa vitalu kutoka kwenye programu yako.
+description: Utangulizi wa maktaba za kiteja za JavaScript zinazokuruhusu kuingiliana na mnyororo wa vitalu kutoka kwenye programu yako.
 lang: sw
 ---
 
-Ili programu ya wavuti iweze kuingiliana na mnyauoro wa vitalu wa Ethereum (yaani, kusoma data ya mnyororo wa vitalu na/au kutuma miamala kwenye mtandao), lazima iunganishwe na nodi ya Ethereum.
+Ili programu ya wavuti iweze kuingiliana na mnyororo wa vitalu wa Ethereum (yaani, kusoma data ya mnyororo wa vitalu na/au kutuma miamala kwenye mtandao), lazima iunganishwe na nodi ya Ethereum.
 
 Kwa madhumuni haya, kila kiteja cha Ethereum hutekeleza vipimo vya [JSON-RPC](/developers/docs/apis/json-rpc/), kwa hivyo kuna seti sawa ya [njia](/developers/docs/apis/json-rpc/#json-rpc-methods) ambazo programu zinaweza kutegemea.
 
@@ -155,7 +155,7 @@ Baada ya kusanidi utaweza:
 
 ### Kuingiliana na vitendaji vya mkataba mahiri {#interact-with-smart-contract-functions}
 
-Maktaba za kiteja za JavaScript huruhusu programu yako kuita vitendaji vya mkataba mahiri kwa kusoma Kiolesura cha Nambari cha Programu (ABI) cha mkataba uliokusanywa.
+Maktaba za kiteja za JavaScript huruhusu programu yako kuita vitendaji vya mkataba mahiri kwa kusoma kiolesura cha jozi cha programu (ABI) cha mkataba uliokusanywa.
 
 Kimsingi ABI inaelezea vitendaji vya mkataba katika muundo wa JSON na inakuruhusu kuitumia kama kipengee cha kawaida cha JavaScript.
 

@@ -26,7 +26,7 @@ JavaScript를 이해하는 것 외에도 [이더리움 스택](/developers/docs/
 
 이러한 라이브러리는 프로바이더(provider)를 사용하여 JSON-RPC, Infura, Etherscan, Alchemy 또는 메타마스크를 통해 이더리움에 연결하고 데이터를 읽을 수 있게 해줍니다.
 
-> **경고:** Web3.js는 2025년 3월 4일에 보관(archive) 처리되었습니다. [공지사항 읽기](https://blog.chainsafe.io/web3-js-sunset/). 새로운 프로젝트의 경우 [ethers.js](https://ethers.또는g) 또는 [viem](https://viem.sh)과 같은 대체 라이브러리 사용을 고려하세요.
+> **경고:** Web3.js는 2025년 3월 4일에 보관(archive) 처리되었습니다. [공지사항 읽기](https://blog.chainsafe.io/web3-js-sunset/). 새로운 프로젝트의 경우 [ethers.js](https://ethers.org) 또는 [viem](https://viem.sh)과 같은 대체 라이브러리 사용을 고려하세요.
 
 **Ethers 예시**
 
@@ -275,7 +275,7 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/Codex-Data)
 - [디스코드](https://discord.com/invite/mFpUhT3vAq)
 
-**Drift -** **_캐싱, 훅(hooks), 테스트 모의 객체(mocks)가 내장된 TypeScript 메타 라이브러._**
+**Drift -** **_캐싱, 훅(hooks), 테스트 모의 객체(mocks)가 내장된 TypeScript 메타 라이브러리._**
 
 - [문서](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)

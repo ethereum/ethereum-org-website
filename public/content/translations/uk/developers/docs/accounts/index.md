@@ -81,14 +81,14 @@ _Діаграму адаптовано з [Ethereum EVM illustrated](https://tak
 ```
 > clef newaccount --keystore <path>
 
-Будь ласка, введіть пароль для нового акаунта, який буде створено:
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] Ваш новий ключ згенеровано       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Будь ласка, зробіть резервну копію файлу ключа      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Будь ласка, запам'ятайте свій пароль!
-Згенеровано акаунт 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Документація Geth](https://geth.ethereum.org/docs)

@@ -81,14 +81,14 @@ Contoh berikut menunjukkan cara menggunakan alat penandatanganan yang disebut [C
 ```
 > clef newaccount --keystore <path>
 
-Silakan masukkan kata sandi untuk akun baru yang akan dibuat:
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] Kunci baru Anda telah dihasilkan       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Harap cadangkan file kunci Anda      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Harap ingat kata sandi Anda!
-Akun yang dihasilkan 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Dokumentasi Geth](https://geth.ethereum.org/docs)

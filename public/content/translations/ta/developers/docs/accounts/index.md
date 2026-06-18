@@ -81,14 +81,14 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 ```
 > clef newaccount --keystore <path>
 
-உருவாக்கப்படவுள்ள புதிய கணக்கிற்கான கடவுச்சொல்லை உள்ளிடவும்:
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] உங்கள் புதிய விசை உருவாக்கப்பட்டது       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] உங்கள் விசை கோப்பை காப்புப் பிரதி எடுக்கவும்      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] உங்கள் கடவுச்சொல்லை நினைவில் கொள்ளவும்!
-உருவாக்கப்பட்ட கணக்கு 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth ஆவணங்கள்](https://geth.ethereum.org/docs)

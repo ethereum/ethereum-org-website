@@ -26,7 +26,7 @@ lang: zh
 
 使用提供者 (provider)，这些库允许你连接到以太坊并读取其数据，无论是通过 JSON-RPC、Infura、Etherscan、Alchemy 还是梅塔马斯克。
 
-> **警告：** Web3.js 已于 2025 年 3 月 4 日归档。[阅读公告](https://blog.chainsafe.io/web3-js-sunset/)。对于新项目，请考虑使用 [Ethers.js](https://ethers.或者g) 或 [Viem](https://viem.sh) 等替代库。
+> **警告：** Web3.js 已于 2025 年 3 月 4 日归档。[阅读公告](https://blog.chainsafe.io/web3-js-sunset/)。对于新项目，请考虑使用 [Ethers.js](https://ethers.org) 或 [Viem](https://viem.sh) 等替代库。
 
 **Ethers 示例**
 

@@ -79,16 +79,16 @@ _రేఖాచిత్రం [Ethereum EVM illustrated](https://takenobu-hs.g
 కొత్త ఖాతాను రూపొందించడానికి [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) అనే సంతకం చేసే సాధనాన్ని ఎలా ఉపయోగించాలో కింది ఉదాహరణ చూపుతుంది. Clef అనేది ఎథీరియం క్లయింట్, [Geth](https://geth.ethereum.org)తో బండిల్ చేయబడిన ఖాతా నిర్వహణ మరియు సంతకం చేసే సాధనం. `clef newaccount` కమాండ్ కొత్త కీ జతను సృష్టిస్తుంది మరియు వాటిని ఎన్‌క్రిప్ట్ చేయబడిన కీస్టోర్‌లో సేవ్ చేస్తుంది.
 
 ```
-> clef newaccount --keystore <పాత్>
+> clef newaccount --keystore <path>
 
-సృష్టించబడే కొత్త ఖాతా కోసం దయచేసి పాస్‌వర్డ్‌ను నమోదు చేయండి:
-> <పాస్‌వర్డ్>
+Please enter a password for the new account to be created:
+> <password>
 
 ------------
-INFO [10-28|16:19:09.156] మీ కొత్త కీ సృష్టించబడింది       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] దయచేసి మీ కీ ఫైల్‌ను బ్యాకప్ చేయండి      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] దయచేసి మీ పాస్‌వర్డ్‌ను గుర్తుంచుకోండి!
-సృష్టించబడిన ఖాతా 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth డాక్యుమెంటేషన్](https://geth.ethereum.org/docs)

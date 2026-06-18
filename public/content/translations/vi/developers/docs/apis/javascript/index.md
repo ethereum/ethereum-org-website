@@ -26,7 +26,7 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp của 
 
 Sử dụng các nhà cung cấp (providers), các thư viện này cho phép bạn kết nối với Ethereum và đọc dữ liệu của nó, cho dù đó là qua JSON-RPC, Infura, Etherscan, Alchemy hay MetaMask.
 
-> **Cảnh báo:** Web3.js đã được lưu trữ vào ngày 4 tháng 3 năm 2025. [Đọc thông báo](https://blog.chainsafe.io/web3-js-sunset/). Cân nhắc sử dụng các thư viện thay thế như [ethers.js](https://ethers.hoặcg) hoặc [viem](https://viem.sh) cho các dự án mới.
+> **Cảnh báo:** Web3.js đã được lưu trữ vào ngày 4 tháng 3 năm 2025. [Đọc thông báo](https://blog.chainsafe.io/web3-js-sunset/). Cân nhắc sử dụng các thư viện thay thế như [ethers.js](https://ethers.org) hoặc [viem](https://viem.sh) cho các dự án mới.
 
 **Ví dụ về Ethers**
 

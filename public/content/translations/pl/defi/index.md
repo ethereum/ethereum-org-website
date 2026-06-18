@@ -227,7 +227,7 @@ Na przykład, jeśli chcesz skorzystać z loterii bez strat PoolTogether (opisan
 
 Istnieją bardziej zaawansowane opcje dla traderów, którzy lubią mieć nieco większą kontrolę. Zlecenia z limitem, kontrakty perpetual, handel z depozytem zabezpieczającym (margin trading) i wiele innych są możliwe. Dzięki zdecentralizowanemu handlowi zyskujesz dostęp do globalnej płynności, rynek nigdy się nie zamyka, a Ty zawsze masz kontrolę nad swoimi aktywami.
 
-Kiedy korzystasz ze scentralizowaneg giełdy, musisz zdeponować swoje aktywa przed transakcją i zaufać im, że będą się nimi opiekować. Podczas gdy Twoje aktywa są zdeponowane, są one narażone na ryzyko, ponieważ scentralizowane giełdy są atrakcyjnym celem dla hakerów.
+Kiedy korzystasz ze scentralizowanej giełdy, musisz zdeponować swoje aktywa przed transakcją i zaufać im, że będą się nimi opiekować. Podczas gdy Twoje aktywa są zdeponowane, są one narażone na ryzyko, ponieważ scentralizowane giełdy są atrakcyjnym celem dla hakerów.
 
 <ButtonLink href="/apps/categories/defi">
   Zobacz dappy do handlu

@@ -10,11 +10,11 @@ Za tímto účelem implementuje každý klient Etherea specifikaci [JSON-RPC](/d
 
 Pokud chcete k připojení k uzlu Etherea použít JavaScript, je možné použít čistý (vanilla) JavaScript, ale v ekosystému existuje několik užitečných knihoven, které to mnohem usnadňují. S těmito knihovnami mohou vývojáři psát intuitivní, jednořádkové metody pro inicializaci požadavků JSON-RPC (na pozadí), které komunikují s Ethereem.
 
-Vezměte prosím na vědomí, že od [Merge](/roadmap/merge/) jsou ke spuštění uzlu vyžadovány dvě propojené části softwaru Etherea – exekuční klient a konsensuální klient. Ujistěte se prosím, že váš uzel obsahuje jak exekučního, tak konsensuálního klienta. Pokud váš uzel neběží na vašem lokálním počítači (např. váš uzel běží na instanci AWS), aktualizujte odpovídajícím způsobem IP adresy v tutneboiálu. Pro více infnebomací se prosím podívejte na naši stránku o [provozování uzlu](/developers/docs/nodes-and-clients/run-a-node/).
+Vezměte prosím na vědomí, že od [Merge](/roadmap/merge/) jsou ke spuštění uzlu vyžadovány dvě propojené části softwaru Etherea – exekuční klient a konsensuální klient. Ujistěte se prosím, že váš uzel obsahuje jak exekučního, tak konsensuálního klienta. Pokud váš uzel neběží na vašem lokálním počítači (např. váš uzel běží na instanci AWS), aktualizujte odpovídajícím způsobem IP adresy v tutoriálu. Pro více informací se prosím podívejte na naši stránku o [provozování uzlu](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Předpoklady {#prerequisites}
 
-Kromě pneboozumění JavaScriptu může být užitečné porozumět [technologickému zásobníku Etherea](/developers/docs/ethereum-stack/) a [klientům Etherea](/developers/docs/nodes-and-clients/).
+Kromě porozumění JavaScriptu může být užitečné porozumět [technologickému zásobníku Etherea](/developers/docs/ethereum-stack/) a [klientům Etherea](/developers/docs/nodes-and-clients/).
 
 ## Proč používat knihovnu? {#why-use-a-library}
 

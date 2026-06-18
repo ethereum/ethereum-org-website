@@ -79,16 +79,16 @@ Mfano:
 Mfano ufuatao unaonyesha jinsi ya kutumia zana ya kusaini inayoitwa [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) ili kuunda akaunti mpya. Clef ni zana ya usimamizi wa akaunti na kusaini inayokuja pamoja na mteja wa Ethereum, [Geth](https://geth.ethereum.org). Amri ya `clef newaccount` inaunda jozi mpya ya funguo na kuzihifadhi kwenye hifadhi ya funguo iliyosimbwa.
 
 ```
-> clef newaccount --keystore <njia>
+> clef newaccount --keystore <path>
 
-Tafadhali weka nenosiri kwa akaunti mpya itakayoundwa:
-> <nenosiri>
+Please enter a password for the new account to be created:
+> <password>
 
 ------------
-INFO [10-28|16:19:09.156] Ufunguo wako mpya umezalishwa       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Tafadhali hifadhi nakala ya faili lako la ufunguo      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Tafadhali kumbuka nenosiri lako!
-Akaunti iliyozalishwa 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Nyaraka za Geth](https://geth.ethereum.org/docs)

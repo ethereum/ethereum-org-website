@@ -79,16 +79,16 @@ _مخطط مقتبس من [Ethereum EVM illustrated](https://takenobu-hs.github.
 يوضح المثال التالي كيفية استخدام أداة توقيع تسمى [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) لإنشاء حساب جديد. Clef هي أداة لإدارة الحسابات والتوقيع تأتي مجمعة مع عميل إيثيريوم، [Geth](https://geth.ethereum.org). ينشئ الأمر `clef newaccount` زوج مفاتيح جديدًا ويحفظه في مخزن مفاتيح مشفر.
 
 ```
-> clef newaccount --keystore <المسار>
+> clef newaccount --keystore <path>
 
-الرجاء إدخال كلمة مرور للحساب الجديد المراد إنشاؤه:
-> <كلمة_المرور>
+Please enter a password for the new account to be created:
+> <password>
 
 ------------
-INFO [10-28|16:19:09.156] تم إنشاء مفتاحك الجديد       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] يرجى عمل نسخة احتياطية من ملف المفتاح الخاص بك      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] يرجى تذكر كلمة المرور الخاصة بك!
-تم إنشاء الحساب 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [وثائق Geth](https://geth.ethereum.org/docs)

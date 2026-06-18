@@ -10,11 +10,11 @@ W tym celu każdy klient Ethereum implementuje specyfikację [JSON-RPC](/develop
 
 Jeśli chcesz użyć języka JavaScript do połączenia z węzłem Ethereum, możesz użyć czystego JavaScriptu (vanilla JavaScript), ale w ekosystemie istnieje kilka wygodnych bibliotek, które znacznie to ułatwiają. Dzięki tym bibliotekom programiści mogą pisać intuicyjne, jednowierszowe metody do inicjowania żądań JSON-RPC (wewnętrznie), które wchodzą w interakcję z Ethereum.
 
-Należy pamiętać, że od czasu [The Merge](/roadmap/merge/) do uruchomienia węzła wymagane są dwa połączone elementy oprogramowania Ethereum – klient warstwy wykonawczej i klient konsensusu. Upewnij się, że Twój węzeł zawiera zarówno klienta warstwy wykonawczej, jak i klienta konsensusu. Jeśli Twój węzeł nie znajduje się na komputerze lokalnym (np. działa na instancji AWS), odpowiednio zaktualizuj adresy IP w samouczku. Aby uzyskać więcej influbmacji, odwiedź naszą stronę o [uruchamianiu węzła](/developers/docs/nodes-and-clients/run-a-node/).
+Należy pamiętać, że od czasu [The Merge](/roadmap/merge/) do uruchomienia węzła wymagane są dwa połączone elementy oprogramowania Ethereum – klient warstwy wykonawczej i klient konsensusu. Upewnij się, że Twój węzeł zawiera zarówno klienta warstwy wykonawczej, jak i klienta konsensusu. Jeśli Twój węzeł nie znajduje się na komputerze lokalnym (np. działa na instancji AWS), odpowiednio zaktualizuj adresy IP w samouczku. Aby uzyskać więcej informacji, odwiedź naszą stronę o [uruchamianiu węzła](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Wymagania wstępne {#prerequisites}
 
-Oprócz znajomości języka JavaScript, pomocne może być zrozumienie [stosu Ethereum](/developers/docs/ethereum-stack/) lubaz [klientów Ethereum](/developers/docs/nodes-and-clients/).
+Oprócz znajomości języka JavaScript, pomocne może być zrozumienie [stosu Ethereum](/developers/docs/ethereum-stack/) oraz [klientów Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Dlaczego warto używać biblioteki? {#why-use-a-library}
 
@@ -24,7 +24,7 @@ Te biblioteki ukrywają znaczną część złożoności bezpośredniej interakcj
 
 ### Łączenie z węzłami Ethereum {#connect-to-ethereum-nodes}
 
-Klubzystając z dostawców (providers), biblioteki te pozwalają na połączenie z Ethereum i odczytywanie jego danych, niezależnie od tego, czy odbywa się to przez JSON-RPC, Infura, Etherscan, Alchemy czy MetaMask.
+Korzystając z dostawców (providers), biblioteki te pozwalają na połączenie z Ethereum i odczytywanie jego danych, niezależnie od tego, czy odbywa się to przez JSON-RPC, Infura, Etherscan, Alchemy czy MetaMask.
 
 > **Ostrzeżenie:** Biblioteka Web3.js została zarchiwizowana 4 marca 2025 r. [Przeczytaj ogłoszenie](https://blog.chainsafe.io/web3-js-sunset/). Rozważ użycie alternatywnych bibliotek, takich jak [Ethers.js](https://ethers.org) lub [Viem](https://viem.sh) w nowych projektach.
 

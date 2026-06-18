@@ -26,7 +26,7 @@ lang: zh-tw
 
 使用提供者 (providers)，這些函式庫允許您連接到以太坊並讀取其資料，無論是透過 JSON-RPC、Infura、Etherscan、Alchemy 還是梅塔馬斯克。
 
-> **警告：** Web3.js 已於 2025 年 3 月 4 日封存。[閱讀公告](https://blog.chainsafe.io/web3-js-sunset/)。對於新專案，請考慮使用 [Ethers.js](https://ethers.或g) 或 [Viem](https://viem.sh) 等替代函式庫。
+> **警告：** Web3.js 已於 2025 年 3 月 4 日封存。[閱讀公告](https://blog.chainsafe.io/web3-js-sunset/)。對於新專案，請考慮使用 [Ethers.js](https://ethers.org) 或 [Viem](https://viem.sh) 等替代函式庫。
 
 **Ethers 範例**
 

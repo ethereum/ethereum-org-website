@@ -6,11 +6,11 @@ lang: it
 
 Affinché un'app web possa interagire con la blockchain di Ethereum (ovvero, leggere i dati della blockchain e/o inviare transazioni alla rete), deve connettersi a un nodo Ethereum.
 
-A questo scopo, ogni client Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), in modo che vi sia un insieme unifoppureme di [metodi](/developers/docs/apis/json-rpc/#json-rpc-methods) su cui le applicazioni possono fare affidamento.
+A questo scopo, ogni client Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), in modo che vi sia un insieme uniforme di [metodi](/developers/docs/apis/json-rpc/#json-rpc-methods) su cui le applicazioni possono fare affidamento.
 
-Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, è possibile utilizzare JavaScript puro, ma all'interno dell'ecosistema esistono diverse librerie di utilità che rendono l'operazione molto più semplice. Con queste librerie, gli sviluppatoppurei possono scrivere metodi intuitivi di una sola riga per inizializzare le richieste JSON-RPC (internamente) che interagiscono con Ethereum.
+Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, è possibile utilizzare JavaScript puro, ma all'interno dell'ecosistema esistono diverse librerie di utilità che rendono l'operazione molto più semplice. Con queste librerie, gli sviluppatori possono scrivere metodi intuitivi di una sola riga per inizializzare le richieste JSON-RPC (internamente) che interagiscono con Ethereum.
 
-Tieni presente che da [The Merge](/roadmap/merge/), per eseguire un nodo sono necessari due software Ethereum connessi: un client di esecuzione e un client di consenso. Assicurati che il tuo nodo includa sia un client di esecuzione che uno di consenso. Se il tuo nodo non si trova sulla tua macchina locale (ad es. il tuo nodo è in esecuzione su un'istanza AWS), aggioppurena di conseguenza gli indirizzi IP nel tutorial. Per maggiori informazioni, consulta la nostra pagina sull'[esecuzione di un nodo](/developers/docs/nodes-and-clients/run-a-node/).
+Tieni presente che da [The Merge](/roadmap/merge/), per eseguire un nodo sono necessari due software Ethereum connessi: un client di esecuzione e un client di consenso. Assicurati che il tuo nodo includa sia un client di esecuzione che uno di consenso. Se il tuo nodo non si trova sulla tua macchina locale (ad es. il tuo nodo è in esecuzione su un'istanza AWS), aggiorna di conseguenza gli indirizzi IP nel tutorial. Per maggiori informazioni, consulta la nostra pagina sull'[esecuzione di un nodo](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Prerequisiti {#prerequisites}
 
