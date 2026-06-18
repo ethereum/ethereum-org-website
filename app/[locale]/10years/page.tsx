@@ -313,7 +313,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <div
                 key={`adoption-card-${index}`}
                 className={cn(
-                  "w-[70%] rounded-2xl p-8 shadow",
+                  "w-[70%] rounded-base p-8 shadow",
                   index % 2 === 0 && "ml-auto",
                   index !== 0 && "-mt-10",
                   zIndexClasses[index],

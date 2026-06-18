@@ -24,7 +24,7 @@ const InnovationSwiper = ({ innovationCards }: InnovationSwiperProps) => (
           ({ image, title, date, description1, description2 }, index) => (
             <SwiperSlide
               key={index}
-              className="mx-auto flex w-full max-w-[550px] flex-col gap-4 rounded-lg bg-card-gradient-secondary p-4 sm:p-6 xl:max-w-[700px]"
+              className="mx-auto flex w-full max-w-[550px] flex-col gap-4 rounded-base bg-card-gradient-secondary p-4 sm:p-6 xl:max-w-[700px]"
             >
               <Image
                 src={image}

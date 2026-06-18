@@ -1,0 +1,374 @@
+{
+  "version": 1,
+  "locale": "pl",
+  "translatedAt": "2026-06-16T23:02:32.329Z",
+  "englishManifestHash": "9cc35543689e",
+  "placeholderOrder": [
+    "LINK-c42188",
+    "LINK-5e5e9b",
+    "LINK-6857cb",
+    "LINK-1200a5",
+    "LINK-456e6f",
+    "LINK-0ab4bf",
+    "LINK-72358f",
+    "LINK-f37b3c",
+    "LINK-823fa1",
+    "LINK-b2bad9",
+    "LINK-f312cb",
+    "LINK-f56be6",
+    "LINK-380c58",
+    "LINK-99c103",
+    "LINK-e7e0eb",
+    "LINK-bcc92f",
+    "LINK-5a9888",
+    "LINK-d12526",
+    "LINK-9422d6",
+    "LINK-879dea",
+    "LINK-81559a",
+    "LINK-b84b87",
+    "LINK-99a86e",
+    "LINK-2d08de",
+    "LINK-71d6b3",
+    "LINK-7bcaad",
+    "LINK-6931b7",
+    "LINK-a3e131",
+    "LINK-032efb",
+    "LINK-d1506c",
+    "LINK-3c9f6e",
+    "LINK-c597e8",
+    "LINK-09739d",
+    "LINK-eeab88",
+    "LINK-a325a8",
+    "LINK-ddf07d",
+    "LINK-faa694",
+    "LINK-c7f9eb",
+    "LINK-a81486",
+    "LINK-890b99",
+    "LINK-5e5e9b",
+    "LINK-da701e",
+    "LINK-3d1014",
+    "LINK-eb657f",
+    "LINK-ddcc78",
+    "LINK-2699ab",
+    "LINK-6759ed",
+    "LINK-4cf8e5",
+    "LINK-1b6bca",
+    "LINK-791c41",
+    "LINK-9310de",
+    "LINK-493751"
+  ],
+  "placeholderMap": {
+    "LINK-c42188": {
+      "type": "link",
+      "values": {
+        "url": "/learn/"
+      }
+    },
+    "LINK-5e5e9b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-6857cb": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained"
+      }
+    },
+    "LINK-1200a5": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract"
+      }
+    },
+    "LINK-456e6f": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract"
+      }
+    },
+    "LINK-0ab4bf": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment"
+      }
+    },
+    "LINK-72358f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial"
+      }
+    },
+    "LINK-f37b3c": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458"
+      }
+    },
+    "LINK-823fa1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=-7uChuO_VzM"
+      }
+    },
+    "LINK-b2bad9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=pytGqQmDslE"
+      }
+    },
+    "LINK-f312cb": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78"
+      }
+    },
+    "LINK-f56be6": {
+      "type": "link",
+      "values": {
+        "url": "https://goethereumbook.org/"
+      }
+    },
+    "LINK-380c58": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/docs"
+      }
+    },
+    "LINK-99c103": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md"
+      }
+    },
+    "LINK-e7e0eb": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/3-Mn7OckSus?t=394"
+      }
+    },
+    "LINK-bcc92f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=CSpc1vZQW2Q"
+      }
+    },
+    "LINK-5a9888": {
+      "type": "link",
+      "values": {
+        "url": "https://godoc.org/github.com/ethereum/go-ethereum"
+      }
+    },
+    "LINK-d12526": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/"
+      }
+    },
+    "LINK-9422d6": {
+      "type": "link",
+      "values": {
+        "url": "https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php"
+      }
+    },
+    "LINK-879dea": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281"
+      }
+    },
+    "LINK-81559a": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e"
+      }
+    },
+    "LINK-b84b87": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top"
+      }
+    },
+    "LINK-99a86e": {
+      "type": "link",
+      "values": {
+        "url": "https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html"
+      }
+    },
+    "LINK-2d08de": {
+      "type": "link",
+      "values": {
+        "url": "https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html"
+      }
+    },
+    "LINK-71d6b3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes"
+      }
+    },
+    "LINK-7bcaad": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts"
+      }
+    },
+    "LINK-6931b7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/go-ethereum"
+      }
+    },
+    "LINK-a3e131": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ZtesoftCS/go-ethereum-code-analysis"
+      }
+    },
+    "LINK-032efb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ledgerwatch/erigon"
+      }
+    },
+    "LINK-d1506c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/golemfactory/golem"
+      }
+    },
+    "LINK-3c9f6e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/jpmorganchase/quorum"
+      }
+    },
+    "LINK-c597e8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/prysmaticlabs/prysm"
+      }
+    },
+    "LINK-09739d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/yep/eth-tweet"
+      }
+    },
+    "LINK-eeab88": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kyokan/plasma"
+      }
+    },
+    "LINK-a325a8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/sammy007/open-ethereum-pool"
+      }
+    },
+    "LINK-ddf07d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/miguelmota/go-ethereum-hdwallet"
+      }
+    },
+    "LINK-faa694": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/multi-geth/multi-geth"
+      }
+    },
+    "LINK-c7f9eb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client"
+      }
+    },
+    "LINK-a81486": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/everFinance/goether"
+      }
+    },
+    "LINK-890b99": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/covalenthq/covalent-api-sdk-go"
+      }
+    },
+    "LINK-da701e": {
+      "type": "link",
+      "values": {
+        "url": "https://discordapp.com/invite/nthXNEv"
+      }
+    },
+    "LINK-3d1014": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/ethereum/go-ethereum"
+      }
+    },
+    "LINK-eb657f": {
+      "type": "link",
+      "values": {
+        "url": "https://invite.slack.golangbridge.org/"
+      }
+    },
+    "LINK-ddcc78": {
+      "type": "link",
+      "values": {
+        "url": "https://gophers.slack.com/messages/C9HP1S9V2"
+      }
+    },
+    "LINK-2699ab": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/"
+      }
+    },
+    "LINK-6759ed": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/ethoxy/multi-geth"
+      }
+    },
+    "LINK-4cf8e5": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/ethereum/home"
+      }
+    },
+    "LINK-1b6bca": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/ethereum/light-client"
+      }
+    },
+    "LINK-791c41": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/btomashvili/awesome-ethereum"
+      }
+    },
+    "LINK-9310de": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/2023/https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974"
+      }
+    },
+    "LINK-493751": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ConsenSys/ethereum-developer-tools-list"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:02:32.329Z",
+      "status": "success"
+    }
+  }
+}

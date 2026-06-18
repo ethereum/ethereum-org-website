@@ -13,13 +13,13 @@ In questo tutorial analizziamo [un token truffa](https://etherscan.io/token/0xb0
 
 ## Token truffa: cosa sono, perché le persone li creano e come evitarli {#scam-tokens}
 
-Uno degli usi più comuni di Ethereum è la creazione di un token negoziabile da parte di un gruppo, in un certo senso la propria valuta. Tuttavia, ovunque ci siano casi d'uso legittimi che portano valore, ci sono anche criminali che cercano di rubare quel valore per sé stessi.
+Uno degli usi più comuni di Ethereum è la creazione di un token scambiabile da parte di un gruppo, in un certo senso la propria valuta. Tuttavia, ovunque ci siano casi d'uso legittimi che portano valore, ci sono anche criminali che cercano di rubare quel valore per sé.
 
-Puoi leggere di più su questo argomento [altrove su ethereum.org](/guides/how-to-id-scam-tokens/) dal punto di vista dell'utente. Questo tutorial si concentra sull'analisi di un token truffa per vedere come viene realizzato e come può essere rilevato.
+Puoi leggere di più su questo argomento [altrove su ethereum.org](/guides/how-to-id-scam-tokens/) dal punto di vista dell'utente. Questo tutorial si concentra sull'analisi di un token truffa per vedere come è fatto e come può essere rilevato.
 
 ### Come faccio a sapere che wARB è una truffa? {#warb-scam}
 
-Il token che analizziamo è [wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code), che finge di essere equivalente al legittimo [token ARB](https://etherscan.io/token/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
+Il token che analizziamo è [wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code), che finge di essere equivalente al [token ARB](https://etherscan.io/token/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) legittimo.
 
 Il modo più semplice per sapere quale sia il token legittimo è guardare l'organizzazione di origine, [Arbitrum](https://arbitrum.foundation/). Gli indirizzi legittimi sono specificati [nella loro documentazione](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -29,7 +29,7 @@ Normalmente ci aspetteremmo che le persone che cercano di truffare gli altri sia
 
 Tuttavia, i token legittimi di solito pubblicano il loro codice sorgente, quindi per apparire legittimi a volte gli autori dei token truffa fanno lo stesso. [wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code) è uno di quei token con codice sorgente disponibile, il che rende più facile comprenderlo.
 
-Sebbene i distributori dei contratti possano scegliere se pubblicare o meno il codice sorgente, _non possono_ pubblicare il codice sorgente sbagliato. L'esploratore di blocchi compila il codice sorgente fornito in modo indipendente e, se non ottiene l'esatto stesso bytecode, rifiuta quel codice sorgente. [Puoi leggere di più al riguardo sul sito di Etherscan](https://etherscan.io/verifyContract).
+Sebbene i distributori del contratto possano scegliere se pubblicare o meno il codice sorgente, _non possono_ pubblicare il codice sorgente sbagliato. Il block explorer compila il codice sorgente fornito in modo indipendente e, se non ottiene esattamente lo stesso bytecode, rifiuta quel codice sorgente. [Puoi leggere di più al riguardo sul sito di Etherscan](https://etherscan.io/verifyContract).
 
 ## Confronto con i token ERC-20 legittimi {#compare-legit-erc20}
 
@@ -37,9 +37,9 @@ Confronteremo questo token con i token ERC-20 legittimi. Se non hai familiarità
 
 ### Costanti per gli indirizzi privilegiati {#constants-for-privileged-addresses}
 
-I contratti a volte necessitano di indirizzi privilegiati. I contratti progettati per un uso a lungo termine consentono ad alcuni indirizzi privilegiati di modificare tali indirizzi, ad esempio per abilitare l'uso di un nuovo contratto multifirma. Ci sono diversi modi per farlo.
+I contratti a volte necessitano di indirizzi privilegiati. I contratti progettati per un uso a lungo termine consentono ad alcuni indirizzi privilegiati di modificare tali indirizzi, ad esempio per abilitare l'uso di un nuovo contratto multisig. Ci sono diversi modi per farlo.
 
-Il [contratto del token `HOP`](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) utilizza il pattern [`Ownable`](https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable). L'indirizzo privilegiato è conservato nell'archiviazione, in un campo chiamato `_owner` (vedi il terzo file, `Ownable.sol`).
+Il [contratto del token `HOP`](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) utilizza il pattern [`Ownable`](https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable). L'indirizzo privilegiato è conservato nello storage, in un campo chiamato `_owner` (vedi il terzo file, `Ownable.sol`).
 
 ```solidity
 abstract contract Ownable is Context {
@@ -53,11 +53,9 @@ abstract contract Ownable is Context {
 Il [contratto del token `ARB`](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code) non ha direttamente un indirizzo privilegiato. Tuttavia, non ne ha bisogno. Si trova dietro un [`proxy`](https://docs.openzeppelin.com/contracts/5.x/api/proxy) all'[indirizzo `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code). Quel contratto ha un indirizzo privilegiato (vedi il quarto file, `ERC1967Upgrade.sol`) che può essere utilizzato per gli aggiornamenti.
 
 ```solidity
-    /* *
-     * @dev Memorizza un nuovo indirizzo nello slot admin EIP1967. */
-    
-
-
+    /**
+     * @dev Memorizza un nuovo indirizzo nello slot admin EIP1967.
+     */
     function _setAdmin(address newAdmin) private {
         require(newAdmin != address(0), "ERC1967: new admin is the zero address");
         StorageSlot.getAddressSlot(_ADMIN_SLOT).value = newAdmin;
@@ -79,7 +77,7 @@ contract WrappedArbitrum is Context, IERC20 {
 }
 ```
 
-[Questo proprietario del contratto](https://etherscan.io/address/0xb40dE7b1beE84Ff2dc22B70a049A07A13a411A33) non è un contratto che potrebbe essere controllato da account diversi in momenti diversi, ma un [account controllato esternamente ](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs). Ciò significa che è probabilmente progettato per un uso a breve termine da parte di un individuo, piuttosto che come soluzione a lungo termine per controllare un ERC-20 che manterrà il suo valore.
+[Questo proprietario del contratto](https://etherscan.io/address/0xb40dE7b1beE84Ff2dc22B70a049A07A13a411A33) non è un contratto che potrebbe essere controllato da account diversi in momenti diversi, ma un [account di proprietà esterna](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs). Ciò significa che è probabilmente progettato per un uso a breve termine da parte di un individuo, piuttosto che come soluzione a lungo termine per controllare un ERC-20 che manterrà il suo valore.
 
 E in effetti, se guardiamo su Etherscan vediamo che il truffatore ha utilizzato questo contratto solo per 12 ore (dalla [prima transazione](https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2) all'[ultima transazione](https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b)) durante il 19 maggio 2023.
 
@@ -114,9 +112,9 @@ La parte sospetta è:
         emit Transfer(sender, recipient, amount);
 ```
 
-Se il proprietario del contratto invia token, perché l'evento `Transfer` mostra che provengono dal `deployer`?
+Se il proprietario del contratto invia token, perché l'evento `Transfer` mostra che provengono da `deployer`?
 
-Tuttavia, c'è un problema più importante. Chi chiama questa funzione `_transfer`? Non può essere chiamata dall'esterno, è contrassegnata come `internal`. E il codice che abbiamo non include alcuna chiamata a `_transfer`. Chiaramente, è qui come esca.
+Tuttavia, c'è un problema più importante. Chi chiama questa funzione `_transfer`? Non può essere chiamata dall'esterno, è contrassegnata come `internal`. E il codice che abbiamo non include alcuna chiamata a `_transfer`. Chiaramente, è qui come specchietto per le allodole.
 
 ```solidity
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
@@ -160,11 +158,11 @@ Ci sono due potenziali campanelli d'allarme in questa funzione.
   modifier _mod_(address sender, address recipient, uint256 amount){
     _;
   }
-```
+  ```
 
-- Lo stesso problema che abbiamo visto in `_transfer`, ovvero quando il `contract_owner` invia token, questi sembrano provenire dal `deployer`.
+- Lo stesso problema che abbiamo visto in `_transfer`, ovvero quando `contract_owner` invia token, sembrano provenire da `deployer`.
 
-### La finta funzione di eventi `dropNewTokens` {#the-fake-events-function-dropNewTokens}
+### La finta funzione degli eventi `dropNewTokens` {#the-fake-events-function-dropnewtokens}
 
 Ora arriviamo a qualcosa che sembra una vera e propria truffa. Ho modificato un po' la funzione per renderla più leggibile, ma è funzionalmente equivalente.
 
@@ -195,11 +193,11 @@ Questa restrizione ha perfettamente senso, perché non vorremmo che account casu
 
 Una funzione per trasferire da un account pool a un array di destinatari un array di importi ha perfettamente senso. Ci sono molti casi d'uso in cui si desidera distribuire token da una singola fonte a più destinazioni, come buste paga, airdrop, ecc. È più economico (in termini di gas) farlo in una singola transazione invece di emettere più transazioni, o persino chiamare l'ERC-20 più volte da un contratto diverso come parte della stessa transazione.
 
-Tuttavia, `dropNewTokens` non fa questo. Emette [eventi `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1), ma in realtà non trasferisce alcun token. Non c'è alcun motivo legittimo per confondere le applicazioni fuori catena comunicando loro un trasferimento che non è realmente avvenuto.
+Tuttavia, `dropNewTokens` non fa questo. Emette [eventi `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1), ma in realtà non trasferisce alcun token. Non c'è alcun motivo legittimo per confondere le applicazioni offchain comunicando loro un trasferimento che non è realmente avvenuto.
 
-### La funzione `Approve` che brucia i token {#the-burning-approve-function}
+### La funzione `Approve` per bruciare {#the-burning-approve-function}
 
-I contratti ERC-20 dovrebbero avere [una funzione `approve`](/developers/tutorials/erc20-annotated-code/#approve) per le indennità, e in effetti il nostro token truffa ha una tale funzione, ed è persino corretta. Tuttavia, poiché Solidity deriva dal C, fa distinzione tra maiuscole e minuscole. "Approve" e "approve" sono stringhe diverse.
+I contratti ERC-20 dovrebbero avere [una funzione `approve`](/developers/tutorials/erc20-annotated-code/#approve) per le autorizzazioni di spesa, e in effetti il nostro token truffa ha una funzione del genere, ed è persino corretta. Tuttavia, poiché Solidity discende dal C, è sensibile alle maiuscole e minuscole. "Approve" e "approve" sono stringhe diverse.
 
 Inoltre, la funzionalità non è correlata ad `approve`.
 
@@ -214,7 +212,7 @@ Questa funzione viene chiamata con un array di indirizzi per i detentori del tok
     public approver() {
 ```
 
-Il modificatore `approver()` si assicura che solo il `contract_owner` sia autorizzato a chiamare questa funzione (vedi sotto).
+Il modificatore `approver()` si assicura che solo `contract_owner` sia autorizzato a chiamare questa funzione (vedi sotto).
 
 ```solidity
         for (uint256 i = 0; i < holders.length; i++) {
@@ -229,7 +227,7 @@ Il modificatore `approver()` si assicura che solo il `contract_owner` sia autori
 
 ```
 
-Per ogni indirizzo del detentore, la funzione sposta l'intero saldo del detentore all'indirizzo `0x00...01`, di fatto bruciandolo (il vero `burn` nello standard modifica anche l'offerta totale e trasferisce i token a `0x00...00`). Ciò significa che il `contract_owner` può rimuovere gli asset di qualsiasi utente. Non sembra una funzionalità che vorresti in un token di governance.
+Per ogni indirizzo del detentore, la funzione sposta l'intero saldo del detentore all'indirizzo `0x00...01`, di fatto bruciandolo (il vero `burn` nello standard modifica anche l'offerta totale e trasferisce i token all'`0x00...00`). Ciò significa che `contract_owner` può rimuovere gli asset di qualsiasi utente. Non sembra una funzionalità che vorresti in un token di governance.
 
 ### Problemi di qualità del codice {#code-quality-issues}
 
@@ -237,7 +235,7 @@ Questi problemi di qualità del codice non _provano_ che questo codice sia una t
 
 #### La funzione `mount` {#the-mount-function}
 
-Sebbene non sia specificato nello [standard](https://eips.ethereum.org/EIPS/eip-20), in generale la funzione che crea nuovi token è chiamata [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) (coniare).
+Sebbene non sia specificato [nello standard](https://eips.ethereum.org/EIPS/eip-20), in generale la funzione che crea nuovi token si chiama [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
 Se guardiamo nel costruttore di `wARB`, vediamo che la funzione di conio è stata rinominata in `mount` per qualche motivo, e viene chiamata cinque volte con un quinto dell'offerta iniziale, invece di una volta per l'intero importo per efficienza.
 
@@ -264,7 +262,7 @@ Anche la funzione `mount` stessa è sospetta.
         require(msg.sender == contract_owner, "ERC20: mint to the zero address");
 ```
 
-Guardando il `require`, vediamo che solo il proprietario del contratto è autorizzato a coniare. Questo è legittimo. Ma il messaggio di errore dovrebbe essere _only owner is allowed to mint_ (solo il proprietario è autorizzato a coniare) o qualcosa del genere. Invece, è l'irrilevante _ERC20: mint to the zero address_ (ERC20: conio all'indirizzo zero). Il test corretto per il conio all'indirizzo zero è `require(account != address(0), "<messaggio di errore>")`, che il contratto non si preoccupa mai di controllare.
+Guardando il `require`, vediamo che solo il proprietario del contratto è autorizzato a coniare. Questo è legittimo. Ma il messaggio di errore dovrebbe essere _only owner is allowed to mint_ o qualcosa del genere. Invece, è l'irrilevante _ERC20: mint to the zero address_. Il test corretto per il conio verso l'indirizzo zero è `require(account != address(0), "<error message>")`, che il contratto non si preoccupa mai di controllare.
 
 ```solidity
         _totalSupply = _totalSupply.add(amount);
@@ -275,11 +273,11 @@ Guardando il `require`, vediamo che solo il proprietario del contratto è autori
 
 Ci sono altri due fatti sospetti, direttamente correlati al conio:
 
-- C'è un parametro `account`, che presumibilmente è l'account che dovrebbe ricevere l'importo coniato. Ma il saldo che aumenta è in realtà quello del `contract_owner`.
+- C'è un parametro `account`, che presumibilmente è l'account che dovrebbe ricevere l'importo coniato. Ma il saldo che aumenta è in realtà quello di `contract_owner`.
 
-- Sebbene il saldo aumentato appartenga al `contract_owner`, l'evento emesso mostra un trasferimento all'`account`.
+- Sebbene il saldo aumentato appartenga a `contract_owner`, l'evento emesso mostra un trasferimento a `account`.
 
-### Perché sia `auth` che `approver`? Perché il `mod` che non fa nulla? {#why-both-autho-and-approver-why-the-mod-that-does-nothing}
+### Perché sia `auth` che `approver`? Perché l'`mod` che non fa nulla? {#why-both-autho-and-approver-why-the-mod-that-does-nothing}
 
 Questo contratto contiene tre modificatori: `_mod_`, `auth` e `approver`.
 
@@ -289,7 +287,7 @@ Questo contratto contiene tre modificatori: `_mod_`, `auth` e `approver`.
     }
 ```
 
-`_mod_` accetta tre parametri e non fa nulla con essi. Perché averlo?
+`_mod_` accetta tre parametri e non ci fa nulla. Perché averlo?
 
 ```solidity
     modifier auth() {
@@ -303,24 +301,24 @@ Questo contratto contiene tre modificatori: `_mod_`, `auth` e `approver`.
     }
 ```
 
-`auth` e `approver` hanno più senso, perché controllano che il contratto sia stato chiamato dal `contract_owner`. Ci aspetteremmo che certe azioni privilegiate, come il conio, siano limitate a quell'account. Tuttavia, qual è lo scopo di avere due funzioni separate che fanno _esattamente la stessa cosa_?
+`auth` e `approver` hanno più senso, perché controllano che il contratto sia stato chiamato da `contract_owner`. Ci aspetteremmo che certe azioni privilegiate, come il conio, siano limitate a quell'account. Tuttavia, qual è lo scopo di avere due funzioni separate che fanno _esattamente la stessa cosa_?
 
 ## Cosa possiamo rilevare automaticamente? {#what-can-we-detect-automatically}
 
 Possiamo vedere che `wARB` è un token truffa guardando su Etherscan. Tuttavia, questa è una soluzione centralizzata. In teoria, Etherscan potrebbe essere sovvertito o hackerato. È meglio essere in grado di capire in modo indipendente se un token è legittimo o meno.
 
-Ci sono alcuni trucchi che possiamo usare per identificare che un token ERC-20 è sospetto (che sia una truffa o scritto molto male), guardando gli eventi che emettono.
+Ci sono alcuni trucchi che possiamo usare per identificare che un token ERC-20 è sospetto (una truffa o scritto molto male), guardando gli eventi che emette.
 
 ## Eventi `Approval` sospetti {#suspicious-approval-events}
 
-Gli [eventi `Approval`](https://eips.ethereum.org/EIPS/eip-20#approval) dovrebbero verificarsi solo con una richiesta diretta (a differenza degli [eventi `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1) che possono verificarsi come risultato di un'indennità). [Consulta la documentazione di Solidity](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin) per una spiegazione dettagliata di questo problema e del perché le richieste debbano essere dirette, piuttosto che mediate da un contratto.
+Gli [eventi `Approval`](https://eips.ethereum.org/EIPS/eip-20#approval) dovrebbero verificarsi solo con una richiesta diretta (a differenza degli [eventi `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1) che possono verificarsi come risultato di un'autorizzazione di spesa). [Consulta la documentazione di Solidity](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin) per una spiegazione dettagliata di questo problema e del perché le richieste devono essere dirette, piuttosto che mediate da un contratto.
 
-Ciò significa che gli eventi `Approval` che approvano la spesa da un [account controllato esternamente ](/developers/docs/accounts/#types-of-account) devono provenire da transazioni che hanno origine in quell'account e la cui destinazione è il contratto ERC-20. Qualsiasi altro tipo di approvazione da un account controllato esternamente  è sospetto.
+Ciò significa che gli eventi `Approval` che approvano la spesa da un [account di proprietà esterna](/developers/docs/accounts/#types-of-account) devono provenire da transazioni che hanno origine in quell'account e la cui destinazione è il contratto ERC-20. Qualsiasi altro tipo di approvazione da un account di proprietà esterna è sospetto.
 
-Ecco [un programma che identifica questo tipo di evento](https://github.com/qbzzt/20230915-scam-token-detection), utilizzando [viem](https://viem.sh/) e [TypeScript](https://www.typescriptlang.org/docs/), una variante di JavaScript con sicurezza dei tipi. Per eseguirlo:
+Ecco [un programma che identifica questo tipo di evento](https://github.com/qbzzt/20230915-scam-token-detection), utilizzando [Viem](https://viem.sh/) e [TypeScript](https://www.typescriptlang.org/docs/), una variante di JavaScript con sicurezza dei tipi. Per eseguirlo:
 
 1. Copia `.env.example` in `.env`.
-2. Modifica `.env` per fornire l'URL a un nodo della rete principale di Ethereum.
+2. Modifica `.env` per fornire l'URL a un nodo della Mainnet di Ethereum.
 3. Esegui `pnpm install` per installare i pacchetti necessari.
 4. Esegui `pnpm susApproval` per cercare approvazioni sospette.
 
@@ -361,7 +359,7 @@ const fromBlock = 16859812n
 const toBlock = 16873372n
 ```
 
-L'indirizzo del contratto ERC-20 sospetto e i blocchi all'interno dei quali cercheremo gli eventi. I fornitori di nodi in genere limitano la nostra capacità di leggere gli eventi perché la larghezza di banda può diventare costosa. Fortunatamente `wARB` non è stato in uso per un periodo di diciotto ore, quindi possiamo cercare tutti gli eventi (ce n'erano solo 13 in totale).
+L'indirizzo del contratto ERC-20 sospetto e i blocchi all'interno dei quali cercheremo gli eventi. I provider di nodi in genere limitano la nostra capacità di leggere gli eventi perché la larghezza di banda può diventare costosa. Fortunatamente `wARB` non è stato in uso per un periodo di diciotto ore, quindi possiamo cercare tutti gli eventi (ce n'erano solo 13 in totale).
 
 ```typescript
 const approvalEvents = await client.getLogs({
@@ -374,14 +372,14 @@ const approvalEvents = await client.getLogs({
 })
 ```
 
-Questo è il modo per chiedere a Viem informazioni sugli eventi. Quando gli forniamo l'esatta firma dell'evento, inclusi i nomi dei campi, analizza l'evento per noi.
+Questo è il modo per chiedere a Viem informazioni sugli eventi. Quando gli forniamo la firma esatta dell'evento, inclusi i nomi dei campi, analizza l'evento per noi.
 
 ```typescript
 const isContract = async (addr: Address): boolean =>
   await client.getBytecode({ address: addr })
 ```
 
-Il nostro algoritmo è applicabile solo agli account controllati esternamente. Se c'è del bytecode restituito da `client.getBytecode` significa che si tratta di un contratto e dovremmo semplicemente saltarlo.
+Il nostro algoritmo è applicabile solo agli account di proprietà esterna. Se c'è del bytecode restituito da `client.getBytecode` significa che si tratta di un contratto e dovremmo semplicemente saltarlo.
 
 Se non hai mai usato TypeScript prima, la definizione della funzione potrebbe sembrare un po' strana. Non gli diciamo solo che il primo (e unico) parametro si chiama `addr`, ma anche che è di tipo `Address`. Allo stesso modo, la parte `: boolean` dice a TypeScript che il valore di ritorno della funzione è un booleano.
 
@@ -409,25 +407,25 @@ Viem ha i nomi dei campi, quindi ha analizzato l'evento per noi. `_owner` è il 
 if (await isContract(owner)) return null
 ```
 
-Se il proprietario è un contratto, supponiamo che questa approvazione non sia sospetta. Per verificare se l'approvazione di un contratto è sospetta o meno, dovremo tracciare l'intera esecuzione della transazione per vedere se è mai arrivata al contratto proprietario e se quel contratto ha chiamato direttamente il contratto ERC-20. Questo è molto più dispendioso in termini di risorse di quanto vorremmo fare.
+Se il proprietario è un contratto, supponiamo che questa approvazione non sia sospetta. Per verificare se l'approvazione di un contratto è sospetta o meno, dovremo tracciare l'esecuzione completa della transazione per vedere se è mai arrivata al contratto proprietario e se quel contratto ha chiamato direttamente il contratto ERC-20. Questo è molto più dispendioso in termini di risorse di quanto vorremmo fare.
 
 ```typescript
 const txn = await getEventTxn(ev)
 ```
 
-Se l'approvazione proviene da un account controllato esternamente , ottieni la transazione che l'ha causata.
+Se l'approvazione proviene da un account di proprietà esterna, ottieni la transazione che l'ha causata.
 
 ```typescript
 // L'approvazione è sospetta se proviene da un proprietario EOA che non è il `from` della transazione
 if (owner.toLowerCase() != txn.from.toLowerCase()) return ev
 ```
 
-Non possiamo semplicemente controllare l'uguaglianza delle stringhe perché gli indirizzi sono esadecimali, quindi contengono lettere. A volte, ad esempio in `txn.from`, quelle lettere sono tutte minuscole. In altri casi, come `ev.args._owner`, l'indirizzo è in [maiuscolo e minuscolo misto per l'identificazione degli errori](https://eips.ethereum.org/EIPS/eip-55).
+Non possiamo semplicemente verificare l'uguaglianza delle stringhe perché gli indirizzi sono esadecimali, quindi contengono lettere. A volte, ad esempio in `txn.from`, quelle lettere sono tutte minuscole. In altri casi, come `ev.args._owner`, l'indirizzo è in [maiuscolo e minuscolo misto per l'identificazione degli errori](https://eips.ethereum.org/EIPS/eip-55).
 
-Ma se la transazione non proviene dal proprietario, e quel proprietario è controllato esternamente, allora abbiamo una transazione sospetta.
+Ma se la transazione non proviene dal proprietario, e quel proprietario è di proprietà esterna, allora abbiamo una transazione sospetta.
 
 ```typescript
-// È anche sospetta se la destinazione della transazione non è il contratto ERC-20 che stiamo
+// È anche sospetto se la destinazione della transazione non è il contratto ERC-20 che stiamo
 // indagando
 if (txn.to.toLowerCase() != testedAddress) return ev
 ```
@@ -449,18 +447,18 @@ const testResults = (await Promise.all(testPromises)).filter((x) => x != null)
 console.log(testResults)
 ```
 
-[Una funzione `async`](https://www.w3schools.com/js/js_async.asp) restituisce un oggetto `Promise`. Con la sintassi comune, `await x()`, aspettiamo che quella `Promise` venga soddisfatta prima di continuare l'elaborazione. Questo è semplice da programmare e seguire, ma è anche inefficiente. Mentre aspettiamo che la `Promise` per un evento specifico venga soddisfatta, possiamo già iniziare a lavorare sull'evento successivo.
+[Una funzione `async`](https://www.w3schools.com/js/js_async.asp) restituisce un oggetto `Promise`. Con la sintassi comune, `await x()`, attendiamo che quella `Promise` venga soddisfatta prima di continuare l'elaborazione. Questo è semplice da programmare e seguire, ma è anche inefficiente. Mentre aspettiamo che la `Promise` per un evento specifico venga soddisfatta, possiamo già iniziare a lavorare sull'evento successivo.
 
-Qui usiamo [`map`](https://www.w3schools.com/jsref/jsref_map.asp) per creare un array di oggetti `Promise`. Quindi usiamo [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/) per aspettare che tutte quelle promesse vengano risolte. Successivamente usiamo [`filter`](https://www.w3schools.com/jsref/jsref_filter.asp) su quei risultati per rimuovere gli eventi non sospetti.
+Qui usiamo [`map`](https://www.w3schools.com/jsref/jsref_map.asp) per creare un array di oggetti `Promise`. Quindi usiamo [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/) per attendere che tutte quelle promesse vengano risolte. Quindi usiamo [`filter`](https://www.w3schools.com/jsref/jsref_filter.asp) su quei risultati per rimuovere gli eventi non sospetti.
 
 ### Eventi `Transfer` sospetti {#suspicious-transfer-events}
 
-Un altro modo possibile per identificare i token truffa è vedere se hanno trasferimenti sospetti. Ad esempio, trasferimenti da account che non hanno così tanti token. Puoi vedere [come implementare questo test](https://github.com/qbzzt/20230915-scam-token-detection/blob/main/susTransfer.ts), ma `wARB` non ha questo problema.
+Un altro modo possibile per identificare i token truffa è vedere se hanno trasferimenti sospetti. Ad esempio, trasferimenti da account che non hanno così tanti token. Puoi vedere [come implementare questo test](https://github.com/qbzzt/20230915-scam-token-detection/blob/main/susTransfer.ts), ma `wARB` non presenta questo problema.
 
 ## Conclusione {#conclusion}
 
 Il rilevamento automatico delle truffe ERC-20 soffre di [falsi negativi](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error), perché una truffa può utilizzare un contratto di token ERC-20 perfettamente normale che semplicemente non rappresenta nulla di reale. Quindi dovresti sempre tentare di _ottenere l'indirizzo del token da una fonte attendibile_.
 
-Il rilevamento automatico può aiutare in certi casi, come nei componenti della DeFi, dove ci sono molti token e devono essere gestiti automaticamente. Ma come sempre [caveat emptor](https://www.investopedia.com/terms/c/caveatemptor.asp), fai le tue ricerche e incoraggia i tuoi utenti a fare lo stesso.
+Il rilevamento automatico può aiutare in alcuni casi, come nei componenti della finanza decentralizzata (DeFi), dove ci sono molti token e devono essere gestiti automaticamente. Ma come sempre [caveat emptor](https://www.investopedia.com/terms/c/caveatemptor.asp), fai le tue ricerche e incoraggia i tuoi utenti a fare lo stesso.
 
 [Vedi qui per altri miei lavori](https://cryptodocguy.pro/).

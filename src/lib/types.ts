@@ -511,37 +511,15 @@ export type CommonHeroProps<
 }
 
 // Staking stats data fetching
-type Data<T> = {
-  data: T
-}
-
-export type EthStoreResponse = Data<{
-  apr: number
-  day: number
-  effective_balances_sum_wei: number
-}>
-
-export type EthStakedResponse = {
+export type DuneResultResponse = {
   result: {
-    rows?: {
-      cum_deposited_eth: number
-      time: string
-    }[]
+    rows?: Record<string, number | string | null>[]
   }
 }
 
-export type EpochResponse = Data<
-  Record<"eligibleether" | "validatorscount", number>
->
-
-export type BeaconchainEpochData = Record<
-  "totalEthStaked" | "validatorscount",
-  MetricReturnData
->
-
 export type StakingStatsData = {
   totalEthStaked: number
-  validatorscount: number
+  stakedPercentage: number
   apr: number
 }
 
@@ -801,7 +779,7 @@ export type ChainName = (typeof chains)[number]["name"]
 
 export type NonEVMChainName = "Starknet"
 
-export type AppOnlyChainName = "Immutable zkEVM"
+export type AppOnlyChainName = "Immutable zkEVM" | "Ronin"
 
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel

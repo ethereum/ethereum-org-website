@@ -1,14 +1,14 @@
 ---
 title: Entornos de desarrollo integrados (IDE)
-description: "Conozca más a fondo los IDE basados en la web y de escritorio para el desarrollo en Ethereum, incluidos Remix, VS Code y plugins populares."
+description: Aprenda sobre los IDE basados en la web y de escritorio para el desarrollo de Ethereum, incluyendo Remix, VS Code y complementos populares.
 lang: es
 ---
 
-Cuando se trata de configurar un [entorno de desarrollo integrado (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programar aplicaciones en Ethereum es similar a programar cualquier otro proyecto de software. Hay muchas opciones para elegir, por eso, al final del día, elija el IDE o editor de código que mejor se ajuste a sus preferencias. Probablemente la mejor opción de IDE para su desarrollo de Ethereum es el IDE que ya usa para el desarrollo tradicional de software.
+Cuando se trata de configurar un [entorno de desarrollo integrado (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programar aplicaciones en Ethereum es similar a programar cualquier otro proyecto de software. Hay muchas opciones para elegir, así que, al final del día, elija el IDE o editor de código que mejor se adapte a sus preferencias. Lo más probable es que la mejor opción de IDE para su desarrollo en Ethereum sea el IDE que ya utiliza para el desarrollo de software tradicional.
 
 ## IDE basados en la web {#web-based-ides}
 
-Si desea experimentar con el código antes de [configurar un entorno de desarrollo local](/developers/local-environment/), estas aplicaciones web están diseñadas a medida para el desarrollo de contratos inteligentes de Ethereum.
+Si busca trastear con el código antes de [configurar un entorno de desarrollo local](/developers/local-environment/), estas aplicaciones web están creadas específicamente para el desarrollo de contratos inteligentes en Ethereum.
 
 **[Remix](https://remix.ethereum.org/)** - **_IDE basado en la web con análisis estático integrado y una máquina virtual de cadena de bloques de prueba_**
 
@@ -24,7 +24,7 @@ Si desea experimentar con el código antes de [configurar un entorno de desarrol
 
 - [Documentación](https://docs.replit.com/)
 
-**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_Un entorno de prototipado rápido donde puede escribir, ejecutar y depurar contratos inteligentes en el navegador utilizando Solidity y JavaScript_**
+**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_Un entorno de creación rápida de prototipos donde puede escribir, ejecutar y depurar contratos inteligentes en el navegador usando Solidity y JavaScript_**
 
 **[EthFiddle](https://ethfiddle.com/)** - **_IDE basado en la web que le permite escribir, compilar y depurar su contrato inteligente_**
 
@@ -32,33 +32,33 @@ Si desea experimentar con el código antes de [configurar un entorno de desarrol
 
 ## IDE de escritorio {#desktop-ides}
 
-La mayoría de los IDE establecidos han desarrollado complementos para mejorar la experiencia de desarrollo de Ethereum. Como mínimo, proporcionan resaltado de sintaxis para los [lenguajes de contratos inteligentes](/developers/docs/smart-contracts/languages/).
+La mayoría de los IDE establecidos han creado complementos para mejorar la experiencia de desarrollo en Ethereum. Como mínimo, proporcionan resaltado de sintaxis para [lenguajes de contratos inteligentes](/developers/docs/smart-contracts/languages/).
 
-**Visual Studio Code -** **_IDE profesional multiplataforma con soporte oficial de Ethereum_**
+**Visual Studio Code:** **_IDE profesional multiplataforma con soporte oficial para Ethereum_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Muestras de código](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
+- [Ejemplos de código](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**IDE JetBrains (IntelliJ IDEA, etc.) -** **_Herramientas esenciales para desarrolladores de software y equipos_**
+**IDE de JetBrains (IntelliJ IDEA, etc.):** **_Herramientas esenciales para desarrolladores y equipos de software_**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)
 - [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
 
-**Remix Desktop -** **_Experimente Remix IDE en su máquina local_**
+**Remix Desktop:** **_Experimente el IDE Remix en su máquina local_**
 
 - [Descargar](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## Plugins y extensiones {#plugins-extensions}
+## Complementos y extensiones {#plugins-extensions}
 
-- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Lenguaje Ethereum Solidity para Visual Studio Code
-- [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Soporte para Solidity y Hardhat por el equipo de Hardhat
-- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Formateador de código que usa prettier
+- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity): lenguaje Solidity de Ethereum para Visual Studio Code
+- [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity): soporte para Solidity y Hardhat por parte del equipo de Hardhat
+- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity): formateador de código usando Prettier
 
-## Lecturas adicionales {#further-reading}
+## Más información {#further-reading}
 
-- [IDE de Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Lista de Alchemy de IDE de Ethereum_
+- [IDE de Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Lista de IDE de Ethereum de Alchemy_
 
-_¿Conoce algún recurso de la comunidad que le haya sido de ayuda? ¡Edite esta página y agréguela!_
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? ¡Edite esta página y añádalo!_

@@ -1,0 +1,556 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-17T00:18:12.958Z",
+  "englishManifestHash": "26fa99195ec5",
+  "placeholderOrder": [
+    "LINK-6f460a",
+    "LINK-909684",
+    "LINK-ecc7d4",
+    "LINK-d79e39",
+    "CODEBLOCK-207819",
+    "CODEBLOCK-0d84c2",
+    "CODEBLOCK-b6ba0e",
+    "CODEBLOCK-72137d",
+    "CODEBLOCK-0354df",
+    "LINK-18f7ae",
+    "LINK-903f15",
+    "LINK-fd8427",
+    "LINK-b3236a",
+    "LINK-9939be",
+    "LINK-e04e61",
+    "LINK-04ae28",
+    "LINK-6f8994",
+    "LINK-a2f69e",
+    "LINK-01a012",
+    "LINK-c26a74",
+    "LINK-42c396",
+    "LINK-3146ea",
+    "LINK-301534",
+    "LINK-8ce2d5",
+    "LINK-5c0984",
+    "CODEBLOCK-0904b5",
+    "IMAGE-e76e0c",
+    "CODE-e8a009",
+    "CODE-b60080",
+    "CODE-a318c2",
+    "LINK-6197fe",
+    "CODE-7ac5c5",
+    "CODE-7ac5c5",
+    "CODEBLOCK-96fc0b",
+    "IMAGE-86651c",
+    "LINK-6fca0d",
+    "LINK-719f04",
+    "LINK-947982",
+    "LINK-30f470",
+    "CODE-fd54aa",
+    "CODE-18b2e0",
+    "CODE-fd54aa",
+    "CODE-18b2e0",
+    "CODE-fd54aa",
+    "CODE-18b2e0",
+    "CODEBLOCK-6d0342",
+    "LINK-afd168",
+    "LINK-b42318",
+    "LINK-829bd5",
+    "CODE-92a00d",
+    "CODE-b60080",
+    "CODE-f16474",
+    "CODE-5b46f8",
+    "LINK-54dea5",
+    "CODEBLOCK-698718",
+    "LINK-e5a366",
+    "LINK-5c3c69",
+    "LINK-a80c27",
+    "LINK-f2b898",
+    "LINK-b855a4",
+    "LINK-14bef3",
+    "LINK-d34efb",
+    "CODEBLOCK-c2bed8",
+    "CODE-058a42",
+    "CODE-7a18e9",
+    "CODE-a75bc7",
+    "CODE-4a2c4e",
+    "CODE-a6f5b0",
+    "CODE-338c6a",
+    "CODE-511e37",
+    "CODE-1c1706",
+    "CODE-0dac08",
+    "CODE-97c52a",
+    "CODE-1b5993",
+    "CODE-41164d",
+    "CODE-289609",
+    "CODE-c80371",
+    "CODE-42e376",
+    "CODE-338c6a",
+    "CODE-e0bbb9",
+    "CODE-25efea",
+    "CODE-e7b0d9",
+    "CODE-e7895c",
+    "CODE-99cc7e",
+    "CODE-0a52c3",
+    "CODE-2c42cf"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-207819": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0d84c2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b6ba0e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-72137d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0354df": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0904b5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-96fc0b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6d0342": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-698718": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c2bed8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-e8a009": {
+      "type": "inline-code",
+      "values": {
+        "content": "a + b <= a"
+      }
+    },
+    "CODE-b60080": {
+      "type": "inline-code",
+      "values": {
+        "content": "<="
+      }
+    },
+    "CODE-a318c2": {
+      "type": "inline-code",
+      "values": {
+        "content": "+"
+      }
+    },
+    "CODE-7ac5c5": {
+      "type": "inline-code",
+      "values": {
+        "content": "ExpressionVisitor"
+      }
+    },
+    "CODE-fd54aa": {
+      "type": "inline-code",
+      "values": {
+        "content": "variable_a"
+      }
+    },
+    "CODE-18b2e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "variable_b"
+      }
+    },
+    "CODE-92a00d": {
+      "type": "inline-code",
+      "values": {
+        "content": ">="
+      }
+    },
+    "CODE-f16474": {
+      "type": "inline-code",
+      "values": {
+        "content": "=="
+      }
+    },
+    "CODE-5b46f8": {
+      "type": "inline-code",
+      "values": {
+        "content": "balanceOf(address)"
+      }
+    },
+    "CODE-058a42": {
+      "type": "inline-code",
+      "values": {
+        "content": "Slither"
+      }
+    },
+    "CODE-7a18e9": {
+      "type": "inline-code",
+      "values": {
+        "content": "contracts (list(Contract)"
+      }
+    },
+    "CODE-a75bc7": {
+      "type": "inline-code",
+      "values": {
+        "content": "contracts_derived (list(Contract)"
+      }
+    },
+    "CODE-4a2c4e": {
+      "type": "inline-code",
+      "values": {
+        "content": "get_contract_from_name (str)"
+      }
+    },
+    "CODE-a6f5b0": {
+      "type": "inline-code",
+      "values": {
+        "content": "Contract"
+      }
+    },
+    "CODE-338c6a": {
+      "type": "inline-code",
+      "values": {
+        "content": "name (str)"
+      }
+    },
+    "CODE-511e37": {
+      "type": "inline-code",
+      "values": {
+        "content": "functions (list(Function))"
+      }
+    },
+    "CODE-1c1706": {
+      "type": "inline-code",
+      "values": {
+        "content": "modifiers (list(Modifier))"
+      }
+    },
+    "CODE-0dac08": {
+      "type": "inline-code",
+      "values": {
+        "content": "all_functions_called (list(Function/Modifier))"
+      }
+    },
+    "CODE-97c52a": {
+      "type": "inline-code",
+      "values": {
+        "content": "inheritance (list(Contract))"
+      }
+    },
+    "CODE-1b5993": {
+      "type": "inline-code",
+      "values": {
+        "content": "get_function_from_signature (str)"
+      }
+    },
+    "CODE-41164d": {
+      "type": "inline-code",
+      "values": {
+        "content": "get_modifier_from_signature (str)"
+      }
+    },
+    "CODE-289609": {
+      "type": "inline-code",
+      "values": {
+        "content": "get_state_variable_from_name (str)"
+      }
+    },
+    "CODE-c80371": {
+      "type": "inline-code",
+      "values": {
+        "content": "Function"
+      }
+    },
+    "CODE-42e376": {
+      "type": "inline-code",
+      "values": {
+        "content": "Modifier"
+      }
+    },
+    "CODE-e0bbb9": {
+      "type": "inline-code",
+      "values": {
+        "content": "contract (contract)"
+      }
+    },
+    "CODE-25efea": {
+      "type": "inline-code",
+      "values": {
+        "content": "nodes (list(Node))"
+      }
+    },
+    "CODE-e7b0d9": {
+      "type": "inline-code",
+      "values": {
+        "content": "entry_point (Node)"
+      }
+    },
+    "CODE-e7895c": {
+      "type": "inline-code",
+      "values": {
+        "content": "variables_read (list(Variable))"
+      }
+    },
+    "CODE-99cc7e": {
+      "type": "inline-code",
+      "values": {
+        "content": "variables_written (list(Variable))"
+      }
+    },
+    "CODE-0a52c3": {
+      "type": "inline-code",
+      "values": {
+        "content": "state_variables_read (list(StateVariable))"
+      }
+    },
+    "CODE-2c42cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "state_variables_written (list(StateVariable))"
+      }
+    },
+    "IMAGE-e76e0c": {
+      "type": "image",
+      "values": {
+        "path": "./ast.png"
+      }
+    },
+    "IMAGE-86651c": {
+      "type": "image",
+      "values": {
+        "path": "./cfg.png"
+      }
+    },
+    "LINK-6f460a": {
+      "type": "link",
+      "values": {
+        "url": "#installation"
+      }
+    },
+    "LINK-909684": {
+      "type": "link",
+      "values": {
+        "url": "#command-line"
+      }
+    },
+    "LINK-ecc7d4": {
+      "type": "link",
+      "values": {
+        "url": "#static-analysis"
+      }
+    },
+    "LINK-d79e39": {
+      "type": "link",
+      "values": {
+        "url": "#api-basics"
+      }
+    },
+    "LINK-18f7ae": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither#printers"
+      }
+    },
+    "LINK-903f15": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither#tools"
+      }
+    },
+    "LINK-fd8427": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic"
+      }
+    },
+    "LINK-b3236a": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/"
+      }
+    },
+    "LINK-9939be": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/"
+      }
+    },
+    "LINK-e04e61": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf"
+      }
+    },
+    "LINK-04ae28": {
+      "type": "link",
+      "values": {
+        "url": "https://clang-analyzer.llvm.org/"
+      }
+    },
+    "LINK-6f8994": {
+      "type": "link",
+      "values": {
+        "url": "https://lwn.net/Articles/806099/"
+      }
+    },
+    "LINK-a2f69e": {
+      "type": "link",
+      "values": {
+        "url": "https://fbinfer.com/"
+      }
+    },
+    "LINK-01a012": {
+      "type": "link",
+      "values": {
+        "url": "https://codeclimate.com/"
+      }
+    },
+    "LINK-c26a74": {
+      "type": "link",
+      "values": {
+        "url": "https://findbugs.sourceforge.net/"
+      }
+    },
+    "LINK-42c396": {
+      "type": "link",
+      "values": {
+        "url": "https://frama-c.com/"
+      }
+    },
+    "LINK-3146ea": {
+      "type": "link",
+      "values": {
+        "url": "https://www.mathworks.com/products/polyspace.html"
+      }
+    },
+    "LINK-301534": {
+      "type": "link",
+      "values": {
+        "url": "#code-representation"
+      }
+    },
+    "LINK-8ce2d5": {
+      "type": "link",
+      "values": {
+        "url": "#analysis"
+      }
+    },
+    "LINK-5c0984": {
+      "type": "link",
+      "values": {
+        "url": "#intermediate-representation"
+      }
+    },
+    "LINK-6197fe": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/master/slither/visitors/expression/expression.py"
+      }
+    },
+    "LINK-6fca0d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Detector-Documentation#state-variable-shadowing"
+      }
+    },
+    "LINK-719f04": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/shadowing/state.py#L51-L62"
+      }
+    },
+    "LINK-947982": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface"
+      }
+    },
+    "LINK-30f470": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55"
+      }
+    },
+    "LINK-afd168": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/data-dependency"
+      }
+    },
+    "LINK-b42318": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities"
+      }
+    },
+    "LINK-829bd5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87"
+      }
+    },
+    "LINK-54dea5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64"
+      }
+    },
+    "LINK-e5a366": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131"
+      }
+    },
+    "LINK-5c3c69": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py"
+      }
+    },
+    "LINK-a80c27": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py"
+      }
+    },
+    "LINK-f2b898": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py"
+      }
+    },
+    "LINK-b855a4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/SlithIR"
+      }
+    },
+    "LINK-14bef3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Printer-documentation#slithir"
+      }
+    },
+    "LINK-d34efb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:18:12.958Z",
+      "status": "success"
+    }
+  }
+}

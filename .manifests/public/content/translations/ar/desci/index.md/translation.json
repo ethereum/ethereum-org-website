@@ -1,0 +1,416 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-16T21:48:07.841Z",
+  "englishManifestHash": "26cdbea7b4d7",
+  "placeholderOrder": [
+    "LINK-9b0f6e",
+    "LINK-0abc42",
+    "LINK-b8bfd3",
+    "LINK-9b0f6e",
+    "LINK-a21a82",
+    "LINK-ce7b28",
+    "LINK-984f46",
+    "LINK-6c3a56",
+    "LINK-7dcf0c",
+    "LINK-6af0a5",
+    "LINK-2202f7",
+    "LINK-785d90",
+    "LINK-13e922",
+    "LINK-e84c81",
+    "LINK-118968",
+    "LINK-7b68bc",
+    "LINK-c5ae4a",
+    "LINK-220e65",
+    "LINK-335f65",
+    "LINK-8dab1a",
+    "LINK-06f5d4",
+    "LINK-5f4627",
+    "LINK-c1e9c6",
+    "LINK-90f729",
+    "LINK-c3bd7a",
+    "LINK-55c5ca",
+    "LINK-ed87dc",
+    "LINK-f333c6",
+    "LINK-dc7035",
+    "LINK-f32542",
+    "LINK-4f68ac",
+    "LINK-83cd5b",
+    "LINK-4d7727",
+    "LINK-fb4723",
+    "LINK-a14923",
+    "LINK-fc9489",
+    "LINK-bee379",
+    "LINK-67022d",
+    "LINK-cf779e",
+    "LINK-2bd8e6",
+    "LINK-15e803",
+    "LINK-72ae05",
+    "LINK-148aca",
+    "LINK-41ebe3",
+    "LINK-85db0c",
+    "LINK-bcf9f3",
+    "LINK-19f967",
+    "LINK-93bc13",
+    "LINK-ca2b1c",
+    "LINK-b234fb",
+    "LINK-1a234f",
+    "LINK-91f67b",
+    "LINK-e54dba",
+    "LINK-fa2dee",
+    "LINK-19e41f",
+    "LINK-801e22",
+    "LINK-19cba7",
+    "LINK-b1c1f6"
+  ],
+  "placeholderMap": {
+    "LINK-9b0f6e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#web3"
+      }
+    },
+    "LINK-0abc42": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#dao"
+      }
+    },
+    "LINK-b8bfd3": {
+      "type": "link",
+      "values": {
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-ce7b28": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#public-goods"
+      }
+    },
+    "LINK-984f46": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/"
+      }
+    },
+    "LINK-6c3a56": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#anti-sybil"
+      }
+    },
+    "LINK-7dcf0c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#attestation"
+      }
+    },
+    "LINK-6af0a5": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c"
+      }
+    },
+    "LINK-2202f7": {
+      "type": "link",
+      "values": {
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531"
+      }
+    },
+    "LINK-785d90": {
+      "type": "link",
+      "values": {
+        "url": "https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead"
+      }
+    },
+    "LINK-13e922": {
+      "type": "link",
+      "values": {
+        "url": "https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design"
+      }
+    },
+    "LINK-e84c81": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#nft"
+      }
+    },
+    "LINK-118968": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6"
+      }
+    },
+    "LINK-7b68bc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#defi"
+      }
+    },
+    "LINK-c5ae4a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.vitadao.com/"
+      }
+    },
+    "LINK-220e65": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2022/01/26/soulbound.html"
+      }
+    },
+    "LINK-335f65": {
+      "type": "link",
+      "values": {
+        "url": "https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol"
+      }
+    },
+    "LINK-8dab1a": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/weavechain/whats-in-store-for-the-future-of-healthcare-data-b6398745fbbb"
+      }
+    },
+    "LINK-06f5d4": {
+      "type": "link",
+      "values": {
+        "url": "https://desci.global"
+      }
+    },
+    "LINK-5f4627": {
+      "type": "link",
+      "values": {
+        "url": "https://t.me/BlockchainForScience"
+      }
+    },
+    "LINK-c1e9c6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.molecule.xyz/"
+      }
+    },
+    "LINK-90f729": {
+      "type": "link",
+      "values": {
+        "url": "https://www.vitadao.com/"
+      }
+    },
+    "LINK-c3bd7a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.researchhub.com/"
+      }
+    },
+    "LINK-55c5ca": {
+      "type": "link",
+      "values": {
+        "url": "https://www.dclimate.net/"
+      }
+    },
+    "LINK-ed87dc": {
+      "type": "link",
+      "values": {
+        "url": "https://descifoundation.org/"
+      }
+    },
+    "LINK-f333c6": {
+      "type": "link",
+      "values": {
+        "url": "https://desci.world"
+      }
+    },
+    "LINK-dc7035": {
+      "type": "link",
+      "values": {
+        "url": "https://oceanprotocol.com/"
+      }
+    },
+    "LINK-f32542": {
+      "type": "link",
+      "values": {
+        "url": "https://opsci.io/research/"
+      }
+    },
+    "LINK-4f68ac": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bio.xyz/"
+      }
+    },
+    "LINK-83cd5b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.activeinference.org/"
+      }
+    },
+    "LINK-4d7727": {
+      "type": "link",
+      "values": {
+        "url": "https://ideamarket.io/"
+      }
+    },
+    "LINK-fb4723": {
+      "type": "link",
+      "values": {
+        "url": "https://www.desci.com/"
+      }
+    },
+    "LINK-a14923": {
+      "type": "link",
+      "values": {
+        "url": "https://www.valleydao.bio"
+      }
+    },
+    "LINK-fc9489": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cerebrumdao.com/"
+      }
+    },
+    "LINK-bee379": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryodao.org"
+      }
+    },
+    "LINK-67022d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.elata.bio/"
+      }
+    },
+    "LINK-cf779e": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-desci-projects/"
+      }
+    },
+    "LINK-2bd8e6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#"
+      }
+    },
+    "LINK-15e803": {
+      "type": "link",
+      "values": {
+        "url": "https://future.a16z.com/a-guide-to-decentralized-biotech/"
+      }
+    },
+    "LINK-72ae05": {
+      "type": "link",
+      "values": {
+        "url": "https://gitcoin.co/blog/desci-the-case-for-decentralised-science/"
+      }
+    },
+    "LINK-148aca": {
+      "type": "link",
+      "values": {
+        "url": "https://future.com/what-is-decentralized-science-aka-desci/"
+      }
+    },
+    "LINK-41ebe3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.vincentweisser.com/desci"
+      }
+    },
+    "LINK-85db0c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description"
+      }
+    },
+    "LINK-bcf9f3": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673"
+      }
+    },
+    "LINK-19f967": {
+      "type": "link",
+      "values": {
+        "url": "https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a"
+      }
+    },
+    "LINK-93bc13": {
+      "type": "link",
+      "values": {
+        "url": "https://zenodo.org/record/6320575"
+      }
+    },
+    "LINK-ca2b1c": {
+      "type": "link",
+      "values": {
+        "url": "https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec"
+      }
+    },
+    "LINK-b234fb": {
+      "type": "link",
+      "values": {
+        "url": "https://nadia.xyz/science-funding"
+      }
+    },
+    "LINK-1a234f": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f"
+      }
+    },
+    "LINK-91f67b": {
+      "type": "link",
+      "values": {
+        "url": "https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/"
+      }
+    },
+    "LINK-e54dba": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=-DeMklVWNdA"
+      }
+    },
+    "LINK-fa2dee": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=x9TSJK1widA"
+      }
+    },
+    "LINK-19e41f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=WkvzYgCvWj8"
+      }
+    },
+    "LINK-801e22": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=zkXM9H90g_E"
+      }
+    },
+    "LINK-19cba7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=qB4Tc3FcVbM"
+      }
+    },
+    "LINK-b1c1f6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T21:48:07.841Z",
+      "status": "success"
+    }
+  }
+}

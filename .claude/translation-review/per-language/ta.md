@@ -28,3 +28,10 @@ Left unfixed: choosing the right Tamil term for "trade-offs" (compromises/downsi
 
 - collateral/network homograph (both பிணையம்) is glossary-endorsed; not an error.
 - All hrefs/tickers/markup byte-identical; brands transliterated (ஆவே/Aave) or kept Latin per policy. No critical issues.
+
+---
+
+## PR #18418 (intl/pending-dev) -- 2026-06-16 -- Score 9.6/10
+
+- 21 UI-string JSONs reviewed. 0 critical. No placeholder leak in glossary-tooltip (clean). The prior "trade-offs" polysemy issue does NOT apply here -- page-stablecoins.json is not in this PR; no "trade-offs" strings present.
+- Minor warnings only: two valid Ethereum transliterations coexist (எத்திரியம்/எத்தீரியம்). ICU/tags/hrefs/domains all intact.
