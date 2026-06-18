@@ -1,118 +1,118 @@
 ---
 title: Blokzincir Veri Depolama Stratejileri
-description: "Blokzincir kullanarak veri dopalamanın birçok yolu vardır. Bu makalede farklı stratejiler, bu stratejilerin maliyetleri, artıları ve eksileri ve bu stratejileri güvenli bir şekilde kullanmak için gerekenler karşılaştırılacaktır."
+description: Blokzincir kullanarak veri depolamanın birkaç yolu vardır. Bu makale, farklı stratejileri, bunların maliyetlerini ve ödünleşimlerini ve ayrıca güvenli bir şekilde kullanmak için gerekenleri karşılaştıracaktır.
 lang: tr
 ---
 
-Blokzincirde ya da blokzincir tarafından güvence altına alınan bir şekilde bilgi depolamanın birçok yolu vardır:
+Bilgileri doğrudan blokzincir üzerinde veya blokzincir tarafından güvence altına alınacak şekilde depolamanın birden fazla yolu vardır:
 
 - EIP-4844 blob'ları
-- Calldata
-- L1 mekanizmalarıyla zincir dışında
+- Çağrı verisi
+- Katman 1 (L1) mekanizmalarıyla zincir dışı
 - Sözleşme "kodu"
-- Etkinlikler
+- Olaylar
 - EVM depolaması
 
-Hangi yöntemin kullanılacağı çeşitli ölçütlere bağlıdır:
+Hangi yöntemin kullanılacağının seçimi birkaç kritere dayanır:
 
-- Bilginin kaynağı. Calldata'daki bilgi direkt olarak blokzincirin kendisinden gelemez.
-- Bilginin varış noktası. Calldata yalnızca onu içeren işlemde kullanılabilir. Olaylar zincir üstünde hiçbir zaman erişilebilir değildir.
-- Ne kadar zorluğa katlanılabilir? Tam ölçekli bir düğüm çalıştıran bilgisayarlar, tarayıcıda çalışan bir uygulamada hafif bir istemciden daha fazla işlem gerçekleştirebilir.
-- Bilgiye her düğümden kolayca ulaşılabilmesi gerekli midir?
-- Güvenlik gereklilikleri.
+- Bilginin kaynağı. Çağrı verisindeki bilgiler doğrudan blokzincirin kendisinden gelemez.
+- Bilginin hedefi. Çağrı verisi yalnızca onu içeren işlemde mevcuttur. Olaylara zincir içi olarak hiçbir şekilde erişilemez.
+- Ne kadar zorluk kabul edilebilir? Tam ölçekli bir düğüm çalıştıran bilgisayarlar, tarayıcıda çalışan bir uygulamadaki hafif istemciden daha fazla işlem gerçekleştirebilir.
+- Bilgiye her düğümden kolay erişimi kolaylaştırmak gerekli mi?
+- Güvenlik gereksinimleri.
 
-## Güvenlik gereklilikleri {#security-requirements}
+## Güvenlik gereksinimleri {#security-requirements}
 
-Bilgi güvenliği genel olarak üç özellikten oluşur:
+Genel olarak, bilgi güvenliği üç özellikten oluşur:
 
-- _Gizlilik_, yetkisi olmayan kişilerin bilgileri okumasına izin verilmez. Bu çoğu durumda önemlidir, ama burada değil. _Blokzincirde sır yoktur_. Blokzincirler, durum geçişlerini herkes doğrulayabildiği için işe yarar; dolayısıyla onları sırları doğrudan depolamak için kullanmak imkânsızdır. Gizli bilgileri blokzincirde saklamanın çeşitli yolları olsa da, bu yolların tümü en azından bir anahtarı saklamak için zincir dışında bir bileşene ihtiyaç duyar.
+- _Gizlilik_, yetkisiz varlıkların bilgileri okumasına izin verilmez. Bu birçok durumda önemlidir, ancak burada değil. _Blokzincirde sır yoktur_. Blokzincirler, herkesin durum geçişlerini doğrulayabilmesi sayesinde çalışır, bu nedenle onları doğrudan sırları depolamak için kullanmak imkansızdır. Blokzincirde gizli bilgileri depolamanın yolları vardır, ancak bunların hepsi en azından bir anahtar depolamak için bazı zincir dışı bileşenlere dayanır.
 
-- _Bütünlük_, bilgi doğrudur, yetkisiz kişiler tarafından, ya da yetkisiz yollarla değiştirilemez (örneğin bir `Transfer` olayı olmadan [ERC-20 jetonlarını](https://eips.ethereum.org/EIPS/eip-20#events) transfer etmek gibi). Blokzincirde her düğüm her durum değişikliğini doğrular, bu da bütünlüğü sağlar.
+- _Bütünlük_, bilgi doğrudur, yetkisiz varlıklar tarafından veya yetkisiz yollarla değiştirilemez (örneğin, bir `Transfer` olayı olmadan [ERC-20 token'larını](https://eips.ethereum.org/EIPS/eip-20#events) transfer etmek). Blokzincirde, her düğüm her durum değişikliğini doğrular, bu da bütünlüğü sağlar.
 
-- _Erişilebilirlik_, bilgiye yetkisi olan herkes tarafından erişilebilir. Blokzincirde bu genellikle her [tam düğümde](https://ethereum.org/developers/docs/nodes-and-clients/#full-node) bilginin mevcut olmasıyla sağlanır.
+- _Erişilebilirlik_, bilgi yetkili herhangi bir varlık için mevcuttur. Blokzincirde bu, genellikle bilginin her [tam düğümde](https://ethereum.org/developers/docs/nodes-and-clients/#full-node) mevcut olmasıyla elde edilir.
 
-Karmalar L1'e gönderildiği için buradaki farklı çözümlerin hepsi mükemmel bütünlüğe sahiptir. Fakat bunların farklı kullanılabilirlik garantileri vardır.
+Buradaki farklı çözümlerin tümü mükemmel bütünlüğe sahiptir, çünkü hash'ler L1'de yayınlanır. Ancak, farklı erişilebilirlik garantilerine sahiptirler.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-[Blokzincirin temellerini](/developers/docs/intro-to-ethereum/) iyi anlamış olmanız gerekir. Bu sayfa okuyucunun ayrıca [bloklar](/developers/docs/blocks/), [işlemler](/developers/docs/transactions/) ve ilgili diğer konulara da aşina olduğunu varsayar.
+[Blokzincir temellerini](/developers/docs/intro-to-ethereum/) iyi anlamış olmalısınız. Bu sayfa ayrıca okuyucunun [bloklara](/developers/docs/blocks/), [işlemlere](/developers/docs/transactions/) ve diğer ilgili konulara aşina olduğunu varsayar.
 
 ## EIP-4844 blob'ları {#eip-4844-blobs}
 
-[Dencun sert çatallanmasından](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md) itibaren Ethereum blokzinciri, Ethereum veri blob'larına sınırlı bir kullanım ömrü (başlangıçta yaklaşık [18 gün](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)) ekleyen [EIP-4844'ü](https://eips.ethereum.org/EIPS/eip-4844) içerir. Bu blob'lar, benzer bir mekanizma kullanmalarına rağmen [yürütüm gazından](/developers/docs/gas) ayrı olarak fiyatlandırılır. Blob'lar geçici veri göndermenin ucuz bir yoludur.
+[Dencun sert çatallanmasıyla (hardfork)](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md) başlayarak Ethereum blokzinciri, Ethereum'a sınırlı bir ömre (başlangıçta yaklaşık [18 gün](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)) sahip veri blob'ları ekleyen [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)'ü içerir. Bu blob'lar, benzer bir mekanizma kullanmalarına rağmen [yürütme gazından](/developers/docs/gas) ayrı olarak fiyatlandırılır. Geçici verileri yayınlamanın ucuz bir yoludur.
 
-EIP-4844 blob'larının temel kullanım alanı, toplamaların işlemlerini yayınlamasıdır. [İyimser toplamaların](/developers/docs/scaling/optimistic-rollups) işlemleri kendi blokzincirlerinde yayımlaması gerekir. Bu işlemler, toplamanın [sıralayıcısının](https://docs.optimism.io/connect/resources/glossary#challenge-period) hatalı bir durum kökü göndermesi halinde [doğrulayıcıların](https://docs.optimism.io/connect/resources/glossary#validator) hatayı düzeltmelerini mümkün kılmak için [itiraz süresi](https://docs.optimism.io/connect/resources/glossary#challenge-period) boyunca herkese açık olmalıdır.
+EIP-4844 blob'larının ana kullanım durumu, toplamaların işlemlerini yayınlaması içindir. [İyimser rollup'ların](/developers/docs/scaling/optimistic-rollups) işlemleri kendi blokzincirlerinde yayınlaması gerekir. Bu işlemler, rollup'ın [sıralayıcısı](https://docs.optimism.io/connect/resources/glossary#sequencer) yanlış bir durum kökü yayınlarsa [doğrulayıcıların](https://docs.optimism.io/connect/resources/glossary#validator) hatayı düzeltmesini sağlamak için [itiraz süresi](https://docs.optimism.io/connect/resources/glossary#challenge-period) boyunca herkesin erişimine açık olmalıdır.
 
-Bununla birlikte, itiraz süresi geçtikten ve durum kökü kesinleştirildikten sonra bu işlemleri bilmenin tek amacı, zincirin mevcut durumunu kopyalamaktır. Bu durum, çok daha az işleme gerektiren zincir düğümlerinden de alınabilir. Bu nedenle işlem bilgileri yine de [blok arayıcıları](/developers/docs/data-and-analytics/block-explorers) gibi birkaç yerde saklanmalıdır ancak Ethereum'un sunduğu sansür direnci seviyesi için ödeme yapmaya gerek yoktur.
+Ancak, itiraz süresi geçtikten ve durum kökü kesinleşmiş olduktan sonra, bu işlemleri bilmenin geriye kalan amacı zincirin mevcut durumunu kopyalamaktır. Bu durum, çok daha az işlem gerektirerek zincir düğümlerinden de elde edilebilir. Bu nedenle işlem bilgileri [blok gezginleri](/developers/docs/data-and-analytics/block-explorers) gibi birkaç yerde hala korunmalıdır, ancak Ethereum'un sağladığı sansür direnci seviyesi için ödeme yapmaya gerek yoktur.
 
-[Sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups/#data-availability), diğer düğümlerin mevcut durumu çoğaltmasını ve doğruluk kanıtlarını doğrulamasını sağlamak için işlem verilerini de yayınlar ancak bu yine kısa vadeli bir gerekliliktir.
+[Sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups/#data-availability) da diğer düğümlerin mevcut durumu kopyalamasını ve geçerlilik kanıtlarını doğrulamasını sağlamak için işlem verilerini yayınlar, ancak bu yine kısa vadeli bir gereksinimdir.
 
-EIP-4844'te yazım gönderimi, bayt başına bir wei'ye (10<sup>-18</sup> ETH) mal olur; bu da [blob gönderme işlemi de dahil olmak üzere herhangi bir işlemin maliyeti olan 21.000 yürütüm gazına](https://eth.blockscout.com/tx/0xf6cfaf0431c73dd1d96369a5e6707d64f463ccf477a4131265397f1d81466929?tab=index) kıyasla ihmal edilebilir düzeydedir. Güncel EIP-4844 fiyatını [blobscan.com](https://blobscan.com/blocks) adresinden görebilirsiniz.
+Yazının yazıldığı sırada EIP-4844'te yayın yapmanın maliyeti bayt başına bir Wei'dir (10<sup>-18</sup> ETH), bu da [blob'ları yayınlayanlar da dahil olmak üzere herhangi bir işlemin maliyeti olan 21.000 yürütme gazına](https://eth.blockscout.com/tx/0xf6cfaf0431c73dd1d96369a5e6707d64f463ccf477a4131265397f1d81466929?tab=index) kıyasla ihmal edilebilir düzeydedir. Mevcut EIP-4844 fiyatını [blobscan.com](https://blobscan.com/blocks) adresinde görebilirsiniz.
 
-İşte bazı ünlü toplamaların gönderdiği blob'ları görebileceğiniz adresler.
+İşte bazı ünlü toplamalar tarafından yayınlanan blob'ları görebileceğiniz adresler.
 
-| Toplama                              | Posta adresi                                                                                                            |
+| Rollup                               | Posta kutusu adresi                                                                                                         |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://blobscan.com/address/0xFF00000000000000000000000000000000000010) |
 | [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://blobscan.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
 | [Base](https://base.org/)            | [`0xFF00000000000000000000000000000000008453`](https://blobscan.com/address/0xFF00000000000000000000000000000000008453) |
 
-## Calldata {#calldata}
+## Çağrı verisi {#calldata}
 
-Calldata, işlemin bir parçası olarak gönderilen baytları ifade eder. İşlemi içeren blokta, blokzincirin kalıcı kaydının bir parçası olarak saklanır.
+Çağrı verisi, işlemin bir parçası olarak gönderilen baytları ifade eder. O işlemi içeren blokta, blokzincirin kalıcı kaydının bir parçası olarak saklanır.
 
-Bu, blokzincire kalıcı olarak veri yerleştirmenin en ucuz yoludur. Bayt başına maliyet, 4 yürütüm gazı (bayt sıfırsa) veya 16 gazdır (başka herhangi bir değer). Standart uygulamaya uygun olarak veriler sıkıştırılmışsa, her bayt değeri eşit olasılıkla olacaktır; dolayısıyla ortalama maliyet, bayt başına yaklaşık 15,95 gazdır.
+Bu, verileri blokzincire kalıcı olarak koymanın en ucuz yöntemidir. Bayt başına maliyet 4 yürütme gazı (bayt sıfırsa) veya 16 gazdır (diğer herhangi bir değer). Veriler sıkıştırılmışsa (ki bu standart bir uygulamadır), her bayt değerinin olasılığı eşittir, bu nedenle ortalama maliyet bayt başına yaklaşık 15,95 gazdır.
 
-Yazım anında fiyatlar 12 gwei/gaz ve 2300 $/ETH'dir, bu da kilobayt başına maliyetin yaklaşık 45 sent olduğu anlamına gelir. EIP-4844 öncesinde en ucuz yöntem olduğundan bu, toplamaların [hata zorlukları](https://docs.optimism.io/stack/protocol/overview#fault-proofs) için kullanılabilir olması gereken, ancak doğrudan zincir üstünde erişilebilir olması gerekmeyen işlem bilgilerini depolamak için kullanıldığı yöntemdir.
+Yazının yazıldığı sırada fiyatlar 12 Gwei/gaz ve 2300 $/ETH'dir, bu da maliyetin kilobayt başına yaklaşık 45 sent olduğu anlamına gelir. EIP-4844'ten önce en ucuz yöntem bu olduğu için, toplamaların [hata itirazları](https://docs.optimism.io/stack/protocol/overview#fault-proofs) için erişilebilir olması gereken ancak doğrudan zincir içi erişilebilir olması gerekmeyen işlem bilgilerini depolamak için kullandığı yöntem buydu.
 
-İşte bazı ünlü toplamaların gönderdiği işlemleri görebileceğiniz adresler.
+İşte bazı ünlü toplamalar tarafından yayınlanan işlemleri görebileceğiniz adresler.
 
-| Toplama                              | Posta adresi                                                                                                                  |
+| Rollup                               | Posta kutusu adresi                                                                                                               |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
 | [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000000010) |
 | [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://eth.blockscout.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
 | [Base](https://base.org/)            | [`0xFF00000000000000000000000000000000008453`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000008453) |
 
-## L1 mekanizmalarıyla zincir dışında {#offchain-with-l1-mechs}
+## Katman 1 (L1) mekanizmalarıyla zincir dışı {#offchain-with-l1-mechs}
 
-Güvenlikten ne kadar ödün vermek isteyeceğinize bağlı olarak, bilgileri başka bir yere yerleştirmeniz ve ihtiyaç duyulduğunda verilere erişilebilmesini sağlayacak bir mekanizma kullanmanız kabul edilebilir. Bunun işe yaraması için iki gereklilik vardır:
+Güvenlik ödünleşimlerinize bağlı olarak, bilgileri başka bir yere koymak ve gerektiğinde verilerin kullanılabilir olmasını sağlayan bir mekanizma kullanmak kabul edilebilir olabilir. Bunun çalışması için iki gereksinim vardır:
 
-1. Verilerin _giriş taahhüdü_ adı verilen bir [karmasını](https://en.wikipedia.org/wiki/Cryptographic_hash_function) blokzincire gönderin. Bu 32 baytlık tek bir kelime olabilir, dolayısıyla pahalı değildir. Giriş taahhüdü mevcut olduğu sürece bütünlük güvence altındadır. Çünkü aynı değere karma yapacak başka veri bulmak makul değildir. Yani yanlış veri sağlanırsa tespit edilebilir.
+1. Blokzincirde verilerin _girdi taahhüdü_ adı verilen bir [hash'ini](https://en.wikipedia.org/wiki/Cryptographic_hash_function) yayınlayın. Bu tek bir 32 baytlık kelime olabilir, bu nedenle pahalı değildir. Girdi taahhüdü mevcut olduğu sürece bütünlük sağlanır çünkü aynı değere hash'lenecek başka bir veri bulmak mümkün değildir. Bu nedenle yanlış veri sağlanırsa tespit edilebilir.
 
-2. Kullanılabilirliği sağlayan bir mekanizmaya sahip olunmalıdır. Örneğin, [Redstone'da](https://redstone.xyz/docs/what-is-redstone) herhangi bir düğüm kullanılabilirlik itirazı başlatabilir. Sıralayıcının son tarihe kadar zincir üstünde yanıt vermemesi halinde giriş taahhüdü atılır, böylece bilginin hiç gönderilmediği kabul edilir.
+2. Erişilebilirliği sağlayan bir mekanizmaya sahip olun. Örneğin, [Redstone](https://redstone.xyz/docs/what-is-redstone)'da herhangi bir düğüm bir erişilebilirlik itirazı sunabilir. Sıralayıcı son tarihe kadar zincir içi yanıt vermezse, girdi taahhüdü atılır, bu nedenle bilginin hiç yayınlanmadığı kabul edilir.
 
-Bu, iyimser toplamalarda kabul edilebilirdir çünkü durum kökü için en az bir doğrulayıcının dürüst olduğunu kabul ederiz. Dürüst bir doğrulayıcı aynı zamanda blokları işlemek için gerekli verilere sahip olduğundan emin olur ve bilgiler zincir dışında mevcut değilse bir kullanılabilirlik itirazında bulunur. Bu tip iyimser toplamalar [plazma](/developers/docs/scaling/plasma/) olarak adlandırılır.
+Bu, iyimser bir rollup için kabul edilebilirdir çünkü durum kökü için zaten en az bir dürüst doğrulayıcıya sahip olmaya güveniyoruz. Böyle dürüst bir doğrulayıcı, blokları işlemek için verilere sahip olduğundan da emin olacak ve bilgi zincir dışı mevcut değilse bir erişilebilirlik itirazı yayınlayacaktır. Bu tür iyimser rollup'a [Plasma](/developers/docs/scaling/plasma/) denir.
 
 ## Sözleşme kodu {#contract-code}
 
-Sadece bir kez yazılması gereken, asla üzerine yazılamayan ve zincir üstünde erişilebilir olması gereken bilgiler, sözleşme kodu olarak saklanabilir. Bu, verilerle bir "akıllı sözleşme" oluşturduktan sonra bilgileri okumak için [`EXTCODECOPY`](https://www.evm.codes/#3c?fork=shanghai) kullandığımız anlamına gelir. Bunun avantajı, kod kopyalamanın nispeten ucuz olmasıdır.
+Yalnızca bir kez yazılması gereken, üzerine asla yazılmayan ve zincir içi erişilebilir olması gereken bilgiler sözleşme kodu olarak saklanabilir. Bu, verilerle bir "akıllı sözleşme" oluşturduğumuz ve ardından bilgileri okumak için [`EXTCODECOPY`](https://www.evm.codes/#3c?fork=shanghai) kullandığımız anlamına gelir. Avantajı, kod kopyalamanın nispeten ucuz olmasıdır.
 
-`EXTCODECOPY`, bellek genişletme maliyetinin dışında bir sözleşmeye ilk erişim için ("soğukken") 2600 gaz ve aynı sözleşmeden sonraki kopyalar için 100 gaz artı 32 bayt kelime başına 3 gaz maliyetine sahiptir. Bayt başına maliyeti 15,95 olan calldata ile karşılaştırıldığında, yaklaşık 200 bayttan itibaren daha ucuzdur. [Bellek genişletme maliyeti formülüne](https://www.evm.codes/about#memoryexpansion) göre bellek genişletme maliyeti, 4MB'tan fazla belleğe ihtiyaç duymadığınız sürece calldata ekleme maliyetinden daha azdır.
+Bellek genişletme maliyeti dışında, `EXTCODECOPY` bir sözleşmeye ilk erişim için ("soğuk" olduğunda) 2600 gaz ve aynı sözleşmeden sonraki kopyalar için 100 gaz artı 32 baytlık kelime başına 3 gaz maliyetindedir. Bayt başına 15,95 maliyeti olan çağrı verisiyle karşılaştırıldığında, bu yaklaşık 200 bayttan itibaren daha ucuzdur. [Bellek genişletme maliyetleri formülüne](https://www.evm.codes/about#memoryexpansion) dayanarak, 4 MB'tan fazla belleğe ihtiyacınız olmadığı sürece, bellek genişletme maliyeti çağrı verisi ekleme maliyetinden daha küçüktür.
 
-Elbette bu sadece veriyi _okuma_ maliyetidir. Sözleşmeyi oluşturma maliyeti yaklaşık 32.000 gaz + 200 gaz/bayt'tır. Bu yöntem, sadece aynı bilginin farklı işlemlerde birçok kez okunması gerektiği zaman ekonomiktir.
+Elbette bu sadece verileri _okumanın_ maliyetidir. Sözleşmeyi oluşturmak yaklaşık 32.000 gaz + 200 gaz/bayt maliyetindedir. Bu yöntem yalnızca aynı bilginin farklı işlemlerde birçok kez okunması gerektiğinde ekonomiktir.
 
-Sözleşme kodu, `0xEF` ile başlamadığı sürece anlamsız olabilir. `0xEF` ile başlayan sözleşmeler, çok daha katı gereksinimlere sahip olan [ethereum nesne formatı](https://notes.ethereum.org/@ipsilon/evm-object-format-overview) olarak yorumlanır.
+Sözleşme kodu, `0xEF` ile başlamadığı sürece anlamsız olabilir. `0xEF` ile başlayan sözleşmeler, çok daha katı gereksinimleri olan [Ethereum nesne formatı](https://notes.ethereum.org/@ipsilon/evm-object-format-overview) olarak yorumlanır.
 
 ## Olaylar {#events}
 
-[Olaylar](https://docs.alchemy.com/docs/solidity-events), akıllı sözleşmeler tarafından yayılır ve zincir dışı yazılımla okunur.
-Avantajları, zincir dışı kodun olayları dinleyebiliyor olmasıdır. Maliyeti, [gaz](https://www.evm.codes/#a0?fork=cancun), 375 artı veri baytı başına 8 gazdır. 12 gwei/gaz ve 2300 $/ETH üzerinden hesaplandığında bir sent artı kilobayt başına 22 sent anlamına gelir.
+[Olaylar](https://docs.alchemy.com/docs/solidity-events) akıllı sözleşmeler tarafından yayınlanır ve zincir dışı yazılımlar tarafından okunur.
+Avantajları, zincir dışı kodun olayları dinleyebilmesidir. Maliyeti [gazdır](https://www.evm.codes/#a0?fork=cancun), 375 artı veri baytı başına 8 gaz. 12 Gwei/gaz ve 2300 $/ETH'de bu, bir sent artı kilobayt başına 22 sente karşılık gelir.
 
 ## Depolama {#storage}
 
-Akıllı sözleşmelerin [kalıcı depolamaya](https://docs.alchemy.com/docs/smart-contract-storage-layout#what-is-storage-memory) erişimi vardır. Ancak, bu çok pahalıdır. Önceden boş olan bir depolama yuvasına 32 baytlık bir kelime yazmak [22.100 gaza mal olabilir](https://www.evm.codes/#55?fork=cancun). 12 gwei/gaz ve 2300 $/ETH'de, yazma işlemi başına yaklaşık 61 sent veya kilobayt başına 19,5 $ anlamına gelir.
+Akıllı sözleşmelerin [kalıcı depolamaya](https://docs.alchemy.com/docs/smart-contract-storage-layout#what-is-storage-memory) erişimi vardır. Ancak bu çok pahalıdır. Daha önce boş olan bir depolama slotuna 32 baytlık bir kelime yazmak [22.100 gaza mal olabilir](https://www.evm.codes/#55?fork=cancun). 12 Gwei/gaz ve 2300 $/ETH'de bu, yazma işlemi başına yaklaşık 61 sent veya kilobayt başına 19,5 $'dır.
 
-Bu, Ethereum'daki en pahalı depolama yöntemidir.
+Bu, Ethereum'daki en pahalı depolama biçimidir.
 
 ## Özet {#summary}
 
-Bu tabloda farklı seçenekler, bu seçenekleri avantajları ve dezavantajları özetlenmiştir.
+Bu tablo farklı seçenekleri, bunların avantajlarını ve dezavantajlarını özetlemektedir.
 
-| Depolama türü                      | Veri kaynağı                        | Kullanılabilirlik garantisi                                                                                                                             | Zincir üstünde kullanılabilirlik                                | Ek sınırlamalar                                                       |
-| ---------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------- |
-| EIP-4844 blob'ları                 | Zincir dışında                      | [~18 gün](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) süresince Ethereum garantili | Sadece karma kullanılabilir                                     |                                                                       |
-| Calldata                           | Zincir dışında                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Sadece bir sözleşmeye yazıldıysa ve o işlemdeyse kullanılabilir |                                                                       |
-| L1 mekanizmalarıyla zincir dışında | Zincir dışında                      | İtiraz dönemi boyunca "bir dürüst doğrulayıcı" garantisi                                                                                                | Sadece karma                                                    | Sadece itiraz döneminde, itiraz mekanizması tarafından garanti edilir |
-| Sözleşme kodu                      | Zincir üstünde ya da zincir dışında | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Evet                                                            | "Rastgele" bir adrese yazılır, `0xEF` ile başlayamaz                  |
-| Etkinlikler                        | Zincir üstünde                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Hayır                                                           |                                                                       |
-| Depolama                           | Zincir üstünde                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası ve üzerine yazılana kadar mevcut durum)                                          | Evet                                                            |                                                                       |
+| Depolama türü               | Veri kaynağı        | Erişilebilirlik garantisi                                                                                                          | Zincir içi erişilebilirlik                                       | Ek sınırlamalar                                                         |
+| --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| EIP-4844 blob'ları          | Zincir dışı         | [~18 gün](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) için Ethereum garantisi | Yalnızca hash mevcuttur                                          |                                                                         |
+| Çağrı verisi                | Zincir dışı         | Sonsuza kadar Ethereum garantisi (blokzincirin bir parçası)                                                                        | Yalnızca bir sözleşmeye yazılmışsa ve o işlemde mevcuttur        |                                                                         |
+| Katman 1 (L1) mekanizmalarıyla zincir dışı | Zincir dışı         | İtiraz süresi boyunca "bir dürüst doğrulayıcı" garantisi                                                                           | Yalnızca hash                                                    | İtiraz mekanizması tarafından garanti edilir, yalnızca itiraz süresi boyunca |
+| Sözleşme kodu               | Zincir içi veya zincir dışı | Sonsuza kadar Ethereum garantisi (blokzincirin bir parçası)                                                                        | Evet                                                             | "Rastgele" bir adrese yazılır, `0xEF` ile başlayamaz    |
+| Olaylar                     | Zincir içi          | Sonsuza kadar Ethereum garantisi (blokzincirin bir parçası)                                                                        | Hayır                                                            |                                                                         |
+| Depolama                    | Zincir içi          | Sonsuza kadar Ethereum garantisi (blokzincirin ve üzerine yazılana kadar mevcut durumun bir parçası)                               | Evet                                                             |                                                                         |

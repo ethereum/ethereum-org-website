@@ -1,33 +1,27 @@
 ---
-title: "Solidity akıllı sözleşmeleri test etmek için nasıl taklit edilir?"
-description: "Neden sözleşmelerinizi test ederken dalga geçmelisiniz?"
+title: Test için Solidity akıllı sözleşmeleri nasıl mock'lanır
+description: Test yaparken sözleşmelerinizle neden dalga geçmelisiniz
 author: Markus Waas
 lang: tr
-tags:
-  [
-    "solidity",
-    "akıllı kontratlar",
-    "test etmek",
-    "taklit etme"
-  ]
+tags: ["solidity", "akıllı sözleşmeler", "test etme", "mocking"]
 skill: intermediate
-breadcrumb: "Sözleşme mocklama"
+breadcrumb: Sözleşmeleri mock'lamak
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
 
-[Taklit nesneler](https://wikipedia.org/wiki/Mock_object), nesne yönelimli programlamada yaygın olarak kullanılan bir tasarım modelidir. Fransızca'dan gelen "mocquer" kelimesi "dalga geçmek" anlamındadır. Bu kelime "gerçek olan bir şeyi taklit etmek" anlamına evrilmiştir ki bu, tam olarak programlamada yaptığımız şeydir. Akıllı sözleşmelerinizle lütfen sadece istediğiniz zaman dalga geçin ama her boş vaktinizde onları taklit edin. Bu, hayatınızı kolaylaştıracak.
+[Mock (taklit) nesneleri](https://wikipedia.org/wiki/Mock_object), nesne yönelimli programlamada yaygın bir tasarım desenidir. 'Dalga geçmek' anlamına gelen eski Fransızca 'mocquer' kelimesinden gelerek, aslında programlamada yaptığımız şey olan 'gerçek bir şeyi taklit etme' anlamını kazanmıştır. Lütfen sadece isterseniz akıllı sözleşmelerinizle dalga geçin, ancak yapabildiğiniz her zaman onları mock'layın (taklit edin). Bu, hayatınızı kolaylaştırır.
 
-## Taklit nesnelerle sözleşmelerin birim testi {#unit-testing-contracts-with-mocks}
+## Sözleşmeleri mock'lar ile birim testine tabi tutmak {#unit-testing-contracts-with-mocks}
 
-Bir sözleşmeyi taklit etmek, sözleşmenin gerçek hali gibi davranan ve geliştirici tarafından kolayca kontrol edilebilen ikinci bir versiyonunu oluşturmak anlamına gelir. Çoğu zaman, yalnızca [sözleşmenin küçük kısımlarına birim testi yapmak](/developers/docs/smart-contracts/testing/) istediğiniz karmaşık sözleşmelerle karşılaşırsınız. Buradaki sorun, ya bu ufak parçanın test edilmesi çok detaylı bir sözleşme durumu gerektiriyorsa ve buna ulaşmak zorsa?
+Bir sözleşmeyi mock'lamak, temel olarak o sözleşmenin orijinaline çok benzer davranan, ancak geliştirici tarafından kolayca kontrol edilebilecek şekilde ikinci bir versiyonunu oluşturmak anlamına gelir. Genellikle sadece [sözleşmenin küçük parçalarını birim testine tabi tutmak](/developers/docs/smart-contracts/testing/) istediğiniz karmaşık sözleşmelerle karşılaşırsınız. Sorun şu ki, ya bu küçük parçayı test etmek, ulaşılması zor olan çok spesifik bir sözleşme durumu gerektiriyorsa?
 
-Her seferinde sözleşmeyi istenen duruma getiren karmaşık bir test yazabilir veya "taklitlerle" işinizi kolayca halledebilirsiniz. Bir sözleşme, kalıtım yöntemiyle kolayca taklit edilebilir. Orijinal sözleşmeyi içeren ikinci bir taklit sözleşme yazın. Şimdi fonksiyonları taklit sözleşmeniz için geçersiz kılabilirsiniz. Bir örnekle görelim.
+Sözleşmeyi her seferinde gerekli duruma getiren karmaşık bir test kurulum mantığı yazabilirsiniz veya bir mock yazabilirsiniz. Bir sözleşmeyi mock'lamak kalıtım (inheritance) ile kolaydır. Sadece orijinalinden kalıtım alan ikinci bir mock sözleşmesi oluşturun. Artık mock'unuzdaki işlevleri geçersiz kılabilirsiniz (override). Bunu bir örnekle görelim.
 
-## Örnek: Özel ERC20 {#example-private-erc20}
+## Örnek: Özel ERC-20 {#example-private-erc20}
 
-Başlangıç özel zamanı olan örnek bir ERC-20 sözleşmesi kullanıyoruz. Sözleşmenin sahibi özel kullanıcıları yönetebilir ve başlangıçta yalnızca bu kullanıcıların jeton almasına izin verir. Belirli bir zaman geçtikten sonra herkes jetonları kullanabilecektir. Merak ediyorsanız, yeni OpenZeppelin sözleşmeleri v3'ten gelen [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) kancasını kullanıyoruz.
+Başlangıçta özel bir süresi olan örnek bir ERC-20 sözleşmesi kullanıyoruz. Sahibi özel kullanıcıları yönetebilir ve başlangıçta yalnızca bu kullanıcıların token almasına izin verilir. Belirli bir süre geçtikten sonra, herkesin token'ları kullanmasına izin verilecektir. Merak ediyorsanız, yeni OpenZeppelin sözleşmeleri v3'teki [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) kancasını (hook) kullanıyoruz.
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -54,7 +48,7 @@ contract PrivateERC20 is ERC20, Ownable {
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override {
         super._beforeTokenTransfer(from, to, amount);
 
-        require(_validRecipient(to), "PrivateERC20: geçersiz alıcı");
+        require(_validRecipient(to), "PrivateERC20: invalid recipient");
     }
 
     function _validRecipient(address to) private view returns (bool) {
@@ -67,7 +61,7 @@ contract PrivateERC20 is ERC20, Ownable {
 }
 ```
 
-Şimdi sözleşmeyi taklit edelim.
+Ve şimdi onu mock'layalım.
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -88,22 +82,22 @@ contract PrivateERC20Mock is PrivateERC20 {
 }
 ```
 
-Şu hata mesajlarından birini alacaksınız:
+Aşağıdaki hata mesajlarından birini alacaksınız:
 
-- `PrivateERC20Mock.sol: TypeError: Geçersiz kılan fonksiyon "override" niteleyicisini içermiyor.`
-- `PrivateERC20.sol: TypeError: Sanal olmayan bir işlevi geçersiz kılmaya çalışılıyor. "virtual" eklemeyi unuttunuz mu?.`
+- `PrivateERC20Mock.sol: TypeError: Overriding function is missing "override" specifier.`
+- `PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.`
 
-Yeni Solidity 0.6 sürümünü kullandığımız için, üzerine yazılabilecek fonksiyonlar için `virtual` anahtar kelimesini ve üzerine yazan fonksiyon için de override anahtar kelimesini eklemeliyiz. Öyleyse bunları her iki `isPublic` fonksiyonuna da ekleyelim.
+Yeni 0.6 Solidity sürümünü kullandığımız için, geçersiz kılınabilen işlevler için `virtual` anahtar kelimesini ve geçersiz kılan işlev için override anahtar kelimesini eklemeliyiz. Öyleyse bunları her iki `isPublic` işlevine de ekleyelim.
 
-Artık birim testlerinizde bunun yerine `PrivateERC20Mock` kullanabilirsiniz. Özel kullanım süresi sırasındaki davranışı test etmek istediğinizde `setIsPublic(false)` kullanın ve benzer şekilde, genel kullanım süresini test etmek için `setIsPublic(true)` kullanın. Elbette örneğimizde, zamanları buna göre değiştirmek için [zaman yardımcılarını](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) da kullanabiliriz. Ancak taklit amacı artık açık olmalıdır ve bunun sadece zamanı ilerletmek kadar kolay olmadığı durumları hayal edebilirsiniz.
+Artık birim testlerinizde bunun yerine `PrivateERC20Mock` kullanabilirsiniz. Özel kullanım süresi boyunca davranışı test etmek istediğinizde `setIsPublic(false)` ve benzer şekilde genel kullanım süresini test etmek için `setIsPublic(true)` kullanın. Elbette örneğimizde, zamanları buna göre değiştirmek için sadece [zaman yardımcılarını (time helpers)](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) da kullanabilirdik. Ancak mock'lama fikri artık netleşmiş olmalı ve zamanı basitçe ileri sarmak kadar kolay olmayan senaryoları hayal edebilirsiniz.
 
-## Birçok sözleşmeyi taklit etme {#mocking-many-contracts}
+## Birçok sözleşmeyi mock'lamak {#mocking-many-contracts}
 
-Her taklit için ayrı bir sözleşme oluşturmak karışıklık oluşturabilir. Bu durum sizi rahatsız ediyorsa, [MockContract](https://github.com/gnosis/mock-contract) kütüphanesine göz atabilirsiniz. Size anlık olarak sözleşmelerin davranışlarını değiştirme ve geçersiz kılma olanağı sağlar. Ancak, yalnızca diğer bir sözleşmeye yapılan taklitler için çalışır; bu nedenle, örneğimizde işe yaramaz.
+Her bir mock için başka bir sözleşme oluşturmanız gerekirse işler karışabilir. Eğer bu sizi rahatsız ediyorsa, [MockContract](https://github.com/gnosis/mock-contract) kütüphanesine göz atabilirsiniz. Sözleşmelerin davranışlarını anında (on-the-fly) geçersiz kılmanıza ve değiştirmenize olanak tanır. Ancak, yalnızca başka bir sözleşmeye yapılan çağrıları mock'lamak için çalışır, bu nedenle örneğimiz için işe yaramayacaktır.
 
-## Taklit etme daha da güçlü olabilir {#mocking-can-be-even-more-powerful}
+## Mock'lamak daha da güçlü olabilir {#mocking-can-be-even-more-powerful}
 
-Taklit etmenin gücü burada bitmiyor.
+Mock'lamanın gücü bununla sınırlı değildir.
 
-- Fonksiyon ekleme: Sadece belirli bir işlevi geçersiz kılmak açısından değil, aynı zamanda ilave fonksiyonlar eklemek açısından da kullanışlıdır. Jetonlar için iyi bir örnek, herhangi bir kullanıcının ücretsiz olarak yeni jetonlar almasını sağlamak için ek bir `mint` işlevine sahip olmaktır.
-- Test ağlarında kullanım: Sözleşmelerinizi merkeziyetsiz uygulamalarınızla birlikte test ağlarına dağıtıp test ettiğinizde, taklit sürümlerini kullanmayı düşünün. Mecbur kalmadıkça fonksiyonları geçersiz kılmaktan kaçının. Sonuçta arkasındaki gerçek mantığı test etmek istiyorsunuz. Fakat örneğin, sözleşme durumunu en başa sıfırlayan ve yeni bir dağıtım gerektirmeyen bir sıfırlama işlevi eklemek de yararlı olabilir. Tabii ki de bunu bir Ana Ağ sözleşmesinde kullanmak istemezsiniz.
+- İşlevler eklemek: Sadece belirli bir işlevi geçersiz kılmak değil, aynı zamanda ek işlevler eklemek de faydalıdır. Token'lar için iyi bir örnek, herhangi bir kullanıcının ücretsiz olarak yeni token'lar almasına izin veren ek bir `mint` işlevine sahip olmaktır.
+- Test ağlarında kullanım: Sözleşmelerinizi merkeziyetsiz uygulamanız (dapp) ile birlikte test ağlarında dağıttığınızda ve test ettiğinizde, mock'lanmış bir sürüm kullanmayı düşünün. Gerçekten zorunda kalmadıkça işlevleri geçersiz kılmaktan kaçının. Sonuçta gerçek mantığı test etmek istersiniz. Ancak örneğin, sözleşme durumunu başlangıca sıfırlayan ve yeni bir dağıtım gerektirmeyen bir sıfırlama işlevi eklemek faydalı olabilir. Açıkçası bunu bir Ana Ağ sözleşmesinde bulundurmak istemezsiniz.

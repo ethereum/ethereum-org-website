@@ -1,176 +1,180 @@
 ---
-title: Plazma zincirleri
-description: "Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak plazma zincirlerine giriş."
+title: Plasma zincirleri
+description: Ethereum topluluğu tarafından şu anda kullanılan bir ölçeklendirme çözümü olan Plasma zincirlerine giriş.
 lang: tr
 incomplete: true
 sidebarDepth: 3
 ---
 
-Plazma zinciri, Ethereum Ana Ağı'na bağlı ayrı bir blokzincirdir fakat işlemleri kendi blok doğrulama mekanizmasıyla zincir dışında yürütür. Plazma zincirleri, esasen Ethereum Ana Ağı'nın daha küçük kopyaları oldukları için bazen "alt" zincirler olarak adlandırılır. Plazma zincirleri, anlaşmazlıkları çözmek için ([iyimser toplamalar](/developers/docs/scaling/optimistic-rollups/) gibi) [sahtecilik kanıtları](/glossary/#fraud-proof) kullanır.
+Bir Plasma zinciri, [Ethereum](/) Ana Ağına bağlı olan ancak işlemleri kendi blok doğrulama mekanizmasıyla zincir dışı yürüten ayrı bir blokzincirdir. Plasma zincirleri bazen "çocuk" zincirler olarak adlandırılır ve esasen Ethereum Ana Ağının daha küçük kopyalarıdır. Plasma zincirleri, anlaşmazlıkları çözmek için ([iyimser toplamalar](/developers/docs/scaling/optimistic-rollups/) gibi) [sahtekarlık kanıtları](/glossary/#fraud-proof) kullanır.
 
-Merkle ağaçları, üst zincirlerdeki (Ethereum Ana Ağı dahil) bant genişliğini boşaltmak için bu zincirlerin sınırsız bir yığınının oluşturulmasını sağlar. Bununla birlikte, bu zincirler Ethereum'dan bir miktar güvenlik (sahtecilik kanıtları aracılığıyla) edinse de, güvenlikleri ve verimlilikleri birkaç tasarım kısıtlamasından etkilenir.
+Merkle ağaçları, ebeveyn zincirlerden (Ethereum Ana Ağı dahil) bant genişliği yükünü hafifletmek için çalışabilen bu zincirlerin sonsuz bir yığınının oluşturulmasını sağlar. Ancak, bu zincirler Ethereum'dan (sahtekarlık kanıtları aracılığıyla) bir miktar güvenlik elde etse de, güvenlikleri ve verimlilikleri çeşitli tasarım sınırlamalarından etkilenir.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Tüm temel konuları iyi anlamalı ve [Ethereum ölçeklendirmesi](/developers/docs/scaling/) hakkında üst düzey bir anlayışa sahip olmalısınız.
+Tüm temel konuları iyi bir şekilde anlamış olmalı ve [Ethereum ölçeklendirmesi](/developers/docs/scaling/) hakkında üst düzey bir anlayışa sahip olmalısınız.
 
-## Plazma nedir?
+## Plasma nedir? {#what-is-plasma}
 
-Plazma, Ethereum gibi halka açık blokzincirlerdeki ölçeklendirmeyi geliştirmek için oluşturulan bir yapıdır. Orijinal [Plazma tanıtım belgesinde](https://plasma.io/plasma.pdf) belirtildiği gibi, Plazma zincirleri ("kök zincir" adı verilen) başka bir blokzincirinin üzerine inşa edilmiştir. Her "alt zincir" kök zincirden büyür ve genelde üst zincirde dağıtılmış bir akıllı sözleşme tarafından yönetilir.
+Plasma, Ethereum gibi halka açık blokzincirlerde ölçeklenebilirliği artırmak için bir çerçevedir. Orijinal [Plasma tanıtım belgesinde](https://plasma.io/plasma.pdf) açıklandığı gibi, Plasma zincirleri başka bir blokzincirin ("kök zincir" olarak adlandırılır) üzerine inşa edilir. Her "çocuk zincir" kök zincirden uzanır ve genellikle ebeveyn zincirde dağıtılan bir akıllı sözleşme tarafından yönetilir.
 
-Plazma sözleşmesi, diğer şeylerin yanı sıra, kullanıcıların varlıklarını Ethereum Ana Ağı ile plazma zinciri arasında taşımasına olanak tanıyan bir [köprü](/developers/docs/bridges/) işlevi görür. Bu onları [yan zincirlere](/developers/docs/scaling/sidechains/) benzer kılsa da plazma zincirleri en azından bir ölçüde Ethereum Ana Ağı'nın güvenliğinden yararlanır. Bu, kendi güvenliğinden tamamen kendi sorumlu olan yan zincirlerden farklıdır.
+Plasma sözleşmesi, diğer şeylerin yanı sıra, kullanıcıların Ethereum Ana Ağı ile Plasma zinciri arasında varlık taşımasına olanak tanıyan bir [köprü](/developers/docs/bridges/) işlevi görür. Bu onları [yan zincirlere](/developers/docs/scaling/sidechains/) benzer kılsa da, Plasma zincirleri—en azından bir dereceye kadar—Ethereum Ana Ağının güvenliğinden faydalanır. Bu, yalnızca kendi güvenliklerinden sorumlu olan yan zincirlerden farklıdır.
 
-## Plazma nasıl çalışır?
+## Plasma nasıl çalışır? {#how-does-plasma-work}
 
-Plazma yapısının basit bileşenleri şunlardır:
+Plasma çerçevesinin temel bileşenleri şunlardır:
 
 ### Zincir dışı hesaplama {#offchain-computation}
 
-Ethereum'un şu andaki işlem hızı saniye başına ~ 15-20 işlemle sınırlandırılmıştır, bu da daha fazla kullanıcıyı idare etmek için ölçeklendirmenin kısa vadeli olasılığını azaltır. Bu sorun temel olarak Ethereum'un [mutabakat mekanizmasının](/developers/docs/consensus-mechanisms/) blokzincirinin durumuna ilişkin her güncellemeyi doğrulamak için çok sayıda eşler arası düğüm gerektirmesinden kaynaklanmaktadır.
+Ethereum'un mevcut işlem hızı saniyede ~ 15-20 işlemle sınırlıdır ve bu da daha fazla kullanıcıyı idare edecek şekilde ölçeklenme olasılığını kısa vadede azaltır. Bu sorun temel olarak Ethereum'un [mutabakat mekanizmasının](/developers/docs/consensus-mechanisms/), blokzincirin durumuna yapılan her güncellemeyi doğrulamak için birçok eşler arası düğüm gerektirmesinden kaynaklanmaktadır.
 
-Ethereum'un mutabakat mekanizması güvenlik için gerekli olsa da, bu her olası olay durum için geçerli olmayabilir. Örnek olarak, iki tarafta da belli bir güven ilişkisi olduğu durumlarda Alice, Bob'a yaptığı günlük kahve ödemesinin Ethereum Ağı'nın tamamı tarafından doğrulanmasına ihtiyaç duymayabilir.
+Ethereum'un mutabakat mekanizması güvenlik için gerekli olsa da, her kullanım durumu için geçerli olmayabilir. Örneğin, Alice'in Bob'a bir fincan kahve için yaptığı günlük ödemelerin tüm Ethereum ağı tarafından doğrulanmasına gerek olmayabilir, çünkü her iki taraf arasında bir miktar güven vardır.
 
-Plazma, Ethereum Ana Ağı'nın tüm işlemleri doğrulamasına gerek olmadığını varsayar. Bunun yerine düğümleri her işlemi doğrulama zorunluluğundan kurtararak işlemleri Ana Ağ dışından yapabiliriz.
+Plasma, Ethereum Ana Ağının tüm işlemleri doğrulamasına gerek olmadığını varsayar. Bunun yerine, işlemleri Ana Ağ dışında işleyebilir ve düğümleri her işlemi doğrulama zorunluluğundan kurtarabiliriz.
 
-Plazma zincirleri hız ve maliyet için optimize edilebildiğinden zincir dışı hesaplama gereklidir. Örnek olarak, Plazma işlemlerin düzenlenmesi ve yürütülmesi için tekli bir operatör kullanabilir; çoğu zaman da böyle olur. İşlemleri doğrulayan sadece bir varlık olunca, plazma zincirindeki işleme süreleri Ethereum Ana Ağı'na göre daha hızlı hale gelir.
+Plasma zincirleri hız ve maliyet için optimize edilebildiğinden zincir dışı hesaplama gereklidir. Örneğin, bir Plasma zinciri işlemlerin sıralanmasını ve yürütülmesini yönetmek için tek bir "operatör" kullanabilir—ve çoğunlukla kullanır. İşlemleri doğrulayan tek bir varlık olduğunda, bir Plasma zincirindeki işlem süreleri Ethereum Ana Ağındakinden daha hızlıdır.
 
 ### Durum taahhütleri {#state-commitments}
 
-Plazma, işlemleri zincir dışında yürütürken, bunlar ana Ethereum yürütme katmanında sonuçlandırılır; aksi takdirde Plazma zincirleri, Ethereum'un güvenlik garantilerinden yararlanamaz. Ancak zincir dışı işlemleri plazma zincirinin durumunu bilmeden sonuçlandırmak güvenlik modelini bozar ve geçersiz işlemlerin yayılmasına neden olur. Bu yüzden plazma zincirinde blokları oluşturmaktan sorumlu yapı olan operatör, Ethereum'da periyodik olarak "durum taahhütleri" yayımlamalıdır.
+Plasma işlemleri zincir dışı yürütürken, bunlar ana Ethereum yürütme katmanında uzlaştırılır—aksi takdirde Plasma zincirleri Ethereum'un güvenlik garantilerinden faydalanamaz. Ancak Plasma zincirinin durumunu bilmeden zincir dışı işlemleri kesinleştirmek güvenlik modelini bozar ve geçersiz işlemlerin çoğalmasına izin verir. Bu nedenle, Plasma zincirinde blok üretmekten sorumlu varlık olan operatörün, Ethereum üzerinde periyodik olarak "durum taahhütleri" yayınlaması gerekir.
 
-Bir [taahhüt şeması](https://en.wikipedia.org/wiki/Commitment_scheme), bir değeri veya beyanı başka bir tarafa açıklamadan taahhüt etmek için kullanılan kriptografik bir tekniktir. Taahhütler siz içine girdikten sonra ifadeleri ya da değerleri değiştiremeyeceğiniz şekilde "bağlayıcı"dır. Plazma'daki durum taahhütleri, operatörün belirli aralıklarla Ethereum zincirindeki Plazma sözleşmesine gönderdiği ([Merkle ağacından](/whitepaper/#merkle-trees) türetilen) "Merkle kökleri" biçimini alır.
+Bir [taahhüt şeması](https://en.wikipedia.org/wiki/Commitment_scheme), bir değeri veya ifadeyi başka bir tarafa ifşa etmeden taahhüt etmek için kullanılan kriptografik bir tekniktir. Taahhütler, bir kez taahhüt ettikten sonra değeri veya ifadeyi değiştiremeyeceğiniz anlamında "bağlayıcıdır". Plasma'daki durum taahhütleri, operatörün Ethereum zincirindeki Plasma sözleşmesine aralıklarla gönderdiği "Merkle kökleri" (bir [Merkle ağacından](/whitepaper/#merkle-trees) türetilen) şeklini alır.
 
-Merkle kökleri büyük miktarda bilgiyi sıkıştırmaya yarayan kriptografik parçalardır. Bir Merkle kökü (bu durumda "blok kökü" de denir) bir bloktaki tüm işlemleri temsil edebilir. Merkle kökleri ayrıca küçük bir veri parçasının daha büyük bir veri setinin bir parçası olduğunu doğrulamayı da kolaylaştırır. Örneğin, bir kullanıcı, bir işlemin belirli bir blokta yer aldığını kanıtlamak için bir [Merkle kanıtı](/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content) üretebilir.
+Merkle kökleri, büyük miktarda bilginin sıkıştırılmasını sağlayan kriptografik ilkellerdir. Bir Merkle kökü (bu durumda "blok kökü" olarak da adlandırılır) bir bloktaki tüm işlemleri temsil edebilir. Merkle kökleri ayrıca küçük bir veri parçasının daha büyük veri kümesinin bir parçası olduğunu doğrulamayı kolaylaştırır. Örneğin, bir kullanıcı bir işlemin belirli bir bloğa dahil edildiğini kanıtlamak için bir [Merkle kanıtı](/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content) üretebilir.
 
-Merkle kökleri, Ethereum'a zincir dışı durum hakkında bilgi sağlamak için önemlidir. Merkle köklerini "kayıt noktaları" olarak düşünebilirsiniz: Operatör şunu söyler: "Plazma zincirinin zamanda x noktasındaki durumu budur ve bu da kanıtı olan Merkle köküdür." Operatör, bir Merkle kökü ile plazma zincirinin _mevcut durumunu_ taahhüt eder, bu nedenle buna "durum taahhüdü" denir.
+Merkle kökleri, zincir dışı durum hakkında Ethereum'a bilgi sağlamak için önemlidir. Merkle köklerini "kayıt noktaları" olarak düşünebilirsiniz: operatör, "Bu, x anındaki Plasma zincirinin durumudur ve bu da kanıt olarak Merkle köküdür" demektedir. Operatör, bir Merkle kökü ile Plasma zincirinin _mevcut durumunu_ taahhüt etmektedir, bu nedenle buna "durum taahhüdü" denir.
 
 ### Girişler ve çıkışlar {#entries-and-exits}
 
-Ethereum kullanıcılarının Plazmadan faydalanabilmesi için varlıkları Ana Ağ'dan plazma zincirlerine geçiren bir mekanizma olması gerekmektedir. Ama keyfi olarak plazma zincirindeki bir adrese ether gönderemeyiz-; bu zincirler bu konuda uyumsuzdur, bu yüzden işlem ya kayıp kaynaklara gider ya da başarısız olur.
+Ethereum kullanıcılarının Plasma'dan faydalanabilmesi için, Ana Ağ ile Plasma zincirleri arasında fon taşımak için bir mekanizma olması gerekir. Ancak Plasma zincirindeki bir adrese keyfi olarak Ether gönderemeyiz—bu zincirler uyumsuzdur, bu nedenle işlem ya başarısız olur ya da fonların kaybolmasına yol açar.
 
-Plazma, kullanıcı giriş ve çıkışlarını işlemek için Ethereum'da bir ana sözleşme kullanır. Bu ana sözleşme ayrıca durum taahhütlerini takip etmede (daha önce açıklanmıştır) ve sahtecilik kanıtıyla (bu konuda başka açıklamalar da yapılacak) sahtecilik davranışlarını cevalandırmaktan da sorumludur.
+Plasma, kullanıcı girişlerini ve çıkışlarını işlemek için Ethereum üzerinde çalışan bir ana sözleşme kullanır. Bu ana sözleşme aynı zamanda durum taahhütlerini izlemekten (daha önce açıklanmıştı) ve sahtekarlık kanıtları aracılığıyla dürüst olmayan davranışları cezalandırmaktan (buna daha sonra değinilecektir) sorumludur.
 
-#### Plazma zincirine giriş {#entering-the-plasma-chain}
+#### Plasma zincirine giriş {#entering-the-plasma-chain}
 
-Plazma zincirine girmek için Alice (kullanıcı) plazma sözleşmesine ETH ya da herhangi bir ERC-20 jetonu yatırmak zorunda olacaktır. Plazma operatörü, sözleşme depozitolarını inceler, Alice'in başlangıçta yatırdığı miktara eşit bir miktarı yeniden yaratır ve bunu plazma zincirindeki adresine bırakır. Alice, alt zincirde bu fonları aldığını tasdik etmek zorundadır ve bunun ardından bu fonları işlemler için kullanabilir.
+Plasma zincirine girmek için Alice'in (kullanıcı) Plasma sözleşmesine ETH veya herhangi bir ERC-20 Token yatırması gerekecektir. Sözleşme yatırımlarını izleyen Plasma operatörü, Alice'in ilk yatırdığı tutara eşit bir miktar yeniden oluşturur ve bunu Plasma zincirindeki adresine serbest bırakır. Alice'in çocuk zincirde fonları aldığını onaylaması gerekir ve ardından bu fonları işlemler için kullanabilir.
 
-#### Plazma zincirinden çıkış {#exiting-the-plasma-chain}
+#### Plasma zincirinden çıkış {#exiting-the-plasma-chain}
 
-Plazma zincirinden çıkmak, birkaç sebepten dolayı girmekten daha karmaşıktır. Bunlardan en büyüğü, Ethereum'un plazma zincirinin durumundan haberdar olmasına karşın, bu bilginin doğru olup olmadığını kanıtlayamamasıdır. Kötü niyetli bir kullanıcı yanlış bir savda ("1000 ETH'm var) bulunabilir ve savını sahte kanıtlarla desteklemesi yanına kalabilir.
+Plasma zincirinden çıkmak, çeşitli nedenlerden dolayı girmekten daha karmaşıktır. En büyük neden, Ethereum'un Plasma zincirinin durumu hakkında bilgiye sahip olmasına rağmen, bilginin doğru olup olmadığını doğrulayamamasıdır. Kötü niyetli bir kullanıcı yanlış bir iddiada bulunabilir ("1000 ETH'm var") ve bu talebi desteklemek için sahte kanıtlar sunarak bundan sıyrılabilir.
 
-Bu kötü niyetli çekimleri engellemek için bir "itiraz dönemi" devreye alınmıştır. İtiraz döneminde (genelde bir haftadır) herhangi biri sahtecilik kanıtı kullanarak bir çekim talebine itiraz edebilir. İtiraz başarılı olursa, çekim talebi reddedilir.
+Kötü niyetli çekim işlemlerini önlemek için bir "itiraz süresi" getirilmiştir. İtiraz süresi boyunca (genellikle bir hafta), herkes bir sahtekarlık kanıtı kullanarak bir çekim talebine itiraz edebilir. İtiraz başarılı olursa, çekim talebi reddedilir.
 
-Buna rağmen, kullanıcılar genelde dürüsttür ve sahip oldukları fonlarla ilgili genelde doğru iddialarda bulunurlar. Bu senaryoda, Alice plazma zincirine bir işlem göndererek kök zincirden (Ethereum) bir çekim talebi oluşturacaktır.
+Ancak, genellikle kullanıcılar dürüsttür ve sahip oldukları fonlar hakkında doğru taleplerde bulunurlar. Bu senaryoda Alice, Plasma sözleşmesine bir işlem göndererek kök zincirde (Ethereum) bir çekim talebi başlatacaktır.
 
-Ayrıca Plazma zincirinde fonlarını yaratan işlemin bir bloğa dahil edildiğini de bir Merkle ispatıyla doğrulamak zorundadır. Bu, [Harcanmamış İşlem Çıktısı (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output) modelini kullanan [Plazma MVP](https://www.learnplasma.org/en/learn/mvp.html) gibi Plazma yinelemeleri için gereklidir.
+Ayrıca, Plasma zincirinde fonlarını oluşturan bir işlemin bir bloğa dahil edildiğini doğrulayan bir Merkle kanıtı sunmalıdır. Bu, [UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) modelini kullanan [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html) gibi Plasma yinelemeleri için gereklidir.
 
-[Plazma Cash](https://www.learnplasma.org/en/learn/cash.html) gibi diğerleri, fonları UTXO'lar yerine [değiştirilemez jetonlar](/developers/docs/standards/tokens/erc-721/) olarak temsil eder. Bu durumda çekme, Plazma zincirinde jetona sahip olunduğuna dair bir kanıt gerektirir. Bu, jetonu içinde bulunduran son 2 işlemi gönderip bu işlemlerin bir bloğa dahil olduğunu doğrulayan bir Merkle ispatı sağlayarak yapılır.
+[Plasma Cash](https://www.learnplasma.org/en/learn/cash.html) gibi diğerleri, fonları UTXO'lar yerine [değiştirilemez token'lar](/developers/docs/standards/tokens/erc-721/) olarak temsil eder. Bu durumda çekim işlemi, Plasma zincirindeki Token'ların sahiplik kanıtını gerektirir. Bu, Token'ı içeren en son iki işlemin gönderilmesi ve bu işlemlerin bir bloğa dahil edildiğini doğrulayan bir Merkle kanıtı sağlanmasıyla yapılır.
 
-Kullanıcı, çekim talebine dürüst davranışın garantisi olarak bir teminat eklemek zorundadır. İtiraz eden kişi, Alice'in çekim talebinin geçersiz olduğunu kanıtlarsa, teminatı kesilir ve bir kısmı ödül olarak itiraz edene gider.
+Kullanıcı ayrıca dürüst davranışın bir garantisi olarak çekim talebine bir teminat eklemelidir. Bir itirazcı Alice'in çekim talebinin geçersiz olduğunu kanıtlarsa, teminatında kesinti yapılır ve bir kısmı ödül olarak itirazcıya gider.
 
-İtiraz süresi herhangi biri sahtecilik kanıtı sağlamadan sona ererse, Alice'in geri çekim talebi geçerli sayılır, bu da yatırdıklarını Ethereum üzerindeki Plazma sözleşmesinden geri almasını sağlar.
+İtiraz süresi kimse bir sahtekarlık kanıtı sunmadan geçerse, Alice'in çekim talebi geçerli kabul edilir ve Ethereum'daki Plasma sözleşmesinden yatırdığı fonları geri almasına olanak tanır.
 
 ### Anlaşmazlık tahkimi {#dispute-arbitration}
 
-Her blokzincir gibi, plazma zincirlerinin de katılımcıların kötü niyetli davranması (ör. fonları çifte harcama) durumunda işlemlerin bütünlüğünü sağlamak için bir mekanizmaya ihtiyacı vardır. Bunun için plazma zincirleri durum işlemlerinin doğruluğunu ölçmek ve kötü davranışlara cevaplar vermek amacıyla yaptığı uyuşmazlık hakemliklerinde sahtecilik kanıtlarını kullanır. Sahtecilik kanıtları, Plazma alt zincirlerinin üst zincire ya da kök zincire şikayetler sunması şeklinde bir mekanizma olarak kullanılır.
+Herhangi bir blokzincir gibi, Plasma zincirlerinin de katılımcıların kötü niyetli davranması (örneğin, fonların çifte harcaması) durumunda işlemlerin bütünlüğünü sağlamak için bir mekanizmaya ihtiyacı vardır. Bu amaçla, Plasma zincirleri durum geçişlerinin geçerliliğine ilişkin anlaşmazlıkları çözmek ve kötü davranışları cezalandırmak için sahtekarlık kanıtları kullanır. Sahtekarlık kanıtları, bir Plasma çocuk zincirinin ebeveyn zincirine veya kök zincirine şikayette bulunduğu bir mekanizma olarak kullanılır.
 
-Bir Sahtecilik kanıtı basitçe belli bir işlemin durumunun geçersiz olduğu iddiasıdır. Bir kullanıcının (Alice) aynı fonları iki kere harcamaya çalışması örnek olarak verilebilir. Belki UTXO'sunu Bob'la yaptığı bir işlemde harcamış ve aynı UTXO'yu (artık Bob'un olan) başka bir işlemde harcamak istiyordur.
+Bir sahtekarlık kanıtı, basitçe belirli bir durum geçişinin geçersiz olduğuna dair bir iddiadır. Bir kullanıcının (Alice) aynı fonları iki kez harcamaya çalışması buna bir örnektir. Belki UTXO'yu Bob ile yaptığı bir işlemde harcadı ve aynı UTXO'yu (artık Bob'un olan) başka bir işlemde harcamak istiyor.
 
-Bu çekimi engellemek için Bob, Alice'in bir önceki işlemde UTXO'yu harcadığını ve bu işlemin bir bloğa dahil olduğunu söyleyen bir Merkle kanıtını kullanarak bir sahtecilik kanıtı hazırlayacaktır. Plasma Cash'te de aynı süreç işler; Bob'un, Alice'in şu anda da geri çekmeye çalıştığı jetonları daha önce transfer ettiğine dair kanıt sunması gerekecektir.
+Çekim işlemini önlemek için Bob, Alice'in söz konusu UTXO'yu önceki bir işlemde harcadığına dair kanıt ve işlemin bir bloğa dahil edildiğine dair bir Merkle kanıtı sunarak bir sahtekarlık kanıtı oluşturacaktır. Aynı süreç Plasma Cash'te de işler—Bob'un, Alice'in çekmeye çalıştığı Token'ları daha önce transfer ettiğine dair kanıt sunması gerekir.
 
-Bob'un itirazı başarılı olursa, Alice'in çekim talebi iptal edilir. Bununla birlikte, bu yaklaşım Bob'un çekim taleplerini görmek için zinciri takip etme becerisine dayalıdır. Bob çevrimdışı ise, Alice bu kötü niyetli çekimini itiraz süresi dolduğunda işleme koyabilir.
+Bob'un itirazı başarılı olursa, Alice'in çekim talebi iptal edilir. Ancak bu yaklaşım, Bob'un çekim talepleri için zinciri izleme yeteneğine dayanır. Bob çevrimdışıysa, Alice itiraz süresi dolduğunda kötü niyetli çekim işlemini gerçekleştirebilir.
 
-## Plazmadaki toplu çıkış sorunu {#the-mass-exit-problem-in-plasma}
+## Plasma'da kitlesel çıkış sorunu {#the-mass-exit-problem-in-plasma}
 
-Toplu çıkış problemi, çok sayıda kullanıcı plazma zincirinden aynı anda çekim yapmayı denediğinde gerçekleşir. Bu sorunun var olmasının nedeni, Plazma'nın en büyük sorunlarından biriyle ilgilidir: **veri kullanılamazlığı**.
+Kitlesel çıkış sorunu, çok sayıda kullanıcının aynı anda bir Plasma zincirinden çekim yapmaya çalışmasıyla ortaya çıkar. Bu sorunun neden var olduğu, Plasma'nın en büyük sorunlarından biriyle ilgilidir: **veri kullanılamazlığı**.
 
-Veri kullanılabilirliği, önerilen bir bloğun blokzincir ağında gerçekten yayımlandığına dair bilginin doğrulanması olanağıdır. Bir blok eğer üretici, bloğun kendisini yayımlar fakat bloğun oluşturulmasında kullanılan veriyi saklarsa "erişilemez" olarak adlandırılır.
+Veri kullanılabilirliği, önerilen bir blok için bilgilerin blokzincir ağında gerçekten yayınlandığını doğrulama yeteneğidir. Üretici bloğun kendisini yayınlar ancak bloğu oluşturmak için kullanılan verileri saklarsa bir blok "kullanılamaz" olur.
 
-Bloklar, düğümler bloğu indirebiliyor ve işlemlerin geçerliliğini doğrulayabiliyorsa erişilebilir olmak zorundadır. Blokzincirler, blok üreticilerini tüm işlem verilerini zincir üstünde yayınlamaya zorlayarak veri kullanılabilirliğini sağlar.
+Düğümlerin bloğu indirebilmesi ve işlemlerin geçerliliğini doğrulayabilmesi için blokların kullanılabilir olması gerekir. Blokzincirler, blok üreticilerini tüm işlem verilerini zincir içi yayınlamaya zorlayarak veri kullanılabilirliğini sağlar.
 
-Veri kullanılabilirliği, Ethereum'un temel katmanı üzerine inşa edilen zincir dışı ölçeklendirme protokollerinin güvenliğini sağlamaya da yardımcı olur. Bu zincirlerdeki operatörlerin işlem verilerini Ethereum'da yayımlamasını şart koşarak dileyen herkes geçersiz bloklara zincirin doğru durumunu referans alan sahtecilik kanıtları hazırlayarak itiraz edebilir.
+Veri kullanılabilirliği ayrıca Ethereum'un temel katmanı üzerine inşa edilen zincir dışı ölçeklendirme protokollerinin güvenliğini sağlamaya yardımcı olur. Bu zincirlerdeki operatörleri işlem verilerini Ethereum'da yayınlamaya zorlayarak, herkes zincirin doğru durumuna atıfta bulunan sahtekarlık kanıtları oluşturarak geçersiz bloklara itiraz edebilir.
 
-Plazma zincirleri, işlem verilerini öncelikli olarak operatörde depolar ve **Ana Ağ'da hiçbir veri yayımlamaz** (yani, periyodik durum taahhütleri dışında). Bu, eğer kullanıcıların geçersiz işlemlere itiraz sahtecilik kanıtları oluşturmaları gerekiyorsa, bunun operatörün blok verisi sağlayıp sağlamadığına bağlı olduğu anlamına gelir. Eğer bu sistem çalışırsa, kullanıcılar kaynakları güvende tutmak için sahtecilik kanıtlarını her zaman kullanabilirler.
+Plasma zincirleri işlem verilerini öncelikle operatörde depolar ve **Ana Ağda hiçbir veri yayınlamaz** (yani, periyodik durum taahhütleri dışında). Bu, kullanıcıların geçersiz işlemlere itiraz eden sahtekarlık kanıtları oluşturmaları gerekiyorsa blok verilerini sağlamak için operatöre güvenmeleri gerektiği anlamına gelir. Bu sistem çalışırsa, kullanıcılar fonları güvence altına almak için her zaman sahtekarlık kanıtlarını kullanabilirler.
 
-Problem, kötü niyetli davranan taraf herhangi bir kullanıcı değil, operatör olduğunda başlar. Blokzincirin kontrolü operatörün elinde olduğu için işin içine daha büyük ölçekte geçersiz durumda işlem sokmak adına plazma zincirindeki kullanıcıların sahip olduğu fonları çalmak gibi daha fazla gerekçesi vardır.
+Sorun, sadece herhangi bir kullanıcı değil, operatörün kötü niyetli davranan taraf olmasıyla başlar. Operatör blokzincirin tek kontrolüne sahip olduğundan, Plasma zincirindeki kullanıcılara ait fonları çalmak gibi daha büyük ölçekte geçersiz durum geçişlerini ilerletmek için daha fazla teşvike sahiptir.
 
-Böyle bir durumda, klasik sahtecilik kanıtı sistemini kullanmak işe yaramaz. Operatör kolayca Alice'in ve Bob'un fonlarını kendi cüzdanına transfer eden geçersiz bir işlem yapabilir ve sahtecilik kanıtını oluşturmak için gereken veriyi saklayabilir. Bunun mümkün olmasının sebebi, operatörün verileri kullanıcılara ya da Ana Ağ'a açık kılmasının zorunlu olmamasıdır.
+Bu durumda, klasik sahtekarlık kanıtı sistemini kullanmak işe yaramaz. Operatör, Alice ve Bob'un fonlarını kendi cüzdanına aktaran geçersiz bir işlemi kolayca yapabilir ve sahtekarlık kanıtı oluşturmak için gerekli verileri gizleyebilir. Bu mümkündür çünkü operatörün verileri kullanıcılara veya Ana Ağa sunması gerekmez.
 
-Bu yüzden, en iyimser çözüm yolu bir plazma zincirden kullanıcı "toplu çıkışı" denemesidir. Toplu çıkış, kötü niyetli operatörün fon çalma planını yavaşlatır ve kullanıcılara belli bir ölçüde güvenlik sağlar. Geri çekim talepleri her bir UTXO'nun (ya da jeton) oluşturulma zamanına göre sıralanarak kötü niyetli operatörlerin dürüst kullanıcılara front-running yapmasını engeller.
+Bu nedenle, en iyimser çözüm kullanıcıların Plasma zincirinden "kitlesel çıkış" yapmaya çalışmasıdır. Kitlesel çıkış, kötü niyetli operatörün fon çalma planını yavaşlatır ve kullanıcılar için bir miktar koruma sağlar. Çekim talepleri, her bir UTXO'nun (veya Token'ın) ne zaman oluşturulduğuna göre sıralanır ve kötü niyetli operatörlerin dürüst kullanıcılardan önden koşmasını önler.
 
-Yine de, toplu çıkış sürecindeki geri çekim taleplerinin doğruluğunu onaylamak için bir yola ihtiyacımız vardır; fırsatçı bireylerin geçersiz çıkışlar işlenirken kaostan para kazanmasını engelleyen bir yola. Çözüm basittir: kullanıcıların fonlarını çekmek için **zincirin son geçerli durumunu** göndermelerini gerektirmek.
+Yine de, kitlesel bir çıkış sırasında çekim taleplerinin geçerliliğini doğrulamanın bir yoluna ihtiyacımız var—fırsatçı bireylerin geçersiz çıkışları işleyerek kaostan faydalanmasını önlemek için. Çözüm basittir: kullanıcıların paralarını çıkarmak için **zincirin son geçerli durumunu** yayınlamalarını gerektirir.
 
-Ama bu yaklaşımın hala sorunları vardır. Örnek olarak, plazma zincirindeki tüm kullanıcıların çıkması gerekiyorsa (kötü niyetli operatör durumunda bu mümkündür), plazma zincirinin bütün geçerli durumu hemen Ethereum'un temel katmanına boşaltılmak zorundadır. Plazma zincirlerinin keyfi boyutları (yüksek hacim = daha fazla veri) ve Ethereum'daki işleme hızı kısıtlamalarıyla bu pek de ideal bir çözüm değildir.
+Ancak bu yaklaşımın hala sorunları var. Örneğin, bir Plasma zincirindeki tüm kullanıcıların çıkması gerekiyorsa (kötü niyetli bir operatör durumunda bu mümkündür), o zaman Plasma zincirinin tüm geçerli durumu tek seferde Ethereum'un temel katmanına dökülmelidir. Plasma zincirlerinin keyfi boyutu (yüksek işlem kapasitesi = daha fazla veri) ve Ethereum'un işlem hızlarındaki kısıtlamalar göz önüne alındığında, bu ideal bir çözüm değildir.
 
-Çıkış senaryoları teoride kulağa iyi gelse de, gerçek hayattaki toplu çıkışlar muhtemelen Ethereum'un kendisi üzerinde ağ çapında bir sıkışıklığı tetikleyecektir. Kötü koordine edilmiş bir toplu çıkış, Ethereum'un işlevselliğine zarar vermenin yanı sıra kullanıcıların operatör plazma zincirindeki her hesabı boşaltmadan önce fonlarını geri çekemeyebileceği anlamına gelir.
+Çıkış oyunları teoride kulağa hoş gelse de, gerçek hayattaki kitlesel çıkışlar muhtemelen Ethereum'un kendisinde ağ çapında tıkanıklığı tetikleyecektir. Ethereum'un işlevselliğine zarar vermesinin yanı sıra, zayıf koordine edilmiş bir kitlesel çıkış, operatör Plasma zincirindeki her hesabı boşaltmadan önce kullanıcıların fonlarını çekemeyebileceği anlamına gelir.
 
-## Plazmanın artıları ve eksileri {#pros-and-cons-of-plasma}
+## Plasma'nın artıları ve eksileri {#pros-and-cons-of-plasma}
 
-| Artıları                                                                                                                                                                                                                                                            | Eksileri                                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yüksek verim ve işlem başına düşük maliyet sunar.                                                                                                                                                                                                   | Genel amaçlı hesaplamayı desteklemez (akıllı sözleşmeleri çalıştıramaz). Yüklem mantığı aracılığıyla yalnızca temel token aktarımları, takaslar ve diğer birkaç işlem türü desteklenir.        |
-| Rastgele kullanıcılar arasındaki işlemler için iyi (her ikisi de plazma zincirinde kuruluysa, kullanıcı çifti başına ek yük yoktur)                                                                                                              | Fonlarınızın güvenliğini sağlamak için ağı periyodik olarak izlemeniz (canlılık gereksinimi) veya bu sorumluluğu başka birine devretme ihtiyacı.                                                               |
-| Plazma zincirleri, ana zincirle ilgisi olmayan spesifik kullanım durumlarına uyarlanabilir. İşletmeler dahil herkes, farklı bağlamlarda çalışan ölçeklenebilir altyapı sağlamak için Plazma akıllı sözleşmelerini özelleştirebilir. | Verileri depolamak ve talep üzerine sunmak için bir veya daha fazla operatöre ihtiyaç duyar.                                                                                                                                      |
-| Hesaplama ve depolamayı zincir dışına taşıyarak Ethereum Ana Ağı üzerindeki yükü azaltır.                                                                                                                                                           | Zorluklara izin vermek için para çekme işlemleri birkaç gün ertelenir. Geri ödenebilir varlıklar için bu, likidite sağlayıcıları tarafından hafifletilebilir, ancak bununla ilişkili bir sermaye maliyeti vardır. |
-|                                                                                                                                                                                                                                                                     | Çok fazla kullanıcı aynı anda çıkmaya çalışırsa, Ethereum Mainnet'i tıkanabilir.                                                                                                                                                  |
+| Artıları                                                                                                                                                                                                                             | Eksileri                                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| İşlem başına yüksek işlem kapasitesi ve düşük maliyet sunar.                                                                                                                                                                             | Genel hesaplamayı desteklemez (akıllı sözleşmeleri çalıştıramaz). Yüklem mantığı aracılığıyla yalnızca temel Token transferleri, takaslar ve birkaç diğer işlem türü desteklenir.    |
+| Keyfi kullanıcılar arasındaki işlemler için iyidir (her ikisi de Plasma zincirinde kuruluysa kullanıcı çifti başına ek yük yoktur)                                                                                                            | Fonlarınızın güvenliğini sağlamak için ağı periyodik olarak izlemeniz (canlılık gereksinimi) veya bu sorumluluğu başka birine devretmeniz gerekir.                          |
+| Plasma zincirleri, ana zincirle ilgisi olmayan belirli kullanım durumlarına uyarlanabilir. İşletmeler dahil herkes, farklı bağlamlarda çalışan ölçeklenebilir altyapı sağlamak için Plasma akıllı sözleşmelerini özelleştirebilir. | Verileri depolamak ve talep üzerine sunmak için bir veya daha fazla operatöre güvenir.                                                                                                     |
+| Hesaplama ve depolamayı zincir dışına taşıyarak Ethereum Ana Ağındaki yükü azaltır.                                                                                                                                                    | Çekim işlemleri, itirazlara izin vermek için birkaç gün geciktirilir. Değiştirilebilir varlıklar için bu, Likidite sağlayıcıları tarafından hafifletilebilir, ancak bununla ilişkili bir sermaye maliyeti vardır. |
+|                                                                                                                                                                                                                                  | Çok fazla kullanıcı aynı anda çıkmaya çalışırsa, Ethereum Ana Ağı tıkanabilir.                                                                                          |
 
-## Plazma ve katman 2 ölçeklendirme protokolleri {#plasma-vs-layer-2}
+## Plasma ve katman 2 ölçeklendirme protokolleri {#plasma-vs-layer-2}
 
-Plazma bir zamanlar Ethereum için kullanışlı bir ölçeklendirme çözümü olarak kabul edilse de o zamandan beri [katman 2 (L2) ölçeklendirme protokolleri](/layer-2/) lehine kullanımdan kaldırılmıştır. L2 ölçeklendirme çözümleri, Plazma'nın birkaç problemini çözüyor:
+Plasma bir zamanlar Ethereum için yararlı bir ölçeklendirme çözümü olarak kabul edilse de, o zamandan beri [katman 2 (L2) ölçeklendirme protokolleri](/layer-2/) lehine terk edilmiştir. L2 ölçeklendirme çözümleri Plasma'nın çeşitli sorunlarını giderir:
 
 ### Verimlilik {#efficiency}
 
-[Sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups), zincir dışında işlenen her işlem grubunun geçerliliğine dair kriptografik kanıtlar oluşturur. Bu, kullanıcıların (ve operatörlerin) geçersiz durum geçişlerini ilerletmesini önleyerek itiraz dönemlerine ve çıkış senaryolarına olan ihtiyacı ortadan kaldırır. Bu, aynı zamanda kullanıcıların fonlarını güvence altına almak için zinciri periyodik olarak izlemelerine gerek kalmayacağı anlamına da gelir.
+[Sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups), zincir dışı işlenen her işlem partisinin geçerliliğine dair kriptografik kanıtlar üretir. Bu, kullanıcıların (ve operatörlerin) geçersiz durum geçişlerini ilerletmesini önleyerek itiraz süreleri ve çıkış oyunları ihtiyacını ortadan kaldırır. Ayrıca, kullanıcıların fonlarını güvence altına almak için zinciri periyodik olarak izlemek zorunda kalmamaları anlamına gelir.
 
 ### Akıllı sözleşmeler için destek {#support-for-smart-contracts}
 
-Plazma çerçevesiyle ilgili bir başka sorun da [Ethereum akıllı sözleşmelerinin yürütülmesini destekleyememesiydi](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4). Sonuç olarak, Plazma uygulamalarının çoğu çoğunlukla basit ödemeler veya ERC-20 jetonlarının değişimi için oluşturuldu.
+Plasma çerçevesiyle ilgili bir diğer sorun, [Ethereum akıllı sözleşmelerinin yürütülmesini destekleyememesiydi](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4). Sonuç olarak, Plasma'nın çoğu uygulaması çoğunlukla basit ödemeler veya ERC-20 Token'larının değişimi için inşa edildi.
 
-Tersine, iyimser toplamalar [Ethereum Sanal Makinesi](/developers/docs/evm/) ile uyumludur ve Ethereum'a özgü [akıllı sözleşmeleri](/developers/docs/smart-contracts/) çalıştırabilir, bu da onları [merkeziyetsiz uygulamaları](/developers/docs/dapps/) ölçeklendirmek için kullanışlı ve _güvenli_ bir çözüm haline getirir. Benzer şekilde, ZK-toplamaların isteğe bağlı mantığı işlemesine ve akıllı sözleşmeleri yürütmesine olanak tanıyacak [EVM'nin (zkEVM) sıfır bilgili bir uygulamasını oluşturma](https://ethresear.ch/t/a-zk-evm-specification/11549) planları devam etmektedir.
+Aksine, iyimser toplamalar [Ethereum Sanal Makinesi](/developers/docs/evm/) ile uyumludur ve Ethereum'a özgü [akıllı sözleşmeleri](/developers/docs/smart-contracts/) çalıştırabilir, bu da onları [merkeziyetsiz uygulamaları](/developers/docs/dapps/) ölçeklendirmek için yararlı ve _güvenli_ bir çözüm haline getirir. Benzer şekilde, ZK-toplamalarının keyfi mantığı işlemesine ve akıllı sözleşmeleri yürütmesine olanak tanıyacak [EVM'nin sıfır bilgi uygulamasını (zkEVM) oluşturma](https://ethresear.ch/t/a-zk-evm-specification/11549) planları devam etmektedir.
 
 ### Veri kullanılamazlığı {#data-unavailability}
 
-Daha önce açıklandığı gibi plazmada veri kullanılabilirliği sorunu vardır. Eğer kötü niyetli bir operatör, geçersiz bir geçişi plazma zincirinde ilerletirse sahtecilik kanıtı oluşturmak için gereken verileri saklayabileceği için kullanıcılar buna itiraz edemez. Toplamalar, operatörleri Ethereum'a işlem verilerini göndermeye zorlayarak bu sorunu çözer, böylece herhangi birinin zincirin durumunu doğrulayabilmesine ve gerektiğinde sahtecilik kanıtları oluşturabilmesine olanak tanır.
+Daha önce açıklandığı gibi, Plasma bir veri kullanılabilirliği sorunundan muzdariptir. Kötü niyetli bir operatör Plasma zincirinde geçersiz bir geçişi ilerletirse, operatör sahtekarlık kanıtı oluşturmak için gereken verileri saklayabileceğinden kullanıcılar buna itiraz edemez. Toplamalar, operatörleri işlem verilerini Ethereum'da yayınlamaya zorlayarak bu sorunu çözer, böylece herkesin zincirin durumunu doğrulamasına ve gerekirse sahtekarlık kanıtları oluşturmasına olanak tanır.
 
-### Toplu çıkış sorunu {#mass-exit-problem}
+### Kitlesel çıkış sorunu {#mass-exit-problem}
 
-Hem ZK toplamalar hem de iyimser toplamalar, Plazma'nın toplu çıkış sorununu çeşitli yollarla çözer. Örneğin ZK toplama, operatörlerin herhangi bir senaryoda kullanıcı fonlarını çalamamalarını sağlayan kriptografik mekanizmalara dayanır.
+ZK-toplamaları ve iyimser toplamalar, Plasma'nın kitlesel çıkış sorununu çeşitli şekillerde çözer. Örneğin, bir ZK-toplaması, operatörlerin hiçbir senaryoda kullanıcı fonlarını çalamamasını sağlayan kriptografik mekanizmalara dayanır.
 
-Benzer şekilde iyimser toplamalar, çekimler üzerinde bir gecikme süresi uygular ve bu süre boyunca herhangi biri itiraz başlatıp kötü niyetli çekim taleplerini engelleyebilir. Bu, Plazma'ya benzer bir yaklaşımdır ancak farklılığı, doğrulayıcıların sahtecilik kanıtları oluşturmak için gereken verilere sahip olmasıdır. Bu nedenle, toplama kullanıcılarının Ethereum Ana Ağı'na yönelik çılgınca "ilk çıkan" geçişine girmelerine gerek yoktur.
+Benzer şekilde, iyimser toplamalar çekim işlemlerine, herkesin bir itiraz başlatabileceği ve kötü niyetli çekim taleplerini önleyebileceği bir gecikme süresi uygular. Bu Plasma'ya benzer olsa da, aradaki fark doğrulayıcıların sahtekarlık kanıtları oluşturmak için gereken verilere erişebilmesidir. Bu nedenle, Toplama kullanıcılarının Ethereum Ana Ağına çılgınca, "ilk çıkan kurtulur" tarzı bir göçe girmesine gerek yoktur.
 
-## Plazma, yan zincirlerden ve parçalamadan nasıl farklıdır? {#plasma-sidechains-sharding}
+## Plasma, yan zincirlerden ve parçalamadan nasıl farklıdır? {#plasma-sidechains-sharding}
 
-Plazma, yan zincirler ve parçalama oldukça benzerdir, çünkü hepsi bir şekilde Ethereum Ana Ağı'na bağlanır. Ancak, bu bağlantıların düzeyi ve gücü değişiklik gösterir ve bu da her ölçeklendirme çözümünün güvenlik özelliklerini etkiler.
+Plasma, yan zincirler ve parçalama oldukça benzerdir çünkü hepsi bir şekilde Ethereum Ana Ağına bağlanır. Ancak, bu bağlantıların seviyesi ve gücü değişir, bu da her ölçeklendirme çözümünün güvenlik özelliklerini etkiler.
 
-### Plazma ve yan zincirler {#plasma-vs-sidechains}
+### Plasma ve yan zincirler {#plasma-vs-sidechains}
 
-Bir [yan zincir](/developers/docs/scaling/sidechains/), Ethereum Ana Ağı'na iki yönlü bir köprü aracılığıyla bağlanan, bağımsız olarak işletilen bir blokzincirdir. [Köprüler](/bridges/), kullanıcıların iki blokzincir arasında jeton alışverişi yaparak yan zincirde işlem yapmalarını sağlar, bu da Ethereum Ana Ağı'ndaki sıkışıklığı azaltır ve ölçeklenebilirliği artırır.
-Yan zincirler ayrı bir mutabakat mekanizması kullanır ve genellikle Ethereum Ana Ağı'ndan çok daha küçüktür. Sonuç olarak, varlıkları bu zincirlere bağlamak, artan risk içerir; yan zincir modelinde Ethereum Ana Ağı'ndan devralınan güvenlik garantilerinin olmaması göz önüne alındığında, kullanıcılar yan zincire yapılacak bir saldırıda fon kaybını riske etmiş olur.
+Bir [yan zincir](/developers/docs/scaling/sidechains/), iki yönlü bir köprü aracılığıyla Ethereum Ana Ağına bağlanan bağımsız olarak işletilen bir blokzincirdir. [Köprüler](/bridges/), kullanıcıların yan zincirde işlem yapmak için iki blokzincir arasında Token alışverişi yapmasına olanak tanıyarak Ethereum Ana Ağındaki tıkanıklığı azaltır ve ölçeklenebilirliği artırır.
+Yan zincirler ayrı bir mutabakat mekanizması kullanır ve tipik olarak Ethereum Ana Ağından çok daha küçüktür. Sonuç olarak, varlıkları bu zincirlere köprülemek artan risk içerir; yan zincir modelinde Ethereum Ana Ağından miras alınan güvenlik garantilerinin eksikliği göz önüne alındığında, kullanıcılar yan zincire yönelik bir saldırıda fon kaybı riskiyle karşı karşıya kalır.
 
-Bunun tersine, plazma zincirleri güvenliklerini Ana Ağ'dan alırlar. Bu, onları yan zincirlerden ölçülebilir şekilde daha güvenli hale getirir. Hem yan zincirler hem de plazma zincirleri farklı mutabakat protokollerine sahip olabilir, ancak aradaki fark, plazma zincirlerinin Ethereum Ana Ağı'ndaki her blok için Merkle kökleri yayımlamasıdır. Blok kökleri, bir plazma zincirinde gerçekleşen işlemler hakkındaki bilgileri doğrulamak için kullanabileceğimiz küçük bilgi parçalarıdır. Plazma zincirine bir saldırı olursa, kullanıcılar uygun kanıtları kullanarak fonlarını güvenli bir şekilde Ana Ağ'a geri çekebilir.
+Aksine, Plasma zincirleri güvenliklerini Ana Ağdan alır. Bu onları yan zincirlerden ölçülebilir derecede daha güvenli hale getirir. Hem yan zincirler hem de Plasma zincirleri farklı mutabakat protokollerine sahip olabilir, ancak aradaki fark Plasma zincirlerinin Ethereum Ana Ağındaki her blok için Merkle kökleri yayınlamasıdır. Blok kökleri, bir Plasma zincirinde gerçekleşen işlemler hakkındaki bilgileri doğrulamak için kullanabileceğimiz küçük bilgi parçalarıdır. Bir Plasma zincirinde bir saldırı gerçekleşirse, kullanıcılar uygun kanıtları kullanarak fonlarını güvenli bir şekilde Ana Ağa geri çekebilirler.
 
-### Plazma ve parçalama {#plasma-vs-sharding}
+### Plasma ve parçalama {#plasma-vs-sharding}
 
-Hem plazma zincirleri hem de parça zincirleri, Ethereum Ana Ağı'da periyodik olarak kriptografik kanıtlar yayımlar. Ancak her ikisinin de farklı güvenlik özellikleri vardır.
+Hem Plasma zincirleri hem de parça zincirleri periyodik olarak Ethereum Ana Ağına kriptografik kanıtlar yayınlar. Ancak her ikisinin de farklı güvenlik özellikleri vardır.
 
-Parça zincirleri, Ana Ağ'a her bir veri parçası hakkında ayrıntılı bilgi içeren "harmanlama başlıkları" gönderir. Ana Ağ'daki düğümler, veri parçalarının geçerliliğini doğrular ve uygular, böylece geçersiz parça geçişleri olasılığını azaltır ve ağı kötü niyetli etkinliklere karşı korur.
+Parça zincirleri, her veri parçası hakkında ayrıntılı bilgi içeren "harmanlama başlıklarını" Ana Ağa taahhüt eder. Ana Ağdaki düğümler, veri parçalarının geçerliliğini doğrular ve uygular, geçersiz parça geçişleri olasılığını azaltır ve ağı kötü niyetli faaliyetlere karşı korur.
 
-Plazma farklıdır; çünkü Ana Ağ, alt zincirlerin durumu hakkında yalnızca minimum düzeyde bilgi alır. Bu, Ana Ağ'ın alt zincirler üzerinde gerçekleştirilen işlemleri etkin bir şekilde doğrulayamadığı ve onları daha az güvenli hale getirdiği anlamına gelir.
+Plasma farklıdır çünkü Ana Ağ, çocuk zincirlerin durumu hakkında yalnızca minimum bilgi alır. Bu, Ana Ağın çocuk zincirlerde yürütülen işlemleri etkili bir şekilde doğrulayamayacağı ve onları daha az güvenli hale getireceği anlamına gelir.
 
-**Not:** Ethereum blokzincirini parçalama artık yol haritasında yer almıyor. Onun yerini toplamalar ve [Danksharding](/roadmap/danksharding) yoluyla ölçeklendirme almıştır.
+**Not:** Ethereum blokzincirini parçalamak artık yol haritasında değildir. Bunun yerini toplamalar ve [danksharding](/roadmap/danksharding) yoluyla ölçeklendirme almıştır.
 
-### Plazma kullanın {#use-plasma}
+### Plasma'yı kullanın {#use-plasma}
 
-Birden çok proje, merkeziyetsiz uygulamalarınıza entegre edebileceğiniz Plazma uygulamaları sağlar:
+Birden fazla proje, dapp'lerinize entegre edebileceğiniz Plasma uygulamaları sağlar:
 
-- [Polygon](https://polygon.technology/) (önceki adıyla Matic Network)
+- [Polygon](https://polygon.technology/) (önceden Matic Network)
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-- [Plazma hakkında bilgi edinin](https://www.learnplasma.org/en/)
-- ["Paylaşılan güvenliğin" ne anlama geldiği ve neden bu kadar önemli olduğuna dair hızlı bir hatırlatma](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Yan Zincirler, Plazma ve Parçalama Karşılaştırması](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
-- [Plazma'yı Anlamak, Bölüm 1: Temel Bilgiler](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
-- [Plazma'nın Doğuşu ve Ölümü](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
+- [Plasma'yı Öğrenin](https://www.learnplasma.org/en/)
+- ["Paylaşılan güvenlik" kavramının ne anlama geldiğine ve neden bu kadar önemli olduğuna dair hızlı bir hatırlatma](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
+- [Yan Zincirler, Plasma ve Parçalama Karşılaştırması](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
+- [Plasma'yı Anlamak, Bölüm 1: Temeller](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
+- [Plasma'nın Yaşamı ve Ölümü](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
+
+## Eğitimler: Ethereum'da Plasma zincirleri {#tutorials}
+
+- [Gizliliği koruyan uygulamaya özel bir plasma yazın](/developers/tutorials/app-plasma/) _– Sıfır bilgi ispatları ve zincir dışı bileşenler kullanarak gizliliği koruyan bir plasma uygulaması oluşturun._

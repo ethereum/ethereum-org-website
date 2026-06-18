@@ -1,165 +1,165 @@
 ---
-title: "Akıllı sözleşmeleri yükseltmek"
-description: "Ethereum akıllı sözleşmeleri için güncelleme modellerine genel bir bakış"
+title: Akıllı sözleşmeleri yükseltme
+description: Ethereum akıllı sözleşmeleri için yükseltme modellerine genel bir bakış
 lang: tr
 ---
 
-Ethereum'daki akıllı sözleşmeler, Ethereum Sanal Makinesi'nde (EVM) çalışan ve kendini yürüten programlardır. Bu programlar tasarım bakımından değişmezdir, bu da kontratın dağıtıldıktan sonra iş mantığında herhangi bir güncelleme yapılmasını engeller.
+Ethereum üzerindeki akıllı sözleşmeler, Ethereum Sanal Makinesi'nde (EVM) çalışan kendi kendini yürüten programlardır. Bu programlar tasarımları gereği değişmezdir, bu da sözleşme dağıtıldıktan sonra iş mantığında herhangi bir güncelleme yapılmasını engeller.
 
-Değişmezlik, akıllı sözleşmelerin güvensizliği, merkeziyestizliği ve güvenliği için gerekliyken bazı durumlarda dezavantaj teşkil edebilir. Örneğin, değişmez kod geliştiriciler için savunmasız sözleşmeleri düzeltmeyi imkansız hale getirebilir.
+Değişmezlik, akıllı sözleşmelerin güven gereksinimsizliği, merkeziyetsizliği ve güvenliği için gerekli olsa da, bazı durumlarda bir dezavantaj olabilir. Örneğin, değişmez kod, geliştiricilerin savunmasız sözleşmeleri düzeltmesini imkansız hale getirebilir.
 
-Ancak akıllı sözleşmeleri geliştirmeye yönelik artan araştırmalar, birkaç yükseltme modelinin kullanılmaya başlamasına neden olmuştur. Bu yükseltme modelleri geliştiricilere, (değişmezliği korurken) iş mantığını farklı sözleşmelere yerleştirerek akıllı sözleşmeleri yükseltme olanağı verir.
+Ancak, akıllı sözleşmeleri iyileştirmeye yönelik artan araştırmalar, çeşitli yükseltme modellerinin tanıtılmasına yol açmıştır. Bu yükseltme modelleri, geliştiricilerin iş mantığını farklı sözleşmelere yerleştirerek akıllı sözleşmeleri (değişmezliği korurken) yükseltmelerini sağlar.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-[Akıllı sözleşmeler](/developers/docs/smart-contracts/), [akıllı sözleşme anatomisi](/developers/docs/smart-contracts/anatomy/) ve [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) hakkında iyi bir anlayışa sahip olmalısınız. Bu kılavuz aynı zamanda, okuyucuların akıllı sözleşmeleri programlama konusunu kavramış durumda olduğunu varsayar.
+[Akıllı sözleşmeler](/developers/docs/smart-contracts/), [akıllı sözleşme anatomisi](/developers/docs/smart-contracts/anatomy/) ve [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) hakkında iyi bir anlayışa sahip olmalısınız. Bu kılavuz ayrıca okuyucuların akıllı sözleşme programlamayı kavradığını varsaymaktadır.
 
 ## Akıllı sözleşme yükseltmesi nedir? {#what-is-a-smart-contract-upgrade}
 
-Akıllı sözleşme yükseltmesi, akıllı sözleşmenin iş mantığını değiştirirken sözleşmenin durumunu da korumayı içerir. Özellikle akıllı sözleşmeler kapsamında, yükseltilebilirlik ile değişebilirliğin farklı şeyler olduğuna açıklık getirmek önemlidir.
+Bir akıllı sözleşme yükseltmesi, sözleşmenin durumunu korurken bir akıllı sözleşmenin iş mantığını değiştirmeyi içerir. Özellikle akıllı sözleşmeler bağlamında yükseltilebilirliğin ve değişebilirliğin aynı şey olmadığını açıklığa kavuşturmak önemlidir.
 
-Ethereum ağındaki bir adrese dağıtılmış bir programı hala değiştiremezsiniz. Ancak kullanıcılar bir akıllı sözleşmeyle etkileşime girdiğinde yürütülen kodu değiştirebilirsiniz.
+Ethereum ağındaki bir adrese dağıtılmış bir programı hâlâ değiştiremezsiniz. Ancak kullanıcılar bir akıllı sözleşme ile etkileşime girdiğinde yürütülen kodu değiştirebilirsiniz.
 
 Bu, aşağıdaki yöntemlerle yapılabilir:
 
-1. Bir akıllı sözleşmenin birden fazla sürümünü oluşturmak ve durumu (verilerden) eski sözleşmeden sözleşmenin yeni bir örneğine taşımak.
+1. Bir akıllı sözleşmenin birden fazla sürümünü oluşturmak ve durumu (yani verileri) eski sözleşmeden sözleşmenin yeni bir örneğine taşımak.
 
-2. İş mantığı ve durumunu kaydetmek için ayrı sözleşmeler oluşturmak.
+2. İş mantığını ve durumu depolamak için ayrı sözleşmeler oluşturmak.
 
-3. Değişmez vekil sözleşmeden gelen fonksiyon çağrılarını değiştirilebilir bir mantık sözleşmesine yönlendirmek için vekil kalıplarını kullanmak.
+3. Fonksiyon çağrılarını değişmez bir vekil kontrattan değiştirilebilir bir mantık sözleşmesine devretmek için vekil (proxy) modelleri kullanmak.
 
-4. Belirli fonksiyonları yürütmek için esnek uydu sözleşmeleriyle arayüz oluşturan ve bu sözleşmelere dayanan değişmez bir ana sözleşme oluşturmak.
+4. Belirli fonksiyonları yürütmek için esnek uydu sözleşmelerle arayüz oluşturan ve bunlara dayanan değişmez bir ana sözleşme oluşturmak.
 
-5. Elmas modelini kullanarak vekil sözleşmeden gelen fonksiyon çağrılarını bir mantık sözleşmelerine yönlendirmek.
+5. Fonksiyon çağrılarını bir vekil kontrattan mantık sözleşmelerine devretmek için elmas (diamond) modelini kullanmak.
 
-### Yükseltme mekanizması 1: Sözleşme taşıma {#contract-migration}
+### Yükseltme mekanizması #1: Sözleşme taşıma {#contract-migration}
 
-Sözleşme taşıma, aynı yazılımın eşsiz durumlarını oluşturma ve yönetme fikri anlamına gelen sürüm belirleme temelinde çalışır. Sözleşme taşıma, mevcut bir akıllı sözleşmenin yeni bir örneğinin dağıtılması ve depolama ile bakiyelerin yeni sözleşmeye transferini içerir.
+Sözleşme taşıma, aynı yazılımın benzersiz durumlarını oluşturma ve yönetme fikri olan sürüm oluşturmaya dayanır. Sözleşme taşıma, mevcut bir akıllı sözleşmenin yeni bir örneğini dağıtmayı ve depolamayı ve bakiyeleri yeni sözleşmeye aktarmayı içerir.
 
-Yeni dağıtılmış sözleşmenin depolaması boş olacaktır ve bu durum, eski sözleşmeden verileri kurtarıp ve yeni uygulamaya yazmanıza olanak tanır. Sonrasında, eski sözleşme ile etkileşimde olan tüm sözleşmeleri yeni adresi belirtecek şekilde güncellemeniz gerekir.
+Yeni dağıtılan sözleşme boş bir depolamaya sahip olacak, bu da eski sözleşmeden verileri kurtarmanıza ve yeni uygulamaya yazmanıza olanak tanıyacaktır. Daha sonra, yeni adresi yansıtması için eski sözleşmeyle etkileşime giren tüm sözleşmeleri güncellemeniz gerekecektir.
 
-Sözleşme taşımanın son adımı, kullanıcıları yeni sözleşmeyi kullanmaya geçmeye ikna etmektir. Yeni sözleşme sürümü, kullanıcı bakiyelerini ve adreslerini korur ve dolayısıyla değişmezliği sürdürür. Jeton tabanlı sözleşme söz konusu olduğunda, aynı zamanda eski sözleşmeyi bırakıp yeni sözleşmeyi kullanmak için borsalarla da iletişime geçmeniz gerekir.
+Sözleşme taşımadaki son adım, kullanıcıları yeni sözleşmeyi kullanmaya geçmeye ikna etmektir. Yeni sözleşme sürümü, değişmezliği koruyan kullanıcı bakiyelerini ve adreslerini muhafaza edecektir. Eğer bu Token tabanlı bir sözleşmeyse, eski sözleşmeyi atıp yeni sözleşmeyi kullanmaları için borsalarla da iletişime geçmeniz gerekecektir.
 
-Sözleşme taşıma, akıllı sözleşmeleri kullanıcı etkileşimlerini kesintiye uğratmadan yükseltmeye yönelik görece basit ve güvenli bir tedbirdir. Ancak, kullanıcı depolama ve bakiyelerini yeni sözleşmeye manuel olarak taşımak zaman alıcıdır ve yüksek gaz ücretlerine sebep olabilir.
+Sözleşme taşıma, kullanıcı etkileşimlerini bozmadan akıllı sözleşmeleri yükseltmek için nispeten basit ve güvenli bir önlemdir. Ancak, kullanıcı depolamasını ve bakiyelerini yeni sözleşmeye manuel olarak taşımak zaman alıcıdır ve yüksek Gaz maliyetlerine neden olabilir.
 
 [Sözleşme taşıma hakkında daha fazlası.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
-### Yükseltme mekanizması 2: Veri ayırma {#data-separation}
+### Yükseltme mekanizması #2: Veri ayrımı {#data-separation}
 
-Akıllı sözleşmeleri yükseltmenin bir diğer yöntemi, iş mantığı ile veri depolamayı farklı sözleşmelere ayırmaktır. Bunun anlamı, veriler depolama sözleşmesinde depolanırken kullanıcıların mantık sözleşmesi ile etkileşime girmesidir.
+Akıllı sözleşmeleri yükseltmenin bir başka yöntemi de iş mantığını ve veri depolamayı ayrı sözleşmelere ayırmaktır. Bu, veriler depolama sözleşmesinde saklanırken kullanıcıların mantık sözleşmesiyle etkileşime girdiği anlamına gelir.
 
-Mantık sözleşmesi, kullanıcılar uygulamayla etkileşime girdiğinde yürütülen kodu içerir. Aynı zamanda, depolama sözleşmesinin adresini tutar ve veri alma ve ayarlama amacıyla bu adresle etkileşime geçer.
+Mantık sözleşmesi, kullanıcılar uygulamayla etkileşime girdiğinde yürütülen kodu içerir. Ayrıca depolama sözleşmesinin adresini tutar ve veri almak ve ayarlamak için onunla etkileşime girer.
 
-Bu arada, kullanıcı bakiyeleri ve adresleri gibi akıllı sözleşme ile bağlantılı durumu da depolama sözleşmesi tutar. Depolama sözleşmesinin mantık sözleşmesine ait olduğunu ve dağıtım anında mantık sözleşmesinin adresi ile yapılandırıldığını unutmayın. Bu, yetkisiz sözleşmelerin depolama sözleşmesini çağırmasını ya da verilerini güncellemesini engeller.
+Bu arada, depolama sözleşmesi, kullanıcı bakiyeleri ve adresleri gibi akıllı sözleşmeyle ilişkili durumu tutar. Depolama sözleşmesinin mantık sözleşmesine ait olduğunu ve dağıtım sırasında ikincisinin adresiyle yapılandırıldığını unutmayın. Bu, yetkisiz sözleşmelerin depolama sözleşmesini çağırmasını veya verilerini güncellemesini engeller.
 
-Varsayılan olarak, depolama sözleşmesi değiştirilemez; fakat işaret ettiği mantık sözleşmesini, yeni bir uygulama ile değiştirebilirsiniz. Bu, depolamayı ve bakiyeleri olduğu gibi tutarken Ethereum Sanal Makinesi'nde çalışan kodu değiştirir.
+Varsayılan olarak, depolama sözleşmesi değişmezdir; ancak işaret ettiği mantık sözleşmesini yeni bir uygulamayla değiştirebilirsiniz. Bu, depolamayı ve bakiyeleri sağlam tutarken EVM'de çalışan kodu değiştirecektir.
 
-Bu yükseltme yönteminin kullanılması, depolama sözleşmesinde mantık sözleşmesinin adresini güncellemeyi gerektirir. Daha önce açıklanmış sebeplerden dolayı, yeni mantık sözleşmesini depolama sözleşmesinin adresi ile de yapılandırmanız gerekir.
+Bu yükseltme yöntemini kullanmak, depolama sözleşmesindeki mantık sözleşmesinin adresini güncellemeyi gerektirir. Daha önce açıklanan nedenlerden dolayı yeni mantık sözleşmesini de depolama sözleşmesinin adresiyle yapılandırmalısınız.
 
-Veri ayırma modelini uygulamak, sözleşme taşınması ile karşılaştırıldığında tartışmasız daha kolaydır. Ancak, akıllı sözleşmeleri kötü niyetli yükseltmelerden korumak için birden çok sözleşmeyi yönetmeniz ve karmaşık yetkilendirme düzenlemeleri uygulamanız gerekir.
+Veri ayrımı modelinin uygulanması, sözleşme taşımaya kıyasla tartışmasız daha kolaydır. Ancak, akıllı sözleşmeleri kötü niyetli yükseltmelerden korumak için birden fazla sözleşmeyi yönetmeniz ve karmaşık yetkilendirme şemaları uygulamanız gerekecektir.
 
-### Yükseltme mekanizması 3: Vekil modeller {#proxy-patterns}
+### Yükseltme mekanizması #3: Vekil (Proxy) modelleri {#proxy-patterns}
 
-Araştırma modeli aynı zamanda, iş mantığını ve veriyi ayrı sözleşmelerde tutmak için veri ayırmayı kullanır. Bununla beraber bir vekil modelinde, depolama sözleşmesi (vekil olarak adlandırılır) kod yürütme sırasında mantık sözleşmesini çağırır. Bu, mantık sözleşmesinin depolama sözleşmesini çağırdığı veri ayırma yönteminin tersidir.
+Vekil modeli de iş mantığını ve verileri ayrı sözleşmelerde tutmak için veri ayrımını kullanır. Ancak, bir vekil modelinde, depolama sözleşmesi (vekil olarak adlandırılır) kod yürütme sırasında mantık sözleşmesini çağırır. Bu, mantık sözleşmesinin depolama sözleşmesini çağırdığı veri ayrımı yönteminin tersidir.
 
-Bir vekil modelinde şunlar gerçekleşir:
+Bir vekil modelinde şu olaylar gerçekleşir:
 
-1. Kullanıcılar, veri depolayan ama iş mantığını tutmayan vekil sözleşme ile etkileşime girer.
+1. Kullanıcılar, verileri depolayan ancak iş mantığını barındırmayan vekil kontrat ile etkileşime girer.
 
-2. Vekil sözleşme, mantık sözleşmesinin adresini depolar ve `delegatecall` fonksiyonunu kullanarak tüm fonksiyon çağrılarını (iş mantığı içeren) mantık sözleşmesine delege eder.
+2. Vekil kontrat, mantık sözleşmesinin adresini depolar ve `delegatecall` fonksiyonunu kullanarak tüm fonksiyon çağrılarını (iş mantığını barındıran) mantık sözleşmesine devreder.
 
-3. Çağrı, mantık sözleşmesine iletildikten sonra mantık sözleşmesinden gelen veri alınır ve kullanıcıya geri döndürülür.
+3. Çağrı mantık sözleşmesine iletildikten sonra, mantık sözleşmesinden dönen veriler alınır ve kullanıcıya döndürülür.
 
-Vekil modellerin kullanılması için **delegatecall** fonksiyonuna hakim olmak gerekir. Basitçe ifade etmek gerekirse, `delegatecall` bir sözleşmenin başka bir sözleşmeyi çağırmasına izin veren bir işlem kodudur, gerçek kod yürütme ise çağıran sözleşme bağlamında gerçekleşir. Vekil modellerde `delegatecall` fonksiyonunu kullanmanın olası sonuçlarından biri, vekil sözleşmenin kendi depolamasını okuyup yazması ve mantık sözleşmesinde saklanan mantığı, dahili bir fonksiyonu çağırıyormuş gibi yürütmesidir.
+Vekil modellerini kullanmak, **delegatecall** fonksiyonunun anlaşılmasını gerektirir. Temel olarak, `delegatecall`, bir sözleşmenin başka bir sözleşmeyi çağırmasına izin veren bir işlem kodudur, asıl kod yürütmesi ise çağıran sözleşmenin bağlamında gerçekleşir. Vekil modellerinde `delegatecall` kullanmanın bir sonucu, vekil kontratın kendi depolamasına okuma ve yazma yapması ve mantık sözleşmesinde depolanan mantığı sanki dahili bir fonksiyon çağırıyormuş gibi yürütmesidir.
 
 [Solidity belgelerinden](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries):
 
-> _Mesaj çağrısının **delegatecall** adında özel bir varyantı vardır. Bu, hedef adresteki kodun çağıran sözleşmenin bağlamında (yani adresinde) yürütülmesi ve `msg.sender` ile `msg.value` değerlerinin değişmemesi dışında bir mesaj çağrısıyla aynıdır._ _Bu, bir sözleşmenin çalışma zamanında farklı bir adresten dinamik olarak kod yükleyebileceği anlamına gelir._ Depolama, geçerli adres ve bakiye, hala çağırana başvuruda bulunur, çağrılan adresten sadece kod alınır._
+> _Hedef adresteki kodun çağıran sözleşmenin bağlamında (yani adresinde) yürütülmesi ve `msg.sender` ile `msg.value` değerlerinin değişmemesi dışında bir mesaj çağrısıyla aynı olan **delegatecall** adında özel bir mesaj çağrısı varyantı vardır._ _Bu, bir sözleşmenin çalışma zamanında farklı bir adresten dinamik olarak kod yükleyebileceği anlamına gelir. Depolama, mevcut adres ve bakiye hâlâ çağıran sözleşmeye atıfta bulunur, yalnızca kod çağrılan adresten alınır._
 
-Vekil sözleşme, bir kullanıcı bir fonksiyonu her çağırdığında `delegatecall` çağrısı yapması gerektiğini bilir. Çünkü yerleşik bir `fallback` fonksiyonuna sahiptir. Solidity programlamada, bir fonksiyon çağrısı sözleşmede belirtilmiş olan fonksiyonlarla eşleşmediğinde [geri dönüş işlevi](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) çalıştırılır.
+Vekil kontrat, içine yerleşik bir `fallback` fonksiyonu olduğu için bir kullanıcı bir fonksiyonu her çağırdığında `delegatecall`'u başlatmayı bilir. Solidity programlamada, bir fonksiyon çağrısı bir sözleşmede belirtilen fonksiyonlarla eşleşmediğinde [geri dönüş fonksiyonu](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) yürütülür.
 
-Vekil modelin çalışması için vekil sözleşmenin desteklemediği fonksiyon çağrılarını nasıl yürütmesi gerektiğini belirten özel bir geri dönüş fonksiyonu yazmak gerekir. Bu durumda, vekilin geri dönüş fonksiyonu bir delegatecall başlatmak ve kullanıcının isteğini geçerli mantık sözleşmesi uygulamasına tekrardan yönlendirmek üzere programlanır.
+Vekil modelinin çalışmasını sağlamak, vekil kontratın desteklemediği fonksiyon çağrılarını nasıl ele alması gerektiğini belirten özel bir geri dönüş fonksiyonu yazmayı gerektirir. Bu durumda vekilin geri dönüş fonksiyonu, bir delegatecall başlatmak ve kullanıcının isteğini mevcut mantık sözleşmesi uygulamasına yeniden yönlendirmek üzere programlanmıştır.
 
-Vekil sözleşme, varsayılan olarak değiştirilemez ancak güncellenmiş iş mantığına sahip yeni mantık sözleşmeleri oluşturulabilir. Bu itibarla yükseltmenin gerçekleştirilmesi, vekil sözleşmede başvurulan mantık sözleşmesinin adresini değiştirme anlamına gelir.
+Vekil kontrat varsayılan olarak değişmezdir, ancak güncellenmiş iş mantığına sahip yeni mantık sözleşmeleri oluşturulabilir. Yükseltmeyi gerçekleştirmek, vekil kontratta referans verilen mantık sözleşmesinin adresini değiştirmekten ibarettir.
 
-Vekil sözleşmeyi yeni bir mantık sözleşmesine yönlendirildiğinde kullanıcılar vekil sözleşmenin fonksiyonunu çağırdığında yürütülen kod değişir. Bu, kullanıcılardan yeni bir sözleşme ile etkileşime girmelerini istemeden bir sözleşmenin mantığını yükseltmemize izin verir.
+Vekil kontratı yeni bir mantık sözleşmesine işaret ederek, kullanıcılar vekil kontrat fonksiyonunu çağırdığında yürütülen kod değişir. Bu, kullanıcılardan yeni bir sözleşmeyle etkileşime girmelerini istemeden bir sözleşmenin mantığını yükseltmemize olanak tanır.
 
-Vekil modeller, sözleşme taşımayla ilgili zorlukları ortadan kaldırmasından dolayı akıllı sözleşmeleri yükseltme konusunda popüler bir yöntemdir. Ancak vekil modellerin kullanımı daha karmaşıktır ve yanlış kullanıldığında [işlev seçici çakışmaları](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357) gibi kritik kusurlara yol açabilir.
+Vekil modelleri, sözleşme taşımayla ilişkili zorlukları ortadan kaldırdıkları için akıllı sözleşmeleri yükseltmek için popüler bir yöntemdir. Ancak, vekil modellerinin kullanımı daha karmaşıktır ve yanlış kullanıldığında [fonksiyon seçici çakışmaları](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357) gibi kritik kusurlara yol açabilir.
 
-[Vekil modeller hakkında daha fazlası](https://blog.openzeppelin.com/proxy-patterns/).
+[Vekil modelleri hakkında daha fazlası](https://blog.openzeppelin.com/proxy-patterns/).
 
-### Yükseltme mekanizması 4: Strateji modeli {#strategy-pattern}
+### Yükseltme mekanizması #4: Strateji modeli {#strategy-pattern}
 
-Bu teknik, belirli özellikleri uygulamak için diğer programlarla arayüz oluşturan yazılım programları oluşturmayı teşvik eden [strateji modelinden](https://en.wikipedia.org/wiki/Strategy_pattern) etkilenmiştir. Strateji modelini Ethereum'u geliştirmek için kullanmak, diğer sözleşmelerden fonksiyon çağıran bir akıllı sözleşme oluşturmak anlamına gelir.
+Bu teknik, belirli özellikleri uygulamak için diğer programlarla arayüz oluşturan yazılım programları oluşturmayı teşvik eden [strateji modelinden](https://en.wikipedia.org/wiki/Strategy_pattern) etkilenmiştir. Strateji modelini Ethereum geliştirmeye uygulamak, diğer sözleşmelerden fonksiyonlar çağıran bir akıllı sözleşme oluşturmak anlamına gelir.
 
-Bu durumda ana sözleşme, temel iş mantığını içerir ancak belirli işlevleri gerçekleştirmek için diğer akıllı sözleşmeler ile ("uydu sözleşmeleri") arayüz oluşturur. Aynı zamanda bu ana sözleşme uydu sözleşmesinin farklı uygulamaları arasında geçiş yapabilir ve her uydu sözleşmesinin adresini depolar.
+Bu durumdaki ana sözleşme, temel iş mantığını içerir, ancak belirli fonksiyonları yürütmek için diğer akıllı sözleşmelerle ("uydu sözleşmeler") arayüz oluşturur. Bu ana sözleşme ayrıca her uydu sözleşmesi için adresi depolar ve uydu sözleşmesinin farklı uygulamaları arasında geçiş yapabilir.
 
-Yeni bir uydu sözleşmesi oluşturabilir ve ana sözleşmeyi yeni adres ile yapılandırabilirsiniz. Bu, bir akıllı sözleşme için _stratejileri_ (yani yeni mantık uygulamayı) değiştirmenize olanak tanır.
+Yeni bir uydu sözleşmesi oluşturabilir ve ana sözleşmeyi yeni adresle yapılandırabilirsiniz. Bu, bir akıllı sözleşme için _stratejileri_ değiştirmenize (yani yeni mantık uygulamanıza) olanak tanır.
 
-Strateji modeli, daha önce tartışılan vekil model ile benzerlik taşısa da ondan farklıdır; çünkü iş mantığını kullanıcıların etkileşimde olduğu ana sözleşme tutar. Bu modeli kullanmak, bir akıllı sözleşmede ana altyapıyı etkilemeden sınırlı değişiklikler yapmaya olanak sağlar.
+Daha önce tartışılan vekil modeline benzese de, strateji modeli farklıdır çünkü kullanıcıların etkileşime girdiği ana sözleşme iş mantığını barındırır. Bu modeli kullanmak, temel altyapıyı etkilemeden bir akıllı sözleşmede sınırlı değişiklikler yapma fırsatı sunar.
 
-Ana dezavantajı, bu modelin çoğunlukla küçük yükseltmeleri devreye almak açısından kullanışlı olmasıdır. Ayrıca, ana sözleşmenin güvenliği tehlike altındaysa (örneğin, saldırı yoluyla) bu yükseltme yöntemini kullanamazsınız.
+Temel dezavantaj, bu modelin çoğunlukla küçük yükseltmeleri sunmak için yararlı olmasıdır. Ayrıca, ana sözleşme tehlikeye girerse (örneğin bir hack yoluyla), bu yükseltme yöntemini kullanamazsınız.
 
-### Yükseltme mekanizması 5: Elmas modeli {#diamond-pattern}
+### Yükseltme mekanizması #5: Elmas modeli {#diamond-pattern}
 
-Elmas modeli, vekil modelde yapılan bir iyileştirme olarak kabul edilir. Elmas modelleri, elmas vekil sözleşmesi, fonksiyon çağrılarını birden fazla mantık sözleşmesine iletebildiği için vekil modellerden farklıdır.
+Elmas modeli, vekil modeli üzerinde bir iyileştirme olarak düşünülebilir. Elmas modelleri vekil modellerinden farklıdır çünkü elmas vekil kontratı fonksiyon çağrılarını birden fazla mantık sözleşmesine devredebilir.
 
-Elmas modelindeki mantık sözleşmeleri _yüzeyler_ olarak bilinir. Elmas modelinin çalışması için, vekil sözleşmede [işlev seçicilerini](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector) farklı yüzey adresleriyle eşleyen bir haritalama oluşturmanız gerekir.
+Elmas modelindeki mantık sözleşmeleri _yüzeyler (facets)_ olarak bilinir. Elmas modelinin çalışmasını sağlamak için, vekil kontratta [fonksiyon seçicilerini](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector) farklı yüzey adresleriyle eşleyen bir eşleme oluşturmanız gerekir.
 
-Bir kullanıcı bir fonksiyon çağrısı yaptığında vekil sözleşme, o fonksiyonu yürütmekten sorumlu yüzü bulmak için eşlemeyi kontrol eder. Daha sonra, `delegatecall` çağrısı yapar (geri dönüş fonksiyonunu kullanarak) ve çağrıyı uygun mantık sözleşmesine yönlendirir.
+Bir kullanıcı bir fonksiyon çağrısı yaptığında, vekil kontrat o fonksiyonu yürütmekten sorumlu yüzeyi bulmak için eşlemeyi kontrol eder. Ardından (geri dönüş fonksiyonunu kullanarak) `delegatecall`'u başlatır ve çağrıyı uygun mantık sözleşmesine yönlendirir.
 
-Elmas yükseltmesi modelinin, geleneksel vekil yükseltme modellerine göre bazı avantajları vardır:
+Elmas yükseltme modelinin geleneksel vekil yükseltme modellerine göre bazı avantajları vardır:
 
-1. Tüm kodu değiştirmeden sözleşmenin küçük bir kısmını yükseltmenize olanak tanır. Yükseltmeler için vekil modeli kullanmak için küçük yükseltmelerde bile olsa, baştan sonra yeni bir mantık sözleşmesi oluşturmak gerekir.
+1. Tüm kodu değiştirmeden sözleşmenin küçük bir bölümünü yükseltmenize olanak tanır. Yükseltmeler için vekil modelini kullanmak, küçük yükseltmeler için bile tamamen yeni bir mantık sözleşmesi oluşturmayı gerektirir.
 
-2. Tüm akıllı sözleşmelerde (vekil modelde kullanılan mantık sözleşmeleri dahil) 24 KB'lık bir boyut limiti vardır; bu, özellikle daha çok fonksiyon gerektiren karmaşık sözleşmeler için sınırlayıcı olabilir. Elmas modeli, fonksiyonları birden çok mantık sözleşmesine bölerek bu sorunu çözmeyi kolaylaştırır.
+2. Tüm akıllı sözleşmeler (vekil modellerinde kullanılan mantık sözleşmeleri dahil) 24KB boyut sınırına sahiptir, bu da özellikle daha fazla fonksiyon gerektiren karmaşık sözleşmeler için bir sınırlama olabilir. Elmas modeli, fonksiyonları birden fazla mantık sözleşmesine bölerek bu sorunu çözmeyi kolaylaştırır.
 
-3. Vekil modeller, erişim kontrolleri için tümünü yakalama yaklaşımını benimser. Yükseltme işlevlerine erişimi olan bir varlık, sözleşmenin _tamamını_ değiştirebilir. Ancak elmas modeli, varlıkları bir akıllı sözleşme içindeki belirli işlevleri yükseltmekle kısıtlayabileceğiniz modüler bir izin yaklaşımı sağlar.
+3. Vekil modelleri, erişim kontrollerine her şeyi kapsayan bir yaklaşım benimser. Yükseltme fonksiyonlarına erişimi olan bir varlık _tüm_ sözleşmeyi değiştirebilir. Ancak elmas modeli, varlıkları bir akıllı sözleşme içindeki belirli fonksiyonları yükseltmekle kısıtlayabileceğiniz modüler bir izin yaklaşımı sağlar.
 
 [Elmas modeli hakkında daha fazlası](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w).
 
 ## Akıllı sözleşmeleri yükseltmenin artıları ve eksileri {#pros-and-cons-of-upgrading-smart-contracts}
 
-| Artıları                                                                                                                                                                      | Eksileri                                                                                                                                                                      |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bir akıllı sözleşme yükseltmesi, dağıtım sonrası aşamada keşfedilen güvenlik açıklarını gidermeyi kolaylaştırabilir.                                          | Akıllı kontratları güncellemek, kodun değişmezliği ilkesini geçersiz kılar ve bunun merkeziyetsizlik ve güvenlik açısından sonuçları olabilir.                |
-| Geliştiriciler, mantık yükseltmelerini kullanarak merkeziyetsiz uygulamalara yeni özellikler ekleyebilir.                                                     | Kulllanıcılar, geliştiricilerin akıllı sözleşmeleri keyfi olarak değiştirmeyeceğine güvenmek durumundadır.                                                    |
-| Akıllı sözleşme yükseltmeleri, hatalar hızlı bir şekilde çözüldüğünden son kullanıcılar için güvenliği arttırabilir.                                          | Akıllı sözleşmelere programlama yoluyla güncelleme işlevselliği eklemek, başka bir karmaşıklık katmanı ekler ve kritik hata olasılığını artırır.              |
-| Akıllı sözleşme yükseltmeleri, geliştiricilere farklı özellikleri denemek ve zaman içinde merkeziyetsiz uygulamaları geliştirmek için daha fazla alan sağlar. | Akıllı sözleşmeleri yükseltme fırsatı, geliştiricilerin projeleri geliştirme aşamasında yeterli önlem almadan daha hızlı başlatmalarına teşvik edebilir.      |
-|                                                                                                                                                                               | Akıllı sözleşmelerde güvensiz erişim kontrolü veya merkezileşme, kötü niyetli kişilerin yetkisiz yükseltmeler gerçekleştirmesini daha kolay hale getirebilir. |
+| Artıları                                                                                                           | Eksileri                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bir akıllı sözleşme yükseltmesi, dağıtım sonrası aşamada keşfedilen güvenlik açıklarını düzeltmeyi kolaylaştırabilir.    | Akıllı sözleşmeleri yükseltmek, merkeziyetsizlik ve güvenlik açısından sonuçları olan kod değişmezliği fikrini geçersiz kılar.                              |
+| Geliştiriciler, merkeziyetsiz uygulamalara yeni özellikler eklemek için mantık yükseltmelerini kullanabilirler.                           | Kullanıcılar, akıllı sözleşmeleri keyfi olarak değiştirmeyecekleri konusunda geliştiricilere güvenmelidir.                                                                                  |
+| Hatalar hızlı bir şekilde düzeltilebildiği için akıllı sözleşme yükseltmeleri son kullanıcılar için güvenliği artırabilir.                      | Akıllı sözleşmelere yükseltme işlevselliği programlamak, başka bir karmaşıklık katmanı ekler ve kritik kusur olasılığını artırır.                |
+| Sözleşme yükseltmeleri, geliştiricilere farklı özelliklerle denemeler yapmaları ve dapp'leri zaman içinde iyileştirmeleri için daha fazla alan sağlar. | Akıllı sözleşmeleri yükseltme fırsatı, geliştiricileri geliştirme aşamasında gerekli özeni göstermeden projeleri daha hızlı başlatmaya teşvik edebilir. |
+|                                                                                                                | Akıllı sözleşmelerdeki güvensiz erişim kontrolü veya merkezileşme, kötü niyetli aktörlerin yetkisiz yükseltmeler gerçekleştirmesini kolaylaştırabilir.                  |
 
 ## Akıllı sözleşmeleri yükseltirken dikkat edilmesi gerekenler {#considerations-for-upgrading-smart-contracts}
 
-1. Özellikle vekil modeller, strateji modelleri ya da veri ayırma kullanıyorsanız, yetkisiz akıllı sözleşme güncellemelerini önlemek için güvenli erişim kontrolü/yetkilendirme mekanizmalarını kullanın. Buna örnek olarak, yükseltme işlevinin erişimini, sadece sözleşme sahibinin onu çağırmasına izin verecek şekilde kısıtlamak verilebilir.
+1. Özellikle vekil modelleri, strateji modelleri veya veri ayrımı kullanıyorsanız, yetkisiz akıllı sözleşme yükseltmelerini önlemek için güvenli erişim kontrolü/yetkilendirme mekanizmaları kullanın. Buna bir örnek, yükseltme fonksiyonuna erişimi yalnızca sözleşmenin sahibinin çağırabileceği şekilde kısıtlamaktır.
 
-2. Akıllı sözleşmeleri yükseltmek karmaşık bir eylemdir ve güvenlik açıklarının ortaya çıkmasını engellemek için yüksek seviyede özen gerekir.
+2. Akıllı sözleşmeleri yükseltmek karmaşık bir faaliyettir ve güvenlik açıklarının ortaya çıkmasını önlemek için yüksek düzeyde özen gerektirir.
 
-3. Yükseltmeleri uygulama sürecini merkeziyetsizleştirerek güven varsayımlarını azaltın. Olası stratejiler arasında, yükseltmeleri kontrol etmek için bir [çoklu imzalı cüzdan sözleşmesi](/developers/docs/smart-contracts/#multisig) kullanmak veya [bir DAO'nun üyelerinin](/dao/) yükseltmeyi onaylamak için oy kullanmasını zorunlu kılmak yer alır.
+3. Yükseltmeleri uygulama sürecini merkeziyetsizleştirerek güven varsayımlarını azaltın. Olası stratejiler arasında yükseltmeleri kontrol etmek için bir [çoklu imzalı cüzdan sözleşmesi](/developers/docs/smart-contracts/#multisig) kullanmak veya [bir DAO üyelerinin](/dao/) yükseltmeyi onaylamak için oy kullanmasını gerektirmek yer alır.
 
-4. Sözleşmelerin yükseltilmesiyle alakalı maliyetlerin farkında olun. Örnek olarak, sözleşme taşıma sırasında durumu (örn. kullanıcı bakiyeleri) eski bir sözleşmeden yeni bir sözleşmeye kopyalamak için birden çok işlem ve dolayısıyla daha fazla gaz ücreti gerekebilir.
+4. Sözleşmeleri yükseltmenin içerdiği maliyetlerin farkında olun. Örneğin, sözleşme taşıma sırasında durumu (örneğin kullanıcı bakiyeleri) eski bir sözleşmeden yeni bir sözleşmeye kopyalamak birden fazla işlem gerektirebilir, bu da daha fazla Gaz ücreti anlamına gelir.
 
-5. Kullanıcıları korumak için **zaman kilitleri** uygulamayı değerlendirin. Zaman kilidi, bir sistemde yapılan değişikliklere uygulanan gecikme anlamına gelir. Zaman kilitleri, yükseltmeleri kontrol etmek için bir çoklu imza yönetişim sistemi ile bir arada kullanılabilir: Önerilen işlem gerekli onay eşiğine ulaşırsa, önceden belirlenmiş olan gecikme süresi geçene kadar yürütülmez.
+5. Kullanıcıları korumak için **zaman kilitleri (timelocks)** uygulamayı düşünün. Bir zaman kilidi, bir sistemdeki değişikliklere uygulanan bir gecikmeyi ifade eder. Zaman kilitleri, yükseltmeleri kontrol etmek için çoklu imzalı bir yönetişim sistemiyle birleştirilebilir: önerilen bir eylem gerekli onay eşiğine ulaşırsa, önceden tanımlanmış gecikme süresi geçene kadar yürütülmez.
 
-Zaman kilitleri, önerilen bir değişikliğe (örn. mantık yükseltmesi ya da yeni ücret planları) katılmayan kullanıcılara sistemden çıkmaları için biraz zaman tanır. Zaman kilitleri olmadığında kullanıcılar, geliştiricilerin önceden haber vermeden akıllı bir sözleşmede keyfi değişiklikler yapmayacağına güvenmek zorunda kalır. Buradaki dezavantaj, zaman kilitlerinin, güvenlik açıklarını hızlıca onarma yeterliliğini kısıtlamasıdır.
+Zaman kilitleri, önerilen bir değişikliğe (örneğin mantık yükseltmesi veya yeni ücret şemaları) katılmıyorlarsa kullanıcılara sistemden çıkış yapmaları için biraz zaman tanır. Zaman kilitleri olmadan, kullanıcıların önceden haber vermeden bir akıllı sözleşmede keyfi değişiklikler uygulamayacakları konusunda geliştiricilere güvenmeleri gerekir. Buradaki dezavantaj, zaman kilitlerinin güvenlik açıklarını hızlı bir şekilde yamama yeteneğini kısıtlamasıdır.
 
 ## Kaynaklar {#resources}
 
-**OpenZeppelin Yükseltme Eklentileri - _Yükseltilebilir akıllı sözleşmelerin dağıtımını ve güvence altına alınmasını sağlayan bir araç paketi._**
+**OpenZeppelin Upgrades Eklentileri - _Yükseltilebilir akıllı sözleşmeleri dağıtmak ve güvence altına almak için bir araç paketi._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [Belgeler](https://docs.openzeppelin.com/upgrades)
 
 ## Eğitimler {#tutorials}
 
-- [Akıllı Sözleşmelerinizi Yükseltme | YouTube Eğitimi](https://www.youtube.com/watch?v=bdXJmWajZRY) - Patrick Collins
-- [Ethereum Akıllı Sözleşme Taşıma Eğitimi](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) - Austin Griffith
-- [Akıllı sözleşmeleri yükseltmek için UUPS vekil modelini kullanma](https://blog.logrocket.com/author/praneshas/) - Pranesh A.S
-- [Web3 Eğitimi: OpenZeppelin kullanarak yükseltilebilir akıllı sözleşme (vekil) yazma](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) - fangjun.eth
+- Patrick Collins'ten [Akıllı Sözleşmelerinizi Yükseltme | YouTube Eğitimi](https://www.youtube.com/watch?v=bdXJmWajZRY)
+- Austin Griffith'ten [Ethereum Akıllı Sözleşme Taşıma Eğitimi](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd)
+- Pranesh A.S'den [Akıllı sözleşmeleri yükseltmek için UUPS vekil modelini kullanma](https://blog.logrocket.com/author/praneshas/)
+- fangjun.eth'ten [Web3 Eğitimi: OpenZeppelin kullanarak yükseltilebilir akıllı sözleşme (vekil) yazma](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916)
 
-## Daha fazla kaynak {#further-reading}
+## İleri okuma {#further-reading}
 
-- [Akıllı Sözleşme Yükseltmelerinin Durumu](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) - Santiago Palladino
-- [Bir Solidity akıllı sözleşmesini yükseltmenin birden çok yolu](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool blogu
+- Santiago Palladino'dan [Akıllı Sözleşme Yükseltmelerinin Durumu](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/)
+- [Bir Solidity akıllı sözleşmesini yükseltmenin birden fazla yolu](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool blogu
 - [Öğrenin: Akıllı Sözleşmeleri Yükseltme](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin Belgeleri
-- [Solidity Sözleşmelerinin Yükseltilebilirliği İçin Vekil Modelleri: Şeffaf ve UUPS Vekilleri Karşılaştırması](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) - Naveen Sahu
-- [Elmas Yükseltmeleri Nasıl Çalışır?](https://dev.to/mudgen/how-diamond-upgrades-work-417j) - Nick Mudge
+- Naveen Sahu'dan [Solidity Sözleşmelerinin Yükseltilebilirliği İçin Vekil Modelleri: Şeffaf ve UUPS Vekilleri](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0)
+- Nick Mudge'dan [Elmas Yükseltmeleri Nasıl Çalışır](https://dev.to/mudgen/how-diamond-upgrades-work-417j)
