@@ -1,208 +1,208 @@
 ---
 title: Malipo ya Ethereum
-metaTitle: Malipo ya Ethereum
-description: Maelezo ya malipo juu ya Ethereum
+metaTitle: Malipo kwenye Ethereum
+description: Muhtasari wa malipo kwenye Ethereum
 lang: sw
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Nembo ya Eth kuonyeshwa pamoja na kupeana mikono.
+alt: Nembo ya Eth ikionyeshwa pamoja na mikono inayotoa.
 summaryPoints:
-  - "Ulimwengu ambamo pesa hutiririka kwa uhuru kama habari"
-  - "Wazi na wa kimataifa, kuwezesha shughuli bila mipaka kwa kila mtu"
-  - "Malipo kupokea ndani ya dakika"
+  - "Ulimwengu ambapo pesa inasonga kwa uhuru kama habari"
+  - "Wazi na wa kimataifa, unaowezesha miamala isiyo na mipaka kwa kila mtu"
+  - "Malipo yanapokelewa ndani ya dakika moja"
 ---
 
-Kila siku, mamilioni ya watu huona tatizo hilohilo: Kuhamisha pesa kutoka nchi moja hadi nyingine huchukua muda mrefu,
-ghali pesa nyingi, na mara nyingi huvunja moyo. Mfanyakazi wa kujitegemea huko Bali ngojea kwa siku nyingi ili wateja kutoka huko Mji Mpya mteja. Hii inawaathiri hasa watu katika maeneo yenye miundombinu duni ya benki, na kufanya iwe vigumu kushiriki katika uchumi wa dunia.
+Kila siku, mamilioni ya watu wanakabiliwa na changamoto ileile: kuhamisha pesa kuvuka mipaka ni polepole, ghali, na mara nyingi kunakatisha tamaa. Mfanyakazi huru huko Bali anasubiri siku kadhaa ili malipo yakamilike kutoka kwa mteja wake wa New York. Hili linaathiri hasa watu katika maeneo yenye miundombinu duni ya kibenki, na kufanya iwe vigumu kushiriki katika uchumi wa kimataifa.
 
-Hii si ndoto ya mbali—inafanyika leo kwenye Ethereum. Wakati taasisi za jadi za kifedha zimejenga mifumo imara ya malipo kwa miongo kadhaa, mara nyingi hubaki zikifungwa na mipaka, saa za kazi, na miundombinu ya kizamani. Ethereum inatoa mtindo mpya: jukwaa la kifedha la kimataifa, la saa 24/7 linalowezesha miamala ya papo hapo na inayoweza kuratibiwa kwa mtu yeyote aliye na intaneti.
+Hii si ndoto ya mbali—inafanyika leo kwenye Ethereum. Ingawa taasisi za kifedha za jadi zimejenga mifumo imara ya malipo kwa miongo kadhaa, mara nyingi zinabaki zimebanwa na mipaka, saa za kazi, na miundombinu ya kizamani. Ethereum inatoa mtazamo mpya: jukwaa la kifedha la kimataifa, linalofanya kazi saa 24/7 ambalo linawezesha miamala inayokaribia kuwa ya papo hapo, inayoweza kupangwa kwa mtu yeyote aliye na ufikiaji wa intaneti.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
-![Nembo ya Ethereum kwenye skrini ya kompyuta](./computer.png)
+![Ethereum logo on the computer screen](./computer.png)
+
 </div>
 
-## Uhamishaji pesa: uhamisho wa kimataifa wa bei nafuu {#remittances}
+## Utumaji pesa: uhamishaji wa kimataifa wa bei nafuu {#remittances}
 
-Kwa mamilioni ya watu wanaofanya kazi nje ya nchi, kutuma pesa nyumbani ni hitaji la mara kwa mara. Huduma za kawaida za utumaji pesa mara nyingi huambatana na ada za juu na muda mrefu wa kushughulikiwa. Ethereum inatoa mbadala unaovutia.
+Kwa mamilioni ya watu wanaofanya kazi nje ya nchi, kutuma pesa nyumbani ni hitaji la kawaida. Huduma za jadi za kutuma pesa mara nyingi huja na ada kubwa na nyakati za polepole za usindikaji. Ethereum inatoa mbadala wa kuvutia.
 
 <Grid>
-  <Card title="Ada Nafuu" emoji=":money_with_wings:" description="Huduma za kutuma pesa hutoza ada hadi $14 kwa wastani. Miamala ya Ethereum mara nyingi inaweza kukamilika kwa chini ya $0.01."/>
-  <Card title="Uhamisho wa Haraka" emoji="📶" description="Uhamisho wa kimataifa wa benki huchukua siku kadhaa kuchakatwa. Miamala ya Ethereum hukamilika kwa dakika chache." />
-  <Card title="Wazi kwa Yeyote" emoji="🌎" description="Unahitaji tu muunganisho wa intaneti na programu ya mkoba ili kutuma au kupokea Ether." />
+  <Card title="Ada Nafuu Zaidi" emoji=":money_with_wings:" description="Huduma za kutuma pesa hutoza ada ya hadi description="4 kwa wastani. Miamala ya Ethereum mara nyingi inaweza kukamilishwa kwa chini ya $0.01."/>
+  <Card title="Uhamisho wa Haraka Zaidi" emoji="📶" description="Uhamisho wa pesa wa kimataifa huchukua siku kadhaa kushughulikiwa. Miamala ya Ethereum hukamilishwa ndani ya dakika chache." />
+  <Card title="Wazi kwa yeyote" emoji="🌎" description="Unahitaji tu muunganisho wa intaneti na programu ya mkoba ili kutuma au kupokea Etha." />
 </Grid>
 
-## Upatikanaji wa sarafu za kimataifa {#access-to-global-currencies}
+## Ufikiaji wa sarafu za kimataifa {#access-to-global-currencies}
 
-Katika nchi nyingi, mfumuko wa bei ni tatizo kubwa, mara nyingi likifuatana na upatikanaji mdogo wa sarafu za kigeni. Watu walio katika hali hii wanatatizika kuhifadhi mali zao kwani wanalazimishwa kushikilia akiba inayopoteza thamani haraka.
+Katika nchi nyingi, mfumuko wa bei ni wasiwasi mkubwa, mara nyingi unaambatana na ufikiaji mdogo wa sarafu za kigeni. Watu katika hali hizi wanajitahidi kuhifadhi utajiri wao kwani wanalazimika kushikilia akiba inayoshuka thamani kwa kasi.
 
-Jumuiya ya Ethereum imeunda **mfumo mbadala imara wa kifedha** ambao hautegemei sera za fedha au udhibiti wa taifa lolote.
+Jumuiya ya Ethereum imeunda **mfumo mbadala imara wa kifedha** ambao unajitegemea na hauko chini ya sera za kifedha au udhibiti wa taifa lolote.
 
-Watumiaji wa Ethereum wanaweza kutumia **sarafu zilizowambwa na fedha halisi—tokeni ambazo kwa kawaida huunganishwa na sarafu imara kama Dola ya Marekani**. Kwa kupata na kuweka akiba katika sarafu za kidijitali za kripto, watu wanaweza kujikinga na mfumuko mkubwa wa bei katika nchi zao, hivyo kusaidia kuhifadhi au hata kukuza uwezo wao wa kununua. Hii pia huwezesha malipo rahisi kwa bidhaa na huduma, kote ndani na kimataifa.
+Watumiaji wa Ethereum wanaweza kutumia **sarafu dhabiti—sarafu ambazo kwa kawaida hufungamanishwa na sarafu zenye nguvu kama vile Dola ya Marekani**. Kwa kuchuma na kuweka akiba katika sarafu-fiche, watu wanaweza kujilinda dhidi ya mfumuko mkubwa wa bei katika nchi yao, kusaidia kuhifadhi au hata kukuza uwezo wao wa kununua. Hii pia inawezesha malipo rahisi kwa bidhaa na huduma, ndani na kimataifa.
 
 <ButtonLink href="/stablecoins">
-Zaidi juu ya sarafu imara
+  Zaidi kuhusu sarafu dhabiti
 </ButtonLink>
 
 ## Kununua bidhaa na malipo ya huduma {#buying-goods-and-payment-for-services}
 
-Biashara nyingi zinaanza kukubali ether (ETH) na sarafu nyingine za kidijitali kama malipo. Kwa mfano:
+Biashara nyingi zinaanza kukubali Etha (ETH) na sarafu-fiche nyingine kama malipo. Kwa mfano:
 
-- **Newegg:** Muuzaji maarufu wa bidhaa za elektroniki anakubali Ethereum kwa manunuzi katika nchi zilizochaguliwa.
-- **Travala.com:** Jukwaa hili la kuhifadhi nafasi za usafiri linaruhusu watumiaji kulipia hoteli na safari za ndege kwa kutumia Ethereum.
-- **Shopify:** Jukwaa hili maarufu la biashara ya mtandaoni ambalo hutumika kama jukwaa la kuendesha biashara, pia hukubali malipo ya bidhaa na huduma kwa kutumia Ethereum.
-- **Sotheby's:** Shirika hili hufanya biashara ya sanaa nzuri na za mapambo, vito, na vitu vya kukusanywa na huruhusu malipo kwa kutumia Ethereum na sarafu nyingine za kidigitali.
+- **Newegg:** Muuzaji maarufu wa vifaa vya kielektroniki anakubali Ethereum kwa ununuzi katika nchi zilizochaguliwa.
+- **Travala.com:** Jukwaa hili la kukata tiketi za usafiri linaruhusu watumiaji kulipia hoteli na ndege kwa kutumia Ethereum.
+- **Shopify:** Jukwaa hili maarufu la biashara ya mtandaoni ambalo hutumika kama jukwaa la kupangisha biashara pia linakubali malipo ya bidhaa na huduma kwa kutumia Ethereum.
+- **Sotheby's:** Shirika hili linafanya biashara ya sanaa nzuri na ya mapambo, vito, na vitu vya kukusanywa na linaruhusu malipo kwa kutumia Ethereum na sarafu-fiche nyingine.
 
-Nchi kama El Salvador na Jamhuri ya Afrika ya Kati zimepitisha sarafu za kidijitali za kripto kama malipo halali, ivyo kufungua njia ya kukubalika kwa upana zaidi kwa malipo ya Ethereum katika miamala ya kila siku.
+Nchi kama El Salvador na Jamhuri ya Afrika ya Kati hata zimepitisha sarafu-fiche kama fedha halali, na kufungua njia kwa ukubalifu mpana wa malipo ya Ethereum katika miamala ya kila siku.
 
-Katika nchi ambazo njia zao za malipo hazipo ulimwenguni kote, suluhisho za malipo zilizounganishwa na sarafu za kidijitali zimekuwa afueni kubwa. Malipo ya usajili kwa majukwaa kama Netflix, Spotify, na kozi za elimu sasa yamerahisishwa kupitia majukwaa ya malipo ya kidijitali kama Gnosis Pay na Paypal.
+Katika nchi ambazo njia zao za malipo zimetenganishwa na ulimwengu wote, suluhisho za malipo zilizojumuishwa na kripto zimekuwa faraja kubwa. Malipo ya usajili kwa majukwaa kama Netflix, Spotify, na kozi za elimu sasa yamerahisishwa kupitia majukwaa ya malipo ya kripto kama Gnosis Pay na PayPal.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Fungua akaunti yako ya Ethereum na programu ya mkoba wa kidijitali leo.</div>
-<ButtonLink href="/wallets/find-wallet">
-Anza sasa
-</ButtonLink>
+  <div>Fungua akaunti yako ya Ethereum ukitumia programu ya mkoba leo.</div>
+  <ButtonLink href="/wallets/find-wallet">
+    Anza
+  </ButtonLink>
 </AlertContent>
-
 </Alert>
 
-## Lipa kwa kutumia kadi za kripto za kujihifadhi {#pay-with-self-custodial-crypto-cards}
+## Lipa kwa kadi za kripto za uhifadhi binafsi {#pay-with-self-custodial-crypto-cards}
 
-Kadi za kripto za kujihifadhi hufanya kazi kama kutumia mkoba wako mwenyewe badala ya kufungia pesa zako kwenye kuba la mtu mwingine. Ukiwa na kadi ya kawaida, benki au mlinzi hushikilia fedha zako na kuziachilia unapotumia. Ukiwa na kadi za kujihifadhi, unabaki na udhibiti wa mali zako wakati wote—bila mtu wa kati—huku ukiwa bado unaweza kugusa au kutelezesha kidole ili kulipia kahawa, mboga, au hata safari ya ndege.
+Kadi za kripto za uhifadhi binafsi zinafanya kazi kama kutumia mkoba wako mwenyewe badala ya kufungia pesa zako katika hifadhi ya mtu mwingine. Ukiwa na kadi ya jadi, benki au mtunzaji anashikilia pesa zako na kuziachilia unapofanya matumizi. Ukiwa na kadi za uhifadhi binafsi, unadhibiti mali zako wakati wote—hakuna mtu wa kati—huku ukiweza kugusa au kupitisha kadi kulipia kahawa, bidhaa za nyumbani, au hata ndege.
 
-Kadi hizi huunganishwa moja kwa moja kwenye mikoba isiyo ya kihifadhi au akaunti za mkataba-erevu, na hivyo kuruhusu watumiaji kutumia ETH na stablecoins katika mazingira ya kila siku bila kuacha umiliki. Tofauti na kadi za kihifadhi, ambazo zinahitaji watumiaji kuweka fedha kwa mtu wa tatu, kadi za kujihifadhi huwezesha malipo ya ulimwengu halisi kama vile Visa na Mastercard huku zikihifadhi udhibiti wa onchain.
+Kadi hizi huunganishwa moja kwa moja na mikoba isiyo ya udhamini au akaunti za mkataba mahiri, kuruhusu watumiaji kutumia ETH na sarafu dhabiti katika mazingira ya kila siku bila kuachia umiliki. Tofauti na kadi za udhamini, ambazo zinahitaji watumiaji kuweka pesa kwa mtu wa tatu, kadi za uhifadhi binafsi zinawezesha malipo ya ulimwengu halisi kama vile Visa na Mastercard huku zikihifadhi udhibiti mnyororoni.
 
-### Mfano {#crypto-cards-examples}
+### Mifano {#crypto-cards-examples}
 
-- **Kadi ya MetaMask:** Ikiunganishwa na mkoba wa MetaMask, kadi hii ya malipo ya Mastercard inaruhusu watumiaji kutumia ETH, stablecoins na tokeni nyingine zinazotumika. Inatumika na Apple Pay na Google Pay, inajumuisha zawadi za kurejeshewa pesa kwa njia ya kripto, na inatoa chaguo za kupata faida.
+- **MetaMask Card:** Ikiunganishwa na mkoba wa MetaMask, kadi hii ya malipo ya Mastercard inaruhusu watumiaji kutumia ETH, sarafu dhabiti, na tokeni nyingine zinazotumika. Inasaidia Apple Pay na Google Pay, inajumuisha zawadi za kurudishiwa pesa za kripto, na inatoa chaguzi za kupata faida.
 
-- **Kadi ya Tuyo:** Kadi ya Visa inayotegemea mkataba-erevu ambayo hubadilisha kripto kiotomatiki kuwa USDC kwa matumizi popote pale Visa inapokubalika. Watumiaji hudumisha umiliki wa mali zao, wakiwa na ufikiaji wa vipengele vya faida, biashara, na matumizi.
+- **Tuyo Card:** Kadi ya Visa inayotegemea mkataba mahiri ambayo hubadilisha kripto kiotomatiki kuwa USDC kwa matumizi popote Visa inapokubaliwa. Watumiaji huhifadhi udhibiti wa mali zao, wakiwa na ufikiaji wa vipengele vya faida, biashara, na matumizi.
 
-- **Gnosis Pay:** Kadi ya kwanza ya Visa ya kujihifadhi iliyounganishwa na akaunti erevu ya Gnosis Safe. Watumiaji hutumia kripto moja kwa moja kutoka kwenye mkoba wao bila ada ya gesi, FX, au ada ya kutoa fedha. Ugeuzaji binafsi wa kadi kupitia Ethereum Name Service (ENS) pia unatumika.
+- **Gnosis Pay:** Kadi ya kwanza ya Visa ya uhifadhi binafsi iliyounganishwa na akaunti janja ya Gnosis Safe. Watumiaji wanatumia kripto moja kwa moja kutoka kwenye mkoba wao bila ada za gesi, ubadilishaji wa fedha za kigeni (FX), au ada za njia ya kutoka. Kubinafsisha kadi kupitia Huduma ya Jina la Ethereum (ENS) pia kunasaidiwa.
 
-- **Kadi ya Ether.Fi Cash:** Ikiunganishwa na itifaki ya kusimamisha ya ether.fi, kadi hii inaruhusu watumiaji kutumia pesa huku ETH yao ikiwa imesimamishwa. Malipo hushughulikiwa kupitia mikataba-erevu, huku umiliki binafsi ukidumishwa hata wakati wa matumizi.
+- **Ether.Fi Cash card:** Ikiunganishwa na itifaki ya uwekaji dhamana ya ether.fi, kadi hii inaruhusu watumiaji kufanya matumizi huku ETH yao ikibaki imewekwa dhamana. Malipo yanashughulikiwa kupitia mikataba mahiri, kudumisha uhifadhi binafsi hata wakati wa kufanya matumizi.
 
-### Ulinganisho wa kadi za kripto za kujihifadhi {#crypto-card-custody-comparison}
+### Ulinganisho wa kadi za kripto za uhifadhi binafsi {#crypto-card-custody-comparison}
 
-| **Kadi ya Kripto**            | **Ya kujihifadhi** | **Zisizokua chini ya ulinzi** | **Dondoo muhimu**                                                                         |
-| ----------------------------- | :----------------: | :---------------------------: | ----------------------------------------------------------------------------------------- |
-| Kadi ya MetaMask              |          ✅         |               ✅               | Mkoba unabaki kwenye MetaMask; kutoa fedha kiotomatiki wakati wa malipo                   |
-| Kadi ya Tuyo                  |          ✅         |               ✅               | Mkoba erevu hubadilisha kuwa USDC; mtumiaji anabaki na udhibiti                           |
-| Gnosis Pay                    |          ✅         |               ✅               | Imeunganishwa na Gnosis Safe ya mtumiaji; hakuna mabadiliko ya umiliki wakati wa matumizi |
-| Ether.Fi Cash |          ✅         |               ✅               | ETH inabaki imesimamishwa; mkataba-erevu unadhibiti ufikiaji wa matumizi. |
+| **Kadi ya kripto** | **Uhifadhi binafsi** | **Isiyo ya udhamini** | **Vidokezo muhimu**                                                |
+| --------------- | :----------------: | :---------------: | ------------------------------------------------------------ |
+| MetaMask Card   |         ✅         |        ✅         | Mkoba unabaki kwenye MetaMask; njia ya kutoka kiotomatiki wakati wa malipo           |
+| Tuyo Card       |         ✅         |        ✅         | Mkoba janja unabadilisha kuwa USDC; mtumiaji anabaki na udhibiti          |
+| Gnosis Pay      |         ✅         |        ✅         | Imeunganishwa na Gnosis Safe ya mtumiaji; hakuna mabadiliko ya udhamini wakati wa matumizi    |
+| Ether.Fi Cash   |         ✅         |        ✅         | ETH inabaki imewekwa dhamana; mkataba mahiri unadhibiti ufikiaji wa matumizi. |
 
-> **Kumbuka:** "Ya kujihifadhi" inarejelea mikoba inayodhibitiwa na mtumiaji ambapo mtumiaji ana ufikiaji kamili na udhibiti wa fedha zake.
-> "Isiyo ya kihifadhi" inarejelea mikoba ambapo fedha hudhibitiwa bila umiliki wa mtu wa tatu, mara nyingi kupitia mikataba-erevu.
-> Ingawa kadi zote za kujihifadhi ni zisizo za kihifadhi, si kadi zote zisizo za kihifadhi ambazo ni za kujihifadhi.
+> **Kumbuka:** "Uhifadhi binafsi" inarejelea mikoba inayodhibitiwa na mtumiaji ambapo mtumiaji ana ufikiaji kamili na udhibiti wa pesa zake.
+> "Isiyo ya udhamini" inarejelea mikoba ambapo pesa zinasimamiwa bila udhamini wa mtu wa tatu, mara nyingi kupitia mikataba mahiri.
+> Ingawa kadi zote za uhifadhi binafsi ni zisizo za udhamini, si kadi zote zisizo za udhamini ni za uhifadhi binafsi.
 
-## Malipo madogo kwa tovuti na maajenti (x402) {#x402}
+## Malipo madogo kwa tovuti na mawakala (x402) {#x402}
 
-[x402](https://www.x402.org/) ni kiwango huria cha malipo kinacholeta malipo ya asili kwa kila matumizi kwenye wavuti. Kwa kutumia [stablecoins](/stablecoins/) kwenye [mitandao ya layer 2 ya Ethereum](/layer-2/) ya gharama nafuu, kiwango cha x402 hufanya iwe nafuu kwa wanadamu na mashine kulipa moja kwa moja kwa kitendo kimoja, kama vile kusoma makala ya habari au kuita API, badala ya kudhibiti funguo za API, usajili, au "kulipa" kwa kutoa umakini kwa matangazo.
+[x402](https://www.x402.org/) ni kiwango wazi cha malipo kinacholeta malipo ya asili kwa kila matumizi kwenye wavuti. Kwa kutumia [sarafu dhabiti](/stablecoins/) kwenye [mitandao ya tabaka la 2 (l2) ya Ethereum](/layer-2/) ya gharama nafuu, kiwango cha x402 kinafanya iwe nafuu kwa binadamu na mashine kulipa moja kwa moja kwa kitendo kimoja, kama vile kusoma makala ya habari au kuita API, badala ya kusimamia funguo za API, usajili, au "kulipa" kwa kutoa umakini kwenye matangazo.
 
-- **Kuondoa vizuizi vya malipo na kuingia:** Badala ya kufungua akaunti na kushiriki taarifa za kibinafsi ili kusoma makala moja ya habari, mkoba wako unaweza kulipa senti chache zinazohitajika ili kuifungua.
-- **Malipo kwa maajenti wa AI:** x402 huwezesha programu zinazojiendesha ("Maajenti wa AI") kulipia data na miito ya API wanayohitaji ili kufanya kazi, bila kuingiliwa na binadamu.
+- **Kuondoa vizuizi vya malipo na kuingia:** Badala ya kufungua akaunti na kushiriki maelezo ya kibinafsi ili kusoma makala moja ya habari, mkoba wako unaweza kulipa senti chache zinazohitajika kuifungua.
+- **Malipo kwa mawakala wa AI:** x402 inawezesha programu zinazojitegemea ("Mawakala wa AI") kulipia data na miito ya API wanayohitaji ili kufanya kazi, bila uingiliaji wa binadamu.
 
 ### Jinsi kiwango cha malipo cha x402 kinavyofanya kazi {#x402-how}
 
-Mteja anapoomba rasilimali, seva hutuma msimbo wa hitilafu wa `402 Payment Required` pamoja na maelekezo ya malipo (bei, akaunti, na ni tokeni na minyororo gani inayotumika).
+Mteja anapoomba rasilimali, seva hutuma msimbo wa hitilafu wa `402 Payment Required` pamoja na maagizo ya malipo (bei, akaunti, na ni tokeni na minyororo gani inatumika).
 
-- [Mkoba](/wallets/) wako hugundua ombi na kushughulikia malipo (mara nyingi kwa kubofya mara moja ili kuidhinisha, au kiotomatiki kwa kutumia posho iliyoidhinishwa awali)
-- [Maajenti wa AI](/ai-agents/) wenye ufikiaji wa salio la mkoba lililoidhinishwa awali wanaweza kugundua bei kiotomatiki na kulipa papo hapo ili kupata data au huduma
-- Mteja anahitaji kuwa na mojawapo ya stablecoins zinazotumika kwenye mkoba wake, lakini hahitaji kuwa na ETH yoyote kwa [gharama za gesi](/gas/)
+- [Mkoba](/wallets/) wako unatambua ombi na kushughulikia malipo (mara nyingi kwa kubofya mara moja ili kuidhinisha, au kiotomatiki kwa kutumia kibali kilichoidhinishwa mapema)
+- [Mawakala wa AI](/ai-agents/) walio na ufikiaji wa salio la mkoba lililoidhinishwa mapema wanaweza kutambua bei kiotomatiki na kulipa papo hapo ili kufikia data au huduma
+- Mteja anahitaji kuwa na mojawapo ya sarafu dhabiti zinazotumika kwenye mkoba wake, lakini hahitaji kuwa na ETH yoyote kwa ajili ya [gharama za gesi](/gas/)
 
-Hii inafungua uchumi mpya wa "mashine kwa mashine" ambapo maajenti wa AI wanaweza kununua rasilimali wao wenyewe, na ambapo huduma za API zinaweza kupatikana kwa ufanisi zaidi.
+Hii inafungua uchumi mpya wa "mashine kwa mashine" ambapo mawakala wa AI wanaweza kununua rasilimali peke yao, na ambapo huduma za API zinaweza kufikiwa kwa ufanisi zaidi.
 
-Ujumbe uliotiwa saini kisha huwasilishwa kwa seva. Seva kwa kawaida hutumia [msaidizi wa x402](https://x402.gitbook.io/x402/core-concepts/facilitator) kushughulikia ugumu wa mnyororo wa bloku (kutuma muamala, kupata malipo, kuwezesha ada za gesi, n.k.), ambayo inamaanisha kuwa wasanidi programu wanaweza kukubali kwa urahisi malipo madogo ya kripto bila kudhibiti miundombinu ya malipo.
+Ujumbe uliotiwa saini kisha unawasilishwa kwa seva. Seva kwa kawaida hutumia [mwezeshaji wa x402](https://x402.gitbook.io/x402/core-concepts/facilitator) kushughulikia ugumu wa mnyororo wa vitalu (kutuma muamala, kupata malipo, kuwezesha ada za gesi, n.k.), ambayo inamaanisha kuwa wasanidi programu wanaweza kukubali kwa urahisi malipo madogo ya kripto bila kusimamia miundombinu ya malipo.
 
 ## Malipo ya mshahara {#salary-payments}
 
-Kampuni nyingi zinazofikiria mbele sasa zinawapa wafanyakazi fursa ya kupokea mishahara yao, au sehemu yake, katika sarafu za kidijitali kama ether (ETH):
+Kampuni nyingi zenye mtazamo wa mbele sasa zinawapa wafanyakazi chaguo la kupokea mishahara yao, au sehemu yake, katika sarafu-fiche kama Etha (ETH):
 
-- **Gipsybee:** ni shirika linalohusika na vifaa vya elektroniki, roboti, uundaji wa michezo, na huduma nyinginezo. Huwapa wafanyakazi wao uchaguzi wa kuweza kulipwa kwa Ethereum.
-- **SC5:** Kampuni hii ya Kifini ilikuwa moja ya kampuni za kwanza kutoa mishahara kwa Bitcoin, ikifungua njia kwa mipangilio kama kulipwa kwa Ethereum.
-- **Kampuni changa za Blockchain:** Kampuni nyingi katika uwanja wa blockchain kwa kawaida hutoa fursa za mshahara kwa sarafu za kidijitali za kripto kwa wafanyakazi wao.
-- **DAOs:** Kutokana na umbile la kipekee na utofauti wa wachangiaji wa DAO, michango na mishahara mingi hutolewa kama malipo kwa kutumia sarafu za kidijitali za kripto.
+- **Gipsybee:** ni shirika linalojishughulisha na vifaa vya kielektroniki, robotiki, uundaji wa michezo na huduma nyingine. Wanawapa wafanyakazi chaguo la kulipwa kwa Ethereum.
+- **SC5:** Kampuni hii ya Kifini ilikuwa mojawapo ya za kwanza kutoa mishahara kwa Bitcoin, na kufungua njia kwa mipango sawa na Ethereum.
+- **Kampuni zinazoanza za mnyororo wa vitalu:** Kampuni nyingi katika nafasi ya mnyororo wa vitalu kwa asili hutoa chaguzi za mshahara wa sarafu-fiche kwa wafanyakazi wao.
+- **DAOs:** Kutokana na upekee na utofauti wa wachangiaji kwenye DAOs, michango na mishahara mingi hutuzwa kwa sarafu-fiche.
 
-Mwenendo huu unawavutia hasa wafanyakazi wa mbali na wahamaji wa kidijitali ambao wanaweza kufaidika na malipo yasiyo na mipaka na viwango vya kubadilisha fedha vinavyoweza kuwa na manufaa.
+Mwenendo huu unawavutia hasa wafanyakazi wa masafa na wahamaji wa kidijitali ambao wanaweza kufaidika na malipo yasiyo na mipaka na viwango vya kubadilisha fedha vinavyoweza kuwa vyema.
 
-## Juhudi za Misaada ya Kimataifa {#global-relief-efforts}
+## Juhudi za misaada za kimataifa {#global-relief-efforts}
 
-Mnamo Februari 2023, wakati matetemeko ya ardhi yaliyokuwa maharibifu yalipotokea nchini Uturuki na Syria, jumuiya ya kidijitali ya kimataifa ilichukua hatua. Kampeni mbalimbali zilianzishwa kukusanya fedha kwa ajili ya juhudi za misaada, ikionyesha uwezo wa Ethereum wakati wa majanga. Hata ingawa sarafu za kidijitali [hazitambuliwi kama njia halali](https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/) ya malipo nchini Uturuki, mamlaka [zilitoa ruhusa](https://x.com/haluklevent/status/1622913175409623041) kwa mashirika machache kukusanya michango. Baadhi ya mifano ikiwa:
+Mnamo Februari 2023, matetemeko makubwa ya ardhi yalipoikumba Uturuki na Syria, jumuiya ya kimataifa ya kripto ilichukua hatua. Kampeni mbalimbali zilianzishwa ili kukusanya fedha kwa ajili ya juhudi za misaada, zikionyesha nguvu ya Ethereum wakati wa majanga. Licha ya kripto [kutokuwa njia inayotambulika](https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/) ya malipo nchini Uturuki, mamlaka zilifanya [isipokuwa](https://x.com/haluklevent/status/1622913175409623041) kwa baadhi ya mashirika kukusanya michango. Baadhi ya mifano ni:
 
-- [Refik Anadol](https://x.com/refikanadol/status/1622623521104089090): ni msanii maarufu wa kidijitali ambaye alianzisha kampeni ya kukusanya fedha.
-- Nguvu ya DAO: [Anka Relief DAO](https://ankarelief.org/) na [Bankless DAO](https://x.com/banklessDAO) ziliungana na [Giveth](https://x.com/Giveth/status/1623493672149843969) kukusanya fedha.
-- [Pak](https://cause.quest/), msanii maarufu wa mali za Kidijitali za kripto zisizoweza kubadilishwa kama picha, pia alichangia katika mradi huu.
-- Hata mwanzilishi mwenza wa Ethereum, [Vitalik Buterin](https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria)alitoa michango binafsi kwa kampeni nyingi.
+- [Refik Anadol](https://x.com/refikanadol/status/1622623521104089090): ni msanii maarufu wa kidijitali aliyeanzisha kampeni ya kuchangisha fedha.
+- Nguvu ya DAO: [Anka Relief DAO](https://ankarelief.org/) na [Bankless DAO](https://x.com/banklessDAO) ziliungana na [Giveth](https://x.com/Giveth/status/1623493672149843969) ili kuchangisha fedha.
+- [Pak](https://cause.quest/), msanii mashuhuri wa NFT, pia alichangia katika jambo hilo.
+- Hata mwanzilishi mwenza wa Ethereum [Vitalik Buterin](https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria) alitoa michango ya kibinafsi kwa kampeni nyingi.
 
-Matokeo ya haya? Zaidi ya dola milioni 6 zilikusanywa ndani ya siku chache, kama ilivyofuatiliwa na dashibodi ya [Dune](https://dune.com/davy42/turkiye-earthquake-donations) Dashibodi ya uchanganuzi.
+Matokeo ya hili? Zaidi ya dola milioni 6 zilichangishwa ndani ya siku chache, kama ilivyofuatiliwa na dashibodi ya [Dune Analytics](https://dune.com/davy42/turkiye-earthquake-donations).
 
-Pia kulikuwa na muda sawa wa kujibu kwa majanga yaliyotokea nchini India na Ukraine. Mwitikio huu wa haraka unaangazia faida muhimu ya malipo ya Ethereum, ambayo ni uwezo wa kukusanya haraka msaada wa kimataifa bila vikwazo vya kubadilisha sarafu, uhamisho mrefu wa benki, au ada kubwa mno.
+Pia kulikuwa na nyakati sawa za mwitikio kwa majanga yaliyotokea India na Ukraine. Mwitikio huu wa haraka unaangazia faida muhimu ya malipo ya Ethereum, ambayo ni uwezo wa kuhamasisha haraka msaada wa kimataifa bila vikwazo vya ubadilishaji wa sarafu, uhamishaji mrefu wa benki, au ada kubwa mno.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
-![Picha ya roboti ya Ethereum](./eth_robot.png)
+![Ethereum Robot Image](./eth_robot.png)
+
 </div>
 
-## Ethereum zidi ya fedha za kawaida {#ethereum-vs-fiat}
+## Malipo ya kripto kwenye Ethereum dhidi ya malipo ya fiat {#ethereum-vs-fiat}
 
-Ili kuthamini kikamilifu athari za malipo ya Ethereum, inafaa kulinganisha na sarafu za fedha za kawaida:
+Ili kuthamini kikweli athari za malipo ya Ethereum, inafaa kuyalinganisha na sarafu za jadi za fiat:
 
-|                                | **Ethereum**               | **Bank za jadi**                                            |
-| ------------------------------ | -------------------------- | ----------------------------------------------------------- |
-| **Kasi**                       | Sekunde hadi dakika        | Masaa hadi siku                                             |
-| **Kufikia Ulimwengu**          | Isiyo na mipaka, 24/7      | Kukabiliwa na vikwazo vya benki za kimataifa na saa za kazi |
-| **Uwazi**                      | Uwazi kamili               | Hutofautiana kulinagana na taasisi                          |
-| **Uratibu**                    | Inaruhusu mikataba mahiri  | Huishia tu kwenye miamala ya kawaida                        |
-| **Udhibiti wa Mfumuko wa Bei** | Utoaji unaotabirika        | Kukabiliwa na sera za benki kuu                             |
-| **Ufikiaji**                   | Mtu yeyote mwenye intaneti | Kukabiliwa na vikwazo vya kitaifa na kimataifa              |
+|                       | **Ethereum**            | **Benki za jadi**                                        |
+| --------------------- | ----------------------- | ------------------------------------------------------------ |
+| **Kasi**             | Sekunde hadi dakika      | Saa hadi siku                                                |
+| **Ufikiaji wa Kimataifa**      | Bila mipaka, 24/7        | Inategemea vikwazo vya benki za kimataifa na saa za kazi |
+| **Uwazi**      | Wazi kabisa       | Inatofautiana kulingana na taasisi                                        |
+| **Uwezo wa kupangwa**   | Mikataba mahiri imewezeshwa | Imepunguzwa kwa miamala ya msingi                                |
+| **Udhibiti wa Mfumuko wa Bei** | Utoaji unaotabirika    | Inategemea sera za benki kuu                             |
+| **Ufikiaji**     | Mtu yeyote aliye na intaneti    | Inategemea vikwazo vya kitaifa na kimataifa           |
 
-Kwa msingi wake, Ethereum ni jukwaa lililo gatuliwa ambalo huruhusu miamala salama, ya haraka, na ya uwazi. Hata hivyo, kuna mambo mengi yanayoifanya itofautiane na njia za malipo ya jadi. Hebu tuzame kidogo katika faida zinazofanya malipo ya Ethereum kuwa mabadiliko makubwa:
+Kimsingi, Ethereum ni jukwaa lililogatuliwa ambalo linaruhusu miamala salama, ya haraka, na ya wazi. Hata hivyo, vipengele vingi vinaiweka tofauti na njia za jadi za malipo. Hebu tuchunguze kwa kina faida zinazofanya malipo ya Ethereum kuwa mabadiliko makubwa:
 
-### Uratibu {#programmability}
+### Uwezo wa kupangwa {#programmability}
 
-Moja ya sifa za kipekee za Ethereum ni uwezo wake wa kusaidia mikataba mahiri. Mikataba mahiri ni mikataba inayojitekeleza yenyewe ikiwa na masharti yaliyoandikwa moja kwa moja kwenye msimbo. Hii inafungua ulimwengu wa uwezekano wa malipo yanayotekelezwa kiotomatiki, kulingana na masharti ambayo yanaweza kuboresha sana miamala kama:
+Moja ya vipengele vya kipekee vya Ethereum ni uwezo wake wa kusaidia mikataba mahiri. Mikataba mahiri ni makubaliano yanayojitekeleza yenyewe huku masharti yakiwa yameandikwa moja kwa moja kwenye msimbo. Hii inafungua ulimwengu wa uwezekano wa malipo ya kiotomatiki, yanayotegemea masharti ambayo yanaweza kuboresha sana miamala kama vile:
 
-- Huduma za amana
+- Huduma za Escrow
 - Malipo ya mara kwa mara
-- Malipo yanayotegemea utendaji
+- Fidia inayotegemea utendaji
 
 ### Kasi {#speed}
 
-Unakumbuka mara ya mwisho uliposubiri siku kadhaa kwa uhamisho wa benki ya kimataifa kuingia? Mstari mrefu? Na fomu nyingi ulizohitaji kujaza? Kwa Ethereum, siku hizo zimepita zamani. Miamala kwenye mtandao wa Ethereum hukamilika ndani ya dakika chache, bila kujali mahali ambapo mtumaji na mpokeaji wanapatikana. Kwa sababu Ethereum haihitaji idhini, hakuna urasimu wa kisheria wakati wa kutuma fedha. Kasi hii ni muhimu sana katika hali zinazohitaji haraka, kama vile juhudi za misaada ya dharura.
+Je, unakumbuka mara ya mwisho uliposubiri siku kadhaa ili uhamishaji wa benki wa kimataifa ukamilike? Foleni ndefu? Na fomu nyingi ulizolazimika kujaza? Ukiwa na Ethereum, siku hizo zimepita. Miamala kwenye mtandao wa Ethereum inakamilika kwa dakika, bila kujali mtumaji na mpokeaji wako wapi. Kwa sababu Ethereum ni bila ruhusa, hakuna urasimu wa udhibiti wakati wa kutuma pesa. Kasi hii ni muhimu sana katika hali zinazohitaji muda, kama vile juhudi za misaada ya dharura.
 
-### Ada ndogo {#lower-fees}
+### Ada za chini {#lower-fees}
 
-Ada za uhamisho wa fedha za kimataifa wa jadi wakati mwingine hupunguza kiasi kikubwa cha pesa inayotumwa, hasa unaposhughulika na miamala ya mamia ya dola. Miamala ya Ethereum, japokuwa sio bure, lakini huja na ada kidogo. Hii inamaanisha kuwa fedha zako nyingi zinafika mahali unapotaka, badala ya kuingia mifukoni mwa walanguzi.
+Ada za jadi za uhamishaji pesa wa kimataifa wakati mwingine humeza sehemu kubwa ya kiasi kilichotumwa, hasa unaposhughulika na miamala ya mamia ya dola. Miamala ya Ethereum, ingawa si ya bure, mara nyingi huja na ada za chini. Hii inamaanisha pesa zako nyingi zinaenda pale unapokusudia, badala ya kujaza mifuko ya watu wa kati.
 
 ### Uwazi {#transparency}
 
-Kila muamala kwenye kiambajengo cha Ethereum hurekodiwa kwenye daftari la umma. Hii inamaanisha kuwa mtu yeyote anaweza kuthibitisha mienendo ya fedha, na kuifanya zanaa nzuri kwa ajili ya:
+Kila muamala kwenye mnyororo wa vitalu wa Ethereum unarekodiwa kwenye leja ya umma. Hii inamaanisha mtu yeyote anaweza kuthibitisha mwendo wa pesa, na kuifanya kuwa zana bora kwa:
 
-- Mashirika ya hisani kuonyesha jinsi michango inavyotumika
-- Biashara kuthibitisha malipo kwa wauzaji au wafanyakazi
+- Mashirika ya misaada kuonyesha jinsi michango inavyotumika
+- Biashara kuthibitisha malipo kwa wasambazaji au wafanyakazi
 - Watu binafsi kufuatilia shughuli zao za kifedha
 
-Kwa Ethereum, kila mtu anaweza kuona jinsi pesa zinavyosonga na jinsi gharama zinavyotekelezwa, tofauti na mashirika ya kawaida ambapo mengi ya haya hubaki bila kujulikana.
+Ukiwa na Ethereum, kila mtu anaweza kuona jinsi pesa inavyosonga na jinsi gharama zinavyotekelezwa, tofauti na mashirika ya jadi ambapo mengi ya haya hubaki hayajulikani.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
-![picha ya mtu anayotembea](./walking.png)
+![walking image](./walking.png)
+
 </div>
 
-Wakati sarafu za fedha za kawaida zina faida ya kukubalika kote na utulivu, Ethereum inatoa manufaa ya kipekee ambayo yanaifanya kuwa chaguo la kuvutia kwa aina fulani za miamala.
+Ingawa sarafu za fiat zina faida ya kukubalika kote na utulivu, Ethereum inatoa faida za kipekee zinazoifanya kuwa chaguo la kuvutia kwa aina fulani za miamala.
 
-Kuanzia kuwezesha misaada ya haraka ya majanga hadi kuwawezesha wafanyakazi wa kimataifa, malipo ya Ethereum yanaandika sura mpya katika historia ndefu ya fedha. Ingawa bado kuna changamoto, faida za kipekee zinazotolewa na teknolojia hii zinaifanya kuwa chaguo la kuvutia kwa matumizi mbalimbali.
+Kuanzia kuwezesha misaada ya haraka ya majanga hadi kuwawezesha wafanyakazi wa kimataifa, malipo ya Ethereum yanaandika sura mpya katika historia ndefu ya pesa. Ingawa changamoto zimesalia, faida za kipekee zinazotolewa na teknolojia hii zinaifanya kuwa chaguo la kuvutia kwa anuwai ya matumizi.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Ni wakati wa kufungua akaunti yako ya Ethereum.</div>
+  <div>Wakati wa kupata akaunti yako ya Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
-    Anza sasa!
+    Anza!
   </ButtonLink>
 </AlertContent>
-
 </Alert>

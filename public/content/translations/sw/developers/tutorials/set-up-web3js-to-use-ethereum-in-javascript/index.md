@@ -1,10 +1,10 @@
 ---
-title: Sanidi web3.js ili kutumia mnyororo wa bloku wa Ethereum katika JavaScript
-description: Jifunze jinsi ya kuweka na kusanidi maktaba ya web3.js ili kuingiliana na mnyororo wa bloku wa Ethereum kutoka kwa programu za JavaScript.
+title: Sanidi Web3.js ili kutumia mnyororo wa vitalu wa Ethereum katika JavaScript
+description: Jifunze jinsi ya kusanidi na kuweka maktaba ya Web3.js ili kuingiliana na mnyororo wa vitalu wa Ethereum kutoka kwenye programu za JavaScript.
 author: "jdourlens"
-tags: [ "web3.js", "javascript" ]
+tags: ["web3.js", "javascript"]
 skill: beginner
-breadcrumb: "Sanidi web3.js"
+breadcrumb: usanidi wa web3.js
 lang: sw
 published: 2020-04-11
 source: EthereumDev
@@ -12,39 +12,39 @@ sourceUrl: https://ethereumdev.io/setup-web3js-to-use-the-ethereum-blockchain-in
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Katika somo hili, tutaona jinsi ya kuanza na [web3.js](https://web3js.readthedocs.io/) ili kuingiliana na mnyororo wa bloku wa Ethereum. Web3.js inaweza kutumika katika sehemu zote mbili za mbele na za nyuma ili kusoma data kutoka kwenye mnyororo wa bloku au kufanya miamala na hata kupeleka mikataba-erevu.
+Katika mafunzo haya, tutaona jinsi ya kuanza na [Web3.js](https://web3js.readthedocs.io/) ili kuingiliana na mnyororo wa vitalu wa Ethereum. Web3.js inaweza kutumika katika mazingira ya mbele (frontends) na ya nyuma (backends) kusoma data kutoka kwenye mnyororo wa vitalu au kufanya miamala na hata kusambaza mikataba mahiri.
 
-Hatua ya kwanza ni kujumuisha web3.js katika mradi wako. Ili kuitumia kwenye ukurasa wa wavuti, unaweza kuagiza maktaba moja kwa moja kwa kutumia CDN kama JSDeliver.
+Hatua ya kwanza ni kujumuisha Web3.js katika mradi wako. Ili kuitumia katika ukurasa wa wavuti, unaweza kuingiza maktaba moja kwa moja ukitumia CDN kama JSDeliver.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 ```
 
-Ukipenda kusakinisha maktaba ili kuitumia katika sehemu ya nyuma au mradi wa mbele unaotumia muundo unaweza kuisakinisha kwa kutumia npm:
+Ikiwa unapendelea kusakinisha maktaba ili kuitumia katika mazingira yako ya nyuma au mradi wa mazingira ya mbele unaotumia muundo (build), unaweza kuisakinisha ukitumia npm:
 
 ```bash
 npm install web3 --save
 ```
 
-Kisha ili kuagiza Web3.js katika hati ya Node.js au mradi wa mbele wa Browserify, unaweza kutumia mstari ufuatao wa JavaScript:
+Kisha ili kuingiza Web3.js kwenye hati ya Node.js au mradi wa mazingira ya mbele wa Browserify, unaweza kutumia mstari ufuatao wa JavaScript:
 
 ```js
 const Web3 = require("web3")
 ```
 
-Sasa kwa kuwa tumejumuisha maktaba katika mradi tunahitaji kuianzisha. Mradi wako unahitaji kuwa na uwezo wa kuwasiliana na mnyororo wa bloku. Maktaba nyingi za Ethereum huwasiliana na [nodi](/developers/docs/nodes-and-clients/) kupitia simu za RPC. Ili kuanzisha mtoa huduma wetu wa Web3, tutaanzisha mfano wa Web3 kwa kupitisha URL ya mtoa huduma kama kiunda. Ikiwa una nodi au [mfano wa ganache unaoendeshwa kwenye kompyuta yako](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/) itaonekana kama hivi:
+Sasa kwa kuwa tumejumuisha maktaba katika mradi tunahitaji kuianzisha. Mradi wako unahitaji kuweza kuwasiliana na mnyororo wa vitalu. Maktaba nyingi za Ethereum huwasiliana na [nodi](/developers/docs/nodes-and-clients/) kupitia miito ya RPC. Ili kuanzisha mtoa huduma wetu wa Web3, tutaunda mfano wa Web3 kwa kupitisha URL ya mtoa huduma kama konstrukta. Ikiwa una nodi au [mfano wa ganache unaoendeshwa kwenye kompyuta yako](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/) itaonekana hivi:
 
 ```js
 const web3 = new Web3("http://localhost:8545")
 ```
 
-Ikiwa ungependa kufikia moja kwa moja nodi iliyohifadhiwa unaweza kupata chaguo kwenye [nodi kama huduma](/developers/docs/nodes-and-clients/nodes-as-a-service).
+Ikiwa ungependa kufikia moja kwa moja nodi iliyopangishwa unaweza kupata chaguo kwenye [nodi kama huduma](/developers/docs/nodes-and-clients/nodes-as-a-service).
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
 ```
 
-Ili kujaribu kwamba tumesanidi mfano wetu wa Web3 ipasavyo, tutajaribu kupata nambari ya bloku ya hivi karibuni kwa kutumia utendaji wa `getBlockNumber`. Utendaji huu unakubali simu ya kurudi kama kigezo na hurudisha nambari ya bloku kama nambari kamili.
+Ili kujaribu kwamba tumesanidi kwa usahihi mfano wetu wa Web3, tutajaribu kupata nambari ya kitalu cha hivi karibuni kwa kutumia kipengele cha `getBlockNumber`. Kipengele hiki kinakubali mwito wa kurudi (callback) kama kigezo na kurejesha nambari ya kitalu kama nambari kamili (integer).
 
 ```js
 var Web3 = require("web3")
@@ -55,7 +55,7 @@ web3.eth.getBlockNumber(function (error, result) {
 })
 ```
 
-Ukiendesha programu hii, itachapisha tu nambari ya bloku ya hivi karibuni: juu ya mnyororo wa bloku. Unaweza pia kutumia miito ya utendaji ya `await/async` ili kuepuka miito ya kurudi iliyopachikwa katika msimbo wako:
+Ikiwa utaendesha programu hii, itachapisha tu nambari ya kitalu cha hivi karibuni: juu ya mnyororo wa vitalu. Unaweza pia kutumia miito ya kipengele cha `await/async` ili kuepuka kuweka miito ya kurudi ndani ya msimbo wako:
 
 ```js
 async function getBlockNumber() {
@@ -67,27 +67,27 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-Unaweza kuona utendaji wote unaopatikana kwenye mfano wa Web3 katika [nyaraka rasmi za web3.js](https://docs.web3js.org/).
+Unaweza kuona vipengele vyote vinavyopatikana kwenye mfano wa Web3 katika [nyaraka rasmi za Web3.js](https://docs.web3js.org/).
 
-Maktaba nyingi za Web3 hazifanani kwa sababu chinichini maktaba hupiga simu za JSON-RPC kwa nodi ambayo hurudisha matokeo.
+Maktaba nyingi za Web3 hazilandani (asynchronous) kwa sababu katika mandharinyuma maktaba hufanya miito ya JSON-RPC kwenye nodi ambayo hutuma majibu.
 
 <Divider />
 
-Ikiwa unafanya kazi kwenye kivinjari, baadhi ya pochi huweka mfano wa Web3 moja kwa moja na unapaswa kujaribu kuitumia kila inapowezekana hasa ikiwa unapanga kuingiliana na anwani ya Ethereum ya mtumiaji ili kufanya miamala.
+Ikiwa unafanya kazi kwenye kivinjari, baadhi ya mikoba huingiza moja kwa moja mfano wa Web3 na unapaswa kujaribu kuitumia wakati wowote inapowezekana hasa ikiwa unapanga kuingiliana na anwani ya Ethereum ya mtumiaji ili kufanya miamala.
 
-Hii hapa ni sehemu fupi ya kugundua ikiwa pochi ya MetaMask inapatikana na kujaribu kuiwasha ikiwa ipo. Baadaye itakuruhusu kusoma salio la mtumiaji na kuwawezesha kuhalalisha miamala ambayo ungependa wafanye kwenye mnyororo wa bloku wa Ethereum:
+Hiki ni kijisehemu cha kugundua ikiwa mkoba wa MetaMask unapatikana na kujaribu kuuwezesha ikiwa upo. Baadaye itakuruhusu kusoma salio la mtumiaji na kuwawezesha kuthibitisha miamala ambayo ungependa wafanye kwenye mnyororo wa vitalu wa Ethereum:
 
 ```js
 if (window.ethereum != null) {
   state.web3 = new Web3(window.ethereum)
   try {
-    // Omba ufikiaji wa akaunti ikiwa inahitajika
+    // Omba ufikivu wa akaunti ikiwa inahitajika
     await window.ethereum.enable()
-    // Akaunti sasa zimefichuliwa
+    // Akaunti sasa zinaonekana
   } catch (error) {
-    // Mtumiaji amekataa ufikiaji wa akaunti...
+    // Mtumiaji amekataa ufikivu wa akaunti...
   }
 }
 ```
 
-Njia mbadala za web3.js kama [Ethers.js](https://docs.ethers.io/) zipo na pia hutumiwa kwa kawaida. Katika somo linalofuata tutaona [jinsi ya kusikiliza kwa urahisi bloku mpya zinazoingia kwenye mnyororo wa bloku na kuona yaliyomo ndani yake](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).
+Njia mbadala za Web3.js kama [Ethers.js](https://docs.ethers.io/) zipo na pia hutumiwa sana. Katika mafunzo yajayo tutaona [jinsi ya kusikiliza kwa urahisi vitalu vipya vinavyoingia kwenye mnyororo wa vitalu na kuona kile kilichomo](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).
