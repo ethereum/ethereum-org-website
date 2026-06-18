@@ -1,52 +1,53 @@
 ---
-title: "Mercados de previsão"
+title: Mercados de previsão
 lang: pt-br
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoints:
   - "Receba incentivos financeiros para gerar previsões precisas"
-  - "Previsões de alta qualidade sobre eventos que virão"
-buttons:
+  - "Previsões de alta qualidade sobre eventos futuros"
+buttons: 
   - content: Saiba mais
-    toId: "como funciona o mercado das previsões"
-  - content: Explorar Aplicativos
-    toId: "encontre um mercado de previsões"
+    toId: how-prediction-markets-work
+  - content: Explorar aplicativos
+    toId: find-a-prediction-market
     isSecondary: false
 ---
 
-Mercados de previsão combinam o conhecimento da comunidade e incentivos financeiros para antecipar acontecimentos futuros. Eles oferecem dados diversos e de alta qualidade, e ganharam notoriedade durante as eleições dos EUA de 2024. eleições.
+Os mercados de previsão usam a sabedoria das multidões e incentivos financeiros para prever eventos. Eles oferecem dados diversos e de alta qualidade e ganharam força durante as eleições dos EUA em 2024.
 
-## Como prever como o mercado funciona {#how-prediction-markets-work}
+## Como funcionam os mercados de previsão {#how-prediction-markets-work}
 
-Diferente dos métodos tradicionais de previsão, que dependem de opiniões de especialistas, amostras limitadas de pesquisas ou dados históricos, os mercados de previsão utilizam **incentivos financeiros em tempo real** e o **conhecimento da comunidade** para gerar insights sobre eventos específicos — eleições, preços de criptomoedas, resultados esportivos — qualquer coisa
+Ao contrário dos métodos tradicionais de previsão que dependem de opiniões de especialistas, amostras limitadas de pesquisas ou dados históricos, os mercados de previsão aproveitam **incentivos financeiros em tempo real** e a **sabedoria das multidões** para gerar insights relacionados a um evento específico — eleições, preços de cripto, resultados esportivos — qualquer coisa. 
 
-Isso permite que qualquer pessoa demonstre a apoio a um resultou por meio de um compromisso financeiro.
-Ao permitir apostas em eventos do mundo real e ajustar os preços conforme novas informações surgem, opiniões bem fundamentadas são mais valorizadas e a precisão pode ser recompensada.
+Isso permite que qualquer pessoa sinalize apoio a um resultado específico com um compromisso financeiro.
+ 
+Ao permitir apostas em eventos do mundo real e ajustar os preços à medida que novas informações surgem, opiniões informadas são mais valorizadas e a precisão pode ser recompensada. 
 
-Em  teoria, dado que os apostadores podem ser beneficiados por acertar, os mercados de projeções podem prever resultados com grande precisão.  Os mercados de previsão baseados em blockchain são ainda mais empolgantes, pois virtualmente qualquer pessoa pode participar das previsões e ganhar recompensas em stablecoins ou criptomoedas.
+Em teoria, como os apostadores podem lucrar por estarem corretos, os mercados de previsão podem prever resultados com grande precisão. Os mercados de previsão baseados em blockchain são ainda mais empolgantes, pois praticamente qualquer pessoa pode participar da previsão e ganhar recompensas em stablecoin ou criptomoeda.
 
 ## Por que isso importa? {#why-does-this-matter}
 
-Diferentemente das projeções tradicionais, os mercados de projeção baseados em blockchain são:
+Ao contrário das previsões tradicionais, os mercados de previsão baseados em blockchain são:
 
 <Grid>
-  <Card title="Incentivado" emoji=":money_with_wings:" description="Os participantes aplicam fundos reais, o que leva a previsões de alta qualidade."/>
-  <Card title="Descentralização" emoji="🌎" description="O uso de blockchain e contratos inteligentes garante pagamentos transparentes e automatizados." />
+  <Card title="Incentivized" emoji=":money_with_wings:" description="Os participantes fazem stake de fundos reais, o que indica previsões de alta qualidade."/>
+  <Card title="Decentralization" emoji="🌎" description="O uso da blockchain e de contratos inteligentes garante pagamentos transparentes e automatizados." />
   <Card title="Probabilidades definidas pelo mercado" emoji="🤝" description="Os preços são definidos por traders que compram e vendem cotas de resultados, em vez de serem predefinidos por uma casa de apostas centralizada." />
 </Grid>
 
-Mesmo como um observador do mercado, você pode avaliar dados valiosos que de outra forma não estariam disponíveis. Pense nisso assim:
+Mesmo como um observador do mercado, você pode avaliar dados valiosos que de outra forma estariam indisponíveis. Pense da seguinte forma:
 
-1. As previsões estão vinculadas a um evento específico (por exemplo, a Beam Chain será implantada até 2030?).
-2. Os participantes do mercado compram e vendem ações segundo a sua confiança em algum resultado vindouro.
-3. Os preços se ajustam à medida que mais participantes apostam em suas análises, resultando em insights em tempo real.
-4. Qualquer um apostando corretamente é recompensado proporcionalmente ao montante apostado
-5. Observadores do mercado podem aproveitar os dados abertos para embasar suas pesquisas e discussões.
+1. As previsões estão vinculadas a um evento específico (ex.: A Beam Chain será implantada até 2030?).
+2. Os participantes do mercado compram e vendem ações com base em sua confiança em qualquer resultado.
+3. Os preços se ajustam à medida que mais participantes fazem stake de suas crenças, refletindo insights em tempo real.
+4. Qualquer pessoa que apostar corretamente ganha proporcionalmente ao valor em stake. 
+5. Os observadores do mercado podem aproveitar os dados abertos para informar pesquisas ou discussões.
 
-## Encontre um mercado de previsões {#find-a-prediction-market}
+## Encontre um mercado de previsão {#find-a-prediction-market}
 
-Existem vários mercados de previsão rodando no Ethereum disponíveis. Esses alguns dos mercados de projeções mais conhecidos hoje:
+Existem vários mercados de previsão baseados no Ethereum disponíveis. Estes são alguns dos mercados de previsão mais conhecidos atualmente:
 
 <PredictionMarketLists />
 
@@ -54,35 +55,32 @@ Existem vários mercados de previsão rodando no Ethereum disponíveis. Esses al
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Esteja atento aos riscos</strong></p>
-  <p className="mt-2">Aposte de forma moderada, fique distante de possíveis vícios.</p>
+  <p className="mt-0"><strong>Esteja ciente dos riscos</strong></strong>
+  <p className="mt-2">Aposte apenas o que você pode perder e esteja ciente de possíveis comportamentos viciantes.</p>
 </AlertDescription>
-
 </AlertContent>
-
 </Alert>
 
-## Desafios & Riscos {#challenges-and-risks}
+## Desafios e Riscos {#challenges-and-risks}
 
-Os mercados de previsão baseados em blockchain enfrentam desafios limitados que podem afetar a justiça, a conformidade legal e a exatidão.
+Os mercados de previsão na blockchain enfrentam alguns desafios que podem impactar a justiça, a legalidade e a precisão.
 
-⚠️ **Manipulação do Mercado** – Os jogadores com grande capital podem manipular os resultados através de operações simuladas (wash trading).  
-💧 **Problemas de liquidez** – A baixa participação ([liquidez reduzida](https://www.investopedia.com/terms/t/thinmarket.asp))
-pode comprometer a confiabilidade do mercado.  
-🏛 **Incerteza Regulatória** – Algumas pllataformas vêm sofrendo com restrições por Governos.
+⚠️ **Manipulação de Mercado** – Jogadores ricos podem distorcer os resultados por meio de wash trading.  
+💧 **Problemas de Liquidez** – A baixa participação ([baixa liquidez](https://www.investopedia.com/terms/t/thinmarket.asp)) pode reduzir a confiabilidade do mercado.  
+🏛 **Incerteza Regulatória** – Governos impuseram restrições a algumas plataformas.
 
-Para mitigar estes problemas, os desenvolvedores da Ethereum estão testando soluções como a futarquia (governança por mercados de previsão) e verificação de identidade descentralizada.
+Para mitigar esses problemas, os desenvolvedores do Ethereum estão experimentando soluções como a futarquia (governança por mercados de previsão) e a verificação de identidade descentralizada.
 
-## Experimentar com mercados de previsão {#experimenting-with-prediction-markets}
+## Experimentando com mercados de previsão {#experimenting-with-prediction-markets}
 
-. Ao alavancar o Ethereum, eles oferecem **maneiras justas, abertas e gratificantes de prever o futuro.**
+Os mercados de previsão estão remodelando a tomada de decisões na era digital. Ao aproveitar o Ethereum, eles oferecem **maneiras justas, abertas e recompensadoras de prever o futuro.**
 
-Há  muitas formas de utilizar ferrramentas de prognóstico à margem de garantias financeiras. Por exemplo, em uma [Proposta de melhoria para DevCon](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) se sugeriu que os organizadores da DevCon usem mercados de previsão para estimar a participação em eventos futuros.
+Existem muitas maneiras de usar ferramentas de previsão fora do ganho financeiro. Por exemplo, em uma [Proposta de Melhoria da DevCon](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP), foi sugerido que os organizadores da DevCon usassem mercados de previsão para antecipar o comparecimento em eventos futuros. 
 
-Isso ajudaria os organizadores a determinar em lugaria se poderia realizar o maior evento, em comparação com o lugar que seria mais acessível internacionalmente. Com isso, os organizadores da DevCon conseguem agilizar a análise de políticas de vistos, acesso a aeroportos e custo de vida local, ao mesmo tempo que coletam dados sobre os destinos de preferência dos possíveis participantes.
+Isso ajudaria os organizadores a determinar qual local levaria ao maior evento, em comparação com qual local seria o mais acessível internacionalmente. Os benefícios disso significam que os organizadores da DevCon podem agilizar o tempo necessário para analisar várias políticas de vistos, acesso a aeroportos e custo de vida na área, ao mesmo tempo em que coletam dados sobre para onde os possíveis participantes estariam animados em ir.
 
 ## Leitura adicional {#further-reading}
 
-[De mercados de previsão às finanças da informação](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) – Vitalik Buterin
-[Desenvolvimento de Mercados de Previsão Descentralizados no Ethereum](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)
+[Dos mercados de previsão às finanças da informação](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - Vitalik Buterin  
+[Desenvolvimento de Mercado de Previsão Descentralizado no Ethereum](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  
 [Whitepaper do Projeto Augur](https://github.com/AugurProject/whitepaper)
