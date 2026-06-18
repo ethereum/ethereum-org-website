@@ -1,21 +1,21 @@
 ---
-title: Ethereum Payments
-metaTitle: Payments on Ethereum
-description: An overview of payments on Ethereum
-lang: en
+title: Ethereum Ödemeleri
+metaTitle: Ethereum'da Ödemeler
+description: Ethereum'daki ödemelere genel bir bakış
+lang: tr
 template: use-cases
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: An Eth logo being displayed along with giving hands.
+alt: Veren ellerle birlikte sergilenen bir Eth logosu.
 summaryPoints:
-  - "A world where money moves as freely as information"
-  - "Open and global, enabling borderless transactions for everyone"
-  - "Payments received within a minute"
+  - "Paranın bilgi kadar özgürce hareket ettiği bir dünya"
+  - "Açık ve küresel, herkes için sınırsız işlemlere olanak tanır"
+  - "Bir dakika içinde alınan ödemeler"
 ---
 
-Every day, millions of people face the same challenge: moving money across borders is slow, expensive, and often frustrating. A freelancer in Bali waits days for payment to clear from their New York client. This particularly affects people in regions with limited banking infrastructure, making it difficult to participate in the global economy.
+Her gün milyonlarca insan aynı zorlukla karşılaşıyor: parayı sınırlar ötesine taşımak yavaş, pahalı ve genellikle sinir bozucu. Bali'deki bir serbest çalışan, New York'taki müşterisinden gelen ödemenin onaylanması için günlerce bekler. Bu durum özellikle sınırlı bankacılık altyapısına sahip bölgelerdeki insanları etkileyerek küresel ekonomiye katılmalarını zorlaştırır.
 
-This isn't a far-off dream—it's happening today on Ethereum. While traditional financial institutions have built robust payment systems over decades, they often remain constrained by borders, working hours, and legacy infrastructure. Ethereum offers a new paradigm: a global, 24/7 financial platform that enables near-instant, programmable transactions for anyone with internet access.
+Bu uzak bir hayal değil; bugün Ethereum'da gerçekleşiyor. Geleneksel finans kurumları onlarca yıl boyunca sağlam ödeme sistemleri kurmuş olsalar da, genellikle sınırlar, çalışma saatleri ve eski altyapı ile kısıtlı kalırlar. Ethereum yeni bir paradigma sunuyor: internet erişimi olan herkes için neredeyse anında, programlanabilir işlemlere olanak tanıyan küresel, 7/24 bir finansal platform.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
@@ -23,122 +23,122 @@ This isn't a far-off dream—it's happening today on Ethereum. While traditional
 
 </div>
 
-## Remittances: cheaper international transfers {#remittances}
+## Havaleler: daha ucuz uluslararası transferler {#remittances}
 
-For millions of people working abroad, sending money back home is a regular necessity. Traditional remittance services often come with high fees and slow processing times. Ethereum offers a compelling alternative.
+Yurtdışında çalışan milyonlarca insan için memlekete para göndermek düzenli bir ihtiyaçtır. Geleneksel havale hizmetleri genellikle yüksek ücretler ve yavaş işlem süreleri ile birlikte gelir. Ethereum cazip bir alternatif sunar.
 
 <Grid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="Daha Düşük Ücretler" emoji=":money_with_wings:" description="Para transferi hizmetleri ortalama 14 $'a varan ücretler alır. Ethereum işlemleri genellikle 0,01 $'ın altında tamamlanabilir."/>
+  <Card title="Daha Hızlı Transferler" emoji="📶" description="Uluslararası banka transferlerinin işleme alınması birkaç gün sürer. Ethereum işlemleri dakikalar içinde sonuçlanır." />
+  <Card title="Herkese açık" emoji="🌎" description="Ether göndermek veya almak için yalnızca bir internet bağlantısına ve bir cüzdan uygulamasına ihtiyacınız vardır." />
 </Grid>
 
-## Access to global currencies {#access-to-global-currencies}
+## Küresel para birimlerine erişim {#access-to-global-currencies}
 
-In many countries, inflation is a pressing concern, often accompanied by limited access to foreign currencies. People in these situations struggle to preserve their wealth as they are forced to hold rapidly depreciating savings.
+Birçok ülkede enflasyon, genellikle yabancı para birimlerine sınırlı erişimin eşlik ettiği acil bir sorundur. Bu durumlardaki insanlar, hızla değer kaybeden tasarrufları ellerinde tutmak zorunda kaldıkları için servetlerini korumakta zorlanırlar.
 
-The Ethereum community has created **a robust alternative financial system** that is independent of any nation’s monetary policies or control.
+Ethereum topluluğu, herhangi bir ulusun para politikalarından veya kontrolünden bağımsız **sağlam bir alternatif finansal sistem** yarattı.
 
-Ethereum users can use **stablecoins—tokens typically tied to strong currencies like the US Dollar**. By earning and saving in cryptocurrency, people can protect themselves from high inflation in their country, helping to preserve or even grow their purchasing power. This also enables easier payments for goods and services, both locally and globally.
+Ethereum kullanıcıları, **genellikle ABD Doları gibi güçlü para birimlerine bağlı tokenlar olan sabit paraları** kullanabilirler. İnsanlar kripto para kazanarak ve biriktirerek kendilerini ülkelerindeki yüksek enflasyondan koruyabilir, satın alma güçlerini korumaya ve hatta artırmaya yardımcı olabilirler. Bu aynı zamanda hem yerel hem de küresel olarak mal ve hizmetler için daha kolay ödeme yapılmasını sağlar.
 
 <ButtonLink href="/stablecoins">
-  More on stablecoins
+  Sabit paralar hakkında daha fazlası
 </ButtonLink>
 
-## Buying goods and payment for services {#buying-goods-and-payment-for-services}
+## Mal satın alma ve hizmetler için ödeme {#buying-goods-and-payment-for-services}
 
-Many businesses are beginning to accept ether (ETH) and other cryptocurrencies as payment. For example:
+Birçok işletme ödeme olarak Ether (ETH) ve diğer kripto paraları kabul etmeye başlıyor. Örneğin:
 
-- **Newegg:** The popular electronics retailer accepts Ethereum for purchases in select countries.
-- **Travala.com:** This travel booking platform allows users to pay for hotels and flights using Ethereum.
-- **Shopify:** This popular E-commerce platform which serves as a platform for hosting businesses also accepts payments for goods and services using Ethereum.
-- **Sotheby's:** This organization trade fine and decorative art, jewelry, and collectibles and allows for payments using Ethereum and other cryptocurrencies.
+- **Newegg:** Popüler elektronik perakendecisi, belirli ülkelerdeki alışverişler için Ethereum'u kabul ediyor.
+- **Travala.com:** Bu seyahat rezervasyon platformu, kullanıcıların Ethereum kullanarak otel ve uçuş ödemeleri yapmasına olanak tanır.
+- **Shopify:** İşletmeleri barındırmak için bir platform görevi gören bu popüler e-ticaret platformu da mal ve hizmetler için Ethereum kullanarak ödeme kabul ediyor.
+- **Sotheby's:** Bu kuruluş güzel ve dekoratif sanat eserleri, mücevherler ve koleksiyon eşyalarının ticaretini yapar ve Ethereum ile diğer kripto paraları kullanarak ödeme yapılmasına olanak tanır.
 
-Countries like El Salvador and the Central African Republic have even adopted cryptocurrencies as legal tender, paving the way for wider acceptance of Ethereum payments in everyday transactions.
+El Salvador ve Orta Afrika Cumhuriyeti gibi ülkeler kripto paraları yasal ödeme aracı olarak bile kabul ederek, günlük işlemlerde Ethereum ödemelerinin daha geniş çapta kabul görmesinin önünü açtı.
 
-In countries where their means of payment have been disconnected from the rest of the world, crypto-integrated payment solutions have been a huge relief. Payments of subscriptions for platforms like Netflix, Spotify, and educational courses have now been made easy through crypto payment platforms like Gnosis Pay and Paypal.
+Ödeme araçlarının dünyanın geri kalanıyla bağlantısının kesildiği ülkelerde, kripto entegreli ödeme çözümleri büyük bir rahatlama sağladı. Netflix, Spotify gibi platformlar ve eğitim kursları için abonelik ödemeleri artık Gnosis Pay ve PayPal gibi kripto ödeme platformları aracılığıyla kolaylaştırıldı.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Create your Ethereum account with a wallet app today.</div>
+  <div>Bugün bir cüzdan uygulamasıyla Ethereum hesabınızı oluşturun.</div>
   <ButtonLink href="/wallets/find-wallet">
-    Get started
+    Başlayın
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Pay with self-custodial crypto cards {#pay-with-self-custodial-crypto-cards}
+## Öz saklama özellikli kripto kartlarıyla ödeme yapın {#pay-with-self-custodial-crypto-cards}
 
-Self-custodial crypto cards work like using your own backpack instead of locking your money in someone else’s vault. With a traditional card, a bank or custodian holds your funds and releases them when you spend. With self-custodial cards, you stay in control of your assets the whole time—no middleman—while still being able to tap or swipe to pay for coffee, groceries, or even a flight.
+Öz saklama özellikli kripto kartları, paranızı başkasının kasasına kilitlemek yerine kendi sırt çantanızı kullanmak gibi çalışır. Geleneksel bir kartta, bir banka veya saklayıcı fonlarınızı tutar ve harcama yaptığınızda bunları serbest bırakır. Öz saklama özellikli kartlarla, kahve, market alışverişi veya hatta bir uçuş için ödeme yapmak üzere dokundurma veya kaydırma yapabilirken, varlıklarınızın kontrolü her zaman sizde kalır; aracı yoktur.
 
-These cards link directly to non-custodial wallets or smart contract accounts, allowing users to spend ETH and stablecoins in everyday settings without giving up ownership. Unlike custodial cards, which require users to deposit funds with a third party, self-custodial cards enable real-world payments such as Visa and Mastercard while preserving onchain control.
+Bu kartlar doğrudan gözetimsiz cüzdanlara veya akıllı sözleşme hesaplarına bağlanarak kullanıcıların mülkiyetten vazgeçmeden günlük ortamlarda ETH ve sabit paralar harcamasına olanak tanır. Kullanıcıların fonlarını üçüncü bir tarafa yatırmasını gerektiren gözetimli kartların aksine, öz saklama özellikli kartlar zincir içi kontrolü korurken Visa ve Mastercard gibi gerçek dünya ödemelerine olanak tanır.
 
-### Examples {#crypto-cards-examples}
+### Örnekler {#crypto-cards-examples}
 
-- **MetaMask Card:** Linked to the MetaMask wallet, this Mastercard debit card lets users spend ETH, stablecoins, and other supported tokens. It supports Apple Pay and Google Pay, includes crypto cashback rewards, and offers yield-earning options.
+- **MetaMask Card:** MetaMask cüzdanına bağlı olan bu Mastercard banka kartı, kullanıcıların ETH, sabit paralar ve desteklenen diğer tokenları harcamasına olanak tanır. Apple Pay ve Google Pay'i destekler, kripto para iadesi ödülleri içerir ve getiri kazanma seçenekleri sunar.
 
-- **Tuyo Card:** A smart contract–based Visa card that auto-converts crypto to USDC for spending anywhere Visa is accepted. Users keep custody of their assets, with access to yield, trading, and spending features.
+- **Tuyo Card:** Visa'nın kabul edildiği her yerde harcama yapmak için kriptoyu otomatik olarak USDC'ye dönüştüren akıllı sözleşme tabanlı bir Visa kartı. Kullanıcılar getiri, alım satım ve harcama özelliklerine erişimle birlikte varlıklarının saklamasını ellerinde tutarlar.
 
-- **Gnosis Pay:** The first self-custodial Visa card tied to a Gnosis Safe smart account. Users spend crypto directly from their wallet with no gas, FX, or off-ramping fees. Card personalization via Ethereum Name Service (ENS) is also supported.
+- **Gnosis Pay:** Bir Gnosis Safe akıllı hesabına bağlı ilk öz saklama özellikli Visa kartı. Kullanıcılar gaz, döviz veya kriptodan çıkış ücretleri olmadan doğrudan cüzdanlarından kripto harcarlar. Ethereum Name Service (ENS) aracılığıyla kart kişiselleştirme de desteklenmektedir.
 
-- **Ether.Fi Cash card:** Integrated with ether.fi’s staking protocol, this card lets users spend while their ETH remains staked. Payments are handled via smart contracts, maintaining self-custody even while spending.
+- **Ether.Fi Cash card:** ether.fi'nin staking protokolüne entegre olan bu kart, kullanıcıların ETH'leri stake edilmiş haldeyken harcama yapmalarına olanak tanır. Ödemeler akıllı sözleşmeler aracılığıyla gerçekleştirilir ve harcama yaparken bile öz saklama korunur.
 
-### Self-custodial crypto card comparison {#crypto-card-custody-comparison}
+### Öz saklama özellikli kripto kartı karşılaştırması {#crypto-card-custody-comparison}
 
-| **Crypto card** | **Self-custodial** | **Non-custodial** | **Key notes**                                                |
+| **Kripto kartı** | **Öz saklama özellikli** | **Gözetimsiz** | **Önemli notlar**                                                |
 | --------------- | :----------------: | :---------------: | ------------------------------------------------------------ |
-| MetaMask Card   |         ✅         |        ✅         | Wallet stays in MetaMask; auto off-ramp at payment           |
-| Tuyo Card       |         ✅         |        ✅         | Smart wallet converts to USDC; user retains control          |
-| Gnosis Pay      |         ✅         |        ✅         | Linked to user’s Gnosis Safe; no custody shift during use    |
-| Ether.Fi Cash   |         ✅         |        ✅         | ETH remains staked; smart contract controls spending access. |
+| MetaMask Card   |         ✅         |        ✅         | Cüzdan MetaMask'te kalır; ödeme sırasında otomatik kriptodan çıkış |
+| Tuyo Card       |         ✅         |        ✅         | Akıllı cüzdan USDC'ye dönüştürür; kullanıcı kontrolü elinde tutar |
+| Gnosis Pay      |         ✅         |        ✅         | Kullanıcının Gnosis Safe'ine bağlıdır; kullanım sırasında saklama değişikliği olmaz |
+| Ether.Fi Cash   |         ✅         |        ✅         | ETH stake edilmiş kalır; akıllı sözleşme harcama erişimini kontrol eder. |
 
-> **Note:** "Self-custodial" refers to user-controlled wallets where the user has full access and control over their funds.
-> "Non-custodial" refers to wallets where funds are managed without third-party custody, often through smart contracts.
-> While all self-custodial cards are non-custodial, not all non-custodial cards are self-custodial.
+> **Not:** "Öz saklama özellikli", kullanıcının fonları üzerinde tam erişime ve kontrole sahip olduğu kullanıcı kontrollü cüzdanları ifade eder.
+> "Gözetimsiz", fonların genellikle akıllı sözleşmeler aracılığıyla üçüncü taraf gözetimi olmadan yönetildiği cüzdanları ifade eder.
+> Tüm öz saklama özellikli kartlar gözetimsiz olsa da, tüm gözetimsiz kartlar öz saklama özellikli değildir.
 
-## Micro-payments for websites & agents (x402) {#x402}
+## Web siteleri ve aracılar için mikro ödemeler (x402) {#x402}
 
-[x402](https://www.x402.org/) is an open payment standard that brings native per-use payments to the web. By using [stablecoins](/stablecoins/) on low-cost [Ethereum layer 2 networks](/layer-2/), the x402 standard makes it economical for humans and machines to pay directly for a single action, such as reading a news article or calling an API, rather than managing API keys, subscriptions, or “paying” by giving attention to advertising.
+[x402](https://www.x402.org/), web'e yerel kullanım başına ödemeler getiren açık bir ödeme standardıdır. Düşük maliyetli [Ethereum katman 2 (L2) ağlarında](/layer-2/) [sabit paralar](/stablecoins/) kullanarak x402 standardı, API anahtarlarını, abonelikleri yönetmek veya reklamlara dikkat vererek "ödeme yapmak" yerine, insanların ve makinelerin bir haber makalesi okumak veya bir API çağırmak gibi tek bir eylem için doğrudan ödeme yapmasını ekonomik hale getirir.
 
-- **Removing paywalls and logins:** Instead of creating an account and sharing personal information to read one news article, your wallet can pay the few cents required to unlock it.
-- **Payments for AI agents:** x402 enables autonomous software ("AI Agents") to pay for the data and API calls they need to function, without human intervention.
+- **Ödeme duvarlarını ve girişleri kaldırma:** Tek bir haber makalesini okumak için bir hesap oluşturmak ve kişisel bilgileri paylaşmak yerine, cüzdanınız kilidi açmak için gereken birkaç senti ödeyebilir.
+- **Yapay zeka aracıları için ödemeler:** x402, otonom yazılımların ("Yapay Zeka Aracıları") insan müdahalesi olmadan çalışmak için ihtiyaç duydukları veri ve API çağrıları için ödeme yapmalarını sağlar.
 
-### How the x402 payment standard works {#x402-how}
+### x402 ödeme standardı nasıl çalışır {#x402-how}
 
-When a client requests a resource, the server sends a `402 Payment Required` error code along with payment instructions (price, account, and what tokens and chains are supported).
+Bir istemci bir kaynak talep ettiğinde, sunucu ödeme talimatlarıyla (fiyat, hesap ve hangi tokenların ve zincirlerin desteklendiği) birlikte bir `402 Payment Required` hata kodu gönderir.
 
-- Your [wallet](/wallets/) detects the request and handles the payment (often with a single click to approve, or automatically using a pre-approved allowance)
-- [AI agents](/ai-agents/) with access to pre-approved wallet balances can automatically detect the price and pay instantly to access data or services
-- The client needs to have one of the supported stablecoins in their wallet, but does not need to have any ETH for [gas expenses](/gas/)
+- [Cüzdanınız](/wallets/) talebi algılar ve ödemeyi gerçekleştirir (genellikle onaylamak için tek bir tıklamayla veya önceden onaylanmış bir harcama izni kullanarak otomatik olarak)
+- Önceden onaylanmış cüzdan bakiyelerine erişimi olan [yapay zeka aracıları](/ai-agents/) fiyatı otomatik olarak algılayabilir ve verilere veya hizmetlere erişmek için anında ödeme yapabilir
+- İstemcinin cüzdanında desteklenen sabit paralardan birine sahip olması gerekir, ancak [gaz masrafları](/gas/) için herhangi bir ETH'ye sahip olması gerekmez
 
-This unlocks a new "machine to machine" economy where AI agents can buy resources on their own, and where API services can be accessed more efficiently.
+Bu, yapay zeka aracılarının kendi başlarına kaynak satın alabileceği ve API hizmetlerine daha verimli bir şekilde erişilebileceği yeni bir "makineden makineye" ekonominin kilidini açar.
 
-The signed message is then delivered to the server. Servers typically use an [x402 facilitator](https://x402.gitbook.io/x402/core-concepts/facilitator) to handle the blockchain complexity (sending the transaction, obtaining the payment, facilitating gas fees, etc.), which means that developers can easily accept crypto micropayments without managing payment infrastructure.
+İmzalanan mesaj daha sonra sunucuya iletilir. Sunucular genellikle blokzincir karmaşıklığını (işlemi göndermek, ödemeyi almak, gaz ücretlerini kolaylaştırmak vb.) ele almak için bir [x402 kolaylaştırıcısı](https://x402.gitbook.io/x402/core-concepts/facilitator) kullanır; bu da geliştiricilerin ödeme altyapısını yönetmeden kripto mikro ödemelerini kolayca kabul edebileceği anlamına gelir.
 
-## Salary payments {#salary-payments}
+## Maaş ödemeleri {#salary-payments}
 
-Many forward-thinking companies are now offering employees the option to receive their salaries, or a portion of them, in cryptocurrencies like ether (ETH):
+Birçok ileri görüşlü şirket artık çalışanlarına maaşlarını veya bir kısmını Ether (ETH) gibi kripto paralarla alma seçeneği sunuyor:
 
-- **Gipsybee:** is an organization that deals in electronics, robotics, game creation and other services. They give employees the option to get paid in Ethereum.
-- **SC5:** This Finnish company was one of the first to offer salaries in Bitcoin, paving the way for similar arrangements with Ethereum.
-- **Blockchain startups:** Many companies in the blockchain space naturally offer cryptocurrency salary options to their employees.
-- **DAOs:** Due to the peculiarity and diversity of contributors to DAOs, most contributions and salaries are rewarded in cryptocurrency.
+- **Gipsybee:** elektronik, robotik, oyun oluşturma ve diğer hizmetlerle ilgilenen bir kuruluştur. Çalışanlara Ethereum ile ödeme alma seçeneği sunarlar.
+- **SC5:** Bu Finlandiyalı şirket, maaşları Bitcoin ile sunan ilk şirketlerden biriydi ve Ethereum ile benzer düzenlemelerin önünü açtı.
+- **Blokzincir girişimleri:** Blokzincir alanındaki birçok şirket doğal olarak çalışanlarına kripto para maaş seçenekleri sunar.
+- **DAO'lar:** DAO'lara katkıda bulunanların özelliği ve çeşitliliği nedeniyle, çoğu katkı ve maaş kripto para ile ödüllendirilir.
 
-This trend particularly appeals to remote workers and digital nomads who can benefit from borderless payments and potentially favorable exchange rates.
+Bu eğilim, özellikle sınırsız ödemelerden ve potansiyel olarak uygun döviz kurlarından yararlanabilen uzaktan çalışanlara ve dijital göçebelere hitap etmektedir.
 
-## Global relief efforts {#global-relief-efforts}
+## Küresel yardım çabaları {#global-relief-efforts}
 
-In February 2023, when devastating earthquakes struck Turkey and Syria, the global crypto community sprang into action. Various campaigns were launched to collect funds for relief efforts, showcasing the power of Ethereum in times of crisis. Despite crypto [not being a recognized form](https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/) of payment in Turkey, authorities made [exceptions](https://x.com/haluklevent/status/1622913175409623041) for some organizations to collect donations. Some examples are:
+Şubat 2023'te Türkiye ve Suriye'yi vuran yıkıcı depremlerde küresel kripto topluluğu harekete geçti. Yardım çabaları için fon toplamak amacıyla çeşitli kampanyalar başlatıldı ve kriz zamanlarında Ethereum'un gücü sergilendi. Kriptonun Türkiye'de [tanınan bir ödeme şekli olmamasına](https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/) rağmen, yetkililer bazı kuruluşların bağış toplaması için [istisnalar](https://x.com/haluklevent/status/1622913175409623041) yaptı. Bazı örnekler şunlardır:
 
-- [Refik Anadol](https://x.com/refikanadol/status/1622623521104089090): is a renowned digital artist who initiated a fundraising campaign.
-- DAO Power: [Anka Relief DAO](https://ankarelief.org/) and [Bankless DAO](https://x.com/banklessDAO) joined forces with [Giveth](https://x.com/Giveth/status/1623493672149843969) to raise funds.
-- [Pak](https://cause.quest/), a prominent NFT artist, also contributed to the cause.
-- Even Ethereum co-founder [Vitalik Buterin](https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria) made personal donations to multiple campaigns.
+- [Refik Anadol](https://x.com/refikanadol/status/1622623521104089090): bir bağış toplama kampanyası başlatan ünlü bir dijital sanatçıdır.
+- DAO Gücü: [Anka Relief DAO](https://ankarelief.org/) ve [Bankless DAO](https://x.com/banklessDAO), fon toplamak için [Giveth](https://x.com/Giveth/status/1623493672149843969) ile güçlerini birleştirdi.
+- Önde gelen bir NFT sanatçısı olan [Pak](https://cause.quest/) da bu amaca katkıda bulundu.
+- Ethereum kurucu ortağı [Vitalik Buterin](https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria) bile birden fazla kampanyaya kişisel bağışlarda bulundu.
 
-The result of this? Over $6 million was raised in a matter of days, as tracked by a [Dune](https://dune.com/davy42/turkiye-earthquake-donations) Analytics dashboard.
+Bunun sonucu mu? Bir [Dune](https://dune.com/davy42/turkiye-earthquake-donations) Analytics panosu tarafından izlendiği üzere, birkaç gün içinde 6 milyon doların üzerinde para toplandı.
 
-There were also similar response times for tragedies that happened in India and Ukraine. This rapid response highlights a crucial advantage of Ethereum payments, which is the ability to quickly mobilize global support without the hurdles of currency conversion, lengthy bank transfers, or exorbitant fees.
+Hindistan ve Ukrayna'da yaşanan trajediler için de benzer tepki süreleri oldu. Bu hızlı tepki, Ethereum ödemelerinin çok önemli bir avantajını, yani para birimi dönüştürme, uzun banka transferleri veya fahiş ücretler gibi engeller olmadan küresel desteği hızla harekete geçirme yeteneğini vurgulamaktadır.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
@@ -146,46 +146,46 @@ There were also similar response times for tragedies that happened in India and 
 
 </div>
 
-## Crypto payments on Ethereum vs. fiat payments {#ethereum-vs-fiat}
+## Ethereum'daki kripto ödemeleri ile itibari para ödemelerinin karşılaştırması {#ethereum-vs-fiat}
 
-To truly appreciate the impact of Ethereum payments, it's worth comparing them to traditional fiat currencies:
+Ethereum ödemelerinin etkisini gerçekten takdir etmek için, bunları geleneksel itibari para birimleriyle karşılaştırmakta fayda var:
 
-|                       | **Ethereum**            | **Traditional banks**                                        |
+|                       | **Ethereum**            | **Geleneksel bankalar**                                      |
 | --------------------- | ----------------------- | ------------------------------------------------------------ |
-| **Speed**             | Seconds to minutes      | Hours to days                                                |
-| **Global Reach**      | Borderless, 24/7        | Subject to international banking restrictions and work hours |
-| **Transparency**      | Fully transparent       | Varies by institution                                        |
-| **Programmability**   | Smart contracts enabled | Limited to basic transactions                                |
-| **Inflation Control** | Predictable issuance    | Subject to central bank policies                             |
-| **Accessibility**     | Anyone with internet    | Subject to national and international restrictions           |
+| **Hız**               | Saniyelerden dakikalara | Saatlerden günlere                                           |
+| **Küresel Erişim**    | Sınırsız, 7/24          | Uluslararası bankacılık kısıtlamalarına ve çalışma saatlerine tabidir |
+| **Şeffaflık**         | Tamamen şeffaf          | Kuruma göre değişir                                          |
+| **Programlanabilirlik**| Akıllı sözleşmeler etkin| Temel işlemlerle sınırlıdır                                  |
+| **Enflasyon Kontrolü**| Öngörülebilir ihraç     | Merkez bankası politikalarına tabidir                        |
+| **Erişilebilirlik**   | İnterneti olan herkes   | Ulusal ve uluslararası kısıtlamalara tabidir                 |
 
-At its core, Ethereum is a decentralized platform that allows for secure, fast, and transparent transactions. However, many components set it apart from traditional payment methods. Let's dive into the benefits that make Ethereum payments a game-changer:
+Özünde Ethereum, güvenli, hızlı ve şeffaf işlemlere olanak tanıyan merkeziyetsiz bir platformdur. Ancak, birçok bileşen onu geleneksel ödeme yöntemlerinden ayırır. Ethereum ödemelerini oyunun kurallarını değiştiren bir unsur haline getiren faydaları derinlemesine inceleyelim:
 
-### Programmability {#programmability}
+### Programlanabilirlik {#programmability}
 
-One of Ethereum's unique features is its ability to support smart contracts. Smart contracts are self-executing agreements with the terms directly written into code. This opens up a world of possibilities for automated, condition-based payments that can greatly improve transactions like:
+Ethereum'un benzersiz özelliklerinden biri akıllı sözleşmeleri destekleme yeteneğidir. Akıllı sözleşmeler, şartları doğrudan koda yazılmış, kendi kendini yürüten anlaşmalardır. Bu, aşağıdaki gibi işlemleri büyük ölçüde iyileştirebilecek otomatik, koşula dayalı ödemeler için bir olasılıklar dünyasının kapılarını açar:
 
-- Escrow services
-- Recurring payments
-- Performance-based compensation
+- Emanet hizmetleri
+- Yinelenen ödemeler
+- Performansa dayalı ödemeler
 
-### Speed {#speed}
+### Hız {#speed}
 
-Do you remember the last time you waited days for an international bank transfer to clear? The long queue? And the multiple forms you had to fill? With Ethereum, those days are long gone. Transactions on the Ethereum network settle in minutes, regardless of where the sender and recipient are located. Due to Ethereum being permissionless, there is no regulatory bureaucracy when sending money. This speed is particularly crucial in time-sensitive situations, such as emergency relief efforts.
+Uluslararası bir banka transferinin onaylanması için günlerce beklediğiniz son zamanı hatırlıyor musunuz? Uzun kuyruğu? Ve doldurmanız gereken birden fazla formu? Ethereum ile o günler çok geride kaldı. Ethereum ağındaki işlemler, gönderici ve alıcının nerede olduğuna bakılmaksızın dakikalar içinde gerçekleşir. Ethereum'un izinsiz olması nedeniyle, para gönderirken herhangi bir düzenleyici bürokrasi yoktur. Bu hız, acil yardım çabaları gibi zamana duyarlı durumlarda özellikle çok önemlidir.
 
-### Lower fees {#lower-fees}
+### Daha düşük ücretler {#lower-fees}
 
-Traditional international money transfers fees sometimes eat up a significant portion of the amount sent, especially when dealing with transactions in the hundreds of dollars. Ethereum transactions, while not free, often come with lower fees. This means more of your money goes where you intend it to, rather than lining the pockets of intermediaries.
+Geleneksel uluslararası para transferi ücretleri, özellikle yüzlerce dolarlık işlemlerle uğraşırken, bazen gönderilen miktarın önemli bir bölümünü tüketir. Ethereum işlemleri ücretsiz olmasa da genellikle daha düşük ücretlerle gelir. Bu, paranızın daha büyük bir kısmının aracıların ceplerini doldurmak yerine amaçladığınız yere gitmesi anlamına gelir.
 
-### Transparency {#transparency}
+### Şeffaflık {#transparency}
 
-Every transaction on the Ethereum blockchain is recorded on a public ledger. This means anyone can verify the movement of funds, making it an excellent tool for:
+Ethereum blokzincirindeki her işlem halka açık bir deftere kaydedilir. Bu, herkesin fonların hareketini doğrulayabileceği anlamına gelir ve bu da onu aşağıdakiler için mükemmel bir araç haline getirir:
 
-- Charitable organizations to demonstrate how donations are used
-- Businesses to prove payments to suppliers or employees
-- Individuals to keep track of their financial activities
+- Hayır kurumlarının bağışların nasıl kullanıldığını göstermesi
+- İşletmelerin tedarikçilere veya çalışanlara yapılan ödemeleri kanıtlaması
+- Bireylerin finansal faaliyetlerini takip etmesi
 
-With Ethereum, everyone can see how money moves and how costs are implemented, unlike traditional organizations where most of these remain unknown.
+Ethereum ile, bunların çoğunun bilinmediği geleneksel kuruluşların aksine, herkes paranın nasıl hareket ettiğini ve maliyetlerin nasıl uygulandığını görebilir.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
@@ -193,16 +193,16 @@ With Ethereum, everyone can see how money moves and how costs are implemented, u
 
 </div>
 
-While fiat currencies have the advantage of widespread acceptance and stability, Ethereum offers unique benefits that make it an attractive option for certain types of transactions.
+İtibari para birimleri yaygın kabul görme ve istikrar avantajına sahip olsa da, Ethereum onu belirli işlem türleri için cazip bir seçenek haline getiren benzersiz faydalar sunar.
 
-From facilitating rapid disaster relief to empowering global workers, Ethereum payments are writing a new chapter in the long history of money. While challenges remain, the unique advantages offered by this technology make it an attractive option for a wide range of use cases.
+Hızlı afet yardımını kolaylaştırmaktan küresel çalışanları güçlendirmeye kadar, Ethereum ödemeleri paranın uzun tarihinde yeni bir sayfa açıyor. Zorluklar devam etse de, bu teknolojinin sunduğu benzersiz avantajlar onu çok çeşitli kullanım durumları için cazip bir seçenek haline getiriyor.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Time to get your own Ethereum account.</div>
+  <div>Kendi Ethereum hesabınızı alma zamanı.</div>
   <ButtonLink href="/wallets/find-wallet">
-    Get started!
+    Başlayın!
   </ButtonLink>
 </AlertContent>
 </Alert>
