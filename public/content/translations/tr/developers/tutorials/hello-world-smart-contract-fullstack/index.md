@@ -486,7 +486,7 @@ main()
 Terminalde `npx hardhat run scripts/interact.js` kullanarak dosyayı çalıştırdıktan sonra şu yanıtı görmeliyiz:
 
 ```
-Mesaj: Hello world!
+The message is: Hello world!
 ```
 
 Tebrikler! Ethereum Blokzincir'inden akıllı sözleşme verilerini başarıyla okudunuz, harika iş çıkardınız!
@@ -566,9 +566,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Mesaj: Hello World!
-Mesaj güncelleniyor...
-Yeni mesaj: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 Bu betiği çalıştırırken, yeni mesaj yüklenmeden önce `Updating the message...` adımının yüklenmesinin biraz zaman aldığını fark edebilirsiniz. Bunun nedeni madencilik sürecidir; işlemlerin kazılırken nasıl takip edileceğini merak ediyorsanız, bir işlemin durumunu görmek için [Alchemy bellek havuzunu (mempool)](https://dashboard.alchemyapi.io/mempool) ziyaret edin. Eğer işlem düşerse, [Goerli Etherscan](https://goerli.etherscan.io)'i kontrol etmek ve işlem özetinizi (hash) aramak da faydalı olacaktır.

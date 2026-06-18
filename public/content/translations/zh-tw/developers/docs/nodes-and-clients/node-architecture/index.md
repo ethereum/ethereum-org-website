@@ -22,7 +22,7 @@ _執行客戶端有多種選擇，包括 Erigon、Nethermind 和 Besu_。
 
 執行客戶端建立執行負載——交易列表、更新的狀態樹以及其他與執行相關的資料。共識客戶端將執行負載包含在每個區塊中。執行客戶端還負責重新執行新區塊中的交易，以確保它們是有效的。執行交易是在執行客戶端的嵌入式電腦上完成的，該電腦被稱為[以太坊虛擬機 (EVM)](/developers/docs/evm)。
 
-執行客戶端還透過 [RPC 方法](/developers/docs/apis/json-rpc)提供以太坊的使用者介面，讓使用者能夠查詢以太坊區塊鏈、提交交易和部署智慧合約。RPC 呼叫通常由 [Web3js](https://docs.web3js.org/)、[Web3py](https://web3py.readthedocs.io/en/v5/) 等函式庫或瀏覽器錢包等使用者介面來處理。
+執行客戶端還透過 [RPC 方法](/developers/docs/apis/json-rpc)提供以太坊的使用者介面，讓使用者能夠查詢以太坊區塊鏈、提交交易和部署智能合約。RPC 呼叫通常由 [Web3js](https://docs.web3js.org/)、[Web3py](https://web3py.readthedocs.io/en/v5/) 等函式庫或瀏覽器錢包等使用者介面來處理。
 
 總結來說，執行客戶端是：
 

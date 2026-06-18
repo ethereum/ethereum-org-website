@@ -1,6 +1,6 @@
 ---
-title: "Proof-of-stake ödülleri ve cezaları"
-description: "Proof-of-stake Ethereum'daki protokol içi teşvikler hakkında bilgi edinin."
+title: "Hisse Kanıtı ödülleri ve cezaları"
+description: "Hisse Kanıtı Ethereum'daki protokol içi teşvikler hakkında bilgi edinin."
 lang: tr
 ---
 

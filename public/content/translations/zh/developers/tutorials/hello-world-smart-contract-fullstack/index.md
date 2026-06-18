@@ -314,7 +314,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.get合约Factory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // 开始部署，返回一个解析为合约对象的 promise
   const hello_world = await HelloWorld.deploy("Hello World!")
