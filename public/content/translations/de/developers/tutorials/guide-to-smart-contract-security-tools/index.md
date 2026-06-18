@@ -1,9 +1,9 @@
 ---
-title: "Ein Leitfaden für Smart-Contract-Sicherheitstools"
-description: "Ein Überblick über drei verschiedene Test- und Programmanalysetechniken"
+title: Ein Leitfaden für Smart-Contract-Sicherheitstools
+description: Ein Überblick über drei verschiedene Test- und Programmanalysetechniken
 author: "Trailofbits"
 lang: de
-tags: ["Solidity", "Smart Contracts", "Sicherheit"]
+tags: ["solidity", "Smart Contracts", "Sicherheit"]
 skill: intermediate
 breadcrumb: Sicherheitstools
 published: 2020-09-07
@@ -13,47 +13,47 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 Wir werden drei verschiedene Test- und Programmanalysetechniken verwenden:
 
-- **Statische Analyse mit [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/).** Alle Pfade des Programms werden angenähert und gleichzeitig durch verschiedene Programmdarstellungen (z. B. Kontrollflussgraph) analysiert.
+- **Statische Analyse mit [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/).** Alle Pfade des Programms werden angenähert und gleichzeitig durch verschiedene Programmdarstellungen (z. B. Kontrollflussgraphen) analysiert.
 - **Fuzzing mit [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/).** Der Code wird mit einer pseudozufälligen Generierung von Transaktionen ausgeführt. Der Fuzzer wird versuchen, eine Sequenz von Transaktionen zu finden, die eine bestimmte Eigenschaft verletzt.
-- **Symbolische Ausführung mit [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/).** Eine formale Verifizierungstechnik, die jeden Ausführungspfad in eine mathematische Formel übersetzt, auf deren Grundlage Einschränkungen überprüft werden können.
+- **Symbolische Ausführung mit [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/).** Eine Technik für Formale Verifikation, die jeden Ausführungspfad in eine mathematische Formel übersetzt, auf deren Basis Einschränkungen (Constraints) überprüft werden können.
 
-Jede Technik hat Vorteile und Tücken und ist in [bestimmten Fällen](#determining-security-properties) nützlich:
+Jede Technik hat Vor- und Nachteile und ist in [bestimmten Fällen](#determining-security-properties) nützlich:
 
-| Technik | Tool | Nutzung | Geschwindigkeit | Übersehene Fehler | Falscher Alarm |
+| Technik | Tool | Nutzung | Geschwindigkeit | Übersehene Bugs | Falscher Alarm |
 | ------------------ | --------- | ----------------------------- | ------- | ----------- | ------------ |
-| Statische Analyse | Slither | CLI & Skripte | Sekunden | moderat | niedrig |
-| Fuzzing | Echidna | Solidity-Eigenschaften | Minuten | niedrig | keine |
+| Statische Analyse | Slither | CLI & Skripte | Sekunden | moderat | gering |
+| Fuzzing | Echidna | Solidity-Eigenschaften | Minuten | gering | keine |
 | Symbolische Ausführung | Manticore | Solidity-Eigenschaften & Skripte | Stunden | keine\* | keine |
 
-\* wenn alle Pfade ohne Zeitüberschreitung erkundet werden
+\* wenn alle Pfade ohne Zeitüberschreitung (Timeout) erkundet werden
 
-**Slither** analysiert Verträge innerhalb von Sekunden, jedoch kann die statische Analyse zu falschem Alarm führen und ist für komplexe Überprüfungen (z. B. arithmetische Prüfungen) weniger geeignet. Führen Sie Slither über die API aus, um per Knopfdruck auf integrierte Detektoren zuzugreifen, oder über die API für benutzerdefinierte Überprüfungen.
+**Slither** analysiert Verträge innerhalb von Sekunden, jedoch kann die statische Analyse zu falschem Alarm führen und ist für komplexe Prüfungen (z. B. arithmetische Prüfungen) weniger geeignet. Führen Sie Slither über die API aus, um auf Knopfdruck Zugriff auf integrierte Detektoren zu erhalten, oder über die API für benutzerdefinierte Prüfungen.
 
-**Echidna** muss mehrere Minuten lang ausgeführt werden und erzeugt nur echte Treffer. Echidna überprüft vom Benutzer bereitgestellte Sicherheitseigenschaften, die in Solidity geschrieben sind. Es könnte Fehler übersehen, da es auf zufälliger Erkundung basiert.
+**Echidna** muss mehrere Minuten lang ausgeführt werden und erzeugt nur echte Treffer (True Positives). Echidna überprüft vom Benutzer bereitgestellte Sicherheitseigenschaften, die in Solidity geschrieben sind. Es könnte Bugs übersehen, da es auf zufälliger Erkundung basiert.
 
-**Manticore** führt die „schwerwiegendste“ Analyse durch. Wie Echidna verifiziert Manticore vom Benutzer bereitgestellte Eigenschaften. Es benötigt mehr Zeit für die Ausführung, kann aber die Gültigkeit einer Eigenschaft beweisen und meldet keinen falschen Alarm.
+**Manticore** führt die "schwerwiegendste" (umfangreichste) Analyse durch. Wie Echidna verifiziert Manticore vom Benutzer bereitgestellte Eigenschaften. Es benötigt mehr Zeit für die Ausführung, kann aber die Gültigkeit einer Eigenschaft beweisen und meldet keinen falschen Alarm.
 
 ## Empfohlener Workflow {#suggested-workflow}
 
-Beginnen Sie mit den integrierten Detektoren von Slither, um sicherzustellen, dass keine einfachen Fehler vorhanden sind oder später eingeführt werden. Verwenden Sie Slither, um Eigenschaften im Zusammenhang mit Vererbung, Variablenabhängigkeiten und strukturellen Problemen zu überprüfen. Wenn die Codebasis wächst, verwenden Sie Echidna, um komplexere Eigenschaften des Zustandsautomaten zu testen. Kehren Sie zu Slither zurück, um benutzerdefinierte Überprüfungen für Schutzmaßnahmen zu entwickeln, die in Solidity nicht verfügbar sind, wie z. B. den Schutz vor dem Überschreiben einer Funktion. Verwenden Sie schließlich Manticore, um eine gezielte Verifizierung kritischer Sicherheitseigenschaften durchzuführen, z. B. arithmetische Operationen.
+Beginnen Sie mit den integrierten Detektoren von Slither, um sicherzustellen, dass keine einfachen Bugs vorhanden sind oder später eingeführt werden. Verwenden Sie Slither, um Eigenschaften im Zusammenhang mit Vererbung, Variablenabhängigkeiten und strukturellen Problemen zu überprüfen. Wenn die Codebasis wächst, verwenden Sie Echidna, um komplexere Eigenschaften des Zustandsautomaten (State Machine) zu testen. Kehren Sie zu Slither zurück, um benutzerdefinierte Prüfungen für Schutzmechanismen zu entwickeln, die in Solidity nicht verfügbar sind, wie z. B. den Schutz davor, dass eine Funktion überschrieben wird. Verwenden Sie schließlich Manticore, um eine gezielte Verifikation kritischer Sicherheitseigenschaften durchzuführen, z. B. arithmetische Operationen.
 
 - Verwenden Sie die CLI von Slither, um häufige Probleme zu erfassen
 - Verwenden Sie Echidna, um übergeordnete Sicherheitseigenschaften Ihres Vertrags zu testen
-- Verwenden Sie Slither, um benutzerdefinierte statische Überprüfungen zu schreiben
+- Verwenden Sie Slither, um benutzerdefinierte statische Prüfungen zu schreiben
 - Verwenden Sie Manticore, sobald Sie eine tiefgehende Absicherung kritischer Sicherheitseigenschaften wünschen
 
-**Ein Hinweis zu Unit-Tests**. Unit-Tests sind notwendig, um qualitativ hochwertige Software zu erstellen. Diese Techniken sind jedoch nicht am besten geeignet, um Sicherheitslücken zu finden. Sie werden typischerweise verwendet, um positive Verhaltensweisen von Code zu testen (d. h. der Code funktioniert im normalen Kontext wie erwartet), während Sicherheitslücken tendenziell in Randfällen liegen, die die Entwickler nicht berücksichtigt haben. In unserer Studie von Dutzenden von Smart-Contract-Sicherheitsüberprüfungen [hatte die Abdeckung durch Unit-Tests keine Auswirkungen auf die Anzahl oder den Schweregrad von Sicherheitslücken](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/), die wir im Code unserer Kunden gefunden haben.
+**Ein Hinweis zu Unit-Tests**. Unit-Tests sind notwendig, um qualitativ hochwertige Software zu entwickeln. Diese Techniken sind jedoch nicht am besten geeignet, um Sicherheitslücken zu finden. Sie werden typischerweise verwendet, um das positive Verhalten von Code zu testen (d. h. der Code funktioniert im normalen Kontext wie erwartet), während Sicherheitslücken tendenziell in Randfällen (Edge Cases) liegen, die die Entwickler nicht berücksichtigt haben. In unserer Studie von Dutzenden von Smart-Contract-Sicherheitsüberprüfungen [hatte die Abdeckung durch Unit-Tests keine Auswirkungen auf die Anzahl oder den Schweregrad von Sicherheitslücken](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/), die wir im Code unserer Kunden gefunden haben.
 
 ## Bestimmung von Sicherheitseigenschaften {#determining-security-properties}
 
-Um Ihren Code effektiv zu testen und zu verifizieren, müssen Sie die Bereiche identifizieren, die Aufmerksamkeit erfordern. Da Ihre für Sicherheit aufgewendeten Ressourcen begrenzt sind, ist es wichtig, die schwachen oder hochwertigen Teile Ihrer Codebasis einzugrenzen, um Ihren Aufwand zu optimieren. Bedrohungsmodellierung kann dabei helfen. Ziehen Sie in Betracht, Folgendes zu überprüfen:
+Um Ihren Code effektiv zu testen und zu verifizieren, müssen Sie die Bereiche identifizieren, die Aufmerksamkeit erfordern. Da Ihre für Sicherheit aufgewendeten Ressourcen begrenzt sind, ist es wichtig, die schwachen oder besonders wertvollen Teile Ihrer Codebasis einzugrenzen, um Ihren Aufwand zu optimieren. Threat Modeling (Bedrohungsmodellierung) kann dabei helfen. Ziehen Sie in Betracht, Folgendes zu überprüfen:
 
-- [Rapid Risk Assessments](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html) (unser bevorzugter Ansatz, wenn die Zeit knapp ist)
-- [Guide to Data-Centric System Threat Modeling](https://csrc.nist.gov/pubs/sp/800/154/ipd) (auch bekannt als NIST 800-154)
-- [Shostack threat modeling](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
+- [Schnelle Risikobewertungen (Rapid Risk Assessments)](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html) (unser bevorzugter Ansatz, wenn die Zeit knapp ist)
+- [Leitfaden zur datenzentrierten Systembedrohungsmodellierung](https://csrc.nist.gov/pubs/sp/800/154/ipd) (auch bekannt als NIST 800-154)
+- [Shostack Threat Modeling](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
 - [STRIDE](<https://wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
-- [Use of Assertions](https://blog.regehr.org/archives/1091)
+- [Verwendung von Assertions](https://blog.regehr.org/archives/1091)
 
 ### Komponenten {#components}
 
@@ -61,15 +61,15 @@ Zu wissen, was Sie überprüfen möchten, hilft Ihnen auch bei der Auswahl des r
 
 Zu den weitreichenden Bereichen, die für Smart Contracts häufig relevant sind, gehören:
 
-- **Zustandsautomat.** Die meisten Verträge können als Zustandsautomat dargestellt werden. Überprüfen Sie, ob (1) kein ungültiger Zustand erreicht werden kann, (2) ein gültiger Zustand auch erreicht werden kann und (3) kein Zustand den Vertrag blockiert.
+- **Zustandsautomat (State Machine).** Die meisten Verträge können als Zustandsautomat dargestellt werden. Überprüfen Sie, ob (1) kein ungültiger Zustand erreicht werden kann, (2) wenn ein Zustand gültig ist, dieser auch erreicht werden kann, und (3) kein Zustand den Vertrag in eine Falle lockt (Trapping).
 
-  - Echidna und Manticore sind die bevorzugten Tools zum Testen von Zustandsautomaten-Spezifikationen.
+  - Echidna und Manticore sind die bevorzugten Tools, um Spezifikationen von Zustandsautomaten zu testen.
 
-- **Zugriffskontrollen.** Wenn Ihr System über privilegierte Benutzer verfügt (z. B. einen Eigentümer, Controller ...), müssen Sie sicherstellen, dass (1) jeder Benutzer nur die autorisierten Aktionen ausführen kann und (2) kein Benutzer Aktionen eines privilegierteren Benutzers blockieren kann.
+- **Zugriffskontrollen.** Wenn Ihr System privilegierte Benutzer hat (z. B. einen Eigentümer, Controller ...), müssen Sie sicherstellen, dass (1) jeder Benutzer nur die autorisierten Aktionen ausführen kann und (2) kein Benutzer Aktionen eines privilegierteren Benutzers blockieren kann.
 
-  - Slither, Echidna und Manticore können auf korrekte Zugriffskontrollen prüfen. Beispielsweise kann Slither überprüfen, ob nur bei auf der Whitelist stehenden Funktionen der `onlyOwner`-Modifikator fehlt. Echidna und Manticore sind nützlich für komplexere Zugriffskontrollen, wie z. B. eine Berechtigung, die nur erteilt wird, wenn der Vertrag einen bestimmten Zustand erreicht.
+  - Slither, Echidna und Manticore können auf korrekte Zugriffskontrollen prüfen. Zum Beispiel kann Slither überprüfen, ob nur bei auf der Whitelist stehenden Funktionen der onlyOwner-Modifikator fehlt. Echidna und Manticore sind nützlich für komplexere Zugriffskontrollen, wie z. B. eine Berechtigung, die nur erteilt wird, wenn der Vertrag einen bestimmten Zustand erreicht.
 
-- **Arithmetische Operationen.** Die Überprüfung der Fehlerfreiheit der arithmetischen Operationen ist von entscheidender Bedeutung. Die durchgängige Verwendung von `SafeMath` ist ein guter Schritt, um Überlauf/Unterlauf zu verhindern. Sie müssen jedoch weiterhin andere arithmetische Fehler berücksichtigen, einschließlich Rundungsproblemen und Fehlern, die den Vertrag blockieren.
+- **Arithmetische Operationen.** Die Überprüfung der Fehlerfreiheit der arithmetischen Operationen ist von entscheidender Bedeutung. Die überall stattfindende Verwendung von `SafeMath` ist ein guter Schritt, um einen Überlauf/Unterlauf zu verhindern. Sie müssen jedoch weiterhin andere arithmetische Fehler berücksichtigen, einschließlich Rundungsproblemen und Fehlern, die den Vertrag blockieren.
 
   - Manticore ist hier die beste Wahl. Echidna kann verwendet werden, wenn die Arithmetik außerhalb des Bereichs des SMT-Solvers liegt.
 
@@ -79,10 +79,10 @@ Zu den weitreichenden Bereichen, die für Smart Contracts häufig relevant sind,
 
 - **Externe Interaktionen.** Verträge interagieren miteinander, und einigen externen Verträgen sollte nicht vertraut werden. Wenn sich Ihr Vertrag beispielsweise auf externe Orakel verlässt, bleibt er dann sicher, wenn die Hälfte der verfügbaren Orakel kompromittiert ist?
 
-  - Manticore und Echidna sind die beste Wahl zum Testen externer Interaktionen mit Ihren Verträgen. Manticore verfügt über einen integrierten Mechanismus zum Stubbing externer Verträge.
+  - Manticore und Echidna sind die beste Wahl zum Testen externer Interaktionen mit Ihren Verträgen. Manticore verfügt über einen integrierten Mechanismus zum Stubben externer Verträge.
 
-- **Standardkonformität.** Ethereum-Standards (z. B. ERC20) haben eine Geschichte von Fehlern in ihrem Design. Seien Sie sich der Einschränkungen des Standards bewusst, auf dem Sie aufbauen.
-  - Slither, Echidna und Manticore helfen Ihnen, Abweichungen von einem bestimmten Standard zu erkennen.
+- **Standardkonformität.** Ethereum-Standards (z. B. ERC-20) haben eine Historie von Fehlern in ihrem Design. Seien Sie sich der Einschränkungen des Standards bewusst, auf dem Sie aufbauen.
+  - Slither, Echidna und Manticore helfen Ihnen dabei, Abweichungen von einem bestimmten Standard zu erkennen.
 
 ### Spickzettel zur Tool-Auswahl {#tool-selection-cheatsheet}
 
@@ -95,7 +95,7 @@ Zu den weitreichenden Bereichen, die für Smart Contracts häufig relevant sind,
 | Externe Interaktionen | Manticore, Echidna |
 | Standardkonformität | Slither, Echidna, Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance) |
 
-Andere Bereiche müssen je nach Ihren Zielen überprüft werden, aber diese groben Schwerpunktbereiche sind ein guter Start für jedes Smart-Contract-System.
+Andere Bereiche müssen je nach Ihren Zielen überprüft werden, aber diese groben Schwerpunktbereiche sind ein guter Ausgangspunkt für jedes Smart-Contract-System.
 
 Unsere öffentlichen Audits enthalten Beispiele für verifizierte oder getestete Eigenschaften. Ziehen Sie in Betracht, die Abschnitte `Automated Testing and Verification` der folgenden Berichte zu lesen, um reale Sicherheitseigenschaften zu überprüfen:
 

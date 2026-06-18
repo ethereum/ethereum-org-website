@@ -1,16 +1,16 @@
 ---
 title: Netzwerke
-description: "Ein Überblick über die Netzwerke von Ethereum und wo man Testnet-Ether (ETH) zum Testen seiner Anwendung erhält."
+description: Ein Überblick über die Netzwerke von Ethereum und wo man Testnetz-Ether (ETH) zum Testen seiner Anwendung erhält.
 lang: de
 ---
 
-[Ethereum](/) Netzwerke sind Gruppen von verbundenen Computern, die über das Ethereum-Protokoll kommunizieren. Es gibt nur ein Ethereum-Mainnet, aber unabhängige Netzwerke, die denselben Protokollregeln entsprechen, können zu Test- und Entwicklungszwecken erstellt werden. Es gibt viele unabhängige „Netzwerke“, die dem Protokoll entsprechen, ohne miteinander zu interagieren. Sie können sogar lokal auf Ihrem eigenen Computer eines starten, um Ihre Smart Contracts und Web3-Dapps zu testen.
+[Ethereum](/)-Netzwerke sind Gruppen verbundener Computer, die über das Ethereum-Protokoll kommunizieren. Es gibt nur ein Ethereum Mainnet, aber für Test- und Entwicklungszwecke können unabhängige Netzwerke erstellt werden, die denselben Protokollregeln entsprechen. Es gibt viele unabhängige „Netzwerke“, die dem Protokoll entsprechen, ohne miteinander zu interagieren. Sie können sogar lokal auf Ihrem eigenen Computer eines starten, um Ihre Smart Contracts und Web3-Apps zu testen.
 
-Ihr Ethereum-Konto funktioniert über die verschiedenen Netzwerke hinweg, aber Ihr Kontostand und Ihre Transaktionshistorie werden nicht aus dem Haupt-Ethereum-Netzwerk übernommen. Zu Testzwecken ist es nützlich zu wissen, welche Netzwerke verfügbar sind und wie man Testnet-ETH erhält, um damit herumzuspielen. Im Allgemeinen wird aus Sicherheitsgründen nicht empfohlen, Mainnet-Konten in Testnets wiederzuverwenden oder umgekehrt.
+Ihr Ethereum-Konto funktioniert über die verschiedenen Netzwerke hinweg, aber Ihr Kontostand und Ihr Transaktionsverlauf werden nicht aus dem Haupt-Ethereum-Netzwerk übernommen. Für Testzwecke ist es nützlich zu wissen, welche Netzwerke verfügbar sind und wie man Testnetz-ETH zum Ausprobieren erhält. Im Allgemeinen wird aus Sicherheitsgründen nicht empfohlen, Mainnet-Konten in Testnetzen wiederzuverwenden oder umgekehrt.
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten die [Grundlagen von Ethereum](/developers/docs/intro-to-ethereum/) verstehen, bevor Sie sich über die verschiedenen Netzwerke informieren, da die Testnetzwerke Ihnen eine günstige, sichere Version von Ethereum zum Herumspielen bieten.
+Sie sollten die [Grundlagen von Ethereum](/developers/docs/intro-to-ethereum/) verstehen, bevor Sie sich über die verschiedenen Netzwerke informieren, da die Testnetzwerke Ihnen eine günstige, sichere Version von Ethereum zum Ausprobieren bieten.
 
 ## Öffentliche Netzwerke {#public-networks}
 
@@ -18,29 +18,29 @@ Sie sollten die [Grundlagen von Ethereum](/developers/docs/intro-to-ethereum/) v
 
 ### Ethereum Mainnet {#ethereum-mainnet}
 
-Das Mainnet ist die primäre öffentliche Ethereum-Produktions-Blockchain, auf der Transaktionen mit tatsächlichem Wert auf dem verteilten Ledger stattfinden.
+Das Mainnet ist die primäre öffentliche Ethereum-Produktions-Blockchain, auf der Transaktionen mit tatsächlichem Wert auf dem verteilten Hauptbuch (Distributed Ledger) stattfinden.
 
 Wenn Leute und Börsen über ETH-Preise diskutieren, sprechen sie über Mainnet-ETH.
 
-### Ethereum-Testnets {#ethereum-testnets}
+### Ethereum-Testnetze {#ethereum-testnets}
 
-Zusätzlich zum Mainnet gibt es öffentliche Testnets. Dies sind Netzwerke, die von Protokollentwicklern oder Smart-Contract-Entwicklern verwendet werden, um sowohl Protokoll-Upgrades als auch potenzielle Smart Contracts in einer produktionsähnlichen Umgebung zu testen, bevor sie im Mainnet bereitgestellt werden. Stellen Sie sich dies als Analogon zu Produktions- versus Staging-Servern vor.
+Zusätzlich zum Mainnet gibt es öffentliche Testnetze. Dies sind Netzwerke, die von Protokollentwicklern oder Smart-Contract-Entwicklern verwendet werden, um sowohl Protokoll-Upgrades als auch potenzielle Smart Contracts in einer produktionsähnlichen Umgebung vor der Bereitstellung im Mainnet zu testen. Stellen Sie sich dies als Analogon zu Produktions- versus Staging-Servern vor.
 
-Sie sollten jeden von Ihnen geschriebenen Vertrags-Code in einem Testnet testen, bevor Sie ihn im Mainnet bereitstellen. Bei Dapps, die in bestehende Smart Contracts integriert sind, haben die meisten Projekte Kopien in Testnets bereitgestellt.
+Sie sollten jeden von Ihnen geschriebenen Vertrags-Code in einem Testnetz testen, bevor Sie ihn im Mainnet bereitstellen. Bei dezentralen Anwendungen (Dapps), die in bestehende Smart Contracts integriert sind, haben die meisten Projekte Kopien in Testnetzen bereitgestellt.
 
-Die meisten Testnets begannen mit der Verwendung eines erlaubnispflichtigen Proof-of-Authority-Konsensmechanismus. Das bedeutet, dass eine kleine Anzahl von Blockchain-Knoten ausgewählt wird, um Transaktionen zu validieren und neue Blöcke zu erstellen – wobei sie dabei ihre Identität als Einsatz verwenden. Alternativ verfügen einige Testnets über einen offenen Proof-of-Stake-Konsensmechanismus, bei dem jeder das Ausführen eines Validators testen kann, genau wie im Ethereum-Mainnet.
+Die meisten Testnetze begannen mit der Verwendung eines erlaubnispflichtigen Autoritätsnachweis (PoA)-Konsensmechanismus. Das bedeutet, dass eine kleine Anzahl von Knoten ausgewählt wird, um Transaktionen zu validieren und neue Blöcke zu erstellen – wobei sie dabei ihre Identität einsetzen. Alternativ verfügen einige Testnetze über einen offenen Proof-of-Stake (PoS)-Konsensmechanismus, bei dem jeder das Ausführen eines Validators testen kann, genau wie im Ethereum Mainnet.
 
-ETH in Testnets soll keinen echten Wert haben; es wurden jedoch Märkte für bestimmte Arten von Testnet-ETH geschaffen, die knapp oder schwer zu bekommen sind. Da Sie ETH benötigen, um tatsächlich mit Ethereum zu interagieren (auch in Testnets), erhalten die meisten Leute Testnet-ETH kostenlos von Faucets. Die meisten Faucets sind Web-Apps, in die Sie eine Adresse eingeben können, an die ETH gesendet werden soll.
+ETH in Testnetzen soll keinen echten Wert haben; es wurden jedoch Märkte für bestimmte Arten von Testnetz-ETH geschaffen, die knapp oder schwer zu bekommen sind. Da Sie ETH benötigen, um tatsächlich mit Ethereum zu interagieren (auch in Testnetzen), erhalten die meisten Leute Testnetz-ETH kostenlos von Faucets. Die meisten Faucets sind Web-Apps, in die Sie eine Adresse eingeben können, an die ETH gesendet werden soll.
 
-#### Welches Testnet sollte ich verwenden?
+#### Welches Testnetz sollte ich verwenden? {#which-testnet-should-i-use}
 
-Die beiden öffentlichen Testnets, die Anwendungsentwickler derzeit pflegen, sind Sepolia und Hoodi. Sepolia ist ein Netzwerk für Vertrags- und Anwendungsentwickler, um ihre Anwendungen zu testen. Das Hoodi-Netzwerk ermöglicht es Protokollentwicklern, Netzwerk-Upgrades zu testen, und lässt Staker das Ausführen von Validatoren testen.
+Die beiden öffentlichen Testnetze, die Client-Entwickler derzeit pflegen, sind Sepolia und Hoodi. Sepolia ist ein Netzwerk für Vertrags- und Anwendungsentwickler, um ihre Anwendungen zu testen. Das Hoodi-Netzwerk ermöglicht es Protokollentwicklern, Netzwerk-Upgrades zu testen, und Stakern, das Ausführen von Validatoren zu testen.
 
 #### Sepolia {#sepolia}
 
-**Sepolia ist das empfohlene Standard-Testnet für die Anwendungsentwicklung**. Das Sepolia-Netzwerk verwendet ein erlaubnispflichtiges Validator-Set, das von Anwendungs- und Testteams kontrolliert wird.
+**Sepolia ist das empfohlene Standard-Testnetz für die Anwendungsentwicklung**. Das Sepolia-Netzwerk verwendet ein erlaubnispflichtiges Validator-Set, das von Client- und Testteams kontrolliert wird.
 
-##### Ressourcen
+##### Ressourcen {#hoodi}
 
 - [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Die beiden öffentlichen Testnets, die Anwendungsentwickler derzeit pflegen, sin
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucets
+##### Faucets {#ephemery}
 
 - [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -61,15 +61,15 @@ Die beiden öffentlichen Testnets, die Anwendungsentwickler derzeit pflegen, sin
 - [PoW Faucet](https://sepolia-faucet.pk910.de/)
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Hoodi {#hoodi}
+#### Hoodi {#faucets}
 
-Hoodi ist ein Testnet zum Testen von Validierung und Staking. Das Hoodi-Netzwerk ist offen für Benutzer, die einen Testnet-Validator ausführen möchten. Staker, die Protokoll-Upgrades testen möchten, bevor sie im Mainnet bereitgestellt werden, sollten daher Hoodi verwenden.
+Hoodi ist ein Testnetz zum Testen von Validierung und Staking. Das Hoodi-Netzwerk ist offen für Benutzer, die einen Testnetz-Validator ausführen möchten. Staker, die Protokoll-Upgrades testen möchten, bevor sie im Mainnet bereitgestellt werden, sollten daher Hoodi verwenden.
 
 - Offenes Validator-Set, Staker können Netzwerk-Upgrades testen
 - Großer Zustand, nützlich zum Testen komplexer Smart-Contract-Interaktionen
-- Längere Synchronisationszeit und erfordert mehr Speicherplatz, um einen Blockchain-Knoten auszuführen
+- Längere Synchronisierung und erfordert mehr Speicherplatz, um einen Knoten auszuführen
 
-##### Ressourcen
+##### Ressourcen {#holesky}
 
 - [Website](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,22 +78,22 @@ Hoodi ist ein Testnet zum Testen von Validierung und Staking. Das Hoodi-Netzwerk
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucets
+##### Faucets {#layer-2-testnets}
 
 - [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 - [PoW Faucet](https://hoodi-faucet.pk910.de/)
 
-#### Ephemery {#ephemery}
+#### Ephemery {#arbitrum-sepolia}
 
-Ephemery ist eine einzigartige Art von Testnet, das jeden Monat vollständig zurückgesetzt wird. Der Ausführungs- und Konsenszustand wird alle 28 Tage auf Genesis zurückgesetzt, was bedeutet, dass alles, was im Testnet passiert, flüchtig ist. Dies macht es ideal für kurzfristige Tests, schnelles Bootstrapping von Blockchain-Knoten und „Hello World“-Anwendungen, die keine Dauerhaftigkeit benötigen.
+Ephemery ist eine einzigartige Art von Testnetz, das jeden Monat vollständig zurückgesetzt wird. Der Ausführungs- und Konsenszustand wird alle 28 Tage auf Genesis zurückgesetzt, was bedeutet, dass alles, was im Testnetz passiert, flüchtig (ephemeral) ist. Dies macht es ideal für kurzfristige Tests, schnelles Bootstrapping von Knoten und „Hello World“-Anwendungen, die keine Dauerhaftigkeit benötigen.
 
 - Immer frischer Zustand, kurzfristiges Testen von Validatoren und Apps
 - Enthält nur einen grundlegenden Satz von Verträgen
 - Offenes Validator-Set und einfacher Zugang zu großen Mengen an Geldern
-- Geringste Anforderungen an Blockchain-Knoten und schnellste Synchronisation, durchschnittlich &lt;5GB
+- Geringste Knoten-Anforderungen und schnellste Synchronisierung, im Durchschnitt &lt;5GB
 
-##### Ressourcen
+##### Ressourcen {#optimistic-sepolia}
 
 - [Website](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -104,57 +104,57 @@ Ephemery ist eine einzigartige Art von Testnet, das jeden Monat vollständig zur
 - [Checkpoint Sync](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
-#### Faucets
+#### Faucets {#starknet-sepolia}
 
 - [Bordel Faucet](https://faucet.bordel.wtf/)
 - [Pk910 PoW Faucet](https://ephemery-faucet.pk910.de/)
 
-#### Holesky (veraltet) {#holesky}
+#### Holesky (veraltet) {#private-networks}
 
-Das Holesky-Testnet ist seit September 2025 veraltet. Staking-Betreiber und Infrastrukturanbieter sollten stattdessen Hoodi für Validator-Tests verwenden.
+Das Holesky-Testnetz ist ab September 2025 veraltet. Staking-Betreiber und Infrastrukturanbieter sollten stattdessen Hoodi für Validator-Tests verwenden.
 
-- [Ankündigung der Abschaltung des Holesky-Testnets](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF Blog, 1. September 2025_
-- [Updates zu den Holesky- und Hoodi-Testnets](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EF Blog, 18. März 2025_
+- [Ankündigung der Abschaltung des Holesky-Testnetzes](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF Blog, 1. September 2025_
+- [Updates zu den Holesky- und Hoodi-Testnetzen](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EF Blog, 18. März 2025_
 
-### Ebene-2-Testnets {#layer-2-testnets}
+### Layer-2-Testnetze {#development-networks}
 
-[Ebene 2 (L2)](/layer-2/) ist ein Sammelbegriff zur Beschreibung einer bestimmten Gruppe von Ethereum-Skalierungslösungen. Eine Ebene 2 ist eine separate Blockchain, die Ethereum erweitert und die Sicherheitsgarantien von Ethereum erbt. Ebene-2-Testnets sind in der Regel eng mit öffentlichen Ethereum-Testnets gekoppelt.
+[Layer 2 (L2)](/layer-2/) ist ein Sammelbegriff zur Beschreibung einer bestimmten Gruppe von Ethereum-Skalierungslösungen. Ein Layer 2 ist eine separate Blockchain, die Ethereum erweitert und die Sicherheitsgarantien von Ethereum erbt. Layer-2-Testnetze sind in der Regel eng mit öffentlichen Ethereum-Testnetzen gekoppelt.
 
-#### Arbitrum Sepolia {#arbitrum-sepolia}
+#### Arbitrum Sepolia {#consortium-networks}
 
-Ein Testnet für [Arbitrum](https://arbitrum.io/).
+Ein Testnetz für [Arbitrum](https://arbitrum.io/).
 
-##### Ressourcen
+##### Ressourcen {#why-naming}
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucets
+##### Faucets {#common-and-legacy-testnets}
 
 - [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
-- [Chainlink Arbitrum Sepolia faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [Chainlink Arbitrum Sepolia Faucet](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com Arbitrum Sepolia Faucet](https://ethfaucet.com/networks/arbitrum)
 - [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Sepolia {#optimistic-sepolia}
+#### Optimistic Sepolia {#other-testnets}
 
-Ein Testnet für [Optimism](https://www.optimism.io/).
+Ein Testnetz für [Optimism](https://www.optimism.io/).
 
-##### Ressourcen
+##### Ressourcen {#related-tools}
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucets
+##### Faucets {#further-reading}
 
 - [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com Optimism Sepolia Faucet](https://ethfaucet.com/networks/optimism)
-- [Testnet Faucet](https://docs.optimism.io/builders/tools/build/faucets)
+- [Testnet-Faucet](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet Sepolia {#starknet-sepolia}
+#### Starknet Sepolia
 
-Ein Testnet für [Starknet](https://www.starknet.io).
+Ein Testnetz für [Starknet](https://www.starknet.io).
 
 ##### Ressourcen
 
@@ -166,51 +166,51 @@ Ein Testnet für [Starknet](https://www.starknet.io).
 - [Blast Starknet Sepolia Faucet](https://blastapi.io/faucets/starknet-sepolia-eth)
 - [Starknet Faucet](https://starknet-faucet.vercel.app/)
 
-## Private Netzwerke {#private-networks}
+## Private Netzwerke
 
-Ein Ethereum-Netzwerk ist ein privates Netzwerk, wenn seine Blockchain-Knoten nicht mit einem öffentlichen Netzwerk (d. h. Mainnet oder einem Testnet) verbunden sind. In diesem Zusammenhang bedeutet privat nur reserviert oder isoliert, anstatt geschützt oder sicher.
+Ein Ethereum-Netzwerk ist ein privates Netzwerk, wenn seine Knoten nicht mit einem öffentlichen Netzwerk (d. h. Mainnet oder einem Testnetz) verbunden sind. In diesem Zusammenhang bedeutet privat nur reserviert oder isoliert, nicht jedoch geschützt oder sicher.
 
-### Entwicklungsnetzwerke {#development-networks}
+### Entwicklungsnetzwerke
 
-Um eine Ethereum-Anwendung zu entwickeln, sollten Sie sie in einem privaten Netzwerk ausführen, um zu sehen, wie sie funktioniert, bevor Sie sie bereitstellen. Ähnlich wie Sie einen lokalen Server auf Ihrem Computer für die Webentwicklung erstellen, können Sie eine lokale Blockchain-Instanz erstellen, um Ihre Dapp zu testen. Dies ermöglicht eine viel schnellere Iteration als ein öffentliches Testnet.
+Um eine Ethereum-Anwendung zu entwickeln, sollten Sie sie in einem privaten Netzwerk ausführen, um zu sehen, wie sie funktioniert, bevor Sie sie bereitstellen. Ähnlich wie Sie für die Webentwicklung einen lokalen Server auf Ihrem Computer erstellen, können Sie eine lokale Blockchain-Instanz erstellen, um Ihre Dapp zu testen. Dies ermöglicht eine viel schnellere Iteration als ein öffentliches Testnetz.
 
 Es gibt Projekte und Tools, die speziell dafür entwickelt wurden, dabei zu helfen. Erfahren Sie mehr über [Entwicklungsnetzwerke](/developers/docs/development-networks/).
 
-### Konsortium-Netzwerke {#consortium-networks}
+### Konsortium-Netzwerke
 
-Der Konsensprozess wird von einer vordefinierten Gruppe von Blockchain-Knoten gesteuert, denen vertraut wird. Zum Beispiel ein privates Netzwerk bekannter akademischer Institutionen, die jeweils einen einzelnen Blockchain-Knoten verwalten, und Blöcke werden durch einen Schwellenwert von Unterzeichnern innerhalb des Netzwerks validiert.
+Der Konsensprozess wird von einer vordefinierten Gruppe von Knoten gesteuert, denen vertraut wird. Zum Beispiel ein privates Netzwerk bekannter akademischer Einrichtungen, die jeweils einen einzelnen Knoten verwalten, und Blöcke werden durch einen Schwellenwert von Unterzeichnern innerhalb des Netzwerks validiert.
 
 Wenn ein öffentliches Ethereum-Netzwerk wie das öffentliche Internet ist, ist ein Konsortium-Netzwerk wie ein privates Intranet.
 
-## <Emoji text="🚉" /> Warum sind Ethereum-Testnets nach U-Bahn-Stationen benannt? {#why-naming}
+## <Emoji text="🚉" /> Warum sind Ethereum-Testnetze nach U-Bahn-Stationen benannt?
 
-Viele Ethereum-Testnets sind nach realen U-Bahn- oder Bahnhöfen benannt. Diese Namensgebungstradition begann früh und spiegelt die globalen Städte wider, in denen Mitwirkende gelebt oder gearbeitet haben. Es ist symbolisch, einprägsam und praktisch. Genau wie Testnets vom Ethereum-Mainnet isoliert sind, verlaufen U-Bahn-Linien getrennt vom Oberflächenverkehr.
+Viele Ethereum-Testnetze sind nach realen U-Bahn- oder Bahnhöfen benannt. Diese Namenstradition begann früh und spiegelt die globalen Städte wider, in denen Mitwirkende gelebt oder gearbeitet haben. Es ist symbolisch, einprägsam und praktisch. Genau wie Testnetze vom Ethereum Mainnet isoliert sind, verlaufen U-Bahn-Linien getrennt vom Oberflächenverkehr.
 
-### <Emoji text="🚧" /> Häufig genutzte und veraltete Testnets {#common-and-legacy-testnets}
+### <Emoji text="🚧" /> Häufig genutzte und veraltete Testnetze
 
 - **Sepolia** - Ein an die U-Bahn angebundenes Viertel in Athen, Griechenland. Wird derzeit für Smart-Contract- und Dapp-Tests verwendet.
 - **Hoodi** - Benannt nach der U-Bahn-Station Hoodi in Bengaluru, Indien. Wird für Validator- und Protokoll-Upgrade-Tests verwendet.
 - **Goerli** _(veraltet)_ - Benannt nach dem Görlitzer Bahnhof in Berlin, Deutschland.
 - **Rinkeby** _(veraltet)_ - Benannt nach einem Vorort von Stockholm mit einer U-Bahn-Station.
-- **Ropsten** _(veraltet)_ - Bezieht sich auf ein Gebiet und einen ehemaligen Fähr-/U-Bahn-Terminal in Stockholm.
+- **Ropsten** _(veraltet)_ - Bezieht sich auf ein Gebiet und ein ehemaliges Fähr-/U-Bahn-Terminal in Stockholm.
 - **Kovan** _(veraltet)_ - Benannt nach einer MRT-Station in Singapur.
-- **Morden** _(veraltet)_ - Benannt nach einer Station der London Underground. Ethereums erstes öffentliches Testnet.
+- **Morden** _(veraltet)_ - Benannt nach einer Station der London Underground. Ethereums erstes öffentliches Testnetz.
 
-### <Emoji text="🧪" /> Andere spezialisierte Testnets {#other-testnets}
+### <Emoji text="🧪" /> Andere spezialisierte Testnetze
 
-Einige Testnets wurden für kurzfristige oder Upgrade-spezifische Tests erstellt und haben nicht unbedingt ein U-Bahn-Thema:
+Einige Testnetze wurden für kurzfristige oder Upgrade-spezifische Tests erstellt und haben nicht unbedingt ein U-Bahn-Thema:
 
-- **Holesky** _(veraltet)_ - Benannt nach dem Bahnhof Holešovice in Prag. Wurde für Validator-Tests verwendet; veraltet seit 2025.
-- **Kiln**, **Zhejiang**, **Shandong**, **Prater**, **Pyrmont**, **Olympic** _(alle veraltet)_ und **Ephemery** - Speziell für Upgrade-Simulationen wie The Merge, Shanghai oder Validator-Experimente entwickelt. Einige Namen sind eher regional oder thematisch als U-Bahn-basiert.
+- **Holesky** _(veraltet)_ - Benannt nach dem Bahnhof Holešovice in Prag. Wurde für Validator-Tests verwendet; 2025 als veraltet eingestuft.
+- **Kiln**, **Zhejiang**, **Shandong**, **Prater**, **Pyrmont**, **Olympic** _(alle veraltet)_ und **Ephemery** - Speziell für Upgrade-Simulationen wie den Merge, Shanghai oder Validator-Experimente entwickelt. Einige Namen sind eher regional oder thematisch als U-Bahn-basiert.
 
-Die Verwendung von U-Bahn-Stationsnamen hilft Entwicklern, Testnets schnell zu identifizieren und sich daran zu erinnern, ohne sich auf numerische Chain-IDs verlassen zu müssen. Es spiegelt auch die Kultur von Ethereum wider: praktisch, global und menschenzentriert.
+Die Verwendung von U-Bahn-Stationsnamen hilft Entwicklern, Testnetze schnell zu identifizieren und sich daran zu erinnern, ohne sich auf numerische Chain-IDs verlassen zu müssen. Es spiegelt auch die Kultur von Ethereum wider: praktisch, global und menschenzentriert.
 
-## Verwandte Tools {#related-tools}
+## Verwandte Tools
 
 - [Chainlist](https://chainlist.org/) _Liste von EVM-Netzwerken, um Wallets und Anbieter mit der entsprechenden Chain-ID und Netzwerk-ID zu verbinden_
-- [EVM-basierte Chains](https://github.com/ethereum-lists/chains) _GitHub-Repo mit Chain-Metadaten, das Chainlist antreibt_
+- [EVM-basierte Chains](https://github.com/ethereum-lists/chains) _GitHub-Repository mit Chain-Metadaten, die Chainlist antreiben_
 
-## Weiterführende Literatur {#further-reading}
+## Weiterführende Literatur
 
-- [Vorschlag: Vorhersehbarer Lebenszyklus von Ethereum-Testnets](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
-- [Die Evolution der Ethereum-Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
+- [Vorschlag: Vorhersehbarer Lebenszyklus von Ethereum-Testnetzen](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
+- [Die Evolution der Ethereum-Testnetze](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

@@ -1,31 +1,31 @@
 ---
-title: "Dezentralisierte Identität"
-description: "Was ist eine dezentralisierte Identität und warum ist sie wichtig?"
+title: Dezentrale Identität
+description: Was ist dezentrale Identität und warum ist sie wichtig?
 lang: de
 template: use-cases
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
 summaryPoints:
-  - "Traditionelle Identitätssysteme haben die Emission, Pflege und Kontrolle Ihrer Identifikatoren zentralisiert."
-  - "Dezentralisierte Identität beseitigt die Abhängigkeit von zentralisierten Drittanbietern."
-  - "Dank Krypto haben Benutzer nun wieder die Werkzeuge, um ihre eigenen Identifikatoren und Bestätigungen zu emittieren, zu halten und zu kontrollieren."
+  - "Traditionelle Identitätssysteme haben die Ausstellung, Pflege und Kontrolle Ihrer Identifikatoren zentralisiert."
+  - "Dezentrale Identität beseitigt die Abhängigkeit von zentralisierten Drittanbietern."
+  - "Dank Krypto haben Nutzer nun wieder die Werkzeuge, um ihre eigenen Identifikatoren und Attestierungen auszustellen, zu halten und zu kontrollieren."
 ---
 
 Identität untermauert heute praktisch jeden Aspekt Ihres Lebens. Die Nutzung von Online-Diensten, die Eröffnung eines Bankkontos, die Stimmabgabe bei Wahlen, der Kauf von Immobilien, die Sicherung eines Arbeitsplatzes – all diese Dinge erfordern den Nachweis Ihrer Identität.
 
-Traditionelle Identitätsmanagementsysteme verlassen sich jedoch seit langem auf zentralisierte Vermittler, die Ihre Identifikatoren und [Bestätigungen](/glossary/#attestation) ausgeben, halten und kontrollieren. Das bedeutet, dass Sie Ihre identitätsbezogenen Informationen nicht kontrollieren oder entscheiden können, wer Zugang zu personenbezogenen Daten (PII) hat und wie viel Zugang diese Parteien haben.
+Traditionelle Identitätsmanagementsysteme verlassen sich jedoch seit langem auf zentralisierte Vermittler, die Ihre Identifikatoren und [Attestierungen](/glossary/#attestation) ausstellen, halten und kontrollieren. Das bedeutet, dass Sie Ihre identitätsbezogenen Informationen nicht kontrollieren oder entscheiden können, wer Zugang zu personenbezogenen Daten (PII) hat und wie viel Zugang diese Parteien haben.
 
-Um diese Probleme zu lösen, haben wir dezentralisierte Identitätssysteme, die auf öffentlichen Blockchains wie [Ethereum](/) aufbauen. Dezentralisierte Identität ermöglicht es Einzelpersonen, ihre identitätsbezogenen Informationen zu verwalten. Mit dezentralisierten Identitätslösungen können _Sie_ Identifikatoren erstellen und Ihre Bestätigungen beanspruchen und halten, ohne sich auf zentrale Behörden wie Dienstleister oder Regierungen verlassen zu müssen.
+Um diese Probleme zu lösen, haben wir dezentrale Identitätssysteme, die auf öffentlichen Blockchains wie [Ethereum](/) aufbauen. Dezentrale Identität ermöglicht es Einzelpersonen, ihre identitätsbezogenen Informationen zu verwalten. Mit dezentralen Identitätslösungen können _Sie_ Identifikatoren erstellen und Ihre Attestierungen beanspruchen und halten, ohne sich auf zentrale Behörden wie Dienstleister oder Regierungen verlassen zu müssen.
 
 ## Was ist Identität? {#what-is-identity}
 
-Identität bedeutet das Selbstverständnis eines Individuums, definiert durch einzigartige Merkmale. Identität bezieht sich darauf, ein _Individuum_ zu sein, d. h. eine eigenständige menschliche Entität. Identität könnte sich auch auf andere, nicht-menschliche Entitäten beziehen, wie z. B. eine Organisation oder Behörde.
+Identität bedeutet das Selbstverständnis eines Individuums, definiert durch einzigartige Merkmale. Identität bezieht sich darauf, ein _Individuum_ zu sein, d. h. eine eigenständige menschliche Entität. Identität könnte sich auch auf andere nicht-menschliche Entitäten beziehen, wie eine Organisation oder Behörde.
 
-<YouTube id="Ew-_F-OtDFI" />
+<VideoWatch slug="decentralized-identity-explained" />
 
 ## Was sind Identifikatoren? {#what-are-identifiers}
 
-Ein Identifikator ist eine Information, die als Verweis auf eine bestimmte Identität oder bestimmte Identitäten dient. Zu den gängigen Identifikatoren gehören:
+Ein Identifikator ist eine Information, die als Verweis auf eine bestimmte Identität oder Identitäten dient. Häufige Identifikatoren sind:
 
 - Name
 - Sozialversicherungsnummer/Steueridentifikationsnummer
@@ -33,172 +33,172 @@ Ein Identifikator ist eine Information, die als Verweis auf eine bestimmte Ident
 - Geburtsdatum und -ort
 - Digitale Identifikationsnachweise, z. B. E-Mail-Adressen, Benutzernamen, Avatare
 
-Diese traditionellen Beispiele für Identifikatoren werden von zentralen Entitäten ausgegeben, gehalten und kontrolliert. Sie benötigen die Erlaubnis Ihrer Regierung, um Ihren Namen zu ändern, oder von einer Social-Media-Plattform, um Ihren Benutzernamen zu ändern.
+Diese traditionellen Beispiele für Identifikatoren werden von zentralen Entitäten ausgestellt, gehalten und kontrolliert. Sie benötigen die Erlaubnis Ihrer Regierung, um Ihren Namen zu ändern, oder von einer Social-Media-Plattform, um Ihren Benutzernamen zu ändern.
 
-## Vorteile der dezentralisierten Identität {#benefits-of-decentralized-identity}
+## Vorteile der dezentralen Identität {#benefits-of-decentralized-identity}
 
-1. Dezentralisierte Identität erhöht die individuelle Kontrolle über identifizierende Informationen. Dezentralisierte Identifikatoren und Bestätigungen können verifiziert werden, ohne sich auf zentralisierte Behörden und Drittanbieterdienste verlassen zu müssen.
+1. Dezentrale Identität erhöht die individuelle Kontrolle über identifizierende Informationen. Dezentrale Identifikatoren und Attestierungen können verifiziert werden, ohne sich auf zentralisierte Behörden und Drittanbieterdienste verlassen zu müssen.
 
-2. Dezentralisierte Identitätslösungen ermöglichen eine vertrauenslose, nahtlose und datenschutzfreundliche Methode zur Verifizierung und Verwaltung der Benutzeridentität.
+2. Dezentrale Identitätslösungen ermöglichen eine vertrauenslose, nahtlose und die Privatsphäre schützende Methode zur Verifizierung und Verwaltung der Benutzeridentität.
 
-3. Dezentralisierte Identität nutzt die Blockchain-Technologie, die Vertrauen zwischen verschiedenen Parteien schafft und kryptografische Garantien bietet, um die Gültigkeit von Bestätigungen zu beweisen.
+3. Dezentrale Identität nutzt die Blockchain-Technologie, die Vertrauen zwischen verschiedenen Parteien schafft und kryptographische Garantien bietet, um die Gültigkeit von Attestierungen zu beweisen.
 
-4. Dezentralisierte Identität macht Identitätsdaten portabel. Benutzer speichern Bestätigungen und Identifikatoren in einem mobilen Wallet und können sie mit jeder beliebigen Partei teilen. Dezentralisierte Identifikatoren und Bestätigungen sind nicht in der Datenbank der ausstellenden Organisation gesperrt.
+4. Dezentrale Identität macht Identitätsdaten portabel. Nutzer speichern Attestierungen und Identifikatoren in einer mobilen Wallet und können sie mit jeder beliebigen Partei teilen. Dezentrale Identifikatoren und Attestierungen sind nicht in der Datenbank der ausstellenden Organisation eingeschlossen.
 
-5. Dezentralisierte Identität sollte gut mit aufkommenden [Zero-Knowledge](/glossary/#zk-proof)-Technologien funktionieren, die es Einzelpersonen ermöglichen zu beweisen, dass sie etwas besitzen oder getan haben, ohne preiszugeben, was diese Sache ist. Dies könnte ein mächtiger Weg werden, um Vertrauen und Privatsphäre für Anwendungen wie Wahlen zu kombinieren.
+5. Dezentrale Identität sollte gut mit aufkommenden [Zero-Knowledge](/glossary/#zk-proof)-Technologien funktionieren, die es Einzelpersonen ermöglichen zu beweisen, dass sie etwas besitzen oder getan haben, ohne preiszugeben, was genau das ist. Dies könnte ein mächtiger Weg werden, um Vertrauen und Privatsphäre für Anwendungen wie die Stimmabgabe zu kombinieren.
 
-6. Dezentralisierte Identität ermöglicht Anti-[Sybil-Angriff](/glossary/#anti-sybil)-Mechanismen (Anti-Sybil), um zu erkennen, wenn ein einzelner Mensch vorgibt, mehrere Menschen zu sein, um ein System zu manipulieren oder zu spammen.
+6. Dezentrale Identität ermöglicht [Anti-Sybil](/glossary/#anti-sybil)-Mechanismen, um zu erkennen, wenn ein einzelner Mensch vorgibt, mehrere Menschen zu sein, um ein System zu manipulieren oder zu spammen.
 
-## Anwendungsfälle für dezentralisierte Identität {#decentralized-identity-use-cases}
+## Anwendungsfälle für dezentrale Identität {#decentralized-identity-use-cases}
 
-Dezentralisierte Identität hat viele potenzielle Anwendungsfälle:
+Dezentrale Identität hat viele potenzielle Anwendungsfälle:
 
 ### 1. Universelle Logins {#universal-dapp-logins}
 
-Dezentralisierte Identität kann helfen, passwortbasierte Logins durch dezentralisierte Authentifizierung zu ersetzen. Dienstleister können Bestätigungen an Benutzer ausgeben, die in einem Ethereum-Wallet gespeichert werden können. Eine beispielhafte Bestätigung wäre ein [nicht-fungibler Token](/glossary/#nft) (NFT), der dem Inhaber Zugang zu einer Online-Community gewährt.
+Dezentrale Identität kann helfen, passwortbasierte Logins durch dezentrale Authentifizierung zu ersetzen. Dienstleister können Attestierungen an Nutzer ausstellen, die in einer Ethereum-Wallet gespeichert werden können. Eine beispielhafte Attestierung wäre ein [NFT](/glossary/#nft), das dem Inhaber Zugang zu einer Online-Community gewährt.
 
-Eine [Sign-In with Ethereum](https://siwe.xyz/)-Funktion würde es Servern dann ermöglichen, das Ethereum-Konto des Benutzers zu bestätigen und die erforderliche Bestätigung von seiner Kontoadresse abzurufen. Das bedeutet, dass Benutzer auf Plattformen und Websites zugreifen können, ohne sich lange Passwörter merken zu müssen, was das Online-Erlebnis für Benutzer verbessert.
+Eine [Sign-In with Ethereum](https://siwe.xyz/)-Funktion würde es Servern dann ermöglichen, das Ethereum-Konto des Nutzers zu bestätigen und die erforderliche Attestierung von dessen Kontoadresse abzurufen. Das bedeutet, dass Nutzer auf Plattformen und Websites zugreifen können, ohne sich lange Passwörter merken zu müssen, was das Online-Erlebnis für die Nutzer verbessert.
 
 ### 2. KYC-Authentifizierung {#kyc-authentication}
 
-Die Nutzung vieler Online-Dienste erfordert, dass Einzelpersonen Bestätigungen und Nachweise vorlegen, wie z. B. einen Führerschein oder einen nationalen Reisepass. Dieser Ansatz ist jedoch problematisch, da private Benutzerinformationen kompromittiert werden können und Dienstleister die Echtheit der Bestätigung nicht überprüfen können.
+Die Nutzung vieler Online-Dienste erfordert, dass Einzelpersonen Attestierungen und Nachweise vorlegen, wie z. B. einen Führerschein oder einen nationalen Reisepass. Dieser Ansatz ist jedoch problematisch, da private Nutzerinformationen kompromittiert werden können und Dienstleister die Echtheit der Attestierung nicht verifizieren können.
 
-Dezentralisierte Identität ermöglicht es Unternehmen, auf herkömmliche [Know-Your-Customer (KYC)](https://en.wikipedia.org/wiki/Know_your_customer)-Prozesse zu verzichten und Benutzeridentitäten über verifizierbare Nachweise (Verifiable Credentials) zu authentifizieren. Dies senkt die Kosten für das Identitätsmanagement und verhindert die Verwendung gefälschter Dokumente.
+Dezentrale Identität ermöglicht es Unternehmen, auf herkömmliche [Know-Your-Customer (KYC)](https://en.wikipedia.org/wiki/Know_your_customer)-Prozesse zu verzichten und Nutzeridentitäten über Verifizierbare Nachweise zu authentifizieren. Dies senkt die Kosten für das Identitätsmanagement und verhindert die Verwendung gefälschter Dokumente.
 
-### 3. Wahlen und Online-Communities {#voting-and-online-communities}
+### 3. Stimmabgabe und Online-Communities {#voting-and-online-communities}
 
-Online-Wahlen und soziale Medien sind zwei neuartige Anwendungen für dezentralisierte Identität. Online-Wahlsysteme sind anfällig für Manipulationen, insbesondere wenn böswillige Akteure falsche Identitäten erstellen, um abzustimmen. Die Aufforderung an Einzelpersonen, Bestätigungen auf der Blockchain vorzulegen, kann die Integrität von Online-Wahlprozessen verbessern.
+Online-Stimmabgabe und soziale Medien sind zwei neuartige Anwendungen für dezentrale Identität. Online-Abstimmungssysteme sind anfällig für Manipulationen, insbesondere wenn böswillige Akteure falsche Identitäten erstellen, um abzustimmen. Die Aufforderung an Einzelpersonen, Onchain-Attestierungen vorzulegen, kann die Integrität von Online-Abstimmungsprozessen verbessern.
 
-Dezentralisierte Identität kann helfen, Online-Communities zu schaffen, die frei von gefälschten Konten sind. Zum Beispiel müsste jeder Benutzer seine Identität mithilfe eines Identitätssystems auf der Blockchain, wie dem Ethereum Name Service, authentifizieren, was die Wahrscheinlichkeit von Bots verringert.
+Dezentrale Identität kann helfen, Online-Communities zu schaffen, die frei von gefälschten Konten sind. Zum Beispiel müsste jeder Nutzer seine Identität über ein Onchain-Identitätssystem wie den Ethereum Name Service authentifizieren, was die Wahrscheinlichkeit von Bots verringert.
 
 ### 4. Anti-Sybil-Schutz {#sybil-protection}
 
-Anwendungen zur Vergabe von Zuschüssen, die [quadratische Abstimmungen](/glossary/#quadratic-voting) verwenden, sind anfällig für [Sybil-Angriffe](/glossary/#sybil-attack), da der Wert eines Zuschusses steigt, wenn mehr Personen dafür stimmen, was Benutzer dazu anregt, ihre Beiträge auf viele Identitäten aufzuteilen. Dezentralisierte Identitäten helfen, dies zu verhindern, indem sie die Hürde für jeden Teilnehmer erhöhen, zu beweisen, dass er wirklich ein Mensch ist, oft jedoch ohne spezifische private Informationen preisgeben zu müssen.
+Anwendungen zur Vergabe von Zuschüssen, die [Quadratische Stimmabgabe](/glossary/#quadratic-voting) verwenden, sind anfällig für [Sybil-Angriffe](/glossary/#sybil-attack), da der Wert eines Zuschusses steigt, wenn mehr Personen dafür stimmen, was Nutzer dazu anregt, ihre Beiträge auf viele Identitäten aufzuteilen. Dezentrale Identitäten helfen, dies zu verhindern, indem sie die Hürde für jeden Teilnehmer erhöhen, zu beweisen, dass er wirklich ein Mensch ist, oft ohne spezifische private Informationen preisgeben zu müssen.
 
 ### 5. Nationale und staatliche IDs {#national-and-government-id}
 
-Regierungen können die Prinzipien der dezentralisierten Identität nutzen, um grundlegende Identitätsdokumente – wie nationale Personalausweise, Reisepässe oder Führerscheine – als verifizierbare Nachweise auf Ethereum auszugeben. Dies bietet starke kryptografische Garantien für die Echtheit, um Betrug und Fälschung bei der Online-Identitätsprüfung zu reduzieren. Bürger können diese Bestätigungen in ihrem persönlichen [Wallet](/wallets/) speichern und sie verwenden, um ihre Identität, ihr Alter oder ihr Wahlrecht nachzuweisen.
+Regierungen können die Prinzipien der dezentralen Identität nutzen, um grundlegende Identitätsdokumente – wie Personalausweise, Reisepässe oder Führerscheine – als Verifizierbare Nachweise auf Ethereum auszustellen. Dies bietet starke kryptographische Garantien für die Echtheit, um Betrug und Fälschungen bei der Online-Identitätsprüfung zu reduzieren. Bürger können diese Attestierungen in ihrer persönlichen [Wallet](/wallets/) speichern und sie verwenden, um ihre Identität, ihr Alter oder ihr Wahlrecht nachzuweisen.
 
-Dieses Modell ermöglicht eine selektive Offenlegung, insbesondere in Kombination mit der Datenschutztechnologie [Zero-Knowledge-Beweis (ZKP)](/zero-knowledge-proofs/). Zum Beispiel könnte ein Bürger kryptografisch beweisen, dass er über 18 Jahre alt ist, um auf einen altersbeschränkten Dienst zuzugreifen, ohne sein genaues Geburtsdatum preiszugeben, was mehr Privatsphäre bietet als ein herkömmlicher Ausweis.
+Dieses Modell ermöglicht eine selektive Offenlegung, insbesondere in Kombination mit der Privatsphäre-Technologie der [Zero-Knowledge-Beweise (ZKP)](/zero-knowledge-proofs/). Zum Beispiel könnte ein Bürger kryptographisch beweisen, dass er über 18 Jahre alt ist, um auf einen altersbeschränkten Dienst zuzugreifen, ohne sein genaues Geburtsdatum preiszugeben, was eine größere Privatsphäre als eine herkömmliche ID bietet.
 
 #### 💡Fallstudie: Bhutan National Digital ID (NDI) auf Ethereum {#case-study-bhutan-ndi}
 
-- Bietet Zugang zu verifizierbaren Nachweisen für die fast 800.000 Bürger Bhutans
-- Migration vom Polygon-Netzwerk [zum Ethereum-Mainnet](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) im Oktober 2025
-- Über [234.000 digitale IDs](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/) ausgestellt (Stand: März 2025)
+- Bietet Zugang zu Verifizierbaren Nachweisen für die fast 800.000 Bürger Bhutans
+- Migration vom Polygon-Netzwerk [zum Ethereum Mainnet](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) im Oktober 2025
+- Über [234.000 digitale IDs](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/) ausgestellt (Stand März 2025)
 
-Das Königreich Bhutan [migrierte sein National Digital Identity (NDI)-System](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) im Oktober 2025 zu Ethereum. Basierend auf den Prinzipien der dezentralisierten Identität und der selbstsouveränen Identität verwendet das NDI-System von Bhutan dezentralisierte Identifikatoren und verifizierbare Nachweise, um digital signierte Nachweise direkt an das persönliche Wallet eines Bürgers auszugeben. Durch die Verankerung der Ausstellerschemata dieser Nachweise auf Ethereum stellt das System sicher, dass sie authentisch und manipulationssicher sind und von jeder Partei verifiziert werden können, ohne eine zentrale Behörde abfragen zu müssen.
+Das Königreich Bhutan [migrierte sein National Digital Identity (NDI)-System](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) im Oktober 2025 zu Ethereum. Aufbauend auf den Prinzipien der dezentralen Identität und der selbstsouveränen Identität verwendet Bhutans NDI-System dezentrale Identifikatoren und Verifizierbare Nachweise, um digital signierte Nachweise direkt in die persönliche Wallet eines Bürgers auszustellen. Durch die Verankerung der Ausstellerschemata dieser Nachweise auf Ethereum stellt das System sicher, dass sie authentisch und manipulationssicher sind und von jeder Partei verifiziert werden können, ohne eine zentrale Behörde abfragen zu müssen.
 
-## Was sind Bestätigungen? {#what-are-attestations}
+## Was sind Attestierungen? {#what-are-attestations}
 
-Eine Bestätigung ist eine Behauptung, die von einer Entität über eine andere Entität aufgestellt wird. Wenn Sie in den Vereinigten Staaten leben, bestätigt der Ihnen vom Department of Motor Vehicles (einer Entität) ausgestellte Führerschein, dass Sie (eine andere Entität) gesetzlich berechtigt sind, ein Auto zu fahren.
+Eine Attestierung ist eine Aussage, die von einer Entität über eine andere Entität getroffen wird. Wenn Sie in den Vereinigten Staaten leben, attestiert der Ihnen vom Department of Motor Vehicles (einer Entität) ausgestellte Führerschein, dass Sie (eine andere Entität) gesetzlich berechtigt sind, ein Auto zu fahren.
 
-Bestätigungen unterscheiden sich von Identifikatoren. Eine Bestätigung _enthält_ Identifikatoren, um auf eine bestimmte Identität zu verweisen, und stellt eine Behauptung über ein Attribut im Zusammenhang mit dieser Identität auf. Ihr Führerschein enthält also Identifikatoren (Name, Geburtsdatum, Adresse), ist aber auch die Bestätigung über Ihr gesetzliches Recht zu fahren.
+Attestierungen unterscheiden sich von Identifikatoren. Eine Attestierung _enthält_ Identifikatoren, um auf eine bestimmte Identität zu verweisen, und trifft eine Aussage über ein Attribut, das mit dieser Identität zusammenhängt. Ihr Führerschein enthält also Identifikatoren (Name, Geburtsdatum, Adresse), ist aber gleichzeitig die Attestierung über Ihr gesetzliches Recht zu fahren.
 
-### Was sind dezentralisierte Identifikatoren? {#what-are-decentralized-identifiers}
+### Was sind dezentrale Identifikatoren? {#what-are-decentralized-identifiers}
 
-Traditionelle Identifikatoren wie Ihr gesetzlicher Name oder Ihre E-Mail-Adresse sind auf Dritte angewiesen – Regierungen und E-Mail-Anbieter. Dezentralisierte Identifikatoren (DIDs) sind anders – sie werden von keiner zentralen Entität ausgegeben, verwaltet oder kontrolliert.
+Traditionelle Identifikatoren wie Ihr gesetzlicher Name oder Ihre E-Mail-Adresse sind auf Dritte angewiesen – Regierungen und E-Mail-Anbieter. Dezentrale Identifikatoren (DIDs) sind anders – sie werden von keiner zentralen Entität ausgestellt, verwaltet oder kontrolliert.
 
-Dezentralisierte Identifikatoren werden von Einzelpersonen ausgegeben, gehalten und kontrolliert. Ein [Ethereum-Konto](/glossary/#account) ist ein Beispiel für einen dezentralisierten Identifikator. Sie können so viele Konten erstellen, wie Sie möchten, ohne die Erlaubnis von irgendjemandem und ohne die Notwendigkeit, sie in einem zentralen Register zu speichern.
+Dezentrale Identifikatoren werden von Einzelpersonen ausgestellt, gehalten und kontrolliert. Ein [Ethereum-Konto](/glossary/#account) ist ein Beispiel für einen dezentralen Identifikator. Sie können so viele Konten erstellen, wie Sie möchten, ohne jemanden um Erlaubnis zu fragen und ohne sie in einem zentralen Register speichern zu müssen.
 
-Dezentralisierte Identifikatoren werden auf verteilten Ledgern ([Blockchains](/glossary/#blockchain)) oder [Peer-to-Peer-Netzwerken](/glossary/#peer-to-peer-network) gespeichert. Dies macht DIDs [global einzigartig, mit hoher Verfügbarkeit auflösbar und kryptografisch verifizierbar](https://w3c-ccg.github.io/did-primer/). Ein dezentralisierter Identifikator kann mit verschiedenen Entitäten verknüpft werden, einschließlich Personen, Organisationen oder Regierungsinstitutionen.
+Dezentrale Identifikatoren werden auf verteilten Kassenbüchern (Distributed Ledgers) ([Blockchains](/glossary/#blockchain)) oder [Peer-to-Peer-Netzwerken](/glossary/#peer-to-peer-network) gespeichert. Dies macht DIDs [global einzigartig, mit hoher Verfügbarkeit auflösbar und kryptographisch verifizierbar](https://w3c-ccg.github.io/did-primer/). Ein dezentraler Identifikator kann mit verschiedenen Entitäten verknüpft werden, einschließlich Personen, Organisationen oder Regierungsinstitutionen.
 
-## Was macht dezentralisierte Identifikatoren möglich? {#what-makes-decentralized-identifiers-possible}
+## Was macht dezentrale Identifikatoren möglich? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Public-Key-Kryptografie {#public-key-cryptography}
+### 1. Public-Key-Kryptographie {#public-key-cryptography}
 
-Public-Key-Kryptografie ist eine Informationssicherheitsmaßnahme, die einen [Public-Key](/glossary/#public-key) und einen [Private-Key](/glossary/#private-key) für eine Entität generiert. Public-Key-[Kryptografie](/glossary/#cryptography) wird in Blockchain-Netzwerken verwendet, um Benutzeridentitäten zu authentifizieren und das Eigentum an digitalen Vermögenswerten zu beweisen.
+Public-Key-Kryptographie ist eine Maßnahme der Informationssicherheit, die einen [öffentlichen Schlüssel](/glossary/#public-key) und einen [privaten Schlüssel](/glossary/#private-key) für eine Entität generiert. Public-Key-[Kryptographie](/glossary/#cryptography) wird in Blockchain-Netzwerken verwendet, um Benutzeridentitäten zu authentifizieren und den Besitz digitaler Vermögenswerte nachzuweisen.
 
-Einige dezentralisierte Identifikatoren, wie z. B. ein Ethereum-Konto, verfügen über Public- und Private-Keys. Der Public-Key identifiziert den Kontrolleur des Kontos, während die Private-Keys Nachrichten für dieses Konto signieren und entschlüsseln können. Die Public-Key-Kryptografie liefert Beweise, die erforderlich sind, um Entitäten zu authentifizieren und Identitätsdiebstahl sowie die Verwendung gefälschter Identitäten zu verhindern, indem [kryptografische Signaturen](https://andersbrownworth.com/blockchain/public-private-keys/) verwendet werden, um alle Behauptungen zu verifizieren.
+Einige dezentrale Identifikatoren, wie z. B. ein Ethereum-Konto, verfügen über öffentliche und private Schlüssel. Der öffentliche Schlüssel identifiziert den Kontrolleur des Kontos, während die privaten Schlüssel Nachrichten für dieses Konto signieren und entschlüsseln können. Public-Key-Kryptographie liefert die Beweise, die benötigt werden, um Entitäten zu authentifizieren und Identitätsdiebstahl sowie die Verwendung gefälschter Identitäten zu verhindern, indem [kryptographische Signaturen](https://andersbrownworth.com/blockchain/public-private-keys/) verwendet werden, um alle Aussagen zu verifizieren.
 
-### 2. Dezentralisierte Datenspeicher {#decentralized-datastores}
+### 2. Dezentrale Datenspeicher {#decentralized-datastores}
 
-Eine Blockchain dient als verifizierbares Datenregister: ein offenes, vertrauensloses und dezentralisiertes Informations-Repository. Die Existenz öffentlicher Blockchains beseitigt die Notwendigkeit, Identifikatoren in zentralisierten Registern zu speichern.
+Eine Blockchain dient als verifizierbares Datenregister: ein offener, vertrauensloser und dezentraler Informationsspeicher. Die Existenz öffentlicher Blockchains beseitigt die Notwendigkeit, Identifikatoren in zentralisierten Registern zu speichern.
 
-Wenn jemand die Gültigkeit eines dezentralisierten Identifikators bestätigen muss, kann er den zugehörigen Public-Key auf der Blockchain nachschlagen. Dies unterscheidet sich von traditionellen Identifikatoren, die Dritte zur Authentifizierung benötigen.
+Wenn jemand die Gültigkeit eines dezentralen Identifikators bestätigen muss, kann er den zugehörigen öffentlichen Schlüssel auf der Blockchain nachschlagen. Dies unterscheidet sich von traditionellen Identifikatoren, die Dritte zur Authentifizierung benötigen.
 
-## Wie ermöglichen dezentralisierte Identifikatoren und Bestätigungen eine dezentralisierte Identität? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
+## Wie ermöglichen dezentrale Identifikatoren und Attestierungen eine dezentrale Identität? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
 
-Dezentralisierte Identität ist die Idee, dass identitätsbezogene Informationen selbstkontrolliert, privat und portabel sein sollten, wobei dezentralisierte Identifikatoren und Bestätigungen die primären Bausteine sind.
+Dezentrale Identität ist die Idee, dass identitätsbezogene Informationen selbstkontrolliert, privat und portabel sein sollten, wobei dezentrale Identifikatoren und Attestierungen die primären Bausteine sind.
 
-Im Kontext der dezentralisierten Identität sind Bestätigungen (auch bekannt als [Verifiable Credentials](https://www.w3.org/TR/vc-data-model/)) manipulationssichere, kryptografisch verifizierbare Behauptungen des Ausstellers. Jede Bestätigung oder jedes Verifiable Credential, das eine Entität (z. B. eine Organisation) ausgibt, ist mit ihrer DID verknüpft.
+Im Kontext der dezentralen Identität sind Attestierungen (auch bekannt als [Verifizierbare Nachweise](https://www.w3.org/TR/vc-data-model/)) manipulationssichere, kryptographisch verifizierbare Aussagen des Ausstellers. Jede Attestierung oder jeder Verifizierbare Nachweis, den eine Entität (z. B. eine Organisation) ausstellt, ist mit ihrer DID verknüpft.
 
-Da DIDs auf der Blockchain gespeichert sind, kann jeder die Gültigkeit einer Bestätigung überprüfen, indem er die DID des Ausstellers auf Ethereum abgleicht. Im Wesentlichen fungiert die Ethereum-Blockchain wie ein globales Verzeichnis, das die Verifizierung von DIDs ermöglicht, die mit bestimmten Entitäten verknüpft sind.
+Da DIDs auf der Blockchain gespeichert sind, kann jeder die Gültigkeit einer Attestierung überprüfen, indem er die DID des Ausstellers auf Ethereum abgleicht. Im Wesentlichen fungiert die Ethereum-Blockchain wie ein globales Verzeichnis, das die Verifizierung von DIDs ermöglicht, die mit bestimmten Entitäten verknüpft sind.
 
-Dezentralisierte Identifikatoren sind der Grund, warum Bestätigungen selbstkontrolliert und verifizierbar sind. Selbst wenn der Aussteller nicht mehr existiert, hat der Inhaber immer einen Beweis für die Herkunft und Gültigkeit der Bestätigung.
+Dezentrale Identifikatoren sind der Grund, warum Attestierungen selbstkontrolliert und verifizierbar sind. Selbst wenn der Aussteller nicht mehr existiert, hat der Inhaber immer einen Beweis für die Herkunft und Gültigkeit der Attestierung.
 
-Dezentralisierte Identifikatoren sind auch entscheidend für den Schutz der Privatsphäre persönlicher Informationen durch dezentralisierte Identität. Wenn beispielsweise eine Person den Beweis einer Bestätigung (einen Führerschein) einreicht, muss die verifizierende Partei die Gültigkeit der Informationen im Beweis nicht überprüfen. Stattdessen benötigt der Verifizierer nur kryptografische Garantien für die Echtheit der Bestätigung und die Identität der ausstellenden Organisation, um festzustellen, ob der Beweis gültig ist.
+Dezentrale Identifikatoren sind auch entscheidend für den Schutz der Privatsphäre persönlicher Informationen durch dezentrale Identität. Wenn beispielsweise eine Person den Beweis einer Attestierung (einen Führerschein) einreicht, muss die verifizierende Partei nicht die Gültigkeit der Informationen im Beweis überprüfen. Stattdessen benötigt der Verifizierer nur kryptographische Garantien für die Echtheit der Attestierung und die Identität der ausstellenden Organisation, um festzustellen, ob der Beweis gültig ist.
 
-## Arten von Bestätigungen in der dezentralisierten Identität {#types-of-attestations-in-decentralized-identity}
+## Arten von Attestierungen in der dezentralen Identität {#types-of-attestations-in-decentralized-identity}
 
-Wie Bestätigungsinformationen in einem Ethereum-basierten Identitätsökosystem gespeichert und abgerufen werden, unterscheidet sich vom traditionellen Identitätsmanagement. Hier ist ein Überblick über die verschiedenen Ansätze zur Ausgabe, Speicherung und Verifizierung von Bestätigungen in dezentralisierten Identitätssystemen:
+Wie Attestierungsinformationen in einem Ethereum-basierten Identitätsökosystem gespeichert und abgerufen werden, unterscheidet sich vom traditionellen Identitätsmanagement. Hier ist ein Überblick über die verschiedenen Ansätze zur Ausstellung, Speicherung und Verifizierung von Attestierungen in dezentralen Identitätssystemen:
 
-### Off-Chain-Bestätigungen {#offchain-attestations}
+### Offchain-Attestierungen {#offchain-attestations}
 
-Ein Bedenken bei der Speicherung von Bestätigungen auf der Blockchain ist, dass sie Informationen enthalten könnten, die Einzelpersonen privat halten möchten. Die öffentliche Natur der Ethereum-Blockchain macht es unattraktiv, solche Bestätigungen zu speichern.
+Ein Bedenken bei der Onchain-Speicherung von Attestierungen ist, dass sie Informationen enthalten könnten, die Einzelpersonen privat halten möchten. Die öffentliche Natur der Ethereum-Blockchain macht es unattraktiv, solche Attestierungen zu speichern.
 
-Die Lösung besteht darin, Bestätigungen auszugeben, die von Benutzern Off-Chain in digitalen Wallets gehalten werden, aber mit der auf der Blockchain gespeicherten DID des Ausstellers signiert sind. Diese Bestätigungen sind als [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) codiert und enthalten die digitale Signatur des Ausstellers – was eine einfache Verifizierung von Off-Chain-Behauptungen ermöglicht.
+Die Lösung besteht darin, Attestierungen auszustellen, die von Nutzern offchain in digitalen Wallets gehalten werden, aber mit der Onchain gespeicherten DID des Ausstellers signiert sind. Diese Attestierungen sind als [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) kodiert und enthalten die digitale Signatur des Ausstellers – was eine einfache Verifizierung von Offchain-Aussagen ermöglicht.
 
-Hier ist ein hypothetisches Szenario, um Off-Chain-Bestätigungen zu erklären:
+Hier ist ein hypothetisches Szenario, um Offchain-Attestierungen zu erklären:
 
-1. Eine Universität (der Aussteller) generiert eine Bestätigung (ein digitales akademisches Zertifikat), signiert sie mit ihren Schlüsseln und gibt sie an Bob (den Identitätsinhaber) aus.
+1. Eine Universität (der Aussteller) generiert eine Attestierung (ein digitales akademisches Zertifikat), signiert sie mit ihren Schlüsseln und stellt sie Bob (dem Identitätsinhaber) aus.
 
-2. Bob bewirbt sich um einen Job und möchte einem Arbeitgeber seine akademischen Qualifikationen nachweisen, also teilt er die Bestätigung aus seinem mobilen Wallet. Das Unternehmen (der Verifizierer) kann dann die Gültigkeit der Bestätigung bestätigen, indem es die DID des Ausstellers (d. h. seinen Public-Key auf Ethereum) überprüft.
+2. Bob bewirbt sich um einen Job und möchte einem Arbeitgeber seine akademischen Qualifikationen nachweisen, also teilt er die Attestierung aus seiner mobilen Wallet. Das Unternehmen (der Verifizierer) kann dann die Gültigkeit der Attestierung bestätigen, indem es die DID des Ausstellers (d. h. seinen öffentlichen Schlüssel auf Ethereum) überprüft.
 
-### Off-Chain-Bestätigungen mit dauerhaftem Zugriff {#offchain-attestations-with-persistent-access}
+### Offchain-Attestierungen mit dauerhaftem Zugriff {#offchain-attestations-with-persistent-access}
 
-Bei dieser Anordnung werden Bestätigungen in JSON-Dateien umgewandelt und Off-Chain gespeichert (idealerweise auf einer [dezentralisierten Cloud-Speicher](/developers/docs/storage/)-Plattform wie IPFS oder Swarm). Ein [Hash](/glossary/#hash) der JSON-Datei wird jedoch auf der Blockchain gespeichert und über ein Register auf der Blockchain mit einer DID verknüpft. Die zugehörige DID könnte entweder die des Ausstellers der Bestätigung oder die des Empfängers sein.
+Bei dieser Anordnung werden Attestierungen in JSON-Dateien umgewandelt und offchain gespeichert (idealerweise auf einer [dezentralen Cloud-Speicherplattform](/developers/docs/storage/) wie IPFS oder Swarm). Ein [Hash](/glossary/#hash) der JSON-Datei wird jedoch Onchain gespeichert und über ein Onchain-Register mit einer DID verknüpft. Die zugehörige DID könnte entweder die des Ausstellers der Attestierung oder die des Empfängers sein.
 
-Dieser Ansatz ermöglicht es Bestätigungen, eine Blockchain-basierte Persistenz zu erlangen, während die Behauptungsinformationen verschlüsselt und verifizierbar bleiben. Er ermöglicht auch eine selektive Offenlegung, da der Inhaber des Private-Keys die Informationen entschlüsseln kann.
+Dieser Ansatz ermöglicht es Attestierungen, eine Blockchain-basierte Persistenz zu erlangen, während die Informationen der Aussagen verschlüsselt und verifizierbar bleiben. Er ermöglicht auch eine selektive Offenlegung, da der Inhaber des privaten Schlüssels die Informationen entschlüsseln kann.
 
-### Bestätigungen auf der Blockchain {#onchain-attestations}
+### Onchain-Attestierungen {#onchain-attestations}
 
-Bestätigungen auf der Blockchain werden in [Smart Contracts](/glossary/#smart-contract) auf der Ethereum-Blockchain gehalten. Der Smart Contract (der als Register fungiert) ordnet eine Bestätigung einem entsprechenden dezentralisierten Identifikator auf der Blockchain (einem Public-Key) zu.
+Onchain-Attestierungen werden in [Smart Contracts](/glossary/#smart-contract) auf der Ethereum-Blockchain gehalten. Der Smart Contract (der als Register fungiert) ordnet eine Attestierung einem entsprechenden dezentralen Onchain-Identifikator (einem öffentlichen Schlüssel) zu.
 
-Hier ist ein Beispiel, um zu zeigen, wie Bestätigungen auf der Blockchain in der Praxis funktionieren könnten:
+Hier ist ein Beispiel, um zu zeigen, wie Onchain-Attestierungen in der Praxis funktionieren könnten:
 
-1. Ein Unternehmen (XYZ Corp) plant, Eigentumsanteile mithilfe eines Smart Contracts zu verkaufen, möchte aber nur Käufer, die eine Hintergrundüberprüfung abgeschlossen haben.
+1. Ein Unternehmen (XYZ Corp) plant, Eigentumsanteile über einen Smart Contract zu verkaufen, möchte aber nur Käufer, die eine Hintergrundüberprüfung abgeschlossen haben.
 
-2. XYZ Corp kann das Unternehmen, das Hintergrundüberprüfungen durchführt, veranlassen, Bestätigungen auf der Blockchain auf Ethereum auszugeben. Diese Bestätigung zertifiziert, dass eine Person die Hintergrundüberprüfung bestanden hat, ohne persönliche Informationen preiszugeben.
+2. XYZ Corp kann das Unternehmen, das die Hintergrundüberprüfungen durchführt, veranlassen, Onchain-Attestierungen auf Ethereum auszustellen. Diese Attestierung bescheinigt, dass eine Person die Hintergrundüberprüfung bestanden hat, ohne persönliche Informationen preiszugeben.
 
-3. Der Smart Contract, der Anteile verkauft, kann den Registervertrag auf die Identitäten der überprüften Käufer prüfen, was es dem Smart Contract ermöglicht zu bestimmen, wer Anteile kaufen darf oder nicht.
+3. Der Smart Contract, der die Anteile verkauft, kann den Registervertrag auf die Identitäten der überprüften Käufer prüfen, was es dem Smart Contract ermöglicht zu bestimmen, wer Anteile kaufen darf und wer nicht.
 
 ### Soulbound-Token und Identität {#soulbound}
 
-[Soulbound-Token](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([nicht-fungible Token](/glossary/#nft), die nicht übertragbar sind) könnten verwendet werden, um Informationen zu sammeln, die für ein bestimmtes Wallet einzigartig sind. Dies schafft effektiv eine einzigartige Identität auf der Blockchain, die an eine bestimmte Ethereum-Adresse gebunden ist und Token umfassen könnte, die Erfolge (z. B. den Abschluss eines bestimmten Online-Kurses oder das Erreichen einer Mindestpunktzahl in einem Spiel) oder die Teilnahme an der Community repräsentieren.
+[Soulbound-Token](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([nicht übertragbare NFTs](/glossary/#nft)) könnten verwendet werden, um Informationen zu sammeln, die für eine bestimmte Wallet einzigartig sind. Dies schafft effektiv eine einzigartige Onchain-Identität, die an eine bestimmte Ethereum-Adresse gebunden ist und Token umfassen könnte, die Errungenschaften (z. B. den Abschluss eines bestimmten Online-Kurses oder das Erreichen einer Mindestpunktzahl in einem Spiel) oder die Teilnahme an einer Community repräsentieren.
 
-## Dezentralisierte Identität nutzen {#use-decentralized-identity}
+## Dezentrale Identität nutzen {#use-decentralized-identity}
 
-Es gibt viele ehrgeizige Projekte, die Ethereum als Grundlage für dezentralisierte Identitätslösungen nutzen:
+Es gibt viele ehrgeizige Projekte, die Ethereum als Grundlage für dezentrale Identitätslösungen nutzen:
 
-- **[Ethereum Name Service (ENS)](https://ens.domains/)** - _Ein dezentralisiertes Namenssystem für maschinenlesbare Identifikatoren auf der Blockchain, wie Ethereum-Wallet-Adressen, Inhalts-Hashes und Metadaten._
-- **[Sign in with Ethereum (SIWE)](https://siwe.xyz/)** - _Offener Standard für die Authentifizierung mit Ethereum-Konten._
-- **[SpruceID](https://www.spruceid.com/)** - _Ein dezentralisiertes Identitätsprojekt, das es Benutzern ermöglicht, die digitale Identität mit Ethereum-Konten und ENS-Profilen zu kontrollieren, anstatt sich auf Drittanbieterdienste zu verlassen._
-- **[Ethereum Attestation Service (EAS)](https://attest.org/)** - _Ein dezentralisierter Ledger/ein dezentralisiertes Protokoll zur Erstellung von Bestätigungen auf der Blockchain oder Off-Chain über alles Mögliche._
-- **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (oder PoH) ist ein soziales Identitätsverifizierungssystem, das auf Ethereum aufbaut._
-- **[Veramo](https://veramo.io/)** - _Ein JavaScript-Framework, das es jedem leicht macht, kryptografisch verifizierbare Daten in seinen Anwendungen zu verwenden._
+- **[Ethereum Name Service (ENS)](https://ens.domains/)** – _Ein dezentrales Namenssystem für maschinenlesbare Onchain-Identifikatoren wie Ethereum-Wallet-Adressen, Content-Hashes und Metadaten._
+- **[Sign in with Ethereum (SIWE)](https://siwe.xyz/)** – _Offener Standard zur Authentifizierung mit Ethereum-Konten._
+- **[SpruceID](https://www.spruceid.com/)** – _Ein dezentrales Identitätsprojekt, das es Nutzern ermöglicht, ihre digitale Identität mit Ethereum-Konten und ENS-Profilen zu kontrollieren, anstatt sich auf Drittanbieterdienste zu verlassen._
+- **[Ethereum Attestation Service (EAS)](https://attest.org/)** – _Ein dezentrales Kassenbuch/Protokoll zur Erstellung von Onchain- oder Offchain-Attestierungen über alles Mögliche._
+- **[Proof of Humanity](https://www.proofofhumanity.id)** – _Proof of Humanity (oder PoH) ist ein soziales Identitätsverifizierungssystem, das auf Ethereum aufbaut._
+- **[Veramo](https://veramo.io/)** – _Ein JavaScript-Framework, das es jedem leicht macht, kryptographisch verifizierbare Daten in seinen Anwendungen zu verwenden._
 
 ## Weiterführende Literatur {#further-reading}
 
 ### Artikel {#articles}
 
-- [Blockchain Use Cases: Blockchain in Digital Identity](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsenSys_
-- [What is Ethereum ERC725? Self-Sovereign Identity Management on the Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
-- [How Blockchain Could Solve the Problem of Digital Identity](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
-- [What Is Decentralized Identity And Why Should You Care?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
-- [Introduction to Decentralized Identity](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
+- [Blockchain-Anwendungsfälle: Blockchain in der digitalen Identität](https://consensys.net/blockchain-use-cases/digital-identity/) – _ConsenSys_
+- [Was ist Ethereum ERC-725? Selbstsouveränes Identitätsmanagement auf der Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) – _Sam Town_
+- [Wie die Blockchain das Problem der digitalen Identität lösen könnte](https://time.com/6142810/proof-of-humanity/) – _Andrew R. Chow_
+- [Was ist dezentrale Identität und warum sollte sie Sie interessieren?](https://web3.hashnode.com/what-is-decentralized-identity) – _Emmanuel Awosika_
+- [Einführung in die dezentrale Identität](https://walt.id/white-paper/digital-identity) – _Dominik Beron_
 
 ### Videos {#videos}
 
-- [Decentralized Identity (Bonus Livestream Session)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Ein großartiges Erklärvideo zur dezentralisierten Identität von Andreas Antonopoulos_
-- [Sign In with Ethereum and Decentralized Identity with Ceramic, IDX, React, and 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube-Tutorial zum Aufbau eines Identitätsmanagementsystems zum Erstellen, Lesen und Aktualisieren des Profils eines Benutzers mithilfe seines Ethereum-Wallets von Nader Dabit_
-- [BrightID - Decentralized Identity on Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless-Podcast-Episode, in der BrightID diskutiert wird, eine dezentralisierte Identitätslösung für Ethereum_
-- [The Offchain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022-Präsentation von Evin McMullen
-- [Verifiable Credentials Explained](https://www.youtube.com/watch?v=ce1IdSr-Kig) - YouTube-Erklärvideo mit Demo von Tamino Baumann
+- [Dezentrale Identität (Bonus-Livestream-Sitzung)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) – _Ein großartiges Erklärvideo zur dezentralen Identität von Andreas Antonopoulos_
+- [Sign In with Ethereum und dezentrale Identität mit Ceramic, IDX, React und 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) – _YouTube-Tutorial zum Aufbau eines Identitätsmanagementsystems zum Erstellen, Lesen und Aktualisieren des Profils eines Nutzers mithilfe seiner Ethereum-Wallet von Nader Dabit_
+- [BrightID – Dezentrale Identität auf Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) – _Bankless-Podcast-Episode, in der BrightID, eine dezentrale Identitätslösung für Ethereum, diskutiert wird_
+- [Das Offchain-Internet: Dezentrale Identität & Verifizierbare Nachweise](https://www.youtube.com/watch?v=EZ_Bb6j87mg) – EthDenver 2022-Präsentation von Evin McMullen
+- [Verifizierbare Nachweise erklärt](https://www.youtube.com/watch?v=ce1IdSr-Kig) – YouTube-Erklärvideo mit Demo von Tamino Baumann
 
 ### Communities {#communities}
 
-- [ERC-725 Alliance auf GitHub](https://github.com/erc725alliance) — _Unterstützer des ERC725-Standards zur Verwaltung von Identitäten auf der Ethereum-Blockchain_
-- [EthID Discord-Server](https://discord.com/invite/ZUyG3mSXFD) — _Community für Enthusiasten und Entwickler, die an Sign-in with Ethereum und dem Ethereum Follow Protocol arbeiten_
-- [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Eine Community von Entwicklern, die zum Aufbau eines Frameworks für verifizierbare Daten für Anwendungen beitragen_
-- [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Eine Community von Entwicklern und Buildern, die an Anwendungsfällen für dezentralisierte Identität in verschiedenen Branchen arbeiten_
+- [ERC-725-Allianz auf GitHub](https://github.com/erc725alliance) – _Unterstützer des ERC-725-Standards zur Verwaltung von Identitäten auf der Ethereum-Blockchain_
+- [EthID Discord-Server](https://discord.com/invite/ZUyG3mSXFD) – _Community für Enthusiasten und Entwickler, die an Sign-in with Ethereum und dem Ethereum Follow Protocol arbeiten_
+- [Veramo Labs](https://discord.gg/sYBUXpACh4) – _Eine Community von Entwicklern, die zum Aufbau eines Frameworks für verifizierbare Daten für Anwendungen beitragen_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) – _Eine Community von Entwicklern und Buildern, die an Anwendungsfällen für dezentrale Identität in verschiedenen Branchen arbeiten_

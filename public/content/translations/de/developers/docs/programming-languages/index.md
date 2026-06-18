@@ -1,17 +1,17 @@
 ---
 title: Programmiersprachen
-description: "Entdecke Ethereum-Entwicklungsressourcen für verschiedene Programmiersprachen, darunter JavaScript, Python, Go, Rust und mehr."
+description: Entdecke Ethereum-Entwicklungsressourcen für verschiedene Programmiersprachen wie JavaScript, Python, Go, Rust und mehr.
 lang: de
 ---
 
 Ein weit verbreiteter Irrglaube ist, dass Entwickler [Smart Contracts](/developers/docs/smart-contracts/) schreiben müssen, um auf Ethereum aufzubauen. Das ist falsch.
-Eines der schönen Dinge am Ethereum-Netzwerk und der Community ist, dass man sich in fast jeder Programmiersprache [beteiligen](/community/) kann.
+Eines der schönen Dinge am Ethereum-Netzwerk und der Community ist, dass man in fast jeder Programmiersprache [teilnehmen](/community/) kann.
 
 Ethereum und seine Community setzen auf Open Source. Du findest Community-Projekte – Client-Implementierungen, APIs, Entwicklungs-Frameworks, Test-Tools – in einer Vielzahl von Sprachen.
 
 ## Wähle deine Sprache {#data}
 
-Wähle deine bevorzugte Programmiersprache, um Projekte, Ressourcen und virtuelle Communities zu finden:
+Wähle deine bevorzugte Programmiersprache aus, um Projekte, Ressourcen und virtuelle Communities zu finden:
 
 - [Ethereum für Dart-Entwickler](/developers/docs/programming-languages/dart/)
 - [Ethereum für Delphi-Entwickler](/developers/docs/programming-languages/delphi/)
