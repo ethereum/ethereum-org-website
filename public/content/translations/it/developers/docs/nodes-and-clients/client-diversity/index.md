@@ -1,15 +1,15 @@
 ---
-title: "Diversità dei client"
-description: "Una spiegazione ad alto livello dell'importanza della diversità dei client di Ethereum."
+title: Diversità dei client
+description: Una spiegazione ad alto livello dell'importanza della diversità dei client di Ethereum.
 lang: it
 sidebarDepth: 2
 ---
 
-Il comportamento di un nodo di [Ethereum](/) è controllato dal software del client che esegue. Esistono diversi client di Ethereum a livello di produzione, ognuno sviluppato e mantenuto in linguaggi diversi da team separati. I client sono costruiti secondo una specifica comune che garantisce che comunichino tra loro senza problemi, abbiano le stesse funzionalità e forniscano un'esperienza utente equivalente. Tuttavia, al momento la distribuzione dei client tra i nodi non è abbastanza equa da realizzare questa fortificazione della rete al suo pieno potenziale. Idealmente, gli utenti si dividono in modo approssimativamente uguale tra i vari client per portare quanta più diversità dei client possibile alla rete.
+Il comportamento di un nodo [Ethereum](/) è controllato dal software client che esegue. Esistono diversi client Ethereum a livello di produzione, ognuno sviluppato e mantenuto in linguaggi diversi da team separati. I client sono creati in base a una specifica comune che garantisce che comunichino tra loro senza problemi, abbiano le stesse funzionalità e forniscano un'esperienza utente equivalente. Tuttavia, al momento la distribuzione dei client tra i nodi non è sufficientemente equa per realizzare appieno il potenziale di questa fortificazione della rete. Idealmente, gli utenti si dividono in modo approssimativamente uguale tra i vari client per apportare la massima diversità dei client possibile alla rete.
 
 ## Prerequisiti {#prerequisites}
 
-Se non capisci ancora cosa siano i nodi e i client, dai un'occhiata a [nodi e client](/developers/docs/nodes-and-clients/). I livelli di [esecuzione](/glossary/#execution-layer) e [consenso](/glossary/#consensus-layer) sono definiti nel glossario.
+Se non hai ancora compreso cosa siano i nodi e i client, dai un'occhiata a [nodi e client](/developers/docs/nodes-and-clients/). I livelli di [esecuzione](/glossary/#execution-layer) e di [consenso](/glossary/#consensus-layer) sono definiti nel glossario.
 
 ## Perché ci sono più client? {#why-multiple-clients}
 
@@ -21,19 +21,19 @@ Avere molti client sviluppati e mantenuti in modo indipendente è vitale per la 
 
 ### Bug {#bugs}
 
-Un bug in un singolo client rappresenta un rischio minore per la rete quando rappresenta una minoranza dei nodi di Ethereum. Con una distribuzione approssimativamente uniforme dei nodi tra molti client, la probabilità che la maggior parte dei client soffra di un problema condiviso è piccola e, di conseguenza, la rete è più robusta.
+Un bug in un singolo client rappresenta un rischio minore per la rete quando rappresenta una minoranza dei nodi Ethereum. Con una distribuzione approssimativamente uniforme dei nodi tra molti client, la probabilità che la maggior parte dei client soffra di un problema condiviso è bassa e, di conseguenza, la rete è più robusta.
 
 ### Resilienza agli attacchi {#resilience}
 
-La diversità dei client offre anche resilienza agli attacchi. Ad esempio, un attacco che [inganna un particolare client](https://twitter.com/vdWijden/status/1437712249926393858) su un particolare ramo della catena è improbabile che abbia successo perché è improbabile che altri client siano sfruttabili allo stesso modo e la catena canonica rimane incorrotta. Una bassa diversità dei client aumenta il rischio associato a un hack sul client dominante. La diversità dei client si è già dimostrata un'importante difesa contro gli attacchi dannosi alla rete, ad esempio l'attacco denial-of-service di Shanghai nel 2016 è stato possibile perché gli aggressori sono stati in grado di ingannare il client dominante (Geth) facendogli eseguire una lenta operazione di I/O su disco decine di migliaia di volte per blocco. Poiché erano online anche client alternativi che non condividevano la vulnerabilità, Ethereum è stato in grado di resistere all'attacco e continuare a operare mentre la vulnerabilità in Geth veniva risolta.
+La diversità dei client offre anche resilienza agli attacchi. Ad esempio, un attacco che [inganna un particolare client](https://twitter.com/vdWijden/status/1437712249926393858) su un ramo specifico della catena difficilmente avrà successo, perché è improbabile che altri client siano sfruttabili allo stesso modo e la catena canonica rimane incorrotta. Una bassa diversità dei client aumenta il rischio associato a un attacco informatico sul client dominante. La diversità dei client si è già dimostrata un'importante difesa contro gli attacchi dannosi alla rete; ad esempio, l'attacco denial-of-service di Shanghai nel 2016 è stato possibile perché gli aggressori sono riusciti a ingannare il client dominante (Geth) facendogli eseguire una lenta operazione di I/O su disco decine di migliaia di volte per blocco. Poiché erano online anche client alternativi che non condividevano la vulnerabilità, Ethereum è stato in grado di resistere all'attacco e continuare a operare mentre la vulnerabilità in Geth veniva risolta.
 
-### Finalità della prova di stake {#finality}
+### Definitività della Proof-of-Stake {#finality}
 
-Un bug in un client di consenso con oltre il 33% dei nodi di Ethereum potrebbe impedire al livello di consenso di raggiungere la finalità, il che significa che gli utenti non potrebbero fidarsi del fatto che le transazioni non vengano annullate o modificate a un certo punto. Questo sarebbe molto problematico per molte delle app costruite su Ethereum, in particolare per la DeFi.
+Un bug in un client di consenso con oltre il 33% dei nodi Ethereum potrebbe impedire al livello di consenso di raggiungere la definitività, il che significa che gli utenti non potrebbero fidarsi del fatto che le transazioni non vengano annullate o modificate a un certo punto. Questo sarebbe molto problematico per molte delle app create su Ethereum, in particolare per la finanza decentralizzata (DeFi).
 
-<Emoji text="🚨" className="me-4" /> Peggio ancora, un bug critico in un client con una maggioranza di due terzi potrebbe causare alla catena di <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">dividersi e finalizzarsi in modo errato</a>, portando un ampio gruppo di validatori a rimanere bloccati su una catena non valida. Se vogliono ricongiungersi alla catena corretta, questi validatori rischiano di essere puniti o di dover affrontare un ritiro volontario e una riattivazione lenti e costosi. L'entità della punizione scala con il numero di nodi colpevoli, con una maggioranza di due terzi punita al massimo (32 ETH).
+<Emoji text="🚨" className="me-4" /> Peggio ancora, un bug critico in un client con una maggioranza di due terzi potrebbe causare la <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">divisione e la definitività errate</a> della catena, portando un ampio gruppo di validatori a rimanere bloccati su una catena non valida. Se vogliono ricongiungersi alla catena corretta, questi validatori vanno incontro allo slashing o a un prelievo volontario e a una riattivazione lenti e costosi. L'entità di uno slashing scala con il numero di nodi colpevoli, con una maggioranza di due terzi penalizzata al massimo (32 ETH).
 
-Sebbene questi siano scenari improbabili, l'ecosistema di Ethereum può mitigarne il rischio uniformando la distribuzione dei client tra i nodi attivi. Idealmente, nessun client di consenso dovrebbe mai raggiungere una quota del 33% dei nodi totali.
+Sebbene si tratti di scenari improbabili, l'ecosistema di Ethereum può mitigarne il rischio uniformando la distribuzione dei client tra i nodi attivi. Idealmente, nessun client di consenso dovrebbe mai raggiungere una quota del 33% dei nodi totali.
 
 ### Responsabilità condivisa {#responsibility}
 
@@ -69,19 +69,19 @@ data={[
 
 Questo diagramma potrebbe essere obsoleto: vai su [ethernodes.org](https://ethernodes.org) e [clientdiversity.org](https://clientdiversity.org) per informazioni aggiornate.
 
-I due grafici a torta qui sopra mostrano istantanee dell'attuale diversità dei client per i livelli di esecuzione e di consenso (al momento della stesura, a ottobre 2025). La diversità dei client è migliorata nel corso degli anni e il livello di esecuzione ha visto una riduzione del dominio da parte di [Geth](https://geth.ethereum.org/), con [Nethermind](https://www.nethermind.io/nethermind-client) al secondo posto a breve distanza, [Besu](https://besu.hyperledger.org/) al terzo ed [Erigon](https://github.com/ledgerwatch/erigon) al quarto, con altri client che costituiscono meno del 3% della rete. Il client più comunemente utilizzato sul livello di consenso, [Lighthouse](https://lighthouse.sigmaprime.io/), è molto vicino al secondo più utilizzato. [Prysm](https://prysmaticlabs.com/#projects) e [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) costituiscono rispettivamente circa il 31% e il 14%, e gli altri client sono usati raramente.
+I due grafici a torta qui sopra mostrano istantanee dell'attuale diversità dei client per i livelli di esecuzione e di consenso (al momento della stesura, a ottobre 2025). La diversità dei client è migliorata nel corso degli anni e il livello di esecuzione ha visto una riduzione del dominio di [Geth](https://geth.ethereum.org/), con [Nethermind](https://www.nethermind.io/nethermind-client) al secondo posto, [Besu](https://besu.hyperledger.org/) al terzo ed [Erigon](https://github.com/ledgerwatch/erigon) al quarto, mentre gli altri client costituiscono meno del 3% della rete. Il client più comunemente utilizzato sul livello di consenso, [Lighthouse](https://lighthouse.sigmaprime.io/), è molto vicino al secondo più utilizzato. [Prysm](https://prysmaticlabs.com/#projects) e [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) costituiscono rispettivamente circa il 31% e il 14%, e gli altri client sono usati raramente.
 
-I dati del livello di esecuzione sono stati ottenuti da [supermajority.info](https://supermajority.info/) il 26 ottobre 2025. I dati per i client di consenso sono stati ottenuti da [Michael Sproul](https://github.com/sigp/blockprint). I dati dei client di consenso sono più difficili da ottenere perché i client del livello di consenso non hanno sempre tracce inequivocabili che possono essere utilizzate per identificarli. I dati sono stati generati utilizzando un algoritmo di classificazione che a volte confonde alcuni dei client di minoranza (vedi [qui](https://twitter.com/sproulM_/status/1440512518242197516) per maggiori dettagli). Nel diagramma sopra, queste classificazioni ambigue sono trattate con un'etichetta o/o (es. Nimbus/Teku). Tuttavia, è chiaro che la maggior parte della rete esegue Prysm. Nonostante siano solo istantanee, i valori nel diagramma forniscono un buon senso generale dello stato attuale della diversità dei client.
+I dati del livello di esecuzione sono stati ottenuti da [supermajority.info](https://supermajority.info/) il 26 ottobre 2025. I dati per i client di consenso sono stati ottenuti da [Michael Sproul](https://github.com/sigp/blockprint). I dati dei client di consenso sono più difficili da ottenere perché i client del livello di consenso non hanno sempre tracce inequivocabili che possono essere utilizzate per identificarli. I dati sono stati generati utilizzando un algoritmo di classificazione che a volte confonde alcuni dei client di minoranza (vedi [qui](https://twitter.com/sproulM_/status/1440512518242197516) per maggiori dettagli). Nel diagramma precedente, queste classificazioni ambigue sono trattate con un'etichetta alternativa (es. Nimbus/Teku). Ciononostante, è chiaro che la maggior parte della rete esegue Prysm. Pur essendo solo istantanee, i valori nel diagramma forniscono una buona idea generale dello stato attuale della diversità dei client.
 
 I dati aggiornati sulla diversità dei client per il livello di consenso sono ora disponibili su [clientdiversity.org](https://clientdiversity.org/).
 
 ## Livello di esecuzione {#execution-layer}
 
-Fino ad ora, la conversazione sulla diversità dei client si è concentrata principalmente sul livello di consenso. Tuttavia, il client di esecuzione [Geth](https://geth.ethereum.org) rappresenta attualmente circa l'85% di tutti i nodi. Questa percentuale è problematica per gli stessi motivi dei client di consenso. Ad esempio, un bug in Geth che influisce sulla gestione delle transazioni o sulla costruzione dei payload di esecuzione potrebbe portare i client di consenso a finalizzare transazioni problematiche o con bug. Pertanto, Ethereum sarebbe più sano con una distribuzione più uniforme dei client di esecuzione, idealmente senza alcun client che rappresenti più del 33% della rete.
+Finora, la conversazione sulla diversità dei client si è concentrata principalmente sul livello di consenso. Tuttavia, il client di esecuzione [Geth](https://geth.ethereum.org) rappresenta attualmente circa l'85% di tutti i nodi. Questa percentuale è problematica per gli stessi motivi dei client di consenso. Ad esempio, un bug in Geth che influisce sulla gestione delle transazioni o sulla costruzione dei payload di esecuzione potrebbe portare i client di consenso a finalizzare transazioni problematiche o con bug. Pertanto, Ethereum sarebbe più in salute con una distribuzione più uniforme dei client di esecuzione, idealmente senza alcun client che rappresenti più del 33% della rete.
 
 ## Usa un client di minoranza {#use-minority-client}
 
-Affrontare la diversità dei client richiede più che i singoli utenti scelgano client di minoranza: richiede che anche le pool di validatori e le istituzioni come le principali dApp e gli exchange cambino client. Tuttavia, tutti gli utenti possono fare la loro parte per correggere l'attuale squilibrio e normalizzare l'uso di tutto il software di Ethereum disponibile. Dopo Il Merge, a tutti gli operatori di nodi sarà richiesto di eseguire un client di esecuzione e un client di consenso. Scegliere combinazioni dei client suggeriti di seguito aiuterà ad aumentare la diversità dei client.
+Affrontare la diversità dei client richiede molto più che i singoli utenti scelgano client di minoranza: richiede che anche i pool di validatori e le istituzioni come le principali dapp e gli exchange cambino client. Tuttavia, tutti gli utenti possono fare la loro parte per correggere l'attuale squilibrio e normalizzare l'uso di tutto il software Ethereum disponibile. Dopo The Merge, a tutti gli operatori dei nodi sarà richiesto di eseguire un client di esecuzione e un client di consenso. Scegliere combinazioni dei client suggeriti di seguito aiuterà ad aumentare la diversità dei client.
 
 ### Client di esecuzione {#execution-clients}
 
@@ -116,17 +116,17 @@ Diverse dashboard forniscono statistiche in tempo reale sulla diversità dei cli
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
-## Letture consigliate {#further-reading}
+## Letture di approfondimento {#further-reading}
 
 - [Diversità dei client sul livello di consenso di Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
-- [Il Merge di Ethereum: Esegui il client di maggioranza a tuo rischio e pericolo!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, 24 marzo 2022_
-- [L'importanza della diversità dei client](https://our.status.im/the-importance-of-client-diversity/)
-- [Elenco dei servizi di nodi di Ethereum](https://ethereumnodes.com/)
-- [I "Cinque Perché" del problema della diversità dei client](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
+- [The Merge di Ethereum: esegui il client di maggioranza a tuo rischio e pericolo!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, 24 marzo 2022_
+- [Importanza della diversità dei client](https://our.status.im/the-importance-of-client-diversity/)
+- [Elenco dei servizi per i nodi Ethereum](https://ethereumnodes.com/)
+- [I "Cinque perché" del problema della diversità dei client](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
 - [La diversità di Ethereum e come risolverla (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
 ## Argomenti correlati {#related-topics}
 
-- [Esegui un nodo di Ethereum](/run-a-node/)
+- [Esegui un nodo Ethereum](/run-a-node/)
 - [Nodi e client](/developers/docs/nodes-and-clients/)
