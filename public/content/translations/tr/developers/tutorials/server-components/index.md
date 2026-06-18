@@ -68,7 +68,7 @@ Bir sunucu bileşeninin nasıl yazılacağını anlamanın en kolay yolu, örnek
 
 Programın büyük çoğunluğu [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts) içinde yer almaktadır.
 
-##### Ön koşul nesnelerini oluşturma {#}
+##### Ön koşul nesnelerini oluşturma
 
 ```typescript
 import {
@@ -176,7 +176,7 @@ const greeter = getContract({
 
 Artık tüm ön koşullara sahip olduğumuza göre, nihayet bir [Sözleşme örneği](https://viem.sh/docs/contract/getContract) oluşturabiliriz. Zincir içi Sözleşme ile iletişim kurmak için bu Sözleşme örneğini kullanacağız.
 
-##### Blokzincirden okuma {#}
+##### Blokzincirden okuma
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -188,7 +188,7 @@ JavaScript tek iş parçacıklıdır, bu nedenle uzun süren bir işlemi başlat
 
 Bunun nasıl çalıştığıyla ilgileniyorsanız [buradan okuyabilirsiniz](https://www.w3schools.com/js/js_promise.asp), ancak pratik anlamda bilmeniz gereken tek şey, uzun süren bir işlem başlatırsanız sonuçları `await` ile beklemeniz gerektiği ve bunu yapan herhangi bir işlevin `async` olarak bildirilmesi gerektiğidir.
 
-##### İşlem gönderme {#}
+##### İşlem gönderme
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -211,7 +211,7 @@ Sözleşme örneğinin `write` alanı, [`setGreeting`](https://eth-holesky.block
 
 İşlemin hash'ini (görüntülemek için blok gezginine giden bir URL'nin parçası olarak) bildirin ve döndürün.
 
-##### Olaylara yanıt verme {#}
+##### Olaylara yanıt verme
 
 ```typescript
 greeter.watchEvent.SetGreeting({

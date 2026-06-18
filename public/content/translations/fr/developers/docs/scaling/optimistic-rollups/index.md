@@ -152,7 +152,7 @@ Les rollups optimistes sont conçus pour l'interopérabilité avec le réseau pr
 
 #### 1. Mouvement des actifs {#asset-movement}
 
-##### Entrer dans le rollup {#}
+##### Entrer dans le rollup
 
 Pour utiliser un rollup optimiste, les utilisateurs déposent des ETH, des jetons ERC-20 et d'autres actifs acceptés dans le contrat de [pont](/developers/docs/bridges/) du rollup sur la l1. Le contrat de pont relaiera la transaction vers la l2, où une quantité équivalente d'actifs est frappée et envoyée à l'adresse choisie par l'utilisateur sur le rollup optimiste.
 
@@ -160,7 +160,7 @@ Les transactions générées par les utilisateurs (comme un dépôt l1 > l2) son
 
 Certains rollups optimistes adoptent une approche plus directe pour empêcher les séquenceurs de censurer les utilisateurs. Ici, un bloc est défini par toutes les transactions soumises au contrat l1 depuis le bloc précédent (par ex., les dépôts) en plus des transactions traitées sur la chaîne de rollup. Si un séquenceur ignore une transaction l1, il publiera une racine d'état (prouvablement) erronée ; par conséquent, les séquenceurs ne peuvent pas retarder les messages générés par les utilisateurs une fois publiés sur la l1.
 
-##### Sortir du rollup {#}
+##### Sortir du rollup
 
 Le retrait d'un rollup optimiste vers Ethereum est plus difficile en raison du système de preuve de fraude. Si un utilisateur initie une transaction l2 > l1 pour retirer des fonds mis sous séquestre sur la l1, il doit attendre que la période de contestation — d'une durée d'environ sept jours — s'écoule. Néanmoins, le processus de retrait lui-même est assez simple.
 

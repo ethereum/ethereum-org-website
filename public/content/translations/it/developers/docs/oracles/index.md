@@ -269,7 +269,7 @@ Gli oracoli centralizzati si basano su un'unica fonte di verità quando fornisco
 
 Gli oracoli decentralizzati, tuttavia, devono affrontare le discrepanze nelle informazioni recuperate da più fonti offchain. Per ridurre al minimo le differenze nelle informazioni e garantire che i dati passati al contratto dell'oracolo riflettano l'opinione collettiva dei nodi oracolo, gli oracoli decentralizzati utilizzano i seguenti meccanismi:
 
-##### Voto/staking sull'accuratezza dei dati {#}
+##### Voto/staking sull'accuratezza dei dati
 
 Alcune reti di oracoli decentralizzate richiedono ai partecipanti di votare o mettere in staking sull'accuratezza delle risposte alle query di dati (ad es. "Chi ha vinto le elezioni statunitensi del 2020?") utilizzando il token nativo della rete. Un protocollo di aggregazione aggrega quindi i voti e gli stake e prende come valida la risposta supportata dalla maggioranza.
 
@@ -277,7 +277,7 @@ I nodi le cui risposte si discostano dalla risposta della maggioranza vengono pe
 
 Lo staking/voto protegge anche gli oracoli decentralizzati dagli [attacchi Sybil](/glossary/#sybil-attack) in cui attori malintenzionati creano più identità per manipolare il sistema di consenso. Tuttavia, lo staking non può impedire il "freeloading" (nodi oracolo che copiano informazioni da altri) e la "convalida pigra" (nodi oracolo che seguono la maggioranza senza verificare le informazioni da soli).
 
-##### Meccanismi del punto di Schelling {#}
+##### Meccanismi del punto di Schelling
 
 Il [punto di Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) è un concetto della teoria dei giochi che presuppone che più entità adotteranno sempre una soluzione comune a un problema in assenza di qualsiasi comunicazione. I meccanismi del punto di Schelling sono spesso utilizzati nelle reti di oracoli decentralizzate per consentire ai nodi di raggiungere il consenso sulle risposte alle richieste di dati.
 

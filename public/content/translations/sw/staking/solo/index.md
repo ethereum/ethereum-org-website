@@ -193,7 +193,7 @@ Mara tu vitambulisho vya uondoaji vinapowekwa, malipo ya tuzo (ETH iliyolimbikiz
 Ili kufungua na kupokea salio lako lote nyuma lazima pia ukamilishe mchakato wa kujitoa kwa mthibitishaji wako.
 
 <ButtonLink href="/staking/withdrawals/">Zaidi kuhusu utoaji wa uwekaji dhamana</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Usomaji zaidi {#further-reading}
 

@@ -52,7 +52,7 @@ Unit-Tests sind nützlich, um zu überprüfen, ob Funktionen erwartete Werte zur
 
 #### Richtlinien für Unit-Tests von Smart Contracts {#unit-testing-guidelines}
 
-##### 1. Verstehen Sie die Geschäftslogik und den Workflow Ihres Vertrags {#}
+##### 1. Verstehen Sie die Geschäftslogik und den Workflow Ihres Vertrags
 
 Bevor Sie Unit-Tests schreiben, ist es hilfreich zu wissen, welche Funktionalitäten ein Smart Contract bietet und wie Benutzer auf diese Funktionen zugreifen und sie nutzen werden. Dies ist besonders nützlich für die Ausführung von [Happy-Path-Tests](https://en.m.wikipedia.org/wiki/Happy_path), die bestimmen, ob Funktionen in einem Vertrag die korrekte Ausgabe für gültige Benutzereingaben zurückgeben. Wir erklären dieses Konzept anhand dieses (gekürzten) Beispiels [eines Auktionsvertrags](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
@@ -114,7 +114,7 @@ Unit-Tests für einen solchen Vertrag würden verschiedene Funktionen abdecken, 
 
 Das Verständnis des operativen Workflows eines Vertrags hilft auch beim Schreiben von Unit-Tests, die prüfen, ob die Ausführung den Anforderungen entspricht. Zum Beispiel legt der Auktionsvertrag fest, dass Benutzer keine Gebote abgeben können, wenn die Auktion beendet ist (d. h. wenn `auctionEndTime` niedriger als `block.timestamp` ist). Daher könnte ein Entwickler einen Unit-Test ausführen, der prüft, ob Aufrufe der Funktion `bid()` erfolgreich sind oder fehlschlagen, wenn die Auktion vorbei ist (d. h. wenn `auctionEndTime` > `block.timestamp`).
 
-##### 2. Bewerten Sie alle Annahmen im Zusammenhang mit der Vertragsausführung {#}
+##### 2. Bewerten Sie alle Annahmen im Zusammenhang mit der Vertragsausführung
 
 Es ist wichtig, alle Annahmen über die Ausführung eines Vertrags zu dokumentieren und Unit-Tests zu schreiben, um die Gültigkeit dieser Annahmen zu überprüfen. Abgesehen vom Schutz vor unerwarteter Ausführung zwingt Sie das Testen von Zusicherungen dazu, über Operationen nachzudenken, die das Sicherheitsmodell eines Smart Contracts brechen könnten. Ein nützlicher Tipp ist, über „Happy-User-Tests“ hinauszugehen und negative Tests zu schreiben, die prüfen, ob eine Funktion bei falschen Eingaben fehlschlägt.
 
@@ -128,11 +128,11 @@ Viele Unit-Testing-Frameworks ermöglichen es Ihnen, Zusicherungen zu erstellen 
 
 **Hinweis**: Eine weitere Möglichkeit, Annahmen zu testen, besteht darin, Tests zu schreiben, die [Funktionsmodifikatoren](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) in einem Vertrag auslösen, insbesondere `require`-, `assert`- und `if…else`-Anweisungen.
 
-##### 3. Messen Sie die Codeabdeckung {#}
+##### 3. Messen Sie die Codeabdeckung
 
 [Codeabdeckung](https://en.m.wikipedia.org/wiki/Code_coverage) ist eine Testmetrik, die die Anzahl der Zweige, Zeilen und Anweisungen in Ihrem Code verfolgt, die während der Tests ausgeführt werden. Tests sollten eine gute Codeabdeckung aufweisen, um das Risiko ungetesteter Schwachstellen zu minimieren. Ohne ausreichende Abdeckung könnten Sie fälschlicherweise annehmen, dass Ihr Vertrag sicher ist, weil alle Tests bestanden wurden, während in ungetesteten Codepfaden weiterhin Schwachstellen existieren. Die Aufzeichnung einer hohen Codeabdeckung gibt jedoch die Gewissheit, dass alle Anweisungen/Funktionen in einem Smart Contract ausreichend auf Korrektheit getestet wurden.
 
-##### 4. Verwenden Sie gut entwickelte Test-Frameworks {#}
+##### 4. Verwenden Sie gut entwickelte Test-Frameworks
 
 Die Qualität der Tools, die zur Ausführung von Unit-Tests für Ihre Smart Contracts verwendet werden, ist entscheidend. Ein ideales Test-Framework wird regelmäßig gewartet, bietet nützliche Funktionen (z. B. Protokollierungs- und Berichtsfunktionen) und muss von anderen Entwicklern ausgiebig genutzt und geprüft worden sein.
 

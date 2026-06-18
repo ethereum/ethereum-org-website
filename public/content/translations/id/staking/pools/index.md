@@ -69,7 +69,7 @@ Sekarang juga! Peningkatan jaringan Shanghai/Capella terjadi pada bulan April 20
 Sebagai alternatif, pool yang menggunakan token staking ERC-20 memungkinkan pengguna untuk memperdagangkan token ini di pasar terbuka, memungkinkan Anda untuk menjual posisi staking Anda, yang secara efektif "menarik" tanpa benar-benar menghapus ETH dari kontrak staking.
 
 <ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Apakah ini berbeda dengan staking di bursa saya?">
 Ada banyak kesamaan antara opsi staking gabungan ini dan bursa terpusat, seperti kemampuan untuk melakukan stake sejumlah kecil ETH dan menggabungkannya untuk mengaktifkan validator.

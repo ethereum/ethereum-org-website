@@ -269,7 +269,7 @@ Scentralizowane wyrocznie opierają się na jednym źródle prawdy podczas dosta
 
 Zdecentralizowane wyrocznie muszą jednak radzić sobie z rozbieżnościami w informacjach pobieranych z wielu źródeł pozałańcuchowych. Aby zminimalizować różnice w informacjach i upewnić się, że dane przekazywane do kontraktu wyroczni odzwierciedlają zbiorową opinię węzłów wyroczni, zdecentralizowane wyrocznie wykorzystują następujące mechanizmy:
 
-##### Głosowanie/staking na dokładność danych {#}
+##### Głosowanie/staking na dokładność danych
 
 Niektóre zdecentralizowane sieci wyroczni wymagają od uczestników głosowania lub stakowania na dokładność odpowiedzi na zapytania o dane (np. „Kto wygrał wybory w USA w 2020 r.?”) przy użyciu natywnego tokena sieci. Protokół agregacji następnie agreguje głosy i stawki i przyjmuje odpowiedź popieraną przez większość jako ważną.
 
@@ -277,7 +277,7 @@ Węzły, których odpowiedzi odbiegają od odpowiedzi większości, są karane p
 
 Staking/głosowanie chroni również zdecentralizowane wyrocznie przed [atakami Sybil](/glossary/#sybil-attack), w których złośliwi aktorzy tworzą wiele tożsamości, aby oszukać system konsensusu. Jednak staking nie może zapobiec „jeździe na gapę” (węzły wyroczni kopiujące informacje od innych) i „leniwej walidacji” (węzły wyroczni podążające za większością bez samodzielnej weryfikacji informacji).
 
-##### Mechanizmy punktu Schellinga {#}
+##### Mechanizmy punktu Schellinga
 
 [Punkt Schellinga](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) to koncepcja z teorii gier, która zakłada, że wiele podmiotów zawsze domyślnie wybierze wspólne rozwiązanie problemu w przypadku braku jakiejkolwiek komunikacji. Mechanizmy punktu Schellinga są często używane w zdecentralizowanych sieciach wyroczni, aby umożliwić węzłom osiągnięcie konsensusu w sprawie odpowiedzi na żądania danych.
 

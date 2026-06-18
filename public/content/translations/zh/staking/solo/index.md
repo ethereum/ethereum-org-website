@@ -193,7 +193,7 @@ summaryPoints:
 要解锁并收回你的全部余额，你还必须完成退出验证者的过程。
 
 <ButtonLink href="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## 延伸阅读 {#further-reading}
 

@@ -269,7 +269,7 @@ Zentralisierte Orakel verlassen sich bei der Bereitstellung von Daten für Smart
 
 Dezentrale Orakel müssen jedoch mit Diskrepanzen bei Informationen umgehen, die aus mehreren offchain Quellen abgerufen wurden. Um Informationsunterschiede zu minimieren und sicherzustellen, dass die an den Orakel-Vertrag weitergegebenen Daten die kollektive Meinung der Orakel-Knoten widerspiegeln, verwenden dezentrale Orakel die folgenden Mechanismen:
 
-##### Abstimmen/Staking über die Genauigkeit von Daten {#}
+##### Abstimmen/Staking über die Genauigkeit von Daten
 
 Einige dezentrale Orakel-Netzwerke verlangen von den Teilnehmern, dass sie mit dem nativen Token des Netzwerks über die Genauigkeit von Antworten auf Datenabfragen (z. B. „Wer hat die US-Wahl 2020 gewonnen?“) abstimmen oder staken. Ein Aggregationsprotokoll aggregiert dann die Stimmen und Stakes und nimmt die von der Mehrheit unterstützte Antwort als die gültige an.
 
@@ -277,7 +277,7 @@ Knoten, deren Antworten von der Mehrheitsantwort abweichen, werden bestraft, ind
 
 Staking/Abstimmen schützt dezentrale Orakel auch vor [Sybil-Angriffen](/glossary/#sybil-attack), bei denen böswillige Akteure mehrere Identitäten erstellen, um das Konsenssystem auszutricksen. Staking kann jedoch „Trittbrettfahren“ (Orakel-Knoten kopieren Informationen von anderen) und „faule Validierung“ (Orakel-Knoten folgen der Mehrheit, ohne die Informationen selbst zu überprüfen) nicht verhindern.
 
-##### Schelling-Punkt-Mechanismen {#}
+##### Schelling-Punkt-Mechanismen
 
 Ein [Schelling-Punkt](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) ist ein spieltheoretisches Konzept, das davon ausgeht, dass mehrere Entitäten in Abwesenheit jeglicher Kommunikation immer auf eine gemeinsame Lösung für ein Problem zurückgreifen. Schelling-Punkt-Mechanismen werden häufig in dezentralen Orakel-Netzwerken verwendet, um es Knoten zu ermöglichen, einen Konsens über Antworten auf Datenanfragen zu erzielen.
 

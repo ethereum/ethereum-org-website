@@ -40,7 +40,7 @@ Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mante
 
 **Sepolia è la testnet predefinita consigliata per lo sviluppo di applicazioni**. La rete Sepolia utilizza un set di validatori autorizzato controllato dai team dei client e di test.
 
-##### Risorse {#} {#}
+##### Risorse
 
 - [Sito web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mante
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucet {#} {#}
+##### Faucet
 
 - [Faucet di Sepolia di Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet di Sepolia di Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi è una testnet per testare la convalida e lo staking. La rete Hoodi è ape
 - Stato di grandi dimensioni, utile per testare interazioni complesse di smart contract
 - Sincronizzazione più lunga e richiede più spazio di archiviazione per eseguire un nodo
 
-##### Risorse {#}
+##### Risorse
 
 - [Sito web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi è una testnet per testare la convalida e lo staking. La rete Hoodi è ape
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucet {#}
+##### Faucet
 
 - [Faucet di Hoodi di Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Faucet di Hoodi](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery è un tipo unico di testnet che si ripristina completamente ogni mese. 
 - Set di validatori aperto e facile accesso a grandi quantità di fondi
 - Requisiti minimi per i nodi e sincronizzazione più rapida, in media &lt;5GB
 
-##### Risorse {#}
+##### Risorse
 
 - [Sito web](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ Il [layer 2 (l2)](/layer-2/) è un termine collettivo per descrivere un insieme 
 
 Una testnet per [Arbitrum](https://arbitrum.io/).
 
-##### Risorse {#}
+##### Risorse
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucet {#}
+##### Faucet
 
 - [Faucet di Arbitrum Sepolia di Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Faucet di Arbitrum Sepolia di Chainlink](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Una testnet per [Arbitrum](https://arbitrum.io/).
 
 Una testnet per [Optimism](https://www.optimism.io/).
 
-##### Risorse {#}
+##### Risorse
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucet {#}
+##### Faucet
 
 - [Faucet di Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet di Chainlink](https://faucets.chain.link/optimism-sepolia)

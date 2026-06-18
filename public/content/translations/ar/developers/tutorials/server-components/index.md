@@ -68,7 +68,7 @@ published: 2024-07-15
 
 الغالبية العظمى من البرنامج موجودة في [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### إنشاء الكائنات الأساسية {#}
+##### إنشاء الكائنات الأساسية
 
 ```typescript
 import {
@@ -176,7 +176,7 @@ const greeter = getContract({
 
 الآن بعد أن أصبح لدينا جميع المتطلبات الأساسية، يمكننا أخيرًا إنشاء [نسخة عقد](https://viem.sh/docs/contract/getContract). سنستخدم نسخة العقد هذه للتواصل مع العقد على السلسلة.
 
-##### القراءة من سلسلة الكتل {#}
+##### القراءة من سلسلة الكتل
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -188,7 +188,7 @@ console.log(`Current greeting:`, await greeter.read.greet())
 
 إذا كنت مهتمًا بكيفية عمل ذلك، يمكنك [القراءة عنه هنا](https://www.w3schools.com/js/js_promise.asp)، ولكن من الناحية العملية، كل ما تحتاج إلى معرفته هو أنك تستخدم `await` للنتائج إذا بدأت عملية تستغرق وقتًا طويلاً، وأن أي دالة تقوم بذلك يجب الإعلان عنها كـ `async`.
 
-##### إصدار المعاملات {#}
+##### إصدار المعاملات
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -211,7 +211,7 @@ const txHash = await greeter.write.setGreeting([greeting])
 
 أبلغ عن تجزئة المعاملة (كجزء من عنوان URL لمستكشف الكتل لعرضها) وقم بإرجاعها.
 
-##### الاستجابة للأحداث {#}
+##### الاستجابة للأحداث
 
 ```typescript
 greeter.watchEvent.SetGreeting({

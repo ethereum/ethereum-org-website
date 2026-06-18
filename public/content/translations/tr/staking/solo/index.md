@@ -193,7 +193,7 @@ Yeni stake edenler bunu anahtar oluşturma ve para yatırma sırasında ayarlar.
 Tüm bakiyenizin kilidini açmak ve geri almak için doğrulayıcınızdan çıkış işlemini de tamamlamanız gerekir.
 
 <ButtonLink href="/staking/withdrawals/">Staking çekim işlemleri hakkında daha fazlası</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Daha fazla okuma {#further-reading}
 

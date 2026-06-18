@@ -69,7 +69,7 @@ Právě teď! Upgrade sítě Šanghaj/Capella proběhl v dubnu 2023 a zavedl vý
 Alternativně pooly, které využívají stakingový token ERC-20, umožňují uživatelům obchodovat s tímto tokenem na otevřeném trhu, což vám umožňuje prodat vaši stakingovou pozici a efektivně tak „vybrat“ bez skutečného odstranění ETH ze stakingového kontraktu.
 
 <ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Liší se to od stakingu na mé burze?">
 Mezi těmito možnostmi společného stakingu a centralizovanými burzami existuje mnoho podobností, jako je možnost stakovat malá množství ETH a nechat je spojit dohromady za účelem aktivace validátorů.

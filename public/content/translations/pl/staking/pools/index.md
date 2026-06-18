@@ -69,7 +69,7 @@ Już teraz! Aktualizacja sieci Szanghaj/Capella miała miejsce w kwietniu 2023 r
 Alternatywnie, pule wykorzystujące token stakingowy ERC-20 pozwalają użytkownikom na handel tym tokenem na otwartym rynku, co umożliwia sprzedaż pozycji stakingowej, skutecznie „wypłacając” środki bez faktycznego usuwania ETH z kontraktu stakingowego.
 
 <ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Czy to różni się od stakingu na mojej giełdzie?">
 Istnieje wiele podobieństw między tymi opcjami stakingu grupowego a scentralizowanymi giełdami, takimi jak możliwość stakowania małych ilości ETH i łączenia ich w celu aktywacji walidatorów.

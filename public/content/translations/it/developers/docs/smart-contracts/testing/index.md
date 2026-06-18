@@ -52,7 +52,7 @@ I test unitari sono utili per verificare che le funzioni restituiscano i valori 
 
 #### Linee guida per i test unitari degli smart contract {#unit-testing-guidelines}
 
-##### 1. Comprendere la logica di business e il flusso di lavoro del contratto {#}
+##### 1. Comprendere la logica di business e il flusso di lavoro del contratto
 
 Prima di scrivere test unitari, è utile sapere quali funzionalità offre uno smart contract e come gli utenti accederanno e utilizzeranno tali funzioni. Questo è particolarmente utile per eseguire [test del percorso felice (happy path)](https://en.m.wikipedia.org/wiki/Happy_path) che determinano se le funzioni in un contratto restituiscono l'output corretto per input utente validi. Spiegheremo questo concetto utilizzando questo esempio (abbreviato) di [un contratto d'asta](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
@@ -114,7 +114,7 @@ I test unitari per un contratto come questo coprirebbero diverse funzioni che un
 
 Comprendere il flusso di lavoro operativo di un contratto aiuta anche a scrivere test unitari che verificano se l'esecuzione soddisfa i requisiti. Ad esempio, il contratto d'asta specifica che gli utenti non possono fare offerte quando l'asta è terminata (cioè, quando `auctionEndTime` è inferiore a `block.timestamp`). Pertanto, uno sviluppatore potrebbe eseguire un test unitario che verifica se le chiamate alla funzione `bid()` hanno successo o falliscono quando l'asta è finita (cioè, quando `auctionEndTime` > `block.timestamp`).
 
-##### 2. Valutare tutte le assunzioni relative all'esecuzione del contratto {#}
+##### 2. Valutare tutte le assunzioni relative all'esecuzione del contratto
 
 È importante documentare qualsiasi assunzione sull'esecuzione di un contratto e scrivere test unitari per verificare la validità di tali assunzioni. Oltre a offrire protezione contro esecuzioni impreviste, testare le asserzioni ti costringe a pensare alle operazioni che potrebbero infrangere il modello di sicurezza di uno smart contract. Un consiglio utile è andare oltre i "test dell'utente felice" e scrivere test negativi che verificano se una funzione fallisce per gli input sbagliati.
 
@@ -128,11 +128,11 @@ Molti framework di test unitari consentono di creare asserzioni (semplici dichia
 
 **Nota**: Un altro modo per testare le assunzioni è scrivere test che attivano i [modificatori di funzione](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) in un contratto, in particolare le istruzioni `require`, `assert` e `if…else`.
 
-##### 3. Misurare la copertura del codice {#}
+##### 3. Misurare la copertura del codice
 
 La [copertura del codice](https://en.m.wikipedia.org/wiki/Code_coverage) è una metrica di test che traccia il numero di rami, righe e istruzioni nel tuo codice eseguiti durante i test. I test dovrebbero avere una buona copertura del codice per ridurre al minimo il rischio di vulnerabilità non testate. Senza una copertura sufficiente, potresti presumere erroneamente che il tuo contratto sia sicuro perché tutti i test vengono superati, mentre le vulnerabilità esistono ancora in percorsi di codice non testati. Registrare un'elevata copertura del codice, tuttavia, dà la garanzia che tutte le istruzioni/funzioni in uno smart contract siano state sufficientemente testate per la correttezza.
 
-##### 4. Utilizzare framework di test ben sviluppati {#}
+##### 4. Utilizzare framework di test ben sviluppati
 
 La qualità degli strumenti utilizzati per eseguire i test unitari per i tuoi smart contract è fondamentale. Un framework di test ideale è quello che viene regolarmente mantenuto; fornisce funzionalità utili (es. capacità di registrazione e reportistica); e deve essere stato ampiamente utilizzato e verificato da altri sviluppatori.
 

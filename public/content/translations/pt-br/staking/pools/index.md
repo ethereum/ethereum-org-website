@@ -69,7 +69,7 @@ Agora mesmo! A atualização da rede Shanghai/Capella ocorreu em abril de 2023 e
 Alternativamente, os pools que utilizam um token de staking ERC-20 permitem que os usuários negociem esse token no mercado aberto, permitindo que você venda sua posição de staking, efetivamente "sacando" sem realmente remover o ETH do contrato de staking.
 
 <ButtonLink href="/staking/withdrawals/">Mais sobre saques de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Isso é diferente de fazer staking com a minha exchange?">
 Existem muitas semelhanças entre essas opções de staking em pool e exchanges centralizadas, como a capacidade de fazer stake de pequenas quantias de ETH e agrupá-las para ativar validadores.

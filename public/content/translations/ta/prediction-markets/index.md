@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>ஆபத்துகள் குறித்து கவனமாக இருங்கள்</strong>
+ <p className="mt-0"><strong>ஆபத்துகள் குறித்து கவனமாக இருங்கள்</strong></p>
   <p className="mt-2">உங்களால் இழக்க முடிந்த தொகையை மட்டுமே பந்தயம் கட்டுங்கள், மேலும் இது அடிமையாக்கும் பழக்கமாக மாறக்கூடிய சாத்தியக்கூறுகள் குறித்து விழிப்புடன் இருங்கள்.</p>
 </AlertDescription>
 </AlertContent>

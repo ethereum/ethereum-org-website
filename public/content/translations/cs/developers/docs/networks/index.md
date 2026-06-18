@@ -40,7 +40,7 @@ Dva veřejné testnety, které vývojáři klientů v současné době udržují
 
 **Sepolia je doporučený výchozí testnet pro vývoj aplikací**. Síť Sepolia používá sadu validátorů s řízeným přístupem, kterou kontrolují klientské a testovací týmy.
 
-##### Zdroje {#} {#}
+##### Zdroje
 
 - [Webové stránky](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Dva veřejné testnety, které vývojáři klientů v současné době udržují
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucety {#} {#}
+##### Faucety
 
 - [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi je testnet pro testování validace a stakingu. Síť Hoodi je otevřená 
 - Velký stav, užitečný pro testování složitých interakcí chytrých kontraktů
 - Delší doba synchronizace a vyžaduje více úložného prostoru pro provoz uzlu
 
-##### Zdroje {#}
+##### Zdroje
 
 - [Webové stránky](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi je testnet pro testování validace a stakingu. Síť Hoodi je otevřená 
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucety {#}
+##### Faucety
 
 - [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery je unikátní druh testnetu, který se každý měsíc plně resetuje. 
 - Otevřená sada validátorů a snadný přístup k velkému množství prostředků
 - Nejmenší požadavky na uzel a nejrychlejší synchronizace, v průměru &lt;5 GB
 
-##### Zdroje {#}
+##### Zdroje
 
 - [Webové stránky](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ Testnet Holesky je od září 2025 zastaralý. Provozovatelé stakingu a poskyto
 
 Testnet pro [Arbitrum](https://arbitrum.io/).
 
-##### Zdroje {#}
+##### Zdroje
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucety {#}
+##### Faucety
 
 - [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Chainlink Arbitrum Sepolia Faucet](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Testnet pro [Arbitrum](https://arbitrum.io/).
 
 Testnet pro [Optimism](https://www.optimism.io/).
 
-##### Zdroje {#}
+##### Zdroje
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucety {#}
+##### Faucety
 
 - [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)

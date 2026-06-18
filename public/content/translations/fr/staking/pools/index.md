@@ -69,7 +69,7 @@ Dès maintenant ! La mise à niveau du réseau Shanghai/Capella a eu lieu en avr
 Alternativement, les pools qui utilisent un jeton de staking ERC-20 permettent aux utilisateurs d'échanger ce jeton sur le marché libre, vous permettant de vendre votre position de staking, effectuant ainsi un « retrait » sans réellement retirer d'ETH du contrat de staking.
 
 <ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Est-ce différent du staking sur ma plateforme d'échange ?">
 Il existe de nombreuses similitudes entre ces options de staking mutualisé et les échanges centralisés, telles que la possibilité de staker de petites quantités d'ETH et de les regrouper pour activer des validateurs.

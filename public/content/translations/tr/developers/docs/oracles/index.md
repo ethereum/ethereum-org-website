@@ -269,7 +269,7 @@ Merkezi kâhinler, akıllı sözleşmelere veri sağlarken tek bir doğruluk kay
 
 Ancak merkeziyetsiz kâhinler, birden fazla zincir dışı kaynaktan alınan bilgilerdeki tutarsızlıklarla başa çıkmalıdır. Bilgilerdeki farklılıkları en aza indirmek ve kâhin sözleşmesine aktarılan verilerin kâhin düğümlerinin ortak görüşünü yansıtmasını sağlamak için merkeziyetsiz kâhinler aşağıdaki mekanizmaları kullanır:
 
-##### Verilerin doğruluğu üzerine oylama/staking {#}
+##### Verilerin doğruluğu üzerine oylama/staking
 
 Bazı merkeziyetsiz kâhin ağları, katılımcıların ağın yerel tokenini kullanarak veri sorgularına verilen yanıtların doğruluğu üzerine oy vermesini veya stake etmesini gerektirir (örneğin, "2020 ABD seçimlerini kim kazandı?"). Daha sonra bir toplama protokolü oyları ve stakeleri bir araya getirir ve çoğunluk tarafından desteklenen cevabı geçerli olarak kabul eder.
 
@@ -277,7 +277,7 @@ Cevapları çoğunluğun cevabından sapan düğümler, tokenlerinin daha doğru
 
 Staking/oylama ayrıca merkeziyetsiz kâhinleri, kötü niyetli aktörlerin mutabakat sistemini manipüle etmek için birden fazla kimlik oluşturduğu [Sybil saldırılarından](/glossary/#sybil-attack) korur. Ancak staking, "beleşçiliği" (kâhin düğümlerinin bilgileri başkalarından kopyalaması) ve "tembel doğrulamayı" (kâhin düğümlerinin bilgileri kendileri doğrulamadan çoğunluğu takip etmesi) engelleyemez.
 
-##### Schelling noktası mekanizmaları {#}
+##### Schelling noktası mekanizmaları
 
 [Schelling noktası](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>), herhangi bir iletişim olmadığında birden fazla varlığın her zaman bir soruna ortak bir çözüm bulacağını varsayan bir oyun teorisi kavramıdır. Schelling noktası mekanizmaları, düğümlerin veri taleplerine verilen yanıtlar üzerinde mutabakata varmasını sağlamak için genellikle merkeziyetsiz kâhin ağlarında kullanılır.
 

@@ -69,7 +69,7 @@ summaryPoints:
 대안으로, ERC-20 스테이킹 토큰을 활용하는 풀은 사용자가 공개 시장에서 이 토큰을 거래할 수 있도록 하여 스테이킹 포지션을 판매할 수 있게 해줍니다. 이는 스테이킹 컨트랙트에서 실제로 ETH를 제거하지 않고도 효과적으로 "인출"하는 것과 같습니다.
 
 <ButtonLink href="/staking/withdrawals/">스테이킹 인출에 대해 자세히 알아보기</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="거래소에서 스테이킹하는 것과 다른가요?">
 이러한 풀 스테이킹 옵션과 중앙화된 거래소 사이에는 적은 양의 ETH를 스테이킹하고 이를 묶어 검증자를 활성화할 수 있는 기능 등 많은 유사점이 있습니다.

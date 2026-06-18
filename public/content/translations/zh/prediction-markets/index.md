@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>注意风险</strong>
+ <p className="mt-0"><strong>注意风险</strong></p>
   <p className="mt-2">只下注你能承受损失的金额，并警惕潜在的成瘾行为。</p>
 </AlertDescription>
 </AlertContent>

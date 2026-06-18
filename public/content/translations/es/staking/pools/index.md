@@ -69,7 +69,7 @@ Por lo general, los tokens de staking ERC-20 se emiten a los participantes y rep
 Alternativamente, los pools que utilizan un token de staking ERC-20 permiten a los usuarios intercambiar este token en el mercado abierto, lo que le permite vender su posición de staking, "retirando" efectivamente sin eliminar realmente el ETH del contrato de staking.
 
 <ButtonLink href="/staking/withdrawals/">Más sobre los retiros de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="¿Es esto diferente de hacer staking con mi exchange?">
 Existen muchas similitudes entre estas opciones de staking conjunto y los intercambios centralizados, como la capacidad de hacer staking con pequeñas cantidades de ETH y agruparlas para activar validadores.

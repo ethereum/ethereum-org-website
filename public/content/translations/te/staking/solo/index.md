@@ -193,7 +193,7 @@ summaryPoints:
 మీ మొత్తం నిల్వను అన్‌లాక్ చేయడానికి మరియు తిరిగి స్వీకరించడానికి మీరు మీ ధృవీకర్త నుండి నిష్క్రమణ ప్రక్రియను కూడా పూర్తి చేయాలి.
 
 <ButtonLink href="/staking/withdrawals/">స్టేకింగ్ ఉపసంహరణల గురించి మరింత</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## తదుపరి పఠనం {#further-reading}
 

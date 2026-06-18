@@ -335,7 +335,7 @@ Hardhat 在他們的[合約教學](https://hardhat.org/tutorial/testing-contract
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
 ```
 
-ethers.js 中的 `ContractFactory` 是一個用於部署新智能合約的抽象概念，因此這裡的 `HelloWorld` 是我們 hello world 合約實例的[工廠](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)。當使用 `hardhat-ethers` 外掛程式 `ContractFactory` 和 `Contract` 時，實例預設會連接到第一個簽署者（擁有者）。
+ethers.js 中的 `ContractFactory` 是一個用於部署新智能合約的抽象概念，因此這裡的 `HelloWorld` 是我們 hello world 合約實例的[工廠](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>)。當使用 `hardhat-ethers` 外掛程式 `ContractFactory` 和 `Contract` 時，實例預設會連接到第一個簽署者（擁有者）。
 
 ```javascript
 const hello_world = await HelloWorld.deploy()

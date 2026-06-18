@@ -193,7 +193,7 @@ summaryPoints:
 உங்கள் முழு இருப்பையும் திறந்து திரும்பப் பெற, உங்கள் சரிபார்ப்பானிலிருந்து வெளியேறும் செயல்முறையையும் நீங்கள் முடிக்க வேண்டும்.
 
 <ButtonLink href="/staking/withdrawals/">பங்குவைப்பு திரும்பப் பெறுதல் பற்றி மேலும்</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## மேலும் படிக்க {#further-reading}
 

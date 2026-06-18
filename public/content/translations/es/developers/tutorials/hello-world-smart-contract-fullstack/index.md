@@ -335,7 +335,7 @@ Hardhat hace un trabajo increíble al explicar qué hace cada una de estas líne
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
 ```
 
-Un `ContractFactory` en ethers.js es una abstracción utilizada para desplegar nuevos contratos inteligentes, por lo que `HelloWorld` aquí es una [fábrica](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)) para instancias de nuestro contrato hello world. Al usar el complemento `hardhat-ethers`, `ContractFactory` y `Contract`, las instancias se conectan al primer firmante (propietario) de forma predeterminada.
+Un `ContractFactory` en ethers.js es una abstracción utilizada para desplegar nuevos contratos inteligentes, por lo que `HelloWorld` aquí es una [fábrica](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>) para instancias de nuestro contrato hello world. Al usar el complemento `hardhat-ethers`, `ContractFactory` y `Contract`, las instancias se conectan al primer firmante (propietario) de forma predeterminada.
 
 ```javascript
 const hello_world = await HelloWorld.deploy()

@@ -39,7 +39,7 @@ Kwa njia sawa na ambayo waweka dhamana wengi wa ETH huendesha programu ya uthibi
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Ni vyema kujua</strong>
+ <p className="mt-0"><strong>Ni vyema kujua</strong></p>
   <p className="mt-2">Ingawa "Huduma Zilizothibitishwa Kikamilifu" (AVSs) ndiyo inayojulikana zaidi, majukwaa tofauti ya uwekaji dhamana upya yanaweza kutumia majina mengine kwa huduma zilizogatuliwa yanazosaidia kulinda, kama vile "Huduma Zilizothibitishwa Kiotomatiki," "Huduma Salama Zilizosambazwa," au "Mitandao."</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ Katika ulimwengu huu wenye uwekaji dhamana upya, AVS na mweka dhamana wananufaik
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Faida ya ziada ya uwekaji dhamana upya</strong>
+ <p className="mt-0"><strong>Faida ya ziada ya uwekaji dhamana upya</strong></p>
   <p className="mt-2">AVSs zinaweza kuweka rasilimali zao zote katika kujenga na kutangaza huduma zao, badala ya kukengeushwa na ugatuzi na usalama.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ Kuna vyombo kadhaa vinavyohusika katika uwekaji dhamana upya — kila kimoja wap
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Ni vyema kujua</strong>
+ <p className="mt-0"><strong>Ni vyema kujua</strong></p>
   <p className="mt-2">Waweka dhamana upya asilia na wenye ukwasi mara nyingi hukaimisha ETH yao iliyowekwa dhamana kwa mwendeshaji, badala ya kuendesha programu ya kulinda AVSs wenyewe.</p>
   <p className="mt-2">Kwa njia hii hawahitaji kuwa na wasiwasi kuhusu mahitaji magumu ya kiufundi kutoka kwa AVSs, ingawa wanapokea kiwango cha chini cha tuzo kuliko waendeshaji.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ Ingawa ni wazo geni, miradi michache imeibuka ili kuchunguza uwezekano wa uwekaj
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Tahadhari ya jina lisilo sahihi</strong>
+ <p className="mt-0"><strong>Tahadhari ya jina lisilo sahihi</strong></p>
   <p className="mt-2">Baadhi ya watu huchanganya "uwekaji dhamana upya" na ukopeshaji na ukopaji wa LSTs katika fedha zilizogatuliwa (DeFi). Zote mbili huweka ETH iliyowekwa dhamana kufanya kazi, lakini uwekaji dhamana upya unamaanisha kulinda AVSs, sio tu kupata faida kwenye LSTs.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,9 +139,10 @@ Ingawa AVSs hutoa viwango tofauti, Tokeni za Uwezeshaji Dhamana Upya Zenye Ukwas
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Mwanzilishi mwenza wa Ethereum anaandika…</strong>
+ <p className="mt-0"><strong>Mwanzilishi mwenza wa Ethereum anaandika…</strong></p>
   <p className="mt-2">
     Vitalik, mwanzilishi mwenza wa Ethereum, alionya kuhusu hatari zinazowezekana za uwekaji dhamana upya katika chapisho la blogu la 2021 lililoitwa <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Usizidishe Mzigo Kwenye Mwafaka.</a>
+  </p>
 
 </AlertDescription>
 </AlertContent>
@@ -161,7 +162,7 @@ Ingawa AVSs hutoa viwango tofauti, Tokeni za Uwezeshaji Dhamana Upya Zenye Ukwas
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Uwekaji Dhamana wa Ethereum :</strong> Inafanyaje kazi?
+ <p className="mt-0"><strong>Uwekaji Dhamana wa Ethereum :</strong> Inafanyaje kazi?</p>
   <ButtonLink href="/staking/">
     Jifunze Zaidi
   </ButtonLink>

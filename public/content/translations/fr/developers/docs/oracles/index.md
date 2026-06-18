@@ -269,7 +269,7 @@ Les oracles centralisés s'appuient sur une seule source de vérité lorsqu'ils 
 
 Les oracles décentralisés doivent cependant faire face aux divergences dans les informations récupérées à partir de multiples sources hors chaîne. Pour minimiser les différences d'informations et s'assurer que les données transmises au contrat d'oracle reflètent l'opinion collective des nœuds d'oracle, les oracles décentralisés utilisent les mécanismes suivants :
 
-##### Vote/staking sur l'exactitude des données {#}
+##### Vote/staking sur l'exactitude des données
 
 Certains réseaux d'oracles décentralisés exigent que les participants votent ou fassent du staking sur l'exactitude des réponses aux requêtes de données (par exemple, « Qui a remporté l'élection américaine de 2020 ? ») en utilisant le jeton natif du réseau. Un protocole d'agrégation agrège ensuite les votes et les mises et prend la réponse soutenue par la majorité comme étant la réponse valide.
 
@@ -277,7 +277,7 @@ Les nœuds dont les réponses s'écartent de la réponse majoritaire sont pénal
 
 Le staking/vote protège également les oracles décentralisés des [attaques Sybil](/glossary/#sybil-attack) où des acteurs malveillants créent de multiples identités pour tromper le système de consensus. Cependant, le staking ne peut pas empêcher le « parasitisme » (les nœuds d'oracle copiant les informations des autres) et la « validation paresseuse » (les nœuds d'oracle suivant la majorité sans vérifier les informations eux-mêmes).
 
-##### Mécanismes de point de Schelling {#}
+##### Mécanismes de point de Schelling
 
 Le [point de Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) est un concept de la théorie des jeux qui suppose que de multiples entités se rabattront toujours sur une solution commune à un problème en l'absence de toute communication. Les mécanismes de point de Schelling sont souvent utilisés dans les réseaux d'oracles décentralisés pour permettre aux nœuds de parvenir à un consensus sur les réponses aux demandes de données.
 

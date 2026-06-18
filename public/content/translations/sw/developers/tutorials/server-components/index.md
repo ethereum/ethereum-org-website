@@ -72,7 +72,7 @@ Njia rahisi ya kuelewa jinsi ya kuandika kipengele cha seva ni kupitia mfano mst
 
 Sehemu kubwa ya programu iko ndani ya [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Kuunda vipengee vya awali {#}
+##### Kuunda vipengee vya awali
 
 ```typescript
 import {
@@ -180,7 +180,7 @@ const greeter = getContract({
 
 Sasa kwa kuwa tuna mahitaji yote ya awali, hatimaye tunaweza kuunda [mfano wa mkataba](https://viem.sh/docs/contract/getContract). Tutatumia mfano huu wa mkataba kuwasiliana na mkataba ulio mnyororoni.
 
-##### Kusoma kutoka kwenye mnyororo wa vitalu {#}
+##### Kusoma kutoka kwenye mnyororo wa vitalu
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -192,7 +192,7 @@ JavaScript ina uzi mmoja, kwa hivyo tunapoanzisha mchakato unaoendelea kwa muda 
 
 Ikiwa una nia ya kujua jinsi hii inavyofanya kazi unaweza [kusoma kuihusu hapa](https://www.w3schools.com/js/js_promise.asp), lakini kwa vitendo unachohitaji kujua ni kwamba una-`await` matokeo ikiwa utaanzisha operesheni inayochukua muda mrefu, na kwamba kitendaji chochote kinachofanya hivi lazima kitangazwe kama `async`.
 
-##### Kutoa miamala {#}
+##### Kutoa miamala
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -215,7 +215,7 @@ Sehemu ya `write` ya mfano wa mkataba ina vitendaji vyote vinavyoandika kwenye h
 
 Ripoti heshi ya muamala (kama sehemu ya URL kwa kichunguzi cha bloku ili kuitazama) na uirudishe.
 
-##### Kujibu matukio {#}
+##### Kujibu matukio
 
 ```typescript
 greeter.watchEvent.SetGreeting({

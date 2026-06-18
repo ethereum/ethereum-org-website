@@ -269,7 +269,7 @@ Centralizovaná orákula spoléhají při poskytování dat chytrým kontraktům
 
 Decentralizovaná orákula se však musí vypořádat s nesrovnalostmi v informacích získaných z více offchain zdrojů. K minimalizaci rozdílů v informacích a zajištění toho, aby data předaná kontraktu orákula odrážela kolektivní názor uzlů orákula, používají decentralizovaná orákula následující mechanismy:
 
-##### Hlasování/staking o přesnosti dat {#}
+##### Hlasování/staking o přesnosti dat
 
 Některé decentralizované sítě orákul vyžadují, aby účastníci hlasovali nebo prováděli staking ohledně přesnosti odpovědí na datové dotazy (např. „Kdo vyhrál volby v USA v roce 2020?“) pomocí nativního tokenu sítě. Agregační protokol pak agreguje hlasy a staky a bere odpověď podporovanou většinou jako platnou.
 
@@ -277,7 +277,7 @@ Uzly, jejichž odpovědi se odchylují od většinové odpovědi, jsou penalizov
 
 Staking/hlasování také chrání decentralizovaná orákula před [Sybil útoky](/glossary/#sybil-attack), kdy zlomyslní aktéři vytvářejí více identit, aby oklamali systém konsensu. Staking však nemůže zabránit „přiživování“ (uzly orákula kopírující informace od ostatních) a „líné validaci“ (uzly orákula následující většinu bez toho, aby samy ověřily informace).
 
-##### Mechanismy Schellingova bodu {#}
+##### Mechanismy Schellingova bodu
 
 [Schellingův bod](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) je koncept teorie her, který předpokládá, že více subjektů se při absenci jakékoli komunikace vždy uchýlí ke společnému řešení problému. Mechanismy Schellingova bodu jsou často používány v decentralizovaných sítích orákul, aby umožnily uzlům dosáhnout konsensu o odpovědích na požadavky na data.
 

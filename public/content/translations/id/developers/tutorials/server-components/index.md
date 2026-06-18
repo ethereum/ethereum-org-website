@@ -69,7 +69,7 @@ Cara termudah untuk memahami cara menulis komponen server adalah dengan memeriks
 
 Sebagian besar program terdapat di dalam [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Membuat objek prasyarat {#}
+##### Membuat objek prasyarat
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 Sekarang setelah kita memiliki semua prasyarat, kita akhirnya dapat membuat [instans kontrak](https://viem.sh/docs/contract/getContract). Kita akan menggunakan instans kontrak ini untuk berkomunikasi dengan kontrak onchain.
 
-##### Membaca dari rantai blok {#}
+##### Membaca dari rantai blok
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript bersifat utas tunggal (single-threaded), jadi ketika kita menjalankan
 
 Jika Anda tertarik dengan cara kerjanya, Anda dapat [membacanya di sini](https://www.w3schools.com/js/js_promise.asp), tetapi secara praktis yang perlu Anda ketahui adalah bahwa Anda menggunakan `await` untuk hasil jika Anda memulai operasi yang memakan waktu lama, dan bahwa fungsi apa pun yang melakukan ini harus dideklarasikan sebagai `async`.
 
-##### Mengeluarkan transaksi {#}
+##### Mengeluarkan transaksi
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ Bidang `write` dari instans kontrak memiliki semua fungsi yang menulis ke state 
 
 Laporkan hash dari transaksi (sebagai bagian dari URL ke penjelajah blok untuk melihatnya) dan kembalikan.
 
-##### Merespons peristiwa {#}
+##### Merespons peristiwa
 
 ```typescript
 greeter.watchEvent.SetGreeting({

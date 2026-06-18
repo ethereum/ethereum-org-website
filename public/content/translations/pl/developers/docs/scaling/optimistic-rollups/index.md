@@ -152,7 +152,7 @@ Optymistyczne rollupy są zaprojektowane z myślą o interoperacyjności z sieci
 
 #### 1. Przemieszczanie aktywów {#asset-movement}
 
-##### Wejście do rollupa {#}
+##### Wejście do rollupa
 
 Aby skorzystać z optymistycznego rollupa, użytkownicy deponują ETH, tokeny ERC-20 i inne akceptowane aktywa w kontrakcie [mostu](/developers/docs/bridges/) rollupa w L1. Kontrakt mostu przekaże transakcję do L2, gdzie równoważna ilość aktywów jest wybijana i wysyłana na wybrany przez użytkownika adres w optymistycznym rollupie.
 
@@ -160,7 +160,7 @@ Transakcje generowane przez użytkowników (takie jak depozyt L1 > L2) są zazwy
 
 Niektóre optymistyczne rollupy przyjmują bardziej bezpośrednie podejście, aby zapobiec cenzurowaniu użytkowników przez sekwensery. Tutaj blok jest definiowany przez wszystkie transakcje przesłane do kontraktu L1 od poprzedniego bloku (np. depozyty) oprócz transakcji przetwarzanych w łańcuchu rollupa. Jeśli sekwenser zignoruje transakcję L1, opublikuje (możliwy do udowodnienia) błędny korzeń stanu; dlatego sekwensery nie mogą opóźniać wiadomości generowanych przez użytkowników po ich opublikowaniu w L1.
 
-##### Wyjście z rollupa {#}
+##### Wyjście z rollupa
 
 Wypłata z optymistycznego rollupa do Ethereum jest trudniejsza ze względu na schemat dowodzenia oszustw. Jeśli użytkownik zainicjuje transakcję L2 > L1 w celu wypłaty środków zdeponowanych w L1, musi poczekać, aż upłynie okres wyzwania — trwający około siedmiu dni. Niemniej jednak sam proces wypłaty jest dość prosty.
 

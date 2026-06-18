@@ -40,7 +40,7 @@ lang: ko
 
 **Sepolia는 애플리케이션 개발을 위해 권장되는 기본 테스트넷입니다**. Sepolia 네트워크는 클라이언트 및 테스트 팀이 제어하는 허가형 검증자 세트를 사용합니다.
 
-##### 리소스 {#} {#}
+##### 리소스
 
 - [웹사이트](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: ko
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### 퍼싯 {#} {#}
+##### 퍼싯
 
 - [Alchemy Sepolia 퍼싯](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia 퍼싯](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi는 검증 및 스테이킹을 테스트하기 위한 테스트넷입니다
 - 대규모 상태, 복잡한 스마트 컨트랙트 상호작용을 테스트하는 데 유용함
 - 동기화에 더 오랜 시간이 걸리며 노드를 실행하는 데 더 많은 스토리지가 필요함
 
-##### 리소스 {#}
+##### 리소스
 
 - [웹사이트](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi는 검증 및 스테이킹을 테스트하기 위한 테스트넷입니다
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### 퍼싯 {#}
+##### 퍼싯
 
 - [Chain Platform Hoodi 퍼싯](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi 퍼싯](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery는 매달 완전히 초기화되는 독특한 종류의 테스트넷입
 - 개방형 검증자 세트 및 대량의 자금에 쉽게 접근 가능
 - 최소한의 노드 요구 사항 및 가장 빠른 동기화, 평균 5GB 미만
 
-##### 리소스 {#}
+##### 리소스
 
 - [웹사이트](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ Ephemery는 매달 완전히 초기화되는 독특한 종류의 테스트넷입
 
 [아비트럼](https://arbitrum.io/)을 위한 테스트넷입니다.
 
-##### 리소스 {#}
+##### 리소스
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### 퍼싯 {#}
+##### 퍼싯
 
 - [Alchemy 아비트럼 Sepolia 퍼싯](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [체인링크 아비트럼 Sepolia 퍼싯](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Ephemery는 매달 완전히 초기화되는 독특한 종류의 테스트넷입
 
 [옵티미즘](https://www.optimism.io/)을 위한 테스트넷입니다.
 
-##### 리소스 {#}
+##### 리소스
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### 퍼싯 {#}
+##### 퍼싯
 
 - [Alchemy 퍼싯](https://www.alchemy.com/faucets/optimism-sepolia)
 - [체인링크 퍼싯](https://faucets.chain.link/optimism-sepolia)

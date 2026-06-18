@@ -69,7 +69,7 @@ published: 2024-07-15
 
 程序的绝大部分包含在 [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts) 中。
 
-##### 创建先决条件对象 {#}
+##### 创建先决条件对象
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 现在我们已经具备了所有先决条件，终于可以创建一个[合约实例](https://viem.sh/docs/contract/getContract)了。我们将使用此合约实例与链上合约进行通信。
 
-##### 从区块链读取 {#}
+##### 从区块链读取
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript 是单线程的，因此当我们启动一个长时间运行的进程
 
 如果你对它的工作原理感兴趣，可以[在这里阅读相关内容](https://www.w3schools.com/js/js_promise.asp)，但实际上你只需要知道，如果你启动一个需要很长时间的操作，你需要 `await` 结果，并且任何执行此操作的函数都必须声明为 `async`。
 
-##### 发出交易 {#}
+##### 发出交易
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ const txHash = await greeter.write.setGreeting([greeting])
 
 报告交易的哈希（作为在区块浏览器中查看它的 URL 的一部分）并将其返回。
 
-##### 响应事件 {#}
+##### 响应事件
 
 ```typescript
 greeter.watchEvent.SetGreeting({

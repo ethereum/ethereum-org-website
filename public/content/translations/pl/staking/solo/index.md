@@ -193,7 +193,7 @@ Po ustawieniu danych uwierzytelniających wypłaty, wypłaty nagród (zgromadzon
 Aby odblokować i odzyskać całe swoje saldo, musisz również ukończyć proces wyjścia swojego walidatora.
 
 <ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakowania</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Dalsza lektura {#further-reading}
 

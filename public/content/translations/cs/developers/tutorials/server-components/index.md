@@ -69,7 +69,7 @@ Nejjednodušší způsob, jak pochopit psaní serverové komponenty, je projít 
 
 Převážná většina programu je obsažena v [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Vytvoření nezbytných objektů {#}
+##### Vytvoření nezbytných objektů
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 Nyní, když máme všechny předpoklady, můžeme konečně vytvořit [instanci kontraktu](https://viem.sh/docs/contract/getContract). Tuto instanci kontraktu použijeme ke komunikaci s onchain kontraktem.
 
-##### Čtení z blockchainu {#}
+##### Čtení z blockchainu
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript je jednovláknový, takže když spustíme dlouho běžící proces, 
 
 Pokud vás zajímá, jak to funguje, můžete si o tom [přečíst zde](https://www.w3schools.com/js/js_promise.asp), ale z praktického hlediska vám stačí vědět, že pokud spustíte operaci, která trvá dlouho, použijete na výsledky `await`, a že každá funkce, která to dělá, musí být deklarována jako `async`.
 
-##### Vydávání transakcí {#}
+##### Vydávání transakcí
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ Pole `write` instance kontraktu obsahuje všechny funkce, které zapisují do st
 
 Nahlaste hash transakce (jako součást URL adresy do prohlížeče bloků pro její zobrazení) a vraťte jej.
 
-##### Reakce na události {#}
+##### Reakce na události
 
 ```typescript
 greeter.watchEvent.SetGreeting({

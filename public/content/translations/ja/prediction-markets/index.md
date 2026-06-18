@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>リスクに注意する</strong>
+ <p className="mt-0"><strong>リスクに注意する</strong></p>
   <p className="mt-2">失っても問題ない範囲の金額でのみ賭けを行い、依存症になる可能性に注意してください。</p>
 </AlertDescription>
 </AlertContent>

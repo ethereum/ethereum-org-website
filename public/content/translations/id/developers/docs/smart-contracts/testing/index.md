@@ -52,7 +52,7 @@ Pengujian unit berguna untuk memeriksa bahwa fungsi mengembalikan nilai yang dih
 
 #### Panduan untuk pengujian unit kontrak pintar {#unit-testing-guidelines}
 
-##### 1. Pahami logika bisnis dan alur kerja kontrak Anda {#}
+##### 1. Pahami logika bisnis dan alur kerja kontrak Anda
 
 Sebelum menulis pengujian unit, ada baiknya untuk mengetahui fungsionalitas apa yang ditawarkan kontrak pintar dan bagaimana pengguna akan mengakses dan menggunakan fungsi tersebut. Hal ini sangat berguna untuk menjalankan [pengujian jalur bahagia (happy path)](https://en.m.wikipedia.org/wiki/Happy_path) yang menentukan apakah fungsi dalam kontrak mengembalikan keluaran yang benar untuk masukan pengguna yang valid. Kami akan menjelaskan konsep ini menggunakan contoh (singkat) dari [kontrak lelang](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction) ini
 
@@ -114,7 +114,7 @@ Pengujian unit untuk kontrak seperti ini akan mencakup berbagai fungsi yang mung
 
 Memahami alur kerja operasional kontrak juga membantu dalam menulis pengujian unit yang memeriksa apakah eksekusi memenuhi persyaratan. Misalnya, kontrak lelang menentukan bahwa pengguna tidak dapat mengajukan tawaran saat lelang telah berakhir (yaitu, saat `auctionEndTime` lebih rendah dari `block.timestamp`). Dengan demikian, pengembang mungkin menjalankan pengujian unit yang memeriksa apakah panggilan ke fungsi `bid()` berhasil atau gagal saat lelang selesai (yaitu, saat `auctionEndTime` > `block.timestamp`).
 
-##### 2. Evaluasi semua asumsi yang terkait dengan eksekusi kontrak {#}
+##### 2. Evaluasi semua asumsi yang terkait dengan eksekusi kontrak
 
 Penting untuk mendokumentasikan setiap asumsi tentang eksekusi kontrak dan menulis pengujian unit untuk memverifikasi validitas asumsi tersebut. Selain menawarkan perlindungan terhadap eksekusi yang tidak terduga, menguji asersi memaksa Anda untuk memikirkan operasi yang dapat merusak model keamanan kontrak pintar. Tip yang berguna adalah melampaui "pengujian pengguna bahagia" dan menulis pengujian negatif yang memeriksa apakah suatu fungsi gagal untuk masukan yang salah.
 
@@ -128,11 +128,11 @@ Banyak kerangka kerja pengujian unit memungkinkan Anda membuat asersi—pernyata
 
 **Catatan**: Cara lain untuk menguji asumsi adalah dengan menulis pengujian yang memicu [pengubah fungsi (function modifier)](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) dalam kontrak, terutama pernyataan `require`, `assert`, dan `if…else`.
 
-##### 3. Ukur cakupan kode {#}
+##### 3. Ukur cakupan kode
 
 [Cakupan kode](https://en.m.wikipedia.org/wiki/Code_coverage) adalah metrik pengujian yang melacak jumlah cabang, baris, dan pernyataan dalam kode Anda yang dieksekusi selama pengujian. Pengujian harus memiliki cakupan kode yang baik untuk meminimalkan risiko kerentanan yang tidak teruji. Tanpa cakupan yang memadai, Anda mungkin salah berasumsi bahwa kontrak Anda aman karena semua pengujian lulus, sementara kerentanan masih ada di jalur kode yang tidak teruji. Namun, mencatat cakupan kode yang tinggi memberikan jaminan bahwa semua pernyataan/fungsi dalam kontrak pintar telah diuji kecukupannya untuk kebenaran.
 
-##### 4. Gunakan kerangka kerja pengujian yang dikembangkan dengan baik {#}
+##### 4. Gunakan kerangka kerja pengujian yang dikembangkan dengan baik
 
 Kualitas alat yang digunakan dalam menjalankan pengujian unit untuk kontrak pintar Anda sangat penting. Kerangka kerja pengujian yang ideal adalah yang dipelihara secara teratur; menyediakan fitur yang berguna (misalnya, kemampuan pencatatan dan pelaporan); dan harus telah digunakan secara luas dan diperiksa oleh pengembang lain.
 

@@ -69,7 +69,7 @@ summaryPoints:
 或者，使用 ERC-20 質押代幣的質押池允許使用者在公開市場上交易該代幣，讓你可以出售你的質押部位，實際上等同於「提款」，而無需真正從質押合約中移除 ETH。
 
 <ButtonLink href="/staking/withdrawals/">更多關於質押提款的資訊</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="這與在交易所質押有何不同？">
 這些聯合質押選項與中心化交易所之間有許多相似之處，例如能夠質押少量的 ETH 並將它們捆綁在一起以啟用驗證者。

@@ -152,7 +152,7 @@ Rollup Optimistic dirancang untuk interoperabilitas dengan Mainnet Ethereum dan 
 
 #### 1. Pergerakan aset {#asset-movement}
 
-##### Memasuki rollup {#}
+##### Memasuki rollup
 
 Untuk menggunakan rollup Optimistic, pengguna mendepositkan ETH, token ERC-20, dan aset lain yang diterima dalam kontrak [jembatan](/developers/docs/bridges/) rollup di l1. Kontrak jembatan akan meneruskan transaksi ke l2, di mana jumlah aset yang setara dicetak dan dikirim ke alamat pilihan pengguna di rollup Optimistic.
 
@@ -160,7 +160,7 @@ Transaksi yang dibuat pengguna (seperti deposit l1 > l2) biasanya diantrekan sam
 
 Beberapa rollup Optimistic mengadopsi pendekatan yang lebih lugas untuk mencegah sekuenser menyensor pengguna. Di sini, sebuah blok didefinisikan oleh semua transaksi yang dikirimkan ke kontrak l1 sejak blok sebelumnya (misalnya, deposit) di samping transaksi yang diproses pada rantai rollup. Jika sekuenser mengabaikan transaksi l1, ia akan memublikasikan akar state yang (terbukti) salah; oleh karena itu, sekuenser tidak dapat menunda pesan yang dibuat pengguna setelah diposting di l1.
 
-##### Keluar dari rollup {#}
+##### Keluar dari rollup
 
 Melakukan penarikan dari rollup Optimistic ke Ethereum lebih sulit karena skema pembuktian penipuan. Jika pengguna memulai transaksi l2 > l1 untuk menarik dana yang di-escrow di l1, mereka harus menunggu sampai periode tantangan—berlangsung sekitar tujuh hari—berlalu. Namun demikian, proses penarikan itu sendiri cukup mudah.
 

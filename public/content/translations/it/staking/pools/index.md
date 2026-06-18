@@ -69,7 +69,7 @@ Proprio adesso! L'aggiornamento della rete Shanghai/Capella è avvenuto ad april
 In alternativa, le pool che utilizzano un token di staking ERC-20 consentono agli utenti di scambiare questo token nel mercato aperto, permettendoti di vendere la tua posizione di staking, di fatto "prelevando" senza rimuovere effettivamente gli ETH dal contratto di staking.
 
 <ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi di staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="È diverso dallo staking con il mio exchange?">
 Ci sono molte somiglianze tra queste opzioni di staking in pool e gli exchange centralizzati, come la possibilità di mettere in staking piccole quantità di ETH e raggrupparle per attivare i validatori.

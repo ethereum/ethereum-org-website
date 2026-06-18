@@ -52,7 +52,7 @@ Les tests unitaires sont utiles pour vérifier que les fonctions renvoient les v
 
 #### Directives pour les tests unitaires des contrats intelligents {#unit-testing-guidelines}
 
-##### 1. Comprendre la logique métier et le flux de travail de vos contrats {#}
+##### 1. Comprendre la logique métier et le flux de travail de vos contrats
 
 Avant d'écrire des tests unitaires, il est utile de savoir quelles fonctionnalités un contrat intelligent offre et comment les utilisateurs accéderont et utiliseront ces fonctions. Cela est particulièrement utile pour exécuter des [tests de chemin nominal (happy path)](https://en.m.wikipedia.org/wiki/Happy_path) qui déterminent si les fonctions d'un contrat renvoient la sortie correcte pour des entrées utilisateur valides. Nous expliquerons ce concept en utilisant cet exemple (abrégé) d'[un contrat d'enchères](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
@@ -114,7 +114,7 @@ Les tests unitaires pour un contrat comme celui-ci couvriraient différentes fon
 
 Comprendre le flux de travail opérationnel d'un contrat aide également à écrire des tests unitaires qui vérifient si l'exécution répond aux exigences. Par exemple, le contrat d'enchères spécifie que les utilisateurs ne peuvent pas placer d'offres lorsque l'enchère est terminée (c'est-à-dire lorsque `auctionEndTime` est inférieur à `block.timestamp`). Ainsi, un développeur pourrait exécuter un test unitaire qui vérifie si les appels à la fonction `bid()` réussissent ou échouent lorsque l'enchère est terminée (c'est-à-dire lorsque `auctionEndTime` > `block.timestamp`).
 
-##### 2. Évaluer toutes les hypothèses liées à l'exécution du contrat {#}
+##### 2. Évaluer toutes les hypothèses liées à l'exécution du contrat
 
 Il est important de documenter toutes les hypothèses concernant l'exécution d'un contrat et d'écrire des tests unitaires pour vérifier la validité de ces hypothèses. En plus d'offrir une protection contre une exécution inattendue, tester les assertions vous oblige à réfléchir aux opérations qui pourraient briser le modèle de sécurité d'un contrat intelligent. Une astuce utile consiste à aller au-delà des « tests d'utilisateurs idéaux » et à écrire des tests négatifs qui vérifient si une fonction échoue pour de mauvaises entrées.
 
@@ -128,11 +128,11 @@ De nombreux frameworks de tests unitaires vous permettent de créer des assertio
 
 **Remarque** : Une autre façon de tester les hypothèses est d'écrire des tests qui déclenchent des [modificateurs de fonction](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) dans un contrat, en particulier les instructions `require`, `assert` et `if…else`.
 
-##### 3. Mesurer la couverture de code {#}
+##### 3. Mesurer la couverture de code
 
 La [couverture de code](https://en.m.wikipedia.org/wiki/Code_coverage) est une métrique de test qui suit le nombre de branches, de lignes et d'instructions de votre code exécutées pendant les tests. Les tests doivent avoir une bonne couverture de code pour minimiser le risque de vulnérabilités non testées. Sans une couverture suffisante, vous pourriez supposer à tort que votre contrat est sécurisé parce que tous les tests réussissent, alors que des vulnérabilités existent toujours dans des chemins de code non testés. L'enregistrement d'une couverture de code élevée donne cependant l'assurance que toutes les instructions/fonctions d'un contrat intelligent ont été suffisamment testées pour leur exactitude.
 
-##### 4. Utiliser des frameworks de test bien développés {#}
+##### 4. Utiliser des frameworks de test bien développés
 
 La qualité des outils utilisés pour exécuter des tests unitaires pour vos contrats intelligents est cruciale. Un framework de test idéal est celui qui est régulièrement maintenu ; fournit des fonctionnalités utiles (par ex., des capacités de journalisation et de rapport) ; et doit avoir été largement utilisé et approuvé par d'autres développeurs.
 

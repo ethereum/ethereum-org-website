@@ -193,7 +193,7 @@ summaryPoints:
 要解鎖並收回你的全部餘額，你還必須完成退出驗證者的程序。
 
 <ButtonLink href="/staking/withdrawals/">更多關於質押提款的資訊</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## 進一步閱讀 {#further-reading}
 

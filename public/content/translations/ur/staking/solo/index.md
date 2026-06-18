@@ -193,7 +193,7 @@ summaryPoints:
 اپنے پورے بیلنس کو غیر مقفل کرنے اور واپس حاصل کرنے کے لیے آپ کو اپنے توثیق کار سے خروج کا عمل بھی مکمل کرنا ہوگا۔
 
 <ButtonLink href="/staking/withdrawals/">اسٹیکنگ کے انخلا کے بارے میں مزید</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## مزید مطالعہ {#further-reading}
 

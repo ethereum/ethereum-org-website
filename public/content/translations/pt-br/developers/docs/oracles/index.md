@@ -269,7 +269,7 @@ Os oráculos centralizados dependem de uma única fonte da verdade ao fornecer d
 
 Os oráculos descentralizados, no entanto, devem lidar com discrepâncias nas informações recuperadas de várias fontes offchain. Para minimizar as diferenças nas informações e garantir que os dados passados para o contrato do oráculo reflitam a opinião coletiva dos nós de oráculo, os oráculos descentralizados usam os seguintes mecanismos:
 
-##### Votação/staking na precisão dos dados {#}
+##### Votação/staking na precisão dos dados
 
 Algumas redes de oráculos descentralizadas exigem que os participantes votem ou façam stake na precisão das respostas às consultas de dados (por exemplo, "Quem ganhou as eleições dos EUA em 2020?") usando o token nativo da rede. Um protocolo de agregação então agrega os votos e os stakes e toma a resposta apoiada pela maioria como a válida.
 
@@ -277,7 +277,7 @@ Os nós cujas respostas se desviam da resposta da maioria são penalizados tendo
 
 O staking/votação também protege os oráculos descentralizados de [ataques Sybil](/glossary/#sybil-attack), onde atores mal-intencionados criam várias identidades para manipular o sistema de consenso. No entanto, o staking não pode impedir o “aproveitamento” (nós de oráculo copiando informações de outros) e a “validação preguiçosa” (nós de oráculo seguindo a maioria sem verificar as informações por si mesmos).
 
-##### Mecanismos de ponto de Schelling {#}
+##### Mecanismos de ponto de Schelling
 
 O [ponto de Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) é um conceito da teoria dos jogos que pressupõe que várias entidades sempre adotarão uma solução comum para um problema na ausência de qualquer comunicação. Os mecanismos de ponto de Schelling são frequentemente usados em redes de oráculos descentralizadas para permitir que os nós cheguem a um consenso sobre as respostas às solicitações de dados.
 

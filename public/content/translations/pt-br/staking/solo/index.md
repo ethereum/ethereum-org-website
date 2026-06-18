@@ -193,7 +193,7 @@ Depois que as credenciais de saque forem definidas, os pagamentos de recompensa 
 Para desbloquear e receber todo o seu saldo de volta, você também deve concluir o processo de saída do seu validador.
 
 <ButtonLink href="/staking/withdrawals/">Mais sobre saques de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Leitura adicional {#further-reading}
 

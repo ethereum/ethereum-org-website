@@ -69,7 +69,7 @@ published: 2024-07-15
 
 프로그램의 대부분은 [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts)에 포함되어 있습니다.
 
-##### 필수 객체 생성하기 {#}
+##### 필수 객체 생성하기
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 이제 모든 전제 조건을 갖추었으므로 마침내 [컨트랙트 인스턴스](https://viem.sh/docs/contract/getContract)를 생성할 수 있습니다. 이 컨트랙트 인스턴스를 사용하여 온체인 컨트랙트와 통신할 것입니다.
 
-##### 블록체인에서 읽기 {#}
+##### 블록체인에서 읽기
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript는 단일 스레드이므로 장기 실행 프로세스를 시작할 
 
 이것이 어떻게 작동하는지 관심이 있다면 [여기에서 읽어볼 수 있지만](https://www.w3schools.com/js/js_promise.asp), 실질적으로 알아야 할 것은 시간이 오래 걸리는 작업을 시작할 때 결과를 `await`해야 하며, 이를 수행하는 모든 함수는 `async`로 선언되어야 한다는 점입니다.
 
-##### 트랜잭션 발행하기 {#}
+##### 트랜잭션 발행하기
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ const txHash = await greeter.write.setGreeting([greeting])
 
 트랜잭션의 해시를 (블록 탐색기에서 볼 수 있는 URL의 일부로) 보고하고 반환합니다.
 
-##### 이벤트에 응답하기 {#}
+##### 이벤트에 응답하기
 
 ```typescript
 greeter.watchEvent.SetGreeting({

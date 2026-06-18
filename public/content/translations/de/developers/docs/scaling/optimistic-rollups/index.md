@@ -152,7 +152,7 @@ Optimistic Rollups sind für die Interoperabilität mit dem Ethereum Mainnet kon
 
 #### 1. Bewegung von Vermögenswerten {#asset-movement}
 
-##### Eintritt in das Rollup {#}
+##### Eintritt in das Rollup
 
 Um ein Optimistic Rollup zu nutzen, zahlen Benutzer ETH, ERC-20-Token und andere akzeptierte Vermögenswerte in den [Brücken](/developers/docs/bridges/)-Vertrag des Rollups auf L1 ein. Der Brücken-Vertrag leitet die Transaktion an L2 weiter, wo ein entsprechender Betrag an Vermögenswerten geprägt und an die vom Benutzer gewählte Adresse auf dem Optimistic Rollup gesendet wird.
 
@@ -160,7 +160,7 @@ Benutzergenerierte Transaktionen (wie eine L1 > L2-Einzahlung) werden normalerwe
 
 Einige Optimistic Rollups verfolgen einen direkteren Ansatz, um zu verhindern, dass Sequencer Benutzer zensieren. Hier wird ein Block durch alle Transaktionen definiert, die seit dem vorherigen Block an den L1-Vertrag übermittelt wurden (z. B. Einzahlungen), zusätzlich zu den auf der Rollup-Chain verarbeiteten Transaktionen. Wenn ein Sequencer eine L1-Transaktion ignoriert, veröffentlicht er die (nachweislich) falsche Zustandswurzel; daher können Sequencer benutzergenerierte Nachrichten nicht verzögern, sobald sie auf L1 gepostet wurden.
 
-##### Austritt aus dem Rollup {#}
+##### Austritt aus dem Rollup
 
 Eine Abhebung von einem Optimistic Rollup zu Ethereum ist aufgrund des Betrugsnachweis-Schemas schwieriger. Wenn ein Benutzer eine L2 > L1-Transaktion initiiert, um auf L1 treuhänderisch verwahrte Gelder abzuheben, muss er warten, bis die Challenge-Periode – die etwa sieben Tage dauert – abgelaufen ist. Dennoch ist der Abhebungsprozess selbst recht unkompliziert.
 

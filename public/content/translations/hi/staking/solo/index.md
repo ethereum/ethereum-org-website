@@ -193,7 +193,7 @@ summaryPoints:
 अपने पूरे बैलेंस को अनलॉक करने और वापस प्राप्त करने के लिए आपको अपने सत्यापक से निकास की प्रक्रिया भी पूरी करनी होगी।
 
 <ButtonLink href="/staking/withdrawals/">स्टेकिंग निकासी के बारे में अधिक जानकारी</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## आगे की सामग्री {#further-reading}
 

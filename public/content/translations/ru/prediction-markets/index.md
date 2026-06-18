@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Помните о рисках</strong>
+ <p className="mt-0"><strong>Помните о рисках</strong></p>
   <p className="mt-2">Ставьте только то, что можете позволить себе потерять, и помните о возможном развитии зависимости.</p>
 </AlertDescription>
 </AlertContent>

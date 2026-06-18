@@ -193,7 +193,7 @@ summaryPoints:
 तुमची संपूर्ण शिल्लक अनलॉक करण्यासाठी आणि परत मिळवण्यासाठी तुम्ही तुमच्या प्रमाणकातून निर्गमन करण्याची प्रक्रिया देखील पूर्ण केली पाहिजे.
 
 <ButtonLink href="/staking/withdrawals/">स्टेकिंग रक्कम काढण्याबद्दल अधिक</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## पुढील वाचन {#further-reading}
 

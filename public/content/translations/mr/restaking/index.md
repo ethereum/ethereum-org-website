@@ -39,7 +39,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>हे माहीत असणे चांगले आहे</strong>
+ <p className="mt-0"><strong>हे माहीत असणे चांगले आहे</strong></p>
   <p className="mt-2">जरी "ॲक्टिव्हली व्हॅलिडेटेड सर्व्हिसेस" (AVSs) हे सर्वात सामान्य नाव असले तरी, विविध रिस्टेकिंग प्लॅटफॉर्म्स ते सुरक्षित करत असलेल्या विकेंद्रित सेवांसाठी "ऑटोनॉमसली व्हॅलिडेटेड सर्व्हिसेस," "डिस्ट्रिब्युटेड सिक्युर सर्व्हिसेस," किंवा "नेटवर्क्स" यांसारखी इतर नावे वापरू शकतात.</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>रिस्टेकिंगचा अतिरिक्त फायदा</strong>
+ <p className="mt-0"><strong>रिस्टेकिंगचा अतिरिक्त फायदा</strong></p>
   <p className="mt-2">AVSs विकेंद्रीकरण आणि सुरक्षेमध्ये विचलित होण्याऐवजी, त्यांची सर्व संसाधने त्यांच्या सेवा तयार करण्यात आणि त्यांचे मार्केटिंग करण्यात लावू शकतात.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>हे माहीत असणे चांगले आहे</strong>
+ <p className="mt-0"><strong>हे माहीत असणे चांगले आहे</strong></p>
   <p className="mt-2">नेटिव्ह आणि लिक्विड रिस्टेकर्स अनेकदा AVSs सुरक्षित करण्यासाठी स्वतः सॉफ्टवेअर चालवण्याऐवजी त्यांचे स्टेक केलेले ETH ऑपरेटरकडे प्रतिनिधी म्हणून सोपवतात.</p>
   <p className="mt-2">अशा प्रकारे त्यांना AVSs च्या गुंतागुंतीच्या तांत्रिक आवश्यकतांबद्दल काळजी करण्याची गरज नाही, जरी त्यांना ऑपरेटर्सपेक्षा कमी बक्षीस दर मिळतो.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>चुकीच्या संज्ञेबद्दल इशारा</strong>
+ <p className="mt-0"><strong>चुकीच्या संज्ञेबद्दल इशारा</strong></p>
   <p className="mt-2">काही लोक विकेंद्रित वित्त (DeFi) मध्ये LSTs कर्ज देणे आणि कर्ज घेणे याला "रिस्टेकिंग" समजण्याची चूक करतात. दोन्हीमध्ये स्टेक केलेले ETH कामाला लावले जाते, परंतु रिस्टेकिंग म्हणजे केवळ LSTs वर परतावा मिळवणे नव्हे, तर AVSs सुरक्षित करणे होय.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,9 +139,10 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>इथेरियमचे सह-संस्थापक लिहित आहेत…</strong>
+ <p className="mt-0"><strong>इथेरियमचे सह-संस्थापक लिहित आहेत…</strong></p>
   <p className="mt-2">
     इथेरियमचे सह-संस्थापक विटालिक् यांनी 2021 च्या <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a> नावाच्या ब्लॉग पोस्टमध्ये रिस्टेकिंगच्या संभाव्य धोक्यांबद्दल चेतावणी दिली होती.
+  </p>
 
 </AlertDescription>
 </AlertContent>
@@ -161,7 +162,7 @@ buttons:
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>इथेरियम स्टेकिंग :</strong> ते कसे काम करते?
+ <p className="mt-0"><strong>इथेरियम स्टेकिंग :</strong> ते कसे काम करते?</p>
   <ButtonLink href="/staking/">
     अधिक जाणून घ्या
   </ButtonLink>

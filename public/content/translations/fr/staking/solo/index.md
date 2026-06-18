@@ -193,7 +193,7 @@ Une fois les identifiants de retrait définis, les paiements de récompense (ETH
 Pour débloquer et récupérer l'intégralité de votre solde, vous devez également terminer le processus de sortie de votre validateur.
 
 <ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Lectures complémentaires {#further-reading}
 

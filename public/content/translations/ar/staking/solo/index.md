@@ -193,7 +193,7 @@ summaryPoints:
 لإلغاء القفل واستلام رصيدك بالكامل، يجب عليك أيضًا إكمال عملية خروج المُدَقِّق الخاص بك.
 
 <ButtonLink href="/staking/withdrawals/">المزيد عن عمليات سحب التخزين</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## قراءة إضافية {#further-reading}
 

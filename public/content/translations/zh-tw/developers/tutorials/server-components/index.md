@@ -69,7 +69,7 @@ published: 2024-07-15
 
 絕大部分的程式碼都包含在 [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts) 中。
 
-##### 建立必備物件 {#}
+##### 建立必備物件
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 現在我們已經具備了所有先決條件，我們終於可以建立一個 [合約實例](https://viem.sh/docs/contract/getContract)。我們將使用這個合約實例與鏈上合約進行通訊。
 
-##### 從區塊鏈讀取 {#}
+##### 從區塊鏈讀取
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript 是單執行緒的，所以當我們啟動一個長時間執行的程
 
 如果你對它的運作方式感興趣，你可以 [在這裡閱讀相關資訊](https://www.w3schools.com/js/js_promise.asp)，但實際上你只需要知道，如果你啟動了一個需要很長時間的操作，你就必須 `await` 結果，而且任何執行此操作的函式都必須宣告為 `async`。
 
-##### 發送交易 {#}
+##### 發送交易
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ const txHash = await greeter.write.setGreeting([greeting])
 
 報告交易的雜湊（作為區塊鏈瀏覽器 URL 的一部分以供檢視）並將其回傳。
 
-##### 回應事件 {#}
+##### 回應事件
 
 ```typescript
 greeter.watchEvent.SetGreeting({

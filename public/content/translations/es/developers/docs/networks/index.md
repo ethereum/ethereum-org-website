@@ -40,7 +40,7 @@ Las dos redes de prueba públicas que los desarrolladores de clientes mantienen 
 
 **Sepolia es la red de prueba predeterminada recomendada para el desarrollo de aplicaciones**. La red Sepolia utiliza un conjunto de validadores con permisos controlado por equipos de clientes y pruebas.
 
-##### Recursos {#} {#}
+##### Recursos
 
 - [Sitio web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Las dos redes de prueba públicas que los desarrolladores de clientes mantienen 
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucets {#} {#}
+##### Faucets
 
 - [Faucet de Sepolia de Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet de Sepolia de Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi es una red de prueba para probar la validación y el staking. La red Hoodi
 - Estado grande, útil para probar interacciones complejas de contratos inteligentes
 - Mayor tiempo de sincronización y requiere más almacenamiento para ejecutar un nodo
 
-##### Recursos {#}
+##### Recursos
 
 - [Sitio web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi es una red de prueba para probar la validación y el staking. La red Hoodi
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Faucet de Hoodi de Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Faucet de Hoodi](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery es un tipo único de red de prueba que se reinicia por completo cada me
 - Conjunto de validadores abierto y fácil acceso a grandes cantidades de fondos
 - Requisitos de nodo más pequeños y sincronización más rápida, &lt;5 GB en promedio
 
-##### Recursos {#}
+##### Recursos
 
 - [Sitio web](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ La red de prueba Holesky está obsoleta a partir de septiembre de 2025. Los oper
 
 Una red de prueba para [Arbitrum](https://arbitrum.io/).
 
-##### Recursos {#}
+##### Recursos
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Faucet de Arbitrum Sepolia de Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Faucet de Arbitrum Sepolia de Chainlink](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Una red de prueba para [Arbitrum](https://arbitrum.io/).
 
 Una red de prueba para [Optimism](https://www.optimism.io/).
 
-##### Recursos {#}
+##### Recursos
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Faucet de Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet de Chainlink](https://faucets.chain.link/optimism-sepolia)

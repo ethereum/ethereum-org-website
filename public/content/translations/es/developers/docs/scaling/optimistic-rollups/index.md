@@ -152,7 +152,7 @@ Los rollups optimistas están diseñados para la interoperabilidad con la red pr
 
 #### 1. Movimiento de activos {#asset-movement}
 
-##### Ingreso al rollup {#}
+##### Ingreso al rollup
 
 Para usar un rollup optimista, los usuarios depositan ETH, tokens ERC-20 y otros activos aceptados en el contrato del [puente](/developers/docs/bridges/) del rollup en la capa 1 (L1). El contrato del puente transmitirá la transacción a la capa 2 (L2), donde se acuña una cantidad equivalente de activos y se envía a la dirección elegida por el usuario en el rollup optimista.
 
@@ -160,7 +160,7 @@ Las transacciones generadas por el usuario (como un depósito de L1 > L2) genera
 
 Algunos rollups optimistas adoptan un enfoque más directo para evitar que los secuenciadores censuren a los usuarios. Aquí, un bloque se define por todas las transacciones enviadas al contrato de capa 1 (L1) desde el bloque anterior (por ejemplo, depósitos) además de las transacciones procesadas en la cadena del rollup. Si un secuenciador ignora una transacción de capa 1 (L1), publicará la raíz de estado (demostrablemente) incorrecta; por lo tanto, los secuenciadores no pueden retrasar los mensajes generados por el usuario una vez publicados en la capa 1 (L1).
 
-##### Salida del rollup {#}
+##### Salida del rollup
 
 El retiro de un rollup optimista a Ethereum es más difícil debido al esquema de prueba de fraude. Si un usuario inicia una transacción de L2 > L1 para retirar fondos en custodia en la capa 1 (L1), debe esperar hasta que transcurra el período de desafío, que dura aproximadamente siete días. Sin embargo, el proceso de retiro en sí es bastante sencillo.
 

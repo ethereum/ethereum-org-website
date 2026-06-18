@@ -69,7 +69,7 @@ La forma más fácil de entender cómo escribir un componente de servidor es rep
 
 La gran mayoría del programa está contenida en [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Creación de los objetos prerrequisitos {#}
+##### Creación de los objetos prerrequisitos
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 Ahora que tenemos todos los prerrequisitos, finalmente podemos crear una [instancia de contrato](https://viem.sh/docs/contract/getContract). Usaremos esta instancia de contrato para comunicarnos con el contrato en cadena.
 
-##### Lectura de la cadena de bloques {#}
+##### Lectura de la cadena de bloques
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript es de un solo hilo, por lo que cuando iniciamos un proceso de larga d
 
 Si está interesado en cómo funciona esto, puede [leer al respecto aquí](https://www.w3schools.com/js/js_promise.asp), pero en términos prácticos todo lo que necesita saber es que hace `await` a los resultados si inicia una operación que toma mucho tiempo, y que cualquier función que haga esto tiene que ser declarada como `async`.
 
-##### Emisión de transacciones {#}
+##### Emisión de transacciones
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ El campo `write` de la instancia del contrato tiene todas las funciones que escr
 
 Reporte el hash de la transacción (como parte de una URL al explorador de bloques para verla) y devuélvalo.
 
-##### Respuesta a eventos {#}
+##### Respuesta a eventos
 
 ```typescript
 greeter.watchEvent.SetGreeting({

@@ -193,7 +193,7 @@ summaryPoints:
 আপনার সম্পূর্ণ ব্যালেন্স আনলক করতে এবং ফেরত পেতে আপনাকে অবশ্যই আপনার ভ্যালিডেটর থেকে প্রস্থান করার প্রক্রিয়াটিও সম্পন্ন করতে হবে।
 
 <ButtonLink href="/staking/withdrawals/">স্টেকিং উত্তোলন সম্পর্কে আরও জানুন</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## আরও পড়ুন {#further-reading}
 

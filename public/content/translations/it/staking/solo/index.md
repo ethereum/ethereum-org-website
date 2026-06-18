@@ -193,7 +193,7 @@ Una volta impostate le credenziali di prelievo, i pagamenti delle ricompense (ET
 Per sbloccare e ricevere indietro l'intero saldo devi anche completare il processo di uscita del tuo validatore.
 
 <ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi di staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Letture di approfondimento {#further-reading}
 

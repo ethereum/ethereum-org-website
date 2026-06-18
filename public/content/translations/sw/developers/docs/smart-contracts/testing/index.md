@@ -52,7 +52,7 @@ Majaribio ya kitengo ni muhimu kwa kuangalia kuwa utendaji unarudisha thamani zi
 
 #### Miongozo ya majaribio ya kitengo ya mikataba mahiri {#unit-testing-guidelines}
 
-##### 1. Elewa mantiki ya biashara ya mkataba wako na mtiririko wa kazi {#}
+##### 1. Elewa mantiki ya biashara ya mkataba wako na mtiririko wa kazi
 
 Kabla ya kuandika majaribio ya kitengo, inasaidia kujua ni utendaji gani mkataba mahiri unatoa na jinsi watumiaji watafikia na kutumia utendaji huo. Hii ni muhimu sana kwa kuendesha [majaribio ya njia yenye furaha](https://en.m.wikipedia.org/wiki/Happy_path) ambayo huamua ikiwa utendaji katika mkataba unarudisha matokeo sahihi kwa ingizo halali la mtumiaji. Tutaelezea dhana hii kwa kutumia mfano huu (uliofupishwa) wa [mkataba wa mnada](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
@@ -114,7 +114,7 @@ Majaribio ya kitengo kwa mkataba kama huu yatashughulikia utendaji tofauti ambao
 
 Kuelewa mtiririko wa kazi wa uendeshaji wa mkataba pia husaidia katika kuandika majaribio ya kitengo ambayo huangalia ikiwa utekelezaji unakidhi mahitaji. Kwa mfano, mkataba wa mnada unabainisha kuwa watumiaji hawawezi kuweka zabuni wakati mnada umekwisha (yaani, wakati `auctionEndTime` iko chini ya `block.timestamp`). Kwa hivyo, msanidi programu anaweza kuendesha jaribio la kitengo ambalo huangalia ikiwa wito kwa utendaji wa `bid()` unafanikiwa au kufeli wakati mnada umekwisha (yaani, wakati `auctionEndTime` > `block.timestamp`).
 
-##### 2. Tathmini dhana zote zinazohusiana na utekelezaji wa mkataba {#}
+##### 2. Tathmini dhana zote zinazohusiana na utekelezaji wa mkataba
 
 Ni muhimu kuandika dhana zozote kuhusu utekelezaji wa mkataba na kuandika majaribio ya kitengo ili kuthibitisha uhalali wa dhana hizo. Mbali na kutoa ulinzi dhidi ya utekelezaji usiotarajiwa, kujaribu madai kunakulazimisha kufikiria kuhusu shughuli zinazoweza kuvunja muundo wa usalama wa mkataba mahiri. Kidokezo muhimu ni kwenda zaidi ya "majaribio ya mtumiaji mwenye furaha" na kuandika majaribio hasi ambayo huangalia ikiwa utendaji unafeli kwa ingizo zisizo sahihi.
 
@@ -128,11 +128,11 @@ Mifumo mingi ya majaribio ya kitengo inakuruhusu kuunda madai—kauli rahisi zin
 
 **Kumbuka**: Njia nyingine ya kujaribu dhana ni kuandika majaribio ambayo huchochea [virekebishaji vya utendaji](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) katika mkataba, hasa kauli za `require`, `assert`, na `if…else`.
 
-##### 3. Pima ufunikaji wa msimbo {#}
+##### 3. Pima ufunikaji wa msimbo
 
 [Ufunikaji wa msimbo](https://en.m.wikipedia.org/wiki/Code_coverage) ni kipimo cha majaribio ambacho hufuatilia idadi ya matawi, mistari, na kauli katika msimbo wako zilizotekelezwa wakati wa majaribio. Majaribio yanapaswa kuwa na ufunikaji mzuri wa msimbo ili kupunguza hatari ya udhaifu ambao haujajaribiwa. Bila ufunikaji wa kutosha, unaweza kudhani kimakosa kuwa mkataba wako uko salama kwa sababu majaribio yote yanafaulu, wakati udhaifu bado upo katika njia za msimbo ambazo hazijajaribiwa. Kurekodi ufunikaji wa juu wa msimbo, hata hivyo, kunatoa hakikisho kuwa kauli/utendaji wote katika mkataba mahiri ulijaribiwa vya kutosha kwa usahihi.
 
-##### 4. Tumia mifumo ya majaribio iliyotengenezwa vizuri {#}
+##### 4. Tumia mifumo ya majaribio iliyotengenezwa vizuri
 
 Ubora wa zana zinazotumiwa katika kuendesha majaribio ya kitengo kwa mikataba yako mahiri ni muhimu. Mfumo bora wa majaribio ni ule unaodumishwa mara kwa mara; hutoa vipengele muhimu (k.m., uwezo wa kuweka kumbukumbu na kuripoti); na lazima uwe umetumiwa sana na kuhakikiwa na wasanidi programu wengine.
 

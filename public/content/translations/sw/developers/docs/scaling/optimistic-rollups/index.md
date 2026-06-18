@@ -152,7 +152,7 @@ Mikusanyiko ya optimistic imeundwa kwa ajili ya mwingiliano na Mtandao Mkuu wa E
 
 #### 1. Usogezi wa mali {#asset-movement}
 
-##### Kuingia kwenye rollup {#}
+##### Kuingia kwenye rollup
 
 Ili kutumia rollup ya optimistic, watumiaji huweka ETH, tokeni za ERC-20, na mali nyingine zinazokubaliwa katika mkataba wa [daraja](/developers/docs/bridges/) la rollup kwenye tabaka la 1 (l1). Mkataba wa daraja utapitisha muamala kwenye tabaka la 2 (l2), ambapo kiasi sawa cha mali hufuliwa na kutumwa kwa anwani iliyochaguliwa na mtumiaji kwenye rollup ya optimistic.
 
@@ -160,7 +160,7 @@ Miamala inayozalishwa na mtumiaji (kama amana ya L1 > L2) kwa kawaida hupangwa k
 
 Baadhi ya mikusanyiko ya optimistic inachukua mbinu ya moja kwa moja zaidi ili kuzuia wapangaji kudhibiti watumiaji. Hapa, kitalu kinafafanuliwa na miamala yote iliyowasilishwa kwenye mkataba wa tabaka la 1 (l1) tangu kitalu kilichopita (k.m., amana) pamoja na miamala iliyochakatwa kwenye mnyororo wa rollup. Ikiwa mpangaji atapuuza muamala wa tabaka la 1 (l1), atachapisha mzizi wa hali usio sahihi (unaothibitishwa); kwa hivyo, wapangaji hawawezi kuchelewesha ujumbe unaozalishwa na mtumiaji pindi unapochapishwa kwenye tabaka la 1 (l1).
 
-##### Kutoka kwenye rollup {#}
+##### Kutoka kwenye rollup
 
 Kutoa kutoka kwenye rollup ya optimistic kwenda Ethereum ni vigumu zaidi kutokana na mpango wa kuthibitisha udanganyifu. Ikiwa mtumiaji ataanzisha muamala wa L2 > L1 ili kutoa fedha zilizowekwa kwenye tabaka la 1 (l1), lazima asubiri hadi kipindi cha changamoto—kinachodumu takriban siku saba—kipite. Hata hivyo, mchakato wa utoaji wenyewe ni wa moja kwa moja.
 

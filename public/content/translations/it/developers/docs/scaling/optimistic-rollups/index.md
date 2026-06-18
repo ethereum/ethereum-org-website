@@ -152,7 +152,7 @@ I rollup ottimistici sono progettati per l'interoperabilità con la Mainnet di E
 
 #### 1. Movimento degli asset {#asset-movement}
 
-##### Entrare nel rollup {#}
+##### Entrare nel rollup
 
 Per utilizzare un rollup ottimistico, gli utenti depositano ETH, token ERC-20 e altri asset accettati nel contratto [ponte](/developers/docs/bridges/) del rollup su L1. Il contratto ponte trasmetterà la transazione a L2, dove una quantità equivalente di asset viene coniata e inviata all'indirizzo scelto dall'utente sul rollup ottimistico.
 
@@ -160,7 +160,7 @@ Le transazioni generate dagli utenti (come un deposito L1 > L2) vengono solitame
 
 Alcuni rollup ottimistici adottano un approccio più diretto per impedire ai sequencer di censurare gli utenti. Qui, un blocco è definito da tutte le transazioni inviate al contratto L1 dal blocco precedente (ad es. i depositi) in aggiunta alle transazioni elaborate sulla catena del rollup. Se un sequencer ignora una transazione L1, pubblicherà la radice di stato (dimostrabilmente) sbagliata; pertanto, i sequencer non possono ritardare i messaggi generati dagli utenti una volta pubblicati su L1.
 
-##### Uscire dal rollup {#}
+##### Uscire dal rollup
 
 Il prelievo da un rollup ottimistico a Ethereum è più difficile a causa dello schema di prova di frode. Se un utente avvia una transazione L2 > L1 per prelevare fondi depositati in garanzia su L1, deve attendere fino alla scadenza del periodo di contestazione, che dura circa sette giorni. Tuttavia, il processo di prelievo in sé è abbastanza semplice.
 

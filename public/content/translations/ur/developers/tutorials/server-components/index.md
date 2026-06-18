@@ -68,7 +68,7 @@ published: 2024-07-15
 
 پروگرام کی اکثریت [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts) میں موجود ہے۔
 
-##### ضروری آبجیکٹس بنانا {#}
+##### ضروری آبجیکٹس بنانا
 
 ```typescript
 import {
@@ -176,7 +176,7 @@ const greeter = getContract({
 
 اب جب کہ ہمارے پاس تمام ضروریات موجود ہیں، ہم آخر کار ایک [کنٹریکٹ کی مثال (instance)](https://viem.sh/docs/contract/getContract) بنا سکتے ہیں۔ ہم اس کنٹریکٹ کی مثال کو آن چین کنٹریکٹ کے ساتھ بات چیت کرنے کے لیے استعمال کریں گے۔
 
-##### بلاک چین سے پڑھنا {#}
+##### بلاک چین سے پڑھنا
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -188,7 +188,7 @@ console.log(`Current greeting:`, await greeter.read.greet())
 
 اگر آپ اس میں دلچسپی رکھتے ہیں کہ یہ کیسے کام کرتا ہے تو آپ [اس کے بارے میں یہاں پڑھ سکتے ہیں](https://www.w3schools.com/js/js_promise.asp)، لیکن عملی لحاظ سے آپ کو صرف یہ جاننے کی ضرورت ہے کہ اگر آپ کوئی ایسا عمل شروع کرتے ہیں جس میں زیادہ وقت لگتا ہے تو آپ نتائج کا `await` کرتے ہیں، اور یہ کہ ایسا کرنے والے کسی بھی فنکشن کو `async` کے طور پر قرار دیا جانا چاہیے۔
 
-##### ٹرانزیکشنز جاری کرنا {#}
+##### ٹرانزیکشنز جاری کرنا
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -211,7 +211,7 @@ const txHash = await greeter.write.setGreeting([greeting])
 
 ٹرانزیکشن کے ہیش کی اطلاع دیں (اسے دیکھنے کے لیے بلاک ایکسپلورر کے <span dir="ltr">URL</span> کے حصے کے طور پر) اور اسے واپس کریں۔
 
-##### ایونٹس کا جواب دینا {#}
+##### ایونٹس کا جواب دینا
 
 ```typescript
 greeter.watchEvent.SetGreeting({

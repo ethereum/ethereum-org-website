@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>خطرات کو ذہن میں رکھیں</strong>
+ <p className="mt-0"><strong>خطرات کو ذہن میں رکھیں</strong></p>
   <p className="mt-2">صرف وہی شرط لگائیں جو آپ برداشت کر سکتے ہیں، اور ممکنہ لت والے رویوں سے آگاہ رہیں۔</p>
 </AlertDescription>
 </AlertContent>

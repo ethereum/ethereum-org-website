@@ -72,7 +72,7 @@ published: 2024-07-15
 
 प्रोग्राम का अधिकांश भाग [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts) में समाहित है।
 
-##### पूर्वापेक्षित ऑब्जेक्ट्स बनाना {#}
+##### पूर्वापेक्षित ऑब्जेक्ट्स बनाना
 
 ```typescript
 import {
@@ -180,7 +180,7 @@ const greeter = getContract({
 
 अब जब हमारे पास सभी पूर्वापेक्षाएँ हैं, तो हम अंततः एक [अनुबंध इंस्टेंस](https://viem.sh/docs/contract/getContract) बना सकते हैं। हम ऑनचेन अनुबंध के साथ संवाद करने के लिए इस अनुबंध इंस्टेंस का उपयोग करेंगे।
 
-##### ब्लॉकचेन से पढ़ना {#}
+##### ब्लॉकचेन से पढ़ना
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -192,7 +192,7 @@ JavaScript सिंगल-थ्रेडेड है, इसलिए जब 
 
 यदि आप इसमें रुचि रखते हैं कि यह कैसे काम करता है तो आप [इसके बारे में यहाँ पढ़ सकते हैं](https://www.w3schools.com/js/js_promise.asp), लेकिन व्यावहारिक रूप से आपको बस इतना जानने की आवश्यकता है कि यदि आप कोई ऐसा ऑपरेशन शुरू करते हैं जिसमें लंबा समय लगता है तो आप परिणामों की `await` करते हैं, और ऐसा करने वाले किसी भी फ़ंक्शन को `async` के रूप में घोषित किया जाना चाहिए।
 
-##### लेन-देन जारी करना {#}
+##### लेन-देन जारी करना
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -215,7 +215,7 @@ const txHash = await greeter.write.setGreeting([greeting])
 
 लेन-देन के हैश की रिपोर्ट करें (इसे देखने के लिए ब्लॉक एक्सप्लोरर के URL के भाग के रूप में) और इसे वापस करें।
 
-##### घटनाओं पर प्रतिक्रिया देना {#}
+##### घटनाओं पर प्रतिक्रिया देना
 
 ```typescript
 greeter.watchEvent.SetGreeting({

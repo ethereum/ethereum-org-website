@@ -40,7 +40,7 @@ Mitandao miwili ya majaribio ya umma ambayo wasanidi wa wateja wanaitunza kwa sa
 
 **Sepolia ni mtandao wa majaribio chaguomsingi unaopendekezwa kwa maendeleo ya programu**. Mtandao wa Sepolia unatumia seti ya wathibitishaji yenye ruhusa inayodhibitiwa na timu za wateja na majaribio.
 
-##### Rasilimali {#} {#}
+##### Rasilimali
 
 - [Tovuti](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Mitandao miwili ya majaribio ya umma ambayo wasanidi wa wateja wanaitunza kwa sa
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Mabomba {#} {#}
+##### Mabomba
 
 - [Bomba la Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Bomba la Chain Platform Sepolia](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi ni mtandao wa majaribio kwa ajili ya kujaribu uthibitishaji na uwekaji dha
 - Hali kubwa, muhimu kwa kujaribu mwingiliano changamano wa mikataba mahiri
 - Inachukua muda mrefu zaidi kufanya usawazishaji na inahitaji hifadhi zaidi ili kuendesha nodi
 
-##### Rasilimali {#}
+##### Rasilimali
 
 - [Tovuti](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi ni mtandao wa majaribio kwa ajili ya kujaribu uthibitishaji na uwekaji dha
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Mabomba {#}
+##### Mabomba
 
 - [Bomba la Chain Platform Hoodi](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Bomba la Hoodi](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery ni aina ya kipekee ya mtandao wa majaribio ambayo huwekwa upya kikamili
 - Seti wazi ya wathibitishaji na rahisi kupata kiasi kikubwa cha fedha
 - Mahitaji madogo zaidi ya nodi na usawazishaji wa haraka zaidi, &lt;5GB kwa wastani
 
-##### Rasilimali {#}
+##### Rasilimali
 
 - [Tovuti](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ Mtandao wa majaribio wa Holesky umeachwa kutumika kuanzia Septemba 2025. Waendes
 
 Mtandao wa majaribio kwa ajili ya [Arbitrum](https://arbitrum.io/).
 
-##### Rasilimali {#}
+##### Rasilimali
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Mabomba {#}
+##### Mabomba
 
 - [Bomba la Alchemy Arbitrum Sepolia](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Bomba la Chainlink Arbitrum Sepolia](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Mtandao wa majaribio kwa ajili ya [Arbitrum](https://arbitrum.io/).
 
 Mtandao wa majaribio kwa ajili ya [Optimism](https://www.optimism.io/).
 
-##### Rasilimali {#}
+##### Rasilimali
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Mabomba {#}
+##### Mabomba
 
 - [Bomba la Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Bomba la Chainlink](https://faucets.chain.link/optimism-sepolia)

@@ -69,7 +69,7 @@ Sasa hivi! Uboreshaji wa mtandao wa Shanghai/Capella ulifanyika Aprili 2023, na 
 Vinginevyo, mabwawa yanayotumia tokeni ya uwekaji dhamana ya ERC-20 yanaruhusu watumiaji kufanya biashara ya tokeni hii katika soko la wazi, kukurusu kuuza nafasi yako ya uwekaji dhamana, kwa ufanisi "kutoa" bila kuondoa ETH kutoka kwenye mkataba wa uwekaji dhamana.
 
 <ButtonLink href="/staking/withdrawals/">Zaidi kuhusu utoaji wa uwekaji dhamana</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Je, hii ni tofauti na uwekaji dhamana kwenye soko langu la kubadilishia fedha?">
 Kuna mfanano mwingi kati ya chaguzi hizi za uwekaji dhamana wa pamoja na mabadilishano yaliyowekwa kati, kama vile uwezo wa kuweka dhamana ya kiasi kidogo cha ETH na kuziunganisha pamoja ili kuwezesha wathibitishaji.

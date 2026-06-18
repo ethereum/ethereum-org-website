@@ -40,7 +40,7 @@ Les deux réseaux de test publics que les développeurs de clients maintiennent 
 
 **Sepolia est le réseau de test par défaut recommandé pour le développement d'applications**. Le réseau Sepolia utilise un ensemble de validateurs à permission contrôlé par les équipes de clients et de test.
 
-##### Ressources {#} {#}
+##### Ressources
 
 - [Site web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Les deux réseaux de test publics que les développeurs de clients maintiennent 
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucets {#} {#}
+##### Faucets
 
 - [Faucet Sepolia d'Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet Sepolia de Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi est un réseau de test pour tester la validation et le staking. Le réseau
 - État volumineux, utile pour tester des interactions complexes de contrats intelligents
 - Plus long à synchroniser et nécessite plus de stockage pour exécuter un nœud
 
-##### Ressources {#}
+##### Ressources
 
 - [Site web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi est un réseau de test pour tester la validation et le staking. Le réseau
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Faucet Hoodi de Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Faucet Hoodi](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery est un type unique de réseau de test qui se réinitialise complètemen
 - Ensemble de validateurs ouvert et accès facile à de grandes quantités de fonds
 - Exigences de nœud les plus faibles et synchronisation la plus rapide, &lt;5 Go en moyenne
 
-##### Ressources {#}
+##### Ressources
 
 - [Site web](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ La [couche 2 (l2)](/layer-2/) est un terme collectif pour décrire un ensemble s
 
 Un réseau de test pour [Arbitrum](https://arbitrum.io/).
 
-##### Ressources {#}
+##### Ressources
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Faucet Arbitrum Sepolia d'Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Faucet Arbitrum Sepolia de Chainlink](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Un réseau de test pour [Arbitrum](https://arbitrum.io/).
 
 Un réseau de test pour [Optimism](https://www.optimism.io/).
 
-##### Ressources {#}
+##### Ressources
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Faucet d'Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet de Chainlink](https://faucets.chain.link/optimism-sepolia)

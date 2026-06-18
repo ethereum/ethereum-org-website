@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>నష్టభయాల పట్ల అప్రమత్తంగా ఉండండి</strong>
+ <p className="mt-0"><strong>నష్టభయాల పట్ల అప్రమత్తంగా ఉండండి</strong></p>
   <p className="mt-2">మీరు భరించగలిగేంత మాత్రమే బెట్టింగ్ చేయండి మరియు సంభావ్య వ్యసనపరుడయ్యే ప్రవర్తనల గురించి తెలుసుకోండి.</p>
 </AlertDescription>
 </AlertContent>

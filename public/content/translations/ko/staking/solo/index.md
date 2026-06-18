@@ -193,7 +193,7 @@ ETH 홈 스테이킹을 돕는 도구와 서비스가 점점 늘어나고 있지
 전체 잔고를 잠금 해제하고 돌려받으려면 검증자 종료 프로세스도 완료해야 합니다.
 
 <ButtonLink href="/staking/withdrawals/">스테이킹 인출에 대해 자세히 알아보기</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## 추가 읽을거리 {#further-reading}
 

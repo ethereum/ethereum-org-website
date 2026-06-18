@@ -72,7 +72,7 @@ Cách dễ nhất để hiểu cách viết một thành phần máy chủ là x
 
 Phần lớn chương trình được chứa trong [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Tạo các đối tượng tiên quyết {#}
+##### Tạo các đối tượng tiên quyết
 
 ```typescript
 import {
@@ -180,7 +180,7 @@ const greeter = getContract({
 
 Bây giờ chúng ta đã có tất cả các điều kiện tiên quyết, cuối cùng chúng ta có thể tạo một [phiên bản hợp đồng](https://viem.sh/docs/contract/getContract). Chúng ta sẽ sử dụng phiên bản hợp đồng này để giao tiếp với hợp đồng trên chuỗi.
 
-##### Đọc từ chuỗi khối {#}
+##### Đọc từ chuỗi khối
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -192,7 +192,7 @@ JavaScript là đơn luồng, vì vậy khi chúng ta kích hoạt một quá tr
 
 Nếu bạn quan tâm đến cách thức hoạt động của nó, bạn có thể [đọc về nó ở đây](https://www.w3schools.com/js/js_promise.asp), nhưng về mặt thực tế, tất cả những gì bạn cần biết là bạn `await` kết quả nếu bạn bắt đầu một thao tác mất nhiều thời gian và bất kỳ hàm nào thực hiện điều này đều phải được khai báo là `async`.
 
-##### Phát hành giao dịch {#}
+##### Phát hành giao dịch
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -215,7 +215,7 @@ Trường `write` của phiên bản hợp đồng có tất cả các hàm ghi 
 
 Báo cáo mã băm của giao dịch (như một phần của URL đến trình khám phá khối để xem nó) và trả về nó.
 
-##### Phản hồi các sự kiện {#}
+##### Phản hồi các sự kiện
 
 ```typescript
 greeter.watchEvent.SetGreeting({

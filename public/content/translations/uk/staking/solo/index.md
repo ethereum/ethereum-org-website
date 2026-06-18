@@ -193,7 +193,7 @@ Staking Launchpad — це програма з відкритим вихідни
 Щоб розблокувати та отримати весь свій баланс назад, ви також повинні завершити процес виходу вашого валідатора.
 
 <ButtonLink href="/staking/withdrawals/">Детальніше про виведення зі стейкінгу</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Додаткова література {#further-reading}
 

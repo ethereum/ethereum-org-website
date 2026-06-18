@@ -40,7 +40,7 @@ lang: ur
 
 **ایپلی کیشن کی ترقی کے لیے Sepolia تجویز کردہ ڈیفالٹ آزمائشی نیٹ ورک ہے**۔ Sepolia نیٹ ورک کلائنٹ اور ٹیسٹنگ ٹیموں کے زیر کنٹرول ایک اجازت یافتہ توثیق کار سیٹ استعمال کرتا ہے۔
 
-##### وسائل {#} {#}
+##### وسائل
 
 - [ویب سائٹ](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: ur
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### فوسٹس {#} {#}
+##### فوسٹس
 
 - [Alchemy Sepolia فوسٹ](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia فوسٹ](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi توثیق اور اسٹیکنگ کی جانچ کے لیے ایک آزما
 - بڑی حالت، پیچیدہ سمارٹ کنٹریکٹ کے تعاملات کی جانچ کے لیے مفید ہے
 - ہم آہنگی میں زیادہ وقت لگتا ہے اور نوڈ چلانے کے لیے زیادہ اسٹوریج کی ضرورت ہوتی ہے
 
-##### وسائل {#}
+##### وسائل
 
 - [ویب سائٹ](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi توثیق اور اسٹیکنگ کی جانچ کے لیے ایک آزما
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### فوسٹس {#}
+##### فوسٹس
 
 - [Chain Platform Hoodi فوسٹ](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi فوسٹ](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery ایک منفرد قسم کا آزمائشی نیٹ ورک ہے جو ہ
 - کھلا توثیق کار سیٹ اور بڑی مقدار میں فنڈز تک رسائی آسان ہے
 - نوڈ کی سب سے کم ضروریات اور تیز ترین ہم آہنگی، اوسطاً <span dir="ltr">&lt;5GB</span>
 
-##### وسائل {#}
+##### وسائل
 
 - [ویب سائٹ](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ Ephemery ایک منفرد قسم کا آزمائشی نیٹ ورک ہے جو ہ
 
 [آربٹرم](https://arbitrum.io/) کے لیے ایک آزمائشی نیٹ ورک۔
 
-##### وسائل {#}
+##### وسائل
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### فوسٹس {#}
+##### فوسٹس
 
 - [Alchemy آربٹرم Sepolia فوسٹ](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [چین لنک آربٹرم Sepolia فوسٹ](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Ephemery ایک منفرد قسم کا آزمائشی نیٹ ورک ہے جو ہ
 
 [آپٹیمزم](https://www.optimism.io/) کے لیے ایک آزمائشی نیٹ ورک۔
 
-##### وسائل {#}
+##### وسائل
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### فوسٹس {#}
+##### فوسٹس
 
 - [Alchemy فوسٹ](https://www.alchemy.com/faucets/optimism-sepolia)
 - [چین لنک فوسٹ](https://faucets.chain.link/optimism-sepolia)

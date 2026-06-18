@@ -69,7 +69,7 @@ Najprostszym sposobem na zrozumienie, jak napisać komponent serwerowy, jest prz
 
 Zdecydowana większość programu znajduje się w pliku [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Tworzenie wymaganych obiektów {#}
+##### Tworzenie wymaganych obiektów
 
 ```typescript
 import {
@@ -177,7 +177,7 @@ const greeter = getContract({
 
 Teraz, gdy mamy już wszystkie wymagane elementy, możemy w końcu utworzyć [instancję kontraktu](https://viem.sh/docs/contract/getContract). Użyjemy tej instancji kontraktu do komunikacji z kontraktem onchain.
 
-##### Odczyt z blockchaina {#}
+##### Odczyt z blockchaina
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -189,7 +189,7 @@ JavaScript jest jednowątkowy, więc kiedy uruchamiamy długotrwały proces, mus
 
 Jeśli interesuje Cię, jak to działa, możesz [przeczytać o tym tutaj](https://www.w3schools.com/js/js_promise.asp), ale w praktyce wszystko, co musisz wiedzieć, to to, że używasz `await` dla wyników, jeśli rozpoczynasz operację, która zajmuje dużo czasu, a każda funkcja, która to robi, musi być zadeklarowana jako `async`.
 
-##### Wysyłanie transakcji {#}
+##### Wysyłanie transakcji
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -212,7 +212,7 @@ Pole `write` instancji kontraktu zawiera wszystkie funkcje, które zapisują do 
 
 Zgłoś hash transakcji (jako część adresu URL do eksploratora bloków, aby go wyświetlić) i zwróć go.
 
-##### Reagowanie na zdarzenia {#}
+##### Reagowanie na zdarzenia
 
 ```typescript
 greeter.watchEvent.SetGreeting({

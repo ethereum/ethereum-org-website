@@ -152,7 +152,7 @@ Os rollups otimistas são projetados para interoperabilidade com a Rede Principa
 
 #### 1. Movimentação de ativos {#asset-movement}
 
-##### Entrando no rollup {#}
+##### Entrando no rollup
 
 Para usar um rollup otimista, os usuários depositam ETH, tokens ERC-20 e outros ativos aceitos no contrato de [ponte](/developers/docs/bridges/) do rollup na l1. O contrato de ponte retransmitirá a transação para a l2, onde uma quantidade equivalente de ativos é cunhada e enviada para o endereço escolhido pelo usuário no rollup otimista.
 
@@ -160,7 +160,7 @@ Transações geradas pelo usuário (como um depósito l1 > l2) geralmente são e
 
 Alguns rollups otimistas adotam uma abordagem mais direta para evitar que os sequenciadores censurem os usuários. Aqui, um bloco é definido por todas as transações enviadas ao contrato da l1 desde o bloco anterior (por exemplo, depósitos), além das transações processadas na cadeia de rollup. Se um sequenciador ignorar uma transação da l1, ele publicará a raiz de estado (comprovadamente) errada; portanto, os sequenciadores não podem atrasar mensagens geradas pelo usuário uma vez publicadas na l1.
 
-##### Saindo do rollup {#}
+##### Saindo do rollup
 
 Sacar de um rollup otimista para o Ethereum é mais difícil devido ao esquema de prova de fraude. Se um usuário iniciar uma transação l2 > l1 para sacar fundos mantidos em garantia na l1, ele deve esperar até que o período de desafio — que dura cerca de sete dias — termine. No entanto, o processo de saque em si é bastante direto.
 

@@ -40,7 +40,7 @@ lang: ja
 
 **Sepoliaは、アプリケーション開発において推奨されるデフォルトのテストネットです**。Sepoliaネットワークは、クライアントおよびテストチームによって管理されるパーミッションドなバリデータセットを使用します。
 
-##### リソース {#} {#}
+##### リソース
 
 - [ウェブサイト](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: ja
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### フォーセット {#} {#}
+##### フォーセット
 
 - [Alchemy Sepoliaフォーセット](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepoliaフォーセット](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodiは、検証とステーキングをテストするためのテストネッ
 - 大きな状態を持ち、複雑なスマート・コントラクトの相互作用のテストに有用
 - 同期に時間がかかり、ノードの実行により多くのストレージが必要
 
-##### リソース {#}
+##### リソース
 
 - [ウェブサイト](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodiは、検証とステーキングをテストするためのテストネッ
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### フォーセット {#}
+##### フォーセット
 
 - [Chain Platform Hoodiフォーセット](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodiフォーセット](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemeryは、毎月完全にリセットされるユニークな種類のテス
 - オープンなバリデータセットであり、多額の資金に簡単にアクセス可能
 - 最小のノード要件と最速の同期（平均5GB未満）
 
-##### リソース {#}
+##### リソース
 
 - [ウェブサイト](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ Ephemeryは、毎月完全にリセットされるユニークな種類のテス
 
 [アービトラム](https://arbitrum.io/)のテストネットです。
 
-##### リソース {#}
+##### リソース
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### フォーセット {#}
+##### フォーセット
 
 - [Alchemy アービトラム Sepoliaフォーセット](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [チェーンリンク アービトラム Sepoliaフォーセット](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Ephemeryは、毎月完全にリセットされるユニークな種類のテス
 
 [オプティミズム](https://www.optimism.io/)のテストネットです。
 
-##### リソース {#}
+##### リソース
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### フォーセット {#}
+##### フォーセット
 
 - [Alchemyフォーセット](https://www.alchemy.com/faucets/optimism-sepolia)
 - [チェーンリンク・フォーセット](https://faucets.chain.link/optimism-sepolia)

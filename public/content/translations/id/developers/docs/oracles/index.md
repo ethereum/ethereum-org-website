@@ -269,7 +269,7 @@ Orakel tersentralisasi bergantung pada satu sumber kebenaran saat memberikan dat
 
 Namun, orakel terdesentralisasi harus berurusan dengan perbedaan informasi yang diambil dari beberapa sumber offchain. Untuk meminimalkan perbedaan informasi dan memastikan data yang diteruskan ke kontrak orakel mencerminkan pendapat kolektif node orakel, orakel terdesentralisasi menggunakan mekanisme berikut:
 
-##### Memberikan suara/staking pada keakuratan data {#}
+##### Memberikan suara/staking pada keakuratan data
 
 Beberapa jaringan orakel terdesentralisasi mewajibkan peserta untuk memberikan suara atau melakukan staking pada keakuratan jawaban atas kueri data (mis., "Siapa yang memenangkan pemilu AS 2020?") menggunakan token asli jaringan. Protokol agregasi kemudian menggabungkan suara dan stake serta mengambil jawaban yang didukung oleh mayoritas sebagai jawaban yang valid.
 
@@ -277,7 +277,7 @@ Node yang jawabannya menyimpang dari jawaban mayoritas akan dihukum dengan mendi
 
 Staking/memberikan suara juga melindungi orakel terdesentralisasi dari [serangan Sybil](/glossary/#sybil-attack) di mana aktor jahat membuat banyak identitas untuk mempermainkan sistem konsensus. Namun, staking tidak dapat mencegah "freeloading" (node orakel menyalin informasi dari pihak lain) dan "validasi malas" (node orakel mengikuti mayoritas tanpa memverifikasi informasi itu sendiri).
 
-##### Mekanisme titik Schelling {#}
+##### Mekanisme titik Schelling
 
 [Titik Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) adalah konsep teori permainan yang mengasumsikan beberapa entitas akan selalu menggunakan solusi umum untuk suatu masalah tanpa adanya komunikasi. Mekanisme titik Schelling sering digunakan dalam jaringan orakel terdesentralisasi untuk memungkinkan node mencapai konsensus pada jawaban atas permintaan data.
 

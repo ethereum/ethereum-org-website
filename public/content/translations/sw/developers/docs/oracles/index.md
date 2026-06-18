@@ -269,7 +269,7 @@ Orakeli zilizowekwa kati hutegemea chanzo kimoja cha ukweli wakati wa kutoa data
 
 Orakeli zilizogatuliwa, hata hivyo, lazima zishughulikie tofauti katika taarifa iliyorejeshwa kutoka vyanzo vingi vya nje ya mnyororo. Ili kupunguza tofauti katika taarifa na kuhakikisha data iliyopitishwa kwenye mkataba wa orakeli inaonyesha maoni ya pamoja ya nodi za orakeli, orakeli zilizogatuliwa hutumia mbinu zifuatazo:
 
-##### Kupiga kura/kuweka dhamana juu ya usahihi wa data {#}
+##### Kupiga kura/kuweka dhamana juu ya usahihi wa data
 
 Baadhi ya mitandao ya orakeli iliyogatuliwa inahitaji washiriki kupiga kura au kuweka dhamana juu ya usahihi wa majibu ya maswali ya data (k.m., "Nani alishinda uchaguzi wa Marekani wa 2020?") kwa kutumia tokeni asili ya mtandao. Itifaki ya ujumlishaji kisha hujumlisha kura na dhamana na kuchukua jibu linaloungwa mkono na wengi kama lile halali.
 
@@ -277,7 +277,7 @@ Nodi ambazo majibu yake yanatofautiana na jibu la wengi huadhibiwa kwa kusambaza
 
 Kuweka dhamana/kupiga kura pia hulinda orakeli zilizogatuliwa dhidi ya [mashambulizi ya Sybil](/glossary/#sybil-attack) ambapo wahusika wabaya huunda vitambulisho vingi ili kuchezea mfumo wa mwafaka. Hata hivyo, kuweka dhamana hakuwezi kuzuia “kudandia” (nodi za orakeli kunakili taarifa kutoka kwa wengine) na “uthibitishaji mvivu” (nodi za orakeli kufuata wengi bila kuthibitisha taarifa zenyewe).
 
-##### Mbinu za pointi ya Schelling {#}
+##### Mbinu za pointi ya Schelling
 
 [Pointi ya Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) ni dhana ya nadharia ya mchezo inayochukulia kuwa huluki nyingi daima zitaelekea kwenye suluhu ya kawaida kwa tatizo bila mawasiliano yoyote. Mbinu za pointi ya Schelling mara nyingi hutumika katika mitandao ya orakeli iliyogatuliwa ili kuwezesha nodi kufikia mwafaka juu ya majibu ya maombi ya data.
 

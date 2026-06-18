@@ -52,7 +52,7 @@ Birim testleri, işlevlerin beklenen değerleri döndürdüğünü ve işlev yü
 
 #### Akıllı sözleşmelerin birim testi için yönergeler {#unit-testing-guidelines}
 
-##### 1. Sözleşmenizin iş mantığını ve iş akışını anlayın {#}
+##### 1. Sözleşmenizin iş mantığını ve iş akışını anlayın
 
 Birim testleri yazmadan önce, bir akıllı sözleşmenin hangi işlevleri sunduğunu ve kullanıcıların bu işlevlere nasıl erişip kullanacağını bilmek yardımcı olur. Bu, bir sözleşmedeki işlevlerin geçerli kullanıcı girdileri için doğru çıktıyı döndürüp döndürmediğini belirleyen [mutlu yol testlerini (happy path tests)](https://en.m.wikipedia.org/wiki/Happy_path) çalıştırmak için özellikle yararlıdır. Bu kavramı, [bir açık artırma sözleşmesinin](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction) bu (kısaltılmış) örneğini kullanarak açıklayacağız
 
@@ -114,7 +114,7 @@ Bunun gibi bir sözleşme için birim testleri, bir kullanıcının sözleşmeyl
 
 Bir sözleşmenin operasyonel iş akışını anlamak, yürütmenin gereksinimleri karşılayıp karşılamadığını kontrol eden birim testleri yazmaya da yardımcı olur. Örneğin, açık artırma sözleşmesi, açık artırma sona erdiğinde (yani, `auctionEndTime`, `block.timestamp` değerinden düşük olduğunda) kullanıcıların teklif veremeyeceğini belirtir. Bu nedenle, bir geliştirici, açık artırma bittiğinde (yani, `auctionEndTime` > `block.timestamp` olduğunda) `bid()` işlevine yapılan çağrıların başarılı olup olmadığını veya başarısız olup olmadığını kontrol eden bir birim testi çalıştırabilir.
 
-##### 2. Sözleşme yürütmesiyle ilgili tüm varsayımları değerlendirin {#}
+##### 2. Sözleşme yürütmesiyle ilgili tüm varsayımları değerlendirin
 
 Bir sözleşmenin yürütülmesiyle ilgili tüm varsayımları belgelemek ve bu varsayımların geçerliliğini doğrulamak için birim testleri yazmak önemlidir. Beklenmeyen yürütmeye karşı koruma sağlamanın yanı sıra, doğrulamaları (assertions) test etmek sizi bir akıllı sözleşmenin güvenlik modelini bozabilecek işlemler hakkında düşünmeye zorlar. Yararlı bir ipucu, "mutlu kullanıcı testlerinin" ötesine geçmek ve bir işlevin yanlış girdiler için başarısız olup olmadığını kontrol eden negatif testler yazmaktır.
 
@@ -128,11 +128,11 @@ Birçok birim testi çerçevesi, doğrulamalar (bir sözleşmenin ne yapıp ne y
 
 **Not**: Varsayımları test etmenin başka bir yolu, bir sözleşmedeki [işlev değiştiricilerini (modifiers)](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers), özellikle `require`, `assert` ve `if…else` ifadelerini tetikleyen testler yazmaktır.
 
-##### 3. Kod kapsamını ölçün {#}
+##### 3. Kod kapsamını ölçün
 
 [Kod kapsamı](https://en.m.wikipedia.org/wiki/Code_coverage), testler sırasında yürütülen kodunuzdaki dalların, satırların ve ifadelerin sayısını izleyen bir test metriğidir. Test edilmemiş güvenlik açıkları riskini en aza indirmek için testlerin iyi bir kod kapsamına sahip olması gerekir. Yeterli kapsam olmadan, tüm testler geçtiği için sözleşmenizin güvenli olduğunu yanlış bir şekilde varsayabilirsiniz, oysa test edilmemiş kod yollarında güvenlik açıkları hala mevcut olabilir. Ancak yüksek kod kapsamı kaydetmek, bir akıllı sözleşmedeki tüm ifadelerin/işlevlerin doğruluk açısından yeterince test edildiğinin güvencesini verir.
 
-##### 4. İyi geliştirilmiş test çerçeveleri kullanın {#}
+##### 4. İyi geliştirilmiş test çerçeveleri kullanın
 
 Akıllı sözleşmeleriniz için birim testleri çalıştırmada kullanılan araçların kalitesi çok önemlidir. İdeal bir test çerçevesi, düzenli olarak bakımı yapılan; yararlı özellikler (örneğin, günlük kaydı ve raporlama yetenekleri) sağlayan; ve diğer geliştiriciler tarafından kapsamlı bir şekilde kullanılmış ve incelenmiş olandır.
 
@@ -241,7 +241,7 @@ Yine de, bağımsız bir kod incelemesi alarak sözleşme güvenlik açıkların
 
 Denetimler, akıllı sözleşmelerdeki güvenlik açıkları ve zayıf geliştirme uygulamaları vakalarını bulma konusunda deneyimli denetçiler tarafından gerçekleştirilir. Bir denetim genellikle test etmeyi (ve muhtemelen biçimsel doğrulamayı) ve tüm kod tabanının manuel olarak incelenmesini içerecektir.
 
-Buna karşılık, bir hata ödül programı genellikle bir akıllı sözleşmede bir güvenlik açığı keşfeden ve bunu geliştiricilere açıklayan bir kişiye (genellikle [beyaz şapkalı bilgisayar korsanları](<https://en.wikipedia.org/wiki/White_hat_(computer_security) olarak tanımlanır) finansal bir ödül sunmayı içerir. Hata ödülleri, başkalarından akıllı sözleşmelerdeki kusurları bulmaya yardım etmelerini istemeyi içerdiğinden denetimlere benzer.
+Buna karşılık, bir hata ödül programı genellikle bir akıllı sözleşmede bir güvenlik açığı keşfeden ve bunu geliştiricilere açıklayan bir kişiye (genellikle [beyaz şapkalı bilgisayar korsanları](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) olarak tanımlanır) finansal bir ödül sunmayı içerir. Hata ödülleri, başkalarından akıllı sözleşmelerdeki kusurları bulmaya yardım etmelerini istemeyi içerdiğinden denetimlere benzer.
 
 En büyük fark, hata ödül programlarının daha geniş geliştirici/bilgisayar korsanı topluluğuna açık olması ve benzersiz becerilere ve deneyime sahip geniş bir etik bilgisayar korsanları ve bağımsız güvenlik profesyonelleri sınıfını çekmesidir. Bu, temel olarak sınırlı veya dar uzmanlığa sahip olabilecek ekiplere dayanan akıllı sözleşme denetimlerine göre bir avantaj olabilir.
 

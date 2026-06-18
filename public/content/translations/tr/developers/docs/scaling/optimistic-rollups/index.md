@@ -152,7 +152,7 @@ Bu aynı zamanda iyimser rollupların başka bir güvenlik özelliğiyle de ilgi
 
 #### 1. Varlık hareketi {#asset-movement}
 
-##### Rollup'a giriş {#}
+##### Rollup'a giriş
 
 İyimser bir rollup kullanmak için kullanıcılar ETH, ERC-20 token'ları ve kabul edilen diğer varlıkları L1'deki rollup'ın [köprü](/developers/docs/bridges/) sözleşmesine yatırırlar. Köprü sözleşmesi işlemi L2'ye iletecek, burada eşdeğer miktarda varlık basılacak ve iyimser rollup üzerinde kullanıcının seçtiği adrese gönderilecektir.
 
@@ -160,7 +160,7 @@ Kullanıcı tarafından oluşturulan işlemler (L1 > L2 para yatırma gibi) gene
 
 Bazı iyimser rolluplar, sıralayıcıların kullanıcıları sansürlemesini önlemek için daha basit bir yaklaşım benimser. Burada bir blok, rollup zincirinde işlenen işlemlere ek olarak önceki bloktan bu yana L1 sözleşmesine gönderilen tüm işlemlerle (örn. para yatırma işlemleri) tanımlanır. Bir sıralayıcı bir L1 işlemini görmezden gelirse, (kanıtlanabilir şekilde) yanlış durum kökünü yayınlayacaktır; bu nedenle sıralayıcılar, L1'de yayınlandıktan sonra kullanıcı tarafından oluşturulan mesajları geciktiremezler.
 
-##### Rollup'tan çıkış {#}
+##### Rollup'tan çıkış
 
 İyimser bir rollup'tan Ethereum'a çekim yapmak, sahtekarlık kanıtlama şeması nedeniyle daha zordur. Bir kullanıcı L1'de emanet edilen fonları çekmek için bir L2 > L1 işlemi başlatırsa, kabaca yedi gün süren itiraz süresinin geçmesini beklemelidir. Yine de çekim işleminin kendisi oldukça basittir.
 

@@ -52,7 +52,7 @@ Os testes de unidade são úteis para verificar se as funções retornam os valo
 
 #### Diretrizes para testes de unidade de contratos inteligentes {#unit-testing-guidelines}
 
-##### 1. Entenda a lógica de negócios e o fluxo de trabalho do seu contrato {#}
+##### 1. Entenda a lógica de negócios e o fluxo de trabalho do seu contrato
 
 Antes de escrever testes de unidade, é útil saber quais funcionalidades um contrato inteligente oferece e como os usuários acessarão e usarão essas funções. Isso é particularmente útil para executar [testes de caminho feliz (happy path)](https://en.m.wikipedia.org/wiki/Happy_path) que determinam se as funções em um contrato retornam a saída correta para entradas de usuário válidas. Explicaremos esse conceito usando este exemplo (resumido) de [um contrato de leilão](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
@@ -114,7 +114,7 @@ Os testes de unidade para um contrato como este cobririam diferentes funções q
 
 Entender o fluxo de trabalho operacional de um contrato também ajuda a escrever testes de unidade que verificam se a execução atende aos requisitos. Por exemplo, o contrato de leilão especifica que os usuários não podem dar lances quando o leilão terminar (ou seja, quando `auctionEndTime` for menor que `block.timestamp`). Assim, um desenvolvedor pode executar um teste de unidade que verifica se as chamadas para a função `bid()` são bem-sucedidas ou falham quando o leilão termina (ou seja, quando `auctionEndTime` > `block.timestamp`).
 
-##### 2. Avalie todas as premissas relacionadas à execução do contrato {#}
+##### 2. Avalie todas as premissas relacionadas à execução do contrato
 
 É importante documentar quaisquer premissas sobre a execução de um contrato e escrever testes de unidade para verificar a validade dessas premissas. Além de oferecer proteção contra execuções inesperadas, testar asserções força você a pensar em operações que poderiam quebrar o modelo de segurança de um contrato inteligente. Uma dica útil é ir além dos "testes de usuário feliz" e escrever testes negativos que verificam se uma função falha para as entradas erradas.
 
@@ -128,11 +128,11 @@ Muitas estruturas de teste de unidade permitem que você crie asserções — de
 
 **Nota**: Outra maneira de testar premissas é escrever testes que acionam [modificadores de função](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) em um contrato, especialmente as instruções `require`, `assert` e `if…else`.
 
-##### 3. Meça a cobertura de código {#}
+##### 3. Meça a cobertura de código
 
 A [cobertura de código](https://en.m.wikipedia.org/wiki/Code_coverage) é uma métrica de teste que rastreia o número de ramificações, linhas e instruções em seu código executadas durante os testes. Os testes devem ter uma boa cobertura de código para minimizar o risco de vulnerabilidades não testadas. Sem cobertura suficiente, você pode presumir falsamente que seu contrato é seguro porque todos os testes passam, enquanto as vulnerabilidades ainda existem em caminhos de código não testados. Registrar uma alta cobertura de código, no entanto, dá a garantia de que todas as instruções/funções em um contrato inteligente foram suficientemente testadas quanto à correção.
 
-##### 4. Use estruturas de teste bem desenvolvidas {#}
+##### 4. Use estruturas de teste bem desenvolvidas
 
 A qualidade das ferramentas usadas na execução de testes de unidade para seus contratos inteligentes é crucial. Uma estrutura de teste ideal é aquela que é mantida regularmente; fornece recursos úteis (por exemplo, recursos de registro e relatórios); e deve ter sido amplamente usada e avaliada por outros desenvolvedores.
 

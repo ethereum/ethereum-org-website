@@ -39,7 +39,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>جاننا اچھا ہے</strong>
+ <p className="mt-0"><strong>جاننا اچھا ہے</strong></p>
   <p className="mt-2">اگرچہ "ایکٹیولی ویلیڈیٹڈ سروسز" (<span dir="ltr">AVSs</span>) سب سے زیادہ عام ہے، مختلف ری اسٹیکنگ پلیٹ فارمز ان لامركزی خدمات کے لیے دیگر نام استعمال کر سکتے ہیں جنہیں وہ محفوظ بنانے میں مدد کرتے ہیں، جیسے "آٹونومسلی ویلیڈیٹڈ سروسز،" "ڈسٹری بیوٹڈ سیکیور سروسز،" یا "نیٹ ورکس"۔</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>ری اسٹیکنگ کا اضافی فائدہ</strong>
+ <p className="mt-0"><strong>ری اسٹیکنگ کا اضافی فائدہ</strong></p>
   <p className="mt-2"><span dir="ltr">AVSs</span> لامرکزیت اور سیکیورٹی کے ساتھ مشغول ہونے کے بجائے، اپنے تمام وسائل اپنی خدمات کی تعمیر اور مارکیٹنگ میں لگا سکتے ہیں۔</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>جاننا اچھا ہے</strong>
+ <p className="mt-0"><strong>جاننا اچھا ہے</strong></p>
   <p className="mt-2">نیٹو اور لیکویڈ ری اسٹیکرز اکثر <span dir="ltr">AVSs</span> کو خود محفوظ بنانے کے لیے سافٹ ویئر چلانے کے بجائے، اپنے اسٹیک شدہ <span dir="ltr">ETH</span> کو کسی آپریٹر کو تفویض کرتے ہیں۔</p>
   <p className="mt-2">اس طرح انہیں <span dir="ltr">AVSs</span> کی پیچیدہ تکنیکی ضروریات کے بارے میں فکر کرنے کی ضرورت نہیں ہے، حالانکہ انہیں آپریٹرز کے مقابلے میں کم انعام کی شرح ملتی ہے۔</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>غلط فہمی کا انتباہ</strong>
+ <p className="mt-0"><strong>غلط فہمی کا انتباہ</strong></p>
   <p className="mt-2">کچھ لوگ غیر مرکزی مالیات (<span dir="ltr">DeFi</span>) میں <span dir="ltr">LSTs</span> کو قرض دینے اور قرض گیری کے ساتھ "ری اسٹیکنگ" کو ملا دیتے ہیں۔ دونوں اسٹیک شدہ <span dir="ltr">ETH</span> کو کام میں لاتے ہیں، لیکن ری اسٹیکنگ کا مطلب <span dir="ltr">AVSs</span> کو محفوظ بنانا ہے، نہ کہ صرف <span dir="ltr">LSTs</span> پر منافع کمانا۔</p>
 </AlertDescription>
 </AlertContent>
@@ -139,9 +139,10 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>ایتھیریم کے شریک بانی ٹائپ کر رہے ہیں…</strong>
+ <p className="mt-0"><strong>ایتھیریم کے شریک بانی ٹائپ کر رہے ہیں…</strong></p>
   <p className="mt-2">
     ایتھیریم کے شریک بانی، وٹالک نے <span dir="ltr">2021</span> کی ایک بلاگ پوسٹ میں ری اسٹیکنگ کے ممکنہ خطرات کے بارے میں خبردار کیا تھا جس کا نام <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a> تھا۔
+  </p>
 
 </AlertDescription>
 </AlertContent>
@@ -161,7 +162,7 @@ buttons:
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>ایتھیریم اسٹیکنگ:</strong> یہ کیسے کام کرتی ہے؟
+ <p className="mt-0"><strong>ایتھیریم اسٹیکنگ:</strong> یہ کیسے کام کرتی ہے؟</p>
   <ButtonLink href="/staking/">
     مزید جانیں
   </ButtonLink>

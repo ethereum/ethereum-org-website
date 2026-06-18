@@ -193,7 +193,7 @@ Setelah kredensial penarikan diatur, pembayaran imbalan (akumulasi ETH di atas 3
 Untuk membuka kunci dan menerima seluruh saldo Anda kembali, Anda juga harus menyelesaikan proses keluar dari validator Anda.
 
 <ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}
 

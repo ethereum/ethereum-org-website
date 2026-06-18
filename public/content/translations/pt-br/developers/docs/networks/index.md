@@ -40,7 +40,7 @@ As duas redes de teste públicas que os desenvolvedores de clientes estão mante
 
 **A Sepolia é a rede de teste padrão recomendada para o desenvolvimento de aplicativos**. A rede Sepolia usa um conjunto de validadores permissionado controlado por equipes de clientes e de testes.
 
-##### Recursos {#} {#}
+##### Recursos
 
 - [Site](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ As duas redes de teste públicas que os desenvolvedores de clientes estão mante
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucets {#} {#}
+##### Faucets
 
 - [Faucet da Sepolia da Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet da Sepolia da Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ A Hoodi é uma rede de teste para testar a validação e o staking. A rede Hoodi
 - Estado grande, útil para testar interações complexas de contratos inteligentes
 - Mais tempo para sincronização e requer mais armazenamento para executar um nó
 
-##### Recursos {#}
+##### Recursos
 
 - [Site](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ A Hoodi é uma rede de teste para testar a validação e o staking. A rede Hoodi
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Faucet da Hoodi da Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Faucet da Hoodi](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ A Ephemery é um tipo único de rede de teste que é totalmente redefinida todos
 - Conjunto de validadores aberto e fácil acesso a grandes quantidades de fundos
 - Menores requisitos de nó e sincronização mais rápida, &lt;5GB em média
 
-##### Recursos {#}
+##### Recursos
 
 - [Site](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ A rede de teste Holesky foi descontinuada a partir de setembro de 2025. Operador
 
 Uma rede de teste para a [Arbitrum](https://arbitrum.io/).
 
-##### Recursos {#}
+##### Recursos
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Faucet da Arbitrum Sepolia da Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Faucet da Arbitrum Sepolia da Chainlink](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Uma rede de teste para a [Arbitrum](https://arbitrum.io/).
 
 Uma rede de teste para a [Optimism](https://www.optimism.io/).
 
-##### Recursos {#}
+##### Recursos
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Faucet da Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet da Chainlink](https://faucets.chain.link/optimism-sepolia)

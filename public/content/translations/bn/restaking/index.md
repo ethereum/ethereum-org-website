@@ -39,7 +39,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>জেনে রাখা ভালো</strong>
+ <p className="mt-0"><strong>জেনে রাখা ভালো</strong></p>
   <p className="mt-2">যদিও "অ্যাক্টিভলি ভ্যালিডেটেড সার্ভিসেস" (AVSs) সবচেয়ে সাধারণ, বিভিন্ন রিস্টেকিং প্ল্যাটফর্ম তাদের সুরক্ষিত করতে সাহায্য করা বিকেন্দ্রীকৃত পরিষেবাগুলোর জন্য অন্যান্য নাম ব্যবহার করতে পারে, যেমন "অটোনোমাসলি ভ্যালিডেটেড সার্ভিসেস," "ডিস্ট্রিবিউটেড সিকিউর সার্ভিসেস," বা "নেটওয়ার্ক।"</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>রিস্টেকিংয়ের অতিরিক্ত সুবিধা</strong>
+ <p className="mt-0"><strong>রিস্টেকিংয়ের অতিরিক্ত সুবিধা</strong></p>
   <p className="mt-2">AVS-গুলো বিকেন্দ্রীকরণ এবং নিরাপত্তার বিষয়ে বিভ্রান্ত হওয়ার পরিবর্তে তাদের পরিষেবা তৈরি এবং বিপণনে তাদের সমস্ত সংস্থান ঢেলে দিতে পারে।</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>জেনে রাখা ভালো</strong>
+ <p className="mt-0"><strong>জেনে রাখা ভালো</strong></p>
   <p className="mt-2">নেটিভ এবং লিকুইড রিস্টেকাররা প্রায়শই AVS সুরক্ষিত করার জন্য নিজেরাই সফ্টওয়্যার চালানোর পরিবর্তে তাদের স্টেক করা ETH একজন অপারেটরের কাছে প্রতিনিধি হিসেবে অর্পণ করে (delegate)।</p>
   <p className="mt-2">এভাবে তাদের AVS-এর জটিল প্রযুক্তিগত প্রয়োজনীয়তা নিয়ে চিন্তা করতে হয় না, যদিও তারা অপারেটরদের তুলনায় কম হারে পুরস্কার পায়।</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>ভুল ধারণার সতর্কতা</strong>
+ <p className="mt-0"><strong>ভুল ধারণার সতর্কতা</strong></p>
   <p className="mt-2">কিছু লোক বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi)-তে LST ঋণ প্রদান এবং ঋণ গ্রহণের সাথে "রিস্টেকিং"-কে গুলিয়ে ফেলে। উভয় ক্ষেত্রেই স্টেক করা ETH কাজে লাগানো হয়, তবে রিস্টেকিং মানে হলো AVS সুরক্ষিত করা, শুধুমাত্র LST-এর ওপর ইল্ড (yield) উপার্জন করা নয়।</p>
 </AlertDescription>
 </AlertContent>
@@ -139,9 +139,10 @@ buttons:
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>ইথেরিয়ামের সহ-প্রতিষ্ঠাতা লিখছেন…</strong>
+ <p className="mt-0"><strong>ইথেরিয়ামের সহ-প্রতিষ্ঠাতা লিখছেন…</strong></p>
   <p className="mt-2">
     ইথেরিয়ামের সহ-প্রতিষ্ঠাতা ভিটালিক 2021 সালের একটি ব্লগ পোস্টে রিস্টেকিংয়ের সম্ভাব্য ঝুঁকি সম্পর্কে সতর্ক করেছিলেন, যার নাম <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus.</a>
+  </p>
 
 </AlertDescription>
 </AlertContent>
@@ -161,7 +162,7 @@ buttons:
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>ইথেরিয়াম স্টেকিং :</strong> এটি কীভাবে কাজ করে?
+ <p className="mt-0"><strong>ইথেরিয়াম স্টেকিং :</strong> এটি কীভাবে কাজ করে?</p>
   <ButtonLink href="/staking/">
     আরও জানুন
   </ButtonLink>

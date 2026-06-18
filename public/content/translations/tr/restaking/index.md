@@ -39,7 +39,7 @@ Birçok ETH stake edenin Ethereum doğrulama yazılımı çalıştırmasıyla ay
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Bilinmesinde fayda var</strong>
+ <p className="mt-0"><strong>Bilinmesinde fayda var</strong></p>
   <p className="mt-2">"Aktif Olarak Doğrulanan Hizmetler" (AVS'ler) en yaygın olanı olsa da, farklı yeniden staking platformları güvenliğini sağlamaya yardımcı oldukları merkeziyetsiz hizmetler için "Otonom Olarak Doğrulanan Hizmetler", "Dağıtık Güvenli Hizmetler" veya "Ağlar" gibi başka isimler kullanabilir.</p>
 </AlertDescription>
 </AlertContent>
@@ -69,7 +69,7 @@ Yeniden staking'in olduğu bu dünyada, hem AVS hem de stake eden kişi birbirin
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Yeniden staking'in ek faydası</strong>
+ <p className="mt-0"><strong>Yeniden staking'in ek faydası</strong></p>
   <p className="mt-2">AVS'ler, merkeziyetsizlik ve güvenlikle dikkatlerini dağıtmak yerine tüm kaynaklarını hizmetlerini oluşturmaya ve pazarlamaya aktarabilirler.</p>
 </AlertDescription>
 </AlertContent>
@@ -93,7 +93,7 @@ Yeniden staking'e dahil olan birkaç varlık vardır — her biri önemli bir ro
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Bilinmesinde fayda var</strong>
+ <p className="mt-0"><strong>Bilinmesinde fayda var</strong></p>
   <p className="mt-2">Yerel ve likit yeniden stake edenler, AVS'leri güvence altına almak için yazılımı kendileri çalıştırmak yerine genellikle stake ettikleri ETH'nin yetkisini bir operatöre devrederler.</p>
   <p className="mt-2">Bu şekilde, operatörlerden daha düşük bir ödül oranı alsalar da, AVS'lerin karmaşık teknik gereksinimleri hakkında endişelenmelerine gerek kalmaz.</p>
 </AlertDescription>
@@ -112,7 +112,7 @@ Yeni bir fikir olmasına rağmen, yeniden staking olanaklarını keşfetmek içi
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Yanlış isimlendirme uyarısı</strong>
+ <p className="mt-0"><strong>Yanlış isimlendirme uyarısı</strong></p>
   <p className="mt-2">Bazı insanlar "yeniden staking"i merkeziyetsiz finansta (DeFi) LST'leri borç verme ve borç alma ile karıştırır. Her ikisi de stake edilmiş ETH'yi işe koşar, ancak yeniden staking sadece LST'lerden getiri elde etmek değil, AVS'leri güvence altına almak anlamına gelir.</p>
 </AlertDescription>
 </AlertContent>
@@ -139,9 +139,10 @@ AVS'ler farklı oranlar sunsa da, eETH gibi Likit Yeniden Staking Tokenleri (LRT
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Ethereum kurucu ortağı yazıyor…</strong>
+ <p className="mt-0"><strong>Ethereum kurucu ortağı yazıyor…</strong></p>
   <p className="mt-2">
     Ethereum'un kurucu ortağı Vitalik, 2021'de yazdığı <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Mutabakatı Aşırı Yüklemeyin</a> adlı blog yazısında yeniden staking'in potansiyel riskleri hakkında uyarılarda bulundu.
+  </p>
 
 </AlertDescription>
 </AlertContent>
@@ -161,7 +162,7 @@ AVS'ler farklı oranlar sunsa da, eETH gibi Likit Yeniden Staking Tokenleri (LRT
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Ethereum Staking :</strong> Nasıl çalışır?
+ <p className="mt-0"><strong>Ethereum Staking :</strong> Nasıl çalışır?</p>
   <ButtonLink href="/staking/">
     Daha Fazla Bilgi Edin
   </ButtonLink>

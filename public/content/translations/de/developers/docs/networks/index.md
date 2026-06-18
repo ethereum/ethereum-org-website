@@ -40,7 +40,7 @@ Die beiden öffentlichen Testnetze, die Client-Entwickler derzeit pflegen, sind 
 
 **Sepolia ist das empfohlene Standard-Testnetz für die Anwendungsentwicklung**. Das Sepolia-Netzwerk verwendet ein erlaubnispflichtiges Validator-Set, das von Client- und Testteams kontrolliert wird.
 
-##### Ressourcen {#} {#}
+##### Ressourcen
 
 - [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Die beiden öffentlichen Testnetze, die Client-Entwickler derzeit pflegen, sind 
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucets {#} {#}
+##### Faucets
 
 - [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi ist ein Testnetz zum Testen von Validierung und Staking. Das Hoodi-Netzwer
 - Großer Zustand, nützlich zum Testen komplexer Smart-Contract-Interaktionen
 - Längere Synchronisierung und erfordert mehr Speicherplatz, um einen Knoten auszuführen
 
-##### Ressourcen {#}
+##### Ressourcen
 
 - [Website](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi ist ein Testnetz zum Testen von Validierung und Staking. Das Hoodi-Netzwer
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery ist eine einzigartige Art von Testnetz, das jeden Monat vollständig zu
 - Offenes Validator-Set und einfacher Zugang zu großen Mengen an Geldern
 - Geringste Knoten-Anforderungen und schnellste Synchronisierung, im Durchschnitt &lt;5GB
 
-##### Ressourcen {#}
+##### Ressourcen
 
 - [Website](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ Das Holesky-Testnetz ist ab September 2025 veraltet. Staking-Betreiber und Infra
 
 Ein Testnetz für [Arbitrum](https://arbitrum.io/).
 
-##### Ressourcen {#}
+##### Ressourcen
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Chainlink Arbitrum Sepolia Faucet](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Ein Testnetz für [Arbitrum](https://arbitrum.io/).
 
 Ein Testnetz für [Optimism](https://www.optimism.io/).
 
-##### Ressourcen {#}
+##### Ressourcen
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucets {#}
+##### Faucets
 
 - [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)

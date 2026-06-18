@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>위험에 유의하세요</strong>
+ <p className="mt-0"><strong>위험에 유의하세요</strong></p>
   <p className="mt-2">감당할 수 있는 금액만 베팅하고, 잠재적인 중독성 행동에 주의하세요.</p>
 </AlertDescription>
 </AlertContent>

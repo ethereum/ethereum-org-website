@@ -52,7 +52,7 @@ Thử nghiệm đơn vị rất hữu ích để kiểm tra xem các hàm có tr
 
 #### Hướng dẫn thử nghiệm đơn vị hợp đồng thông minh {#unit-testing-guidelines}
 
-##### 1. Hiểu logic nghiệp vụ và quy trình làm việc của hợp đồng {#}
+##### 1. Hiểu logic nghiệp vụ và quy trình làm việc của hợp đồng
 
 Trước khi viết các thử nghiệm đơn vị, việc biết hợp đồng thông minh cung cấp những chức năng gì và cách người dùng sẽ truy cập và sử dụng các chức năng đó là rất hữu ích. Điều này đặc biệt hữu ích để chạy [các thử nghiệm đường dẫn lý tưởng (happy path)](https://en.m.wikipedia.org/wiki/Happy_path) nhằm xác định xem các hàm trong hợp đồng có trả về đầu ra chính xác cho các đầu vào hợp lệ của người dùng hay không. Chúng tôi sẽ giải thích khái niệm này bằng cách sử dụng ví dụ (rút gọn) này về [một hợp đồng đấu giá](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
@@ -114,7 +114,7 @@ Các thử nghiệm đơn vị cho một hợp đồng như thế này sẽ bao 
 
 Việc hiểu quy trình hoạt động của hợp đồng cũng giúp viết các thử nghiệm đơn vị kiểm tra xem việc thực thi có đáp ứng các yêu cầu hay không. Ví dụ: hợp đồng đấu giá chỉ định rằng người dùng không thể đặt giá thầu khi cuộc đấu giá đã kết thúc (tức là khi `auctionEndTime` thấp hơn `block.timestamp`). Do đó, một nhà phát triển có thể chạy một thử nghiệm đơn vị kiểm tra xem các lệnh gọi đến hàm `bid()` thành công hay thất bại khi cuộc đấu giá kết thúc (tức là khi `auctionEndTime` > `block.timestamp`).
 
-##### 2. Đánh giá tất cả các giả định liên quan đến việc thực thi hợp đồng {#}
+##### 2. Đánh giá tất cả các giả định liên quan đến việc thực thi hợp đồng
 
 Điều quan trọng là phải ghi lại bất kỳ giả định nào về việc thực thi của hợp đồng và viết các thử nghiệm đơn vị để xác minh tính hợp lệ của những giả định đó. Ngoài việc cung cấp sự bảo vệ chống lại việc thực thi không mong muốn, việc thử nghiệm các khẳng định buộc bạn phải suy nghĩ về các hoạt động có thể phá vỡ mô hình bảo mật của hợp đồng thông minh. Một mẹo hữu ích là vượt ra ngoài "các thử nghiệm người dùng lý tưởng" và viết các thử nghiệm tiêu cực để kiểm tra xem một hàm có thất bại đối với các đầu vào sai hay không.
 
@@ -128,11 +128,11 @@ Nhiều khuôn khổ thử nghiệm đơn vị cho phép bạn tạo các khẳn
 
 **Lưu ý**: Một cách khác để thử nghiệm các giả định là viết các thử nghiệm kích hoạt [các công cụ sửa đổi hàm](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) trong một hợp đồng, đặc biệt là các câu lệnh `require`, `assert` và `if…else`.
 
-##### 3. Đo lường mức độ bao phủ mã {#}
+##### 3. Đo lường mức độ bao phủ mã
 
 [Mức độ bao phủ mã](https://en.m.wikipedia.org/wiki/Code_coverage) là một số liệu thử nghiệm theo dõi số lượng nhánh, dòng và câu lệnh trong mã của bạn được thực thi trong quá trình thử nghiệm. Các thử nghiệm nên có mức độ bao phủ mã tốt để giảm thiểu rủi ro của các lỗ hổng chưa được thử nghiệm. Nếu không có đủ mức độ bao phủ, bạn có thể lầm tưởng rằng hợp đồng của mình an toàn vì tất cả các thử nghiệm đều vượt qua, trong khi các lỗ hổng vẫn tồn tại trong các đường dẫn mã chưa được thử nghiệm. Tuy nhiên, việc ghi nhận mức độ bao phủ mã cao mang lại sự đảm bảo rằng tất cả các câu lệnh/hàm trong một hợp đồng thông minh đã được thử nghiệm đầy đủ về tính chính xác.
 
-##### 4. Sử dụng các khuôn khổ thử nghiệm được phát triển tốt {#}
+##### 4. Sử dụng các khuôn khổ thử nghiệm được phát triển tốt
 
 Chất lượng của các công cụ được sử dụng trong việc chạy các thử nghiệm đơn vị cho hợp đồng thông minh của bạn là rất quan trọng. Một khuôn khổ thử nghiệm lý tưởng là khuôn khổ được bảo trì thường xuyên; cung cấp các tính năng hữu ích (ví dụ: khả năng ghi nhật ký và báo cáo); và phải được sử dụng rộng rãi cũng như được kiểm duyệt bởi các nhà phát triển khác.
 
@@ -241,7 +241,7 @@ Tuy nhiên, bạn có thể tăng thêm khả năng phát hiện các lỗ hổn
 
 Các cuộc kiểm toán được thực hiện bởi các kiểm toán viên có kinh nghiệm trong việc tìm kiếm các trường hợp có lỗ hổng bảo mật và các thực tiễn phát triển kém trong hợp đồng thông minh. Một cuộc kiểm toán thường sẽ bao gồm thử nghiệm (và có thể là xác minh hình thức) cũng như đánh giá thủ công toàn bộ cơ sở mã.
 
-Ngược lại, một chương trình tiền thưởng tìm lỗi thường liên quan đến việc cung cấp phần thưởng tài chính cho một cá nhân (thường được mô tả là [tin tặc mũ trắng](<https://en.wikipedia.org/wiki/White_hat_(computer_security)) phát hiện ra lỗ hổng trong một hợp đồng thông minh và tiết lộ nó cho các nhà phát triển. Tiền thưởng tìm lỗi tương tự như kiểm toán vì nó liên quan đến việc yêu cầu người khác giúp tìm ra các khiếm khuyết trong hợp đồng thông minh.
+Ngược lại, một chương trình tiền thưởng tìm lỗi thường liên quan đến việc cung cấp phần thưởng tài chính cho một cá nhân (thường được mô tả là [tin tặc mũ trắng](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) phát hiện ra lỗ hổng trong một hợp đồng thông minh và tiết lộ nó cho các nhà phát triển. Tiền thưởng tìm lỗi tương tự như kiểm toán vì nó liên quan đến việc yêu cầu người khác giúp tìm ra các khiếm khuyết trong hợp đồng thông minh.
 
 Sự khác biệt chính là các chương trình tiền thưởng tìm lỗi mở cửa cho cộng đồng nhà phát triển/tin tặc rộng lớn hơn và thu hút một tầng lớp rộng lớn các tin tặc có đạo đức và các chuyên gia bảo mật độc lập với các kỹ năng và kinh nghiệm độc đáo. Đây có thể là một lợi thế so với các cuộc kiểm toán hợp đồng thông minh chủ yếu dựa vào các nhóm có thể sở hữu chuyên môn hạn chế hoặc hẹp.
 

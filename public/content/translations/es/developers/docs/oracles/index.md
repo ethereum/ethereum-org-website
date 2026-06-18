@@ -269,7 +269,7 @@ Los oráculos centralizados dependen de una única fuente de la verdad al propor
 
 Los oráculos descentralizados, sin embargo, deben lidiar con discrepancias en la información recuperada de múltiples fuentes fuera de la cadena. Para minimizar las diferencias en la información y garantizar que los datos pasados al contrato de oráculo reflejen la opinión colectiva de los nodos de oráculo, los oráculos descentralizados utilizan los siguientes mecanismos:
 
-##### Votación/staking sobre la precisión de los datos {#}
+##### Votación/staking sobre la precisión de los datos
 
 Algunas redes de oráculos descentralizadas requieren que los participantes voten o hagan staking sobre la precisión de las respuestas a las consultas de datos (por ejemplo, «¿Quién ganó las elecciones estadounidenses de 2020?») utilizando el token nativo de la red. Un protocolo de agregación luego agrega los votos y las participaciones y toma la respuesta respaldada por la mayoría como la válida.
 
@@ -277,7 +277,7 @@ Los nodos cuyas respuestas se desvían de la respuesta de la mayoría son penali
 
 El staking/votación también protege a los oráculos descentralizados de los [ataques Sybil](/glossary/#sybil-attack) donde actores maliciosos crean múltiples identidades para manipular el sistema de consenso. Sin embargo, el staking no puede evitar el «aprovechamiento» (nodos de oráculo que copian información de otros) y la «validación perezosa» (nodos de oráculo que siguen a la mayoría sin verificar la información ellos mismos).
 
-##### Mecanismos de punto de Schelling {#}
+##### Mecanismos de punto de Schelling
 
 El [punto de Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) es un concepto de la teoría de juegos que asume que múltiples entidades siempre optarán por una solución común a un problema en ausencia de cualquier comunicación. Los mecanismos de punto de Schelling se utilizan a menudo en redes de oráculos descentralizadas para permitir que los nodos alcancen un consenso sobre las respuestas a las solicitudes de datos.
 

@@ -152,7 +152,7 @@ Optimistické rollupy jsou navrženy pro interoperabilitu s Ethereum Mainnetem a
 
 #### 1. Pohyb aktiv {#asset-movement}
 
-##### Vstup do rollupu {#}
+##### Vstup do rollupu
 
 K použití optimistického rollupu uživatelé vkládají ETH, tokeny ERC-20 a další přijímaná aktiva do kontraktu [mostu](/developers/docs/bridges/) rollupu na L1. Kontrakt mostu předá transakci na L2, kde je vyraženo ekvivalentní množství aktiv a odesláno na uživatelem zvolenou adresu na optimistickém rollupu.
 
@@ -160,7 +160,7 @@ Transakce generované uživateli (jako vklad L1 > L2) jsou obvykle zařazeny do 
 
 Některé optimistické rollupy přijímají přímočařejší přístup, aby zabránily sekvencerům v cenzuře uživatelů. Zde je blok definován všemi transakcemi odeslanými do kontraktu L1 od předchozího bloku (např. vklady) navíc k transakcím zpracovaným na řetězci rollupu. Pokud sekvencer ignoruje transakci L1, publikuje (prokazatelně) nesprávný stavový kořen; proto sekvenceři nemohou zdržovat zprávy generované uživateli, jakmile jsou odeslány na L1.
 
-##### Výstup z rollupu {#}
+##### Výstup z rollupu
 
 Výběr z optimistického rollupu do Etherea je obtížnější kvůli schématu dokazování podvodů. Pokud uživatel iniciuje transakci L2 > L1 k výběru prostředků uložených v úschově na L1, musí počkat, dokud neuplyne období pro zpochybnění – trvající zhruba sedm dní. Nicméně samotný proces výběru je poměrně přímočarý.
 

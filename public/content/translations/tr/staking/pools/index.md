@@ -69,7 +69,7 @@ Hemen şimdi! Şanghay/Capella ağ yükseltmesi Nisan 2023'te gerçekleşti ve s
 Alternatif olarak, bir ERC-20 staking Token'ı kullanan havuzlar, kullanıcıların bu Token'ı açık piyasada alıp satmasına olanak tanıyarak staking pozisyonunuzu satmanıza ve staking sözleşmesinden fiilen ETH çıkarmadan etkili bir şekilde "çekim" yapmanıza olanak tanır.
 
 <ButtonLink href="/staking/withdrawals/">Staking çekim işlemleri hakkında daha fazla bilgi</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Bu, borsamla staking yapmaktan farklı mı?">
 Bu havuzlu staking seçenekleri ile merkezi borsalar arasında, küçük miktarlarda ETH'yi stake etme ve doğrulayıcıları etkinleştirmek için bunları bir araya getirme yeteneği gibi birçok benzerlik vardır.

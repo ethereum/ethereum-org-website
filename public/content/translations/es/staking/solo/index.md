@@ -193,7 +193,7 @@ Una vez que se establecen las credenciales de retiro, los pagos de recompensas (
 Para desbloquear y recibir todo su saldo de vuelta, también debe completar el proceso de salida de su validador.
 
 <ButtonLink href="/staking/withdrawals/">Más sobre los retiros de staking</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Lecturas adicionales {#further-reading}
 

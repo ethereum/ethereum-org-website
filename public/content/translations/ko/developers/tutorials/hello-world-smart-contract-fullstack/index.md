@@ -335,7 +335,7 @@ Hardhat은 [컨트랙트 튜토리얼](https://hardhat.org/tutorial/testing-cont
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
 ```
 
-ethers.js에서 `ContractFactory`는 새로운 스마트 컨트랙트를 배포하는 데 사용되는 추상화이므로, 여기서 `HelloWorld`는 hello world 컨트랙트 인스턴스를 위한 [팩토리(factory)](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)입니다. `hardhat-ethers` 플러그인의 `ContractFactory`와 `Contract`를 사용할 때, 인스턴스는 기본적으로 첫 번째 서명자(소유자)에 연결됩니다.
+ethers.js에서 `ContractFactory`는 새로운 스마트 컨트랙트를 배포하는 데 사용되는 추상화이므로, 여기서 `HelloWorld`는 hello world 컨트랙트 인스턴스를 위한 [팩토리(factory)](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>)입니다. `hardhat-ethers` 플러그인의 `ContractFactory`와 `Contract`를 사용할 때, 인스턴스는 기본적으로 첫 번째 서명자(소유자)에 연결됩니다.
 
 ```javascript
 const hello_world = await HelloWorld.deploy()

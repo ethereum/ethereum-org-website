@@ -55,7 +55,7 @@ buttons:
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>ঝুঁকি সম্পর্কে সচেতন থাকুন</strong>
+ <p className="mt-0"><strong>ঝুঁকি সম্পর্কে সচেতন থাকুন</strong></p>
   <p className="mt-2">শুধুমাত্র ততটুকুই বাজি ধরুন যতটুকু হারানোর সামর্থ্য আপনার আছে এবং সম্ভাব্য আসক্তিমূলক আচরণ সম্পর্কে সতর্ক থাকুন।</p>
 </AlertDescription>
 </AlertContent>

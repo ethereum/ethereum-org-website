@@ -40,7 +40,7 @@ Dua testnet publik yang saat ini dikelola oleh pengembang klien adalah Sepolia d
 
 **Sepolia adalah testnet default yang direkomendasikan untuk pengembangan aplikasi**. Jaringan Sepolia menggunakan set validator berizin yang dikendalikan oleh tim klien & pengujian.
 
-##### Sumber Daya {#} {#}
+##### Sumber Daya
 
 - [Situs Web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Dua testnet publik yang saat ini dikelola oleh pengembang klien adalah Sepolia d
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucet {#} {#}
+##### Faucet
 
 - [Faucet Sepolia Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet Sepolia Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi adalah testnet untuk menguji validasi dan staking. Jaringan Hoodi terbuka 
 - State besar, berguna untuk menguji interaksi kontrak pintar yang kompleks
 - Lebih lama untuk sinkronisasi dan membutuhkan lebih banyak penyimpanan untuk menjalankan node
 
-##### Sumber Daya {#}
+##### Sumber Daya
 
 - [Situs Web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi adalah testnet untuk menguji validasi dan staking. Jaringan Hoodi terbuka 
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Faucet {#}
+##### Faucet
 
 - [Faucet Hoodi Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Faucet Hoodi](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery adalah jenis testnet unik yang diatur ulang sepenuhnya setiap bulan. St
 - Set validator terbuka dan mudah untuk mengakses dana dalam jumlah besar
 - Persyaratan node terkecil dan sinkronisasi tercepat, rata-rata &lt;5GB
 
-##### Sumber Daya {#}
+##### Sumber Daya
 
 - [Situs Web](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ Testnet Holesky sudah usang sejak September 2025. Operator staking dan penyedia 
 
 Sebuah testnet untuk [Arbitrum](https://arbitrum.io/).
 
-##### Sumber Daya {#}
+##### Sumber Daya
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Faucet {#}
+##### Faucet
 
 - [Faucet Arbitrum Sepolia Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Faucet Arbitrum Sepolia Chainlink](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Sebuah testnet untuk [Arbitrum](https://arbitrum.io/).
 
 Sebuah testnet untuk [Optimism](https://www.optimism.io/).
 
-##### Sumber Daya {#}
+##### Sumber Daya
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Faucet {#}
+##### Faucet
 
 - [Faucet Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet Chainlink](https://faucets.chain.link/optimism-sepolia)

@@ -193,7 +193,7 @@ Jakmile je pověření k výběru nastaveno, platby odměn (nashromážděné ET
 Chcete-li odemknout a získat zpět celý svůj zůstatek, musíte také dokončit proces výstupu vašeho validátora.
 
 <ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakingu</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Další čtení {#further-reading}
 

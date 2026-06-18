@@ -40,7 +40,7 @@ Dwie publiczne sieci testowe, które są obecnie utrzymywane przez deweloperów 
 
 **Sepolia to zalecana domyślna sieć testowa do tworzenia aplikacji**. Sieć Sepolia wykorzystuje zestaw walidatorów wymagający zezwolenia, kontrolowany przez zespoły klienckie i testowe.
 
-##### Zasoby {#} {#}
+##### Zasoby
 
 - [Strona internetowa](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Dwie publiczne sieci testowe, które są obecnie utrzymywane przez deweloperów 
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Kraniki {#} {#}
+##### Kraniki
 
 - [Kranik Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Kranik Chain Platform Sepolia](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
@@ -69,7 +69,7 @@ Hoodi to sieć testowa do testowania walidacji i stakingu. Sieć Hoodi jest otwa
 - Duży stan, przydatny do testowania złożonych interakcji inteligentnych kontraktów
 - Dłuższa synchronizacja i wymaga więcej pamięci masowej do uruchomienia węzła
 
-##### Zasoby {#}
+##### Zasoby
 
 - [Strona internetowa](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
@@ -78,7 +78,7 @@ Hoodi to sieć testowa do testowania walidacji i stakingu. Sieć Hoodi jest otwa
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
-##### Kraniki {#}
+##### Kraniki
 
 - [Kranik Chain Platform Hoodi](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Kranik Hoodi](https://hoodi.ethpandaops.io/)
@@ -93,7 +93,7 @@ Ephemery to unikalny rodzaj sieci testowej, która w pełni resetuje się co mie
 - Otwarty zestaw walidatorów i łatwy dostęp do dużych ilości środków
 - Najmniejsze wymagania dla węzła i najszybsza synchronizacja, średnio &lt;5GB
 
-##### Zasoby {#}
+##### Zasoby
 
 - [Strona internetowa](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
@@ -124,12 +124,12 @@ Sieć testowa Holesky jest przestarzała od września 2025 r. Operatorzy staking
 
 Sieć testowa dla [Arbitrum](https://arbitrum.io/).
 
-##### Zasoby {#}
+##### Zasoby
 
 - [Etherscan](https://sepolia.arbiscan.io/)
 - [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
-##### Kraniki {#}
+##### Kraniki
 
 - [Kranik Alchemy Arbitrum Sepolia](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Kranik Chainlink Arbitrum Sepolia](https://faucets.chain.link/arbitrum-sepolia)
@@ -140,12 +140,12 @@ Sieć testowa dla [Arbitrum](https://arbitrum.io/).
 
 Sieć testowa dla [Optimism](https://www.optimism.io/).
 
-##### Zasoby {#}
+##### Zasoby
 
 - [Etherscan](https://sepolia-optimistic.etherscan.io/)
 - [Blockscout](https://optimism-sepolia.blockscout.com/)
 
-##### Kraniki {#}
+##### Kraniki
 
 - [Kranik Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Kranik Chainlink](https://faucets.chain.link/optimism-sepolia)

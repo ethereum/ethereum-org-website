@@ -68,7 +68,7 @@ Der einfachste Weg zu verstehen, wie man eine Serverkomponente schreibt, ist, da
 
 Der weitaus größte Teil des Programms ist in [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts) enthalten.
 
-##### Erstellen der vorausgesetzten Objekte {#}
+##### Erstellen der vorausgesetzten Objekte
 
 ```typescript
 import {
@@ -176,7 +176,7 @@ const greeter = getContract({
 
 Da wir nun alle Voraussetzungen haben, können wir endlich eine [Vertragsinstanz](https://viem.sh/docs/contract/getContract) erstellen. Wir werden diese Vertragsinstanz verwenden, um mit dem Onchain-Vertrag zu kommunizieren.
 
-##### Lesen von der Blockchain {#}
+##### Lesen von der Blockchain
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
@@ -188,7 +188,7 @@ JavaScript ist Single-Threaded. Wenn wir also einen lang laufenden Prozess ansto
 
 Wenn du dich dafür interessierst, wie das funktioniert, kannst du [hier darüber lesen](https://www.w3schools.com/js/js_promise.asp). In der Praxis musst du jedoch nur wissen, dass du auf die Ergebnisse `await` musst, wenn du eine Operation startest, die lange dauert, und dass jede Funktion, die dies tut, als `async` deklariert werden muss.
 
-##### Ausgeben von Transaktionen {#}
+##### Ausgeben von Transaktionen
 
 ```typescript
 const setGreeting = async (greeting: string): Promise<any> => {
@@ -211,7 +211,7 @@ Das Feld `write` der Vertragsinstanz enthält alle Funktionen, die in den Blockc
 
 Melde den Hash der Transaktion (als Teil einer URL zum Block-Explorer, um sie anzusehen) und gib ihn zurück.
 
-##### Reagieren auf Ereignisse {#}
+##### Reagieren auf Ereignisse
 
 ```typescript
 greeter.watchEvent.SetGreeting({

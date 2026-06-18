@@ -55,7 +55,7 @@ Piyasanın bir gözlemcisi olarak bile, başka türlü ulaşılamayacak değerli
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Risklere karşı dikkatli olun</strong>
+ <p className="mt-0"><strong>Risklere karşı dikkatli olun</strong></p>
   <p className="mt-2">Yalnızca kaybetmeyi göze alabileceğiniz kadar bahis yapın ve olası bağımlılık yapıcı davranışların farkında olun.</p>
 </AlertDescription>
 </AlertContent>

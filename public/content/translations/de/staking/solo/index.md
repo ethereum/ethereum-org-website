@@ -193,7 +193,7 @@ Sobald Auszahlungsberechtigungen festgelegt sind, werden Belohnungszahlungen (an
 Um Ihr gesamtes Guthaben freizuschalten und zurückzuerhalten, müssen Sie auch den Prozess des Austritts Ihres Validators abschließen.
 
 <ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Abhebungen</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 ## Weiterführende Literatur {#further-reading}
 
