@@ -1,40 +1,36 @@
 ---
-title: "ERC-721 非同質化代幣標準"
-description: "了解 ERC-721，這是以太坊上代表獨特數位資產的非同質化代幣 (NFT) 標準。"
+title: ERC-721 非同質化代幣標準
+description: 了解 ERC-721，這是在以太坊上代表獨特數位資產的非同質化代幣 (NFT) 標準。
 lang: zh-tw
 ---
 
-## 介紹 {#introduction}
+## 簡介 {#introduction}
 
 **什麼是非同質化代幣？**
 
-非同質化代幣 (NFT) 用於以獨一無二的方式來識別某物或某人。 這類型的代幣非常適合在提供收藏品、密鑰、彩票、音樂會和體育比賽的編號座位等平台上使用。 這種特殊類型的代幣具有驚人潛力，因此它應得一個適當標準，而 ERC-721 正是來解決這個問題！
+非同質化代幣 (NFT) 用於以獨特的方式識別某物或某人。這種類型的代幣非常適合用於提供收藏品、存取金鑰、彩券、演唱會和體育比賽對號座等的平台。這種特殊類型的代幣具有驚人的潛力，因此它值得擁有一個適當的標準，而 ERC-721 就是為了解決這個問題而誕生的！
 
 **什麼是 ERC-721？**
 
-ERC-721 引入了非同質化代幣標準，換句話說，這類型的代幣是獨一無二，並且可以與來自同一智慧型合約的另一種代幣有不同的價值，這可能是由於其存在時間、稀有性甚至是視覺觀感等其他原因。
-等一下，視覺觀感？
+ERC-721 引入了 NFT 的標準，換句話說，這種類型的代幣是獨一無二的，並且可以與來自同一個智能合約的另一個代幣具有不同的價值，這可能是由於它的年齡、稀有度，甚至是視覺外觀等其他因素。等等，視覺外觀？
 
-是的！ 所有 NFT 都有一個名為 `tokenId` 的 `uint256` 變數，因此對於任何 ERC-721 合約，
-`contract address, uint256 tokenId` 這組配對都必須是全域唯一的。 話雖如此，一個去中心化應用程式可以有一個 "轉換器"，
-它使用 `tokenId` 作為輸入，並輸出一些很酷的東西的圖片，像是殭屍、武器、技能或超讚的貓咪！
+沒錯！所有的 NFT 都有一個名為 `tokenId` 的 `uint256` 變數，因此對於任何 ERC-721 合約，`contract address, uint256 tokenId` 這對組合必須是全域唯一的。也就是說，去中心化應用程式 (dapp) 可以有一個「轉換器」，將 `tokenId` 作為輸入，並輸出一些酷炫的圖像，例如殭屍、武器、技能或令人驚豔的貓咪！
 
 ## 先決條件 {#prerequisites}
 
-- [賬戶](/developers/docs/accounts/)
+- [帳戶](/developers/docs/accounts/)
 - [智能合約](/developers/docs/smart-contracts/)
 - [代幣標準](/developers/docs/standards/tokens/)
 
-## 主旨 {#body}
+## 內文 {#body}
 
-ERC-721（以太坊意見請求 721）由 William Entriken、Dieter Shirley、Jacob Evans、Nastassia Sachs 於 2018 年 1 月提出，是一種非同質化代幣標準，在智慧型合約中實作代幣應用程式介面。
+ERC-721（[以太坊](/)徵求修正意見書 721）由 William Entriken、Dieter Shirley、Jacob Evans 和 Nastassia Sachs 於 2018 年 1 月提出，是一個非同質化代幣標準，在智能合約中實作了代幣的 API。
 
-它提供的功能包括將代幣從一個帳戶轉移到另一個帳戶、獲取帳戶當前的代幣餘額、獲取特定代幣的所有者以及網路上可用代幣的總供應量。
-此外它還有一些其他功能，例如批准帳戶中一定數量的代幣可以被第三方帳戶轉移。
+它提供了將代幣從一個帳戶轉帳到另一個帳戶、取得帳戶目前的代幣餘額、取得特定代幣的擁有者，以及網路上可用代幣總供應量等功能。除此之外，它還有一些其他功能，例如授權第三方帳戶可以轉移某個帳戶中的一定數量的代幣。
 
-如果智慧型合約實作以下方法和事件，則可以將其稱為 ERC-721 非同質化代幣合約。一旦部署，它將負責追蹤以太坊上創建的代幣。
+如果一個智能合約實作了以下方法和事件，它就可以被稱為 ERC-721 非同質化代幣合約，一旦部署，它將負責追蹤在以太坊上建立的代幣。
 
-來自 [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
+來自 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)：
 
 ### 方法 {#methods}
 
@@ -50,7 +46,7 @@ ERC-721（以太坊意見請求 721）由 William Entriken、Dieter Shirley、Ja
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Events {#events}
+### 事件 {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -60,12 +56,11 @@ ERC-721（以太坊意見請求 721）由 William Entriken、Dieter Shirley、Ja
 
 ### 範例 {#web3py-example}
 
-讓我們看看為何標準如此重要，去讓我們檢查以太坊上的任何 ERC-721 代幣合約變得簡單。
-我們只需要合約應用程式二進位介面 (ABI) 來創建任何 ERC-721 代幣的介面。 如下所示，我們將使用簡化的 ABI，使其成為一個低門檻的範例。
+讓我們來看看標準為何如此重要，它讓我們能輕鬆檢查以太坊上的任何 ERC-721 代幣合約。我們只需要合約應用程式二進位介面 (ABI) 即可建立任何 ERC-721 代幣的介面。如下所示，我們將使用簡化的 ABI，使其成為一個低門檻的範例。
 
-#### Web3.py 範例 {#web3py-example}
+#### Web3.py 範例 {#web3py-example-2}
 
-首先，請確認您已安裝 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 函式庫：
+首先，請確保您已安裝 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 函式庫：
 
 ```
 pip install web3
@@ -78,12 +73,12 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties 合約
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # 加密貓合約
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties 銷售拍賣
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # 加密貓銷售拍賣
 
-# 這是 ERC-721 NFT 合約的簡化版合約應用程式二進位介面 (ABI)。
-# 它只會公開以下方法：balanceOf(address)、name()、ownerOf(tokenId)、symbol()、totalSupply()
+# 這是一個簡化的 ERC-721 NFT 合約應用程式二進位介面 (ABI)。
+# 它將僅公開以下方法：balanceOf(address)、name()、ownerOf(tokenId)、symbol()、totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -136,12 +131,12 @@ ck_contract = w3.eth.contract(address=w3.to_checksum_address(ck_token_addr), abi
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
 kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
-print(f"{name} [{symbol}] 拍賣中的 NFT：{kitties_auctions}")
+print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
-print(f"{name} [{symbol}] 懷孕中的 NFT：{pregnant_kitties}")
+print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# 使用 Transfer 事件 ABI 來取得已轉移貓咪的資訊。
+# 使用 Transfer 事件 ABI 來獲取有關已轉帳貓咪的資訊。
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -152,7 +147,7 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# 我們需要事件的簽章來篩選日誌
+# 我們需要事件的簽章來過濾日誌
 event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.get_logs({
@@ -161,25 +156,25 @@ logs = w3.eth.get_logs({
     "topics": [event_signature]
 })
 
-# 注意：
-#   - 如果沒有回傳任何 Transfer 事件，請增加 120 這個區塊數量。
-#   - 如果找不到任何 Transfer 事件，您也可以嘗試在此處取得 tokenId：
+# 注意事項：
+#   - 如果沒有返回 Transfer 事件，請將區塊數量從 120 往上增加。
+#   - 如果您沒有找到任何 Transfer 事件，您也可以嘗試在以下網址獲取 tokenId：
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-#       按一下以展開事件的日誌，並複製其「tokenId」引數
+#       點擊展開事件的日誌並複製其 "tokenId" 參數
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 if recent_tx:
-    kitty_id = recent_tx[0]['tokenId'] # 從上面的連結將「tokenId」貼在此處
+    kitty_id = recent_tx[0]['tokenId'] # 在此貼上來自上述連結的 "tokenId"
     is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
-    print(f"{name} [{symbol}] NFT {kitty_id} 是否懷孕：{is_pregnant}")
+    print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
-除了標準事件外，謎戀貓合約還有一些有趣的事件。
+加密貓合約除了標準事件外，還有一些有趣的事件。
 
-讓我們檢查其中兩個：`Pregnant` 和 `Birth`。
+讓我們來看看其中的兩個：`Pregnant` 和 `Birth`。
 
 ```python
-# 使用 Pregnant 和 Birth 事件的 ABI 來取得新貓咪的資訊。
+# 使用 Pregnant 和 Birth 事件 ABI 來獲取有關新貓咪的資訊。
 ck_extra_events_abi = [
     {
         'anonymous': False,
@@ -203,7 +198,7 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# 我們需要事件的簽章來篩選日誌
+# 我們需要事件的簽章來過濾日誌
 ck_event_signatures = [
     w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
     w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
@@ -230,26 +225,28 @@ birth_logs = w3.eth.get_logs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## 熱門 NFT {#popular-nfts}
+## 熱門的 NFT {#popular-nfts}
 
-- [Etherscan NFT Tracker](https://etherscan.io/nft-top-contracts) 根據轉帳量列出以太坊上的頂級 NFT。
-- [CryptoKitties](https://www.cryptokitties.co/) 是一款遊戲，主題圍繞著一種我們稱之為「謎戀貓」的
-  可繁殖、可收藏且非常可愛的生物。
-- [Sorare](https://sorare.com/) 是一款全球夢幻足球遊戲，你可以在其中收集限量版收藏品、
-  管理你的球隊並參與競爭以贏得獎品。
-- [以太坊域名服務 (ENS)](https://ens.domains/) 提供一種安全且去中心化的方式，可使用簡單易讀的名稱來定址
-  鏈上和鏈下的資源。
-- [POAP](https://poap.xyz) 會向參加活動或完成特定行動的人們免費發放 NFT。 建立和分發 POAP 是免費的。
-- [Unstoppable Domains](https://unstoppabledomains.com/) 是一家總部位於舊金山的公司，專門在
-  區塊鏈上建立網域。 區塊鏈網域以人類可讀的名稱取代加密貨幣地址，並可用於啟用
-  抗審查的網站。
-- [Gods Unchained Cards](https://godsunchained.com/) 是以太坊區塊鏈上的一款集換式卡牌遊戲 (TCG)，它使用 NFT 為
-  遊戲內資產帶來真正的所有權。
-- [Bored Ape Yacht Club](https://boredapeyachtclub.com) 是一個包含 10,000 個獨特 NFT 的收藏品，它既是一件可證明為稀有的藝術品，也同時是俱樂部的會員代幣，能為會員提供福利，而這些福利會隨著社群的努力與時俱進。
+- [Etherscan NFT 追蹤器](https://etherscan.io/nft-top-contracts)按轉帳量列出了以太坊上頂級的 NFT。
+- [加密貓](https://www.cryptokitties.co/)是一款圍繞著可繁殖、可作為收藏品且非常可愛的生物（我們稱之為加密貓）的遊戲。
+- [Sorare](https://sorare.com/) 是一款全球夢幻足球遊戲，您可以在其中收集限量版收藏品、管理您的球隊並透過競爭贏得獎品。
+- [以太坊域名服務 (ENS)](https://ens.domains/) 提供了一種安全且去中心化的方式，使用簡單、人類可讀的名稱來定址區塊鏈上和區塊鏈外的資源。
+- [POAP](https://poap.xyz) 向參加事件或完成特定操作的人發放免費的 NFT。POAP 可以免費建立和分發。
+- [Unstoppable Domains](https://unstoppabledomains.com/) 是一家總部位於舊金山的公司，致力於在區塊鏈上建立域名。區塊鏈域名用人類可讀的名稱取代了加密貨幣地址，並可用於啟用抗審查的網站。
+- [Gods Unchained Cards](https://godsunchained.com/) 是以太坊區塊鏈上的一款集換式卡牌遊戲 (TCG)，它使用 NFT 為遊戲內資產帶來真正的所有權。
+- [無聊猿遊艇俱樂部 (Bored Ape Yacht Club)](https://boredapeyachtclub.com) 是 10,000 個獨特 NFT 的集合，它不僅是可證明的稀有藝術品，還可作為俱樂部的會員代幣，提供隨著社群努力而隨時間增加的會員特權和福利。
 
-## 延伸閱讀 {#further-reading}
+## 進一步閱讀 {#further-reading}
 
 - [EIP-721：ERC-721 非同質化代幣標準](https://eips.ethereum.org/EIPS/eip-721)
-- [OpenZeppelin - ERC-721 文件](https://docs.openzeppelin.com/contracts/3.x/erc721)
-- [OpenZeppelin - ERC-721 實作](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [歐本齊柏林 - ERC-721 文件](https://docs.openzeppelin.com/contracts/3.x/erc721)
+- [歐本齊柏林 - ERC-721 實作](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
+
+## 教學：在以太坊上使用非同質化代幣 (ERC-721) 進行建置 {#tutorials}
+
+- [Vyper ERC-721 合約演練](/developers/tutorials/erc-721-vyper-annotated-code/) _– 以 Vyper 撰寫的完整 ERC-721 NFT 合約的註解演練。_
+- [如何撰寫與部署 NFT（第 1/3 部分）](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 撰寫並部署您的第一個 ERC-721 智能合約的逐步指南。_
+- [如何鑄造 NFT（第 2/3 部分）](/developers/tutorials/how-to-mint-an-nft/) _– 如何使用您部署的智能合約和 Web3 鑄造 ERC-721 NFT。_
+- [如何在錢包中檢視您的 NFT（第 3/3 部分）](/developers/tutorials/how-to-view-nft-in-metamask/) _– 部署後如何在梅塔馬斯克中顯示您鑄造的 NFT。_
+- [NFT 鑄造器教學](/developers/tutorials/nft-minter/) _– 使用 React 前端、梅塔馬斯克和 Alchemy 建置全端 NFT 鑄造去中心化應用程式 (dapp)。_

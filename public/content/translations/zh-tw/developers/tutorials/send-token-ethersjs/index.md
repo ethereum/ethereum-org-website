@@ -1,25 +1,25 @@
 ---
-title: "使用 ethers.js 傳送代幣"
-description: "使用 ethers.js 傳送代幣的初學者指南。"
-author: Kim YongJun
-tags: [ "ETHERS.JS", "ERC-20", "TOKENS" ]
+title: 使用 ethers.js 發送代幣
+description: 適合初學者的使用 ethers.js 發送代幣指南。
+author: 金容俊
+tags: ["ETHERS.JS", "ERC-20", "代幣"]
 skill: beginner
-breadcrumb: "傳送代幣"
+breadcrumb: 發送代幣
 lang: zh-tw
 published: 2021-04-06
 ---
 
-## 使用 ethers.js (5.0) 傳送代幣 {#send-token}
+## 使用 ethers.js (5.0) 發送代幣 {#send-token}
 
-### 在本教學中，您將學習如何 {#you-learn-about}
+### 在本教學中，您將學到如何 {#you-learn-about}
 
 - 匯入 ethers.js
-- 傳送代幣
-- 根據網路流量情況設定 gas 價格
+- 轉帳代幣
+- 根據網路流量狀況設定 Gas 價格
 
-### 開始使用 {#to-get-started}
+### 開始之前 {#to-get-started}
 
-開始之前，我們必須先將 ethers.js 函式庫匯入 javascript 程式碼中
+首先，我們必須將 ethers.js 函式庫匯入到我們的 JavaScript 中
 包含 ethers.js (5.0)
 
 ### 安裝 {#install-ethersjs}
@@ -33,7 +33,7 @@ published: 2021-04-06
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // 您的程式碼...
+  // 在此輸入您的程式碼...
 </script>
 ```
 
@@ -48,23 +48,23 @@ published: 2021-04-06
 
 ### 參數 {#param}
 
-1. **`contract_address`**：代幣合約地址（當您要傳送的代幣不是 ether 時，需要合約地址）
-2. **`send_token_amount`**：您想傳送給接收者的代幣數量
+1. **`contract_address`**：代幣合約地址（當您想要轉帳的代幣不是以太幣時，需要合約地址）
+2. **`send_token_amount`**：您想要發送給接收者的金額
 3. **`to_address`**：接收者的地址
-4. **`send_account`**：傳送者的地址
-5. **`private_key`**：傳送者的私密金鑰，用以簽署交易並實際傳送代幣
+4. **`send_account`**：發送者的地址
+5. **`private_key`**：發送者的私鑰，用於簽署交易並實際轉帳代幣
 
-## 注意事項 {#notice}
+## 注意 {#notice}
 
-`signTransaction(tx)` 已被移除，因為 `sendTransaction()` 會在內部處理。
+已移除 `signTransaction(tx)`，因為 `sendTransaction()` 會在內部執行此操作。
 
-## 傳送程序 {#procedure}
+## 發送程序 {#procedure}
 
-### 1. 連線至網路 (測試網) {#connect-to-network}
+### 1. 連接到網路（測試網） {#connect-to-network}
 
 #### 設定提供者 (Infura) {#set-provider}
 
-連線至 Ropsten 測試網
+連接到 Ropsten 測試網
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
@@ -76,31 +76,31 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3 將錢包連線至網路 {#connect-wallet-to-net}
+### 3. 將錢包連接到網路 {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4 取得目前的 gas 價格 {#get-gas}
+### 4. 取得當前 Gas 價格 {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // gas 價格
+window.ethersProvider.getGasPrice() // Gas 價格
 ```
 
-### 5 定義交易 {#define-transaction}
+### 5. 定義交易 {#define-transaction}
 
-下方定義的變數相依於 `send_token()`。
+以下定義的這些變數取決於 `send_token()`
 
 ### 交易參數 {#transaction-params}
 
-1. **`send_account`**：代幣傳送者的地址
+1. **`send_account`**：代幣發送者的地址
 2. **`to_address`**：代幣接收者的地址
-3. **`send_token_amount`**：要傳送的代幣數量
-4. **`gas_limit`**：gas 上限
-5. **`gas_price`**：gas 價格
+3. **`send_token_amount`**：要發送的代幣數量
+4. **`gas_limit`**：Gas 限制
+5. **`gas_price`**：Gas 價格
 
-[關於如何使用，請參閱下方](#how-to-use)
+[有關如何使用，請參閱下文](#how-to-use)
 
 ```javascript
 const tx = {
@@ -113,12 +113,12 @@ const tx = {
 }
 ```
 
-### 6. 傳送 {#transfer}
+### 6. 轉帳 {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("傳送完成！")
+  alert("Send finished!")
 })
 ```
 
@@ -147,7 +147,7 @@ send_token(
 
 ### 成功！ {#success}
 
-![交易成功完成的圖片](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -167,7 +167,7 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // 一般代幣傳送
+      // 一般代幣發送
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
@@ -178,12 +178,12 @@ function send_token(
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // 傳送代幣
+      // 發送代幣
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("已傳送代幣")
+        alert("sent token")
       })
-    } // ether 傳送
+    } // 以太幣發送
     else {
       const tx = {
         from: send_account,
@@ -200,10 +200,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("傳送完成！")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("傳送失敗！！")
+        alert("failed to send!!")
       }
     }
   })

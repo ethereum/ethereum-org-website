@@ -1,72 +1,76 @@
 ---
-title: "如何導入一ERC-721市場"
-description: "如何販售代幣化物件於去中央化訊息版."
-author: "Alberto Cuesta Cañada"
-tags: [ "smart contracts", "erc-721", "solidity", "tokens" ]
+title: 如何實作 ERC-721 市場
+description: 如何在去中心化分類廣告板上出售代幣化物品
+author: 阿爾貝托·庫埃斯塔·卡納達
+tags:
+  - 智能合約
+  - erc-721
+  - solidity
+  - 代幣
 skill: intermediate
-breadcrumb: "ERC-721市場"
+breadcrumb: ERC-721 市場
 lang: zh-tw
 published: 2020-03-19
 source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---
 
-於此文章, 我們將介紹如何為以太坊區塊鏈程式編輯Craigslist之物件訊息版.
+在本文中，我將向你展示如何為以太坊區塊鏈編寫一個類似 Craigslist 的程式。
 
-於Gumtree, Ebay 及 Craigslist, 分類訊息版通常由紙本或軟木所組成. 此為分類訊息版於學校走廊, 報紙, 跑馬燈, 及店面廣告.
+在 Gumtree、Ebay 和 Craigslist 出現之前，分類廣告板大多由軟木或紙張製成。學校走廊、報紙、路燈和店面都有分類廣告板。
 
-此全部因網路之導入而大幅改變. 能看見特殊分類訊息版的人數因網路而大幅提升. 與此, 市場代表將成為更加有效率且能夠擴張至全球範圍. Ebay為一龐大事業且其原始商業模式源於此實體分類訊息版模式.
+這一切隨著網際網路的出現而改變。能看到特定分類廣告板的人數呈指數級增長。因此，它們所代表的市場變得更加高效，並擴展到全球規模。Ebay 是一家龐大的企業，其起源可以追溯到這些實體的分類廣告板。
 
-區塊鏈技術能使其市場再次改變. 讓我們來看看此如何發生.
+隨著區塊鏈的出現，這些市場將再次發生改變，讓我來告訴你如何實現。
 
-## 營利 {#monetization}
+## 營利方式 {#monetization}
 
-一基於公共區塊鏈之商業模式的分類訊息版將與Ebay及其他公司看起來大大不同.
+公共區塊鏈分類廣告板的商業模式將需要與 Ebay 等公司有所不同。
 
-首先，從[去中心化的角度](/developers/docs/web2-vs-web3/)來看。 既有平台需要來維持其擁有服務. 一去中央化平台是由其用戶所維持, 所以就平台持有者之角度來看, 運作平台核心之成本費用降至幾乎為零.
+首先是[去中心化的角度](/developers/docs/web2-vs-web3/)。現有平台需要維護自己的伺服器。而去中心化平台由其使用者維護，因此對於平台擁有者來說，運行核心平台的成本降至零。
 
-然後我們必須考慮前端介面, 網站及用戶介面提供訪問平台之機會. 以下為許多選項. 此平台持有者能夠限制介面訪問權並索取費用. 平台擁有者也可以決定開放存取權限 (權力歸於人民！) 並讓任何人為平台建構介面。 或平台持有者能夠做出處於前兩選項之間之綜合選擇.
+其次是前端，即提供平台存取權限的網站或介面。這裡有很多選擇。平台擁有者可以限制存取權限，強制每個人使用他們的介面並收取費用。平台擁有者也可以決定開放存取權限（還權於民！），讓任何人都能為平台建立介面。或者，擁有者可以決定採取介於這兩個極端之間的任何方法。
 
-_商業領導人具廣泛視野將知道如何商業化此. 目前我們所能視的為, 此與現狀不同, 且其可能有利可圖._
+_比我更有遠見的商業領袖會知道如何從中營利。我只看到這與現狀不同，而且可能有利可圖。_
 
-甚至, 其具自動化功能及多種支付角度來檢視問題. 有些東西可以非常[有效地代幣化](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com)，並在分類廣告板上交易。 代幣化資產能簡單被交易於區塊鏈中. 高強度支付手段能被簡單導入至一區塊鏈.
+此外，還有自動化和支付的角度。有些東西可以非常[有效地被代幣化](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com)並在分類廣告板上交易。代幣化資產在區塊鏈中很容易轉移。高度複雜的支付方式也可以在區塊鏈中輕鬆實作。
 
-聞到商業機會了嗎? 一分類訊息版無一運作成本並能被簡單導入, 包括複雜支付方案於各類交易. 我們很確定未來將會有更多有趣創想來更加擴張此用途.
+我只是在這裡嗅到了商機。一個沒有營運成本的分類廣告板可以輕鬆實作，並且每筆交易都可以包含複雜的支付路徑。我相信一定會有人想出如何利用它的好點子。
 
-我們只是很高興能建造此. 來一起看看其程式程式碼吧.
+我只是很樂於建置它。讓我們來看看程式碼。
 
 ## 實作 {#implementation}
 
-不久前，我們啟動了一個[開源儲存庫](https://github.com/HQ20/contracts?ref=hackernoon.com)，其中包含商業案例的實作範例和其他好東西，歡迎查看。
+不久前，我們建立了一個[開源儲存庫](https://github.com/HQ20/contracts?ref=hackernoon.com)，其中包含商業案例的範例實作和其他好東西，請去看看。
 
-這個 [以太坊分類廣告板](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) 的程式碼就在那裡，請盡情使用。 只是請小心某些程式還未被完全審核, 所以你需謹慎檢查研究當投資資產於此.
+這個[以太坊分類廣告板](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com)的程式碼就在那裡，請盡情使用和測試。但請注意，該程式碼尚未經過稽核，在投入資金之前，你需要自行做好盡職調查。
 
-分類訊息版之基礎核心其實相當簡單. 所有廣告於分類版為建構於以下幾行字段:
+廣告板的基礎並不複雜。廣告板中的所有廣告都只是一個包含幾個欄位的結構 (struct)：
 
 ```solidity
 struct Trade {
   address poster;
   uint256 item;
   uint256 price;
-  bytes32 status; // Open, Executed, Cancelled
+  bytes32 status; // 開啟, 已執行, 已取消
 }
 ```
 
-所以當某人公開此一廣告. item為販售物件. price為物件價格. status表示物件狀態為公開, 執行, 或取消.
+所以有人發布廣告。一個待售物品。物品的價格。交易的狀態（可以是開放、已執行或已取消）。
 
-所有交易將被管理於一擬地圖/mapping結構. 因為所有物件於Solidity需要被標示類似地圖映射. 加上此管理類型十分方便.
+所有這些交易都將保存在一個映射 (mapping) 中。因為在 Solidity 中，似乎所有東西都是映射。也因為這樣很方便。
 
 ```solidity
 mapping(uint256 => Trade) public trades;
 ```
 
-使用一mapping代表我們需要設置一id來為所有想公開之廣告, 而我們也須事前瞭解一廣告id來實際執行此. 其有多種類型方案來處理此於智慧型合約或前端介面. 如你有任何不明點, 請自由發問或查看相關幫助資訊.
+使用映射只意味著我們必須在發布廣告之前為每個廣告產生一個 ID，並且我們需要知道廣告的 ID 才能對其進行操作。在智能合約或前端中有多種處理此問題的方法。如果你需要一些指引，請隨時提問。
 
-接下來我們須考慮和物件需要被處理, 並指定其支付貨幣為何.
+接下來的問題是，我們處理的這些物品是什麼，以及用於支付交易的貨幣是什麼。
 
-對於這些項目，我們只要求它們實作 [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com) 介面，這實際上只是在區塊鏈中表示現實世界物品的一種方式，儘管它[最適用於數位資產](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com)。 我們將必須創建一ERC-721合約於建立架構, 代表其任何資產於分類訊息版需要事前被代幣化.
+對於物品，我們只要求它們實作 [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com) 介面，這實際上只是在區塊鏈中表示現實世界物品的一種方式，儘管它[最適合數位資產](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com)。我們將在建構函式中指定我們自己的 ERC721 合約，這意味著我們分類廣告板中的任何資產都需要事先被代幣化。
 
-為所有支付, 我們需要進行一類似之程序. 大多數區塊鏈專案都定義了自己的 [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) 加密貨幣。 有些傾向使用主流選項如DAI. 於此分類資訊版, 你需要來決定你加密貨幣之建立基礎架構為何. 簡單吧.
+對於支付，我們將採取類似的做法。大多數區塊鏈專案都定義了自己的 [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) 加密貨幣。其他一些專案則傾向於使用像 DAI 這樣的主流加密貨幣。在這個分類廣告板中，你只需要在建構時決定你的貨幣是什麼。非常簡單。
 
 ```solidity
 constructor (
@@ -78,9 +82,9 @@ constructor (
 }
 ```
 
-就快到了!! 我們有了廣告, 交易物件, 及支付貨幣. 來建立一廣告代表需要放置資產於質押狀態, 以顯示你確實擁有此並無雙重公開此於其他分類訊息版.
+我們快完成了。我們有了廣告、交易物品和支付貨幣。製作廣告意味著將物品放入託管中，以證明你擁有該物品，並且你沒有將其重複發布（可能在不同的廣告板上）。
 
-以下程式運作此質押功能. 放置物件於質押, 創建一廣告, 做些記帳操作.
+下面的程式碼正是執行這個操作。將物品放入託管，建立廣告，並進行一些清理工作。
 
 ```solidity
 function openTrade(uint256 _item, uint256 _price)
@@ -98,7 +102,7 @@ function openTrade(uint256 _item, uint256 _price)
 }
 ```
 
-來接收交易代表選擇一廣告(交易), 支付其價格, 並接收物件. 此程式代表獲取一交易. 查看其是否為可供用狀態. 支付物件價格. 獲取物件. 更新廣告狀態.
+接受交易意味著選擇一個廣告（交易），支付價格，並接收物品。下面的程式碼會擷取一筆交易。檢查它是否可用。支付物品。擷取物品。更新廣告。
 
 ```solidity
 function executeTrade(uint256 _trade)
@@ -113,9 +117,9 @@ function executeTrade(uint256 _trade)
 }
 ```
 
-最終, 我們將具一功能使賣家能於買家接收前退出交易. 於一些模式, 廣告將於過期前存留一段時間. 你的選擇, 基於你市場之設計.
+最後，我們為賣家提供了一個選項，讓他們可以在買家接受交易之前退出交易。在某些模式中，廣告會在到期前存活一段時間。這取決於你市場的設計，由你來選擇。
 
-此程式非常類似於執行一交易, 不過此不具交換貨幣, 且物件回返至廣告公布者.
+這段程式碼與用於執行交易的程式碼非常相似，只是沒有貨幣易手，物品會退還給廣告發布者。
 
 ```solidity
 function cancelTrade(uint256 _trade)
@@ -124,23 +128,23 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "交易只能由張貼者取消。"
+    "Trade can be cancelled only by poster."
   );
-  require(trade.status == "Open", "交易未開啟。");
+  require(trade.status == "Open", "Trade is not Open.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Cancelled";
   emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-此為全部程式碼!! 你以完成所有所需導入步驟. 此為非常驚人當一些商業概念被表達於程式程式碼, 而以上為其中一範例. 請在[我們的儲存庫](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol)中查看完整的合約。
+就是這樣。你已經完成了實作的最後一步。令人驚訝的是，某些商業概念在用程式碼表達時是如此簡潔，這就是其中一個例子。請[在我們的儲存庫中](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol)查看完整的合約。
 
 ## 結論 {#conclusion}
 
-分類信息板是一種常見商業模式, 其於網路技術之幫助下, 大規模擴張的市場結構, 但此也是一種容易形成少數壟斷贏家的非常流行的商業模式.
+分類廣告板是一種常見的市場配置，隨著網際網路的發展而大規模擴展，成為一種非常受歡迎的商業模式，並產生了少數壟斷性的贏家。
 
-分類信息板也恰好是在區塊鏈環境中容易進行複制的一種簡單工具, 其具有可以挑戰現有的巨頭的非常具體之功能.
+分類廣告板碰巧也是一種很容易在區塊鏈環境中複製的工具，其非常具體的特徵將使挑戰現有巨頭成為可能。
 
-在本文中，我們嘗試將分類信息板的商業業務與技術實現共同進行講解. 如果你擁有合適的技能, 這些知識應該可以幫助你創建願景及實施路線藍圖.
+在本文中，我嘗試將分類廣告板業務的商業現實與技術實作橋接起來。如果你具備合適的技能，這些知識應該能幫助你建立願景和實作路線圖。
 
-一如往常，如果您想打造一些有趣的專案並需要一些建議，請[與我聯絡](https://albertocuesta.es/)！ 我們隨時樂意幫助你.
+一如既往，如果你打算建置任何有趣的東西並希望獲得一些建議，請[留言給我](https://albertocuesta.es/)！我總是很樂意提供幫助。
