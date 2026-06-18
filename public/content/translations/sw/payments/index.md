@@ -28,7 +28,7 @@ Hii si ndoto ya mbali—inafanyika leo kwenye Ethereum. Ingawa taasisi za kifedh
 Kwa mamilioni ya watu wanaofanya kazi nje ya nchi, kutuma pesa nyumbani ni hitaji la kawaida. Huduma za jadi za kutuma pesa mara nyingi huja na ada kubwa na nyakati za polepole za usindikaji. Ethereum inatoa mbadala wa kuvutia.
 
 <Grid>
-  <Card title="Ada Nafuu Zaidi" emoji=":money_with_wings:" description="Huduma za kutuma pesa hutoza ada ya hadi description="4 kwa wastani. Miamala ya Ethereum mara nyingi inaweza kukamilishwa kwa chini ya $0.01."/>
+  <Card title="Ada Nafuu Zaidi" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
   <Card title="Uhamisho wa Haraka Zaidi" emoji="📶" description="Uhamisho wa pesa wa kimataifa huchukua siku kadhaa kushughulikiwa. Miamala ya Ethereum hukamilishwa ndani ya dakika chache." />
   <Card title="Wazi kwa yeyote" emoji="🌎" description="Unahitaji tu muunganisho wa intaneti na programu ya mkoba ili kutuma au kupokea Etha." />
 </Grid>
