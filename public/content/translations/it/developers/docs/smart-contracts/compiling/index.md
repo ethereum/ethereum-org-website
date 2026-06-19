@@ -1,15 +1,15 @@
 ---
-title: Compilare i contratti intelligenti
-description: "Una spiegazione del perché è necessario compilare i contratti intelligenti e di cosa fa effettivamente la compilazione."
+title: Compilare gli smart contract
+description: Una spiegazione del perché è necessario compilare gli smart contract e di cosa fa effettivamente la compilazione.
 lang: it
 incomplete: true
 ---
 
-Devi compilare il tuo contratto in modo che la tua app web e la macchina virtuale di Ethereum (EVM) possano comprenderlo.
+Devi compilare il tuo contratto in modo che la tua applicazione web e la Macchina Virtuale di Ethereum (EVM) possano comprenderlo.
 
 ## Prerequisiti {#prerequisites}
 
-Potresti trovare utile aver letto la nostra introduzione ai [contratti intelligenti](/developers/docs/smart-contracts/) e alla [macchina virtuale di Ethereum](/developers/docs/evm/) prima di leggere della compilazione.
+Potresti trovare utile aver letto la nostra introduzione agli [smart contract](/developers/docs/smart-contracts/) e alla [Macchina Virtuale di Ethereum](/developers/docs/evm/) prima di leggere della compilazione.
 
 ## L'EVM {#the-evm}
 
@@ -33,7 +33,7 @@ contract Greeter {
 PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH29 0x100000000000000000000000000000000000000000000000000000000 SWAP1 DIV PUSH4 0xFFFFFFFF AND DUP1 PUSH4 0xCFAE3217 EQ PUSH2 0x46 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x52 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x5B PUSH2 0xD6 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 DUP1 PUSH1 0x20 ADD DUP3 DUP2 SUB DUP3 MSTORE DUP4 DUP2 DUP2 MLOAD DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP DUP1 MLOAD SWAP1 PUSH1 0x20 ADD SWAP1 DUP1 DUP4 DUP4 PUSH1 0x0 JUMPDEST DUP4 DUP2 LT ISZERO PUSH2 0x9B JUMPI DUP1 DUP3 ADD MLOAD DUP2 DUP5 ADD MSTORE PUSH1 0x20 DUP2 ADD SWAP1 POP PUSH2 0x80 JUMP JUMPDEST POP POP POP POP SWAP1 POP SWAP1 DUP2 ADD SWAP1 PUSH1 0x1F AND DUP1 ISZERO PUSH2 0xC8 JUMPI DUP1 DUP3 SUB DUP1 MLOAD PUSH1 0x1 DUP4 PUSH1 0x20 SUB PUSH2 0x100 EXP SUB NOT AND DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP JUMPDEST POP SWAP3 POP POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x60 PUSH1 0x40 DUP1 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x5 DUP2 MSTORE PUSH1 0x20 ADD PUSH32 0x48656C6C6F000000000000000000000000000000000000000000000000000000 DUP2 MSTORE POP SWAP1 POP SWAP1 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 SLT 0xec 0xe 0xf5 0xf8 SLT 0xc7 0x2d STATICCALL ADDRESS SHR 0xdb COINBASE 0xb1 BALANCE 0xe8 0xf8 DUP14 0xda 0xad DUP13 LOG1 0x4c 0xb4 0x26 0xc2 DELEGATECALL PUSH7 0x8994D3E002900
 ```
 
-Questi sono chiamati **opcode**. Gli opcode dell'EVM sono le istruzioni di basso livello che la macchina virtuale di Ethereum (EVM) può eseguire. Ogni opcode rappresenta un'operazione specifica, come operazioni aritmetiche, operazioni logiche, manipolazione dei dati, flusso di controllo, ecc.
+Questi sono chiamati **codici operativi (opcode)**. Gli opcode dell'EVM sono le istruzioni di basso livello che la Macchina Virtuale di Ethereum (EVM) può eseguire. Ogni opcode rappresenta un'operazione specifica, come operazioni aritmetiche, operazioni logiche, manipolazione dei dati, flusso di controllo, ecc.
 
 [Maggiori informazioni sugli opcode](/developers/docs/evm/opcodes/)
 
@@ -41,9 +41,9 @@ Questi sono chiamati **opcode**. Gli opcode dell'EVM sono le istruzioni di basso
 
 Il compilatore produrrà anche l'**Application Binary Interface (ABI)**, necessaria affinché la tua applicazione comprenda il contratto e chiami le funzioni del contratto.
 
-L'ABI è un file JSON che descrive il contratto distribuito e le funzioni del suo contratto intelligente. Questo aiuta a colmare il divario tra web2 e web3
+L'ABI è un file JSON che descrive il contratto distribuito e le funzioni del suo smart contract. Questo aiuta a fare da ponte tra il Web2 e il Web3
 
-Una [libreria client JavaScript](/developers/docs/apis/javascript/) leggerà l'**ABI** per consentirti di richiamare il tuo contratto intelligente nell'interfaccia della tua app web.
+Una [libreria client JavaScript](/developers/docs/apis/javascript/) leggerà l'**ABI** per consentirti di richiamare il tuo smart contract nell'interfaccia della tua applicazione web.
 
 Di seguito è riportata l'ABI per il contratto del token ERC-20. Un ERC-20 è un token che puoi scambiare su Ethereum.
 
@@ -279,4 +279,4 @@ Di seguito è riportata l'ABI per il contratto del token ERC-20. Un ERC-20 è un
 ## Argomenti correlati {#related-topics}
 
 - [Librerie client JavaScript](/developers/docs/apis/javascript/)
-- [Macchina virtuale di Ethereum](/developers/docs/evm/)
+- [Macchina Virtuale di Ethereum](/developers/docs/evm/)
