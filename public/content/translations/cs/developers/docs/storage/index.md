@@ -1,6 +1,6 @@
 ---
-title: Decentralizované úložiště
-description: Přehled toho, co je decentralizované úložiště, a dostupných nástrojů pro jeho integraci do decentralizované aplikace (dapp).
+title: "Decentralizované úložiště"
+description: "Přehled toho, co je decentralizované úložiště, a dostupných nástrojů pro jeho integraci do decentralizované aplikace (dapp)."
 lang: cs
 authors: ["Patrick Collins"]
 ---

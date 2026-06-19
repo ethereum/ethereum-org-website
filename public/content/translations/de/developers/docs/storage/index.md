@@ -1,6 +1,6 @@
 ---
 title: Dezentraler Speicher
-description: Übersicht darüber, was dezentraler Speicher ist und welche Werkzeuge zur Verfügung stehen, um ihn in eine Dezentrale Anwendung (Dapp) zu integrieren.
+description: "Übersicht darüber, was dezentraler Speicher ist und welche Werkzeuge zur Verfügung stehen, um ihn in eine Dezentrale Anwendung (Dapp) zu integrieren."
 lang: de
 authors: ["Patrick Collins"]
 ---

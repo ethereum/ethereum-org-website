@@ -1,6 +1,6 @@
 ---
-title: 適合 .NET 開發人員的以太坊
-description: 了解如何使用基於 .NET 的專案與工具在以太坊上進行開發
+title: "適合 .NET 開發人員的以太坊"
+description: "了解如何使用基於 .NET 的專案與工具在以太坊上進行開發"
 lang: zh-tw
 incomplete: true
 ---

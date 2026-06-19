@@ -1,6 +1,6 @@
 ---
-title: Padrões de token
-description: Explore os padrões de token do Ethereum, incluindo ERC-20, ERC-721 e ERC-1155 para tokens fungíveis e não fungíveis.
+title: "Padrões de token"
+description: "Explore os padrões de token do Ethereum, incluindo ERC-20, ERC-721 e ERC-1155 para tokens fungíveis e não fungíveis."
 lang: pt-br
 incomplete: true
 ---

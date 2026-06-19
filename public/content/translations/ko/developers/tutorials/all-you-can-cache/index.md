@@ -1,10 +1,10 @@
 ---
 title: "마음껏 캐시하기"
-description: 더 저렴한 롤업 트랜잭션을 위해 캐싱 컨트랙트를 생성하고 사용하는 방법을 배워보세요.
-author: 오리 포메란츠
+description: "더 저렴한 롤업 트랜잭션을 위해 캐싱 컨트랙트를 생성하고 사용하는 방법을 배워보세요."
+author: "오리 포메란츠"
 tags: ["레이어 2", "캐싱", "스토리지", "확장성"]
 skill: intermediate
-breadcrumb: 롤업을 위한 캐싱
+breadcrumb: "롤업을 위한 캐싱"
 published: 2022-09-15
 lang: ko
 ---
@@ -757,6 +757,7 @@ contract WORM is Cache {
 이것이 Foundry에서 코드가 [이벤트를 올바르게 내보내는지](https://getfoundry.sh/reference/cheatcodes/expect-emit/) 확인하는 방법입니다.
 
 ### 클라이언트 {#the-client}
+
 Solidity 테스트에서 얻을 수 없는 한 가지는 자체 애플리케이션에 잘라내어 붙여넣을 수 있는 JavaScript 코드입니다. 이 코드를 작성하기 위해 저는 [옵티미즘](https://www.optimism.io/)의 새로운 테스트넷인 [옵티미즘 괴를리](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli)에 WORM을 배포했습니다. 주소는 [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a)입니다.
 
 [여기서 클라이언트용 JavaScript 코드를 볼 수 있습니다](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). 사용 방법은 다음과 같습니다:

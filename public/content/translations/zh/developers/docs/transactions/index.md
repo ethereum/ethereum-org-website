@@ -1,6 +1,6 @@
 ---
-title: 交易
-description: 以太坊交易概述——它们如何工作、它们的数据结构以及如何通过应用程序发送它们。
+title: "交易"
+description: "以太坊交易概述——它们如何工作、它们的数据结构以及如何通过应用程序发送它们。"
 lang: zh
 ---
 
@@ -223,9 +223,9 @@ _图表改编自[以太坊 EVM 图解](https://takenobu-hs.github.io/downloads/e
 
 3. **类型 2 交易**，通常被称为 EIP-1559 交易，是在以太坊的[伦敦升级](/ethereum-forks/#london)中通过 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 引入的交易。它们已成为以太坊网络上的标准交易类型。这些交易引入了一种新的费用市场机制，通过将交易费分为基础费用和优先费来提高可预测性。它们以字节 `0x02` 开头，并包含 `maxPriorityFeePerGas` 和 `maxFeePerGas` 等字段。由于其灵活性和效率，类型 2 交易现在是默认的，特别是在网络高度拥堵期间受到青睐，因为它们能够帮助用户更可预测地管理交易费。这些交易的 TransactionType 值为 `0x2`。
 
-4. **类型 3（斑点）交易**是在 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) 中引入的，作为以太坊[登昆升级](/ethereum-forks/#dencun)的一部分。这些交易旨在更有效地处理“斑点”数据（二进制大型对象），通过提供一种以较低成本将数据发布到以太坊网络的方法，特别有利于二层网络 (l2) 汇总。斑点交易包含额外的字段，例如 `blobVersionedHashes`、`maxFeePerBlobGas` 和 `blobGasPrice`。它们以字节 `0x03` 开头，其 TransactionType 值为 `0x3`。斑点交易代表了以太坊数据可用性和扩展能力的重大改进。
+4. <strong>类型 3（斑点）交易</strong>是在 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) 中引入的，作为以太坊[登昆升级](/ethereum-forks/#dencun)的一部分。这些交易旨在更有效地处理“斑点”数据（二进制大型对象），通过提供一种以较低成本将数据发布到以太坊网络的方法，特别有利于二层网络 (l2) 汇总。斑点交易包含额外的字段，例如 `blobVersionedHashes`、`maxFeePerBlobGas` 和 `blobGasPrice`。它们以字节 `0x03` 开头，其 TransactionType 值为 `0x3`。斑点交易代表了以太坊数据可用性和扩展能力的重大改进。
 
-5. **类型 4 交易**是在 [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) 中引入的，作为以太坊[佩克特拉升级](/roadmap/pectra/)的一部分。这些交易旨在与账户抽象向前兼容。它们允许外部拥有账户 (EOA) 暂时表现得像智能合约账户，而不会损害其原始功能。它们包含一个 `authorization_list` 参数，该参数指定了 EOA 将其权限委托给的智能合约。交易完成后，EOA 的代码字段将具有被委托智能合约的地址。
+5. <strong>类型 4 交易</strong>是在 [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) 中引入的，作为以太坊[佩克特拉升级](/roadmap/pectra/)的一部分。这些交易旨在与账户抽象向前兼容。它们允许外部拥有账户 (EOA) 暂时表现得像智能合约账户，而不会损害其原始功能。它们包含一个 `authorization_list` 参数，该参数指定了 EOA 将其权限委托给的智能合约。交易完成后，EOA 的代码字段将具有被委托智能合约的地址。
 
 ## 延伸阅读 {#further-reading}
 

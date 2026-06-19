@@ -1,6 +1,6 @@
 ---
-title: Wdrażanie inteligentnych kontraktów
-description: Dowiedz się, jak wdrażać inteligentne kontrakty w sieciach Ethereum, w tym o wymaganiach wstępnych, narzędziach i krokach wdrażania.
+title: "Wdrażanie inteligentnych kontraktów"
+description: "Dowiedz się, jak wdrażać inteligentne kontrakty w sieciach Ethereum, w tym o wymaganiach wstępnych, narzędziach i krokach wdrażania."
 lang: pl
 ---
 

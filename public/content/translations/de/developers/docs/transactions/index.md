@@ -1,6 +1,6 @@
 ---
 title: Transaktionen
-description: Ein Überblick über Ethereum-Transaktionen – wie sie funktionieren, ihre Datenstruktur und wie man sie über eine Anwendung sendet.
+description: "Ein Überblick über Ethereum-Transaktionen – wie sie funktionieren, ihre Datenstruktur und wie man sie über eine Anwendung sendet."
 lang: de
 ---
 

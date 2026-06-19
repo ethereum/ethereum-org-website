@@ -1,6 +1,6 @@
 ---
 title: Zero-Knowledge-Rollups
-description: Eine Einführung in Zero-Knowledge-Rollups – eine Skalierungslösung, die von der Ethereum-Community verwendet wird.
+description: "Eine Einführung in Zero-Knowledge-Rollups – eine Skalierungslösung, die von der Ethereum-Community verwendet wird."
 lang: de
 ---
 
@@ -106,7 +106,7 @@ ZK-STARKs sind auch sicher gegen Quantencomputer, während die in ZK-SNARKs verw
 
 #### Wie funktionieren Gültigkeitsbeweise in ZK-Rollups? {#validity-proofs-in-zk-rollups}
 
-##### Beweisgenerierung {#entries-and-exits}
+##### Beweisgenerierung {#}
 
 Bevor Transaktionen akzeptiert werden, führt der Betreiber die üblichen Überprüfungen durch. Dazu gehört die Bestätigung, dass:
 
@@ -132,7 +132,7 @@ Der Prozess wiederholt sich für jede Transaktion; jede „Schleife“ erstellt 
 
 Die ZK-Beweisschaltung iteriert über den gesamten Transaktions-Batch und verifiziert die Sequenz von Aktualisierungen, die nach Ausführung der letzten Transaktion zu einer endgültigen Zustandswurzel führen. Die zuletzt berechnete Merkle-Wurzel wird zur neuesten kanonischen Zustandswurzel des ZK-Rollups.
 
-##### Beweisverifizierung {#zk-rollups-and-evm-compatibility}
+##### Beweisverifizierung {#}
 
 Nachdem die Beweisschaltung die Korrektheit der Zustandsaktualisierungen verifiziert hat, übermittelt der L2-Betreiber den berechneten Gültigkeitsbeweis an den Verifizierer-Vertrag auf L1. Die Verifizierungsschaltung des Vertrags verifiziert die Gültigkeit des Beweises und prüft auch öffentliche Eingaben, die Teil des Beweises sind:
 
@@ -146,7 +146,7 @@ Nachdem die Beweisschaltung die Korrektheit der Zustandsaktualisierungen verifiz
 
 Wenn der Beweis die Schaltung erfüllt (d. h. er ist gültig), bedeutet dies, dass eine Sequenz gültiger Transaktionen existiert, die das Rollup vom vorherigen Zustand (kryptographisch durch die Vor-Zustandswurzel gekennzeichnet) in einen neuen Zustand (kryptographisch durch die Nach-Zustandswurzel gekennzeichnet) überführt. Wenn die Vor-Zustandswurzel mit der im Rollup-Vertrag gespeicherten Wurzel übereinstimmt und der Beweis gültig ist, übernimmt der Rollup-Vertrag die Nach-Zustandswurzel aus dem Beweis und aktualisiert seinen Zustandsbaum, um den geänderten Zustand des Rollups widerzuspiegeln.
 
-### Eintritte und Austritte {#how-do-zk-rollup-fees-work}
+### Eintritte und Austritte {#entries-and-exits}
 
 Benutzer treten in das ZK-Rollup ein, indem sie Token in den Rollup-Vertrag einzahlen, der auf der L1-Chain bereitgestellt ist. Diese Transaktion wird in die Warteschlange gestellt, da nur Betreiber Transaktionen an den Rollup-Vertrag übermitteln können.
 
@@ -164,7 +164,7 @@ Die Abhebung von einem ZK-Rollup zu L1 ist unkompliziert. Der Benutzer initiiert
 
 Der Rollup-Vertrag hasht die Transaktionsdaten, prüft, ob die Batch-Wurzel existiert, und verwendet den Merkle-Nachweis, um zu prüfen, ob der Transaktions-Hash Teil der Batch-Wurzel ist. Anschließend führt der Vertrag die Austritts-Transaktion aus und sendet die Gelder an die vom Benutzer gewählte Adresse auf L1.
 
-## ZK-Rollups und EVM-Kompatibilität {#scaling-ethereum-with-zk-rollups}
+## ZK-Rollups und EVM-Kompatibilität {#zk-rollups-and-evm-compatibility}
 
 Im Gegensatz zu Optimistic Rollups sind ZK-Rollups nicht ohne Weiteres mit der [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) kompatibel. Das Beweisen von Allzweck-EVM-Berechnungen in Schaltungen ist schwieriger und ressourcenintensiver als das Beweisen einfacher Berechnungen (wie der zuvor beschriebene Token-Transfer).
 
@@ -174,7 +174,7 @@ Wie die EVM geht eine zkEVM zwischen Zuständen über, nachdem Berechnungen an e
 
 Es wird erwartet, dass die Einführung EVM-kompatibler ZK-Rollups Entwicklern hilft, die Skalierbarkeit und Sicherheitsgarantien von Zero-Knowledge-Beweisen zu nutzen. Noch wichtiger ist, dass die Kompatibilität mit der nativen Ethereum-Infrastruktur bedeutet, dass Entwickler ZK-freundliche Dapps mit vertrauten (und praxiserprobten) Tools und Sprachen erstellen können.
 
-## Wie funktionieren ZK-Rollup-Gebühren? {#transaction-data-compression}
+## Wie funktionieren ZK-Rollup-Gebühren? {#how-do-zk-rollup-fees-work}
 
 Wie viel Benutzer für Transaktionen auf ZK-Rollups bezahlen, hängt von der Gasgebühr ab, genau wie im Ethereum Mainnet. Gasgebühren funktionieren jedoch auf L2 anders und werden von den folgenden Kosten beeinflusst:
 
@@ -188,15 +188,15 @@ Wie viel Benutzer für Transaktionen auf ZK-Rollups bezahlen, hängt von der Gas
 
 Abgesehen von der Bündelung von Transaktionen reduzieren ZK-Rollups die Gebühren für Benutzer durch die Komprimierung von Transaktionsdaten. Sie können [eine Echtzeit-Übersicht sehen](https://l2fees.info/), wie viel die Nutzung von Ethereum-ZK-Rollups kostet.
 
-## Wie skalieren ZK-Rollups Ethereum? {#recursive-proofs}
+## Wie skalieren ZK-Rollups Ethereum? {#scaling-ethereum-with-zk-rollups}
 
-### Komprimierung von Transaktionsdaten {#zk-rollups-pros-and-cons}
+### Komprimierung von Transaktionsdaten {#transaction-data-compression}
 
 ZK-Rollups erweitern den Transaktionsdurchsatz auf der Basisschicht von Ethereum, indem sie Berechnungen offchain verlagern, aber der eigentliche Schub für die Skalierung kommt von der Komprimierung der Transaktionsdaten. Die [Blockgröße](/developers/docs/blocks/#block-size) von Ethereum begrenzt die Daten, die jeder Block aufnehmen kann, und damit auch die Anzahl der pro Block verarbeiteten Transaktionen. Durch die Komprimierung transaktionsbezogener Daten erhöhen ZK-Rollups die Anzahl der pro Block verarbeiteten Transaktionen erheblich.
 
 ZK-Rollups können Transaktionsdaten besser komprimieren als Optimistic Rollups, da sie nicht alle Daten veröffentlichen müssen, die zur Validierung jeder Transaktion erforderlich sind. Sie müssen nur die minimalen Daten veröffentlichen, die erforderlich sind, um den neuesten Zustand von Konten und Salden auf dem Rollup wiederherzustellen.
 
-### Rekursive Beweise {#zk-video}
+### Rekursive Beweise {#recursive-proofs}
 
 Ein Vorteil von Zero-Knowledge-Beweisen ist, dass Beweise andere Beweise verifizieren können. Zum Beispiel kann ein einzelner ZK-SNARK andere ZK-SNARKs verifizieren. Solche „Beweise von Beweisen“ werden rekursive Beweise genannt und erhöhen den Transaktionsdurchsatz auf ZK-Rollups drastisch.
 
@@ -204,7 +204,7 @@ Derzeit werden Gültigkeitsbeweise blockweise generiert und zur Verifizierung an
 
 Rekursive Beweise machen es jedoch möglich, mehrere Blöcke mit einem einzigen Gültigkeitsbeweis endgültig zu machen. Dies liegt daran, dass die Beweisschaltung rekursiv mehrere Blockbeweise aggregiert, bis ein endgültiger Beweis erstellt ist. Der L2-Betreiber reicht diesen rekursiven Beweis ein, und wenn der Vertrag ihn akzeptiert, werden alle relevanten Blöcke sofort endgültig. Mit rekursiven Beweisen steigt die Anzahl der ZK-Rollup-Transaktionen, die in Intervallen auf Ethereum endgültig gemacht werden können.
 
-### Vorteile und Nachteile von ZK-Rollups {#zkevm-projects}
+### Vorteile und Nachteile von ZK-Rollups {#zk-rollups-pros-and-cons}
 
 | Vorteile                                                                                                                                                                                                   | Nachteile                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,17 +216,14 @@ Rekursive Beweise machen es jedoch möglich, mehrere Blöcke mit einem einzigen 
 | Hängt nicht von Liveness-Annahmen ab und Benutzer müssen die Chain nicht validieren, um ihre Gelder zu schützen.                                                                                              | Einige Beweissysteme (z. B. ZK-SNARK) erfordern ein Trusted Setup, das bei falscher Handhabung möglicherweise das Sicherheitsmodell eines ZK-Rollups gefährden könnte.                                                     |
 | Eine bessere Datenkomprimierung kann helfen, die Kosten für die Veröffentlichung von `calldata` auf Ethereum zu senken und die Rollup-Gebühren für Benutzer zu minimieren.                                                                             |                                                                                                                                                                                                    |
 
-### Eine visuelle Erklärung von ZK-Rollups {#further-reading-on-zk-rollups}
+### Eine visuelle Erklärung von ZK-Rollups {#zk-video}
 
 Sehen Sie sich an, wie Finematics ZK-Rollups erklärt:
 
-<HTML-PLACEHOLDER-COMPONENT-000000 />
-
-
-## Wer arbeitet an einer zkEVM? {#tutorials}
+## Wer arbeitet an einer zkEVM? {#zkevm-projects}
 
 <HTML-PLACEHOLDER-COMPONENT-000001>
-<HTML-PLACEHOLDER-COMPONENT-000002 />
+
 <HTML-PLACEHOLDER-COMPONENT-000003>
 <HTML-PLACEHOLDER-COMPONENT-000004>zkEVM für L2 vs. L1</HTML-PLACEHOLDER-COMPONENT-000004>
 <HTML-PLACEHOLDER-COMPONENT-000005>
@@ -253,7 +250,7 @@ Zu den Projekten, die an zkEVMs arbeiten, gehören:
 
 - **[Linea](https://linea.build)** – _Linea ist ein Ethereum-äquivalentes zkEVM-Layer-2, das von ConsenSys entwickelt wurde und vollständig auf das Ethereum-Ökosystem abgestimmt ist._
 
-## Weiterführende Literatur zu ZK-Rollups
+## Weiterführende Literatur zu ZK-Rollups {#further-reading-on-zk-rollups}
 
 - [Was sind Zero-Knowledge-Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Was sind Zero-Knowledge-Rollups?](https://alchemy.com/blog/zero-knowledge-rollups)
@@ -267,7 +264,7 @@ Zu den Projekten, die an zkEVMs arbeiten, gehören:
 - [ZK-SNARKs unter der Haube](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [Wie sind SNARKs möglich?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
 
-## Tutorials: Privatsphäre & Zero-Knowledge auf Ethereum
+## Tutorials: Privatsphäre & Zero-Knowledge auf Ethereum {#tutorials}
 
 - [Verwendung von Zero-Knowledge für einen geheimen Zustand](/developers/tutorials/secret-state/) _– Wie man ZK-Beweise und Offchain-Serverkomponenten verwendet, um einen geheimen Spielzustand Onchain aufrechtzuerhalten._
 - [Verwendung von Stealth-Adressen](/developers/tutorials/stealth-addr/) _– Wie ERC-5564-Stealth-Adressen anonyme ETH-Transfers mithilfe kryptographischer Schlüsselableitung ermöglichen._

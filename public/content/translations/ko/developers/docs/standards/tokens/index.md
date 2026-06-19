@@ -1,6 +1,6 @@
 ---
-title: 토큰 표준
-description: 대체 가능 및 대체 불가능 토큰을 위한 ERC-20, ERC-721, ERC-1155를 포함한 이더리움 토큰 표준을 살펴봅니다.
+title: "토큰 표준"
+description: "대체 가능 및 대체 불가능 토큰을 위한 ERC-20, ERC-721, ERC-1155를 포함한 이더리움 토큰 표준을 살펴봅니다."
 lang: ko
 incomplete: true
 ---

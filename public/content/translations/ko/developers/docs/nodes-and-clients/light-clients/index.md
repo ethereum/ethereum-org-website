@@ -1,6 +1,6 @@
 ---
-title: 경량 클라이언트
-description: 이더리움 경량 클라이언트에 대한 소개입니다.
+title: "경량 클라이언트"
+description: "이더리움 경량 클라이언트에 대한 소개입니다."
 lang: ko
 ---
 

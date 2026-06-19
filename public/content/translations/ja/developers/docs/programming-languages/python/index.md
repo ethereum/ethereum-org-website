@@ -1,6 +1,6 @@
 ---
-title: Python開発者のためのイーサリアム
-description: Pythonベースのプロジェクトやツールを使用してイーサリアム向けに開発する方法を学びます
+title: "Python開発者のためのイーサリアム"
+description: "Pythonベースのプロジェクトやツールを使用してイーサリアム向けに開発する方法を学びます"
 lang: ja
 incomplete: true
 ---

@@ -1,6 +1,6 @@
 ---
-title: Thư viện hợp đồng thông minh
-description: Khám phá các thư viện hợp đồng thông minh và các khối xây dựng có thể tái sử dụng để tăng tốc các dự án phát triển Ethereum của bạn.
+title: "Thư viện hợp đồng thông minh"
+description: "Khám phá các thư viện hợp đồng thông minh và các khối xây dựng có thể tái sử dụng để tăng tốc các dự án phát triển Ethereum của bạn."
 lang: vi
 ---
 

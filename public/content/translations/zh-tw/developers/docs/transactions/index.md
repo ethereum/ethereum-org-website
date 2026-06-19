@@ -1,6 +1,6 @@
 ---
-title: 交易
-description: 以太坊交易概覽：它們的運作方式、資料結構，以及如何透過應用程式發送交易。
+title: "交易"
+description: "以太坊交易概覽：它們的運作方式、資料結構，以及如何透過應用程式發送交易。"
 lang: zh-tw
 ---
 
@@ -223,9 +223,9 @@ _圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 
 3. **類型 2 交易**，通常被稱為 EIP-1559 交易，是在以太坊[倫敦升級](/ethereum-forks/#london)的 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 中引入的交易。它們已成為以太坊網路上的標準交易類型。這些交易引入了一種新的費用市場機制，透過將交易手續費分為基礎費用和優先費來提高可預測性。它們以位元組 `0x02` 開頭，並包含 `maxPriorityFeePerGas` 和 `maxFeePerGas` 等欄位。由於其靈活性和效率，類型 2 交易現在是預設的，特別是在網路高度擁塞期間受到青睞，因為它們能夠幫助使用者更可預測地管理交易手續費。這些交易的 TransactionType 值為 `0x2`。
 
-4. **類型 3（資料塊）交易**是在 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) 中引入的，作為以太坊 [Dencun 升級](/ethereum-forks/#dencun)的一部分。這些交易旨在更有效地處理「資料塊（blob）」資料（二進位大型物件），透過提供一種以較低成本將資料發布到以太坊網路的方法，特別有利於第二層 (L2) 匯總。資料塊交易包含額外的欄位，例如 `blobVersionedHashes`、`maxFeePerBlobGas` 和 `blobGasPrice`。它們以位元組 `0x03` 開頭，其 TransactionType 值為 `0x3`。資料塊交易代表了以太坊資料可用性和擴展能力的重大改進。
+4. <strong>類型 3（資料塊）交易</strong>是在 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) 中引入的，作為以太坊 [Dencun 升級](/ethereum-forks/#dencun)的一部分。這些交易旨在更有效地處理「資料塊（blob）」資料（二進位大型物件），透過提供一種以較低成本將資料發布到以太坊網路的方法，特別有利於第二層 (L2) 匯總。資料塊交易包含額外的欄位，例如 `blobVersionedHashes`、`maxFeePerBlobGas` 和 `blobGasPrice`。它們以位元組 `0x03` 開頭，其 TransactionType 值為 `0x3`。資料塊交易代表了以太坊資料可用性和擴展能力的重大改進。
 
-5. **類型 4 交易**是在 [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) 中引入的，作為以太坊[佩克特拉升級](/roadmap/pectra/)的一部分。這些交易旨在與帳戶抽象化向前相容。它們允許外部擁有帳戶（EOA）暫時表現得像合約帳戶，而不會損害其原始功能。它們包含一個 `authorization_list` 參數，該參數指定了 EOA 將其權限委託給哪個智能合約。交易後，EOA 的程式碼欄位將具有被委託智能合約的地址。
+5. <strong>類型 4 交易</strong>是在 [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) 中引入的，作為以太坊[佩克特拉升級](/roadmap/pectra/)的一部分。這些交易旨在與帳戶抽象化向前相容。它們允許外部擁有帳戶（EOA）暫時表現得像合約帳戶，而不會損害其原始功能。它們包含一個 `authorization_list` 參數，該參數指定了 EOA 將其權限委託給哪個智能合約。交易後，EOA 的程式碼欄位將具有被委託智能合約的地址。
 
 ## 延伸閱讀 {#further-reading}
 

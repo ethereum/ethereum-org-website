@@ -1,6 +1,6 @@
 ---
-title: JavaScript geliştiricileri için Ethereum
-description: JavaScript tabanlı projeleri ve araçları kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin.
+title: "JavaScript geliştiricileri için Ethereum"
+description: "JavaScript tabanlı projeleri ve araçları kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin."
 lang: tr
 ---
 

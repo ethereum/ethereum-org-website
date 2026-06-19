@@ -1,6 +1,6 @@
 ---
-title: 輕客戶端
-description: 以太坊輕客戶端簡介。
+title: "輕客戶端"
+description: "以太坊輕客戶端簡介。"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Implantando contratos inteligentes
-description: Aprenda como implantar contratos inteligentes nas redes Ethereum, incluindo pré-requisitos, ferramentas e etapas de implantação.
+description: "Aprenda como implantar contratos inteligentes nas redes Ethereum, incluindo pré-requisitos, ferramentas e etapas de implantação."
 lang: pt-br
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Smart Contracts kompilieren
-description: Eine Erklärung, warum Sie Smart Contracts kompilieren müssen und was die Kompilierung eigentlich bewirkt.
+description: "Eine Erklärung, warum Sie Smart Contracts kompilieren müssen und was die Kompilierung eigentlich bewirkt."
 lang: de
 incomplete: true
 ---

@@ -1,6 +1,6 @@
 ---
-title: 节点和客户端
-description: 以太坊节点和客户端软件概述，以及如何设置节点和为什么要设置节点。
+title: "节点和客户端"
+description: "以太坊节点和客户端软件概述，以及如何设置节点和为什么要设置节点。"
 lang: zh
 sidebarDepth: 2
 ---

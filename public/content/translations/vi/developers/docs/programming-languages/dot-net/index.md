@@ -1,6 +1,6 @@
 ---
-title: Ethereum dành cho nhà phát triển .NET
-description: Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên .NET
+title: "Ethereum dành cho nhà phát triển .NET"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên .NET"
 lang: vi
 incomplete: true
 ---

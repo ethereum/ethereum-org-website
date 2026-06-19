@@ -1,6 +1,6 @@
 ---
-title: Các nút và máy khách
-description: Tổng quan về các nút và phần mềm máy khách Ethereum, cùng với cách thiết lập một nút và lý do bạn nên làm điều đó.
+title: "Các nút và máy khách"
+description: "Tổng quan về các nút và phần mềm máy khách Ethereum, cùng với cách thiết lập một nút và lý do bạn nên làm điều đó."
 lang: vi
 sidebarDepth: 2
 ---

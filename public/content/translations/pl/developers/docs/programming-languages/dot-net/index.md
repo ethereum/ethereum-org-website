@@ -1,6 +1,6 @@
 ---
-title: Ethereum dla programistów .NET
-description: Dowiedz się, jak programować na Ethereum przy użyciu projektów i narzędzi opartych na .NET
+title: "Ethereum dla programistów .NET"
+description: "Dowiedz się, jak programować na Ethereum przy użyciu projektów i narzędzi opartych na .NET"
 lang: pl
 incomplete: true
 ---

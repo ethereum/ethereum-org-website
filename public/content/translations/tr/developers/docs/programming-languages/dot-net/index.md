@@ -1,6 +1,6 @@
 ---
-title: .NET geliştiricileri için Ethereum
-description: .NET tabanlı projeler ve araçlar kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin
+title: ".NET geliştiricileri için Ethereum"
+description: ".NET tabanlı projeler ve araçlar kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin"
 lang: tr
 incomplete: true
 ---

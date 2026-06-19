@@ -1,6 +1,6 @@
 ---
-title: Nasazení chytrých kontraktů
-description: Naučte se, jak nasadit chytré kontrakty do sítí Ethereum, včetně předpokladů, nástrojů a kroků nasazení.
+title: "Nasazení chytrých kontraktů"
+description: "Naučte se, jak nasadit chytré kontrakty do sítí Ethereum, včetně předpokladů, nástrojů a kroků nasazení."
 lang: cs
 ---
 

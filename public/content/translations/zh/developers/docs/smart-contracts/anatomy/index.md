@@ -1,6 +1,6 @@
 ---
-title: 智能合约剖析
-description: 深入了解智能合约的剖析——函数、数据和变量。
+title: "智能合约剖析"
+description: "深入了解智能合约的剖析——函数、数据和变量。"
 lang: zh
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Tất cả những gì bạn có thể lưu vào bộ nhớ đệm"
-description: Tìm hiểu cách tạo và sử dụng hợp đồng bộ nhớ đệm để có các giao dịch bản cuộn rẻ hơn
+description: "Tìm hiểu cách tạo và sử dụng hợp đồng bộ nhớ đệm để có các giao dịch bản cuộn rẻ hơn"
 author: Ori Pomerantz
 tags:
   - lớp 2
@@ -8,7 +8,7 @@ tags:
   - lưu trữ
   - mở rộng quy mô
 skill: intermediate
-breadcrumb: Bộ nhớ đệm cho các bản cuộn
+breadcrumb: "Bộ nhớ đệm cho các bản cuộn"
 published: 2022-09-15
 lang: vi
 ---
@@ -761,6 +761,7 @@ Vì chúng ta sử dụng hàm `<address>.call()` cấp thấp, chúng ta không
 Đây là cách chúng ta xác minh rằng mã [phát ra một sự kiện một cách chính xác](https://getfoundry.sh/reference/cheatcodes/expect-emit/) trong Foundry.
 
 ### Máy khách {#the-client}
+
 Một điều bạn không nhận được với các bài kiểm tra Solidity là mã JavaScript mà bạn có thể cắt và dán vào ứng dụng của riêng mình. Để viết mã đó, tôi đã triển khai WORM lên [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), mạng thử nghiệm mới của [Optimism](https://www.optimism.io/). Nó ở địa chỉ [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Bạn có thể xem mã JavaScript cho máy khách tại đây](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Để sử dụng nó:

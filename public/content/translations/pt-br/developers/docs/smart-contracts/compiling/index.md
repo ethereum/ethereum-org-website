@@ -1,6 +1,6 @@
 ---
 title: Compilando contratos inteligentes
-description: Uma explicação do porquê você precisa compilar contratos inteligentes e o que a compilação realmente faz.
+description: "Uma explicação do porquê você precisa compilar contratos inteligentes e o que a compilação realmente faz."
 lang: pt-br
 incomplete: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: Smart-Contract-Sicherheit
-description: Ein Überblick über Richtlinien zur Erstellung sicherer Ethereum-Smart-Contracts
+description: "Ein Überblick über Richtlinien zur Erstellung sicherer Ethereum-Smart-Contracts"
 lang: de
 ---
 
@@ -34,13 +34,13 @@ Die Registrierung einer einzelnen Adresse als `Owner` in einem Smart Contract bi
 
 Bei der rollenbasierten Zugriffskontrolle wird der Zugriff auf sensible Funktionen auf eine Gruppe vertrauenswürdiger Teilnehmer verteilt. Beispielsweise kann ein Konto für das Prägen von Token verantwortlich sein, während ein anderes Konto Upgrades durchführt oder den Vertrag pausiert. Die dezentrale Zugriffskontrolle auf diese Weise eliminiert Single Points of Failure und reduziert die Vertrauensannahmen für Benutzer.
 
-##### Verwendung von Multi-Signature-Wallets {#use-require-assert-revert}
+##### Verwendung von Multi-Signature-Wallets {#}
 
 Ein weiterer Ansatz zur Implementierung einer sicheren Zugriffskontrolle ist die Verwendung eines [Mehrfachsignatur-Kontos](/developers/docs/smart-contracts/#multisig) zur Verwaltung eines Vertrags. Im Gegensatz zu einem regulären EOA gehören Mehrfachsignatur-Konten mehreren Entitäten und erfordern Signaturen von einer Mindestanzahl von Konten – sagen wir 3 von 5 –, um Transaktionen auszuführen.
 
 Die Verwendung einer Multisig für die Zugriffskontrolle führt eine zusätzliche Sicherheitsebene ein, da Aktionen auf dem Zielvertrag die Zustimmung mehrerer Parteien erfordern. Dies ist besonders nützlich, wenn die Verwendung des Ownable-Musters erforderlich ist, da es für einen Angreifer oder böswilligen Insider schwieriger wird, sensible Vertragsfunktionen für böswillige Zwecke zu manipulieren.
 
-### 2. Verwenden Sie require()-, assert()- und revert()-Anweisungen, um Vertragsoperationen abzusichern {#test-smart-contracts-and-verify-code-correctness}
+### 2. Verwenden Sie require()-, assert()- und revert()-Anweisungen, um Vertragsoperationen abzusichern {#use-require-assert-revert}
 
 Wie bereits erwähnt, kann jeder öffentliche Funktionen in Ihrem Smart Contract aufrufen, sobald dieser auf der Blockchain bereitgestellt ist. Da Sie nicht im Voraus wissen können, wie externe Konten mit einem Vertrag interagieren werden, ist es ideal, vor der Bereitstellung interne Schutzmaßnahmen gegen problematische Operationen zu implementieren. Sie können korrektes Verhalten in Smart Contracts erzwingen, indem Sie die Anweisungen `require()`, `assert()` und `revert()` verwenden, um Ausnahmen auszulösen und Zustandsänderungen rückgängig zu machen, wenn die Ausführung bestimmte Anforderungen nicht erfüllt.
 
@@ -70,7 +70,7 @@ contract VendingMachine {
 }
 ```
 
-### 3. Testen Sie Smart Contracts und überprüfen Sie die Code-Korrektheit {#get-independent-code-reviews}
+### 3. Testen Sie Smart Contracts und überprüfen Sie die Code-Korrektheit {#test-smart-contracts-and-verify-code-correctness}
 
 Die Unveränderlichkeit von Code, der in der [Ethereum Virtual Machine](/developers/docs/evm/) ausgeführt wird, bedeutet, dass Smart Contracts während der Entwicklungsphase ein höheres Maß an Qualitätsbewertung erfordern. Das ausführliche Testen Ihres Vertrags und die Beobachtung auf unerwartete Ergebnisse wird die Sicherheit erheblich verbessern und Ihre Benutzer langfristig schützen.
 
@@ -82,11 +82,11 @@ Ein besserer Ansatz ist die Kombination von Unit-Testing mit eigenschaftsbasiert
 
 [Formale Verifikation](/developers/docs/smart-contracts/formal-verification) ist eine weitere Technik zur Überprüfung von Sicherheitseigenschaften in Smart Contracts. Im Gegensatz zu regulären Tests kann die Formale Verifikation die Fehlerfreiheit in einem Smart Contract schlüssig beweisen. Dies wird erreicht, indem eine formale Spezifikation erstellt wird, die die gewünschten Sicherheitseigenschaften erfasst, und bewiesen wird, dass ein formales Modell der Verträge dieser Spezifikation entspricht.
 
-### 4. Bitten Sie um eine unabhängige Überprüfung Ihres Codes {#audits}
+### 4. Bitten Sie um eine unabhängige Überprüfung Ihres Codes {#get-independent-code-reviews}
 
 Nach dem Testen Ihres Vertrags ist es ratsam, andere zu bitten, den Quellcode auf Sicherheitsprobleme zu überprüfen. Tests werden nicht jeden Fehler in einem Smart Contract aufdecken, aber eine unabhängige Überprüfung erhöht die Wahrscheinlichkeit, Schwachstellen zu entdecken.
 
-#### Audits {#bug-bounties}
+#### Audits {#audits}
 
 Die Beauftragung eines Smart-Contract-Audits ist eine Möglichkeit, eine unabhängige Code-Überprüfung durchzuführen. Auditoren spielen eine wichtige Rolle dabei, sicherzustellen, dass Smart Contracts sicher und frei von Qualitätsmängeln und Designfehlern sind.
 
@@ -95,7 +95,7 @@ Dennoch sollten Sie vermeiden, Audits als Allheilmittel zu betrachten. Smart-Con
 - [Tipps & Tricks für Smart-Contract-Audits](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Machen Sie das Beste aus Ihrem Audit](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
-#### Bug-Bounties {#follow-smart-contract-development-best-practices}
+#### Bug-Bounties {#bug-bounties}
 
 Die Einrichtung eines Bug-Bounty-Programms ist ein weiterer Ansatz zur Implementierung externer Code-Überprüfungen. Ein Bug-Bounty ist eine finanzielle Belohnung, die an Personen (normalerweise Whitehat-Hacker) vergeben wird, die Schwachstellen in einer Anwendung entdecken.
 
@@ -103,7 +103,7 @@ Bei richtiger Anwendung geben Bug-Bounties Mitgliedern der Hacker-Community eine
 
 Eine nützliche Strategie besteht darin, die Auszahlung eines Bug-Bounty-Programms im Verhältnis zu den auf dem Spiel stehenden Geldern festzulegen. Dieser Ansatz, der als „[skalierendes Bug-Bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)“ bezeichnet wird, bietet finanzielle Anreize für Einzelpersonen, Schwachstellen verantwortungsvoll offenzulegen, anstatt sie auszunutzen.
 
-### 5. Befolgen Sie Best Practices bei der Smart-Contract-Entwicklung {#implement-disaster-recovery-plans}
+### 5. Befolgen Sie Best Practices bei der Smart-Contract-Entwicklung {#follow-smart-contract-development-best-practices}
 
 Die Existenz von Audits und Bug-Bounties entbindet Sie nicht von Ihrer Verantwortung, qualitativ hochwertigen Code zu schreiben. Gute Smart-Contract-Sicherheit beginnt mit der Befolgung ordnungsgemäßer Design- und Entwicklungsprozesse:
 
@@ -121,11 +121,11 @@ Die Existenz von Audits und Bug-Bounties entbindet Sie nicht von Ihrer Verantwor
 
 - Dokumentieren Sie Ihren Code ordnungsgemäß (unter Verwendung von [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)) und beschreiben Sie Details zur Vertragsarchitektur in leicht verständlicher Sprache. Dies erleichtert es anderen, Ihren Code zu prüfen und zu überprüfen.
 
-### 6. Implementieren Sie robuste Disaster-Recovery-Pläne {#contract-upgrades}
+### 6. Implementieren Sie robuste Disaster-Recovery-Pläne {#implement-disaster-recovery-plans}
 
 Das Entwerfen sicherer Zugriffskontrollen, die Implementierung von Funktionsmodifikatoren und andere Vorschläge können die Smart-Contract-Sicherheit verbessern, aber sie können die Möglichkeit böswilliger Exploits nicht ausschließen. Der Aufbau sicherer Smart Contracts erfordert die „Vorbereitung auf den Fehlerfall“ und einen Fallback-Plan, um effektiv auf Angriffe reagieren zu können. Ein ordnungsgemäßer Disaster-Recovery-Plan umfasst einige oder alle der folgenden Komponenten:
 
-#### Vertrags-Upgrades {#emergency-stops}
+#### Vertrags-Upgrades {#contract-upgrades}
 
 Während Ethereum-Smart-Contracts standardmäßig unveränderlich sind, ist es möglich, durch die Verwendung von Upgrade-Mustern ein gewisses Maß an Veränderbarkeit zu erreichen. Das Upgraden von Verträgen ist in Fällen notwendig, in denen ein kritischer Fehler Ihren alten Vertrag unbrauchbar macht und die Bereitstellung neuer Logik die praktikabelste Option ist.
 
@@ -137,7 +137,7 @@ Das Delegieren von Aufrufen an den Logik-Vertrag erfordert das Speichern seiner 
 
 [Mehr zum Upgraden von Verträgen](/developers/docs/smart-contracts/upgrading/).
 
-#### Notstopps {#event-monitoring}
+#### Notstopps {#emergency-stops}
 
 Wie bereits erwähnt, können umfangreiche Audits und Tests unmöglich alle Fehler in einem Smart Contract entdecken. Wenn nach der Bereitstellung eine Schwachstelle in Ihrem Code auftritt, ist das Patchen unmöglich, da Sie den an der Vertragsadresse ausgeführten Code nicht ändern können. Außerdem kann die Implementierung von Upgrade-Mechanismen (z. B. Proxy-Muster) Zeit in Anspruch nehmen (sie erfordern oft die Genehmigung verschiedener Parteien), was Angreifern nur mehr Zeit gibt, um mehr Schaden anzurichten.
 
@@ -201,7 +201,7 @@ Dieses Beispiel zeigt die grundlegenden Merkmale von Notstopps:
 
 Die Verwendung einer Notstopp-Funktionalität bietet eine effektive Übergangslösung für den Umgang mit schwerwiegenden Schwachstellen in Ihrem Smart Contract. Es erhöht jedoch die Notwendigkeit für Benutzer, darauf zu vertrauen, dass Entwickler sie nicht aus eigennützigen Gründen aktivieren. Zu diesem Zweck sind die Dezentralisierung der Kontrolle über den Notstopp, indem er einem Onchain-Abstimmungsmechanismus, einem Timelock oder der Genehmigung durch eine Multisig-Wallet unterworfen wird, mögliche Lösungen.
 
-#### Ereignisüberwachung {#design-secure-governance-systems}
+#### Ereignisüberwachung {#event-monitoring}
 
 [Ereignisse](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) ermöglichen es Ihnen, Aufrufe von Smart-Contract-Funktionen zu verfolgen und Änderungen an Zustandsvariablen zu überwachen. Es ist ideal, Ihren Smart Contract so zu programmieren, dass er ein Ereignis ausgibt, wann immer eine Partei eine sicherheitskritische Aktion durchführt (z. B. das Abheben von Geldern).
 
@@ -209,7 +209,7 @@ Das Protokollieren von Ereignissen und deren offchain-Überwachung bietet Einbli
 
 Sie können sich auch für ein handelsübliches Überwachungstool entscheiden, das automatisch Warnungen weiterleitet, wenn jemand mit Ihren Verträgen interagiert. Diese Tools ermöglichen es Ihnen, benutzerdefinierte Warnungen basierend auf verschiedenen Auslösern zu erstellen, wie z. B. Transaktionsvolumen, Häufigkeit von Funktionsaufrufen oder den spezifisch beteiligten Funktionen. Beispielsweise könnten Sie eine Warnung programmieren, die eingeht, wenn der in einer einzelnen Transaktion abgehobene Betrag einen bestimmten Schwellenwert überschreitet.
 
-### 7. Entwerfen Sie sichere Governance-Systeme {#reduce-code-complexity}
+### 7. Entwerfen Sie sichere Governance-Systeme {#design-secure-governance-systems}
 
 Möglicherweise möchten Sie Ihre Anwendung dezentralisieren, indem Sie die Kontrolle über zentrale Smart Contracts an Community-Mitglieder übergeben. In diesem Fall wird das Smart-Contract-System ein Governance-Modul enthalten – einen Mechanismus, der es Community-Mitgliedern ermöglicht, administrative Aktionen über ein Onchain-Governance-System zu genehmigen. Beispielsweise kann über einen Vorschlag zum Upgrade eines Proxy-Contracts auf eine neue Implementierung von Token-Inhabern abgestimmt werden.
 
@@ -219,7 +219,7 @@ Eine Möglichkeit, Probleme im Zusammenhang mit Onchain-Governance zu verhindern
 
 Mehr zum [Entwerfen sicherer Governance-Systeme](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), zu [verschiedenen Abstimmungsmechanismen in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos) und zu [den häufigen DAO-Angriffsvektoren, die DeFi nutzen](https://dacian.me/dao-governance-defi-attacks), in den geteilten Links.
 
-### 8. Reduzieren Sie die Komplexität im Code auf ein Minimum {#mitigate-common-smart-contract-vulnerabilities}
+### 8. Reduzieren Sie die Komplexität im Code auf ein Minimum {#reduce-code-complexity}
 
 Traditionelle Softwareentwickler sind mit dem KISS-Prinzip („Keep it simple, stupid“) vertraut, das davon abrät, unnötige Komplexität in das Software-Design einzuführen. Dies folgt dem langjährigen Gedanken, dass „komplexe Systeme auf komplexe Weise scheitern“ und anfälliger für kostspielige Fehler sind.
 
@@ -227,9 +227,9 @@ Die Dinge einfach zu halten, ist beim Schreiben von Smart Contracts von besonder
 
 Ein weiterer häufiger Ratschlag ist, kleine Funktionen zu schreiben und Verträge modular zu halten, indem die Geschäftslogik auf mehrere Verträge aufgeteilt wird. Das Schreiben von einfacherem Code reduziert nicht nur die Angriffsfläche in einem Smart Contract, sondern erleichtert es auch, über die Korrektheit des Gesamtsystems nachzudenken und mögliche Designfehler frühzeitig zu erkennen.
 
-### 9. Verteidigen Sie sich gegen häufige Smart-Contract-Schwachstellen {#reentrancy}
+### 9. Verteidigen Sie sich gegen häufige Smart-Contract-Schwachstellen {#mitigate-common-smart-contract-vulnerabilities}
 
-#### Wiedereintritt {#integer-underflows-and-overflows}
+#### Wiedereintritt {#reentrancy}
 
 Die EVM erlaubt keine Nebenläufigkeit (Concurrency), was bedeutet, dass zwei an einem Nachrichtenaufruf beteiligte Verträge nicht gleichzeitig ausgeführt werden können. Ein externer Aufruf pausiert die Ausführung und den Speicher des aufrufenden Vertrags, bis der Aufruf zurückkehrt, woraufhin die Ausführung normal fortgesetzt wird. Dieser Prozess kann formal als Übertragung des [Kontrollflusses](https://www.computerhope.com/jargon/c/contflow.htm) an einen anderen Vertrag beschrieben werden.
 
@@ -289,7 +289,7 @@ Dieser Vertrag ist darauf ausgelegt, drei Dinge zu tun:
 2. 1 ETH in den Victim-Vertrag einzahlen
 3. Die im Smart Contract gespeicherten 1 ETH abheben
 
-Daran ist nichts falsch, außer dass `Attacker` eine weitere Funktion hat, die `withdraw()` in `Victim` erneut aufruft, wenn das vom eingehenden `msg.sender.call.value` übrig gebliebene Gas mehr als 40.000 beträgt. Dies gibt `Attacker` die Möglichkeit, wieder in `Victim` einzutreten und mehr Gelder abzuheben, _bevor_ der erste Aufruf von `withdraw` abgeschlossen ist. Der Zyklus sieht so aus:
+Daran ist nichts falsch, außer dass `Attacker` eine weitere Funktion hat, die `withdraw() in `Victim` erneut aufruft, wenn das vom eingehenden `msg.sender.call.value` übrig gebliebene Gas mehr als 40.000 beträgt. Dies gibt `Attacker` die Möglichkeit, wieder in `Victim` einzutreten und mehr Gelder abzuheben, _bevor_ der erste Aufruf von `withdraw` abgeschlossen ist. Der Zyklus sieht so aus:
 
 ```solidity
 - Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH
@@ -306,7 +306,7 @@ Daran ist nichts falsch, außer dass `Attacker` eine weitere Funktion hat, die `
 
 Zusammenfassend lässt sich sagen, dass, da das Guthaben des Aufrufers erst auf 0 gesetzt wird, wenn die Funktionsausführung abgeschlossen ist, nachfolgende Aufrufe erfolgreich sein werden und es dem Aufrufer ermöglichen, sein Guthaben mehrmals abzuheben. Diese Art von Angriff kann verwendet werden, um einen Smart Contract von seinen Geldern zu leeren, wie es beim [DAO-Hack 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) geschah. Wiedereintritts-Angriffe sind auch heute noch ein kritisches Problem für Smart Contracts, wie [öffentliche Auflistungen von Wiedereintritts-Exploits](https://github.com/pcaversaccio/reentrancy-attacks) zeigen.
 
-##### Wie man Wiedereintritts-Angriffe verhindert {#oracle-manipulation}
+##### Wie man Wiedereintritts-Angriffe verhindert {#}
 
 Ein Ansatz zum Umgang mit Wiedereintritt ist die Befolgung des [Checks-Effects-Interactions-Musters](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Dieses Muster ordnet die Ausführung von Funktionen so an, dass Code, der notwendige Überprüfungen durchführt, bevor er mit der Ausführung fortfährt, an erster Stelle steht, gefolgt von Code, der den Vertragszustand manipuliert, und Code, der mit anderen Verträgen oder EOAs interagiert, an letzter Stelle steht.
 
@@ -356,7 +356,7 @@ contract MutexPattern {
 
 Sie können auch ein [Pull-Payments](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment)-System verwenden, das von Benutzern verlangt, Gelder aus den Smart Contracts abzuheben, anstelle eines „Push-Payments“-Systems, das Gelder an Konten sendet. Dies beseitigt die Möglichkeit, versehentlich Code an unbekannten Adressen auszulösen (und kann auch bestimmte Denial-of-Service-Angriffe verhindern).
 
-#### Integer-Unterläufe und -Überläufe {#smart-contract-security-resources-for-developers}
+#### Integer-Unterläufe und -Überläufe {#integer-underflows-and-overflows}
 
 Ein Integer-Überlauf tritt auf, wenn die Ergebnisse einer arithmetischen Operation außerhalb des akzeptablen Wertebereichs liegen, was dazu führt, dass sie auf den niedrigsten darstellbaren Wert „überrollen“. Beispielsweise kann ein `uint8` nur Werte bis zu 2^8-1=255 speichern. Arithmetische Operationen, die zu Werten über `255` führen, werden überlaufen und `uint` auf `0` zurücksetzen, ähnlich wie der Kilometerzähler eines Autos auf 0 zurückgesetzt wird, sobald er den maximalen Kilometerstand (999999) erreicht.
 
@@ -433,11 +433,11 @@ contract Attack {
 }
 ```
 
-##### Wie man Integer-Unterläufe und -Überläufe verhindert {#code-analysis-tools}
+##### Wie man Integer-Unterläufe und -Überläufe verhindert {#}
 
 Ab Version 0.8.0 lehnt der Solidity-Compiler Code ab, der zu Integer-Unterläufen und -Überläufen führt. Verträge, die mit einer niedrigeren Compiler-Version kompiliert wurden, sollten jedoch entweder Überprüfungen bei Funktionen durchführen, die arithmetische Operationen beinhalten, oder eine Bibliothek (z. B. [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) verwenden, die auf Unterlauf/Überlauf prüft.
 
-#### Orakel-Manipulation {#smart-contract-monitoring-tools}
+#### Orakel-Manipulation {#oracle-manipulation}
 
 [Orakel](/developers/docs/oracles/) beziehen offchain-Informationen und senden sie onchain, damit Smart Contracts sie nutzen können. Mit Orakeln können Sie Smart Contracts entwerfen, die mit offchain-Systemen wie Kapitalmärkten interagieren, was ihre Anwendungsmöglichkeiten erheblich erweitert.
 
@@ -449,15 +449,15 @@ DEX-Preise sind oft genau, was größtenteils Arbitrageuren zu verdanken ist, di
 
 Beispielsweise könnte ein Angreifer den Spotpreis eines Vermögenswerts künstlich in die Höhe treiben, indem er einen Blitzkredit aufnimmt, kurz bevor er mit Ihrem Kreditvertrag interagiert. Die Abfrage des Vermögenspreises bei der DEX würde einen überdurchschnittlich hohen Wert zurückgeben (da die große „Kauforder“ des Angreifers die Nachfrage nach dem Vermögenswert verzerrt), was es ihm ermöglicht, mehr zu leihen, als er sollte. Solche „Blitzkredit-Angriffe“ wurden genutzt, um die Abhängigkeit von Preis-Orakeln bei DeFi-Anwendungen auszunutzen, was Protokolle Millionen an verlorenen Geldern kostete.
 
-##### Wie man Orakel-Manipulation verhindert {#smart-contract-administration-tools}
+##### Wie man Orakel-Manipulation verhindert {#}
 
 Die Mindestanforderung zur [Vermeidung von Orakel-Manipulation](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) ist die Verwendung eines dezentralen Orakel-Netzwerks, das Informationen aus mehreren Quellen abfragt, um Single Points of Failure zu vermeiden. In den meisten Fällen verfügen dezentrale Orakel über integrierte kryptoökonomische Anreize, um Orakel-Knoten zu ermutigen, korrekte Informationen zu melden, was sie sicherer macht als zentralisierte Orakel.
 
 Wenn Sie planen, ein Onchain-Orakel für Vermögenspreise abzufragen, sollten Sie eines in Betracht ziehen, das einen zeitgewichteten Durchschnittspreis-Mechanismus (TWAP) implementiert. Ein [TWAP-Orakel](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) fragt den Preis eines Vermögenswerts zu zwei verschiedenen Zeitpunkten ab (die Sie ändern können) und berechnet den Spotpreis basierend auf dem ermittelten Durchschnitt. Die Wahl längerer Zeiträume schützt Ihr Protokoll vor Preismanipulationen, da kürzlich ausgeführte große Aufträge die Vermögenspreise nicht beeinflussen können.
 
-## Ressourcen zur Smart-Contract-Sicherheit für Entwickler {#smart-contract-auditing-services}
+## Ressourcen zur Smart-Contract-Sicherheit für Entwickler {#smart-contract-security-resources-for-developers}
 
-### Tools zur Analyse von Smart Contracts und zur Überprüfung der Code-Korrektheit {#bug-bounty-platforms}
+### Tools zur Analyse von Smart Contracts und zur Überprüfung der Code-Korrektheit {#code-analysis-tools}
 
 - **[Test-Tools und Bibliotheken](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _Sammlung von branchenüblichen Tools und Bibliotheken zur Durchführung von Unit-Tests, statischer Analyse und dynamischer Analyse von Smart Contracts._
 
@@ -473,17 +473,17 @@ Wenn Sie planen, ein Onchain-Orakel für Vermögenspreise abzufragen, sollten Si
 
 - **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Statischer Analysator für Solidity, der die abstrakten Syntaxbäume (AST) durchläuft, um vermutete Schwachstellen genau zu lokalisieren und Probleme in einem leicht verständlichen Markdown-Format auszugeben._
 
-### Tools zur Überwachung von Smart Contracts {#common-smart-contract-vulnerabilities-and-exploits}
+### Tools zur Überwachung von Smart Contracts {#smart-contract-monitoring-tools}
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/monitoring)** - _Ein Tool, um Echtzeit-Benachrichtigungen zu erhalten, wenn ungewöhnliche oder unerwartete Ereignisse bei Ihren Smart Contracts oder Wallets auftreten._
 
-### Tools zur sicheren Verwaltung von Smart Contracts {#challenges-for-learning-smart-contract-security}
+### Tools zur sicheren Verwaltung von Smart Contracts {#smart-contract-administration-tools}
 
 - **[Safe](https://safe.global/)** - _Eine auf Ethereum laufende Smart-Contract-Wallet, die eine Mindestanzahl von Personen erfordert, um eine Transaktion zu genehmigen, bevor sie ausgeführt werden kann (M-von-N)._
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Vertragsbibliotheken zur Implementierung administrativer Funktionen, einschließlich Vertragsbesitz, Upgrades, Zugriffskontrollen, Governance, Pausierbarkeit und mehr._
 
-### Smart-Contract-Auditing-Dienste {#smart-contract-security-best-practices}
+### Smart-Contract-Auditing-Dienste {#smart-contract-auditing-services}
 
 - **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Smart-Contract-Auditing-Dienst, der Projekten im gesamten Blockchain-Ökosystem hilft, sicherzustellen, dass ihre Protokolle bereit für den Start sind und zum Schutz der Benutzer entwickelt wurden._
 
@@ -517,7 +517,7 @@ Wenn Sie planen, ein Onchain-Orakel für Vermögenspreise abzufragen, sollten Si
 
 - **[Inference](https://inference.ag/)** - _Sicherheits-Auditing-Unternehmen, spezialisiert auf Smart-Contract-Auditing für EVM-basierte Blockchains. Dank seiner erfahrenen Auditoren identifizieren sie potenzielle Probleme und schlagen umsetzbare Lösungen vor, um diese vor der Bereitstellung zu beheben._
 
-### Bug-Bounty-Plattformen {#tutorials-on-smart-contract-security}
+### Bug-Bounty-Plattformen {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug-Bounty-Plattform für Smart Contracts und Dezentralisierte Finanzen (DeFi)-Projekte, auf der Sicherheitsforscher Code überprüfen, Schwachstellen offenlegen, bezahlt werden und Krypto sicherer machen._
 
@@ -529,7 +529,7 @@ Wenn Sie planen, ein Onchain-Orakel für Vermögenspreise abzufragen, sollten Si
 
 -  **[CodeHawks](https://www.codehawks.com/)** - _Wettbewerbsorientierte Bug-Bounty-Plattform, auf der Auditoren an Sicherheitswettbewerben und Herausforderungen sowie (bald) an ihren eigenen privaten Audits teilnehmen._
 
-### Publikationen bekannter Smart-Contract-Schwachstellen und -Exploits
+### Publikationen bekannter Smart-Contract-Schwachstellen und -Exploits {#common-smart-contract-vulnerabilities-and-exploits}
 
 - **[ConsenSys: Bekannte Smart-Contract-Angriffe](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Anfängerfreundliche Erklärung der wichtigsten Vertrags-Schwachstellen, mit Beispielcode für die meisten Fälle._
 
@@ -537,7 +537,7 @@ Wenn Sie planen, ein Onchain-Orakel für Vermögenspreise abzufragen, sollten Si
 
 - **[Rekt](https://rekt.news/)** - _Regelmäßig aktualisierte Publikation von aufsehenerregenden Krypto-Hacks und -Exploits, zusammen mit detaillierten Post-Mortem-Berichten._
 
-### Herausforderungen zum Erlernen der Smart-Contract-Sicherheit
+### Herausforderungen zum Erlernen der Smart-Contract-Sicherheit {#challenges-for-learning-smart-contract-security}
 
 - **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Kuratierte Liste von Blockchain-Sicherheits-Wargames, Herausforderungen und [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/)-Wettbewerben sowie Lösungsberichten._
 
@@ -547,7 +547,7 @@ Wenn Sie planen, ein Onchain-Orakel für Vermögenspreise abzufragen, sollten Si
 
 - **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Smart-Contract-Hacking-Herausforderung, eingebettet in ein Fantasy-Abenteuer. Der erfolgreiche Abschluss der Herausforderung gewährt zudem Zugang zu einem privaten Bug-Bounty-Programm._
 
-### Best Practices zur Sicherung von Smart Contracts
+### Best Practices zur Sicherung von Smart Contracts {#smart-contract-security-best-practices}
 
 - **[ConsenSys: Best Practices für die Sicherheit von Ethereum-Smart-Contracts](https://consensys.github.io/smart-contract-best-practices/)** - _Umfassende Liste von Richtlinien zur Sicherung von Ethereum-Smart-Contracts._
 
@@ -561,7 +561,7 @@ Wenn Sie planen, ein Onchain-Orakel für Vermögenspreise abzufragen, sollten Si
 
 - **[Smart-Contract-Sicherheit und Auditing lernen](https://updraft.cyfrin.io/courses/security)** - _Ultimativer Kurs für Smart-Contract-Sicherheit und Auditing, entwickelt für Smart-Contract-Entwickler, die ihre Sicherheits-Best-Practices verbessern und Sicherheitsforscher werden möchten._
 
-### Tutorials zur Smart-Contract-Sicherheit
+### Tutorials zur Smart-Contract-Sicherheit {#tutorials-on-smart-contract-security}
 
 - [Wie man sichere Smart Contracts schreibt](/developers/tutorials/secure-development-workflow/)
 

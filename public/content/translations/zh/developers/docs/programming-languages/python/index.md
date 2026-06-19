@@ -1,6 +1,6 @@
 ---
-title: 适合 Python 开发者的以太坊
-description: 学习如何使用基于 Python 的项目和工具在以太坊上进行开发
+title: "适合 Python 开发者的以太坊"
+description: "学习如何使用基于 Python 的项目和工具在以太坊上进行开发"
 lang: zh
 incomplete: true
 ---

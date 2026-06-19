@@ -1,6 +1,6 @@
 ---
-title: Dart開発者のためのイーサリアム
-description: Dart言語を使用してイーサリアム向けに開発する方法を学ぶ
+title: "Dart開発者のためのイーサリアム"
+description: "Dart言語を使用してイーサリアム向けに開発する方法を学ぶ"
 lang: ja
 incomplete: true
 ---

@@ -39,7 +39,7 @@ incomplete: true
 
 - [بيئة اللعب (Playground)](https://playground.nethereum.com/) - تفاعل مع إيثيريوم وتعلم كيفية استخدام Nethereum من خلال المتصفح.
   - [الاستعلام عن رصيد الحساب](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
-  - [الاستعلام عن رصيد العقد الذكي ERC-20](https://docs.nethereum.com/docs/smart-contracts/erc20)
+  - [الاستعلام عن رصيد العقد الذكي <span dir="ltr">ERC-20</span>](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [تحويل إيثر إلى حساب](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... والمزيد!
 

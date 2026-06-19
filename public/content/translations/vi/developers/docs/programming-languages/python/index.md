@@ -1,6 +1,6 @@
 ---
-title: Ethereum cho nhà phát triển Python
-description: Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Python
+title: "Ethereum cho nhà phát triển Python"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Python"
 lang: vi
 incomplete: true
 ---

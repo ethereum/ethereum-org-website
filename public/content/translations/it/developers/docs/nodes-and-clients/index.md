@@ -1,6 +1,6 @@
 ---
 title: Nodi e client
-description: Una panoramica dei nodi e dei software client di Ethereum, oltre a come configurare un nodo e perché dovresti farlo.
+description: "Una panoramica dei nodi e dei software client di Ethereum, oltre a come configurare un nodo e perché dovresti farlo."
 lang: it
 sidebarDepth: 2
 ---

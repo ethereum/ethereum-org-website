@@ -1,10 +1,10 @@
 ---
 title: "आप जितना कैश कर सकते हैं"
-description: सस्ते रोलअप लेन-देन के लिए कैशिंग अनुबंध बनाना और उसका उपयोग करना सीखें
-author: ओरी पोमेरेंट्ज़
+description: "सस्ते रोलअप लेन-देन के लिए कैशिंग अनुबंध बनाना और उसका उपयोग करना सीखें"
+author: "ओरी पोमेरेंट्ज़"
 tags: ["लेयर 2", "कैशिंग", "स्टोरेज", "स्केलिंग"]
 skill: intermediate
-breadcrumb: रोलअप्स के लिए कैशिंग
+breadcrumb: "रोलअप्स के लिए कैशिंग"
 published: 2022-09-15
 lang: hi
 ---
@@ -757,6 +757,7 @@ contract WORM is Cache {
 इस तरह हम सत्यापित करते हैं कि कोड Foundry में [किसी घटना को सही ढंग से उत्सर्जित करता है](https://getfoundry.sh/reference/cheatcodes/expect-emit/)।
 
 ### क्लाइंट {#the-client}
+
 Solidity परीक्षणों के साथ आपको एक चीज़ जो नहीं मिलती है वह है JavaScript कोड जिसे आप अपने स्वयं के एप्लिकेशन में कट और पेस्ट कर सकते हैं। उस कोड को लिखने के लिए मैंने WORM को [ऑप्टिमिज़्म गोएर्ली](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli) पर तैनात किया, जो [ऑप्टिमिज़्म](https://www.optimism.io/) का नया टेस्टनेट है। यह [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a) पते पर है।
 
 [आप यहाँ क्लाइंट के लिए JavaScript कोड देख सकते हैं](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)। इसका उपयोग करने के लिए:

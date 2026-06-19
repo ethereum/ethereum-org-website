@@ -34,13 +34,13 @@ Mendaftarkan satu alamat sebagai `Owner` dalam kontrak pintar menimbulkan risiko
 
 Dalam kontrol akses berbasis peran, akses ke fungsi sensitif didistribusikan di antara sekumpulan peserta tepercaya. Misalnya, satu akun mungkin bertanggung jawab untuk pencetakan token, sementara akun lain melakukan peningkatan atau menjeda kontrak. Mendestralisasikan kontrol akses dengan cara ini menghilangkan titik kegagalan tunggal dan mengurangi asumsi kepercayaan bagi pengguna.
 
-##### Menggunakan dompet tanda tangan ganda {#use-require-assert-revert}
+##### Menggunakan dompet tanda tangan ganda {#}
 
 Pendekatan lain untuk menerapkan kontrol akses yang aman adalah menggunakan [akun tanda tangan ganda](/developers/docs/smart-contracts/#multisig) untuk mengelola kontrak. Tidak seperti EOA biasa, akun tanda tangan ganda dimiliki oleh beberapa entitas dan memerlukan tanda tangan dari jumlah minimum akun—katakanlah 3-dari-5—untuk mengeksekusi transaksi.
 
 Menggunakan multisig untuk kontrol akses memperkenalkan lapisan keamanan ekstra karena tindakan pada kontrak target memerlukan persetujuan dari beberapa pihak. Hal ini sangat berguna jika penggunaan pola Ownable diperlukan, karena membuatnya lebih sulit bagi penyerang atau orang dalam yang jahat untuk memanipulasi fungsi kontrak sensitif untuk tujuan jahat.
 
-### 2. Gunakan pernyataan require(), assert(), dan revert() untuk menjaga operasi kontrak {#test-smart-contracts-and-verify-code-correctness}
+### 2. Gunakan pernyataan require(), assert(), dan revert() untuk menjaga operasi kontrak {#use-require-assert-revert}
 
 Seperti yang disebutkan, siapa pun dapat memanggil fungsi publik dalam kontrak pintar Anda setelah disebarkan di rantai blok. Karena Anda tidak dapat mengetahui sebelumnya bagaimana akun eksternal akan berinteraksi dengan kontrak, sangat ideal untuk menerapkan perlindungan internal terhadap operasi bermasalah sebelum penyebaran. Anda dapat menegakkan perilaku yang benar dalam kontrak pintar dengan menggunakan pernyataan `require()`, `assert()`, dan `revert()` untuk memicu pengecualian dan mengembalikan perubahan state jika eksekusi gagal memenuhi persyaratan tertentu.
 
@@ -70,7 +70,7 @@ contract VendingMachine {
 }
 ```
 
-### 3. Uji kontrak pintar dan verifikasi kebenaran kode {#get-independent-code-reviews}
+### 3. Uji kontrak pintar dan verifikasi kebenaran kode {#test-smart-contracts-and-verify-code-correctness}
 
 Ketidakberubahan kode yang berjalan di [Mesin Virtual Ethereum](/developers/docs/evm/) berarti kontrak pintar menuntut tingkat penilaian kualitas yang lebih tinggi selama fase pengembangan. Menguji kontrak Anda secara ekstensif dan mengamatinya untuk hasil yang tidak terduga akan sangat meningkatkan keamanan dan melindungi pengguna Anda dalam jangka panjang.
 
@@ -82,11 +82,11 @@ Pendekatan yang lebih baik adalah menggabungkan pengujian unit dengan pengujian 
 
 [Verifikasi formal](/developers/docs/smart-contracts/formal-verification) adalah teknik lain untuk memverifikasi properti keamanan dalam kontrak pintar. Tidak seperti pengujian biasa, verifikasi formal dapat secara meyakinkan membuktikan tidak adanya kesalahan dalam kontrak pintar. Hal ini dicapai dengan membuat spesifikasi formal yang menangkap properti keamanan yang diinginkan dan membuktikan bahwa model formal dari kontrak mematuhi spesifikasi ini.
 
-### 4. Mintalah tinjauan independen atas kode Anda {#audits}
+### 4. Mintalah tinjauan independen atas kode Anda {#get-independent-code-reviews}
 
 Setelah menguji kontrak Anda, ada baiknya meminta orang lain untuk memeriksa kode sumber untuk masalah keamanan apa pun. Pengujian tidak akan mengungkap setiap kelemahan dalam kontrak pintar, tetapi mendapatkan tinjauan independen meningkatkan kemungkinan menemukan kerentanan.
 
-#### Audit {#bug-bounties}
+#### Audit {#audits}
 
 Menugaskan audit kontrak pintar adalah salah satu cara untuk melakukan tinjauan kode independen. Auditor memainkan peran penting dalam memastikan bahwa kontrak pintar aman dan bebas dari cacat kualitas serta kesalahan desain.
 
@@ -95,7 +95,7 @@ Meskipun demikian, Anda harus menghindari memperlakukan audit sebagai solusi aja
 - [Kiat & trik audit kontrak pintar](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Maksimalkan audit Anda](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
-#### Bug bounty {#follow-smart-contract-development-best-practices}
+#### Bug bounty {#bug-bounties}
 
 Menyiapkan program bug bounty adalah pendekatan lain untuk menerapkan tinjauan kode eksternal. Bug bounty adalah imbalan finansial yang diberikan kepada individu (biasanya peretas topi putih) yang menemukan kerentanan dalam suatu aplikasi.
 
@@ -103,7 +103,7 @@ Jika digunakan dengan benar, bug bounty memberikan insentif kepada anggota komun
 
 Strategi yang berguna adalah menetapkan pembayaran program bug bounty secara proporsional dengan jumlah dana yang dipertaruhkan. Digambarkan sebagai "[bug bounty berskala](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)", pendekatan ini memberikan insentif finansial bagi individu untuk mengungkapkan kerentanan secara bertanggung jawab alih-alih mengeksploitasinya.
 
-### 5. Ikuti praktik terbaik selama pengembangan kontrak pintar {#implement-disaster-recovery-plans}
+### 5. Ikuti praktik terbaik selama pengembangan kontrak pintar {#follow-smart-contract-development-best-practices}
 
 Keberadaan audit dan bug bounty tidak membebaskan tanggung jawab Anda untuk menulis kode berkualitas tinggi. Keamanan kontrak pintar yang baik dimulai dengan mengikuti proses desain dan pengembangan yang tepat:
 
@@ -121,11 +121,11 @@ Keberadaan audit dan bug bounty tidak membebaskan tanggung jawab Anda untuk menu
 
 - Dokumentasikan kode Anda dengan benar (menggunakan [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)) dan jelaskan detail tentang arsitektur kontrak dalam bahasa yang mudah dipahami. Ini akan memudahkan orang lain untuk mengaudit dan meninjau kode Anda.
 
-### 6. Terapkan rencana pemulihan bencana yang kuat {#contract-upgrades}
+### 6. Terapkan rencana pemulihan bencana yang kuat {#implement-disaster-recovery-plans}
 
 Merancang kontrol akses yang aman, menerapkan pengubah fungsi, dan saran lainnya dapat meningkatkan keamanan kontrak pintar, tetapi tidak dapat mengesampingkan kemungkinan eksploitasi berbahaya. Membangun kontrak pintar yang aman membutuhkan "persiapan untuk kegagalan" dan memiliki rencana cadangan untuk merespons serangan secara efektif. Rencana pemulihan bencana yang tepat akan menggabungkan beberapa atau semua komponen berikut:
 
-#### Peningkatan kontrak {#emergency-stops}
+#### Peningkatan kontrak {#contract-upgrades}
 
 Meskipun kontrak pintar Ethereum secara default tidak dapat diubah, dimungkinkan untuk mencapai tingkat mutabilitas tertentu dengan menggunakan pola peningkatan. Meningkatkan kontrak diperlukan dalam kasus di mana kelemahan kritis membuat kontrak lama Anda tidak dapat digunakan dan menyebarkan logika baru adalah opsi yang paling layak.
 
@@ -137,7 +137,7 @@ Mendelegasikan panggilan ke kontrak logika memerlukan penyimpanan alamatnya di p
 
 [Lebih lanjut tentang peningkatan kontrak](/developers/docs/smart-contracts/upgrading/).
 
-#### Penghentian darurat {#event-monitoring}
+#### Penghentian darurat {#emergency-stops}
 
 Seperti yang disebutkan, audit dan pengujian ekstensif tidak mungkin menemukan semua bug dalam kontrak pintar. Jika kerentanan muncul dalam kode Anda setelah penyebaran, menambalnya tidak mungkin dilakukan karena Anda tidak dapat mengubah kode yang berjalan di alamat kontrak. Selain itu, mekanisme peningkatan (misalnya, pola proksi) mungkin memerlukan waktu untuk diterapkan (sering kali memerlukan persetujuan dari berbagai pihak), yang hanya memberi penyerang lebih banyak waktu untuk menyebabkan lebih banyak kerusakan.
 
@@ -201,7 +201,7 @@ Contoh ini menunjukkan fitur dasar dari penghentian darurat:
 
 Menggunakan fungsionalitas penghentian darurat memberikan solusi sementara yang efektif untuk menangani kerentanan serius dalam kontrak pintar Anda. Namun, hal ini meningkatkan kebutuhan pengguna untuk mempercayai pengembang agar tidak mengaktifkannya untuk alasan kepentingan pribadi. Untuk tujuan ini, mendesentralisasikan kontrol penghentian darurat baik dengan menundukkannya pada mekanisme pemungutan suara onchain, timelock, atau persetujuan dari dompet multisig adalah solusi yang memungkinkan.
 
-#### Pemantauan peristiwa {#design-secure-governance-systems}
+#### Pemantauan peristiwa {#event-monitoring}
 
 [Peristiwa](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) memungkinkan Anda melacak panggilan ke fungsi kontrak pintar dan memantau perubahan pada variabel state. Sangat ideal untuk memprogram kontrak pintar Anda agar memancarkan peristiwa setiap kali ada pihak yang mengambil tindakan kritis terhadap keamanan (misalnya, penarikan dana).
 
@@ -209,7 +209,7 @@ Mencatat peristiwa dan memantaunya secara offchain memberikan wawasan tentang op
 
 Anda juga dapat memilih alat pemantauan siap pakai yang secara otomatis meneruskan peringatan setiap kali seseorang berinteraksi dengan kontrak Anda. Alat-alat ini akan memungkinkan Anda membuat peringatan khusus berdasarkan pemicu yang berbeda, seperti volume transaksi, frekuensi panggilan fungsi, atau fungsi spesifik yang terlibat. Misalnya, Anda dapat memprogram peringatan yang masuk saat jumlah yang ditarik dalam satu transaksi melewati ambang batas tertentu.
 
-### 7. Rancang sistem tata kelola yang aman {#reduce-code-complexity}
+### 7. Rancang sistem tata kelola yang aman {#design-secure-governance-systems}
 
 Anda mungkin ingin mendesentralisasikan aplikasi Anda dengan menyerahkan kendali kontrak pintar inti kepada anggota komunitas. Dalam hal ini, sistem kontrak pintar akan mencakup modul tata kelola—sebuah mekanisme yang memungkinkan anggota komunitas untuk menyetujui tindakan administratif melalui sistem tata kelola onchain. Misalnya, proposal untuk meningkatkan kontrak proksi ke implementasi baru dapat dipilih oleh pemegang token.
 
@@ -219,7 +219,7 @@ Salah satu cara untuk mencegah masalah terkait tata kelola onchain adalah dengan
 
 Lebih lanjut tentang [merancang sistem tata kelola yang aman](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [berbagai mekanisme pemungutan suara di DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos), dan [vektor serangan DAO umum yang memanfaatkan DeFi](https://dacian.me/dao-governance-defi-attacks) di tautan yang dibagikan.
 
-### 8. Kurangi kompleksitas dalam kode seminimal mungkin {#mitigate-common-smart-contract-vulnerabilities}
+### 8. Kurangi kompleksitas dalam kode seminimal mungkin {#reduce-code-complexity}
 
 Pengembang perangkat lunak tradisional akrab dengan prinsip KISS ("keep it simple, stupid"), yang menyarankan untuk tidak memasukkan kompleksitas yang tidak perlu ke dalam desain perangkat lunak. Hal ini mengikuti pemikiran yang telah lama dipegang bahwa "sistem yang kompleks gagal dengan cara yang kompleks" dan lebih rentan terhadap kesalahan yang merugikan.
 
@@ -227,9 +227,9 @@ Menjaga segala sesuatunya tetap sederhana sangat penting saat menulis kontrak pi
 
 Saran umum lainnya adalah menulis fungsi kecil dan menjaga kontrak tetap modular dengan membagi logika bisnis di beberapa kontrak. Menulis kode yang lebih sederhana tidak hanya mengurangi permukaan serangan dalam kontrak pintar, tetapi juga memudahkan untuk menalar kebenaran sistem secara keseluruhan dan mendeteksi kemungkinan kesalahan desain sejak dini.
 
-### 9. Bertahan terhadap kerentanan kontrak pintar yang umum {#reentrancy}
+### 9. Bertahan terhadap kerentanan kontrak pintar yang umum {#mitigate-common-smart-contract-vulnerabilities}
 
-#### Reentransi {#integer-underflows-and-overflows}
+#### Reentransi {#reentrancy}
 
 EVM tidak mengizinkan konkurensi, yang berarti dua kontrak yang terlibat dalam panggilan pesan tidak dapat berjalan secara bersamaan. Panggilan eksternal menjeda eksekusi dan memori kontrak pemanggil hingga panggilan kembali, di mana eksekusi dilanjutkan secara normal. Proses ini dapat secara formal digambarkan sebagai mentransfer [aliran kontrol](https://www.computerhope.com/jargon/c/contflow.htm) ke kontrak lain.
 
@@ -306,7 +306,7 @@ Tidak ada yang salah di sini, kecuali bahwa `Attacker` memiliki fungsi lain yang
 
 Ringkasannya adalah karena saldo pemanggil tidak diatur ke 0 hingga eksekusi fungsi selesai, pemanggilan berikutnya akan berhasil dan memungkinkan pemanggil untuk menarik saldo mereka beberapa kali. Jenis serangan ini dapat digunakan untuk menguras dana kontrak pintar, seperti yang terjadi pada [peretasan DAO tahun 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Serangan reentransi masih menjadi masalah kritis untuk kontrak pintar saat ini seperti yang ditunjukkan oleh [daftar publik eksploitasi reentransi](https://github.com/pcaversaccio/reentrancy-attacks).
 
-##### Cara mencegah serangan reentransi {#oracle-manipulation}
+##### Cara mencegah serangan reentransi {#}
 
 Pendekatan untuk menangani reentransi adalah mengikuti [pola pemeriksaan-efek-interaksi](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Pola ini mengurutkan eksekusi fungsi sedemikian rupa sehingga kode yang melakukan pemeriksaan yang diperlukan sebelum melanjutkan eksekusi didahulukan, diikuti oleh kode yang memanipulasi state kontrak, dengan kode yang berinteraksi dengan kontrak lain atau EOA berada di urutan terakhir.
 
@@ -356,7 +356,7 @@ contract MutexPattern {
 
 Anda juga dapat menggunakan sistem [pembayaran tarik (pull payments)](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment) yang mengharuskan pengguna untuk menarik dana dari kontrak pintar, alih-alih sistem "pembayaran dorong (push payments)" yang mengirimkan dana ke akun. Hal ini menghilangkan kemungkinan memicu kode secara tidak sengaja di alamat yang tidak diketahui (dan juga dapat mencegah serangan penolakan layanan (denial-of-service) tertentu).
 
-#### Limpahan bawah (underflow) dan limpahan (overflow) bilangan bulat {#smart-contract-security-resources-for-developers}
+#### Limpahan bawah (underflow) dan limpahan (overflow) bilangan bulat {#integer-underflows-and-overflows}
 
 Limpahan bilangan bulat terjadi ketika hasil operasi aritmatika berada di luar rentang nilai yang dapat diterima, menyebabkannya "bergulir" ke nilai terendah yang dapat direpresentasikan. Misalnya, `uint8` hanya dapat menyimpan nilai hingga 2^8-1=255. Operasi aritmatika yang menghasilkan nilai lebih tinggi dari `255` akan melimpah dan mengatur ulang `uint` menjadi `0`, mirip dengan bagaimana odometer pada mobil diatur ulang ke 0 setelah mencapai jarak tempuh maksimum (999999).
 
@@ -433,11 +433,11 @@ contract Attack {
 }
 ```
 
-##### Cara mencegah limpahan bawah dan limpahan bilangan bulat {#code-analysis-tools}
+##### Cara mencegah limpahan bawah dan limpahan bilangan bulat {#}
 
 Mulai versi 0.8.0, kompiler Solidity menolak kode yang menghasilkan limpahan bawah dan limpahan bilangan bulat. Namun, kontrak yang dikompilasi dengan versi kompiler yang lebih rendah harus melakukan pemeriksaan pada fungsi yang melibatkan operasi aritmatika atau menggunakan pustaka (misalnya, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) yang memeriksa limpahan bawah/limpahan.
 
-#### Manipulasi orakel {#smart-contract-monitoring-tools}
+#### Manipulasi orakel {#oracle-manipulation}
 
 [Orakel](/developers/docs/oracles/) mengambil informasi offchain dan mengirimkannya secara onchain untuk digunakan oleh kontrak pintar. Dengan orakel, Anda dapat merancang kontrak pintar yang beroperasi dengan sistem offchain, seperti pasar modal, yang sangat memperluas aplikasinya.
 
@@ -449,15 +449,15 @@ Harga DEX sering kali akurat, sebagian besar karena pelaku arbitrase memulihkan 
 
 Misalnya, penyerang dapat secara artifisial memompa harga spot suatu aset dengan mengambil pinjaman kilat tepat sebelum berinteraksi dengan kontrak peminjaman Anda. Meminta harga aset ke DEX akan mengembalikan nilai yang lebih tinggi dari biasanya (karena "pesanan beli" penyerang yang besar memiringkan permintaan aset), memungkinkan mereka untuk meminjam lebih dari yang seharusnya. "Serangan pinjaman kilat" semacam itu telah digunakan untuk mengeksploitasi ketergantungan pada orakel harga di antara aplikasi DeFi, yang merugikan protokol hingga jutaan dana yang hilang.
 
-##### Cara mencegah manipulasi orakel {#smart-contract-administration-tools}
+##### Cara mencegah manipulasi orakel {#}
 
 Persyaratan minimum untuk [menghindari manipulasi orakel](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) adalah menggunakan jaringan orakel terdesentralisasi yang meminta informasi dari berbagai sumber untuk menghindari titik kegagalan tunggal. Dalam kebanyakan kasus, orakel terdesentralisasi memiliki insentif kriptoekonomi bawaan untuk mendorong node orakel melaporkan informasi yang benar, menjadikannya lebih aman daripada orakel terpusat.
 
 Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan untuk menggunakan orakel yang menerapkan mekanisme harga rata-rata tertimbang waktu (TWAP). [Orakel TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) meminta harga aset pada dua titik waktu yang berbeda (yang dapat Anda modifikasi) dan menghitung harga spot berdasarkan rata-rata yang diperoleh. Memilih periode waktu yang lebih lama melindungi protokol Anda dari manipulasi harga karena pesanan besar yang dieksekusi baru-baru ini tidak dapat memengaruhi harga aset.
 
-## Sumber daya keamanan kontrak pintar untuk pengembang {#smart-contract-auditing-services}
+## Sumber daya keamanan kontrak pintar untuk pengembang {#smart-contract-security-resources-for-developers}
 
-### Alat untuk menganalisis kontrak pintar dan memverifikasi kebenaran kode {#bug-bounty-platforms}
+### Alat untuk menganalisis kontrak pintar dan memverifikasi kebenaran kode {#code-analysis-tools}
 
 - **[Alat pengujian dan pustaka](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _Koleksi alat dan pustaka standar industri untuk melakukan pengujian unit, analisis statis, dan analisis dinamis pada kontrak pintar._
 
@@ -473,17 +473,17 @@ Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan un
 
 - **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Penganalisis Statis Solidity, melintasi Abstract Syntax Trees (AST) untuk menunjukkan dengan tepat dugaan kerentanan dan mencetak masalah dalam format markdown yang mudah dipahami._
 
-### Alat untuk memantau kontrak pintar {#common-smart-contract-vulnerabilities-and-exploits}
+### Alat untuk memantau kontrak pintar {#smart-contract-monitoring-tools}
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/monitoring)** - _Alat untuk mendapatkan notifikasi waktu nyata ketika peristiwa yang tidak biasa atau tidak terduga terjadi pada kontrak pintar atau dompet Anda._
 
-### Alat untuk administrasi kontrak pintar yang aman {#challenges-for-learning-smart-contract-security}
+### Alat untuk administrasi kontrak pintar yang aman {#smart-contract-administration-tools}
 
 - **[Safe](https://safe.global/)** - _Dompet kontrak pintar yang berjalan di Ethereum yang mewajibkan jumlah minimum orang untuk menyetujui transaksi sebelum dapat terjadi (M-of-N)._
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Pustaka kontrak untuk mengimplementasikan fitur administratif, termasuk kepemilikan kontrak, peningkatan, kontrol akses, tata kelola, kemampuan jeda, dan banyak lagi._
 
-### Layanan audit kontrak pintar {#smart-contract-security-best-practices}
+### Layanan audit kontrak pintar {#smart-contract-auditing-services}
 
 - **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Layanan audit kontrak pintar yang membantu proyek di seluruh ekosistem rantai blok memastikan protokol mereka siap diluncurkan dan dibangun untuk melindungi pengguna._
 
@@ -517,7 +517,7 @@ Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan un
 
 - **[Inference](https://inference.ag/)** - _Perusahaan audit keamanan, berspesialisasi dalam audit kontrak pintar untuk rantai blok berbasis EVM. Berkat auditor ahlinya, mereka mengidentifikasi potensi masalah dan menyarankan solusi yang dapat ditindaklanjuti untuk memperbaikinya sebelum penyebaran._
 
-### Platform bug bounty {#tutorials-on-smart-contract-security}
+### Platform bug bounty {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Platform bug bounty untuk kontrak pintar dan proyek DeFi, tempat peneliti keamanan meninjau kode, mengungkapkan kerentanan, mendapatkan bayaran, dan membuat kripto lebih aman._
 
@@ -529,7 +529,7 @@ Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan un
 
 -  **[CodeHawks](https://www.codehawks.com/)** - _Platform bug bounty kompetitif tempat auditor mengambil bagian dalam kontes dan tantangan keamanan, dan (segera) dalam audit pribadi mereka sendiri._
 
-### Publikasi kerentanan dan eksploitasi kontrak pintar yang diketahui
+### Publikasi kerentanan dan eksploitasi kontrak pintar yang diketahui {#common-smart-contract-vulnerabilities-and-exploits}
 
 - **[ConsenSys: Serangan Kontrak Pintar yang Diketahui](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Penjelasan ramah pemula tentang kerentanan kontrak yang paling signifikan, dengan kode sampel untuk sebagian besar kasus._
 
@@ -537,7 +537,7 @@ Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan un
 
 - **[Rekt](https://rekt.news/)** - _Publikasi yang diperbarui secara berkala tentang peretasan dan eksploitasi kripto tingkat tinggi, beserta laporan post-mortem yang terperinci._
 
-### Tantangan untuk mempelajari keamanan kontrak pintar
+### Tantangan untuk mempelajari keamanan kontrak pintar {#challenges-for-learning-smart-contract-security}
 
 - **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Daftar kurasi wargame keamanan rantai blok, tantangan, dan kompetisi [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) serta tulisan solusinya._
 
@@ -547,7 +547,7 @@ Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan un
 
 - **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Tantangan peretasan kontrak pintar, berlatar petualangan fantasi. Penyelesaian tantangan yang berhasil juga memberikan akses ke program bug bounty pribadi._
 
-### Praktik terbaik untuk mengamankan kontrak pintar
+### Praktik terbaik untuk mengamankan kontrak pintar {#smart-contract-security-best-practices}
 
 - **[ConsenSys: Praktik Terbaik Keamanan Kontrak Pintar Ethereum](https://consensys.github.io/smart-contract-best-practices/)** - _Daftar panduan komprehensif untuk mengamankan kontrak pintar Ethereum._
 
@@ -561,7 +561,7 @@ Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan un
 
 - **[Pelajari Keamanan dan Audit Kontrak Pintar](https://updraft.cyfrin.io/courses/security)** - _Kursus keamanan dan audit kontrak pintar terbaik, dibuat untuk pengembang kontrak pintar yang ingin meningkatkan praktik terbaik keamanan mereka dan menjadi peneliti keamanan._
 
-### Tutorial tentang keamanan kontrak pintar
+### Tutorial tentang keamanan kontrak pintar {#tutorials-on-smart-contract-security}
 
 - [Cara menulis kontrak pintar yang aman](/developers/tutorials/secure-development-workflow/)
 

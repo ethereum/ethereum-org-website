@@ -1,6 +1,6 @@
 ---
-title: Ethereum dla programistów Java
-description: Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na języku Java
+title: "Ethereum dla programistów Java"
+description: "Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na języku Java"
 lang: pl
 incomplete: true
 ---

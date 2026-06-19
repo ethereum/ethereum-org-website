@@ -1,6 +1,6 @@
 ---
 title: Zdecentralizowane przechowywanie danych
-description: Przegląd tego, czym jest zdecentralizowane przechowywanie danych i dostępnych narzędzi do zintegrowania go ze zdecentralizowaną aplikacją (dapp).
+description: "Przegląd tego, czym jest zdecentralizowane przechowywanie danych i dostępnych narzędzi do zintegrowania go ze zdecentralizowaną aplikacją (dapp)."
 lang: pl
 authors: ["Patrick Collins"]
 ---

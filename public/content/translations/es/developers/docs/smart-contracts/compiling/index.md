@@ -1,6 +1,6 @@
 ---
-title: Compilación de contratos inteligentes
-description: Una explicación de por qué necesita compilar contratos inteligentes y qué hace realmente la compilación.
+title: "Compilación de contratos inteligentes"
+description: "Una explicación de por qué necesita compilar contratos inteligentes y qué hace realmente la compilación."
 lang: es
 incomplete: true
 ---

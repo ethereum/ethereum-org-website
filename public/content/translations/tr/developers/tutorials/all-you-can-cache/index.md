@@ -1,10 +1,10 @@
 ---
 title: "Önbelleğe alabildiğiniz kadar"
-description: Daha ucuz Rollup işlemleri için bir önbelleğe alma sözleşmesinin nasıl oluşturulacağını ve kullanılacağını öğrenin
+description: "Daha ucuz Rollup işlemleri için bir önbelleğe alma sözleşmesinin nasıl oluşturulacağını ve kullanılacağını öğrenin"
 author: Ori Pomerantz
 tags: ["katman 2", "önbelleğe alma", "depolama", "ölçeklendirme"]
 skill: intermediate
-breadcrumb: Toplamalar için önbelleğe alma
+breadcrumb: "Toplamalar için önbelleğe alma"
 published: 2022-09-15
 lang: tr
 ---
@@ -757,6 +757,7 @@ Düşük seviyeli `<address>.call()` işlevini kullandığımız için `vm.expec
 Bu, Foundry'de kodun [bir olayı doğru bir şekilde yayınladığını](https://getfoundry.sh/reference/cheatcodes/expect-emit/) doğrulama yöntemimizdir.
 
 ### İstemci {#the-client}
+
 Solidity testleriyle elde edemediğiniz bir şey, kendi uygulamanıza kesip yapıştırabileceğiniz JavaScript kodudur. Bu kodu yazmak için WORM'u [Optimism'in](https://www.optimism.io/) yeni test ağı olan [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli)'ye dağıttım. [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a) adresinde bulunuyor.
 
 [İstemci için JavaScript kodunu buradan görebilirsiniz](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Kullanmak için:

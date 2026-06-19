@@ -1,6 +1,6 @@
 ---
 title: Muundo wa mikataba mahiri
-description: Mtazamo wa kina kuhusu muundo wa mkataba mahiri – vipengele, data, na vigezo.
+description: "Mtazamo wa kina kuhusu muundo wa mkataba mahiri – vipengele, data, na vigezo."
 lang: sw
 ---
 

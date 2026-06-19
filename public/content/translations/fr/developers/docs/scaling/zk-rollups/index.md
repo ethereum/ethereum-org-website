@@ -1,6 +1,6 @@
 ---
-title: Rollups à divulgation nulle de connaissance
-description: Une introduction aux rollups à divulgation nulle de connaissance, une solution de mise à l'échelle utilisée par la communauté Ethereum.
+title: "Rollups à divulgation nulle de connaissance"
+description: "Une introduction aux rollups à divulgation nulle de connaissance, une solution de mise à l'échelle utilisée par la communauté Ethereum."
 lang: fr
 ---
 
@@ -106,7 +106,7 @@ Les ZK-STARKs sont également sécurisés contre les ordinateurs quantiques, tan
 
 #### Comment fonctionnent les preuves de validité dans les ZK-rollups ? {#validity-proofs-in-zk-rollups}
 
-##### Génération de preuves {#entries-and-exits}
+##### Génération de preuves {#}
 
 Avant d'accepter les transactions, l'opérateur effectuera les vérifications habituelles. Cela inclut de confirmer que :
 
@@ -132,7 +132,7 @@ Le processus se répète pour chaque transaction ; chaque « boucle » crée une
 
 Le circuit de preuve ZK itère sur l'ensemble du lot de transactions, vérifiant la séquence de mises à jour qui aboutit à une racine d'état finale après l'exécution de la dernière transaction. La dernière racine de Merkle calculée devient la nouvelle racine d'état canonique du ZK-rollup.
 
-##### Vérification des preuves {#zk-rollups-and-evm-compatibility}
+##### Vérification des preuves {#}
 
 Après que le circuit de preuve a vérifié l'exactitude des mises à jour d'état, l'opérateur L2 soumet la preuve de validité calculée au contrat vérificateur sur L1. Le circuit de vérification du contrat vérifie la validité de la preuve et vérifie également les entrées publiques qui font partie de la preuve :
 
@@ -146,7 +146,7 @@ Après que le circuit de preuve a vérifié l'exactitude des mises à jour d'ét
 
 Si la preuve satisfait le circuit (c'est-à-dire qu'elle est valide), cela signifie qu'il existe une séquence de transactions valides qui font passer le rollup de l'état précédent (empreinte cryptographique par la racine de pré-état) à un nouvel état (empreinte cryptographique par la racine de post-état). Si la racine de pré-état correspond à la racine stockée dans le contrat de rollup, et que la preuve est valide, le contrat de rollup prend la racine de post-état de la preuve et met à jour son arbre d'état pour refléter l'état modifié du rollup.
 
-### Entrées et sorties {#how-do-zk-rollup-fees-work}
+### Entrées et sorties {#entries-and-exits}
 
 Les utilisateurs entrent dans le ZK-rollup en déposant des jetons dans le contrat du rollup déployé sur la chaîne L1. Cette transaction est mise en file d'attente car seuls les opérateurs peuvent soumettre des transactions au contrat de rollup.
 
@@ -164,7 +164,7 @@ Le retrait d'un ZK-rollup vers L1 est simple. L'utilisateur initie la transactio
 
 Le contrat de rollup hache les données de transaction, vérifie si la racine de lot existe et utilise la preuve de Merkle pour vérifier si le hachage de transaction fait partie de la racine de lot. Ensuite, le contrat exécute la transaction de sortie et envoie les fonds à l'adresse choisie par l'utilisateur sur L1.
 
-## ZK-rollups et compatibilité EVM {#scaling-ethereum-with-zk-rollups}
+## ZK-rollups et compatibilité EVM {#zk-rollups-and-evm-compatibility}
 
 Contrairement aux rollups optimistes, les ZK-rollups ne sont pas facilement compatibles avec la [Machine Virtuelle Ethereum (EVM)](/developers/docs/evm/). Prouver le calcul EVM à usage général dans des circuits est plus difficile et gourmand en ressources que de prouver des calculs simples (comme le transfert de jetons décrit précédemment).
 
@@ -174,7 +174,7 @@ Comme l'EVM, un zkEVM effectue une transition entre les états après que le cal
 
 L'introduction de ZK-rollups compatibles EVM devrait aider les développeurs à tirer parti de l'évolutivité et des garanties de sécurité des preuves à divulgation nulle de connaissance. Plus important encore, la compatibilité avec l'infrastructure Ethereum native signifie que les développeurs peuvent créer des applications décentralisées (dapps) compatibles ZK en utilisant des outils et des langages familiers (et éprouvés).
 
-## Comment fonctionnent les frais de ZK-rollup ? {#transaction-data-compression}
+## Comment fonctionnent les frais de ZK-rollup ? {#how-do-zk-rollup-fees-work}
 
 Le montant que les utilisateurs paient pour les transactions sur les ZK-rollups dépend des frais de gaz, tout comme sur le réseau principal Ethereum. Cependant, les frais de gaz fonctionnent différemment sur L2 et sont influencés par les coûts suivants :
 
@@ -188,15 +188,15 @@ Le montant que les utilisateurs paient pour les transactions sur les ZK-rollups 
 
 Outre le traitement par lots des transactions, les ZK-rollups réduisent les frais pour les utilisateurs en compressant les données de transaction. Vous pouvez [voir un aperçu en temps réel](https://l2fees.info/) de ce qu'il en coûte d'utiliser les ZK-rollups Ethereum.
 
-## Comment les ZK-rollups mettent-ils Ethereum à l'échelle ? {#recursive-proofs}
+## Comment les ZK-rollups mettent-ils Ethereum à l'échelle ? {#scaling-ethereum-with-zk-rollups}
 
-### Compression des données de transaction {#zk-rollups-pros-and-cons}
+### Compression des données de transaction {#transaction-data-compression}
 
 Les ZK-rollups étendent le débit sur la couche de base d'Ethereum en effectuant les calculs hors chaîne, mais le véritable coup de pouce pour la mise à l'échelle vient de la compression des données de transaction. La [taille de bloc](/developers/docs/blocks/#block-size) d'Ethereum limite les données que chaque bloc peut contenir et, par extension, le nombre de transactions traitées par bloc. En compressant les données liées aux transactions, les ZK-rollups augmentent considérablement le nombre de transactions traitées par bloc.
 
 Les ZK-rollups peuvent mieux compresser les données de transaction que les rollups optimistes car ils n'ont pas à publier toutes les données requises pour valider chaque transaction. Ils n'ont qu'à publier les données minimales requises pour reconstruire le dernier état des comptes et des soldes sur le rollup.
 
-### Preuves récursives {#zk-video}
+### Preuves récursives {#recursive-proofs}
 
 Un avantage des preuves à divulgation nulle de connaissance est que les preuves peuvent vérifier d'autres preuves. Par exemple, un seul ZK-SNARK peut vérifier d'autres ZK-SNARKs. Ces « preuves de preuves » sont appelées preuves récursives et augmentent considérablement le débit sur les ZK-rollups.
 
@@ -204,7 +204,7 @@ Actuellement, les preuves de validité sont générées bloc par bloc et soumise
 
 Les preuves récursives, cependant, permettent de finaliser plusieurs blocs avec une seule preuve de validité. C'est parce que le circuit de preuve agrège de manière récursive plusieurs preuves de blocs jusqu'à ce qu'une preuve finale soit créée. L'opérateur L2 soumet cette preuve récursive, et si le contrat l'accepte, tous les blocs pertinents seront finalisés instantanément. Avec les preuves récursives, le nombre de transactions de ZK-rollup qui peuvent être finalisées sur Ethereum à intervalles réguliers augmente.
 
-### Avantages et inconvénients des ZK-rollups {#zkevm-projects}
+### Avantages et inconvénients des ZK-rollups {#zk-rollups-pros-and-cons}
 
 | Avantages                                                                                                                                                                                                   | Inconvénients                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,14 +216,14 @@ Les preuves récursives, cependant, permettent de finaliser plusieurs blocs avec
 | Ne dépend pas d'hypothèses de vivacité et les utilisateurs n'ont pas à valider la chaîne pour protéger leurs fonds.                                                                                              | Certains systèmes de preuve (par exemple, ZK-SNARK) nécessitent une configuration de confiance qui, si elle est mal gérée, pourrait potentiellement compromettre le modèle de sécurité d'un ZK-rollup.                                                     |
 | Une meilleure compression des données peut aider à réduire les coûts de publication de `calldata` sur Ethereum et à minimiser les frais de rollup pour les utilisateurs.                                                                             |                                                                                                                                                                                                    |
 
-### Une explication visuelle des ZK-rollups {#further-reading-on-zk-rollups}
+### Une explication visuelle des ZK-rollups {#zk-video}
 
 Regardez Finematics expliquer les ZK-rollups :
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="406" />
 
 
-## Qui travaille sur un zkEVM ? {#tutorials}
+## Qui travaille sur un zkEVM ? {#zkevm-projects}
 
 <Alert variant="info">
 <AlertEmoji text="💡" />
@@ -253,7 +253,7 @@ Les projets travaillant sur les zkEVMs incluent :
 
 - **[Linea](https://linea.build)** - _Linea est une couche 2 (l2) zkEVM équivalente à Ethereum construite par ConsenSys, entièrement alignée avec l'écosystème Ethereum._
 
-## Lectures complémentaires sur les ZK-rollups
+## Lectures complémentaires sur les ZK-rollups {#further-reading-on-zk-rollups}
 
 - [Que sont les rollups à divulgation nulle de connaissance ?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Que sont les rollups à divulgation nulle de connaissance ?](https://alchemy.com/blog/zero-knowledge-rollups)
@@ -267,7 +267,7 @@ Les projets travaillant sur les zkEVMs incluent :
 - [Les ZK-SNARKs sous le capot](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [Comment les SNARKs sont-ils possibles ?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
 
-## Tutoriels : Confidentialité et divulgation nulle de connaissance sur Ethereum
+## Tutoriels : Confidentialité et divulgation nulle de connaissance sur Ethereum {#tutorials}
 
 - [Utiliser la divulgation nulle de connaissance pour un état secret](/developers/tutorials/secret-state/) _– Comment utiliser les preuves ZK et les composants de serveur hors chaîne pour maintenir un état de jeu secret onchain._
 - [Utilisation d'adresses furtives](/developers/tutorials/stealth-addr/) _– Comment les adresses furtives ERC-5564 permettent des transferts d'ETH anonymes en utilisant la dérivation de clé cryptographique._

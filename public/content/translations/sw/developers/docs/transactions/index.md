@@ -1,6 +1,6 @@
 ---
 title: Miamala
-description: Muhtasari wa miamala ya Ethereum – jinsi inavyofanya kazi, muundo wa data zake, na jinsi ya kuituma kupitia programu.
+description: "Muhtasari wa miamala ya Ethereum – jinsi inavyofanya kazi, muundo wa data zake, na jinsi ya kuituma kupitia programu."
 lang: sw
 ---
 

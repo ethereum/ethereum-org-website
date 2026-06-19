@@ -761,6 +761,7 @@ Kwa kuwa tunatumia kazi ya kiwango cha chini ya `<address>.call()`, hatuwezi kut
 Hii ndiyo njia tunayothibitisha kwamba msimbo [unatoa tukio kwa usahihi](https://getfoundry.sh/reference/cheatcodes/expect-emit/) katika Foundry.
 
 ### Mteja {#the-client}
+
 Jambo moja ambalo hupati na majaribio ya Solidity ni msimbo wa JavaScript unaoweza kukata na kubandika kwenye programu yako mwenyewe. Ili kuandika msimbo huo nilipeleka WORM kwenye [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), mtandao wa majaribio mpya wa [Optimism](https://www.optimism.io/). Iko kwenye anwani [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Unaweza kuona msimbo wa JavaScript kwa mteja hapa](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Ili kuitumia:

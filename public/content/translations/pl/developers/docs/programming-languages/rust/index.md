@@ -1,6 +1,6 @@
 ---
-title: Ethereum dla programistów Rust
-description: Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na języku Rust
+title: "Ethereum dla programistów Rust"
+description: "Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na języku Rust"
 lang: pl
 incomplete: true
 ---

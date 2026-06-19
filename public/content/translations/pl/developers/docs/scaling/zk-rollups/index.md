@@ -1,6 +1,6 @@
 ---
-title: Rollupy z wiedzą zerową
-description: Wprowadzenie do rollupów z wiedzą zerową — rozwiązania skalującego używanego przez społeczność Ethereum.
+title: "Rollupy z wiedzą zerową"
+description: "Wprowadzenie do rollupów z wiedzą zerową — rozwiązania skalującego używanego przez społeczność Ethereum."
 lang: pl
 ---
 
@@ -106,7 +106,7 @@ ZK-STARKi są również bezpieczne przed komputerami kwantowymi, podczas gdy kry
 
 #### Jak działają dowody ważności w ZK-rollupach? {#validity-proofs-in-zk-rollups}
 
-##### Generowanie dowodów {#entries-and-exits}
+##### Generowanie dowodów {#}
 
 Przed zaakceptowaniem transakcji operator przeprowadzi zwykłe kontrole. Obejmuje to potwierdzenie, że:
 
@@ -132,7 +132,7 @@ Proces powtarza się dla każdej transakcji; każda „pętla” tworzy nowy kor
 
 Obwód dowodzący z wiedzą zerową iteruje po całym wsadzie transakcji, weryfikując sekwencję aktualizacji, które skutkują końcowym korzeniem stanu po wykonaniu ostatniej transakcji. Ostatni obliczony korzeń drzewa Merklego staje się najnowszym kanonicznym korzeniem stanu ZK-rollupa.
 
-##### Weryfikacja dowodów {#zk-rollups-and-evm-compatibility}
+##### Weryfikacja dowodów {#}
 
 Po tym, jak obwód dowodzący zweryfikuje poprawność aktualizacji stanu, operator L2 przesyła obliczony dowód ważności do kontraktu weryfikatora w L1. Obwód weryfikacyjny kontraktu weryfikuje ważność dowodu, a także sprawdza publiczne dane wejściowe, które stanowią część dowodu:
 
@@ -146,7 +146,7 @@ Po tym, jak obwód dowodzący zweryfikuje poprawność aktualizacji stanu, opera
 
 Jeśli dowód zadowala obwód (tj. jest ważny), oznacza to, że istnieje sekwencja ważnych transakcji, które przenoszą rollup z poprzedniego stanu (kryptograficznie oznaczonego przez korzeń stanu początkowego) do nowego stanu (kryptograficznie oznaczonego przez korzeń stanu końcowego). Jeśli korzeń stanu początkowego pasuje do korzenia przechowywanego w kontrakcie rollupa, a dowód jest ważny, kontrakt rollupa pobiera korzeń stanu końcowego z dowodu i aktualizuje swoje drzewo stanu, aby odzwierciedlić zmieniony stan rollupa.
 
-### Wejścia i wyjścia {#how-do-zk-rollup-fees-work}
+### Wejścia i wyjścia {#entries-and-exits}
 
 Użytkownicy wchodzą do ZK-rollupa, deponując tokeny w kontrakcie rollupa wdrożonym w łańcuchu L1. Ta transakcja jest kolejkowana, ponieważ tylko operatorzy mogą przesyłać transakcje do kontraktu rollupa.
 
@@ -164,7 +164,7 @@ Wypłata z ZK-rollupa do L1 jest prosta. Użytkownik inicjuje transakcję wyjśc
 
 Kontrakt rollupa haszuje dane transakcji, sprawdza, czy korzeń wsadu istnieje, i używa dowodu Merkle'a, aby sprawdzić, czy hash transakcji jest częścią korzenia wsadu. Następnie kontrakt wykonuje transakcję wyjścia i wysyła środki na wybrany przez użytkownika adres w L1.
 
-## ZK-rollupy a kompatybilność z EVM {#scaling-ethereum-with-zk-rollups}
+## ZK-rollupy a kompatybilność z EVM {#zk-rollups-and-evm-compatibility}
 
 W przeciwieństwie do optymistycznych rollupów, ZK-rollupy nie są łatwo kompatybilne z [Maszyną Wirtualną Ethereum (EVM)](/developers/docs/evm/). Dowodzenie obliczeń EVM ogólnego przeznaczenia w obwodach jest trudniejsze i bardziej zasobochłonne niż dowodzenie prostych obliczeń (takich jak opisany wcześniej transfer tokenów).
 
@@ -174,7 +174,7 @@ Podobnie jak EVM, zkEVM przechodzi między stanami po wykonaniu obliczeń na pew
 
 Oczekuje się, że wprowadzenie ZK-rollupów kompatybilnych z EVM pomoże deweloperom wykorzystać gwarancje skalowalności i bezpieczeństwa dowodów z wiedzą zerową. Co ważniejsze, kompatybilność z natywną infrastrukturą Ethereum oznacza, że deweloperzy mogą budować zdecentralizowane aplikacje (dapp) przyjazne dla ZK, używając znanych (i sprawdzonych w boju) narzędzi i języków.
 
-## Jak działają opłaty w ZK-rollupach? {#transaction-data-compression}
+## Jak działają opłaty w ZK-rollupach? {#how-do-zk-rollup-fees-work}
 
 To, ile użytkownicy płacą za transakcje w ZK-rollupach, zależy od opłaty za gaz, podobnie jak w sieci głównej Ethereum. Jednak opłaty za gaz działają inaczej w L2 i zależą od następujących kosztów:
 
@@ -188,15 +188,15 @@ To, ile użytkownicy płacą za transakcje w ZK-rollupach, zależy od opłaty za
 
 Oprócz wsadowania transakcji, ZK-rollupy obniżają opłaty dla użytkowników poprzez kompresję danych transakcyjnych. Możesz [zobaczyć przegląd w czasie rzeczywistym](https://l2fees.info/) kosztów korzystania z ZK-rollupów Ethereum.
 
-## Jak ZK-rollupy skalują Ethereum? {#recursive-proofs}
+## Jak ZK-rollupy skalują Ethereum? {#scaling-ethereum-with-zk-rollups}
 
-### Kompresja danych transakcyjnych {#zk-rollups-pros-and-cons}
+### Kompresja danych transakcyjnych {#transaction-data-compression}
 
 ZK-rollupy zwiększają przepustowość w warstwie bazowej Ethereum poprzez przeniesienie obliczeń do środowiska pozałańcuchowego, ale prawdziwy impuls do skalowania pochodzi z kompresji danych transakcyjnych. [Rozmiar bloku](/developers/docs/blocks/#block-size) Ethereum ogranicza ilość danych, które może pomieścić każdy blok, a co za tym idzie, liczbę transakcji przetwarzanych w bloku. Kompresując dane związane z transakcjami, ZK-rollupy znacznie zwiększają liczbę transakcji przetwarzanych w bloku.
 
 ZK-rollupy mogą kompresować dane transakcyjne lepiej niż optymistyczne rollupy, ponieważ nie muszą publikować wszystkich danych wymaganych do walidacji każdej transakcji. Muszą jedynie opublikować minimalne dane wymagane do odbudowania najnowszego stanu kont i sald w rollupie.
 
-### Dowody rekurencyjne {#zk-video}
+### Dowody rekurencyjne {#recursive-proofs}
 
 Zaletą dowodów z wiedzą zerową jest to, że dowody mogą weryfikować inne dowody. Na przykład pojedynczy ZK-SNARK może weryfikować inne ZK-SNARKi. Takie „dowody dowodów” nazywane są dowodami rekurencyjnymi i drastycznie zwiększają przepustowość w ZK-rollupach.
 
@@ -204,7 +204,7 @@ Obecnie dowody ważności są generowane blok po bloku i przesyłane do kontrakt
 
 Dowody rekurencyjne umożliwiają jednak sfinalizowanie kilku bloków za pomocą jednego dowodu ważności. Dzieje się tak, ponieważ obwód dowodzący rekurencyjnie agreguje wiele dowodów bloków, aż do utworzenia jednego końcowego dowodu. Operator L2 przesyła ten dowód rekurencyjny, a jeśli kontrakt go zaakceptuje, wszystkie odpowiednie bloki zostaną natychmiast sfinalizowane. Dzięki dowodom rekurencyjnym wzrasta liczba transakcji ZK-rollupa, które mogą być finalizowane w Ethereum w określonych odstępach czasu.
 
-### Plusy i minusy ZK-rollupów {#zkevm-projects}
+### Plusy i minusy ZK-rollupów {#zk-rollups-pros-and-cons}
 
 | Plusy                                                                                                                                                                                                   | Minusy                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,14 +216,14 @@ Dowody rekurencyjne umożliwiają jednak sfinalizowanie kilku bloków za pomocą
 | Nie zależy od założeń dotyczących żywotności, a użytkownicy nie muszą weryfikować łańcucha, aby chronić swoje środki.                                                                                              | Niektóre systemy dowodzenia (np. ZK-SNARK) wymagają zaufanej konfiguracji, która w przypadku niewłaściwego postępowania może potencjalnie zagrozić modelowi bezpieczeństwa ZK-rollupa.                                                     |
 | Lepsza kompresja danych może pomóc obniżyć koszty publikowania `calldata` w Ethereum i zminimalizować opłaty za rollup dla użytkowników.                                                                             |                                                                                                                                                                                                    |
 
-### Wizualne wyjaśnienie ZK-rollupów {#further-reading-on-zk-rollups}
+### Wizualne wyjaśnienie ZK-rollupów {#zk-video}
 
 Obejrzyj, jak Finematics wyjaśnia ZK-rollupy:
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="406" />
 
 
-## Kto pracuje nad zkEVM? {#tutorials}
+## Kto pracuje nad zkEVM? {#zkevm-projects}
 
 <Alert variant="info">
 <AlertEmoji text="💡" />
@@ -253,7 +253,7 @@ Projekty pracujące nad zkEVM obejmują:
 
 - **[Linea](https://linea.build)** - _Linea to równoważna z Ethereum warstwa 2 (L2) zkEVM zbudowana przez ConsenSys, w pełni zgodna z ekosystemem Ethereum._
 
-## Dalsza lektura na temat ZK-rollupów
+## Dalsza lektura na temat ZK-rollupów {#further-reading-on-zk-rollups}
 
 - [Czym są rollupy z wiedzą zerową?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Czym są rollupy z wiedzą zerową?](https://alchemy.com/blog/zero-knowledge-rollups)
@@ -267,7 +267,7 @@ Projekty pracujące nad zkEVM obejmują:
 - [ZK-SNARK od podszewki](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [Jak możliwe są SNARKi?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
 
-## Samouczki: Prywatność i wiedza zerowa w Ethereum
+## Samouczki: Prywatność i wiedza zerowa w Ethereum {#tutorials}
 
 - [Wykorzystanie wiedzy zerowej do tajnego stanu](/developers/tutorials/secret-state/) _– Jak używać dowodów ZK i pozałańcuchowych komponentów serwera do utrzymywania tajnego stanu gry onchain._
 - [Korzystanie z ukrytych adresów (stealth addresses)](/developers/tutorials/stealth-addr/) _– Jak ukryte adresy ERC-5564 umożliwiają anonimowe transfery ETH przy użyciu kryptograficznego wyprowadzania kluczy._

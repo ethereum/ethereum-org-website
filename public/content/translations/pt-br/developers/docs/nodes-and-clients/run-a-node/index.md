@@ -1,6 +1,6 @@
 ---
-title: Crie o seu próprio nó do Ethereum
-description: Introdução geral sobre como executar a sua própria instância de um cliente Ethereum.
+title: "Crie o seu próprio nó do Ethereum"
+description: "Introdução geral sobre como executar a sua própria instância de um cliente Ethereum."
 lang: pt-br
 sidebarDepth: 2
 ---
@@ -71,18 +71,18 @@ O tamanho do banco de dados e a velocidade da sincronização inicial dependem d
 
 Certifique-se também de que a sua conexão com a internet não seja limitada por um [limite de largura de banda](https://wikipedia.org/wiki/Data_cap). É recomendado usar uma conexão não medida, pois a sincronização inicial e os dados transmitidos para a rede podem exceder o seu limite.
 
-##### Sistema operacional {#plug-and-play}
+##### Sistema operacional {#}
 
 Todos os clientes suportam os principais sistemas operacionais - Linux, macOS, Windows. Isso significa que você pode executar nós em máquinas desktop ou servidores comuns com o sistema operacional (SO) que melhor lhe convier. Certifique-se de que o seu SO esteja atualizado para evitar possíveis problemas e vulnerabilidades de segurança.
 
-##### Requisitos mínimos {#ethereum-on-a-single-board-computer}
+##### Requisitos mínimos {#}
 
 - CPU com 2+ núcleos
 - 8 GB de RAM
 - SSD de 2 TB
 - Largura de banda de 10+ MBit/s
 
-##### Especificações recomendadas {#spinning-up-node}
+##### Especificações recomendadas {#}
 
 - CPU rápida com 4+ núcleos
 - 16 GB+ de RAM
@@ -99,30 +99,30 @@ O modo de sincronização e o cliente que você escolher afetarão os requisitos
 | Nethermind | 500GB+                                | 12TB+                               |
 | Reth       | N/A                                   | 2.2TB+                              |
 
-- Nota: O Erigon e o Reth não oferecem sincronização snap, mas a Poda Completa (Full Pruning) é possível (~2TB para o Erigon, ~1.2TB para o Reth)
+- Nota: O Erigon e o Reth não oferecem sincronização snap, mas a Poda Completa (Full Pruning) é possível (\~2TB para o Erigon, ~1.2TB para o Reth)
 
 Para clientes de consenso, o requisito de espaço também depende da implementação do cliente e dos recursos ativados (por exemplo, penalizador de validador), mas geralmente conte com mais 200 GB necessários para os dados do beacon. Com um grande número de validadores, a carga de largura de banda também cresce. Você pode encontrar [detalhes sobre os requisitos do cliente de consenso nesta análise](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
-#### Soluções plug-and-play {#automatized-setup}
+#### Soluções plug-and-play {#plug-and-play}
 
 A opção mais fácil para executar um nó com o seu próprio hardware é usar caixas plug-and-play. Máquinas pré-configuradas de fornecedores oferecem a experiência mais direta: encomendar, conectar, executar. Tudo é pré-configurado e executado automaticamente com um guia intuitivo e um painel para monitorar e controlar o software.
 
 - [DAppNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### Ethereum em um computador de placa única {#manual-setup}
+#### Ethereum em um computador de placa única {#ethereum-on-a-single-board-computer}
 
 Uma maneira fácil e barata de executar um nó do Ethereum é usar um computador de placa única, mesmo com uma arquitetura ARM como o Raspberry Pi. O [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) fornece imagens fáceis de executar de vários clientes de execução e consenso para o Raspberry Pi e outras placas ARM.
 
 Dispositivos pequenos, acessíveis e eficientes como esses são ideais para executar um nó em casa, mas tenha em mente o seu desempenho limitado.
 
-## Criando o nó {#getting-the-client}
+## Criando o nó {#spinning-up-node}
 
 A configuração real do cliente pode ser feita com inicializadores automatizados ou manualmente, configurando o software do cliente diretamente.
 
 Para usuários menos avançados, a abordagem recomendada é usar um inicializador, um software que guia você pela instalação e automatiza o processo de configuração do cliente. No entanto, se você tiver alguma experiência no uso de um terminal, os passos para a configuração manual devem ser simples de seguir.
 
-### Configuração guiada {#client-setup}
+### Configuração guiada {#automatized-setup}
 
 Vários projetos amigáveis visam melhorar a experiência de configuração de um cliente. Esses inicializadores fornecem instalação e configuração automáticas do cliente, com alguns até oferecendo uma interface gráfica para configuração guiada e monitoramento de clientes.
 
@@ -135,13 +135,13 @@ Abaixo estão alguns projetos que podem ajudar você a instalar e controlar clie
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Ferramenta de configuração de nó que gera automaticamente uma configuração do Docker usando um assistente de CLI. Escrito em Go pelo Nethermind.
 - [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - Interface de usuário da Web e CLI para implantar clientes de execução e consenso no Kubernetes. Inicialização de snapshot e monitoramento integrado incluídos. Gratuito. Nenhuma conta da Chainstack é exigida. Construído pela Chainstack.
 
-### Configuração manual de clientes {#starting-the-execution-client}
+### Configuração manual de clientes {#manual-setup}
 
 A outra opção é baixar, verificar e configurar o software do cliente manualmente. Mesmo que alguns clientes ofereçam uma interface gráfica, uma configuração manual ainda exige habilidades básicas com o terminal, mas oferece muito mais versatilidade.
 
 Como explicado antes, configurar o seu próprio nó do Ethereum exigirá a execução de um par de clientes de consenso e execução. Alguns clientes podem incluir um cliente leve do outro tipo e sincronizar sem a necessidade de nenhum outro software. No entanto, a verificação completa sem necessidade de confiança exige ambas as implementações.
 
-#### Obtendo o software do cliente {#running-an-execution-client}
+#### Obtendo o software do cliente {#getting-the-client}
 
 Primeiro, você precisa obter o software do seu [cliente de execução](/developers/docs/nodes-and-clients/#execution-clients) e [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients) preferidos.
 
@@ -151,7 +151,7 @@ As instruções para instalar cada cliente são fornecidas na documentação vin
 
 Aqui estão as páginas de lançamento dos clientes onde você pode encontrar os seus binários pré-compilados ou instruções de instalação:
 
-##### Clientes de execução {#starting-the-consensus-client}
+##### Clientes de execução {#}
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
@@ -161,7 +161,7 @@ Aqui estão as páginas de lançamento dos clientes onde você pode encontrar os
 
 Também vale a pena notar que a diversidade de clientes é um [problema na camada de execução](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). É recomendado que os leitores considerem executar um cliente de execução minoritário.
 
-##### Clientes de consenso {#running-a-consensus-client}
+##### Clientes de consenso {#}
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Não fornece um binário pré-compilado, apenas uma imagem do Docker ou para ser compilado a partir do código-fonte)
@@ -173,7 +173,7 @@ A [diversidade de clientes](/developers/docs/nodes-and-clients/client-diversity/
 
 [Veja o uso mais recente de clientes da rede](https://clientdiversity.org/) e aprenda mais sobre a [diversidade de clientes](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Verificando o software {#adding-validators}
+##### Verificando o software {#}
 
 Ao baixar software da internet, é recomendado verificar a sua integridade. Este passo é opcional, mas especialmente com uma peça de infraestrutura crucial como o cliente Ethereum, é importante estar ciente dos possíveis vetores de ataque e evitá-los. Se você baixou um binário pré-compilado, você precisa confiar nele e correr o risco de que um invasor possa trocar o executável por um malicioso.
 
@@ -187,7 +187,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Configuração do cliente {#using-the-node}
+#### Configuração do cliente {#client-setup}
 
 Após instalar, baixar ou compilar o software do cliente, você está pronto para executá-lo. Isso significa apenas que ele deve ser executado com a configuração adequada. Os clientes oferecem ricas opções de configuração, que podem ativar vários recursos.
 
@@ -199,7 +199,7 @@ Para fins de teste, você pode preferir executar um cliente em uma das redes de 
 
 Exemplos de execução de clientes de execução com configuração básica podem ser encontrados na próxima seção.
 
-#### Iniciando o cliente de execução {#reaching-rpc}
+#### Iniciando o cliente de execução {#starting-the-execution-client}
 
 Antes de iniciar o software do cliente Ethereum, faça uma última verificação para garantir que o seu ambiente esteja pronto. Por exemplo, certifique-se de que:
 
@@ -221,7 +221,7 @@ Este token é gerado automaticamente pelo software do cliente, mas em alguns cas
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Executando um cliente de execução {#operating-the-node}
+#### Executando um cliente de execução {#running-an-execution-client}
 
 Esta seção guiará você na inicialização de clientes de execução. Ela serve apenas como um exemplo de uma configuração básica, que iniciará o cliente com estas configurações:
 
@@ -238,7 +238,7 @@ Lembre-se de que este é apenas um exemplo básico, todas as outras configuraç�
 
 > Observe que as barras invertidas `\` nos exemplos são apenas para fins de formatação; as flags de configuração podem ser definidas em uma única linha.
 
-##### Executando o Besu {#keeping-node-online}
+##### Executando o Besu {#}
 
 Este exemplo inicia o Besu na Mainnet, armazena os dados da blockchain no formato padrão em `/data/ethereum`, ativa o JSON-RPC e o Engine RPC para conectar o cliente de consenso. A Engine API é autenticada com o token `jwtsecret` e apenas chamadas de `localhost` são permitidas.
 
@@ -260,7 +260,7 @@ besu --Xlauncher
 
 A [documentação do Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) contém opções adicionais e detalhes de configuração.
 
-##### Executando o Erigon {#creating-client-services}
+##### Executando o Erigon {#}
 
 Este exemplo inicia o Erigon na Mainnet, armazena os dados da blockchain em `/data/ethereum`, ativa o JSON-RPC, define quais namespaces são permitidos e ativa a autenticação para conectar o cliente de consenso que é definido pelo caminho `jwtsecret`.
 
@@ -273,7 +273,7 @@ erigon --chain mainnet \
 
 O Erigon, por padrão, realiza uma sincronização completa com 8 GB de HDD, o que resultará em mais de 2 TB de dados de arquivo. Certifique-se de que `datadir` esteja apontando para um disco com espaço livre suficiente ou analise a flag `--prune` que pode cortar diferentes tipos de dados. Verifique o `--help` do Erigon para saber mais.
 
-##### Executando o Geth {#updating-clients}
+##### Executando o Geth {#}
 
 Este exemplo inicia o Geth na Mainnet, armazena os dados da blockchain em `/data/ethereum`, ativa o JSON-RPC e define quais namespaces são permitidos. Ele também ativa a autenticação para conectar o cliente de consenso, o que exige o caminho para o `jwtsecret` e também a opção que define quais conexões são permitidas, no nosso exemplo apenas de `localhost`.
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 Verifique a [documentação para todas as opções de configuração](https://geth.ethereum.org/docs/fundamentals/command-line-options) e aprenda mais sobre [como executar o Geth com um cliente de consenso](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Executando o Nethermind {#running-additional-services}
+##### Executando o Nethermind {#}
 
 O Nethermind oferece várias [opções de instalação](https://docs.nethermind.io/get-started/installing-nethermind). O pacote vem com vários binários, incluindo um Inicializador com uma configuração guiada, que ajudará você a criar a configuração interativamente. Alternativamente, você encontra o Runner, que é o próprio executável, e você pode simplesmente executá-lo com flags de configuração. O JSON-RPC é ativado por padrão.
 
@@ -302,7 +302,7 @@ A documentação do Nethermind oferece um [guia completo](https://docs.nethermin
 
 Um cliente de execução iniciará as suas funções principais, os endpoints escolhidos e começará a procurar por pares. Após descobrir pares com sucesso, o cliente inicia a sincronização. O cliente de execução aguardará uma conexão do cliente de consenso. Os dados atuais da blockchain estarão disponíveis assim que o cliente for sincronizado com sucesso com o estado atual.
 
-##### Executando o Reth {#monitoring-the-node}
+##### Executando o Reth {#}
 
 Este exemplo inicia o Reth na Mainnet, usando o local de dados padrão. Ativa a autenticação JSON-RPC e Engine RPC para conectar o cliente de consenso que é definido pelo caminho `jwtsecret`, com apenas chamadas de `localhost` sendo permitidas.
 
@@ -315,7 +315,7 @@ reth node \
 
 Veja [Configurando o Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) para saber mais sobre os diretórios de dados padrão. A [documentação do Reth](https://reth.rs/run/mainnet.html) contém opções adicionais e detalhes de configuração.
 
-#### Iniciando o cliente de consenso {#further-reading}
+#### Iniciando o cliente de consenso {#starting-the-consensus-client}
 
 O cliente de consenso deve ser iniciado com a configuração de porta correta para estabelecer uma conexão RPC local com o cliente de execução. Os clientes de consenso devem ser executados com a porta exposta do cliente de execução como argumento de configuração.
 
@@ -325,9 +325,9 @@ Se você planeja executar um validador, certifique-se de adicionar uma flag de c
 
 Ao iniciar um nó do Beacon em uma rede de teste, você pode economizar um tempo significativo de sincronização usando um endpoint público para a [sincronização de ponto de verificação](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Executando um cliente de consenso {#related-topics}
+#### Executando um cliente de consenso {#running-a-consensus-client}
 
-##### Executando o Lighthouse
+##### Executando o Lighthouse {#}
 
 Antes de executar o Lighthouse, aprenda mais sobre como instalá-lo e configurá-lo no [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
@@ -340,7 +340,7 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### Executando o Lodestar
+##### Executando o Lodestar {#}
 
 Instale o software do Lodestar compilando-o ou baixando a imagem do Docker. Aprenda mais na [documentação](https://chainsafe.github.io/lodestar/) e no [guia de configuração](https://hackmd.io/@philknows/rk5cDvKmK) mais abrangente.
 
@@ -353,7 +353,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Executando o Nimbus
+##### Executando o Nimbus {#}
 
 O Nimbus vem com clientes de consenso e de execução. Ele pode ser executado em vários dispositivos, mesmo com um poder de computação muito modesto.
 Após [instalar as dependências e o próprio Nimbus](https://nimbus.guide/quick-start.html), você pode executar o seu cliente de consenso:
@@ -366,7 +366,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Executando o Prysm
+##### Executando o Prysm {#}
 
 O Prysm vem com um script que permite uma instalação automática fácil. Os detalhes podem ser encontrados na [documentação do Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
@@ -378,7 +378,7 @@ O Prysm vem com um script que permite uma instalação automática fácil. Os de
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### Executando o Teku
+##### Executando o Teku {#}
 
 ```sh
 teku --network mainnet \
@@ -389,7 +389,7 @@ teku --network mainnet \
 
 Quando um cliente de consenso se conecta ao cliente de execução para ler o contrato de depósito e identificar validadores, ele também se conecta a outros pares do nó do Beacon e começa a sincronizar os slots de consenso a partir do bloco gênese. Assim que o nó do Beacon atinge a época atual, a API do Beacon se torna utilizável para os seus validadores. Aprenda mais sobre as [APIs do nó do Beacon](https://eth2docs.vercel.app/).
 
-### Adicionando validadores
+### Adicionando validadores {#adding-validators}
 
 Um cliente de consenso serve como um nó do Beacon para os validadores se conectarem. Cada cliente de consenso tem o seu próprio software de validador descrito em detalhes na sua respectiva documentação.
 
@@ -399,7 +399,7 @@ A maneira mais fácil de começar com o staking e a geração de chaves de valid
 
 Consulte a [página de staking](/staking) para obter uma visão geral sobre as opções de staking.
 
-### Usando o nó
+### Usando o nó {#using-the-node}
 
 Os clientes de execução oferecem [endpoints de API RPC](/developers/docs/apis/json-rpc/) que você pode usar para enviar transações, interagir com ou implantar contratos inteligentes na rede Ethereum de várias maneiras:
 
@@ -411,7 +411,7 @@ Diferentes clientes têm diferentes implementações dos endpoints RPC. Mas há 
 
 Todos os clientes de consenso expõem uma [API do Beacon](https://ethereum.github.io/beacon-APIs) que pode ser usada para verificar o status do cliente de consenso ou baixar blocos e dados de consenso enviando solicitações usando ferramentas como o [Curl](https://curl.se). Mais informações sobre isso podem ser encontradas na documentação de cada cliente de consenso.
 
-#### Acessando o RPC
+#### Acessando o RPC {#reaching-rpc}
 
 A porta padrão para o JSON-RPC do cliente de execução é `8545`, mas você pode modificar as portas dos endpoints locais na configuração. Por padrão, a interface RPC só pode ser acessada no localhost do seu computador. Para torná-la acessível remotamente, você pode querer expô-la ao público alterando o endereço para `0.0.0.0`. Isso a tornará acessível pela rede local e por endereços IP públicos. Na maioria dos casos, você também precisará configurar o encaminhamento de porta no seu roteador.
 
@@ -427,11 +427,11 @@ Para fazer isso, você tem que criar o seu próprio [serviço onion](https://com
 
 Por fim, e uma das maneiras mais populares de fornecer acesso a redes internas é por meio de uma conexão VPN. Dependendo do seu caso de uso e da quantidade de usuários que precisam de acesso ao seu nó, uma conexão VPN segura pode ser uma opção. O [OpenVPN](https://openvpn.net/) é uma VPN SSL completa que implementa a extensão de rede segura da camada 2 ou 3 do modelo OSI usando o protocolo SSL/TLS padrão da indústria, suporta métodos flexíveis de autenticação de cliente baseados em certificados, cartões inteligentes e/ou credenciais de nome de usuário/senha, e permite políticas de controle de acesso específicas de usuário ou grupo usando regras de firewall aplicadas à interface virtual da VPN.
 
-### Operando o nó
+### Operando o nó {#operating-the-node}
 
 Você deve monitorar regularmente o seu nó para garantir que ele esteja funcionando corretamente. Você pode precisar fazer manutenção ocasional.
 
-#### Mantendo um nó online
+#### Mantendo um nó online {#keeping-node-online}
 
 O seu nó não precisa estar online o tempo todo, mas você deve mantê-lo online o máximo possível para mantê-lo em sincronização com a rede. Você pode desligá-lo para reiniciá-lo, mas tenha em mente que:
 
@@ -441,11 +441,11 @@ O seu nó não precisa estar online o tempo todo, mas você deve mantê-lo onlin
 
 _Isso não se aplica a nós validadores da camada de consenso._ Colocar o seu nó offline afetará todos os serviços dependentes dele. Se você estiver executando um nó para fins de _staking_, você deve tentar minimizar o tempo de inatividade o máximo possível.
 
-#### Criando serviços de cliente
+#### Criando serviços de cliente {#creating-client-services}
 
 Considere criar um serviço para executar os seus clientes automaticamente na inicialização. Por exemplo, em servidores Linux, uma boa prática seria criar um serviço, por exemplo, com `systemd`, que executa o cliente com a configuração adequada, sob um usuário com privilégios limitados e reinicia automaticamente.
 
-#### Atualizando clientes
+#### Atualizando clientes {#updating-clients}
 
 Você precisa manter o software do seu cliente atualizado com os patches de segurança, recursos e [EIPs](/eips/) mais recentes. Especialmente antes de [hard forks](/ethereum-forks/), certifique-se de estar executando as versões corretas do cliente.
 
@@ -455,17 +455,17 @@ Atualizar clientes é muito simples. Cada cliente tem instruções específicas 
 
 Cada implementação de cliente tem uma string de versão legível por humanos usada no protocolo ponto a ponto, mas também é acessível a partir da linha de comando. Esta string de versão permite que os usuários verifiquem se estão executando a versão correta e permite que exploradores de blocos e outras ferramentas analíticas interessadas em quantificar a distribuição de clientes específicos na rede. Consulte a documentação individual do cliente para obter mais informações sobre strings de versão.
 
-#### Executando serviços adicionais
+#### Executando serviços adicionais {#running-additional-services}
 
 Executar o seu próprio nó permite que você use serviços que exigem acesso direto ao RPC do cliente Ethereum. Estes são serviços construídos sobre o Ethereum, como [soluções de camada 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend para carteiras, exploradores de blocos, ferramentas de desenvolvedor e outras infraestruturas do Ethereum.
 
-#### Monitorando o nó
+#### Monitorando o nó {#monitoring-the-node}
 
 Para monitorar adequadamente o seu nó, considere coletar métricas. Os clientes fornecem endpoints de métricas para que você possa obter dados abrangentes sobre o seu nó. Use ferramentas como o [InfluxDB](https://www.influxdata.com/get-influxdb/) ou o [Prometheus](https://prometheus.io/) para criar bancos de dados que você pode transformar em visualizações e gráficos em softwares como o [Grafana](https://grafana.com/). Existem muitas configurações para usar este software e diferentes painéis do Grafana para você visualizar o seu nó e a rede como um todo. Por exemplo, confira o [tutorial sobre como monitorar o Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
 Como parte do seu monitoramento, certifique-se de ficar de olho no desempenho da sua máquina. Durante a sincronização inicial do seu nó, o software do cliente pode ser muito pesado na CPU e na RAM. Além do Grafana, você pode usar as ferramentas que o seu SO oferece, como `htop` ou `uptime`, para fazer isso.
 
-## Leitura adicional
+## Leitura adicional {#further-reading}
 
 - [Guias de staking do Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, atualizado frequentemente_
 - [Guia | Como configurar um validador para staking do Ethereum na Mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, atualizado frequentemente_
@@ -477,7 +477,7 @@ Como parte do seu monitoramento, certifique-se de ficar de olho no desempenho da
 - [Executando um nó do Hyperledger Besu na Rede Principal do Ethereum: benefícios, requisitos e configuração](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 de maio de 2020_
 - [Implantando o cliente Ethereum Nethermind com pilha de monitoramento](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 de julho de 2020_
 
-## Tópicos relacionados
+## Tópicos relacionados {#related-topics}
 
 - [Nós e clientes](/developers/docs/nodes-and-clients/)
 - [Blocos](/developers/docs/blocks/)

@@ -1,6 +1,6 @@
 ---
-title: 給 JavaScript 開發者的以太坊
-description: 了解如何使用基於 JavaScript 的專案與工具來開發以太坊。
+title: "給 JavaScript 開發者的以太坊"
+description: "了解如何使用基於 JavaScript 的專案與工具來開發以太坊。"
 lang: zh-tw
 ---
 

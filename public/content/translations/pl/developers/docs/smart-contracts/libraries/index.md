@@ -1,6 +1,6 @@
 ---
-title: Biblioteki inteligentnych kontraktów
-description: Odkryj biblioteki inteligentnych kontraktów i bloki konstrukcyjne wielokrotnego użytku, aby przyspieszyć swoje projekty programistyczne na Ethereum.
+title: "Biblioteki inteligentnych kontraktów"
+description: "Odkryj biblioteki inteligentnych kontraktów i bloki konstrukcyjne wielokrotnego użytku, aby przyspieszyć swoje projekty programistyczne na Ethereum."
 lang: pl
 ---
 

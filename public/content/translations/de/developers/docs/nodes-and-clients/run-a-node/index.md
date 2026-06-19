@@ -1,6 +1,6 @@
 ---
 title: Einen eigenen Ethereum-Knoten betreiben
-description: Allgemeine Einführung in den Betrieb einer eigenen Instanz eines Ethereum-Clients.
+description: "Allgemeine Einführung in den Betrieb einer eigenen Instanz eines Ethereum-Clients."
 lang: de
 sidebarDepth: 2
 ---
@@ -71,18 +71,18 @@ Die Größe der Datenbank und die Geschwindigkeit der anfänglichen Synchronisie
 
 Stellen Sie außerdem sicher, dass Ihre Internetverbindung nicht durch eine [Bandbreitenbegrenzung](https://wikipedia.org/wiki/Data_cap) eingeschränkt ist. Es wird empfohlen, eine unbegrenzte Verbindung zu verwenden, da die anfängliche Synchronisierung und die an das Netzwerk gesendeten Daten Ihr Limit überschreiten könnten.
 
-##### Betriebssystem {#plug-and-play}
+##### Betriebssystem {#}
 
 Alle Clients unterstützen die gängigen Betriebssysteme – Linux, macOS, Windows. Das bedeutet, dass Sie Knoten auf normalen Desktop- oder Servermaschinen mit dem Betriebssystem (OS) ausführen können, das Ihnen am besten passt. Stellen Sie sicher, dass Ihr Betriebssystem auf dem neuesten Stand ist, um mögliche Probleme und Sicherheitslücken zu vermeiden.
 
-##### Mindestanforderungen {#ethereum-on-a-single-board-computer}
+##### Mindestanforderungen {#}
 
 - CPU mit 2+ Kernen
 - 8 GB RAM
 - 2 TB SSD
 - 10+ MBit/s Bandbreite
 
-##### Empfohlene Spezifikationen {#spinning-up-node}
+##### Empfohlene Spezifikationen {#}
 
 - Schnelle CPU mit 4+ Kernen
 - 16 GB+ RAM
@@ -99,30 +99,30 @@ Der von Ihnen gewählte Synchronisierungsmodus und Client wirken sich auf den Sp
 | Nethermind | 500 GB+                               | 12 TB+                               |
 | Reth       | N/A                                   | 2,2 TB+                              |
 
-- Hinweis: Erigon und Reth bieten keine Snap-Synchronisierung an, aber vollständiges Pruning (Full Pruning) ist möglich (~2 TB für Erigon, ~1,2 TB für Reth).
+- Hinweis: Erigon und Reth bieten keine Snap-Synchronisierung an, aber vollständiges Pruning (Full Pruning) ist möglich (\~2 TB für Erigon, ~1,2 TB für Reth).
 
 Für Konsens-Clients hängt der Speicherbedarf auch von der Client-Implementierung und den aktivierten Funktionen (z. B. Validator-Slasher) ab, aber rechnen Sie im Allgemeinen mit weiteren 200 GB, die für Beacon-Daten benötigt werden. Bei einer großen Anzahl von Validatoren steigt auch die Bandbreitenbelastung. Sie finden [Details zu den Anforderungen an Konsens-Clients in dieser Analyse](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
-#### Plug-and-Play-Lösungen {#automatized-setup}
+#### Plug-and-Play-Lösungen {#plug-and-play}
 
 Die einfachste Option für den Betrieb eines Knotens mit eigener Hardware ist die Verwendung von Plug-and-Play-Boxen. Vorkonfigurierte Maschinen von Anbietern bieten die unkomplizierteste Erfahrung: bestellen, anschließen, ausführen. Alles ist vorkonfiguriert und läuft automatisch mit einer intuitiven Anleitung und einem Dashboard zur Überwachung und Steuerung der Software.
 
 - [DAppNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### Ethereum auf einem Einplatinencomputer {#manual-setup}
+#### Ethereum auf einem Einplatinencomputer {#ethereum-on-a-single-board-computer}
 
 Eine einfache und günstige Möglichkeit, einen Ethereum-Knoten zu betreiben, ist die Verwendung eines Einplatinencomputers, sogar mit einer ARM-Architektur wie dem Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) bietet einfach auszuführende Images mehrerer Ausführungs- und Konsens-Clients für Raspberry Pi und andere ARM-Boards.
 
 Kleine, erschwingliche und effiziente Geräte wie diese sind ideal für den Betrieb eines Knotens zu Hause, aber denken Sie an ihre begrenzte Leistung.
 
-## Starten des Knotens {#getting-the-client}
+## Starten des Knotens {#spinning-up-node}
 
 Die eigentliche Client-Einrichtung kann entweder mit automatisierten Launchern oder manuell durch direkte Einrichtung der Client-Software erfolgen.
 
 Für weniger fortgeschrittene Benutzer ist der empfohlene Ansatz die Verwendung eines Launchers, einer Software, die Sie durch die Installation führt und den Client-Einrichtungsprozess automatisiert. Wenn Sie jedoch etwas Erfahrung mit der Verwendung eines Terminals haben, sollten die Schritte für die manuelle Einrichtung einfach zu befolgen sein.
 
-### Geführtes Setup {#client-setup}
+### Geführtes Setup {#automatized-setup}
 
 Mehrere benutzerfreundliche Projekte zielen darauf ab, die Erfahrung bei der Einrichtung eines Clients zu verbessern. Diese Launcher bieten eine automatische Client-Installation und -Konfiguration, wobei einige sogar eine grafische Oberfläche für die geführte Einrichtung und Überwachung von Clients bieten.
 
@@ -135,13 +135,13 @@ Im Folgenden finden Sie einige Projekte, die Ihnen helfen können, Clients mit n
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Knoten-Setup-Tool, das mithilfe eines CLI-Assistenten automatisch eine Docker-Konfiguration generiert. Geschrieben in Go von Nethermind.
 - [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - Web-UI und CLI für die Bereitstellung von Ausführungs- und Konsens-Clients auf Kubernetes. Snapshot-Bootstrap und integriertes Monitoring inklusive. Kostenlos. Kein Chainstack-Konto erforderlich. Entwickelt von Chainstack.
 
-### Manuelle Client-Einrichtung {#starting-the-execution-client}
+### Manuelle Client-Einrichtung {#manual-setup}
 
 Die andere Option besteht darin, die Client-Software manuell herunterzuladen, zu verifizieren und zu konfigurieren. Auch wenn einige Clients eine grafische Oberfläche bieten, erfordert eine manuelle Einrichtung dennoch grundlegende Kenntnisse im Umgang mit dem Terminal, bietet aber viel mehr Vielseitigkeit.
 
 Wie bereits erklärt, erfordert die Einrichtung Ihres eigenen Ethereum-Knotens den Betrieb eines Paares aus Konsens- und Ausführungsclients. Einige Clients enthalten möglicherweise einen Light-Client der anderen Art und synchronisieren sich, ohne dass weitere Software benötigt wird. Eine vollständige vertrauenslose Verifizierung erfordert jedoch beide Implementierungen.
 
-#### Beziehen der Client-Software {#running-an-execution-client}
+#### Beziehen der Client-Software {#getting-the-client}
 
 Zuerst müssen Sie Ihre bevorzugte [Ausführungsclient](/developers/docs/nodes-and-clients/#execution-clients)- und [Konsens-Client](/developers/docs/nodes-and-clients/#consensus-clients)-Software beziehen.
 
@@ -151,7 +151,7 @@ Anweisungen zur Installation jedes Clients finden Sie in der Dokumentation, die 
 
 Hier sind die Release-Seiten der Clients, auf denen Sie deren vorkompilierte Binärdateien oder Installationsanweisungen finden können:
 
-##### Ausführungsclients {#starting-the-consensus-client}
+##### Ausführungsclients {#}
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
@@ -161,7 +161,7 @@ Hier sind die Release-Seiten der Clients, auf denen Sie deren vorkompilierte Bin
 
 Es ist auch erwähnenswert, dass die Client-Diversität ein [Problem auf der Ausführungsschicht](/developers/docs/nodes-and-clients/client-diversity/#execution-layer) ist. Es wird empfohlen, dass Leser in Erwägung ziehen, einen Minderheits-Ausführungsclient zu betreiben.
 
-##### Konsens-Clients {#running-a-consensus-client}
+##### Konsens-Clients {#}
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Bietet keine vorkompilierte Binärdatei, nur ein Docker-Image oder muss aus dem Quellcode kompiliert werden)
@@ -173,7 +173,7 @@ Es ist auch erwähnenswert, dass die Client-Diversität ein [Problem auf der Aus
 
 [Sehen Sie sich die aktuelle Nutzung der Netzwerk-Clients an](https://clientdiversity.org/) und erfahren Sie mehr über [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Überprüfen der Software {#adding-validators}
+##### Überprüfen der Software {#}
 
 Beim Herunterladen von Software aus dem Internet wird empfohlen, deren Integrität zu überprüfen. Dieser Schritt ist optional, aber besonders bei einem so wichtigen Infrastrukturteil wie dem Ethereum-Client ist es wichtig, sich potenzieller Angriffsvektoren bewusst zu sein und diese zu vermeiden. Wenn Sie eine vorkompilierte Binärdatei heruntergeladen haben, müssen Sie ihr vertrauen und riskieren, dass ein Angreifer die ausführbare Datei gegen eine bösartige austauschen könnte.
 
@@ -187,7 +187,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Client-Einrichtung {#using-the-node}
+#### Client-Einrichtung {#client-setup}
 
 Nach der Installation, dem Herunterladen oder der Kompilierung der Client-Software sind Sie bereit, sie auszuführen. Das bedeutet nur, dass sie mit der richtigen Konfiguration ausgeführt werden muss. Clients bieten umfangreiche Konfigurationsoptionen, die verschiedene Funktionen aktivieren können.
 
@@ -199,7 +199,7 @@ Zu Testzwecken ziehen Sie es möglicherweise vor, einen Client in einem der Test
 
 Beispiele für die Ausführung von Ausführungsclients mit grundlegender Konfiguration finden Sie im nächsten Abschnitt.
 
-#### Starten des Ausführungsclients {#reaching-rpc}
+#### Starten des Ausführungsclients {#starting-the-execution-client}
 
 Bevor Sie die Ethereum-Client-Software starten, führen Sie eine letzte Überprüfung durch, ob Ihre Umgebung bereit ist. Stellen Sie beispielsweise sicher:
 
@@ -221,7 +221,7 @@ Dieses Token wird automatisch von der Client-Software generiert, aber in einigen
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Ausführen eines Ausführungsclients {#operating-the-node}
+#### Ausführen eines Ausführungsclients {#running-an-execution-client}
 
 Dieser Abschnitt führt Sie durch das Starten von Ausführungsclients. Er dient nur als Beispiel für eine grundlegende Konfiguration, die den Client mit diesen Einstellungen startet:
 
@@ -238,7 +238,7 @@ Bitte denken Sie daran, dass dies nur ein grundlegendes Beispiel ist, alle ander
 
 > Beachten Sie, dass Backslashes `\` in Beispielen nur Formatierungszwecken dienen; Konfigurations-Flags können in einer einzigen Zeile definiert werden.
 
-##### Ausführen von Besu {#keeping-node-online}
+##### Ausführen von Besu {#}
 
 Dieses Beispiel startet Besu im Mainnet, speichert Blockchain-Daten im Standardformat unter `/data/ethereum`, aktiviert JSON-RPC und Engine RPC für die Verbindung des Konsens-Clients. Die Engine API wird mit dem Token `jwtsecret` authentifiziert und es sind nur Aufrufe von `localhost` erlaubt.
 
@@ -260,7 +260,7 @@ besu --Xlauncher
 
 Die [Dokumentation von Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) enthält zusätzliche Optionen und Konfigurationsdetails.
 
-##### Ausführen von Erigon {#creating-client-services}
+##### Ausführen von Erigon {#}
 
 Dieses Beispiel startet Erigon im Mainnet, speichert Blockchain-Daten unter `/data/ethereum`, aktiviert JSON-RPC, definiert, welche Namespaces erlaubt sind, und aktiviert die Authentifizierung für die Verbindung des Konsens-Clients, die durch den Pfad `jwtsecret` definiert ist.
 
@@ -273,7 +273,7 @@ erigon --chain mainnet \
 
 Erigon führt standardmäßig eine vollständige Synchronisierung mit 8 GB HDD durch, was zu mehr als 2 TB Archivdaten führt. Stellen Sie sicher, dass `datadir` auf eine Festplatte mit ausreichend freiem Speicherplatz verweist, oder sehen Sie sich das Flag `--prune` an, das verschiedene Arten von Daten trimmen kann. Überprüfen Sie die `--help` von Erigon, um mehr zu erfahren.
 
-##### Ausführen von Geth {#updating-clients}
+##### Ausführen von Geth {#}
 
 Dieses Beispiel startet Geth im Mainnet, speichert Blockchain-Daten unter `/data/ethereum`, aktiviert JSON-RPC und definiert, welche Namespaces erlaubt sind. Es aktiviert auch die Authentifizierung für die Verbindung des Konsens-Clients, was den Pfad zu `jwtsecret` erfordert, sowie eine Option, die definiert, welche Verbindungen erlaubt sind, in unserem Beispiel nur von `localhost`.
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 Sehen Sie sich die [Dokumentation für alle Konfigurationsoptionen](https://geth.ethereum.org/docs/fundamentals/command-line-options) an und erfahren Sie mehr über den [Betrieb von Geth mit einem Konsens-Client](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Ausführen von Nethermind {#running-additional-services}
+##### Ausführen von Nethermind {#}
 
 Nethermind bietet verschiedene [Installationsoptionen](https://docs.nethermind.io/get-started/installing-nethermind). Das Paket enthält verschiedene Binärdateien, einschließlich eines Launchers mit einem geführten Setup, der Ihnen hilft, die Konfiguration interaktiv zu erstellen. Alternativ finden Sie den Runner, der die ausführbare Datei selbst ist und den Sie einfach mit Konfigurations-Flags ausführen können. JSON-RPC ist standardmäßig aktiviert.
 
@@ -302,7 +302,7 @@ Die Nethermind-Dokumentation bietet eine [vollständige Anleitung](https://docs.
 
 Ein Ausführungsclient initiiert seine Kernfunktionen, die ausgewählten Endpunkte und beginnt mit der Suche nach Peers. Nach der erfolgreichen Erkennung von Peers beginnt der Client mit der Synchronisierung. Der Ausführungsclient wartet auf eine Verbindung vom Konsens-Client. Aktuelle Blockchain-Daten sind verfügbar, sobald der Client erfolgreich auf den aktuellen Zustand synchronisiert ist.
 
-##### Ausführen von Reth {#monitoring-the-node}
+##### Ausführen von Reth {#}
 
 Dieses Beispiel startet Reth im Mainnet unter Verwendung des Standard-Speicherorts für Daten. Es aktiviert JSON-RPC und die Engine-RPC-Authentifizierung für die Verbindung des Konsens-Clients, die durch den Pfad `jwtsecret` definiert ist, wobei nur Aufrufe von `localhost` erlaubt sind.
 
@@ -315,7 +315,7 @@ reth node \
 
 Siehe [Konfiguration von Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), um mehr über Standard-Datenverzeichnisse zu erfahren. Die [Dokumentation von Reth](https://reth.rs/run/mainnet.html) enthält zusätzliche Optionen und Konfigurationsdetails.
 
-#### Starten des Konsens-Clients {#further-reading}
+#### Starten des Konsens-Clients {#starting-the-consensus-client}
 
 Der Konsens-Client muss mit der richtigen Port-Konfiguration gestartet werden, um eine lokale RPC-Verbindung zum Ausführungsclient herzustellen. Die Konsens-Clients müssen mit dem freigegebenen Port des Ausführungsclients als Konfigurationsargument ausgeführt werden.
 
@@ -325,9 +325,9 @@ Wenn Sie planen, einen Validator zu betreiben, stellen Sie sicher, dass Sie ein 
 
 Wenn Sie einen Beacon-Knoten in einem Testnetz starten, können Sie durch die Verwendung eines öffentlichen Endpunkts für die [Checkpoint-Synchronisierung](https://notes.ethereum.org/@launchpad/checkpoint-sync) erheblich Synchronisierungszeit sparen.
 
-#### Ausführen eines Konsens-Clients {#related-topics}
+#### Ausführen eines Konsens-Clients {#running-a-consensus-client}
 
-##### Ausführen von Lighthouse
+##### Ausführen von Lighthouse {#}
 
 Bevor Sie Lighthouse ausführen, erfahren Sie im [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html) mehr darüber, wie Sie es installieren und konfigurieren.
 
@@ -340,7 +340,7 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### Ausführen von Lodestar
+##### Ausführen von Lodestar {#}
 
 Installieren Sie die Lodestar-Software, indem Sie sie kompilieren oder das Docker-Image herunterladen. Erfahren Sie mehr in der [Dokumentation](https://chainsafe.github.io/lodestar/) und der umfassenderen [Einrichtungsanleitung](https://hackmd.io/@philknows/rk5cDvKmK).
 
@@ -353,7 +353,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Ausführen von Nimbus
+##### Ausführen von Nimbus {#}
 
 Nimbus wird sowohl mit Konsens- als auch mit Ausführungsclients geliefert. Es kann auf verschiedenen Geräten ausgeführt werden, selbst mit sehr bescheidener Rechenleistung.
 Nach der [Installation der Abhängigkeiten und von Nimbus selbst](https://nimbus.guide/quick-start.html) können Sie seinen Konsens-Client ausführen:
@@ -366,7 +366,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Ausführen von Prysm
+##### Ausführen von Prysm {#}
 
 Prysm wird mit einem Skript geliefert, das eine einfache automatische Installation ermöglicht. Details finden Sie in der [Prysm-Dokumentation](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
@@ -378,7 +378,7 @@ Prysm wird mit einem Skript geliefert, das eine einfache automatische Installati
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### Ausführen von Teku
+##### Ausführen von Teku {#}
 
 ```sh
 teku --network mainnet \
@@ -389,7 +389,7 @@ teku --network mainnet \
 
 Wenn sich ein Konsens-Client mit dem Ausführungsclient verbindet, um den Einzahlungsvertrag zu lesen und Validatoren zu identifizieren, verbindet er sich auch mit anderen Beacon-Knoten-Peers und beginnt mit der Synchronisierung von Konsens-Slots ab Genesis. Sobald der Beacon-Knoten die aktuelle Epoche erreicht, wird die Beacon-API für Ihre Validatoren nutzbar. Erfahren Sie mehr über [Beacon-Knoten-APIs](https://eth2docs.vercel.app/).
 
-### Hinzufügen von Validatoren
+### Hinzufügen von Validatoren {#adding-validators}
 
 Ein Konsens-Client dient als Beacon-Knoten, mit dem sich Validatoren verbinden können. Jeder Konsens-Client verfügt über eine eigene Validator-Software, die in der jeweiligen Dokumentation detailliert beschrieben ist.
 
@@ -399,7 +399,7 @@ Der einfachste Weg, um mit dem Staking und der Generierung von Validator-Schlüs
 
 Sehen Sie sich die [Staking-Seite](/staking) für einen Überblick über die Staking-Optionen an.
 
-### Nutzung des Knotens
+### Nutzung des Knotens {#using-the-node}
 
 Ausführungsclients bieten [RPC-API-Endpunkte](/developers/docs/apis/json-rpc/), die Sie verwenden können, um Transaktionen einzureichen, mit Smart Contracts zu interagieren oder diese auf verschiedene Weise im Ethereum-Netzwerk bereitzustellen:
 
@@ -411,7 +411,7 @@ Verschiedene Clients haben unterschiedliche Implementierungen der RPC-Endpunkte.
 
 Die Konsens-Clients stellen alle eine [Beacon-API](https://ethereum.github.io/beacon-APIs) bereit, die verwendet werden kann, um den Status des Konsens-Clients zu überprüfen oder Blöcke und Konsensdaten herunterzuladen, indem Anfragen mit Tools wie [Curl](https://curl.se) gesendet werden. Weitere Informationen hierzu finden Sie in der Dokumentation für jeden Konsens-Client.
 
-#### Erreichen des RPC
+#### Erreichen des RPC {#reaching-rpc}
 
 Der Standard-Port für den Ausführungsclient-JSON-RPC ist `8545`, aber Sie können die Ports lokaler Endpunkte in der Konfiguration ändern. Standardmäßig ist die RPC-Schnittstelle nur auf dem Localhost Ihres Computers erreichbar. Um sie aus der Ferne zugänglich zu machen, möchten Sie sie möglicherweise der Öffentlichkeit zugänglich machen, indem Sie die Adresse in `0.0.0.0` ändern. Dadurch wird sie über das lokale Netzwerk und öffentliche IP-Adressen erreichbar. In den meisten Fällen müssen Sie auch eine Portweiterleitung auf Ihrem Router einrichten.
 
@@ -427,11 +427,11 @@ Dazu müssen Sie Ihren eigenen [Onion-Service](https://community.torproject.org/
 
 Schließlich ist eine der beliebtesten Möglichkeiten, Zugriff auf interne Netzwerke zu gewähren, eine VPN-Verbindung. Abhängig von Ihrem Anwendungsfall und der Anzahl der Benutzer, die Zugriff auf Ihren Knoten benötigen, könnte eine sichere VPN-Verbindung eine Option sein. [OpenVPN](https://openvpn.net/) ist ein voll ausgestattetes SSL-VPN, das eine sichere Netzwerkerweiterung auf OSI-Schicht 2 oder 3 unter Verwendung des Industriestandards SSL/TLS-Protokoll implementiert, flexible Client-Authentifizierungsmethoden basierend auf Zertifikaten, Smartcards und/oder Benutzernamen/Passwort-Anmeldeinformationen unterstützt und benutzer- oder gruppenspezifische Zugriffssteuerungsrichtlinien mithilfe von Firewall-Regeln ermöglicht, die auf die virtuelle VPN-Schnittstelle angewendet werden.
 
-### Betrieb des Knotens
+### Betrieb des Knotens {#operating-the-node}
 
 Sie sollten Ihren Knoten regelmäßig überwachen, um sicherzustellen, dass er ordnungsgemäß läuft. Möglicherweise müssen Sie gelegentlich Wartungsarbeiten durchführen.
 
-#### Einen Knoten online halten
+#### Einen Knoten online halten {#keeping-node-online}
 
 Ihr Knoten muss nicht ständig online sein, aber Sie sollten ihn so oft wie möglich online halten, um ihn mit dem Netzwerk synchron zu halten. Sie können ihn herunterfahren, um ihn neu zu starten, aber denken Sie daran, dass:
 
@@ -441,11 +441,11 @@ Ihr Knoten muss nicht ständig online sein, aber Sie sollten ihn so oft wie mög
 
 _Dies gilt nicht für Validator-Knoten der Konsensschicht._ Wenn Sie Ihren Knoten offline nehmen, wirkt sich dies auf alle davon abhängigen Dienste aus. Wenn Sie einen Knoten für _Staking_-Zwecke betreiben, sollten Sie versuchen, die Ausfallzeit so weit wie möglich zu minimieren.
 
-#### Erstellen von Client-Diensten
+#### Erstellen von Client-Diensten {#creating-client-services}
 
 Erwägen Sie die Erstellung eines Dienstes, um Ihre Clients beim Start automatisch auszuführen. Auf Linux-Servern wäre es beispielsweise eine gute Praxis, einen Dienst zu erstellen, z. B. mit `systemd`, der den Client mit der richtigen Konfiguration unter einem Benutzer mit eingeschränkten Rechten ausführt und automatisch neu startet.
 
-#### Aktualisieren von Clients
+#### Aktualisieren von Clients {#updating-clients}
 
 Sie müssen Ihre Client-Software mit den neuesten Sicherheitspatches, Funktionen und [EIPs](/eips/) auf dem neuesten Stand halten. Stellen Sie insbesondere vor [Hard Forks](/ethereum-forks/) sicher, dass Sie die richtigen Client-Versionen ausführen.
 
@@ -455,17 +455,17 @@ Das Aktualisieren von Clients ist sehr einfach. Jeder Client hat spezifische Anw
 
 Jede Client-Implementierung verfügt über eine für Menschen lesbare Versionszeichenfolge, die im Peer-to-Peer-Protokoll verwendet wird, aber auch über die Befehlszeile zugänglich ist. Diese Versionszeichenfolge ermöglicht es Benutzern zu überprüfen, ob sie die richtige Version ausführen, und ermöglicht Block-Explorern und anderen Analysetools, die an der Quantifizierung der Verteilung bestimmter Clients im Netzwerk interessiert sind, dies zu tun. Weitere Informationen zu Versionszeichenfolgen finden Sie in der Dokumentation des jeweiligen Clients.
 
-#### Ausführen zusätzlicher Dienste
+#### Ausführen zusätzlicher Dienste {#running-additional-services}
 
 Der Betrieb eines eigenen Knotens ermöglicht es Ihnen, Dienste zu nutzen, die direkten Zugriff auf den Ethereum-Client-RPC erfordern. Dies sind Dienste, die auf Ethereum aufbauen, wie [Layer-2-Lösungen](/developers/docs/scaling/#layer-2-scaling), Backends für Wallets, Block-Explorer, Entwicklertools und andere Ethereum-Infrastruktur.
 
-#### Überwachung des Knotens
+#### Überwachung des Knotens {#monitoring-the-node}
 
 Um Ihren Knoten richtig zu überwachen, sollten Sie das Sammeln von Metriken in Betracht ziehen. Clients stellen Metrik-Endpunkte bereit, sodass Sie umfassende Daten über Ihren Knoten erhalten können. Verwenden Sie Tools wie [InfluxDB](https://www.influxdata.com/get-influxdb/) oder [Prometheus](https://prometheus.io/), um Datenbanken zu erstellen, die Sie in Software wie [Grafana](https://grafana.com/) in Visualisierungen und Diagramme umwandeln können. Es gibt viele Setups für die Verwendung dieser Software und verschiedene Grafana-Dashboards, mit denen Sie Ihren Knoten und das Netzwerk als Ganzes visualisieren können. Sehen Sie sich zum Beispiel das [Tutorial zur Überwachung von Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/) an.
 
 Achten Sie im Rahmen Ihrer Überwachung darauf, die Leistung Ihrer Maschine im Auge zu behalten. Während der anfänglichen Synchronisierung Ihres Knotens kann die Client-Software CPU und RAM stark beanspruchen. Zusätzlich zu Grafana können Sie die Tools verwenden, die Ihr Betriebssystem bietet, wie `htop` oder `uptime`, um dies zu tun.
 
-## Weiterführende Literatur
+## Weiterführende Literatur {#further-reading}
 
 - [Ethereum-Staking-Leitfäden](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, wird oft aktualisiert_
 - [Leitfaden | Wie man einen Validator für Ethereum-Staking im Mainnet einrichtet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, wird oft aktualisiert_
@@ -477,7 +477,7 @@ Achten Sie im Rahmen Ihrer Überwachung darauf, die Leistung Ihrer Maschine im A
 - [Betrieb eines Hyperledger Besu-Knotens im Ethereum Mainnet: Vorteile, Anforderungen und Einrichtung](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7. Mai 2020_
 - [Bereitstellung des Nethermind-Ethereum-Clients mit Monitoring-Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8. Juli 2020_
 
-## Verwandte Themen
+## Verwandte Themen {#related-topics}
 
 - [Knoten und Clients](/developers/docs/nodes-and-clients/)
 - [Blöcke](/developers/docs/blocks/)

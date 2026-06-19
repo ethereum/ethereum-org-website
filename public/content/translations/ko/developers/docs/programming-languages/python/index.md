@@ -1,6 +1,6 @@
 ---
-title: Python 개발자를 위한 이더리움
-description: Python 기반 프로젝트 및 도구를 사용하여 이더리움용으로 개발하는 방법 알아보기
+title: "Python 개발자를 위한 이더리움"
+description: "Python 기반 프로젝트 및 도구를 사용하여 이더리움용으로 개발하는 방법 알아보기"
 lang: ko
 incomplete: true
 ---

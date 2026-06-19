@@ -1,6 +1,6 @@
 ---
 title: Compiler les contrats intelligents
-description: Une explication des raisons pour lesquelles vous devez compiler les contrats intelligents et de ce que fait réellement la compilation.
+description: "Une explication des raisons pour lesquelles vous devez compiler les contrats intelligents et de ce que fait réellement la compilation."
 lang: fr
 incomplete: true
 ---

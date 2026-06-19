@@ -1,6 +1,6 @@
 ---
-title: Máy khách nhẹ
-description: Giới thiệu về máy khách nhẹ Ethereum.
+title: "Máy khách nhẹ"
+description: "Giới thiệu về máy khách nhẹ Ethereum."
 lang: vi
 ---
 

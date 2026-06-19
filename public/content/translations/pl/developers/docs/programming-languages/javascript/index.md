@@ -1,6 +1,6 @@
 ---
-title: Ethereum dla programistów JavaScript
-description: Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na języku JavaScript.
+title: "Ethereum dla programistów JavaScript"
+description: "Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na języku JavaScript."
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Smart Contracts bereitstellen
-description: Erfahre, wie du Smart Contracts in Ethereum-Netzwerken bereitstellst, einschließlich Voraussetzungen, Tools und Bereitstellungsschritten.
+description: "Erfahre, wie du Smart Contracts in Ethereum-Netzwerken bereitstellst, einschließlich Voraussetzungen, Tools und Bereitstellungsschritten."
 lang: de
 ---
 

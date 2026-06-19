@@ -1,6 +1,6 @@
 ---
-title: Anatomía de los contratos inteligentes
-description: Un análisis en profundidad de la anatomía de un contrato inteligente: las funciones, los datos y las variables.
+title: "Anatomía de los contratos inteligentes"
+description: "Un análisis en profundidad de la anatomía de un contrato inteligente: las funciones, los datos y las variables."
 lang: es
 ---
 

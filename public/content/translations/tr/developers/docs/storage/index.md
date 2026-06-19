@@ -1,6 +1,6 @@
 ---
 title: Merkeziyetsiz Depolama
-description: Merkeziyetsiz depolamanın ne olduğuna ve onu bir merkeziyetsiz uygulamaya (dapp) entegre etmek için mevcut araçlara genel bakış.
+description: "Merkeziyetsiz depolamanın ne olduğuna ve onu bir merkeziyetsiz uygulamaya (dapp) entegre etmek için mevcut araçlara genel bakış."
 lang: tr
 authors: ["Patrick Collins"]
 ---

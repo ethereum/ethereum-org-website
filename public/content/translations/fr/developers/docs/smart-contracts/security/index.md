@@ -1,6 +1,6 @@
 ---
-title: Sécurité des contrats intelligents
-description: Un aperçu des directives pour créer des contrats intelligents Ethereum sécurisés
+title: "Sécurité des contrats intelligents"
+description: "Un aperçu des directives pour créer des contrats intelligents Ethereum sécurisés"
 lang: fr
 ---
 
@@ -34,13 +34,13 @@ L'enregistrement d'une seule adresse en tant que `Owner` dans un contrat intelli
 
 Dans le contrôle d'accès basé sur les rôles, l'accès aux fonctions sensibles est réparti entre un ensemble de participants de confiance. Par exemple, un compte peut être responsable de la frappe de jetons, tandis qu'un autre compte effectue des mises à niveau ou met le contrat en pause. Décentraliser le contrôle d'accès de cette manière élimine les points de défaillance uniques et réduit les hypothèses de confiance pour les utilisateurs.
 
-##### Utilisation de portefeuilles multi-signatures {#use-require-assert-revert}
+##### Utilisation de portefeuilles multi-signatures {#}
 
 Une autre approche pour mettre en œuvre un contrôle d'accès sécurisé consiste à utiliser un [compte multi-signature](/developers/docs/smart-contracts/#multisig) pour gérer un contrat. Contrairement à un EOA classique, les comptes multi-signatures sont détenus par plusieurs entités et nécessitent les signatures d'un nombre minimum de comptes — disons 3 sur 5 — pour exécuter des transactions.
 
 L'utilisation d'un multisig pour le contrôle d'accès introduit une couche de sécurité supplémentaire puisque les actions sur le contrat cible nécessitent le consentement de plusieurs parties. Ceci est particulièrement utile si l'utilisation du modèle Ownable est nécessaire, car cela rend plus difficile pour un attaquant ou un initié malveillant de manipuler les fonctions sensibles du contrat à des fins malveillantes.
 
-### 2. Utiliser les instructions require(), assert() et revert() pour protéger les opérations du contrat {#test-smart-contracts-and-verify-code-correctness}
+### 2. Utiliser les instructions require(), assert() et revert() pour protéger les opérations du contrat {#use-require-assert-revert}
 
 Comme mentionné, n'importe qui peut appeler des fonctions publiques dans votre contrat intelligent une fois qu'il est déployé sur la chaîne de blocs. Puisque vous ne pouvez pas savoir à l'avance comment les comptes externes interagiront avec un contrat, il est idéal de mettre en place des garanties internes contre les opérations problématiques avant le déploiement. Vous pouvez imposer un comportement correct dans les contrats intelligents en utilisant les instructions `require()`, `assert()` et `revert()` pour déclencher des exceptions et annuler les changements d'état si l'exécution ne satisfait pas à certaines exigences.
 
@@ -70,7 +70,7 @@ contract VendingMachine {
 }
 ```
 
-### 3. Tester les contrats intelligents et vérifier l'exactitude du code {#get-independent-code-reviews}
+### 3. Tester les contrats intelligents et vérifier l'exactitude du code {#test-smart-contracts-and-verify-code-correctness}
 
 L'immuabilité du code s'exécutant dans la [Machine Virtuelle Ethereum](/developers/docs/evm/) signifie que les contrats intelligents exigent un niveau plus élevé d'évaluation de la qualité pendant la phase de développement. Tester votre contrat de manière approfondie et l'observer pour détecter tout résultat inattendu améliorera considérablement la sécurité et protégera vos utilisateurs à long terme.
 
@@ -82,11 +82,11 @@ Une meilleure approche consiste à combiner les tests unitaires avec des tests b
 
 La [vérification formelle](/developers/docs/smart-contracts/formal-verification) est une autre technique pour vérifier les propriétés de sécurité dans les contrats intelligents. Contrairement aux tests réguliers, la vérification formelle peut prouver de manière concluante l'absence d'erreurs dans un contrat intelligent. Ceci est réalisé en créant une spécification formelle qui capture les propriétés de sécurité souhaitées et en prouvant qu'un modèle formel des contrats adhère à cette spécification.
 
-### 4. Demander un examen indépendant de votre code {#audits}
+### 4. Demander un examen indépendant de votre code {#get-independent-code-reviews}
 
 Après avoir testé votre contrat, il est bon de demander à d'autres de vérifier le code source pour détecter d'éventuels problèmes de sécurité. Les tests ne découvriront pas toutes les failles d'un contrat intelligent, mais obtenir un examen indépendant augmente la possibilité de repérer des vulnérabilités.
 
-#### Audits {#bug-bounties}
+#### Audits {#audits}
 
 Commander un audit de contrat intelligent est une façon de mener un examen de code indépendant. Les auditeurs jouent un rôle important pour s'assurer que les contrats intelligents sont sécurisés et exempts de défauts de qualité et d'erreurs de conception.
 
@@ -95,7 +95,7 @@ Cela dit, vous devriez éviter de considérer les audits comme une solution mira
 - [Trucs et astuces pour l'audit de contrats intelligents](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Tirer le meilleur parti de votre audit](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
-#### Primes aux bugs (Bug bounties) {#follow-smart-contract-development-best-practices}
+#### Primes aux bugs (Bug bounties) {#bug-bounties}
 
 La mise en place d'un programme de primes aux bugs est une autre approche pour mettre en œuvre des examens de code externes. Une prime aux bugs est une récompense financière accordée aux individus (généralement des hackers éthiques) qui découvrent des vulnérabilités dans une application.
 
@@ -103,7 +103,7 @@ Lorsqu'elles sont utilisées correctement, les primes aux bugs incitent les memb
 
 Une stratégie utile consiste à fixer le paiement d'un programme de primes aux bugs proportionnellement au montant des fonds en jeu. Décrite comme la « [prime aux bugs évolutive](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) », cette approche offre des incitations financières aux individus pour qu'ils divulguent de manière responsable les vulnérabilités au lieu de les exploiter.
 
-### 5. Suivre les meilleures pratiques lors du développement de contrats intelligents {#implement-disaster-recovery-plans}
+### 5. Suivre les meilleures pratiques lors du développement de contrats intelligents {#follow-smart-contract-development-best-practices}
 
 L'existence d'audits et de primes aux bugs ne vous dispense pas de votre responsabilité d'écrire un code de haute qualité. Une bonne sécurité des contrats intelligents commence par le respect de processus de conception et de développement appropriés :
 
@@ -121,11 +121,11 @@ L'existence d'audits et de primes aux bugs ne vous dispense pas de votre respons
 
 - Documenter correctement votre code (en utilisant [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)) et décrire les détails de l'architecture du contrat dans un langage facile à comprendre. Cela facilitera l'audit et l'examen de votre code par d'autres personnes.
 
-### 6. Mettre en œuvre des plans de reprise après sinistre robustes {#contract-upgrades}
+### 6. Mettre en œuvre des plans de reprise après sinistre robustes {#implement-disaster-recovery-plans}
 
 La conception de contrôles d'accès sécurisés, la mise en œuvre de modificateurs de fonctions et d'autres suggestions peuvent améliorer la sécurité des contrats intelligents, mais elles ne peuvent exclure la possibilité d'exploits malveillants. La création de contrats intelligents sécurisés nécessite de « se préparer à l'échec » et d'avoir un plan de secours pour répondre efficacement aux attaques. Un plan de reprise après sinistre approprié intégrera tout ou partie des composants suivants :
 
-#### Mises à niveau de contrat {#emergency-stops}
+#### Mises à niveau de contrat {#contract-upgrades}
 
 Bien que les contrats intelligents Ethereum soient immuables par défaut, il est possible d'atteindre un certain degré de mutabilité en utilisant des modèles de mise à niveau. La mise à niveau des contrats est nécessaire dans les cas où une faille critique rend votre ancien contrat inutilisable et où le déploiement d'une nouvelle logique est l'option la plus réalisable.
 
@@ -137,7 +137,7 @@ La délégation d'appels au contrat logique nécessite de stocker son adresse da
 
 [En savoir plus sur la mise à niveau des contrats](/developers/docs/smart-contracts/upgrading/).
 
-#### Arrêts d'urgence {#event-monitoring}
+#### Arrêts d'urgence {#emergency-stops}
 
 Comme mentionné, des audits et des tests approfondis ne peuvent pas découvrir tous les bugs dans un contrat intelligent. Si une vulnérabilité apparaît dans votre code après le déploiement, la corriger est impossible puisque vous ne pouvez pas modifier le code s'exécutant à l'adresse du contrat. De plus, les mécanismes de mise à niveau (par exemple, les modèles proxy) peuvent prendre du temps à mettre en œuvre (ils nécessitent souvent l'approbation de différentes parties), ce qui ne donne aux attaquants que plus de temps pour causer plus de dégâts.
 
@@ -201,7 +201,7 @@ Cet exemple montre les caractéristiques de base des arrêts d'urgence :
 
 L'utilisation d'une fonctionnalité d'arrêt d'urgence fournit une solution de fortune efficace pour faire face aux vulnérabilités graves de votre contrat intelligent. Cependant, cela augmente la nécessité pour les utilisateurs de faire confiance aux développeurs pour ne pas l'activer à des fins personnelles. À cette fin, décentraliser le contrôle de l'arrêt d'urgence en le soumettant à un mécanisme de vote onchain, à un verrouillage temporel (timelock) ou à l'approbation d'un portefeuille multisig sont des solutions possibles.
 
-#### Surveillance des événements {#design-secure-governance-systems}
+#### Surveillance des événements {#event-monitoring}
 
 Les [événements](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) vous permettent de suivre les appels aux fonctions du contrat intelligent et de surveiller les modifications des variables d'état. Il est idéal de programmer votre contrat intelligent pour émettre un événement chaque fois qu'une partie prend une action critique pour la sécurité (par exemple, le retrait de fonds).
 
@@ -209,7 +209,7 @@ La journalisation des événements et leur surveillance hors chaîne fournissent
 
 Vous pouvez également opter pour un outil de surveillance prêt à l'emploi qui transmet automatiquement des alertes chaque fois que quelqu'un interagit avec vos contrats. Ces outils vous permettront de créer des alertes personnalisées basées sur différents déclencheurs, tels que le volume de transactions, la fréquence des appels de fonction ou les fonctions spécifiques impliquées. Par exemple, vous pourriez programmer une alerte qui se déclenche lorsque le montant retiré en une seule transaction dépasse un seuil particulier.
 
-### 7. Concevoir des systèmes de gouvernance sécurisés {#reduce-code-complexity}
+### 7. Concevoir des systèmes de gouvernance sécurisés {#design-secure-governance-systems}
 
 Vous souhaiterez peut-être décentraliser votre application en confiant le contrôle des contrats intelligents de base aux membres de la communauté. Dans ce cas, le système de contrat intelligent inclura un module de gouvernance — un mécanisme qui permet aux membres de la communauté d'approuver des actions administratives via un système de gouvernance onchain. Par exemple, une proposition de mise à niveau d'un contrat proxy vers une nouvelle implémentation peut être soumise au vote des détenteurs de jetons.
 
@@ -219,7 +219,7 @@ Une façon de prévenir les problèmes liés à la gouvernance onchain est d'[ut
 
 En savoir plus sur la [conception de systèmes de gouvernance sécurisés](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), les [différents mécanismes de vote dans les DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos) et [les vecteurs d'attaque DAO courants tirant parti de la DeFi](https://dacian.me/dao-governance-defi-attacks) dans les liens partagés.
 
-### 8. Réduire la complexité du code au minimum {#mitigate-common-smart-contract-vulnerabilities}
+### 8. Réduire la complexité du code au minimum {#reduce-code-complexity}
 
 Les développeurs de logiciels traditionnels connaissent bien le principe KISS (« keep it simple, stupid »), qui déconseille d'introduire une complexité inutile dans la conception de logiciels. Cela fait suite à l'idée de longue date selon laquelle « les systèmes complexes échouent de manière complexe » et sont plus susceptibles de commettre des erreurs coûteuses.
 
@@ -227,9 +227,9 @@ Garder les choses simples est d'une importance particulière lors de la rédacti
 
 Un autre conseil courant est d'écrire de petites fonctions et de garder les contrats modulaires en divisant la logique métier sur plusieurs contrats. Non seulement l'écriture d'un code plus simple réduit la surface d'attaque dans un contrat intelligent, mais elle facilite également le raisonnement sur l'exactitude du système global et la détection précoce d'éventuelles erreurs de conception.
 
-### 9. Se défendre contre les vulnérabilités courantes des contrats intelligents {#reentrancy}
+### 9. Se défendre contre les vulnérabilités courantes des contrats intelligents {#mitigate-common-smart-contract-vulnerabilities}
 
-#### Réentrance {#integer-underflows-and-overflows}
+#### Réentrance {#reentrancy}
 
 L'EVM ne permet pas la concurrence, ce qui signifie que deux contrats impliqués dans un appel de message ne peuvent pas s'exécuter simultanément. Un appel externe met en pause l'exécution et la mémoire du contrat appelant jusqu'au retour de l'appel, moment auquel l'exécution se poursuit normalement. Ce processus peut être formellement décrit comme le transfert du [flux de contrôle](https://www.computerhope.com/jargon/c/contflow.htm) à un autre contrat.
 
@@ -306,7 +306,7 @@ Il n'y a rien de mal ici, sauf que `Attacker` a une autre fonction qui appelle �
 
 En résumé, comme le solde de l'appelant n'est pas mis à 0 tant que l'exécution de la fonction n'est pas terminée, les invocations ultérieures réussiront et permettront à l'appelant de retirer son solde plusieurs fois. Ce type d'attaque peut être utilisé pour vider un contrat intelligent de ses fonds, comme ce qui s'est passé lors du [piratage de la DAO en 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Les attaques de réentrance sont encore aujourd'hui un problème critique pour les contrats intelligents, comme le montrent les [listes publiques d'exploits de réentrance](https://github.com/pcaversaccio/reentrancy-attacks).
 
-##### Comment prévenir les attaques de réentrance {#oracle-manipulation}
+##### Comment prévenir les attaques de réentrance {#}
 
 Une approche pour faire face à la réentrance consiste à suivre le [modèle vérifications-effets-interactions](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Ce modèle ordonne l'exécution des fonctions de manière à ce que le code qui effectue les vérifications nécessaires avant de poursuivre l'exécution vienne en premier, suivi du code qui manipule l'état du contrat, le code qui interagit avec d'autres contrats ou EOA arrivant en dernier.
 
@@ -356,7 +356,7 @@ contract MutexPattern {
 
 Vous pouvez également utiliser un système de [paiements tirés (pull payments)](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment) qui oblige les utilisateurs à retirer des fonds des contrats intelligents, au lieu d'un système de « paiements poussés » (push payments) qui envoie des fonds aux comptes. Cela supprime la possibilité de déclencher par inadvertance du code à des adresses inconnues (et peut également prévenir certaines attaques par déni de service).
 
-#### Dépassements de capacité inférieurs et supérieurs d'entiers {#smart-contract-security-resources-for-developers}
+#### Dépassements de capacité inférieurs et supérieurs d'entiers {#integer-underflows-and-overflows}
 
 Un dépassement de capacité (overflow) d'entier se produit lorsque les résultats d'une opération arithmétique se situent en dehors de la plage de valeurs acceptable, ce qui la fait « basculer » vers la valeur représentable la plus basse. Par exemple, un `uint8` ne peut stocker que des valeurs allant jusqu'à 2^8-1=255. Les opérations arithmétiques qui aboutissent à des valeurs supérieures à `255` provoqueront un dépassement de capacité et réinitialiseront `uint` à `0`, de la même manière que le compteur kilométrique d'une voiture se réinitialise à 0 une fois qu'il atteint le kilométrage maximum (999999).
 
@@ -433,11 +433,11 @@ contract Attack {
 }
 ```
 
-##### Comment prévenir les dépassements de capacité inférieurs et supérieurs d'entiers {#code-analysis-tools}
+##### Comment prévenir les dépassements de capacité inférieurs et supérieurs d'entiers {#}
 
 À partir de la version 0.8.0, le compilateur Solidity rejette le code qui entraîne des dépassements de capacité inférieurs et supérieurs d'entiers. Cependant, les contrats compilés avec une version de compilateur inférieure doivent soit effectuer des vérifications sur les fonctions impliquant des opérations arithmétiques, soit utiliser une bibliothèque (par exemple, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) qui vérifie les dépassements de capacité inférieurs/supérieurs.
 
-#### Manipulation d'oracle {#smart-contract-monitoring-tools}
+#### Manipulation d'oracle {#oracle-manipulation}
 
 Les [oracles](/developers/docs/oracles/) s'approvisionnent en informations hors chaîne et les envoient onchain pour que les contrats intelligents les utilisent. Avec les oracles, vous pouvez concevoir des contrats intelligents qui interagissent avec des systèmes hors chaîne, tels que les marchés de capitaux, élargissant considérablement leur application.
 
@@ -449,15 +449,15 @@ Les prix des DEX sont souvent précis, en grande partie grâce aux arbitragistes
 
 Par exemple, un attaquant pourrait gonfler artificiellement le prix au comptant d'un actif en contractant un prêt éclair juste avant d'interagir avec votre contrat de prêt. Interroger le DEX pour le prix de l'actif renverrait une valeur plus élevée que la normale (en raison de l'important « ordre d'achat » de l'attaquant faussant la demande pour l'actif), lui permettant d'emprunter plus qu'il ne le devrait. De telles « attaques par prêt éclair » ont été utilisées pour exploiter la dépendance aux oracles de prix parmi les applications DeFi, coûtant aux protocoles des millions en fonds perdus.
 
-##### Comment prévenir la manipulation d'oracle {#smart-contract-administration-tools}
+##### Comment prévenir la manipulation d'oracle {#}
 
 L'exigence minimale pour [éviter la manipulation d'oracle](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) est d'utiliser un réseau d'oracles décentralisé qui interroge des informations provenant de sources multiples pour éviter les points de défaillance uniques. Dans la plupart des cas, les oracles décentralisés ont des incitations cryptoéconomiques intégrées pour encourager les nœuds d'oracle à rapporter des informations correctes, ce qui les rend plus sécurisés que les oracles centralisés.
 
 Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envisagez d'en utiliser un qui met en œuvre un mécanisme de prix moyen pondéré dans le temps (TWAP). Un [oracle TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) interroge le prix d'un actif à deux moments différents (que vous pouvez modifier) et calcule le prix au comptant en fonction de la moyenne obtenue. Le choix de périodes plus longues protège votre protocole contre la manipulation des prix, car les ordres importants exécutés récemment ne peuvent pas avoir d'impact sur les prix des actifs.
 
-## Ressources de sécurité des contrats intelligents pour les développeurs {#smart-contract-auditing-services}
+## Ressources de sécurité des contrats intelligents pour les développeurs {#smart-contract-security-resources-for-developers}
 
-### Outils pour analyser les contrats intelligents et vérifier l'exactitude du code {#bug-bounty-platforms}
+### Outils pour analyser les contrats intelligents et vérifier l'exactitude du code {#code-analysis-tools}
 
 - **[Outils et bibliothèques de test](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _Collection d'outils et de bibliothèques standards de l'industrie pour effectuer des tests unitaires, des analyses statiques et des analyses dynamiques sur les contrats intelligents._
 
@@ -473,17 +473,17 @@ Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envis
 
 - **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Analyseur statique Solidity, parcourant les arbres de syntaxe abstraite (AST) pour identifier les vulnérabilités suspectées et affichant les problèmes dans un format markdown facile à lire._
 
-### Outils pour surveiller les contrats intelligents {#common-smart-contract-vulnerabilities-and-exploits}
+### Outils pour surveiller les contrats intelligents {#smart-contract-monitoring-tools}
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/monitoring)** - _Un outil pour recevoir des notifications en temps réel lorsque des événements inhabituels ou inattendus se produisent sur vos contrats intelligents ou portefeuilles._
 
-### Outils pour l'administration sécurisée des contrats intelligents {#challenges-for-learning-smart-contract-security}
+### Outils pour l'administration sécurisée des contrats intelligents {#smart-contract-administration-tools}
 
 - **[Safe](https://safe.global/)** - _Portefeuille de contrat intelligent fonctionnant sur Ethereum qui nécessite qu'un nombre minimum de personnes approuvent une transaction avant qu'elle ne puisse avoir lieu (M-sur-N)._
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Bibliothèques de contrats pour implémenter des fonctionnalités administratives, y compris la propriété des contrats, les mises à niveau, les contrôles d'accès, la gouvernance, la possibilité de mise en pause, et plus encore._
 
-### Services d'audit de contrats intelligents {#smart-contract-security-best-practices}
+### Services d'audit de contrats intelligents {#smart-contract-auditing-services}
 
 - **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Service d'audit de contrats intelligents aidant les projets à travers l'écosystème de la chaîne de blocs à s'assurer que leurs protocoles sont prêts pour le lancement et conçus pour protéger les utilisateurs._
 
@@ -517,7 +517,7 @@ Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envis
 
 - **[Inference](https://inference.ag/)** - _Entreprise d'audit de sécurité, spécialisée dans l'audit de contrats intelligents pour les chaînes de blocs basées sur l'EVM. Grâce à ses auditeurs experts, ils identifient les problèmes potentiels et suggèrent des solutions concrètes pour les corriger avant le déploiement._
 
-### Plateformes de primes aux bugs {#tutorials-on-smart-contract-security}
+### Plateformes de primes aux bugs {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Plateforme de primes aux bugs pour les contrats intelligents et les projets DeFi, où les chercheurs en sécurité examinent le code, divulguent les vulnérabilités, sont payés et rendent la crypto plus sûre._
 
@@ -529,7 +529,7 @@ Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envis
 
 -  **[CodeHawks](https://www.codehawks.com/)** - _Plateforme compétitive de primes aux bugs où les auditeurs participent à des concours et des défis de sécurité, et (bientôt) à leurs propres audits privés._
 
-### Publications sur les vulnérabilités et exploits connus des contrats intelligents
+### Publications sur les vulnérabilités et exploits connus des contrats intelligents {#common-smart-contract-vulnerabilities-and-exploits}
 
 - **[ConsenSys : Attaques connues de contrats intelligents](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Explication accessible aux débutants des vulnérabilités de contrats les plus importantes, avec des exemples de code pour la plupart des cas._
 
@@ -537,7 +537,7 @@ Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envis
 
 - **[Rekt](https://rekt.news/)** - _Publication régulièrement mise à jour sur les piratages et exploits crypto de premier plan, accompagnée de rapports post-mortem détaillés._
 
-### Défis pour apprendre la sécurité des contrats intelligents
+### Défis pour apprendre la sécurité des contrats intelligents {#challenges-for-learning-smart-contract-security}
 
 - **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Liste organisée de wargames de sécurité de chaîne de blocs, de défis, de compétitions [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) et de comptes-rendus de solutions._
 
@@ -547,7 +547,7 @@ Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envis
 
 - **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Défi de piratage de contrats intelligents, se déroulant dans une aventure fantastique. La réussite du défi donne également accès à un programme privé de primes aux bugs._
 
-### Bonnes pratiques pour sécuriser les contrats intelligents
+### Bonnes pratiques pour sécuriser les contrats intelligents {#smart-contract-security-best-practices}
 
 - **[ConsenSys : Bonnes pratiques de sécurité des contrats intelligents Ethereum](https://consensys.github.io/smart-contract-best-practices/)** - _Liste exhaustive de directives pour sécuriser les contrats intelligents Ethereum._
 
@@ -561,7 +561,7 @@ Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envis
 
 - **[Apprendre la sécurité et l'audit des contrats intelligents](https://updraft.cyfrin.io/courses/security)** - _Cours ultime sur la sécurité et l'audit des contrats intelligents, créé pour les développeurs de contrats intelligents cherchant à améliorer leurs bonnes pratiques de sécurité et à devenir des chercheurs en sécurité._
 
-### Tutoriels sur la sécurité des contrats intelligents
+### Tutoriels sur la sécurité des contrats intelligents {#tutorials-on-smart-contract-security}
 
 - [Comment écrire des contrats intelligents sécurisés](/developers/tutorials/secure-development-workflow/)
 

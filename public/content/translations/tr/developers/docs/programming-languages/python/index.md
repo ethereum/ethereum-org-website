@@ -1,6 +1,6 @@
 ---
-title: Python Geliştiricileri İçin Ethereum
-description: Python tabanlı projeleri ve araçları kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin
+title: "Python Geliştiricileri İçin Ethereum"
+description: "Python tabanlı projeleri ve araçları kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin"
 lang: tr
 incomplete: true
 ---

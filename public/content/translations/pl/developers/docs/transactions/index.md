@@ -1,6 +1,6 @@
 ---
 title: Transakcje
-description: Przegląd transakcji w Ethereum – jak działają, ich struktura danych oraz jak je wysyłać za pośrednictwem aplikacji.
+description: "Przegląd transakcji w Ethereum – jak działają, ich struktura danych oraz jak je wysyłać za pośrednictwem aplikacji."
 lang: pl
 ---
 

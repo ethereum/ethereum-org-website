@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas de contratos inteligentes
-description: Descubra bibliotecas de contratos inteligentes y bloques de construcción reutilizables para acelerar sus proyectos de desarrollo en Ethereum.
+description: "Descubra bibliotecas de contratos inteligentes y bloques de construcción reutilizables para acelerar sus proyectos de desarrollo en Ethereum."
 lang: es
 ---
 

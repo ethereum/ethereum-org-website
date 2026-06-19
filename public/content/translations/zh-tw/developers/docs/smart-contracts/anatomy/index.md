@@ -1,6 +1,6 @@
 ---
-title: 智能合約的剖析
-description: 深入探討智能合約的剖析：函式、資料與變數。
+title: "智能合約的剖析"
+description: "深入探討智能合約的剖析：函式、資料與變數。"
 lang: zh-tw
 ---
 

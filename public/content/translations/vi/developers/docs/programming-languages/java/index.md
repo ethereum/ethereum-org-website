@@ -1,6 +1,6 @@
 ---
-title: Ethereum dành cho nhà phát triển Java
-description: Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Java
+title: "Ethereum dành cho nhà phát triển Java"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Java"
 lang: vi
 incomplete: true
 ---

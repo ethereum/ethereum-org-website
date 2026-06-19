@@ -1,10 +1,10 @@
 ---
 title: "আপনি যা কিছু ক্যাশ করতে পারেন"
-description: সস্তা রোলআপ ট্রানজ্যাকশনের জন্য কীভাবে একটি ক্যাশিং কন্ট্রাক্ট তৈরি এবং ব্যবহার করতে হয় তা শিখুন
-author: ওরি পোমেরান্টজ
+description: "সস্তা রোলআপ ট্রানজ্যাকশনের জন্য কীভাবে একটি ক্যাশিং কন্ট্রাক্ট তৈরি এবং ব্যবহার করতে হয় তা শিখুন"
+author: "ওরি পোমেরান্টজ"
 tags: ["লেয়ার 2", "ক্যাশিং", "স্টোরেজ", "স্কেলিং"]
 skill: intermediate
-breadcrumb: রোলআপের জন্য ক্যাশিং
+breadcrumb: "রোলআপের জন্য ক্যাশিং"
 published: 2022-09-15
 lang: bn
 ---
@@ -757,6 +757,7 @@ contract WORM is Cache {
 এভাবেই আমরা যাচাই করি যে কোডটি Foundry-তে [সঠিকভাবে একটি ইভেন্ট নির্গত করে](https://getfoundry.sh/reference/cheatcodes/expect-emit/)।
 
 ### ক্লায়েন্ট {#the-client}
+
 Solidity পরীক্ষার সাথে আপনি যে জিনিসটি পান না তা হলো JavaScript কোড যা আপনি কাট করে আপনার নিজস্ব অ্যাপ্লিকেশনে পেস্ট করতে পারেন। সেই কোডটি লেখার জন্য আমি WORM-কে [অপটিমিজম Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli)-তে ডিপ্লয় করেছি, যা [অপটিমিজমের](https://www.optimism.io/) নতুন টেস্টনেট। এটি [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a) ঠিকানায় রয়েছে।
 
 [আপনি এখানে ক্লায়েন্টের জন্য JavaScript কোড দেখতে পারেন](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)। এটি ব্যবহার করতে:

@@ -1,6 +1,6 @@
 ---
-title: 代幣標準
-description: 探索以太坊代幣標準，包含用於同質化與非同質化代幣的 ERC-20、ERC-721 和 ERC-1155。
+title: "代幣標準"
+description: "探索以太坊代幣標準，包含用於同質化與非同質化代幣的 ERC-20、ERC-721 和 ERC-1155。"
 lang: zh-tw
 incomplete: true
 ---

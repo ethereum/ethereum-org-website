@@ -1,6 +1,6 @@
 ---
 title: Compilare gli smart contract
-description: Una spiegazione del perché è necessario compilare gli smart contract e di cosa fa effettivamente la compilazione.
+description: "Una spiegazione del perché è necessario compilare gli smart contract e di cosa fa effettivamente la compilazione."
 lang: it
 incomplete: true
 ---

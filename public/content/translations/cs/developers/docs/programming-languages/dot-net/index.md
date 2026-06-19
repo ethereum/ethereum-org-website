@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro vývojáře v .NET
-description: Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na .NET
+title: "Ethereum pro vývojáře v .NET"
+description: "Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na .NET"
 lang: cs
 incomplete: true
 ---

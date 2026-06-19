@@ -1,6 +1,6 @@
 ---
 title: Transakce
-description: Přehled transakcí na Ethereu – jak fungují, jejich datová struktura a jak je odesílat prostřednictvím aplikace.
+description: "Přehled transakcí na Ethereu – jak fungují, jejich datová struktura a jak je odesílat prostřednictvím aplikace."
 lang: cs
 ---
 

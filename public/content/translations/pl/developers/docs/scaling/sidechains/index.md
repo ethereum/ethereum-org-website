@@ -1,6 +1,6 @@
 ---
-title: Łańcuchy poboczne
-description: Wprowadzenie do łańcuchów pobocznych jako rozwiązania skalującego obecnie wykorzystywanego przez społeczność Ethereum.
+title: "Łańcuchy poboczne"
+description: "Wprowadzenie do łańcuchów pobocznych jako rozwiązania skalującego obecnie wykorzystywanego przez społeczność Ethereum."
 lang: pl
 sidebarDepth: 3
 ---

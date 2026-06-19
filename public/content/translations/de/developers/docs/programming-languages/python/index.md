@@ -1,6 +1,6 @@
 ---
-title: Ethereum für Python-Entwickler
-description: Lerne, wie man für Ethereum mit Python-basierten Projekten und Tools entwickelt
+title: "Ethereum für Python-Entwickler"
+description: "Lerne, wie man für Ethereum mit Python-basierten Projekten und Tools entwickelt"
 lang: de
 incomplete: true
 ---

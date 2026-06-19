@@ -1,10 +1,10 @@
 ---
 title: "Vše, co můžete cachovat"
-description: Naučte se, jak vytvořit a používat cachovací kontrakt pro levnější transakce na rollupech
+description: "Naučte se, jak vytvořit a používat cachovací kontrakt pro levnější transakce na rollupech"
 author: Ori Pomerantz
 tags: ["vrstva 2", "cachování", "úložiště", "škálování"]
 skill: intermediate
-breadcrumb: Cachování pro rollupy
+breadcrumb: "Cachování pro rollupy"
 published: 2022-09-15
 lang: cs
 ---
@@ -757,6 +757,7 @@ Vzhledem k tomu, že používáme nízkoúrovňovou funkci `<address>.call()`, n
 Tímto způsobem ověřujeme, že kód ve Foundry [správně emituje událost](https://getfoundry.sh/reference/cheatcodes/expect-emit/).
 
 ### Klient {#the-client}
+
 Jedna věc, kterou s testy v Solidity nezískáte, je kód v JavaScriptu, který můžete zkopírovat a vložit do své vlastní aplikace. Abych tento kód napsal, nasadil jsem WORM na [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), nový testnet sítě [Optimism](https://www.optimism.io/). Nachází se na adrese [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Kód v JavaScriptu pro klienta si můžete prohlédnout zde](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Chcete-li jej použít:

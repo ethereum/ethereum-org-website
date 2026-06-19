@@ -1,6 +1,6 @@
 ---
 title: Hafif istemciler
-description: Ethereum hafif istemcilerine giriş.
+description: "Ethereum hafif istemcilerine giriş."
 lang: tr
 ---
 

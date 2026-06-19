@@ -1,6 +1,6 @@
 ---
-title: Uruchom swój własny węzeł Ethereum
-description: Ogólne wprowadzenie do uruchamiania własnej instancji klienta Ethereum.
+title: "Uruchom swój własny węzeł Ethereum"
+description: "Ogólne wprowadzenie do uruchamiania własnej instancji klienta Ethereum."
 lang: pl
 sidebarDepth: 2
 ---
@@ -71,18 +71,18 @@ Rozmiar bazy danych i szybkość początkowej synchronizacji zależą od wybrane
 
 Upewnij się również, że Twoje połączenie internetowe nie jest ograniczone przez [limit przepustowości](https://wikipedia.org/wiki/Data_cap). Zaleca się korzystanie z nielimitowanego połączenia, ponieważ początkowa synchronizacja i dane przesyłane do sieci mogą przekroczyć Twój limit.
 
-##### System operacyjny {#plug-and-play}
+##### System operacyjny {#}
 
 Wszystkie klienty obsługują główne systemy operacyjne – Linux, macOS, Windows. Oznacza to, że możesz uruchamiać węzły na zwykłych komputerach stacjonarnych lub serwerach z systemem operacyjnym (OS), który najbardziej Ci odpowiada. Upewnij się, że Twój system operacyjny jest aktualny, aby uniknąć potencjalnych problemów i luk w zabezpieczeniach.
 
-##### Minimalne wymagania {#ethereum-on-a-single-board-computer}
+##### Minimalne wymagania {#}
 
 - Procesor z 2+ rdzeniami
 - 8 GB RAM
 - 2 TB SSD
 - Przepustowość 10+ MBit/s
 
-##### Zalecana specyfikacja {#spinning-up-node}
+##### Zalecana specyfikacja {#}
 
 - Szybki procesor z 4+ rdzeniami
 - 16 GB+ RAM
@@ -99,30 +99,30 @@ Wybrany tryb synchronizacji i klient wpłyną na wymagania dotyczące miejsca, a
 | Nethermind | 500GB+                    | 12TB+                          |
 | Reth       | N/D                       | 2.2TB+                         |
 
-- Uwaga: Erigon i Reth nie oferują synchronizacji typu snap sync, ale możliwe jest pełne przycinanie (Full Pruning) (~2 TB dla Erigona, ~1,2 TB dla Retha)
+- Uwaga: Erigon i Reth nie oferują synchronizacji typu snap sync, ale możliwe jest pełne przycinanie (Full Pruning) (\~2 TB dla Erigona, ~1,2 TB dla Retha)
 
 W przypadku klientów konsensusu wymagania dotyczące miejsca zależą również od implementacji klienta i włączonych funkcji (np. slasher walidatora), ale ogólnie należy liczyć się z kolejnymi 200 GB potrzebnymi na dane Beacon. Przy dużej liczbie walidatorów rośnie również obciążenie przepustowości. Możesz znaleźć [szczegóły dotyczące wymagań klientów konsensusu w tej analizie](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
-#### Rozwiązania plug-and-play {#automatized-setup}
+#### Rozwiązania plug-and-play {#plug-and-play}
 
 Najprostszą opcją uruchomienia węzła na własnym sprzęcie jest użycie urządzeń typu plug-and-play. Wstępnie skonfigurowane maszyny od dostawców oferują najbardziej bezpośrednie doświadczenie: zamów, podłącz, uruchom. Wszystko jest wstępnie skonfigurowane i działa automatycznie z intuicyjnym przewodnikiem i panelem do monitorowania i kontrolowania oprogramowania.
 
 - [DappNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### Ethereum na komputerze jednopłytkowym {#manual-setup}
+#### Ethereum na komputerze jednopłytkowym {#ethereum-on-a-single-board-computer}
 
 Łatwym i tanim sposobem na uruchomienie węzła Ethereum jest użycie komputera jednopłytkowego, nawet z architekturą ARM, takiego jak Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) zapewnia łatwe do uruchomienia obrazy wielu klientów warstwy wykonawczej i konsensusu dla Raspberry Pi i innych płyt ARM.
 
 Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomienia węzła w domu, ale należy pamiętać o ich ograniczonej wydajności.
 
-## Uruchamianie węzła {#getting-the-client}
+## Uruchamianie węzła {#spinning-up-node}
 
 Właściwa konfiguracja klienta może być wykonana za pomocą zautomatyzowanych programów uruchamiających (launcherów) lub ręcznie, konfigurując oprogramowanie klienta bezpośrednio.
 
 Dla mniej zaawansowanych użytkowników zalecanym podejściem jest użycie launchera, oprogramowania, które prowadzi przez instalację i automatyzuje proces konfiguracji klienta. Jeśli jednak masz pewne doświadczenie w korzystaniu z terminala, kroki ręcznej konfiguracji powinny być proste do wykonania.
 
-### Konfiguracja z przewodnikiem {#client-setup}
+### Konfiguracja z przewodnikiem {#automatized-setup}
 
 Wiele przyjaznych dla użytkownika projektów ma na celu poprawę doświadczenia związanego z konfiguracją klienta. Te launchery zapewniają automatyczną instalację i konfigurację klienta, a niektóre oferują nawet interfejs graficzny do konfiguracji z przewodnikiem i monitorowania klientów.
 
@@ -135,13 +135,13 @@ Poniżej znajduje się kilka projektów, które mogą pomóc Ci zainstalować i 
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) – Narzędzie do konfiguracji węzła, które automatycznie generuje konfigurację Dockera za pomocą kreatora CLI. Napisane w Go przez Nethermind.
 - [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) – Interfejs WWW i CLI do wdrażania klientów warstwy wykonawczej i konsensusu na Kubernetes. Zawiera bootstrap ze snapshotów i wbudowane monitorowanie. Darmowe. Nie wymaga konta Chainstack. Zbudowane przez Chainstack.
 
-### Ręczna konfiguracja klientów {#starting-the-execution-client}
+### Ręczna konfiguracja klientów {#manual-setup}
 
 Inną opcją jest ręczne pobranie, zweryfikowanie i skonfigurowanie oprogramowania klienta. Nawet jeśli niektóre klienty oferują interfejs graficzny, ręczna konfiguracja nadal wymaga podstawowych umiejętności obsługi terminala, ale oferuje znacznie większą wszechstronność.
 
 Jak wyjaśniono wcześniej, skonfigurowanie własnego węzła Ethereum będzie wymagało uruchomienia pary klientów: konsensusu i warstwy wykonawczej. Niektóre klienty mogą zawierać lekkiego klienta drugiego rodzaju i synchronizować się bez potrzeby używania innego oprogramowania. Jednak pełna, niewymagająca zaufania weryfikacja wymaga obu implementacji.
 
-#### Pobieranie oprogramowania klienta {#running-an-execution-client}
+#### Pobieranie oprogramowania klienta {#getting-the-client}
 
 Najpierw musisz uzyskać preferowane oprogramowanie [klienta warstwy wykonawczej](/developers/docs/nodes-and-clients/#execution-clients) i [klienta konsensusu](/developers/docs/nodes-and-clients/#consensus-clients).
 
@@ -151,7 +151,7 @@ Instrukcje instalacji każdego klienta znajdują się w dokumentacji podlinkowan
 
 Oto strony wydań klientów, na których można znaleźć ich wstępnie skompilowane pliki binarne lub instrukcje instalacji:
 
-##### Klienty warstwy wykonawczej {#starting-the-consensus-client}
+##### Klienty warstwy wykonawczej {#}
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
@@ -161,7 +161,7 @@ Oto strony wydań klientów, na których można znaleźć ich wstępnie skompilo
 
 Warto również zauważyć, że różnorodność klientów jest [problemem w warstwie wykonawczej](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Zaleca się, aby czytelnicy rozważyli uruchomienie mniejszościowego klienta warstwy wykonawczej.
 
-##### Klienty konsensusu {#running-a-consensus-client}
+##### Klienty konsensusu {#}
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Nie udostępnia wstępnie skompilowanego pliku binarnego, tylko obraz Dockera lub do zbudowania ze źródeł)
@@ -173,7 +173,7 @@ Warto również zauważyć, że różnorodność klientów jest [problemem w war
 
 [Zobacz najnowsze statystyki użycia klientów w sieci](https://clientdiversity.org/) i dowiedz się więcej o [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Weryfikacja oprogramowania {#adding-validators}
+##### Weryfikacja oprogramowania {#}
 
 Pobierając oprogramowanie z Internetu, zaleca się zweryfikowanie jego integralności. Ten krok jest opcjonalny, ale zwłaszcza w przypadku kluczowego elementu infrastruktury, jakim jest klient Ethereum, ważne jest, aby zdawać sobie sprawę z potencjalnych wektorów ataku i ich unikać. Jeśli pobrałeś wstępnie skompilowany plik binarny, musisz mu zaufać i zaryzykować, że atakujący mógł podmienić plik wykonywalny na złośliwy.
 
@@ -187,7 +187,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Konfiguracja klienta {#using-the-node}
+#### Konfiguracja klienta {#client-setup}
 
 Po zainstalowaniu, pobraniu lub skompilowaniu oprogramowania klienta jesteś gotowy do jego uruchomienia. Oznacza to tylko, że musi zostać wykonane z odpowiednią konfiguracją. Klienty oferują bogate opcje konfiguracji, które mogą włączyć różne funkcje.
 
@@ -199,7 +199,7 @@ Do celów testowych możesz woleć uruchomić klienta w jednej z sieci testowych
 
 Przykłady uruchamiania klientów warstwy wykonawczej z podstawową konfiguracją można znaleźć w następnej sekcji.
 
-#### Uruchamianie klienta warstwy wykonawczej {#reaching-rpc}
+#### Uruchamianie klienta warstwy wykonawczej {#starting-the-execution-client}
 
 Przed uruchomieniem oprogramowania klienta Ethereum wykonaj ostatnie sprawdzenie, czy Twoje środowisko jest gotowe. Na przykład upewnij się, że:
 
@@ -221,7 +221,7 @@ Ten token jest generowany automatycznie przez oprogramowanie klienta, ale w niek
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Uruchamianie klienta warstwy wykonawczej {#operating-the-node}
+#### Uruchamianie klienta warstwy wykonawczej {#running-an-execution-client}
 
 Ta sekcja poprowadzi Cię przez uruchamianie klientów warstwy wykonawczej. Służy jedynie jako przykład podstawowej konfiguracji, która uruchomi klienta z następującymi ustawieniami:
 
@@ -238,7 +238,7 @@ Pamiętaj, że to tylko podstawowy przykład, wszystkie inne ustawienia zostaną
 
 > Zauważ, że ukośniki odwrotne (backslashe) `\` w przykładach służą tylko do celów formatowania; flagi konfiguracyjne można zdefiniować w jednej linii.
 
-##### Running Besu {#keeping-node-online}
+##### Running Besu {#}
 
 Ten przykład uruchamia Besu w Sieci głównej, przechowuje dane blockchaina w domyślnym formacie w `/data/ethereum`, włącza JSON-RPC i Engine RPC do łączenia klienta konsensusu. Engine API jest uwierzytelniane za pomocą tokena `jwtsecret` i dozwolone są tylko wywołania z `localhost`.
 
@@ -260,7 +260,7 @@ besu --Xlauncher
 
 [Dokumentacja Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) zawiera dodatkowe opcje i szczegóły konfiguracji.
 
-##### Running Erigon {#creating-client-services}
+##### Running Erigon {#}
 
 Ten przykład uruchamia Erigona w Sieci głównej, przechowuje dane blockchaina w `/data/ethereum`, włącza JSON-RPC, definiuje, które przestrzenie nazw są dozwolone i włącza uwierzytelnianie do łączenia klienta konsensusu, które jest zdefiniowane przez ścieżkę `jwtsecret`.
 
@@ -273,7 +273,7 @@ erigon --chain mainnet \
 
 Erigon domyślnie wykonuje pełną synchronizację z 8 GB HDD, co spowoduje powstanie ponad 2 TB danych archiwalnych. Upewnij się, że `datadir` wskazuje na dysk z wystarczającą ilością wolnego miejsca lub zapoznaj się z flagą `--prune`, która może przycinać różne rodzaje danych. Sprawdź `--help` Erigona, aby dowiedzieć się więcej.
 
-##### Running Geth {#updating-clients}
+##### Running Geth {#}
 
 Ten przykład uruchamia Getha w Sieci głównej, przechowuje dane blockchaina w `/data/ethereum`, włącza JSON-RPC i definiuje, które przestrzenie nazw są dozwolone. Włącza również uwierzytelnianie do łączenia klienta konsensusu, co wymaga ścieżki do `jwtsecret`, a także opcji definiującej, które połączenia są dozwolone, w naszym przykładzie tylko z `localhost`.
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 Sprawdź [dokumentację dla wszystkich opcji konfiguracji](https://geth.ethereum.org/docs/fundamentals/command-line-options) i dowiedz się więcej o [uruchamianiu Getha z klientem konsensusu](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Running Nethermind {#running-additional-services}
+##### Running Nethermind {#}
 
 Nethermind oferuje różne [opcje instalacji](https://docs.nethermind.io/get-started/installing-nethermind). Pakiet zawiera różne pliki binarne, w tym Launcher z konfiguracją z przewodnikiem, który pomoże Ci interaktywnie utworzyć konfigurację. Alternatywnie znajdziesz Runnera, który jest samym plikiem wykonywalnym i możesz go po prostu uruchomić z flagami konfiguracyjnymi. JSON-RPC jest włączone domyślnie.
 
@@ -302,7 +302,7 @@ Dokumentacja Nethermind oferuje [kompletny przewodnik](https://docs.nethermind.i
 
 Klient warstwy wykonawczej zainicjuje swoje podstawowe funkcje, wybrane punkty końcowe i zacznie szukać węzłów równorzędnych (peers). Po pomyślnym odkryciu węzłów równorzędnych klient rozpoczyna synchronizację. Klient warstwy wykonawczej będzie oczekiwał na połączenie od klienta konsensusu. Aktualne dane blockchaina będą dostępne, gdy klient zostanie pomyślnie zsynchronizowany z bieżącym stanem.
 
-##### Running Reth {#monitoring-the-node}
+##### Running Reth {#}
 
 Ten przykład uruchamia Retha w Sieci głównej, używając domyślnej lokalizacji danych. Włącza uwierzytelnianie JSON-RPC i Engine RPC do łączenia klienta konsensusu, które jest zdefiniowane przez ścieżkę `jwtsecret`, przy czym dozwolone są tylko wywołania z `localhost`.
 
@@ -315,7 +315,7 @@ reth node \
 
 Zobacz [Konfiguracja Retha](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), aby dowiedzieć się więcej o domyślnych katalogach danych. [Dokumentacja Retha](https://reth.rs/run/mainnet.html) zawiera dodatkowe opcje i szczegóły konfiguracji.
 
-#### Uruchamianie klienta konsensusu {#further-reading}
+#### Uruchamianie klienta konsensusu {#starting-the-consensus-client}
 
 Klient konsensusu musi zostać uruchomiony z odpowiednią konfiguracją portów, aby ustanowić lokalne połączenie RPC z klientem warstwy wykonawczej. Klienty konsensusu muszą być uruchamiane z wystawionym portem klienta warstwy wykonawczej jako argumentem konfiguracji.
 
@@ -325,9 +325,9 @@ Jeśli planujesz uruchomić walidator, upewnij się, że dodałeś flagę konfig
 
 Uruchamiając węzeł Beacon w sieci testowej, możesz zaoszczędzić znaczną ilość czasu synchronizacji, używając publicznego punktu końcowego dla [synchronizacji z punktem kontrolnym (Checkpoint sync)](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Uruchamianie klienta konsensusu {#related-topics}
+#### Uruchamianie klienta konsensusu {#running-a-consensus-client}
 
-##### Running Lighthouse
+##### Running Lighthouse {#}
 
 Przed uruchomieniem Lighthouse dowiedz się więcej o tym, jak go zainstalować i skonfigurować w [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
@@ -340,7 +340,7 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### Running Lodestar
+##### Running Lodestar {#}
 
 Zainstaluj oprogramowanie Lodestar, kompilując je lub pobierając obraz Dockera. Dowiedz się więcej w [dokumentacji](https://chainsafe.github.io/lodestar/) i bardziej kompleksowym [przewodniku konfiguracji](https://hackmd.io/@philknows/rk5cDvKmK).
 
@@ -353,7 +353,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Running Nimbus
+##### Running Nimbus {#}
 
 Nimbus jest dostarczany zarówno z klientem konsensusu, jak i warstwy wykonawczej. Może być uruchamiany na różnych urządzeniach, nawet o bardzo skromnej mocy obliczeniowej.
 Po [zainstalowaniu zależności i samego Nimbusa](https://nimbus.guide/quick-start.html) możesz uruchomić jego klienta konsensusu:
@@ -366,7 +366,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Running Prysm
+##### Running Prysm {#}
 
 Prysm jest dostarczany ze skryptem, który umożliwia łatwą automatyczną instalację. Szczegóły można znaleźć w [dokumentacji Prysma](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
@@ -378,7 +378,7 @@ Prysm jest dostarczany ze skryptem, który umożliwia łatwą automatyczną inst
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### Running Teku
+##### Running Teku {#}
 
 ```sh
 teku --network mainnet \
@@ -389,7 +389,7 @@ teku --network mainnet \
 
 Kiedy klient konsensusu łączy się z klientem warstwy wykonawczej, aby odczytać kontrakt depozytowy i zidentyfikować walidatory, łączy się również z innymi węzłami równorzędnymi węzła Beacon i rozpoczyna synchronizację slotów konsensusu od bloku genezy (genesis). Gdy węzeł Beacon osiągnie bieżącą epokę, Beacon API staje się użyteczne dla Twoich walidatorów. Dowiedz się więcej o [interfejsach API węzła Beacon](https://eth2docs.vercel.app/).
 
-### Dodawanie walidatorów
+### Dodawanie walidatorów {#adding-validators}
 
 Klient konsensusu służy jako węzeł Beacon, do którego mogą łączyć się walidatory. Każdy klient konsensusu ma własne oprogramowanie walidatora opisane szczegółowo w odpowiedniej dokumentacji.
 
@@ -399,7 +399,7 @@ Najłatwiejszym sposobem na rozpoczęcie stakingu i generowania kluczy walidator
 
 Zajrzyj na [stronę o stakingu](/staking), aby zapoznać się z przeglądem opcji stakingu.
 
-### Korzystanie z węzła
+### Korzystanie z węzła {#using-the-node}
 
 Klienty warstwy wykonawczej oferują [punkty końcowe RPC API](/developers/docs/apis/json-rpc/), których możesz użyć do przesyłania transakcji, interakcji z inteligentnymi kontraktami lub ich wdrażania w sieci Ethereum na różne sposoby:
 
@@ -411,7 +411,7 @@ Różne klienty mają różne implementacje punktów końcowych RPC. Istnieje je
 
 Wszystkie klienty konsensusu udostępniają [Beacon API](https://ethereum.github.io/beacon-APIs), którego można użyć do sprawdzenia statusu klienta konsensusu lub pobrania bloków i danych konsensusu, wysyłając żądania za pomocą narzędzi takich jak [Curl](https://curl.se). Więcej informacji na ten temat można znaleźć w dokumentacji każdego klienta konsensusu.
 
-#### Dostęp do RPC
+#### Dostęp do RPC {#reaching-rpc}
 
 Domyślnym portem dla JSON-RPC klienta warstwy wykonawczej jest `8545`, ale możesz zmodyfikować porty lokalnych punktów końcowych w konfiguracji. Domyślnie interfejs RPC jest osiągalny tylko na hoście lokalnym (localhost) Twojego komputera. Aby uczynić go zdalnie dostępnym, możesz chcieć wystawić go publicznie, zmieniając adres na `0.0.0.0`. Dzięki temu będzie on osiągalny przez sieć lokalną i publiczne adresy IP. W większości przypadków będziesz musiał również skonfigurować przekierowanie portów na swoim routerze.
 
@@ -427,11 +427,11 @@ Aby to zrobić, musisz utworzyć własną [usługę cebulową](https://community
 
 Wreszcie, jednym z najpopularniejszych sposobów zapewnienia dostępu do sieci wewnętrznych jest połączenie VPN. W zależności od przypadku użycia i liczby użytkowników potrzebujących dostępu do Twojego węzła, bezpieczne połączenie VPN może być dobrą opcją. [OpenVPN](https://openvpn.net/) to w pełni funkcjonalny SSL VPN, który implementuje bezpieczne rozszerzenie sieci w warstwie 2 lub 3 modelu OSI przy użyciu standardowego protokołu SSL/TLS, obsługuje elastyczne metody uwierzytelniania klientów oparte na certyfikatach, kartach inteligentnych i/lub poświadczeniach nazwy użytkownika/hasła oraz umożliwia stosowanie zasad kontroli dostępu specyficznych dla użytkownika lub grupy przy użyciu reguł zapory sieciowej zastosowanych do wirtualnego interfejsu VPN.
 
-### Obsługa węzła
+### Obsługa węzła {#operating-the-node}
 
 Powinieneś regularnie monitorować swój węzeł, aby upewnić się, że działa prawidłowo. Może być konieczna sporadyczna konserwacja.
 
-#### Utrzymywanie węzła online
+#### Utrzymywanie węzła online {#keeping-node-online}
 
 Twój węzeł nie musi być online przez cały czas, ale powinieneś utrzymywać go online tak bardzo, jak to możliwe, aby był zsynchronizowany z siecią. Możesz go wyłączyć, aby go zrestartować, ale pamiętaj, że:
 
@@ -441,11 +441,11 @@ Twój węzeł nie musi być online przez cały czas, ale powinieneś utrzymywać
 
 _Nie dotyczy to węzłów walidatorów warstwy konsensusu._ Przełączenie węzła w tryb offline wpłynie na wszystkie zależne od niego usługi. Jeśli uruchamiasz węzeł w celach _stakingu_, powinieneś starać się zminimalizować przestoje tak bardzo, jak to możliwe.
 
-#### Tworzenie usług klienta
+#### Tworzenie usług klienta {#creating-client-services}
 
 Rozważ utworzenie usługi, która będzie automatycznie uruchamiać Twoje klienty podczas startu systemu. Na przykład na serwerach Linux dobrą praktyką byłoby utworzenie usługi, np. za pomocą `systemd`, która wykonuje klienta z odpowiednią konfiguracją, na koncie użytkownika z ograniczonymi uprawnieniami i automatycznie się restartuje.
 
-#### Aktualizacja klientów
+#### Aktualizacja klientów {#updating-clients}
 
 Musisz aktualizować oprogramowanie klienta o najnowsze poprawki bezpieczeństwa, funkcje i [EIP](/eips/). Zwłaszcza przed [hard forkami](/ethereum-forks/) upewnij się, że używasz prawidłowych wersji klienta.
 
@@ -455,17 +455,17 @@ Aktualizacja klientów jest bardzo prosta. Każdy klient ma określone instrukcj
 
 Każda implementacja klienta ma czytelny dla człowieka ciąg wersji używany w protokole peer-to-peer, ale jest on również dostępny z wiersza poleceń. Ten ciąg wersji pozwala użytkownikom sprawdzić, czy uruchamiają poprawną wersję, i umożliwia eksploratorom bloków oraz innym narzędziom analitycznym zainteresowanym ilościowym określeniem dystrybucji określonych klientów w sieci. Więcej informacji na temat ciągów wersji można znaleźć w dokumentacji poszczególnych klientów.
 
-#### Uruchamianie dodatkowych usług
+#### Uruchamianie dodatkowych usług {#running-additional-services}
 
 Uruchomienie własnego węzła pozwala na korzystanie z usług, które wymagają bezpośredniego dostępu do RPC klienta Ethereum. Są to usługi zbudowane na bazie Ethereum, takie jak [rozwiązania warstwy 2](/developers/docs/scaling/#layer-2-scaling), backend dla portfeli, eksploratory bloków, narzędzia deweloperskie i inna infrastruktura Ethereum.
 
-#### Monitorowanie węzła
+#### Monitorowanie węzła {#monitoring-the-node}
 
 Aby prawidłowo monitorować swój węzeł, rozważ zbieranie metryk. Klienty udostępniają punkty końcowe metryk, dzięki czemu możesz uzyskać kompleksowe dane o swoim węźle. Użyj narzędzi takich jak [InfluxDB](https://www.influxdata.com/get-influxdb/) lub [Prometheus](https://prometheus.io/), aby utworzyć bazy danych, które możesz zamienić w wizualizacje i wykresy w oprogramowaniu takim jak [Grafana](https://grafana.com/). Istnieje wiele konfiguracji do korzystania z tego oprogramowania i różnych pulpitów nawigacyjnych Grafana do wizualizacji Twojego węzła i sieci jako całości. Na przykład sprawdź [samouczek dotyczący monitorowania Getha](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
 W ramach monitorowania upewnij się, że masz oko na wydajność swojej maszyny. Podczas początkowej synchronizacji węzła oprogramowanie klienta może bardzo obciążać procesor i pamięć RAM. Oprócz Grafany możesz użyć narzędzi oferowanych przez Twój system operacyjny, takich jak `htop` lub `uptime`, aby to zrobić.
 
-## Dalsza lektura
+## Dalsza lektura {#further-reading}
 
 - [Przewodniki po stakingu Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) – _Somer Esat, często aktualizowane_
 - [Przewodnik | Jak skonfigurować walidator do stakingu Ethereum w Sieci głównej](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, często aktualizowane_
@@ -477,7 +477,7 @@ W ramach monitorowania upewnij się, że masz oko na wydajność swojej maszyny.
 - [Uruchamianie węzła Hyperledger Besu w sieci głównej Ethereum: Korzyści, wymagania i konfiguracja](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 maja 2020_
 - [Wdrażanie klienta Ethereum Nethermind ze stosem monitorującym](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 lipca 2020_
 
-## Powiązane tematy
+## Powiązane tematy {#related-topics}
 
 - [Węzły i klienty](/developers/docs/nodes-and-clients/)
 - [Bloki](/developers/docs/blocks/)

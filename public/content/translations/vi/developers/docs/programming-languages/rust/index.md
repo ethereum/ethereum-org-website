@@ -1,6 +1,6 @@
 ---
-title: Ethereum dành cho nhà phát triển Rust
-description: Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Rust
+title: "Ethereum dành cho nhà phát triển Rust"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Rust"
 lang: vi
 incomplete: true
 ---

@@ -1,10 +1,10 @@
 ---
 title: "尽情缓存"
-description: 了解如何创建和使用缓存合约，以降低 Rollup 交易成本
-author: 奥里·波梅兰茨
+description: "了解如何创建和使用缓存合约，以降低 Rollup 交易成本"
+author: "奥里·波梅兰茨"
 tags: ["二层网络", "缓存", "存储", "扩容"]
 skill: intermediate
-breadcrumb: 汇总缓存
+breadcrumb: "汇总缓存"
 published: 2022-09-15
 lang: zh
 ---
@@ -757,6 +757,7 @@ contract WORM is Cache {
 这就是我们在 Foundry 中验证代码是否[正确发出事件](https://getfoundry.sh/reference/cheatcodes/expect-emit/)的方式。
 
 ### 客户端 {#the-client}
+
 Solidity 测试无法提供的一点是，你可以剪切并粘贴到自己应用程序中的 JavaScript 代码。为了编写该代码，我将 WORM 部署到了 [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli)（[Optimism](https://www.optimism.io/) 的新测试网）。它的地址是 [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a)。
 
 [你可以在这里查看客户端的 JavaScript 代码](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)。要使用它：

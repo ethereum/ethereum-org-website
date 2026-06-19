@@ -1,6 +1,6 @@
 ---
-title: Knihovny chytrých kontraktů
-description: Objevte znovupoužitelné knihovny chytrých kontraktů a stavební bloky, které urychlí vaše vývojové projekty na Ethereu.
+title: "Knihovny chytrých kontraktů"
+description: "Objevte znovupoužitelné knihovny chytrých kontraktů a stavební bloky, které urychlí vaše vývojové projekty na Ethereu."
 lang: cs
 ---
 

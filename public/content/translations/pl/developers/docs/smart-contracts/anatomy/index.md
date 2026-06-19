@@ -1,6 +1,6 @@
 ---
-title: Anatomia inteligentnych kontraktów
-description: Szczegółowe spojrzenie na anatomię inteligentnego kontraktu – funkcje, dane i zmienne.
+title: "Anatomia inteligentnych kontraktów"
+description: "Szczegółowe spojrzenie na anatomię inteligentnego kontraktu – funkcje, dane i zmienne."
 lang: pl
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "كل ما يمكنك تخزينه مؤقتًا"
 description: "تعلم كيفية إنشاء واستخدام عقد تخزين مؤقت لمعاملات تجميعات أرخص"
-author: أوري بوميرانتس
+author: "أوري بوميرانتس"
 tags:
   - الطبقة 2
   - التخزين المؤقت
@@ -761,6 +761,7 @@ contract WORM is Cache {
 هذه هي الطريقة التي نتحقق بها من أن الكود [يُصدر حدثًا بشكل صحيح](https://getfoundry.sh/reference/cheatcodes/expect-emit/) في Foundry.
 
 ### العميل {#the-client}
+
 أحد الأشياء التي لا تحصل عليها مع اختبارات Solidity هو كود JavaScript يمكنك قصه ولصقه في تطبيقك الخاص. لكتابة هذا الكود، قمت بنشر WORM على [أوبتيميزم غويرلي](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli)، شبكة اختبار [أوبتيميزم](https://www.optimism.io/) الجديدة. وهو موجود على العنوان [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [يمكنك رؤية كود JavaScript للعميل هنا](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). لاستخدامه:

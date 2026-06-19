@@ -1,6 +1,6 @@
 ---
 title: Cadenas laterales
-description: Una introducción a las cadenas laterales como solución de escalabilidad utilizada actualmente por la comunidad de Ethereum.
+description: "Una introducción a las cadenas laterales como solución de escalabilidad utilizada actualmente por la comunidad de Ethereum."
 lang: es
 sidebarDepth: 3
 ---

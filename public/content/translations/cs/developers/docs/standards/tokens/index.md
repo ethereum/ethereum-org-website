@@ -1,6 +1,6 @@
 ---
-title: Standardy tokenů
-description: Prozkoumejte standardy tokenů na Ethereu, včetně ERC-20, ERC-721 a ERC-1155 pro zastupitelné a nezastupitelné tokeny.
+title: "Standardy tokenů"
+description: "Prozkoumejte standardy tokenů na Ethereu, včetně ERC-20, ERC-721 a ERC-1155 pro zastupitelné a nezastupitelné tokeny."
 lang: cs
 incomplete: true
 ---

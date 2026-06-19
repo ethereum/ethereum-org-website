@@ -1,6 +1,6 @@
 ---
-title: 面向 Rust 开发者的以太坊
-description: 了解如何使用基于 Rust 的项目和工具在以太坊上进行开发
+title: "面向 Rust 开发者的以太坊"
+description: "了解如何使用基于 Rust 的项目和工具在以太坊上进行开发"
 lang: zh
 incomplete: true
 ---

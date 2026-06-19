@@ -1,6 +1,6 @@
 ---
 title: Almacenamiento descentralizado
-description: Descripción general de qué es el almacenamiento descentralizado y las herramientas disponibles para integrarlo en una aplicación descentralizada (dapp).
+description: "Descripción general de qué es el almacenamiento descentralizado y las herramientas disponibles para integrarlo en una aplicación descentralizada (dapp)."
 lang: es
 authors: ["Patrick Collins"]
 ---

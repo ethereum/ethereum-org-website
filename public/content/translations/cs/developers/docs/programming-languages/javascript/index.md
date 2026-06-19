@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro vývojáře v JavaScriptu
-description: Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na JavaScriptu.
+title: "Ethereum pro vývojáře v JavaScriptu"
+description: "Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na JavaScriptu."
 lang: cs
 ---
 

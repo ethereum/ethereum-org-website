@@ -1,10 +1,10 @@
 ---
 title: "All you can cache"
-description: Erfahren Sie, wie Sie einen Caching-Vertrag für günstigere Rollup-Transaktionen erstellen und verwenden
+description: "Erfahren Sie, wie Sie einen Caching-Vertrag für günstigere Rollup-Transaktionen erstellen und verwenden"
 author: Ori Pomerantz
 tags: ["Layer 2", "Caching", "Speicher", "Skalierung"]
 skill: intermediate
-breadcrumb: Caching für Rollups
+breadcrumb: "Caching für Rollups"
 published: 2022-09-15
 lang: de
 ---
@@ -757,6 +757,7 @@ Da wir die Low-Level-Funktion `<address>.call()` verwenden, können wir `vm.expe
 Auf diese Weise überprüfen wir in Foundry, ob Code [ein Ereignis korrekt ausgibt](https://getfoundry.sh/reference/cheatcodes/expect-emit/).
 
 ### Der Client {#the-client}
+
 Eine Sache, die Sie bei Solidity-Tests nicht bekommen, ist JavaScript-Code, den Sie ausschneiden und in Ihre eigene Anwendung einfügen können. Um diesen Code zu schreiben, habe ich WORM auf [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), dem neuen Testnetz von [Optimism](https://www.optimism.io/), bereitgestellt. Es befindet sich unter der Adresse [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Den JavaScript-Code für den Client können Sie hier sehen](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Um ihn zu verwenden:

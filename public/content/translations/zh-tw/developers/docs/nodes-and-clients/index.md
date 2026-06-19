@@ -1,6 +1,6 @@
 ---
-title: 節點與客戶端
-description: 以太坊節點與客戶端軟體概覽，以及如何設定節點與為何應該這麼做。
+title: "節點與客戶端"
+description: "以太坊節點與客戶端軟體概覽，以及如何設定節點與為何應該這麼做。"
 lang: zh-tw
 sidebarDepth: 2
 ---

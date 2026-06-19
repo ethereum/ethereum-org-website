@@ -1,6 +1,6 @@
 ---
-title: Token Standartları
-description: Değiştirilebilir ve değiştirilemez token'lar için ERC-20, ERC-721 ve ERC-1155 dahil olmak üzere Ethereum token standartlarını keşfedin.
+title: "Token Standartları"
+description: "Değiştirilebilir ve değiştirilemez token'lar için ERC-20, ERC-721 ve ERC-1155 dahil olmak üzere Ethereum token standartlarını keşfedin."
 lang: tr
 incomplete: true
 ---

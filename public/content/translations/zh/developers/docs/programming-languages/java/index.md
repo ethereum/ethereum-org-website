@@ -1,6 +1,6 @@
 ---
-title: 以太坊 Java 开发者指南
-description: 了解如何使用基于 Java 的项目和工具在以太坊上进行开发
+title: "以太坊 Java 开发者指南"
+description: "了解如何使用基于 Java 的项目和工具在以太坊上进行开发"
 lang: zh
 incomplete: true
 ---

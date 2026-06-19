@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro vývojáře v Javě
-description: Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Javě
+title: "Ethereum pro vývojáře v Javě"
+description: "Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Javě"
 lang: cs
 incomplete: true
 ---

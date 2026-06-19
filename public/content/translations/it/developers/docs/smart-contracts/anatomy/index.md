@@ -1,6 +1,6 @@
 ---
 title: Anatomia degli smart contract
-description: Uno sguardo approfondito all'anatomia di uno smart contract: funzioni, dati e variabili.
+description: "Uno sguardo approfondito all'anatomia di uno smart contract: funzioni, dati e variabili."
 lang: it
 ---
 

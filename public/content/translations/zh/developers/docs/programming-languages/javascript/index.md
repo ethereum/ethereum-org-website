@@ -1,6 +1,6 @@
 ---
-title: 面向 JavaScript 开发者的以太坊
-description: 了解如何使用基于 JavaScript 的项目和工具进行以太坊开发。
+title: "面向 JavaScript 开发者的以太坊"
+description: "了解如何使用基于 JavaScript 的项目和工具进行以太坊开发。"
 lang: zh
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: "Кешуйте все, що можете"
-description: Дізнайтеся, як створити та використовувати контракт кешування для дешевших транзакцій ролапів
-author: Орі Померанц
+description: "Дізнайтеся, як створити та використовувати контракт кешування для дешевших транзакцій ролапів"
+author: "Орі Померанц"
 tags: ["рівень 2", "кешування", "сховище", "масштабування"]
 skill: intermediate
-breadcrumb: Кешування для ролапів
+breadcrumb: "Кешування для ролапів"
 published: 2022-09-15
 lang: uk
 ---
@@ -757,6 +757,7 @@ contract WORM is Cache {
 Таким чином ми перевіряємо, що код [правильно випромінює подію](https://getfoundry.sh/reference/cheatcodes/expect-emit/) у Foundry.
 
 ### Клієнт {#the-client}
+
 Чого ви не отримуєте з тестами Solidity, так це коду JavaScript, який можна вирізати та вставити у власний застосунок. Щоб написати цей код, я розгорнув WORM в [Optimism Ґерлі](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), новій тестовій мережі [Optimism](https://www.optimism.io/). Він знаходиться за адресою [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Ви можете переглянути код JavaScript для клієнта тут](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Щоб використати його:

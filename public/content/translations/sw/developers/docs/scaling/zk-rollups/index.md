@@ -1,6 +1,6 @@
 ---
 title: Mikusanyiko ya sifuri-maarifa
-description: Utangulizi wa mikusanyiko ya sifuri-maarifa—suluhisho la kuongeza uwezo linalotumiwa na jamii ya Ethereum.
+description: "Utangulizi wa mikusanyiko ya sifuri-maarifa—suluhisho la kuongeza uwezo linalotumiwa na jamii ya Ethereum."
 lang: sw
 ---
 
@@ -106,7 +106,7 @@ ZK-STARKs pia ni salama dhidi ya kompyuta za kwanta, wakati Kriptografia ya Tao 
 
 #### Uthibitisho wa uhalali hufanyaje kazi katika ZK-rollups? {#validity-proofs-in-zk-rollups}
 
-##### Uzalishaji wa uthibitisho {#entries-and-exits}
+##### Uzalishaji wa uthibitisho {#}
 
 Kabla ya kukubali miamala, mwendeshaji atafanya ukaguzi wa kawaida. Hii inajumuisha kuthibitisha kwamba:
 
@@ -132,7 +132,7 @@ Mchakato unajirudia kwa kila muamala; kila "mzunguko" huunda mzizi mpya wa hali 
 
 Saketi ya kuthibitisha ya ZK inarudia juu ya fungu zima la muamala, ikihakiki mfuatano wa masasisho yanayosababisha mzizi wa mwisho wa hali baada ya muamala wa mwisho kutekelezwa. Mzizi wa mwisho wa Merkle uliokokotolewa unakuwa mzizi mpya zaidi wa hali rasmi wa ZK-rollup.
 
-##### Uhakiki wa uthibitisho {#zk-rollups-and-evm-compatibility}
+##### Uhakiki wa uthibitisho {#}
 
 Baada ya saketi ya kuthibitisha kuhakiki usahihi wa masasisho ya hali, mwendeshaji wa L2 huwasilisha uthibitisho wa uhalali uliokokotolewa kwenye mkataba wa mhakiki kwenye L1. Saketi ya uhakiki ya mkataba inahakiki uhalali wa uthibitisho na pia inakagua pembejeo za umma zinazounda sehemu ya uthibitisho:
 
@@ -146,7 +146,7 @@ Baada ya saketi ya kuthibitisha kuhakiki usahihi wa masasisho ya hali, mwendesha
 
 Ikiwa uthibitisho unaridhisha saketi (yaani, ni halali), inamaanisha kwamba kuna mfuatano wa miamala halali inayobadilisha rollup kutoka hali ya awali (iliyowekwa alama ya vidole ya kriptografia na mzizi wa hali ya awali) hadi hali mpya (iliyowekwa alama ya vidole ya kriptografia na mzizi wa hali ya baada). Ikiwa mzizi wa hali ya awali unalingana na mzizi uliohifadhiwa katika mkataba wa rollup, na uthibitisho ni halali, mkataba wa rollup huchukua mzizi wa hali ya baada kutoka kwenye uthibitisho na kusasisha mti wake wa hali ili kuonyesha hali iliyobadilika ya rollup.
 
-### Kuingia na kujitoa {#how-do-zk-rollup-fees-work}
+### Kuingia na kujitoa {#entries-and-exits}
 
 Watumiaji huingia kwenye ZK-rollup kwa kuweka tokeni katika mkataba wa rollup uliowekwa kwenye mnyororo wa L1. Muamala huu umepangwa kwenye foleni kwa kuwa waendeshaji pekee ndio wanaoweza kuwasilisha miamala kwenye mkataba wa rollup.
 
@@ -164,7 +164,7 @@ Kutoa kutoka kwenye ZK-rollup kwenda L1 ni moja kwa moja. Mtumiaji huanzisha mua
 
 Mkataba wa rollup huheshi data ya muamala, hukagua ikiwa mzizi wa fungu upo, na hutumia ushahidi wa Merkle kukagua ikiwa heshi ya muamala ni sehemu ya mzizi wa fungu. Baadaye, mkataba hutekeleza muamala wa kujitoa na kutuma fedha kwa anwani iliyochaguliwa ya mtumiaji kwenye L1.
 
-## ZK-rollups na utangamano wa EVM {#scaling-ethereum-with-zk-rollups}
+## ZK-rollups na utangamano wa EVM {#zk-rollups-and-evm-compatibility}
 
 Tofauti na mikusanyiko yenye matumaini, ZK-rollups hazitangamani kwa urahisi na [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm/). Kuthibitisha ukokotoaji wa EVM wa madhumuni ya jumla katika saketi ni ngumu zaidi na inahitaji rasilimali nyingi kuliko kuthibitisha ukokotoaji rahisi (kama hamisho la tokeni lililoelezwa hapo awali).
 
@@ -174,7 +174,7 @@ Kama EVM, zkEVM hubadilika kati ya hali baada ya ukokotoaji kufanywa kwenye baad
 
 Kuanzishwa kwa ZK-rollups zinazotangamana na EVM kunatarajiwa kusaidia wasanidi programu kutumia uwezo wa kuongezeka na hakikisho la usalama la uthibitisho wa maarifa-sifuri. Muhimu zaidi, utangamano na miundombinu asilia ya Ethereum inamaanisha wasanidi programu wanaweza kujenga programu tumizi zilizogatuliwa (dapps) zinazofaa kwa ZK kwa kutumia zana na lugha zinazofahamika (na zilizojaribiwa vitani).
 
-## Ada za ZK-rollup hufanyaje kazi? {#transaction-data-compression}
+## Ada za ZK-rollup hufanyaje kazi? {#how-do-zk-rollup-fees-work}
 
 Kiasi ambacho watumiaji hulipa kwa miamala kwenye ZK-rollups kinategemea ada ya gesi, kama tu kwenye Mtandao Mkuu wa Ethereum. Hata hivyo, ada za gesi hufanya kazi tofauti kwenye L2 na huathiriwa na gharama zifuatazo:
 
@@ -188,15 +188,15 @@ Kiasi ambacho watumiaji hulipa kwa miamala kwenye ZK-rollups kinategemea ada ya 
 
 Mbali na kukusanya miamala katika mafungu, ZK-rollups hupunguza ada kwa watumiaji kwa kubana data ya muamala. Unaweza [kuona muhtasari wa wakati halisi](https://l2fees.info/) wa jinsi inavyogharimu kutumia ZK-rollups za Ethereum.
 
-## ZK-rollups huongezaje uwezo wa Ethereum? {#recursive-proofs}
+## ZK-rollups huongezaje uwezo wa Ethereum? {#scaling-ethereum-with-zk-rollups}
 
-### Mfinyazo wa data ya muamala {#zk-rollups-pros-and-cons}
+### Mfinyazo wa data ya muamala {#transaction-data-compression}
 
 ZK-rollups hupanua uwezo wa upitishaji kwenye tabaka la msingi la Ethereum kwa kuchukua ukokotoaji nje ya mnyororo, lakini msukumo halisi wa kuongeza uwezo unatokana na kubana data ya muamala. [Ukubwa wa kitalu](/developers/docs/blocks/#block-size) cha Ethereum huzuia data ambayo kila kitalu kinaweza kushikilia na, kwa ugani, idadi ya miamala inayochakatwa kwa kila kitalu. Kwa kubana data inayohusiana na muamala, ZK-rollups huongeza kwa kiasi kikubwa idadi ya miamala inayochakatwa kwa kila kitalu.
 
 ZK-rollups zinaweza kubana data ya muamala vizuri zaidi kuliko mikusanyiko yenye matumaini kwa kuwa hazilazimiki kuchapisha data yote inayohitajika kuthibitisha kila muamala. Zinapaswa tu kuchapisha data ndogo inayohitajika ili kujenga upya hali ya hivi punde ya akaunti na salio kwenye rollup.
 
-### Uthibitisho unaojirudia {#zk-video}
+### Uthibitisho unaojirudia {#recursive-proofs}
 
 Faida ya uthibitisho wa maarifa-sifuri ni kwamba uthibitisho unaweza kuhakiki uthibitisho mwingine. Kwa mfano, ZK-SNARK moja inaweza kuhakiki ZK-SNARKs nyingine. "Uthibitisho-wa-uthibitisho" kama huo huitwa uthibitisho unaojirudia na huongeza kwa kiasi kikubwa uwezo wa upitishaji kwenye ZK-rollups.
 
@@ -204,7 +204,7 @@ Kwa sasa, uthibitisho wa uhalali unazalishwa kwa msingi wa kitalu-kwa-kitalu na 
 
 Uthibitisho unaojirudia, hata hivyo, hufanya iwezekane kukamilisha vitalu kadhaa kwa uthibitisho mmoja wa uhalali. Hii ni kwa sababu saketi ya kuthibitisha hukusanya kwa kujirudia uthibitisho wa vitalu vingi hadi uthibitisho mmoja wa mwisho utakapoundwa. Mwendeshaji wa L2 huwasilisha uthibitisho huu unaojirudia, na ikiwa mkataba utaukubali, vitalu vyote husika vitakamilishwa papo hapo. Kwa uthibitisho unaojirudia, idadi ya miamala ya ZK-rollup inayoweza kukamilishwa kwenye Ethereum kwa vipindi huongezeka.
 
-### Faida na hasara za ZK-rollups {#zkevm-projects}
+### Faida na hasara za ZK-rollups {#zk-rollups-pros-and-cons}
 
 | Faida                                                                                                                                                                                                   | Hasara                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,14 +216,14 @@ Uthibitisho unaojirudia, hata hivyo, hufanya iwezekane kukamilisha vitalu kadhaa
 | Haitegemei dhana za uhai na watumiaji hawalazimiki kuthibitisha mnyororo ili kulinda fedha zao.                                                                                              | Baadhi ya mifumo ya kuthibitisha (k.m., ZK-SNARK) inahitaji usanidi unaoaminika ambao, ikiwa utashughulikiwa vibaya, unaweza kuhatarisha muundo wa usalama wa ZK-rollup.                                                     |
 | Mfinyazo bora wa data unaweza kusaidia kupunguza gharama za kuchapisha `calldata` kwenye Ethereum na kupunguza ada za rollup kwa watumiaji.                                                                             |                                                                                                                                                                                                    |
 
-### Maelezo ya kuona ya ZK-rollups {#further-reading-on-zk-rollups}
+### Maelezo ya kuona ya ZK-rollups {#zk-video}
 
 Tazama Finematics akielezea ZK-rollups:
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="406" />
 
 
-## Nani anafanyia kazi zkEVM? {#tutorials}
+## Nani anafanyia kazi zkEVM? {#zkevm-projects}
 
 <Alert variant="info">
 <AlertEmoji text="💡" />
@@ -253,7 +253,7 @@ Miradi inayofanyia kazi zkEVMs inajumuisha:
 
 - **[Linea](https://linea.build)** - _Linea ni Tabaka la 2 la zkEVM sawa na Ethereum lililojengwa na ConsenSys, linaloendana kikamilifu na mfumo ikolojia wa Ethereum._
 
-## Usomaji zaidi kuhusu ZK-rollups
+## Usomaji zaidi kuhusu ZK-rollups {#further-reading-on-zk-rollups}
 
 - [Mikusanyiko ya Sifuri-Maarifa ni Nini?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Mikusanyiko ya sifuri-maarifa ni nini?](https://alchemy.com/blog/zero-knowledge-rollups)
@@ -267,7 +267,7 @@ Miradi inayofanyia kazi zkEVMs inajumuisha:
 - [Jinsi ZK-SNARKS inavyofanya kazi kiufundi](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [SNARKs zinawezekanaje?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
 
-## Mafunzo: Faragha na sifuri-maarifa kwenye Ethereum
+## Mafunzo: Faragha na sifuri-maarifa kwenye Ethereum {#tutorials}
 
 - [Kutumia sifuri-maarifa kwa hali ya siri](/developers/tutorials/secret-state/) _– Jinsi ya kutumia uthibitisho wa ZK na vipengele vya seva vya nje ya mnyororo kudumisha hali ya siri ya mchezo mnyororoni._
 - [Kutumia Anwani za Siri](/developers/tutorials/stealth-addr/) _– Jinsi anwani za siri za ERC-5564 zinavyowezesha uhamisho wa ETH usiojulikana kwa kutumia unyambulishaji wa ufunguo wa kriptografia._

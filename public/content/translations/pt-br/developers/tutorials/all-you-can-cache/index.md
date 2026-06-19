@@ -1,6 +1,6 @@
 ---
 title: "Tudo o que você pode armazenar em cache"
-description: Aprenda a criar e usar um contrato de cache para transações de rollup mais baratas
+description: "Aprenda a criar e usar um contrato de cache para transações de rollup mais baratas"
 author: Ori Pomerantz
 tags: ["camada 2", "cache", "armazenamento", "escalabilidade"]
 skill: intermediate
@@ -757,6 +757,7 @@ Como usamos a função de baixo nível `<address>.call()`, não podemos usar `vm
 Esta é a maneira como verificamos se o código [emite um evento corretamente](https://getfoundry.sh/reference/cheatcodes/expect-emit/) no Foundry.
 
 ### O cliente {#the-client}
+
 Uma coisa que você não obtém com os testes em Solidity é o código JavaScript que você pode recortar e colar em seu próprio aplicativo. Para escrever esse código, implantei o WORM na [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), a nova rede de teste da [Optimism](https://www.optimism.io/). Ele está no endereço [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Você pode ver o código JavaScript para o cliente aqui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Para usá-lo:

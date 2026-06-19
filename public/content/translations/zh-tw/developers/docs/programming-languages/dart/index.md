@@ -1,6 +1,6 @@
 ---
-title: Dart 開發者的以太坊指南
-description: 學習如何使用 Dart 語言在以太坊上進行開發
+title: "Dart 開發者的以太坊指南"
+description: "學習如何使用 Dart 語言在以太坊上進行開發"
 lang: zh-tw
 incomplete: true
 ---

@@ -1,10 +1,10 @@
 ---
 title: "盡情快取"
-description: 了解如何建立與使用快取合約，以降低匯總交易的成本
-author: 奧里·波梅蘭茨
+description: "了解如何建立與使用快取合約，以降低匯總交易的成本"
+author: "奧里·波梅蘭茨"
 tags: ["第二層 (L2)", "快取", "儲存", "擴容"]
 skill: intermediate
-breadcrumb: 匯總的快取
+breadcrumb: "匯總的快取"
 published: 2022-09-15
 lang: zh-tw
 ---
@@ -757,6 +757,7 @@ contract WORM is Cache {
 這是我們在 Foundry 中驗證程式碼 [正確發出事件](https://getfoundry.sh/reference/cheatcodes/expect-emit/) 的方式。
 
 ### 用戶端 {#the-client}
+
 Solidity 測試無法提供的一件事是您可以剪下並貼上到您自己應用程式中的 JavaScript 程式碼。為了撰寫該程式碼，我將 WORM 部署到 [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli)（[Optimism](https://www.optimism.io/) 的新測試網）。它的地址是 [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a)。
 
 [您可以在這裡看到用戶端的 JavaScript 程式碼](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js)。要使用它：

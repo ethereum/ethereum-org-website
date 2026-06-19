@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmelerin anatomisi
-description: Bir akıllı sözleşmenin anatomisine derinlemesine bir bakış – işlevler, veriler ve değişkenler.
+title: "Akıllı sözleşmelerin anatomisi"
+description: "Bir akıllı sözleşmenin anatomisine derinlemesine bir bakış – işlevler, veriler ve değişkenler."
 lang: tr
 ---
 

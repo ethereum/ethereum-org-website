@@ -1,6 +1,6 @@
 ---
 title: Knoten und Clients
-description: Ein Überblick über Ethereum-Knoten und Client-Software sowie darüber, wie man einen Knoten einrichtet und warum man dies tun sollte.
+description: "Ein Überblick über Ethereum-Knoten und Client-Software sowie darüber, wie man einen Knoten einrichtet und warum man dies tun sollte."
 lang: de
 sidebarDepth: 2
 ---

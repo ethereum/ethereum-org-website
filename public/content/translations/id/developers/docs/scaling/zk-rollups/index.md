@@ -1,6 +1,6 @@
 ---
 title: Rollup zero-knowledge
-description: Pengantar tentang rollup zero-knowledge—sebuah solusi penskalaan yang digunakan oleh komunitas Ethereum.
+description: "Pengantar tentang rollup zero-knowledge—sebuah solusi penskalaan yang digunakan oleh komunitas Ethereum."
 lang: id
 ---
 
@@ -106,7 +106,7 @@ ZK-STARK juga aman terhadap komputer kuantum, sementara Kriptografi Kurva Elipti
 
 #### Bagaimana cara kerja bukti validitas di ZK-rollup? {#validity-proofs-in-zk-rollups}
 
-##### Pembuatan bukti {#entries-and-exits}
+##### Pembuatan bukti {#}
 
 Sebelum menerima transaksi, operator akan melakukan pemeriksaan biasa. Ini termasuk mengonfirmasi bahwa:
 
@@ -132,7 +132,7 @@ Proses ini berulang untuk setiap transaksi; setiap "loop" membuat akar state bar
 
 Sirkuit pembuktian ZK melakukan iterasi pada seluruh batch transaksi, memverifikasi urutan pembaruan yang menghasilkan akar state akhir setelah transaksi terakhir dieksekusi. Akar Merkle terakhir yang dihitung menjadi akar state kanonis terbaru dari ZK-rollup.
 
-##### Verifikasi bukti {#zk-rollups-and-evm-compatibility}
+##### Verifikasi bukti {#}
 
 Setelah sirkuit pembuktian memverifikasi kebenaran pembaruan state, operator l2 mengirimkan bukti validitas yang dihitung ke kontrak pemverifikasi di l1. Sirkuit verifikasi kontrak memverifikasi validitas bukti dan juga memeriksa input publik yang menjadi bagian dari bukti:
 
@@ -146,7 +146,7 @@ Setelah sirkuit pembuktian memverifikasi kebenaran pembaruan state, operator l2 
 
 Jika bukti memenuhi sirkuit (yaitu, valid), itu berarti ada urutan transaksi valid yang mentransisikan rollup dari state sebelumnya (disidikjari secara kriptografi oleh akar pra-state) ke state baru (disidikjari secara kriptografi oleh akar pasca-state). Jika akar pra-state cocok dengan akar yang disimpan dalam kontrak rollup, dan buktinya valid, kontrak rollup mengambil akar pasca-state dari bukti dan memperbarui pohon statenya untuk mencerminkan state rollup yang berubah.
 
-### Masuk dan keluar {#how-do-zk-rollup-fees-work}
+### Masuk dan keluar {#entries-and-exits}
 
 Pengguna memasuki ZK-rollup dengan mendepositkan token di kontrak rollup yang diterapkan pada rantai l1. Transaksi ini diantrekan karena hanya operator yang dapat mengirimkan transaksi ke kontrak rollup.
 
@@ -164,7 +164,7 @@ Melakukan penarikan dari ZK-rollup ke l1 sangatlah mudah. Pengguna memulai trans
 
 Kontrak rollup melakukan proses hash pada data transaksi, memeriksa apakah akar batch ada, dan menggunakan bukti Merkle untuk memeriksa apakah hash transaksi adalah bagian dari akar batch. Setelah itu, kontrak mengeksekusi transaksi keluar dan mengirimkan dana ke alamat pilihan pengguna di l1.
 
-## ZK-rollup dan kompatibilitas EVM {#scaling-ethereum-with-zk-rollups}
+## ZK-rollup dan kompatibilitas EVM {#zk-rollups-and-evm-compatibility}
 
 Tidak seperti rollup optimistik, ZK-rollup tidak serta-merta kompatibel dengan [Mesin Virtual Ethereum (EVM)](/developers/docs/evm/). Membuktikan komputasi EVM tujuan umum dalam sirkuit lebih sulit dan memakan banyak sumber daya daripada membuktikan komputasi sederhana (seperti transfer token yang dijelaskan sebelumnya).
 
@@ -174,7 +174,7 @@ Seperti EVM, zkEVM bertransisi antar state setelah komputasi dilakukan pada bebe
 
 Pengenalan ZK-rollup yang kompatibel dengan EVM diharapkan dapat membantu pengembang memanfaatkan skalabilitas dan jaminan keamanan dari bukti tanpa pengetahuan. Lebih penting lagi, kompatibilitas dengan infrastruktur asli Ethereum berarti pengembang dapat membangun aplikasi terdesentralisasi (dapp) yang ramah ZK menggunakan perkakas dan bahasa yang familier (dan telah teruji).
 
-## Bagaimana cara kerja biaya ZK-rollup? {#transaction-data-compression}
+## Bagaimana cara kerja biaya ZK-rollup? {#how-do-zk-rollup-fees-work}
 
 Berapa banyak yang dibayar pengguna untuk transaksi di ZK-rollup bergantung pada biaya gas, sama seperti di Mainnet Ethereum. Namun, biaya gas bekerja secara berbeda di l2 dan dipengaruhi oleh biaya-biaya berikut:
 
@@ -188,15 +188,15 @@ Berapa banyak yang dibayar pengguna untuk transaksi di ZK-rollup bergantung pada
 
 Selain melakukan pemrosesan batch transaksi, ZK-rollup mengurangi biaya bagi pengguna dengan mengompresi data transaksi. Anda dapat [melihat gambaran umum waktu nyata](https://l2fees.info/) tentang berapa biaya untuk menggunakan ZK-rollup Ethereum.
 
-## Bagaimana ZK-rollup menskalakan Ethereum? {#recursive-proofs}
+## Bagaimana ZK-rollup menskalakan Ethereum? {#scaling-ethereum-with-zk-rollups}
 
-### Kompresi data transaksi {#zk-rollups-pros-and-cons}
+### Kompresi data transaksi {#transaction-data-compression}
 
 ZK-rollup memperluas laju pemrosesan pada lapisan dasar Ethereum dengan melakukan komputasi secara offchain, tetapi dorongan nyata untuk penskalaan berasal dari kompresi data transaksi. [Ukuran blok](/developers/docs/blocks/#block-size) Ethereum membatasi data yang dapat ditampung setiap blok dan, lebih jauh lagi, jumlah transaksi yang diproses per blok. Dengan mengompresi data terkait transaksi, ZK-rollup secara signifikan meningkatkan jumlah transaksi yang diproses per blok.
 
 ZK-rollup dapat mengompresi data transaksi lebih baik daripada rollup optimistik karena mereka tidak perlu memposting semua data yang diperlukan untuk memvalidasi setiap transaksi. Mereka hanya perlu memposting data minimal yang diperlukan untuk membangun kembali state terbaru dari akun dan saldo di rollup.
 
-### Bukti rekursif {#zk-video}
+### Bukti rekursif {#recursive-proofs}
 
 Keuntungan dari bukti tanpa pengetahuan adalah bahwa bukti dapat memverifikasi bukti lainnya. Misalnya, satu ZK-SNARK dapat memverifikasi ZK-SNARK lainnya. "Bukti dari bukti" semacam itu disebut bukti rekursif dan secara dramatis meningkatkan laju pemrosesan pada ZK-rollup.
 
@@ -204,7 +204,7 @@ Saat ini, bukti validitas dihasilkan berdasarkan blok demi blok dan dikirimkan k
 
 Namun, bukti rekursif memungkinkan untuk memfinalisasi beberapa blok dengan satu bukti validitas. Ini karena sirkuit pembuktian secara rekursif menggabungkan beberapa bukti blok hingga satu bukti akhir dibuat. Operator l2 mengirimkan bukti rekursif ini, dan jika kontrak menerimanya, semua blok yang relevan akan difinalisasi secara instan. Dengan bukti rekursif, jumlah transaksi ZK-rollup yang dapat difinalisasi di Ethereum pada interval tertentu akan meningkat.
 
-### Kelebihan dan kekurangan ZK-rollup {#zkevm-projects}
+### Kelebihan dan kekurangan ZK-rollup {#zk-rollups-pros-and-cons}
 
 | Kelebihan                                                                                                                                                                                                   | Kekurangan                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,17 +216,14 @@ Namun, bukti rekursif memungkinkan untuk memfinalisasi beberapa blok dengan satu
 | Tidak bergantung pada asumsi keaktifan dan pengguna tidak perlu memvalidasi rantai untuk melindungi dana mereka.                                                                                              | Beberapa sistem pembuktian (misalnya, ZK-SNARK) memerlukan pengaturan tepercaya yang, jika salah ditangani, berpotensi membahayakan model keamanan ZK-rollup.                                                     |
 | Kompresi data yang lebih baik dapat membantu mengurangi biaya publikasi `calldata` di Ethereum dan meminimalkan biaya rollup bagi pengguna.                                                                             |                                                                                                                                                                                                    |
 
-### Penjelasan visual tentang ZK-rollup {#further-reading-on-zk-rollups}
+### Penjelasan visual tentang ZK-rollup {#zk-video}
 
 Tonton Finematics menjelaskan ZK-rollup:
 
-<HTML-PLACEHOLDER-COMPONENT-000000 />
-
-
-## Siapa yang mengerjakan zkEVM? {#tutorials}
+## Siapa yang mengerjakan zkEVM? {#zkevm-projects}
 
 <HTML-PLACEHOLDER-COMPONENT-000001>
-<HTML-PLACEHOLDER-COMPONENT-000002 />
+
 <HTML-PLACEHOLDER-COMPONENT-000003>
 <HTML-PLACEHOLDER-COMPONENT-000004>zkEVM untuk l2 vs l1</HTML-PLACEHOLDER-COMPONENT-000004>
 <HTML-PLACEHOLDER-COMPONENT-000005>
@@ -253,7 +250,7 @@ Proyek yang mengerjakan zkEVM meliputi:
 
 - **[Linea](https://linea.build)** - _Linea adalah Lapisan 2 zkEVM yang setara dengan Ethereum yang dibangun oleh ConsenSys, sepenuhnya selaras dengan ekosistem Ethereum._
 
-## Bacaan lebih lanjut tentang ZK-rollup
+## Bacaan lebih lanjut tentang ZK-rollup {#further-reading-on-zk-rollups}
 
 - [Apa Itu Rollup Zero-Knowledge?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Apa itu rollup zero-knowledge?](https://alchemy.com/blog/zero-knowledge-rollups)
@@ -267,7 +264,7 @@ Proyek yang mengerjakan zkEVM meliputi:
 - [Cara kerja ZK-SNARK secara teknis](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [Bagaimana SNARK dimungkinkan?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
 
-## Tutorial: Privasi & zero-knowledge di Ethereum
+## Tutorial: Privasi & zero-knowledge di Ethereum {#tutorials}
 
 - [Menggunakan zero-knowledge untuk state rahasia](/developers/tutorials/secret-state/) _– Cara menggunakan bukti ZK dan komponen server offchain untuk mempertahankan state permainan rahasia secara onchain._
 - [Menggunakan Alamat Siluman](/developers/tutorials/stealth-addr/) _– Bagaimana alamat siluman ERC-5564 memungkinkan transfer ETH anonim menggunakan derivasi kunci kriptografi._

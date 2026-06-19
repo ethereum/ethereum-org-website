@@ -1,6 +1,6 @@
 ---
-title: Java開発者向けのイーサリアム
-description: Javaベースのプロジェクトやツールを使用してイーサリアム向けに開発する方法を学びます
+title: "Java開発者向けのイーサリアム"
+description: "Javaベースのプロジェクトやツールを使用してイーサリアム向けに開発する方法を学びます"
 lang: ja
 incomplete: true
 ---

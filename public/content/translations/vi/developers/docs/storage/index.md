@@ -1,6 +1,6 @@
 ---
-title: Lưu trữ phi tập trung
-description: Tổng quan về lưu trữ phi tập trung là gì và các công cụ có sẵn để tích hợp nó vào một ứng dụng phi tập trung (dapp).
+title: "Lưu trữ phi tập trung"
+description: "Tổng quan về lưu trữ phi tập trung là gì và các công cụ có sẵn để tích hợp nó vào một ứng dụng phi tập trung (dapp)."
 lang: vi
 authors: ["Patrick Collins"]
 ---

@@ -1,10 +1,10 @@
 ---
 title: "Todo lo que puedas almacenar en caché"
-description: Aprenda a crear y usar un contrato de almacenamiento en caché para transacciones de rollup más baratas
+description: "Aprenda a crear y usar un contrato de almacenamiento en caché para transacciones de rollup más baratas"
 author: Ori Pomerantz
 tags: ["capa 2", "almacenamiento en caché", "almacenamiento", "escalabilidad"]
 skill: intermediate
-breadcrumb: Almacenamiento en caché para rollups
+breadcrumb: "Almacenamiento en caché para rollups"
 published: 2022-09-15
 lang: es
 ---
@@ -757,6 +757,7 @@ Dado que usamos la función de bajo nivel `<address>.call()`, no podemos usar `v
 Esta es la forma en que verificamos que el código [emite un evento correctamente](https://getfoundry.sh/reference/cheatcodes/expect-emit/) en Foundry.
 
 ### El cliente {#the-client}
+
 Una cosa que no se obtiene con las pruebas de Solidity es código JavaScript que pueda cortar y pegar en su propia aplicación. Para escribir ese código, implementé WORM en [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), la nueva red de prueba de [Optimism](https://www.optimism.io/). Está en la dirección [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Puede ver el código JavaScript para el cliente aquí](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Para usarlo:

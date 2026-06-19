@@ -1,6 +1,6 @@
 ---
-title: Ethereum dành cho nhà phát triển JavaScript
-description: Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên JavaScript.
+title: "Ethereum dành cho nhà phát triển JavaScript"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên JavaScript."
 lang: vi
 ---
 

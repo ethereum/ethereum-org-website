@@ -1,6 +1,6 @@
 ---
-title: 适合 Dart 开发者的以太坊
-description: 学习如何使用 Dart 语言进行以太坊开发
+title: "适合 Dart 开发者的以太坊"
+description: "学习如何使用 Dart 语言进行以太坊开发"
 lang: zh
 incomplete: true
 ---

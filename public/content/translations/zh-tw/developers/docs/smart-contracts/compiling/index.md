@@ -1,6 +1,6 @@
 ---
-title: 編譯智能合約
-description: 解釋為什麼需要編譯智能合約，以及編譯實際上做了什麼。
+title: "編譯智能合約"
+description: "解釋為什麼需要編譯智能合約，以及編譯實際上做了什麼。"
 lang: zh-tw
 incomplete: true
 ---

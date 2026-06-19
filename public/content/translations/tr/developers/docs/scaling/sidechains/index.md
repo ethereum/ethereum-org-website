@@ -1,6 +1,6 @@
 ---
 title: Yan Zincirler
-description: Ethereum topluluğu tarafından halihazırda kullanılan bir ölçeklendirme çözümü olarak yan zincirlere giriş.
+description: "Ethereum topluluğu tarafından halihazırda kullanılan bir ölçeklendirme çözümü olarak yan zincirlere giriş."
 lang: tr
 sidebarDepth: 3
 ---

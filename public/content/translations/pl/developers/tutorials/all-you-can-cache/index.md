@@ -1,10 +1,10 @@
 ---
 title: "Wszystko, co możesz zbuforować"
-description: Dowiedz się, jak stworzyć i używać kontraktu buforującego dla tańszych transakcji w rollupach
+description: "Dowiedz się, jak stworzyć i używać kontraktu buforującego dla tańszych transakcji w rollupach"
 author: Ori Pomerantz
 tags: ["warstwa 2", "caching", "przechowywanie", "skalowanie"]
 skill: intermediate
-breadcrumb: Caching dla rollupów
+breadcrumb: "Caching dla rollupów"
 published: 2022-09-15
 lang: pl
 ---
@@ -757,6 +757,7 @@ Ponieważ używamy niskopoziomowej funkcji `<address>.call()`, nie możemy uży�
 W ten sposób weryfikujemy, czy kod [poprawnie emituje zdarzenie](https://getfoundry.sh/reference/cheatcodes/expect-emit/) w Foundry.
 
 ### Klient {#the-client}
+
 Jedną rzeczą, której nie otrzymujesz z testami Solidity, jest kod JavaScript, który możesz wyciąć i wkleić do własnej aplikacji. Aby napisać ten kod, wdrożyłem WORM do [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), nowej sieci testowej [Optimism](https://www.optimism.io/). Znajduje się pod adresem [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Kod JavaScript dla klienta możesz zobaczyć tutaj](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Aby go użyć:

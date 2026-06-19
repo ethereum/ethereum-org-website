@@ -1,6 +1,6 @@
 ---
-title: 侧链
-description: 介绍以太坊社区目前使用的扩容解决方案——侧链。
+title: "侧链"
+description: "介绍以太坊社区目前使用的扩容解决方案——侧链。"
 lang: zh
 sidebarDepth: 3
 ---

@@ -1,6 +1,6 @@
 ---
-title: Rollupy s nulovým vědomím (ZK-rollupy)
-description: Úvod do rollupů s nulovým vědomím – řešení škálování používané komunitou Etherea.
+title: "Rollupy s nulovým vědomím (ZK-rollupy)"
+description: "Úvod do rollupů s nulovým vědomím – řešení škálování používané komunitou Etherea."
 lang: cs
 ---
 
@@ -106,7 +106,7 @@ ZK-STARKy jsou také bezpečné proti kvantovým počítačům, zatímco kryptog
 
 #### Jak fungují důkazy platnosti v ZK-rollupech? {#validity-proofs-in-zk-rollups}
 
-##### Generování důkazu {#entries-and-exits}
+##### Generování důkazu {#}
 
 Před přijetím transakcí provede operátor obvyklé kontroly. To zahrnuje potvrzení, že:
 
@@ -132,7 +132,7 @@ Proces se opakuje pro každou transakci; každá „smyčka“ vytvoří nový k
 
 ZK-dokazovací obvod iteruje přes celou dávku transakcí a ověřuje sekvenci aktualizací, které vedou ke konečnému kořeni stavu po provedení poslední transakce. Poslední vypočítaný Merkleho kořen se stává nejnovějším kanonickým kořenem stavu ZK-rollupu.
 
-##### Ověření důkazu {#zk-rollups-and-evm-compatibility}
+##### Ověření důkazu {#}
 
 Poté, co dokazovací obvod ověří správnost aktualizací stavu, L2 operátor odešle vypočítaný důkaz platnosti do kontraktu ověřovatele na L1. Ověřovací obvod kontraktu ověří platnost důkazu a také zkontroluje veřejné vstupy, které tvoří součást důkazu:
 
@@ -146,7 +146,7 @@ Poté, co dokazovací obvod ověří správnost aktualizací stavu, L2 operátor
 
 Pokud důkaz vyhovuje obvodu (tj. je platný), znamená to, že existuje sekvence platných transakcí, které převádějí rollup z předchozího stavu (kryptograficky otisknutého předchozím kořenem stavu) do nového stavu (kryptograficky otisknutého následným kořenem stavu). Pokud se předchozí kořen stavu shoduje s kořenem uloženým v kontraktu rollupu a důkaz je platný, kontrakt rollupu převezme následný kořen stavu z důkazu a aktualizuje svůj stavový strom tak, aby odrážel změněný stav rollupu.
 
-### Vstupy a výstupy {#how-do-zk-rollup-fees-work}
+### Vstupy a výstupy {#entries-and-exits}
 
 Uživatelé vstupují do ZK-rollupu vložením tokenů do kontraktu rollupu nasazeného na L1 řetězci. Tato transakce je zařazena do fronty, protože transakce do kontraktu rollupu mohou odesílat pouze operátoři.
 
@@ -164,7 +164,7 @@ Výběr ze ZK-rollupu na L1 je přímočarý. Uživatel iniciuje výstupní tran
 
 Kontrakt rollupu provede hashování transakčních dat, zkontroluje, zda existuje kořen dávky, a pomocí Merkleova důkazu zkontroluje, zda je hash transakce součástí kořene dávky. Poté kontrakt provede výstupní transakci a odešle prostředky na uživatelem zvolenou adresu na L1.
 
-## ZK-rollupy a kompatibilita s EVM {#scaling-ethereum-with-zk-rollups}
+## ZK-rollupy a kompatibilita s EVM {#zk-rollups-and-evm-compatibility}
 
 Na rozdíl od optimistických rollupů nejsou ZK-rollupy snadno kompatibilní s [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). Dokazování obecných výpočtů EVM v obvodech je obtížnější a náročnější na zdroje než dokazování jednoduchých výpočtů (jako je dříve popsaný převod tokenů).
 
@@ -174,7 +174,7 @@ Stejně jako EVM, i zkEVM přechází mezi stavy po provedení výpočtu na něk
 
 Očekává se, že zavedení ZK-rollupů kompatibilních s EVM pomůže vývojářům využít záruky škálovatelnosti a bezpečnosti důkazů s nulovou znalostí. Ještě důležitější je, že kompatibilita s nativní infrastrukturou Etherea znamená, že vývojáři mohou budovat ZK-přátelské decentralizované aplikace (dapps) pomocí známých (a v praxi ověřených) nástrojů a jazyků.
 
-## Jak fungují poplatky u ZK-rollupů? {#transaction-data-compression}
+## Jak fungují poplatky u ZK-rollupů? {#how-do-zk-rollup-fees-work}
 
 Kolik uživatelé platí za transakce na ZK-rollupech, závisí na poplatku za plyn (gas fee), stejně jako na Ethereum Mainnetu. Poplatky za gas však na L2 fungují odlišně a jsou ovlivněny následujícími náklady:
 
@@ -188,15 +188,15 @@ Kolik uživatelé platí za transakce na ZK-rollupech, závisí na poplatku za p
 
 Kromě dávkování transakcí snižují ZK-rollupy poplatky pro uživatele kompresí transakčních dat. Můžete se [podívat na přehled v reálném čase](https://l2fees.info/), kolik stojí používání ZK-rollupů na Ethereu.
 
-## Jak ZK-rollupy škálují Ethereum? {#recursive-proofs}
+## Jak ZK-rollupy škálují Ethereum? {#scaling-ethereum-with-zk-rollups}
 
-### Komprese transakčních dat {#zk-rollups-pros-and-cons}
+### Komprese transakčních dat {#transaction-data-compression}
 
 ZK-rollupy rozšiřují propustnost na základní vrstvě Etherea přesunem výpočtů offchain, ale skutečným impulsem pro škálování je komprese transakčních dat. [Velikost bloku](/developers/docs/blocks/#block-size) Etherea omezuje data, která může každý blok pojmout, a v důsledku toho i počet transakcí zpracovaných v jednom bloku. Kompresí dat souvisejících s transakcemi ZK-rollupy významně zvyšují počet transakcí zpracovaných v jednom bloku.
 
 ZK-rollupy dokážou komprimovat transakční data lépe než optimistické rollupy, protože nemusí odesílat všechna data potřebná k validaci každé transakce. Musí odeslat pouze minimální data potřebná k obnovení nejnovějšího stavu účtů a zůstatků na rollupu.
 
-### Rekurzivní důkazy {#zk-video}
+### Rekurzivní důkazy {#recursive-proofs}
 
 Výhodou důkazů s nulovou znalostí je, že důkazy mohou ověřovat jiné důkazy. Například jeden ZK-SNARK může ověřit jiné ZK-SNARKy. Takové „důkazy důkazů“ se nazývají rekurzivní důkazy a dramaticky zvyšují propustnost na ZK-rollupech.
 
@@ -204,7 +204,7 @@ V současné době jsou důkazy platnosti generovány blok po bloku a odesílán
 
 Rekurzivní důkazy však umožňují finalizovat několik bloků pomocí jednoho důkazu platnosti. Je to proto, že dokazovací obvod rekurzivně agreguje více důkazů bloků, dokud není vytvořen jeden konečný důkaz. L2 operátor odešle tento rekurzivní důkaz, a pokud jej kontrakt přijme, všechny příslušné bloky budou okamžitě finalizovány. S rekurzivními důkazy se zvyšuje počet transakcí ZK-rollupu, které lze v intervalech finalizovat na Ethereu.
 
-### Výhody a nevýhody ZK-rollupů {#zkevm-projects}
+### Výhody a nevýhody ZK-rollupů {#zk-rollups-pros-and-cons}
 
 | Výhody | Nevýhody |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,14 +216,14 @@ Rekurzivní důkazy však umožňují finalizovat několik bloků pomocí jednoh
 | Nezávisí na předpokladech živosti (liveness) a uživatelé nemusí validovat řetězec, aby ochránili své prostředky. | Některé dokazovací systémy (např. ZK-SNARK) vyžadují důvěryhodné nastavení, které by v případě nesprávného zacházení mohlo potenciálně ohrozit bezpečnostní model ZK-rollupu. |
 | Lepší komprese dat může pomoci snížit náklady na publikování `calldata` na Ethereu a minimalizovat poplatky za rollup pro uživatele. | |
 
-### Vizuální vysvětlení ZK-rollupů {#further-reading-on-zk-rollups}
+### Vizuální vysvětlení ZK-rollupů {#zk-video}
 
 Podívejte se, jak Finematics vysvětluje ZK-rollupy:
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="406" />
 
 
-## Kdo pracuje na zkEVM? {#tutorials}
+## Kdo pracuje na zkEVM? {#zkevm-projects}
 
 <Alert variant="info">
 <AlertEmoji text="💡" />
@@ -253,7 +253,7 @@ Mezi projekty pracující na zkEVM patří:
 
 - **[Linea](https://linea.build)** – _Linea je zkEVM na vrstvě 2 ekvivalentní Ethereu vytvořené společností ConsenSys, plně sladěné s ekosystémem Etherea._
 
-## Další čtení o ZK-rollupech
+## Další čtení o ZK-rollupech {#further-reading-on-zk-rollups}
 
 - [Co jsou rollupy s nulovým vědomím?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Co jsou rollupy s nulovým vědomím?](https://alchemy.com/blog/zero-knowledge-rollups)
@@ -267,7 +267,7 @@ Mezi projekty pracující na zkEVM patří:
 - [ZK-SNARKy pod pokličkou](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [Jak jsou SNARKy možné?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
 
-## Návody: Soukromí a nulové vědomí na Ethereu
+## Návody: Soukromí a nulové vědomí na Ethereu {#tutorials}
 
 - [Využití nulového vědomí pro tajný stav](/developers/tutorials/secret-state/) _– Jak používat ZK-důkazy a offchain serverové komponenty k udržování tajného stavu hry onchain._
 - [Používání skrytých adres (Stealth Addresses)](/developers/tutorials/stealth-addr/) _– Jak skryté adresy ERC-5564 umožňují anonymní převody ETH pomocí odvození kryptografického klíče._

@@ -34,13 +34,13 @@ Kusajili anwani moja kama `Owner` katika mkataba mahiri huleta hatari ya uwekaji
 
 Katika udhibiti wa ufikiaji unaotegemea jukumu, ufikiaji wa vipengele nyeti vya utendaji husambazwa kati ya kundi la washiriki wanaoaminika. Kwa mfano, akaunti moja inaweza kuwajibika kwa ufuzi wa tokeni, huku akaunti nyingine ikifanya uboreshaji au kusitisha mkataba. Kugatua udhibiti wa ufikiaji kwa njia hii huondoa hatua moja ya kutofaulu na kupunguza dhana za uaminifu kwa watumiaji.
 
-##### Kutumia mikoba ya saini-nyingi {#use-require-assert-revert}
+##### Kutumia mikoba ya saini-nyingi {#}
 
 Mbinu nyingine ya kutekeleza udhibiti salama wa ufikiaji ni kutumia [akaunti ya saini-nyingi](/developers/docs/smart-contracts/#multisig) kusimamia mkataba. Tofauti na EOA ya kawaida, akaunti za saini-nyingi zinamilikiwa na huluki nyingi na zinahitaji saini kutoka kwa idadi ya chini ya akaunti—tuseme 3-kati-ya-5—ili kutekeleza miamala.
 
 Kutumia saini-nyingi kwa udhibiti wa ufikiaji huleta tabaka la ziada la usalama kwa kuwa vitendo kwenye mkataba lengwa vinahitaji idhini kutoka kwa pande nyingi. Hili ni muhimu hasa ikiwa kutumia muundo wa Umiliki ni muhimu, kwani inafanya iwe vigumu zaidi kwa mshambuliaji au mtu wa ndani mpotovu kuchezea vipengele nyeti vya utendaji vya mkataba kwa madhumuni mabaya.
 
-### 2. Tumia kauli za require(), assert(), na revert() kulinda shughuli za mkataba {#test-smart-contracts-and-verify-code-correctness}
+### 2. Tumia kauli za require(), assert(), na revert() kulinda shughuli za mkataba {#use-require-assert-revert}
 
 Kama ilivyotajwa, mtu yeyote anaweza kuita vipengele vya utendaji vya umma katika mkataba mahiri wako pindi unaposambazwa kwenye mnyororo wa vitalu. Kwa kuwa huwezi kujua mapema jinsi akaunti za nje zitaingiliana na mkataba, ni bora kutekeleza ulinzi wa ndani dhidi ya shughuli zenye matatizo kabla ya usambazaji. Unaweza kutekeleza tabia sahihi katika mikataba mahiri kwa kutumia kauli za `require()`, `assert()`, na `revert()` ili kuanzisha vighairi na kutengua mabadiliko ya hali ikiwa utekelezaji utashindwa kukidhi mahitaji fulani.
 
@@ -70,7 +70,7 @@ contract VendingMachine {
 }
 ```
 
-### 3. Jaribu mikataba mahiri na uthibitishe usahihi wa msimbo {#get-independent-code-reviews}
+### 3. Jaribu mikataba mahiri na uthibitishe usahihi wa msimbo {#test-smart-contracts-and-verify-code-correctness}
 
 Kutobadilika kwa msimbo unaoendeshwa katika [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm/) kunamaanisha mikataba mahiri inahitaji kiwango cha juu cha tathmini ya ubora wakati wa awamu ya uundaji. Kujaribu mkataba wako kwa kina na kuuangalia kwa matokeo yoyote yasiyotarajiwa kutaboresha usalama kwa kiasi kikubwa na kuwalinda watumiaji wako kwa muda mrefu.
 
@@ -82,11 +82,11 @@ Mbinu bora ni kuchanganya majaribio ya vipengele na majaribio yanayotegemea sifa
 
 [Uthibitishaji rasmi](/developers/docs/smart-contracts/formal-verification) ni mbinu nyingine ya kuthibitisha sifa za usalama katika mikataba mahiri. Tofauti na majaribio ya kawaida, uthibitishaji rasmi unaweza kuthibitisha kwa uhakika kutokuwepo kwa makosa katika mkataba mahiri. Hili linafikiwa kwa kuunda vipimo rasmi vinavyonasa sifa za usalama zinazohitajika na kuthibitisha kwamba muundo rasmi wa mikataba unazingatia vipimo hivi.
 
-### 4. Omba ukaguzi huru wa msimbo wako {#audits}
+### 4. Omba ukaguzi huru wa msimbo wako {#get-independent-code-reviews}
 
 Baada ya kujaribu mkataba wako, ni vyema kuwaomba wengine wakague msimbo wa chanzo kwa masuala yoyote ya usalama. Majaribio hayatagundua kila dosari katika mkataba mahiri, lakini kupata ukaguzi huru huongeza uwezekano wa kuona udhaifu.
 
-#### Kaguzi {#bug-bounties}
+#### Kaguzi {#audits}
 
 Kuidhinisha ukaguzi wa mkataba mahiri ni njia mojawapo ya kufanya ukaguzi huru wa msimbo. Wakaguzi wana jukumu muhimu katika kuhakikisha kwamba mikataba mahiri ni salama na haina kasoro za ubora na makosa ya muundo.
 
@@ -95,7 +95,7 @@ Hata hivyo, unapaswa kuepuka kuchukulia kaguzi kama suluhisho la kila kitu. Kagu
 - [Vidokezo na mbinu za ukaguzi wa mkataba mahiri](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Pata manufaa zaidi kutokana na ukaguzi wako](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
-#### Zawadi za kugundua hitilafu (Bug bounties) {#follow-smart-contract-development-best-practices}
+#### Zawadi za kugundua hitilafu (Bug bounties) {#bug-bounties}
 
 Kuanzisha programu ya zawadi ya kugundua hitilafu ni mbinu nyingine ya kutekeleza ukaguzi wa msimbo wa nje. Zawadi ya kugundua hitilafu ni tuzo ya kifedha inayotolewa kwa watu binafsi (kawaida wadukuzi wema au 'whitehat hackers') wanaogundua udhaifu katika programu.
 
@@ -103,7 +103,7 @@ Inapotumiwa ipasavyo, zawadi za kugundua hitilafu huwapa wanachama wa jumuiya ya
 
 Mkakati muhimu ni kuweka malipo ya programu ya zawadi ya kugundua hitilafu kulingana na kiasi cha fedha kilicho hatarini. Ikifafanuliwa kama "[zawadi ya kugundua hitilafu inayoongezeka](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)", mbinu hii hutoa motisha ya kifedha kwa watu binafsi kufichua udhaifu kwa kuwajibika badala ya kuutumia vibaya.
 
-### 5. Fuata mbinu bora wakati wa uundaji wa mkataba mahiri {#implement-disaster-recovery-plans}
+### 5. Fuata mbinu bora wakati wa uundaji wa mkataba mahiri {#follow-smart-contract-development-best-practices}
 
 Kuwepo kwa kaguzi na zawadi za kugundua hitilafu hakukuondolei jukumu lako la kuandika msimbo wa ubora wa juu. Usalama mzuri wa mkataba mahiri huanza kwa kufuata michakato sahihi ya muundo na uundaji:
 
@@ -121,11 +121,11 @@ Kuwepo kwa kaguzi na zawadi za kugundua hitilafu hakukuondolei jukumu lako la ku
 
 - Weka kumbukumbu za msimbo wako ipasavyo (kwa kutumia [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)) na ueleze maelezo kuhusu usanifu wa mkataba katika lugha rahisi kueleweka. Hii itafanya iwe rahisi kwa wengine kukagua na kupitia msimbo wako.
 
-### 6. Tekeleza mipango thabiti ya kurejesha hali baada ya maafa {#contract-upgrades}
+### 6. Tekeleza mipango thabiti ya kurejesha hali baada ya maafa {#implement-disaster-recovery-plans}
 
 Kubuni vidhibiti salama vya ufikiaji, kutekeleza virekebishaji vya vipengele vya utendaji, na mapendekezo mengine kunaweza kuboresha usalama wa mkataba mahiri, lakini haviwezi kuondoa uwezekano wa unyonyaji mbaya. Kujenga mikataba mahiri iliyo salama kunahitaji "kujitayarisha kwa kutofaulu" na kuwa na mpango mbadala wa kujibu mashambulizi kwa ufanisi. Mpango sahihi wa kurejesha hali baada ya maafa utajumuisha baadhi au vipengele vyote vifuatavyo:
 
-#### Uboreshaji wa mkataba {#emergency-stops}
+#### Uboreshaji wa mkataba {#contract-upgrades}
 
 Ingawa mikataba mahiri ya Ethereum ni isiyobadilika kwa chaguo-msingi, inawezekana kufikia kiwango fulani cha ubadilikaji kwa kutumia miundo ya uboreshaji. Kuboresha mikataba ni muhimu katika matukio ambapo dosari muhimu inafanya mkataba wako wa zamani kutotumika na kusambaza mantiki mpya ndilo chaguo linalowezekana zaidi.
 
@@ -137,7 +137,7 @@ Kukabidhi miito kwa mkataba wa mantiki kunahitaji kuhifadhi anwani yake katika h
 
 [Zaidi kuhusu kuboresha mikataba](/developers/docs/smart-contracts/upgrading/).
 
-#### Vituo vya dharura {#event-monitoring}
+#### Vituo vya dharura {#emergency-stops}
 
 Kama ilivyotajwa, ukaguzi na majaribio ya kina hayawezi kugundua hitilafu zote katika mkataba mahiri. Ikiwa udhaifu utaonekana katika msimbo wako baada ya usambazaji, kuurekebisha haiwezekani kwa kuwa huwezi kubadilisha msimbo unaoendeshwa kwenye anwani ya mkataba. Pia, taratibu za uboreshaji (k.m., miundo ya uwakilishi) zinaweza kuchukua muda kutekelezwa (mara nyingi zinahitaji idhini kutoka kwa pande tofauti), ambayo huwapa tu washambuliaji muda zaidi wa kusababisha uharibifu zaidi.
 
@@ -201,7 +201,7 @@ Mfano huu unaonyesha vipengele vya msingi vya vituo vya dharura:
 
 Kutumia utendaji wa kituo cha dharura hutoa suluhisho la muda la ufanisi kwa kushughulikia udhaifu mkubwa katika mkataba mahiri wako. Hata hivyo, inaongeza hitaji la watumiaji kuwaamini wasanidi programu kutoiwasha kwa sababu za kujinufaisha. Ili kufikia lengo hili, kugatua udhibiti wa kituo cha dharura ama kwa kukiweka chini ya utaratibu wa kura mnyororoni, kufuli ya muda (timelock), au idhini kutoka kwa mkoba wa saini-nyingi ni masuluhisho yanayowezekana.
 
-#### Ufuatiliaji wa matukio {#design-secure-governance-systems}
+#### Ufuatiliaji wa matukio {#event-monitoring}
 
 [Matukio](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) hukuruhusu kufuatilia miito kwa vipengele vya utendaji vya mkataba mahiri na kufuatilia mabadiliko kwa vigeu vya hali. Ni bora kupanga mkataba mahiri wako kutoa tukio wakati wowote upande fulani unapochukua hatua muhimu kwa usalama (k.m., utoaji wa fedha).
 
@@ -209,7 +209,7 @@ Kurekodi matukio na kuyafuatilia nje ya mnyororo hutoa maarifa kuhusu shughuli z
 
 Unaweza pia kuchagua zana ya ufuatiliaji iliyo tayari kutumika ambayo hutuma arifa kiotomatiki wakati wowote mtu anapoingiliana na mikataba yako. Zana hizi zitakuruhusu kuunda arifa maalum kulingana na vichochezi tofauti, kama vile kiasi cha muamala, marudio ya miito ya vipengele vya utendaji, au vipengele maalum vinavyohusika. Kwa mfano, unaweza kupanga arifa inayokuja wakati kiasi kilichotolewa katika muamala mmoja kinapovuka kikomo fulani.
 
-### 7. Buni mifumo salama ya utawala {#reduce-code-complexity}
+### 7. Buni mifumo salama ya utawala {#design-secure-governance-systems}
 
 Unaweza kutaka kugatua programu yako kwa kukabidhi udhibiti wa mikataba mahiri ya msingi kwa wanachama wa jumuiya. Katika hali hii, mfumo wa mkataba mahiri utajumuisha moduli ya utawala—utaratibu unaoruhusu wanachama wa jumuiya kuidhinisha vitendo vya usimamizi kupitia mfumo wa utawala mnyororoni. Kwa mfano, pendekezo la kuboresha mkataba wa uwakilishi kwa utekelezaji mpya linaweza kupigiwa kura na wamiliki wa tokeni.
 
@@ -219,7 +219,7 @@ Njia moja ya kuzuia matatizo yanayohusiana na utawala mnyororoni ni [kutumia kuf
 
 Zaidi kuhusu [kubuni mifumo salama ya utawala](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [taratibu tofauti za kupiga kura katika DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos), na [njia za kawaida za mashambulizi ya DAO zinazotumia DeFi](https://dacian.me/dao-governance-defi-attacks) katika viungo vilivyoshirikiwa.
 
-### 8. Punguza utata katika msimbo kwa kiwango cha chini zaidi {#mitigate-common-smart-contract-vulnerabilities}
+### 8. Punguza utata katika msimbo kwa kiwango cha chini zaidi {#reduce-code-complexity}
 
 Wasanidi programu wa jadi wanafahamu kanuni ya KISS ("keep it simple, stupid" - iweke rahisi), ambayo inashauri dhidi ya kuleta utata usio wa lazima katika muundo wa programu. Hii inafuata fikra ya muda mrefu kwamba "mifumo tata inashindwa kwa njia tata" na ina uwezekano mkubwa wa kupata makosa ya gharama kubwa.
 
@@ -227,9 +227,9 @@ Kuweka mambo rahisi ni muhimu sana wakati wa kuandika mikataba mahiri, ikizingat
 
 Ushauri mwingine wa kawaida ni kuandika vipengele vidogo vya utendaji na kuweka mikataba katika moduli kwa kugawanya mantiki ya biashara katika mikataba mingi. Sio tu kwamba kuandika msimbo rahisi hupunguza eneo la mashambulizi katika mkataba mahiri, pia inafanya iwe rahisi kufikiri kuhusu usahihi wa mfumo mzima na kugundua makosa yanayowezekana ya muundo mapema.
 
-### 9. Jilinde dhidi ya udhaifu wa kawaida wa mkataba mahiri {#reentrancy}
+### 9. Jilinde dhidi ya udhaifu wa kawaida wa mkataba mahiri {#mitigate-common-smart-contract-vulnerabilities}
 
-#### Uingiaji upya {#integer-underflows-and-overflows}
+#### Uingiaji upya {#reentrancy}
 
 EVM hairuhusu usawazishaji (concurrency), ikimaanisha mikataba miwili inayohusika katika mwito wa ujumbe haiwezi kuendeshwa kwa wakati mmoja. Mwito wa nje husitisha utekelezaji na kumbukumbu ya mkataba unaoita hadi mwito urudi, ambapo utekelezaji unaendelea kama kawaida. Mchakato huu unaweza kuelezewa rasmi kama kuhamisha [mtiririko wa udhibiti](https://www.computerhope.com/jargon/c/contflow.htm) kwa mkataba mwingine.
 
@@ -306,7 +306,7 @@ Hakuna kosa hapa, isipokuwa kwamba `Attacker` ina kipengele kingine cha utendaji
 
 Muhtasari ni kwamba kwa sababu salio la mpigaji halijawekwa kuwa 0 hadi utekelezaji wa kipengele cha utendaji ukamilike, uanzishaji unaofuata utafaulu na kuruhusu mpigaji kutoa salio lake mara nyingi. Aina hii ya shambulio inaweza kutumika kukausha mkataba mahiri wa fedha zake, kama kile kilichotokea katika [udukuzi wa DAO wa 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Mashambulizi ya uingiaji upya bado ni suala muhimu kwa mikataba mahiri leo kama [orodha za umma za unyonyaji wa uingiaji upya](https://github.com/pcaversaccio/reentrancy-attacks) zinavyoonyesha.
 
-##### Jinsi ya kuzuia mashambulizi ya uingiaji upya {#oracle-manipulation}
+##### Jinsi ya kuzuia mashambulizi ya uingiaji upya {#}
 
 Mbinu ya kushughulikia uingiaji upya ni kufuata [muundo wa ukaguzi-athari-mwingiliano](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Muundo huu hupanga utekelezaji wa vipengele vya utendaji kwa njia ambayo msimbo unaofanya ukaguzi muhimu kabla ya kuendelea na utekelezaji unakuja kwanza, ukifuatiwa na msimbo unaodhibiti hali ya mkataba, na msimbo unaoingiliana na mikataba mingine au EOAs ukifika mwisho.
 
@@ -356,7 +356,7 @@ contract MutexPattern {
 
 Unaweza pia kutumia mfumo wa [malipo ya kuvuta (pull payments)](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment) ambao unahitaji watumiaji kutoa fedha kutoka kwa mikataba mahiri, badala ya mfumo wa "malipo ya kusukuma (push payments)" ambao hutuma fedha kwa akaunti. Hii huondoa uwezekano wa kuanzisha msimbo bila kukusudia kwenye anwani zisizojulikana (na pia inaweza kuzuia mashambulizi fulani ya kunyimwa huduma).
 
-#### Mizidio ya chini na mizidio ya nambari kamili {#smart-contract-security-resources-for-developers}
+#### Mizidio ya chini na mizidio ya nambari kamili {#integer-underflows-and-overflows}
 
 Mzidio wa nambari kamili hutokea wakati matokeo ya operesheni ya hesabu yanapoanguka nje ya masafa yanayokubalika ya thamani, na kuisababisha "kuzunguka" hadi thamani ya chini kabisa inayowakilishwa. Kwa mfano, `uint8` inaweza tu kuhifadhi thamani hadi 2^8-1=255. Operesheni za hesabu zinazosababisha thamani za juu kuliko `255` zitazidi na kuweka upya `uint` kuwa `0`, sawa na jinsi odomita kwenye gari inavyoweka upya kuwa 0 pindi inapofikia umbali wa juu zaidi (999999).
 
@@ -431,11 +431,11 @@ contract Attack {
 }
 ```
 
-##### Jinsi ya kuzuia mizidio ya chini na mizidio ya nambari kamili {#code-analysis-tools}
+##### Jinsi ya kuzuia mizidio ya chini na mizidio ya nambari kamili {#}
 
 Kuanzia toleo la 0.8.0, kikusanyaji cha Solidity kinakataa msimbo unaosababisha mizidio ya chini na mizidio ya nambari kamili. Hata hivyo, mikataba iliyokusanywa na toleo la chini la kikusanyaji inapaswa kufanya ukaguzi kwenye vipengele vya utendaji vinavyohusisha operesheni za hesabu au kutumia maktaba (k.m., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) ambayo hukagua mzidio wa chini/mzidio.
 
-#### Udanganyifu wa orakeli {#smart-contract-monitoring-tools}
+#### Udanganyifu wa orakeli {#oracle-manipulation}
 
 [Orakeli](/developers/docs/oracles/) hupata taarifa nje ya mnyororo na kuzituma mnyororoni ili mikataba mahiri izitumie. Ukiwa na orakeli, unaweza kubuni mikataba mahiri inayoingiliana na mifumo ya nje ya mnyororo, kama vile masoko ya mitaji, na kupanua sana matumizi yake.
 
@@ -447,15 +447,15 @@ Bei za DEX mara nyingi ni sahihi, kwa kiasi kikubwa kutokana na wafanyabiashara 
 
 Kwa mfano, mshambuliaji anaweza kupandisha bei ya papo hapo ya rasilimali kwa njia isiyo ya asili kwa kuchukua mkopo wa ghafla kabla tu ya kuingiliana na mkataba wako wa ukopeshaji. Kuuliza DEX kwa bei ya rasilimali kungerudisha thamani ya juu kuliko kawaida (kutokana na "agizo la kununua" kubwa la mshambuliaji kupotosha mahitaji ya rasilimali), na kuwaruhusu kukopa zaidi ya wanavyopaswa. "Mashambulizi ya mkopo wa ghafla" kama haya yametumika kutumia vibaya utegemezi wa orakeli za bei kati ya programu za DeFi, na kugharimu itifaki mamilioni ya fedha zilizopotea.
 
-##### Jinsi ya kuzuia udanganyifu wa orakeli {#smart-contract-administration-tools}
+##### Jinsi ya kuzuia udanganyifu wa orakeli {#}
 
 Sharti la chini kabisa la [kuepuka udanganyifu wa orakeli](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) ni kutumia mtandao wa orakeli uliogatuliwa ambao unauliza taarifa kutoka kwa vyanzo vingi ili kuepuka hatua moja ya kutofaulu. Katika hali nyingi, orakeli zilizogatuliwa zina motisha za kiuchumi za kripto zilizojengewa ndani ili kuhimiza nodi za orakeli kuripoti taarifa sahihi, na kuzifanya kuwa salama zaidi kuliko orakeli zilizowekwa kati.
 
 Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutumia ile inayotekeleza utaratibu wa bei ya wastani iliyopimwa kwa wakati (TWAP). [Orakeli ya TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) huuliza bei ya rasilimali katika nyakati mbili tofauti (ambazo unaweza kurekebisha) na kukokotoa bei ya papo hapo kulingana na wastani uliopatikana. Kuchagua vipindi virefu vya muda hulinda itifaki yako dhidi ya udanganyifu wa bei kwa kuwa maagizo makubwa yaliyotekelezwa hivi karibuni hayawezi kuathiri bei za rasilimali.
 
-## Rasilimali za usalama wa mkataba mahiri kwa wasanidi {#smart-contract-auditing-services}
+## Rasilimali za usalama wa mkataba mahiri kwa wasanidi {#smart-contract-security-resources-for-developers}
 
-### Zana za kuchanganua mikataba mahiri na kuthibitisha usahihi wa kodi {#bug-bounty-platforms}
+### Zana za kuchanganua mikataba mahiri na kuthibitisha usahihi wa kodi {#code-analysis-tools}
 
 - **[Zana za majaribio na maktaba](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _Mkusanyiko wa zana na maktaba za viwango vya tasnia kwa ajili ya kufanya majaribio ya vipengele, uchanganuzi tuli, na uchanganuzi thabiti kwenye mikataba mahiri._
 
@@ -471,17 +471,17 @@ Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutu
 
 - **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Kichanganuzi Tuli cha Solidity, kinachopitia Abstract Syntax Trees (AST) ili kubainisha udhaifu unaoshukiwa na kuchapisha matatizo katika umbizo la markdown ambalo ni rahisi kusoma._
 
-### Zana za kufuatilia mikataba mahiri {#common-smart-contract-vulnerabilities-and-exploits}
+### Zana za kufuatilia mikataba mahiri {#smart-contract-monitoring-tools}
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/monitoring)** - _Zana ya kupata arifa za wakati halisi wakati matukio yasiyo ya kawaida au yasiyotarajiwa yanapotokea kwenye mikataba mahiri au mikoba yako._
 
-### Zana za usimamizi salama wa mikataba mahiri {#challenges-for-learning-smart-contract-security}
+### Zana za usimamizi salama wa mikataba mahiri {#smart-contract-administration-tools}
 
 - **[Safe](https://safe.global/)** - _Mkoba wa mkataba mahiri unaoendeshwa kwenye Ethereum ambao unahitaji idadi ya chini ya watu kuidhinisha muamala kabla ya kufanyika (M-of-N)._
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Maktaba za mkataba za kutekeleza vipengele vya usimamizi, ikijumuisha umiliki wa mkataba, uboreshaji, vidhibiti vya ufikiaji, utawala, uwezo wa kusitisha, na zaidi._
 
-### Huduma za ukaguzi wa mkataba mahiri {#smart-contract-security-best-practices}
+### Huduma za ukaguzi wa mkataba mahiri {#smart-contract-auditing-services}
 
 - **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Huduma ya ukaguzi wa mkataba mahiri inayosaidia miradi katika mfumo ikolojia wa mnyororo wa vitalu kuhakikisha itifaki zao ziko tayari kwa uzinduzi na zimejengwa ili kulinda watumiaji._
 
@@ -515,7 +515,7 @@ Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutu
 
 - **[Inference](https://inference.ag/)** - _Kampuni ya ukaguzi wa usalama, iliyobobea katika ukaguzi wa mkataba mahiri kwa minyororo ya vitalu inayotegemea EVM. Shukrani kwa wakaguzi wake wataalamu wanatambua matatizo yanayoweza kutokea na kupendekeza masuluhisho yanayoweza kutekelezeka ili kuyarekebisha kabla ya usambazaji._
 
-### Majukwaa ya tuzo za hitilafu {#tutorials-on-smart-contract-security}
+### Majukwaa ya tuzo za hitilafu {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Jukwaa la tuzo za hitilafu kwa mikataba mahiri na miradi ya fedha zilizogatuliwa (DeFi), ambapo watafiti wa usalama hukagua kodi, kufichua udhaifu, kulipwa, na kufanya kripto kuwa salama zaidi._
 
@@ -527,7 +527,7 @@ Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutu
 
 -  **[CodeHawks](https://www.codehawks.com/)** - _Jukwaa la ushindani la tuzo za hitilafu ambapo wakaguzi hushiriki katika mashindano na changamoto za usalama, na (hivi karibuni) katika ukaguzi wao wenyewe wa kibinafsi._
 
-### Machapisho ya udhaifu na unyonyaji unaojulikana wa mkataba mahiri
+### Machapisho ya udhaifu na unyonyaji unaojulikana wa mkataba mahiri {#common-smart-contract-vulnerabilities-and-exploits}
 
 - **[ConsenSys: Mashambulizi Yanayojulikana ya Mkataba Mahiri](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Maelezo yanayofaa kwa wanaoanza ya udhaifu muhimu zaidi wa mkataba, na kodi ya mfano kwa matukio mengi._
 
@@ -535,7 +535,7 @@ Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutu
 
 - **[Rekt](https://rekt.news/)** - _Chapisho linalosasishwa mara kwa mara la udukuzi na unyonyaji wa hali ya juu wa kripto, pamoja na ripoti za kina za baada ya tukio._
 
-### Changamoto za kujifunza usalama wa mkataba mahiri
+### Changamoto za kujifunza usalama wa mkataba mahiri {#challenges-for-learning-smart-contract-security}
 
 - **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Orodha iliyoratibiwa ya michezo ya kivita ya usalama wa mnyororo wa vitalu, changamoto, na mashindano ya [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) na maandishi ya masuluhisho._
 
@@ -545,7 +545,7 @@ Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutu
 
 - **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Changamoto ya udukuzi wa mkataba mahiri, iliyowekwa katika tukio la njozi. Kukamilisha kwa mafanikio changamoto hiyo pia kunatoa ufikiaji wa programu ya kibinafsi ya tuzo za hitilafu._
 
-### Mbinu bora za kulinda mikataba mahiri
+### Mbinu bora za kulinda mikataba mahiri {#smart-contract-security-best-practices}
 
 - **[ConsenSys: Mbinu Bora za Usalama za Mkataba Mahiri wa Ethereum](https://consensys.github.io/smart-contract-best-practices/)** - _Orodha ya kina ya miongozo ya kulinda mikataba mahiri ya Ethereum._
 
@@ -559,7 +559,7 @@ Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutu
 
 - **[Jifunze Usalama na Ukaguzi wa Mkataba Mahiri](https://updraft.cyfrin.io/courses/security)** - _Kozi kuu ya usalama na ukaguzi wa mkataba mahiri, iliyoundwa kwa ajili ya wasanidi wa mkataba mahiri wanaotafuta kuongeza kiwango cha mbinu zao bora za usalama na kuwa watafiti wa usalama._
 
-### Mafunzo kuhusu usalama wa mkataba mahiri
+### Mafunzo kuhusu usalama wa mkataba mahiri {#tutorials-on-smart-contract-security}
 
 - [Jinsi ya kuandika mikataba mahiri salama](/developers/tutorials/secure-development-workflow/)
 

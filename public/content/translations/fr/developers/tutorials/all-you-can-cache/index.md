@@ -1,6 +1,6 @@
 ---
 title: "Mise en cache à volonté"
-description: Apprenez à créer et utiliser un contrat de mise en cache pour des transactions de rollup moins chères
+description: "Apprenez à créer et utiliser un contrat de mise en cache pour des transactions de rollup moins chères"
 author: Ori Pomerantz
 tags: ["couche 2", "mise en cache", "stockage", "mise à l'échelle"]
 skill: intermediate
@@ -757,6 +757,7 @@ Puisque nous utilisons la fonction de bas niveau `<address>.call()`, nous ne pou
 C'est ainsi que nous vérifions que le code [émet correctement un événement](https://getfoundry.sh/reference/cheatcodes/expect-emit/) dans Foundry.
 
 ### Le client {#the-client}
+
 Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScript que vous pouvez copier-coller dans votre propre application. Pour écrire ce code, j'ai déployé WORM sur [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), le nouveau réseau de test d'[Optimism](https://www.optimism.io/). Il se trouve à l'adresse [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Vous pouvez voir le code JavaScript pour le client ici](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Pour l'utiliser :

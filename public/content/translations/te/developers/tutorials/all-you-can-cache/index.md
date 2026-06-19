@@ -1,10 +1,10 @@
 ---
 title: "మీరు కాష్ చేయగలిగినదంతా"
-description: చౌకైన రోలప్ లావాదేవీల కోసం కాషింగ్ కాంట్రాక్ట్‌ను ఎలా సృష్టించాలో మరియు ఎలా ఉపయోగించాలో తెలుసుకోండి
-author: ఓరి పోమెరాంట్జ్
+description: "చౌకైన రోలప్ లావాదేవీల కోసం కాషింగ్ కాంట్రాక్ట్‌ను ఎలా సృష్టించాలో మరియు ఎలా ఉపయోగించాలో తెలుసుకోండి"
+author: "ఓరి పోమెరాంట్జ్"
 tags: ["లేయర్ 2", "కాషింగ్", "నిల్వ", "స్కేలింగ్"]
 skill: intermediate
-breadcrumb: రోల్అప్‌ల కోసం కాషింగ్
+breadcrumb: "రోల్అప్‌ల కోసం కాషింగ్"
 published: 2022-09-15
 lang: te
 ---
@@ -757,6 +757,7 @@ contract WORM is Cache {
 Foundryలో కోడ్ [ఈవెంట్‌ను సరిగ్గా విడుదల చేస్తుందని](https://getfoundry.sh/reference/cheatcodes/expect-emit/) మనం ధృవీకరించే విధానం ఇది.
 
 ### క్లయింట్ {#the-client}
+
 Solidity పరీక్షలతో మీకు లభించని ఒక విషయం ఏమిటంటే, మీరు మీ స్వంత అప్లికేషన్‌లో కట్ చేసి పేస్ట్ చేయగల JavaScript కోడ్. ఆ కోడ్‌ను వ్రాయడానికి నేను WORMని [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli)కి డిప్లాయ్ చేసాను, ఇది [Optimism యొక్క](https://www.optimism.io/) కొత్త టెస్ట్‌నెట్. ఇది [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a) చిరునామాలో ఉంది.
 
 [మీరు క్లయింట్ కోసం JavaScript కోడ్‌ను ఇక్కడ చూడవచ్చు](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). దీనిని ఉపయోగించడానికి:

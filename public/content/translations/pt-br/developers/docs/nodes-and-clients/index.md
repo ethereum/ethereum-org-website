@@ -1,6 +1,6 @@
 ---
-title: Nós e clientes
-description: Uma visão geral dos nós do Ethereum e do software cliente, além de como configurar um nó e por que você deve fazê-lo.
+title: "Nós e clientes"
+description: "Uma visão geral dos nós do Ethereum e do software cliente, além de como configurar um nó e por que você deve fazê-lo."
 lang: pt-br
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: JavaScript開発者向けのイーサリアム
-description: JavaScriptベースのプロジェクトやツールを使用して、イーサリアム向けに開発する方法を学びます。
+title: "JavaScript開発者向けのイーサリアム"
+description: "JavaScriptベースのプロジェクトやツールを使用して、イーサリアム向けに開発する方法を学びます。"
 lang: ja
 ---
 

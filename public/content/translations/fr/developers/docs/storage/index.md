@@ -1,6 +1,6 @@
 ---
-title: Stockage décentralisé
-description: Aperçu de ce qu'est le stockage décentralisé et des outils disponibles pour l'intégrer dans une application décentralisée (dapp).
+title: "Stockage décentralisé"
+description: "Aperçu de ce qu'est le stockage décentralisé et des outils disponibles pour l'intégrer dans une application décentralisée (dapp)."
 lang: fr
 authors: ["Patrick Collins"]
 ---

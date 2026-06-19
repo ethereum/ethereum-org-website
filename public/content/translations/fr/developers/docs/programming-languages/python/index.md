@@ -1,6 +1,6 @@
 ---
-title: Ethereum pour les développeurs Python
-description: Apprenez à développer pour Ethereum en utilisant des projets et des outils basés sur Python
+title: "Ethereum pour les développeurs Python"
+description: "Apprenez à développer pour Ethereum en utilisant des projets et des outils basés sur Python"
 lang: fr
 incomplete: true
 ---
