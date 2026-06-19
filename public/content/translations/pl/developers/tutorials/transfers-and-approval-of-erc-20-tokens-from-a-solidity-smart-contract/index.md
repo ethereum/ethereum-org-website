@@ -1,10 +1,10 @@
 ---
-title: "Transfery i zatwierdzenie tokenów ERC-20 z inteligentnego kontraktu Solidity"
-description: "Zbuduj inteligentny kontrakt DEX, który obsługuje transfery i zatwierdzenia tokenów ERC-20 przy użyciu Solidity."
+title: Transfery i zatwierdzanie tokenów ERC-20 z inteligentnego kontraktu w Solidity
+description: Zbuduj inteligentny kontrakt DEX, który obsługuje transfery i zatwierdzanie tokenów ERC-20 przy użyciu Solidity.
 author: "jdourlens"
-tags: [ "smart kontrakty", "tokeny", "Solidity", "erc-20" ]
+tags: ["inteligentne kontrakty", "tokeny", "solidity", "erc-20"]
 skill: intermediate
-breadcrumb: "Transfery ERC-20"
+breadcrumb: Transfery ERC-20
 lang: pl
 published: 2020-04-07
 source: EthereumDev
@@ -12,16 +12,16 @@ sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-W poprzednim samouczku zbadaliśmy [anatomię tokena ERC-20 w Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) na blockchainie Ethereum. W tym artykule zobaczymy, jak możemy użyć inteligentnego kontraktu do interakcji z tokenem, używając języka Solidity.
+W poprzednim samouczku omówiliśmy [anatomię tokena ERC-20 w Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) na blockchainie Ethereum. W tym artykule zobaczymy, jak możemy użyć inteligentnego kontraktu do interakcji z tokenem przy użyciu języka Solidity.
 
-W ramach tego inteligentnego kontraktu stworzymy prostą, przykładową, zdecentralizowaną giełdę, na której użytkownik może wymieniać ether na nasz nowo wdrożony [token ERC-20](/developers/docs/standards/tokens/erc-20/).
+Dla tego inteligentnego kontraktu stworzymy prawdziwą, testową zdecentralizowaną giełdę (DEX), na której użytkownik będzie mógł wymieniać ether na nasz nowo wdrożony [token ERC-20](/developers/docs/standards/tokens/erc-20/).
 
-W tym samouczku użyjemy kodu, który napisaliśmy w poprzednim samouczku jako podstawy. Nasz DEX utworzy instancję kontraktu w swoim konstruktorze i wykona następujące operacje:
+W tym samouczku jako bazy użyjemy kodu napisanego w poprzednim samouczku. Nasz DEX utworzy instancję kontraktu w swoim konstruktorze i będzie wykonywał następujące operacje:
 
 - wymiana tokenów na ether
 - wymiana etheru na tokeny
 
-Pracę nad kodem naszej zdecentralizowanej giełdy rozpoczniemy od dodania prostej bazy kodu ERC20:
+Rozpoczniemy pisanie kodu naszej zdecentralizowanej giełdy od dodania naszej prostej bazy kodu ERC20:
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -101,7 +101,7 @@ contract ERC20Basic is IERC20 {
 
 ```
 
-Nasz nowy inteligentny kontrakt DEX wdroży token ERC-20 i otrzyma całą jego podaż:
+Nasz nowy inteligentny kontrakt DEX wdroży ERC-20 i otrzyma całą podaż:
 
 ```solidity
 contract DEX {
@@ -116,94 +116,94 @@ contract DEX {
     }
 
     function buy() payable public {
-        // DO ZROBIENIA
+        // TODO
     }
 
     function sell(uint256 amount) public {
-        // DO ZROBIENIA
+        // TODO
     }
 
 }
 ```
 
-Więc teraz mamy nasz DEX, który posiada całą dostępną rezerwę tokenów. Kontrakt ma dwie funkcje:
+Mamy więc teraz nasz DEX, który dysponuje całą dostępną rezerwą tokenów. Kontrakt posiada dwie funkcje:
 
-- `buy`: użytkownik może wysyłać ether i otrzymywać w zamian tokeny
-- `sell`: użytkownik może wysłać tokeny, aby odzyskać ether
+- `buy`: Użytkownik może wysłać ether i otrzymać w zamian tokeny
+- `sell`: Użytkownik może zdecydować się na wysłanie tokenów, aby odzyskać ether
 
-## Funkcja `buy` {#the-buy-function}
+## Funkcja kupna {#the-buy-function}
 
-Zakodujmy funkcję `buy`. Najpierw będziemy musieli sprawdzić ilość etheru zawartą w komunikacie i zweryfikować, czy kontrakt posiada wystarczającą liczbę tokenów oraz czy komunikat zawiera jakąś ilość etheru. Jeśli kontrakt posiada wystarczającą liczbę tokenów, wyśle on odpowiednią liczbę tokenów do użytkownika i wyemituje zdarzenie `Bought`.
+Napiszmy kod funkcji kupna. Najpierw będziemy musieli sprawdzić ilość etheru, jaką zawiera wiadomość, oraz zweryfikować, czy kontrakt posiada wystarczającą liczbę tokenów i czy wiadomość w ogóle zawiera jakiś ether. Jeśli kontrakt posiada wystarczającą liczbę tokenów, wyśle je do użytkownika i wyemituje zdarzenie `Bought`.
 
-Zwróć uwagę, że jeśli w przypadku błędu wywołamy funkcję `require`, wysłany ether zostanie natychmiast zwrócony do użytkownika.
+Zauważ, że jeśli wywołamy instrukcję require, w przypadku błędu wysłany ether zostanie bezpośrednio cofnięty i zwrócony użytkownikowi.
 
-Dla uproszczenia wymieniamy 1 token na 1 wei.
+Dla uproszczenia wymieniamy po prostu 1 token na 1 wei.
 
 ```solidity
 function buy() payable public {
     uint256 amountTobuy = msg.value;
     uint256 dexBalance = token.balanceOf(address(this));
-    require(amountTobuy > 0, "Musisz wysłać trochę etheru");
-    require(amountTobuy <= dexBalance, "Niewystarczająca liczba tokenów w rezerwie");
+    require(amountTobuy > 0, "You need to send some ether");
+    require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
     token.transfer(msg.sender, amountTobuy);
     emit Bought(amountTobuy);
 }
 ```
 
-W przypadku pomyślnego zakupu powinniśmy zobaczyć w transakcji dwa zdarzenia: `Transfer` tokena oraz zdarzenie `Bought`.
+W przypadku, gdy kupno zakończy się sukcesem, powinniśmy zobaczyć dwa zdarzenia w transakcji: `Transfer` tokena oraz zdarzenie `Bought`.
 
-![Dwa zdarzenia w transakcji: Transfer i Bought](./transfer-and-bought-events.png)
+![Two events in the transaction: Transfer and Bought](./transfer-and-bought-events.png)
 
-## Funkcja `sell` {#the-sell-function}
+## Funkcja sprzedaży {#the-sell-function}
 
-Funkcja odpowiedzialna za sprzedaż (`sell`) będzie w pierwszej kolejności wymagać od użytkownika zatwierdzenia kwoty poprzez wcześniejsze wywołanie funkcji `approve`. Zatwierdzenie transferu wymaga od użytkownika wywołania funkcji na instancji tokena ERC20Basic utworzonej przez DEX. Można to osiągnąć, najpierw wywołując funkcję `token()` kontraktu DEX, aby pobrać adres, pod którym kontrakt DEX wdrożył kontrakt ERC20Basic. Następnie tworzymy instancję tego kontraktu w naszej sesji i wywołujemy jego funkcję `approve`. Następnie możemy wywołać funkcję `sell` kontraktu DEX i wymienić nasze tokeny z powrotem na ether. Na przykład tak to wygląda w interaktywnej sesji brownie:
+Funkcja odpowiedzialna za sprzedaż będzie najpierw wymagać od użytkownika zatwierdzenia kwoty poprzez wcześniejsze wywołanie funkcji approve. Zatwierdzenie transferu wymaga, aby token ERC20Basic, którego instancję utworzył DEX, został wywołany przez użytkownika. Można to osiągnąć, wywołując najpierw funkcję `token()` kontraktu DEX, aby pobrać adres, pod którym DEX wdrożył kontrakt ERC20Basic o nazwie `token`. Następnie tworzymy instancję tego kontraktu w naszej sesji i wywołujemy jego funkcję `approve`. Wtedy jesteśmy w stanie wywołać funkcję `sell` kontraktu DEX i wymienić nasze tokeny z powrotem na ether. Na przykład, tak to wygląda w interaktywnej sesji Brownie:
 
 ```python
-#### Python w interaktywnej konsoli brownie...
+#### Python w interaktywnej konsoli Brownie...
 
-# wdróż DEX
+# wdroż DEX
 dex = DEX.deploy({'from':account1})
 
-# wywołaj funkcję buy, aby wymienić ether na tokeny
+# wywołaj funkcję buy, aby wymienić ether na token
 # 1e18 to 1 ether wyrażony w wei
 dex.buy({'from': account2, 1e18})
 
-# pobierz adres wdrożenia tokena ERC20,
+# pobierz adres wdrożenia tokena ERC20
 # który został wdrożony podczas tworzenia kontraktu DEX
-# dex.token() zwraca adres wdrożonego tokena
+# dex.token() zwraca wdrożony adres tokena
 token = ERC20Basic.at(dex.token())
 
 # wywołaj funkcję approve tokena
-# zatwierdź adres dex jako 'spendera' (wydającego)
-# i określ, ile Twoich tokenów może on wydać
+# zatwierdź adres dex jako wydającego
+# oraz ile twoich tokenów może on wydać
 token.approve(dex.address, 3e18, {'from':account2})
 
 ```
 
-Następnie, po wywołaniu funkcji `sell`, sprawdzimy, czy transfer z adresu wywołującego na adres kontraktu powiódł się, a następnie odeślemy ether z powrotem na adres wywołującego.
+Następnie, gdy wywoływana jest funkcja sprzedaży, sprawdzimy, czy transfer z adresu wywołującego na adres kontraktu zakończył się pomyślnie, a następnie odeślemy ether z powrotem na adres wywołującego.
 
 ```solidity
 function sell(uint256 amount) public {
-    require(amount > 0, "Musisz sprzedać co najmniej jakąś liczbę tokenów");
+    require(amount > 0, "You need to sell at least some tokens");
     uint256 allowance = token.allowance(msg.sender, address(this));
-    require(allowance >= amount, "Sprawdź przydział tokenów");
+    require(allowance >= amount, "Check the token allowance");
     token.transferFrom(msg.sender, address(this), amount);
     payable(msg.sender).transfer(amount);
     emit Sold(amount);
 }
 ```
 
-Jeśli wszystko zadziała poprawnie, w transakcji powinny być widoczne 2 zdarzenia (`Transfer` i `Sold`), a salda tokenów i etheru zostaną zaktualizowane.
+Jeśli wszystko działa, powinieneś zobaczyć 2 zdarzenia (`Transfer` i `Sold`) w transakcji, a Twoje saldo tokenów i etheru powinno zostać zaktualizowane.
 
-![Dwa zdarzenia w transakcji: Transfer i Sold](./transfer-and-sold-events.png)
+![Two events in the transaction: Transfer and Sold](./transfer-and-sold-events.png)
 
 <Divider />
 
-W tym samouczku zobaczyliśmy, jak sprawdzić saldo i przydział (allowance) tokena ERC-20, a także jak wywołać funkcje `Transfer` i `TransferFrom` inteligentnego kontraktu ERC20 za pomocą interfejsu.
+Z tego samouczka dowiedzieliśmy się, jak sprawdzić saldo i limit wydatków tokena ERC-20, a także jak wywołać `Transfer` i `TransferFrom` inteligentnego kontraktu ERC20 za pomocą interfejsu.
 
-Po wykonaniu transakcji polecamy nasz samouczek JavaScript, aby dowiedzieć się, jak [oczekiwać na transakcje i pobierać ich szczegóły](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) dla kontraktu, oraz [samouczek dotyczący dekodowania zdarzeń](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) generowanych przez transfery tokenów lub inne, pod warunkiem posiadania ABI.
+Po wykonaniu transakcji mamy samouczek JavaScript, z którego dowiesz się, jak [czekać i uzyskiwać szczegóły dotyczące transakcji](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) wykonanych na Twoim kontrakcie, oraz [samouczek dotyczący dekodowania zdarzeń generowanych przez transfery tokenów lub dowolne inne zdarzenia](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/), o ile posiadasz ABI.
 
-Oto kompletny kod do tego samouczka:
+Oto kompletny kod z tego samouczka:
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -296,16 +296,16 @@ contract DEX {
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "Musisz wysłać trochę etheru");
-        require(amountTobuy <= dexBalance, "Niewystarczająca liczba tokenów w rezerwie");
+        require(amountTobuy > 0, "You need to send some ether");
+        require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);
     }
 
     function sell(uint256 amount) public {
-        require(amount > 0, "Musisz sprzedać co najmniej jakąś liczbę tokenów");
+        require(amount > 0, "You need to sell at least some tokens");
         uint256 allowance = token.allowance(msg.sender, address(this));
-        require(allowance >= amount, "Sprawdź przydział tokenów");
+        require(allowance >= amount, "Check the token allowance");
         token.transferFrom(msg.sender, address(this), amount);
         payable(msg.sender).transfer(amount);
         emit Sold(amount);

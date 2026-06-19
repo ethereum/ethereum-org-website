@@ -1,48 +1,48 @@
 ---
 title: Bezpieczniejsze Ethereum
-description: "Ethereum jest najbezpieczniejszą i najbardziej zdecentralizowaną platformą inteligentnych kontraktów. Nadal jednak można wprowadzać ulepszenia, aby Ethereum pozostawała odporna na wszelkie ataki w przyszłości."
+description: Ethereum jest najbezpieczniejszą i najbardziej zdecentralizowaną platformą inteligentnych kontraktów, jaka istnieje. Wciąż jednak można wprowadzić ulepszenia, aby Ethereum pozostało odporne na wszelkie ataki w dalekiej przyszłości.
 lang: pl
 image: /images/roadmap/roadmap-security.png
-alt: "Plan działania Ethereum"
+alt: Mapa drogowa Ethereum
 template: roadmap
 ---
 
-**Ethereum jest już bardzo bezpieczną**, zdecentralizowaną platformą [inteligentnych kontraktów](/glossary/#smart-contract). Nadal jednak można wprowadzać ulepszenia, aby Ethereum pozostawała odporna na wszelkie ataki w przyszłości. Obejmują one subtelne zmiany w sposobie, w jaki [klienci Ethereum](/glossary/#consensus-client) radzą sobie z konkurującymi [blokami](/glossary/#block), a także zwiększają szybkość, z jaką sieć uznaje bloki za [„sfinalizowane”](/developers/docs/consensus-mechanisms/pos/#finality) (co oznacza, że nie można ich zmienić bez ekstremalnych strat ekonomicznych dla atakującego).
+**Ethereum jest już bardzo bezpieczną**, zdecentralizowaną platformą [inteligentnych kontraktów](/glossary/#smart-contract). Wciąż jednak można wprowadzić ulepszenia, aby Ethereum pozostało odporne na wszelkiego rodzaju ataki w dalekiej przyszłości. Obejmują one subtelne zmiany w sposobie, w jaki [klienty Ethereum](/glossary/#consensus-client) radzą sobie z konkurującymi [blokami](/glossary/#block), a także zwiększenie szybkości, z jaką sieć uznaje bloki za [„sfinalizowane”](/developers/docs/consensus-mechanisms/pos/#finality) (co oznacza, że nie można ich zmienić bez ogromnych strat ekonomicznych dla atakującego).
 
-Istnieją również ulepszenia, które znacznie utrudniają cenzurowanie transakcji, poprzez uniemożliwianie proponentom bloków śledzenia rzeczywistej zawartości ich bloków, a także nowe sposoby identyfikacji, kiedy klient cenzuruje. Te ulepszenia razem zaktualizują protokół [proof-of-stake](/glossary/#pos), dzięki czemu użytkownicy – od osób fizycznych po korporacje – będą mieli natychmiastowe zaufanie do swoich aplikacji, danych i zasobów na Ethereum.
+Istnieją również ulepszenia, które znacznie utrudniają cenzurowanie transakcji, sprawiając, że proponujący blok nie widzą rzeczywistej zawartości swoich bloków, a także nowe sposoby identyfikacji, kiedy klient cenzuruje. Razem te ulepszenia zaktualizują protokół [dowodu stawki (PoS)](/glossary/#pos), tak aby użytkownicy – od osób prywatnych po korporacje – mieli natychmiastową pewność co do swoich aplikacji, danych i aktywów w Ethereum.
 
-## Wypłaty ze stakowania {#staking-withdrawals}
+## Wypłaty ze stakingu {#staking-withdrawals}
 
-Ulepszenie z [proof-of-work](/glossary/#pow) do proof-of-stake rozpoczęło się od pionierów Ethereum „stakujących” swoje ETH w kontrakcie depozytowym. Te ETH są wykorzystywane do zabezpieczania sieci. Druga aktualizacja miała miejsce 12 kwietnia 2023 r. i pozwoliła walidatorom na wypłatę stakowanego ETH. Od tamtego momentu walidatorzy mogą swobodnie stakować lub wypłacać swoje ETH.
+Aktualizacja z [dowodu pracy (PoW)](/glossary/#pow) do dowodu stawki (PoS) rozpoczęła się od pionierów Ethereum „stakujących” swoje ETH w kontrakcie depozytowym. To ETH jest używane do ochrony sieci. Druga aktualizacja miała miejsce 12 kwietnia 2023 r., aby umożliwić walidatorom wypłatę stakowanego ETH. Od tego czasu walidatorzy mogą swobodnie stakować lub wypłacać ETH.
 
-<ButtonLink variant="outline-color" href="/staking/withdrawals/">Poczytaj o wypłatach</ButtonLink>
+<ButtonLink variant="outline-color" href="/staking/withdrawals/">Przeczytaj o wypłatach</ButtonLink>
 
 ## Obrona przed atakami {#defending-against-attacks}
 
-Istnieją ulepszenia, które można wprowadzić do protokołu proof-of-stake Ethereum. Jeden z nich jest znany jako [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) – bezpieczniejszy algorytm wyboru [forka](/glossary/#fork), który utrudnia niektóre zaawansowane typy ataków.
+Istnieją ulepszenia, które można wprowadzić do protokołu dowodu stawki (PoS) Ethereum. Jednym z nich jest [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) – bezpieczniejszy algorytm wyboru [rozwidlenia](/glossary/#fork), który utrudnia pewne wyrafinowane rodzaje ataków.
 
-Zmniejszenie czasu potrzebnego Ethereum na [sfinalizowanie](/glossary/#finality) bloków zapewniłoby lepsze wrażenia użytkownika i zapobiegłoby zaawansowanym atakom typu „reorg”, w których atakujący próbują przetasować najnowsze bloki, aby uzyskać zysk lub ocenzurować niektóre transakcje. [**Finalizacja w pojedynczym slocie (SSF)**](/roadmap/single-slot-finality/) to **sposób na zminimalizowanie opóźnienia finalizacji**. W tej chwili istnieją 15-minutowe bloki, do których przekonfigurowania atakujący mógłby teoretycznie przekonać inne walidatory. Z SSF jest ich 0. Użytkownicy, od osób indywidualnych po aplikacje i giełdy, korzystają z szybkiej gwarancji, że ich transakcje nie zostaną cofnięte, a sieć korzysta z zamknięcia całej masy ataków.
+Skrócenie czasu potrzebnego Ethereum na [sfinalizowanie](/glossary/#finality) bloków zapewniłoby lepsze wrażenia użytkownika i zapobiegłoby wyrafinowanym atakom typu „reorganizacja łańcucha”, w których atakujący próbują przetasować bardzo niedawne bloki, aby czerpać zyski lub cenzurować określone transakcje. [**Ostateczność w pojedynczym slocie (SSF)**](/roadmap/single-slot-finality/) to **sposób na zminimalizowanie opóźnienia finalizacji**. Obecnie istnieje 15 minut bloków, do których rekonfiguracji atakujący mógłby teoretycznie przekonać innych walidatorów. Dzięki SSF ten czas wynosi 0. Użytkownicy, od osób prywatnych po aplikacje i giełdy, zyskują szybką pewność, że ich transakcje nie zostaną cofnięte, a sieć zyskuje dzięki wyeliminowaniu całej klasy ataków.
 
-<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Poczytaj o finalizacji w pojedynczym slocie</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Przeczytaj o ostateczności w pojedynczym slocie</ButtonLink>
 
 ## Obrona przed cenzurą {#defending-against-censorship}
 
-Decentralizacja uniemożliwia osobom fizycznym lub małym grupom [walidatorów](/glossary/#validator) uzyskanie zbyt dużych wpływów. Nowe technologie stakowania mogą zwiększyć gwarancję, że walidatory Ethereum pozostaną tak zdecentralizowane, jak to tylko możliwe, jednocześnie chroniąc je przed awariami sprzętu, oprogramowania i sieci. Obejmuje to oprogramowanie, które rozdziela obowiązki walidatora pomiędzy wiele [węzłów](/glossary/#node). Jest to znane jako **technologia rozproszonego walidatora (DVT)**. [Pule stakowania](/glossary/#staking-pool) są zachęcane do korzystania z DVT, ponieważ pozwala to wielu komputerom na wspólne uczestnictwo w walidacji, co zwiększa redundancję i odporność na błędy. Dzieli również klucze walidatora na kilka systemów, co jest alternatywą dla posiadania pojedynczych operatorów obsługujących wiele walidatorów. Utrudnia to nieuczciwym operatorom koordynowanie ataków na Ethereum. Ogólnie rzecz biorąc, chodzi o to, aby czerpać korzyści z bezpieczeństwa, uruchamiając walidatorów jako _społeczności_, a nie jako pojedyncze podmioty.
+Decentralizacja zapobiega uzyskaniu zbyt dużych wpływów przez jednostki lub małe grupy [walidatorów](/glossary/#validator). Nowe technologie stakingu mogą pomóc w zapewnieniu, że walidatorzy Ethereum pozostaną tak zdecentralizowani, jak to tylko możliwe, jednocześnie chroniąc ich przed awariami sprzętu, oprogramowania i sieci. Obejmuje to oprogramowanie, które dzieli obowiązki walidatora na wiele [węzłów](/glossary/#node). Jest to znane jako **technologia rozproszonych walidatorów (DVT)**. [Pule stakingowe](/glossary/#staking-pool) są zachęcane do korzystania z DVT, ponieważ pozwala to wielu komputerom na wspólne uczestnictwo w walidacji, dodając redundancję i odporność na błędy. Dzieli to również klucze walidatora na kilka systemów, zamiast polegać na pojedynczych operatorach obsługujących wielu walidatorów. Utrudnia to nieuczciwym operatorom koordynowanie ataków na Ethereum. Ogólnie rzecz biorąc, chodzi o czerpanie korzyści z bezpieczeństwa poprzez uruchamianie walidatorów jako _społeczności_, a nie jako jednostek.
 
-<ButtonLink variant="outline-color" href="/staking/dvt/">Poczytaj o technologii rozproszonego walidatora</ButtonLink>
+<ButtonLink variant="outline-color" href="/staking/dvt/">Przeczytaj o technologii rozproszonych walidatorów</ButtonLink>
 
-Wdrożenie **rozdzielenia proponującego od budowniczego (PBS)** znacznie poprawi wbudowane mechanizmy obronne Ethereum przed cenzurą. PBS pozwala jednemu walidatorowi na tworzenie bloku, a drugiemu na rozgłaszanie go w sieci Ethereum. Zapewnia to, że zyski z profesjonalnych, maksymalizujących zysk algorytmów budowania bloków są dzielone bardziej sprawiedliwie w całej sieci, **zapobiegając koncentracji stawki** u najlepiej prosperujących stakerów instytucjonalnych w miarę upływu czasu. Proponent bloku może wybrać najbardziej opłacalny blok oferowany mu przez rynek twórców bloków. Aby dokonać cenzury, proponujący blok musiałby często wybierać mniej dochodowy blok, co byłoby **ekonomicznie irracjonalne i oczywiste dla reszty walidatorów** w sieci.
+Wdrożenie **separacji proponującego i budującego (PBS)** drastycznie poprawi wbudowaną obronę Ethereum przed cenzurą. PBS pozwala jednemu walidatorowi na utworzenie bloku, a innemu na rozgłoszenie go w sieci Ethereum. Zapewnia to, że zyski z profesjonalnych algorytmów budowania bloków maksymalizujących zysk są dzielone sprawiedliwiej w całej sieci, **zapobiegając koncentracji stawki** u najlepiej radzących sobie instytucjonalnych stakerów z biegiem czasu. Proponujący blok może wybrać najbardziej opłacalny blok zaoferowany mu przez rynek budowniczych bloków. Aby cenzurować, proponujący blok często musiałby wybrać mniej opłacalny blok, co byłoby **ekonomicznie irracjonalne, a także oczywiste dla reszty walidatorów** w sieci.
 
-Istnieją potencjalne dodatki do PBS, takie jak szyfrowane transakcje i listy inkluzywne, które mogą jeszcze bardziej poprawić odporność Ethereum na cenzurę. Za ich sprawą twórca bloku i proponent nie widzą rzeczywistych transakcji zawartych w ich blokach.
+Istnieją potencjalne dodatki do PBS, takie jak szyfrowane transakcje i listy włączeń, które mogłyby jeszcze bardziej poprawić odporność Ethereum na cenzurę. Sprawiają one, że budowniczy bloków i proponujący nie widzą rzeczywistych transakcji zawartych w ich blokach.
 
-<ButtonLink variant="outline-color" href="/roadmap/pbs/">Poczytaj o rozdzieleniu proponującego od budowniczego</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/pbs/">Przeczytaj o separacji proponującego i budującego</ButtonLink>
 
 ## Ochrona walidatorów {#protecting-validators}
 
-Możliwe jest, że zaawansowany atakujący mógłby zidentyfikować nadchodzących walidatorów i spamować ich, aby uniemożliwić im proponowanie bloków; jest to znane jako atak typu **odmowa usługi (DoS)**. Wdrożenie [**tajnego wyboru lidera (SLE)**](/roadmap/secret-leader-election) ochroni przed tego typu atakami, uniemożliwiając poznanie z wyprzedzeniem tożsamości osób proponujących bloki. Działa to poprzez ciągłe mieszanie zestawu zobowiązań kryptograficznych reprezentujących kandydatów na proponentów bloków i wykorzystywanie ich kolejności do określenia, który walidator jest wybierany w taki sposób, że tylko sami walidatorzy znają ich kolejność z wyprzedzeniem.
+Możliwe jest, że wyrafinowany atakujący mógłby zidentyfikować nadchodzących walidatorów i spamować ich, aby uniemożliwić im proponowanie bloków; jest to znane jako atak typu **odmowa usługi (DoS)**. Wdrożenie [**tajnego wyboru lidera (SLE)**](/roadmap/secret-leader-election) ochroni przed tego typu atakiem, uniemożliwiając wcześniejsze poznanie proponujących blok. Działa to poprzez ciągłe tasowanie zestawu zobowiązań kryptograficznych reprezentujących kandydatów na proponujących blok i wykorzystywanie ich kolejności do określenia, który walidator zostanie wybrany w taki sposób, że tylko sami walidatorzy znają swoją kolejność z wyprzedzeniem.
 
-<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Poczytaj o tajnym wyborze lidera</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Przeczytaj o tajnym wyborze lidera</ButtonLink>
 
-## Aktualny postęp {#current-progress}
+## Obecny postęp {#current-progress}
 
-**Ulepszenia bezpieczeństwa w planie rozwoju są na zaawansowanym etapie badań**, ale nie przewiduje się, że zostaną wdrożone w najbliższym czasie. Kolejne kroki dla view-merge, PBS, SSF i SLE to sfinalizowanie specyfikacji i rozpoczęcie budowy prototypów.
+**Aktualizacje bezpieczeństwa na mapie drogowej są na zaawansowanym etapie badań**, ale nie oczekuje się ich wdrożenia przez jakiś czas. Kolejnymi krokami dla view-merge, PBS, SSF i SLE są sfinalizowanie specyfikacji i rozpoczęcie budowy prototypów.
