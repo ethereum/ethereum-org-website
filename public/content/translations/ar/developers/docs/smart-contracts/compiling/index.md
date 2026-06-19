@@ -1,19 +1,19 @@
 ---
-title: "تجميع القعد الذكي"
-description: "شرح لماذا تحتاج إلى تجميع العقود الذكية وما يفعله التجميع بالفعل."
+title: "تجميع العقود الذكية"
+description: "شرح لسبب حاجتك إلى تجميع العقود الذكية وما يفعله التجميع فعليًا."
 lang: ar
 incomplete: true
 ---
 
-تحتاج إلى تجميع العقد الخاص بك حتى يتمكن تطبيق الويب الخاص بك وجهاز إيثريوم الظاهري (EVM) من فهمه.
+تحتاج إلى تجميع العقد الخاص بك حتى يتمكن تطبيق الويب الخاص بك وجهاز إيثيريوم الظاهري (<span dir="ltr">EVM</span>) من فهمه.
 
 ## المتطلبات الأساسية {#prerequisites}
 
-قد تجد أنه من المفيد قراءة مقدمتنا عن [العقود الذكية](/developers/docs/smart-contracts/) و[آلة إيثريوم الافتراضية](/developers/docs/evm/) قبل القراءة عن التجميع.
+قد تجد أنه من المفيد قراءة مقدمتنا عن [العقود الذكية](/developers/docs/smart-contracts/) و[جهاز إيثيريوم الظاهري](/developers/docs/evm/) قبل القراءة عن التجميع.
 
-## آلة إيثريوم الافتراضية {#the-evm}
+## <span dir="ltr">EVM</span> {#the-evm}
 
-لكي يتمكن [EVM](/developers/docs/evm/) من تشغيل العقد الخاص بك، يجب أن يكون في **رمز البايت**. تجميع يتحول هذا:
+لكي يتمكن [<span dir="ltr">EVM</span>](/developers/docs/evm/) من تشغيل العقد الخاص بك، يجب أن يكون في شكل **رمز البايت**. يحول التجميع هذا:
 
 ```solidity
 pragma solidity 0.4.24;
@@ -33,19 +33,19 @@ contract Greeter {
 PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH29 0x100000000000000000000000000000000000000000000000000000000 SWAP1 DIV PUSH4 0xFFFFFFFF AND DUP1 PUSH4 0xCFAE3217 EQ PUSH2 0x46 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x52 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x5B PUSH2 0xD6 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 DUP1 PUSH1 0x20 ADD DUP3 DUP2 SUB DUP3 MSTORE DUP4 DUP2 DUP2 MLOAD DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP DUP1 MLOAD SWAP1 PUSH1 0x20 ADD SWAP1 DUP1 DUP4 DUP4 PUSH1 0x0 JUMPDEST DUP4 DUP2 LT ISZERO PUSH2 0x9B JUMPI DUP1 DUP3 ADD MLOAD DUP2 DUP5 ADD MSTORE PUSH1 0x20 DUP2 ADD SWAP1 POP PUSH2 0x80 JUMP JUMPDEST POP POP POP POP SWAP1 POP SWAP1 DUP2 ADD SWAP1 PUSH1 0x1F AND DUP1 ISZERO PUSH2 0xC8 JUMPI DUP1 DUP3 SUB DUP1 MLOAD PUSH1 0x1 DUP4 PUSH1 0x20 SUB PUSH2 0x100 EXP SUB NOT AND DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP JUMPDEST POP SWAP3 POP POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x60 PUSH1 0x40 DUP1 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x5 DUP2 MSTORE PUSH1 0x20 ADD PUSH32 0x48656C6C6F000000000000000000000000000000000000000000000000000000 DUP2 MSTORE POP SWAP1 POP SWAP1 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 SLT 0xec 0xe 0xf5 0xf8 SLT 0xc7 0x2d STATICCALL ADDRESS SHR 0xdb COINBASE 0xb1 BALANCE 0xe8 0xf8 DUP14 0xda 0xad DUP13 LOG1 0x4c 0xb4 0x26 0xc2 DELEGATECALL PUSH7 0x8994D3E002900
 ```
 
-تسمى هذه **أكواد التشغيل**. أكواد تشغيل EVM هي تعليمات منخفضة المستوى يمكن أن تنفذها آلة إيثريوم الافتراضية (EVM). يمثل كل كود تشغيل عملية محددة، مثل العمليات الحسابية والعمليات المنطقية ومعالجة البيانات وتدفق التحكم وما إلى ذلك.
+تُسمى هذه **رموز التشغيل**. رموز التشغيل في <span dir="ltr">EVM</span> هي التعليمات منخفضة المستوى التي يمكن لجهاز إيثيريوم الظاهري (<span dir="ltr">EVM</span>) تنفيذها. يمثل كل رمز تشغيل عملية محددة، مثل العمليات الحسابية، والعمليات المنطقية، ومعالجة البيانات، وتدفق التحكم، وما إلى ذلك.
 
-[المزيد عن أكواد التشغيل](/developers/docs/evm/opcodes/)
+[المزيد عن رموز التشغيل](/developers/docs/evm/opcodes/)
 
 ## تطبيقات الويب {#web-applications}
 
-سينتج المحول البرمجي أيضًا **واجهة التطبيق الثنائية (ABI)** التي تحتاجها حتى يتمكن تطبيقك من فهم العقد واستدعاء وظائف العقد.
+سينتج المترجم أيضًا **واجهة التطبيق الثنائية (<span dir="ltr">ABI</span>)** والتي تحتاجها لكي يفهم تطبيقك العقد ويستدعي وظائف العقد.
 
-ABI هو ملف JSON يصف العقد المنشور ووظائف العقد الذكية الخاصة به. وهذا يساعد على سد الفجوة بين web2 وweb3
+<span dir="ltr">ABI</span> هو ملف <span dir="ltr">JSON</span> يصف العقد المنشور ووظائف العقد الذكي الخاصة به. يساعد هذا في سد الفجوة بين ويب 2 و<span dir="ltr">Web3</span>
 
-ستقرأ [مكتبة عميل جافا سكريبت](/developers/docs/apis/javascript/) **واجهة التطبيق الثنائية (ABI)** لكي تتمكن من استدعاء عقدك الذكي في واجهة تطبيق الويب الخاص بك.
+ستقرأ [مكتبة عميل <span dir="ltr">JavaScript</span>](/developers/docs/apis/javascript/) **<span dir="ltr">ABI</span>** لكي تتمكن من استدعاء العقد الذكي الخاص بك في واجهة تطبيق الويب الخاص بك.
 
-يوجد أدناه ABI لعقد الرمز المميز ERC-20. ERC-20 هو رمز يمكنك تداوله على إيثريوم.
+يوجد أدناه <span dir="ltr">ABI</span> لعقد الرمز المميز <span dir="ltr">ERC-20</span>. <span dir="ltr">ERC-20</span> هو رمز مميز يمكنك تداوله على إيثيريوم.
 
 ```json
 [
@@ -272,11 +272,11 @@ ABI هو ملف JSON يصف العقد المنشور ووظائف العقد ا
 ]
 ```
 
-## قراءة إضافية {#further-reading}
+## قراءة متعمقة {#further-reading}
 
-- [مواصفات واجهة التطبيق الثنائية (ABI)](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _– Solidity_
+- [مواصفات <span dir="ltr">ABI</span>](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _– <span dir="ltr">Solidity</span>_
 
-## المواضيع ذات الصلة {#related-topics}
+## مواضيع ذات صلة {#related-topics}
 
-- [مكتبات عميل جافا سكريبت](/developers/docs/apis/javascript/)
-- [آلة إيثريوم الافتراضية](/developers/docs/evm/)
+- [مكتبات عميل <span dir="ltr">JavaScript</span>](/developers/docs/apis/javascript/)
+- [جهاز إيثيريوم الظاهري](/developers/docs/evm/)

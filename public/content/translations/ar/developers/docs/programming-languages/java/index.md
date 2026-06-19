@@ -1,64 +1,63 @@
 ---
-title: "إثيريوم لمطوري جافا"
-description: "تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على جافا"
+title: "إيثيريوم لمطوري ⁦Java⁩"
+description: "تعلم كيفية التطوير لإيثيريوم باستخدام المشاريع والأدوات المعتمدة على ⁦Java⁩"
 lang: ar
 incomplete: true
 ---
 
-<FeaturedText>تعلّم كيفية التطوير على إيثريوم باستخدام المشاريع والأدوات المستندة إلى جافا</FeaturedText>
+<FeaturedText>تعلم كيفية التطوير لإيثيريوم باستخدام المشاريع والأدوات المعتمدة على <span dir="ltr">Java</span></FeaturedText>
 
-استخدم إثيريوم لإنشاء تطبيقات لامركزية (أو "dapp") تستخدم فوائد العملات المشفرة وتكنولوجيا سلسلة الكتل. قد تكون هذه التطبيقات اللامركزية جديرة بالثقة، بمعنى أنه بمجرد نشرها على إثيريوم، فستعمل دائمًا كما تم برمجتها بالضبط. ويمكن لتلك التطبيقات اللامركزية التحكم في الأصول الرقمية من أجل إنشاء أنواع جديدة من التطبيقات المالية. كما أنها قد تكون لامركزية، بمعنى عدم وجود كيان أو شخص واحد يتحكم فيها ويكاد يكون من المستحيل مراقبتها.
+استخدم إيثيريوم لإنشاء تطبيقات لامركزية (dapps) تستفيد من مزايا العملات المشفرة وتكنولوجيا سلسلة الكتل. يمكن أن تكون هذه التطبيقات اللامركزية (dapps) جديرة بالثقة، مما يعني أنه بمجرد نشرها على إيثيريوم، فإنها ستعمل دائمًا كما تمت برمجتها. يمكنها التحكم في الأصول الرقمية من أجل إنشاء أنواع جديدة من التطبيقات المالية. يمكن أن تكون لامركزية، مما يعني أنه لا يوجد كيان أو شخص واحد يتحكم فيها ويكاد يكون من المستحيل فرض رقابة عليها.
 
-## بدء العمل مع العقود الذكية ولغة سوليديتي
+## البدء مع العقود الذكية ولغة <span dir="ltr">Solidity</span> {#getting-started-with-smart-contracts-and-solidity}
 
-**اخط خطواتك الأولي لدمج جافا مع إثيريوم**
+**اتخذ خطواتك الأولى لدمج <span dir="ltr">Java</span> مع إيثيريوم**
 
-هل تحتاج مفاهيم أساسيه أولاً؟ تحقق من [ethereum.org/learn](/learn/) أو [ethereum.org/developers.](/developers/)
+هل تحتاج إلى مقدمة أساسية أولاً؟ تحقق من [<span dir="ltr">ethereum.org/learn</span>](/learn/) أو [<span dir="ltr">ethereum.org/developers</span>.](/developers/)
 
-- [شرح البلوكتشين](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [شرح سلسلة الكتل](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [فهم العقود الذكية](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [اكتب أول عقد ذكي الخاص بك](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [تعلم كيفية تجميع ونشر](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [كتابة عقدك الذكي الأول](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [تعلم كيفية تجميع ونشر <span dir="ltr">Solidity</span>](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## العمل مع عملاء إيثريوم {#working-with-ethereum-clients}
+## العمل مع عملاء إيثيريوم {#working-with-ethereum-clients}
 
-تعلّم كيفية استخدام [Web3J](https://github.com/web3j/web3j) وهايبر ليدجر بيسو، وهما اثنان من عملاء إيثريوم الرائدين المستندين إلى جافا
+تعلم كيفية استخدام [<span dir="ltr">Web3j</span>](https://github.com/web3j/web3j) و<span dir="ltr">Hyperledger</span> بيسو، وهما من أبرز عملاء إيثيريوم المعتمدين على <span dir="ltr">Java</span>
 
-- [الاتصال بعميل إيثريوم باستخدام جافا وEclipse وWeb3J](https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j)
-- [إدارة حساب إيثريوم باستخدام جافا وويب 3 جي](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)
-- [إنشاء غلاف جافا من عقدك الذكي](https://kauri.io/article/84475132317d4d6a84a2c42eb9348e4b/generate-a-java-wrapper-from-your-smart-contract)
-- [التفاعل مع عقد إيثريوم ذكي](https://kauri.io/article/14dc434d11ef4ee18bf7d57f079e246e/interacting-with-an-ethereum-smart-contract-in-java)
-- [الاستماع إلى أحداث عقود إيثريوم الذكية](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
-- [استخدام بيسو (Pantheon)، عميل إيثريوم بلغة جافا مع لينكس](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
-- [تشغيل عقدة هايبر ليدجر بيسو (Pantheon) في اختبارات تكامل جافا](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [ورقة غش ويب 3 جي](https://kauri.io/web3j-cheat-sheet-\(java-ethereum\)/5dfa1ea941ac3d0001ce1d90/c)
+- [الاتصال بعميل إيثيريوم باستخدام <span dir="ltr">Java</span> و<span dir="ltr">Eclipse</span> و<span dir="ltr">Web3j</span>](https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j)
+- [إدارة حساب إيثيريوم باستخدام <span dir="ltr">Java</span> و<span dir="ltr">Web3j</span>](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)
+- [إنشاء غلاف <span dir="ltr">Java</span> من عقدك الذكي](https://kauri.io/article/84475132317d4d6a84a2c42eb9348e4b/generate-a-java-wrapper-from-your-smart-contract)
+- [التفاعل مع عقد ذكي على إيثيريوم](https://kauri.io/article/14dc434d11ef4ee18bf7d57f079e246e/interacting-with-an-ethereum-smart-contract-in-java)
+- [الاستماع إلى أحداث العقد الذكي على إيثيريوم](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
+- [استخدام بيسو (<span dir="ltr">Pantheon</span>)، عميل إيثيريوم المعتمد على <span dir="ltr">Java</span> مع <span dir="ltr">Linux</span>](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
+- [تشغيل عقدة <span dir="ltr">Hyperledger</span> بيسو (<span dir="ltr">Pantheon</span>) في اختبارات تكامل <span dir="ltr">Java</span>](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
+- [ورقة مرجعية لـ <span dir="ltr">Web3j</span>](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)<span dir="ltr">/5dfa1ea941ac3d0001ce1d90/c)</span>
 
-تعلّم كيفية استخدام [ethers-kt](https://github.com/Kr1ptal/ethers-kt)، وهي مكتبة Kotlin غير متزامنة وعالية الأداء للتفاعل مع سلاسل الكتل المستندة إلى EVM. استهداف منصات JVM وأندرويد.
+تعلم كيفية استخدام [<span dir="ltr">ethers-kt</span>](https://github.com/Kr1ptal/ethers-kt)، وهي مكتبة <span dir="ltr">Kotlin</span> غير متزامنة وعالية الأداء للتفاعل مع سلاسل الكتل المعتمدة على جهاز إيثيريوم الظاهري (<span dir="ltr">EVM</span>). تستهدف منصات <span dir="ltr">JVM</span> و<span dir="ltr">Android</span>.
+- [تحويل رموز <span dir="ltr">ERC-20</span>](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
+- [مبادلة <span dir="ltr">UniswapV2</span> مع الاستماع للأحداث](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
+- [متتبع رصيد <span dir="ltr">ETH</span> / <span dir="ltr">ERC-20</span>](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
 
-- [نقل رموز ERC20](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
-- [مبادلة UniswapV2 مع الاستماع للأحداث](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
-- [متعقب رصيد ETH / ERC20](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
+## مقالات متوسطة {#intermediate-articles}
 
-## المقالات الوسيطة {#intermediate-articles}
-
-- [إدارة التخزين في تطبيق جافا باستخدام آي بي إف إس](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
-- [إدارة رموز ERC20 في جافا باستخدام ويب 3 جي](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
-- [مديرو معاملات ويب 3 جي](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
+- [إدارة التخزين في تطبيق <span dir="ltr">Java</span> باستخدام <span dir="ltr">IPFS</span>](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
+- [إدارة رموز <span dir="ltr">ERC-20</span> في <span dir="ltr">Java</span> باستخدام <span dir="ltr">Web3j</span>](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
+- [مديرو معاملات <span dir="ltr">Web3j</span>](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
 
 ## أنماط الاستخدام المتقدمة {#advanced-use-patterns}
 
-- [استخدام Eventeum لإنشاء ذاكرة تخزين مؤقت لبيانات العقد الذكي بلغة جافا](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
+- [استخدام <span dir="ltr">Eventeum</span> لبناء ذاكرة تخزين مؤقت لبيانات العقد الذكي في <span dir="ltr">Java</span>](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
 
-## مشاريع وأدوات جافا {#java-projects-and-tools}
+## مشاريع وأدوات <span dir="ltr">Java</span> {#java-projects-and-tools}
 
-- [Web3J (مكتبة للتفاعل مع عملاء إيثريوم)](https://github.com/web3j/web3j)
-- [ethers-kt (مكتبة Kotlin/جافا/أندرويد عالية الأداء وغير متزامنة لسلاسل الكتل المستندة إلى EVM.)](https://github.com/Kr1ptal/ethers-kt)
-- [Eventeum (مستمع الأحداث)](https://github.com/ConsenSys/eventeum)
-- [Mahuta (أدوات مطوري آي بي إف إس)](https://github.com/ConsenSys/mahuta)
+- [<span dir="ltr">Web3j</span> (مكتبة للتفاعل مع عملاء إيثيريوم)](https://github.com/web3j/web3j)
+- [<span dir="ltr">ethers-kt</span> (مكتبة <span dir="ltr">Kotlin</span>/<span dir="ltr">Java</span>/<span dir="ltr">Android</span> غير متزامنة وعالية الأداء لسلاسل الكتل المعتمدة على <span dir="ltr">EVM</span>.)](https://github.com/Kr1ptal/ethers-kt)
+- [<span dir="ltr">Eventeum</span> (مستمع للأحداث)](https://github.com/ConsenSys/eventeum)
+- [<span dir="ltr">Mahuta</span> (أدوات تطوير <span dir="ltr">IPFS</span>)](https://github.com/ConsenSys/mahuta)
 
-تبحث عن المزيد من المصادر؟ راجع [ethereum.org/developers.](/developers/)
+هل تبحث عن المزيد من الموارد؟ تحقق من [<span dir="ltr">ethereum.org/developers</span>.](/developers/)
 
-## مساهمو مجتمع جافا {#java-community-contributors}
+## مساهمو مجتمع <span dir="ltr">Java</span> {#java-community-contributors}
 
-- [IO Builders](https://io.builders)
-- [Kauri](https://kauri.io)
+- [<span dir="ltr">IO Builders</span>](https://io.builders)
+- [<span dir="ltr">Kauri</span>](https://kauri.io)
