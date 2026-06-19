@@ -3,7 +3,7 @@ title: WebSockets verwenden
 description: Leitfaden zur Verwendung von WebSockets und Alchemy, um JSON-RPC-Anfragen zu stellen und Ereignisse zu abonnieren.
 author: "Elan Halpern"
 lang: de
-tags: ["Alchemy", "websockets", "abfragen", "JavaScript"]
+tags: ["alchemy", "websockets", "abfragen", "javascript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs
@@ -11,11 +11,11 @@ sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-webso
 published: 2020-12-01
 ---
 
-Dies ist ein Einstiegsleitfaden zur Verwendung von WebSockets und Alchemy, um Anfragen an die Ethereum-Blockchain zu stellen.
+Dies ist ein Einsteiger-Leitfaden zur Verwendung von WebSockets und Alchemy, um Anfragen an die Ethereum-Blockchain zu stellen.
 
 ## WebSockets vs. HTTP {#websockets-vs-http}
 
-Im Gegensatz zu HTTP müssen Sie bei WebSockets nicht ständig Anfragen stellen, wenn Sie bestimmte Informationen benötigen. WebSockets halten eine Netzwerkverbindung für Sie aufrecht (wenn sie richtig implementiert sind) und lauschen auf Änderungen.
+Im Gegensatz zu HTTP müssen Sie bei WebSockets nicht ständig Anfragen stellen, wenn Sie bestimmte Informationen wünschen. WebSockets halten eine Netzwerkverbindung für Sie aufrecht (wenn sie richtig implementiert sind) und lauschen auf Änderungen.
 
 Wie bei jeder Netzwerkverbindung sollten Sie nicht davon ausgehen, dass ein WebSocket für immer ohne Unterbrechung geöffnet bleibt. Das korrekte manuelle Behandeln von abgebrochenen Verbindungen und Wiederverbindungen kann jedoch eine Herausforderung sein. Ein weiterer Nachteil von WebSockets ist, dass Sie in der Antwort keine HTTP-Statuscodes erhalten, sondern nur die Fehlermeldung.
 
@@ -33,20 +33,19 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
 <  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-
 ```
 
 ## Wie man WebSockets verwendet {#how-to-use-websockets}
 
-Öffnen Sie zunächst einen WebSocket über die WebSocket-URL für Ihre App. Sie finden die WebSocket-URL Ihrer App, indem Sie die Seite der App in [Ihrem Dashboard](https://dashboard.alchemy.com/) öffnen und auf „View Key“ klicken. Beachten Sie, dass sich die URL Ihrer App für WebSockets von der URL für HTTP-Anfragen unterscheidet, aber beide können durch Klicken auf „View Key“ gefunden werden.
+Öffnen Sie zunächst einen WebSocket mit der WebSocket-URL für Ihre App. Sie finden die WebSocket-URL Ihrer App, indem Sie die Seite der App in [Ihrem Dashboard](https://dashboard.alchemy.com/) öffnen und auf „View Key“ klicken. Beachten Sie, dass sich die URL Ihrer App für WebSockets von der URL für HTTP-Anfragen unterscheidet, aber beide können durch Klicken auf „View Key“ gefunden werden.
 
-![Wo Sie Ihre WebSocket-URL in Ihrem Alchemy-Dashboard finden](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
 
 Jede der in der [Alchemy-API-Referenz](https://www.alchemy.com/docs/reference/api-overview) aufgeführten APIs kann über WebSocket verwendet werden. Verwenden Sie dazu dieselbe Payload, die als Body einer HTTP-POST-Anfrage gesendet werden würde, senden Sie diese Payload jedoch stattdessen über den WebSocket.
 
 ## Mit Web3 {#with-web3}
 
-Der Wechsel zu WebSockets bei der Verwendung einer Client-Bibliothek wie Web3 ist einfach. Übergeben Sie bei der Instanziierung Ihrer Web3-Anwendung einfach die WebSocket-URL anstelle der HTTP-URL. Zum Beispiel:
+Der Wechsel zu WebSockets bei Verwendung einer Client-Bibliothek wie Web3 ist einfach. Übergeben Sie bei der Instanziierung Ihres Web3-Clients einfach die WebSocket-URL anstelle der HTTP-URL. Zum Beispiel:
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -60,7 +59,7 @@ Wenn Sie über einen WebSocket verbunden sind, können Sie zwei zusätzliche Met
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Erstellt ein neues Abonnement für angegebene Ereignisse. [Erfahren Sie mehr über `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
+Erstellt ein neues Abonnement für bestimmte Ereignisse. [Erfahren Sie mehr über `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parameter {#parameters}
 
@@ -75,19 +74,19 @@ Die Abonnement-ID: Diese ID wird an alle empfangenen Ereignisse angehängt und k
 
 #### Abonnement-Ereignisse {#subscription-events}
 
-Während das Abonnement aktiv ist, erhalten Sie Ereignisse, die Objekte mit den folgenden Feldern sind:
+Solange das Abonnement aktiv ist, erhalten Sie Ereignisse, die Objekte mit den folgenden Feldern sind:
 
-- `jsonrpc`: Immer „2.0“
-- `method`: Immer „eth_subscription“
+- `jsonrpc`: Immer "2.0"
+- `method`: Immer "eth_subscription"
 - `params`: Ein Objekt mit den folgenden Feldern:
-  - `subscription`: Die Abonnement-ID, die vom `eth_subscribe`-Aufruf zurückgegeben wurde, der dieses Abonnement erstellt hat.
+  - `subscription`: Die Abonnement-ID, die durch den Aufruf von `eth_subscribe` zurückgegeben wurde, der dieses Abonnement erstellt hat.
   - `result`: Ein Objekt, dessen Inhalt je nach Art des Abonnements variiert.
 
 #### Abonnementtypen {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-Gibt die Transaktionsinformationen für alle Transaktionen zurück, die dem ausstehenden Status hinzugefügt werden. Dieser Abonnementtyp abonniert ausstehende Transaktionen, ähnlich dem Standard-Web3-Aufruf `web3.eth.subscribe("pendingTransactions")`, unterscheidet sich jedoch darin, dass er _vollständige Transaktionsinformationen_ anstelle von nur Transaktions-Hashes ausgibt.
+Gibt die Transaktionsinformationen für alle Transaktionen zurück, die dem ausstehenden Zustand hinzugefügt werden. Dieser Abonnementtyp abonniert ausstehende Transaktionen, ähnlich dem Standard-Web3-Aufruf `web3.eth.subscribe("pendingTransactions")`, unterscheidet sich jedoch darin, dass er _vollständige Transaktionsinformationen_ anstelle von nur Transaktions-Hashes ausgibt.
 
 Beispiel:
 
@@ -122,9 +121,9 @@ Beispiel:
 
 2. `newHeads`
 
-Gibt jedes Mal ein Ereignis aus, wenn der Chain ein neuer Header hinzugefügt wird, einschließlich während einer Chain-Reorganisation.
+Gibt jedes Mal ein Ereignis aus, wenn der Chain ein neuer Header hinzugefügt wird, einschließlich während eines Chain-Reorgs.
 
-Wenn eine Chain-Reorganisation auftritt, gibt dieses Abonnement ein Ereignis aus, das alle neuen Header für die neue Chain enthält. Insbesondere bedeutet dies, dass Sie möglicherweise mehrere Header sehen, die mit derselben Höhe ausgegeben werden. Wenn dies geschieht, sollte der spätere Header als der korrekte nach einer Reorganisation angesehen werden.
+Wenn ein Chain-Reorg auftritt, gibt dieses Abonnement ein Ereignis aus, das alle neuen Header für die neue Chain enthält. Insbesondere bedeutet dies, dass Sie möglicherweise mehrere Header mit derselben Höhe sehen, und wenn dies geschieht, sollte der spätere Header als der korrekte nach einem Reorg angesehen werden.
 
 Beispiel:
 
@@ -159,22 +158,22 @@ Beispiel:
 
 3. `logs`
 
-Gibt Protokolle (Logs) aus, die Teil neu hinzugefügter Blöcke sind und den angegebenen Filterkriterien entsprechen.
+Gibt Protokolle aus, die Teil neu hinzugefügter Blöcke sind und den angegebenen Filterkriterien entsprechen.
 
-Wenn eine Chain-Reorganisation auftritt, werden Protokolle, die Teil von Blöcken auf der alten Chain sind, erneut ausgegeben, wobei die Eigenschaft `removed` auf `true` gesetzt ist. Darüber hinaus werden Protokolle ausgegeben, die Teil der Blöcke auf der neuen Chain sind, was bedeutet, dass es möglich ist, Protokolle für dieselbe Transaktion im Falle einer Reorganisation mehrmals zu sehen.
+Wenn ein Chain-Reorg auftritt, werden Protokolle, die Teil von Blöcken auf der alten Chain sind, erneut ausgegeben, wobei die Eigenschaft `removed` auf `true` gesetzt ist. Darüber hinaus werden Protokolle ausgegeben, die Teil der Blöcke auf der neuen Chain sind, was bedeutet, dass es möglich ist, im Falle eines Reorgs Protokolle für dieselbe Transaktion mehrmals zu sehen.
 
 Parameter
 
 1. Ein Objekt mit den folgenden Feldern:
-   - `address` (optional): Entweder ein String, der eine Adresse darstellt, oder ein Array solcher Strings.
-     - Nur Protokolle, die von einer dieser Adressen erstellt wurden, werden ausgegeben.
-   - `topics`: Ein Array von Topic-Spezifikatoren.
+   - `address` (optional): entweder ein String, der eine Adresse darstellt, oder ein Array solcher Strings.
+     - Es werden nur Protokolle ausgegeben, die von einer dieser Adressen erstellt wurden.
+   - `topics`: ein Array von Topic-Spezifikatoren.
      - Jeder Topic-Spezifikator ist entweder `null`, ein String, der ein Topic darstellt, oder ein Array von Strings.
      - Jede Position im Array, die nicht `null` ist, beschränkt die ausgegebenen Protokolle auf diejenigen, die eines der angegebenen Topics an dieser Position haben.
 
 Einige Beispiele für Topic-Spezifikationen:
 
-- `[]`: Alle Topics erlaubt.
+- `[]`: Beliebige Topics erlaubt.
 - `[A]`: A an erster Position (und alles danach).
 - `[null, B]`: Beliebiges an erster Position und B an zweiter Position (und alles danach).
 - `[A, B]`: A an erster Position und B an zweiter Position (und alles danach).
@@ -227,8 +226,6 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-
-
 ```
 
 **Ergebnis**
