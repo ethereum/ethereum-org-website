@@ -1,27 +1,27 @@
 ---
-title: "تشريح العقود الذكية"
-description: "نظرة متعمقة على تشريح جهة الاتصال الذكية - الوظائف والبيانات والمتغيرات."
+title: تشريح العقود الذكية
+description: نظرة متعمقة في تشريح العقد الذكي – الدوال والبيانات والمتغيرات.
 lang: ar
 ---
 
-العقد الذكي هو برنامج يتم تشغيله على عنوان على إيثريوم. إنها تتكون من البيانات والوظائف التي يمكن تنفيذها عند تلقي المعاملة. فيما يلي نظرة عامة على العناصر التي يشكلها العقد الذكي.
+العقد الذكي هو برنامج يعمل على عنوان في إيثيريوم. تتكون من بيانات ودوال يمكن تنفيذها عند تلقي معاملة. إليك نظرة عامة على ما يتكون منه العقد الذكي.
 
 ## المتطلبات الأساسية {#prerequisites}
 
-تأكد من أنك قرأت عن [العقود الذكية](/developers/docs/smart-contracts/) أولاً. يفترض هذا المستند أنك على دراية بلغات البرمجة مثل جافا سكريبت أو بايثون.
+تأكد من قراءة حول [العقود الذكية](/developers/docs/smart-contracts/) أولاً. تفترض هذه الوثيقة أنك على دراية بالفعل بلغات البرمجة مثل JavaScript أو Python.
 
 ## البيانات {#data}
 
-يجب تعيين أي بيانات عقد إلى موقع: إما إلى `storage` أو `memory`. يعد تعديل مساحة التخزين في العقد الذكي أمرًا مكلفًا، لذا يتعين عليك التفكير في المكان الذي يجب أن تعيش فيه بياناتك.
+يجب تعيين أي بيانات عقد إلى موقع: إما إلى `storage` أو `memory`. من المكلف تعديل التخزين في عقد ذكي، لذا يجب عليك التفكير في المكان الذي يجب أن توجد فيه بياناتك.
 
 ### التخزين {#storage}
 
-يشار إلى البيانات الدائمة بالتخزين ويتم تمثيلها بمتغيرات الحالة. يتم تخزين هذه القيم بشكل دائم على blockchain. يتعين عليك الإعلان عن النوع حتى يتمكن العقد من تتبع مقدار التخزين الذي تحتاجه على blockchain عند تجميعه.
+يُشار إلى البيانات الدائمة باسم التخزين ويتم تمثيلها بواسطة متغيرات الحالة. يتم تخزين هذه القيم بشكل دائم على سلسلة الكتل. تحتاج إلى التصريح عن النوع حتى يتمكن العقد من تتبع مقدار التخزين الذي يحتاجه على سلسلة الكتل عند تجميعه.
 
 ```solidity
-// مثال سوليديتي
+// مثال Solidity
 contract SimpleStorage {
-    uint storedData; // متغير الحالة
+    uint storedData; // متغير حالة
     // ...
 }
 ```
@@ -31,81 +31,81 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-إذا كنت قد قمت بالفعل ببرمجة لغات موجهة للكائنات، فمن المحتمل أن تكون على دراية بمعظم الأنواع. ومع ذلك، يجب أن يكون `address` جديدًا عليك إذا كنت جديدًا في تطوير إيثريوم.
+إذا كنت قد برمجت بالفعل بلغات كائنية التوجه، فمن المحتمل أن تكون على دراية بمعظم الأنواع. ومع ذلك، يجب أن يكون `address` جديدًا بالنسبة لك إذا كنت جديدًا في تطوير [إيثيريوم](/).
 
-يمكن لنوع `address` أن يحمل عنوان إيثريوم الذي يعادل 20 بايت أو 160 بت. يتم إرجاعه بالتدوين الست عشري مع 0x بادئة.
+يمكن أن يحمل النوع `address` عنوان إيثيريوم والذي يعادل <span dir="ltr">20 bytes</span> أو <span dir="ltr">160 bits</span>. يتم إرجاعه بالتدوين السداسي العشري مع بادئة <span dir="ltr">0x</span>.
 
-تشمل الأنواع الأخرى ما يلي:
+تشمل الأنواع الأخرى:
 
-- منطقية
-- عدد صحيح
-- أرقام النقطة الثابتة
-- صفائف بايت ذات حجم ثابت
-- مصفوفات البايت ذات الحجم الديناميكي
-- القيم الحرفية النسبية والصحيحة
+- منطقي (boolean)
+- عدد صحيح (integer)
+- أرقام الفاصلة الثابتة (fixed point numbers)
+- مصفوفات بايتات ثابتة الحجم
+- مصفوفات بايتات متغيرة الحجم
+- القيم الحرفية المنطقية والصحيحة
 - القيم الحرفية النصية
-- القيم الحرفية الست عشرية
-- التعدادات
+- القيم الحرفية السداسية العشرية
+- التعدادات (enums)
 
-لمزيد من التوضيح، نلقي نظرة على المستندات:
+لمزيد من التوضيح، ألق نظرة على المستندات:
 
-- [اطلع على أنواع فايبر](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
-- [اطلع على أنواع سوليديتي](https://docs.soliditylang.org/en/latest/types.html#value-types)
+- [انظر أنواع Vyper](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [انظر أنواع Solidity](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### الذاكرة {#memory}
 
-تسمى القيم التي يتم تخزينها فقط طوال مدة تنفيذ وظيفة العقد بمتغيرات الذاكرة. وبما أنه لا يتم تخزينها بشكل دائم على blockchain، فهي أرخص بكثير في الاستخدام.
+القيم التي يتم تخزينها فقط طوال فترة تنفيذ دالة العقد تسمى متغيرات الذاكرة. نظرًا لأن هذه لا يتم تخزينها بشكل دائم على سلسلة الكتل، فهي أرخص بكثير في الاستخدام.
 
-تعرف على المزيد حول كيفية تخزين EVM للبيانات (التخزين، والذاكرة، والمكدس) في [وثائق سوليديتي](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack).
+تعرف على المزيد حول كيفية تخزين آلة إيثيريوم الافتراضية (EVM) للبيانات (التخزين، الذاكرة، والمكدس) في [مستندات Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack).
 
 ### متغيرات البيئة {#environment-variables}
 
-بالإضافة إلى المتغيرات التي تحددها في العقد الخاص بك، هناك بعض المتغيرات العالمية الخاصة. يتم استخدامها بشكل أساسي لتوفير معلومات حول blockchain أو المعاملة الحالية.
+بالإضافة إلى المتغيرات التي تحددها في عقدك، هناك بعض المتغيرات العامة الخاصة. تُستخدم بشكل أساسي لتوفير معلومات حول سلسلة الكتل أو المعاملة الحالية.
 
 أمثلة:
 
-| **الخاصية**       | **متغيرات الحالة** | **الوصف**                                          |
-| ----------------- | ------------------ | -------------------------------------------------- |
-| `block.timestamp` | الوحدة 256         | الطابع الزمني لعصر الكتلة الحالي                   |
-| `msg.sender`      | العنوان            | مرسل الرسالة (المكالمة الحالية) |
+| **الخاصية**          | **متغير الحالة** | **الوصف**                      |
+| ----------------- | ------------------ | ------------------------------------ |
+| `block.timestamp` | uint256            | الطابع الزمني لحقبة الكتلة الحالية        |
+| `msg.sender`      | address            | مرسل الرسالة (الاستدعاء الحالي) |
 
 ## الدوال {#functions}
 
-بعبارات أبسط، يمكن للوظائف الحصول على معلومات أو تعيين معلومات استجابةً للمعاملات الواردة.
+بعبارات بسيطة للغاية، يمكن للدوال الحصول على معلومات أو تعيين معلومات استجابة للمعاملات الواردة.
 
-هناك نوعان من استدعاءات الوظائف:
+هناك نوعان من استدعاءات الدوال:
 
-- `internal` – هذه لا تنشئ استدعاءً لـ EVM
+- `internal` – هذه لا تنشئ استدعاء لآلة إيثيريوم الافتراضية (EVM)
   - لا يمكن الوصول إلى الدوال الداخلية ومتغيرات الحالة إلا داخليًا (أي من داخل العقد الحالي أو العقود المشتقة منه)
-- `external` – هذه تنشئ استدعاءً لـ EVM
-  - تعد الوظائف الخارجية جزءًا من واجهة العقد، مما يعني أنه يمكن استدعاؤها من عقود أخرى وعبر المعاملات. لا يمكن استدعاء دالة خارجية `f` داخليًا (أي أن `f()` لا تعمل، لكن `this.f()` تعمل).
+- `external` – هذه تنشئ استدعاء لآلة إيثيريوم الافتراضية (EVM)
+  - الدوال الخارجية هي جزء من واجهة العقد، مما يعني أنه يمكن استدعاؤها من عقود أخرى وعبر المعاملات. لا يمكن استدعاء دالة خارجية `f` داخليًا (أي أن `f()` لا يعمل، ولكن `this.f()` يعمل).
 
-يمكن أيضًا أن تكون `public` أو `private`
+يمكن أن تكون أيضًا `public` أو `private`
 
 - يمكن استدعاء دوال `public` داخليًا من داخل العقد أو خارجيًا عبر الرسائل
-- دوال `private` مرئية فقط للعقد الذي عُرِّفت فيه وليس في العقود المشتقة
+- دوال `private` مرئية فقط للعقد الذي تم تعريفها فيه وليس في العقود المشتقة
 
-يمكن جعل كل من الوظائف ومتغيرات الحالة عامة أو خاصة
+يمكن جعل كل من الدوال ومتغيرات الحالة عامة أو خاصة
 
-فيما يلي وظيفة لتحديث متغير الحالة في العقد:
+إليك دالة لتحديث متغير حالة في عقد:
 
 ```solidity
-// مثال سوليديتي
+// مثال Solidity
 function update_name(string value) public {
     dapp_name = value;
 }
 ```
 
-- المعلمة `value` من النوع `string` تُمرر إلى الدالة: `update_name`
-- تم إعلانها `public`، مما يعني أن أي شخص يمكنه الوصول إليها
-- لم يتم إعلانها `view`، لذا يمكنها تعديل حالة العقد
+- يتم تمرير المعلمة `value` من النوع `string` إلى الدالة: `update_name`
+- تم التصريح عنها كـ `public`، مما يعني أنه يمكن لأي شخص الوصول إليها
+- لم يتم التصريح عنها كـ `view`، لذا يمكنها تعديل حالة العقد
 
-### دوال العرض {#view-functions}
+### دوال العرض (View functions) {#view-functions}
 
-تعد هذه الوظائف بعدم تعديل حالة بيانات العقد. الأمثلة الشائعة هي وظائف "الحصول على" - يمكنك استخدام هذا لتلقي رصيد المستخدم على سبيل المثال.
+تتعهد هذه الدوال بعدم تعديل حالة بيانات العقد. الأمثلة الشائعة هي دوال "الجلب" (getter) – يمكنك استخدام هذا لتلقي رصيد المستخدم على سبيل المثال.
 
 ```solidity
-// مثال سوليديتي
+// مثال Solidity
 function balanceOf(address _owner) public view returns (uint256 _balance) {
     return ownerPizzaCount[_owner];
 }
@@ -120,30 +120,30 @@ def readName() -> string:
   return dappName
 ```
 
-ما يعتبر تعديل الحالة:
+ما يُعتبر تعديلاً للحالة:
 
-1. الكتابة لمتغيرات الحالة
+1. الكتابة في متغيرات الحالة.
 2. [إصدار الأحداث](https://docs.soliditylang.org/en/v0.7.0/contracts.html#events).
 3. [إنشاء عقود أخرى](https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts).
 4. استخدام `selfdestruct`.
-5. إرسال الأثير عن طريق المكالمات.
-6. استدعاء أي دالة غير معلمة كـ `view` أو `pure`.
-7. استخدام المكالمات ذات المستوى المنخفض.
-8. استخدام التجميع المضمن الذي يحتوي على رمز تشغيل معينة.
+5. إرسال الإيثر عبر الاستدعاءات.
+6. استدعاء أي دالة غير مميزة بـ `view` أو `pure`.
+7. استخدام الاستدعاءات منخفضة المستوى.
+8. استخدام لغة التجميع المضمنة (inline assembly) التي تحتوي على أكواد تشغيل (opcodes) معينة.
 
-### دوال المُنشِئ {#constructor-functions}
+### دوال المُنشئ {#constructor-functions}
 
-دوال `constructor` تُنفذ مرة واحدة فقط عند نشر العقد لأول مرة. مثل `constructor` في العديد من لغات البرمجة القائمة على الأصناف، غالبًا ما تُهيئ هذه الدوال متغيرات الحالة إلى قيمها المحددة.
+يتم تنفيذ دوال `constructor` مرة واحدة فقط عند نشر العقد لأول مرة. مثل `constructor` في العديد من لغات البرمجة القائمة على الفئات (class-based)، غالبًا ما تقوم هذه الدوال بتهيئة متغيرات الحالة إلى قيمها المحددة.
 
 ```solidity
-// مثال سوليديتي
-// يهيئ بيانات العقد، ويضبط `owner`
-// على عنوان مُنشئ العقد.
+// مثال Solidity
+// يهيئ بيانات العقد، ويعين `owner`
+// إلى عنوان منشئ العقد.
 constructor() public {
-    // تعتمد جميع العقود الذكية على المعاملات الخارجية لتشغيل دوالها.
-    // `msg` هو متغير عالمي يتضمن البيانات ذات الصلة بالمعاملة المحددة،
+    // تعتمد جميع العقود الذكية على معاملات خارجية لتشغيل وظائفها.
+    // `msg` هو متغير عام يتضمن بيانات ذات صلة بالمعاملة المحددة،
     // مثل عنوان المرسل وقيمة ETH المضمنة في المعاملة.
-    // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
     owner = msg.sender;
 }
 ```
@@ -160,31 +160,31 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 
 ### الدوال المدمجة {#built-in-functions}
 
-بالإضافة إلى المتغيرات والوظائف التي تحددها في عقدك، هناك بعض الوظائف الخاصة المضمنة. الأمثلة الأكثر وضوحا هي :
+بالإضافة إلى المتغيرات والدوال التي تحددها في عقدك، هناك بعض الدوال المدمجة الخاصة. المثال الأكثر وضوحًا هو:
 
-- `address.send()` – سوليديتي
-- `send(address)` – فايبر
+- `address.send()` – Solidity
+- `send(address)` – Vyper
 
-تسمح هذه العقود بإرسال ETH إلى حسابات أخرى.
+تسمح هذه للعقود بإرسال ETH إلى حسابات أخرى.
 
 ## كتابة الدوال {#writing-functions}
 
-تحتاج وظيفتك إلى:
+تحتاج دالتك إلى:
 
-- متغير المعلمة ونوعها (إذا كان يقبل المعلمات)
-- إعلان داخلي/خارجي
-- إعلان نقي / عرض / مستحق الدفع
-- نوع الإرجاع (إذا كان يُرجع قيمة)
+- متغير المعلمة والنوع (إذا كانت تقبل معلمات)
+- التصريح بكونها داخلية/خارجية (internal/external)
+- التصريح بكونها pure/view/payable
+- نوع الإرجاع (إذا كانت تُرجع قيمة)
 
 ```solidity
 pragma solidity >=0.4.0 <=0.6.0;
 
 contract ExampleDapp {
-    string dapp_name; // متغير الحالة
+    string dapp_name; // متغير حالة
 
-    // تُستدعى عند نشر العقد وتهيئ القيمة
+    // يُستدعى عند نشر العقد ويهيئ القيمة
     constructor() public {
-        dapp_name = "تطبيقي اللامركزي المثالي";
+        dapp_name = "My Example dapp";
     }
 
     // دالة الجلب
@@ -192,118 +192,118 @@ contract ExampleDapp {
         return dapp_name;
     }
 
-    // دالة الضبط
+    // دالة التعيين
     function update_name(string value) public {
         dapp_name = value;
     }
 }
 ```
 
-قد يبدو العقد الكامل شيئًا كهذا. هنا، توفر دالة `constructor` قيمة أولية للمتغير `dapp_name`.
+قد يبدو العقد الكامل شيئًا كهذا. هنا توفر دالة `constructor` قيمة أولية للمتغير `dapp_name`.
 
 ## الأحداث والسجلات {#events-and-logs}
 
-تتيح الأحداث لعقدك الذكي التواصل مع الواجهة الأمامية أو تطبيقات الاشتراك الأخرى. بمجرد التحقق من صحة المعاملة وإضافتها إلى الكتلة، يمكن للعقود الذكية إصدار أحداث وتسجيل المعلومات، والتي يمكن للواجهة الأمامية بعد ذلك معالجتها واستخدامها.
+تمكّن الأحداث عقدك الذكي من التواصل مع الواجهة الأمامية أو التطبيقات المشتركة الأخرى. بمجرد التحقق من صحة معاملة وإضافتها إلى كتلة، يمكن للعقود الذكية إصدار أحداث وتسجيل المعلومات، والتي يمكن للواجهة الأمامية بعد ذلك معالجتها والاستفادة منها.
 
 ## أمثلة مشروحة {#annotated-examples}
 
-هذه بعض الأمثلة الصلبة المكتوبة . إذا كنت ترغب في تجربة النص البرمجي، يمكنك التفاعل معه في [ريميكس](https://remix.ethereum.org).
+هذه بعض الأمثلة المكتوبة بلغة Solidity. إذا كنت ترغب في تجربة الكود، يمكنك التفاعل معها في [Remix](https://remix.ethereum.org).
 
-### Hello world {#hello-world}
+### مرحبًا بالعالم {#hello-world}
 
 ```solidity
-// يحدد إصدار سوليديتي، باستخدام الإصدار الدلالي.
-// اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// يحدد إصدار Solidity، باستخدام تعيين الإصدارات الدلالي.
+// تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
-// يُعرِّف عقدًا باسم `HelloWorld`.
+// يحدد عقدًا باسم `HelloWorld`.
 // العقد هو مجموعة من الدوال والبيانات (حالته).
-// بمجرد نشره، يقيم العقد على عنوان محدد على بلوكتشين إيثريوم.
-// اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// بمجرد نشره، يستقر العقد في عنوان محدد على سلسلة الكتل لإيثيريوم.
+// تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-    // يُعلن عن متغير حالة `message` من النوع `string`.
+    // يصرح عن متغير حالة `message` من النوع `string`.
     // متغيرات الحالة هي متغيرات تُخزن قيمها بشكل دائم في مساحة تخزين العقد.
     // الكلمة المفتاحية `public` تجعل المتغيرات قابلة للوصول من خارج العقد
-    // وتنشئ دالة يمكن للعقود الأخرى أو العملاء استدعاؤها للوصول إلى القيمة.
+    // وتنشئ دالة يمكن للعقود أو العملاء الآخرين استدعاؤها للوصول إلى القيمة.
     string public message;
 
-    // على غرار العديد من لغات البرمجة الشيئية القائمة على الأصناف، المُنشئ هو
-    // دالة خاصة لا تُنفذ إلا عند إنشاء العقد.
-    // تُستخدم المُنشِئات لتهيئة بيانات العقد.
-    // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+    // على غرار العديد من اللغات كائنية التوجه القائمة على الفئات، فإن المُنشئ هو
+    // دالة خاصة تُنفذ فقط عند إنشاء العقد.
+    // تُستخدم المُنشئات لتهيئة بيانات العقد.
+    // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
-        // يقبل وسيط سلسلة نصية `initMessage` ويضبط القيمة
+        // يقبل وسيطة نصية `initMessage` ويعين القيمة
         // في متغير التخزين `message` الخاص بالعقد).
         message = initMessage;
     }
 
-    // دالة عامة تقبل وسيط سلسلة نصية
-    // وتُحدِّث متغير التخزين `message`.
+    // دالة عامة تقبل وسيطة نصية
+    // وتُحدّث متغير التخزين `message`.
     function update(string memory newMessage) public {
         message = newMessage;
     }
 }
 ```
 
-### الرمز {#token}
+### رمز مميز {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
 
 contract Token {
-    // يشبه `address` عنوان البريد الإلكتروني - يُستخدم لتعريف حساب على إيثريوم.
+    // العنوان مشابه لعنوان البريد الإلكتروني - يُستخدم لتحديد حساب على إيثيريوم.
     // يمكن أن تمثل العناوين عقدًا ذكيًا أو حسابات خارجية (للمستخدمين).
-    // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
+    // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
 
-    // `mapping` هو في الأساس بنية بيانات جدول التجزئة (هاش).
-    // يقوم هذا الـ `mapping` بتعيين عدد صحيح غير مُشار إليه (رصيد الرمز) إلى عنوان (حامل الرمز).
-    // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
+    // الـ `mapping` هو في الأساس بنية بيانات جدول تجزئة.
+    // يعين هذا الـ `mapping` عددًا صحيحًا بدون إشارة (رصيد الرمز المميز) إلى عنوان (حامل الرمز المميز).
+    // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
     mapping (address => uint) public balances;
 
-    // تسمح الأحداث بتسجيل النشاط على البلوكتشين.
-    // يمكن لعملاء إيثريوم الاستماع إلى الأحداث من أجل التفاعل مع تغييرات حالة العقد.
-    // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
+    // تسمح الأحداث بتسجيل النشاط على سلسلة الكتل.
+    // يمكن لعملاء إيثيريوم الاستماع إلى الأحداث من أجل التفاعل مع تغييرات حالة العقد.
+    // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // يهيئ بيانات العقد، ويضبط `owner`
-    // على عنوان مُنشئ العقد.
+    // يهيئ بيانات العقد، ويعين `owner`
+    // إلى عنوان منشئ العقد.
     constructor() public {
-        // تعتمد جميع العقود الذكية على المعاملات الخارجية لتشغيل دوالها.
-        // `msg` هو متغير عالمي يتضمن البيانات ذات الصلة بالمعاملة المحددة،
+        // تعتمد جميع العقود الذكية على معاملات خارجية لتشغيل وظائفها.
+        // `msg` هو متغير عام يتضمن بيانات ذات صلة بالمعاملة المحددة،
         // مثل عنوان المرسل وقيمة ETH المضمنة في المعاملة.
-        // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+        // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
         owner = msg.sender;
     }
 
-    // ينشئ كمية من الرموز الجديدة ويرسلها إلى عنوان.
+    // ينشئ كمية من الرموز المميزة الجديدة ويرسلها إلى عنوان.
     function mint(address receiver, uint amount) public {
-        // `require` هي بنية تحكم تستخدم لفرض شروط معينة.
-        // إذا تم تقييم عبارة `require` إلى `false`، يتم إطلاق استثناء،
-        // والذي يعكس جميع التغييرات التي تم إجراؤها على الحالة أثناء الاستدعاء الحالي.
-        // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // `require` هي بنية تحكم تُستخدم لفرض شروط معينة.
+        // إذا تم تقييم عبارة `require` إلى `false`، يتم تشغيل استثناء،
+        // مما يؤدي إلى التراجع عن جميع التغييرات التي أُجريت على الحالة أثناء الاستدعاء الحالي.
+        // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
         // يمكن لمالك العقد فقط استدعاء هذه الدالة
-        require(msg.sender == owner, "أنت لست المالك.");
+        require(msg.sender == owner, "You are not the owner.");
 
-        // يفرض حدًا أقصى لكمية الرموز
-        require(amount < 1e60, "تم تجاوز الحد الأقصى للإصدار");
+        // يفرض حدًا أقصى لعدد الرموز المميزة
+        require(amount < 1e60, "Maximum issuance exceeded");
 
         // يزيد رصيد `receiver` بمقدار `amount`
         balances[receiver] += amount;
     }
 
-    // يرسل كمية من الرموز الموجودة من أي مستدعٍ إلى عنوان.
+    // يرسل كمية من الرموز المميزة الحالية من أي مستدعي إلى عنوان.
     function transfer(address receiver, uint amount) public {
-        // يجب أن يكون لدى المرسل ما يكفي من الرموز لإرسالها
-        require(amount <= balances[msg.sender], "رصيد غير كافٍ.");
+        // يجب أن يمتلك المرسل ما يكفي من الرموز المميزة لإرسالها
+        require(amount <= balances[msg.sender], "Insufficient balance.");
 
-        // يعدل أرصدة الرموز للعنوانين
+        // يضبط أرصدة الرموز المميزة للعنوانين
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
 
-        // يُصدر الحدث المحدد سابقًا
+        // يُصدر الحدث المُعرّف سابقًا
         emit Transfer(msg.sender, receiver, amount);
     }
 }
@@ -316,72 +316,72 @@ pragma solidity ^0.5.10;
 
 // يستورد الرموز من ملفات أخرى إلى العقد الحالي.
 // في هذه الحالة، سلسلة من العقود المساعدة من OpenZeppelin.
-// اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
+// تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// تُستخدم الكلمة المفتاحية `is` لوراثة الدوال والكلمات المفتاحية من العقود الخارجية.
-// في هذه الحالة، يرث `CryptoPizza` من عقود `IERC721` و `ERC165`.
-// اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
+// تُستخدم الكلمة المفتاحية `is` لوراثة الدوال والكلمات المفتاحية من عقود خارجية.
+// في هذه الحالة، يرث `CryptoPizza` من عقدي `IERC721` و `ERC165`.
+// تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // يستخدم مكتبة SafeMath من OpenZeppelin لإجراء العمليات الحسابية بأمان.
-    // اعرف المزيد: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // يستخدم مكتبة SafeMath الخاصة بـ OpenZeppelin لإجراء العمليات الحسابية بأمان.
+    // تعرف على المزيد: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
     using SafeMath for uint256;
 
-    // متغيرات الحالة الثابتة في سوليديتي تشبه اللغات الأخرى
-    // ولكن يجب عليك التعيين من تعبير ثابت في وقت الترجمة.
-    // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // متغيرات الحالة الثابتة في Solidity مشابهة للغات الأخرى
+    // ولكن يجب التعيين من تعبير ثابت في وقت الترجمة.
+    // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // تتيح لك أنواع Struct تحديد النوع الخاص بك
-    // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // تتيح لك أنواع البنيات (Struct) تحديد النوع الخاص بك
+    // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // ينشئ مصفوفة فارغة من هياكل Pizza
+    // ينشئ مصفوفة فارغة من بنيات Pizza
     Pizza[] public pizzas;
 
-    // ربط من معرف البيتزا إلى عنوان مالكها
+    // تعيين من معرف البيتزا إلى عنوان مالكها
     mapping(uint256 => address) public pizzaToOwner;
 
-    // ربط من عنوان المالك إلى عدد الرموز المملوكة
+    // تعيين من عنوان المالك إلى عدد الرموز المميزة المملوكة
     mapping(address => uint256) public ownerPizzaCount;
 
-    // ربط من معرف الرمز إلى العنوان المعتمد
+    // تعيين من معرف الرمز المميز إلى العنوان المعتمد
     mapping(uint256 => address) pizzaApprovals;
 
-    // يمكنك تداخل عمليات الربط، هذا المثال يربط المالك بموافقات المشغل
+    // يمكنك تداخل التعيينات، يربط هذا المثال المالك بموافقات المشغل
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
     // دالة داخلية لإنشاء بيتزا عشوائية من سلسلة نصية (الاسم) والحمض النووي (DNA)
     function _createPizza(string memory _name, uint256 _dna)
         // الكلمة المفتاحية `internal` تعني أن هذه الدالة مرئية فقط
-        // داخل هذا العقد والعقود التي تشتق من هذا العقد
-        // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // داخل هذا العقد والعقود المشتقة من هذا العقد
+        // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` هو مُعدِّل دالة يتحقق مما إذا كانت البيتزا موجودة بالفعل
-        // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // `isUnique` هو مُعدِّل دالة يتحقق مما إذا كانت البيتزا موجودة بالفعل
+        // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
         // يضيف البيتزا إلى مصفوفة البيتزا ويحصل على المعرف
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
         // يتحقق من أن مالك البيتزا هو نفس المستخدم الحالي
-        // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
         // لاحظ أن address(0) هو العنوان الصفري،
-        // مما يشير إلى أن pizza[id] لم يتم تخصيصها بعد لمستخدم معين.
+        // مما يشير إلى أن pizza[id] لم تُخصص بعد لمستخدم معين.
 
         assert(pizzaToOwner[id] == address(0));
 
-        // يربط البيتزا بالمالك
+        // يعين البيتزا للمالك
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -395,32 +395,32 @@ contract CryptoPizza is IERC721, ERC165 {
         _createPizza(_name, randDna);
     }
 
-    // يولد حمضًا نوويًا عشوائيًا (DNA) من سلسلة نصية (الاسم) وعنوان المالك (المنشئ)
+    // يُنشئ حمضًا نوويًا (DNA) عشوائيًا من سلسلة نصية (الاسم) وعنوان المالك (المنشئ)
     function generateRandomDna(string memory _str, address _owner)
         public
-        // الدوال المعلمة بأنها `pure` تعد بعدم القراءة من الحالة أو تعديلها
-        // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // الدوال المحددة كـ `pure` تتعهد بعدم القراءة من الحالة أو تعديلها
+        // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // يولد عددًا صحيحًا عشوائيًا غير مُشار إليه من سلسلة نصية (الاسم) + عنوان (المالك)
+        // يُنشئ عددًا صحيحًا بدون إشارة (uint) عشوائيًا من سلسلة نصية (الاسم) + العنوان (المالك)
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // يعيد مصفوفة من البيتزا التي تم العثور عليها حسب المالك
+    // يُرجع مصفوفة من البيتزا التي عثر عليها المالك
     function getPizzasByOwner(address _owner)
         public
-        // الدوال المعلمة بأنها `view` تعد بعدم تعديل الحالة
-        // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // الدوال المحددة كـ `view` تتعهد بعدم تعديل الحالة
+        // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // يستخدم موقع التخزين `memory` لتخزين القيم فقط لـ
+        // يستخدم موقع التخزين `memory` لتخزين القيم فقط طوال
         // دورة حياة استدعاء هذه الدالة.
-        // اعرف المزيد: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
+        // تعرف على المزيد: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -434,25 +434,25 @@ contract CryptoPizza is IERC721, ERC165 {
 
     // ينقل البيتزا والملكية إلى عنوان آخر
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
-        require(_from != address(0) && _to != address(0), "عنوان غير صالح.");
-        require(_exists(_pizzaId), "البيتزا غير موجودة.");
-        require(_from != _to, "لا يمكن النقل إلى نفس العنوان.");
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "العنوان غير معتمد.");
+        require(_from != address(0) && _to != address(0), "Invalid address.");
+        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(_from != _to, "Cannot transfer to the same address.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
 
         ownerPizzaCount[_to] = SafeMath.add(ownerPizzaCount[_to], 1);
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // يُصدر الحدث المحدد في عقد IERC721 المستورد
+        // يُصدر الحدث المُعرّف في عقد IERC721 المستورد
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
-     * ينقل بأمان ملكية معرف رمز معين إلى عنوان آخر
-     * إذا كان العنوان المستهدف عقدًا، فيجب عليه تنفيذ `onERC721Received`،
-     * والذي يتم استدعاؤه عند النقل الآمن، وإرجاع القيمة السحرية
-     * `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`؛
+     * ينقل ملكية معرف رمز مميز معين بأمان إلى عنوان آخر
+     * إذا كان العنوان المستهدف عبارة عن عقد، فيجب أن ينفذ `onERC721Received`،
+     * والذي يُستدعى عند النقل الآمن، ويُرجع القيمة السحرية
+     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`؛
      * وإلا، يتم التراجع عن النقل.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
@@ -463,10 +463,10 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * ينقل بأمان ملكية معرف رمز معين إلى عنوان آخر
-     * إذا كان العنوان المستهدف عقدًا، فيجب عليه تنفيذ `onERC721Received`،
-     * والذي يتم استدعاؤه عند النقل الآمن، وإرجاع القيمة السحرية
-     * `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`؛
+     * ينقل ملكية معرف رمز مميز معين بأمان إلى عنوان آخر
+     * إذا كان العنوان المستهدف عبارة عن عقد، فيجب أن ينفذ `onERC721Received`،
+     * والذي يُستدعى عند النقل الآمن، ويُرجع القيمة السحرية
+     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`؛
      * وإلا، يتم التراجع عن النقل.
      */
     function safeTransferFrom(
@@ -476,12 +476,12 @@ contract CryptoPizza is IERC721, ERC165 {
         bytes memory _data
     ) public {
         this.transferFrom(from, to, pizzaId);
-        require(_checkOnERC721Received(from, to, pizzaId, _data), "يجب تنفيذ onERC721Received.");
+        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implement onERC721Received.");
     }
 
     /**
      * دالة داخلية لاستدعاء `onERC721Received` على عنوان مستهدف
-     * لا يتم تنفيذ الاستدعاء إذا لم يكن العنوان المستهدف عقدًا
+     * لا يتم تنفيذ الاستدعاء إذا كان العنوان المستهدف ليس عقدًا
      */
     function _checkOnERC721Received(
         address from,
@@ -502,13 +502,13 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // حرق بيتزا - يدمر الرمز بالكامل
-    // مُعدِّل الدالة `external` يعني أن هذه الدالة
+    // يحرق بيتزا - يدمر الرمز المميز تمامًا
+    // مُعدِّل الدالة `external` يعني أن هذه الدالة هي
     // جزء من واجهة العقد ويمكن للعقود الأخرى استدعاؤها
     function burn(uint256 _pizzaId) external {
-        require(msg.sender != address(0), "عنوان غير صالح.");
-        require(_exists(_pizzaId), "البيتزا غير موجودة.");
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "العنوان غير معتمد.");
+        require(msg.sender != address(0), "Invalid address.");
+        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
 
         ownerPizzaCount[msg.sender] = SafeMath.sub(
             ownerPizzaCount[msg.sender],
@@ -517,58 +517,58 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // يعيد عدد البيتزا حسب العنوان
+    // يُرجع عدد البيتزا حسب العنوان
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // يعيد مالك البيتزا الذي تم العثور عليه بالمعرف
+    // يُرجع مالك البيتزا الموجودة بواسطة المعرف
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
-        require(owner != address(0), "معرف بيتزا غير صالح.");
+        require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
     // يوافق لعنوان آخر على نقل ملكية البيتزا
     function approve(address _to, uint256 _pizzaId) public {
-        require(msg.sender == pizzaToOwner[_pizzaId], "يجب أن يكون مالك البيتزا.");
+        require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // يعيد العنوان المعتمد لبيتزا معينة
+    // يُرجع العنوان المعتمد لبيتزا معينة
     function getApproved(uint256 _pizzaId)
         public
         view
         returns (address operator)
     {
-        require(_exists(_pizzaId), "البيتزا غير موجودة.");
+        require(_exists(_pizzaId), "Pizza does not exist.");
         return pizzaApprovals[_pizzaId];
     }
 
     /**
-     * دالة خاصة لمسح الموافقة الحالية لمعرف رمز معين
-     * يتم التراجع إذا لم يكن العنوان المحدد هو مالك الرمز بالفعل
+     * دالة خاصة لمسح الموافقة الحالية لمعرف رمز مميز معين
+     * يتراجع إذا كان العنوان المحدد ليس في الواقع مالك الرمز المميز
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
-        require(pizzaToOwner[_pizzaId] == owner, "يجب أن يكون مالك البيتزا.");
-        require(_exists(_pizzaId), "البيتزا غير موجودة.");
+        require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
+        require(_exists(_pizzaId), "Pizza does not exist.");
         if (pizzaApprovals[_pizzaId] != address(0)) {
             pizzaApprovals[_pizzaId] = address(0);
         }
     }
 
     /*
-     * يضبط أو يلغي ضبط موافقة مشغل معين
-     * يُسمح للمشغل بنقل جميع رموز المرسل نيابة عنهم
+     * يعين أو يلغي تعيين الموافقة لمشغل معين
+     * يُسمح للمشغل بنقل جميع الرموز المميزة للمرسل نيابة عنه
      */
     function setApprovalForAll(address to, bool approved) public {
-        require(to != msg.sender, "لا يمكن الموافقة على العنوان الخاص بك");
+        require(to != msg.sender, "Cannot approve own address");
         operatorApprovals[msg.sender][to] = approved;
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // يوضح ما إذا كان المشغل معتمدًا من قبل مالك معين
+    // يخبر عما إذا كان المشغل معتمدًا من قبل مالك معين
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -577,9 +577,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // يستحوذ على ملكية البيتزا - للمستخدمين المعتمدين فقط
+    // يأخذ ملكية البيتزا - فقط للمستخدمين المعتمدين
     function takeOwnership(uint256 _pizzaId) public {
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "العنوان غير معتمد.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
@@ -590,14 +590,14 @@ contract CryptoPizza is IERC721, ERC165 {
         return owner != address(0);
     }
 
-    // يتحقق مما إذا كان العنوان مالكًا أو معتمدًا لنقل البيتزا
+    // يتحقق مما إذا كان العنوان هو المالك أو معتمدًا لنقل البيتزا
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Disable solium check because of
+        // تعطيل فحص solium بسبب
         // https://github.com/duaraghav8/Solium/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
@@ -605,7 +605,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // تحقق مما إذا كانت البيتزا فريدة وغير موجودة بعد
+    // التحقق مما إذا كانت البيتزا فريدة ولا توجد بعد
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -617,19 +617,19 @@ contract CryptoPizza is IERC721, ERC165 {
                 result = false;
             }
         }
-        require(result, "توجد بالفعل بيتزا بهذا الاسم.");
+        require(result, "Pizza with such name already exists.");
         _;
     }
 
-    // يُرجع ما إذا كان العنوان المستهدف عقدًا
+    // يُرجع ما إذا كان العنوان المستهدف عبارة عن عقد
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // حاليًا لا توجد طريقة أفضل للتحقق مما إذا كان هناك عقد في عنوان ما
-        // من التحقق من حجم النص البرمجي في ذلك العنوان.
-        // انظر https://ethereum.stackexchange.com/a/14016/36603
-        // لمزيد من التفاصيل حول كيفية عمل هذا.
+        // حاليًا لا توجد طريقة أفضل للتحقق مما إذا كان هناك عقد في عنوان
+        // من التحقق من حجم الكود في ذلك العنوان.
+        // راجع https://ethereum.stackexchange.com/a/14016/36603
+        // لمزيد من التفاصيل حول كيفية عمل ذلك.
         // TODO تحقق من هذا مرة أخرى قبل إصدار Serenity، لأن جميع العناوين ستكون
-        // عقودًا في ذلك الحين.
+        // عقودًا حينها.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -641,18 +641,18 @@ contract CryptoPizza is IERC721, ERC165 {
 
 ## قراءة إضافية {#further-reading}
 
-تحقق من وثائق سوليديتي وفايبر للحصول على نظرة عامة أكثر شمولاً حول العقود الذكية:
+تحقق من وثائق Solidity و Vyper للحصول على نظرة عامة أكثر اكتمالاً على العقود الذكية:
 
-- [سوليديتي](https://docs.soliditylang.org/)
-- [فايبر](https://docs.vyperlang.org/en/stable/)
+- [Solidity](https://docs.soliditylang.org/)
+- [Vyper](https://docs.vyperlang.org/en/stable/)
 
-## المواضيع ذات الصلة {#related-topics}
+## مواضيع ذات صلة {#related-topics}
 
 - [العقود الذكية](/developers/docs/smart-contracts/)
-- [آلة إيثريوم الافتراضية](/developers/docs/evm/)
+- [آلة إيثيريوم الافتراضية (EVM)](/developers/docs/evm/)
 
-## دروس تعليمية ذات صلة {#related-tutorials}
+## برامج تعليمية ذات صلة {#related-tutorials}
 
-- [تقليص حجم العقود لمواجهة حد حجم العقد](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- بعض النصائح العملية لتقليل حجم عقدك الذكي._
-- [تسجيل البيانات من العقود الذكية باستخدام الأحداث](/developers/tutorials/logging-events-smart-contracts/) _- مقدمة إلى أحداث العقود الذكية وكيفية استخدامها لتسجيل البيانات._
-- [التفاعل مع العقود الأخرى من سوليديتي](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- كيفية نشر عقد ذكي من عقد موجود والتفاعل معه._
+- [تقليص حجم العقود لمواجهة حد حجم العقد](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– بعض النصائح العملية لتقليل حجم عقدك الذكي._
+- [تسجيل البيانات من العقود الذكية باستخدام الأحداث](/developers/tutorials/logging-events-smart-contracts/) _– مقدمة لأحداث العقد الذكي وكيف يمكنك استخدامها لتسجيل البيانات._
+- [التفاعل مع العقود الأخرى من Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– كيفية نشر عقد ذكي من عقد موجود والتفاعل معه._

@@ -1,81 +1,81 @@
 ---
-title: "توزيع العقود الذكيه"
-description: "تعرف على كيفية نشر العقود الذكية على شبكات إيثريوم، بما في ذلك المتطلبات الأساسية والأدوات وخطوات النشر"
+title: نشر العقود الذكية
+description: تعرف على كيفية نشر العقود الذكية على شبكات إيثيريوم، بما في ذلك المتطلبات الأساسية والأدوات وخطوات النشر.
 lang: ar
 ---
 
-تحتاج إلى نشر عقدك الذكي ليكون متاحًا لمستخدمي شبكة إيثريوم.
+تحتاج إلى نشر عقدك الذكي ليكون متاحًا لمستخدمي شبكة إيثيريوم.
 
-لنشر عقد ذكي، ما عليك سوى إرسال معاملة إيثريوم تحتوي على الكود المجمع للعقد الذكي دون تحديد أي مستلم.
+لنشر عقد ذكي، ما عليك سوى إرسال معاملة إيثيريوم تحتوي على الكود المُصرّف للعقد الذكي دون تحديد أي مستلم.
 
 ## المتطلبات الأساسية {#prerequisites}
 
-يجب أن تفهم [شبكات إيثريوم](/developers/docs/networks/)، [والمعاملات](/developers/docs/transactions/) [وبنية العقود الذكية](/developers/docs/smart-contracts/anatomy/) قبل نشر العقود الذكية.
+يجب أن تفهم [شبكات إيثيريوم](/developers/docs/networks/)، و[المعاملات](/developers/docs/transactions/)، و[تشريح العقود الذكية](/developers/docs/smart-contracts/anatomy/) قبل نشر العقود الذكية.
 
-يكلف نشر العقد أيضًا الإيثر (ETH) حيث يتم تخزينه على البلوكتشين، لذا يجب أن تكون على دراية [بالغاز والرسوم](/developers/docs/gas/) على إيثريوم.
+يكلف نشر العقد أيضًا إيثر (<span dir="ltr">ETH</span>) نظرًا لأنه يتم تخزينه على سلسلة الكتل، لذا يجب أن تكون على دراية بـ [الغاز والرسوم](/developers/docs/gas/) على إيثيريوم.
 
-أخيرًا، ستحتاج إلى تجميع عقدك قبل نشره، لذا تأكد من أنك قرأت عن [تجميع العقود الذكية](/developers/docs/smart-contracts/compiling/).
+أخيرًا، ستحتاج إلى تصريف عقدك قبل نشره، لذا تأكد من قراءة المزيد حول [تصريف العقود الذكية](/developers/docs/smart-contracts/compiling/).
 
 ## كيفية نشر عقد ذكي {#how-to-deploy-a-smart-contract}
 
 ### ما ستحتاج إليه {#what-youll-need}
 
-- بايت كود عقدك - يتم إنشاؤه من خلال [التجميع](/developers/docs/smart-contracts/compiling/)
-- ETH للغاز – ستحدد حد الغاز الخاص بك مثل المعاملات الأخرى، لذا كن على دراية بأن نشر العقد يحتاج إلى كمية أكبر بكثير من الغاز مقارنة بنقل ETH البسيط
-- برنامج نصي للنشر أو البرنامج المساعد
-- الوصول إلى [عقدة إيثريوم](/developers/docs/nodes-and-clients/)، إما عن طريق تشغيل عقدتك الخاصة، أو الاتصال بعقدة عامة، أو عبر مفتاح واجهة برمجة تطبيقات (API) باستخدام [خدمة العقدة](/developers/docs/nodes-and-clients/nodes-as-a-service/)
+- رمز البايت الخاص بعقدك – يتم إنشاؤه من خلال [التصريف](/developers/docs/smart-contracts/compiling/)
+- <span dir="ltr">ETH</span> للغاز – ستقوم بتعيين حد الغاز الخاص بك مثل المعاملات الأخرى، لذا كن على دراية بأن نشر العقد يحتاج إلى غاز أكثر بكثير من مجرد تحويل <span dir="ltr">ETH</span> بسيط
+- برنامج نصي للنشر أو مكون إضافي
+- الوصول إلى [عقدة إيثيريوم](/developers/docs/nodes-and-clients/)، إما عن طريق تشغيل عقدتك الخاصة، أو الاتصال بعقدة عامة، أو عبر مفتاح <span dir="ltr">API</span> باستخدام [خدمة العقد](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
 ### خطوات نشر عقد ذكي {#steps-to-deploy}
 
-ستعتمد الخطوات المحددة المتضمنة على إطار التطوير المعني. على سبيل المثال، يمكنك الاطلاع على [توثيق هارد هات حول نشر عقودك](https://hardhat.org/docs/tutorial/deploying) أو [توثيق فاوندري حول نشر عقد ذكي والتحقق منه](https://book.getfoundry.sh/forge/deploying). بمجرد نشره، سيكون لعقدك عنوان إيثريوم مثل [الحسابات](/developers/docs/accounts/) الأخرى ويمكن التحقق منه باستخدام [أدوات التحقق من الكود المصدري](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+تعتمد الخطوات المحددة المتضمنة على إطار عمل التطوير المعني. على سبيل المثال، يمكنك التحقق من [وثائق Hardhat حول نشر عقودك](https://hardhat.org/docs/tutorial/deploying) أو [وثائق Foundry حول نشر والتحقق من عقد ذكي](https://book.getfoundry.sh/forge/deploying). بمجرد النشر، سيكون لعقدك عنوان إيثيريوم مثل [الحسابات](/developers/docs/accounts/) الأخرى ويمكن التحقق منه باستخدام [أدوات التحقق من كود المصدر](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## أدوات ذات صلة {#related-tools}
 
-**ريميكس - _يسمح ريميكس IDE بتطوير ونشر وإدارة العقود الذكية لبلوكتشينات شبيهة بالإيثريوم._**
+**Remix - _تسمح بيئة التطوير المتكاملة Remix بتطوير ونشر وإدارة العقود الذكية لسلاسل الكتل المشابهة لإيثيريوم_**
 
-- [ريميكس](https://remix.ethereum.org)
+- [Remix](https://remix.ethereum.org)
 
-**تيندرلي - _منصة تطوير ويب3 التي توفر تصحيح الأخطاء، والقابلية للمراقبة، وكتل بناء البنية التحتية لتطوير العقود الذكية واختبارها ومراقبتها وتشغيلها._**
+**Tenderly - _منصة تطوير Web3 توفر تصحيح الأخطاء، وقابلية الملاحظة، ولبنات بناء البنية التحتية لتطوير واختبار ومراقبة وتشغيل العقود الذكية_**
 
-- [tenderly.co](https://tenderly.co/)
-- [التوثيق](https://docs.tenderly.co/)
-- [غيت هاب](https://github.com/Tenderly)
+- [<span dir="ltr">tenderly.co</span>](https://tenderly.co/)
+- [الوثائق](https://docs.tenderly.co/)
+- [GitHub](https://github.com/Tenderly)
 - [ديسكورد](https://discord.gg/eCWjuvt)
 
-**هارد هات - _بيئة تطوير لتجميع برامج الإيثريوم الخاصة بك ونشرها واختبارها وتصحيحها._**
+**Hardhat - _بيئة تطوير لتصريف ونشر واختبار وتصحيح أخطاء برمجيات إيثيريوم الخاصة بك_**
 
-- [hardhat.org](https://hardhat.org/getting-started/)
-- [توثيق حول نشر عقودك](https://hardhat.org/docs/tutorial/deploying)
-- [غيت هاب](https://github.com/nomiclabs/hardhat)
+- [<span dir="ltr">hardhat.org</span>](https://hardhat.org/getting-started/)
+- [وثائق حول نشر عقودك](https://hardhat.org/docs/tutorial/deploying)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 - [ديسكورد](https://discord.com/invite/TETZs2KK4k)
 
-**thirdweb - _انشر أي عقد بسهولة إلى أي سلسلة متوافقة مع آلة الإيثريوم الافتراضية (EVM)، باستخدام أمر واحد._**
+**thirdweb - _انشر أي عقد بسهولة على أي سلسلة متوافقة مع آلة إيثيريوم الافتراضية (<span dir="ltr">EVM</span>)، باستخدام أمر واحد_**
 
-- [التوثيق](https://portal.thirdweb.com/deploy/)
+- [الوثائق](https://portal.thirdweb.com/deploy/)
 
-**Crossmint - _منصة تطوير web3 على مستوى المؤسسات لنشر العقود الذكية، وتمكين الدفع ببطاقات الائتمان والمدفوعات عبر السلاسل، واستخدام واجهات برمجة التطبيقات (APIs) لإنشاء وتوزيع وبيع وتخزين وتعديل الرموز غير القابلة للاستبدال (إن إف تيز)._**
+**Crossmint - _منصة تطوير Web3 على مستوى المؤسسات لنشر العقود الذكية، وتمكين مدفوعات بطاقات الائتمان والمدفوعات عبر السلاسل، واستخدام واجهات برمجة التطبيقات (<span dir="ltr">APIs</span>) لإنشاء وتوزيع وبيع وتخزين وتعديل الرموز غير القابلة للاستبدال (<span dir="ltr">NFTs</span>)._**
 
-- [crossmint.com](https://www.crossmint.com)
-- [التوثيق](https://docs.crossmint.com)
+- [<span dir="ltr">crossmint.com</span>](https://www.crossmint.com)
+- [الوثائق](https://docs.crossmint.com)
 - [ديسكورد](https://discord.com/invite/crossmint)
 - [المدونة](https://blog.crossmint.com)
 
-## دروس تعليمية ذات صلة {#related-tutorials}
+## برامج تعليمية ذات صلة {#related-tutorials}
 
-- [نشر عقدك الذكي الأول](/developers/tutorials/deploying-your-first-smart-contract/) _– مقدمة لنشر عقدك الذكي الأول على شبكة اختبار إيثريوم._
-- [Hello World | برنامج تعليمي للعقد الذكي](/developers/tutorials/hello-world-smart-contract/) _– برنامج تعليمي سهل المتابعة لإنشاء ونشر عقد ذكي أساسي على إيثريوم._
-- [التفاعل مع العقود الأخرى من سوليديتي](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- كيفية نشر عقد ذكي من عقد موجود والتفاعل معه._
-- [كيفية تقليص حجم عقدك](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- كيفية تقليل حجم عقدك لإبقائه ضمن الحد المسموح به وتوفير الغاز_
+- [نشر عقدك الذكي الأول](/developers/tutorials/deploying-your-first-smart-contract/) _– مقدمة لنشر عقدك الذكي الأول على شبكة اختبار إيثيريوم._
+- [مرحبًا بالعالم | برنامج تعليمي للعقود الذكية](/developers/tutorials/hello-world-smart-contract/) _– برنامج تعليمي سهل المتابعة لإنشاء ونشر عقد ذكي أساسي على إيثيريوم._
+- [التفاعل مع العقود الأخرى من Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– كيفية نشر عقد ذكي من عقد موجود والتفاعل معه._
+- [كيفية تقليص حجم عقدك](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- كيفية تقليل حجم عقدك لإبقائه تحت الحد المسموح به وتوفير الغاز_
 
 ## قراءة إضافية {#further-reading}
 
-- [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [نشر عقودك باستخدام هارد هات](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
+- [<span dir="ltr">https://docs.openzeppelin.com/learn/deploying-and-interacting</span>](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _أوبن زبلن_
+- [نشر عقودك باستخدام Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
-_هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
+_هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وأضفه!_
 
-## المواضيع ذات الصلة {#related-topics}
+## مواضيع ذات صلة {#related-topics}
 
-- [أطر التطوير](/developers/docs/frameworks/)
-- [تشغيل عقدة إيثريوم](/developers/docs/nodes-and-clients/run-a-node/)
-- [العُقد كخدمة](/developers/docs/nodes-and-clients/nodes-as-a-service)
+- [أطر عمل التطوير](/developers/docs/frameworks/)
+- [تشغيل عقدة إيثيريوم](/developers/docs/nodes-and-clients/run-a-node/)
+- [العقد كخدمة](/developers/docs/nodes-and-clients/nodes-as-a-service)

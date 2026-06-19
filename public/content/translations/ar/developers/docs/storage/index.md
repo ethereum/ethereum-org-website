@@ -1,238 +1,226 @@
 ---
-title: "التخزين اللامركزي"
-description: "نظرة عامة حول ما هو التخزين اللامركزي والأدوات المتاحة لدمجه في dapp."
+title: التخزين اللامركزي
+description: نظرة عامة على ماهية التخزين اللامركزي والأدوات المتاحة لدمجه في تطبيق لامركزي ⁦(dapp)⁩.
 lang: ar
+authors: ["باتريك كولينز"]
 ---
 
-على عكس الخادم المركزي الذي تديره شركة أو منظمة واحدة، تتكون أنظمة التخزين اللامركزية من شبكة نظير إلى نظير من مشغلي المستخدمين الذين يحتفظون بجزء من البيانات الإجمالية، مما يخلق نظامًا مرنًا لمشاركة تخزين الملفات. يمكن أن تكون هذه في تطبيق قائم على blockchain أو أي شبكة تعتمد على نظير إلى نظير.
+على عكس الخادم المركزي الذي تديره شركة أو مؤسسة واحدة، تتكون أنظمة التخزين اللامركزي من شبكة نظير إلى نظير من المستخدمين المشغلين الذين يحتفظون بجزء من البيانات الإجمالية، مما يخلق نظامًا مرنًا لمشاركة تخزين الملفات. يمكن أن تكون هذه الأنظمة في تطبيق قائم على سلسلة الكتل أو أي شبكة قائمة على مبدأ نظير إلى نظير.
 
-يمكن استخدام الإيثريوم بحد ذاته كنظام تخزين لامركزي، وهو كذلك عندما يتعلق الأمر بتخزين التعليمات البرمجية في جميع العقود الذكية. ومع ذلك، عندما يتعلق الأمر بكميات كبيرة من البيانات، فهذا ليس ما تم تصميم الإيثريوم من أجله. تنمو السلسلة بشكل مطرد، ولكن في وقت كتابة هذا التقرير، يبلغ حجم سلسلة إيثريوم حوالي 500 جيجابايت - 1 تيرابايت ([حسب العميل](https://etherscan.io/chartsync/chaindefault))، ويجب أن تكون كل عقدة على الشبكة قادرة على تخزين جميع البيانات. إذا تم توسيع السلسلة إلى كميات كبيرة من البيانات (على سبيل المثال 5 تيرابايت)، فلن يكون من الممكن أن تستمر جميع العقد في العمل. بالإضافة إلى ذلك، فإن تكلفة نشر هذا القدر الكبير من البيانات على الشبكة الرئيسية ستكون باهظة للغاية بسبب رسوم [الغاز](/developers/docs/gas).
+يمكن استخدام إيثيريوم نفسها كنظام تخزين لامركزي، وهي كذلك عندما يتعلق الأمر بتخزين التعليمات البرمجية في جميع العقود الذكية. ومع ذلك، عندما يتعلق الأمر بكميات كبيرة من البيانات، فإن إيثيريوم لم تُصمم لذلك. تنمو السلسلة بشكل مطرد، ولكن في وقت كتابة هذا التقرير، يبلغ حجم سلسلة إيثيريوم حوالي <span dir="ltr">500GB - 1TB</span> ([اعتمادًا على العميل](https://etherscan.io/chartsync/chaindefault))، وتحتاج كل عقدة على الشبكة إلى أن تكون قادرة على تخزين جميع البيانات. إذا توسعت السلسلة لتشمل كميات كبيرة من البيانات (لنفترض <span dir="ltr">5TBs</span>)، فلن يكون من المجدي لجميع العقد الاستمرار في العمل. بالإضافة إلى ذلك، فإن تكلفة نشر هذا القدر من البيانات على الشبكة الرئيسية ستكون باهظة التكلفة بسبب رسوم الـ [غاز](/developers/docs/gas).
 
-وبسبب هذه القيود، نحتاج إلى سلسلة أو منهجية مختلفة لتخزين كميات كبيرة من البيانات بطريقة لامركزية.
+بسبب هذه القيود، نحتاج إلى سلسلة أو منهجية مختلفة لتخزين كميات كبيرة من البيانات بطريقة لامركزية.
 
-عند النظر في خيارات التخزين اللامركزي (dStorage)، هناك بعض الأشياء التي يجب على المستخدم وضعها في الاعتبار.
+عند النظر في خيارات التخزين اللامركزي (<span dir="ltr">dStorage</span>)، هناك بعض الأشياء التي يجب على المستخدم وضعها في الاعتبار.
 
-- آلية الاستمرار / هيكل الحوافز
-- إنفاذ الاحتفاظ بالبيانات
+- آلية الاستمرارية / هيكل الحوافز
+- فرض الاحتفاظ بالبيانات
 - اللامركزية
-- إجماع
+- الإجماع
 
 ## آلية الاستمرارية / هيكل الحوافز {#persistence-mechanism}
 
-### قائم على البلوك تشين {#blockchain-based}
+### القائمة على سلسلة الكتل {#blockchain-based}
 
-لكي تستمر قطعة من البيانات إلى الأبد، نحتاج إلى استخدام آلية الاستمرار. على سبيل المثال، على إيثريوم، آلية الاستمرار هي أنه يجب أخذ السلسلة بأكملها في الاعتبار عند تشغيل عقدة. تتم إضافة قطع جديدة من البيانات إلى نهاية السلسلة، وتستمر في النمو - مما يتطلب من كل عقدة تكرار جميع البيانات المضمنة.
+لكي تستمر قطعة من البيانات إلى الأبد، نحتاج إلى استخدام آلية استمرارية. على سبيل المثال، في إيثيريوم، تتمثل آلية الاستمرارية في ضرورة أخذ السلسلة بأكملها في الاعتبار عند تشغيل عقدة. يتم إلحاق أجزاء جديدة من البيانات بنهاية السلسلة، وتستمر في النمو - مما يتطلب من كل عقدة نسخ جميع البيانات المضمنة.
 
-يُعرف هذا باسم الاستمرارية **القائمة على البلوك تشين**.
+يُعرف هذا باسم الاستمرارية **القائمة على سلسلة الكتل**.
 
-المشكلة في الاستمرارية القائمة على البلوك تشين هي أن السلسلة قد تصبح كبيرة جدًا بحيث لا يمكن صيانتها وتخزين جميع البيانات بشكل ممكن (على سبيل المثال، تقدر [العديد من المصادر](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) أن الإنترنت يتطلب أكثر من 40 زيتابايت من سعة التخزين).
+تكمن المشكلة في الاستمرارية القائمة على سلسلة الكتل في أن السلسلة قد تصبح كبيرة جدًا بحيث لا يمكن صيانتها وتخزين جميع البيانات بشكل عملي (على سبيل المثال، تقدر [العديد من المصادر](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) أن الإنترنت يتطلب أكثر من <span dir="ltr">40 Zetabytes</span> من سعة التخزين).
 
-يجب أن تحتوي سلسلة الكتل أيضًا على نوع من هيكل الحوافز. بالنسبة للاستمرارية المستندة إلى blockchain، يتم دفع مبلغ إلى المحقق. عندما تتم إضافة البيانات إلى السلسلة، يتم دفع الأموال للمحققين لإضافة البيانات عليها.
+يجب أن تحتوي سلسلة الكتل أيضًا على نوع من هيكل الحوافز. بالنسبة للاستمرارية القائمة على سلسلة الكتل، يتم دفع مبلغ إلى المُدَقِّق. عندما تتم إضافة البيانات إلى السلسلة، يتم الدفع للمُدَقِّقين مقابل إضافة البيانات.
 
-المنصات ذات الاستمرارية القائمة على تقنية البلوك تشين:
+المنصات ذات الاستمرارية القائمة على سلسلة الكتل:
 
-- إثيريوم
-- [آرويف](https://www.arweave.org/)
+- إيثيريوم
+- [Arweave](https://www.arweave.org/)
 
-### قائم على العقد {#contract-based}
+### القائمة على العقود {#contract-based}
 
-تقوم الاستمرارية **القائمة على العقد** على مبدأ أن البيانات لا يمكن نسخها من قبل كل عقدة وتخزينها إلى الأبد، بل يجب الحفاظ عليها من خلال اتفاقيات العقود. هذه هي الاتفاقيات المبرمة مع عدة عقد والتي وعدت بتخزين قطعة من البيانات لفترة زمنية محددة.
-hadhih hi alatifaqiaat almubramat mae eidat eaqd walati waeudat bitakhzin qiteat min albayanat lifatrat zamaniat muhadadatin. يجب استردادها أو تجديدها عند انتهاء صلاحيتها للحفاظ على استمرار البيانات.
-yajib astirdaduha 'aw tajdiduha eind antiha' salahiatiha lilhifaz ealaa astimrar albayanati.
+تعتمد الاستمرارية **القائمة على العقود** على فكرة أنه لا يمكن نسخ البيانات بواسطة كل عقدة وتخزينها إلى الأبد، وبدلاً من ذلك يجب الحفاظ عليها من خلال اتفاقيات العقود. هذه اتفاقيات تُبرم مع عقد متعددة وعدت بالاحتفاظ بقطعة من البيانات لفترة من الزمن. يجب تمويلها أو تجديدها كلما نفدت للحفاظ على استمرارية البيانات.
 
-في معظم الحالات، بدلاً من تخزين كافة البيانات على السلسلة، يتم تخزين التجزئة الخاصة بالمكان الذي توجد فيه البيانات على السلسلة.
-fi muezam alhalati, bdlaan min takhzin kafat albayanat ealaa alsilsilati, yatimu takhzin altajziat alkhasat bialmakan aladhi tujad fih albayanat ealaa alsilsilati. بهذه الطريقة، لن تحتاج السلسلة بأكملها إلى التوسع للاحتفاظ بجميع البيانات.
-bihadhih altariqati, lan tahtaj alsilsilat bi'akmaliha 'iilaa altawasue liliahtifaz bijamie albayanati.
+في معظم الحالات، بدلاً من تخزين جميع البيانات على السلسلة، يتم تخزين تجزئة لموقع البيانات على السلسلة. بهذه الطريقة، لا تحتاج السلسلة بأكملها إلى التوسع للاحتفاظ بجميع البيانات.
 
-المنصات ذات الاستمرارية القائمة على العقد:
-alminasaat dhat alastimrariat alqayimat ealaa aleaqdi:
+المنصات ذات الاستمرارية القائمة على العقود:
 
 - [فايل كوين](https://docs.filecoin.io/basics/what-is-filecoin)
 - [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
-- [سوارم](https://www.ethswarm.org/)
+- [سرب](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
 ### اعتبارات إضافية {#additional-consideration}
 
-آي بي إف إس هو نظام موزع لتخزين الملفات ومواقع الويب والتطبيقات والبيانات والوصول إليها.
-آي بي إف إس hu nizam muazae litakhzin almilafaat wamawaqie alwib waltatbiqat walbayanat walwusul 'iilayha. لا يحتوي هذا النظام على مخطط حوافز مدمج، ولكن يمكن استخدامه بدلاً من ذلك مع أي من حلول الحوافز القائمة على العقود المذكورة أعلاه لتحقيق استمرارية أطول أمدًا.
-la yahtawi hadha alnizam ealaa mukhatat hawafiz mudmaji, walakin yumkin aistikhdamuh bdlaan min dhalik mae 'ayin min hulul alhawafiz alqayimat ealaa aleuqud almadhkurat 'aelah litahqiq aistimrariat 'atwal amdan. هناك طريقة أخرى للحفاظ على البيانات على آي بي إف إس وهي العمل مع خدمة التثبيت، والتي سوف تقوم "بتثبيت" بياناتك نيابةً عنك.
-hunak tariqat 'ukhraa lilhifaz ealaa albayanat ealaa آي بي إف إس wahi aleamal mae khidmat altathbiti, walati sawf taqum "btathbiat" bayanatik nyabtan eanka. يمكنك أيضًا تشغيل عقدة آي بي إف إس الخاصة بك والمساهمة في الشبكة للحفاظ على بياناتك و/أو بيانات الآخرين مجانًا!
-yumkinuk aydan tashghil euqdat آي بي إف إس alkhasat bik walmusahamat fi alshabakat lilhifaz ealaa bayanatik wa/'aw bayanat alakharin mjanan!
+IPFS هو نظام موزع لتخزين والوصول إلى الملفات ومواقع الويب والتطبيقات والبيانات. لا يحتوي على نظام حوافز مدمج، ولكن يمكن استخدامه بدلاً من ذلك مع أي من حلول الحوافز القائمة على العقود المذكورة أعلاه لاستمرارية أطول أجلاً. طريقة أخرى للحفاظ على البيانات على IPFS هي العمل مع خدمة تثبيت (pinning service)، والتي ستقوم بـ "تثبيت" بياناتك نيابة عنك. يمكنك حتى تشغيل عقدة IPFS الخاصة بك والمساهمة في الشبكة للحفاظ على بياناتك و/أو بيانات الآخرين مجانًا!
 
-- [آي بي إف إس](https://docs.ipfs.io/concepts/what-is-ipfs/)
-- [بينياتا](https://www.pinata.cloud/) _(خدمة تثبيت آي بي إف إس)_
-- [web3.storage](https://web3.storage/) _(خدمة تثبيت آي بي إف إس/فايل كوين)_
-- [إنفيورا](https://infura.io/product/ipfs) _(خدمة تثبيت آي بي إف إس)_
-- [آي بي إف إس Scan](https://ipfs-scan.io) _(مستكشف تثبيت آي بي إف إس)_
-- [4EVERLAND](https://www.4everland.org/)_ (خدمة تثبيت آي بي إف إس)_
-- [فايل بيز](https://filebase.com) _(خدمة تثبيت آي بي إف إس)_
-- [Spheron Network](https://spheron.network/) _(خدمة تثبيت آي بي إف إس/فايل كوين)_
+- [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
+- [Pinata](https://www.pinata.cloud/) _(خدمة تثبيت IPFS)_
+- [web3.storage](https://web3.storage/) _(خدمة تثبيت IPFS/فايل كوين)_
+- [Infura](https://infura.io/product/ipfs) _(خدمة تثبيت IPFS)_
+- [IPFS Scan](https://ipfs-scan.io) _(مستكشف تثبيت IPFS)_
+- [4EVERLAND](https://www.4everland.org/) _(خدمة تثبيت IPFS)_
+- [Filebase](https://filebase.com) _(خدمة تثبيت IPFS)_
+- [Spheron Network](https://spheron.network/) _(خدمة تثبيت IPFS/فايل كوين)_
 
-SWARM هي تقنية تخزين وتوزيع بيانات لامركزية مع نظام حوافز تخزين وسعر إيجار تخزين.
+سرب هي تقنية لامركزية لتخزين وتوزيع البيانات مع نظام حوافز للتخزين وأوراكل لأسعار إيجار التخزين.
 
 ## الاحتفاظ بالبيانات {#data-retention}
 
-من أجل الاحتفاظ بالبيانات، يجب أن تحتوي الأنظمة على نوع ما من الآلية للتأكد من الاحتفاظ بالبيانات.
+من أجل الاحتفاظ بالبيانات، يجب أن تمتلك الأنظمة نوعًا من الآليات للتأكد من الاحتفاظ بالبيانات.
 
 ### آلية التحدي {#challenge-mechanism}
 
-إحدى الطرق الأكثر شيوعًا للتأكد من الاحتفاظ بالبيانات هي استخدام نوع ما من التحدي التشفيري الذي يتم إصداره للعقد للتأكد من أنها لا تزال تحتفظ بالبيانات. أحد الطرق البسيطة هو النظر إلى إثبات الوصول الخاص بـ آرويف. إنهم يصدرون تحديًا للعقد لمعرفة ما إذا كانت لديهم البيانات في كل من الكتلة الأحدث وكتلة عشوائية في الماضي. إذا لم تتمكن العقدة من التوصل إلى الإجابة، فسيتم معاقبتها.
+واحدة من أكثر الطرق شيوعًا للتأكد من الاحتفاظ بالبيانات هي استخدام نوع من تحديات علم التشفير التي يتم إصدارها للعقد للتأكد من أنها لا تزال تمتلك البيانات. مثال بسيط على ذلك هو إثبات الوصول (proof-of-access) الخاص بـ Arweave. حيث يصدرون تحديًا للعقد لمعرفة ما إذا كانت تمتلك البيانات في كل من أحدث كتلة وكتلة عشوائية في الماضي. إذا لم تتمكن العقدة من تقديم الإجابة، تتم معاقبتها.
 
-أنواع dStorage مع آلية التحدي:
+أنواع التخزين اللامركزي (<span dir="ltr">dStorage</span>) التي تحتوي على آلية تحدي:
 
-- زوس
-  zws
-- سكاي نت
-  skay nit
-- أرويف
-- فايلكوين
-  faylkwin
-- شبكة القشرة
-  shabakat alqishra
-- 4إيفرلاند
-  4'iifirland
+- Züs
+- Skynet
+- Arweave
+- فايل كوين
+- Crust Network
+- 4EVERLAND
 
 ### اللامركزية {#decentrality}
 
-لا توجد أدوات رائعة لقياس مستوى اللامركزية في المنصات، ولكن بشكل عام، قد ترغب في استخدام أدوات لا تحتوي على شكل من أشكال KYC لتوفير دليل على أنها ليست مركزية.
+لا توجد أدوات رائعة لقياس مستوى لامركزية المنصات، ولكن بشكل عام، ستحتاج إلى استخدام أدوات لا تتطلب أي شكل من أشكال KYC لتقديم دليل على أنها ليست مركزية.
 
-أدوات لامركزية بدون KYC:
+الأدوات اللامركزية بدون KYC:
 
-- سكاي نت
-  skay nit
-- أرويف
-- فايلكوين
-  faylkwin
-- نظام الملفات InterPlanetary  هو تخزين لامركزي ونظام مرجعي للملفات من أجل ايثيريوم.
-- إثيريوم
-- شبكة القشرة
-  shabakat alqishra
-- 4إيفرلاند
-  4'iifirland
+- Skynet
+- Arweave
+- فايل كوين
+- IPFS
+- إيثيريوم
+- Crust Network
+- 4EVERLAND
 
-### إجماع {#consensus}
+### الإجماع {#consensus}
 
-لدى معظم هذه الأدوات نسختها الخاصة من [آلية الإجماع](/developers/docs/consensus-mechanisms/) ولكنها تستند بشكل عام إما إلى [**إثبات العمل (PoW)**](/developers/docs/consensus-mechanisms/pow/) أو [**إثبات الحصة (PoS)**](/developers/docs/consensus-mechanisms/pos/).
+تمتلك معظم هذه الأدوات نسختها الخاصة من [آلية الإجماع](/developers/docs/consensus-mechanisms/) ولكنها تعتمد بشكل عام إما على [**إثبات العمل (PoW)**](/developers/docs/consensus-mechanisms/pow/) أو [**إثبات الحصة (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-Proof-of-work based:
+القائمة على إثبات العمل:
 
-- سكاي نت
-  skay nit
-- أرويف
+- Skynet
+- Arweave
 
-Proof-of-stake based:
+القائمة على إثبات الحصة:
 
-- إثيريوم
-- فايلكوين
-  faylkwin
-- زوس
-  zws
-- شبكة القشرة
-  shabakat alqishra
+- إيثيريوم
+- فايل كوين
+- Züs
+- Crust Network
 
 ## أدوات ذات صلة {#related-tools}
 
-**آي بي إف إس - _نظام الملفات بين الكواكب (InterPlanetary File System) هو نظام لا مركزي لتخزين الملفات والإشارة إليها مخصص لإيثريوم._**
+**IPFS - _نظام الملفات بين الكواكب (InterPlanetary File System) هو نظام تخزين لامركزي ومرجعية ملفات لإيثيريوم._**
 
 - [Ipfs.io](https://ipfs.io/)
-- [التوثيق](https://docs.ipfs.io/)
-- [غيت هاب](https://github.com/ipfs/ipfs)
+- [الوثائق](https://docs.ipfs.io/)
+- [GitHub](https://github.com/ipfs/ipfs)
 
-**Storj DCS - _تخزين سحابي لامركزي للكائنات، آمن وخاص ومتوافق مع S3 للمطورين._**
+**Storj DCS - _تخزين كائنات سحابي لامركزي آمن وخاص ومتوافق مع <span dir="ltr">S3</span> للمطورين._**
 
 - [Storj.io](https://storj.io/)
-- [التوثيق](https://docs.storj.io/)
-- [غيت هاب](https://github.com/storj/storj)
+- [الوثائق](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
-**Sia - _تستخدم التشفير لإنشاء سوق تخزين سحابي غير موثوق، مما يسمح للمشترين والبائعين بالتعامل مباشرة._**
+**Sia - _تُسخّر علم التشفير لإنشاء سوق تخزين سحابي منزوع الثقة، مما يسمح للمشترين والبائعين بالتعامل مباشرة._**
 
 - [Skynet.net](https://sia.tech/)
-- [التوثيق](https://docs.sia.tech/)
-- [غيت هاب](https://github.com/SiaFoundation/)
+- [الوثائق](https://docs.sia.tech/)
+- [GitHub](https://github.com/SiaFoundation/)
 
-**فايل كوين - _تم إنشاء فايل كوين من قبل نفس الفريق الذي يقف وراء آي بي إف إس. إنها طبقة حوافز فوق مبادئ آي بي إف إس._**
+**فايل كوين - _تم إنشاء فايل كوين من قبل نفس الفريق الذي يقف وراء IPFS. إنها طبقة حوافز مبنية على مُثُل IPFS._**
 
 - [Filecoin.io](https://filecoin.io/)
-- [التوثيق](https://docs.filecoin.io/)
-- [غيت هاب](https://github.com/filecoin-project/)
+- [الوثائق](https://docs.filecoin.io/)
+- [GitHub](https://github.com/filecoin-project/)
 
-**آرويف - _Arweave هي منصة تخزين لامركزي (dStorage) لتخزين البيانات._**
+**Arweave - _Arweave هي منصة تخزين لامركزي (<span dir="ltr">dStorage</span>) لتخزين البيانات._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [التوثيق](https://docs.arweave.org/info/)
-- [آرويف](https://github.com/ArweaveTeam/arweave/)
+- [الوثائق](https://docs.arweave.org/info/)
+- [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**Züs - _Züs هي منصة تخزين لامركزي (dStorage) قائمة على إثبات الحصة مع التقسيم (sharding) والـ blobbers._**
+**Züs - _Züs هي منصة تخزين لامركزي (<span dir="ltr">dStorage</span>) قائمة على إثبات الحصة مع تجزئة إلى شظايا وعقد تخزين (blobbers)._**
 
 - [zus.network](https://zus.network/)
-- [التوثيق](https://docs.zus.network/zus-docs/)
-- [غيت هاب](https://github.com/0chain/)
+- [الوثائق](https://docs.zus.network/zus-docs/)
+- [GitHub](https://github.com/0chain/)
 
-**Crust Network - _Crust هي منصة تخزين لامركزي (dStorage) مبنية على آي بي إف إس._**
+**Crust Network - _Crust هي منصة تخزين لامركزي (<span dir="ltr">dStorage</span>) مبنية فوق IPFS._**
 
 - [Crust.network](https://crust.network)
-- [التوثيق](https://wiki.crust.network)
-- [غيت هاب](https://github.com/crustio)
+- [الوثائق](https://wiki.crust.network)
+- [GitHub](https://github.com/crustio)
 
-**سوارم - _منصة تخزين موزعة وخدمة توزيع محتوى لحزمة web3 الخاصة بإيثريوم._**
+**سرب - _منصة تخزين موزعة وخدمة توزيع محتوى لحزمة Web3 الخاصة بإيثيريوم._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
-- [التوثيق](https://docs.ethswarm.org/)
-- [غيت هاب](https://github.com/ethersphere/)
+- [الوثائق](https://docs.ethswarm.org/)
+- [GitHub](https://github.com/ethersphere/)
 
-**OrbitDB - _قاعدة بيانات لامركزية من نظير إلى نظير (peer to peer) مبنية على آي بي إف إس._**
+**OrbitDB - _قاعدة بيانات لامركزية من نظير إلى نظير مبنية فوق IPFS._**
 
 - [OrbitDB.org](https://orbitdb.org/)
-- [التوثيق](https://github.com/orbitdb/field-manual/)
-- [غيت هاب](https://github.com/orbitdb/orbit-db/)
+- [الوثائق](https://github.com/orbitdb/field-manual/)
+- [GitHub](https://github.com/orbitdb/orbit-db/)
 
-**Aleph.im - _مشروع سحابي لامركزي (قاعدة بيانات، تخزين ملفات، حوسبة، و DID). مزيج فريد من نوعه بين تكنولوجيا الند للند على السلسلة وخارجها. متوافق مع آي بي إف إس وعدة سلاسل._**
+**Aleph.im - _مشروع سحابي لامركزي (قاعدة بيانات، تخزين ملفات، حوسبة وهوية لامركزية). مزيج فريد من تقنية نظير إلى نظير خارج السلسلة وعلى السلسلة. توافق مع IPFS وسلاسل متعددة._**
 
 - [Aleph.im](https://aleph.cloud/)
-- [التوثيق](https://docs.aleph.cloud/)
-- [غيت هاب](https://github.com/aleph-im/)
+- [الوثائق](https://docs.aleph.cloud/)
+- [GitHub](https://github.com/aleph-im/)
 
-**Ceramic - _تخزين قاعدة بيانات آي بي إف إس يتحكم فيه المستخدم، للتطبيقات الغنية بالبيانات والجذابة._**
+**Ceramic - _تخزين قاعدة بيانات IPFS يتحكم فيه المستخدم للتطبيقات الغنية بالبيانات والجذابة._**
 
 - [Ceramic.network](https://ceramic.network/)
-- [التوثيق](https://developers.ceramic.network/)
-- [غيت هاب](https://github.com/ceramicnetwork/js-ceramic/)
+- [الوثائق](https://developers.ceramic.network/)
+- [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**فايل بيز - _تخزين لامركزي متوافق مع S3 وخدمة تثبيت آي بي إف إس متكررة جغرافيًا. يتم تثبيت جميع الملفات التي يتم تحميلها إلى آي بي إف إس عبر فايل بيز تلقائيًا في البنية التحتية لـ فايل بيز مع 3 نسخ مكررة في جميع أنحاء العالم._**
+**Filebase - _تخزين لامركزي متوافق مع <span dir="ltr">S3</span> وخدمة تثبيت IPFS ذات تكرار جغرافي. يتم تثبيت جميع الملفات التي تم تحميلها إلى IPFS من خلال Filebase تلقائيًا على البنية التحتية لـ Filebase مع تكرار <span dir="ltr">3x</span> في جميع أنحاء العالم._**
 
 - [Filebase.com](https://filebase.com/)
-- [التوثيق](https://docs.filebase.com/)
-- [غيت هاب](https://github.com/filebase)
+- [الوثائق](https://docs.filebase.com/)
+- [GitHub](https://github.com/filebase)
 
-**4EVERLAND - _منصة حوسبة سحابية للويب 3.0 (Web 3.0) تدمج الإمكانيات الأساسية للتخزين والحوسبة والشبكات، وهي متوافقة مع S3 وتوفر تخزينًا متزامنًا للبيانات على شبكات التخزين اللامركزية مثل آي بي إف إس وآرويف._**
+**4EVERLAND - _منصة حوسبة سحابية للويب 3.0 تدمج القدرات الأساسية للتخزين والحوسبة والشبكات، وهي متوافقة مع <span dir="ltr">S3</span> وتوفر تخزينًا متزامنًا للبيانات على شبكات التخزين اللامركزي مثل IPFS و Arweave._**
 
 - [4everland.org](https://www.4everland.org/)
-- [التوثيق](https://docs.4everland.org/)
-- [غيت هاب](https://github.com/4everland)
+- [الوثائق](https://docs.4everland.org/)
+- [GitHub](https://github.com/4everland)
 
-**كاليدو - _منصة بلوك تشين كخدمة (blockchain-as-a-service) مع عقد آي بي إف إس تعمل بنقرة زر_**
+**Kaleido - _منصة سلسلة الكتل كخدمة (BaaS) مع عقد IPFS بنقرة زر_**
 
-- [كاليدو](https://kaleido.io/)
-- [التوثيق](https://docs.kaleido.io/kaleido-services/ipfs/)
-- [غيت هاب](https://github.com/kaleido-io)
+- [Kaleido](https://kaleido.io/)
+- [الوثائق](https://docs.kaleido.io/kaleido-services/ipfs/)
+- [GitHub](https://github.com/kaleido-io)
 
-**Spheron Network - _Spheron هي منصة كخدمة (PaaS) مصممة للتطبيقات اللامركزية (dApps) التي تسعى لإطلاق تطبيقاتها على بنية تحتية لامركزية بأفضل أداء. وهي توفر الحوسبة، والتخزين اللامركزي، وشبكة توصيل المحتوى (CDN)، واستضافة الويب بشكل جاهز._**
+**Spheron Network - _Spheron هي منصة كخدمة (PaaS) مصممة للتطبيقات اللامركزية (dApps) التي تتطلع إلى إطلاق تطبيقاتها على بنية تحتية لامركزية بأفضل أداء. توفر الحوسبة والتخزين اللامركزي وشبكة توصيل المحتوى (CDN) واستضافة الويب بشكل افتراضي._**
 
 - [spheron.network](https://spheron.network/)
-- [التوثيق](https://docs.spheron.network/)
-- [غيت هاب](https://github.com/spheronFdn)
+- [الوثائق](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
+
+**dweb3 - _مُحلل (Resolver) لصفحات الويب اللامركزية، مشابه لـ eth.limo، يدعم جميع الأنواع ولا يقتصر على ENS و IPFS._**
+
+- [dweb3.wtf](https://dweb3.wtf)
+
+**web3compass - _محرك بحث لمواقع الويب اللامركزية المدعومة بـ IPFS و ENS._**
+
+- [web3compass.net](https://www.web3compass.net/)
+- [الوثائق](https://www.web3compass.net/statistics)
 
 ## قراءة إضافية {#further-reading}
 
 - [ما هو التخزين اللامركزي؟](https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [دحض خمس خرافات شائعة حول التخزين اللامركزي](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
-_هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
+_هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وأضفه!_
 
-## المواضيع ذات الصلة {#related-topics}
+## مواضيع ذات صلة {#related-topics}
 
-- [أطر التطوير](/developers/docs/frameworks/)
+- [أطر عمل التطوير](/developers/docs/frameworks/)

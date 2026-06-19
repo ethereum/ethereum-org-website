@@ -1,0 +1,1227 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/scaling/zk-rollups/index.md",
+  "generatedAt": "2026-06-19T19:01:23.948Z",
+  "rootHash": "5e5c362c0744",
+  "tree": {
+    "contentHash": "a6ea2d198351",
+    "anchorHash": "0798dcb5b368",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "f72c38cd19cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "59e9e125020d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:2": {
+        "contentHash": "709372788c32",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "b899b2bb258f",
+        "anchorHash": "0e11617f9023"
+      },
+      "prose:3": {
+        "contentHash": "de618875c860",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:4": {
+        "contentHash": "bde2976e0625",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "2f52e795ea76",
+        "anchorHash": "d440c819977a",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "2edc678151ba",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "42d7538ac3a1",
+            "anchorHash": "0e11617f9023"
+          },
+          "prose:3": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "0c6eea24ed5f",
+            "anchorHash": "ffb8e9b5b37e"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "what-are-zk-rollups": {
+        "contentHash": "f57bf7b90193",
+        "anchorHash": "86134e69a853",
+        "labelHash": "9cb646dd1362",
+        "children": {
+          "_label": {
+            "contentHash": "9cb646dd1362",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "d4e91384eba2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1acffd121120",
+            "anchorHash": "a4a2d84f7d3b"
+          },
+          "prose:7": {
+            "contentHash": "29205284eedf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a3ed0d3cc039",
+            "anchorHash": "36b0991a1869"
+          },
+          "prose:8": {
+            "contentHash": "6035bb058e9e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "b8ab18f76aa1",
+            "anchorHash": "05db58e92d4e"
+          },
+          "prose:9": {
+            "contentHash": "6170daafedd3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:10": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:11": {
+            "contentHash": "e5bd4e096de6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:12": {
+            "contentHash": "434c0bc545a0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "inline-code:3",
+          "prose:10",
+          "inline-code:4",
+          "prose:11",
+          "inline-code:5",
+          "prose:12"
+        ]
+      },
+      "zk-rollups-and-ethereum": {
+        "contentHash": "b863c43c534a",
+        "anchorHash": "5f64fd4814db",
+        "labelHash": "dfae2a43a190",
+        "children": {
+          "_label": {
+            "contentHash": "dfae2a43a190",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "97befc879609",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f7925209bc63",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:4": {
+            "contentHash": "9df9a5ad8d00",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "9c8ae38f81d5",
+            "anchorHash": "e0dcdaf3a7b0"
+          },
+          "prose:5": {
+            "contentHash": "529aa34d3588",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "64d3e9f252a1",
+            "anchorHash": "73493728a640"
+          },
+          "prose:6": {
+            "contentHash": "1ed03998adfb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "data-availability": {
+            "contentHash": "fb14c3b5a8c9",
+            "anchorHash": "53f52fffcd39",
+            "labelHash": "188a992e372f",
+            "children": {
+              "_label": {
+                "contentHash": "188a992e372f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "de5d40dad26f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "6ba9f2ab1a28"
+              },
+              "prose:2": {
+                "contentHash": "c5d7b7ae5e83",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "inline-code:0",
+              "prose:2"
+            ]
+          },
+          "transaction-finality": {
+            "contentHash": "a5948dc7f30b",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "f177d92b8a11",
+            "children": {
+              "_label": {
+                "contentHash": "f177d92b8a11",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "65090ea67a73",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "censorship-resistance": {
+            "contentHash": "4d4862bce0b6",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "cae4d9818fc9",
+            "children": {
+              "_label": {
+                "contentHash": "cae4d9818fc9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "9b4c45d4c4cd",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "data-availability",
+          "transaction-finality",
+          "censorship-resistance"
+        ]
+      },
+      "how-do-zk-rollups-work": {
+        "contentHash": "11a9c5b42b96",
+        "anchorHash": "a79f8d491942",
+        "labelHash": "d000aa1ea219",
+        "children": {
+          "_label": {
+            "contentHash": "d000aa1ea219",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "transactions": {
+            "contentHash": "19a1c91392d2",
+            "anchorHash": "73a88d432ae2",
+            "labelHash": "3e5136fd4b11",
+            "children": {
+              "_label": {
+                "contentHash": "3e5136fd4b11",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "d6b192b9a81e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "769e0b8515e3",
+                "anchorHash": "0e500613f6a4"
+              },
+              "prose:2": {
+                "contentHash": "a9bf22f5a684",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "how-zk-rollups-publish-transaction-data-on-ethereum": {
+                "contentHash": "c461e608c17c",
+                "anchorHash": "6f29159f210e",
+                "labelHash": "985f6d26babc",
+                "children": {
+                  "_label": {
+                    "contentHash": "985f6d26babc",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:8": {
+                    "contentHash": "3bc13fd7c253",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:0": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:9": {
+                    "contentHash": "cdb4ee2aea69",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:1": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:10": {
+                    "contentHash": "0f056eab04d4",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:2": {
+                    "contentHash": "c064fbca9d9d",
+                    "anchorHash": "88f015060148"
+                  },
+                  "prose:11": {
+                    "contentHash": "30ac7d31c4ff",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:3": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:12": {
+                    "contentHash": "2528ef506461",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:4": {
+                    "contentHash": "d912cbceafc9",
+                    "anchorHash": "cd0b17dfb4ed"
+                  },
+                  "prose:13": {
+                    "contentHash": "cdb4ee2aea69",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:5": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:14": {
+                    "contentHash": "5fe47914af1b",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:6": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:15": {
+                    "contentHash": "9a0cf87b33f0",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:7": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:16": {
+                    "contentHash": "ef5f7a8c132c",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:8",
+                  "inline-code:0",
+                  "prose:9",
+                  "inline-code:1",
+                  "prose:10",
+                  "link:2",
+                  "prose:11",
+                  "inline-code:3",
+                  "prose:12",
+                  "link:4",
+                  "prose:13",
+                  "inline-code:5",
+                  "prose:14",
+                  "inline-code:6",
+                  "prose:15",
+                  "inline-code:7",
+                  "prose:16"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2",
+              "how-zk-rollups-publish-transaction-data-on-ethereum"
+            ]
+          },
+          "state-commitments": {
+            "contentHash": "b860ef8d041f",
+            "anchorHash": "09affb976a5e",
+            "labelHash": "b36974277a12",
+            "children": {
+              "_label": {
+                "contentHash": "b36974277a12",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "4d34212e56ab",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "57862879aa34",
+                "anchorHash": "b8fc8f788bd4"
+              },
+              "prose:3": {
+                "contentHash": "d6354d0dfbca",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "b650583713a0",
+                "anchorHash": "973e284d67f9"
+              },
+              "prose:4": {
+                "contentHash": "a9b6662edc0b",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "validity-proofs": {
+            "contentHash": "2fb16d7edc13",
+            "anchorHash": "337d1062dbee",
+            "labelHash": "c953230092be",
+            "children": {
+              "_label": {
+                "contentHash": "c953230092be",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "3786229ef4ca",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "b30fbe19ef63",
+                "anchorHash": "8d39fe3ee440"
+              },
+              "prose:4": {
+                "contentHash": "d90ba987ddb4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "121b84217a3d",
+                "anchorHash": "03590f7f347b"
+              },
+              "prose:5": {
+                "contentHash": "f52e115405a2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "5b36fe345728",
+                "anchorHash": "d9bf42e2db1b"
+              },
+              "prose:6": {
+                "contentHash": "95e53fd88b73",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "validity-proofs-in-zk-rollups": {
+                "contentHash": "add2c04bb676",
+                "anchorHash": "e2c84f5cb440",
+                "labelHash": "3544c2011a22",
+                "children": {
+                  "_label": {
+                    "contentHash": "3544c2011a22",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "_auto:proof-generation": {
+                    "contentHash": "60ee0e5300a5",
+                    "anchorHash": "4b9f7d802648",
+                    "labelHash": "01d900f9476c",
+                    "children": {
+                      "_label": {
+                        "contentHash": "01d900f9476c",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:0": {
+                        "contentHash": "f7bc906420b3",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "_label",
+                      "prose:0"
+                    ]
+                  },
+                  "_auto:proof-verification": {
+                    "contentHash": "6dae82f4bbca",
+                    "anchorHash": "4b9f7d802648",
+                    "labelHash": "fea025b7266e",
+                    "children": {
+                      "_label": {
+                        "contentHash": "fea025b7266e",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:0": {
+                        "contentHash": "88116693f089",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "_label",
+                      "prose:0"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "_auto:proof-generation",
+                  "_auto:proof-verification"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6",
+              "validity-proofs-in-zk-rollups"
+            ]
+          },
+          "entries-and-exits": {
+            "contentHash": "04e9b4b0676d",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "dfda3014b037",
+            "children": {
+              "_label": {
+                "contentHash": "dfda3014b037",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "ab30f6086b22",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "transactions",
+          "state-commitments",
+          "validity-proofs",
+          "entries-and-exits"
+        ]
+      },
+      "zk-rollups-and-evm-compatibility": {
+        "contentHash": "3d6ee85eac8d",
+        "anchorHash": "2aaf0937dc41",
+        "labelHash": "3048f1328885",
+        "children": {
+          "_label": {
+            "contentHash": "3048f1328885",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "6661aab860cf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "6676f17ddccb",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:3": {
+            "contentHash": "d81a2b21ec5c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "c7973977d74e",
+            "anchorHash": "ab43bc39944f"
+          },
+          "prose:4": {
+            "contentHash": "52f64d26f7c7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "how-do-zk-rollup-fees-work": {
+        "contentHash": "48f4eba100f1",
+        "anchorHash": "086f76d49bb7",
+        "labelHash": "6fd8860ede3c",
+        "children": {
+          "_label": {
+            "contentHash": "6fd8860ede3c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:7": {
+            "contentHash": "93fe15af21fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:8": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:9": {
+            "contentHash": "936ca2397337",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "0164198dd9bc",
+            "anchorHash": "2be2a692f09f"
+          },
+          "prose:10": {
+            "contentHash": "e81778175a8b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:11": {
+            "contentHash": "5be5650e0cd0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:12": {
+            "contentHash": "4c8e8348e362",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "901b29cac8e1",
+            "anchorHash": "70b6d3bbe669"
+          },
+          "prose:13": {
+            "contentHash": "7b1adba98bf8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "2907d72cfbd5",
+            "anchorHash": "146a7bea92ac"
+          },
+          "prose:14": {
+            "contentHash": "07cb5ae7d4fb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:7",
+          "inline-code:0",
+          "prose:8",
+          "inline-code:1",
+          "prose:9",
+          "link:2",
+          "prose:10",
+          "inline-code:3",
+          "prose:11",
+          "inline-code:4",
+          "prose:12",
+          "link:5",
+          "prose:13",
+          "link:6",
+          "prose:14"
+        ]
+      },
+      "scaling-ethereum-with-zk-rollups": {
+        "contentHash": "bb810697f569",
+        "anchorHash": "f9dcdddda616",
+        "labelHash": "5038573b8dc5",
+        "children": {
+          "_label": {
+            "contentHash": "5038573b8dc5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "transaction-data-compression": {
+            "contentHash": "162ad7bda03f",
+            "anchorHash": "3d749621e937",
+            "labelHash": "2ab99563b16d",
+            "children": {
+              "_label": {
+                "contentHash": "2ab99563b16d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "1fdc8f0f5be1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "b010ace0d9b7",
+                "anchorHash": "7de092b00b2b"
+              },
+              "prose:2": {
+                "contentHash": "0f965d1e6df1",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "recursive-proofs": {
+            "contentHash": "3562e36eb220",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "515cbdd40d7b",
+            "children": {
+              "_label": {
+                "contentHash": "515cbdd40d7b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "f9f15b5e3ace",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "zk-rollups-pros-and-cons": {
+            "contentHash": "4a20ceda854a",
+            "anchorHash": "2be8d97dc5df",
+            "labelHash": "adce56dd5d90",
+            "children": {
+              "_label": {
+                "contentHash": "adce56dd5d90",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "6f9774e356b3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "a3ed0d3cc039",
+                "anchorHash": "353f95697e39"
+              },
+              "prose:3": {
+                "contentHash": "026cac62afc8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "6ba9f2ab1a28"
+              },
+              "prose:4": {
+                "contentHash": "061e8f19ea08",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "inline-code:1",
+              "prose:4"
+            ]
+          },
+          "zk-video": {
+            "contentHash": "5922300cc850",
+            "anchorHash": "d1e613bed4c7",
+            "labelHash": "d85638e6a885",
+            "children": {
+              "_label": {
+                "contentHash": "d85638e6a885",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "769dcc7a8141",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "f5818652a990",
+                "anchorHash": "e91cfec7fbab",
+                "children": {
+                  "attr:slug": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "a8d8388dac8e"
+                  },
+                  "attr:startTime": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "f64f410744d9"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:slug",
+                  "attr:startTime"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "transaction-data-compression",
+          "recursive-proofs",
+          "zk-rollups-pros-and-cons",
+          "zk-video"
+        ]
+      },
+      "zkevm-projects": {
+        "contentHash": "dec9f9ca7875",
+        "anchorHash": "1e58181ae26a",
+        "labelHash": "16cd7310f90e",
+        "children": {
+          "_label": {
+            "contentHash": "16cd7310f90e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "ed4a0d72b522",
+            "anchorHash": "a72ca8f76828",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "06271baf4953"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "a86755f4507d",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "8aa6471e16db"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "9f8458f50979",
+                "anchorHash": "f515adb8f3a4",
+                "children": {
+                  "prose:0": {
+                    "contentHash": "0077b0beafa8",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "component:1": {
+                    "contentHash": "5c45ee26f693",
+                    "anchorHash": "907edb259694",
+                    "children": {
+                      "prose:1": {
+                        "contentHash": "a7acabde9f5b",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "link:0": {
+                        "contentHash": "ceeac83717b2",
+                        "anchorHash": "864ffba16f54"
+                      },
+                      "prose:2": {
+                        "contentHash": "0f8faf403c90",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "prose:1",
+                      "link:0",
+                      "prose:2"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "prose:0",
+                  "component:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "component:0",
+              "component:1"
+            ]
+          },
+          "prose:9": {
+            "contentHash": "3cc8c279f923",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "84685178c6df",
+            "anchorHash": "dca7f819c892"
+          },
+          "prose:10": {
+            "contentHash": "c50b7736d17c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "714f87b0ae2c",
+            "anchorHash": "5d974a293265"
+          },
+          "prose:11": {
+            "contentHash": "7cdb155b85f5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "291873e31ccb",
+            "anchorHash": "5ec0657c5129"
+          },
+          "prose:12": {
+            "contentHash": "494ca14ba3fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "4076b5d05db5",
+            "anchorHash": "4fae575a64e4"
+          },
+          "prose:13": {
+            "contentHash": "db8705587b4d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "c96ac787ad63",
+            "anchorHash": "b5bcbd3113a9"
+          },
+          "prose:14": {
+            "contentHash": "a928c659f121",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "dcf03ce8a447",
+            "anchorHash": "fad24d7e96e4"
+          },
+          "prose:15": {
+            "contentHash": "1351fae35d50",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "a22979efeb74",
+            "anchorHash": "0585ba4cee8a"
+          },
+          "prose:16": {
+            "contentHash": "b8e71d57d52b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "61ce25d9ba80",
+            "anchorHash": "f64cc3a60989"
+          },
+          "prose:17": {
+            "contentHash": "c7f203e56799",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "e91199412d31",
+            "anchorHash": "c314c0a63d6f"
+          },
+          "prose:18": {
+            "contentHash": "1f681140da6f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1",
+          "prose:9",
+          "link:0",
+          "prose:10",
+          "link:1",
+          "prose:11",
+          "link:2",
+          "prose:12",
+          "link:3",
+          "prose:13",
+          "link:4",
+          "prose:14",
+          "link:5",
+          "prose:15",
+          "link:6",
+          "prose:16",
+          "link:7",
+          "prose:17",
+          "link:8",
+          "prose:18"
+        ]
+      },
+      "further-reading-on-zk-rollups": {
+        "contentHash": "f76206f149a0",
+        "anchorHash": "3028564091fc",
+        "labelHash": "f6f4f51b422d",
+        "children": {
+          "_label": {
+            "contentHash": "f6f4f51b422d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8fa04e5d8a2d",
+            "anchorHash": "7661d071c390"
+          },
+          "prose:12": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "9cb646dd1362",
+            "anchorHash": "49ec9afcab84"
+          },
+          "prose:13": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "eb8d62e27b94",
+            "anchorHash": "f79a0f0d8bbc"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "8951da6db765",
+            "anchorHash": "1627f05354dd"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "4d5663af0abd",
+            "anchorHash": "1a61d30edd8a"
+          },
+          "prose:16": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "14d9ec9f76bb",
+            "anchorHash": "f8a7efba8616"
+          },
+          "prose:17": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "7aeeb6616dca",
+            "anchorHash": "84f39b27dd10"
+          },
+          "prose:18": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "00a7c3098009",
+            "anchorHash": "8f49a079be9a"
+          },
+          "prose:19": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "ac0a96722fc0",
+            "anchorHash": "4b97efcc728b"
+          },
+          "prose:20": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "efbdf9fecf03",
+            "anchorHash": "c30a6ef4cacf"
+          },
+          "prose:21": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "03d570e2a2fe",
+            "anchorHash": "3c1b206b862d"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:11",
+          "link:0",
+          "prose:12",
+          "link:1",
+          "prose:13",
+          "link:2",
+          "prose:14",
+          "link:3",
+          "prose:15",
+          "link:4",
+          "prose:16",
+          "link:5",
+          "prose:17",
+          "link:6",
+          "prose:18",
+          "link:7",
+          "prose:19",
+          "link:8",
+          "prose:20",
+          "link:9",
+          "prose:21",
+          "link:10"
+        ]
+      },
+      "tutorials": {
+        "contentHash": "8924a6988f2b",
+        "anchorHash": "56910d6153e5",
+        "labelHash": "b57996132b6f",
+        "children": {
+          "_label": {
+            "contentHash": "b57996132b6f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "6ff1aa8fc5e0",
+            "anchorHash": "48662fb9ca19"
+          },
+          "prose:4": {
+            "contentHash": "9935279d88bd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "b107179d24eb",
+            "anchorHash": "91e3712b21b4"
+          },
+          "prose:5": {
+            "contentHash": "30ae032aa9ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "61465ebbff63",
+            "anchorHash": "e22b3d181e41"
+          },
+          "prose:6": {
+            "contentHash": "43b916e97a3c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "prerequisites",
+      "what-are-zk-rollups",
+      "zk-rollups-and-ethereum",
+      "how-do-zk-rollups-work",
+      "zk-rollups-and-evm-compatibility",
+      "how-do-zk-rollup-fees-work",
+      "scaling-ethereum-with-zk-rollups",
+      "zkevm-projects",
+      "further-reading-on-zk-rollups",
+      "tutorials"
+    ]
+  },
+  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+}
