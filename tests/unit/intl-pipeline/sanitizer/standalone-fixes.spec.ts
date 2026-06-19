@@ -62,6 +62,8 @@ const {
   fixUnitOutsideSpan,
   fixMisalignedCodeFences,
   convertSpansToJsonBidi,
+  fixUnclosedParagraphTags,
+  fixFullwidthParensInLinks,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -395,6 +397,107 @@ test.describe("Standalone Fixes", () => {
     test("does not escape backslash-escaped < before single digit", () => {
       const input = "do the same in \\<10 minutes"
       const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("escapes < before a fullwidth paren", () => {
+      const input = "uint256の「より小さい（<）」"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe("uint256の「より小さい（&lt;）」")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not escape < before a space (a < b)", () => {
+      const input = "if a < b then"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not escape valid tags or <_ <$ starts", () => {
+      const input = "<div>x</p> <_x <$x"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not escape fullwidth-paren < inside code blocks", () => {
+      const input = "```\n（<）\n```"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixUnclosedParagraphTags", () => {
+    test("restores dropped </p> when next non-blank line is a tag", () => {
+      const input =
+        '<AlertContent>\n<p className="mt-0"><strong>Buono a sapersi</strong>\n<p className="mt-2">Gli agenti IA...</p>\n</AlertContent>'
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(
+        '<AlertContent>\n<p className="mt-0"><strong>Buono a sapersi</strong></p>\n<p className="mt-2">Gli agenti IA...</p>\n</AlertContent>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves a balanced single-line <p>...</p> unchanged", () => {
+      const input = '<p className="mt-0"><strong>Already closed</strong></p>'
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a multi-line <p> whose next line is prose", () => {
+      const input = "<p>This paragraph continues\non the next line.</p>"
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = "```html\n<p>unclosed\n<div>next</div>\n```"
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixFullwidthParensInLinks", () => {
+    test("fixes fullwidth ) closing an autolink markdown link", () => {
+      const input =
+        "[堆栈](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>）"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
+      expect(content).toBe(
+        "[堆栈](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>)"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes fullwidth ) closing a simple markdown link", () => {
+      const input = "see [docs](https://example.org/page）here"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
+      expect(content).toBe("see [docs](https://example.org/page)here")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves a normal link unchanged", () => {
+      const input = "[x](https://y)"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a fullwidth ) in prose unchanged", () => {
+      const input = "これは（注釈）です"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n[x](https://y）\n```"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
