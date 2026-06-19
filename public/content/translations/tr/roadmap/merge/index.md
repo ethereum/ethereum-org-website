@@ -1,227 +1,233 @@
 ---
-title: "Birleşim"
-description: "Birleşim: Ana Ağ Ethereum'un hisse ispatını kullanmaya başlama zamanı hakkında bilgi edinin."
+title: Birleşme
+description: Birleşme hakkında bilgi edinin - Ethereum Ana Ağı'nın Hisse Kanıtı'na (PoS) geçtiği zaman.
 lang: tr
 template: upgrade
 image: /images/upgrades/merge.png
-alt:
+alt: 
 summaryPoints:
-  - "Ethereum Ana Ağı hisse ispatı kullanır, ancak her zaman geçerli olan durum bu değildi."
-  - "Özgün iş ispatı mekanizmasının hisse ispatına yükseltilmesi Birleşim olarak adlandırılır."
-  - "Birleşim, esas Ethereum Ana Ağının İşaret Zinciri olarak adlandırılan ayrı bir hisse ispatı blok zinciri ile birleşmesi ile artık tek bir zincir olarak varlığını sürdürmesini ifade eder."
-  - "Birleşim, Ethereum'un enerji tüketimini ~ %99,95 oranında azalttı."
+  - "Ethereum Ana Ağı Hisse Kanıtı (PoS) kullanır, ancak bu her zaman böyle değildi."
+  - "Orijinal İş Kanıtı (PoW) mekanizmasından Hisse Kanıtı'na (PoS) geçiş güncellemesine Birleşme adı verildi."
+  - "Birleşme, orijinal Ethereum Ana Ağı'nın İşaret Zinciri adı verilen ayrı bir Hisse Kanıtı (PoS) blokzinciri ile birleşerek artık tek bir zincir olarak var olmasını ifade eder."
+  - "Birleşme, Ethereum'un enerji tüketimini yaklaşık %99,95 oranında azalttı."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  Birleşim 15 Eylül 2022 de gerçekleştirildi. Bu, iş ispatını resmi olarak kullanım dışı bırakarak ve enerji tüketimini yaklaşık %99,95 azaltarak Ethereum'un hisse ispatı mutabakatına geçişini tamamladı.
+  Birleşme 15 Eylül 2022'de gerçekleştirildi. Bu, Ethereum'un Hisse Kanıtı (PoS) mutabakatına geçişini tamamladı, İş Kanıtı'nı (PoW) resmi olarak kullanımdan kaldırdı ve enerji tüketimini yaklaşık %99,95 oranında azalttı.
 </UpgradeStatus>
 
-## Birleşim neydi? {#what-is-the-merge}
+## Birleşme neydi? {#what-is-the-merge}
 
-Birleşim, Ethereum'un orijinal yürütme katmanının ([başlangıçtan](/ethereum-forks/#frontier) beri var olan Ana Ağ) yeni hisse ispatı mutabakat katmanı olan İşaret Zinciri ile birleşmesiydi. Yoğun enerji tüketen madenciliğe olan ihtiyacı kaldırdı ve ağın hisselenmiş ETH aracılığıyla güvenli kılınmasına ön ayak oldu. Ethereum vizyonunun gerçekleştirilmesinde gerçekten heyecan verici bir adımdı; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
+Birleşme, Ethereum'un orijinal yürütme katmanının ([başlangıçtan](/ethereum-forks/#frontier) beri var olan Ana Ağ) yeni Hisse Kanıtı (PoS) mutabakat katmanı olan İşaret Zinciri ile birleşmesiydi. Enerji yoğun madencilik ihtiyacını ortadan kaldırdı ve bunun yerine ağın stake edilmiş ETH kullanılarak güvence altına alınmasını sağladı. Daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik olan [Ethereum](/) vizyonunu gerçekleştirme yolunda gerçekten heyecan verici bir adımdı.
 
 <MergeInfographic />
 
-Başlangıçta, [İşaret Zinciri](/roadmap/beacon-chain/), [Ana Ağ'dan](/glossary/#mainnet) ayrı olarak gönderildi. Ethereum Ana Ağı, tüm hesapları, bakiyeleri, akıllı sözleşmeleri ve blokzincir durumuyla, [iş ispatı](/developers/docs/consensus-mechanisms/pow/) ile güvence altına alınmaya devam ediyordu; İşaret Zinciri ise paralel olarak [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) kullanıyordu. Birleşim bu iki sistemin bir araya geldiği ve hisse ispatının iş kanıtının yerini kalıcı olarak aldığı zamandı.
+Başlangıçta, [İşaret Zinciri](/roadmap/beacon-chain/) [Ana Ağ](/glossary/#mainnet)'dan ayrı olarak yayınlandı. Ethereum Ana Ağı - tüm hesapları, bakiyeleri, akıllı sözleşmeleri ve blokzincir durumu ile birlikte - İşaret Zinciri [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos/) kullanarak paralel olarak çalışırken bile [İş Kanıtı (PoW)](/developers/docs/consensus-mechanisms/pow/) ile güvence altına alınmaya devam etti. Birleşme, bu iki sistemin nihayet bir araya geldiği ve İş Kanıtı'nın kalıcı olarak Hisse Kanıtı ile değiştirildiği zamandı.
 
-Ethereum'un yıldızlar arası bir yolculuğa pek hazır olmadan önce fırlatılan bir uzay gemisi olduğunu düşünün. İşaret Zinciri ile topluluk, yeni bir motor ve sertleştirilmiş bir gövde inşa etti. Kayda değer testlerden sonra, uçuş esnasında yeni motoru eski motorla çalışma esnasında değiştirme vakti geldi. Bu yeni ve daha etkili olan motoru mevcut gemiyle birleştirdi ve ciddi miktarda ışık yılı ortaya koyarak evrene meydan okudu.
+Ethereum'u yıldızlararası bir yolculuğa tam olarak hazır olmadan fırlatılan bir uzay gemisi olarak hayal edin. İşaret Zinciri ile topluluk yeni bir motor ve güçlendirilmiş bir gövde inşa etti. Kapsamlı testlerden sonra, uçuşun ortasında yeni motoru eskisiyle değiştirmenin zamanı gelmişti. Bu, yeni ve daha verimli motoru mevcut gemiyle birleştirerek onun ciddi ışık yılları kat etmesini ve evrene meydan okumasını sağladı.
 
 ## Ana Ağ ile Birleşme {#merging-with-mainnet}
 
-İş ispatı Ethereum Ana Ağı'nı başlangıçtan Birleşim'e kadar güvenli kıldı. Bu, hepimizin alıştığı Ethereum blokzincirinin Temmuz 2015'te işlemler, akıllı sözleşmeler, hesaplar vb. gibi tüm tanıdık özellikleriyle ortaya çıkmasını sağladı.
+İş Kanıtı (PoW), başlangıçtan Birleşme'ye kadar Ethereum Ana Ağı'nı güvence altına aldı. Bu, hepimizin alışkın olduğu Ethereum blokzincirinin Temmuz 2015'te tüm tanıdık özellikleriyle (işlemler, akıllı sözleşmeler, hesaplar vb.) var olmasını sağladı.
 
-Ethereum'un tarihi boyunca geliştiriciler, iş ispatından hisse ispatına nihai bir geçiş için hazırlandılar. 1 Aralık 2020'de, Ana Ağ'dan ayrı bir blok zincir olarak var olan ve paralel olarak çalışan İşaret Zinciri oluşturuldu.
+Ethereum'un tarihi boyunca geliştiriciler, İş Kanıtı'ndan Hisse Kanıtı'na nihai bir geçiş için hazırlandılar. 1 Aralık 2020'de İşaret Zinciri, Ana Ağ'a paralel olarak çalışan ayrı bir blokzincir olarak oluşturuldu.
 
-İşaret Zinciri, normalde Ana Ağ işlemlerini işlemiyordu. Bunun yerine, aktif doğrulayıcılar ve hesap bakiyeleri üzerinde anlaşmaya vararak kendi durumu üzerinde fikir birliğine varıyordu. Geniş testler sonrası, İşaret Zinciri'nin gerçek verilere göre fikir birliğine varmasının zamanı geldi. Birleşim sonrası, İşaret Zinciri yürütüm katmanı işlemleri ve hesap bakiyeleri dahil tüm ağ verisi için mutabakat motoru haline geldi.
+İşaret Zinciri başlangıçta Ana Ağ işlemlerini işlemiyordu. Bunun yerine, aktif doğrulayıcılar ve onların hesap bakiyeleri üzerinde anlaşarak kendi durumu üzerinde mutabakata varıyordu. Kapsamlı testlerden sonra, İşaret Zinciri'nin gerçek dünya verileri üzerinde mutabakata varma zamanı gelmişti. Birleşme'den sonra İşaret Zinciri, yürütme katmanı işlemleri ve hesap bakiyeleri dahil olmak üzere tüm ağ verileri için mutabakat motoru haline geldi.
 
-Birleşim blok üretim motoru olarak İşaret Zinciri'ne resmi geçişi temsil eder. Madencilik artık geçerli bloklar üretmenin yolu değildir. Yerine, hisse ispatı doğrulayıcıları bu rolü almıştır ve artık tüm işlemlerin doğruluğunu işlemekten ve bloklar önermekten sorumludur.
+Birleşme, blok üretiminin motoru olarak İşaret Zinciri'ni kullanmaya resmi geçişi temsil ediyordu. Madencilik artık geçerli bloklar üretmenin bir aracı değildir. Bunun yerine, Hisse Kanıtı doğrulayıcıları bu rolü üstlenmiştir ve artık tüm işlemlerin geçerliliğini işlemekten ve bloklar önermekten sorumludur.
 
-Birleşim'de herhangi bir geçmiş kaybedilmedi. Ana Ağ İşaret Zinciri ile birleşti, ayrıca Ethereum'un tüm işlemsel geçmişini de birleştirdi.
+Birleşme'de hiçbir geçmiş kaybolmadı. Ana Ağ, İşaret Zinciri ile birleşirken, Ethereum'un tüm işlem geçmişini de birleştirdi.
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Hisse ispatına olan bu geçiş, ether'in çıkarılma şeklini değiştirdi. [Birleşim öncesi ve sonrası ether çıkarımı](/roadmap/merge/issuance/) hakkında daha fazla bilgi edinin.
+Hisse Kanıtı'na (PoS) olan bu geçiş, Ether'in ihraç edilme şeklini değiştirdi. [Birleşme öncesi ve sonrası Ether ihracı](/roadmap/merge/issuance/) hakkında daha fazla bilgi edinin.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ### Kullanıcılar ve sahipler {#users-holders}
 
-**Birleşim, sahipler/kullanıcılar için herhangi bir şey değiştirmedi.**
+**Birleşme, sahipler/kullanıcılar için hiçbir şeyi değiştirmedi.**
 
-_Şunu tekrarlamakta fayda var_: Bir kullanıcı veya Ethereum üzerindeki ETH ya da başka bir dijital varlığın sahibi olarak ve düğüm işletmeyen paydaşlar olarak **Birleşim için fonlarınızla veya cüzdanınızla herhangi bir şey yapmanıza gerek yoktur.** ETH yalnızca ETH'dir. "Eski ETH"/"yeni ETH" veya "ETH1"/"ETH2" diye bir şey yoktur ve cüzdanlar Birleşim'den önce nasıl çalışıyorsa sonrasında da öyle çalışacaktır, size bunun aksini söyleyenler muhtemelen dolandırıcılardır.
+_Bunu tekrarlamakta fayda var_: Ethereum'daki ETH veya başka herhangi bir dijital varlığın kullanıcısı veya sahibi olarak ve ayrıca düğüm çalıştırmayan staker'lar olarak, **Birleşme için fonlarınızla veya cüzdanınızla hiçbir şey yapmanıza gerek yoktur.** ETH sadece ETH'dir. "Eski ETH"/"yeni ETH" veya "Eth1"/"Eth2" diye bir şey yoktur ve cüzdanlar Birleşme'den sonra da tıpkı daha önce olduğu gibi çalışır; size aksini söyleyen kişiler muhtemelen dolandırıcıdır.
 
-İş ispatından ayrılmasına rağmen, Ethereum'un başlangıçtan itibaren tüm geçmişi sabit kalmıştır ve hisse ispatına geçişten etkilenmemiştir. Birleşim'den önce cüzdanınızda bulunan herhangi bir fon Birleşim'den sonra da erişilebilirdir. **Yeni sürüme geçmek için herhangi bir işlem yapmanız gerekmez.**
+İş Kanıtı'nın (PoW) değiştirilmesine rağmen, Ethereum'un başlangıçtan bu yana tüm geçmişi bozulmadan kaldı ve Hisse Kanıtı'na (PoS) geçişten etkilenmedi. Birleşme'den önce cüzdanınızda tutulan tüm fonlara Birleşme'den sonra da erişilebilir. **Güncelleme için sizin tarafınızdan herhangi bir işlem yapılması gerekmez.**
 
-[Ethereum güvenliği hakkında daha fazlası](/security/#eth2-token-scam)
+[Ethereum güvenliği hakkında daha fazla bilgi](/security/#eth2-token-scam)
 
 ### Düğüm operatörleri ve dapp geliştiricileri {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking yapan düğüm operatörleri ve sağlayıcılar"
-contentPreview="Kendi düğüm kurulumunuzu çalıştıran bir staker veya düğüm altyapısı sağlayıcısıysanız Birleşim'den sonra dikkat etmeniz gereken birkaç şey var."
+title="Staking node operators and providers"
+contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
 id="staking-node-operators">
 
-Anahtar eylem maddeleri şunları içerir:
+Önemli eylem öğeleri şunları içerir:
 
-1. _Hem_ bir fikir birliği istemcisi hem de yürütüm istemcisi çalıştırın; yürütme verisi elde etmek için kullanılan üçüncü şahıs uç noktaları Birleşim'den itibaren çalışmaz.
-2. Güvenli bir şekilde iletişim kurabilmeleri için hem yürütme hem de fikir birliği istemcilerinin kimliğini paylaşılan bir JWT sırrıyla doğrulayın.
-3. Kazanılmış işlem ücreti/MEV ücretinizini almak için bir "ücret alıcısı" adresi belirleyin.
+1. _Hem_ bir fikir birliği istemcisi hem de bir yürütme istemcisi çalıştırın; yürütme verilerini elde etmek için üçüncü taraf uç noktaları Birleşme'den bu yana artık çalışmamaktadır.
+2. Güvenli bir şekilde iletişim kurabilmeleri için hem yürütme hem de fikir birliği istemcilerinin kimliğini paylaşılan bir JWT sırrı ile doğrulayın.
+3. Kazandığınız işlem ücreti bahşişlerini/MEV'i almak için bir `fee recipient` adresi belirleyin.
 
-İlk iki maddeyi tamamlamamak iki katman da eşlenene ve doğrulanana kadar düğümünüzün "çevrimdışı" olarak görülmesine sebep olur.
+Yukarıdaki ilk iki öğeyi tamamlamamak, her iki katman da eşzamanlanana ve kimlikleri doğrulanana kadar düğümünüzün "çevrimdışı" olarak görünmesine neden olacaktır.
 
-Bir "ücret alıcısı" ayarlamamak doğrulayıcınızın davranışını etkilemez, ancak doğrulayıcınızın önerdiği bloklarda kazanılan yakılmamış ücretleri ve MEV ücretlerini kaçırırsınız.
+Bir `fee recipient` belirlememek, doğrulayıcınızın her zamanki gibi davranmasına izin vermeye devam edecektir, ancak yakılmamış ücret bahşişlerini ve aksi takdirde doğrulayıcınızın önerdiği bloklarda kazanacağınız herhangi bir MEV'i kaçıracaksınız.
 </ExpandableCard>
 
 <ExpandableCard
-title="Doğrulama yapmayan düğüm operatörleri ve altyapı sağlayıcıları"
-contentPreview="Doğrulama yapmayan bir Ethereum düğümü çalıştırıyorsanız Birleşim ile gelen en önemli değişiklik, HEM yürütme katmanı HEM DE mutabakat katmanı için istemcileri çalıştırma zorunluluğuydu."
+title="Non-validating node operators and infrastructure providers"
+contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
 id="node-operators">
 
-Birleşim'e kadar bir yürütüm istemcisi (Geth, Erigon, Besu veya Nethermind gibi) ağdan anlatılan blokları almak, düzgünce doğrulamak ve yaymak için yeterliydi. _Birleşim sonrası_, bir yürütme yükü içinde bulunan işlemlerin geçerliliği artık ayrıca bulunduğu "mutabakat blokunun" geçerliliğine bağlı olacaktır.
+Birleşme'ye kadar, ağ tarafından dedikodusu yapılan blokları almak, düzgün bir şekilde doğrulamak ve yaymak için bir yürütme istemcisi (Go Ethereum (Geth), Erigon, Besu veya Nethermind gibi) yeterliydi. _Birleşme'den sonra_, bir yürütme yükü içinde yer alan işlemlerin geçerliliği artık içinde bulunduğu "mutabakat bloğunun" geçerliliğine de bağlıdır.
 
-Bunun bir sonucu olarak, bir Ethereum düğümü artık hem bir yürütüm istemcisi hem de fikir birliği istemcisi gerektirir. Bu iki müşteri, yeni bir Motor API'sı kullanarak birlikte çalışır. Motor API'sı, her iki müşteriye de sağlanan ve güvenli iletişime izin veren bir JWT sırrı kullanılarak kimlik doğrulaması gerektirir.
+Sonuç olarak, tam bir Ethereum düğümü artık hem bir yürütme istemcisi hem de bir fikir birliği istemcisi gerektirir. Bu iki istemci, yeni bir Engine API kullanarak birlikte çalışır. Engine API, güvenli iletişime izin vererek her iki istemciye de sağlanan bir JWT sırrı kullanılarak kimlik doğrulaması gerektirir.
 
-Anahtar eylem maddeleri şunları içerir:
+Önemli eylem öğeleri şunları içerir:
 
-- Bir yürütüm istemcisine ek olarak bir mutabakat istemcisi kurun
-- Yürütüm ve mutabakat istemcilerinin birbirleriyle güvenli bir şekilde iletişim kurabilmeleri için paylaşılan bir JWT sırrı ile kimliklerini doğrulayın.
+- Bir yürütme istemcisine ek olarak bir fikir birliği istemcisi kurun
+- Birbirleriyle güvenli bir şekilde iletişim kurabilmeleri için yürütme ve fikir birliği istemcilerinin kimliğini paylaşılan bir JWT sırrı ile doğrulayın.
 
-Yukarıdaki maddeleri tamamlamamak iki katman da eşlenene ve doğrulanana kadar düğümünüzün "çevrim dışı" olarak görülmesine sebep olur.
+Yukarıdaki öğeleri tamamlamamak, her iki katman da eşzamanlanana ve kimlikleri doğrulanana kadar düğümünüzün "çevrimdışı" görünmesine neden olacaktır.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Merkeziyetsiz uygulama ve akıllı sözleşme geliştiricileri"
-contentPreview="Birleşim, akıllı sözleşme ve merkeziyetsiz uygulama geliştiricilerini minimum düzeyde etkileyecek şekilde tasarlandı."
+title="Dapp and smart contract developers"
+contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunlarla ilişkili olanları da içerir:
+Birleşme, mutabakat kurallarında değişikliklerle geldi ve bu aynı zamanda şunlarla ilgili değişiklikleri de içerir:
 
 <ul>
   <li>blok yapısı</li>
-  <li>yuva/blok zamanlaması</li>
+  <li>slot/blok zamanlaması</li>
   <li>işlem kodu değişiklikleri</li>
-  <li>zincir üstündeki rastgeleliğin kaynakları</li>
-  <li><em>güvenli baş</em> ve <em>kesinleştirilmiş bloklar</em> konsepti</li>
+  <li>zincir içi rastgelelik kaynakları</li>
+  <li><em>güvenli başlık (safe head)</em> ve <em>kesinleşmiş bloklar</em> kavramı</li>
 </ul>
 
-Daha fazla bilgi için, Tim Beiko tarafından yazılmış <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Birleşim Ethereum'un Uygulama Katmanını Nasıl Etkiler</a> üzerine blog gönderisine bakın.
+Daha fazla bilgi için, Tim Beiko'nun <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Birleşme'nin Ethereum'un Uygulama Katmanını Nasıl Etkilediği</a> hakkındaki bu blog yazısına göz atın.
+
 </ExpandableCard>
 
-## Birleşim ve enerji tüketimi {#merge-and-energy}
+## Birleşme ve enerji tüketimi {#merge-and-energy}
 
-Birleşim, Ethereum için iş ispatının sonunu getirdi ve daha sürdürülebilir, doğa dostu bir Ethereum çağının başlangıcı oldu. Ethereum'un enerji tüketimi %99,95 düştü ve Ethereum çevre dostu bir blok zincir haline geldi. [Ethereum enerji tüketimi](/energy-consumption/) hakkında daha fazla bilgi edinin.
+Birleşme, Ethereum için İş Kanıtı'nın (PoW) sonunu işaret etti ve daha sürdürülebilir, çevre dostu bir Ethereum çağını başlattı. Ethereum'un enerji tüketimi tahmini olarak %99,95 oranında düşerek Ethereum'u yeşil bir blokzincir haline getirdi. [Ethereum enerji tüketimi](/energy-consumption/) hakkında daha fazla bilgi edinin.
 
-## Birleşim ve ölçeklendirme {#merge-and-scaling}
+## Birleşme ve ölçeklendirme {#merge-and-scaling}
 
-Birleşim aynı zamanda, iş ispatı altında mümkün olmayan daha fazla ölçeklenebilirlik yükseltmeleri için zemin hazırladı ve Ethereum'u, [yol haritasının](/roadmap/) hedeflediği tam ölçek, güvenlik ve sürdürülebilirliğe ulaşmaya bir adım daha yaklaştırdı.
+Birleşme ayrıca, İş Kanıtı (PoW) altında mümkün olmayan daha fazla ölçeklenebilirlik yükseltmesi için zemin hazırlayarak Ethereum'u [yol haritasının](/roadmap/) inşa ettiği tam ölçek, güvenlik ve sürdürülebilirliğe ulaşmaya bir adım daha yaklaştırdı.
 
-## Birleşim hakkında yanlış bilinenler {#misconceptions}
+## Birleşme hakkındaki yanlış bilinenler {#misconceptions}
 
 <ExpandableCard
-title="Yanlış Kanı: &quot;Bir düğüm çalıştırmak için 32 ETH hisselemek gerekir.&quot;"
-contentPreview="Yanlış. Herkes Ethereum'un kendi kendine doğrulanmış kopyasını senkronize etmekte (yani bir düğüm çalıştırmakta) özgürdür. ETH gerekmez—ne Birleşim'den önce, ne Birleşim'den sonra, ne de başka bir zaman.">
+title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
-İki tip Ethereum düğümü bulunur: Blok önerebilen ve öneremeyen düğümler.
+İki tür Ethereum düğümü vardır: blok önerebilen düğümler ve öneremeyen düğümler.
 
-Blok önerebilen düğümler Ethereum üzerindeki toplam düğüm sayısının küçük bir kısmıdır. Bu kategori, iş ispatı (PoW) altındaki madencilik düğümleri ile hisse ispatı (PoS) altındaki doğrulayıcı düğümleri kapsar. Bu kategori ekonomik kaynakların (iş ipatındaki GPU karma gücü ya da hisse ispatında hisselenmiş ETH gibi), yeni bloku kimi zaman önerme ve protokol ödülleri kazanma yetenekleri karşılığında buraya adanmasını gerektirir.
+Blok öneren düğümler, Ethereum'daki toplam düğümlerin yalnızca küçük bir kısmıdır. Bu kategori, İş Kanıtı (PoW) altındaki madencilik düğümlerini ve Hisse Kanıtı (PoS) altındaki doğrulayıcı düğümleri içerir. Bu kategori, ara sıra bir sonraki bloğu önerme ve protokol ödülleri kazanma yeteneği karşılığında ekonomik kaynakların (İş Kanıtı'nda GPU hash gücü veya Hisse Kanıtı'nda stake edilmiş ETH gibi) taahhüt edilmesini gerektirir.
 
-Ağdaki diğer düğümlerin (yani çoğunluğun), 1-2 TB kullanılabilir depolama alanına ve internet bağlantısına sahip, tüketici sınıfı bir bilgisayarın ötesinde herhangi bir ekonomik kaynak ayırması gerekmez. Bu düğümler blok önermezler, ancak yine de yeni bloklardan haberdar olarak ve blokların geçerliliğini ağ mutabakat kurallarına göre onaylayarak blok önericilerini açıklanabilir tutarlar ve ağı güvende tutmada önemli bir rol oynarlar. Eğer blok geçerliyse, düğüm ağ içinde yayılmaya devam eder. Eğer blok herhangi bir sebepten dolayı geçersizse, düğüm yazılımı geçersiz olduğu için bloku umursamayacak ve yayılmasını durduracaktır.
+Ağdaki diğer düğümlerin (yani çoğunluğun), 1-2 TB kullanılabilir depolama alanına ve internet bağlantısına sahip tüketici sınıfı bir bilgisayarın ötesinde herhangi bir ekonomik kaynak taahhüt etmesi gerekmez. Bu düğümler blok önermezler, ancak yeni blokları dinleyerek ve ağ mutabakat kurallarına göre geldiklerinde geçerliliklerini doğrulayarak tüm blok önericilerini sorumlu tutarak ağı güvence altına almada hala kritik bir rol oynarlar. Blok geçerliyse, düğüm onu ağ üzerinden yaymaya devam eder. Blok herhangi bir nedenle geçersizse, düğüm yazılımı onu geçersiz sayar ve yayılmasını durdurur.
 
-Blok üretimi yapmayan bir düğümü çalıştırmak da mutabakat mekanizması (iş ispatı ya da hisse ispatı) altındaki herkes için yapılabilirdir ve bu konuda imkân ve niyetleri varsa <em>şiddetle</em> tavsiye edilir. Bir düğümü çalıştırmak Ethereum için son derece önemlidir ve çalıştıran bireye gelişmiş güvenlik, gizlilik ve sansüre dayanıklılık gibi birçok avantaj sağlar.
+Blok üretmeyen bir düğüm çalıştırmak, her iki mutabakat mekanizması (İş Kanıtı veya Hisse Kanıtı) altında herkes için mümkündür; imkanları varsa tüm kullanıcılar için <em>şiddetle tavsiye edilir</em>. Bir düğüm çalıştırmak Ethereum için son derece değerlidir ve çalıştıran herhangi bir bireye gelişmiş güvenlik, gizlilik ve sansür direnci gibi ek faydalar sağlar.
 
-Herhangi bir kişinin kendi düğümünü çalıştırabilmesi Ethereum ağının merkeziyestizliğinin korunması konusu için <em>kesinlikle gereklidir</em>.
+Herkesin kendi düğümünü çalıştırabilmesi, Ethereum ağının merkeziyetsizliğini korumak için <em>kesinlikle gereklidir</em>.
 
 [Kendi düğümünüzü çalıştırma hakkında daha fazla bilgi](/run-a-node/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Yanlış Kanı: &quot;Birleşim, gaz ücretlerini düşürmede başarısız oldu.&quot;"
-contentPreview="Yanlış. Birleşim, bir ağ kapasitesi genişlemesi değil, bir mutabakat mekanizması değişikliğiydi ve hiçbir zaman gaz ücretlerini düşürmeyi amaçlamadı.">
+title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
+contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
 
-Gaz ücretleri ağın kapasitesine bağlı olan bir ağ talebidir. Birleşim iş ispatı modasını bitirip onun yerine mutabakat için hisse ispatını getirdi, ancak hiçbir parametreyi ciddi şekilde değiştirmedi ya da ağ kapasitesini ve iş hacmini etkilemedi.
+Gaz ücretleri, ağın kapasitesine göre ağ talebinin bir ürünüdür. Birleşme, mutabakat için Hisse Kanıtı'na (PoS) geçerek İş Kanıtı'nın (PoW) kullanımını kullanımdan kaldırdı, ancak ağ kapasitesini veya işlem kapasitesini doğrudan etkileyen hiçbir parametreyi önemli ölçüde değiştirmedi.
 
-<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Toplama merkezli bir yol haritası</a> ile çabalar, [katman 2'de](/layer-2/) kullanıcı etkinliğini ölçeklendirmeye odaklanmıştır. Bu esnada katman 1 Ana Ağı, toplama işlemlerini katlanarak daha ucuz hale getirmeye yardımcı olacak şekilde, toplama verilerinin depolanması için optimize edilmiş, güvenli ve merkeziyetsiz bir uzlaşma katmanı olarak etkinleştirilmektedir. Hisse ispatına geçiş bunu fark etmede öncü rol oynuyor. [Gaz ve ücretler hakkında daha fazla bilgi.](/developers/docs/gas/)
+<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup merkezli bir yol haritası</a> ile çabalar, kullanıcı etkinliğini [katman 2 (L2)](/layer-2/)'de ölçeklendirmeye odaklanırken, katman 1 (L1) Ana Ağı'nı Rollup işlemlerini katlanarak daha ucuz hale getirmeye yardımcı olmak için Rollup veri depolaması için optimize edilmiş güvenli bir merkeziyetsiz uzlaşma katmanı olarak etkinleştiriyor. Hisse Kanıtı'na geçiş, bunu gerçekleştirmenin kritik bir öncüsüdür. [Gaz ve ücretler hakkında daha fazla bilgi.](/developers/docs/gas/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Yanlış Kanı: &quot;İşlemler Birleşim ile önemli ölçüde hızlandırıldı.&quot;"
-contentPreview="Yanlış. Bazı küçük değişiklikler olsa da, katman 1'deki işlem hızı Birleşim'den öncesiyle büyük ölçüde aynıdır.">
-Bir işlemin "hızı", bir bloğa dahil edilme süresi ve kesinleşme süresi de dahil olmak üzere birkaç şekilde ölçülebilir. Bunların ikisi de biraz farklıdır, ancak kullanıcıların fark edeceği bir şekilde değil.
+title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
+contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+Bir işlemin "hızı", bir bloğa dahil edilme süresi ve kesinleşme süresi dahil olmak üzere birkaç yolla ölçülebilir. Bunların her ikisi de biraz değişir, ancak kullanıcıların fark edeceği bir şekilde değil.
 
-Tarihi olarak, iş ispatı döneminde, hedef her ~13,3 saniyede yeni bir bloka sahip olmaktı. Hisse ispatında ise yuvalar kesin olarak her 12 saniyede bir ortaya çıkar, hepsi doğrulayıcının bir blok yayınlaması için bir fırsattır. Çoğu yuvanın blokları vardır, ancak hepsinin olması gerekmez (yani, bir doğrulayıcı çevrimdışı olabilir). Hisse ispatında, bloklar iş ispatına göre ~%10 daha sık üretilir. Bu epey önemsiz bir değişiklikti ve muhtemelen kullanıcılar tarafından fark edilmeyecekti.
+Tarihsel olarak, İş Kanıtı'nda (PoW) hedef her ~13,3 saniyede bir yeni bir bloğa sahip olmaktı. Hisse Kanıtı (PoS) altında, slot'lar tam olarak her 12 saniyede bir gerçekleşir ve bunların her biri bir doğrulayıcının bir blok yayınlaması için bir fırsattır. Çoğu slot'ta bloklar bulunur, ancak hepsinde olması gerekmez (örneğin, bir doğrulayıcı çevrimdışıdır). Hisse Kanıtı'nda bloklar, İş Kanıtı'na göre yaklaşık %10 daha sık üretilir. Bu oldukça önemsiz bir değişiklikti ve kullanıcılar tarafından fark edilmesi pek olası değildir.
 
-Hisse ispatı daha önce var olmayan işlem kesinliiğii konseptini tanıttı. İş ispatında, bir bloku ters çevirebilmekmek her geçen blokun işlemin en tepesine çıkarılmış olmasıyla katlanarak zorlaşıyordu, ancak hiçbir zaman da 0'a ulaşmıyordu. Hisse ispatında, bloklar doğrulayıcının oyladıkları dönemlere ayrılmıştır (bloklar için 32 şans içeren 6,4 saniyelik zaman açıklıkları). Bir dönem sonlandığında doğrulayıcılar dönemin "makul" olarak değerlendirilmesi konusunda oylama yapar. Eğer doğrulayıcılar dönemin makul olduğunda fikir birliğine varırlarsa o, bir sonraki dönemde sonuçlandırılır. Kesinleşmiş işlemleri geri çevirmek ekonomik olarak yaşamaz çünkü bu toplam pay edilmiş Ethereum'un üçte birini yakmak demekti.
+Hisse Kanıtı, daha önce var olmayan işlem kesinliği kavramını tanıttı. İş Kanıtı'nda, bir bloğu tersine çevirme yeteneği, bir işlemin üzerine çıkarılan her geçen blokla katlanarak daha da zorlaşır, ancak asla tam olarak sıfıra ulaşmaz. Hisse Kanıtı altında bloklar, doğrulayıcıların oy kullandığı dönemler (bloklar için 32 şans içeren 6,4 dakikalık zaman dilimleri) halinde paketlenir. Bir dönem sona erdiğinde, doğrulayıcılar dönemin 'gerekçelendirilmiş' sayılıp sayılmayacağına oy verirler. Doğrulayıcılar dönemi gerekçelendirmeyi kabul ederse, bir sonraki dönemde kesinleşmiş olur. Kesinleşmiş işlemleri geri almak, toplam stake edilmiş ETH'nin üçte birinden fazlasını elde etmeyi ve yakımını gerektireceğinden ekonomik olarak uygulanamazdır.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Yanlış Kanı: &quot;Birleşim, staking'den para çekme işlemlerini etkinleştirdi.&quot;"
-contentPreview="Yanlış, ancak staking'den para çekme işlemleri o zamandan beri Shanghai/Capella yükseltmesi ile etkinleştirildi.">
+title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
+contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
 
-Birleşim'den sonraki ilk zamanlarda, paydaşlar sadece masraf tüyolarına ve blok önerileriyle kazandıkları MEV'lere erişebiliyorlardı. Bu ödüller doğrulayıcı (<em>ücret alıcı</em> olarak da bilinir) tarafından kontrol edilen ve hisseleme yapmayan hesaplara yatırılır ve anında ulaşılabilir olurlar. Bu ödüller doğrulayıcı görevlerini yapmak için verilen protokol ödüllerinden farklıdır.
+Birleşme'den hemen sonra, staker'lar yalnızca blok önerileri sonucunda kazanılan ücret bahşişlerine ve MEV'e erişebiliyordu. Bu ödüller, doğrulayıcı tarafından kontrol edilen (<em>ücret alıcısı</em> olarak bilinen) stake edilmeyen bir hesaba yatırılır ve anında kullanılabilir. Bu ödüller, doğrulayıcı görevlerini yerine getirmek için verilen protokol ödüllerinden ayrıdır.
 
-Shangai/Capella ağ yükseltmesinden bu yana, paydaşlar herhangi bir hisse bakiyesinden artan ödemeleri alabilmek için (protokol ödüllerinden gelen 32'den fazla Ethereum) artık bir <em>para çekme adresi</em> belirleyebiliyor. Bu yükseltme aynı zamanda bir doğrulayıcının ağdan çıktıktan sonra da bakiyelerinin kilitlerini açabilmesini ve tekrar alabilmesini sağladı.
+Şanghay/Capella ağ yükseltmesinden bu yana, staker'lar artık herhangi bir fazla staking bakiyesinin (protokol ödüllerinden gelen 32'nin üzerindeki ETH) otomatik ödemelerini almaya başlamak için bir <em>çekim adresi</em> belirleyebilirler. Bu yükseltme ayrıca bir doğrulayıcının ağdan çıkış yapması üzerine tüm bakiyesinin kilidini açma ve geri alma yeteneğini de etkinleştirdi.
 
-[Hisseleme çekimleri hakkında daha fazla bilgi](/staking/withdrawals/)
+[Staking çekim işlemleri hakkında daha fazla bilgi](/staking/withdrawals/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Yanlış Kanı: &quot;Birleşim tamamlandığına ve para çekme işlemleri etkinleştirildiğine göre, tüm paydaşlar aynı anda çıkış yapabilir.&quot;"
-contentPreview="Yanlış. Doğrulayıcı çıkışları güvenlik nedenleriyle hız sınırlamalıdır.">
-Shanghai/Capella yükseltmesi para çekme işlemlerini etkinleştirdiğinden beri, doğrulayıcılar 32 ETH'nin üzerindeki hisse bakiyelerini çekmeye teşvik edilmektedir, çünkü bu fonlar getiriye eklenmez ve aksi takdirde kilitlenir. APR'ye (toplam hisselenen ETH tarafından belirlenir) bağlı olarak, tüm bakiyelerini geri almak için doğrulayıcılarından çıkmaya veya daha fazla getiri elde etmek için ödüllerini kullanarak potansiyel olarak daha fazla hisselemeye teşvik edilebilirler.
+title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
+contentPreview="False. Validator exits are rate limited for security reasons.">
+Şanghay/Capella yükseltmesi çekim işlemlerini etkinleştirdiğinden, doğrulayıcılar 32 ETH'nin üzerindeki staking bakiyelerini çekmeye teşvik edilir, çünkü bu fonlar getiriye katkıda bulunmaz ve aksi takdirde kilitli kalır. APR'ye (stake edilen toplam ETH tarafından belirlenir) bağlı olarak, tüm bakiyelerini geri almak için doğrulayıcılarından çıkış yapmaya veya daha fazla getiri elde etmek için ödüllerini kullanarak potansiyel olarak daha da fazla stake etmeye teşvik edilebilirler.
 
-Önemli bir uyarı, tam doğrulayıcı çıkışlarının hızı protokol tarafından sınırlandırılmıştır ve bir dönem (6,4 dakika) başına sadece izin verilen sayıda doğrulayıcı çıkabilir. Bu limit dalgalanmaları aktif doğrulayıcı sayısına bağlıdır, ancak bir günde toplam hisselenmiş Ethereum'un yaklaşık olarak %0,33'ünün ağdan çıkarılabilmesiyle sonuçlanır.
+Burada önemli bir uyarı, tam doğrulayıcı çıkışları protokol tarafından oranla sınırlandırılmıştır ve dönem başına (her 6,4 dakikada bir) yalnızca belirli sayıda doğrulayıcı çıkış yapabilir. Bu sınır, aktif doğrulayıcıların sayısına bağlı olarak dalgalanır, ancak tek bir günde ağdan çıkış yapılabilecek toplam stake edilmiş ETH'nin yaklaşık %0,33'üne denk gelir.
 
-Bu hisselenmiş kaynaklar için büyük bir hareketi, "sermaye kaçışı"nı engeller. Ayrıca, hisselenen ETH'nin büyük bir kısmına erişimi olan potansiyel saldırganlar, protokolün kesilme cezasını uygulayabilmesinden önce, tehdit ettiği tüm doğrulayıcı bakiyelerinden çekilmesi engellenir.
+Bu, stake edilmiş fonların toplu bir şekilde çıkışını önler. Ayrıca, stake edilen toplam ETH'nin büyük bir kısmına erişimi olan potansiyel bir saldırganın, protokol kesinti cezasını uygulamadan önce aynı dönemde kesinti gerektiren bir suç işlemesini ve suç işleyen tüm doğrulayıcı bakiyelerinden çıkış yapmasını/çekim yapmasını önler.
 
-APR ayrıca kasten dinamik yapılmıştır, bu da bir grup paydaşın ağı güvende tutmaya yardımcı olmak için ne kadar ödeme almak istediklerini belirlemelerine olanak verir. Eğer oran çok düşükse, doğrulayıcılar protokol tarafından kısıtlanmış bir oranda çıkacaklardır. Yavaş yavaş bu, kalan herkes için APR'yi artıracak, yeni veya geri dönen paydaşları tekrar çekecektir.
+APR ayrıca kasıtlı olarak dinamiktir ve staker'lardan oluşan bir pazarın ağı güvence altına almaya yardımcı olmak için ne kadar ödeme almaya istekli olduklarını dengelemelerine olanak tanır. Oran çok düşükse, doğrulayıcılar protokol tarafından sınırlandırılan bir oranda çıkış yapacaktır. Bu, kademeli olarak kalan herkes için APR'yi yükseltecek ve yeni veya geri dönen staker'ları bir kez daha çekecektir.
 </ExpandableCard>
 
-## "Eth2"ye ne oldu? {#eth2}
+## 'Eth2'ye ne oldu? {#eth2}
 
-"Eth2" terimi artık kullanım dışı. "Eth1" ve "Eth2"nin tek bir zincirde birleşiminin ardından 2 Ethereum ağının ayırt edilmesine gerek kalmayacak, artık yalnızca bir Ethereum var.
+'Eth2' terimi kullanımdan kaldırılmıştır. 'Eth1' ve 'Eth2'yi tek bir zincirde birleştirdikten sonra, artık iki Ethereum ağı arasında ayrım yapmaya gerek yoktur; sadece Ethereum vardır.
 
-Karışıklığı önlemek için topluluk şu şartları güncelledi:
+Kafa karışıklığını sınırlamak için topluluk bu terimleri güncelledi:
 
-- "Eth1" artık, işlemleri ve çalışmayı yapan "çalıştırma katmanı"dır.
-- "Eth2" artık, hisse ispatı mutabakatını yöneten "mutabakat katmanı"dır.
+- 'Eth1' artık işlemleri ve yürütmeyi yöneten 'yürütme katmanı'dır.
+- 'Eth2' artık Hisse Kanıtı (PoS) mutabakatını yöneten 'mutabakat katmanı'dır.
 
-Bu terminoloji güncellemeleri yalnızca adlandırma alışkanlıklarını değiştirir; bu, Ethereum'un hedeflerini veya yol haritasını değiştirmez.
+Bu terminoloji güncellemeleri yalnızca adlandırma kurallarını değiştirir; bu, Ethereum'un hedeflerini veya yol haritasını değiştirmez.
 
-['Eth2' yeniden adlandırması hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
+['Eth2'nin yeniden adlandırılması hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Yükseltmeler arasındaki ilişki {#relationship-between-upgrades}
 
-Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. Öyleyse Birleşim'in diğer yükseltmelerle nasıl ilişkili olduğunu özetleyelim.
+Ethereum yükseltmelerinin tümü birbiriyle bir şekilde ilişkilidir. Öyleyse Birleşme'nin diğer yükseltmelerle nasıl ilişkili olduğunu özetleyelim.
 
-### Birleşim ve İşaret Zinciri {#merge-and-beacon-chain}
+### Birleşme ve İşaret Zinciri {#merge-and-beacon-chain}
 
-Birleşim, yeni fikir birliği katmanı olarak İşaret Zinciri'nin asıl Ana Ağ yürütüm katmanına resmi olarak eklenmesini temsil eder. Birleşim'den bu yana, doğrulayıcılar Ethereum Ana Ağı'nı güvence altına almakla görevlendirilir ve [iş ispatı](/developers/docs/consensus-mechanisms/pow/) madenciliği artık geçerli bir blok üretim yöntemi değildir.
+Birleşme, İşaret Zinciri'nin orijinal Ana Ağ yürütme katmanına yeni mutabakat katmanı olarak resmi olarak benimsenmesini temsil eder. Birleşme'den bu yana, doğrulayıcılar Ethereum Ana Ağı'nı güvence altına almak için atanmıştır ve [İş Kanıtı (PoW)](/developers/docs/consensus-mechanisms/pow/) üzerinde madencilik artık geçerli bir blok üretim aracı değildir.
 
-Bloklar, mutabakata katılma hakkı karşılığında hisselenmiş ETH sahibi doğrulayan düğümler tarafından önerilmektedir. Bu yükseltmeler, parçalama da dahil olmak üzere gelecekteki ölçeklenebilirlik yükseltmeleri için zemin hazırlar.
+Bloklar bunun yerine, mutabakata katılma hakkı karşılığında ETH stake etmiş doğrulayıcı düğümler tarafından önerilir. Bu yükseltmeler, parça zinciri (sharding) dahil olmak üzere gelecekteki ölçeklenebilirlik yükseltmeleri için zemin hazırlar.
 
 <ButtonLink href="/roadmap/beacon-chain/">
   İşaret Zinciri
 </ButtonLink>
 
-### Birleşim ve Shanghai yükseltmesi {#merge-and-shanghai}
+### Birleşme ve Şanghay yükseltmesi {#merge-and-shanghai}
 
-Hisse ispatına başarıyla geçişe en yüksek düzeyde odaklanma ve bunu basitleştirmek için Birleşim yükseltmesi, hisselenmiş ETH'nin çekilme yeteneği gibi beklenen özellikleri içermemektedir. Bu işlevsellik Shanghai/Capella yükseltmesi ile ayrıca mümkün kılınmıştır.
+Hisse Kanıtı'na (PoS) başarılı bir geçişe odaklanmayı basitleştirmek ve en üst düzeye çıkarmak için Birleşme yükseltmesi, stake edilmiş ETH'yi çekim yeteneği gibi beklenen bazı özellikleri içermiyordu. Bu işlevsellik, Şanghay/Capella yükseltmesi ile ayrı olarak etkinleştirildi.
 
-Merak edenler için, Nisan 2021'deki ETHGlobal etkinliğinde Vitalik tarafından sunulan [Birleşim'den Sonra Ne Olur](https://youtu.be/7ggwLccuN5s?t=101) hakkında daha fazla bilgi edinin.
+Merak edenler için, Nisan 2021 ETHGlobal etkinliğinde Vitalik tarafından sunulan [Birleşme'den Sonra Ne Olacak](https://youtu.be/7ggwLccuN5s?t=101) hakkında daha fazla bilgi edinin.
 
-### Birleşim ve parçalama {#merge-and-data-sharding}
+### Birleşme ve parça zinciri (sharding) {#merge-and-data-sharding}
 
-Başlangıçta plan, ölçeklenebilirliği ele almak için Birleşim'den önce parçalama üzerinde çalışmaktı. Ancak, [katman 2 ölçeklendirme çözümlerinin](/layer-2/) patlamasıyla öncelik, önce iş ispatından hisse ispatına geçmeye kaydı.
+Başlangıçta plan, ölçeklenebilirliği ele almak için Birleşme'den önce parça zinciri (sharding) üzerinde çalışmaktı. Ancak, [katman 2 (L2) ölçeklendirme çözümlerinin](/layer-2/) patlamasıyla birlikte öncelik, ilk olarak İş Kanıtı'nı (PoW) Hisse Kanıtı (PoS) ile değiştirmeye kaydı.
 
-Parçalama planları hızla gelişiyor, ancak işlem yürütmeyi ölçeklendirmek için katman 2 teknolojilerinin yükselişi ve başarısı göz önüne alındığında, parçalama planları, toplama sözleşmelerinden sıkıştırılmış çağrı verilerini depolamanın yükünü dağıtmak için en uygun yolu bulmaya kaydı ve ağ kapasitesinde katlanarak büyümeye izin verdi. Bu, ilk olarak hisse ispatına geçmeden mümkün olmazdı.
+Parça zinciri (sharding) planları hızla gelişiyor, ancak işlem yürütmeyi ölçeklendirmek için katman 2 (L2) teknolojilerinin yükselişi ve başarısı göz önüne alındığında, parça zinciri planları, ağ kapasitesinde üstel büyümeye izin vererek Rollup sözleşmelerinden sıkıştırılmış çağrı verisi depolama yükünü dağıtmanın en uygun yolunu bulmaya kaydı. Bu, ilk olarak Hisse Kanıtı'na (PoS) geçiş yapılmadan mümkün olmazdı.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Parçalama
+  Parça Zinciri (Sharding)
 </ButtonLink>
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 <MergeArticleList />
 
