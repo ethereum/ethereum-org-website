@@ -1,10 +1,10 @@
 ---
-title: "Převody a schválení tokenů ERC-20 z chytrého kontraktu v Solidity"
-description: "Vytvořte chytrý kontrakt DEX, který spravuje převody a schválení tokenů ERC-20 pomocí Solidity."
+title: Převody a schvalování tokenů ERC-20 z chytrého kontraktu v Solidity
+description: Vytvořte chytrý kontrakt pro DEX, který zpracovává převody a schvalování tokenů ERC-20 pomocí Solidity.
 author: "jdourlens"
-tags: [ "smart kontrakt účty", "tokeny", "solidity", "erc-20" ]
+tags: ["chytré kontrakty", "tokeny", "solidity", "erc-20"]
 skill: intermediate
-breadcrumb: "ERC-20 převody"
+breadcrumb: Převody ERC-20
 lang: cs
 published: 2020-04-07
 source: EthereumDev
@@ -12,16 +12,16 @@ sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-V předchozím tutoriálu jsme prostudovali [anatomii tokenu ERC-20 v Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) na blockchainu Etherea. V tomto článku si ukážeme, jak můžeme použít chytrý kontrakt k interakci s tokenem pomocí jazyka Solidity.
+V předchozím tutoriálu jsme studovali [anatomii tokenu ERC-20 v Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) na blockchainu Etherea. V tomto článku se podíváme, jak můžeme použít chytrý kontrakt k interakci s tokenem pomocí jazyka Solidity.
 
-Pro tento chytrý kontrakt vytvoříme skutečnou zkušební decentralizovanou burzu, kde může uživatel směňovat ether za náš nově nasazený [token ERC-20](/developers/docs/standards/tokens/erc-20/).
+Pro tento chytrý kontrakt vytvoříme skutečnou cvičnou decentralizovanou burzu (DEX), kde může uživatel směnit ether za náš nově nasazený [token ERC-20](/developers/docs/standards/tokens/erc-20/).
 
-Pro tento tutoriál použijeme kód, který jsme napsali v předchozím tutoriálu, jako základ. Naše DEX vytvoří instanci kontraktu ve svém konstruktoru a provede následující operace:
+Pro tento tutoriál použijeme jako základ kód, který jsme napsali v předchozím tutoriálu. Naše DEX vytvoří instanci kontraktu ve svém konstruktoru a bude provádět následující operace:
 
 - směna tokenů za ether
 - směna etheru za tokeny
 
-Začneme s kódem naší decentralizované burzy přidáním naší jednoduché kódové základny ERC20:
+Kód naší decentralizované burzy začneme přidáním naší jednoduché kódové základny ERC-20:
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -101,7 +101,7 @@ contract ERC20Basic is IERC20 {
 
 ```
 
-Náš nový chytrý kontrakt DEX nasadí ERC-20 a získá všechny dodané:
+Náš nový chytrý kontrakt DEX nasadí ERC-20 a získá veškerou zásobu:
 
 ```solidity
 contract DEX {
@@ -126,84 +126,84 @@ contract DEX {
 }
 ```
 
-Takže nyní máme naši DEX a ta má k dispozici celou rezervu tokenů. Kontrakt má dvě funkce:
+Nyní tedy máme naši DEX a ta má k dispozici celou rezervu tokenů. Kontrakt má dvě funkce:
 
-- `buy`: Uživatel může poslat ether a na oplátku dostat tokeny
-- `sell`: Uživatel se může rozhodnout poslat tokeny, aby dostal zpět ether
+- `buy`: Uživatel může poslat ether a získat výměnou tokeny
+- `sell`: Uživatel se může rozhodnout poslat tokeny a získat zpět ether
 
 ## Funkce buy {#the-buy-function}
 
-Naprogramujme funkci buy. Nejprve budeme muset zkontrolovat množství etheru, které zpráva obsahuje, a ověřit, že kontrakt vlastní dostatek tokenů a že zpráva obsahuje nějaký ether. Pokud kontrakt vlastní dostatek tokenů, pošle počet tokenů uživateli a vyšle událost `Bought`.
+Pojďme naprogramovat funkci buy. Nejprve budeme muset zkontrolovat množství etheru, které zpráva obsahuje, a ověřit, že kontrakt vlastní dostatek tokenů a že zpráva obsahuje nějaký ether. Pokud kontrakt vlastní dostatek tokenů, pošle uživateli odpovídající počet tokenů a vyvolá událost `Bought`.
 
-Všimněte si, že pokud v případě chyby zavoláme funkci require, zaslaný ether bude přímo vrácen a navrácen uživateli.
+Všimněte si, že pokud v případě chyby zavoláme funkci require, odeslaný ether bude okamžitě vrácen (reverted) a předán zpět uživateli.
 
-Pro zjednodušení směníme 1 token za 1 wei.
+Abychom to udrželi jednoduché, směníme prostě 1 token za 1 Wei.
 
 ```solidity
 function buy() payable public {
     uint256 amountTobuy = msg.value;
     uint256 dexBalance = token.balanceOf(address(this));
-    require(amountTobuy > 0, "Musíte poslat nějaký ether");
-    require(amountTobuy <= dexBalance, "Nedostatek tokenů v rezervě");
+    require(amountTobuy > 0, "You need to send some ether");
+    require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
     token.transfer(msg.sender, amountTobuy);
     emit Bought(amountTobuy);
 }
 ```
 
-V případě, že je nákup úspěšný, měli bychom v transakci vidět dvě události: událost `Transfer` tokenu a událost `Bought`.
+V případě, že je nákup úspěšný, měli bychom v transakci vidět dvě události: `Transfer` tokenu a událost `Bought`.
 
-![Dvě události v transakci: Transfer a Bought](./transfer-and-bought-events.png)
+![Two events in the transaction: Transfer and Bought](./transfer-and-bought-events.png)
 
 ## Funkce sell {#the-sell-function}
 
-Funkce zodpovědná za prodej bude nejprve vyžadovat, aby uživatel schválil částku tím, že předem zavolá funkci approve. Schválení převodu vyžaduje, aby uživatel zavolal token ERC20Basic, který byl vytvořen DEXem. Toho lze dosáhnout tím, že nejprve zavoláte funkci `token()` kontraktu DEX, abyste získali adresu, kam DEX nasadila kontrakt ERC20Basic nazvaný `token`. Poté v naší relaci vytvoříme instanci tohoto kontraktu a zavoláme jeho funkci `approve`. Poté jsme schopni zavolat funkci `sell` DEXu a směnit naše tokeny zpět za ether. Například takhle to vypadá v interaktivní relaci brownie:
+Funkce zodpovědná za prodej bude nejprve vyžadovat, aby uživatel předem schválil částku zavoláním funkce approve. Schválení převodu vyžaduje, aby uživatel zavolal token ERC20Basic, jehož instanci vytvořila DEX. Toho lze dosáhnout tak, že nejprve zavoláme funkci `token()` kontraktu DEX, abychom získali adresu, na které DEX nasadila kontrakt ERC20Basic s názvem `token`. Poté v naší relaci vytvoříme instanci tohoto kontraktu a zavoláme jeho funkci `approve`. Následně můžeme zavolat funkci `sell` naší DEX a provést swap našich tokenů zpět za ether. Takto to například vypadá v interaktivní relaci Brownie:
 
 ```python
-#### Python v interaktivní konzoli brownie...
+#### Python v interaktivní konzoli Brownie...
 
 # nasadit DEX
 dex = DEX.deploy({'from':account1})
 
-# zavolat funkci buy pro směnu etheru za token
-# 1e18 je 1 ether vyjádřený ve wei
+# zavolat funkci buy pro swap etheru za token
+# 1e18 je 1 ether vyjádřený ve Wei
 dex.buy({'from': account2, 1e18})
 
-# získat adresu nasazení pro token ERC20
-# který byl nasazen při vytváření kontraktu DEX
-# dex.token() vrátí adresu nasazeného tokenu
+# získat adresu nasazení pro ERC-20 token
+# který byl nasazen během vytváření DEX kontraktu
+# dex.token() vrací nasazenou adresu pro token
 token = ERC20Basic.at(dex.token())
 
-# zavolat funkci approve tokenu
-# schválit adresu dexu jako utrácejícího
+# zavolat funkci schválit u tokenu
+# schválit adresu DEX jako utrácejícího
 # a kolik vašich tokenů smí utratit
 token.approve(dex.address, 3e18, {'from':account2})
 
 ```
 
-Poté, když je zavolána funkce sell, zkontrolujeme, zda byl převod z adresy volajícího na adresu kontraktu úspěšný, a poté pošleme ether zpět na adresu volajícího.
+Když je pak zavolána funkce sell, zkontrolujeme, zda byl převod z adresy volajícího na adresu kontraktu úspěšný, a poté pošleme ethery zpět na adresu volajícího.
 
 ```solidity
 function sell(uint256 amount) public {
-    require(amount > 0, "Musíte prodat alespoň nějaké tokeny");
+    require(amount > 0, "You need to sell at least some tokens");
     uint256 allowance = token.allowance(msg.sender, address(this));
-    require(allowance >= amount, "Zkontrolujte povolenou částku tokenu");
+    require(allowance >= amount, "Check the token allowance");
     token.transferFrom(msg.sender, address(this), amount);
     payable(msg.sender).transfer(amount);
     emit Sold(amount);
 }
 ```
 
-Pokud vše funguje, měli byste v transakci vidět 2 události (`Transfer` a `Sold`) a váš zůstatek tokenů a etheru by měl být aktualizován.
+Pokud vše funguje, měli byste v transakci vidět 2 události (`Transfer` a `Sold`) a váš zůstatek tokenů i etheru by se měl aktualizovat.
 
-![Dvě události v transakci: Transfer a Sold](./transfer-and-sold-events.png)
+![Two events in the transaction: Transfer and Sold](./transfer-and-sold-events.png)
 
 <Divider />
 
-V tomto tutoriálu jsme viděli, jak zkontrolovat zůstatek a povolenou částku tokenu ERC-20 a také jak volat `Transfer` a `TransferFrom` chytrého kontraktu ERC20 pomocí rozhraní.
+V tomto tutoriálu jsme viděli, jak zkontrolovat zůstatek a povolený limit tokenu ERC-20 a také jak pomocí rozhraní zavolat `Transfer` a `TransferFrom` chytrého kontraktu ERC-20.
 
-Jakmile provedete transakci, máme JavaScriptový tutoriál, jak [počkat a získat podrobnosti o transakcích](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/), které byly provedeny na vašem kontraktu, a [tutoriál pro dekódování událostí generovaných převody tokenů nebo jinými událostmi](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/), pokud máte ABI.
+Jakmile provedete transakci, máme tutoriál v JavaScriptu, jak [počkat a získat podrobnosti o transakcích](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/), které byly provedeny s vaším kontraktem, a [tutoriál pro dekódování událostí generovaných převody tokenů nebo jakýmikoli jinými událostmi](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/), pokud máte ABI.
 
-Zde je kompletní kód k tutoriálu:
+Zde je kompletní kód pro tento tutoriál:
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -296,16 +296,16 @@ contract DEX {
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "Musíte poslat nějaký ether");
-        require(amountTobuy <= dexBalance, "Nedostatek tokenů v rezervě");
+        require(amountTobuy > 0, "You need to send some ether");
+        require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);
     }
 
     function sell(uint256 amount) public {
-        require(amount > 0, "Musíte prodat alespoň nějaké tokeny");
+        require(amount > 0, "You need to sell at least some tokens");
         uint256 allowance = token.allowance(msg.sender, address(this));
-        require(allowance >= amount, "Zkontrolujte povolenou částku tokenu");
+        require(allowance >= amount, "Check the token allowance");
         token.transferFrom(msg.sender, address(this), amount);
         payable(msg.sender).transfer(amount);
         emit Sold(amount);
