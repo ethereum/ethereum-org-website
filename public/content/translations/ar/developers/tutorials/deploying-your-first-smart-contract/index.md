@@ -2,7 +2,7 @@
 title: "نشر أول عقد ذكي لك"
 description: "مقدمة حول نشر أول عقد ذكي لك على شبكة اختبار إيثيريوم"
 author: "jdourlens"
-tags: ["العقود الذكية", "remix", "solidity", "النشر"]
+tags: ["العقود الذكية", "Remix", "Solidity", "النشر"]
 skill: beginner
 breadcrumb: "نشر أول عقد"
 lang: ar

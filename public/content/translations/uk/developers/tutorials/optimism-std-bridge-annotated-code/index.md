@@ -1,10 +1,10 @@
 ---
 title: "Огляд контракту стандартного мосту Optimism"
-description: Як працює стандартний міст для Optimism? Чому він працює саме так?
-author: Орі Померанц
-tags: ["solidity", "міст", "рівень 2 (l2)"]
+description: "Як працює стандартний міст для Optimism? Чому він працює саме так?"
+author: "Орі Померанц"
+tags: ["Solidity", "міст", "рівень 2 (l2)"]
 skill: intermediate
-breadcrumb: Міст Optimism
+breadcrumb: "Міст Optimism"
 published: 2022-03-30
 lang: uk
 ---

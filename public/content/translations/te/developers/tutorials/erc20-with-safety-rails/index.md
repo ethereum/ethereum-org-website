@@ -1,11 +1,11 @@
 ---
-title: సేఫ్టీ రైల్స్‌తో ERC-20
-description: చిన్న చిన్న తప్పులను నివారించడంలో ప్రజలకు ఎలా సహాయపడాలి
-author: ఓరి పోమెరాంట్జ్
+title: "సేఫ్టీ రైల్స్‌తో ERC-20"
+description: "చిన్న చిన్న తప్పులను నివారించడంలో ప్రజలకు ఎలా సహాయపడాలి"
+author: "ఓరి పోమెరాంట్జ్"
 lang: te
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20 భద్రత
+breadcrumb: "ERC-20 భద్రత"
 published: 2022-08-15
 ---
 

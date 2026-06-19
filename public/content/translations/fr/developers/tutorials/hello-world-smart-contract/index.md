@@ -1,8 +1,8 @@
 ---
-title: Contrat intelligent Hello World pour les débutants
-description: Tutoriel d'introduction sur l'écriture et le déploiement d'un contrat intelligent simple sur Ethereum.
+title: "Contrat intelligent Hello World pour les débutants"
+description: "Tutoriel d'introduction sur l'écriture et le déploiement d'un contrat intelligent simple sur Ethereum."
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "contrats intelligents", "déploiement"]
+tags: ["Solidity", "Hardhat", "Alchemy", "contrats intelligents", "déploiement"]
 skill: beginner
 breadcrumb: Contrat Hello World
 lang: fr

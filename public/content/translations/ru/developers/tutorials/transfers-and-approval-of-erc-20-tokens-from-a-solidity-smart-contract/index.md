@@ -1,6 +1,6 @@
 ---
-title: Переводы и одобрение токенов ERC-20 из смарт-контракта на Solidity
-description: Создание смарт-контракта DEX, который обрабатывает переводы и одобрения токенов ERC-20 с использованием Solidity.
+title: "Переводы и одобрение токенов ERC-20 из смарт-контракта на Solidity"
+description: "Создание смарт-контракта DEX, который обрабатывает переводы и одобрения токенов ERC-20 с использованием Solidity."
 author: jdourlens
 tags:
   - смарт-контракты
@@ -8,7 +8,7 @@ tags:
   - solidity
   - erc-20
 skill: intermediate
-breadcrumb: Переводы ERC-20
+breadcrumb: "Переводы ERC-20"
 lang: ru
 published: 2020-04-07
 source: EthereumDev

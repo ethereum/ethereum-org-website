@@ -1,10 +1,10 @@
 ---
-title: 从 Solidity 智能合约转账和授权 ERC-20 代币
-description: 使用 Solidity 构建一个处理 ERC-20 代币转账和授权的 DEX 智能合约。
+title: "从 Solidity 智能合约转账和授权 ERC-20 代币"
+description: "使用 Solidity 构建一个处理 ERC-20 代币转账和授权的 DEX 智能合约。"
 author: "jdourlens"
-tags: ["智能合约", "代币", "solidity", "erc-20"]
+tags: ["智能合约", "代币", "Solidity", "erc-20"]
 skill: intermediate
-breadcrumb: ERC-20 转账
+breadcrumb: "ERC-20 转账"
 lang: zh
 published: 2020-04-07
 source: EthereumDev

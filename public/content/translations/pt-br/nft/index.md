@@ -1,7 +1,7 @@
 ---
-title: Tokens não fungíveis (NFT)
-metaTitle: O que são NFTs? | Benefícios e uso
-description: Uma visão geral dos NFTs no Ethereum
+title: "Tokens não fungíveis (NFT)"
+metaTitle: "O que são NFTs? | Benefícios e uso"
+description: "Uma visão geral dos NFTs no Ethereum"
 lang: pt-br
 template: use-cases
 sidebarDepth: 2

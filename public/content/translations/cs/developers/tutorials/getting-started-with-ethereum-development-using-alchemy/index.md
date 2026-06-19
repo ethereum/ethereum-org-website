@@ -1,10 +1,10 @@
 ---
-title: Začínáme s vývojem na Ethereu
+title: "Začínáme s vývojem na Ethereu"
 description: "Toto je průvodce pro začátečníky, jak začít s vývojem na Ethereu. Provedeme vás od spuštění koncového bodu API přes vytvoření požadavku z příkazové řádky až po napsání vašeho prvního Web3 skriptu! Nejsou potřeba žádné předchozí zkušenosti s vývojem na blockchainu!"
 author: "Elan Halpern"
 tags: ["JavaScript", "ethers.js", "uzly", "dotazování", "Alchemy"]
 skill: beginner
-breadcrumb: Začínáme
+breadcrumb: "Začínáme"
 lang: cs
 published: 2020-10-30
 source: Medium

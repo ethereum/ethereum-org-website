@@ -1,11 +1,11 @@
 ---
-title: Raspberry Pi 4 పై ఎథీరియం నోడ్‌ను రన్ చేయండి
-description: మీ Raspberry Pi 4 ని ఫ్లాష్ చేయండి, ఈథర్‌నెట్ కేబుల్‌ను ప్లగ్ చేయండి, SSD డిస్క్‌ను కనెక్ట్ చేయండి మరియు Raspberry Pi 4 ని పూర్తి ఎథీరియం నోడ్ + ధృవీకర్తగా మార్చడానికి పరికరాన్ని పవర్ అప్ చేయండి.
+title: "Raspberry Pi 4 పై ఎథీరియం నోడ్‌ను రన్ చేయండి"
+description: "మీ Raspberry Pi 4 ని ఫ్లాష్ చేయండి, ఈథర్‌నెట్ కేబుల్‌ను ప్లగ్ చేయండి, SSD డిస్క్‌ను కనెక్ట్ చేయండి మరియు Raspberry Pi 4 ని పూర్తి ఎథీరియం నోడ్ + ధృవీకర్తగా మార్చడానికి పరికరాన్ని పవర్ అప్ చేయండి."
 author: "EthereumOnArm"
 tags: ["క్లయింట్లు", "అమలు పొర", "ఏకాభిప్రాయ పొర", "నోడ్‌లు"]
 lang: te
 skill: intermediate
-breadcrumb: Rasp Pi నోడ్
+breadcrumb: "Rasp Pi నోడ్"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

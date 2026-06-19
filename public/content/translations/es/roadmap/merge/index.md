@@ -1,6 +1,6 @@
 ---
-title: La Fusión
-description: Aprenda sobre La Fusión: cuando la red principal de Ethereum adoptó la prueba de participación.
+title: "La Fusión"
+description: "Aprenda sobre La Fusión: cuando la red principal de Ethereum adoptó la prueba de participación."
 lang: es
 template: upgrade
 image: /images/upgrades/merge.png

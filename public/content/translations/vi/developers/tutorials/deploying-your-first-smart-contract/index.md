@@ -1,10 +1,10 @@
 ---
-title: Triển khai hợp đồng thông minh đầu tiên của bạn
-description: Giới thiệu về việc triển khai hợp đồng thông minh đầu tiên của bạn trên mạng lưới thử nghiệm Ethereum
+title: "Triển khai hợp đồng thông minh đầu tiên của bạn"
+description: "Giới thiệu về việc triển khai hợp đồng thông minh đầu tiên của bạn trên mạng lưới thử nghiệm Ethereum"
 author: "jdourlens"
-tags: ["hợp đồng thông minh", "remix", "solidity", "triển khai"]
+tags: ["hợp đồng thông minh", "Remix", "Solidity", "triển khai"]
 skill: beginner
-breadcrumb: Triển khai hợp đồng đầu tiên
+breadcrumb: "Triển khai hợp đồng đầu tiên"
 lang: vi
 published: 2020-04-03
 source: EthereumDev

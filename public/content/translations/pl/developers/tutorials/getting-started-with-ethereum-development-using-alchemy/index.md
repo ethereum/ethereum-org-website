@@ -2,7 +2,7 @@
 title: Wprowadzenie do programowania w Ethereum
 description: "To jest przewodnik dla początkujących, jak zacząć programować w Ethereum. Przeprowadzimy Cię od uruchomienia punktu końcowego API, przez wykonanie żądania z wiersza poleceń, aż po napisanie pierwszego skryptu Web3! Doświadczenie w programowaniu blockchain nie jest wymagane!"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "węzły", "zapytania", "alchemy"]
+tags: ["JavaScript", "ethers.js", "węzły", "zapytania", "Alchemy"]
 skill: beginner
 breadcrumb: Wprowadzenie
 lang: pl

@@ -2,7 +2,7 @@
 title: Uhamisho na uidhinishaji wa tokeni za ERC-20 kutoka kwenye mkataba mahiri wa Solidity
 description: Jenga mkataba mahiri wa DEX unaoshughulikia uhamisho na uidhinishaji wa tokeni za ERC-20 ukitumia Solidity.
 author: "jdourlens"
-tags: ["mikataba mahiri", "tokeni", "solidity", "erc-20"]
+tags: ["mikataba mahiri", "tokeni", "Solidity", "erc-20"]
 skill: intermediate
 breadcrumb: Uhamisho wa ERC-20
 lang: sw

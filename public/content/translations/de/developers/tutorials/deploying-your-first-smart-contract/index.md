@@ -1,8 +1,8 @@
 ---
 title: Deinen ersten Smart Contract bereitstellen
-description: Eine Einführung in die Bereitstellung deines ersten Smart Contracts in einem Ethereum-Testnetzwerk
+description: "Eine Einführung in die Bereitstellung deines ersten Smart Contracts in einem Ethereum-Testnetzwerk"
 author: "jdourlens"
-tags: ["Smart Contracts", "remix", "solidity", "Bereitstellung"]
+tags: ["Smart Contracts", "Remix", "Solidity", "Bereitstellung"]
 skill: beginner
 breadcrumb: Ersten Vertrag bereitstellen
 lang: de

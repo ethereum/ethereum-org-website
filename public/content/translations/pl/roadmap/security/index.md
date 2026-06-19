@@ -1,6 +1,6 @@
 ---
 title: Bezpieczniejsze Ethereum
-description: Ethereum jest najbezpieczniejszą i najbardziej zdecentralizowaną platformą inteligentnych kontraktów, jaka istnieje. Wciąż jednak można wprowadzić ulepszenia, aby Ethereum pozostało odporne na wszelkie ataki w dalekiej przyszłości.
+description: "Ethereum jest najbezpieczniejszą i najbardziej zdecentralizowaną platformą inteligentnych kontraktów, jaka istnieje. Wciąż jednak można wprowadzić ulepszenia, aby Ethereum pozostało odporne na wszelkie ataki w dalekiej przyszłości."
 lang: pl
 image: /images/roadmap/roadmap-security.png
 alt: Mapa drogowa Ethereum

@@ -1,9 +1,9 @@
 ---
 title: "⁦Using WebSockets⁩"
 description: "⁦WebSockets⁩ اور ⁦Alchemy⁩ کا استعمال کرتے ہوئے ⁦JSON-RPC⁩ درخواستیں کرنے اور ایونٹس کو سبسکرائب کرنے کے لیے گائیڈ۔"
-author: ایلان ہیلپرن
+author: "ایلان ہیلپرن"
 lang: ur
-tags: ["alchemy", "websockets", "کوئری کرنا", "javascript"]
+tags: ["Alchemy", "websockets", "کوئری کرنا", "JavaScript"]
 skill: beginner
 breadcrumb: "⁦WebSockets⁩"
 source: Alchemy docs

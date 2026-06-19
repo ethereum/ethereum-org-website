@@ -1,11 +1,11 @@
 ---
-title: 安全対策付きのERC-20
-description: ユーザーの単純なミスを防ぐ方法
-author: オリ・ポメランツ
+title: "安全対策付きのERC-20"
+description: "ユーザーの単純なミスを防ぐ方法"
+author: "オリ・ポメランツ"
 lang: ja
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20の安全性
+breadcrumb: "ERC-20の安全性"
 published: 2022-08-15
 ---
 

@@ -3,7 +3,7 @@ title: Kutumia WebSockets
 description: Mwongozo wa kutumia WebSockets na Alchemy kufanya maombi ya JSON-RPC na kujiandikisha kwa matukio.
 author: "Elan Halpern"
 lang: sw
-tags: ["alchemy", "websockets", "kudadisi", "javascript"]
+tags: ["Alchemy", "websockets", "kudadisi", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

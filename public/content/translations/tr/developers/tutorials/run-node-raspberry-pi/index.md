@@ -1,11 +1,11 @@
 ---
-title: Raspberry Pi 4 üzerinde bir Ethereum düğümü çalıştırın
-description: Raspberry Pi 4'ünüzü flaşlayın, bir ethernet kablosu takın, SSD diskini bağlayın ve Raspberry Pi 4'ü tam bir Ethereum düğümü + doğrulayıcıya dönüştürmek için cihazı çalıştırın
+title: "Raspberry Pi 4 üzerinde bir Ethereum düğümü çalıştırın"
+description: "Raspberry Pi 4'ünüzü flaşlayın, bir ethernet kablosu takın, SSD diskini bağlayın ve Raspberry Pi 4'ü tam bir Ethereum düğümü + doğrulayıcıya dönüştürmek için cihazı çalıştırın"
 author: "EthereumOnArm"
 tags: ["istemciler", "yürütme katmanı", "fikir birliği katmanı", "düğümler"]
 lang: tr
 skill: intermediate
-breadcrumb: Rasp Pi Düğümü
+breadcrumb: "Rasp Pi Düğümü"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

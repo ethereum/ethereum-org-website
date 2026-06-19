@@ -2,7 +2,7 @@
 title: "تحويلات وموافقة الرموز المميزة ⁦ERC-20⁩ من عقد ذكي بلغة ⁦Solidity⁩"
 description: "بناء عقد ذكي لمنصة تداول لامركزية (DEX) يتعامل مع تحويلات وموافقات الرموز المميزة ⁦ERC-20⁩ باستخدام ⁦Solidity⁩."
 author: "jdourlens"
-tags: ["العقود الذكية", "الرموز المميزة", "solidity", "erc-20"]
+tags: ["العقود الذكية", "الرموز المميزة", "Solidity", "erc-20"]
 skill: intermediate
 breadcrumb: "تحويلات ⁦ERC-20⁩"
 lang: ar

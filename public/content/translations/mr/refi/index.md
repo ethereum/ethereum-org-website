@@ -1,6 +1,6 @@
 ---
-title: पुनरुत्पादक वित्त (रेफाय)
-description: रेफाय (ReFi) आणि त्याच्या सध्याच्या उपयोग प्रकरणांचा (use cases) आढावा.
+title: "पुनरुत्पादक वित्त (रेफाय)"
+description: "रेफाय (ReFi) आणि त्याच्या सध्याच्या उपयोग प्रकरणांचा (use cases) आढावा."
 lang: mr
 template: use-cases
 sidebarDepth: 2

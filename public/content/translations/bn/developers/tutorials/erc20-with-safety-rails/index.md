@@ -1,11 +1,11 @@
 ---
-title: ⁦সেফটি রেল সহ ERC-20⁩
-description: কীভাবে মানুষকে ছোটখাটো ভুল এড়াতে সাহায্য করা যায়
-author: ওরি পোমেরান্টজ
+title: "⁦সেফটি রেল সহ ERC-20⁩"
+description: "কীভাবে মানুষকে ছোটখাটো ভুল এড়াতে সাহায্য করা যায়"
+author: "ওরি পোমেরান্টজ"
 lang: bn
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ⁦ERC-20⁩ নিরাপত্তা
+breadcrumb: "⁦ERC-20⁩ নিরাপত্তা"
 published: 2022-08-15
 ---
 

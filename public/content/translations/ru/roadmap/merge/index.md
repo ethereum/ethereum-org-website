@@ -1,6 +1,6 @@
 ---
-title: Слияние
-description: Узнайте о Слиянии — моменте, когда основная сеть Ethereum перешла на доказательство доли владения.
+title: "Слияние"
+description: "Узнайте о Слиянии — моменте, когда основная сеть Ethereum перешла на доказательство доли владения."
 lang: ru
 template: upgrade
 image: /images/upgrades/merge.png

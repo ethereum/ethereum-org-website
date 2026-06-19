@@ -1,6 +1,6 @@
 ---
-title: 扩容以太坊
-description: 汇总将交易在链下批量处理，从而降低用户的成本。然而，目前汇总使用数据的方式过于昂贵，限制了交易成本的降低空间。Proto-Danksharding 解决了这个问题。
+title: "扩容以太坊"
+description: "汇总将交易在链下批量处理，从而降低用户的成本。然而，目前汇总使用数据的方式过于昂贵，限制了交易成本的降低空间。Proto-Danksharding 解决了这个问题。"
 lang: zh
 image: /images/roadmap/roadmap-transactions.png
 alt: "以太坊路线图"
@@ -18,8 +18,8 @@ template: roadmap
     <li>如今的汇总比以太坊一层网络 (l1) 便宜 <strong>约 5-20 倍</strong></li>
     <li>ZK-rollup 很快将使费用降低 <strong>约 40-100 倍</strong></li>
     <li>以太坊即将进行的变更将提供另外 <strong>约 100-1000 倍</strong> 的扩容</li>
-    <li style={{ marginBottom: 0 }}>用户将受益于 <strong>成本低于 0.001 美元</strong> 的交易</strong>
-  </strong>
+ <li style={{ marginBottom: 0 }}>用户将受益于 <strong>成本低于 0.001 美元</strong> 的交易
+
 </AlertContent>
 </Alert>
 

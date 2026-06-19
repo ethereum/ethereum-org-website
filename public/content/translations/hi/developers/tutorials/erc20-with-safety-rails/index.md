@@ -1,11 +1,11 @@
 ---
-title: सुरक्षा उपायों (Safety Rails) के साथ ERC-20
-description: लोगों को छोटी-मोटी गलतियों से बचने में कैसे मदद करें
-author: ओरी पोमेरेंट्ज़
+title: "सुरक्षा उपायों (Safety Rails) के साथ ERC-20"
+description: "लोगों को छोटी-मोटी गलतियों से बचने में कैसे मदद करें"
+author: "ओरी पोमेरेंट्ज़"
 lang: hi
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20 सुरक्षा
+breadcrumb: "ERC-20 सुरक्षा"
 published: 2022-08-15
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Daha güvenli bir Ethereum
-description: Ethereum, var olan en güvenli ve merkeziyetsiz akıllı sözleşme platformudur. Ancak, Ethereum'un gelecekte de her türlü saldırıya karşı dirençli kalabilmesi için yapılabilecek iyileştirmeler hâlâ mevcuttur.
+title: "Daha güvenli bir Ethereum"
+description: "Ethereum, var olan en güvenli ve merkeziyetsiz akıllı sözleşme platformudur. Ancak, Ethereum'un gelecekte de her türlü saldırıya karşı dirençli kalabilmesi için yapılabilecek iyileştirmeler hâlâ mevcuttur."
 lang: tr
 image: /images/roadmap/roadmap-security.png
 alt: "Ethereum yol haritası"

@@ -1,11 +1,11 @@
 ---
-title: Exécuter un nœud Ethereum sur Raspberry Pi 4
-description: Flashez votre Raspberry Pi 4, branchez un câble Ethernet, connectez le disque SSD et allumez l'appareil pour transformer le Raspberry Pi 4 en un nœud Ethereum complet + validateur
+title: "Exécuter un nœud Ethereum sur Raspberry Pi 4"
+description: "Flashez votre Raspberry Pi 4, branchez un câble Ethernet, connectez le disque SSD et allumez l'appareil pour transformer le Raspberry Pi 4 en un nœud Ethereum complet + validateur"
 author: "EthereumOnArm"
 tags: ["clients", "couche d'exécution", "couche de consensus", "nœuds"]
 lang: fr
 skill: intermediate
-breadcrumb: Nœud Rasp Pi
+breadcrumb: "Nœud Rasp Pi"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

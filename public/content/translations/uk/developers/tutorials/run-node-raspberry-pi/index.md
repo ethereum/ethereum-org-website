@@ -1,11 +1,11 @@
 ---
-title: Запуск вузла Етеріуму на Raspberry Pi 4
-description: Прошийте свій Raspberry Pi 4, підключіть кабель Ethernet, під'єднайте SSD-диск і увімкніть пристрій, щоб перетворити Raspberry Pi 4 на повноцінний вузол Етеріуму та валідатор
+title: "Запуск вузла Етеріуму на Raspberry Pi 4"
+description: "Прошийте свій Raspberry Pi 4, підключіть кабель Ethernet, під'єднайте SSD-диск і увімкніть пристрій, щоб перетворити Raspberry Pi 4 на повноцінний вузол Етеріуму та валідатор"
 author: "EthereumOnArm"
 tags: ["клієнти", "рівень виконання", "рівень консенсусу", "вузли"]
 lang: uk
 skill: intermediate
-breadcrumb: Вузол на Raspberry Pi
+breadcrumb: "Вузол на Raspberry Pi"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

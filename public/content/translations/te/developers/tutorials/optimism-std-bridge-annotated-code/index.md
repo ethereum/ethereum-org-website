@@ -1,10 +1,10 @@
 ---
 title: "Optimism ప్రామాణిక వారధి కాంట్రాక్ట్ వాక్‌త్రూ"
 description: "Optimism కోసం ప్రామాణిక వారధి ఎలా పనిచేస్తుంది? ఇది ఈ విధంగా ఎందుకు పనిచేస్తుంది?"
-author: ఓరి పోమెరాంట్జ్
-tags: ["solidity", "వారధి", "లేయర్ 2 (l2)"]
+author: "ఓరి పోమెరాంట్జ్"
+tags: ["Solidity", "వారధి", "లేయర్ 2 (l2)"]
 skill: intermediate
-breadcrumb: Optimism వారధి
+breadcrumb: "Optimism వారధి"
 published: 2022-03-30
 lang: te
 ---

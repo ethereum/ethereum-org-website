@@ -1,12 +1,12 @@
 ---
-title: 使用 InfluxDB 和 Grafana 监控 Geth
-description: 使用 InfluxDB 和 Grafana 为你的 Geth 节点设置监控，以跟踪性能并识别问题。
+title: "使用 InfluxDB 和 Grafana 监控 Geth"
+description: "使用 InfluxDB 和 Grafana 为你的 Geth 节点设置监控，以跟踪性能并识别问题。"
 author: "马里奥·哈维尔"
 tags:
   - 客户端
   - 节点
 skill: intermediate
-breadcrumb: 监控 Geth
+breadcrumb: "监控 Geth"
 lang: zh
 published: 2021-01-13
 ---
@@ -39,28 +39,16 @@ published: 2021-01-13
 首先，让我们下载并安装 InfluxDB。可以在 [Influxdata 发布页面](https://portal.influxdata.com/downloads/)找到各种下载选项。选择适合你环境的选项。
 你也可以从[代码库](https://repos.influxdata.com/)安装它。例如，在基于 Debian 的发行版中：
 
-<HTML-PLACEHOLDER-CODEBLOCK-685d10 />
-
 成功安装 InfluxDB 后，确保它在后台运行。默认情况下，可以通过 `localhost:8086` 访问它。
 在使用 `influx` 客户端之前，你必须创建一个具有管理员权限的新用户。该用户将用于高级管理、创建数据库和用户。
 
-<HTML-PLACEHOLDER-CODEBLOCK-a5c65e />
-
 现在你可以使用 influx 客户端以该用户身份进入 [InfluxDB shell](https://docs.influxdata.com/influxdb/v1.8/tools/shell/)。
-
-<HTML-PLACEHOLDER-CODEBLOCK-8b28eb />
 
 直接在其 shell 中与 InfluxDB 通信，你可以为 Geth 指标创建数据库和用户。
 
-<HTML-PLACEHOLDER-CODEBLOCK-1c43ce />
-
 使用以下命令验证创建的条目：
 
-<HTML-PLACEHOLDER-CODEBLOCK-5dee85 />
-
 退出 InfluxDB shell。
-
-<HTML-PLACEHOLDER-CODEBLOCK-090211 />
 
 InfluxDB 正在运行并已配置为存储来自 Geth 的指标。
 
@@ -69,20 +57,14 @@ InfluxDB 正在运行并已配置为存储来自 Geth 的指标。
 设置好数据库后，我们需要在 Geth 中启用指标收集。请注意 `geth --help` 中的 `METRICS AND STATS OPTIONS`。那里可以找到多个选项，在这种情况下，我们希望 Geth 将数据推送到 InfluxDB。
 基本设置指定了可访问 InfluxDB 的端点以及数据库的身份验证。
 
-<HTML-PLACEHOLDER-CODEBLOCK-1cd01d />
-
 这些标志可以附加到启动客户端的命令中，也可以保存到配置文件中。
 
 你可以验证 Geth 是否成功推送数据，例如通过列出数据库中的指标。在 InfluxDB shell 中：
-
-<HTML-PLACEHOLDER-CODEBLOCK-1da8b2 />
 
 ## 设置 Grafana {#setting-up-grafana}
 
 下一步是安装 Grafana，它将以图形方式解释数据。请按照 Grafana 文档中针对你环境的安装过程进行操作。除非你有其他需求，否则请确保安装 OSS 版本。
 使用代码库在 Debian 发行版上的示例安装步骤：
-
-<HTML-PLACEHOLDER-CODEBLOCK-ee08e5 />
 
 当 Grafana 运行后，应该可以通过 `localhost:3000` 访问它。
 使用你喜欢的浏览器访问此路径，然后使用默认凭据（用户：`admin`，密码：`admin`）登录。出现提示时，更改默认密码并保存。

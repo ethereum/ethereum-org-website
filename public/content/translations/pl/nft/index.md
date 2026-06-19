@@ -1,12 +1,12 @@
 ---
 title: Niewymienialne tokeny (NFT)
-metaTitle: Czym są NFT? | Korzyści i zastosowanie
-description: Przegląd NFT na Ethereum
+metaTitle: "Czym są NFT? | Korzyści i zastosowanie"
+description: "Przegląd NFT na Ethereum"
 lang: pl
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Logo Eth wyświetlane jako hologram.
+alt: "Logo Eth wyświetlane jako hologram."
 summaryPoints:
   - "Sposób na reprezentowanie wszystkiego, co unikalne, jako aktywa opartego na Ethereum."
   - "NFT dają twórcom treści więcej władzy niż kiedykolwiek wcześniej."

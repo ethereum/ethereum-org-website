@@ -1,10 +1,10 @@
 ---
-title: Nasazení vašeho prvního chytrého kontraktu
-description: Úvod do nasazení vašeho prvního chytrého kontraktu v testovací síti Etherea
+title: "Nasazení vašeho prvního chytrého kontraktu"
+description: "Úvod do nasazení vašeho prvního chytrého kontraktu v testovací síti Etherea"
 author: "jdourlens"
-tags: ["chytré kontrakty", "remix", "solidity", "nasazení"]
+tags: ["chytré kontrakty", "Remix", "Solidity", "nasazení"]
 skill: beginner
-breadcrumb: Nasazení prvního kontraktu
+breadcrumb: "Nasazení prvního kontraktu"
 lang: cs
 published: 2020-04-03
 source: EthereumDev

@@ -2,7 +2,7 @@
 title: Smart contract Hello World per principianti
 description: Tutorial introduttivo sulla scrittura e la distribuzione di un semplice smart contract su Ethereum.
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "smart contract", "distribuzione"]
+tags: ["Solidity", "Hardhat", "Alchemy", "smart contract", "distribuzione"]
 skill: beginner
 breadcrumb: Contratto Hello World
 lang: it

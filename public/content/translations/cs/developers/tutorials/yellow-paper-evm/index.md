@@ -1,6 +1,6 @@
 ---
-title: Porozumění specifikacím EVM v yellow paperu
-description: Porozumění části yellow paperu, formální specifikace Etherea, která vysvětluje virtuální stroj Etherea (EVM).
+title: "Porozumění specifikacím EVM v yellow paperu"
+description: "Porozumění části yellow paperu, formální specifikace Etherea, která vysvětluje virtuální stroj Etherea (EVM)."
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate

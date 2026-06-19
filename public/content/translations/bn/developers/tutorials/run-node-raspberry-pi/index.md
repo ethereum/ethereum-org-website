@@ -1,7 +1,7 @@
 ---
-title: Raspberry Pi 4-এ একটি ইথেরিয়াম নোড চালান
-description: আপনার Raspberry Pi 4 ফ্ল্যাশ করুন, ইথারনেট কেবল প্লাগ ইন করুন, SSD ডিস্ক কানেক্ট করুন এবং ডিভাইসটি চালু করে Raspberry Pi 4-কে একটি সম্পূর্ণ ইথেরিয়াম নোড + ভ্যালিডেটর-এ পরিণত করুন
-author: ইথেরিয়ামঅনআর্ম
+title: "Raspberry Pi 4-এ একটি ইথেরিয়াম নোড চালান"
+description: "আপনার Raspberry Pi 4 ফ্ল্যাশ করুন, ইথারনেট কেবল প্লাগ ইন করুন, SSD ডিস্ক কানেক্ট করুন এবং ডিভাইসটি চালু করে Raspberry Pi 4-কে একটি সম্পূর্ণ ইথেরিয়াম নোড + ভ্যালিডেটর-এ পরিণত করুন"
+author: "ইথেরিয়ামঅনআর্ম"
 tags:
   - ক্লায়েন্ট
   - এক্সিকিউশন লেয়ার
@@ -9,7 +9,7 @@ tags:
   - নোড
 lang: bn
 skill: intermediate
-breadcrumb: Rasp Pi নোড
+breadcrumb: "Rasp Pi নোড"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

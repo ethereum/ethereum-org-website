@@ -1,11 +1,11 @@
 ---
-title: Güvenlik Önlemleriyle ERC-20
-description: İnsanların aptalca hatalardan kaçınmasına nasıl yardımcı olunur
+title: "Güvenlik Önlemleriyle ERC-20"
+description: "İnsanların aptalca hatalardan kaçınmasına nasıl yardımcı olunur"
 author: Ori Pomerantz
 lang: tr
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20 güvenliği
+breadcrumb: "ERC-20 güvenliği"
 published: 2022-08-15
 ---
 

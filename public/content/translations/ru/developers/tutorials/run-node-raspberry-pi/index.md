@@ -1,11 +1,11 @@
 ---
-title: Запуск узла Эфириума на Raspberry Pi 4
-description: Прошейте Raspberry Pi 4, подключите кабель Ethernet, подсоедините SSD-диск и включите устройство, чтобы превратить Raspberry Pi 4 в полноценный узел Эфириума и валидатор
+title: "Запуск узла Эфириума на Raspberry Pi 4"
+description: "Прошейте Raspberry Pi 4, подключите кабель Ethernet, подсоедините SSD-диск и включите устройство, чтобы превратить Raspberry Pi 4 в полноценный узел Эфириума и валидатор"
 author: "EthereumOnArm"
 tags: ["клиенты", "уровень исполнения", "уровень консенсуса", "узлы"]
 lang: ru
 skill: intermediate
-breadcrumb: Узел на Rasp Pi
+breadcrumb: "Узел на Rasp Pi"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

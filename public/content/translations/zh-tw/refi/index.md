@@ -1,6 +1,6 @@
 ---
-title: 再生金融 (ReFi)
-description: 再生金融 (ReFi) 及其目前使用案例的概述。
+title: "再生金融 (ReFi)"
+description: "再生金融 (ReFi) 及其目前使用案例的概述。"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2

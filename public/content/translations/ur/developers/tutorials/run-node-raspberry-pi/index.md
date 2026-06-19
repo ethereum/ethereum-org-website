@@ -1,11 +1,11 @@
 ---
-title: ⁦Raspberry Pi 4⁩ پر ⁦Ethereum⁩ نوڈ چلائیں
-description: اپنے ⁦Raspberry Pi 4⁩ کو فلیش کریں، ایتھرنیٹ کیبل لگائیں، ⁦SSD⁩ ڈسک جوڑیں اور ڈیوائس کو آن کر کے ⁦Raspberry Pi 4⁩ کو ایک مکمل ⁦Ethereum⁩ نوڈ اور توثیق کار میں تبدیل کریں۔
+title: "⁦Raspberry Pi 4⁩ پر ⁦Ethereum⁩ نوڈ چلائیں"
+description: "اپنے ⁦Raspberry Pi 4⁩ کو فلیش کریں، ایتھرنیٹ کیبل لگائیں، ⁦SSD⁩ ڈسک جوڑیں اور ڈیوائس کو آن کر کے ⁦Raspberry Pi 4⁩ کو ایک مکمل ⁦Ethereum⁩ نوڈ اور توثیق کار میں تبدیل کریں۔"
 author: "ایتھیریم آن آرم"
 tags: ["کلائنٹس", "ایگزیکیوشن لیئر", "اتفاق رائے کی لیئر", "نوڈز"]
 lang: ur
 skill: intermediate
-breadcrumb: ⁦Rasp Pi⁩ نوڈ
+breadcrumb: "⁦Rasp Pi⁩ نوڈ"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

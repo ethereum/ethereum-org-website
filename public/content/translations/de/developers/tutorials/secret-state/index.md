@@ -1,6 +1,6 @@
 ---
-title: Verwendung von Zero-Knowledge für einen geheimen Zustand
-description: Onchain-Spiele sind eingeschränkt, da sie keine verborgenen Informationen speichern können. Nach dem Lesen dieses Tutorials wird der Leser in der Lage sein, Zero-Knowledge-Beweise und Serverkomponenten zu kombinieren, um verifizierbare Spiele mit einem geheimen Zustand als offchain-Komponente zu erstellen. Die Technik dazu wird anhand der Erstellung eines Minesweeper-Spiels demonstriert.
+title: "Verwendung von Zero-Knowledge für einen geheimen Zustand"
+description: "Onchain-Spiele sind eingeschränkt, da sie keine verborgenen Informationen speichern können. Nach dem Lesen dieses Tutorials wird der Leser in der Lage sein, Zero-Knowledge-Beweise und Serverkomponenten zu kombinieren, um verifizierbare Spiele mit einem geheimen Zustand als offchain-Komponente zu erstellen. Die Technik dazu wird anhand der Erstellung eines Minesweeper-Spiels demonstriert."
 author: Ori Pomerantz
 tags: ["Server", "offchain", "zentralisiert", "Zero-Knowledge", "zokrates", "mud", "Datenschutz"]
 skill: advanced

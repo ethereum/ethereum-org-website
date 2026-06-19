@@ -1,10 +1,10 @@
 ---
 title: "Optimism 标准跨链桥合约演练"
 description: "Optimism 的标准跨链桥是如何工作的？为什么它要这样工作？"
-author: 奥里·波梅兰茨
-tags: ["solidity", "跨链桥", "二层网络 (l2)"]
+author: "奥里·波梅兰茨"
+tags: ["Solidity", "跨链桥", "二层网络 (l2)"]
 skill: intermediate
-breadcrumb: Optimism 跨链桥
+breadcrumb: "Optimism 跨链桥"
 published: 2022-03-30
 lang: zh
 ---
@@ -573,7 +573,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 为此，我们使用 [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy)，这是一个使用 [`delegatecall`](https://solidity-by-example.org/delegatecall/) 将调用转移到单独合约的合约，该单独合约的地址由代理合约存储（升级时，您告诉代理更改该地址）。
 当您使用 `delegatecall` 时，存储仍然是_调用_合约的存储，因此所有合约状态变量的值都不受影响。
 
-这种模式的一个影响是，作为 `delegatecall` _被调用者_的合约的存储未被使用，因此传递给它的构造函数值并不重要。
+这种模式的一个影响是，作为 `delegatecall` <em>被调用者</em>的合约的存储未被使用，因此传递给它的构造函数值并不重要。
 这就是我们可以为 `CrossDomainEnabled` 构造函数提供无意义值的原因。
 这也是下面的初始化与构造函数分开的原因。
 

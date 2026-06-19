@@ -1,9 +1,9 @@
 ---
-title: Швидкий старт розробки фронтенду вашого децентралізованого застосунку (dapp) за допомогою create-eth-app
-description: Огляд того, як використовувати create-eth-app та його функції
+title: "Швидкий старт розробки фронтенду вашого децентралізованого застосунку (dapp) за допомогою create-eth-app"
+description: "Огляд того, як використовувати create-eth-app та його функції"
 author: "Маркус Ваас"
 tags:
-  ["фронтенд", "javascript", "ethers.js", "the graph", "defi"]
+  ["фронтенд", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: uk

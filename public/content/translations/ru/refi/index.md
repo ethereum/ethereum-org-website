@@ -1,6 +1,6 @@
 ---
-title: Регенеративные финансы (ReFi)
-description: Обзор ReFi и текущих вариантов использования.
+title: "Регенеративные финансы (ReFi)"
+description: "Обзор ReFi и текущих вариантов использования."
 lang: ru
 template: use-cases
 sidebarDepth: 2

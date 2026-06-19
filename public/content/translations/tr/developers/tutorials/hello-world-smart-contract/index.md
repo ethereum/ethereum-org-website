@@ -1,6 +1,6 @@
 ---
-title: Yeni Başlayanlar İçin Merhaba Dünya Akıllı Sözleşmesi
-description: Ethereum üzerinde basit bir akıllı sözleşme yazma ve dağıtma üzerine giriş niteliğinde eğitim.
+title: "Yeni Başlayanlar İçin Merhaba Dünya Akıllı Sözleşmesi"
+description: "Ethereum üzerinde basit bir akıllı sözleşme yazma ve dağıtma üzerine giriş niteliğinde eğitim."
 author: "elanh"
 tags:
   - solidity
@@ -9,7 +9,7 @@ tags:
   - akıllı sözleşmeler
   - dağıtım
 skill: beginner
-breadcrumb: Merhaba Dünya sözleşmesi
+breadcrumb: "Merhaba Dünya sözleşmesi"
 lang: tr
 published: 2021-03-31
 ---
@@ -50,7 +50,7 @@ Sepolia'nın listelendiğini görmüyorsanız, menüye, ardından Gelişmiş'e (
 
 ## Adım 4: Bir musluktan ether ekleyin {#step-4}
 
-Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. Sepolia ETH almak için çeşitli muslukların bir listesini görüntülemek üzere [Sepolia ağ ayrıntılarına](/developers/docs/networks/#sepolia) gidebilirsiniz. Biri çalışmazsa, bazen kuruyabildikleri için diğerini deneyin. Ağ trafiği nedeniyle sahte ETH'nizi almanız biraz zaman alabilir. Kısa bir süre sonra Metamask hesabınızda ETH görmelisiniz!
+Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. Sepolia ETH almak için çeşitli muslukların bir listesini görüntülemek üzere [Sepolia ağ ayrıntılarına](/developers/docs/networks/#sepolia) gidebilirsiniz. Biri çalışmazsa, bazen kuruyabildikleri için diğerini deneyin. Ağ trafiği nedeniyle sahte ETH'nizi almanız biraz zaman alabilir. Kısa bir süre sonra MetaMask hesabınızda ETH görmelisiniz!
 
 ## Adım 5: Bakiyenizi Kontrol Edin {#step-5}
 

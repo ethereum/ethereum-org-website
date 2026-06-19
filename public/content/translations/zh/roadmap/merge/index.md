@@ -1,6 +1,6 @@
 ---
-title: 合并
-description: 了解合并——以太坊主网采用权益证明的时刻。
+title: "合并"
+description: "了解合并——以太坊主网采用权益证明的时刻。"
 lang: zh
 template: upgrade
 image: /images/upgrades/merge.png
@@ -65,7 +65,7 @@ id="staking-node-operators">
 
 关键行动项目包括：
 
-1. _同时_运行共识客户端和执行客户端；自合并以来，获取执行数据的第三方端点不再起作用。
+1. <em>同时</em>运行共识客户端和执行客户端；自合并以来，获取执行数据的第三方端点不再起作用。
 2. 使用共享的 JWT 密钥对执行客户端和共识客户端进行身份验证，以便它们可以安全地通信。
 3. 设置一个 `fee recipient` 地址以接收您赚取的交易费小费/MEV。
 

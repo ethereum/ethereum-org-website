@@ -1,10 +1,10 @@
 ---
-title: Tìm hiểu các chủ đề nền tảng của Ethereum bằng SQL
-description: Hướng dẫn này giúp người đọc hiểu các khái niệm cơ bản về Ethereum bao gồm giao dịch, khối và gas bằng cách truy vấn dữ liệu trên chuỗi với Ngôn ngữ truy vấn có cấu trúc (SQL).
+title: "Tìm hiểu các chủ đề nền tảng của Ethereum bằng SQL"
+description: "Hướng dẫn này giúp người đọc hiểu các khái niệm cơ bản về Ethereum bao gồm giao dịch, khối và gas bằng cách truy vấn dữ liệu trên chuỗi với Ngôn ngữ truy vấn có cấu trúc (SQL)."
 author: "Paul Apivat"
 tags: ["SQL", "Truy vấn", "Giao dịch", "dữ liệu và phân tích"]
 skill: beginner
-breadcrumb: Ethereum với SQL
+breadcrumb: "Ethereum với SQL"
 lang: vi
 published: 2021-05-11
 source: paulapivat.com

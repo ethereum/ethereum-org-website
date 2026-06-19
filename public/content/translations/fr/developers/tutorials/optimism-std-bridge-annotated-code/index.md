@@ -2,7 +2,7 @@
 title: "Examen détaillé du contrat du pont standard d'Optimism"
 description: "Comment fonctionne le pont standard pour Optimism ? Pourquoi fonctionne-t-il ainsi ?"
 author: Ori Pomerantz
-tags: ["solidity", "pont", "couche 2 (l2)"]
+tags: ["Solidity", "pont", "couche 2 (l2)"]
 skill: intermediate
 breadcrumb: "Pont Optimism"
 published: 2022-03-30

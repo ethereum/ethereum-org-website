@@ -1,14 +1,14 @@
 ---
-title: 使用 SQL 學習以太坊基礎主題
-description: 本教學透過使用結構化查詢語言 (SQL) 查詢鏈上資料，幫助讀者了解以太坊的基本概念，包含交易、區塊和燃料。
-author: 保羅·阿皮瓦
+title: "使用 SQL 學習以太坊基礎主題"
+description: "本教學透過使用結構化查詢語言 (SQL) 查詢鏈上資料，幫助讀者了解以太坊的基本概念，包含交易、區塊和燃料。"
+author: "保羅·阿皮瓦"
 tags:
   - SQL
   - 查詢
   - 交易
   - 資料與分析
 skill: beginner
-breadcrumb: 使用 SQL 學習以太坊
+breadcrumb: "使用 SQL 學習以太坊"
 lang: zh-tw
 published: 2021-05-11
 source: paulapivat.com

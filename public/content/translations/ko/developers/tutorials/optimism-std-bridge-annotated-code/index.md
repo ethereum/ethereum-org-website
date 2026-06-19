@@ -1,10 +1,10 @@
 ---
 title: "옵티미즘 표준 브릿지 컨트랙트 살펴보기"
-description: 옵티미즘의 표준 브릿지는 어떻게 작동할까요? 왜 이런 방식으로 작동할까요?
-author: 오리 포메란츠
-tags: ["solidity", "브릿지", "레이어 2 (l2)"]
+description: "옵티미즘의 표준 브릿지는 어떻게 작동할까요? 왜 이런 방식으로 작동할까요?"
+author: "오리 포메란츠"
+tags: ["Solidity", "브릿지", "레이어 2 (l2)"]
 skill: intermediate
-breadcrumb: 옵티미즘 브릿지
+breadcrumb: "옵티미즘 브릿지"
 published: 2022-03-30
 lang: ko
 ---
@@ -98,7 +98,7 @@ interface IL1ERC20Bridge {
     event ERC20DepositInitiated(
 ```
 
-옵티미즘 브릿지 용어에서 _입금(deposit)_은 l1에서 l2로의 전송을 의미하고, _인출(withdrawal)_은 l2에서 l1으로의 전송을 의미합니다.
+옵티미즘 브릿지 용어에서 <em>입금(deposit)</em>은 l1에서 l2로의 전송을 의미하고, <em>인출(withdrawal)</em>은 l2에서 l1으로의 전송을 의미합니다.
 
 ```solidity
         address indexed _l1Token,

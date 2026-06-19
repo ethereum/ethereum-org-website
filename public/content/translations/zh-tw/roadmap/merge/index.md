@@ -1,6 +1,6 @@
 ---
-title: 合併
-description: 了解合併——以太坊主網採用權益證明之時。
+title: "合併"
+description: "了解合併——以太坊主網採用權益證明之時。"
 lang: zh-tw
 template: upgrade
 image: /images/upgrades/merge.png
@@ -65,7 +65,7 @@ id="staking-node-operators">
 
 關鍵行動項目包括：
 
-1. _同時_執行共識客戶端和執行客戶端；自合併以來，獲取執行資料的第三方端點已不再有效。
+1. <em>同時</em>執行共識客戶端和執行客戶端；自合併以來，獲取執行資料的第三方端點已不再有效。
 2. 使用共享的 JWT 密鑰對執行客戶端和共識客戶端進行身分驗證，以便它們可以安全地通訊。
 3. 設定一個 `fee recipient` 地址以接收您賺取的交易手續費小費/MEV。
 

@@ -1,9 +1,9 @@
 ---
-title: create-eth-appでdappのフロントエンド開発を始めよう
-description: create-eth-appの使い方とその機能の概要
+title: "create-eth-appでdappのフロントエンド開発を始めよう"
+description: "create-eth-appの使い方とその機能の概要"
 author: "マーカス・ワース"
 tags:
-  ["フロントエンド", "javascript", "ethers.js", "the graph", "defi"]
+  ["フロントエンド", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: ja
@@ -83,7 +83,7 @@ React.useEffect(() => {
 
 利息を生み出す取引トークンは_aTokens_と呼ばれます。
 
-_create-eth-app_とアーベを統合することを選択すると、[サブグラフの統合](https://docs.aave.com/developers/getting-started/using-graphql)が得られます。アーベはThe Graphを使用しており、[ロプステン](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten)および[メインネット](https://thegraph.com/explorer/subgraph/aave/protocol)上で、[raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw)または[フォーマット済み](https://thegraph.com/explorer/subgraph/aave/protocol)の形式ですぐに使用できるサブグラフをすでにいくつか提供しています。
+<em>create-eth-app</em>とアーベを統合することを選択すると、[サブグラフの統合](https://docs.aave.com/developers/getting-started/using-graphql)が得られます。アーベはThe Graphを使用しており、[ロプステン](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten)および[メインネット](https://thegraph.com/explorer/subgraph/aave/protocol)上で、[raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw)または[フォーマット済み](https://thegraph.com/explorer/subgraph/aave/protocol)の形式ですぐに使用できるサブグラフをすでにいくつか提供しています。
 
 ![Aave Flash Loan meme – "Yeahhh, if I could keep my flash loan longer than 1 transaction, that would be great"](./flashloan-meme.png)
 
@@ -103,4 +103,4 @@ _create-eth-app_とアーベを統合することを選択すると、[サブグ
 
 ## 次のステップ {#whats-next}
 
-_create-eth-app_について質問がある場合は、[Sablierコミュニティサーバー](https://discord.gg/bsS8T47)にアクセスしてください。そこで_create-eth-app_の作成者と連絡を取ることができます。最初の次のステップとして、[Material UI](https://mui.com/material-ui/)のようなUIフレームワークを統合し、実際に必要なデータのためのGraphQLクエリを記述し、デプロイメントを設定することをお勧めします。
+<em>create-eth-app</em>について質問がある場合は、[Sablierコミュニティサーバー](https://discord.gg/bsS8T47)にアクセスしてください。そこで_create-eth-app_の作成者と連絡を取ることができます。最初の次のステップとして、[Material UI](https://mui.com/material-ui/)のようなUIフレームワークを統合し、実際に必要なデータのためのGraphQLクエリを記述し、デプロイメントを設定することをお勧めします。

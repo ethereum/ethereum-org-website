@@ -1,9 +1,9 @@
 ---
 title: Uso de WebSockets
-description: Guía para usar WebSockets y Alchemy para hacer solicitudes JSON-RPC y suscribirse a eventos.
+description: "Guía para usar WebSockets y Alchemy para hacer solicitudes JSON-RPC y suscribirse a eventos."
 author: "Elan Halpern"
 lang: es
-tags: ["alchemy", "websockets", "consultas", "javascript"]
+tags: ["Alchemy", "websockets", "consultas", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

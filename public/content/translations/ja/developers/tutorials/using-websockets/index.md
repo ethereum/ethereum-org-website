@@ -1,9 +1,9 @@
 ---
-title: WebSocketの使用
-description: WebSocketとAlchemyを使用してJSON-RPCリクエストを行い、イベントをサブスクライブするためのガイド。
+title: "WebSocketの使用"
+description: "WebSocketとAlchemyを使用してJSON-RPCリクエストを行い、イベントをサブスクライブするためのガイド。"
 author: "エラン・ハルパーン"
 lang: ja
-tags: ["alchemy", "WebSocket", "クエリ", "javascript"]
+tags: ["Alchemy", "WebSocket", "クエリ", "JavaScript"]
 skill: beginner
 breadcrumb: WebSocket
 source: Alchemy docs

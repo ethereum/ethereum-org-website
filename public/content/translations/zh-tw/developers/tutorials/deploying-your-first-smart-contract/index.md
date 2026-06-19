@@ -1,6 +1,6 @@
 ---
-title: 部署你的第一個智能合約
-description: 在以太坊測試網路上部署第一個智能合約的簡介
+title: "部署你的第一個智能合約"
+description: "在以太坊測試網路上部署第一個智能合約的簡介"
 author: "jdourlens"
 tags:
   - 智能合約
@@ -8,7 +8,7 @@ tags:
   - solidity
   - 部署
 skill: beginner
-breadcrumb: 部署第一個合約
+breadcrumb: "部署第一個合約"
 lang: zh-tw
 published: 2020-04-03
 source: EthereumDev

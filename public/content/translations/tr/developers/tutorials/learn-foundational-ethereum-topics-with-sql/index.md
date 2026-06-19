@@ -1,6 +1,6 @@
 ---
-title: SQL ile Temel Ethereum Konularını Öğrenin
-description: Bu eğitim, okuyucuların Yapılandırılmış Sorgu Dili (SQL) ile zincir içi verileri sorgulayarak işlemler, bloklar ve gaz dahil olmak üzere temel Ethereum kavramlarını anlamalarına yardımcı olur.
+title: "SQL ile Temel Ethereum Konularını Öğrenin"
+description: "Bu eğitim, okuyucuların Yapılandırılmış Sorgu Dili (SQL) ile zincir içi verileri sorgulayarak işlemler, bloklar ve gaz dahil olmak üzere temel Ethereum kavramlarını anlamalarına yardımcı olur."
 author: "Paul Apivat"
 tags: ["SQL", "Sorgulama", "İşlemler", "veri-ve-analitik"]
 skill: beginner

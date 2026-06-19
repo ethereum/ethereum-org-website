@@ -1,8 +1,8 @@
 ---
-title: Inteligentny kontrakt Hello World dla początkujących
-description: Wprowadzający samouczek dotyczący pisania i wdrażania prostego inteligentnego kontraktu w sieci Ethereum.
+title: "Inteligentny kontrakt Hello World dla początkujących"
+description: "Wprowadzający samouczek dotyczący pisania i wdrażania prostego inteligentnego kontraktu w sieci Ethereum."
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "inteligentne kontrakty", "wdrażanie"]
+tags: ["Solidity", "Hardhat", "Alchemy", "inteligentne kontrakty", "wdrażanie"]
 skill: beginner
 breadcrumb: Kontrakt Hello World
 lang: pl

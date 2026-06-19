@@ -2,7 +2,7 @@
 title: "كيفية سك ⁦NFT⁩ (الجزء 2/3 من سلسلة دروس ⁦NFT⁩)"
 description: "يصف هذا البرنامج التعليمي كيفية سك ⁦NFT⁩ على سلسلة كتل إيثيريوم باستخدام عقدنا الذكي و⁦Web3⁩."
 author: "سومي مودجيل"
-tags: ["ERC-721", "alchemy", "solidity", "العقود الذكية"]
+tags: ["ERC-721", "Alchemy", "Solidity", "العقود الذكية"]
 skill: beginner
 breadcrumb: "سك ⁦NFT⁩"
 lang: ar

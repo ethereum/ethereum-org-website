@@ -1,9 +1,9 @@
 ---
-title: create-eth-app सह तुमच्या विकेंद्रित ॲप्लिकेशन (dapp) फ्रंटएंड डेव्हलपमेंटला सुरुवात करा
-description: create-eth-app कसे वापरावे आणि त्याच्या वैशिष्ट्यांचे विहंगावलोकन
+title: "create-eth-app सह तुमच्या विकेंद्रित ॲप्लिकेशन (dapp) फ्रंटएंड डेव्हलपमेंटला सुरुवात करा"
+description: "create-eth-app कसे वापरावे आणि त्याच्या वैशिष्ट्यांचे विहंगावलोकन"
 author: "मार्कस वास"
 tags:
-  ["फ्रंटएंड", "javascript", "ethers.js", "the graph", "defi"]
+  ["फ्रंटएंड", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: mr

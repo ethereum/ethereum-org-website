@@ -1,6 +1,6 @@
 ---
-title: Solidity स्मार्ट अनुबंध से ERC-20 टोकन का ट्रांसफर और स्वीकृति
-description: Solidity का उपयोग करके एक DEX स्मार्ट अनुबंध बनाएं जो ERC-20 टोकन ट्रांसफर और स्वीकृतियों को संभालता है।
+title: "Solidity स्मार्ट अनुबंध से ERC-20 टोकन का ट्रांसफर और स्वीकृति"
+description: "Solidity का उपयोग करके एक DEX स्मार्ट अनुबंध बनाएं जो ERC-20 टोकन ट्रांसफर और स्वीकृतियों को संभालता है।"
 author: "jdourlens"
 tags:
   - स्मार्ट अनुबंध
@@ -8,7 +8,7 @@ tags:
   - solidity
   - erc-20
 skill: intermediate
-breadcrumb: ERC-20 ट्रांसफर
+breadcrumb: "ERC-20 ट्रांसफर"
 lang: hi
 published: 2020-04-07
 source: EthereumDev

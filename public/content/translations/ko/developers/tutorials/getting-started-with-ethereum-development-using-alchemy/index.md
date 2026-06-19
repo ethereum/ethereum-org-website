@@ -1,10 +1,10 @@
 ---
-title: 이더리움 개발 시작하기
+title: "이더리움 개발 시작하기"
 description: "이더리움 개발을 시작하기 위한 초보자용 가이드입니다. API 엔드포인트 생성부터 명령줄 요청, 첫 Web3 스크립트 작성까지 안내해 드립니다! 블록체인 개발 경험이 없어도 괜찮습니다!"
 author: "엘란 할펀"
-tags: ["javascript", "ethers.js", "노드", "쿼리", "alchemy"]
+tags: ["JavaScript", "ethers.js", "노드", "쿼리", "Alchemy"]
 skill: beginner
-breadcrumb: 시작하기
+breadcrumb: "시작하기"
 lang: ko
 published: 2020-10-30
 source: Medium
@@ -71,11 +71,11 @@ _**참고:** [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alc
 
 **기존 클라이언트가 있는 경우,** 현재 노드 공급자 URL을 API 키가 포함된 Alchemy URL로 변경하세요: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**_참고:_** 아래 스크립트는 명령줄에서 실행하는 것이 아니라 **노드 컨텍스트**에서 실행하거나 **파일에 저장**해야 합니다. Node나 npm이 아직 설치되어 있지 않다면, 이 간단한 [Mac용 설정 가이드](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)를 확인하세요.
+**_참고:_** 아래 스크립트는 명령줄에서 실행하는 것이 아니라 <strong>노드 컨텍스트</strong>에서 실행하거나 <strong>파일에 저장</strong>해야 합니다. Node나 npm이 아직 설치되어 있지 않다면, 이 간단한 [Mac용 설정 가이드](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)를 확인하세요.
 
 Alchemy와 통합할 수 있는 수많은 [Web3 라이브러리](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)가 있지만, Alchemy와 원활하게 작동하도록 구축 및 구성된 Web3.js의 드롭인(drop-in) 대체품인 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)를 사용하는 것을 권장합니다. 이는 자동 재시도 및 강력한 WebSocket 지원과 같은 여러 가지 이점을 제공합니다.
 
-AlchemyWeb3.js를 설치하려면 **프로젝트 디렉터리로 이동**하여 다음을 실행하세요.
+AlchemyWeb3.js를 설치하려면 <strong>프로젝트 디렉터리로 이동</strong>하여 다음을 실행하세요.
 
 **Yarn 사용 시:**
 

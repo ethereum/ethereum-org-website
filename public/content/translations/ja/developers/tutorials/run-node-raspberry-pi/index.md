@@ -1,11 +1,11 @@
 ---
-title: Raspberry Pi 4でイーサリアムノードを実行する
-description: Raspberry Pi 4をフラッシュし、イーサネットケーブルを接続し、SSDディスクを繋いでデバイスの電源を入れ、Raspberry Pi 4を完全なイーサリアムノード＋バリデータにする方法
+title: "Raspberry Pi 4でイーサリアムノードを実行する"
+description: "Raspberry Pi 4をフラッシュし、イーサネットケーブルを接続し、SSDディスクを繋いでデバイスの電源を入れ、Raspberry Pi 4を完全なイーサリアムノード＋バリデータにする方法"
 author: "EthereumOnArm"
 tags: ["クライアント", "実行レイヤー", "コンセンサスレイヤー", "ノード"]
 lang: ja
 skill: intermediate
-breadcrumb: Raspberry Piノード
+breadcrumb: "Raspberry Piノード"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

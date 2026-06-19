@@ -1,10 +1,10 @@
 ---
-title: Převody a schvalování tokenů ERC-20 z chytrého kontraktu v Solidity
-description: Vytvořte chytrý kontrakt pro DEX, který zpracovává převody a schvalování tokenů ERC-20 pomocí Solidity.
+title: "Převody a schvalování tokenů ERC-20 z chytrého kontraktu v Solidity"
+description: "Vytvořte chytrý kontrakt pro DEX, který zpracovává převody a schvalování tokenů ERC-20 pomocí Solidity."
 author: "jdourlens"
-tags: ["chytré kontrakty", "tokeny", "solidity", "erc-20"]
+tags: ["chytré kontrakty", "tokeny", "Solidity", "erc-20"]
 skill: intermediate
-breadcrumb: Převody ERC-20
+breadcrumb: "Převody ERC-20"
 lang: cs
 published: 2020-04-07
 source: EthereumDev

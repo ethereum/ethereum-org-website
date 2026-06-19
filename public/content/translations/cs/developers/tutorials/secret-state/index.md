@@ -1,10 +1,10 @@
 ---
-title: Využití nulového vědomí pro tajný stav
-description: Onchain hry jsou omezené, protože nemohou uchovávat žádné skryté informace. Po přečtení tohoto tutoriálu bude čtenář schopen kombinovat důkazy s nulovou znalostí a serverové komponenty k vytvoření ověřitelných her s tajným stavem a offchain komponentou. Tato technika bude demonstrována na vytvoření hry Hledání min.
+title: "Využití nulového vědomí pro tajný stav"
+description: "Onchain hry jsou omezené, protože nemohou uchovávat žádné skryté informace. Po přečtení tohoto tutoriálu bude čtenář schopen kombinovat důkazy s nulovou znalostí a serverové komponenty k vytvoření ověřitelných her s tajným stavem a offchain komponentou. Tato technika bude demonstrována na vytvoření hry Hledání min."
 author: Ori Pomerantz
 tags: ["server", "offchain", "centralizované", "nulové vědomí", "zokrates", "mud", "soukromí"]
 skill: advanced
-breadcrumb: Tajný stav pomocí ZK
+breadcrumb: "Tajný stav pomocí ZK"
 lang: cs
 published: 2025-03-15
 ---

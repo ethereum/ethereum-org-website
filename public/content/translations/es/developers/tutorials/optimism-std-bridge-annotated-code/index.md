@@ -2,7 +2,7 @@
 title: "Análisis del contrato del puente estándar de Optimism"
 description: "¿Cómo funciona el puente estándar de Optimism? ¿Por qué funciona de esta manera?"
 author: Ori Pomerantz
-tags: ["solidity", "puente", "capa 2"]
+tags: ["Solidity", "puente", "capa 2"]
 skill: intermediate
 breadcrumb: "Puente de Optimism"
 published: 2022-03-30

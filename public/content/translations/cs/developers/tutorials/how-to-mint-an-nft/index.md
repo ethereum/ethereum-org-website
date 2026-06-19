@@ -1,10 +1,10 @@
 ---
-title: Jak razit NFT (Část 2/3 ze série tutoriálů o NFT)
-description: Tento tutoriál popisuje, jak razit NFT na blockchainu Etherea pomocí našeho chytrého kontraktu a Web3.
+title: "Jak razit NFT (Část 2/3 ze série tutoriálů o NFT)"
+description: "Tento tutoriál popisuje, jak razit NFT na blockchainu Etherea pomocí našeho chytrého kontraktu a Web3."
 author: "Sumi Mudgil"
-tags: ["ERC-721", "alchemy", "solidity", "chytré kontrakty"]
+tags: ["ERC-721", "Alchemy", "Solidity", "chytré kontrakty"]
 skill: beginner
-breadcrumb: Ražení NFT
+breadcrumb: "Ražení NFT"
 lang: cs
 published: 2021-04-22
 ---

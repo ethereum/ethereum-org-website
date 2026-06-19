@@ -1,9 +1,9 @@
 ---
-title: WebSockets ব্যবহার করা
-description: JSON-RPC রিকোয়েস্ট করতে এবং ইভেন্ট সাবস্ক্রাইব করতে WebSockets এবং Alchemy ব্যবহারের গাইড।
+title: "WebSockets ব্যবহার করা"
+description: "JSON-RPC রিকোয়েস্ট করতে এবং ইভেন্ট সাবস্ক্রাইব করতে WebSockets এবং Alchemy ব্যবহারের গাইড।"
 author: "এলান হ্যালপার্ন"
 lang: bn
-tags: ["alchemy", "websockets", "কোয়েরি করা", "javascript"]
+tags: ["Alchemy", "websockets", "কোয়েরি করা", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

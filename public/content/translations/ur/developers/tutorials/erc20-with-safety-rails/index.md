@@ -1,7 +1,7 @@
 ---
 title: "⁦ERC-20⁩ حفاظتی ریلز کے ساتھ"
 description: "لوگوں کو احمقانہ غلطیوں سے بچنے میں کیسے مدد کی جائے"
-author: اوری پومرانٹز
+author: "اوری پومرانٹز"
 lang: ur
 tags:
   - "erc-20"
@@ -23,7 +23,7 @@ published: 2022-08-15
 3. GitHub ریپوزٹری `https://github.com/qbzzt/20220815-erc20-safety-rails` کو کلون کریں۔
 4. **contracts > erc20-safety-rails.sol** کھولیں۔
 
-## ایک ERC-20 کنٹریکٹ بنانا {#creating-an-erc-20-contract}
+## ایک <span dir="ltr">ERC-20</span> کنٹریکٹ بنانا {#creating-an-erc-20-contract}
 
 حفاظتی ریل کی فعالیت شامل کرنے سے پہلے ہمیں ایک <span dir="ltr">ERC-20</span> کنٹریکٹ کی ضرورت ہے۔ اس مضمون میں ہم [اوپن زیپلن کنٹریکٹس وزرڈ](https://docs.openzeppelin.com/contracts/5.x/wizard) استعمال کریں گے۔ اسے کسی دوسرے براؤزر میں کھولیں اور ان ہدایات پر عمل کریں:
 

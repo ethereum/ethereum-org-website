@@ -2,7 +2,7 @@
 title: "⁦NFT⁩ کیسے ڈھالیں (⁦NFT⁩ ٹیوٹوریل سیریز کا حصہ ⁦2/3⁩)"
 description: "یہ ٹیوٹوریل بتاتا ہے کہ ہمارے سمارٹ کنٹریکٹ اور ⁦Web3⁩ کا استعمال کرتے ہوئے ایتھیریم بلاک چین پر ⁦NFT⁩ کیسے ڈھالیں۔"
 author: "سومی مدگل"
-tags: ["ERC-721", "alchemy", "solidity", "سمارٹ کنٹریکٹس"]
+tags: ["ERC-721", "Alchemy", "Solidity", "سمارٹ کنٹریکٹس"]
 skill: beginner
 breadcrumb: "⁦NFT⁩ ڈھالیں"
 lang: ur

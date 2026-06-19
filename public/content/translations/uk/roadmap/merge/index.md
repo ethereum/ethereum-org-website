@@ -1,6 +1,6 @@
 ---
-title: Злиття
-description: Дізнайтеся про Злиття — коли головна мережа Ethereum перейшла на доказ частки (PoS).
+title: "Злиття"
+description: "Дізнайтеся про Злиття — коли головна мережа Ethereum перейшла на доказ частки (PoS)."
 lang: uk
 template: upgrade
 image: /images/upgrades/merge.png

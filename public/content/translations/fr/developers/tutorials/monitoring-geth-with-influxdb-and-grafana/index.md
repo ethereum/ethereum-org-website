@@ -1,6 +1,6 @@
 ---
 title: Surveiller Geth avec InfluxDB et Grafana
-description: Configurez la surveillance de votre nœud Geth à l'aide d'InfluxDB et de Grafana pour suivre les performances et identifier les problèmes.
+description: "Configurez la surveillance de votre nœud Geth à l'aide d'InfluxDB et de Grafana pour suivre les performances et identifier les problèmes."
 author: "Mario Havel"
 tags: ["clients", "nœuds"]
 skill: intermediate

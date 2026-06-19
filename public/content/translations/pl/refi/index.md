@@ -1,6 +1,6 @@
 ---
 title: Finanse regeneracyjne (ReFi)
-description: Przegląd ReFi i jego obecnych przypadków użycia.
+description: "Przegląd ReFi i jego obecnych przypadków użycia."
 lang: pl
 template: use-cases
 sidebarDepth: 2

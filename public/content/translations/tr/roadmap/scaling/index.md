@@ -1,6 +1,6 @@
 ---
-title: Ethereum'u Ölçeklendirmek
-description: Toplamalar, işlemleri zincir dışında bir araya getirerek kullanıcı için maliyetleri düşürür. Ancak, toplamaların şu anda verileri kullanma şekli çok pahalıdır ve işlemlerin ne kadar ucuz olabileceğini sınırlar. Proto-Danksharding bunu düzeltir.
+title: "Ethereum'u Ölçeklendirmek"
+description: "Toplamalar, işlemleri zincir dışında bir araya getirerek kullanıcı için maliyetleri düşürür. Ancak, toplamaların şu anda verileri kullanma şekli çok pahalıdır ve işlemlerin ne kadar ucuz olabileceğini sınırlar. Proto-Danksharding bunu düzeltir."
 lang: tr
 image: /images/roadmap/roadmap-transactions.png
 alt: "Ethereum yol haritası"
@@ -15,11 +15,11 @@ Ethereum, işlemleri bir araya getiren ve çıktıyı Ethereum'a gönderen [katm
   İşlem maliyetleri
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Günümüzün toplamaları, Ethereum katman 1'den <strong>~5-20 kat</strong> daha ucuzdur</li>
-    <li>ZK-toplamaları yakında ücretleri <strong>~40-100 kat</strong> düşürecektir</li>
-    <li>Ethereum'da yapılacak olan yaklaşan değişiklikler, <strong>~100-1000 kat</strong> daha fazla ölçeklendirme sağlayacaktır</li>
-    <li style={{ marginBottom: 0 }}>Kullanıcılar, <strong>0,001 $'dan daha aza mal olan</strong> işlemlerden faydalanmalıdır</strong>
-  </strong>
+    <li>Günümüzün toplamaları, Ethereum katman 1'den <strong>\~5-20 kat</strong> daha ucuzdur</li>
+    <li>ZK-toplamaları yakında ücretleri <strong>\~40-100 kat</strong> düşürecektir</li>
+    <li>Ethereum'da yapılacak olan yaklaşan değişiklikler, <strong>\~100-1000 kat</strong> daha fazla ölçeklendirme sağlayacaktır</li>
+ <li style={{ marginBottom: 0 }}>Kullanıcılar, <strong>0,001 $'dan daha aza mal olan</strong> işlemlerden faydalanmalıdır
+
 </AlertContent>
 </Alert>
 

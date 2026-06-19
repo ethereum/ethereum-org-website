@@ -1,6 +1,6 @@
 ---
-title: Mise à l'échelle d'Ethereum
-description: Les rollups regroupent les transactions hors chaîne, réduisant ainsi les coûts pour l'utilisateur. Cependant, la façon dont les rollups utilisent actuellement les données est trop coûteuse, ce qui limite la réduction du coût des transactions. Le proto-danksharding résout ce problème.
+title: "Mise à l'échelle d'Ethereum"
+description: "Les rollups regroupent les transactions hors chaîne, réduisant ainsi les coûts pour l'utilisateur. Cependant, la façon dont les rollups utilisent actuellement les données est trop coûteuse, ce qui limite la réduction du coût des transactions. Le proto-danksharding résout ce problème."
 lang: fr
 image: /images/roadmap/roadmap-transactions.png
 alt: Feuille de route d'Ethereum
@@ -15,11 +15,11 @@ La mise à l'échelle d'Ethereum s'effectue à l'aide de [couches 2](/layer-2/#r
   Coûts de transaction
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Les rollups actuels sont <strong>~5 à 20 fois</strong> moins chers que la couche 1 (l1) d'Ethereum</li>
-    <li>Les ZK-rollups réduiront bientôt les frais de <strong>~40 à 100 fois</strong></li>
-    <li>Les prochaines modifications apportées à Ethereum offriront une mise à l'échelle supplémentaire de <strong>~100 à 1000 fois</strong></li>
-    <li style={{ marginBottom: 0 }}>Les utilisateurs devraient bénéficier de transactions <strong>coûtant moins de 0,001 $</strong></strong>
-  </strong>
+    <li>Les rollups actuels sont <strong>\~5 à 20 fois</strong> moins chers que la couche 1 (l1) d'Ethereum</li>
+    <li>Les ZK-rollups réduiront bientôt les frais de <strong>\~40 à 100 fois</strong></li>
+    <li>Les prochaines modifications apportées à Ethereum offriront une mise à l'échelle supplémentaire de <strong>\~100 à 1000 fois</strong></li>
+ <li style={{ marginBottom: 0 }}>Les utilisateurs devraient bénéficier de transactions <strong>coûtant moins de 0,001 $</strong>
+
 </AlertContent>
 </Alert>
 

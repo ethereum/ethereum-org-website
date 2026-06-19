@@ -1,6 +1,6 @@
 ---
-title: द मर्ज
-description: द मर्ज बद्दल जाणून घ्या - जेव्हा मेननेट इथेरियमने प्रूफ-ऑफ-स्टेक (PoS) स्वीकारले.
+title: "द मर्ज"
+description: "द मर्ज बद्दल जाणून घ्या - जेव्हा मेननेट इथेरियमने प्रूफ-ऑफ-स्टेक (PoS) स्वीकारले."
 lang: mr
 template: upgrade
 image: /images/upgrades/merge.png

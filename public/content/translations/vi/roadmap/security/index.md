@@ -1,6 +1,6 @@
 ---
-title: Một Ethereum bảo mật hơn
-description: Ethereum là nền tảng hợp đồng thông minh bảo mật và phi tập trung nhất hiện nay. Tuy nhiên, vẫn có thể thực hiện các cải tiến để Ethereum duy trì khả năng chống chịu trước mọi cấp độ tấn công trong tương lai xa.
+title: "Một Ethereum bảo mật hơn"
+description: "Ethereum là nền tảng hợp đồng thông minh bảo mật và phi tập trung nhất hiện nay. Tuy nhiên, vẫn có thể thực hiện các cải tiến để Ethereum duy trì khả năng chống chịu trước mọi cấp độ tấn công trong tương lai xa."
 lang: vi
 image: /images/roadmap/roadmap-security.png
 alt: "Lộ trình Ethereum"

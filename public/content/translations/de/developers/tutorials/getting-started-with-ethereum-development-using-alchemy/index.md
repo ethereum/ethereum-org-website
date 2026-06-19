@@ -2,7 +2,7 @@
 title: Erste Schritte in der Ethereum-Entwicklung
 description: "Dies ist ein Anfängerleitfaden für den Einstieg in die Ethereum-Entwicklung. Wir begleiten dich von der Einrichtung eines API-Endpunkts über eine Kommandozeilenanfrage bis hin zum Schreiben deines ersten Web3-Skripts! Keine Erfahrung in der Blockchain-Entwicklung erforderlich!"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "Knoten", "Abfragen", "alchemy"]
+tags: ["JavaScript", "ethers.js", "Knoten", "Abfragen", "Alchemy"]
 skill: beginner
 breadcrumb: Erste Schritte
 lang: de

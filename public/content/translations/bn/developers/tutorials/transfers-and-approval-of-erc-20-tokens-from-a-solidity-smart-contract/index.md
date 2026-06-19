@@ -1,10 +1,10 @@
 ---
-title: Solidity স্মার্ট কন্ট্রাক্ট থেকে ERC-20 টোকেন হস্তান্তর এবং অনুমোদন
-description: Solidity ব্যবহার করে একটি DEX স্মার্ট কন্ট্রাক্ট তৈরি করুন যা ERC-20 টোকেন হস্তান্তর এবং অনুমোদন পরিচালনা করে।
+title: "Solidity স্মার্ট কন্ট্রাক্ট থেকে ERC-20 টোকেন হস্তান্তর এবং অনুমোদন"
+description: "Solidity ব্যবহার করে একটি DEX স্মার্ট কন্ট্রাক্ট তৈরি করুন যা ERC-20 টোকেন হস্তান্তর এবং অনুমোদন পরিচালনা করে।"
 author: "jdourlens"
-tags: ["স্মার্ট কন্ট্রাক্ট", "টোকেন", "solidity", "erc-20"]
+tags: ["স্মার্ট কন্ট্রাক্ট", "টোকেন", "Solidity", "erc-20"]
 skill: intermediate
-breadcrumb: ERC-20 হস্তান্তর
+breadcrumb: "ERC-20 হস্তান্তর"
 lang: bn
 published: 2020-04-07
 source: EthereumDev

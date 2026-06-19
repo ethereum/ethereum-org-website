@@ -1,9 +1,9 @@
 ---
-title: 使用 WebSockets
-description: 使用 WebSockets 與 Alchemy 發送 JSON-RPC 請求並訂閱事件的指南。
+title: "使用 WebSockets"
+description: "使用 WebSockets 與 Alchemy 發送 JSON-RPC 請求並訂閱事件的指南。"
 author: "伊蘭·哈爾彭"
 lang: zh-tw
-tags: ["alchemy", "websockets", "查詢", "javascript"]
+tags: ["Alchemy", "websockets", "查詢", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

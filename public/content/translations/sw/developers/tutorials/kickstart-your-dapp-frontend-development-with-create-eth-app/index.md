@@ -3,7 +3,7 @@ title: Anzisha uundaji wa sehemu ya mbele ya programu tumizi iliyogatuliwa (dapp
 description: Muhtasari wa jinsi ya kutumia create-eth-app na vipengele vyake
 author: "Markus Waas"
 tags:
-  ["sehemu ya mbele", "javascript", "ethers.js", "the graph", "defi"]
+  ["sehemu ya mbele", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: sw

@@ -1,10 +1,10 @@
 ---
-title: 從 Solidity 智能合約轉帳與授權 ERC-20 代幣
-description: 使用 Solidity 構建一個處理 ERC-20 代幣轉帳與授權的去中心化交易所 (DEX) 智能合約。
+title: "從 Solidity 智能合約轉帳與授權 ERC-20 代幣"
+description: "使用 Solidity 構建一個處理 ERC-20 代幣轉帳與授權的去中心化交易所 (DEX) 智能合約。"
 author: "jdourlens"
-tags: ["智能合約", "代幣", "solidity", "erc-20"]
+tags: ["智能合約", "代幣", "Solidity", "erc-20"]
 skill: intermediate
-breadcrumb: ERC-20 轉帳
+breadcrumb: "ERC-20 轉帳"
 lang: zh-tw
 published: 2020-04-07
 source: EthereumDev

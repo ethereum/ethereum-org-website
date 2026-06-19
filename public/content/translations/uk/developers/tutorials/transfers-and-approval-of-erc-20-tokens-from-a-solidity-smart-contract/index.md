@@ -1,6 +1,6 @@
 ---
-title: Перекази та схвалення токенів ERC-20 зі смарт-контракту на Solidity
-description: Створіть смарт-контракт DEX, який обробляє перекази та схвалення токенів ERC-20 за допомогою Solidity.
+title: "Перекази та схвалення токенів ERC-20 зі смарт-контракту на Solidity"
+description: "Створіть смарт-контракт DEX, який обробляє перекази та схвалення токенів ERC-20 за допомогою Solidity."
 author: jdourlens
 tags:
   - смарт-контракти
@@ -8,7 +8,7 @@ tags:
   - solidity
   - erc-20
 skill: intermediate
-breadcrumb: Перекази ERC-20
+breadcrumb: "Перекази ERC-20"
 lang: uk
 published: 2020-04-07
 source: EthereumDev

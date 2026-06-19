@@ -1,9 +1,9 @@
 ---
-title: create-eth-app తో మీ వికేంద్రీకృత అప్లికేషన్ (dapp) ఫ్రంటెండ్ డెవలప్‌మెంట్‌ను ప్రారంభించండి
-description: create-eth-app ను ఎలా ఉపయోగించాలి మరియు దాని ఫీచర్ల గురించి ఒక అవలోకనం
+title: "create-eth-app తో మీ వికేంద్రీకృత అప్లికేషన్ (dapp) ఫ్రంటెండ్ డెవలప్‌మెంట్‌ను ప్రారంభించండి"
+description: "create-eth-app ను ఎలా ఉపయోగించాలి మరియు దాని ఫీచర్ల గురించి ఒక అవలోకనం"
 author: "మార్కస్ వాస్"
 tags:
-  ["ఫ్రంటెండ్", "javascript", "ethers.js", "The Graph", "defi"]
+  ["ఫ్రంటెండ్", "JavaScript", "ethers.js", "The Graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: te

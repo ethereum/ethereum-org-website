@@ -1,7 +1,7 @@
 ---
 title: Nicht-fungible Token (NFT)
 metaTitle: Was sind NFTs? | Vorteile und Nutzen
-description: Ein Überblick über NFTs auf Ethereum
+description: "Ein Überblick über NFTs auf Ethereum"
 lang: de
 template: use-cases
 sidebarDepth: 2

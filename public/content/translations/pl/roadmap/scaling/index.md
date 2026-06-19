@@ -1,6 +1,6 @@
 ---
 title: Skalowanie Ethereum
-description: Rollupy grupują transakcje poza łańcuchem, zmniejszając koszty dla użytkownika. Jednak sposób, w jaki rollupy obecnie wykorzystują dane, jest zbyt drogi, co ogranicza możliwość obniżenia kosztów transakcji. Proto-danksharding rozwiązuje ten problem.
+description: "Rollupy grupują transakcje poza łańcuchem, zmniejszając koszty dla użytkownika. Jednak sposób, w jaki rollupy obecnie wykorzystują dane, jest zbyt drogi, co ogranicza możliwość obniżenia kosztów transakcji. Proto-danksharding rozwiązuje ten problem."
 lang: pl
 image: /images/roadmap/roadmap-transactions.png
 alt: Mapa drogowa Ethereum
@@ -15,11 +15,11 @@ Ethereum jest skalowane za pomocą [warstw 2](/layer-2/#rollups) (znanych równi
   Koszty transakcji
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Dzisiejsze rollupy są <strong>~5-20x</strong> tańsze niż warstwa 1 Ethereum</li>
-    <li>ZK-rollupy wkrótce obniżą opłaty o <strong>~40-100x</strong></li>
-    <li>Nadchodzące zmiany w Ethereum zapewnią kolejne <strong>~100-1000x</strong> skalowania</li>
-    <li style={{ marginBottom: 0 }}>Użytkownicy powinni skorzystać na transakcjach <strong>kosztujących mniej niż 0,001 USD</strong></strong>
-  </strong>
+    <li>Dzisiejsze rollupy są <strong>\~5-20x</strong> tańsze niż warstwa 1 Ethereum</li>
+    <li>ZK-rollupy wkrótce obniżą opłaty o <strong>\~40-100x</strong></li>
+    <li>Nadchodzące zmiany w Ethereum zapewnią kolejne <strong>\~100-1000x</strong> skalowania</li>
+ <li style={{ marginBottom: 0 }}>Użytkownicy powinni skorzystać na transakcjach <strong>kosztujących mniej niż 0,001 USD</strong>
+
 </AlertContent>
 </Alert>
 

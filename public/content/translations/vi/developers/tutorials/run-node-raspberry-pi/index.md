@@ -1,11 +1,11 @@
 ---
-title: Chạy một nút Ethereum trên Raspberry Pi 4
-description: Flash Raspberry Pi 4 của bạn, cắm cáp ethernet, kết nối ổ đĩa SSD và bật nguồn thiết bị để biến Raspberry Pi 4 thành một nút Ethereum đầy đủ + trình xác thực
+title: "Chạy một nút Ethereum trên Raspberry Pi 4"
+description: "Flash Raspberry Pi 4 của bạn, cắm cáp ethernet, kết nối ổ đĩa SSD và bật nguồn thiết bị để biến Raspberry Pi 4 thành một nút Ethereum đầy đủ + trình xác thực"
 author: "EthereumOnArm"
 tags: ["ứng dụng khách", "lớp thực thi", "lớp đồng thuận", "nút"]
 lang: vi
 skill: intermediate
-breadcrumb: Nút Rasp Pi
+breadcrumb: "Nút Rasp Pi"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

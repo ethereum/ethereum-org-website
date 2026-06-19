@@ -1,11 +1,11 @@
 ---
-title: सुरक्षा उपायांसह ERC-20
-description: लोकांना मूर्खपणाच्या चुका टाळण्यास कशी मदत करावी
-author: ओरी पोमेरँट्झ
+title: "सुरक्षा उपायांसह ERC-20"
+description: "लोकांना मूर्खपणाच्या चुका टाळण्यास कशी मदत करावी"
+author: "ओरी पोमेरँट्झ"
 lang: mr
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20 सुरक्षा
+breadcrumb: "ERC-20 सुरक्षा"
 published: 2022-08-15
 ---
 

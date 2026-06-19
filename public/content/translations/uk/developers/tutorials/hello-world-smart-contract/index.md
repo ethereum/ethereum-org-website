@@ -1,6 +1,6 @@
 ---
-title: Смарт-контракт Hello World для початківців
-description: Вступний посібник із написання та розгортання простого смарт-контракту в мережі Етеріум.
+title: "Смарт-контракт Hello World для початківців"
+description: "Вступний посібник із написання та розгортання простого смарт-контракту в мережі Етеріум."
 author: elanh
 tags:
   - solidity
@@ -9,7 +9,7 @@ tags:
   - смарт-контракти
   - розгортання
 skill: beginner
-breadcrumb: Контракт Hello World
+breadcrumb: "Контракт Hello World"
 lang: uk
 published: 2021-03-31
 ---

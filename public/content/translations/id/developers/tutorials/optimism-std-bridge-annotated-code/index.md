@@ -2,7 +2,7 @@
 title: "Panduan kontrak jembatan standar Optimism"
 description: "Bagaimana cara kerja jembatan standar untuk Optimism? Mengapa bekerja dengan cara seperti ini?"
 author: Ori Pomerantz
-tags: ["solidity", "jembatan", "lapisan 2"]
+tags: ["Solidity", "jembatan", "lapisan 2"]
 skill: intermediate
 breadcrumb: "Jembatan Optimism"
 published: 2022-03-30

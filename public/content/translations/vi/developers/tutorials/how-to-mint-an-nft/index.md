@@ -1,10 +1,10 @@
 ---
-title: Cách đúc một NFT (Phần 2/3 của Chuỗi hướng dẫn về NFT)
-description: Hướng dẫn này mô tả cách đúc một NFT trên chuỗi khối Ethereum bằng cách sử dụng hợp đồng thông minh của chúng tôi và Web3.
+title: "Cách đúc một NFT (Phần 2/3 của Chuỗi hướng dẫn về NFT)"
+description: "Hướng dẫn này mô tả cách đúc một NFT trên chuỗi khối Ethereum bằng cách sử dụng hợp đồng thông minh của chúng tôi và Web3."
 author: "Sumi Mudgil"
-tags: ["ERC-721", "alchemy", "solidity", "hợp đồng thông minh"]
+tags: ["ERC-721", "Alchemy", "Solidity", "hợp đồng thông minh"]
 skill: beginner
-breadcrumb: Đúc một NFT
+breadcrumb: "Đúc một NFT"
 lang: vi
 published: 2021-04-22
 ---

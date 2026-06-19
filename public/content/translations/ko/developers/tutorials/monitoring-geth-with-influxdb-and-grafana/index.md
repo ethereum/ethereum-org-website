@@ -1,12 +1,12 @@
 ---
-title: InfluxDB와 Grafana로 Geth 모니터링하기
-description: InfluxDB와 Grafana를 사용하여 Geth 노드의 모니터링을 설정하고 성능을 추적하며 문제를 식별하세요.
+title: "InfluxDB와 Grafana로 Geth 모니터링하기"
+description: "InfluxDB와 Grafana를 사용하여 Geth 노드의 모니터링을 설정하고 성능을 추적하며 문제를 식별하세요."
 author: "마리오 하벨"
 tags:
   - "클라이언트"
   - "노드"
 skill: intermediate
-breadcrumb: Geth 모니터링
+breadcrumb: "Geth 모니터링"
 lang: ko
 published: 2021-01-13
 ---

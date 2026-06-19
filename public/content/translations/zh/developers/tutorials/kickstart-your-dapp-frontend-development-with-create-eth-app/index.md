@@ -1,6 +1,6 @@
 ---
-title: 使用 create-eth-app 快速启动你的去中心化应用 (dapp) 前端开发
-description: 概述如何使用 create-eth-app 及其功能
+title: "使用 create-eth-app 快速启动你的去中心化应用 (dapp) 前端开发"
+description: "概述如何使用 create-eth-app 及其功能"
 author: "马库斯·瓦斯"
 tags:
   ["前端", "JavaScript", "Ethers.js", "The Graph", "DeFi"]

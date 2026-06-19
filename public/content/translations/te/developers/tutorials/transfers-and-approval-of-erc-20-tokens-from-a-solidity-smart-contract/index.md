@@ -1,10 +1,10 @@
 ---
-title: Solidity స్మార్ట్ కాంట్రాక్ట్ నుండి ERC-20 టోకెన్‌ల బదిలీలు మరియు ఆమోదం
-description: Solidityని ఉపయోగించి ERC-20 టోకెన్ బదిలీలు మరియు ఆమోదాలను నిర్వహించే DEX స్మార్ట్ కాంట్రాక్ట్‌ను రూపొందించండి.
+title: "Solidity స్మార్ట్ కాంట్రాక్ట్ నుండి ERC-20 టోకెన్‌ల బదిలీలు మరియు ఆమోదం"
+description: "Solidityని ఉపయోగించి ERC-20 టోకెన్ బదిలీలు మరియు ఆమోదాలను నిర్వహించే DEX స్మార్ట్ కాంట్రాక్ట్‌ను రూపొందించండి."
 author: "jdourlens"
-tags: ["స్మార్ట్ కాంట్రాక్ట్‌లు", "టోకెన్‌లు", "solidity", "erc-20"]
+tags: ["స్మార్ట్ కాంట్రాక్ట్‌లు", "టోకెన్‌లు", "Solidity", "erc-20"]
 skill: intermediate
-breadcrumb: ERC-20 బదిలీలు
+breadcrumb: "ERC-20 బదిలీలు"
 lang: te
 published: 2020-04-07
 source: EthereumDev

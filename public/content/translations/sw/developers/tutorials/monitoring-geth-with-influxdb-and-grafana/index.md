@@ -39,28 +39,16 @@ Katika mafunzo haya, tutasanidi mteja wako wa Geth kusukuma data kwenye InfluxDB
 Kwanza, hebu tupakue na kusakinisha InfluxDB. Chaguzi mbalimbali za kupakua zinaweza kupatikana kwenye [ukurasa wa matoleo wa Influxdata](https://portal.influxdata.com/downloads/). Chagua inayofaa mazingira yako.
 Unaweza pia kuisakinisha kutoka kwenye [hifadhi](https://repos.influxdata.com/). Kwa mfano katika usambazaji unaotegemea Debian:
 
-<HTML-PLACEHOLDER-CODEBLOCK-685d10 />
-
 Baada ya kusakinisha InfluxDB kwa ufanisi, hakikisha inafanya kazi nyuma. Kwa chaguo-msingi, inapatikana kwenye `localhost:8086`.
 Kabla ya kutumia mteja wa `influx`, inabidi uunde mtumiaji mpya aliye na mapendeleo ya msimamizi. Mtumiaji huyu atatumika kwa usimamizi wa kiwango cha juu, kuunda hifadhidata na watumiaji.
 
-<HTML-PLACEHOLDER-CODEBLOCK-a5c65e />
-
 Sasa unaweza kutumia mteja wa influx kuingia kwenye [ganda la InfluxDB](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) na mtumiaji huyu.
-
-<HTML-PLACEHOLDER-CODEBLOCK-8b28eb />
 
 Ukiwasiliana moja kwa moja na InfluxDB katika ganda lake, unaweza kuunda hifadhidata na mtumiaji kwa ajili ya vipimo vya geth.
 
-<HTML-PLACEHOLDER-CODEBLOCK-1c43ce />
-
 Thibitisha maingizo yaliyoundwa kwa:
 
-<HTML-PLACEHOLDER-CODEBLOCK-5dee85 />
-
 Ondoka kwenye ganda la InfluxDB.
-
-<HTML-PLACEHOLDER-CODEBLOCK-090211 />
 
 InfluxDB inafanya kazi na imesanidiwa kuhifadhi vipimo kutoka kwa Geth.
 
@@ -69,20 +57,14 @@ InfluxDB inafanya kazi na imesanidiwa kuhifadhi vipimo kutoka kwa Geth.
 Baada ya kusanidi hifadhidata, tunahitaji kuwezesha ukusanyaji wa vipimo katika Geth. Zingatia `METRICS AND STATS OPTIONS` katika `geth --help`. Chaguzi nyingi zinaweza kupatikana hapo, katika kesi hii tunataka Geth isukume data kwenye InfluxDB.
 Usanidi wa kimsingi unabainisha sehemu ya mwisho ambapo InfluxDB inapatikana na uthibitishaji wa hifadhidata.
 
-<HTML-PLACEHOLDER-CODEBLOCK-1cd01d />
-
 Alama hizi zinaweza kuongezwa kwenye amri inayoanzisha mteja au kuhifadhiwa kwenye faili ya usanidi.
 
 Unaweza kuthibitisha kuwa Geth inasukuma data kwa ufanisi, kwa mfano kwa kuorodhesha vipimo katika hifadhidata. Katika ganda la InfluxDB:
-
-<HTML-PLACEHOLDER-CODEBLOCK-1da8b2 />
 
 ## Kusanidi Grafana {#setting-up-grafana}
 
 Hatua inayofuata ni kusakinisha Grafana ambayo itatafsiri data kwa njia ya picha. Fuata mchakato wa usakinishaji kwa mazingira yako katika nyaraka za Grafana. Hakikisha umesakinisha toleo la OSS ikiwa hutaki vinginevyo.
 Mfano wa hatua za usakinishaji kwa usambazaji wa Debian kwa kutumia hifadhi:
-
-<HTML-PLACEHOLDER-CODEBLOCK-ee08e5 />
 
 Unapokuwa na Grafana inayoendesha, inapaswa kupatikana kwenye `localhost:3000`.
 Tumia kivinjari unachopendelea kufikia njia hii, kisha ingia na vitambulisho vya chaguo-msingi (mtumiaji: `admin` na nenosiri: `admin`). Unapoulizwa, badilisha nenosiri la chaguo-msingi na uhifadhi.

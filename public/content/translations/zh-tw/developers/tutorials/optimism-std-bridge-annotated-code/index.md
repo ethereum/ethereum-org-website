@@ -576,7 +576,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 為此，我們使用 [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy)，這是一個使用 [`delegatecall`](https://solidity-by-example.org/delegatecall/) 將呼叫轉移到另一個獨立合約的代理合約，該獨立合約的地址由代理合約儲存（當您升級時，您會告訴代理合約更改該地址）。
 當您使用 `delegatecall` 時，儲存空間仍然是_呼叫_合約的儲存空間，因此所有合約狀態變數的值都不受影響。
 
-這種模式的一個影響是，作為 `delegatecall` _被呼叫方_的合約的儲存空間不會被使用，因此傳遞給它的建構函式值並不重要。
+這種模式的一個影響是，作為 `delegatecall` <em>被呼叫方</em>的合約的儲存空間不會被使用，因此傳遞給它的建構函式值並不重要。
 這就是我們可以向 `CrossDomainEnabled` 建構函式提供無意義值的原因。
 這也是下面的初始化與建構函式分開的原因。
 
@@ -1057,7 +1057,7 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 
 L2 跨鏈橋使用 ERC-165 作為健全性檢查，以確保它發送資產的 ERC-20 合約是一個 `IL2StandardERC20`。
 
-**注意：**沒有任何機制可以防止惡意合約對 `supportsInterface` 提供錯誤的答案，因此這是一個健全性檢查機制，_不是_安全機制。
+<strong>注意：</strong>沒有任何機制可以防止惡意合約對 `supportsInterface` 提供錯誤的答案，因此這是一個健全性檢查機制，_不是_安全機制。
 
 ```solidity
     // 斯立瑟-disable-next-line external-function

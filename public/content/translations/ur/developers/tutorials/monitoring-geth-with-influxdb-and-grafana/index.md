@@ -14,8 +14,8 @@ published: 2021-01-13
 ## پیشگی شرائط {#prerequisites}
 
 - آپ کے پاس پہلے سے ہی گو ایتھیریم (<span dir="ltr">Geth</span>) کا ایک انسٹنس چل رہا ہونا چاہیے۔
-- زیادہ تر اقدامات اور مثالیں `<span dir="ltr">Linux</span>` ماحول کے لیے ہیں، ٹرمینل کا بنیادی علم مددگار ثابت ہوگا۔
-- `<span dir="ltr">Geth</span>` کے میٹرکس کے مجموعے کا یہ ویڈیو جائزہ دیکھیں: [Péter Szilágyi کی جانب سے ایتھیریم انفراسٹرکچر کی نگرانی](https://www.youtube.com/watch?v=cOBab8IJMYI)۔
+- زیادہ تر اقدامات اور مثالیں `Linux` ماحول کے لیے ہیں، ٹرمینل کا بنیادی علم مددگار ثابت ہوگا۔
+- `Geth` کے میٹرکس کے مجموعے کا یہ ویڈیو جائزہ دیکھیں: [Péter Szilágyi کی جانب سے ایتھیریم انفراسٹرکچر کی نگرانی](https://www.youtube.com/watch?v=cOBab8IJMYI)۔
 
 ## مانیٹرنگ اسٹیک {#monitoring-stack}
 
@@ -28,14 +28,14 @@ published: 2021-01-13
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-یہاں [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter) بھی موجود ہے، جو `<span dir="ltr">InfluxDB</span>` اور `<span dir="ltr">Grafana</span>` کے ساتھ پہلے سے کنفیگر شدہ ایک آپشن ہے۔
+یہاں [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter) بھی موجود ہے، جو `InfluxDB` اور `Grafana` کے ساتھ پہلے سے کنفیگر شدہ ایک آپشن ہے۔
 
-اس ٹیوٹوریل میں، ہم آپ کے گو ایتھیریم (<span dir="ltr">Geth</span>) کلائنٹ کو ڈیٹا بیس بنانے کے لیے `<span dir="ltr">InfluxDB</span>` پر ڈیٹا پش کرنے اور ڈیٹا کی گراف ویژولائزیشن بنانے کے لیے `<span dir="ltr">Grafana</span>` کو سیٹ اپ کریں گے۔ اسے دستی طور پر کرنے سے آپ کو اس عمل کو بہتر طور پر سمجھنے، اس میں ترمیم کرنے اور مختلف ماحول میں تعینات کرنے میں مدد ملے گی۔
+اس ٹیوٹوریل میں، ہم آپ کے گو ایتھیریم (<span dir="ltr">Geth</span>) کلائنٹ کو ڈیٹا بیس بنانے کے لیے `InfluxDB` پر ڈیٹا پش کرنے اور ڈیٹا کی گراف ویژولائزیشن بنانے کے لیے `Grafana` کو سیٹ اپ کریں گے۔ اسے دستی طور پر کرنے سے آپ کو اس عمل کو بہتر طور پر سمجھنے، اس میں ترمیم کرنے اور مختلف ماحول میں تعینات کرنے میں مدد ملے گی۔
 
 ## <span dir="ltr">InfluxDB</span> کو سیٹ اپ کرنا {#setting-up-influxdb}
 
-سب سے پہلے، آئیے `<span dir="ltr">InfluxDB</span>` ڈاؤن لوڈ اور انسٹال کریں۔ ڈاؤن لوڈ کے مختلف اختیارات [Influxdata ریلیز پیج](https://portal.influxdata.com/downloads/) پر مل سکتے ہیں۔ وہ منتخب کریں جو آپ کے ماحول کے مطابق ہو۔
-آپ اسے کسی [ریپوزٹری](https://repos.influxdata.com/) سے بھی انسٹال کر سکتے ہیں۔ مثال کے طور پر `<span dir="ltr">Debian</span>` پر مبنی ڈسٹری بیوشن میں:
+سب سے پہلے، آئیے `InfluxDB` ڈاؤن لوڈ اور انسٹال کریں۔ ڈاؤن لوڈ کے مختلف اختیارات [Influxdata ریلیز پیج](https://portal.influxdata.com/downloads/) پر مل سکتے ہیں۔ وہ منتخب کریں جو آپ کے ماحول کے مطابق ہو۔
+آپ اسے کسی [ریپوزٹری](https://repos.influxdata.com/) سے بھی انسٹال کر سکتے ہیں۔ مثال کے طور پر `Debian` پر مبنی ڈسٹری بیوشن میں:
 
 ```
 curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add
@@ -48,7 +48,7 @@ sudo systemctl start influxdb
 sudo apt install influxdb-client
 ```
 
-`<span dir="ltr">InfluxDB</span>` کو کامیابی سے انسٹال کرنے کے بعد، یقینی بنائیں کہ یہ بیک گراؤنڈ میں چل رہا ہے۔ پہلے سے طے شدہ طور پر، یہ `localhost:8086` پر قابل رسائی ہے۔
+`InfluxDB` کو کامیابی سے انسٹال کرنے کے بعد، یقینی بنائیں کہ یہ بیک گراؤنڈ میں چل رہا ہے۔ پہلے سے طے شدہ طور پر، یہ `localhost:8086` پر قابل رسائی ہے۔
 `influx` کلائنٹ استعمال کرنے سے پہلے، آپ کو ایڈمن مراعات کے ساتھ نیا صارف بنانا ہوگا۔ یہ صارف اعلیٰ سطح کے انتظام، ڈیٹا بیس اور صارفین بنانے کے لیے کام کرے گا۔
 
 ```
@@ -61,7 +61,7 @@ curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER userna
 influx -username 'username' -password 'password'
 ```
 
-اس کے شیل میں `<span dir="ltr">InfluxDB</span>` کے ساتھ براہ راست بات چیت کرتے ہوئے، آپ `<span dir="ltr">geth</span>` میٹرکس کے لیے ڈیٹا بیس اور صارف بنا سکتے ہیں۔
+اس کے شیل میں `InfluxDB` کے ساتھ براہ راست بات چیت کرتے ہوئے، آپ `geth` میٹرکس کے لیے ڈیٹا بیس اور صارف بنا سکتے ہیں۔
 
 ```
 create database geth
@@ -75,18 +75,18 @@ show databases
 show users
 ```
 
-`<span dir="ltr">InfluxDB</span>` شیل سے باہر نکلیں۔
+`InfluxDB` شیل سے باہر نکلیں۔
 
 ```
 exit
 ```
 
-`<span dir="ltr">InfluxDB</span>` چل رہا ہے اور گو ایتھیریم (<span dir="ltr">Geth</span>) سے میٹرکس کو اسٹور کرنے کے لیے کنفیگر ہو چکا ہے۔
+`InfluxDB` چل رہا ہے اور گو ایتھیریم (<span dir="ltr">Geth</span>) سے میٹرکس کو اسٹور کرنے کے لیے کنفیگر ہو چکا ہے۔
 
 ## گو ایتھیریم (<span dir="ltr">Geth</span>) کی تیاری {#preparing-geth}
 
-ڈیٹا بیس سیٹ اپ کرنے کے بعد، ہمیں `<span dir="ltr">Geth</span>` میں میٹرکس جمع کرنے کو فعال کرنے کی ضرورت ہے۔ `geth --help` میں `METRICS AND STATS OPTIONS` پر توجہ دیں۔ وہاں متعدد اختیارات مل سکتے ہیں، اس صورت میں ہم چاہتے ہیں کہ `<span dir="ltr">Geth</span>` ڈیٹا کو `<span dir="ltr">InfluxDB</span>` میں پش کرے۔
-بنیادی سیٹ اپ اس اینڈ پوائنٹ کی وضاحت کرتا ہے جہاں `<span dir="ltr">InfluxDB</span>` قابل رسائی ہے اور ڈیٹا بیس کے لیے توثیق (authentication) فراہم کرتا ہے۔
+ڈیٹا بیس سیٹ اپ کرنے کے بعد، ہمیں `Geth` میں میٹرکس جمع کرنے کو فعال کرنے کی ضرورت ہے۔ `geth --help` میں `METRICS AND STATS OPTIONS` پر توجہ دیں۔ وہاں متعدد اختیارات مل سکتے ہیں، اس صورت میں ہم چاہتے ہیں کہ `Geth` ڈیٹا کو `InfluxDB` میں پش کرے۔
+بنیادی سیٹ اپ اس اینڈ پوائنٹ کی وضاحت کرتا ہے جہاں `InfluxDB` قابل رسائی ہے اور ڈیٹا بیس کے لیے توثیق (authentication) فراہم کرتا ہے۔
 
 ```
 geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:8086" --metrics.influxdb.username "geth" --metrics.influxdb.password "chosenpassword"
@@ -94,17 +94,17 @@ geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:80
 
 ان فلیگز کو کلائنٹ شروع کرنے والی کمانڈ کے ساتھ منسلک کیا جا سکتا ہے یا کنفیگریشن فائل میں محفوظ کیا جا سکتا ہے۔
 
-آپ تصدیق کر سکتے ہیں کہ `<span dir="ltr">Geth</span>` کامیابی سے ڈیٹا پش کر رہا ہے، مثال کے طور پر ڈیٹا بیس میں میٹرکس کی فہرست بنا کر۔ `<span dir="ltr">InfluxDB</span>` شیل میں:
+آپ تصدیق کر سکتے ہیں کہ `Geth` کامیابی سے ڈیٹا پش کر رہا ہے، مثال کے طور پر ڈیٹا بیس میں میٹرکس کی فہرست بنا کر۔ `InfluxDB` شیل میں:
 
 ```
 use geth
 show measurements
 ```
 
-## `<span dir="ltr">Grafana</span>` کو سیٹ اپ کرنا {#setting-up-grafana}
+## `Grafana` کو سیٹ اپ کرنا {#setting-up-grafana}
 
-اگلا قدم `<span dir="ltr">Grafana</span>` کو انسٹال کرنا ہے جو ڈیٹا کی گرافک طور پر تشریح کرے گا۔ `<span dir="ltr">Grafana</span>` کی دستاویزات میں اپنے ماحول کے لیے انسٹالیشن کے عمل کی پیروی کریں۔ یقینی بنائیں کہ `<span dir="ltr">OSS</span>` ورژن انسٹال کریں الا یہ کہ آپ کچھ اور چاہتے ہوں۔
-ریپوزٹری کا استعمال کرتے ہوئے `<span dir="ltr">Debian</span>` ڈسٹری بیوشنز کے لیے انسٹالیشن کے مراحل کی مثال:
+اگلا قدم `Grafana` کو انسٹال کرنا ہے جو ڈیٹا کی گرافک طور پر تشریح کرے گا۔ `Grafana` کی دستاویزات میں اپنے ماحول کے لیے انسٹالیشن کے عمل کی پیروی کریں۔ یقینی بنائیں کہ `OSS` ورژن انسٹال کریں الا یہ کہ آپ کچھ اور چاہتے ہوں۔
+ریپوزٹری کا استعمال کرتے ہوئے `Debian` ڈسٹری بیوشنز کے لیے انسٹالیشن کے مراحل کی مثال:
 
 ```
 curl -tlsv1.3 --proto =https -sL https://packages.grafana.com/gpg.key | sudo apt-key add -
@@ -115,12 +115,12 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-جب آپ کا `<span dir="ltr">Grafana</span>` چلنا شروع ہو جائے، تو اسے `localhost:3000` پر قابل رسائی ہونا چاہیے۔
+جب آپ کا `Grafana` چلنا شروع ہو جائے، تو اسے `localhost:3000` پر قابل رسائی ہونا چاہیے۔
 اس پاتھ تک رسائی کے لیے اپنا پسندیدہ براؤزر استعمال کریں، پھر پہلے سے طے شدہ اسناد (صارف: `admin` اور پاس ورڈ: `admin`) کے ساتھ لاگ ان کریں۔ جب کہا جائے تو پہلے سے طے شدہ پاس ورڈ تبدیل کریں اور محفوظ کریں۔
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 1)](./grafana1.png)
 
-آپ کو `<span dir="ltr">Grafana</span>` کے ہوم پیج پر ری ڈائریکٹ کر دیا جائے گا۔ سب سے پہلے، اپنا سورس ڈیٹا سیٹ اپ کریں۔ بائیں بار میں کنفیگریشن آئیکن پر کلک کریں اور "<span dir="ltr">Data sources</span>" کو منتخب کریں۔
+آپ کو `Grafana` کے ہوم پیج پر ری ڈائریکٹ کر دیا جائے گا۔ سب سے پہلے، اپنا سورس ڈیٹا سیٹ اپ کریں۔ بائیں بار میں کنفیگریشن آئیکن پر کلک کریں اور "<span dir="ltr">Data sources</span>" کو منتخب کریں۔
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 2)](./grafana2.png)
 
@@ -132,19 +132,19 @@ sudo systemctl start grafana-server
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 4)](./grafana4.png)
 
-اگر آپ ایک ہی مشین پر ٹولز چلا رہے ہیں تو ڈیٹا سورس کی کنفیگریشن کافی سیدھی ہے۔ آپ کو ڈیٹا بیس تک رسائی کے لیے `<span dir="ltr">InfluxDB</span>` کا پتہ اور تفصیلات سیٹ کرنے کی ضرورت ہے۔ نیچے دی گئی تصویر سے رجوع کریں۔
+اگر آپ ایک ہی مشین پر ٹولز چلا رہے ہیں تو ڈیٹا سورس کی کنفیگریشن کافی سیدھی ہے۔ آپ کو ڈیٹا بیس تک رسائی کے لیے `InfluxDB` کا پتہ اور تفصیلات سیٹ کرنے کی ضرورت ہے۔ نیچے دی گئی تصویر سے رجوع کریں۔
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 5)](./grafana5.png)
 
-اگر سب کچھ مکمل ہے اور `<span dir="ltr">InfluxDB</span>` قابل رسائی ہے، تو "<span dir="ltr">Save and test</span>" پر کلک کریں اور تصدیق کے پاپ اپ ہونے کا انتظار کریں۔
+اگر سب کچھ مکمل ہے اور `InfluxDB` قابل رسائی ہے، تو "<span dir="ltr">Save and test</span>" پر کلک کریں اور تصدیق کے پاپ اپ ہونے کا انتظار کریں۔
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 6)](./grafana6.png)
 
-`<span dir="ltr">Grafana</span>` اب `<span dir="ltr">InfluxDB</span>` سے ڈیٹا پڑھنے کے لیے سیٹ اپ ہو چکا ہے۔ اب آپ کو ایک ڈیش بورڈ بنانے کی ضرورت ہے جو اس کی تشریح کرے گا اور اسے دکھائے گا۔ ڈیش بورڈز کی خصوصیات `<span dir="ltr">JSON</span>` فائلوں میں انکوڈ ہوتی ہیں جنہیں کوئی بھی بنا سکتا ہے اور آسانی سے امپورٹ کیا جا سکتا ہے۔ بائیں بار پر، "<span dir="ltr">Create and Import</span>" پر کلک کریں۔
+`Grafana` اب `InfluxDB` سے ڈیٹا پڑھنے کے لیے سیٹ اپ ہو چکا ہے۔ اب آپ کو ایک ڈیش بورڈ بنانے کی ضرورت ہے جو اس کی تشریح کرے گا اور اسے دکھائے گا۔ ڈیش بورڈز کی خصوصیات `JSON` فائلوں میں انکوڈ ہوتی ہیں جنہیں کوئی بھی بنا سکتا ہے اور آسانی سے امپورٹ کیا جا سکتا ہے۔ بائیں بار پر، "<span dir="ltr">Create and Import</span>" پر کلک کریں۔
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 7)](./grafana7.png)
 
-گو ایتھیریم (<span dir="ltr">Geth</span>) مانیٹرنگ ڈیش بورڈ کے لیے، [اس ڈیش بورڈ](https://grafana.com/grafana/dashboards/13877/) کی ID کاپی کریں اور اسے `<span dir="ltr">Grafana</span>` میں "<span dir="ltr">Import page</span>" میں پیسٹ کریں۔ ڈیش بورڈ کو محفوظ کرنے کے بعد، یہ اس طرح نظر آنا چاہیے:
+گو ایتھیریم (<span dir="ltr">Geth</span>) مانیٹرنگ ڈیش بورڈ کے لیے، [اس ڈیش بورڈ](https://grafana.com/grafana/dashboards/13877/) کی ID کاپی کریں اور اسے `Grafana` میں "<span dir="ltr">Import page</span>" میں پیسٹ کریں۔ ڈیش بورڈ کو محفوظ کرنے کے بعد، یہ اس طرح نظر آنا چاہیے:
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 8)](./grafana8.png)
 

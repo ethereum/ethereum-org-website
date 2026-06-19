@@ -1,10 +1,10 @@
 ---
-title: Começando com o desenvolvimento na Ethereum
+title: "Começando com o desenvolvimento na Ethereum"
 description: "Este é um guia para iniciantes sobre como começar a desenvolver na Ethereum. Vamos levá-lo desde a criação de um endpoint de API, passando por uma solicitação de linha de comando, até escrever seu primeiro script Web3! Nenhuma experiência em desenvolvimento de blockchain é necessária!"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "nós", "consultas", "alchemy"]
+tags: ["JavaScript", "ethers.js", "nós", "consultas", "Alchemy"]
 skill: beginner
-breadcrumb: Começando
+breadcrumb: "Começando"
 lang: pt-br
 published: 2020-10-30
 source: Medium

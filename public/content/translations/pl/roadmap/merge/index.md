@@ -1,6 +1,6 @@
 ---
 title: The Merge
-description: Dowiedz się o The Merge – kiedy sieć główna Ethereum przeszła na dowód stawki (PoS).
+description: "Dowiedz się o The Merge – kiedy sieć główna Ethereum przeszła na dowód stawki (PoS)."
 lang: pl
 template: upgrade
 image: /images/upgrades/merge.png

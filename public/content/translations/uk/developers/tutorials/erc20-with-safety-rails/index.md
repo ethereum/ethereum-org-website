@@ -1,11 +1,11 @@
 ---
-title: ERC-20 із запобіжниками
-description: Як допомогти людям уникати безглуздих помилок
-author: Орі Померанц
+title: "ERC-20 із запобіжниками"
+description: "Як допомогти людям уникати безглуздих помилок"
+author: "Орі Померанц"
 lang: uk
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: Безпека ERC-20
+breadcrumb: "Безпека ERC-20"
 published: 2022-08-15
 ---
 

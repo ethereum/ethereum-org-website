@@ -2,7 +2,7 @@
 title: Kusambaza mkataba mahiri wako wa kwanza
 description: Utangulizi wa kusambaza mkataba mahiri wako wa kwanza kwenye mtandao wa majaribio wa Ethereum
 author: "jdourlens"
-tags: ["mikataba mahiri", "remix", "solidity", "kusambaza"]
+tags: ["mikataba mahiri", "Remix", "Solidity", "kusambaza"]
 skill: beginner
 breadcrumb: Sambaza mkataba wa kwanza
 lang: sw

@@ -1,6 +1,6 @@
 ---
-title: 初學者的 Hello World 智能合約
-description: 在以太坊上撰寫與部署簡單智能合約的入門教學。
+title: "初學者的 Hello World 智能合約"
+description: "在以太坊上撰寫與部署簡單智能合約的入門教學。"
 author: "elanh"
 tags:
   - solidity
@@ -9,7 +9,7 @@ tags:
   - 智能合約
   - 部署
 skill: beginner
-breadcrumb: Hello World 合約
+breadcrumb: "Hello World 合約"
 lang: zh-tw
 published: 2021-03-31
 ---

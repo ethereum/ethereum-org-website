@@ -1,6 +1,6 @@
 ---
-title: 초보자를 위한 Hello World 스마트 컨트랙트
-description: 이더리움에서 간단한 스마트 컨트랙트를 작성하고 배포하는 방법에 대한 입문 튜토리얼입니다.
+title: "초보자를 위한 Hello World 스마트 컨트랙트"
+description: "이더리움에서 간단한 스마트 컨트랙트를 작성하고 배포하는 방법에 대한 입문 튜토리얼입니다."
 author: elanh
 tags:
   - solidity
@@ -9,7 +9,7 @@ tags:
   - 스마트 컨트랙트
   - 배포
 skill: beginner
-breadcrumb: Hello World 컨트랙트
+breadcrumb: "Hello World 컨트랙트"
 lang: ko
 published: 2021-03-31
 ---

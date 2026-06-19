@@ -1,6 +1,6 @@
 ---
 title: Der Merge
-description: Erfahren Sie mehr über den Merge – als das Ethereum Mainnet Proof-of-Stake einführte.
+description: "Erfahren Sie mehr über den Merge – als das Ethereum Mainnet Proof-of-Stake einführte."
 lang: de
 template: upgrade
 image: /images/upgrades/merge.png

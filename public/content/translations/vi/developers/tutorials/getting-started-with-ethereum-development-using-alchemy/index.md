@@ -1,10 +1,10 @@
 ---
-title: Bắt đầu với việc phát triển Ethereum
+title: "Bắt đầu với việc phát triển Ethereum"
 description: "Đây là hướng dẫn dành cho người mới bắt đầu để làm quen với việc phát triển Ethereum. Chúng tôi sẽ đưa bạn từ việc thiết lập một điểm cuối API, thực hiện một yêu cầu dòng lệnh, cho đến việc viết tập lệnh Web3 đầu tiên của bạn! Không yêu cầu kinh nghiệm phát triển Chuỗi khối!"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "nút", "truy vấn", "alchemy"]
+tags: ["JavaScript", "ethers.js", "nút", "truy vấn", "Alchemy"]
 skill: beginner
-breadcrumb: Bắt đầu
+breadcrumb: "Bắt đầu"
 lang: vi
 published: 2020-10-30
 source: Medium

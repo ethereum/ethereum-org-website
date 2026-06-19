@@ -1,10 +1,10 @@
 ---
-title: 部署你的第一个智能合约
-description: 在以太坊测试网络上部署你的第一个智能合约的简介
+title: "部署你的第一个智能合约"
+description: "在以太坊测试网络上部署你的第一个智能合约的简介"
 author: "jdourlens"
-tags: ["智能合约", "remix", "solidity", "部署"]
+tags: ["智能合约", "Remix", "Solidity", "部署"]
 skill: beginner
-breadcrumb: 部署第一个合约
+breadcrumb: "部署第一个合约"
 lang: zh
 published: 2020-04-03
 source: EthereumDev

@@ -1,12 +1,12 @@
 ---
-title: नॉन-फंजिबल टोकन (NFT)
-metaTitle: NFT क्या हैं? | लाभ और उपयोग
-description: इथेरियम पर NFT का अवलोकन
+title: "नॉन-फंजिबल टोकन (NFT)"
+metaTitle: "NFT क्या हैं? | लाभ और उपयोग"
+description: "इथेरियम पर NFT का अवलोकन"
 lang: hi
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: होलोग्राम के माध्यम से प्रदर्शित किया जा रहा एक Eth लोगो।
+alt: "होलोग्राम के माध्यम से प्रदर्शित किया जा रहा एक Eth लोगो।"
 summaryPoints:
   - "किसी भी अनूठी चीज़ को इथेरियम-आधारित संपत्ति के रूप में दर्शाने का एक तरीका।"
   - "NFT कंटेंट क्रिएटर्स को पहले से कहीं अधिक शक्ति दे रहे हैं।"

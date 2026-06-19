@@ -1,9 +1,9 @@
 ---
-title: Dê o pontapé inicial no desenvolvimento do frontend do seu dapp com o create-eth-app
-description: Uma visão geral de como usar o create-eth-app e seus recursos
+title: "Dê o pontapé inicial no desenvolvimento do frontend do seu dapp com o create-eth-app"
+description: "Uma visão geral de como usar o create-eth-app e seus recursos"
 author: "Markus Waas"
 tags:
-  ["frontend", "javascript", "ethers.js", "the graph", "defi"]
+  ["frontend", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: pt-br

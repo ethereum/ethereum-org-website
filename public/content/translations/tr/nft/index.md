@@ -1,12 +1,12 @@
 ---
-title: Değiştirilemez token'lar (NFT)
-metaTitle: NFT'ler nedir? | Faydaları ve kullanımı
-description: Ethereum'daki NFT'lere genel bir bakış
+title: "Değiştirilemez token'lar (NFT)"
+metaTitle: "NFT'ler nedir? | Faydaları ve kullanımı"
+description: "Ethereum'daki NFT'lere genel bir bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Hologram aracılığıyla görüntülenen bir Eth logosu.
+alt: "Hologram aracılığıyla görüntülenen bir Eth logosu."
 summaryPoints:
   - "Benzersiz herhangi bir şeyi Ethereum tabanlı bir varlık olarak temsil etmenin bir yolu."
   - "NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor."

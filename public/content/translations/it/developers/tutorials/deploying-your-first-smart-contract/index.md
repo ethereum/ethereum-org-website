@@ -2,7 +2,7 @@
 title: Distribuire il tuo primo smart contract
 description: Un'introduzione alla distribuzione del tuo primo smart contract su una rete di test di Ethereum
 author: "jdourlens"
-tags: ["smart contract", "remix", "solidity", "distribuzione"]
+tags: ["smart contract", "Remix", "Solidity", "distribuzione"]
 skill: beginner
 breadcrumb: Distribuire il primo contratto
 lang: it

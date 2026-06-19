@@ -1,10 +1,10 @@
 ---
 title: "オプティミズムの標準ブリッジコントラクトの解説"
-description: オプティミズムの標準ブリッジはどのように機能するのでしょうか？なぜこのように機能するのでしょうか？
-author: オリ・ポメランツ
-tags: ["solidity", "ブリッジ", "レイヤー2"]
+description: "オプティミズムの標準ブリッジはどのように機能するのでしょうか？なぜこのように機能するのでしょうか？"
+author: "オリ・ポメランツ"
+tags: ["Solidity", "ブリッジ", "レイヤー2"]
 skill: intermediate
-breadcrumb: オプティミズムのブリッジ
+breadcrumb: "オプティミズムのブリッジ"
 published: 2022-03-30
 lang: ja
 ---

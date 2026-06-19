@@ -1,6 +1,6 @@
 ---
 title: Utilizzare la conoscenza zero per uno stato segreto
-description: I giochi onchain sono limitati perché non possono mantenere alcuna informazione nascosta. Dopo aver letto questo tutorial, il lettore sarà in grado di combinare le prove a conoscenza zero e i componenti server per creare giochi verificabili con un componente di stato segreto offchain. La tecnica per farlo verrà dimostrata creando un gioco del campo minato.
+description: "I giochi onchain sono limitati perché non possono mantenere alcuna informazione nascosta. Dopo aver letto questo tutorial, il lettore sarà in grado di combinare le prove a conoscenza zero e i componenti server per creare giochi verificabili con un componente di stato segreto offchain. La tecnica per farlo verrà dimostrata creando un gioco del campo minato."
 author: Ori Pomerantz
 tags:
   - server

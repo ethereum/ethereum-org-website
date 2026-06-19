@@ -1,7 +1,7 @@
 ---
-title: Cancún-Deneb (Dencun)
-metaTitle: Preguntas frecuentes sobre Cancún-Deneb (Dencun)
-description: Preguntas frecuentes sobre la actualización de la red Cancún-Deneb (Dencun)
+title: "Cancún-Deneb (Dencun)"
+metaTitle: "Preguntas frecuentes sobre Cancún-Deneb (Dencun)"
+description: "Preguntas frecuentes sobre la actualización de la red Cancún-Deneb (Dencun)"
 lang: es
 ---
 

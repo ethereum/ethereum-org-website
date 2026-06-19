@@ -1,10 +1,10 @@
 ---
-title: Solidityスマート・コントラクトからのERC-20トークンの送金と承認
-description: Solidityを使用して、ERC-20トークンの送金と承認を処理するDEXスマート・コントラクトを構築します。
+title: "Solidityスマート・コントラクトからのERC-20トークンの送金と承認"
+description: "Solidityを使用して、ERC-20トークンの送金と承認を処理するDEXスマート・コントラクトを構築します。"
 author: "jdourlens"
-tags: ["スマート・コントラクト", "トークン", "solidity", "erc-20"]
+tags: ["スマート・コントラクト", "トークン", "Solidity", "erc-20"]
 skill: intermediate
-breadcrumb: ERC-20の送金
+breadcrumb: "ERC-20の送金"
 lang: ja
 published: 2020-04-07
 source: EthereumDev

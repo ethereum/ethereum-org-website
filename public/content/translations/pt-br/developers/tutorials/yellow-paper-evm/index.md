@@ -1,6 +1,6 @@
 ---
-title: Entendendo as especificações da EVM no yellow paper
-description: Entendendo a parte do yellow paper, as especificações formais do Ethereum, que explica a Máquina Virtual Ethereum (EVM).
+title: "Entendendo as especificações da EVM no yellow paper"
+description: "Entendendo a parte do yellow paper, as especificações formais do Ethereum, que explica a Máquina Virtual Ethereum (EVM)."
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate

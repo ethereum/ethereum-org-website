@@ -1,11 +1,11 @@
 ---
-title: 안전장치가 있는 ERC-20
-description: 사람들이 어리석은 실수를 피하도록 돕는 방법
-author: 오리 포메란츠
+title: "안전장치가 있는 ERC-20"
+description: "사람들이 어리석은 실수를 피하도록 돕는 방법"
+author: "오리 포메란츠"
 lang: ko
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20 안전
+breadcrumb: "ERC-20 안전"
 published: 2022-08-15
 ---
 
@@ -20,13 +20,13 @@ published: 2022-08-15
 1. [Remix IDE](https://remix.ethereum.org/)를 엽니다.
 2. GitHub 클론 아이콘(![clone github icon](icon-clone.png))을 클릭합니다.
 3. GitHub 리포지토리 `https://github.com/qbzzt/20220815-erc20-safety-rails`를 클론합니다.
-4. **contracts > erc20-safety-rails.sol**을 엽니다.
+4. <strong>contracts > erc20-safety-rails.sol</strong>을 엽니다.
 
 ## ERC-20 컨트랙트 생성 {#creating-an-erc-20-contract}
 
 안전장치 기능을 추가하려면 먼저 ERC-20 컨트랙트가 필요합니다. 이 글에서는 [오픈제플린 컨트랙트 마법사(OpenZeppelin Contracts Wizard)](https://docs.openzeppelin.com/contracts/5.x/wizard)를 사용합니다. 다른 브라우저에서 열고 다음 지침을 따르세요.
 
-1. **ERC20**을 선택합니다.
+1. <strong>ERC20</strong>을 선택합니다.
 2. 다음 설정을 입력합니다.
 
    | 매개변수      | 값            |
@@ -38,7 +38,7 @@ published: 2022-08-15
    | Access Control | Ownable          |
    | Upgradability  | None             |
 
-3. 위로 스크롤하여 **Open in Remix**(Remix용)를 클릭하거나 다른 환경을 사용하려면 **Download**를 클릭합니다. 여기서는 Remix를 사용한다고 가정하며, 다른 환경을 사용하는 경우 적절히 변경하세요.
+3. 위로 스크롤하여 **Open in Remix**(Remix용)를 클릭하거나 다른 환경을 사용하려면 <strong>Download</strong>를 클릭합니다. 여기서는 Remix를 사용한다고 가정하며, 다른 환경을 사용하는 경우 적절히 변경하세요.
 4. 이제 완전히 작동하는 ERC-20 컨트랙트가 준비되었습니다. `.deps` > `npm`를 확장하여 가져온 코드를 볼 수 있습니다.
 5. 컨트랙트를 컴파일하고 배포하여 ERC-20 컨트랙트로 작동하는지 확인해 보세요. Remix 사용법을 배워야 한다면 [이 튜토리얼을 사용하세요](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 

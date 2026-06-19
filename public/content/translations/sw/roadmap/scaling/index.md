@@ -15,11 +15,11 @@ Uwezo wa Ethereum unaongezwa kwa kutumia [matabaka ya 2](/layer-2/#rollups) (pia
   Gharama za miamala
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Mikusanyiko ya leo ni nafuu <strong>~5-20x</strong> kuliko tabaka la 1 la Ethereum</li>
-    <li>Mikusanyiko ya ZK hivi karibuni itapunguza ada kwa <strong>~40-100x</strong></li>
-    <li>Mabadiliko yajayo kwenye Ethereum yatatoa ongezeko lingine la uwezo la <strong>~100-1000x</strong></li>
-    <li style={{ marginBottom: 0 }}>Watumiaji wanapaswa kunufaika na miamala <strong>inayogharimu chini ya $0.001</strong></strong>
-  </strong>
+    <li>Mikusanyiko ya leo ni nafuu <strong>\~5-20x</strong> kuliko tabaka la 1 la Ethereum</li>
+    <li>Mikusanyiko ya ZK hivi karibuni itapunguza ada kwa <strong>\~40-100x</strong></li>
+    <li>Mabadiliko yajayo kwenye Ethereum yatatoa ongezeko lingine la uwezo la <strong>\~100-1000x</strong></li>
+ <li style={{ marginBottom: 0 }}>Watumiaji wanapaswa kunufaika na miamala <strong>inayogharimu chini ya $0.001</strong>
+
 </AlertContent>
 </Alert>
 

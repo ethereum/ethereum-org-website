@@ -1,9 +1,9 @@
 ---
-title: create-eth-app ile dapp ön yüz geliştirmenize hızlı bir başlangıç yapın
-description: create-eth-app'in nasıl kullanılacağına ve özelliklerine genel bir bakış
+title: "create-eth-app ile dapp ön yüz geliştirmenize hızlı bir başlangıç yapın"
+description: "create-eth-app'in nasıl kullanılacağına ve özelliklerine genel bir bakış"
 author: "Markus Waas"
 tags:
-  ["ön yüz", "javascript", "ethers.js", "the graph", "defi"]
+  ["ön yüz", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: tr

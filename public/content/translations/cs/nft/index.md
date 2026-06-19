@@ -1,12 +1,12 @@
 ---
-title: Nezastupitelné tokeny (NFT)
-metaTitle: Co jsou to NFT? | Výhody a využití
-description: Přehled NFT na Ethereu
+title: "Nezastupitelné tokeny (NFT)"
+metaTitle: "Co jsou to NFT? | Výhody a využití"
+description: "Přehled NFT na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Logo Eth zobrazené jako hologram.
+alt: "Logo Eth zobrazené jako hologram."
 summaryPoints:
   - "Způsob, jak reprezentovat cokoli jedinečného jako aktivum na Ethereu."
   - "NFT dávají tvůrcům obsahu více moci než kdykoli předtím."

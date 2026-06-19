@@ -1,10 +1,10 @@
 ---
-title: Hợp đồng thông minh Hello World cho người mới bắt đầu
-description: Hướng dẫn nhập môn về cách viết và triển khai một hợp đồng thông minh đơn giản trên Ethereum.
+title: "Hợp đồng thông minh Hello World cho người mới bắt đầu"
+description: "Hướng dẫn nhập môn về cách viết và triển khai một hợp đồng thông minh đơn giản trên Ethereum."
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "hợp đồng thông minh", "triển khai"]
+tags: ["Solidity", "Hardhat", "Alchemy", "hợp đồng thông minh", "triển khai"]
 skill: beginner
-breadcrumb: Hợp đồng Hello World
+breadcrumb: "Hợp đồng Hello World"
 lang: vi
 published: 2021-03-31
 ---

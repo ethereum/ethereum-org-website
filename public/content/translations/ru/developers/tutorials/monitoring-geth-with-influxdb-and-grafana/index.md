@@ -1,12 +1,12 @@
 ---
-title: Мониторинг Geth с помощью InfluxDB и Grafana
-description: Настройте мониторинг для вашего узла Geth с помощью InfluxDB и Grafana, чтобы отслеживать производительность и выявлять проблемы.
+title: "Мониторинг Geth с помощью InfluxDB и Grafana"
+description: "Настройте мониторинг для вашего узла Geth с помощью InfluxDB и Grafana, чтобы отслеживать производительность и выявлять проблемы."
 author: "Марио Хавел"
 tags:
   - клиенты
   - узлы
 skill: intermediate
-breadcrumb: Мониторинг Geth
+breadcrumb: "Мониторинг Geth"
 lang: ru
 published: 2021-01-13
 ---

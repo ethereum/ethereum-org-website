@@ -1,11 +1,11 @@
 ---
-title: ⁨WebSockets⁩ ఉపయోగించడం
-description: ⁨JSON-RPC⁩ అభ్యర్థనలు చేయడానికి మరియు ఈవెంట్‌లకు సబ్‌స్క్రైబ్ చేయడానికి ⁨WebSockets⁩ మరియు ⁨Alchemy⁩ ఉపయోగించడంపై గైడ్.
+title: "⁨WebSockets⁩ ఉపయోగించడం"
+description: "⁨JSON-RPC⁩ అభ్యర్థనలు చేయడానికి మరియు ఈవెంట్‌లకు సబ్‌స్క్రైబ్ చేయడానికి ⁨WebSockets⁩ మరియు ⁨Alchemy⁩ ఉపయోగించడంపై గైడ్."
 author: "ఎలాన్ హాల్పెర్న్"
 lang: te
-tags: ["alchemy", "websockets", "క్వెరీ చేయడం", "javascript"]
+tags: ["Alchemy", "websockets", "క్వెరీ చేయడం", "JavaScript"]
 skill: beginner
-breadcrumb: ⁨WebSockets⁩
+breadcrumb: "⁨WebSockets⁩"
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01

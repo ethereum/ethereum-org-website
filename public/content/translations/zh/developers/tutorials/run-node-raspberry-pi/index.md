@@ -1,11 +1,11 @@
 ---
-title: 在 Raspberry Pi 4 上运行以太坊节点
-description: 刷写 Raspberry Pi 4，插入以太网电缆，连接 SSD 磁盘并开启设备，将 Raspberry Pi 4 变成一个完整的以太坊节点和验证者
+title: "在 Raspberry Pi 4 上运行以太坊节点"
+description: "刷写 Raspberry Pi 4，插入以太网电缆，连接 SSD 磁盘并开启设备，将 Raspberry Pi 4 变成一个完整的以太坊节点和验证者"
 author: "EthereumOnArm"
 tags: ["客户端", "执行层", "共识层", "节点"]
 lang: zh
 skill: intermediate
-breadcrumb: Raspberry Pi 节点
+breadcrumb: "Raspberry Pi 节点"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

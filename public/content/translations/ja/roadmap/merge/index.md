@@ -1,6 +1,6 @@
 ---
-title: マージ
-description: マージについて — イーサリアム・メインネットがプルーフ・オブ・ステークを採用した経緯を学びましょう。
+title: "マージ"
+description: "マージについて — イーサリアム・メインネットがプルーフ・オブ・ステークを採用した経緯を学びましょう。"
 lang: ja
 template: upgrade
 image: /images/upgrades/merge.png

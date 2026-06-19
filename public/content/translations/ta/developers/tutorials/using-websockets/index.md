@@ -1,9 +1,9 @@
 ---
-title: WebSockets பயன்படுத்துதல்
-description: JSON-RPC கோரிக்கைகளைச் செய்வதற்கும் நிகழ்வுகளுக்குக் குழுசேர்வதற்கும் WebSockets மற்றும் Alchemy-ஐப் பயன்படுத்துவதற்கான வழிகாட்டி.
+title: "WebSockets பயன்படுத்துதல்"
+description: "JSON-RPC கோரிக்கைகளைச் செய்வதற்கும் நிகழ்வுகளுக்குக் குழுசேர்வதற்கும் WebSockets மற்றும் Alchemy-ஐப் பயன்படுத்துவதற்கான வழிகாட்டி."
 author: "எலான் ஹால்பெர்ன்"
 lang: ta
-tags: ["alchemy", "websockets", "வினவுதல்", "javascript"]
+tags: ["Alchemy", "websockets", "வினவுதல்", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

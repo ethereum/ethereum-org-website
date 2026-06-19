@@ -1,11 +1,11 @@
 ---
-title: ERC-20 com barreiras de proteção
+title: "ERC-20 com barreiras de proteção"
 description: Como ajudar as pessoas a evitar erros bobos
 author: Ori Pomerantz
 lang: pt-br
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: Segurança de ERC-20
+breadcrumb: "Segurança de ERC-20"
 published: 2022-08-15
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Průvodce kontraktem standardního mostu Optimism"
-description: Jak funguje standardní most pro Optimism? Proč funguje právě takto?
+description: "Jak funguje standardní most pro Optimism? Proč funguje právě takto?"
 author: Ori Pomerantz
-tags: ["solidity", "most", "vrstva 2"]
+tags: ["Solidity", "most", "vrstva 2"]
 skill: intermediate
 breadcrumb: Most Optimism
 published: 2022-03-30

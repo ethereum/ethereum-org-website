@@ -1,6 +1,6 @@
 ---
-title: द मर्ज
-description: द मर्ज के बारे में जानें - जब मेननेट इथेरियम ने प्रूफ-ऑफ़-स्टेक को अपनाया।
+title: "द मर्ज"
+description: "द मर्ज के बारे में जानें - जब मेननेट इथेरियम ने प्रूफ-ऑफ़-स्टेक को अपनाया।"
 lang: hi
 template: upgrade
 image: /images/upgrades/merge.png

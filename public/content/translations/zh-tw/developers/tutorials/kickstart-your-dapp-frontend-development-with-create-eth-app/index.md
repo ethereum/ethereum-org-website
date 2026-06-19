@@ -1,7 +1,7 @@
 ---
-title: 使用 create-eth-app 啟動你的去中心化應用程式 (dapp) 前端開發
-description: create-eth-app 的使用方法及其功能概述
-author: 馬庫斯·瓦斯
+title: "使用 create-eth-app 啟動你的去中心化應用程式 (dapp) 前端開發"
+description: "create-eth-app 的使用方法及其功能概述"
+author: "馬庫斯·瓦斯"
 tags:
   - 前端
   - javascript

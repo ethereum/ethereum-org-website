@@ -1,6 +1,6 @@
 ---
 title: Uso de conocimiento cero para un estado secreto
-description: Los juegos en cadena están limitados porque no pueden mantener ninguna información oculta. Después de leer este tutorial, el lector podrá combinar pruebas de conocimiento cero y componentes de servidor para crear juegos verificables con un componente de estado secreto fuera de la cadena. La técnica para hacer esto se demostrará creando un juego de buscaminas.
+description: "Los juegos en cadena están limitados porque no pueden mantener ninguna información oculta. Después de leer este tutorial, el lector podrá combinar pruebas de conocimiento cero y componentes de servidor para crear juegos verificables con un componente de estado secreto fuera de la cadena. La técnica para hacer esto se demostrará creando un juego de buscaminas."
 author: Ori Pomerantz
 tags:
   - servidor

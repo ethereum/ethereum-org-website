@@ -1,10 +1,10 @@
 ---
-title: البدء في تطوير إيثيريوم
+title: "البدء في تطوير إيثيريوم"
 description: "هذا دليل للمبتدئين للبدء في تطوير إيثيريوم. سنأخذك من إعداد نقطة نهاية ⁦API⁩، إلى إجراء طلب من سطر الأوامر، وصولاً إلى كتابة أول برنامج نصي لـ ⁦Web3⁩! لا يلزم وجود خبرة سابقة في تطوير سلسلة الكتل!"
 author: "إيلان هالبرن"
 tags: ["JavaScript", "ethers.js", "العقد", "الاستعلام", "Alchemy"]
 skill: beginner
-breadcrumb: البدء
+breadcrumb: "البدء"
 lang: ar
 published: 2020-10-30
 source: Medium
@@ -13,7 +13,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-هذا دليل للمبتدئين للبدء في تطوير إيثيريوم. في هذا البرنامج التعليمي، سنستخدم [Alchemy](https://alchemyapi.io/)، وهي منصة تطوير سلسلة الكتل الرائدة التي تدعم ملايين المستخدمين من <span dir="ltr">70%</span> من أفضل تطبيقات سلسلة الكتل، بما في ذلك Maker و 0x و MyEtherWallet و Dharma و Kyber. ستمنحنا Alchemy إمكانية الوصول إلى نقطة نهاية API على سلسلة إيثيريوم حتى نتمكن من قراءة المعاملات وكتابتها.
+هذا دليل للمبتدئين للبدء في تطوير إيثيريوم. في هذا البرنامج التعليمي، سنستخدم [Alchemy](https://alchemyapi.io/)، وهي منصة تطوير سلسلة الكتل الرائدة التي تدعم ملايين المستخدمين من <span dir="ltr">70%</span> من أفضل تطبيقات سلسلة الكتل، بما في ذلك Maker و <span dir="ltr">0x</span> و MyEtherWallet و Dharma و Kyber. ستمنحنا Alchemy إمكانية الوصول إلى نقطة نهاية API على سلسلة إيثيريوم حتى نتمكن من قراءة المعاملات وكتابتها.
 
 سنأخذك من التسجيل في Alchemy إلى كتابة أول برنامج نصي لـ Web3! لا يلزم وجود خبرة سابقة في تطوير سلسلة الكتل!
 

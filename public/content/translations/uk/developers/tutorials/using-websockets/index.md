@@ -1,9 +1,9 @@
 ---
-title: Використання WebSockets
-description: Посібник із використання WebSockets та Alchemy для виконання JSON-RPC запитів і підписки на події.
+title: "Використання WebSockets"
+description: "Посібник із використання WebSockets та Alchemy для виконання JSON-RPC запитів і підписки на події."
 author: "Елан Гальперн"
 lang: uk
-tags: ["alchemy", "websockets", "запити", "javascript"]
+tags: ["Alchemy", "websockets", "запити", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

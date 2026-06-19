@@ -1,6 +1,6 @@
 ---
-title: Comprendre les spécifications de l'EVM du livre jaune
-description: Comprendre la partie du livre jaune, les spécifications formelles d'Ethereum, qui explique la machine virtuelle Ethereum (EVM).
+title: "Comprendre les spécifications de l'EVM du livre jaune"
+description: "Comprendre la partie du livre jaune, les spécifications formelles d'Ethereum, qui explique la machine virtuelle Ethereum (EVM)."
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate

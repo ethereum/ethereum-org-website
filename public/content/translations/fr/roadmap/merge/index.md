@@ -1,6 +1,6 @@
 ---
 title: La Fusion
-description: Découvrez La Fusion - le moment où le réseau principal Ethereum a adopté la preuve d'enjeu.
+description: "Découvrez La Fusion - le moment où le réseau principal Ethereum a adopté la preuve d'enjeu."
 lang: fr
 template: upgrade
 image: /images/upgrades/merge.png

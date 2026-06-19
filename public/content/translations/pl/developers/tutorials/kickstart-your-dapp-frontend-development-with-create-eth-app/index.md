@@ -1,9 +1,9 @@
 ---
 title: Rozpocznij tworzenie frontendu swojej zdecentralizowanej aplikacji (dapp) z create-eth-app
-description: Przegląd sposobu korzystania z create-eth-app i jego funkcji
+description: "Przegląd sposobu korzystania z create-eth-app i jego funkcji"
 author: "Markus Waas"
 tags:
-  ["frontend", "javascript", "ethers.js", "the graph", "defi"]
+  ["frontend", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: pl

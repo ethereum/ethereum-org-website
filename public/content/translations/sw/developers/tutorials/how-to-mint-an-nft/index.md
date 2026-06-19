@@ -2,7 +2,7 @@
 title: Jinsi ya Kufua NFT (Sehemu ya 2/3 ya Mfululizo wa Mafunzo ya NFT)
 description: Mafunzo haya yanaelezea jinsi ya kufua NFT kwenye mnyororo wa vitalu wa Ethereum kwa kutumia mkataba wetu mahiri na Web3.
 author: "Sumi Mudgil"
-tags: ["ERC-721", "alchemy", "solidity", "mikataba mahiri"]
+tags: ["ERC-721", "Alchemy", "Solidity", "mikataba mahiri"]
 skill: beginner
 breadcrumb: Fua NFT
 lang: sw

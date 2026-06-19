@@ -1,10 +1,10 @@
 ---
 title: "Walkthrough durch den Standard-Brücken-Vertrag von Optimism"
-description: Wie funktioniert die Standard-Brücke für Optimism? Warum funktioniert sie auf diese Weise?
+description: "Wie funktioniert die Standard-Brücke für Optimism? Warum funktioniert sie auf diese Weise?"
 author: Ori Pomerantz
 tags: ["Solidity", "Brücke", "Layer 2"]
 skill: intermediate
-breadcrumb: Optimism-Brücke
+breadcrumb: "Optimism-Brücke"
 published: 2022-03-30
 lang: de
 ---

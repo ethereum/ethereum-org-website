@@ -2,7 +2,7 @@
 title: Trasferimenti e approvazione di token ERC-20 da uno smart contract in Solidity
 description: Crea uno smart contract per un DEX che gestisce i trasferimenti e le approvazioni di token ERC-20 usando Solidity.
 author: "jdourlens"
-tags: ["smart contract", "token", "solidity", "erc-20"]
+tags: ["smart contract", "token", "Solidity", "erc-20"]
 skill: intermediate
 breadcrumb: Trasferimenti ERC-20
 lang: it

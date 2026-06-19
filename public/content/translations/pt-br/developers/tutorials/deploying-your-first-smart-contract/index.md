@@ -1,8 +1,8 @@
 ---
 title: Implantando seu primeiro contrato inteligente
-description: Uma introdução à implantação do seu primeiro contrato inteligente em uma rede de teste da Ethereum
+description: "Uma introdução à implantação do seu primeiro contrato inteligente em uma rede de teste da Ethereum"
 author: "jdourlens"
-tags: ["contratos inteligentes", "remix", "solidity", "implantação"]
+tags: ["contratos inteligentes", "Remix", "Solidity", "implantação"]
 skill: beginner
 breadcrumb: Implantar primeiro contrato
 lang: pt-br

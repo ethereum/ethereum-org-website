@@ -1,6 +1,6 @@
 ---
-title: Tài chính tái tạo (ReFi)
-description: Tổng quan về ReFi và các trường hợp sử dụng hiện tại của nó.
+title: "Tài chính tái tạo (ReFi)"
+description: "Tổng quan về ReFi và các trường hợp sử dụng hiện tại của nó."
 lang: vi
 template: use-cases
 sidebarDepth: 2

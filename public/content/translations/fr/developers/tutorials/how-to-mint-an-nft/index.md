@@ -1,8 +1,8 @@
 ---
-title: Comment frapper un NFT (Partie 2/3 de la série de tutoriels sur les NFT)
-description: Ce tutoriel décrit comment frapper un NFT sur la chaîne de blocs Ethereum en utilisant notre contrat intelligent et Web3.
+title: "Comment frapper un NFT (Partie 2/3 de la série de tutoriels sur les NFT)"
+description: "Ce tutoriel décrit comment frapper un NFT sur la chaîne de blocs Ethereum en utilisant notre contrat intelligent et Web3."
 author: "Sumi Mudgil"
-tags: ["ERC-721", "alchemy", "solidity", "contrats intelligents"]
+tags: ["ERC-721", "Alchemy", "Solidity", "contrats intelligents"]
 skill: beginner
 breadcrumb: Frapper un NFT
 lang: fr

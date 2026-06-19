@@ -180,7 +180,7 @@ FROM temp_table
 
 ![Chart showing daily Ethereum block production](./daily_blocks.png)
 
-متوسط عدد الكتل المنتجة يوميًا خلال هذه الفترة الزمنية هو <span dir="ltr">~5,874</span>:
+متوسط عدد الكتل المنتجة يوميًا خلال هذه الفترة الزمنية هو <span dir="ltr">\~5,874</span>:
 
 ![Chart showing daily Ethereum block production](./avg_daily_blocks.png)
 

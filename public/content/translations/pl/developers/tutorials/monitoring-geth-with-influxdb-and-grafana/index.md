@@ -1,6 +1,6 @@
 ---
-title: Monitorowanie Geth za pomocą InfluxDB i Grafana
-description: Skonfiguruj monitorowanie swojego węzła Geth za pomocą InfluxDB i Grafana, aby śledzić wydajność i identyfikować problemy.
+title: "Monitorowanie Geth za pomocą InfluxDB i Grafana"
+description: "Skonfiguruj monitorowanie swojego węzła Geth za pomocą InfluxDB i Grafana, aby śledzić wydajność i identyfikować problemy."
 author: "Mario Havel"
 tags: ["klienci", "węzły"]
 skill: intermediate
@@ -37,28 +37,16 @@ W tym samouczku skonfigurujemy Twojego klienta Geth tak, aby wypychał dane do I
 Najpierw pobierzmy i zainstalujmy InfluxDB. Różne opcje pobierania można znaleźć na [stronie wydań Influxdata](https://portal.influxdata.com/downloads/). Wybierz tę, która pasuje do Twojego środowiska.
 Możesz również zainstalować go z [repozytorium](https://repos.influxdata.com/). Na przykład w dystrybucji opartej na Debianie:
 
-<HTML-PLACEHOLDER-CODEBLOCK-685d10 />
-
 Po pomyślnym zainstalowaniu InfluxDB upewnij się, że działa w tle. Domyślnie jest on dostępny pod adresem `localhost:8086`.
 Przed użyciem klienta `influx` musisz utworzyć nowego użytkownika z uprawnieniami administratora. Ten użytkownik będzie służył do zarządzania na wysokim poziomie, tworzenia baz danych i użytkowników.
 
-<HTML-PLACEHOLDER-CODEBLOCK-a5c65e />
-
 Teraz możesz użyć klienta influx, aby wejść do [powłoki InfluxDB](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) jako ten użytkownik.
-
-<HTML-PLACEHOLDER-CODEBLOCK-8b28eb />
 
 Komunikując się bezpośrednio z InfluxDB w jego powłoce, możesz utworzyć bazę danych i użytkownika dla metryk Geth.
 
-<HTML-PLACEHOLDER-CODEBLOCK-1c43ce />
-
 Zweryfikuj utworzone wpisy za pomocą:
 
-<HTML-PLACEHOLDER-CODEBLOCK-5dee85 />
-
 Opuść powłokę InfluxDB.
-
-<HTML-PLACEHOLDER-CODEBLOCK-090211 />
 
 InfluxDB jest uruchomiony i skonfigurowany do przechowywania metryk z Geth.
 
@@ -67,20 +55,14 @@ InfluxDB jest uruchomiony i skonfigurowany do przechowywania metryk z Geth.
 Po skonfigurowaniu bazy danych musimy włączyć zbieranie metryk w Geth. Zwróć uwagę na `METRICS AND STATS OPTIONS` w `geth --help`. Można tam znaleźć wiele opcji, w tym przypadku chcemy, aby Geth wypychał dane do InfluxDB.
 Podstawowa konfiguracja określa punkt końcowy, w którym dostępny jest InfluxDB, oraz uwierzytelnianie dla bazy danych.
 
-<HTML-PLACEHOLDER-CODEBLOCK-1cd01d />
-
 Te flagi można dołączyć do polecenia uruchamiającego klienta lub zapisać w pliku konfiguracyjnym.
 
 Możesz sprawdzić, czy Geth pomyślnie wypycha dane, na przykład wyświetlając listę metryk w bazie danych. W powłoce InfluxDB:
-
-<HTML-PLACEHOLDER-CODEBLOCK-1da8b2 />
 
 ## Konfiguracja Grafana {#setting-up-grafana}
 
 Następnym krokiem jest instalacja Grafana, która będzie graficznie interpretować dane. Postępuj zgodnie z procesem instalacji dla swojego środowiska w dokumentacji Grafana. Upewnij się, że instalujesz wersję OSS, chyba że wolisz inaczej.
 Przykładowe kroki instalacji dla dystrybucji Debiana przy użyciu repozytorium:
-
-<HTML-PLACEHOLDER-CODEBLOCK-ee08e5 />
 
 Gdy Grafana jest już uruchomiona, powinna być dostępna pod adresem `localhost:3000`.
 Użyj preferowanej przeglądarki, aby uzyskać dostęp do tej ścieżki, a następnie zaloguj się przy użyciu domyślnych danych uwierzytelniających (użytkownik: `admin` i hasło: `admin`). Po wyświetleniu monitu zmień domyślne hasło i zapisz.

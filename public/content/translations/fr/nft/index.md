@@ -1,12 +1,12 @@
 ---
 title: Jetons non fongibles (NFT)
 metaTitle: Que sont les NFT ? | Avantages et utilisation
-description: Un aperçu des NFT sur Ethereum
+description: "Un aperçu des NFT sur Ethereum"
 lang: fr
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Un logo Eth affiché via un hologramme.
+alt: "Un logo Eth affiché via un hologramme."
 summaryPoints:
   - "Un moyen de représenter tout élément unique sous forme d'actif basé sur Ethereum."
   - "Les NFT donnent plus de pouvoir que jamais aux créateurs de contenu."

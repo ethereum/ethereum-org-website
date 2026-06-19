@@ -1,10 +1,10 @@
 ---
-title: Sarı Bülten'in EVM Spesifikasyonlarını Anlamak
-description: Ethereum'un resmi spesifikasyonları olan Sarı Bülten'in Ethereum sanal makinesini (EVM) açıklayan bölümünü anlamak.
+title: "Sarı Bülten'in EVM Spesifikasyonlarını Anlamak"
+description: "Ethereum'un resmi spesifikasyonları olan Sarı Bülten'in Ethereum sanal makinesini (EVM) açıklayan bölümünü anlamak."
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate
-breadcrumb: Sarı Bülten EVM
+breadcrumb: "Sarı Bülten EVM"
 lang: tr
 published: 2022-05-15
 ---

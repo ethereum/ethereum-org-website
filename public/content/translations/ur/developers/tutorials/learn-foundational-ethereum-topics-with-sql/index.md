@@ -176,7 +176,7 @@ FROM temp_table
 
 ![Chart showing daily Ethereum block production](./daily_blocks.png)
 
-اس وقت کے دوران روزانہ تیار ہونے والے بلاکس کی اوسط تعداد <span dir="ltr">~5,874</span> ہے:
+اس وقت کے دوران روزانہ تیار ہونے والے بلاکس کی اوسط تعداد <span dir="ltr">\~5,874</span> ہے:
 
 ![Chart showing daily Ethereum block production](./avg_daily_blocks.png)
 

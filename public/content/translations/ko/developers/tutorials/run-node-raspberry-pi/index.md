@@ -1,11 +1,11 @@
 ---
-title: Raspberry Pi 4에서 이더리움 노드 실행하기
-description: Raspberry Pi 4를 플래시하고, 이더넷 케이블을 꽂고, SSD 디스크를 연결한 후 전원을 켜서 Raspberry Pi 4를 완전한 이더리움 노드 및 검증자로 만들어 보세요.
+title: "Raspberry Pi 4에서 이더리움 노드 실행하기"
+description: "Raspberry Pi 4를 플래시하고, 이더넷 케이블을 꽂고, SSD 디스크를 연결한 후 전원을 켜서 Raspberry Pi 4를 완전한 이더리움 노드 및 검증자로 만들어 보세요."
 author: "EthereumOnArm"
 tags: ["클라이언트", "실행 계층", "합의 계층", "노드"]
 lang: ko
 skill: intermediate
-breadcrumb: Raspberry Pi 노드
+breadcrumb: "Raspberry Pi 노드"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
@@ -90,7 +90,7 @@ sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=prog
 
 ## 노드 시작 {#start-the-node}
 
-SD 카드를 Raspberry Pi에 삽입한 상태에서 이더넷 케이블과 SSD를 연결한 다음 전원을 켭니다. OS가 부팅되고 클라이언트 소프트웨어 설치 및 빌드를 포함하여 Raspberry Pi를 이더리움 노드로 바꾸는 사전 구성된 작업을 자동으로 수행하기 시작합니다. 이 작업은 아마도 10~15분 정도 걸릴 것입니다.
+SD 카드를 Raspberry Pi에 삽입한 상태에서 이더넷 케이블과 SSD를 연결한 다음 전원을 켭니다. OS가 부팅되고 클라이언트 소프트웨어 설치 및 빌드를 포함하여 Raspberry Pi를 이더리움 노드로 바꾸는 사전 구성된 작업을 자동으로 수행하기 시작합니다. 이 작업은 아마도 10\~15분 정도 걸릴 것입니다.
 
 모든 설치 및 구성이 완료되면 ssh 연결을 통해 장치에 로그인하거나 보드에 모니터와 키보드가 연결된 경우 터미널을 직접 사용하여 로그인합니다. 노드를 시작하는 데 필요한 권한이 있는 `ethereum` 계정을 사용하여 로그인합니다.
 

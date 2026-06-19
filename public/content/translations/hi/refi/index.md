@@ -1,6 +1,6 @@
 ---
-title: पुनर्योजी वित्त (रीफाई)
-description: रीफाई (ReFi) और इसके वर्तमान उपयोग के मामलों का अवलोकन।
+title: "पुनर्योजी वित्त (रीफाई)"
+description: "रीफाई (ReFi) और इसके वर्तमान उपयोग के मामलों का अवलोकन।"
 lang: hi
 template: use-cases
 sidebarDepth: 2

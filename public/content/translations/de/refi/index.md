@@ -1,6 +1,6 @@
 ---
 title: Regeneratives Finanzwesen (ReFi)
-description: Ein Überblick über ReFi und seine aktuellen Anwendungsfälle.
+description: "Ein Überblick über ReFi und seine aktuellen Anwendungsfälle."
 lang: de
 template: use-cases
 sidebarDepth: 2

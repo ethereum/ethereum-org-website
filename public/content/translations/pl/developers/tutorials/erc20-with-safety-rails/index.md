@@ -1,11 +1,11 @@
 ---
 title: ERC-20 z zabezpieczeniami
-description: Jak pomóc ludziom unikać głupich błędów
+description: "Jak pomóc ludziom unikać głupich błędów"
 author: Ori Pomerantz
 lang: pl
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: Bezpieczeństwo ERC-20
+breadcrumb: "Bezpieczeństwo ERC-20"
 published: 2022-08-15
 ---
 

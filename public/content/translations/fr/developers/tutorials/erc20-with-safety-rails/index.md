@@ -1,11 +1,11 @@
 ---
-title: ERC-20 avec des mesures de sécurité
-description: Comment aider les utilisateurs à éviter les erreurs stupides
+title: "ERC-20 avec des mesures de sécurité"
+description: "Comment aider les utilisateurs à éviter les erreurs stupides"
 author: Ori Pomerantz
 lang: fr
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: Sécurité ERC-20
+breadcrumb: "Sécurité ERC-20"
 published: 2022-08-15
 ---
 

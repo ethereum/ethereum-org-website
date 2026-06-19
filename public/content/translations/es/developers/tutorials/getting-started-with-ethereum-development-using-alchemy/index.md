@@ -1,10 +1,10 @@
 ---
-title: Introducción al desarrollo en Ethereum
+title: "Introducción al desarrollo en Ethereum"
 description: "Esta es una guía para principiantes sobre cómo empezar con el desarrollo en Ethereum. ¡Le llevaremos desde la creación de un punto de enlace de la API, pasando por la realización de una solicitud de línea de comandos, hasta la escritura de su primer script de Web3! ¡No se necesita experiencia en desarrollo de cadenas de bloques!"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "nodos", "consultas", "alchemy"]
+tags: ["JavaScript", "ethers.js", "nodos", "consultas", "Alchemy"]
 skill: beginner
-breadcrumb: Introducción
+breadcrumb: "Introducción"
 lang: es
 published: 2020-10-30
 source: Medium

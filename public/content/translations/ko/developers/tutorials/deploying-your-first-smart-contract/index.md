@@ -1,10 +1,10 @@
 ---
-title: 첫 번째 스마트 컨트랙트 배포하기
-description: 이더리움 테스트 네트워크에 첫 번째 스마트 컨트랙트를 배포하는 방법에 대한 소개
+title: "첫 번째 스마트 컨트랙트 배포하기"
+description: "이더리움 테스트 네트워크에 첫 번째 스마트 컨트랙트를 배포하는 방법에 대한 소개"
 author: "jdourlens"
 tags: ["스마트 컨트랙트", "Remix", "Solidity", "배포"]
 skill: beginner
-breadcrumb: 첫 번째 컨트랙트 배포
+breadcrumb: "첫 번째 컨트랙트 배포"
 lang: ko
 published: 2020-04-03
 source: EthereumDev

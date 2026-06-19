@@ -1,12 +1,12 @@
 ---
-title: 非代替性トークン (NFT)
-metaTitle: NFTとは？ | メリットと用途
-description: イーサリアム上のNFTの概要
+title: "非代替性トークン (NFT)"
+metaTitle: "NFTとは？ | メリットと用途"
+description: "イーサリアム上のNFTの概要"
 lang: ja
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: ホログラムで表示されるEthロゴ。
+alt: "ホログラムで表示されるEthロゴ。"
 summaryPoints:
   - "固有のものをイーサリアムベースの資産として表現する方法。"
   - "NFTは、コンテンツクリエイターにこれまで以上の力を与えています。"

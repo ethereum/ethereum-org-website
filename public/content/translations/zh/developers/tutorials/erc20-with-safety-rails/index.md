@@ -1,11 +1,11 @@
 ---
-title: 带有安全护栏的 ERC-20
-description: 如何帮助人们避免犯低级错误
-author: 奥里·波梅兰茨
+title: "带有安全护栏的 ERC-20"
+description: "如何帮助人们避免犯低级错误"
+author: "奥里·波梅兰茨"
 lang: zh
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20 安全
+breadcrumb: "ERC-20 安全"
 published: 2022-08-15
 ---
 

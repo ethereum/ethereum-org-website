@@ -1,8 +1,8 @@
 ---
 title: Desplegando tu primer contrato inteligente
-description: Una introducción al despliegue de tu primer contrato inteligente en una red de pruebas de Ethereum
+description: "Una introducción al despliegue de tu primer contrato inteligente en una red de pruebas de Ethereum"
 author: "jdourlens"
-tags: ["contratos inteligentes", "remix", "solidity", "despliegue"]
+tags: ["contratos inteligentes", "Remix", "Solidity", "despliegue"]
 skill: beginner
 breadcrumb: Desplegar primer contrato
 lang: es

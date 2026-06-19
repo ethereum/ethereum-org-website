@@ -1,10 +1,10 @@
 ---
-title: Zrozumienie specyfikacji EVM w żółtej księdze
-description: Zrozumienie części żółtej księgi, formalnej specyfikacji Ethereum, która wyjaśnia maszynę wirtualną Ethereum (EVM).
+title: "Zrozumienie specyfikacji EVM w żółtej księdze"
+description: "Zrozumienie części żółtej księgi, formalnej specyfikacji Ethereum, która wyjaśnia maszynę wirtualną Ethereum (EVM)."
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate
-breadcrumb: Żółta księga EVM
+breadcrumb: "Żółta księga EVM"
 lang: pl
 published: 2022-05-15
 ---

@@ -1,6 +1,6 @@
 ---
 title: Usando conhecimento zero para um estado secreto
-description: Jogos onchain são limitados porque não podem manter nenhuma informação oculta. Após ler este tutorial, o leitor será capaz de combinar provas de conhecimento zero e componentes de servidor para criar jogos verificáveis com um componente de estado secreto offchain. A técnica para fazer isso será demonstrada criando um jogo de campo minado.
+description: "Jogos onchain são limitados porque não podem manter nenhuma informação oculta. Após ler este tutorial, o leitor será capaz de combinar provas de conhecimento zero e componentes de servidor para criar jogos verificáveis com um componente de estado secreto offchain. A técnica para fazer isso será demonstrada criando um jogo de campo minado."
 author: Ori Pomerantz
 tags: ["servidor", "offchain", "centralizado", "conhecimento zero", "zokrates", "mud", "privacidade"]
 skill: advanced

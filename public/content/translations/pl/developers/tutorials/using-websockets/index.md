@@ -1,9 +1,9 @@
 ---
 title: Korzystanie z WebSockets
-description: Przewodnik po korzystaniu z WebSockets i Alchemy do wykonywania żądań JSON-RPC i subskrybowania zdarzeń.
+description: "Przewodnik po korzystaniu z WebSockets i Alchemy do wykonywania żądań JSON-RPC i subskrybowania zdarzeń."
 author: "Elan Halpern"
 lang: pl
-tags: ["alchemy", "websockets", "zapytania", "javascript"]
+tags: ["Alchemy", "websockets", "zapytania", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

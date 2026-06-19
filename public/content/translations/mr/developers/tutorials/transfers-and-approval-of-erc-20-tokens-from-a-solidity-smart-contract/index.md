@@ -1,10 +1,10 @@
 ---
-title: Solidity स्मार्ट कॉन्ट्रॅक्टमधून ERC-20 टोकन्सचे हस्तांतरण आणि मंजुरी
-description: Solidity वापरून ERC-20 टोकन हस्तांतरण आणि मंजुरी हाताळणारे DEX स्मार्ट कॉन्ट्रॅक्ट तयार करा.
+title: "Solidity स्मार्ट कॉन्ट्रॅक्टमधून ERC-20 टोकन्सचे हस्तांतरण आणि मंजुरी"
+description: "Solidity वापरून ERC-20 टोकन हस्तांतरण आणि मंजुरी हाताळणारे DEX स्मार्ट कॉन्ट्रॅक्ट तयार करा."
 author: "jdourlens"
-tags: ["स्मार्ट कॉन्ट्रॅक्ट्स", "टोकन्स", "solidity", "erc-20"]
+tags: ["स्मार्ट कॉन्ट्रॅक्ट्स", "टोकन्स", "Solidity", "erc-20"]
 skill: intermediate
-breadcrumb: ERC-20 हस्तांतरण
+breadcrumb: "ERC-20 हस्तांतरण"
 lang: mr
 published: 2020-04-07
 source: EthereumDev

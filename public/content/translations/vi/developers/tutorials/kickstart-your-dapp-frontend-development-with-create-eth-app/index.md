@@ -1,9 +1,9 @@
 ---
-title: Khởi đầu việc phát triển frontend cho dapp của bạn với create-eth-app
-description: Tổng quan về cách sử dụng create-eth-app và các tính năng của nó
+title: "Khởi đầu việc phát triển frontend cho dapp của bạn với create-eth-app"
+description: "Tổng quan về cách sử dụng create-eth-app và các tính năng của nó"
 author: "Markus Waas"
 tags:
-  ["frontend", "javascript", "ethers.js", "the graph", "defi"]
+  ["frontend", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: vi

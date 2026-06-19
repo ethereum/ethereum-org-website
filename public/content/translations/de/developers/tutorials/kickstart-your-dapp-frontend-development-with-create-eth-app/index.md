@@ -1,6 +1,6 @@
 ---
 title: Starten Sie Ihre Dapp-Frontend-Entwicklung mit create-eth-app
-description: Ein Überblick über die Verwendung von create-eth-app und seinen Funktionen
+description: "Ein Überblick über die Verwendung von create-eth-app und seinen Funktionen"
 author: "Markus Waas"
 tags:
   ["Frontend", "JavaScript", "Ethers.js", "The Graph", "DeFi"]

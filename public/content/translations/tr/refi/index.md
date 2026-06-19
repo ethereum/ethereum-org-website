@@ -1,6 +1,6 @@
 ---
-title: Onarıcı Finans (ReFi)
-description: ReFi'ye ve mevcut kullanım durumlarına genel bir bakış.
+title: "Onarıcı Finans (ReFi)"
+description: "ReFi'ye ve mevcut kullanım durumlarına genel bir bakış."
 lang: tr
 template: use-cases
 sidebarDepth: 2

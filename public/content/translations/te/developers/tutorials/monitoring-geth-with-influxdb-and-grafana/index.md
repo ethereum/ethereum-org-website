@@ -1,12 +1,12 @@
 ---
-title: InfluxDB మరియు Grafanaతో Gethను పర్యవేక్షించడం
-description: పనితీరును ట్రాక్ చేయడానికి మరియు సమస్యలను గుర్తించడానికి InfluxDB మరియు Grafanaను ఉపయోగించి మీ Geth నోడ్ కోసం పర్యవేక్షణను సెటప్ చేయండి.
+title: "InfluxDB మరియు Grafanaతో Gethను పర్యవేక్షించడం"
+description: "పనితీరును ట్రాక్ చేయడానికి మరియు సమస్యలను గుర్తించడానికి InfluxDB మరియు Grafanaను ఉపయోగించి మీ Geth నోడ్ కోసం పర్యవేక్షణను సెటప్ చేయండి."
 author: "మారియో హావెల్"
 tags:
   - క్లయింట్లు
   - నోడ్‌లు
 skill: intermediate
-breadcrumb: Gethను పర్యవేక్షించడం
+breadcrumb: "Gethను పర్యవేక్షించడం"
 lang: te
 published: 2021-01-13
 ---

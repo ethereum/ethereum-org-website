@@ -1,6 +1,6 @@
 ---
-title: Škálování Etherea
-description: Rollupy dávkují transakce mimo řetězec (offchain), čímž snižují náklady pro uživatele. Způsob, jakým rollupy v současnosti využívají data, je však příliš drahý, což omezuje, jak levné mohou transakce být. Proto-danksharding to řeší.
+title: "Škálování Etherea"
+description: "Rollupy dávkují transakce mimo řetězec (offchain), čímž snižují náklady pro uživatele. Způsob, jakým rollupy v současnosti využívají data, je však příliš drahý, což omezuje, jak levné mohou transakce být. Proto-danksharding to řeší."
 lang: cs
 image: /images/roadmap/roadmap-transactions.png
 alt: "Plán vývoje Etherea"
@@ -15,11 +15,11 @@ Ethereum se škáluje pomocí [vrstev 2](/layer-2/#rollups) (známých také jak
   Transakční náklady
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Dnešní rollupy jsou <strong>~5-20x</strong> levnější než vrstva 1 (l1) Etherea</li>
-    <li>ZK-rollupy brzy sníží poplatky o <strong>~40-100x</strong></li>
-    <li>Nadcházející změny v Ethereu poskytnou dalších <strong>~100-1000x</strong> škálování</li>
-    <li style={{ marginBottom: 0 }}>Uživatelé by měli těžit z transakcí, <strong>které stojí méně než 0,001 $</strong></strong>
-  </strong>
+    <li>Dnešní rollupy jsou <strong>\~5-20x</strong> levnější než vrstva 1 (l1) Etherea</li>
+    <li>ZK-rollupy brzy sníží poplatky o <strong>\~40-100x</strong></li>
+    <li>Nadcházející změny v Ethereu poskytnou dalších <strong>\~100-1000x</strong> škálování</li>
+ <li style={{ marginBottom: 0 }}>Uživatelé by měli těžit z transakcí, <strong>které stojí méně než 0,001 $</strong>
+
 </AlertContent>
 </Alert>
 

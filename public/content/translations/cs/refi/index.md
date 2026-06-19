@@ -1,6 +1,6 @@
 ---
-title: Regenerativní finance (ReFi)
-description: Přehled ReFi a jeho současných případů užití.
+title: "Regenerativní finance (ReFi)"
+description: "Přehled ReFi a jeho současných případů užití."
 lang: cs
 template: use-cases
 sidebarDepth: 2

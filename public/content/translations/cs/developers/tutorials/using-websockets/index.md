@@ -1,9 +1,9 @@
 ---
-title: Používání WebSocketů
-description: Průvodce používáním WebSocketů a Alchemy k provádění JSON-RPC požadavků a odebírání událostí.
+title: "Používání WebSocketů"
+description: "Průvodce používáním WebSocketů a Alchemy k provádění JSON-RPC požadavků a odebírání událostí."
 author: "Elan Halpern"
 lang: cs
-tags: ["alchemy", "websockets", "dotazování", "javascript"]
+tags: ["Alchemy", "websockets", "dotazování", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

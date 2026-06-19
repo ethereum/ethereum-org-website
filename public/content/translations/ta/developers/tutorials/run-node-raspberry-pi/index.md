@@ -1,11 +1,11 @@
 ---
-title: Raspberry Pi 4 இல் ஒரு எத்திரியம் கணுவை இயக்கவும்
-description: உங்கள் Raspberry Pi 4-ஐ ஃபிளாஷ் செய்து, ஈதர்நெட் கேபிளைச் செருகி, SSD வட்டை இணைத்து, சாதனத்தை இயக்கி Raspberry Pi 4-ஐ முழுமையான எத்திரியம் கணு + சரிபார்ப்பானாக மாற்றவும்
+title: "Raspberry Pi 4 இல் ஒரு எத்திரியம் கணுவை இயக்கவும்"
+description: "உங்கள் Raspberry Pi 4-ஐ ஃபிளாஷ் செய்து, ஈதர்நெட் கேபிளைச் செருகி, SSD வட்டை இணைத்து, சாதனத்தை இயக்கி Raspberry Pi 4-ஐ முழுமையான எத்திரியம் கணு + சரிபார்ப்பானாக மாற்றவும்"
 author: "EthereumOnArm"
 tags: ["கிளையண்டுகள்", "செயலாக்க அடுக்கு", "ஒருமித்த அடுக்கு", "கணுக்கள்"]
 lang: ta
 skill: intermediate
-breadcrumb: Rasp Pi கணு
+breadcrumb: "Rasp Pi கணு"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

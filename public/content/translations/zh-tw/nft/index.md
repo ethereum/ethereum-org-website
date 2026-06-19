@@ -1,12 +1,12 @@
 ---
-title: 非同質化代幣 (NFT)
-metaTitle: 什麼是 NFT？ | 優勢與用途
-description: 以太坊上的 NFT 概覽
+title: "非同質化代幣 (NFT)"
+metaTitle: "什麼是 NFT？ | 優勢與用途"
+description: "以太坊上的 NFT 概覽"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: 透過全息投影顯示的以太坊標誌。
+alt: "透過全息投影顯示的以太坊標誌。"
 summaryPoints:
   - "一種將任何獨特事物表示為基於以太坊資產的方法。"
   - "NFT 賦予內容創作者前所未有的權力。"

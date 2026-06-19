@@ -1,6 +1,6 @@
 ---
 title: Merge
-description: Přečtěte si o Merge – kdy Ethereum Mainnet přešel na důkaz podílem (PoS).
+description: "Přečtěte si o Merge – kdy Ethereum Mainnet přešel na důkaz podílem (PoS)."
 lang: cs
 template: upgrade
 image: /images/upgrades/merge.png

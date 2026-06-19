@@ -1,9 +1,9 @@
 ---
-title: Nastartujte vývoj frontendu své dapp pomocí create-eth-app
-description: Přehled toho, jak používat create-eth-app a jeho funkce
+title: "Nastartujte vývoj frontendu své dapp pomocí create-eth-app"
+description: "Přehled toho, jak používat create-eth-app a jeho funkce"
 author: "Markus Waas"
 tags:
-  ["frontend", "javascript", "ethers.js", "the graph", "defi"]
+  ["frontend", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: cs

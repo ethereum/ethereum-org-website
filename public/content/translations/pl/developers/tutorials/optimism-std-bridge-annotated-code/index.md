@@ -2,7 +2,7 @@
 title: "Przewodnik po kontrakcie standardowego mostu Optimism"
 description: "Jak działa standardowy most dla Optimism? Dlaczego działa w ten sposób?"
 author: Ori Pomerantz
-tags: ["solidity", "most", "warstwa 2"]
+tags: ["Solidity", "most", "warstwa 2"]
 skill: intermediate
 breadcrumb: "Most Optimism"
 published: 2022-03-30

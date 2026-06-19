@@ -2,7 +2,7 @@
 title: Kuanza na Uendelezaji wa Ethereum
 description: "Huu ni mwongozo wa wanaoanza kuanza na uendelezaji wa Ethereum. Tutakuchukua kuanzia kuanzisha mwisho wa API, hadi kufanya ombi la mstari wa amri, hadi kuandika hati yako ya kwanza ya Web3! Hakuna uzoefu wa uendelezaji wa mnyororo wa vitalu unaohitajika!"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "nodi", "kuuliza", "alchemy"]
+tags: ["JavaScript", "ethers.js", "nodi", "kuuliza", "Alchemy"]
 skill: beginner
 breadcrumb: Kuanza
 lang: sw

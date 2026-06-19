@@ -1,9 +1,9 @@
 ---
-title: WebSockets वापरणे
-description: JSON-RPC विनंत्या करण्यासाठी आणि घटना सबस्क्राइब करण्यासाठी WebSockets आणि Alchemy वापरण्याबाबतचे मार्गदर्शक.
+title: "WebSockets वापरणे"
+description: "JSON-RPC विनंत्या करण्यासाठी आणि घटना सबस्क्राइब करण्यासाठी WebSockets आणि Alchemy वापरण्याबाबतचे मार्गदर्शक."
 author: "एलन हॅल्पर्न"
 lang: mr
-tags: ["alchemy", "websockets", "क्वेरी करणे", "javascript"]
+tags: ["Alchemy", "websockets", "क्वेरी करणे", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

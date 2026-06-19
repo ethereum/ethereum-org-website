@@ -1,10 +1,10 @@
 ---
-title: शुरुआती लोगों के लिए Hello World स्मार्ट अनुबंध
-description: इथेरियम पर एक सरल स्मार्ट अनुबंध लिखने और तैनात करने पर परिचयात्मक ट्यूटोरियल।
+title: "शुरुआती लोगों के लिए Hello World स्मार्ट अनुबंध"
+description: "इथेरियम पर एक सरल स्मार्ट अनुबंध लिखने और तैनात करने पर परिचयात्मक ट्यूटोरियल।"
 author: "एलान"
 tags: ["Solidity", "Hardhat", "Alchemy", "स्मार्ट अनुबंध", "तैनाती"]
 skill: beginner
-breadcrumb: Hello World अनुबंध
+breadcrumb: "Hello World अनुबंध"
 lang: hi
 published: 2021-03-31
 ---

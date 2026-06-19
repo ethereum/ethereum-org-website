@@ -1,6 +1,6 @@
 ---
-title: দ্য মার্জ
-description: দ্য মার্জ সম্পর্কে জানুন - যখন মেইননেট ইথেরিয়াম প্রুফ-অফ-স্টেক গ্রহণ করেছিল।
+title: "দ্য মার্জ"
+description: "দ্য মার্জ সম্পর্কে জানুন - যখন মেইননেট ইথেরিয়াম প্রুফ-অফ-স্টেক গ্রহণ করেছিল।"
 lang: bn
 template: upgrade
 image: /images/upgrades/merge.png

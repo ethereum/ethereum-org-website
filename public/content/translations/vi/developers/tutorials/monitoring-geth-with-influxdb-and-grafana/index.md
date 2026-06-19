@@ -1,10 +1,10 @@
 ---
-title: Giám sát Geth bằng InfluxDB và Grafana
-description: Thiết lập giám sát cho nút Geth của bạn bằng InfluxDB và Grafana để theo dõi hiệu suất và xác định các sự cố.
+title: "Giám sát Geth bằng InfluxDB và Grafana"
+description: "Thiết lập giám sát cho nút Geth của bạn bằng InfluxDB và Grafana để theo dõi hiệu suất và xác định các sự cố."
 author: "Mario Havel"
 tags: ["máy khách", "nút"]
 skill: intermediate
-breadcrumb: Giám sát Geth
+breadcrumb: "Giám sát Geth"
 lang: vi
 published: 2021-01-13
 ---

@@ -1,9 +1,9 @@
 ---
-title: Sử dụng WebSockets
-description: Hướng dẫn sử dụng WebSockets và Alchemy để thực hiện các yêu cầu JSON-RPC và đăng ký nhận các sự kiện.
+title: "Sử dụng WebSockets"
+description: "Hướng dẫn sử dụng WebSockets và Alchemy để thực hiện các yêu cầu JSON-RPC và đăng ký nhận các sự kiện."
 author: "Elan Halpern"
 lang: vi
-tags: ["alchemy", "websockets", "truy vấn", "javascript"]
+tags: ["Alchemy", "websockets", "truy vấn", "JavaScript"]
 skill: beginner
 breadcrumb: WebSockets
 source: Alchemy docs

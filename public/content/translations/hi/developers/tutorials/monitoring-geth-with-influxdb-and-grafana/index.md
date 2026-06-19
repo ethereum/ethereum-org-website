@@ -1,10 +1,10 @@
 ---
-title: InfluxDB और Grafana के साथ Geth की निगरानी करना
-description: प्रदर्शन को ट्रैक करने और समस्याओं की पहचान करने के लिए InfluxDB और Grafana का उपयोग करके अपने Geth नोड के लिए निगरानी सेट करें।
+title: "InfluxDB और Grafana के साथ Geth की निगरानी करना"
+description: "प्रदर्शन को ट्रैक करने और समस्याओं की पहचान करने के लिए InfluxDB और Grafana का उपयोग करके अपने Geth नोड के लिए निगरानी सेट करें।"
 author: "मारियो हैवल"
 tags: ["क्लाइंट्स", "नोड्स"]
 skill: intermediate
-breadcrumb: Geth की निगरानी करना
+breadcrumb: "Geth की निगरानी करना"
 lang: hi
 published: 2021-01-13
 ---

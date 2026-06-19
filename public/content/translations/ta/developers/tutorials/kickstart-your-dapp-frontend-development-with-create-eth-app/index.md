@@ -1,9 +1,9 @@
 ---
-title: create-eth-app மூலம் உங்கள் dapp முன்பக்க மேம்பாட்டைத் தொடங்குங்கள்
-description: create-eth-app மற்றும் அதன் அம்சங்களை எவ்வாறு பயன்படுத்துவது என்பதற்கான மேலோட்டம்
+title: "create-eth-app மூலம் உங்கள் dapp முன்பக்க மேம்பாட்டைத் தொடங்குங்கள்"
+description: "create-eth-app மற்றும் அதன் அம்சங்களை எவ்வாறு பயன்படுத்துவது என்பதற்கான மேலோட்டம்"
 author: "மார்கஸ் வாஸ்"
 tags:
-  ["முன்பக்கம்", "javascript", "ethers.js", "the graph", "DeFi"]
+  ["முன்பக்கம்", "JavaScript", "ethers.js", "the graph", "DeFi"]
 skill: beginner
 breadcrumb: create-eth-app
 lang: ta

@@ -3,7 +3,7 @@ title: "⁦create-eth-app⁩ کے ساتھ اپنی غیر مرکزی ایپلی
 description: "⁦create-eth-app⁩ اور اس کی خصوصیات کو استعمال کرنے کے طریقے کا جائزہ"
 author: "مارکس واس"
 tags:
-  ["فرنٹ اینڈ", "javascript", "ethers.js", "the graph", "defi"]
+  ["فرنٹ اینڈ", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
 breadcrumb: "⁦create-eth-app⁩"
 lang: ur

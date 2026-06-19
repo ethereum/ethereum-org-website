@@ -1,13 +1,13 @@
 ---
-title: 更安全的以太坊
-description: 以太坊是目前最安全且去中心化的智能合約平台。然而，我們仍可進行一些改進，確保以太坊在未來能長期抵禦任何級別的攻擊。
+title: "更安全的以太坊"
+description: "以太坊是目前最安全且去中心化的智能合約平台。然而，我們仍可進行一些改進，確保以太坊在未來能長期抵禦任何級別的攻擊。"
 lang: zh-tw
 image: /images/roadmap/roadmap-security.png
 alt: "以太坊路線圖"
 template: roadmap
 ---
 
-**以太坊已經是一個非常安全**且去中心化的[智能合約](/glossary/#smart-contract)平台。然而，我們仍可進行一些改進，確保以太坊在未來能長期抵禦各種攻擊。這些改進包括對[以太坊用戶端](/glossary/#consensus-client)處理競爭[區塊](/glossary/#block)方式的細微調整，以及提高網路將區塊視為[「已定案」](/developers/docs/consensus-mechanisms/pos/#finality)的速度（這意味著除非攻擊者承受極大的經濟損失，否則無法更改這些區塊）。
+<strong>以太坊已經是一個非常安全</strong>且去中心化的[智能合約](/glossary/#smart-contract)平台。然而，我們仍可進行一些改進，確保以太坊在未來能長期抵禦各種攻擊。這些改進包括對[以太坊用戶端](/glossary/#consensus-client)處理競爭[區塊](/glossary/#block)方式的細微調整，以及提高網路將區塊視為[「已定案」](/developers/docs/consensus-mechanisms/pos/#finality)的速度（這意味著除非攻擊者承受極大的經濟損失，否則無法更改這些區塊）。
 
 還有一些改進能讓審查交易變得更加困難，例如讓區塊提案者無法看見其區塊的實際內容，以及識別用戶端何時在進行審查的新方法。這些改進將共同升級[權益證明 (PoS)](/glossary/#pos)協定，讓從個人到企業的所有使用者，都能對他們在以太坊上的應用程式、資料和資產充滿信心。
 

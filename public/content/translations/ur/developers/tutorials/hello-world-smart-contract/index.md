@@ -2,7 +2,7 @@
 title: "مبتدیان کے لیے ⁦Hello World⁩ سمارٹ کنٹریکٹ"
 description: "ایتھیریم پر ایک سادہ سمارٹ کنٹریکٹ لکھنے اور تعینات کرنے کے بارے میں تعارفی ٹیوٹوریل۔"
 author: "ایلان ایچ"
-tags: ["solidity", "hardhat", "alchemy", "سمارٹ کنٹریکٹس", "تعیناتی"]
+tags: ["Solidity", "Hardhat", "Alchemy", "سمارٹ کنٹریکٹس", "تعیناتی"]
 skill: beginner
 breadcrumb: "⁦Hello World⁩ کنٹریکٹ"
 lang: ur

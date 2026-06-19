@@ -1,10 +1,10 @@
 ---
-title: イーサリアム開発の始め方
+title: "イーサリアム開発の始め方"
 description: "これはイーサリアム開発を始めるための初心者向けガイドです。APIエンドポイントの立ち上げから、コマンドラインでのリクエスト、そして初めてのWeb3スクリプトの作成までをご案内します！ブロックチェーン開発の経験は必要ありません！"
 author: "エラン・ハルパーン"
-tags: ["javascript", "ethers.js", "ノード", "クエリ", "alchemy"]
+tags: ["JavaScript", "ethers.js", "ノード", "クエリ", "Alchemy"]
 skill: beginner
-breadcrumb: 始め方
+breadcrumb: "始め方"
 lang: ja
 published: 2020-10-30
 source: Medium
@@ -69,7 +69,7 @@ _**注:** [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchem
 
 ## 4. Web3クライアントをセットアップする {#set-up-your-web3-client}
 
-**既存のクライアントがある場合は、**現在のノードプロバイダーのURLを、APIキーを含むAlchemyのURLに変更します: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+<strong>既存のクライアントがある場合は、</strong>現在のノードプロバイダーのURLを、APIキーを含むAlchemyのURLに変更します: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
 **_注:_** 以下のスクリプトは、コマンドラインから実行するのではなく、**ノードコンテキスト**で実行するか、**ファイルに保存**する必要があります。Nodeまたはnpmをまだインストールしていない場合は、こちらの簡単な[Mac向けセットアップガイド](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)を確認してください。
 

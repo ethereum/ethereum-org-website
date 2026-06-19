@@ -2,7 +2,7 @@
 title: Mkataba Mahiri wa Hello World kwa Wanaoanza
 description: Mafunzo ya utangulizi kuhusu kuandika na kusambaza mkataba mahiri rahisi kwenye Ethereum.
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "mikataba mahiri", "kusambaza"]
+tags: ["Solidity", "Hardhat", "Alchemy", "mikataba mahiri", "kusambaza"]
 skill: beginner
 breadcrumb: Mkataba wa Hello World
 lang: sw
@@ -45,7 +45,7 @@ Ikiwa huoni Sepolia kwenye orodha, nenda kwenye menyu, kisha Advanced (Kina) na 
 
 ## Hatua ya 4: Ongeza Etha kutoka kwenye bomba {#step-4}
 
-Ili kusambaza mkataba wetu mahiri kwenye mtandao wa majaribio, tutahitaji ETH bandia. Ili kupata ETH ya Sepolia unaweza kwenda kwenye [maelezo ya mtandao wa Sepolia](/developers/docs/networks/#sepolia) ili kutazama orodha ya mabomba mbalimbali. Ikiwa moja haifanyi kazi, jaribu nyingine kwani wakati mwingine zinaweza kukauka. Inaweza kuchukua muda kupokea ETH yako bandia kutokana na msongamano wa mtandao. Unapaswa kuona ETH kwenye akaunti yako ya Metamask muda mfupi baadaye!
+Ili kusambaza mkataba wetu mahiri kwenye mtandao wa majaribio, tutahitaji ETH bandia. Ili kupata ETH ya Sepolia unaweza kwenda kwenye [maelezo ya mtandao wa Sepolia](/developers/docs/networks/#sepolia) ili kutazama orodha ya mabomba mbalimbali. Ikiwa moja haifanyi kazi, jaribu nyingine kwani wakati mwingine zinaweza kukauka. Inaweza kuchukua muda kupokea ETH yako bandia kutokana na msongamano wa mtandao. Unapaswa kuona ETH kwenye akaunti yako ya MetaMask muda mfupi baadaye!
 
 ## Hatua ya 5: Angalia Salio lako {#step-5}
 

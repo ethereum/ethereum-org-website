@@ -1,10 +1,10 @@
 ---
-title: InfluxDB ve Grafana ile Geth'i İzleme
-description: Performansı izlemek ve sorunları belirlemek için InfluxDB ve Grafana kullanarak Geth düğümünüz için izleme ayarlayın.
+title: "InfluxDB ve Grafana ile Geth'i İzleme"
+description: "Performansı izlemek ve sorunları belirlemek için InfluxDB ve Grafana kullanarak Geth düğümünüz için izleme ayarlayın."
 author: "Mario Havel"
 tags: ["istemciler", "düğümler"]
 skill: intermediate
-breadcrumb: Geth'i İzleme
+breadcrumb: "Geth'i İzleme"
 lang: tr
 published: 2021-01-13
 ---

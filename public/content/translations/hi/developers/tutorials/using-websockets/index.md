@@ -1,7 +1,7 @@
 ---
-title: WebSockets का उपयोग करना
-description: JSON-RPC अनुरोध करने और घटनाओं की सदस्यता लेने के लिए WebSockets और Alchemy का उपयोग करने की मार्गदर्शिका।
-author: एलन हैल्पर्न
+title: "WebSockets का उपयोग करना"
+description: "JSON-RPC अनुरोध करने और घटनाओं की सदस्यता लेने के लिए WebSockets और Alchemy का उपयोग करने की मार्गदर्शिका।"
+author: "एलन हैल्पर्न"
 lang: hi
 tags:
   - alchemy

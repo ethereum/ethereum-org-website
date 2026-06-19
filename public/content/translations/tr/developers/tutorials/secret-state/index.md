@@ -1,6 +1,6 @@
 ---
-title: Gizli bir durum için sıfır bilgi kullanımı
-description: Zincir içi oyunlar, hiçbir gizli bilgiyi tutamadıkları için sınırlıdır. Bu öğreticiyi okuduktan sonra, okuyucu sıfır bilgi ispatlarını ve sunucu bileşenlerini birleştirerek gizli bir duruma sahip, zincir dışı bir bileşenle doğrulanabilir oyunlar oluşturabilecektir. Bunu yapma tekniği bir mayın tarlası oyunu oluşturularak gösterilecektir.
+title: "Gizli bir durum için sıfır bilgi kullanımı"
+description: "Zincir içi oyunlar, hiçbir gizli bilgiyi tutamadıkları için sınırlıdır. Bu öğreticiyi okuduktan sonra, okuyucu sıfır bilgi ispatlarını ve sunucu bileşenlerini birleştirerek gizli bir duruma sahip, zincir dışı bir bileşenle doğrulanabilir oyunlar oluşturabilecektir. Bunu yapma tekniği bir mayın tarlası oyunu oluşturularak gösterilecektir."
 author: Ori Pomerantz
 tags:
   - sunucu

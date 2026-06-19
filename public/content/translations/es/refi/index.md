@@ -1,6 +1,6 @@
 ---
 title: Finanzas regenerativas (ReFi)
-description: Una descripción general de ReFi y sus casos de uso actuales.
+description: "Una descripción general de ReFi y sus casos de uso actuales."
 lang: es
 template: use-cases
 sidebarDepth: 2

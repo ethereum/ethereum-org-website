@@ -1,10 +1,10 @@
 ---
-title: Déployer votre premier contrat intelligent
-description: Une introduction au déploiement de votre premier contrat intelligent sur un réseau de test Ethereum
+title: "Déployer votre premier contrat intelligent"
+description: "Une introduction au déploiement de votre premier contrat intelligent sur un réseau de test Ethereum"
 author: "jdourlens"
-tags: ["contrats intelligents", "remix", "solidity", "déploiement"]
+tags: ["contrats intelligents", "Remix", "Solidity", "déploiement"]
 skill: beginner
-breadcrumb: Déployer un premier contrat
+breadcrumb: "Déployer un premier contrat"
 lang: fr
 published: 2020-04-03
 source: EthereumDev

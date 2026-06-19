@@ -2,7 +2,7 @@
 title: Kontrak Pintar Hello World untuk Pemula
 description: Tutorial pengantar tentang penulisan dan penyebaran kontrak pintar sederhana di Ethereum.
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "kontrak pintar", "penyebaran"]
+tags: ["Solidity", "Hardhat", "Alchemy", "kontrak pintar", "penyebaran"]
 skill: beginner
 breadcrumb: Kontrak Hello World
 lang: id
@@ -45,7 +45,7 @@ Jika Anda tidak melihat Sepolia terdaftar, buka menu, lalu Advanced dan gulir ke
 
 ## Langkah 4: Tambahkan ether dari faucet {#step-4}
 
-Untuk menyebarkan kontrak pintar kita ke jaringan pengujian, kita akan membutuhkan beberapa ETH palsu. Untuk mendapatkan ETH Sepolia, Anda dapat membuka [detail jaringan Sepolia](/developers/docs/networks/#sepolia) untuk melihat daftar berbagai faucet. Jika salah satunya tidak berfungsi, coba yang lain karena terkadang bisa kehabisan dana. Mungkin perlu beberapa saat untuk menerima ETH palsu Anda karena lalu lintas jaringan. Anda akan segera melihat ETH di akun Metamask Anda setelahnya!
+Untuk menyebarkan kontrak pintar kita ke jaringan pengujian, kita akan membutuhkan beberapa ETH palsu. Untuk mendapatkan ETH Sepolia, Anda dapat membuka [detail jaringan Sepolia](/developers/docs/networks/#sepolia) untuk melihat daftar berbagai faucet. Jika salah satunya tidak berfungsi, coba yang lain karena terkadang bisa kehabisan dana. Mungkin perlu beberapa saat untuk menerima ETH palsu Anda karena lalu lintas jaringan. Anda akan segera melihat ETH di akun MetaMask Anda setelahnya!
 
 ## Langkah 5: Periksa Saldo Anda {#step-5}
 

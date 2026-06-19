@@ -1,10 +1,10 @@
 ---
-title: InfluxDB आणि Grafana सह Geth चे संनियंत्रण (Monitoring) करणे
-description: कार्यप्रदर्शनाचा मागोवा घेण्यासाठी आणि समस्या ओळखण्यासाठी InfluxDB आणि Grafana वापरून तुमच्या Geth नोडसाठी संनियंत्रण (monitoring) सेट करा.
+title: "InfluxDB आणि Grafana सह Geth चे संनियंत्रण (Monitoring) करणे"
+description: "कार्यप्रदर्शनाचा मागोवा घेण्यासाठी आणि समस्या ओळखण्यासाठी InfluxDB आणि Grafana वापरून तुमच्या Geth नोडसाठी संनियंत्रण (monitoring) सेट करा."
 author: "मारिओ हॅवेल"
 tags: ["क्लायंट्स", "नोड्स"]
 skill: intermediate
-breadcrumb: Geth चे संनियंत्रण करणे
+breadcrumb: "Geth चे संनियंत्रण करणे"
 lang: mr
 published: 2021-01-13
 ---

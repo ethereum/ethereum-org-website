@@ -1,8 +1,8 @@
 ---
-title: Bir Solidity akıllı sözleşmesinden ERC-20 Token transferleri ve onayları
-description: Solidity kullanarak ERC-20 Token transferlerini ve onaylarını işleyen bir DEX akıllı sözleşmesi oluşturun.
+title: "Bir Solidity akıllı sözleşmesinden ERC-20 Token transferleri ve onayları"
+description: "Solidity kullanarak ERC-20 Token transferlerini ve onaylarını işleyen bir DEX akıllı sözleşmesi oluşturun."
 author: "jdourlens"
-tags: ["akıllı sözleşmeler", "token'lar", "solidity", "erc-20"]
+tags: ["akıllı sözleşmeler", "token'lar", "Solidity", "erc-20"]
 skill: intermediate
 breadcrumb: ERC-20 transferleri
 lang: tr

@@ -1,10 +1,10 @@
 ---
-title: Monitorización de Geth con InfluxDB y Grafana
-description: Configure la monitorización para su nodo de Geth utilizando InfluxDB y Grafana para realizar un seguimiento del rendimiento e identificar problemas.
+title: "Monitorización de Geth con InfluxDB y Grafana"
+description: "Configure la monitorización para su nodo de Geth utilizando InfluxDB y Grafana para realizar un seguimiento del rendimiento e identificar problemas."
 author: "Mario Havel"
 tags: ["clientes", "nodos"]
 skill: intermediate
-breadcrumb: Monitorización de Geth
+breadcrumb: "Monitorización de Geth"
 lang: es
 published: 2021-01-13
 ---

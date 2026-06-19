@@ -1,11 +1,11 @@
 ---
-title: ERC-20 s bezpečnostními pojistkami
-description: Jak pomoci lidem vyhnout se hloupým chybám
+title: "ERC-20 s bezpečnostními pojistkami"
+description: "Jak pomoci lidem vyhnout se hloupým chybám"
 author: Ori Pomerantz
 lang: cs
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: Bezpečnost ERC-20
+breadcrumb: "Bezpečnost ERC-20"
 published: 2022-08-15
 ---
 

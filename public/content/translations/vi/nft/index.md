@@ -1,12 +1,12 @@
 ---
-title: Token không thể thay thế (NFT)
-metaTitle: NFT là gì? | Lợi ích và cách sử dụng
-description: Tổng quan về NFT trên Ethereum
+title: "Token không thể thay thế (NFT)"
+metaTitle: "NFT là gì? | Lợi ích và cách sử dụng"
+description: "Tổng quan về NFT trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Logo Eth được hiển thị qua ảnh ba chiều.
+alt: "Logo Eth được hiển thị qua ảnh ba chiều."
 summaryPoints:
   - "Một cách để đại diện cho bất kỳ thứ gì độc nhất dưới dạng tài sản trên Ethereum."
   - "NFT đang trao nhiều quyền lực hơn cho những người sáng tạo nội dung so với trước đây."

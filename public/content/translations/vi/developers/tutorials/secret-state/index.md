@@ -1,6 +1,6 @@
 ---
-title: Sử dụng không tri thức cho một trạng thái bí mật
-description: Các trò chơi trên chuỗi bị hạn chế vì chúng không thể giữ bất kỳ thông tin ẩn nào. Sau khi đọc hướng dẫn này, người đọc sẽ có thể kết hợp các bằng chứng không kiến thức và các thành phần máy chủ để tạo ra các trò chơi có thể xác minh với một thành phần trạng thái bí mật, ngoài chuỗi. Kỹ thuật để thực hiện điều này sẽ được chứng minh bằng cách tạo ra một trò chơi dò mìn.
+title: "Sử dụng không tri thức cho một trạng thái bí mật"
+description: "Các trò chơi trên chuỗi bị hạn chế vì chúng không thể giữ bất kỳ thông tin ẩn nào. Sau khi đọc hướng dẫn này, người đọc sẽ có thể kết hợp các bằng chứng không kiến thức và các thành phần máy chủ để tạo ra các trò chơi có thể xác minh với một thành phần trạng thái bí mật, ngoài chuỗi. Kỹ thuật để thực hiện điều này sẽ được chứng minh bằng cách tạo ra một trò chơi dò mìn."
 author: Ori Pomerantz
 tags:
   - máy chủ
@@ -11,7 +11,7 @@ tags:
   - MUD
   - quyền riêng tư
 skill: advanced
-breadcrumb: Trạng thái bí mật ZK
+breadcrumb: "Trạng thái bí mật ZK"
 lang: vi
 published: 2025-03-15
 ---

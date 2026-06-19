@@ -1,6 +1,6 @@
 ---
-title: Poznaj podstawowe zagadnienia Ethereum za pomocą SQL
-description: Ten samouczek pomaga czytelnikom zrozumieć podstawowe koncepcje Ethereum, w tym transakcje, bloki i gaz, poprzez odpytywanie danych onchain za pomocą języka SQL (Structured Query Language).
+title: "Poznaj podstawowe zagadnienia Ethereum za pomocą SQL"
+description: "Ten samouczek pomaga czytelnikom zrozumieć podstawowe koncepcje Ethereum, w tym transakcje, bloki i gaz, poprzez odpytywanie danych onchain za pomocą języka SQL (Structured Query Language)."
 author: "Paul Apivat"
 tags: ["SQL", "zapytania", "transakcje", "dane i analityka"]
 skill: beginner

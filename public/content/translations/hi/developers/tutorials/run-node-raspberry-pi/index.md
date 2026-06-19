@@ -1,6 +1,6 @@
 ---
-title: Raspberry Pi 4 पर इथेरियम नोड चलाएं
-description: अपने Raspberry Pi 4 को फ्लैश करें, ईथरनेट केबल लगाएं, SSD डिस्क कनेक्ट करें और डिवाइस को चालू करके Raspberry Pi 4 को एक पूर्ण इथेरियम नोड + सत्यापक में बदलें
+title: "Raspberry Pi 4 पर इथेरियम नोड चलाएं"
+description: "अपने Raspberry Pi 4 को फ्लैश करें, ईथरनेट केबल लगाएं, SSD डिस्क कनेक्ट करें और डिवाइस को चालू करके Raspberry Pi 4 को एक पूर्ण इथेरियम नोड + सत्यापक में बदलें"
 author: "EthereumOnArm"
 tags:
   - क्लाइंट
@@ -9,7 +9,7 @@ tags:
   - नोड्स
 lang: hi
 skill: intermediate
-breadcrumb: Rasp Pi नोड
+breadcrumb: "Rasp Pi नोड"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

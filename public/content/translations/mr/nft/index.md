@@ -1,12 +1,12 @@
 ---
-title: नॉन-फंजिबल टोकन्स (NFT)
-metaTitle: NFTs म्हणजे काय? | फायदे आणि उपयोग
-description: इथेरियमवरील NFTs चा आढावा
+title: "नॉन-फंजिबल टोकन्स (NFT)"
+metaTitle: "NFTs म्हणजे काय? | फायदे आणि उपयोग"
+description: "इथेरियमवरील NFTs चा आढावा"
 lang: mr
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: होलोग्रामद्वारे प्रदर्शित केलेला Eth लोगो.
+alt: "होलोग्रामद्वारे प्रदर्शित केलेला Eth लोगो."
 summaryPoints:
   - "इथेरियम-आधारित मालमत्ता म्हणून कोणतीही अद्वितीय गोष्ट दर्शविण्याचा एक मार्ग."
   - "NFTs सामग्री निर्मात्यांना पूर्वीपेक्षा अधिक अधिकार देत आहेत."

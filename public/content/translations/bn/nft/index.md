@@ -1,12 +1,12 @@
 ---
-title: নন-ফাঞ্জিবল টোকেন (NFT)
-metaTitle: NFT কী? | সুবিধা এবং ব্যবহার
-description: ইথেরিয়ামে NFT-এর একটি ওভারভিউ
+title: "নন-ফাঞ্জিবল টোকেন (NFT)"
+metaTitle: "NFT কী? | সুবিধা এবং ব্যবহার"
+description: "ইথেরিয়ামে NFT-এর একটি ওভারভিউ"
 lang: bn
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: হোলোগ্রামের মাধ্যমে প্রদর্শিত একটি Eth লোগো।
+alt: "হোলোগ্রামের মাধ্যমে প্রদর্শিত একটি Eth লোগো।"
 summaryPoints:
   - "যেকোনো অনন্য জিনিসকে ইথেরিয়াম-ভিত্তিক সম্পদ হিসেবে উপস্থাপন করার একটি উপায়।"
   - "NFT কন্টেন্ট ক্রিয়েটরদের আগের চেয়ে অনেক বেশি ক্ষমতা দিচ্ছে।"

@@ -1,6 +1,6 @@
 ---
 title: The Merge
-description: Aprenda sobre The Merge - quando a Mainnet do Ethereum adotou a Prova de Participação (PoS).
+description: "Aprenda sobre The Merge - quando a Mainnet do Ethereum adotou a Prova de Participação (PoS)."
 lang: pt-br
 template: upgrade
 image: /images/upgrades/merge.png

@@ -1,11 +1,11 @@
 ---
-title: Execute um nó da Ethereum no Raspberry Pi 4
-description: Grave a imagem no seu Raspberry Pi 4, conecte um cabo ethernet, conecte o disco SSD e ligue o dispositivo para transformar o Raspberry Pi 4 em um nó completo da Ethereum + validador
+title: "Execute um nó da Ethereum no Raspberry Pi 4"
+description: "Grave a imagem no seu Raspberry Pi 4, conecte um cabo ethernet, conecte o disco SSD e ligue o dispositivo para transformar o Raspberry Pi 4 em um nó completo da Ethereum + validador"
 author: "EthereumOnArm"
 tags: ["clientes", "camada de execução", "camada de consenso", "nós"]
 lang: pt-br
 skill: intermediate
-breadcrumb: Nó no Rasp Pi
+breadcrumb: "Nó no Rasp Pi"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

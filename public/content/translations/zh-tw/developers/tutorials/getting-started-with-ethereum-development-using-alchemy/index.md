@@ -1,10 +1,10 @@
 ---
-title: 以太坊開發入門
+title: "以太坊開發入門"
 description: "這是一份以太坊開發入門的初學者指南。我們將帶你從建立 API 端點、發送命令列請求，到編寫你的第一個 Web3 腳本！無需任何區塊鏈開發經驗！"
 author: "伊蘭·哈爾彭"
-tags: ["javascript", "ethers.js", "節點", "查詢", "alchemy"]
+tags: ["JavaScript", "ethers.js", "節點", "查詢", "Alchemy"]
 skill: beginner
-breadcrumb: 入門
+breadcrumb: "入門"
 lang: zh-tw
 published: 2020-10-30
 source: Medium
@@ -69,9 +69,9 @@ _**注意：**請將 [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mai
 
 ## 4. 設定你的 Web3 客戶端 {#set-up-your-web3-client}
 
-**如果你已有現成的客戶端，**請將你目前的節點提供者 URL 變更為帶有你 API 金鑰的 Alchemy URL：`“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+<strong>如果你已有現成的客戶端，</strong>請將你目前的節點提供者 URL 變更為帶有你 API 金鑰的 Alchemy URL：`“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**_注意：_** 以下腳本需要在 **Node 環境**中執行或**儲存在檔案中**，而不是從命令列執行。如果你尚未安裝 Node 或 npm，請查看這份快速的 [Mac 設定指南](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)。
+**_注意：_** 以下腳本需要在 <strong>Node 環境</strong>中執行或**儲存在檔案中**，而不是從命令列執行。如果你尚未安裝 Node 或 npm，請查看這份快速的 [Mac 設定指南](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)。
 
 有許多 [Web3 函式庫](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)可以與 Alchemy 整合，不過，我們建議使用 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)，這是 Web3.js 的直接替代品，專為與 Alchemy 無縫運作而建置和設定。這提供了多種優勢，例如自動重試和強大的 WebSocket 支援。
 

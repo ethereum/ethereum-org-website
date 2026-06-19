@@ -1,8 +1,8 @@
 ---
-title: Chytrý kontrakt Hello World pro začátečníky
-description: Úvodní tutoriál o psaní a nasazení jednoduchého chytrého kontraktu na Ethereu.
+title: "Chytrý kontrakt Hello World pro začátečníky"
+description: "Úvodní tutoriál o psaní a nasazení jednoduchého chytrého kontraktu na Ethereu."
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "chytré kontrakty", "nasazení"]
+tags: ["Solidity", "Hardhat", "Alchemy", "chytré kontrakty", "nasazení"]
 skill: beginner
 breadcrumb: Kontrakt Hello World
 lang: cs

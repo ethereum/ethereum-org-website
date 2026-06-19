@@ -1,10 +1,10 @@
 ---
-title: 如何鑄造 NFT（NFT 教學系列第 2/3 部分）
-description: 本教學說明如何使用我們的智能合約與 Web3 在以太坊區塊鏈上鑄造 NFT。
+title: "如何鑄造 NFT（NFT 教學系列第 2/3 部分）"
+description: "本教學說明如何使用我們的智能合約與 Web3 在以太坊區塊鏈上鑄造 NFT。"
 author: "蘇米·穆吉爾"
-tags: ["ERC-721", "alchemy", "solidity", "智能合約"]
+tags: ["ERC-721", "Alchemy", "Solidity", "智能合約"]
 skill: beginner
-breadcrumb: 鑄造 NFT
+breadcrumb: "鑄造 NFT"
 lang: zh-tw
 published: 2021-04-22
 ---

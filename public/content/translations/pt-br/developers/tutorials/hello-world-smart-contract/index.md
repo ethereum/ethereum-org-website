@@ -1,8 +1,8 @@
 ---
 title: Contrato inteligente Hello World para iniciantes
-description: Tutorial introdutório sobre como escrever e implantar um contrato inteligente simples no Ethereum.
+description: "Tutorial introdutório sobre como escrever e implantar um contrato inteligente simples no Ethereum."
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "contratos inteligentes", "implantação"]
+tags: ["Solidity", "Hardhat", "Alchemy", "contratos inteligentes", "implantação"]
 skill: beginner
 breadcrumb: Contrato Hello World
 lang: pt-br

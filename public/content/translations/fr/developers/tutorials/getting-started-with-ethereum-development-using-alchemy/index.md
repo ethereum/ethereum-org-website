@@ -1,8 +1,8 @@
 ---
-title: Premiers pas avec le développement sur Ethereum
+title: "Premiers pas avec le développement sur Ethereum"
 description: "Ceci est un guide pour débutants pour faire ses premiers pas dans le développement sur Ethereum. Nous vous accompagnerons de la configuration d'un point de terminaison d'API à l'écriture de votre premier script Web3, en passant par l'exécution d'une requête en ligne de commande ! Aucune expérience en développement de chaîne de blocs n'est requise !"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "nœuds", "requêtes", "alchemy"]
+tags: ["JavaScript", "ethers.js", "nœuds", "requêtes", "Alchemy"]
 skill: beginner
 breadcrumb: Premiers pas
 lang: fr

@@ -1,11 +1,11 @@
 ---
-title: 웹소켓 사용하기
-description: 웹소켓과 Alchemy를 사용하여 JSON-RPC 요청을 보내고 이벤트에 구독하는 방법에 대한 가이드입니다.
+title: "웹소켓 사용하기"
+description: "웹소켓과 Alchemy를 사용하여 JSON-RPC 요청을 보내고 이벤트에 구독하는 방법에 대한 가이드입니다."
 author: "엘란 할펀"
 lang: ko
-tags: ["alchemy", "웹소켓", "쿼리", "javascript"]
+tags: ["Alchemy", "웹소켓", "쿼리", "JavaScript"]
 skill: beginner
-breadcrumb: 웹소켓
+breadcrumb: "웹소켓"
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
@@ -86,7 +86,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 1. `alchemy_newFullPendingTransactions`
 
-대기 중(pending) 상태에 추가된 모든 트랜잭션에 대한 트랜잭션 정보를 반환합니다. 이 구독 유형은 표준 Web3 호출인 `web3.eth.subscribe("pendingTransactions")`와 유사하게 대기 중인 트랜잭션을 구독하지만, 트랜잭션 해시뿐만 아니라 _전체 트랜잭션 정보_를 내보낸다는 점에서 다릅니다.
+대기 중(pending) 상태에 추가된 모든 트랜잭션에 대한 트랜잭션 정보를 반환합니다. 이 구독 유형은 표준 Web3 호출인 `web3.eth.subscribe("pendingTransactions")`와 유사하게 대기 중인 트랜잭션을 구독하지만, 트랜잭션 해시뿐만 아니라 <em>전체 트랜잭션 정보</em>를 내보낸다는 점에서 다릅니다.
 
 예:
 

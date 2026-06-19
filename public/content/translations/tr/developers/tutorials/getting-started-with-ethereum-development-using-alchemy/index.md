@@ -1,10 +1,10 @@
 ---
-title: Ethereum Geliştirmeye Başlarken
+title: "Ethereum Geliştirmeye Başlarken"
 description: "Bu, Ethereum geliştirmeye başlamak için yeni başlayanlara yönelik bir rehberdir. Sizi bir API uç noktası oluşturmaktan, komut satırı isteği yapmaya ve ilk Web3 betiğinizi yazmaya kadar götüreceğiz! Blokzincir geliştirme deneyimi gerekmez!"
 author: "Elan Halpern"
-tags: ["javascript", "ethers.js", "düğümler", "sorgulama", "alchemy"]
+tags: ["JavaScript", "ethers.js", "düğümler", "sorgulama", "Alchemy"]
 skill: beginner
-breadcrumb: Başlarken
+breadcrumb: "Başlarken"
 lang: tr
 published: 2020-10-30
 source: Medium

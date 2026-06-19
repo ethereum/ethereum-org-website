@@ -2,7 +2,7 @@
 title: Menyebarkan kontrak pintar pertama Anda
 description: Pengenalan tentang cara menyebarkan kontrak pintar pertama Anda di jaringan pengujian Ethereum
 author: "jdourlens"
-tags: ["kontrak pintar", "remix", "solidity", "menyebarkan"]
+tags: ["kontrak pintar", "Remix", "Solidity", "menyebarkan"]
 skill: beginner
 breadcrumb: Menyebarkan kontrak pertama
 lang: id

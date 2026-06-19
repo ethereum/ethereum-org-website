@@ -1,7 +1,7 @@
 ---
-title: Использование WebSockets
-description: Руководство по использованию WebSockets и Alchemy для выполнения JSON-RPC запросов и подписки на события.
-author: Элан Халперн
+title: "Использование WebSockets"
+description: "Руководство по использованию WebSockets и Alchemy для выполнения JSON-RPC запросов и подписки на события."
+author: "Элан Халперн"
 lang: ru
 tags:
   - alchemy

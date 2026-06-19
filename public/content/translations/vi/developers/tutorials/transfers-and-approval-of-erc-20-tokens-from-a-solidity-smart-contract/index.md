@@ -1,10 +1,10 @@
 ---
-title: Chuyển và chấp thuận token ERC-20 từ một hợp đồng thông minh Solidity
-description: Xây dựng một hợp đồng thông minh DEX xử lý việc chuyển và chấp thuận token ERC-20 bằng Solidity.
+title: "Chuyển và chấp thuận token ERC-20 từ một hợp đồng thông minh Solidity"
+description: "Xây dựng một hợp đồng thông minh DEX xử lý việc chuyển và chấp thuận token ERC-20 bằng Solidity."
 author: "jdourlens"
-tags: ["hợp đồng thông minh", "token", "solidity", "erc-20"]
+tags: ["hợp đồng thông minh", "token", "Solidity", "erc-20"]
 skill: intermediate
-breadcrumb: Chuyển ERC-20
+breadcrumb: "Chuyển ERC-20"
 lang: vi
 published: 2020-04-07
 source: EthereumDev

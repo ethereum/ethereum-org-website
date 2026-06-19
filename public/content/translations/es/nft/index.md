@@ -1,12 +1,12 @@
 ---
 title: Tokens no fungibles (NFT)
-metaTitle: ¿Qué son los NFT? | Beneficios y uso
-description: Una descripción general de los NFT en Ethereum
+metaTitle: "¿Qué son los NFT? | Beneficios y uso"
+description: "Una descripción general de los NFT en Ethereum"
 lang: es
 template: use-cases
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Un logotipo de Eth mostrado a través de un holograma.
+alt: "Un logotipo de Eth mostrado a través de un holograma."
 summaryPoints:
   - "Una forma de representar cualquier cosa única como un activo basado en Ethereum."
   - "Los NFT están dando más poder que nunca a los creadores de contenido."

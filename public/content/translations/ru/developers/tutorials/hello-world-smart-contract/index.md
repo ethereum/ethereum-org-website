@@ -1,10 +1,10 @@
 ---
-title: Смарт-контракт Hello World для начинающих
-description: Вводное руководство по написанию и развертыванию простого смарт-контракта в Эфириуме.
+title: "Смарт-контракт Hello World для начинающих"
+description: "Вводное руководство по написанию и развертыванию простого смарт-контракта в Эфириуме."
 author: "elanh"
 tags: ["Solidity", "Hardhat", "Alchemy", "смарт-контракты", "развертывание"]
 skill: beginner
-breadcrumb: Контракт Hello World
+breadcrumb: "Контракт Hello World"
 lang: ru
 published: 2021-03-31
 ---

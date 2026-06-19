@@ -1,6 +1,6 @@
 ---
-title: Birleşme
-description: Birleşme hakkında bilgi edinin - Ethereum Ana Ağı'nın Hisse Kanıtı'na (PoS) geçtiği zaman.
+title: "Birleşme"
+description: "Birleşme hakkında bilgi edinin - Ethereum Ana Ağı'nın Hisse Kanıtı'na (PoS) geçtiği zaman."
 lang: tr
 template: upgrade
 image: /images/upgrades/merge.png

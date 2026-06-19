@@ -1,10 +1,10 @@
 ---
-title: 初めてのスマート・コントラクトのデプロイ
-description: イーサリアムのテストネットワークに初めてのスマート・コントラクトをデプロイするための入門ガイド
+title: "初めてのスマート・コントラクトのデプロイ"
+description: "イーサリアムのテストネットワークに初めてのスマート・コントラクトをデプロイするための入門ガイド"
 author: "jdourlens"
 tags: ["スマート・コントラクト", "Remix", "Solidity", "デプロイ"]
 skill: beginner
-breadcrumb: 初めてのコントラクトのデプロイ
+breadcrumb: "初めてのコントラクトのデプロイ"
 lang: ja
 published: 2020-04-03
 source: EthereumDev

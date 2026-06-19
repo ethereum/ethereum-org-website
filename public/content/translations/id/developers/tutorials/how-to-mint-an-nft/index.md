@@ -2,7 +2,7 @@
 title: Cara Mencetak NFT (Bagian 2/3 dari Seri Tutorial NFT)
 description: Tutorial ini menjelaskan cara mencetak NFT di rantai blok Ethereum menggunakan kontrak pintar kami dan Web3.
 author: "Sumi Mudgil"
-tags: ["ERC-721", "alchemy", "solidity", "kontrak pintar"]
+tags: ["ERC-721", "Alchemy", "Solidity", "kontrak pintar"]
 skill: beginner
 breadcrumb: Cetak NFT
 lang: id

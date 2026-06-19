@@ -1,6 +1,6 @@
 ---
 title: Comprender las especificaciones de la EVM del Libro Amarillo
-description: Comprender la parte del Libro Amarillo, las especificaciones formales de Ethereum, que explica la máquina virtual de Ethereum (EVM).
+description: "Comprender la parte del Libro Amarillo, las especificaciones formales de Ethereum, que explica la máquina virtual de Ethereum (EVM)."
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate

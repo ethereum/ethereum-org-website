@@ -1,6 +1,6 @@
 ---
-title: Utiliser la divulgation nulle de connaissance pour un état secret
-description: Les jeux onchain sont limités car ils ne peuvent conserver aucune information cachée. Après avoir lu ce tutoriel, un lecteur sera capable de combiner des preuves à divulgation nulle de connaissance et des composants serveur pour créer des jeux vérifiables avec un composant d'état secret hors chaîne. La technique pour y parvenir sera démontrée en créant un jeu de démineur.
+title: "Utiliser la divulgation nulle de connaissance pour un état secret"
+description: "Les jeux onchain sont limités car ils ne peuvent conserver aucune information cachée. Après avoir lu ce tutoriel, un lecteur sera capable de combiner des preuves à divulgation nulle de connaissance et des composants serveur pour créer des jeux vérifiables avec un composant d'état secret hors chaîne. La technique pour y parvenir sera démontrée en créant un jeu de démineur."
 author: Ori Pomerantz
 tags:
   - serveur
@@ -11,7 +11,7 @@ tags:
   - mud
   - confidentialité
 skill: advanced
-breadcrumb: État secret ZK
+breadcrumb: "État secret ZK"
 lang: fr
 published: 2025-03-15
 ---

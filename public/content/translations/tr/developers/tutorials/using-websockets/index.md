@@ -1,9 +1,9 @@
 ---
 title: WebSocket'leri Kullanmak
-description: JSON-RPC istekleri yapmak ve olaylara abone olmak için WebSocket'leri ve Alchemy'yi kullanma rehberi.
+description: "JSON-RPC istekleri yapmak ve olaylara abone olmak için WebSocket'leri ve Alchemy'yi kullanma rehberi."
 author: "Elan Halpern"
 lang: tr
-tags: ["alchemy", "websocket'ler", "sorgulama", "javascript"]
+tags: ["Alchemy", "websocket'ler", "sorgulama", "JavaScript"]
 skill: beginner
 breadcrumb: WebSocket'ler
 source: Alchemy docs

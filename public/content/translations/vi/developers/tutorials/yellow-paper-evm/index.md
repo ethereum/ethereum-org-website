@@ -1,10 +1,10 @@
 ---
-title: Hiểu về các thông số kỹ thuật EVM trong Sách vàng
-description: Hiểu về phần giải thích Máy ảo Ethereum (EVM) trong Sách vàng, tài liệu đặc tả chính thức của Ethereum.
+title: "Hiểu về các thông số kỹ thuật EVM trong Sách vàng"
+description: "Hiểu về phần giải thích Máy ảo Ethereum (EVM) trong Sách vàng, tài liệu đặc tả chính thức của Ethereum."
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate
-breadcrumb: EVM trong Sách vàng
+breadcrumb: "EVM trong Sách vàng"
 lang: vi
 published: 2022-05-15
 ---

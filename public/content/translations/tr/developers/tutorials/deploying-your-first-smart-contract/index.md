@@ -1,10 +1,10 @@
 ---
-title: İlk akıllı sözleşmenizi dağıtmak
-description: Bir Ethereum test ağında ilk akıllı sözleşmenizi dağıtmaya giriş
+title: "İlk akıllı sözleşmenizi dağıtmak"
+description: "Bir Ethereum test ağında ilk akıllı sözleşmenizi dağıtmaya giriş"
 author: "jdourlens"
-tags: ["akıllı sözleşmeler", "remix", "solidity", "dağıtmak"]
+tags: ["akıllı sözleşmeler", "Remix", "Solidity", "dağıtmak"]
 skill: beginner
-breadcrumb: İlk sözleşmeyi dağıt
+breadcrumb: "İlk sözleşmeyi dağıt"
 lang: tr
 published: 2020-04-03
 source: EthereumDev

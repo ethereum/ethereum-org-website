@@ -1,6 +1,6 @@
 ---
 title: Escalando o Ethereum
-description: Os rollups agrupam transações fora da cadeia (offchain), reduzindo os custos para o usuário. No entanto, a forma como os rollups usam os dados atualmente é muito cara, limitando o quão baratas as transações podem ser. O Proto-Danksharding resolve isso.
+description: "Os rollups agrupam transações fora da cadeia (offchain), reduzindo os custos para o usuário. No entanto, a forma como os rollups usam os dados atualmente é muito cara, limitando o quão baratas as transações podem ser. O Proto-Danksharding resolve isso."
 lang: pt-br
 image: /images/roadmap/roadmap-transactions.png
 alt: "Roteiro do Ethereum"
@@ -15,11 +15,11 @@ O Ethereum é escalado usando [camadas 2 (l2)](/layer-2/#rollups) (também conhe
   Custos de transação
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Os rollups de hoje são <strong>~5-20x</strong> mais baratos que a camada 1 (l1) do Ethereum</li>
-    <li>Os ZK-rollups em breve reduzirão as taxas em <strong>~40-100x</strong></li>
-    <li>As próximas mudanças no Ethereum fornecerão mais <strong>~100-1000x</strong> de escalabilidade</li>
-    <li style={{ marginBottom: 0 }}>Os usuários devem se beneficiar de transações <strong>custando menos de US$ 0,001</strong></strong>
-  </strong>
+    <li>Os rollups de hoje são <strong>\~5-20x</strong> mais baratos que a camada 1 (l1) do Ethereum</li>
+    <li>Os ZK-rollups em breve reduzirão as taxas em <strong>\~40-100x</strong></li>
+    <li>As próximas mudanças no Ethereum fornecerão mais <strong>\~100-1000x</strong> de escalabilidade</li>
+ <li style={{ marginBottom: 0 }}>Os usuários devem se beneficiar de transações <strong>custando menos de US$ 0,001</strong>
+
 </AlertContent>
 </Alert>
 

@@ -1,10 +1,10 @@
 ---
-title: Cómo acuñar un NFT (Parte 2/3 de la serie de tutoriales sobre NFT)
-description: Este tutorial describe cómo acuñar un NFT en la cadena de bloques de Ethereum utilizando nuestro contrato inteligente y Web3.
+title: "Cómo acuñar un NFT (Parte 2/3 de la serie de tutoriales sobre NFT)"
+description: "Este tutorial describe cómo acuñar un NFT en la cadena de bloques de Ethereum utilizando nuestro contrato inteligente y Web3."
 author: "Sumi Mudgil"
-tags: ["ERC-721", "alchemy", "solidity", "contratos inteligentes"]
+tags: ["ERC-721", "Alchemy", "Solidity", "contratos inteligentes"]
 skill: beginner
-breadcrumb: Acuñar un NFT
+breadcrumb: "Acuñar un NFT"
 lang: es
 published: 2021-04-22
 ---

@@ -1,6 +1,6 @@
 ---
 title: The Merge
-description: Tìm hiểu về The Merge - khi Mạng chính Ethereum áp dụng bằng chứng cổ phần (PoS).
+description: "Tìm hiểu về The Merge - khi Mạng chính Ethereum áp dụng bằng chứng cổ phần (PoS)."
 lang: vi
 template: upgrade
 image: /images/upgrades/merge.png

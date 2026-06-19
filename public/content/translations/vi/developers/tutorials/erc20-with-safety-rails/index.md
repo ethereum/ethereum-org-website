@@ -1,12 +1,12 @@
 ---
-title: ERC-20 với các biện pháp an toàn
-description: Cách giúp mọi người tránh những sai lầm ngớ ngẩn
+title: "ERC-20 với các biện pháp an toàn"
+description: "Cách giúp mọi người tránh những sai lầm ngớ ngẩn"
 author: Ori Pomerantz
 lang: vi
 tags:
   - erc-20
 skill: beginner
-breadcrumb: An toàn ERC-20
+breadcrumb: "An toàn ERC-20"
 published: 2022-08-15
 ---
 

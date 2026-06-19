@@ -1,6 +1,6 @@
 ---
-title: Finance régénérative (ReFi)
-description: Un aperçu de la ReFi et de ses cas d'utilisation actuels.
+title: "Finance régénérative (ReFi)"
+description: "Un aperçu de la ReFi et de ses cas d'utilisation actuels."
 lang: fr
 template: use-cases
 sidebarDepth: 2

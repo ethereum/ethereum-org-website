@@ -1,8 +1,8 @@
 ---
 title: Contrato inteligente Hola Mundo para principiantes
-description: Tutorial introductorio sobre cómo escribir y desplegar un contrato inteligente simple en Ethereum.
+description: "Tutorial introductorio sobre cómo escribir y desplegar un contrato inteligente simple en Ethereum."
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "contratos inteligentes", "despliegue"]
+tags: ["Solidity", "Hardhat", "Alchemy", "contratos inteligentes", "despliegue"]
 skill: beginner
 breadcrumb: Contrato Hola Mundo
 lang: es

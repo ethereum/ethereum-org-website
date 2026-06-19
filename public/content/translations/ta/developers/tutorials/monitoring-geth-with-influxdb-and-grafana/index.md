@@ -1,10 +1,10 @@
 ---
-title: InfluxDB மற்றும் Grafana மூலம் Geth-ஐக் கண்காணித்தல்
-description: செயல்திறனைக் கண்காணிக்கவும் சிக்கல்களைக் கண்டறியவும் InfluxDB மற்றும் Grafana-ஐப் பயன்படுத்தி உங்கள் Geth கணுவிற்கான கண்காணிப்பை அமைக்கவும்.
+title: "InfluxDB மற்றும் Grafana மூலம் Geth-ஐக் கண்காணித்தல்"
+description: "செயல்திறனைக் கண்காணிக்கவும் சிக்கல்களைக் கண்டறியவும் InfluxDB மற்றும் Grafana-ஐப் பயன்படுத்தி உங்கள் Geth கணுவிற்கான கண்காணிப்பை அமைக்கவும்."
 author: "மரியோ ஹாவெல்"
 tags: ["கிளையண்டுகள்", "கணுக்கள்"]
 skill: intermediate
-breadcrumb: Geth-ஐக் கண்காணித்தல்
+breadcrumb: "Geth-ஐக் கண்காணித்தல்"
 lang: ta
 published: 2021-01-13
 ---
