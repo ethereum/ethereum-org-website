@@ -1,8 +1,8 @@
 ---
 title: Come coniare un NFT (Parte 2/3 della serie di tutorial sugli NFT)
-description: Questo tutorial descrive come coniare un NFT sulla blockchain di Ethereum usando il nostro contratto intelligente e Web3.
+description: Questo tutorial descrive come coniare un NFT sulla blockchain di Ethereum usando il nostro smart contract e il Web3.
 author: "Sumi Mudgil"
-tags: ["ERC-721", "Alchemy", "Solidity", "contratti intelligenti"]
+tags: ["ERC-721", "alchemy", "solidity", "smart contract"]
 skill: beginner
 breadcrumb: Coniare un NFT
 lang: it
@@ -13,15 +13,15 @@ published: 2021-04-22
 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 milioni di dollari
 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 milioni di dollari
 
-Tutti loro hanno coniato i propri NFT usando la potente API di Alchemy. In questo tutorial, ti insegneremo come fare lo stesso in \<10 minuti.
+Tutti loro hanno coniato i propri NFT utilizzando la potente API di Alchemy. In questo tutorial, ti insegneremo come fare lo stesso in \<10 minuti.
 
-"Coniare un NFT" è l'atto di pubblicare un'istanza unica del tuo token ERC-721 sulla blockchain. Usando il nostro contratto intelligente dalla [Parte 1 di questa serie di tutorial sugli NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/), mettiamo in mostra le nostre abilità con Web3 e coniamo un NFT. Alla fine di questo tutorial, sarai in grado di coniare tutti gli NFT che il tuo cuore (e il tuo portafoglio) desidera!
+"Coniare un NFT" è l'atto di pubblicare un'istanza unica del tuo token ERC-721 sulla blockchain. Utilizzando il nostro smart contract dalla [Parte 1 di questa serie di tutorial sugli NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/), mettiamo in mostra le nostre abilità nel Web3 e coniamo un NFT. Alla fine di questo tutorial, sarai in grado di coniare tutti gli NFT che il tuo cuore (e il tuo portafoglio) desidera!
 
 Iniziamo!
 
 ## Passaggio 1: Installare Web3 {#install-web3}
 
-Se hai seguito il primo tutorial sulla creazione del tuo contratto intelligente per NFT, hai già esperienza nell'uso di Ethers.js. Web3 è simile a Ethers, in quanto è una libreria usata per facilitare la creazione di richieste alla blockchain di [Ethereum](/). In questo tutorial useremo [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), che è una libreria Web3 migliorata che offre tentativi automatici e un solido supporto per WebSocket.
+Se hai seguito il primo tutorial sulla creazione del tuo smart contract NFT, hai già esperienza nell'uso di Ethers.js. Web3 è simile a Ethers, in quanto è una libreria utilizzata per facilitare la creazione di richieste alla blockchain di [Ethereum](/). In questo tutorial utilizzeremo [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), che è una libreria Web3 migliorata che offre tentativi automatici e un solido supporto WebSocket.
 
 Nella directory principale del tuo progetto esegui:
 
@@ -42,7 +42,7 @@ const web3 = createAlchemyWeb3(API_URL)
 
 ## Passaggio 3: Ottenere l'ABI del tuo contratto {#contract-abi}
 
-L'ABI (Application Binary Interface) del nostro contratto è l'interfaccia per interagire con il nostro contratto intelligente. Puoi saperne di più sulle ABI dei contratti [qui](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat genera automaticamente un'ABI per noi e la salva nel file `MyNFT.json`. Per poterla usare dovremo analizzarne i contenuti aggiungendo le seguenti righe di codice al nostro file `mint-nft.js`:
+L'ABI (Application Binary Interface) del nostro contratto è l'interfaccia per interagire con il nostro smart contract. Puoi saperne di più sulle ABI dei contratti [qui](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat genera automaticamente un'ABI per noi e la salva nel file `MyNFT.json`. Per utilizzarla dovremo analizzarne i contenuti aggiungendo le seguenti righe di codice al nostro file `mint-nft.js`:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -60,25 +60,25 @@ Per eseguire `mint-nft.js` e vedere la tua ABI stampata nella console, naviga ne
 node scripts/mint-nft.js
 ```
 
-## Passaggio 4: Configurare i metadati per il tuo NFT usando IPFS {#config-meta}
+## Passaggio 4: Configurare i metadati per il tuo NFT utilizzando IPFS {#config-meta}
 
-Se ricordi dal nostro tutorial nella Parte 1, la nostra funzione del contratto intelligente `mintNFT` accetta un parametro tokenURI che dovrebbe risolversi in un documento JSON che descrive i metadati dell'NFT, che è in realtà ciò che dà vita all'NFT, permettendogli di avere proprietà configurabili, come un nome, una descrizione, un'immagine e altri attributi.
+Se ricordi dal nostro tutorial nella Parte 1, la funzione del nostro smart contract `mintNFT` accetta un parametro tokenURI che dovrebbe risolversi in un documento JSON che descrive i metadati dell'NFT, che è in realtà ciò che dà vita all'NFT, consentendogli di avere proprietà configurabili, come un nome, una descrizione, un'immagine e altri attributi.
 
 > _L'Interplanetary File System (IPFS) è un protocollo decentralizzato e una rete peer-to-peer per l'archiviazione e la condivisione di dati in un file system distribuito._
 
-Useremo Pinata, una comoda API e toolkit IPFS, per archiviare la risorsa e i metadati del nostro NFT per assicurarci che il nostro NFT sia veramente decentralizzato. Se non hai un account Pinata, registrati per un account gratuito [qui](https://app.pinata.cloud) e completa i passaggi per verificare la tua email.
+Utilizzeremo Pinata, una comoda API e toolkit IPFS, per archiviare il nostro asset NFT e i metadati per garantire che il nostro NFT sia veramente decentralizzato. Se non hai un account Pinata, registrati per un account gratuito [qui](https://app.pinata.cloud) e completa i passaggi per verificare la tua email.
 
 Una volta creato un account:
 
-- Naviga alla pagina "Files" e clicca sul pulsante blu "Upload" in alto a sinistra della pagina.
+- Naviga alla pagina "Files" e fai clic sul pulsante blu "Upload" in alto a sinistra della pagina.
 
-- Carica un'immagine su Pinata: questa sarà la risorsa immagine per il tuo NFT. Sentiti libero di nominare la risorsa come preferisci
+- Carica un'immagine su Pinata: questo sarà l'asset immagine per il tuo NFT. Sentiti libero di nominare l'asset come preferisci
 
-- Dopo il caricamento, vedrai le informazioni del file nella tabella sulla pagina "Files". Vedrai anche una colonna CID. Puoi copiare il CID cliccando sul pulsante di copia accanto ad esso. Puoi visualizzare il tuo caricamento su: `https://gateway.pinata.cloud/ipfs/<CID>`. Puoi trovare l'immagine che abbiamo usato su IPFS [qui](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5), per esempio.
+- Dopo il caricamento, vedrai le informazioni del file nella tabella sulla pagina "Files". Vedrai anche una colonna CID. Puoi copiare il CID facendo clic sul pulsante di copia accanto ad esso. Puoi visualizzare il tuo caricamento su: `https://gateway.pinata.cloud/ipfs/<CID>`. Puoi trovare l'immagine che abbiamo usato su IPFS [qui](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5), ad esempio.
 
 Per chi apprende in modo più visivo, i passaggi precedenti sono riassunti qui:
 
-![Come caricare la tua immagine su Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.gif)
 
 Ora, vorremo caricare un altro documento su Pinata. Ma prima di farlo, dobbiamo crearlo!
 
@@ -102,21 +102,21 @@ Nella tua directory principale, crea un nuovo file chiamato `nft-metadata.json` 
 }
 ```
 
-Sentiti libero di cambiare i dati nel json. Puoi rimuovere o aggiungere alla sezione degli attributi. La cosa più importante è assicurarsi che il campo dell'immagine punti alla posizione della tua immagine IPFS, altrimenti il tuo NFT includerà una foto di un cane (molto carino!).
+Sentiti libero di modificare i dati nel json. Puoi rimuovere o aggiungere elementi alla sezione degli attributi. La cosa più importante è assicurarsi che il campo dell'immagine punti alla posizione della tua immagine IPFS, altrimenti il tuo NFT includerà la foto di un cane (molto carino!).
 
 Una volta terminata la modifica del file JSON, salvalo e caricalo su Pinata, seguendo gli stessi passaggi che abbiamo fatto per caricare l'immagine.
 
-![Come caricare il tuo nft-metadata.json su Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
 
 ## Passaggio 5: Creare un'istanza del tuo contratto {#instance-contract}
 
-Ora, per interagire con il nostro contratto, dobbiamo crearne un'istanza nel nostro codice. Per farlo avremo bisogno del nostro indirizzo del contratto che possiamo ottenere dalla distribuzione o da [Blockscout](https://eth-sepolia.blockscout.com/) cercando l'indirizzo che hai usato per distribuire il contratto.
+Ora, per interagire con il nostro contratto, dobbiamo crearne un'istanza nel nostro codice. Per farlo avremo bisogno dell'indirizzo del nostro contratto, che possiamo ottenere dalla distribuzione o da [Blockscout](https://eth-sepolia.blockscout.com/) cercando l'indirizzo che hai utilizzato per distribuire il contratto.
 
-![Visualizza l'indirizzo del tuo contratto su Etherscan](./view-contract-etherscan.png)
+![View your contract address on Etherscan](./view-contract-etherscan.png)
 
-Nell'esempio sopra, il nostro indirizzo del contratto è 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
+Nell'esempio sopra, l'indirizzo del nostro contratto è 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
-Successivamente useremo il [metodo contract](https://docs.web3js.org/api/web3-eth-contract/class/Contract) di Web3 per creare il nostro contratto usando l'ABI e l'indirizzo. Nel tuo file `mint-nft.js`, aggiungi quanto segue:
+Successivamente utilizzeremo il [metodo contract](https://docs.web3js.org/api/web3-eth-contract/class/Contract) di Web3 per creare il nostro contratto utilizzando l'ABI e l'indirizzo. Nel tuo file `mint-nft.js`, aggiungi quanto segue:
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
@@ -126,7 +126,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 ## Passaggio 6: Aggiornare il file `.env` {#update-env}
 
-Ora, per creare e inviare transazioni alla catena di Ethereum, useremo l'indirizzo pubblico del tuo account Ethereum per ottenere il nonce dell'account (lo spiegheremo di seguito).
+Ora, per creare e inviare transazioni alla catena di Ethereum, utilizzeremo l'indirizzo pubblico del tuo account Ethereum per ottenere il nonce dell'account (lo spiegheremo di seguito).
 
 Aggiungi la tua chiave pubblica al tuo file `.env`: se hai completato la parte 1 del tutorial, il nostro file `.env` dovrebbe ora apparire così:
 
@@ -142,7 +142,7 @@ Per prima cosa, definiamo una funzione chiamata `mintNFT(tokenData)` e creiamo l
 
 1. Prendi la tua _PRIVATE_KEY_ e _PUBLIC_KEY_ dal file `.env`.
 
-1. Successivamente, dovremo capire il nonce dell'account. La specifica del nonce è usata per tenere traccia del numero di transazioni inviate dal tuo indirizzo, di cui abbiamo bisogno per motivi di sicurezza e per prevenire [attacchi di replay](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). Per ottenere il numero di transazioni inviate dal tuo indirizzo, usiamo [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+1. Successivamente, dovremo capire il nonce dell'account. La specifica del nonce viene utilizzata per tenere traccia del numero di transazioni inviate dal tuo indirizzo, di cui abbiamo bisogno per motivi di sicurezza e per prevenire [attacchi di replay](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). Per ottenere il numero di transazioni inviate dal tuo indirizzo, utilizziamo [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
 
 1. Infine imposteremo la nostra transazione con le seguenti informazioni:
 
@@ -172,9 +172,9 @@ Il tuo file `mint-nft.js` dovrebbe apparire così ora:
    const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
    async function mintNFT(tokenURI) {
-     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); // ottieni l'ultimo nonce
+     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //ottieni l'ultimo nonce
 
-   // la transazione
+   //la transazione
      const tx = {
        'from': PUBLIC_KEY,
        'to': contractAddress,
@@ -187,7 +187,7 @@ Il tuo file `mint-nft.js` dovrebbe apparire così ora:
 
 ## Passaggio 8: Firmare la transazione {#sign-txn}
 
-Ora che abbiamo creato la nostra transazione, dobbiamo firmarla per poterla inviare. È qui che useremo la nostra chiave privata.
+Ora che abbiamo creato la nostra transazione, dobbiamo firmarla per poterla inviare. È qui che utilizzeremo la nostra chiave privata.
 
 `web3.eth.sendSignedTransaction` ci darà l'hash della transazione, che possiamo usare per assicurarci che la nostra transazione sia stata minata e non sia stata scartata dalla rete. Noterai che nella sezione della firma della transazione, abbiamo aggiunto un controllo degli errori in modo da sapere se la nostra transazione è andata a buon fine.
 
@@ -205,9 +205,9 @@ const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") // ottieni l'ultimo nonce
+  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //ottieni l'ultimo nonce
 
-  // la transazione
+  //la transazione
   const tx = {
     from: PUBLIC_KEY,
     to: contractAddress,
@@ -249,11 +249,11 @@ Ricordi il `metadata.json` che hai caricato su Pinata? Ottieni il suo codice has
 
 Ecco come ottenere il codice hash:
 
-![Come ottenere il codice hash dei metadati del tuo nft su Pinata](./metadataPinata.gif)_Come ottenere il codice hash dei metadati del tuo nft su Pinata_
+![How to get your nft metadata hashcode on Pinata](./metadataPinata.gif)_Come ottenere il codice hash dei metadati del tuo nft su Pinata_
 
-> Controlla due volte che il codice hash che hai copiato si colleghi al tuo **metadata.json** caricando `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` in una finestra separata. La pagina dovrebbe apparire simile allo screenshot qui sotto:
+> Ricontrolla che il codice hash che hai copiato colleghi al tuo **metadata.json** caricando `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` in una finestra separata. La pagina dovrebbe essere simile allo screenshot qui sotto:
 
-![La tua pagina dovrebbe visualizzare i metadati json](./metadataJSON.png)_La tua pagina dovrebbe visualizzare i metadati json_
+![Your page should display the json metadata](./metadataJSON.png)_La tua pagina dovrebbe visualizzare i metadati json_
 
 Nel complesso, il tuo codice dovrebbe apparire più o meno così:
 
@@ -271,9 +271,9 @@ const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") // ottieni l'ultimo nonce
+  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //ottieni l'ultimo nonce
 
-  // la transazione
+  //la transazione
   const tx = {
     from: PUBLIC_KEY,
     to: contractAddress,
@@ -317,12 +317,12 @@ Ora, esegui `node scripts/mint-nft.js` per distribuire il tuo NFT. Dopo un paio 
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Successivamente, visita la tua [mempool di Alchemy](https://dashboard.alchemyapi.io/mempool) per vedere lo stato della tua transazione (se è in sospeso, minata o è stata scartata dalla rete). Se la tua transazione è stata scartata, è anche utile controllare [Blockscout](https://eth-sepolia.blockscout.com/) e cercare l'hash della tua transazione.
+Successivamente, visita la tua [mempool di Alchemy](https://dashboard.alchemyapi.io/mempool) per vedere lo stato della tua transazione (se è in sospeso, minata o è stata scartata dalla rete). Se la tua transazione è stata scartata, è anche utile controllare [Blockscout](https://eth-sepolia.blockscout.com/) e cercare l'hash della transazione.
 
-![Visualizza l'hash della transazione del tuo NFT su Etherscan](./view-nft-etherscan.png)_Visualizza l'hash della transazione del tuo NFT su Etherscan_
+![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Visualizza l'hash della transazione del tuo NFT su Etherscan_
 
 E questo è tutto! Ora hai distribuito E coniato un NFT sulla blockchain di Ethereum <Emoji text=":money_mouth_face:" size={1} />
 
-Usando `mint-nft.js` puoi coniare tutti gli NFT che il tuo cuore (e il tuo portafoglio) desidera! Assicurati solo di passare un nuovo tokenURI che descrive i metadati dell'NFT (altrimenti, finirai solo per crearne un mucchio identici con ID diversi).
+Utilizzando `mint-nft.js` puoi coniare tutti gli NFT che il tuo cuore (e il tuo portafoglio) desidera! Assicurati solo di passare un nuovo tokenURI che descriva i metadati dell'NFT (altrimenti, finirai solo per crearne un mucchio identici con ID diversi).
 
 Presumibilmente, ti piacerebbe poter mostrare il tuo NFT nel tuo portafoglio, quindi assicurati di dare un'occhiata alla [Parte 3: Come visualizzare il tuo NFT nel tuo portafoglio](/developers/tutorials/how-to-view-nft-in-metamask/)!

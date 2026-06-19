@@ -1,9 +1,9 @@
 ---
-title: Utilizzare i WebSocket
+title: Usare i WebSocket
 description: Guida all'uso dei WebSocket e di Alchemy per effettuare richieste JSON-RPC e iscriversi agli eventi.
 author: "Elan Halpern"
 lang: it
-tags: ["Alchemy", "websockets", "interrogazione", "JavaScript"]
+tags: ["alchemy", "websocket", "interrogazione", "javascript"]
 skill: beginner
 breadcrumb: WebSocket
 source: Alchemy docs
@@ -11,21 +11,21 @@ sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-webso
 published: 2020-12-01
 ---
 
-Questa è una guida di base per utilizzare i WebSocket e Alchemy per effettuare richieste alla blockchain di Ethereum.
+Questa è una guida di base all'uso dei WebSocket e di Alchemy per effettuare richieste alla blockchain di Ethereum.
 
 ## WebSocket contro HTTP {#websockets-vs-http}
 
-A differenza dell'HTTP, con i WebSocket non è necessario effettuare continuamente richieste quando si desiderano informazioni specifiche. I WebSocket mantengono una connessione di rete per te (se eseguiti correttamente) e restano in ascolto dei cambiamenti.
+A differenza dell'HTTP, con i WebSocket non è necessario effettuare continuamente richieste quando si desiderano informazioni specifiche. I WebSocket mantengono una connessione di rete per te (se fatti bene) e restano in ascolto dei cambiamenti.
 
-Come per qualsiasi connessione di rete, non si dovrebbe presumere che un WebSocket rimanga aperto per sempre senza interruzioni, ma gestire correttamente le connessioni interrotte e la riconnessione manuale può essere difficile da eseguire nel modo giusto. Un altro svantaggio dei WebSocket è che non si ottengono i codici di stato HTTP nella risposta, ma solo il messaggio di errore.
+Come per qualsiasi connessione di rete, non si dovrebbe presumere che un WebSocket rimanga aperto per sempre senza interruzioni, ma gestire correttamente le connessioni interrotte e la riconnessione manuale può essere difficile da fare bene. Un altro svantaggio dei WebSocket è che non si ottengono i codici di stato HTTP nella risposta, ma solo il messaggio di errore.
 
 ​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) aggiunge automaticamente la gestione dei guasti e dei tentativi dei WebSocket senza alcuna configurazione necessaria.
 
 ## Provalo {#try-it-out}
 
-Il modo più semplice per testare i WebSocket è installare uno strumento a riga di comando per effettuare richieste WebSocket come [wscat](https://github.com/websockets/wscat). Usando wscat, puoi inviare richieste come segue:
+Il modo più semplice per testare i WebSocket è installare uno strumento a riga di comando per effettuare richieste WebSocket come [wscat](https://github.com/websockets/wscat). Usando wscat, puoi inviare richieste nel modo seguente:
 
-_Nota: se hai un account Alchemy puoi sostituire `demo` con la tua chiave API. [Registrati qui per un account Alchemy gratuito!](https://auth.alchemy.com/signup)_
+_Nota: se hai un account Alchemy puoi sostituire `demo` con la tua chiave API. [Registrati per un account Alchemy gratuito qui!](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -33,20 +33,19 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
 <  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-
 ```
 
 ## Come usare i WebSocket {#how-to-use-websockets}
 
-Per iniziare, apri un WebSocket utilizzando l'URL WebSocket per la tua app. Puoi trovare l'URL WebSocket della tua app aprendo la pagina dell'app nella [tua dashboard](https://dashboard.alchemy.com/) e cliccando su "View Key" (Visualizza chiave). Nota che l'URL della tua app per i WebSocket è diverso dal suo URL per le richieste HTTP, ma entrambi possono essere trovati cliccando su "View Key".
+Per iniziare, apri un WebSocket usando l'URL WebSocket per la tua app. Puoi trovare l'URL WebSocket della tua app aprendo la pagina dell'app nella [tua dashboard](https://dashboard.alchemy.com/) e cliccando su "View Key". Nota che l'URL della tua app per i WebSocket è diverso dal suo URL per le richieste HTTP, ma entrambi possono essere trovati cliccando su "View Key".
 
-![Dove trovare il tuo URL WebSocket nella tua dashboard di Alchemy](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
 
-Qualsiasi API elencata nel [Riferimento API di Alchemy](https://www.alchemy.com/docs/reference/api-overview) può essere utilizzata tramite WebSocket. Per farlo, usa lo stesso payload che verrebbe inviato come corpo di una richiesta HTTP POST, ma invialo invece attraverso il WebSocket.
+Qualsiasi API elencata nel [Riferimento API di Alchemy](https://www.alchemy.com/docs/reference/api-overview) può essere usata tramite WebSocket. Per farlo, usa lo stesso payload che verrebbe inviato come corpo di una richiesta HTTP POST, ma invialo invece attraverso il WebSocket.
 
-## Con Web3 {#with-web3}
+## Con il Web3 {#with-web3}
 
-Passare ai WebSocket mentre si utilizza una libreria client come Web3 è semplice. Basta passare l'URL WebSocket invece di quello HTTP quando si istanzia il proprio client Web3. Ad esempio:
+Passare ai WebSocket mentre si usa una libreria client come Web3 è semplice. Basta passare l'URL del WebSocket invece di quello HTTP quando si istanzia il client Web3. Ad esempio:
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -56,7 +55,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ## API di iscrizione {#subscription-api}
 
-Quando si è connessi tramite un WebSocket, è possibile utilizzare due metodi aggiuntivi: `eth_subscribe` ed `eth_unsubscribe`. Questi metodi ti permetteranno di ascoltare eventi particolari e di essere avvisato immediatamente.
+Quando si è connessi tramite un WebSocket, è possibile usare due metodi aggiuntivi: `eth_subscribe` e `eth_unsubscribe`. Questi metodi ti permetteranno di restare in ascolto di eventi particolari e di essere notificato immediatamente.
 
 ### `eth_subscribe` {#eth-subscribe}
 
@@ -71,7 +70,7 @@ Il primo argomento specifica il tipo di evento da ascoltare. Il secondo argoment
 
 #### Restituisce {#returns}
 
-L'ID dell'iscrizione: questo ID sarà allegato a qualsiasi evento ricevuto e può anche essere utilizzato per annullare l'iscrizione utilizzando `eth_unsubscribe`.
+L'ID dell'iscrizione: questo ID sarà allegato a tutti gli eventi ricevuti e può anche essere usato per annullare l'iscrizione usando `eth_unsubscribe`.
 
 #### Eventi di iscrizione {#subscription-events}
 
@@ -87,7 +86,7 @@ Mentre l'iscrizione è attiva, riceverai eventi che sono oggetti con i seguenti 
 
 1. `alchemy_newFullPendingTransactions`
 
-Restituisce le informazioni della transazione per tutte le transazioni che vengono aggiunte allo stato in sospeso. Questo tipo di iscrizione si iscrive alle transazioni in sospeso, in modo simile alla chiamata standard di Web3 `web3.eth.subscribe("pendingTransactions")`, ma differisce in quanto emette _informazioni complete sulla transazione_ piuttosto che solo gli hash della transazione.
+Restituisce le informazioni sulla transazione per tutte le transazioni che vengono aggiunte allo stato in sospeso. Questo tipo di iscrizione si iscrive alle transazioni in sospeso, in modo simile alla chiamata standard del Web3 `web3.eth.subscribe("pendingTransactions")`, ma differisce in quanto emette _informazioni complete sulla transazione_ piuttosto che solo gli hash della transazione.
 
 Esempio:
 
@@ -168,7 +167,7 @@ Parametri
 1. Un oggetto con i seguenti campi:
    - `address` (opzionale): una stringa che rappresenta un indirizzo o un array di tali stringhe.
      - Verranno emessi solo i log creati da uno di questi indirizzi.
-   - `topics`: un array di specificatori di argomenti.
+   - `topics`: un array di specificatori di argomenti (topic).
      - Ogni specificatore di argomento è `null`, una stringa che rappresenta un argomento o un array di stringhe.
      - Ogni posizione nell'array che non è `null` limita i log emessi solo a quelli che hanno uno degli argomenti dati in quella posizione.
 
@@ -227,8 +226,6 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-
-
 ```
 
 **Risultato**
