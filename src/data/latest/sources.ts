@@ -151,8 +151,17 @@ export const LATEST_SOURCES: LatestSource[] = [
 /** Category bucket for first-party builder articles. */
 export const BUILDER_CATEGORY = "Ethereum.org"
 
-/** Trailing window (days) of RSS history retained at fetch time. */
-export const LATEST_RSS_WINDOW_DAYS = 30
+/**
+ * Trailing window (days) of RSS history retained at fetch time. Sized so the
+ * grid has real depth behind "See more" and every curated source appears, not
+ * just the high-frequency ones: at 30 days only ~8 of 18 feeds had any item;
+ * the low-frequency but high-value sources (EF, Solidity, Vitalik, Argot,
+ * Nimbus, Besu, etc.) publish roughly monthly or less. Widening only enriches
+ * the tail — the grid sorts newest-first, so the top stays fresh — and the
+ * per-source display cap (LATEST_MAX_PER_SOURCE) bounds how much any one feed
+ * contributes.
+ */
+export const LATEST_RSS_WINDOW_DAYS = 180
 
 /** Per-source display cap applied at the consumer (not the fetcher). */
 export const LATEST_MAX_PER_SOURCE = 3

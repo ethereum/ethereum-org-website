@@ -1,7 +1,329 @@
 [
-  [],
-  [],
-  [],
+  [
+    {
+      "pubDate": "Tue, 12 May 2026 00:00:00 GMT",
+      "title": "Clear Signing: Making Transaction Approvals Safer on Ethereum",
+      "link": "https://blog.ethereum.org/en/2026/05/12/clear-signing-announcement",
+      "imgSrc": "https://blog.ethereum.org/images/ethereum-blog-og-image.png",
+      "description": "An Ethereum Working Group consisting of wallet developers, security firms and the Ethereum Foundation’s Trillion Dollar Security Initiative today launched an open standard designed to end blind…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 11 May 2026 00:00:00 GMT",
+      "title": "Protocol Cluster Updates: May 2026",
+      "link": "https://blog.ethereum.org/en/2026/05/11/protocol-update-may-26",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_270c7c873d5994bd4e47958030e3599c.png",
+      "description": "A semi-regular gathering of Ethereum core devs from various client teams, or interop, recently took place in Svalbard, Norway. Over the week-long event, teams focused on hardening and preparation for…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Sat, 02 May 2026 00:00:00 GMT",
+      "title": "Soldøgn Interop Recap ☀️",
+      "link": "https://blog.ethereum.org/en/2026/05/02/soldogn-interop-recap",
+      "imgSrc": "https://notes.ethereum.org/_uploads/B17NArz0Zg.jpg",
+      "description": "This past week, just over 100 Ethereum core contributors gathered above the Arctic Circle — in Longyearbyen, Svalbard — for the Soldøgn Interop: a week of intense work on the Glamsterdam network…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 30 Apr 2026 00:00:00 GMT",
+      "title": "Announcing Cohort 7 of the Ethereum Protocol Fellowship",
+      "link": "https://blog.ethereum.org/en/2026/04/30/epf-7",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_c50eca66747ace2cabf26db67a00de83.png",
+      "description": "TL;DR: 📝 Applications for EPF7 are open until May 13 🔎 Review the program details for EPF7 🎙️ An introductory town hall will be held on May 6 at 1500 UTC We are excited to announce that…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 29 Apr 2026 00:00:00 GMT",
+      "title": "Allocation Update - Q1 2026",
+      "link": "https://blog.ethereum.org/en/2026/04/29/allocation-q1-26",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_fd63dc334e72e1c2885cb7969adc1faf.jpg",
+      "description": "Q1 2026 continued our focus on strengthening Ethereum’s foundations, with sustained investment in core domains like cryptography, zero-knowledge proofs, security, and protocol research. See the list…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 16 Apr 2026 00:00:00 GMT",
+      "title": "ETH Rangers Program Recap",
+      "link": "https://blog.ethereum.org/en/2026/04/16/eth-rangers-recap",
+      "imgSrc": "https://blog.ethereum.org/images/ethereum-blog-og-image.png",
+      "description": "In late 2024, the Ethereum Foundation, together with Secureum, The Red Guild, and Security Alliance (SEAL), launched the ETH Rangers Program, an initiative to provide stipends for individuals doing…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Fri, 10 Apr 2026 00:00:00 GMT",
+      "title": "Checkpoint #9: Apr 2026",
+      "link": "https://blog.ethereum.org/en/2026/04/10/checkpoint-9",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_9a721d102a66685eba4b944119d345f8.jpg",
+      "description": "Ethereum's All Core Developer calls can be a lot to keep up with, so this \"Checkpoint\" series aims for periodic high-level updates, depending on what's happening in core development. See the previous…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 23 Mar 2026 00:00:00 GMT",
+      "title": "How L1 and L2s can build the strongest possible Ethereum",
+      "link": "https://blog.ethereum.org/en/2026/03/23/l1-l2-ethereum",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_b0065dd9b949a11badbef9a4c8d51aeb.jpg",
+      "description": "*The North Star of the Platform team is for Ethereum to scale as a cohesive system and enable confident adoption by all users. This post is intended to share our perspective on the L1 \\ L2…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Fri, 13 Mar 2026 00:00:00 GMT",
+      "title": "The Promise of Ethereum: Introducing the EF Mandate",
+      "link": "https://blog.ethereum.org/en/2026/03/13/ef-mandate",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_3b3943b70ed8ab0b09f7a3b0328fc98e.png",
+      "description": "Dearest Friends, Today we are publishing the EF Mandate, a document that serves as part constitution, part manifesto, and part guide for the Ethereum Foundation. It is written primarily for the EF…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Fri, 27 Feb 2026 00:00:00 GMT",
+      "title": "This Is Fine (Until the Grant Runs Out)",
+      "link": "https://blog.ethereum.org/en/2026/02/27/project-odin",
+      "imgSrc": "https://blog.ethereum.org/images/ethereum-blog-og-image.png",
+      "description": "The commons called. It wants a runway. Every so often, in the blockchain world’s usual cycle of funding scares, a team maintaining a widely used open source public good declares mayday. Libp2p is a…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 24 Feb 2026 00:00:00 GMT",
+      "title": "Treasury Staking Initiative",
+      "link": "https://blog.ethereum.org/en/2026/02/24/staking",
+      "imgSrc": "https://blog.ethereum.org/images/ethereum-blog-og-image.png",
+      "description": "The Ethereum Foundation has begun staking a portion of its treasury, in line with its Treasury Policy announced last year. Approximately 70,000 ETH is being staked with rewards directed back to the…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 23 Feb 2026 00:00:00 GMT",
+      "title": "The Ethereum Foundation's Commitment to DeFi",
+      "link": "https://blog.ethereum.org/en/2026/02/23/commitment-to-defi",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_116f124710089285c27f8aa61cacb960.png",
+      "description": "DeFi isn't a speculative bet on the future. It's the inevitable evolution of finance, driven by a fundamental truth: financial autonomy is a right, not a privilege. And it's been a critical driver of…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 18 Feb 2026 00:00:00 GMT",
+      "title": "Protocol Priorities Update for 2026",
+      "link": "https://blog.ethereum.org/en/2026/02/18/protocol-priorities-update-2026",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_270c7c873d5994bd4e47958030e3599c.png",
+      "description": "We introduced Protocol last June which organized our work around three strategic initiatives: Scale L1, Scale Blobs, and Improve UX. A lot has happened since then! In this post, we want to share what…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 17 Feb 2026 00:00:00 GMT",
+      "title": "Announcing the Platform Team at EF",
+      "link": "https://blog.ethereum.org/en/2026/02/17/platform",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_83f7261d7ab310511251a956f3930f05.jpg",
+      "description": "Platform is a new team inside the EF with one goal: Deliver the strongest possible Ethereum platform, where L1 and L2s are best positioned to support users, apps, and all organizations building on…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 17 Feb 2026 00:00:00 GMT",
+      "title": "Ethereum Protocol Studies 2026",
+      "link": "https://blog.ethereum.org/en/2026/02/17/ethereum-protocol-studies-26",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_90861cf71a023ade96e2cc7fb49b82e1.png",
+      "description": "tl;dr: Ethereum Protocol Studies returns for 2026 with new content tracks in cryptography, lean consensus and zkEVM, plus a new self-paced learning platform. The program kicks off February 23rd.…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Fri, 13 Feb 2026 00:00:00 GMT",
+      "title": "Executive Leadership Update",
+      "link": "https://blog.ethereum.org/en/2026/02/13/leadership-update",
+      "imgSrc": "https://blog.ethereum.org/images/ethereum-blog-og-image.png",
+      "description": "Today, we are announcing a transition in the executive leadership team at the Ethereum Foundation. After extensive contributions to the Foundation’s mission and operations, Tomasz Stańczak has…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Fri, 13 Feb 2026 00:00:00 GMT",
+      "title": "An update from Tomasz",
+      "link": "https://blog.ethereum.org/en/2026/02/13/tomasz-update",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_be6cab3b391500de08002adcf32a472e.jpg",
+      "description": "tl;dr I am stepping down from my co-ED role at the EF at the end of February 2026. Bastian Aue is taking over the co-ED role alongside Hsiao-Wei. The future is bright for builders, for Ethereum, for…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 05 Feb 2026 00:00:00 GMT",
+      "title": "Introducing the EF Academic Secretariat 2026 PhD Fellowship",
+      "link": "https://blog.ethereum.org/en/2026/02/05/phd-fellowship",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_7fcfd8aba69c0ff3335945801ca4d335.png",
+      "description": "The EF's Academic Secretariat team is proud to announce the launch of the inaugural PhD Fellowship Program, a pioneering initiative aimed at empowering and expanding the frontiers of Ethereum-related…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 03 Feb 2026 00:00:00 GMT",
+      "title": "Trillion Dollar Security Day at Devconnect",
+      "link": "https://blog.ethereum.org/en/2026/02/03/1ts-day-devconnect-ba",
+      "imgSrc": "https://blog.ethereum.org/images/ethereum-blog-og-image.png",
+      "description": "During Devconnect Buenos Aires, the Ethereum Foundation and Secureum TrustX brought together Ethereum security practitioners for Trillion Dollar Security Day, a focused event exploring what it would…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 27 Jan 2026 00:00:00 GMT",
+      "title": "Allocation Update - Q4 2025",
+      "link": "https://blog.ethereum.org/en/2026/01/27/allocation-q4-25",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_fd63dc334e72e1c2885cb7969adc1faf.jpg",
+      "description": "Q4 2025 closed out the year with exciting growth across the ecosystem! Dive into the projects and community initiatives we supported this quarter and see what our grantees have been building:...",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 20 Jan 2026 00:00:00 GMT",
+      "title": "Checkpoint #8: Jan 2026",
+      "link": "https://blog.ethereum.org/en/2026/01/20/checkpoint-8",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_9a721d102a66685eba4b944119d345f8.jpg",
+      "description": "Ethereum’s All Core Developer calls are a lot to keep up with, so this \"Checkpoint\" series aims for high-level updates roughly every 4-8 weeks, depending on what’s happening in core development. See…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 23 Dec 2025 00:00:00 GMT",
+      "title": "Devcon 8 is coming to Mumbai, India in November 2026",
+      "link": "https://blog.ethereum.org/en/2025/12/23/devcon-mumbai",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_d4c43ee91710f85b175ea9ae75b30c9f.png",
+      "description": "Devcon, the Ethereum community’s annual global gathering for builders, will take place from 3-6 November 2026 at the JIO World Center in Mumbai, India. This Devcon 8 update is not a full vision, but…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 22 Dec 2025 00:00:00 GMT",
+      "title": "Hegota Upgrade EIP Proposal Timelines",
+      "link": "https://blog.ethereum.org/en/2025/12/22/hegota-timeline",
+      "imgSrc": "https://blog.ethereum.org/images/ethereum-blog-og-image.png",
+      "description": "Fusaka shipped PeerDAS in addition to a myriad of minor features and Glamsterdam’s major features will include Block-level Access Lists and enshrined Proposer-Builder Separation. Now we begin…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Tue, 27 Jan 2026 00:00:00 GMT",
+      "title": "How Ethereum Decides What Ships",
+      "link": "https://blog.echinstitute.org/NetworkUpgradeStages",
+      "imgSrc": "https://raw.githubusercontent.com/ethcatherders/ech-blog/refs/heads/main/blogs/images/NetworkUpgrade.webp",
+      "description": "## Inside the EIP-7723 Inclusion Lifecycle For years, selecting which changes make it into an Ethereum network upgrade (“hard fork”) was a complex and often ad-hoc process. With nearly ten client…",
+      "source": "Ethereum Cat Herders",
+      "category": "Protocol",
+      "sourceUrl": "https://blog.echinstitute.org",
+      "sourceFeedUrl": "https://blog.echinstitute.org/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 12 Jan 2026 00:00:00 GMT",
+      "title": "The Protocol Post #1",
+      "link": "https://blog.echinstitute.org/newsletter001",
+      "imgSrc": "https://raw.githubusercontent.com/ethcatherders/ech-blog/refs/heads/main/blogs/images/The%20Protocol%20Post%201.png",
+      "description": "Your Weekly Dose of Protocol Updates with ECH! Strengthening Ethereum standards, governance, and public-goods infrastructure ## Overview Happy New Year 2026! This is the first _Protocol Post_ from…",
+      "source": "Ethereum Cat Herders",
+      "category": "Protocol",
+      "sourceUrl": "https://blog.echinstitute.org",
+      "sourceFeedUrl": "https://blog.echinstitute.org/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 01 Jan 2026 00:00:00 GMT",
+      "title": "It's a Wrap: ECH Institute 2025",
+      "link": "https://blog.echinstitute.org/2025YearEndRecap",
+      "imgSrc": "https://raw.githubusercontent.com/ethcatherders/ech-blog/refs/heads/main/blogs/images/2025RecapImage.png",
+      "description": "### ECH 2025: Pectra upgrade, Fusaka upgrade, 10 Years of Ethereum celebration, Devconnect, EIP Summit, WiEP, PEEPanEIP and much more! With 2025 winding down, we at ECH Institute are looking back on…",
+      "source": "Ethereum Cat Herders",
+      "category": "Protocol",
+      "sourceUrl": "https://blog.echinstitute.org",
+      "sourceFeedUrl": "https://blog.echinstitute.org/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Mon, 20 Apr 2026 00:00:00 GMT",
+      "title": "Ethereum Protocol Fellowship Cohort 6 Recap",
+      "link": "https://ps.ethereum.foundation/blog/epf6-recap",
+      "imgSrc": "",
+      "description": "The EPF successfully concluded the sixth cohort, Study Group 2026 and is preparing for cohort seven (EPF7)",
+      "source": "Protocol Support",
+      "category": "Protocol",
+      "sourceUrl": "https://ps.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://ps.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 16 Mar 2026 00:00:00 GMT",
+      "title": "Helping EIP Champions Build Stronger Proposals",
+      "link": "https://ps.ethereum.foundation/blog/helping-eip-champions-build-stronger-proposals",
+      "imgSrc": "",
+      "description": "Introducing the EIP Champion's Handbook — a new resource suite to help champions navigate the ACD process and build compelling cases for EIP inclusion.",
+      "source": "Protocol Support",
+      "category": "Protocol",
+      "sourceUrl": "https://ps.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://ps.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 05 Feb 2026 00:00:00 GMT",
+      "title": "Welcome to Protocol Support",
+      "link": "https://ps.ethereum.foundation/blog/welcome-to-protocol-support",
+      "imgSrc": "",
+      "description": "Introducing the Protocol Support team website - your gateway to understanding Ethereum protocol governance and development.",
+      "source": "Protocol Support",
+      "category": "Protocol",
+      "sourceUrl": "https://ps.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://ps.ethereum.foundation/feed.xml"
+    }
+  ],
   [
     {
       "pubDate": "Wed, 03 Jun 2026 00:00:00 GMT",
@@ -35,9 +357,65 @@
       "category": "Protocol",
       "sourceUrl": "https://ethpandaops.io/posts/",
       "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
+    },
+    {
+      "pubDate": "Thu, 05 Mar 2026 00:00:00 GMT",
+      "title": "Introducing EthIQ",
+      "link": "https://ethpandaops.io/posts/introducing-ethiq/",
+      "imgSrc": "https://ethpandaops.io/img/blog/introducing-ethiq/performance-chart.png",
+      "description": "An Ethereum protocol knowledge benchmark for AI models",
+      "source": "ethPandaOps",
+      "category": "Protocol",
+      "sourceUrl": "https://ethpandaops.io/posts/",
+      "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
+    },
+    {
+      "pubDate": "Wed, 11 Feb 2026 00:00:00 GMT",
+      "title": "EVM Gas Profiling: New Execution Trace Data",
+      "link": "https://ethpandaops.io/posts/evm-gas-profiling/",
+      "imgSrc": "https://ethpandaops.io/img/blog/evm-gas-profiling/header.png",
+      "description": "New EVM execution trace data in the Xatu dataset, a Gas Profiler in The Lab, and a Gas Repricing Simulator for testing gas schedule changes against real blocks.",
+      "source": "ethPandaOps",
+      "category": "Protocol",
+      "sourceUrl": "https://ethpandaops.io/posts/",
+      "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
+    },
+    {
+      "pubDate": "Thu, 15 Jan 2026 00:00:00 GMT",
+      "title": "Fusaka: More Blobs, Less Votes, Broken Hearts?",
+      "link": "https://ethpandaops.io/posts/fusaka-more-blobs-less-votes/",
+      "imgSrc": "https://ethpandaops.io/img/blog/late-blocks-lost-votes/hero.jpg",
+      "description": "Investigating how attestation performance changes as blobs change through Fusaka, BPO1, and BPO2.",
+      "source": "ethPandaOps",
+      "category": "Protocol",
+      "sourceUrl": "https://ethpandaops.io/posts/",
+      "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 09 Jan 2026 00:00:00 GMT",
+      "title": "Our Roadmap for 2026",
+      "link": "https://ethpandaops.io/posts/ethpandaops-in-2026/",
+      "imgSrc": "https://ethpandaops.io/img/blog/roadmap-2026/factorio-panda.png",
+      "description": "A look at what's coming up for ethPandaOps in 2026!",
+      "source": "ethPandaOps",
+      "category": "Protocol",
+      "sourceUrl": "https://ethpandaops.io/posts/",
+      "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
     }
   ],
-  [],
+  [
+    {
+      "pubDate": "Thu, 15 Jan 2026 00:00:00 GMT",
+      "title": "Argot Roadmap Update 2026 (1/2)",
+      "link": "https://argot.org/blog/2026-01-15-argot-roadmap-update-2026-1",
+      "imgSrc": "",
+      "description": "This blog post recaps the Argot Collective’s work from the second half of 2025 and provides a detailed outline of priorities and upcoming milestones for the first half of 2026.",
+      "source": "Argot Collective",
+      "category": "Protocol",
+      "sourceUrl": "https://argot.org/blog",
+      "sourceFeedUrl": "https://www.argot.org/feed.xml"
+    }
+  ],
   [
     {
       "pubDate": "2026-06-09T12:00:00+10:00",
@@ -49,10 +427,78 @@
       "category": "Clients",
       "sourceUrl": "https://blog.sigmaprime.io/",
       "sourceFeedUrl": "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml"
+    },
+    {
+      "pubDate": "2026-05-08T13:00:00+10:00",
+      "title": "Soldøgn Interop Recap: Glamsterdam & ePBS",
+      "link": "https://blog.sigmaprime.io/soldogn-interop-glamsterdam-ePBS.html",
+      "imgSrc": "",
+      "description": "A recap of Soldøgn Interop, covering Lighthouse’s work on Glamsterdam and progress toward implementing Enshrined Proposer-Builder Separation (ePBS).",
+      "source": "Lighthouse",
+      "category": "Clients",
+      "sourceUrl": "https://blog.sigmaprime.io/",
+      "sourceFeedUrl": "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml"
+    },
+    {
+      "pubDate": "2026-04-01T00:00:00+11:00",
+      "title": "Defensive Protocol Design",
+      "link": "https://blog.sigmaprime.io/defensive-protocol-design.html",
+      "imgSrc": "",
+      "description": "This article covers protective steps developers can take to prevent protocol exploits via defensive design.",
+      "source": "Lighthouse",
+      "category": "Clients",
+      "sourceUrl": "https://blog.sigmaprime.io/",
+      "sourceFeedUrl": "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml"
+    },
+    {
+      "pubDate": "2026-03-18T00:00:00+11:00",
+      "title": "Your first ZK vulnerabilities: From ZeroKnowledge of ZK to OneKnowledge",
+      "link": "https://blog.sigmaprime.io/first-zk-vulnerabilities.html",
+      "imgSrc": "",
+      "description": "An introduction to ZK circuit security, exploring fundamental mental models for creating and thinking about ZK circuits. Learn about under-constrained variable vulnerabilities that appear in ZK code…",
+      "source": "Lighthouse",
+      "category": "Clients",
+      "sourceUrl": "https://blog.sigmaprime.io/",
+      "sourceFeedUrl": "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml"
+    },
+    {
+      "pubDate": "2026-01-13T00:00:00+11:00",
+      "title": "Fusaka's Impact On Smart Contract Security",
+      "link": "https://blog.sigmaprime.io/fusaka-contract-security.html",
+      "imgSrc": "",
+      "description": "A summary of Ethereum's Fusaka upgrade and its implications on smart contract functionality.",
+      "source": "Lighthouse",
+      "category": "Clients",
+      "sourceUrl": "https://blog.sigmaprime.io/",
+      "sourceFeedUrl": "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml"
     }
   ],
-  [],
-  [],
+  [
+    {
+      "pubDate": "Mon, 02 Mar 2026 12:34:11 GMT",
+      "title": "The Nimbus Unified Client",
+      "link": "https://blog.nimbus.team/the-nimbus-unified-client/",
+      "imgSrc": "https://blog.nimbus.team/content/images/2026/02/Nimbus-Unified-Client-5.png",
+      "description": "Back to the Good Old Days of Running Ethereum There was a time&#x2014;the pre-Merge days&#x2014;when running Ethereum felt refreshingly simple. You ran one client, one process, one database. Back…",
+      "source": "Nimbus",
+      "category": "Clients",
+      "sourceUrl": "https://blog.nimbus.team/",
+      "sourceFeedUrl": "https://blog.nimbus.team/rss/"
+    }
+  ],
+  [
+    {
+      "pubDate": "Mon, 20 Apr 2026 14:43:23 GMT",
+      "title": "Optimizing Besu Performance: Parallelizing State Root Computation",
+      "link": "https://www.lfdecentralizedtrust.org/blog/optimizing-besu-performance-parallelizing-state-root-computation",
+      "imgSrc": "https://www.lfdecentralizedtrust.org/hubfs/Besu%20Exam%20post-1.jpg",
+      "description": "In the ever-evolving blockchain landscape, optimizing execution performance is essential. State root computation is one of the primary bottlenecks in Ethereum execution clients, becoming critical…",
+      "source": "Besu",
+      "category": "Clients",
+      "sourceUrl": "https://www.lfdecentralizedtrust.org/blog",
+      "sourceFeedUrl": "https://www.lfdecentralizedtrust.org/blog/rss.xml"
+    }
+  ],
   [
     {
       "pubDate": "Mon, 01 Jun 2026 00:00:00 GMT",
@@ -97,11 +543,331 @@
       "category": "Research",
       "sourceUrl": "https://pse.dev",
       "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Mon, 18 May 2026 00:00:00 GMT",
+      "title": "PlasmaBlind: Private L2 Payments at Consumer-Hardware Proving Speeds",
+      "link": "https://pse.dev/blog/plasmablind-private-l2-payments-at-consumer-hardware-proving-speeds",
+      "imgSrc": "https://pse.dev/articles/plasmablind-private-l2-payments-at-consumer-hardware-proving-speeds/cover.png",
+      "description": "PlasmaBlind is a new design for a private, scalable L2 on Ethereum. It uses a folding-scheme technique called BlindFold for sub-100 ms client-side proving and a linked dual-IVC architecture for ~270…",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Wed, 13 May 2026 00:00:00 GMT",
+      "title": "GPU-Accelerated WHIR Proving on Apple Silicon",
+      "link": "https://pse.dev/blog/gpu-accelerated-whir",
+      "imgSrc": "https://pse.dev/favicon.ico",
+      "description": "Apple Silicon GPU acceleration for WHIR proving reaches up to 2x speedups on M1 by fusing NTT, Poseidon2 Merkle hashing, and proof-of-work grinding in Metal.",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Wed, 13 May 2026 00:00:00 GMT",
+      "title": "Post-Quantum Threats to Ethereum Privacy",
+      "link": "https://pse.dev/blog/post-quantum-threats-to-ethereum-privacy",
+      "imgSrc": "https://pse.dev/favicon.ico",
+      "description": "Privacy migration to post-quantum cryptography is more time-sensitive than authentication migration — harvest-now-decrypt-later turns every encrypted on-chain ciphertext into a permanent exposure.…",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Fri, 08 May 2026 00:00:00 GMT",
+      "title": "Introducing SpeakUp",
+      "link": "https://pse.dev/blog/introducing-speakup",
+      "imgSrc": "https://pse.dev/articles/introducing-speakup/speakup-logo.svg",
+      "description": "An early look at SpeakUp, a zkVM we're prototyping at PSE for client-side, privacy-first proving of WebAssembly programs. The draft design is public and we're looking for feedback.",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Fri, 08 May 2026 00:00:00 GMT",
+      "title": "User Research: Uncovering Problems in the Private Transfers Space",
+      "link": "https://pse.dev/blog/private-transfers-engineering-user-research",
+      "imgSrc": "https://pse.dev/articles/private-transfers-engineering-user-research/cover.webp",
+      "description": "A summary of 38 interviews conducted for user research into private transfers",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Mon, 02 Mar 2026 00:00:00 GMT",
+      "title": "Social Recovery SDK: design, implementation and learnings",
+      "link": "https://pse.dev/blog/social-recovery-sdk",
+      "imgSrc": "https://pse.dev/favicon.ico",
+      "description": "Social recovery is a wallet recovery model where trusted guardians can help restore access if the owner loses their key, replacing fragile seed-phrase backups with programmable onchain policy. Social…",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Thu, 26 Feb 2026 00:00:00 GMT",
+      "title": "Pretty Good Payments: Free, Private and Scalable Stablecoin Transactions on Ethereum",
+      "link": "https://pse.dev/blog/pretty-good-payments",
+      "imgSrc": "https://pse.dev/favicon.ico",
+      "description": "Pretty Good Payments combines zero-knowledge proofs with a yield-based economic model that turns idle deposits into network fuel, enabling free, private stablecoin transactions that settle directly…",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Thu, 19 Feb 2026 00:00:00 GMT",
+      "title": "PSE February 2026 Newsletter",
+      "link": "https://pse.dev/blog/pse-february-2026",
+      "imgSrc": "https://pse.dev/articles/pse-february-2026/feb-cover-image.jpg",
+      "description": "Updates from Private Writes, Private Proving, and Private Reads teams covering research progress, new releases, and ecosystem collaborations.",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Tue, 03 Feb 2026 00:00:00 GMT",
+      "title": "Revocation in zkID: Merkle Tree-based Approaches",
+      "link": "https://pse.dev/blog/revocation-in-zkid-merkle-tree-based-approaches",
+      "imgSrc": "https://pse.dev/articles/revocation-in-zkid-merkle-tree-based-approaches/cover.webp",
+      "description": "Merkle tree-based approaches enable efficient and privacy-preserving revocation checks for verifiable credentials using either membership proofs over valid credentials or non-membership proofs over…",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Mon, 26 Jan 2026 00:00:00 GMT",
+      "title": "Client-Side GPU Acceleration for ZK: A Path to Everyday Ethereum Privacy",
+      "link": "https://pse.dev/blog/client-side-gpu-everyday-ef-privacy",
+      "imgSrc": "https://pse.dev/articles/mopro-client-side-gpu-everyday-ef-privacy/cover.webp",
+      "description": "Everyday Ethereum privacy needs ZK proofs generated on users' devices; client-side GPU acceleration makes this practical while aligning with post-quantum goals.",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Thu, 08 Jan 2026 00:00:00 GMT",
+      "title": "Measuring the Privacy Experience on Ethereum",
+      "link": "https://pse.dev/blog/px-user-survey-2025",
+      "imgSrc": "https://pse.dev/articles/privacy-experience-report/privacy-experience-report.webp",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Thu, 01 Jan 2026 00:00:00 GMT",
+      "title": "do not pass \"Go\"",
+      "link": "https://pse.dev/blog/tlsnotary-do-not-pass-go",
+      "imgSrc": "https://pse.dev/articles/tlsnotary-do-not-pass-go/institutions.webp",
+      "description": "To solve problems at scale, humans design systems which both encapsulate complexity and leverage specialization to achieve efficiency and predictability. This reduces the need for interpersonal trust…",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
     }
   ],
-  [],
-  [],
-  [],
+  [
+    {
+      "pubDate": "Wed, 20 May 2026 00:00:00 GMT",
+      "title": "On Formal Verification and a Bug in SP1 Hypercube",
+      "link": "https://zkevm.ethereum.foundation/blog/sp1-fv",
+      "imgSrc": "",
+      "description": "A practical study in establishing and validating formal correctness guarantees",
+      "source": "zkEVM",
+      "category": "Research",
+      "sourceUrl": "https://zkevm.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://zkevm.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 14 May 2026 00:00:00 GMT",
+      "title": "EIP-8025: bringing optional execution proofs to Hegotá",
+      "link": "https://zkevm.ethereum.foundation/blog/eip-8025-optional-execution-proofs-hegota",
+      "imgSrc": "",
+      "description": "The non-headliner proposal window for Hegotá - the fork planned to follow Glamsterdam - is open, and the L1-zkEVM workstream is putting EIP-8025 (Optional Execution Proofs) forward for inclusion.",
+      "source": "zkEVM",
+      "category": "Research",
+      "sourceUrl": "https://zkevm.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://zkevm.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 16 Feb 2026 00:00:00 GMT",
+      "title": "Ethereum zkVM Interoperability: zkVM Standards v0",
+      "link": "https://zkevm.ethereum.foundation/blog/zkevm-standards-v0-release",
+      "imgSrc": "",
+      "description": "The first release of zkVM-standards establishes three initial standards for zkVM development: RV64IM target architecture, C interfaces for precompiles, and standardized IO handling.",
+      "source": "zkEVM",
+      "category": "Research",
+      "sourceUrl": "https://zkevm.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://zkevm.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 11 Feb 2026 00:00:00 GMT",
+      "title": "zkEVM Security Sprint: February Update",
+      "link": "https://zkevm.ethereum.foundation/blog/cryptography-research-update",
+      "imgSrc": "",
+      "description": "zkEVM Security Sprint: Whitepaper guidelines, lookups in soundcalc, and an updated deadline.",
+      "source": "zkEVM",
+      "category": "Research",
+      "sourceUrl": "https://zkevm.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://zkevm.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 19 Jan 2026 00:00:00 GMT",
+      "title": "Repricings for block proving (Part 2: The tools and process)",
+      "link": "https://zkevm.ethereum.foundation/blog/repricings-for-block-proving-part-2",
+      "imgSrc": "",
+      "description": "In this second part of the series, we dive into the tooling we created for measuring proving times and the process for interpreting the measurements.",
+      "source": "zkEVM",
+      "category": "Research",
+      "sourceUrl": "https://zkevm.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://zkevm.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 14 Jan 2026 00:00:00 GMT",
+      "title": "zkEVM Security Overview",
+      "link": "https://zkevm.ethereum.foundation/blog/zkevm-security-overview",
+      "imgSrc": "",
+      "description": "A comprehensive overview of security considerations for zkEVMs, covering diversity, guest programs, proving systems, and the engineering stack.",
+      "source": "zkEVM",
+      "category": "Research",
+      "sourceUrl": "https://zkevm.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://zkevm.ethereum.foundation/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Mon, 18 May 2026 00:00:00 +0000",
+      "title": "A shallow dive into formal verification",
+      "link": "https://vitalik.ca/general/2026/05/18/fv.html",
+      "imgSrc": "http://vitalik.ca/images/icon.png",
+      "source": "Vitalik Buterin",
+      "category": "Research",
+      "sourceUrl": "https://vitalik.ca/",
+      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 02 Apr 2026 00:00:00 +0000",
+      "title": "My self-sovereign / local / private / secure LLM setup, April 2026",
+      "link": "https://vitalik.ca/general/2026/04/02/secure_llms.html",
+      "imgSrc": "http://vitalik.ca/images/icon.png",
+      "source": "Vitalik Buterin",
+      "category": "Research",
+      "sourceUrl": "https://vitalik.ca/",
+      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 30 Dec 2025 00:00:00 +0000",
+      "title": "Balance of power",
+      "link": "https://vitalik.ca/general/2025/12/30/balance_of_power.html",
+      "imgSrc": "http://vitalik.ca/images/icon.png",
+      "source": "Vitalik Buterin",
+      "category": "Research",
+      "sourceUrl": "https://vitalik.ca/",
+      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Tue, 05 May 2026 00:00:00 GMT",
+      "title": "Pattern Matching in Core Solidity",
+      "link": "https://soliditylang.org///blog/2026/05/05/pattern-matching-in-core-solidity",
+      "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
+      "description": "Smart contracts often need to handle values that come in several variants: a payment might be native ETH, an ERC20 transfer, or an NFT transfer; an auction can be not-started, active, ended, or…",
+      "source": "Solidity",
+      "category": "Dev tooling",
+      "sourceUrl": "https://soliditylang.org/",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 29 Apr 2026 00:00:00 GMT",
+      "title": "Solidity 0.8.35 Release Announcement",
+      "link": "https://soliditylang.org///blog/2026/04/29/solidity-0.8.35-release-announcement",
+      "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
+      "description": "We are excited to announce the release of the Solidity Compiler v0.8.35! This release introduces a new builtin, erc7201, that computes the base slot of an ERC-7201 namespaced storage layout from its…",
+      "source": "Solidity",
+      "category": "Dev tooling",
+      "sourceUrl": "https://soliditylang.org/",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 15 Apr 2026 00:00:00 GMT",
+      "title": "Solidity Developer Survey 2025 Results",
+      "link": "https://soliditylang.org///blog/2026/04/15/solidity-developer-survey-2025-results",
+      "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
+      "description": "The Solidity Developer Survey 2025, our sixth annual survey, collected 1,095 responses from developers across 87 countries. Thank you to everyone who participated. This post covers the key findings.…",
+      "source": "Solidity",
+      "category": "Dev tooling",
+      "sourceUrl": "https://soliditylang.org/",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 18 Feb 2026 00:00:00 GMT",
+      "title": "Transient Storage Clearing Helper Collision Bug",
+      "link": "https://soliditylang.org///blog/2026/02/18/transient-storage-clearing-helper-collision-bug",
+      "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
+      "description": "On 2026-02-11, a bug in the Solidity code generator was reported by Hexens. The bug affects compiler versions 0.8.28 through 0.8.33 when using the IR pipeline. When a contract clears both a…",
+      "source": "Solidity",
+      "category": "Dev tooling",
+      "sourceUrl": "https://soliditylang.org/",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 18 Feb 2026 00:00:00 GMT",
+      "title": "Solidity 0.8.34 Release Announcement",
+      "link": "https://soliditylang.org///blog/2026/02/18/solidity-0.8.34-release-announcement",
+      "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
+      "description": "Today we are releasing version 0.8.34 of the Solidity Compiler. This is a bugfix release that patches an important bug of high severity affecting clearing of storage and transient storage variables…",
+      "source": "Solidity",
+      "category": "Dev tooling",
+      "sourceUrl": "https://soliditylang.org/",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 10 Feb 2026 00:00:00 GMT",
+      "title": "Annual Solidity Developer Survey is Live!",
+      "link": "https://soliditylang.org///blog/2026/02/10/solidity-developer-survey-2025-announcement",
+      "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
+      "description": "The annual Solidity Developer Survey is now live, and we need your input! Take 5 minutes to share your experience and help us prioritize language design, performance improvements, and developer…",
+      "source": "Solidity",
+      "category": "Dev tooling",
+      "sourceUrl": "https://soliditylang.org/",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Tue, 12 May 2026 00:00:00 GMT",
+      "title": "Making Clear Signing the default on Ethereum",
+      "link": "https://docs.sourcify.dev/blog/clear-signing-launch/",
+      "imgSrc": "https://docs.sourcify.dev/assets/images/clear-sign-card-0fc0cf272b4655a0f51b849449957e3d.png",
+      "description": "Clear Signing Working Group",
+      "source": "Sourcify",
+      "category": "Dev tooling",
+      "sourceUrl": "https://docs.sourcify.dev/blog/",
+      "sourceFeedUrl": "https://docs.sourcify.dev/blog/rss.xml"
+    },
+    {
+      "pubDate": "Wed, 06 May 2026 00:00:00 GMT",
+      "title": "API v1 Brownouts: Time to Move to v2",
+      "link": "https://docs.sourcify.dev/blog/api-v1-brownouts/",
+      "imgSrc": "",
+      "description": "Sourcify's legacy v1 API has been deprecated for a while. v2 has been the primary, recommended API for over a year: async job-based verification (no more hanging requests), richer responses (storage…",
+      "source": "Sourcify",
+      "category": "Dev tooling",
+      "sourceUrl": "https://docs.sourcify.dev/blog/",
+      "sourceFeedUrl": "https://docs.sourcify.dev/blog/rss.xml"
+    }
+  ],
   [
     {
       "pubDate": "Thu, 11 Jun 2026 03:43:38 GMT",
@@ -113,9 +879,120 @@
       "category": "Dev tooling",
       "sourceUrl": "https://ethereumremix.substack.com",
       "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    },
+    {
+      "pubDate": "Thu, 14 May 2026 17:52:29 GMT",
+      "title": "⏳ QF Round Last Call for Remix",
+      "link": "https://ethereumremix.substack.com/p/qf-round-last-call-for-remix",
+      "imgSrc": "https://substackcdn.com/image/fetch/$s_!Ey39!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fac1e8de7-4e95-493d-98fd-e1621f7d6faa_512x512.png",
+      "description": "Help Remix Secure Ethereum (for just $1)",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    },
+    {
+      "pubDate": "Thu, 16 Apr 2026 02:10:46 GMT",
+      "title": "Remix Release v2.1.0",
+      "link": "https://ethereumremix.substack.com/p/remix-release-v210",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/b0627e5b-1677-4bd0-ae18-fc22d24dfad6_840x420.png",
+      "description": "Updates to the UI of Deploy & Run, Bug fixes, MCP Tricks",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    },
+    {
+      "pubDate": "Mon, 13 Apr 2026 17:02:54 GMT",
+      "title": "Features to Review for Remix Beta Testers",
+      "link": "https://ethereumremix.substack.com/p/features-to-review-for-remix-beta",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/4630addc-77cc-4100-825a-4cd162189b3c_1200x601.png",
+      "description": "The Remix v2 Beta Testing is now live!",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    },
+    {
+      "pubDate": "Thu, 26 Mar 2026 16:01:03 GMT",
+      "title": "Remix Release v2",
+      "link": "https://ethereumremix.substack.com/p/remix-release-v2",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/eb106717-c878-41ec-9e23-fb01801c4b0d_800x420.png",
+      "description": "Major updates to Deploy & Run, the Debugger, and RemixAI",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    },
+    {
+      "pubDate": "Wed, 04 Mar 2026 19:43:02 GMT",
+      "title": "Beta Testers Needed for Remix v2 ",
+      "link": "https://ethereumremix.substack.com/p/beta-testers-needed-for-remix-v2",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/56f348ab-e7f4-4123-b82a-d37cfba4ffc0_800x420.png",
+      "description": "Get early access to the powerful new tools in Remix v2!",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    },
+    {
+      "pubDate": "Mon, 09 Feb 2026 08:02:08 GMT",
+      "title": "Remix Desktop",
+      "link": "https://ethereumremix.substack.com/p/remix-desktop",
+      "imgSrc": "https://substackcdn.com/image/fetch/$s_!mRv3!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3fc81c50-e7d1-4bf8-bc8d-5308e9fb762f_1030x793.png",
+      "description": "The Desktop version of Remix IDE and how I use it with Foundry",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    },
+    {
+      "pubDate": "Tue, 20 Jan 2026 16:59:09 GMT",
+      "title": "Remix IDE: the GoTo DevRel Tool",
+      "link": "https://ethereumremix.substack.com/p/remix-ide-the-goto-devrel-tool",
+      "imgSrc": "https://substackcdn.com/image/fetch/$s_!cTH1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F50198ce2-f586-4242-8f19-345bc8dc3991_970x401.png",
+      "description": "Hey DevRels!",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    },
+    {
+      "pubDate": "Wed, 24 Dec 2025 20:11:42 GMT",
+      "title": "Remix Release v1.5",
+      "link": "https://ethereumremix.substack.com/p/remix-release-v15",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/f0e5925b-a83a-4e92-bc92-0ed62ef310fc_500x420.png",
+      "description": "Consider Supporting Remix. Maximize Panels. New Git Clone Button. Foundry & Hardhat Compilation Update.",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
     }
   ],
-  [],
+  [
+    {
+      "pubDate": "Mon, 23 Mar 2026 12:33:03 GMT",
+      "title": "The 2026 Staking Survey is Now Open!",
+      "link": "https://paragraph.com/@ethstaker/the-2026-staking-survey-is-now-open",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/4258a1c5a8b4bfbbfa502151ef5775f5.jpg",
+      "description": "The 2026 Staking Landscape Survey from EthStaker is now open! Fill it out here. As in recent years, the survey collects a snapshot of the staking landscape and community sentiment. It also shows…",
+      "source": "EthStaker",
+      "category": "Staking",
+      "sourceUrl": "https://paragraph.com/@ethstaker",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethstaker"
+    },
+    {
+      "pubDate": "Mon, 12 Jan 2026 15:30:02 GMT",
+      "title": "Introducing the Staker Console",
+      "link": "https://paragraph.com/@ethstaker/introducing-the-staker-console",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/88e1532fc1d76bd6da02f103e260fc967229f609c72f2bf5afd4f662bd40aad1.jpg",
+      "description": "Today we are excited to share the Staker Console, a new interface for interacting with the Ethereum staking contract. It is built for solo stakers and home operators who want a clear, reliable place…",
+      "source": "EthStaker",
+      "category": "Staking",
+      "sourceUrl": "https://paragraph.com/@ethstaker",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethstaker"
+    }
+  ],
   [
     {
       "pubDate": "Thu, 04 Jun 2026 09:41:15 GMT",
@@ -134,6 +1011,127 @@
       "link": "https://localethereum.substack.com/p/turkiye-ethereum-ecosystem-overview",
       "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/de3e6b11-ae4f-41e6-9775-94e381fba893_2912x2096.png",
       "description": "&#127481;&#127479; Where crisis meets innovation.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Wed, 06 May 2026 09:01:43 GMT",
+      "title": "Local Ethereum #16",
+      "link": "https://localethereum.substack.com/p/local-ethereum-16",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/55c13d99-60c2-4e18-a624-ed6f3ae80500_3148x2096.png",
+      "description": "April was a month of extremes, and a reminder of what makes Ethereum different.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Wed, 29 Apr 2026 09:01:11 GMT",
+      "title": "Romania Ethereum Ecosystem Overview ",
+      "link": "https://localethereum.substack.com/p/romania-ethereum-ecosystem-overview",
+      "imgSrc": "https://substackcdn.com/image/fetch/$s_!weLR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3bd8369-163e-48ce-8161-8950c04110f0_3840x2160.png",
+      "description": "Romania Builds Quietly: The Ethereum Ecosystem in Eastern Europe's Hidden Engineering Powerhouse.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Fri, 03 Apr 2026 10:15:23 GMT",
+      "title": "Local Ethereum #15",
+      "link": "https://localethereum.substack.com/p/local-ethereum-15",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/804ea917-ecad-4b42-9ee3-8f4c9ed880f9_3148x2096.png",
+      "description": "Mar 2026 roundup: regulatory clarity, a new EF mandate, the Ethereum Economic Zone, and the AA debate that will shape UX for years.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Tue, 17 Mar 2026 09:01:45 GMT",
+      "title": "Taiwan Ethereum Ecosystem Overview",
+      "link": "https://localethereum.substack.com/p/taiwan-ethereum-ecosystem-overview",
+      "imgSrc": "https://substackcdn.com/image/fetch/$s_!QyaU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F412fd46f-56ef-461d-bd14-1d94617094b4_3840x2160.png",
+      "description": "Community ownership and volunteer spirit make Taiwan&#8217;s Ethereum ecosystem unique.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Thu, 05 Mar 2026 11:37:40 GMT",
+      "title": "Local Ethereum #14",
+      "link": "https://localethereum.substack.com/p/local-ethereum-14",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/15e1037f-be92-4529-8951-88ae2c72e756_2912x2096.png",
+      "description": "Prague funds a hacker house on-chain, Hong Kong licenses its first stablecoin issuers, and builders gather from Mumbai to Warsaw.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Mon, 02 Mar 2026 10:01:14 GMT",
+      "title": "Poland Ethereum Ecosystem Overview",
+      "link": "https://localethereum.substack.com/p/poland-ethereum-ecosystem-overview",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/cabe12ee-1a3b-4173-891b-d60dae49f234_2912x2096.png",
+      "description": "This month, let's explore Poland's thriving Ethereum ecosystem.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Thu, 12 Feb 2026 12:41:59 GMT",
+      "title": "Local Ethereum #13",
+      "link": "https://localethereum.substack.com/p/local-ethereum-13",
+      "imgSrc": "https://substackcdn.com/image/fetch/$s_!qMlS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4d160224-52ec-49eb-981c-1cf89f7672f5_2518x1417.png",
+      "description": "Ethereum powers AI interactions as an economic layer that's not just digital, it's also physical.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Tue, 03 Feb 2026 10:19:44 GMT",
+      "title": "Vietnam Ethereum Ecosystem Overview Part II",
+      "link": "https://localethereum.substack.com/p/vietnam-ethereum-ecosystem-overview-part-2",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/56fe1155-aa5e-41ce-b655-c0eb4a4354ce_2912x2096.png",
+      "description": "What is the Ethereum ecosystem landscape in Vietnam?",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Fri, 30 Jan 2026 10:13:54 GMT",
+      "title": "Vietnam Ethereum Ecosystem Overview Part I",
+      "link": "https://localethereum.substack.com/p/vietnam-ethereum-ecosystem-overview-part-1",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/207b7f26-cb0f-46c8-8484-627eb8f97841_2912x2096.png",
+      "description": "Why crypto adoption in Vietnam is so high?",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Mon, 26 Jan 2026 09:00:38 GMT",
+      "title": "Serbia Ethereum Ecosystem Overview",
+      "link": "https://localethereum.substack.com/p/serbia-ethereum-ecosystem-overview",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/f69c758e-cf97-46f1-a591-026b58e75781_2912x2096.png",
+      "description": "Let's explore Serbia's thriving Ethereum ecosystem.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Tue, 06 Jan 2026 12:52:44 GMT",
+      "title": "Local Ethereum #12",
+      "link": "https://localethereum.substack.com/p/local-ethereum-12",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/18be154b-935f-4a4f-a72e-aa163e3f7d9f_2912x2096.png",
+      "description": "December 2025 Roundup",
       "source": "Local Ethereum",
       "category": "Community",
       "sourceUrl": "https://localethereum.substack.com",
@@ -191,6 +1189,237 @@
       "link": "https://ethereal.news/ethereal-news-weekly-24/",
       "imgSrc": "https://ethereal.news/etherealnews.jpg",
       "description": "Devcon 8 early bird tickets, ApeWorX collective: nonprofit for Python dev tooling, glamsterdam-devnet-4 launched",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 15 May 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #23",
+      "link": "https://ethereal.news/ethereal-news-weekly-23/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Clear signing, CLARITY Act advanced out of Senate Banking committee, Ben Edgington fast finality plan",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 08 May 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #22",
+      "link": "https://ethereal.news/ethereal-news-weekly-22/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "200M+ gas limit target post-Glamsterdam, 25M blocks on mainnet, Arbitrum DAO voted to release frozen ETH",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 01 May 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #21",
+      "link": "https://ethereal.news/ethereal-news-weekly-21/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "DeFi United technical implementation plan to restore rsETH backing, Solidity 0.8.35, Status Network merging into Linea stack",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 24 Apr 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #20",
+      "link": "https://ethereal.news/ethereal-news-weekly-20/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Etherealize: ETH is productive money, DeFi united: effort to restore rsETH backing, Arbitrum security council froze exploiter ETH",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 17 Apr 2026 00:00:00 GMT",
+      "title": "Ethereal news mini #0",
+      "link": "https://ethereal.news/ethereal-news-mini-0/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Solidity developer survey results, ether.fi migrated to OP Mainnet, X $ETH cashtag",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 10 Apr 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #19",
+      "link": "https://ethereal.news/ethereal-news-weekly-19/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Roman Storm acquittal hearing, ETHGlobal Cannes hackathon finalists, EVM Now block explorer",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 03 Apr 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #18",
+      "link": "https://ethereal.news/ethereal-news-weekly-18/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Quantum breakthrough papers, Aave v4, Aztec alpha",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 27 Mar 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #17",
+      "link": "https://ethereal.news/ethereal-news-weekly-17/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Frame transaction Considered for Inclusion for Hegotá, EthStaker staking survey, EF post-quantum website",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 20 Mar 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #16",
+      "link": "https://ethereal.news/ethereal-news-weekly-16/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "US SEC securities laws application to crypto, fast confirmation rule, EF mandate",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 13 Mar 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #15",
+      "link": "https://ethereal.news/ethereal-news-weekly-15/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "US DoJ seeks Roman Storm retrial, BlackRock staked ETH ETF live, EF bug bounty $1M max payout",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 06 Mar 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #14",
+      "link": "https://ethereal.news/ethereal-news-weekly-14/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "ePBS first devnet live, Aave Labs temp check passed, Synthesis AI + human hackathon",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 27 Feb 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #13",
+      "link": "https://ethereal.news/ethereal-news-weekly-13/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Strawmap (strawman roadmap), EF staking 70k ETH, BNP Paribas tokenized fund",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 20 Feb 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #12",
+      "link": "https://ethereal.news/ethereal-news-weekly-12/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "FOCIL is Hegotá consensus layer headliner, EF protocol priorities: Scale, Improve UX & Harden the L1, Base moving to own stack",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 13 Feb 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #11",
+      "link": "https://ethereal.news/ethereal-news-weekly-11/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "BlackRock BUIDL tradeable via UniswapX, ENS staying on mainnet, Solidity developer survey",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 06 Feb 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #10",
+      "link": "https://ethereal.news/ethereal-news-weekly-10/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Vitalik: role of L2s has changed, Hegotá upgrade headliner proposals, Lido v3 live",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 30 Jan 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #9",
+      "link": "https://ethereal.news/ethereal-news-weekly-9/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Fidelity Investments FIDD stablecoin, TheDAO Security Fund, Hegotá upgrade headliner proposals",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 23 Jan 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #8",
+      "link": "https://ethereal.news/ethereal-news-weekly-8/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "NYSE tokenized securities platform, Neynar new steward of Farcaster, Glamsterdam upgrade Considered for Inclusion scope finalized",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 16 Jan 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #7",
+      "link": "https://ethereal.news/ethereal-news-weekly-7/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Ethereum must pass walkaway test, Base app focuses on trading, Trail of Bits Claude Code skills",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 09 Jan 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #6",
+      "link": "https://ethereal.news/ethereal-news-weekly-6/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "BPO2 upgrade increased blobs, write Roman Storm a letter of support, Octant epoch 10",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 02 Jan 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #5",
+      "link": "https://ethereal.news/ethereal-news-weekly-5/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Vitalik: call to improve usability & decentralization, Nethereum 10 year anniversary release, Uniswap interface fees set to zero",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 26 Dec 2025 00:00:00 GMT",
+      "title": "Ethereal news weekly #4",
+      "link": "https://ethereal.news/ethereal-news-weekly-4/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Uniswap voted for UNIfication, Devcon 8 November 3 - 6 at JIO World Center, Punks & Squiggles donated to MoMA",
       "source": "Ethereal",
       "category": "Newsletters",
       "sourceUrl": "https://ethereal.news/",
