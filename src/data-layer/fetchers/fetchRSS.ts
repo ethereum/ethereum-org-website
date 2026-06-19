@@ -118,10 +118,19 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
           )
           .map((item) => {
             const getImgSrc = () => {
-              if (item["content:encoded"])
-                return item["content:encoded"][0].match(IMG_REGEX)?.[0]
-              if (item.enclosure) return item.enclosure[0].$.url
+              // Prefer an explicit image attachment (the post's cover) over
+              // scraping the body — body scraping tends to grab the first
+              // inline image, which is often an ad banner or logo. Guard the
+              // enclosure by type so podcast/audio enclosures aren't treated
+              // as images (e.g. Paragraph feeds carry an image/png cover).
+              const enclosure = item.enclosure?.[0]?.$
+              if (enclosure?.url && enclosure.type?.startsWith("image/"))
+                return enclosure.url
               if (item["media:content"]) return item["media:content"][0].$.url
+              if (item["content:encoded"]) {
+                const match = item["content:encoded"][0].match(IMG_REGEX)?.[0]
+                if (match) return match
+              }
               return channelImage
             }
             return {
