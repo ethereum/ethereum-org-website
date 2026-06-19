@@ -183,9 +183,17 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           {/* Open source */}
           <Section
             data-flow="skip"
-            className="flex items-center gap-space-3x *:first:flex-2 *:last:flex-1 max-lg:flex-col-reverse lg:flex-row-reverse"
+            className="flex gap-space-3x *:flex-1 max-md:flex-col md:items-center"
           >
-            <div className="flow max-w-3xl">
+            <div className="grid place-items-center">
+              <Image
+                className="max-h-64 w-auto max-w-full object-contain md:max-h-128 md:w-full"
+                src={whatIsEthereumImg}
+                alt={t("page-community-open-source-image-alt")}
+                sizes="(min-width: 768px) 50vw, 360px"
+              />
+            </div>
+            <div className="flow md:max-w-2xl">
               <h2>{t("page-community-open-source")}</h2>
               <p>{t("page-community-open-source-description")}</p>
               <div className="flex gap-4 max-md:flex-col max-md:items-start">
@@ -201,22 +209,22 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </ButtonLink>
               </div>
             </div>
-            <div className="grid place-items-center">
-              <Image
-                className="max-h-64 w-auto object-contain"
-                src={whatIsEthereumImg}
-                alt={t("page-community-open-source-image-alt")}
-                sizes="360px"
-              />
-            </div>
           </Section>
 
           {/* Contribute */}
           <Section
             data-flow="skip"
-            className="flex items-center gap-space-3x *:first:flex-2 *:last:flex-1 max-lg:flex-col-reverse lg:flex-row"
+            className="flex flex-col gap-space-3x *:flex-1 md:flex-row-reverse md:items-center"
           >
-            <div className="flow max-w-3xl">
+            <div className="grid place-items-center">
+              <Image
+                className="max-h-64 w-auto max-w-full object-contain md:max-h-128 md:w-full"
+                src={financeTransparentImg}
+                alt={t("page-index-internet-image-alt")}
+                sizes="(min-width: 768px) 50vw, 360px"
+              />
+            </div>
+            <div className="flow md:max-w-2xl">
               <h2>{t("page-community-contribute")}</h2>
               <p>{t("page-community-contribute-description")}</p>
               <div className="flex gap-4 max-md:flex-col max-md:items-start">
@@ -232,35 +240,27 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </ButtonLink>
               </div>
             </div>
-            <div className="grid place-items-center">
-              <Image
-                className="max-h-64 w-auto object-contain"
-                src={financeTransparentImg}
-                alt={t("page-index-internet-image-alt")}
-                sizes="360px"
-              />
-            </div>
           </Section>
 
           {/* Support */}
           <Section
             data-flow="skip"
-            className="flex items-center gap-space-3x *:first:flex-2 *:last:flex-1 max-lg:flex-col-reverse lg:flex-row-reverse"
+            className="flex gap-space-3x *:flex-1 max-md:flex-col md:items-center"
           >
-            <div className="flow max-w-3xl">
+            <div className="grid place-items-center">
+              <Image
+                className="max-h-64 w-auto max-w-full object-contain md:max-h-128 md:w-full"
+                src={hackathonTransparentImg}
+                alt={t("page-community-support-alt")}
+                sizes="(min-width: 768px) 50vw, 360px"
+              />
+            </div>
+            <div className="flow md:max-w-2xl">
               <h2>{t("page-community-support")}</h2>
               <p>{t("page-community-support-description")}</p>
               <ButtonLink href="/community/support/">
                 {t("page-community-support-button")}
               </ButtonLink>
-            </div>
-            <div className="grid place-items-center">
-              <Image
-                className="max-h-64 w-auto object-contain"
-                src={hackathonTransparentImg}
-                alt={t("page-community-support-alt")}
-                sizes="360px"
-              />
             </div>
           </Section>
 
