@@ -5,15 +5,14 @@ import { useLocale } from "next-intl"
 
 import type { LatestArticle } from "@/lib/types"
 
-import CardImage from "@/components/Image/CardImage"
 import { Button } from "@/components/ui/buttons/Button"
-import { Card, CardContent } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
-import { BaseLink } from "@/components/ui/Link"
 import { TagButton } from "@/components/ui/tag"
 
 import { dateTimeFormat } from "@/lib/utils/date"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import LatestCard from "./LatestCard"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -151,71 +150,35 @@ const LatestArticlesGrid = ({
 
       <Grid columns={3}>
         {visible.map((article) => (
-          <Card
+          <LatestCard
             key={article.href}
-            variant="nested"
-            size="md"
-            hoverEffect="lift"
-            className="relative overflow-hidden border"
-          >
-            {/* RSS images come from arbitrary hosts not configured for
-                next/image; CardImage uses a plain img and falls back to a
-                generic thumbnail when the source is missing or fails. */}
-            <CardImage
-              src={article.image}
-              className="mb-4 aspect-video w-full rounded-md object-cover"
-            />
-            <CardContent spacing="sm" className="flex flex-col gap-3">
-              <div className="relative z-10 flex flex-wrap gap-2">
-                {article.tags.map((tag) => (
-                  <TagButton
-                    key={tag}
-                    variant={tag === selectedTag ? "solid" : "outline"}
-                    status={tag === selectedTag ? "tag" : "normal"}
-                    onClick={() => handleTagSelect(tag)}
-                  >
-                    {tag}
-                  </TagButton>
-                ))}
-              </div>
-
-              <h3 className="text-xl font-bold">
-                <BaseLink
-                  href={article.href}
-                  hideArrow
-                  className="text-body no-underline before:absolute before:inset-0 hover:text-body hover:underline"
-                  customEventOptions={{
-                    eventCategory: "latest-articles",
-                    eventAction: "click",
-                    eventName: article.title,
-                  }}
-                >
-                  {article.title}
-                </BaseLink>
-              </h3>
-
-              {article.description && (
-                <p className="line-clamp-3 text-body-medium">
-                  {article.description}
-                </p>
-              )}
-
-              <p className="text-sm text-body-medium">
-                <span className="font-bold">
-                  {article.author ?? article.source}
-                </span>
-                {article.date && <> · {formatDate(article.date)}</>}
-                {article.timeToRead ? (
-                  <>
-                    {" · "}
-                    {t("page-latest:page-latest-minute-read", {
-                      minutes: article.timeToRead,
-                    })}
-                  </>
-                ) : null}
-              </p>
-            </CardContent>
-          </Card>
+            href={article.href}
+            title={article.title}
+            image={article.image}
+            byline={article.author ?? article.source}
+            description={article.description}
+            tags={article.tags}
+            meta={
+              article.date ? (
+                <>
+                  {formatDate(article.date)}
+                  {article.timeToRead ? (
+                    <>
+                      {" · "}
+                      {t("page-latest:page-latest-minute-read", {
+                        minutes: article.timeToRead,
+                      })}
+                    </>
+                  ) : null}
+                </>
+              ) : undefined
+            }
+            customEventOptions={{
+              eventCategory: "latest-articles",
+              eventAction: "click",
+              eventName: article.title,
+            }}
+          />
         ))}
       </Grid>
 

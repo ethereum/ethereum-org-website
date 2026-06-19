@@ -10,14 +10,13 @@ import type { Lang, PageParams, RSSItem } from "@/lib/types"
 import FeedbackCard from "@/components/FeedbackCard"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
-import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardContent } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { dateTimeFormat } from "@/lib/utils/date"
 import { mergeLatestArticles } from "@/lib/utils/latest"
 import { getBlogPostsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -27,6 +26,7 @@ import { getFullUrl } from "@/lib/utils/url"
 import { LATEST_HIGHLIGHTS } from "@/data/latest/highlights"
 
 import LatestArticlesGrid from "./_components/LatestArticlesGrid"
+import LatestCard from "./_components/LatestCard"
 import SourceDirectory from "./_components/SourceDirectory"
 import BlogPageJsonLD from "./page-jsonld"
 
@@ -73,6 +73,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const disclaimer =
     locale !== "en" ? t("page-latest-i18n-disclaimer") : undefined
 
+  const formatHighlightDate = (date: string) => {
+    const parsed = new Date(date)
+    if (Number.isNaN(parsed.getTime())) return undefined
+    return dateTimeFormat(locale, {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    }).format(parsed)
+  }
+
   return (
     <>
       <BlogPageJsonLD
@@ -106,35 +116,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-latest-highlights-heading")}</h2>
               <Grid balanced={2} className="gap-6">
                 {LATEST_HIGHLIGHTS.map((highlight) => (
-                  <Card
+                  <LatestCard
                     key={highlight.href}
                     href={highlight.href}
-                    variant="nested"
-                    size="lg"
-                    hoverEffect="lift"
-                    className="overflow-hidden border"
-                  >
-                    <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-md">
-                      <Image
-                        src={highlight.image}
-                        alt=""
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <CardContent spacing="sm" className="flex flex-col gap-3">
-                      {highlight.source && (
-                        <p className="text-sm font-bold text-body-medium uppercase">
-                          {highlight.source}
-                        </p>
-                      )}
-                      <h3 className="text-2xl font-bold">{highlight.title}</h3>
-                      <p className="text-body-medium">
-                        {highlight.description}
-                      </p>
-                    </CardContent>
-                  </Card>
+                    title={highlight.title}
+                    image={highlight.image}
+                    byline={highlight.source}
+                    description={highlight.description}
+                    meta={
+                      highlight.date
+                        ? formatHighlightDate(highlight.date)
+                        : undefined
+                    }
+                  />
                 ))}
               </Grid>
             </Section>

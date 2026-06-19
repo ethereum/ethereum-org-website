@@ -1064,6 +1064,8 @@ export type LatestHighlight = {
   image: string
   href: string
   source?: string
+  /** Publication date (ISO `YYYY-MM-DD`), shown in the card footer. */
+  date?: string
 }
 
 /**

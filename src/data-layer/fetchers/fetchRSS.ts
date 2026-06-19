@@ -79,7 +79,14 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
   const errors: string[] = []
 
   for (let i = 0; i < LATEST_SOURCES.length; i++) {
-    const { feed: url, name, category } = LATEST_SOURCES[i]
+    const { feed: url, name, category, categoryFilter } = LATEST_SOURCES[i]
+
+    // Sources whose feed mixes unrelated posts (e.g. Besu inside the wider
+    // LF Decentralized Trust feed) restrict items to an RSS `<category>`
+    // allow-list. Sources without a filter keep every item.
+    const matchesCategoryFilter = (itemCategories?: string[]) =>
+      !categoryFilter ||
+      (itemCategories ?? []).some((c) => categoryFilter.includes(c))
 
     // Add a small delay between requests to avoid rate limiting
     // Skip delay for the first request
@@ -98,7 +105,12 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
           : ""
 
         const parsedRssItems: RSSItem[] = mainChannel.item
-          .filter((item) => item.pubDate && withinWindow(item.pubDate[0]))
+          .filter(
+            (item) =>
+              item.pubDate &&
+              withinWindow(item.pubDate[0]) &&
+              matchesCategoryFilter(item.category)
+          )
           .sort(
             (a, b) =>
               new Date(b.pubDate[0]).getTime() -

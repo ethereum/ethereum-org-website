@@ -1,5 +1,7 @@
 [
   [],
+  [],
+  [],
   [
     {
       "pubDate": "Wed, 03 Jun 2026 00:00:00 GMT",
@@ -36,8 +38,116 @@
     }
   ],
   [],
+  [
+    {
+      "pubDate": "2026-06-09T12:00:00+10:00",
+      "title": "Go for Security Auditors: Part 1 - Syntax That Will Trip You Up",
+      "link": "https://blog.sigmaprime.io/go-for-security-auditors-part-1.html",
+      "imgSrc": "",
+      "description": "The first in a three-part series on auditing Go code, covering deceptive syntax, common pitfalls like nil maps and slice aliasing, testing gotchas, and compiler pragmas that hide security-relevant…",
+      "source": "Lighthouse",
+      "category": "Clients",
+      "sourceUrl": "https://blog.sigmaprime.io/",
+      "sourceFeedUrl": "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml"
+    }
+  ],
+  [],
   [],
   [
+    {
+      "pubDate": "Mon, 01 Jun 2026 00:00:00 GMT",
+      "title": "Sonobe Updates 2026 Part 1: Audit Report",
+      "link": "https://pse.dev/blog/sonobe-updates-1",
+      "description": "Ahead of Sonobe's first release, we had our folding-schemes and IVC library audited by both a human auditor and an AI auditor. This article summarizes their findings.",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Thu, 28 May 2026 00:00:00 GMT",
+      "title": "EVM Verification of WHIR over a 31-bit Field",
+      "link": "https://pse.dev/blog/evm-verification-of-whir-31bit",
+      "description": "A standalone WHIR verifier over the 31-bit KoalaBear field can verify a 2^22 polynomial opening on EVM with 100-bit Johnson-bound soundness for 5.65 MGas in software, or 4.33 MGas with experimental…",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Fri, 22 May 2026 00:00:00 GMT",
+      "title": "Announcing the Private Transfers Dashboard",
+      "link": "https://pse.dev/blog/announcing-private-transfers-dashboard",
+      "description": "Compare private transfer protocols across a variety of different metrics",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Fri, 22 May 2026 00:00:00 GMT",
+      "title": "Circuit-specific decryption keys for FHE: a new four-part series from Machina iO",
+      "link": "https://pse.dev/blog/circuit-specific-decryption-keys-for-fhe",
+      "description": "Machina iO publishes a four-part series on circuit-specific decryption keys for FHE: a primitive that lets a decryption committee publish a key for one specific computation and then step away,…",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    }
+  ],
+  [],
+  [],
+  [],
+  [],
+  [
+    {
+      "pubDate": "Thu, 11 Jun 2026 03:43:38 GMT",
+      "title": "Join the Remix AI Bootcamp for Real World Impact",
+      "link": "https://ethereumremix.substack.com/p/join-the-remix-ai-bootcamp-for-real",
+      "description": "5 weeks, top-tier ecosystem partners, and the latest RemixAI features to bring your real-world dApps to life.",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    }
+  ],
+  [],
+  [
+    {
+      "pubDate": "Thu, 04 Jun 2026 09:41:15 GMT",
+      "title": "Local Ethereum #17",
+      "link": "https://localethereum.substack.com/p/local-ethereum-17",
+      "imgSrc": "https://substackcdn.com/image/fetch/$s_!mwz6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe511b3ae-21c7-49cb-bed5-b962d5794955_2518x1417.png",
+      "description": "CROPS, CLARITY, and the Road Ahead.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Tue, 26 May 2026 09:13:35 GMT",
+      "title": "Türkiye Ethereum Ecosystem Overview",
+      "link": "https://localethereum.substack.com/p/turkiye-ethereum-ecosystem-overview",
+      "imgSrc": "https://substackcdn.com/image/fetch/$s_!PzSh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14c23117-c906-44ba-9c71-881f06127cc7_3840x2160.png",
+      "description": "&#127481;&#127479; Where crisis meets innovation.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    }
+  ],
+  [
+    {
+      "pubDate": "Fri, 19 Jun 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #28",
+      "link": "https://ethereal.news/ethereal-news-weekly-28/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Hsiao-Wei Wang stepped down, 1M lifetime developers, Glamsterdam upgrade adds separate builder deposit & exit contracts",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
     {
       "pubDate": "Fri, 12 Jun 2026 00:00:00 GMT",
       "title": "Ethereal news weekly #27",
@@ -81,6 +191,214 @@
       "category": "Newsletters",
       "sourceUrl": "https://ethereal.news/",
       "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Fri, 19 Jun 2026 01:33:03 GMT",
+      "title": "#971 - Hsiao-Wei Wang Steps Down, Base Beryl Upgrade, Aztec Exploit",
+      "link": "https://ethdaily.io/971",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/451cc866a3d850b22fc8dd1db907f94a08090ffffe29963d21a2257b4abacfe7.png",
+      "description": "Hsiao-Wei Wang steps down as EF co-executive director, Base ships its Beryl upgrade to testnet, and Aztec investigates a second rollup exploit.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Fri, 19 Jun 2026 00:48:02 GMT",
+      "title": "Ethereum Foundation Leadership: The Complete Tracker",
+      "link": "https://ethdaily.io/ef-leadership-tracker",
+      "description": "The Ethereum Foundation has undergone significant leadership changes since 2025, including a governance restructuring and high-profile departures. These shifts reflect a redefined, narrower mandate…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Thu, 18 Jun 2026 21:45:49 GMT",
+      "title": "Aztec Hit By Second Deprecated Rollup Exploit",
+      "link": "https://ethdaily.io/aztec-hit-by-second-deprecated-rollup-exploit",
+      "description": "Aztec Labs is investigating a second exploit that drained roughly $2 million from a deprecated, immutable rollup on June 17. This follows a $2.19 million exploit of Aztec Connect on June 14.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Thu, 18 Jun 2026 20:39:14 GMT",
+      "title": "Base Beryl Upgrade Goes Live On Testnet",
+      "link": "https://ethdaily.io/base-beryl-upgrade-goes-live-on-testnet",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/451cc866a3d850b22fc8dd1db907f94a08090ffffe29963d21a2257b4abacfe7.png",
+      "description": "Base has rolled out its Beryl upgrade to the Sepolia testnet, bringing the native token standard B20, reduced withdrawal delays, and Reth V2 for better scalability. The mainnet is set to go live on…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Thu, 18 Jun 2026 19:58:54 GMT",
+      "title": "Ethereum Interop & Intents: The Complete Tracker",
+      "link": "https://ethdaily.io/interop-intents-tracker",
+      "description": "ETH Daily's running index of Ethereum cross-chain intents coverage: ERC-7683, ERC-8211, Socket, Wonderland, LI.FI, and Biconomy.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Thu, 18 Jun 2026 18:42:53 GMT",
+      "title": "Hsiao-Wei Wang Steps Down As EF Co-Executive Director",
+      "link": "https://ethdaily.io/hsiao-wei-wang-steps-down-as-ef-co-executive-director",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/451cc866a3d850b22fc8dd1db907f94a08090ffffe29963d21a2257b4abacfe7.png",
+      "description": "Hsiao-Wei Wang has stepped down as co-executive director and board member of the Ethereum Foundation, effective today.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Thu, 18 Jun 2026 01:32:37 GMT",
+      "title": "#970 - TheDAO Hack 10 Years Later, Polygon Hits 5,000 TPS, Steakhouse Confidential USDC Vault",
+      "link": "https://ethdaily.io/970",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/ef3f884a26f196b94a2f294367031484ed2c946e18ab5d2cb5d3793852d81ef2.jpg",
+      "description": "This edition covers the 10-year anniversary of TheDAO hack, Polygon's block gas limit increase to 160M, and Steakhouse's new Confidential USDC vault on Morpho.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Wed, 17 Jun 2026 21:34:02 GMT",
+      "title": "Polygon Chain Hits 5,000 TPS After Gas Limit Upgrade",
+      "link": "https://ethdaily.io/polygon-chain-hits-5000-tps-after-gas-limit-upgrade",
+      "description": "Polygon raised its block gas limit to 160M at 1.5-second blocks as part of its most recent upgrade, enabling up to 5,000 TPS.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Wed, 17 Jun 2026 19:54:33 GMT",
+      "title": "Steakhouse Launches Confidential USDC Yield Vault",
+      "link": "https://ethdaily.io/steakhouse-launches-confidential-usdc-yield-vault",
+      "description": "Steakhouse Financial launched the first DeFi yield product built for confidential USDC (cUSDC), deploying the Steakhouse Confidential USDC Prime vault on Morpho.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Wed, 17 Jun 2026 19:38:36 GMT",
+      "title": "Plasma One Neobank Launches With Aave",
+      "link": "https://ethdaily.io/plasma-one-neobank-launches-with-aave",
+      "description": "Plasma launched Plasma One, a stablecoin-native neobank, with in-app lending and yield powered by Aave.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Wed, 17 Jun 2026 19:26:30 GMT",
+      "title": "Ondo Expands Tokenized Stock Catalog",
+      "link": "https://ethdaily.io/ondo-expands-tokenized-stock-catalog",
+      "description": "Ondo Global Markets expanded its tokenized stock catalog by 173 new assets, now totaling over 430 tokenized equities and funds live on Ethereum. The additions include AI, robotics, quantum computing,…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Wed, 17 Jun 2026 00:15:57 GMT",
+      "title": "#969 - Coinbase Tokenized Stocks, Base Privacy, Safe Workspace",
+      "link": "https://ethdaily.io/969",
+      "imgSrc": "https://spotify.com&quot;,&quot;description&quot;:&quot;Listen to this episode from ETH Daily - Ethereum News on Spotify. Coinbase introduces tokenized stocks. Base announces private enterprise transactions. And Safe ships Workspace for treasury teams. Read more: https://ethdaily.io/969 ETH Daily sponsorships are now open. Reach over 10,000 Ethereum-native subscribers every weekday.&quot;,&quot;title&quot;:&quot;Coinbase Introduces Tokenized Stocks&quot;,&quot;thumbnail_width&quot;:300,&quot;height&quot;:152,&quot;width&quot;:456,&quot;html&quot;:&quot;&lt;iframe loading=\\&quot;lazy\\&quot; class=\\&quot;embedly-embed\\&quot; src=\\&quot;//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fopen.spotify.com%2Fembed%2Fepisode%2F2O2rJJ8iLBJDdIPSqpzSOb%3Futm_source%3Doembed&amp;display_name=Spotify&amp;url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F2O2rJJ8iLBJDdIPSqpzSOb&amp;image=https%3A%2F%2Fimage-cdn-ak.spotifycdn.com%2Fimage%2Fab67656300005f1fbdc4ee6c4c20c83b2d3311e1&amp;type=text%2Fhtml&amp;schema=spotify\\&quot; width=\\&quot;456\\&quot; height=\\&quot;152\\&quot; scrolling=\\&quot;no\\&quot; title=\\&quot;Spotify embed\\&quot; frameborder=\\&quot;0\\&quot; allow=\\&quot;autoplay; fullscreen; encrypted-media; picture-in-picture\\&quot; allowfullscreen=\\&quot;true\\&quot;&gt;&lt;/iframe&gt;&quot;,&quot;version&quot;:&quot;1.0&quot;,&quot;provider_name&quot;:&quot;Spotify&quot;,&quot;thumbnail_url&quot;:&quot;https://storage.googleapis.com/papyrus_images/ef3f884a26f196b94a2f294367031484ed2c946e18ab5d2cb5d3793852d81ef2.jpg",
+      "description": "Coinbase introduces tokenized stocks, Base launches private enterprise transactions, and Safe ships Workspace for treasury teams.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Wed, 17 Jun 2026 00:03:57 GMT",
+      "title": "Base Launches Private Enterprise Transactions",
+      "link": "https://ethdaily.io/base-launches-private-enterprise-transactions",
+      "description": "Coinbase launches Base Privacy to enable confidential enterprise transactions on the Base network. This infrastructure utilizes Base Ledgers for private, compliant trading and settlement, with funds…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Tue, 16 Jun 2026 23:51:42 GMT",
+      "title": "Coinbase Introduces Tokenized Stocks",
+      "link": "https://ethdaily.io/coinbase-introduces-tokenized-stocks",
+      "description": "Coinbase is launching tokenized stocks, backed 1:1 by underlying assets to represent equity ownership with onchain utility. The exchange has also expanded into equities trading for U.S. users.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Tue, 16 Jun 2026 23:31:13 GMT",
+      "title": "Safe Launches Workspace For Treasury Teams",
+      "link": "https://ethdaily.io/safe-launches-workspace-for-treasury-teams",
+      "description": "Safe's new Workspace streamlines treasury management with a unified dashboard for Safes, transactions, and team roles, featuring passwordless email login and a shared address book for enhanced…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Tue, 16 Jun 2026 17:01:57 GMT",
+      "title": "Ethereum Privacy: The Complete Tracker",
+      "link": "https://ethdaily.io/ethereum-privacy-tracker",
+      "description": "Ethereum's privacy push has shifted from optional add-on to a core design goal, organized around a single principle: make private transactions the default user experience while requiring only minimal…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Tue, 16 Jun 2026 17:01:57 GMT",
+      "title": "Tokenized Real-World Assets on Ethereum: The Complete Tracker",
+      "link": "https://ethdaily.io/rwa-tokenization-tracker",
+      "description": "Tokenized real-world assets bring traditional financial instruments, equities, funds, treasuries, and credit, onto Ethereum as transferable onchain tokens. The model lets regulated issuers settle,…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Mon, 15 Jun 2026 23:53:38 GMT",
+      "title": "#968 - Ethereum Hits 1M Developers, Standard Chartered Covers Uniswap, Arbitrum 2026 Roadmap",
+      "link": "https://ethdaily.io/968",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/451cc866a3d850b22fc8dd1db907f94a08090ffffe29963d21a2257b4abacfe7.png",
+      "description": "Ethereum surpasses one million lifetime developers; Standard Chartered projects Uniswap at $100; Arbitrum unveils its 2026 roadmap.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Mon, 15 Jun 2026 22:08:07 GMT",
+      "title": "Ethereum Surpasses One Million Developers",
+      "link": "https://ethdaily.io/ethereum-surpasses-one-million-developers",
+      "description": "Ethereum has reached over one million lifetime developers, a milestone attributed to its enduring appeal and advancements in scalability and privacy. Despite a decrease in its share of active crypto…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Mon, 15 Jun 2026 19:02:11 GMT",
+      "title": "Standard Chartered Initiates Uniswap Coverage",
+      "link": "https://ethdaily.io/standard-chartered-initiates-uniswap-coverage",
+      "description": "Standard Chartered initiated coverage of Uniswap (UNI), projecting a 40x price increase to $100 by 2030, driven by the growth of tokenized assets and DeFi integration. The bank’s analysis forecasts…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
     }
   ]
 ]

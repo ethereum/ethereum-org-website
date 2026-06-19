@@ -7,13 +7,15 @@ import type { LatestSource } from "@/lib/types"
  *  - RSS ingestion (every entry has a `feed`), and
  *  - the "Read more on these websites" directory (renders every entry).
  *
- * v1 ships a small set of clean, working feeds that need no per-item
- * filtering. Remaining sources from the feed spreadsheet (and feeds that
- * require a `categoryFilter`, e.g. Besu) are added post-v1.
+ * The list is the working subset of the curated feed spreadsheet: every entry
+ * here has a feed that fetches and parses cleanly. Sources from the spreadsheet
+ * with no live feed yet (IPTF, Protocol Consensus) are omitted until their feed
+ * exists; feedless entries (Devcon, Offchain, Erigon, Nethermind, RIG) are not
+ * listed.
  *
- * `category` is the publication-wide tag shown on every item from that feed
- * and is one of the curated filter facets. Assigned by hand (the source list
- * has no category column) — tune freely.
+ * `category` is the publication-wide facet shown on every item from that feed
+ * and drives the filter chips. Assigned by hand (the spreadsheet has no category
+ * column) — tune freely.
  */
 export const LATEST_SOURCES: LatestSource[] = [
   {
@@ -23,16 +25,60 @@ export const LATEST_SOURCES: LatestSource[] = [
     category: "Foundation",
   },
   {
+    name: "Ethereum Cat Herders",
+    link: "https://blog.echinstitute.org/",
+    feed: "https://blog.echinstitute.org/feed.xml",
+    category: "Protocol",
+  },
+  {
+    name: "Protocol Support",
+    link: "https://ps.ethereum.foundation/blog",
+    feed: "https://ps.ethereum.foundation/feed.xml",
+    category: "Protocol",
+  },
+  {
     name: "ethPandaOps",
     link: "https://ethpandaops.io/posts/",
     feed: "https://ethpandaops.io/posts/rss.xml",
     category: "Protocol",
   },
   {
-    name: "Solidity",
-    link: "https://soliditylang.org/blog/",
-    feed: "https://soliditylang.org/feed.xml",
-    category: "Dev tooling",
+    name: "Argot Collective",
+    link: "https://www.argot.org/blog",
+    feed: "https://www.argot.org/feed.xml",
+    category: "Protocol",
+  },
+  {
+    name: "Lighthouse",
+    link: "https://lighthouse-blog.sigmaprime.io/",
+    feed: "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml",
+    category: "Clients",
+  },
+  {
+    name: "Nimbus",
+    link: "https://blog.nimbus.team/",
+    feed: "https://blog.nimbus.team/rss/",
+    category: "Clients",
+  },
+  {
+    name: "Besu",
+    link: "https://www.lfdecentralizedtrust.org/blog/tag/besu",
+    feed: "https://www.lfdecentralizedtrust.org/blog/rss.xml",
+    category: "Clients",
+    // Shared LF Decentralized Trust feed; keep only Besu-tagged posts.
+    categoryFilter: ["Besu"],
+  },
+  {
+    name: "Privacy & Scaling Explorations",
+    link: "https://pse.dev/blog",
+    feed: "https://pse.dev/api/rss",
+    category: "Research",
+  },
+  {
+    name: "zkEVM",
+    link: "https://zkevm.ethereum.foundation/blog",
+    feed: "https://zkevm.ethereum.foundation/feed.xml",
+    category: "Research",
   },
   {
     name: "Vitalik Buterin",
@@ -41,9 +87,45 @@ export const LATEST_SOURCES: LatestSource[] = [
     category: "Research",
   },
   {
+    name: "Solidity",
+    link: "https://soliditylang.org/blog/",
+    feed: "https://soliditylang.org/feed.xml",
+    category: "Dev tooling",
+  },
+  {
+    name: "Sourcify",
+    link: "https://docs.sourcify.dev/blog/",
+    feed: "https://docs.sourcify.dev/blog/rss.xml",
+    category: "Dev tooling",
+  },
+  {
+    name: "Ethereum Remix",
+    link: "https://ethereumremix.substack.com/",
+    feed: "https://ethereumremix.substack.com/feed",
+    category: "Dev tooling",
+  },
+  {
+    name: "EthStaker",
+    link: "https://paragraph.com/@ethstaker",
+    feed: "https://api.paragraph.com/blogs/rss/@ethstaker",
+    category: "Staking",
+  },
+  {
+    name: "Local Ethereum",
+    link: "https://www.localethereum.org/",
+    feed: "https://localethereum.substack.com/feed",
+    category: "Community",
+  },
+  {
     name: "Ethereal",
     link: "https://ethereal.news/",
     feed: "https://ethereal.news/rss.xml",
+    category: "Newsletters",
+  },
+  {
+    name: "ETH Daily",
+    link: "https://ethdaily.io/",
+    feed: "https://api.paragraph.com/blogs/rss/@ethdaily",
     category: "Newsletters",
   },
 ]
