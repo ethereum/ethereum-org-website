@@ -1,6 +1,6 @@
 ---
-title: Kompilieren von Smart Contracts
-description: "Eine Erklärung, warum Sie Smart Contracts kompilieren müssen und was die Kompilierung eigentlich bewirkt."
+title: Smart Contracts kompilieren
+description: Eine Erklärung, warum Sie Smart Contracts kompilieren müssen und was die Kompilierung eigentlich bewirkt.
 lang: de
 incomplete: true
 ---
@@ -9,7 +9,7 @@ Sie müssen Ihren Vertrag kompilieren, damit Ihre Web-App und die Ethereum Virtu
 
 ## Voraussetzungen {#prerequisites}
 
-Es könnte hilfreich sein, unsere Einführung zu [Smart Contracts](/developers/docs/smart-contracts/) und der [Ethereum Virtual Machine](/developers/docs/evm/) zu lesen, bevor Sie sich mit der Kompilierung befassen.
+Es könnte hilfreich sein, unsere Einführung in [Smart Contracts](/developers/docs/smart-contracts/) und die [Ethereum Virtual Machine](/developers/docs/evm/) zu lesen, bevor Sie sich mit der Kompilierung befassen.
 
 ## Die EVM {#the-evm}
 
@@ -39,9 +39,9 @@ Diese werden **Opcodes** genannt. EVM-Opcodes sind die Low-Level-Anweisungen, di
 
 ## Webanwendungen {#web-applications}
 
-Der Compiler erstellt auch das **Application Binary Interface (ABI)**, das Sie benötigen, damit Ihre Anwendung den Vertrag versteht und die Funktionen des Vertrags aufrufen kann.
+Der Compiler erzeugt auch das **Application Binary Interface (ABI)**, das Sie benötigen, damit Ihre Anwendung den Vertrag versteht und die Funktionen des Vertrags aufrufen kann.
 
-Das ABI ist eine JSON-Datei, die den bereitgestellten Vertrag und seine Smart Contract-Funktionen beschreibt. Dies hilft, die Lücke zwischen Web2 und Web3 zu schließen.
+Das ABI ist eine JSON-Datei, die den bereitgestellten Vertrag und seine Smart-Contract-Funktionen beschreibt. Dies hilft, die Lücke zwischen Web2 und Web3 zu schließen.
 
 Eine [JavaScript-Client-Bibliothek](/developers/docs/apis/javascript/) liest das **ABI**, damit Sie Ihren Smart Contract in der Benutzeroberfläche Ihrer Web-App aufrufen können.
 
