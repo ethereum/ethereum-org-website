@@ -1,31 +1,31 @@
 ---
-title: Standardy pro tokeny
-description: "Prozkoumejte tokenové standardy sítě Ethereum, včetně ERC-20, ERC-721 a ERC-1155, pro zaměnitelné a nezaměnitelné tokeny."
+title: Standardy tokenů
+description: Prozkoumejte standardy tokenů na Ethereu, včetně ERC-20, ERC-721 a ERC-1155 pro zastupitelné a nezastupitelné tokeny.
 lang: cs
 incomplete: true
 ---
 
 ## Úvod {#introduction}
 
-Mnoho vývojových standardů na Ethereu se zaměřuje na rozhraní pro tokeny. Tyto standardy pomáhají zajistit, že smart kontrakty zůstanou složitelné, takže když nový projekt vydá token, zůstane kompatibilní se stávajícími decentralizovanými burzami a aplikacemi.
+Mnoho vývojových standardů na [Ethereu](/) se zaměřuje na rozhraní tokenů. Tyto standardy pomáhají zajistit, aby chytré kontrakty zůstaly komponovatelné, takže když nový projekt vydá token, zůstane kompatibilní s existujícími decentralizovanými burzami a aplikacemi.
 
-Tokenové standardy definují, jak se tokeny chovají a jak spolu interagují napříč ekosystémem Etherea. Usnadňují vývojářům práci, protože nemusí znovu objevovat kolo, a zajišťují, že tokeny bezproblémově fungují s peněženkami, burzami a platformami DeFi. Ať už se jedná o herní průmysl, správu nebo jiné případy použití, tyto standardy zajišťují konzistenci a díky nim je Ethereum více propojené.
+Standardy tokenů definují, jak se tokeny chovají a jak interagují napříč ekosystémem Etherea. Usnadňují vývojářům tvorbu bez nutnosti znovu objevovat kolo a zajišťují, že tokeny bezproblémově fungují s peněženkami, burzami a platformami pro decentralizované finance (DeFi). Ať už jde o hraní her, správu nebo jiné případy použití, tyto standardy poskytují konzistenci a činí Ethereum propojenějším.
 
 ## Předpoklady {#prerequisites}
 
-- [Vývojářské standardy sítě Ethereum](/developers/docs/standards/)
+- [Vývojové standardy Etherea](/developers/docs/standards/)
 - [Chytré kontrakty](/developers/docs/smart-contracts/)
 
-## Tokenové standardy {#token-standards}
+## Standardy tokenů {#token-standards}
 
-Zde jsou některé z nejpopulárnějších standardů pro tokeny na Ethereu:
+Zde jsou některé z nejpopulárnějších standardů tokenů na Ethereu:
 
-- [ERC-20](/developers/docs/standards/tokens/erc-20/) – standardní rozhraní pro zaměnitelné (fungible) tokeny, jako jsou hlasovací tokeny, stakovací tokeny nebo virtuální měny.
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) – Standardní rozhraní pro zastupitelné (zaměnitelné) tokeny, jako jsou tokeny pro hlasování, staking tokeny nebo virtuální měny.
 
 ### Standardy NFT {#nft-standards}
 
-- [ERC-721](/developers/docs/standards/tokens/erc-721/) – standardní rozhraní pro nezaměnitelné tokeny, jako je listina k uměleckému dílu nebo písni.
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) – standard ERC-1155 umožňuje efektivnější obchody a seskupování transakcí, čímž se šetří náklady. Tento standard tokenů umožňuje vytvářet jak užitkové tokeny (například $BNB nebo $BAT), tak nezaměnitelné tokeny jako jsou CryptoPunks.
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) – Standardní rozhraní pro nezastupitelné tokeny, jako je doklad o vlastnictví uměleckého díla nebo písně.
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) – ERC-1155 umožňuje efektivnější obchody a sdružování transakcí, čímž šetří náklady. Tento standard tokenů umožňuje vytvářet jak užitkové tokeny (například $BNB nebo $BAT), tak nezastupitelné tokeny (NFT), jako jsou CryptoPunks.
 
 Úplný seznam návrhů [ERC](https://eips.ethereum.org/erc).
 
@@ -33,9 +33,9 @@ Zde jsou některé z nejpopulárnějších standardů pro tokeny na Ethereu:
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 
-## Související návody {#related-tutorials}
+## Související tutoriály {#related-tutorials}
 
 - [Kontrolní seznam pro integraci tokenů](/developers/tutorials/token-integration-checklist/) _– Seznam věcí, které je třeba zvážit při interakci s tokeny._
-- [Pochopení smart kontraktu pro token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Úvod do nasazení vašeho prvního smart kontraktu na testnetu Etherea._
-- [Převody a schvalování tokenů ERC-20 pomocí smart kontraktu v jazyce Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Jak používat smart kontrakt k interakci s tokenem pomocí jazyka Solidity._
-- [Implementace trhu s tokeny ERC-721 [návod]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Jak nabídnout tokenizované položky k prodeji na decentralizovaném inzertním portálu._
+- [Porozumění chytrému kontraktu tokenu ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Úvod do nasazení vašeho prvního chytrého kontraktu v testovací síti Etherea._
+- [Převody a schvalování tokenů ERC-20 z chytrého kontraktu v Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Jak použít chytrý kontrakt k interakci s tokenem pomocí jazyka Solidity._
+- [Implementace trhu ERC-721 [návod]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Jak nabídnout tokenizované položky k prodeji na decentralizovaném inzertním portálu._
