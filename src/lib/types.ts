@@ -1051,10 +1051,18 @@ export type LatestSource = {
    */
   icon?: string
   /**
-   * Optional RSS `<category>` allow-list. Reserved for sources whose feed
-   * mixes unrelated posts (e.g. Besu). Not yet implemented.
+   * Optional RSS `<category>` allow-list for sources whose feed mixes unrelated
+   * posts (e.g. Besu inside the wider LF Decentralized Trust feed) — only items
+   * tagged with one of these categories are kept.
    */
   categoryFilter?: string[]
+  /**
+   * Optional item-link host rewrite. Some feeds publish links to a dead/old
+   * domain while the live articles sit elsewhere (e.g. Vitalik's feed, served
+   * via the eth.limo ENS gateway, still links to the now-defunct vitalik.ca).
+   * Item links beginning with `from` have that prefix swapped for `to`.
+   */
+  linkReplace?: { from: string; to: string }
 }
 
 /** A hardcoded editorial highlight card. `href` may be internal or external. */

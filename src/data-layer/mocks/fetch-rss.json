@@ -748,7 +748,7 @@
     {
       "pubDate": "Mon, 18 May 2026 00:00:00 +0000",
       "title": "A shallow dive into formal verification",
-      "link": "https://vitalik.ca/general/2026/05/18/fv.html",
+      "link": "https://vitalik.eth.limo/general/2026/05/18/fv.html",
       "imgSrc": "http://vitalik.ca/images/icon.png",
       "source": "Vitalik Buterin",
       "category": "Research",
@@ -758,7 +758,7 @@
     {
       "pubDate": "Thu, 02 Apr 2026 00:00:00 +0000",
       "title": "My self-sovereign / local / private / secure LLM setup, April 2026",
-      "link": "https://vitalik.ca/general/2026/04/02/secure_llms.html",
+      "link": "https://vitalik.eth.limo/general/2026/04/02/secure_llms.html",
       "imgSrc": "http://vitalik.ca/images/icon.png",
       "source": "Vitalik Buterin",
       "category": "Research",
@@ -768,7 +768,7 @@
     {
       "pubDate": "Tue, 30 Dec 2025 00:00:00 +0000",
       "title": "Balance of power",
-      "link": "https://vitalik.ca/general/2025/12/30/balance_of_power.html",
+      "link": "https://vitalik.eth.limo/general/2025/12/30/balance_of_power.html",
       "imgSrc": "http://vitalik.ca/images/icon.png",
       "source": "Vitalik Buterin",
       "category": "Research",

@@ -79,7 +79,13 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
   const errors: string[] = []
 
   for (let i = 0; i < LATEST_SOURCES.length; i++) {
-    const { feed: url, name, category, categoryFilter } = LATEST_SOURCES[i]
+    const {
+      feed: url,
+      name,
+      category,
+      categoryFilter,
+      linkReplace,
+    } = LATEST_SOURCES[i]
 
     // Sources whose feed mixes unrelated posts (e.g. Besu inside the wider
     // LF Decentralized Trust feed) restrict items to an RSS `<category>`
@@ -87,6 +93,12 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
     const matchesCategoryFilter = (itemCategories?: string[]) =>
       !categoryFilter ||
       (itemCategories ?? []).some((c) => categoryFilter.includes(c))
+
+    // Swap a dead/old link host for the live one (e.g. vitalik.ca → eth.limo).
+    const rewriteLink = (link: string) =>
+      linkReplace && link.startsWith(linkReplace.from)
+        ? linkReplace.to + link.slice(linkReplace.from.length)
+        : link
 
     // Add a small delay between requests to avoid rate limiting
     // Skip delay for the first request
@@ -136,7 +148,7 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
             return {
               pubDate: item.pubDate[0],
               title: item.title[0],
-              link: item.link[0],
+              link: rewriteLink(item.link[0]),
               imgSrc: getImgSrc(),
               description: toExcerpt(item.description?.[0]),
               source: name,
@@ -185,7 +197,7 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
             return {
               pubDate: entry.updated[0],
               title: getString(entry.title),
-              link: getHref(),
+              link: rewriteLink(getHref()),
               imgSrc: getImgSrc(),
               description: toExcerpt(
                 getString(entry.summary) || getString(entry.content)

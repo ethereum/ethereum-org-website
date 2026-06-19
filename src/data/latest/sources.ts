@@ -96,6 +96,9 @@ export const LATEST_SOURCES: LatestSource[] = [
     feed: "https://vitalik.eth.limo/feed.xml",
     category: "Research",
     icon: "/images/latest/sources/vitalik-buterin.png",
+    // Feed hardcodes links to the now-defunct vitalik.ca; eth.limo (the ENS
+    // gateway) serves the same article paths.
+    linkReplace: { from: "https://vitalik.ca", to: "https://vitalik.eth.limo" },
   },
   {
     name: "Solidity",
