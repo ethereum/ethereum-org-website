@@ -1,26 +1,26 @@
 ---
-title: "智慧型合約庫"
-description: "探索可重複使用的智能合約函式庫與建構模塊，以加速您的以太坊開發專案。"
+title: 智能合約函式庫
+description: 探索可重複使用的智能合約函式庫與建構區塊，以加速你的以太坊開發專案。
 lang: zh-tw
 ---
 
-你無需從頭開始編寫專案中的每一個智慧型合約。 因為我們有許多開放原始碼智慧型合約庫可為你的專案提供可重複利用的組件，因此你不必從零開始。
+你不需要從頭開始編寫專案中的每一個智能合約。有許多開源的智能合約函式庫可供使用，它們為你的專案提供可重複使用的建構區塊，讓你免於重新發明輪子。
 
 ## 先決條件 {#prerequisites}
 
-在使用智慧型合約庫之前，最好先清楚瞭解智慧型合約的結構。 如果您還沒看過[智能合約剖析](/developers/docs/smart-contracts/anatomy/)，請前往該頁面。
+在深入了解智能合約函式庫之前，最好先對智能合約的結構有充分的了解。如果你還沒有這樣做，請前往[智能合約剖析](/developers/docs/smart-contracts/anatomy/)。
 
-## 函式庫中有什麼 {#whats-in-a-library}
+## 函式庫裡有什麼 {#whats-in-a-library}
 
-你通常可以在智慧型合約庫中找到兩種組件：可以添加到合約的可重複使用行為，與採納的各種標準。
+你通常可以在智能合約函式庫中找到兩種建構區塊：可以新增到合約中的可重複使用行為，以及各種標準的實作。
 
 ### 行為 {#behaviors}
 
-撰寫智能合約時，您很可能會發現自己需要一再撰寫類似的模式，例如指派_管理員_地址來執行合約中的受保護操作，或是在發生非預期問題時新增緊急_暫停_按鈕。
+在編寫智能合約時，你很有可能會發現自己一遍又一遍地編寫類似的模式，例如指派一個 _admin_ (管理員) 地址來執行合約中受保護的操作，或者在發生意外問題時新增一個緊急的 _pause_ (暫停) 按鈕。
 
-智能合約函式庫通常會以 Solidity 的 [函式庫](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) 或 [繼承](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) 形式，提供這些行為的可重複使用實作。
+智能合約函式庫通常會以[函式庫](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries)的形式，或透過 Solidity 中的[繼承](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance)，來提供這些行為的可重複使用實作。
 
-舉例來說，下方是 [OpenZeppelin Contracts 函式庫](https://github.com/OpenZeppelin/openzeppelin-contracts) 中 [`Ownable` 合約](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) 的簡化版本，它會指定一個地址作為合約的擁有者，並提供修飾符，將方法的存取權限僅限於該擁有者。
+舉例來說，以下是來自 [歐本齊柏林合約函式庫](https://github.com/OpenZeppelin/openzeppelin-contracts) 中 [`Ownable` 合約](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol)的簡化版本，它將一個地址指定為合約的擁有者，並提供一個修飾符 (modifier) 來限制只有該擁有者才能存取某個方法。
 
 ```solidity
 contract Ownable {
@@ -37,35 +37,35 @@ contract Ownable {
 }
 ```
 
-若要在你的合約中使用這種組件，首先要匯入，再於自己的合約中擴充。 這可讓您使用基礎 `Ownable` 合約提供的修飾符，來保護您自己的函式。
+要在你的合約中使用像這樣的建構區塊，你需要先將其匯入，然後在自己的合約中繼承它。這將允許你使用基礎 `Ownable` 合約提供的修飾符來保護你自己的函式。
 
 ```solidity
-import ".../Ownable.sol"; // Path to the imported library
+import ".../Ownable.sol"; // 匯入函式庫的路徑
 
 contract MyContract is Ownable {
-    // The following function can only be called by the owner
+    // 以下函式只能由擁有者呼叫
     function secured() onlyOwner public {
         msg.sender.transfer(1 ether);
     }
 }
 ```
 
-另一個常見的例子是 [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) 或 [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html)。 這些庫（與基礎合約不同）提供了語言本身不具備的溢出檢查算術函數。 使用這些庫而非原生算術運算可以防止合約出現溢出，這類錯誤可能導致災難性後果！
+另一個受歡迎的例子是 [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) 或 [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html)。這些是函式庫（與基礎合約相反），它們提供了帶有溢位檢查的算術函式，而這是語言本身未提供的。使用這些函式庫之一來取代原生算術運算是一個好習慣，可以保護你的合約免受溢位影響，因為溢位可能會帶來災難性的後果！
 
 ### 標準 {#standards}
 
-為了促進[可組合性與互通性](/developers/docs/smart-contracts/composability/)，以太坊社群以 **ERC** 的形式定義了多項標準。 您可以在[標準](/developers/docs/standards/)一節中閱讀更多相關資訊。
+為了促進[可組合性與互操作性](/developers/docs/smart-contracts/composability/)，以太坊社群以 **ERC** 的形式定義了多項標準。你可以在[標準](/developers/docs/standards/)章節中閱讀更多相關資訊。
 
-將以太坊意見徵求納入合約時，更好的做法是尋找標準實作，而非嘗試推出自己的方式。 許多智慧型合約庫包含採用最熱門 ERC 標準的做法。 例如，在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md)、[DappSys](https://github.com/dapphub/ds-token/) 和 [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20) 中，都可以找到無所不在的[ERC20 可替代代幣標準](/developers/tutorials/understand-the-erc-20-token-smart-contract/)。 此外，一些以太坊意見徵求也提供作為以太坊意見徵求本身一部分的規範實作。
+當將 ERC 納入你的合約時，尋找標準實作會是個好主意，而不是試圖自己開發。許多智能合約函式庫都包含了最受歡迎的 ERC 實作。例如，無處不在的 [ERC-20 同質化代幣標準](/developers/tutorials/understand-the-erc-20-token-smart-contract/) 可以在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md)、[DappSys](https://github.com/dapphub/ds-token/) 和 [歐本齊柏林](https://docs.openzeppelin.com/contracts/3.x/erc20) 中找到。此外，某些 ERC 也會提供規範實作作為 ERC 本身的一部分。
 
-值得一提的是，一些以太坊意見徵求並非獨立的，而是對其他以太坊意見徵求的補充。 例如，[ERC2612](https://eips.ethereum.org/EIPS/eip-2612) 為 ERC20 新增了擴充功能，以改善其可用性。
+值得一提的是，有些 ERC 並非獨立存在，而是其他 ERC 的附加元件。例如，[ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) 為 ERC-20 新增了一個擴充功能，以提高其可用性。
 
 ## 如何新增函式庫 {#how-to}
 
-務必參考你要納入的庫文件，以掌握如何將其納入專案的具體說明。 有數個 Solidity 合約函式庫是使用 `npm` 封裝，所以您只要 `npm install` 即可安裝。 大多數[編譯](/developers/docs/smart-contracts/compiling/)合約的工具都會在您的 `node_modules` 中尋找智能合約函式庫，因此您可以執行下列操作：
+請務必參考你所引入之函式庫的文件，以取得如何將其納入專案的具體指示。有幾個 Solidity 合約函式庫是使用 `npm` 打包的，因此你可以直接 `npm install` 它們。大多數用於[編譯](/developers/docs/smart-contracts/compiling/)合約的工具都會在你的 `node_modules` 中尋找智能合約函式庫，因此你可以執行以下操作：
 
 ```solidity
-// This will load the @openzeppelin/contracts library from your node_modules
+// 這將從您的 node_modules 載入 @openzeppelin/contracts 函式庫
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract MyNFT is ERC721 {
@@ -73,45 +73,45 @@ contract MyNFT is ERC721 {
 }
 ```
 
-無論使用哪種方法，在加入函式庫時，都務必留意[語言](/developers/docs/smart-contracts/languages/)版本。 例如，如果你使用 Solidity 0.5 編寫合約，就不能使用 Solidity 0.6 庫。
+無論你使用哪種方法，在引入函式庫時，請務必留意[語言](/developers/docs/smart-contracts/languages/)版本。例如，如果你使用 Solidity 0.5 編寫合約，就不能使用適用於 Solidity 0.6 的函式庫。
 
-## 使用時機 {#when-to-use}
+## 何時使用 {#when-to-use}
 
-在你的專案使用智慧型合約庫有幾個好處。 首先，這提供了現成的組件，可以納入你的系統，而不必自己編寫程式碼，從而節省時間。
+在專案中使用智能合約函式庫有幾個好處。首先也是最重要的是，它為你提供了可以納入系統中現成的建構區塊，從而節省了你的時間，而無需自己編寫程式碼。
 
-安全性也是一個重要的優點。 開放原始碼智慧型合約庫也經常接受嚴格審查。 鑑於許多專案都依賴它們，社群有強烈動機加以持續審查。 在應用程式代碼中比起可重複使用的合約庫更容易發現錯誤。 有些函式庫也會經過[外部稽核](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits)，以增加安全性。
+安全性也是一大優勢。開源智能合約函式庫通常會受到嚴格的審查。由於許多專案都依賴它們，社群有強烈的動機對其進行持續的審查。在應用程式碼中發現錯誤的情況，比在可重複使用的合約函式庫中發現錯誤要常見得多。有些函式庫還會進行[外部稽核](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits)以獲得額外的安全性。
 
-然而，使用智慧型合約庫可能將你不熟悉的程式碼納入專案。 我們會想匯入合約，並將其直接納入專案，但若未充分理解該合約的作用，可能會由於意外行為，而無意中在系統中引入問題。 務必參閱要匯入的程式碼文件，然後在納入專案前審查程式碼！
+然而，使用智能合約函式庫也伴隨著將你不熟悉的程式碼引入專案的風險。直接匯入合約並將其納入專案是很誘人的，但如果沒有充分了解該合約的作用，你可能會因為非預期的行為而無意中在系統中引入問題。請務必閱讀你所匯入之程式碼的文件，然後在將其納入專案之前審查程式碼本身！
 
-最後，在決定是否納入庫時，要考慮其總體使用情況。 獲得廣泛採用的資料庫，好處在於有取得更廣大的社群和關注來審視問題。 在建立智慧型合約時，安全性應為首要考量！
+最後，在決定是否引入函式庫時，請考慮其整體使用情況。被廣泛採用的函式庫具有社群規模較大、有更多人關注並尋找問題的優勢。在使用智能合約進行建構時，安全性應該是你的首要考量！
 
 ## 相關工具 {#related-tools}
 
-**OpenZeppelin Contracts -** **_最受歡迎的安全智能合約開發函式庫。_**
+**歐本齊柏林合約 -** **_最受歡迎的安全智能合約開發函式庫。_**
 
 - [文件](https://docs.openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社群論壇](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_安全、簡單、靈活的智能合約建置組件。_**
+**DappSys -** **_安全、簡單、靈活的智能合約建構區塊。_**
 
 - [文件](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-**HQ20 -** **_一個包含合約、函式庫和範例的 Solidity 專案，可協助您建置適用於真實世界、功能齊全的分散式應用程式。_**
+**HQ20 -** **_一個包含合約、函式庫和範例的 Solidity 專案，可協助你建構適用於現實世界的全功能分散式應用程式。_**
 
 - [GitHub](https://github.com/HQ20/contracts)
 
-**thirdweb Solidity SDK -** **_提供有效率地建置自訂智能合約所需的工具_**
+**thirdweb Solidity SDK -** **_提供高效建構自訂智能合約所需的工具_**
 
 - [文件](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## 相關教學 {#related-tutorials}
 
-- [以太坊開發人員的安全性考量](/developers/docs/smart-contracts/security/) _– 關於建置智能合約時安全性考量的教學，包含函式庫的使用。_
-- [了解 ERC-20 代幣智能合約](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- 關於 ERC20 標準的教學，由多個函式庫提供。_
+- [以太坊開發者的安全考量](/developers/docs/smart-contracts/security/) _– 關於建構智能合約時安全考量的教學，包含函式庫的使用。_
+- [了解 ERC-20 代幣智能合約](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– 關於 ERC-20 標準的教學，由多個函式庫提供。_
 
 ## 延伸閱讀 {#further-reading}
 
-_知道一個曾經幫助你學習更多社區或社團資源? 歡迎在本頁自由編輯或添加內容！_
+_知道有什麼社群資源對你有幫助嗎？編輯此頁面並加入它！_

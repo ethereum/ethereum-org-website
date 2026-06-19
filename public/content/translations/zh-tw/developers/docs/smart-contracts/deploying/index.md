@@ -1,59 +1,59 @@
 ---
-title: "部署智慧型合約"
-description: "了解如何將智能合約部署至以太坊網路，包括先決條件、工具和部署步驟。"
+title: 部署智能合約
+description: 了解如何將智能合約部署到以太坊網路，包含先決條件、工具和部署步驟。
 lang: zh-tw
 ---
 
-你需要部署智慧型合約，以供以太坊網路使用者使用。
+你需要部署你的智能合約，才能讓以太坊網路的使用者使用它。
 
-要部署智慧型合約，只需要傳送一個包含編譯後智慧型合約程式碼的以太坊交易，而無須指定任何接收者。
+要部署智能合約，你只需要發送一筆包含智能合約編譯後程式碼的以太坊交易，且不指定任何接收者。
 
 ## 先決條件 {#prerequisites}
 
-在部署智能合約之前，您應先了解 [以太坊網路](/developers/docs/networks/)、[交易](/developers/docs/transactions/) 和 [智能合約的結構](/developers/docs/smart-contracts/anatomy/)。
+在部署智能合約之前，你應該先了解[以太坊網路](/developers/docs/networks/)、[交易](/developers/docs/transactions/)以及[智能合約剖析](/developers/docs/smart-contracts/anatomy/)。
 
-部署合約也需要花費以太幣 (ETH)，因為它們會儲存在區塊鏈上，所以您應該熟悉以太坊上的 [gas 和費用](/developers/docs/gas/)。
+部署合約也需要花費以太幣 (ETH)，因為它們儲存在區塊鏈上，所以你應該熟悉以太坊上的[燃料與手續費](/developers/docs/gas/)。
 
-最後，在部署合約之前，您需要先編譯合約，所以請確定您已閱讀有關 [編譯智能合約](/developers/docs/smart-contracts/compiling/) 的內容。
+最後，在部署之前你需要編譯你的合約，因此請確保你已經閱讀過關於[編譯智能合約](/developers/docs/smart-contracts/compiling/)的內容。
 
 ## 如何部署智能合約 {#how-to-deploy-a-smart-contract}
 
-### 您需要準備什麼 {#what-youll-need}
+### 你需要的東西 {#what-youll-need}
 
-- 您的合約位元組碼 – 這是透過 [編譯](/developers/docs/smart-contracts/compiling/) 產生的
-- 可作為燃料的以太幣 – 像其他交易一樣，你需要設定燃料限制，所以請注意合約部署需要比簡單的以太幣傳送花費更多燃料
-- 一個部署腳本或外掛程式
-- 存取 [以太坊節點](/developers/docs/nodes-and-clients/) 的權限，可以透過執行自己的節點、連線到公用節點，或透過使用 [節點服務](/developers/docs/nodes-and-clients/nodes-as-a-service/) 的 API 金鑰來達成
+- 你合約的位元組碼 – 這是透過[編譯](/developers/docs/smart-contracts/compiling/)產生的
+- 用作燃料的 ETH – 你會像其他交易一樣設定你的 Gas 限制，因此請注意，合約部署需要的燃料比單純的 ETH 轉帳多得多
+- 部署指令碼或外掛程式
+- 存取[以太坊節點](/developers/docs/nodes-and-clients/)的權限，可以透過執行你自己的節點、連接到公開節點，或是使用[節點服務](/developers/docs/nodes-and-clients/nodes-as-a-service/)的 API 金鑰來達成
 
 ### 部署智能合約的步驟 {#steps-to-deploy}
 
-所涉具體步驟仰賴所用的開發框架。 例如，您可以查看 [Hardhat 有關部署您的合約的文件](https://hardhat.org/docs/tutorial/deploying) 或 [Foundry 有關部署和驗證智能合約的文件](https://book.getfoundry.sh/forge/deploying)。 部署之後，您的合約將會有一個像其他 [帳戶](/developers/docs/accounts/) 一樣的以太坊地址，並可使用 [原始碼驗證工具](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) 進行驗證。
+具體步驟將取決於所使用的開發框架。例如，你可以查看 [Hardhat 關於部署合約的文件](https://hardhat.org/docs/tutorial/deploying)或 [Foundry 關於部署與驗證智能合約的文件](https://book.getfoundry.sh/forge/deploying)。一旦部署完成，你的合約將會像其他[帳戶](/developers/docs/accounts/)一樣擁有一個以太坊地址，並且可以使用[原始碼驗證工具](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)進行驗證。
 
 ## 相關工具 {#related-tools}
 
-**Remix - _Remix IDE 允許為以太坊之類的區塊鏈開發、部署和管理智能合約_**
+**Remix - _Remix IDE 允許為類似以太坊的區塊鏈開發、部署與管理智能合約_**
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly - _Web3 開發平台，提供了開發、測試、監控和營運智能合約所需的偵錯、可觀察性和基礎架構組件_**
+**Tenderly - _Web3 開發平台，為開發、測試、監控與營運智能合約提供除錯、可觀測性與基礎設施建構模塊_**
 
 - [tenderly.co](https://tenderly.co/)
 - [文件](https://docs.tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
-**Hardhat - _一個用於編譯、部署、測試和偵錯您的以太坊軟體的開發環境_**
+**Hardhat - _用於編譯、部署、測試與除錯以太坊軟體的開發環境_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [有關部署您的合約的文件](https://hardhat.org/docs/tutorial/deploying)
+- [關於部署合約的文件](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
-**thirdweb - _使用單一指令，輕鬆將任何合約部署至任何 EVM 相容鏈_**
+**thirdweb - _使用單一指令，輕鬆將任何合約部署到任何 EVM 相容鏈_**
 
 - [文件](https://portal.thirdweb.com/deploy/)
 
-**Crossmint - _企業級 Web3 開發平台，可用於部署智能合約、啟用信用卡和跨鏈支付，並使用 API 建立、分發、銷售、儲存和編輯 NFT。_**
+**Crossmint - _企業級 Web3 開發平台，用於部署智能合約、啟用信用卡與跨鏈支付，並使用 API 建立、發行、銷售、儲存與編輯 NFT。_**
 
 - [crossmint.com](https://www.crossmint.com)
 - [文件](https://docs.crossmint.com)
@@ -62,20 +62,20 @@ lang: zh-tw
 
 ## 相關教學 {#related-tutorials}
 
-- [部署您的第一個智能合約](/developers/tutorials/deploying-your-first-smart-contract/) _– 在以太坊測試網路上部署您的第一個智能合約的簡介。_
-- [Hello World | 智能合約教學](/developers/tutorials/hello-world-smart-contract/) _– 一個在以太坊上建立和部署基本智能合約的簡易教學。_
-- [從 Solidity 與其他合約互動](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– 如何從現有合約部署智能合約並與其互動。_
-- [如何縮減您的合約大小](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- 如何縮減您的合約大小，以使其保持在限制之下並節省 gas_
+- [部署你的第一個智能合約](/developers/tutorials/deploying-your-first-smart-contract/) _– 介紹如何在以太坊測試網路上部署你的第一個智能合約。_
+- [Hello World | 智能合約教學](/developers/tutorials/hello-world-smart-contract/) _– 簡單易懂的教學，教你如何在以太坊上建立與部署基本的智能合約。_
+- [從 Solidity 與其他合約互動](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– 如何從現有合約部署智能合約並與之互動。_
+- [如何縮小你的合約大小](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- 如何縮減合約大小以保持在限制範圍內並節省燃料_
 
 ## 延伸閱讀 {#further-reading}
 
-- [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [使用 Hardhat 部署您的合約](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
+- [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _歐本齊柏林_
+- [使用 Hardhat 部署你的合約](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
-_知道一個曾經幫助你學習更多社區或社團資源? 歡迎在本頁自由編輯或添加內容！_
+_知道有哪個社群資源對你有幫助嗎？編輯此頁面並加入它！_
 
 ## 相關主題 {#related-topics}
 
 - [開發框架](/developers/docs/frameworks/)
 - [執行以太坊節點](/developers/docs/nodes-and-clients/run-a-node/)
-- [節點即服務](/developers/docs/nodes-and-clients/nodes-as-a-service)
+- [節點即服務 (Nodes-as-a-service)](/developers/docs/nodes-and-clients/nodes-as-a-service)
