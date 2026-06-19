@@ -3720,6 +3720,40 @@ function fixBackslashBeforeClosingTag(content: string): {
  * after the {#anchor-id} tag, e.g. {#network-impact}네트워크-충격
  * These break rendering and must be stripped.
  */
+/**
+ * Strip empty heading anchors ({#} or {# }) from markdown headings.
+ *
+ * English h5 headings have no anchor, but the pipeline can inject an empty
+ * {#} onto translated h5 headings. MDX parses {#} as a JS expression and
+ * acorn rejects it, breaking the build (PR #18438 hit 70 files / 24 locales).
+ * An empty {#} is never valid, so stripping it is always correct.
+ *
+ * Example: "##### Operating system {#}" -> "##### Operating system"
+ */
+function fixEmptyHeadingAnchors(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    parts[i] = parts[i].replace(
+      /^(#{1,6} .*?)[ \t]*\{#[ \t]*\}[ \t]*$/gm,
+      (_, heading) => {
+        fixCount++
+        return heading
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 function fixJunkAfterHeadingAnchors(content: string): {
   content: string
   fixCount: number
@@ -4677,6 +4711,10 @@ function processMarkdownFile(
   applyFix(
     () => fixBacktickWrappedLinks(content),
     (n) => `Unwrapped ${n} backtick-wrapped markdown links`
+  )
+  applyFix(
+    () => fixEmptyHeadingAnchors(content),
+    (n) => `Stripped ${n} empty {#} heading anchor(s)`
   )
   applyFix(
     () => fixJunkAfterHeadingAnchors(content),
@@ -5734,6 +5772,7 @@ export const _testOnly = {
   // Warnings
   warnPunctuationOnlyHeadings,
   fixBackslashBeforeClosingTag,
+  fixEmptyHeadingAnchors,
   fixJunkAfterHeadingAnchors,
   fixNonAsciiHeadingIds,
   fixJsxMarkdownHybrids,
