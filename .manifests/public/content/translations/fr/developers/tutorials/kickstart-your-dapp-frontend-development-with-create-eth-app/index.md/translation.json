@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-19T22:57:05.635Z",
+  "englishManifestHash": "d3bc493b61b1",
+  "placeholderOrder": [
+    "LINK-51cd81",
+    "LINK-a0c791",
+    "LINK-2640d6",
+    "CODE-b5c22b",
+    "CODEBLOCK-837649",
+    "LINK-7e82c7",
+    "CODE-f960fc",
+    "LINK-96a601",
+    "LINK-eb5ea9",
+    "LINK-d028a0",
+    "LINK-5ec044",
+    "LINK-58f7a5",
+    "CODE-5169ec",
+    "CODE-f27fe3",
+    "LINK-6a15ea",
+    "LINK-c67bf8",
+    "LINK-bef7dc",
+    "LINK-23dc32",
+    "LINK-3d340c",
+    "LINK-3507c9",
+    "CODE-702998",
+    "LINK-279f91",
+    "LINK-150260",
+    "LINK-e8bf4c",
+    "LINK-d88921",
+    "LINK-4e2f1b",
+    "CODEBLOCK-5a6bca",
+    "CODE-84aadb",
+    "LINK-821d73",
+    "LINK-d05b69",
+    "LINK-40ebe4",
+    "LINK-58447e",
+    "LINK-9003dd",
+    "LINK-80fc34",
+    "LINK-898965",
+    "IMAGE-cbd8b5",
+    "LINK-5a97c2",
+    "LINK-a8ffb6",
+    "LINK-6f97a5",
+    "LINK-db9374",
+    "LINK-2640d6",
+    "LINK-60fb1e",
+    "LINK-2ce704",
+    "LINK-6fe0e5"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-837649": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5a6bca": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-b5c22b": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm install yarn --global"
+      }
+    },
+    "CODE-f960fc": {
+      "type": "inline-code",
+      "values": {
+        "content": "http://localhost:3000/"
+      }
+    },
+    "CODE-5169ec": {
+      "type": "inline-code",
+      "values": {
+        "content": "yarn install"
+      }
+    },
+    "CODE-f27fe3": {
+      "type": "inline-code",
+      "values": {
+        "content": "create-eth-app"
+      }
+    },
+    "CODE-702998": {
+      "type": "inline-code",
+      "values": {
+        "content": "MyContract.methods.latestTradeTime().call()"
+      }
+    },
+    "CODE-84aadb": {
+      "type": "inline-code",
+      "values": {
+        "content": "yarn create eth-app my-eth-app --with-template aave"
+      }
+    },
+    "IMAGE-cbd8b5": {
+      "type": "image",
+      "values": {
+        "path": "./flashloan-meme.png"
+      }
+    },
+    "LINK-51cd81": {
+      "type": "link",
+      "values": {
+        "url": "https://soliditydeveloper.com/solidity-overview-2020"
+      }
+    },
+    "LINK-a0c791": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/PaulRBerg/create-eth-app"
+      }
+    },
+    "LINK-2640d6": {
+      "type": "link",
+      "values": {
+        "url": "https://sablier.com/"
+      }
+    },
+    "LINK-7e82c7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/facebook/create-react-app"
+      }
+    },
+    "LINK-96a601": {
+      "type": "link",
+      "values": {
+        "url": "https://www.netlify.com/"
+      }
+    },
+    "LINK-eb5ea9": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/"
+      }
+    },
+    "LINK-d028a0": {
+      "type": "link",
+      "values": {
+        "url": "https://vuejs.org/"
+      }
+    },
+    "LINK-5ec044": {
+      "type": "link",
+      "values": {
+        "url": "https://legacy.reactjs.org/docs/hooks-effect.html"
+      }
+    },
+    "LINK-58f7a5": {
+      "type": "link",
+      "values": {
+        "url": "https://classic.yarnpkg.com/en/docs/workspaces/"
+      }
+    },
+    "LINK-6a15ea": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/"
+      }
+    },
+    "LINK-c67bf8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.io/"
+      }
+    },
+    "LINK-bef7dc": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.org/v5/"
+      }
+    },
+    "LINK-23dc32": {
+      "type": "link",
+      "values": {
+        "url": "https://graphql.org/"
+      }
+    },
+    "LINK-3d340c": {
+      "type": "link",
+      "values": {
+        "url": "https://restfulapi.net/"
+      }
+    },
+    "LINK-3507c9": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a"
+      }
+    },
+    "LINK-279f91": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Round-trip_delay_time"
+      }
+    },
+    "LINK-150260": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph"
+      }
+    },
+    "LINK-e8bf4c": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/explorer/"
+      }
+    },
+    "LINK-d88921": {
+      "type": "link",
+      "values": {
+        "url": "https://www.apollographql.com/docs/react/get-started/"
+      }
+    },
+    "LINK-4e2f1b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.apollographql.com/blog/apollo-client-now-with-react-hooks"
+      }
+    },
+    "LINK-821d73": {
+      "type": "link",
+      "values": {
+        "url": "https://aave.com/"
+      }
+    },
+    "LINK-d05b69": {
+      "type": "link",
+      "values": {
+        "url": "https://aave.com/docs/developers/flash-loans"
+      }
+    },
+    "LINK-40ebe4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.aave.com/developers/getting-started/using-graphql"
+      }
+    },
+    "LINK-58447e": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/explorer/subgraph/aave/protocol-ropsten"
+      }
+    },
+    "LINK-9003dd": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/explorer/subgraph/aave/protocol"
+      }
+    },
+    "LINK-80fc34": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/explorer/subgraph/aave/protocol-raw"
+      }
+    },
+    "LINK-898965": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/explorer/subgraph/aave/protocol"
+      }
+    },
+    "LINK-5a97c2": {
+      "type": "link",
+      "values": {
+        "url": "https://compound.finance/"
+      }
+    },
+    "LINK-a8ffb6": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195"
+      }
+    },
+    "LINK-6f97a5": {
+      "type": "link",
+      "values": {
+        "url": "https://uniswap.exchange/"
+      }
+    },
+    "LINK-db9374": {
+      "type": "link",
+      "values": {
+        "url": "https://uniswap.org/blog/uniswap-v2/"
+      }
+    },
+    "LINK-60fb1e": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/explorer/subgraph/sablierhq/sablier"
+      }
+    },
+    "LINK-2ce704": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/bsS8T47"
+      }
+    },
+    "LINK-6fe0e5": {
+      "type": "link",
+      "values": {
+        "url": "https://mui.com/material-ui/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T22:57:05.635Z",
+      "status": "success"
+    }
+  }
+}
