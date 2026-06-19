@@ -12,7 +12,7 @@ The site has **six** layouts. All live in `src/layouts/`. Each maps to a `templa
 | `StaticLayout` | `src/layouts/Static.tsx` | One-off markdown pages with no sub-nav. | `static` (default fallback) |
 | `DocsLayout` | `src/layouts/Docs.tsx` | Developer docs with the docs sidebar. | `docs` |
 | `TutorialLayout` | `src/layouts/Tutorial.tsx` | Long-form developer tutorials with author/date/skill metadata. | `tutorial` |
-| `ContentLayout` | `src/layouts/ContentLayout.tsx` | **Not a top-level layout.** Underlying scaffold consumed by the four above plus a handful of app-router pages (e.g. `/learn/`). | n/a (composed, not selected) |
+| `ContentLayout` | `src/layouts/ContentLayout.tsx` | **Not a top-level layout.** Composition scaffold (hero + TOC aside + `MainArticle` + contributors + feedback). Consumed by `TopicLayout`, and composed directly by app-router content pages (`/learn/`, `/staking/`, `/use-cases/`, `/what-is-ethereum/`). NOT used by Docs/Static/Tutorial — they build their own scaffold. | n/a (composed, not selected) |
 | `BaseLayout` | `src/layouts/BaseLayout.tsx` | Root document scaffold (`<html>`, providers). Applied automatically by the App Router. | n/a |
 
 That's the whole inventory. If a UI need can be met by configuring one of these (especially `TopicLayout`), it should be.
@@ -24,7 +24,7 @@ When you have a page or section that "needs its own layout," walk this list top-
 1. **Does the page render through `[...slug]` with a markdown source?** Pick the right `template:` value. `TopicLayout` for anything with a sub-nav across sibling pages, `static` otherwise. No new layout.
 2. **Does the page have a sub-nav dropdown linking related sibling pages?** That's exactly what `TopicLayout` is for. Add a `src/data/topics/<key>.ts` config file. Route `layoutMapping[<key>] = TopicLayout`. No new layout.
 3. **Is the variation just a swap-in component (hero, before-content, after-content)?** Use the slots `TopicLayout` already exposes (`afterContent`, `heroSection` override via config `hubHero`) or add a narrow new slot. No new layout.
-4. **Is the page a one-off App Router page (`app/[locale]/<route>/page.tsx`) with non-markdown content?** Compose `ContentLayout` directly (see `/learn/`). No new layout.
+4. **Is the page a one-off App Router page (`app/[locale]/<route>/page.tsx`) with non-markdown content?** Compose `ContentLayout` directly (see `/learn/`) and pick its `asidePosition` (see "`ContentLayout` in Practice" below). No new layout — and don't hand-roll the `<main>` / TOC / byline / feedback shell; that's exactly what `ContentLayout` owns.
 
 If you can stop at any of those steps, you don't need a new layout file.
 
@@ -90,6 +90,39 @@ When the topic genuinely needs something extra:
 - **`afterContent` prop** — Render arbitrary JSX after the markdown content. Used by Staking for its community callout. Passed by the slug router for the one or two topics that need it. If you find yourself wanting a *third* `afterContent` consumer, consider promoting it to `config.afterContent` (still keyed by topic data).
 
 If your topic needs something none of these expose, the right move is usually a narrow new slot on `TopicLayout`, not a new layout file.
+
+## `ContentLayout` in Practice
+
+`ContentLayout` is the shared scaffold for hub/article-style pages: it renders the hero, a TOC aside, the `MainArticle` (with `.flow`), the `FileContributors` block, the end-of-page `ContentFeedback`, and the mobile sub-nav dropdown. App-router content pages compose it directly — **don't hand-roll the `<main>` / flex / TOC / byline / feedback shell on the page**; pass content as `children` and let the layout own the structure.
+
+```tsx
+<ContentLayout
+  heroSection={<PageHero … />}        // or HubHero
+  tocItems={tocItems}
+  contributors={contributors}
+  lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+  asidePosition="right-top"           // optional; see below
+  listenSlug="what-is-ethereum"       // optional; renders the audio player in the byline
+>
+  <Section id="…">…</Section>
+  {/* more <Section> blocks */}
+</ContentLayout>
+```
+
+### `asidePosition` — the two shapes
+
+One prop selects between two coherent arrangements (the aside side co-varies with where contributors sit):
+
+| `asidePosition` | TOC | Contributors | Article width | Use for |
+|---|---|---|---|---|
+| `"left-bottom"` (default) | left rail (`variant="left"`), hidden on mobile in favour of the sticky `MobileButtonDropdown` | at the **foot** of the article (`border-t`) | wide (`basis-5xl`) | topic hubs + `/learn/`, `/staking/`, `/use-cases/` |
+| `"right-top"` | card (`variant="card"`) in a right-hand `<aside>` | compact **byline at the top** (`FileContributors variant="compact"`, optional `ListenToPlayer`) | capped (`max-w-3xl`) | standalone concept articles — `/what-is-ethereum/` and its siblings (`what-is-ether`, `ethereum-vs-bitcoin`, `what-is-the-ethereum-network`, `ethereum-history-founder-and-ownership`) |
+
+Notes:
+- The byline spacing (player `mt-space-half`, first-section gap) is owned by the layout — pages don't hand-tune it.
+- `FileContributors` exposes `variant="compact"` for the top byline; reach for it via `asidePosition="right-top"` rather than overriding `FileContributors` padding with `!`/`[&>div]` hacks at the call site.
+- `listenSlug` is the only thing that toggles the audio player — omit it on pages without a playlist.
+- This is **not** the future `ArticleLayout` (reserved for Tutorial / Latest / Stories). It's the existing `ContentLayout` with a positional variant.
 
 ## When a New Layout IS the Answer
 
