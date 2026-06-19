@@ -1,31 +1,31 @@
 ---
-title: "使用WebSockets"
-description: "利用WebSockets 及 Alchemy提交一JSON-RPC要求和事件訂閱之簡介."
-author: "Elan Halpern"
+title: 使用 WebSockets
+description: 使用 WebSockets 與 Alchemy 發送 JSON-RPC 請求並訂閱事件的指南。
+author: "伊蘭·哈爾彭"
 lang: zh-tw
-tags: [ "alchemy", "websockets", "querying", "javascript" ]
+tags: ["alchemy", "websockets", "查詢", "javascript"]
 skill: beginner
-breadcrumb: "WebSockets"
+breadcrumb: WebSockets
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
-此為一初級教學來指導你如何利用WebSockets 及 Alchemy來提交一請求於以太坊區塊鏈.
+這是一篇入門指南，介紹如何使用 WebSockets 與 Alchemy 向以太坊區塊鏈發送請求。
 
 ## WebSockets 與 HTTP 的比較 {#websockets-vs-http}
 
-不像HTTP, 利用WebSockets, 你無須持續請求當想要一特定情報時. WebSockets 為你維持一網路連結(如使用正確) 並傾聽變化.
+與 HTTP 不同，使用 WebSockets 時，你不需要在想要獲取特定資訊時不斷發送請求。WebSockets 會為你維持網路連線（如果設定正確的話）並監聽變更。
 
-就如任何網絡連接一樣, 你不應該假設WebSocket永遠不間斷地保持打開狀態, 你應期盼其正確處理丟棄的連接和處理正確新連接可能為一挑戰. 另一WebSocket缺點為你不需要取得一HTTP狀態節點於一回覆, 你只需一錯誤訊息.
+如同任何網路連線一樣，你不應假設 WebSocket 會永遠保持開啟而不中斷，但手動正確處理斷線與重新連線可能會是一項挑戰。WebSockets 的另一個缺點是，你不會在回應中獲得 HTTP 狀態碼，而只會收到錯誤訊息。
 
-[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) 會自動新增 WebSocket 故障和重試的處理，無需任何設定。
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) 會自動加入對 WebSocket 失敗與重試的處理，無需任何設定。
 
-## 試用看看 {#try-it-out}
+## 試試看 {#try-it-out}
 
-測試 WebSockets 最簡單的方法，是安裝用於發出 WebSocket 請求的命令列工具，例如 [wscat](https://github.com/websockets/wscat)。 使用wscat, 你將能傳送以下之請求:
+測試 WebSockets 最簡單的方法是安裝一個用於發送 WebSocket 請求的命令列工具，例如 [wscat](https://github.com/websockets/wscat)。使用 wscat，你可以如下發送請求：
 
-_注意：如果您有 Alchemy 帳戶，可以用您自己的 API 金鑰取代 `demo`。 [在此註冊免費的 Alchemy 帳戶！](https://auth.alchemy.com/signup)_
+_注意：如果你有 Alchemy 帳戶，可以將 `demo` 替換為你自己的 API 金鑰。[在此註冊免費的 Alchemy 帳戶！](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -33,20 +33,19 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
 <  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-
 ```
 
 ## 如何使用 WebSockets {#how-to-use-websockets}
 
-來開始, 為你的應用程式打開一WebSocket使用其URL. 您可以在[您的儀表板](https://dashboard.alchemy.com/)中打開應用程式的頁面，然後按一下「檢視金鑰」，即可找到您應用程式的 WebSocket URL。 值得注意的是, 你應用程式之WebSockets URL與其HTTP請求有所些微相異, 但雙方登能被發現當點擊"驗證鑰鍵".
+首先，使用你應用程式的 WebSocket URL 開啟一個 WebSocket。你可以在 [你的儀表板](https://dashboard.alchemy.com/) 中開啟應用程式頁面並點擊「View Key」來找到應用程式的 WebSocket URL。請注意，你的應用程式的 WebSocket URL 與 HTTP 請求的 URL 不同，但兩者都可以透過點擊「View Key」找到。
 
-![在您的 Alchemy 儀表板中尋找 WebSocket URL 的位置](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
 
-[Alchemy API 參考資料](https://www.alchemy.com/docs/reference/api-overview)中列出的任何 API 都可以透過 WebSocket 使用。 來達成此, 使用HTTP POST本文體相同之有效載荷, 且通過WebSocket傳送下載之有效載荷.
+[Alchemy API 參考文件](https://www.alchemy.com/docs/reference/api-overview) 中列出的任何 API 都可以透過 WebSocket 使用。為此，請使用與 HTTP POST 請求主體相同的有效負載 (payload)，但改為透過 WebSocket 發送該有效負載。
 
 ## 使用 Web3 {#with-web3}
 
-轉換至WebSockets利用客戶圖書資料庫如Web3極為簡單. 簡單來通過WebSocket URL, 而非HTTP URL, 當轉換至Web3客戶. 例如：
+在使用像 Web3 這樣的客戶端函式庫時，轉換到 WebSockets 非常簡單。只需在實例化你的 Web3 客戶端時，傳入 WebSocket URL 而不是 HTTP URL 即可。例如：
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -56,38 +55,38 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ## 訂閱 API {#subscription-api}
 
-透過 WebSocket 連線時，您可以使用另外兩種方法：`eth_subscribe` 和 `eth_unsubscribe`。 此方案需要你來傾聽特定事件並被立即通知.
+透過 WebSocket 連線時，你可以使用兩個額外的方法：`eth_subscribe` 與 `eth_unsubscribe`。這些方法將允許你監聽特定事件並立即收到通知。
 
 ### `eth_subscribe` {#eth-subscribe}
 
-生成一新訂閱為專門特定事件. [進一步了解 `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe)。
+為指定的事件建立新的訂閱。[了解更多關於 `eth_subscribe` 的資訊](https://docs.alchemy.com/reference/eth-subscribe)。
 
 #### 參數 {#parameters}
 
 1. 訂閱類型
-2. 可選參數
+2. 選擇性參數
 
-第一參數特定出傾聽事件之類型. 第二參數包含額外選項基於第一參數. 不同類型之訂閱類型, 選項, 及其事件有效載荷形容如下.
+第一個參數指定要監聽的事件類型。第二個參數包含取決於第一個參數的額外選項。不同的訂閱類型、其選項以及其事件有效負載說明如下。
 
-#### 傳回值 {#returns}
+#### 回傳值 {#returns}
 
-訂閱 ID：此 ID 將附加至任何收到的事件，也可用於透過 `eth_unsubscribe` 取消訂閱。
+訂閱 ID：此 ID 將附加到任何接收到的事件中，也可以用來透過 `eth_unsubscribe` 取消訂閱。
 
 #### 訂閱事件 {#subscription-events}
 
-當訂閱處於活動狀態, 你將接收一系列事件, 而其為物件於以下範圍:
+當訂閱處於活動狀態時，你將收到事件，這些事件是具有以下欄位的物件：
 
-- `jsonrpc`：一律為「2.0」
-- `method`：一律為「eth_subscription」
+- `jsonrpc`：始終為 "2.0"
+- `method`：始終為 "eth_subscription"
 - `params`：具有以下欄位的物件：
-  - `subscription`：建立此訂閱的 `eth_subscribe` 呼叫所傳回的訂閱 ID。
-  - `result`：一個物件，其內容會因訂閱類型而異。
+  - `subscription`：由建立此訂閱的 `eth_subscribe` 呼叫所回傳的訂閱 ID。
+  - `result`：其內容根據訂閱類型而有所不同的物件。
 
 #### 訂閱類型 {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-為所有被添加於等待狀態之交易回返一交易訊息. 此訂閱類型會訂閱待處理的交易，與標準 Web3 呼叫 `web3.eth.subscribe("pendingTransactions")` 類似，但不同之處在於，它會發出_完整的交易資訊_，而不僅僅是交易哈希。
+回傳所有新增至待處理狀態的交易資訊。此訂閱類型會訂閱待處理交易，類似於標準的 Web3 呼叫 `web3.eth.subscribe("pendingTransactions")`，但不同之處在於它會發出_完整的交易資訊_，而不僅僅是交易雜湊。
 
 範例：
 
@@ -122,9 +121,9 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 2. `newHeads`
 
-隱藏式鍵當一新區塊頭被添加於鏈上, 或處於區塊認識途中程序時.
+每當有新的區塊標頭新增至鏈上時（包括在區塊鏈重組期間），就會發出一個事件。
 
-當一區塊認識發生, 此訂閱將隱藏一包含所有新區塊頭之事件. 特別是, 此意味著你可以見識到多個區塊頭發射至同一區塊高度, 而當發生這種情況時, 重整後的標題應將後面的標題視為認識後正確區塊頭.
+當發生區塊鏈重組時，此訂閱將發出一個包含新鏈所有新區塊標頭的事件。特別是，這意味著你可能會看到多個具有相同高度的區塊標頭被發出，當這種情況發生時，應將較晚發出的區塊標頭視為重組後的正確標頭。
 
 範例：
 
@@ -159,26 +158,26 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 3. `logs`
 
-發布日誌紀錄/logs當一新添增之區塊符合一特定要求.
+發出屬於符合指定過濾條件的新增區塊一部分的日誌。
 
-發生鏈重組時，舊鏈上屬於區塊一部分的日誌將會再次發出，且屬性 `removed` 會設為 `true`。 更加延伸的話, 日誌為新鏈還區塊發佈時的一部分, 意旨此可在重組的情況下可以多次看到同一交易的日誌.
+當發生區塊鏈重組時，屬於舊鏈上區塊一部分的日誌將再次被發出，且其屬性 `removed` 會被設定為 `true`。此外，屬於新鏈上區塊一部分的日誌也會被發出，這意味著在發生重組的情況下，可能會多次看到同一筆交易的日誌。
 
 參數
 
-1. 一物件具有以下可選之範圍:
-   - `address` (選用)：代表地址的字串，或此類字串的陣列。
-     - 此只能從其中一個地址創建之紀錄日誌才被發布.
-   - `topics`：主題指定元的陣列。
-     - 每個主題指定元可以是 `null`、代表主題的字串，或字串陣列。
-     - 陣列中每個非 `null` 的位置，都會將發出的日誌限制為僅在該位置具有其中一個指定主題的日誌。
+1. 具有以下欄位的物件：
+   - `address`（選擇性）：代表地址的字串或此類字串的陣列。
+     - 只有從這些地址之一建立的日誌才會被發出。
+   - `topics`：主題指定符的陣列。
+     - 每個主題指定符可以是 `null`、代表主題的字串或字串陣列。
+     - 陣列中非 `null` 的每個位置，會將發出的日誌限制為僅包含在該位置具有給定主題之一的日誌。
 
-主題特定標註範例:
+主題指定的一些範例：
 
 - `[]`：允許任何主題。
-- `[A]`：A 在第一個位置 (後面接任何內容)。
-- `[null, B]`：第一個位置為任何內容，B 在第二個位置 (後面接任何內容)。
-- `[A, B]`：A 在第一個位置，B 在第二個位置 (後面接任何內容)。
-- `[[A, B], [A, B]]`：(A 或 B) 在第一個位置，(A 或 B) 在第二個位置 (後面接任何內容)。
+- `[A]`：A 在第一個位置（以及之後的任何內容）。
+- `[null, B]`：任何內容在第一個位置，且 B 在第二個位置（以及之後的任何內容）。
+- `[A, B]`：A 在第一個位置，且 B 在第二個位置（以及之後的任何內容）。
+- `[[A, B], [A, B]]`：（A 或 B）在第一個位置，且（A 或 B）在第二個位置（以及之後的任何內容）。
 
 範例：
 
@@ -208,15 +207,15 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-取消現行訂閱並避免未來事件被送發.
+取消現有的訂閱，以便不再發送任何事件。
 
 參數
 
-1. 訂閱 ID，由先前的 `eth_subscribe` 呼叫傳回。
+1. 訂閱 ID，如先前從 `eth_subscribe` 呼叫中所回傳的。
 
-傳回
+回傳值
 
-如果訂閱成功取消，則為 `true`；如果不存在具有指定 ID 的訂閱，則為 `false`。
+如果成功取消訂閱則回傳 `true`，如果不存在具有給定 ID 的訂閱則回傳 `false`。
 
 範例：
 
@@ -227,8 +226,6 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-
-
 ```
 
 **結果**
@@ -243,4 +240,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-免費[註冊 Alchemy](https://auth.alchemy.com)、查看[我們的文件](https://www.alchemy.com/docs/)，以及如欲了解最新消息，請在 [Twitter](https://x.com/AlchemyPlatform) 上關注我們。
+免費 [註冊 Alchemy](https://auth.alchemy.com)，查看 [我們的文件](https://www.alchemy.com/docs/)，並在 [推特](https://x.com/AlchemyPlatform) 上追蹤我們以獲取最新消息。
