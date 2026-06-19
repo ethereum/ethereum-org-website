@@ -108,7 +108,7 @@ ERC-8004 упрощает для агентов обнаружение, пров
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Полезно знать</strong>
+<p className="mt-0"><strong>Полезно знать</strong></p>
 <p className="mt-2">ИИ-агенты и связанные с ними инструменты все еще находятся на ранней стадии разработки и являются весьма экспериментальными — используйте их с осторожностью.</p>
 </AlertContent>
 </Alert>

@@ -108,7 +108,7 @@ buttons:
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>من الجيد معرفة ذلك</strong>
+<p className="mt-0"><strong>من الجيد معرفة ذلك</strong></p>
 <p className="mt-2">لا يزال وكلاء الذكاء الاصطناعي والأدوات ذات الصلة في مراحل التطوير المبكرة وتجريبية للغاية — استخدمها بحذر.</p>
 </AlertContent>
 </Alert>

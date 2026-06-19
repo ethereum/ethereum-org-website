@@ -108,7 +108,7 @@ Podczas kampanii społecznościowej Luny na platformie X pod hasłem #LunaMuralC
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Warto wiedzieć</strong>
+<p className="mt-0"><strong>Warto wiedzieć</strong></p>
 <p className="mt-2">Agenci AI i powiązane z nimi narzędzia są wciąż we wczesnej fazie rozwoju i mają charakter wysoce eksperymentalny — używaj ich z ostrożnością.</p>
 </AlertContent>
 </Alert>

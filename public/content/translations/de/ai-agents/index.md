@@ -108,7 +108,7 @@ Während Lunas Social-Media-Kampagne #LunaMuralChallenge auf X wählte und beloh
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Gut zu wissen</strong>
+<p className="mt-0"><strong>Gut zu wissen</strong></p>
 <p className="mt-2">KI-Agenten und verwandte Tools befinden sich noch in einer frühen Entwicklungsphase und sind sehr experimentell – mit Vorsicht verwenden.</p>
 </AlertContent>
 </Alert>

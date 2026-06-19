@@ -108,7 +108,7 @@ Trong chiến dịch xã hội X của Luna mang tên #LunaMuralChallenge, Luna 
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Thông tin hữu ích</strong>
+<p className="mt-0"><strong>Thông tin hữu ích</strong></p>
 <p className="mt-2">Các tác nhân AI và các công cụ liên quan vẫn đang trong giai đoạn phát triển ban đầu và mang tính thử nghiệm cao—hãy thận trọng khi sử dụng.</p>
 </AlertContent>
 </Alert>

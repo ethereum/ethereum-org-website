@@ -108,7 +108,7 @@ Během sociální kampaně Luny na síti X #LunaMuralChallenge Luna vybrala a od
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Dobré vědět</strong>
+<p className="mt-0"><strong>Dobré vědět</strong></p>
 <p className="mt-2">AI agenti a související nástroje jsou stále v raném stádiu vývoje a jsou velmi experimentální – používejte je s opatrností.</p>
 </AlertContent>
 </Alert>

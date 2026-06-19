@@ -108,7 +108,7 @@ ERC-8004 పూర్తిగా వికేంద్రీకృత వాత
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>తెలుసుకోవడం మంచిది</strong>
+<p className="mt-0"><strong>తెలుసుకోవడం మంచిది</strong></p>
 <p className="mt-2">కృత్రిమ మేధ ఏజెంట్లు మరియు సంబంధిత సాధనాలు ఇంకా ప్రారంభ అభివృద్ధి దశలో ఉన్నాయి మరియు చాలా ప్రయోగాత్మకమైనవి—జాగ్రత్తగా ఉపయోగించండి.</p>
 </AlertContent>
 </Alert>

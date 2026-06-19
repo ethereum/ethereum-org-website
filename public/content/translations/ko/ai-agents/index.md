@@ -108,7 +108,7 @@ Luna의 X 소셜 캠페인인 #LunaMuralChallenge 동안, Luna는 자신의 Base
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>알아두면 좋은 정보</strong>
+<p className="mt-0"><strong>알아두면 좋은 정보</strong></p>
 <p className="mt-2">AI 에이전트 및 관련 도구는 아직 초기 개발 단계에 있으며 매우 실험적이므로 주의해서 사용하세요.</p>
 </AlertContent>
 </Alert>

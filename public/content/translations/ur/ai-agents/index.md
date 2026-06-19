@@ -108,7 +108,7 @@ buttons:
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>جاننا اچھا ہے</strong>
+<p className="mt-0"><strong>جاننا اچھا ہے</strong></p>
 <p className="mt-2">مصنوعی ذہانت کے ایجنٹس اور متعلقہ ٹولز ابھی ابتدائی ترقی کے مراحل میں ہیں اور بہت تجرباتی ہیں—احتیاط کے ساتھ استعمال کریں۔</p>
 </AlertContent>
 </Alert>

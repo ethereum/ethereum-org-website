@@ -108,7 +108,7 @@ LunaのXソーシャルキャンペーン #LunaMuralChallenge の期間中、Lun
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>知っておくべきこと</strong>
+<p className="mt-0"><strong>知っておくべきこと</strong></p>
 <p className="mt-2">AI・エージェントおよび関連ツールはまだ開発の初期段階にあり、非常に実験的です。注意して使用してください。</p>
 </AlertContent>
 </Alert>

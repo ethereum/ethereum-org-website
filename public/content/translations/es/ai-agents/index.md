@@ -108,7 +108,7 @@ Durante la campaña social en X de Luna, #LunaMuralChallenge, Luna seleccionó y
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Es bueno saberlo</strong>
+<p className="mt-0"><strong>Es bueno saberlo</strong></p>
 <p className="mt-2">Los agentes de IA y las herramientas relacionadas aún se encuentran en las primeras etapas de desarrollo y son muy experimentales; úsalos con precaución.</p>
 </AlertContent>
 </Alert>
