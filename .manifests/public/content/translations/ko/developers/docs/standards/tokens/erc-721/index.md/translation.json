@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-17T23:17:58.504Z",
+  "englishManifestHash": "20f7b462cdec",
+  "placeholderOrder": [
+    "CODE-ea15d8",
+    "CODE-77951f",
+    "CODE-6fd337",
+    "CODE-ea15d8",
+    "LINK-60076a",
+    "LINK-3923cd",
+    "LINK-5717a5",
+    "LINK-a21a82",
+    "LINK-4b6d3b",
+    "CODEBLOCK-2ffef5",
+    "CODEBLOCK-43a968",
+    "LINK-38b427",
+    "CODEBLOCK-fe2886",
+    "CODEBLOCK-bd6097",
+    "CODE-d4818f",
+    "CODE-32eaeb",
+    "CODEBLOCK-3a6217",
+    "LINK-161698",
+    "LINK-05384c",
+    "LINK-d4763c",
+    "LINK-c853f8",
+    "LINK-47ad92",
+    "LINK-e0f80d",
+    "LINK-0fe120",
+    "LINK-e3f374",
+    "LINK-f49f49",
+    "LINK-1e0951",
+    "LINK-ffa390",
+    "LINK-c50943",
+    "LINK-b73762",
+    "LINK-7b7f05",
+    "LINK-12fedf",
+    "LINK-b8dfe1",
+    "LINK-e0e967"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-2ffef5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-43a968": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fe2886": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bd6097": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3a6217": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-77951f": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint256"
+      }
+    },
+    "CODE-ea15d8": {
+      "type": "inline-code",
+      "values": {
+        "content": "tokenId"
+      }
+    },
+    "CODE-6fd337": {
+      "type": "inline-code",
+      "values": {
+        "content": "contract address, uint256 tokenId"
+      }
+    },
+    "CODE-d4818f": {
+      "type": "inline-code",
+      "values": {
+        "content": "Pregnant"
+      }
+    },
+    "CODE-32eaeb": {
+      "type": "inline-code",
+      "values": {
+        "content": "Birth"
+      }
+    },
+    "LINK-60076a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-3923cd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-5717a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-4b6d3b": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-721"
+      }
+    },
+    "LINK-38b427": {
+      "type": "link",
+      "values": {
+        "url": "https://web3py.readthedocs.io/en/stable/quickstart.html#installation"
+      }
+    },
+    "LINK-161698": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/nft-top-contracts"
+      }
+    },
+    "LINK-05384c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptokitties.co/"
+      }
+    },
+    "LINK-d4763c": {
+      "type": "link",
+      "values": {
+        "url": "https://sorare.com/"
+      }
+    },
+    "LINK-c853f8": {
+      "type": "link",
+      "values": {
+        "url": "https://ens.domains/"
+      }
+    },
+    "LINK-47ad92": {
+      "type": "link",
+      "values": {
+        "url": "https://poap.xyz"
+      }
+    },
+    "LINK-e0f80d": {
+      "type": "link",
+      "values": {
+        "url": "https://unstoppabledomains.com/"
+      }
+    },
+    "LINK-0fe120": {
+      "type": "link",
+      "values": {
+        "url": "https://godsunchained.com/"
+      }
+    },
+    "LINK-e3f374": {
+      "type": "link",
+      "values": {
+        "url": "https://boredapeyachtclub.com"
+      }
+    },
+    "LINK-f49f49": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-721"
+      }
+    },
+    "LINK-1e0951": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/3.x/erc721"
+      }
+    },
+    "LINK-ffa390": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol"
+      }
+    },
+    "LINK-c50943": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/reference/nft-api-quickstart"
+      }
+    },
+    "LINK-b73762": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc-721-vyper-annotated-code/"
+      }
+    },
+    "LINK-7b7f05": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-write-and-deploy-an-nft/"
+      }
+    },
+    "LINK-12fedf": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-mint-an-nft/"
+      }
+    },
+    "LINK-b8dfe1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-view-nft-in-metamask/"
+      }
+    },
+    "LINK-e0e967": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/nft-minter/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:17:58.504Z",
+      "status": "success"
+    }
+  }
+}

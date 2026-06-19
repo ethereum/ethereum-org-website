@@ -81,6 +81,10 @@ Whenever you want a non-heading element (or a heading you're resizing) to read a
 
 `text-h*` sets size and line-height **only** -- it does *not* set `font-black`. Real headings get their weight from `base.css`; on other elements, set weight separately if you want it.
 
+### Spacing: `.flow` + the `page`/`space`/`hero` tokens, not hand-rolled margins
+
+Vertical rhythm between prose blocks is the opt-in `.flow` system -- wrap a region in `flow`, write semantic tags, and skip `mt-*`/`mb-*`. Page/section padding, the flow unit (used manually), and hero padding come from named responsive tokens -- `px-page`/`p-page`, `mt-space`/`gap-space`, `p-hero` -- not `px-4 md:px-8` chains or arbitrary `p-(--var)`. App pages follow a `<main className="p-page"> > <MainArticle className="flow"> > <Section id>` skeleton. Details in `references/spacing-typography.md`; token table in `references/tokens.md`.
+
 ### One stray `toLocaleString` in `ui/chart.tsx:241`
 
 Don't add more. Use `numberFormat()`.

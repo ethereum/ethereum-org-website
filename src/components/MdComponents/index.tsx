@@ -1,4 +1,4 @@
-import { type ComponentProps, type HTMLAttributes } from "react"
+import { type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -18,7 +18,6 @@ import IdAnchor from "@/components/IdAnchor"
 import MarkdownImage from "@/components/Image/MarkdownImage" // TODO: Pull into MdComponents
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
-import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
@@ -26,7 +25,6 @@ import TweetEmbed from "@/components/TweetEmbed"
 import * as AlertComponents from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
-import { Flex } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
@@ -109,28 +107,6 @@ const AlertWithMargins = ({ className, ...props }) => (
   <Alert className={cn(className)} {...props} />
 )
 
-export const Page = ({
-  className,
-  ...props
-}: HTMLAttributes<HTMLDivElement>) => (
-  <Flex
-    className={cn(
-      "mx-auto mb-16 w-full flex-col justify-between lg:flex-row lg:pt-16",
-      className
-    )}
-    {...props}
-  />
-)
-
-export const ContentContainer = (props: ComponentProps<"article">) => {
-  return (
-    <MainArticle
-      className="relative flex-[1_1_992px] px-8 pb-8 *:first:mt-0"
-      {...props}
-    />
-  )
-}
-
 export const ExpandableCardWithMargin = ({
   className,
   ...props
@@ -145,7 +121,6 @@ export const reactComponents = {
   BrowseApps,
   ButtonLink,
   Card: MarkdownCard,
-  ContentContainer,
   Contributors,
   Divider,
   DocLink,
@@ -154,7 +129,6 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   Grid,
-  Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
   RestakingList,

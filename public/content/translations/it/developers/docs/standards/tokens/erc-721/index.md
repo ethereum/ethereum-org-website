@@ -8,29 +8,27 @@ lang: it
 
 **Cos'è un token non fungibile?**
 
-Un token non fungibile (NFT) è utilizzato per identificare qualcosa o qualcuno in modo unico. Questo tipo di token è perfetto per essere utilizzato su piattaforme che offrono oggetti da collezione, chiavi di accesso, biglietti della lotteria, posti numerati per concerti e partite sportive, ecc. Questo tipo speciale di token ha possibilità incredibili, quindi merita uno standard adeguato, e l'ERC-721 è nato per risolvere questo problema!
+Un token non fungibile (NFT) viene utilizzato per identificare qualcosa o qualcuno in modo univoco. Questo tipo di token è perfetto per essere utilizzato su piattaforme che offrono oggetti collezionabili, chiavi di accesso, biglietti della lotteria, posti numerati per concerti e partite sportive, ecc. Questo tipo speciale di token ha possibilità incredibili, quindi merita uno standard adeguato, e l'ERC-721 è nato per risolvere questo problema!
 
 **Cos'è l'ERC-721?**
 
-L'ERC-721 introduce uno standard per gli NFT; in altre parole, questo tipo di token è unico e può avere un valore diverso rispetto a un altro token proveniente dallo stesso contratto intelligente, magari a causa della sua età, rarità o persino di qualcos'altro come il suo aspetto visivo.
-Aspetta, aspetto visivo?
+L'ERC-721 introduce uno standard per gli NFT; in altre parole, questo tipo di token è unico e può avere un valore diverso rispetto a un altro token dello stesso smart contract, magari a causa della sua età, rarità o persino di qualcos'altro come il suo aspetto visivo. Aspetta, aspetto visivo?
 
-Sì! Tutti gli NFT hanno una variabile `uint256` chiamata `tokenId`, quindi per qualsiasi contratto ERC-721, la coppia `indirizzo del contratto, uint256 tokenId` deve essere globalmente unica. Detto questo, una dApp può avere un "convertitore" che utilizza il `tokenId` come input e restituisce un'immagine di qualcosa di fantastico, come zombi, armi, abilità o gattini incredibili!
+Sì! Tutti gli NFT hanno una variabile `uint256` chiamata `tokenId`, quindi per qualsiasi contratto ERC-721, la coppia `contract address, uint256 tokenId` deve essere globalmente univoca. Detto questo, un'applicazione decentralizzata (dapp) può avere un "convertitore" che utilizza il `tokenId` come input e restituisce un'immagine di qualcosa di fantastico, come zombi, armi, abilità o incredibili gattini!
 
 ## Prerequisiti {#prerequisites}
 
 - [Account](/developers/docs/accounts/)
-- [Contratti intelligenti](/developers/docs/smart-contracts/)
+- [Smart contract](/developers/docs/smart-contracts/)
 - [Standard dei token](/developers/docs/standards/tokens/)
 
 ## Corpo {#body}
 
-L'ERC-721 ([Ethereum](/) Request for Comments 721), proposto da William Entriken, Dieter Shirley, Jacob Evans e Nastassia Sachs nel gennaio 2018, è uno standard per token non fungibili che implementa un'API per i token all'interno dei contratti intelligenti.
+L'ERC-721 ([Ethereum](/) Request for Comments 721), proposto da William Entriken, Dieter Shirley, Jacob Evans e Nastassia Sachs nel gennaio 2018, è uno standard per token non fungibili che implementa un'API per i token all'interno degli smart contract.
 
-Fornisce funzionalità come il trasferimento di token da un account a un altro, l'ottenimento del saldo attuale dei token di un account, l'identificazione del proprietario di un token specifico e anche l'offerta totale del token disponibile sulla rete.
-Oltre a queste, ha anche altre funzionalità, come l'approvazione affinché una quantità di token da un account possa essere spostata da un account di terze parti.
+Fornisce funzionalità come il trasferimento di token da un account a un altro, l'ottenimento del saldo attuale dei token di un account, l'ottenimento del proprietario di un token specifico e anche l'offerta totale del token disponibile sulla rete. Oltre a queste, ha anche altre funzionalità come approvare che una quantità di token da un account possa essere spostata da un account di terze parti.
 
-Se un contratto intelligente implementa i seguenti metodi ed eventi, può essere definito un contratto di token non fungibili ERC-721 e, una volta distribuito, sarà responsabile di tenere traccia dei token creati su Ethereum.
+Se uno smart contract implementa i seguenti metodi ed eventi, può essere definito un contratto di token non fungibili ERC-721 e, una volta distribuito, sarà responsabile di tenere traccia dei token creati su Ethereum.
 
 Da [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
@@ -58,10 +56,9 @@ Da [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
 ### Esempi {#web3py-example}
 
-Vediamo come uno standard sia così importante per semplificarci l'ispezione di qualsiasi contratto di token ERC-721 su Ethereum.
-Abbiamo solo bisogno dell'Application Binary Interface (ABI) del contratto per creare un'interfaccia verso qualsiasi token ERC-721. Come puoi vedere di seguito, utilizzeremo un'ABI semplificata, per renderlo un esempio a basso attrito.
+Vediamo come uno standard sia così importante per semplificarci l'ispezione di qualsiasi contratto di token ERC-721 su Ethereum. Abbiamo solo bisogno dell'Application Binary Interface (ABI) del contratto per creare un'interfaccia per qualsiasi token ERC-721. Come puoi vedere di seguito, utilizzeremo un'ABI semplificata, per renderlo un esempio a basso attrito.
 
-#### Esempio con Web3.py {#web3py-example}
+#### Esempio con Web3.py {#web3py-example-2}
 
 Innanzitutto, assicurati di aver installato la libreria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
@@ -76,9 +73,9 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d" # Contratto CryptoKitties
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # Contratto CryptoKitties
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C" # Asta di vendita CryptoKitties
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # Asta di vendita CryptoKitties
 
 # Questa è una Contract Application Binary Interface (ABI) semplificata di un contratto NFT ERC-721.
 # Esporrà solo i metodi: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
@@ -139,7 +136,7 @@ print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
 print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# Utilizzo dell'ABI dell'evento Transfer per ottenere informazioni sui Kitties trasferiti.
+# Utilizzo dell'ABI dell'evento di trasferimento per ottenere informazioni sui Kitties trasferiti.
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -160,10 +157,10 @@ logs = w3.eth.get_logs({
 })
 
 # Note:
-# - Aumenta il numero di blocchi oltre 120 se non viene restituito alcun evento Transfer.
-# - Se non hai trovato alcun evento Transfer, puoi anche provare a ottenere un tokenId su:
-# https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-# Fai clic per espandere i log dell'evento e copia il suo argomento "tokenId"
+#   - Aumenta il numero di blocchi oltre 120 se non viene restituito alcun evento di trasferimento.
+#   - Se non hai trovato alcun evento di trasferimento, puoi anche provare a ottenere un tokenId su:
+#       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
+#       Fai clic per espandere i log dell'evento e copia il suo argomento "tokenId"
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 if recent_tx:
@@ -174,7 +171,7 @@ if recent_tx:
 
 Il contratto di CryptoKitties ha alcuni eventi interessanti oltre a quelli standard.
 
-Controlliamone due: `Pregnant` e `Birth`.
+Controlliamone due, `Pregnant` e `Birth`.
 
 ```python
 # Utilizzo dell'ABI degli eventi Pregnant e Birth per ottenere informazioni sui nuovi Kitties.
@@ -231,9 +228,9 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 ## NFT popolari {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/nft-top-contracts) elenca i migliori NFT su Ethereum per volume di trasferimenti.
-- [CryptoKitties](https://www.cryptokitties.co/) è un gioco incentrato su creature allevabili, collezionabili e adorabili che chiamiamo CryptoKitties.
-- [Sorare](https://sorare.com/) è un gioco di fantacalcio globale in cui puoi raccogliere oggetti da collezione in edizione limitata, gestire le tue squadre e competere per vincere premi.
-- [L'Ethereum Name Service (ENS)](https://ens.domains/) offre un modo sicuro e decentralizzato per indirizzare le risorse sia sulla blockchain che fuori utilizzando nomi semplici e leggibili dall'uomo.
+- [CryptoKitties](https://www.cryptokitties.co/) è un gioco incentrato su creature allevabili, collezionabili e davvero adorabili che chiamiamo CryptoKitties.
+- [Sorare](https://sorare.com/) è un gioco di fantacalcio globale in cui puoi raccogliere oggetti collezionabili in edizione limitata, gestire le tue squadre e competere per vincere premi.
+- [L'Ethereum Name Service (ENS)](https://ens.domains/) offre un modo sicuro e decentralizzato per indirizzare le risorse sia all'interno che all'esterno della blockchain utilizzando nomi semplici e leggibili dall'uomo.
 - [POAP](https://poap.xyz) distribuisce NFT gratuiti alle persone che partecipano a eventi o completano azioni specifiche. I POAP sono gratuiti da creare e distribuire.
 - [Unstoppable Domains](https://unstoppabledomains.com/) è un'azienda con sede a San Francisco che crea domini sulle blockchain. I domini blockchain sostituiscono gli indirizzi di criptovaluta con nomi leggibili dall'uomo e possono essere utilizzati per abilitare siti web resistenti alla censura.
 - [Gods Unchained Cards](https://godsunchained.com/) è un gioco di carte collezionabili (TCG) sulla blockchain di Ethereum che utilizza gli NFT per conferire la vera proprietà alle risorse di gioco.
@@ -249,7 +246,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 ## Tutorial: Sviluppare con i token non fungibili (ERC-721) su Ethereum {#tutorials}
 
 - [Guida al contratto ERC-721 in Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Una guida annotata di un contratto NFT ERC-721 completo scritto in Vyper._
-- [Come scrivere e distribuire un NFT (Parte 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Guida passo passo per scrivere e distribuire il tuo primo contratto intelligente ERC-721._
-- [Come coniare un NFT (Parte 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Come coniare un NFT ERC-721 utilizzando il tuo contratto intelligente distribuito e Web3._
+- [Come scrivere e distribuire un NFT (Parte 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Guida passo passo per scrivere e distribuire il tuo primo smart contract ERC-721._
+- [Come coniare un NFT (Parte 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Come coniare un NFT ERC-721 utilizzando il tuo smart contract distribuito e Web3._
 - [Come visualizzare il tuo NFT nel tuo portafoglio (Parte 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Come visualizzare il tuo NFT coniato in MetaMask dopo la distribuzione._
-- [Tutorial per coniare NFT](/developers/tutorials/nft-minter/) _– Crea una dApp full-stack per coniare NFT con un frontend React, MetaMask e Alchemy._
+- [Tutorial per il conio di NFT](/developers/tutorials/nft-minter/) _– Crea una dapp full-stack per il conio di NFT con un frontend React, MetaMask e Alchemy._

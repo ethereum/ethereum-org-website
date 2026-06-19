@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/index.md",
+  "generatedAt": "2026-06-17T21:52:39.119Z",
+  "rootHash": "215058b2cb62",
+  "tree": {
+    "contentHash": "fe7368dcdf57",
+    "anchorHash": "ae2e89e83f37",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "e437f9e52ff4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "3d6b393a871e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:2": {
+        "contentHash": "629e9bb893e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:3": {
+        "contentHash": "99e791d6716d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "0eec4b0fe0d1",
+        "anchorHash": "a4b2ea1a0a3e"
+      },
+      "prose:4": {
+        "contentHash": "2795c0e039b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "pick-a-starting-point": {
+        "contentHash": "cf2876ff71b9",
+        "anchorHash": "1f4f7c347093",
+        "labelHash": "c55d59f402bb",
+        "children": {
+          "_label": {
+            "contentHash": "c55d59f402bb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:10": {
+            "contentHash": "dfb6e07f75b7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d78cc1fac0a4",
+            "anchorHash": "12c27408c3cf"
+          },
+          "prose:11": {
+            "contentHash": "3a96bb0c2b3e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "bc62a3c14fec",
+            "anchorHash": "d094984b1eaf"
+          },
+          "prose:12": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "81dc075c3d55",
+            "anchorHash": "d20c9fa6d21a"
+          },
+          "prose:13": {
+            "contentHash": "c112c190e74c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "06a61df042ad",
+            "anchorHash": "f1bdb6df8255"
+          },
+          "prose:14": {
+            "contentHash": "3e9d1d8eb6e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "c432b372e0e3",
+            "anchorHash": "12c27408c3cf"
+          },
+          "prose:15": {
+            "contentHash": "8f372c5a9d33",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:16": {
+            "contentHash": "e11d5d6d1efd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "6e5f5884f6f4",
+            "anchorHash": "00ec2e5e724f"
+          },
+          "prose:17": {
+            "contentHash": "7d512e9da1d8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "e7efd98892bf",
+            "anchorHash": "94d095604d5e"
+          },
+          "prose:18": {
+            "contentHash": "aae687415b64",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "fefdcdb71779",
+            "anchorHash": "0af257386894"
+          },
+          "prose:19": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "7c9492ccf67a",
+            "anchorHash": "ab199f905ffa"
+          },
+          "prose:20": {
+            "contentHash": "c4c65dccd126",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:10",
+          "link:0",
+          "prose:11",
+          "link:1",
+          "prose:12",
+          "link:2",
+          "prose:13",
+          "link:3",
+          "prose:14",
+          "link:4",
+          "prose:15",
+          "link:5",
+          "prose:16",
+          "link:6",
+          "prose:17",
+          "link:7",
+          "prose:18",
+          "link:8",
+          "prose:19",
+          "link:9",
+          "prose:20"
+        ]
+      },
+      "development-modules": {
+        "contentHash": "6904aa46656e",
+        "anchorHash": "3912c0d6ca44",
+        "labelHash": "90948ff3b81a",
+        "children": {
+          "_label": {
+            "contentHash": "90948ff3b81a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "60e9ad4a348d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "foundational-topics": {
+            "contentHash": "fb3c2f4b6ca6",
+            "anchorHash": "e8c40fa52e65",
+            "labelHash": "eb1455dc121a",
+            "children": {
+              "_label": {
+                "contentHash": "eb1455dc121a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:1": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "0cf8eb63d326",
+                "children": {
+                  "attr:headerId": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "9d2fdedcf96c"
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "component:1"
+            ]
+          },
+          "ethereum-stack": {
+            "contentHash": "fb3c2f4b6ca6",
+            "anchorHash": "5a0bf9132a72",
+            "labelHash": "be1ff85b5120",
+            "children": {
+              "_label": {
+                "contentHash": "be1ff85b5120",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:1": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "d0f271e66292",
+                "children": {
+                  "attr:headerId": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "47e391021e4d"
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "component:1"
+            ]
+          },
+          "advanced": {
+            "contentHash": "fb3c2f4b6ca6",
+            "anchorHash": "00ff39d8372c",
+            "labelHash": "9f088dbebd6c",
+            "children": {
+              "_label": {
+                "contentHash": "9f088dbebd6c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:1": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "f3ddacfb5093",
+                "children": {
+                  "attr:headerId": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "d21f85ea3816"
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "foundational-topics",
+          "ethereum-stack",
+          "advanced"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "pick-a-starting-point",
+      "development-modules"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

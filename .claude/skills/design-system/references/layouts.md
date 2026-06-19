@@ -30,7 +30,7 @@ If you can stop at any of those steps, you don't need a new layout file.
 
 ## `TopicLayout` in Practice
 
-`TopicLayout` is the canonical "topic hub" layout. It renders a hero, a TOC, content, a contributors block, a feedback card, and a sub-nav dropdown linking sibling pages. Everything per-topic comes from data.
+`TopicLayout` is the canonical "topic hub" layout. It renders a hero, a TOC, content, a contributors block, a feedback prompt (`ContentFeedback`), and a sub-nav dropdown linking sibling pages. Everything per-topic comes from data.
 
 ### Adding a new topic
 
@@ -113,6 +113,28 @@ If you encounter a `src/layouts/md/<Something>.tsx` that exports its own `<Somet
 
 See `docs/topic-layout-refactor.md` for the worked example.
 
+## Where end-of-page actions live (`<article>` vs `<main>`)
+
+`MainArticle` renders the page's `<article>`, and it's reserved for **article content** -- the prose itself plus the `FileContributors` block that credits it. End-of-page *actions* are page-level UI, not part of the article, so they live **outside** the `<article>` as siblings: `DocsNav`, `ContentFeedback`, and `CallToContribute`.
+
+The four content layouts (`Docs`, `Static`, `Tutorial`, `ContentLayout`) express this by closing `MainArticle` and rendering the actions after it, behind an `{/* End-of-page actions */}` marker comment:
+
+```tsx
+<main className="...">
+  <MainArticle className="flow">
+    {children}
+    <FileContributors ... /> {/* credits the article -> stays inside */}
+  </MainArticle>
+
+  {/* End-of-page actions */}
+  {isPageIncomplete && <CallToContribute editPath={...} />}
+  <DocsNav ... />
+  <ContentFeedback isArticle />
+</main>
+```
+
+Not every page needs a `<main>` wrapper. But when a page does need to wrap its article plus end-of-page actions in something, `<main>` is the element to reach for -- not a bare `<div>`.
+
 ## Pre-Merge Checklist for Layout Work
 
 Before opening a PR that touches anything in `src/layouts/`:
@@ -123,5 +145,6 @@ Before opening a PR that touches anything in `src/layouts/`:
 - [ ] Have I read `docs/topic-layout-refactor.md` for context on why the topic layouts were consolidated?
 - [ ] If introducing a new layout (very rare), do I have explicit signoff from a maintainer?
 - [ ] If extending `ContentLayout`, is the new prop genuinely shared across multiple consumers — not a one-section special case?
+- [ ] End-of-page actions (`ContentFeedback`, `DocsNav`, `CallToContribute`) sit *outside* `MainArticle` as siblings in `<main>`; only `FileContributors` stays inside the `<article>`.
 
 If you can't say yes to all of these and you're about to add `src/layouts/<NewName>.tsx`, stop and re-read the top of this file.

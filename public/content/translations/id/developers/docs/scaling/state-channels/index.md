@@ -1,261 +1,260 @@
 ---
-title: State Channels
-description: An introduction to state channels and payment channels as a scaling solution currently utilized by the Ethereum community.
+title: Kanal State
+description: Pengantar tentang kanal state dan kanal pembayaran sebagai solusi penskalaan yang saat ini digunakan oleh komunitas Ethereum.
 lang: id
 sidebarDepth: 3
 ---
 
-Saluran status (state channel) memungkinkan peserta untuk bertransaksi secara aman secara offchain sambil menjaga interaksi dengan Mainnet [Ethereum](/) seminimal mungkin. Rekan saluran dapat melakukan sejumlah transaksi offchain secara bebas sementara hanya mengirimkan dua transaksi onchain untuk membuka dan menutup saluran. Hal ini memungkinkan throughput transaksi yang sangat tinggi dan menghasilkan biaya yang lebih rendah bagi pengguna.
+Kanal state memungkinkan peserta untuk bertransaksi secara aman secara offchain sambil menjaga interaksi dengan Mainnet [Ethereum](/) seminimal mungkin. Peer kanal dapat melakukan sejumlah transaksi offchain tanpa batas sambil hanya mengirimkan dua transaksi onchain untuk membuka dan menutup kanal. Ini memungkinkan laju pemrosesan transaksi yang sangat tinggi dan menghasilkan biaya yang lebih rendah bagi pengguna.
 
 ## Prasyarat {#prerequisites}
 
-Anda harus sudah membaca dan memahami halaman kami tentang [peningkatan Ethereum](/developers/docs/scaling/) dan [layer 2](/layer-2/).
+Anda harus sudah membaca dan memahami halaman kami tentang [penskalaan Ethereum](/developers/docs/scaling/) dan [lapisan 2 (l2)](/layer-2/).
 
-## Apa itu saluran? {#what-are-channels}
+## Apa itu kanal? {#what-are-channels}
 
-Blockchain publik, seperti Ethereum, menghadapi tantangan skalabilitas karena arsitektur terdistribusi mereka: transaksi onchain harus dieksekusi oleh semua node. Node harus mampu menangani volume transaksi dalam sebuah blok menggunakan perangkat keras yang sederhana, yang memberlakukan batas pada throughput transaksi untuk menjaga jaringan tetap desentralisasi. Saluran blockchain memecahkan masalah ini dengan memungkinkan pengguna untuk berinteraksi secara offchain sambil tetap mengandalkan keamanan rantai utama untuk penyelesaian akhir.
+Rantai blok publik, seperti Ethereum, menghadapi tantangan skalabilitas karena arsitektur terdistribusinya: transaksi onchain harus dieksekusi oleh semua node. Node harus mampu menangani volume transaksi dalam sebuah blok menggunakan perangkat keras yang sederhana, yang memberlakukan batasan pada laju pemrosesan transaksi untuk menjaga jaringan tetap terdesentralisasi. Kanal rantai blok memecahkan masalah ini dengan memungkinkan pengguna untuk berinteraksi secara offchain sambil tetap mengandalkan keamanan rantai utama untuk penyelesaian akhir.
 
-Saluran adalah protokol peer-to-peer sederhana yang memungkinkan dua pihak untuk melakukan banyak transaksi di antara mereka sendiri dan kemudian hanya memposting hasil akhirnya ke blockchain. Saluran ini menggunakan kriptografi untuk menunjukkan bahwa data ringkasan yang mereka hasilkan benar-benar merupakan hasil dari serangkaian transaksi perantara yang valid. Sebuah kontrak pintar ["multi tanda tangan"](/developers/docs/smart-contracts/#multisig) memastikan transaksi ditandatangani oleh pihak yang tepat.
+Kanal adalah protokol peer-to-peer sederhana yang memungkinkan dua pihak untuk melakukan banyak transaksi di antara mereka sendiri dan kemudian hanya memposting hasil akhirnya ke rantai blok. Kanal menggunakan kriptografi untuk menunjukkan bahwa data ringkasan yang mereka hasilkan benar-benar merupakan hasil dari serangkaian transaksi perantara yang valid. Sebuah kontrak pintar ["multisig"](/developers/docs/smart-contracts/#multisig) memastikan transaksi ditandatangani oleh pihak yang tepat.
 
-Dengan saluran, perubahan status dieksekusi dan divalidasi oleh pihak-pihak yang berkepentingan, meminimalkan komputasi pada lapisan eksekusi Ethereum. Hal ini mengurangi kemacetan di Ethereum dan juga meningkatkan kecepatan pemrosesan transaksi bagi pengguna.
+Dengan kanal, perubahan state dieksekusi dan divalidasi oleh pihak-pihak yang berkepentingan, meminimalkan komputasi pada lapisan eksekusi Ethereum. Ini mengurangi kemacetan di Ethereum dan juga meningkatkan kecepatan pemrosesan transaksi bagi pengguna.
 
-Setiap saluran dikelola oleh [kontrak pintar multi tanda tangan](/developers/docs/smart-contracts/#multisig) yang berjalan di Ethereum. Untuk membuka saluran, peserta menerapkan kontrak saluran secara onchain dan menyetorkan dana ke dalamnya. Kedua belah pihak secara kolektif menandatangani pembaruan status untuk menginisialisasi status saluran, setelah itu mereka dapat bertransaksi dengan cepat dan bebas secara offchain.
+Setiap kanal dikelola oleh [kontrak pintar multisig](/developers/docs/smart-contracts/#multisig) yang berjalan di Ethereum. Untuk membuka kanal, peserta menyebarkan kontrak kanal secara onchain dan menyetorkan dana ke dalamnya. Kedua belah pihak secara kolektif menandatangani pembaruan state untuk menginisialisasi state kanal, setelah itu mereka dapat bertransaksi dengan cepat dan bebas secara offchain.
 
-Untuk menutup saluran, peserta mengirimkan status saluran terakhir yang disepakati secara onchain. Setelah itu, kontrak pintar mendistribusikan dana yang terkunci sesuai dengan saldo masing-masing peserta dalam status akhir saluran.
+Untuk menutup kanal, peserta mengirimkan state kanal terakhir yang disepakati secara onchain. Setelah itu, kontrak pintar mendistribusikan dana yang dikunci sesuai dengan saldo masing-masing peserta dalam state akhir kanal.
 
-Saluran peer-to-peer sangat berguna untuk situasi di mana beberapa peserta yang telah ditentukan sebelumnya ingin bertransaksi dengan frekuensi tinggi tanpa menimbulkan overhead yang terlihat. Saluran blockchain terbagi dalam dua kategori: **saluran pembayaran (payment channel)** dan **saluran status (state channel)**.
+Kanal peer-to-peer sangat berguna untuk situasi di mana beberapa peserta yang telah ditentukan sebelumnya ingin bertransaksi dengan frekuensi tinggi tanpa menimbulkan biaya tambahan yang terlihat. Kanal rantai blok terbagi dalam dua kategori: **kanal pembayaran** dan **kanal state**.
 
-## Saluran pembayaran {#payment-channels}
+## Kanal pembayaran {#payment-channels}
 
-Saluran pembayaran paling baik digambarkan sebagai "buku besar dua arah" yang dikelola secara kolektif oleh dua pengguna. Saldo awal buku besar adalah jumlah deposit yang dikunci ke dalam kontrak onchain selama fase pembukaan saluran. Transfer saluran pembayaran dapat dilakukan secara instan dan tanpa keterlibatan blockchain yang sebenarnya itu sendiri, kecuali untuk pembuatan onchain satu kali di awal dan penutupan saluran pada akhirnya.
+Kanal pembayaran paling baik digambarkan sebagai "buku besar dua arah" yang dikelola secara kolektif oleh dua pengguna. Saldo awal buku besar adalah jumlah setoran yang dikunci ke dalam kontrak onchain selama fase pembukaan kanal. Transfer kanal pembayaran dapat dilakukan secara instan dan tanpa keterlibatan rantai blok yang sebenarnya itu sendiri, kecuali untuk pembuatan onchain satu kali di awal dan penutupan kanal pada akhirnya.
 
-Pembaruan pada saldo buku besar (yaitu, status saluran pembayaran) memerlukan persetujuan dari semua pihak di dalam saluran. Pembaruan saluran, yang ditandatangani oleh semua peserta saluran, dianggap telah difinalisasi, sama seperti transaksi di Ethereum.
+Pembaruan pada saldo buku besar (yaitu, state kanal pembayaran) mewajibkan persetujuan dari semua pihak di dalam kanal. Pembaruan kanal, yang ditandatangani oleh semua peserta kanal, dianggap telah difinalisasi, sangat mirip dengan transaksi di Ethereum.
 
-Saluran pembayaran adalah salah satu solusi peningkatan paling awal yang dirancang untuk meminimalkan aktivitas onchain yang mahal dari interaksi pengguna yang sederhana (misalnya, transfer ETH, pertukaran atomik, pembayaran mikro). Peserta saluran dapat melakukan transaksi instan tanpa biaya dalam jumlah tak terbatas antara satu sama lain selama jumlah bersih transfer mereka tidak melebihi token yang disetorkan.
+Kanal pembayaran adalah salah satu solusi penskalaan paling awal yang dirancang untuk meminimalkan aktivitas onchain yang mahal dari interaksi pengguna yang sederhana (misalnya, transfer ETH, pertukaran atomik, pembayaran mikro). Peserta kanal dapat melakukan transaksi instan tanpa biaya dalam jumlah tak terbatas di antara mereka sendiri selama jumlah bersih transfer mereka tidak melebihi token yang disetorkan.
 
-## Saluran status {#state-channels}
+## Kanal state {#state-channels}
 
-Selain mendukung pembayaran offchain, saluran pembayaran belum terbukti berguna untuk menangani logika transisi status umum. Saluran status dibuat untuk memecahkan masalah ini dan membuat saluran berguna untuk peningkatan komputasi tujuan umum.
+Selain mendukung pembayaran offchain, kanal pembayaran belum terbukti berguna untuk menangani logika transisi state secara umum. Kanal state diciptakan untuk memecahkan masalah ini dan membuat kanal berguna untuk menskalakan komputasi tujuan umum.
 
-Saluran status masih memiliki banyak kesamaan dengan saluran pembayaran. Misalnya, pengguna berinteraksi dengan bertukar pesan (transaksi) yang ditandatangani secara kriptografi, yang juga harus ditandatangani oleh peserta saluran lainnya. Jika pembaruan status yang diusulkan tidak ditandatangani oleh semua peserta, maka pembaruan tersebut dianggap tidak valid.
+Kanal state masih memiliki banyak kesamaan dengan kanal pembayaran. Misalnya, pengguna berinteraksi dengan bertukar pesan yang ditandatangani secara kriptografi (transaksi), yang juga harus ditandatangani oleh peserta kanal lainnya. Jika pembaruan state yang diusulkan tidak ditandatangani oleh semua peserta, itu dianggap tidak valid.
 
-Namun, selain menyimpan saldo pengguna, saluran ini juga melacak status penyimpanan kontrak saat ini (yaitu, nilai variabel kontrak).
+Namun, selain menyimpan saldo pengguna, kanal juga melacak state saat ini dari penyimpanan kontrak (yaitu, nilai variabel kontrak).
 
-Hal ini memungkinkan untuk mengeksekusi kontrak pintar secara offchain antara dua pengguna. Dalam skenario ini, pembaruan pada status internal kontrak pintar hanya memerlukan persetujuan dari rekan-rekan yang membuat saluran tersebut.
+Ini memungkinkan untuk mengeksekusi kontrak pintar secara offchain di antara dua pengguna. Dalam skenario ini, pembaruan pada state internal kontrak pintar hanya mewajibkan persetujuan dari peer yang membuat kanal tersebut.
 
-Meskipun ini memecahkan masalah skalabilitas yang dijelaskan sebelumnya, hal ini memiliki implikasi terhadap keamanan. Di Ethereum, validitas transisi status ditegakkan oleh protokol konsensus jaringan. Hal ini membuatnya tidak mungkin untuk mengusulkan pembaruan yang tidak valid pada status kontrak pintar atau mengubah eksekusi kontrak pintar.
+Meskipun ini memecahkan masalah skalabilitas yang dijelaskan sebelumnya, hal ini memiliki implikasi terhadap keamanan. Di Ethereum, validitas transisi state ditegakkan oleh protokol konsensus jaringan. Ini membuatnya mustahil untuk mengusulkan pembaruan yang tidak valid pada state kontrak pintar atau mengubah eksekusi kontrak pintar.
 
-Saluran status tidak memiliki jaminan keamanan yang sama. Sampai batas tertentu, saluran status adalah versi miniatur dari mainnet. Dengan serangkaian peserta terbatas yang menegakkan aturan, kemungkinan perilaku jahat (misalnya, mengusulkan pembaruan status yang tidak valid) meningkat. Saluran status memperoleh keamanannya dari sistem arbitrase perselisihan yang didasarkan pada [anti-penipuan](/glossary/#fraud-proof).
+Kanal state tidak memiliki jaminan keamanan yang sama. Sampai batas tertentu, kanal status adalah versi miniatur dari Mainnet. Dengan serangkaian peserta terbatas yang menegakkan aturan, kemungkinan perilaku jahat (misalnya, mengusulkan pembaruan state yang tidak valid) meningkat. Kanal state memperoleh keamanannya dari sistem arbitrase perselisihan yang didasarkan pada [bukti penipuan](/glossary/#fraud-proof).
 
-## Bagaimana saluran status bekerja {#how-state-channels-work}
+## Cara kerja kanal state {#how-state-channels-work}
 
-Pada dasarnya, aktivitas dalam saluran status adalah sesi interaksi yang melibatkan pengguna dan sistem blockchain. Pengguna sebagian besar berkomunikasi satu sama lain secara offchain dan hanya berinteraksi dengan blockchain yang mendasarinya untuk membuka saluran, menutup saluran, atau menyelesaikan potensi perselisihan antar peserta.
+Pada dasarnya, aktivitas dalam kanal status adalah sesi interaksi yang melibatkan pengguna dan sistem rantai blok. Pengguna sebagian besar berkomunikasi satu sama lain secara offchain dan hanya berinteraksi dengan rantai blok yang mendasarinya untuk membuka kanal, menutup kanal, atau menyelesaikan potensi perselisihan di antara peserta.
 
-Bagian berikut menguraikan alur kerja dasar dari saluran status:
+Bagian berikut menguraikan alur kerja dasar dari sebuah kanal status:
 
-### Membuka saluran {#opening-the-channel}
+### Membuka kanal {#opening-the-channel}
 
-Membuka saluran mengharuskan peserta untuk mengunci dana ke kontrak pintar di mainnet. Deposit ini juga berfungsi sebagai tab virtual, sehingga aktor yang berpartisipasi dapat bertransaksi secara bebas tanpa perlu menyelesaikan pembayaran dengan segera. Hanya ketika saluran difinalisasi secara onchain, para pihak saling menyelesaikan dan menarik apa yang tersisa dari tab mereka.
+Membuka kanal mewajibkan peserta untuk mengunci dana ke kontrak pintar di Mainnet. Setoran ini juga berfungsi sebagai tabungan virtual, sehingga aktor yang berpartisipasi dapat bertransaksi dengan bebas tanpa perlu segera menyelesaikan pembayaran. Hanya ketika kanal difinalisasi secara onchain barulah para pihak saling menyelesaikan pembayaran dan menarik apa yang tersisa dari tabungan mereka.
 
-Deposit ini juga berfungsi sebagai jaminan untuk menjamin perilaku jujur dari setiap peserta. Jika deposan terbukti bersalah atas tindakan jahat selama fase penyelesaian perselisihan, kontrak akan melakukan pemotongan terhadap deposit mereka.
+Setoran ini juga berfungsi sebagai jaminan untuk memastikan perilaku jujur dari setiap peserta. Jika penyetor terbukti bersalah melakukan tindakan jahat selama fase penyelesaian perselisihan, kontrak akan memotong setoran mereka.
 
-Rekan saluran harus menandatangani status awal, yang disetujui oleh mereka semua. Ini berfungsi sebagai genesis saluran status, setelah itu pengguna dapat mulai bertransaksi.
+Peer kanal harus menandatangani state awal, yang disepakati oleh mereka semua. Ini berfungsi sebagai genesis kanal status, setelah itu pengguna dapat mulai bertransaksi.
 
-### Menggunakan saluran {#using-the-channel}
+### Menggunakan kanal {#using-the-channel}
 
-Setelah menginisialisasi status saluran, rekan-rekan berinteraksi dengan menandatangani transaksi dan mengirimkannya satu sama lain untuk disetujui. Peserta memulai pembaruan status dengan transaksi ini dan menandatangani pembaruan status dari orang lain. Setiap transaksi terdiri dari hal-hal berikut:
+Setelah menginisialisasi state kanal, peer berinteraksi dengan menandatangani transaksi dan mengirimkannya satu sama lain untuk disetujui. Peserta memulai pembaruan state dengan transaksi ini dan menandatangani pembaruan state dari yang lain. Setiap transaksi terdiri dari hal-hal berikut:
 
-- Sebuah **nonce**, yang bertindak sebagai ID unik untuk transaksi dan mencegah serangan replay. Ini juga mengidentifikasi urutan terjadinya pembaruan status (yang penting untuk penyelesaian perselisihan)
+- Sebuah **nonce**, yang bertindak sebagai ID unik untuk transaksi dan mencegah serangan pemutaran ulang (replay attack). Ini juga mengidentifikasi urutan terjadinya pembaruan state (yang penting untuk penyelesaian perselisihan)
 
-- Status lama saluran
+- State lama kanal
 
-- Status baru saluran
+- State baru kanal
 
-- Transaksi yang memicu transisi status (misalnya, Alice mengirim 5 ETH ke Bob)
+- Transaksi yang memicu transisi state (misalnya, Alice mengirim 5 ETH ke Bob)
 
-Pembaruan status di dalam saluran tidak disiarkan secara onchain seperti yang biasanya terjadi ketika pengguna berinteraksi di mainnet, yang sejalan dengan tujuan saluran status untuk meminimalkan jejak onchain. Selama peserta menyetujui pembaruan status, pembaruan tersebut sama finalnya dengan transaksi Ethereum. Peserta hanya perlu bergantung pada konsensus mainnet jika timbul perselisihan.
+Pembaruan state di dalam kanal tidak disiarkan secara onchain seperti yang biasanya terjadi ketika pengguna berinteraksi di Mainnet, yang sejalan dengan tujuan kanal state untuk meminimalkan jejak onchain. Selama peserta menyetujui pembaruan state, pembaruan tersebut sama finalnya dengan transaksi Ethereum. Peserta hanya perlu bergantung pada konsensus Mainnet jika timbul perselisihan.
 
-### Menutup saluran {#closing-the-channel}
+### Menutup kanal {#closing-the-channel}
 
-Menutup saluran status memerlukan pengiriman status akhir saluran yang disepakati ke kontrak pintar onchain. Detail yang dirujuk dalam pembaruan status mencakup jumlah langkah masing-masing peserta dan daftar transaksi yang disetujui.
+Menutup kanal status mewajibkan pengiriman state akhir kanal yang disepakati ke kontrak pintar onchain. Detail yang dirujuk dalam pembaruan state mencakup jumlah langkah masing-masing peserta dan daftar transaksi yang disetujui.
 
-Setelah memverifikasi bahwa pembaruan status valid (yaitu, ditandatangani oleh semua pihak), kontrak pintar memfinalisasi saluran dan mendistribusikan dana yang terkunci sesuai dengan hasil saluran. Pembayaran yang dilakukan secara offchain diterapkan pada status Ethereum dan setiap peserta menerima sisa porsi dana mereka yang terkunci.
+Setelah memverifikasi bahwa pembaruan state valid (yaitu, ditandatangani oleh semua pihak), kontrak pintar memfinalisasi kanal dan mendistribusikan dana yang dikunci sesuai dengan hasil kanal. Pembayaran yang dilakukan secara offchain diterapkan pada state Ethereum dan setiap peserta menerima sisa porsi dana mereka yang terkunci.
 
-Skenario yang dijelaskan di atas mewakili apa yang terjadi dalam kasus yang membahagiakan (happy case). Terkadang, pengguna mungkin tidak dapat mencapai kesepakatan dan memfinalisasi saluran (kasus yang menyedihkan/sad case). Salah satu dari hal berikut ini bisa jadi benar untuk situasi tersebut:
+Skenario yang dijelaskan di atas mewakili apa yang terjadi dalam kasus yang ideal. Terkadang, pengguna mungkin tidak dapat mencapai kesepakatan dan memfinalisasi kanal (kasus yang buruk). Salah satu dari hal berikut bisa terjadi dalam situasi tersebut:
 
-- Peserta offline dan gagal mengusulkan transisi status
+- Peserta menjadi offline dan gagal mengusulkan transisi state
 
-- Peserta menolak untuk ikut menandatangani pembaruan status yang valid
+- Peserta menolak untuk ikut menandatangani pembaruan state yang valid
 
-- Peserta mencoba memfinalisasi saluran dengan mengusulkan pembaruan status lama ke kontrak onchain
+- Peserta mencoba memfinalisasi kanal dengan mengusulkan pembaruan state lama ke kontrak onchain
 
-- Peserta mengusulkan transisi status yang tidak valid untuk ditandatangani oleh orang lain
+- Peserta mengusulkan transisi state yang tidak valid untuk ditandatangani oleh orang lain
 
-Kapan pun konsensus rusak di antara aktor yang berpartisipasi dalam sebuah saluran, opsi terakhir adalah mengandalkan konsensus mainnet untuk menegakkan status akhir saluran yang valid. Dalam hal ini, menutup saluran status memerlukan penyelesaian perselisihan secara onchain.
+Kapan pun konsensus rusak di antara aktor yang berpartisipasi dalam sebuah kanal, opsi terakhir adalah mengandalkan konsensus Mainnet untuk menegakkan state akhir kanal yang valid. Dalam kasus ini, menutup kanal status mewajibkan penyelesaian perselisihan secara onchain.
 
 ### Menyelesaikan perselisihan {#settling-disputes}
 
-Biasanya, pihak-pihak dalam sebuah saluran setuju untuk menutup saluran sebelumnya dan ikut menandatangani transisi status terakhir, yang mereka kirimkan ke kontrak pintar. Setelah pembaruan disetujui secara onchain, eksekusi kontrak pintar offchain berakhir dan peserta keluar dari saluran dengan uang mereka.
+Biasanya, pihak-pihak dalam sebuah kanal sepakat untuk menutup kanal sebelumnya dan ikut menandatangani transisi state terakhir, yang mereka kirimkan ke kontrak pintar. Setelah pembaruan disetujui secara onchain, eksekusi kontrak pintar offchain berakhir dan peserta keluar dari kanal dengan uang mereka.
 
-Namun, satu pihak dapat mengirimkan permintaan onchain untuk mengakhiri eksekusi kontrak pintar dan memfinalisasi saluran—tanpa menunggu persetujuan rekan mereka. Jika salah satu situasi perusak konsensus yang dijelaskan sebelumnya terjadi, salah satu pihak dapat memicu kontrak onchain untuk menutup saluran dan mendistribusikan dana. Hal ini memberikan sifat **tanpa kepercayaan (trustlessness)**, memastikan bahwa pihak yang jujur dapat menarik deposit mereka kapan saja, terlepas dari tindakan pihak lain.
+Namun, satu pihak dapat mengirimkan permintaan onchain untuk mengakhiri eksekusi kontrak pintar dan memfinalisasi kanal—tanpa menunggu persetujuan dari pihak lawannya. Jika salah satu situasi perusak konsensus yang dijelaskan sebelumnya terjadi, salah satu pihak dapat memicu kontrak onchain untuk menutup kanal dan mendistribusikan dana. Ini memberikan **sifat tanpa kepercayaan**, memastikan bahwa pihak yang jujur dapat keluar dengan setoran mereka kapan saja, terlepas dari tindakan pihak lain.
 
-Untuk memproses keluar dari saluran, pengguna harus mengirimkan pembaruan status valid terakhir dari aplikasi ke kontrak onchain. Jika ini terbukti benar (yaitu, memuat tanda tangan semua pihak), maka dana didistribusikan kembali untuk keuntungan mereka.
+Untuk memproses keluar dari kanal, pengguna harus mengirimkan pembaruan state valid terakhir dari aplikasi ke kontrak onchain. Jika ini terbukti benar (yaitu, memuat tanda tangan semua pihak), maka dana didistribusikan kembali untuk keuntungan mereka.
 
-Namun, ada penundaan dalam mengeksekusi permintaan keluar pengguna tunggal. Jika permintaan untuk menyimpulkan saluran disetujui dengan suara bulat, maka transaksi keluar onchain dieksekusi dengan segera.
+Namun, ada penundaan dalam mengeksekusi permintaan keluar pengguna tunggal. Jika permintaan untuk menyimpulkan kanal disetujui dengan suara bulat, maka transaksi keluar onchain dieksekusi dengan segera.
 
-Penundaan ini ikut berperan dalam proses keluar pengguna tunggal karena kemungkinan tindakan penipuan. Misalnya, peserta saluran mungkin mencoba memfinalisasi saluran di Ethereum dengan mengirimkan pembaruan status yang lebih lama secara onchain.
+Penundaan mulai berlaku pada proses keluar pengguna tunggal karena adanya kemungkinan tindakan penipuan. Misalnya, peserta kanal mungkin mencoba memfinalisasi kanal di Ethereum dengan mengirimkan pembaruan state yang lebih lama secara onchain.
 
-Sebagai tindakan pencegahan, saluran status memungkinkan pengguna yang jujur untuk menantang pembaruan status yang tidak valid dengan mengirimkan status saluran terbaru yang valid secara onchain. Saluran status dirancang sedemikian rupa sehingga pembaruan status yang lebih baru dan disepakati mengalahkan pembaruan status yang lebih lama.
+Sebagai tindakan pencegahan, kanal state memungkinkan pengguna yang jujur untuk menantang pembaruan state yang tidak valid dengan mengirimkan state kanal terbaru yang valid secara onchain. Kanal state dirancang sedemikian rupa sehingga pembaruan state yang lebih baru dan disepakati mengalahkan pembaruan state yang lebih lama.
 
-Setelah rekan memicu sistem penyelesaian perselisihan onchain, pihak lain diharuskan untuk merespons dalam batas waktu (disebut jendela tantangan). Hal ini memungkinkan pengguna untuk menantang transaksi keluar, terutama jika pihak lain menerapkan pembaruan yang sudah usang.
+Setelah peer memicu sistem penyelesaian perselisihan onchain, pihak lain diwajibkan untuk merespons dalam batas waktu (disebut jendela tantangan). Ini memungkinkan pengguna untuk menantang transaksi keluar, terutama jika pihak lain menerapkan pembaruan yang sudah usang.
 
-Apa pun masalahnya, pengguna saluran selalu memiliki jaminan finalitas yang kuat: jika transisi status yang mereka miliki ditandatangani oleh semua anggota dan merupakan pembaruan terbaru, maka finalitasnya sama dengan transaksi onchain biasa. Mereka masih harus menantang pihak lain secara onchain, tetapi satu-satunya hasil yang mungkin adalah memfinalisasi status valid terakhir, yang mereka pegang.
+Apa pun kasusnya, pengguna kanal selalu memiliki jaminan finalitas yang kuat: jika transisi state yang mereka miliki ditandatangani oleh semua anggota dan merupakan pembaruan terbaru, maka itu memiliki finalitas yang setara dengan transaksi onchain biasa. Mereka masih harus menantang pihak lain secara onchain, tetapi satu-satunya hasil yang mungkin adalah memfinalisasi state valid terakhir, yang mereka pegang.
 
-### Bagaimana saluran status berinteraksi dengan Ethereum? {#how-do-state-channels-interact-with-ethereum}
+### Bagaimana kanal state berinteraksi dengan Ethereum? {#how-do-state-channels-interact-with-ethereum}
 
-Meskipun ada sebagai protokol offchain, saluran status memiliki komponen onchain: kontrak pintar yang diterapkan di Ethereum saat membuka saluran. Kontrak ini mengontrol aset yang disetorkan ke dalam saluran, memverifikasi pembaruan status, dan menengahi perselisihan antar peserta.
+Meskipun ada sebagai protokol offchain, kanal state memiliki komponen onchain: kontrak pintar yang disebarkan di Ethereum saat membuka kanal. Kontrak ini mengontrol aset yang disetorkan ke dalam kanal, memverifikasi pembaruan state, dan menengahi perselisihan di antara peserta.
 
-Saluran status tidak mempublikasikan data transaksi atau komitmen status ke mainnet, tidak seperti solusi peningkatan [layer 2](/layer-2/). Namun, mereka lebih terhubung ke mainnet daripada, katakanlah, [sidechain](/developers/docs/scaling/sidechains/), yang membuatnya sedikit lebih aman.
+Kanal state tidak memublikasikan data transaksi atau komitmen state ke Mainnet, tidak seperti solusi penskalaan [lapisan 2 (l2)](/layer-2/). Namun, mereka lebih terhubung ke Mainnet daripada, katakanlah, [rantai samping](/developers/docs/scaling/sidechains/), yang membuatnya sedikit lebih aman.
 
-Saluran status mengandalkan protokol utama Ethereum untuk hal-hal berikut:
+Kanal state mengandalkan protokol utama Ethereum untuk hal-hal berikut:
 
-#### 1. Keaktifan (Liveness) {#liveness}
+#### 1. Liveness {#liveness}
 
-Kontrak onchain yang diterapkan saat membuka saluran bertanggung jawab atas fungsionalitas saluran. Jika kontrak berjalan di Ethereum, maka saluran selalu tersedia untuk digunakan. Sebaliknya, sidechain selalu bisa gagal, bahkan jika mainnet beroperasi, yang menempatkan dana pengguna dalam risiko.
+Kontrak onchain yang disebarkan saat membuka kanal bertanggung jawab atas fungsionalitas kanal. Jika kontrak berjalan di Ethereum, maka kanal selalu tersedia untuk digunakan. Sebaliknya, rantai samping selalu bisa gagal, bahkan jika Mainnet beroperasi, yang menempatkan dana pengguna dalam risiko.
 
-#### 2. Keamanan {#security}
+#### 2. Security {#security}
 
-Sampai batas tertentu, saluran status mengandalkan Ethereum untuk memberikan keamanan dan melindungi pengguna dari rekan yang jahat. Seperti yang dibahas di bagian selanjutnya, saluran menggunakan mekanisme anti-penipuan yang memungkinkan pengguna menantang upaya untuk memfinalisasi saluran dengan pembaruan yang tidak valid atau usang.
+Sampai batas tertentu, kanal state mengandalkan Ethereum untuk memberikan keamanan dan melindungi pengguna dari peer yang jahat. Seperti yang dibahas di bagian selanjutnya, kanal menggunakan mekanisme bukti penipuan yang memungkinkan pengguna menantang upaya untuk memfinalisasi kanal dengan pembaruan yang tidak valid atau usang.
 
-Dalam hal ini, pihak yang jujur memberikan status saluran valid terbaru sebagai anti-penipuan ke kontrak onchain untuk verifikasi. Anti-penipuan memungkinkan pihak-pihak yang saling tidak percaya untuk melakukan transaksi offchain tanpa mempertaruhkan dana mereka dalam prosesnya.
+Dalam kasus ini, pihak yang jujur memberikan state kanal valid terbaru sebagai bukti penipuan ke kontrak onchain untuk diverifikasi. Bukti penipuan memungkinkan pihak-pihak yang saling tidak percaya untuk melakukan transaksi offchain tanpa mempertaruhkan dana mereka dalam prosesnya.
 
-#### 3. Finalitas {#finality}
+#### 3. Finality {#finality}
 
-Pembaruan status yang ditandatangani secara kolektif oleh pengguna saluran dianggap sama baiknya dengan transaksi onchain. Namun, semua aktivitas di dalam saluran hanya mencapai finalitas yang sebenarnya ketika saluran ditutup di Ethereum.
+Pembaruan state yang ditandatangani secara kolektif oleh pengguna kanal dianggap sama baiknya dengan transaksi onchain. Namun, semua aktivitas di dalam kanal hanya mencapai finalitas sejati ketika kanal ditutup di Ethereum.
 
-Dalam kasus yang optimis, kedua belah pihak dapat bekerja sama dan menandatangani pembaruan status akhir dan mengirimkannya secara onchain untuk menutup saluran, setelah itu dana didistribusikan sesuai dengan status akhir saluran. Dalam kasus yang pesimis, di mana seseorang mencoba menipu dengan memposting pembaruan status yang salah secara onchain, transaksi mereka tidak difinalisasi sampai jendela tantangan berlalu.
+Dalam kasus yang optimis, kedua belah pihak dapat bekerja sama dan menandatangani pembaruan state akhir dan mengirimkannya secara onchain untuk menutup kanal, setelah itu dana didistribusikan sesuai dengan state akhir kanal. Dalam kasus yang pesimis, di mana seseorang mencoba berbuat curang dengan memposting pembaruan state yang salah secara onchain, transaksi mereka tidak difinalisasi sampai jendela tantangan berlalu.
 
-## Saluran status virtual {#virtual-state-channels}
+## Kanal state virtual {#virtual-state-channels}
 
-Implementasi naif dari saluran status adalah menerapkan kontrak baru ketika dua pengguna ingin mengeksekusi aplikasi secara offchain. Hal ini tidak hanya tidak layak, tetapi juga meniadakan efektivitas biaya dari saluran status (biaya transaksi onchain dapat dengan cepat bertambah).
+Implementasi naif dari sebuah kanal status adalah menyebarkan kontrak baru ketika dua pengguna ingin mengeksekusi aplikasi secara offchain. Ini tidak hanya tidak layak, tetapi juga meniadakan efektivitas biaya dari kanal state (biaya transaksi onchain dapat dengan cepat menumpuk).
 
-Untuk memecahkan masalah ini, "saluran virtual" diciptakan. Tidak seperti saluran biasa yang memerlukan transaksi onchain untuk membuka dan mengakhiri, saluran virtual dapat dibuka, dieksekusi, dan difinalisasi tanpa berinteraksi dengan rantai utama. Bahkan dimungkinkan untuk menyelesaikan perselisihan secara offchain menggunakan metode ini.
+Untuk memecahkan masalah ini, "kanal virtual" diciptakan. Tidak seperti kanal biasa yang mewajibkan transaksi onchain untuk dibuka dan diakhiri, kanal virtual dapat dibuka, dieksekusi, dan difinalisasi tanpa berinteraksi dengan rantai utama. Bahkan dimungkinkan untuk menyelesaikan perselisihan secara offchain menggunakan metode ini.
 
-Sistem ini bergantung pada keberadaan apa yang disebut "saluran buku besar" (ledger channel), yang telah didanai secara onchain. Saluran virtual antara dua pihak dapat dibangun di atas saluran buku besar yang ada, dengan pemilik saluran buku besar berfungsi sebagai perantara.
+Sistem ini mengandalkan keberadaan apa yang disebut "kanal buku besar", yang telah didanai secara onchain. Kanal virtual antara dua pihak dapat dibangun di atas kanal buku besar yang ada, dengan pemilik kanal buku besar berfungsi sebagai perantara.
 
-Pengguna di setiap saluran virtual berinteraksi melalui instans kontrak baru, dengan saluran buku besar yang mampu mendukung beberapa instans kontrak. Status saluran buku besar juga berisi lebih dari satu status penyimpanan kontrak, yang memungkinkan eksekusi paralel aplikasi secara offchain di antara pengguna yang berbeda.
+Pengguna di setiap kanal virtual berinteraksi melalui instans kontrak baru, dengan kanal buku besar yang mampu mendukung beberapa instans kontrak. State kanal buku besar juga berisi lebih dari satu state penyimpanan kontrak, yang memungkinkan eksekusi paralel aplikasi secara offchain di antara pengguna yang berbeda.
 
-Sama seperti saluran biasa, pengguna bertukar pembaruan status untuk memajukan mesin status. Kecuali jika timbul perselisihan, perantara hanya perlu dihubungi saat membuka atau mengakhiri saluran.
+Sama seperti kanal biasa, pengguna bertukar pembaruan state untuk memajukan mesin state. Kecuali jika timbul perselisihan, perantara hanya perlu dihubungi saat membuka atau mengakhiri kanal.
 
-### Saluran pembayaran virtual {#virtual-payment-channels}
+### Kanal pembayaran virtual {#virtual-payment-channels}
 
-Saluran pembayaran virtual bekerja berdasarkan ide yang sama dengan saluran status virtual: peserta yang terhubung ke jaringan yang sama dapat menyampaikan pesan tanpa perlu membuka saluran baru secara onchain. Dalam saluran pembayaran virtual, transfer nilai dirutekan melalui satu atau lebih perantara, dengan jaminan bahwa hanya penerima yang dituju yang dapat menerima dana yang ditransfer.
+Kanal pembayaran virtual bekerja berdasarkan ide yang sama dengan kanal state virtual: peserta yang terhubung ke jaringan yang sama dapat meneruskan pesan tanpa perlu membuka kanal baru secara onchain. Dalam kanal pembayaran virtual, transfer nilai dirutekan melalui satu atau lebih perantara, dengan jaminan bahwa hanya penerima yang dituju yang dapat menerima dana yang ditransfer.
 
-## Aplikasi saluran status {#applications-of-state-channels}
+## Aplikasi kanal state {#applications-of-state-channels}
 
 ### Pembayaran {#payments}
 
-Saluran blockchain awal adalah protokol sederhana yang memungkinkan dua peserta untuk melakukan transfer cepat dengan biaya rendah secara offchain tanpa harus membayar biaya transaksi yang tinggi di mainnet. Saat ini, saluran pembayaran masih berguna untuk aplikasi yang dirancang untuk pertukaran dan deposit ether dan token.
+Kanal rantai blok awal adalah protokol sederhana yang memungkinkan dua peserta untuk melakukan transfer cepat dengan biaya rendah secara offchain tanpa harus membayar biaya transaksi yang tinggi di Mainnet. Saat ini, kanal pembayaran masih berguna untuk aplikasi yang dirancang untuk pertukaran dan penyetoran Ether dan token.
 
-Pembayaran berbasis saluran memiliki keuntungan sebagai berikut:
+Pembayaran berbasis kanal memiliki keuntungan sebagai berikut:
 
-1. **Throughput**: Jumlah transaksi offchain per saluran tidak terhubung dengan throughput Ethereum, yang dipengaruhi oleh berbagai faktor, terutama ukuran blok dan waktu blok. Dengan mengeksekusi transaksi secara offchain, saluran blockchain dapat mencapai throughput yang lebih tinggi.
+1. **Laju pemrosesan**: Jumlah transaksi offchain per kanal tidak terhubung dengan laju pemrosesan Ethereum, yang dipengaruhi oleh berbagai faktor, terutama ukuran blok dan waktu blok. Dengan mengeksekusi transaksi secara offchain, kanal rantai blok dapat mencapai laju pemrosesan yang lebih tinggi.
 
-2. **Privasi**: Karena saluran ada secara offchain, detail interaksi antar peserta tidak dicatat di blockchain publik Ethereum. Pengguna saluran hanya perlu berinteraksi secara onchain saat mendanai dan menutup saluran atau menyelesaikan perselisihan. Dengan demikian, saluran berguna bagi individu yang menginginkan transaksi yang lebih privat.
+2. **Privasi**: Karena kanal ada secara offchain, detail interaksi antar peserta tidak dicatat di rantai blok publik Ethereum. Pengguna kanal hanya perlu berinteraksi secara onchain saat mendanai dan menutup kanal atau menyelesaikan perselisihan. Dengan demikian, kanal berguna bagi individu yang menginginkan transaksi yang lebih privat.
 
-3. **Latensi**: Transaksi offchain yang dilakukan antar peserta saluran dapat diselesaikan secara instan, jika kedua belah pihak bekerja sama, sehingga mengurangi penundaan. Sebaliknya, mengirim transaksi di mainnet mengharuskan menunggu node untuk memproses transaksi, menghasilkan blok baru dengan transaksi tersebut, dan mencapai konsensus. Pengguna mungkin juga perlu menunggu lebih banyak konfirmasi blok sebelum menganggap transaksi telah difinalisasi.
+3. **Latensi**: Transaksi offchain yang dilakukan antar peserta kanal dapat diselesaikan secara instan, jika kedua belah pihak bekerja sama, sehingga mengurangi penundaan. Sebaliknya, mengirim transaksi di Mainnet mewajibkan Anda menunggu node untuk memproses transaksi, menghasilkan blok baru dengan transaksi tersebut, dan mencapai konsensus. Pengguna mungkin juga perlu menunggu lebih banyak konfirmasi blok sebelum menganggap transaksi telah difinalisasi.
 
-4. **Biaya**: Saluran status sangat berguna dalam situasi di mana sekumpulan peserta akan bertukar banyak pembaruan status dalam jangka waktu yang lama. Satu-satunya biaya yang timbul adalah pembukaan dan penutupan kontrak pintar saluran status; setiap perubahan status antara pembukaan dan penutupan saluran akan lebih murah daripada yang sebelumnya karena biaya penyelesaian didistribusikan sebagaimana mestinya.
+4. **Biaya**: Kanal state sangat berguna dalam situasi di mana sekelompok peserta akan bertukar banyak pembaruan state dalam jangka waktu yang lama. Satu-satunya biaya yang timbul adalah pembukaan dan penutupan kontrak pintar kanal status; setiap perubahan state antara pembukaan dan penutupan kanal akan lebih murah daripada yang sebelumnya karena biaya penyelesaian didistribusikan sebagaimana mestinya.
 
-Menerapkan saluran status pada solusi layer 2, seperti [rollup](/developers/docs/scaling/#rollups), dapat membuatnya lebih menarik untuk pembayaran. Meskipun saluran menawarkan pembayaran yang murah, biaya penyiapan kontrak onchain di mainnet selama fase pembukaan bisa menjadi mahal—terutama ketika biaya gas melonjak. Rollup berbasis Ethereum menawarkan [biaya transaksi yang lebih rendah](https://l2fees.info/) dan dapat mengurangi overhead bagi peserta saluran dengan menurunkan biaya penyiapan.
+Menerapkan kanal state pada solusi lapisan 2 (l2), seperti [rollup](/developers/docs/scaling/#rollups), dapat membuatnya lebih menarik untuk pembayaran. Meskipun kanal menawarkan pembayaran yang murah, biaya penyiapan kontrak onchain di Mainnet selama fase pembukaan bisa menjadi mahal—terutama ketika biaya gas melonjak. Rollup berbasis Ethereum menawarkan [biaya transaksi yang lebih rendah](https://l2fees.info/) dan dapat mengurangi biaya tambahan bagi peserta kanal dengan menurunkan biaya penyiapan.
 
-### Transaksi mikro {#microtransactions}
+### Pembayaran mikro {#microtransactions}
 
-Transaksi mikro adalah pembayaran bernilai rendah (misalnya, lebih rendah dari sebagian kecil dolar) yang tidak dapat diproses oleh bisnis tanpa menimbulkan kerugian. Entitas ini harus membayar penyedia layanan pembayaran, yang tidak dapat mereka lakukan jika margin pada pembayaran pelanggan terlalu rendah untuk menghasilkan keuntungan.
+Pembayaran mikro adalah pembayaran bernilai rendah (misalnya, lebih rendah dari sebagian kecil dolar) yang tidak dapat diproses oleh bisnis tanpa mengalami kerugian. Entitas ini harus membayar penyedia layanan pembayaran, yang tidak dapat mereka lakukan jika margin pada pembayaran pelanggan terlalu rendah untuk menghasilkan keuntungan.
 
-Saluran pembayaran memecahkan masalah ini dengan mengurangi overhead yang terkait dengan transaksi mikro. Misalnya, Penyedia Layanan Internet (ISP) dapat membuka saluran pembayaran dengan pelanggan, yang memungkinkan mereka untuk mengalirkan pembayaran kecil setiap kali mereka menggunakan layanan tersebut.
+Kanal pembayaran memecahkan masalah ini dengan mengurangi biaya tambahan yang terkait dengan pembayaran mikro. Misalnya, Penyedia Layanan Internet (ISP) dapat membuka kanal pembayaran dengan pelanggan, yang memungkinkan mereka untuk mengalirkan pembayaran kecil setiap kali mereka menggunakan layanan tersebut.
 
-Di luar biaya pembukaan dan penutupan saluran, peserta tidak dikenakan biaya lebih lanjut pada transaksi mikro (tidak ada biaya gas). Ini adalah situasi yang saling menguntungkan karena pelanggan memiliki lebih banyak fleksibilitas dalam berapa banyak mereka membayar untuk layanan dan bisnis tidak kehilangan transaksi mikro yang menguntungkan.
+Di luar biaya pembukaan dan penutupan kanal, peserta tidak dikenakan biaya lebih lanjut pada pembayaran mikro (tidak ada biaya gas). Ini adalah situasi yang saling menguntungkan karena pelanggan memiliki lebih banyak fleksibilitas dalam berapa banyak mereka membayar untuk layanan dan bisnis tidak kehilangan pembayaran mikro yang menguntungkan.
 
-### Aplikasi terdesentralisasi {#decentralized-applications}
+### Aplikasi terdesentralisasi (dapp) {#decentralized-applications}
 
-Seperti saluran pembayaran, saluran status dapat melakukan pembayaran bersyarat sesuai dengan status akhir mesin status. Saluran status juga dapat mendukung logika transisi status arbitrer, yang membuatnya berguna untuk mengeksekusi aplikasi generik secara offchain.
+Seperti kanal pembayaran, kanal state dapat melakukan pembayaran bersyarat sesuai dengan state akhir mesin state. Kanal state juga dapat mendukung logika transisi state arbitrer, yang membuatnya berguna untuk mengeksekusi aplikasi generik secara offchain.
 
-Saluran status sering kali terbatas pada aplikasi berbasis giliran yang sederhana, karena hal ini memudahkan pengelolaan dana yang dikunci ke kontrak onchain. Selain itu, dengan jumlah pihak yang terbatas yang memperbarui status aplikasi offchain secara berkala, menghukum perilaku tidak jujur relatif mudah.
+Kanal state sering kali terbatas pada aplikasi berbasis giliran yang sederhana, karena ini membuatnya lebih mudah untuk mengelola dana yang dikunci ke kontrak onchain. Selain itu, dengan jumlah pihak yang terbatas yang memperbarui state aplikasi offchain secara berkala, menghukum perilaku tidak jujur relatif mudah.
 
-Efisiensi aplikasi saluran status juga bergantung pada desainnya. Misalnya, pengembang mungkin menerapkan kontrak saluran aplikasi secara onchain sekali dan memungkinkan pemain lain untuk menggunakan kembali aplikasi tersebut tanpa harus menggunakan onchain. Dalam hal ini, saluran aplikasi awal berfungsi sebagai saluran buku besar yang mendukung beberapa saluran virtual, yang masing-masing menjalankan instans baru dari kontrak pintar aplikasi secara offchain.
+Efisiensi aplikasi kanal status juga bergantung pada desainnya. Misalnya, pengembang mungkin menyebarkan kontrak kanal aplikasi secara onchain satu kali dan mengizinkan pemain lain untuk menggunakan kembali aplikasi tersebut tanpa harus pergi ke onchain. Dalam kasus ini, kanal aplikasi awal berfungsi sebagai kanal buku besar yang mendukung beberapa kanal virtual, yang masing-masing menjalankan instans baru dari kontrak pintar aplikasi secara offchain.
 
-Kasus penggunaan potensial untuk aplikasi saluran status adalah permainan dua pemain sederhana, di mana dana didistribusikan berdasarkan hasil permainan. Manfaatnya di sini adalah bahwa pemain tidak perlu saling percaya (tanpa kepercayaan) dan kontrak onchain, bukan pemain, yang mengontrol alokasi dana dan penyelesaian perselisihan (desentralisasi).
+Kasus penggunaan potensial untuk aplikasi kanal status adalah permainan dua pemain sederhana, di mana dana didistribusikan berdasarkan hasil permainan. Manfaatnya di sini adalah pemain tidak perlu saling percaya (sifat tanpa kepercayaan) dan kontrak onchain, bukan pemain, yang mengontrol alokasi dana dan penyelesaian perselisihan (desentralisasi).
 
-Kasus penggunaan lain yang mungkin untuk aplikasi saluran status mencakup kepemilikan nama ENS, buku besar NFT, dan banyak lagi.
+Kasus penggunaan lain yang mungkin untuk aplikasi kanal status mencakup kepemilikan nama ENS, buku besar NFT, dan banyak lagi.
 
 ### Transfer atomik {#atomic-transfers}
 
-Saluran pembayaran awal dibatasi pada transfer antara dua pihak, yang membatasi kegunaannya. Namun, pengenalan saluran virtual memungkinkan individu untuk merutekan transfer melalui perantara (yaitu, beberapa saluran p2p) tanpa harus membuka saluran baru secara onchain.
+Kanal pembayaran awal dibatasi pada transfer antara dua pihak, yang membatasi kegunaannya. Namun, pengenalan kanal virtual memungkinkan individu untuk merutekan transfer melalui perantara (yaitu, beberapa kanal p2p) tanpa harus membuka kanal baru secara onchain.
 
-Umumnya digambarkan sebagai "transfer multi-hop", pembayaran yang dirutekan bersifat atomik (yaitu, semua bagian transaksi berhasil atau gagal sama sekali). Transfer atomik menggunakan [Hashed Timelock Contracts (HTLCs)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts) untuk memastikan pembayaran dirilis hanya jika kondisi tertentu terpenuhi, sehingga mengurangi risiko pihak lawan.
+Umumnya digambarkan sebagai "transfer multi-hop", pembayaran yang dirutekan bersifat atomik (yaitu, semua bagian transaksi berhasil atau gagal sama sekali). Transfer atomik menggunakan [Hashed Timelock Contracts (HTLCs)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts) untuk memastikan pembayaran dilepaskan hanya jika kondisi tertentu terpenuhi, sehingga mengurangi risiko pihak lawan.
 
-## Kelemahan menggunakan saluran status {#drawbacks-of-state-channels}
+## Kelemahan menggunakan kanal state {#drawbacks-of-state-channels}
 
-### Asumsi keaktifan {#liveness-assumptions}
+### Asumsi liveness {#liveness-assumptions}
 
-Untuk memastikan efisiensi, saluran status menempatkan batas waktu pada kemampuan peserta saluran untuk merespons perselisihan. Aturan ini mengasumsikan bahwa rekan-rekan akan selalu online untuk memantau aktivitas saluran dan menentang tantangan bila diperlukan.
+Untuk memastikan efisiensi, kanal state menempatkan batas waktu pada kemampuan peserta kanal untuk merespons perselisihan. Aturan ini mengasumsikan bahwa peer akan selalu online untuk memantau aktivitas kanal dan melawan tantangan bila diperlukan.
 
-Pada kenyataannya, pengguna dapat offline karena alasan di luar kendali mereka (misalnya, koneksi internet yang buruk, kegagalan mekanis, dll.). Jika pengguna yang jujur offline, rekan yang jahat dapat mengeksploitasi situasi tersebut dengan menyajikan status perantara lama ke kontrak penengah dan mencuri dana yang dikunci.
+Pada kenyataannya, pengguna dapat menjadi offline karena alasan di luar kendali mereka (misalnya, koneksi internet yang buruk, kegagalan mekanis, dll.). Jika pengguna yang jujur menjadi offline, peer yang jahat dapat mengeksploitasi situasi tersebut dengan menyajikan state perantara lama ke kontrak penengah dan mencuri dana yang dikunci.
 
-Beberapa saluran menggunakan "menara pengawas" (watchtower)—entitas yang bertanggung jawab untuk mengawasi peristiwa perselisihan onchain atas nama orang lain dan mengambil tindakan yang diperlukan, seperti memperingatkan pihak-pihak yang berkepentingan. Namun, hal ini dapat menambah biaya penggunaan saluran status.
+Beberapa kanal menggunakan "menara pengawas" (watchtowers)—entitas yang bertanggung jawab untuk mengawasi peristiwa perselisihan onchain atas nama orang lain dan mengambil tindakan yang diperlukan, seperti memperingatkan pihak-pihak yang berkepentingan. Namun, ini dapat menambah biaya penggunaan kanal status.
 
 ### Ketidaktersediaan data {#data-unavailability}
 
-Seperti yang dijelaskan sebelumnya, menantang perselisihan yang tidak valid memerlukan penyajian status saluran status terbaru yang valid. Ini adalah aturan lain yang didasarkan pada asumsi—bahwa pengguna memiliki akses ke status terbaru saluran.
+Seperti yang dijelaskan sebelumnya, menantang perselisihan yang tidak valid mewajibkan penyajian state terbaru yang valid dari kanal status. Ini adalah aturan lain yang didasarkan pada asumsi—bahwa pengguna memiliki akses ke state terbaru kanal.
 
-Meskipun mengharapkan pengguna saluran untuk menyimpan salinan status aplikasi offchain adalah hal yang wajar, data ini mungkin hilang karena kesalahan atau kegagalan mekanis. Jika pengguna tidak memiliki cadangan data, mereka hanya dapat berharap bahwa pihak lain tidak memfinalisasi permintaan keluar yang tidak valid menggunakan transisi status lama yang mereka miliki.
+Meskipun mengharapkan pengguna kanal untuk menyimpan salinan state aplikasi offchain adalah hal yang masuk akal, data ini mungkin hilang karena kesalahan atau kegagalan mekanis. Jika pengguna tidak memiliki cadangan data, mereka hanya dapat berharap bahwa pihak lain tidak memfinalisasi permintaan keluar yang tidak valid menggunakan transisi state lama yang mereka miliki.
 
 Pengguna Ethereum tidak perlu berurusan dengan masalah ini karena jaringan menegakkan aturan tentang ketersediaan data. Data transaksi disimpan dan disebarkan oleh semua node dan tersedia untuk diunduh pengguna jika dan ketika diperlukan.
 
-### Masalah likuiditas {#liquidity-issues}
+### Masalah Likuiditas {#liquidity-issues}
 
-Untuk membuat saluran blockchain, peserta perlu mengunci dana dalam kontrak pintar onchain selama siklus hidup saluran. Hal ini mengurangi likuiditas pengguna saluran dan juga membatasi saluran bagi mereka yang mampu menjaga dana tetap terkunci di mainnet.
+Untuk membuat kanal rantai blok, peserta perlu mengunci dana dalam kontrak pintar onchain selama siklus hidup kanal. Ini mengurangi Likuiditas pengguna kanal dan juga membatasi kanal hanya bagi mereka yang mampu menjaga dana tetap terkunci di Mainnet.
 
-Namun, saluran buku besar—yang dioperasikan oleh penyedia layanan offchain (OSP)—dapat mengurangi masalah likuiditas bagi pengguna. Dua rekan yang terhubung ke saluran buku besar dapat membuat saluran virtual, yang dapat mereka buka dan finalisasi sepenuhnya secara offchain, kapan pun mereka mau.
+Namun, kanal buku besar—yang dioperasikan oleh penyedia layanan offchain (OSP)—dapat mengurangi masalah Likuiditas bagi pengguna. Dua peer yang terhubung ke kanal buku besar dapat membuat kanal virtual, yang dapat mereka buka dan finalisasi sepenuhnya secara offchain, kapan pun mereka mau.
 
-Penyedia layanan offchain juga dapat membuka saluran dengan beberapa rekan, yang membuatnya berguna untuk merutekan pembayaran. Tentu saja, pengguna harus membayar biaya kepada OSP untuk layanan mereka, yang mungkin tidak diinginkan oleh sebagian orang.
+Penyedia layanan offchain juga dapat membuka kanal dengan beberapa peer, yang membuatnya berguna untuk merutekan pembayaran. Tentu saja, pengguna harus membayar biaya kepada OSP untuk layanan mereka, yang mungkin tidak diinginkan oleh sebagian orang.
 
 ### Serangan griefing {#griefing-attacks}
 
-Serangan griefing adalah fitur umum dari sistem berbasis anti-penipuan. Serangan griefing tidak secara langsung menguntungkan penyerang tetapi menyebabkan kesedihan (yaitu, kerugian) bagi korban, oleh karena itu dinamakan demikian.
+Serangan griefing adalah fitur umum dari sistem berbasis bukti penipuan. Serangan griefing tidak secara langsung menguntungkan penyerang tetapi menyebabkan kesedihan (yaitu, kerugian) bagi korban, oleh karena itu dinamakan demikian.
 
-Pembuktian anti-penipuan rentan terhadap serangan griefing karena pihak yang jujur harus merespons setiap perselisihan, bahkan yang tidak valid sekalipun, atau berisiko kehilangan dana mereka. Peserta yang jahat dapat memutuskan untuk berulang kali memposting transisi status yang usang secara onchain, yang memaksa pihak yang jujur untuk merespons dengan status yang valid. Biaya transaksi onchain tersebut dapat dengan cepat bertambah, yang menyebabkan pihak yang jujur merugi dalam prosesnya.
+Pembuktian penipuan rentan terhadap serangan griefing karena pihak yang jujur harus merespons setiap perselisihan, bahkan yang tidak valid sekalipun, atau berisiko kehilangan dana mereka. Peserta yang jahat dapat memutuskan untuk berulang kali memposting transisi state yang usang secara onchain, memaksa pihak yang jujur untuk merespons dengan state yang valid. Biaya transaksi onchain tersebut dapat dengan cepat menumpuk, menyebabkan pihak yang jujur merugi dalam prosesnya.
 
-### Kumpulan peserta yang telah ditentukan sebelumnya {#predefined-participant-sets}
+### Kumpulan peserta yang telah ditentukan {#predefined-participant-sets}
 
-Berdasarkan desain, jumlah peserta yang membentuk saluran status tetap tidak berubah sepanjang masa pakainya. Hal ini karena memperbarui kumpulan peserta akan memperumit operasi saluran, terutama saat mendanai saluran, atau menyelesaikan perselisihan. Menambah atau menghapus peserta juga akan memerlukan aktivitas onchain tambahan, yang meningkatkan overhead bagi pengguna.
+Berdasarkan desain, jumlah peserta yang membentuk kanal status tetap tidak berubah sepanjang masa pakainya. Ini karena memperbarui kumpulan peserta akan memperumit operasi kanal, terutama saat mendanai kanal, atau menyelesaikan perselisihan. Menambah atau menghapus peserta juga akan mewajibkan aktivitas onchain tambahan, yang meningkatkan biaya tambahan bagi pengguna.
 
-Meskipun hal ini membuat saluran status lebih mudah untuk dipahami, hal ini membatasi kegunaan desain saluran bagi pengembang aplikasi. Hal ini sebagian menjelaskan mengapa saluran status telah ditinggalkan demi solusi peningkatan lainnya, seperti rollup.
+Meskipun ini membuat kanal state lebih mudah dipahami, hal ini membatasi kegunaan desain kanal bagi pengembang aplikasi. Ini sebagian menjelaskan mengapa kanal state telah ditinggalkan demi solusi penskalaan lainnya, seperti rollup.
 
 ### Pemrosesan transaksi paralel {#parallel-transaction-processing}
 
-Peserta dalam saluran status mengirimkan pembaruan status secara bergantian, itulah sebabnya mereka bekerja paling baik untuk "aplikasi berbasis giliran" (misalnya, permainan catur dua pemain). Hal ini menghilangkan kebutuhan untuk menangani pembaruan status secara bersamaan dan mengurangi pekerjaan yang harus dilakukan kontrak onchain untuk menghukum pemosting pembaruan yang usang. Namun, efek samping dari desain ini adalah bahwa transaksi bergantung satu sama lain, yang meningkatkan latensi dan mengurangi pengalaman pengguna secara keseluruhan.
+Peserta dalam kanal status mengirimkan pembaruan state secara bergiliran, itulah sebabnya mereka bekerja paling baik untuk "aplikasi berbasis giliran" (misalnya, permainan catur dua pemain). Ini menghilangkan kebutuhan untuk menangani pembaruan state secara bersamaan dan mengurangi pekerjaan yang harus dilakukan kontrak onchain untuk menghukum pemosting pembaruan yang usang. Namun, efek samping dari desain ini adalah bahwa transaksi saling bergantung satu sama lain, meningkatkan latensi dan mengurangi pengalaman pengguna secara keseluruhan.
 
-Beberapa saluran status memecahkan masalah ini dengan menggunakan desain "full-duplex" yang memisahkan status offchain menjadi dua status "simpleks" searah, yang memungkinkan pembaruan status secara bersamaan. Desain semacam itu meningkatkan throughput offchain dan mengurangi penundaan transaksi.
+Beberapa kanal state memecahkan masalah ini dengan menggunakan desain "full-duplex" yang memisahkan state offchain menjadi dua state "simpleks" searah, yang memungkinkan pembaruan state secara bersamaan. Desain semacam itu meningkatkan laju pemrosesan offchain dan mengurangi penundaan transaksi.
 
-## Gunakan saluran status {#use-state-channels}
+## Gunakan kanal state {#use-state-channels}
 
-Beberapa proyek menyediakan implementasi saluran status yang dapat Anda integrasikan ke dalam dapps Anda:
+Beberapa proyek menyediakan implementasi kanal state yang dapat Anda integrasikan ke dalam aplikasi terdesentralisasi (dapp) Anda:
 
 - [Connext](https://connext.network/)
-- [Kchannels](https://www.kchannels.io/)
 - [Perun](https://perun.network/)
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
 ## Bacaan lebih lanjut {#further-reading}
 
-**Saluran status**
+**Kanal state**
 
-- [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, Feb 12 2018_
-- [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
-- [Basics of State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
-- [Blockchain State Channels: A State of the Art](https://ieeexplore.ieee.org/document/9627997)
+- [Memahami Solusi Penskalaan Lapisan 2 (l2) Ethereum: Kanal State, Plasma, dan Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 Feb 2018_
+- [Kanal State - sebuah penjelasan](https://www.jeffcoleman.ca/state-channels/) _6 Nov 2015 - Jeff Coleman_
+- [Dasar-dasar Kanal State](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
+- [Kanal State Rantai Blok: Sebuah Kecanggihan Teknologi](https://ieeexplore.ieee.org/document/9627997)
 
-_Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
+_Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

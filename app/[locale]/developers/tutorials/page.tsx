@@ -7,7 +7,7 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -56,6 +56,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         internalTutorials={internalTutorials}
         contributors={contributors}
       />
+
       <I18nProvider locale={locale} messages={messages}>
         <PageHero
           breadcrumbs={{ slug: "developers/tutorials", startDepth: 1 }}
@@ -68,15 +69,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </TutorialSubmitModal>,
           ]}
         />
+
         <MainArticle
-          className="mx-auto my-0 flex w-full flex-col items-center"
+          className="mx-auto my-page w-full max-w-screen-lg shadow-table-box"
           dir={dir}
         >
           <TutorialsList internalTutorials={internalTutorials} />
-
-          <FeedbackCard />
         </MainArticle>
       </I18nProvider>
+
+      {/* End-of-page actions */}
+      <div className="p-page">
+        <ContentFeedback />
+      </div>
     </>
   )
 }

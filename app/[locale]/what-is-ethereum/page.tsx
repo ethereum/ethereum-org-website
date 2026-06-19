@@ -10,8 +10,8 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, ToCItem } from "@/lib/types"
 
+import ContentFeedback from "@/components/ContentFeedback"
 import DocLink from "@/components/DocLink"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import {
@@ -174,13 +174,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </p>
           </Section>
 
-          <Section>
+          <Section id={getId(tocItems[1].url)}>
             <Image
               src={networksBanner}
               alt={t("page-what-is-ethereum-banner-networks-alt")}
               sizes={`(max-width: 800px) 100vw, (max-width: ${screens.xl}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
-            <h2 id={getId(tocItems[1].url)}>{tocItems[1].title}</h2>
+            <h2>{tocItems[1].title}</h2>
             <p>
               {t.rich("page-what-is-ethereum-network-intro-1", {
                 strong: Strong,
@@ -954,10 +954,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </ListItem>
             </UnorderedList>
           </Section>
-
-          <FeedbackCard />
         </div>
       </MainArticle>
+
+      {/* End-of-page actions */}
+      <ContentFeedback />
     </>
   )
 }

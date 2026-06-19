@@ -1,56 +1,59 @@
 ---
-title: "Vipengele vya seva na mawakala kwa ajili ya programu za web3"
-description: Baada ya kusoma mafunzo haya, utaweza kuandika seva za TypeScript zinazosikiliza matukio kwenye mnyororo wa bloku na kujibu ipasavyo kwa miamala yao wenyewe. Hii itakuwezesha kuandika programu za kati (kwa sababu seva ni mahali pa kushindwa), lakini inaweza kuingiliana na mashirika ya web3. Mbinu hizi hizi zinaweza pia kutumika kuandika wakala anayeshughulikia matukio ya onchain bila kuhusisha binadamu.
-
+title: "Vipengele vya seva na mawakala kwa programu za web3"
+description: Baada ya kusoma mafunzo haya, utaweza kuandika seva za TypeScript zinazosikiliza matukio kwenye mnyororo wa vitalu na kujibu ipasavyo kwa miamala yao wenyewe. Hii itakuwezesha kuandika programu zilizowekwa kati (kwa sababu seva ni kituo cha kushindwa), lakini zinaweza kuingiliana na huluki za web3. Mbinu hizo hizo pia zinaweza kutumika kuandika wakala anayejibu matukio ya mnyororoni bila mwanadamu kuhusika.
 author: Ori Pomerantz
 lang: sw
-tags: ["agent", "server", "offchain"]
+tags:
+  - wakala
+  - seva
+  - nje ya mnyororo
+  - dapps
 skill: beginner
-breadcrumb: "Vipengele vya seva"
+breadcrumb: Vipengele vya seva
 published: 2024-07-15
 ---
 
 ## Utangulizi {#introduction}
 
-Katika hali nyingi, programu isiyo ya kati hutumia seva kusambaza programu, lakini mwingiliano wote halisi hutokea kati ya mteja (kawaida, kivinjari cha wavuti) na mnyororo wa bloku.
+Katika hali nyingi, programu tumizi iliyogatuliwa (dapp) hutumia seva kusambaza programu, lakini mwingiliano wote halisi hufanyika kati ya kiteja (kawaida, kivinjari cha wavuti) na mnyororo wa vitalu.
 
-![Mwingiliano wa kawaida kati ya seva ya wavuti, mteja, na mnyororo wa bloku](./fig-1.svg)
+![Normal interaction between web server, client, and blockchain](./fig-1.svg)
 
-Hata hivyo, kuna baadhi ya matukio ambapo programu ingenufaika kutokana na kuwa na kipengele cha seva kinachofanya kazi kivyake. Seva kama hiyo itaweza kujibu matukio, na maombi yanayotoka kwenye vyanzo vingine, kama vile API, kwa kutoa miamala.
+Hata hivyo, kuna baadhi ya matukio ambapo programu itanufaika kwa kuwa na kipengele cha seva kinachofanya kazi kwa kujitegemea. Seva kama hiyo itaweza kujibu matukio, na maombi yanayotoka kwa vyanzo vingine, kama vile API, kwa kutoa miamala.
 
-![Mwingiliano na nyongeza ya seva](./fig-2.svg)
+![The interaction with the addition of a server](./fig-2.svg)
 
-Kuna kazi kadhaa zinazowezekana ambazo seva kama hiyo inaweza kutimiza.
+Kuna kazi kadhaa zinazowezekana kwa seva kama hiyo kutimiza.
 
-- Mmiliki wa hali ya siri. Katika michezo ya kubahatisha mara nyingi ni muhimu kutokuwa na taarifa zote ambazo mchezo unajua zinazopatikana kwa wachezaji. Hata hivyo, _hakuna siri kwenye mnyororo wa bloku_, taarifa yoyote iliyo kwenye mnyororo wa bloku ni rahisi kwa yeyote kuigundua. Kwa hiyo, kama sehemu ya hali ya mchezo inapaswa kuwekwa siri, ni lazima ihifadhiwe mahali pengine (na ikiwezekana athari za hali hiyo zithibitishwe kwa kutumia [uthibitisho wa zero-knowledge](/zero-knowledge-proofs)).
+- Mshikiliaji wa hali ya siri. Katika michezo mara nyingi ni muhimu kutokuwa na taarifa zote ambazo mchezo unajua kupatikana kwa wachezaji. Hata hivyo, _hakuna siri kwenye mnyororo wa vitalu_, taarifa yoyote iliyo kwenye mnyororo wa vitalu ni rahisi kwa mtu yeyote kuigundua. Kwa hivyo, ikiwa sehemu ya hali ya mchezo inapaswa kuwekwa siri, inabidi ihifadhiwe mahali pengine (na ikiwezekana athari za hali hiyo zithibitishwe kwa kutumia [uthibitisho wa sifuri-maarifa](/zero-knowledge-proofs)).
 
-- Oracle ya kati. Ikiwa hisa ni za chini vya kutosha, seva ya nje inayosoma baadhi ya taarifa mtandaoni na kisha kuichapisha kwenye chaini inaweza kuwa nzuri ya kutosha kutumia kama [oracle](/developers/docs/oracles/).
+- Orakeli iliyowekwa kati. Ikiwa hatari ni ndogo vya kutosha, seva ya nje inayosoma baadhi ya taarifa mtandaoni na kisha kuziweka kwenye mnyororo inaweza kuwa nzuri vya kutosha kutumika kama [orakeli](/developers/docs/oracles/).
 
-- Wakala. Hakuna kinachotokea kwenye mnyororo wa bloku bila muamala wa kuiwasha. Seva inaweza kutenda kwa niaba ya mtumiaji kutekeleza vitendo kama vile [arbitrage](/developers/docs/mev/#mev-examples-dex-arbitrage) wakati fursa inapojitokeza.
+- Wakala. Hakuna kinachotokea kwenye mnyororo wa vitalu bila muamala wa kuiwasha. Seva inaweza kutenda kwa niaba ya mtumiaji kufanya vitendo kama vile [usuluhishi](/developers/docs/mev/#mev-examples-dex-arbitrage) wakati fursa inapotokea.
 
 ## Programu ya mfano {#sample-program}
 
-Unaweza kuona seva ya mfano [kwenye github](https://github.com/qbzzt/20240715-server-component). Seva hii inasikiliza matukio yanayotoka kwenye [mkataba huu](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), toleo lililobadilishwa la Greeter ya Hardhat. Wakati salamu inabadilishwa, inairudisha kama ilivyokuwa.
+Unaweza kuona seva ya mfano [kwenye GitHub](https://github.com/qbzzt/20240715-server-component). Seva hii inasikiliza matukio yanayotoka kwenye [mkataba huu](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), toleo lililobadilishwa la Greeter ya Hardhat. Wakati salamu inabadilishwa, inairudisha nyuma.
 
 Ili kuiendesha:
 
-1. Kloni hifadhi.
+1. Nakili hazina.
 
    ```sh copy
    git clone https://github.com/qbzzt/20240715-server-component.git
    cd 20240715-server-component
    ```
 
-2. Sakinisha vifurushi vinavyohitajika. Kama huna tayari, [sakinisha Node kwanza](https://nodejs.org/en/download/package-manager).
+2. Sakinisha vifurushi vinavyohitajika. Ikiwa huna tayari, [sakinisha Node kwanza](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Hariri `.env` ili kubainisha ufunguo binafsi wa akaunti iliyo na ETH kwenye testnet ya Holesky. Ikiwa huna ETH kwenye Holesky, unaweza [kutumia bomba hili](https://holesky-faucet.pk910.de/).
+3. Hariri `.env` ili kubainisha ufunguo wa siri wa akaunti ambayo ina ETH kwenye mtandao wa majaribio wa Holesky. Ikiwa huna ETH kwenye Holesky, unaweza [kutumia bomba hili](https://holesky-faucet.pk910.de/).
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <ufunguo binafsi unaenda hapa>
+   PRIVATE_KEY=0x <private key goes here>
    ```
 
 4. Anzisha seva.
@@ -59,17 +62,17 @@ Ili kuiendesha:
    npm start
    ```
 
-5. Nenda kwenye [kichunguzi cha bloku](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract), na ukitumia anwani tofauti na ile iliyo na ufunguo binafsi rekebisha salamu. Tazama kwamba salamu inarekebishwa kiotomatiki.
+5. Nenda kwenye [kichunguzi cha bloku](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract), na ukitumia anwani tofauti na ile iliyo na ufunguo wa siri badilisha salamu. Utaona kwamba salamu inabadilishwa kiotomatiki kurudi ilivyokuwa.
 
 ### Inafanyaje kazi? {#how-it-works}
 
-Njia rahisi zaidi ya kuelewa jinsi ya kuandika kipengele cha seva ni kupitia sampuli mstari kwa mstari.
+Njia rahisi ya kuelewa jinsi ya kuandika kipengele cha seva ni kupitia mfano mstari kwa mstari.
 
 #### `src/app.ts` {#src-app-ts}
 
-Idadi kubwa ya programu imo ndani ya [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
+Sehemu kubwa ya programu iko ndani ya [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-##### Kuunda vitu vinavyohitajika
+##### Kuunda vipengee vya awali
 
 ```typescript
 import {
@@ -81,27 +84,27 @@ import {
 } from "viem"
 ```
 
-Hizi ni huluki za [Viem](https://viem.sh/) tunazohitaji, kazi na [aina ya `Anwani`](https://viem.sh/docs/glossary/types#address). Seva hii imeandikwa kwa [TypeScript](https://www.typescriptlang.org/), ambayo ni nyongeza kwa JavaScript inayoifanya iwe na [aina madhubuti](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
+Hizi ni huluki za [Viem](https://viem.sh/) tunazohitaji, vitendaji na [aina ya `Address`](https://viem.sh/docs/glossary/types#address). Seva hii imeandikwa kwa [TypeScript](https://www.typescriptlang.org/), ambayo ni kiendelezi cha JavaScript kinachoifanya iwe [na aina thabiti](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
 
 ```typescript
 import { privateKeyToAccount } from "viem/accounts"
 ```
 
-[Kitendakazi hiki](https://viem.sh/docs/accounts/privateKey) kinaturuhusu kutoa maelezo ya mkoba, ikiwa ni pamoja na anwani, inayolingana na ufunguo binafsi.
+[Kitendaji hiki](https://viem.sh/docs/accounts/privateKey) kinaturuhusu kuzalisha taarifa za mkoba, ikiwa ni pamoja na anwani, inayolingana na ufunguo wa siri.
 
 ```typescript
 import { holesky } from "viem/chains"
 ```
 
-Ili kutumia mnyororo wa bloku katika Viem unahitaji kuingiza ufafanuzi wake. Katika kesi hii, tunataka kuunganisha kwenye mnyororo wa bloku wa majaribio wa [Holesky](https://github.com/eth-clients/holesky).
+Ili kutumia mnyororo wa vitalu katika Viem unahitaji kuingiza ufafanuzi wake. Katika kesi hii, tunataka kuunganisha kwenye mnyororo wa vitalu wa majaribio wa [Holesky](https://github.com/eth-clients/holesky).
 
 ```typescript
-// Hivi ndivyo tunavyoongeza ufafanuzi katika .env kwa process.env.
+// Hivi ndivyo tunavyoongeza fasili zilizo ndani ya .env kwenye process.env.
 import * as dotenv from "dotenv"
 dotenv.config()
 ```
 
-Hivi ndivyo tunavyosoma `.env` katika mazingira. Tunaihitaji kwa ufunguo binafsi (tazama baadaye).
+Hivi ndivyo tunavyosoma `.env` kwenye mazingira. Tunaihitaji kwa ajili ya ufunguo wa siri (tazama baadaye).
 
 ```typescript
 const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
@@ -138,7 +141,7 @@ const greeterABI = [
 
 Ili kutumia mkataba tunahitaji anwani yake na [ABI](/glossary/#abi) yake. Tunatoa zote mbili hapa.
 
-Katika JavaScript (na kwa hiyo TypeScript) huwezi kugawa thamani mpya kwa kistari, lakini _unaweza_ kurekebisha kitu kilichohifadhiwa ndani yake. Kwa kutumia kiambishi tamati `as const` tunaiambia TypeScript kwamba orodha yenyewe ni ya kudumu na haiwezi kubadilishwa.
+Katika JavaScript (na hivyo basi TypeScript) huwezi kugawa thamani mpya kwa konstanti, lakini _unaweza_ kurekebisha kipengee kilichohifadhiwa ndani yake. Kwa kutumia kiambishi tamati `as const` tunaiambia TypeScript kwamba orodha yenyewe ni konstanti na haiwezi kubadilishwa.
 
 ```typescript
 const publicClient = createPublicClient({
@@ -147,15 +150,15 @@ const publicClient = createPublicClient({
 })
 ```
 
-Unda [mteja wa umma](https://viem.sh/docs/clients/public.html) wa Viem. Wateja wa umma hawana ufunguo binafsi ulioambatanishwa, na kwa hivyo hawawezi kutuma miamala. Wanaweza kuita [kazi za `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), kusoma salio za akaunti, n.k.
+Unda [kiteja cha umma](https://viem.sh/docs/clients/public.html) cha Viem. Wateja wa umma hawana ufunguo wa siri ulioambatishwa, na kwa hivyo hawawezi kutuma miamala. Wanaweza kuita [vitendaji vya `view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), kusoma salio la akaunti, n.k.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-Vigezo vya mazingira vinapatikana katika [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Hata hivyo, TypeScript ina aina madhubuti. Kigezo cha mazingira kinaweza kuwa mfuatano wowote, au tupu, kwa hivyo aina ya kigezo cha mazingira ni `string | undefined`. Hata hivyo, ufunguo umefafanuliwa katika Viem kama `0x${string}` (`0x` ikifuatiwa na mfuatano). Hapa tunaiambia TypeScript kwamba kigezo cha mazingira cha `PRIVATE_KEY` kitakuwa cha aina hiyo. Ikiwa sivyo, tutapata hitilafu ya muda wa utekelezaji.
+Vigezo vya mazingira vinapatikana katika [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). Hata hivyo, TypeScript ina aina thabiti. Kigezo cha mazingira kinaweza kuwa mfuatano wowote, au tupu, kwa hivyo aina ya kigezo cha mazingira ni `string | undefined`. Hata hivyo, ufunguo unafafanuliwa katika Viem kama `0x${string}` (`0x` ikifuatiwa na mfuatano). Hapa tunaiambia TypeScript kwamba kigezo cha mazingira cha `PRIVATE_KEY` kitakuwa cha aina hiyo. Ikiwa sivyo, tutapata hitilafu ya wakati wa utekelezaji.
 
-Kitendakazi cha [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) kisha hutumia ufunguo huu binafsi kuunda kitu kamili cha akaunti.
+Kitendaji cha [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) kisha hutumia ufunguo huu wa siri kuunda kipengee kamili cha akaunti.
 
 ```typescript
 const walletClient = createWalletClient({
@@ -165,7 +168,7 @@ const walletClient = createWalletClient({
 })
 ```
 
-Ifuatayo, tunatumia kitu cha akaunti kuunda [mteja wa mkoba](https://viem.sh/docs/clients/wallet). Mteja huyu ana ufunguo binafsi na anwani, kwa hivyo inaweza kutumika kutuma miamala.
+Kisha, tunatumia kipengee cha akaunti kuunda [kiteja cha mkoba](https://viem.sh/docs/clients/wallet). Kiteja hiki kina ufunguo wa siri na anwani, kwa hivyo kinaweza kutumika kutuma miamala.
 
 ```typescript
 const greeter = getContract({
@@ -175,19 +178,19 @@ const greeter = getContract({
 })
 ```
 
-Sasa kwa kuwa tuna mahitaji yote, hatimaye tunaweza kuunda [mfano wa mkataba](https://viem.sh/docs/contract/getContract). Tutatumia mfano huu wa mkataba kuwasiliana na mkataba wa onchain.
+Sasa kwa kuwa tuna mahitaji yote ya awali, hatimaye tunaweza kuunda [mfano wa mkataba](https://viem.sh/docs/contract/getContract). Tutatumia mfano huu wa mkataba kuwasiliana na mkataba ulio mnyororoni.
 
-##### Kusoma kutoka kwenye mnyororo wa bloku
+##### Kusoma kutoka kwenye mnyororo wa vitalu
 
 ```typescript
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-Kazi za mkataba ambazo zinasomwa tu ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) na [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) zinapatikana chini ya `read`. Katika kisa hiki, tunaitumia kufikia kitendakazi cha [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217), ambacho hurudisha salamu.
+Vitendaji vya mkataba ambavyo ni vya kusoma tu ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) na [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) vinapatikana chini ya `read`. Katika kesi hii, tunaitumia kufikia kitendaji cha [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217), ambacho kinarudisha salamu.
 
-JavaScript ina uzi mmoja, kwa hivyo tunapoanzisha mchakato mrefu tunahitaji [kubainisha kuwa tunafanya hivyo kwa njia isiyosawazishwa](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Kuita mnyororo wa bloku, hata kwa operesheni ya kusoma tu, inahitaji safari ya kwenda na kurudi kati ya kompyuta na nodi ya mnyororo wa bloku. Hiyo ndiyo sababu tunabainisha hapa msimbo unahitaji `kusubiri` matokeo.
+JavaScript ina uzi mmoja, kwa hivyo tunapoanzisha mchakato unaoendelea kwa muda mrefu tunahitaji [kubainisha kuwa tunaifanya kwa njia isiyosawazishwa](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Kuita mnyororo wa vitalu, hata kwa operesheni ya kusoma tu, kunahitaji safari ya kwenda na kurudi kati ya kompyuta na nodi ya mnyororo wa vitalu. Hiyo ndiyo sababu tunabainisha hapa kwamba msimbo unahitaji `await` kwa matokeo.
 
-Ikiwa una nia ya jinsi hii inavyofanya kazi unaweza [kusoma kuihusu hapa](https://www.w3schools.com/js/js_promise.asp), lakini kwa vitendo unachohitaji kujua ni kwamba `unasubiri` matokeo ukianza operesheni inayochukua muda mrefu, na kwamba kitendakazi chochote kinachofanya hivi lazima kitangazwe kama `async`.
+Ikiwa una nia ya kujua jinsi hii inavyofanya kazi unaweza [kusoma kuihusu hapa](https://www.w3schools.com/js/js_promise.asp), lakini kwa vitendo unachohitaji kujua ni kwamba una-`await` matokeo ikiwa utaanzisha operesheni inayochukua muda mrefu, na kwamba kitendaji chochote kinachofanya hivi lazima kitangazwe kama `async`.
 
 ##### Kutoa miamala
 
@@ -195,13 +198,13 @@ Ikiwa una nia ya jinsi hii inavyofanya kazi unaweza [kusoma kuihusu hapa](https:
 const setGreeting = async (greeting: string): Promise<any> => {
 ```
 
-Hiki ndicho kitendakazi unachoita ili kutoa muamala unaobadilisha salamu. Kwa kuwa hii ni operesheni ndefu, kitendakazi kinatangazwa kama `async`. Kwa sababu ya utekelezaji wa ndani, kitendakazi chochote cha `async` kinahitaji kurudisha kitu cha `Promise`. Katika kesi hii, `Promise<any>` inamaanisha kuwa hatubainishi nini hasa kitarudishwa katika `Promise`.
+Hiki ni kitendaji unachokiita ili kutoa muamala unaobadilisha salamu. Kwa kuwa hii ni operesheni ndefu, kitendaji kinatangazwa kama `async`. Kwa sababu ya utekelezaji wa ndani, kitendaji chochote cha `async` kinahitaji kurudisha kipengee cha `Promise`. Katika kesi hii, `Promise<any>` inamaanisha kuwa hatubainishi ni nini hasa kitarudishwa katika `Promise`.
 
 ```typescript
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-Sehemu ya `write` ya mfano wa mkataba ina kazi zote zinazoandika kwenye hali ya mnyororo wa bloku (zile zinazohitaji kutuma muamala), kama vile [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). Vigezo, ikiwa vipo, vinatolewa kama orodha, na kitendakazi hurudisha hashi ya muamala.
+Sehemu ya `write` ya mfano wa mkataba ina vitendaji vyote vinavyoandika kwenye hali ya mnyororo wa vitalu (vile vinavyohitaji kutuma muamala), kama vile [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). Vigezo, ikiwa vipo, hutolewa kama orodha, na kitendaji kinarudisha heshi ya muamala.
 
 ```typescript
     console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
@@ -210,7 +213,7 @@ Sehemu ya `write` ya mfano wa mkataba ina kazi zote zinazoandika kwenye hali ya 
 }
 ```
 
-Ripoti hashi ya muamala (kama sehemu ya URL kwa kichunguzi cha bloku ili kuitazama) na uirudishe.
+Ripoti heshi ya muamala (kama sehemu ya URL kwa kichunguzi cha bloku ili kuitazama) na uirudishe.
 
 ##### Kujibu matukio
 
@@ -218,13 +221,13 @@ Ripoti hashi ya muamala (kama sehemu ya URL kwa kichunguzi cha bloku ili kuitaza
 greeter.watchEvent.SetGreeting({
 ```
 
-[Kitendakazi cha `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) hukuruhusu kubainisha kuwa kitendakazi kitaendeshwa tukio linapotolewa. Ikiwa unajali tu aina moja ya tukio (katika kesi hii, `SetGreeting`), unaweza kutumia sintaksia hii kujizuia kwa aina hiyo ya tukio.
+[Kitendaji cha `watchEvent`](https://viem.sh/docs/actions/public/watchEvent) kinakuruhusu kubainisha kuwa kitendaji kitaendeshwa wakati tukio linapotolewa. Ikiwa unajali tu kuhusu aina moja ya tukio (katika kesi hii, `SetGreeting`), unaweza kutumia sintaksia hii kujiwekea kikomo kwa aina hiyo ya tukio.
 
 ```typescript
     onLogs: logs => {
 ```
 
-Kitendakazi cha `onLogs` huitwa kunapokuwa na maingizo ya kumbukumbu. Katika Ethereum "log" na "tukio" kawaida hubadilishana.
+Kitendaji cha `onLogs` kinaitwa wakati kuna maingizo ya logi. Katika Ethereum "logi" na "tukio" kwa kawaida hutumika kwa kubadilishana.
 
 ```typescript
 console.log(
@@ -245,14 +248,14 @@ Ikiwa mtumaji _sio_ seva hii, tumia `setGreeting` kubadilisha salamu.
 
 #### `package.json` {#package-json}
 
-[Faili hii](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) inadhibiti usanidi wa [Node.js](https://nodejs.org/en). Makala hii inaelezea tu ufafanuzi muhimu.
+[Faili hili](https://github.com/qbzzt/20240715-server-component/blob/main/package.json) linadhibiti usanidi wa [Node.js](https://nodejs.org/en). Makala haya yanaelezea tu ufafanuzi muhimu.
 
 ```json
 {
   "main": "dist/index.js",
 ```
 
-Ufafanuzi huu unabainisha faili gani ya JavaScript itaendeshwa.
+Ufafanuzi huu unabainisha ni faili gani la JavaScript la kuendesha.
 
 ```json
   "scripts": {
@@ -260,13 +263,13 @@ Ufafanuzi huu unabainisha faili gani ya JavaScript itaendeshwa.
   },
 ```
 
-Hati ni vitendo mbalimbali vya programu. Katika kesi hii, pekee tuliyo nayo ni `start`, ambayo inakusanya na kisha kuendesha seva. Amri ya `tsc` ni sehemu ya kifurushi cha `typescript` na inakusanya TypeScript kuwa JavaScript. Ikiwa unataka kuiendesha mwenyewe, iko katika `node_modules/.bin`. Amri ya pili inaendesha seva.
+Hati ni vitendo mbalimbali vya programu. Katika kesi hii, pekee tuliyo nayo ni `start`, ambayo inakusanya na kisha kuendesha seva. Amri ya `tsc` ni sehemu ya kifurushi cha `typescript` na inakusanya TypeScript kuwa JavaScript. Ikiwa unataka kuiendesha wewe mwenyewe, inapatikana katika `node_modules/.bin`. Amri ya pili inaendesha seva.
 
 ```json
   "type": "module",
 ```
 
-Kuna aina nyingi za programu za Node za JavaScript. Aina ya `module` inaturuhusu kuwa na `await` katika msimbo wa kiwango cha juu, ambayo ni muhimu unapofanya operesheni za polepole (na kwa hivyo zisizosawazishwa).
+Kuna aina nyingi za programu za nodi za JavaScript. Aina ya `module` inaturuhusu kuwa na `await` katika msimbo wa kiwango cha juu, ambayo ni muhimu unapofanya operesheni za polepole (na kwa hivyo zisizosawazishwa).
 
 ```json
   "devDependencies": {
@@ -275,7 +278,7 @@ Kuna aina nyingi za programu za Node za JavaScript. Aina ya `module` inaturuhusu
   },
 ```
 
-Hivi ni vifurushi vinavyohitajika tu kwa ajili ya maendeleo. Hapa tunahitaji `typescript` na kwa sababu tunaitumia na Node.js, tunapata pia aina za vigezo na vitu vya Node, kama vile `process`. [Nukuu ya `^<toleo>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) inamaanisha toleo hilo au toleo la juu zaidi ambalo halina mabadiliko ya kuvunja. Tazama [hapa](https://semver.org) kwa habari zaidi kuhusu maana ya nambari za toleo.
+Hivi ni vifurushi ambavyo vinahitajika tu kwa maendeleo. Hapa tunahitaji `typescript` na kwa sababu tunaitumia na Node.js, tunapata pia aina za vigezo na vipengee vya nodi, kama vile `process`. [Nukuu ya `^<version>`](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) inamaanisha toleo hilo au toleo la juu zaidi ambalo halina mabadiliko yanayovunja. Tazama [hapa](https://semver.org) kwa taarifa zaidi kuhusu maana ya nambari za matoleo.
 
 ```json
   "dependencies": {
@@ -289,8 +292,8 @@ Hivi ni vifurushi vinavyohitajika wakati wa utekelezaji, wakati wa kuendesha `di
 
 ## Hitimisho {#conclusion}
 
-Seva ya kati tuliyoiunda hapa inafanya kazi yake, ambayo ni kutenda kama wakala kwa mtumiaji. Mtu mwingine yeyote anayetaka mfumo mtawanyo wa kimamlaka uendelee kufanya kazi na yuko tayari kutumia gesi anaweza kuendesha mfano mpya wa seva na anwani yake mwenyewe.
+Seva iliyowekwa kati tuliyounda hapa inafanya kazi yake, ambayo ni kutenda kama wakala kwa mtumiaji. Mtu mwingine yeyote anayetaka dapp iendelee kufanya kazi na yuko tayari kutumia gesi anaweza kuendesha mfano mpya wa seva na anwani yake mwenyewe.
 
-Hata hivyo, hii inafanya kazi tu wakati vitendo vya seva ya kati vinaweza kuthibitishwa kwa urahisi. Ikiwa seva ya kati ina habari yoyote ya hali ya siri, au inafanya hesabu ngumu, ni chombo cha kati ambacho unahitaji kuamini ili kutumia programu, ambacho ndicho hasa minyororo ya bloku inajaribu kuepuka. Katika makala ya baadaye napanga kuonyesha jinsi ya kutumia [uthibitisho wa zero-knowledge](/zero-knowledge-proofs) ili kutatua tatizo hili.
+Hata hivyo, hii inafanya kazi tu wakati vitendo vya seva iliyowekwa kati vinaweza kuthibitishwa kwa urahisi. Ikiwa seva iliyowekwa kati ina taarifa yoyote ya hali ya siri, au inaendesha hesabu ngumu, ni huluki iliyowekwa kati ambayo unahitaji kuiamini ili kutumia programu, ambayo ndiyo hasa minyororo ya vitalu inajaribu kuepuka. Katika makala yajayo ninapanga kuonyesha jinsi ya kutumia [uthibitisho wa sifuri-maarifa](/zero-knowledge-proofs) ili kutatua tatizo hili.
 
 [Tazama hapa kwa kazi zangu zaidi](https://cryptodocguy.pro/).

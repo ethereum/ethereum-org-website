@@ -13,22 +13,15 @@ import * as url from "@/lib/utils/url"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { Link as I18nLink } from "@/i18n/navigation"
 import { usePathname } from "@/i18n/navigation"
 
-export const ExternalLinkIcon = () => {
-  const { twFlipForRtl } = useRtlFlip()
-  return (
-    <ExternalLink
-      data-label="arrow"
-      className={cn(
-        "ms-1 !mb-0.5 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
-        twFlipForRtl
-      )}
-    />
-  )
-}
+export const ExternalLinkIcon = () => (
+  <ExternalLink
+    data-label="arrow"
+    className="ms-1 mb-0.5! inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100"
+  />
+)
 
 type BaseProps = {
   hideArrow?: boolean
@@ -187,23 +180,20 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 BaseLink.displayName = "BaseLink"
 
 export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, className, ...props }: LinkProps, ref) => {
-    const { twFlipForRtl } = useRtlFlip()
-    return (
-      <BaseLink
-        className={cn(
-          "group block w-fit no-underline visited:text-primary-visited",
-          className
-        )}
-        ref={ref}
-        {...props}
-      >
-        <span className="group-hover:underline">{children}</span>
-        &nbsp;
-        <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
-      </BaseLink>
-    )
-  }
+  ({ children, className, ...props }: LinkProps, ref) => (
+    <BaseLink
+      className={cn(
+        "group block w-fit no-underline visited:text-primary-visited",
+        className
+      )}
+      ref={ref}
+      {...props}
+    >
+      <span className="group-hover:underline">{children}</span>
+      &nbsp;
+      <ArrowRight className="mb-1 inline size-[1em] rtl:-scale-x-100" />
+    </BaseLink>
+  )
 )
 LinkWithArrow.displayName = "LinkWithArrow"
 

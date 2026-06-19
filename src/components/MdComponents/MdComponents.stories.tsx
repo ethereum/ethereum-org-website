@@ -20,14 +20,12 @@ const meta = {
 export default meta
 
 const {
-  ContentContainer,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
   FeaturedText,
   Divider,
   hr: HR,
-  Page,
 } = MdComponentSet
 
 const Para = () => (
@@ -43,22 +41,19 @@ const Para = () => (
 export const MdComponents: StoryObj = {
   render: () => (
     <div className="mx-auto max-w-screen-lg">
-      <Page>
-        <ContentContainer>
-          <h1>Heading1</h1>
-          <Para />
-          <Heading2>Heading2</Heading2>
-          <Para />
-          <Heading3>Heading3</Heading3>
-          <Para />
-          <Heading4>Heading4</Heading4>
-          <Para />
-
-          <Divider />
-          <HR />
-          <FeaturedText>Feature Text</FeaturedText>
-        </ContentContainer>
-      </Page>
+      <div className="flow px-page pb-page">
+        <h1>Heading1</h1>
+        <Para />
+        <Heading2>Heading2</Heading2>
+        <Para />
+        <Heading3>Heading3</Heading3>
+        <Para />
+        <Heading4>Heading4</Heading4>
+        <Para />
+        <Divider />
+        <HR />
+        <FeaturedText>Feature Text</FeaturedText>
+      </div>
     </div>
   ),
 }

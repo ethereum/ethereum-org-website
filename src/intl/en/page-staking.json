@@ -165,7 +165,7 @@
   "page-staking-stats-box-metric-3-tooltip": "Estimated annualized validator reward rate, based on the total amount of ETH staked",
   "page-staking-section-comparison-subtitle": "There is no one-size-fits-all solution for staking, and each is unique. Here we'll compare some of the risks, rewards and requirements of the different ways you can stake.",
   "page-staking-section-comparison-rewards-title": "Rewards",
-  "page-staking-section-comparison-solo-rewards-li1": "Maximum rewards - receive full rewards directly from the protocol",
+  "page-staking-section-comparison-solo-rewards-li1": "Maximum rewards—receive full rewards directly from the protocol",
   "page-staking-section-comparison-solo-rewards-li2": "Rewards for proposing blocks, including unburnt transaction fees, and attesting regularly to the state of the network",
   "page-staking-section-comparison-solo-rewards-li3": "Option to mint a liquid staking token against your home node to be used in DeFi",
   "page-staking-section-comparison-saas-rewards-li1": "Usually involves full protocol rewards minus monthly fee for node operations",

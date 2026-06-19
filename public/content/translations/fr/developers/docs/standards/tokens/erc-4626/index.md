@@ -1,52 +1,52 @@
 ---
-title: Norme de coffre-fort avec les jetons ERC-4626
-description: "Une norme pour les coffres-forts à rendement."
+title: "Norme de coffre-fort tokenisé ERC-4626"
+description: "Une norme pour les coffres-forts générateurs de rendement."
 lang: fr
 ---
 
 ## Introduction {#introduction}
 
-ERC-4626 est une norme pour optimiser et standardiser les paramètres techniques des coffres à rendement. Elle fournit une API standard pour les coffres à rendement tokenisé qui représentent les actions d'un seul jeton ERC-20 sous-jacent. L'ERC-4626 soulignent également une extension facultative pour les coffres à jetons utilisant l'ERC-20, offrant ainsi des fonctionnalités de base pour les dépôts, les retraits de jetons et la lecture des soldes.
+L'ERC-4626 est une norme permettant d'optimiser et d'unifier les paramètres techniques des coffres-forts générateurs de rendement. Il fournit une API standard pour les coffres-forts tokenisés générateurs de rendement qui représentent des parts d'un seul jeton ERC-20 sous-jacent. L'ERC-4626 décrit également une extension facultative pour les coffres-forts tokenisés utilisant l'ERC-20, offrant des fonctionnalités de base pour le dépôt, le retrait de jetons et la lecture des soldes.
 
-**Le rôle de l’ERC-4626 dans les coffres à rendement**
+**Le rôle de l'ERC-4626 dans les coffres-forts générateurs de rendement**
 
-Les marchés de prêts, les agrégateurs et les jetons intrinsèquement porteurs d'intérêts aident les utilisateurs à trouver le meilleur rendement pour leurs jetons de cryptomonnaie en exécutant différentes stratégies. Ces stratégies s'opèrent avec de légères variations, qui pourraient être source d'erreurs ou de perte de ressources de développement.
+Les marchés de prêt, les agrégateurs et les jetons intrinsèquement porteurs d'intérêts aident les utilisateurs à trouver le meilleur rendement sur leurs jetons crypto en exécutant différentes stratégies. Ces stratégies sont réalisées avec de légères variations, ce qui peut être source d'erreurs ou gaspiller des ressources de développement.
 
-Les coffres de rendement ERC-4626 réduiront l'effort d'intégration et ouvriront l'accès au rendement de diverses applications avec peu d'efforts spécialisés de la part des développeurs, en créant des modèles d'implémentation plus cohérents et plus robustes.
+L'ERC-4626 dans les coffres-forts générateurs de rendement réduira l'effort d'intégration et débloquera l'accès au rendement dans diverses applications avec peu d'efforts spécialisés de la part des développeurs en créant des modèles d'implémentation plus cohérents et robustes.
 
-Le jeton ERC-4626 est entièrement décrit dans [l'EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
+Le jeton ERC-4626 est décrit en détail dans l'[EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
 **Extension de coffre-fort asynchrone (ERC-7540)**
 
-L'ERC-4626 est optimisé pour les dépôts et les rachats atomiques jusqu'à une certaine limite. Si la limite est atteinte, aucun nouveau dépôt ni rachat ne peut être soumis. Cette limitation ne fonctionne pas correctement pour les systèmes de contrats intelligents dont les actions asynchrones ou les retards sont une condition préalable à l'interface avec le coffre-fort (par exemple, les protocoles d'actifs du monde réel, les protocoles de prêts sous-collatéralisés, les protocoles de prêts entre chaînes, les jetons de mise en jeu liquides, ou les modules de sécurité d'assurance).
+L'ERC-4626 est optimisé pour les dépôts et les rachats atomiques jusqu'à une certaine limite. Si la limite est atteinte, aucun nouveau dépôt ou rachat ne peut être soumis. Cette limitation ne fonctionne pas bien pour tout système de contrat intelligent avec des actions asynchrones ou des délais comme condition préalable à l'interface avec le coffre-fort (par exemple, les protocoles d'actifs du monde réel, les protocoles de prêt sous-collatéralisés, les protocoles de prêt inter-chaîne, les jetons de staking liquide (LST) ou les modules de sécurité d'assurance).
 
-L'ERC-7540 étend l'utilité des coffre-forts ERC-4626 pour les cas d'utilisation asynchrones. L'interface de coffre-fort existante (`deposit`/`withdraw`/`mint`/`redeem`) est pleinement utilisée pour réclamer les demandes asynchrones.
+L'ERC-7540 étend l'utilité des coffres-forts ERC-4626 pour les cas d'utilisation asynchrones. L'interface existante du coffre-fort (`deposit`/`withdraw`/`mint`/`redeem`) est pleinement utilisée pour réclamer des requêtes asynchrones.
 
-L'extension ERC-7540 est entièrement décrite dans [l'ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+L'extension ERC-7540 est décrite en détail dans l'[ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
 
-**Extension du coffre-fort multi-actifs (ERC-7575)**
+**Extension de coffre-fort multi-actifs (ERC-7575)**
 
-Parmi les cas d'utilisation qui ne sont pas pris en charge par l'ERC-4626, on trouve les coffres-forts qui possèdent plusieurs actifs ou points d'entrée, tels que les jetons de fournisseurs de liquidités (LP). Ces derniers sont généralement difficiles à manipuler ou non conformes en raison de l'exigence de l'ERC-4626 d'être lui-même un ERC-20.
+Un cas d'utilisation manquant qui n'est pas pris en charge par l'ERC-4626 concerne les coffres-forts qui ont plusieurs actifs ou points d'entrée tels que les jetons de fournisseur de liquidité (LP). Ceux-ci sont généralement peu pratiques ou non conformes en raison de l'exigence de l'ERC-4626 d'être lui-même un ERC-20.
 
-L'ERC-7575 ajoute la prise en charge des coffre-forts comportant plusieurs actifs en externalisant l'implémentation du jeton ERC-20 à partir de l'implémentation de l'ERC-4626.
+L'ERC-7575 ajoute la prise en charge des coffres-forts avec plusieurs actifs en externalisant l'implémentation du jeton ERC-20 de l'implémentation de l'ERC-4626.
 
-L'extension ERC-7575 est entièrement décrite dans [l'ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
+L'extension ERC-7575 est décrite en détail dans l'[ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
 
 ## Prérequis {#prerequisites}
 
-Pour mieux comprendre cette page, nous vous recommandons de commencer par vous informer sur les [normes de jetons](/developers/docs/standards/tokens/) et l'[ERC-20](/developers/docs/standards/tokens/erc-20/).
+Pour mieux comprendre cette page, nous vous recommandons de lire d'abord les informations sur les [normes de jetons](/developers/docs/standards/tokens/) et l'[ERC-20](/developers/docs/standards/tokens/erc-20/).
 
-## Fonctions et fonctionnalités ERC-4626 : {#body}
+## Fonctions et caractéristiques de l'ERC-4626 : {#body}
 
 ### Méthodes {#methods}
 
-#### actif {#asset}
+#### asset {#asset}
 
 ```solidity
 function asset() public view returns (address assetTokenAddress)
 ```
 
-Cette fonction retourne l'adresse du jeton sous-jacent utilisé pour le coffre pour la comptabilité, le dépôt, le retrait.
+Cette fonction renvoie l'adresse du jeton sous-jacent utilisé pour le coffre-fort pour la comptabilité, le dépôt et le retrait.
 
 #### totalAssets {#totalassets}
 
@@ -54,7 +54,7 @@ Cette fonction retourne l'adresse du jeton sous-jacent utilisé pour le coffre p
 function totalAssets() public view returns (uint256)
 ```
 
-Cette fonction retourne le montant total des actifs sous-jacents détenus dans le coffre.
+Cette fonction renvoie le montant total des actifs sous-jacents détenus par le coffre-fort.
 
 #### convertToShares {#convertoshares}
 
@@ -62,7 +62,7 @@ Cette fonction retourne le montant total des actifs sous-jacents détenus dans l
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-Cette fonction renvoie le montant de `parts` qui seraient échangées par le coffre-fort contre le montant d' `actifs` fournis.
+Cette fonction renvoie le montant de `shares` qui serait échangé par le coffre-fort pour le montant de `assets` fourni.
 
 #### convertToAssets {#convertoassets}
 
@@ -70,7 +70,7 @@ Cette fonction renvoie le montant de `parts` qui seraient échangées par le cof
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-Cette fonction renvoie le montant d' `actifs` qui seraient échangés par le coffre-fort contre le montant de `parts` fournies.
+Cette fonction renvoie le montant de `assets` qui serait échangé par le coffre-fort pour le montant de `shares` fourni.
 
 #### maxDeposit {#maxdeposit}
 
@@ -78,7 +78,7 @@ Cette fonction renvoie le montant d' `actifs` qui seraient échangés par le cof
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-Cette fonction renvoie le montant maximal d'actifs sous-jacents qui peuvent être déposés en un seul appel [`deposit`](#deposit), les parts étant frappées pour le `receiver`.
+Cette fonction renvoie le montant maximum d'actifs sous-jacents qui peuvent être déposés en un seul appel [`deposit`](#deposit), avec les parts frappées pour le `receiver`.
 
 #### previewDeposit {#previewdeposit}
 
@@ -86,7 +86,7 @@ Cette fonction renvoie le montant maximal d'actifs sous-jacents qui peuvent êtr
 function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
-Cette fonction permet aux utilisateurs de simuler les effets de leur dépôt sur le bloc actuel.
+Cette fonction permet aux utilisateurs de simuler les effets de leur dépôt au bloc actuel.
 
 #### deposit {#deposit}
 
@@ -94,7 +94,7 @@ Cette fonction permet aux utilisateurs de simuler les effets de leur dépôt sur
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-Cette fonction dépose des `actifs` de jetons sous-jacents dans le coffre-fort et accorde la propriété de `parts` au `destinataire`.
+Cette fonction dépose `assets` de jetons sous-jacents dans le coffre-fort et accorde la propriété de `shares` à `receiver`.
 
 #### maxMint {#maxmint}
 
@@ -102,7 +102,7 @@ Cette fonction dépose des `actifs` de jetons sous-jacents dans le coffre-fort e
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-Cette fonction renvoie le montant maximal de parts qui peuvent être frappées en un seul appel [`mint`](#mint), les parts étant frappées pour le `receiver`.
+Cette fonction renvoie le montant maximum de parts qui peuvent être frappées en un seul appel [`mint`](#mint), avec les parts frappées pour le `receiver`.
 
 #### previewMint {#previewmint}
 
@@ -110,7 +110,7 @@ Cette fonction renvoie le montant maximal de parts qui peuvent être frappées e
 function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
-Cette fonction permet aux utilisateurs de simuler les effets de leur frappe sur le bloc actuel.
+Cette fonction permet aux utilisateurs de simuler les effets de leur frappe au bloc actuel.
 
 #### mint {#mint}
 
@@ -118,7 +118,7 @@ Cette fonction permet aux utilisateurs de simuler les effets de leur frappe sur 
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-Cette fonction frappe exactement un nombre de `parts` du coffre-fort pour le `destinataire` en déposant des `actifs` de jetons sous-jacents.
+Cette fonction frappe exactement `shares` parts de coffre-fort pour `receiver` en déposant `assets` de jetons sous-jacents.
 
 #### maxWithdraw {#maxwithdraw}
 
@@ -126,7 +126,7 @@ Cette fonction frappe exactement un nombre de `parts` du coffre-fort pour le `de
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-Cette fonction renvoie le montant maximal d'actifs sous-jacents qui peuvent être retirés du solde du `propriétaire` avec un seul appel [`withdraw`](#withdraw).
+Cette fonction renvoie le montant maximum d'actifs sous-jacents qui peuvent être retirés du solde `owner` avec un seul appel [`withdraw`](#withdraw).
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -134,7 +134,7 @@ Cette fonction renvoie le montant maximal d'actifs sous-jacents qui peuvent êtr
 function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
-Cette fonction permet aux utilisateurs de simuler les effets de leur retrait sur le bloc actuel.
+Cette fonction permet aux utilisateurs de simuler les effets de leur retrait au bloc actuel.
 
 #### withdraw {#withdraw}
 
@@ -142,7 +142,7 @@ Cette fonction permet aux utilisateurs de simuler les effets de leur retrait sur
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Cette fonction brûle les `parts` du `propriétaire` et envoie exactement les `actifs` de jetons du coffre-fort au `destinataire`.
+Cette fonction brûle `shares` de `owner` et envoie exactement `assets` jeton du coffre-fort à `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -150,7 +150,7 @@ Cette fonction brûle les `parts` du `propriétaire` et envoie exactement les `a
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-Cette fonction renvoie le montant maximal de parts qui peuvent être rachetées sur le solde du `propriétaire` par le biais d'un appel [`redeem`](#redeem).
+Cette fonction renvoie le montant maximum de parts qui peuvent être rachetées du solde `owner` via un appel [`redeem`](#redeem).
 
 #### previewRedeem {#previewredeem}
 
@@ -158,7 +158,7 @@ Cette fonction renvoie le montant maximal de parts qui peuvent être rachetées 
 function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
-Cette fonction permet aux utilisateurs de simuler les effets de leur rachat sur le bloc actuel.
+Cette fonction permet aux utilisateurs de simuler les effets de leur rachat au bloc actuel.
 
 #### redeem {#redeem}
 
@@ -166,7 +166,7 @@ Cette fonction permet aux utilisateurs de simuler les effets de leur rachat sur 
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Cette fonction rachète un nombre spécifique de `parts` auprès du `propriétaire` et envoie des `actifs` du jeton sous-jacent du coffre-fort au `destinataire`.
+Cette fonction rachète un nombre spécifique de `shares` de `owner` et envoie `assets` de jeton sous-jacent du coffre-fort à `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -174,7 +174,7 @@ Cette fonction rachète un nombre spécifique de `parts` auprès du `propriétai
 function totalSupply() public view returns (uint256)
 ```
 
-Renvoie le nombre total d'actions non rachetées en circulation.
+Renvoie le nombre total de parts de coffre-fort non rachetées en circulation.
 
 #### balanceOf {#balanceof}
 
@@ -182,35 +182,46 @@ Renvoie le nombre total d'actions non rachetées en circulation.
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-Renvoie le montant total de parts de coffre-fort que le `propriétaire` détient actuellement.
+Renvoie le montant total de parts de coffre-fort que le `owner` possède actuellement.
 
-### Carte de l'interface {#mapOfTheInterface}
+### Carte de l'interface {#mapoftheinterface}
 
-![Carte de l'interface ERC-4626](./map-of-erc-4626.png)
+![Map of the ERC-4626 interface](./map-of-erc-4626.png)
 
 ### Événements {#events}
 
-#### Événement de dépôt
+#### Événement de dépôt {#deposit-event}
 
 **DOIT** être émis lorsque des jetons sont déposés dans le coffre-fort via les méthodes [`mint`](#mint) et [`deposit`](#deposit).
 
 ```solidity
-event Deposit(\n    address indexed sender,\n    address indexed owner,\n    uint256 assets,\n    uint256 shares\n)
+event Deposit(
+    address indexed sender,
+    address indexed owner,
+    uint256 assets,
+    uint256 shares
+)
 ```
 
-Où `sender` est l'utilisateur qui a échangé des `assets` contre des `shares`, et a transféré ces `shares` à `owner`.
+Où `sender` est l'utilisateur qui a échangé `assets` contre `shares`, et a transféré ces `shares` à `owner`.
 
-#### Évènement de retrait
+#### Événement de retrait {#withdraw-event}
 
 **DOIT** être émis lorsque des parts sont retirées du coffre-fort par un déposant dans les méthodes [`redeem`](#redeem) ou [`withdraw`](#withdraw).
 
 ```solidity
-event Withdraw(\n    address indexed sender,\n    address indexed receiver,\n    address indexed owner,\n    uint256 assets,\n    uint256 shares\n)
+event Withdraw(
+    address indexed sender,
+    address indexed receiver,
+    address indexed owner,
+    uint256 assets,
+    uint256 shares
+)
 ```
 
-Où `sender` est l'utilisateur qui a déclenché le retrait et échangé des `shares`, détenues par le `propriétaire`, contre des `assets`. `receiver` est l'utilisateur qui a reçu les `assets` retirés.
+Où `sender` est l'utilisateur qui a déclenché le retrait et échangé `shares`, appartenant à `owner`, contre `assets`. `receiver` est l'utilisateur qui a reçu les `assets` retirés.
 
-## En savoir plus {#further-reading}
+## Complément d'information {#further-reading}
 
-- [EIP-4626 : Norme de coffre-fort tokenisé](https://eips.ethereum.org/EIPS/eip-4626)
+- [EIP-4626 : Norme de coffre-fort tokenisé](https://eips.ethereum.org/EIPS/eip-4626)
 - [ERC-4626 : Dépôt GitHub](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

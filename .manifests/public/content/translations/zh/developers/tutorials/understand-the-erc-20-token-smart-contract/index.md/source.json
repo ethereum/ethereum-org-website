@@ -1,0 +1,396 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md",
+  "generatedAt": "2026-06-18T00:34:04.593Z",
+  "rootHash": "4990aebfedd7",
+  "tree": {
+    "contentHash": "469c13083a18",
+    "anchorHash": "b0526a494550",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "1f8344701fad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "9ad714adb47b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "32c02afec79d"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "15f36bb8e03d"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9eb7c0f2fc36"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9ec95904a9ee"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f26cb6fb8ba7"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6e4564bab8b2"
+      },
+      "frontmatter:address": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "875b7ef46ba2"
+      },
+      "prose:3": {
+        "contentHash": "f57d42601ba4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "e08a19da3e03",
+        "anchorHash": "3c27c4aa9882"
+      },
+      "prose:4": {
+        "contentHash": "79e41cb77a51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "1f090d6c3bb9",
+        "anchorHash": "68c1f3dae0e4"
+      },
+      "prose:5": {
+        "contentHash": "c89b7d0df083",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "4a825addcf5d",
+        "anchorHash": "d233beb2cfc0"
+      },
+      "prose:6": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:18": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1c08491fe248"
+      },
+      "prose:0": {
+        "contentHash": "960df9fec706",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "getters": {
+        "contentHash": "613eb5fca43b",
+        "anchorHash": "9b03366bbf78",
+        "labelHash": "5a561fb5796d",
+        "children": {
+          "_label": {
+            "contentHash": "5a561fb5796d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "0fc463dde1a4"
+          },
+          "prose:0": {
+            "contentHash": "adafd838e683",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7a9cdf099db2"
+          },
+          "prose:1": {
+            "contentHash": "3d443e42e1e5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8b971817e6fb"
+          },
+          "prose:2": {
+            "contentHash": "c2e559f54553",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:7": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a42127477104"
+          },
+          "prose:3": {
+            "contentHash": "2ce70f75a6fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4c1029697ee3"
+          },
+          "prose:4": {
+            "contentHash": "f88618192c89",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "code-fence:1",
+          "prose:0",
+          "code-fence:3",
+          "prose:1",
+          "inline-code:0",
+          "prose:2",
+          "code-fence:7",
+          "prose:2",
+          "inline-code:0",
+          "prose:3",
+          "inline-code:1",
+          "prose:4"
+        ]
+      },
+      "functions": {
+        "contentHash": "469fe2b06bad",
+        "anchorHash": "c64afb4be2ff",
+        "labelHash": "75e942e5b366",
+        "children": {
+          "_label": {
+            "contentHash": "75e942e5b366",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8c0ba06110ab"
+          },
+          "prose:3": {
+            "contentHash": "bbd4acfe374d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "cf38d95c9c6b"
+          },
+          "prose:4": {
+            "contentHash": "54ebc243a5b0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "0a367b92cf0b"
+          },
+          "prose:5": {
+            "contentHash": "a5ffe3cf679f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "665d0698dbc8"
+          },
+          "prose:6": {
+            "contentHash": "663ea1bfffe5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:9": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b928f7ff6909"
+          },
+          "code-fence:17": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "14dbeddc3d97"
+          },
+          "prose:7": {
+            "contentHash": "2f5378b98476",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dde8bef78cbb"
+          },
+          "prose:8": {
+            "contentHash": "99c9423c65c8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "code-fence:1",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "inline-code:2",
+          "prose:6",
+          "code-fence:9",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "inline-code:2",
+          "prose:6",
+          "code-fence:17",
+          "prose:4",
+          "inline-code:0",
+          "prose:5",
+          "inline-code:1",
+          "prose:6",
+          "inline-code:2",
+          "prose:7",
+          "inline-code:3",
+          "prose:8"
+        ]
+      },
+      "events": {
+        "contentHash": "294159295b9b",
+        "anchorHash": "f294e0742193",
+        "labelHash": "8d14f6e72de8",
+        "children": {
+          "_label": {
+            "contentHash": "8d14f6e72de8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a495df46e9b9"
+          },
+          "prose:4": {
+            "contentHash": "e613f80bb51a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "cd42404d52ad"
+          },
+          "prose:5": {
+            "contentHash": "b60a1d2ba651",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4c1029697ee3"
+          },
+          "prose:6": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8b971817e6fb"
+          },
+          "prose:7": {
+            "contentHash": "90169b94afa4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "663ea1bfffe5"
+          },
+          "prose:8": {
+            "contentHash": "61b2fc3d11e6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:11": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "63c225e40d20"
+          },
+          "prose:3": {
+            "contentHash": "c0c4bde3416c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "code-fence:1",
+          "prose:4",
+          "inline-code:0",
+          "prose:5",
+          "inline-code:1",
+          "prose:6",
+          "inline-code:2",
+          "prose:7",
+          "inline-code:3",
+          "prose:8",
+          "code-fence:11",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "inline-code:2",
+          "prose:6"
+        ]
+      },
+      "a-basic-implementation-of-erc-20-tokens": {
+        "contentHash": "715f51659905",
+        "anchorHash": "6c09a6536292",
+        "labelHash": "7091e7c778c3",
+        "children": {
+          "_label": {
+            "contentHash": "7091e7c778c3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4895cdb5156d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a0bf65c1c6a"
+          },
+          "prose:1": {
+            "contentHash": "c08c04c8930f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "fd649b572c7a",
+            "anchorHash": "60755fec6312"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "code-fence:2",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "frontmatter:address",
+      "prose:3",
+      "link:0",
+      "prose:4",
+      "link:1",
+      "prose:5",
+      "link:2",
+      "prose:6",
+      "code-fence:18",
+      "prose:0",
+      "getters",
+      "functions",
+      "events",
+      "a-basic-implementation-of-erc-20-tokens"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}
