@@ -25,7 +25,7 @@ const variants = cva(
           "top-28 min-w-80 max-w-72 lg:p-8 px-3 py-2",
           "shrink-0 gap-y-2.5 rounded-base bg-accent-a/10 text-body-medium"
         ),
-        left: "top-28 me-16 ms-8 basis-[400px] [&_ul]:leading-relaxed",
+        left: "top-28 [&_ul]:leading-relaxed",
       },
     },
     defaultVariants: {
