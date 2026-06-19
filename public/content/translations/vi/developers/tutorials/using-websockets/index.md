@@ -1,31 +1,31 @@
 ---
-title: "Sử dụng WebSocket"
-description: "Hướng dẫn sử dụng WebSocket và Alchemy để thực hiện các yêu cầu JSON-RPC và đăng ký các sự kiện."
+title: Sử dụng WebSockets
+description: Hướng dẫn sử dụng WebSockets và Alchemy để thực hiện các yêu cầu JSON-RPC và đăng ký nhận các sự kiện.
 author: "Elan Halpern"
 lang: vi
-tags: [ "Alchemy", "websockets", "truy vấn", "JavaScript" ]
+tags: ["alchemy", "websockets", "truy vấn", "javascript"]
 skill: beginner
-breadcrumb: "WebSockets"
+breadcrumb: WebSockets
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
-Đây là hướng dẫn ở cấp độ cơ bản về cách sử dụng WebSocket và Alchemy để gửi yêu cầu đến chuỗi khối Ethereum.
+Đây là hướng dẫn cơ bản về cách sử dụng WebSockets và Alchemy để thực hiện các yêu cầu đến Chuỗi khối Ethereum.
 
-## WebSocket so với HTTP {#websockets-vs-http}
+## WebSockets so với HTTP {#websockets-vs-http}
 
-Không giống như HTTP, với WebSocket, bạn không cần phải liên tục đưa ra yêu cầu khi muốn có thông tin cụ thể. WebSocket duy trì kết nối mạng cho bạn (nếu được thực hiện đúng) và lắng nghe các thay đổi.
+Khác với HTTP, với WebSockets, bạn không cần phải liên tục thực hiện các yêu cầu khi muốn có thông tin cụ thể. WebSockets duy trì một kết nối mạng lưới cho bạn (nếu được thực hiện đúng cách) và lắng nghe các thay đổi.
 
-Như với bất kỳ kết nối mạng nào, bạn không nên cho rằng một WebSocket sẽ duy trì mở mãi mãi mà không bị gián đoạn, nhưng việc xử lý chính xác các kết nối bị rớt và kết nối lại bằng tay có thể là một thách thức để làm đúng. Một nhược điểm khác của WebSocket là bạn không nhận được mã trạng thái HTTP trong phản hồi mà chỉ có thông báo lỗi.
+Giống như bất kỳ kết nối mạng lưới nào, bạn không nên cho rằng một WebSocket sẽ luôn mở mãi mãi mà không bị gián đoạn, nhưng việc xử lý chính xác các kết nối bị rớt và kết nối lại theo cách thủ công có thể rất khó khăn để thực hiện đúng. Một nhược điểm khác của WebSockets là bạn không nhận được mã trạng thái HTTP trong phản hồi, mà chỉ nhận được thông điệp lỗi.
 
-​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) tự động thêm xử lý cho các lỗi WebSocket và thử lại mà không cần cấu hình.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) tự động thêm tính năng xử lý các lỗi WebSocket và thử lại mà không cần cấu hình.
 
-## Hãy dùng thử {#try-it-out}
+## Dùng thử {#try-it-out}
 
-Cách dễ nhất để thử nghiệm WebSocket là cài đặt một công cụ dòng lệnh để thực hiện các yêu cầu WebSocket như [wscat](https://github.com/websockets/wscat). Sử dụng wscat, bạn có thể gửi yêu cầu như sau:
+Cách dễ nhất để kiểm tra WebSockets là cài đặt một công cụ dòng lệnh để thực hiện các yêu cầu WebSocket như [wscat](https://github.com/websockets/wscat). Bằng cách sử dụng wscat, bạn có thể gửi các yêu cầu như sau:
 
-_Lưu ý: nếu bạn có tài khoản Alchemy, bạn có thể thay thế `demo` bằng khóa API của riêng mình._ [Đăng ký tài khoản Alchemy miễn phí tại đây!](https://auth.alchemy.com/signup)_
+_Lưu ý: nếu bạn có một Tài khoản Alchemy, bạn có thể thay thế `demo` bằng khóa API của riêng bạn. [Đăng ký Tài khoản Alchemy miễn phí tại đây!](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -33,20 +33,19 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
 <  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-
 ```
 
-## Cách sử dụng WebSocket {#how-to-use-websockets}
+## Cách sử dụng WebSockets {#how-to-use-websockets}
 
-Để bắt đầu, hãy mở một WebSocket bằng URL WebSocket cho ứng dụng của bạn. Bạn có thể tìm URL WebSocket của ứng dụng bằng cách mở trang của ứng dụng trong [bảng điều khiển của bạn](https://dashboard.alchemy.com/) và nhấp vào "View Key". Lưu ý rằng URL của ứng dụng cho WebSocket khác với URL cho các yêu cầu HTTP, nhưng cả hai đều có thể được tìm thấy bằng cách nhấp vào "View Key".
+Để bắt đầu, hãy mở một WebSocket bằng cách sử dụng URL WebSocket cho ứng dụng của bạn. Bạn có thể tìm thấy URL WebSocket của ứng dụng bằng cách mở trang của ứng dụng trong [bảng điều khiển của bạn](https://dashboard.alchemy.com/) và nhấp vào "View Key". Lưu ý rằng URL của ứng dụng cho WebSockets khác với URL cho các yêu cầu HTTP, nhưng cả hai đều có thể được tìm thấy bằng cách nhấp vào "View Key".
 
-![Nơi tìm URL WebSocket của bạn trong bảng điều khiển Alchemy](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
 
-Bất kỳ API nào được liệt kê trong [Tài liệu tham khảo API của Alchemy](https://www.alchemy.com/docs/reference/api-overview) đều có thể được sử dụng qua WebSocket. Để làm như vậy, hãy sử dụng cùng một tải trọng sẽ được gửi dưới dạng phần thân của yêu cầu HTTP POST, nhưng thay vào đó hãy gửi tải trọng đó qua WebSocket.
+Bất kỳ API nào được liệt kê trong [Tài liệu tham khảo API của Alchemy](https://www.alchemy.com/docs/reference/api-overview) đều có thể được sử dụng qua WebSocket. Để làm như vậy, hãy sử dụng cùng một payload sẽ được gửi dưới dạng phần thân của yêu cầu HTTP POST, nhưng thay vào đó hãy gửi payload đó thông qua WebSocket.
 
 ## Với Web3 {#with-web3}
 
-Chuyển sang WebSocket trong khi sử dụng thư viện ứng dụng khách như Web3 rất đơn giản. Chỉ cần chuyển URL WebSocket thay vì URL HTTP khi khởi tạo ứng dụng khách Web3 của bạn. Ví dụ:
+Việc chuyển đổi sang WebSockets trong khi sử dụng một Thư viện máy khách như Web3 rất đơn giản. Chỉ cần truyền URL WebSocket thay vì URL HTTP khi khởi tạo máy khách Web3 của bạn. Ví dụ:
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -54,26 +53,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## API đăng ký {#subscription-api}
+## API Đăng ký (Subscription API) {#subscription-api}
 
-Khi được kết nối thông qua WebSocket, bạn có thể sử dụng hai phương thức bổ sung: `eth_subscribe` và `eth_unsubscribe`. Các phương pháp này sẽ cho phép bạn lắng nghe các sự kiện cụ thể và được thông báo ngay lập tức.
+Khi được kết nối thông qua WebSocket, bạn có thể sử dụng thêm hai phương thức: `eth_subscribe` và `eth_unsubscribe`. Các phương thức này sẽ cho phép bạn lắng nghe các sự kiện cụ thể và được thông báo ngay lập tức.
 
 ### `eth_subscribe` {#eth-subscribe}
 
 Tạo một đăng ký mới cho các sự kiện được chỉ định. [Tìm hiểu thêm về `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
-#### Các tham số {#parameters}
+#### Tham số {#parameters}
 
 1. Các loại đăng ký
-2. Tham số tùy chọn
+2. Các tham số tùy chọn
 
-Đối số đầu tiên chỉ định loại sự kiện cần lắng nghe. Đối số thứ hai chứa các tùy chọn bổ sung phụ thuộc vào đối số đầu tiên. Các loại mô tả khác nhau, các tùy chọn và tải trọng sự kiện của chúng được mô tả dưới đây.
+Đối số đầu tiên chỉ định loại sự kiện cần lắng nghe. Đối số thứ hai chứa các tùy chọn bổ sung phụ thuộc vào đối số đầu tiên. Các loại mô tả khác nhau, các tùy chọn của chúng và payload sự kiện của chúng được mô tả bên dưới.
 
-#### Giá trị trả về {#returns}
+#### Kết quả trả về {#returns}
 
-ID đăng ký: ID này sẽ được đính kèm với bất kỳ sự kiện nào nhận được và cũng có thể được sử dụng để hủy đăng ký bằng `eth_unsubscribe`.
+ID đăng ký: ID này sẽ được đính kèm vào bất kỳ sự kiện nào nhận được và cũng có thể được sử dụng để hủy đăng ký bằng cách sử dụng `eth_unsubscribe`.
 
-#### Sự kiện đăng ký {#subscription-events}
+#### Các sự kiện đăng ký {#subscription-events}
 
 Trong khi đăng ký đang hoạt động, bạn sẽ nhận được các sự kiện là các đối tượng có các trường sau:
 
@@ -87,7 +86,7 @@ Trong khi đăng ký đang hoạt động, bạn sẽ nhận được các sự 
 
 1. `alchemy_newFullPendingTransactions`
 
-Trả về thông tin giao dịch cho tất cả các giao dịch được thêm vào trạng thái đang chờ xử lý. Loại đăng ký này đăng ký các giao dịch đang chờ xử lý, tương tự như lệnh gọi Web3 tiêu chuẩn `web3.eth.subscribe("pendingTransactions")`, nhưng khác ở chỗ nó phát ra _thông tin giao dịch đầy đủ_ thay vì chỉ các hàm băm giao dịch.
+Trả về thông tin giao dịch cho tất cả các giao dịch được thêm vào trạng thái chờ xử lý. Loại đăng ký này đăng ký các giao dịch đang chờ xử lý, tương tự như lệnh gọi Web3 tiêu chuẩn `web3.eth.subscribe("pendingTransactions")`, nhưng khác ở chỗ nó phát ra _thông tin giao dịch đầy đủ_ thay vì chỉ các hàm băm giao dịch.
 
 Ví dụ:
 
@@ -122,9 +121,9 @@ Ví dụ:
 
 2. `newHeads`
 
-Phát ra một sự kiện bất cứ khi nào một tiêu đề mới được thêm vào chuỗi, kể cả trong quá trình tái tổ chức chuỗi.
+Phát ra một sự kiện bất cứ khi nào một header mới được thêm vào Chuỗi, bao gồm cả trong quá trình tổ chức lại chuỗi.
 
-Khi xảy ra tái tổ chức chuỗi, đăng ký này sẽ phát ra một sự kiện chứa tất cả các tiêu đề mới cho chuỗi mới. Cụ thể, điều này có nghĩa là bạn có thể thấy nhiều tiêu đề được phát ra có cùng chiều cao và khi điều này xảy ra, tiêu đề sau nên được coi là tiêu đề chính xác sau khi tái tổ chức.
+Khi xảy ra tổ chức lại chuỗi, đăng ký này sẽ phát ra một sự kiện chứa tất cả các header mới cho Chuỗi mới. Cụ thể, điều này có nghĩa là bạn có thể thấy nhiều header được phát ra với cùng một chiều cao và khi điều này xảy ra, header sau đó nên được coi là header chính xác sau khi tổ chức lại chuỗi.
 
 Ví dụ:
 
@@ -159,22 +158,22 @@ Ví dụ:
 
 3. `logs`
 
-Phát ra các nhật ký là một phần của các khối mới được thêm vào khớp với tiêu chí bộ lọc đã chỉ định.
+Phát ra các nhật ký (logs) là một phần của các khối mới được thêm vào khớp với các tiêu chí bộ lọc được chỉ định.
 
-Khi xảy ra tái tổ chức chuỗi, các nhật ký là một phần của các khối trên chuỗi cũ sẽ được phát ra lại với thuộc tính `removed` được đặt thành `true`. Hơn nữa, các nhật ký là một phần của các khối trên chuỗi mới được phát ra, có nghĩa là có thể thấy các nhật ký cho cùng một giao dịch nhiều lần trong trường hợp tái tổ chức.
+Khi xảy ra tổ chức lại chuỗi, các nhật ký thuộc về các khối trên Chuỗi cũ sẽ được phát lại với thuộc tính `removed` được đặt thành `true`. Hơn nữa, các nhật ký thuộc về các khối trên Chuỗi mới cũng được phát ra, có nghĩa là bạn có thể thấy các nhật ký cho cùng một giao dịch nhiều lần trong trường hợp tổ chức lại chuỗi.
 
 Tham số
 
 1. Một đối tượng có các trường sau:
-   - `address` (tùy chọn): một chuỗi đại diện cho một địa chỉ hoặc một mảng các chuỗi như vậy.
-     - Chỉ các nhật ký được tạo từ một trong những địa chỉ này mới được phát ra.
-   - `topics`: một mảng các bộ chỉ định chủ đề.
-     - Mỗi bộ chỉ định chủ đề là `null`, một chuỗi đại diện cho một chủ đề hoặc một mảng các chuỗi.
-     - Mỗi vị trí trong mảng không phải là `null` sẽ hạn chế các nhật ký được phát ra chỉ với những nhật ký có một trong các chủ đề đã cho ở vị trí đó.
+   - `address` (tùy chọn): một chuỗi đại diện cho một Địa chỉ hoặc một mảng các chuỗi như vậy.
+     - Chỉ các nhật ký được tạo từ một trong những Địa chỉ này mới được phát ra.
+   - `topics`: một mảng các bộ chỉ định chủ đề (topic specifiers).
+     - Mỗi bộ chỉ định chủ đề có thể là `null`, một chuỗi đại diện cho một chủ đề, hoặc một mảng các chuỗi.
+     - Mỗi vị trí trong mảng không phải là `null` sẽ giới hạn các nhật ký được phát ra chỉ bao gồm những nhật ký có một trong các chủ đề đã cho ở vị trí đó.
 
-Một số ví dụ về thông số kỹ thuật chủ đề:
+Một số ví dụ về thông số kỹ thuật của chủ đề:
 
-- `[]`: Mọi chủ đề đều được cho phép.
+- `[]`: Bất kỳ chủ đề nào cũng được phép.
 - `[A]`: A ở vị trí đầu tiên (và bất kỳ thứ gì sau đó).
 - `[null, B]`: Bất kỳ thứ gì ở vị trí đầu tiên và B ở vị trí thứ hai (và bất kỳ thứ gì sau đó).
 - `[A, B]`: A ở vị trí đầu tiên và B ở vị trí thứ hai (và bất kỳ thứ gì sau đó).
@@ -208,15 +207,15 @@ Ví dụ:
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-Hủy một đăng ký hiện có để không có sự kiện nào được gửi thêm.
+Hủy một đăng ký hiện có để không có thêm sự kiện nào được gửi.
 
 Tham số
 
 1. ID đăng ký, như đã được trả về trước đó từ một lệnh gọi `eth_subscribe`.
 
-Giá trị trả về
+Kết quả trả về
 
-`true` nếu đăng ký được hủy thành công, hoặc `false` nếu không có đăng ký nào tồn tại với ID đã cho.
+`true` nếu đăng ký đã được hủy thành công, hoặc `false` nếu không có đăng ký nào tồn tại với ID đã cho.
 
 Ví dụ:
 
@@ -227,8 +226,6 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-
-
 ```
 
 **Kết quả**
@@ -243,4 +240,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Đăng ký miễn phí với Alchemy](https://auth.alchemy.com), xem [tài liệu của chúng tôi](https://www.alchemy.com/docs/) và để biết những tin tức mới nhất, hãy theo dõi chúng tôi trên [Twitter](https://x.com/AlchemyPlatform).
+[Đăng ký Alchemy](https://auth.alchemy.com) miễn phí, xem [tài liệu của chúng tôi](https://www.alchemy.com/docs/) và để cập nhật những tin tức mới nhất, hãy theo dõi chúng tôi trên [Twitter](https://x.com/AlchemyPlatform).

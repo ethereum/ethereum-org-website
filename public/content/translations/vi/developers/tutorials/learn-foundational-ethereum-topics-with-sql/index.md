@@ -1,35 +1,35 @@
 ---
-title: "Tìm hiểu các chủ đề cơ bản về Ethereum bằng SQL"
-description: "Hướng dẫn này giúp người đọc hiểu các khái niệm cơ bản về Ethereum bao gồm giao dịch, khối và gas bằng cách truy vấn dữ liệu trên chuỗi bằng Ngôn ngữ truy vấn có cấu trúc (SQL)."
+title: Tìm hiểu các chủ đề nền tảng của Ethereum bằng SQL
+description: Hướng dẫn này giúp người đọc hiểu các khái niệm cơ bản về Ethereum bao gồm giao dịch, khối và gas bằng cách truy vấn dữ liệu trên chuỗi với Ngôn ngữ truy vấn có cấu trúc (SQL).
 author: "Paul Apivat"
-tags: [ "SQL", "Truy vấn", "Các giao dịch" ]
+tags: ["SQL", "Truy vấn", "Giao dịch", "dữ liệu và phân tích"]
 skill: beginner
-breadcrumb: "Ethereum với SQL"
+breadcrumb: Ethereum với SQL
 lang: vi
 published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---
 
-Nhiều hướng dẫn về Ethereum nhắm đến các nhà phát triển, nhưng lại thiếu tài nguyên giáo dục cho các nhà phân tích dữ liệu hoặc cho những người muốn xem dữ liệu trên chuỗi mà không cần chạy một ứng dụng hoặc nút.
+Nhiều hướng dẫn về Ethereum nhắm đến các nhà phát triển, nhưng lại thiếu các tài nguyên giáo dục dành cho các nhà phân tích dữ liệu hoặc cho những người muốn xem dữ liệu trên chuỗi mà không cần chạy một client hoặc nút.
 
-Hướng dẫn này giúp người đọc hiểu các khái niệm cơ bản về Ethereum bao gồm giao dịch, khối và gas bằng cách truy vấn dữ liệu trên chuỗi bằng ngôn ngữ truy vấn có cấu trúc (SQL) thông qua giao diện do [Dune Analytics](https://dune.com/) cung cấp.
+Hướng dẫn này giúp người đọc hiểu các khái niệm cơ bản về Ethereum bao gồm giao dịch, khối và Gas bằng cách truy vấn dữ liệu trên chuỗi với ngôn ngữ truy vấn có cấu trúc (SQL) thông qua một giao diện được cung cấp bởi [Dune Analytics](https://dune.com/).
 
-Dữ liệu trên chuỗi có thể giúp chúng ta hiểu về Ethereum, mạng lưới, và như một nền kinh tế cho sức mạnh tính toán và sẽ đóng vai trò là cơ sở để hiểu các thách thức mà Ethereum đang đối mặt hiện nay (ví dụ: giá gas tăng) và quan trọng hơn là các cuộc thảo luận xung quanh các giải pháp thay đổi quy mô.
+Dữ liệu trên chuỗi có thể giúp chúng ta hiểu về Ethereum, mạng lưới, và như một nền kinh tế cho sức mạnh tính toán và nên đóng vai trò là cơ sở để hiểu các thách thức mà Ethereum đang phải đối mặt hiện nay (ví dụ: giá Gas tăng) và quan trọng hơn là các cuộc thảo luận xung quanh các giải pháp mở rộng quy mô.
 
-### Các giao dịch {#transactions}
+### Giao dịch {#transactions}
 
-Hành trình của người dùng trên Ethereum bắt đầu bằng việc khởi tạo một tài khoản do người dùng kiểm soát hoặc một thực thể có số dư ETH. Có hai loại tài khoản - do người dùng kiểm soát hoặc một hợp đồng thông minh (xem [ethereum.org](/developers/docs/accounts/)).
+Hành trình của người dùng trên Ethereum bắt đầu bằng việc khởi tạo một tài khoản do người dùng kiểm soát hoặc một thực thể có số dư ETH. Có hai loại tài khoản - do người dùng kiểm soát hoặc hợp đồng thông minh (xem [ethereum.org](/developers/docs/accounts/)).
 
-Bất kỳ tài khoản nào cũng có thể được xem trên một trình duyệt khối như [Etherscan](https://etherscan.io/) hoặc [Blockscout](https://eth.blockscout.com/). Trình duyệt khối là một cổng thông tin đến dữ liệu của Ethereum. Chúng hiển thị dữ liệu theo thời gian thực về các khối, giao dịch, thợ đào, tài khoản và các hoạt động trên chuỗi khác (xem [tại đây](/developers/docs/data-and-analytics/block-explorers/)).
+Bất kỳ tài khoản nào cũng có thể được xem trên một trình khám phá khối như [Etherscan](https://etherscan.io/) hoặc [Blockscout](https://eth.blockscout.com/). Trình khám phá khối là một cổng thông tin vào dữ liệu của Ethereum. Chúng hiển thị, theo thời gian thực, dữ liệu về các khối, giao dịch, thợ đào, tài khoản và các hoạt động trên chuỗi khác (xem [tại đây](/developers/docs/data-and-analytics/block-explorers/)).
 
-Tuy nhiên, người dùng có thể muốn truy vấn trực tiếp dữ liệu để đối chiếu thông tin được cung cấp bởi các trình duyệt khối bên ngoài. [Dune Analytics](https://dune.com/) cung cấp khả năng này cho bất kỳ ai có một số kiến thức về SQL.
+Tuy nhiên, người dùng có thể muốn truy vấn dữ liệu trực tiếp để đối chiếu thông tin được cung cấp bởi các trình khám phá khối bên ngoài. [Dune Analytics](https://dune.com/) cung cấp khả năng này cho bất kỳ ai có chút kiến thức về SQL.
 
-Để tham khảo, tài khoản hợp đồng thông minh của Ethereum Foundation (EF) có thể được xem trên [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
+Để tham khảo, tài khoản hợp đồng thông minh của Tổ chức Ethereum (EF) có thể được xem trên [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
 
-Một điều cần lưu ý là tất cả các tài khoản, bao gồm cả tài khoản của EF, đều có một địa chỉ công khai có thể được sử dụng để gửi và nhận giao dịch.
+Một điều cần lưu ý là tất cả các tài khoản, bao gồm cả của EF, đều có một địa chỉ công khai có thể được sử dụng để gửi và nhận các giao dịch.
 
-Số dư tài khoản trên Etherscan bao gồm các giao dịch thông thường và các giao dịch nội bộ. Giao dịch nội bộ, mặc dù tên gọi là vậy, không phải là các giao dịch _thực tế_ làm thay đổi trạng thái của chuỗi. Chúng là các lần chuyển giao giá trị được khởi tạo bằng cách thực thi một hợp đồng ([nguồn](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Vì các giao dịch nội bộ không có chữ ký, chúng **không** được bao gồm trên chuỗi khối và không thể được truy vấn bằng Dune Analytics.
+Số dư tài khoản trên Etherscan bao gồm các giao dịch thông thường và các giao dịch nội bộ. Các giao dịch nội bộ, mặc dù có tên như vậy, không phải là các giao dịch _thực sự_ làm thay đổi trạng thái của chuỗi. Chúng là các giao dịch chuyển giá trị được khởi tạo bằng cách thực thi một hợp đồng ([nguồn](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Vì các giao dịch nội bộ không có chữ ký, chúng **không** được đưa vào chuỗi khối và không thể được truy vấn bằng Dune Analytics.
 
 Do đó, hướng dẫn này sẽ tập trung vào các giao dịch thông thường. Điều này có thể được truy vấn như sau:
 
@@ -59,33 +59,33 @@ SELECT
 FROM temp_table
 ```
 
-Thao tác này sẽ mang lại thông tin tương tự như thông tin được cung cấp trên trang giao dịch của Etherscan. Để so sánh, đây là hai nguồn:
+Điều này sẽ mang lại thông tin giống như được cung cấp trên trang giao dịch của Etherscan. Để so sánh, đây là hai nguồn:
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Screenshot of Etherscan transaction explorer view](./etherscan_view.png)
 
 [Trang hợp đồng của EF trên Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Screenshot of a Dune Analytics query dashboard](./dune_view.png)
 
 Bạn có thể tìm thấy bảng điều khiển [tại đây](https://dune.com/paulapivat/Learn-Ethereum). Nhấp vào bảng để xem truy vấn (cũng xem ở trên).
 
-### Phân tích các giao dịch {#breaking_down_transactions}
+### Phân tích chi tiết các giao dịch {#breaking-down-transactions}
 
-Một giao dịch đã gửi bao gồm một số thông tin bao gồm ([nguồn](/developers/docs/transactions/)):
+Một giao dịch được gửi bao gồm một số thông tin bao gồm ([nguồn](/developers/docs/transactions/)):
 
 - **Người nhận**: Địa chỉ nhận (được truy vấn là "to")
-- **Chữ ký**: Trong khi khóa riêng tư của người gửi ký một giao dịch, điều chúng ta có thể truy vấn bằng SQL là địa chỉ công khai của người gửi ("from").
+- **Chữ ký**: Mặc dù khóa riêng tư của người gửi ký một giao dịch, những gì chúng ta có thể truy vấn bằng SQL là địa chỉ công khai của người gửi ("from").
 - **Giá trị**: Đây là số lượng ETH được chuyển (xem cột `ether`).
 - **Dữ liệu**: Đây là dữ liệu tùy ý đã được băm (xem cột `data`)
-- **giới hạn gas** – số lượng đơn vị gas tối đa mà giao dịch có thể tiêu thụ. Các đơn vị gas đại diện cho các bước tính toán
-- **maxPriorityFeePerGas** - lượng gas tối đa được bao gồm dưới dạng tiền boa cho thợ đào
-- **maxFeePerGas** - lượng gas tối đa sẵn sàng trả cho giao dịch (bao gồm baseFeePerGas và maxPriorityFeePerGas)
+- **gasLimit** – giới hạn gas tối đa có thể được tiêu thụ bởi giao dịch. Các đơn vị Gas đại diện cho các bước tính toán
+- **maxPriorityFeePerGas** - lượng Gas tối đa được bao gồm như một khoản phí ưu tiên cho thợ đào
+- **maxFeePerGas** - lượng Gas tối đa sẵn sàng trả cho giao dịch (bao gồm cả baseFeePerGas và maxPriorityFeePerGas)
 
-Chúng ta có thể truy vấn các thông tin cụ thể này cho các giao dịch đến địa chỉ công khai của Ethereum Foundation:
+Chúng ta có thể truy vấn các thông tin cụ thể này cho các giao dịch đến địa chỉ công khai của Tổ chức Ethereum:
 
 ```sql
 SELECT
@@ -102,11 +102,11 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Các khối {#blocks}
+### Khối {#blocks}
 
-Mỗi giao dịch sẽ thay đổi trạng thái của máy ảo Ethereum ([EVM](/developers/docs/evm/)) ([nguồn](/developers/docs/transactions/)). Các giao dịch được quảng bá đến mạng để được xác minh và đưa vào một khối. Mỗi giao dịch được liên kết với một số khối. Để xem dữ liệu, chúng ta có thể truy vấn một số khối cụ thể: 12396854 (khối gần đây nhất trong số các giao dịch của Ethereum Foundation tại thời điểm viết bài này, 11/5/21).
+Mỗi giao dịch sẽ thay đổi trạng thái của Máy ảo Ethereum ([EVM](/developers/docs/evm/)) ([nguồn](/developers/docs/transactions/)). Các giao dịch được phát sóng lên mạng lưới để được xác minh và đưa vào một khối. Mỗi giao dịch được liên kết với một số khối. Để xem dữ liệu, chúng ta có thể truy vấn một số khối cụ thể: 12396854 (khối gần đây nhất trong số các giao dịch của Tổ chức Ethereum tính đến thời điểm viết bài này, 11/5/21).
 
-Hơn nữa, khi chúng ta truy vấn hai khối tiếp theo, chúng ta có thể thấy rằng mỗi khối chứa hàm băm của khối trước đó (tức là hàm băm của khối cha), minh họa cách chuỗi khối được hình thành.
+Hơn nữa, khi chúng ta truy vấn hai khối tiếp theo, chúng ta có thể thấy rằng mỗi khối chứa mã băm của khối trước đó (tức là mã băm cha), minh họa cách chuỗi khối được hình thành.
 
 Mỗi khối chứa một tham chiếu đến khối cha của nó. Điều này được hiển thị bên dưới giữa các cột `hash` và `parent_hash` ([nguồn](/developers/docs/blocks/)):
 
@@ -126,18 +126,18 @@ WHERE "number" = 12396854 OR "number" = 12396855 OR "number" = 12396856
 LIMIT 10
 ```
 
-Chúng ta có thể kiểm tra một khối bằng cách truy vấn thời gian, số khối, độ khó, hàm băm, hàm băm của khối cha và nonce.
+Chúng ta có thể kiểm tra một khối bằng cách truy vấn thời gian, số khối, độ khó, mã băm, mã băm cha và nonce.
 
-Điều duy nhất mà truy vấn này không bao gồm là _danh sách giao dịch_ yêu cầu một truy vấn riêng bên dưới và _gốc trạng thái_. Một nút đầy đủ hoặc nút lưu trữ sẽ lưu trữ tất cả các giao dịch và chuyển đổi trạng thái, cho phép các ứng dụng truy vấn trạng thái của chuỗi bất kỳ lúc nào. Bởi vì điều này đòi hỏi không gian lưu trữ lớn, chúng ta có thể tách dữ liệu chuỗi khỏi dữ liệu trạng thái:
+Điều duy nhất mà truy vấn này không bao gồm là _danh sách giao dịch_ vốn yêu cầu một truy vấn riêng biệt bên dưới và _gốc trạng thái_ (state root). Một nút đầy đủ (full node) hoặc nút lưu trữ (archival node) sẽ lưu trữ tất cả các giao dịch và các chuyển đổi trạng thái, cho phép các client truy vấn trạng thái của chuỗi bất cứ lúc nào. Vì điều này đòi hỏi không gian lưu trữ lớn, chúng ta có thể tách dữ liệu chuỗi khỏi dữ liệu trạng thái:
 
 - Dữ liệu chuỗi (danh sách các khối, giao dịch)
-- Dữ liệu trạng thái (kết quả của mỗi lần chuyển đổi trạng thái của giao dịch)
+- Dữ liệu trạng thái (kết quả của quá trình chuyển đổi trạng thái của mỗi giao dịch)
 
-Gốc trạng thái thuộc loại thứ hai và là dữ liệu _ngầm_ (không được lưu trữ trên chuỗi), trong khi dữ liệu chuỗi là dữ liệu tường minh và được lưu trữ trên chính chuỗi đó ([nguồn](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
+Gốc trạng thái thuộc về loại sau và là dữ liệu _ngầm định_ (không được lưu trữ trên chuỗi), trong khi dữ liệu chuỗi là rõ ràng và được lưu trữ trên chính chuỗi đó ([nguồn](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
 
 Đối với hướng dẫn này, chúng ta sẽ tập trung vào dữ liệu trên chuỗi _có thể_ được truy vấn bằng SQL thông qua Dune Analytics.
 
-Như đã nêu ở trên, mỗi khối chứa một danh sách các giao dịch, chúng ta có thể truy vấn điều này bằng cách lọc một khối cụ thể. Chúng ta sẽ thử với khối gần đây nhất, 12396854:
+Như đã nêu ở trên, mỗi khối chứa một danh sách các giao dịch, chúng ta có thể truy vấn điều này bằng cách lọc theo một khối cụ thể. Chúng ta sẽ thử với khối gần đây nhất, 12396854:
 
 ```sql
 SELECT * FROM ethereum."transactions"
@@ -147,9 +147,9 @@ ORDER BY block_time DESC`
 
 Đây là đầu ra SQL trên Dune:
 
-![](./list_of_txn.png)
+![Screenshot of a list of Ethereum transactions](./list_of_txn.png)
 
-Một khối duy nhất này được thêm vào chuỗi sẽ làm thay đổi trạng thái của máy ảo Ethereum ([EVM](/developers/docs/evm/)). Đôi khi hàng chục, hàng trăm giao dịch được xác minh cùng một lúc. Trong trường hợp cụ thể này, 222 giao dịch đã được bao gồm.
+Khối duy nhất này được thêm vào chuỗi sẽ thay đổi trạng thái của Máy ảo Ethereum ([EVM](/developers/docs/evm/)). Hàng chục, đôi khi hàng trăm giao dịch được xác minh cùng một lúc. Trong trường hợp cụ thể này, 222 giao dịch đã được bao gồm.
 
 Để xem có bao nhiêu giao dịch thực sự thành công, chúng ta sẽ thêm một bộ lọc khác để đếm các giao dịch thành công:
 
@@ -166,24 +166,24 @@ FROM temp_table
 
 Đối với khối 12396854, trong tổng số 222 giao dịch, 204 giao dịch đã được xác minh thành công:
 
-![](./successful_txn.png)
+![Screenshot of a successful Ethereum transaction](./successful_txn.png)
 
 Các yêu cầu giao dịch xảy ra hàng chục lần mỗi giây, nhưng các khối được cam kết khoảng 15 giây một lần ([nguồn](/developers/docs/blocks/)).
 
-Để thấy rằng có một khối được tạo ra khoảng 15 giây một lần, chúng ta có thể lấy số giây trong một ngày (86400) chia cho 15 để có được số khối trung bình ước tính mỗi ngày (~ 5760).
+Để thấy rằng có một khối được tạo ra khoảng mỗi 15 giây, chúng ta có thể lấy số giây trong một ngày (86400) chia cho 15 để có được số lượng khối trung bình ước tính mỗi ngày (~ 5760).
 
 Biểu đồ cho các khối Ethereum được tạo ra mỗi ngày (2016 - nay) là:
 
-![](./daily_blocks.png)
+![Chart showing daily Ethereum block production](./daily_blocks.png)
 
-Số khối trung bình được tạo ra hàng ngày trong khoảng thời gian này là ~5.874:
+Số lượng khối trung bình được tạo ra hàng ngày trong khoảng thời gian này là ~5.874:
 
-![](./avg_daily_blocks.png)
+![Chart showing daily Ethereum block production](./avg_daily_blocks.png)
 
 Các truy vấn là:
 
 ```sql
-# truy vấn để trực quan hóa số lượng khối được tạo ra hàng ngày kể từ năm 2016
+# query to visualize number of blocks produced daily since 2016
 
 SELECT
     DATE_TRUNC('day', time) AS dt,
@@ -192,7 +192,7 @@ FROM ethereum."blocks"
 GROUP BY dt
 OFFSET 1
 
-# số lượng khối trung bình được tạo ra mỗi ngày
+# average number of blocks produced per day
 
 WITH temp_table AS (
 SELECT
@@ -207,15 +207,15 @@ SELECT
 FROM temp_table
 ```
 
-Số khối trung bình được tạo ra mỗi ngày kể từ năm 2016 cao hơn một chút so với con số đó, ở mức 5.874. Ngoài ra, chia 86400 giây cho 5874 khối trung bình sẽ ra 14,7 giây hoặc khoảng một khối mỗi 15 giây.
+Số lượng khối trung bình được tạo ra mỗi ngày kể từ năm 2016 cao hơn một chút so với con số đó ở mức 5.874. Ngoài ra, chia 86400 giây cho 5874 khối trung bình sẽ ra 14,7 giây hoặc xấp xỉ một khối mỗi 15 giây.
 
 ### Gas {#gas}
 
-Các khối bị giới hạn về kích thước. Kích thước khối tối đa là động và thay đổi theo nhu cầu của mạng từ 12.500.000 đến 25.000.000 đơn vị. Cần có giới hạn để ngăn các khối có kích thước lớn tùy ý gây căng thẳng cho các nút đầy đủ về không gian đĩa và yêu cầu tốc độ ([nguồn](/developers/docs/blocks/)).
+Các khối bị giới hạn về kích thước. Kích thước khối tối đa là động và thay đổi theo nhu cầu của mạng lưới từ 12.500.000 đến 25.000.000 đơn vị. Các giới hạn là cần thiết để ngăn chặn kích thước khối lớn tùy ý gây áp lực lên các nút đầy đủ về không gian đĩa và yêu cầu tốc độ ([nguồn](/developers/docs/blocks/)).
 
-Một cách để hình dung giới hạn gas của khối là coi nó như **nguồn cung** không gian khối có sẵn để xử lý các giao dịch theo lô. Giới hạn gas của khối có thể được truy vấn và trực quan hóa từ năm 2016 đến nay:
+Một cách để khái niệm hóa giới hạn gas của khối là coi nó như **nguồn cung** không gian khối có sẵn để gộp các giao dịch. Giới hạn gas của khối có thể được truy vấn và trực quan hóa từ năm 2016 đến nay:
 
-![](./avg_gas_limit.png)
+![Chart showing average Ethereum gas limit over time](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -226,9 +226,9 @@ GROUP BY dt
 OFFSET 1
 ```
 
-Sau đó là lượng gas thực tế được sử dụng hàng ngày để trả cho việc tính toán được thực hiện trên chuỗi Ethereum (tức là gửi giao dịch, gọi một hợp đồng thông minh, đúc một NFT). Đây là **nhu cầu** về không gian khối Ethereum có sẵn:
+Sau đó là lượng Gas thực tế được sử dụng hàng ngày để trả cho việc tính toán được thực hiện trên chuỗi Ethereum (ví dụ: gửi giao dịch, gọi một hợp đồng thông minh, việc đúc một NFT). Đây là **nhu cầu** đối với không gian khối Ethereum có sẵn:
 
-![](./daily_gas_used.png)
+![Chart showing daily Ethereum gas used](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -239,17 +239,17 @@ GROUP BY dt
 OFFSET 1
 ```
 
-Chúng ta cũng có thể đặt hai biểu đồ này cạnh nhau để xem **cung và cầu** phù hợp với nhau như thế nào:
+Chúng ta cũng có thể đặt hai biểu đồ này cạnh nhau để xem **cung và cầu** tương quan như thế nào:
 
 ![gas_demand_supply](./gas_demand_supply.png)
 
-Do đó, chúng ta có thể hiểu giá gas là một hàm của nhu cầu về không gian khối Ethereum, với nguồn cung có sẵn.
+Do đó, chúng ta có thể hiểu giá Gas như một hàm của nhu cầu đối với không gian khối Ethereum, dựa trên nguồn cung có sẵn.
 
-Cuối cùng, chúng ta có thể muốn truy vấn giá gas trung bình hàng ngày cho chuỗi Ethereum, tuy nhiên, làm như vậy sẽ dẫn đến thời gian truy vấn đặc biệt dài, vì vậy chúng ta sẽ lọc truy vấn của mình đến lượng gas trung bình được trả cho mỗi giao dịch bởi Ethereum Foundation.
+Cuối cùng, chúng ta có thể muốn truy vấn giá Gas trung bình hàng ngày cho chuỗi Ethereum, tuy nhiên, làm như vậy sẽ dẫn đến thời gian truy vấn đặc biệt dài, vì vậy chúng ta sẽ lọc truy vấn của mình theo lượng Gas trung bình được trả cho mỗi giao dịch bởi Tổ chức Ethereum.
 
-![](./ef_daily_gas.png)
+![Chart showing Ethereum Foundation daily gas usage](./ef_daily_gas.png)
 
-Chúng ta có thể thấy giá gas đã trả cho tất cả các giao dịch được thực hiện đến địa chỉ Ethereum Foundation trong những năm qua. Đây là truy vấn:
+Chúng ta có thể thấy giá Gas được trả cho tất cả các giao dịch được thực hiện đến địa chỉ của Tổ chức Ethereum trong những năm qua. Đây là truy vấn:
 
 ```sql
 SELECT
@@ -263,8 +263,8 @@ ORDER BY block_time DESC
 
 ### Tóm tắt {#summary}
 
-Với hướng dẫn này, chúng ta hiểu các khái niệm cơ bản về Ethereum và cách hoạt động của chuỗi khối Ethereum bằng cách truy vấn và làm quen với dữ liệu trên chuỗi.
+Với hướng dẫn này, chúng ta hiểu các khái niệm nền tảng của Ethereum và cách chuỗi khối Ethereum hoạt động bằng cách truy vấn và cảm nhận dữ liệu trên chuỗi.
 
 Bảng điều khiển chứa tất cả mã được sử dụng trong hướng dẫn này có thể được tìm thấy [tại đây](https://dune.com/paulapivat/Learn-Ethereum).
 
-Để biết thêm cách sử dụng dữ liệu để khám phá web3 [hãy tìm tôi trên Twitter](https://twitter.com/paulapivat).
+Để biết thêm về việc sử dụng dữ liệu để khám phá Web3, [hãy tìm tôi trên Twitter](https://twitter.com/paulapivat).
