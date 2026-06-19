@@ -1,185 +1,185 @@
 ---
 title: Anzisha nodi yako mwenyewe ya Ethereum
-description: Utangulizi wa jumla wa kuendesha mfano wako wa mteja wa Ethereum.
+description: Utangulizi wa jumla wa kuendesha mfano wako mwenyewe wa mteja wa Ethereum.
 lang: sw
 sidebarDepth: 2
 ---
 
-Kuendesha nodi yako hukupa faida mbalimbali, hufungua uwezekano mpya, na husaidia mfumo wa ikolojia. Ukurasa huu utakusaidia kuanzisha nodi yako na kushiriki katika kuthibitisha miamala ya Ethereum.
+Kuendesha nodi yako mwenyewe kunakupa faida mbalimbali, kunafungua uwezekano mpya, na kusaidia kusaidia mfumo wa ikolojia. Ukurasa huu utakuongoza katika kuanzisha nodi yako mwenyewe na kushiriki katika kuthibitisha miamala ya [Ethereum](/).
 
-Kumbuka kuwa baada ya [Muungano](/roadmap/merge), wateja wawili wanahitajika kuendesha nodi ya Ethereum; mteja wa **safu ya utekelezaji (EL)** na mteja wa **safu ya makubaliano (CL)**. Ukurasa huu utaonesha jinsi ya kusakinisha, kusanidi na kuunganisha wateja hawa wawili ili kuendesha nodi ya Ethereum.
+Kumbuka kwamba baada ya [Unganisho](/roadmap/merge), wateja wawili wanahitajika ili kuendesha nodi ya Ethereum; kiteja cha **tabaka la utekelezaji (EL)** na mteja wa **tabaka la mwafaka (CL)**. Ukurasa huu utaonyesha jinsi ya kusakinisha, kusanidi na kuunganisha wateja hawa wawili ili kuendesha nodi ya Ethereum.
 
 ## Mahitaji ya awali {#prerequisites}
 
-Unatakiwa kuelewa nodi ya Ethereum ni nini na kwanini utatakiwa kuendesha mteja. Hili limeelezwa katika [Nodi na wateja](/developers/docs/nodes-and-clients/).
+Unapaswa kuelewa nodi ya Ethereum ni nini na kwa nini unaweza kutaka kuendesha mteja. Hili limejadiliwa katika [Nodi na wateja](/developers/docs/nodes-and-clients/).
 
-Kama wewe ni mgeni katika mada ya kuendesha nodi, au unatafuta njia isiyo ya kiufundi sana, tunapendekeza kwanza uangalie utangulizi wetu rahisi kwa mtumiaji kuhusu [kuendesha nodi ya Ethereum](/run-a-node).
+Ikiwa wewe ni mgeni katika mada ya kuendesha nodi, au unatafuta njia isiyo ya kiufundi sana, tunapendekeza kwanza uangalie utangulizi wetu unaofaa kwa watumiaji kuhusu [kuendesha nodi ya Ethereum](/run-a-node).
 
 ## Kuchagua mbinu {#choosing-approach}
 
-Hatua ya kwanza kwenye kuendesha nodi yako ni kuchagua mbinu yako. Kulingana na mahitaji na uwezekano mbalimbali, unatakiwa uchague utekelezaji wa mteja (wa wateja wa utekelezaji na makubaliano), mazingira (vifaa, mfumo), na vigezo vya mipangilio ya mteja.
+Hatua ya kwanza katika kuanzisha nodi yako ni kuchagua mbinu yako. Kulingana na mahitaji na uwezekano mbalimbali, lazima uchague utekelezaji wa mteja (wa wateja wa utekelezaji na mwafaka), mazingira (vifaa, mfumo), na vigezo vya mipangilio ya mteja.
 
-Ukurasa huu utakusaidia katika kufanya maamuzi na kukusaidia kupata njia inayofaa zaidi ya kuendesha tukio lako la Ethereum.
+Ukurasa huu utakuongoza kupitia maamuzi haya na kukusaidia kupata njia inayofaa zaidi ya kuendesha mfano wako wa Ethereum.
 
-Ili kuchagua kutoka kwa utekelezaji wa wateja, angalia wote [wateja wa utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) walio tayari kwa Mtandao Mkuu, [wateja wa makubaliano](/developers/docs/nodes-and-clients/#consensus-clients) na ujifunze kuhusu [utofauti wa wateja](/developers/docs/nodes-and-clients/client-diversity).
+Ili kuchagua kutoka kwa utekelezaji wa wateja, angalia [wateja wa utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) wote wanaopatikana tayari kwa Mtandao Mkuu, [wateja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients) na ujifunze kuhusu [anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity).
 
-Amua ikiwa utaendesha programu kwenye [maunzi yako mwenyewe au kwenye wingu](#local-vs-cloud), ukizingatia [mahitaji](#requirements) ya wateja.
+Amua kama utaendesha programu kwenye [vifaa vyako mwenyewe au kwenye wingu](#local-vs-cloud), ukizingatia [mahitaji](#requirements) ya wateja.
 
-Baada ya kuandaa mazingira, sakinisha wateja waliochaguliwa ama kwa [kiolesura rahisi kwa wanaoanza](#automatized-setup) au [kwa mikono](#manual-setup) ukitumia terminal yenye chaguo za hali ya juu.
+Baada ya kuandaa mazingira, sakinisha wateja waliochaguliwa ama kwa [kiolesura kinachofaa kwa wanaoanza](#automatized-setup) au [kwa mikono](#manual-setup) ukitumia terminali yenye chaguo za kina.
 
-Wakati nodi inaendeshwa na kusawazisha, uko tayari [kuitumia](#using-the-node), lakini hakikisha unafuatilia [utunzaji](#operating-the-node) wake.
+Wakati nodi inafanya kazi na kusawazisha, uko tayari [kuitumia](#using-the-node), lakini hakikisha unafuatilia [matengenezo](#operating-the-node) yake.
 
-![Usanidi wa mteja](./diagram.png)
+![Client setup](./diagram.png)
 
-### Mazingira na maunzi {#environment-and-hardware}
+### Mazingira na vifaa {#environment-and-hardware}
 
-#### Kwenye kifaa au kwenye wingu {#local-vs-cloud}
+#### Ndani au wingu {#local-vs-cloud}
 
-Wateja wa Ethereum wanaweza kuendeshwa kwenye kompyuta za kawaida za watumiaji na hawahitaji vifaa maalumu, kama mashine za kuchimba madini mfano. Kwa hivyo, una machaguo mbalimbali ya kuendesha nodi kulingana na mahitaji yako.
-Ili kurahisisha, tufikirie kuhusu kuendesha nodi kwenye kifaa chako binafsi na kwenye seva ya mtandaoni:
+Wateja wa Ethereum wana uwezo wa kufanya kazi kwenye kompyuta za kiwango cha watumiaji na hawahitaji vifaa vyovyote maalum, kama vile mashine za uchimbaji kwa mfano. Kwa hivyo, una chaguo mbalimbali za kusambaza nodi kulingana na mahitaji yako.
+Ili kurahisisha, hebu tufikirie kuhusu kuendesha nodi kwenye mashine halisi ya ndani na seva ya wingu:
 
 - Wingu
-  - Watoa huduma hutoa muda mrefu wa upatikanaji wa seva na anwani za IP zisizobadilika
-  - Kupata seva maalumu au seva ya mtandaoni inaweza kuwa rahisi zaidi kuliko kujenga yako
-  - Hasara ni kutaabika kwa mtu wa tatu - mtoa huduma wa seva
-  - Kwa sababu ya kiasi kinachohitajika cha nodi nzima, bei ya seva iliyokodishwa inaweza ikawa kubwa
-- Miliki vifaa
-  - Njia ya kujiamini kidogo na uhuru zaidi
+  - Watoa huduma hutoa muda wa juu wa seva na anwani za IP za umma zisizobadilika
+  - Kupata seva maalum au ya mtandaoni inaweza kuwa rahisi zaidi kuliko kujenga yako mwenyewe
+  - Hasara ni kuamini mhusika wa tatu - mtoa huduma wa seva
+  - Kwa sababu ya ukubwa wa hifadhi unaohitajika kwa nodi kamili, bei ya seva iliyokodishwa inaweza kuwa juu
+- Vifaa vyako mwenyewe
+  - Mbinu isiyo na hitaji la uaminifu na huru zaidi
   - Uwekezaji wa mara moja
-  - Chaguo la kununua mashine zilizosanifiwa tayari
-  - Unatakiwa uandae, utunze, na kutatua matatizo ya mashine na mtandao
+  - Chaguo la kununua mashine zilizosanidiwa mapema
+  - Inabidi uandae kimwili, udumishe, na uwezekano wa kutatua matatizo ya mashine na mtandao
 
-Machaguo yote mawili yana faida tofauti zilizoelezwa kwa ufupi hapo juu. Kama unatafuta suluhisho la wingu, pamoja na watoa huduma wa kompyuta za wingu, kuna pia huduma zinazolenga kuendesha nodi. Angalia [nodi kama huduma](/developers/docs/nodes-and-clients/nodes-as-a-service/) kwa chaguo zaidi kuhusu nodi zilizopangishwa.
+Chaguzi zote mbili zina faida tofauti zilizofupishwa hapo juu. Ikiwa unatafuta suluhisho la wingu, pamoja na watoa huduma wengi wa jadi wa kompyuta ya wingu, pia kuna huduma zinazolenga kusambaza nodi. Angalia [nodi kama huduma](/developers/docs/nodes-and-clients/nodes-as-a-service/) kwa chaguo zaidi kwenye nodi zilizopangishwa.
 
 #### Vifaa {#hardware}
 
-Hata hivyo, mtandao usioweza kudhibitiwa na ulioenea hautakiwi kutegemea watoa huduma wa wingu. Badala yake, kuendesha nodi yako kwenye vifaa vyako binafsi ni bora zaidi kwa mfumo wa ikolojia. [Makadirio](https://www.ethernodes.org/networkType/cl/Hosting) yanaonyesha sehemu kubwa ya nodi huendeshwa kwenye wingu, jambo ambalo linaweza kuwa chanzo kimoja cha hitilafu.
+Hata hivyo, mtandao unaostahimili udhibiti, uliogatuliwa haupaswi kutegemea watoa huduma wa wingu. Badala yake, kuendesha nodi yako kwenye vifaa vyako vya ndani ni bora zaidi kwa mfumo wa ikolojia. [Makadirio](https://www.ethernodes.org/networkType/cl/Hosting) yanaonyesha sehemu kubwa ya nodi zinaendeshwa kwenye wingu, ambayo inaweza kuwa hatua moja ya kutofaulu.
 
-Wateja wa Ethereum wanaweza kuendeshwa kwenye kompyuta, kompyuta ya mkononi, seva au hata kompyuta ya bodi moja. Ingawa inawezekana kuendesha wateja kwenye kompyuta yako binafsi, kuwa na mashine maalumu kwa ajili ya nodi yako tu inaweza kuongeza utendaji na usalama wake kwa kiasi kikubwa huku ikipunguza athari kwenye kompyuta yako kuu.
+Wateja wa Ethereum wanaweza kufanya kazi kwenye kompyuta yako, kompyuta mpakato, seva, au hata kompyuta ya bodi moja. Ingawa kuendesha wateja kwenye kompyuta yako binafsi kunawezekana, kuwa na mashine maalum kwa ajili ya nodi yako tu kunaweza kuongeza utendaji na usalama wake kwa kiasi kikubwa huku ukipunguza athari kwenye kompyuta yako kuu.
 
-Kutumia vifaa vyako inaweza kuwa rahisi zaidi. Kuna machaguo mengi rahisi na pia kuna machaguo ya juu kwa ajili ya watu wa kiufundi zaidi. Hivyo basi tuangalie mahitaji na njia za kuendesha wateja wa Ethereum kwenye mashine yako.
+Kutumia vifaa vyako mwenyewe kunaweza kuwa rahisi sana. Kuna chaguo nyingi rahisi pamoja na mipangilio ya kina kwa watu wa kiufundi zaidi. Kwa hivyo hebu tuangalie mahitaji na njia za kuendesha wateja wa Ethereum kwenye mashine yako.
 
 #### Mahitaji {#requirements}
 
-Mahitaji ya vifaa hutofautiana kulingana na mteja lakini kwa kawaida hayako juu sana kwani nodi zinahitaji tu kuwa zimesawazishwa. Usiichanganye na kuchimba madini, ambayo inahitaji nguvu kubwa zaidi ya kompyuta. Muda wa kusawazisha na utendaji huboreshwa zaidi na vifaa vyenye nguvu zaidi.
+Mahitaji ya vifaa hutofautiana kulingana na mteja lakini kwa ujumla si ya juu sana kwa kuwa nodi inahitaji tu kusalia katika usawazishaji. Usichanganye na uchimbaji, ambao unahitaji nguvu zaidi ya kompyuta. Hata hivyo, muda wa usawazishaji na utendaji huboreka ukiwa na vifaa vyenye nguvu zaidi.
 
-Kabla ya kusakinisha mteja yeyote, tafadhali hakikisha kompyuta yako ina uwezo wa kutosha kuiendesha. Unaweza kupata mahitaji ya chini na yaliyopendekezwa hapa chini.
+Kabla ya kusakinisha mteja yeyote, tafadhali hakikisha kompyuta yako ina rasilimali za kutosha kuiendesha. Unaweza kupata mahitaji ya chini na yaliyopendekezwa hapa chini.
 
-Kizuizi kikubwa cha kifaa chako mara nyingi ni nafasi ya diski. Kusawazisha blockchain ya Ethereum kunahitaji input/output ya kiwango cha juu na nafasi kubwa ya hifadhi. Ni bora kuwa na **hifadhi ya hali dhabiti (SSD)** yenye mamia ya GB za nafasi ya ziada hata baada ya usawazishaji.
+Kikwazo kwa vifaa vyako mara nyingi ni nafasi ya diski. Kusawazisha mnyororo wa vitalu wa Ethereum kunahitaji uingizaji/utolewaji mwingi na kunahitaji nafasi nyingi. Ni bora kuwa na **hifadhi ya hali dhabiti (SSD)** yenye mamia ya GB za nafasi ya bure ya kuhifadhi hata baada ya usawazishaji.
 
-Ukubwa wa hifadhidata na kasi ya usawazishaji wa awali hutegemea mteja aliyechaguliwa, usanidi wake na [mkakati wa kusawazisha](/developers/docs/nodes-and-clients/#sync-modes).
+Ukubwa wa hifadhidata na kasi ya usawazishaji wa awali inategemea mteja aliyechaguliwa, usanidi wake na [mkakati wa usawazishaji](/developers/docs/nodes-and-clients/#sync-modes).
 
-Pia hakikisha muunganisho wako wa intaneti hauna [kikomo cha kipimo data](https://wikipedia.org/wiki/Data_cap). Inashauriwa kutumia muunganisho usio na kikomo kwa kuwa usawazishaji wa awali na data inayotumwa kwenye mtandao inaweza kuzidi kikomo chako.
+Pia hakikisha muunganisho wako wa intaneti hauzuiliwi na [kikomo cha kipimo data](https://wikipedia.org/wiki/Data_cap). Inapendekezwa kutumia muunganisho usio na kikomo kwa kuwa usawazishaji wa awali na data inayotangazwa kwenye mtandao inaweza kuzidi kikomo chako.
 
-##### Mfumo wa uendeshaji
+##### Mfumo wa uendeshaji {#plug-and-play}
 
-Wateja wote wanaunga mkono mifumo mikuu ya uendeshaji - Linux MacOS, Windows. Hii inamaanisha kuwa unaweza kuendesha nodi kwenye kompyuta ya kawaida au mashine ya seva kwa kutumia mfumo wa uendeshaji (OS) unaokufaa sana. Hakikisha mfumo wako wa uendeshaji umesasishwa ili kuepuka matatizo yanayoweza kutokea na udhaifu wa kiusalama.
+Wateja wote wanaauni mifumo mikuu ya uendeshaji - Linux, macOS, Windows. Hii inamaanisha unaweza kuendesha nodi kwenye kompyuta za kawaida za mezani au mashine za seva zilizo na mfumo wa uendeshaji (OS) unaokufaa zaidi. Hakikisha OS yako imesasishwa ili kuepuka matatizo yanayoweza kutokea na udhaifu wa usalama.
 
-##### Vigezo vya chini
+##### Mahitaji ya chini {#ethereum-on-a-single-board-computer}
 
-- CPU yenye angalau cores 2 na zaidi
-- RAM yenye GB 8
-- SSD yenye 2TB
-- Kipimo data cha angalau 10 MBit/s
+- CPU yenye core 2+
+- RAM ya GB 8
+- SSD ya TB 2
+- Kipimo data cha MBit/s 10+
 
-##### Maelezo yaliyopendekezwa
+##### Vipimo vilivyopendekezwa {#spinning-up-node}
 
-- CPU ya haraka yenye angalau core 4 na zaidi
-- RAM yenye GB 16 na zaidi
-- SSD ya haraka yenye 2 TB na zaidi
-- Kipimo data cha 25+ MBit/s
+- CPU ya haraka yenye core 4+
+- RAM ya GB 16+
+- SSD ya haraka yenye TB 2+
+- Kipimo data cha MBit/s 25+
 
-Hali ya usawazishaji na mteja utakayochagua itaathiri mahitaji ya nafasi, lakini tumekadiria nafasi ya diski utakayohitaji kwa kila mteja hapa chini.
+Hali ya usawazishaji na mteja unayemchagua itaathiri mahitaji ya nafasi, lakini tumekadiria nafasi ya diski utakayohitaji kwa kila mteja hapa chini.
 
-| Mteja      | Ukubwa wa diski (usawazishaji wa haraka) | Ukubwa wa diski (kumbukumbu kamili) |
-| ---------- | ----------------------------------------------------------- | ------------------------------------------------------ |
-| Besu       | 800GB+                                                      | 12TB+                                                  |
-| Erigon     | N/A                                                         | 2.5TB+                                 |
-| Geth       | 500GB+                                                      | 12TB+                                                  |
-| Nethermind | 500GB+                                                      | 12TB+                                                  |
-| Reth       | N/A                                                         | 2.2TB+                                 |
+| Mteja      | Ukubwa wa diski (usawazishaji wa snap) | Ukubwa wa diski (kumbukumbu kamili) |
+| ---------- | -------------------------------------- | ----------------------------------- |
+| Besu       | 800GB+                                 | 12TB+                               |
+| Erigon     | N/A                                    | 2.5TB+                              |
+| Geth       | 500GB+                                 | 12TB+                               |
+| Nethermind | 500GB+                                 | 12TB+                               |
+| Reth       | N/A                                    | 2.2TB+                              |
 
-- Kumbuka: Erigon na Reth hawatoi usawazishaji wa haraka, lakini Full Prunning inawezekana (\~2TB kwa Erigon, ~1.2TB kwa Reth)
+- Kumbuka: Erigon na Reth hazitoi usawazishaji wa snap, lakini Upunguzaji Kamili unawezekana (~2TB kwa Erigon, ~1.2TB kwa Reth)
 
-Kwa wateja wa makubaliano, hitaji la nafasi pia linategemea utekelezaji wa mteja na vipengele vilivyowezeshwa (k.m., kikataji cha mthibitishaji) lakini kwa ujumla hesabia GB 200 nyingine inayohitajika kwa data ya beacon. Kwa namba kubwa ya wahalalishaji, kipimo data kinakuwa kikubwa pia. Unaweza kupata [maelezo kuhusu mahitaji ya mteja wa makubaliano katika uchambuzi huu](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Kwa wateja wa mwafaka, hitaji la nafasi pia linategemea utekelezaji wa mteja na vipengele vilivyowezeshwa (k.m., mkataji wa mthibitishaji) lakini kwa ujumla hesabu na GB 200 nyingine zinazohitajika kwa data ya kinara. Pamoja na idadi kubwa ya wathibitishaji, mzigo wa kipimo data unakua pia. Unaweza kupata [maelezo kuhusu mahitaji ya mteja wa mwafaka katika uchambuzi huu](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
-#### Suluhisho za chomeka-na-cheza {#plug-and-play}
+#### Suluhu za chomeka-na-cheza {#automatized-setup}
 
-Chaguo rahisi la kuendesha nodi kwa vifaa vyako binafsi ni kutumia masanduku ya plug-and-play. Mashine zilizosanifiwa tayari kutoka kwa wauzaji hutoa uzoefu rahisi zaidi: oda, unganisha, endesha. Kila kitu kimesanifiwa tayari na kinaendeshwa kiotomatiki kwa kutumia mwongozo wa kirahisi na dashibodi ya kufuatilia na kudhibiti programu.
+Chaguo rahisi zaidi la kuendesha nodi na vifaa vyako mwenyewe ni kutumia masanduku ya chomeka-na-cheza. Mashine zilizosanidiwa mapema kutoka kwa wachuuzi hutoa uzoefu wa moja kwa moja: agiza, unganisha, endesha. Kila kitu kimesanidiwa mapema na kinafanya kazi kiotomatiki na mwongozo angavu na dashibodi ya kufuatilia na kudhibiti programu.
 
-- [DappNode](https://dappnode.io/)
+- [DAppNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### Ethereum kwenye kompyuta ya bodi moja {#ethereum-on-a-single-board-computer}
+#### Ethereum kwenye kompyuta ya bodi moja {#manual-setup}
 
-Njia rahisi na ya bei nafuu ya kuendesha nodi ya Ethereum ni kutumia kompyuta yenye bodi moja, hata yenye usanifu wa ARM kama Raspberry Pi. [Ethereum kwenye ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) hutoa picha rahisi kuendesha za wateja wengi wa utekelezaji na makubaliano kwa ajili ya Raspberry Pi na bodi zingine za ARM.
+Njia rahisi na ya bei nafuu ya kuendesha nodi ya Ethereum ni kutumia kompyuta ya bodi moja, hata yenye usanifu wa ARM kama Raspberry Pi. [Ethereum kwenye ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) hutoa picha zilizo rahisi kuendesha za wateja wengi wa utekelezaji na mwafaka kwa Raspberry Pi na bodi nyingine za ARM.
 
-Vifaa vidogo, vya bei nafuu na vyenye ufanisi kama hivi ni bora kwa kuendesha modi nyumbani lakini kumbuka utendaji wao mdogo.
+Vifaa vidogo, vya bei nafuu na vyenye ufanisi kama hivi ni bora kwa kuendesha nodi nyumbani lakini kumbuka utendaji wao mdogo.
 
-## Kuanzisha nodi {#spinning-up-node}
+## Kuanzisha nodi {#getting-the-client}
 
-Usanidi halisi wa mteja unaweza kufanywa ama kwa kutumia zana za kuanzisha kiotomatiki au kwa mikono, ukisanidi programu ya mteja moja kwa moja.
+Usanidi halisi wa mteja unaweza kufanywa ama kwa vizindua vya kiotomatiki au kwa mikono, kusanidi programu ya mteja moja kwa moja.
 
-Kwa watumiaji wasio wa kitaalamu sana, njia inayopendekezwa ni kutumia kizindua, programu inayokuongoza kwenye usanikishaji na kuotomatisha mchakato wa usanidi wa mteja. Hata hivyo, kama una uzoefu wowote wa kutumia terminal, hatua za usanidi kwa mikono zinapaswa kuwa rahisi kufuatwa.
+Kwa watumiaji wasio na uzoefu sana, mbinu inayopendekezwa ni kutumia kizindua, programu inayokuongoza kupitia usakinishaji na kufanya mchakato wa usanidi wa mteja kiotomatiki. Hata hivyo, ikiwa una uzoefu fulani wa kutumia terminali, hatua za usanidi wa mikono zinapaswa kuwa rahisi kufuata.
 
-### Usanidi wa kuongozwa {#automatized-setup}
+### Usanidi unaoongozwa {#client-setup}
 
-Miradi mbalimbali rahisi kwa watumiaji inalenga kuboresha uzoefu wa kuanzisha mteja. Zana hizi za kuanzisha zinatoa usakinishaji na usanidi wa mteja kiotomatiki, na baadhi hata hutoa kiolesura cha picha kwa ajili ya usanidi uliopangwa na ufuatiliaji wa wateja.
+Miradi mingi inayofaa kwa watumiaji inalenga kuboresha uzoefu wa kusanidi mteja. Vizindua hivi hutoa usakinishaji na usanidi wa mteja kiotomatiki, huku vingine hata vikitoa kiolesura cha picha kwa usanidi unaoongozwa na ufuatiliaji wa wateja.
 
-Hapa chini kuna miradi michache inayoweza kukusaidia kusakinisha na kudhibiti wateja kwa mibofyo michache:
+Hapa chini kuna miradi michache inayoweza kukusaidia kusakinisha na kudhibiti wateja kwa kubofya mara chache tu:
 
-- [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode haiji tu na mashine kutoka kwa mchuuzi. Programu, kizindua halisi cha nodi na kituo cha kudhibiti chenye vipengele vingi inaweza kutumika kwenye vifaa vyovyote.
-- [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - Njia ya haraka na rahisi zaidi ya kusanidi nodi kamili. Zana ya usanidi kwa mstari mmoja na TUI ya usimamizi wa nodi. Huru. Chanzo cha wazi. Bidhaa za umma za Ethereum zinazotolewa na wadau binafsi. Inasaidia ARM64 na AMD64.
-- [eth-docker](https://eth-docker.net/) - Usanidi wa kiotomatiki unaotumia Docker unaolenga kusimamisha kwa urahisi na usalama, unahitaji maarifa ya msingi ya terminal na Docker, unapendekezwa kwa watumiaji walio na uzoefu zaidi.
-- [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) - Kizinduzi cha kusakinisha wateja kwenye seva ya mbali kupitia muunganisho wa SSH na mwongozo wa usanidi wa GUI, kituo cha udhibiti, na vipengele vingine vingi.
-- [NiceNode](https://www.nicenode.xyz/) - Kizinduzi chenye uzoefu rahisi wa mtumiaji ili kuendesha nodi kwenye kompyuta yako. Chagua tu wateja na uwanzishe kwa kubofya mara chache. Bado inaendelezwa.
-- [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Zana ya usanidi wa nodi inayotengeneza kiotomatiki usanidi wa Docker kwa kutumia kichawi cha CLI. Imeandikwa kwa Go na Nethermind.
+- [DAppNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DAppNode haiji tu na mashine kutoka kwa mchuuzi. Programu, kizindua halisi cha nodi na kituo cha udhibiti chenye vipengele vingi vinaweza kutumika kwenye vifaa vyovyote.
+- [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - Njia ya haraka na rahisi zaidi ya kusanidi nodi kamili. Zana ya usanidi ya mstari mmoja na TUI ya usimamizi wa nodi. Bure. Chanzo wazi. Bidhaa za umma kwa Ethereum na waweka dhamana wa kujitegemea. Usaidizi wa ARM64 na AMD64.
+- [eth-docker](https://eth-docker.net/) - Usanidi wa kiotomatiki kwa kutumia Docker unaolenga uwekaji dhamana rahisi na salama, unahitaji ujuzi wa kimsingi wa terminali na Docker, unapendekezwa kwa watumiaji wa hali ya juu kidogo.
+- [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) - Kizindua cha kusakinisha wateja kwenye seva ya mbali kupitia muunganisho wa SSH na mwongozo wa usanidi wa GUI, kituo cha udhibiti, na vipengele vingine vingi.
+- [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Zana ya usanidi wa nodi ambayo inazalisha kiotomatiki usanidi wa Docker kwa kutumia mchawi wa CLI. Imeandikwa katika Go na Nethermind.
+- [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - Web UI na CLI kwa ajili ya kusambaza wateja wa utekelezaji na mwafaka kwenye Kubernetes. Bootstrap ya Snapshot na ufuatiliaji uliojengewa ndani umejumuishwa. Bure. Hakuna akaunti ya Chainstack inayohitajika. Imejengwa na Chainstack.
 
-### Usanidi wa wateja kwa mikono {#manual-setup}
+### Usanidi wa wateja kwa mikono {#starting-the-execution-client}
 
-Chaguo jingine ni kupakua, kuthibitisha, na kusanidi programu ya mteja kwa mikono. Hata kama baadhi ya wateja wanatoa kiolesura cha picha, usanidi wa mikono bado unahitaji ujuzi wa msingi na terminal lakini unatoa wepesi mwingi zaidi.
+Chaguo jingine ni kupakua, kuthibitisha, na kusanidi programu ya mteja kwa mikono. Hata kama baadhi ya wateja wanatoa kiolesura cha picha, usanidi wa mikono bado unahitaji ujuzi wa kimsingi na terminali lakini unatoa uwezo mwingi zaidi.
 
-Kama ilivyoelezwa hapo awali, kusanidi nodi yako ya Ethereum kutahitaji kuendesha jozi ya wateja wa makubaliano na wateja wa utekelezaji. Baadhi ya wateja wanaweza kujumuisha mteja mwepesi wa aina nyingine na kusawazisha bila kuhitaji programu nyingine yoyote. Hata hivyo, uthibitisho kamili usio na uaminifu unahitaji utekelezaji wote miwili.
+Kama ilivyoelezwa hapo awali, kusanidi nodi yako mwenyewe ya Ethereum kutahitaji kuendesha jozi ya wateja wa mwafaka na utekelezaji. Baadhi ya wateja wanaweza kujumuisha kiteja chepesi cha aina nyingine na kusawazisha bila programu nyingine yoyote inayohitajika. Hata hivyo, uthibitishaji kamili bila hitaji la uaminifu unahitaji utekelezaji wote wawili.
 
-#### Kupata programu ya mteja {#getting-the-client}
+#### Kupata programu ya mteja {#running-an-execution-client}
 
-Kwanza, unahitaji kupata programu unayopendelea ya [mteja wa utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) na [mteja wa makubaliano](/developers/docs/nodes-and-clients/#consensus-clients).
+Kwanza, unahitaji kupata programu yako unayopendelea ya [kiteja cha utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) na [mteja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients).
 
-Unaweza kupakua tu programu inayoweza kuendeshwa au kifurushi cha usakinishaji kinachofaa mfumo wako wa uendeshaji na usanifu. Thibitisha saini na jumla ya ukaguzi ya vifurushi vilivyopakuliwa kila wakati. Baadhi ya wateja pia hutoa hazina au picha za Docker kwa usakinishaji na masasisho rahisi. Wateja wote ni chanzo-wazi, kwa hivyo unaweza pia kuwajenga kutoka kwa chanzo. Hii ni njia ya hali ya juu zaidi, lakini katika hali zingine, inaweza kuhitajika.
+Unaweza kupakua tu programu inayoweza kutekelezwa au kifurushi cha usakinishaji kinachofaa mfumo wako wa uendeshaji na usanifu. Kila mara thibitisha sahihi na checksums za vifurushi vilivyopakuliwa. Baadhi ya wateja pia hutoa hazina au picha za Docker kwa usakinishaji na masasisho rahisi zaidi. Wateja wote ni chanzo wazi, kwa hivyo unaweza pia kuwajenga kutoka kwa chanzo. Hii ni njia ya juu zaidi, lakini katika baadhi ya matukio, inaweza kuhitajika.
 
-Maagizo ya kusakinisha kila mteja yametolewa katika nyaraka zilizounganishwa kwenye orodha za wateja hapo juu.
+Maagizo ya kusakinisha kila mteja yametolewa katika nyaraka zilizounganishwa katika orodha za wateja hapo juu.
 
-Hizi ni kurasa za matoleo ya wateja ambapo unaweza kupata faili zao za binary zilizojengwa awali au maagizo ya usakinishaji:
+Hapa kuna kurasa za matoleo ya wateja ambapo unaweza kupata binaries zao zilizojengwa mapema au maagizo juu ya usakinishaji:
 
-##### Programu za utelekezji
+##### Wateja wa utekelezaji {#starting-the-consensus-client}
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
-- [Geth](https://geth.ethereum.org/downloads/)
+- [Geth](https://geth.ethereum.org/downloads)
 - [Nethermind](https://downloads.nethermind.io/)
 - [Reth](https://reth.rs/installation/installation.html)
 
-Inafaa pia kuzingatia kuwa utofauti wa wateja ni [suala kwenye safu ya utekelezaji](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Inapendekezwa wasomaji wafikirie kuendesha mteja wa utekelezaji wa wachache.
+Inafaa pia kuzingatia kwamba anuwai ya wateja ni [suala kwenye tabaka la utekelezaji](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Inapendekezwa kwamba wasomaji wafikirie kuendesha kiteja cha utekelezaji cha wachache.
 
-##### Programu ya makubaliano
+##### Wateja wa mwafaka {#running-a-consensus-client}
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Haitoi faili ya binary iliyojengwa awali, bali picha ya Docker tu au ya kujengwa kutoka kwa chanzo)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Haitoi binary iliyojengwa mapema, picha ya Docker pekee au kujengwa kutoka kwa chanzo)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-[Utofauti wa wateja](/developers/docs/nodes-and-clients/client-diversity/) ni muhimu kwa nodi za makubaliano zinazoendesha wathibitishaji. Ikiwa wathibitishaji wengi wanaendesha utekelezaji wa mteja mmoja, usalama wa mtandao uko hatarini. Kwa hivyo inapendekezwa kufikiria kuchagua mteja wa wachache.
+[Anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity/) ni muhimu kwa nodi za mwafaka zinazoendesha wathibitishaji. Ikiwa wengi wa wathibitishaji wanaendesha utekelezaji wa mteja mmoja, usalama wa mtandao uko hatarini. Kwa hivyo inapendekezwa kufikiria kuchagua mteja wa wachache.
 
-[Angalia matumizi ya hivi karibuni ya wateja wa mtandao](https://clientdiversity.org/) na jifunze zaidi kuhusu [utofauti wa wateja](/developers/docs/nodes-and-clients/client-diversity).
+[Angalia matumizi ya hivi punde ya mteja wa mtandao](https://clientdiversity.org/) na ujifunze zaidi kuhusu [anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Kuthibitisha programu
+##### Kuthibitisha programu {#adding-validators}
 
-Unapopakua programu kutoka kwenye intaneti, inapendekezwa kuthibitisha uadilifu wake. Hatua hii ni ya hiari lakini hasa kwa sehemu muhimu ya miundombinu kama mteja wa Ethereum, ni muhimu kufahamu vekta za mashambulizi zinazowezekana na kuziepuka. Ikiwa umepakua faili ya binary iliyojengwa awali, unahitaji kuiamini na kuhatarisha kwamba mshambuliaji anaweza kubadilisha faili inayoweza kuendeshwa na moja hasidi.
+Unapopakua programu kutoka kwenye intaneti, inapendekezwa kuthibitisha uadilifu wake. Hatua hii ni ya hiari lakini hasa kwa kipande muhimu cha miundombinu kama mteja wa Ethereum, ni muhimu kufahamu vekta zinazoweza kushambulia na kuziepuka. Ikiwa ulipakua binary iliyojengwa mapema, unahitaji kuiamini na kuhatarisha kwamba mshambuliaji anaweza kubadilisha inayoweza kutekelezwa kwa mbaya.
 
-Wasanidi programu hutia saini faili za binary zilizotolewa kwa funguo zao za PGP ili uweze kuthibitisha kwa njia ya kriptografia kuwa unaendesha hasa programu waliyoiunda. Unahitaji tu kupata funguo za umma zinazotumiwa na wasanidi programu, ambazo zinaweza kupatikana kwenye kurasa za matoleo ya mteja au kwenye nyaraka. Baada ya kupakua toleo la mteja na saini yake, unaweza kutumia utekelezaji wa PGP, k.m., [GnuPG](https://gnupg.org/download/index.html) ili kuzithibitisha kwa urahisi. Angalia mafunzo ya jinsi ya kuthibitisha programu chanzo-wazi kwa kutumia `gpg` kwenye [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) au [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
+Wasanidi programu hutia saini binaries zilizotolewa na funguo zao za PGP ili uweze kuthibitisha kwa njia ya kriptografia kuwa unaendesha programu haswa waliyounda. Unahitaji tu kupata funguo za umma zinazotumiwa na wasanidi programu, ambazo zinaweza kupatikana kwenye kurasa za matoleo ya mteja au katika nyaraka. Baada ya kupakua toleo la mteja na sahihi yake, unaweza kutumia utekelezaji wa PGP, k.m., [GnuPG](https://gnupg.org/download/index.html) ili kuzithibitisha kwa urahisi. Angalia mafunzo kuhusu kuthibitisha programu huria kwa kutumia `gpg` kwenye [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) au [Windows/macOS](https://freedom.press/training/verifying-open-source-software/).
 
-Aina nyingine ya uthibitisho ni kuhakikisha kuwa hashi, alama ya kipekee ya kriptografia, ya programu uliyoipakua inalingana na ile iliyotolewa na wasanidi programu. Hii ni rahisi zaidi kuliko kutumia PGP, na baadhi ya wateja hutoa chaguo hili pekee. Endesha tu chaguo la kukokotoa la hashi kwenye programu iliyopakuliwa na uilinganishe na ile kutoka kwa ukurasa wa toleo. Kwa mfano:
+Njia nyingine ya uthibitishaji ni kuhakikisha kwamba heshi, alama ya kipekee ya kriptografia, ya programu uliyopakua inalingana na ile iliyotolewa na wasanidi programu. Hii ni rahisi zaidi kuliko kutumia PGP, na baadhi ya wateja hutoa chaguo hili pekee. Endesha tu kazi ya heshi kwenye programu iliyopakuliwa na uilinganishe na ile kutoka kwenye ukurasa wa toleo. Kwa mfano:
 
 ```sh
 sha256sum teku-22.6.1.tar.gz
@@ -187,60 +187,60 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Usanidi wa mteja {#client-setup}
+#### Usanidi wa mteja {#using-the-node}
 
-Baada ya kusakinisha, kupakua, au kukusanya programu ya mteja, uko tayari kuiendesha. Hii inamaanisha tu kwamba inapaswa kutekelezwa na usanidi unaofaa. Wateja hutoa chaguo nyingi za usanidi, ambazo zinaweza kuwezesha vipengele mbalimbali.
+Baada ya kusakinisha, kupakua, au kukusanya programu ya mteja, uko tayari kuiendesha. Hii inamaanisha tu inapaswa kutekelezwa na usanidi sahihi. Wateja hutoa chaguo tajiri za usanidi, ambazo zinaweza kuwezesha vipengele mbalimbali.
 
-Tuanze na chaguo ambazo zinaweza kuathiri sana utendaji wa mteja na matumizi ya data. [Njia za usawazishaji](/developers/docs/nodes-and-clients/#sync-modes) zinawakilisha mbinu tofauti za kupakua na kuthibitisha data ya mnyororo wa bloku. Kabla ya kuanzisha nodi, unapaswa kuamua ni mtandao gani na njia gani ya kusawazisha utumie. Mambo muhimu zaidi ya kuzingatia ni nafasi ya diski, na muda wa kusawazisha ambao mteja atahitaji. Zingatia nyaraka za mteja ili kubaini ni njia gani ya kusawazisha ndiyo chaguo-msingi. Ikiwa hiyo haikufai, chagua nyingine kulingana na kiwango cha usalama, data inayopatikana, na gharama. Mbali na algoriti ya usawazishaji, unaweza pia kuweka upunguzaji wa aina tofauti za data ya zamani. Upunguzaji huwezesha kufuta data iliyopitwa na wakati, yaani, kuondoa nodi za state trie ambazo hazifikiwi kutoka kwa bloku za hivi karibuni.
+Hebu tuanze na chaguo zinazoweza kuathiri kwa kiasi kikubwa utendaji wa mteja na matumizi ya data. [Njia za usawazishaji](/developers/docs/nodes-and-clients/#sync-modes) zinawakilisha mbinu tofauti za kupakua na kuthibitisha data ya mnyororo wa vitalu. Kabla ya kuanzisha nodi, unapaswa kuamua ni mtandao gani na hali gani ya usawazishaji ya kutumia. Mambo muhimu zaidi ya kuzingatia ni nafasi ya diski, na muda wa usawazishaji ambao mteja atahitaji. Zingatia nyaraka za mteja ili kubaini ni hali gani ya usawazishaji iliyo chaguo-msingi. Ikiwa hiyo haikufai, chagua nyingine kulingana na kiwango cha usalama, data inayopatikana, na gharama. Mbali na algoriti ya usawazishaji, unaweza pia kuweka upunguzaji wa aina tofauti za data ya zamani. Upunguzaji huwezesha kufuta data iliyopitwa na wakati, yaani, kuondoa nodi za trie ya hali ambazo hazifikiki kutoka kwa vitalu vya hivi karibuni.
 
-Chaguo zingine za msingi za usanidi ni, k.m., kuchagua mtandao - Mtandao Mkuu au testnet, kuwezesha sehemu ya mwisho ya HTTP kwa RPC au WebSockets, n.k. Unaweza kupata vipengele na chaguo zote katika nyaraka za mteja. Usanidi mbalimbali wa mteja unaweza kuwekwa kwa kutekeleza mteja na bendera zinazolingana moja kwa moja kwenye CLI au faili ya usanidi. Kila mteja ni tofauti kidogo; tafadhali rejelea daima nyaraka zake rasmi au ukurasa wa usaidizi kwa maelezo juu ya chaguo za usanidi.
+Chaguo zingine za msingi za usanidi ni, k.m., kuchagua mtandao - Mtandao Mkuu au mitandao ya majaribio, kuwezesha mwisho wa HTTP kwa RPC au WebSockets, n.k. Unaweza kupata vipengele na chaguo zote katika nyaraka za mteja. Mipangilio mbalimbali ya mteja inaweza kuwekwa kwa kutekeleza mteja na bendera zinazolingana moja kwa moja kwenye CLI au faili ya usanidi. Kila mteja ni tofauti kidogo; tafadhali kila mara rejelea nyaraka zake rasmi au ukurasa wa usaidizi kwa maelezo kuhusu chaguo za usanidi.
 
-Kwa madhumuni ya majaribio, unaweza kupendelea kuendesha mteja kwenye mojawapo ya mitandao ya testnet. [Angalia muhtasari wa mitandao inayotumika](/developers/docs/nodes-and-clients/#execution-clients).
+Kwa madhumuni ya majaribio, unaweza kupendelea kuendesha mteja kwenye mojawapo ya mitandao ya majaribio. [Angalia muhtasari wa mitandao inayoungwa mkono](/developers/docs/nodes-and-clients/#execution-clients).
 
 Mifano ya kuendesha wateja wa utekelezaji na usanidi wa msingi inaweza kupatikana katika sehemu inayofuata.
 
-#### Kuanzisha mteja wa utekelezaji {#starting-the-execution-client}
+#### Kuanzisha kiteja cha utekelezaji {#reaching-rpc}
 
-Kabla ya kuanzisha programu ya mteja wa Ethereum, fanya ukaguzi wa mwisho ili kuhakikisha mazingira yako yako tayari. Kwa mfano, hakikisha:
+Kabla ya kuanzisha programu ya mteja wa Ethereum, fanya ukaguzi wa mwisho kwamba mazingira yako yako tayari. Kwa mfano, hakikisha:
 
 - Kuna nafasi ya kutosha ya diski ukizingatia mtandao uliochaguliwa na hali ya usawazishaji.
 - Kumbukumbu na CPU hazijasimamishwa na programu zingine.
-- Mfumo wa uendeshaji umesasishwa kwa toleo la hivi karibuni.
-- Mfumo una saa na tarehe sahihi.
-- Router na firewall yako vinakubali miunganisho kwenye bandari za kusikiliza. Kwa chaguo-msingi wateja wa Ethereum hutumia bandari ya msikilizaji (TCP) na bandari ya ugunduzi (UDP), zote mbili kwenye 30303 kwa chaguo-msingi.
+- Mfumo wa uendeshaji umesasishwa hadi toleo la hivi punde.
+- Mfumo una muda na tarehe sahihi.
+- Rota yako na ngome zinakubali miunganisho kwenye bandari za kusikiliza. Kwa chaguo-msingi wateja wa Ethereum hutumia bandari ya msikilizaji (TCP) na bandari ya ugunduzi (UDP), zote kwenye 30303 kwa chaguo-msingi.
 
-Endesha mteja wako kwenye testnet kwanza ili kusaidia kuhakikisha kila kitu kinafanya kazi ipasavyo.
+Endesha mteja wako kwenye mtandao wa majaribio kwanza ili kusaidia kuhakikisha kila kitu kinafanya kazi kwa usahihi.
 
-Unahitaji kutangaza mipangilio yoyote ya mteja ambayo si chaguomsingi mwanzoni. Unaweza kutumia bendera au faili ya usanidi kutangaza usanidi unaopendelea. Seti ya vipengele na sintaksia ya usanidi ya kila mteja hutofautiana. Angalia nyaraka za mteja wako kwa maelezo maalum.
+Unahitaji kutangaza mipangilio yoyote ya mteja ambayo si chaguo-msingi mwanzoni. Unaweza kutumia bendera au faili ya usanidi kutangaza usanidi wako unaopendelea. Seti ya vipengele na sintaksia ya usanidi ya kila mteja inatofautiana. Angalia nyaraka za mteja wako kwa maelezo mahususi.
 
-Wateja wa utekelezaji na makubaliano huwasiliana kupitia sehemu ya mwisho iliyothibitishwa iliyoainishwa katika [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine). Ili kuunganisha na mteja wa makubaliano, mteja wa utekelezaji lazima atengeneze [`jwtsecret`](https://jwt.io/) kwenye njia inayojulikana. Kwa sababu za usalama na uthabiti, wateja wanapaswa kufanya kazi kwenye mashine moja, na wateja wote wawili lazima wajue njia hii kwani inatumiwa kuthibitisha muunganisho wa RPC wa ndani kati yao. Mteja wa utekelezaji lazima pia aainishe bandari ya kusikiliza kwa API zilizothibitishwa.
+Wateja wa utekelezaji na mwafaka huwasiliana kupitia mwisho uliothibitishwa uliobainishwa katika [API ya Injini](https://github.com/ethereum/execution-apis/tree/main/src/engine). Ili kuunganisha kwa mteja wa mwafaka, kiteja cha utekelezaji lazima kizalise [`jwtsecret`](https://jwt.io/) kwenye njia inayojulikana. Kwa sababu za usalama na uthabiti, wateja wanapaswa kufanya kazi kwenye mashine moja, na wateja wote wawili lazima wajue njia hii kwani inatumika kuthibitisha muunganisho wa RPC wa ndani kati yao. Kiteja cha utekelezaji lazima pia kifafanue bandari ya kusikiliza kwa API zilizothibitishwa.
 
-Tokeni hii hutolewa kiotomatiki na programu ya mteja, lakini katika hali zingine, unaweza kuhitaji kuifanya mwenyewe. Unaweza kuitengeneza kwa kutumia [OpenSSL](https://www.openssl.org/):
+Tokeni hii inazalishwa kiotomatiki na programu ya mteja, lakini katika baadhi ya matukio, unaweza kuhitaji kuifanya mwenyewe. Unaweza kuizalisha kwa kutumia [OpenSSL](https://www.openssl.org/):
 
 ```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Kuendesha mteja wa utekelezaji {#running-an-execution-client}
+#### Kuendesha kiteja cha utekelezaji {#operating-the-node}
 
-Sehemu hii itakuongoza katika kuanzisha wateja wa utekelezaji. Inatumika tu kama mfano wa usanidi wa msingi, ambao utaanzisha mteja na mipangilio hii:
+Sehemu hii itakuongoza kupitia kuanzisha wateja wa utekelezaji. Inatumika tu kama mfano wa usanidi wa msingi, ambao utaanzisha mteja na mipangilio hii:
 
-- Inaainisha mtandao wa kuunganisha, Mtandao Mkuu katika mifano yetu
-  - Badala yake unaweza kuchagua [mojawapo ya testnet](/developers/docs/networks/) kwa majaribio ya awali ya usanidi wako
-- Inafafanua saraka ya data, ambapo data zote zikiwemo za mnyororo wa bloku zitahifadhiwa
-  - Hakikisha unabadilisha njia na moja halisi, k.m., inayoelekeza kwenye hifadhi yako ya nje
-- Huwezesha violessura vya mawasiliano na mteja
-  - Ikiwa ni pamoja na JSON-RPC na Engine API kwa mawasiliano na mteja wa makubaliano
+- Inabainisha mtandao wa kuunganisha, Mtandao Mkuu katika mifano yetu
+  - Unaweza badala yake kuchagua [mojawapo ya mitandao ya majaribio](/developers/docs/networks/) kwa majaribio ya awali ya usanidi wako
+- Inafafanua saraka ya data, ambapo data yote ikiwa ni pamoja na mnyororo wa vitalu itahifadhiwa
+  - Hakikisha unabadilisha njia na ile halisi, k.m., inayoelekeza kwenye hifadhi yako ya nje
+- Inawezesha violesura vya kuwasiliana na mteja
+  - Ikiwa ni pamoja na JSON-RPC na API ya Injini kwa mawasiliano na mteja wa mwafaka
 - Inafafanua njia ya `jwtsecret` kwa API iliyothibitishwa
-  - Hakikisha unabadilisha njia ya mfano na moja halisi inayoweza kufikiwa na wateja, k.m., `/tmp/jwtsecret`
+  - Hakikisha unabadilisha njia ya mfano na ile halisi inayoweza kufikiwa na wateja, k.m., `/tmp/jwtsecret`
 
-Tafadhali kumbuka kuwa huu ni mfano wa msingi tu, mipangilio mingine yote itawekwa kwa chaguomsingi. Zingatia nyaraka za kila mteja ili kujifunza kuhusu maadili chaguomsingi, mipangilio, na vipengele. Kwa vipengele zaidi, kwa mfano kwa kuendesha wathibitishaji, ufuatiliaji, n.k., tafadhali rejelea nyaraka za mteja mahususi.
+Tafadhali kumbuka kuwa huu ni mfano wa msingi tu, mipangilio mingine yote itawekwa kwa chaguo-msingi. Zingatia nyaraka za kila mteja ili kujifunza kuhusu thamani za chaguo-msingi, mipangilio, na vipengele. Kwa vipengele zaidi, kwa mfano kwa kuendesha wathibitishaji, ufuatiliaji, n.k., tafadhali rejelea nyaraka za mteja mahususi.
 
-> Kumbuka kuwa backslash `` katika mifano ni kwa madhumuni ya uumbizaji tu; bendera za usanidi zinaweza kufafanuliwa katika mstari mmoja.
+> Kumbuka kwamba mikwaju ya nyuma `\` katika mifano ni kwa madhumuni ya uumbizaji tu; bendera za usanidi zinaweza kufafanuliwa katika mstari mmoja.
 
-##### Inaendesha Besu
+##### Kuendesha Besu {#keeping-node-online}
 
-Mfano huu unaanzisha Besu kwenye Mtandao Mkuu, huhifadhi data ya mnyororo wa bloku katika umbizo la chaguomsingi kwenye `/data/ethereum`, huwezesha JSON-RPC na Engine RPC kwa kuunganisha mteja wa makubaliano. Engine API inathibitishwa na tokeni `jwtsecret` na miito kutoka `localhost` pekee ndiyo inaruhusiwa.
+Mfano huu unaanzisha Besu kwenye Mtandao Mkuu, unahifadhi data ya mnyororo wa vitalu katika umbizo la chaguo-msingi kwenye `/data/ethereum`, unawezesha JSON-RPC na RPC ya Injini kwa kuunganisha mteja wa mwafaka. API ya Injini inathibitishwa na tokeni `jwtsecret` na simu tu kutoka `localhost` zinaruhusiwa.
 
 ```sh
 besu --network=mainnet \
@@ -252,7 +252,7 @@ besu --network=mainnet \
     --engine-jwt-secret=/path/to/jwtsecret
 ```
 
-Besu pia huja na chaguo la kizinduzi ambalo litauliza mfululizo wa maswali na kutengeneza faili ya usanidi. Endesha kizinduzi shirikishi kwa kutumia:
+Besu pia inakuja na chaguo la kizindua ambalo litauliza mfululizo wa maswali na kuzalisha faili ya usanidi. Endesha kizindua shirikishi kwa kutumia:
 
 ```sh
 besu --Xlauncher
@@ -260,9 +260,9 @@ besu --Xlauncher
 
 [Nyaraka za Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) zina chaguo za ziada na maelezo ya usanidi.
 
-##### Inaendesha Erigon
+##### Kuendesha Erigon {#creating-client-services}
 
-Mfano huu unaanzisha Erigon kwenye Mtandao Mkuu, huhifadhi data ya mnyororo wa bloku kwenye `/data/ethereum`, huwezesha JSON-RPC, hufafanua ni nafasi zipi za majina zinaruhusiwa na huwezesha uthibitishaji wa kuunganisha mteja wa makubaliano ambao umefafanuliwa na njia ya `jwtsecret`.
+Mfano huu unaanzisha Erigon kwenye Mtandao Mkuu, unahifadhi data ya mnyororo wa vitalu kwenye `/data/ethereum`, unawezesha JSON-RPC, unafafanua ni nafasi gani za majina zinaruhusiwa na unawezesha uthibitishaji kwa kuunganisha mteja wa mwafaka ambao unafafanuliwa na njia ya `jwtsecret`.
 
 ```sh
 erigon --chain mainnet \
@@ -271,11 +271,11 @@ erigon --chain mainnet \
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
-Kwa chaguomsingi Erigon hufanya usawazishaji kamili na HDD ya 8GB ambayo itasababisha zaidi ya 2TB ya data ya kumbukumbu. Hakikisha `datadir` inaelekeza kwenye diski yenye nafasi ya kutosha au angalia bendera ya `--prune` ambayo inaweza kupunguza aina tofauti za data. Angalia `--help` ya Erigon ili kujifunza zaidi.
+Erigon kwa chaguo-msingi hufanya usawazishaji kamili na HDD ya 8GB ambayo itasababisha zaidi ya 2TB ya data ya kumbukumbu. Hakikisha `datadir` inaelekeza kwenye diski yenye nafasi ya kutosha ya bure au angalia bendera ya `--prune` ambayo inaweza kupunguza aina tofauti za data. Angalia `--help` ya Erigon ili kujifunza zaidi.
 
-##### Inaendesha Geth
+##### Kuendesha Geth {#updating-clients}
 
-Mfano huu unaanzisha Geth kwenye Mtandao Mkuu, huhifadhi data ya mnyororo wa bloku kwenye `/data/ethereum`, huwezesha JSON-RPC na hufafanua ni nafasi zipi za majina zinaruhusiwa. Pia huwezesha uthibitishaji wa kuunganisha mteja wa makubaliano ambao unahitaji njia ya `jwtsecret` na pia chaguo linalofafanua ni miunganisho ipi inaruhusiwa, katika mfano wetu ni kutoka `localhost` pekee.
+Mfano huu unaanzisha Geth kwenye Mtandao Mkuu, unahifadhi data ya mnyororo wa vitalu kwenye `/data/ethereum`, unawezesha JSON-RPC na unafafanua ni nafasi gani za majina zinaruhusiwa. Pia inawezesha uthibitishaji kwa kuunganisha mteja wa mwafaka ambao unahitaji njia ya `jwtsecret` na pia chaguo linalofafanua ni miunganisho gani inaruhusiwa, katika mfano wetu tu kutoka `localhost`.
 
 ```sh
 geth --mainnet \
@@ -286,11 +286,11 @@ geth --mainnet \
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
-Angalia [nyaraka za chaguo zote za usanidi](https://geth.ethereum.org/docs/fundamentals/command-line-options) na ujifunze zaidi kuhusu [kuendesha Geth na mteja wa makubaliano](https://geth.ethereum.org/docs/getting-started/consensus-clients).
+Angalia [nyaraka kwa chaguo zote za usanidi](https://geth.ethereum.org/docs/fundamentals/command-line-options) na ujifunze zaidi kuhusu [kuendesha Geth na mteja wa mwafaka](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Inaendesha Nethermind
+##### Kuendesha Nethermind {#running-additional-services}
 
-Nethermind hutoa [chaguo mbalimbali za usakinishaji](https://docs.nethermind.io/get-started/installing-nethermind). Kifurushi huja na faili mbalimbali za binary, ikiwa ni pamoja na Kizinduzi chenye usanidi wa kuongozwa, ambacho kitakusaidia kuunda usanidi kwa njia shirikishi. Vinginevyo, utapata Runner ambayo ni faili yenyewe inayoweza kuendeshwa na unaweza kuiendesha tu na bendera za usanidi. JSON-RPC huwashwa kwa chaguo-msingi.
+Nethermind inatoa [chaguo mbalimbali za usakinishaji](https://docs.nethermind.io/get-started/installing-nethermind). Kifurushi kinakuja na binaries mbalimbali, ikiwa ni pamoja na Kizindua chenye usanidi unaoongozwa, ambacho kitakusaidia kuunda usanidi kwa mwingiliano. Vinginevyo, unapata Mwendeshaji ambayo ni inayoweza kutekelezwa yenyewe na unaweza kuiendesha tu na bendera za usanidi. JSON-RPC imewezeshwa kwa chaguo-msingi.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -298,13 +298,13 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nyaraka za Nethermind hutoa [mwongozo kamili](https://docs.nethermind.io/get-started/running-node/) juu ya kuendesha Nethermind na mteja wa makubaliano.
+Nyaraka za Nethermind zinatoa [mwongozo kamili](https://docs.nethermind.io/get-started/running-node/) wa kuendesha Nethermind na mteja wa mwafaka.
 
-Mteja wa utekelezaji atanzisha kazi zake za msingi, sehemu za mwisho zilizochaguliwa, na kuanza kutafuta rika. Baada ya kugundua rika kwa mafanikio, mteja huanza usawazishaji. Mteja wa utekelezaji atasubiri muunganisho kutoka kwa mteja wa makubaliano. Data ya sasa ya mnyororo wa bloku itapatikana mara tu mteja atakaposawazishwa kwa mafanikio na hali ya sasa.
+Kiteja cha utekelezaji kitaanzisha kazi zake za msingi, miisho iliyochaguliwa, na kuanza kutafuta rika. Baada ya kugundua rika kwa mafanikio, mteja anaanza usawazishaji. Kiteja cha utekelezaji kitasubiri muunganisho kutoka kwa mteja wa mwafaka. Data ya sasa ya mnyororo wa vitalu itapatikana mara tu mteja atakaposawazishwa kwa mafanikio kwa hali ya sasa.
 
-##### Inaendesha Reth
+##### Kuendesha Reth {#monitoring-the-node}
 
-Mfano huu unaanzisha Reth kwenye Mtandao Mkuu, ukitumia eneo la data la chaguo-msingi. Huwezesha JSON-RPC na uthibitishaji wa Engine RPC kwa kuunganisha mteja wa makubaliano ambao umefafanuliwa na njia ya `jwtsecret`, na miito kutoka `localhost` pekee ndiyo inaruhusiwa.
+Mfano huu unaanzisha Reth kwenye Mtandao Mkuu, kwa kutumia eneo la data la chaguo-msingi. Inawezesha uthibitishaji wa JSON-RPC na RPC ya Injini kwa kuunganisha mteja wa mwafaka ambao unafafanuliwa na njia ya `jwtsecret`, na simu tu kutoka `localhost` zinaruhusiwa.
 
 ```sh
 reth node \
@@ -315,21 +315,21 @@ reth node \
 
 Angalia [Kusanidi Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) ili kujifunza zaidi kuhusu saraka za data za chaguo-msingi. [Nyaraka za Reth](https://reth.rs/run/mainnet.html) zina chaguo za ziada na maelezo ya usanidi.
 
-#### Kuanzisha mteja wa makubaliano {#starting-the-consensus-client}
+#### Kuanzisha mteja wa mwafaka {#further-reading}
 
-Mteja wa makubaliano lazima aanzishwe na usanidi sahihi wa bandari ili kuanzisha muunganisho wa RPC wa ndani na mteja wa utekelezaji. Wateja wa makubaliano wanapaswa kuendeshwa na bandari ya mteja wa utekelezaji iliyo wazi kama hoja ya usanidi.
+Mteja wa mwafaka lazima aanzishwe na usanidi sahihi wa bandari ili kuanzisha muunganisho wa RPC wa ndani kwa kiteja cha utekelezaji. Wateja wa mwafaka wanapaswa kuendeshwa na bandari ya kiteja cha utekelezaji iliyofichuliwa kama hoja ya usanidi.
 
-Mteja wa makubaliano pia anahitaji njia ya `jwt-secret` ya mteja wa utekelezaji ili kuthibitisha muunganisho wa RPC kati yao. Sawa na mifano ya utekelezaji hapo juu, kila mteja wa makubaliano ana bendera ya usanidi ambayo inachukua njia ya faili ya tokeni ya jwt kama hoja. Hii lazima iendane na njia ya `jwtsecret` iliyotolewa kwa mteja wa utekelezaji.
+Mteja wa mwafaka pia anahitaji njia ya `jwt-secret` ya kiteja cha utekelezaji ili kuthibitisha muunganisho wa RPC kati yao. Sawa na mifano ya utekelezaji hapo juu, kila mteja wa mwafaka ana bendera ya usanidi ambayo inachukua njia ya faili ya tokeni ya jwt kama hoja. Hii lazima iwe sawa na njia ya `jwtsecret` iliyotolewa kwa kiteja cha utekelezaji.
 
-Ikiwa unapanga kuendesha mthibitishaji, hakikisha unaongeza bendera ya usanidi inayobainisha anwani ya Ethereum ya mpokeaji ada. Hapa ndipo zawadi za ether za mthibitishaji wako zinakusanywa. Kila mteja wa makubaliano ana chaguo, k.m., `--suggested-fee-recipient=0xabcd1`, ambalo huchukua anwani ya Ethereum kama hoja.
+Ikiwa unapanga kuendesha mthibitishaji, hakikisha unaongeza bendera ya usanidi inayobainisha anwani ya Ethereum ya mpokeaji wa ada. Hapa ndipo zawadi za Etha kwa mthibitishaji wako hujilimbikiza. Kila mteja wa mwafaka ana chaguo, k.m., `--suggested-fee-recipient=0xabcd1`, ambalo linachukua anwani ya Ethereum kama hoja.
 
-Unapoanzisha Nodi ya Beacon kwenye testnet, unaweza kuokoa muda mwingi wa kusawazisha kwa kutumia sehemu ya mwisho ya umma kwa [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
+Unapoanzisha Nodi ya Kinara kwenye mtandao wa majaribio, unaweza kuokoa muda mwingi wa kusawazisha kwa kutumia mwisho wa umma kwa [Usawazishaji wa kituo cha ukaguzi](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Kuendesha mteja wa makubaliano {#running-a-consensus-client}
+#### Kuendesha mteja wa mwafaka {#related-topics}
 
-##### Inaendesha Lighthouse
+##### Kuendesha Lighthouse
 
-Kabla ya kuendesha Lighthouse, jifunze zaidi jinsi ya kuisakinisha na kuisanidi katika [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
+Kabla ya kuendesha Lighthouse, jifunze zaidi kuhusu jinsi ya kuisakinisha na kuisanidi katika [Kitabu cha Lighthouse](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```sh
 lighthouse beacon_node \
@@ -340,9 +340,9 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### Inaendesha Lodestar
+##### Kuendesha Lodestar
 
-Sakinisha programu ya Lodestar kwa kuikusanya au kupakua picha ya Docker. Jifunze zaidi katika [nyaraka](https://chainsafe.github.io/lodestar/) na [mwongozo kamili zaidi wa usanidi](https://hackmd.io/@philknows/rk5cDvKmK).
+Sakinisha programu ya Lodestar kwa kuikusanya au kupakua picha ya Docker. Jifunze zaidi katika [nyaraka](https://chainsafe.github.io/lodestar/) na [mwongozo wa usanidi](https://hackmd.io/@philknows/rk5cDvKmK) wa kina zaidi.
 
 ```sh
 lodestar beacon \
@@ -353,10 +353,10 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Inaendesha Nimbus
+##### Kuendesha Nimbus
 
-Nimbus huja na wateja wa makubaliano na wa utekelezaji. Inaweza kuendeshwa kwenye vifaa mbalimbali hata vyenye nguvu ndogo sana ya kompyuta.
-Baada ya [kusakinisha vitegemezi na Nimbus yenyewe](https://nimbus.guide/quick-start.html), unaweza kuendesha mteja wake wa makubaliano:
+Nimbus inakuja na wateja wote wa mwafaka na utekelezaji. Inaweza kuendeshwa kwenye vifaa mbalimbali hata vyenye nguvu ndogo sana ya kompyuta.
+Baada ya [kusakinisha vitegemezi na Nimbus yenyewe](https://nimbus.guide/quick-start.html), unaweza kuendesha mteja wake wa mwafaka:
 
 ```sh
 nimbus_beacon_node \
@@ -366,9 +366,9 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Inaendesha Prysm
+##### Kuendesha Prysm
 
-Prysm huja na hati ambayo inaruhusu usakinishaji rahisi wa kiotomatiki. Maelezo zaidi yanaweza kupatikana katika [nyaraka za Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
+Prysm inakuja na hati ambayo inaruhusu usakinishaji rahisi wa kiotomatiki. Maelezo yanaweza kupatikana katika [nyaraka za Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -378,7 +378,7 @@ Prysm huja na hati ambayo inaruhusu usakinishaji rahisi wa kiotomatiki. Maelezo 
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### Inaendesha Teku
+##### Kuendesha Teku
 
 ```sh
 teku --network mainnet \
@@ -387,98 +387,98 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Wakati mteja wa makubaliano anapounganisha na mteja wa utekelezaji kusoma mkataba wa amana na kutambua wathibitishaji, pia huunganisha na rika zingine za Nodi ya Beacon na kuanza kusawazisha nafasi za makubaliano kutoka mwanzo. Mara Nodi ya Beacon inapofikia epoch ya sasa, API ya Beacon inakuwa tayari kutumika kwa wathibitishaji wako. Jifunze zaidi kuhusu [API za Nodi ya Beacon](https://eth2docs.vercel.app/).
+Wakati mteja wa mwafaka anapounganishwa na kiteja cha utekelezaji ili kusoma mkataba wa amana na kutambua wathibitishaji, pia huunganishwa na rika zingine za Nodi ya Kinara na kuanza kusawazisha nafasi za mwafaka kutoka mwanzo. Mara tu Nodi ya Kinara inapofikia kipindi cha sasa, API ya Kinara inakuwa inatumika kwa wathibitishaji wako. Jifunze zaidi kuhusu [API za Nodi ya Kinara](https://eth2docs.vercel.app/).
 
-### Kuongeza Wathibitishaji {#adding-validators}
+### Kuongeza Wathibitishaji
 
-Mteja wa makubaliano hutumika kama Nodi ya Beacon kwa wathibitishaji kuunganisha. Kila mteja wa makubaliano ana programu yake ya mthibitishaji iliyoelezwa kwa undani katika nyaraka zake husika.
+Mteja wa mwafaka hutumika kama Nodi ya Kinara kwa wathibitishaji kuunganishwa. Kila mteja wa mwafaka ana programu yake ya mthibitishaji iliyoelezwa kwa kina katika nyaraka zake husika.
 
-Kuendesha mthibitishaji wako mwenyewe kunaruhusu [kusimamisha peke yako](/staking/solo/), njia yenye athari zaidi na isiyo na uaminifu ya kusaidia mtandao wa Ethereum. Hata hivyo, hii inahitaji amana ya ETH 32. Ili kuendesha mthibitishaji kwenye nodi yako mwenyewe kwa kiasi kidogo, bwawa la ugatuzi na waendeshaji wa nodi wasio na ruhusa, kama vile [Rocket Pool](https://rocketpool.net/node-operators), linaweza kukuvutia.
+Kuendesha mthibitishaji wako mwenyewe kunaruhusu [uwekaji dhamana wa kujitegemea](/staking/solo/), mbinu yenye athari zaidi na isiyo na hitaji la uaminifu kusaidia mtandao wa Ethereum. Hata hivyo, hii inahitaji amana ya ETH 32. Ili kuendesha mthibitishaji kwenye nodi yako mwenyewe kwa kiasi kidogo, bwawa lililogatuliwa na waendeshaji wa nodi bila ruhusa, kama vile [Rocket Pool](https://rocketpool.net/node-operators), linaweza kukuvutia.
 
-Njia rahisi zaidi ya kuanza na kusimamisha na uzalishaji wa ufunguo wa mthibitishaji ni kutumia [Jukwaa la Uzinduzi la Kusimamisha la Hoodi Testnet](https://hoodi.launchpad.ethereum.org/), ambalo linakuruhusu kupima usanidi wako kwa [kuendesha nodi kwenye Hoodi](https://notes.ethereum.org/@launchpad/hoodi). Unapokuwa tayari kwa Mtandao Mkuu, unaweza kurudia hatua hizi ukitumia [Jukwaa la Uzinduzi la Kusimamisha la Mtandao Mkuu](https://launchpad.ethereum.org/).
+Njia rahisi zaidi ya kuanza na uwekaji dhamana na uzalishaji wa ufunguo wa mthibitishaji ni kutumia [Kizinduzi cha Uwekezaji Dhamana cha Mtandao wa Majaribio wa Hoodi](https://hoodi.launchpad.ethereum.org/), ambacho kinakuruhusu kujaribu usanidi wako kwa [kuendesha nodi kwenye Hoodi](https://notes.ethereum.org/@launchpad/hoodi). Ukiwa tayari kwa Mtandao Mkuu, unaweza kurudia hatua hizi kwa kutumia [Kizinduzi cha Uwekezaji Dhamana cha Mtandao Mkuu](https://launchpad.ethereum.org/).
 
-Angalia [ukurasa wa kusimamisha](/staking) kwa muhtasari kuhusu chaguo za kusimamisha.
+Angalia [ukurasa wa uwekaji dhamana](/staking) kwa muhtasari kuhusu chaguo za uwekaji dhamana.
 
-### Kutumia nodi {#using-the-node}
+### Kutumia nodi
 
-Wateja wa utekelezaji hutoa [sehemu za mwisho za API za RPC](/developers/docs/apis/json-rpc/) ambazo unaweza kutumia kuwasilisha miamala, kuingiliana na au kupeleka mikataba-erevu kwenye mtandao wa Ethereum kwa njia mbalimbali:
+Wateja wa utekelezaji hutoa [miisho ya API ya RPC](/developers/docs/apis/json-rpc/) ambayo unaweza kutumia kuwasilisha miamala, kuingiliana na au kusambaza mikataba mahiri kwenye mtandao wa Ethereum kwa njia mbalimbali:
 
-- Kuzipiga simu kwa mikono na itifaki inayofaa (k.m., kwa kutumia `curl`)
-- Kuambatanisha koni iliyotolewa (k.m., `geth attach`)
-- Kuzitekeleza katika programu kwa kutumia maktaba za web3, k.m., [web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io/ethers.js/)
+- Kuziita kwa mikono na itifaki inayofaa (k.m., kwa kutumia `curl`)
+- Kuambatisha kiweko kilichotolewa (k.m., `geth attach`)
+- Kuzitekeleza katika programu kwa kutumia maktaba za Web3, k.m., [Web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io/ethers.js/)
 
-Wateja tofauti wana utekelezaji tofauti wa sehemu za mwisho za RPC. Lakini kuna JSON-RPC ya kawaida ambayo unaweza kutumia na kila mteja. Kwa muhtasari [soma nyaraka za JSON-RPC](/developers/docs/apis/json-rpc/). Programu zinazohitaji habari kutoka kwa mtandao wa Ethereum zinaweza kutumia RPC hii. Kwa mfano, mkoba maarufu wa MetaMask unakuwezesha [kuunganisha kwenye sehemu yako ya mwisho ya RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) ambayo ina manufaa makubwa ya faragha na usalama.
+Wateja tofauti wana utekelezaji tofauti wa miisho ya RPC. Lakini kuna JSON-RPC ya kawaida ambayo unaweza kutumia na kila mteja. Kwa muhtasari [soma nyaraka za JSON-RPC](/developers/docs/apis/json-rpc/). Programu zinazohitaji taarifa kutoka kwa mtandao wa Ethereum zinaweza kutumia RPC hii. Kwa mfano, mkoba maarufu wa MetaMask unakuruhusu [kuunganisha kwenye mwisho wako mwenyewe wa RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) ambao una faida kubwa za faragha na usalama.
 
-Wateja wote wa makubaliano huonyesha [API ya Beacon](https://ethereum.github.io/beacon-APIs) ambayo inaweza kutumika kuangalia hali ya mteja wa makubaliano au kupakua bloku na data ya makubaliano kwa kutuma maombi kwa kutumia zana kama vile [Curl](https://curl.se). Taarifa zaidi juu ya hili inaweza kupatikana katika nyaraka za kila mteja wa makubaliano.
+Wateja wote wa mwafaka hufichua [API ya Kinara](https://ethereum.github.io/beacon-APIs) ambayo inaweza kutumika kuangalia hali ya mteja wa mwafaka au kupakua vitalu na data ya mwafaka kwa kutuma maombi kwa kutumia zana kama vile [Curl](https://curl.se). Maelezo zaidi kuhusu hili yanaweza kupatikana katika nyaraka za kila mteja wa mwafaka.
 
-#### Kufikia RPC {#reaching-rpc}
+#### Kufikia RPC
 
-Bandari ya chaguo-msingi ya JSON-RPC ya mteja wa utekelezaji ni `8545` lakini unaweza kurekebisha bandari za sehemu za mwisho za ndani katika usanidi. Kwa chaguomsingi, kiolesura cha RPC kinapatikana tu kwenye localhost ya kompyuta yako. Ili kuifanya ipatikane kwa mbali, unaweza kutaka kuifungua kwa umma kwa kubadilisha anwani kuwa `0.0.0.0`. Hii itafanya ifikiwe kupitia mtandao wa ndani na anwani za IP za umma. Katika hali nyingi utahitaji pia kusanidi usambazaji wa bandari kwenye router yako.
+Bandari ya chaguo-msingi ya JSON-RPC ya kiteja cha utekelezaji ni `8545` lakini unaweza kurekebisha bandari za miisho ya ndani katika usanidi. Kwa chaguo-msingi, kiolesura cha RPC kinafikiwa tu kwenye mwenyeji wa ndani wa kompyuta yako. Ili kuifanya ifikiwe kwa mbali, unaweza kutaka kuifichua kwa umma kwa kubadilisha anwani kuwa `0.0.0.0`. Hii itaifanya ifikiwe kupitia mtandao wa ndani na anwani za IP za umma. Katika hali nyingi utahitaji pia kusanidi usambazaji wa bandari kwenye rota yako.
 
-Fikia kufungua bandari kwa mtandao kwa tahadhari kwani hii itamruhusu mtu yeyote kwenye mtandao kudhibiti nodi yako. Wahusika hasidi wanaweza kufikia nodi yako ili kuharibu mfumo wako au kuiba fedha zako ikiwa unatumia mteja wako kama mkoba.
+Fikia kufichua bandari kwenye intaneti kwa tahadhari kwani hii itamruhusu mtu yeyote kwenye intaneti kudhibiti nodi yako. Watendaji wabaya wanaweza kufikia nodi yako ili kuangusha mfumo wako au kuiba pesa zako ikiwa unatumia mteja wako kama mkoba.
 
-Njia ya kuzunguka hii ni kuzuia mbinu hatari za RPC kurekebishwa. Kwa mfano, na Geth, unaweza kutangaza mbinu zinazoweza kurekebishwa na bendera: `--http.api web3,eth,txpool`.
+Njia ya kuepuka hili ni kuzuia mbinu za RPC zinazoweza kudhuru zisiweze kurekebishwa. Kwa mfano, ukiwa na Geth, unaweza kutangaza mbinu zinazoweza kurekebishwa kwa bendera: `--http.api web3,eth,txpool`.
 
-Ufikiaji wa kiolesura cha RPC unaweza kupanuliwa kupitia ukuzaji wa API za safu ya pembeni au programu za seva za wavuti, kama Nginx, na kuziunganisha na anwani na bandari ya ndani ya mteja wako. Kutumia safu ya kati kunaweza pia kuwapa wasanidi programu uwezo wa kusanidi cheti cha miunganisho salama ya `https` kwenye kiolesura cha RPC.
+Ufikiaji wa kiolesura cha RPC unaweza kupanuliwa kupitia uundaji wa API za tabaka la ukingo au programu za seva ya wavuti, kama Nginx, na kuziunganisha kwenye anwani na bandari ya ndani ya mteja wako. Kutumia tabaka la kati kunaweza pia kuruhusu wasanidi programu uwezo wa kusanidi cheti kwa miunganisho salama ya `https` kwenye kiolesura cha RPC.
 
-Kuanzisha seva ya wavuti, proksi, au API ya nje ya Rest sio njia pekee ya kutoa ufikiaji wa sehemu ya mwisho ya RPC ya nodi yako. Njia nyingine ya kuhifadhi faragha ya kuanzisha sehemu ya mwisho inayopatikana hadharani ni kupangisha nodi kwenye huduma yako mwenyewe ya [Tor](https://www.torproject.org/) onion. Hii itakuwezesha kufikia RPC nje ya mtandao wako wa ndani bila anwani ya IP ya umma tuli au bandari zilizofunguliwa. Hata hivyo, kutumia usanidi huu kunaweza kuruhusu tu sehemu ya mwisho ya RPC kupatikana kupitia mtandao wa Tor ambao hauhimiliwi na programu zote na inaweza kusababisha matatizo ya muunganisho.
+Kusanidi seva ya wavuti, proksi, au Rest API inayoangalia nje sio njia pekee ya kutoa ufikiaji wa mwisho wa RPC wa nodi yako. Njia nyingine ya kuhifadhi faragha ya kusanidi mwisho unaofikiwa na umma ni kupangisha nodi kwenye huduma yako mwenyewe ya kitunguu ya [Tor](https://www.torproject.org/). Hii itakuruhusu kufikia RPC nje ya mtandao wako wa ndani bila anwani ya IP ya umma isiyobadilika au bandari zilizofunguliwa. Hata hivyo, kutumia usanidi huu kunaweza tu kuruhusu mwisho wa RPC kufikiwa kupitia mtandao wa Tor ambao hauungwi mkono na programu zote na unaweza kusababisha matatizo ya muunganisho.
 
-Ili kufanya hivi, unapaswa kuunda [huduma yako ya onion](https://community.torproject.org/onion-services/). Angalia [nyaraka](https://community.torproject.org/onion-services/setup/) juu ya usanidi wa huduma ya onion ili upate yako mwenyewe. Unaweza kuielekeza kwenye seva ya wavuti na proksi kwenye bandari ya RPC au moja kwa moja kwenye RPC.
+Ili kufanya hivi, lazima uunde [huduma yako ya kitunguu](https://community.torproject.org/onion-services/). Angalia [nyaraka](https://community.torproject.org/onion-services/setup/) kuhusu usanidi wa huduma ya kitunguu ili kupangisha yako mwenyewe. Unaweza kuielekeza kwenye seva ya wavuti yenye proksi kwenye bandari ya RPC au moja kwa moja kwenye RPC.
 
-Mwisho, na mojawapo ya njia maarufu zaidi za kutoa ufikiaji wa mitandao ya ndani ni kupitia muunganisho wa VPN. Kulingana na matumizi yako na idadi ya watumiaji wanaohitaji ufikiaji wa nodi yako, muunganisho salama wa VPN unaweza kuwa chaguo. [OpenVPN](https://openvpn.net/) ni SSL VPN yenye vipengele kamili inayotekeleza upanuzi salama wa mtandao wa safu ya OSI 2 au 3 kwa kutumia itifaki ya SSL/TLS ya kiwango cha tasnia, inasaidia mbinu rahisi za uthibitishaji wa mteja kulingana na vyeti, kadi janja, na/au vitambulisho vya jina la mtumiaji/nenosiri, na inaruhusu sera za udhibiti wa ufikiaji maalum za mtumiaji au kikundi kwa kutumia sheria za firewall zinazotumika kwenye kiolesura cha mtandao cha VPN.
+Mwisho, na mojawapo ya njia maarufu zaidi za kutoa ufikiaji wa mitandao ya ndani ni kupitia muunganisho wa VPN. Kulingana na kesi yako ya matumizi na idadi ya watumiaji wanaohitaji ufikiaji wa nodi yako, muunganisho salama wa VPN unaweza kuwa chaguo. [OpenVPN](https://openvpn.net/) ni SSL VPN yenye vipengele kamili ambayo inatekeleza upanuzi wa mtandao salama wa tabaka la 2 au 3 la OSI kwa kutumia itifaki ya kiwango cha sekta ya SSL/TLS, inasaidia mbinu rahisi za uthibitishaji wa mteja kulingana na vyeti, kadi mahiri, na/au vitambulisho vya jina la mtumiaji/nenosiri, na inaruhusu sera za udhibiti wa ufikiaji mahususi kwa mtumiaji au kikundi kwa kutumia sheria za ngome zinazotumika kwenye kiolesura cha mtandaoni cha VPN.
 
-### Kuendesha nodi {#operating-the-node}
+### Kuendesha nodi
 
-Unapaswa kufuatilia nodi yako mara kwa mara ili kuhakikisha inafanya kazi ipasavyo. Unaweza kuhitaji kufanya matengenezo ya mara kwa mara.
+Unapaswa kufuatilia nodi yako mara kwa mara ili kuhakikisha inafanya kazi vizuri. Unaweza kuhitaji kufanya matengenezo ya mara kwa mara.
 
-#### Kuweka nodi mtandaoni {#keeping-node-online}
+#### Kuweka nodi mtandaoni
 
-Nodi yako haihitaji kuwa mtandaoni kila wakati, lakini unapaswa kuiweka mtandaoni iwezekanavyo ili iendelee kusawazisha na mtandao. Unaweza kuizima ili kuiwasha upya, lakini kumbuka kwamba:
+Nodi yako si lazima iwe mtandaoni wakati wote, lakini unapaswa kuiweka mtandaoni kadiri iwezekanavyo ili kuiweka katika usawazishaji na mtandao. Unaweza kuizima ili kuiwasha upya, lakini kumbuka kwamba:
 
 - Kuzima kunaweza kuchukua dakika chache ikiwa hali ya hivi karibuni bado inaandikwa kwenye diski.
-- Kuzima kwa lazima kunaweza kuharibu hifadhidata na kukuhitaji usawazishe upya nodi nzima.
-- Mteja wako atatoka kwenye usawazishaji na mtandao na atahitaji kusawazisha upya unapoiwasha tena. Wakati nodi inaweza kuanza kusawazisha kutoka pale ilipozimwa mara ya mwisho, mchakato unaweza kuchukua muda kulingana na muda ambao imekuwa nje ya mtandao.
+- Kuzima kwa lazima kunaweza kuharibu hifadhidata na kukuhitaji kusawazisha upya nodi nzima.
+- Mteja wako atatoka kwenye usawazishaji na mtandao na atahitaji kusawazisha upya utakapomwasha tena. Ingawa nodi inaweza kuanza kusawazisha kutoka ilipozimwa mara ya mwisho, mchakato unaweza kuchukua muda kulingana na muda ambao imekuwa nje ya mtandao.
 
-_Hii haihusu nodi za wathibitishaji wa safu ya makubaliano._ Kuzima nodi yako kutaathiri huduma zote zinazoitegemea. Ikiwa unaendesha nodi kwa madhumuni ya _kusimamisha_ unapaswa kujaribu kupunguza muda wa kutofanya kazi iwezekanavyo.
+_Hii haitumiki kwenye nodi za mthibitishaji wa tabaka la mwafaka._ Kuondoa nodi yako mtandaoni kutaathiri huduma zote zinazoitegemea. Ikiwa unaendesha nodi kwa madhumuni ya _uwekaji dhamana_ unapaswa kujaribu kupunguza muda wa kupumzika kadiri iwezekanavyo.
 
-#### Kuunda huduma za mteja {#creating-client-services}
+#### Kuunda huduma za mteja
 
-Fikiria kuunda huduma ili kuendesha wateja wako kiotomatiki wakati wa kuanza. Kwa mfano, kwenye seva za Linux, ni vizuri kuunda huduma, k.m., na `systemd`, ambayo inatekeleza mteja na usanidi unaofaa, chini ya mtumiaji mwenye marupurupu machache na kuanza upya kiotomatiki.
+Fikiria kuunda huduma ili kuendesha wateja wako kiotomatiki wakati wa kuanza. Kwa mfano, kwenye seva za Linux, mazoezi mazuri yatakuwa kuunda huduma, k.m., na `systemd`, ambayo inatekeleza mteja na usanidi sahihi, chini ya mtumiaji aliye na mapendeleo machache na kuanza upya kiotomatiki.
 
-#### Kusasisha wateja {#updating-clients}
+#### Kusasisha wateja
 
-Unahitaji kuweka programu yako ya mteja ikiwa imesasishwa na viraka vya hivi karibuni vya usalama, vipengele, na [EIPs](/eips/). Hasa kabla ya [uma ngumu](/ethereum-forks/), hakikisha unaendesha matoleo sahihi ya mteja.
+Unahitaji kusasisha programu yako ya mteja na viraka vya hivi punde vya usalama, vipengele, na [EIPs](/eips/). Hasa kabla ya [migawanyiko migumu](/ethereum-forks/), hakikisha unaendesha matoleo sahihi ya mteja.
 
-> Kabla ya masasisho muhimu ya mtandao, EF huchapisha chapisho kwenye [blogu](https://blog.ethereum.org) yake. Unaweza [kujisajili kwa matangazo haya](https://blog.ethereum.org/category/protocol#subscribe) ili kupata arifa kwenye barua pepe yako wakati nodi yako inahitaji sasisho.
+> Kabla ya masasisho muhimu ya mtandao, EF huchapisha chapisho kwenye [blogu](https://blog.ethereum.org) yake. Unaweza [kujiandikisha kwa matangazo haya](https://blog.ethereum.org/category/protocol#subscribe) ili kupata arifa kwenye barua pepe yako wakati nodi yako inahitaji sasisho.
 
-Kusasisha wateja ni rahisi sana. Kila mteja ana maagizo maalum katika nyaraka zake, lakini mchakato kwa ujumla ni kupakua toleo la hivi karibuni na kuanzisha upya mteja na faili mpya inayoweza kuendeshwa. Mteja anapaswa kuendelea kutoka pale alipoishia, lakini na masasisho yaliyotumika.
+Kusasisha wateja ni rahisi sana. Kila mteja ana maagizo maalum katika nyaraka zao, lakini mchakato kwa ujumla ni kupakua tu toleo la hivi punde na kuanzisha upya mteja na inayoweza kutekelezwa mpya. Mteja anapaswa kuendelea pale alipoishia, lakini na masasisho yaliyotumika.
 
-Kila utekelezaji wa mteja una mfuatano wa toleo unaoweza kusomwa na binadamu unaotumika katika itifaki ya rika-kwa-rika lakini pia unapatikana kutoka kwa mstari wa amri. Mfuatano huu wa toleo unawawezesha watumiaji kuangalia kama wanaendesha toleo sahihi na huruhusu wachunguzi wa bloku na zana zingine za uchanganuzi zinazopenda kupima usambazaji wa wateja maalum kwenye mtandao. Tafadhali rejelea nyaraka za mteja binafsi kwa habari zaidi kuhusu mfuatano wa matoleo.
+Kila utekelezaji wa mteja una mfuatano wa toleo unaosomeka na binadamu unaotumika katika itifaki ya rika-kwa-rika lakini pia unafikiwa kutoka kwa mstari wa amri. Mfuatano huu wa toleo huwaruhusu watumiaji kuangalia kuwa wanaendesha toleo sahihi na huruhusu wavumbuzi wa vitalu na zana zingine za uchanganuzi zinazopenda kukadiria usambazaji wa wateja mahususi kwenye mtandao. Tafadhali rejelea nyaraka za mteja binafsi kwa maelezo zaidi kuhusu mifuatano ya matoleo.
 
-#### Kuendesha huduma za ziada {#running-additional-services}
+#### Kuendesha huduma za ziada
 
-Kuendesha nodi yako mwenyewe kunakuwezesha kutumia huduma zinazohitaji ufikiaji wa moja kwa moja kwenye RPC ya mteja wa Ethereum. Hizi ni huduma zilizojengwa juu ya Ethereum kama [suluhisho za safu ya 2](/developers/docs/scaling/#layer-2-scaling), backend kwa mikoba, wachunguzi wa bloku, zana za wasanidi programu na miundombinu mingine ya Ethereum.
+Kuendesha nodi yako mwenyewe kunakuruhusu kutumia huduma zinazohitaji ufikiaji wa moja kwa moja kwa RPC ya mteja wa Ethereum. Hizi ni huduma zilizojengwa juu ya Ethereum kama [suluhu za tabaka la 2 (l2)](/developers/docs/scaling/#layer-2-scaling), mazingira ya nyuma ya mikoba, wavumbuzi wa vitalu, zana za wasanidi programu na miundombinu mingine ya Ethereum.
 
-#### Kufuatilia nodi {#monitoring-the-node}
+#### Kufuatilia nodi
 
-Ili kufuatilia vizuri nodi yako, fikiria kukusanya vipimo. Wateja hutoa sehemu za mwisho za vipimo ili uweze kupata data kamili kuhusu nodi yako. Tumia zana kama vile [InfluxDB](https://www.influxdata.com/get-influxdb/) au [Prometheus](https://prometheus.io/) kuunda hifadhidata ambazo unaweza kuzigeuza kuwa taswira na chati katika programu kama [Grafana](https://grafana.com/). Kuna usanidi mwingi wa kutumia programu hii na dashibodi tofauti za Grafana kwako kuona nodi yako na mtandao kwa ujumla. Kwa mfano, angalia [mafunzo ya jinsi ya kufuatilia Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
+Ili kufuatilia vizuri nodi yako, fikiria kukusanya vipimo. Wateja hutoa miisho ya vipimo ili uweze kupata data ya kina kuhusu nodi yako. Tumia zana kama [InfluxDB](https://www.influxdata.com/get-influxdb/) au [Prometheus](https://prometheus.io/) kuunda hifadhidata ambazo unaweza kuzigeuza kuwa taswira na chati katika programu kama [Grafana](https://grafana.com/). Kuna mipangilio mingi ya kutumia programu hii na dashibodi tofauti za Grafana ili uweze kuona nodi yako na mtandao kwa ujumla. Kwa mfano, angalia [mafunzo kuhusu kufuatilia Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
-Kama sehemu ya ufuatiliaji wako, hakikisha unaangalia utendaji wa mashine yako. Wakati wa usawazishaji wa awali wa nodi yako, programu ya mteja inaweza kuwa nzito sana kwenye CPU na RAM. Mbali na Grafana, unaweza kutumia zana ambazo OS yako inatoa kama `htop` au `uptime` kufanya hivi.
+Kama sehemu ya ufuatiliaji wako, hakikisha unafuatilia utendaji wa mashine yako. Wakati wa usawazishaji wa awali wa nodi yako, programu ya mteja inaweza kuwa nzito sana kwenye CPU na RAM. Mbali na Grafana, unaweza kutumia zana zinazotolewa na OS yako kama `htop` au `uptime` kufanya hivi.
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi
 
-- [Miongozo ya Kusimamisha ya Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, husasishwa mara kwa mara_
-- [Mwongozo | Jinsi ya kusanidi mthibitishaji kwa ajili ya kusimamisha Ethereum kwenye mtandao mkuu](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, husasishwa mara kwa mara_
-- [Miongozo ya ETHStaker juu ya kuendesha wathibitishaji kwenye testnet](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, husasishwa mara kwa mara_
-- [Sampuli ya programu ya AWS Blockchain Node Runner kwa Nodi za Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, husasishwa mara kwa mara_
-- [Maswali Yanayoulizwa Mara kwa Mara ya Muungano kwa waendeshaji wa nodi](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Julai 2022_
-- [Kuchambua mahitaji ya maunzi ili kuwa nodi kamili iliyothibitishwa ya Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Septemba 2018_
-- [Kuendesha Nodi Kamili za Ethereum: Mwongozo kwa Wenye Ari Kidogo](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Novemba 2019_
+- [Miongozo ya Uwekezaji Dhamana ya Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, inasasishwa mara kwa mara_
+- [Mwongozo | Jinsi ya kusanidi mthibitishaji kwa uwekaji dhamana wa Ethereum kwenye Mtandao Mkuu](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, inasasishwa mara kwa mara_
+- [Miongozo ya EthStaker kuhusu kuendesha wathibitishaji kwenye mitandao ya majaribio](https://github.com/remyroy/ethstaker#guides) – _EthStaker, inasasishwa mara kwa mara_
+- [Sampuli ya programu ya AWS Blockchain Node Runner kwa Nodi za Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, inasasishwa mara kwa mara_
+- [Maswali Yanayoulizwa Mara kwa Mara ya Unganisho kwa waendeshaji wa nodi](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Julai 2022_
+- [Kuchambua mahitaji ya vifaa ili kuwa nodi kamili iliyothibitishwa ya Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Septemba 2018_
+- [Kuendesha Nodi Kamili za Ethereum: Mwongozo kwa Wasio na Motisha Sana](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Novemba 2019_
 - [Kuendesha Nodi ya Hyperledger Besu kwenye Mtandao Mkuu wa Ethereum: Faida, Mahitaji, na Usanidi](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Mei 2020_
-- [Kupeleka Mteja wa Nethermind Ethereum na Mrundikano wa Ufuatiliaji](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 Julai 2020_
+- [Kusambaza Mteja wa Ethereum wa Nethermind na Rafu ya Ufuatiliaji](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 Julai 2020_
 
-## Mada zinazohusiana {#related-topics}
+## Mada zinazohusiana
 
 - [Nodi na wateja](/developers/docs/nodes-and-clients/)
-- [Bloku](/developers/docs/blocks/)
+- [Vitalu](/developers/docs/blocks/)
 - [Mitandao](/developers/docs/networks/)
