@@ -1,0 +1,1171 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-19T23:08:50.310Z",
+  "englishManifestHash": "5a4e2c221430",
+  "placeholderOrder": [
+    "LINK-12c146",
+    "LINK-6705ac",
+    "LINK-0bd3a1",
+    "LINK-8cbda0",
+    "LINK-ed768f",
+    "CODE-b5fa3e",
+    "CODE-098d23",
+    "CODE-e1ab8b",
+    "CODE-937f72",
+    "CODE-bca417",
+    "CODE-bca417",
+    "LINK-4c14fc",
+    "CODE-c26f22",
+    "CODE-b67e38",
+    "CODE-bfa3d0",
+    "CODE-3d8366",
+    "CODE-eaeacd",
+    "CODE-3d8366",
+    "CODE-eaeacd",
+    "LINK-f6ded7",
+    "CODEBLOCK-bfc0fd",
+    "LINK-376ebb",
+    "CODEBLOCK-a7b45a",
+    "CODEBLOCK-e644d9",
+    "CODEBLOCK-d2181c",
+    "LINK-ad2f8e",
+    "CODE-be6206",
+    "CODE-be6206",
+    "CODE-be6206",
+    "CODEBLOCK-3e43ff",
+    "CODEBLOCK-1c8f50",
+    "CODEBLOCK-29cb48",
+    "CODE-14aa76",
+    "CODEBLOCK-f72be2",
+    "CODE-f0a7f9",
+    "LINK-6c15a2",
+    "CODEBLOCK-ccdcff",
+    "CODE-b5fa3e",
+    "CODEBLOCK-8a00f4",
+    "LINK-006bdc",
+    "LINK-fdfef4",
+    "CODE-8824a3",
+    "CODE-8824a3",
+    "CODEBLOCK-5a3795",
+    "CODE-c6515d",
+    "CODEBLOCK-926427",
+    "LINK-e6902d",
+    "LINK-965f3e",
+    "LINK-b34d86",
+    "CODEBLOCK-731965",
+    "LINK-eb748f",
+    "CODEBLOCK-fd8748",
+    "CODEBLOCK-c7d5aa",
+    "CODEBLOCK-67f0a4",
+    "CODE-050f99",
+    "CODEBLOCK-dd5f11",
+    "LINK-3323c9",
+    "CODE-720e74",
+    "CODEBLOCK-1a1e86",
+    "CODE-050f99",
+    "CODEBLOCK-12283e",
+    "CODEBLOCK-160fb8",
+    "LINK-487118",
+    "LINK-065dac",
+    "LINK-d65195",
+    "CODEBLOCK-7d75d3",
+    "CODE-63a1ca",
+    "LINK-5a4f37",
+    "CODEBLOCK-81b9d5",
+    "CODEBLOCK-705844",
+    "LINK-57ab4e",
+    "LINK-06827b",
+    "CODEBLOCK-ba142f",
+    "LINK-6c3853",
+    "CODEBLOCK-12af63",
+    "LINK-124580",
+    "LINK-08759c",
+    "CODEBLOCK-5d351b",
+    "LINK-81b5f8",
+    "CODEBLOCK-cbcdcc",
+    "LINK-acb1ed",
+    "CODE-1b71cf",
+    "CODEBLOCK-2d08af",
+    "LINK-55ac30",
+    "CODEBLOCK-1720b5",
+    "LINK-7d3c8a",
+    "CODE-fcbcf1",
+    "LINK-0ef335",
+    "CODE-02e7c6",
+    "LINK-7ea605",
+    "CODEBLOCK-fede4e",
+    "CODE-02e7c6",
+    "CODE-8e9215",
+    "CODEBLOCK-a0b7e6",
+    "LINK-d42ee5",
+    "CODEBLOCK-c07247",
+    "LINK-b904d4",
+    "LINK-9d788d",
+    "CODE-16208d",
+    "CODEBLOCK-df9617",
+    "LINK-6c7012",
+    "CODE-a68ee4",
+    "LINK-692ad2",
+    "CODE-42a841",
+    "CODE-42a841",
+    "CODE-42a841",
+    "CODE-581842",
+    "CODEBLOCK-a898b0",
+    "LINK-56f0f1",
+    "CODE-3c4623",
+    "CODE-efa1f3",
+    "CODE-3c4623",
+    "CODE-efa1f3",
+    "CODEBLOCK-e5c511",
+    "CODE-470ebe",
+    "LINK-7917d3",
+    "CODE-470ebe",
+    "LINK-304a3c",
+    "CODE-470ebe",
+    "CODEBLOCK-496c8f",
+    "CODEBLOCK-17b9bf",
+    "CODE-56ef8f",
+    "CODEBLOCK-d28521",
+    "CODEBLOCK-0cd398",
+    "CODE-50c3c9",
+    "CODEBLOCK-66a59f",
+    "LINK-86c44b",
+    "LINK-5cad77",
+    "CODE-7c6a95",
+    "CODEBLOCK-3ff42c",
+    "LINK-7c6c3c",
+    "CODE-bca417",
+    "CODE-ef518b",
+    "CODEBLOCK-d40cf7",
+    "CODEBLOCK-643c9a",
+    "CODEBLOCK-95f91a",
+    "CODE-c06731",
+    "CODEBLOCK-08199c",
+    "CODE-50c3c9",
+    "CODE-59114e",
+    "CODEBLOCK-ab1b8d",
+    "CODE-fcd38a",
+    "CODE-c06731",
+    "CODE-b5fa3e",
+    "CODE-098d23",
+    "CODE-bfa3d0",
+    "CODE-fcd38a",
+    "CODEBLOCK-e20fe8",
+    "CODE-a68005",
+    "CODEBLOCK-7eb11d",
+    "LINK-0484b9",
+    "CODEBLOCK-03463a",
+    "CODEBLOCK-1502f8",
+    "CODE-59114e",
+    "CODEBLOCK-079974",
+    "CODEBLOCK-c36308",
+    "CODE-3d8366",
+    "CODEBLOCK-5c7077",
+    "CODE-a68005",
+    "CODEBLOCK-1c7d92",
+    "CODE-606368",
+    "LINK-691b85",
+    "LINK-4b0c31",
+    "CODEBLOCK-240e0c",
+    "LINK-1d3afd",
+    "CODE-dc6f17",
+    "CODE-859fac",
+    "LINK-15d3b7",
+    "CODEBLOCK-5adfac",
+    "LINK-195c69",
+    "LINK-7ddb4f",
+    "CODEBLOCK-c50954",
+    "CODEBLOCK-284d29",
+    "LINK-6c67be",
+    "CODE-ddd6d4",
+    "CODEBLOCK-9f671b",
+    "LINK-ef3e64",
+    "CODEBLOCK-8e76da",
+    "CODEBLOCK-76feee",
+    "CODE-877b68",
+    "CODEBLOCK-5ed67b",
+    "LINK-18b278",
+    "LINK-d4076b",
+    "LINK-3cc838",
+    "CODE-ddd6d4",
+    "CODE-fc03ce",
+    "CODEBLOCK-8a0ff5",
+    "CODE-846706",
+    "CODE-134042",
+    "LINK-d67ed3",
+    "LINK-d0394a",
+    "CODEBLOCK-33e5e4",
+    "LINK-143665",
+    "LINK-b9e436",
+    "LINK-dacde4",
+    "CODEBLOCK-93fcc9",
+    "CODEBLOCK-67c03d",
+    "CODEBLOCK-76c780",
+    "CODE-fcd38a",
+    "CODE-bfa3d0",
+    "CODEBLOCK-9ae7e8",
+    "CODEBLOCK-e9202c",
+    "CODE-cfc9d1",
+    "CODEBLOCK-c61ffa",
+    "CODE-846706",
+    "CODEBLOCK-6bb096",
+    "CODEBLOCK-9271ad",
+    "CODEBLOCK-59324b",
+    "CODEBLOCK-a0abf6",
+    "LINK-4fa6ff",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-bfc0fd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a7b45a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e644d9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d2181c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3e43ff": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1c8f50": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-29cb48": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f72be2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ccdcff": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8a00f4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5a3795": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-926427": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-731965": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fd8748": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c7d5aa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-67f0a4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dd5f11": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1a1e86": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-12283e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-160fb8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7d75d3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-81b9d5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-705844": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ba142f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-12af63": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5d351b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cbcdcc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2d08af": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1720b5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fede4e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a0b7e6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c07247": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-df9617": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a898b0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e5c511": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-496c8f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-17b9bf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d28521": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0cd398": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-66a59f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3ff42c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d40cf7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-643c9a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-95f91a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-08199c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ab1b8d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e20fe8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7eb11d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-03463a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1502f8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-079974": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c36308": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5c7077": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1c7d92": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-240e0c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5adfac": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c50954": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-284d29": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9f671b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8e76da": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-76feee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5ed67b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8a0ff5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-33e5e4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-93fcc9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-67c03d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-76c780": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9ae7e8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e9202c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c61ffa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6bb096": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9271ad": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-59324b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a0abf6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-b5fa3e": {
+      "type": "inline-code",
+      "values": {
+        "content": "depositERC20"
+      }
+    },
+    "CODE-098d23": {
+      "type": "inline-code",
+      "values": {
+        "content": "depositERC20To"
+      }
+    },
+    "CODE-e1ab8b": {
+      "type": "inline-code",
+      "values": {
+        "content": "depositETH"
+      }
+    },
+    "CODE-937f72": {
+      "type": "inline-code",
+      "values": {
+        "content": "depositETHTo"
+      }
+    },
+    "CODE-bca417": {
+      "type": "inline-code",
+      "values": {
+        "content": "finalizeDeposit"
+      }
+    },
+    "CODE-c26f22": {
+      "type": "inline-code",
+      "values": {
+        "content": "withdraw"
+      }
+    },
+    "CODE-b67e38": {
+      "type": "inline-code",
+      "values": {
+        "content": "withdrawTo"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-3d8366": {
+      "type": "inline-code",
+      "values": {
+        "content": "finalizeETHWithdrawal"
+      }
+    },
+    "CODE-eaeacd": {
+      "type": "inline-code",
+      "values": {
+        "content": "finalizeERC20Withdrawal"
+      }
+    },
+    "CODE-be6206": {
+      "type": "inline-code",
+      "values": {
+        "content": "chainId"
+      }
+    },
+    "CODE-14aa76": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x4200000000000000000000000000000000000010"
+      }
+    },
+    "CODE-f0a7f9": {
+      "type": "inline-code",
+      "values": {
+        "content": "_l2Gas"
+      }
+    },
+    "CODE-8824a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "IL1ERC20Bridge"
+      }
+    },
+    "CODE-c6515d": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC20DepositInitiated"
+      }
+    },
+    "CODE-050f99": {
+      "type": "inline-code",
+      "values": {
+        "content": "messenger"
+      }
+    },
+    "CODE-720e74": {
+      "type": "inline-code",
+      "values": {
+        "content": ".xDomainMessageSender()"
+      }
+    },
+    "CODE-63a1ca": {
+      "type": "inline-code",
+      "values": {
+        "content": "getCrossDomainMessenger()"
+      }
+    },
+    "CODE-1b71cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "Lib_PredeployAddresses"
+      }
+    },
+    "CODE-fcbcf1": {
+      "type": "inline-code",
+      "values": {
+        "content": "false"
+      }
+    },
+    "CODE-02e7c6": {
+      "type": "inline-code",
+      "values": {
+        "content": "SafeERC20"
+      }
+    },
+    "CODE-8e9215": {
+      "type": "inline-code",
+      "values": {
+        "content": "IERC20"
+      }
+    },
+    "CODE-16208d": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposit[L1 token addr][L2 token addr]"
+      }
+    },
+    "CODE-a68ee4": {
+      "type": "inline-code",
+      "values": {
+        "content": "Proxy"
+      }
+    },
+    "CODE-42a841": {
+      "type": "inline-code",
+      "values": {
+        "content": "delegatecall"
+      }
+    },
+    "CODE-581842": {
+      "type": "inline-code",
+      "values": {
+        "content": "CrossDomainEnabled"
+      }
+    },
+    "CODE-3c4623": {
+      "type": "inline-code",
+      "values": {
+        "content": "external"
+      }
+    },
+    "CODE-efa1f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "public"
+      }
+    },
+    "CODE-470ebe": {
+      "type": "inline-code",
+      "values": {
+        "content": "initialize"
+      }
+    },
+    "CODE-56ef8f": {
+      "type": "inline-code",
+      "values": {
+        "content": "Address"
+      }
+    },
+    "CODE-50c3c9": {
+      "type": "inline-code",
+      "values": {
+        "content": "_initiateETHDeposit"
+      }
+    },
+    "CODE-7c6a95": {
+      "type": "inline-code",
+      "values": {
+        "content": "abi.encodeWithSelector"
+      }
+    },
+    "CODE-ef518b": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000"
+      }
+    },
+    "CODE-c06731": {
+      "type": "inline-code",
+      "values": {
+        "content": "_initiateERC20Deposit"
+      }
+    },
+    "CODE-59114e": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.value"
+      }
+    },
+    "CODE-fcd38a": {
+      "type": "inline-code",
+      "values": {
+        "content": "_from"
+      }
+    },
+    "CODE-a68005": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposits"
+      }
+    },
+    "CODE-606368": {
+      "type": "inline-code",
+      "values": {
+        "content": "donateETH"
+      }
+    },
+    "CODE-dc6f17": {
+      "type": "inline-code",
+      "values": {
+        "content": "mint"
+      }
+    },
+    "CODE-859fac": {
+      "type": "inline-code",
+      "values": {
+        "content": "burn"
+      }
+    },
+    "CODE-ddd6d4": {
+      "type": "inline-code",
+      "values": {
+        "content": "IL2StandardERC20"
+      }
+    },
+    "CODE-877b68": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC20(_name, _symbol)"
+      }
+    },
+    "CODE-fc03ce": {
+      "type": "inline-code",
+      "values": {
+        "content": "supportsInterface"
+      }
+    },
+    "CODE-846706": {
+      "type": "inline-code",
+      "values": {
+        "content": "_mint"
+      }
+    },
+    "CODE-134042": {
+      "type": "inline-code",
+      "values": {
+        "content": "_burn"
+      }
+    },
+    "CODE-cfc9d1": {
+      "type": "inline-code",
+      "values": {
+        "content": "L1StandardBridge"
+      }
+    },
+    "LINK-12c146": {
+      "type": "link",
+      "values": {
+        "url": "https://www.optimism.io/"
+      }
+    },
+    "LINK-6705ac": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "LINK-0bd3a1": {
+      "type": "link",
+      "values": {
+        "url": "/bridges/#prerequisites"
+      }
+    },
+    "LINK-8cbda0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-ed768f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.optimism.io/app-developers/bridging/standard-bridge"
+      }
+    },
+    "LINK-4c14fc": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-165"
+      }
+    },
+    "LINK-f6ded7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol"
+      }
+    },
+    "LINK-376ebb": {
+      "type": "link",
+      "values": {
+        "url": "https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-"
+      }
+    },
+    "LINK-ad2f8e": {
+      "type": "link",
+      "values": {
+        "url": "https://static.optimism.io/optimism.tokenlist.json"
+      }
+    },
+    "LINK-6c15a2": {
+      "type": "link",
+      "values": {
+        "url": "https://community.optimism.io/docs/developers/bridge/messaging/#for-l1-%E2%87%92-l2-transactions-2"
+      }
+    },
+    "LINK-006bdc": {
+      "type": "link",
+      "values": {
+        "url": "https://community.optimism.io/docs/how-optimism-works/#fault-proofs"
+      }
+    },
+    "LINK-fdfef4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol"
+      }
+    },
+    "LINK-e6902d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol"
+      }
+    },
+    "LINK-965f3e": {
+      "type": "link",
+      "values": {
+        "url": "#the-l1-bridge-contract"
+      }
+    },
+    "LINK-b34d86": {
+      "type": "link",
+      "values": {
+        "url": "#l2-bridge-code"
+      }
+    },
+    "LINK-eb748f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/ICrossDomainMessenger.sol"
+      }
+    },
+    "LINK-3323c9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1CrossDomainMessenger.sol#L122-L128"
+      }
+    },
+    "LINK-487118": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither"
+      }
+    },
+    "LINK-065dac": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3"
+      }
+    },
+    "LINK-d65195": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2"
+      }
+    },
+    "LINK-5a4f37": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol"
+      }
+    },
+    "LINK-57ab4e": {
+      "type": "link",
+      "values": {
+        "url": "#il1erc20bridge"
+      }
+    },
+    "LINK-06827b": {
+      "type": "link",
+      "values": {
+        "url": "#il1standardbridge"
+      }
+    },
+    "LINK-6c3853": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol"
+      }
+    },
+    "LINK-124580": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol"
+      }
+    },
+    "LINK-08759c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code/#the-interface"
+      }
+    },
+    "LINK-81b5f8": {
+      "type": "link",
+      "values": {
+        "url": "#crossdomainenabled"
+      }
+    },
+    "LINK-acb1ed": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/constants/Lib_PredeployAddresses.sol"
+      }
+    },
+    "LINK-55ac30": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol"
+      }
+    },
+    "LINK-7d3c8a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      }
+    },
+    "LINK-0ef335": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol"
+      }
+    },
+    "LINK-7ea605": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96"
+      }
+    },
+    "LINK-d42ee5": {
+      "type": "link",
+      "values": {
+        "url": "#l2-bridge-code"
+      }
+    },
+    "LINK-b904d4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_mappings.htm"
+      }
+    },
+    "LINK-9d788d": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Sparse_matrix"
+      }
+    },
+    "LINK-6c7012": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/3.x/api/proxy"
+      }
+    },
+    "LINK-692ad2": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity-by-example.org/delegatecall/"
+      }
+    },
+    "LINK-56f0f1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external"
+      }
+    },
+    "LINK-7917d3": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity-by-example.org/hacks/front-running/"
+      }
+    },
+    "LINK-304a3c": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595"
+      }
+    },
+    "LINK-86c44b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.12/abi-spec.html"
+      }
+    },
+    "LINK-5cad77": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions"
+      }
+    },
+    "LINK-7c6c3c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148"
+      }
+    },
+    "LINK-0484b9": {
+      "type": "link",
+      "values": {
+        "url": "https://community.optimism.io/docs/developers/bridge/messaging/#fees-for-l2-%E2%87%92-l1-transactions"
+      }
+    },
+    "LINK-691b85": {
+      "type": "link",
+      "values": {
+        "url": "https://www.investopedia.com/terms/f/fractionalreservebanking.asp"
+      }
+    },
+    "LINK-4b0c31": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol"
+      }
+    },
+    "LINK-1d3afd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol"
+      }
+    },
+    "LINK-15d3b7": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      }
+    },
+    "LINK-195c69": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol"
+      }
+    },
+    "LINK-7ddb4f": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-165"
+      }
+    },
+    "LINK-6c67be": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol"
+      }
+    },
+    "LINK-ef3e64": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol"
+      }
+    },
+    "LINK-18b278": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-165"
+      }
+    },
+    "LINK-d4076b": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Exclusive_or"
+      }
+    },
+    "LINK-3cc838": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector"
+      }
+    },
+    "LINK-d67ed3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn"
+      }
+    },
+    "LINK-d0394a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol"
+      }
+    },
+    "LINK-143665": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol"
+      }
+    },
+    "LINK-b9e436": {
+      "type": "link",
+      "values": {
+        "url": "#il1erc20bridge"
+      }
+    },
+    "LINK-dacde4": {
+      "type": "link",
+      "values": {
+        "url": "https://explorer.optimism.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000"
+      }
+    },
+    "LINK-4fa6ff": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism.io/apps#bridge"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:08:50.310Z",
+      "status": "success"
+    }
+  }
+}
