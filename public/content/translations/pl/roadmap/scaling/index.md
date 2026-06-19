@@ -1,57 +1,57 @@
 ---
-title: Skalowania Ethereum
-description: "Pakiety zbiorowe grupują razem transakcje poza łańcuchem, zmniejszając koszty dla użytkownika. Jednak sposób, w jaki pakiety zbiorcze wykorzystują dane, jest obecnie zbyt drogi, ograniczając możliwość tanich transakcji. Proto-Danksharding to naprawia."
+title: Skalowanie Ethereum
+description: "Rollupy grupują transakcje poza łańcuchem, zmniejszając koszty dla użytkownika. Jednak sposób, w jaki rollupy obecnie wykorzystują dane, jest zbyt drogi, co ogranicza możliwość obniżenia kosztów transakcji. Proto-danksharding rozwiązuje ten problem."
 lang: pl
 image: /images/roadmap/roadmap-transactions.png
-alt: "Plan działania Ethereum"
+alt: Mapa drogowa Ethereum
 template: roadmap
 ---
 
-Ethereum jest skalowane przy użyciu [warstw 2](/layer-2/#rollups) (znanych również jako pakiety zbiorcze), które grupują transakcje w pakiety i wysyłają dane wyjściowe do Ethereum. Mimo że pakiety zbiorcze są do ośmiu razy tańsze niż sieć główna Ethereum, możliwa jest dalsza optymalizacja pakietów zbiorczych w celu dalszego obniżenia kosztów dla użytkowników końcowych. Pakiety zbiorcze opierają się również na niektórych scentralizowanych elementach, które deweloperzy mogą usuwać w miarę rozwoju pakietów zbiorczych.
+Ethereum jest skalowane za pomocą [warstw 2](/layer-2/#rollups) (znanych również jako rollupy), które grupują transakcje i wysyłają ich wynik do Ethereum. Mimo że rollupy są nawet ośmiokrotnie tańsze niż sieć główna Ethereum, możliwe jest ich dalsze zoptymalizowanie w celu obniżenia kosztów dla użytkowników końcowych. Rollupy opierają się również na pewnych scentralizowanych komponentach, które deweloperzy mogą usunąć w miarę ich dojrzewania.
 
-<Alert variant="update" className="mb-8">
+<Alert variant="update">
 <AlertContent>
 <AlertTitle className="mb-4">
   Koszty transakcji
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Obecne pakiety zbiorcze są <strong>około 5-20 razy</strong> tańsze niż warstwa 1 Ethereum</li>
-    <li>Pakiety zbiorcze o wiedzy zerowej (ZK-rollups) wkrótce obniżą opłaty o <strong>około 40-100 razy</strong></li>
-    <li>Nadchodzące zmiany w Ethereum zapewnią kolejne <strong>około 100-1000 razy</strong> skalowania</li>
-    <li style={{ marginBottom: 0 }}>Użytkownicy powinni skorzystać z transakcji <strong>kosztujących mniej niż 0,001 USD</strong></li>
-  </ul>
+    <li>Dzisiejsze rollupy są <strong>\~5-20x</strong> tańsze niż warstwa 1 Ethereum</li>
+    <li>ZK-rollupy wkrótce obniżą opłaty o <strong>\~40-100x</strong></li>
+    <li>Nadchodzące zmiany w Ethereum zapewnią kolejne <strong>\~100-1000x</strong> skalowania</li>
+ <li style={{ marginBottom: 0 }}>Użytkownicy powinni skorzystać na transakcjach <strong>kosztujących mniej niż 0,001 USD</strong>
+
 </AlertContent>
 </Alert>
 
-## Tańsze dane {#making-data-cheaper}
+## Obniżenie kosztów danych {#making-data-cheaper}
 
-Pakiety zbiorcze zbierają dużą liczbę transakcji, wykonują je i przesyłają wyniki do Ethereum. Generuje to wiele danych, które muszą być otwarcie dostępne, aby każdy mógł samodzielnie wykonać transakcje i zweryfikować, czy operator pakietu zbiorczego był uczciwy. Jeśli ktoś znajdzie rozbieżność, może zakwestionować wyniki.
+Rollupy zbierają duże ilości transakcji, wykonują je i przesyłają wyniki do Ethereum. Generuje to mnóstwo danych, które muszą być publicznie dostępne, aby każdy mógł samodzielnie wykonać transakcje i zweryfikować, czy operator rollupa był uczciwy. Jeśli ktoś znajdzie rozbieżność, może to zakwestionować.
 
-### Proto-Danksharding {#proto-danksharding}
+### Proto-danksharding {#proto-danksharding}
 
-Dane pakietu zbiorczego były kiedyś przechowywane na stałe w Ethereum, co jest kosztowne. Ponad 90% kosztów transakcji ponoszonych przez użytkowników w związku z pakietami zbiorczymi wynika z przechowywania tych danych. Aby zmniejszyć koszty transakcji, możemy przenieść dane do nowej tymczasowej pamięci „blob”. Bloby są tańsze, ponieważ nie są trwałe; usuwa się je z Ethereum, gdy nie są już potrzebne. Długoterminowe przechowywanie danych pakietów zbiorczych staje się obowiązkiem osób, które ich potrzebują, jak np. operatorów pakietów zbiorczych, giełdy, usługi indeksowania itp. Dodawanie transakcji blobów do Ethereum jest częścią aktualizacji znanej jako „Proto-Danksharding”.
+Dane rollupów były historycznie przechowywane w Ethereum na stałe, co jest kosztowne. Ponad 90% kosztów transakcji, które użytkownicy płacą w rollupach, wynika z przechowywania tych danych. Aby obniżyć koszty transakcji, możemy przenieść dane do nowego, tymczasowego magazynu typu „blob”. Bloby są tańsze, ponieważ nie są trwałe; są usuwane z Ethereum, gdy nie są już potrzebne. Długoterminowe przechowywanie danych rollupów staje się obowiązkiem osób, które ich potrzebują, takich jak operatorzy rollupów, giełdy, usługi indeksowania itp. Dodanie transakcji typu blob do Ethereum jest częścią aktualizacji znanej jako „proto-danksharding”.
 
-Z Proto-Dankshardingiem do bloków Ethereum można dodawać wiele blobów. Umożliwia to kolejne znaczące (>100x) zwiększenie przepustowości Ethereum i zmniejszenie kosztów transakcji.
+Dzięki proto-dankshardingowi możliwe jest dodanie wielu blobów do bloków Ethereum. Umożliwia to kolejne znaczne (>100x) zwiększenie przepustowości Ethereum i obniżenie kosztów transakcji.
 
 ### Danksharding {#danksharding}
 
-Drugi etap rozszerzania danych blob jest skomplikowany, ponieważ wymaga nowych metod sprawdzania, czy dane pakietu zbiorczego są dostępne w sieci i opiera się na [walidatorach](/glossary/#validator) oddzielających swoje obowiązki tworzenia [bloków](/glossary/#block) i proponowania bloków. Wymaga to również sposobu na kryptograficzne udowodnienie, że walidatory zweryfikowały małe podzbiory danych blobów.
+Drugi etap rozszerzania danych blobów jest skomplikowany, ponieważ wymaga nowych metod sprawdzania, czy dane rollupów są dostępne w sieci, i opiera się na [walidatorach](/glossary/#validator) oddzielających swoje obowiązki związane z budowaniem [bloku](/glossary/#block) od propozycji bloku. Wymaga to również sposobu na kryptograficzne udowodnienie, że walidatorzy zweryfikowali małe podzbiory danych blobów.
 
-Ten drugi etap jest znany jako ["Danksharding"](/roadmap/danksharding/). Prace wdrożeniowe trwają, a postępy są czynione w zakresie warunków wstępnych, takich jak [oddzielenie tworzenia bloków i propozycji bloków](/roadmap/pbs) oraz nowe projekty sieciowe, które umożliwiają sieci skuteczne potwierdzanie, że dane są dostępne, poprzez losowe próbkowanie kilku kilobajtów na raz, znane jako [próbkowanie dostępności danych (DAS)](/developers/docs/data-availability).
+Ten drugi krok jest znany jako [„danksharding”](/roadmap/danksharding/). Prace wdrożeniowe trwają, a postępy są widoczne w zakresie wymagań wstępnych, takich jak [oddzielenie budowania bloku od propozycji bloku](/roadmap/pbs) oraz nowe projekty sieci, które umożliwiają sieci wydajne potwierdzanie dostępności danych poprzez losowe próbkowanie kilku kilobajtów na raz, co jest znane jako [próbkowanie dostępności danych (DAS)](/developers/docs/data-availability).
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Więcej o Dankshardingu</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Więcej o dankshardingu</ButtonLink>
 
-## Decentralizacja pakietów zbiorczych {#decentralizing-rollups}
+## Decentralizacja rollupów {#decentralizing-rollups}
 
-[Pakiety zbiorcze](/layer-2) już skalują Ethereum. [Bogaty ekosystem projektów pakietów zbiorczych](https://l2beat.com/scaling/tvs) umożliwia użytkownikom szybkie i tanie przeprowadzanie transakcji z szeregiem gwarancji bezpieczeństwa. Jednak pakiety zbiorcze zostały uruchomione przy użyciu scentralizowanych sekwencerów (komputerów, które wykonują całe przetwarzanie transakcji i agregację przed przesłaniem ich do Ethereum). Jest to podatne na cenzurę, ponieważ operatorzy sekwencerów mogą zostać ukarani, przekupieni lub w inny sposób zagrożeni. Jednocześnie [pakiety zbiorcze różnią się](https://l2beat.com/scaling/summary) sposobem weryfikacji przychodzących danych. Najlepszym sposobem jest, aby "dowodzący" przesyłali [dowody oszustwa](/glossary/#fraud-proof) lub dowody ważności, ale nie wszystkie pakiety zbiorcze są już na to gotowe. Nawet te pakiety zbiorcze, które wykorzystują dowody ważności/oszustwa, korzystają z niewielkiej puli znanych udowadniających. Dlatego kolejnym krytycznym etapem w skalowaniu Ethereum jest rozłożenie odpowiedzialności za uruchamianie sekwencerów i udowadniających na większą liczbę osób.
+[Rollupy](/layer-2) już teraz skalują Ethereum. [Bogaty ekosystem projektów rollupów](https://l2beat.com/scaling/tvs) umożliwia użytkownikom szybkie i tanie przeprowadzanie transakcji z zachowaniem szeregu gwarancji bezpieczeństwa. Jednak rollupy zostały uruchomione przy użyciu scentralizowanych sekwenserów (komputerów, które wykonują całe przetwarzanie i agregację transakcji przed przesłaniem ich do Ethereum). Jest to podatne na cenzurę, ponieważ operatorzy sekwenserów mogą zostać objęci sankcjami, przekupieni lub w inny sposób skompromitowani. Jednocześnie [rollupy różnią się](https://l2beat.com/scaling/summary) sposobem walidacji przychodzących danych. Najlepszym sposobem jest przesyłanie przez „dowodzących” (ang. provers) [dowodów oszustwa](/glossary/#fraud-proof) lub dowodów ważności, ale nie wszystkie rollupy już to robią. Nawet te rollupy, które używają dowodów ważności/oszustwa, korzystają z małej puli znanych dowodzących. Dlatego kolejnym kluczowym krokiem w skalowaniu Ethereum jest rozdzielenie odpowiedzialności za uruchamianie sekwenserów i dowodzących na większą liczbę osób.
 
-<ButtonLink variant="outline-color" href="/developers/docs/scaling/">Więcej o pakietach zbiorczych</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">Więcej o rollupach</ButtonLink>
 
-## Aktualny postęp {#current-progress}
+## Obecny postęp {#current-progress}
 
-Proto-Danksharding został pomyślnie wdrożony w ramach uaktualnienia sieci nazwanej Cancun-Deneb („Dencun”) w marcu 2024 roku. Od czasu jego implementacji pakiety zbiorcze zaczęły korzystać z pamięci blobów, co doprowadziło do obniżenia kosztów transakcji dla użytkowników i przetworzenia milionów transakcji w blobach.
+Proto-danksharding został pomyślnie wdrożony jako część aktualizacji sieci Cancun-Deneb („Dencun”) w marcu 2024 roku. Od czasu jego wdrożenia rollupy zaczęły wykorzystywać przechowywanie blobów, co zaowocowało obniżeniem kosztów transakcji dla użytkowników i milionami transakcji przetwarzanych w blobach.
 
-Prace nad pełnym Dankshardingiem wciąż trwają, a postępy są widoczne w zakresie jego wymagań wstępnych, takich jak PBS (separacja proponujący-budujący) i DAS (próbkowanie dostępności danych). Decentralizacja infrastruktury pakietów zbiorczych to procesem stopniowy — istnieje wiele różnych pakietów zbiorczych, które budują nieco inne systemy i będą w pełni decentralizować się w różnym tempie.
+Prace nad pełnym dankshardingiem trwają, a postępy są widoczne w zakresie jego wymagań wstępnych, takich jak separacja proponującego i budującego (PBS) oraz próbkowanie dostępności danych (DAS). Decentralizacja infrastruktury rollupów to stopniowy proces – istnieje wiele różnych rollupów, które budują nieco inne systemy i będą w pełni decentralizować się w różnym tempie.
 
 [Więcej o aktualizacji sieci Dencun i jej wpływie](/roadmap/dencun/)
 

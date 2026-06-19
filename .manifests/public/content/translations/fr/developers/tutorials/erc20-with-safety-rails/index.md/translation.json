@@ -1,0 +1,490 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-19T22:44:34.633Z",
+  "englishManifestHash": "ec39101bc693",
+  "placeholderOrder": [
+    "LINK-fb2e62",
+    "LINK-4099d8",
+    "LINK-5339b4",
+    "LINK-7dc5e9",
+    "IMAGE-fb92f3",
+    "CODE-acca20",
+    "LINK-18d722",
+    "CODE-b39076",
+    "CODE-d79677",
+    "LINK-2465aa",
+    "LINK-d28859",
+    "LINK-1a69aa",
+    "LINK-046797",
+    "LINK-efb516",
+    "LINK-63f5a1",
+    "LINK-d3de3f",
+    "CODE-8e66d6",
+    "CODEBLOCK-2ea452",
+    "CODEBLOCK-47f27d",
+    "CODE-e2efdd",
+    "CODE-8aaf35",
+    "CODEBLOCK-e0767b",
+    "LINK-966b46",
+    "CODE-8e66d6",
+    "CODE-8e66d6",
+    "CODEBLOCK-0a41ac",
+    "CODE-8e66d6",
+    "CODE-8aaf35",
+    "CODE-238c19",
+    "CODE-bc7e13",
+    "CODE-663ea1",
+    "CODE-73ebe2",
+    "CODE-663ea1",
+    "LINK-ec8fa8",
+    "CODE-90efef",
+    "LINK-e41a6b",
+    "LINK-e035d5",
+    "CODE-4a664e",
+    "CODE-0dd0fe",
+    "CODEBLOCK-a83032",
+    "CODE-663ea1",
+    "CODE-f635d6",
+    "CODEBLOCK-badefb",
+    "CODE-6dfa1d",
+    "LINK-ec8fa8",
+    "CODE-90efef",
+    "LINK-13f3b2",
+    "CODE-ba464b",
+    "CODE-6dfa1d",
+    "CODEBLOCK-a63899",
+    "LINK-387670",
+    "LINK-a784c7",
+    "LINK-b06c4c",
+    "LINK-7fe0cb",
+    "LINK-c5ead9",
+    "CODE-238c19",
+    "LINK-2c03cd",
+    "CODE-1db978",
+    "LINK-c34042",
+    "CODE-616f3a",
+    "LINK-64c675",
+    "CODE-238c19",
+    "LINK-b904d4",
+    "LINK-7f7383",
+    "CODEBLOCK-911964",
+    "LINK-dd939d",
+    "CODEBLOCK-d85432",
+    "CODEBLOCK-9e0810",
+    "LINK-b1039f",
+    "CODE-efa1f3",
+    "CODEBLOCK-c9617b",
+    "CODE-967dd4",
+    "CODE-8e66d6",
+    "CODEBLOCK-806aa3",
+    "LINK-c9fb0e",
+    "CODE-27f576",
+    "LINK-d6ce5f",
+    "CODE-74e216",
+    "CODEBLOCK-dcbc96",
+    "LINK-d940d6",
+    "CODEBLOCK-693629",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-2ea452": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-47f27d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e0767b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0a41ac": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a83032": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-badefb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a63899": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-911964": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d85432": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9e0810": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c9617b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-806aa3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dcbc96": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-693629": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-acca20": {
+      "type": "inline-code",
+      "values": {
+        "content": "https://github.com/qbzzt/20220815-erc20-safety-rails"
+      }
+    },
+    "CODE-b39076": {
+      "type": "inline-code",
+      "values": {
+        "content": ".deps"
+      }
+    },
+    "CODE-d79677": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm"
+      }
+    },
+    "CODE-8e66d6": {
+      "type": "inline-code",
+      "values": {
+        "content": "_beforeTokenTransfer"
+      }
+    },
+    "CODE-e2efdd": {
+      "type": "inline-code",
+      "values": {
+        "content": "virtual"
+      }
+    },
+    "CODE-8aaf35": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC20"
+      }
+    },
+    "CODE-238c19": {
+      "type": "inline-code",
+      "values": {
+        "content": "Ownable"
+      }
+    },
+    "CODE-bc7e13": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC20._beforeTokenTransfer"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-73ebe2": {
+      "type": "inline-code",
+      "values": {
+        "content": "address(this)"
+      }
+    },
+    "CODE-90efef": {
+      "type": "inline-code",
+      "values": {
+        "content": "EXTCODESIZE"
+      }
+    },
+    "CODE-4a664e": {
+      "type": "inline-code",
+      "values": {
+        "content": "<address>.code"
+      }
+    },
+    "CODE-0dd0fe": {
+      "type": "inline-code",
+      "values": {
+        "content": "<address>.codehash"
+      }
+    },
+    "CODE-f635d6": {
+      "type": "inline-code",
+      "values": {
+        "content": "this(address)"
+      }
+    },
+    "CODE-6dfa1d": {
+      "type": "inline-code",
+      "values": {
+        "content": "isToContract"
+      }
+    },
+    "CODE-ba464b": {
+      "type": "inline-code",
+      "values": {
+        "content": "GT"
+      }
+    },
+    "CODE-1db978": {
+      "type": "inline-code",
+      "values": {
+        "content": "onlyOwner"
+      }
+    },
+    "CODE-616f3a": {
+      "type": "inline-code",
+      "values": {
+        "content": "AccessControl"
+      }
+    },
+    "CODE-efa1f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "public"
+      }
+    },
+    "CODE-967dd4": {
+      "type": "inline-code",
+      "values": {
+        "content": "emit"
+      }
+    },
+    "CODE-27f576": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer"
+      }
+    },
+    "CODE-74e216": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve"
+      }
+    },
+    "IMAGE-fb92f3": {
+      "type": "image",
+      "values": {
+        "path": "icon-clone.png"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-4099d8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20"
+      }
+    },
+    "LINK-5339b4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code"
+      }
+    },
+    "LINK-7dc5e9": {
+      "type": "link",
+      "values": {
+        "url": "https://remix.ethereum.org/"
+      }
+    },
+    "LINK-18d722": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/5.x/wizard"
+      }
+    },
+    "LINK-2465aa": {
+      "type": "link",
+      "values": {
+        "url": "https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth"
+      }
+    },
+    "LINK-d28859": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism.mirror.xyz/qvd0WfuLKnePm1Gxb9dpGchPf5uDz5NSMEFdgirDS4c"
+      }
+    },
+    "LINK-1a69aa": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000042"
+      }
+    },
+    "LINK-046797": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/#externally-owned-accounts-and-key-pairs"
+      }
+    },
+    "LINK-efb516": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts"
+      }
+    },
+    "LINK-63f5a1": {
+      "type": "link",
+      "values": {
+        "url": "https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595"
+      }
+    },
+    "LINK-d3de3f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368"
+      }
+    },
+    "LINK-966b46": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.15/contracts.html#function-overriding"
+      }
+    },
+    "LINK-ec8fa8": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#3b"
+      }
+    },
+    "LINK-e41a6b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.15/yul.html"
+      }
+    },
+    "LINK-e035d5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types"
+      }
+    },
+    "LINK-13f3b2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#11"
+      }
+    },
+    "LINK-387670": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.logrocket.com/security-choices-multi-signature-wallets/"
+      }
+    },
+    "LINK-a784c7": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism.blockscout.com/token/0x2348B1a1228DDCd2dB668c3d30207c3E1852fBbe?tab=holders"
+      }
+    },
+    "LINK-b06c4c": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism.blockscout.com/token/0x4200000000000000000000000000000000000042"
+      }
+    },
+    "LINK-7fe0cb": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism.blockscout.com/token/0x2348B1a1228DDCd2dB668c3d30207c3E1852fBbe"
+      }
+    },
+    "LINK-c5ead9": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable"
+      }
+    },
+    "LINK-2c03cd": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm"
+      }
+    },
+    "LINK-c34042": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control"
+      }
+    },
+    "LINK-64c675": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Role-based_access_control"
+      }
+    },
+    "LINK-b904d4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_mappings.htm"
+      }
+    },
+    "LINK-7f7383": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Boolean_data_type"
+      }
+    },
+    "LINK-dd939d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_events.htm"
+      }
+    },
+    "LINK-b1039f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_contracts.htm"
+      }
+    },
+    "LINK-c9fb0e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20#transfer"
+      }
+    },
+    "LINK-d6ce5f": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20#approve"
+      }
+    },
+    "LINK-d940d6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T22:44:34.633Z",
+      "status": "success"
+    }
+  }
+}

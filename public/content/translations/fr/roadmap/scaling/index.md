@@ -1,58 +1,58 @@
 ---
 title: "Mise à l'échelle d'Ethereum"
-description: "Les rollups regroupent des transactions hors chaîne, ce qui réduit les coûts pour l'utilisateur. Cependant, la manière dont les rollups utilisent les données est pour l'heure trop coûteuse, ce qui limite le coût des transactions. La solution Proto-Danksharding règle ce problème."
+description: "Les rollups regroupent les transactions hors chaîne, réduisant ainsi les coûts pour l'utilisateur. Cependant, la façon dont les rollups utilisent actuellement les données est trop coûteuse, ce qui limite la réduction du coût des transactions. Le proto-danksharding résout ce problème."
 lang: fr
 image: /images/roadmap/roadmap-transactions.png
-alt: "Feuille de route d'Ethereum"
+alt: Feuille de route d'Ethereum
 template: roadmap
 ---
 
-Ethereum est mis à l'échelle à l'aide de [couches 2](/layer-2/#rollups) (également appelées rollups), qui regroupent les transactions et envoient le résultat à Ethereum. Bien que les rollups soient jusqu'à huit fois moins chers que le réseau principal d'Ethereum, il est possible d'optimiser davantage ces derniers, et réduire ainsi les coûts des utilisateurs finaux. Les rollups reposent également sur certains composants centralisés, que les développeurs peuvent supprimer à mesure que les rollups évoluent.
+La mise à l'échelle d'Ethereum s'effectue à l'aide de [couches 2](/layer-2/#rollups) (également appelées rollups), qui regroupent les transactions et envoient le résultat à Ethereum. Même si les rollups sont jusqu'à huit fois moins chers que le réseau principal Ethereum, il est possible de les optimiser davantage pour réduire les coûts pour les utilisateurs finaux. Les rollups s'appuient également sur certains composants centralisés que les développeurs peuvent supprimer à mesure que les rollups gagnent en maturité.
 
-<Alert variant="update" className="mb-8">
+<Alert variant="update">
 <AlertContent>
 <AlertTitle className="mb-4">
-  Frais de transaction
+  Coûts de transaction
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Aujourd'hui, les rollups sont <strong> 5 à 20 fois</strong> moins coûteux que la couche 1 d'Ethereum</li>
-    <li>Les rollups ZK réduiront bientôt de <strong> 40 à 100 fois moins </strong>ces coûts</li>
-    <li>Les changements à venir apportés à Ethereum fourniront une mise à l'échelle <strong>~100-1000x</strong> supplémentaire</li>
-    <li style={{ marginBottom: 0 }}>Les utilisateurs bénéficieront de transactions<strong> à moins de 0,001 USD</strong></li>
-  </ul>
+    <li>Les rollups actuels sont <strong>\~5 à 20 fois</strong> moins chers que la couche 1 (l1) d'Ethereum</li>
+    <li>Les ZK-rollups réduiront bientôt les frais de <strong>\~40 à 100 fois</strong></li>
+    <li>Les prochaines modifications apportées à Ethereum offriront une mise à l'échelle supplémentaire de <strong>\~100 à 1000 fois</strong></li>
+ <li style={{ marginBottom: 0 }}>Les utilisateurs devraient bénéficier de transactions <strong>coûtant moins de 0,001 $</strong>
+
 </AlertContent>
 </Alert>
 
 ## Rendre les données moins chères {#making-data-cheaper}
 
-Les rollups collectent un grand nombre de transactions, les exécutent et soumettent les résultats à Ethereum. Ceci génère un maximum de données qui doivent être publiquement disponibles, pour que quiconque puisse exécuter les transactions et vérifier que l'opérateur du rollup soit intègre. Si une personne constate une divergence, cette dernière peut être contestée.
+Les rollups collectent un grand nombre de transactions, les exécutent et soumettent les résultats à Ethereum. Cela génère beaucoup de données qui doivent être librement accessibles afin que quiconque puisse exécuter les transactions par lui-même et vérifier que l'opérateur du rollup a été honnête. Si quelqu'un trouve une anomalie, il peut soulever une contestation.
 
-### Proto-Danksharding {#proto-danksharding}
+### Proto-danksharding {#proto-danksharding}
 
-Les données rollup sont historiquement stockées en permanence sur Ethereum, ce qui est coûteux. Plus de 90 % des frais de transaction assumés par les utilisateurs sur les rollups sont dus à ce stockage de données. Pour réduire les coûts de transaction, il est possible de déplacer les données vers un nouveau stockage temporaire appelé « blob » - Binary Large Object/Large Objet Binaire. Les blobs sont moins chers car temporaires ; ils sont supprimés d'Ethereum une fois leur nécessité devenue obsolète. Le stockage des données rollup à long terme devient la responsabilité des personnes qui en ont besoin, telles que les opérateurs rollup, les bourses, les services d'indexation, etc. L'ajout de transactions blob à Ethereum fait partie d'une mise à niveau connue sous le terme « Proto-Danksharding ».
+Historiquement, les données des rollups étaient stockées de manière permanente sur Ethereum, ce qui est coûteux. Plus de 90 % du coût de transaction que les utilisateurs paient sur les rollups est dû à ce stockage de données. Pour réduire les coûts de transaction, nous pouvons déplacer les données vers un nouveau stockage temporaire de « blobs ». Les blobs sont moins chers car ils ne sont pas permanents ; ils sont supprimés d'Ethereum une fois qu'ils ne sont plus nécessaires. Le stockage à long terme des données des rollups devient la responsabilité des personnes qui en ont besoin, telles que les opérateurs de rollups, les plateformes d'échange, les services d'indexation, etc. L'ajout de transactions de blobs à Ethereum fait partie d'une mise à jour connue sous le nom de « proto-danksharding ».
 
-Avec le Proto-Danksharding, il est possible d'ajouter de nombreux blobs aux blocs Ethereum. Cela permet une autre augmentation substantielle (>100x) du débit d'Ethereum et une réduction des coûts de transaction.
+Avec le proto-danksharding, il est possible d'ajouter de nombreux blobs aux blocs Ethereum. Cela permet une autre augmentation substantielle (>100x) du débit d'Ethereum et une réduction des coûts de transaction.
 
 ### Danksharding {#danksharding}
 
-La deuxième étape de l'expansion des données blob est compliquée car elle nécessite de nouvelles méthodes pour vérifier que les données de rollup sont disponibles sur le réseau et repose sur la séparation, par les [validateurs](/glossary/#validator), de leurs responsabilités de construction de [bloc](/glossary/#block) et de proposition de bloc. Cela nécessite également un moyen de prouver cryptographiquement que les validateurs ont vérifié de petits sous-ensembles de données blob.
+La deuxième étape de l'expansion des données de blobs est compliquée car elle nécessite de nouvelles méthodes pour vérifier que les données des rollups sont disponibles sur le réseau et repose sur le fait que les [validateurs](/glossary/#validator) séparent leurs responsabilités de construction de [blocs](/glossary/#block) et de proposition de blocs. Elle nécessite également un moyen de prouver cryptographiquement que les validateurs ont vérifié de petits sous-ensembles des données de blobs.
 
-Cette deuxième étape est connue sous le nom de [« Danksharding »](/roadmap/danksharding/). Les travaux d'implémentation se poursuivent, avec des progrès sur les prérequis comme [la séparation de la construction et de la proposition de blocs](/roadmap/pbs) et de nouvelles conceptions de réseau qui permettent au réseau de confirmer efficacement que les données sont disponibles en échantillonnant de manière aléatoire quelques kilo-octets à la fois, une méthode connue sous le nom [d'échantillonnage de disponibilité des données (DAS)](/developers/docs/data-availability).
+Cette deuxième étape est connue sous le nom de [« danksharding »](/roadmap/danksharding/). Le travail de mise en œuvre se poursuit, avec des progrès réalisés sur des prérequis tels que la [séparation de la construction et de la proposition de blocs](/roadmap/pbs) et de nouvelles conceptions de réseau qui permettent au réseau de confirmer efficacement que les données sont disponibles en échantillonnant aléatoirement quelques kilo-octets à la fois, ce que l'on appelle l'[échantillonnage de la disponibilité des données (DAS)](/developers/docs/data-availability).
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding/">En savoir plus sur Danksharding</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">En savoir plus sur le danksharding</ButtonLink>
 
 ## Décentralisation des rollups {#decentralizing-rollups}
 
-[Les rollups](/layer-2) permettent déjà la mise à l'échelle d'Ethereum. Un [riche écosystème de projets de rollup](https://l2beat.com/scaling/tvs) permet aux utilisateurs d'effectuer des transactions rapidement et à moindre coût, avec une gamme de garanties de sécurité. Cependant, les rollups ont été initiés en utilisant des séquenceurs centralisés (ordinateurs qui effectuent l'ensemble du traitement et l'agrégation des transactions avant de les soumettre à Ethereum). Cette approche est vulnérable à la censure car, en d'autres termes, les opérateurs-séquenceurs peuvent être sanctionnés, soudoyés ou corrompus. En même temps, [les rollups varient](https://l2beat.com/scaling/summary) dans la manière dont ils valident les données entrantes. La meilleure façon est que les « provers » soumettent des [preuves de fraude](/glossary/#fraud-proof) ou des preuves de validité, mais les rollups n'en sont pas encore tous là. Même ceux qui utilisent des preuves de validité/fraude font appel à un petit groupe de « provers » réputés. Par conséquent, la prochaine étape cruciale dans la mise à l'échelle d'Ethereum consiste à répartir la responsabilité de l'exécution des séquenceurs et des provers, parmi davantage de personnes.
+Les [rollups](/layer-2) mettent déjà Ethereum à l'échelle. Un [riche écosystème de projets de rollups](https://l2beat.com/scaling/tvs) permet aux utilisateurs d'effectuer des transactions rapidement et à moindre coût, avec diverses garanties de sécurité. Cependant, les rollups ont été amorcés à l'aide de séquenceurs centralisés (des ordinateurs qui effectuent tout le traitement et l'agrégation des transactions avant de les soumettre à Ethereum). Cela les rend vulnérables à la censure, car les opérateurs de séquenceurs peuvent être sanctionnés, soudoyés ou autrement compromis. Dans le même temps, les [rollups varient](https://l2beat.com/scaling/summary) dans la façon dont ils valident les données entrantes. La meilleure méthode consiste pour les « prouveurs » à soumettre des [preuves de fraude](/glossary/#fraud-proof) ou des preuves de validité, mais tous les rollups n'en sont pas encore là. Même les rollups qui utilisent des preuves de validité/fraude font appel à un petit groupe de prouveurs connus. Par conséquent, la prochaine étape critique dans la mise à l'échelle d'Ethereum consiste à répartir la responsabilité de l'exécution des séquenceurs et des prouveurs entre un plus grand nombre de personnes.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">En savoir plus sur les rollups</ButtonLink>
 
 ## Progrès actuels {#current-progress}
 
-Le Proto-Danksharding a été mis en œuvre avec succès dans le cadre de la mise à niveau du réseau Cancun-Deneb (« Dencun ») en mars 2024. Depuis sa mise en œuvre, les rollups ont commencé à utiliser le stockage de blobs, entraînant une réduction des frais de transaction pour les utilisateurs et des millions de transactions traitées dans des blobs.
+Le proto-danksharding a été mis en œuvre avec succès dans le cadre de la mise à jour du réseau Cancun-Deneb (« Dencun ») en mars 2024. Depuis sa mise en œuvre, les rollups ont commencé à utiliser le stockage de blobs, ce qui a entraîné une réduction des coûts de transaction pour les utilisateurs et le traitement de millions de transactions dans des blobs.
 
-Les travaux sur le Danksharding complet se poursuivent, avec des avancées sur ses prérequis tels que PBS (Proposer-Builder Separation) et DAS (Data Availability Sampling). La décentralisation de l'infrastructure de rollup est un processus progressif : il existe de nombreux rollups différents qui construisent des systèmes légèrement différents et seront entièrement décentralisés à des rythmes différents.
+Le travail sur le danksharding complet se poursuit, avec des progrès réalisés sur ses prérequis tels que la séparation proposant-constructeur (PBS) et l'échantillonnage de la disponibilité des données (DAS). La décentralisation de l'infrastructure des rollups est un processus graduel : il existe de nombreux rollups différents qui construisent des systèmes légèrement différents et se décentraliseront complètement à des rythmes différents.
 
-[En savoir plus sur la mise à niveau du réseau Dencun et son impact](/roadmap/dencun/)
+[En savoir plus sur la mise à jour du réseau Dencun et son impact](/roadmap/dencun/)
 
 <QuizWidget quizKey="scaling" />

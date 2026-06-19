@@ -1,57 +1,57 @@
 ---
-title: "以太坊擴容"
-description: "卷軸可在鏈下批次處理交易，從而降低使用者的成本。 但現今卷軸使用資料的方式還是過於昂貴，限制了交易費用的下限。 Proto-Danksharding 可以解決這個問題。"
+title: "擴容以太坊"
+description: "匯總將交易在鏈下打包在一起，從而降低使用者的成本。然而，目前匯總使用資料的方式過於昂貴，限制了交易成本的降低幅度。原始 Danksharding 解決了這個問題。"
 lang: zh-tw
 image: /images/roadmap/roadmap-transactions.png
-alt: "以太坊開發藍圖"
+alt: "以太坊路線圖"
 template: roadmap
 ---
 
-以太坊利用[二層網路](/layer-2/#rollups) (也稱作「卷軸」) 實現擴容，可批次處理交易並將輸出傳送至以太坊。 儘管成本已比以太坊主網低八倍，卷軸還有進一步最佳化的空間，進而幫助降低終端使用者的成本。 此外，卷軸還仰賴於一些中心化組件，隨著其不斷發展成熟，開發者可以移除這些組件。
+以太坊使用[第二層 (L2)](/layer-2/#rollups)（也稱為匯總）進行擴容，它將交易打包在一起並將輸出發送到以太坊。儘管匯總的成本比以太坊主網低多達八倍，但仍有可能進一步優化匯總以降低終端使用者的成本。匯總還依賴一些中心化元件，開發人員可以在匯總成熟時將其移除。
 
-<Alert variant="update" className="mb-8">
+<Alert variant="update">
 <AlertContent>
 <AlertTitle className="mb-4">
   交易成本
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>現今卷軸的成本比以太坊一層網路便宜<strong>大約 5 - 20 倍</strong></li>
-    <li>零知識卷軸很快會讓費用降低<strong>大約 40-100 倍</strong></li>
-    <li>以太坊即將變更，會帶來<strong>大約 100-1000 倍</strong>的擴容</li>
-    <li style={{ marginBottom: 0 }}>使用者應該能夠從<strong>成本低於 $0.001</strong> 的交易中受益</li>
-  </ul>
+    <li>現今的匯總比以太坊第一層 (L1) 便宜約 <strong>5-20 倍</strong></li>
+    <li>零知識匯總 (ZK-rollup) 很快將使費用降低約 <strong>40-100 倍</strong></li>
+    <li>即將到來的以太坊變更將提供額外約 <strong>100-1000 倍</strong>的擴容</li>
+ <li style={{ marginBottom: 0 }}>使用者將受惠於<strong>低於 0.001 美元</strong>的交易成本
+
 </AlertContent>
 </Alert>
 
 ## 降低資料成本 {#making-data-cheaper}
 
-卷軸會集合大量交易，執行它們並將結果提交到以太坊。 這會產生大量需要公開的資料，以便所有人都可以自己執行交易並驗證卷軸營運者是否誠實。 若有人發現矛盾之處，可以提起質詢。
+匯總收集大量交易，執行它們並將結果提交給以太坊。這會產生大量需要公開可用的資料，以便任何人都可以自行執行交易並驗證匯總營運商是否誠實。如果有人發現差異，他們可以提出挑戰。
 
-### Proto-Danksharding {#proto-danksharding}
+### 原始 Danksharding {#proto-danksharding}
 
-以往卷軸資料會永久儲存在以太坊上，成本非常高昂。 使用者為卷軸支付的交易費用中，超過 90% 都是花在資料儲存上。 為了降低交易費用，我們可以將資料移至新的「二進位大型物件」臨時儲存區。 二進位大型物件更便宜，因為它們不是永久性的，一旦不再需要，就會從以太坊中刪除。 需要長期卷軸資料的人，例如卷軸營運商、交易所、索引服務等，得要自己負責儲存這些資料。 將二進位大型物件交易新增至以太坊是「Proto-Danksharding」升級的一部分。
+過去，匯總資料一直永久儲存在以太坊上，這非常昂貴。使用者在匯總上支付的交易成本中，超過 90% 是由於這種資料儲存造成的。為了降低交易成本，我們可以將資料移至新的暫時性「資料塊」儲存中。資料塊比較便宜，因為它們不是永久性的；一旦不再需要，它們就會從以太坊中刪除。長期儲存匯總資料成為需要它的人的責任，例如匯總營運商、交易所、索引服務等。將資料塊交易新增至以太坊是稱為「原始 Danksharding」升級的一部分。
 
-透過 Proto-Danksharding，將多個二進位大型物件新增至以太坊區塊成為可能。 這將使以太坊的吞吐量再次大幅 (超過 100 倍) 擴容，並降低交易成本。
+透過原始 Danksharding，可以將許多資料塊新增至以太坊區塊中。這使得以太坊的吞吐量能夠再次大幅提升（超過 100 倍），並大幅降低交易成本。
 
-### Danksharding {#danksharding}
+### 丹克分片 {#danksharding}
 
-擴展 blob 資料的第二階段很複雜，因為它需要新的方法來檢查網路上是否有可用的卷軸資料，並依賴[驗證者](/glossary/#validator)將其[區塊](/glossary/#block)建構和區塊提案的職責分開。 它還需要一種方法來以加密方式證明驗證者已驗證一小部分二進位大型物件資料。
+擴展資料塊資料的第二階段很複雜，因為它需要新的方法來檢查匯總資料在網路上是否可用，並且依賴[驗證者](/glossary/#validator)分離其[區塊](/glossary/#block)建構和區塊提案的職責。它還需要一種方法來透過密碼學證明驗證者已經驗證了資料塊資料的一小部分。
 
-這個第二個步驟稱作 ["Danksharding"](/roadmap/danksharding/)。 實作工作仍在繼續，先決條件方面也取得進展，例如[分離區塊建構與區塊提案](/roadmap/pbs)，以及新的網路設計，讓網路能透過一次隨機抽樣數千位元組的資料來有效確認資料可用性，這項技術稱為[資料可用性抽樣 (DAS)](/developers/docs/data-availability)。
+這第二步被稱為[「丹克分片」](/roadmap/danksharding/)。實作工作仍在繼續，並在先決條件上取得了進展，例如[分離區塊建構與區塊提案](/roadmap/pbs)，以及新的網路設計，使網路能夠透過每次隨機抽樣幾千位元組來有效確認資料可用性，這被稱為[資料可用性抽樣 (DAS)](/developers/docs/data-availability)。
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding/">更多關於 Danksharding 的資訊</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">更多關於丹克分片的資訊</ButtonLink>
 
-## 去中心化卷軸 {#decentralizing-rollups}
+## 去中心化匯總 {#decentralizing-rollups}
 
-[卷軸](/layer-2) 已在為以太坊擴容。 [豐富的卷軸專案生態系統](https://l2beat.com/scaling/tvs)讓使用者能快速且便宜地進行交易，並提供各種安全保證。 然而，一直以來卷軸都是使用中心化排序者（先完成所有交易處理和匯總，再將結果提交至以太坊的電腦）啟動的。 這樣便容易受到審查，因為排序者營運商可能被制裁、賄賂或者做出其他讓步。 同時，[各種卷軸](https://l2beat.com/scaling/summary)驗證傳入資料的方式也各不相同。 最好的方法是讓「證明者」提交[詐欺證明](/glossary/#fraud-proof)或有效性證明，但並非所有卷軸都已做到這一點。 即使是確實使用有效性/欺詐證明的卷軸也只使用一小部分已知的證明者。 因此，以太坊擴容的下一個關鍵步驟就是將運行排序者和證明者的責任分配給更多人。
+[匯總](/layer-2)已經在為以太坊擴容。一個[豐富的匯總專案生態系統](https://l2beat.com/scaling/tvs)正讓使用者能夠快速且廉價地進行交易，並提供一系列的安全保證。然而，匯總在初始階段使用了中心化的定序器（在將交易提交給以太坊之前，負責所有交易處理和聚合的電腦）。這容易受到審查，因為定序器營運商可能會受到制裁、賄賂或以其他方式被妥協。同時，[匯總在驗證傳入資料的方式上各有不同](https://l2beat.com/scaling/summary)。最好的方法是由「證明者」提交[詐欺證明](/glossary/#fraud-proof)或有效性證明，但並非所有匯總都已達到這個階段。即使是那些確實使用有效性/詐欺證明的匯總，也只使用一小群已知的證明者。因此，擴容以太坊的下一個關鍵步驟是將執行定序器和證明者的責任分配給更多人。
 
-<ButtonLink variant="outline-color" href="/developers/docs/scaling/">更多關於卷軸的資訊</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">更多關於匯總的資訊</ButtonLink>
 
-## 目前進度 {#current-progress}
+## 目前進展 {#current-progress}
 
-Proto-Danksharding 已成功於 2024 年 3 月的 Cancun-Deneb（「坎昆」）網路升級中實施。 自那以後，卷軸開始使用 blob 存儲，從而降低了用戶的交易成本，並在 blob 中處理了數百萬筆交易。
+原始 Danksharding 已於 2024 年 3 月作為 Cancun-Deneb (「Dencun」) 網路升級的一部分成功實作。自實作以來，匯總已開始利用資料塊儲存，從而降低了使用者的交易成本，並在資料塊中處理了數百萬筆交易。
 
-完整 Danksharding 的研發工作仍在進行，相關前置需求包括 PBS (提議者-建構者分離) 和 DAS (資料可用性抽樣) 均已取得進展。 卷軸基礎設施的去中心化是一個漸進的過程，有許多不同的卷軸正在構建略有不同的系統，並將以不同的速率完全去中心化。
+完整丹克分片的工作仍在繼續，並在其先決條件（如提案者與建構者分離 (PBS) 和資料可用性抽樣 (DAS)）上取得了進展。去中心化匯總基礎設施是一個漸進的過程——有許多不同的匯總正在建構略有不同的系統，並將以不同的速度完全去中心化。
 
 [更多關於 Dencun 網路升級及其影響的資訊](/roadmap/dencun/)
 

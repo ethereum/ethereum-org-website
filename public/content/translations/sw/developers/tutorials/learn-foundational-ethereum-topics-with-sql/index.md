@@ -1,37 +1,37 @@
 ---
-title: Jifunze Mada za Msingi za Ethereum kwa kutumia SQL
-description: Mafunzo haya yanawasaidia wasomaji kuelewa dhana za msingi za Ethereum ikiwemo miamala, bloku na gesi kwa kuuliza data iliyo kwenye mtandao kwa kutumia Lugha ya Kuuliza Data Iliyopangwa (SQL).
+title: Jifunze Mada za Msingi za Ethereum kwa SQL
+description: Mafunzo haya yanasaidia wasomaji kuelewa dhana za msingi za Ethereum ikiwa ni pamoja na miamala, vitalu na gesi kwa kuhoji data za mnyororoni kwa kutumia Lugha ya Maswali Iliyoundwa (SQL).
 author: "Paul Apivat"
-tags: ["SQL", "Querying", "Transactions"]
+tags: ["SQL", "Kuhoji", "Miamala", "data-na-uchanganuzi"]
 skill: beginner
-breadcrumb: "Ethereum na SQL"
+breadcrumb: Ethereum kwa SQL
 lang: sw
 published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---
 
-Mafunzo mengi ya Ethereum huwalenga wasanidi programu, lakini kuna ukosefu wa rasilimali za kielimu kwa wachambuzi wa data au kwa watu wanaotaka kuona data iliyo kwenye mtandao bila kuendesha mteja au nodi.
+Mafunzo mengi ya Ethereum yanalenga wasanidi programu, lakini kuna ukosefu wa rasilimali za elimu kwa wachanganuzi wa data au kwa watu wanaotaka kuona data za mnyororoni bila kuendesha mteja au nodi.
 
-Mafunzo haya yanawasaidia wasomaji kuelewa dhana za msingi za Ethereum ikiwemo miamala, bloku na gesi kwa kuuliza data iliyo kwenye mtandao kwa kutumia lugha ya kuuliza data iliyopangwa (SQL) kupitia kiolesura kilichotolewa na [Dune Analytics](https://dune.com/).
+Mafunzo haya yanasaidia wasomaji kuelewa dhana za msingi za Ethereum ikiwa ni pamoja na miamala, vitalu na gesi kwa kuhoji data za mnyororoni kwa kutumia lugha ya maswali iliyoundwa (SQL) kupitia kiolesura kinachotolewa na [Dune Analytics](https://dune.com/).
 
-Data iliyo kwenye mtandao inaweza kutusaidia kuelewa Ethereum, mtandao, na kama uchumi wa nguvu za kompyuta na inapaswa kutumika kama msingi wa kuelewa changamoto zinazoikabili Ethereum leo (yaani, kupanda kwa bei za gesi) na, muhimu zaidi, majadiliano kuhusu suluhu za kuongeza uwezo.
+Data za mnyororoni zinaweza kutusaidia kuelewa Ethereum, mtandao, na kama uchumi wa nguvu za kompyuta na zinapaswa kutumika kama msingi wa kuelewa changamoto zinazoikabili Ethereum leo (k.m., kupanda kwa bei za gesi) na, muhimu zaidi, majadiliano kuhusu suluhisho za kuongeza viwango.
 
 ### Miamala {#transactions}
 
-Safari ya mtumiaji kwenye Ethereum huanza na kuanzisha akaunti inayodhibitiwa na mtumiaji au huluki yenye salio la ETH. Kuna aina mbili za akaunti - inayodhibitiwa na mtumiaji au mkataba-erevu (tazama [ethereum.org](/developers/docs/accounts/)).
+Safari ya mtumiaji kwenye Ethereum inaanza kwa kuanzisha akaunti inayodhibitiwa na mtumiaji au huluki yenye salio la ETH. Kuna aina mbili za akaunti - inayodhibitiwa na mtumiaji au mkataba mahiri (tazama [ethereum.org](/developers/docs/accounts/)).
 
-Akaunti yoyote inaweza kutazamwa kwenye wachunguzi wa bloku kama [Etherscan](https://etherscan.io/) au [Blockscout](https://eth.blockscout.com/). Wachunguzi wa bloku ni lango la data ya Ethereum. Wanaonyesha, kwa wakati halisi, data kuhusu bloku, miamala, wachimbaji, akaunti na shughuli nyingine za kwenye mtandao (tazama [hapa](/developers/docs/data-and-analytics/block-explorers/)).
+Akaunti yoyote inaweza kutazamwa kwenye kichunguza bloku kama [Etherscan](https://etherscan.io/) au [Blockscout](https://eth.blockscout.com/). Vichunguzi vya bloku ni lango la data za Ethereum. Vinaonyesha, kwa wakati halisi, data kuhusu vitalu, miamala, wachimbaji, akaunti na shughuli nyingine za mnyororoni (tazama [hapa](/developers/docs/data-and-analytics/block-explorers/)).
 
-Hata hivyo, mtumiaji anaweza kutaka kuuliza data moja kwa moja ili kupatanisha taarifa zinazotolewa na wachunguzi wa bloku wa nje. [Dune Analytics](https://dune.com/) hutoa uwezo huu kwa yeyote aliye na ujuzi fulani wa SQL.
+Hata hivyo, mtumiaji anaweza kutaka kuhoji data moja kwa moja ili kupatanisha taarifa zinazotolewa na vichunguzi vya bloku vya nje. [Dune Analytics](https://dune.com/) inatoa uwezo huu kwa mtu yeyote aliye na ujuzi kiasi wa SQL.
 
-Kwa marejeleo, akaunti ya mkataba-erevu ya Msingi wa Ethereum (EF) inaweza kutazamwa kwenye [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
+Kwa marejeleo, akaunti ya mkataba mahiri ya Taasisi ya Ethereum (EF) inaweza kutazamwa kwenye [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
 
-Jambo moja la kuzingatia ni kwamba akaunti zote, ikiwemo ya EF, zina anwani ya umma inayoweza kutumika kutuma na kupokea miamala.
+Jambo moja la kuzingatia ni kwamba akaunti zote, ikiwa ni pamoja na za EF, zina anwani ya umma inayoweza kutumika kutuma na kupokea miamala.
 
-Salio la akaunti kwenye Etherscan linajumuisha miamala ya kawaida na miamala ya ndani. Miamala ya ndani, licha ya jina lake, sio miamala _halisi_ inayobadilisha hali ya mnyororo. Ni uhamisho wa thamani ulioanzishwa kwa kutekeleza mkataba ([chanzo](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Kwa kuwa miamala ya ndani haina saini, **haijumuishwi** kwenye mnyororo wa bloku na haiwezi kuulizwa na Dune Analytics.
+Salio la akaunti kwenye Etherscan linajumuisha miamala ya kawaida na miamala ya ndani. Miamala ya ndani, licha ya jina lake, si miamala _halisi_ inayobadilisha hali ya mnyororo. Ni uhamishaji wa thamani ulioanzishwa kwa kutekeleza mkataba ([chanzo](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Kwa kuwa miamala ya ndani haina sahihi, **haijajumuishwa** kwenye mnyororo wa vitalu na haiwezi kuhojiwa kwa Dune Analytics.
 
-Kwa hivyo, mafunzo haya yatazingatia miamala ya kawaida. Hii inaweza kuulizwa kama ifuatavyo:
+Kwa hivyo, mafunzo haya yataangazia miamala ya kawaida. Hii inaweza kuhojiwa kama ifuatavyo:
 
 ```sql
 WITH temp_table AS (
@@ -59,33 +59,33 @@ SELECT
 FROM temp_table
 ```
 
-Hii itatoa taarifa sawa na inayotolewa kwenye ukurasa wa miamala wa Etherscan. Kwa kulinganisha, hizi ndizo vyanzo viwili:
+Hii itatoa taarifa sawa na iliyotolewa kwenye ukurasa wa miamala wa Etherscan. Kwa ulinganisho, hapa kuna vyanzo viwili:
 
 #### Etherscan {#etherscan}
 
-![Picha ya skrini ya mwonekano wa kichunguzi cha muamala wa Etherscan](./etherscan_view.png)
+![Screenshot of Etherscan transaction explorer view](./etherscan_view.png)
 
 [Ukurasa wa mkataba wa EF kwenye Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![Picha ya skrini ya dashibodi ya hoja ya Dune Analytics](./dune_view.png)
+![Screenshot of a Dune Analytics query dashboard](./dune_view.png)
 
-Unaweza kupata dashibodi [hapa](https://dune.com/paulapivat/Learn-Ethereum). Bofya kwenye jedwali ili kuona ulizo (pia tazama hapo juu).
+Unaweza kupata dashibodi [hapa](https://dune.com/paulapivat/Learn-Ethereum). Bofya kwenye jedwali ili kuona swali (pia tazama hapo juu).
 
-### Kuchanganua Miamala {#breaking_down_transactions}
+### Kuchanganua Miamala {#breaking-down-transactions}
 
-Muamala uliowasilishwa unajumuisha taarifa kadhaa ikiwemo ([chanzo](/developers/docs/transactions/)):
+Muamala uliowasilishwa unajumuisha vipande kadhaa vya taarifa ikiwa ni pamoja na ([chanzo](/developers/docs/transactions/)):
 
-- **Mpokeaji**: Anwani ya kupokea (iliyoulizwa kama "to")
-- **Saini**: Wakati ufunguo binafsi wa mtumaji hutia saini kwenye muamala, tunachoweza kuuliza kwa kutumia SQL ni anwani ya umma ya mtumaji ("from").
-- **Thamani**: Hii ni kiasi cha ETH kilichohamishwa (tazama safu wima ya `ether`).
-- **Data**: Hii ni data yoyote ambayo imefanyiwa hashi (tazama safu wima ya `data`)
-- **gasLimit** – kiasi cha juu cha vitengo vya gesi kinachoweza kutumiwa na muamala. Vitengo vya gesi vinawakilisha hatua za kikokotozi
-- **maxPriorityFeePerGas** - kiasi cha juu cha gesi kitakachojumuishwa kama zawadi kwa mchimbaji
-- **maxFeePerGas** - kiasi cha juu cha gesi ambacho mtu yuko tayari kulipa kwa muamala (ikijumuisha baseFeePerGas na maxPriorityFeePerGas)
+- **Mpokeaji**: Anwani inayopokea (iliyohojiwa kama "to")
+- **Sahihi**: Ingawa funguo za faragha za mtumaji hutia sahihi muamala, kile tunachoweza kuhoji kwa SQL ni anwani ya umma ya mtumaji ("from").
+- **Thamani**: Hiki ni kiasi cha ETH kilichohamishwa (tazama safu wima ya `ether`).
+- **Data**: Hizi ni data za kiholela ambazo zimefanyiwa heshi (tazama safu wima ya `data`)
+- **gasLimit** – kiwango cha juu cha uniti za gesi zinazoweza kutumiwa na muamala. Uniti za gesi zinawakilisha hatua za kimahesabu
+- **maxPriorityFeePerGas** - kiwango cha juu cha gesi kitakachojumuishwa kama ada ya kipaumbele kwa mchimbaji
+- **maxFeePerGas** - kiwango cha juu cha gesi kilicho tayari kulipwa kwa ajili ya muamala (ikijumuisha baseFeePerGas na maxPriorityFeePerGas)
 
-Tunaweza kuuliza taarifa hizi maalum kwa miamala kwenda kwa anwani ya umma ya Msingi wa Ethereum:
+Tunaweza kuhoji vipande hivi maalum vya taarifa kwa miamala kwenda kwenye anwani ya umma ya Taasisi ya Ethereum:
 
 ```sql
 SELECT
@@ -102,17 +102,17 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Bloku {#blocks}
+### Vitalu {#blocks}
 
-Kila muamala utabadilisha hali ya mashine halisi ya Ethereum ([EVM](/developers/docs/evm/)) ([chanzo](/developers/docs/transactions/)). Miamala hutangazwa kwenye mtandao ili ithibitishwe na ijumuishwe kwenye bloku. Kila muamala unahusishwa na nambari ya bloku. Ili kuona data, tunaweza kuuliza nambari maalum ya bloku: 12396854 (bloku ya hivi karibuni zaidi kati ya miamala ya Msingi wa Ethereum kufikia wakati wa uandishi huu, 11/5/21).
+Kila muamala utabadilisha hali ya mashine pepe ya Ethereum ([EVM](/developers/docs/evm/)) ([chanzo](/developers/docs/transactions/)). Miamala inatangazwa kwenye mtandao ili kuthibitishwa na kujumuishwa kwenye kitalu. Kila muamala unahusishwa na nambari ya kitalu. Ili kuona data, tunaweza kuhoji nambari maalum ya kitalu: 12396854 (kitalu cha hivi karibuni zaidi kati ya miamala ya Taasisi ya Ethereum wakati wa kuandika haya, 11/5/21).
 
-Zaidi ya hayo, tunapouliza bloku mbili zinazofuata, tunaweza kuona kwamba kila bloku ina hashi ya bloku iliyotangulia (yaani, hashi ya mzazi), kuonyesha jinsi mnyororo wa bloku unavyoundwa.
+Zaidi ya hayo, tunapohoji vitalu viwili vinavyofuata, tunaweza kuona kwamba kila kitalu kina heshi ya kitalu kilichotangulia (yaani, heshi mzazi), ikionyesha jinsi mnyororo wa vitalu unavyoundwa.
 
-Kila bloku ina rejeleo kwa bloku yake ya mzazi. Hii inaonyeshwa hapa chini kati ya safu wima za `hash` na `parent_hash` ([chanzo](/developers/docs/blocks/)):
+Kila kitalu kina rejeleo la kitalu chake mzazi. Hili linaonyeshwa hapa chini kati ya safu wima za `hash` na `parent_hash` ([chanzo](/developers/docs/blocks/)):
 
 ![parent_hash](./parent_hash.png)
 
-Hili ndilo [ulizo](https://dune.com/queries/44856/88292) kwenye Dune Analytics:
+Hili hapa ni [swali](https://dune.com/queries/44856/88292) kwenye Dune Analytics:
 
 ```sql
 SELECT
@@ -126,18 +126,18 @@ WHERE "number" = 12396854 OR "number" = 12396855 OR "number" = 12396856
 LIMIT 10
 ```
 
-Tunaweza kuchunguza bloku kwa kuuliza muda, nambari ya bloku, ugumu, hashi, hashi ya mzazi, na nonce.
+Tunaweza kuchunguza kitalu kwa kuhoji muda, nambari ya kitalu, ugumu, heshi, heshi mzazi, na nonsi.
 
-Kitu pekee ambacho ulizo hili halishughulikii ni _orodha ya miamala_ ambayo inahitaji ulizo tofauti hapa chini na _mzizi wa hali_. Nodi kamili au ya kumbukumbu itahifadhi miamala yote na mabadiliko ya hali, kuwaruhusu wateja kuuliza hali ya mnyororo wakati wowote. Kwa sababu hii inahitaji nafasi kubwa ya kuhifadhi, tunaweza kutenganisha data ya mnyororo na data ya hali:
+Kitu pekee ambacho swali hili halijumuishi ni _orodha ya miamala_ ambayo inahitaji swali tofauti hapa chini na _mzizi wa hali_. Nodi kamili au ya kumbukumbu itahifadhi miamala yote na mabadiliko ya hali, ikiruhusu wateja kuhoji hali ya mnyororo wakati wowote. Kwa sababu hii inahitaji nafasi kubwa ya kuhifadhi, tunaweza kutenganisha data za mnyororo na data za hali:
 
-- Data ya mnyororo (orodha ya bloku, miamala)
-- Data ya hali (matokeo ya mabadiliko ya hali ya kila muamala)
+- Data za mnyororo (orodha ya vitalu, miamala)
+- Data za hali (matokeo ya mabadiliko ya hali ya kila muamala)
 
-Mzizi wa hali huangukia kwenye kundi la pili na ni data _iliyodokezwa_ (haihifadhiwi kwenye mnyororo), wakati data ya mnyororo iko wazi na huhifadhiwa kwenye mnyororo wenyewe ([chanzo](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
+Mzizi wa hali unaangukia katika kundi la pili na ni data _isiyo dhahiri_ (haijahifadhiwa mnyororoni), wakati data za mnyororo ni dhahiri na zimehifadhiwa kwenye mnyororo wenyewe ([chanzo](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
 
-Kwa mafunzo haya, tutazingatia data ya kwenye mnyororo ambayo _inaweza_ kuulizwa kwa SQL kupitia Dune Analytics.
+Kwa mafunzo haya, tutaangazia data za mnyororoni ambazo _zinaweza_ kuhojiwa kwa SQL kupitia Dune Analytics.
 
-Kama ilivyoelezwa hapo juu, kila bloku ina orodha ya miamala, tunaweza kuuliza hili kwa kuchuja bloku maalum. Tutajaribu bloku ya hivi karibuni zaidi, 12396854:
+Kama ilivyoelezwa hapo juu, kila kitalu kina orodha ya miamala, tunaweza kuhoji hili kwa kuchuja kitalu maalum. Tutajaribu kitalu cha hivi karibuni zaidi, 12396854:
 
 ```sql
 SELECT * FROM ethereum."transactions"
@@ -145,13 +145,13 @@ WHERE block_number = 12396854
 ORDER BY block_time DESC`
 ```
 
-Huu ndio matokeo ya SQL kwenye Dune:
+Haya hapa ni matokeo ya SQL kwenye Dune:
 
-![Picha ya skrini ya orodha ya shughuli za Ethereum](./list_of_txn.png)
+![Screenshot of a list of Ethereum transactions](./list_of_txn.png)
 
-Bloku hii moja kuongezwa kwenye mnyororo hubadilisha hali ya mashine halisi ya Ethereum ([EVM](/developers/docs/evm/)). Wakati mwingine makumi, mamia ya miamala huhakikiwa kwa wakati mmoja. Katika kisa hiki maalum, miamala 222 ilijumuishwa.
+Kitalu hiki kimoja kinachoongezwa kwenye mnyororo kinabadilisha hali ya mashine pepe ya Ethereum ([EVM](/developers/docs/evm/)). Makumi wakati mwingine, mamia ya miamala inathibitishwa kwa wakati mmoja. Katika kisa hiki maalum, miamala 222 ilijumuishwa.
 
-Ili kuona ni ngapi zilifanikiwa, tungeongeza kichujio kingine kuhesabu miamala iliyofanikiwa:
+Ili kuona ni mingapi iliyofanikiwa kweli, tungeongeza kichujio kingine ili kuhesabu miamala iliyofanikiwa:
 
 ```sql
 WITH temp_table AS (
@@ -164,26 +164,26 @@ SELECT
 FROM temp_table
 ```
 
-Kwa bloku 12396854, kati ya miamala 222 jumla, 204 zilihakikiwa kwa mafanikio:
+Kwa kitalu 12396854, kati ya jumla ya miamala 222, 204 ilithibitishwa kwa ufanisi:
 
-![Picha ya skrini ya shughuli iliyofanikiwa ya Ethereum](./successful_txn.png)
+![Screenshot of a successful Ethereum transaction](./successful_txn.png)
 
-Maombi ya miamala hutokea makumi ya mara kwa sekunde, lakini bloku huhifadhiwa takriban mara moja kila sekunde 15 ([chanzo](/developers/docs/blocks/)).
+Maombi ya miamala hutokea makumi ya mara kwa sekunde, lakini vitalu huwekwa takriban mara moja kila sekunde 15 ([chanzo](/developers/docs/blocks/)).
 
-Ili kuona kwamba kuna bloku moja inayozalishwa takriban kila sekunde 15, tunaweza kuchukua idadi ya sekunde katika siku (86400) kugawanywa kwa 15 ili kupata wastani wa makadirio ya idadi ya bloku kwa siku (~ 5760).
+Ili kuona kwamba kuna kitalu kimoja kinachozalishwa takriban kila sekunde 15, tunaweza kuchukua idadi ya sekunde katika siku (86400) na kugawanya kwa 15 ili kupata makadirio ya wastani wa idadi ya vitalu kwa siku (~ 5760).
 
-Chati ya bloku za Ethereum zinazozalishwa kwa siku (2016 - sasa) ni:
+Chati ya vitalu vya Ethereum vinavyozalishwa kwa siku (2016 - sasa) ni:
 
-![Chati inayoonyesha uzalishaji wa kila siku wa Ethereum](./daily_blocks.png)
+![Chart showing daily Ethereum block production](./daily_blocks.png)
 
-Wastani wa idadi ya bloku zinazozalishwa kila siku katika kipindi hiki ni ~5,874:
+Wastani wa idadi ya vitalu vinavyozalishwa kila siku katika kipindi hiki ni ~5,874:
 
-![Chati inayoonyesha uzalishaji wa kila siku wa Ethereum](./avg_daily_blocks.png)
+![Chart showing daily Ethereum block production](./avg_daily_blocks.png)
 
-Maulizo ni:
+Maswali ni:
 
 ```sql
-# ulizo la kuonyesha idadi ya bloku zinazozalishwa kila siku tangu 2016
+# query to visualize number of blocks produced daily since 2016
 
 SELECT
     DATE_TRUNC('day', time) AS dt,
@@ -192,7 +192,7 @@ FROM ethereum."blocks"
 GROUP BY dt
 OFFSET 1
 
-# wastani wa idadi ya bloku zinazozalishwa kwa siku
+# average number of blocks produced per day
 
 WITH temp_table AS (
 SELECT
@@ -207,15 +207,15 @@ SELECT
 FROM temp_table
 ```
 
-Wastani wa idadi ya bloku zinazozalishwa kwa siku tangu 2016 iko juu kidogo ya nambari hiyo kwa 5,874. Vinginevyo, kugawanya sekunde 86400 kwa wastani wa bloku 5874 hutoa sekunde 14.7 au takriban bloku moja kila sekunde 15.
+Wastani wa idadi ya vitalu vinavyozalishwa kwa siku tangu 2016 iko juu kidogo ya nambari hiyo kwa 5,874. Vinginevyo, kugawanya sekunde 86400 kwa wastani wa vitalu 5874 kunaleta sekunde 14.7 au takriban kitalu kimoja kila sekunde 15.
 
 ### Gesi {#gas}
 
-Bloku zina ukomo wa ukubwa. Ukubwa wa juu wa bloku hubadilika na hutofautiana kulingana na mahitaji ya mtandao kati ya vitengo 12,500,000 na 25,000,000. Vikomo vinahitajika kuzuia ukubwa wa bloku kuwa mkubwa kiholela na kuweka mzigo kwenye nodi kamili kwa upande wa nafasi ya diski na mahitaji ya kasi ([chanzo](/developers/docs/blocks/)).
+Vitalu vina kikomo cha ukubwa. Ukubwa wa juu wa kitalu unabadilika na hutofautiana kulingana na mahitaji ya mtandao kati ya uniti 12,500,000 na 25,000,000. Vikomo vinahitajika ili kuzuia ukubwa wa vitalu vikubwa kiholela kuweka mzigo kwenye nodi kamili kwa upande wa nafasi ya diski na mahitaji ya kasi ([chanzo](/developers/docs/blocks/)).
 
-Njia moja ya kufikiria kikomo cha gesi cha bloku ni kuifikiria kama **ugavi** wa nafasi ya bloku inayopatikana ambapo miamala inaweza kuwekwa kwa makundi. Kikomo cha gesi cha bloku kinaweza kuulizwa na kuonyeshwa kutoka 2016 hadi leo:
+Njia moja ya kufikiria kikomo cha gesi cha kitalu ni kukichukulia kama **usambazaji** wa nafasi ya kitalu inayopatikana ambamo miamala inaweza kuwekwa pamoja. Kikomo cha gesi cha kitalu kinaweza kuhojiwa na kuonyeshwa kuanzia 2016 hadi leo:
 
-![Chati inayoonyesha wastani wa kikomo cha gesi ya Ethereum baada ya muda](./avg_gas_limit.png)
+![Chart showing average Ethereum gas limit over time](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -226,9 +226,9 @@ GROUP BY dt
 OFFSET 1
 ```
 
-Halafu kuna gesi halisi inayotumika kila siku kulipia ukokotoaji unaofanywa kwenye mnyororo wa Ethereum (yaani, kutuma muamala, kuita mkataba-erevu, kutoa NFT). Haya ndiyo **mahitaji** ya nafasi ya bloku ya Ethereum inayopatikana:
+Kisha kuna gesi halisi inayotumika kila siku kulipia ukokotoaji unaofanywa kwenye mnyororo wa Ethereum (k.m., kutuma muamala, kuita mkataba mahiri, ufuzi wa NFT). Haya ni **mahitaji** ya nafasi ya kitalu cha Ethereum inayopatikana:
 
-![Chati inayoonyesha gesi ya kila siku ya Ethereum inayotumika](./daily_gas_used.png)
+![Chart showing daily Ethereum gas used](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -239,17 +239,17 @@ GROUP BY dt
 OFFSET 1
 ```
 
-Tunaweza pia kuweka chati hizi mbili pamoja ili kuona jinsi **mahitaji na ugavi** vinavyolingana:
+Tunaweza pia kuweka chati hizi mbili pamoja ili kuona jinsi **mahitaji na usambazaji** vinavyolingana:
 
 ![gas_demand_supply](./gas_demand_supply.png)
 
-Kwa hivyo tunaweza kuelewa bei za gesi kama kazi ya mahitaji ya nafasi ya bloku ya Ethereum, kulingana na ugavi unaopatikana.
+Kwa hivyo tunaweza kuelewa bei za gesi kama matokeo ya mahitaji ya nafasi ya kitalu cha Ethereum, kulingana na usambazaji unaopatikana.
 
-Mwishowe, tunaweza kutaka kuuliza wastani wa bei za gesi za kila siku kwa mnyororo wa Ethereum, hata hivyo, kufanya hivyo kutasababisha muda mrefu sana wa kuuliza, kwa hivyo tutachuja ulizo letu kwa kiasi cha wastani cha gesi kilicholipwa kwa kila muamala na Msingi wa Ethereum.
+Hatimaye, tunaweza kutaka kuhoji wastani wa bei za gesi za kila siku kwa mnyororo wa Ethereum, hata hivyo, kufanya hivyo kutasababisha muda mrefu sana wa kuhoji, kwa hivyo tutachuja swali letu kwa wastani wa kiasi cha gesi kinacholipwa kwa kila muamala na Taasisi ya Ethereum.
 
-![Chati inayoonyesha matumizi ya kila siku ya gesi ya Ethereum Foundation](./ef_daily_gas.png)
+![Chart showing Ethereum Foundation daily gas usage](./ef_daily_gas.png)
 
-Tunaweza kuona bei za gesi zilizolipwa kwa miamala yote iliyofanywa kwa anwani ya Msingi wa Ethereum kwa miaka mingi. Hili ndilo ulizo:
+Tunaweza kuona bei za gesi zilizolipwa kwa miamala yote iliyofanywa kwenye anwani ya Taasisi ya Ethereum kwa miaka mingi. Hili hapa ni swali:
 
 ```sql
 SELECT
@@ -263,8 +263,8 @@ ORDER BY block_time DESC
 
 ### Muhtasari {#summary}
 
-Kwa mafunzo haya, tunaelewa dhana za msingi za Ethereum na jinsi mnyororo wa bloku wa Ethereum unavyofanya kazi kwa kuuliza na kupata hisia ya data ya kwenye mnyororo.
+Kwa mafunzo haya, tunaelewa dhana za msingi za Ethereum na jinsi mnyororo wa vitalu wa Ethereum unavyofanya kazi kwa kuhoji na kupata hisia ya data za mnyororoni.
 
 Dashibodi inayoshikilia msimbo wote uliotumika katika mafunzo haya inaweza kupatikana [hapa](https://dune.com/paulapivat/Learn-Ethereum).
 
-Kwa matumizi zaidi ya data kuchunguza web3 [nipate kwenye Twitter](https://twitter.com/paulapivat).
+Kwa matumizi zaidi ya data kuchunguza Web3 [nitafute kwenye Twitter](https://twitter.com/paulapivat).

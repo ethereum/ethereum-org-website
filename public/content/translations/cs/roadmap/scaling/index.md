@@ -1,56 +1,58 @@
 ---
 title: "Škálování Etherea"
-description: "Rollupy združují transakce mimo blockchain, čímž uživateli snižují náklady za transakci. Současný způsob, jakým rollupy zpracovávají data, je však příliš drahý, což limituje, nakolik mohou transakce zlevnit. Tento problém řeší Proto-Danksharding."
+description: "Rollupy dávkují transakce mimo řetězec (offchain), čímž snižují náklady pro uživatele. Způsob, jakým rollupy v současnosti využívají data, je však příliš drahý, což omezuje, jak levné mohou transakce být. Proto-danksharding to řeší."
 lang: cs
 image: /images/roadmap/roadmap-transactions.png
-alt: "Plán Etherea"
+alt: "Plán vývoje Etherea"
 template: roadmap
 ---
 
-Ethereum je škálováno pomocí [druhé vrstvy](/layer-2/#rollups) (řešení též známého pod pojmem „rollupy“), která sdružuje transakce a výstup odesílá do Etherea. Přestože jsou rollupy až osmkrát levnější než hlavní síť Ethereum, je možné je dále optimalizovat a snížit tak náklady pro koncové uživatele. Rollupy spoléhají na některé centralizované komponenty, které mohou vývojáři v budoucnu odstranit.
+Ethereum se škáluje pomocí [vrstev 2](/layer-2/#rollups) (známých také jako rollupy), které dávkují transakce dohromady a odesílají výstup do Etherea. Přestože jsou rollupy až osmkrát levnější než Ethereum Mainnet, je možné je dále optimalizovat a snížit tak náklady pro koncové uživatele. Rollupy také spoléhají na některé centralizované komponenty, které mohou vývojáři s tím, jak rollupy dospívají, odstranit.
 
-<Alert variant="update" className="mb-8">
+<Alert variant="update">
 <AlertContent>
 <AlertTitle className="mb-4">
   Transakční náklady
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Dnešní rollupy jsou přibližně <strong>5x až 20x</strong> levnější než 1. vrstva Etherea</li>
-    <li>ZK-rollupy brzy sníží poplatky <strong>asi 40x až 100x</strong></li>
-    <li>Nadcházející změny v Ethereu přinesou další <strong>asi 100x až 1000x</strong> škálování</li>
-    <li style={{ marginBottom: 0 }}>Pro uživatele to bude znamenat, že se cena za provedení transakce ustálí na hodnotě, která odpovídá přibližně <strong>0,001 USD</strong></li>
-  </ul>
+    <li>Dnešní rollupy jsou <strong>\~5-20x</strong> levnější než vrstva 1 (l1) Etherea</li>
+    <li>ZK-rollupy brzy sníží poplatky o <strong>\~40-100x</strong></li>
+    <li>Nadcházející změny v Ethereu poskytnou dalších <strong>\~100-1000x</strong> škálování</li>
+ <li style={{ marginBottom: 0 }}>Uživatelé by měli těžit z transakcí, <strong>které stojí méně než 0,001 $</strong>
+
 </AlertContent>
 </Alert>
 
 ## Zlevnění dat {#making-data-cheaper}
 
-Rollupy sdružují velké množství transakcí, provádějí je a výsledky zasílají do Etherea. Tento postup generuje mnoho dat, která musí být otevřeně dostupná, aby kdokoli mohl provádět transakce a ověřit čestnost operátora rollupu. Pokud někdo zjistí nějakou nesrovnalost, může vznést námitku.
+Rollupy shromažďují velké množství transakcí, provádějí je a odesílají výsledky do Etherea. Tím vzniká spousta dat, která musí být veřejně dostupná, aby si kdokoli mohl transakce sám provést a ověřit, že operátor rollupu byl poctivý. Pokud někdo najde nesrovnalost, může vznést námitku.
 
-### Proto-Danksharding {#proto-danksharding}
+### Proto-danksharding {#proto-danksharding}
 
-Rollupová data jsou permanentně uložena na Ethereu, což je drahé. Více než 90 % transakčních nákladů, které uživatelé platí za použití rollupů, je využito na uložení dat. Abychom snížili transakční náklady, můžeme data přesunout do nového dočasného úložiště zvaného „blob“. Bloby jsou levnější, protože nejsou permanentní; jakmile nebudou potřeba, budou z Etherea odstraněny. Dlouhodobé ukládání dat rollupů je odpovědností lidí, kteří je potřebují, jako jsou operátoři rollupů, burzy, indexovací služby atd. Přidání blobových transakcí do infrastruktury Etherea je součástí vylepšení známého jako „Proto-Danksharding“.
+Data rollupů se historicky ukládala na Ethereu trvale, což je drahé. Více než 90 % transakčních nákladů, které uživatelé na rollupech platí, je způsobeno tímto ukládáním dat. Abychom snížili transakční náklady, můžeme data přesunout do nového dočasného úložiště „blobů“. Bloby jsou levnější, protože nejsou trvalé; jakmile již nejsou potřeba, jsou z Etherea smazány. Dlouhodobé ukládání dat rollupů se stává odpovědností těch, kteří je potřebují, jako jsou operátoři rollupů, burzy, indexovací služby atd. Přidání blobových transakcí do Etherea je součástí aktualizace známé jako „proto-danksharding“.
 
-Pomocí Proto-Dankshardingu je možné do bloků na Ethereu přidávat spoustu blobů. To umožňuje další podstatné zvýšení škálovatelnosti (více než >100x) Etherea a zmenšení transakčních nákladů.
+Díky proto-dankshardingu je možné do bloků Etherea přidat mnoho blobů. To umožňuje další podstatné (>100x) zvýšení propustnosti Etherea a snížení transakčních nákladů.
 
 ### Danksharding {#danksharding}
 
-Druhá fáze rozšiřování blobových dat je komplikovaná, protože vyžaduje nové metody kontroly dostupnosti souhrnných dat v síti. Také se v otázce oddělení odpovědnosti za vytváření bloků a návrhy [bloků](/glossary/#block) spoléhá na [validátory](/glossary/#validator). To také vyžaduje vývoj řešení kryptografického důkazu, že validátoři skutečně ověřili malé podmnožiny blobových dat.
+Druhá fáze rozšiřování blobových dat je komplikovaná, protože vyžaduje nové metody pro kontrolu dostupnosti dat rollupů v síti a spoléhá na to, že [validátoři](/glossary/#validator) oddělí své povinnosti při tvorbě [bloku](/glossary/#block) a návrhu bloku. Vyžaduje také způsob, jak kryptograficky dokázat, že validátoři ověřili malé podmnožiny blobových dat.
 
-Tento druhý krok je známý jako [„Danksharding“](/roadmap/danksharding/). Do úplné implementace pravděpodobně **zbývá několik let**. Danksharding spoléhá na další vývoj, jako je [oddělení tvorby bloků a návrhů bloků](/roadmap/pbs) a nové návrhy sítí, které umožňují efektivně potvrdit dostupnost dat náhodným vzorkováním několika kilobajtů najednou, známým jako [vzorkování dostupnosti dat (DAS)](/developers/docs/data-availability).
+Tento druhý krok je známý jako [„danksharding“](/roadmap/danksharding/). Práce na implementaci pokračují, přičemž se dosahuje pokroku v předpokladech, jako je [oddělení navrhovatele a tvůrce (PBS)](/roadmap/pbs) a nové návrhy sítě, které umožňují síti efektivně potvrdit, že jsou data dostupná, náhodným vzorkováním několika kilobajtů najednou, což je známé jako [vzorkování dostupnosti dat (DAS)](/developers/docs/data-availability).
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Více o Dankshardingu</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Více o dankshardingu</ButtonLink>
 
-## Decentralizující rollupy {#decentralizing-rollups}
+## Decentralizace rollupů {#decentralizing-rollups}
 
-[Rollupy](/layer-2) již v současné době pomáhají škálovat Ethereum. [Rozsáhlý ekosystém rollupových projektů](https://l2beat.com/scaling/tvs) umožňuje uživatelům provádět transakce rychle a levně s řadou bezpečnostních záruk. Rollupy ale byly zavedeny pomocí centralizovaných sekvencerů (to jsou počítače, které provádějí veškeré zpracování a agregaci transakcí před jejich odesláním do Etherea). To je řešení s potenciální cenzurou, protože operátory sekvenceru mohou být sankcionovány, podplaceny nebo jinak kompromitovány. [Rollupy se zároveň liší](https://l2beat.com/scaling/summary) ve způsobu, jakým ověřují příchozí data. Nejlepším způsobem je, že „prověřovatelé“ předkládají [důkazy o podvodu](/glossary/#fraud-proof) nebo důkazy o platnosti, ale ne všechny rollupy už toto umí. Dokonce i ty, které používají důkazy o platnosti/podvodu, používají jen malou skupinu známých důkazů. Proto je dalším kritickým krokem při škálování Etherea rozdělení odpovědnosti za provoz sekvencerů a prověřovatelů mezi více entit.
+[Rollupy](/layer-2) již Ethereum škálují. [Bohatý ekosystém rollupových projektů](https://l2beat.com/scaling/tvs) umožňuje uživatelům provádět transakce rychle a levně s řadou bezpečnostních záruk. Rollupy však byly spuštěny pomocí centralizovaných sekvencerů (počítačů, které provádějí veškeré zpracování a agregaci transakcí před jejich odesláním do Etherea). To je zranitelné vůči cenzuře, protože operátoři sekvencerů mohou být sankcionováni, podplaceni nebo jinak kompromitováni. Zároveň se [rollupy liší](https://l2beat.com/scaling/summary) ve způsobu, jakým ověřují příchozí data. Nejlepším způsobem je, aby „dokazovatelé“ (provers) předkládali [důkazy o podvodu](/glossary/#fraud-proof) nebo důkazy o platnosti, ale ne všechny rollupy už jsou tak daleko. Dokonce i ty rollupy, které používají důkazy o platnosti/podvodu, využívají malou skupinu známých dokazovatelů. Proto je dalším kritickým krokem ve škálování Etherea rozdělení odpovědnosti za provoz sekvencerů a dokazovatelů mezi více lidí.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Více o rollupech</ButtonLink>
 
-## Aktuální průběh {#current-progress}
+## Současný pokrok {#current-progress}
 
-Proto-Danksharding je první z bodů plánu, které budou implementovány v rámci vylepšení sítě Cancun-Deneb („Dencun“) v březnu 2024. **Úplný Danksharding bude pravděpodobně implementován za několik let**. Nejprve je třeba spustit několik dalších bodů plánu vylepšení Etherea. Decentralizace rollupové infrastruktury bude pravděpodobně postupný proces – existuje mnoho různých rollupů, které budují mírně odlišné systémy a budou se plně decentralizovat různým tempem.
+Proto-danksharding byl úspěšně implementován jako součást aktualizace sítě Cancun-Deneb („Dencun“) v březnu 2024. Od jeho implementace začaly rollupy využívat úložiště blobů, což vedlo ke snížení transakčních nákladů pro uživatele a milionům transakcí zpracovaných v blobech.
 
-[Více o vylepšení sítě s názvem Dencun](/roadmap/dencun/)
+Práce na plném dankshardingu pokračují, přičemž se dosahuje pokroku v jeho předpokladech, jako je oddělení navrhovatele a tvůrce (PBS) a vzorkování dostupnosti dat (DAS). Decentralizace infrastruktury rollupů je postupný proces – existuje mnoho různých rollupů, které budují mírně odlišné systémy a budou se plně decentralizovat různou rychlostí.
+
+[Více o aktualizaci sítě Dencun a jejím dopadu](/roadmap/dencun/)
 
 <QuizWidget quizKey="scaling" />
