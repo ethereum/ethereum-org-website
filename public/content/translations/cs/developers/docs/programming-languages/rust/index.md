@@ -7,13 +7,13 @@ incomplete: true
 
 <FeaturedText>Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Rustu</FeaturedText>
 
-Na platformě Ethereum můžete vytvářet decentralizované aplikace (neboli dapps), které využívají výhody kryptoměn a blockchainové technologie. Tyto aplikace mohou být důvěryhodné, což znamená, že jakmile je jednou nasadíte na Ethereum, budou vždy spouštěny přesně tak, jak jsou naprogramovány. Tyto aplikace mohou kontrolovat digitální aktiva, a tím vytvářet nové druhy finančních aplikací. Mohou být decentralizované, což znamená, že je nemůže ovládat jediná entita nebo osoba a že jsou téměř necenzurovatelné.
+Použijte Ethereum k vytvoření decentralizovaných aplikací (neboli „dapps“), které využívají výhod kryptoměn a technologie blockchain. Tyto dapps mohou být důvěryhodné, což znamená, že jakmile jsou nasazeny na Ethereum, budou vždy běžet tak, jak byly naprogramovány. Mohou ovládat digitální aktiva za účelem vytváření nových druhů finančních aplikací. Mohou být decentralizované, což znamená, že je neovládá žádný jediný subjekt ani osoba a je téměř nemožné je cenzurovat.
 
 ## Začínáme s chytrými kontrakty a jazykem Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Udělejte své první kroky k integraci Rustu s Ethereem**
 
-Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum.org/learn](/learn/) nebo [ethereum.org/developers](/developers/).
+Potřebujete nejprve základnější úvod? Podívejte se na [ethereum.org/learn](/learn/) nebo [ethereum.org/developers](/developers/).
 
 - [Vysvětlení blockchainu](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Porozumění chytrým kontraktům](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -22,42 +22,41 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 ## Články pro začátečníky {#beginner-articles}
 
-- [Klient Ethereum v Rustu](https://openethereum.github.io/) \* **Upozornění: OpenEthereum [je zastaralý](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) a již není udržován.** Používejte jej opatrně a nejlépe přejděte na jinou implementaci klienta.
-- [Posílání transakcí do Etherea pomocí Rustu](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
-- [Postupný návod, jak psát kontrakty v Rustu a Wasmu pro Kovan](https://github.com/paritytech/pwasm-tutorial)
+- [Ethereový klient v Rustu](https://openethereum.github.io/) \* **Upozorňujeme, že OpenEthereum [byl označen jako zastaralý](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) a již není udržován.** Používejte jej opatrně a raději přejděte na jinou implementaci klienta.
+- [Odeslání transakce do Etherea pomocí Rustu](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
+- [Podrobný návod, jak psát kontrakty v Rust Wasm pro Kovan](https://github.com/paritytech/pwasm-tutorial)
 
-## Články pro pokročilé {#intermediate-articles}
+## Články pro středně pokročilé {#intermediate-articles}
 
 ## Pokročilé vzory použití {#advanced-use-patterns}
 
-- [Knihovna pwasm_ethereum externs pro interakci se sítěmi podobnými Ethereu](https://github.com/openethereum/pwasm-ethereum)
+- [Knihovna externs pwasm_ethereum pro interakci se sítí podobnou Ethereu](https://github.com/openethereum/pwasm-ethereum)
+- [Vytvořte decentralizovaný chat pomocí JavaScriptu a Rustu](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
+- [Vytvořte decentralizovanou Todo aplikaci pomocí Vue.js a Rustu](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 
-- [Sestavení decentralizovaného chatu pomocí JavaScriptu a Rustu](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-
-- [Sestavení decentralizované todo aplikace pomocí Vue.js a Rustu](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
-
-- [Sestavení blockchainu v Rustu](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
+- [Vytvořte blockchain v Rustu](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Projekty a nástroje v Rustu {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Sbírka externů pro interakci se sítěmi podobnými Ethereu_
-- [Lighthouse](https://github.com/sigp/lighthouse) - _Rychlý klient konsensuální vrstvy Etherea_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Sbírka externs pro interakci se sítí podobnou Ethereu_
+- [Lighthouse](https://github.com/sigp/lighthouse) - _Rychlý klient vrstvy konsensu Etherea_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Navrhovaný redesign exekuční vrstvy chytrých kontraktů Etherea pomocí deterministické podmnožiny WebAssembly_
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Reference OASIS API_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Nástroj pro jednotkové testování chytrých kontraktů v Solidity využívající nativní EVM klienta Parity._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementace Ethereum Virtual Machine (EVM) v Rustu_
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementace Ethereum Virtual Machine v Rustu_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Chytrý kontrakt Wavelet v Rustu_
-- [Foundry](https://github.com/foundry-rs/foundry) - _Sada nástrojů pro vývoj aplikací pro Ethereum_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Sada nástrojů pro vývoj aplikací na Ethereu_
 - [Alloy](https://alloy.rs) - _Vysoce výkonné, dobře otestované a zdokumentované knihovny pro interakci s Ethereem a dalšími řetězci založenými na EVM._
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Implementace knihovny a peněženky pro Ethereum_
-- [SewUp](https://github.com/second-state/SewUp) - _Knihovna, která vám pomůže vytvořit kontrakt pro Ethereum WebAssembly v Rustu, stejně jako při vývoji běžného backendu_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Knihovna pro Ethereum a implementace peněženky_
+- [SewUp](https://github.com/second-state/SewUp) - _Knihovna, která vám pomůže vytvořit váš WebAssembly kontrakt pro Ethereum pomocí Rustu, podobně jako při vývoji běžného backendu_
 - [Substreams](https://github.com/streamingfast/substreams) - _Technologie pro paralelizované indexování dat z blockchainu_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (zkratka pro Rust Ethereum) je nová implementace plného uzlu Etherea
-- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Spravovaná sbírka projektů v ekosystému Etherea napsaných v Rustu_
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Vybraná sbírka projektů v ekosystému Etherea napsaných v Rustu_
+- [Stylus](https://github.com/OffchainLabs/stylus) - _Rust SDK pro tvorbu chytrých kontraktů na Arbitru_
 
-Hledáte další informační zdroje? Podívejte se na [ethereum.org/developers.](/developers/)
+Hledáte další zdroje? Podívejte se na [ethereum.org/developers.](/developers/)
 
-## Přispěvatelé komunity Rust {#rust-community-contributors}
+## Přispěvatelé z komunity Rustu {#rust-community-contributors}
 
 - [Ethereum WebAssembly](https://gitter.im/ewasm/Lobby)
 - [Oasis Gitter](https://gitter.im/Oasis-official/Lobby)

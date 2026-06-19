@@ -1,0 +1,600 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/programming-languages/dot-net/index.md",
+  "generatedAt": "2026-06-19T18:48:03.425Z",
+  "rootHash": "b4a2837a5958",
+  "tree": {
+    "contentHash": "56cb61a8214a",
+    "anchorHash": "7938f2085c74",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "13f3e961ab3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "27cf7463fcc0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:incomplete": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "prose:0": {
+        "contentHash": "c5edaafb3fd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "getting-started-with-smart-contracts-and-the-solidity-language": {
+        "contentHash": "02de7ba7547d",
+        "anchorHash": "a48afc0c5e36",
+        "labelHash": "7cd37d52b081",
+        "children": {
+          "_label": {
+            "contentHash": "7cd37d52b081",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "3a6d1b3acb1e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f8af7777bb8f",
+            "anchorHash": "da6930f1ec2d"
+          },
+          "prose:7": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d896c4bde8a6",
+            "anchorHash": "10260c8eaaaa"
+          },
+          "prose:8": {
+            "contentHash": "b220a64f849c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "f01579475e2d",
+            "anchorHash": "5458a066d411"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "9254611895b7",
+            "anchorHash": "7365a1c17c2a"
+          },
+          "prose:10": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "9ead8cce16b3",
+            "anchorHash": "a9c9e19634cc"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "bd76d1850071",
+            "anchorHash": "6586070dede3"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5"
+        ]
+      },
+      "beginner-references-and-links": {
+        "contentHash": "acf8c12aacd2",
+        "anchorHash": "35dd339a78e1",
+        "labelHash": "1c744b0e0e83",
+        "children": {
+          "_label": {
+            "contentHash": "1c744b0e0e83",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:13": {
+            "contentHash": "1c4edc9770fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2b6520f7c233",
+            "anchorHash": "e51cad83d999"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "8ae059bd29a8",
+            "anchorHash": "5d7dc1777b9c"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "8ea24ec60501",
+            "anchorHash": "bb0113ebe022"
+          },
+          "prose:16": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "05043fd1bbd3",
+            "anchorHash": "7171616aacf7"
+          },
+          "prose:17": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "30fc41a509a6",
+            "anchorHash": "242cd8687d17"
+          },
+          "prose:18": {
+            "contentHash": "5dca4e0db9fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "48079a96a4d4",
+            "anchorHash": "efe3b1755ed4"
+          },
+          "prose:19": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "de33b0d4104a",
+            "anchorHash": "e26f9b1b2911"
+          },
+          "prose:20": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "c765162b6d4b",
+            "anchorHash": "a410a4cfa07a"
+          },
+          "prose:21": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "9157bfc6f89e",
+            "anchorHash": "5c25f325a2c5"
+          },
+          "prose:22": {
+            "contentHash": "6714f2130e05",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "a6273fb551f2",
+            "anchorHash": "30d15118bb04"
+          },
+          "prose:23": {
+            "contentHash": "1080249785d2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "6b09d03dc057",
+            "anchorHash": "9288fa68d3d3"
+          },
+          "prose:24": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "1bf9434b9114",
+            "anchorHash": "d5a4d964f18a"
+          },
+          "prose:25": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:12": {
+            "contentHash": "8d4cd44d4555",
+            "anchorHash": "800178d0b9aa"
+          },
+          "prose:26": {
+            "contentHash": "9ce40775e9e0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:13",
+          "link:0",
+          "prose:14",
+          "link:1",
+          "prose:15",
+          "link:2",
+          "prose:16",
+          "link:3",
+          "prose:17",
+          "link:4",
+          "prose:18",
+          "link:5",
+          "prose:19",
+          "link:6",
+          "prose:20",
+          "link:7",
+          "prose:21",
+          "link:8",
+          "prose:22",
+          "link:9",
+          "prose:23",
+          "link:10",
+          "prose:24",
+          "link:11",
+          "prose:25",
+          "link:12",
+          "prose:26"
+        ]
+      },
+      "intermediate-articles": {
+        "contentHash": "ebe334de68bc",
+        "anchorHash": "d3408ce8b54a",
+        "labelHash": "a2555da8e22a",
+        "children": {
+          "_label": {
+            "contentHash": "a2555da8e22a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:10": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7a0bd2516002",
+            "anchorHash": "e237f9e6597b"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "86f54ec7c9dc",
+            "anchorHash": "980e75ba6531"
+          },
+          "prose:12": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "aff09e7b7484",
+            "anchorHash": "d538b341c9e3"
+          },
+          "prose:13": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "6869e7f2e295",
+            "anchorHash": "5818d24afb25"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "7e01e43c23fe",
+            "anchorHash": "8b50781f35a3"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "b0ab4ffa7c6a",
+            "anchorHash": "a9bfa81b86e2"
+          },
+          "prose:16": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "481bbbecf18e",
+            "anchorHash": "d04a1ce41435"
+          },
+          "prose:17": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "b6c46458a188",
+            "anchorHash": "f23e14f88f5d"
+          },
+          "prose:18": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "b7023d0517e0",
+            "anchorHash": "81c563e6e65f"
+          },
+          "prose:19": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "8d824af2c373",
+            "anchorHash": "f7f8271a865b"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:10",
+          "link:0",
+          "prose:11",
+          "link:1",
+          "prose:12",
+          "link:2",
+          "prose:13",
+          "link:3",
+          "prose:14",
+          "link:4",
+          "prose:15",
+          "link:5",
+          "prose:16",
+          "link:6",
+          "prose:17",
+          "link:7",
+          "prose:18",
+          "link:8",
+          "prose:19",
+          "link:9"
+        ]
+      },
+      "advanced-use-patterns": {
+        "contentHash": "d0e6591597b3",
+        "anchorHash": "f579cbfa4166",
+        "labelHash": "d791bf9455f8",
+        "children": {
+          "_label": {
+            "contentHash": "d791bf9455f8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "0409ccea7332",
+            "anchorHash": "ac4a648c5041"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "b0407b847b53",
+            "anchorHash": "5abde8ab2c69"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "dot-net-projects-tools-and-other-fun-stuff": {
+        "contentHash": "8c8c937835b9",
+        "anchorHash": "3273002e3f7f",
+        "labelHash": "758d11ce9159",
+        "children": {
+          "_label": {
+            "contentHash": "758d11ce9159",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "565e1f1b371f",
+            "anchorHash": "30d15118bb04"
+          },
+          "prose:8": {
+            "contentHash": "215d648cbf59",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "fcfe7999c4a4",
+            "anchorHash": "62f14c6948b4"
+          },
+          "prose:9": {
+            "contentHash": "77881110a40c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "25205bc4a1cf",
+            "anchorHash": "27575d096c5a"
+          },
+          "prose:10": {
+            "contentHash": "55102dcb9f80",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "f79c67c0d6de",
+            "anchorHash": "0015a5a2c918"
+          },
+          "prose:11": {
+            "contentHash": "76c757e20f0b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "83314c37a86f",
+            "anchorHash": "fd62331fa5cd"
+          },
+          "prose:12": {
+            "contentHash": "742b548a3d69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "6133cf9e4072",
+            "anchorHash": "61351d2ef0cf"
+          },
+          "prose:13": {
+            "contentHash": "0877a250d3f6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "d896c4bde8a6",
+            "anchorHash": "10260c8eaaaa"
+          },
+          "prose:14": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:7",
+          "link:0",
+          "prose:8",
+          "link:1",
+          "prose:9",
+          "link:2",
+          "prose:10",
+          "link:3",
+          "prose:11",
+          "link:4",
+          "prose:12",
+          "link:5",
+          "prose:13",
+          "link:6",
+          "prose:14"
+        ]
+      },
+      "dot-net-community-contributors": {
+        "contentHash": "3b3f3c963c32",
+        "anchorHash": "cb1017f7a364",
+        "labelHash": "84a02989f31e",
+        "children": {
+          "_label": {
+            "contentHash": "84a02989f31e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "ed8099138eb7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "68dff9f5e97d",
+            "anchorHash": "561fc6809103"
+          },
+          "prose:6": {
+            "contentHash": "c0e58ee53bbe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "78d483b90626",
+            "anchorHash": "833f7f058144"
+          },
+          "prose:7": {
+            "contentHash": "3eb03a8a10d7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "053bc65874ad",
+            "anchorHash": "c947d9d4aade"
+          },
+          "prose:8": {
+            "contentHash": "95fabbd42550",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "053bc65874ad",
+            "anchorHash": "e1caf20693a0"
+          },
+          "prose:9": {
+            "contentHash": "189913077bd9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "70fce04801be",
+            "anchorHash": "0015a5a2c918"
+          },
+          "prose:10": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "other-aggregated-lists": {
+        "contentHash": "8d6ee8dd4b3b",
+        "anchorHash": "8f8fad0c067b",
+        "labelHash": "333b6f30ee56",
+        "children": {
+          "_label": {
+            "contentHash": "333b6f30ee56",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a855da055f49",
+            "anchorHash": "74220a72ce74"
+          },
+          "link:1": {
+            "contentHash": "55b464682ead",
+            "anchorHash": "465b1d361c20"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "link:0",
+          "link:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:incomplete",
+      "prose:0",
+      "getting-started-with-smart-contracts-and-the-solidity-language",
+      "beginner-references-and-links",
+      "intermediate-articles",
+      "advanced-use-patterns",
+      "dot-net-projects-tools-and-other-fun-stuff",
+      "dot-net-community-contributors",
+      "other-aggregated-lists"
+    ]
+  },
+  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+}

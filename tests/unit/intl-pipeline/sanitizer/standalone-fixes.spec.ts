@@ -28,6 +28,7 @@ const {
   splitIntoBlocks,
   fixBackslashBeforeClosingTag,
   fixAsymmetricBackticks,
+  fixEmptyHeadingAnchors,
   fixJunkAfterHeadingAnchors,
   fixBacktickWrappedLinks,
   fixMissingLinkParentheses,
@@ -3169,6 +3170,46 @@ author: Ori Pomerantz
       const { content, fixCount } = fixDuplicateHeadingBlocks(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixEmptyHeadingAnchors", () => {
+    test("strips an empty {#} anchor from an h5 heading", () => {
+      const { content, fixCount } = fixEmptyHeadingAnchors(
+        "##### Operating system {#}"
+      )
+      expect(content).toBe("##### Operating system")
+      expect(fixCount).toBe(1)
+    })
+
+    test("strips only the empty anchor among mixed headings", () => {
+      const input =
+        "## Intro {#intro}\n\nsome text\n\n##### Operating system {#}\n\n### Done {#done}"
+      const { content, fixCount } = fixEmptyHeadingAnchors(input)
+      expect(content).toBe(
+        "## Intro {#intro}\n\nsome text\n\n##### Operating system\n\n### Done {#done}"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves non-empty anchors untouched", () => {
+      const input = "### Real heading {#real-id}"
+      const { content, fixCount } = fixEmptyHeadingAnchors(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves an empty {#} inside a code fence untouched", () => {
+      const input = "```md\n##### Operating system {#}\n```"
+      const { content, fixCount } = fixEmptyHeadingAnchors(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("strips an empty anchor with inner whitespace {# }", () => {
+      const { content, fixCount } = fixEmptyHeadingAnchors("## Title {# }")
+      expect(content).toBe("## Title")
+      expect(fixCount).toBe(1)
     })
   })
 })
