@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-18T21:46:04.203Z",
+  "englishManifestHash": "93da93b1f18d",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-9117e4",
+    "LINK-c0c514",
+    "LINK-6e7a52",
+    "LINK-4aaa67",
+    "LINK-168d83",
+    "CODE-906055",
+    "CODE-906055",
+    "CODE-906055",
+    "CODE-906055",
+    "CODE-957849",
+    "CODE-906055",
+    "CODE-957849",
+    "CODE-9c042d",
+    "CODE-9c042d",
+    "CODEBLOCK-1a25b2",
+    "LINK-8445d3",
+    "LINK-168d83",
+    "LINK-2a713f",
+    "LINK-fdad6f",
+    "LINK-8737ad",
+    "LINK-7405e4",
+    "LINK-8dd846",
+    "LINK-1291e8",
+    "LINK-672705",
+    "LINK-6c5466",
+    "LINK-1097eb",
+    "LINK-7e8505",
+    "LINK-2f19ee",
+    "LINK-bee9fb",
+    "CODE-151b6d",
+    "CODE-151b6d",
+    "LINK-b3d945",
+    "LINK-3aec22",
+    "CODE-478454",
+    "IMAGE-07bc65",
+    "IMAGE-3d75e4",
+    "LINK-7ad338",
+    "LINK-8737ad",
+    "LINK-62ca51",
+    "LINK-b65afe",
+    "LINK-f988b0",
+    "LINK-859415",
+    "LINK-9679fc",
+    "LINK-f7c05f",
+    "LINK-99585a"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-1a25b2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-906055": {
+      "type": "inline-code",
+      "values": {
+        "content": "PING"
+      }
+    },
+    "CODE-957849": {
+      "type": "inline-code",
+      "values": {
+        "content": "PONG"
+      }
+    },
+    "CODE-9c042d": {
+      "type": "inline-code",
+      "values": {
+        "content": "FIND-NEIGHBOURS"
+      }
+    },
+    "CODE-151b6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth2"
+      }
+    },
+    "CODE-478454": {
+      "type": "inline-code",
+      "values": {
+        "content": "create block"
+      }
+    },
+    "IMAGE-07bc65": {
+      "type": "image",
+      "values": {
+        "path": "cons_client_net_layer.png"
+      }
+    },
+    "IMAGE-3d75e4": {
+      "type": "image",
+      "values": {
+        "path": "exe_client_net_layer.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-9117e4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-c0c514": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go"
+      }
+    },
+    "LINK-6e7a52": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f"
+      }
+    },
+    "LINK-4aaa67": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Distributed_hash_table"
+      }
+    },
+    "LINK-168d83": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p/tree/master/discv5"
+      }
+    },
+    "LINK-8445d3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p/blob/master/discv4.md"
+      }
+    },
+    "LINK-2a713f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networking-layer/network-addresses/"
+      }
+    },
+    "LINK-fdad6f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networking-layer/network-addresses"
+      }
+    },
+    "LINK-8737ad": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p"
+      }
+    },
+    "LINK-7405e4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p/blob/master/rlpx.md"
+      }
+    },
+    "LINK-8dd846": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p/blob/master/caps/eth.md"
+      }
+    },
+    "LINK-1291e8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-672705": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p/blob/master/caps/les.md"
+      }
+    },
+    "LINK-6c5466": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p/blob/master/caps/snap.md#ethereum-snapshot-protocol-snap"
+      }
+    },
+    "LINK-1097eb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p/blob/master/caps/wit.md#ethereum-witness-protocol-wit"
+      }
+    },
+    "LINK-7e8505": {
+      "type": "link",
+      "values": {
+        "url": "https://wakunetwork.com/"
+      }
+    },
+    "LINK-2f19ee": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5"
+      }
+    },
+    "LINK-bee9fb": {
+      "type": "link",
+      "values": {
+        "url": "https://libp2p.io/"
+      }
+    },
+    "LINK-b3d945": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub"
+      }
+    },
+    "LINK-3aec22": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md"
+      }
+    },
+    "LINK-7ad338": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/eth1-eth2-client-relationship/7248"
+      }
+    },
+    "LINK-62ca51": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/libp2p/specs"
+      }
+    },
+    "LINK-b65afe": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure"
+      }
+    },
+    "LINK-f988b0": {
+      "type": "link",
+      "values": {
+        "url": "https://vac.dev/kademlia-to-discv5"
+      }
+    },
+    "LINK-859415": {
+      "type": "link",
+      "values": {
+        "url": "https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf"
+      }
+    },
+    "LINK-9679fc": {
+      "type": "link",
+      "values": {
+        "url": "https://p2p.paris/en/talks/intro-ethereum-networking/"
+      }
+    },
+    "LINK-f7c05f": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/eth1-eth2-client-relationship/7248"
+      }
+    },
+    "LINK-99585a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=zNIrIninMgg"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:46:04.203Z",
+      "status": "success"
+    }
+  }
+}

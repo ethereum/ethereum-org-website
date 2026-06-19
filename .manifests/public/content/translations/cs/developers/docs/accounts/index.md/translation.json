@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-18T20:35:50.572Z",
+  "englishManifestHash": "f1c07ae5055b",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-cd977e",
+    "LINK-adc8d3",
+    "CODE-78377b",
+    "CODE-5751e0",
+    "CODE-d93d5a",
+    "CODE-79bd67",
+    "LINK-30ef4d",
+    "IMAGE-ddf631",
+    "LINK-fb70b4",
+    "CODE-eaf220",
+    "LINK-6389dd",
+    "CODE-a54942",
+    "CODE-a54942",
+    "CODE-1d3c33",
+    "LINK-db7db2",
+    "LINK-8a3ac0",
+    "CODE-6d891f",
+    "CODEBLOCK-2fe4d8",
+    "LINK-67e167",
+    "CODE-c85d05",
+    "LINK-9d4843",
+    "LINK-65df1e",
+    "LINK-efc0b7",
+    "LINK-8efafa"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-2fe4d8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-78377b": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonce"
+      }
+    },
+    "CODE-5751e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "balance"
+      }
+    },
+    "CODE-d93d5a": {
+      "type": "inline-code",
+      "values": {
+        "content": "codeHash"
+      }
+    },
+    "CODE-79bd67": {
+      "type": "inline-code",
+      "values": {
+        "content": "storageRoot"
+      }
+    },
+    "CODE-eaf220": {
+      "type": "inline-code",
+      "values": {
+        "content": "fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f"
+      }
+    },
+    "CODE-a54942": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x"
+      }
+    },
+    "CODE-1d3c33": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x5e97870f263700f46aa00d967821199b9bc5a120"
+      }
+    },
+    "CODE-6d891f": {
+      "type": "inline-code",
+      "values": {
+        "content": "clef newaccount"
+      }
+    },
+    "CODE-c85d05": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x06012c8cf97bead5deae237070f9587f8e7a266d"
+      }
+    },
+    "IMAGE-ddf631": {
+      "type": "image",
+      "values": {
+        "path": "./accounts.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-cd977e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-30ef4d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/patricia-merkle-trie/"
+      }
+    },
+    "LINK-fb70b4": {
+      "type": "link",
+      "values": {
+        "url": "https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf"
+      }
+    },
+    "LINK-6389dd": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm"
+      }
+    },
+    "LINK-db7db2": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/docs/tools/clef/introduction"
+      }
+    },
+    "LINK-8a3ac0": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org"
+      }
+    },
+    "LINK-67e167": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/docs"
+      }
+    },
+    "LINK-9d4843": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/keys/"
+      }
+    },
+    "LINK-65df1e": {
+      "type": "link",
+      "values": {
+        "url": "https://info.etherscan.com/understanding-ethereum-accounts/"
+      }
+    },
+    "LINK-efc0b7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-8efafa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T20:35:50.572Z",
+      "status": "success"
+    }
+  }
+}
