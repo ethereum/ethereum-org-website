@@ -106,8 +106,7 @@ ZK-STARK cũng an toàn trước các máy tính lượng tử, trong khi Mật 
 
 #### Các bằng chứng tính hợp lệ hoạt động như thế nào trong các ZK-rollup? {#validity-proofs-in-zk-rollups}
 
-##### Proof generation {#}
-
+##### Proof generation
 Trước khi chấp nhận các giao dịch, nhà điều hành sẽ thực hiện các kiểm tra thông thường. Điều này bao gồm việc xác nhận rằng:
 
 - Các Tài khoản người gửi và người nhận là một phần của cây trạng thái.
@@ -132,8 +131,7 @@ Quá trình lặp lại cho mọi giao dịch; mỗi "vòng lặp" tạo ra mộ
 
 Mạch chứng minh ZK lặp qua toàn bộ lô giao dịch, xác minh chuỗi các bản cập nhật dẫn đến một gốc trạng thái cuối cùng sau khi giao dịch cuối cùng được thực thi. Gốc Merkle cuối cùng được tính toán trở thành gốc trạng thái chính tắc mới nhất của ZK-rollup.
 
-##### Proof verification {#}
-
+##### Proof verification
 Sau khi mạch chứng minh xác minh tính chính xác của các bản cập nhật trạng thái, nhà điều hành L2 gửi bằng chứng tính hợp lệ đã tính toán cho hợp đồng trình xác minh trên L1. Mạch xác minh của hợp đồng xác minh tính hợp lệ của bằng chứng và cũng kiểm tra các đầu vào công khai tạo thành một phần của bằng chứng:
 
 - **Gốc tiền trạng thái**: Gốc trạng thái cũ của ZK-rollup (tức là trước khi các giao dịch được gom lô được thực thi), phản ánh trạng thái hợp lệ được biết đến cuối cùng của chuỗi L2.

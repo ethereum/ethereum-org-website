@@ -31,7 +31,7 @@ incomplete: true
 - [الاستماع إلى أحداث العقد الذكي على إيثيريوم](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [استخدام بيسو (<span dir="ltr">Pantheon</span>)، عميل إيثيريوم المعتمد على <span dir="ltr">Java</span> مع <span dir="ltr">Linux</span>](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [تشغيل عقدة <span dir="ltr">Hyperledger</span> بيسو (<span dir="ltr">Pantheon</span>) في اختبارات تكامل <span dir="ltr">Java</span>](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [ورقة مرجعية لـ <span dir="ltr">Web3j</span>](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)<span dir="ltr">/5dfa1ea941ac3d0001ce1d90/c)</span>
+- [ورقة مرجعية لـ <span dir="ltr">Web3j</span>](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
 تعلم كيفية استخدام [<span dir="ltr">ethers-kt</span>](https://github.com/Kr1ptal/ethers-kt)، وهي مكتبة <span dir="ltr">Kotlin</span> غير متزامنة وعالية الأداء للتفاعل مع سلاسل الكتل المعتمدة على جهاز إيثيريوم الظاهري (<span dir="ltr">EVM</span>). تستهدف منصات <span dir="ltr">JVM</span> و<span dir="ltr">Android</span>.
 - [تحويل رموز <span dir="ltr">ERC-20</span>](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)

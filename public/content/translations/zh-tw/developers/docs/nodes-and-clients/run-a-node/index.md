@@ -71,19 +71,16 @@ sidebarDepth: 2
 
 此外，請確保你的網際網路連線不受[頻寬上限](https://wikipedia.org/wiki/Data_cap)的限制。建議使用不限流量的連線，因為初始同步和廣播到網路的資料可能會超過你的限制。
 
-##### 作業系統 {#}
-
+##### 作業系統
 所有客戶端都支援主要的作業系統 - Linux、macOS、Windows。這意味著你可以在一般桌上型電腦或伺服器機器上，使用最適合你的作業系統 (OS) 來執行節點。請確保你的作業系統是最新的，以避免潛在的問題和安全漏洞。
 
-##### 最低要求 {#}
-
+##### 最低要求
 - 2 核心以上的 CPU
 - 8 GB RAM
 - 2TB SSD
 - 10+ MBit/s 頻寬
 
-##### 建議規格 {#}
-
+##### 建議規格
 - 4 核心以上的快速 CPU
 - 16 GB+ RAM
 - 2+TB 的快速 SSD
@@ -151,8 +148,7 @@ sidebarDepth: 2
 
 以下是客戶端的發布頁面，你可以在其中找到它們預先建置的二進位檔案或安裝說明：
 
-##### 執行客戶端 {#}
-
+##### 執行客戶端
 - [貝蘇 (Besu)](https://github.com/hyperledger/besu/releases)
 - [艾瑞貢 (Erigon)](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads)
@@ -161,8 +157,7 @@ sidebarDepth: 2
 
 值得注意的是，客戶端多樣性是[執行層上的一個問題](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)。建議讀者考慮執行少數派的執行客戶端。
 
-##### 共識客戶端 {#}
-
+##### 共識客戶端
 - [萊特豪斯 (Lighthouse)](https://github.com/sigp/lighthouse/releases/latest)
 - [洛德斯塔 (Lodestar)](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)（不提供預先建置的二進位檔案，僅提供 Docker 映像檔或需從原始碼編譯）
 - [寧布斯 (Nimbus)](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -173,8 +168,7 @@ sidebarDepth: 2
 
 [查看最新的網路客戶端使用情況](https://clientdiversity.org/)，並了解更多關於[客戶端多樣性](/developers/docs/nodes-and-clients/client-diversity)的資訊。
 
-##### 驗證軟體 {#}
-
+##### 驗證軟體
 從網際網路下載軟體時，建議驗證其完整性。此步驟是可選的，但特別是對於像以太坊客戶端這樣關鍵的基礎設施，了解潛在的攻擊向量並避免它們非常重要。如果你下載了預先建置的二進位檔案，你需要信任它，並承擔攻擊者可能將執行檔替換為惡意檔案的風險。
 
 開發人員使用他們的 PGP 金鑰對發布的二進位檔案進行簽章，因此你可以透過密碼學驗證你執行的正是他們建立的軟體。你只需要取得開發人員使用的公鑰，這些公鑰可以在客戶端發布頁面或文件中找到。下載客戶端發布版本及其簽章後，你可以使用 PGP 實作（例如 [GnuPG](https://gnupg.org/download/index.html)）輕鬆驗證它們。查看關於在 [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) 或 [Windows/macOS](https://freedom.press/training/verifying-open-source-software/) 上使用 `gpg` 驗證開源軟體的教學。
@@ -238,8 +232,7 @@ openssl rand -hex 32 > jwtsecret
 
 > 注意，範例中的反斜線 `\` 僅用於格式化目的；設定標誌可以在單行中定義。
 
-##### 執行貝蘇 (Besu) {#}
-
+##### 執行貝蘇 (Besu)
 此範例在主網上啟動貝蘇 (Besu)，將區塊鏈資料以預設格式儲存在 `/data/ethereum`，啟用 JSON-RPC 和 Engine RPC 以連接共識客戶端。Engine API 使用代幣 `jwtsecret` 進行驗證，並且僅允許來自 `localhost` 的呼叫。
 
 ```sh
@@ -260,8 +253,7 @@ besu --Xlauncher
 
 [貝蘇 (Besu) 的文件](https://besu.hyperledger.org/public-networks/get-started/start-node/)包含其他選項和設定詳細資訊。
 
-##### 執行艾瑞貢 (Erigon) {#}
-
+##### 執行艾瑞貢 (Erigon)
 此範例在主網上啟動艾瑞貢 (Erigon)，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON-RPC，定義允許哪些命名空間，並啟用連接共識客戶端的驗證（由 `jwtsecret` 路徑定義）。
 
 ```sh
@@ -273,8 +265,7 @@ erigon --chain mainnet \
 
 艾瑞貢 (Erigon) 預設使用 8GB HDD 執行完整同步，這將產生超過 2TB 的歸檔資料。請確保 `datadir` 指向具有足夠可用空間的磁碟，或者查看可以修剪不同種類資料的 `--prune` 標誌。查看艾瑞貢 (Erigon) 的 `--help` 以了解更多資訊。
 
-##### 執行 Geth {#}
-
+##### 執行 Geth
 此範例在主網上啟動 Geth，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON-RPC 並定義允許哪些命名空間。它還啟用了連接共識客戶端的驗證，這需要 `jwtsecret` 的路徑，以及定義允許哪些連線的選項，在我們的範例中僅允許來自 `localhost` 的連線。
 
 ```sh
@@ -288,8 +279,7 @@ geth --mainnet \
 
 查看[所有設定選項的文件](https://geth.ethereum.org/docs/fundamentals/command-line-options)，並了解更多關於[與共識客戶端一起執行 Geth](https://geth.ethereum.org/docs/getting-started/consensus-clients) 的資訊。
 
-##### 執行奈瑟邁 (Nethermind) {#}
-
+##### 執行奈瑟邁 (Nethermind)
 奈瑟邁 (Nethermind) 提供各種[安裝選項](https://docs.nethermind.io/get-started/installing-nethermind)。該套件附帶各種二進位檔案，包括一個帶有引導設定的啟動器，這將幫助你互動式地建立設定。或者，你可以找到 Runner，它是執行檔本身，你可以直接使用設定標誌執行它。JSON-RPC 預設為啟用。
 
 ```sh
@@ -302,8 +292,7 @@ Nethermind.Runner --config mainnet \
 
 執行客戶端將啟動其核心功能、選擇的端點，並開始尋找對等節點。成功發現對等節點後，客戶端開始同步。執行客戶端將等待來自共識客戶端的連線。一旦客戶端成功同步到當前狀態，當前的區塊鏈資料將可用。
 
-##### 執行瑞斯 (Reth) {#}
-
+##### 執行瑞斯 (Reth)
 此範例在主網上啟動瑞斯 (Reth)，使用預設資料位置。啟用 JSON-RPC 和 Engine RPC 驗證以連接共識客戶端（由 `jwtsecret` 路徑定義），並且僅允許來自 `localhost` 的呼叫。
 
 ```sh
@@ -327,8 +316,7 @@ reth node \
 
 #### 執行共識客戶端 {#running-a-consensus-client}
 
-##### 執行萊特豪斯 (Lighthouse) {#}
-
+##### 執行萊特豪斯 (Lighthouse)
 在執行萊特豪斯 (Lighthouse) 之前，請在 [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html) 中了解更多關於如何安裝和設定它的資訊。
 
 ```sh
@@ -340,8 +328,7 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### 執行洛德斯塔 (Lodestar) {#}
-
+##### 執行洛德斯塔 (Lodestar)
 透過編譯或下載 Docker 映像檔來安裝洛德斯塔 (Lodestar) 軟體。在[文件](https://chainsafe.github.io/lodestar/)和更全面的[設定指南](https://hackmd.io/@philknows/rk5cDvKmK)中了解更多資訊。
 
 ```sh
@@ -353,8 +340,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### 執行寧布斯 (Nimbus) {#}
-
+##### 執行寧布斯 (Nimbus)
 寧布斯 (Nimbus) 附帶共識和執行客戶端。即使在運算能力非常有限的各種裝置上，它也可以執行。
 在[安裝依賴項和寧布斯 (Nimbus) 本身](https://nimbus.guide/quick-start.html)之後，你可以執行其共識客戶端：
 
@@ -366,8 +352,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### 執行普萊斯姆 (Prysm) {#}
-
+##### 執行普萊斯姆 (Prysm)
 普萊斯姆 (Prysm) 附帶允許輕鬆自動安裝的腳本。詳細資訊可以在[普萊斯姆 (Prysm) 文件](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)中找到。
 
 ```sh
@@ -378,8 +363,7 @@ nimbus_beacon_node \
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### 執行泰庫 (Teku) {#}
-
+##### 執行泰庫 (Teku)
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \

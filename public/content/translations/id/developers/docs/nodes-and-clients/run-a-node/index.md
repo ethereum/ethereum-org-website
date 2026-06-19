@@ -71,19 +71,16 @@ Ukuran basis data dan kecepatan sinkronisasi awal bergantung pada klien yang dip
 
 Pastikan juga koneksi internet Anda tidak dibatasi oleh [batas bandwidth](https://wikipedia.org/wiki/Data_cap). Disarankan untuk menggunakan koneksi tanpa batas karena sinkronisasi awal dan data yang disiarkan ke jaringan dapat melebihi batas Anda.
 
-##### Sistem operasi {#}
-
+##### Sistem operasi
 Semua klien mendukung sistem operasi utama - Linux, macOS, Windows. Ini berarti Anda dapat menjalankan node pada mesin desktop atau server biasa dengan sistem operasi (OS) yang paling sesuai untuk Anda. Pastikan OS Anda mutakhir untuk menghindari potensi masalah dan kerentanan keamanan.
 
-##### Persyaratan minimum {#}
-
+##### Persyaratan minimum
 - CPU dengan 2+ inti
 - RAM 8 GB
 - SSD 2TB
 - Bandwidth 10+ MBit/s
 
-##### Spesifikasi yang disarankan {#}
-
+##### Spesifikasi yang disarankan
 - CPU cepat dengan 4+ inti
 - RAM 16 GB+
 - SSD cepat dengan 2+TB
@@ -151,8 +148,7 @@ Instruksi untuk menginstal setiap klien disediakan dalam dokumentasi yang ditaut
 
 Berikut adalah halaman rilis klien tempat Anda dapat menemukan biner pra-kompilasi mereka atau instruksi tentang instalasi:
 
-##### Klien eksekusi {#}
-
+##### Klien eksekusi
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads)
@@ -161,8 +157,7 @@ Berikut adalah halaman rilis klien tempat Anda dapat menemukan biner pra-kompila
 
 Perlu juga dicatat bahwa keragaman klien adalah [masalah pada lapisan eksekusi](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Disarankan agar pembaca mempertimbangkan untuk menjalankan klien eksekusi minoritas.
 
-##### Klien konsensus {#}
-
+##### Klien konsensus
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Tidak menyediakan biner pra-kompilasi, hanya citra Docker atau untuk dikompilasi dari sumber)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -173,8 +168,7 @@ Perlu juga dicatat bahwa keragaman klien adalah [masalah pada lapisan eksekusi](
 
 [Lihat penggunaan klien jaringan terbaru](https://clientdiversity.org/) dan pelajari lebih lanjut tentang [keragaman klien](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Memverifikasi perangkat lunak {#}
-
+##### Memverifikasi perangkat lunak
 Saat mengunduh perangkat lunak dari internet, disarankan untuk memverifikasi integritasnya. Langkah ini opsional tetapi terutama dengan bagian infrastruktur penting seperti klien Ethereum, penting untuk menyadari potensi vektor serangan dan menghindarinya. Jika Anda mengunduh biner pra-kompilasi, Anda harus memercayainya dan mengambil risiko bahwa penyerang dapat menukar file yang dapat dieksekusi dengan yang berbahaya.
 
 Pengembang menandatangani biner yang dirilis dengan kunci PGP mereka sehingga Anda dapat memverifikasi secara kriptografis bahwa Anda menjalankan perangkat lunak yang persis mereka buat. Anda hanya perlu mendapatkan kunci publik yang digunakan oleh pengembang, yang dapat ditemukan di halaman rilis klien atau dalam dokumentasi. Setelah mengunduh rilis klien dan tanda tangannya, Anda dapat menggunakan implementasi PGP, misalnya, [GnuPG](https://gnupg.org/download/index.html) untuk memverifikasinya dengan mudah. Lihat tutorial tentang memverifikasi perangkat lunak sumber terbuka menggunakan `gpg` di [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) atau [Windows/macOS](https://freedom.press/training/verifying-open-source-software/).
@@ -238,8 +232,7 @@ Harap diingat bahwa ini hanyalah contoh dasar, semua pengaturan lainnya akan dia
 
 > Perhatikan bahwa garis miring terbalik `\` dalam contoh hanya untuk tujuan pemformatan; tanda (flag) konfigurasi dapat ditentukan dalam satu baris.
 
-##### Menjalankan Besu {#}
-
+##### Menjalankan Besu
 Contoh ini memulai Besu di Mainnet, menyimpan data rantai blok dalam format default di `/data/ethereum`, mengaktifkan JSON-RPC dan Engine RPC untuk menghubungkan klien konsensus. Engine API diautentikasi dengan token `jwtsecret` dan hanya panggilan dari `localhost` yang diizinkan.
 
 ```sh
@@ -260,8 +253,7 @@ besu --Xlauncher
 
 [Dokumentasi Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) berisi opsi tambahan dan detail konfigurasi.
 
-##### Menjalankan Erigon {#}
-
+##### Menjalankan Erigon
 Contoh ini memulai Erigon di Mainnet, menyimpan data rantai blok di `/data/ethereum`, mengaktifkan JSON-RPC, menentukan namespace mana yang diizinkan dan mengaktifkan autentikasi untuk menghubungkan klien konsensus yang ditentukan oleh jalur `jwtsecret`.
 
 ```sh
@@ -273,8 +265,7 @@ erigon --chain mainnet \
 
 Erigon secara default melakukan sinkronisasi penuh dengan HDD 8GB yang akan menghasilkan lebih dari 2TB data arsip. Pastikan `datadir` menunjuk ke disk dengan ruang kosong yang cukup atau lihat tanda `--prune` yang dapat memangkas berbagai jenis data. Periksa `--help` Erigon untuk mempelajari lebih lanjut.
 
-##### Menjalankan Geth {#}
-
+##### Menjalankan Geth
 Contoh ini memulai Geth di Mainnet, menyimpan data rantai blok di `/data/ethereum`, mengaktifkan JSON-RPC dan menentukan namespace mana yang diizinkan. Ini juga mengaktifkan autentikasi untuk menghubungkan klien konsensus yang memerlukan jalur ke `jwtsecret` dan juga opsi yang menentukan koneksi mana yang diizinkan, dalam contoh kami hanya dari `localhost`.
 
 ```sh
@@ -288,8 +279,7 @@ geth --mainnet \
 
 Periksa [dokumen untuk semua opsi konfigurasi](https://geth.ethereum.org/docs/fundamentals/command-line-options) dan pelajari lebih lanjut tentang [menjalankan Geth dengan klien konsensus](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Menjalankan Nethermind {#}
-
+##### Menjalankan Nethermind
 Nethermind menawarkan berbagai [opsi instalasi](https://docs.nethermind.io/get-started/installing-nethermind). Paket ini dilengkapi dengan berbagai biner, termasuk Peluncur dengan pengaturan terpandu, yang akan membantu Anda membuat konfigurasi secara interaktif. Sebagai alternatif, Anda menemukan Runner yang merupakan file yang dapat dieksekusi itu sendiri dan Anda dapat menjalankannya dengan tanda konfigurasi. JSON-RPC diaktifkan secara default.
 
 ```sh
@@ -302,8 +292,7 @@ Dokumen Nethermind menawarkan [panduan lengkap](https://docs.nethermind.io/get-s
 
 Klien eksekusi akan memulai fungsi intinya, titik akhir yang dipilih, dan mulai mencari rekan (peer). Setelah berhasil menemukan rekan, klien memulai sinkronisasi. Klien eksekusi akan menunggu koneksi dari klien konsensus. Data rantai blok saat ini akan tersedia setelah klien berhasil disinkronkan ke state saat ini.
 
-##### Menjalankan Reth {#}
-
+##### Menjalankan Reth
 Contoh ini memulai Reth di Mainnet, menggunakan lokasi data default. Mengaktifkan autentikasi JSON-RPC dan Engine RPC untuk menghubungkan klien konsensus yang ditentukan oleh jalur `jwtsecret`, dengan hanya panggilan dari `localhost` yang diizinkan.
 
 ```sh
@@ -327,8 +316,7 @@ Saat memulai Simpul Suar di testnet, Anda dapat menghemat waktu sinkronisasi yan
 
 #### Menjalankan klien konsensus {#running-a-consensus-client}
 
-##### Menjalankan Lighthouse {#}
-
+##### Menjalankan Lighthouse
 Sebelum menjalankan Lighthouse, pelajari lebih lanjut tentang cara menginstal dan mengonfigurasinya di [Buku Lighthouse](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```sh
@@ -340,8 +328,7 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### Menjalankan Lodestar {#}
-
+##### Menjalankan Lodestar
 Instal perangkat lunak Lodestar dengan mengkompilasinya atau mengunduh citra Docker. Pelajari lebih lanjut di [dokumen](https://chainsafe.github.io/lodestar/) dan [panduan pengaturan](https://hackmd.io/@philknows/rk5cDvKmK) yang lebih komprehensif.
 
 ```sh
@@ -353,8 +340,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Menjalankan Nimbus {#}
-
+##### Menjalankan Nimbus
 Nimbus dilengkapi dengan klien konsensus dan eksekusi. Ini dapat dijalankan di berbagai perangkat bahkan dengan daya komputasi yang sangat sederhana.
 Setelah [menginstal dependensi dan Nimbus itu sendiri](https://nimbus.guide/quick-start.html), Anda dapat menjalankan klien konsensusnya:
 
@@ -366,8 +352,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Menjalankan Prysm {#}
-
+##### Menjalankan Prysm
 Prysm dilengkapi dengan skrip yang memungkinkan instalasi otomatis yang mudah. Detailnya dapat ditemukan di [dokumen Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
@@ -378,8 +363,7 @@ Prysm dilengkapi dengan skrip yang memungkinkan instalasi otomatis yang mudah. D
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### Menjalankan Teku {#}
-
+##### Menjalankan Teku
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \

@@ -71,19 +71,16 @@ Die Größe der Datenbank und die Geschwindigkeit der anfänglichen Synchronisie
 
 Stellen Sie außerdem sicher, dass Ihre Internetverbindung nicht durch eine [Bandbreitenbegrenzung](https://wikipedia.org/wiki/Data_cap) eingeschränkt ist. Es wird empfohlen, eine unbegrenzte Verbindung zu verwenden, da die anfängliche Synchronisierung und die an das Netzwerk gesendeten Daten Ihr Limit überschreiten könnten.
 
-##### Betriebssystem {#}
-
+##### Betriebssystem
 Alle Clients unterstützen die gängigen Betriebssysteme – Linux, macOS, Windows. Das bedeutet, dass Sie Knoten auf normalen Desktop- oder Servermaschinen mit dem Betriebssystem (OS) ausführen können, das Ihnen am besten passt. Stellen Sie sicher, dass Ihr Betriebssystem auf dem neuesten Stand ist, um mögliche Probleme und Sicherheitslücken zu vermeiden.
 
-##### Mindestanforderungen {#}
-
+##### Mindestanforderungen
 - CPU mit 2+ Kernen
 - 8 GB RAM
 - 2 TB SSD
 - 10+ MBit/s Bandbreite
 
-##### Empfohlene Spezifikationen {#}
-
+##### Empfohlene Spezifikationen
 - Schnelle CPU mit 4+ Kernen
 - 16 GB+ RAM
 - Schnelle SSD mit 2+ TB
@@ -151,8 +148,7 @@ Anweisungen zur Installation jedes Clients finden Sie in der Dokumentation, die 
 
 Hier sind die Release-Seiten der Clients, auf denen Sie deren vorkompilierte Binärdateien oder Installationsanweisungen finden können:
 
-##### Ausführungsclients {#}
-
+##### Ausführungsclients
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads)
@@ -161,8 +157,7 @@ Hier sind die Release-Seiten der Clients, auf denen Sie deren vorkompilierte Bin
 
 Es ist auch erwähnenswert, dass die Client-Diversität ein [Problem auf der Ausführungsschicht](/developers/docs/nodes-and-clients/client-diversity/#execution-layer) ist. Es wird empfohlen, dass Leser in Erwägung ziehen, einen Minderheits-Ausführungsclient zu betreiben.
 
-##### Konsens-Clients {#}
-
+##### Konsens-Clients
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Bietet keine vorkompilierte Binärdatei, nur ein Docker-Image oder muss aus dem Quellcode kompiliert werden)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -173,8 +168,7 @@ Es ist auch erwähnenswert, dass die Client-Diversität ein [Problem auf der Aus
 
 [Sehen Sie sich die aktuelle Nutzung der Netzwerk-Clients an](https://clientdiversity.org/) und erfahren Sie mehr über [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Überprüfen der Software {#}
-
+##### Überprüfen der Software
 Beim Herunterladen von Software aus dem Internet wird empfohlen, deren Integrität zu überprüfen. Dieser Schritt ist optional, aber besonders bei einem so wichtigen Infrastrukturteil wie dem Ethereum-Client ist es wichtig, sich potenzieller Angriffsvektoren bewusst zu sein und diese zu vermeiden. Wenn Sie eine vorkompilierte Binärdatei heruntergeladen haben, müssen Sie ihr vertrauen und riskieren, dass ein Angreifer die ausführbare Datei gegen eine bösartige austauschen könnte.
 
 Entwickler signieren veröffentlichte Binärdateien mit ihren PGP-Schlüsseln, sodass Sie kryptografisch überprüfen können, ob Sie genau die von ihnen erstellte Software ausführen. Sie müssen lediglich die von den Entwicklern verwendeten öffentlichen Schlüssel beziehen, die auf den Release-Seiten der Clients oder in der Dokumentation zu finden sind. Nach dem Herunterladen des Client-Releases und seiner Signatur können Sie eine PGP-Implementierung, z. B. [GnuPG](https://gnupg.org/download/index.html), verwenden, um diese einfach zu überprüfen. Sehen Sie sich ein Tutorial zur Überprüfung von Open-Source-Software mit `gpg` unter [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) oder [Windows/macOS](https://freedom.press/training/verifying-open-source-software/) an.
@@ -238,8 +232,7 @@ Bitte denken Sie daran, dass dies nur ein grundlegendes Beispiel ist, alle ander
 
 > Beachten Sie, dass Backslashes `\` in Beispielen nur Formatierungszwecken dienen; Konfigurations-Flags können in einer einzigen Zeile definiert werden.
 
-##### Ausführen von Besu {#}
-
+##### Ausführen von Besu
 Dieses Beispiel startet Besu im Mainnet, speichert Blockchain-Daten im Standardformat unter `/data/ethereum`, aktiviert JSON-RPC und Engine RPC für die Verbindung des Konsens-Clients. Die Engine API wird mit dem Token `jwtsecret` authentifiziert und es sind nur Aufrufe von `localhost` erlaubt.
 
 ```sh
@@ -260,8 +253,7 @@ besu --Xlauncher
 
 Die [Dokumentation von Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) enthält zusätzliche Optionen und Konfigurationsdetails.
 
-##### Ausführen von Erigon {#}
-
+##### Ausführen von Erigon
 Dieses Beispiel startet Erigon im Mainnet, speichert Blockchain-Daten unter `/data/ethereum`, aktiviert JSON-RPC, definiert, welche Namespaces erlaubt sind, und aktiviert die Authentifizierung für die Verbindung des Konsens-Clients, die durch den Pfad `jwtsecret` definiert ist.
 
 ```sh
@@ -273,8 +265,7 @@ erigon --chain mainnet \
 
 Erigon führt standardmäßig eine vollständige Synchronisierung mit 8 GB HDD durch, was zu mehr als 2 TB Archivdaten führt. Stellen Sie sicher, dass `datadir` auf eine Festplatte mit ausreichend freiem Speicherplatz verweist, oder sehen Sie sich das Flag `--prune` an, das verschiedene Arten von Daten trimmen kann. Überprüfen Sie die `--help` von Erigon, um mehr zu erfahren.
 
-##### Ausführen von Geth {#}
-
+##### Ausführen von Geth
 Dieses Beispiel startet Geth im Mainnet, speichert Blockchain-Daten unter `/data/ethereum`, aktiviert JSON-RPC und definiert, welche Namespaces erlaubt sind. Es aktiviert auch die Authentifizierung für die Verbindung des Konsens-Clients, was den Pfad zu `jwtsecret` erfordert, sowie eine Option, die definiert, welche Verbindungen erlaubt sind, in unserem Beispiel nur von `localhost`.
 
 ```sh
@@ -288,8 +279,7 @@ geth --mainnet \
 
 Sehen Sie sich die [Dokumentation für alle Konfigurationsoptionen](https://geth.ethereum.org/docs/fundamentals/command-line-options) an und erfahren Sie mehr über den [Betrieb von Geth mit einem Konsens-Client](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Ausführen von Nethermind {#}
-
+##### Ausführen von Nethermind
 Nethermind bietet verschiedene [Installationsoptionen](https://docs.nethermind.io/get-started/installing-nethermind). Das Paket enthält verschiedene Binärdateien, einschließlich eines Launchers mit einem geführten Setup, der Ihnen hilft, die Konfiguration interaktiv zu erstellen. Alternativ finden Sie den Runner, der die ausführbare Datei selbst ist und den Sie einfach mit Konfigurations-Flags ausführen können. JSON-RPC ist standardmäßig aktiviert.
 
 ```sh
@@ -302,8 +292,7 @@ Die Nethermind-Dokumentation bietet eine [vollständige Anleitung](https://docs.
 
 Ein Ausführungsclient initiiert seine Kernfunktionen, die ausgewählten Endpunkte und beginnt mit der Suche nach Peers. Nach der erfolgreichen Erkennung von Peers beginnt der Client mit der Synchronisierung. Der Ausführungsclient wartet auf eine Verbindung vom Konsens-Client. Aktuelle Blockchain-Daten sind verfügbar, sobald der Client erfolgreich auf den aktuellen Zustand synchronisiert ist.
 
-##### Ausführen von Reth {#}
-
+##### Ausführen von Reth
 Dieses Beispiel startet Reth im Mainnet unter Verwendung des Standard-Speicherorts für Daten. Es aktiviert JSON-RPC und die Engine-RPC-Authentifizierung für die Verbindung des Konsens-Clients, die durch den Pfad `jwtsecret` definiert ist, wobei nur Aufrufe von `localhost` erlaubt sind.
 
 ```sh
@@ -327,8 +316,7 @@ Wenn Sie einen Beacon-Knoten in einem Testnetz starten, können Sie durch die Ve
 
 #### Ausführen eines Konsens-Clients {#running-a-consensus-client}
 
-##### Ausführen von Lighthouse {#}
-
+##### Ausführen von Lighthouse
 Bevor Sie Lighthouse ausführen, erfahren Sie im [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html) mehr darüber, wie Sie es installieren und konfigurieren.
 
 ```sh
@@ -340,8 +328,7 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### Ausführen von Lodestar {#}
-
+##### Ausführen von Lodestar
 Installieren Sie die Lodestar-Software, indem Sie sie kompilieren oder das Docker-Image herunterladen. Erfahren Sie mehr in der [Dokumentation](https://chainsafe.github.io/lodestar/) und der umfassenderen [Einrichtungsanleitung](https://hackmd.io/@philknows/rk5cDvKmK).
 
 ```sh
@@ -353,8 +340,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Ausführen von Nimbus {#}
-
+##### Ausführen von Nimbus
 Nimbus wird sowohl mit Konsens- als auch mit Ausführungsclients geliefert. Es kann auf verschiedenen Geräten ausgeführt werden, selbst mit sehr bescheidener Rechenleistung.
 Nach der [Installation der Abhängigkeiten und von Nimbus selbst](https://nimbus.guide/quick-start.html) können Sie seinen Konsens-Client ausführen:
 
@@ -366,8 +352,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Ausführen von Prysm {#}
-
+##### Ausführen von Prysm
 Prysm wird mit einem Skript geliefert, das eine einfache automatische Installation ermöglicht. Details finden Sie in der [Prysm-Dokumentation](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
@@ -378,8 +363,7 @@ Prysm wird mit einem Skript geliefert, das eine einfache automatische Installati
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### Ausführen von Teku {#}
-
+##### Ausführen von Teku
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \

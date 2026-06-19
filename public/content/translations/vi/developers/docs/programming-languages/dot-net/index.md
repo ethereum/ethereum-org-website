@@ -5,7 +5,7 @@ lang: vi
 incomplete: true
 ---
 
-<HTML-PLACEHOLDER-COMPONENT-111111>Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên .NET</HTML-PLACEHOLDER-COMPONENT-111111>
+<FeaturedText>Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên .NET</FeaturedText>
 
 Sử dụng Ethereum để tạo các ứng dụng phi tập trung (hoặc "dapp") tận dụng những lợi ích của tiền mã hóa và công nghệ chuỗi khối. Các dapp này có thể đáng tin cậy, nghĩa là một khi được triển khai lên Ethereum, chúng sẽ luôn chạy đúng như được lập trình. Chúng có thể kiểm soát các tài sản kỹ thuật số để tạo ra các loại ứng dụng tài chính mới. Chúng có thể phi tập trung, nghĩa là không một thực thể hay cá nhân nào kiểm soát chúng và gần như không thể bị kiểm duyệt.
 

@@ -31,7 +31,7 @@ incomplete: true
 - [ایتھیریم سمارٹ کنٹریکٹ ایونٹس کو سننا](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [<span dir="ltr">Linux</span> کے ساتھ <span dir="ltr">Java</span> ایتھیریم کلائنٹ، بیسو (<span dir="ltr">Pantheon</span>) کا استعمال](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [<span dir="ltr">Java</span> انٹیگریشن ٹیسٹس میں <span dir="ltr">Hyperledger</span> بیسو (<span dir="ltr">Pantheon</span>) نوڈ چلانا](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [<span dir="ltr">Web3j</span> چیٹ شیٹ](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)<span dir="ltr">/5dfa1ea941ac3d0001ce1d90/c>)</span>
+- [<span dir="ltr">Web3j</span> چیٹ شیٹ](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
 [<span dir="ltr">ethers-kt</span>](https://github.com/Kr1ptal/ethers-kt) استعمال کرنے کا طریقہ سیکھیں، جو <span dir="ltr">EVM</span> پر مبنی بلاک چینز کے ساتھ تعامل کے لیے ایک غیر مطابقت پذیر (async)، اعلی کارکردگی والی <span dir="ltr">Kotlin</span> لائبریری ہے۔ یہ <span dir="ltr">JVM</span> اور <span dir="ltr">Android</span> پلیٹ فارمز کو ہدف بناتی ہے۔
 - [<span dir="ltr">ERC-20</span> ٹوکنز کی منتقلی](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)

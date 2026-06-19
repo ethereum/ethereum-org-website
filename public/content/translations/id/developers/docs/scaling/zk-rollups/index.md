@@ -106,8 +106,7 @@ ZK-STARK juga aman terhadap komputer kuantum, sementara Kriptografi Kurva Elipti
 
 #### Bagaimana cara kerja bukti validitas di ZK-rollup? {#validity-proofs-in-zk-rollups}
 
-##### Pembuatan bukti {#}
-
+##### Pembuatan bukti
 Sebelum menerima transaksi, operator akan melakukan pemeriksaan biasa. Ini termasuk mengonfirmasi bahwa:
 
 - Akun pengirim dan penerima adalah bagian dari pohon state.
@@ -132,8 +131,7 @@ Proses ini berulang untuk setiap transaksi; setiap "loop" membuat akar state bar
 
 Sirkuit pembuktian ZK melakukan iterasi pada seluruh batch transaksi, memverifikasi urutan pembaruan yang menghasilkan akar state akhir setelah transaksi terakhir dieksekusi. Akar Merkle terakhir yang dihitung menjadi akar state kanonis terbaru dari ZK-rollup.
 
-##### Verifikasi bukti {#}
-
+##### Verifikasi bukti
 Setelah sirkuit pembuktian memverifikasi kebenaran pembaruan state, operator l2 mengirimkan bukti validitas yang dihitung ke kontrak pemverifikasi di l1. Sirkuit verifikasi kontrak memverifikasi validitas bukti dan juga memeriksa input publik yang menjadi bagian dari bukti:
 
 - **Akar pra-state**: Akar state lama ZK-rollup (yaitu, sebelum transaksi yang diproses secara batch dieksekusi), yang mencerminkan state valid terakhir yang diketahui dari rantai l2.
@@ -222,15 +220,15 @@ Tonton Finematics menjelaskan ZK-rollup:
 
 ## Siapa yang mengerjakan zkEVM? {#zkevm-projects}
 
-<HTML-PLACEHOLDER-COMPONENT-000001>
-
-<HTML-PLACEHOLDER-COMPONENT-000003>
-<HTML-PLACEHOLDER-COMPONENT-000004>zkEVM untuk l2 vs l1</HTML-PLACEHOLDER-COMPONENT-000004>
-<HTML-PLACEHOLDER-COMPONENT-000005>
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>zkEVM untuk l2 vs l1</AlertTitle>
+<AlertDescription>
 Proyek-proyek di bawah ini menggunakan teknologi zkEVM untuk membangun rollup Lapisan 2. Ada juga penelitian tentang penggunaan zkEVM untuk [verifikasi blok l1](/roadmap/zkevm/), yang akan memungkinkan validator untuk memverifikasi blok Ethereum tanpa mengeksekusi ulang transaksi.
-</HTML-PLACEHOLDER-COMPONENT-000005>
-</HTML-PLACEHOLDER-COMPONENT-000003>
-</HTML-PLACEHOLDER-COMPONENT-000001>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Proyek yang mengerjakan zkEVM meliputi:
 

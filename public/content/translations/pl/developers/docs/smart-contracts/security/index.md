@@ -34,8 +34,7 @@ Rejestracja pojedynczego adresu jako `Owner` w inteligentnym kontrakcie wprowadz
 
 W kontroli dostępu opartej na rolach dostęp do wrażliwych funkcji jest rozdzielony między grupę zaufanych uczestników. Na przykład jedno konto może być odpowiedzialne za wybijanie tokenów, podczas gdy inne konto wykonuje aktualizacje lub wstrzymuje kontrakt. Zdecentralizowanie kontroli dostępu w ten sposób eliminuje pojedyncze punkty awarii i zmniejsza założenia dotyczące zaufania dla użytkowników.
 
-##### Korzystanie z portfeli z wielopodpisem {#}
-
+##### Korzystanie z portfeli z wielopodpisem
 Innym podejściem do wdrożenia bezpiecznej kontroli dostępu jest użycie [konta z wielopodpisem](/developers/docs/smart-contracts/#multisig) do zarządzania kontraktem. W przeciwieństwie do zwykłego EOA, konta z wielopodpisem są własnością wielu podmiotów i wymagają podpisów od minimalnej liczby kont — powiedzmy 3 z 5 — do wykonania transakcji.
 
 Użycie multisig do kontroli dostępu wprowadza dodatkową warstwę bezpieczeństwa, ponieważ działania na docelowym kontrakcie wymagają zgody wielu stron. Jest to szczególnie przydatne, jeśli konieczne jest użycie wzorca Ownable, ponieważ utrudnia to atakującemu lub nieuczciwemu pracownikowi manipulowanie wrażliwymi funkcjami kontraktu w złośliwych celach.
@@ -306,8 +305,7 @@ Nie ma w tym nic złego, z wyjątkiem tego, że `Attacker` ma inną funkcję, kt
 
 Podsumowując, ponieważ saldo wywołującego nie jest ustawiane na 0, dopóki wykonanie funkcji nie zostanie zakończone, kolejne wywołania zakończą się sukcesem i pozwolą wywołującemu na wielokrotną wypłatę swojego salda. Tego rodzaju atak może zostać użyty do opróżnienia inteligentnego kontraktu z jego środków, tak jak miało to miejsce w [ataku na DAO w 2016 roku](https://www.coindesk.com/learn/understanding-the-dao-attack). Ataki reentrancji są nadal krytycznym problemem dla inteligentnych kontraktów, co pokazują [publiczne listy exploitów reentrancji](https://github.com/pcaversaccio/reentrancy-attacks).
 
-##### Jak zapobiegać atakom reentrancji {#}
-
+##### Jak zapobiegać atakom reentrancji
 Podejściem do radzenia sobie z reentrancją jest podążanie za [wzorcem sprawdzenia-efekty-interakcje (checks-effects-interactions)](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Wzorzec ten porządkuje wykonywanie funkcji w taki sposób, że kod wykonujący niezbędne sprawdzenia przed przejściem do wykonania jest na pierwszym miejscu, następnie kod manipulujący stanem kontraktu, a kod wchodzący w interakcje z innymi kontraktami lub EOA jest na końcu.
 
 Wzorzec sprawdzenia-efekty-interakcje jest używany w poprawionej wersji kontraktu `Victim` pokazanej poniżej:
@@ -433,8 +431,7 @@ contract Attack {
 }
 ```
 
-##### Jak zapobiegać niedomiarom i przepełnieniom liczb całkowitych {#}
-
+##### Jak zapobiegać niedomiarom i przepełnieniom liczb całkowitych
 Począwszy od wersji 0.8.0, kompilator Solidity odrzuca kod, który powoduje niedomiar i przepełnienie liczb całkowitych. Jednakże kontrakty skompilowane w niższej wersji kompilatora powinny albo przeprowadzać sprawdzanie funkcji obejmujących operacje arytmetyczne, albo używać biblioteki (np. [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)), która sprawdza niedomiar/przepełnienie.
 
 #### Manipulacja wyrocznią {#oracle-manipulation}
@@ -449,8 +446,7 @@ Ceny na DEX są często dokładne, w dużej mierze dzięki arbitrażystom przywr
 
 Na przykład atakujący mógłby sztucznie zawyżyć cenę spot aktywa, zaciągając błyskawiczną pożyczkę tuż przed wejściem w interakcję z Twoim kontraktem pożyczkowym. Zapytanie DEX o cenę aktywa zwróciłoby wyższą niż normalnie wartość (z powodu dużego „zlecenia kupna” atakującego, które zniekształca popyt na aktywo), pozwalając mu pożyczyć więcej, niż powinien. Takie „ataki z użyciem błyskawicznych pożyczek” były wykorzystywane do eksploatacji polegania na wyroczniach cenowych wśród aplikacji DeFi, kosztując protokoły miliony utraconych środków.
 
-##### Jak zapobiegać manipulacji wyrocznią {#}
-
+##### Jak zapobiegać manipulacji wyrocznią
 Minimalnym wymogiem, aby [uniknąć manipulacji wyrocznią](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples), jest użycie zdecentralizowanej sieci wyroczni, która pobiera informacje z wielu źródeł, aby uniknąć pojedynczych punktów awarii. W większości przypadków zdecentralizowane wyrocznie mają wbudowane zachęty kryptoekonomiczne, aby zachęcić węzły wyroczni do zgłaszania prawidłowych informacji, co czyni je bezpieczniejszymi niż scentralizowane wyrocznie.
 
 Jeśli planujesz odpytywać wyrocznię onchain o ceny aktywów, rozważ użycie takiej, która implementuje mechanizm średniej ceny ważonej w czasie (TWAP). [Wyrocznia TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) odpytuje o cenę aktywa w dwóch różnych punktach w czasie (które można modyfikować) i oblicza cenę spot na podstawie uzyskanej średniej. Wybór dłuższych okresów chroni Twój protokół przed manipulacją cenami, ponieważ duże zlecenia zrealizowane niedawno nie mogą wpłynąć na ceny aktywów.

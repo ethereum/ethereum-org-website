@@ -71,19 +71,16 @@ sidebarDepth: 2
 
 また、インターネット接続が[帯域幅の制限](https://wikipedia.org/wiki/Data_cap)によって制限されていないことを確認してください。初期同期やネットワークにブロードキャストされるデータが制限を超える可能性があるため、従量制ではない接続を使用することをお勧めします。
 
-##### オペレーティングシステム {#}
-
+##### オペレーティングシステム
 すべてのクライアントは、主要なオペレーティングシステム（Linux、macOS、Windows）をサポートしています。つまり、自分に最適なオペレーティングシステム（OS）を搭載した通常のデスクトップマシンやサーバーマシンでノードを実行できます。潜在的な問題やセキュリティの脆弱性を回避するために、OSが最新であることを確認してください。
 
-##### 最小要件 {#}
-
+##### 最小要件
 - 2コア以上のCPU
 - 8 GBのRAM
 - 2TBのSSD
 - 10 MBit/s以上の帯域幅
 
-##### 推奨スペック {#}
-
+##### 推奨スペック
 - 4コア以上の高速なCPU
 - 16 GB以上のRAM
 - 2TB以上の高速なSSD
@@ -151,8 +148,7 @@ sidebarDepth: 2
 
 以下は、ビルド済みのバイナリやインストール手順を見つけることができるクライアントのリリース・ページです。
 
-##### 実行クライアント {#}
-
+##### 実行クライアント
 - [ベス](https://github.com/hyperledger/besu/releases)
 - [エリゴン](https://github.com/ledgerwatch/erigon/releases)
 - [ゲス](https://geth.ethereum.org/downloads)
@@ -161,8 +157,7 @@ sidebarDepth: 2
 
 クライアント・ダイバーシティが[実行レイヤーにおける課題](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)であることにも注意が必要です。読者は、マイノリティの実行クライアントを実行することを検討することをお勧めします。
 
-##### コンセンサス・クライアント {#}
-
+##### コンセンサス・クライアント
 - [ライトハウス](https://github.com/sigp/lighthouse/releases/latest)
 - [ロードスター](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)（ビルド済みのバイナリは提供されておらず、Dockerイメージのみ、またはソースからビルドする必要があります）
 - [ニンバス](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -173,8 +168,7 @@ sidebarDepth: 2
 
 [最新のネットワーククライアントの使用状況を確認](https://clientdiversity.org/)し、[クライアント・ダイバーシティ](/developers/docs/nodes-and-clients/client-diversity)について詳しく学んでください。
 
-##### ソフトウェアの検証 {#}
-
+##### ソフトウェアの検証
 インターネットからソフトウェアをダウンロードする場合は、その整合性を検証することをお勧めします。この手順はオプションですが、特にイーサリアムクライアントのような重要なインフラストラクチャの一部では、潜在的な攻撃ベクトルを認識し、それらを回避することが重要です。ビルド済みのバイナリをダウンロードした場合は、それを信頼する必要があり、攻撃者が実行可能ファイルを悪意のあるものと交換するリスクを負うことになります。
 
 開発者はリリースされたバイナリにPGP鍵で署名するため、作成したソフトウェアとまったく同じものを実行していることを暗号学的に検証できます。開発者が使用する公開鍵を入手するだけでよく、これはクライアントのリリース・ページまたはドキュメントに記載されています。クライアントのリリースとその署名をダウンロードした後、[GnuPG](https://gnupg.org/download/index.html)などのPGP実装を使用して簡単に検証できます。[Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/)または[Windows/macOS](https://freedom.press/training/verifying-open-source-software/)で`gpg`を使用してオープンソースソフトウェアを検証するチュートリアルを確認してください。
@@ -238,8 +232,7 @@ openssl rand -hex 32 > jwtsecret
 
 > 例のバックスラッシュ`\`はフォーマット目的のみであることに注意してください。設定フラグは1行で定義できます。
 
-##### ベスの実行 {#}
-
+##### ベスの実行
 この例では、メインネットでベスを起動し、ブロックチェーンデータをデフォルトの形式で`/data/ethereum`に保存し、コンセンサス・クライアントを接続するためのJSON-RPCとEngine RPCを有効にします。Engine APIはトークン`jwtsecret`で認証され、`localhost`からの呼び出しのみが許可されます。
 
 ```sh
@@ -260,8 +253,7 @@ besu --Xlauncher
 
 [ベスのドキュメント](https://besu.hyperledger.org/public-networks/get-started/start-node/)には、追加のオプションと設定の詳細が含まれています。
 
-##### エリゴンの実行 {#}
-
+##### エリゴンの実行
 この例では、メインネットでエリゴンを起動し、ブロックチェーンデータを`/data/ethereum`に保存し、JSON-RPCを有効にし、許可される名前空間を定義し、`jwtsecret`パスで定義されるコンセンサス・クライアントを接続するための認証を有効にします。
 
 ```sh
@@ -273,8 +265,7 @@ erigon --chain mainnet \
 
 エリゴンはデフォルトで8GBのHDDを使用してフル同期を実行し、その結果、2TBを超えるアーカイブデータが生成されます。`datadir`が十分な空き容量のあるディスクを指していることを確認するか、さまざまな種類のデータをトリミングできる`--prune`フラグを調べてください。詳細については、エリゴンの`--help`を確認してください。
 
-##### ゲスの実行 {#}
-
+##### ゲスの実行
 この例では、メインネットでゲスを起動し、ブロックチェーンデータを`/data/ethereum`に保存し、JSON-RPCを有効にして、許可される名前空間を定義します。また、コンセンサス・クライアントを接続するための認証も有効にします。これには、`jwtsecret`へのパスと、許可される接続を定義するオプション（この例では`localhost`からのみ）が必要です。
 
 ```sh
@@ -288,8 +279,7 @@ geth --mainnet \
 
 [すべての設定オプションのドキュメント](https://geth.ethereum.org/docs/fundamentals/command-line-options)を確認し、[コンセンサス・クライアントでゲスを実行する](https://geth.ethereum.org/docs/getting-started/consensus-clients)方法について詳しく学んでください。
 
-##### ネザーマインドの実行 {#}
-
+##### ネザーマインドの実行
 ネザーマインドはさまざまな[インストールオプション](https://docs.nethermind.io/get-started/installing-nethermind)を提供しています。パッケージには、ガイド付きセットアップを備えたランチャーなど、さまざまなバイナリが付属しており、インタラクティブに設定を作成するのに役立ちます。または、実行可能ファイル自体であるRunnerを見つけて、設定フラグを使用して実行することもできます。JSON-RPCはデフォルトで有効になっています。
 
 ```sh
@@ -302,8 +292,7 @@ Nethermind.Runner --config mainnet \
 
 実行クライアントは、コア機能、選択したエンドポイントを初期化し、ピアの検索を開始します。ピアを正常に発見した後、クライアントは同期を開始します。実行クライアントは、コンセンサス・クライアントからの接続を待機します。クライアントが現在の状態に正常に同期されると、現在のブロックチェーンデータが利用可能になります。
 
-##### レスの実行 {#}
-
+##### レスの実行
 この例では、デフォルトのデータの場所を使用して、メインネットでレスを起動します。`jwtsecret`パスで定義されるコンセンサス・クライアントを接続するためのJSON-RPCおよびEngine RPC認証を有効にし、`localhost`からの呼び出しのみが許可されます。
 
 ```sh
@@ -327,8 +316,7 @@ reth node \
 
 #### コンセンサス・クライアントの実行 {#running-a-consensus-client}
 
-##### ライトハウスの実行 {#}
-
+##### ライトハウスの実行
 ライトハウスを実行する前に、[Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html)でインストールと設定の方法について詳しく学んでください。
 
 ```sh
@@ -340,8 +328,7 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### ロードスターの実行 {#}
-
+##### ロードスターの実行
 ロードスターのソフトウェアをコンパイルするか、Dockerイメージをダウンロードしてインストールします。詳細については、[ドキュメント](https://chainsafe.github.io/lodestar/)と、より包括的な[セットアップガイド](https://hackmd.io/@philknows/rk5cDvKmK)を参照してください。
 
 ```sh
@@ -353,8 +340,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### ニンバスの実行 {#}
-
+##### ニンバスの実行
 ニンバスには、コンセンサス・クライアントと実行クライアントの両方が付属しています。非常に控えめな計算能力のデバイスでも実行できます。
 [依存関係とニンバス自体をインストール](https://nimbus.guide/quick-start.html)した後、そのコンセンサス・クライアントを実行できます。
 
@@ -366,8 +352,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### プリズムの実行 {#}
-
+##### プリズムの実行
 プリズムには、簡単な自動インストールを可能にするスクリプトが付属しています。詳細は[プリズムのドキュメント](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)に記載されています。
 
 ```sh
@@ -378,8 +363,7 @@ nimbus_beacon_node \
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### テクの実行 {#}
-
+##### テクの実行
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \

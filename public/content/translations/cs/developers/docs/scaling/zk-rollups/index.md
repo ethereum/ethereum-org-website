@@ -106,8 +106,7 @@ ZK-STARKy jsou také bezpečné proti kvantovým počítačům, zatímco kryptog
 
 #### Jak fungují důkazy platnosti v ZK-rollupech? {#validity-proofs-in-zk-rollups}
 
-##### Generování důkazu {#}
-
+##### Generování důkazu
 Před přijetím transakcí provede operátor obvyklé kontroly. To zahrnuje potvrzení, že:
 
 - Účty odesílatele a příjemce jsou součástí stavového stromu.
@@ -132,8 +131,7 @@ Proces se opakuje pro každou transakci; každá „smyčka“ vytvoří nový k
 
 ZK-dokazovací obvod iteruje přes celou dávku transakcí a ověřuje sekvenci aktualizací, které vedou ke konečnému kořeni stavu po provedení poslední transakce. Poslední vypočítaný Merkleho kořen se stává nejnovějším kanonickým kořenem stavu ZK-rollupu.
 
-##### Ověření důkazu {#}
-
+##### Ověření důkazu
 Poté, co dokazovací obvod ověří správnost aktualizací stavu, L2 operátor odešle vypočítaný důkaz platnosti do kontraktu ověřovatele na L1. Ověřovací obvod kontraktu ověří platnost důkazu a také zkontroluje veřejné vstupy, které tvoří součást důkazu:
 
 - **Předchozí kořen stavu (Pre-state root)**: Starý kořen stavu ZK-rollupu (tj. před provedením dávkovaných transakcí), odrážející poslední známý platný stav L2 řetězce.

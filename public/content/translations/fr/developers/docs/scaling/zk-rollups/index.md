@@ -106,8 +106,7 @@ Les ZK-STARKs sont également sécurisés contre les ordinateurs quantiques, tan
 
 #### Comment fonctionnent les preuves de validité dans les ZK-rollups ? {#validity-proofs-in-zk-rollups}
 
-##### Génération de preuves {#}
-
+##### Génération de preuves
 Avant d'accepter les transactions, l'opérateur effectuera les vérifications habituelles. Cela inclut de confirmer que :
 
 - Les comptes de l'expéditeur et du destinataire font partie de l'arbre d'état.
@@ -132,8 +131,7 @@ Le processus se répète pour chaque transaction ; chaque « boucle » crée une
 
 Le circuit de preuve ZK itère sur l'ensemble du lot de transactions, vérifiant la séquence de mises à jour qui aboutit à une racine d'état finale après l'exécution de la dernière transaction. La dernière racine de Merkle calculée devient la nouvelle racine d'état canonique du ZK-rollup.
 
-##### Vérification des preuves {#}
-
+##### Vérification des preuves
 Après que le circuit de preuve a vérifié l'exactitude des mises à jour d'état, l'opérateur L2 soumet la preuve de validité calculée au contrat vérificateur sur L1. Le circuit de vérification du contrat vérifie la validité de la preuve et vérifie également les entrées publiques qui font partie de la preuve :
 
 - **Racine de pré-état** : L'ancienne racine d'état du ZK-rollup (c'est-à-dire avant l'exécution des transactions traitées par lots), reflétant le dernier état valide connu de la chaîne L2.

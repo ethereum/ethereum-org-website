@@ -106,8 +106,7 @@ Los ZK-STARKs también son seguros contra computadoras cuánticas, mientras que 
 
 #### ¿Cómo funcionan las pruebas de validez en los ZK-rollups? {#validity-proofs-in-zk-rollups}
 
-##### Generación de pruebas {#}
-
+##### Generación de pruebas
 Antes de aceptar transacciones, el operador realizará las comprobaciones habituales. Esto incluye confirmar que:
 
 - Las cuentas del remitente y del receptor forman parte del árbol de estado.
@@ -132,8 +131,7 @@ El proceso se repite para cada transacción; cada "iteración" crea una nueva ra
 
 El circuito de prueba ZK itera sobre todo el lote de transacciones, verificando la secuencia de actualizaciones que dan como resultado una raíz de estado final después de que se ejecuta la última transacción. La última raíz de Merkle calculada se convierte en la raíz de estado canónica más reciente del ZK-rollup.
 
-##### Verificación de pruebas {#}
-
+##### Verificación de pruebas
 Después de que el circuito de prueba verifica la exactitud de las actualizaciones de estado, el operador de L2 envía la prueba de validez calculada al contrato verificador en L1. El circuito de verificación del contrato verifica la validez de la prueba y también comprueba las entradas públicas que forman parte de la prueba:
 
 - **Raíz de estado previo**: La antigua raíz de estado del ZK-rollup (es decir, antes de que se ejecutaran las transacciones por lotes), que refleja el último estado válido conocido de la cadena de L2.

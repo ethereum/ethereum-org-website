@@ -71,19 +71,16 @@ sidebarDepth: 2
 
 또한 인터넷 연결이 [대역폭 제한](https://wikipedia.org/wiki/Data_cap)에 걸리지 않는지 확인하세요. 초기 동기화 및 네트워크로 브로드캐스트되는 데이터가 제한을 초과할 수 있으므로 종량제가 아닌 연결을 사용하는 것이 좋습니다.
 
-##### 운영 체제 {#}
-
+##### 운영 체제
 모든 클라이언트는 주요 운영 체제인 Linux, macOS, Windows를 지원합니다. 즉, 자신에게 가장 적합한 운영 체제(OS)가 설치된 일반 데스크톱이나 서버 머신에서 노드를 실행할 수 있습니다. 잠재적인 문제와 보안 취약점을 피하기 위해 OS를 최신 상태로 유지하세요.
 
-##### 최소 요구 사항 {#}
-
+##### 최소 요구 사항
 - 2개 이상의 코어가 있는 CPU
 - 8GB RAM
 - 2TB SSD
 - 10+ MBit/s 대역폭
 
-##### 권장 사양 {#}
-
+##### 권장 사양
 - 4개 이상의 코어가 있는 빠른 CPU
 - 16GB 이상의 RAM
 - 2TB 이상의 빠른 SSD
@@ -151,8 +148,7 @@ sidebarDepth: 2
 
 다음은 사전 빌드된 바이너리나 설치 지침을 찾을 수 있는 클라이언트의 릴리스 페이지입니다.
 
-##### 실행 클라이언트 {#}
-
+##### 실행 클라이언트
 - [베수](https://github.com/hyperledger/besu/releases)
 - [에리곤](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads)
@@ -161,8 +157,7 @@ sidebarDepth: 2
 
 클라이언트 다양성이 [실행 계층의 문제](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)라는 점도 주목할 가치가 있습니다. 독자들은 소수 실행 클라이언트를 실행하는 것을 고려하는 것이 좋습니다.
 
-##### 합의 클라이언트 {#}
-
+##### 합의 클라이언트
 - [라이트하우스](https://github.com/sigp/lighthouse/releases/latest)
 - [로드스타](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (사전 빌드된 바이너리를 제공하지 않으며 Docker 이미지 또는 소스에서 빌드해야 함)
 - [님버스](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -173,8 +168,7 @@ sidebarDepth: 2
 
 [최신 네트워크 클라이언트 사용량 보기](https://clientdiversity.org/) 및 [클라이언트 다양성](/developers/docs/nodes-and-clients/client-diversity)에 대해 자세히 알아보세요.
 
-##### 소프트웨어 검증 {#}
-
+##### 소프트웨어 검증
 인터넷에서 소프트웨어를 다운로드할 때는 무결성을 확인하는 것이 좋습니다. 이 단계는 선택 사항이지만 특히 이더리움 클라이언트와 같은 중요한 인프라 요소의 경우 잠재적인 공격 벡터를 인식하고 이를 피하는 것이 중요합니다. 사전 빌드된 바이너리를 다운로드한 경우 이를 신뢰해야 하며 공격자가 실행 파일을 악성 파일로 교체할 수 있는 위험을 감수해야 합니다.
 
 개발자는 릴리스된 바이너리에 PGP 키로 서명하므로 개발자가 만든 소프트웨어를 정확히 실행하고 있는지 암호화 방식으로 확인할 수 있습니다. 클라이언트 릴리스 페이지나 문서에서 찾을 수 있는 개발자가 사용하는 공개 키만 얻으면 됩니다. 클라이언트 릴리스와 해당 서명을 다운로드한 후 [GnuPG](https://gnupg.org/download/index.html)와 같은 PGP 구현을 사용하여 쉽게 확인할 수 있습니다. [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) 또는 [Windows/macOS](https://freedom.press/training/verifying-open-source-software/)에서 `gpg`를 사용하여 오픈 소스 소프트웨어를 확인하는 튜토리얼을 확인하세요.
@@ -238,8 +232,7 @@ openssl rand -hex 32 > jwtsecret
 
 > 예제의 백슬래시 `\`는 서식 지정 목적으로만 사용되며 구성 플래그는 한 줄로 정의할 수 있습니다.
 
-##### 베수 실행 {#}
-
+##### 베수 실행
 이 예제는 메인넷에서 베수를 시작하고, 블록체인 데이터를 기본 형식으로 `/data/ethereum`에 저장하며, 합의 클라이언트 연결을 위해 JSON-RPC 및 엔진 RPC를 활성화합니다. 엔진 API는 `jwtsecret` 토큰으로 인증되며 `localhost`의 호출만 허용됩니다.
 
 ```sh
@@ -260,8 +253,7 @@ besu --Xlauncher
 
 [베수 문서](https://besu.hyperledger.org/public-networks/get-started/start-node/)에는 추가 옵션 및 구성 세부 정보가 포함되어 있습니다.
 
-##### 에리곤 실행 {#}
-
+##### 에리곤 실행
 이 예제는 메인넷에서 에리곤을 시작하고, 블록체인 데이터를 `/data/ethereum`에 저장하며, JSON-RPC를 활성화하고, 허용되는 네임스페이스를 정의하며, `jwtsecret` 경로로 정의된 합의 클라이언트 연결을 위한 인증을 활성화합니다.
 
 ```sh
@@ -273,8 +265,7 @@ erigon --chain mainnet \
 
 에리곤은 기본적으로 8GB HDD로 전체 동기화를 수행하여 2TB 이상의 아카이브 데이터를 생성합니다. `datadir`가 여유 공간이 충분한 디스크를 가리키는지 확인하거나 다양한 종류의 데이터를 다듬을 수 있는 `--prune` 플래그를 살펴보세요. 자세한 내용은 에리곤의 `--help`를 확인하세요.
 
-##### Geth 실행 {#}
-
+##### Geth 실행
 이 예제는 메인넷에서 Geth를 시작하고, 블록체인 데이터를 `/data/ethereum`에 저장하며, JSON-RPC를 활성화하고 허용되는 네임스페이스를 정의합니다. 또한 합의 클라이언트 연결을 위한 인증을 활성화하는데, 여기에는 `jwtsecret` 경로와 허용되는 연결을 정의하는 옵션(이 예제에서는 `localhost`에서만 허용)이 필요합니다.
 
 ```sh
@@ -288,8 +279,7 @@ geth --mainnet \
 
 [모든 구성 옵션에 대한 문서](https://geth.ethereum.org/docs/fundamentals/command-line-options)를 확인하고 [합의 클라이언트와 함께 Geth 실행하기](https://geth.ethereum.org/docs/getting-started/consensus-clients)에 대해 자세히 알아보세요.
 
-##### 네더마인드 실행 {#}
-
+##### 네더마인드 실행
 네더마인드는 다양한 [설치 옵션](https://docs.nethermind.io/get-started/installing-nethermind)을 제공합니다. 패키지에는 대화형으로 구성을 생성하는 데 도움이 되는 안내 설정이 포함된 런처를 비롯한 다양한 바이너리가 함께 제공됩니다. 또는 실행 파일 자체인 러너(Runner)를 찾아 구성 플래그와 함께 실행할 수도 있습니다. JSON-RPC는 기본적으로 활성화되어 있습니다.
 
 ```sh
@@ -302,8 +292,7 @@ Nethermind.Runner --config mainnet \
 
 실행 클라이언트는 핵심 기능, 선택한 엔드포인트를 시작하고 피어를 찾기 시작합니다. 피어를 성공적으로 발견한 후 클라이언트는 동기화를 시작합니다. 실행 클라이언트는 합의 클라이언트의 연결을 기다립니다. 클라이언트가 현재 상태로 성공적으로 동기화되면 현재 블록체인 데이터를 사용할 수 있습니다.
 
-##### 레스 실행 {#}
-
+##### 레스 실행
 이 예제는 기본 데이터 위치를 사용하여 메인넷에서 레스를 시작합니다. `jwtsecret` 경로로 정의된 합의 클라이언트 연결을 위해 JSON-RPC 및 엔진 RPC 인증을 활성화하며 `localhost`의 호출만 허용됩니다.
 
 ```sh
@@ -327,8 +316,7 @@ reth node \
 
 #### 합의 클라이언트 실행 {#running-a-consensus-client}
 
-##### 라이트하우스 실행 {#}
-
+##### 라이트하우스 실행
 라이트하우스를 실행하기 전에 [라이트하우스 북(Lighthouse Book)](https://lighthouse-book.sigmaprime.io/installation.html)에서 설치 및 구성 방법에 대해 자세히 알아보세요.
 
 ```sh
@@ -340,8 +328,7 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### 로드스타 실행 {#}
-
+##### 로드스타 실행
 로드스타 소프트웨어를 컴파일하거나 Docker 이미지를 다운로드하여 설치하세요. [문서](https://chainsafe.github.io/lodestar/) 및 더 포괄적인 [설정 가이드](https://hackmd.io/@philknows/rk5cDvKmK)에서 자세히 알아보세요.
 
 ```sh
@@ -353,8 +340,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### 님버스 실행 {#}
-
+##### 님버스 실행
 님버스는 합의 및 실행 클라이언트와 함께 제공됩니다. 컴퓨팅 파워가 매우 낮은 다양한 장치에서도 실행할 수 있습니다.
 [종속성 및 님버스 자체를 설치](https://nimbus.guide/quick-start.html)한 후 합의 클라이언트를 실행할 수 있습니다.
 
@@ -366,8 +352,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### 프리즘 실행 {#}
-
+##### 프리즘 실행
 프리즘에는 쉬운 자동 설치를 허용하는 스크립트가 함께 제공됩니다. 자세한 내용은 [프리즘 문서](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)에서 찾을 수 있습니다.
 
 ```sh
@@ -378,8 +363,7 @@ nimbus_beacon_node \
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### 테쿠 실행 {#}
-
+##### 테쿠 실행
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \

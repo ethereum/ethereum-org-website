@@ -106,8 +106,7 @@ ZK-STARKs pia ni salama dhidi ya kompyuta za kwanta, wakati Kriptografia ya Tao 
 
 #### Uthibitisho wa uhalali hufanyaje kazi katika ZK-rollups? {#validity-proofs-in-zk-rollups}
 
-##### Uzalishaji wa uthibitisho {#}
-
+##### Uzalishaji wa uthibitisho
 Kabla ya kukubali miamala, mwendeshaji atafanya ukaguzi wa kawaida. Hii inajumuisha kuthibitisha kwamba:
 
 - Akaunti za mtumaji na mpokeaji ni sehemu ya mti wa hali.
@@ -132,8 +131,7 @@ Mchakato unajirudia kwa kila muamala; kila "mzunguko" huunda mzizi mpya wa hali 
 
 Saketi ya kuthibitisha ya ZK inarudia juu ya fungu zima la muamala, ikihakiki mfuatano wa masasisho yanayosababisha mzizi wa mwisho wa hali baada ya muamala wa mwisho kutekelezwa. Mzizi wa mwisho wa Merkle uliokokotolewa unakuwa mzizi mpya zaidi wa hali rasmi wa ZK-rollup.
 
-##### Uhakiki wa uthibitisho {#}
-
+##### Uhakiki wa uthibitisho
 Baada ya saketi ya kuthibitisha kuhakiki usahihi wa masasisho ya hali, mwendeshaji wa L2 huwasilisha uthibitisho wa uhalali uliokokotolewa kwenye mkataba wa mhakiki kwenye L1. Saketi ya uhakiki ya mkataba inahakiki uhalali wa uthibitisho na pia inakagua pembejeo za umma zinazounda sehemu ya uthibitisho:
 
 - **Mzizi wa hali ya awali**: Mzizi wa hali ya zamani wa ZK-rollup (yaani, kabla ya miamala iliyokusanywa katika mafungu kutekelezwa), unaoonyesha hali halali ya mwisho inayojulikana ya mnyororo wa L2.

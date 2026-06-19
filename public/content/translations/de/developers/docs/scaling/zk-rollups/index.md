@@ -106,8 +106,7 @@ ZK-STARKs sind auch sicher gegen Quantencomputer, während die in ZK-SNARKs verw
 
 #### Wie funktionieren Gültigkeitsbeweise in ZK-Rollups? {#validity-proofs-in-zk-rollups}
 
-##### Beweisgenerierung {#}
-
+##### Beweisgenerierung
 Bevor Transaktionen akzeptiert werden, führt der Betreiber die üblichen Überprüfungen durch. Dazu gehört die Bestätigung, dass:
 
 - Die Konten des Senders und Empfängers Teil des Zustandsbaums sind.
@@ -132,8 +131,7 @@ Der Prozess wiederholt sich für jede Transaktion; jede „Schleife“ erstellt 
 
 Die ZK-Beweisschaltung iteriert über den gesamten Transaktions-Batch und verifiziert die Sequenz von Aktualisierungen, die nach Ausführung der letzten Transaktion zu einer endgültigen Zustandswurzel führen. Die zuletzt berechnete Merkle-Wurzel wird zur neuesten kanonischen Zustandswurzel des ZK-Rollups.
 
-##### Beweisverifizierung {#}
-
+##### Beweisverifizierung
 Nachdem die Beweisschaltung die Korrektheit der Zustandsaktualisierungen verifiziert hat, übermittelt der L2-Betreiber den berechneten Gültigkeitsbeweis an den Verifizierer-Vertrag auf L1. Die Verifizierungsschaltung des Vertrags verifiziert die Gültigkeit des Beweises und prüft auch öffentliche Eingaben, die Teil des Beweises sind:
 
 - **Vor-Zustandswurzel**: Die alte Zustandswurzel des ZK-Rollups (d. h. bevor die gebündelten Transaktionen wurden ausgeführt), die den letzten bekannten gültigen Zustand der L2-Chain widerspiegelt.
@@ -222,15 +220,15 @@ Sehen Sie sich an, wie Finematics ZK-Rollups erklärt:
 
 ## Wer arbeitet an einer zkEVM? {#zkevm-projects}
 
-<HTML-PLACEHOLDER-COMPONENT-000001>
-
-<HTML-PLACEHOLDER-COMPONENT-000003>
-<HTML-PLACEHOLDER-COMPONENT-000004>zkEVM für L2 vs. L1</HTML-PLACEHOLDER-COMPONENT-000004>
-<HTML-PLACEHOLDER-COMPONENT-000005>
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>zkEVM für L2 vs. L1</AlertTitle>
+<AlertDescription>
 Die unten stehenden Projekte verwenden zkEVM-Technologie, um Layer-2-Rollups zu erstellen. Es gibt auch Forschungen zur Verwendung von zkEVM für die [L1-Blockverifizierung](/roadmap/zkevm/), was es Validatoren ermöglichen würde, Ethereum-Blöcke zu verifizieren, ohne Transaktionen erneut auszuführen.
-</HTML-PLACEHOLDER-COMPONENT-000005>
-</HTML-PLACEHOLDER-COMPONENT-000003>
-</HTML-PLACEHOLDER-COMPONENT-000001>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Zu den Projekten, die an zkEVMs arbeiten, gehören:
 

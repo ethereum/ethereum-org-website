@@ -106,8 +106,7 @@ ZK-STARKi są również bezpieczne przed komputerami kwantowymi, podczas gdy kry
 
 #### Jak działają dowody ważności w ZK-rollupach? {#validity-proofs-in-zk-rollups}
 
-##### Generowanie dowodów {#}
-
+##### Generowanie dowodów
 Przed zaakceptowaniem transakcji operator przeprowadzi zwykłe kontrole. Obejmuje to potwierdzenie, że:
 
 - Konta nadawcy i odbiorcy są częścią drzewa stanu.
@@ -132,8 +131,7 @@ Proces powtarza się dla każdej transakcji; każda „pętla” tworzy nowy kor
 
 Obwód dowodzący z wiedzą zerową iteruje po całym wsadzie transakcji, weryfikując sekwencję aktualizacji, które skutkują końcowym korzeniem stanu po wykonaniu ostatniej transakcji. Ostatni obliczony korzeń drzewa Merklego staje się najnowszym kanonicznym korzeniem stanu ZK-rollupa.
 
-##### Weryfikacja dowodów {#}
-
+##### Weryfikacja dowodów
 Po tym, jak obwód dowodzący zweryfikuje poprawność aktualizacji stanu, operator L2 przesyła obliczony dowód ważności do kontraktu weryfikatora w L1. Obwód weryfikacyjny kontraktu weryfikuje ważność dowodu, a także sprawdza publiczne dane wejściowe, które stanowią część dowodu:
 
 - **Korzeń stanu początkowego (Pre-state root)**: Stary korzeń stanu ZK-rollupa (tj. przed wykonaniem wsadowanych transakcji), odzwierciedlający ostatni znany ważny stan łańcucha L2.

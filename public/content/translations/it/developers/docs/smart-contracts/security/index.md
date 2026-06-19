@@ -34,8 +34,7 @@ Registrare un singolo indirizzo come `Owner` in uno smart contract introduce il 
 
 Nel controllo degli accessi basato sui ruoli, l'accesso alle funzioni sensibili è distribuito tra un gruppo di partecipanti fidati. Ad esempio, un account potrebbe essere responsabile del conio di token, mentre un altro account esegue aggiornamenti o mette in pausa il contratto. Decentralizzare il controllo degli accessi in questo modo elimina i singoli punti di vulnerabilità e riduce le assunzioni di fiducia per gli utenti.
 
-##### Utilizzo di portafogli multifirma {#}
-
+##### Utilizzo di portafogli multifirma
 Un altro approccio per implementare un controllo degli accessi sicuro è utilizzare un [account multifirma](/developers/docs/smart-contracts/#multisig) per gestire un contratto. A differenza di un normale EOA, gli account multifirma sono di proprietà di più entità e richiedono le firme di un numero minimo di account (ad esempio 3 su 5) per eseguire le transazioni.
 
 L'utilizzo di un multisig per il controllo degli accessi introduce un ulteriore livello di sicurezza, poiché le azioni sul contratto di destinazione richiedono il consenso di più parti. Ciò è particolarmente utile se è necessario utilizzare il pattern Ownable, in quanto rende più difficile per un aggressore o un insider malintenzionato manipolare le funzioni sensibili del contratto per scopi malevoli.
@@ -306,8 +305,7 @@ Non c'è niente di sbagliato qui, tranne che `Attacker` ha un'altra funzione che
 
 In sintesi, poiché il saldo del chiamante non viene impostato a 0 fino al completamento dell'esecuzione della funzione, le invocazioni successive avranno successo e consentiranno al chiamante di prelevare il proprio saldo più volte. Questo tipo di attacco può essere utilizzato per prosciugare i fondi di uno smart contract, come è successo nell'[hack della DAO del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Gli attacchi di rientranza sono ancora oggi un problema critico per gli smart contract, come mostrano gli [elenchi pubblici di exploit di rientranza](https://github.com/pcaversaccio/reentrancy-attacks).
 
-##### Come prevenire gli attacchi di rientranza {#}
-
+##### Come prevenire gli attacchi di rientranza
 Un approccio per affrontare la rientranza è seguire il [pattern controlli-effetti-interazioni](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Questo pattern ordina l'esecuzione delle funzioni in modo tale che il codice che esegue i controlli necessari prima di procedere con l'esecuzione venga per primo, seguito dal codice che manipola lo stato del contratto, con il codice che interagisce con altri contratti o EOA che arriva per ultimo.
 
 Il pattern controlli-effetti-interazioni viene utilizzato in una versione rivista del contratto `Victim` mostrata di seguito:
@@ -433,8 +431,7 @@ contract Attack {
 }
 ```
 
-##### Come prevenire underflow e overflow di interi {#}
-
+##### Come prevenire underflow e overflow di interi
 A partire dalla versione 0.8.0, il compilatore Solidity rifiuta il codice che produce underflow e overflow di interi. Tuttavia, i contratti compilati con una versione del compilatore inferiore dovrebbero eseguire controlli sulle funzioni che coinvolgono operazioni aritmetiche o utilizzare una libreria (ad es., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) che controlla la presenza di underflow/overflow.
 
 #### Manipolazione dell'oracolo {#oracle-manipulation}
@@ -449,8 +446,7 @@ I prezzi dei DEX sono spesso accurati, in gran parte grazie agli arbitraggisti c
 
 Ad esempio, un aggressore potrebbe pompare artificialmente il prezzo spot di un asset stipulando un prestito lampo subito prima di interagire con il tuo contratto di prestito. Interrogare il DEX per il prezzo dell'asset restituirebbe un valore più alto del normale (a causa del grande "ordine di acquisto" dell'aggressore che distorce la domanda per l'asset), consentendogli di prendere in prestito più di quanto dovrebbe. Tali "attacchi di prestito lampo" sono stati utilizzati per sfruttare la dipendenza dagli oracoli di prezzo tra le applicazioni DeFi, costando ai protocolli milioni in fondi persi.
 
-##### Come prevenire la manipolazione dell'oracolo {#}
-
+##### Come prevenire la manipolazione dell'oracolo
 Il requisito minimo per [evitare la manipolazione dell'oracolo](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) è utilizzare una rete di oracoli decentralizzata che interroga le informazioni da più fonti per evitare singoli punti di vulnerabilità. Nella maggior parte dei casi, gli oracoli decentralizzati hanno incentivi criptoeconomici integrati per incoraggiare i nodi oracolo a riportare informazioni corrette, rendendoli più sicuri degli oracoli centralizzati.
 
 Se hai intenzione di interrogare un oracolo onchain per i prezzi degli asset, considera di utilizzarne uno che implementa un meccanismo di prezzo medio ponderato nel tempo (TWAP). Un [oracolo TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) interroga il prezzo di un asset in due diversi momenti nel tempo (che puoi modificare) e calcola il prezzo spot in base alla media ottenuta. La scelta di periodi di tempo più lunghi protegge il tuo protocollo dalla manipolazione dei prezzi poiché i grandi ordini eseguiti di recente non possono influire sui prezzi degli asset.

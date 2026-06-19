@@ -34,8 +34,7 @@ Registrar um único endereço como `Owner` em um contrato inteligente introduz o
 
 No controle de acesso baseado em funções, o acesso a funções sensíveis é distribuído entre um conjunto de participantes confiáveis. Por exemplo, uma conta pode ser responsável pela cunhagem de tokens, enquanto outra conta realiza atualizações ou pausa o contrato. Descentralizar o controle de acesso dessa forma elimina pontos únicos de falha e reduz as premissas de confiança para os usuários.
 
-##### Usando carteiras de multissinatura {#}
-
+##### Usando carteiras de multissinatura
 Outra abordagem para implementar o controle de acesso seguro é usar uma [conta de multissinatura](/developers/docs/smart-contracts/#multisig) para gerenciar um contrato. Ao contrário de uma EOA comum, as contas de multissinatura pertencem a várias entidades e exigem assinaturas de um número mínimo de contas — digamos, 3 de 5 — para executar transações.
 
 O uso de uma multisig para controle de acesso introduz uma camada extra de segurança, já que as ações no contrato alvo exigem o consentimento de várias partes. Isso é particularmente útil se o uso do padrão Ownable for necessário, pois torna mais difícil para um invasor ou um infiltrado mal-intencionado manipular funções sensíveis do contrato para fins maliciosos.
@@ -306,8 +305,7 @@ Não há nada de errado aqui, exceto que `Attacker` tem outra função que chama
 
 O resumo é que, como o saldo do chamador não é definido como 0 até que a execução da função seja concluída, as invocações subsequentes serão bem-sucedidas e permitirão que o chamador saque seu saldo várias vezes. Esse tipo de ataque pode ser usado para drenar os fundos de um contrato inteligente, como o que aconteceu no [hack da DAO em 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Os ataques de reentrada ainda são um problema crítico para os contratos inteligentes hoje, como mostram as [listagens públicas de explorações de reentrada](https://github.com/pcaversaccio/reentrancy-attacks).
 
-##### Como evitar ataques de reentrada {#}
-
+##### Como evitar ataques de reentrada
 Uma abordagem para lidar com a reentrada é seguir o [padrão de verificações-efeitos-interações (checks-effects-interactions)](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Esse padrão ordena a execução de funções de forma que o código que realiza as verificações necessárias antes de prosseguir com a execução venha primeiro, seguido pelo código que manipula o estado do contrato, com o código que interage com outros contratos ou EOAs chegando por último.
 
 O padrão de verificações-efeitos-interações é usado em uma versão revisada do contrato `Victim` mostrada abaixo:
@@ -431,8 +429,7 @@ contract Attack {
 }
 ```
 
-##### Como evitar underflows e overflows de inteiros {#}
-
+##### Como evitar underflows e overflows de inteiros
 A partir da versão 0.8.0, o compilador Solidity rejeita o código que resulta em underflows e overflows de inteiros. No entanto, os contratos compilados com uma versão de compilador inferior devem realizar verificações em funções que envolvem operações aritméticas ou usar uma biblioteca (por exemplo, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) que verifica a ocorrência de underflow/overflow.
 
 #### Manipulação de oráculo {#oracle-manipulation}
@@ -447,8 +444,7 @@ Os preços das DEXs costumam ser precisos, em grande parte devido aos arbitrador
 
 Por exemplo, um invasor poderia inflar artificialmente o preço à vista de um ativo fazendo um empréstimo relâmpago logo antes de interagir com seu contrato de empréstimo. Consultar a DEX sobre o preço do ativo retornaria um valor mais alto do que o normal (devido à grande “ordem de compra” do invasor distorcendo a demanda pelo ativo), permitindo que ele tomasse emprestado mais do que deveria. Esses "ataques de empréstimo relâmpago" têm sido usados para explorar a dependência de oráculos de preços entre aplicativos DeFi, custando aos protocolos milhões em fundos perdidos.
 
-##### Como evitar a manipulação de oráculos {#}
-
+##### Como evitar a manipulação de oráculos
 O requisito mínimo para [evitar a manipulação de oráculos](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) é usar uma rede de oráculos descentralizada que consulta informações de várias fontes para evitar pontos únicos de falha. Na maioria dos casos, os oráculos descentralizados têm incentivos criptoeconômicos integrados para encorajar os nós do oráculo a relatar informações corretas, tornando-os mais seguros do que os oráculos centralizados.
 
 Se você planeja consultar um oráculo onchain para obter preços de ativos, considere usar um que implemente um mecanismo de preço médio ponderado pelo tempo (TWAP). Um [oráculo TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) consulta o preço de um ativo em dois momentos diferentes (que você pode modificar) e calcula o preço à vista com base na média obtida. A escolha de períodos de tempo mais longos protege seu protocolo contra a manipulação de preços, já que grandes ordens executadas recentemente não podem impactar os preços dos ativos.
