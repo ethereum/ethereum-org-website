@@ -1,152 +1,121 @@
 ---
 title: Kufuatilia Geth kwa kutumia InfluxDB na Grafana
-description: Weka ufuatiliaji kwa nodi yako ya Geth kwa kutumia InfluxDB na Grafana ili kufuatilia utendaji na kutambua matatizo.
+description: Sanidi ufuatiliaji wa nodi yako ya Geth ukitumia InfluxDB na Grafana ili kufuatilia utendaji na kutambua matatizo.
 author: "Mario Havel"
-tags: ["clients", "nodes"]
+tags:
+  - wateja
+  - nodi
 skill: intermediate
-breadcrumb: "Kufuatilia Geth"
+breadcrumb: Kufuatilia Geth
 lang: sw
 published: 2021-01-13
 ---
 
-Mafunzo haya yatakusaidia kuweka ufuatiliaji wa nodi yako ya Geth ili uweze kuelewa vyema utendaji wake na kutambua matatizo yanayoweza kutokea.
+Mafunzo haya yatakusaidia kusanidi ufuatiliaji wa nodi yako ya Geth ili uweze kuelewa vyema utendaji wake na kutambua matatizo yanayoweza kutokea.
 
 ## Mahitaji ya awali {#prerequisites}
 
-- Unapaswa kuwa tayari unaendesha mfano wa Geth.
-- Hatua na mifano mingi ni kwa ajili ya mazingira ya linux, ujuzi wa msingi wa terminal utasaidia.
-- Angalia muhtasari huu wa video wa seti ya vipimo vya Geth: [Monitoring an Ethereum infrastructure by Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
+- Unapaswa kuwa tayari unaendesha mfumo wa Geth.
+- Hatua na mifano mingi ni kwa ajili ya mazingira ya Linux, ujuzi wa kimsingi wa terminal utasaidia.
+- Tazama muhtasari huu wa video wa vipimo vya Geth: [Kufuatilia miundombinu ya Ethereum na Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
-## Rundo la ufuatiliaji {#monitoring-stack}
+## Mkusanyiko wa ufuatiliaji {#monitoring-stack}
 
-Mteja wa Ethereum hukusanya data nyingi ambayo inaweza kusomwa katika mfumo wa hifadhidata ya mpangilio wa matukio. Ili kurahisisha ufuatiliaji, unaweza kuiingiza katika programu ya kuonesha data. Kuna chaguo nyingi zinazopatikana:
+Mteja wa Ethereum hukusanya data nyingi ambazo zinaweza kusomwa kwa mfumo wa hifadhidata ya mpangilio wa matukio. Ili kurahisisha ufuatiliaji, unaweza kuingiza haya kwenye programu ya kuona data. Kuna chaguzi nyingi zinazopatikana:
 
-- [Prometheus](https://prometheus.io/) (mfumo wa kuvuta)
-- [InfluxDB](https://www.influxdata.com/get-influxdb/) (mfumo wa kusukuma)
+- [Prometheus](https://prometheus.io/) (mtindo wa kuvuta)
+- [InfluxDB](https://www.influxdata.com/get-influxdb/) (mtindo wa kusukuma)
 - [Telegraf](https://www.influxdata.com/get-influxdb/)
 - [Grafana](https://www.grafana.com/)
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-Pia kuna [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), chaguo lililowekwa tayari na InfluxDB na Grafana.
+Pia kuna [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), chaguo lililosanidiwa mapema na InfluxDB na Grafana.
 
-Katika mafunzo haya, tutaweka mteja wako wa Geth ili kusukuma data kwenda InfluxDB ili kuunda hifadhidata na Grafana ili kuunda taswira ya grafu ya data. Kufanya hivi mwenyewe kutakusaidia kuelewa mchakato vizuri zaidi, kuubadilisha, na kuupeleka katika mazingira tofauti.
+Katika mafunzo haya, tutasanidi mteja wako wa Geth kusukuma data kwenye InfluxDB ili kuunda hifadhidata na Grafana ili kuunda mwonekano wa grafu wa data. Kufanya hivi kwa mikono kutakusaidia kuelewa mchakato vizuri zaidi, kuubadilisha, na kusambaza katika mazingira tofauti.
 
-## Inasanidi InfluxDB {#setting-up-influxdb}
+## Kusanidi InfluxDB {#setting-up-influxdb}
 
-Kwanza, hebu tupakue na kusakinisha InfluxDB. Chaguo mbalimbali za upakuaji zinaweza kupatikana kwenye [ukurasa wa matoleo wa Influxdata](https://portal.influxdata.com/downloads/). Chagua ile inayoendana na mazingira yako.
-Unaweza pia kuisakinisha kutoka kwenye [repository](https://repos.influxdata.com/). Kwa mfano katika usambazaji unaotegemea Debian:
+Kwanza, hebu tupakue na kusakinisha InfluxDB. Chaguzi mbalimbali za kupakua zinaweza kupatikana kwenye [ukurasa wa matoleo wa Influxdata](https://portal.influxdata.com/downloads/). Chagua inayofaa mazingira yako.
+Unaweza pia kuisakinisha kutoka kwenye [hifadhi](https://repos.influxdata.com/). Kwa mfano katika usambazaji unaotegemea Debian:
 
-```
-curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add
-source /etc/lsb-release
-echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
-sudo apt update
-sudo apt install influxdb -y
-sudo systemctl enable influxdb
-sudo systemctl start influxdb
-sudo apt install influxdb-client
-```
+<HTML-PLACEHOLDER-CODEBLOCK-685d10 />
 
-Baada ya kusakinisha InfluxDB kwa mafanikio, hakikisha inaendeshwa chinichini. Kwa chaguo-msingi, inapatikana katika `localhost:8086`.
-Kabla ya kutumia mteja wa `influx`, unapaswa kuunda mtumiaji mpya mwenye haki za msimamizi. Mtumiaji huyu atatumiwa kwa usimamizi wa ngazi ya juu, kuunda hifadhidata na watumiaji.
+Baada ya kusakinisha InfluxDB kwa ufanisi, hakikisha inafanya kazi nyuma. Kwa chaguo-msingi, inapatikana kwenye `localhost:8086`.
+Kabla ya kutumia mteja wa `influx`, inabidi uunde mtumiaji mpya aliye na mapendeleo ya msimamizi. Mtumiaji huyu atatumika kwa usimamizi wa kiwango cha juu, kuunda hifadhidata na watumiaji.
 
-```
-curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'password' WITH ALL PRIVILEGES"
-```
+<HTML-PLACEHOLDER-CODEBLOCK-a5c65e />
 
-Sasa unaweza kutumia mteja wa influx kuingia [shell ya InfluxDB](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) na mtumiaji huyu.
+Sasa unaweza kutumia mteja wa influx kuingia kwenye [ganda la InfluxDB](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) na mtumiaji huyu.
 
-```
-influx -username 'username' -password 'password'
-```
+<HTML-PLACEHOLDER-CODEBLOCK-8b28eb />
 
-Kwa kuwasiliana moja kwa moja na InfluxDB kwenye shell yake, unaweza kuunda hifadhidata na mtumiaji kwa vipimo vya geth.
+Ukiwasiliana moja kwa moja na InfluxDB katika ganda lake, unaweza kuunda hifadhidata na mtumiaji kwa ajili ya vipimo vya geth.
 
-```
-unda hifadhidata geth
-unda mtumiaji geth na nenosiri chaguapassword
-```
+<HTML-PLACEHOLDER-CODEBLOCK-1c43ce />
 
-Thibitisha viingilio vilivyoundwa na:
+Thibitisha maingizo yaliyoundwa kwa:
 
-```
-onyesha hifadhidata
-onyesha watumiaji
-```
+<HTML-PLACEHOLDER-CODEBLOCK-5dee85 />
 
-Toka kwenye shell ya InfluxDB.
+Ondoka kwenye ganda la InfluxDB.
 
-```
-toka
-```
+<HTML-PLACEHOLDER-CODEBLOCK-090211 />
 
-InfluxDB inaendeshwa na imesanidiwa kuhifadhi vipimo kutoka Geth.
+InfluxDB inafanya kazi na imesanidiwa kuhifadhi vipimo kutoka kwa Geth.
 
-## Inatayarisha Geth {#preparing-geth}
+## Kuandaa Geth {#preparing-geth}
 
-Baada ya kusanidi hifadhidata, tunahitaji kuwezesha ukusanyaji wa vipimo katika Geth. Zingatia `METRICS AND STATS OPTIONS` katika `geth --help`. Chaguo nyingi zinaweza kupatikana hapo, katika kesi hii tunataka Geth isukume data kwenye InfluxDB.
-Usanidi wa msingi unabainisha kituo ambapo InfluxDB inapatikana na uthibitishaji wa hifadhidata.
+Baada ya kusanidi hifadhidata, tunahitaji kuwezesha ukusanyaji wa vipimo katika Geth. Zingatia `METRICS AND STATS OPTIONS` katika `geth --help`. Chaguzi nyingi zinaweza kupatikana hapo, katika kesi hii tunataka Geth isukume data kwenye InfluxDB.
+Usanidi wa kimsingi unabainisha sehemu ya mwisho ambapo InfluxDB inapatikana na uthibitishaji wa hifadhidata.
 
-```
-geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:8086" --metrics.influxdb.username "geth" --metrics.influxdb.password "chosenpassword"
-```
+<HTML-PLACEHOLDER-CODEBLOCK-1cd01d />
 
-Bendera hizi zinaweza kuongezwa kwenye amri inayoanzisha mteja au kuhifadhiwa kwenye faili ya usanidi.
+Alama hizi zinaweza kuongezwa kwenye amri inayoanzisha mteja au kuhifadhiwa kwenye faili ya usanidi.
 
-Unaweza kuthibitisha kwamba Geth inasukuma data kwa mafanikio, kwa mfano kwa kuorodhesha vipimo katika hifadhidata. Katika shell ya InfluxDB:
+Unaweza kuthibitisha kuwa Geth inasukuma data kwa ufanisi, kwa mfano kwa kuorodhesha vipimo katika hifadhidata. Katika ganda la InfluxDB:
 
-```
-tumia geth
-onyesha vipimo
-```
+<HTML-PLACEHOLDER-CODEBLOCK-1da8b2 />
 
-## Inasanidi Grafana {#setting-up-grafana}
+## Kusanidi Grafana {#setting-up-grafana}
 
-Hatua inayofuata ni kusakinisha Grafana ambayo itatafsiri data kwa njia ya picha. Fuata mchakato wa usakinishaji kwa mazingira yako katika nyaraka za Grafana. Hakikisha unasakinisha toleo la OSS ikiwa hutaki vinginevyo.
-Mfano wa hatua za usakinishaji kwa usambazaji wa Debian kwa kutumia repository:
+Hatua inayofuata ni kusakinisha Grafana ambayo itatafsiri data kwa njia ya picha. Fuata mchakato wa usakinishaji kwa mazingira yako katika nyaraka za Grafana. Hakikisha umesakinisha toleo la OSS ikiwa hutaki vinginevyo.
+Mfano wa hatua za usakinishaji kwa usambazaji wa Debian kwa kutumia hifadhi:
 
-```
-curl -tlsv1.3 --proto =https -sL https://packages.grafana.com/gpg.key | sudo apt-key add -
-echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
-sudo apt update
-sudo apt install grafana
-sudo systemctl enable grafana-server
-sudo systemctl start grafana-server
-```
+<HTML-PLACEHOLDER-CODEBLOCK-ee08e5 />
 
-Ukishafanikiwa kuendesha Grafana, inapaswa kupatikana kwenye `localhost:3000`.
-Tumia kivinjari chako unachopendelea kufikia njia hii, kisha ingia na vitambulisho vya chaguo-msingi (mtumiaji: `admin` na nenosiri: `admin`). Unapoombwa, badilisha nenosiri la chaguo-msingi na uhifadhi.
+Unapokuwa na Grafana inayoendesha, inapaswa kupatikana kwenye `localhost:3000`.
+Tumia kivinjari unachopendelea kufikia njia hii, kisha ingia na vitambulisho vya chaguo-msingi (mtumiaji: `admin` na nenosiri: `admin`). Unapoulizwa, badilisha nenosiri la chaguo-msingi na uhifadhi.
 
-![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 1)](./grafana1.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 1)](./grafana1.png)
 
-Utaelekezwa kwenye ukurasa wa nyumbani wa Grafana. Kwanza, sanidi data yako chanzo. Bofya kwenye ikoni ya usanidi kwenye upau wa kushoto na uchague "Vyanzo vya data".
+Utaelekezwa kwenye ukurasa wa nyumbani wa Grafana. Kwanza, sanidi data yako ya chanzo. Bofya kwenye ikoni ya usanidi kwenye upau wa kushoto na uchague "Data sources" (Vyanzo vya data).
 
-![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 2)](./grafana2.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 2)](./grafana2.png)
 
-Bado hakuna vyanzo vya data vilivyoundwa, bofya kwenye "Ongeza chanzo cha data" ili kufafanua kimoja.
+Hakuna vyanzo vya data vilivyoundwa bado, bofya kwenye "Add data source" (Ongeza chanzo cha data) ili kufafanua kimoja.
 
-![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (jopo la 3)](./grafana3.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 3)](./grafana3.png)
 
 Kwa usanidi huu, chagua "InfluxDB" na uendelee.
 
-![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 4)](./grafana4.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 4)](./grafana4.png)
 
 Usanidi wa chanzo cha data ni rahisi sana ikiwa unaendesha zana kwenye mashine moja. Unahitaji kuweka anwani ya InfluxDB na maelezo ya kufikia hifadhidata. Rejelea picha hapa chini.
 
-![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 5)](./grafana5.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 5)](./grafana5.png)
 
-Ikiwa kila kitu kimekamilika na InfluxDB inapatikana, bofya kwenye "Hifadhi na ujaribu" na usubiri uthibitisho utokee.
+Ikiwa kila kitu kimekamilika na InfluxDB inapatikana, bofya kwenye "Save and test" (Hifadhi na ujaribu) na usubiri uthibitisho ujitokeze.
 
-![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 6)](./grafana6.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 6)](./grafana6.png)
 
-Sasa Grafana imesanidiwa kusoma data kutoka InfluxDB. Sasa unahitaji kuunda dashibodi ambayo itatafsiri na kuionyesha. Sifa za dashibodi zimesimbwa katika faili za JSON ambazo zinaweza kuundwa na mtu yeyote na kuingizwa kwa urahisi. Kwenye upau wa kushoto, bofya kwenye "Unda na Ingiza".
+Grafana sasa imesanidiwa kusoma data kutoka InfluxDB. Sasa unahitaji kuunda dashibodi ambayo itatafsiri na kuionyesha. Sifa za dashibodi zimesimbwa katika faili za JSON ambazo zinaweza kuundwa na mtu yeyote na kuingizwa kwa urahisi. Kwenye upau wa kushoto, bofya kwenye "Create and Import" (Unda na Uingize).
 
-![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (paneli 7)](./grafana7.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 7)](./grafana7.png)
 
-Kwa dashibodi ya ufuatiliaji ya Geth, nakili ID ya [dashibodi hii](https://grafana.com/grafana/dashboards/13877/) na uibandike kwenye "Ukurasa wa kuingiza" katika Grafana. Baada ya kuhifadhi dashibodi, inapaswa kuonekana kama hivi:
+Kwa dashibodi ya ufuatiliaji wa Geth, nakili kitambulisho cha [dashibodi hii](https://grafana.com/grafana/dashboards/13877/) na ubandike katika "Import page" (Ukurasa wa kuingiza) katika Grafana. Baada ya kuhifadhi dashibodi, inapaswa kuonekana hivi:
 
-![Picha ya skrini ya dashibodi ya Grafana ya ufuatiliaji wa Geth (jopo la 8)](./grafana8.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 8)](./grafana8.png)
 
 Unaweza kurekebisha dashibodi zako. Kila paneli inaweza kuhaririwa, kuhamishwa, kuondolewa au kuongezwa. Unaweza kubadilisha usanidi wako. Ni juu yako! Ili kujifunza zaidi kuhusu jinsi dashibodi zinavyofanya kazi, rejelea [nyaraka za Grafana](https://grafana.com/docs/grafana/latest/dashboards/).
-Unaweza pia kupendezwa na [Kuarifu](https://grafana.com/docs/grafana/latest/alerting/). Hii inakuwezesha kuweka arifa za tahadhari kwa wakati vipimo vinafikia thamani fulani. Njia mbalimbali za mawasiliano zinatumika.
+Unaweza pia kuvutiwa na [Kutoa Tahadhari](https://grafana.com/docs/grafana/latest/alerting/). Hii inakuwezesha kusanidi arifa za tahadhari wakati vipimo vinafikia viwango fulani. Njia mbalimbali za mawasiliano zinatumika.
