@@ -1,22 +1,22 @@
 ---
-title: "Akıllı sözleşmelerin anatomisi"
-description: "Akıllı bir sözleşmenin anatomisine derinlemesine bir bakış - fonksiyonlar, veriler ve değişkenler."
+title: Akıllı sözleşmelerin anatomisi
+description: Bir akıllı sözleşmenin anatomisine derinlemesine bir bakış – işlevler, veriler ve değişkenler.
 lang: tr
 ---
 
-Bir akıllı sözleşme Ethereum üzerindeki bir adreste çalışan bir programdır. Bir işlem alındığında yürütülebilen fonksiyonlar ve verilerden oluşurlar. Burada bir akıllı sözleşmenin nelerden oluştuğu hakkında genel bir bakış bulunmaktadır.
+Bir akıllı sözleşme, Ethereum üzerindeki bir adreste çalışan bir programdır. Bir işlem alındığında yürütülebilen veriler ve işlevlerden oluşurlar. İşte bir akıllı sözleşmeyi nelerin oluşturduğuna dair bir genel bakış.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Önce [akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında bilgi edindiğinizden emin olun. Bu belge, hâlihazırda JavaScript veya Python gibi programlama dillerine aşina olduğunuzu varsayar.
+Önce [akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında okuduğunuzdan emin olun. Bu belge, JavaScript veya Python gibi programlama dillerine zaten aşina olduğunuzu varsayar.
 
-## Veri {#data}
+## Veriler {#data}
 
-Herhangi bir sözleşme verisi bir konuma atanmalıdır: ya `storage` ya da `memory`. Bir akıllı sözleşmede depolamayı değiştirmek pahalıdır, bundan dolayı verinizin nerede yaşayacağını düşünmelisiniz.
+Herhangi bir sözleşme verisi bir konuma atanmalıdır: `storage` veya `memory`. Bir akıllı sözleşmede depolamayı değiştirmek maliyetlidir, bu nedenle verilerinizin nerede yaşaması gerektiğini düşünmeniz gerekir.
 
 ### Depolama {#storage}
 
-Kalıcı veriden depolama olarak bahsedilir ve durum değişkenleri tarafından temsil edilir. Bu değerler kalıcı olarak blok zincirinde depolanır. Sözleşmenin derlendiğinde blok zincirinde ne kadar depolama ihtiyacı duyacağını takip edebilmesi için türünü deklare etmelisiniz.
+Kalıcı veriler depolama olarak adlandırılır ve durum değişkenleri ile temsil edilir. Bu değerler Blokzincir üzerinde kalıcı olarak depolanır. Sözleşmenin derlendiğinde Blokzincir üzerinde ne kadar depolamaya ihtiyacı olduğunu takip edebilmesi için türü bildirmeniz gerekir.
 
 ```solidity
 // Solidity örneği
@@ -31,63 +31,63 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-Hâlihazırda nesne odaklı dillerde programlama yaptıysanız, büyük ihtimalle çoğu türe aşinasınızdır. Ancak, Ethereum geliştirmede yeniyseniz `address` sizin için yeni olmalıdır.
+Nesne yönelimli dillerde zaten programlama yaptıysanız, muhtemelen çoğu türe aşinasınızdır. Ancak, [Ethereum](/) geliştirmeye yeniyseniz `address` sizin için yeni olmalıdır.
 
-Bir `address` türü, 20 bayt veya 160 bite eşdeğer bir Ethereum adresi tutabilir. Önünde 0x olan onaltılık gösterim şeklinde döndürür.
+Bir `address` türü, 20 bayt veya 160 bite eşit olan bir Ethereum adresi tutabilir. Başında 0x bulunan onaltılık (hexadecimal) gösterimde döner.
 
-Diğer türler:
+Diğer türler şunları içerir:
 
-- boolean
-- tam sayı
+- boolean (mantıksal)
+- tam sayı (integer)
 - sabit noktalı sayılar
 - sabit boyutlu bayt dizileri
-- dinamik olarak boyutlandırılmış bayt dizileri
-- rasyonel ve tam sayı değişmezleri
-- metin değişmezleri
-- onaltılık değişmezler
-- enum'lar
+- dinamik boyutlu bayt dizileri
+- rasyonel ve tam sayı sabitleri (literals)
+- dize (string) sabitleri
+- onaltılık (hexadecimal) sabitler
+- enum'lar (numaralandırmalar)
 
 Daha fazla açıklama için belgelere göz atın:
 
-- [Vyper türlerini görün](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
-- [Solidity türlerini görün](https://docs.soliditylang.org/en/latest/types.html#value-types)
+- [Vyper türlerine bakın](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Solidity türlerine bakın](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Bellek {#memory}
 
-Sadece bir sözleşme fonksiyonunun yürütümü esnasında depolanan değerlere bellek değişkenleri denir. Bunlar blok zincirinde kalıcı şekilde depolanmadıkları için kullanımları çok daha ucuzdur.
+Yalnızca bir sözleşme işlevinin yürütülme ömrü boyunca depolanan değerlere bellek değişkenleri denir. Bunlar Blokzincir üzerinde kalıcı olarak depolanmadığından, kullanımları çok daha ucuzdur.
 
-EVM'nin verileri nasıl depoladığı (Depolama, Bellek ve Yığın) hakkında daha fazla bilgiyi [Solidity belgelerinden](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) edinin.
+Ethereum Sanal Makinesi (EVM)'nin verileri nasıl depoladığı (Depolama, Bellek ve Yığın) hakkında daha fazla bilgiyi [Solidity belgelerinde](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) öğrenebilirsiniz.
 
 ### Ortam değişkenleri {#environment-variables}
 
-Sözleşmenizde tanımladığınız değişkenlere ek olarak, bazı özel global değişkenler bulunmaktadır. Başlıca blok zinciri veya mevcut işlem hakkında bilgi sağlamak için kullanılırlar.
+Sözleşmenizde tanımladığınız değişkenlere ek olarak, bazı özel küresel değişkenler vardır. Bunlar öncelikle Blokzincir veya mevcut işlem hakkında bilgi sağlamak için kullanılır.
 
 Örnekler:
 
-| **Özellik**       | **Durum değişkeni** | **Açıklama**                                          |
-| ----------------- | ------------------- | ----------------------------------------------------- |
-| `block.timestamp` | uint256             | Mevcut blok dönemi zaman damgası                      |
-| `msg.sender`      | adres               | Mesajın göndericisi (mevcut çağrı) |
+| **Özellik**          | **Durum değişkeni** | **Açıklama**                      |
+| ----------------- | ------------------ | ------------------------------------ |
+| `block.timestamp` | uint256            | Mevcut blok dönem zaman damgası        |
+| `msg.sender`      | address            | Mesajın göndericisi (mevcut çağrı) |
 
-## Fonksiyonlar {#functions}
+## İşlevler {#functions}
 
-En basit şekilde, fonksiyonlar gelen işlemlere yanıt olarak bilgi alabilir veya düzenleyebilir.
+En basit ifadeyle işlevler, gelen işlemlere yanıt olarak bilgi alabilir veya bilgi ayarlayabilir.
 
-İki tip fonksiyon çağrısı bulunur:
+İki tür işlev çağrısı vardır:
 
 - `internal` – bunlar bir EVM çağrısı oluşturmaz
-  - Dahili fonksiyonlara ve durum değişkenlerine yalnızca dahili olarak erişilebilir (yani mevcut sözleşmenin içinden veya ondan türetilen sözleşmelerden)
+  - Dahili işlevlere ve durum değişkenlerine yalnızca dahili olarak (yani, mevcut sözleşmenin içinden veya ondan türetilen sözleşmelerden) erişilebilir
 - `external` – bunlar bir EVM çağrısı oluşturur
-  - External fonksiyonlar sözleşme arayüzünün bir parçasıdır, bu da diğer sözleşmelerden ve işlemler aracılığıyla çağrılabilecekleri anlamına gelir. Harici bir `f` fonksiyonu dahili olarak çağrılamaz (yani `f()` çalışmaz, ancak `this.f()` çalışır).
+  - Harici işlevler sözleşme arayüzünün bir parçasıdır, bu da diğer sözleşmelerden ve işlemler aracılığıyla çağrılabilecekleri anlamına gelir. Harici bir `f` işlevi dahili olarak çağrılamaz (yani, `f()` çalışmaz, ancak `this.f()` çalışır).
 
 Ayrıca `public` veya `private` olabilirler
 
-- `public` fonksiyonlar, sözleşme içinden dahili olarak veya mesajlar aracılığıyla harici olarak çağrılabilir
-- `private` fonksiyonlar yalnızca tanımlandıkları sözleşme için görünürdür ve türetilmiş sözleşmelerde görünmezler
+- `public` işlevleri sözleşme içinden dahili olarak veya mesajlar aracılığıyla harici olarak çağrılabilir
+- `private` işlevleri yalnızca tanımlandıkları sözleşme için görünürdür ve türetilmiş sözleşmelerde görünmez
 
-Hem fonksiyonlar hem de durum değişkenleri public veya private yapılabilir
+Hem işlevler hem de durum değişkenleri genel (public) veya özel (private) yapılabilir
 
-Burada bir sözleşmedeki bir durum değişkenini güncellemek için bir fonksiyon bulunmaktadır:
+İşte bir sözleşmedeki bir durum değişkenini güncellemek için bir işlev:
 
 ```solidity
 // Solidity örneği
@@ -96,13 +96,13 @@ function update_name(string value) public {
 }
 ```
 
-- `string` türündeki `value` parametresi, `update_name` fonksiyonuna geçirilir
+- `string` türündeki `value` parametresi işleve geçirilir: `update_name`
 - `public` olarak bildirilmiştir, yani herkes erişebilir
 - `view` olarak bildirilmemiştir, bu nedenle sözleşme durumunu değiştirebilir
 
-### Görünüm fonksiyonları {#view-functions}
+### View (Görüntüleme) işlevleri {#view-functions}
 
-Bu fonksiyonlar sözleşmenin verisinin durumunu değiştirmemeye söz verirler. Yaygın örnekler "alıcı" fonksiyonlardır – örnek olarak bunu bir kullanıcının bakiyesini almak için kullanabilirsiniz.
+Bu işlevler, sözleşme verilerinin durumunu değiştirmemeyi taahhüt eder. Yaygın örnekler "getter" (alıcı) işlevleridir – örneğin bunu bir kullanıcının bakiyesini almak için kullanabilirsiniz.
 
 ```solidity
 // Solidity örneği
@@ -120,30 +120,30 @@ def readName() -> string:
   return dappName
 ```
 
-Durumu değiştirme olarak sayılan şeyler:
+Durumu değiştirmek olarak kabul edilenler:
 
-1. Değişkenlikleri belirtmek için yazma.
-2. [Olayları yayma](https://docs.soliditylang.org/en/v0.7.0/contracts.html#events).
-3. [Diğer sözleşmeleri oluşturma](https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts).
-4. `selfdestruct` kullanma.
-5. Çağrılar aracılığıyla ether gönderme.
-6. `view` veya `pure` olarak işaretlenmemiş herhangi bir fonksiyonu çağırma.
-7. Alt düzey çağrıları kullanma.
-8. Belirli işlem kodları içeren satır içi tümleşkeler kullanma.
+1. Durum değişkenlerine yazmak.
+2. [Olaylar yaymak](https://docs.soliditylang.org/en/v0.7.0/contracts.html#events).
+3. [Başka sözleşmeler oluşturmak](https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts).
+4. `selfdestruct` kullanmak.
+5. Çağrılar aracılığıyla Ether göndermek.
+6. `view` veya `pure` olarak işaretlenmemiş herhangi bir işlevi çağırmak.
+7. Düşük seviyeli çağrılar kullanmak.
+8. Belirli işlem kodlarını (opcodes) içeren satır içi (inline) assembly kullanmak.
 
-### Yapıcı fonksiyonlar {#constructor-functions}
+### Kurucu işlevler {#constructor-functions}
 
-`constructor` fonksiyonları yalnızca sözleşme ilk kez dağıtıldığında bir kez yürütülür. Birçok sınıf tabanlı programlama dilindeki `constructor` gibi, bu fonksiyonlar da genellikle durum değişkenlerini belirtilen değerlere başlatır.
+`constructor` işlevleri, sözleşme ilk dağıtıldığında yalnızca bir kez yürütülür. Sınıf tabanlı birçok programlama dilindeki `constructor` gibi, bu işlevler genellikle durum değişkenlerini belirtilen değerlerine başlatır.
 
 ```solidity
 // Solidity örneği
-// Sözleşmenin verilerini başlatır, `owner`'ı
-// sözleşmeyi oluşturanın adresine ayarlar.
+// Sözleşmenin verilerini başlatır, `owner` değerini
+// sözleşme oluşturucusunun adresine ayarlar.
 constructor() public {
-    // Tüm akıllı sözleşmeler, fonksiyonlarını tetiklemek için harici işlemlere güvenir.
-    // `msg`, gönderenin adresi ve işlemde yer alan ETH değeri gibi
-    // belirli bir işlemle ilgili verileri içeren genel bir değişkendir.
-    // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    // Tüm akıllı sözleşmeler, işlevlerini tetiklemek için harici işlemlere güvenir.
+    // `msg`, verilen işlemle ilgili verileri içeren küresel bir değişkendir,
+    // gönderenin adresi ve işleme dahil edilen ETH değeri gibi.
+    // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
     owner = msg.sender;
 }
 ```
@@ -158,23 +158,23 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Yerleşik fonksiyonlar {#built-in-functions}
+### Yerleşik işlevler {#built-in-functions}
 
-Sözleşmenizde tanımladığınız değişkenler ve fonksiyonlara ek olarak, bazı özel yerleşik fonksiyonlar bulunmaktadır. En bariz örnek şudur:
+Sözleşmenizde tanımladığınız değişkenlere ve işlevlere ek olarak, bazı özel yerleşik işlevler vardır. En belirgin örnek şudur:
 
 - `address.send()` – Solidity
 - `send(address)` – Vyper
 
-Bunlar sözleşmelerin başka hesaplara ETH göndermesini sağlar.
+Bunlar, sözleşmelerin diğer hesaplara ETH göndermesine olanak tanır.
 
-## Fonksiyon yazma {#writing-functions}
+## İşlevler yazmak {#writing-functions}
 
-Fonksiyonunuz şunlara ihtiyaç duyar:
+İşlevinizin şunlara ihtiyacı vardır:
 
-- parametre değişkeni ve türü (eğer parametre kabul ediyorsa)
-- internal/external deklarasyonu
-- pure/view/payable deklarasyonu
-- dönüş türü (eğer bir değer döndürüyorsa)
+- parametre değişkeni ve türü (parametre kabul ediyorsa)
+- internal/external (dahili/harici) bildirimi
+- pure/view/payable bildirimi
+- dönüş türü (bir değer döndürüyorsa)
 
 ```solidity
 pragma solidity >=0.4.0 <=0.6.0;
@@ -187,119 +187,119 @@ contract ExampleDapp {
         dapp_name = "My Example dapp";
     }
 
-    // Get Fonksiyonu
+    // Get İşlevi
     function read_name() public view returns(string) {
         return dapp_name;
     }
 
-    // Set Fonksiyonu
+    // Set İşlevi
     function update_name(string value) public {
         dapp_name = value;
     }
 }
 ```
 
-Tam bir sözleşme bu şekilde gözükebilir. Burada `constructor` fonksiyonu, `dapp_name` değişkeni için bir başlangıç değeri sağlar.
+Tam bir sözleşme buna benzer bir şey olabilir. Burada `constructor` işlevi, `dapp_name` değişkeni için bir başlangıç değeri sağlar.
 
 ## Olaylar ve günlükler {#events-and-logs}
 
-Olaylar, akıllı sözleşmelerinizin ön yüzünüz ya da diğer abonelik uygulamalarınızla iletişime geçebilmesini sağlar. Bir işlem doğrulandıktan ve bir bloğa eklendikten sonra akıllı sözleşmeler, ön ucun daha sonra işleyebileceği ve kullanabileceği olayları ve günlük bilgilerini yayabilir.
+Olaylar, akıllı sözleşmenizin ön yüzünüzle veya abone olan diğer uygulamalarla iletişim kurmasını sağlar. Bir işlem doğrulanıp bir bloğa eklendiğinde, akıllı sözleşmeler olaylar yayabilir ve bilgileri günlüğe kaydedebilir; ön yüz daha sonra bunları işleyebilir ve kullanabilir.
 
 ## Açıklamalı örnekler {#annotated-examples}
 
-Bunlar Solidity ile yazılmış bazı örneklerdir. Kodla oynamak isterseniz, [Remix](https://remix.ethereum.org) üzerinde onlarla etkileşime girebilirsiniz.
+Bunlar Solidity ile yazılmış bazı örneklerdir. Kodla oynamak isterseniz, onlarla [Remix](https://remix.ethereum.org) üzerinde etkileşime girebilirsiniz.
 
 ### Merhaba dünya {#hello-world}
 
 ```solidity
-// Anlamsal sürüm oluşturmayı kullanarak Solidity sürümünü belirtir.
-// Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// Anlamsal sürümleme kullanarak Solidity sürümünü belirtir.
+// Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
 // `HelloWorld` adında bir sözleşme tanımlar.
-// Bir sözleşme, fonksiyonlar ve verilerden (durumundan) oluşan bir koleksiyondur.
-// Dağıtıldıktan sonra, bir sözleşme Ethereum blokzincirinde belirli bir adreste bulunur.
-// Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Bir sözleşme, işlevlerin ve verilerin (durumunun) bir koleksiyonudur.
+// Dağıtıldıktan sonra, bir sözleşme Ethereum Blokzincir üzerinde belirli bir adreste bulunur.
+// Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
     // `string` türünde bir `message` durum değişkeni bildirir.
-    // Durum değişkenleri, değerleri kalıcı olarak sözleşme depolama alanında saklanan değişkenlerdir.
+    // Durum değişkenleri, değerleri sözleşme depolamasında kalıcı olarak saklanan değişkenlerdir.
     // `public` anahtar kelimesi, değişkenleri bir sözleşmenin dışından erişilebilir hale getirir
-    // ve diğer sözleşmelerin veya istemcilerin değere erişmek için çağırabileceği bir fonksiyon oluşturur.
+    // ve diğer sözleşmelerin veya istemcilerin değere erişmek için çağırabileceği bir işlev oluşturur.
     string public message;
 
-    // Birçok sınıf tabanlı nesne yönelimli dilde olduğu gibi, bir yapıcı
-    // yalnızca sözleşme oluşturulduğunda yürütülen özel bir fonksiyondur.
-    // Yapıcılar, sözleşmenin verilerini başlatmak için kullanılır.
-    // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+    // Sınıf tabanlı nesne yönelimli birçok dile benzer şekilde, bir kurucu
+    // yalnızca sözleşme oluşturulduğunda yürütülen özel bir işlevdir.
+    // Kurucular, sözleşmenin verilerini başlatmak için kullanılır.
+    // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
-        // Bir `initMessage` dize bağımsız değişkenini kabul eder ve değeri
+        // Bir dize argümanı olan `initMessage` değerini kabul eder ve değeri
         // sözleşmenin `message` depolama değişkenine ayarlar).
         message = initMessage;
     }
 
-    // Bir dize bağımsız değişkenini kabul eden
-    // ve `message` depolama değişkenini güncelleyen genel bir fonksiyon.
+    // Bir dize argümanı kabul eden genel bir işlev
+    // ve `message` depolama değişkenini günceller.
     function update(string memory newMessage) public {
         message = newMessage;
     }
 }
 ```
 
-### Jeton {#token}
+### Token {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
 
 contract Token {
-    // Bir `address` bir e-posta adresine benzer; Ethereum'da bir hesabı tanımlamak için kullanılır.
-    // Adresler bir akıllı sözleşmeyi veya harici (kullanıcı) hesapları temsil edebilir.
-    // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
+    // Bir `address` bir e-posta adresine benzetilebilir - Ethereum üzerinde bir hesabı tanımlamak için kullanılır.
+    // Adresler bir akıllı sözleşmeyi veya harici (kullanıcı) hesaplarını temsil edebilir.
+    // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
 
-    // Bir `mapping` aslında bir karma tablo veri yapısıdır.
-    // Bu `mapping`, işaretsiz bir tam sayıyı (jeton bakiyesi) bir adrese (jeton sahibi) atar.
-    // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
+    // Bir `mapping` temel olarak bir karma tablo veri yapısıdır.
+    // Bu `mapping`, bir adrese (Token sahibine) işaretsiz bir tamsayı (Token bakiyesi) atar.
+    // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
     mapping (address => uint) public balances;
 
-    // Olaylar, blokzincirindeki etkinliğin günlüğe kaydedilmesine olanak tanır.
-    // Ethereum istemcileri, sözleşme durumu değişikliklerine tepki vermek için olayları dinleyebilir.
-    // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
+    // Olaylar, Blokzincir üzerindeki etkinliklerin günlüğe kaydedilmesine olanak tanır.
+    // Ethereum istemcileri, sözleşme durum değişikliklerine tepki vermek için olayları dinleyebilir.
+    // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // Sözleşmenin verilerini başlatır, `owner`'ı
-    // sözleşmeyi oluşturanın adresine ayarlar.
+    // Sözleşmenin verilerini başlatır, `owner` değerini
+    // sözleşme oluşturucusunun adresine ayarlar.
     constructor() public {
-        // Tüm akıllı sözleşmeler, fonksiyonlarını tetiklemek için harici işlemlere güvenir.
-        // `msg`, gönderenin adresi ve işlemde yer alan ETH değeri gibi
-        // belirli bir işlemle ilgili verileri içeren genel bir değişkendir.
-        // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+        // Tüm akıllı sözleşmeler, işlevlerini tetiklemek için harici işlemlere güvenir.
+        // `msg`, verilen işlemle ilgili verileri içeren küresel bir değişkendir,
+        // gönderenin adresi ve işleme dahil edilen ETH değeri gibi.
+        // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
         owner = msg.sender;
     }
 
-    // Yeni jetonlar oluşturur ve bunları bir adrese gönderir.
+    // Belirli bir miktarda yeni Token oluşturur ve bunları bir adrese gönderir.
     function mint(address receiver, uint amount) public {
-        // `require`, belirli koşulları zorlamak için kullanılan bir kontrol yapısıdır.
-        // Bir `require` ifadesi `false` olarak değerlendirilirse, bir istisna tetiklenir,
-        // bu da mevcut çağrı sırasında durumda yapılan tüm değişiklikleri geri alır.
-        // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // `require`, belirli koşulları zorunlu kılmak için kullanılan bir kontrol yapısıdır.
+        // Eğer bir `require` ifadesi `false` olarak değerlendirilirse, bir istisna tetiklenir,
+        // bu da mevcut çağrı sırasında duruma yapılan tüm değişiklikleri geri alır.
+        // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // Bu fonksiyonu yalnızca sözleşme sahibi çağırabilir
-        require(msg.sender == owner, "Sahip siz değilsiniz.");
+        // Bu işlevi yalnızca sözleşme sahibi çağırabilir
+        require(msg.sender == owner, "You are not the owner.");
 
-        // Maksimum jeton miktarını zorlar
-        require(amount < 1e60, "Maksimum ihraç aşıldı");
+        // Maksimum Token miktarını zorunlu kılar
+        require(amount < 1e60, "Maximum issuance exceeded");
 
         // `receiver` bakiyesini `amount` kadar artırır
         balances[receiver] += amount;
     }
 
-    // Herhangi bir çağırandan bir adrese mevcut jeton miktarını gönderir.
+    // Herhangi bir arayandan bir adrese belirli bir miktarda mevcut Token gönderir.
     function transfer(address receiver, uint amount) public {
-        // Gönderenin göndermek için yeterli jetonu olmalıdır
-        require(amount <= balances[msg.sender], "Yetersiz bakiye.");
+        // Gönderenin göndermek için yeterli Token'ı olmalıdır
+        require(amount <= balances[msg.sender], "Insufficient balance.");
 
-        // İki adresin jeton bakiyelerini ayarlar
+        // İki adresin Token bakiyelerini ayarlar
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
 
@@ -314,32 +314,32 @@ contract Token {
 ```solidity
 pragma solidity ^0.5.10;
 
-// Diğer dosyalardan sembolleri mevcut sözleşmeye aktarır.
+// Diğer dosyalardaki sembolleri mevcut sözleşmeye içe aktarır.
 // Bu durumda, OpenZeppelin'den bir dizi yardımcı sözleşme.
-// Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
+// Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// `is` anahtar kelimesi, harici sözleşmelerden fonksiyonları ve anahtar kelimeleri miras almak için kullanılır.
-// Bu durumda `CryptoPizza`, `IERC721` ve `ERC165` sözleşmelerinden miras alır.
-// Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
+// `is` anahtar kelimesi, harici sözleşmelerden işlevleri ve anahtar kelimeleri devralmak için kullanılır.
+// Bu durumda, `CryptoPizza`, `IERC721` ve `ERC165` sözleşmelerinden devralır.
+// Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Aritmetik işlemleri güvenli bir şekilde gerçekleştirmek için OpenZeppelin'in SafeMath kütüphanesini kullanır.
-    // Daha fazlasını öğrenin: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Daha fazla bilgi edinin: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
     using SafeMath for uint256;
 
     // Solidity'deki sabit durum değişkenleri diğer dillere benzer
-    // ancak derleme zamanında sabit olan bir ifadeden atama yapmanız gerekir.
-    // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // ancak derleme zamanında sabit olan bir ifadeden atama yapmalısınız.
+    // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Struct türleri kendi türünüzü tanımlamanızı sağlar
-    // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // Yapı türleri kendi türünüzü tanımlamanıza olanak tanır
+    // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
@@ -351,37 +351,37 @@ contract CryptoPizza is IERC721, ERC165 {
     // Pizza kimliğinden sahibinin adresine eşleme
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Sahibin adresinden sahip olunan jeton sayısına eşleme
+    // Sahibinin adresinden sahip olunan Token sayısına eşleme
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Jeton kimliğinden onaylanmış adrese eşleme
+    // Token kimliğinden onaylı adrese eşleme
     mapping(uint256 => address) pizzaApprovals;
 
-    // Eşlemeleri iç içe kullanabilirsiniz, bu örnek sahibi operatör onaylarıyla eşler
+    // Eşlemeleri iç içe yerleştirebilirsiniz, bu örnek sahibini operatör onaylarıyla eşler
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // Dizeden (ad) ve DNA'dan rastgele bir Pizza oluşturmak için dahili fonksiyon
+    // Dize (isim) ve DNA'dan rastgele bir Pizza oluşturmak için dahili işlev
     function _createPizza(string memory _name, uint256 _dna)
-        // `internal` anahtar kelimesi, bu fonksiyonun yalnızca
-        // bu sözleşme ve bu sözleşmeyi türeten sözleşmeler içinde görünür olduğu anlamına gelir
-        // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // `internal` anahtar kelimesi, bu işlevin yalnızca
+        // bu sözleşme ve bu sözleşmeden türetilen sözleşmeler içinde görünür olduğu anlamına gelir
+        // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique`, pizzanın zaten var olup olmadığını kontrol eden bir fonksiyon değiştiricisidir
-        // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // `isUnique`, pizzanın zaten var olup olmadığını kontrol eden bir işlev değiştiricisidir
+        // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Pizza'yı Pizza dizisine ekler ve kimliği alır
+        // Pizzayı Pizzalar dizisine ekler ve kimliği alır
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
         // Pizza sahibinin mevcut kullanıcıyla aynı olup olmadığını kontrol eder
-        // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
         // address(0)'ın sıfır adresi olduğunu unutmayın,
-        // pizza[id]'nin henüz belirli bir kullanıcıya atanmadığını gösterir.
+        // bu, pizza[id]'nin henüz belirli bir kullanıcıya tahsis edilmediğini gösterir.
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Pizza'yı sahibine eşler
+        // Pizzayı sahibine eşler
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -389,38 +389,38 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // Dizeden (ad) rastgele bir Pizza oluşturur
+    // Dizeden (isim) rastgele bir Pizza oluşturur
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // Dizeden (ad) ve sahibinin adresinden (oluşturan) rastgele DNA oluşturur
+    // Dizeden (isim) ve sahibinin (oluşturanın) adresinden rastgele DNA üretir
     function generateRandomDna(string memory _str, address _owner)
         public
-        // `pure` olarak işaretlenmiş fonksiyonlar durumu okumama veya değiştirmeme sözü verir
-        // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // `pure` olarak işaretlenen işlevler, durumu okumamayı veya değiştirmemeyi taahhüt eder
+        // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // Dizeden (ad) + adresten (sahip) rastgele uint oluşturur
+        // Dize (isim) + adresten (sahip) rastgele uint üretir
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // Sahibe göre bulunan Pizza dizisini döndürür
+    // Sahibi tarafından bulunan Pizzaların dizisini döndürür
     function getPizzasByOwner(address _owner)
         public
-        // `view` olarak işaretlenmiş fonksiyonlar durumu değiştirmeme sözü verir
-        // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // `view` olarak işaretlenen işlevler durumu değiştirmemeyi taahhüt eder
+        // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // Değerleri yalnızca bu fonksiyon çağrısının
-        // yaşam döngüsü için saklamak üzere `memory` depolama konumunu kullanır.
-        // Daha fazlasını öğrenin: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
+        // `memory` depolama konumunu, değerleri yalnızca
+        // bu işlev çağrısının yaşam döngüsü boyunca saklamak için kullanır.
+        // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -432,12 +432,12 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // Pizza'yı ve sahipliğini başka bir adrese aktarır
+    // Pizzayı ve sahipliğini diğer adrese aktarır
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
-        require(_from != address(0) && _to != address(0), "Geçersiz adres.");
-        require(_exists(_pizzaId), "Pizza mevcut değil.");
-        require(_from != _to, "Aynı adrese transfer yapılamaz.");
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Adres onaylı değil.");
+        require(_from != address(0) && _to != address(0), "Invalid address.");
+        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(_from != _to, "Cannot transfer to the same address.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
 
         ownerPizzaCount[_to] = SafeMath.add(ownerPizzaCount[_to], 1);
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
@@ -449,11 +449,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Belirli bir jeton kimliğinin sahipliğini başka bir adrese güvenli bir şekilde aktarır
-     * Hedef adres bir sözleşme ise `onERC721Received` uygulamalıdır,
-     * bu, güvenli bir aktarım üzerine çağrılır ve sihirli değeri döndürür
+     * Belirli bir Token kimliğinin sahipliğini güvenli bir şekilde başka bir adrese aktarır
+     * Hedef adres bir sözleşme ise, güvenli bir aktarım üzerine çağrılan
+     * `onERC721Received` işlevini uygulamalı ve sihirli değeri döndürmelidir
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * aksi takdirde, aktarım geri alınır.
+     * aksi takdirde aktarım geri alınır.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -463,11 +463,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Belirli bir jeton kimliğinin sahipliğini başka bir adrese güvenli bir şekilde aktarır
-     * Hedef adres bir sözleşme ise `onERC721Received` uygulamalıdır,
-     * bu, güvenli bir aktarım üzerine çağrılır ve sihirli değeri döndürür
+     * Belirli bir Token kimliğinin sahipliğini güvenli bir şekilde başka bir adrese aktarır
+     * Hedef adres bir sözleşme ise, güvenli bir aktarım üzerine çağrılan
+     * `onERC721Received` işlevini uygulamalı ve sihirli değeri döndürmelidir
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * aksi takdirde, aktarım geri alınır.
+     * aksi takdirde aktarım geri alınır.
      */
     function safeTransferFrom(
         address from,
@@ -476,11 +476,11 @@ contract CryptoPizza is IERC721, ERC165 {
         bytes memory _data
     ) public {
         this.transferFrom(from, to, pizzaId);
-        require(_checkOnERC721Received(from, to, pizzaId, _data), "onERC721Received uygulanmalıdır.");
+        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implement onERC721Received.");
     }
 
     /**
-     * Hedef bir adreste `onERC721Received`'i çağırmak için dahili fonksiyon
+     * Hedef adreste `onERC721Received` işlevini çağırmak için dahili işlev
      * Hedef adres bir sözleşme değilse çağrı yürütülmez
      */
     function _checkOnERC721Received(
@@ -502,13 +502,13 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Bir Pizza'yı yakar - Jetonu tamamen yok eder
-    // `external` fonksiyon değiştiricisi, bu fonksiyonun
+    // Bir Pizzayı yakar - Token'ı tamamen yok eder
+    // `external` işlev değiştiricisi, bu işlevin
     // sözleşme arayüzünün bir parçası olduğu ve diğer sözleşmelerin onu çağırabileceği anlamına gelir
     function burn(uint256 _pizzaId) external {
-        require(msg.sender != address(0), "Geçersiz adres.");
-        require(_exists(_pizzaId), "Pizza mevcut değil.");
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Adres onaylı değil.");
+        require(msg.sender != address(0), "Invalid address.");
+        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
 
         ownerPizzaCount[msg.sender] = SafeMath.sub(
             ownerPizzaCount[msg.sender],
@@ -522,37 +522,37 @@ contract CryptoPizza is IERC721, ERC165 {
         return ownerPizzaCount[_owner];
     }
 
-    // Kimliğe göre bulunan Pizza'nın sahibini döndürür
+    // Kimliğe göre bulunan Pizzanın sahibini döndürür
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
-        require(owner != address(0), "Geçersiz Pizza Kimliği.");
+        require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // Pizza sahipliğini devretmek için başka bir adresi onaylar
+    // Pizzanın sahipliğini aktarmak için diğer adresi onaylar
     function approve(address _to, uint256 _pizzaId) public {
-        require(msg.sender == pizzaToOwner[_pizzaId], "Pizza sahibi olmalısınız.");
+        require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Belirli Pizza için onaylanmış adresi döndürür
+    // Belirli bir Pizza için onaylı adresi döndürür
     function getApproved(uint256 _pizzaId)
         public
         view
         returns (address operator)
     {
-        require(_exists(_pizzaId), "Pizza mevcut değil.");
+        require(_exists(_pizzaId), "Pizza does not exist.");
         return pizzaApprovals[_pizzaId];
     }
 
     /**
-     * Belirli bir jeton kimliğinin mevcut onayını temizlemek için özel fonksiyon
-     * Verilen adres gerçekten jetonun sahibi değilse geri alınır
+     * Belirli bir Token kimliğinin mevcut onayını temizlemek için özel işlev
+     * Verilen adres gerçekten Token'ın sahibi değilse geri alınır
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
-        require(pizzaToOwner[_pizzaId] == owner, "Pizza sahibi olmalısınız.");
-        require(_exists(_pizzaId), "Pizza mevcut değil.");
+        require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
+        require(_exists(_pizzaId), "Pizza does not exist.");
         if (pizzaApprovals[_pizzaId] != address(0)) {
             pizzaApprovals[_pizzaId] = address(0);
         }
@@ -560,15 +560,15 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /*
      * Belirli bir operatörün onayını ayarlar veya kaldırır
-     * Bir operatörün, gönderenin tüm jetonlarını kendi adına transfer etmesine izin verilir
+     * Bir operatörün, gönderenin tüm Token'larını onun adına aktarmasına izin verilir
      */
     function setApprovalForAll(address to, bool approved) public {
-        require(to != msg.sender, "Kendi adresinizi onaylayamazsınız");
+        require(to != msg.sender, "Cannot approve own address");
         operatorApprovals[msg.sender][to] = approved;
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Bir operatörün belirli bir sahip tarafından onaylanıp onaylanmadığını söyler
+    // Bir operatörün belirli bir sahip tarafından onaylanıp onaylanmadığını belirtir
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -577,27 +577,27 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Pizza'nın sahipliğini alır - yalnızca onaylı kullanıcılar için
+    // Pizzanın sahipliğini alır - yalnızca onaylı kullanıcılar için
     function takeOwnership(uint256 _pizzaId) public {
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Adres onaylı değil.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // Pizza'nın var olup olmadığını kontrol eder
+    // Pizzanın var olup olmadığını kontrol eder
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // Adresin sahip olup olmadığını veya Pizza'yı transfer etme yetkisi olup olmadığını kontrol eder
+    // Adresin sahip olup olmadığını veya Pizzayı aktarmak için onaylanıp onaylanmadığını kontrol eder
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Solium kontrolünü devre dışı bırak, çünkü
+        // Solium kontrolünü devre dışı bırak, nedeni:
         // https://github.com/duaraghav8/Solium/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
@@ -605,7 +605,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // Pizza'nın benzersiz olup olmadığını ve henüz mevcut olup olmadığını kontrol edin
+    // Pizzanın benzersiz olup olmadığını ve henüz var olmadığını kontrol et
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -617,18 +617,19 @@ contract CryptoPizza is IERC721, ERC165 {
                 result = false;
             }
         }
-        require(result, "Bu isimde bir pizza zaten var.");
+        require(result, "Pizza with such name already exists.");
         _;
     }
 
     // Hedef adresin bir sözleşme olup olmadığını döndürür
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Şu anda bir adreste sözleşme olup olmadığını kontrol etmenin, o adresteki kodun boyutunu kontrol etmekten daha iyi bir yolu yoktur.
-        // Bunun nasıl çalıştığı hakkında daha fazla ayrıntı için
-        // bkz. https://ethereum.stackexchange.com/a/14016/36603.
-        // TODO Serenity sürümünden önce bunu tekrar kontrol edin, çünkü o zaman tüm adresler
-        // sözleşme olacak.
+        // Şu anda bir adreste bir sözleşme olup olmadığını kontrol etmenin daha iyi bir yolu yoktur
+        // o adresteki kodun boyutunu kontrol etmekten başka.
+        // Bkz. https://ethereum.stackexchange.com/a/14016/36603
+        // bunun nasıl çalıştığı hakkında daha fazla ayrıntı için.
+        // YAPILACAKLAR Serenity sürümünden önce bunu tekrar kontrol edin, çünkü o zaman tüm adresler
+        // sözleşme olacaktır.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -638,20 +639,20 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla okuma {#further-reading}
 
-Akıllı sözleşmelere daha detaylı bir genel bakış için Solidity ve Vyper'ın belgelerine bakın:
+Akıllı sözleşmelere dair daha eksiksiz bir genel bakış için Solidity ve Vyper belgelerine göz atın:
 
 - [Solidity](https://docs.soliditylang.org/)
 - [Vyper](https://docs.vyperlang.org/en/stable/)
 
-## Alakalı başlıklar {#related-topics}
+## İlgili konular {#related-topics}
 
 - [Akıllı sözleşmeler](/developers/docs/smart-contracts/)
 - [Ethereum Sanal Makinesi](/developers/docs/evm/)
 
-## İlgili öğreticiler {#related-tutorials}
+## İlgili eğitimler {#related-tutorials}
 
-- [Sözleşme boyutu limitiyle mücadele etmek için sözleşmeleri küçültme](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Akıllı sözleşmenizin boyutunu küçültmek için bazı pratik ipuçları._
-- [Akıllı sözleşmelerden olaylarla veri günlüğü tutma](/developers/tutorials/logging-events-smart-contracts/) _– Akıllı sözleşme olaylarına ve bunları veri günlüğü tutmak için nasıl kullanabileceğinize bir giriş._
+- [Sözleşme boyutu sınırıyla mücadele etmek için sözleşmeleri küçültmek](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Akıllı sözleşmenizin boyutunu küçültmek için bazı pratik ipuçları._
+- [Olaylarla akıllı sözleşmelerden veri günlüğe kaydetme](/developers/tutorials/logging-events-smart-contracts/) _– Akıllı sözleşme olaylarına ve bunları veri günlüğe kaydetmek için nasıl kullanabileceğinize dair bir giriş._
 - [Solidity'den diğer sözleşmelerle etkileşim kurma](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Mevcut bir sözleşmeden bir akıllı sözleşmenin nasıl dağıtılacağı ve onunla nasıl etkileşim kurulacağı._
