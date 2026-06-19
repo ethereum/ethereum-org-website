@@ -385,7 +385,7 @@ teku --network mainnet \
 
 ### 使用節點 {#using-the-node}
 
-執行客戶端提供 [RPC API 端點](/developers/docs/apis/json-rpc/)，你可以使用它們以各種方式在以太坊網路上提交交易、互動或部署智慧合約：
+執行客戶端提供 [RPC API 端點](/developers/docs/apis/json-rpc/)，你可以使用它們以各種方式在以太坊網路上提交交易、互動或部署智能合約：
 
 - 使用合適的協定手動呼叫它們（例如，使用 `curl`）
 - 附加提供的控制台（例如，`geth attach`）

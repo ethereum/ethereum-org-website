@@ -38,7 +38,7 @@ lang: ta
 
 ## தேக்ககக் கையாளுதல் {#cache-manipulation}
 
-தேக்ககம் [`தற்காலிக சேமிப்பு.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol) இல் செயல்படுத்தப்பட்டுள்ளது. இதை வரியாகப் பார்ப்போம்.
+தேக்ககம் [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol) இல் செயல்படுத்தப்பட்டுள்ளது. இதை வரியாகப் பார்ப்போம்.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED

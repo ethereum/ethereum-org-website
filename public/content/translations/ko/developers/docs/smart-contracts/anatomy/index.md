@@ -54,7 +54,7 @@ storedData: int128
 
 ### 메모리 (Memory) {#memory}
 
-컨트랙트 함수가 실행되는 동안에만 저장되는 값을 메모리 변라고 합니다. 이 변수들은 블록체인에 영구적으로 저장되지 않기 때문에 사용하는 데 훨씬 저렴합니다.
+컨트랙트 함수가 실행되는 동안에만 저장되는 값을 메모리 변수라고 합니다. 이 변수들은 블록체인에 영구적으로 저장되지 않기 때문에 사용하는 데 훨씬 저렴합니다.
 
 EVM이 데이터를 저장하는 방법(스토리지, 메모리, 스택)에 대해 더 알아보려면 [Solidity 문서](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack)를 참조하세요.
 

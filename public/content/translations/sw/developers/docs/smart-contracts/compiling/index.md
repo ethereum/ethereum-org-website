@@ -39,7 +39,7 @@ Hizi zinaitwa **misimbo ya operesheni**. Misimbo ya operesheni ya EVM ni maagizo
 
 ## Programu za wavuti {#web-applications}
 
-Kikusanyaji pia kitazalisha **Kiolesura cha Nambari cha Programu (ABI)** ambacho unakihitaji ili programu yako ielewe mkataba na kuita vitendaji vya mkataba.
+Kikusanyaji pia kitazalisha **kiolesura cha jozi cha programu (ABI)** ambacho unakihitaji ili programu yako ielewe mkataba na kuita vitendaji vya mkataba.
 
 ABI ni faili la JSON linaloelezea mkataba uliosambazwa na vitendaji vyake vya mkataba mahiri. Hii inasaidia kujenga daraja kati ya Web2 na Web3
 

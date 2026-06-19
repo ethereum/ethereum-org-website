@@ -19,7 +19,7 @@ _Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 As transações, que alteram o estado da EVM, precisam ser transmitidas para toda a rede. Qualquer nó pode transmitir uma solicitação para que uma transação seja executada na EVM; depois que isso acontece, um validador executará a transação e propagará a mudança de estado resultante para o resto da rede.
 
-As transações exigem uma taxa e devem ser incluídas em um bloco validado. Para tornar esta visão geral mais simples, abordaremos as taxas de gas e a validação em outro lugar.
+As transações exigem uma taxa e devem ser incluídas em um bloco validado. Para tornar esta visão geral mais simples, abordaremos as taxas de gás e a validação em outro lugar.
 
 Uma transação enviada inclui as seguintes informações:
 
@@ -160,7 +160,7 @@ Portanto, para Bob enviar a Alice 1 ETH a uma `baseFeePerGas` de 190 gwei e uma 
 0.0042 ETH
 ```
 
-A conta de Bob será debitada em **-1,0042 ETH** (1 ETH para Alice + 0,0042 ETH em taxas de gas)
+A conta de Bob será debitada em **-1,0042 ETH** (1 ETH para Alice + 0,0042 ETH em taxas de gás)
 
 A conta de Alice será creditada em **+1,0 ETH**
 

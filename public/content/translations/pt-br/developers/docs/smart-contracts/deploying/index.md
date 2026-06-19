@@ -12,7 +12,7 @@ Para implantar um contrato inteligente, você simplesmente envia uma transação
 
 Você deve entender as [redes Ethereum](/developers/docs/networks/), as [transações](/developers/docs/transactions/) e a [anatomia dos contratos inteligentes](/developers/docs/smart-contracts/anatomy/) antes de implantar contratos inteligentes.
 
-A implantação de um contrato também custa ether (ETH), pois eles são armazenados na blockchain, portanto, você deve estar familiarizado com [gas e taxas](/developers/docs/gas/) no Ethereum.
+A implantação de um contrato também custa ether (ETH), pois eles são armazenados na blockchain, portanto, você deve estar familiarizado com [gás e taxas](/developers/docs/gas/) no Ethereum.
 
 Por fim, você precisará compilar seu contrato antes de implantá-lo, portanto, certifique-se de ter lido sobre a [compilação de contratos inteligentes](/developers/docs/smart-contracts/compiling/).
 
@@ -21,7 +21,7 @@ Por fim, você precisará compilar seu contrato antes de implantá-lo, portanto,
 ### O que você vai precisar {#what-youll-need}
 
 - O bytecode do seu contrato – isso é gerado por meio da [compilação](/developers/docs/smart-contracts/compiling/)
-- ETH para o gas – você definirá seu limite de gas como em outras transações, portanto, esteja ciente de que a implantação de contratos precisa de muito mais gas do que uma simples transferência de ETH
+- ETH para o gás – você definirá seu limite de gás como em outras transações, portanto, esteja ciente de que a implantação de contratos precisa de muito mais gás do que uma simples transferência de ETH
 - um script ou plugin de implantação
 - acesso a um [nó Ethereum](/developers/docs/nodes-and-clients/), seja executando o seu próprio, conectando-se a um nó público ou por meio de uma chave de API usando um [serviço de nó](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 

@@ -288,12 +288,12 @@ Questo contratto è progettato per fare tre cose:
 2. Depositare 1 ETH nel contratto Vittima
 3. Prelevare l'1 ETH memorizzato nello smart contract
 
-Non c'è niente di sbagliato qui, tranne che `Attacker` ha un'altra funzione che chiama nuovamente `withdraw() in `Victim` se il gas rimanente dal `msg.sender.call.value` in entrata è superiore a 40.000. Ciò dà a `Attacker` la capacità di rientrare in `Victim` e prelevare più fondi _prima_ che la prima invocazione di `withdraw` sia completata. Il ciclo si presenta così:
+Non c'è niente di sbagliato qui, tranne che `Attacker` ha un'altra funzione che chiama nuovamente `withdraw()` in `Victim` se il gas rimanente dal `msg.sender.call.value` in entrata è superiore a 40.000. Ciò dà a `Attacker` la capacità di rientrare in `Victim` e prelevare più fondi _prima_ che la prima invocazione di `withdraw` sia completata. Il ciclo si presenta così:
 
 ```solidity
 - Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH
 - `Attacker.beginAttack()` deposits 1 ETH into `Victim`
-- `Attacker` calls `withdraw() in `Victim`
+- `Attacker` calls `withdraw()` in `Victim`
 - `Victim` checks `Attacker`’s balance (1 ETH)
 - `Victim` sends 1 ETH to `Attacker` (which triggers the default function)
 - `Attacker` calls `Victim.withdraw()` again (note that `Victim` hasn’t reduced `Attacker`’s balance from the first withdrawal)

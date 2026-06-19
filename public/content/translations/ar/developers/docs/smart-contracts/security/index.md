@@ -16,11 +16,6 @@ lang: ar
 
 تأكد من أنك على دراية بـ [أساسيات تطوير العقود الذكية](/developers/docs/smart-contracts/) قبل التعامل مع الأمان.
 
-```yaml
-title: أمان العقد الذكي
-description: نظرة عامة على إرشادات الأمان لمطوري العقود الذكية على إيثيريوم
-lang: ar
-```
 
 ## إرشادات لبناء عقود ذكية آمنة على إيثيريوم {#smart-contract-security-guidelines}
 
