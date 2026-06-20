@@ -939,7 +939,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 त्या पद्धती [ERC-20 स्टँडर्डद्वारे](https://eips.ethereum.org/EIPS/eip-20) आवश्यक नाहीत, जे टोकन तयार आणि नष्ट करण्याच्या यंत्रणा अनिर्दिष्ट ठेवते.
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 कॉन्ट्रॅक्ट कोणती फंक्शन्स प्रदान करतो हे निर्दिष्ट करण्यासाठी [ERC-165 इंटरफेस](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) वापरला जातो.

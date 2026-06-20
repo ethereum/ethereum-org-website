@@ -959,7 +959,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 Metode tersebut tidak diwajibkan oleh [standar ERC-20](https://eips.ethereum.org/EIPS/eip-20), yang membiarkan mekanisme untuk membuat dan menghancurkan token tidak ditentukan.
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 [Antarmuka ERC-165](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) digunakan untuk menentukan fungsi apa yang disediakan oleh kontrak.

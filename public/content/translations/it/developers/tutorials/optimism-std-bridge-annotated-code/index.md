@@ -959,7 +959,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 Questi metodi non sono richiesti dallo [standard ERC-20](https://eips.ethereum.org/EIPS/eip-20), che lascia non specificati i meccanismi per creare e distruggere i token.
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 [L'interfaccia ERC-165](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) viene utilizzata per specificare quali funzioni fornisce un contratto.

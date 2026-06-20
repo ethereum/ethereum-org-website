@@ -955,7 +955,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 [ERC-20 标准](https://eips.ethereum.org/EIPS/eip-20)不需要这些方法，该标准未指定创建和销毁代币的机制。
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 [ERC-165 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol)用于指定合约提供哪些函数。

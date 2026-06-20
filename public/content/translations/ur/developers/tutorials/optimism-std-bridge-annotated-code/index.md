@@ -957,7 +957,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ان طریقوں کی [<span dir="ltr">ERC-20</span> معیار](https://eips.ethereum.org/EIPS/eip-20) کو ضرورت نہیں ہے، جو ٹوکن بنانے اور تباہ کرنے کے طریقہ کار کو غیر متعین چھوڑ دیتا ہے۔
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 [<span dir="ltr">ERC-165</span> انٹرفیس](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) یہ بتانے کے لیے استعمال ہوتا ہے کہ کنٹریکٹ کون سے فنکشنز فراہم کرتا ہے۔

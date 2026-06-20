@@ -958,7 +958,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 এই পদ্ধতিগুলো [ERC-20 স্ট্যান্ডার্ড](https://eips.ethereum.org/EIPS/eip-20) দ্বারা প্রয়োজনীয় নয়, যা টোকেন তৈরি এবং ধ্বংস করার মেকানিজমগুলোকে অনির্দিষ্ট রাখে।
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 একটি কন্ট্রাক্ট কী কী ফাংশন প্রদান করে তা নির্দিষ্ট করতে [ERC-165 ইন্টারফেস](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) ব্যবহৃত হয়।

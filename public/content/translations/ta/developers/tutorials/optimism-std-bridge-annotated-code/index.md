@@ -937,7 +937,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 அந்த முறைகள் [ERC-20 தரநிலையால்](https://eips.ethereum.org/EIPS/eip-20) கோரப்படவில்லை, இது வில்லைகளை உருவாக்குவதற்கும் அழிப்பதற்குமான வழிமுறைகளைக் குறிப்பிடாமல் விட்டுவிடுகிறது.
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 ஒரு ஒப்பந்தம் என்ன செயல்பாடுகளை வழங்குகிறது என்பதைக் குறிப்பிட [ERC-165 இடைமுகம்](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) பயன்படுத்தப்படுகிறது.

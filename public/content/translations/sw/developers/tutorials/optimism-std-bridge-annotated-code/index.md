@@ -959,7 +959,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 Mbinu hizo hazihitajiki na [kiwango cha ERC-20](https://eips.ethereum.org/EIPS/eip-20), ambacho huacha bila kubainishwa taratibu za kuunda na kuharibu tokeni.
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 [Kiolesura cha ERC-165](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) kinatumika kubainisha ni vipengele gani mkataba unatoa.

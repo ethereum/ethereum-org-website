@@ -936,7 +936,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 이러한 메서드는 토큰을 생성하고 파괴하는 메커니즘을 지정하지 않은 [ERC-20 표준](https://eips.ethereum.org/EIPS/eip-20)에서 요구하지 않습니다.
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 [ERC-165 인터페이스](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol)는 컨트랙트가 제공하는 함수를 지정하는 데 사용됩니다.

@@ -954,7 +954,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 これらのメソッドは[ERC-20標準](https://eips.ethereum.org/EIPS/eip-20)では要求されておらず、トークンを作成および破棄するメカニズムは指定されていません。
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 [ERC-165インターフェース](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol)は、コントラクトが提供する関数を指定するために使用されます。

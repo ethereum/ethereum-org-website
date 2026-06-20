@@ -958,7 +958,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 هذه الطرق غير مطلوبة بواسطة [معيار <span dir="ltr">ERC-20</span>](https://eips.ethereum.org/EIPS/eip-20)، والذي يترك آليات إنشاء وتدمير الرموز المميزة غير محددة.
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 تُستخدم [واجهة <span dir="ltr">ERC-165</span>](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) لتحديد الدوال التي يوفرها العقد.

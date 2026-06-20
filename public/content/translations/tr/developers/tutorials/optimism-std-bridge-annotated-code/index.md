@@ -959,7 +959,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 Bu yöntemler, token'ları oluşturma ve yok etme mekanizmalarını belirtmeyen [ERC-20 standardı](https://eips.ethereum.org/EIPS/eip-20) tarafından gerekli kılınmaz.
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 [ERC-165 arayüzü](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol), bir sözleşmenin hangi işlevleri sağladığını belirtmek için kullanılır.

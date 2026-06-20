@@ -953,7 +953,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ఆ పద్ధతులు [ERC-20 ప్రమాణం](https://eips.ethereum.org/EIPS/eip-20) ద్వారా అవసరం లేదు, ఇది టోకెన్‌లను సృష్టించడానికి మరియు నాశనం చేయడానికి యంత్రాంగాలను పేర్కొనకుండా వదిలివేస్తుంది.
 
 ```solidity
-import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
 కాంట్రాక్ట్ ఏ ఫంక్షన్‌లను అందిస్తుందో పేర్కొనడానికి [ERC-165 ఇంటర్‌ఫేస్](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) ఉపయోగించబడుతుంది.

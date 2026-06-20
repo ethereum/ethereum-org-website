@@ -213,11 +213,6 @@ _ブロックチェーン上に秘密はありません_。ブロックチェー
 
 7. クライアントは自動的に更新を取得し、[プレイヤーに表示されるマップを更新し](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190)、該当する場合はプレイヤーに勝敗を伝えます。
 
-```yaml
-title: ゼロ知識dappにおける秘密の状態
-description: Zokratesを使用して状態を秘密に保つ方法
-lang: ja
-```
 
 ## Zokratesの使用 {#using-zokrates}
 
