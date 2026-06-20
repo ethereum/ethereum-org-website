@@ -18,8 +18,8 @@ template: roadmap
     <li>現今的匯總比以太坊第一層 (L1) 便宜約 <strong>5-20 倍</strong></li>
     <li>零知識匯總 (ZK-rollup) 很快將使費用降低約 <strong>40-100 倍</strong></li>
     <li>即將到來的以太坊變更將提供額外約 <strong>100-1000 倍</strong>的擴容</li>
- <li style={{ marginBottom: 0 }}>使用者將受惠於<strong>低於 0.001 美元</strong>的交易成本
-
+ <li style={{ marginBottom: 0 }}>使用者將受惠於<strong>低於 0.001 美元</strong>的交易成本</li>
+  </ul>
 </AlertContent>
 </Alert>
 

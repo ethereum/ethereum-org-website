@@ -18,8 +18,8 @@ Ethereum se escala utilizando [capas 2](/layer-2/#rollups) (también conocidas c
     <li>Los rollups actuales son <strong>\~5-20x</strong> más baratos que la capa 1 (l1) de Ethereum</li>
     <li>Los ZK-rollups pronto reducirán las tarifas en <strong>\~40-100x</strong></li>
     <li>Los próximos cambios en Ethereum proporcionarán otros <strong>\~100-1000x</strong> de escalabilidad</li>
- <li style={{ marginBottom: 0 }}>Los usuarios deberían beneficiarse de transacciones <strong>que cuesten menos de $0.001</strong>
-
+ <li style={{ marginBottom: 0 }}>Los usuarios deberían beneficiarse de transacciones <strong>que cuesten menos de $0.001</strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

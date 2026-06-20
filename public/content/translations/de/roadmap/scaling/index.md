@@ -18,8 +18,8 @@ Ethereum wird mithilfe von [Layer 2s](/layer-2/#rollups) (auch bekannt als Rollu
     <li>Heutige Rollups sind <strong>\~5-20x</strong> günstiger als Ethereum Layer 1</li>
     <li>ZK-Rollups werden die Gebühren bald um das <strong>\~40-100-fache</strong> senken</li>
     <li>Kommende Änderungen an Ethereum werden eine weitere Skalierung um das <strong>\~100-1000-fache</strong> ermöglichen</li>
- <li style={{ marginBottom: 0 }}>Nutzer sollten von Transaktionen profitieren, <strong>die weniger als 0,001 $ kosten</strong>
-
+ <li style={{ marginBottom: 0 }}>Nutzer sollten von Transaktionen profitieren, <strong>die weniger als 0,001 $ kosten</strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

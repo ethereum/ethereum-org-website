@@ -18,8 +18,8 @@ template: roadmap
     <li>오늘날의 롤업은 이더리움 레이어 1 (l1)보다 <strong>약 5\~20배</strong> 저렴합니다.</li>
     <li>ZK-롤업은 곧 수수료를 <strong>약 40\~100배</strong> 낮출 것입니다.</li>
     <li>다가오는 이더리움의 변경 사항은 <strong>약 100\~1000배</strong>의 추가적인 확장을 제공할 것입니다.</li>
- <li style={{ marginBottom: 0 }}>사용자는 <strong>$0.001 미만의 비용</strong>으로 트랜잭션의 혜택을 누릴 수 있게 될 것입니다.
-
+ <li style={{ marginBottom: 0 }}>사용자는 <strong>$0.001 미만의 비용</strong>으로 트랜잭션의 혜택을 누릴 수 있게 될 것입니다.</li>
+  </ul>
 </AlertContent>
 </Alert>
 

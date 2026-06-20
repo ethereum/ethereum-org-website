@@ -18,8 +18,8 @@ template: roadmap
     <li>التجميعات اليوم أرخص بحوالي <strong><span dir="ltr">\~5-20x</span></strong> من طبقة 1 (L1) لإيثيريوم</li>
     <li>ستعمل تجميعات المعرفة الصفرية (ZK-rollups) قريبًا على خفض الرسوم بحوالي <strong><span dir="ltr">\~40-100x</span></strong></li>
     <li>ستوفر التغييرات القادمة على إيثيريوم توسعًا إضافيًا بحوالي <strong><span dir="ltr">\~100-1000x</span></strong></li>
- <li style={{ marginBottom: 0 }}>يجب أن يستفيد المستخدمون من معاملات <strong>تكلف أقل من <span dir="ltr">$0.001</span></strong>
-
+ <li style={{ marginBottom: 0 }}>يجب أن يستفيد المستخدمون من معاملات <strong>تكلف أقل من <span dir="ltr">$0.001</span></strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

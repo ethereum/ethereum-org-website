@@ -18,8 +18,8 @@ template: roadmap
     <li>آج کے رول اپس ایتھیریم لیئر ۱ (l1) سے <strong><span dir="ltr">\~5-20x</span></strong> سستے ہیں</li>
     <li>ZK-rollups جلد ہی فیس کو <strong><span dir="ltr">\~40-100x</span></strong> تک کم کر دیں گے</li>
     <li>ایتھیریم میں آنے والی تبدیلیاں اسکیلنگ کا ایک اور <strong><span dir="ltr">\~100-1000x</span></strong> فراہم کریں گی</li>
- <li style={{ marginBottom: 0 }}>صارفین کو ایسی ٹرانزیکشنز سے فائدہ اٹھانا چاہیے جن کی <strong>لاگت <span dir="ltr">$0.001</span> سے کم ہو</strong>
-
+ <li style={{ marginBottom: 0 }}>صارفین کو ایسی ٹرانزیکشنز سے فائدہ اٹھانا چاہیے جن کی <strong>لاگت <span dir="ltr">$0.001</span> سے کم ہو</strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

@@ -18,8 +18,8 @@ Uwezo wa Ethereum unaongezwa kwa kutumia [matabaka ya 2](/layer-2/#rollups) (pia
     <li>Mikusanyiko ya leo ni nafuu <strong>\~5-20x</strong> kuliko tabaka la 1 la Ethereum</li>
     <li>Mikusanyiko ya ZK hivi karibuni itapunguza ada kwa <strong>\~40-100x</strong></li>
     <li>Mabadiliko yajayo kwenye Ethereum yatatoa ongezeko lingine la uwezo la <strong>\~100-1000x</strong></li>
- <li style={{ marginBottom: 0 }}>Watumiaji wanapaswa kunufaika na miamala <strong>inayogharimu chini ya $0.001</strong>
-
+ <li style={{ marginBottom: 0 }}>Watumiaji wanapaswa kunufaika na miamala <strong>inayogharimu chini ya $0.001</strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

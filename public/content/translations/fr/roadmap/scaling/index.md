@@ -18,8 +18,8 @@ La mise à l'échelle d'Ethereum s'effectue à l'aide de [couches 2](/layer-2/#r
     <li>Les rollups actuels sont <strong>\~5 à 20 fois</strong> moins chers que la couche 1 (l1) d'Ethereum</li>
     <li>Les ZK-rollups réduiront bientôt les frais de <strong>\~40 à 100 fois</strong></li>
     <li>Les prochaines modifications apportées à Ethereum offriront une mise à l'échelle supplémentaire de <strong>\~100 à 1000 fois</strong></li>
- <li style={{ marginBottom: 0 }}>Les utilisateurs devraient bénéficier de transactions <strong>coûtant moins de 0,001 $</strong>
-
+ <li style={{ marginBottom: 0 }}>Les utilisateurs devraient bénéficier de transactions <strong>coûtant moins de 0,001 $</strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

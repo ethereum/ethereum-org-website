@@ -18,8 +18,8 @@ Ethereum se škáluje pomocí [vrstev 2](/layer-2/#rollups) (známých také jak
     <li>Dnešní rollupy jsou <strong>\~5-20x</strong> levnější než vrstva 1 (l1) Etherea</li>
     <li>ZK-rollupy brzy sníží poplatky o <strong>\~40-100x</strong></li>
     <li>Nadcházející změny v Ethereu poskytnou dalších <strong>\~100-1000x</strong> škálování</li>
- <li style={{ marginBottom: 0 }}>Uživatelé by měli těžit z transakcí, <strong>které stojí méně než 0,001 $</strong>
-
+ <li style={{ marginBottom: 0 }}>Uživatelé by měli těžit z transakcí, <strong>které stojí méně než 0,001 $</strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

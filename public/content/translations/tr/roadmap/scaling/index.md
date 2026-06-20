@@ -18,8 +18,8 @@ Ethereum, işlemleri bir araya getiren ve çıktıyı Ethereum'a gönderen [katm
     <li>Günümüzün toplamaları, Ethereum katman 1'den <strong>\~5-20 kat</strong> daha ucuzdur</li>
     <li>ZK-toplamaları yakında ücretleri <strong>\~40-100 kat</strong> düşürecektir</li>
     <li>Ethereum'da yapılacak olan yaklaşan değişiklikler, <strong>\~100-1000 kat</strong> daha fazla ölçeklendirme sağlayacaktır</li>
- <li style={{ marginBottom: 0 }}>Kullanıcılar, <strong>0,001 $'dan daha aza mal olan</strong> işlemlerden faydalanmalıdır
-
+ <li style={{ marginBottom: 0 }}>Kullanıcılar, <strong>0,001 $'dan daha aza mal olan</strong> işlemlerden faydalanmalıdır</li>
+  </ul>
 </AlertContent>
 </Alert>
 

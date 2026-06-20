@@ -18,8 +18,8 @@ template: roadmap
     <li>আজকের রোলআপগুলো ইথেরিয়াম লেয়ার ১ এর চেয়ে <strong>\~5-20x</strong> সস্তা</li>
     <li>ZK-রোলআপগুলো শীঘ্রই ফি <strong>\~40-100x</strong> কমিয়ে দেবে</li>
     <li>ইথেরিয়ামের আসন্ন পরিবর্তনগুলো আরও <strong>\~100-1000x</strong> স্কেলিং প্রদান করবে</li>
- <li style={{ marginBottom: 0 }}>ব্যবহারকারীরা <strong>$0.001 এর চেয়ে কম খরচের</strong> ট্রানজ্যাকশন থেকে উপকৃত হবেন
-
+ <li style={{ marginBottom: 0 }}>ব্যবহারকারীরা <strong>$0.001 এর চেয়ে কম খরচের</strong> ট্রানজ্যাকশন থেকে উপকৃত হবেন</li>
+  </ul>
 </AlertContent>
 </Alert>
 

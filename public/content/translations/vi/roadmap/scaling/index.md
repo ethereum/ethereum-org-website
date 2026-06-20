@@ -18,8 +18,8 @@ Ethereum được mở rộng quy mô bằng cách sử dụng [lớp 2](/layer-
     <li>Các bản cuộn ngày nay rẻ hơn <strong>\~5-20 lần</strong> so với lớp 1 của Ethereum</li>
     <li>ZK-rollup sẽ sớm giảm phí xuống <strong>\~40-100 lần</strong></li>
     <li>Những thay đổi sắp tới đối với Ethereum sẽ cung cấp thêm khả năng mở rộng quy mô gấp <strong>\~100-1000 lần</strong></li>
- <li style={{ marginBottom: 0 }}>Người dùng sẽ được hưởng lợi từ các giao dịch <strong>có chi phí dưới 0,001 đô la</strong>
-
+ <li style={{ marginBottom: 0 }}>Người dùng sẽ được hưởng lợi từ các giao dịch <strong>có chi phí dưới 0,001 đô la</strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

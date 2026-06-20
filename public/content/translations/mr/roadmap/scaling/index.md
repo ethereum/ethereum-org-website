@@ -18,8 +18,8 @@ template: roadmap
     <li>आजचे रोलअप्स इथेरियम स्तर १ (l1) पेक्षा <strong>\~5-20x</strong> स्वस्त आहेत</li>
     <li>ZK-rollups लवकरच फी <strong>\~40-100x</strong> ने कमी करतील</li>
     <li>इथेरियममधील आगामी बदल आणखी <strong>\~100-1000x</strong> स्केलिंग प्रदान करतील</li>
- <li style={{ marginBottom: 0 }}>वापरकर्त्यांना <strong>$0.001 पेक्षा कमी खर्चाच्या</strong> व्यवहारांचा फायदा झाला पाहिजे
-
+ <li style={{ marginBottom: 0 }}>वापरकर्त्यांना <strong>$0.001 पेक्षा कमी खर्चाच्या</strong> व्यवहारांचा फायदा झाला पाहिजे</li>
+  </ul>
 </AlertContent>
 </Alert>
 

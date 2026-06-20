@@ -18,8 +18,8 @@ Ethereum viene scalato utilizzando i [layer 2](/layer-2/#rollups) (noti anche co
     <li>I rollup odierni sono <strong>\~5-20 volte</strong> più economici del layer 1 di Ethereum</li>
     <li>Gli ZK-rollup abbasseranno presto le commissioni di <strong>\~40-100 volte</strong></li>
     <li>Le imminenti modifiche a Ethereum forniranno un'ulteriore scalabilità di <strong>\~100-1000 volte</strong></li>
- <li style={{ marginBottom: 0 }}>Gli utenti dovrebbero beneficiare di transazioni <strong>che costano meno di 0,001 $</strong>
-
+ <li style={{ marginBottom: 0 }}>Gli utenti dovrebbero beneficiare di transazioni <strong>che costano meno di 0,001 $</strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

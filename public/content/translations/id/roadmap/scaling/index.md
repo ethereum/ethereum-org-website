@@ -18,8 +18,8 @@ Ethereum diskalakan menggunakan [lapisan 2](/layer-2/#rollups) (juga dikenal seb
     <li>Rollup saat ini <strong>\~5-20x</strong> lebih murah daripada lapisan 1 Ethereum</li>
     <li>ZK-rollup akan segera menurunkan biaya sebesar <strong>\~40-100x</strong></li>
     <li>Perubahan mendatang pada Ethereum akan memberikan penskalaan tambahan sebesar <strong>\~100-1000x</strong></li>
- <li style={{ marginBottom: 0 }}>Pengguna akan mendapatkan keuntungan dari transaksi <strong>dengan biaya kurang dari $0,001</strong>
-
+ <li style={{ marginBottom: 0 }}>Pengguna akan mendapatkan keuntungan dari transaksi <strong>dengan biaya kurang dari $0,001</strong></li>
+  </ul>
 </AlertContent>
 </Alert>
 

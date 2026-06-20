@@ -18,8 +18,8 @@ template: roadmap
     <li>आज के रोलअप्स इथेरियम लेयर 1 (L1) की तुलना में <strong>\~5-20x</strong> सस्ते हैं</li>
     <li>ZK-रोलअप्स जल्द ही फीस को <strong>\~40-100x</strong> तक कम कर देंगे</li>
     <li>इथेरियम में आगामी बदलाव स्केलिंग में <strong>\~100-1000x</strong> का और सुधार प्रदान करेंगे</li>
- <li style={{ marginBottom: 0 }}>उपयोगकर्ताओं को <strong>$0.001 से कम लागत वाले</strong> लेन-देन से लाभ होना चाहिए
-
+ <li style={{ marginBottom: 0 }}>उपयोगकर्ताओं को <strong>$0.001 से कम लागत वाले</strong> लेन-देन से लाभ होना चाहिए</li>
+  </ul>
 </AlertContent>
 </Alert>
 

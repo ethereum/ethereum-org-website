@@ -18,8 +18,8 @@ template: roadmap
     <li>現在のロールアップは、イーサリアムのレイヤー1 (L1) よりも<strong>約5〜20倍</strong>安価です</li>
     <li>ZKロールアップはまもなく手数料を<strong>約40〜100倍</strong>引き下げます</li>
     <li>今後のイーサリアムの変更により、さらに<strong>約100〜1000倍</strong>のスケーリングが提供されます</li>
- <li style={{ marginBottom: 0 }}>ユーザーは<strong>0.001ドル未満のコスト</strong>でトランザクションの恩恵を受けられるようになります
-
+ <li style={{ marginBottom: 0 }}>ユーザーは<strong>0.001ドル未満のコスト</strong>でトランザクションの恩恵を受けられるようになります</li>
+  </ul>
 </AlertContent>
 </Alert>
 
