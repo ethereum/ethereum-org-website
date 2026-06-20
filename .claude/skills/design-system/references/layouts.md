@@ -124,6 +124,29 @@ Notes:
 - `listenSlug` is the only thing that toggles the audio player — omit it on pages without a playlist.
 - This is **not** the future `ArticleLayout` (reserved for Tutorial / Latest / Stories). It's the existing `ContentLayout` with a positional variant.
 
+### Section anchors: `id` on the `Section`, unless it opens with an image
+
+Each `<Section>` you pass as a child is a TOC anchor target. By default put the `id` on the `<Section>` -- it scrolls into view correctly on its own (`scroll-mt` is automatic; see `gotchas.md`).
+
+The exception is a section that **opens with a decorative image**: with the `id` on the `<Section>`, the anchor lands on the image, above the heading. Instead, move the `id` to the heading and label the section by it:
+
+```tsx
+// Heading-first section -> id on the Section
+<Section id="staking">
+  <h2>Staking</h2>
+  …
+</Section>
+
+// Image-leading section -> id on the <h2>, aria-labelledby on the Section
+<Section aria-labelledby="layer-2s">
+  <Image … alt="" />
+  <h2 id="layer-2s">Layer 2s</h2>
+  …
+</Section>
+```
+
+Never put the same `id` on both the `<Section>` and its heading -- that's a duplicate id and an ambiguous anchor.
+
 ## When a New Layout IS the Answer
 
 The bar is high. A new layout is justified only when:

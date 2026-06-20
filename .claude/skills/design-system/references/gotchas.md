@@ -173,3 +173,7 @@ This arbitrary "page title size" suggests we need a `--text-page-title` token (o
 ### `BigNumber` exists -- USE IT
 
 `@/components/BigNumber` is a real component for prominent numeric displays. If you find yourself writing `<p className="text-4xl font-bold">$3000</p>`, you should be using `BigNumber` instead.
+
+### `scroll-mt` is automatic on headings and sections
+
+`base.css` applies `scroll-mt-32` to every `h1`--`h6` and `<section>`, so anchored navigation isn't clipped by the sticky nav. Don't hand-add `scroll-mt-*` to a heading or section, and don't carry over hacks like `scroll-mt-28` / `-scroll-mt-80` -- it's handled globally.
