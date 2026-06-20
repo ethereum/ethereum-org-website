@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-18T20:27:26.566Z",
+  "englishManifestHash": "8713cc758b67",
+  "placeholderOrder": [
+    "COMPONENT-5e7e56",
+    "COMPONENT-608950",
+    "COMPONENT-bc8e70",
+    "LINK-1262bf",
+    "LINK-dca254",
+    "LINK-70e377",
+    "LINK-85cb8f",
+    "LINK-e7f043",
+    "LINK-985028",
+    "LINK-a0ff6e",
+    "HTMLTAG-bfa71e",
+    "HTMLTAG-76f50e"
+  ],
+  "placeholderMap": {
+    "COMPONENT-5e7e56": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":money_with_wings:"
+      }
+    },
+    "COMPONENT-608950": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🌎"
+      }
+    },
+    "COMPONENT-bc8e70": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🛠️"
+      }
+    },
+    "HTMLTAG-bfa71e": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-0"
+      }
+    },
+    "HTMLTAG-76f50e": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-2"
+      }
+    },
+    "LINK-1262bf": {
+      "type": "link",
+      "values": {
+        "url": "https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04"
+      }
+    },
+    "LINK-dca254": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Trusted_execution_environment"
+      }
+    },
+    "LINK-70e377": {
+      "type": "link",
+      "values": {
+        "url": "https://www.x402.org/"
+      }
+    },
+    "LINK-85cb8f": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4337"
+      }
+    },
+    "LINK-e7f043": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8004"
+      }
+    },
+    "LINK-985028": {
+      "type": "link",
+      "values": {
+        "url": "https://clusters.xyz/aixbt"
+      }
+    },
+    "LINK-a0ff6e": {
+      "type": "link",
+      "values": {
+        "url": "https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T20:27:26.566Z",
+      "status": "success"
+    }
+  }
+}

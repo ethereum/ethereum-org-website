@@ -1,144 +1,144 @@
 ---
-title: "واجهة برمجة تطبيقات JSON-RPC"
-description: "بروتوكول استدعاء الإجراء عن بُعد (RPC) خفيف الوزن وعديم الحالة لعملاء إيثريوم."
+title: "⁦JSON-RPC API⁩"
+description: "بروتوكول استدعاء الإجراء عن بُعد (⁦RPC⁩) خفيف الوزن وعديم الحالة لعملاء إيثيريوم."
 lang: ar
 ---
 
-لكي يتفاعل تطبيق برمجي مع البلوك تشين الخاص بـ [إيثريوم](/) - إما عن طريق قراءة بيانات البلوك تشين أو إرسال المعاملات إلى شبكة - يجب أن يتصل بـ عقدة إيثريوم.
+لكي يتفاعل تطبيق برمجي مع سلسلة كتل [إيثيريوم](/) - إما عن طريق قراءة بيانات سلسلة الكتل أو إرسال معاملات إلى الشبكة - يجب أن يتصل بعقدة إيثيريوم.
 
-لهذا الغرض، يطبق كل [عميل إيثريوم](/developers/docs/nodes-and-clients/#execution-clients) [مواصفات JSON-RPC](https://github.com/ethereum/execution-apis)، بحيث تكون هناك مجموعة موحدة من الطرق التي يمكن للتطبيقات الاعتماد عليها بغض النظر عن العقدة المحددة أو تنفيذ العميل.
+لهذا الغرض، ينفذ كل [عميل إيثيريوم](/developers/docs/nodes-and-clients/#execution-clients) [مواصفات <span dir="ltr">JSON-RPC</span>](https://github.com/ethereum/execution-apis)، بحيث تكون هناك مجموعة موحدة من الطرق التي يمكن للتطبيقات الاعتماد عليها بغض النظر عن العقدة المحددة أو تنفيذ العميل.
 
-[JSON-RPC](https://www.jsonrpc.org/specification) هو بروتوكول استدعاء الإجراء عن بُعد (RPC) خفيف الوزن وعديم الحالة. يحدد العديد من هياكل البيانات والقواعد المتعلقة بمعالجتها. وهو مستقل عن وسيلة النقل حيث يمكن استخدام المفاهيم داخل نفس العملية، أو عبر مآخذ التوصيل (sockets)، أو عبر HTTP، أو في العديد من بيئات تمرير الرسائل المختلفة. يستخدم JSON (RFC 4627) كتنسيق للبيانات.
+[<span dir="ltr">JSON-RPC</span>](https://www.jsonrpc.org/specification) هو بروتوكول استدعاء الإجراء عن بُعد (<span dir="ltr">RPC</span>) خفيف الوزن وعديم الحالة. يحدد العديد من هياكل البيانات والقواعد المتعلقة بمعالجتها. وهو مستقل عن وسيلة النقل، حيث يمكن استخدام المفاهيم داخل نفس العملية، أو عبر مآخذ التوصيل، أو عبر <span dir="ltr">HTTP</span>، أو في العديد من بيئات تمرير الرسائل المختلفة. يستخدم <span dir="ltr">JSON</span> (<span dir="ltr">RFC 4627</span>) كتنسيق للبيانات.
 
 ## تنفيذات العميل {#client-implementations}
 
-قد يستخدم كل من عملاء إيثريوم لغات برمجة مختلفة عند تنفيذ مواصفات JSON-RPC. راجع [وثائق كل عميل](/developers/docs/nodes-and-clients/#execution-clients) لمزيد من التفاصيل المتعلقة بلغات برمجة محددة. نوصي بمراجعة وثائق كل عميل للحصول على أحدث المعلومات حول دعم واجهة برمجة التطبيقات (API).
+قد يستخدم كل من عملاء إيثيريوم لغات برمجة مختلفة عند تنفيذ مواصفات <span dir="ltr">JSON-RPC</span>. راجع [وثائق كل عميل](/developers/docs/nodes-and-clients/#execution-clients) لمزيد من التفاصيل المتعلقة بلغات برمجة محددة. نوصي بالتحقق من وثائق كل عميل للحصول على أحدث معلومات دعم <span dir="ltr">API</span>.
 
 ## مكتبات التسهيل {#convenience-libraries}
 
-بينما يمكنك اختيار التفاعل مباشرة مع عملاء إيثريوم عبر واجهة برمجة تطبيقات JSON-RPC، غالبًا ما تكون هناك خيارات أسهل لمطوري التطبيقات اللامركزية. توجد العديد من مكتبات [JavaScript](/developers/docs/apis/javascript/#available-libraries) و[واجهة برمجة تطبيقات الواجهة الخلفية](/developers/docs/apis/backend/#available-libraries) التي توفر واجهات تغليف (wrappers) مبنية على واجهة برمجة تطبيقات JSON-RPC. باستخدام هذه المكتبات، يمكن للمطورين كتابة دوال بديهية من سطر واحد بلغة البرمجة التي يختارونها لتهيئة طلبات JSON-RPC (في الخلفية) والتي تتفاعل مع إيثريوم.
+على الرغم من أنه يمكنك اختيار التفاعل مباشرة مع عملاء إيثيريوم عبر <span dir="ltr">JSON-RPC API</span>، إلا أن هناك غالباً خيارات أسهل لمطوري التطبيقات اللامركزية (<span dir="ltr">dapp</span>). توجد العديد من مكتبات [JavaScript](/developers/docs/apis/javascript/#available-libraries) و[<span dir="ltr">API</span> للواجهة الخلفية](/developers/docs/apis/backend/#available-libraries) لتوفير واجهات تغليف أعلى <span dir="ltr">JSON-RPC API</span>. باستخدام هذه المكتبات، يمكن للمطورين كتابة دوال بديهية من سطر واحد بلغة البرمجة التي يختارونها لتهيئة طلبات <span dir="ltr">JSON-RPC</span> (داخلياً) والتي تتفاعل مع إيثيريوم.
 
-## واجهات برمجة تطبيقات عميل الإجماع {#consensus-clients}
+## واجهات <span dir="ltr">API</span> لعميل الإجماع {#consensus-clients}
 
-تتناول هذه الصفحة بشكل أساسي واجهة برمجة تطبيقات JSON-RPC التي يستخدمها عملاء التنفيذ في إيثريوم. ومع ذلك، يمتلك عملاء الإجماع أيضًا واجهة برمجة تطبيقات RPC تسمح للمستخدمين بالاستعلام عن معلومات حول العقدة، وطلب كتل المنارة، وحالة المنارة، وغيرها من المعلومات المتعلقة بالإجماع مباشرة من العقدة. تم توثيق واجهة برمجة التطبيقات هذه على [صفحة واجهة برمجة تطبيقات المنارة (Beacon API)](https://ethereum.github.io/beacon-APIs/#/).
+تتناول هذه الصفحة بشكل أساسي واجهة <span dir="ltr">API</span> الخاصة بـ <span dir="ltr">JSON-RPC</span> التي يستخدمها عملاء التنفيذ في إيثيريوم. ومع ذلك، يمتلك عملاء الإجماع أيضًا واجهة <span dir="ltr">RPC API</span> تتيح للمستخدمين الاستعلام عن معلومات حول العقدة، وطلب كتل <span dir="ltr">Beacon</span>، وحالة <span dir="ltr">Beacon</span>، وغيرها من المعلومات المتعلقة بالإجماع مباشرة من العقدة. تم توثيق واجهة <span dir="ltr">API</span> هذه في [صفحة الويب الخاصة بواجهة <span dir="ltr">Beacon API</span>](https://ethereum.github.io/beacon-APIs/#/).
 
-تُستخدم أيضًا واجهة برمجة تطبيقات داخلية للتواصل بين العملاء داخل العقدة - أي أنها تمكّن عميل الإجماع وعميل التنفيذ من تبادل البيانات. يُطلق على هذا اسم 'Engine API' والمواصفات متاحة على [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+تُستخدم أيضًا واجهة <span dir="ltr">API</span> داخلية للتواصل بين العملاء داخل العقدة - أي أنها تمكن عميل الإجماع وعميل التنفيذ من مبادلة البيانات. يُطلق على هذا اسم '<span dir="ltr">Engine API</span>' والمواصفات متاحة على [<span dir="ltr">GitHub</span>](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## مواصفات عميل التنفيذ {#spec}
 
-[اقرأ مواصفات واجهة برمجة تطبيقات JSON-RPC الكاملة على GitHub](https://github.com/ethereum/execution-apis). تم توثيق واجهة برمجة التطبيقات هذه على [صفحة الويب الخاصة بواجهة برمجة تطبيقات التنفيذ](https://ethereum.github.io/execution-apis/) وتتضمن أداة فحص (Inspector) لتجربة جميع الطرق المتاحة.
+[اقرأ مواصفات <span dir="ltr">JSON-RPC API</span> الكاملة على GitHub](https://github.com/ethereum/execution-apis). تم توثيق <span dir="ltr">API</span> هذه في [صفحة ويب <span dir="ltr">API</span> التنفيذ](https://ethereum.github.io/execution-apis/) وتتضمن أداة فحص لتجربة جميع الطرق المتاحة.
 
 ## الاصطلاحات {#conventions}
 
-### ترميز القيمة السداسية العشرية {#hex-encoding}
+### ترميز القيم السداسية العشرية {#hex-encoding}
 
 يتم تمرير نوعين رئيسيين من البيانات عبر JSON: مصفوفات البايت غير المنسقة والكميات. يتم تمرير كلاهما بترميز سداسي عشري ولكن بمتطلبات تنسيق مختلفة.
 
 #### الكميات {#quantities-encoding}
 
-عند ترميز الكميات (الأعداد الصحيحة، الأرقام): قم بترميزها بالنظام السداسي العشري، مع إضافة البادئة "0x"، وهو التمثيل الأكثر إيجازًا (استثناء بسيط: يجب تمثيل الصفر كـ "0x0").
+عند ترميز الكميات (الأعداد الصحيحة، الأرقام): يتم ترميزها بالنظام السداسي العشري، وتُسبق بـ <span dir="ltr">"0x"</span>، بأكثر تمثيل مضغوط (استثناء بسيط: يجب تمثيل الصفر كـ <span dir="ltr">"0x0"</span>).
 
 إليك بعض الأمثلة:
 
-- 0x41 (65 بالنظام العشري)
-- 0x400 (1024 بالنظام العشري)
-- خطأ: 0x (يجب أن يحتوي دائمًا على رقم واحد على الأقل - الصفر هو "0x0")
-- خطأ: 0x0400 (لا يُسمح بالأصفار البادئة)
-- خطأ: ff (يجب أن يسبقه 0x)
+- <span dir="ltr">0x41</span> (65 بالنظام العشري)
+- <span dir="ltr">0x400</span> (1024 بالنظام العشري)
+- خطأ: <span dir="ltr">0x</span> (يجب أن يحتوي دائمًا على رقم واحد على الأقل - الصفر هو <span dir="ltr">"0x0"</span>)
+- خطأ: <span dir="ltr">0x0400</span> (لا يُسمح بالأصفار البادئة)
+- خطأ: <span dir="ltr">ff</span> (يجب أن يُسبق بـ <span dir="ltr">0x</span>)
 
 ### البيانات غير المنسقة {#unformatted-data-encoding}
 
-عند ترميز البيانات غير المنسقة (مصفوفات البايت، عناوين الحسابات، التجزئة (هاش)، مصفوفات الرمز الثانوي (bytecode)): قم بترميزها بالنظام السداسي العشري، مع إضافة البادئة "0x"، ورقمين سداسيين عشريين لكل بايت.
+عند ترميز البيانات غير المنسقة (مصفوفات البايت، عناوين الحسابات، التجزئات، مصفوفات رمز البايت): يتم ترميزها بالنظام السداسي العشري، وتُسبق بـ <span dir="ltr">"0x"</span>، مع رقمين سداسيين عشريين لكل بايت.
 
 إليك بعض الأمثلة:
 
-- 0x41 (الحجم 1، "A")
-- 0x004200 (الحجم 3، "0B0")
-- 0x (الحجم 0، "")
-- خطأ: 0xf0f0f (يجب أن يكون عدد الأرقام زوجيًا)
-- خطأ: 004200 (يجب أن يسبقه 0x)
+- <span dir="ltr">0x41</span> (الحجم 1، <span dir="ltr">"A"</span>)
+- <span dir="ltr">0x004200</span> (الحجم 3، <span dir="ltr">"0B0"</span>)
+- <span dir="ltr">0x</span> (الحجم 0، "")
+- خطأ: <span dir="ltr">0xf0f0f</span> (يجب أن يكون عدد الأرقام زوجيًا)
+- خطأ: <span dir="ltr">004200</span> (يجب أن يُسبق بـ <span dir="ltr">0x</span>)
 
-### معلمة البلوك {#block-parameter}
+### معلمة الكتلة {#block-parameter}
 
-تحتوي الطرق التالية على معلمة بلوك:
+تحتوي الطرق التالية على معلمة الكتلة:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getCode](#eth-getcode)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_call](#eth-call)
 
-عند إجراء طلبات تستعلم عن حالة إيثريوم، تحدد معلمة البلوك المقدمة ارتفاع البلوك.
+عند إجراء طلبات تستعلم عن حالة إيثيريوم، تحدد معلمة الكتلة المقدمة ارتفاع الكتلة.
 
-الخيارات التالية ممكنة لمعلمة البلوك:
+الخيارات التالية ممكنة لمعلمة الكتلة:
 
-- `HEX String` - رقم بلوك صحيح
-- `String "earliest"` للبلوك الأقدم/التكويني
-- `String "latest"` - لأحدث بلوك مقترح
-- `String "safe"` - لأحدث بلوك رأس آمن
-- `String "finalized"` - لأحدث بلوك نهائي
+- `HEX String` - رقم كتلة صحيح
+- `String "earliest"` للكتلة الأقدم/كتلة التكوين
+- `String "latest"` - لأحدث كتلة مقترحة
+- `String "safe"` - لأحدث كتلة رأس آمنة
+- `String "finalized"` - لأحدث كتلة نهائية
 - `String "pending"` - للحالة/المعاملات المعلقة
 
-## أمثلة
+## أمثلة {#examples}
 
-نقدم في هذه الصفحة أمثلة على كيفية استخدام نقاط نهاية واجهة برمجة تطبيقات JSON_RPC الفردية باستخدام أداة سطر الأوامر، [curl](https://curl.se). توجد أمثلة نقاط النهاية الفردية هذه أدناه في قسم [أمثلة Curl](#curl-examples). وفي أسفل الصفحة، نقدم أيضًا [مثالاً شاملاً](#usage-example) لتجميع ونشر عقد ذكي باستخدام عقدة Geth، وواجهة برمجة تطبيقات JSON_RPC، وcurl.
+نقدم في هذه الصفحة أمثلة على كيفية استخدام نقاط نهاية <span dir="ltr">JSON_RPC API</span> الفردية باستخدام أداة سطر الأوامر، [<span dir="ltr">curl</span>](https://curl.se). توجد أمثلة نقاط النهاية الفردية هذه أدناه في قسم [أمثلة <span dir="ltr">Curl</span>](#curl-examples). وفي أسفل الصفحة، نقدم أيضًا [مثالًا شاملاً](#usage-example) لتصريف ونشر عقد ذكي باستخدام عقدة جو إيثريوم (<span dir="ltr">Geth</span>)، و<span dir="ltr">JSON_RPC API</span> و<span dir="ltr">curl</span>.
 
-## أمثلة Curl {#curl-examples}
+## أمثلة <span dir="ltr">Curl</span> {#curl-examples}
 
-تتوفر أدناه أمثلة على استخدام واجهة برمجة تطبيقات JSON_RPC من خلال إجراء طلبات [curl](https://curl.se) إلى عقدة إيثريوم. يتضمن كل مثال وصفًا لنقطة النهاية المحددة، ومعلماتها، ونوع الإرجاع، ومثالًا عمليًا لكيفية استخدامها.
+فيما يلي أمثلة على استخدام <span dir="ltr">JSON_RPC API</span> من خلال إجراء طلبات [curl](https://curl.se) إلى عقدة إيثيريوم. يتضمن كل مثال وصفًا لنقطة النهاية المحددة، ومعلماتها، ونوع الإرجاع، ومثالًا عمليًا لكيفية استخدامها.
 
-قد تُرجع طلبات curl رسالة خطأ تتعلق بنوع المحتوى. ويرجع ذلك إلى أن خيار `--data` يعين نوع المحتوى إلى `application/x-www-form-urlencoded`. إذا كانت عقدتك تبلغ عن خطأ بخصوص هذا، فقم بتعيين الترويسة يدويًا عن طريق وضع `-H "Content-Type: application/json"` في بداية الاستدعاء. لا تتضمن الأمثلة أيضًا مجموعة عنوان URL/IP والمنفذ والتي يجب أن تكون الوسيطة الأخيرة المعطاة لـ curl (على سبيل المثال، `127.0.0.1:8545`). يأخذ طلب curl الكامل الذي يتضمن هذه البيانات الإضافية الشكل التالي:
+قد تُرجع طلبات <span dir="ltr">curl</span> رسالة خطأ تتعلق بنوع المحتوى. يرجع ذلك إلى أن خيار `--data` يعين نوع المحتوى إلى `application/x-www-form-urlencoded`. إذا كانت عقدتك تشتكي من ذلك، فقم بتعيين الترويسة يدويًا عن طريق وضع `-H "Content-Type: application/json"` في بداية الاستدعاء. لا تتضمن الأمثلة أيضًا مجموعة عنوان <span dir="ltr">URL/IP</span> والمنفذ والتي يجب أن تكون الوسيطة الأخيرة المعطاة لـ <span dir="ltr">curl</span> (على سبيل المثال، `127.0.0.1:8545`). يأخذ طلب <span dir="ltr">curl</span> الكامل الذي يتضمن هذه البيانات الإضافية الشكل التالي:
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## النشر (Gossip)، الحالة، التاريخ {#gossip-state-history}
+## التناقل، الحالة، والتاريخ {#gossip-state-history}
 
-تتطلب مجموعة من طرق JSON-RPC الأساسية بيانات من شبكة إيثريوم، وتندرج بدقة في ثلاث فئات رئيسية: _النشر (Gossip)، والحالة، والتاريخ_. استخدم الروابط في هذه الأقسام للانتقال إلى كل طريقة، أو استخدم جدول المحتويات لاستكشاف القائمة الكاملة للطرق.
+تتطلب مجموعة من طرق <span dir="ltr">JSON-RPC</span> الأساسية بيانات من شبكة إيثيريوم، وتندرج بدقة تحت ثلاث فئات رئيسية: _التناقل، الحالة، والتاريخ_. استخدم الروابط في هذه الأقسام للانتقال إلى كل طريقة، أو استخدم جدول المحتويات لاستكشاف القائمة الكاملة للطرق.
 
-### طرق النشر (Gossip) {#gossip-methods}
+### طرق التناقل {#gossip-methods}
 
 > تتتبع هذه الطرق رأس السلسلة. هذه هي الطريقة التي تشق بها المعاملات طريقها عبر الشبكة، وتجد طريقها إلى الكتل، وكيف يكتشف العملاء الكتل الجديدة.
 
-- [eth_blockNumber](#eth_blocknumber)
-- [eth_sendRawTransaction](#eth_sendrawtransaction)
+- [<span dir="ltr">eth_blockNumber</span>](#eth-blocknumber)
+- [<span dir="ltr">eth_sendRawTransaction</span>](#eth-sendrawtransaction)
 
-### طرق الحالة {#state_methods}
+### طرق الحالة {#state-methods}
 
-> الطرق التي تبلغ عن الحالة الحالية لجميع البيانات المخزنة. تشبه "الحالة" قطعة كبيرة مشتركة من ذاكرة الوصول العشوائي (RAM)، وتتضمن أرصدة الحسابات، وبيانات العقود، وتقديرات الغاز.
+> الطرق التي تبلغ عن الحالة الحالية لجميع البيانات المخزنة. تشبه "الحالة" قطعة كبيرة مشتركة من ذاكرة الوصول العشوائي (<span dir="ltr">RAM</span>)، وتتضمن أرصدة الحسابات، وبيانات العقود، وتقديرات الغاز.
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getCode](#eth_getcode)
-- [eth_call](#eth_call)
-- [eth_estimateGas](#eth_estimategas)
+- [<span dir="ltr">eth_getBalance</span>](#eth-getbalance)
+- [<span dir="ltr">eth_getStorageAt</span>](#eth-getstorageat)
+- [<span dir="ltr">eth_getTransactionCount</span>](#eth-gettransactioncount)
+- [<span dir="ltr">eth_getCode</span>](#eth-getcode)
+- [<span dir="ltr">eth_call</span>](#eth-call)
+- [<span dir="ltr">eth_estimateGas</span>](#eth-estimategas)
 
-### طرق التاريخ {#history_methods}
+### طرق التاريخ {#history-methods}
 
-> تجلب السجلات التاريخية لكل كتلة وصولاً إلى كتلة التكوين (genesis). يشبه هذا ملفًا كبيرًا للإلحاق فقط، ويتضمن جميع ترويسات الكتل، وأجسام الكتل، وكتل العم (uncle blocks)، وإيصالات المعاملات.
+> تجلب السجلات التاريخية لكل كتلة رجوعاً إلى التكوين. يشبه هذا ملفاً كبيراً للإلحاق فقط، ويتضمن جميع رؤوس الكتل، وأجسام الكتل، والكتل العمّة، وإيصالات المعاملات.
 
-- [eth_getBlockTransactionCountByHash](#eth_getblocktransactioncountbyhash)
-- [eth_getBlockTransactionCountByNumber](#eth_getblocktransactioncountbynumber)
-- [eth_getUncleCountByBlockHash](#eth_getunclecountbyblockhash)
-- [eth_getUncleCountByBlockNumber](#eth_getunclecountbyblocknumber)
-- [eth_getBlockByHash](#eth_getblockbyhash)
-- [eth_getBlockByNumber](#eth_getblockbynumber)
-- [eth_getTransactionByHash](#eth_gettransactionbyhash)
-- [eth_getTransactionByBlockHashAndIndex](#eth_gettransactionbyblockhashandindex)
-- [eth_getTransactionByBlockNumberAndIndex](#eth_gettransactionbyblocknumberandindex)
-- [eth_getTransactionReceipt](#eth_gettransactionreceipt)
-- [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
-- [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+- [<span dir="ltr">eth_getBlockTransactionCountByHash</span>](#eth-getblocktransactioncountbyhash)
+- [<span dir="ltr">eth_getBlockTransactionCountByNumber</span>](#eth-getblocktransactioncountbynumber)
+- [<span dir="ltr">eth_getUncleCountByBlockHash</span>](#eth-getunclecountbyblockhash)
+- [<span dir="ltr">eth_getUncleCountByBlockNumber</span>](#eth-getunclecountbyblocknumber)
+- [<span dir="ltr">eth_getBlockByHash</span>](#eth-getblockbyhash)
+- [<span dir="ltr">eth_getBlockByNumber</span>](#eth-getblockbynumber)
+- [<span dir="ltr">eth_getTransactionByHash</span>](#eth-gettransactionbyhash)
+- [<span dir="ltr">eth_getTransactionByBlockHashAndIndex</span>](#eth-gettransactionbyblockhashandindex)
+- [<span dir="ltr">eth_getTransactionByBlockNumberAndIndex</span>](#eth-gettransactionbyblocknumberandindex)
+- [<span dir="ltr">eth_getTransactionReceipt</span>](#eth-gettransactionreceipt)
+- [<span dir="ltr">eth_getUncleByBlockHashAndIndex</span>](#eth-getunclebyblockhashandindex)
+- [<span dir="ltr">eth_getUncleByBlockNumberAndIndex</span>](#eth-getunclebyblocknumberandindex)
 
-## ساحة تجارب واجهة برمجة تطبيقات JSON-RPC
+## ساحة تجربة <span dir="ltr">JSON-RPC API</span> {#json-rpc-api-playground}
 
-يمكنك استخدام [أداة ساحة التجارب](https://ethereum-json-rpc.com) لاكتشاف وتجربة طرق واجهة برمجة التطبيقات (API). كما توضح لك الطرق والشبكات المدعومة من قِبل مختلف مزودي العقد.
+يمكنك استخدام [أداة ساحة التجربة](https://ethereum-json-rpc.com) لاكتشاف وتجربة طرق <span dir="ltr">API</span>. كما توضح لك الطرق والشبكات التي يدعمها مختلف مزودي العقد.
 
-## طرق واجهة برمجة تطبيقات JSON-RPC {#json-rpc-methods}
+## طرق <span dir="ltr">JSON-RPC API</span> {#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion {#web3-clientversion}
 
 يُرجع إصدار العميل الحالي.
 
@@ -153,9 +153,9 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
-// Result // النتيجة
+// نتيجة
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -163,13 +163,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### <span dir="ltr">web3_sha3</span> {#web3-sha3}
 
-يُرجع Keccak-256 (_وليس_ SHA3-256 القياسي) للبيانات المحددة.
+يُرجع <span dir="ltr">Keccak-256</span> (_وليس_ <span dir="ltr">SHA3-256</span> القياسي) للبيانات المحددة.
 
 **المعلمات**
 
-1. `DATA` - البيانات المراد تحويلها إلى التجزئة (هاش) SHA3
+1. `DATA` - البيانات المراد تحويلها إلى تجزئة <span dir="ltr">SHA3</span>
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
@@ -177,14 +177,14 @@ params: ["0x68656c6c6f20776f726c64"]
 
 **المرتجعات**
 
-`DATA` - نتيجة SHA3 للسلسلة المحددة.
+`DATA` - نتيجة <span dir="ltr">SHA3</span> للسلسلة المحددة.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f20776f726c64"],"id":64}'
-// Result // النتيجة
+// نتيجة
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -192,9 +192,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### <span dir="ltr">net_version</span> {#net-version}
 
-يُرجع مُعرّف الشبكة الحالي.
+يعيد معرف الشبكة الحالي.
 
 **المعلمات**
 
@@ -202,20 +202,20 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 
 **المرتجعات**
 
-`String` - مُعرّف الشبكة الحالي.
+`String` - معرف الشبكة الحالي.
 
-القائمة الكاملة لمُعرّفات الشبكة الحالية متاحة على [chainlist.org](https://chainlist.org). بعض المُعرّفات الشائعة هي:
+القائمة الكاملة لمعرفات الشبكة الحالية متاحة على [<span dir="ltr">chainlist.org</span>](https://chainlist.org). بعض المعرفات الشائعة هي:
 
-- `1`: الشبكة الرئيسية لإيثريوم (Ethereum Mainnet)
-- `11155111`: شبكة الاختبار Sepolia
-- `560048` : شبكة الاختبار Hoodi
+- `1`: شبكة إيثيريوم الرئيسية
+- `11155111`: شبكة اختبار <span dir="ltr">Sepolia</span>
+- `560048`: شبكة اختبار <span dir="ltr">Hoodi</span>
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67}'
-// Result // النتيجة
+// نتيجة
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -223,7 +223,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening {#net-listening}
 
 يُرجع `true` إذا كان العميل يستمع بنشاط لاتصالات الشبكة.
 
@@ -238,9 +238,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":67}'
-// Result // النتيجة
+// نتيجة
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -248,7 +248,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount {#net-peercount}
 
 يُرجع عدد الأقران المتصلين حاليًا بالعميل.
 
@@ -258,24 +258,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 
 **المرتجعات**
 
-`QUANTITY` - عدد صحيح لعدد الأقران المتصلين.
+`QUANTITY` - عدد صحيح يمثل عدد الأقران المتصلين.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}'
-// Result // النتيجة
+// نتيجة
 {
   "id":74,
   "jsonrpc": "2.0",
-  "result": "0x2" // 2 // 2
+  "result": "0x2" // 2
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion {#eth-protocolversion}
 
-يُرجع إصدار بروتوكول إيثريوم الحالي. لاحظ أن هذه الطريقة [غير متوفرة في Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
+يعيد إصدار بروتوكول إيثيريوم الحالي. لاحظ أن هذه الطريقة [غير متوفرة في جو إيثريوم (Geth)](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
 
 **المعلمات**
 
@@ -283,14 +283,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 **المرتجعات**
 
-`String` - إصدار بروتوكول إيثريوم الحالي
+`String` - إصدار بروتوكول إيثيريوم الحالي
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
-// Result // النتيجة
+// نتيجة
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -298,7 +298,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### <span dir="ltr">eth_syncing</span> {#eth-syncing}
 
 يُرجع كائنًا يحتوي على بيانات حول حالة المزامنة أو `false`.
 
@@ -310,17 +310,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 
 لا يوجد
 
-**المرتجعات**
+**القيم المرجعة**
 
-تختلف بيانات الإرجاع الدقيقة بين تطبيقات العميل. تُرجع جميع العملاء `False` عندما لا تقوم العقدة بالمزامنة، وتُرجع جميع العملاء الحقول التالية.
+تختلف بيانات الإرجاع الدقيقة بين تطبيقات العميل. يُرجع جميع العملاء `False` عندما لا تقوم العقدة بالمزامنة، ويُرجع جميع العملاء الحقول التالية.
 
 `Object|Boolean`، كائن يحتوي على بيانات حالة المزامنة أو `FALSE`، عند عدم المزامنة:
 
-- `startingBlock`: `QUANTITY` - البلوك الذي بدأ عنده الاستيراد (سيتم إعادة تعيينه فقط، بعد أن تصل المزامنة إلى رأسها)
-- `currentBlock`: `QUANTITY` - البلوك الحالي، نفس eth_blockNumber
-- `highestBlock`: `QUANTITY` - أعلى بلوك مُقدّر
+- `startingBlock`: `QUANTITY` - الكتلة التي بدأ عندها الاستيراد (سيتم إعادة تعيينها فقط بعد أن تصل المزامنة إلى رأسها)
+- `currentBlock`: `QUANTITY` - الكتلة الحالية، تمامًا مثل <span dir="ltr">eth_blockNumber</span>
+- `highestBlock`: `QUANTITY` - أعلى كتلة مُقدرة
 
-ومع ذلك، قد توفر العملاء الفردية أيضًا بيانات إضافية. على سبيل المثال، يُرجع Geth ما يلي:
+ومع ذلك، قد يوفر العملاء الفرديون أيضًا بيانات إضافية. على سبيل المثال، يُرجع <span dir="ltr">Geth</span> ما يلي:
 
 ```json
 {
@@ -345,7 +345,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-بينما يُرجع Besu:
+بينما يُرجع بيسو (<span dir="ltr">Besu</span>):
 
 ```json
 {
@@ -366,9 +366,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -378,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
     highestBlock: '0x454'
   }
 }
-// Or when not syncing // أو عند عدم المزامنة
+// أو عند عدم المزامنة
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -386,15 +386,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase {#eth-coinbase}
 
-يُرجع عنوان coinbase للعميل.
+يُرجع عنوان كوين بيس الخاص بالعميل.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة اللعب
 </ButtonLink>
 
-> **ملاحظة:** تم إيقاف هذه الطريقة اعتبارًا من الإصدار **v1.14.0** ولم تعد مدعومة. ستؤدي محاولة استخدام هذه الطريقة إلى ظهور خطأ "الطريقة غير مدعومة".
+> **ملاحظة:** تم إيقاف هذه الطريقة اعتبارًا من **<span dir="ltr">v1.14.0</span>** ولم تعد مدعومة. ستؤدي محاولة استخدام هذه الطريقة إلى ظهور خطأ <span dir="ltr">"Method not supported"</span>.
 
 **المعلمات**
 
@@ -402,14 +402,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 **المرتجعات**
 
-`DATA`، 20 بايت - عنوان coinbase الحالي.
+`DATA`، 20 بايت - عنوان كوين بيس الحالي.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
-// Result // النتيجة
+// نتيجة
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -417,9 +417,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### <span dir="ltr">eth_chainId</span> {#eth-chainid}
 
-يُرجع مُعرّف السلسلة المستخدم لتوقيع المعاملات المحمية من إعادة التشغيل.
+يُرجع معرف السلسلة المستخدم في توقيع المعاملات المحمية من إعادة الإرسال.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
   جرب نقطة النهاية في ساحة اللعب
@@ -429,16 +429,16 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 
 لا يوجد
 
-**المرتجعات**
+**القيم المرجعة**
 
-`chainId`، قيمة سداسية عشرية كسلسلة تمثل العدد الصحيح لمُعرّف السلسلة الحالي.
+`chainId`، قيمة سداسية عشرية في شكل سلسلة نصية تمثل العدد الصحيح لمعرف السلسلة الحالي.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
-// Result // النتيجة
+// نتيجة
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -446,12 +446,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining {#eth-mining}
 
-يُرجع `true` إذا كان العميل يقوم بتعدين كتل جديدة بنشاط. يمكن أن يُرجع هذا `true` فقط لشبكات إثبات العمل وقد لا يكون متاحًا في بعض العملاء منذ [الدمج](/roadmap/merge/).
+يُرجع `true` إذا كان العميل يقوم بتعدين كتل جديدة بنشاط. يمكن أن يُرجع هذا `true` فقط لشبكات إثبات العمل (PoW) وقد لا يكون متاحًا في بعض العملاء منذ [الدمج](/roadmap/merge/).
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة الاختبار
 </ButtonLink>
 
 **المعلمات**
@@ -465,7 +465,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
 //
 {
@@ -475,28 +475,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### <span dir="ltr">eth_hashrate</span> {#eth-hashrate}
 
-يُرجع عدد التجزئات في الثانية التي تقوم العقدة بالتعدين بها. يمكن أن يُرجع هذا `true` فقط لشبكات إثبات العمل وقد لا يكون متاحًا في بعض العملاء منذ [الدمج](/roadmap/merge/).
+يُرجع عدد التجزئات في الثانية التي تقوم العقدة بالتعدين بها. يمكن أن يُرجع هذا فقط `true` لشبكات إثبات العمل (PoW) وقد لا يكون متاحًا في بعض العملاء منذ [الدمج](/roadmap/merge/).
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
-  جرب نقطة النهاية في ساحة اللعب
+  تجربة نقطة النهاية في بيئة اللعب
 </ButtonLink>
 
 **المعلمات**
 
 لا يوجد
 
-**المرتجعات**
+**القيم المرجعة**
 
 `QUANTITY` - عدد التجزئات في الثانية.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":71}'
-// Result // النتيجة
+// نتيجة
 {
   "id":71,
   "jsonrpc": "2.0",
@@ -504,9 +504,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### <span dir="ltr">eth_gasPrice</span> {#eth-gasprice}
 
-يُرجع تقديرًا لسعر الغاز الحالي بوحدة wei. على سبيل المثال، يفحص عميل Besu آخر 100 بلوك ويُرجع متوسط سعر وحدة الغاز افتراضيًا.
+يعيد تقديراً للسعر الحالي لكل غاز بوحدة <span dir="ltr">Wei</span>. على سبيل المثال، يفحص عميل بيسو آخر 100 كتلة ويعيد وسيط سعر وحدة الغاز افتراضيًا.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
   جرب نقطة النهاية في ساحة اللعب
@@ -518,24 +518,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 
 **المرتجعات**
 
-`QUANTITY` - عدد صحيح لسعر الغاز الحالي بوحدة wei.
+`QUANTITY` - عدد صحيح يمثل سعر الغاز الحالي بوحدة <span dir="ltr">Wei</span>.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
-// Result // النتيجة
+// نتيجة
 {
   "id":73,
   "jsonrpc": "2.0",
-  "result": "0x1dfd14000" // 8049999872 Wei // 8049999872 Wei
+  "result": "0x1dfd14000" // 8049999872 Wei
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### <span dir="ltr">eth_accounts</span> {#eth-accounts}
 
-يُرجع قائمة بالعناوين المملوكة للعميل.
+يعيد قائمة بالعناوين المملوكة للعميل.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
   جرب نقطة النهاية في ساحة اللعب
@@ -545,16 +545,16 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 
 لا يوجد
 
-**المرتجعات**
+**القيم المعادة**
 
-`Array of DATA`، 20 بايت - العناوين المملوكة للعميل.
+`Array of DATA`، <span dir="ltr">20 Bytes</span> - العناوين المملوكة للعميل.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -562,12 +562,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### <span dir="ltr">eth_blockNumber</span> {#eth-blocknumber}
 
-يُرجع رقم أحدث بلوك.
+يُرجع رقم أحدث كتلة.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_blockNumber">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة الاختبار
 </ButtonLink>
 
 **المعلمات**
@@ -576,70 +576,70 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 
 **المرتجعات**
 
-`QUANTITY` - عدد صحيح لرقم البلوك الحالي الذي يتواجد عليه العميل.
+`QUANTITY` - عدد صحيح لرقم الكتلة الحالية التي يوجد عليها العميل.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'
-// Result // النتيجة
+// نتيجة
 {
   "id":83,
   "jsonrpc": "2.0",
-  "result": "0x4b7" // 1207 // 1207
+  "result": "0x4b7" // 1207
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance {#eth-getbalance}
 
-يُرجع رصيد الحساب في عنوان محدد.
+يعيد رصيد الحساب في عنوان معين.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة اللعب
 </ButtonLink>
 
 **المعلمات**
 
-1. `DATA`، 20 بايت - العنوان للتحقق من الرصيد.
-2. `QUANTITY|TAG` - عدد صحيح لرقم البلوك، أو السلسلة `"latest"`، `"earliest"`، `"pending"`، `"safe"`، أو `"finalized"`، راجع [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`، <span dir="ltr">20 Bytes</span> - العنوان المراد التحقق من رصيده.
+2. `QUANTITY|TAG` - رقم كتلة صحيح، أو السلسلة `"latest"`، أو `"earliest"`، أو `"pending"`، أو `"safe"`، أو `"finalized"`، راجع [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 ```
 
-**المرتجعات**
+**القيم المعادة**
 
-`QUANTITY` - عدد صحيح للرصيد الحالي بوحدة wei.
+`QUANTITY` - عدد صحيح يمثل الرصيد الحالي بوحدة Wei.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x0234c8a3397aab58" // 158972490234375000 // 158972490234375000
+  "result": "0x0234c8a3397aab58" // 158972490234375000
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt {#eth-getstorageat}
 
 يُرجع القيمة من موضع تخزين في عنوان محدد.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة الاختبار
 </ButtonLink>
 
 **المعلمات**
 
-1. `DATA`، 20 بايت - عنوان التخزين.
-2. `QUANTITY` - عدد صحيح للموضع في التخزين.
-3. `QUANTITY|TAG` - عدد صحيح لرقم البلوك، أو السلسلة `"latest"`، `"earliest"`، `"pending"`، `"safe"`، `"finalized"`، راجع [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`، <span dir="ltr">20 Bytes</span> - عنوان التخزين.
+2. `QUANTITY` - عدد صحيح لموضع التخزين.
+3. `QUANTITY|TAG` - عدد صحيح لرقم الكتلة، أو السلسلة `"latest"`، أو `"earliest"`، أو `"pending"`، أو `"safe"`، أو `"finalized"`، راجع [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter)
 
-**المرتجعات**
+**القيم المرجعة**
 
 `DATA` - القيمة في موضع التخزين هذا.
 
@@ -657,20 +657,20 @@ contract Storage {
 }
 ```
 
-استرداد قيمة pos0 أمر مباشر:
+استرداد قيمة <span dir="ltr">pos0</span> أمر مباشر:
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 ```
 
-استرداد عنصر من الخريطة (map) أصعب. يتم حساب موضع عنصر في الخريطة باستخدام:
+استرداد عنصر من الخريطة أصعب. يتم حساب موضع عنصر في الخريطة باستخدام:
 
 ```js
 keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
-هذا يعني أنه لاسترداد التخزين في pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] نحتاج إلى حساب الموضع باستخدام:
+هذا يعني أنه لاسترداد التخزين في <span dir="ltr">pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"]</span> نحتاج إلى حساب الموضع باستخدام:
 
 ```js
 keccak(
@@ -681,7 +681,7 @@ keccak(
 )
 ```
 
-يمكن استخدام وحدة تحكم geth التي تأتي مع مكتبة web3 لإجراء الحساب:
+يمكن استخدام وحدة تحكم جو إيثريوم (geth) التي تأتي مع مكتبة Web3 لإجراء الحساب:
 
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -697,54 +697,54 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### <span dir="ltr">eth_getTransactionCount</span> {#eth-gettransactioncount}
 
-يُرجع عدد المعاملات _المرسلة_ من عنوان.
+يعيد عدد المعاملات _المرسلة_ من عنوان.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة الاختبار
 </ButtonLink>
 
 **المعلمات**
 
-1. `DATA`، 20 بايت - العنوان.
-2. `QUANTITY|TAG` - عدد صحيح لرقم البلوك، أو السلسلة `"latest"`، `"earliest"`، `"pending"`، `"safe"` أو `"finalized"`، راجع [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`، <span dir="ltr">20 Bytes</span> - عنوان.
+2. `QUANTITY|TAG` - رقم كتلة صحيح، أو السلسلة `"latest"`، أو `"earliest"`، أو `"pending"`، أو `"safe"` أو `"finalized"`، راجع [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
   "0x407d73d8a49eeb85d32cf465507dd71d507100c1",
-  "latest", // state at the latest block // الحالة عند أحدث كتلة
+  "latest", // حالة عند أحدث كتلة
 ]
 ```
 
-**المرتجعات**
+**القيم المعادة**
 
-`QUANTITY` - عدد صحيح لعدد المعاملات المرسلة من هذا العنوان.
+`QUANTITY` - عدد صحيح يمثل عدد المعاملات المرسلة من هذا العنوان.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1","latest"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash {#eth-getblocktransactioncountbyhash}
 
-يُرجع عدد المعاملات في بلوك من بلوك يطابق تجزئة (هاش) البلوك المحددة.
+يُرجع عدد المعاملات في كتلة من كتلة تطابق تجزئة الكتلة المحددة.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة الاختبار
 </ButtonLink>
 
 **المعلمات**
 
-1. `DATA`، 32 بايت - التجزئة (هاش) لبلوك
+1. `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة كتلة
 
 ```js
 params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
@@ -752,59 +752,59 @@ params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 
 **المرتجعات**
 
-`QUANTITY` - عدد صحيح لعدد المعاملات في هذا البلوك.
+`QUANTITY` - عدد صحيح يمثل عدد المعاملات في هذه الكتلة.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x8b" // 139 // 139
+  "result": "0x8b" // 139
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber {#eth-getblocktransactioncountbynumber}
 
-يُرجع عدد المعاملات في بلوك يطابق رقم البلوك المحدد.
+يُرجع عدد المعاملات في كتلة تطابق رقم الكتلة المحدد.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة اللعب
 </ButtonLink>
 
 **المعلمات**
 
-1. `QUANTITY|TAG` - عدد صحيح لرقم بلوك، أو السلسلة `"earliest"`، `"latest"`، `"pending"`، `"safe"` أو `"finalized"`، كما في [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter).
+1. `QUANTITY|TAG` - عدد صحيح لرقم كتلة، أو السلسلة النصية `"earliest"`، أو `"latest"`، أو `"pending"`، أو `"safe"`، أو `"finalized"`، كما هو الحال في [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter).
 
 ```js
 params: [
-  "0x13738ca", // 20396234 // 20396234
+  "0x13738ca", // 20396234
 ]
 ```
 
-**المرتجعات**
+**القيم المرجعة**
 
-`QUANTITY` - عدد صحيح لعدد المعاملات في هذا البلوك.
+`QUANTITY` - عدد صحيح يمثل عدد المعاملات في هذه الكتلة.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x8b" // 139 // 139
+  "result": "0x8b" // 139
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### <span dir="ltr">eth_getUncleCountByBlockHash</span> {#eth-getunclecountbyblockhash}
 
-يُرجع عدد كتل العم (uncles) في بلوك من بلوك يطابق تجزئة (هاش) البلوك المحددة.
+يُرجع عدد الأعمام في كتلة من كتلة تطابق تجزئة الكتلة المحددة.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
   جرب نقطة النهاية في ساحة اللعب
@@ -812,7 +812,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 
 **المعلمات**
 
-1. `DATA`، 32 بايت - التجزئة (هاش) لبلوك
+1. `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة كتلة
 
 ```js
 params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
@@ -820,86 +820,86 @@ params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 
 **المرتجعات**
 
-`QUANTITY` - عدد صحيح لعدد كتل العم في هذا البلوك.
+`QUANTITY` - عدد صحيح يمثل عدد الأعمام في هذه الكتلة.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### <span dir="ltr">eth_getUncleCountByBlockNumber</span> {#eth-getunclecountbyblocknumber}
 
-يُرجع عدد كتل العم (uncles) في بلوك من بلوك يطابق رقم البلوك المحدد.
+يُرجع عدد الأعمام في كتلة من كتلة تطابق رقم الكتلة المحدد.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة الاختبار
 </ButtonLink>
 
 **المعلمات**
 
-1. `QUANTITY|TAG` - عدد صحيح لرقم بلوك، أو السلسلة `"latest"`، `"earliest"`، `"pending"`، `"safe"` أو `"finalized"`، راجع [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter)
+1. `QUANTITY|TAG` - عدد صحيح لرقم كتلة، أو السلسلة `"latest"`، أو `"earliest"`، أو `"pending"`، أو `"safe"`، أو `"finalized"`، راجع [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
-  "0xe8", // 232 // 232
+  "0xe8", // 232
 ]
 ```
 
 **المرتجعات**
 
-`QUANTITY` - عدد صحيح لعدد كتل العم في هذا البلوك.
+`QUANTITY` - عدد صحيح لعدد الأعمام في هذه الكتلة.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params":["0xe8"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x0" // 0 // 0
+  "result": "0x0" // 0
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode {#eth-getcode}
 
-يُرجع الكود في عنوان محدد.
+يعيد الرمز الموجود في عنوان معين.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة اللعب
 </ButtonLink>
 
 **المعلمات**
 
-1. `DATA`، 20 بايت - العنوان
-2. `QUANTITY|TAG` - عدد صحيح لرقم البلوك، أو السلسلة `"latest"`، `"earliest"`، `"pending"`، `"safe"` أو `"finalized"`، راجع [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`، <span dir="ltr">20 Bytes</span> - العنوان
+2. `QUANTITY|TAG` - رقم كتلة صحيح، أو السلسلة النصية `"latest"`، أو `"earliest"`، أو `"pending"`، أو `"safe"` أو `"finalized"`، راجع [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
   "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-  "0x5daf3b", // 6139707 // 6139707
+  "0x5daf3b", // 6139707
 ]
 ```
 
 **المرتجعات**
 
-`DATA` - الكود من العنوان المحدد.
+`DATA` - الرمز من العنوان المحدد.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -907,18 +907,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign {#eth-sign}
 
-تحسب طريقة sign توقيعًا خاصًا بإيثريوم باستخدام: <span dir="ltr">`sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`</span>.
+تحسب طريقة sign توقيعًا خاصًا بشبكة إيثيريوم باستخدام: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-من خلال إضافة بادئة إلى الرسالة، يصبح التوقيع المحسوب قابلاً للتعرف عليه كتوقيع خاص بإيثريوم. يمنع هذا سوء الاستخدام حيث يمكن لتطبيق لامركزي خبيث توقيع بيانات عشوائية (مثل معاملة) واستخدام التوقيع لانتحال شخصية الضحية.
+تؤدي إضافة بادئة إلى الرسالة إلى جعل التوقيع المحسوب مميزًا كتوقيع خاص بشبكة إيثيريوم. يمنع هذا سوء الاستخدام حيث يمكن لتطبيق لامركزي (dapp) ضار توقيع بيانات عشوائية (مثل معاملة) واستخدام التوقيع لانتحال شخصية الضحية.
 
 ملاحظة: يجب أن يكون العنوان المراد التوقيع به غير مقفل.
 
 **المعلمات**
 
-1. `DATA`، 20 بايت - العنوان
-2. `DATA`، N بايت - الرسالة المراد توقيعها
+1. `DATA`، <span dir="ltr">20 Bytes</span> - العنوان
+2. `DATA`، <span dir="ltr">N Bytes</span> - الرسالة المراد توقيعها
 
 **المرتجعات**
 
@@ -927,9 +927,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "0xdeadbeaf"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -937,33 +937,33 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### <span dir="ltr">eth_signTransaction</span> {#eth-signtransaction}
 
-يوقع معاملة يمكن إرسالها إلى الشبكة في وقت لاحق باستخدام [eth_sendRawTransaction](#eth_sendrawtransaction).
+يوقع معاملة يمكن إرسالها إلى الشبكة في وقت لاحق باستخدام [<span dir="ltr">eth_sendRawTransaction</span>](#eth-sendrawtransaction).
 
 **المعلمات**
 
 1. `Object` - كائن المعاملة
 
 - `type`:
-- `from`: `DATA`، 20 بايت - العنوان الذي تُرسل منه المعاملة.
-- `to`: `DATA`، 20 بايت - (اختياري عند إنشاء عقد جديد) العنوان الموجهة إليه المعاملة.
-- `gas`: `QUANTITY` - (اختياري، الافتراضي: 90000) عدد صحيح للغاز المقدم لتنفيذ المعاملة. سيُرجع الغاز غير المستخدم.
-- `gasPrice`: `QUANTITY` - (اختياري، الافتراضي: سيتم تحديده) عدد صحيح لسعر الغاز (gasPrice) المستخدم لكل غاز مدفوع، بوحدة Wei.
-- `value`: `QUANTITY` - (اختياري) عدد صحيح للقيمة المرسلة مع هذه المعاملة، بوحدة Wei.
-- `data`: `DATA` - الكود المترجم لعقد أو التجزئة (هاش) لتوقيع الطريقة المستدعاة والمعلمات المشفرة.
-- `nonce`: `QUANTITY` - (اختياري) عدد صحيح لرقم عشوائي (nonce). يسمح هذا بالكتابة فوق معاملاتك المعلقة التي تستخدم نفس الرقم العشوائي.
+- `from`: `DATA`، <span dir="ltr">20 Bytes</span> - العنوان الذي تُرسل منه المعاملة.
+- `to`: `DATA`، <span dir="ltr">20 Bytes</span> - (اختياري عند إنشاء عقد جديد) العنوان الذي تُوجه إليه المعاملة.
+- `gas`: `QUANTITY` - (اختياري، الافتراضي: <span dir="ltr">90000</span>) عدد صحيح للغاز المقدم لتنفيذ المعاملة. سيعيد الغاز غير المستخدم.
+- `gasPrice`: `QUANTITY` - (اختياري، الافتراضي: <span dir="ltr">To-Be-Determined</span>) عدد صحيح لسعر الغاز المستخدم لكل غاز مدفوع، بوحدة <span dir="ltr">Wei</span>.
+- `value`: `QUANTITY` - (اختياري) عدد صحيح للقيمة المرسلة مع هذه المعاملة، بوحدة <span dir="ltr">Wei</span>.
+- `data`: `DATA` - الرمز المصرّف لعقد أو تجزئة توقيع الطريقة المستدعاة والمعلمات المشفرة.
+- `nonce`: `QUANTITY` - (اختياري) عدد صحيح لرقم فريد. يسمح هذا بالكتابة فوق معاملاتك المعلقة التي تستخدم نفس الرقم الفريد.
 
 **المرتجعات**
 
-`DATA`، كائن المعاملة المشفر بـ RLP والموقع بواسطة الحساب المحدد.
+`DATA`، كائن المعاملة المشفر بـ <span dir="ltr">RLP</span> والموقع من قبل الحساب المحدد.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","params": [{"data":"0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675","from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","gas": "0x76c0","gasPrice": "0x9184e72a000","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","value": "0x9184e72a"}]}'
-// Result // النتيجة
+// نتيجة
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -971,48 +971,48 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction {#eth-sendtransaction}
 
-ينشئ معاملة استدعاء رسالة جديدة أو إنشاء عقد، إذا كان حقل البيانات يحتوي على كود، ويوقعه باستخدام الحساب المحدد في `from`.
+ينشئ معاملة استدعاء رسالة جديدة أو إنشاء عقد، إذا كان حقل البيانات يحتوي على رمز، ويوقعها باستخدام الحساب المحدد في `from`.
 
 **المعلمات**
 
 1. `Object` - كائن المعاملة
 
-- `from`: `DATA`، 20 بايت - العنوان الذي تُرسل منه المعاملة.
-- `to`: `DATA`، 20 بايت - (اختياري عند إنشاء عقد جديد) العنوان الموجهة إليه المعاملة.
-- `gas`: `QUANTITY` - (اختياري، الافتراضي: 90000) عدد صحيح للغاز المقدم لتنفيذ المعاملة. سيُرجع الغاز غير المستخدم.
-- `gasPrice`: `QUANTITY` - (اختياري، الافتراضي: سيتم تحديده) عدد صحيح لسعر الغاز (gasPrice) المستخدم لكل غاز مدفوع.
+- `from`: `DATA`، <span dir="ltr">20 Bytes</span> - العنوان الذي تُرسل منه المعاملة.
+- `to`: `DATA`، <span dir="ltr">20 Bytes</span> - (اختياري عند إنشاء عقد جديد) العنوان الذي تُوجه إليه المعاملة.
+- `gas`: `QUANTITY` - (اختياري، الافتراضي: <span dir="ltr">90000</span>) عدد صحيح للغاز المقدم لتنفيذ المعاملة. سيعيد الغاز غير المستخدم.
+- `gasPrice`: `QUANTITY` - (اختياري، الافتراضي: يُحدد لاحقًا) عدد صحيح يمثل سعر الغاز (gasPrice) المستخدم لكل غاز مدفوع.
 - `value`: `QUANTITY` - (اختياري) عدد صحيح للقيمة المرسلة مع هذه المعاملة.
-- `input`: `DATA` - الكود المترجم لعقد أو التجزئة (هاش) لتوقيع الطريقة المستدعاة والمعلمات المشفرة.
-- `nonce`: `QUANTITY` - (اختياري) عدد صحيح لرقم عشوائي (nonce). يسمح هذا بالكتابة فوق معاملاتك المعلقة التي تستخدم نفس الرقم العشوائي.
+- `input`: `DATA` - الرمز المُصرف لعقد أو تجزئة توقيع الطريقة المستدعاة والمعلمات المشفرة.
+- `nonce`: `QUANTITY` - (اختياري) عدد صحيح يمثل رقمًا فريدًا (nonce). يتيح لك هذا الكتابة فوق معاملاتك المعلقة التي تستخدم نفس الرقم الفريد.
 
 ```js
 params: [
   {
     from: "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
     to: "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
-    gas: "0x76c0", // 30400 // 30400
-    gasPrice: "0x9184e72a000", // 10000000000000 // 10000000000000
-    value: "0x9184e72a", // 2441406250 // 2441406250
+    gas: "0x76c0", // 30400
+    gasPrice: "0x9184e72a000", // 10000000000000
+    value: "0x9184e72a", // 2441406250
     input:
       "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
   },
 ]
 ```
 
-**المرتجعات**
+**القيم المعادة**
 
-`DATA`، 32 بايت - التجزئة (هاش) للمعاملة، أو تجزئة الصفر إذا لم تكن المعاملة متاحة بعد.
+`DATA`، <span dir="ltr">32 Bytes</span> - تجزئة المعاملة، أو التجزئة الصفرية إذا لم تكن المعاملة متاحة بعد.
 
-استخدم [eth_getTransactionReceipt](#eth_gettransactionreceipt) للحصول على عنوان العقد، بعد اقتراح المعاملة في بلوك، عند إنشاء عقد.
+استخدم [eth_getTransactionReceipt](#eth-gettransactionreceipt) للحصول على عنوان العقد، بعد اقتراح المعاملة في كتلة، عند إنشائك لعقد.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{see above}],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1020,7 +1020,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth-sendrawtransaction}
 
 ينشئ معاملة استدعاء رسالة جديدة أو إنشاء عقد للمعاملات الموقعة.
 
@@ -1034,18 +1034,18 @@ params: [
 ]
 ```
 
-**المرتجعات**
+**القيم المرجعة**
 
-`DATA`، 32 بايت - التجزئة (هاش) للمعاملة، أو تجزئة الصفر إذا لم تكن المعاملة متاحة بعد.
+`DATA`، <span dir="ltr">32 Bytes</span> - تجزئة المعاملة، أو التجزئة الصفرية إذا لم تكن المعاملة متاحة بعد.
 
-استخدم [eth_getTransactionReceipt](#eth_gettransactionreceipt) للحصول على عنوان العقد، بعد اقتراح المعاملة في بلوك، عند إنشاء عقد.
+استخدم [eth_getTransactionReceipt](#eth-gettransactionreceipt) للحصول على عنوان العقد، بعد اقتراح المعاملة في كتلة، عندما قمت بإنشاء عقد.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{see above}],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1053,12 +1053,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call {#eth-call}
 
-ينفذ استدعاء رسالة جديدًا على الفور دون إنشاء معاملة على البلوك تشين. يُستخدم غالبًا لتنفيذ وظائف العقد الذكي للقراءة فقط، على سبيل المثال `balanceOf` لعقد ERC-20.
+ينفذ استدعاء رسالة جديدًا على الفور دون إنشاء معاملة على سلسلة الكتل. يُستخدم غالبًا لتنفيذ وظائف العقد الذكي للقراءة فقط، على سبيل المثال `balanceOf` لعقد <span dir="ltr">ERC-20</span>.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة الاختبار
 </ButtonLink>
 
 **المعلمات**
@@ -1066,24 +1066,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 1. `Object` - كائن استدعاء المعاملة
 
 - `from`: `DATA`، 20 بايت - (اختياري) العنوان الذي تُرسل منه المعاملة.
-- `to`: `DATA`، 20 بايت - العنوان الموجهة إليه المعاملة.
-- `gas`: `QUANTITY` - (اختياري) عدد صحيح للغاز المقدم لتنفيذ المعاملة. يستهلك eth_call صفر غاز، ولكن قد تكون هذه المعلمة مطلوبة لبعض عمليات التنفيذ.
-- `gasPrice`: `QUANTITY` - (اختياري) عدد صحيح لسعر الغاز (gasPrice) المستخدم لكل غاز مدفوع
+- `to`: `DATA`، 20 بايت - العنوان الذي تُوجه إليه المعاملة.
+- `gas`: `QUANTITY` - (اختياري) عدد صحيح للغاز المقدم لتنفيذ المعاملة. يستهلك <span dir="ltr">eth_call</span> صفر غاز، ولكن قد تكون هذه المعلمة مطلوبة لبعض عمليات التنفيذ.
+- `gasPrice`: `QUANTITY` - (اختياري) عدد صحيح لـ <span dir="ltr">gasPrice</span> المستخدم لكل غاز مدفوع
 - `value`: `QUANTITY` - (اختياري) عدد صحيح للقيمة المرسلة مع هذه المعاملة
-- `input`: `DATA` - (اختياري) التجزئة (هاش) لتوقيع الطريقة والمعلمات المشفرة. للحصول على التفاصيل، راجع [واجهة التطبيق الثنائية (ABI) لعقد إيثريوم في وثائق Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `input`: `DATA` - (اختياري) تجزئة توقيع الطريقة والمعلمات المشفرة. للحصول على التفاصيل، راجع [<span dir="ltr">ABI</span> لعقد إيثيريوم في وثائق Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - عدد صحيح لرقم البلوك، أو السلسلة `"latest"`، `"earliest"`، `"pending"`، `"safe"` أو `"finalized"`، راجع [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - رقم كتلة صحيح، أو السلسلة `"latest"`، أو `"earliest"`، أو `"pending"`، أو `"safe"` أو `"finalized"`، راجع [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter)
 
-**المرتجعات**
+**القيم المرجعة**
 
 `DATA` - القيمة المرجعة للعقد المنفذ.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1091,9 +1091,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas {#eth-estimategas}
 
-يُنشئ ويُرجع تقديرًا لمقدار الغاز اللازم للسماح باكتمال المعاملة. لن تتم إضافة المعاملة إلى البلوك تشين. لاحظ أن التقدير قد يكون أكثر بكثير من كمية الغاز المستخدمة فعليًا بواسطة المعاملة، لمجموعة متنوعة من الأسباب بما في ذلك آليات آلة إيثريوم الافتراضية (EVM) وأداء العقدة.
+يُنشئ ويُرجع تقديرًا لمقدار الغاز اللازم للسماح للمعاملة بالاكتمال. لن تتم إضافة المعاملة إلى سلسلة الكتل. لاحظ أن التقدير قد يكون أكثر بكثير من كمية الغاز التي تستخدمها المعاملة فعليًا، لمجموعة متنوعة من الأسباب بما في ذلك آليات EVM وأداء العقدة.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
   جرب نقطة النهاية في ساحة اللعب
@@ -1101,37 +1101,37 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 **المعلمات**
 
-راجع معلمات [eth_call](#eth_call)، باستثناء أن جميع الخصائص اختيارية. إذا لم يتم تحديد حد الغاز، يستخدم geth حد الغاز للبلوك من البلوك المعلق كحد أقصى. نتيجة لذلك، قد لا يكون التقدير المرجع كافيًا لتنفيذ الاستدعاء/المعاملة عندما تكون كمية الغاز أعلى من حد الغاز للبلوك المعلق.
+راجع معلمات [eth_call](#eth-call)، باستثناء أن جميع الخصائص اختيارية. إذا لم يتم تحديد حد الغاز، يستخدم جو إيثريوم (geth) حد الغاز للكتلة من الكتلة المعلقة كحد أقصى. ونتيجة لذلك، قد لا يكون التقدير المُرجع كافيًا لتنفيذ الاستدعاء/المعاملة عندما تكون كمية الغاز أعلى من حد الغاز للكتلة المعلقة.
 
-**المرتجعات**
+**القيم المرجعة**
 
 `QUANTITY` - كمية الغاز المستخدمة.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see above}],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x5208" // 21000 // 21000
+  "result": "0x5208" // 21000
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash {#eth-getblockbyhash}
 
-يُرجع معلومات حول بلوك بواسطة التجزئة (هاش).
+يعيد معلومات حول كتلة بناءً على التجزئة.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة الاختبار
 </ButtonLink>
 
 **المعلمات**
 
-1. `DATA`، 32 بايت - التجزئة (هاش) لبلوك.
-2. `Boolean` - إذا كان `true` فإنه يُرجع كائنات المعاملة الكاملة، وإذا كان `false` فإنه يُرجع فقط تجزئات المعاملات.
+1. `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة الكتلة.
+2. `Boolean` - إذا كان `true` فإنه يعيد كائنات المعاملة الكاملة، وإذا كان `false` فإنه يعيد تجزئات المعاملات فقط.
 
 ```js
 params: [
@@ -1140,36 +1140,36 @@ params: [
 ]
 ```
 
-**المرتجعات**
+**القيم المعادة**
 
-`Object` - كائن بلوك، أو `null` عند عدم العثور على بلوك:
+`Object` - كائن كتلة، أو `null` عندما لا يتم العثور على كتلة:
 
-- `number`: `QUANTITY` - رقم البلوك. `null` عندما يكون بلوك معلقًا.
-- `hash`: `DATA`، 32 بايت - التجزئة (هاش) للبلوك. `null` عندما يكون بلوك معلقًا.
-- `parentHash`: `DATA`، 32 بايت - التجزئة (هاش) للبلوك الأصل.
-- `nonce`: `DATA`، 8 بايت - التجزئة (هاش) لإثبات العمل المُنشأ. `null` عندما يكون بلوك معلقًا، `0x0` لكتل إثبات الحصة (منذ الدمج)
-- `sha3Uncles`: `DATA`، 32 بايت - SHA3 لبيانات كتل العم (uncles) في البلوك.
-- `logsBloom`: `DATA`، 256 بايت - مرشح بلوم (bloom filter) لسجلات البلوك. `null` عندما يكون بلوك معلقًا.
-- `transactionsRoot`: `DATA`، 32 بايت - جذر شجرة المعاملات (transaction trie) للبلوك.
-- `stateRoot`: `DATA`، 32 بايت - جذر شجرة الحالة (state trie) النهائية للبلوك.
-- `receiptsRoot`: `DATA`، 32 بايت - جذر شجرة الإيصالات (receipts trie) للبلوك.
-- `miner`: `DATA`، 20 بايت - عنوان المستفيد الذي أُعطيت له مكافآت البلوك.
-- `difficulty`: `QUANTITY` - عدد صحيح لصعوبة هذا البلوك.
-- `totalDifficulty`: `QUANTITY` - عدد صحيح للصعوبة الإجمالية للسلسلة حتى هذا البلوك.
-- `extraData`: `DATA` - حقل "البيانات الإضافية" لهذا البلوك.
-- `size`: `QUANTITY` - عدد صحيح لحجم هذا البلوك بالبايت.
-- `gasLimit`: `QUANTITY` - الحد الأقصى للغاز المسموح به في هذا البلوك.
-- `gasUsed`: `QUANTITY` - إجمالي الغاز المستخدم بواسطة جميع المعاملات في هذا البلوك.
-- `timestamp`: `QUANTITY` - الطابع الزمني لـ unix لوقت تجميع البلوك.
-- `transactions`: `Array` - مصفوفة من كائنات المعاملة، أو تجزئات معاملات بحجم 32 بايت اعتمادًا على المعلمة الأخيرة المحددة.
-- `uncles`: `Array` - مصفوفة من تجزئات كتل العم (uncles).
+- `number`: `QUANTITY` - رقم الكتلة. `null` عندما تكون كتلة معلقة.
+- `hash`: `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة الكتلة. `null` عندما تكون كتلة معلقة.
+- `parentHash`: `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة الكتلة الأصلية.
+- `nonce`: `DATA`، <span dir="ltr">8 Bytes</span> - تجزئة إثبات العمل (PoW) المُنشأ. `null` عندما تكون كتلة معلقة، `0x0` لكتل إثبات الحصة (PoS) (منذ الدمج)
+- `sha3Uncles`: `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة <span dir="ltr">SHA3</span> لبيانات الكتل الشقيقة (uncles) في الكتلة.
+- `logsBloom`: `DATA`، <span dir="ltr">256 Bytes</span> - مرشح بلوم (bloom filter) لسجلات الكتلة. `null` عندما تكون كتلة معلقة.
+- `transactionsRoot`: `DATA`، <span dir="ltr">32 Bytes</span> - جذر شجرة المعاملات للكتلة.
+- `stateRoot`: `DATA`، <span dir="ltr">32 Bytes</span> - جذر شجرة الحالة النهائية للكتلة.
+- `receiptsRoot`: `DATA`، <span dir="ltr">32 Bytes</span> - جذر شجرة الإيصالات للكتلة.
+- `miner`: `DATA`، <span dir="ltr">20 Bytes</span> - عنوان المستفيد الذي مُنحت له مكافآت الكتلة.
+- `difficulty`: `QUANTITY` - عدد صحيح يمثل صعوبة هذه الكتلة.
+- `totalDifficulty`: `QUANTITY` - عدد صحيح يمثل الصعوبة الإجمالية للسلسلة حتى هذه الكتلة.
+- `extraData`: `DATA` - حقل "البيانات الإضافية" لهذه الكتلة.
+- `size`: `QUANTITY` - عدد صحيح يمثل حجم هذه الكتلة بالبايت.
+- `gasLimit`: `QUANTITY` - الحد الأقصى للغاز المسموح به في هذه الكتلة.
+- `gasUsed`: `QUANTITY` - إجمالي الغاز المستخدم بواسطة جميع المعاملات في هذه الكتلة.
+- `timestamp`: `QUANTITY` - الطابع الزمني لنظام <span dir="ltr">Unix</span> لوقت تجميع الكتلة.
+- `transactions`: `Array` - مصفوفة من كائنات المعاملات، أو تجزئات معاملات بحجم <span dir="ltr">32 Bytes</span> اعتمادًا على المعلمة الأخيرة المعطاة.
+- `uncles`: `Array` - مصفوفة من تجزئات الكتل الشقيقة (uncles).
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0xdc0818cf78f21a8e70579cb46a43643f78291264dda342ae31049421c82d21ae", false],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -1200,104 +1200,104 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth-getblockbynumber}
 
-يُرجع معلومات حول بلوك بواسطة رقم البلوك.
+يُرجع معلومات حول كتلة بناءً على رقم الكتلة.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByNumber">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة الاختبار
 </ButtonLink>
 
 **المعلمات**
 
-1. `QUANTITY|TAG` - عدد صحيح لرقم بلوك، أو السلسلة `"earliest"`، `"latest"`، `"pending"`، `"safe"` أو `"finalized"`، كما في [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter).
-2. `Boolean` - إذا كان `true` فإنه يُرجع كائنات المعاملة الكاملة، وإذا كان `false` فإنه يُرجع فقط تجزئات المعاملات.
+1. `QUANTITY|TAG` - عدد صحيح لرقم الكتلة، أو السلسلة النصية `"earliest"`، أو `"latest"`، أو `"pending"`، أو `"safe"`، أو `"finalized"`، كما هو موضح في [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter).
+2. `Boolean` - إذا كانت `true` فإنها تُرجع كائنات المعاملة الكاملة، وإذا كانت `false` فإنها تُرجع تجزئات المعاملات فقط.
 
 ```js
 params: [
-  "0x1b4", // 436 // 436
+  "0x1b4", // 436
   true,
 ]
 ```
 
-**المرتجعات**
-راجع [eth_getBlockByHash](#eth_getblockbyhash)
+**القيم المرجعة**
+راجع [eth_getBlockByHash](#eth-getblockbyhash)
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-النتيجة راجع [eth_getBlockByHash](#eth_getblockbyhash)
+للنتيجة راجع [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth-gettransactionbyhash}
 
-يُرجع المعلومات حول معاملة مطلوبة بواسطة التجزئة (هاش) للمعاملة.
+يعيد المعلومات حول معاملة مطلوبة بواسطة تجزئة المعاملة.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في ساحة التجربة
 </ButtonLink>
 
 **المعلمات**
 
-1. `DATA`، 32 بايت - التجزئة (هاش) لمعاملة
+1. `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة المعاملة
 
 ```js
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 ```
 
-**المرتجعات**
+**القيم المعادة**
 
 `Object` - كائن معاملة، أو `null` عند عدم العثور على معاملة:
 
-- `blockHash`: `DATA`، 32 بايت - التجزئة (هاش) للبلوك الذي كانت فيه هذه المعاملة. `null` عندما تكون معلقة.
-- `blockNumber`: `QUANTITY` - رقم البلوك الذي كانت فيه هذه المعاملة. `null` عندما تكون معلقة.
-- `from`: `DATA`، 20 بايت - عنوان المرسل.
+- `blockHash`: `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة الكتلة التي كانت هذه المعاملة فيها. `null` عندما تكون معلقة.
+- `blockNumber`: `QUANTITY` - رقم الكتلة التي كانت هذه المعاملة فيها. `null` عندما تكون معلقة.
+- `from`: `DATA`، <span dir="ltr">20 Bytes</span> - عنوان المرسل.
 - `gas`: `QUANTITY` - الغاز المقدم من المرسل.
-- `gasPrice`: `QUANTITY` - سعر الغاز المقدم من المرسل بوحدة Wei.
-- `hash`: `DATA`، 32 بايت - التجزئة (هاش) للمعاملة.
+- `gasPrice`: `QUANTITY` - سعر الغاز المقدم من المرسل بوحدة <span dir="ltr">Wei</span>.
+- `hash`: `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة المعاملة.
 - `input`: `DATA` - البيانات المرسلة مع المعاملة.
 - `nonce`: `QUANTITY` - عدد المعاملات التي أجراها المرسل قبل هذه المعاملة.
-- `to`: `DATA`، 20 بايت - عنوان المستلم. `null` عندما تكون معاملة إنشاء عقد.
-- `transactionIndex`: `QUANTITY` - عدد صحيح لموضع فهرس المعاملات في البلوك. `null` عندما تكون معلقة.
-- `value`: `QUANTITY` - القيمة المحولة بوحدة Wei.
-- `v`: `QUANTITY` - مُعرّف استرداد ECDSA
-- `r`: `QUANTITY` - توقيع ECDSA r
-- `s`: `QUANTITY` - توقيع ECDSA s
+- `to`: `DATA`، <span dir="ltr">20 Bytes</span> - عنوان المستلم. `null` عندما تكون معاملة إنشاء عقد.
+- `transactionIndex`: `QUANTITY` - عدد صحيح لموضع مؤشر المعاملة في الكتلة. `null` عندما تكون معلقة.
+- `value`: `QUANTITY` - القيمة المحولة بوحدة <span dir="ltr">Wei</span>.
+- `v`: `QUANTITY` - معرف استرداد <span dir="ltr">ECDSA</span>
+- `r`: `QUANTITY` - توقيع <span dir="ltr">ECDSA r</span>
+- `s`: `QUANTITY` - توقيع <span dir="ltr">ECDSA s</span>
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "jsonrpc":"2.0",
   "id":1,
   "result":{
     "blockHash":"0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
-    "blockNumber":"0x5daf3b", // 6139707 // 6139707
+    "blockNumber":"0x5daf3b", // 6139707
     "from":"0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
-    "gas":"0xc350", // 50000 // 50000
-    "gasPrice":"0x4a817c800", // 20000000000 // 20000000000
+    "gas":"0xc350", // 50000
+    "gasPrice":"0x4a817c800", // 20000000000
     "hash":"0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b",
     "input":"0x68656c6c6f21",
-    "nonce":"0x15", // 21 // 21
+    "nonce":"0x15", // 21
     "to":"0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
-    "transactionIndex":"0x41", // 65 // 65
-    "value":"0xf3dbb76162000", // 4290000000000000 // 4290000000000000
-    "v":"0x25", // 37 // 37
+    "transactionIndex":"0x41", // 65
+    "value":"0xf3dbb76162000", // 4290000000000000
+    "v":"0x25", // 37
     "r":"0x1b5e176d927f8e9ab405058b2d2457392da3e20f328b16ddabcebc33eaac5fea",
     "s":"0x4ba69724e8f69de52f0125ad8b3c5c2cef33019bac3249e2c0a2192766d1721c"
   }
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### <span dir="ltr">eth_getTransactionByBlockHashAndIndex</span> {#eth-gettransactionbyblockhashandindex}
 
-يُرجع معلومات حول معاملة بواسطة التجزئة (هاش) للبلوك وموضع فهرس المعاملة.
+يُرجع معلومات حول معاملة حسب تجزئة الكتلة وموضع مؤشر المعاملة.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
   جرب نقطة النهاية في ساحة اللعب
@@ -1305,102 +1305,102 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 
 **المعلمات**
 
-1. `DATA`، 32 بايت - التجزئة (هاش) لبلوك.
-2. `QUANTITY` - عدد صحيح لموضع فهرس المعاملة.
+1. `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة الكتلة.
+2. `QUANTITY` - عدد صحيح لموضع مؤشر المعاملة.
 
 ```js
 params: [
   "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
-  "0x0", // 0 // 0
+  "0x0", // 0
 ]
 ```
 
 **المرتجعات**
-راجع [eth_getTransactionByHash](#eth_gettransactionbyhash)
+انظر [<span dir="ltr">eth_getTransactionByHash</span>](#eth-gettransactionbyhash)
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-النتيجة راجع [eth_getTransactionByHash](#eth_gettransactionbyhash)
+للنتيجة انظر [<span dir="ltr">eth_getTransactionByHash</span>](#eth-gettransactionbyhash)
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex {#eth-gettransactionbyblocknumberandindex}
 
-يُرجع معلومات حول معاملة بواسطة رقم البلوك وموضع فهرس المعاملة.
+يُرجع معلومات حول معاملة بناءً على رقم الكتلة وموضع مؤشر المعاملة.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في بيئة اللعب
 </ButtonLink>
 
 **المعلمات**
 
-1. `QUANTITY|TAG` - رقم بلوك، أو السلسلة `"earliest"`، `"latest"`، `"pending"`، `"safe"` أو `"finalized"`، كما في [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter).
-2. `QUANTITY` - موضع فهرس المعاملة.
+1. `QUANTITY|TAG` - رقم كتلة، أو السلسلة `"earliest"`، أو `"latest"`، أو `"pending"`، أو `"safe"`، أو `"finalized"`، كما هو موضح في [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter).
+2. `QUANTITY` - موضع مؤشر المعاملة.
 
 ```js
 params: [
-  "0x9c47cf", // 10241999 // 10241999
-  "0x24", // 36 // 36
+  "0x9c47cf", // 10241999
+  "0x24", // 36
 ]
 ```
 
 **المرتجعات**
-راجع [eth_getTransactionByHash](#eth_gettransactionbyhash)
+راجع [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-النتيجة راجع [eth_getTransactionByHash](#eth_gettransactionbyhash)
+للنتيجة راجع [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth-gettransactionreceipt}
 
-يُرجع إيصال معاملة بواسطة التجزئة (هاش) للمعاملة.
+يعيد إيصال معاملة بواسطة تجزئة المعاملة.
 
-**ملاحظة** الإيصال غير متاح للمعاملات المعلقة.
+**ملاحظة** أن الإيصال غير متاح للمعاملات المعلقة.
 
 **المعلمات**
 
-1. `DATA`، 32 بايت - التجزئة (هاش) لمعاملة
+1. `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة معاملة
 
 ```js
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
-**المرتجعات**
+**القيم المعادة**
 `Object` - كائن إيصال معاملة، أو `null` عند عدم العثور على إيصال:
 
-- `transactionHash `: `DATA`، 32 بايت - التجزئة (هاش) للمعاملة.
-- `transactionIndex`: `QUANTITY` - عدد صحيح لموضع فهرس المعاملات في البلوك.
-- `blockHash`: `DATA`، 32 بايت - التجزئة (هاش) للبلوك الذي كانت فيه هذه المعاملة.
-- `blockNumber`: `QUANTITY` - رقم البلوك الذي كانت فيه هذه المعاملة.
-- `from`: `DATA`، 20 بايت - عنوان المرسل.
-- `to`: `DATA`، 20 بايت - عنوان المستلم. null عندما تكون معاملة إنشاء عقد.
-- `cumulativeGasUsed ` : `QUANTITY ` - إجمالي كمية الغاز المستخدمة عند تنفيذ هذه المعاملة في البلوك.
-- `effectiveGasPrice ` : `QUANTITY` - مجموع الرسوم الأساسية والإكرامية المدفوعة لكل وحدة غاز.
+- `transactionHash `: `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة المعاملة.
+- `transactionIndex`: `QUANTITY` - عدد صحيح يمثل موضع مؤشر المعاملة في الكتلة.
+- `blockHash`: `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة الكتلة التي كانت هذه المعاملة فيها.
+- `blockNumber`: `QUANTITY` - رقم الكتلة التي كانت هذه المعاملة فيها.
+- `from`: `DATA`، <span dir="ltr">20 Bytes</span> - عنوان المرسل.
+- `to`: `DATA`، <span dir="ltr">20 Bytes</span> - عنوان المستلم. يكون <span dir="ltr">null</span> عندما تكون معاملة إنشاء عقد.
+- `cumulativeGasUsed` : `QUANTITY ` - إجمالي كمية الغاز المستخدمة عند تنفيذ هذه المعاملة في الكتلة.
+- `effectiveGasPrice` : `QUANTITY` - مجموع الرسم الأساسي والإكرامية المدفوعة لكل وحدة غاز.
 - `gasUsed `: `QUANTITY ` - كمية الغاز المستخدمة بواسطة هذه المعاملة المحددة وحدها.
-- `contractAddress `: `DATA`، 20 بايت - عنوان العقد المُنشأ، إذا كانت المعاملة عبارة عن إنشاء عقد، وإلا `null`.
-- `logs`: `Array` - مصفوفة من كائنات السجل، التي أنشأتها هذه المعاملة.
-- `logsBloom`: `DATA`، 256 بايت - مرشح بلوم (Bloom filter) للعملاء الخفيفين لاسترداد السجلات ذات الصلة بسرعة.
-- `type`: `QUANTITY` - عدد صحيح لنوع المعاملة، `0x0` للمعاملات القديمة، `0x1` لأنواع قائمة الوصول، `0x2` للرسوم الديناميكية.
+- `contractAddress `: `DATA`، <span dir="ltr">20 Bytes</span> - عنوان العقد الذي تم إنشاؤه، إذا كانت المعاملة عبارة عن إنشاء عقد، وإلا `null`.
+- `logs`: `Array` - مصفوفة من كائنات السجل التي أنشأتها هذه المعاملة.
+- `logsBloom`: `DATA`، <span dir="ltr">256 Bytes</span> - مرشح بلوم للعملاء الخفيفين لاسترداد السجلات ذات الصلة بسرعة.
+- `type`: `QUANTITY` - عدد صحيح يمثل نوع المعاملة، `0x0` للمعاملات القديمة، `0x1` لأنواع قوائم الوصول، `0x2` للرسوم الديناميكية.
 
-كما أنه يُرجع _إما_ :
+كما يعيد _إما_ :
 
-- `root` : `DATA` 32 بايت لجذر الحالة (state root) بعد المعاملة (قبل بيزنطة)
+- `root` : `DATA` <span dir="ltr">32 bytes</span> من جذر الحالة بعد المعاملة (قبل بيزنطيوم)
 - `status`: `QUANTITY` إما `1` (نجاح) أو `0` (فشل)
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"],"id":1}'
-// Result // النتيجة
+// نتيجة
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -1408,15 +1408,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
     "blockHash":
       "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
     "blockNumber": "0xeff35f",
-    "contractAddress": null, // string of the address if it was created // سلسلة نصية للعنوان إذا تم إنشاؤه
+    "contractAddress": null, // سلسلة نصية للعنوان إذا تم إنشاؤه
     "cumulativeGasUsed": "0xa12515",
     "effectiveGasPrice": "0x5a9c688d4",
     "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
     "gasUsed": "0xb4c8",
     "logs": [{
-      // logs as returned by getFilterLogs, etc. // السجلات كما يتم إرجاعها بواسطة getFilterLogs، وما إلى ذلك.
+      // سجلات كما تم إرجاعها بواسطة getFilterLogs، إلخ.
     }],
-    "logsBloom": "0x00...0", // 256 byte bloom filter // مرشح بلوم بحجم 256 بايت
+    "logsBloom": "0x00...0", // مرشح بلوم 256 بايت
     "status": "0x1",
     "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
     "transactionHash":
@@ -1427,43 +1427,43 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex {#eth-getunclebyblockhashandindex}
 
-يُرجع معلومات حول كتلة عم (uncle) لبلوك بواسطة التجزئة (هاش) وموضع فهرس كتلة العم.
+يُرجع معلومات حول عم لكتلة بناءً على التجزئة وموضع مؤشر العم.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
-  جرب نقطة النهاية في ساحة اللعب
+  جرب نقطة النهاية في ساحة التجربة
 </ButtonLink>
 
 **المعلمات**
 
-1. `DATA`، 32 بايت - التجزئة (هاش) لبلوك.
-2. `QUANTITY` - موضع فهرس كتلة العم.
+1. `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة الكتلة.
+2. `QUANTITY` - موضع مؤشر العم.
 
 ```js
 params: [
   "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
-  "0x0", // 0 // 0
+  "0x0", // 0
 ]
 ```
 
 **المرتجعات**
-راجع [eth_getBlockByHash](#eth_getblockbyhash)
+انظر [eth_getBlockByHash](#eth-getblockbyhash)
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-النتيجة راجع [eth_getBlockByHash](#eth_getblockbyhash)
+للنتيجة انظر [eth_getBlockByHash](#eth-getblockbyhash)
 
-**ملاحظة**: لا تحتوي كتلة العم على معاملات فردية.
+**ملاحظة**: لا يحتوي العم على معاملات فردية.
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex {#eth-getunclebyblocknumberandindex}
 
-يُرجع معلومات حول كتلة عم (uncle) لبلوك بواسطة الرقم وموضع فهرس كتلة العم.
+يُرجع معلومات حول عم لكتلة بناءً على الرقم وموضع مؤشر العم.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
   جرب نقطة النهاية في ساحة اللعب
@@ -1471,51 +1471,51 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 
 **المعلمات**
 
-1. `QUANTITY|TAG` - رقم بلوك، أو السلسلة `"earliest"`، `"latest"`، `"pending"`، `"safe"`، `"finalized"`، كما في [معلمة البلوك](/developers/docs/apis/json-rpc/#block-parameter).
-2. `QUANTITY` - موضع فهرس كتلة العم.
+1. `QUANTITY|TAG` - رقم كتلة، أو السلسلة `"earliest"`، أو `"latest"`، أو `"pending"`، أو `"safe"`، أو `"finalized"`، كما هو الحال في [معلمة الكتلة](/developers/docs/apis/json-rpc/#block-parameter).
+2. `QUANTITY` - موضع مؤشر العم.
 
 ```js
 params: [
-  "0x29c", // 668 // 668
-  "0x0", // 0 // 0
+  "0x29c", // 668
+  "0x0", // 0
 ]
 ```
 
 **المرتجعات**
-راجع [eth_getBlockByHash](#eth_getblockbyhash)
+راجع [eth_getBlockByHash](#eth-getblockbyhash)
 
-**ملاحظة**: لا تحتوي كتلة العم على معاملات فردية.
+**ملاحظة**: لا يحتوي العم على معاملات فردية.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-النتيجة راجع [eth_getBlockByHash](#eth_getblockbyhash)
+للنتيجة راجع [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_newFilter {#eth_newfilter}
+### <span dir="ltr">eth_newFilter</span> {#eth-newfilter}
 
-ينشئ كائن مرشح (filter)، بناءً على خيارات المرشح، للإشعار عند تغير الحالة (السجلات).
-للتحقق مما إذا كانت الحالة قد تغيرت، استدعِ [eth_getFilterChanges](#eth_getfilterchanges).
+ينشئ كائن مرشح، بناءً على خيارات الترشيح، للإشعار عند تغير الحالة (السجلات).
+للتحقق مما إذا كانت الحالة قد تغيرت، استدعِ [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges).
 
 **ملاحظة حول تحديد مرشحات المواضيع:**
-المواضيع تعتمد على الترتيب. المعاملة التي تحتوي على سجل بمواضيع [A, B] ستتطابق مع مرشحات المواضيع التالية:
+المواضيع تعتمد على الترتيب. المعاملة التي تحتوي على سجل بمواضيع <span dir="ltr">[A, B]</span> ستتطابق مع مرشحات المواضيع التالية:
 
 - `[]` "أي شيء"
-- `[A]` "A في الموضع الأول (وأي شيء بعده)"
-- `[null, B]` "أي شيء في الموضع الأول و B في الموضع الثاني (وأي شيء بعده)"
-- `[A, B]` "A في الموضع الأول و B في الموضع الثاني (وأي شيء بعده)"
-- `[[A, B], [A, B]]` "(A أو B) في الموضع الأول و (A أو B) في الموضع الثاني (وأي شيء بعده)"
+- `[A]` "<span dir="ltr">A</span> في الموضع الأول (وأي شيء بعده)"
+- `[null, B]` "أي شيء في الموضع الأول و <span dir="ltr">B</span> في الموضع الثاني (وأي شيء بعده)"
+- `[A, B]` "<span dir="ltr">A</span> في الموضع الأول و <span dir="ltr">B</span> في الموضع الثاني (وأي شيء بعده)"
+- `[[A, B], [A, B]]` "(<span dir="ltr">A</span> أو <span dir="ltr">B</span>) في الموضع الأول و (<span dir="ltr">A</span> أو <span dir="ltr">B</span>) في الموضع الثاني (وأي شيء بعده)"
 - **المعلمات**
 
 1. `Object` - خيارات المرشح:
 
-- `fromBlock`: `QUANTITY|TAG` - (اختياري، الافتراضي: `"latest"`) عدد صحيح لرقم البلوك، أو `"latest"` لآخر بلوك مقترح، `"safe"` لأحدث بلوك آمن، `"finalized"` لأحدث بلوك نهائي، أو `"pending"`، `"earliest"` للمعاملات التي لم تدرج في بلوك بعد.
-- `toBlock`: `QUANTITY|TAG` - (اختياري، الافتراضي: `"latest"`) عدد صحيح لرقم البلوك، أو `"latest"` لآخر بلوك مقترح، `"safe"` لأحدث بلوك آمن، `"finalized"` لأحدث بلوك نهائي، أو `"pending"`، `"earliest"` للمعاملات التي لم تدرج في بلوك بعد.
-- `address`: `DATA|Array`، 20 بايت - (اختياري) عنوان العقد أو قائمة بالعناوين التي يجب أن تصدر منها السجلات.
-- `topics`: `Array of DATA`، - (اختياري) مصفوفة من مواضيع `DATA` بحجم 32 بايت. المواضيع تعتمد على الترتيب. يمكن أن يكون كل موضوع أيضًا مصفوفة من DATA مع خيارات "أو".
+- `fromBlock`: `QUANTITY|TAG` - (اختياري، الافتراضي: `"latest"`) رقم كتلة صحيح، أو `"latest"` لآخر كتلة مقترحة، أو `"safe"` لأحدث كتلة آمنة، أو `"finalized"` لأحدث كتلة نهائية، أو `"pending"`، `"earliest"` للمعاملات التي لم تُدرج في كتلة بعد.
+- `toBlock`: `QUANTITY|TAG` - (اختياري، الافتراضي: `"latest"`) رقم كتلة صحيح، أو `"latest"` لآخر كتلة مقترحة، أو `"safe"` لأحدث كتلة آمنة، أو `"finalized"` لأحدث كتلة نهائية، أو `"pending"`، `"earliest"` للمعاملات التي لم تُدرج في كتلة بعد.
+- `address`: `DATA|Array`، <span dir="ltr">20 Bytes</span> - (اختياري) عنوان عقد أو قائمة عناوين يجب أن تصدر منها السجلات.
+- `topics`: `Array of DATA`، - (اختياري) مصفوفة من مواضيع `DATA` بحجم <span dir="ltr">32 Bytes</span>. المواضيع تعتمد على الترتيب. يمكن أن يكون كل موضوع أيضًا مصفوفة من البيانات مع خيارات "أو" (<span dir="ltr">or</span>).
 
 ```js
 params: [
@@ -1536,93 +1536,93 @@ params: [
 ```
 
 **المرتجعات**
-`QUANTITY` - مُعرّف المرشح.
+`QUANTITY` - معرف المرشح.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics":["0x12341234"]}],"id":73}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### <span dir="ltr">eth_newBlockFilter</span> {#eth-newblockfilter}
 
-ينشئ مرشحًا في العقدة، للإشعار عند وصول بلوك جديد.
-للتحقق مما إذا كانت الحالة قد تغيرت، استدعِ [eth_getFilterChanges](#eth_getfilterchanges).
+ينشئ مرشحًا في العقدة، للإشعار عند وصول كتلة جديدة.
+للتحقق مما إذا كانت الحالة قد تغيرت، قم باستدعاء [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges).
 
 **المعلمات**
 لا يوجد
 
 **المرتجعات**
-`QUANTITY` - مُعرّف المرشح.
+`QUANTITY` - معرف المرشح.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":73}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc":  "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### <span dir="ltr">eth_newPendingTransactionFilter</span> {#eth-newpendingtransactionfilter}
 
 ينشئ مرشحًا في العقدة، للإشعار عند وصول معاملات معلقة جديدة.
-للتحقق مما إذا كانت الحالة قد تغيرت، استدعِ [eth_getFilterChanges](#eth_getfilterchanges).
+للتحقق مما إذا كانت الحالة قد تغيرت، قم باستدعاء [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges).
 
 **المعلمات**
 لا يوجد
 
 **المرتجعات**
-`QUANTITY` - مُعرّف المرشح.
+`QUANTITY` - معرف المرشح.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc":  "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### <span dir="ltr">eth_uninstallFilter</span> {#eth-uninstallfilter}
 
-يلغي تثبيت مرشح بالمعرّف المحدد. يجب استدعاؤه دائمًا عندما لا تعد هناك حاجة للمراقبة.
-بالإضافة إلى ذلك، تنتهي مهلة المرشحات عندما لا يتم طلبها باستخدام [eth_getFilterChanges](#eth_getfilterchanges) لفترة من الوقت.
+يقوم بإلغاء تثبيت مرشح بمعرف محدد. يجب استدعاؤه دائمًا عندما لا تعود هناك حاجة للمراقبة.
+بالإضافة إلى ذلك، تنتهي مهلة المرشحات عندما لا يتم طلبها باستخدام [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges) لفترة من الوقت.
 
 **المعلمات**
 
-1. `QUANTITY` - مُعرّف المرشح.
+1. `QUANTITY` - معرف المرشح.
 
 ```js
 params: [
-  "0xb", // 11 // 11
+  "0xb", // 11
 ]
 ```
 
-**المرتجعات**
+**القيم المرجعة**
 `Boolean` - `true` إذا تم إلغاء تثبيت المرشح بنجاح، وإلا `false`.
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xb"],"id":73}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1630,51 +1630,51 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges {#eth-getfilterchanges}
 
 طريقة استطلاع لمرشح، والتي تُرجع مصفوفة من السجلات التي حدثت منذ آخر استطلاع.
 
 **المعلمات**
 
-1. `QUANTITY` - مُعرّف المرشح.
+1. `QUANTITY` - معرف المرشح.
 
 ```js
 params: [
-  "0x16", // 22 // 22
+  "0x16", // 22
 ]
 ```
 
-**المرتجعات**
+**القيم المرجعة**
 `Array` - مصفوفة من كائنات السجل، أو مصفوفة فارغة إذا لم يتغير شيء منذ آخر استطلاع.
 
-- بالنسبة للمرشحات المنشأة باستخدام `eth_newBlockFilter`، تكون المرتجعات عبارة عن تجزئات كتل (`DATA`، 32 بايت)، على سبيل المثال، `["0x3454645634534..."]`.
-- بالنسبة للمرشحات المنشأة باستخدام `eth_newPendingTransactionFilter `، تكون المرتجعات عبارة عن تجزئات معاملات (`DATA`، 32 بايت)، على سبيل المثال، `["0x6345343454645..."]`.
-- بالنسبة للمرشحات المنشأة باستخدام `eth_newFilter`، تكون السجلات عبارة عن كائنات بالمعلمات التالية:
-  - `removed`: `TAG` - `true` عند إزالة السجل، بسبب إعادة تنظيم السلسلة. `false` إذا كان سجلاً صالحًا.
-  - `logIndex`: `QUANTITY` - عدد صحيح لموضع فهرس السجل في البلوك. `null` عندما يكون سجلاً معلقًا.
-  - `transactionIndex`: `QUANTITY` - عدد صحيح لموضع فهرس المعاملات الذي تم إنشاء السجل منه. `null` عندما يكون سجلاً معلقًا.
-  - `transactionHash`: `DATA`، 32 بايت - التجزئة (هاش) للمعاملات التي تم إنشاء هذا السجل منها. `null` عندما يكون سجلاً معلقًا.
-  - `blockHash`: `DATA`، 32 بايت - التجزئة (هاش) للبلوك الذي كان فيه هذا السجل. `null` عندما يكون معلقًا. `null` عندما يكون سجلاً معلقًا.
-  - `blockNumber`: `QUANTITY` - رقم البلوك الذي كان فيه هذا السجل. `null` عندما يكون معلقًا. `null` عندما يكون سجلاً معلقًا.
-  - `address`: `DATA`، 20 بايت - العنوان الذي صدر منه هذا السجل.
-  - `data`: `DATA` - بيانات سجل غير مفهرسة متغيرة الطول. (في _Solidity_: صفر أو أكثر من وسيطات السجل غير المفهرسة بحجم 32 بايت.)
-  - `topics`: `Array of DATA` - مصفوفة من 0 إلى 4 `DATA` بحجم 32 بايت لوسيطات السجل المفهرسة. (في _Solidity_: الموضوع الأول هو _التجزئة (هاش)_ لتوقيع الحدث (على سبيل المثال، `Deposit(address,bytes32,uint256)`)، إلا إذا قمت بتعريف الحدث باستخدام المحدد `anonymous`.)
+- بالنسبة للمرشحات التي تم إنشاؤها باستخدام `eth_newBlockFilter` تكون القيم المرجعة عبارة عن تجزئات الكتل (`DATA`، <span dir="ltr">32 Bytes</span>)، على سبيل المثال، `["0x3454645634534..."]`.
+- بالنسبة للمرشحات التي تم إنشاؤها باستخدام `eth_newPendingTransactionFilter ` تكون القيم المرجعة عبارة عن تجزئات المعاملات (`DATA`، <span dir="ltr">32 Bytes</span>)، على سبيل المثال، `["0x6345343454645..."]`.
+- بالنسبة للمرشحات التي تم إنشاؤها باستخدام `eth_newFilter` تكون السجلات عبارة عن كائنات تحتوي على المعلمات التالية:
+  - `removed`: `TAG` - `true` عندما تتم إزالة السجل، بسبب إعادة التنظيم للسلسلة. `false` إذا كان سجلاً صالحًا.
+  - `logIndex`: `QUANTITY` - عدد صحيح لموضع مؤشر السجل في الكتلة. `null` عندما يكون سجلاً معلقًا.
+  - `transactionIndex`: `QUANTITY` - عدد صحيح لموضع مؤشر المعاملة التي تم إنشاء السجل منها. `null` عندما يكون سجلاً معلقًا.
+  - `transactionHash`: `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة المعاملة التي تم إنشاء هذا السجل منها. `null` عندما يكون سجلاً معلقًا.
+  - `blockHash`: `DATA`، <span dir="ltr">32 Bytes</span> - تجزئة الكتلة التي كان هذا السجل موجودًا فيها. `null` عندما يكون معلقًا. `null` عندما يكون سجلاً معلقًا.
+  - `blockNumber`: `QUANTITY` - رقم الكتلة التي كان هذا السجل موجودًا فيها. `null` عندما يكون معلقًا. `null` عندما يكون سجلاً معلقًا.
+  - `address`: `DATA`، <span dir="ltr">20 Bytes</span> - العنوان الذي نشأ منه هذا السجل.
+  - `data`: `DATA` - بيانات سجل غير مفهرسة متغيرة الطول. (في _Solidity_: صفر أو أكثر من وسيطات السجل غير المفهرسة بحجم <span dir="ltr">32 Bytes</span>.)
+  - `topics`: `Array of DATA` - مصفوفة من 0 إلى 4 `DATA` بحجم <span dir="ltr">32 Bytes</span> من وسيطات السجل المفهرسة. (في _Solidity_: الموضوع الأول هو _تجزئة_ توقيع الحدث (على سبيل المثال، `Deposit(address,bytes32,uint256)`)، إلا إذا قمت بتعريف الحدث باستخدام المحدد `anonymous`.)
 
 - **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":73}'
-// Result // النتيجة
+// نتيجة
 {
   "id":1,
   "jsonrpc":"2.0",
   "result": [{
-    "logIndex": "0x1", // 1 // 1
-    "blockNumber":"0x1b4", // 436 // 436
+    "logIndex": "0x1", // 1
+    "blockNumber":"0x1b4", // 436
     "blockHash": "0x8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcfdf829c5a142f1fccd7d",
     "transactionHash":  "0xdf829c5a142f1fccd7d8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcf",
-    "transactionIndex": "0x0", // 0 // 0
+    "transactionIndex": "0x0", // 0
     "address": "0x16c5785ac562ff41e2dcfdf829c5a142f1fccd7d",
     "data":"0x0000000000000000000000000000000000000000000000000000000000000000",
     "topics": ["0x59ebeb90bc63057b6515673c3ecf9438e5058bca0f92585014eced636878c9a5"]
@@ -1684,45 +1684,45 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### <span dir="ltr">eth_getFilterLogs</span> {#eth-getfilterlogs}
 
-يُرجع مصفوفة بجميع السجلات المطابقة للمرشح بالمعرّف المحدد.
+يعيد مصفوفة بجميع السجلات التي تطابق عامل التصفية بالمعرف المحدد.
 
 **المعلمات**
 
-1. `QUANTITY` - مُعرّف المرشح.
+1. `QUANTITY` - معرف عامل التصفية.
 
 ```js
 params: [
-  "0x16", // 22 // 22
+  "0x16", // 22
 ]
 ```
 
-**المرتجعات**
-راجع [eth_getFilterChanges](#eth_getfilterchanges)
+**القيم المعادة**
+راجع [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges)
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-النتيجة راجع [eth_getFilterChanges](#eth_getfilterchanges)
+للنتيجة راجع [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges)
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs {#eth-getlogs}
 
-يُرجع مصفوفة بجميع السجلات المطابقة لكائن مرشح محدد.
+يعيد مصفوفة بجميع السجلات التي تطابق كائن تصفية معين.
 
 **المعلمات**
 
-1. `Object` - خيارات المرشح:
+1. `Object` - خيارات التصفية:
 
-- `fromBlock`: `QUANTITY|TAG` - (اختياري، الافتراضي: `"latest"`) عدد صحيح لرقم البلوك، أو `"latest"` لآخر بلوك مقترح، `"safe"` لأحدث بلوك آمن، `"finalized"` لأحدث بلوك نهائي، أو `"pending"`، `"earliest"` للمعاملات التي لم تدرج في بلوك بعد.
-- `toBlock`: `QUANTITY|TAG` - (اختياري، الافتراضي: `"latest"`) عدد صحيح لرقم البلوك، أو `"latest"` لآخر بلوك مقترح، `"safe"` لأحدث بلوك آمن، `"finalized"` لأحدث بلوك نهائي، أو `"pending"`، `"earliest"` للمعاملات التي لم تدرج في بلوك بعد.
-- `address`: `DATA|Array`، 20 بايت - (اختياري) عنوان العقد أو قائمة بالعناوين التي يجب أن تصدر منها السجلات.
-- `topics`: `Array of DATA`، - (اختياري) مصفوفة من مواضيع `DATA` بحجم 32 بايت. المواضيع تعتمد على الترتيب. يمكن أن يكون كل موضوع أيضًا مصفوفة من DATA مع خيارات "أو".
-- `blockHash`: `DATA`، 32 بايت - (اختياري، **مستقبلي**) مع إضافة EIP-234، سيكون `blockHash` خيار مرشح جديدًا يقيد السجلات المرجعة بالبلوك الفردي الذي يحتوي على التجزئة (هاش) `blockHash` بحجم 32 بايت. استخدام `blockHash` يعادل `fromBlock` = `toBlock` = رقم البلوك الذي يحتوي على التجزئة (هاش) `blockHash`. إذا كان `blockHash` موجودًا في معايير المرشح، فلن يُسمح باستخدام `fromBlock` ولا `toBlock`.
+- `fromBlock`: `QUANTITY|TAG` - (اختياري، الافتراضي: `"latest"`) رقم الكتلة كعدد صحيح، أو `"latest"` لآخر كتلة مقترحة، أو `"safe"` لأحدث كتلة آمنة، أو `"finalized"` لأحدث كتلة نهائية، أو `"pending"`، `"earliest"` للمعاملات التي لم تُدرج في كتلة بعد.
+- `toBlock`: `QUANTITY|TAG` - (اختياري، الافتراضي: `"latest"`) رقم الكتلة كعدد صحيح، أو `"latest"` لآخر كتلة مقترحة، أو `"safe"` لأحدث كتلة آمنة، أو `"finalized"` لأحدث كتلة نهائية، أو `"pending"`، `"earliest"` للمعاملات التي لم تُدرج في كتلة بعد.
+- `address`: `DATA|Array`، <span dir="ltr">20 Bytes</span> - (اختياري) عنوان العقد أو قائمة بالعناوين التي يجب أن تصدر منها السجلات.
+- `topics`: `Array of DATA`، - (اختياري) مصفوفة من مواضيع `DATA` بحجم <span dir="ltr">32 Bytes</span>. المواضيع تعتمد على الترتيب. يمكن أن يكون كل موضوع أيضًا مصفوفة من البيانات (DATA) مع خيارات "أو" (or).
+- `blockHash`: `DATA`، <span dir="ltr">32 Bytes</span> - (اختياري، **مستقبلي**) مع إضافة <span dir="ltr">EIP-234</span>، سيكون `blockHash` خيار تصفية جديدًا يقصر السجلات المعادة على الكتلة الفردية ذات التجزئة بحجم <span dir="ltr">32-byte</span> `blockHash`. استخدام `blockHash` يعادل `fromBlock` = `toBlock` = رقم الكتلة ذات التجزئة `blockHash`. إذا كان `blockHash` موجودًا في معايير التصفية، فلن يُسمح باستخدام `fromBlock` ولا `toBlock`.
 
 ```js
 params: [
@@ -1734,25 +1734,25 @@ params: [
 ]
 ```
 
-**المرتجعات**
-راجع [eth_getFilterChanges](#eth_getfilterchanges)
+**القيم المعادة**
+انظر [eth_getFilterChanges](#eth-getfilterchanges)
 
 **مثال**
 
 ```js
-// Request // الطلب
+// طلب
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-النتيجة راجع [eth_getFilterChanges](#eth_getfilterchanges)
+للنتيجة انظر [eth_getFilterChanges](#eth-getfilterchanges)
 
 ## مثال على الاستخدام {#usage-example}
 
-### نشر عقد باستخدام JSON_RPC {#deploying-contract}
+### نشر عقد باستخدام <span dir="ltr">JSON_RPC</span> {#deploying-contract}
 
-يتضمن هذا القسم عرضًا توضيحيًا لكيفية نشر عقد باستخدام واجهة RPC فقط. هناك طرق بديلة لنشر العقود حيث يتم تجريد هذا التعقيد — على سبيل المثال، باستخدام المكتبات المبنية فوق واجهة RPC مثل [web3.js](https://web3js.readthedocs.io/) و [web3.py](https://github.com/ethereum/web3.py). هذه التجريدات بشكل عام أسهل في الفهم وأقل عرضة للخطأ، ولكن لا يزال من المفيد فهم ما يحدث خلف الكواليس.
+يتضمن هذا القسم عرضًا توضيحيًا لكيفية نشر عقد باستخدام واجهة <span dir="ltr">RPC</span> فقط. هناك طرق بديلة لنشر العقود حيث يتم تجريد هذا التعقيد — على سبيل المثال، باستخدام مكتبات مبنية فوق واجهة <span dir="ltr">RPC</span> مثل [Web3.js](https://web3js.readthedocs.io/) و[Web3.py](https://github.com/ethereum/web3.py). هذه التجريدات بشكل عام أسهل في الفهم وأقل عرضة للخطأ، ولكن لا يزال من المفيد فهم ما يحدث داخليًا.
 
-فيما يلي عقد ذكي بسيط يسمى `Multiply7` سيتم نشره باستخدام واجهة JSON-RPC إلى عقدة إيثريوم. يفترض هذا البرنامج التعليمي أن القارئ يقوم بالفعل بتشغيل عقدة Geth. يتوفر المزيد من المعلومات حول العقد والعملاء [هنا](/developers/docs/nodes-and-clients/run-a-node). يُرجى الرجوع إلى وثائق كل [عميل](/developers/docs/nodes-and-clients/) على حدة لمعرفة كيفية بدء HTTP JSON-RPC للعملاء غير Geth. يعمل معظم العملاء افتراضيًا على `localhost:8545`.
+فيما يلي عقد ذكي بسيط يسمى `Multiply7` سيتم نشره باستخدام واجهة <span dir="ltr">JSON-RPC</span> إلى عقدة إيثيريوم. يفترض هذا البرنامج التعليمي أن القارئ يقوم بالفعل بتشغيل عقدة جو إيثريوم (geth). يتوفر المزيد من المعلومات حول العقد والعملاء [هنا](/developers/docs/nodes-and-clients/run-a-node). يُرجى الرجوع إلى وثائق [العميل](/developers/docs/nodes-and-clients/) الفردية لمعرفة كيفية بدء <span dir="ltr">HTTP JSON-RPC</span> للعملاء غير Geth. يعمل معظم العملاء افتراضيًا على `localhost:8545`.
 
 ```javascript
 contract Multiply7 {
@@ -1764,15 +1764,15 @@ contract Multiply7 {
 }
 ```
 
-أول شيء يجب القيام به هو التأكد من تمكين واجهة HTTP RPC. هذا يعني أننا نزود Geth بعلامة `--http` عند بدء التشغيل. في هذا المثال، نستخدم عقدة Geth على سلسلة تطوير خاصة. باستخدام هذا النهج، لا نحتاج إلى الإيثر (ether) على الشبكة الحقيقية.
+أول شيء يجب فعله هو التأكد من تمكين واجهة <span dir="ltr">HTTP RPC</span>. هذا يعني أننا نزود جو إيثريوم (geth) بعلامة `--http` عند بدء التشغيل. في هذا المثال، نستخدم عقدة جو إيثريوم (geth) على سلسلة تطوير خاصة. باستخدام هذا النهج، لا نحتاج إلى إيثر على الشبكة الحقيقية.
 
 ```bash
 geth --http --dev console 2>>geth.log
 ```
 
-سيؤدي هذا إلى بدء واجهة HTTP RPC على `http://localhost:8545`.
+سيؤدي هذا إلى بدء واجهة <span dir="ltr">HTTP RPC</span> على `http://localhost:8545`.
 
-يمكننا التحقق من أن الواجهة قيد التشغيل عن طريق استرداد عنوان coinbase (عن طريق الحصول على العنوان الأول من مصفوفة الحسابات) والرصيد باستخدام [curl](https://curl.se). يُرجى ملاحظة أن البيانات في هذه الأمثلة ستختلف على عقدتك المحلية. إذا كنت ترغب في تجربة هذه الأوامر، فاستبدل معلمات الطلب في طلب curl الثاني بالنتيجة التي تم إرجاعها من الطلب الأول.
+يمكننا التحقق من تشغيل الواجهة عن طريق استرداد عنوان كوين بيس (عن طريق الحصول على العنوان الأول من مصفوفة الحسابات) والرصيد باستخدام [curl](https://curl.se). يُرجى ملاحظة أن البيانات في هذه الأمثلة ستختلف على عقدتك المحلية. إذا كنت ترغب في تجربة هذه الأوامر، فاستبدل معلمات الطلب في طلب curl الثاني بالنتيجة التي تم إرجاعها من الطلب الأول.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
@@ -1782,16 +1782,16 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-نظرًا لأن الأرقام مشفرة بالنظام السداسي عشري (hex)، يتم إرجاع الرصيد بوحدة wei كسلسلة سداسية عشرية. إذا أردنا الحصول على الرصيد بوحدة الإيثر (ether) كرقم، يمكننا استخدام web3 من وحدة تحكم Geth.
+نظرًا لأن الأرقام مشفرة بالنظام السداسي العشري، يتم إرجاع الرصيد بوحدة <span dir="ltr">Wei</span> كسلسلة سداسية عشرية. إذا أردنا الحصول على الرصيد بوحدة إيثر كرقم، يمكننا استخدام Web3 من وحدة تحكم جو إيثريوم (geth).
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
-// "410" // "410"
+// "410"
 ```
 
-الآن بعد أن أصبح هناك بعض الإيثر على سلسلة التطوير الخاصة بنا، يمكننا نشر العقد. الخطوة الأولى هي تجميع عقد Multiply7 إلى كود بايت (byte code) يمكن إرساله إلى آلة إيثريوم الافتراضية (EVM). لتثبيت solc، مترجم Solidity، اتبع [وثائق Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (قد ترغب في استخدام إصدار `solc` أقدم ليتطابق مع [إصدار المترجم المستخدم في مثالنا](https://github.com/ethereum/solidity/releases/tag/v0.4.20)).
+الآن بعد أن أصبح هناك بعض الإيثر على سلسلة التطوير الخاصة بنا، يمكننا نشر العقد. الخطوة الأولى هي تصريف عقد Multiply7 إلى رمز البايت الذي يمكن إرساله إلى جهاز إيثيريوم الظاهري (EVM). لتثبيت solc، مُصرّف Solidity، اتبع [وثائق Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (قد ترغب في استخدام إصدار `solc` أقدم لمطابقة [إصدار المُصرّف المستخدم في مثالنا](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
 
-الخطوة التالية هي تجميع عقد Multiply7 إلى كود بايت يمكن إرساله إلى آلة إيثريوم الافتراضية (EVM).
+الخطوة التالية هي تصريف عقد Multiply7 إلى رمز البايت الذي يمكن إرساله إلى جهاز إيثيريوم الظاهري (EVM).
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1801,7 +1801,7 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-الآن بعد أن أصبح لدينا الكود المجمع، نحتاج إلى تحديد مقدار الغاز الذي سيكلفه نشره. تحتوي واجهة RPC على طريقة `eth_estimateGas` التي ستعطينا تقديرًا.
+الآن بعد أن أصبح لدينا الرمز المُصرّف، نحتاج إلى تحديد مقدار الغاز الذي يكلفه نشره. تحتوي واجهة <span dir="ltr">RPC</span> على طريقة `eth_estimateGas` التي ستعطينا تقديرًا.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
@@ -1815,31 +1815,31 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-يتم قبول المعاملة بواسطة العقدة ويتم إرجاع التجزئة (هاش) للمعاملة. يمكن استخدام هذه التجزئة لتتبع المعاملة. الخطوة التالية هي تحديد العنوان الذي تم نشر عقدنا فيه. ستنشئ كل معاملة منفذة إيصالًا. يحتوي هذا الإيصال على معلومات مختلفة حول المعاملة مثل أي بلوك تم تضمين المعاملة فيه ومقدار الغاز الذي استخدمته آلة إيثريوم الافتراضية (EVM). إذا أنشأت المعاملة عقدًا، فستحتوي أيضًا على عنوان العقد. يمكننا استرداد الإيصال باستخدام طريقة RPC `eth_getTransactionReceipt`.
+يتم قبول المعاملة بواسطة العقدة ويتم إرجاع تجزئة المعاملة. يمكن استخدام هذه التجزئة لتتبع المعاملة. الخطوة التالية هي تحديد العنوان الذي تم نشر عقدنا فيه. ستؤدي كل معاملة يتم تنفيذها إلى إنشاء إيصال. يحتوي هذا الإيصال على معلومات مختلفة حول المعاملة مثل الكتلة التي تم تضمين المعاملة فيها ومقدار الغاز الذي استخدمه جهاز إيثيريوم الظاهري (EVM). إذا أنشأت المعاملة عقدًا، فستحتوي أيضًا على عنوان العقد. يمكننا استرداد الإيصال باستخدام طريقة <span dir="ltr">RPC</span> `eth_getTransactionReceipt`.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-تم إنشاء عقدنا على `0x4d03d617d700cf81935d7f797f4e2ae719648262`. النتيجة الفارغة (null) بدلاً من الإيصال تعني أن المعاملة لم يتم تضمينها في بلوك بعد. انتظر لحظة وتحقق مما إذا كان عميل الإجماع الخاص بك قيد التشغيل وحاول مرة أخرى.
+تم إنشاء عقدنا على `0x4d03d617d700cf81935d7f797f4e2ae719648262`. النتيجة الفارغة (null) بدلاً من الإيصال تعني أن المعاملة لم يتم تضمينها في كتلة بعد. انتظر لحظة وتحقق مما إذا كان عميل الإجماع الخاص بك قيد التشغيل وحاول مرة أخرى.
 
 #### التفاعل مع العقود الذكية {#interacting-with-smart-contract}
 
-في هذا المثال، سنقوم بإرسال معاملة باستخدام `eth_sendTransaction` إلى طريقة `multiply` الخاصة بالعقد.
+في هذا المثال، سنرسل معاملة باستخدام `eth_sendTransaction` إلى طريقة `multiply` الخاصة بالعقد.
 
-تتطلب `eth_sendTransaction` عدة وسيطات، وتحديدًا `from` و `to` و `data`. `From` هو العنوان العام لحسابنا، و `to` هو عنوان العقد. تحتوي وسيطة `data` على حمولة تحدد الطريقة التي يجب استدعاؤها وبأي وسيطات. هنا يأتي دور [ABI (واجهة التطبيق الثنائية)](https://docs.soliditylang.org/en/latest/abi-spec.html). إن ABI هو ملف JSON يحدد كيفية تعريف وتشفير البيانات لآلة إيثريوم الافتراضية (EVM).
+يتطلب `eth_sendTransaction` عدة وسائط، وتحديدًا `from` و`to` و`data`. `From` هو العنوان العام لحسابنا، و`to` هو عنوان العقد. تحتوي وسيطة `data` على حمولة تحدد الطريقة التي يجب استدعاؤها وبأي وسائط. هنا يأتي دور [واجهة التطبيق الثنائية (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html). واجهة التطبيق الثنائية (ABI) هي ملف JSON يحدد كيفية تعريف وتشفير البيانات لجهاز إيثيريوم الظاهري (EVM).
 
-تحدد بايتات الحمولة الطريقة التي يتم استدعاؤها في العقد. هذه هي أول 4 بايتات من التجزئة (هاش) Keccak لاسم الدالة وأنواع وسيطاتها، مشفرة بالنظام السداسي عشري. تقبل دالة multiply نوع uint وهو اسم مستعار لـ uint256. هذا يتركنا مع:
+تحدد بايتات الحمولة الطريقة التي يتم استدعاؤها في العقد. هذه هي أول <span dir="ltr">4</span> بايتات من تجزئة كيكاك (Keccak) لاسم الدالة وأنواع وسائطها، مشفرة بالنظام السداسي العشري. تقبل دالة multiply نوع uint وهو اسم مستعار لـ uint256. هذا يتركنا مع:
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
-// "0xc6888fa1" // "0xc6888fa1"
+// "0xc6888fa1"
 ```
 
-الخطوة التالية هي تشفير الوسيطات. يوجد uint256 واحد فقط، لنقل، القيمة 6. يحتوي ABI على قسم يحدد كيفية تشفير أنواع uint256.
+الخطوة التالية هي تشفير الوسائط. يوجد uint256 واحد فقط، لنقل، القيمة <span dir="ltr">6</span>. تحتوي واجهة التطبيق الثنائية (ABI) على قسم يحدد كيفية تشفير أنواع uint256.
 
-`int<M>: enc(X)` هو تشفير المكمل الثنائي (two’s complement) ذو النهاية الكبرى (big-endian) لـ X، مبطنًا على الجانب ذي الترتيب الأعلى (الأيسر) بـ 0xff لـ X السالبة وببايتات صفرية لـ X الموجبة بحيث يكون الطول من مضاعفات 32 بايت.
+`int<M>: enc(X)` هو تشفير المتمم الثنائي بنظام النهاية الكبرى لـ X، مبطن على الجانب ذي الترتيب الأعلى (الأيسر) بـ 0xff لـ X السالبة وببايتات صفرية لـ X الموجبة بحيث يكون الطول مضاعفًا لـ <span dir="ltr">32</span> بايت.
 
 يتم تشفير هذا إلى `0000000000000000000000000000000000000000000000000000000000000006`.
 
@@ -1852,7 +1852,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":8,"jsonrpc":"2.0","result":"0x759cf065cbc22e9d779748dc53763854e5376eea07409e590c990eafc0869d74"}
 ```
 
-نظرًا لأنه تم إرسال معاملة، تم إرجاع التجزئة (هاش) للمعاملة. استرداد الإيصال يعطي:
+نظرًا لأنه تم إرسال معاملة، تم إرجاع تجزئة المعاملة. يؤدي استرداد الإيصال إلى إعطاء:
 
 ```javascript
 {
@@ -1876,19 +1876,19 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 }
 ```
 
-يحتوي الإيصال على سجل (log). تم إنشاء هذا السجل بواسطة آلة إيثريوم الافتراضية (EVM) عند تنفيذ المعاملة وتم تضمينه في الإيصال. تُظهر دالة `multiply` أنه تم إطلاق حدث `Print` مع المدخلات مضروبة في 7. نظرًا لأن وسيطة حدث `Print` كانت uint256، يمكننا فك تشفيرها وفقًا لقواعد ABI مما سيتركنا مع الرقم العشري المتوقع 42. بصرف النظر عن البيانات، تجدر الإشارة إلى أنه يمكن استخدام المواضيع (topics) لتحديد الحدث الذي أنشأ السجل:
+يحتوي الإيصال على سجل. تم إنشاء هذا السجل بواسطة جهاز إيثيريوم الظاهري (EVM) عند تنفيذ المعاملة وتم تضمينه في الإيصال. تُظهر دالة `multiply` أنه تم إطلاق حدث `Print` مع المدخلات مضروبة في <span dir="ltr">7</span>. نظرًا لأن وسيطة حدث `Print` كانت uint256، يمكننا فك تشفيرها وفقًا لقواعد واجهة التطبيق الثنائية (ABI) مما سيتركنا مع الرقم العشري المتوقع <span dir="ltr">42</span>. بصرف النظر عن البيانات، تجدر الإشارة إلى أنه يمكن استخدام المواضيع لتحديد الحدث الذي أنشأ السجل:
 
 ```javascript
 web3.sha3("Print(uint256)")
-// "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da" // "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
+// "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
 ```
 
-كانت هذه مجرد مقدمة موجزة لبعض المهام الأكثر شيوعًا، والتي توضح الاستخدام المباشر لـ JSON-RPC.
+كانت هذه مجرد مقدمة موجزة لبعض المهام الأكثر شيوعًا، والتي توضح الاستخدام المباشر لـ <span dir="ltr">JSON-RPC</span>.
 
 ## مواضيع ذات صلة {#related-topics}
 
-- [مواصفات JSON-RPC](http://www.jsonrpc.org/specification)
+- [مواصفات <span dir="ltr">JSON-RPC</span>](http://www.jsonrpc.org/specification)
 - [العقد والعملاء](/developers/docs/nodes-and-clients/)
-- [واجهات برمجة تطبيقات JavaScript](/developers/docs/apis/javascript/)
-- [واجهات برمجة تطبيقات الواجهة الخلفية](/developers/docs/apis/backend/)
+- [واجهات برمجة تطبيقات (<span dir="ltr">APIs</span>) لـ <span dir="ltr">JavaScript</span>](/developers/docs/apis/javascript/)
+- [واجهات برمجة تطبيقات (<span dir="ltr">APIs</span>) للواجهة الخلفية](/developers/docs/apis/backend/)
 - [عملاء التنفيذ](/developers/docs/nodes-and-clients/#execution-clients)

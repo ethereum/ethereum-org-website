@@ -1,162 +1,161 @@
 ---
 title: API ya JSON-RPC
-description: Itifaki isiyo na hali, nyepesi ya wito wa utaratibu wa mbali (RPC) kwa wateja wa Ethereum.
+description: Itifaki isiyo na hali, nyepesi ya wito wa utaratibu wa mbali (RPC) kwa viteja vya Ethereum.
 lang: sw
 ---
 
-Ili programu ya programu kuingiliana na blockchain ya Ethereum - ama kwa kusoma data ya blockchain au kutuma shughuli kwenye mtandao lazima iunganishe kwenye node ya Ethereum.
+Ili programu tumizi iweze kuingiliana na mnyororo wa vitalu wa [Ethereum](/) - iwe kwa kusoma data ya mnyororo wa vitalu au kutuma miamala kwenye mtandao - ni lazima iunganishwe kwenye nodi ya Ethereum.
 
-Kwa kusudi hili, kila [mteja wa Ethereum](/developers/docs/nodes-and-clients/#execution-clients) hutekeleza [vipimo vya JSON-RPC](https://github.com/ethereum/execution-apis), kwa hivyo kuna seti sare ya mbinu ambazo programu zinaweza kutegemea bila kujali nodi maalum au utekelezaji wa mteja.
+Kwa madhumuni haya, kila [kiteja cha Ethereum](/developers/docs/nodes-and-clients/#execution-clients) hutekeleza [ubainifu wa JSON-RPC](https://github.com/ethereum/execution-apis), kwa hivyo kuna seti sawa ya mbinu ambazo programu tumizi zinaweza kutegemea bila kujali utekelezaji maalum wa nodi au kiteja.
 
-[JSON-RPC](https://www.jsonrpc.org/specification) ni itifaki isiyo na hali, nyepesi ya wito wa utaratibu wa mbali (RPC). Inafafanua miundo kadhaa ya data na sheria zinazohusu usindikaji wao. Ni usafiri usioaminika kwa kuwa dhana zinaweza kutumika ndani ya mchakato sawa, juu ya soketi, juu ya HTTP, au katika mazingira mengi ya kupitisha ujumbe. Inatumia JSON (RFC 4627) kama umbizo la data.
+[JSON-RPC](https://www.jsonrpc.org/specification) ni itifaki isiyo na hali, nyepesi ya wito wa utaratibu wa mbali (RPC). Inafafanua miundo kadhaa ya data na sheria zinazohusu uchakataji wake. Haitegemei njia ya usafirishaji kwa kuwa dhana zinaweza kutumika ndani ya mchakato huo huo, kupitia soketi, kupitia HTTP, au katika mazingira mengi mbalimbali ya kupitisha ujumbe. Inatumia JSON (RFC 4627) kama umbizo la data.
 
-## Utekelezaji wa mteja {#client-implementations}
+## Utekelezaji wa viteja {#client-implementations}
 
-Wateja wa Ethereum kila mmoja anaweza kutumia lugha tofauti za kupanga wakati wa kutekeleza vipimo vya JSON-RPC. Angalia [nyaraka za mteja](/developers/docs/nodes-and-clients/#execution-clients) binafsi kwa maelezo zaidi yanayohusiana na lugha maalum za programu. Tunapendekeza uangalie nyaraka za kila mteja kwa taarifa za hivi karibuni za usaidizi wa API.
+Viteja vya Ethereum kila kimoja kinaweza kutumia lugha tofauti za programu wakati wa kutekeleza ubainifu wa JSON-RPC. Tazama [nyaraka za kiteja](/developers/docs/nodes-and-clients/#execution-clients) binafsi kwa maelezo zaidi kuhusiana na lugha mahususi za programu. Tunapendekeza kuangalia nyaraka za kila kiteja kwa taarifa za hivi punde za usaidizi wa API.
 
-## Maktaba za Urahisi {#convenience-libraries}
+## Maktaba za Urahisishaji {#convenience-libraries}
 
-Ingawa unaweza kuchagua kuingiliana moja kwa moja na wateja wa Ethereum kupitia API ya JSON-RPC, mara nyingi kuna chaguo rahisi kwa wasanidi wa dapp. Maktaba nyingi za [JavaScript](/developers/docs/apis/javascript/#available-libraries) na [API za backend](/developers/docs/apis/backend/#available-libraries) zipo ili kutoa vifuniko juu ya API ya JSON-RPC. Kwa kutumia maktaba hizi, watengenezaji wanaweza kuandika mbinu angavu, za mstari mmoja katika lugha ya programu wanayochagua ili kuanzisha maombi ya JSON-RPC (chini ya kifuniko) ambayo yanaingiliana na Ethereum.
+Ingawa unaweza kuchagua kuingiliana moja kwa moja na viteja vya Ethereum kupitia API ya JSON-RPC, mara nyingi kuna chaguzi rahisi zaidi kwa watengenezaji wa programu tumizi zilizogatuliwa (dapp). Kuna maktaba nyingi za [JavaScript](/developers/docs/apis/javascript/#available-libraries) na [API za mandhari-nyuma](/developers/docs/apis/backend/#available-libraries) ambazo zipo ili kutoa vifuniko juu ya API ya JSON-RPC. Kwa kutumia maktaba hizi, watengenezaji wanaweza kuandika mbinu angavu za mstari mmoja katika lugha ya programu wanayoichagua ili kuanzisha maombi ya JSON-RPC (kiufundi kwa ndani) ambayo huingiliana na Ethereum.
 
-## API za mteja wa makubaliano {#consensus-clients}
+## API za mteja wa mwafaka {#consensus-clients}
 
-Ukurasa huu unahusika hasa na API ya JSON-RPC inayotumiwa na wateja wa utekelezaji wa Ethereum. Hata hivyo, wateja wa makubaliano pia wana API ya RPC ambayo inaruhusu watumiaji kuuliza maelezo kuhusu nodi, kuomba vizuizi vya Beacon, hali ya Beacon, na maelezo mengine yanayohusiana na makubaliano moja kwa moja kutoka kwa nodi. API hii imeandikwa kwenye [ukurasa wa wavuti wa Beacon API](https://ethereum.github.io/beacon-APIs/#/).
+Ukurasa huu unahusika zaidi na API ya JSON-RPC inayotumiwa na viteja vya utekelezaji vya Ethereum. Hata hivyo, wateja wa mwafaka pia wana API ya RPC inayoruhusu watumiaji kuuliza taarifa kuhusu nodi, kuomba vitalu vya Beacon, hali ya Beacon, na taarifa nyingine zinazohusiana na mwafaka moja kwa moja kutoka kwenye nodi. API hii imeandikwa kwenye [ukurasa wa wavuti wa API ya Beacon](https://ethereum.github.io/beacon-APIs/#/).
 
-API ya ndani pia inatumika kwa mawasiliano kati ya mteja ndani ya nodi - yaani, inawezesha mteja wa makubaliano na mteja wa utekelezaji kubadilishana data. Hii inaitwa 'Engine API' na vipimo vinapatikana kwenye [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+API ya ndani pia inatumika kwa mawasiliano kati ya wateja ndani ya nodi - yaani, inawezesha mteja wa mwafaka na kiteja cha utekelezaji kubadilishana data. Hii inaitwa 'Engine API' na vipimo vyake vinapatikana kwenye [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
-## Vipimo vya mteja wa utekelezaji {#spec}
+## Maelezo maalum ya kiteja cha utekelezaji {#spec}
 
-[Soma vipimo kamili vya API ya JSON-RPC kwenye GitHub](https://github.com/ethereum/execution-apis). API hii imeandikwa kwenye [ukurasa wa wavuti wa Execution API](https://ethereum.github.io/execution-apis/) na inajumuisha Mkaguzi ili kujaribu mbinu zote zinazopatikana.
+[Soma maelezo maalum kamili ya API ya JSON-RPC kwenye GitHub](https://github.com/ethereum/execution-apis). API hii imeandikwa kwenye [ukurasa wa wavuti wa API ya Utekelezaji](https://ethereum.github.io/execution-apis/) na inajumuisha Kikaguzi ili kujaribu mbinu zote zinazopatikana.
 
-## Mikataba {#conventions}
+## Taratibu {#conventions}
 
-### Usimbaji wa thamani ya hex {#hex-encoding}
+### Usimbaji wa thamani ya heksadesimali {#hex-encoding}
 
-Aina mbili kuu za data hupitishwa kupitia JSON: safu za baiti zisizo na umbizo na idadi. Zote mbili hupitishwa kwa usimbaji wa hex lakini na mahitaji tofauti ya uumbizaji.
+Aina mbili kuu za data hupitishwa kupitia JSON: safu za baiti ambazo hazijapangiliwa na viasi. Zote mbili hupitishwa kwa usimbaji wa heksadesimali lakini zikiwa na mahitaji tofauti ya upangiliaji.
 
-#### Idadi {#quantities-encoding}
+#### Viasi {#quantities-encoding}
 
-Wakati wa kusimba idadi (nambari kamili, nambari): simba kama hex, kiambishi awali chenye "0x", kiwakilishi chanya zaidi (isipokuwa kidogo: sufuri inapaswa kuwakilishwa kama "0x0").
+Wakati wa kusimba viasi (nambari kamili, nambari): simba kama heksadesimali, anza na "0x", uwakilishi uliofinyana zaidi (ubaguzi mdogo: sifuri inapaswa kuwakilishwa kama "0x0").
 
 Hapa kuna baadhi ya mifano:
 
 - 0x41 (65 katika desimali)
 - 0x400 (1024 katika desimali)
-- SI SAHIHI: 0x (inapaswa kuwa na angalau tarakimu moja - sifuri ni "0x0")
-- SI SAHIHI: 0x0400 (sifuri zinazoongoza haziruhusiwi)
-- SI SAHIHI: ff (lazima iwe na kiambishi awali 0x)
+- KOSA: 0x (inapaswa kuwa na angalau tarakimu moja kila wakati - sifuri ni "0x0")
+- KOSA: 0x0400 (sifuri za kuongoza haziruhusiwi)
+- KOSA: ff (lazima ianze na 0x)
 
-### Data isiyo na umbizo {#unformatted-data-encoding}
+### Data isiyopangiliwa {#unformatted-data-encoding}
 
-Wakati wa kusimba data ambayo haijaumbizwa (safu za baiti, anwani za akaunti, heshi, safu za msimbo wa baiti): simba kama hex, kiambishi awali na "0x", tarakimu mbili za heksi kwa kila baiti.
+Wakati wa kusimba data isiyopangiliwa (safu za baiti, anwani za akaunti, heshi, safu za msimbo wa baiti): simba kama heksadesimali, anza na "0x", tarakimu mbili za heksadesimali kwa kila baiti.
 
 Hapa kuna baadhi ya mifano:
 
 - 0x41 (ukubwa 1, "A")
 - 0x004200 (ukubwa 3, "0B0")
 - 0x (ukubwa 0, "")
-- SI SAHIHI: 0xf0f0f (lazima iwe nambari sawa ya tarakimu)
-- SI SAHIHI: 004200 (lazima iwe na kiambishi awali 0x)
+- KOSA: 0xf0f0f (lazima iwe nambari shufwa ya tarakimu)
+- KOSA: 004200 (lazima ianze na 0x)
 
-### Kigezo cha kizuizi {#block-parameter}
+### Kigezo cha kitalu {#block-parameter}
 
-Mbinu zifuatazo zina kigezo cha kizuizi:
+Mbinu zifuatazo zina kigezo cha kitalu:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getCode](#eth-getcode)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_call](#eth-call)
 
-Wakati maombi yanafanywa kwamba swala hali ya Ethereum, parameter ya kuzuia iliyotolewa huamua urefu wa kizuizi.
+Wakati maombi yanapofanywa ambayo yanahoji hali ya Ethereum, kigezo cha kitalu kilichotolewa huamua urefu wa kitalu.
 
-Chaguo zifuatazo zinawezekana kwa kigezo cha kizuizi:
+Chaguzi zifuatazo zinawezekana kwa kigezo cha kitalu:
 
-- `HEX String` - nambari kamili ya kizuizi
-- `String "earliest"` kwa kizuizi cha mwanzo kabisa/cha mwanzo
-- `String "latest"` - kwa kizuizi cha hivi karibuni kilichopendekezwa
-- `String "safe"` - kwa kizuizi cha hivi karibuni salama cha kichwa
-- `String "finalized"` - kwa kizuizi cha hivi karibuni kilichokamilishwa
+- `HEX String` - nambari kamili ya kitalu
+- `String "earliest"` kwa kitalu cha mapema zaidi/kitalu cha asili
+- `String "latest"` - kwa kitalu cha hivi punde kilichopendekezwa
+- `String "safe"` - kwa kitalu cha hivi punde salama cha kichwa
+- `String "finalized"` - kwa kitalu cha hivi punde kilichokamilishwa
 - `String "pending"` - kwa hali/miamala inayosubiri
 
-## Mifano
+## Mifano {#examples}
 
-Katika ukurasa huu tunatoa mifano ya jinsi ya kutumia ncha za mwisho za API za JSON_RPC kwa kutumia zana ya mstari wa amri, [curl](https://curl.se). Mifano hii ya ncha za mwisho za kibinafsi inapatikana hapa chini katika sehemu ya [Mifano ya Curl](#curl-examples). Zaidi chini ya ukurasa, tunatoa pia [mfano wa mwanzo hadi mwisho](#usage-example) wa kuandaa na kupeleka mkataba-erevu kwa kutumia nodi ya Geth, API ya JSON_RPC na curl.
+Katika ukurasa huu tunatoa mifano ya jinsi ya kutumia ncha binafsi za API ya JSON_RPC kwa kutumia zana ya mstari wa amri, [curl](https://curl.se). Mifano hii ya ncha binafsi inapatikana hapa chini katika sehemu ya [Mifano ya Curl](#curl-examples). Zaidi chini ya ukurasa, pia tunatoa [mfano wa mwanzo hadi mwisho](#usage-example) kwa ajili ya kukusanya na kusambaza mkataba mahiri kwa kutumia nodi ya Geth, API ya JSON_RPC na curl.
 
 ## Mifano ya Curl {#curl-examples}
 
-Mifano ya kutumia API ya JSON_RPC kwa kufanya maombi ya [curl](https://curl.se) kwa nodi ya Ethereum imetolewa hapa chini. Kila mfano
-unajumuisha maelezo ya ncha maalum ya mwisho, vigezo vyake, aina ya urejeshaji, na mfano uliofanyiwa kazi wa jinsi inapaswa kutumika.
+Mifano ya kutumia API ya JSON_RPC kwa kufanya maombi ya [curl](https://curl.se) kwenye nodi ya Ethereum imetolewa hapa chini. Kila mfano unajumuisha maelezo ya sehemu ya mwisho maalum, vigezo vyake, aina ya kurejesha, na mfano wa vitendo wa jinsi inavyopaswa kutumika.
 
-Maombi ya curl yanaweza kurudisha ujumbe wa hitilafu unaohusiana na aina ya maudhui. Hii ni kwa sababu chaguo la `--data` huweka aina ya maudhui kuwa `application/x-www-form-urlencoded`. Ikiwa nodi yako inalalamika kuhusu hili, weka kichwa kwa mikono kwa kuweka `-H "Content-Type: application/json"` mwanzoni mwa wito. Mifano pia haijumuishi mchanganyiko wa URL/IP & mlango ambao lazima uwe hoja ya mwisho iliyotolewa kwa curl (k.m., `127.0.0.1:8545`). Ombi kamili la curl linalojumuisha data hizi za ziada huchukua fomu ifuatayo:
+Maombi ya curl yanaweza kurejesha ujumbe wa hitilafu unaohusiana na aina ya maudhui. Hii ni kwa sababu chaguo la `--data` huweka aina ya maudhui kuwa `application/x-www-form-urlencoded`. Ikiwa nodi yako inalalamika kuhusu hili, weka kichwa wewe mwenyewe kwa kuweka `-H "Content-Type: application/json"` mwanzoni mwa mwito. Mifano pia haijumuishi mchanganyiko wa URL/IP na lango ambayo lazima iwe hoja ya mwisho inayotolewa kwa curl (k.m., `127.0.0.1:8545`). Ombi kamili la curl linalojumuisha data hizi za ziada huchukua muundo ufuatao:
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## Uvumi, Hali, Historia {#gossip-state-history}
+## Gossip, Hali, Historia {#gossip-state-history}
 
-Mbinu chache za msingi za JSON-RPC zinahitaji data kutoka kwa mtandao wa Ethereum, na ziko katika kategoria tatu kuu: _Uvumi, Hali, na Historia_. Tumia viungo katika sehemu hizi kurukia kila mbinu, au tumia jedwali la yaliyomo kuchunguza orodha nzima ya mbinu.
+Baadhi ya mbinu kuu za JSON-RPC zinahitaji data kutoka kwenye mtandao wa Ethereum, na zinaangukia vizuri katika makundi makuu matatu: _Gossip, Hali, na Historia_. Tumia viungo katika sehemu hizi kuruka hadi kwenye kila mbinu, au tumia yaliyomo kuchunguza orodha nzima ya mbinu.
 
-### Mbinu za Uvumi {#gossip-methods}
+### Mbinu za Gossip {#gossip-methods}
 
-> Mbinu hizi hufuatilia kichwa cha mnyororo. Hivi ndivyo miamala inavyozunguka mtandao, kutafuta njia kwenye vizuizi, na jinsi wateja wanavyojua kuhusu vizuizi vipya.
+> Mbinu hizi hufuatilia kichwa cha mnyororo. Hivi ndivyo miamala inavyosambaa kwenye mtandao, inavyoingia kwenye vitalu, na jinsi wateja wanavyopata taarifa kuhusu vitalu vipya.
 
-- [eth_blockNumber](#eth_blocknumber)
-- [eth_sendRawTransaction](#eth_sendrawtransaction)
+- [eth_blockNumber](#eth-blocknumber)
+- [eth_sendRawTransaction](#eth-sendrawtransaction)
 
-### Mbinu za Hali {#state_methods}
+### Mbinu za Hali {#state-methods}
 
-> Mbinu zinazoripoti hali ya sasa ya data zote zilizohifadhiwa. "Jimbo" ni kama sehemu kubwa ya RAM iliyoshirikiwa, na inajumuisha salio la akaunti, data ya mkataba na makadirio ya gharama ya muamala.
+> Mbinu zinazoripoti hali ya sasa ya data zote zilizohifadhiwa. "Hali" ni kama kipande kimoja kikubwa cha RAM kinachoshirikiwa, na inajumuisha salio la akaunti, data za mkataba, na makadirio ya gesi.
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getCode](#eth_getcode)
-- [eth_call](#eth_call)
-- [eth_estimateGas](#eth_estimategas)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getCode](#eth-getcode)
+- [eth_call](#eth-call)
+- [eth_estimateGas](#eth-estimategas)
 
-### Mbinu za Historia {#history_methods}
+### Mbinu za Historia {#history-methods}
 
-> Hupata rekodi za kihistoria za kila kizuizi kurudi hadi mwanzo. Hii ni kama faili moja kubwa ya kiambatisho pekee, na inajumuisha vichwa vyote vya block, vikundi vya kuzuia, vizuizi vya ukaribu, na risiti za muamala.
+> Huchukua rekodi za kihistoria za kila kitalu kurudi nyuma hadi asili. Hili ni kama faili moja kubwa la kuongeza pekee, na linajumuisha vichwa vyote vya vitalu, miili ya vitalu, vitalu vya mjomba, na stakabadhi za miamala.
 
-- [eth_getBlockTransactionCountByHash](#eth_getblocktransactioncountbyhash)
-- [eth_getBlockTransactionCountByNumber](#eth_getblocktransactioncountbynumber)
-- [eth_getUncleCountByBlockHash](#eth_getunclecountbyblockhash)
-- [eth_getUncleCountByBlockNumber](#eth_getunclecountbyblocknumber)
-- [eth_getBlockByHash](#eth_getblockbyhash)
-- [eth_getBlockByNumber](#eth_getblockbynumber)
-- [eth_getTransactionByHash](#eth_gettransactionbyhash)
-- [eth_getTransactionByBlockHashAndIndex](#eth_gettransactionbyblockhashandindex)
-- [eth_getTransactionByBlockNumberAndIndex](#eth_gettransactionbyblocknumberandindex)
-- [eth_getTransactionReceipt](#eth_gettransactionreceipt)
-- [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
-- [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+- [eth_getBlockTransactionCountByHash](#eth-getblocktransactioncountbyhash)
+- [eth_getBlockTransactionCountByNumber](#eth-getblocktransactioncountbynumber)
+- [eth_getUncleCountByBlockHash](#eth-getunclecountbyblockhash)
+- [eth_getUncleCountByBlockNumber](#eth-getunclecountbyblocknumber)
+- [eth_getBlockByHash](#eth-getblockbyhash)
+- [eth_getBlockByNumber](#eth-getblockbynumber)
+- [eth_getTransactionByHash](#eth-gettransactionbyhash)
+- [eth_getTransactionByBlockHashAndIndex](#eth-gettransactionbyblockhashandindex)
+- [eth_getTransactionByBlockNumberAndIndex](#eth-gettransactionbyblocknumberandindex)
+- [eth_getTransactionReceipt](#eth-gettransactionreceipt)
+- [eth_getUncleByBlockHashAndIndex](#eth-getunclebyblockhashandindex)
+- [eth_getUncleByBlockNumberAndIndex](#eth-getunclebyblocknumberandindex)
 
-## Uwanja wa Michezo wa API ya JSON-RPC
+## Uwanja wa Majaribio wa API ya JSON-RPC {#json-rpc-api-playground}
 
-Unaweza kutumia [zana ya uwanja wa michezo](https://ethereum-json-rpc.com) kugundua na kujaribu mbinu za API. Pia inakuonyesha ni mbinu na mitandao gani inasaidiwa na watoa huduma mbalimbali wa nodi.
+Unaweza kutumia [zana ya uwanja wa majaribio](https://ethereum-json-rpc.com) kugundua na kujaribu mbinu za API. Pia inakuonyesha ni mbinu na mitandao ipi inayoungwa mkono na watoa huduma mbalimbali wa nodi.
 
-## Mbinu za API za JSON-RPC {#json-rpc-methods}
+## Mbinu za API ya JSON-RPC {#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion {#web3-clientversion}
 
-Inarudisha toleo la sasa la mteja.
+Hurejesha toleo la sasa la kiteja.
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Hurejesha**
 
-`String` - Toleo la sasa la mteja
+`String` - Toleo la sasa la kiteja
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
-// Matokeo
+// Result
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -164,28 +163,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### web3_sha3 {#web3-sha3}
 
-Inarudisha Keccak-256 (_sio_ SHA3-256 iliyosanifishwa) ya data iliyotolewa.
+Inarejesha Keccak-256 (_sio_ SHA3-256 iliyosanifiwa) ya data iliyotolewa.
 
 **Vigezo**
 
-1. `DATA` - Data ya kubadilisha kuwa hashi ya SHA3
+1. `DATA` - Data ya kubadilisha kuwa heshi ya SHA3
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
 ```
 
-**Inarudisha**
+**Inarejesha**
 
-`DATA` - Matokeo ya SHA3 ya mfuatano uliotolewa.
+`DATA` - Tokeo la SHA3 la mfuatano uliotolewa.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f20776f726c64"],"id":64}'
-// Matokeo
+// Result
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -193,30 +192,30 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version {#net-version}
 
-Inarudisha kitambulisho cha sasa cha mtandao.
+Hurejesha kitambulisho cha mtandao cha sasa.
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Hurejesha**
 
-`String` - Kitambulisho cha sasa cha mtandao.
+`String` - Kitambulisho cha mtandao cha sasa.
 
-Orodha kamili ya vitambulisho vya sasa vya mtandao inapatikana kwenye [chainlist.org](https://chainlist.org). Baadhi ya za kawaida ni:
+Orodha kamili ya vitambulisho vya mtandao vya sasa inapatikana kwenye [chainlist.org](https://chainlist.org). Baadhi ya vile vya kawaida ni:
 
 - `1`: Mtandao Mkuu wa Ethereum
-- `11155111`: Testnet ya Sepolia
-- `560048` : Testnet ya Hoodi
+- `11155111`: Mtandao wa majaribio wa Sepolia
+- `560048` : Mtandao wa majaribio wa Hoodi
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67}'
-// Matokeo
+// Result
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -224,9 +223,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening {#net-listening}
 
-Inarudisha `true` ikiwa mteja anasikiliza kikamilifu miunganisho ya mtandao.
+Inarudisha `true` ikiwa kiteja kinasikiliza kikamilifu miunganisho ya mtandao.
 
 **Vigezo**
 
@@ -239,9 +238,9 @@ Hakuna
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":67}'
-// Matokeo
+// Result
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -249,24 +248,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount {#net-peercount}
 
-Inarudisha idadi ya rika zilizounganishwa kwa sasa na mteja.
+Hurejesha idadi ya rika zilizounganishwa kwa sasa kwenye kiteja.
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Hurejesha**
 
 `QUANTITY` - nambari kamili ya idadi ya rika zilizounganishwa.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}'
-// Matokeo
+// Result
 {
   "id":74,
   "jsonrpc": "2.0",
@@ -274,24 +273,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion {#eth-protocolversion}
 
-Inarudisha toleo la sasa la itifaki ya Ethereum. Kumbuka kuwa mbinu hii [haipatikani katika Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
+Hurejesha toleo la sasa la itifaki ya Ethereum. Kumbuka kwamba mbinu hii [haipatikani katika Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Hurejesha**
 
 `String` - Toleo la sasa la itifaki ya Ethereum
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
-// Matokeo
+// Result
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -299,29 +298,29 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### eth_syncing {#eth-syncing}
 
-Inarudisha kitu chenye data kuhusu hali ya usawazishaji au `false`.
+Hurejesha kipengee chenye data kuhusu hali ya usawazishaji au `false`.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Hurejesha**
 
-Data kamili ya urejeshaji hutofautiana kati ya utekelezaji wa mteja. Wateja wote hurudisha `False` wakati nodi haisawazishi, na wateja wote hurudisha sehemu zifuatazo.
+Data kamili inayorejeshwa inatofautiana kati ya utekelezaji wa kiteja. Wateja wote hurejesha `False` wakati nodi haisawazishi, na wateja wote hurejesha nyanja zifuatazo.
 
-`Object|Boolean`, Kitu chenye data ya hali ya usawazishaji au `FALSE`, wakati haisawazishi:
+`Object|Boolean`, Kipengee chenye data ya hali ya usawazishaji au `FALSE`, wakati haisawazishi:
 
-- `startingBlock`: `QUANTITY` - Kizuizi ambapo uingizaji ulianza (itawekwa upya tu, baada ya usawazishaji kufikia kichwa chake)
-- `currentBlock`: `QUANTITY` - Kizuizi cha sasa, sawa na eth_blockNumber
-- `highestBlock`: `QUANTITY` - Kizuizi cha juu zaidi kinachokadiriwa
+- `startingBlock`: `QUANTITY` - Kitalu ambacho uingizaji ulianzia (itawekwa upya tu, baada ya usawazishaji kufikia kilele chake)
+- `currentBlock`: `QUANTITY` - Kitalu cha sasa, sawa na eth_blockNumber
+- `highestBlock`: `QUANTITY` - Kitalu cha juu zaidi kinachokadiriwa
 
-Hata hivyo, wateja binafsi wanaweza pia kutoa data ya ziada. Kwa mfano, Geth inarudisha yafuatayo:
+Hata hivyo, wateja binafsi wanaweza pia kutoa data ya ziada. Kwa mfano Geth hurejesha yafuatayo:
 
 ```json
 {
@@ -346,7 +345,7 @@ Hata hivyo, wateja binafsi wanaweza pia kutoa data ya ziada. Kwa mfano, Geth ina
 }
 ```
 
-Wakati Besu inarudisha:
+Wakati Besu hurejesha:
 
 ```json
 {
@@ -362,14 +361,14 @@ Wakati Besu inarudisha:
 }
 ```
 
-Rejelea nyaraka za mteja wako maalum kwa maelezo zaidi.
+Rejelea nyaraka za kiteja chako mahususi kwa maelezo zaidi.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -379,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
     highestBlock: '0x454'
   }
 }
-// Au wakati haisawazishi
+// Or when not syncing
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -387,30 +386,30 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase {#eth-coinbase}
 
-Inarudisha anwani ya coinbase ya mteja.
+Inarejesha anwani ya coinbase ya kiteja.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kifikio kwenye uwanja wa majaribio
 </ButtonLink>
 
-> **Kumbuka:** Mbinu hii imeacha kutumika kuanzia **v1.14.0** na haitumiki tena. Kujaribu kutumia mbinu hii kutasababisha hitilafu ya "Mbinu haitumiki".
+> **Kumbuka:** Mbinu hii imeachwa kutumika kuanzia **v1.14.0** na haitumiki tena. Kujaribu kutumia mbinu hii kutasababisha hitilafu ya "Method not supported".
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Inarejesha**
 
 `DATA`, baiti 20 - anwani ya sasa ya coinbase.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
-// Matokeo
+// Result
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -418,28 +417,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### eth_chainId {#eth-chainid}
 
-Inarudisha kitambulisho cha mnyororo kinachotumiwa kutia saini miamala iliyolindwa dhidi ya uchezaji tena.
+Hurejesha kitambulisho cha mnyororo kinachotumika kusaini miamala iliyolindwa dhidi ya marudio.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kifikio katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Hurejesha**
 
-`chainId`, thamani ya heksadesimali kama mfuatano unaowakilisha nambari kamili ya kitambulisho cha sasa cha mnyororo.
+`chainId`, thamani ya heksadesimali kama tungo inayowakilisha nambari kamili ya kitambulisho cha mnyororo cha sasa.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
-// Matokeo
+// Result
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -447,12 +446,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining {#eth-mining}
 
-Inarudisha `true` ikiwa mteja anachimba kikamilifu vizuizi vipya. Hii inaweza tu kurudisha `true` kwa mitandao ya uthibitishaji-wa-kazi na huenda isipatikane kwa baadhi ya wateja tangu [Muungano](/roadmap/merge/).
+Inarudisha `true` ikiwa kiteja kinachimba vitalu vipya kikamilifu. Hii inaweza tu kurudisha `true` kwa mitandao ya Uthibitisho wa Kazi (PoW) na inaweza isipatikane katika baadhi ya viteja tangu [Unganisho](/roadmap/merge/).
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
@@ -461,12 +460,12 @@ Hakuna
 
 **Inarudisha**
 
-`Boolean` - inarudisha `true` ikiwa mteja anachimba, vinginevyo `false`.
+`Boolean` - inarudisha `true` ikiwa kiteja kinachimba, vinginevyo `false`.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
 //
 {
@@ -476,28 +475,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate {#eth-hashrate}
 
-Inarudisha idadi ya hashi kwa sekunde ambayo nodi inachimba nayo. Hii inaweza tu kurudisha `true` kwa mitandao ya uthibitishaji-wa-kazi na huenda isipatikane kwa baadhi ya wateja tangu [Muungano](/roadmap/merge/).
+Inarejesha idadi ya heshi kwa sekunde ambazo nodi inatumia kuchimba. Hii inaweza tu kurejesha `true` kwa mitandao ya Uthibitisho wa Kazi (PoW) na inaweza isipatikane katika baadhi ya viteja tangu [Unganisho](/roadmap/merge/).
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kituo cha mwisho kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Inarejesha**
 
-`QUANTITY` - idadi ya hashi kwa sekunde.
+`QUANTITY` - idadi ya heshi kwa sekunde.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":71}'
-// Matokeo
+// Result
 {
   "id":71,
   "jsonrpc": "2.0",
@@ -505,28 +504,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### eth_gasPrice {#eth-gasprice}
 
-Inarudisha makadirio ya bei ya sasa kwa kila gesi katika wei. Kwa mfano, mteja wa Besu huchunguza vitalu 100 vya mwisho na kurejesha bei ya wastani ya kitengo cha gesi kwa chaguo-msingi.
+Hurejesha makadirio ya bei ya sasa kwa kila gesi katika Wei. Kwa mfano, kiteja cha Besu huchunguza vitalu 100 vya mwisho na kurejesha bei ya wastani ya uniti ya gesi kwa chaguo-msingi.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Hurejesha**
 
-`QUANTITY` - nambari kamili ya bei ya sasa ya gesi katika wei.
+`QUANTITY` - nambari kamili ya bei ya sasa ya gesi katika Wei.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
-// Matokeo
+// Result
 {
   "id":73,
   "jsonrpc": "2.0",
@@ -534,28 +533,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts {#eth-accounts}
 
-Inarudisha orodha ya anwani zinazomilikiwa na mteja.
+Hurejesha orodha ya anwani zinazomilikiwa na kiteja.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Hurejesha**
 
-`Array of DATA`, Baiti 20 - anwani zinazomilikiwa na mteja.
+`Array of DATA`, Baiti 20 - anwani zinazomilikiwa na kiteja.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -563,28 +562,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### eth_blockNumber {#eth-blocknumber}
 
-Hurudisha nambari ya bloku ya hivi karibuni zaidi.
+Inarejesha nambari ya kitalu cha hivi karibuni zaidi.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_blockNumber">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kituo kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 Hakuna
 
-**Inarudisha**
+**Inarejesha**
 
-`QUANTITY` - nambari kamili ya nambari ya sasa ya kizuizi ambayo mteja yuko.
+`QUANTITY` - nambari kamili ya nambari ya kitalu cha sasa ambacho kiteja kipo.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'
-// Matokeo
+// Result
 {
   "id":83,
   "jsonrpc": "2.0",
@@ -592,33 +591,33 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance {#eth-getbalance}
 
-Hurudisha salio la akaunti kwenye anwani fulani.
+Inarejesha salio la akaunti kwenye anwani iliyotolewa.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 1. `DATA`, Baiti 20 - anwani ya kuangalia salio.
-2. `QUANTITY|TAG` - nambari kamili ya kizuizi, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"`, au `"finalized"`, angalia [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - nambari kamili ya kitalu, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"`, au `"finalized"`, tazama [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 ```
 
-**Inarudisha**
+**Inarejesha**
 
-`QUANTITY` - nambari kamili ya salio la sasa katika wei.
+`QUANTITY` - nambari kamili ya salio la sasa katika Wei.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -626,26 +625,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt {#eth-getstorageat}
 
-Inarudisha thamani kutoka kwa nafasi ya hifadhi katika anwani fulani.
+Inarejesha thamani kutoka kwenye nafasi ya hifadhi katika anwani iliyotolewa.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 1. `DATA`, Baiti 20 - anwani ya hifadhi.
 2. `QUANTITY` - nambari kamili ya nafasi katika hifadhi.
-3. `QUANTITY|TAG` - nambari kamili ya kizuizi, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, angalia [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter)
+3. `QUANTITY|TAG` - nambari kamili ya kitalu, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, tazama [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter)
 
-**Inarudisha**
+**Inarejesha**
 
 `DATA` - thamani katika nafasi hii ya hifadhi.
 
 **Mfano**
-Kukokotoa nafasi sahihi kunategemea hifadhi ya kupata. Fikiria mkataba ufuatao uliotumwa katika `0x295a70b2de5e3953354a6a8344e616ed314d7251` kwa anwani `0x391694e7e0b0cce554cb130d723a9d27458f9298`.
+Kukokotoa nafasi sahihi kunategemea hifadhi itakayorejeshwa. Fikiria mkataba ufuatao uliosambazwa kwenye `0x295a70b2de5e3953354a6a8344e616ed314d7251` na anwani `0x391694e7e0b0cce554cb130d723a9d27458f9298`.
 
 ```
 contract Storage {
@@ -658,20 +657,20 @@ contract Storage {
 }
 ```
 
-Kupata thamani ya pos0 ni rahisi.
+Kurejesha thamani ya pos0 ni rahisi:
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 ```
 
-Kupata kipengele cha ramani ni ngumu zaidi. Nafasi ya kipengele katika ramani inakokotolewa na:
+Kurejesha kipengele cha ramani ni kugumu zaidi. Nafasi ya kipengele katika ramani inakokotolewa kwa:
 
 ```js
 keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
-Hii inamaanisha kupata hifadhi kwenye pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] tunahitaji kukokotoa nafasi na:
+Hii inamaanisha ili kurejesha hifadhi kwenye pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] tunahitaji kukokotoa nafasi kwa:
 
 ```js
 keccak(
@@ -682,7 +681,7 @@ keccak(
 )
 ```
 
-Koni ya geth ambayo inakuja na maktaba ya web3 inaweza kutumika kufanya hesabu:
+Console ya geth inayokuja na maktaba ya Web3 inaweza kutumika kufanya mkokotoo:
 
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -698,36 +697,36 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount {#eth-gettransactioncount}
 
-Inarudisha idadi ya miamala _iliyotumwa_ kutoka kwa anwani.
+Inarudisha idadi ya miamala _iliyotumwa_ kutoka kwenye anwani.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 1. `DATA`, Baiti 20 - anwani.
-2. `QUANTITY|TAG` - nambari kamili ya kizuizi, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"` au `"finalized"`, angalia [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - nambari kamili ya kitalu, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"` au `"finalized"`, tazama [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
   "0x407d73d8a49eeb85d32cf465507dd71d507100c1",
-  "latest", // hali kwenye kizuizi cha hivi karibuni
+  "latest", // state at the latest block
 ]
 ```
 
 **Inarudisha**
 
-`QUANTITY` - nambari kamili ya idadi ya miamala iliyotumwa kutoka kwa anwani hii.
+`QUANTITY` - nambari kamili ya idadi ya miamala iliyotumwa kutoka kwenye anwani hii.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1","latest"],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -735,32 +734,32 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash {#eth-getblocktransactioncountbyhash}
 
-Inarudisha idadi ya miamala katika kizuizi kutoka kwa kizuizi kinacholingana na hashi ya kizuizi iliyotolewa.
+Hurejesha idadi ya miamala katika kitalu kutoka kwenye kitalu kinacholingana na heshi ya kitalu iliyotolewa.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `DATA`, Baiti 32 - hashi ya kizuizi
+1. `DATA`, Baiti 32 - heshi ya kitalu
 
 ```js
 params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 ```
 
-**Inarudisha**
+**Hurejesha**
 
-`QUANTITY` - nambari kamili ya idadi ya miamala katika kizuizi hiki.
+`QUANTITY` - nambari kamili ya idadi ya miamala katika kitalu hiki.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -768,17 +767,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber {#eth-getblocktransactioncountbynumber}
 
-Inarudisha idadi ya miamala katika kizuizi kinacholingana na nambari ya kizuizi iliyotolewa.
+Hurejesha idadi ya miamala katika kitalu kinacholingana na nambari ya kitalu iliyotolewa.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kituo katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `QUANTITY|TAG` - nambari kamili ya nambari ya kizuizi, au mfuatano `"earliest"`, `"latest"`, `"pending"`, `"safe"` au `"finalized"`, kama ilivyo katika [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter).
+1. `QUANTITY|TAG` - nambari kamili ya nambari ya kitalu, au mfuatano `"earliest"`, `"latest"`, `"pending"`, `"safe"` au `"finalized"`, kama ilivyo katika [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter).
 
 ```js
 params: [
@@ -786,16 +785,16 @@ params: [
 ]
 ```
 
-**Inarudisha**
+**Hurejesha**
 
-`QUANTITY` - nambari kamili ya idadi ya miamala katika kizuizi hiki.
+`QUANTITY` - nambari kamili ya idadi ya miamala katika kitalu hiki.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -803,32 +802,32 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash {#eth-getunclecountbyblockhash}
 
-Inarudisha idadi ya wajomba katika kizuizi kutoka kwa kizuizi kinacholingana na hashi ya kizuizi iliyotolewa.
+Hurejesha idadi ya wajomba katika kitalu kutoka kwenye kitalu kinacholingana na heshi ya kitalu iliyotolewa.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `DATA`, Baiti 32 - hashi ya kizuizi
+1. `DATA`, Baiti 32 - heshi ya kitalu
 
 ```js
 params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 ```
 
-**Inarudisha**
+**Hurejesha**
 
-`QUANTITY` - nambari kamili ya idadi ya wajomba katika kizuizi hiki.
+`QUANTITY` - nambari kamili ya idadi ya wajomba katika kitalu hiki.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -836,17 +835,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber {#eth-getunclecountbyblocknumber}
 
-Inarudisha idadi ya wajomba katika kizuizi kutoka kwa kizuizi kinacholingana na nambari ya kizuizi iliyotolewa.
+Hurejesha idadi ya wajomba katika kitalu kutoka kwenye kitalu kinacholingana na nambari ya kitalu iliyotolewa.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kifikio katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `QUANTITY|TAG` - nambari kamili ya nambari ya kizuizi, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"` au `"finalized"`, angalia [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter)
+1. `QUANTITY|TAG` - nambari kamili ya nambari ya kitalu, au tungo `"latest"`, `"earliest"`, `"pending"`, `"safe"` au `"finalized"`, tazama [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -854,16 +853,16 @@ params: [
 ]
 ```
 
-**Inarudisha**
+**Hurejesha**
 
-`QUANTITY` - nambari kamili ya idadi ya wajomba katika kizuizi hiki.
+`QUANTITY` - nambari kamili ya idadi ya wajomba katika kitalu hiki.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params":["0xe8"],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -871,18 +870,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode {#eth-getcode}
 
-Inarudisha msimbo katika anwani fulani.
+Hurejesha msimbo kwenye anwani iliyotolewa.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kituo cha mwisho katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
 1. `DATA`, Baiti 20 - anwani
-2. `QUANTITY|TAG` - nambari kamili ya kizuizi, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"` au `"finalized"`, angalia [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - nambari kamili ya kitalu, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"` au `"finalized"`, tazama [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -891,16 +890,16 @@ params: [
 ]
 ```
 
-**Inarudisha**
+**Inayorejeshwa**
 
 `DATA` - msimbo kutoka kwa anwani iliyotolewa.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -908,29 +907,29 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign {#eth-sign}
 
-Mbinu ya kutia saini inakokotoa saini maalum ya Ethereum na: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
+Mbinu ya sign hukokotoa sahihi mahususi ya Ethereum kwa kutumia: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-Kwa kuongeza kiambishi awali kwenye ujumbe hufanya saini iliyokokotolewa itambulike kama saini maalum ya Ethereum. Hii inazuia matumizi mabaya ambapo mfumo mtawanyo wa kimamlaka hasidi unaweza kusaini data holela (k.m., muamala) na kutumia saini kumwiga mwathiriwa.
+Kuongeza kiambishi awali kwenye ujumbe hufanya sahihi iliyokokotolewa itambulike kama sahihi mahususi ya Ethereum. Hii huzuia matumizi mabaya ambapo programu tumizi iliyogatuliwa (dapp) hasidi inaweza kusaini data yoyote (k.m., muamala) na kutumia sahihi hiyo kujifanya kuwa mwathiriwa.
 
-Kumbuka: anwani ya kutia saini nayo lazima ifunguliwe.
+Kumbuka: anwani ya kusaini nayo lazima iwe imefunguliwa.
 
 **Vigezo**
 
 1. `DATA`, Baiti 20 - anwani
-2. `DATA`, Baiti N - ujumbe wa kutia saini
+2. `DATA`, Baiti N - ujumbe wa kusaini
 
-**Inarudisha**
+**Inarejesha**
 
 `DATA`: Sahihi
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "0xdeadbeaf"],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -938,33 +937,33 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### eth_signTransaction {#eth-signtransaction}
 
-Inatia saini muamala ambao unaweza kuwasilishwa kwenye mtandao baadaye kwa kutumia [eth_sendRawTransaction](#eth_sendrawtransaction).
+Inasaini muamala unaoweza kuwasilishwa kwenye mtandao baadaye kwa kutumia [eth_sendRawTransaction](#eth-sendrawtransaction).
 
 **Vigezo**
 
-1. `Object` - Kitu cha muamala
+1. `Object` - Kipengee cha muamala
 
 - `type`:
-- `from`: `DATA`, Baiti 20 - Anwani ambayo muamala unatumwa kutoka.
-- `to`: `DATA`, Baiti 20 - (si lazima unapounda mkataba mpya) Anwani ambayo muamala unaelekezwa.
-- `gas`: `QUANTITY` - (si lazima, chaguo-msingi: 90000) Nambari kamili ya gesi iliyotolewa kwa ajili ya utekelezaji wa muamala. Itarudisha gesi isiyotumika.
-- `gasPrice`: `QUANTITY` - (si lazima, chaguo-msingi: Itaamuliwa) Nambari kamili ya gasPrice inayotumika kwa kila gesi inayolipwa, katika Wei.
+- `from`: `DATA`, Baiti 20 - Anwani ambayo muamala unatoka.
+- `to`: `DATA`, Baiti 20 - (si lazima wakati wa kuunda mkataba mpya) Anwani ambayo muamala unaelekezwa.
+- `gas`: `QUANTITY` - (si lazima, chaguo-msingi: 90000) Nambari kamili ya gesi iliyotolewa kwa ajili ya utekelezaji wa muamala. Itarejesha gesi ambayo haijatumika.
+- `gasPrice`: `QUANTITY` - (si lazima, chaguo-msingi: Itaamuliwa-Baadaye) Nambari kamili ya gasPrice inayotumika kwa kila gesi iliyolipiwa, katika Wei.
 - `value`: `QUANTITY` - (si lazima) Nambari kamili ya thamani iliyotumwa na muamala huu, katika Wei.
-- `data`: `DATA` - Msimbo uliokusanywa wa mkataba AU hashi ya saini ya mbinu iliyoitwa na vigezo vilivyosimbwa.
-- `nonce`: `QUANTITY` - (si lazima) Nambari kamili ya nonce. Hii inaruhusu kubatilisha miamala yako mwenyewe inayosubiri inayotumia nonce sawa.
+- `data`: `DATA` - Msimbo uliokusanywa wa mkataba AU heshi ya sahihi ya mbinu iliyoombwa na vigezo vilivyosimbwa.
+- `nonce`: `QUANTITY` - (si lazima) Nambari kamili ya nonsi. Hii inaruhusu kufuta na kuandika upya miamala yako inayosubiri inayotumia nonsi sawa.
 
-**Inarudisha**
+**Inarejesha**
 
-`DATA`, Kitu cha muamala kilichosimbwa na RLP kilichotiwa saini na akaunti maalum.
+`DATA`, Kipengee cha muamala kilichosimbwa kwa RLP kilichosainiwa na akaunti iliyobainishwa.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","params": [{"data":"0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675","from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","gas": "0x76c0","gasPrice": "0x9184e72a000","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","value": "0x9184e72a"}]}'
-// Matokeo
+// Result
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -972,21 +971,21 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction {#eth-sendtransaction}
 
-Huunda muamala mpya wa wito wa ujumbe au uundaji wa mkataba, ikiwa sehemu ya data ina msimbo, na inautia saini kwa kutumia akaunti maalum katika `from`.
+Hutengeneza muamala mpya wa mwito wa ujumbe au uundaji wa mkataba, ikiwa sehemu ya data ina msimbo, na kuusaini kwa kutumia akaunti iliyobainishwa katika `from`.
 
 **Vigezo**
 
-1. `Object` - Kitu cha muamala
+1. `Object` - Kipengee cha muamala
 
-- `from`: `DATA`, Baiti 20 - Anwani ambayo muamala unatumwa kutoka.
-- `to`: `DATA`, Baiti 20 - (si lazima unapounda mkataba mpya) Anwani ambayo muamala unaelekezwa.
-- `gas`: `QUANTITY` - (si lazima, chaguo-msingi: 90000) Nambari kamili ya gesi iliyotolewa kwa ajili ya utekelezaji wa muamala. Itarudisha gesi isiyotumika.
-- `gasPrice`: `QUANTITY` - (si lazima, chaguo-msingi: Itaamuliwa) Nambari kamili ya gasPrice inayotumika kwa kila gesi inayolipwa.
+- `from`: `DATA`, Baiti 20 - Anwani ambayo muamala unatoka.
+- `to`: `DATA`, Baiti 20 - (si lazima wakati wa kuunda mkataba mpya) Anwani ambayo muamala unaelekezwa.
+- `gas`: `QUANTITY` - (si lazima, chaguo-msingi: 90000) Nambari kamili ya gesi iliyotolewa kwa ajili ya utekelezaji wa muamala. Itarejesha gesi ambayo haijatumika.
+- `gasPrice`: `QUANTITY` - (si lazima, chaguo-msingi: Itaamuliwa-Baadaye) Nambari kamili ya bei ya gesi (gasPrice) inayotumika kwa kila gesi iliyolipwa.
 - `value`: `QUANTITY` - (si lazima) Nambari kamili ya thamani iliyotumwa na muamala huu.
-- `input`: `DATA` - Msimbo uliokusanywa wa mkataba AU hashi ya saini ya mbinu iliyoitwa na vigezo vilivyosimbwa.
-- `nonce`: `QUANTITY` - (si lazima) Nambari kamili ya nonce. Hii inaruhusu kubatilisha miamala yako mwenyewe inayosubiri inayotumia nonce sawa.
+- `input`: `DATA` - Msimbo uliokusanywa wa mkataba AU heshi ya sahihi ya mbinu iliyoombwa na vigezo vilivyosimbwa.
+- `nonce`: `QUANTITY` - (si lazima) Nambari kamili ya nonsi. Hii inaruhusu kufuta na kuandika upya miamala yako inayosubiri ambayo inatumia nonsi sawa.
 
 ```js
 params: [
@@ -1002,18 +1001,18 @@ params: [
 ]
 ```
 
-**Inarudisha**
+**Inarejesha**
 
-`DATA`, Baiti 32 - hashi ya muamala, au hashi sifuri ikiwa muamala bado haupatikani.
+`DATA`, Baiti 32 - heshi ya muamala, au heshi sifuri ikiwa muamala bado haupatikani.
 
-Tumia [eth_getTransactionReceipt](#eth_gettransactionreceipt) kupata anwani ya mkataba, baada ya muamala kupendekezwa katika kizuizi, ulipounda mkataba.
+Tumia [eth_getTransactionReceipt](#eth-gettransactionreceipt) kupata anwani ya mkataba, baada ya muamala kupendekezwa katika kitalu, wakati ulipounda mkataba.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{see above}],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1021,13 +1020,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth-sendrawtransaction}
 
-Huunda muamala mpya wa wito wa ujumbe au uundaji wa mkataba kwa miamala iliyotiwa saini.
+Huunda muamala mpya wa mwito wa ujumbe au uundaji mkataba kwa miamala iliyosainiwa.
 
 **Vigezo**
 
-1. `DATA`, Data ya muamala iliyotiwa saini.
+1. `DATA`, Data ya muamala iliyosainiwa.
 
 ```js
 params: [
@@ -1035,18 +1034,18 @@ params: [
 ]
 ```
 
-**Inarudisha**
+**Inarejesha**
 
-`DATA`, Baiti 32 - hashi ya muamala, au hashi sifuri ikiwa muamala bado haupatikani.
+`DATA`, Baiti 32 - heshi ya muamala, au heshi sifuri ikiwa muamala bado haupatikani.
 
-Tumia [eth_getTransactionReceipt](#eth_gettransactionreceipt) kupata anwani ya mkataba, baada ya muamala kupendekezwa katika kizuizi, ulipounda mkataba.
+Tumia [eth_getTransactionReceipt](#eth-gettransactionreceipt) kupata anwani ya mkataba, baada ya muamala kupendekezwa kwenye kitalu, ulipounda mkataba.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{see above}],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1054,37 +1053,37 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call {#eth-call}
 
-Hutekeleza wito mpya wa ujumbe mara moja bila kuunda muamala kwenye mnyororo wa bloku. Mara nyingi hutumika kutekeleza kazi za mkataba-erevu za kusoma tu, kwa mfano `balanceOf` kwa mkataba wa ERC-20.
+Hutekeleza mwito wa ujumbe mpya mara moja bila kuunda muamala kwenye mnyororo wa vitalu. Mara nyingi hutumika kutekeleza vitendaji vya kusoma tu vya mkataba mahiri, kwa mfano `balanceOf` kwa mkataba wa ERC-20.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kituo cha mwisho kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `Object` - Kitu cha wito wa muamala
+1. `Object` - Kipengee cha mwito wa muamala
 
-- `from`: `DATA`, Baiti 20 - (si lazima) Anwani ambayo muamala unatumwa kutoka.
+- `from`: `DATA`, Baiti 20 - (si lazima) Anwani ambayo muamala unatoka.
 - `to`: `DATA`, Baiti 20 - Anwani ambayo muamala unaelekezwa.
 - `gas`: `QUANTITY` - (si lazima) Nambari kamili ya gesi iliyotolewa kwa ajili ya utekelezaji wa muamala. eth_call hutumia gesi sifuri, lakini kigezo hiki kinaweza kuhitajika na baadhi ya utekelezaji.
-- `gasPrice`: `QUANTITY` - (si lazima) Nambari kamili ya gasPrice inayotumika kwa kila gesi inayolipwa
+- `gasPrice`: `QUANTITY` - (si lazima) Nambari kamili ya bei ya gesi inayotumika kwa kila gesi iliyolipiwa
 - `value`: `QUANTITY` - (si lazima) Nambari kamili ya thamani iliyotumwa na muamala huu
-- `input`: `DATA` - (si lazima) Hashi ya saini ya mbinu na vigezo vilivyosimbwa. Kwa maelezo angalia [ABI ya Mkataba wa Ethereum katika nyaraka za Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `input`: `DATA` - (si lazima) Heshi ya sahihi ya mbinu na vigezo vilivyosimbwa. Kwa maelezo zaidi tazama [ABI ya Mkataba wa Ethereum katika nyaraka za Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - nambari kamili ya kizuizi, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"` au `"finalized"`, angalia [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - nambari kamili ya kitalu, au mfuatano `"latest"`, `"earliest"`, `"pending"`, `"safe"` au `"finalized"`, tazama [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter)
 
-**Inarudisha**
+**Inarejesha**
 
-`DATA` - thamani ya urejeshaji ya mkataba uliotekelezwa.
+`DATA` - thamani iliyorejeshwa ya mkataba uliotekelezwa.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1092,28 +1091,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas {#eth-estimategas}
 
-Huzalisha na kurudisha makadirio ya gesi kiasi gani inahitajika kuruhusu muamala kukamilika. Muamala hautaongezwa kwenye mnyororo wa bloku. Kumbuka kwamba makadirio yanaweza kuwa zaidi ya kiasi cha gesi inayotumiwa na shughuli ya ununuzi, kwa sababu mbalimbali ikiwa ni pamoja na mechanics ya EVM na utendaji wa nodi.
+Inazalisha na kurudisha makadirio ya kiasi gani cha gesi kinahitajika ili kuruhusu muamala kukamilika. Muamala hautaongezwa kwenye mnyororo wa vitalu. Kumbuka kwamba makadirio yanaweza kuwa makubwa zaidi kuliko kiasi cha gesi kilichotumiwa hasa na muamala, kwa sababu mbalimbali ikiwa ni pamoja na mitambo ya EVM na utendaji wa nodi.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-Angalia vigezo vya [eth_call](#eth_call), isipokuwa kwamba sifa zote ni za hiari. Ikiwa hakuna kikomo cha gesi kilichobainishwa, geth hutumia kikomo cha gesi ya block kutoka kwa kizuizi kinachosubiri kama njia ya juu. Matokeo yake, makadirio yaliyorejeshwa yanaweza yasitoshe kutekeleza wito/muamala wakati kiasi cha gesi ni cha juu kuliko kikomo cha gesi cha bloku inayosubiri.
+Tazama vigezo vya [eth_call](#eth-call), isipokuwa kwamba sifa zote ni za hiari. Ikiwa hakuna kikomo cha gesi kilichobainishwa geth hutumia kikomo cha gesi cha kitalu kutoka kwenye kitalu kinachosubiri kama kikomo cha juu. Kutokana na hili, makadirio yaliyorejeshwa yanaweza yasiwe ya kutosha kutekeleza mwito/muamala wakati kiasi cha gesi ni kikubwa kuliko kikomo cha gesi cha kitalu kinachosubiri.
 
-**Inarudisha**
+**Inarejesha**
 
-`QUANTITY` - kiasi cha gesi iliyotumika.
+`QUANTITY` - kiasi cha gesi kilichotumika.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see above}],"id":1}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1121,18 +1120,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash {#eth-getblockbyhash}
 
-Inarudisha taarifa kuhusu kizuizi kwa hashi.
+Inarudisha taarifa kuhusu kitalu kwa heshi.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kituo kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `DATA`, Baiti 32 - Hashi ya kizuizi.
-2. `Boolean` - Ikiwa `true` inarudisha vitu kamili vya muamala, ikiwa `false` ni hashi tu za miamala.
+1. `DATA`, Baiti 32 - Heshi ya kitalu.
+2. `Boolean` - Ikiwa `true` inarudisha vipengee kamili vya muamala, ikiwa `false` inarudisha tu heshi za miamala.
 
 ```js
 params: [
@@ -1143,27 +1142,27 @@ params: [
 
 **Inarudisha**
 
-`Object` - Kitu cha kizuizi, au `null` wakati hakuna kizuizi kilichopatikana:
+`Object` - Kipengee cha kitalu, au `null` wakati hakuna kitalu kilichopatikana:
 
-- `number`: `QUANTITY` - nambari ya kizuizi. `null` wakati ni kizuizi kinachosubiri.
-- `hash`: `DATA`, Baiti 32 - hashi ya kizuizi. `null` wakati ni kizuizi kinachosubiri.
-- `parentHash`: `DATA`, Baiti 32 - hashi ya kizuizi cha mzazi.
-- `nonce`: `DATA`, Baiti 8 - hashi ya uthibitishaji-wa-kazi uliotengenezwa. `null` wakati ni kizuizi kinachosubiri, `0x0` kwa vizuizi vya uthibitishaji-wa-hisa (tangu Muungano)
-- `sha3Uncles`: `DATA`, Baiti 32 - SHA3 ya data ya wajomba katika kizuizi.
-- `logsBloom`: `DATA`, Baiti 256 - kichujio cha bloom kwa kumbukumbu za kizuizi. `null` wakati ni kizuizi kinachosubiri.
-- `transactionsRoot`: `DATA`, Baiti 32 - mzizi wa trie ya muamala wa kizuizi.
-- `stateRoot`: `DATA`, Baiti 32 - mzizi wa trie ya hali ya mwisho ya kizuizi.
-- `receiptsRoot`: `DATA`, Baiti 32 - mzizi wa trie ya risiti za kizuizi.
-- `miner`: `DATA`, Baiti 20 - anwani ya mnufaika ambaye zawadi za kizuizi zilipewa.
-- `difficulty`: `QUANTITY` - nambari kamili ya ugumu kwa kizuizi hiki.
-- `totalDifficulty`: `QUANTITY` - nambari kamili ya ugumu jumla wa mnyororo hadi kizuizi hiki.
-- `extraData`: `DATA` - sehemu ya "data ya ziada" ya kizuizi hiki.
-- `size`: `QUANTITY` - nambari kamili ya ukubwa wa kizuizi hiki katika baiti.
-- `gasLimit`: `QUANTITY` - gesi ya juu inayoruhusiwa katika kizuizi hiki.
-- `gasUsed`: `QUANTITY` - jumla ya gesi iliyotumika na miamala yote katika kizuizi hiki.
-- `timestamp`: `QUANTITY` - muhuri wa muda wa unix wa wakati kizuizi kilikusanywa.
-- `transactions`: `Array` - Safu ya vitu vya muamala, au hashi za muamala za Baiti 32 kulingana na kigezo cha mwisho kilichotolewa.
-- `uncles`: `Array` - Safu ya hashi za wajomba.
+- `number`: `QUANTITY` - nambari ya kitalu. `null` wakati ni kitalu kinachosubiri.
+- `hash`: `DATA`, Baiti 32 - heshi ya kitalu. `null` wakati ni kitalu kinachosubiri.
+- `parentHash`: `DATA`, Baiti 32 - heshi ya kitalu mzazi.
+- `nonce`: `DATA`, Baiti 8 - heshi ya Uthibitisho wa Kazi (PoW) iliyozalishwa. `null` wakati ni kitalu kinachosubiri, `0x0` kwa vitalu vya Uthibitisho wa Dau (PoS) (tangu Unganisho)
+- `sha3Uncles`: `DATA`, Baiti 32 - SHA3 ya data za wajomba (uncles) katika kitalu.
+- `logsBloom`: `DATA`, Baiti 256 - kichujio cha bloom kwa logi za kitalu. `null` wakati ni kitalu kinachosubiri.
+- `transactionsRoot`: `DATA`, Baiti 32 - mzizi wa trie ya muamala ya kitalu.
+- `stateRoot`: `DATA`, Baiti 32 - mzizi wa trie ya hali ya mwisho ya kitalu.
+- `receiptsRoot`: `DATA`, Baiti 32 - mzizi wa trie ya stakabadhi ya kitalu.
+- `miner`: `DATA`, Baiti 20 - anwani ya mnufaika ambaye alipewa tuzo za kitalu.
+- `difficulty`: `QUANTITY` - nambari kamili ya ugumu kwa kitalu hiki.
+- `totalDifficulty`: `QUANTITY` - nambari kamili ya jumla ya ugumu wa mnyororo hadi kitalu hiki.
+- `extraData`: `DATA` - uwanja wa "data ya ziada" wa kitalu hiki.
+- `size`: `QUANTITY` - nambari kamili ya ukubwa wa kitalu hiki katika baiti.
+- `gasLimit`: `QUANTITY` - kiwango cha juu cha gesi kinachoruhusiwa katika kitalu hiki.
+- `gasUsed`: `QUANTITY` - jumla ya gesi iliyotumika na miamala yote katika kitalu hiki.
+- `timestamp`: `QUANTITY` - muhuri wa muda wa unix wa wakati kitalu kilipokusanywa.
+- `transactions`: `Array` - Safu ya vipengee vya muamala, au heshi za muamala za Baiti 32 kulingana na kigezo cha mwisho kilichotolewa.
+- `uncles`: `Array` - Safu ya heshi za wajomba (uncles).
 
 **Mfano**
 
@@ -1201,18 +1200,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth-getblockbynumber}
 
-Inarudisha taarifa kuhusu kizuizi kwa nambari ya kizuizi.
+Hurejesha taarifa kuhusu kitalu kwa nambari ya kitalu.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByNumber">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kikomo katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `QUANTITY|TAG` - nambari kamili ya nambari ya kizuizi, au mfuatano `"earliest"`, `"latest"`, `"pending"`, `"safe"` au `"finalized"`, kama ilivyo katika [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter).
-2. `Boolean` - Ikiwa `true` inarudisha vitu kamili vya muamala, ikiwa `false` ni hashi tu za miamala.
+1. `QUANTITY|TAG` - nambari kamili ya nambari ya kitalu, au tungo `"earliest"`, `"latest"`, `"pending"`, `"safe"` au `"finalized"`, kama ilivyo katika [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter).
+2. `Boolean` - Ikiwa ni `true` hurejesha vipengee kamili vya muamala, ikiwa ni `false` hurejesha tu heshi za miamala.
 
 ```js
 params: [
@@ -1221,29 +1220,29 @@ params: [
 ]
 ```
 
-**Inarudisha**
-Angalia [eth_getBlockByHash](#eth_getblockbyhash)
+**Hurejesha**
+Tazama [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-Matokeo angalia [eth_getBlockByHash](#eth_getblockbyhash)
+Matokeo tazama [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth-gettransactionbyhash}
 
-Inarudisha taarifa kuhusu muamala ulioombwa kwa hashi ya muamala.
+Inarudisha taarifa kuhusu muamala ulioombwa kwa heshi ya muamala.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `DATA`, Baiti 32 - hashi ya muamala
+1. `DATA`, Baiti 32 - heshi ya muamala
 
 ```js
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
@@ -1251,29 +1250,29 @@ params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 
 **Inarudisha**
 
-`Object` - Kitu cha muamala, au `null` wakati hakuna muamala uliopatikana:
+`Object` - Kipengee cha muamala, au `null` wakati hakuna muamala uliopatikana:
 
-- `blockHash`: `DATA`, Baiti 32 - hashi ya kizuizi ambapo muamala huu ulikuwa. `null` wakati inasubiri.
-- `blockNumber`: `QUANTITY` - nambari ya kizuizi ambapo muamala huu ulikuwa. `null` wakati inasubiri.
+- `blockHash`: `DATA`, Baiti 32 - heshi ya kitalu ambapo muamala huu ulikuwemo. `null` wakati inasubiri.
+- `blockNumber`: `QUANTITY` - nambari ya kitalu ambapo muamala huu ulikuwemo. `null` wakati inasubiri.
 - `from`: `DATA`, Baiti 20 - anwani ya mtumaji.
 - `gas`: `QUANTITY` - gesi iliyotolewa na mtumaji.
 - `gasPrice`: `QUANTITY` - bei ya gesi iliyotolewa na mtumaji katika Wei.
-- `hash`: `DATA`, Baiti 32 - hashi ya muamala.
+- `hash`: `DATA`, Baiti 32 - heshi ya muamala.
 - `input`: `DATA` - data iliyotumwa pamoja na muamala.
-- `nonce`: `QUANTITY` - idadi ya miamala iliyofanywa na mtumaji kabla ya hii.
-- `to`: `DATA`, Baiti 20 - anwani ya mpokeaji. `null` wakati ni muamala wa uundaji wa mkataba.
-- `transactionIndex`: `QUANTITY` - nambari kamili ya nafasi ya faharasa ya miamala katika kizuizi. `null` wakati inasubiri.
+- `nonce`: `QUANTITY` - idadi ya miamala iliyofanywa na mtumaji kabla ya huu.
+- `to`: `DATA`, Baiti 20 - anwani ya mpokeaji. `null` wakati ni muamala wa uundaji mkataba.
+- `transactionIndex`: `QUANTITY` - nambari kamili ya nafasi ya faharisi ya miamala katika kitalu. `null` wakati inasubiri.
 - `value`: `QUANTITY` - thamani iliyohamishwa katika Wei.
 - `v`: `QUANTITY` - kitambulisho cha urejeshaji cha ECDSA
-- `r`: `QUANTITY` - saini ya ECDSA r
-- `s`: `QUANTITY` - saini ya ECDSA s
+- `r`: `QUANTITY` - sahihi ya ECDSA r
+- `s`: `QUANTITY` - sahihi ya ECDSA s
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"],"id":1}'
-// Matokeo
+// Result
 {
   "jsonrpc":"2.0",
   "id":1,
@@ -1296,18 +1295,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex {#eth-gettransactionbyblockhashandindex}
 
-Inarudisha taarifa kuhusu muamala kwa hashi ya kizuizi na nafasi ya faharasa ya muamala.
+Inarejesha taarifa kuhusu muamala kwa heshi ya kitalu na nafasi ya faharisi ya muamala.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu endpoint katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `DATA`, Baiti 32 - hashi ya kizuizi.
-2. `QUANTITY` - nambari kamili ya nafasi ya faharasa ya muamala.
+1. `DATA`, Baiti 32 - heshi ya kitalu.
+2. `QUANTITY` - nambari kamili ya nafasi ya faharisi ya muamala.
 
 ```js
 params: [
@@ -1316,30 +1315,30 @@ params: [
 ]
 ```
 
-**Inarudisha**
-Angalia [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**Inarejesha**
+Tazama [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Matokeo angalia [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Matokeo tazama [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex {#eth-gettransactionbyblocknumberandindex}
 
-Inarudisha taarifa kuhusu muamala kwa nambari ya kizuizi na nafasi ya faharasa ya muamala.
+Hurejesha maelezo kuhusu muamala kwa nambari ya kitalu na nafasi ya faharisi ya muamala.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kituo cha mwisho katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `QUANTITY|TAG` - nambari ya kizuizi, au mfuatano `"earliest"`, `"latest"`, `"pending"`, `"safe"` au `"finalized"`, kama ilivyo katika [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter).
-2. `QUANTITY` - nafasi ya faharasa ya muamala.
+1. `QUANTITY|TAG` - nambari ya kitalu, au mfuatano `"earliest"`, `"latest"`, `"pending"`, `"safe"` au `"finalized"`, kama ilivyo katika [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter).
+2. `QUANTITY` - nafasi ya faharisi ya muamala.
 
 ```js
 params: [
@@ -1348,60 +1347,60 @@ params: [
 ]
 ```
 
-**Inarudisha**
-Angalia [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**Hurejesha**
+Tazama [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-Matokeo angalia [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Matokeo tazama [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth-gettransactionreceipt}
 
-Inarudisha risiti ya muamala kwa hashi ya muamala.
+Hurejesha stakabadhi ya muamala kwa heshi ya muamala.
 
-**Kumbuka** Kwamba risiti haipatikani kwa miamala inayosubiri.
+**Kumbuka** Kwamba stakabadhi haipatikani kwa miamala inayosubiri.
 
 **Vigezo**
 
-1. `DATA`, Baiti 32 - hashi ya muamala
+1. `DATA`, Baiti 32 - heshi ya muamala
 
 ```js
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
-**Inarudisha**
-`Object` - Kitu cha risiti ya muamala, au `null` wakati hakuna risiti iliyopatikana:
+**Hurejesha**
+`Object` - Kipengee cha stakabadhi ya muamala, au `null` wakati hakuna stakabadhi iliyopatikana:
 
-- `transactionHash `: `DATA`, Baiti 32 - hashi ya muamala.
-- `transactionIndex`: `QUANTITY` - nambari kamili ya nafasi ya faharasa ya miamala katika kizuizi.
-- `blockHash`: `DATA`, Baiti 32 - hashi ya kizuizi ambapo muamala huu ulikuwa.
-- `blockNumber`: `QUANTITY` - nambari ya kizuizi ambapo muamala huu ulikuwa.
+- `transactionHash `: `DATA`, Baiti 32 - heshi ya muamala.
+- `transactionIndex`: `QUANTITY` - nambari kamili ya nafasi ya faharisi ya miamala katika kitalu.
+- `blockHash`: `DATA`, Baiti 32 - heshi ya kitalu ambapo muamala huu ulikuwepo.
+- `blockNumber`: `QUANTITY` - nambari ya kitalu ambapo muamala huu ulikuwepo.
 - `from`: `DATA`, Baiti 20 - anwani ya mtumaji.
-- `to`: `DATA`, Baiti 20 - anwani ya mpokeaji. `null` wakati ni muamala wa uundaji wa mkataba.
-- `cumulativeGasUsed` : `QUANTITY ` - Jumla ya kiasi cha gesi iliyotumika wakati muamala huu ulitekelezwa katika kizuizi.
-- `effectiveGasPrice` : `QUANTITY` - Jumla ya ada ya msingi na ncha iliyolipwa kwa kila kitengo cha gesi.
-- `gasUsed `: `QUANTITY ` - Kiasi cha gesi kilichotumiwa na muamala huu maalum pekee.
+- `to`: `DATA`, Baiti 20 - anwani ya mpokeaji. null wakati ni muamala wa uundaji mkataba.
+- `cumulativeGasUsed` : `QUANTITY ` - Jumla ya kiasi cha gesi iliyotumika wakati muamala huu ulipotekelezwa katika kitalu.
+- `effectiveGasPrice` : `QUANTITY` - Jumla ya ada ya msingi na ada ya kipaumbele iliyolipwa kwa kila uniti ya gesi.
+- `gasUsed `: `QUANTITY ` - Kiasi cha gesi iliyotumika na muamala huu mahususi pekee.
 - `contractAddress `: `DATA`, Baiti 20 - Anwani ya mkataba iliyoundwa, ikiwa muamala ulikuwa uundaji wa mkataba, vinginevyo `null`.
-- `logs`: `Array` - Safu ya vitu vya kumbukumbu, ambavyo muamala huu ulizalisha.
-- `logsBloom`: `DATA`, Baiti 256 - Kichujio cha Bloom kwa wateja wepesi kupata kumbukumbu zinazohusiana haraka.
-- `type`: `QUANTITY` - nambari kamili ya aina ya muamala, `0x0` kwa miamala ya zamani, `0x1` kwa aina za orodha ya ufikiaji, `0x2` kwa ada za nguvu.
+- `logs`: `Array` - Safu ya vipengee vya logi, ambavyo muamala huu ulizalisha.
+- `logsBloom`: `DATA`, Baiti 256 - Kichujio cha Bloom kwa wateja wepesi ili kupata haraka logi zinazohusiana.
+- `type`: `QUANTITY` - nambari kamili ya aina ya muamala, `0x0` kwa miamala ya zamani, `0x1` kwa aina za orodha ya ufikiaji, `0x2` kwa ada zinazobadilika.
 
-Pia inarudisha _ama_ :
+Pia inarejesha _mojawapo ya_ :
 
-- `root` : `DATA` baiti 32 za mzizi wa hali baada ya muamala (kabla ya Byzantium).
+- `root` : `DATA` Baiti 32 za mzizi wa hali ya baada ya muamala (kabla ya Bizantiamu)
 - `status`: `QUANTITY` ama `1` (mafanikio) au `0` (kushindwa)
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"],"id":1}'
-// Matokeo
+// Result
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -1409,15 +1408,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
     "blockHash":
       "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
     "blockNumber": "0xeff35f",
-    "contractAddress": null, // mfuatano wa anwani ikiwa iliundwa
+    "contractAddress": null, // string of the address if it was created
     "cumulativeGasUsed": "0xa12515",
     "effectiveGasPrice": "0x5a9c688d4",
     "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
     "gasUsed": "0xb4c8",
     "logs": [{
-      // kumbukumbu kama zilivyorudishwa na getFilterLogs, n.k.
+      // logs as returned by getFilterLogs, etc.
     }],
-    "logsBloom": "0x00...0", // kichujio cha bloom cha baiti 256
+    "logsBloom": "0x00...0", // 256 byte bloom filter
     "status": "0x1",
     "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
     "transactionHash":
@@ -1428,18 +1427,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex {#eth-getunclebyblockhashandindex}
 
-Hurejesha taarifa kuhusu uncle wa bloku kwa hashi na nafasi ya faharasa ya uncle.
+Hurejesha taarifa kuhusu mjomba wa kitalu kwa heshi na nafasi ya faharisi ya mjomba.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kifikio katika uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `DATA`, Baiti 32 - Hashi ya kizuizi.
-2. `QUANTITY` - Nafasi ya faharasa ya mjomba.
+1. `DATA`, Baiti 32 - Heshi ya kitalu.
+2. `QUANTITY` - Nafasi ya faharisi ya mjomba.
 
 ```js
 params: [
@@ -1448,32 +1447,32 @@ params: [
 ]
 ```
 
-**Inarudisha**
-Angalia [eth_getBlockByHash](#eth_getblockbyhash)
+**Hurejesha**
+Tazama [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Matokeo angalia [eth_getBlockByHash](#eth_getblockbyhash)
+Kwa matokeo tazama [eth_getBlockByHash](#eth-getblockbyhash)
 
-**Kumbuka**: Mjomba hana miamala ya kibinafsi.
+**Kumbuka**: Mjomba hauna miamala mmojammoja.
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex {#eth-getunclebyblocknumberandindex}
 
-Hurejesha taarifa kuhusu uncle wa bloku kwa nambari na nafasi ya faharasa ya uncle.
+Hurejesha maelezo kuhusu mjomba wa kitalu kwa nambari na nafasi ya faharisi ya mjomba.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
-  Jaribu ncha ya mwisho katika uwanja wa michezo
+  Jaribu kifikio kwenye uwanja wa majaribio
 </ButtonLink>
 
 **Vigezo**
 
-1. `QUANTITY|TAG` - nambari ya kizuizi, au mfuatano `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, kama ilivyo katika [kigezo cha kizuizi](/developers/docs/apis/json-rpc/#block-parameter).
-2. `QUANTITY` - nafasi ya faharasa ya mjomba.
+1. `QUANTITY|TAG` - nambari ya kitalu, au mfuatano `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, kama ilivyo katika [kigezo cha kitalu](/developers/docs/apis/json-rpc/#block-parameter).
+2. `QUANTITY` - nafasi ya faharisi ya mjomba.
 
 ```js
 params: [
@@ -1482,41 +1481,41 @@ params: [
 ]
 ```
 
-**Inarudisha**
-Angalia [eth_getBlockByHash](#eth_getblockbyhash)
+**Hurejesha**
+Tazama [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Kumbuka**: Mjomba hana miamala ya kibinafsi.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-Matokeo angalia [eth_getBlockByHash](#eth_getblockbyhash)
+Kwa matokeo tazama [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter {#eth-newfilter}
 
-Huunda kitu cha kichujio, kulingana na chaguzi za kichujio, ili kuarifu wakati hali inabadilika (kumbukumbu).
-Ili kuangalia kama hali imebadilika, piga simu [eth_getFilterChanges](#eth_getfilterchanges).
+Huunda kipengee cha kichujio, kulingana na chaguo za kichujio, ili kuarifu wakati hali inabadilika (logi).
+Ili kuangalia ikiwa hali imebadilika, piga [eth_getFilterChanges](#eth-getfilterchanges).
 
-**Kumbuka kuhusu kubainisha vichujio vya mada:**
-Mada zinategemea mpangilio. Muamala wenye kumbukumbu na mada [A, B] utalinganishwa na vichujio vifuatavyo vya mada:
+**Dokezo kuhusu kubainisha vichujio vya mada:**
+Mada hutegemea mpangilio. Muamala ulio na logi yenye mada [A, B] utalinganishwa na vichujio vifuatavyo vya mada:
 
 - `[]` "chochote"
-- `[A]` "A katika nafasi ya kwanza (na chochote baada)"
-- `[null, B]` "chochote katika nafasi ya kwanza NA B katika nafasi ya pili (na chochote baada)"
-- `[A, B]` "A katika nafasi ya kwanza NA B katika nafasi ya pili (na chochote baada)"
-- `[[A, B], [A, B]]` "(A AU B) katika nafasi ya kwanza NA (A AU B) katika nafasi ya pili (na chochote baada)"
+- `[A]` "A katika nafasi ya kwanza (na chochote kinachofuata)"
+- `[null, B]` "chochote katika nafasi ya kwanza NA B katika nafasi ya pili (na chochote kinachofuata)"
+- `[A, B]` "A katika nafasi ya kwanza NA B katika nafasi ya pili (na chochote kinachofuata)"
+- `[[A, B], [A, B]]` "(A AU B) katika nafasi ya kwanza NA (A AU B) katika nafasi ya pili (na chochote kinachofuata)"
 - **Vigezo**
 
-1. `Object` - Chaguzi za kichujio:
+1. `Object` - Chaguo za kichujio:
 
-- `fromBlock`: `QUANTITY|TAG` - (si lazima, chaguo-msingi: `"latest"`) Nambari kamili ya kizuizi, au `"latest"` kwa kizuizi cha mwisho kilichopendekezwa, `"safe"` kwa kizuizi cha mwisho salama, `"finalized"` kwa kizuizi cha mwisho kilichokamilishwa, au `"pending"`, `"earliest"` kwa miamala ambayo bado haiko kwenye kizuizi.
-- `toBlock`: `QUANTITY|TAG` - (si lazima, chaguo-msingi: `"latest"`) Nambari kamili ya kizuizi, au `"latest"` kwa kizuizi cha mwisho kilichopendekezwa, `"safe"` kwa kizuizi cha mwisho salama, `"finalized"` kwa kizuizi cha mwisho kilichokamilishwa, au `"pending"`, `"earliest"` kwa miamala ambayo bado haiko kwenye kizuizi.
-- `address`: `DATA|Array`, Baiti 20 - (si lazima) Anwani ya mkataba au orodha ya anwani ambazo kumbukumbu zinapaswa kutoka.
-- `topics`: `Array of DATA`, - (si lazima) Safu ya mada za `DATA` za Baiti 32. Mada zinategemea mpangilio. Kila mada inaweza pia kuwa safu ya DATA na chaguzi za "au".
+- `fromBlock`: `QUANTITY|TAG` - (si lazima, chaguo-msingi: `"latest"`) Nambari kamili ya kitalu, au `"latest"` kwa kitalu cha mwisho kilichopendekezwa, `"safe"` kwa kitalu salama cha hivi punde, `"finalized"` kwa kitalu cha hivi punde kilichokamilishwa, au `"pending"`, `"earliest"` kwa miamala ambayo bado haipo kwenye kitalu.
+- `toBlock`: `QUANTITY|TAG` - (si lazima, chaguo-msingi: `"latest"`) Nambari kamili ya kitalu, au `"latest"` kwa kitalu cha mwisho kilichopendekezwa, `"safe"` kwa kitalu salama cha hivi punde, `"finalized"` kwa kitalu cha hivi punde kilichokamilishwa, au `"pending"`, `"earliest"` kwa miamala ambayo bado haipo kwenye kitalu.
+- `address`: `DATA|Array`, Baiti 20 - (si lazima) Anwani ya mkataba au orodha ya anwani ambazo logi zinapaswa kutoka.
+- `topics`: `Array of DATA`, - (si lazima) Safu ya Baiti 32 `DATA` mada. Mada hutegemea mpangilio. Kila mada inaweza pia kuwa safu ya DATA yenye chaguo za "au".
 
 ```js
 params: [
@@ -1536,15 +1535,15 @@ params: [
 ]
 ```
 
-**Inarudisha**
+**Inarejesha**
 `QUANTITY` - Kitambulisho cha kichujio.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics":["0x12341234"]}],"id":73}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1552,23 +1551,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### eth_newBlockFilter {#eth-newblockfilter}
 
-Huunda kichujio katika nodi, ili kuarifu wakati kizuizi kipya kinafika.
-Ili kuangalia kama hali imebadilika, piga simu [eth_getFilterChanges](#eth_getfilterchanges).
+Huunda kichujio katika nodi, ili kutoa arifa wakati kitalu kipya kinapowasili.
+Ili kuangalia ikiwa hali imebadilika, ita [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Vigezo**
 Hakuna
 
-**Inarudisha**
+**Inarejesha**
 `QUANTITY` - Kitambulisho cha kichujio.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":73}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1576,23 +1575,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter {#eth-newpendingtransactionfilter}
 
-Huunda kichujio katika nodi, ili kuarifu wakati miamala mipya inayosubiri inafika.
-Ili kuangalia kama hali imebadilika, piga simu [eth_getFilterChanges](#eth_getfilterchanges).
+Huunda kichujio katika nodi, ili kutoa arifa wakati miamala mipya inayosubiri inapowasili.
+Ili kuangalia ikiwa hali imebadilika, ita [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Vigezo**
 Hakuna
 
-**Inarudisha**
+**Inarejesha**
 `QUANTITY` - Kitambulisho cha kichujio.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1600,10 +1599,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### eth_uninstallFilter {#eth-uninstallfilter}
 
-Huondoa kichujio chenye kitambulisho fulani. Inapaswa kuitwa kila wakati ufuatiliaji hauhitajiki tena.
-Zaidi ya hayo, Vichujio huisha muda wake wakati havijaombwa na [eth_getFilterChanges](#eth_getfilterchanges) kwa kipindi fulani.
+Huondoa kichujio chenye kitambulisho kilichotolewa. Inapaswa kuitwa kila wakati uangalizi hauhitajiki tena.
+Zaidi ya hayo, Vichujio huisha muda wake visipoombwa na [eth_getFilterChanges](#eth-getfilterchanges) kwa muda fulani.
 
 **Vigezo**
 
@@ -1615,15 +1614,15 @@ params: [
 ]
 ```
 
-**Inarudisha**
-`Boolean` - `true` ikiwa kichujio kimeondolewa kwa mafanikio, vinginevyo `false`.
+**Inarejesha**
+`Boolean` - `true` ikiwa kichujio kiliondolewa kikamilifu, vinginevyo `false`.
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xb"],"id":73}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1631,9 +1630,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges {#eth-getfilterchanges}
 
-Mbinu ya kupiga kura kwa kichujio, ambayo inarudisha safu ya kumbukumbu zilizotokea tangu upigaji kura wa mwisho.
+Mbinu ya kuchunguza kichujio, ambayo hurejesha safu ya logi zilizotokea tangu uchunguzi wa mwisho.
 
 **Vigezo**
 
@@ -1645,30 +1644,28 @@ params: [
 ]
 ```
 
-**Inarudisha**
-`Array` - Safu ya vitu vya kumbukumbu, au safu tupu ikiwa hakuna kitu kilichobadilika tangu upigaji kura wa mwisho.
+**Inarejesha**
+`Array` - Safu ya vipengee vya logi, au safu tupu ikiwa hakuna kilichobadilika tangu uchunguzi wa mwisho.
 
-- Kwa vichujio vilivyoundwa na `eth_newBlockFilter` marejesho ni hashi za bloku (`DATA`, Baiti 32), k.m., `["0x3454645634534..."]`.
-
-- Kwa vichujio vilivyoundwa na `eth_newPendingTransactionFilter ` marejesho ni hashi za muamala (`DATA`, Baiti 32), k.m., `["0x6345343454645..."]`.
-
-- Kwa vichujio vilivyoundwa na `eth_newFilter` kumbukumbu ni vitu vyenye vigezo vifuatavyo:
-  - `removed`: `TAG` - `true` wakati kumbukumbu iliondolewa, kutokana na upangaji upya wa mnyororo. `false` ikiwa ni kumbukumbu halali.
-  - `logIndex`: `QUANTITY` - nambari kamili ya nafasi ya faharasa ya kumbukumbu katika kizuizi. `null` wakati ni kumbukumbu inayosubiri.
-  - `transactionIndex`: `QUANTITY` - nambari kamili ya nafasi ya faharasa ya miamala ambayo kumbukumbu ilitengenezwa kutoka. `null` wakati ni kumbukumbu inayosubiri.
-  - `transactionHash`: `DATA`, Baiti 32 - hashi ya miamala ambayo kumbukumbu hii ilitengenezwa kutoka. `null` wakati ni kumbukumbu inayosubiri.
-  - `blockHash`: `DATA`, Baiti 32 - hashi ya kizuizi ambapo kumbukumbu hii ilikuwa. `null` wakati inasubiri. `null` wakati ni kumbukumbu inayosubiri.
-  - `blockNumber`: `QUANTITY` - nambari ya kizuizi ambapo kumbukumbu hii ilikuwa. `null` wakati inasubiri. `null` wakati ni kumbukumbu inayosubiri.
-  - `address`: `DATA`, Baiti 20 - anwani ambayo kumbukumbu hii ilitoka.
-  - `data`: `DATA` - data ya kumbukumbu isiyo na faharasa ya urefu-tofauti. (Katika _solidity_: hoja sifuri au zaidi za kumbukumbu zisizo na faharasa za Baiti 32.)
-  - `topics`: `Array of DATA` - Safu ya hoja za kumbukumbu zilizoorodheshwa za Baiti 0 hadi 4 32 za `DATA`. (Katika _solidity_: Mada ya kwanza ni _hashi_ ya saini ya tukio (k.m., `Deposit(address,bytes32,uint256)`), isipokuwa umetangaza tukio hilo na kibainishi `anonymous`.)
+- Kwa vichujio vilivyoundwa na `eth_newBlockFilter` kinachorejeshwa ni heshi za kitalu (`DATA`, Baiti 32), k.m., `["0x3454645634534..."]`.
+- Kwa vichujio vilivyoundwa na `eth_newPendingTransactionFilter ` kinachorejeshwa ni heshi za muamala (`DATA`, Baiti 32), k.m., `["0x6345343454645..."]`.
+- Kwa vichujio vilivyoundwa na `eth_newFilter` logi ni vipengee vyenye vigezo vifuatavyo:
+  - `removed`: `TAG` - `true` wakati logi ilipoondolewa, kutokana na upangaji upya wa mnyororo. `false` ikiwa ni logi halali.
+  - `logIndex`: `QUANTITY` - nambari kamili ya nafasi ya faharisi ya logi katika kitalu. `null` wakati ni logi inayosubiri.
+  - `transactionIndex`: `QUANTITY` - nambari kamili ya nafasi ya faharisi ya miamala ambapo logi iliundwa. `null` wakati ni logi inayosubiri.
+  - `transactionHash`: `DATA`, Baiti 32 - heshi ya miamala ambapo logi hii iliundwa. `null` wakati ni logi inayosubiri.
+  - `blockHash`: `DATA`, Baiti 32 - heshi ya kitalu ambapo logi hii ilikuwepo. `null` wakati inasubiri. `null` wakati ni logi inayosubiri.
+  - `blockNumber`: `QUANTITY` - nambari ya kitalu ambapo logi hii ilikuwepo. `null` wakati inasubiri. `null` wakati ni logi inayosubiri.
+  - `address`: `DATA`, Baiti 20 - anwani ambapo logi hii ilitoka.
+  - `data`: `DATA` - data ya logi isiyo na faharisi yenye urefu unaobadilika. (Katika _Solidity_: hoja sifuri au zaidi za logi zisizo na faharisi za Baiti 32.)
+  - `topics`: `Array of DATA` - Safu ya 0 hadi 4 ya Baiti 32 `DATA` za hoja za logi zenye faharisi. (Katika _Solidity_: Mada ya kwanza ni _heshi_ ya sahihi ya tukio (k.m., `Deposit(address,bytes32,uint256)`), isipokuwa ulitangaza tukio kwa kibainishi cha `anonymous`.)
 
 - **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":73}'
-// Matokeo
+// Result
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1687,13 +1684,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### eth_getFilterLogs {#eth-getfilterlogs}
 
-Inarudisha safu ya kumbukumbu zote zinazolingana na kichujio chenye kitambulisho fulani.
+Hurejesha safu ya logi zote zinazolingana na kichujio chenye id iliyotolewa.
 
 **Vigezo**
 
-1. `QUANTITY` - Kitambulisho cha kichujio.
+1. `QUANTITY` - Id ya kichujio.
 
 ```js
 params: [
@@ -1701,31 +1698,31 @@ params: [
 ]
 ```
 
-**Inarudisha**
-Angalia [eth_getFilterChanges](#eth_getfilterchanges)
+**Hurejesha**
+Tazama [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-Matokeo angalia [eth_getFilterChanges](#eth_getfilterchanges)
+Matokeo tazama [eth_getFilterChanges](#eth-getfilterchanges)
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs {#eth-getlogs}
 
-Inarudisha safu ya kumbukumbu zote zinazolingana na kitu fulani cha kichujio.
+Hurejesha safu ya logi zote zinazolingana na kipengee cha kichujio kilichotolewa.
 
 **Vigezo**
 
-1. `Object` - Chaguzi za kichujio:
+1. `Object` - Chaguo za kichujio:
 
-- `fromBlock`: `QUANTITY|TAG` - (si lazima, chaguo-msingi: `"latest"`) Nambari kamili ya kizuizi, au `"latest"` kwa kizuizi cha mwisho kilichopendekezwa, `"safe"` kwa kizuizi cha mwisho salama, `"finalized"` kwa kizuizi cha mwisho kilichokamilishwa, au `"pending"`, `"earliest"` kwa miamala ambayo bado haiko kwenye kizuizi.
-- `toBlock`: `QUANTITY|TAG` - (si lazima, chaguo-msingi: `"latest"`) Nambari kamili ya kizuizi, au `"latest"` kwa kizuizi cha mwisho kilichopendekezwa, `"safe"` kwa kizuizi cha mwisho salama, `"finalized"` kwa kizuizi cha mwisho kilichokamilishwa, au `"pending"`, `"earliest"` kwa miamala ambayo bado haiko kwenye kizuizi.
-- `address`: `DATA|Array`, Baiti 20 - (si lazima) Anwani ya mkataba au orodha ya anwani ambazo kumbukumbu zinapaswa kutoka.
-- `topics`: `Array of DATA`, - (si lazima) Safu ya mada za `DATA` za Baiti 32. Mada zinategemea mpangilio. Kila mada inaweza pia kuwa safu ya DATA na chaguzi za "au".
-- `blockHash`: `DATA`, Baiti 32 - (si lazima, **baadaye**) Kwa kuongezwa kwa EIP-234, `blockHash` itakuwa chaguo jipya la kichujio ambalo linazuia kumbukumbu zilizorudishwa kwa kizuizi kimoja na hashi ya baiti 32 `blockHash`. Kutumia `blockHash` ni sawa na `fromBlock` = `toBlock` = nambari ya kizuizi na hashi `blockHash`. Ikiwa `blockHash` ipo katika vigezo vya kichujio, basi `fromBlock` wala `toBlock` haziruhusiwi.
+- `fromBlock`: `QUANTITY|TAG` - (si lazima, chaguo-msingi: `"latest"`) Nambari kamili ya kitalu, au `"latest"` kwa kitalu cha mwisho kilichopendekezwa, `"safe"` kwa kitalu salama cha hivi punde, `"finalized"` kwa kitalu cha hivi punde kilichokamilishwa, au `"pending"`, `"earliest"` kwa miamala ambayo bado haipo kwenye kitalu.
+- `toBlock`: `QUANTITY|TAG` - (si lazima, chaguo-msingi: `"latest"`) Nambari kamili ya kitalu, au `"latest"` kwa kitalu cha mwisho kilichopendekezwa, `"safe"` kwa kitalu salama cha hivi punde, `"finalized"` kwa kitalu cha hivi punde kilichokamilishwa, au `"pending"`, `"earliest"` kwa miamala ambayo bado haipo kwenye kitalu.
+- `address`: `DATA|Array`, Baiti 20 - (si lazima) Anwani ya mkataba au orodha ya anwani ambazo logi zinapaswa kutoka.
+- `topics`: `Array of DATA`, - (si lazima) Safu ya mada za `DATA` za Baiti 32. Mada zinategemea mpangilio. Kila mada inaweza pia kuwa safu ya DATA yenye chaguo za "au".
+- `blockHash`: `DATA`, Baiti 32 - (si lazima, **ya baadaye**) Pamoja na nyongeza ya EIP-234, `blockHash` itakuwa chaguo jipya la kichujio ambalo huzuia logi zinazorejeshwa kwenye kitalu kimoja chenye heshi ya baiti 32 `blockHash`. Kutumia `blockHash` ni sawa na `fromBlock` = `toBlock` = nambari ya kitalu yenye heshi `blockHash`. Ikiwa `blockHash` ipo kwenye vigezo vya kichujio, basi `fromBlock` wala `toBlock` haziruhusiwi.
 
 ```js
 params: [
@@ -1737,25 +1734,25 @@ params: [
 ]
 ```
 
-**Inarudisha**
-Angalia [eth_getFilterChanges](#eth_getfilterchanges)
+**Hurejesha**
+Tazama [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Mfano**
 
 ```js
-// Ombi
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-Matokeo angalia [eth_getFilterChanges](#eth_getfilterchanges)
+Kwa matokeo tazama [eth_getFilterChanges](#eth-getfilterchanges)
 
 ## Mfano wa Matumizi {#usage-example}
 
-### Kupeleka mkataba kwa kutumia JSON_RPC {#deploying-contract}
+### Kusambaza mkataba kwa kutumia JSON_RPC {#deploying-contract}
 
-Sehemu hii inajumuisha onyesho la jinsi ya kupeleka mkataba kwa kutumia kiolesura cha RPC pekee. Kuna njia mbadala za kupeleka mikataba ambapo utata huu unaondolewa—kwa mfano, kutumia maktaba zilizojengwa juu ya kiolesura cha RPC kama vile [web3.js](https://web3js.readthedocs.io/) na [web3.py](https://github.com/ethereum/web3.py). Uondoaji huu kwa ujumla ni rahisi kuelewa na una makosa machache, lakini bado ni muhimu kuelewa kinachoendelea chini ya kofia.
+Sehemu hii inajumuisha onyesho la jinsi ya kusambaza mkataba kwa kutumia kiolesura cha RPC pekee. Kuna njia mbadala za kusambaza mikataba ambapo ugumu huu unafichwa—kwa mfano, kutumia maktaba zilizojengwa juu ya kiolesura cha RPC kama vile [web3.js](https://web3js.readthedocs.io/) na [web3.py](https://github.com/ethereum/web3.py). Ufichaji huu kwa ujumla ni rahisi kueleweka na hauna uwezekano mkubwa wa makosa, lakini bado ni muhimu kuelewa jinsi inavyofanya kazi kiufundi.
 
-Ifuatayo ni mkataba-erevu ulio wazi unaoitwa `Multiply7` ambao utapelekwa kwa kutumia kiolesura cha JSON-RPC kwa nodi ya Ethereum. Mafunzo haya yanadhania msomaji tayari anaendesha nodi ya Geth. Maelezo zaidi kuhusu nodi na wateja yanapatikana [hapa](/developers/docs/nodes-and-clients/run-a-node). Tafadhali rejelea nyaraka za [mteja](/developers/docs/nodes-and-clients/) binafsi ili kuona jinsi ya kuanza HTTP JSON-RPC kwa wateja wasio wa Geth. Wateja wengi hutoa huduma kwa chaguo-msingi kwenye `localhost:8545`.
+Ufuatao ni mkataba mahiri wa moja kwa moja unaoitwa `Multiply7` ambao utasambazwa kwa kutumia kiolesura cha JSON-RPC kwenye nodi ya Ethereum. Mafunzo haya yanachukulia kuwa msomaji tayari anaendesha nodi ya Geth. Maelezo zaidi kuhusu nodi na wateja yanapatikana [hapa](/developers/docs/nodes-and-clients/run-a-node). Tafadhali rejelea nyaraka za kila [kiteja](/developers/docs/nodes-and-clients/) ili kuona jinsi ya kuanzisha HTTP JSON-RPC kwa viteja ambavyo si vya Geth. Viteja vingi kwa chaguo-msingi huhudumia kwenye `localhost:8545`.
 
 ```javascript
 contract Multiply7 {
@@ -1767,15 +1764,15 @@ contract Multiply7 {
 }
 ```
 
-Jambo la kwanza kufanya ni kuhakikisha kiolesura cha HTTP RPC kimewashwa. Hii inamaanisha tunatoa Geth na bendera ya `--http` wakati wa kuanza. Katika mfano huu tunatumia nodi ya Geth kwenye mnyororo wa kibinafsi wa maendeleo. Kwa kutumia mbinu hii hatuhitaji ether kwenye mtandao halisi.
+Jambo la kwanza kufanya ni kuhakikisha kiolesura cha HTTP RPC kimewezeshwa. Hii inamaanisha tunaipa Geth alama ya `--http` wakati wa kuanza. Katika mfano huu tunatumia nodi ya Geth kwenye mnyororo wa kibinafsi wa maendeleo. Kwa kutumia mbinu hii hatuhitaji Etha kwenye mtandao halisi.
 
 ```bash
 geth --http --dev console 2>>geth.log
 ```
 
-Hii itaanza kiolesura cha HTTP RPC kwenye `http://localhost:8545`.
+Hii itaanzisha kiolesura cha HTTP RPC kwenye `http://localhost:8545`.
 
-Tunaweza kuthibitisha kuwa kiolesura kinafanya kazi kwa kupata anwani ya coinbase (kwa kupata anwani ya kwanza kutoka kwenye safu ya akaunti) na salio kwa kutumia [curl](https://curl.se). Tafadhali kumbuka kuwa data katika mifano hii itatofautiana kwenye nodi yako ya ndani. Ikiwa unataka kujaribu amri hizi, badilisha vigezo vya ombi katika ombi la pili la curl na matokeo yaliyorudishwa kutoka kwa la kwanza.
+Tunaweza kuthibitisha kuwa kiolesura kinafanya kazi kwa kupata anwani ya Coinbase (kwa kupata anwani ya kwanza kutoka kwenye orodha ya akaunti) na salio kwa kutumia [curl](https://curl.se). Tafadhali kumbuka kuwa data katika mifano hii itatofautiana kwenye nodi yako ya ndani. Ikiwa unataka kujaribu amri hizi, badilisha vigezo vya ombi katika ombi la pili la curl na matokeo yaliyorejeshwa kutoka kwa la kwanza.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
@@ -1785,16 +1782,16 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-Kwa sababu nambari zimesimbwa kwa hex, salio hurudishwa katika wei kama mfuatano wa hex. Ikiwa tunataka kuwa na salio katika ether kama nambari tunaweza kutumia web3 kutoka kwa koni ya Geth.
+Kwa sababu nambari zimesimbwa kwa heksadesimali, salio hurejeshwa katika Wei kama mfuatano wa heksadesimali. Ikiwa tunataka kuwa na salio katika Etha kama nambari tunaweza kutumia web3 kutoka kwenye kiweko cha Geth.
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-Sasa kwa kuwa kuna ether fulani kwenye mnyororo wetu wa kibinafsi wa maendeleo, tunaweza kupeleka mkataba. Hatua ya kwanza ni kuandaa mkataba wa Multiply7 kuwa msimbo wa baiti ambao unaweza kutumwa kwa EVM. Ili kusakinisha solc, mkusanyaji wa Solidity, fuata [nyaraka za Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Unaweza kutaka kutumia toleo la zamani la `solc` ili kuendana na [toleo la mkusanyaji lililotumika kwa mfano wetu](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
+Kwa kuwa sasa kuna Etha kwenye mnyororo wetu wa kibinafsi wa maendeleo, tunaweza kusambaza mkataba. Hatua ya kwanza ni kukusanya mkataba wa Multiply7 kuwa msimbo wa baiti ambao unaweza kutumwa kwa EVM. Ili kusakinisha solc, kikusanyaji cha Solidity, fuata [nyaraka za Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Unaweza kutaka kutumia toleo la zamani la `solc` ili lilingane na [toleo la kikusanyaji lililotumika kwa mfano wetu](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
 
-Hatua inayofuata ni kuandaa mkataba wa Multiply7 kuwa msimbo wa baiti unaoweza kutumwa kwa EVM.
+Hatua inayofuata ni kukusanya mkataba wa Multiply7 kuwa msimbo wa baiti ambao unaweza kutumwa kwa EVM.
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1804,50 +1801,49 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-Sasa kwa kuwa tuna msimbo uliokusanywa tunahitaji kuamua ni kiasi gani cha gesi kinagharimu kuupeleka. Kiolesura cha RPC kina mbinu ya `eth_estimateGas` ambayo itatupa makadirio.
+Kwa kuwa sasa tuna msimbo uliokusanywa tunahitaji kubaini ni kiasi gani cha gesi kinagharimu kuusambaza. Kiolesura cha RPC kina mbinu ya `eth_estimateGas` ambayo itatupa makadirio.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":5,"result":"0x1c31e"}
 ```
 
-Na hatimaye peleka mkataba.
+Na hatimaye kusambaza mkataba.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "gas": "0x1c31e", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 6}' -H "Content-Type: application/json" localhost:8545
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-Muamala unakubaliwa na nodi na hashi ya muamala inarudishwa. Hashi hii inaweza kutumika kufuatilia muamala. Hatua inayofuata ni kuamua anwani ambapo mkataba wetu umepelekwa. Kila muamala uliotekelezwa utaunda risiti. Risiti hii ina taarifa mbalimbali kuhusu muamala kama vile ni katika kizuizi gani muamala ulijumuishwa na ni kiasi gani cha gesi kilitumika na EVM. Ikiwa muamala
-unaunda mkataba pia utakuwa na anwani ya mkataba. Tunaweza kupata risiti kwa kutumia mbinu ya `eth_getTransactionReceipt` ya RPC.
+Muamala unakubaliwa na nodi na heshi ya muamala inarejeshwa. Heshi hii inaweza kutumika kufuatilia muamala. Hatua inayofuata ni kubaini anwani ambapo mkataba wetu umesambazwa. Kila muamala uliotekelezwa utaunda stakabadhi. Stakabadhi hii ina taarifa mbalimbali kuhusu muamala kama vile muamala ulijumuishwa katika kitalu kipi na ni kiasi gani cha gesi kilitumiwa na EVM. Ikiwa muamala unaunda mkataba pia utakuwa na anwani ya mkataba. Tunaweza kupata stakabadhi kwa kutumia mbinu ya RPC ya `eth_getTransactionReceipt`.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-Mkataba wetu uliundwa kwenye `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Matokeo ya null badala ya risiti inamaanisha muamala bado haujajumuishwa kwenye kizuizi. Subiri kwa muda na uangalie ikiwa mteja wako wa makubaliano anafanya kazi na ujaribu tena.
+Mkataba wetu uliundwa kwenye `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Matokeo tupu badala ya stakabadhi inamaanisha muamala haujajumuishwa kwenye kitalu bado. Subiri kwa muda na uangalie ikiwa mteja wa mwafaka wako unafanya kazi na ujaribu tena.
 
-#### Kuwasiliana na mikataba-erevu {#interacting-with-smart-contract}
+#### Kuingiliana na mikataba mahiri {#interacting-with-smart-contract}
 
-Katika mfano huu tutakuwa tunatuma muamala kwa kutumia `eth_sendTransaction` kwa mbinu ya `multiply` ya mkataba.
+Katika mfano huu tutakuwa tunatuma muamala kwa kutumia `eth_sendTransaction` kwenye mbinu ya `multiply` ya mkataba.
 
-`eth_sendTransaction` inahitaji hoja kadhaa, hasa `from`, `to` na `data`. `Kutoka` ni anwani ya umma ya akaunti yetu, na `kwenda` ni anwani ya mkataba. Hoja ya `data` ina mzigo unaobainisha ni mbinu gani lazima itumike na kwa hoja gani. Hapa ndipo [ABI (application binary interface)](https://docs.soliditylang.org/en/latest/abi-spec.html) inapoingia. ABI ni faili ya JSON inayobainisha jinsi ya kubainisha na kusimba data kwa ajili ya EVM.
+`eth_sendTransaction` inahitaji hoja kadhaa, haswa `from`, `to` na `data`. `From` ni anwani ya umma ya akaunti yetu, na `to` ni anwani ya mkataba. Hoja ya `data` ina mzigo unaofafanua ni mbinu gani lazima iitwe na kwa hoja zipi. Hapa ndipo [ABI (kiolesura cha mfumo wa jozi cha programu)](https://docs.soliditylang.org/en/latest/abi-spec.html) inapotumika. ABI ni faili la JSON ambalo linafafanua jinsi ya kufafanua na kusimba data kwa ajili ya EVM.
 
-Baiti za mzigo hubainisha ni mbinu gani katika mkataba inayoitwa. Hizi ni baiti 4 za kwanza kutoka kwenye hashi ya Keccak juu ya jina la utendakazi na aina zake za hoja, zilizosimbwa kwa hex. Kazi ya kuzidisha inakubali uint ambayo ni jina lingine la uint256. Hii inatuacha na:
+Baiti za mzigo hufafanua ni mbinu gani katika mkataba inaitwa. Hizi ni baiti 4 za kwanza kutoka kwenye heshi ya Keccak juu ya jina la utendakazi na aina zake za hoja, zilizosimbwa kwa heksadesimali. Utendakazi wa kuzidisha unakubali uint ambayo ni jina mbadala la uint256. Hii inatuacha na:
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
 // "0xc6888fa1"
 ```
 
-Hatua inayofuata ni kusimba hoja. Kuna uint256 moja tu, tuseme, thamani 6. ABI ina sehemu inayobainisha jinsi ya kusimba aina za uint256.
+Hatua inayofuata ni kusimba hoja. Kuna uint256 moja tu, tuseme, thamani ya 6. ABI ina sehemu inayobainisha jinsi ya kusimba aina za uint256.
 
-`int<M>: enc(X)` ni usimbaji wa kikamilisho cha mbili-kubwa-mwisho cha X, kilichopachikwa kwenye upande wa juu (kushoto) na 0xff kwa X hasi na baiti > sifuri kwa X chanya ili urefu uwe zidisho la baiti 32.
+`int<M>: enc(X)` ni usimbaji wa kianzia-kikubwa wa kikamilisho cha mbili cha X, kilichojazwa upande wa mpangilio wa juu (kushoto) na 0xff kwa X hasi na kwa baiti > sifuri kwa X chanya ili urefu uwe kizidisho cha baiti 32.
 
-Hii inasimba hadi `0000000000000000000000000000000000000000000000000000000000000006`.
+Hii inasimbwa kuwa `0000000000000000000000000000000000000000000000000000000000000006`.
 
-Kuchanganya kiteuzi cha kazi na hoja iliyosimbwa, data yetu itakuwa `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`.
+Kwa kuchanganya kiteuzi cha utendakazi na hoja iliyosimbwa data yetu itakuwa `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`.
 
 Hii sasa inaweza kutumwa kwa nodi:
 
@@ -1856,7 +1852,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":8,"jsonrpc":"2.0","result":"0x759cf065cbc22e9d779748dc53763854e5376eea07409e590c990eafc0869d74"}
 ```
 
-Kwa kuwa muamala ulitumwa, hashi ya muamala ilirejeshwa. Kupata risiti kunatoa:
+Kwa kuwa muamala ulitumwa, heshi ya muamala ilirejeshwa. Kupata stakabadhi kunatoa:
 
 ```javascript
 {
@@ -1880,7 +1876,7 @@ Kwa kuwa muamala ulitumwa, hashi ya muamala ilirejeshwa. Kupata risiti kunatoa:
 }
 ```
 
-Risiti ina kumbukumbu. Kumbukumbu hii ilitolewa na EVM kwenye utekelezaji wa muamala na kujumuishwa kwenye risiti. Kazi ya `multiply` inaonyesha kuwa tukio la `Print` liliibuliwa na ingizo mara 7. Kwa kuwa hoja ya tukio la `Print` ilikuwa uint256 tunaweza kuisimbua kulingana na sheria za ABI ambazo zitatuacha na desimali inayotarajiwa 42. Kando na data inafaa kuzingatia kwamba mada zinaweza kutumika kubainisha ni tukio gani lililounda kumbukumbu:
+Stakabadhi ina logi. Logi hii ilizalishwa na EVM wakati wa utekelezaji wa muamala na kujumuishwa kwenye stakabadhi. Utendakazi wa `multiply` unaonyesha kuwa tukio la `Print` liliibuliwa na ingizo mara 7. Kwa kuwa hoja ya tukio la `Print` ilikuwa uint256 tunaweza kuisimbua kulingana na sheria za ABI ambazo zitatupa desimali 42 inayotarajiwa. Mbali na data inafaa kuzingatia kuwa mada zinaweza kutumika kubaini ni tukio gani liliunda logi:
 
 ```javascript
 web3.sha3("Print(uint256)")
@@ -1891,8 +1887,8 @@ Huu ulikuwa utangulizi mfupi tu wa baadhi ya kazi za kawaida, ukionyesha matumiz
 
 ## Mada zinazohusiana {#related-topics}
 
-- [Ufafanuzi wa JSON-RPC](http://www.jsonrpc.org/specification)
-- [Nodi na wateja](/developers/docs/nodes-and-clients/)
+- [Uainisho wa JSON-RPC](http://www.jsonrpc.org/specification)
+- [Nodi na viteja](/developers/docs/nodes-and-clients/)
 - [API za JavaScript](/developers/docs/apis/javascript/)
 - [API za Backend](/developers/docs/apis/backend/)
-- [Wateja wa utekelezaji](/developers/docs/nodes-and-clients/#execution-clients)
+- [Viteja vya utekelezaji](/developers/docs/nodes-and-clients/#execution-clients)

@@ -1,0 +1,755 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/gas/index.md",
+  "generatedAt": "2026-06-18T21:36:57.952Z",
+  "rootHash": "3471327389e7",
+  "tree": {
+    "contentHash": "5572fe0abd64",
+    "anchorHash": "2aaf04a9bf60",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "f5544e76fdee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2199122d82b5"
+      },
+      "frontmatter:description": {
+        "contentHash": "b703022fd4cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "c2d44f79335e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:2": {
+        "contentHash": "28022a07e153",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "cbd1c4f5a5e5",
+        "anchorHash": "3830dc80d160",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "ed40dad09508",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "81dc075c3d55",
+            "anchorHash": "d20c9fa6d21a"
+          },
+          "prose:3": {
+            "contentHash": "44359e21492d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "f7925209bc63",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "what-is-gas": {
+        "contentHash": "bdc4972d8366",
+        "anchorHash": "2b4880a6e0cc",
+        "labelHash": "ddff5b514f29",
+        "children": {
+          "_label": {
+            "contentHash": "ddff5b514f29",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "e6081f3a7d5c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "070f72356805",
+            "anchorHash": "a371712d1acb"
+          },
+          "prose:5": {
+            "contentHash": "b12227817e20",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "931d210378d9",
+            "anchorHash": "e395d21ce0ea"
+          },
+          "prose:6": {
+            "contentHash": "39f281ce1dc9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "a5a4244986ca",
+            "anchorHash": "d05e3aae8265"
+          },
+          "prose:7": {
+            "contentHash": "f89837b51749",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "cc99b23eb56b",
+            "anchorHash": "2e25a2f751df"
+          },
+          "prose:8": {
+            "contentHash": "b759759e1981",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "image:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "how-are-gas-fees-calculated": {
+        "contentHash": "7646b262cf14",
+        "anchorHash": "8549b92db467",
+        "labelHash": "b8cfc08b305b",
+        "children": {
+          "_label": {
+            "contentHash": "b8cfc08b305b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:12": {
+            "contentHash": "65ea0affb407",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4347a1eeb801"
+          },
+          "prose:13": {
+            "contentHash": "44359e21492d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "bc2d4b8970de"
+          },
+          "prose:14": {
+            "contentHash": "8a6860ca421b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4347a1eeb801"
+          },
+          "prose:15": {
+            "contentHash": "382d158261de",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "bc2d4b8970de"
+          },
+          "prose:16": {
+            "contentHash": "d67ee9f15b9e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4347a1eeb801"
+          },
+          "prose:17": {
+            "contentHash": "e44901448952",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3092a5f0dba0"
+          },
+          "prose:18": {
+            "contentHash": "5b71f533bc08",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3092a5f0dba0"
+          },
+          "prose:19": {
+            "contentHash": "6339fe20d83a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:7": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "139a3af8c814"
+          },
+          "prose:20": {
+            "contentHash": "88b89129a53e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4347a1eeb801"
+          },
+          "prose:21": {
+            "contentHash": "e0abd3da4ce6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:9": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "bc2d4b8970de"
+          },
+          "prose:22": {
+            "contentHash": "8361d4b43bda",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:10": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "705f81b0c31d"
+          },
+          "prose:23": {
+            "contentHash": "da572b718e08",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:11": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4347a1eeb801"
+          },
+          "prose:24": {
+            "contentHash": "cea5a48c1db6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "base-fee": {
+            "contentHash": "306badbff222",
+            "anchorHash": "83d27934b11e",
+            "labelHash": "6efacc6c89ed",
+            "children": {
+              "_label": {
+                "contentHash": "6efacc6c89ed",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "295fc86a2dde",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "8d16331e0eb9"
+              },
+              "prose:3": {
+                "contentHash": "7175517a370b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "a4e696db097d"
+              },
+              "prose:4": {
+                "contentHash": "422f51bfc240",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "inline-code:0",
+              "prose:3",
+              "inline-code:1",
+              "prose:4"
+            ]
+          },
+          "priority-fee": {
+            "contentHash": "d5258ebe7381",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "ae3ee91b1ab4",
+            "children": {
+              "_label": {
+                "contentHash": "ae3ee91b1ab4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "fde4515f36b5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "maxfee": {
+            "contentHash": "4196e4251804",
+            "anchorHash": "e023a1eb8ae8",
+            "labelHash": "3c4276261081",
+            "children": {
+              "_label": {
+                "contentHash": "3c4276261081",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "9b522dfeec56",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "7c58b14a800e"
+              },
+              "prose:2": {
+                "contentHash": "7edb5d5a7f7a",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "inline-code:0",
+              "prose:2"
+            ]
+          },
+          "block-size": {
+            "contentHash": "7572cbdd9a57",
+            "anchorHash": "c07206167324",
+            "labelHash": "cd5c76d24155",
+            "children": {
+              "_label": {
+                "contentHash": "cd5c76d24155",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "7e016a8a9e1a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "2eec2f43ccd3",
+                "anchorHash": "33d4aca38983"
+              },
+              "prose:3": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "100a42db9d9e",
+                "anchorHash": "5fdb077865bd"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1"
+            ]
+          },
+          "calculating-fees-in-practice": {
+            "contentHash": "9fc21db3ca62",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "45024e98b690",
+            "children": {
+              "_label": {
+                "contentHash": "45024e98b690",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e3f2c804d1cb",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:12",
+          "inline-code:0",
+          "prose:13",
+          "inline-code:1",
+          "prose:14",
+          "inline-code:2",
+          "prose:15",
+          "inline-code:3",
+          "prose:16",
+          "inline-code:4",
+          "prose:17",
+          "inline-code:5",
+          "prose:18",
+          "inline-code:6",
+          "prose:19",
+          "inline-code:7",
+          "prose:20",
+          "inline-code:8",
+          "prose:21",
+          "inline-code:9",
+          "prose:22",
+          "inline-code:10",
+          "prose:23",
+          "inline-code:11",
+          "prose:24",
+          "base-fee",
+          "priority-fee",
+          "maxfee",
+          "block-size",
+          "calculating-fees-in-practice"
+        ]
+      },
+      "why-do-gas-fees-exist": {
+        "contentHash": "c62053108ebb",
+        "anchorHash": "9f336a63f18e",
+        "labelHash": "b1dcb90d3e85",
+        "children": {
+          "_label": {
+            "contentHash": "b1dcb90d3e85",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "8e6e5332a644",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4a84d8b40318"
+          },
+          "prose:4": {
+            "contentHash": "ed415043db31",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:1": {
+            "contentHash": "a59651dbc0e1",
+            "anchorHash": "8831d07d5dc2"
+          },
+          "prose:5": {
+            "contentHash": "b12227817e20",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "931d210378d9",
+            "anchorHash": "e395d21ce0ea"
+          },
+          "prose:6": {
+            "contentHash": "d2e2adf7177b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "image:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "what-is-gas-limit": {
+        "contentHash": "39dcf1e506f9",
+        "anchorHash": "e3bf24aee659",
+        "labelHash": "1d943a0fe99f",
+        "children": {
+          "_label": {
+            "contentHash": "1d943a0fe99f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "8660b0885e5b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:2": {
+            "contentHash": "bb5d7c0d7a28",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "why-can-gas-fees-get-so-high": {
+        "contentHash": "7314a6b03be5",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "94bf6cc9d829",
+        "children": {
+          "_label": {
+            "contentHash": "94bf6cc9d829",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1b976237ddf4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "initiatives-to-reduce-gas-costs": {
+        "contentHash": "9edcbb767d0d",
+        "anchorHash": "ffd3c2a400c5",
+        "labelHash": "ef309277d206",
+        "children": {
+          "_label": {
+            "contentHash": "ef309277d206",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "32db59bb1ded",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8fea95b70c0c",
+            "anchorHash": "0d9f7701bb4e"
+          },
+          "prose:3": {
+            "contentHash": "8cb5ca75d567",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "5a5341f473a1",
+            "anchorHash": "6c7d9ade8e1f"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "monitoring-gas-fees": {
+        "contentHash": "731b08bd6c7c",
+        "anchorHash": "25df325247d1",
+        "labelHash": "6848de463c35",
+        "children": {
+          "_label": {
+            "contentHash": "6848de463c35",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "30f2abc3a2be",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d0299bb7f22b",
+            "anchorHash": "3d21241828a2"
+          },
+          "prose:6": {
+            "contentHash": "1d93486dd2ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3dee05652774",
+            "anchorHash": "d195727de38a"
+          },
+          "prose:7": {
+            "contentHash": "26a1e98351c2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "ce42adafba1e",
+            "anchorHash": "d0bc2f3a6f63"
+          },
+          "prose:8": {
+            "contentHash": "0852c4d8ab9b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "1ccf2eb604cf",
+            "anchorHash": "bc0d803b838a"
+          },
+          "prose:9": {
+            "contentHash": "a7dee4dc266f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "175f2a1b837b",
+            "anchorHash": "c1314209b85f"
+          },
+          "prose:10": {
+            "contentHash": "7d34ca1e20d4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "related-tools": {
+        "contentHash": "7fa3afbc43b1",
+        "anchorHash": "42fbf4910a2d",
+        "labelHash": "3da6e153ee8c",
+        "children": {
+          "_label": {
+            "contentHash": "3da6e153ee8c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "cc481a547b54",
+            "anchorHash": "168fc4c56039"
+          },
+          "prose:3": {
+            "contentHash": "657a3d55a78d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "fb8e2d3ff144",
+            "anchorHash": "9e4d3e7efe95"
+          },
+          "prose:4": {
+            "contentHash": "e74c35f812b1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "6c70a3b06175",
+        "anchorHash": "030995b42c3c",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "70b717453854",
+            "anchorHash": "0d7f48de3ba2"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3b8b079f7225",
+            "anchorHash": "02bb605d72a7"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "b3054deb8294",
+            "anchorHash": "dec0501c4da0"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "e313e79bcb1f",
+            "anchorHash": "2be2a692f09f"
+          },
+          "prose:10": {
+            "contentHash": "1bff53634dc7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "f2be23535e0a",
+            "anchorHash": "9e1c73ab5a21"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "b1032201e598",
+            "anchorHash": "f82e7918b17e"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "prerequisites",
+      "what-is-gas",
+      "how-are-gas-fees-calculated",
+      "why-do-gas-fees-exist",
+      "what-is-gas-limit",
+      "why-can-gas-fees-get-so-high",
+      "initiatives-to-reduce-gas-costs",
+      "monitoring-gas-fees",
+      "related-tools",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+}

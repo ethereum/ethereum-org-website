@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-19T19:13:17.248Z",
+  "englishManifestHash": "26080b14f24a",
+  "placeholderOrder": [
+    "LINK-59bc42",
+    "LINK-d6e49f",
+    "LINK-17d370",
+    "LINK-dad05d",
+    "LINK-d4700f",
+    "CODE-238c19",
+    "CODEBLOCK-8a8aa4",
+    "CODE-238c19",
+    "CODEBLOCK-6b67e3",
+    "LINK-7e594f",
+    "LINK-9b7bc7",
+    "LINK-a37b26",
+    "LINK-135410",
+    "LINK-e49d01",
+    "LINK-1eab56",
+    "LINK-be9b66",
+    "LINK-7395eb",
+    "LINK-65c406",
+    "CODE-d79677",
+    "CODE-3a2dc0",
+    "LINK-c4e29b",
+    "CODE-dba27c",
+    "CODEBLOCK-a4cf5b",
+    "LINK-0360b8",
+    "LINK-501b35",
+    "LINK-fe027c",
+    "LINK-7fef0a",
+    "LINK-fdac47",
+    "LINK-9bbb62",
+    "LINK-1df00c",
+    "LINK-1a6b32",
+    "LINK-f45f48",
+    "LINK-6af2e6",
+    "LINK-d762d4",
+    "LINK-ac8846"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-8a8aa4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6b67e3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a4cf5b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-238c19": {
+      "type": "inline-code",
+      "values": {
+        "content": "Ownable"
+      }
+    },
+    "CODE-d79677": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm"
+      }
+    },
+    "CODE-3a2dc0": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm install"
+      }
+    },
+    "CODE-dba27c": {
+      "type": "inline-code",
+      "values": {
+        "content": "node_modules"
+      }
+    },
+    "LINK-59bc42": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/"
+      }
+    },
+    "LINK-d6e49f": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries"
+      }
+    },
+    "LINK-17d370": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance"
+      }
+    },
+    "LINK-d4700f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol"
+      }
+    },
+    "LINK-dad05d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts"
+      }
+    },
+    "LINK-7e594f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/3.x/utilities#math"
+      }
+    },
+    "LINK-9b7bc7": {
+      "type": "link",
+      "values": {
+        "url": "https://dappsys.readthedocs.io/en/latest/ds_math.html"
+      }
+    },
+    "LINK-a37b26": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/composability/"
+      }
+    },
+    "LINK-135410": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/"
+      }
+    },
+    "LINK-e49d01": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/understand-the-erc-20-token-smart-contract/"
+      }
+    },
+    "LINK-1eab56": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/HQ20/contracts/blob/master/contracts/token/README.md"
+      }
+    },
+    "LINK-be9b66": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/dapphub/ds-token/"
+      }
+    },
+    "LINK-7395eb": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/3.x/erc20"
+      }
+    },
+    "LINK-65c406": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2612"
+      }
+    },
+    "LINK-c4e29b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/compiling/"
+      }
+    },
+    "LINK-0360b8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/languages/"
+      }
+    },
+    "LINK-501b35": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits"
+      }
+    },
+    "LINK-fe027c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/"
+      }
+    },
+    "LINK-7fef0a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts"
+      }
+    },
+    "LINK-fdac47": {
+      "type": "link",
+      "values": {
+        "url": "https://forum.openzeppelin.com/c/general/16"
+      }
+    },
+    "LINK-9bbb62": {
+      "type": "link",
+      "values": {
+        "url": "https://dappsys.readthedocs.io/"
+      }
+    },
+    "LINK-1df00c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/dapphub/dappsys"
+      }
+    },
+    "LINK-1a6b32": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/HQ20/contracts"
+      }
+    },
+    "LINK-f45f48": {
+      "type": "link",
+      "values": {
+        "url": "https://portal.thirdweb.com/contracts/build/overview"
+      }
+    },
+    "LINK-6af2e6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/thirdweb-dev/contracts"
+      }
+    },
+    "LINK-d762d4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/security/"
+      }
+    },
+    "LINK-ac8846": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/understand-the-erc-20-token-smart-contract/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T19:13:17.248Z",
+      "status": "success"
+    }
+  }
+}

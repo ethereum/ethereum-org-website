@@ -1,15 +1,15 @@
 ---
 title: Alamat jaringan
-description: Pengenalan tentang alamat jaringan.
+description: Pengantar tentang alamat jaringan.
 lang: id
 sidebarDepth: 2
 ---
 
-Node [Ethereum](/) harus mengidentifikasi diri mereka dengan beberapa informasi dasar untuk terhubung ke peer. Untuk memastikan setiap calon peer dapat menafsirkan informasi ini, informasi tersebut disampaikan dalam salah satu dari tiga format standar yang dapat dipahami oleh node Ethereum mana pun: multiaddr, enode, atau Ethereum Node Records (ENR). ENR adalah standar saat ini untuk alamat jaringan Ethereum.
+Node [Ethereum](/) harus mengidentifikasi diri mereka dengan beberapa informasi dasar untuk terhubung ke peer. Untuk memastikan setiap peer potensial dapat menafsirkan informasi ini, informasi tersebut diteruskan dalam salah satu dari tiga format standar yang dapat dipahami oleh node Ethereum mana pun: multiaddr, enode, atau Ethereum Node Records (ENR). ENR adalah standar saat ini untuk alamat jaringan Ethereum.
 
 ## Prasyarat {#prerequisites}
 
-Beberapa pemahaman tentang [lapisan jaringan](/developers/docs/networking-layer/) Ethereum diperlukan untuk memahami halaman ini.
+Pemahaman tentang [lapisan jaringan](/developers/docs/networking-layer/) Ethereum diperlukan untuk memahami halaman ini.
 
 ## Multiaddr {#multiaddr}
 
@@ -31,7 +31,7 @@ Dalam contoh berikut, URL node mendeskripsikan node dengan alamat IP `10.3.58.6`
 
 ## Ethereum Node Records (ENR) {#enr}
 
-Ethereum Node Records (ENR) adalah format standar untuk alamat jaringan di Ethereum. Mereka menggantikan multiaddr dan enode. Ini sangat berguna karena memungkinkan pertukaran informasi yang lebih besar antar node. ENR berisi tanda tangan, nomor urut, dan bidang yang merinci skema identitas yang digunakan untuk menghasilkan dan memvalidasi tanda tangan. ENR juga dapat diisi dengan data arbitrer yang diatur sebagai pasangan kunci-nilai. Pasangan kunci-nilai ini berisi alamat IP node dan informasi tentang sub-protokol yang dapat digunakan oleh node. Klien konsensus menggunakan [struktur ENR spesifik](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) untuk mengidentifikasi boot node dan juga menyertakan bidang `eth2` yang berisi informasi tentang fork Ethereum saat ini dan subnet gosip pengesahan (ini menghubungkan node ke sekumpulan peer tertentu yang pengesahannya diagregasi bersama).
+Ethereum Node Records (ENR) adalah format standar untuk alamat jaringan di Ethereum. Format ini menggantikan multiaddr dan enode. Format ini sangat berguna karena memungkinkan pertukaran informasi yang lebih besar antar node. ENR berisi tanda tangan, nomor urut, dan bidang yang merinci skema identitas yang digunakan untuk menghasilkan dan memvalidasi tanda tangan. ENR juga dapat diisi dengan data arbitrer yang diatur sebagai pasangan kunci-nilai. Pasangan kunci-nilai ini berisi alamat IP node dan informasi tentang sub-protokol yang dapat digunakan oleh node tersebut. Klien konsensus menggunakan [struktur ENR spesifik](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) untuk mengidentifikasi node boot dan juga menyertakan bidang `eth2` yang berisi informasi tentang percabangan Ethereum saat ini dan subnet gosip atestasi (ini menghubungkan node ke sekumpulan peer tertentu yang atestasinya diagregasi bersama).
 
 ## Bacaan Lebih Lanjut {#further-reading}
 

@@ -1,54 +1,53 @@
 ---
 title: "Akıllı sözleşme güvenliği"
-description: "Güvenli Ethereum akıllı sözleşmeleri oluşturma yönergelerine genel bakış"
+description: "Güvenli Ethereum akıllı sözleşmeleri oluşturmaya yönelik yönergelere genel bir bakış"
 lang: tr
 ---
 
-Akıllı sözleşmeler son derece esnektir ve blokzincirlere dağıtılan kod temelinde değiştirilemez mantık çalıştırırken büyük miktarlarda değer ve veriyi de kontrol etme özelliğine de sahiptir. Bu, canlı bir güven gerektirmeyen ve merkeziyetsiz uygulamalar ekosistemi yaratmıştır ve bu uygulamalar geleneksel sistemlere oranla birçok avantaja sahiptir. Aynı zamanda, akıllı sözleşmelerdeki güvenlik açıklarından yararlanarak kar peşinde koşan saldırganlar için fırsatlar sunarlar.
+Akıllı sözleşmeler son derece esnektir ve blokzincir üzerinde dağıtılan koda dayalı değişmez mantık çalıştırırken büyük miktarda değer ve veriyi kontrol edebilirler. Bu, eski sistemlere göre birçok avantaj sağlayan güven gerektirmeyen ve merkeziyetsiz uygulamalardan oluşan canlı bir ekosistem yaratmıştır. Bunlar aynı zamanda akıllı sözleşmelerdeki güvenlik açıklarından yararlanarak kâr elde etmek isteyen saldırganlar için de fırsatları temsil eder.
 
-Ethereum gibi halka açık blokzincirler, akıllı sözleşmelerin güvenliğini sağlama sorununu daha da karmaşık hale getirir. Dağıtılmış sözleşme kodu _genellikle_ güvenlik açıklarını kapatmak için değiştirilemez, ayrıca akıllı sözleşmelerden çalınan varlıkların takibi aşırı derecede zordur ve çoğunlukla değiştirilemezlik kaynaklı olarak geri alınamaz.
+[Ethereum](/) gibi halka açık blokzincirler, akıllı sözleşmelerin güvenliğini sağlama konusunu daha da karmaşık hâle getirir. Dağıtılan sözleşme kodu güvenlik açıklarını yamamak için _genellikle_ değiştirilemezken, akıllı sözleşmelerden çalınan varlıkların takibi son derece zordur ve değişmezlik nedeniyle çoğunlukla geri alınamaz.
 
-Rakamlar değişkenlik gösterse de, akıllı sözleşmelerdeki güvenlik açıklarından kaynaklı kaybedilen veya çalınan toplam değerin miktarının 1 milyar doları rahatlıkla aştığı tahmin edilmektedir. Buna [DAO hack'i](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (bugünkü fiyatlarla 1 milyar doların üzerinde değere sahip 3,6 milyon ETH çalındı), [Parity çoklu imzalı cüzdan hack'i](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (bilgisayar korsanları tarafından 30 milyon dolar kaybedildi) ve [Parity donmuş cüzdan sorunu](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 milyon doların üzerinde ETH sonsuza kadar kilitlendi) gibi yüksek profilli olaylar dahildir.
+Rakamlar değişiklik gösterse de, akıllı sözleşmelerdeki güvenlik kusurları nedeniyle çalınan veya kaybedilen toplam değer miktarının rahatlıkla 1 milyar doların üzerinde olduğu tahmin edilmektedir. Bu, [DAO hack'i](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (bugünkü fiyatlarla 1 milyar doların üzerinde değere sahip 3,6 milyon ETH çalındı), [Parity çoklu imza cüzdanı hack'i](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (bilgisayar korsanlarına 30 milyon dolar kaybedildi) ve [Parity dondurulmuş cüzdan sorunu](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 milyon doların üzerinde ETH sonsuza dek kilitlendi) gibi yüksek profilli olayları içerir.
 
-Sayılan sorunlar geliştiricilerin güvenli, güçlü ve sağlam akıllı sözleşmeler oluşturmaya çaba harcamasını zorunlu kılmaktadır. Akıllı sözleşme güvenliği ciddi bir iştir ve her geliştiricinin öğrenmesi gerekir. Bu kılavuz, Ethereum geliştiricilerinin güvenlik konusunda dikkat etmesi gereken hususları ele alacak ve akıllı sözleşme güvenliğini geliştirmeye yönelik kaynakları inceleyecektir.
+Yukarıda bahsedilen sorunlar, geliştiricilerin güvenli, sağlam ve dirençli akıllı sözleşmeler oluşturmak için çaba sarf etmesini zorunlu kılmaktadır. Akıllı sözleşme güvenliği ciddi bir iştir ve her geliştiricinin öğrenmesi kendi yararına olacaktır. Bu kılavuz, Ethereum geliştiricileri için güvenlik hususlarını ele alacak ve akıllı sözleşme güvenliğini artırmaya yönelik kaynakları inceleyecektir.
 
 ## Ön Koşullar {#prerequisites}
 
-Güvenlik konusuna girmeden önce [akıllı sözleşme geliştirmenin temellerine](/developers/docs/smart-contracts/) aşina olduğunuzdan emin olun.
+Güvenlik konusunu ele almadan önce [akıllı sözleşme geliştirme temellerine](/developers/docs/smart-contracts/) aşina olduğunuzdan emin olun.
 
 ## Güvenli Ethereum akıllı sözleşmeleri oluşturma yönergeleri {#smart-contract-security-guidelines}
 
-### 1. Uygun erişim denetimleri tasarlayın {#design-proper-access-controls}
+### 1. Uygun erişim kontrolleri tasarlayın {#design-proper-access-controls}
 
-Akıllı sözleşmelerde, `public` veya `external` olarak işaretlenmiş olan fonksiyonlar herhangi bir harici olarak sahiplenilmiş hesap (EOA'lar) veya sözleşme hesabı tarafından çağırılabilir. Başkalarının sözleşmeniz ile etkileşime girmesini istiyorsanız fonksiyonlar için herkese açık görülebilirliği belirtmeniz gereklidir. Ancak `private` olarak işaretlenmiş olan fonksiyonlar harici hesaplardan değil, sadece akıllı sözleşmenin içinden çağrılabilir. Her ağ katılımcısına sözleşme fonksiyonlarına erişim hakkı vermek, özellikle de hassas işlemleri herkesin yapabileceği anlamına geliyorsa (örneğin yeni jetonlar basmak) sorunlar yaratabilir.
+Akıllı sözleşmelerde, `public` veya `external` olarak işaretlenmiş fonksiyonlar, harici olarak sahip olunan hesaplar (EOA'lar) veya sözleşme hesapları tarafından çağrılabilir. Başkalarının sözleşmenizle etkileşime girmesini istiyorsanız, fonksiyonlar için public (genel) görünürlük belirtmek gereklidir. Ancak `private` olarak işaretlenmiş fonksiyonlar, harici hesaplar tarafından değil, yalnızca akıllı sözleşme içindeki fonksiyonlar tarafından çağrılabilir. Ağdaki her katılımcıya sözleşme fonksiyonlarına erişim izni vermek, özellikle herkesin hassas işlemleri (örneğin, yeni token basımı) gerçekleştirebileceği anlamına geliyorsa sorunlara neden olabilir.
 
-Akıllı sözleşme fonksiyonlarının izinsiz kullanımını engellemek için güvenli erişim kontrolleri uygulamak şarttır. Erişim kontrol mekanizmaları, bir akıllı sözleşmedeki belirli fonksiyonları kullanma olanağını sözleşmeyi yönetmekten sorumlu olan hesaplar gibi onaylı varlıklar ile sınırlar. **Sahiplenilebilir desen** ve **rol tabanlı kontrol**, akıllı sözleşmelerde erişim kontrolü uygulamaya yönelik iki kullanışlı desendir:
+Akıllı sözleşme fonksiyonlarının yetkisiz kullanımını önlemek için güvenli erişim kontrolleri uygulamak gereklidir. Erişim kontrol mekanizmaları, bir akıllı sözleşmedeki belirli fonksiyonları kullanma yeteneğini, sözleşmeyi yönetmekten sorumlu hesaplar gibi onaylanmış varlıklarla sınırlar. **Sahiplik (Ownable) modeli** ve **role dayalı kontrol**, akıllı sözleşmelerde erişim kontrolünü uygulamak için yararlı olan iki modeldir:
 
-#### Sahiplenilebilir desen {#ownable-pattern}
+#### Sahiplik (Ownable) modeli {#ownable-pattern}
 
-Sahiplenilebilir desende, sözleşme yaratım sürecinde bir adres sözleşmenin "sahibi" olarak ayarlanır. Korunan fonksiyonlara bir `OnlyOwner` niteleyicisi atanır; bu niteleyici, sözleşmenin fonksiyonu yürütmeden önce çağıran adresin kimliğini doğrulamasını sağlar. Korunan fonksiyonlara sözleşme sahibinin dışındaki diğer adreslerden yapılan çağrılar hep geri döndürülerek istenmeyen erişim engellenir.
+Sahiplik modelinde, sözleşme oluşturma süreci sırasında bir adres sözleşmenin "sahibi" olarak ayarlanır. Korumalı fonksiyonlara, sözleşmenin fonksiyonu yürütmeden önce çağıran adresin kimliğini doğrulamasını sağlayan bir `OnlyOwner` değiştiricisi (modifier) atanır. Sözleşme sahibi dışındaki diğer adreslerden korumalı fonksiyonlara yapılan çağrılar her zaman geri alınır (revert) ve istenmeyen erişimi engeller.
 
-#### Rol tabanlı erişim kontrolü {#role-based-access-control}
+#### Role dayalı erişim kontrolü {#role-based-access-control}
 
-Bir akıllı sözleşmede tek bir adresi `Owner` olarak kaydetmek, merkezileşme riskini beraberinde getirir ve tek bir başarısızlık noktasını temsil eder. Sahibin hesap anahtarları açığa çıkarsa, saldırganlar sahip olunan sözleşmeye saldırabilir. İşte bu nedenle, birden fazla yönetim hesabı olan rol tabanlı bir erişim kontrol deseninin kullanılması daha iyi bir seçenek olabilir.
+Bir akıllı sözleşmede tek bir adresi `Owner` olarak kaydetmek, merkezileşme riski getirir ve tek bir hata noktasını temsil eder. Sahibinin hesap anahtarları ele geçirilirse, saldırganlar sahip olunan sözleşmeye saldırabilir. Bu nedenle, birden fazla yönetim hesabına sahip role dayalı bir erişim kontrol modeli kullanmak daha iyi bir seçenek olabilir.
 
-Rol tabanlı erişim kontrolünde, hassas fonksiyonlara erişim bir grup güvenilir katılımcıya dağıtılır. Örnek olarak, bir hesap jeton basmaktan sorumlu olabilir, diğer hesap da yükseltmeleri gerçekleştirir veya sözleşmeyi duraklatır. Erişim kontrolünü bu yolla merkeziyetsizleştirmek, tek başarısızlık noktalarını ortadan kaldırır ve kullanıcılar için güven varsayımlarını azaltır.
+Role dayalı erişim kontrolünde, hassas fonksiyonlara erişim bir dizi güvenilir katılımcı arasında dağıtılır. Örneğin, bir hesap token basımından sorumlu olabilirken, başka bir hesap yükseltmeleri gerçekleştirir veya sözleşmeyi duraklatır. Erişim kontrolünü bu şekilde merkeziyetsizleştirmek, tek hata noktalarını ortadan kaldırır ve kullanıcılar için güven varsayımlarını azaltır.
 
-##### Çoklu imzalı cüzdanlar kullanma
+##### Çoklu imza cüzdanlarını kullanma
+Güvenli erişim kontrolü uygulamak için başka bir yaklaşım, bir sözleşmeyi yönetmek için [çoklu imza hesabı](/developers/docs/smart-contracts/#multisig) kullanmaktır. Normal bir EOA'nın aksine, çoklu imza hesapları birden fazla varlığa aittir ve işlemleri yürütmek için minimum sayıda hesaptan (örneğin 5'in 3'ü) imza gerektirir.
 
-Güvenli erişim kontrolü uygulamaya yönelik diğer bir yaklaşım ise sözleşmeyi yönetmek için [çoklu imzalı hesap](/developers/docs/smart-contracts/#multisig) kullanmaktır. Çoklu imzalı hesaplar, sıradan bir EOA'nın aksine birden fazla varlığa aittir ve işlemleri yürütmek için belirlenen minimum sayıda hesaptan (örneğin 5 hesaptan 3'ü) imza alınmasını şart koşar.
+Erişim kontrolü için çoklu imza kullanmak, hedef sözleşmedeki eylemler birden fazla tarafın onayını gerektirdiğinden ekstra bir güvenlik katmanı sunar. Bu, özellikle Sahiplik (Ownable) modelini kullanmak gerekliyse yararlıdır, çünkü bir saldırganın veya kötü niyetli bir içeriden kişinin hassas sözleşme fonksiyonlarını kötü amaçlarla manipüle etmesini zorlaştırır.
 
-Erişim kontrolü için çoklu imza kullanmak, hedef sözleşme üzerinde yapılacak eylemlerin birden fazla tarafın iznini gerektirmesi nedeniyle ekstra bir güvenlik katmanı sağlar. Bu, özellikle sahiplenilebilir desenin kullanılması zorunluysa kullanışlıdır, çünkü bir saldırganın veya içeriden kötü niyetli birinin hassas sözleşme fonksiyonlarını kötü amaçlar için manipüle etmesini daha da zorlaştırır.
+### 2. Sözleşme işlemlerini korumak için require(), assert() ve revert() ifadelerini kullanın {#use-require-assert-revert}
 
-### 2. Sözleşme operasyonlarını korumak için `require()`, `assert()` ve `revert()` ifadelerini kullanın {#use-require-assert-revert}
+Belirtildiği gibi, akıllı sözleşmeniz blokzincir üzerinde dağıtıldıktan sonra herkes public fonksiyonları çağırabilir. Harici hesapların bir sözleşmeyle nasıl etkileşime gireceğini önceden bilemeyeceğiniz için, dağıtımdan önce sorunlu işlemlere karşı dahili önlemler uygulamak idealdir. Yürütme belirli gereksinimleri karşılamadığında istisnaları tetiklemek ve durum değişikliklerini geri almak için `require()`, `assert()` ve `revert()` ifadelerini kullanarak akıllı sözleşmelerde doğru davranışı zorunlu kılabilirsiniz.
 
-Belirtildiği gibi, akıllı sözleşmenizdeki herkese açık fonksiyonları blokzincire dağıtıldıktan sonra herkes çağırabilir. Harici hesapların bir sözleşme ile nasıl etkileşime geçeceğini önceden bilemeyeceğiniz için dağıtmadan önce sorunlu işlemlere karşı dahili önlemleri uygulamaya koymak idealdir. Akıllı sözleşmelerde yürütmenin bazı gereklilikleri başarıyla karşılayamadığı durumlarda istisnaları tetiklemek ve durum değişikliklerini geri almak için doğru davranışları `require()`, `assert()` ve `revert()` ifadelerini kullanarak uygulatabilirsiniz.
+**`require()`**: `require` ifadeleri fonksiyonların başında tanımlanır ve çağrılan fonksiyon yürütülmeden önce önceden tanımlanmış koşulların karşılandığından emin olur. Bir `require` ifadesi, bir fonksiyonda ilerlemeden önce kullanıcı girdilerini doğrulamak, durum değişkenlerini kontrol etmek veya çağıran hesabın kimliğini doğrulamak için kullanılabilir.
 
-**`require()`**: `require`, fonksiyonların başlangıcında tanımlanır ve önceden belirlenmiş koşulların çağrılan fonksiyon yürütülmeden önce karşılanmasını sağlar. Bir `require` ifadesi, bir fonksiyona devam etmeden önce kullanıcı girdilerini doğrulamak, durum değişkenlerini kontrol etmek veya çağıran hesabın kimliğini doğrulamak için kullanılabilir.
+**`assert()`**: `assert()`, dahili hataları tespit etmek ve kodunuzdaki "değişmezlerin" (invariants) ihlallerini kontrol etmek için kullanılır. Bir değişmez, bir sözleşmenin durumu hakkında tüm fonksiyon yürütmeleri için doğru kalması gereken mantıksal bir iddiadır. Örnek bir değişmez, bir token sözleşmesinin maksimum toplam arzı veya bakiyesidir. `assert()` kullanmak, sözleşmenizin asla savunmasız bir duruma ulaşmamasını sağlar ve ulaşırsa, durum değişkenlerindeki tüm değişiklikler geri alınır.
 
-**`assert()`**: `assert()`, dahili hataları tespit etmek ve kodunuzda "değişmez" ihlali olup olmadığını kontrol etmek için kullanılır. Bir değişmez, bir sözleşmenin durumu ile ilgili olarak tüm fonksiyon yürütmeleri için doğru olması gereken mantıksal bir çıkarımdır. Bir jeton sözleşmesinin maksimum toplam arzı veya bakiyesi, değişmeze örnek olarak verilebilir. `assert()` kullanmanız sözleşmenizin asla güvenlik açığı olan bir duruma gelmemesini ve gelirse de durum değişkenlerinde yapılan tüm değişikliklerin geri alınmasını sağlar.
-
-**`revert()`**: `revert()`, gerekli koşul sağlanmadığında bir istisna tetikleyen bir eğer-değilse ifadesinde kullanılabilir. Aşağıdaki örnek sözleşmede, fonksiyonların yürütülmesini korumak için `revert()` kullanılmaktadır:
+**`revert()`**: `revert()`, gerekli koşul karşılanmazsa bir istisna tetikleyen bir if-else ifadesinde kullanılabilir. Aşağıdaki örnek sözleşme, fonksiyonların yürütülmesini korumak için `revert()` kullanır:
 
 ```
 pragma solidity ^0.8.4;
@@ -58,7 +57,7 @@ contract VendingMachine {
     error Unauthorized();
     function buy(uint amount) public payable {
         if (amount > msg.value / 2 ether)
-            revert("Yeterli Ether sağlanmadı.");
+            revert("Not enough Ether provided.");
         // Satın alma işlemini gerçekleştirin.
     }
     function withdraw() public {
@@ -70,89 +69,89 @@ contract VendingMachine {
 }
 ```
 
-### 3. Akıllı sözleşmeleri test edin ve kodun doğruluğunu onaylayın {#test-smart-contracts-and-verify-code-correctness}
+### 3. Akıllı sözleşmeleri test edin ve kod doğruluğunu onaylayın {#test-smart-contracts-and-verify-code-correctness}
 
-[Ethereum Sanal Makinesi'nde](/developers/docs/evm/) çalışan kodun değiştirilemezliği, akıllı sözleşmelerin geliştirme aşamasında daha yüksek seviyede bir kalite değerlendirmesi gerektirdiği anlamına gelir. Sözleşmeyi kapsamlı bir şekilde test etmek ve beklenmeyen bir sonuç olup olmadığını görmek için gözlemlemek, güvenliği büyük oranda artırır ve uzun vadede kullanıcılarınızı korur.
+[Ethereum Sanal Makinesi](/developers/docs/evm/) içinde çalışan kodun değişmezliği, akıllı sözleşmelerin geliştirme aşamasında daha yüksek düzeyde bir kalite değerlendirmesi gerektirdiği anlamına gelir. Sözleşmenizi kapsamlı bir şekilde test etmek ve beklenmedik sonuçlar için gözlemlemek, güvenliği büyük ölçüde artıracak ve uzun vadede kullanıcılarınızı koruyacaktır.
 
-Sık kullanılan yöntem, sözleşmenin kullanıcılardan alması beklenen taklit verileri kullanarak küçük birim testleri yazmaktır. [Birim testi](/developers/docs/smart-contracts/testing/#unit-testing) yapmak, bazı fonksiyonların çalışıp çalışmadığını test etmek ve bir akıllı sözleşmenin beklendiği gibi çalıştığından emin olmak açısından kullanışlıdır.
+Olağan yöntem, sözleşmenin kullanıcılardan alması beklenen sahte (mock) verileri kullanarak küçük birim testleri yazmaktır. [Birim testi](/developers/docs/smart-contracts/testing/#unit-testing), belirli fonksiyonların işlevselliğini test etmek ve bir akıllı sözleşmenin beklendiği gibi çalıştığından emin olmak için iyidir.
 
-İzole şekilde kullanıldığında birim testi yapmak maalesef akıllı sözleşme güvenliğini geliştirmekte minimal seviyede etkilidir. Bir birim testi, bir fonksiyonun taklit veriler için düzgün şekilde yürütüldüğünü kanıtlayabilse de, birim testleri sadece yazılan testler kadar etkilidir. Bu, akıllı sözleşmenizin güvenliğine zarar verebilecek eksik uç durumlarını ve güvenlik açıklarını tespit etmeyi zorlaştırır.
+Ne yazık ki, birim testi tek başına kullanıldığında akıllı sözleşme güvenliğini artırmada asgari düzeyde etkilidir. Bir birim testi, bir fonksiyonun sahte veriler için düzgün bir şekilde yürütüldüğünü kanıtlayabilir, ancak birim testleri yalnızca yazılan testler kadar etkilidir. Bu, akıllı sözleşmenizin güvenliğini bozabilecek gözden kaçan uç durumları ve güvenlik açıklarını tespit etmeyi zorlaştırır.
 
-Birim testini [statik ve dinamik analiz](/developers/docs/smart-contracts/testing/#static-dynamic-analysis) kullanarak özellik tabanlı test ile birleştirmek daha doğru bir yaklaşımdır. Statik analiz, ulaşılabilir program durumlarını ve yürütme yollarını analiz etmek için [kontrol akış grafikleri](https://en.wikipedia.org/wiki/Control-flow_graph) ve [soyut söz dizimi ağaçları](https://deepsource.io/glossary/ast/) gibi düşük seviyeli gösterimlere dayanır. Bu arada, [akıllı sözleşme bulanıklaştırma (fuzzing)](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry) gibi dinamik analiz teknikleri, sözleşme kodunu rastgele giriş değerleriyle yürüterek güvenlik özelliklerini ihlal eden işlemleri tespit eder.
+Daha iyi bir yaklaşım, birim testini [statik ve dinamik analiz](/developers/docs/smart-contracts/testing/#static-dynamic-analysis) kullanılarak gerçekleştirilen özellik tabanlı testlerle birleştirmektir. Statik analiz, ulaşılabilir program durumlarını ve yürütme yollarını analiz etmek için [kontrol akış grafikleri](https://en.wikipedia.org/wiki/Control-flow_graph) ve [soyut sözdizimi ağaçları](https://deepsource.io/glossary/ast/) gibi düşük seviyeli temsillere dayanır. Bu arada, [akıllı sözleşme fuzzing'i](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry) gibi dinamik analiz teknikleri, güvenlik özelliklerini ihlal eden işlemleri tespit etmek için sözleşme kodunu rastgele girdi değerleriyle yürütür.
 
-[Resmi doğrulama](/developers/docs/smart-contracts/formal-verification), akıllı sözleşmelerdeki güvenlik özelliklerini doğrulamaya yönelik başka bir tekniktir. Sıradan testlerin aksine, resmi doğrulama bir akıllı sözleşmede hata bulunmadığını kesin bir şekilde kanıtlayabilir. Bu, istenen güvenlik özelliklerini belirleyen bir resmi spesifikasyon oluşturarak ve sözleşmelerin resmi bir modelinin bu spesifikasyona uyduğu kanıtlanarak gerçekleştirilir.
+[Biçimsel doğrulama](/developers/docs/smart-contracts/formal-verification), akıllı sözleşmelerdeki güvenlik özelliklerini doğrulamak için başka bir tekniktir. Normal testlerin aksine, biçimsel doğrulama bir akıllı sözleşmede hataların olmadığını kesin olarak kanıtlayabilir. Bu, istenen güvenlik özelliklerini yakalayan biçimsel bir şartname oluşturarak ve sözleşmelerin biçimsel bir modelinin bu şartnameye bağlı kaldığını kanıtlayarak elde edilir.
 
-### 4. Kodunuzun bağımsız bir şekilde gözden geçirilmesini isteyin {#get-independent-code-reviews}
+### 4. Kodunuzun bağımsız bir incelemesini isteyin {#get-independent-code-reviews}
 
-Sözleşmenizi test ettikten sonra başkalarından herhangi bir güvenlik sorunu için kaynak koduna bakmalarını istemek doğru olur. Test etmek, bir akıllı sözleşmedeki her hatayı ortaya çıkarmayacaktır, ancak bağımsız bir inceleme yaptırmak güvenlik açıklarının tespit edilmesi ihtimalini artırır.
+Sözleşmenizi test ettikten sonra, başkalarından kaynak kodunu herhangi bir güvenlik sorunu açısından kontrol etmelerini istemek iyidir. Test etmek, bir akıllı sözleşmedeki her kusuru ortaya çıkarmaz, ancak bağımsız bir inceleme almak güvenlik açıklarını tespit etme olasılığını artırır.
 
 #### Denetimler {#audits}
 
-Akıllı sözleşme denetim hizmeti almak, bağımsız bir kod incelemesi gerçekleştirmenin bir yoludur. Denetimciler, akıllı sözleşmelerin güvenli olmasının, kalite eksikleri ve tasarım hataları içermemesinin sağlanmasında önemli bir rol oynar.
+Bir akıllı sözleşme denetimi (audit) talep etmek, bağımsız bir kod incelemesi yürütmenin bir yoludur. Denetçiler, akıllı sözleşmelerin güvenli olmasını ve kalite kusurlarından ve tasarım hatalarından arınmış olmasını sağlamada önemli bir rol oynar.
 
-Bununla birlikte, denetimleri sihirli değnek gibi görmemelisiniz. Akıllı sözleşme denetimleri her hatayı yakalamaz ve çoğunlukla ek bir dizi inceleme sunmak üzere tasarlanmıştır, bu da geliştiriciler tarafından ilk geliştirme ve test esnasında gözden kaçırılabilecek sorunları tespit etmeye yardımcı olur. Ayrıca akıllı sözleşme denetiminin faydasını maksimuma çıkarmak için kodu düzgün biçimde belgelemek ve satır içi yorumlar eklemek gibi denetimcilerle çalışmaya yönelik en iyi pratikleri takip etmelisiniz.
+Bununla birlikte, denetimleri sihirli bir değnek olarak görmekten kaçınmalısınız. Akıllı sözleşme denetimleri her hatayı yakalamaz ve çoğunlukla, ilk geliştirme ve test sırasında geliştiriciler tarafından gözden kaçırılan sorunları tespit etmeye yardımcı olabilecek ek bir inceleme turu sağlamak için tasarlanmıştır. Bir akıllı sözleşme denetiminin faydasını en üst düzeye çıkarmak için, kodu düzgün bir şekilde belgelemek ve satır içi yorumlar eklemek gibi denetçilerle çalışmaya yönelik en iyi uygulamaları da izlemelisiniz.
 
-- [Akıllı sözleşme denetim ipuçları ve püf noktaları](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Akıllı sözleşme denetimi ipuçları ve püf noktaları](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Denetiminizden en iyi şekilde yararlanın](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Hata ödülleri {#bug-bounties}
 
-Bir hata ödülü programı oluşturmak, harici kod incelemelerinin uygulamaya koymaya yönelik başka bir yaklaşımdır. Hata ödülü, bir uygulamada güvenlik açığı bulan kişilere (genelde beyaz şapkalı hackerlar) verilen para cinsinden bir ödüldür.
+Bir hata ödül (bug bounty) programı oluşturmak, harici kod incelemelerini uygulamak için başka bir yaklaşımdır. Hata ödülü, bir uygulamadaki güvenlik açıklarını keşfeden kişilere (genellikle beyaz şapkalı bilgisayar korsanları) verilen finansal bir ödüldür.
 
-Düzgün şekilde kullanıldığında, hata ödülleri hacker topluluğunun üyelerine kodunuzda kritik hatalar bulunup bulunmadığını incelemeleri için bir teşvik sunar. Bunun gerçek hayattaki örneklerinden biri, Ethereum üzerinde çalışan bir [Katman 2](/layer-2/) protokolü olan [Optimism](https://www.optimism.io/) üzerinde bir saldırganın sınırsız miktarda ether yaratabilmesine olanak tanıyan "sınırsız para hatası"dır. Neyse ki, beyaz şapkalı bir bilgisayar korsanı [kusuru keşfetti](https://www.saurik.com/optimism.html) ve ekibe bildirdi, [bu süreçte büyük bir ödeme kazandı](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Düzgün kullanıldığında, hata ödülleri bilgisayar korsanı topluluğu üyelerine kodunuzu kritik kusurlar açısından incelemeleri için teşvik sağlar. Gerçek hayattan bir örnek, bir saldırganın Ethereum üzerinde çalışan bir [katman 2 (L2)](/layer-2/) protokolü olan [Optimism](https://www.optimism.io/) üzerinde sınırsız miktarda Ether yaratmasına izin verecek olan "sonsuz para hatası"dır. Neyse ki, beyaz şapkalı bir bilgisayar korsanı [kusuru keşfetti](https://www.saurik.com/optimism.html) ve ekibi bilgilendirerek [bu süreçte büyük bir ödeme kazandı](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
-Bir hata ödülü programının ödemesini ilgili fonların miktarı ile orantılı bir şekilde ayarlamak kullanışlı bir stratejidir. “[Hata ödülünü ölçeklendirme](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)” olarak tanımlanan bu yaklaşım, kişilerin güvenlik açıklarını istismar etmek yerine sorumlu şekilde bildirmesi için parasal teşvikler sağlar.
+Yararlı bir strateji, bir hata ödül programının ödemesini tehlikedeki fon miktarıyla orantılı olarak belirlemektir. "[Ölçeklenen hata ödülü](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)" olarak tanımlanan bu yaklaşım, bireylerin güvenlik açıklarını istismar etmek yerine sorumlu bir şekilde ifşa etmeleri için finansal teşvikler sağlar.
 
-### 5. Akıllı sözleşme geliştirme sırasında en iyi uygulamaları takip edin {#follow-smart-contract-development-best-practices}
+### 5. Akıllı sözleşme geliştirme sırasında en iyi uygulamaları izleyin {#follow-smart-contract-development-best-practices}
 
-Denetimlerin ve hata ödüllerinin varlığı, yüksek kalitede kod yazma sorumluluğunuz açısından bir mazeret değildir. Akıllı sözleşme güvenliğinin iyi seviyede olması için ilk olarak düzgün tasarım ve geliştirme süreçleri oluşturmanız gerekir:
+Denetimlerin ve hata ödüllerinin varlığı, yüksek kaliteli kod yazma sorumluluğunuzu ortadan kaldırmaz. İyi bir akıllı sözleşme güvenliği, uygun tasarım ve geliştirme süreçlerini izlemekle başlar:
 
-- Tüm kodu git gibi bir sürüm denetimi sisteminde depolayın
+- Tüm kodu git gibi bir sürüm kontrol sisteminde saklayın
 
-- Tüm kod değişikliklerini çekme istekleri aracılığı ile yapın
+- Tüm kod değişikliklerini çekme istekleri (pull request) aracılığıyla yapın
 
-- Çekme isteklerinin en az bir bağımsız denetçisi olduğundan emin olun; bir projede tek başınıza çalışıyorsanız, başka geliştiriciler bulmayı ve kod incelemesi alışverişinde bulunmayı düşünün
+- Çekme isteklerinin en az bir bağımsız inceleyicisi olduğundan emin olun; bir projede tek başınıza çalışıyorsanız, başka geliştiriciler bulmayı ve kod incelemelerini takas etmeyi düşünün
 
-- Akıllı sözleşmeleri test etmek, derlemek, dağıtmak için bir [geliştirme ortamı](/developers/docs/frameworks/) kullanın
+- Akıllı sözleşmeleri test etmek, derlemek ve dağıtmak için bir [geliştirme ortamı](/developers/docs/frameworks/) kullanın
 
-- Kodunuzu [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril ve Slither gibi temel kod analiz araçlarından geçirin. İdeal olarak, bunu her çekme isteği birleştirmesinden önce yapmalı ve çıktılardaki farkları karşılaştırmalısınız
+- Kodunuzu [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril ve Slither gibi temel kod analiz araçlarından geçirin. İdeal olarak, bunu her çekme isteği birleştirilmeden önce yapmalı ve çıktıdaki farklılıkları karşılaştırmalısınız
 
-- Kodunuzun hatasız bir şekilde derlendiğinden ve Solidity derleyicisinin herhangi bir uyarı vermediğinden emin olun
+- Kodunuzun hatasız derlendiğinden ve Solidity derleyicisinin hiçbir uyarı vermediğinden emin olun
 
-- Kodunuzu düzgün biçimde belgelendirin ([NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html) kullanın) ve sözleşme yapısı hakkındaki detayları anlaşılabilir bir dille açıklayın. Bu, başkalarının sizin kodunuzu denetlemesini ve incelemesini kolaylaştıracaktır.
+- Kodunuzu düzgün bir şekilde belgeleyin ([NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html) kullanarak) ve sözleşme mimarisi hakkındaki ayrıntıları anlaşılması kolay bir dille açıklayın. Bu, başkalarının kodunuzu denetlemesini ve incelemesini kolaylaştıracaktır.
 
 ### 6. Sağlam felaket kurtarma planları uygulayın {#implement-disaster-recovery-plans}
 
-Güvenli erişim kontrolleri tasarlamak, fonksiyon değiştiricileri uygulamak ve diğer öneriler, akıllı sözleşme güvenliğini artırabilir ancak kötü niyetli saldırıların gerçekleşme ihtimalini sıfıra indirgeyemez. Güvenli akıllı sözleşmeler oluşturmak, "başarısızlığa hazırlanmayı" ve saldırılara karşı etkili bir şekilde cevap vermek için bir geri dönüş planına sahip olmayı gerektirir. Düzgün bir olağanüstü durum kurtarma planı, aşağıdaki bileşenlerin bazılarını ya da hepsini kapsar:
+Güvenli erişim kontrolleri tasarlamak, fonksiyon değiştiricileri uygulamak ve diğer öneriler akıllı sözleşme güvenliğini artırabilir, ancak kötü niyetli istismar olasılığını ortadan kaldıramazlar. Güvenli akıllı sözleşmeler oluşturmak, "başarısızlığa hazırlanmayı" ve saldırılara etkili bir şekilde yanıt vermek için bir geri dönüş planına sahip olmayı gerektirir. Uygun bir felaket kurtarma planı, aşağıdaki bileşenlerin bazılarını veya tümünü içerecektir:
 
 #### Sözleşme yükseltmeleri {#contract-upgrades}
 
-Ethereum akıllı sözleşmeleri varsayılan olarak değiştirilemez olsa da, yükseltme desenleri kullanılarak bir dereceye kadar değiştirilebilirliğe ulaşmak mümkündür. Kritik bir hatanın eski sözleşmenizi kullanılamaz hale getirdiği ve yeni bir mantık dağıtmanın en makul seçenek olduğu durumlarda sözleşmeleri yükseltmek gereklidir.
+Ethereum akıllı sözleşmeleri varsayılan olarak değişmez olsa da, yükseltme modellerini kullanarak bir dereceye kadar değişebilirlik elde etmek mümkündür. Kritik bir kusurun eski sözleşmenizi kullanılamaz hale getirdiği ve yeni mantık dağıtmanın en uygun seçenek olduğu durumlarda sözleşmeleri yükseltmek gereklidir.
 
-Sözleşme yükseltme mekanizmaları farklı şekilde çalışsa da, "vekil deseni" akıllı sözleşmeleri yükseltmeye yönelik daha popüler yaklaşımlardan biridir. [Proxy desenleri](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern), bir uygulamanın durumunu ve mantığını _iki_ sözleşme arasında böler. İlk sözleşme ('vekil sözleşmesi' adı verilir) durum değişkenlerini depolar (örneğin kullanıcı bakiyeleri), ikinci sözleşme ise ('mantık sözleşmesi' adı verilir) sözleşme fonksiyonlarını yürütmek için gereken kodu tutar.
+Sözleşme yükseltme mekanizmaları farklı çalışır, ancak "vekil (proxy) modeli" akıllı sözleşmeleri yükseltmek için daha popüler yaklaşımlardan biridir. [Vekil modelleri](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern), bir uygulamanın durumunu ve mantığını _iki_ sözleşme arasında böler. İlk sözleşme ('vekil kontrat' olarak adlandırılır) durum değişkenlerini (örneğin, kullanıcı bakiyeleri) saklarken, ikinci sözleşme ('mantık sözleşmesi' olarak adlandırılır) sözleşme fonksiyonlarını yürütmek için kodu tutar.
 
-Hesaplar, tüm fonksiyon çağrılarını [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries) düşük seviyeli çağrısını kullanarak mantık sözleşmesine gönderen proxy sözleşmesiyle etkileşime girer. Sıradan bir mesaj çağrısının aksine `delegatecall()`, mantık sözleşmesinin adresinde çalışan kodun çağıran sözleşme bağlamında yürütülmesini sağlar. Bu, mantık sözleşmesinin her zaman vekilin depolamasına yazacağı (kendi depolaması yerine) ve `msg.sender` ile `msg.value` değerlerinin orijinal halinin korunacağı anlamına gelir.
+Hesaplar, [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries) düşük seviyeli çağrısını kullanarak tüm fonksiyon çağrılarını mantık sözleşmesine gönderen vekil kontrat ile etkileşime girer. Normal bir mesaj çağrısının aksine, `delegatecall()`, mantık sözleşmesinin adresinde çalışan kodun çağıran sözleşmenin bağlamında yürütülmesini sağlar. Bu, mantık sözleşmesinin her zaman (kendi depolaması yerine) vekilin depolamasına yazacağı ve `msg.sender` ile `msg.value`'nin orijinal değerlerinin korunacağı anlamına gelir.
 
-Mantık sözleşmesine çağrılar devretmek için adresinin vekil sözleşmesinin depolamasında depolanması gerekir. Dolayısıyla sözleşmenin mantığını yükseltme, sadece başka bir mantık sözleşmesi dağıtmaktan ve yeni adresi vekil sözleşmesinde depolamaktan ibarettir. Vekil sözleşmesine sonraki çağrılar otomatik olarak yeni mantık sözleşmesine yönlendirildiği için kodu gerçekten değiştirmeden sözleşmeyi "yükseltmiş" olursunuz.
+Çağrıları mantık sözleşmesine devretmek, adresini vekil kontratın depolamasında saklamayı gerektirir. Bu nedenle, sözleşmenin mantığını yükseltmek yalnızca başka bir mantık sözleşmesi dağıtmak ve yeni adresi vekil kontratta saklamak meselesidir. Vekil kontrata yapılan sonraki çağrılar otomatik olarak yeni mantık sözleşmesine yönlendirildiğinden, kodu fiilen değiştirmeden sözleşmeyi "yükseltmiş" olursunuz.
 
-[Sözleşmeleri yükseltme hakkında daha fazlası](/developers/docs/smart-contracts/upgrading/).
+[Sözleşmeleri yükseltme hakkında daha fazla bilgi](/developers/docs/smart-contracts/upgrading/).
 
-#### Acil durum durdurmaları {#emergency-stops}
+#### Acil durdurmalar {#emergency-stops}
 
-Belirtildiği gibi, bir akıllı sözleşmedeki tüm hataları geniş çaplı denetim ve test yoluyla bulmak mümkün olmayabilir. Dağıtım sonrası kodunuzda bir güvenlik açığı ortaya çıkarsa, sözleşme adresinde çalışan kodu değiştiremeyeceğiniz için bu açığı kapatmak imkansızdır. Ayrıca yükseltme mekanizmalarını (örneğin vekil desenleri) uygulamak zaman alabilir (genelde farklı taraflardan onay alınması gerekir), bu da saldırganlara daha fazla zarar vermek için daha fazla zaman tanır.
+Belirtildiği gibi, kapsamlı denetim ve testler bir akıllı sözleşmedeki tüm hataları keşfedemez. Dağıtımdan sonra kodunuzda bir güvenlik açığı ortaya çıkarsa, sözleşme adresinde çalışan kodu değiştiremeyeceğiniz için bunu yamalamak imkansızdır. Ayrıca, yükseltme mekanizmalarının (örneğin, vekil modelleri) uygulanması zaman alabilir (genellikle farklı taraflardan onay gerektirirler), bu da saldırganlara daha fazla hasar vermeleri için yalnızca daha fazla zaman tanır.
 
-Nükleer seçenek ise bir sözleşmede güvenlik açığı bulunan fonksiyonlara gelecek çağrıları engelleyen bir "acil durdurma" fonksiyonunu uygulamaya koymaktır. Acil durdurmalar genelde şu bileşenlerden oluşur:
+Nükleer seçenek, bir sözleşmedeki savunmasız fonksiyonlara yapılan çağrıları engelleyen bir "acil durdurma" fonksiyonu uygulamaktır. Acil durdurmalar tipik olarak aşağıdaki bileşenleri içerir:
 
-1. Akıllı sözleşmenin durdurulmuş bir durumda olup olmadığını gösteren global bir Boole değişkeni. Bu değişken, sözleşme oluşturulurken `false` olarak ayarlanmıştır ancak sözleşme durdurulduğunda `true` şekline döner.
+1. Akıllı sözleşmenin durdurulmuş bir durumda olup olmadığını gösteren global bir Boolean değişkeni. Bu değişken, sözleşmeyi kurarken `false` olarak ayarlanır, ancak sözleşme durdurulduğunda `true` değerine döner.
 
-2. Yürütülürken Boole değişkenine başvuran fonksiyonlar. Bu fonksiyonlar, akıllı sözleşme durdurulmamışsa erişilebilir durumdadır ve acil durdurma özelliği tetiklendiğinde erişilemez hale gelir.
+2. Yürütmelerinde Boolean değişkenine başvuran fonksiyonlar. Bu tür fonksiyonlara akıllı sözleşme durdurulmadığında erişilebilir ve acil durdurma özelliği tetiklendiğinde erişilemez hale gelir.
 
-3. Boole değişkenini `true` yapan acil durdurma fonksiyonuna erişimi olan bir varlık. Bu fonksiyona yapılan çağrılar, kötü niyetli eylemleri önlemek için güvenilir bir adres ile (örneğin sözleşme sahibi) sınırlandırılabilir.
+3. Boolean değişkenini `true` olarak ayarlayan acil durdurma fonksiyonuna erişimi olan bir varlık. Kötü niyetli eylemleri önlemek için, bu fonksiyona yapılan çağrılar güvenilir bir adresle (örneğin, sözleşme sahibi) sınırlandırılabilir.
 
-Sözleşmenin acil durdurmayı etkinleştirmesinin ardından belirli fonksiyonlar çağrılabilir niteliğini kaybeder. Bu, seçili fonksiyonların global değişkene başvuran bir niteleyici ile paketlenmesi yoluyla gerçekleştirilir. Aşağıda, bu desenin sözleşmelerdeki bir uygulamasını açıklayan [bir örnek](https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol) bulunmaktadır:
+Sözleşme acil durdurmayı etkinleştirdiğinde, belirli fonksiyonlar çağrılamaz hale gelecektir. Bu, seçili fonksiyonları global değişkene başvuran bir değiştirici (modifier) içine sararak elde edilir. Aşağıda, sözleşmelerde bu modelin bir uygulamasını açıklayan [bir örnek](https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol) verilmiştir:
 
 ```solidity
-// Bu kod profesyonel olarak denetlenmemiştir ve güvenlik veya doğruluk konusunda hiçbir vaatte bulunmaz. Riski size aittir.
+// Bu kod profesyonel olarak denetlenmemiştir ve güvenlik veya doğruluk hakkında hiçbir vaatte bulunmaz. Riski size ait olmak üzere kullanın.
 
 contract EmergencyStop {
 
@@ -169,7 +168,7 @@ contract EmergencyStop {
     }
 
     modifier onlyAuthorized {
-        // msg.sender'ın yetkisini burada kontrol edin
+        // Burada msg.sender yetkilendirmesini kontrol edin
         _;
     }
 
@@ -182,63 +181,63 @@ contract EmergencyStop {
     }
 
     function deposit() public payable stoppedInEmergency {
-        // Para yatırma mantığı burada işliyor
+        // Yatırma mantığı burada gerçekleşiyor
     }
 
     function emergencyWithdraw() public onlyWhenStopped {
-        // Acil para çekme burada işliyor
+        // Acil durum çekme işlemi burada gerçekleşiyor
     }
 }
 ```
 
 Bu örnek, acil durdurmaların temel özelliklerini göstermektedir:
 
-- `isStopped`, başlangıçta `false` olan ve sözleşme acil durum moduna geçtiğinde değişerek `true` olan bir Boole değeridir.
+- `isStopped`, başlangıçta `false` ve sözleşme acil durum moduna girdiğinde `true` olarak değerlendirilen bir Boolean'dır.
 
-- `onlyWhenStopped` ve `stoppedInEmergency` fonksiyon niteleyicileri, `isStopped` değişkenini kontrol eder. `stoppedInEmergency`, sözleşmenin güvenlik açığı olduğunda (örneğin, `deposit()`) erişilemez olması gereken fonksiyonları kontrol etmek için kullanılır. Basitçe ifade etmek gerekirse, bu fonksiyonlara yapılan çağrılar geri döndürülür.
+- `onlyWhenStopped` ve `stoppedInEmergency` fonksiyon değiştiricileri `isStopped` değişkenini kontrol eder. `stoppedInEmergency`, sözleşme savunmasız olduğunda erişilememesi gereken fonksiyonları (örneğin, `deposit()`) kontrol etmek için kullanılır. Bu fonksiyonlara yapılan çağrılar basitçe geri alınacaktır (revert).
 
-`onlyWhenStopped`, sadece bir acil durum esnasında çağrılabilir olması gereken fonksiyonlar (örneğin `emergencyWithdraw()`) için kullanılır. Bu tarz fonksiyonlar durumun çözüme kavuşturulmasına yardımcı olabilir ve bundan dolayı "yasaklı fonksiyonlar" listesinden çıkarılmıştır.
+`onlyWhenStopped`, acil bir durumda çağrılabilmesi gereken fonksiyonlar (örneğin, `emergencyWithdraw()`) için kullanılır. Bu tür fonksiyonlar durumun çözülmesine yardımcı olabilir, bu nedenle "kısıtlanmış fonksiyonlar" listesinden çıkarılırlar.
 
-Acil durdurma fonksiyonunu kullanmak, akıllı sözleşmenizdeki ciddi güvenlik açıkları ile baş etmek adına etkili bir tedbirdir. Ancak, kullanıcıların kendi faydalarına etkinleştirmemeleri konusunda geliştiricilere güvenmesi ihtiyacını artırır. Bu amaçla, acil durdurma kontrolünün merkeziyetsizleştirilmesi için ya zincir üstü bir oy mekanizmasına tabi tutularak ya zaman kilidi uygulanarak ya da çoklu imza cüzdanından onay alınarak çözümler geliştirmek mümkündür.
+Bir acil durdurma işlevi kullanmak, akıllı sözleşmenizdeki ciddi güvenlik açıklarıyla başa çıkmak için etkili bir geçici çözüm sağlar. Ancak, kullanıcıların geliştiricilere bunu kendi çıkarları için etkinleştirmeyeceklerine güvenme ihtiyacını artırır. Bu amaçla, acil durdurmanın kontrolünü zincir içi bir oylama mekanizmasına, zaman kilidine (timelock) veya çoklu imza cüzdanından onaya tabi tutarak merkeziyetsizleştirmek olası çözümlerdir.
 
 #### Olay izleme {#event-monitoring}
 
-[Olaylar](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events), akıllı sözleşme fonksiyonlarına yapılan çağrıları takip etmenize ve durum değişkenlerindeki değişiklikleri izlemenize olanak tanır. Akıllı sözleşmenizi, bir tarafın güvenlik açısından kritik bir eylem (örneğin, fon çekme) gerçekleştirdiğinde bir olay yayımlayacak şekilde programlamak idealdir.
+[Olaylar](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events), akıllı sözleşme fonksiyonlarına yapılan çağrıları izlemenize ve durum değişkenlerindeki değişiklikleri takip etmenize olanak tanır. Akıllı sözleşmenizi, herhangi bir taraf güvenlik açısından kritik bir eylemde bulunduğunda (örneğin, fon çekimi) bir olay yayacak şekilde programlamak idealdir.
 
-Olayları günlüğe kaydetmek ve bunları zincir dışında izlemek, sözleşme işlemleri hakkında bilgi sağlar ve kötü niyetli eylemlerin daha hızlı tespitine yardımcı olur. Bu, ekibinizin hızlı bir şekilde hacklere yanıt verebilmesi ve kullanıcılar üzerindeki etkiyi azaltmak için fonksiyonları duraklatma veya yükseltme yapma gibi önlemler alabilmesi anlamına gelir.
+Olayları günlüğe kaydetmek ve bunları zincir dışı izlemek, sözleşme işlemleri hakkında içgörüler sağlar ve kötü niyetli eylemlerin daha hızlı keşfedilmesine yardımcı olur. Bu, ekibinizin bilgisayar korsanlığına daha hızlı yanıt verebileceği ve fonksiyonları duraklatmak veya bir yükseltme gerçekleştirmek gibi kullanıcılar üzerindeki etkiyi azaltmak için harekete geçebileceği anlamına gelir.
 
-Ayrıca, sözleşmelerinizle biri etkileşimde bulunduğunda otomatik olarak uyarıları ileten hazır bir izleme aracını da tercih edebilirsiniz. Bu araçlar işlem hacmi, fonksiyon çağrılarının sıklığı veya sürecin parçası olan spesifik fonksiyonlar gibi farklı tetikleyicilere göre özel uyarılar oluşturmanıza olanak sağlar. Örneğin, tek bir işlemde çekilen miktarın belirli bir eşiği aşması durumunda devreye girecek bir uyarı programlayabilirsiniz.
+Ayrıca, birisi sözleşmelerinizle her etkileşime girdiğinde uyarıları otomatik olarak ileten hazır bir izleme aracı da tercih edebilirsiniz. Bu araçlar, işlem hacmi, fonksiyon çağrılarının sıklığı veya ilgili belirli fonksiyonlar gibi farklı tetikleyicilere dayalı özel uyarılar oluşturmanıza olanak tanır. Örneğin, tek bir işlemde çekilen miktar belirli bir eşiği aştığında gelen bir uyarı programlayabilirsiniz.
 
 ### 7. Güvenli yönetişim sistemleri tasarlayın {#design-secure-governance-systems}
 
-Ana akıllı sözleşmelerin kontrolünü topluluk üyelerine devretmek suretiyle uygulamanızı merkeziyetsizleştirmeyi düşünebilirsiniz. Bu durumda akıllı sözleşme sistemi, topluluk üyelerinin yönetimsel eylemleri zincir üstünde yönetişim sistemi aracılığıyla onaylayabilmesine olanak tanıyan bir yönetişim modülü içerecektir. Örneğin, bir vekil sözleşmenin yeni bir uygulamaya yükseltilmesi teklifi, jeton sahipleri tarafından oylanabilir.
+Temel akıllı sözleşmelerin kontrolünü topluluk üyelerine devrederek uygulamanızı merkeziyetsizleştirmek isteyebilirsiniz. Bu durumda, akıllı sözleşme sistemi bir yönetişim modülü içerecektir; bu, topluluk üyelerinin zincir içi bir yönetişim sistemi aracılığıyla idari eylemleri onaylamasına olanak tanıyan bir mekanizmadır. Örneğin, bir vekil kontratı yeni bir uygulamaya yükseltme teklifi, token sahipleri tarafından oylanabilir.
 
-Merkezi olmayan yönetişim, özellikle geliştiricilerin ve son kullanıcıların çıkarlarını uyumlu hale getirdiği için faydalı olabilir. Yine de, akıllı sözleşme yönetişim mekanizmaları yanlış uygulandığında yeni riskleri beraberinde getirebilir. Saldırganın bir [hızlı kredi](/defi/#flash-loans) alarak büyük miktarda oy hakkı (elindeki jeton sayısıyla ölçülen) elde etmesi ve kötü niyetli bir teklifi kabul ettirmesi makul bir senaryo olabilir.
+Merkeziyetsiz yönetişim, özellikle geliştiricilerin ve son kullanıcıların çıkarlarını uyumlu hale getirdiği için faydalı olabilir. Bununla birlikte, akıllı sözleşme yönetişim mekanizmaları yanlış uygulanırsa yeni riskler getirebilir. Makul bir senaryo, bir saldırganın bir [Flaş kredi](/defi/#flash-loans) alarak muazzam bir oy gücü (sahip olunan token sayısıyla ölçülür) elde etmesi ve kötü niyetli bir teklifi zorla kabul ettirmesidir.
 
-Zincir üstü yönetişimle ilgili sorunları önlemenin bir yolu [zaman kilidi kullanmaktır](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Zaman kilidi, bir akıllı sözleşmenin belirli bir süre geçene kadar belirli eylemleri gerçekleştirmesini engeller. Diğer stratejiler arasında her bir jetona ne kadar süreyle kilitlendiğine dayalı olarak bir "oylama ağırlığı" atama veya bir adresin oy gücünü mevcut blok yerine geçmişteki bir dönemde (örneğin, geçmişteki 2-3 blok) ölçme gibi yöntemler yer alır. Her iki yöntem de oy gücünü zincir üstündeki oyları hızla etkileyecek şekilde toplama olasılığını azaltır.
+Zincir içi yönetişimle ilgili sorunları önlemenin bir yolu [bir zaman kilidi (timelock) kullanmaktır](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Bir zaman kilidi, belirli bir süre geçene kadar bir akıllı sözleşmenin belirli eylemleri yürütmesini engeller. Diğer stratejiler arasında, her bir token'a ne kadar süredir kilitli kaldığına bağlı olarak bir "oy ağırlığı" atamak veya bir adresin oy gücünü mevcut blok yerine geçmiş bir dönemde (örneğin, geçmişteki 2-3 blok) ölçmek yer alır. Her iki yöntem de zincir içi oyları yönlendirmek için hızlı bir şekilde oy gücü toplama olasılığını azaltır.
 
-Paylaşılan bağlantılarda [güvenli yönetişim sistemleri tasarlama](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [DAO'larda farklı oylama mekanizmaları](https://hackernoon.com/governance-is-the-holy-grail-for-daos) ve [DeFi'den yararlanan yaygın DAO saldırı vektörleri](https://dacian.me/dao-governance-defi-attacks) hakkında daha fazla bilgi bulabilirsiniz.
+Paylaşılan bağlantılarda [güvenli yönetişim sistemleri tasarlama](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [DAO'lardaki farklı oylama mekanizmaları](https://hackernoon.com/governance-is-the-holy-grail-for-daos) ve [DeFi'den yararlanan yaygın DAO saldırı vektörleri](https://dacian.me/dao-governance-defi-attacks) hakkında daha fazla bilgi bulabilirsiniz.
 
-### 8. Koddaki karmaşıklığı en aza indirin {#reduce-code-complexity}
+### 8. Koddaki karmaşıklığı minimuma indirin {#reduce-code-complexity}
 
-Geleneksel yazılım geliştiricileri, yazılım tasarımına gereksiz karmaşıklık eklememeyi tavsiye eden "KISS" ("keep it simple, stupid - basit tut, aptal") prensibini iyi bilir. Bu, uzun süredir kabul gören "karmaşık sistemler karmaşık şekillerde başarısız olur" düşüncesine uygundur ve bu sistemler maliyetli hatalara daha yatkındır.
+Geleneksel yazılım geliştiricileri, yazılım tasarımına gereksiz karmaşıklık getirilmemesini tavsiye eden KISS ("basit tut, aptal") prensibine aşinadır. Bu, "karmaşık sistemlerin karmaşık şekillerde başarısız olduğu" ve maliyetli hatalara daha duyarlı olduğu yönündeki uzun süredir devam eden düşünceyi takip eder.
 
-Akıllı sözleşmeleri yazarken işleri basit tutmak, akıllı sözleşmelerin potansiyel olarak büyük miktarlarda değeri kontrol ettiği göz önüne alındığında özellikle önemlidir. Akıllı sözleşme yazarken basitliği sağlamaya yönelik bir ipucu, mümkün olduğunda [OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/5.x/) gibi mevcut kütüphaneleri yeniden kullanmaktır. Bu kütüphaneler, geliştiriciler tarafından kapsamlı bir şekilde denetlenmiş ve test edilmiş olduğundan bunların kullanılması, yeni işlevselliğin sıfırdan yazılarak hataların eklenmesi olasılığını azaltır.
+Akıllı sözleşmelerin potansiyel olarak büyük miktarlarda değeri kontrol ettiği göz önüne alındığında, akıllı sözleşmeler yazarken işleri basit tutmak özel bir öneme sahiptir. Akıllı sözleşmeler yazarken basitliği sağlamak için bir ipucu, mümkün olduğunda [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/) gibi mevcut kütüphaneleri yeniden kullanmaktır. Bu kütüphaneler geliştiriciler tarafından kapsamlı bir şekilde denetlendiği ve test edildiği için, bunları kullanmak sıfırdan yeni işlevler yazarak hata getirme olasılığını azaltır.
 
-Başka yaygın bir tavsiye de küçük fonksiyonlar yazmak ve iş mantığını birden fazla sözleşmeye bölerek sözleşmeleri modüler tutmaktır. Basit kod yazmak, akıllı sözleşmedeki saldırı yüzeyini azaltırken genel sistem doğruluğu hakkında düşünmeyi ve olası tasarım hatalarını erken tespit etmeyi de kolaylaştırır.
+Bir diğer yaygın tavsiye, küçük fonksiyonlar yazmak ve iş mantığını birden fazla sözleşmeye bölerek sözleşmeleri modüler tutmaktır. Daha basit kod yazmak yalnızca bir akıllı sözleşmedeki saldırı yüzeyini azaltmakla kalmaz, aynı zamanda genel sistemin doğruluğu hakkında akıl yürütmeyi ve olası tasarım hatalarını erkenden tespit etmeyi de kolaylaştırır.
 
 ### 9. Yaygın akıllı sözleşme güvenlik açıklarına karşı savunun {#mitigate-common-smart-contract-vulnerabilities}
 
-#### Yeniden giriş {#reentrancy}
+#### Yeniden giriş (Reentrancy) {#reentrancy}
 
-Ethereum Sanal Makinesi, eş zamanlılığa izin vermez; yani bir mesaj çağrısına dahil olan iki sözleşme aynı anda çalışamaz. Harici bir çağrı sözleşmenin yürütülmesini ve hafızasını çağrı dönene kadar duraklatır; bunun ardından yürütme normal şekilde devam eder. Bu süreç resmi olarak [kontrol akışını](https://www.computerhope.com/jargon/c/contflow.htm) başka bir sözleşmeye aktarmak olarak tanımlanabilir.
+EVM eşzamanlılığa izin vermez, yani bir mesaj çağrısına dahil olan iki sözleşme aynı anda çalışamaz. Harici bir çağrı, çağrı dönene kadar çağıran sözleşmenin yürütülmesini ve belleğini duraklatır, bu noktada yürütme normal şekilde devam eder. Bu süreç resmi olarak [kontrol akışını](https://www.computerhope.com/jargon/c/contflow.htm) başka bir sözleşmeye aktarmak olarak tanımlanabilir.
 
-Çoğunlukla zararsız olsa da, kontrol akışını güvenilmeyen sözleşmelere aktarmak yeniden giriş gibi problemlere yok açabilir. Yeniden giriş saldırısı, kötü niyetli bir sözleşmenin güvenlik açığı bulunan bir sözleşmeye asıl fonksiyonun çağrısı tamamlanmadan geri çağrı yapması durumunda gerçekleşir. Bu tür bir saldırı en iyi şekilde örnek vererek açıklanabilir.
+Çoğunlukla zararsız olsa da, kontrol akışını güvenilmeyen sözleşmelere aktarmak yeniden giriş gibi sorunlara neden olabilir. Bir yeniden giriş saldırısı, kötü niyetli bir sözleşme, orijinal fonksiyon çağrısı tamamlanmadan önce savunmasız bir sözleşmeye geri çağrı yaptığında meydana gelir. Bu tür bir saldırı en iyi bir örnekle açıklanır.
 
-Herhangi bir kişinin ether yatırmasına ve çekmesine izin veren basit bir akıllı sözleşme ('Victim') düşünün:
+Herkesin Ether yatırmasına ve çekmesine izin veren basit bir akıllı sözleşme ('Kurban') düşünün:
 
 ```solidity
-// Bu sözleşme savunmasızdır. Üretimde kullanmayın
+// Bu Sözleşme savunmasızdır. Üretim ortamında kullanmayın
 
 contract Victim {
     mapping (address => uint256) public balances;
@@ -256,17 +255,17 @@ contract Victim {
 }
 ```
 
-Bu sözleşme, kullanıcıların sözleşmeye önceden yatırılmış olan ETH'yi çekmesini sağlayan `withdraw()` fonksiyonunu açığa çıkartır. Sözleşme, bir çekimi işlerken şu işlemleri gerçekleştirir:
+Bu sözleşme, kullanıcıların daha önce sözleşmeye yatırılan ETH'yi çekmelerine olanak tanıyan bir `withdraw()` fonksiyonu sunar. Bir çekim işlemini işlerken, sözleşme aşağıdaki işlemleri gerçekleştirir:
 
 1. Kullanıcının ETH bakiyesini kontrol eder
-2. Fonları çağıran adrese yollar
-3. Bakiyeyi 0'a ayarlayarak kullanıcının ek çekimler yapmasını önler
+2. Çağıran adrese fon gönderir
+3. Bakiyelerini 0'a sıfırlayarak kullanıcıdan ek çekimleri önler
 
-`Victim` sözleşmesindeki `withdraw()` fonksiyonu, "kontroller-etkileşimler-etkiler" desenini takip eder. Yürütme için gerekli koşulların sağlanıp sağlanmadığını (yani kullanıcının pozitif bir ETH bakiyesi olup olmadığını) _kontrol eder_ ve işlemin _etkilerini_ uygulamadan önce (yani kullanıcının bakiyesini düşürmek) çağıranın adresine ETH göndererek _etkileşimi_ gerçekleştirir.
+`Victim` sözleşmesindeki `withdraw()` fonksiyonu bir "kontroller-etkileşimler-etkiler" (checks-interactions-effects) modelini izler. İşlemin _etkilerini_ uygulamadan (yani kullanıcının bakiyesini azaltmadan) önce, yürütme için gerekli koşulların karşılanıp karşılanmadığını _kontrol eder_ (yani kullanıcının pozitif bir ETH bakiyesi vardır) ve çağıranın adresine ETH göndererek _etkileşimi_ gerçekleştirir.
 
-Eğer `withdraw()` bir dışarıdan yönetilen hesaptan (EOA) çağrılırsa, fonksiyon beklenildiği gibi çalışır: `msg.sender.call.value()` çağırana ETH gönderir. Ancak `msg.sender`, `withdraw()` çağrısı yapan bir akıllı sözleşme hesabı ise, `msg.sender.call.value()` kullanarak fon gönderildiğinde aynı zamanda o adreste depolanan kod da çalışacaktır.
+`withdraw()` harici olarak sahip olunan bir hesaptan (EOA) çağrılırsa, fonksiyon beklendiği gibi yürütülür: `msg.sender.call.value()` çağırana ETH gönderir. Ancak, `msg.sender` bir akıllı sözleşme hesabıysa ve `withdraw()` fonksiyonunu çağırırsa, `msg.sender.call.value()` kullanarak fon göndermek, o adreste depolanan kodun çalışmasını da tetikleyecektir.
 
-Sözleşme adresinde dağıtılan kodun şu olduğunu hayal edin:
+Sözleşme adresinde dağıtılan kodun bu olduğunu hayal edin:
 
 ```solidity
  contract Attacker {
@@ -283,34 +282,33 @@ Sözleşme adresinde dağıtılan kodun şu olduğunu hayal edin:
 }
 ```
 
-Bu sözleşme üç şey yapmak üzere tasarlanmıştır:
+Bu sözleşme üç şey yapmak için tasarlanmıştır:
 
-1. Başka bir hesaptan yatırma işlemini kabul etmek (muhtemelen saldırganın EOA'sı)
-2. Victim sözleşmesine 1 ETH yatırmak
+1. Başka bir hesaptan (muhtemelen saldırganın EOA'sı) bir depozito kabul etmek
+2. Kurban sözleşmesine 1 ETH yatırmak
 3. Akıllı sözleşmede depolanan 1 ETH'yi çekmek
 
-Burada, gelen `msg.sender.call.value` tarafından bırakılan gaz miktarı 40.000'den fazla ise `Attacker`'ın `Victim`'deki `withdraw()` fonksiyonunu tekrar çağıran başka bir fonksiyonu olması hariç yanlış hiçbir şey yoktur. Bu, `Attacker`'a `Victim`'e yeniden girebilme ve ilk `withdraw` çağrısı tamamlanmadan önce daha fazla fon çekebilme olanağı sağlar. Bu döngü şöyle görünür:
+Gelen `msg.sender.call.value` işleminden kalan gaz 40.000'den fazlaysa, `Attacker` sözleşmesinin `Victim` içindeki `withdraw()` fonksiyonunu tekrar çağıran başka bir fonksiyona sahip olması dışında burada yanlış bir şey yoktur. Bu, `Attacker` sözleşmesine `Victim` sözleşmesine yeniden girme ve `withdraw` fonksiyonunun ilk çağrısı tamamlanmadan _önce_ daha fazla fon çekme yeteneği verir. Döngü şuna benzer:
 
 ```solidity
-- Saldırganın EOA'sı 1 ETH ile `Attacker.beginAttack()` fonksiyonunu çağırır
-- `Attacker.beginAttack()` `Victim`e 1 ETH yatırır
-- `Attacker`, `Victim`deki `withdraw()` fonksiyonunu çağırır
-- `Victim`, `Attacker`'ın bakiyesini kontrol eder (1 ETH)
-- `Victim`, `Attacker`'a 1 ETH gönderir (bu da varsayılan fonksiyonu tetikler)
-- `Attacker`, `Victim.withdraw()`'ı tekrar çağırır (not: `Victim`, `Attacker`'ın bakiyesini ilk çekimden sonra henüz düşürmedi)
-- `Victim`, `Attacker`'ın bakiyesini kontrol eder (ilk çağrının etkilerini uygulamadığı için hala 1 ETH)
-- `Victim`, `Attacker`'a 1 ETH gönderir (bu da varsayılan fonksiyonu tetikler ve `Attacker`'ın `withdraw` fonksiyonuna yeniden girmesine izin verir)
-- Bu süreç, `Attacker`'ın gas'ı bitene kadar tekrarlanır, bu noktada `msg.sender.call.value` ek para çekme işlemlerini tetiklemeden geri döner
-- `Victim` son olarak ilk işlemin (ve sonrakilerin) sonuçlarını durumuna uygular, böylece `Attacker`'ın bakiyesi 0 olarak ayarlanır
+- Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH
+- `Attacker.beginAttack()` deposits 1 ETH into `Victim`
+- `Attacker` calls `withdraw() in `Victim`
+- `Victim` checks `Attacker`’s balance (1 ETH)
+- `Victim` sends 1 ETH to `Attacker` (which triggers the default function)
+- `Attacker` calls `Victim.withdraw()` again (note that `Victim` hasn’t reduced `Attacker`’s balance from the first withdrawal)
+- `Victim` checks `Attacker`’s balance (which is still 1 ETH because it hasn’t applied the effects of the first call)
+- `Victim` sends 1 ETH to `Attacker` (which triggers the default function and allows `Attacker` to reenter the `withdraw` function)
+- The process repeats until `Attacker` runs out of gas, at which point `msg.sender.call.value` returns without triggering additional withdrawals
+- `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Özetle, çağıranın bakiyesi fonksiyonun yürütülmesi tamamlanana kadar 0'a ayarlanmadığı için sonraki çağrılar başarılı olacak ve çağıranın bakiyesini birden fazla kez çekmesine olanak tanıyacaktır. Bu tür saldırılar, [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack) olayında olduğu gibi bir akıllı sözleşmenin fonlarını boşaltmak için kullanılabilir. Yeniden giriş saldırıları, [yeniden giriş istismarlarının herkese açık listesi](https://github.com/pcaversaccio/reentrancy-attacks) içinde gösterildiği gibi bugün hala akıllı sözleşmeler için ciddi bir sorundur.
+Özetle, çağıranın bakiyesi fonksiyon yürütmesi tamamlanana kadar 0'a ayarlanmadığından, sonraki çağrılar başarılı olacak ve çağıranın bakiyesini birden çok kez çekmesine izin verecektir. Bu tür bir saldırı, [2016 DAO hack'inde](https://www.coindesk.com/learn/understanding-the-dao-attack) olduğu gibi bir akıllı sözleşmenin fonlarını boşaltmak için kullanılabilir. [Yeniden giriş istismarlarının halka açık listelerinin](https://github.com/pcaversaccio/reentrancy-attacks) gösterdiği gibi, yeniden giriş saldırıları bugün akıllı sözleşmeler için hala kritik bir sorundur.
 
-##### Yeniden giriş saldırılarını engelleme
+##### Yeniden giriş saldırıları nasıl önlenir
+Yeniden girişle başa çıkmak için bir yaklaşım, [kontroller-etkiler-etkileşimler (checks-effects-interactions) modelini](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern) izlemektir. Bu model, fonksiyonların yürütülmesini, yürütmeye devam etmeden önce gerekli kontrolleri gerçekleştiren kodun ilk sırada, ardından sözleşme durumunu manipüle eden kodun ve diğer sözleşmelerle veya EOA'larla etkileşime giren kodun en son geleceği şekilde sıralar.
 
-Yeniden girişle başa çıkmanın bir yolu, [kontroller-etkiler-etkileşimler modelini](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern) takip etmektir. Bu model, yürütmenin, yürütme işlemine devam etmeden önce gerekli kontrolleri gerçekleştiren kodla başladığı, ardından sözleşme durumunu manipüle eden kodla devam ettiği ve son olarak diğer sözleşmeler veya EOA'larla etkileşimde bulunan kodun geldiği bir şekilde düzenlenmesini sağlar.
-
-Kontroller-etkiler-etkileşim modeli, aşağıda gösterilen `Victim` sözleşmesinin revize edilmiş bir sürümünde kullanılır:
+Kontroller-etkiler-etkileşimler modeli, aşağıda gösterilen `Victim` sözleşmesinin revize edilmiş bir versiyonunda kullanılmaktadır:
 
 ```solidity
 contract NoLongerAVictim {
@@ -323,9 +321,9 @@ contract NoLongerAVictim {
 }
 ```
 
-Bu sözleşme, kullanıcının bakiyesi üzerinde bir _kontrol_ gerçekleştirir, `withdraw()` fonksiyonunun _etkilerini_ uygular (kullanıcının bakiyesini 0'a ayarlayarak) ve son olarak _etkileşimi_ gerçekleştirir (kullanıcının adresine ETH gönderir). Bu, sözleşmenin depolamasını harici çağrıdan önce güncellemesini sağlayarak ilk saldırıya yol açan yeniden giriş koşulunu ortadan kaldırır. `Attacker` sözleşmesini `NoLongerAVictim`'e çağırmak hala mümkün olsa da `balances[msg.sender]` 0 olarak ayarlandığı için ek çekimler hata verir.
+Bu sözleşme, kullanıcının bakiyesi üzerinde bir _kontrol_ gerçekleştirir, `withdraw()` fonksiyonunun _etkilerini_ uygular (kullanıcının bakiyesini 0'a sıfırlayarak) ve _etkileşimi_ gerçekleştirmeye devam eder (kullanıcının adresine ETH göndererek). Bu, sözleşmenin harici çağrıdan önce depolamasını güncellemesini sağlayarak ilk saldırıyı mümkün kılan yeniden giriş koşulunu ortadan kaldırır. `Attacker` sözleşmesi hala `NoLongerAVictim` sözleşmesine geri çağrı yapabilir, ancak `balances[msg.sender]` 0 olarak ayarlandığından, ek çekimler bir hata fırlatacaktır.
 
-Diğer bir seçenek ise bir fonksiyon çağrısı tamamlanana kadar sözleşmenin durumunun bir kısmını kilitleyen karşılıklı hariç tutma kilidi (genellikle "mutex" olarak tanımlanır) kullanmaktır. Bu, fonksiyon yürütülmeden önce `true` olarak ayarlanan ve çağrı tamamlandıktan sonra `false` şekline dönen bir Boole değişkeni kullanılarak uygulanır. Aşağıdaki örnekte görüldüğü gibi mutex kullanmak, bir fonksiyonu orijinal çağrı halen işleniyorken tekrarlı çağrılara karşı koruyarak yeniden girişi etkin biçimde durdurur.
+Başka bir seçenek, bir fonksiyon çağrısı tamamlanana kadar bir sözleşmenin durumunun bir bölümünü kilitleyen karşılıklı dışlama kilidi (genellikle "mutex" olarak tanımlanır) kullanmaktır. Bu, fonksiyon yürütülmeden önce `true` olarak ayarlanan ve çağrı yapıldıktan sonra `false` değerine dönen bir Boolean değişkeni kullanılarak uygulanır. Aşağıdaki örnekte görüldüğü gibi, bir mutex kullanmak, orijinal çağrı hala işlenirken bir fonksiyonu özyinelemeli çağrılara karşı korur ve yeniden girişi etkili bir şekilde durdurur.
 
 ```solidity
 pragma solidity ^0.7.0;
@@ -335,15 +333,15 @@ contract MutexPattern {
     mapping(address => uint256) public balances;
 
     modifier noReentrancy() {
-        require(!locked, "Yeniden giriş engellendi.");
+        require(!locked, "Blocked from reentrancy.");
         locked = true;
         _;
         locked = false;
     }
-    // Bu fonksiyon bir mutex tarafından korunur, bu nedenle `msg.sender.call` içinden yapılan yeniden giriş çağrıları `withdraw` fonksiyonunu tekrar çağıramaz.
-    // `return` ifadesi `true` olarak değerlendirilir, ancak yine de değiştiricideki `locked = false` ifadesini değerlendirir
+    // Bu fonksiyon bir muteks ile korunmaktadır, bu nedenle `msg.sender.call` içinden gelen yeniden giriş çağrıları `withdraw`'u tekrar çağıramaz.
+    //  `return` ifadesi `true` olarak değerlendirilir ancak yine de değiştiricideki `locked = false` ifadesini değerlendirir
     function withdraw(uint _amount) public payable noReentrancy returns(bool) {
-        require(balances[msg.sender] >= _amount, "Çekilecek bakiye yok.");
+        require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
         balances[msg.sender] -= _amount;
         (bool success, ) = msg.sender.call{value: _amount}("");
@@ -354,30 +352,32 @@ contract MutexPattern {
 }
 ```
 
-Ayrıca fonları hesaplara gönderen bir "itme ödemeleri" sistemi yerine, kullanıcıların akıllı sözleşmelerden fonlarını çekmesini gerektiren bir [çekme ödemeleri](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment) sistemini de kullanabilirsiniz. Bu, bilinmeyen adreslerde yanlışlıkla kod tetikleme ihtimalini ortadan kaldırır (ve aynı zamanda belirli hizmet reddi saldırılarını önleyebilir).
+Ayrıca, hesaplara fon gönderen bir "itme ödemeleri" (push payments) sistemi yerine, kullanıcıların akıllı sözleşmelerden fon çekmesini gerektiren bir [çekme ödemeleri](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment) (pull payments) sistemi de kullanabilirsiniz. Bu, bilinmeyen adreslerdeki kodu yanlışlıkla tetikleme olasılığını ortadan kaldırır (ve ayrıca belirli hizmet reddi saldırılarını da önleyebilir).
 
-#### Tamsayı yetersizlikleri ve taşmaları {#integer-underflows-and-overflows}
+#### Tamsayı taşmaları (underflow ve overflow) {#integer-underflows-and-overflows}
 
-Tamsayı taşması, bir aritmetik işlemin sonucunun kabul edilebilir değer aralığının dışına düşerek tamsayıyı temsil edilebilir en düşük değere yuvarlamasına neden olduğu zaman gerçekleşir. Örneğin bir `uint8` yalnızca 2^8-1=255'e kadar değerleri saklayabilir. 255'ten büyük değerleri sonuç veren aritmetik işlemler taşma yapar ve tıpkı bir otomobildeki kilometre sayacı azami kilometreye (999999) ulaşınca sıfırlandığı gibi `uint`'yi `0` olarak ayarlar.
+Bir tamsayı taşması (overflow), bir aritmetik işlemin sonuçları kabul edilebilir değer aralığının dışına çıktığında meydana gelir ve temsil edilebilir en düşük değere "başa sarmasına" neden olur. Örneğin, bir `uint8` yalnızca 2^8-1=255'e kadar olan değerleri saklayabilir. `255` değerinden daha yüksek değerlerle sonuçlanan aritmetik işlemler taşacak ve bir arabadaki kilometre sayacının maksimum kilometreye (999999) ulaştığında 0'a sıfırlanmasına benzer şekilde `uint` değerini `0` olarak sıfırlayacaktır.
 
-Tamsayı yetersizlikleri de benzer sebeplerden dolayı gerçekleşir: bir aritmetik işlemin sonuçlarının kabul edilebilir aralığın altına düşmesi. Bir `uint8` içinde 0'ı azaltmaya çalıştığınızı düşünelim; sonuç, basit olarak temsil edilebilir maksimum değere (255) yuvarlanacaktır.
+Tamsayı alt taşmaları (underflow) benzer nedenlerle gerçekleşir: bir aritmetik işlemin sonuçları kabul edilebilir aralığın altına düşer. Diyelim ki bir `uint8` içinde `0` değerini azaltmaya çalıştınız, sonuç basitçe temsil edilebilir maksimum değere (`255`) başa saracaktır.
 
-Hem tamsayı taşmaları hem de tamsayı yetersizlikleri, bir sözleşmenin durum değişkenlerinde beklenmedik değişimlere yol açabilir ve planlanmamış yürütmeye sebep olabilir. Bir saldırganın geçersiz bir işlem gerçekleştirmek için akıllı sözleşmedeki aritmetik taşmayı nasıl istismar edebileceğinin bir örneğini aşağıda görebilirsiniz:
+Hem tamsayı taşmaları hem de alt taşmaları, bir sözleşmenin durum değişkenlerinde beklenmedik değişikliklere yol açabilir ve planlanmamış yürütmeyle sonuçlanabilir. Aşağıda, bir saldırganın geçersiz bir işlem gerçekleştirmek için bir akıllı sözleşmedeki aritmetik taşmayı nasıl istismar edebileceğini gösteren bir örnek verilmiştir:
 
 ```
 pragma solidity ^0.7.6;
 
-// Bu sözleşme bir zaman kasası olarak hareket etmek için tasarlanmıştır.
-// Kullanıcı bu sözleşmeye para yatırabilir ancak en az bir hafta boyunca para çekemez.
-// Kullanıcı ayrıca 1 haftalık bekleme süresinin ötesine geçerek bekleme süresini uzatabilir.
+// Bu sözleşme bir zaman kasası olarak hareket etmek üzere tasarlanmıştır.
+// Kullanıcı bu sözleşmeye para yatırabilir ancak en az bir hafta boyunca çekemez.
+// Kullanıcı ayrıca bekleme süresini 1 haftalık bekleme süresinin ötesine uzatabilir.
 
 /*
-1. TimeLock'ı dağıtın
-2. TimeLock adresini kullanarak Attack'i dağıtın
-3. 1 ether göndererek Attack.attack'ı çağırın. Ether'inizi hemen çekebileceksiniz.
+1. TimeLock'u dağıtın
+2. TimeLock adresiyle Attack'ı dağıtın
+3. 1 ether göndererek Attack.attack'ı çağırın. Ether'inizi hemen
+   çekebileceksiniz.
 
 Ne oldu?
-Attack, TimeLock.lockTime'ın taşmasına neden oldu ve 1 haftalık bekleme süresinden önce para çekebildi.
+Attack, TimeLock.lockTime'ın taşmasına neden oldu ve 1 haftalık
+bekleme süresinden önce çekim yapabildi.
 */
 
 contract TimeLock {
@@ -394,14 +394,14 @@ contract TimeLock {
     }
 
     function withdraw() public {
-        require(balances[msg.sender] > 0, "Yetersiz fon");
-        require(block.timestamp > lockTime[msg.sender], "Kilit süresi dolmadı");
+        require(balances[msg.sender] > 0, "Insufficient funds");
+        require(block.timestamp > lockTime[msg.sender], "Lock time not expired");
 
         uint amount = balances[msg.sender];
         balances[msg.sender] = 0;
 
         (bool sent, ) = msg.sender.call{value: amount}("");
-        require(sent, "Ether gönderilemedi");
+        require(sent, "Failed to send Ether");
     }
 }
 
@@ -417,7 +417,7 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        eğer t = mevcut kilit süresi ise, öyle bir x bulmalıyız ki
+        eğer t = mevcut kilit süresi ise, o zaman öyle bir x bulmalıyız ki
         x + t = 2**256 = 0
         yani x = -t
         2**256 = type(uint).max + 1
@@ -431,135 +431,133 @@ contract Attack {
 }
 ```
 
-##### Tamsayı yetersizliklerini ve taşmalarını engelleme
+##### Tamsayı taşmaları nasıl önlenir
+0.8.0 sürümünden itibaren Solidity derleyicisi, tamsayı alt taşmaları ve taşmalarıyla sonuçlanan kodu reddeder. Ancak, daha düşük bir derleyici sürümüyle derlenen sözleşmeler, aritmetik işlemleri içeren fonksiyonlarda kontroller gerçekleştirmeli veya alt taşma/taşma kontrolü yapan bir kütüphane (örneğin, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) kullanmalıdır.
 
-Solidity derleyicisi, 0.8.0 versiyonu itibariyle tamsayı yetersizliklerini ve taşmalarını sonuç veren kodları reddetmektedir. Ancak daha düşük bir derleme versiyonu ile derlenen sözleşmeler ya aritmetik işlemleri içeren fonksiyonlarda kontroller gerçekleştirmeli ya da yetersizlik/taşma kontrolü yapan kütüphaneleri (örneğin, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) kullanmalıdır.
+#### Kâhin (Oracle) manipülasyonu {#oracle-manipulation}
 
-#### Kâhin manipülasyonu {#oracle-manipulation}
+[Kâhinler](/developers/docs/oracles/), zincir dışı bilgileri kaynak olarak alır ve akıllı sözleşmelerin kullanması için zincir içine gönderir. Kâhinlerle, sermaye piyasaları gibi zincir dışı sistemlerle birlikte çalışan akıllı sözleşmeler tasarlayabilir ve uygulamalarını büyük ölçüde genişletebilirsiniz.
 
-[Kâhinler](/developers/docs/oracles/), zincir dışı bilgi toplar ve akıllı sözleşmelerin kullanması için zincir üzerine gönderir. Kâhinler sayesinde sermaye piyasaları gibi zincir dışı sistemlerle birlikte çalışan akıllı sözleşmeler tasarlayabilir ve bu sayede uygulama alanlarını önemli ölçüde genişletebilirsiniz.
+Ancak kâhin bozulursa ve zincir içine yanlış bilgi gönderirse, akıllı sözleşmeler hatalı girdilere dayalı olarak yürütülür ve bu da sorunlara neden olabilir. Bu, bir blokzincir kâhininden gelen bilgilerin doğru, güncel ve zamanında olduğundan emin olma göreviyle ilgili olan "oracle problemi"nin temelidir.
 
-Ancak eğer kâhin yozlaşmışsa ve zincir üstünde yanlış bilgiler gönderiyorsa akıllı sözleşmeler, hatalara sebep olabilecek yanlış girdileri temel alarak yürütülür. Bu, bir blokzincir kâhininden gelen bilginin doğru, güncel olduğundan ve zamanında alındığından emin olma görevini ilgilendiren ''kâhin sorunu''nun temelidir.
+İlgili bir güvenlik endişesi, bir varlığın spot fiyatını almak için merkeziyetsiz bir borsa gibi zincir içi bir kâhin kullanmaktır. [Merkeziyetsiz finans (DeFi)](/defi/) endüstrisindeki borç verme platformları, ne kadar borç alabileceklerini belirlemek amacıyla bir kullanıcının teminatının değerini belirlemek için bunu sıklıkla yapar.
 
-Buna bağlı bir güvenlik endişesi de bir varlığın spot fiyatını almak için merkezi borsa gibi zincir üstü bir kâhin kullanımıdır. [Merkeziyetsiz finans (DeFi)](/defi/) sektörünün borç verme platformları, bunu genellikle bir kullanıcının ne kadar ödünç alabileceğine karar vermek için kullanıcının teminatının değerini belirlemek amacıyla yapar.
+DEX fiyatları, büyük ölçüde arbitrajcıların piyasalardaki pariteyi geri kazanması nedeniyle genellikle doğrudur. Bununla birlikte, özellikle zincir içi kâhin varlık fiyatlarını (genellikle olduğu gibi) geçmiş ticaret modellerine göre hesaplıyorsa, manipülasyona açıktırlar.
 
-DEX (merkeziyetsiz borsa) fiyatları, büyük ölçüde piyasalarda pariteleri eski haline getiren arbitrajcılar sayesinde genellikle doğrudur. Ancak bu fiyatlar, özellikle zincir üstündeki kâhinin varlık fiyatlarını geçmişe dönük ticaret düzenine dayanarak hesapladığı durumlarda (ki genelde durum böyledir) manipülasyona açıktır.
+Örneğin, bir saldırgan borç verme sözleşmenizle etkileşime girmeden hemen önce bir Flaş kredi alarak bir varlığın spot fiyatını yapay olarak şişirebilir. Varlığın fiyatı için DEX'i sorgulamak, (saldırganın varlığa olan talebi saptıran büyük "satın alma emri" nedeniyle) normalden daha yüksek bir değer döndürerek, almaları gerekenden daha fazla borç almalarına olanak tanır. Bu tür "Flaş kredi saldırıları", DeFi uygulamaları arasında fiyat kâhinlerine olan güveni istismar etmek için kullanılmış ve protokollere milyonlarca kayıp fona mal olmuştur.
 
-Örneğin bir saldırgan, borç verme sözleşmenizle etkileşime geçmeden hemen önce hızlı kredi alıp varlığın spot fiyatını suni olarak yükseltebilir. Varlık fiyatı için DEX sorgulama, normalin üstünde bir değer döndürerek (saldırganın varlık talebini çarpıtan büyük ''satın alım emri'' sebebiyle) alması gerekenden daha fazlasını ödünç alabilmesine imkan tanır. Bu gibi ''hızlı kredi saldırıları'' DeFi (merkeziyetsiz finans) uygulamaları arasında fiyat kâhinlerinin güvenilirliğini baltalamak için kullanıldı ve protokollerde milyonlarca dolarlık fon kaybına neden oldu.
+##### Kâhin manipülasyonu nasıl önlenir
+[Kâhin manipülasyonundan kaçınmak](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) için minimum gereksinim, tek hata noktalarından kaçınmak amacıyla birden fazla kaynaktan bilgi sorgulayan merkeziyetsiz bir kâhin ağı kullanmaktır. Çoğu durumda, merkeziyetsiz kâhinler, kâhin düğümlerini doğru bilgileri bildirmeye teşvik etmek için yerleşik kriptoekonomik teşviklere sahiptir ve bu da onları merkezi kâhinlerden daha güvenli hale getirir.
 
-##### Kâhin manipülasyonunu engelleme
-
-[Kâhin manipülasyonundan kaçınmanın](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) asgari şartı, tek hata noktalarından kaçınmak için çok sayıda kaynaktan bilgi sorgulayan bir merkeziyetsiz kâhin ağı kullanmaktır. Çoğu durumda merkeziyetsiz kâhinler, kâhin düğümlerini doğru bilgi aktarımı yapmaya teşvik etmek amacıyla onları merkezi kâhinlerden daha güvenli yapan yerleşik kripto-ekonomik teşviklere sahiptir.
-
-Varlık fiyatları için bir zincir üstü kâhin sorgulaması yapmayı planlıyorsanız zamana göre ağırlıklandırılmış ortalama fiyat (TWAP) mekanizmasını uygulayan bir tanesini kullanmayı göz önünde bulundurun. Bir [TWAP kâhini](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles), bir varlığın fiyatını iki farklı zaman noktasında sorgular (bunu değiştirebilirsiniz) ve elde edilen ortalamaya dayanarak spot fiyatı hesaplar. Daha uzun zaman dilimleri seçmek, yeni işlenmiş büyük emirler varlık fiyatını etkilemeyeceğinden protokolünüzü fiyat manipülasyonuna karşı korur.
+Varlık fiyatları için zincir içi bir kâhini sorgulamayı planlıyorsanız, zaman ağırlıklı ortalama fiyat (TWAP) mekanizması uygulayan bir kâhin kullanmayı düşünün. Bir [TWAP kâhini](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles), bir varlığın fiyatını iki farklı zaman noktasında (değiştirebileceğiniz) sorgular ve elde edilen ortalamaya göre spot fiyatı hesaplar. Daha uzun zaman dilimleri seçmek, yakın zamanda yürütülen büyük emirler varlık fiyatlarını etkileyemeyeceğinden protokolünüzü fiyat manipülasyonuna karşı korur.
 
 ## Geliştiriciler için akıllı sözleşme güvenlik kaynakları {#smart-contract-security-resources-for-developers}
 
-### Akıllı sözleşmeleri analiz etmeye ve kod doğruluğunu teyit etmeye yönelik araçlar {#code-analysis-tools}
+### Akıllı sözleşmeleri analiz etme ve kod doğruluğunu onaylama araçları {#code-analysis-tools}
 
-- **[Test araçları ve kütüphaneleri](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _Akıllı sözleşmeler üzerinde birim testleri, statik analiz ve dinamik analiz gerçekleştirmeye yönelik sektörel standart niteliğinde araçlar ve kütüphaneler koleksiyonu._
+- **[Test araçları ve kütüphaneler](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _Akıllı sözleşmeler üzerinde birim testleri, statik analiz ve dinamik analiz gerçekleştirmek için endüstri standardı araçlar ve kütüphaneler koleksiyonu._
 
-- **[Resmi doğrulama araçları](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Akıllı sözleşmelerde işlevsel doğruluğu ve değişmezleri kontrol etmeye yönelik araçlar._
+- **[Biçimsel doğrulama araçları](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Akıllı sözleşmelerdeki işlevsel doğruluğu onaylamak ve değişmezleri kontrol etmek için araçlar._
 
 - **[Akıllı sözleşme denetim hizmetleri](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Ethereum geliştirme projeleri için akıllı sözleşme denetim hizmetleri sağlayan organizasyonların listesi._
 
-- **[Hata ödülü platformları](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Hata ödüllerini koordine etme ve akıllı sözleşmelerdeki kritik güvenlik açıklarının sorumluluk bilinci içinde bildirilmesini ödüllendirme platformları._
+- **[Hata ödül platformları](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Hata ödüllerini koordine etmek ve akıllı sözleşmelerdeki kritik güvenlik açıklarının sorumlu bir şekilde ifşa edilmesini ödüllendirmek için platformlar._
 
-- **[Çatal Kontrolcüsü (Fork Checker)](https://forkchecker.hashex.org/)** - _Çatallanmış bir sözleşme ile ilgili mevcut tüm bilgileri kontrol etmeye yönelik ücretsiz bir çevrimiçi araç._
+- **[Fork Checker](https://forkchecker.hashex.org/)** - _Çatallanmış bir sözleşme ile ilgili mevcut tüm bilgileri kontrol etmek için ücretsiz bir çevrim içi araç._
 
-- **[ABI Kodlayıcı (ABI Encoder)](https://abi.hashex.org/)** - _Solidity sözleşme fonksiyonlarınızı ve yapıcı bağımsız değişkenlerinizi şifrelemeye yarayan ücretsiz bir çevrimiçi hizmet._
+- **[ABI Encoder](https://abi.hashex.org/)** - _Solidity sözleşme fonksiyonlarınızı ve kurucu argümanlarınızı kodlamak için ücretsiz bir çevrim içi hizmet._
 
-- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Şüpheli güvenlik açıklarını belirlemek ve sorunları kolayca tüketilebilen bir markdown formatında yazdırmak için Soyut Sözdizimi Ağaçlarını (AST) tarayan Solidity Statik Analizcisi._
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Şüpheli güvenlik açıklarını tespit etmek için Soyut Sözdizimi Ağaçlarını (AST) dolaşan ve sorunları kolayca tüketilebilen bir markdown formatında yazdıran Solidity Statik Analizörü._
 
 ### Akıllı sözleşmeleri izleme araçları {#smart-contract-monitoring-tools}
 
-- **[Tenderly Gerçek Zamanlı Uyarı](https://tenderly.co/monitoring)** - _Akıllı sözleşmelerinizde veya cüzdanlarınızda normal olmayan veya beklenmeyen olaylar gerçekleştiğinde gerçek zamanlı bildirimler almaya yarayan bir araç._
+- **[Tenderly Real-Time Alerting](https://tenderly.co/monitoring)** - _Akıllı sözleşmelerinizde veya cüzdanlarınızda olağandışı veya beklenmedik olaylar meydana geldiğinde gerçek zamanlı bildirimler almak için bir araç._
 
 ### Akıllı sözleşmelerin güvenli yönetimi için araçlar {#smart-contract-administration-tools}
 
-- **[Safe](https://safe.global/)** - _Ethereum üzerinde çalışan ve bir işlemi gerçekleştirmeden önce minimum sayıda kişinin onayının alınmasını gerektiren bir akıllı sözleşme cüzdanı (N'nin M'si)._
+- **[Safe](https://safe.global/)** - _Ethereum üzerinde çalışan ve bir işlemin gerçekleşebilmesi için minimum sayıda kişinin onaylamasını gerektiren akıllı sözleşme cüzdanı (M-of-N)._
 
-- **[OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/5.x/)** - _Sözleşme sahipliği, yükseltmeler, erişim kontrolleri, yönetişim, duraklatabilirlik ve benzeri yönetimsel özellikleri uygulamaya yönelik sözleşme kütüphaneleri._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Sözleşme sahipliği, yükseltmeler, erişim kontrolleri, yönetişim, duraklatılabilirlik ve daha fazlası dahil olmak üzere yönetimsel özellikleri uygulamak için sözleşme kütüphaneleri._
 
 ### Akıllı sözleşme denetim hizmetleri {#smart-contract-auditing-services}
 
-- **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Blokzincir ekosistemindeki projelerin protokollerinin kullanıma hazır olmasını ve kullanıcıları korumak amacıyla oluşturulmasını sağlayan akıllı sözleşme denetim hizmeti._
+- **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Blokzincir ekosistemindeki projelerin protokollerinin lansmana hazır olmasını ve kullanıcıları korumak için oluşturulmasını sağlamaya yardımcı olan akıllı sözleşme denetim hizmeti._
 
-- **[CertiK](https://www.certik.com/)** - _Son teknoloji ürünü resmi Doğrulama teknolojisinin akıllı sözleşmelerde ve blokzincir ağlarında kullanımına öncülük eden blokzincir güvenlik şirketi._
+- **[CertiK](https://www.certik.com/)** - _Akıllı sözleşmeler ve blokzincir ağlarında son teknoloji biçimsel doğrulama teknolojisinin kullanımına öncülük eden blokzincir güvenlik firması._
 
-- **[Trail of Bits](https://www.trailofbits.com/)** - _Riskleri azaltmak ve kodu güçlendirmek için güvenlik araştırmalarını saldırgan zihniyetiyle birleştiren siber güvenlik şirketi._
+- **[Trail of Bits](https://www.trailofbits.com/)** - _Riski azaltmak ve kodu güçlendirmek için güvenlik araştırmasını saldırgan zihniyetiyle birleştiren siber güvenlik şirketi._
 
-- **[PeckShield](https://peckshield.com/)** - _Blokzincir ekosisteminin tamamının güvenliği, gizliliği ve kullanılabilirliği için ürünler ve hizmetler sunan blokzincir güvenlik şirketi._
+- **[PeckShield](https://peckshield.com/)** - _Tüm blokzincir ekosisteminin güvenliği, gizliliği ve kullanılabilirliği için ürünler ve hizmetler sunan blokzincir güvenlik şirketi._
 
-- **[QuantStamp](https://quantstamp.com/)** - _Güvenlik ve risk değerlendirme hizmetleri aracılığıyla blokzincir teknolojisinin genel olarak benimsenmesini kolaylaştıran denetim hizmeti._
+- **[QuantStamp](https://quantstamp.com/)** - _Güvenlik ve risk değerlendirme hizmetleri aracılığıyla blokzincir teknolojisinin ana akım benimsenmesini kolaylaştıran denetim hizmeti._
 
-- **[OpenZeppelin](https://www.openzeppelin.com/security-audits)** - _Dağıtılmış sistemler için güvenlik denetimleri sunan akıllı sözleşme güvenlik şirketi._
+- **[OpenZeppelin](https://www.openzeppelin.com/security-audits)** - _Dağıtık sistemler için güvenlik denetimleri sağlayan akıllı sözleşme güvenlik şirketi._
 
-- **[Runtime Verification](https://runtimeverification.com/)** - _Akıllı sözleşmelerin resmi modellenmesi ve doğrulanması üzerine uzmanlaşmış güvenlik şirketi._
+- **[Runtime Verification](https://runtimeverification.com/)** - _Akıllı sözleşmelerin biçimsel modellenmesi ve doğrulanması konusunda uzmanlaşmış güvenlik şirketi._
 
-- **[Hacken](https://hacken.io)** - _Blokzincir güvenliğine 360 derece yaklaşımını getiren Web3 siber güvenlik denetimcisi._
+- **[Hacken](https://hacken.io)** - _Blokzincir güvenliğine 360 derece yaklaşım getiren Web3 siber güvenlik denetçisi._
 
-- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Ethereum ve Starknet üzerinde akıllı sözleşmelerin bütünlüğünü ve kullanıcıların güvenliğini güvence altına alan Solidity ve Cairo denetim hizmetleri._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Ethereum ve Starknet genelinde akıllı sözleşmelerin bütünlüğünü ve kullanıcıların güvenliğini sağlayan Solidity ve Cairo denetim hizmetleri._
 
-- **[HashEx](https://hashex.org/)** - _HashEx, kripto paraların güvenliğini güvence altına almak için blokzincir ve akıllı sözleşme denetimlerine odaklanırken akıllı sözleşme geliştirme, penetrasyon testi ve blokzincir danışmanlığı gibi hizmetler de sunar._
+- **[HashEx](https://hashex.org/)** - _HashEx, kripto paraların güvenliğini sağlamak için blokzincir ve akıllı sözleşme denetimine odaklanır; akıllı sözleşme geliştirme, sızma testi, blokzincir danışmanlığı gibi hizmetler sunar._
 
-- **[Code4rena](https://code4rena.com/)** - _Akıllı sözleşme güvenlik uzmanlarına güvenlik açıklarını bulmaya ve web3'ü daha güvenli hale getirmeye yönelik teşvikler sunan rekabetçi denetim platformu._
+- **[Code4rena](https://code4rena.com/)** - _Akıllı sözleşme güvenlik uzmanlarını güvenlik açıklarını bulmaya ve Web3'ü daha güvenli hâle getirmeye teşvik eden rekabetçi denetim platformu._
 
-- **[CodeHawks](https://codehawks.com/)** - _Güvenlik araştırmacılarına yönelik akıllı sözleşme denetimi yarışmalarına ev sahipliği yapan rekabetçi denetim platformu._
+- **[CodeHawks](https://codehawks.com/)** - _Güvenlik araştırmacıları için akıllı sözleşme denetim yarışmalarına ev sahipliği yapan rekabetçi denetim platformu._
 
-- **[Cyfrin](https://cyfrin.io)** - _Kripto güvenliğini ürünler ve akıllı sözleşme denetim hizmetleri aracılığıyla geliştiren Web3 güvenlik merkezi._
+- **[Cyfrin](https://cyfrin.io)** - _Ürünler ve akıllı sözleşme denetim hizmetleri aracılığıyla kripto güvenliğini geliştiren Web3 güvenlik merkezi._
 
-- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Deneyimli denetçilerden oluşan bir ekip ve sınıfının en iyisi araçlar ile blokzincir sistemleri için güvenlik denetimleri sunan Web3 güvenlik şirketi._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Deneyimli denetçilerden oluşan bir ekip ve sınıfının en iyisi araçlar aracılığıyla blokzincir sistemleri için güvenlik denetimleri sunan Web3 güvenlik firması._
 
-- **[Oxorio](https://oxor.io/)** - _Kripto şirketleri ve DeFi projeleri için EVM, Solidity, ZK, Zincirler Arası teknolojilerinde uzmanlığa sahip akıllı sözleşme denetimleri ve blokzincir güvenlik hizmetleri._
+- **[Oxorio](https://oxor.io/)** - _Kripto firmaları ve DeFi projeleri için EVM, Solidity, ZK, zincirler arası teknoloji alanlarında uzmanlığa sahip akıllı sözleşme denetimleri ve blokzincir güvenlik hizmetleri._
 
-- **[Inference](https://inference.ag/)** - _EVM tabanlı blokzincirler için akıllı sözleşme denetimi alanında uzmanlaşmış güvenlik denetim şirketi. Uzman denetçileri sayesinde potansiyel sorunları tespit eder ve ağa aktarım öncesi bunları düzeltmek için eyleme dönüştürülebilir çözümler önerirler._
+- **[Inference](https://inference.ag/)** - _EVM tabanlı blokzincirler için akıllı sözleşme denetiminde uzmanlaşmış güvenlik denetim şirketi. Uzman denetçileri sayesinde potansiyel sorunları tespit eder ve dağıtımdan önce bunları düzeltmek için eyleme geçirilebilir çözümler önerirler._
 
-### Hata ödülü platformları {#bug-bounty-platforms}
+### Hata ödül platformları {#bug-bounty-platforms}
 
-- **[Immunefi](https://immunefi.com/)** - _Akıllı sözleşmeler ve DeFi projeleri için güvenlik araştırmacılarının kodu inceledikleri, güvenlik açıklarını bildirdikleri, ödeme aldıkları ve kriptoyu daha güvenli hale getirdikleri hata ödülü platformu._
+- **[Immunefi](https://immunefi.com/)** - _Güvenlik araştırmacılarının kodu incelediği, güvenlik açıklarını ifşa ettiği, ödeme aldığı ve kriptoyu daha güvenli hâle getirdiği akıllı sözleşmeler ve DeFi projeleri için hata ödül platformu._
 
-- **[HackerOne](https://www.hackerone.com/)** - _İşletmeler ile penetrasyon testi uzmanları ve siber güvenlik araştırmacılarını bir araya getiren güvenlik açığı koordinasyonu ve hata ödülü platformu._
+- **[HackerOne](https://www.hackerone.com/)** - _İşletmeleri sızma test uzmanları ve siber güvenlik araştırmacılarıyla buluşturan güvenlik açığı koordinasyon ve hata ödül platformu._
 
-- **[HackenProof](https://hackenproof.com/)** - _Kripto projeleri (DeFi, Akıllı Sözleşmeler, Cüzdanlar, CEX ve dahası) için güvenlik profesyonellerinin derecelendirme hizmetleri verdikleri ve araştırmacıların alakalı, doğrulanmış hata raporları için ödeme aldıkları uzman hata ödülü platformu._
+- **[HackenProof](https://hackenproof.com/)** - _Güvenlik profesyonellerinin önceliklendirme hizmetleri sunduğu ve araştırmacıların ilgili, doğrulanmış hata raporları için ödeme aldığı kripto projeleri (DeFi, Akıllı Sözleşmeler, Cüzdanlar, CEX ve daha fazlası) için uzman hata ödül platformu._
 
-- **[Sherlock](https://www.sherlock.xyz/)** - _İlgili hataların adil bir şekilde ödenmesini sağlamak için akıllı sözleşmeler aracılığıyla yönetilen denetçiler için ödeme yapan, akıllı sözleşme güvenliğine yönelik Web3 sigortacısı._
+-  **[Sherlock](https://www.sherlock.xyz/)** - _İlgili hataların adil bir şekilde ödenmesini sağlamak için akıllı sözleşmeler aracılığıyla yönetilen denetçi ödemeleriyle akıllı sözleşme güvenliği için Web3'te sigortacı._
 
-- **[CodeHawks](https://www.codehawks.com/)** - _Denetçilerin güvenlik yarışmalarına ve mücadelelerine ve (yakında) kendi özel denetimlerine katıldıkları, rekabetçi hata ödül platformu._
+-  **[CodeHawks](https://www.codehawks.com/)** - _Denetçilerin güvenlik yarışmalarında ve mücadelelerinde ve (yakında) kendi özel denetimlerinde yer aldığı rekabetçi hata ödül platformu._
 
-### Bilinen akıllı sözleşme güvenlik açıkları ve istismarları yayınları {#common-smart-contract-vulnerabilities-and-exploits}
+### Bilinen akıllı sözleşme güvenlik açıkları ve istismarlarının yayınları {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Akıllı Sözleşmelere Yönelik Bilinen Saldırılar](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Genellikle örnek kod da içeren, en önemli sözleşme açıklarına ilişkin yeni başlayanlara yönelik açıklamalar._
+- **[ConsenSys: Bilinen Akıllı Sözleşme Saldırıları](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Çoğu durum için örnek kod içeren, en önemli sözleşme güvenlik açıklarının yeni başlayanlar için uygun açıklaması._
 
-- **[SWC Kayıt Defteri](https://swcregistry.io/)** - _Ethereum akıllı sözleşmeleri için geçerli Yaygın Zayıflık Numaralandırması (CWE) maddelerinin birleştirilmiş bir listesi._
+- **[SWC Registry](https://swcregistry.io/)** - _Ethereum akıllı sözleşmeleri için geçerli olan Ortak Zayıflık Numaralandırması (CWE) öğelerinin derlenmiş listesi._
 
-- **[Rekt](https://rekt.news/)** - _Detaylı otopsi raporları ile birlikte yüksek profilli kripto hackleri ve saldırılarına ilişkin düzenli şekilde güncellenen bir yayın._
+- **[Rekt](https://rekt.news/)** - _Ayrıntılı olay sonrası raporlarıyla birlikte yüksek profilli kripto hack'leri ve istismarlarının düzenli olarak güncellenen yayını._
 
-### Akıllı sözleşme güvenliğini öğrenmek için meydan okumalar {#challenges-for-learning-smart-contract-security}
+### Akıllı sözleşme güvenliğini öğrenmek için mücadeleler {#challenges-for-learning-smart-contract-security}
 
-- **[Harika BlockSec CTF'leri](https://github.com/blockthreat/blocksec-ctfs)** - _Blokzincir güvenliği savaş oyunları, meydan okumalar, ve [Bayrağı Yakala](https://www.webopedia.com/definitions/ctf-event/amp/) yarışmaları ve çözüm yazılarından oluşan derlenmiş bir liste._
+- **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Blokzincir güvenliği savaş oyunları, mücadeleleri ve [Bayrağı Yakala (Capture The Flag)](https://www.webopedia.com/definitions/ctf-event/amp/) yarışmaları ile çözüm yazılarının derlenmiş listesi._
 
-- **[Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)** - _DeFi akıllı sözleşmelerinin saldırı güvenliğini öğrenmek ve hata avı ile güvenlik denetimi konusunda yetenek geliştirmeye yönelik bir savaş oyunu._
+- **[Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)** - _DeFi akıllı sözleşmelerinin ofansif güvenliğini öğrenmek ve hata avcılığı ile güvenlik denetimi konularında beceriler geliştirmek için savaş oyunu._
 
-- **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Her seviyenin "hacklenmesi" gereken bir akıllı sözleşme olduğu Web3/Solidity tabanlı bir savaş oyunu._
+- **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Her seviyenin 'hacklenmesi' gereken bir akıllı sözleşme olduğu Web3/Solidity tabanlı savaş oyunu._
 
-- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Fantastik bir maceranın içinde geçen akıllı sözleşme bilgisayar saldırısı yarışması. Yarışmanın başarıyla tamamlanması, özel bir hata bulma programına erişim olanağı da sağlar._
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Fantastik bir macerada geçen akıllı sözleşme hackleme mücadelesi. Mücadelenin başarıyla tamamlanması aynı zamanda özel bir hata ödül programına erişim sağlar._
 
 ### Akıllı sözleşmeleri güvence altına almak için en iyi uygulamalar {#smart-contract-security-best-practices}
 
-- **[ConsenSys: Ethereum Akıllı Sözleşme Güvenliği En İyi Uygulamaları](https://consensys.github.io/smart-contract-best-practices/)** - _Ethereum akıllı sözleşmelerini güvenli kılmaya yönelik kapsamlı bir yönergeler listesi._
+- **[ConsenSys: Ethereum Akıllı Sözleşme Güvenliği En İyi Uygulamaları](https://consensys.github.io/smart-contract-best-practices/)** - _Ethereum akıllı sözleşmelerini güvence altına almak için kapsamlı yönergeler listesi._
 
-- **[Nascent: Basit Güvenlik Araç Kutusu](https://github.com/nascentxyz/simple-security-toolkit)** - _Akıllı sözleşme geliştirmeye yönelik güvenlik odaklı pratik rehberler ve kontrol listeleri koleksiyonu._
+- **[Nascent: Basit Güvenlik Araç Seti](https://github.com/nascentxyz/simple-security-toolkit)** - _Akıllı sözleşme geliştirme için pratik güvenlik odaklı kılavuzlar ve kontrol listeleri koleksiyonu._
 
-- **[Solidity Desenleri](https://fravoll.github.io/solidity-patterns/)** - _Akıllı sözleşme programlama dili Solidity için güvenli desenlerin ve en iyi pratiklerin kullanışlı bir derlemesi._
+- **[Solidity Patterns](https://fravoll.github.io/solidity-patterns/)** - _Akıllı sözleşme programlama dili Solidity için güvenli kalıpların ve en iyi uygulamaların faydalı bir derlemesi._
 
 - **[Solidity Belgeleri: Güvenlik Hususları](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _Solidity ile güvenli akıllı sözleşmeler yazmak için yönergeler._
 
-- **[Akıllı Sözleşme Güvenlik Doğrulama Standardı](https://github.com/securing/SCSVS)** - _Akıllı sözleşmelerin güvenliğini geliştiriciler, mimarlar, güvenlik eleştirmenleri ve satıcılar için standart hale getiren on dört parçalı bir kontrol listesi._
+- **[Akıllı Sözleşme Güvenlik Doğrulama Standardı](https://github.com/securing/SCSVS)** - _Geliştiriciler, mimarlar, güvenlik incelemecileri ve satıcılar için akıllı sözleşmelerin güvenliğini standartlaştırmak amacıyla oluşturulmuş on dört bölümlük kontrol listesi._
 
-- **[Akıllı Sözleşme Güvenliğini ve Denetimini Öğrenme](https://updraft.cyfrin.io/courses/security)** - _En iyi güvenlik uygulamalarını geliştirmek ve güvenlik araştırmacısı olmak isteyen akıllı sözleşme geliştiricileri için oluşturulan, akıllı sözleşme güvenliği ve denetimi kursu._
+- **[Akıllı Sözleşme Güvenliğini ve Denetimini Öğrenin](https://updraft.cyfrin.io/courses/security)** - _Güvenlik konusundaki en iyi uygulamalarını geliştirmek ve güvenlik araştırmacısı olmak isteyen akıllı sözleşme geliştiricileri için oluşturulmuş nihai akıllı sözleşme güvenliği ve denetimi kursu._
 
-### Akıllı sözleşme güvenliği üzerine öğreticiler {#tutorials-on-smart-contract-security}
+### Akıllı sözleşme güvenliği üzerine eğitimler {#tutorials-on-smart-contract-security}
 
 - [Güvenli akıllı sözleşmeler nasıl yazılır](/developers/tutorials/secure-development-workflow/)
 
@@ -569,6 +567,6 @@ Varlık fiyatları için bir zincir üstü kâhin sorgulaması yapmayı planlıy
 
 - [Akıllı sözleşme güvenlik yönergeleri](/developers/tutorials/smart-contract-security-guidelines/)
 
-- [Jeton sözleşmenizi keyfi jetonlarla güvenli bir şekilde nasıl entegre edersiniz](/developers/tutorials/token-integration-checklist/)
+- [Token sözleşmenizi rastgele token'larla güvenli bir şekilde nasıl entegre edersiniz](/developers/tutorials/token-integration-checklist/)
 
 - [Cyfrin Updraft - Akıllı sözleşme güvenliği ve denetimi tam kursu](https://updraft.cyfrin.io/courses/security)

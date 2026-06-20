@@ -75,3 +75,6 @@ storybook-static-pages
 
 # Hide skill eval workspaces
 .claude/skills/*-workspace
+
+# Playwright CLI session state
+.playwright-cli

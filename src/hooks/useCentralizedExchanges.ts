@@ -32,6 +32,7 @@ import coinbase from "@/public/images/exchanges/coinbase.png"
 import coinmama from "@/public/images/exchanges/coinmama.png"
 import coinmate from "@/public/images/exchanges/coinmate.png"
 import coinspot from "@/public/images/exchanges/coinspot.png"
+import coinswitch from "@/public/images/exchanges/coinswitch.png"
 import cryptocom from "@/public/images/exchanges/crypto.com.png"
 import easycrypto from "@/public/images/exchanges/easycrypto.png"
 import gateio from "@/public/images/exchanges/gateio.png"
@@ -66,6 +67,7 @@ type ExchangeKey =
   | "coinmama"
   | "coinmate"
   | "coinspot"
+  | "coinswitch"
   | "cryptocom"
   | "easycrypto"
   | "gateio"
@@ -215,6 +217,13 @@ const exchanges: ExchangeDetails = {
     name: "CoinSpot",
     url: "https://www.coinspot.com.au/",
     image: coinspot,
+    usaExceptions: [],
+  },
+  coinswitch: {
+    name: "CoinSwitch",
+    url: "https://coinswitch.co/",
+    // ETH/INR trading: https://coinswitch.co/pro/eth-inr/csx
+    image: coinswitch,
     usaExceptions: [],
   },
   cryptocom: {

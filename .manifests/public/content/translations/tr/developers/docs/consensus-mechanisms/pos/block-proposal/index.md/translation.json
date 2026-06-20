@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-06-18T21:04:47.815Z",
+  "englishManifestHash": "666fdd6fa7f7",
+  "placeholderOrder": [
+    "LINK-2655ce",
+    "LINK-e96260",
+    "LINK-a21a82",
+    "CODE-99a2b5",
+    "CODE-8ce86a",
+    "CODE-c1aabc",
+    "CODE-72f887",
+    "CODE-c46a96",
+    "CODE-72f887",
+    "CODEBLOCK-a1fd79",
+    "CODE-e7a44c",
+    "CODE-b77923",
+    "CODE-8a61a6",
+    "CODE-dcc3bc",
+    "CODE-cd759b",
+    "CODE-a68005",
+    "CODE-1f38b3",
+    "CODE-c14516",
+    "CODE-d7cfb7",
+    "CODE-d7cfb7",
+    "CODE-d7cfb7",
+    "CODE-b129ae",
+    "CODE-d7e21b",
+    "CODE-d7cfb7",
+    "CODE-81dc07",
+    "CODE-541440",
+    "LINK-9f2eaf",
+    "CODE-d7cfb7",
+    "CODE-4a3d95",
+    "CODE-4a3d95",
+    "CODE-b9a87c",
+    "LINK-2cad68",
+    "LINK-f4e6b1",
+    "LINK-7fdc51",
+    "LINK-5e9069",
+    "LINK-e7c83d",
+    "LINK-04c155"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-a1fd79": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-99a2b5": {
+      "type": "inline-code",
+      "values": {
+        "content": "1/N"
+      }
+    },
+    "CODE-8ce86a": {
+      "type": "inline-code",
+      "values": {
+        "content": "N"
+      }
+    },
+    "CODE-c1aabc": {
+      "type": "inline-code",
+      "values": {
+        "content": "balance < 32 ETH"
+      }
+    },
+    "CODE-72f887": {
+      "type": "inline-code",
+      "values": {
+        "content": "balance == 32 ETH"
+      }
+    },
+    "CODE-c46a96": {
+      "type": "inline-code",
+      "values": {
+        "content": "balance > 32 ETH"
+      }
+    },
+    "CODE-e7a44c": {
+      "type": "inline-code",
+      "values": {
+        "content": "randao_reveal"
+      }
+    },
+    "CODE-b77923": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth1_data"
+      }
+    },
+    "CODE-8a61a6": {
+      "type": "inline-code",
+      "values": {
+        "content": "graffiti"
+      }
+    },
+    "CODE-dcc3bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "proposer_slashings"
+      }
+    },
+    "CODE-cd759b": {
+      "type": "inline-code",
+      "values": {
+        "content": "attester_slashings"
+      }
+    },
+    "CODE-a68005": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposits"
+      }
+    },
+    "CODE-1f38b3": {
+      "type": "inline-code",
+      "values": {
+        "content": "voluntary_exits"
+      }
+    },
+    "CODE-c14516": {
+      "type": "inline-code",
+      "values": {
+        "content": "sync_aggregate"
+      }
+    },
+    "CODE-d7cfb7": {
+      "type": "inline-code",
+      "values": {
+        "content": "execution_payload"
+      }
+    },
+    "CODE-d7e21b": {
+      "type": "inline-code",
+      "values": {
+        "content": "prev_randao"
+      }
+    },
+    "CODE-b129ae": {
+      "type": "inline-code",
+      "values": {
+        "content": "difficulty"
+      }
+    },
+    "CODE-81dc07": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactions"
+      }
+    },
+    "CODE-541440": {
+      "type": "inline-code",
+      "values": {
+        "content": "state-root"
+      }
+    },
+    "CODE-4a3d95": {
+      "type": "inline-code",
+      "values": {
+        "content": "base_reward"
+      }
+    },
+    "CODE-b9a87c": {
+      "type": "inline-code",
+      "values": {
+        "content": "1/512 * effective balance"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-e96260": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-9f2eaf": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks"
+      }
+    },
+    "LINK-2cad68": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties"
+      }
+    },
+    "LINK-f4e6b1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-7fdc51": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-5e9069": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs"
+      }
+    },
+    "LINK-e7c83d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/gasper/"
+      }
+    },
+    "LINK-04c155": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:04:47.815Z",
+      "status": "success"
+    }
+  }
+}
