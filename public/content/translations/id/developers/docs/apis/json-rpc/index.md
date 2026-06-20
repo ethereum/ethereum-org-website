@@ -1,14 +1,14 @@
 ---
 title: API JSON-RPC
-description: Protokol pemanggilan prosedur jarak jauh (RPC) yang ringan dan tanpa status (stateless) untuk klien Ethereum.
+description: Protokol pemanggilan prosedur jarak jauh (RPC) yang ringan dan stateless untuk klien Ethereum.
 lang: id
 ---
 
-Agar aplikasi perangkat lunak dapat berinteraksi dengan blockchain [Ethereum](/) - baik dengan membaca data blockchain atau mengirim transaksi ke jaringan - aplikasi tersebut harus terhubung ke sebuah node Ethereum.
+Agar aplikasi perangkat lunak dapat berinteraksi dengan rantai blok [Ethereum](/) - baik dengan membaca data rantai blok atau mengirim transaksi ke jaringan - aplikasi tersebut harus terhubung ke node Ethereum.
 
 Untuk tujuan ini, setiap [klien Ethereum](/developers/docs/nodes-and-clients/#execution-clients) mengimplementasikan [spesifikasi JSON-RPC](https://github.com/ethereum/execution-apis), sehingga terdapat serangkaian metode seragam yang dapat diandalkan oleh aplikasi terlepas dari implementasi node atau klien tertentu.
 
-[JSON-RPC](https://www.jsonrpc.org/specification) adalah protokol pemanggilan prosedur jarak jauh (RPC) yang ringan dan tanpa status (stateless). Protokol ini mendefinisikan beberapa struktur data dan aturan seputar pemrosesannya. Protokol ini bersifat agnostik terhadap transportasi, yang berarti konsep-konsepnya dapat digunakan dalam proses yang sama, melalui soket, melalui HTTP, atau dalam berbagai lingkungan penyampaian pesan lainnya. Protokol ini menggunakan JSON (RFC 4627) sebagai format data.
+[JSON-RPC](https://www.jsonrpc.org/specification) adalah protokol pemanggilan prosedur jarak jauh (RPC) yang ringan dan stateless. Protokol ini mendefinisikan beberapa struktur data dan aturan seputar pemrosesannya. Protokol ini bersifat agnostik terhadap transportasi, yang berarti konsep-konsepnya dapat digunakan dalam proses yang sama, melalui soket, melalui HTTP, atau dalam berbagai lingkungan penyampaian pesan. Protokol ini menggunakan JSON (RFC 4627) sebagai format data.
 
 ## Implementasi klien {#client-implementations}
 
@@ -20,19 +20,19 @@ Meskipun Anda dapat memilih untuk berinteraksi langsung dengan klien Ethereum me
 
 ## API klien konsensus {#consensus-clients}
 
-Halaman ini terutama membahas API JSON-RPC yang digunakan oleh klien eksekusi Ethereum. Namun, klien konsensus juga memiliki API RPC yang memungkinkan pengguna untuk meminta informasi tentang node, meminta blok Beacon, status Beacon, dan informasi terkait konsensus lainnya secara langsung dari sebuah node. API ini didokumentasikan di [halaman web API Beacon](https://ethereum.github.io/beacon-APIs/#/).
+Halaman ini terutama membahas tentang API JSON-RPC yang digunakan oleh klien eksekusi Ethereum. Namun, klien konsensus juga memiliki API RPC yang memungkinkan pengguna untuk meminta informasi tentang node, meminta blok Beacon, state Beacon, dan informasi terkait konsensus lainnya secara langsung dari sebuah node. API ini didokumentasikan di [halaman web API Beacon](https://ethereum.github.io/beacon-APIs/#/).
 
 API internal juga digunakan untuk komunikasi antar-klien di dalam sebuah node - yaitu, memungkinkan klien konsensus dan klien eksekusi untuk bertukar data. Ini disebut 'Engine API' dan spesifikasinya tersedia di [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Spesifikasi klien eksekusi {#spec}
 
-[Baca spesifikasi lengkap API JSON-RPC di GitHub](https://github.com/ethereum/execution-apis). API ini didokumentasikan di [halaman web API Eksekusi](https://ethereum.github.io/execution-apis/) dan menyertakan sebuah Inspektur untuk mencoba semua metode yang tersedia.
+[Baca spesifikasi lengkap API JSON-RPC di GitHub](https://github.com/ethereum/execution-apis). API ini didokumentasikan di [halaman web API Eksekusi](https://ethereum.github.io/execution-apis/) dan menyertakan Inspector untuk mencoba semua metode yang tersedia.
 
 ## Konvensi {#conventions}
 
 ### Pengodean nilai hex {#hex-encoding}
 
-Dua tipe data utama diteruskan melalui JSON: array byte yang tidak diformat dan kuantitas. Keduanya diteruskan dengan pengodean hex tetapi dengan persyaratan pemformatan yang berbeda.
+Dua tipe data utama diteruskan melalui JSON: larik bita yang tidak diformat dan kuantitas. Keduanya diteruskan dengan pengodean hex tetapi dengan persyaratan pemformatan yang berbeda.
 
 #### Kuantitas {#quantities-encoding}
 
@@ -48,97 +48,97 @@ Berikut adalah beberapa contoh:
 
 ### Data yang tidak diformat {#unformatted-data-encoding}
 
-Saat mengodekan data yang tidak diformat (array byte, alamat akun, hash, array bytecode): kodekan sebagai hex, beri awalan "0x", dua digit hex per byte.
+Saat mengodekan data yang tidak diformat (larik bita, alamat akun, hash, larik kode bita): kodekan sebagai hex, beri awalan "0x", dua digit hex per bita.
 
 Berikut adalah beberapa contoh:
 
 - 0x41 (ukuran 1, "A")
 - 0x004200 (ukuran 3, "0B0")
 - 0x (ukuran 0, "")
-- SALAH: 0xf0f0f (harus berupa jumlah digit genap)
+- SALAH: 0xf0f0f (jumlah digit harus genap)
 - SALAH: 004200 (harus diawali dengan 0x)
 
 ### Parameter blok {#block-parameter}
 
 Metode berikut memiliki parameter blok:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getCode](#eth-getcode)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_call](#eth-call)
 
-Saat permintaan dibuat yang menanyakan status Ethereum, parameter blok yang diberikan menentukan ketinggian blok.
+Saat permintaan dibuat yang menanyakan state Ethereum, parameter blok yang diberikan menentukan ketinggian blok.
 
 Opsi berikut dimungkinkan untuk parameter blok:
 
 - `HEX String` - nomor blok bilangan bulat
-- `String "earliest"` untuk blok paling awal/genesis
+- `String "earliest"` untuk blok paling awal/blok genesis
 - `String "latest"` - untuk blok yang diusulkan terbaru
-- `String "safe"` - untuk blok kepala aman terbaru
+- `String "safe"` - untuk blok head aman terbaru
 - `String "finalized"` - untuk blok yang difinalisasi terbaru
-- `String "pending"` - untuk status/transaksi yang tertunda
+- `String "pending"` - untuk state/transaksi yang tertunda
 
-## Contoh
+## Contoh {#examples}
 
-Di halaman ini kami menyediakan contoh cara menggunakan masing-masing endpoint API JSON_RPC menggunakan alat baris perintah, [curl](https://curl.se). Contoh masing-masing endpoint ini dapat ditemukan di bawah pada bagian [Contoh Curl](#curl-examples). Lebih jauh ke bawah di halaman ini, kami juga menyediakan [contoh ujung-ke-ujung (end-to-end)](#usage-example) untuk mengompilasi dan menerapkan kontrak pintar menggunakan node Geth, API JSON_RPC, dan curl.
+Di halaman ini kami menyediakan contoh cara menggunakan titik akhir API JSON_RPC individual menggunakan alat baris perintah, [curl](https://curl.se). Contoh titik akhir individual ini dapat ditemukan di bawah pada bagian [Contoh curl](#curl-examples). Lebih jauh ke bawah di halaman ini, kami juga menyediakan [contoh ujung-ke-ujung (end-to-end)](#usage-example) untuk mengkompilasi dan menyebarkan kontrak pintar menggunakan node Geth, API JSON_RPC, dan curl.
 
-## Contoh Curl {#curl-examples}
+## Contoh curl {#curl-examples}
 
-Contoh penggunaan API JSON_RPC dengan membuat permintaan [curl](https://curl.se) ke node Ethereum disediakan di bawah ini. Setiap contoh mencakup deskripsi endpoint spesifik, parameternya, tipe pengembalian, dan contoh praktis tentang cara penggunaannya.
+Contoh penggunaan API JSON_RPC dengan membuat permintaan [curl](https://curl.se) ke node Ethereum disediakan di bawah ini. Setiap contoh mencakup deskripsi titik akhir tertentu, parameternya, jenis pengembalian, dan contoh praktis tentang cara penggunaannya.
 
-Permintaan curl mungkin mengembalikan pesan kesalahan yang berkaitan dengan tipe konten. Hal ini karena opsi `--data` mengatur tipe konten menjadi `application/x-www-form-urlencoded`. Jika node Anda mengeluhkan hal ini, atur header secara manual dengan menempatkan `-H "Content-Type: application/json"` di awal panggilan. Contoh-contoh tersebut juga tidak menyertakan kombinasi URL/IP & port yang harus menjadi argumen terakhir yang diberikan ke curl (misalnya, `127.0.0.1:8545`). Permintaan curl lengkap yang menyertakan data tambahan ini mengambil bentuk berikut:
+Permintaan curl mungkin mengembalikan pesan kesalahan yang berkaitan dengan jenis konten. Hal ini karena opsi `--data` mengatur jenis konten menjadi `application/x-www-form-urlencoded`. Jika node Anda mengeluhkan hal ini, atur header secara manual dengan menempatkan `-H "Content-Type: application/json"` di awal panggilan. Contoh-contoh ini juga tidak menyertakan kombinasi URL/IP & port yang harus menjadi argumen terakhir yang diberikan ke curl (misalnya, `127.0.0.1:8545`). Permintaan curl lengkap yang menyertakan data tambahan ini mengambil bentuk berikut:
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## Gossip, Status, Riwayat {#gossip-state-history}
+## Gossip, State, Riwayat {#gossip-state-history}
 
-Sejumlah metode JSON-RPC inti memerlukan data dari jaringan Ethereum, dan terbagi rapi ke dalam tiga kategori utama: _Gossip, Status, dan Riwayat_. Gunakan tautan di bagian ini untuk melompat ke setiap metode, atau gunakan daftar isi untuk menjelajahi seluruh daftar metode.
+Beberapa metode inti JSON-RPC memerlukan data dari jaringan Ethereum, dan terbagi rapi ke dalam tiga kategori utama: _Gossip, State, dan Riwayat_. Gunakan tautan di bagian ini untuk melompat ke setiap metode, atau gunakan daftar isi untuk menjelajahi seluruh daftar metode.
 
 ### Metode Gossip {#gossip-methods}
 
-> Metode ini melacak bagian terdepan dari rantai. Ini adalah cara transaksi berjalan di sekitar jaringan, menemukan jalannya ke dalam blok, dan bagaimana klien mengetahui tentang blok baru.
+> Metode-metode ini melacak bagian terdepan dari rantai. Ini adalah cara transaksi menyebar di sekitar jaringan, masuk ke dalam blok, dan bagaimana klien mengetahui tentang blok baru.
 
-- [eth_blockNumber](#eth_blocknumber)
-- [eth_sendRawTransaction](#eth_sendrawtransaction)
+- [eth_blockNumber](#eth-blocknumber)
+- [eth_sendRawTransaction](#eth-sendrawtransaction)
 
-### Metode Status {#state_methods}
+### Metode State {#state-methods}
 
-> Metode yang melaporkan status saat ini dari semua data yang disimpan. "Status" ini seperti satu bagian besar RAM yang dibagikan, dan mencakup saldo akun, data kontrak, dan estimasi gas.
+> Metode yang melaporkan state saat ini dari semua data yang disimpan. "State" ini seperti satu bagian besar RAM yang digunakan bersama, dan mencakup saldo akun, data kontrak, dan estimasi gas.
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getCode](#eth_getcode)
-- [eth_call](#eth_call)
-- [eth_estimateGas](#eth_estimategas)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getCode](#eth-getcode)
+- [eth_call](#eth-call)
+- [eth_estimateGas](#eth-estimategas)
 
-### Metode Riwayat {#history_methods}
+### Metode Riwayat {#history-methods}
 
-> Mengambil catatan riwayat dari setiap blok kembali ke genesis. Ini seperti satu file besar yang hanya bisa ditambahkan (append-only), dan mencakup semua header blok, badan blok, blok uncle, dan tanda terima transaksi.
+> Mengambil catatan riwayat dari setiap blok kembali ke genesis. Ini seperti satu file besar yang hanya bisa ditambahkan (append-only), dan mencakup semua header blok, badan blok, blok paman (uncle block), dan tanda terima transaksi.
 
-- [eth_getBlockTransactionCountByHash](#eth_getblocktransactioncountbyhash)
-- [eth_getBlockTransactionCountByNumber](#eth_getblocktransactioncountbynumber)
-- [eth_getUncleCountByBlockHash](#eth_getunclecountbyblockhash)
-- [eth_getUncleCountByBlockNumber](#eth_getunclecountbyblocknumber)
-- [eth_getBlockByHash](#eth_getblockbyhash)
-- [eth_getBlockByNumber](#eth_getblockbynumber)
-- [eth_getTransactionByHash](#eth_gettransactionbyhash)
-- [eth_getTransactionByBlockHashAndIndex](#eth_gettransactionbyblockhashandindex)
-- [eth_getTransactionByBlockNumberAndIndex](#eth_gettransactionbyblocknumberandindex)
-- [eth_getTransactionReceipt](#eth_gettransactionreceipt)
-- [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
-- [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+- [eth_getBlockTransactionCountByHash](#eth-getblocktransactioncountbyhash)
+- [eth_getBlockTransactionCountByNumber](#eth-getblocktransactioncountbynumber)
+- [eth_getUncleCountByBlockHash](#eth-getunclecountbyblockhash)
+- [eth_getUncleCountByBlockNumber](#eth-getunclecountbyblocknumber)
+- [eth_getBlockByHash](#eth-getblockbyhash)
+- [eth_getBlockByNumber](#eth-getblockbynumber)
+- [eth_getTransactionByHash](#eth-gettransactionbyhash)
+- [eth_getTransactionByBlockHashAndIndex](#eth-gettransactionbyblockhashandindex)
+- [eth_getTransactionByBlockNumberAndIndex](#eth-gettransactionbyblocknumberandindex)
+- [eth_getTransactionReceipt](#eth-gettransactionreceipt)
+- [eth_getUncleByBlockHashAndIndex](#eth-getunclebyblockhashandindex)
+- [eth_getUncleByBlockNumberAndIndex](#eth-getunclebyblocknumberandindex)
 
-## Playground API JSON-RPC
+## Playground API JSON-RPC {#json-rpc-api-playground}
 
 Anda dapat menggunakan [alat playground](https://ethereum-json-rpc.com) untuk menemukan dan mencoba metode-metode API. Alat ini juga menunjukkan kepada Anda metode dan jaringan mana yang didukung oleh berbagai penyedia node.
 
 ## Metode API JSON-RPC {#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion {#web3-clientversion}
 
 Mengembalikan versi klien saat ini.
 
@@ -153,9 +153,9 @@ Tidak ada
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
-// Result // Hasil
+// Hasil
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -163,7 +163,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### web3_sha3 {#web3-sha3}
 
 Mengembalikan Keccak-256 (_bukan_ SHA3-256 yang distandarisasi) dari data yang diberikan.
 
@@ -175,16 +175,16 @@ Mengembalikan Keccak-256 (_bukan_ SHA3-256 yang distandarisasi) dari data yang d
 params: ["0x68656c6c6f20776f726c64"]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
 `DATA` - Hasil SHA3 dari string yang diberikan.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f20776f726c64"],"id":64}'
-// Result // Hasil
+// Hasil
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -192,7 +192,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version {#net-version}
 
 Mengembalikan id jaringan saat ini.
 
@@ -200,22 +200,22 @@ Mengembalikan id jaringan saat ini.
 
 Tidak ada
 
-**Kembalian**
+**Mengembalikan**
 
 `String` - Id jaringan saat ini.
 
 Daftar lengkap ID jaringan saat ini tersedia di [chainlist.org](https://chainlist.org). Beberapa yang umum adalah:
 
 - `1`: Mainnet Ethereum
-- `11155111`: Testnet Sepolia
+- `11155111`: testnet Sepolia
 - `560048` : Testnet Hoodi
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67}'
-// Result // Hasil
+// Hasil
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -223,7 +223,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening {#net-listening}
 
 Mengembalikan `true` jika klien secara aktif mendengarkan koneksi jaringan.
 
@@ -238,9 +238,9 @@ Tidak ada
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":67}'
-// Result // Hasil
+// Hasil
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -248,7 +248,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount {#net-peercount}
 
 Mengembalikan jumlah peer yang saat ini terhubung ke klien.
 
@@ -256,24 +256,24 @@ Mengembalikan jumlah peer yang saat ini terhubung ke klien.
 
 Tidak ada
 
-**Kembalian**
+**Mengembalikan**
 
 `QUANTITY` - bilangan bulat dari jumlah peer yang terhubung.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}'
-// Result // Hasil
+// Hasil
 {
   "id":74,
   "jsonrpc": "2.0",
-  "result": "0x2" // 2 // 2
+  "result": "0x2" // 2
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion {#eth-protocolversion}
 
 Mengembalikan versi protokol Ethereum saat ini. Perhatikan bahwa metode ini [tidak tersedia di Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
 
@@ -281,16 +281,16 @@ Mengembalikan versi protokol Ethereum saat ini. Perhatikan bahwa metode ini [tid
 
 Tidak ada
 
-**Kembalian**
+**Mengembalikan**
 
 `String` - Versi protokol Ethereum saat ini
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
-// Result // Hasil
+// Hasil
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -298,12 +298,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### eth_syncing {#eth-syncing}
 
-Mengembalikan objek dengan data tentang status sinkronisasi atau `false`.
+Mengembalikan sebuah objek dengan data tentang status sinkronisasi atau `false`.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
-  Coba endpoint di playground
+  Coba titik akhir di playground
 </ButtonLink>
 
 **Parameter**
@@ -312,15 +312,15 @@ Tidak ada
 
 **Kembalian**
 
-Data kembalian yang tepat bervariasi antara implementasi klien. Semua klien mengembalikan `False` ketika node tidak melakukan sinkronisasi, dan semua klien mengembalikan bidang berikut.
+Data kembalian yang tepat bervariasi di antara implementasi klien. Semua klien mengembalikan `False` ketika node tidak melakukan sinkronisasi, dan semua klien mengembalikan bidang-bidang berikut.
 
 `Object|Boolean`, Sebuah objek dengan data status sinkronisasi atau `FALSE`, ketika tidak melakukan sinkronisasi:
 
-- `startingBlock`: `QUANTITY` - Blok di mana impor dimulai (hanya akan diatur ulang, setelah sinkronisasi mencapai puncaknya)
+- `startingBlock`: `QUANTITY` - Blok di mana impor dimulai (hanya akan diatur ulang, setelah sinkronisasi mencapai head-nya)
 - `currentBlock`: `QUANTITY` - Blok saat ini, sama dengan eth_blockNumber
 - `highestBlock`: `QUANTITY` - Perkiraan blok tertinggi
 
-Namun, klien individu mungkin juga menyediakan data tambahan. Misalnya Geth mengembalikan yang berikut ini:
+Namun, masing-masing klien mungkin juga menyediakan data tambahan. Misalnya Geth mengembalikan yang berikut ini:
 
 ```json
 {
@@ -361,14 +361,14 @@ Sedangkan Besu mengembalikan:
 }
 ```
 
-Lihat dokumentasi untuk klien spesifik Anda untuk detail lebih lanjut.
+Rujuk ke dokumentasi untuk klien spesifik Anda untuk detail lebih lanjut.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -378,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
     highestBlock: '0x454'
   }
 }
-// Or when not syncing // Atau saat tidak menyinkronkan
+// Atau saat tidak melakukan sinkronisasi
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -386,7 +386,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase {#eth-coinbase}
 
 Mengembalikan alamat coinbase klien.
 
@@ -400,16 +400,16 @@ Mengembalikan alamat coinbase klien.
 
 Tidak ada
 
-**Kembalian**
+**Mengembalikan**
 
 `DATA`, 20 byte - alamat coinbase saat ini.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
-// Result // Hasil
+// Hasil
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -417,9 +417,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### eth_chainId {#eth-chainid}
 
-Mengembalikan ID chain yang digunakan untuk menandatangani transaksi yang dilindungi dari pemutaran ulang (replay-protected).
+Mengembalikan ID rantai yang digunakan untuk penandatanganan transaksi yang dilindungi dari pemutaran ulang.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
   Coba endpoint di playground
@@ -429,16 +429,16 @@ Mengembalikan ID chain yang digunakan untuk menandatangani transaksi yang dilind
 
 Tidak ada
 
-**Kembalian**
+**Mengembalikan**
 
-`chainId`, nilai heksadesimal sebagai string yang mewakili bilangan bulat dari id chain saat ini.
+`chainId`, nilai heksadesimal sebagai string yang mewakili bilangan bulat dari id rantai saat ini.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
-// Result // Hasil
+// Hasil
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -446,26 +446,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining {#eth-mining}
 
-Mengembalikan `true` jika klien secara aktif menambang blok baru. Ini hanya dapat mengembalikan `true` untuk jaringan proof-of-work dan mungkin tidak tersedia di beberapa klien sejak [The Merge](/roadmap/merge/).
+Mengembalikan `true` jika klien sedang aktif menambang blok baru. Ini hanya dapat mengembalikan `true` untuk jaringan Bukti Kerja (PoW) dan mungkin tidak tersedia di beberapa klien sejak [The Merge](/roadmap/merge/).
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
-  Coba endpoint di playground
+  Coba titik akhir di playground
 </ButtonLink>
 
 **Parameter**
 
 Tidak ada
 
-**Kembalian**
+**Mengembalikan**
 
 `Boolean` - mengembalikan `true` jika klien sedang menambang, jika tidak `false`.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
 //
 {
@@ -475,9 +475,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate {#eth-hashrate}
 
-Mengembalikan jumlah hash per detik yang digunakan node untuk menambang. Ini hanya dapat mengembalikan `true` untuk jaringan proof-of-work dan mungkin tidak tersedia di beberapa klien sejak [The Merge](/roadmap/merge/).
+Mengembalikan jumlah hash per detik yang digunakan node saat melakukan penambangan. Ini hanya dapat mengembalikan `true` untuk jaringan Bukti Kerja (PoW) dan mungkin tidak tersedia di beberapa klien sejak [The Merge](/roadmap/merge/).
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
   Coba endpoint di playground
@@ -494,9 +494,9 @@ Tidak ada
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":71}'
-// Result // Hasil
+// Hasil
 {
   "id":71,
   "jsonrpc": "2.0",
@@ -504,9 +504,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### eth_gasPrice {#eth-gasprice}
 
-Mengembalikan perkiraan harga per gas saat ini dalam wei. Misalnya, klien Besu memeriksa 100 blok terakhir dan mengembalikan harga unit gas median secara default.
+Mengembalikan perkiraan harga saat ini per gas dalam Wei. Misalnya, klien Besu memeriksa 100 blok terakhir dan mengembalikan harga satuan gas median secara default.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
   Coba endpoint di playground
@@ -516,24 +516,24 @@ Mengembalikan perkiraan harga per gas saat ini dalam wei. Misalnya, klien Besu m
 
 Tidak ada
 
-**Kembalian**
+**Mengembalikan**
 
-`QUANTITY` - bilangan bulat dari harga gas saat ini dalam wei.
+`QUANTITY` - bilangan bulat dari harga gas saat ini dalam Wei.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
-// Result // Hasil
+// Hasil
 {
   "id":73,
   "jsonrpc": "2.0",
-  "result": "0x1dfd14000" // 8049999872 Wei // 8049999872 Wei
+  "result": "0x1dfd14000" // 8049999872 Wei
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts {#eth-accounts}
 
 Mengembalikan daftar alamat yang dimiliki oleh klien.
 
@@ -547,14 +547,14 @@ Tidak ada
 
 **Kembalian**
 
-`Array dari DATA`, 20 Byte - alamat yang dimiliki oleh klien.
+`Array of DATA`, 20 Byte - alamat yang dimiliki oleh klien.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -562,7 +562,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### eth_blockNumber {#eth-blocknumber}
 
 Mengembalikan nomor dari blok terbaru.
 
@@ -574,60 +574,60 @@ Mengembalikan nomor dari blok terbaru.
 
 Tidak ada
 
-**Kembalian**
+**Mengembalikan**
 
-`QUANTITY` - bilangan bulat dari nomor blok saat ini di mana klien berada.
+`QUANTITY` - bilangan bulat dari nomor blok saat ini pada klien.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'
-// Result // Hasil
+// Hasil
 {
   "id":83,
   "jsonrpc": "2.0",
-  "result": "0x4b7" // 1207 // 1207
+  "result": "0x4b7" // 1207
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance {#eth-getbalance}
 
 Mengembalikan saldo akun pada alamat yang diberikan.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
-  Coba endpoint di playground
+  Coba titik akhir di playground
 </ButtonLink>
 
 **Parameter**
 
 1. `DATA`, 20 Byte - alamat untuk memeriksa saldo.
-2. `QUANTITY|TAG` - bilangan bulat nomor blok, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, atau `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - nomor blok bilangan bulat, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, atau `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
-`QUANTITY` - bilangan bulat dari saldo saat ini dalam wei.
+`QUANTITY` - bilangan bulat dari saldo saat ini dalam Wei.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x0234c8a3397aab58" // 158972490234375000 // 158972490234375000
+  "result": "0x0234c8a3397aab58" // 158972490234375000
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt {#eth-getstorageat}
 
-Mengembalikan nilai dari posisi penyimpanan pada alamat yang diberikan.
+Mengembalikan nilai dari posisi penyimpanan pada alamat tertentu.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
   Coba endpoint di playground
@@ -637,14 +637,14 @@ Mengembalikan nilai dari posisi penyimpanan pada alamat yang diberikan.
 
 1. `DATA`, 20 Byte - alamat penyimpanan.
 2. `QUANTITY` - bilangan bulat dari posisi di penyimpanan.
-3. `QUANTITY|TAG` - bilangan bulat nomor blok, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
+3. `QUANTITY|TAG` - nomor blok bilangan bulat, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
 
-**Kembalian**
+**Mengembalikan**
 
 `DATA` - nilai pada posisi penyimpanan ini.
 
 **Contoh**
-Menghitung posisi yang benar bergantung pada penyimpanan yang akan diambil. Pertimbangkan kontrak berikut yang diterapkan di `0x295a70b2de5e3953354a6a8344e616ed314d7251` oleh alamat `0x391694e7e0b0cce554cb130d723a9d27458f9298`.
+Menghitung posisi yang benar bergantung pada penyimpanan yang akan diambil. Pertimbangkan kontrak berikut yang disebarkan pada `0x295a70b2de5e3953354a6a8344e616ed314d7251` oleh alamat `0x391694e7e0b0cce554cb130d723a9d27458f9298`.
 
 ```
 contract Storage {
@@ -657,14 +657,14 @@ contract Storage {
 }
 ```
 
-Mengambil nilai pos0 sangatlah mudah:
+Mengambil nilai pos0 cukup mudah:
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 ```
 
-Mengambil elemen dari map lebih sulit. Posisi elemen dalam map dihitung dengan:
+Mengambil elemen dari peta (map) lebih sulit. Posisi elemen dalam peta dihitung dengan:
 
 ```js
 keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
@@ -681,7 +681,7 @@ keccak(
 )
 ```
 
-Konsol geth yang disertakan dengan pustaka web3 dapat digunakan untuk melakukan perhitungan:
+Konsol geth yang disertakan dengan pustaka Web3 dapat digunakan untuk melakukan perhitungan:
 
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -697,7 +697,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount {#eth-gettransactioncount}
 
 Mengembalikan jumlah transaksi yang _dikirim_ dari sebuah alamat.
 
@@ -708,33 +708,33 @@ Mengembalikan jumlah transaksi yang _dikirim_ dari sebuah alamat.
 **Parameter**
 
 1. `DATA`, 20 Byte - alamat.
-2. `QUANTITY|TAG` - bilangan bulat nomor blok, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"` atau `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - nomor blok bilangan bulat, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"` atau `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
   "0x407d73d8a49eeb85d32cf465507dd71d507100c1",
-  "latest", // state at the latest block // keadaan pada blok terbaru
+  "latest", // state pada blok terbaru
 ]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
 `QUANTITY` - bilangan bulat dari jumlah transaksi yang dikirim dari alamat ini.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1","latest"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash {#eth-getblocktransactioncountbyhash}
 
 Mengembalikan jumlah transaksi dalam sebuah blok dari blok yang cocok dengan hash blok yang diberikan.
 
@@ -750,24 +750,24 @@ Mengembalikan jumlah transaksi dalam sebuah blok dari blok yang cocok dengan has
 params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
 `QUANTITY` - bilangan bulat dari jumlah transaksi dalam blok ini.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x8b" // 139 // 139
+  "result": "0x8b" // 139
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber {#eth-getblocktransactioncountbynumber}
 
 Mengembalikan jumlah transaksi dalam sebuah blok yang cocok dengan nomor blok yang diberikan.
 
@@ -777,32 +777,32 @@ Mengembalikan jumlah transaksi dalam sebuah blok yang cocok dengan nomor blok ya
 
 **Parameter**
 
-1. `QUANTITY|TAG` - bilangan bulat dari nomor blok, atau string `"earliest"`, `"latest"`, `"pending"`, `"safe"` atau `"finalized"`, seperti pada [parameter blok](/developers/docs/apis/json-rpc/#block-parameter).
+1. `QUANTITY|TAG` - integer dari nomor blok, atau string `"earliest"`, `"latest"`, `"pending"`, `"safe"` atau `"finalized"`, seperti pada [parameter blok](/developers/docs/apis/json-rpc/#block-parameter).
 
 ```js
 params: [
-  "0x13738ca", // 20396234 // 20396234
+  "0x13738ca", // 20396234
 ]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
-`QUANTITY` - bilangan bulat dari jumlah transaksi dalam blok ini.
+`QUANTITY` - integer dari jumlah transaksi dalam blok ini.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x8b" // 139 // 139
+  "result": "0x8b" // 139
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash {#eth-getunclecountbyblockhash}
 
 Mengembalikan jumlah uncle dalam sebuah blok dari blok yang cocok dengan hash blok yang diberikan.
 
@@ -818,24 +818,24 @@ Mengembalikan jumlah uncle dalam sebuah blok dari blok yang cocok dengan hash bl
 params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
-`QUANTITY` - bilangan bulat dari jumlah uncle dalam blok ini.
+`QUANTITY` - integer dari jumlah uncle dalam blok ini.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber {#eth-getunclecountbyblocknumber}
 
 Mengembalikan jumlah uncle dalam sebuah blok dari blok yang cocok dengan nomor blok yang diberikan.
 
@@ -849,28 +849,28 @@ Mengembalikan jumlah uncle dalam sebuah blok dari blok yang cocok dengan nomor b
 
 ```js
 params: [
-  "0xe8", // 232 // 232
+  "0xe8", // 232
 ]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
 `QUANTITY` - bilangan bulat dari jumlah uncle dalam blok ini.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params":["0xe8"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x0" // 0 // 0
+  "result": "0x0" // 0
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode {#eth-getcode}
 
 Mengembalikan kode pada alamat yang diberikan.
 
@@ -881,25 +881,25 @@ Mengembalikan kode pada alamat yang diberikan.
 **Parameter**
 
 1. `DATA`, 20 Byte - alamat
-2. `QUANTITY|TAG` - bilangan bulat nomor blok, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"` atau `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - nomor blok bilangan bulat, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"` atau `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
   "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-  "0x5daf3b", // 6139707 // 6139707
+  "0x5daf3b", // 6139707
 ]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
 `DATA` - kode dari alamat yang diberikan.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -907,11 +907,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign {#eth-sign}
 
-Metode sign menghitung tanda tangan spesifik Ethereum dengan: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
+Metode sign menghitung tanda tangan khusus Ethereum dengan: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-Dengan menambahkan awalan pada pesan membuat tanda tangan yang dihitung dapat dikenali sebagai tanda tangan spesifik Ethereum. Ini mencegah penyalahgunaan di mana dapp berbahaya dapat menandatangani data arbitrer (misalnya, transaksi) dan menggunakan tanda tangan tersebut untuk meniru korban.
+Menambahkan awalan pada pesan membuat tanda tangan yang dihitung dapat dikenali sebagai tanda tangan khusus Ethereum. Hal ini mencegah penyalahgunaan di mana aplikasi terdesentralisasi (dapp) berbahaya dapat menandatangani data arbitrer (misalnya, transaksi) dan menggunakan tanda tangan tersebut untuk meniru korban.
 
 Catatan: alamat yang digunakan untuk menandatangani harus tidak terkunci.
 
@@ -927,9 +927,9 @@ Catatan: alamat yang digunakan untuk menandatangani harus tidak terkunci.
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "0xdeadbeaf"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -937,9 +937,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### eth_signTransaction {#eth-signtransaction}
 
-Menandatangani transaksi yang dapat dikirimkan ke jaringan di lain waktu menggunakan [eth_sendRawTransaction](#eth_sendrawtransaction).
+Menandatangani transaksi yang dapat dikirimkan ke jaringan di lain waktu menggunakan [eth_sendRawTransaction](#eth-sendrawtransaction).
 
 **Parameter**
 
@@ -948,22 +948,22 @@ Menandatangani transaksi yang dapat dikirimkan ke jaringan di lain waktu menggun
 - `type`:
 - `from`: `DATA`, 20 Byte - Alamat asal pengiriman transaksi.
 - `to`: `DATA`, 20 Byte - (opsional saat membuat kontrak baru) Alamat tujuan transaksi.
-- `gas`: `QUANTITY` - (opsional, default: 90000) Bilangan bulat dari gas yang disediakan untuk eksekusi transaksi. Ini akan mengembalikan gas yang tidak terpakai.
-- `gasPrice`: `QUANTITY` - (opsional, default: To-Be-Determined) Bilangan bulat dari harga gas (gasPrice) yang digunakan untuk setiap gas yang dibayar, dalam Wei.
-- `value`: `QUANTITY` - (opsional) Bilangan bulat dari nilai yang dikirim dengan transaksi ini, dalam Wei.
-- `data`: `DATA` - Kode kontrak yang dikompilasi ATAU hash dari tanda tangan metode yang dipanggil dan parameter yang disandikan.
+- `gas`: `QUANTITY` - (opsional, bawaan: 90000) Bilangan bulat dari gas yang disediakan untuk eksekusi transaksi. Ini akan mengembalikan gas yang tidak terpakai.
+- `gasPrice`: `QUANTITY` - (opsional, bawaan: Akan Ditentukan) Bilangan bulat dari gasPrice yang digunakan untuk setiap gas yang dibayar, dalam Wei.
+- `value`: `QUANTITY` - (opsional) Bilangan bulat dari nilai yang dikirim bersama transaksi ini, dalam Wei.
+- `data`: `DATA` - Kode kompilasi dari sebuah kontrak ATAU hash dari tanda tangan metode yang dipanggil dan parameter yang dienkode.
 - `nonce`: `QUANTITY` - (opsional) Bilangan bulat dari sebuah nonce. Ini memungkinkan untuk menimpa transaksi tertunda Anda sendiri yang menggunakan nonce yang sama.
 
 **Kembalian**
 
-`DATA`, Objek transaksi yang disandikan RLP yang ditandatangani oleh akun yang ditentukan.
+`DATA`, Objek transaksi yang dienkode RLP yang ditandatangani oleh akun yang ditentukan.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","params": [{"data":"0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675","from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","gas": "0x76c0","gasPrice": "0x9184e72a000","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","value": "0x9184e72a"}]}'
-// Result // Hasil
+// Hasil
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -971,7 +971,7 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction {#eth-sendtransaction}
 
 Membuat transaksi panggilan pesan baru atau pembuatan kontrak, jika bidang data berisi kode, dan menandatanganinya menggunakan akun yang ditentukan dalam `from`.
 
@@ -981,10 +981,10 @@ Membuat transaksi panggilan pesan baru atau pembuatan kontrak, jika bidang data 
 
 - `from`: `DATA`, 20 Byte - Alamat asal pengiriman transaksi.
 - `to`: `DATA`, 20 Byte - (opsional saat membuat kontrak baru) Alamat tujuan transaksi.
-- `gas`: `QUANTITY` - (opsional, default: 90000) Bilangan bulat dari gas yang disediakan untuk eksekusi transaksi. Ini akan mengembalikan gas yang tidak terpakai.
-- `gasPrice`: `QUANTITY` - (opsional, default: To-Be-Determined) Bilangan bulat dari harga gas (gasPrice) yang digunakan untuk setiap gas yang dibayar.
+- `gas`: `QUANTITY` - (opsional, bawaan: 90000) Bilangan bulat dari gas yang disediakan untuk eksekusi transaksi. Ini akan mengembalikan gas yang tidak terpakai.
+- `gasPrice`: `QUANTITY` - (opsional, bawaan: Akan Ditentukan) Bilangan bulat dari gasPrice yang digunakan untuk setiap gas yang dibayar.
 - `value`: `QUANTITY` - (opsional) Bilangan bulat dari nilai yang dikirim dengan transaksi ini.
-- `input`: `DATA` - Kode kontrak yang dikompilasi ATAU hash dari tanda tangan metode yang dipanggil dan parameter yang disandikan.
+- `input`: `DATA` - Kode kompilasi dari sebuah kontrak ATAU hash dari tanda tangan metode yang dipanggil dan parameter yang dienkode.
 - `nonce`: `QUANTITY` - (opsional) Bilangan bulat dari sebuah nonce. Ini memungkinkan untuk menimpa transaksi tertunda Anda sendiri yang menggunakan nonce yang sama.
 
 ```js
@@ -992,9 +992,9 @@ params: [
   {
     from: "0xb60e8dd61c5d32be8058bb8eb970870f07233155",
     to: "0xd46e8dd67c5d32be8058bb8eb970870f07244567",
-    gas: "0x76c0", // 30400 // 30400
-    gasPrice: "0x9184e72a000", // 10000000000000 // 10000000000000
-    value: "0x9184e72a", // 2441406250 // 2441406250
+    gas: "0x76c0", // 30400
+    gasPrice: "0x9184e72a000", // 10000000000000
+    value: "0x9184e72a", // 2441406250
     input:
       "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
   },
@@ -1005,14 +1005,14 @@ params: [
 
 `DATA`, 32 Byte - hash transaksi, atau hash nol jika transaksi belum tersedia.
 
-Gunakan [eth_getTransactionReceipt](#eth_gettransactionreceipt) untuk mendapatkan alamat kontrak, setelah transaksi diusulkan dalam sebuah blok, ketika Anda membuat kontrak.
+Gunakan [eth_getTransactionReceipt](#eth-gettransactionreceipt) untuk mendapatkan alamat kontrak, setelah transaksi diusulkan dalam sebuah blok, saat Anda membuat kontrak.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{see above}],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1020,7 +1020,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth-sendrawtransaction}
 
 Membuat transaksi panggilan pesan baru atau pembuatan kontrak untuk transaksi yang ditandatangani.
 
@@ -1038,14 +1038,14 @@ params: [
 
 `DATA`, 32 Byte - hash transaksi, atau hash nol jika transaksi belum tersedia.
 
-Gunakan [eth_getTransactionReceipt](#eth_gettransactionreceipt) untuk mendapatkan alamat kontrak, setelah transaksi diusulkan dalam sebuah blok, ketika Anda membuat kontrak.
+Gunakan [eth_getTransactionReceipt](#eth-gettransactionreceipt) untuk mendapatkan alamat kontrak, setelah transaksi diusulkan dalam sebuah blok, saat Anda membuat kontrak.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{see above}],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1053,9 +1053,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call {#eth-call}
 
-Mengeksekusi panggilan pesan baru dengan segera tanpa membuat transaksi di blockchain. Sering digunakan untuk mengeksekusi fungsi kontrak pintar yang hanya-baca, misalnya `balanceOf` untuk kontrak ERC-20.
+Mengeksekusi panggilan pesan baru dengan segera tanpa membuat transaksi di rantai blok. Sering digunakan untuk mengeksekusi fungsi kontrak pintar yang hanya-baca (read-only), misalnya `balanceOf` untuk kontrak ERC-20.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
   Coba endpoint di playground
@@ -1066,13 +1066,13 @@ Mengeksekusi panggilan pesan baru dengan segera tanpa membuat transaksi di block
 1. `Object` - Objek panggilan transaksi
 
 - `from`: `DATA`, 20 Byte - (opsional) Alamat asal pengiriman transaksi.
-- `to`: `DATA`, 20 Byte - Alamat tujuan transaksi.
-- `gas`: `QUANTITY` - (opsional) Bilangan bulat dari gas yang disediakan untuk eksekusi transaksi. eth_call mengonsumsi nol gas, tetapi parameter ini mungkin diperlukan oleh beberapa eksekusi.
-- `gasPrice`: `QUANTITY` - (opsional) Bilangan bulat dari harga gas (gasPrice) yang digunakan untuk setiap gas yang dibayar
-- `value`: `QUANTITY` - (opsional) Bilangan bulat dari nilai yang dikirim dengan transaksi ini
-- `input`: `DATA` - (opsional) Hash dari tanda tangan metode dan parameter yang disandikan. Untuk detailnya lihat [ABI Kontrak Ethereum dalam dokumentasi Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `to`: `DATA`, 20 Byte - Alamat tujuan pengiriman transaksi.
+- `gas`: `QUANTITY` - (opsional) Integer dari gas yang disediakan untuk eksekusi transaksi. eth_call mengonsumsi nol gas, tetapi parameter ini mungkin dibutuhkan oleh beberapa eksekusi.
+- `gasPrice`: `QUANTITY` - (opsional) Integer dari harga gas yang digunakan untuk setiap gas yang dibayar
+- `value`: `QUANTITY` - (opsional) Integer dari nilai yang dikirim bersama transaksi ini
+- `input`: `DATA` - (opsional) Hash dari tanda tangan metode dan parameter yang dienkode. Untuk detailnya, lihat [ABI Kontrak Ethereum dalam dokumentasi Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - bilangan bulat nomor blok, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"` atau `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - integer nomor blok, atau string `"latest"`, `"earliest"`, `"pending"`, `"safe"` atau `"finalized"`, lihat [parameter blok](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Kembalian**
 
@@ -1081,9 +1081,9 @@ Mengeksekusi panggilan pesan baru dengan segera tanpa membuat transaksi di block
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1091,9 +1091,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas {#eth-estimategas}
 
-Menghasilkan dan mengembalikan perkiraan berapa banyak gas yang diperlukan untuk memungkinkan transaksi selesai. Transaksi tidak akan ditambahkan ke blockchain. Perhatikan bahwa perkiraan tersebut mungkin secara signifikan lebih besar dari jumlah gas yang sebenarnya digunakan oleh transaksi, karena berbagai alasan termasuk mekanika EVM dan kinerja node.
+Menghasilkan dan mengembalikan perkiraan berapa banyak gas yang diperlukan untuk memungkinkan transaksi selesai. Transaksi tidak akan ditambahkan ke rantai blok. Perhatikan bahwa perkiraan tersebut mungkin jauh lebih besar daripada jumlah gas yang sebenarnya digunakan oleh transaksi, karena berbagai alasan termasuk mekanika EVM dan kinerja node.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
   Coba endpoint di playground
@@ -1101,26 +1101,26 @@ Menghasilkan dan mengembalikan perkiraan berapa banyak gas yang diperlukan untuk
 
 **Parameter**
 
-Lihat parameter [eth_call](#eth_call), kecuali bahwa semua properti bersifat opsional. Jika tidak ada batas gas yang ditentukan, geth menggunakan batas gas blok dari blok yang tertunda sebagai batas atas. Akibatnya, perkiraan yang dikembalikan mungkin tidak cukup untuk mengeksekusi panggilan/transaksi ketika jumlah gas lebih tinggi dari batas gas blok yang tertunda.
+Lihat parameter [eth_call](#eth-call), kecuali bahwa semua properti bersifat opsional. Jika tidak ada batas gas yang ditentukan, geth menggunakan batas gas blok dari blok yang tertunda sebagai batas atas. Akibatnya, perkiraan yang dikembalikan mungkin tidak cukup untuk mengeksekusi panggilan/transaksi ketika jumlah gas lebih tinggi dari batas gas blok yang tertunda.
 
-**Kembalian**
+**Mengembalikan**
 
 `QUANTITY` - jumlah gas yang digunakan.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see above}],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x5208" // 21000 // 21000
+  "result": "0x5208" // 21000
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash {#eth-getblockbyhash}
 
 Mengembalikan informasi tentang sebuah blok berdasarkan hash.
 
@@ -1131,7 +1131,7 @@ Mengembalikan informasi tentang sebuah blok berdasarkan hash.
 **Parameter**
 
 1. `DATA`, 32 Byte - Hash dari sebuah blok.
-2. `Boolean` - Jika `true`, ini mengembalikan objek transaksi lengkap, jika `false` hanya hash dari transaksi.
+2. `Boolean` - Jika `true` ini mengembalikan objek transaksi lengkap, jika `false` hanya hash dari transaksi tersebut.
 
 ```js
 params: [
@@ -1140,36 +1140,36 @@ params: [
 ]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
 `Object` - Sebuah objek blok, atau `null` ketika tidak ada blok yang ditemukan:
 
 - `number`: `QUANTITY` - nomor blok. `null` ketika ini adalah blok yang tertunda.
 - `hash`: `DATA`, 32 Byte - hash dari blok. `null` ketika ini adalah blok yang tertunda.
 - `parentHash`: `DATA`, 32 Byte - hash dari blok induk.
-- `nonce`: `DATA`, 8 Byte - hash dari proof-of-work yang dihasilkan. `null` ketika ini adalah blok yang tertunda, `0x0` untuk blok proof-of-stake (sejak The Merge)
-- `sha3Uncles`: `DATA`, 32 Byte - SHA3 dari data uncle dalam blok.
-- `logsBloom`: `DATA`, 256 Byte - filter bloom untuk log dari blok. `null` ketika ini adalah blok yang tertunda.
-- `transactionsRoot`: `DATA`, 32 Byte - root dari trie transaksi dari blok.
-- `stateRoot`: `DATA`, 32 Byte - root dari trie status akhir dari blok.
-- `receiptsRoot`: `DATA`, 32 Byte - root dari trie tanda terima dari blok.
-- `miner`: `DATA`, 20 Byte - alamat penerima manfaat yang diberikan hadiah blok.
-- `difficulty`: `QUANTITY` - bilangan bulat dari tingkat kesulitan untuk blok ini.
-- `totalDifficulty`: `QUANTITY` - bilangan bulat dari total kesulitan chain hingga blok ini.
+- `nonce`: `DATA`, 8 Byte - hash dari Bukti Kerja (PoW) yang dihasilkan. `null` ketika ini adalah blok yang tertunda, `0x0` untuk blok Bukti Kepemilikan (PoS) (sejak The Merge)
+- `sha3Uncles`: `DATA`, 32 Byte - SHA3 dari data uncle di dalam blok.
+- `logsBloom`: `DATA`, 256 Byte - filter bloom untuk log dari blok tersebut. `null` ketika ini adalah blok yang tertunda.
+- `transactionsRoot`: `DATA`, 32 Byte - akar dari trie transaksi blok tersebut.
+- `stateRoot`: `DATA`, 32 Byte - akar dari trie keadaan akhir blok tersebut.
+- `receiptsRoot`: `DATA`, 32 Byte - akar dari trie tanda terima blok tersebut.
+- `miner`: `DATA`, 20 Byte - alamat penerima manfaat yang diberikan imbalan blok.
+- `difficulty`: `QUANTITY` - bilangan bulat dari kesulitan untuk blok ini.
+- `totalDifficulty`: `QUANTITY` - bilangan bulat dari total kesulitan rantai hingga blok ini.
 - `extraData`: `DATA` - bidang "data ekstra" dari blok ini.
 - `size`: `QUANTITY` - bilangan bulat ukuran blok ini dalam byte.
-- `gasLimit`: `QUANTITY` - batas gas maksimum yang diizinkan dalam blok ini.
+- `gasLimit`: `QUANTITY` - gas maksimum yang diizinkan dalam blok ini.
 - `gasUsed`: `QUANTITY` - total gas yang digunakan oleh semua transaksi dalam blok ini.
 - `timestamp`: `QUANTITY` - stempel waktu unix untuk saat blok disusun.
-- `transactions`: `Array` - Array dari objek transaksi, atau hash transaksi 32 Byte tergantung pada parameter terakhir yang diberikan.
+- `transactions`: `Array` - Array objek transaksi, atau hash transaksi 32 Byte tergantung pada parameter terakhir yang diberikan.
 - `uncles`: `Array` - Array dari hash uncle.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0xdc0818cf78f21a8e70579cb46a43643f78291264dda342ae31049421c82d21ae", false],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -1200,7 +1200,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth-getblockbynumber}
 
 Mengembalikan informasi tentang sebuah blok berdasarkan nomor blok.
 
@@ -1210,29 +1210,29 @@ Mengembalikan informasi tentang sebuah blok berdasarkan nomor blok.
 
 **Parameter**
 
-1. `QUANTITY|TAG` - bilangan bulat dari nomor blok, atau string `"earliest"`, `"latest"`, `"pending"`, `"safe"` atau `"finalized"`, seperti pada [parameter blok](/developers/docs/apis/json-rpc/#block-parameter).
-2. `Boolean` - Jika `true`, ini mengembalikan objek transaksi lengkap, jika `false` hanya hash dari transaksi.
+1. `QUANTITY|TAG` - integer dari nomor blok, atau string `"earliest"`, `"latest"`, `"pending"`, `"safe"` atau `"finalized"`, seperti pada [parameter blok](/developers/docs/apis/json-rpc/#block-parameter).
+2. `Boolean` - Jika `true` akan mengembalikan objek transaksi secara lengkap, jika `false` hanya mengembalikan hash dari transaksi tersebut.
 
 ```js
 params: [
-  "0x1b4", // 436 // 436
+  "0x1b4", // 436
   true,
 ]
 ```
 
-**Kembalian**
-Lihat [eth_getBlockByHash](#eth_getblockbyhash)
+**Nilai Kembalian**
+Lihat [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-Hasil lihat [eth_getBlockByHash](#eth_getblockbyhash)
+Hasilnya lihat [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth-gettransactionbyhash}
 
 Mengembalikan informasi tentang transaksi yang diminta berdasarkan hash transaksi.
 
@@ -1248,20 +1248,20 @@ Mengembalikan informasi tentang transaksi yang diminta berdasarkan hash transaks
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 ```
 
-**Kembalian**
+**Mengembalikan**
 
-`Object` - Sebuah objek transaksi, atau `null` ketika tidak ada transaksi yang ditemukan:
+`Object` - Sebuah objek transaksi, atau `null` jika tidak ada transaksi yang ditemukan:
 
-- `blockHash`: `DATA`, 32 Byte - hash dari blok di mana transaksi ini berada. `null` ketika ini tertunda.
-- `blockNumber`: `QUANTITY` - nomor blok di mana transaksi ini berada. `null` ketika ini tertunda.
+- `blockHash`: `DATA`, 32 Byte - hash dari blok tempat transaksi ini berada. `null` jika statusnya tertunda.
+- `blockNumber`: `QUANTITY` - nomor blok tempat transaksi ini berada. `null` jika statusnya tertunda.
 - `from`: `DATA`, 20 Byte - alamat pengirim.
 - `gas`: `QUANTITY` - gas yang disediakan oleh pengirim.
 - `gasPrice`: `QUANTITY` - harga gas yang disediakan oleh pengirim dalam Wei.
-- `hash`: `DATA`, 32 Byte - hash dari transaksi.
+- `hash`: `DATA`, 32 Byte - hash transaksi.
 - `input`: `DATA` - data yang dikirim bersama dengan transaksi.
-- `nonce`: `QUANTITY` - jumlah transaksi yang dilakukan oleh pengirim sebelum yang satu ini.
-- `to`: `DATA`, 20 Byte - alamat penerima. `null` ketika ini adalah transaksi pembuatan kontrak.
-- `transactionIndex`: `QUANTITY` - bilangan bulat dari posisi indeks transaksi dalam blok. `null` ketika ini tertunda.
+- `nonce`: `QUANTITY` - jumlah transaksi yang dilakukan oleh pengirim sebelum transaksi ini.
+- `to`: `DATA`, 20 Byte - alamat penerima. `null` jika ini adalah transaksi pembuatan kontrak.
+- `transactionIndex`: `QUANTITY` - bilangan bulat dari posisi indeks transaksi di dalam blok. `null` jika statusnya tertunda.
 - `value`: `QUANTITY` - nilai yang ditransfer dalam Wei.
 - `v`: `QUANTITY` - id pemulihan ECDSA
 - `r`: `QUANTITY` - tanda tangan ECDSA r
@@ -1270,32 +1270,32 @@ params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "jsonrpc":"2.0",
   "id":1,
   "result":{
     "blockHash":"0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
-    "blockNumber":"0x5daf3b", // 6139707 // 6139707
+    "blockNumber":"0x5daf3b", // 6139707
     "from":"0xa7d9ddbe1f17865597fbd27ec712455208b6b76d",
-    "gas":"0xc350", // 50000 // 50000
-    "gasPrice":"0x4a817c800", // 20000000000 // 20000000000
+    "gas":"0xc350", // 50000
+    "gasPrice":"0x4a817c800", // 20000000000
     "hash":"0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b",
     "input":"0x68656c6c6f21",
-    "nonce":"0x15", // 21 // 21
+    "nonce":"0x15", // 21
     "to":"0xf02c1c8e6114b1dbe8937a39260b5b0a374432bb",
-    "transactionIndex":"0x41", // 65 // 65
-    "value":"0xf3dbb76162000", // 4290000000000000 // 4290000000000000
-    "v":"0x25", // 37 // 37
+    "transactionIndex":"0x41", // 65
+    "value":"0xf3dbb76162000", // 4290000000000000
+    "v":"0x25", // 37
     "r":"0x1b5e176d927f8e9ab405058b2d2457392da3e20f328b16ddabcebc33eaac5fea",
     "s":"0x4ba69724e8f69de52f0125ad8b3c5c2cef33019bac3249e2c0a2192766d1721c"
   }
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex {#eth-gettransactionbyblockhashandindex}
 
 Mengembalikan informasi tentang sebuah transaksi berdasarkan hash blok dan posisi indeks transaksi.
 
@@ -1311,23 +1311,23 @@ Mengembalikan informasi tentang sebuah transaksi berdasarkan hash blok dan posis
 ```js
 params: [
   "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
-  "0x0", // 0 // 0
+  "0x0", // 0
 ]
 ```
 
-**Kembalian**
-Lihat [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**Mengembalikan**
+Lihat [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Hasil lihat [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Hasil lihat [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex {#eth-gettransactionbyblocknumberandindex}
 
 Mengembalikan informasi tentang sebuah transaksi berdasarkan nomor blok dan posisi indeks transaksi.
 
@@ -1337,29 +1337,29 @@ Mengembalikan informasi tentang sebuah transaksi berdasarkan nomor blok dan posi
 
 **Parameter**
 
-1. `QUANTITY|TAG` - sebuah nomor blok, atau string `"earliest"`, `"latest"`, `"pending"`, `"safe"` atau `"finalized"`, seperti pada [parameter blok](/developers/docs/apis/json-rpc/#block-parameter).
+1. `QUANTITY|TAG` - nomor blok, atau string `"earliest"`, `"latest"`, `"pending"`, `"safe"` atau `"finalized"`, seperti pada [parameter blok](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - posisi indeks transaksi.
 
 ```js
 params: [
-  "0x9c47cf", // 10241999 // 10241999
-  "0x24", // 36 // 36
+  "0x9c47cf", // 10241999
+  "0x24", // 36
 ]
 ```
 
 **Kembalian**
-Lihat [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Lihat [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-Hasil lihat [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Hasil lihat [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth-gettransactionreceipt}
 
 Mengembalikan tanda terima dari sebuah transaksi berdasarkan hash transaksi.
 
@@ -1373,34 +1373,34 @@ Mengembalikan tanda terima dari sebuah transaksi berdasarkan hash transaksi.
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
-**Kembalian**
-`Object` - Sebuah objek tanda terima transaksi, atau `null` ketika tidak ada tanda terima yang ditemukan:
+**Mengembalikan**
+`Object` - Sebuah objek tanda terima transaksi, atau `null` jika tidak ada tanda terima yang ditemukan:
 
-- `transactionHash `: `DATA`, 32 Byte - hash dari transaksi.
-- `transactionIndex`: `QUANTITY` - bilangan bulat dari posisi indeks transaksi dalam blok.
-- `blockHash`: `DATA`, 32 Byte - hash dari blok di mana transaksi ini berada.
-- `blockNumber`: `QUANTITY` - nomor blok di mana transaksi ini berada.
+- `transactionHash `: `DATA`, 32 Byte - hash dari transaksi tersebut.
+- `transactionIndex`: `QUANTITY` - bilangan bulat dari posisi indeks transaksi di dalam blok.
+- `blockHash`: `DATA`, 32 Byte - hash dari blok tempat transaksi ini berada.
+- `blockNumber`: `QUANTITY` - nomor blok tempat transaksi ini berada.
 - `from`: `DATA`, 20 Byte - alamat pengirim.
-- `to`: `DATA`, 20 Byte - alamat penerima. null ketika ini adalah transaksi pembuatan kontrak.
-- `cumulativeGasUsed` : `QUANTITY ` - Total jumlah gas yang digunakan ketika transaksi ini dieksekusi dalam blok.
+- `to`: `DATA`, 20 Byte - alamat penerima. null jika ini adalah transaksi pembuatan kontrak.
+- `cumulativeGasUsed` : `QUANTITY ` - Jumlah total gas yang digunakan saat transaksi ini dieksekusi di dalam blok.
 - `effectiveGasPrice` : `QUANTITY` - Jumlah dari biaya dasar dan tip yang dibayarkan per unit gas.
 - `gasUsed `: `QUANTITY ` - Jumlah gas yang digunakan oleh transaksi spesifik ini saja.
-- `contractAddress `: `DATA`, 20 Byte - Alamat kontrak yang dibuat, jika transaksi tersebut adalah pembuatan kontrak, jika tidak `null`.
+- `contractAddress `: `DATA`, 20 Byte - Alamat kontrak yang dibuat, jika transaksi tersebut adalah pembuatan kontrak, jika tidak maka `null`.
 - `logs`: `Array` - Array dari objek log, yang dihasilkan oleh transaksi ini.
-- `logsBloom`: `DATA`, 256 Byte - Filter bloom untuk klien ringan (light client) agar dapat dengan cepat mengambil log terkait.
-- `type`: `QUANTITY` - bilangan bulat dari jenis transaksi, `0x0` untuk transaksi lama (legacy), `0x1` untuk jenis daftar akses, `0x2` untuk biaya dinamis.
+- `logsBloom`: `DATA`, 256 Byte - Filter Bloom untuk klien ringan agar dapat mengambil log terkait dengan cepat.
+- `type`: `QUANTITY` - bilangan bulat dari jenis transaksi, `0x0` untuk transaksi lama (legacy), `0x1` untuk jenis daftar akses (access list), `0x2` untuk biaya dinamis.
 
 Ini juga mengembalikan _salah satu dari_ :
 
-- `root` : `DATA` 32 byte dari root status pasca-transaksi (pra Byzantium)
+- `root` : `DATA` 32 byte dari akar state pasca-transaksi (sebelum Bizantium)
 - `status`: `QUANTITY` baik `1` (berhasil) atau `0` (gagal)
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"],"id":1}'
-// Result // Hasil
+// Hasil
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -1408,15 +1408,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
     "blockHash":
       "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
     "blockNumber": "0xeff35f",
-    "contractAddress": null, // string of the address if it was created // string alamat jika dibuat
+    "contractAddress": null, // string dari alamat jika telah dibuat
     "cumulativeGasUsed": "0xa12515",
     "effectiveGasPrice": "0x5a9c688d4",
     "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
     "gasUsed": "0xb4c8",
     "logs": [{
-      // logs as returned by getFilterLogs, etc. // log seperti yang dikembalikan oleh getFilterLogs, dll.
+      // Log seperti yang dikembalikan oleh getFilterLogs, dll.
     }],
-    "logsBloom": "0x00...0", // 256 byte bloom filter // filter bloom 256 byte
+    "logsBloom": "0x00...0", // filter bloom 256 byte
     "status": "0x1",
     "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
     "transactionHash":
@@ -1427,7 +1427,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex {#eth-getunclebyblockhashandindex}
 
 Mengembalikan informasi tentang uncle dari sebuah blok berdasarkan hash dan posisi indeks uncle.
 
@@ -1443,25 +1443,25 @@ Mengembalikan informasi tentang uncle dari sebuah blok berdasarkan hash dan posi
 ```js
 params: [
   "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
-  "0x0", // 0 // 0
+  "0x0", // 0
 ]
 ```
 
-**Kembalian**
-Lihat [eth_getBlockByHash](#eth_getblockbyhash)
+**Mengembalikan**
+Lihat [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Hasil lihat [eth_getBlockByHash](#eth_getblockbyhash)
+Untuk hasil, lihat [eth_getBlockByHash](#eth-getblockbyhash)
 
-**Catatan**: Sebuah uncle tidak berisi transaksi individu.
+**Catatan**: Sebuah uncle tidak berisi transaksi individual.
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex {#eth-getunclebyblocknumberandindex}
 
 Mengembalikan informasi tentang uncle dari sebuah blok berdasarkan nomor dan posisi indeks uncle.
 
@@ -1471,37 +1471,37 @@ Mengembalikan informasi tentang uncle dari sebuah blok berdasarkan nomor dan pos
 
 **Parameter**
 
-1. `QUANTITY|TAG` - sebuah nomor blok, atau string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, seperti pada [parameter blok](/developers/docs/apis/json-rpc/#block-parameter).
+1. `QUANTITY|TAG` - nomor blok, atau string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, seperti pada [parameter blok](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - posisi indeks uncle.
 
 ```js
 params: [
-  "0x29c", // 668 // 668
-  "0x0", // 0 // 0
+  "0x29c", // 668
+  "0x0", // 0
 ]
 ```
 
-**Kembalian**
-Lihat [eth_getBlockByHash](#eth_getblockbyhash)
+**Mengembalikan**
+Lihat [eth_getBlockByHash](#eth-getblockbyhash)
 
-**Catatan**: Sebuah uncle tidak berisi transaksi individu.
+**Catatan**: Sebuah uncle tidak berisi transaksi individual.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-Hasil lihat [eth_getBlockByHash](#eth_getblockbyhash)
+Hasil lihat [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter {#eth-newfilter}
 
-Membuat objek filter, berdasarkan opsi filter, untuk memberi tahu ketika status berubah (log).
-Untuk memeriksa apakah status telah berubah, panggil [eth_getFilterChanges](#eth_getfilterchanges).
+Membuat objek filter, berdasarkan opsi filter, untuk memberi tahu saat state berubah (Log).
+Untuk memeriksa apakah state telah berubah, panggil [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Catatan tentang menentukan filter topik:**
-Topik bergantung pada urutan. Sebuah transaksi dengan log dengan topik [A, B] akan dicocokkan oleh filter topik berikut:
+Topik bergantung pada urutan. Sebuah transaksi dengan Log yang memiliki topik [A, B] akan dicocokkan oleh filter topik berikut:
 
 - `[]` "apa saja"
 - `[A]` "A di posisi pertama (dan apa saja setelahnya)"
@@ -1512,10 +1512,10 @@ Topik bergantung pada urutan. Sebuah transaksi dengan log dengan topik [A, B] ak
 
 1. `Object` - Opsi filter:
 
-- `fromBlock`: `QUANTITY|TAG` - (opsional, default: `"latest"`) Bilangan bulat nomor blok, atau `"latest"` untuk blok terakhir yang diusulkan, `"safe"` untuk blok aman terbaru, `"finalized"` untuk blok yang difinalisasi terbaru, atau `"pending"`, `"earliest"` untuk transaksi yang belum ada dalam blok.
-- `toBlock`: `QUANTITY|TAG` - (opsional, default: `"latest"`) Bilangan bulat nomor blok, atau `"latest"` untuk blok terakhir yang diusulkan, `"safe"` untuk blok aman terbaru, `"finalized"` untuk blok yang difinalisasi terbaru, atau `"pending"`, `"earliest"` untuk transaksi yang belum ada dalam blok.
-- `address`: `DATA|Array`, 20 Byte - (opsional) Alamat kontrak atau daftar alamat dari mana log harus berasal.
-- `topics`: `Array dari DATA`, - (opsional) Array dari topik `DATA` 32 Byte. Topik bergantung pada urutan. Setiap topik juga dapat berupa array dari DATA dengan opsi "atau" (or).
+- `fromBlock`: `QUANTITY|TAG` - (opsional, bawaan: `"latest"`) Nomor blok bilangan bulat, atau `"latest"` untuk blok yang terakhir diusulkan, `"safe"` untuk blok aman terbaru, `"finalized"` untuk blok terbaru yang difinalisasi, atau `"pending"`, `"earliest"` untuk transaksi yang belum ada di dalam blok.
+- `toBlock`: `QUANTITY|TAG` - (opsional, bawaan: `"latest"`) Nomor blok bilangan bulat, atau `"latest"` untuk blok yang terakhir diusulkan, `"safe"` untuk blok aman terbaru, `"finalized"` untuk blok terbaru yang difinalisasi, atau `"pending"`, `"earliest"` untuk transaksi yang belum ada di dalam blok.
+- `address`: `DATA|Array`, 20 Byte - (opsional) Alamat kontrak atau daftar alamat tempat Log seharusnya berasal.
+- `topics`: `Array of DATA`, - (opsional) Larik topik `DATA` 32 Byte. Topik bergantung pada urutan. Setiap topik juga dapat berupa larik DATA dengan opsi "atau".
 
 ```js
 params: [
@@ -1535,74 +1535,74 @@ params: [
 ]
 ```
 
-**Kembalian**
+**Mengembalikan**
 `QUANTITY` - Sebuah id filter.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics":["0x12341234"]}],"id":73}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### eth_newBlockFilter {#eth-newblockfilter}
 
-Membuat filter di node, untuk memberi tahu ketika blok baru tiba.
-Untuk memeriksa apakah status telah berubah, panggil [eth_getFilterChanges](#eth_getfilterchanges).
+Membuat filter di node, untuk memberi tahu saat blok baru tiba.
+Untuk memeriksa apakah state telah berubah, panggil [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parameter**
 Tidak ada
 
 **Kembalian**
-`QUANTITY` - Sebuah id filter.
+`QUANTITY` - ID filter.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":73}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc":  "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter {#eth-newpendingtransactionfilter}
 
-Membuat filter di node, untuk memberi tahu ketika transaksi tertunda baru tiba.
-Untuk memeriksa apakah status telah berubah, panggil [eth_getFilterChanges](#eth_getfilterchanges).
+Membuat filter di dalam node, untuk memberi tahu ketika transaksi tertunda yang baru tiba.
+Untuk memeriksa apakah state telah berubah, panggil [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parameter**
 Tidak ada
 
 **Kembalian**
-`QUANTITY` - Sebuah id filter.
+`QUANTITY` - Sebuah ID filter.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc":  "2.0",
-  "result": "0x1" // 1 // 1
+  "result": "0x1" // 1
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### eth_uninstallFilter {#eth-uninstallfilter}
 
-Menghapus instalan filter dengan id yang diberikan. Harus selalu dipanggil ketika pengawasan (watch) tidak lagi diperlukan.
-Selain itu, Filter akan habis waktu (timeout) ketika tidak diminta dengan [eth_getFilterChanges](#eth_getfilterchanges) selama jangka waktu tertentu.
+Mencopot pemasangan filter dengan id yang diberikan. Harus selalu dipanggil ketika pemantauan tidak lagi diperlukan.
+Selain itu, filter akan habis waktu (timeout) ketika tidak diminta dengan [eth_getFilterChanges](#eth-getfilterchanges) selama jangka waktu tertentu.
 
 **Parameter**
 
@@ -1610,19 +1610,19 @@ Selain itu, Filter akan habis waktu (timeout) ketika tidak diminta dengan [eth_g
 
 ```js
 params: [
-  "0xb", // 11 // 11
+  "0xb", // 11
 ]
 ```
 
 **Kembalian**
-`Boolean` - `true` jika filter berhasil dihapus instalannya, jika tidak `false`.
+`Boolean` - `true` jika filter berhasil dicopot pemasangannya, jika tidak `false`.
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xb"],"id":73}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1630,9 +1630,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges {#eth-getfilterchanges}
 
-Metode polling untuk sebuah filter, yang mengembalikan array log yang terjadi sejak polling terakhir.
+Metode polling untuk sebuah filter, yang mengembalikan sebuah array log yang terjadi sejak polling terakhir.
 
 **Parameter**
 
@@ -1640,41 +1640,41 @@ Metode polling untuk sebuah filter, yang mengembalikan array log yang terjadi se
 
 ```js
 params: [
-  "0x16", // 22 // 22
+  "0x16", // 22
 ]
 ```
 
 **Kembalian**
-`Array` - Array dari objek log, atau array kosong jika tidak ada yang berubah sejak polling terakhir.
+`Array` - Array objek log, atau array kosong jika tidak ada yang berubah sejak polling terakhir.
 
 - Untuk filter yang dibuat dengan `eth_newBlockFilter` kembaliannya adalah hash blok (`DATA`, 32 Byte), mis., `["0x3454645634534..."]`.
 - Untuk filter yang dibuat dengan `eth_newPendingTransactionFilter ` kembaliannya adalah hash transaksi (`DATA`, 32 Byte), mis., `["0x6345343454645..."]`.
 - Untuk filter yang dibuat dengan `eth_newFilter` log adalah objek dengan parameter berikut:
-  - `removed`: `TAG` - `true` ketika log dihapus, karena reorganisasi chain. `false` jika ini adalah log yang valid.
-  - `logIndex`: `QUANTITY` - bilangan bulat dari posisi indeks log dalam blok. `null` ketika ini adalah log yang tertunda.
-  - `transactionIndex`: `QUANTITY` - bilangan bulat dari posisi indeks transaksi dari mana log dibuat. `null` ketika ini adalah log yang tertunda.
-  - `transactionHash`: `DATA`, 32 Byte - hash dari transaksi dari mana log ini dibuat. `null` ketika ini adalah log yang tertunda.
-  - `blockHash`: `DATA`, 32 Byte - hash dari blok di mana log ini berada. `null` ketika ini tertunda. `null` ketika ini adalah log yang tertunda.
-  - `blockNumber`: `QUANTITY` - nomor blok di mana log ini berada. `null` ketika ini tertunda. `null` ketika ini adalah log yang tertunda.
-  - `address`: `DATA`, 20 Byte - alamat dari mana log ini berasal.
-  - `data`: `DATA` - data log non-indeks dengan panjang variabel. (Dalam _solidity_: nol atau lebih argumen log non-indeks 32 Byte.)
-  - `topics`: `Array dari DATA` - Array dari 0 hingga 4 `DATA` 32 Byte dari argumen log yang diindeks. (Dalam _solidity_: Topik pertama adalah _hash_ dari tanda tangan peristiwa (misalnya, `Deposit(address,bytes32,uint256)`), kecuali Anda mendeklarasikan peristiwa tersebut dengan penentu `anonymous`.)
+  - `removed`: `TAG` - `true` ketika log dihapus, karena reorganisasi rantai. `false` jika ini adalah log yang valid.
+  - `logIndex`: `QUANTITY` - bilangan bulat dari posisi indeks log di dalam blok. `null` ketika ini adalah log yang tertunda.
+  - `transactionIndex`: `QUANTITY` - bilangan bulat dari posisi indeks transaksi tempat log ini dibuat. `null` ketika ini adalah log yang tertunda.
+  - `transactionHash`: `DATA`, 32 Byte - hash transaksi tempat log ini dibuat. `null` ketika ini adalah log yang tertunda.
+  - `blockHash`: `DATA`, 32 Byte - hash blok tempat log ini berada. `null` ketika ini tertunda. `null` ketika ini adalah log yang tertunda.
+  - `blockNumber`: `QUANTITY` - nomor blok tempat log ini berada. `null` ketika ini tertunda. `null` ketika ini adalah log yang tertunda.
+  - `address`: `DATA`, 20 Byte - alamat asal log ini.
+  - `data`: `DATA` - data log tidak terindeks dengan panjang variabel. (Dalam _Solidity_: nol atau lebih argumen log tidak terindeks berukuran 32 Byte.)
+  - `topics`: `Array of DATA` - Array berisi 0 hingga 4 `DATA` berukuran 32 Byte dari argumen log yang terindeks. (Dalam _Solidity_: Topik pertama adalah _hash_ dari tanda tangan peristiwa (mis., `Deposit(address,bytes32,uint256)`), kecuali Anda mendeklarasikan peristiwa tersebut dengan penentu `anonymous`.)
 
 - **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":73}'
-// Result // Hasil
+// Hasil
 {
   "id":1,
   "jsonrpc":"2.0",
   "result": [{
-    "logIndex": "0x1", // 1 // 1
-    "blockNumber":"0x1b4", // 436 // 436
+    "logIndex": "0x1", // 1
+    "blockNumber":"0x1b4", // 436
     "blockHash": "0x8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcfdf829c5a142f1fccd7d",
     "transactionHash":  "0xdf829c5a142f1fccd7d8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcf",
-    "transactionIndex": "0x0", // 0 // 0
+    "transactionIndex": "0x0", // 0
     "address": "0x16c5785ac562ff41e2dcfdf829c5a142f1fccd7d",
     "data":"0x0000000000000000000000000000000000000000000000000000000000000000",
     "topics": ["0x59ebeb90bc63057b6515673c3ecf9438e5058bca0f92585014eced636878c9a5"]
@@ -1684,9 +1684,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### eth_getFilterLogs {#eth-getfilterlogs}
 
-Mengembalikan array dari semua log yang cocok dengan filter dengan id yang diberikan.
+Mengembalikan sebuah array dari semua Log yang cocok dengan filter dengan id yang diberikan.
 
 **Parameter**
 
@@ -1694,35 +1694,35 @@ Mengembalikan array dari semua log yang cocok dengan filter dengan id yang diber
 
 ```js
 params: [
-  "0x16", // 22 // 22
+  "0x16", // 22
 ]
 ```
 
-**Kembalian**
-Lihat [eth_getFilterChanges](#eth_getfilterchanges)
+**Mengembalikan**
+Lihat [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-Hasil lihat [eth_getFilterChanges](#eth_getfilterchanges)
+Hasil lihat [eth_getFilterChanges](#eth-getfilterchanges)
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs {#eth-getlogs}
 
-Mengembalikan array dari semua log yang cocok dengan objek filter yang diberikan.
+Mengembalikan sebuah array dari semua log yang cocok dengan objek filter yang diberikan.
 
 **Parameter**
 
 1. `Object` - Opsi filter:
 
-- `fromBlock`: `QUANTITY|TAG` - (opsional, default: `"latest"`) Bilangan bulat nomor blok, atau `"latest"` untuk blok terakhir yang diusulkan, `"safe"` untuk blok aman terbaru, `"finalized"` untuk blok yang difinalisasi terbaru, atau `"pending"`, `"earliest"` untuk transaksi yang belum ada dalam blok.
-- `toBlock`: `QUANTITY|TAG` - (opsional, default: `"latest"`) Bilangan bulat nomor blok, atau `"latest"` untuk blok terakhir yang diusulkan, `"safe"` untuk blok aman terbaru, `"finalized"` untuk blok yang difinalisasi terbaru, atau `"pending"`, `"earliest"` untuk transaksi yang belum ada dalam blok.
-- `address`: `DATA|Array`, 20 Byte - (opsional) Alamat kontrak atau daftar alamat dari mana log harus berasal.
-- `topics`: `Array dari DATA`, - (opsional) Array dari topik `DATA` 32 Byte. Topik bergantung pada urutan. Setiap topik juga dapat berupa array dari DATA dengan opsi "atau" (or).
-- `blockHash`: `DATA`, 32 Byte - (opsional, **masa depan**) Dengan penambahan EIP-234, `blockHash` akan menjadi opsi filter baru yang membatasi log yang dikembalikan ke blok tunggal dengan hash 32-byte `blockHash`. Menggunakan `blockHash` setara dengan `fromBlock` = `toBlock` = nomor blok dengan hash `blockHash`. Jika `blockHash` ada dalam kriteria filter, maka `fromBlock` maupun `toBlock` tidak diizinkan.
+- `fromBlock`: `QUANTITY|TAG` - (opsional, bawaan: `"latest"`) Nomor blok bilangan bulat, atau `"latest"` untuk blok yang terakhir diusulkan, `"safe"` untuk blok aman terbaru, `"finalized"` untuk blok terbaru yang difinalisasi, atau `"pending"`, `"earliest"` untuk transaksi yang belum ada di dalam blok.
+- `toBlock`: `QUANTITY|TAG` - (opsional, bawaan: `"latest"`) Nomor blok bilangan bulat, atau `"latest"` untuk blok yang terakhir diusulkan, `"safe"` untuk blok aman terbaru, `"finalized"` untuk blok terbaru yang difinalisasi, atau `"pending"`, `"earliest"` untuk transaksi yang belum ada di dalam blok.
+- `address`: `DATA|Array`, 20 Byte - (opsional) Alamat kontrak atau daftar alamat yang menjadi asal log.
+- `topics`: `Array of DATA`, - (opsional) Array topik `DATA` 32 Byte. Topik bergantung pada urutan. Setiap topik juga dapat berupa array DATA dengan opsi "atau" ("or").
+- `blockHash`: `DATA`, 32 Byte - (opsional, **masa depan**) Dengan penambahan EIP-234, `blockHash` akan menjadi opsi filter baru yang membatasi log yang dikembalikan ke blok tunggal dengan hash 32-byte `blockHash`. Menggunakan `blockHash` setara dengan `fromBlock` = `toBlock` = nomor blok dengan hash `blockHash`. Jika `blockHash` ada dalam kriteria filter, maka baik `fromBlock` maupun `toBlock` tidak diperbolehkan.
 
 ```js
 params: [
@@ -1734,25 +1734,25 @@ params: [
 ]
 ```
 
-**Kembalian**
-Lihat [eth_getFilterChanges](#eth_getfilterchanges)
+**Mengembalikan**
+Lihat [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Contoh**
 
 ```js
-// Request // Permintaan
+// Permintaan
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-Hasil lihat [eth_getFilterChanges](#eth_getfilterchanges)
+Hasil lihat [eth_getFilterChanges](#eth-getfilterchanges)
 
 ## Contoh Penggunaan {#usage-example}
 
-### Menerapkan kontrak menggunakan JSON_RPC {#deploying-contract}
+### Menyebarkan kontrak menggunakan JSON_RPC {#deploying-contract}
 
-Bagian ini mencakup demonstrasi tentang cara menerapkan kontrak hanya dengan menggunakan antarmuka RPC. Ada rute alternatif untuk menerapkan kontrak di mana kerumitan ini diabstraksikan—misalnya, menggunakan pustaka yang dibangun di atas antarmuka RPC seperti [web3.js](https://web3js.readthedocs.io/) dan [web3.py](https://github.com/ethereum/web3.py). Abstraksi ini umumnya lebih mudah dipahami dan tidak rentan terhadap kesalahan, tetapi tetap berguna untuk memahami apa yang terjadi di balik layar.
+Bagian ini mencakup demonstrasi tentang cara menyebarkan kontrak hanya dengan menggunakan antarmuka RPC. Ada rute alternatif untuk menyebarkan kontrak di mana kerumitan ini diabstraksikan—misalnya, menggunakan pustaka yang dibangun di atas antarmuka RPC seperti [web3.js](https://web3js.readthedocs.io/) dan [web3.py](https://github.com/ethereum/web3.py). Abstraksi ini umumnya lebih mudah dipahami dan tidak rentan terhadap kesalahan, tetapi tetap bermanfaat untuk memahami bagaimana cara kerjanya secara teknis.
 
-Berikut ini adalah kontrak pintar sederhana bernama `Multiply7` yang akan diterapkan menggunakan antarmuka JSON-RPC ke sebuah node Ethereum. Tutorial ini mengasumsikan pembaca sudah menjalankan node Geth. Informasi lebih lanjut tentang node dan klien tersedia [di sini](/developers/docs/nodes-and-clients/run-a-node). Silakan merujuk ke dokumentasi [klien](/developers/docs/nodes-and-clients/) masing-masing untuk melihat cara memulai HTTP JSON-RPC untuk klien non-Geth. Sebagian besar klien secara default melayani di `localhost:8545`.
+Berikut ini adalah kontrak pintar sederhana bernama `Multiply7` yang akan disebarkan menggunakan antarmuka JSON-RPC ke node Ethereum. Tutorial ini mengasumsikan pembaca sudah menjalankan node Geth. Informasi lebih lanjut tentang node dan klien tersedia di [sini](/developers/docs/nodes-and-clients/run-a-node). Silakan merujuk ke dokumentasi [klien](/developers/docs/nodes-and-clients/) masing-masing untuk melihat cara memulai HTTP JSON-RPC untuk klien non-Geth. Sebagian besar klien secara default melayani di `localhost:8545`.
 
 ```javascript
 contract Multiply7 {
@@ -1764,7 +1764,7 @@ contract Multiply7 {
 }
 ```
 
-Hal pertama yang harus dilakukan adalah memastikan antarmuka HTTP RPC diaktifkan. Ini berarti kita menyediakan Geth dengan tanda `--http` saat memulai. Dalam contoh ini kita menggunakan node Geth pada rantai pengembangan pribadi. Dengan menggunakan pendekatan ini kita tidak memerlukan ether di jaringan nyata.
+Hal pertama yang harus dilakukan adalah memastikan antarmuka HTTP RPC diaktifkan. Ini berarti kita memberikan tanda `--http` pada Geth saat memulai. Dalam contoh ini kita menggunakan node Geth pada rantai pengembangan privat. Dengan menggunakan pendekatan ini, kita tidak memerlukan Ether di jaringan nyata.
 
 ```bash
 geth --http --dev console 2>>geth.log
@@ -1772,7 +1772,7 @@ geth --http --dev console 2>>geth.log
 
 Ini akan memulai antarmuka HTTP RPC di `http://localhost:8545`.
 
-Kita dapat memverifikasi bahwa antarmuka sedang berjalan dengan mengambil alamat coinbase (dengan mendapatkan alamat pertama dari array akun) dan saldo menggunakan [curl](https://curl.se). Harap dicatat bahwa data dalam contoh ini akan berbeda pada node lokal Anda. Jika Anda ingin mencoba perintah ini, ganti parameter permintaan pada permintaan curl kedua dengan hasil yang dikembalikan dari yang pertama.
+Kita dapat memverifikasi bahwa antarmuka sedang berjalan dengan mengambil alamat Coinbase (dengan mendapatkan alamat pertama dari larik akun) dan saldo menggunakan [curl](https://curl.se). Harap perhatikan bahwa data dalam contoh ini akan berbeda pada node lokal Anda. Jika Anda ingin mencoba perintah ini, ganti parameter permintaan pada permintaan curl kedua dengan hasil yang dikembalikan dari yang pertama.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
@@ -1782,16 +1782,16 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-Karena angka dienkode dalam bentuk hex, saldo dikembalikan dalam wei sebagai string hex. Jika kita ingin memiliki saldo dalam ether sebagai angka, kita dapat menggunakan web3 dari konsol Geth.
+Karena angka dienkode dalam bentuk hex, saldo dikembalikan dalam Wei sebagai string hex. Jika kita ingin mendapatkan saldo dalam Ether sebagai angka, kita dapat menggunakan Web3 dari konsol Geth.
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
-// "410" // "410"
+// "410"
 ```
 
-Sekarang setelah ada beberapa ether di rantai pengembangan pribadi kita, kita dapat menerapkan kontrak. Langkah pertama adalah mengompilasi kontrak Multiply7 menjadi kode byte yang dapat dikirim ke EVM. Untuk menginstal solc, kompiler Solidity, ikuti [dokumentasi Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Anda mungkin ingin menggunakan rilis `solc` yang lebih lama agar sesuai dengan [versi kompiler yang digunakan untuk contoh kita](https://github.com/ethereum/solidity/releases/tag/v0.4.20)).
+Sekarang setelah ada beberapa Ether di rantai pengembangan privat kita, kita dapat menyebarkan kontrak. Langkah pertama adalah mengkompilasi kontrak Multiply7 menjadi kode bita yang dapat dikirim ke EVM. Untuk menginstal solc, kompiler Solidity, ikuti [dokumentasi Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Anda mungkin ingin menggunakan rilis `solc` yang lebih lama agar sesuai dengan [versi kompiler yang digunakan untuk contoh kita](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
 
-Langkah selanjutnya adalah mengompilasi kontrak Multiply7 menjadi kode byte yang dapat dikirim ke EVM.
+Langkah selanjutnya adalah mengkompilasi kontrak Multiply7 menjadi kode bita yang dapat dikirim ke EVM.
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1801,49 +1801,50 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-Sekarang setelah kita memiliki kode yang dikompilasi, kita perlu menentukan berapa banyak gas yang dibutuhkan untuk menerapkannya. Antarmuka RPC memiliki metode `eth_estimateGas` yang akan memberi kita perkiraan.
+Sekarang setelah kita memiliki kode yang dikompilasi, kita perlu menentukan berapa banyak gas yang dibutuhkan untuk menyebarkannya. Antarmuka RPC memiliki metode `eth_estimateGas` yang akan memberi kita perkiraan.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":5,"result":"0x1c31e"}
 ```
 
-Dan akhirnya menerapkan kontrak.
+Dan terakhir menyebarkan kontrak.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "gas": "0x1c31e", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 6}' -H "Content-Type: application/json" localhost:8545
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-Transaksi diterima oleh node dan hash transaksi dikembalikan. Hash ini dapat digunakan untuk melacak transaksi. Langkah selanjutnya adalah menentukan alamat tempat kontrak kita diterapkan. Setiap transaksi yang dieksekusi akan membuat tanda terima. Tanda terima ini berisi berbagai informasi tentang transaksi seperti di blok mana transaksi tersebut disertakan dan berapa banyak gas yang digunakan oleh EVM. Jika sebuah transaksi membuat kontrak, itu juga akan berisi alamat kontrak. Kita dapat mengambil tanda terima dengan metode RPC `eth_getTransactionReceipt`.
+Transaksi diterima oleh node dan hash transaksi dikembalikan. Hash ini dapat digunakan untuk melacak transaksi. Langkah selanjutnya adalah menentukan alamat tempat kontrak kita disebarkan. Setiap transaksi yang dieksekusi akan membuat tanda terima. Tanda terima ini berisi berbagai informasi tentang transaksi seperti di blok mana transaksi tersebut disertakan dan berapa banyak gas yang digunakan oleh EVM. Jika sebuah transaksi
+membuat kontrak, tanda terima tersebut juga akan berisi alamat kontrak. Kita dapat mengambil tanda terima dengan metode RPC `eth_getTransactionReceipt`.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-Kontrak kita dibuat di `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Hasil null alih-alih tanda terima berarti transaksi belum disertakan dalam blok. Tunggu sebentar dan periksa apakah klien konsensus Anda sedang berjalan dan coba lagi.
+Kontrak kita dibuat di `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Hasil null alih-alih tanda terima berarti transaksi belum disertakan dalam blok. Tunggu sebentar dan periksa apakah klien konsensus Anda sedang berjalan lalu coba lagi.
 
 #### Berinteraksi dengan kontrak pintar {#interacting-with-smart-contract}
 
 Dalam contoh ini kita akan mengirimkan transaksi menggunakan `eth_sendTransaction` ke metode `multiply` dari kontrak.
 
-`eth_sendTransaction` memerlukan beberapa argumen, khususnya `from`, `to`, dan `data`. `From` adalah alamat publik dari akun kita, dan `to` adalah alamat kontrak. Argumen `data` berisi payload yang menentukan metode mana yang harus dipanggil dan dengan argumen apa. Di sinilah [ABI (application binary interface)](https://docs.soliditylang.org/en/latest/abi-spec.html) berperan. ABI adalah file JSON yang menentukan cara mendefinisikan dan mengenkode data untuk EVM.
+`eth_sendTransaction` memerlukan beberapa argumen, khususnya `from`, `to`, dan `data`. `From` adalah alamat publik dari akun kita, dan `to` adalah alamat kontrak. Argumen `data` berisi muatan yang menentukan metode mana yang harus dipanggil dan dengan argumen apa. Di sinilah [ABI (antarmuka biner aplikasi)](https://docs.soliditylang.org/en/latest/abi-spec.html) berperan. ABI adalah file JSON yang menentukan cara mendefinisikan dan mengenkode data untuk EVM.
 
-Byte dari payload menentukan metode mana dalam kontrak yang dipanggil. Ini adalah 4 byte pertama dari hash Keccak atas nama fungsi dan tipe argumennya, yang dienkode dalam hex. Fungsi multiply menerima uint yang merupakan alias untuk uint256. Ini memberi kita:
+Bita dari muatan menentukan metode mana dalam kontrak yang dipanggil. Ini adalah 4 bita pertama dari hash Keccak atas nama fungsi dan tipe argumennya, yang dienkode dalam bentuk hex. Fungsi multiply menerima uint yang merupakan alias untuk uint256. Ini memberi kita:
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
-// "0xc6888fa1" // "0xc6888fa1"
+// "0xc6888fa1"
 ```
 
-Langkah selanjutnya adalah mengenkode argumen. Hanya ada satu uint256, katakanlah, nilai 6. ABI memiliki bagian yang menentukan cara mengenkode tipe uint256.
+Langkah selanjutnya adalah mengenkode argumen. Hanya ada satu uint256, katakanlah, nilainya 6. ABI memiliki bagian yang menentukan cara mengenkode tipe uint256.
 
-`int<M>: enc(X)` adalah pengkodean komplemen dua big-endian dari X, diisi pada sisi orde yang lebih tinggi (kiri) dengan 0xff untuk X negatif dan dengan nol > byte untuk X positif sehingga panjangnya merupakan kelipatan dari 32 byte.
+`int<M>: enc(X)` adalah pengkodean komplemen dua big-endian dari X, yang diisi pada sisi orde lebih tinggi (kiri) dengan 0xff untuk X negatif dan dengan bita nol untuk X positif sehingga panjangnya merupakan kelipatan dari 32 bita.
 
 Ini dienkode menjadi `0000000000000000000000000000000000000000000000000000000000000006`.
 
-Menggabungkan pemilih fungsi dan argumen yang dienkode, data kita akan menjadi `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`.
+Dengan menggabungkan pemilih fungsi dan argumen yang dienkode, data kita akan menjadi `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`.
 
 Ini sekarang dapat dikirim ke node:
 
@@ -1852,7 +1853,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":8,"jsonrpc":"2.0","result":"0x759cf065cbc22e9d779748dc53763854e5376eea07409e590c990eafc0869d74"}
 ```
 
-Karena sebuah transaksi telah dikirim, hash transaksi dikembalikan. Mengambil tanda terima memberikan:
+Karena transaksi telah dikirim, hash transaksi dikembalikan. Mengambil tanda terima akan memberikan:
 
 ```javascript
 {
@@ -1876,19 +1877,19 @@ Karena sebuah transaksi telah dikirim, hash transaksi dikembalikan. Mengambil ta
 }
 ```
 
-Tanda terima berisi sebuah log. Log ini dihasilkan oleh EVM pada eksekusi transaksi dan disertakan dalam tanda terima. Fungsi `multiply` menunjukkan bahwa peristiwa `Print` dimunculkan dengan input dikali 7. Karena argumen untuk peristiwa `Print` adalah uint256, kita dapat mendekodenya sesuai dengan aturan ABI yang akan memberi kita desimal 42 yang diharapkan. Selain data, perlu dicatat bahwa topik dapat digunakan untuk menentukan peristiwa mana yang membuat log:
+Tanda terima tersebut berisi Log. Log ini dihasilkan oleh EVM pada saat eksekusi transaksi dan disertakan dalam tanda terima. Fungsi `multiply` menunjukkan bahwa peristiwa `Print` dimunculkan dengan input dikali 7. Karena argumen untuk peristiwa `Print` adalah uint256, kita dapat mendekodenya sesuai dengan aturan ABI yang akan memberi kita desimal 42 yang diharapkan. Selain data, perlu dicatat bahwa topik dapat digunakan untuk menentukan peristiwa mana yang membuat Log:
 
 ```javascript
 web3.sha3("Print(uint256)")
-// "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da" // "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
+// "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
 ```
 
-Ini hanyalah pengantar singkat tentang beberapa tugas yang paling umum, yang mendemonstrasikan penggunaan langsung dari JSON-RPC.
+Ini hanyalah pengantar singkat tentang beberapa tugas yang paling umum, yang mendemonstrasikan penggunaan langsung JSON-RPC.
 
 ## Topik terkait {#related-topics}
 
 - [Spesifikasi JSON-RPC](http://www.jsonrpc.org/specification)
 - [Node dan klien](/developers/docs/nodes-and-clients/)
 - [API JavaScript](/developers/docs/apis/javascript/)
-- [API Backend](/developers/docs/apis/backend/)
+- [API backend](/developers/docs/apis/backend/)
 - [Klien eksekusi](/developers/docs/nodes-and-clients/#execution-clients)

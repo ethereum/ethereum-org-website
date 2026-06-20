@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-18T21:47:15.303Z",
+  "englishManifestHash": "03731fe30349",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-f81c54",
+    "CODE-7d22d2",
+    "CODE-6d3366",
+    "CODE-7435a6",
+    "CODE-1798c4",
+    "CODE-9144fd",
+    "CODE-5ad9fe",
+    "CODE-429887",
+    "CODE-6a0b98",
+    "LINK-67f4b7",
+    "CODE-151b6d",
+    "LINK-ae000a",
+    "LINK-8325a5"
+  ],
+  "placeholderMap": {
+    "CODE-6d3366": {
+      "type": "inline-code",
+      "values": {
+        "content": "192.168.22.27"
+      }
+    },
+    "CODE-7d22d2": {
+      "type": "inline-code",
+      "values": {
+        "content": "33000"
+      }
+    },
+    "CODE-7435a6": {
+      "type": "inline-code",
+      "values": {
+        "content": "/ip4/192.168.22.27/tcp/33000"
+      }
+    },
+    "CODE-1798c4": {
+      "type": "inline-code",
+      "values": {
+        "content": "/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br"
+      }
+    },
+    "CODE-9144fd": {
+      "type": "inline-code",
+      "values": {
+        "content": "10.3.58.6"
+      }
+    },
+    "CODE-5ad9fe": {
+      "type": "inline-code",
+      "values": {
+        "content": "30303"
+      }
+    },
+    "CODE-429887": {
+      "type": "inline-code",
+      "values": {
+        "content": "30301"
+      }
+    },
+    "CODE-6a0b98": {
+      "type": "inline-code",
+      "values": {
+        "content": "enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301"
+      }
+    },
+    "CODE-151b6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth2"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-f81c54": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networking-layer/"
+      }
+    },
+    "LINK-67f4b7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure"
+      }
+    },
+    "LINK-ae000a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-778"
+      }
+    },
+    "LINK-8325a5": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:47:15.303Z",
+      "status": "success"
+    }
+  }
+}

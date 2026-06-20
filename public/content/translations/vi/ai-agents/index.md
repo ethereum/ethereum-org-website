@@ -1,141 +1,140 @@
 ---
-title: AI agent
-metaTitle: "Tác nhân AI | Các tác nhân AI trên Ethereum"
-description: "Tổng quan các tác nhân AI trên Ethereum"
+title: "Các tác nhân AI"
+metaTitle: "Các tác nhân AI | Các tác nhân AI trên Ethereum"
+description: "Tổng quan về các tác nhân AI trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: "Mọi người đang họp ở bàn đầu cuối"
+alt: "Mọi người tụ tập tại bàn thiết bị đầu cuối"
 summaryPoints:
   - "AI tương tác với chuỗi khối và giao dịch độc lập"
-  - "Kiểm soát vốn và ví trên chuỗi"
-  - "Tuyển dụng nhân sự hoặc những công cụ khác cho công việc"
+  - "Kiểm soát ví và quỹ trên chuỗi"
+  - "Thuê con người hoặc các tác nhân khác làm việc"
 buttons:
   - content: Tác nhân AI là gì?
-    toId: ai-agents-on-ethereum
-  - content: Khám phá tác nhân Ai
+    toId: what-are-ai-agents
+  - content: Khám phá các tác nhân
     toId: ai-agents-on-ethereum
     isSecondary: false
 ---
 
-Hãy tưởng tượng việc điều hướng Ethereum với một trợ lý AI nghiên cứu xu hướng thị trường trên chuỗi 24/7, trả lời các câu hỏi và thậm chí thực hiện giao dịch thay cho bạn. Chào mừng đến thế giới của Trí tuệ nhân tạo - hệ thống thông minh được thiết kế đơn giản hóa cho cuộc sống số.
+Hãy tưởng tượng việc điều hướng Ethereum với một trợ lý AI nghiên cứu các xu hướng thị trường trên chuỗi 24/7, trả lời các câu hỏi và thậm chí thay mặt bạn thực hiện các giao dịch. Chào mừng bạn đến với thế giới của các Tác nhân AI—những hệ thống thông minh được thiết kế để đơn giản hóa cuộc sống kỹ thuật số của bạn.
 
-Trên Ethereum, chúng ta đang chứng kiến những đổi mới của các tác nhân AI, từ những người ảnh hưởng ảo và các nhà sáng tạo nội dung tự động đến các nền tảng phân tích thị trường theo thời gian thực, trao quyền cho người dùng bằng cách cung cấp thông tin chi tiết, giải trí và hiệu quả vận hành.
+Trên Ethereum, chúng ta đang chứng kiến những đổi mới của các tác nhân AI, từ những người có sức ảnh hưởng ảo và nhà sáng tạo nội dung tự trị cho đến các nền tảng phân tích thị trường theo thời gian thực, trao quyền cho người dùng bằng cách cung cấp thông tin chi tiết, giải trí và hiệu quả hoạt động.
 
 ## Tác nhân AI là gì? {#what-are-ai-agents}
 
-Tác nhân AI là những chương trình phần mềm dùng trí thông minh nhân tạo để thực hiện nhiệm vụ và đưa ra quyết định. Chúng học từ dữ liệu, thích ứng với những thay đổi và xử lý các nhiệm vụ phức tạp. Chúng hoạt động không ngừng nghỉ và có thể phát hiện ra cơ hội ngay lập tức.
+Các tác nhân AI là những chương trình phần mềm sử dụng trí tuệ nhân tạo để thực hiện các tác vụ hoặc tự đưa ra quyết định. Chúng học hỏi từ dữ liệu, thích ứng với những thay đổi và xử lý các tác vụ phức tạp. Chúng hoạt động không ngừng nghỉ và có thể phát hiện cơ hội ngay lập tức.
 
-### Cách tác nhân AI hoạt động với chuỗi khối {#how-ai-agents-work-with-blockchains}
+### Cách các tác nhân AI hoạt động với chuỗi khối {#how-ai-agents-work-with-blockchains}
 
-Trong tài chính truyền thống, tác nhân AI thường hoạt động trong môi trường tập trung với lượng dữ liệu đầu vào hạn chế. Điều này cản trở khả năng học hỏi hoặc quản lý tài sản một cách tự chủ của họ.
+Trong tài chính truyền thống, các tác nhân AI thường hoạt động trong các môi trường tập trung với đầu vào dữ liệu hạn chế. Điều này cản trở khả năng học hỏi hoặc quản lý tài sản một cách tự chủ của chúng.
 
-Ngược lại, hệ sinh thái phi tập trung của Ethereum mang lại một số lợi thế quan trọng:
+Ngược lại, hệ sinh thái phi tập trung của Ethereum mang lại một số lợi thế chính:
 
-- <strong>Dữ liệu minh bạch:</strong>Truy cập thông tin chuỗi khối theo thời gian thực.
-- <strong>Quyền sở hữu tài sản thực:</strong>Tài sản số được toàn quyền sở hữu bởi tác nhân AI.
-- <strong>Chức năng mạnh mẽ trên chuỗi:</strong> Cho phép các tác nhân AI thực hiện giao dịch, tương tác với hợp đồng thông minh, cung cấp thanh khoản và cộng tác trên nhiều giao thức.
+- <strong>Dữ liệu minh bạch:</strong> Truy cập vào thông tin chuỗi khối theo thời gian thực.
+- <strong>Quyền sở hữu tài sản thực sự:</strong> Các tài sản kỹ thuật số hoàn toàn thuộc sở hữu của các tác nhân AI.
+- <strong>Chức năng trên chuỗi mạnh mẽ:</strong> Cho phép các Tác nhân AI thực hiện giao dịch, tương tác với các hợp đồng thông minh, cung cấp thanh khoản và cộng tác trên nhiều giao thức.
 
-Các yếu tố này chuyển đổi các tác nhân AI từ con bot đơn giản thành các hệ thống năng động, tự cải thiện, mang lại giá trị đáng kể trên nhiều lĩnh vực:
+Những yếu tố này biến các tác nhân AI từ những bot đơn giản thành các hệ thống năng động, tự cải thiện, mang lại giá trị đáng kể trên nhiều lĩnh vực:
 
 <Grid>
-  <Card title="DeFi tự động" emoji=":money_with_wings:" description="Các agent AI theo dõi chặt chẽ xu hướng thị trường, thực hiện giao dịch và quản lý danh mục đầu tư — giúp thế giới phức tạp của DeFi trở nên dễ tiếp cận hơn nhiều."/>
-  <Card title="Nền kinh tế agent AI mới" emoji="🌎" description="Các agent AI có thể thuê các agent khác (hoặc con người) có kỹ năng khác nhau để thực hiện các tác vụ chuyên biệt cho chúng." />
-  <Card title="Quản lý rủi ro" emoji="🛠️" description="Bằng cách giám sát hoạt động giao dịch, các agent AI có thể giúp phát hiện lừa đảo và bảo vệ tài sản kỹ thuật số của bạn tốt hơn và nhanh hơn." />
+  <Card title="DeFi tự động" emoji=":money_with_wings:" description="Các tác nhân AI theo dõi sát sao các xu hướng thị trường, thực hiện giao dịch và quản lý danh mục đầu tư — làm cho thế giới phức tạp của DeFi trở nên dễ tiếp cận hơn nhiều."/>
+  <Card title="Nền kinh tế tác nhân AI mới" emoji="🌎" description="Các tác nhân AI có thể thuê các tác nhân khác (hoặc con người) với các kỹ năng khác nhau để thực hiện các nhiệm vụ chuyên biệt cho chúng." />
+  <Card title="Quản lý rủi ro" emoji="🛠️" description="Bằng cách giám sát các hoạt động giao dịch, các tác nhân AI có thể giúp phát hiện các trò lừa đảo và bảo vệ tài sản kỹ thuật số của bạn tốt hơn và nhanh hơn." />
 </Grid>
 
 ## AI có thể xác minh {#verifiable-ai}
 
-Các tác tử AI chạy ngoài chuỗi thường hoạt động như "hộp đen"—lý luận, đầu vào và đầu ra của chúng không thể được xác minh một cách độc lập. Ethereum thay đổi điều đó. Bằng cách neo hành vi của tác tử trên chuỗi, các nhà phát triển có thể xây dựng các tác tử _phi tín nhiệm_, _minh bạch_ và _tự chủ về mặt kinh tế_. Hành động của các tác tử đó có thể được kiểm toán, ràng buộc và chứng minh.
+Các tác nhân AI chạy ngoài chuỗi thường hoạt động như những "hộp đen"—lý luận, đầu vào và đầu ra của chúng không thể được xác minh một cách độc lập. Ethereum thay đổi điều đó. Bằng cách neo hành vi của tác nhân trên chuỗi, các nhà phát triển có thể xây dựng các tác nhân _không cần tin cậy_, _minh bạch_ và _tự chủ về mặt kinh tế_. Các hành động của những tác nhân như vậy có thể được kiểm toán, ràng buộc và chứng minh.
 
 ### Suy luận có thể xác minh {#verifiable-inference}
 
-Suy luận AI theo truyền thống diễn ra ngoài chuỗi, nơi việc thực thi có chi phí thấp nhưng việc thực thi mô hình lại thiếu minh bạch. Trên Ethereum, các nhà phát triển có thể ghép cặp các tác tử với tính toán có thể xác minh bằng một số kỹ thuật:
+Suy luận AI theo truyền thống diễn ra ngoài chuỗi, nơi việc thực thi có chi phí rẻ nhưng việc thực thi mô hình lại không minh bạch. Trên Ethereum, các nhà phát triển có thể kết hợp các tác nhân với tính toán có thể xác minh bằng cách sử dụng một số kỹ thuật:
 
-- [**zkML (máy học không kiến thức)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) cho phép các tác tử chứng minh rằng một mô hình đã được thực thi chính xác mà không tiết lộ mô hình hoặc đầu vào
-- [**Chứng thực TEE (môi trường thực thi tin cậy)**](https://en.wikipedia.org/wiki/Trusted_execution_environment) cho phép các bằng chứng được hỗ trợ bằng phần cứng rằng một tác tử đã chạy một mô hình hoặc đường dẫn mã cụ thể
-- **Tính bất biến trên chuỗi** đảm bảo các bằng chứng và chứng thực này có thể được tham chiếu, phát lại và tin cậy bởi bất kỳ hợp đồng hoặc tác tử nào
+- [**zkML (học máy không tri thức)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) cho phép các tác nhân chứng minh rằng một mô hình đã được thực thi chính xác mà không tiết lộ mô hình hoặc đầu vào
+- [**Các chứng thực TEE (môi trường thực thi tin cậy)**](https://en.wikipedia.org/wiki/Trusted_execution_environment) cho phép các bằng chứng được hỗ trợ bởi phần cứng rằng một tác nhân đã chạy một mô hình hoặc đường dẫn mã cụ thể
+- **Tính bất biến trên chuỗi** đảm bảo những bằng chứng và chứng thực này có thể được tham chiếu, phát lại và tin cậy bởi bất kỳ hợp đồng hoặc tác nhân nào
 
 ## Thanh toán và thương mại với x402 {#x402}
 
-[Giao thức x402](https://www.x402.org/), được triển khai trên Ethereum và các L2, cung cấp cho các tác tử một phương thức gốc để thanh toán cho tài nguyên và tương tác về mặt kinh tế mà không cần sự can thiệp của con người. Các tác tử có thể:
+[Giao thức x402](https://www.x402.org/), được triển khai trên Ethereum và các L2, cung cấp cho các tác nhân một cách thức bản địa để thanh toán cho các tài nguyên và tương tác kinh tế mà không cần sự can thiệp của con người. Các tác nhân có thể:
 
-- Thanh toán cho các lệnh gọi điện toán, dữ liệu và API bằng stablecoin
-- Yêu cầu hoặc xác minh các chứng thực từ các tác tử hoặc dịch vụ khác
-- Tham gia vào thương mại giữa các tác tử, mua và bán kết quả đầu ra của điện toán, dữ liệu hoặc mô hình
+- Thanh toán cho tính toán, dữ liệu và các lệnh gọi API bằng stablecoin
+- Yêu cầu hoặc xác minh các chứng thực từ các tác nhân hoặc dịch vụ khác
+- Tham gia vào thương mại giữa các tác nhân, mua và bán tính toán, dữ liệu hoặc đầu ra của mô hình
 
-x402 biến Ethereum thành một lớp kinh tế có thể lập trình cho các tác tử tự trị, cho phép các tương tác trả tiền cho mỗi lần sử dụng thay vì tài khoản, đăng ký hoặc thanh toán tập trung.
+x402 biến Ethereum thành một lớp kinh tế có thể lập trình cho các tác nhân tự trị, cho phép các tương tác trả tiền theo mức sử dụng thay vì tài khoản, đăng ký hoặc thanh toán tập trung.
 
-### Bảo mật tài chính tác tử {#agentic-finance-security}
+### Bảo mật tài chính của tác nhân {#agentic-finance-security}
 
-Các tác tử tự trị cần có các rào cản bảo vệ. Ethereum cung cấp chúng ở cấp độ ví và hợp đồng:
+Các tác nhân tự trị cần có các rào chắn bảo vệ. Ethereum cung cấp chúng ở cấp độ ví và hợp đồng:
 
 - [Tài khoản thông minh (EIP-4337)](https://eips.ethereum.org/EIPS/eip-4337) cho phép các nhà phát triển thực thi các giới hạn chi tiêu, danh sách trắng, khóa phiên và các quyền chi tiết
-- Các ràng buộc được lập trình trong hợp đồng thông minh có thể hạn chế những gì một tác tử được phép làm
-- Các giới hạn dựa trên suy luận (ví dụ: yêu cầu bằng chứng zkML trước khi thực hiện hành động có rủi ro cao) sẽ thêm một lớp an toàn khác
+- Các ràng buộc được lập trình trong các hợp đồng thông minh có thể hạn chế những gì một tác nhân được phép làm
+- Các giới hạn dựa trên suy luận (ví dụ: yêu cầu bằng chứng zkML trước khi thực thi một hành động rủi ro cao) bổ sung thêm một lớp an toàn khác
 
-Các biện pháp kiểm soát này cho phép triển khai các tác tử tự trị không bị giới hạn.
+Những kiểm soát này cho phép việc triển khai các tác nhân tự trị không bị vượt quá giới hạn.
 
 ### Sổ đăng ký trên chuỗi: ERC-8004 {#erc-8004}
 
-[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) là một tiêu chuẩn mới nổi (hiện đang trong quá trình đánh giá ngang hàng) đề xuất các sổ đăng ký trên chuỗi cho danh tính, khả năng và chứng thực của tác tử.
+[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) định nghĩa các sổ đăng ký trên chuỗi cho danh tính, danh tiếng và xác thực của tác nhân. Được đồng tác giả bởi các cộng tác viên từ MetaMask, Tổ chức Ethereum, Google và Coinbase, nó được triển khai trên 16 mạng bao gồm mạng chính Ethereum, Base, Polygon, Arbitrum và các mạng khác.
 
-Nếu được chấp nhận, nó có thể cung cấp:
+Nó cung cấp:
 
-- Một thư mục chung, phi tín nhiệm của các tác tử
-- Các định dạng chứng thực được tiêu chuẩn hóa
-- Một nền tảng cho "cơ sở hạ tầng tác tử phi tín nhiệm" trực tiếp trên mạng chính Ethereum
+- Một **sổ đăng ký danh tính** cho các định danh tác nhân có thể di chuyển và chống kiểm duyệt
+- Một **sổ đăng ký danh tiếng** cho các tín hiệu phản hồi được tiêu chuẩn hóa trên các ứng dụng
+- Một **sổ đăng ký xác thực** để yêu cầu xác minh độc lập (zkML, TEE, thực thi lại có đặt cọc)
 
-Điều này sẽ giúp các tác tử dễ dàng hơn trong việc khám phá, xác minh và giao dịch với nhau trong một môi trường hoàn toàn phi tập trung.
+ERC-8004 giúp các tác nhân dễ dàng khám phá, xác minh và giao dịch với nhau hơn trong một môi trường hoàn toàn phi tập trung.
 
 ## Các tác nhân AI trên Ethereum {#ai-agents-on-ethereum}
 
-Chúng tôi đang bắt đầu khám phá toàn bộ tiềm năng của các tác nhân AI và các dự án đã tận dụng được sự tương tác giữa AI và blockchain, đặc biệt là về tính minh bạch và tạo doanh thu.
+Chúng ta đang bắt đầu khám phá toàn bộ tiềm năng của các tác nhân AI và các dự án đã và đang tận dụng sức mạnh tổng hợp giữa AI và chuỗi khối—đặc biệt là về tính minh bạch và khả năng kiếm tiền.
 
 <AiAgentProductLists list="ai-agents" />
 
-<strong>Lần đầu tiên Luna's xuất hiện với tư cách là khách mời podcast</strong>
+<strong>Lần xuất hiện đầu tiên của Luna với tư cách là khách mời podcast</strong>
 
-<YouTube id="ZCsOMxnIruA" />
+<VideoWatch slug="ai-agents-interview-luna" />
 
-## Ví do tác nhân Ai điều khiển {#agent-controlled-wallets}
+## Ví do tác nhân kiểm soát {#agent-controlled-wallets}
 
-Các AI như Luna hoặc AIXBT điều khiển ví trên chuỗi của riêng chúng ([AIXBT's ví](https://clusters.xyz/aixbt), [Luna's ví](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) cho phép họ trả tiền boa cho người hâm mộ và tham gia vào các hoạt động kinh tế.
+Các tác nhân như Luna hoặc AIXBT kiểm soát ví trên chuỗi của riêng chúng ([ví của AIXBT](https://clusters.xyz/aixbt), [ví của Luna](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) cho phép chúng thưởng cho người hâm mộ và tham gia vào các hoạt động kinh tế.
 
-Trong chiến dịch trên mạng xã hội X #LunaMuralChallenge của Luna, Luna đã chọn và thưởng cho những người chiến thắng thông qua ví Base của mình — đánh dấu <strong>trường hợp đầu tiên AI thuê con người để nhận phần thưởng bằng tiền điện tử</strong>.
+Trong chiến dịch xã hội X của Luna mang tên #LunaMuralChallenge, Luna đã chọn và trao phần thưởng cho những người chiến thắng thông qua ví Base của cô ấy — đánh dấu <strong>trường hợp đầu tiên một AI thuê con người để nhận phần thưởng tiền mã hóa</strong>.
 
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Tốt để biết</strong></p>
-<p className="mt-2">Tác nhân AI và các công cụ liên quan vẫn đang trong giai đoạn phát triển ban đầu và còn đang trong giai đoạn thử nghiệm—hãy thận trọng khi sử dụng.</p>
+<p className="mt-0"><strong>Thông tin hữu ích</strong></p>
+<p className="mt-2">Các tác nhân AI và các công cụ liên quan vẫn đang trong giai đoạn phát triển ban đầu và mang tính thử nghiệm cao—hãy thận trọng khi sử dụng.</p>
 </AlertContent>
-
 </Alert>
 
-## Kiểm soát ví của bạn bằng câu lệnh trò chuyện {#control-your-wallet-using-chat-commands}
+## Kiểm soát ví của bạn bằng các lệnh trò chuyện {#control-your-wallet-using-chat-commands}
 
-Bạn có thể bỏ qua giao diện phức tạp của DeFi và quản lý tiền điện tử của mình bằng các lệnh trò chuyện đơn giản.
+Bạn có thể bỏ qua các giao diện phức tạp của tài chính phi tập trung (DeFi) và quản lý tiền mã hóa của mình bằng các lệnh trò chuyện đơn giản.
 
-Phương pháp trực quan này giúp giao dịch nhanh hơn, dễ dàng hơn và ít xảy ra lỗi như gửi tiền đến sai địa chỉ hoặc trả phí quá cao.
+Cách tiếp cận trực quan này giúp các giao dịch diễn ra nhanh hơn, dễ dàng hơn và ít bị lỗi hơn như gửi tiền sai địa chỉ hoặc trả phí quá cao.
 
 <AiAgentProductLists list="chat" />
 
-## AI agents và AI bots {#ai-agents-vs-ai-bots}
+## Tác nhân AI so với bot AI {#ai-agents-vs-ai-bots}
 
-Sự khác biệt giữa AI agents và bot AI đôi khi có thể gây nhầm lẫn vì cả hai đều thực hiện các hành động tự động dựa trên thông tin đầu vào.
+Sự khác biệt giữa tác nhân AI và bot AI đôi khi có thể gây nhầm lẫn, vì cả hai đều thực hiện các hành động tự động dựa trên đầu vào.
 
-- Bot AI giống như trợ lý tự động — Chúng làm theo các hướng dẫn cụ thể, được lập trình sẵn để thực hiện các nhiệm vụ thường lệ.
-- Các tác nhân AI giống như những người bạn đồng hành thông minh hơn — Chúng học hỏi từ kinh nghiệm, thích nghi với thông tin mới và tự đưa ra quyết định.
+- Bot AI giống như những trợ lý tự động — Chúng tuân theo các hướng dẫn cụ thể, được lập trình sẵn để thực hiện các tác vụ thường ngày.
+- Tác nhân AI giống như những người bạn đồng hành thông minh hơn — Chúng học hỏi từ kinh nghiệm, thích ứng với thông tin mới và tự đưa ra quyết định.
 
-|                         | AI agent                                                                         | AI bots                                                            |
-| ----------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| **Tương tác**           | Phức tạp, thích nghi, tự chủ                                                     | Phạm vi đơn giản, được xác định trước, được mã hóa cứng            |
-| **Học tập**             | Học liên tục, có thể thử nghiệm và thích ứng với dữ liệu mới theo thời gian thực | Hoạt động trên dữ liệu được đào tạo trước hoặc các quy tắc cố định |
-| **Hoàn thành nhiệm vụ** | Mục tiêu đạt được những mục tiêu rộng lớn hơn                                    | Chỉ tập trung vào các nhiệm vụ cụ thể                              |
+|                     | Tác nhân AI                                                              | Bot AI                                     |
+| ------------------- | ---------------------------------------------------------------------- | ------------------------------------------- |
+| **Tương tác**    | Phức tạp, có thể thích ứng, tự trị                                         | Đơn giản, phạm vi được xác định trước, được mã hóa cứng        |
+| **Học hỏi**        | Học hỏi liên tục, có thể thử nghiệm và thích ứng với dữ liệu mới theo thời gian thực | Hoạt động dựa trên dữ liệu được đào tạo trước hoặc các quy tắc cố định |
+| **Hoàn thành tác vụ** | Nhằm mục đích đạt được các mục tiêu rộng lớn hơn                                     | Chỉ tập trung vào các tác vụ cụ thể              |
 
-## Đi sâu hơn {#dive-deeper}
+## Tìm hiểu sâu hơn {#dive-deeper}
 
 <AiAgentProductLists list="dive-deeper" />
 

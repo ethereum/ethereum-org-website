@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/development-networks/index.md",
+  "generatedAt": "2026-06-18T21:27:59.075Z",
+  "rootHash": "2e955dcd6c8b",
+  "tree": {
+    "contentHash": "ebc4b03b8f7b",
+    "anchorHash": "8eb043f2ef08",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "94a942f93dd0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "6e57582573a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "e3c344475858",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:2": {
+        "contentHash": "a906f8f5b6ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "a119f9e987ce",
+        "anchorHash": "8a31c6daee9d",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "37b204bb8b5d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f83ec37306ed",
+            "anchorHash": "496b8e555c12"
+          },
+          "prose:3": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "52281e65571f",
+            "anchorHash": "a6ab4d2bdd72"
+          },
+          "prose:4": {
+            "contentHash": "e75736a893a2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "what-is-a-development-network": {
+        "contentHash": "7a016146be32",
+        "anchorHash": "562ce9480132",
+        "labelHash": "fdae1448748d",
+        "children": {
+          "_label": {
+            "contentHash": "fdae1448748d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "1d6c52f9082c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "097541f929a5",
+            "anchorHash": "f4ee3c5cf36f"
+          },
+          "prose:2": {
+            "contentHash": "7e22a4865d14",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "available-projects": {
+        "contentHash": "14d644986c5a",
+        "anchorHash": "08e8e7c96073",
+        "labelHash": "6eb7a22c7429",
+        "children": {
+          "_label": {
+            "contentHash": "6eb7a22c7429",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "02d935ec1849",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "752ca3ac6fdd",
+            "anchorHash": "f1bdb6df8255"
+          },
+          "prose:3": {
+            "contentHash": "1e46a66d55f5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "4e9016ea8460",
+            "anchorHash": "62319d285b0e"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "hardhat-network": {
+            "contentHash": "6c074ac5f4d7",
+            "anchorHash": "4134e5e491fb",
+            "labelHash": "479e02bacedd",
+            "children": {
+              "_label": {
+                "contentHash": "479e02bacedd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "4039f232190f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "b5a229ac8bec",
+                "anchorHash": "52bbb2b45c8b"
+              },
+              "prose:3": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "f911e414cf6b",
+                "anchorHash": "a03cd63b848c"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1"
+            ]
+          },
+          "local-beacon-chains": {
+            "contentHash": "d5d22f147e4c",
+            "anchorHash": "2c886cc3cd68",
+            "labelHash": "352a38cee84a",
+            "children": {
+              "_label": {
+                "contentHash": "352a38cee84a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "d424ffb61994",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "4872826018d0",
+                "anchorHash": "5a9ed1e3a72d"
+              },
+              "prose:3": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "92cc7bc82e74",
+                "anchorHash": "ea45b8e00dab"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1"
+            ]
+          },
+          "public-beacon-testchains": {
+            "contentHash": "8a6826f53f82",
+            "anchorHash": "f3c776a15ac0",
+            "labelHash": "2fd2c1598445",
+            "children": {
+              "_label": {
+                "contentHash": "2fd2c1598445",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "257e3a0df77e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "b750fb018cda",
+                "anchorHash": "6908c0d0e43d"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "kurtosis": {
+            "contentHash": "a4b0c5efaf1c",
+            "anchorHash": "66b51fa1a020",
+            "labelHash": "ff2ef54e610f",
+            "children": {
+              "_label": {
+                "contentHash": "ff2ef54e610f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "b48c4b57e8ef",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "4e905ab63954",
+                "anchorHash": "1f5070df66a6"
+              },
+              "prose:5": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "b5a229ac8bec",
+                "anchorHash": "0bcab126e093"
+              },
+              "prose:6": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "f911e414cf6b",
+                "anchorHash": "4a174bca8b44"
+              },
+              "prose:7": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "c205924de0fe",
+                "anchorHash": "689e9c9bcd98"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "hardhat-network",
+          "local-beacon-chains",
+          "public-beacon-testchains",
+          "kurtosis"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "7b6014df0830",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "123ee5ac559d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "related-topics": {
+        "contentHash": "48b50ff9ef09",
+        "anchorHash": "9561badd19f3",
+        "labelHash": "5a38da0df0ab",
+        "children": {
+          "_label": {
+            "contentHash": "5a38da0df0ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "81dc3a308ef5",
+            "anchorHash": "f1bdb6df8255"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "1c04cf70fda1",
+            "anchorHash": "62319d285b0e"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "tutorials": {
+        "contentHash": "d70baf374c85",
+        "anchorHash": "d7100755c6d8",
+        "labelHash": "1e180d15ce66",
+        "children": {
+          "_label": {
+            "contentHash": "1e180d15ce66",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d65d8ae90804",
+            "anchorHash": "c0cbf1457d35"
+          },
+          "prose:2": {
+            "contentHash": "e4fa288f83b7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "prerequisites",
+      "what-is-a-development-network",
+      "available-projects",
+      "further-reading",
+      "related-topics",
+      "tutorials"
+    ]
+  },
+  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+}

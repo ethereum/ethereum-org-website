@@ -1,12 +1,13 @@
 ---
 title: Archiviazione decentralizzata
-description: "Panoramica di cos'è l'archiviazione decentralizzata e degli strumenti disponibili per integrarla in una dApp."
+description: Panoramica di cosa sia l'archiviazione decentralizzata e degli strumenti disponibili per integrarla in una dapp.
 lang: it
+authors: ["Patrick Collins"]
 ---
 
-A differenza di un server centralizzato gestito da una singola azienda o organizzazione, i sistemi di archiviazione decentralizzata consistono in una rete peer-to-peer di utenti-operatori che detengono una porzione dei dati complessivi, creando un sistema di condivisione e archiviazione di file resiliente. Questi possono trovarsi in un'applicazione basata su blockchain o in qualsiasi rete basata su peer-to-peer.
+A differenza di un server centralizzato gestito da una singola azienda o organizzazione, i sistemi di archiviazione decentralizzata consistono in una rete peer-to-peer di utenti-operatori che detengono una porzione dei dati complessivi, creando un sistema di condivisione dell'archiviazione di file resiliente. Questi possono trovarsi in un'applicazione basata su blockchain o in qualsiasi rete basata su peer-to-peer.
 
-Ethereum stesso può essere utilizzato come sistema di archiviazione decentralizzata, e lo è quando si tratta di archiviare il codice in tutti i contratti intelligenti. Tuttavia, quando si tratta di grandi quantità di dati, non è per questo che Ethereum è stato progettato. La catena è in costante crescita, ma al momento della stesura, la catena di Ethereum è di circa 500GB - 1TB ([a seconda del client](https://etherscan.io/chartsync/chaindefault)), e ogni nodo sulla rete deve essere in grado di archiviare tutti i dati. Se la catena dovesse espandersi a grandi quantità di dati (diciamo 5TB) non sarebbe fattibile per tutti i nodi continuare a funzionare. Inoltre, il costo di distribuzione di una tale quantità di dati sulla rete principale sarebbe proibitivo a causa delle commissioni del [gas](/developers/docs/gas).
+Ethereum stesso può essere utilizzato come sistema di archiviazione decentralizzata, e lo è quando si tratta di archiviare il codice in tutti i contratti intelligenti (smart contract). Tuttavia, quando si tratta di grandi quantità di dati, non è per questo che Ethereum è stato progettato. La catena è in costante crescita, ma al momento della stesura, la catena di Ethereum è di circa 500 GB - 1 TB ([a seconda del client](https://etherscan.io/chartsync/chaindefault)), e ogni nodo sulla rete deve essere in grado di archiviare tutti i dati. Se la catena dovesse espandersi a grandi quantità di dati (diciamo 5 TB) non sarebbe fattibile per tutti i nodi continuare a funzionare. Inoltre, il costo di distribuzione di una tale quantità di dati sulla Mainnet sarebbe proibitivo a causa delle commissioni del [gas](/developers/docs/gas).
 
 A causa di questi vincoli, abbiamo bisogno di una catena o metodologia diversa per archiviare grandi quantità di dati in modo decentralizzato.
 
@@ -27,7 +28,7 @@ Questa è nota come persistenza **basata su blockchain**.
 
 Il problema con la persistenza basata su blockchain è che la catena potrebbe diventare troppo grande per mantenere e archiviare tutti i dati in modo fattibile (ad es., [molte fonti](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) stimano che Internet richieda oltre 40 Zettabyte di capacità di archiviazione).
 
-La blockchain deve anche avere un qualche tipo di struttura degli incentivi. Per la persistenza basata su blockchain, viene effettuato un pagamento al validatore. Quando i dati vengono aggiunti alla catena, i validatori vengono pagati per aggiungervi i dati.
+La blockchain deve anche avere un qualche tipo di struttura degli incentivi. Per la persistenza basata su blockchain, viene effettuato un pagamento al validatore. Quando i dati vengono aggiunti alla catena, i validatori vengono pagati per aggiungerli.
 
 Piattaforme con persistenza basata su blockchain:
 
@@ -36,9 +37,9 @@ Piattaforme con persistenza basata su blockchain:
 
 ### Basato su contratti {#contract-based}
 
-La persistenza **basata su contratti** si fonda sull'intuizione che i dati non possono essere replicati da ogni nodo e archiviati per sempre, ma devono invece essere mantenuti tramite accordi contrattuali. Si tratta di accordi stipulati con più nodi che hanno promesso di conservare un dato per un periodo di tempo. Devono essere rimborsati o rinnovati ogni volta che scadono per mantenere i dati persistenti.
+La persistenza **basata su contratti** parte dall'intuizione che i dati non possono essere replicati da ogni nodo e archiviati per sempre, ma devono invece essere mantenuti tramite accordi contrattuali. Si tratta di accordi stipulati con più nodi che hanno promesso di conservare un dato per un periodo di tempo. Devono essere rimborsati o rinnovati ogni volta che scadono per mantenere i dati persistenti.
 
-Nella maggior parte dei casi, invece di archiviare tutti i dati on-chain, viene archiviato l'hash della posizione in cui si trovano i dati su una catena. In questo modo, l'intera catena non ha bisogno di scalare per conservare tutti i dati.
+Nella maggior parte dei casi, invece di archiviare tutti i dati onchain, viene archiviato l'hash della posizione in cui si trovano i dati su una catena. In questo modo, l'intera catena non ha bisogno di scalare per conservare tutti i dati.
 
 Piattaforme con persistenza basata su contratti:
 
@@ -52,26 +53,26 @@ Piattaforme con persistenza basata su contratti:
 
 ### Considerazioni aggiuntive {#additional-consideration}
 
-IPFS è un sistema distribuito per l'archiviazione e l'accesso a file, siti web, applicazioni e dati. Non ha uno schema di incentivi integrato, ma può invece essere utilizzato con una qualsiasi delle soluzioni di incentivi basate su contratti di cui sopra per una persistenza a lungo termine. Un altro modo per rendere persistenti i dati su IPFS è lavorare con un servizio di pinning, che "fisserà" (pin) i tuoi dati per te. Puoi persino eseguire il tuo nodo IPFS e contribuire alla rete per rendere persistenti i tuoi dati e/o quelli di altri gratuitamente!
+IPFS è un sistema distribuito per l'archiviazione e l'accesso a file, siti web, applicazioni e dati. Non ha uno schema di incentivi integrato, ma può invece essere utilizzato con una qualsiasi delle soluzioni di incentivi basate su contratti di cui sopra per una persistenza a lungo termine. Un altro modo per far persistere i dati su IPFS è lavorare con un servizio di pinning, che "fisserà" (pin) i tuoi dati per te. Puoi persino eseguire il tuo nodo IPFS e contribuire alla rete per far persistere i tuoi dati e/o quelli di altri gratuitamente!
 
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/) _(servizio di pinning IPFS)_
 - [web3.storage](https://web3.storage/) _(servizio di pinning IPFS/Filecoin)_
 - [Infura](https://infura.io/product/ipfs) _(servizio di pinning IPFS)_
-- [IPFS Scan](https://ipfs-scan.io) _(esploratore di pinning IPFS)_
+- [IPFS Scan](https://ipfs-scan.io) _(explorer di pinning IPFS)_
 - [4EVERLAND](https://www.4everland.org/)_（servizio di pinning IPFS）_
-- [Filebase](https://filebase.com) _(Servizio di pinning IPFS)_
+- [Filebase](https://filebase.com) _(servizio di pinning IPFS)_
 - [Spheron Network](https://spheron.network/) _(servizio di pinning IPFS/Filecoin)_
 
-SWARM è una tecnologia di archiviazione e distribuzione dei dati decentralizzata con un sistema di incentivi per l'archiviazione e un oracolo per il prezzo di affitto dell'archiviazione.
+Swarm è una tecnologia di archiviazione e distribuzione dei dati decentralizzata con un sistema di incentivi per l'archiviazione e un oracolo per il prezzo di affitto dell'archiviazione.
 
 ## Conservazione dei dati {#data-retention}
 
-Al fine di conservare i dati, i sistemi devono avere una sorta di meccanismo per assicurarsi che i dati vengano conservati.
+Al fine di conservare i dati, i sistemi devono avere una sorta di meccanismo per assicurarsi che i dati vengano mantenuti.
 
-### Meccanismo di sfida {#challenge-mechanism}
+### Meccanismo di sfida (challenge) {#challenge-mechanism}
 
-Uno dei modi più popolari per assicurarsi che i dati vengano conservati è utilizzare un qualche tipo di sfida crittografica che viene inviata ai nodi per assicurarsi che abbiano ancora i dati. Un esempio semplice è la prova di accesso (proof-of-access) di Arweave. Emettono una sfida ai nodi per vedere se hanno i dati sia nel blocco più recente che in un blocco casuale nel passato. Se il nodo non riesce a fornire la risposta, viene penalizzato.
+Uno dei modi più popolari per assicurarsi che i dati vengano conservati è utilizzare un qualche tipo di sfida crittografica che viene inviata ai nodi per assicurarsi che abbiano ancora i dati. Un esempio semplice è la proof-of-access di Arweave. Emettono una sfida ai nodi per vedere se hanno i dati sia nel blocco più recente che in un blocco casuale nel passato. Se il nodo non riesce a fornire la risposta, viene penalizzato.
 
 Tipi di dStorage con un meccanismo di sfida:
 
@@ -84,7 +85,7 @@ Tipi di dStorage con un meccanismo di sfida:
 
 ### Decentralizzazione {#decentrality}
 
-Non ci sono ottimi strumenti per misurare il livello di decentralizzazione delle piattaforme, ma in generale, vorrai utilizzare strumenti che non abbiano alcuna forma di KYC per fornire prove che non siano centralizzati.
+Non ci sono ottimi strumenti per misurare il livello di decentralizzazione delle piattaforme, ma in generale, vorrai utilizzare strumenti che non abbiano una qualche forma di KYC per fornire prove che non siano centralizzati.
 
 Strumenti decentralizzati senza KYC:
 
@@ -98,14 +99,14 @@ Strumenti decentralizzati senza KYC:
 
 ### Consenso {#consensus}
 
-La maggior parte di questi strumenti ha la propria versione di un [meccanismo di consenso](/developers/docs/consensus-mechanisms/), ma generalmente si basano sulla [**prova di lavoro (PoW)**](/developers/docs/consensus-mechanisms/pow/) o sulla [**prova di stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
+La maggior parte di questi strumenti ha la propria versione di un [meccanismo di consenso](/developers/docs/consensus-mechanisms/) ma generalmente si basano sulla [**Prova di lavoro (PoW)**](/developers/docs/consensus-mechanisms/pow/) o sulla [**Proof-of-Stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-Basati sulla prova di lavoro:
+Basati sulla Prova di lavoro (PoW):
 
 - Skynet
 - Arweave
 
-Basati sulla prova di stake:
+Basati sulla Proof-of-Stake (PoS):
 
 - Ethereum
 - Filecoin
@@ -144,7 +145,7 @@ Basati sulla prova di stake:
 - [Documentazione](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**Züs - _Züs è una piattaforma dStorage basata sulla prova di stake con frammentazione e blobber._**
+**Züs - _Züs è una piattaforma dStorage Proof-of-Stake con sharding e blobber._**
 
 - [zus.network](https://zus.network/)
 - [Documentazione](https://docs.zus.network/zus-docs/)
@@ -156,7 +157,7 @@ Basati sulla prova di stake:
 - [Documentazione](https://wiki.crust.network)
 - [GitHub](https://github.com/crustio)
 
-**Swarm - _Una piattaforma di archiviazione distribuita e un servizio di distribuzione di contenuti per lo stack web3 di Ethereum._**
+**Swarm - _Una piattaforma di archiviazione distribuita e un servizio di distribuzione dei contenuti per lo stack Web3 di Ethereum._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
 - [Documentazione](https://docs.ethswarm.org/)
@@ -168,7 +169,7 @@ Basati sulla prova di stake:
 - [Documentazione](https://github.com/orbitdb/field-manual/)
 - [GitHub](https://github.com/orbitdb/orbit-db/)
 
-**Aleph.im - _Progetto cloud decentralizzato (database, archiviazione di file, calcolo e DID). Una miscela unica di tecnologia peer-to-peer fuori catena e on-chain. Compatibilità con IPFS e multi-chain._**
+**Aleph.im - _Progetto cloud decentralizzato (database, archiviazione di file, calcolo e identità decentralizzata (DID)). Una miscela unica di tecnologia peer-to-peer offchain e onchain. Compatibilità con IPFS e multi-chain._**
 
 - [Aleph.im](https://aleph.cloud/)
 - [Documentazione](https://docs.aleph.cloud/)
@@ -186,7 +187,7 @@ Basati sulla prova di stake:
 - [Documentazione](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
 
-**4EVERLAND - _Una piattaforma di cloud computing Web 3.0 che integra funzionalità principali di archiviazione, calcolo e rete, è compatibile con S3 e fornisce archiviazione dati sincrona su reti di archiviazione decentralizzata come IPFS e Arweave._**
+**4EVERLAND - _Una piattaforma di cloud computing Web 3.0 che integra funzionalità principali di archiviazione, calcolo e rete, è compatibile con S3 e fornisce archiviazione sincrona dei dati su reti di archiviazione decentralizzata come IPFS e Arweave._**
 
 - [4everland.org](https://www.4everland.org/)
 - [Documentazione](https://docs.4everland.org/)
@@ -198,11 +199,20 @@ Basati sulla prova di stake:
 - [Documentazione](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
-**Spheron Network - _Spheron è una platform-as-a-service (PaaS) progettata per le dApp che desiderano lanciare le proprie applicazioni su un'infrastruttura decentralizzata con le migliori prestazioni. Fornisce calcolo, archiviazione decentralizzata, CDN e web hosting pronti all'uso._**
+**Spheron Network - _Spheron è una platform-as-a-service (PaaS) progettata per le dapp che desiderano lanciare le proprie applicazioni su un'infrastruttura decentralizzata con le migliori prestazioni. Fornisce calcolo, archiviazione decentralizzata, CDN e web hosting pronti all'uso._**
 
 - [spheron.network](https://spheron.network/)
 - [Documentazione](https://docs.spheron.network/)
 - [GitHub](https://github.com/spheronFdn)
+
+**dweb3 - _Risolutore per pagine web decentralizzate, simile a eth.limo, che supporta tutti i tipi e non è limitato a ENS e IPFS._**
+
+- [dweb3.wtf](https://dweb3.wtf)
+
+**web3compass - _Motore di ricerca per siti web decentralizzati supportati da IPFS + ENS._**
+
+- [web3compass.net](https://www.web3compass.net/)
+- [Documentazione](https://www.web3compass.net/statistics)
 
 ## Letture consigliate {#further-reading}
 
