@@ -1,0 +1,593 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/nft/index.md",
+  "generatedAt": "2026-06-19T23:32:37.315Z",
+  "rootHash": "50b661382621",
+  "tree": {
+    "contentHash": "58f4d263a7b6",
+    "anchorHash": "b919d2477deb",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "5c07cc794a93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a5a0fcfa2f7a"
+      },
+      "frontmatter:description": {
+        "contentHash": "0c2d4fd90cdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2290d7d70dea"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "df2ee74ad094"
+      },
+      "frontmatter:alt": {
+        "contentHash": "7b078e85510a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-nfts": {
+        "contentHash": "78c42a33a8b2",
+        "anchorHash": "f9cd1c655456",
+        "labelHash": "7ef5f87b1312",
+        "children": {
+          "_label": {
+            "contentHash": "7ef5f87b1312",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "e506e2ec0959",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f4a3760644d0",
+            "anchorHash": "91b433779c27"
+          },
+          "prose:4": {
+            "contentHash": "1f1aab243dd5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:5": {
+            "contentHash": "afdc89900f1b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "ef7797e13d3a",
+            "anchorHash": "312433dbc1b2"
+          },
+          "prose:6": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:8": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "6da463f35379",
+            "children": {
+              "attr:slug": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "c6a0a1f7d19d"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "component:8"
+        ]
+      },
+      "internet-of-assets": {
+        "contentHash": "6b6b4ad7d8fe",
+        "anchorHash": "2ef2df38fe3d",
+        "labelHash": "80fd6398cc10",
+        "children": {
+          "_label": {
+            "contentHash": "80fd6398cc10",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a89ede2645b7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "nft-comparison": {
+            "contentHash": "82925f7ca8f3",
+            "anchorHash": "f918b1c4c90a",
+            "labelHash": "c7fa540eb81e",
+            "children": {
+              "_label": {
+                "contentHash": "c7fa540eb81e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "82620814a5f5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "81fbd2f198c9",
+                "anchorHash": "89d756280b47"
+              },
+              "prose:2": {
+                "contentHash": "d0d1122a2f2c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "nft-comparison"
+        ]
+      },
+      "nft-use-cases": {
+        "contentHash": "9191694fc43e",
+        "anchorHash": "b68b406b64f8",
+        "labelHash": "b873263c708c",
+        "children": {
+          "_label": {
+            "contentHash": "b873263c708c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "27169464ead1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "56cac1d41a1c",
+            "anchorHash": "1692e1e76501"
+          },
+          "prose:5": {
+            "contentHash": "2c1e521d2fbb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "83846af5ce6c",
+            "anchorHash": "555c7321377e"
+          },
+          "prose:6": {
+            "contentHash": "91060187c095",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "a60860fc878b",
+            "anchorHash": "2e5fdb9452b1"
+          },
+          "prose:7": {
+            "contentHash": "621ba9ba190a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "d80c9bf910f1",
+            "anchorHash": "e11c21197f9a"
+          },
+          "prose:8": {
+            "contentHash": "b6154f757720",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:10": {
+            "contentHash": "22c98bac36fa",
+            "anchorHash": "6c376a064e43",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2937013f2181"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "491aaf33b92d",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "252d79a64486"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "f02badba5a4e",
+                "anchorHash": "4f899c9b8e0e",
+                "children": {
+                  "attr:className": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e796b9e20a49"
+                  },
+                  "prose:0": {
+                    "contentHash": "dd5ac473c4bf",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "component:1": {
+                    "contentHash": "b86832566b7f",
+                    "anchorHash": "37993f95442b",
+                    "children": {
+                      "attr:href": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "7a343a21bd93"
+                      },
+                      "prose:0": {
+                        "contentHash": "77bf9e54ecbf",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:href",
+                      "prose:0"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "attr:className",
+                  "prose:0",
+                  "component:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "component:0",
+              "component:1"
+            ]
+          },
+          "prose:9": {
+            "contentHash": "08900c4fbc4f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:10": {
+            "contentHash": "15d892884c6c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:11": {
+            "contentHash": "ba32c78afe92",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:3": {
+            "contentHash": "9f4c26956db2",
+            "anchorHash": "cf92ac8e9bab"
+          },
+          "prose:12": {
+            "contentHash": "687687b21a02",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7f1c837fb65e"
+          },
+          "prose:13": {
+            "contentHash": "3a422ce89f7b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c344ba8b6a00"
+          },
+          "prose:14": {
+            "contentHash": "c3c94a5f67ff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "9fc5ad651522",
+            "anchorHash": "edeea805f311"
+          },
+          "link:7": {
+            "contentHash": "df34dc0cc9b3",
+            "anchorHash": "a987d000b8ff"
+          },
+          "component:26": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8",
+          "component:10",
+          "prose:8",
+          "link:0",
+          "prose:9",
+          "link:1",
+          "prose:10",
+          "link:2",
+          "prose:11",
+          "image:3",
+          "prose:12",
+          "inline-code:4",
+          "prose:13",
+          "inline-code:5",
+          "prose:14",
+          "link:6",
+          "link:7",
+          "component:26"
+        ]
+      },
+      "how-nfts-work": {
+        "contentHash": "fab52887bc6c",
+        "anchorHash": "898f8cb86f1d",
+        "labelHash": "e3611aaaf691",
+        "children": {
+          "_label": {
+            "contentHash": "e3611aaaf691",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "1dcbe7e17793",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "97d1823f0b00",
+            "anchorHash": "bb9fac920fe0"
+          },
+          "prose:3": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "96233e154782",
+            "anchorHash": "40733e9e29f7"
+          },
+          "prose:4": {
+            "contentHash": "33b9a0f877fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "nft-security": {
+            "contentHash": "2201f6360d14",
+            "anchorHash": "f8768dfb990b",
+            "labelHash": "04269bddddf0",
+            "children": {
+              "_label": {
+                "contentHash": "04269bddddf0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "712de96762e4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "769e0b8515e3",
+                "anchorHash": "5c0b88e44e45"
+              },
+              "prose:4": {
+                "contentHash": "1eea5c5adf46",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "496aca80e4d8",
+                "anchorHash": "182612c428ea"
+              },
+              "prose:5": {
+                "contentHash": "5ff73d9e6f4f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "724155e945df",
+                "anchorHash": "380d2118d094"
+              },
+              "prose:6": {
+                "contentHash": "b8d58a4684e3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:8": {
+                "contentHash": "d3be5027db3b",
+                "anchorHash": "961a65c8b2b9",
+                "children": {
+                  "attr:href": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "a66cf66c9cba"
+                  },
+                  "prose:0": {
+                    "contentHash": "e01f17e6d6ba",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:href",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6",
+              "component:8"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "nft-security"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "717170242a0c",
+        "anchorHash": "40f3eee8d871",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8cd0665abfb3",
+            "anchorHash": "fdd25d13997f"
+          },
+          "prose:8": {
+            "contentHash": "4af89f78bc2c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "ceeda6dcfdc1",
+            "anchorHash": "0316b61deb6a"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "436b98fca2ec",
+            "anchorHash": "9b2ae599a08b"
+          },
+          "prose:10": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "c24514c9c7c8",
+            "anchorHash": "75d475e0e55b"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "d473029d0ea2",
+            "anchorHash": "30418c86ebfc"
+          },
+          "prose:12": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "711d6432a0fd",
+            "anchorHash": "6bf0d25b5695"
+          },
+          "prose:13": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "a9d57e1adc09",
+            "anchorHash": "d4e1c7aeea5d"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:7",
+          "link:0",
+          "prose:8",
+          "link:1",
+          "prose:9",
+          "link:2",
+          "prose:10",
+          "link:3",
+          "prose:11",
+          "link:4",
+          "prose:12",
+          "link:5",
+          "prose:13",
+          "link:6"
+        ]
+      },
+      "other-resources": {
+        "contentHash": "77686a4021bb",
+        "anchorHash": "5d7d4670a31b",
+        "labelHash": "e69760843d30",
+        "children": {
+          "_label": {
+            "contentHash": "e69760843d30",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3684f35c7760",
+            "anchorHash": "b5fff76befd6"
+          },
+          "component:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "07f75c057538",
+            "children": {
+              "attr:quizKey": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "160317613119"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "component:3",
+          "component:4"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:sidebarDepth",
+      "frontmatter:image",
+      "frontmatter:alt",
+      "frontmatter:summaryPoints",
+      "what-are-nfts",
+      "internet-of-assets",
+      "nft-use-cases",
+      "how-nfts-work",
+      "further-reading",
+      "other-resources"
+    ]
+  },
+  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+}

@@ -1,222 +1,227 @@
 ---
-title: "Połączenie"
-description: "Dowiedz się więcej o Połączeniu — kiedy w sieci głównej Ethereum przyjęto dowód stawki (proof-of-stake)."
+title: The Merge
+description: "Dowiedz się o The Merge – kiedy sieć główna Ethereum przeszła na dowód stawki (PoS)."
 lang: pl
 template: upgrade
 image: /images/upgrades/merge.png
-alt:
+alt: 
 summaryPoints:
-  - "Sieć główna Ethereum wykorzystuje mechanizm proof-of-stake, ale nie zawsze tak było."
-  - "Przejście z oryginalnego mechanizmu proof-of-work na proof-of-stake zostało nazwane Połączeniem."
-  - "Połączenie odnosi się do połączenia pierwotnej sieci głównej Ethereum z oddzielnym łańcuchem blockchain proof-of-stake nazywaną łańcuchem śledzącym, które teraz istnieją jako jeden łańcuch."
-  - "Połączenie zmniejszyło zużycie energii przez Ethereum o około 99,95%."
+  - Sieć główna Ethereum wykorzystuje dowód stawki (PoS), ale nie zawsze tak było.
+  - Aktualizacja z oryginalnego mechanizmu dowodu pracy (PoW) do dowodu stawki (PoS) została nazwana The Merge.
+  - The Merge odnosi się do połączenia oryginalnej sieci głównej Ethereum z oddzielnym blockchainem opartym na dowodzie stawki zwanym Beacon Chain, które teraz istnieją jako jeden łańcuch.
+  - The Merge zmniejszyło zużycie energii przez Ethereum o około 99,95%.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  Połączenie zostało przeprowadzone w dniu 15 września 2022 r. Zakończyło to przejście Ethereum na konsensus proof-of-stake i oficjalną rezygnację z mechanizmu proof-of-work, skutkujące zmniejszeniem zużycia energii o około 99,95%.
+  The Merge zostało przeprowadzone 15 września 2022 roku. Zakończyło to przejście Ethereum na konsensus oparty na dowodzie stawki (PoS), oficjalnie wycofując dowód pracy (PoW) i zmniejszając zużycie energii o około 99,95%.
 </UpgradeStatus>
 
-## Czym było Połączenie? {#what-is-the-merge}
+## Czym było The Merge? {#what-is-the-merge}
 
-Połączenie to scalenie pierwotnej warstwy wykonawczej Ethereum (sieci głównej, która istnieje od [genezy](/ethereum-forks/#frontier)) z jej nową warstwą konsensusu proof-of-stake, Łańcuchem śledzącym. Wyeliminowało to potrzebę energochłonnego wydobycia, a zamiast tego umożliwiło zabezpieczenie sieci za pomocą stakowanych ETH. To był naprawdę ekscytujący krok w realizacji wizji Ethereum — większej skalowalności, bezpieczeństwa i zrównoważenia ekologicznego.
+The Merge było połączeniem oryginalnej warstwy wykonawczej Ethereum (sieci głównej, która istniała od [bloku genezy](/ethereum-forks/#frontier)) z jej nową warstwą konsensusu opartą na dowodzie stawki (PoS), czyli Beacon Chain. Wyeliminowało to potrzebę energochłonnego kopania i zamiast tego umożliwiło zabezpieczenie sieci za pomocą stakowanego ETH. Był to niezwykle ekscytujący krok w realizacji wizji [Ethereum](/) – większej skalowalności, bezpieczeństwa i zrównoważonego rozwoju.
 
 <MergeInfographic />
 
-Początkowo [Łańcuch śledzący](/roadmap/beacon-chain/) został uruchomiony oddzielnie od [sieci głównej](/glossary/#mainnet). Sieć główna Ethereum – ze wszystkimi jej kontami, saldami, inteligentnymi kontraktami i stanem blockchain – nadal była zabezpieczana przez [proof-of-work](/developers/docs/consensus-mechanisms/pow/), podczas gdy Łańcuch śledzący działał równolegle przy użyciu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Połączenie to moment, w którym te dwa systemy w końcu się połączyły, a mechanizm proof-of-work został na stałe zastąpiony przez mechanizm proof-of-stake.
+Początkowo [Beacon Chain](/roadmap/beacon-chain/) został uruchomiony oddzielnie od [sieci głównej](/glossary/#mainnet). Sieć główna Ethereum – ze wszystkimi swoimi kontami, saldami, inteligentnymi kontraktami i stanem blockchaina – nadal była zabezpieczana przez [dowód pracy (PoW)](/developers/docs/consensus-mechanisms/pow/), nawet gdy Beacon Chain działał równolegle, wykorzystując [dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos/). The Merge to moment, w którym te dwa systemy w końcu się połączyły, a dowód pracy został na stałe zastąpiony dowodem stawki.
 
-Wyobraź sobie, że Ethereum to statek kosmiczny, który wystartował, zanim był gotowy do podróży międzygwiezdnej. Dzięki łańcuchowi śledzącemu społeczność zbudowała nowy silnik i wzmocniony kadłub. Po intensywnych testach nadszedł czas, aby w czasie jazdy zamienić stary silnik na nowy. To połączyło nowy, wydajniejszy silnik z istniejącym statkiem, dzięki czemu mógł on nabrać kosmicznej prędkości i wyruszyć na podbój wszechświata.
+Wyobraź sobie, że Ethereum to statek kosmiczny, który wystartował, zanim był w pełni gotowy na podróż międzygwiezdną. Dzięki Beacon Chain społeczność zbudowała nowy silnik i wzmocniony kadłub. Po intensywnych testach nadszedł czas, aby w trakcie lotu wymienić stary silnik na nowy. W ten sposób nowy, bardziej wydajny silnik został zintegrowany z istniejącym statkiem, umożliwiając mu pokonanie wielu lat świetlnych i podbój wszechświata.
 
 ## Połączenie z siecią główną {#merging-with-mainnet}
 
-Mechanizm proof-of-work zabezpieczał sieć główną Ethereum od chwili jej genezy aż do Połączenia. Dzięki temu w lipcu 2015 roku powstał blockchain Ethereum, do którego wszyscy jesteśmy przyzwyczajeni, ze wszystkimi znanymi funkcjami — transakcjami, inteligentnymi kontraktami, kontami itp.
+Dowód pracy zabezpieczał sieć główną Ethereum od bloku genezy aż do The Merge. Pozwoliło to blockchainowi Ethereum, do którego wszyscy jesteśmy przyzwyczajeni, powstać w lipcu 2015 roku ze wszystkimi jego znanymi funkcjami – transakcjami, inteligentnymi kontraktami, kontami itp.
 
-Deweloperzy przygotowywali się do ostatecznego przejścia z proof-of-work na proof-of-stake przez całą historię Ethereum. 1 grudnia 2020 roku łańcuch śledzący utworzono jako działającą równolegle sieć blockchain oddzielną od sieci głównej.
+Przez całą historię Ethereum deweloperzy przygotowywali się do ostatecznego odejścia od dowodu pracy na rzecz dowodu stawki. 1 grudnia 2020 roku Beacon Chain został utworzony jako oddzielny blockchain w stosunku do sieci głównej, działający równolegle.
 
-Początkowo łańcuch śledzący nie przetwarzał transakcji w sieci głównej. Zamiast tego osiągał konsensus co do swojego stanu, uzgadniając aktywnych walidatorów i salda ich kont. Po intensywnych testach nadszedł czas, aby łańcuch śledzący osiągnął konsensus na rzeczywistych danych. Po Połączeniu łańcuch śledzący stał się mechanizmem konsensusu dla wszystkich danych sieci, w tym transakcji w warstwie wykonania i sald kont.
+Beacon Chain początkowo nie przetwarzał transakcji z sieci głównej. Zamiast tego osiągał konsensus co do własnego stanu, uzgadniając aktywne walidatory i salda ich kont. Po szeroko zakrojonych testach nadszedł czas, aby Beacon Chain zaczął osiągać konsensus na danych ze świata rzeczywistego. Po The Merge, Beacon Chain stał się silnikiem konsensusu dla wszystkich danych sieciowych, w tym transakcji warstwy wykonawczej i sald kont.
 
-Połączenie oznaczało oficjalne przejście na używanie łańcucha śledzącego jako silnika produkcji bloków. Wydobywanie nie jest już środkiem do produkcji ważnych bloków. Zamiast tego rolę tę przejęli walidatorzy proof-of-stake, którzy są teraz odpowiedzialni za przetwarzanie ważności wszystkich transakcji i proponowanie bloków.
+The Merge stanowiło oficjalne przejście na korzystanie z Beacon Chain jako silnika produkcji bloków. Kopanie nie jest już sposobem na tworzenie ważnych bloków. Zamiast tego rolę tę przejęły walidatory oparte na dowodzie stawki, które są teraz odpowiedzialne za przetwarzanie ważności wszystkich transakcji i proponowanie bloków.
 
-Podczas Połączenia nie została utracona żadna historia. Gdy sieć główna połączyła się z łańcuchem śledzącym, połączona została również cała historia transakcyjna Ethereum.
+Podczas The Merge nie utracono żadnej historii. Kiedy sieć główna połączyła się z Beacon Chain, połączyła również całą historię transakcji Ethereum.
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-To przejście na proof-of-stake zmieniło sposób emisji etheru. Dowiedz się więcej o [emisji etheru przed i po Połączeniu](/roadmap/merge/issuance/).
+To przejście na dowód stawki zmieniło sposób emisji etheru. Dowiedz się więcej o [emisji etheru przed i po The Merge](/roadmap/merge/issuance/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ### Użytkownicy i posiadacze {#users-holders}
 
-**Połączenie nie zmieniło niczego dla posiadaczy/użytkowników.**
+**The Merge nie zmieniło niczego dla posiadaczy/użytkowników.**
 
-_Warto to powtórzyć_: jako użytkownik lub posiadacz ETH lub dowolnego innego zasobu cyfrowego w Ethereum, a także staker nieobsługujący węzła, **nie musisz nic robić ze swoimi środkami ani portfelem w związku z Połączeniem.** ETH to po prostu ETH. Nie ma czegoś takiego jak „stare ETH” / „nowe ETH” ani „ETH1”/„ETH2”, a portfele po Połączeniu działają dokładnie tak samo jak przed połączeniem — osoby, które mówią Ci, że jest inaczej, to prawdopodobnie oszuści.
+_Warto to powtórzyć_: Jako użytkownik lub posiadacz ETH, lub jakiegokolwiek innego aktywa cyfrowego na Ethereum, a także jako staker nieobsługujący węzła, **nie musisz nic robić ze swoimi środkami ani portfelem w związku z The Merge.** ETH to po prostu ETH. Nie ma czegoś takiego jak „stare ETH”/„nowe ETH” czy „Eth1”/„Eth2”, a portfele działają dokładnie tak samo po The Merge, jak przed nim – osoby twierdzące inaczej to prawdopodobnie oszuści.
 
-Mimo przejścia z proof-of-work cała historia Ethereum od genezy pozostała nienaruszona i niezmieniona przez przejście na proof-of-stake. Wszelkie środki znajdujące się w Twoim portfelu przed Połączeniem są nadal dostępne po Połączeniu. **Nie jest wymagane żadne działanie z Twojej strony, aby dokonać uaktualnienia.**
+Mimo rezygnacji z dowodu pracy, cała historia Ethereum od bloku genezy pozostała nienaruszona i niezmieniona przez przejście na dowód stawki. Wszelkie środki przechowywane w Twoim portfelu przed The Merge są nadal dostępne po The Merge. **Z Twojej strony nie są wymagane żadne działania w celu aktualizacji.**
 
 [Więcej o bezpieczeństwie Ethereum](/security/#eth2-token-scam)
 
-### Operatorzy węzłów i deweloperzy dapków {#node-operators-dapp-developers}
+### Operatorzy węzłów i deweloperzy dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Operatorzy i dostawcy węzłów stakujących"
-contentPreview="Jeśli jesteś stakerem prowadzącym własny węzeł lub dostawcą infrastruktury węzłów, jest kilka rzeczy, o których musisz wiedzieć po Połączeniu."
+title="Operatorzy i dostawcy węzłów do stakingu"
+contentPreview="Jeśli jesteś stakerem prowadzącym własną konfigurację węzła lub dostawcą infrastruktury węzłów, jest kilka rzeczy, o których musisz wiedzieć po The Merge."
 id="staking-node-operators">
 
 Kluczowe działania obejmują:
 
-1. Uruchomienie _zarówno_ klienta konsensusu, jak i klienta wykonania; punkty końcowe stron trzecich, które otrzymują dane wykonania, nie działają już od czasu Połączenia.
-2. Uwierzytelnienie zarówno klienta wykonania, jak i klienta konsensusu za pomocą wspólnego klucza tajnego JWT, aby mogli się bezpiecznie komunikować.
-3. Ustawienie adresu „odbiorcy opłat”, na który będziesz otrzymywać swoje zarobione napiwki z tytułu opłat transakcyjnych/MEV.
+1. Uruchomienie _zarówno_ klienta konsensusu, jak i klienta warstwy wykonawczej; punkty końcowe stron trzecich do uzyskiwania danych wykonawczych nie działają od czasu The Merge.
+2. Uwierzytelnienie zarówno klienta warstwy wykonawczej, jak i klienta konsensusu za pomocą współdzielonego sekretu JWT, aby mogły się bezpiecznie komunikować.
+3. Ustawienie adresu `fee recipient`, aby otrzymywać zarobione napiwki z opłat transakcyjnych/MEV.
 
-Niewykonanie dwóch pierwszych punktów spowoduje, że węzeł będzie widoczny jako „offline”, dopóki obie warstwy nie zostaną zsynchronizowane i uwierzytelnione.
+Niewykonanie dwóch pierwszych z powyższych punktów spowoduje, że Twój węzeł będzie widoczny jako „offline”, dopóki obie warstwy nie zostaną zsynchronizowane i uwierzytelnione.
 
-Nieustawienie „odbiorcy opłat” sprawi, że walidator będzie zachowywać się jak zwykle, ale utracisz niespalone napiwki z tytułu opłat i wszystkie MEV, które w przeciwnym razie zarobił(a)byś w blokach proponowanych przez walidatora.
+Nieustawienie `fee recipient` nadal pozwoli Twojemu walidatorowi działać normalnie, ale stracisz niespalone napiwki z opłat i wszelkie MEV, które w przeciwnym razie zarobiłbyś w blokach proponowanych przez Twój walidator.
 </ExpandableCard>
 
 <ExpandableCard
-title="Operatorzy niewalidujących węzłów i dostawcy infrastruktury"
-contentPreview="Jeśli prowadzisz niewalidujący węzeł Ethereum, najważniejszą zmianą wprowadzoną przez Połączenie był wymóg uruchomienia klientów zarówno dla warstwy wykonawczej, jak i warstwy konsensusu."
+title="Operatorzy węzłów niewalidujących i dostawcy infrastruktury"
+contentPreview="Jeśli obsługujesz niewalidujący węzeł Ethereum, najbardziej znaczącą zmianą, jaka nadeszła wraz z The Merge, był wymóg uruchomienia klientów ZARÓWNO dla warstwy wykonawczej, JAK I warstwy konsensusu."
 id="node-operators">
 
-Do czasu Połączenia klient wykonania (taki jak Geth, Erigon, Besu czy Nethermind) wystarczał, aby odbierać, odpowiednio walidować i propagować bloki przekazywane przez sieć. _Po Połączeniu_ ważność transakcji zawartych w ładunku wykonania zależy teraz również od ważności „bloku konsensusu”, w którym jest on zawarty.
+Aż do The Merge, klient warstwy wykonawczej (taki jak Go Ethereum (Geth), Erigon, Besu lub Nethermind) wystarczał do odbierania, prawidłowego walidowania i propagowania bloków rozsyłanych w sieci. _Po The Merge_, ważność transakcji zawartych w ładunku wykonawczym zależy teraz również od ważności „bloku konsensusu”, w którym się on znajduje.
 
-W rezultacie pełny węzeł Ethereum wymaga teraz zarówno klienta wykonania, jak i klienta konsensusu. Ci dwaj klienci współpracują ze sobą za pomocą nowego interfejsu API mechanizmu. Interfejs API mechanizmu wymaga uwierzytelnienia za pomocą tajnego klucza JWT, który jest przekazywany obu klientom, co umożliwia bezpieczną komunikację.
+W rezultacie pełny węzeł Ethereum wymaga teraz zarówno klienta warstwy wykonawczej, jak i klienta konsensusu. Te dwa klienty współpracują ze sobą za pomocą nowego Engine API. Engine API wymaga uwierzytelnienia za pomocą sekretu JWT, który jest dostarczany obu klientom, umożliwiając bezpieczną komunikację.
 
 Kluczowe działania obejmują:
 
-- Zainstaluj klienta konsensusu oprócz klienta wykonawczego
-- Uwierzytelnij klientów wykonawczego i konsensusu za pomocą współdzielonego sekretu JWT, aby mogli się bezpiecznie komunikować.
+- Zainstalowanie klienta konsensusu oprócz klienta warstwy wykonawczej
+- Uwierzytelnienie klienta warstwy wykonawczej i klienta konsensusu za pomocą współdzielonego sekretu JWT, aby mogły się ze sobą bezpiecznie komunikować.
 
-Niewykonanie powyższych działań spowoduje, że węzeł będzie wyświetlany jako „offline”, dopóki obie warstwy nie zostaną zsynchronizowane i uwierzytelnione.
+Niewykonanie powyższych punktów spowoduje, że Twój węzeł będzie widoczny jako „offline”, dopóki obie warstwy nie zostaną zsynchronizowane i uwierzytelnione.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Deweloperzy dapek i smart kontraktów"
-contentPreview="Połączenie zostało zaprojektowane tak, aby mieć minimalny wpływ na deweloperów smart kontraktów i dapek."
+title="Twórcy dapp i inteligentnych kontraktów"
+contentPreview="The Merge zostało zaprojektowane tak, aby miało minimalny wpływ na twórców inteligentnych kontraktów i dapp."
 id="developers">
 
-Połączenie nastąpiło wraz ze zmianami w konsensusie, które obejmują również zmiany związane z:
+The Merge wprowadziło zmiany w konsensusie, które obejmują również zmiany związane z:
 
 <ul>
-  <li>struktura bloków</li>
-  <li>taktowanie gniazda/bloku</li>
-  <li>zmiany kodu operacyjnego</li>
-  <li>źródła losowości onchain</li>
-  <li>koncepcja <em>bezpiecznej głowy</em> i <em>sfinalizowanych bloków</em></li>
+  <li>strukturą bloku</li>
+  <li>czasem trwania slotu/bloku</li>
+  <li>zmianami kodów operacji (opcode)</li>
+  <li>źródłami losowości onchain</li>
+  <li>koncepcją <em>bezpiecznej głowy (safe head)</em> i <em>sfinalizowanych bloków</em></li>
 </ul>
 
-Aby uzyskać więcej informacji, zapoznaj się z tym wpisem na blogu autorstwa Tima Beiko <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer"> Wpływ połączenia na warstwę aplikacji Ethereum </a>.
+Aby uzyskać więcej informacji, sprawdź ten wpis na blogu autorstwa Tima Beiko na temat tego, <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">jak The Merge wpływa na warstwę aplikacji Ethereum</a>.
+
 </ExpandableCard>
 
-## Połączenie i zużycie energii {#merge-and-energy}
+## The Merge a zużycie energii {#merge-and-energy}
 
-Połączenie oznaczało koniec stosowania mechanizmu proof-of-work na platformie Ethereum i rozpoczęcie ery bardziej zrównoważonej ekologicznie Ethereum. Zużycie energii przez sieć Ethereum spadło o około 99,95%, dzięki czemu Ethereum stało się ekologiczną siecią blockchain. Dowiedz się więcej o [zużyciu energii przez Ethereum](/energy-consumption/).
+The Merge wyznaczyło koniec dowodu pracy dla Ethereum i zapoczątkowało erę bardziej zrównoważonego, ekologicznego Ethereum. Zużycie energii przez Ethereum spadło o szacunkowe 99,95%, czyniąc Ethereum zielonym blockchainem. Dowiedz się więcej o [zużyciu energii przez Ethereum](/energy-consumption/).
 
-## Połączenie i skalowanie {#merge-and-scaling}
+## The Merge a skalowanie {#merge-and-scaling}
 
-Połączenie przygotowało również grunt pod dalsze uaktualnienia skalowalności, niemożliwe do wykonania w ramach proof-of-work, przybliżając Ethereum o krok do osiągnięcia pełnej skali, bezpieczeństwa i zrównoważonego rozwoju, do których dąży [plan rozwoju](/roadmap/).
+The Merge przygotowało również grunt pod dalsze aktualizacje skalowalności, które nie były możliwe w ramach dowodu pracy, przybliżając Ethereum o krok do osiągnięcia pełnej skali, bezpieczeństwa i zrównoważonego rozwoju, do których dąży [jego mapa drogowa](/roadmap/).
 
-## Błędne przekonania na temat Połączenia {#misconceptions}
+## Błędne przekonania na temat The Merge {#misconceptions}
 
 <ExpandableCard
 title="Błędne przekonanie: &quot;Uruchomienie węzła wymaga stakowania 32 ETH.&quot;"
-contentPreview="Fałsz.&quot; Każdy może zsynchronizować swoją własną, samodzielnie zweryfikowaną kopię Ethereum (tj. uruchomić węzeł). Nie jest wymagane żadne ETH – ani przed Połączeniem, ani po Połączeniu, nigdy.">
+contentPreview="Fałsz. Każdy może swobodnie zsynchronizować własną, zweryfikowaną przez siebie kopię Ethereum (tj. uruchomić węzeł). Żadne ETH nie jest wymagane — ani przed The Merge, ani po The Merge, ani nigdy.">
 
-Są dwa typy węzłów Ethereum: węzły, które mogą proponować bloki, i węzły, które tego nie mogą.
+Istnieją dwa rodzaje węzłów Ethereum: węzły, które mogą proponować bloki, oraz węzły, które tego nie robią.
 
-Węzły proponujące bloki stanowią jedynie niewielką część wszystkich węzłów w sieci Ethereum. Kategoria ta obejmuje węzły wydobycia w ramach mechanizmu proof-of-work (PoW) oraz węzły walidatorów w ramach mechanizmu proof-of-stake (PoS). Ta kategoria wymaga zaangażowania zasobów ekonomicznych (takich jak moc obliczeniowa GPU w sieci proof-of-work lub stakowanych ETH w sieci proof-of-stake) w zamian za możliwość okazjonalnego proponowania następnego bloku i zdobywania nagród protokołu.
+Węzły proponujące bloki stanowią tylko niewielką część wszystkich węzłów w Ethereum. Kategoria ta obejmuje węzły kopiące w ramach dowodu pracy (PoW) oraz węzły walidatorów w ramach dowodu stawki (PoS). Kategoria ta wymaga zaangażowania zasobów ekonomicznych (takich jak moc obliczeniowa GPU w dowodzie pracy lub stakowane ETH w dowodzie stawki) w zamian za możliwość okazjonalnego zaproponowania następnego bloku i zdobycia nagród z protokołu.
 
-Pozostałe węzły w sieci (czyli większość) nie muszą angażować żadnych zasobów ekonomicznych poza komputerem klasy konsumenckiej z 1–2 TB dostępnej pamięci masowej i połączeniem internetowym. Węzły te nie proponują bloków, ale nadal pełnią kluczową rolę w zabezpieczaniu sieci, gdyż rozliczają wszystkich proponujących bloki, nasłuchując nowych bloków i weryfikując ich ważność po przybyciu zgodnie z zasadami konsensusu sieci. Jeśli blok jest ważny, węzeł nadal propaguje go przez sieć. Jeśli blok jest nieważny z jakiegokolwiek powodu, oprogramowanie węzła odrzuci go jako nieważny i zatrzyma jego propagację.
+Pozostałe węzły w sieci (czyli większość) nie muszą angażować żadnych zasobów ekonomicznych poza komputerem klasy konsumenckiej z 1-2 TB dostępnej pamięci masowej i połączeniem z internetem. Węzły te nie proponują bloków, ale nadal odgrywają kluczową rolę w zabezpieczaniu sieci, pociągając wszystkich proponujących bloki do odpowiedzialności poprzez nasłuchiwanie nowych bloków i weryfikowanie ich ważności po przybyciu zgodnie z zasadami konsensusu sieci. Jeśli blok jest ważny, węzeł kontynuuje jego propagację w sieci. Jeśli blok jest nieważny z jakiegokolwiek powodu, oprogramowanie węzła zignoruje go jako nieważny i zatrzyma jego propagację.
 
-Uruchomienie węzła nieprodukującego bloków jest możliwe dla każdego w ramach dowolnego mechanizmu konsensusu (proof-of-work lub proof-of-stake); jest to <em>mocno zalecane</em> dla wszystkich użytkowników, jeśli mają na to środki. Prowadzenie węzła jest niezwykle cenne dla Ethereum i daje dodatkowe korzyści każdej osobie, która go prowadzi, jak choćby zwiększone bezpieczeństwo, prywatność i odporność na cenzurę.
+Uruchomienie węzła nieprodukującego bloków jest możliwe dla każdego w ramach dowolnego mechanizmu konsensusu (dowodu pracy lub dowodu stawki); jest to <em>zdecydowanie zalecane</em> dla wszystkich użytkowników, jeśli mają ku temu środki. Prowadzenie węzła jest niezwykle cenne dla Ethereum i daje dodatkowe korzyści każdej osobie, która go prowadzi, takie jak zwiększone bezpieczeństwo, prywatność i odporność na cenzurę.
 
-Możliwość uruchomienia własnego węzła przez każdego jest <em> absolutnie niezbędna </em> do utrzymania decentralizacji sieci Ethereum.
+Możliwość uruchomienia własnego węzła przez każdego jest <em>absolutnie niezbędna</em> do utrzymania decentralizacji sieci Ethereum.
 
 [Więcej o uruchamianiu własnego węzła](/run-a-node/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Błędne przekonanie: &quot;Połączenie nie zmniejszyło opłat za gaz.&quot;"
-contentPreview="Fałsz.&quot; Połączenie było zmianą mechanizmu konsensusu, a nie rozszerzeniem pojemności sieci i nigdy nie miało na celu obniżenia opłat za gaz.">
+title="Błędne przekonanie: &quot;The Merge nie obniżyło opłat za gaz.&quot;"
+contentPreview="Fałsz. The Merge było zmianą mechanizmu konsensusu, a nie rozszerzeniem przepustowości sieci, i nigdy nie miało na celu obniżenia opłat za gaz.">
 
-Opłaty za gaz są wypadkową zapotrzebowania na sieć i jej przepustowości. W wyniku Połączenia zrezygnowano z mechanizmu proof-of-work, przechodząc na mechanizm konsensusu proof-of-stake, ale nie zmieniono znacząco żadnych parametrów, które bezpośrednio wpływają na przepustowość sieci.
+Opłaty za gaz są wynikiem popytu w sieci w stosunku do jej przepustowości. The Merge wycofało użycie dowodu pracy, przechodząc na dowód stawki w celu osiągnięcia konsensusu, ale nie zmieniło znacząco żadnych parametrów, które bezpośrednio wpływają na pojemność lub przepustowość sieci.
 
-Poprzez <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">plan rozwoju oparty na rollupach</a> starania skupiają się na skalowaniu aktywności użytkowników na [drugiej warstwie](/layer-2/), podczas gdy warstwa pierwsza sieci głównej Ethereum służyć ma jako bezpieczna zdecentralizowana warstwa rozliczeniowa zoptymalizowana pod kątem przechowywania danych rollupów w celu wykładniczego zmniejszenia kosztów transakcji na rollupach. Przejście na proof-of-stake jest kluczowym prekursorem realizacji tego celu. [Więcej o gazie i opłatach](/developers/docs/gas/)
+Dzięki <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">mapie drogowej skoncentrowanej na rollupach</a>, wysiłki skupiają się na skalowaniu aktywności użytkowników w [warstwie 2 (L2)](/layer-2/), jednocześnie umożliwiając sieci głównej w warstwie 1 (L1) działanie jako bezpieczna, zdecentralizowana warstwa rozrachunku zoptymalizowana pod kątem przechowywania danych rollupów, aby pomóc w wykładniczym obniżeniu kosztów transakcji rollupów. Przejście na dowód stawki jest kluczowym krokiem poprzedzającym realizację tego celu. [Więcej o gazie i opłatach.](/developers/docs/gas/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Błędne przekonanie: &quot;Transakcje zostały znacznie przyspieszone przez Połączenie.&quot;"
-contentPreview="Fałsz.&quot; Chociaż istnieją pewne niewielkie zmiany, szybkość transakcji w warstwie 1 jest obecnie w większości taka sama, jak przed Połączeniem.">
-„Szybkość” transakcji można mierzyć na kilka sposobów, w tym czas dołączenia do bloku i czas do finalizacji. Oba te czasy uległy niewielkiej zmianie, ale nie w taki sposób, aby użytkownicy je zauważyli.
+title="Błędne przekonanie: &quot;Transakcje zostały znacznie przyspieszone przez The Merge.&quot;"
+contentPreview="Fałsz. Chociaż istnieją pewne niewielkie zmiany, prędkość transakcji na warstwie 1 jest obecnie w większości taka sama, jak przed The Merge.">
+„Szybkość” transakcji można mierzyć na kilka sposobów, w tym czas do włączenia do bloku i czas do ostateczności. Oba te parametry uległy niewielkiej zmianie, ale nie w sposób zauważalny dla użytkowników.
 
-Historycznie, w przypadku mechanizmu proof-of-work, celem było generowanie nowego bloku co około 13,3 sekundy. W przypadku mechanizmu proof-of-stake sloty pojawiają się dokładnie co 12 sekund, a każdy z nich stanowi dla walidatora okazję do opublikowania bloku. Większość slotów ma bloki, ale nie wszystkie (np. walidator jest w trybie offline). W przypadku mechanizmu proof-of-stake bloki są produkowane około 10% częściej niż w przypadku mechanizmu proof-of-work. To była dość mało znacząca zmiana i raczej nie zostanie zauważona przez użytkowników.
+Historycznie, w dowodzie pracy, celem było tworzenie nowego bloku co około 13,3 sekundy. W ramach dowodu stawki sloty występują dokładnie co 12 sekund, z których każdy jest okazją dla walidatora do opublikowania bloku. Większość slotów ma bloki, ale niekoniecznie wszystkie (np. gdy walidator jest offline). W dowodzie stawki bloki są produkowane o około 10% częściej niż w dowodzie pracy. Była to dość nieznaczna zmiana i jest mało prawdopodobne, aby została zauważona przez użytkowników.
 
-Mechanizm proof-of-stake wprowadził nieistniejące wcześniej pojęcie nieodwołalności transakcji. W przypadku mechanizmu proof-of-work możliwość odwrócenia bloku staje się wykładniczo trudniejsza z każdym kolejnym blokiem wydobytym na podstawie transakcji, ale nigdy nie osiąga zera. W przypadku mechanizmu proof-of-stake bloki są łączone w epoki (6,4-minutowe odcinki czasu zawierające 32 szanse dla bloków), na które głosują walidatorzy. Gdy epoka się kończy, walidatorzy głosują, czy uznać ją za „uzasadnioną”. Jeśli walidatorzy zgodzą się na uzasadnienie epoki, zostanie ona sfinalizowana w następnej epoce. Cofnięcie sfinalizowanych transakcji jest ekonomicznie nieopłacalne, ponieważ wymagałoby uzyskania i spalenia ponad jednej trzeciej całego stakowanego ETH.
+Dowód stawki wprowadził koncepcję ostateczności transakcji, która wcześniej nie istniała. W dowodzie pracy możliwość odwrócenia bloku staje się wykładniczo trudniejsza z każdym kolejnym blokiem wykopanym na wierzchu transakcji, ale nigdy nie spada całkowicie do zera. W ramach dowodu stawki bloki są grupowane w epoki (6,4-minutowe przedziały czasu zawierające 32 szanse na bloki), nad którymi głosują walidatory. Kiedy epoka dobiega końca, walidatory oddają głos na to, czy uznać epokę za „uzasadnioną”. Jeśli walidatory zgodzą się uzasadnić epokę, zostaje ona sfinalizowana w następnej epoce. Cofnięcie sfinalizowanych transakcji jest ekonomicznie nieopłacalne, ponieważ wymagałoby uzyskania i spalenia ponad jednej trzeciej całkowitego stakowanego ETH.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Błędne przekonanie: &quot;Połączenie umożliwiło wypłaty ze stakowania.&quot;"
-contentPreview="Fałsz, ale wypłaty ze stakowania zostały od tego czasu włączone w ramach aktualizacji Shanghai/Capella.">
+title="Błędne przekonanie: &quot;The Merge umożliwiło wypłaty ze stakingu.&quot;"
+contentPreview="Fałsz, ale wypłaty ze stakingu zostały od tego czasu włączone poprzez aktualizację Szanghaj/Capella.">
 
-Początkowo po połączeniu stakerzy mogli uzyskać dostęp tylko do napiwków i MEV, które zostały zarobione w wyniku propozycji blokowych. Nagrody te są przekazywane na konto kontrolowane przez walidatora (zwanego <em>odbiorcą opłaty</em>) i są dostępne natychmiast. Nagrody te są niezależne od nagród wynikających z protokołu za wykonywanie obowiązków walidatora.
+Początkowo po The Merge stakerzy mieli dostęp tylko do napiwków z opłat i MEV, które zostały zarobione w wyniku propozycji bloków. Nagrody te są dopisywane do konta niestakującego kontrolowanego przez walidatora (znanego jako <em>odbiorca opłat</em>) i są dostępne natychmiast. Nagrody te są oddzielone od nagród z protokołu za wykonywanie obowiązków walidatora.
 
-Od czasu aktualizacji sieci Shanghai/Capella stakerzy mogą wyznaczać <em>adres wypłaty</em>, aby zacząć otrzymywać automatyczne wypłaty nadwyżki salda stakingu (ETH powyżej 32 z nagród wynikających z protokołu). Ta aktualizacja umożliwiła również walidatorowi odblokowanie i odzyskanie całego salda po wyjściu z sieci.
+Od czasu aktualizacji sieci Szanghaj/Capella stakerzy mogą teraz wyznaczyć <em>adres wypłaty</em>, aby zacząć otrzymywać automatyczne wypłaty wszelkich nadwyżek salda stakowania (ETH powyżej 32 z nagród z protokołu). Aktualizacja ta umożliwiła również walidatorowi odblokowanie i odzyskanie całego salda po wyjściu z sieci.
 
-[Więcej na temat wypłat ze stakingu](/staking/withdrawals/)
+[Więcej o wypłatach ze stakowania](/staking/withdrawals/)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Błędne przekonanie: &quot;Teraz, gdy Połączenie jest zakończone, a wypłaty są włączone, wszyscy stakerzy mogliby wyjść na raz.&quot;"
-contentPreview="Fałsz.&quot; Wyjścia walidatorów podlegają ograniczeniom ze względów bezpieczeństwa.">
-Odkąd aktualizacja Shanghai/Capella umożliwiła wypłaty, walidatorzy są zachęcani do wypłacania salda stakingu powyżej 32 ETH, ponieważ środki te nie zwiększają zysku i są w przeciwnym razie zablokowane. W zależności od APR (ustalanej na podstawie całkowitej ilości stakowanych ETH) użytkownicy mogą być zachęcani do wyjścia z walidatorów w celu odzyskania całego salda lub zestakowania jeszcze więcej i wykorzystania nagród do uzyskania większego zysku.
+title="Błędne przekonanie: &quot;Teraz, gdy The Merge zostało zakończone, a wypłaty są włączone, wszyscy stakerzy mogliby wyjść naraz.&quot;"
+contentPreview="Fałsz. Wyjścia walidatorów są limitowane ze względów bezpieczeństwa.">
+Ponieważ aktualizacja Szanghaj/Capella umożliwiła wypłaty, walidatory są zachęcane do wypłacania swojego salda stakowania powyżej 32 ETH, ponieważ środki te nie zwiększają zysku i w przeciwnym razie są zablokowane. W zależności od APR (określanego przez całkowitą ilość stakowanego ETH), mogą być zachęcani do wyjścia ze swojego walidatora (lub walidatorów), aby odzyskać całe saldo lub potencjalnie stakować jeszcze więcej, wykorzystując swoje nagrody do uzyskania większego zysku.
 
-Ważnym zastrzeżeniem jest to, że pełne wyjścia walidatora są ograniczone przez protokół i tylko kilka walidatorów może wyjść w jednej epoce (co 6,4 minuty). Limit ten zmienia się w zależności od liczby aktywnych walidatorów, ale wynosi około 0,33% wszystkich stakowanych ETH, które mogą zostać usunięte z sieci w ciągu jednego dnia.
+Ważne zastrzeżenie: pełne wyjścia walidatorów są ograniczone przez protokół i tylko określona liczba walidatorów może wyjść w każdej epoce (co 6,4 minuty). Limit ten waha się w zależności od liczby aktywnych walidatorów, ale wynosi w przybliżeniu 0,33% całkowitego stakowanego ETH, które może zostać wycofane z sieci w ciągu jednego dnia.
 
-Zapobiega to masowemu odpływowi stakowanych środków. Ponadto uniemożliwia to potencjalnemu atakującemu, który ma dostęp do dużej części wszystkich zestakowanych ETH, popełnienie przestępstwa podlegającego odcięciu i opuszczeniu/wypłaceniu wszystkich naruszających sald walidatora w tej samej epoce, zanim protokół będzie mógł wyegzekwować karę za odcięcie.
+Zapobiega to masowemu odpływowi stakowanych środków. Ponadto zapobiega to sytuacji, w której potencjalny atakujący z dostępem do dużej części całkowitego stakowanego ETH popełnia wykroczenie podlegające cięciu (slashing) i wychodzi/wypłaca wszystkie salda naruszających zasady walidatorów w tej samej epoce, zanim protokół zdąży wyegzekwować karę cięcia.
 
-APR jest również celowo dynamiczny, umożliwiając rynkowi stakerów zrównoważenie zapłaty, jaką są skłonni uiścić za pomoc w zabezpieczeniu sieci. Jeśli wskaźnik jest zbyt niski, walidatory będą wychodzić z częstotliwością ograniczoną przez protokół. Stopniowo podniesie to APR dla wszystkich, którzy pozostaną, przyciągając nowych lub powracających stakerów.
+APR jest również celowo dynamiczne, co pozwala rynkowi stakerów zrównoważyć to, ile chcą otrzymać za pomoc w zabezpieczaniu sieci. Jeśli stawka jest zbyt niska, walidatory będą wychodzić w tempie ograniczonym przez protokół. Stopniowo podniesie to APR dla wszystkich, którzy pozostaną, ponownie przyciągając nowych lub powracających stakerów.
 </ExpandableCard>
 
 ## Co się stało z „Eth2”? {#eth2}
 
-Termin „Eth2” został odrzucony. Po połączeniu „Eth1” i „Eth2” w jeden łańcuch nie trzeba już rozróżniać
-dwóch sieci Ethereum — jest tylko jedna sieć Ethereum.
+Termin „Eth2” został wycofany. Po połączeniu „Eth1” i „Eth2” w jeden łańcuch nie ma już potrzeby rozróżniania dwóch sieci Ethereum; istnieje po prostu Ethereum.
 
-Aby ograniczyć zamieszanie, społeczność zaktualizowała te warunki:
+Aby ograniczyć zamieszanie, społeczność zaktualizowała te terminy:
 
-- „Eth1” jest teraz „warstwą wykonania”, która obsługuje transakcje i wykonanie.
-- „Eth2” jest teraz „warstwą konsensusu”, która obsługuje konsensus dowodu stawki (proof-of-stake).
+- „Eth1” to teraz „warstwa wykonawcza”, która obsługuje transakcje i wykonanie.
+- „Eth2” to teraz „warstwa konsensusu”, która obsługuje konsensus oparty na dowodzie stawki.
 
-Te zmiany w terminologii dotyczą tylko kwestii nazewnictwa; nie zmieniają się cele ani plan działania Ethereum.
+Te aktualizacje terminologii zmieniają jedynie konwencje nazewnictwa; nie zmienia to celów ani mapy drogowej Ethereum.
 
 [Dowiedz się więcej o zmianie nazwy „Eth2”](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Związek między aktualizacjami {#relationship-between-upgrades}
 
-Wszystkie uaktualnienia Ethereum są w pewnym stopniu wzajemnie powiązane. Podsumujmy więc, jak Połączenie ma się do innych uaktualnień.
+Wszystkie aktualizacje Ethereum są ze sobą w pewien sposób powiązane. Podsumujmy więc, jak The Merge ma się do innych aktualizacji.
 
-### Połączenie i Łańcuch śledzący {#merge-and-beacon-chain}
+### The Merge a Beacon Chain {#merge-and-beacon-chain}
 
-Połączenie reprezentuje formalne przyjęcie łańcucha śledzącego jako nowej warstwy konsensusu w stosunku do pierwotnej warstwy wykonania sieci głównej. Od czasu Połączenia walidatorzy są przypisywani do zabezpieczania sieci głównej Ethereum, a wydobywanie w oparciu o [proof-of-work](/developers/docs/consensus-mechanisms/pow/) nie jest już prawidłowym sposobem produkcji bloków.
+The Merge stanowi formalne przyjęcie Beacon Chain jako nowej warstwy konsensusu dla oryginalnej warstwy wykonawczej sieci głównej. Od czasu The Merge walidatory są przypisane do zabezpieczania sieci głównej Ethereum, a kopanie w oparciu o [dowód pracy (PoW)](/developers/docs/consensus-mechanisms/pow/) nie jest już ważnym sposobem produkcji bloków.
 
-Bloki są natomiast proponowane przez węzły walidujące, które stakują ETH w zamian za prawo do udziału w konsensusie. Te uaktualnienia stanowią podstawę dla przyszłych uaktualnień skalowalności, w tym shardingu.
+Zamiast tego bloki są proponowane przez węzły walidujące, które stakowały ETH w zamian za prawo do uczestnictwa w konsensusie. Te aktualizacje przygotowują grunt pod przyszłe aktualizacje skalowalności, w tym sharding.
 
 <ButtonLink href="/roadmap/beacon-chain/">
-  Łańcuch śledzący
+  Beacon Chain
 </ButtonLink>
 
-### Połączenie i aktualizacja Shanghai {#merge-and-shanghai}
+### The Merge a aktualizacja Szanghaj {#merge-and-shanghai}
 
-W celu zapewnienia uproszczenia i maksymalnego skupienia się na udanym przejściu na proof-of-stake uaktualnienie Połączenie nie zawierało pewnych oczekiwanych funkcji, takich jak możliwość wypłaty stakowanych ETH. Funkcja ta została włączona oddzielnie wraz z aktualizacją Shanghai/Capella.
+W celu uproszczenia i maksymalnego skupienia się na udanym przejściu na dowód stawki, aktualizacja The Merge nie obejmowała pewnych oczekiwanych funkcji, takich jak możliwość wypłaty stakowanego ETH. Ta funkcjonalność została włączona oddzielnie wraz z aktualizacją Szanghaj/Capella.
 
-Ciekawscy mogą dowiedzieć się więcej o tym, [co dzieje się po Połączeniu](https://youtu.be/7ggwLccuN5s?t=101), z prezentacji Vitalika podczas wydarzenia ETHGlobal w kwietniu 2021 roku.
+Dla ciekawskich, dowiedz się więcej o tym, [co dzieje się po The Merge](https://youtu.be/7ggwLccuN5s?t=101), co zaprezentował Vitalik na wydarzeniu ETHGlobal w kwietniu 2021 roku.
 
-### Połączenie i sharding {#merge-and-data-sharding}
+### The Merge a sharding {#merge-and-data-sharding}
 
-Pierwotnie planowano prace nad shardingiem przed Połączeniem, aby rozwiązać problem skalowalności. Jednak wraz z boomem na [rozwiązania skalujące warstwy 2](/layer-2/), priorytetem stała się najpierw zamiana proof-of-work na proof-of-stake.
+Początkowo plan zakładał pracę nad shardingiem przed The Merge, aby rozwiązać problem skalowalności. Jednak wraz z boomem na [rozwiązania skalujące warstwy 2 (L2)](/layer-2/), priorytet przesunął się na zamianę dowodu pracy na dowód stawki w pierwszej kolejności.
 
-Plany dotyczące shardingu szybko ewoluują, ale ze względu na rozwój i sukces technologii warstwy 2 do skalowania wykonania transakcji plany shardingu przesunęły się w kierunku znalezienia optymalnego sposobu rozłożenia ciężaru przechowywania skompresowanych calldata z kontraktów pakietów zbiorczych, co pozwala na wykładniczy wzrost przepustowości sieci. Nie byłoby to możliwe bez wcześniejszego przejścia na proof-of-stake.
+Plany dotyczące shardingu szybko ewoluują, ale biorąc pod uwagę rozwój i sukces technologii warstwy 2 w skalowaniu wykonywania transakcji, plany shardingu przesunęły się na znalezienie najbardziej optymalnego sposobu dystrybucji ciężaru przechowywania skompresowanych danych wywołania (call data) z kontraktów rollupów, co pozwoli na wykładniczy wzrost przepustowości sieci. Nie byłoby to możliwe bez wcześniejszego przejścia na dowód stawki.
 
 <ButtonLink href="/roadmap/danksharding/">
   Sharding
