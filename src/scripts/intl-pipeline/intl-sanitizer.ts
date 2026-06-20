@@ -612,6 +612,29 @@ function fixDuplicatedTagValues(content: string): {
 }
 
 /**
+ * Revert wrongly-hyphenated Solidity interface identifiers.
+ * The pipeline's ERC-number normalization sometimes turns `IERC165` into
+ * `IERC-165` (also IERC20, IERC721, IERC1155, etc.). `IERC-<digits>` is never a
+ * valid identifier — the `I`-prefixed interface is always `IERC<digits>` — so
+ * this is safe to revert everywhere, inside and outside code. Note this does NOT
+ * touch the standard names `ERC-165` / `ERC-20` (no leading `I`), which are
+ * correct in prose.
+ */
+function fixHyphenatedInterfaceIdentifiers(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const fixed = content.replace(/\bIERC-(\d+)/g, (_, digits) => {
+    fixCount++
+    return `IERC${digits}`
+  })
+
+  return { content: fixed, fixCount }
+}
+
+/**
  * Restore abbreviations stripped from parentheses in frontmatter.
  * When English has "(RWA)" but translation has "()", restore the abbreviation.
  * Only restores ASCII/Latin abbreviations (not translated text).
@@ -3952,6 +3975,50 @@ function fixMissingLinkParentheses(content: string): {
 }
 
 /**
+ * Fix markdown angle-bracket autolinks of the form `](<URL>)` that lost their
+ * closing `>` during translation, or had it converted to a fullwidth `）`.
+ * Angle-bracket autolinks are used when a URL itself contains parentheses
+ * (e.g. Wikipedia articles like `Stack_(abstract_data_type)`). When the closing
+ * `>` is dropped, MDX parses `<https://...` as a JSX tag and the build breaks.
+ *
+ * Restores `](<URL>)`. Operates outside code blocks.
+ */
+function fixDroppedAutolinkClose(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // (a) Dropped `>`: autolink open `](<`, a URL containing a parenthesised
+    // segment, optionally followed by a stray duplicate `)`, and NOT already
+    // followed by the closing `>`. The negative lookahead leaves correct
+    // `](<URL>)` untouched.
+    parts[i] = parts[i].replace(
+      /\]\(<(https?:\/\/[^\s<>]*\([^\s<>()]*\))\)?(?!>)/g,
+      (_, url) => {
+        fixCount++
+        return `](<${url}>)`
+      }
+    )
+
+    // (b) Fullwidth close: a complete autolink `](<URL>)` written with a
+    // fullwidth `）` instead of an ASCII `)`.
+    parts[i] = parts[i].replace(/(\]\(<[^>\n]+>)）/g, (_, autolink) => {
+      fixCount++
+      return `${autolink})`
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix missing </em> closing tags before </li> in HTML lists.
  * Crowdin sometimes drops the </em> when translating list items.
  * Pattern: <em>text.</li> → <em>text.</em></li>
@@ -4677,6 +4744,10 @@ function processMarkdownFile(
     (n) => `Fixed ${n} duplicated tag value(s)`
   )
   applyFix(
+    () => fixHyphenatedInterfaceIdentifiers(content),
+    (n) => `Fixed ${n} hyphenated interface identifier(s)`
+  )
+  applyFix(
     () => fixSmartQuotesInJsxAttributes(content),
     (n) => `Fixed smart quotes in ${n} JSX tag attribute(s)`
   )
@@ -4707,6 +4778,10 @@ function processMarkdownFile(
   applyFix(
     () => fixMissingLinkParentheses(content),
     (n) => `Fixed ${n} links with missing parentheses`
+  )
+  applyFix(
+    () => fixDroppedAutolinkClose(content),
+    (n) => `Restored ${n} dropped autolink close bracket(s)`
   )
   applyFix(
     () => fixBacktickWrappedLinks(content),
@@ -5778,6 +5853,7 @@ export const _testOnly = {
   fixJsxMarkdownHybrids,
   fixBacktickWrappedLinks,
   fixMissingLinkParentheses,
+  fixDroppedAutolinkClose,
   fixMissingClosingEmTag,
   fixImagePathDotSlash,
   fixEscapedQuotesInJsxAttributes,
@@ -5792,6 +5868,7 @@ export const _testOnly = {
   fixSmartQuotesInJsxAttributes,
   stripCrowdinBoilerplate,
   fixDuplicatedTagValues,
+  fixHyphenatedInterfaceIdentifiers,
   fixKnownBrandGarbles,
   restoreStrippedAbbreviations,
   fixMergedSupDigits,
