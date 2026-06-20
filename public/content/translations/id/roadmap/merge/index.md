@@ -59,8 +59,8 @@ Meskipun menukar Bukti Kerja (PoW), seluruh riwayat Ethereum sejak genesis tetap
 ### Operator node dan pengembang dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Operator dan penyedia node staking"
+contentPreview="Jika Anda adalah pelaku staking yang menjalankan pengaturan node sendiri atau penyedia infrastruktur node, ada beberapa hal yang perlu Anda perhatikan setelah The Merge."
 id="staking-node-operators">
 
 Item tindakan utama meliputi:
@@ -75,8 +75,8 @@ Tidak menetapkan `fee recipient` akan tetap memungkinkan validator Anda berperil
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Operator node non-validasi dan penyedia infrastruktur"
+contentPreview="Jika Anda mengoperasikan node Ethereum non-validasi, perubahan paling signifikan yang datang bersama The Merge adalah persyaratan untuk menjalankan klien untuk BAIK lapisan eksekusi MAUPUN lapisan konsensus."
 id="node-operators">
 
 Hingga The Merge, klien eksekusi (seperti Go Ethereum (Geth), Erigon, Besu, atau Nethermind) sudah cukup untuk menerima, memvalidasi dengan benar, dan menyebarkan blok yang sedang digosipkan oleh jaringan. _Setelah The Merge_, validitas transaksi yang terkandung dalam muatan eksekusi sekarang juga bergantung pada validitas "blok konsensus" di mana ia berada.
@@ -93,8 +93,8 @@ Tidak menyelesaikan item di atas akan mengakibatkan node Anda tampak "offline" h
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Pengembang dapp dan kontrak pintar"
+contentPreview="The Merge dirancang agar memiliki dampak minimal pada pengembang kontrak pintar dan dapp."
 id="developers">
 
 The Merge hadir dengan perubahan pada konsensus, yang juga mencakup perubahan terkait dengan:
@@ -122,8 +122,8 @@ The Merge juga menyiapkan panggung untuk peningkatan skalabilitas lebih lanjut y
 ## Kesalahpahaman tentang The Merge {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Miskonsepsi: &quot;Menjalankan node memerlukan staking 32 ETH.&quot;"
+contentPreview="Salah. Siapa pun bebas melakukan sinkronisasi salinan Ethereum mereka sendiri yang diverifikasi secara mandiri (yaitu, menjalankan node). Tidak diperlukan ETH—baik sebelum The Merge, setelah The Merge, maupun kapan pun.">
 
 Ada dua jenis node Ethereum: node yang dapat mengusulkan blok dan node yang tidak.
 
@@ -140,8 +140,8 @@ Kemampuan bagi siapa saja untuk menjalankan node mereka sendiri <em>sangat penti
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Miskonsepsi: &quot;The Merge gagal menurunkan biaya gas.&quot;"
+contentPreview="Salah. The Merge adalah perubahan mekanisme konsensus, bukan perluasan kapasitas jaringan, dan tidak pernah dimaksudkan untuk menurunkan biaya gas.">
 
 Biaya gas adalah produk dari permintaan jaringan relatif terhadap kapasitas jaringan. The Merge menghentikan penggunaan Bukti Kerja (PoW), bertransisi ke Bukti Kepemilikan (PoS) untuk konsensus, tetapi tidak secara signifikan mengubah parameter apa pun yang secara langsung memengaruhi kapasitas jaringan atau laju pemrosesan.
 
@@ -150,8 +150,8 @@ Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadm
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="Miskonsepsi: &quot;Transaksi dipercepat secara substansial oleh The Merge.&quot;"
+contentPreview="Salah. Meskipun ada sedikit perubahan, kecepatan transaksi sebagian besar sama di lapisan 1 saat ini seperti sebelum The Merge.">
 "Kecepatan" transaksi dapat diukur dengan beberapa cara, termasuk waktu untuk dimasukkan ke dalam blok dan waktu hingga finalitas. Keduanya sedikit berubah, tetapi tidak dengan cara yang akan diperhatikan pengguna.
 
 Secara historis, pada Bukti Kerja (PoW), targetnya adalah memiliki blok baru setiap ~13,3 detik. Di bawah Bukti Kepemilikan (PoS), slot terjadi tepat setiap 12 detik, yang masing-masing merupakan peluang bagi validator untuk menerbitkan blok. Sebagian besar slot memiliki blok, tetapi belum tentu semuanya (misalnya, validator sedang offline). Dalam Bukti Kepemilikan (PoS), blok diproduksi ~10% lebih sering daripada pada Bukti Kerja (PoW). Ini adalah perubahan yang cukup tidak signifikan dan tidak mungkin diperhatikan oleh pengguna.
@@ -161,8 +161,8 @@ Bukti Kepemilikan (PoS) memperkenalkan konsep finalitas transaksi yang sebelumny
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Miskonsepsi: &quot;The Merge memungkinkan penarikan staking.&quot;"
+contentPreview="Salah, tetapi penarikan staking sejak saat itu telah diaktifkan melalui peningkatan Shanghai/Capella.">
 
 Awalnya setelah The Merge, staker hanya dapat mengakses tip biaya dan MEV yang diperoleh sebagai hasil dari proposal blok. Hadiah ini dikreditkan ke akun non-staking yang dikendalikan oleh validator (dikenal sebagai <em>penerima biaya</em>), dan segera tersedia. Hadiah ini terpisah dari hadiah protokol untuk melakukan tugas validator.
 
@@ -173,8 +173,8 @@ Sejak peningkatan jaringan Shanghai/Capella, staker sekarang dapat menunjuk <em>
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="Miskonsepsi: &quot;Sekarang setelah The Merge selesai, dan penarikan diaktifkan, semua pelaku staking dapat keluar secara bersamaan.&quot;"
+contentPreview="Salah. Proses keluar validator dibatasi kecepatannya demi alasan keamanan.">
 Sejak peningkatan Shanghai/Capella mengaktifkan penarikan, validator diberi insentif untuk menarik saldo staking mereka di atas 32 ETH, karena dana ini tidak menambah imbal hasil dan sebaliknya terkunci. Bergantung pada APR (ditentukan oleh total ETH yang di-stake), mereka mungkin diberi insentif untuk keluar dari validator mereka untuk mengklaim kembali seluruh saldo mereka atau berpotensi melakukan stake lebih banyak lagi menggunakan hadiah mereka untuk mendapatkan lebih banyak imbal hasil.
 
 Peringatan penting di sini, keluar validator penuh dibatasi lajunya oleh protokol, dan hanya sejumlah validator yang dapat keluar per Epok (setiap 6,4 menit). Batas ini berfluktuasi tergantung pada jumlah validator aktif, tetapi mencapai sekitar 0,33% dari total ETH yang di-stake dapat dikeluarkan dari jaringan dalam satu hari.

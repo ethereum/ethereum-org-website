@@ -59,8 +59,8 @@ Licha ya kubadilisha Uthibitisho wa Kazi, historia nzima ya Ethereum tangu mwanz
 ### Waendeshaji wa nodi na wasanidi wa programu tumizi zilizogatuliwa (dapp) {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Waendeshaji na watoa huduma wa nodi za uwekaji dhamana"
+contentPreview="Ikiwa wewe ni mweka dhamana unayeendesha usanidi wako mwenyewe wa nodi au mtoa huduma wa miundombinu ya nodi, kuna mambo machache unayohitaji kufahamu baada ya Unganisho."
 id="staking-node-operators">
 
 Vipengee muhimu vya hatua ni pamoja na:
@@ -75,8 +75,8 @@ Kutoweka `fee recipient` bado kutaruhusu mthibitishaji wako kufanya kazi kama ka
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Waendeshaji wa nodi zisizothibitisha na watoa huduma wa miundombinu"
+contentPreview="Ikiwa unaendesha nodi ya Ethereum isiyothibitisha, mabadiliko makubwa zaidi yaliyokuja na Unganisho yalikuwa ni hitaji la kuendesha viteja kwa ZOTE tabaka la utekelezaji NA tabaka la mwafaka."
 id="node-operators">
 
 Hadi Unganisho, kiteja cha utekelezaji (kama vile Go Ethereum (Geth), Erigon, Besu au Nethermind) kilitosha kupokea, kuthibitisha ipasavyo, na kusambaza vitalu vinavyosambazwa na mtandao. _Baada ya Unganisho_, uhalali wa miamala iliyomo ndani ya mzigo wa utekelezaji sasa pia unategemea uhalali wa "kitalu cha mwafaka" ambacho kimo ndani yake.
@@ -93,8 +93,8 @@ Kutokamilisha vipengee hapo juu kutasababisha nodi yako kuonekana kuwa "nje ya m
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Wasanidi wa dapp na mikataba myerevu"
+contentPreview="Unganisho liliundwa kuwa na athari ndogo kwa wasanidi wa mikataba myerevu na dapp."
 id="developers">
 
 Unganisho ulikuja na mabadiliko kwenye mwafaka, ambayo pia yanajumuisha mabadiliko yanayohusiana na:
@@ -122,8 +122,8 @@ Unganisho pia uliweka msingi wa uboreshaji zaidi wa uwezo wa kuongezeka ambao ha
 ## Dhana potofu kuhusu Unganisho {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Dhana potofu: &quot;Kuendesha nodi kunahitaji kuweka dhamana ya ETH 32.&quot;"
+contentPreview="Si kweli. Mtu yeyote yuko huru kufanya usawazishaji wa nakala yake mwenyewe iliyothibitishwa ya Ethereum (yaani, kuendesha nodi). Hakuna ETH inayohitajika—sio kabla ya Unganisho, sio baada ya Unganisho, sio kamwe.">
 
 Kuna aina mbili za nodi za Ethereum: nodi zinazoweza kupendekeza vitalu na nodi ambazo hazipendekezi.
 
@@ -140,8 +140,8 @@ Uwezo wa mtu yeyote kuendesha nodi yake mwenyewe ni <em>muhimu kabisa</em> katik
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Dhana potofu: &quot;Unganisho limeshindwa kupunguza ada za gesi.&quot;"
+contentPreview="Si kweli. Unganisho lilikuwa mabadiliko ya utaratibu wa makubaliano, sio upanuzi wa uwezo wa mtandao, na halikukusudiwa kamwe kupunguza ada za gesi.">
 
 Ada za gesi ni zao la mahitaji ya mtandao kulingana na uwezo wa mtandao. Unganisho uliondoa matumizi ya Uthibitisho wa Kazi, ukihamia kwenye Uthibitisho wa Dau kwa mwafaka, lakini haukubadilisha kwa kiasi kikubwa vigezo vyovyote vinavyoathiri moja kwa moja uwezo wa mtandao au uwezo wa upitishaji.
 
@@ -150,8 +150,8 @@ Pamoja na <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-ro
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="Dhana potofu: &quot;Miamala iliharakishwa kwa kiasi kikubwa na Unganisho.&quot;"
+contentPreview="Si kweli. Ingawa kuna mabadiliko madogo, kasi ya muamala ni karibu sawa kwenye tabaka la 1 (l1) sasa kama ilivyokuwa kabla ya Unganisho.">
 "Kasi" ya muamala inaweza kupimwa kwa njia chache, ikijumuisha muda wa kujumuishwa kwenye kitalu na muda wa ukamilifu. Yote haya yanabadilika kidogo, lakini si kwa njia ambayo watumiaji wataona.
 
 Kihistoria, kwenye Uthibitisho wa Kazi, lengo lilikuwa kuwa na kitalu kipya kila baada ya sekunde ~13.3. Chini ya Uthibitisho wa Dau, sloti hutokea kwa usahihi kila sekunde 12, ambapo kila moja ni fursa kwa mthibitishaji kuchapisha kitalu. Sloti nyingi zina vitalu, lakini si lazima zote (yaani, mthibitishaji yuko nje ya mtandao). Katika Uthibitisho wa Dau, vitalu vinazalishwa ~10% mara kwa mara zaidi kuliko kwenye Uthibitisho wa Kazi. Hili lilikuwa badiliko dogo sana na hakuna uwezekano wa kuonekana na watumiaji.
@@ -161,8 +161,8 @@ Uthibitisho wa Dau ulianzisha dhana ya ukamilifu wa muamala ambayo haikuwepo hap
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Dhana potofu: &quot;Unganisho liliwezesha utoaji wa dhamana.&quot;"
+contentPreview="Si kweli, lakini utoaji wa dhamana umewezeshwa tangu wakati huo kupitia sasisho la Shanghai/Capella.">
 
 Hapo awali baada ya Unganisho, waweka dhamana wangeweza tu kupata vidokezo vya ada na MEV ambavyo vilipatikana kutokana na mapendekezo ya kitalu. Tuzo hizi zinawekwa kwenye akaunti isiyo ya kuweka dhamana inayodhibitiwa na mthibitishaji (inayojulikana kama <em>mpokeaji wa ada</em>), na zinapatikana mara moja. Tuzo hizi ni tofauti na tuzo za itifaki kwa kufanya majukumu ya mthibitishaji.
 
@@ -173,8 +173,8 @@ Tangu uboreshaji wa mtandao wa Shanghai/Capella, waweka dhamana sasa wanaweza ku
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="Dhana potofu: &quot;Kwa kuwa sasa Unganisho limekamilika, na utoaji umewezeshwa, waweka dhamana wote wanaweza kujitoa kwa wakati mmoja.&quot;"
+contentPreview="Si kweli. Kujitoa kwa wathibitishaji kumewekewa kikomo cha kasi kwa sababu za kiusalama.">
 Kwa kuwa uboreshaji wa Shanghai/Capella uliwezesha utoaji, wathibitishaji wanahamasishwa kutoa salio lao la uwekaji dhamana zaidi ya 32 ETH, kwani fedha hizi haziongezi faida na vinginevyo zimefungwa. Kulingana na APR (inayoamuliwa na jumla ya ETH iliyowekwa dhamana), wanaweza kuhamasishwa kujitoa kwa mthibitishaji wao ili kudai salio lao lote au kuweka dhamana zaidi kwa kutumia tuzo zao ili kupata faida zaidi.
 
 Tahadhari muhimu hapa, kujitoa kamili kwa mthibitishaji kunadhibitiwa na itifaki, na ni wathibitishaji wachache tu wanaoweza kujitoa kwa kila kipindi (kila dakika 6.4). Kikomo hiki kinabadilika kulingana na idadi ya wathibitishaji wanaofanya kazi, lakini inakuja kwa takriban 0.33% ya jumla ya ETH iliyowekwa dhamana inaweza kutolewa kwenye mtandao kwa siku moja.

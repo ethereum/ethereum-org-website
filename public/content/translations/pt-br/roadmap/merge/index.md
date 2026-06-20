@@ -59,8 +59,8 @@ Apesar de substituir a Prova de Trabalho (PoW), todo o histórico do Ethereum de
 ### Operadores de nós e desenvolvedores de dapps {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Operadores e provedores de nós de staking"
+contentPreview="Se você é um staker executando sua própria configuração de nó ou um provedor de infraestrutura de nós, há algumas coisas que você precisa saber após The Merge."
 id="staking-node-operators">
 
 Os principais itens de ação incluem:
@@ -75,8 +75,8 @@ Não definir um `fee recipient` ainda permitirá que seu validador se comporte n
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Operadores de nós não validadores e provedores de infraestrutura"
+contentPreview="Se você está operando um nó não validador do Ethereum, a mudança mais significativa que veio com The Merge foi a exigência de executar clientes TANTO para a camada de execução QUANTO para a camada de consenso."
 id="node-operators">
 
 Até The Merge, um cliente de execução (como Go Ethereum (Geth), Erigon, Besu ou Nethermind) era suficiente para receber, validar adequadamente e propagar blocos sendo transmitidos pela rede. _Após The Merge_, a validade das transações contidas em uma carga de execução agora também depende da validade do "bloco de consenso" no qual ela está contida.
@@ -93,8 +93,8 @@ Não concluir os itens acima resultará em seu nó parecendo estar "offline" at�
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Desenvolvedores de dapps e contratos inteligentes"
+contentPreview="The Merge foi projetado para ter um impacto mínimo nos desenvolvedores de contratos inteligentes e dapps."
 id="developers">
 
 The Merge veio com mudanças no consenso, o que também inclui mudanças relacionadas a:
@@ -122,8 +122,8 @@ The Merge também preparou o terreno para futuras atualizações de escalabilida
 ## Equívocos sobre The Merge {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Equívoco: &quot;Executar um nó exige o staking de 32 ETH.&quot;"
+contentPreview="Falso. Qualquer pessoa é livre para sincronizar sua própria cópia autoverificada do Ethereum (ou seja, executar um nó). Nenhum ETH é exigido — nem antes de The Merge, nem depois de The Merge, nem nunca.">
 
 Existem dois tipos de nós do Ethereum: nós que podem propor blocos e nós que não podem.
 
@@ -140,8 +140,8 @@ A capacidade de qualquer pessoa executar seu próprio nó é <em>absolutamente e
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Equívoco: &quot;The Merge falhou em reduzir as taxas de gás.&quot;"
+contentPreview="Falso. The Merge foi uma mudança no mecanismo de consenso, não uma expansão da capacidade da rede, e nunca teve a intenção de reduzir as taxas de gás.">
 
 As taxas de gás são um produto da demanda da rede em relação à capacidade da rede. The Merge descontinuou o uso da Prova de Trabalho (PoW), fazendo a transição para a Prova de Participação (PoS) para o consenso, mas não alterou significativamente nenhum parâmetro que influencie diretamente a capacidade ou a vazão da rede.
 
@@ -150,8 +150,8 @@ Com um <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadm
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="Equívoco: &quot;As transações foram aceleradas substancialmente por The Merge.&quot;"
+contentPreview="Falso. Embora existam algumas pequenas mudanças, a velocidade das transações é basicamente a mesma na camada 1 agora como era antes de The Merge.">
 A "velocidade" de uma transação pode ser medida de algumas maneiras, incluindo o tempo para ser incluída em um bloco e o tempo para a finalidade. Ambos mudam ligeiramente, mas não de uma forma que os usuários percebam.
 
 Historicamente, na Prova de Trabalho (PoW), a meta era ter um novo bloco a cada ~13,3 segundos. Sob a Prova de Participação (PoS), os slots ocorrem precisamente a cada 12 segundos, cada um dos quais é uma oportunidade para um validador publicar um bloco. A maioria dos slots tem blocos, mas não necessariamente todos (ou seja, um validador está offline). Na Prova de Participação (PoS), os blocos são produzidos ~10% mais frequentemente do que na Prova de Trabalho (PoW). Esta foi uma mudança bastante insignificante e é improvável que seja notada pelos usuários.
@@ -161,8 +161,8 @@ A Prova de Participação (PoS) introduziu o conceito de finalidade de transaç�
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Equívoco: &quot;The Merge habilitou os saques de staking.&quot;"
+contentPreview="Falso, mas os saques de staking foram habilitados desde então por meio da atualização Shanghai/Capella.">
 
 Inicialmente após The Merge, os stakers só podiam acessar gorjetas de taxas e MEV que foram ganhos como resultado de propostas de blocos. Essas recompensas são creditadas em uma conta sem staking controlada pelo validador (conhecida como <em>recebedor de taxas</em>) e estão disponíveis imediatamente. Essas recompensas são separadas das recompensas do protocolo por realizar as funções de validador.
 
@@ -173,8 +173,8 @@ Desde a atualização da rede Shanghai/Capella, os stakers agora podem designar 
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="Equívoco: &quot;Agora que The Merge está concluído e os saques estão habilitados, os stakers poderiam sair todos de uma vez.&quot;"
+contentPreview="Falso. As saídas de validadores são limitadas por taxa por motivos de segurança.">
 Como a atualização Shanghai/Capella permitiu saques, os validadores são incentivados a sacar seu saldo de staking acima de 32 ETH, pois esses fundos não aumentam o rendimento e, de outra forma, ficam bloqueados. Dependendo da APR (determinada pelo total de ETH em staking), eles podem ser incentivados a sair de seu(s) validador(es) para recuperar todo o seu saldo ou potencialmente fazer staking de ainda mais usando suas recompensas para ganhar mais rendimento.
 
 Uma ressalva importante aqui: as saídas completas de validadores são limitadas por taxa pelo protocolo, e apenas um certo número de validadores pode sair por época (a cada 6,4 minutos). Esse limite flutua dependendo do número de validadores ativos, mas chega a aproximadamente 0,33% do total de ETH em staking que pode sair da rede em um único dia.

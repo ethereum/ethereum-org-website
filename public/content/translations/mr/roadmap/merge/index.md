@@ -59,8 +59,8 @@ _हे पुन्हा सांगणे आवश्यक आहे_: ETH
 ### नोड ऑपरेटर आणि डॅप (dapp) विकासक {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="स्टेकिंग नोड ऑपरेटर आणि प्रदाते"
+contentPreview="जर तुम्ही स्वतःचा नोड सेटअप चालवणारे स्टेकर असाल किंवा नोड इन्फ्रास्ट्रक्चर प्रदाते असाल, तर द मर्ज नंतर तुम्हाला काही गोष्टींची माहिती असणे आवश्यक आहे."
 id="staking-node-operators">
 
 प्रमुख कृती आयटममध्ये हे समाविष्ट आहे:
@@ -75,8 +75,8 @@ id="staking-node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="नॉन-व्हॅलिडेटिंग नोड ऑपरेटर आणि इन्फ्रास्ट्रक्चर प्रदाते"
+contentPreview="जर तुम्ही नॉन-व्हॅलिडेटिंग इथेरियम नोड चालवत असाल, तर द मर्ज सोबत आलेला सर्वात महत्त्वाचा बदल म्हणजे अंमलबजावणी स्तर आणि सहमती स्तर या दोन्हीसाठी क्लायंट चालवण्याची आवश्यकता."
 id="node-operators">
 
 द मर्जपर्यंत, नेटवर्कद्वारे गॉसिप केले जाणारे ब्लॉक प्राप्त करण्यासाठी, योग्यरित्या प्रमाणित करण्यासाठी आणि प्रसारित करण्यासाठी अंमलबजावणी क्लायंट (जसे की गो इथेरियम (गेथ), एरिगॉन, बेसू किंवा नेदरमाइंड) पुरेसे होते. _द मर्ज नंतर_, अंमलबजावणी पेलोडमध्ये असलेल्या व्यवहारांची वैधता आता ते ज्या "सहमती ब्लॉक" मध्ये समाविष्ट आहे त्याच्या वैधतेवर देखील अवलंबून असते.
@@ -93,8 +93,8 @@ id="node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="डॅप आणि स्मार्ट कॉन्ट्रॅक्ट डेव्हलपर"
+contentPreview="द मर्जची रचना अशा प्रकारे केली गेली होती की त्याचा स्मार्ट कॉन्ट्रॅक्ट आणि डॅप डेव्हलपरवर कमीत कमी परिणाम होईल."
 id="developers">
 
 द मर्ज सहमतीमध्ये बदलांसह आले, ज्यामध्ये यासंबंधित बदलांचा देखील समावेश आहे:
@@ -122,8 +122,8 @@ id="developers">
 ## द मर्ज बद्दलचे गैरसमज {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="गैरसमज: &quot;नोड चालवण्यासाठी 32 ETH चे स्टेकिंग आवश्यक आहे.&quot;"
+contentPreview="खोटे. कोणीही इथेरियमची स्वतःची स्व-सत्यापित प्रत समक्रमित करण्यासाठी (म्हणजेच, नोड चालवण्यासाठी) मुक्त आहे. यासाठी कोणत्याही ETH ची आवश्यकता नाही—द मर्जच्या आधी नाही, द मर्जच्या नंतर नाही, आणि कधीही नाही.">
 
 इथेरियम नोड्सचे दोन प्रकार आहेत: नोड्स जे ब्लॉक प्रस्तावित करू शकतात आणि नोड्स जे करत नाहीत.
 
@@ -140,8 +140,8 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="गैरसमज: &quot;द मर्ज गॅस शुल्क कमी करण्यात अपयशी ठरले.&quot;"
+contentPreview="खोटे. द मर्ज हा सहमती यंत्रणेतील बदल होता, नेटवर्क क्षमतेचा विस्तार नाही, आणि गॅस शुल्क कमी करण्याचा त्याचा कधीही हेतू नव्हता.">
 
 गॅस शुल्क हे नेटवर्कच्या क्षमतेच्या तुलनेत नेटवर्क मागणीचे उत्पादन आहे. द मर्जने प्रूफ-ऑफ-वर्कचा वापर बंद केला, सहमतीसाठी प्रूफ-ऑफ-स्टेककडे संक्रमण केले, परंतु नेटवर्क क्षमता किंवा प्रक्रिया क्षमतेवर थेट प्रभाव टाकणाऱ्या कोणत्याही पॅरामीटर्समध्ये लक्षणीय बदल केला नाही.
 
@@ -150,8 +150,8 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="गैरसमज: &quot;द मर्जमुळे व्यवहारांना लक्षणीय गती मिळाली.&quot;"
+contentPreview="खोटे. जरी काही किरकोळ बदल असले तरी, स्तर १ वरील व्यवहाराचा वेग आता बहुतांश तसाच आहे जसा तो द मर्जच्या आधी होता.">
 व्यवहाराचा "वेग" काही मार्गांनी मोजला जाऊ शकतो, ज्यामध्ये ब्लॉकमध्ये समाविष्ट होण्यासाठी लागणारा वेळ आणि अंतिमत्वासाठी लागणारा वेळ समाविष्ट आहे. या दोन्हीमध्ये थोडा बदल होतो, परंतु वापरकर्त्यांच्या लक्षात येईल अशा प्रकारे नाही.
 
 ऐतिहासिकदृष्ट्या, प्रूफ-ऑफ-वर्कवर, दर ~13.3 सेकंदांनी एक नवीन ब्लॉक असण्याचे लक्ष्य होते. प्रूफ-ऑफ-स्टेक अंतर्गत, स्लॉट तंतोतंत दर 12 सेकंदांनी येतात, ज्यापैकी प्रत्येक प्रमाणकासाठी ब्लॉक प्रकाशित करण्याची संधी असते. बहुतेक स्लॉट्समध्ये ब्लॉक्स असतात, परंतु सर्वच नाही (उदा., प्रमाणक ऑफलाइन आहे). प्रूफ-ऑफ-स्टेक मध्ये, प्रूफ-ऑफ-वर्कच्या तुलनेत ब्लॉक्स ~10% अधिक वारंवार तयार केले जातात. हा एक अतिशय नगण्य बदल होता आणि वापरकर्त्यांच्या लक्षात येण्याची शक्यता नाही.
@@ -161,8 +161,8 @@ contentPreview="False. Though some slight changes exist, transaction speed is mo
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="गैरसमज: &quot;द मर्जमुळे स्टेकिंगमधून रक्कम काढणे शक्य झाले.&quot;"
+contentPreview="खोटे, परंतु शांघाय/कपेला अपग्रेडद्वारे स्टेकिंगमधून रक्कम काढणे आता शक्य झाले आहे.">
 
 सुरुवातीला द मर्ज नंतर, स्टेकर्स केवळ ब्लॉक प्रस्तावांच्या परिणामी मिळवलेल्या फी टिप्स आणि MEV मध्ये प्रवेश करू शकत होते. ही बक्षिसे प्रमाणकाद्वारे नियंत्रित नॉन-स्टेकिंग खात्यात (ज्याला <em>फी प्राप्तकर्ता</em> म्हणून ओळखले जाते) जमा केली जातात आणि ती त्वरित उपलब्ध असतात. ही बक्षिसे प्रमाणक कर्तव्ये पार पाडण्यासाठी मिळणाऱ्या प्रोटोकॉल बक्षिसांपेक्षा वेगळी आहेत.
 
@@ -173,8 +173,8 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="गैरसमज: &quot;आता द मर्ज पूर्ण झाले आहे आणि रक्कम काढणे शक्य झाले आहे, त्यामुळे सर्व स्टेकर एकाच वेळी निर्गमन करू शकतात.&quot;"
+contentPreview="खोटे. सुरक्षिततेच्या कारणास्तव प्रमाणक निर्गमनांचा दर मर्यादित केला आहे.">
 शांघाय/कपेला अपग्रेडने रक्कम काढणे सक्षम केल्यामुळे, प्रमाणकांना त्यांची 32 ETH वरील स्टेकिंग शिल्लक काढण्यासाठी प्रोत्साहित केले जाते, कारण हा निधी उत्पन्नात भर घालत नाही आणि अन्यथा लॉक केलेला असतो. APR (एकूण स्टेक केलेल्या ETH द्वारे निर्धारित) वर अवलंबून, त्यांना त्यांची संपूर्ण शिल्लक परत मिळवण्यासाठी त्यांच्या प्रमाणकांमधून निर्गमन करण्यासाठी किंवा अधिक उत्पन्न मिळवण्यासाठी त्यांच्या बक्षिसांचा वापर करून संभाव्यतः अधिक स्टेक करण्यासाठी प्रोत्साहित केले जाऊ शकते.
 
 येथे एक महत्त्वाची चेतावणी, पूर्ण प्रमाणक निर्गमन प्रोटोकॉलद्वारे दर मर्यादित आहेत आणि प्रति पर्व (दर 6.4 मिनिटांनी) केवळ ठराविक प्रमाणक निर्गमन करू शकतात. ही मर्यादा सक्रिय प्रमाणकांच्या संख्येवर अवलंबून बदलते, परंतु एका दिवसात नेटवर्कमधून एकूण स्टेक केलेल्या ETH पैकी अंदाजे 0.33% निर्गमन केले जाऊ शकते.

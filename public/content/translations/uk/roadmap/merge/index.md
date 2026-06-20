@@ -59,8 +59,8 @@ _Варто повторити_: як користувачу або власни
 ### Оператори вузлів та розробники dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Оператори та провайдери вузлів стейкінгу"
+contentPreview="Якщо ви стейкер, який керує власним вузлом, або провайдер інфраструктури вузлів, вам потрібно знати кілька речей після Злиття."
 id="staking-node-operators">
 
 Основні дії включають:
@@ -75,8 +75,8 @@ id="staking-node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Оператори невалідуючих вузлів та провайдери інфраструктури"
+contentPreview="Якщо ви керуєте невалідуючим вузлом Етеріуму, найважливішою зміною, яка відбулася зі Злиттям, стала вимога запускати клієнти ЯК для рівня виконання, ТАК І для рівня консенсусу."
 id="node-operators">
 
 До Злиття клієнта виконання (такого як Go Ethereum (Geth), Ерігон, Бесу або Незермайнд) було достатньо для отримання, належної перевірки та поширення блоків, що передавалися мережею. _Після Злиття_ дійсність транзакцій, що містяться в корисному навантаженні виконання, тепер також залежить від дійсності «блоку консенсусу», в якому воно міститься.
@@ -93,8 +93,8 @@ id="node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Розробники dapp та смартконтрактів"
+contentPreview="Злиття було розроблено так, щоб мати мінімальний вплив на розробників смартконтрактів та dapp."
 id="developers">
 
 Злиття принесло зміни в консенсус, які також включають зміни, пов'язані з:
@@ -122,8 +122,8 @@ id="developers">
 ## Хибні уявлення про Злиття {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Хибна думка: &quot;Запуск вузла вимагає стейкінгу 32 ETH.&quot;"
+contentPreview="Неправда. Будь-хто може вільно синхронізувати власну самостійно перевірену копію Етеріуму (тобто запустити вузол). ETH не потрібен — ні до Злиття, ні після Злиття, ніколи.">
 
 Існує два типи вузлів Етеріуму: вузли, які можуть пропонувати блоки, і вузли, які цього не роблять.
 
@@ -140,8 +140,8 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Хибна думка: &quot;Злиття не змогло знизити комісії за газ.&quot;"
+contentPreview="Неправда. Злиття було зміною механізму консенсусу, а не розширенням пропускної здатності мережі, і ніколи не мало на меті знизити комісії за газ.">
 
 Комісії за газ є результатом попиту в мережі відносно її пропускної здатності. Злиття відмовилося від використання доказу виконання роботи (PoW), перейшовши на доказ частки (PoS) для консенсусу, але не змінило суттєво жодних параметрів, які безпосередньо впливають на пропускну здатність мережі.
 
@@ -150,8 +150,8 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="Хибна думка: &quot;Транзакції були суттєво прискорені Злиттям.&quot;"
+contentPreview="Неправда. Хоча існують деякі незначні зміни, швидкість транзакцій на рівні 1 зараз здебільшого така ж, як і до Злиття.">
 «Швидкість» транзакції можна виміряти кількома способами, включаючи час до включення в блок і час до фіналізації. Обидва ці показники дещо змінилися, але не настільки, щоб користувачі це помітили.
 
 Історично склалося так, що в доказі виконання роботи (PoW) ціллю було створення нового блоку кожні ~13,3 секунди. За умови доказу частки (PoS) слоти відбуваються рівно кожні 12 секунд, кожен з яких є можливістю для валідатора опублікувати блок. Більшість слотів мають блоки, але не обов'язково всі (наприклад, якщо валідатор офлайн). У доказі частки (PoS) блоки створюються приблизно на 10% частіше, ніж у доказі виконання роботи (PoW). Це була досить незначна зміна, яку користувачі навряд чи помітять.
@@ -161,8 +161,8 @@ contentPreview="False. Though some slight changes exist, transaction speed is mo
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Хибна думка: &quot;Злиття дозволило виведення зі стейкінгу.&quot;"
+contentPreview="Неправда, але виведення зі стейкінгу відтоді було дозволено завдяки оновленню Шанхай/Capella.">
 
 Спочатку після Злиття стейкери могли отримати доступ лише до чайових з комісій та MEV, які були зароблені в результаті пропозицій блоків. Ці винагороди зараховуються на акаунт, що не бере участі у стейкінгу, який контролюється валідатором (відомий як <em>одержувач комісії</em>), і доступні негайно. Ці винагороди відокремлені від винагород протоколу за виконання обов'язків валідатора.
 
@@ -173,8 +173,8 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="Хибна думка: &quot;Тепер, коли Злиття завершено, а виведення дозволено, усі стейкери можуть вийти одночасно.&quot;"
+contentPreview="Неправда. Виходи валідаторів обмежені за швидкістю з міркувань безпеки.">
 Оскільки оновлення Шанхай/Capella дозволило виведення коштів, валідатори зацікавлені у виведенні свого балансу стейкінгу понад 32 ETH, оскільки ці кошти не збільшують дохідність і в іншому випадку залишаються заблокованими. Залежно від APR (визначається загальною кількістю ETH у стейкінгу), вони можуть бути зацікавлені у виході свого валідатора (або валідаторів), щоб повернути весь свій баланс, або потенційно стейкати ще більше, використовуючи свої винагороди для отримання більшої дохідності.
 
 Важливе застереження: повні виходи валідаторів обмежені протоколом за швидкістю, і лише певна кількість валідаторів може вийти за епоху (кожні 6,4 хвилини). Цей ліміт коливається залежно від кількості активних валідаторів, але становить приблизно 0,33% від загальної кількості ETH у стейкінгу, які можуть бути виведені з мережі за один день.

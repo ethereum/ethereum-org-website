@@ -59,8 +59,8 @@ A pesar de cambiar la prueba de trabajo, todo el historial de Ethereum desde el 
 ### Operadores de nodos y desarrolladores de aplicaciones descentralizadas (dapps) {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Operadores y proveedores de nodos de staking"
+contentPreview="Si eres un staker que ejecuta su propia configuración de nodo o un proveedor de infraestructura de nodos, hay algunas cosas que debes tener en cuenta después de La Fusión."
 id="staking-node-operators">
 
 Los elementos de acción clave incluyen:
@@ -75,8 +75,8 @@ No establecer una `fee recipient` aún permitirá que su validador se comporte c
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Operadores de nodos no validadores y proveedores de infraestructura"
+contentPreview="Si operas un nodo de Ethereum no validador, el cambio más significativo que trajo La Fusión fue el requisito de ejecutar clientes TANTO para la capa de ejecución COMO para la capa de consenso."
 id="node-operators">
 
 Hasta La Fusión, un cliente de ejecución (como Go Ethereum (Geth), Erigon, Besu o Nethermind) era suficiente para recibir, validar adecuadamente y propagar los bloques que la red estaba transmitiendo. _Después de La Fusión_, la validez de las transacciones contenidas dentro de una carga útil de ejecución ahora también depende de la validez del "bloque de consenso" en el que está contenida.
@@ -93,8 +93,8 @@ No completar los elementos anteriores dará como resultado que su nodo parezca e
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Desarrolladores de dapps y contratos inteligentes"
+contentPreview="La Fusión se diseñó para tener un impacto mínimo en los desarrolladores de contratos inteligentes y dapps."
 id="developers">
 
 La Fusión vino con cambios en el consenso, que también incluyen cambios relacionados con:
@@ -122,8 +122,8 @@ La Fusión también preparó el escenario para futuras actualizaciones de escala
 ## Conceptos erróneos sobre La Fusión {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Concepto erróneo: &quot;Ejecutar un nodo requiere hacer staking de 32 ETH.&quot;"
+contentPreview="Falso. Cualquiera es libre de sincronizar su propia copia autoverificada de Ethereum (es decir, ejecutar un nodo). No se requiere ETH: ni antes de La Fusión, ni después de La Fusión, ni nunca.">
 
 Hay dos tipos de nodos de Ethereum: nodos que pueden proponer bloques y nodos que no.
 
@@ -140,8 +140,8 @@ La capacidad de que cualquier persona ejecute su propio nodo es <em>absolutament
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Concepto erróneo: &quot;La Fusión no logró reducir las tarifas de gas.&quot;"
+contentPreview="Falso. La Fusión fue un cambio de mecanismo de consenso, no una expansión de la capacidad de la red, y nunca tuvo la intención de reducir las tarifas de gas.">
 
 Las tarifas de gas son un producto de la demanda de la red en relación con la capacidad de la red. La Fusión desaprobó el uso de la prueba de trabajo, haciendo la transición a la prueba de participación para el consenso, pero no cambió significativamente ningún parámetro que influya directamente en la capacidad de la red o la capacidad de procesamiento.
 
@@ -150,8 +150,8 @@ Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-road
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="Concepto erróneo: &quot;Las transacciones se aceleraron sustancialmente con La Fusión.&quot;"
+contentPreview="Falso. Aunque existen algunos cambios leves, la velocidad de las transacciones es prácticamente la misma en la capa 1 ahora que antes de La Fusión.">
 La "velocidad" de una transacción se puede medir de varias maneras, incluido el tiempo para ser incluida en un bloque y el tiempo hasta la finalización. Ambos cambian ligeramente, pero no de una manera que los usuarios noten.
 
 Históricamente, en la prueba de trabajo, el objetivo era tener un nuevo bloque cada ~13.3 segundos. Bajo la prueba de participación, los slots ocurren precisamente cada 12 segundos, cada uno de los cuales es una oportunidad para que un validador publique un bloque. La mayoría de los slots tienen bloques, pero no necesariamente todos (es decir, un validador está fuera de línea). En la prueba de participación, los bloques se producen un ~10 % más frecuentemente que en la prueba de trabajo. Este fue un cambio bastante insignificante y es poco probable que los usuarios lo noten.
@@ -161,8 +161,8 @@ La prueba de participación introdujo el concepto de finalidad de la transacció
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Concepto erróneo: &quot;La Fusión habilitó los retiros de staking.&quot;"
+contentPreview="Falso, pero los retiros de staking se han habilitado desde entonces mediante la actualización Shanghái/Capella.">
 
 Inicialmente después de La Fusión, los stakers solo podían acceder a las propinas de tarifas y al MEV que se ganaban como resultado de las propuestas de bloques. Estas recompensas se acreditan a una cuenta que no es de staking controlada por el validador (conocida como el <em>destinatario de la tarifa</em>), y están disponibles de inmediato. Estas recompensas están separadas de las recompensas del protocolo por realizar las tareas del validador.
 
@@ -173,8 +173,8 @@ Desde la actualización de la red Shanghái/Capella, los stakers ahora pueden de
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="Concepto erróneo: &quot;Ahora que La Fusión está completa y los retiros están habilitados, todos los stakers podrían salir a la vez.&quot;"
+contentPreview="Falso. Las salidas de validadores están limitadas por frecuencia por razones de seguridad.">
 Dado que la actualización Shanghái/Capella habilitó los retiros, los validadores están incentivados a retirar su saldo de staking por encima de 32 ETH, ya que estos fondos no se suman al rendimiento y de otro modo estarían bloqueados. Dependiendo del APR (determinado por el total de ETH en staking), pueden estar incentivados a salir de su(s) validador(es) para reclamar todo su saldo o potencialmente hacer staking de aún más utilizando sus recompensas para ganar más rendimiento.
 
 Una advertencia importante aquí, las salidas completas de validadores están limitadas en tasa por el protocolo, y solo un número determinado de validadores puede salir por época (cada 6.4 minutos). Este límite fluctúa dependiendo del número de validadores activos, pero resulta en que aproximadamente el 0.33 % del total de ETH en staking puede salir de la red en un solo día.

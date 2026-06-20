@@ -59,8 +59,8 @@ _繰り返しになりますが_、ETHやイーサリアム上のその他のデ
 ### ノードオペレーターとdapp開発者 {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="ステーキングノードのオペレーターとプロバイダー"
+contentPreview="独自のノードセットアップを実行しているステーカー、またはノードインフラストラクチャプロバイダーである場合、マージ後に注意すべき点がいくつかあります。"
 id="staking-node-operators">
 
 主なアクションアイテムは以下の通りです：
@@ -75,8 +75,8 @@ id="staking-node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="非検証ノードのオペレーターとインフラストラクチャプロバイダー"
+contentPreview="非検証イーサリアムノードを運用している場合、マージに伴う最も重要な変更は、実行レイヤーとコンセンサス・レイヤーの両方のクライアントを実行する必要があることでした。"
 id="node-operators">
 
 マージまでは、ネットワークによってゴシップされているブロックを受信し、適切に検証し、伝播するには、実行クライアント（ゴー・イーサリアム（ゲス）、エリゴン、ベス、ネザーマインドなど）だけで十分でした。_マージ後_、実行ペイロードに含まれるトランザクションの有効性は、それが含まれる「コンセンサス・ブロック」の有効性にも依存するようになりました。
@@ -93,8 +93,8 @@ id="node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="dappおよびスマートコントラクトの開発者"
+contentPreview="マージは、スマートコントラクトおよびdapp開発者への影響を最小限に抑えるように設計されました。"
 id="developers">
 
 マージに伴いコンセンサスに変更が加えられましたが、これには以下の変更も含まれます：
@@ -122,8 +122,8 @@ id="developers">
 ## マージに関する誤解 {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="誤解：&quot;ノードを実行するには32 ETHをステーキングする必要がある。&quot;"
+contentPreview="誤りです。誰でも自由に自己検証済みのイーサリアムのコピーを同期する（つまり、ノードを実行する）ことができます。マージの前でも、マージの後でも、そして今後も、ETHは一切必要ありません。">
 
 イーサリアムのノードには、ブロックを提案できるノードと提案できないノードの2種類があります。
 
@@ -140,8 +140,8 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="誤解：&quot;マージはガス代の削減に失敗した。&quot;"
+contentPreview="誤りです。マージはコンセンサス・メカニズムの変更であり、ネットワーク容量の拡大ではないため、ガス代を下げることは意図されていませんでした。">
 
 ガス代は、ネットワークの容量に対するネットワーク需要の産物です。マージによりプルーフ・オブ・ワークの使用が非推奨となり、コンセンサスのためにプルーフ・オブ・ステークに移行しましたが、ネットワークの容量やスループットに直接影響するパラメータは大きく変更されませんでした。
 
@@ -150,8 +150,8 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="誤解：&quot;マージによってトランザクションが大幅に高速化された。&quot;"
+contentPreview="誤りです。わずかな変更はありますが、現在のレイヤー1でのトランザクション速度はマージ前とほぼ同じです。">
 トランザクションの「速度」は、ブロックに含まれるまでの時間やファイナリティまでの時間など、いくつかの方法で測定できます。これらはどちらもわずかに変化しますが、ユーザーが気付くようなものではありません。
 
 歴史的に、プルーフ・オブ・ワークでは、約13.3秒ごとに新しいブロックを生成することが目標でした。プルーフ・オブ・ステークの下では、スロットは正確に12秒ごとに発生し、それぞれがバリデータにとってブロックを公開する機会となります。ほとんどのスロットにはブロックがありますが、必ずしもすべてではありません（例：バリデータがオフラインの場合）。プルーフ・オブ・ステークでは、ブロックはプルーフ・オブ・ワークよりも約10%頻繁に生成されます。これはかなり些細な変更であり、ユーザーが気付く可能性は低いです。
@@ -161,8 +161,8 @@ contentPreview="False. Though some slight changes exist, transaction speed is mo
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="誤解：&quot;マージによってステーキングの引き出しが可能になった。&quot;"
+contentPreview="誤りですが、その後シャンハイ／カペラ・アップグレードによってステーキングの引き出しが可能になりました。">
 
 マージ直後、ステーカーはブロック提案の結果として獲得した手数料のチップとMEVにのみアクセスできました。これらの報酬は、バリデータが管理する非ステーキング・アカウント（<em>手数料受取人</em>として知られています）に入金され、すぐに利用できます。これらの報酬は、バリデータの義務を遂行するためのプロトコル報酬とは別のものです。
 
@@ -173,8 +173,8 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="誤解：&quot;マージが完了し、引き出しが可能になったため、ステーカーは全員同時にエグジットできる。&quot;"
+contentPreview="誤りです。バリデータのエグジットはセキュリティ上の理由からレート制限されています。">
 シャンハイ/カペラのアップグレードで引き出しが可能になったため、バリデータは32 ETHを超えるステーキング残高を引き出すインセンティブがあります。これらの資金は利回りを増加させず、そのままではロックされたままになるためです。APR（ステークされたETHの総量によって決定されます）によっては、バリデータをエグジットして残高全体を回収するか、報酬を使用してさらにステークしてより多くの利回りを獲得するインセンティブが働く場合があります。
 
 ここで重要な注意点として、バリデータの完全なエグジットはプロトコルによってレート制限されており、エポック（6.4分ごと）ごとにエグジットできるバリデータの数は限られています。この制限はアクティブなバリデータの数によって変動しますが、1日にネットワークからエグジットできるのは、ステークされたETHの総量の約0.33%になります。

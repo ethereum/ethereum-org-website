@@ -59,8 +59,8 @@ Malgré l'abandon de la preuve de travail, l'intégralité de l'historique d'Eth
 ### Opérateurs de nœuds et développeurs de dapps {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Opérateurs et fournisseurs de nœuds de staking"
+contentPreview="Si vous êtes un staker gérant votre propre configuration de nœud ou un fournisseur d'infrastructure de nœuds, il y a quelques éléments à prendre en compte après La Fusion."
 id="staking-node-operators">
 
 Les principales actions à entreprendre comprennent :
@@ -75,8 +75,8 @@ Ne pas définir de `fee recipient` permettra toujours à votre validateur de se 
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Opérateurs de nœuds non-validateurs et fournisseurs d'infrastructure"
+contentPreview="Si vous exploitez un nœud Ethereum non-validateur, le changement le plus important apporté par La Fusion a été l'obligation d'exécuter des clients À LA FOIS pour la couche d'exécution ET la couche de consensus."
 id="node-operators">
 
 Jusqu'à La Fusion, un client d'exécution (tel que Geth, Erigon, Besu ou Nethermind) suffisait pour recevoir, valider correctement et propager les blocs diffusés par le réseau. _Après La Fusion_, la validité des transactions contenues dans une charge utile d'exécution dépend désormais également de la validité du « bloc de consensus » dans lequel elle est contenue.
@@ -93,8 +93,8 @@ Si vous ne complétez pas les éléments ci-dessus, votre nœud apparaîtra comm
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Développeurs de dapps et de contrats intelligents"
+contentPreview="La Fusion a été conçue pour avoir un impact minimal sur les développeurs de contrats intelligents et de dapps."
 id="developers">
 
 La Fusion s'est accompagnée de modifications du consensus, ce qui inclut également des modifications liées à :
@@ -122,8 +122,8 @@ La Fusion a également préparé le terrain pour d'autres mises à niveau de sca
 ## Idées fausses sur La Fusion {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Idée reçue : &quot;Exécuter un nœud nécessite de staker 32 ETH.&quot;"
+contentPreview="Faux. Tout le monde est libre de synchroniser sa propre copie auto-vérifiée d'Ethereum (c'est-à-dire exécuter un nœud). Aucun ETH n'est requis — ni avant La Fusion, ni après La Fusion, ni jamais.">
 
 Il existe deux types de nœuds Ethereum : les nœuds qui peuvent proposer des blocs et les nœuds qui ne le peuvent pas.
 
@@ -140,8 +140,8 @@ La possibilité pour quiconque d'exécuter son propre nœud est <em>absolument e
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Idée reçue : &quot;La Fusion n'a pas réussi à réduire les frais de gaz.&quot;"
+contentPreview="Faux. La Fusion était un changement de mécanisme de consensus, et non une expansion de la capacité du réseau, et n'a jamais eu pour but de réduire les frais de gaz.">
 
 Les frais de gaz sont le produit de la demande du réseau par rapport à la capacité du réseau. La Fusion a abandonné l'utilisation de la preuve de travail, passant à la preuve d'enjeu pour le consensus, mais n'a pas modifié de manière significative les paramètres qui influencent directement la capacité ou le débit du réseau.
 
@@ -150,8 +150,8 @@ Avec une <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roa
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="Idée reçue : &quot;Les transactions ont été considérablement accélérées par La Fusion.&quot;"
+contentPreview="Faux. Bien qu'il y ait quelques légers changements, la vitesse des transactions est globalement la même sur la couche 1 aujourd'hui qu'avant La Fusion.">
 La « vitesse » d'une transaction peut être mesurée de plusieurs manières, notamment le temps nécessaire pour être incluse dans un bloc et le temps de finalisation. Ces deux éléments changent légèrement, mais pas d'une manière que les utilisateurs remarqueront.
 
 Historiquement, sur la preuve de travail, l'objectif était d'avoir un nouveau bloc toutes les ~13,3 secondes. Sous la preuve d'enjeu, les créneaux se produisent précisément toutes les 12 secondes, chacun d'eux étant une opportunité pour un validateur de publier un bloc. La plupart des créneaux ont des blocs, mais pas nécessairement tous (par exemple, si un validateur est hors ligne). Dans la preuve d'enjeu, les blocs sont produits environ 10 % plus fréquemment que sur la preuve de travail. Il s'agissait d'un changement assez insignifiant et il est peu probable qu'il soit remarqué par les utilisateurs.
@@ -161,8 +161,8 @@ La preuve d'enjeu a introduit le concept de finalité des transactions qui n'exi
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Idée reçue : &quot;La Fusion a activé les retraits de staking.&quot;"
+contentPreview="Faux, mais les retraits de staking ont depuis été activés via la mise à niveau Shanghai/Capella.">
 
 Initialement après La Fusion, les stakers ne pouvaient accéder qu'aux pourboires de frais et à la MEV gagnés à la suite de propositions de blocs. Ces récompenses sont créditées sur un compte non lié au staking contrôlé par le validateur (connu sous le nom de <em>bénéficiaire des frais</em>), et sont disponibles immédiatement. Ces récompenses sont distinctes des récompenses du protocole pour l'exécution des tâches de validateur.
 
@@ -173,8 +173,8 @@ Depuis la mise à niveau du réseau Shanghai/Capella, les stakers peuvent désor
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="Idée reçue : &quot;Maintenant que La Fusion est terminée et que les retraits sont activés, les stakers pourraient tous sortir en même temps.&quot;"
+contentPreview="Faux. Les sorties de validateurs sont limitées en fréquence pour des raisons de sécurité.">
 Depuis que la mise à niveau Shanghai/Capella a activé les retraits, les validateurs sont incités à retirer leur solde de staking supérieur à 32 ETH, car ces fonds n'ajoutent pas de rendement et sont autrement verrouillés. En fonction de l'APR (déterminé par le total des ETH stakés), ils peuvent être incités à sortir leur(s) validateur(s) pour récupérer l'intégralité de leur solde ou potentiellement staker encore plus en utilisant leurs récompenses pour gagner plus de rendement.
 
 Une mise en garde importante ici : les sorties complètes de validateurs sont limitées en fréquence par le protocole, et seul un certain nombre de validateurs peuvent sortir par époque (toutes les 6,4 minutes). Cette limite fluctue en fonction du nombre de validateurs actifs, mais revient à environ 0,33 % du total des ETH stakés pouvant être sortis du réseau en une seule journée.

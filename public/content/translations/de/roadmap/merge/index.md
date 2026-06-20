@@ -59,8 +59,8 @@ Trotz des Austauschs von Proof-of-Work blieb die gesamte Geschichte von Ethereum
 ### Knotenbetreiber und Dapp-Entwickler {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Betreiber und Anbieter von Staking-Knoten"
+contentPreview="Wenn Sie ein Staker sind, der ein eigenes Knoten-Setup betreibt, oder ein Anbieter von Knoten-Infrastruktur, gibt es einige Dinge, die Sie nach dem Merge beachten müssen."
 id="staking-node-operators">
 
 Zu den wichtigsten Aktionspunkten gehören:
@@ -75,8 +75,8 @@ Wenn Sie keine `fee recipient` festlegen, kann sich Ihr Validator weiterhin wie 
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Betreiber von nicht-validierenden Knoten und Infrastrukturanbieter"
+contentPreview="Wenn Sie einen nicht-validierenden Ethereum-Knoten betreiben, war die wichtigste Änderung, die mit dem Merge einherging, die Anforderung, Clients SOWOHL für die Ausführungsschicht ALS AUCH für die Konsensschicht auszuführen."
 id="node-operators">
 
 Bis zum Merge reichte ein Ausführungsclient (wie Go Ethereum (Geth), Erigon, Besu oder Nethermind) aus, um Blöcke zu empfangen, ordnungsgemäß zu validieren und zu verbreiten, die vom Netzwerk weitergegeben wurden. _Nach dem Merge_ hängt die Gültigkeit von Transaktionen, die in einer Ausführungs-Payload enthalten sind, nun auch von der Gültigkeit des „Konsens-Blocks“ ab, in dem sie enthalten ist.
@@ -93,8 +93,8 @@ Wenn Sie die oben genannten Punkte nicht abschließen, wird Ihr Knoten als „of
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Dapp- und Smart-Contract-Entwickler"
+contentPreview="Der Merge wurde so konzipiert, dass er minimale Auswirkungen auf Smart-Contract- und Dapp-Entwickler hat."
 id="developers">
 
 Der Merge brachte Änderungen am Konsens mit sich, was auch Änderungen in Bezug auf Folgendes beinhaltet:
@@ -122,8 +122,8 @@ Der Merge bereitete auch die Bühne für weitere Skalierbarkeits-Upgrades, die u
 ## Missverständnisse über den Merge {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Irrglaube: &quot;Der Betrieb eines Knotens erfordert das Staking von 32 ETH.&quot;"
+contentPreview="Falsch. Es steht jedem frei, seine eigene selbstverifizierte Kopie von Ethereum zu synchronisieren (d. h. einen Knoten zu betreiben). Es sind keine ETH erforderlich – nicht vor dem Merge, nicht nach dem Merge, niemals.">
 
 Es gibt zwei Arten von Ethereum-Knoten: Knoten, die Blöcke vorschlagen können, und Knoten, die dies nicht tun.
 
@@ -140,8 +140,8 @@ Die Fähigkeit für jeden, seinen eigenen Knoten zu betreiben, ist <em>absolut u
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Irrglaube: &quot;Der Merge hat die Gasgebühren nicht gesenkt.&quot;"
+contentPreview="Falsch. Der Merge war eine Änderung des Konsensmechanismus, keine Erweiterung der Netzwerkkapazität, und war nie dazu gedacht, die Gasgebühren zu senken.">
 
 Gas-Gebühren sind ein Produkt der Netzwerknachfrage im Verhältnis zur Kapazität des Netzwerks. Der Merge hat die Verwendung von Proof-of-Work eingestellt und ist für den Konsens zu Proof-of-Stake übergegangen, hat aber keine Parameter wesentlich geändert, die die Netzwerkkapazität oder den Transaktionsdurchsatz direkt beeinflussen.
 
@@ -150,8 +150,8 @@ Mit einer <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-ro
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="Irrglaube: &quot;Transaktionen wurden durch den Merge erheblich beschleunigt.&quot;"
+contentPreview="Falsch. Obwohl es einige leichte Änderungen gibt, ist die Transaktionsgeschwindigkeit auf Layer 1 jetzt größtenteils dieselbe wie vor dem Merge.">
 Die „Geschwindigkeit“ einer Transaktion kann auf verschiedene Weise gemessen werden, einschließlich der Zeit bis zur Aufnahme in einen Block und der Zeit bis zur Endgültigkeit. Beides ändert sich leicht, aber nicht so, dass Benutzer es bemerken werden.
 
 Historisch gesehen war es bei Proof-of-Work das Ziel, alle ~13,3 Sekunden einen neuen Block zu haben. Unter Proof-of-Stake treten Slots genau alle 12 Sekunden auf, von denen jeder eine Gelegenheit für einen Validator ist, einen Block zu veröffentlichen. Die meisten Slots haben Blöcke, aber nicht unbedingt alle (z. B. wenn ein Validator offline ist). Bei Proof-of-Stake werden Blöcke ~10 % häufiger produziert als bei Proof-of-Work. Dies war eine ziemlich unbedeutende Änderung und wird von Benutzern wahrscheinlich nicht bemerkt.
@@ -161,8 +161,8 @@ Proof-of-Stake führte das Konzept der Transaktions-Endgültigkeit ein, das es v
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Irrglaube: &quot;Der Merge hat Staking-Abhebungen ermöglicht.&quot;"
+contentPreview="Falsch, aber Staking-Abhebungen wurden inzwischen durch das Shanghai/Capella-Upgrade ermöglicht.">
 
 Anfänglich nach dem Merge konnten Staker nur auf Gebühren-Trinkgelder und MEV zugreifen, die als Ergebnis von Blockvorschlägen verdient wurden. Diese Belohnungen werden einem Nicht-Staking-Konto gutgeschrieben, das vom Validator kontrolliert wird (bekannt als <em>Gebührenempfänger</em>), und sind sofort verfügbar. Diese Belohnungen sind getrennt von Protokollbelohnungen für die Erfüllung von Validator-Pflichten.
 
@@ -173,8 +173,8 @@ Seit dem Shanghai/Capella-Netzwerk-Upgrade können Staker nun eine <em>Abhebungs
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="Irrglaube: &quot;Jetzt, da der Merge abgeschlossen ist und Abhebungen möglich sind, könnten alle Staker auf einmal austreten.&quot;"
+contentPreview="Falsch. Validator-Austritte sind aus Sicherheitsgründen ratenlimitiert.">
 Da das Shanghai/Capella-Upgrade Abhebungen ermöglichte, haben Validatoren einen Anreiz, ihr Staking-Guthaben über 32 ETH abzuheben, da diese Gelder nicht zur Rendite beitragen und ansonsten gesperrt sind. Abhängig von der APR (bestimmt durch die gesamten gestakten ETH) können sie einen Anreiz haben, mit ihrem Validator (oder ihren Validatoren) einen Austritt durchzuführen, um ihr gesamtes Guthaben zurückzufordern, oder möglicherweise noch mehr zu staken, indem sie ihre Belohnungen verwenden, um mehr Rendite zu erzielen.
 
 Ein wichtiger Vorbehalt hierbei ist, dass vollständige Validator-Austritte durch das Protokoll ratenbegrenzt sind und nur eine bestimmte Anzahl von Validatoren pro Epoche (alle 6,4 Minuten) austreten darf. Dieses Limit schwankt je nach Anzahl der aktiven Validatoren, läuft aber darauf hinaus, dass an einem einzigen Tag etwa 0,33 % der gesamten gestakten ETH aus dem Netzwerk abgezogen werden können.

@@ -59,8 +59,8 @@ _Стоит повторить_: как пользователю или держ
 ### Операторы узлов и разработчики dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Операторы узлов для стейкинга и провайдеры"
+contentPreview="Если вы стейкер, запустивший собственный узел, или провайдер инфраструктуры узлов, вам нужно знать о нескольких вещах после Слияния."
 id="staking-node-operators">
 
 Ключевые действия включают:
@@ -75,8 +75,8 @@ id="staking-node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Операторы невалидирующих узлов и провайдеры инфраструктуры"
+contentPreview="Если вы управляете невалидирующим узлом Эфириума, самым значительным изменением после Слияния стало требование запускать клиенты КАК для уровня исполнения, ТАК И для уровня консенсуса."
 id="node-operators">
 
 Вплоть до Слияния клиента исполнения (такого как Go Ethereum (Geth), Эригон, Бесу или Незермайнд) было достаточно для получения, надлежащей проверки и распространения блоков, передаваемых по сети. _После Слияния_ валидность транзакций, содержащихся в полезной нагрузке исполнения, теперь также зависит от валидности «блока консенсуса», в котором она содержится.
@@ -93,8 +93,8 @@ id="node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Разработчики dapp и смарт-контрактов"
+contentPreview="Слияние было задумано так, чтобы оказать минимальное влияние на разработчиков смарт-контрактов и dapp."
 id="developers">
 
 Слияние принесло изменения в консенсус, которые также включают изменения, связанные с:
@@ -122,8 +122,8 @@ id="developers">
 ## Заблуждения о Слиянии {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Заблуждение: &quot;Для запуска узла требуется стейкинг 32 ETH.&quot;"
+contentPreview="Неверно. Любой желающий может синхронизировать собственную самопроверяемую копию Эфириума (т. е. запустить узел). Для этого не требуется ETH — ни до Слияния, ни после Слияния, вообще никогда.">
 
 Существует два типа узлов Эфириума: узлы, которые могут предлагать блоки, и узлы, которые не могут.
 
@@ -140,8 +140,8 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Заблуждение: &quot;Слияние не привело к снижению комиссий за газ.&quot;"
+contentPreview="Неверно. Слияние стало изменением механизма консенсуса, а не расширением пропускной способности сети, и никогда не предназначалось для снижения комиссий за газ.">
 
 Комиссии за газ являются результатом спроса в сети по отношению к ее пропускной способности. Слияние отменило использование доказательства выполнения работы, перейдя на доказательство доли владения для консенсуса, но не изменило существенно никаких параметров, которые напрямую влияют на емкость или пропускную способность сети.
 
@@ -150,8 +150,8 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="Заблуждение: &quot;Слияние существенно ускорило транзакции.&quot;"
+contentPreview="Неверно. Несмотря на некоторые незначительные изменения, скорость транзакций на уровне 1 осталась примерно такой же, как и до Слияния.">
 «Скорость» транзакции можно измерить несколькими способами, включая время до включения в блок и время до финализации. Оба эти показателя немного изменились, но не так, чтобы пользователи это заметили.
 
 Исторически сложилось так, что при доказательстве выполнения работы целью было появление нового блока каждые ~13,3 секунды. При доказательстве доли владения слоты происходят ровно каждые 12 секунд, каждый из которых дает валидатору возможность опубликовать блок. В большинстве слотов есть блоки, но не обязательно во всех (например, если валидатор не в сети). При доказательстве доли владения блоки производятся примерно на 10% чаще, чем при доказательстве выполнения работы. Это было довольно незначительное изменение, и пользователи вряд ли его заметят.
@@ -161,8 +161,8 @@ contentPreview="False. Though some slight changes exist, transaction speed is mo
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Заблуждение: &quot;Слияние активировало вывод средств из стейкинга.&quot;"
+contentPreview="Неверно, однако вывод средств из стейкинга был активирован позже благодаря обновлению Шанхай/Capella.">
 
 Изначально после Слияния стейкеры могли получить доступ только к чаевым за комиссии и MEV, которые были заработаны в результате предложений блоков. Эти вознаграждения зачисляются на нестейкинговый аккаунт, контролируемый валидатором (известный как <em>получатель комиссий</em>), и доступны немедленно. Эти вознаграждения отделены от вознаграждений Протокола за выполнение обязанностей валидатора.
 
@@ -173,8 +173,8 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="Заблуждение: &quot;Теперь, когда Слияние завершено и вывод средств активирован, все стейкеры могут выйти одновременно.&quot;"
+contentPreview="Неверно. Выход валидаторов ограничен по скорости из соображений безопасности.">
 Поскольку обновление Шанхай/Capella позволило осуществлять вывод средств, валидаторы заинтересованы в выводе своего баланса стейкинга свыше 32 ETH, так как эти средства не увеличивают доходность и в противном случае остаются заблокированными. В зависимости от APR (определяемой общим количеством застейканных ETH), они могут быть заинтересованы в выходе своего валидатора (или валидаторов), чтобы вернуть весь свой баланс, или потенциально застейкать еще больше, используя свои вознаграждения для получения большей доходности.
 
 Важное предостережение: полные выходы валидаторов ограничены Протоколом по скорости, и только определенное количество валидаторов может выйти за эпоху (каждые 6,4 минуты). Этот предел колеблется в зависимости от количества активных валидаторов, но в итоге составляет примерно 0,33% от общего количества застейканных ETH, которые могут быть выведены из сети за один день.

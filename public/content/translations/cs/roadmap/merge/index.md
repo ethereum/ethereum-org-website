@@ -59,8 +59,8 @@ Navzdory výměně důkazu prací (PoW) zůstala celá historie Etherea od genes
 ### Provozovatelé uzlů a vývojáři dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Provozovatelé a poskytovatelé staking uzlů"
+contentPreview="Pokud jste staker provozující vlastní uzel nebo poskytovatel infrastruktury uzlů, je několik věcí, o kterých byste po Merge měli vědět."
 id="staking-node-operators">
 
 Klíčové kroky zahrnují:
@@ -75,8 +75,8 @@ Nenastavení `fee recipient` sice umožní vašemu validátoru chovat se jako ob
 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Provozovatelé nevalidujících uzlů a poskytovatelé infrastruktury"
+contentPreview="Pokud provozujete nevalidující uzel Etherea, nejvýznamnější změnou, která přišla s Merge, byl požadavek na provozování klientů JAK pro exekuční vrstvu, TAK pro vrstvu konsensu."
 id="node-operators">
 
 Až do Merge stačil exekuční klient (jako Go Ethereum (Geth), Erigon, Besu nebo Nethermind) k přijímání, správnému ověřování a šíření bloků, které si síť předávala. _Po Merge_ nyní platnost transakcí obsažených v exekučním payloadu závisí také na platnosti „bloku konsensu“, ve kterém je obsažen.
@@ -93,8 +93,8 @@ Nedokončení výše uvedených bodů bude mít za následek, že se váš uzel 
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Vývojáři dapp a chytrých kontraktů"
+contentPreview="Merge byl navržen tak, aby měl minimální dopad na vývojáře chytrých kontraktů a dapp."
 id="developers">
 
 Merge přinesl změny v konsensu, což zahrnuje i změny týkající se:
@@ -122,8 +122,8 @@ Merge také připravil půdu pro další aktualizace škálovatelnosti, které n
 ## Mylné představy o Merge {#misconceptions}
 
 <ExpandableCard
-title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Mýtus: &quot;Provozování uzlu vyžaduje staking 32 ETH.&quot;"
+contentPreview="Nepravda. Kdokoli si může svobodně synchronizovat vlastní, samostatně ověřenou kopii Etherea (tj. provozovat uzel). Není k tomu potřeba žádné ETH – ani před Merge, ani po Merge, prostě nikdy.">
 
 Existují dva typy uzlů Etherea: uzly, které mohou navrhovat bloky, a uzly, které nemohou.
 
@@ -140,8 +140,8 @@ Možnost kohokoli provozovat vlastní uzel je <em>naprosto nezbytná</em> pro za
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Mýtus: &quot;Merge nesnížil poplatky za gas.&quot;"
+contentPreview="Nepravda. Merge byl změnou mechanismu konsensu, nikoli rozšířením kapacity sítě, a nikdy neměl za cíl snížit poplatky za gas.">
 
 Poplatky za gas jsou produktem poptávky v síti v poměru k její kapacitě. Merge ukončil používání důkazu prací (PoW) a přešel na důkaz podílem (PoS) pro konsensus, ale nijak významně nezměnil žádné parametry, které by přímo ovlivňovaly kapacitu nebo propustnost sítě.
 
@@ -150,8 +150,8 @@ S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/46
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
+title="Mýtus: &quot;Transakce byly díky Merge podstatně zrychleny.&quot;"
+contentPreview="Nepravda. Ačkoli existují drobné změny, rychlost transakcí je nyní na vrstvě 1 většinou stejná jako před Merge.">
 „Rychlost“ transakce lze měřit několika způsoby, včetně času do zařazení do bloku a času do finalizace. Obojí se mírně mění, ale ne tak, aby si toho uživatelé všimli.
 
 Historicky bylo u důkazu prací (PoW) cílem mít nový blok každých ~13,3 sekundy. V rámci důkazu podílem (PoS) se sloty objevují přesně každých 12 sekund, přičemž každý z nich je příležitostí pro validátora publikovat blok. Většina slotů má bloky, ale ne nutně všechny (např. validátor je offline). V důkazu podílem (PoS) jsou bloky produkovány o ~10 % častěji než u důkazu prací (PoW). Byla to poměrně nevýznamná změna a je nepravděpodobné, že by si jí uživatelé všimli.
@@ -161,8 +161,8 @@ Důkaz podílem (PoS) zavedl koncept finality transakcí, který dříve neexist
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Mýtus: &quot;Merge umožnil výběry ze stakingu.&quot;"
+contentPreview="Nepravda, ale výběry ze stakingu byly od té doby umožněny prostřednictvím upgradu Šanghaj/Capella.">
 
 Zpočátku po Merge měli stakeři přístup pouze ke spropitným z poplatků a MEV, které získali jako výsledek návrhů bloků. Tyto odměny jsou připisovány na nestakovací účet kontrolovaný validátorem (známý jako <em>příjemce poplatků</em>) a jsou k dispozici okamžitě. Tyto odměny jsou oddělené od odměn protokolu za plnění povinností validátora.
 
@@ -173,8 +173,8 @@ Od aktualizace sítě Šanghaj/Capella mohou nyní stakeři určit <em>adresu pr
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
+title="Mýtus: &quot;Nyní, když je Merge dokončen a výběry jsou povoleny, by všichni stakeři mohli vystoupit najednou.&quot;"
+contentPreview="Nepravda. Výstupy validátorů jsou z bezpečnostních důvodů rychlostně omezeny.">
 Vzhledem k tomu, že aktualizace Šanghaj/Capella umožnila výběry, jsou validátoři motivováni k výběru svého stakovacího zůstatku nad 32 ETH, protože tyto prostředky nezvyšují výnos a jsou jinak uzamčeny. V závislosti na APR (určeném celkovým stakovaným ETH) mohou být motivováni k výstupu svého validátoru (nebo validátorů), aby získali zpět celý svůj zůstatek, nebo případně stakovali ještě více pomocí svých odměn, aby získali větší výnos.
 
 Důležité upozornění: úplné výstupy validátorů jsou protokolem rychlostně omezeny a za epochu (každých 6,4 minuty) může vystoupit pouze určitý počet validátorů. Tento limit kolísá v závislosti na počtu aktivních validátorů, ale vychází na přibližně 0,33 % z celkového stakovaného ETH, které může být ze sítě vybráno za jediný den.
