@@ -59,6 +59,6 @@ La plupart des IDE ont permis de construire des plugins pour améliorer l'expér
 
 ## En savoir plus {#further-reading}
 
-- [IDE Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _– La liste d'IDE Ethereum d'Alchemy_
+- [IDE Ethereum](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _– La liste d'IDE Ethereum d'Alchemy_
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

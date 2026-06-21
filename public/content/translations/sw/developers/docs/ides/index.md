@@ -59,6 +59,6 @@ IDE nyingi zilizoanzishwa zimeunda programu-jalizi ili kuboresha uzoefu wa maend
 
 ## Masomo zaidi {#further-reading}
 
-- [IDE za Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Orodha ya Alchemy ya IDE za Ethereum_
+- [IDE za Ethereum](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Orodha ya Alchemy ya IDE za Ethereum_
 
 _Unajua rasilimali ya jamii iliyokusaidia?_ Hariri ukurasa huu na uiongeze!_

@@ -59,6 +59,6 @@ lang: tr
 
 ## Daha fazla kaynak {#further-reading}
 
-- [Ethereum IDE'leri](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy'nin Ethereum IDE'leri listesi_
+- [Ethereum IDE'leri](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Alchemy'nin Ethereum IDE'leri listesi_
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
