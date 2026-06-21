@@ -81,4 +81,4 @@ incomplete: true
 ## অন্যান্য একত্রিত তালিকা {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: Ethereum ডেভেলপার টুলসের একটি নির্দিষ্ট তালিকা](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub সোর্স](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: Ethereum ডেভেলপার টুলসের একটি নির্দিষ্ট তালিকা](https://github.com/ConsenSys/ethereum-developer-tools-list)

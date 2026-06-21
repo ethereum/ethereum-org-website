@@ -81,4 +81,4 @@ incomplete: true
 ## 其他汇总列表 {#other-aggregated-lists}
 
 - [以太坊精选资源](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys：以太坊开发者工具权威列表](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub 源代码](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys：以太坊开发者工具权威列表](https://github.com/ConsenSys/ethereum-developer-tools-list)

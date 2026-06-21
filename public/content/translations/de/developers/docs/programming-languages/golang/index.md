@@ -81,4 +81,4 @@ Sind Sie an weiteren Informationen interessiert? Besuchen Sie [ethereum.org/deve
 ## Andere zusammengefasste Listen {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: Eine endgültige Liste von Ethereum-Entwickler-Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub-Quelle](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: Eine endgültige Liste von Ethereum-Entwickler-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list)

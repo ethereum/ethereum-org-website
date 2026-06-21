@@ -81,4 +81,4 @@ incomplete: true
 ## Інші зведені списки {#other-aggregated-lists}
 
 - [Чудовий Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: повний список інструментів для розробників Ethereum](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Джерело на GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: повний список інструментів для розробників Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list)

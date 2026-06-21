@@ -83,7 +83,7 @@ Esta función es una `view`, lo que significa que puede leer el estado de la cad
 
 ### Eventos {#events}
 
-Se emiten [eventos](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) para informar de los eventos a los usuarios y servidores que están fuera de la cadena de bloques. Tenga en cuenta que el contenido de los eventos no está disponible para los contratos en la cadena de bloques.
+Se emiten [eventos](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts) para informar de los eventos a los usuarios y servidores que están fuera de la cadena de bloques. Tenga en cuenta que el contenido de los eventos no está disponible para los contratos en la cadena de bloques.
 
 ```python
 # @dev Se emite cuando la propiedad de cualquier NFT cambia por cualquier mecanismo. Este evento se emite cuando los NFT se

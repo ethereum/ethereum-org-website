@@ -81,4 +81,4 @@ Hledáte další informační zdroje? Podívejte se na [ethereum.org/developers]
 ## Další souhrnné seznamy {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: Definitivní seznam vývojářských nástrojů pro Ethereum](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Zdroj na GitHubu](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: Definitivní seznam vývojářských nástrojů pro Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list)

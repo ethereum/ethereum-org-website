@@ -277,7 +277,6 @@ Pia, si mara zote inawezekana kwa wathibitishaji wa programu kubaini kama sifa (
 ## Masomo zaidi {#further-reading}
 
 - [Jinsi Uthibitishaji Rasmi wa Mikataba-erevu Unavyofanya Kazi](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [Jinsi Uthibitishaji Rasmi Unavyoweza Kuhakikisha Mikataba-erevu Isiyo na Kasoro](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [Muhtasari wa Miradi ya Uthibitishaji Rasmi katika Mfumo Ikolojia wa Ethereum](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [Uthibitishaji Rasmi wa Mwanzo hadi Mwisho wa Mkataba-erevu wa Amana wa Ethereum 2.0](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [Kuthibitisha Rasmi Mkataba-erevu Maarufu Zaidi Duniani](https://www.zellic.io/blog/formal-verification-weth)

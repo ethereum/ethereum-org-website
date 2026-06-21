@@ -277,7 +277,6 @@ function safe_add(uint x, uint y) returns(uint z){
 ## 扩展阅读{#further-reading}
 
 - [智能合约形式化验证的工作原理](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [形式化验证如何确保智能合约完美无瑕](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [以太坊生态系统中的形式化验证项目概述](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [以太坊 2.0 存款智能合约的端到端形式化验证](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [对全球最流行的智能合约进行形式化验证](https://www.zellic.io/blog/formal-verification-weth)

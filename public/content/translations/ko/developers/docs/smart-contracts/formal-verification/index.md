@@ -277,7 +277,6 @@ function safe_add(uint x, uint y) returns(uint z){
 ## 더 읽어보기 {#further-reading}
 
 - [스마트 계약의 형식 검증 작동 방식](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [형식 검증이 완벽한 스마트 계약을 보장하는 방법](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [이더리움 생태계의 형식 검증 프로젝트 개요](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [이더리움 2.0 예치 스마트 계약의 종단 간 형식 검증](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [세계에서 가장 인기 있는 스마트 계약 형식 검증하기](https://www.zellic.io/blog/formal-verification-weth)

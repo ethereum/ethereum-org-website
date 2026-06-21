@@ -95,7 +95,7 @@ ERC-721 поддерживает два типа перевода:
 
 ### События {#events}
 
-[События](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e)
+[События](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts)
 создаются для информирования пользователей и серверов за пределами блокчейна о событиях. Обратите внимание, что содержимое событий
 недоступно контрактам в блокчейне.
 

@@ -81,4 +81,4 @@ incomplete: true
 ## பிற திரட்டப்பட்ட பட்டியல்கள் {#other-aggregated-lists}
 
 - [ஆஸம் எத்தேரியம்](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: எத்தேரியம் உருவாக்குநர் கருவிகளின் ஒரு உறுதியான பட்டியல்](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub மூலம்](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: எத்தேரியம் உருவாக்குநர் கருவிகளின் ஒரு உறுதியான பட்டியல்](https://github.com/ConsenSys/ethereum-developer-tools-list)

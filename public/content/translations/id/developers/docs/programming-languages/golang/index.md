@@ -79,4 +79,4 @@ Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers](/developers
 ## Daftar artikel lainnya {#other-aggregated-lists}
 
 - [Ethereum yang Menakjubkan](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: Sebuah Daftar Definitif untuk Peralatan Pengembang Ethereum](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [sumber GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: Sebuah Daftar Definitif untuk Peralatan Pengembang Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list)

@@ -81,7 +81,7 @@ Fungsi ini merupakan sebuah `view`, yang berarti dapat membaca status blockchain
 
 ### Aksi {#events}
 
-[Aksi](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) dipancarkan untuk memberitahu aksi kepada pengguna dan server yang ada di luar blockchain. Perhatikan bahwa konten aksi tidak tersedia untuk kontrak di blockchain.
+[Aksi](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts) dipancarkan untuk memberitahu aksi kepada pengguna dan server yang ada di luar blockchain. Perhatikan bahwa konten aksi tidak tersedia untuk kontrak di blockchain.
 
 ```python
 # @dev Emits when ownership of any NFT changes by any mechanism. This event emits when NFTs are

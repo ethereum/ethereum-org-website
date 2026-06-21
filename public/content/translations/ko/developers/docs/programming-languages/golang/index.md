@@ -81,4 +81,4 @@ incomplete: true
 ## 기타 수집된 목록 {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: 이더리움 개발자 도구 최종 목록](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub 소스](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: 이더리움 개발자 도구 최종 목록](https://github.com/ConsenSys/ethereum-developer-tools-list)

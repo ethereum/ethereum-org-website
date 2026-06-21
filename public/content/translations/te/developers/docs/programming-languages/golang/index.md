@@ -81,4 +81,4 @@ incomplete: true
 ## ఇతర సమగ్ర జాబితాలు {#other-aggregated-lists}
 
 - [ఆసమ్ Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [కాన్సెన్సిస్: Ethereum డెవలపర్ టూల్స్ యొక్క ఒక నిశ్చయాత్మక జాబితా](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub సోర్స్](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [కాన్సెన్సిస్: Ethereum డెవలపర్ టూల్స్ యొక్క ఒక నిశ్చయాత్మక జాబితా](https://github.com/ConsenSys/ethereum-developer-tools-list)

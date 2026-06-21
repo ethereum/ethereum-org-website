@@ -81,4 +81,4 @@ Daha fazla kaynak mı arıyorsunuz? [ethereum.org/developers](/developers/) adre
 ## Diğer derlenmiş listeler {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: Ethereum Geliştirici Araçlarının Kesin Listesi](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub kaynağı](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: Ethereum Geliştirici Araçlarının Kesin Listesi](https://github.com/ConsenSys/ethereum-developer-tools-list)

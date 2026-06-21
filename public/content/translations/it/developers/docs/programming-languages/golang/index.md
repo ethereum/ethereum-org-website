@@ -81,4 +81,4 @@ Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/)
 ## Altri elenchi aggregati {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Fonte GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: A Definitive List of Ethereum Developer Tools](https://github.com/ConsenSys/ethereum-developer-tools-list)

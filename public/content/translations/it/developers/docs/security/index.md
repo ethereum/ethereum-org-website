@@ -259,7 +259,6 @@ Niente può sostituire la conoscenza dei principi di base della sicurezza di Eth
 **Informazioni sulla verifica formale**
 
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _20 luglio 2018 - Brian Marick_
-- [How Formal Verification Can Ensure Flawless Smart Contract](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _29 gennaio 2018 - Bernard Mueller_
 
 ### Usare gli strumenti {#using-tools}
 

@@ -277,7 +277,6 @@ function safe_add(uint x, uint y) returns(uint z){
 ## మరింత సమాచారం {#further-reading}
 
 - [స్మార్ట్ కాంట్రాక్టుల ఫార్మల్ వెరిఫికేషన్ ఎలా పనిచేస్తుంది](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [ఫార్మల్ వెరిఫికేషన్ దోషరహిత స్మార్ట్ కాంట్రాక్టులను ఎలా నిర్ధారించగలదు](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [ఇతీరియము పర్యావరణ వ్యవస్థలో ఫార్మల్ వెరిఫికేషన్ ప్రాజెక్టుల యొక్క ఒక అవలోకనం](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [ఇతీరియము 2.0 డిపాజిట్ స్మార్ట్ కాంట్రాక్ట్ యొక్క ఎండ్-టు-ఎండ్ ఫార్మల్ వెరిఫికేషన్](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [ప్రపంచంలో అత్యంత ప్రజాదరణ పొందిన స్మార్ట్ కాంట్రాక్ట్‌ను అధికారికంగా ధృవీకరించడం](https://www.zellic.io/blog/formal-verification-weth)

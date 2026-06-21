@@ -96,7 +96,7 @@ This function is a `view`, which means it can read the state of the blockchain, 
 
 ### Events {#events}
 
-[Events](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e)
+[Events](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts)
 are emitted to inform users and servers outside of the blockchain of events. Note that the content of events
 is not available to contracts on the blockchain.
 

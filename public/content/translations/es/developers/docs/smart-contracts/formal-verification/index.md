@@ -277,7 +277,6 @@ Además, no siempre es posible que los verificadores de programas determinen si 
 ## Lecturas adicionales {#further-reading}
 
 - [Cómo funciona la verificación formal de los contratos inteligentes](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [Cómo la verificación formal puede garantizar contratos inteligentes impecables](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [Una descripción general de los proyectos de verificación formal en el ecosistema de Ethereum](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [Verificación formal de extremo a extremo del contrato inteligente de depósito de Ethereum 2.0](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [Verificación formal del contrato inteligente más popular del mundo](https://www.zellic.io/blog/formal-verification-weth)

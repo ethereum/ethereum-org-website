@@ -85,7 +85,7 @@ Bu işlev bir `view`'dur, yani blokzincirin durumunu okuyabilir, ancak değişti
 
 ### Olaylar {#events}
 
-[Olaylar](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) blokzincir dışındaki kullanıcıları ve sunucuları olaylar hakkında bilgilendirmek için yayınlanır. Olayların içeriğinin blokzincirdeki sözleşmeler için mevcut olmadığını unutmayın.
+[Olaylar](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts) blokzincir dışındaki kullanıcıları ve sunucuları olaylar hakkında bilgilendirmek için yayınlanır. Olayların içeriğinin blokzincirdeki sözleşmeler için mevcut olmadığını unutmayın.
 
 ```python
 # @dev Herhangi bir NFT'nin mülkiyeti herhangi bir mekanizma ile değiştiğinde yayınlanır. Bu olay, NFT'ler

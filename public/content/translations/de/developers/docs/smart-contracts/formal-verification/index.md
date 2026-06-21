@@ -277,7 +277,6 @@ Außerdem ist es für Programmverifizierer nicht immer möglich festzustellen, o
 ## Weiterführende Lektüre {#further-reading}
 
 - [Wie die formale Verifizierung von Smart Contracts funktioniert](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [Wie formale Verifizierung fehlerfreie Smart Contracts gewährleisten kann](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [Ein Überblick über formale Verifizierungsprojekte im Ethereum-Ökosystem](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [Durchgängige formale Verifizierung des Ethereum 2.0 Einzahlungs-Smart-Contracts](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [Formale Verifizierung des beliebtesten Smart Contracts der Welt](https://www.zellic.io/blog/formal-verification-weth)

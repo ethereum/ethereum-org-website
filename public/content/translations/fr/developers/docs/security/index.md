@@ -259,7 +259,6 @@ Bien qu'il n'y ait pas de substitut à la compréhension des bases de sécurité
 **Informations sur la vérification formelle**
 
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _- Brian Marick, 20 juillet 2018_
-- [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _29 - Bernard Mueller, janvier 2018_
 
 ### Utilisation d'outils {#using-tools}
 

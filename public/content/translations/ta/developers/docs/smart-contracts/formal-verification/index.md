@@ -277,7 +277,6 @@ function safe_add(uint x, uint y) returns(uint z){
 ## மேலும் வாசிக்க {#further-reading}
 
 - [ஸ்மார்ட் ஒப்பந்தங்களின் ஃபார்மல் வெரிஃபிகேஷன் எவ்வாறு செயல்படுகிறது](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [ஃபார்மல் வெரிஃபிகேஷன் எவ்வாறு குறைபாடற்ற ஸ்மார்ட் ஒப்பந்தங்களை உறுதிசெய்ய முடியும்](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [Ethereum சூழல் அமைப்பில் உள்ள ஃபார்மல் வெரிஃபிகேஷன் திட்டங்களின் ஒரு மேலோட்டம்](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [Ethereum 2.0 டெபாசிட் ஸ்மார்ட் ஒப்பந்தத்தின் முழுமையான ஃபார்மல் வெரிஃபிகேஷன்](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [உலகின் மிகவும் பிரபலமான ஸ்மார்ட் ஒப்பந்தத்தை முறையாக சரிபார்த்தல்](https://www.zellic.io/blog/formal-verification-weth)

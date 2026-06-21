@@ -84,7 +84,7 @@ ERC-721 토큰 ID는 256비트입니다. 일반적으로 토큰이 나타내는 
 
 ### 이벤트 {#events}
 
-[이벤트](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e)는 블록체인 외부의 사용자와 서버에 이벤트를 알리기 위해 발생됩니다. 이벤트의 내용은 블록체인의 계약에서 사용할 수 없습니다.
+[이벤트](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts)는 블록체인 외부의 사용자와 서버에 이벤트를 알리기 위해 발생됩니다. 이벤트의 내용은 블록체인의 계약에서 사용할 수 없습니다.
 
 ```python
 # @dev 모든 NFT의 소유권이 어떤 메커니즘으로든 변경될 때 발생합니다. 이 이벤트는 NFT가

@@ -277,7 +277,6 @@ Také není vždy možné, aby ověřovatelé programů určili, zda je vlastnos
 ## Další čtení {#further-reading}
 
 - [Jak funguje formální ověření chytrých kontraktů](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [Jak může formální ověření zajistit bezchybné chytré kontrakty](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [Přehled projektů formálního ověření v ekosystému Etherea](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [End-to-end formální ověření chytrého kontraktu pro vklad na Ethereum 2.0](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [Formální ověření nejoblíbenějšího chytrého kontraktu na světě](https://www.zellic.io/blog/formal-verification-weth)

@@ -81,4 +81,4 @@ incomplete: true
 ## その他の集約リスト {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: イーサリアム開発者ツールの完全版リスト](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-215974) | [GitHubソース](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: イーサリアム開発者ツールの完全版リスト](https://github.com/ConsenSys/ethereum-developer-tools-list)

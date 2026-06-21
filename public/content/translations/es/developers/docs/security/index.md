@@ -259,7 +259,6 @@ Aunque no hay sustituto para entender los conceptos básicos de seguridad de Eth
 **Información sobre la verificación formal**
 
 - [Cómo funciona la verificación formal en los contratos inteligentes](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/), _20 de julio 2018, Brian Marick_
-- [Cómo puede la verificación formal garantizar la perfección de los contratos inteligentes](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1), _29 de enero 2018, Bernard Mueller_
 
 ### Uso de herramientas {#using-tools}
 
