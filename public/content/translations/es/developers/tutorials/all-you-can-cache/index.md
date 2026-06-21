@@ -757,7 +757,7 @@ Esta es la forma en que verificamos que el código [emite un evento correctament
 
 ### El cliente {#the-client}
 
-Una cosa que no se consigue con las pruebas de Solidity es un código JavaScript para cortar y pegar en su propia aplicación. Para escribir ese código, desplegué WORM en [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), la nueva red de prueba de [Optimism](https://www.optimism.io/). Está en la dirección [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Una cosa que no se consigue con las pruebas de Solidity es un código JavaScript para cortar y pegar en su propia aplicación. Para escribir ese código, desplegué WORM en [Optimism Goerli](https://docs.optimism.io/op-stack/introduction/op-stack), la nueva red de prueba de [Optimism](https://www.optimism.io/). Está en la dirección [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://testnet-explorer.optimism.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Puede ver el código JavaScript para el cliente aquí](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Para usarlo:
 
@@ -784,8 +784,8 @@ Una cosa que no se consigue con las pruebas de Solidity es un código JavaScript
 
    | Parámetro                                                     | Valor                                                                                                                                                                                                     |
    | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC                                                      | El mnemónico de una cuenta que tiene suficiente ETH para pagar una transacción. [Puede obtener ETH gratis para la red Optimism Goerli aquí](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL a Optimism Goerli. El punto de conexión público, `https://goerli.optimism.io`, tiene una tasa limitada pero es suficiente para lo que necesitamos aquí.               |
+   | MNEMONIC                                                      | El mnemónico de una cuenta que tiene suficiente ETH para pagar una transacción. [Puede obtener ETH gratis para la red Optimism Goerli aquí](https://docs.optimism.io/app-developers/tools/faucets). |
+   | OPTIMISM_GOERLI_URL | URL a Optimism Goerli. El punto de conexión público, `https://sepolia.optimism.io`, tiene una tasa limitada pero es suficiente para lo que necesitamos aquí.               |
 
 5. Ejecute `index.js`.
 

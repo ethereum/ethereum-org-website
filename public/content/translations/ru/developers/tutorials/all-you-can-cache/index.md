@@ -757,7 +757,7 @@ contract WORM is Cache {
 
 ### Клиент {#the-client}
 
-Единственное, что вы не получаете с тестами Solidity, — это код JavaScript, который можно вырезать и вставить в свое собственное приложение. Чтобы написать этот код, я развернул WORM в [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), новой тестовой сети [Optimism](https://www.optimism.io/). Он находится по адресу [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Единственное, что вы не получаете с тестами Solidity, — это код JavaScript, который можно вырезать и вставить в свое собственное приложение. Чтобы написать этот код, я развернул WORM в [Optimism Goerli](https://docs.optimism.io/op-stack/introduction/op-stack), новой тестовой сети [Optimism](https://www.optimism.io/). Он находится по адресу [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://testnet-explorer.optimism.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Вы можете увидеть код JavaScript для клиента здесь](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Чтобы использовать его:
 
@@ -784,8 +784,8 @@ contract WORM is Cache {
 
    | Параметр                                                      | Значение                                                                                                                                                                                                            |
    | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC                                                      | Мнемоническая фраза для аккаунта, у которого достаточно ETH для оплаты транзакции. [Вы можете получить бесплатный ETH для сети Optimism Goerli здесь](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL для Optimism Goerli. Общедоступная конечная точка `https://goerli.optimism.io` имеет ограничение по скорости, но этого достаточно для того, что нам здесь нужно.                |
+   | MNEMONIC                                                      | Мнемоническая фраза для аккаунта, у которого достаточно ETH для оплаты транзакции. [Вы можете получить бесплатный ETH для сети Optimism Goerli здесь](https://docs.optimism.io/app-developers/tools/faucets). |
+   | OPTIMISM_GOERLI_URL | URL для Optimism Goerli. Общедоступная конечная точка `https://sepolia.optimism.io` имеет ограничение по скорости, но этого достаточно для того, что нам здесь нужно.                |
 
 5. Запустите `index.js`.
 

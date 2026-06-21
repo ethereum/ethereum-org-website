@@ -757,7 +757,7 @@ Vì chúng ta sử dụng hàm `<address>.call()` cấp thấp, chúng ta không
 
 ### Ứng dụng khách {#the-client}
 
-Một điều bạn không nhận được với các bài kiểm thử Solidity là mã JavaScript mà bạn có thể cắt và dán vào ứng dụng của riêng mình. Để viết mã đó, tôi đã triển khai WORM lên [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), mạng thử nghiệm mới của [Optimism](https://www.optimism.io/). Nó ở địa chỉ [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Một điều bạn không nhận được với các bài kiểm thử Solidity là mã JavaScript mà bạn có thể cắt và dán vào ứng dụng của riêng mình. Để viết mã đó, tôi đã triển khai WORM lên [Optimism Goerli](https://docs.optimism.io/op-stack/introduction/op-stack), mạng thử nghiệm mới của [Optimism](https://www.optimism.io/). Nó ở địa chỉ [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://testnet-explorer.optimism.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Bạn có thể xem mã JavaScript cho ứng dụng khách tại đây](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Để sử dụng nó:
 
@@ -784,8 +784,8 @@ Một điều bạn không nhận được với các bài kiểm thử Solidity
 
    | Thông số                                                      | Giá trị                                                                                                                                                                                                   |
    | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC                                                      | Cụm từ ghi nhớ cho một tài khoản có đủ ETH để thanh toán cho một giao dịch. [Bạn có thể nhận ETH miễn phí cho mạng Optimism Goerli tại đây](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL đến Optimism Goerli. Điểm cuối công cộng, `https://goerli.optimism.io`, bị giới hạn tốc độ nhưng đủ cho những gì chúng ta cần ở đây                                                   |
+   | MNEMONIC                                                      | Cụm từ ghi nhớ cho một tài khoản có đủ ETH để thanh toán cho một giao dịch. [Bạn có thể nhận ETH miễn phí cho mạng Optimism Goerli tại đây](https://docs.optimism.io/app-developers/tools/faucets). |
+   | OPTIMISM_GOERLI_URL | URL đến Optimism Goerli. Điểm cuối công cộng, `https://sepolia.optimism.io`, bị giới hạn tốc độ nhưng đủ cho những gì chúng ta cần ở đây                                                   |
 
 5. Chạy `index.js`.
 

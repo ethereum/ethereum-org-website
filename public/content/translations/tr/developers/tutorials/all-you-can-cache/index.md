@@ -757,7 +757,7 @@ Bu, Foundry'de kodun [bir olayı doğru şekilde yaydığını](https://getfound
 
 ### İstemci {#the-client}
 
-Solidity testleriyle elde edemeyeceğiniz bir şey, kendi uygulamanıza kesip yapıştırabileceğiniz JavaScript kodudur. Bu kodu yazmak için WORM'u [Optimism'in](https://www.optimism.io/) yeni test ağı olan [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli)'ye dağıttım. Adresi [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a)'dır.
+Solidity testleriyle elde edemeyeceğiniz bir şey, kendi uygulamanıza kesip yapıştırabileceğiniz JavaScript kodudur. Bu kodu yazmak için WORM'u [Optimism'in](https://www.optimism.io/) yeni test ağı olan [Optimism Goerli](https://docs.optimism.io/op-stack/introduction/op-stack)'ye dağıttım. Adresi [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://testnet-explorer.optimism.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a)'dır.
 
 [İstemci için JavaScript kodunu burada görebilirsiniz](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Kullanmak için:
 
@@ -784,8 +784,8 @@ Solidity testleriyle elde edemeyeceğiniz bir şey, kendi uygulamanıza kesip ya
 
    | Parametre                                                     | Değer                                                                                                                                                                                                |
    | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC                                                      | Bir işlemi ödemek için yeterli ETH'ye sahip bir hesabın anımsatıcısı. [Optimism Goerli ağı için ücretsiz ETH'yi buradan alabilirsiniz](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | Optimism Goerli'ye URL. Genel uç nokta, `https://goerli.optimism.io`, hız sınırlıdır ancak burada ihtiyacımız olan şey için yeterlidir                                               |
+   | MNEMONIC                                                      | Bir işlemi ödemek için yeterli ETH'ye sahip bir hesabın anımsatıcısı. [Optimism Goerli ağı için ücretsiz ETH'yi buradan alabilirsiniz](https://docs.optimism.io/app-developers/tools/faucets). |
+   | OPTIMISM_GOERLI_URL | Optimism Goerli'ye URL. Genel uç nokta, `https://sepolia.optimism.io`, hız sınırlıdır ancak burada ihtiyacımız olan şey için yeterlidir                                               |
 
 5. `index.js`'i çalıştırın.
 
