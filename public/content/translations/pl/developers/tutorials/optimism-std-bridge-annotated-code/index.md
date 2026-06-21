@@ -76,7 +76,7 @@ Zawiera on funkcje i definicje wymagane do przenoszenia tokenów ERC-20 za pomoc
 // SPDX-License-Identifier: MIT
 ```
 
-[Większość kodu Optimism jest udostępniana na licencji MIT](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
+[Większość kodu Optimism jest udostępniana na licencji MIT](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

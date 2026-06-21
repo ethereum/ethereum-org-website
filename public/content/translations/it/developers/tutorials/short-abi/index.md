@@ -23,7 +23,7 @@ Parlando di rollup, il termine "livello 1" (L1) è usato per la Rete principale,
 
 ## Come possiamo ridurre ulteriormente il costo delle transazioni su L2? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
 
-I [Rollup ottimistici](/developers/docs/scaling/optimistic-rollups) devono conservare un registro di ogni transazione storica, così che chiunque possa consultarlo e verificare che lo stato corrente sia corretto. Il metodo più economico per inserire dati nella Rete principale di Ethereum è scriverli come calldata. Questa soluzione è stata scelta sia da [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) che da [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+I [Rollup ottimistici](/developers/docs/scaling/optimistic-rollups) devono conservare un registro di ogni transazione storica, così che chiunque possa consultarlo e verificare che lo stato corrente sia corretto. Il metodo più economico per inserire dati nella Rete principale di Ethereum è scriverli come calldata. Questa soluzione è stata scelta sia da [Optimism](https://docs.optimism.io/op-stack/protocol/overview) che da [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
 ### Costo delle transazioni su L2 {#cost-of-l2-transactions}
 

@@ -76,7 +76,7 @@ Ela inclui funções e definições necessárias para a transferência de tokens
 // SPDX-License-Identifier: MIT
 ```
 
-[A maior parte do código do Optimism é lançada sob a licença MIT](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
+[A maior parte do código do Optimism é lançada sob a licença MIT](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

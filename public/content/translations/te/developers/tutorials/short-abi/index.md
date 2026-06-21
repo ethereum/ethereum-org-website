@@ -27,7 +27,7 @@ published: 2022-04-01
 
 [ఆప్టిమిస్టిక్ రోలప్‌లు](/developers/docs/scaling/optimistic-rollups) ప్రతి చారిత్రక లావాదేవీ రికార్డును భద్రపరచాలి, తద్వారా ఎవరైనా వాటి ద్వారా వెళ్లి ప్రస్తుత స్థితి సరైనదని ధృవీకరించగలరు.
 Ethereum మెయిన్‌నెట్‌లోకి డేటాను పొందడానికి చౌకైన మార్గం దానిని కాల్‌డేటాగా వ్రాయడం.
-ఈ పరిష్కారాన్ని [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) మరియు [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) రెండూ ఎంచుకున్నాయి.
+ఈ పరిష్కారాన్ని [Optimism](https://docs.optimism.io/op-stack/protocol/overview) మరియు [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) రెండూ ఎంచుకున్నాయి.
 
 ### L2 లావాదేవీల ఖర్చు {#cost-of-l2-transactions}
 

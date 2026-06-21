@@ -27,7 +27,7 @@ Termín „vrstva 2“ (L2) se používá pro rollup nebo jakýkoli jiný systé
 
 [Optimistické rollupy](/developers/docs/scaling/optimistic-rollups) musí uchovávat záznam o každé historické transakci, aby si je kdokoli mohl projít a ověřit, že aktuální stav je správný.
 Nejlevnější způsob, jak dostat data do hlavní sítě Etherea, je zapsat je jako calldata.
-Toto řešení si zvolily jak [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-), tak [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Toto řešení si zvolily jak [Optimism](https://docs.optimism.io/op-stack/protocol/overview), tak [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
 ### Náklady na transakce L2 {#cost-of-l2-transactions}
 

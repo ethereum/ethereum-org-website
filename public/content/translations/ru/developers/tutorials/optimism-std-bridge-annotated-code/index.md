@@ -76,7 +76,7 @@ lang: ru
 // SPDX-License-Identifier: MIT
 ```
 
-[Большая часть кода Optimism выпущена под лицензией MIT](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
+[Большая часть кода Optimism выпущена под лицензией MIT](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

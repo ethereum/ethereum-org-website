@@ -72,7 +72,7 @@ Questo è il codice eseguito su L1, la rete principale di Ethereum.
 // SPDX-License-Identifier: MIT
 ```
 
-[Gran parte del codice di Optimism è rilasciato sotto la licenza MIT](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
+[Gran parte del codice di Optimism è rilasciato sotto la licenza MIT](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

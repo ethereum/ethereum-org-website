@@ -27,7 +27,7 @@ published: 2022-04-01
 
 [Оптимістичні зведення](/developers/docs/scaling/optimistic-rollups) повинні зберігати записи про кожну історичну транзакцію, щоб кожен міг їх переглянути і переконатися, що поточний стан є правильним.
 Найдешевший спосіб передати дані в Ethereum Mainnet — це записати їх як calldata.
-Це рішення обрали як [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-), так і [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Це рішення обрали як [Optimism](https://docs.optimism.io/op-stack/protocol/overview), так і [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
 ### Вартість транзакцій L2 {#cost-of-l2-transactions}
 

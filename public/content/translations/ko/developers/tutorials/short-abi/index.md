@@ -27,7 +27,7 @@ published: 2022-04-01
 
 [낙관적 롤업](/developers/docs/scaling/optimistic-rollups)은 모든 과거 트랜잭션 기록을 보존해야 합니다. 그래야 누구나 이를 검토하고 현재 상태가 올바른지 확인할 수 있습니다.
 이더리움 메인넷에 데이터를 저장하는 가장 저렴한 방법은 calldata로 작성하는 것입니다.
-이 솔루션은 [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-)과 [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) 모두에서 채택되었습니다.
+이 솔루션은 [Optimism](https://docs.optimism.io/op-stack/protocol/overview)과 [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) 모두에서 채택되었습니다.
 
 ### L2 트랜잭션 비용 {#cost-of-l2-transactions}
 

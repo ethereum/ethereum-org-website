@@ -27,7 +27,7 @@ El término 'capa 2' (L2) se utiliza para el rollup o cualquier otro sistema que
 
 Los [rollups optimistas](/developers/docs/scaling/optimistic-rollups) tienen que preservar un registro de cada transacción histórica para que cualquiera pueda revisarlas y verificar que el estado actual es correcto.
 La forma más barata de obtener datos en la red principal de Ethereum es escribirlos como calldata.
-Esta solución fue elegida tanto por [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) como por [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Esta solución fue elegida tanto por [Optimism](https://docs.optimism.io/op-stack/protocol/overview) como por [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
 ### Costo de las transacciones en L2 {#cost-of-l2-transactions}
 

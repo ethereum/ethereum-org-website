@@ -27,7 +27,7 @@ published: 2022-04-01
 
 [आशावादी रोलअप](/developers/docs/scaling/optimistic-rollups) को हर ऐतिहासिक लेनदेन का रिकॉर्ड रखना होता है ताकि कोई भी उनके माध्यम से जाकर यह सत्यापित कर सके कि वर्तमान स्थिति सही है।
 एथेरियम मेननेट में डेटा प्राप्त करने का सबसे सस्ता तरीका इसे कॉलडेटा के रूप में लिखना है।
-यह समाधान [ऑप्टिमिज़्म](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) और [आर्बिट्रम](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) दोनों द्वारा चुना गया था।
+यह समाधान [ऑप्टिमिज़्म](https://docs.optimism.io/op-stack/protocol/overview) और [आर्बिट्रम](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) दोनों द्वारा चुना गया था।
 
 ### L2 लेनदेन की लागत {#cost-of-l2-transactions}
 

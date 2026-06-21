@@ -27,7 +27,7 @@ published: 2022-04-01
 
 [Оптимистические ролл-апы](/developers/docs/scaling/optimistic-rollups) должны сохранять запись каждой исторической транзакции, чтобы любой мог просмотреть их и проверить правильность текущего состояния.
 Самый дешевый способ передать данные в основную сеть Ethereum — это записать их как calldata.
-Это решение было выбрано как [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-), так и [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Это решение было выбрано как [Optimism](https://docs.optimism.io/op-stack/protocol/overview), так и [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
 ### Стоимость транзакций на L2 {#cost-of-l2-transactions}
 

@@ -76,7 +76,7 @@ Elle inclut les fonctions et les définitions nécessaires au pontage des jetons
 // SPDX-License-Identifier: MIT
 ```
 
-[La plupart du code d'Optimism est publié sous la licence MIT](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
+[La plupart du code d'Optimism est publié sous la licence MIT](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

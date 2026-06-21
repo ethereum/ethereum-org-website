@@ -27,7 +27,7 @@ Thuật ngữ 'lớp 2' (L2) được sử dụng cho rollup hoặc bất kỳ h
 
 [Các gộp giao dịch lạc quan](/developers/docs/scaling/optimistic-rollups) phải lưu giữ bản ghi của mọi giao dịch trong lịch sử để bất kỳ ai cũng có thể xem qua chúng và xác minh rằng trạng thái hiện tại là chính xác.
 Cách rẻ nhất để đưa dữ liệu vào Mạng chính Ethereum là ghi dữ liệu đó dưới dạng calldata.
-Giải pháp này đã được cả [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) và [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) lựa chọn.
+Giải pháp này đã được cả [Optimism](https://docs.optimism.io/op-stack/protocol/overview) và [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) lựa chọn.
 
 ### Chi phí giao dịch L2 {#cost-of-l2-transactions}
 
