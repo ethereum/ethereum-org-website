@@ -271,8 +271,8 @@ Außerdem ist es für Programmverifizierer nicht immer möglich festzustellen, o
 
 **Mythril** – _Ein Werkzeug für die symbolische Ausführung zur Erkennung von Schwachstellen in Ethereum-Smart-Contracts_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Dokumentation](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Dokumentation](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## Weiterführende Lektüre {#further-reading}
 

@@ -184,7 +184,7 @@ Fuzzing ni muhimu kwa kutathmini utaratibu mzuri wa uthibitishaji wa pembejeo za
 
 ### Miongozo ya kufanya upimaji unaozingatia sifa kwa mikataba-erevu {#running-property-based-tests}
 
-Kufanya upimaji unaozingatia sifa kwa kawaida huanza kwa kufafanua sifa (k.m., kutokuwepo kwa [mafuriko ya nambari kamili](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) au mkusanyiko wa sifa ambazo unataka kuthibitisha katika mkataba-erevu. Unaweza pia kuhitaji kufafanua safu ya thamani ambazo programu inaweza kutoa data ya pembejeo za miamala wakati wa kuandika majaribio ya mali.
+Kufanya upimaji unaozingatia sifa kwa kawaida huanza kwa kufafanua sifa (k.m., kutokuwepo kwa [mafuriko ya nambari kamili](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) au mkusanyiko wa sifa ambazo unataka kuthibitisha katika mkataba-erevu. Unaweza pia kuhitaji kufafanua safu ya thamani ambazo programu inaweza kutoa data ya pembejeo za miamala wakati wa kuandika majaribio ya mali.
 
 Baada ya kupangwa ipasavyo, zana ya kupima mali itatekeleza utendakazi wako wa mikataba mahiri kwa ingizo zinazozalishwa bila mpangilio. Iwapo kuna ukiukaji wowote wa madai, unapaswa kupata ripoti iliyo na data thabiti ya ingizo ambayo inakiuka mali inayotathminiwa. Tazama baadhi ya miongozo hapa chini ili kuanza na kuendesha majaribio ya msingi wa mali kwa zana tofauti:
 
@@ -195,7 +195,7 @@ Baada ya kupangwa ipasavyo, zana ya kupima mali itatekeleza utendakazi wako wa m
 - **[Kufanya fuzzing kwenye mikataba na Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Kufanya fuzzing kwenye mikataba na Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Utekelezaji wa ishara wa mikataba-erevu na Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Utekelezaji wa ishara wa mikataba-erevu na Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Utekelezaji wa ishara wa mikataba-erevu na Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## Upimaji wa mikono kwa mikataba-erevu {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Tofauti kuu ni kwamba programu za fadhila za kosa ziko wazi kwa jumuiya pana ya 
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _Mfumo wa utekelezaji wa ishara wa nguvu wa kuchambua bytecode ya EVM._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _Zana ya tathmini ya bytecode ya EVM ya kugundua udhaifu wa mkataba kwa kutumia uchambuzi wa doa, uchambuzi wa concolic, na ukaguzi wa mtiririko wa udhibiti._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _Zana ya tathmini ya bytecode ya EVM ya kugundua udhaifu wa mkataba kwa kutumia uchambuzi wa doa, uchambuzi wa concolic, na ukaguzi wa mtiririko wa udhibiti._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble ni lugha ya vipimo na zana ya uthibitishaji wakati wa utekelezaji inayokuruhusu kufafanua mikataba-erevu na sifa zinazokuwezesha kupima mikataba kiotomatiki na zana kama vile Diligence Fuzzing au MythX._
 

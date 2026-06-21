@@ -271,8 +271,8 @@ De plus, il n'est pas toujours possible pour les vérificateurs de programme de 
 
 **Mythril** - _Un outil d'exécution symbolique pour détecter les vulnérabilités dans les contrats intelligents Ethereum_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Documentation](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Documentation](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## En savoir plus {#further-reading}
 

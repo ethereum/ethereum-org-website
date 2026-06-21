@@ -236,8 +236,8 @@ Niente può sostituire la conoscenza dei principi di base della sicurezza di Eth
 
 **Mythril -** **_Strumento di analisi della sicurezza per bytecode dell'EVM._**
 
-- [mythril](https://github.com/ConsenSys/mythril)
-- [Documentazione](https://mythril-classic.readthedocs.io/en/master/about.html)
+- [mythril](https://github.com/ConsenSysDiligence/mythril)
+- [Documentazione](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/about.rst)
 
 **Manticore -** **_Interfaccia da riga di comando che usa uno strumento di esecuzione simbolica su Smart Contract e file binari_**
 
@@ -266,7 +266,7 @@ Niente può sostituire la conoscenza dei principi di base della sicurezza di Eth
 Due degli strumenti più popolari per l'analisi della sicurezza degli Smart Contract sono:
 
 - [Slither](https://github.com/crytic/slither) di [Trail of Bits](https://www.trailofbits.com/) (versione hosted: [Crytic](https://crytic.io/))
-- [Mythril](https://github.com/ConsenSys/mythril) di [ConsenSys](https://consensys.net/) (versione hosted: [MythX](https://mythx.io/))
+- [Mythril](https://github.com/ConsenSysDiligence/mythril) di [ConsenSys](https://consensys.net/) (versione hosted: [MythX](https://mythx.io/))
 
 Entrambi sono strumenti utili che analizzano il codice e segnalano problemi. Ognuno ha una versione hosted commerciale, ma sono disponibili anche gratuitamente da eseguire localmente. Il seguente è un rapido esempio di come eseguire Slither, che viene reso disponibile in una comoda immagine Docker `trailofbits/eth-security-toolbox`. Dovrai [installare Docker se non lo hai già installato](https://docs.docker.com/get-docker/).
 

@@ -184,7 +184,7 @@ Fuzzing jest przydatne do oceny mechanizmu walidacji danych wejściowych intelig
 
 ### Wskazówki dotyczące przeprowadzania testów opartych na właściwościach dla inteligentnych kontraktów {#running-property-based-tests}
 
-Przeprowadzanie testów opartych na właściwościach zazwyczaj rozpoczyna się od zdefiniowania właściwości (np. braku [przepełnień liczb całkowitych](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) lub zbioru właściwości, które chcesz zweryfikować w inteligentnym kontrakcie. Podczas pisania testów właściwości może być również konieczne zdefiniowanie zakresu wartości, w ramach których program może generować dane dla danych wejściowych transakcji.
+Przeprowadzanie testów opartych na właściwościach zazwyczaj rozpoczyna się od zdefiniowania właściwości (np. braku [przepełnień liczb całkowitych](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) lub zbioru właściwości, które chcesz zweryfikować w inteligentnym kontrakcie. Podczas pisania testów właściwości może być również konieczne zdefiniowanie zakresu wartości, w ramach których program może generować dane dla danych wejściowych transakcji.
 
 Po poprawnym skonfigurowaniu narzędzie do testowania nieruchomości będzie wykonywać funkcje inteligentnych kontraktów przy użyciu losowo generowanych danych wejściowych. Jeśli wystąpią jakiekolwiek naruszenia asercji, powinieneś otrzymać raport z konkretnymi danymi wejściowymi, które naruszają ocenianą właściwość. Aby rozpocząć testowanie oparte na właściwościach za pomocą różnych narzędzi, zapoznaj się z poniższymi przewodnikami:
 
@@ -195,7 +195,7 @@ Po poprawnym skonfigurowaniu narzędzie do testowania nieruchomości będzie wyk
 - **[Fuzzing kontraktów za pomocą Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Fuzzing kontraktów za pomocą Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Symboliczne wykonanie inteligentnych kontraktów za pomocą Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Symboliczne wykonanie inteligentnych kontraktów za pomocą Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Symboliczne wykonanie inteligentnych kontraktów za pomocą Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## Ręczne testowanie inteligentnych kontraktów {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Główną różnicą jest to, że programy nagród za znalezienie błędów są 
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** – _dynamiczny framework do symbolicznego wykonywania analizy kodu bajtowego EVM._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** – _narzędzie do oceny kodu bajtowego EVM do wykrywania luk w kontraktach przy użyciu analizy skażenia, analizy konkolikowej i sprawdzania przepływu sterowania._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** – _narzędzie do oceny kodu bajtowego EVM do wykrywania luk w kontraktach przy użyciu analizy skażenia, analizy konkolikowej i sprawdzania przepływu sterowania._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** – _Scribble to język specyfikacji i narzędzie do weryfikacji w czasie wykonywania, które pozwala na adnotowanie inteligentnych kontraktów właściwościami, które umożliwiają automatyczne testowanie kontraktów za pomocą narzędzi takich jak Diligence Fuzzing lub MythX._
 

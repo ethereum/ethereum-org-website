@@ -184,7 +184,7 @@ Fuzzing je užitečný pro vyhodnocení mechanismu ověřování vstupů chytrý
 
 ### Pokyny pro provádění testování na základě vlastností pro chytré kontrakty {#running-property-based-tests}
 
-Provádění testování založeného na vlastnostech obvykle začíná definováním vlastnosti (např. absence [celočíselného přetečení](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) nebo souboru vlastností, které chcete v chytrém kontraktu ověřit. Při psaní testů vlastností může být také nutné definovat rozsah hodnot, ve kterém může program generovat data pro vstupy transakcí.
+Provádění testování založeného na vlastnostech obvykle začíná definováním vlastnosti (např. absence [celočíselného přetečení](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) nebo souboru vlastností, které chcete v chytrém kontraktu ověřit. Při psaní testů vlastností může být také nutné definovat rozsah hodnot, ve kterém může program generovat data pro vstupy transakcí.
 
 Po správné konfiguraci bude nástroj pro testování vlastností vykonávat funkce vašich chytrých kontraktů s náhodně vygenerovanými vstupy. Pokud dojde k porušení tvrzení, měla by se zobrazit zpráva s konkrétními vstupními daty, která porušují vyhodnocovanou vlastnost. Podívejte se na některé z níže uvedených návodů, které vám pomohou začít s testováním na základě vlastností pomocí různých nástrojů:
 
@@ -195,7 +195,7 @@ Po správné konfiguraci bude nástroj pro testování vlastností vykonávat fu
 - **[Fuzzing kontraktů s Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Fuzzing kontraktů s Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Symbolické provádění chytrých kontraktů s Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Symbolické provádění chytrých kontraktů s Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Symbolické provádění chytrých kontraktů s Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## Ruční testování chytrých kontraktů {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Hlavní rozdíl spočívá v tom, že programy odměn za vyřešení chyb jsou o
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** – _Dynamický framework pro symbolické provádění pro analýzu bytekódu EVM._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** – _Nástroj pro hodnocení bytekódu EVM pro detekci zranitelností kontraktů pomocí taint analýzy, konkolické analýzy a kontroly toku řízení._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** – _Nástroj pro hodnocení bytekódu EVM pro detekci zranitelností kontraktů pomocí taint analýzy, konkolické analýzy a kontroly toku řízení._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** – _Scribble je specifikační jazyk a runtime ověřovací nástroj, který umožňuje anotovat chytré kontrakty vlastnostmi, které umožňují automatické testování kontraktů pomocí nástrojů, jako je Diligence Fuzzing nebo MythX._
 

@@ -235,8 +235,8 @@ contract NoLongerAVictim {
 
 **Mythril -** **_EVM 字节码安全分析工具。_**
 
-- [mythril](https://github.com/ConsenSys/mythril)
-- [相关文档](https://mythril-classic.readthedocs.io/en/master/about.html)
+- [mythril](https://github.com/ConsenSysDiligence/mythril)
+- [相关文档](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/about.rst)
 
 **Manticore -** **_在智能合约和二进制文件上使用符号执行工具的命令行界面。_**
 
@@ -265,7 +265,7 @@ contract NoLongerAVictim {
 智能合约安全分析最受欢迎的两个工具是：
 
 - [Slither](https://github.com/crytic/slither) by [Trail of Bits](https://www.trailofbits.com/)（托管版本：[Crytic](https://crytic.io/)）
-- [Mythril](https://github.com/ConsenSys/mythril) by [ConsenSys](https://consensys.net/)（托管版本：[MythX](https://mythx.io/)）
+- [Mythril](https://github.com/ConsenSysDiligence/mythril) by [ConsenSys](https://consensys.net/)（托管版本：[MythX](https://mythx.io/)）
 
 两者都是分析你的代码和报告问题的有用工具。 每个人都有一个 [commercial] 托管版本，但也可以免费在本地运行。 下面是如何运行 Slither 的一个快速示例，这个示例是在方便的 Docker 映像 `trailofbits/eth-security-toolbox` 中提供的。 如果你还没有安装 ，你将需要 [安装 Docker](https://docs.docker.com/get-docker/)。
 

@@ -271,8 +271,8 @@ Také není vždy možné, aby ověřovatelé programů určili, zda je vlastnos
 
 **Mythril** - _Nástroj pro symbolické provádění k odhalování zranitelností v chytrých kontraktech Etherea_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Dokumentace](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Dokumentace](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## Další čtení {#further-reading}
 

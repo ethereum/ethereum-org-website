@@ -236,8 +236,8 @@ Chociaż nic nie zastąpi zrozumienia podstaw bezpieczeństwa Ethereum i zaanga�
 
 **Mythril —** **_narzędzie do analizy bezpieczeństwa dla kodu bajtowego EVM._**
 
-- [mithril](https://github.com/ConsenSys/mythril)
-- [Dokumentacja](https://mythril-classic.readthedocs.io/en/master/about.html)
+- [mithril](https://github.com/ConsenSysDiligence/mythril)
+- [Dokumentacja](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/about.rst)
 
 **Manticore —** **_interfejs wiersza poleceń, który wykorzystuje symboliczne narzędzie do wykonywania inteligentnych kontraktów i plików binarnych._**
 
@@ -266,7 +266,7 @@ Chociaż nic nie zastąpi zrozumienia podstaw bezpieczeństwa Ethereum i zaanga�
 Dwa najpopularniejsze narzędzia do analizy bezpieczeństwa inteligentnych kontraktów to:
 
 - [Slither](https://github.com/crytic/slither) autorstwa [Trail of Bits](https://www.trailofbits.com/) (hostowana wersja: [Crytic](https://crytic.io/))
-- [Mythril](https://github.com/ConsenSys/mythril) autorstwa [ConsenSys](https://consensys.net/) (hostowana wersja: [MythX](https://mythx.io/))
+- [Mythril](https://github.com/ConsenSysDiligence/mythril) autorstwa [ConsenSys](https://consensys.net/) (hostowana wersja: [MythX](https://mythx.io/))
 
 Oba są użytecznymi narzędziami, które analizują Twój kod i zgłaszają problemy. Każdy ma wersję [commercial] hostowaną, ale są również dostępne za darmo do uruchomienia lokalnie. Poniżej znajduje się szybki przykład jak uruchomić Slither, który jest dostępny w wygodnym obrazie Docker `trailofbits/eth-security-toolbox`. Będziesz musiał [zainstalować Docker, jeśli jeszcze go nie masz](https://docs.docker.com/get-docker/).
 
