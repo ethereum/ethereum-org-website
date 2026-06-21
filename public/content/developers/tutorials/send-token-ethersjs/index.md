@@ -9,7 +9,7 @@ lang: en
 published: 2021-04-06
 ---
 
-## Send Token Using ethers.js(5.0) {#send-token}
+## Send Token Using ethers.js v5 {#send-token}
 
 ### In This Tutorial You'll Learn How To {#you-learn-about}
 
@@ -20,19 +20,19 @@ published: 2021-04-06
 ### To-Get-Started {#to-get-started}
 
 To get started, we must first import the ethers.js library into our javascript
-Include ethers.js(5.0)
+Include ethers.js v5
 
 ### Installing {#install-ethersjs}
 
 ```shell
-/home/ricmoo> npm install --save ethers
+/home/ricmoo> npm install --save ethers@5
 ```
 
 ES6 in the Browser
 
 ```html
 <script type="module">
-  import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
+  import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.esm.min.js"
   // Your code here...
 </script>
 ```
@@ -41,7 +41,7 @@ ES3(UMD) in the Browser
 
 ```html
 <script
-  src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
+  src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"
   type="application/javascript"
 ></script>
 ```
