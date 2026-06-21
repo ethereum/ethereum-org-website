@@ -47,7 +47,7 @@ An NFT's metadata is really what brings it to life, allowing it to have properti
 
 In this tutorial, we're going to focus on part 2, calling an existing NFT's smart contract minting function using our React UI.
 
-[Here's a link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) to the ERC-721 NFT smart contract we will be calling in this tutorial. If you'd like to learn how we made it, we highly recommend that you check out our other tutorial, ["How to Create an NFT"](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
+[Here's a link](https://www.alchemy.com/docs/how-to-create-an-nft) to the ERC-721 NFT smart contract we will be calling in this tutorial. If you'd like to learn how we made it, we highly recommend that you check out our other tutorial, ["How to Create an NFT"](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
 
 Cool, now that we understand how making an NFT works, let's clone our starter files!
 
@@ -208,7 +208,7 @@ Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://m
 
 ### Add ether from a Faucet {#add-ether-from-faucet}
 
-In order to mint our NFTs (or sign any transactions on the Ethereum blockchain), we’ll need some fake Eth. To get Eth you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your MetaMask account soon after!
+In order to mint our NFTs (or sign any transactions on the Ethereum blockchain), we’ll need some fake Eth. To get Eth you can go to the [Ropsten faucet](https://www.alchemy.com/faucets/ethereum-sepolia) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your MetaMask account soon after!
 
 ### Check your balance {#check-your-balance}
 
@@ -580,7 +580,7 @@ As with our `connectWallet`function return types, we're returning JSON objects s
 
 Now that we have a way to upload our NFT metadata to IPFS via our `pinJSONToIPFS` function, we're going to need a way to load an instance of our smart contract so we can call its `mintNFT` function.
 
-As we mentioned earlier, in this tutorial we will be using [this existing NFT smart contract](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); however, if you'd like to learn how we made it, or make one yourself, we highly recommend you check out our other tutorial, ["How to Create an NFT."](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
+As we mentioned earlier, in this tutorial we will be using [this existing NFT smart contract](https://www.alchemy.com/docs/how-to-create-an-nft); however, if you'd like to learn how we made it, or make one yourself, we highly recommend you check out our other tutorial, ["How to Create an NFT."](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
 
 ### The contract ABI {#contract-abi}
 
@@ -607,7 +607,7 @@ Awesome so now that we've created our HTTP Alchemy API URL, copy it to your clip
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 Now that we have our contract ABI and our Alchemy API key, we're ready to load our smart contract using [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
@@ -749,7 +749,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://sepolia.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -819,7 +819,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+        "✅ Check out your transaction on Etherscan: https://sepolia.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {

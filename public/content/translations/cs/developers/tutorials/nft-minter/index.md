@@ -48,7 +48,7 @@ Metadata NFT jsou to, co ho skutečně oživuje a umožňuje mu mít vlastnosti,
 
 V tomto návodu se zaměříme na část 2, volání funkce mintování existujícího chytrého kontraktu NFT pomocí našeho uživatelského rozhraní React.
 
-[Zde je odkaz](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) na chytrý kontrakt ERC-721 NFT, který budeme v tomto návodu volat. Pokud byste se chtěli dozvědět, jak jsme ho vytvořili, vřele doporučujeme podívat se na náš další návod, ["Jak vytvořit NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
+[Zde je odkaz](https://www.alchemy.com/docs/how-to-create-an-nft) na chytrý kontrakt ERC-721 NFT, který budeme v tomto návodu volat. Pokud byste se chtěli dozvědět, jak jsme ho vytvořili, vřele doporučujeme podívat se na náš další návod, ["Jak vytvořit NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 Super, teď když chápeme, jak funguje tvorba NFT, naklonujme si naše startovací soubory!
 
@@ -209,7 +209,7 @@ Pro tento výukový program použijeme MetaMask, virtuální peněženku v prohl
 
 ### Přidejte ether z Faucetu {#add-ether-from-faucet}
 
-Abychom mohli mintovat naše NFT (nebo podepisovat jakékoli transakce na blockchainu Ethereum), budeme potřebovat nějaké falešné Eth. Pro získání Eth můžete přejít na [Ropsten faucet](https://faucet.ropsten.be/), zadat adresu svého účtu Ropsten a kliknout na „Send Ropsten Eth“. Krátce poté byste měli vidět Eth ve svém účtu MetaMask!
+Abychom mohli mintovat naše NFT (nebo podepisovat jakékoli transakce na blockchainu Ethereum), budeme potřebovat nějaké falešné Eth. Pro získání Eth můžete přejít na [Ropsten faucet](https://www.alchemy.com/faucets/ethereum-sepolia), zadat adresu svého účtu Ropsten a kliknout na „Send Ropsten Eth“. Krátce poté byste měli vidět Eth ve svém účtu MetaMask!
 
 ### Zkontrolujte si zůstatek {#check-your-balance}
 
@@ -579,7 +579,7 @@ Stejně jako u návratových typů naší funkce `connectWallet` vracíme objekt
 
 Nyní, když máme způsob, jak nahrát naše metadata NFT na IPFS prostřednictvím naší funkce `pinJSONToIPFS`, budeme potřebovat způsob, jak načíst instanci našeho chytrého kontraktu, abychom mohli volat jeho funkci `mintNFT`.
 
-Jak jsme již zmínili, v tomto návodu budeme používat [tento existující chytrý kontrakt NFT](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); nicméně, pokud byste se chtěli dozvědět, jak jsme ho vytvořili, nebo si vytvořit vlastní, vřele doporučujeme podívat se na náš další návod ["Jak vytvořit NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
+Jak jsme již zmínili, v tomto návodu budeme používat [tento existující chytrý kontrakt NFT](https://www.alchemy.com/docs/how-to-create-an-nft); nicméně, pokud byste se chtěli dozvědět, jak jsme ho vytvořili, nebo si vytvořit vlastní, vřele doporučujeme podívat se na náš další návod ["Jak vytvořit NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 ### ABI kontraktu {#contract-abi}
 
@@ -606,7 +606,7 @@ Skvělé, takže teď, když jsme vytvořili naši HTTP Alchemy API URL, zkopír
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 Nyní, když máme naše ABI kontraktu a náš API klíč Alchemy, jsme připraveni načíst náš chytrý kontrakt pomocí [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
@@ -748,7 +748,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Podívejte se na svou transakci na Etherscanu: https://ropsten.etherscan.io/tx/" +
+      "✅ Podívejte se na svou transakci na Etherscanu: https://sepolia.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -818,7 +818,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Podívejte se na svou transakci na Etherscanu: https://ropsten.etherscan.io/tx/" +
+        "✅ Podívejte se na svou transakci na Etherscanu: https://sepolia.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {

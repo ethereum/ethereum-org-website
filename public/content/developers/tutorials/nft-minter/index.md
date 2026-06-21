@@ -38,9 +38,9 @@ Usually, this minting function requires you to pass in two variables as paramete
 
 An NFT's metadata is really what brings it to life, allowing it to have properties, such as a name, description, image (or different digital asset), and other attributes. Here's [an example of a tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), which contains an NFT's metadata.
 
-In this tutorial, we're going to focus on part 2, calling an existing NFT's smart contract minting function using our React UI.
+In this tutorial, we're going to focus on part 2, calling an NFT smart contract minting function using our React UI.
 
-[Here's a link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) to the ERC-721 NFT smart contract we will be calling in this tutorial. If you'd like to learn how we made it, we highly recommend that you check out our other tutorial, ["How to Create an NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
+You'll need an ERC-721 NFT smart contract deployed to a supported testnet such as Sepolia. If you'd like to deploy one yourself, we recommend Alchemy's guide to [deploying a smart contract to Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet).
 
 Cool, now that we understand how making an NFT works, let's clone our starter files!
 
@@ -197,11 +197,11 @@ For users to be able to interact with your smart contract they will need to conn
 
 For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/).
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
+You can download and create a MetaMask account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to a supported test network such as Sepolia \(so that we’re not dealing with real money\).
 
 ### Add ether from a Faucet {#add-ether-from-faucet}
 
-In order to mint our NFTs (or sign any transactions on the Ethereum blockchain), we’ll need some fake Eth. To get Eth you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your MetaMask account soon after!
+In order to mint our NFTs (or sign any transactions on the Ethereum blockchain), we’ll need some fake ETH. To get testnet ETH, use a maintained faucet such as the [Alchemy Sepolia faucet](https://www.alchemy.com/faucets/ethereum-sepolia) and enter your Sepolia account address. You should see ETH in your MetaMask account soon after!
 
 ### Check your balance {#check-your-balance}
 
@@ -573,7 +573,7 @@ As with our `connectWallet`function return types, we're returning JSON objects s
 
 Now that we have a way to upload our NFT metadata to IPFS via our `pinJSONToIPFS` function, we're going to need a way to load an instance of our smart contract so we can call its `mintNFT` function.
 
-As we mentioned earlier, in this tutorial we will be using [this existing NFT smart contract](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); however, if you'd like to learn how we made it, or make one yourself, we highly recommend you check out our other tutorial, ["How to Create an NFT."](https://www.alchemy.com/docs/how-to-create-an-nft).
+As we mentioned earlier, in this tutorial you will need an existing NFT smart contract deployed to a supported testnet such as Sepolia. If you'd like to deploy one yourself, we recommend Alchemy's guide to [deploying a smart contract to Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet).
 
 ### The contract ABI {#contract-abi}
 
@@ -585,11 +585,11 @@ We're also going to need an Alchemy API key and the Alchemy Web3 API to connect 
 
 If you don't already have an Alchemy account, [sign up for free here.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Ropsten test network.
+Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Sepolia test network.
 
 Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”.
 
-Name your app we chose "My First NFT!", offer a short description, select “Staging” for the Environment used for your app bookkeeping, and choose “Ropsten” for your network.
+Name your app we chose "My First NFT!", offer a short description, select “Staging” for the Environment used for your app bookkeeping, and choose “Sepolia” for your network.
 
 Click “Create app” and that’s it! Your app should appear in the table below.
 
@@ -600,7 +600,7 @@ Awesome so now that we've created our HTTP Alchemy API URL, copy it to your clip
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 Now that we have our contract ABI and our Alchemy API key, we're ready to load our smart contract using [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
@@ -634,7 +634,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
+const contractAddress = "<your-contract-address>"
 ```
 
 Once we have both of those, we're ready to start coding our mint function!
@@ -742,7 +742,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://sepolia.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -812,7 +812,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+        "✅ Check out your transaction on Etherscan: https://sepolia.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {

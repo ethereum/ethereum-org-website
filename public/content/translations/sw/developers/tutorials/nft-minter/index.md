@@ -40,7 +40,7 @@ Metadata ya NFT ndiyo hasa inayoipa uhai, kuiruhusu iwe na sifa, kama vile jina,
 
 Katika mafunzo haya, tutazingatia sehemu ya 2, kuita kazi ya uundaji ya mkataba erevu wa NFT uliopo kwa kutumia React UI yetu.
 
-[Hapa kuna kiungo](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) cha mkataba erevu wa ERC-721 NFT tutakaouita katika mafunzo haya. Ikiwa ungependa kujifunza jinsi tulivyoiunda, tunapendekeza sana uangalie mafunzo yetu mengine, ["Jinsi ya Kuunda NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
+[Hapa kuna kiungo](https://www.alchemy.com/docs/how-to-create-an-nft) cha mkataba erevu wa ERC-721 NFT tutakaouita katika mafunzo haya. Ikiwa ungependa kujifunza jinsi tulivyoiunda, tunapendekeza sana uangalie mafunzo yetu mengine, ["Jinsi ya Kuunda NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 Safi, sasa kwa kuwa tunaelewa jinsi uundaji wa NFT unavyofanya kazi, hebu tunakili faili zetu za kuanzia!
 
@@ -201,7 +201,7 @@ Unaweza kupakua na kuunda akaunti ya MetaMask bure [hapa](https://metamask.io/do
 
 ### Ongeza ether kutoka kwa Bomba {#add-ether-from-faucet}
 
-Ili kuunda NFT zetu (au kusaini miamala yoyote kwenye mnyororo wa bloku wa Ethereum), tutahitaji Eth bandia. Ili kupata Eth unaweza kwenda kwenye [Bomba la Ropsten](https://faucet.ropsten.be/) na uingize anwani ya akaunti yako ya Ropsten, kisha bofya "Tuma Ropsten Eth." Unapaswa kuona Eth katika akaunti yako ya MetaMask muda mfupi baadaye!
+Ili kuunda NFT zetu (au kusaini miamala yoyote kwenye mnyororo wa bloku wa Ethereum), tutahitaji Eth bandia. Ili kupata Eth unaweza kwenda kwenye [Bomba la Ropsten](https://www.alchemy.com/faucets/ethereum-sepolia) na uingize anwani ya akaunti yako ya Ropsten, kisha bofya "Tuma Ropsten Eth." Unapaswa kuona Eth katika akaunti yako ya MetaMask muda mfupi baadaye!
 
 ### Angalia salio lako {#check-your-balance}
 
@@ -571,7 +571,7 @@ Kama ilivyo kwa aina zetu za kurudi za kazi ya `connectWallet`, tunarudisha vitu
 
 Sasa kwa kuwa tuna njia ya kupakia metadata yetu ya NFT kwenye IPFS kupitia kazi yetu ya `pinJSONToIPFS`, tutahitaji njia ya kupakia mfano wa mkataba wetu erevu ili tuweze kuita kazi yake ya `mintNFT`.
 
-Kama tulivyotaja awali, katika mafunzo haya tutatumia [mkataba erevu uliopo wa NFT](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); hata hivyo, ikiwa ungependa kujifunza jinsi tulivyoiunda, au kuunda moja wewe mwenyewe, tunapendekeza sana uangalie mafunzo yetu mengine, ["Jinsi ya Kuunda NFT."](https://www.alchemy.com/docs/how-to-create-an-nft).
+Kama tulivyotaja awali, katika mafunzo haya tutatumia [mkataba erevu uliopo wa NFT](https://www.alchemy.com/docs/how-to-create-an-nft); hata hivyo, ikiwa ungependa kujifunza jinsi tulivyoiunda, au kuunda moja wewe mwenyewe, tunapendekeza sana uangalie mafunzo yetu mengine, ["Jinsi ya Kuunda NFT."](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 ### ABI ya mkataba {#contract-abi}
 
@@ -598,7 +598,7 @@ Safi sana, sasa kwa kuwa tumeunda URL yetu ya API ya HTTP Alchemy, inakili kweny
 ```text
 REACT_APP_PINATA_KEY = <ufunguo-wa-pinata>
 REACT_APP_PINATA_SECRET = <siri-ya-pinata>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<ufunguo-wa-alchemy>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<ufunguo-wa-alchemy>
 ```
 
 Sasa kwa kuwa tuna ABI ya mkataba wetu na ufunguo wetu wa API wa Alchemy, tuko tayari kupakia mkataba wetu erevu kwa kutumia [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
@@ -740,7 +740,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Angalia muamala wako kwenye Etherscan: https://ropsten.etherscan.io/tx/" +
+      "✅ Angalia muamala wako kwenye Etherscan: https://sepolia.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -810,7 +810,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Angalia muamala wako kwenye Etherscan: https://ropsten.etherscan.io/tx/" +
+        "✅ Angalia muamala wako kwenye Etherscan: https://sepolia.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {

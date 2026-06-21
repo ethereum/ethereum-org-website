@@ -48,7 +48,7 @@ Web2 నేపథ్యం నుండి వచ్చే డెవలపర్
 
 ఈ ట్యుటోరియల్‌లో, మేము రెండవ భాగంపై దృష్టి పెట్టబోతున్నాము, మా React UIని ఉపయోగించి ఇప్పటికే ఉన్న NFT యొక్క స్మార్ట్ కాంట్రాక్ట్ మింటింగ్ ఫంక్షన్‌ను కాల్ చేయడం.
 
-ఈ ట్యుటోరియల్‌లో మేము కాల్ చేయబోయే ERC-721 NFT స్మార్ట్ కాంట్రాక్ట్‌కి [ఇక్కడ ఒక లింక్](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) ఉంది. మేము దానిని ఎలా తయారు చేశామో మీరు తెలుసుకోవాలనుకుంటే, మా ఇతర ట్యుటోరియల్, ["ఒక NFTని ఎలా సృష్టించాలి"](https://www.alchemy.com/docs/how-to-create-an-nft) ను చూడమని మేము గట్టిగా సిఫార్సు చేస్తున్నాము.
+ఈ ట్యుటోరియల్‌లో మేము కాల్ చేయబోయే ERC-721 NFT స్మార్ట్ కాంట్రాక్ట్‌కి [ఇక్కడ ఒక లింక్](https://www.alchemy.com/docs/how-to-create-an-nft) ఉంది. మేము దానిని ఎలా తయారు చేశామో మీరు తెలుసుకోవాలనుకుంటే, మా ఇతర ట్యుటోరియల్, ["ఒక NFTని ఎలా సృష్టించాలి"](https://www.alchemy.com/docs/how-to-create-an-nft) ను చూడమని మేము గట్టిగా సిఫార్సు చేస్తున్నాము.
 
 బాగుంది, ఇప్పుడు ఒక NFTని తయారు చేయడం ఎలా పనిచేస్తుందో మనకు అర్థమైంది, మా స్టార్టర్ ఫైల్‌లను క్లోన్ చేద్దాం!
 
@@ -209,7 +209,7 @@ return (
 
 ### ఫాసెట్ నుండి ఈథర్ జోడించండి {#add-ether-from-faucet}
 
-మా NFTలను ముద్రించడానికి (లేదా Ethereum బ్లాక్‌చైన్‌లో ఏవైనా లావాదేవీలపై సంతకం చేయడానికి), మాకు కొంత నకిలీ Eth అవసరం. Eth పొందడానికి మీరు [Ropsten ఫాసెట్](https://faucet.ropsten.be/) కు వెళ్లి, మీ Ropsten ఖాతా చిరునామాను నమోదు చేసి, ఆపై “Ropsten Eth పంపించు.” క్లిక్ చేయవచ్చు. త్వరలోనే మీ MetaMask ఖాతాలో Eth కనిపించాలి!
+మా NFTలను ముద్రించడానికి (లేదా Ethereum బ్లాక్‌చైన్‌లో ఏవైనా లావాదేవీలపై సంతకం చేయడానికి), మాకు కొంత నకిలీ Eth అవసరం. Eth పొందడానికి మీరు [Ropsten ఫాసెట్](https://www.alchemy.com/faucets/ethereum-sepolia) కు వెళ్లి, మీ Ropsten ఖాతా చిరునామాను నమోదు చేసి, ఆపై “Ropsten Eth పంపించు.” క్లిక్ చేయవచ్చు. త్వరలోనే మీ MetaMask ఖాతాలో Eth కనిపించాలి!
 
 ### మీ బ్యాలెన్స్‌ను తనిఖీ చేయండి {#check-your-balance}
 
@@ -581,7 +581,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 ఇప్పుడు మా `pinJSONToIPFS` ఫంక్షన్ ద్వారా IPFSకి మా NFT మెటాడేటాను అప్‌లోడ్ చేయడానికి ఒక మార్గం ఉంది, దాని `mintNFT` ఫంక్షన్‌ను కాల్ చేయడానికి మా స్మార్ట్ కాంట్రాక్ట్ యొక్క ఒక ఉదాహరణను లోడ్ చేయడానికి ఒక మార్గం అవసరం.
 
-మేము ఇందాక చెప్పినట్లు, ఈ ట్యుటోరియల్‌లో మేము [ఈ ఇప్పటికే ఉన్న NFT స్మార్ట్ కాంట్రాక్ట్‌](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)ను ఉపయోగిస్తాము; అయితే, మేము దాన్ని ఎలా తయారు చేశామో తెలుసుకోవాలనుకుంటే, లేదా మీరే ఒకటి తయారు చేసుకోవాలనుకుంటే, మా ఇతర ట్యుటోరియల్, ["ఒక NFTని ఎలా సృష్టించాలి."](https://www.alchemy.com/docs/how-to-create-an-nft)ని చూడమని మేము గట్టిగా సిఫార్సు చేస్తున్నాము.
+మేము ఇందాక చెప్పినట్లు, ఈ ట్యుటోరియల్‌లో మేము [ఈ ఇప్పటికే ఉన్న NFT స్మార్ట్ కాంట్రాక్ట్‌](https://www.alchemy.com/docs/how-to-create-an-nft)ను ఉపయోగిస్తాము; అయితే, మేము దాన్ని ఎలా తయారు చేశామో తెలుసుకోవాలనుకుంటే, లేదా మీరే ఒకటి తయారు చేసుకోవాలనుకుంటే, మా ఇతర ట్యుటోరియల్, ["ఒక NFTని ఎలా సృష్టించాలి."](https://www.alchemy.com/docs/how-to-create-an-nft)ని చూడమని మేము గట్టిగా సిఫార్సు చేస్తున్నాము.
 
 ### కాంట్రాక్ట్ ABI {#contract-abi}
 
@@ -608,7 +608,7 @@ Ethereum బ్లాక్‌చైన్‌కు కనెక్ట్ అవ
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 ఇప్పుడు మా కాంట్రాక్ట్ ABI మరియు మా Alchemy API కీ ఉన్నాయి, మేము [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) ఉపయోగించి మా స్మార్ట్ కాంట్రాక్ట్‌ను లోడ్ చేయడానికి సిద్ధంగా ఉన్నాము.
@@ -750,7 +750,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://sepolia.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -820,7 +820,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+        "✅ Check out your transaction on Etherscan: https://sepolia.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {

@@ -40,7 +40,7 @@ Die NFT Metadaten sind das, was Leben hineinbringt, welches Ihnen erlaubt Eigens
 
 In diesem Tutorial werden wir uns auf den 2 Teil fokussieren, das Aufrufen von einer bereits existierenden NFT smart Kontrakt Prägungs Funktion, indem wir unsere React UI benutzen.
 
-[Hier ist ein Link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) zu dem ERC-721-NFT-Smart-Contract, den wir in diesem Tutorial aufrufen werden. Wenn du lernen möchtest, wie wir ihn erstellt haben, empfehlen wir dir dringend unser anderes Tutorial [„Wie man einen NFT erstellt“](https://www.alchemy.com/docs/how-to-create-an-nft).
+[Hier ist ein Link](https://www.alchemy.com/docs/how-to-create-an-nft) zu dem ERC-721-NFT-Smart-Contract, den wir in diesem Tutorial aufrufen werden. Wenn du lernen möchtest, wie wir ihn erstellt haben, empfehlen wir dir dringend unser anderes Tutorial [„Wie man einen NFT erstellt“](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 Cool, nun verstehen wir wie die Erstellung von NFTS funktioniert, lass uns nun unsere Startdateien klonen!
 
@@ -201,7 +201,7 @@ Sie können MetaMask [hier](https://metamask.io/download) kostenlos herunterlade
 
 ### Ether von einem Faucet hinzufügen {#add-ether-from-faucet}
 
-Um unsere NFTs zu minten (oder Transaktionen auf der Ethereum-Blockchain zu signieren), benötigen wir einige gefälschte ETH. Um ETH zu erhalten, kannst du zum [Ropsten-Faucet](https://faucet.ropsten.be/) gehen und deine Ropsten-Kontoadresse eingeben und dann auf „Send Ropsten ETH“ klicken. Kurz darauf solltest du ETH in deinem MetaMask-Konto sehen!
+Um unsere NFTs zu minten (oder Transaktionen auf der Ethereum-Blockchain zu signieren), benötigen wir einige gefälschte ETH. Um ETH zu erhalten, kannst du zum [Ropsten-Faucet](https://www.alchemy.com/faucets/ethereum-sepolia) gehen und deine Ropsten-Kontoadresse eingeben und dann auf „Send Ropsten ETH“ klicken. Kurz darauf solltest du ETH in deinem MetaMask-Konto sehen!
 
 ### Deinen Kontostand überprüfen {#check-your-balance}
 
@@ -573,7 +573,7 @@ Wie bei unseren `connectWallet`-Funktionsrückgabetypen geben wir JSON-Objekte z
 
 Nachdem wir nun eine Möglichkeit haben, unsere NFT-Metadaten über unsere `pinJSONToIPFS`-Funktion auf IPFS hochzuladen, benötigen wir eine Möglichkeit, eine Instanz unseres Smart Contracts zu laden, damit wir seine `mintNFT`-Funktion aufrufen können.
 
-Wie bereits erwähnt, werden wir in diesem Tutorial [diesen bestehenden NFT-Smart-Contract](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) verwenden. Wenn du jedoch lernen möchtest, wie wir ihn erstellt haben oder selbst einen erstellen möchtest, empfehlen wir dir dringend, unser anderes Tutorial [„Wie man einen NFT erstellt“](https://www.alchemy.com/docs/how-to-create-an-nft) anzusehen.
+Wie bereits erwähnt, werden wir in diesem Tutorial [diesen bestehenden NFT-Smart-Contract](https://www.alchemy.com/docs/how-to-create-an-nft) verwenden. Wenn du jedoch lernen möchtest, wie wir ihn erstellt haben oder selbst einen erstellen möchtest, empfehlen wir dir dringend, unser anderes Tutorial [„Wie man einen NFT erstellt“](https://www.alchemy.com/docs/how-to-create-an-nft) anzusehen.
 
 ### Das Contract-ABI {#contract-abi}
 
@@ -600,7 +600,7 @@ Super, jetzt, da wir unsere HTTP-Alchemy-API-URL erstellt haben, kopiere sie in 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 Jetzt, da wir unser Contract-ABI und unseren Alchemy-API-Schlüssel haben, sind wir bereit, unseren Smart Contract mit [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) zu laden.
@@ -742,7 +742,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Sieh dir deine Transaktion auf Etherscan an: https://ropsten.etherscan.io/tx/" +
+      "✅ Sieh dir deine Transaktion auf Etherscan an: https://sepolia.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -812,7 +812,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Sieh dir deine Transaktion auf Etherscan an: https://ropsten.etherscan.io/tx/" +
+        "✅ Sieh dir deine Transaktion auf Etherscan an: https://sepolia.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {
