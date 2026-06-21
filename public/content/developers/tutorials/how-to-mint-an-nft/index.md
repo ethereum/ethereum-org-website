@@ -20,7 +20,7 @@ Let’s get started!
 
 ## Step 1: Install Web3 {#install-web3}
 
-If you followed the first tutorial on creating your NFT smart contract, you already have experience using Ethers.js. Web3 is similar to Ethers, as it is a library used to make creating requests to the [Ethereum](/) blockchain easier. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), which is an enhanced Web3 library that offers automatic retries and robust WebSocket support.
+If you followed the first tutorial on creating your NFT smart contract, you already have experience using Ethers.js. Web3 is similar to Ethers, as it is a library used to make creating requests to the [Ethereum](/) blockchain easier. In this tutorial we’ll be using [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), which is an enhanced Web3 library that offers automatic retries and robust WebSocket support.
 
 In your project home directory run:
 
@@ -41,7 +41,7 @@ const web3 = createAlchemyWeb3(API_URL)
 
 ## Step 3: Grab your contract ABI {#contract-abi}
 
-Our contract ABI (Application Binary Interface) is the interface to interact with our smart contract. You can learn more about Contract ABIs [here](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat automatically generates an ABI for us and saves it in the `MyNFT.json` file. In order to use this we’ll need to parse out the contents by adding the following lines of code to our `mint-nft.js` file:
+Our contract ABI (Application Binary Interface) is the interface to interact with our smart contract. You can learn more about [contract ABIs](/glossary/#abi). Hardhat automatically generates an ABI for us and saves it in the `MyNFT.json` file. In order to use this we’ll need to parse out the contents by adding the following lines of code to our `mint-nft.js` file:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -141,7 +141,7 @@ First, let’s define a function named `mintNFT(tokenData)` and create our trans
 
 1. Grab your _PRIVATE_KEY_ and _PUBLIC_KEY_ from the `.env` file.
 
-1. Next, we’ll need to figure out the account nonce. The nonce specification is used to keep track of the number of transactions sent from your address — which we need for security purposes and to prevent [replay attacks](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). To get the number of transactions sent from your address, we use [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+1. Next, we’ll need to figure out the account nonce. The nonce specification is used to keep track of the number of transactions sent from your address — which we need for security purposes and to prevent replay attacks. To get the number of transactions sent from your address, we use [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
 
 1. Finally we’ll set up our transaction with the following info:
 
@@ -316,7 +316,7 @@ Now, run `node scripts/mint-nft.js` to deploy your NFT. After a couple of second
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Blockscout](https://eth-sepolia.blockscout.com/) and search for your transaction hash.
+Next, visit your [Alchemy mempool](https://dashboard.alchemy.com/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Blockscout](https://eth-sepolia.blockscout.com/) and search for your transaction hash.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_View your NFT transaction hash on Etherscan_
 
