@@ -402,7 +402,7 @@ Ethereum merkeziyetsiz uygulamanıza entegre edebileceğiniz birden fazla kâhin
 
 **[Pyth Network](https://pyth.network/)** - _Pyth ağı, kurcalamaya karşı dayanıklı, merkeziyetsiz ve kendi kendine yeten bir ortamda sürekli gerçek dünya verilerini zincir üstünde yayınlamak için tasarlanmış birinci taraf bir finansal kâhin ağıdır._
 
-**[API3 DAO](https://www.api3.org/)** - _API3 DAO, akıllı sözleşmeler için merkeziyetsiz bir çözümde daha fazla kaynak şeffaflığı, güvenlik ve ölçeklenebilirlik sunan birinci taraf kâhin çözümleri sunar_
+**[API3 DAO](https://api3.org/)** - _API3 DAO, akıllı sözleşmeler için merkeziyetsiz bir çözümde daha fazla kaynak şeffaflığı, güvenlik ve ölçeklenebilirlik sunan birinci taraf kâhin çözümleri sunar_
 
 **[Supra](https://supra.com/)** - Tüm blokzincirleri, halka açık (L1'ler ve L2'ler) veya özel (işletmeler) birbirine bağlayan, zincir üstü ve zincir dışı kullanım durumları için kullanılabilecek merkeziyetsiz kâhin fiyat akışları sağlayan, dikey olarak entegre edilmiş bir zincirler arası çözüm araç takımıdır.
 

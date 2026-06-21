@@ -402,7 +402,7 @@ Chainlink 的 [Keeper Network](https://chain.link/keepers) 為智能合約提供
 
 **[Pyth Network](https://pyth.network/)** - _Pyth Network 是一個第一方金融預言機網路，旨在在一個防竄改、去中心化且可自我維持的環境中，持續將真實世界的資料發布到鏈上。_
 
-**[API3 DAO](https://www.api3.org/)** - _API3 DAO 正在提供第一方預言機解決方案，在為智能合約提供的去中心化解決方案中，提供更高的來源透明度、安全性和可擴展性_
+**[API3 DAO](https://api3.org/)** - _API3 DAO 正在提供第一方預言機解決方案，在為智能合約提供的去中心化解決方案中，提供更高的來源透明度、安全性和可擴展性_
 
 **[Supra](https://supra.com/)** - 一個垂直整合的跨鏈解決方案工具包，將所有區塊鏈 (公共 L1 和 L2 或私有企業) 相互連接，提供可用於鏈上和鏈外用例的去中心化預言機價格饋送。
 

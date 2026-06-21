@@ -400,7 +400,7 @@ Ci sono più applicazioni di oracoli che puoi integrare nella tua dapp su Ethere
 
 **[Pyth Network](https://pyth.network/)** - _La rete Pyth è una rete di oracoli finanziari di prima parte progettata per pubblicare dati continui del mondo reale sulla catena in un ambiente resistente alle manomissioni, decentralizzato e autosostenibile._
 
-**[DAO di API3](https://www.api3.org/)**: _la DAO di API3 distribuisce soluzioni di oracolo di prima parte che offrono una maggiore trasparenza della fonte, sicurezza e scalabilità in una soluzione decentralizzata per i contratti intelligenti_
+**[DAO di API3](https://api3.org/)**: _la DAO di API3 distribuisce soluzioni di oracolo di prima parte che offrono una maggiore trasparenza della fonte, sicurezza e scalabilità in una soluzione decentralizzata per i contratti intelligenti_
 
 **[Supra](https://supra.com/)**: un kit di strumenti integrato verticalmente di soluzioni tra catene che interconnettono tutte le blockchain, pubbliche (L1 e L2) o private (aziendali), fornendo feed sui prezzi degli oracoli decentralizzati utilizzabili per i casi d'uso interni ed esterni alla catena.
 

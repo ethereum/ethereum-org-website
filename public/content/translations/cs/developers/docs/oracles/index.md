@@ -402,7 +402,7 @@ Existuje několik orákulových aplikací, které můžete integrovat do své da
 
 **[Pyth Network](https://pyth.network/)** – _Síť Pyth je finanční síť oraclů první strany navržená tak, aby publikovala nepřetržitá data z reálného světa onchain v prostředí odolném proti neoprávněné manipulaci, decentralizovaném a soběstačném._
 
-**[API3 DAO](https://www.api3.org/)** – _API3 DAO dodává řešení oraclů první strany, která poskytují větší transparentnost zdroje, bezpečnost a škálovatelnost v decentralizovaném řešení pro smart kontrakty_
+**[API3 DAO](https://api3.org/)** – _API3 DAO dodává řešení oraclů první strany, která poskytují větší transparentnost zdroje, bezpečnost a škálovatelnost v decentralizovaném řešení pro smart kontrakty_
 
 **[Supra](https://supra.com/)** – vertikálně integrovaná sada cross-chainových řešení, která propojují všechny blockchainy, veřejné (L1 a L2) i soukromé (podnikové), a poskytují decentralizované cenové kanály oraclů, které lze použít pro onchainové i offchainové případy použití.
 
