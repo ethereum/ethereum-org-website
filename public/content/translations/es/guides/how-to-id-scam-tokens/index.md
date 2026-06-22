@@ -14,7 +14,7 @@ Hay dos formas en las que es probable que te engañen:
 Para ilustrar qué son los tokens fraudulentos y cómo identificarlos, vamos a ver un ejemplo de uno: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Este token intenta parecerse al token legítimo [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="¿Qué es ARB?"
 contentPreview=''>
 
 Arbitrum es una organización que desarrolla y gestiona [rollups optimistas](/developers/docs/scaling/optimistic-rollups/). Inicialmente, Arbitrum se organizó como una empresa con fines de lucro, pero luego tomó medidas para descentralizarse. Como parte de ese proceso, emitieron un [token de gobernanza](/dao/#token-based-membership) negociable.
@@ -22,7 +22,7 @@ Arbitrum es una organización que desarrolla y gestiona [rollups optimistas](/de
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="¿Por qué el token de estafa se llama wARB?"
 contentPreview=''>
 
 Existe una convención en Ethereum de que cuando un activo no es compatible con ERC-20, creamos una versión "envuelta" (wrapped) del mismo con un nombre que comienza con "w". Así, por ejemplo, tenemos wBTC para Bitcoin y <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH para ether</a>.
@@ -36,7 +36,7 @@ No tiene sentido crear una versión envuelta de un token ERC-20 que ya está en 
 El objetivo principal de Ethereum es la descentralización. Esto significa que no hay una autoridad central que pueda confiscar tus activos o impedirte desplegar un contrato inteligente. Pero también significa que los estafadores pueden desplegar cualquier contrato inteligente que deseen.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="¿Qué son los contratos inteligentes?"
 contentPreview=''>
 
 Los [contratos inteligentes](/developers/docs/smart-contracts/) son los programas que se ejecutan sobre la cadena de bloques de Ethereum. Cada token ERC-20, por ejemplo, se implementa como un contrato inteligente.

@@ -354,10 +354,10 @@ Un usuario envía un saludo. Tal vez se actualice en el siguiente bloque. Tal ve
 - El nuevo saludo se ha enviado y está en proceso
 - El nuevo saludo ha sido rechazado
 
-## Conclusión {#conclusion}
+## Conclusión
 
-En este punto, debería poder crear una experiencia sin gas para los usuarios de su aplicación descentralizada (dapp), a costa de cierta centralización.
+Llegados a este punto, debería poder crear una experiencia sin gas para los usuarios de su aplicación descentralizada (dapp), a costa de cierta centralización.
 
-Sin embargo, esto solo funciona con contratos inteligentes que admiten ERC-712. Para transferir un token ERC-20, por ejemplo, es necesario que la transacción sea firmada por el propietario en lugar de solo un mensaje. La solución es la [abstracción de cuentas (ERC-4337)](https://docs.erc4337.io/index.html). Espero escribir un futuro tutorial al respecto.
+Sin embargo, esto solo funciona con contratos inteligentes que admiten ERC-712. Para transferir un token ERC-20, por ejemplo, es necesario que el propietario firme la transacción en lugar de solo un mensaje. La solución más sencilla es que los activos no sean propiedad de la dirección EOA, sino de un contrato separado (una forma sencilla de [abstracción de cuentas](/roadmap/account-abstraction/)). Puede leer más al respecto [en el siguiente tutorial](/developers/tutorials/gasless-token).
 
 [Vea aquí más de mi trabajo](https://cryptodocguy.pro/).

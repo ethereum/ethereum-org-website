@@ -137,5 +137,8 @@
   "page-developers-why-title": "Gana bien. Trabaja de forma remota. Construye el futuro.",
   "page-developers-why-subtitle": "Más de la mitad de las carreras en la cadena de bloques son principalmente remotas, y algunas estimaciones sitúan la cifra hasta en un 70 %.",
   "page-developers-why-avg-salary-dev": "Salario promedio de un desarrollador",
-  "page-developers-why-avg-salary-blockchain": "Salario promedio en la industria de la cadena de bloques"
+  "page-developers-why-avg-salary-blockchain": "Salario promedio en la industria de la cadena de bloques",
+  "page-developers-blog-title": "Actualizaciones para constructores",
+  "page-developers-blog-desc": "Información sobre los últimos recursos, herramientas y desarrollos para constructores de Ethereum.",
+  "page-developers-blog-view-all": "Ver todas las actualizaciones"
 }
