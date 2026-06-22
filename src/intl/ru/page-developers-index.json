@@ -137,5 +137,8 @@
   "page-developers-why-title": "Получайте хорошую зарплату. Работайте удаленно. Создавайте будущее.",
   "page-developers-why-subtitle": "Более половины вакансий в сфере блокчейна предполагают удаленную работу, а по некоторым оценкам эта цифра достигает 70%.",
   "page-developers-why-avg-salary-dev": "Средняя зарплата разработчика",
-  "page-developers-why-avg-salary-blockchain": "Средняя зарплата в блокчейн-индустрии"
+  "page-developers-why-avg-salary-blockchain": "Средняя зарплата в блокчейн-индустрии",
+  "page-developers-blog-title": "Обновления для разработчиков",
+  "page-developers-blog-desc": "Обзор новейших ресурсов, инструментов и нововведений для разработчиков Эфириума.",
+  "page-developers-blog-view-all": "Посмотреть все обновления"
 }
