@@ -106,9 +106,15 @@ const PageHero = ({
           {title}
         </PrimaryHeading>
 
+{description && (
         <div className="space-y-[0.5lh] text-lg not-last:mb-space-3x">
-          {typeof description === "string" ? <p>{description}</p> : description}
+          {typeof description === "string" ? (
+<p>{description}</p>
+            ) : (
+description
+            )}
         </div>
+)}
 
         {buttons && (
           <div className="flex flex-col gap-4 md:flex-row">
