@@ -85,8 +85,8 @@ lang: bn
 ## যেসব স্ক্যাম থেকে সতর্ক থাকতে হবে {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="গিভঅ্যাওয়ে এবং এয়ারড্রপ স্ক্যাম"
+contentPreview="কেউ বিনামূল্যে ETH দিচ্ছে না। এই অফারগুলো সবসময়ই স্ক্যাম।"
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="ছদ্মবেশ ধারণ এবং ভুয়া সাপোর্ট"
+contentPreview="ইথেরিয়াম বা ethereum.org থেকে কেউ কখনোই প্রথমে আপনার সাথে যোগাযোগ করবে না।"
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="রিকভারি স্ক্যাম"
+contentPreview="স্ক্যামের শিকার হওয়ার পর, ভুয়া 'ক্রিপ্টো রিকভারি এক্সপার্ট'-দের থেকে সতর্ক থাকুন।"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="ফিশিং ওয়েবসাইট এবং ভুয়া অ্যাপ"
+contentPreview="স্ক্যাম সাইটগুলো আপনার ক্রেডেনশিয়াল চুরি করতে আসল ওয়ালেট এবং এক্সচেঞ্জের নকল করে।"
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >
