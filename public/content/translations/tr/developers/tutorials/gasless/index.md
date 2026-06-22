@@ -354,10 +354,10 @@ Bir kullanıcı bir selamlama gönderir. Belki bir sonraki blokta güncellenir. 
 - Yeni selamlama gönderildi ve işlemde
 - Yeni selamlama reddedildi
 
-## Sonuç {#conclusion}
+## Sonuç
 
-Bu noktada, bir miktar merkezileşme pahasına, merkeziyetsiz uygulama (dapp) kullanıcılarınız için gazsız bir deneyim yaratabilmelisiniz.
+Bu noktada, bir miktar merkeziyetleşme pahasına merkeziyetsiz uygulama (dapp) kullanıcılarınız için gazsız bir deneyim yaratabilmelisiniz.
 
-Ancak bu yalnızca ERC-712'yi destekleyen akıllı sözleşmelerle çalışır. Örneğin bir ERC-20 Token transfer etmek için, sadece bir mesajın değil, işlemin sahibi tarafından imzalanması gerekir. Çözüm [hesap soyutlama (ERC-4337)](https://docs.erc4337.io/index.html)'dır. Gelecekte bunun hakkında bir eğitim yazmayı umuyorum.
+Ancak bu, yalnızca ERC-712'yi destekleyen akıllı sözleşmelerle çalışır. Örneğin bir ERC-20 Token'ını transfer etmek için, sadece bir mesaj yerine işlemin sahibi tarafından imzalanması gerekir. En basit çözüm, varlıkların EOA adresi yerine ayrı bir sözleşme (basit bir [hesap soyutlama](/roadmap/account-abstraction/) biçimi) tarafından sahiplenilmesini sağlamaktır. Bunun hakkında daha fazla bilgiyi [devam eğitiminde](/developers/tutorials/gasless-token) okuyabilirsiniz.
 
-[Çalışmalarımın daha fazlası için buraya bakın](https://cryptodocguy.pro/).
+[Çalışmalarımın daha fazlası için buraya bakabilirsiniz](https://cryptodocguy.pro/).
