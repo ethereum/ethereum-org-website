@@ -137,5 +137,8 @@
   "page-developers-why-title": "Seja bem remunerado. Trabalhe remotamente. Construa o futuro.",
   "page-developers-why-subtitle": "Mais da metade das carreiras em blockchain são remotas, com algumas estimativas colocando esse número em até 70%.",
   "page-developers-why-avg-salary-dev": "Salário médio de desenvolvedor",
-  "page-developers-why-avg-salary-blockchain": "Salário médio na indústria de blockchain"
+  "page-developers-why-avg-salary-blockchain": "Salário médio na indústria de blockchain",
+  "page-developers-blog-title": "Atualizações para construtores",
+  "page-developers-blog-desc": "Insights sobre os mais recentes recursos, ferramentas e desenvolvimentos para construtores do Ethereum.",
+  "page-developers-blog-view-all": "Ver todas as atualizações"
 }
