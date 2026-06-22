@@ -85,8 +85,8 @@ lang: ko
 ## 주의해야 할 사기 유형 {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="무료 나눔 및 에어드롭 사기"
+contentPreview="아무도 ETH를 무료로 주지 않습니다. 이러한 제안은 항상 사기입니다."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="사칭 및 가짜 고객 지원"
+contentPreview="이더리움이나 ethereum.org의 그 누구도 먼저 연락하지 않습니다."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="복구 사기"
+contentPreview="사기를 당한 후에는 가짜 '암호화폐 복구 전문가'를 조심하세요."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="피싱 웹사이트 및 가짜 앱"
+contentPreview="사기 사이트는 실제 지갑과 거래소를 모방하여 사용자의 자격 증명을 훔칩니다."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

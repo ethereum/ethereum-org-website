@@ -14,7 +14,7 @@ ETH **발행**은 이전에 존재하지 않았던 ETH를 생성하는 과정입
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="ETH 발행 요약">
 
 - 지분 증명 (PoS)으로 전환하기 전에는 채굴자에게 하루 약 13,000 ETH가 발행되었습니다.
 - 총 스테이킹된 약 1,400만 ETH를 기준으로, 스테이커에게는 하루 약 1,700 ETH가 발행됩니다.
