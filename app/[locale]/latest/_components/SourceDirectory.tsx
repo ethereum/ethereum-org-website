@@ -16,19 +16,19 @@ const SourceDirectory = () => (
         key={source.feed}
         href={source.link}
         hideArrow
-        className="flex items-center gap-3 rounded-lg border p-4 text-body no-underline duration-100 hover:bg-background-highlight hover:text-body"
+        className="flex items-center gap-3 rounded-lg border p-2 text-body no-underline duration-100 hover:bg-background-highlight hover:text-body"
       >
         {source.icon ? (
           <Image
             src={source.icon}
             alt=""
-            width={40}
-            height={40}
-            className="size-10 shrink-0 rounded-lg border object-cover"
+            width={48}
+            height={48}
+            className="size-12 shrink-0 rounded-lg object-cover"
           />
         ) : (
-          <span className="grid size-10 shrink-0 place-items-center rounded-lg bg-background-highlight">
-            <Globe className="size-5 text-body-medium" />
+          <span className="grid size-12 shrink-0 place-items-center rounded-lg bg-background-highlight">
+            <Globe className="size-6 text-body-medium" />
           </span>
         )}
         <span className="font-bold">{source.name}</span>
