@@ -137,5 +137,8 @@
   "page-developers-why-title": "Отримуйте гідну оплату. Працюйте віддалено. Будуйте майбутнє.",
   "page-developers-why-subtitle": "Понад половина вакансій у сфері блокчейну передбачають віддалену роботу, а за деякими оцінками ця цифра сягає 70%.",
   "page-developers-why-avg-salary-dev": "Середня зарплата розробника",
-  "page-developers-why-avg-salary-blockchain": "Середня зарплата в блокчейн-індустрії"
+  "page-developers-why-avg-salary-blockchain": "Середня зарплата в блокчейн-індустрії",
+  "page-developers-blog-title": "Оновлення для будівельників",
+  "page-developers-blog-desc": "Огляди останніх ресурсів, інструментів та розробок для будівельників Етеріуму.",
+  "page-developers-blog-view-all": "Переглянути всі оновлення"
 }
