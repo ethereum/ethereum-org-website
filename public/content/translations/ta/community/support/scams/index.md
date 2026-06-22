@@ -85,8 +85,8 @@ lang: ta
 ## கவனிக்க வேண்டிய மோசடிகளின் வகைகள் {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="இலவசப் பரிசுகள் மற்றும் ஏர்ட்ராப் மோசடிகள்"
+contentPreview="யாரும் இலவசமாக ETH-ஐ வழங்குவதில்லை. இந்தச் சலுகைகள் எப்போதும் மோசடியானவையே."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="ஆள்மாறாட்டம் மற்றும் போலி ஆதரவு"
+contentPreview="எத்திரியம் அல்லது ethereum.org-ல் இருந்து யாரும் உங்களை முதலில் தொடர்புகொள்ள மாட்டார்கள்."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="மீட்பு மோசடிகள்"
+contentPreview="மோசடிக்கு ஆளான பிறகு, போலி 'கிரிப்டோ மீட்பு நிபுணர்கள்' குறித்து எச்சரிக்கையாக இருங்கள்."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="ஃபிஷிங் இணையதளங்கள் மற்றும் போலி செயலிகள்"
+contentPreview="உங்கள் உள்நுழைவு விவரங்களைத் திருட, மோசடி தளங்கள் உண்மையான பணப்பைகள் மற்றும் பரிமாற்றகங்களைப் போலத் தோற்றமளிக்கின்றன."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >
