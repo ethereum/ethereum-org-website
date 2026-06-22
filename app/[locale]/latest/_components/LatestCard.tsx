@@ -48,7 +48,6 @@ const LatestCard = ({
     href={href}
     variant="ghost"
     size="md"
-    hoverEffect="lift"
     customEventOptions={customEventOptions}
   >
     <CardBanner className="aspect-video h-auto">
