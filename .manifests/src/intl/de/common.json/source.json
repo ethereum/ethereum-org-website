@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-06-11T18:12:20.878Z",
-  "rootHash": "37e3e90aabf2",
+  "generatedAt": "2026-06-22T21:11:43.198Z",
+  "rootHash": "f0beb86fa6df",
   "tree": {
-    "contentHash": "68ced947acb6",
-    "anchorHash": "2b0750c7dab9",
+    "contentHash": "5ba13c20245f",
+    "anchorHash": "95f53d29d6f0",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -256,6 +256,10 @@
       },
       "defi-page": {
         "contentHash": "ba1a84f8388c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "deposit-contract": {
+        "contentHash": "10449017f4dd",
         "anchorHash": "e3b0c44298fc"
       },
       "description": {
@@ -2306,6 +2310,7 @@
       "decentralized-science",
       "decentralized-social-networks",
       "defi-page",
+      "deposit-contract",
       "description",
       "design",
       "design-principles",
@@ -2794,5 +2799,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "2e0bedf904a21d6a5283f6df5a7894ec4f4b54c3"
+  "sourceCommitSha": "b423246b2edddb948d72040dbe55756a989a7837"
 }

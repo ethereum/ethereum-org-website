@@ -85,8 +85,8 @@ Meldungen sind dennoch wertvoll. Sie helfen den Strafverfolgungsbehörden, organ
 ## Arten von Betrug, auf die Sie achten sollten {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Giveaway- und Airdrop-Betrug"
+contentPreview="Niemand verschenkt gratis ETH. Diese Angebote sind immer Betrug."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ Betrüger erstellen gefälschte Giveaways, die versprechen, Ihre ETH zu vervielf
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Identitätsbetrug und falscher Support"
+contentPreview="Niemand von Ethereum oder ethereum.org wird dich jemals zuerst kontaktieren."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ Betrüger geben sich auf Discord, Telegram und in sozialen Medien als Ethereum-T
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Wiederherstellungsbetrug"
+contentPreview="Nimm dich nach einem Betrug vor falschen „Krypto-Wiederherstellungsexperten“ in Acht."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ Sie versprechen, Ihre gestohlene Krypto gegen eine Vorabgebühr aufzuspüren und
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Phishing-Websites und gefälschte Apps"
+contentPreview="Betrugsseiten ahmen echte Wallets und Börsen nach, um deine Zugangsdaten zu stehlen."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >
