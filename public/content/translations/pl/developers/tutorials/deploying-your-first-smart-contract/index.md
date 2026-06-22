@@ -14,7 +14,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Zapewne jesteś równie podekscytowany jak my, aby [wdrożyć](/developers/docs/smart-contracts/deploying/) i wejść w interakcję ze swoim pierwszym [inteligentnym kontraktem](/developers/docs/smart-contracts/) na blockchainie Ethereum.
 
-Nie martw się, ponieważ jest to nasz pierwszy inteligentny kontrakt, wdrożymy go w [lokalnej sieci testowej](/developers/docs/networks/), więc jego wdrożenie nic Cię nie kosztuje i możesz się nim bawić do woli.
+Nie martw się, ponieważ jest to nasz pierwszy inteligentny kontrakt, wdrożymy go w [lokalnej sieci testowej](/developers/docs/networks/), więc jego wdrożenie nic Cię nie będzie kosztować i będziesz mógł się nim bawić do woli.
 
 ## Pisanie naszego kontraktu {#writing-our-contract}
 
@@ -49,17 +49,17 @@ contract Counter {
 Jeśli jesteś przyzwyczajony do programowania, możesz łatwo odgadnąć, co robi ten program. Oto wyjaśnienie linijka po linijce:
 
 - Linia 4: Definiujemy kontrakt o nazwie `Counter`.
-- Linia 7: Nasz kontrakt przechowuje jedną liczbę całkowitą bez znaku (unsigned integer) o nazwie `count`, zaczynającą się od 0.
-- Linia 10: Pierwsza funkcja zmodyfikuje stan kontraktu i wykona `increment()` (inkrementację) naszej zmiennej `count`.
+- Linia 7: Nasz kontrakt przechowuje jedną liczbę całkowitą bez znaku o nazwie `count`, zaczynającą się od 0.
+- Linia 10: Pierwsza funkcja zmodyfikuje stan kontraktu i zwiększy (`increment()`) naszą zmienną `count`.
 - Linia 15: Druga funkcja to po prostu getter, który pozwala na odczytanie wartości zmiennej `count` poza inteligentnym kontraktem. Zauważ, że ponieważ zdefiniowaliśmy naszą zmienną `count` jako publiczną, nie jest to konieczne, ale zostało pokazane jako przykład.
 
 To wszystko, jeśli chodzi o nasz pierwszy prosty inteligentny kontrakt. Jak zapewne wiesz, wygląda on jak klasa z języków programowania obiektowego (OOP), takich jak Java czy C++. Nadszedł czas, aby pobawić się naszym kontraktem.
 
 ## Wdrażanie naszego kontraktu {#deploying-our-contract}
 
-Skoro napisaliśmy nasz pierwszy inteligentny kontrakt, teraz wdrożymy go na blockchainie, aby móc się nim pobawić.
+Skoro napisaliśmy już nasz pierwszy inteligentny kontrakt, wdrożymy go teraz na blockchainie, aby móc się nim pobawić.
 
-[Wdrożenie inteligentnego kontraktu na blockchainie](/developers/docs/smart-contracts/deploying/) to tak naprawdę tylko wysłanie transakcji zawierającej kod skompilowanego inteligentnego kontraktu bez określania żadnych odbiorców.
+[Wdrożenie inteligentnego kontraktu na blockchainie](/developers/docs/smart-contracts/deploying/) to w rzeczywistości po prostu wysłanie transakcji zawierającej kod skompilowanego inteligentnego kontraktu bez określania żadnych odbiorców.
 
 Najpierw [skompilujemy kontrakt](/developers/docs/smart-contracts/compiling/), klikając ikonę kompilacji po lewej stronie:
 
@@ -75,21 +75,21 @@ Następnie przejdź do ekranu „deploy and run transactions” (wdrażanie i ur
 
 ![The deploy icon in the Remix toolbar](./remix-deploy.png)
 
-Gdy znajdziesz się na ekranie „deploy and run transactions”, upewnij się, że nazwa Twojego kontraktu jest widoczna i kliknij „Deploy” (Wdróż). Jak widać na górze strony, obecne środowisko to „JavaScript VM”, co oznacza, że wdrożymy i będziemy wchodzić w interakcje z naszym inteligentnym kontraktem na lokalnym testowym blockchainie, aby móc testować szybciej i bez żadnych opłat.
+Gdy znajdziesz się na ekranie „deploy and run transactions”, upewnij się, że nazwa Twojego kontraktu jest widoczna, i kliknij „Deploy” (Wdróż). Jak widać na górze strony, obecne środowisko to „JavaScript VM”, co oznacza, że wdrożymy i będziemy wchodzić w interakcję z naszym inteligentnym kontraktem na lokalnym testowym blockchainie, aby móc testować szybciej i bez żadnych opłat.
 
 ![The deploy button in the Remix solidity compiler](./remix-deploy-button.png)
 
 Po kliknięciu przycisku „Deploy” zobaczysz swój kontrakt na dole. Kliknij strzałkę po lewej stronie, aby go rozwinąć, dzięki czemu zobaczymy zawartość naszego kontraktu. To nasza zmienna `counter`, nasza funkcja `increment()` i getter `getCounter()`.
 
-Jeśli klikniesz przycisk `count` lub `getCount`, pobierze on zawartość zmiennej `count` kontraktu i ją wyświetli. Ponieważ nie wywołaliśmy jeszcze funkcji `increment`, powinno wyświetlić się 0.
+Jeśli klikniesz przycisk `count` lub `getCount`, w rzeczywistości pobierze on zawartość zmiennej `count` kontraktu i ją wyświetli. Ponieważ nie wywołaliśmy jeszcze funkcji `increment`, powinno wyświetlić się 0.
 
 ![The function button in the Remix solidity compiler](./remix-function-button.png)
 
-Wywołajmy teraz funkcję `increment`, klikając przycisk. Zobaczysz logi wykonanych transakcji pojawiające się na dole okna. Zauważysz, że logi są inne, gdy naciskasz przycisk w celu pobrania danych, w porównaniu do przycisku `increment`. Dzieje się tak, ponieważ odczytywanie danych na blockchainie nie wymaga żadnych transakcji (zapisywania) ani opłat. Tylko modyfikacja stanu blockchaina wymaga wykonania transakcji:
+Wywołajmy teraz funkcję `increment`, klikając przycisk. Zobaczysz logi wykonanych transakcji pojawiające się na dole okna. Zauważysz, że logi różnią się, gdy naciskasz przycisk w celu pobrania danych, w porównaniu do przycisku `increment`. Dzieje się tak, ponieważ odczytywanie danych na blockchainie nie wymaga żadnych transakcji (zapisywania) ani opłat. Tylko modyfikacja stanu blockchaina wymaga wykonania transakcji:
 
 ![A log of transactions](./transaction-log.png)
 
-Po naciśnięciu przycisku inkrementacji, który wygeneruje transakcję wywołującą naszą funkcję `increment()`, jeśli ponownie klikniemy przyciski count lub getCount, odczytamy nowo zaktualizowany stan naszego inteligentnego kontraktu, w którym zmienna count jest większa niż 0.
+Po naciśnięciu przycisku inkrementacji, który wygeneruje transakcję wywołującą naszą funkcję `increment()`, jeśli ponownie klikniemy przyciski count lub getCount, odczytamy nowo zaktualizowany stan naszego inteligentnego kontraktu, w którym zmienna count będzie większa niż 0.
 
 ![Newly updated state of the smart contract](./updated-state.png)
 

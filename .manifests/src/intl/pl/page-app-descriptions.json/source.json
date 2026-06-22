@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-app-descriptions.json",
-  "generatedAt": "2026-06-02T16:48:34.473Z",
-  "rootHash": "967ac71c1ddb",
+  "generatedAt": "2026-06-22T21:13:50.728Z",
+  "rootHash": "e15a45ccac3b",
   "tree": {
-    "contentHash": "4ae2e96d32b2",
-    "anchorHash": "0517f0226548",
+    "contentHash": "d75a16457ce9",
+    "anchorHash": "415accab04b5",
     "children": {
       "app-0xbow-description": {
         "contentHash": "d6f1ff938878",
@@ -137,6 +137,10 @@
       },
       "app-dark-forest-mud-description": {
         "contentHash": "fa006e3dfcb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-dark-forest-punk-description": {
+        "contentHash": "20001a8e8e13",
         "anchorHash": "e3b0c44298fc"
       },
       "app-dark-shuffle-description": {
@@ -359,6 +363,10 @@
         "contentHash": "1e3e776acd85",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-loot-survivor-description": {
+        "contentHash": "dfd4260668e1",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-magic-eden-description": {
         "contentHash": "ca40b789f1d6",
         "anchorHash": "e3b0c44298fc"
@@ -567,6 +575,10 @@
         "contentHash": "e3e4c5842eaf",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-space-nation-description": {
+        "contentHash": "f589baac3db6",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-spark-description": {
         "contentHash": "411eae0e3a46",
         "anchorHash": "e3b0c44298fc"
@@ -746,6 +758,7 @@
       "app-daimo-pay-description",
       "app-daohaus-description",
       "app-dark-forest-mud-description",
+      "app-dark-forest-punk-description",
       "app-dark-shuffle-description",
       "app-debridge-description",
       "app-decentraland-description",
@@ -801,6 +814,7 @@
       "app-lemon-description",
       "app-liquity-description",
       "app-livepeer-description",
+      "app-loot-survivor-description",
       "app-magic-eden-description",
       "app-manifold-description",
       "app-maple-description",
@@ -853,6 +867,7 @@
       "app-skymaker-usds-description",
       "app-snapshot-description",
       "app-sorare-description",
+      "app-space-nation-description",
       "app-spark-description",
       "app-splits-description",
       "app-splitsorg-description",
@@ -891,5 +906,5 @@
       "app-zupass-description"
     ]
   },
-  "sourceCommitSha": "dfb759274c717847dbdf0fb0570d69de5aa53dfd"
+  "sourceCommitSha": "b423246b2edddb948d72040dbe55756a989a7837"
 }
