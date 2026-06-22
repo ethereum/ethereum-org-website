@@ -14,7 +14,7 @@ Tunaweza kugawanya usambazaji wa ETH katika nguvu mbili kuu: utoaji na kuteketez
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Utoaji wa ETH kwa ufupi">
 
 - Kabla ya kuhamia kwenye Uthibitisho wa Dau (PoS), wachimbaji walitolewa takriban ETH 13,000 kwa siku
 - Waweka dhamana wanatolewa takriban ETH 1,700 kwa siku, kulingana na takriban jumla ya ETH milioni 14 zilizowekwa dhamana
