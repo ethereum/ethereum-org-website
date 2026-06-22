@@ -85,8 +85,8 @@ lang: ur
 ## سکیمز کی اقسام جن سے محتاط رہنا چاہیے {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="گیو اوے اور ایئر ڈراپ سکیمز"
+contentPreview="کوئی بھی مفت ETH نہیں دے رہا ہے۔ یہ پیشکشیں ہمیشہ سکیم ہوتی ہیں۔"
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="جعلی شناخت اور جعلی سپورٹ"
+contentPreview="ایتھیریم یا ethereum.org کی طرف سے کوئی بھی آپ سے کبھی بھی پہلے رابطہ نہیں کرے گا۔"
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="ریکوری سکیمز"
+contentPreview="سکیم ہونے کے بعد، جعلی 'کرپٹو ریکوری ماہرین' سے ہوشیار رہیں۔"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="فشنگ ویب سائٹس اور جعلی ایپس"
+contentPreview="سکیم سائٹس آپ کی اسناد چرانے کے لیے اصلی والیٹس اور ایکسچینجز کی نقل کرتی ہیں۔"
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >
