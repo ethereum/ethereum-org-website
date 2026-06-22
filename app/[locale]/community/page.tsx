@@ -1,3 +1,4 @@
+import { HandCoins, MessageCircleHeart, Sparkles } from "lucide-react"
 import { StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -85,17 +86,17 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   const whyGetInvolvedCards: MarkdownCardProps[] = [
     {
-      emoji: ":mage:",
+      icon: <Sparkles />,
       title: t("page-community-why-get-involved-card-1-title"),
       description: t("page-community-why-get-involved-card-1-description"),
     },
     {
-      emoji: ":dollar:",
+      icon: <HandCoins />,
       title: t("page-community-why-get-involved-card-2-title"),
       description: t("page-community-why-get-involved-card-2-description"),
     },
     {
-      emoji: ":collision:",
+      icon: <MessageCircleHeart />,
       title: t("page-community-why-get-involved-card-3-title"),
       description: t("page-community-why-get-involved-card-3-description"),
     },
@@ -125,7 +126,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               {whyGetInvolvedCards.map((card, idx) => (
                 <MarkdownCard
                   key={idx}
-                  emoji={card.emoji}
+                  icon={card.icon}
                   title={card.title}
                   description={card.description}
                 />
