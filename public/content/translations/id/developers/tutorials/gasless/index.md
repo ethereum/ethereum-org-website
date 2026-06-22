@@ -354,10 +354,10 @@ Seorang pengguna mengirimkan sapaan. Mungkin sapaan itu diperbarui di blok berik
 - Sapaan baru telah dikirimkan, dan sedang diproses
 - Sapaan baru telah ditolak
 
-## Kesimpulan {#conclusion}
+## Kesimpulan
 
-Pada titik ini, Anda seharusnya sudah dapat menciptakan pengalaman tanpa gas untuk pengguna dapp Anda, dengan mengorbankan sedikit sentralisasi.
+Pada titik ini, Anda seharusnya sudah dapat membuat pengalaman tanpa gas untuk pengguna aplikasi terdesentralisasi (dapp) Anda, dengan konsekuensi adanya sedikit sentralisasi.
 
-Namun, ini hanya berfungsi dengan kontrak pintar yang mendukung ERC-712. Untuk mentransfer token ERC-20, misalnya, transaksi perlu ditandatangani oleh pemiliknya, bukan sekadar pesan. Solusinya adalah [abstraksi akun (ERC-4337)](https://docs.erc4337.io/index.html). Saya harap dapat menulis tutorial tentang hal ini di masa mendatang.
+Namun, ini hanya berfungsi dengan kontrak pintar yang mendukung ERC-712. Untuk mentransfer token ERC-20, misalnya, transaksi perlu ditandatangani oleh pemiliknya, bukan hanya sebuah pesan. Solusi paling sederhana adalah dengan membuat aset tidak dimiliki oleh alamat EOA, melainkan oleh kontrak terpisah (bentuk sederhana dari [abstraksi akun](/roadmap/account-abstraction/)). Anda dapat membaca lebih lanjut tentang hal ini [di tutorial lanjutannya](/developers/tutorials/gasless-token).
 
 [Lihat di sini untuk karya saya yang lain](https://cryptodocguy.pro/).

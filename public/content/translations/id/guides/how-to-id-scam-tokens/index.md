@@ -14,7 +14,7 @@ Ada dua cara yang kemungkinan besar mereka gunakan untuk menipu Anda:
 Untuk mengilustrasikan apa itu token penipuan, dan cara mengidentifikasinya, kita akan melihat salah satu contohnya: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Token ini mencoba terlihat seperti token [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) yang sah.
 
 <ExpandableCard
-title="What is ARB?"
+title="Apa itu ARB?"
 contentPreview=''>
 
 Arbitrum adalah organisasi yang mengembangkan dan mengelola [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Awalnya, Arbitrum diorganisasikan sebagai perusahaan nirlaba, tetapi kemudian mengambil langkah-langkah untuk terdesentralisasi. Sebagai bagian dari proses tersebut, mereka menerbitkan [token tata kelola](/dao/#token-based-membership) yang dapat diperdagangkan.
@@ -22,7 +22,7 @@ Arbitrum adalah organisasi yang mengembangkan dan mengelola [optimistic rollup](
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Mengapa token penipuan tersebut disebut wARB?"
 contentPreview=''>
 
 Ada sebuah konvensi di Ethereum bahwa ketika sebuah aset tidak mematuhi ERC-20, kita membuat versi "terbungkus" darinya dengan nama yang dimulai dengan "w". Jadi, misalnya, kita memiliki wBTC untuk bitcoin dan <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH untuk ether</a>.
@@ -36,7 +36,7 @@ Tidak masuk akal untuk membuat versi terbungkus dari token ERC-20 yang sudah ada
 Inti dari Ethereum adalah desentralisasi. Ini berarti tidak ada otoritas pusat yang dapat menyita aset Anda atau mencegah Anda menyebarkan kontrak pintar. Namun, ini juga berarti bahwa penipu dapat menyebarkan kontrak pintar apa pun yang mereka inginkan.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Apa itu kontrak pintar?"
 contentPreview=''>
 
 [Kontrak pintar](/developers/docs/smart-contracts/) adalah program yang berjalan di atas rantai blok Ethereum. Setiap token ERC-20, misalnya, diimplementasikan sebagai kontrak pintar.
