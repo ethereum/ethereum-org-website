@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "Data dan analitik",
   "docs-nav-data-and-analytics-description": "Bagaimana data rantai blok diagregasi, diatur, dan diimplementasikan ke dalam aplikasi terdesentralisasi (dapp)",
   "docs-nav-data-availability": "Ketersediaan data",
+  "docs-nav-data-availability-description": "Gambaran umum tentang masalah dan solusi terkait ketersediaan data di Ethereum",
   "docs-nav-data-availability-storage-strategies": "Strategi penyimpanan data rantai blok",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "Validasi state dalam pengembangan",
   "layer-2-metis-note": "Bukti penipuan dalam pengembangan",
   "layer-2-optimism-note": "Bukti kesalahan dalam pengembangan",
-  "back-to-top": "Kembali ke atas",
   "banner-page-incomplete": "Halaman ini belum lengkap dan kami sangat mengharapkan bantuan Anda. Edit halaman ini dan tambahkan apa pun yang menurut Anda mungkin berguna bagi orang lain.",
   "next": "Selanjutnya",
   "previous": "Sebelumnya"

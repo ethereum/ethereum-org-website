@@ -85,8 +85,8 @@ lang: uk
 ## Типи шахрайства, на які слід звернути увагу {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Шахрайство з розіграшами та аірдропами"
+contentPreview="Ніхто не роздає ETH безкоштовно. Ці пропозиції — завжди шахрайство."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Видавання себе за інших та фейкова підтримка"
+contentPreview="Ніхто з Етеріуму або ethereum.org ніколи не зв'яжеться з вами першим."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Шахрайство з відновленням"
+contentPreview="Після того, як вас ошукали, остерігайтеся фейкових «експертів з відновлення крипто»."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Фішингові вебсайти та фейкові застосунки"
+contentPreview="Шахрайські сайти імітують справжні гаманці та біржі, щоб викрасти ваші облікові дані."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

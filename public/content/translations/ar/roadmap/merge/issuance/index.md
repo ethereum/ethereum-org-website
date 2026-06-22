@@ -14,7 +14,7 @@ lang: ar
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="ملخص إصدار ETH">
 
 - قبل الانتقال إلى إثبات الحصة (PoS)، كان يتم إصدار حوالي <span dir="ltr">13,000 ETH/day</span> للمُعَدِّنين
 - يتم إصدار حوالي <span dir="ltr">1,700 ETH/day</span> للمُخزِّنين، بناءً على إجمالي حوالي 14 مليون <span dir="ltr">ETH</span> مخزنة كحصة تخزين

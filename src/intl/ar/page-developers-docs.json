@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "البيانات والتحليلات",
   "docs-nav-data-and-analytics-description": "كيف يتم تجميع بيانات سلسلة الكتل وتنظيمها وتنفيذها في التطبيقات اللامركزية (dapps)",
   "docs-nav-data-availability": "توفر البيانات",
+  "docs-nav-data-availability-description": "نظرة عامة على المشاكل والحلول المتعلقة بتوفر البيانات في إيثيريوم",
   "docs-nav-data-availability-storage-strategies": "استراتيجيات تخزين بيانات سلسلة الكتل",
   "docs-nav-dart": "⁦Dart⁩",
   "docs-nav-delphi": "⁦Delphi⁩",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "التحقق من الحالة قيد التطوير",
   "layer-2-metis-note": "إثباتات الاحتيال قيد التطوير",
   "layer-2-optimism-note": "إثباتات الأخطاء قيد التطوير",
-  "back-to-top": "العودة إلى الأعلى",
   "banner-page-incomplete": "هذه الصفحة غير مكتملة ونود الحصول على مساعدتك. قم بتعديل هذه الصفحة وأضف أي شيء تعتقد أنه قد يكون مفيداً للآخرين.",
   "next": "التالي",
   "previous": "السابق"

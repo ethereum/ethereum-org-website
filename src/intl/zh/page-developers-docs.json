@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "数据与分析",
   "docs-nav-data-and-analytics-description": "如何将区块链数据聚合、组织并应用到去中心化应用 (dapp) 中",
   "docs-nav-data-availability": "数据可用性",
+  "docs-nav-data-availability-description": "以太坊数据可用性相关问题与解决方案概述",
   "docs-nav-data-availability-storage-strategies": "区块链数据存储策略",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "状态验证正在开发中",
   "layer-2-metis-note": "欺诈证明正在开发中",
   "layer-2-optimism-note": "故障证明正在开发中",
-  "back-to-top": "返回顶部",
   "banner-page-incomplete": "此页面尚不完整，我们非常需要您的帮助。请编辑此页面并添加您认为可能对他人有用的任何内容。",
   "next": "下一页",
   "previous": "上一页"

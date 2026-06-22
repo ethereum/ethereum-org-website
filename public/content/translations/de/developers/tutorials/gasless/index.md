@@ -354,10 +354,10 @@ Ein Nutzer reicht eine Begrüßung ein. Vielleicht wird sie beim nächsten Block
 - Die neue Begrüßung wurde eingereicht und wird verarbeitet
 - Die neue Begrüßung wurde abgelehnt
 
-## Fazit {#conclusion}
+## Fazit
 
-An diesem Punkt sollten Sie in der Lage sein, ein gasloses Erlebnis für die Nutzer Ihrer Dapp zu schaffen, auf Kosten einer gewissen Zentralisierung.
+An diesem Punkt sollten Sie in der Lage sein, eine gasfreie Nutzung für die Nutzer Ihrer Dezentralen Anwendung (Dapp) zu schaffen, auf Kosten einer gewissen Zentralisierung.
 
-Dies funktioniert jedoch nur mit Smart Contracts, die ERC-712 unterstützen. Um beispielsweise einen ERC-20-Token zu transferieren, ist es erforderlich, dass die Transaktion vom Eigentümer signiert wird und nicht nur eine Nachricht. Die Lösung ist die [Kontoabstraktion (ERC-4337)](https://docs.erc4337.io/index.html). Ich hoffe, in Zukunft ein Tutorial darüber zu schreiben.
+Dies funktioniert jedoch nur mit Smart Contracts, die ERC-712 unterstützen. Für den Transfer eines ERC-20-Tokens ist es beispielsweise erforderlich, dass die Transaktion vom Eigentümer signiert wird und nicht nur eine Nachricht. Die einfachste Lösung besteht darin, dass die Vermögenswerte nicht der EOA-Adresse gehören, sondern einem separaten Vertrag (eine einfache Form der [Kontoabstraktion](/roadmap/account-abstraction/)). Mehr darüber erfahren Sie [im Fortsetzungs-Tutorial](/developers/tutorials/gasless-token).
 
-[Sehen Sie hier mehr von meiner Arbeit](https://cryptodocguy.pro/).
+[Weitere meiner Arbeiten finden Sie hier](https://cryptodocguy.pro/).

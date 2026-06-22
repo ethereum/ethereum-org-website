@@ -354,10 +354,10 @@ Mtumiaji anawasilisha salamu. Labda inasasishwa kwenye kitalu kinachofuata. Labd
 - Salamu mpya imewasilishwa, na iko katika mchakato
 - Salamu mpya imekataliwa
 
-## Hitimisho {#conclusion}
+## Hitimisho
 
-Kufikia hapa, unapaswa kuwa na uwezo wa kuunda uzoefu bila gesi kwa watumiaji wako wa dapp, kwa gharama ya kiasi fulani cha uwekaji kati (centralization).
+Kufikia hapa, unapaswa kuwa na uwezo wa kuunda uzoefu wa kutotumia gesi kwa watumiaji wa programu tumizi iliyogatuliwa (dapp) yako, kwa gharama ya usimamizi wa kati kiasi.
 
-Hata hivyo, hii inafanya kazi tu na mikataba mahiri inayoauni ERC-712. Ili kuhamisha tokeni ya ERC-20, kwa mfano, ni lazima muamala utiwe saini na mmiliki badala ya ujumbe tu. Suluhisho ni [udhanifu wa akaunti (ERC-4337)](https://docs.erc4337.io/index.html). Natumai kuandika mafunzo ya baadaye kuihusu.
+Hata hivyo, hii inafanya kazi tu na mikataba mahiri inayotumia ERC-712. Ili kuhamisha tokeni ya ERC-20, kwa mfano, ni lazima muamala utiwe saini na mmiliki badala ya ujumbe tu. Suluhisho rahisi zaidi ni kuwa na rasilimali zinazomilikiwa si na anwani ya EOA, bali na mkataba tofauti (aina rahisi ya [udhanifu wa akaunti](/roadmap/account-abstraction/)). Unaweza kusoma zaidi kuihusu [katika mafunzo yanayofuata](/developers/tutorials/gasless-token).
 
 [Tazama hapa kwa kazi zangu zaidi](https://cryptodocguy.pro/).

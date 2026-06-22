@@ -14,7 +14,7 @@ Podaż ETH możemy podzielić na dwie główne siły: emisję i spalanie.
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Emisja ETH w skrócie">
 
 - Przed przejściem na dowód stawki (PoS), górnicy otrzymywali z emisji około 13 000 ETH dziennie
 - Osoby stakujące otrzymują z emisji około 1700 ETH dziennie, przy założeniu około 14 milionów całkowitego stakowanego ETH

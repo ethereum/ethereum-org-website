@@ -85,8 +85,8 @@ Segnalare è comunque utile. Le segnalazioni aiutano le forze dell'ordine a rint
 ## Tipi di truffe a cui prestare attenzione {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Truffe di giveaway e airdrop"
+contentPreview="Nessuno regala ETH. Queste offerte sono sempre truffe."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ I truffatori creano finti giveaway promettendo di moltiplicare i tuoi ETH o di d
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Furto d'identità e finta assistenza"
+contentPreview="Nessuno di Ethereum o ethereum.org ti contatterà mai per primo."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ I truffatori si spacciano per membri del team di Ethereum, moderatori o agenti d
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Truffe di recupero"
+contentPreview="Dopo aver subito una truffa, fai attenzione ai finti &quot;esperti di recupero cripto&quot;."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ Promettono di rintracciare e recuperare le tue cripto rubate in cambio di una co
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Siti web di phishing e app false"
+contentPreview="I siti truffa imitano portafogli ed exchange reali per rubare le tue credenziali."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

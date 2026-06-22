@@ -85,8 +85,8 @@ lang: hi
 ## ध्यान रखने योग्य घोटालों के प्रकार {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="गिवअवे और एयरड्रॉप स्कैम"
+contentPreview="कोई भी मुफ़्त ETH नहीं दे रहा है। ये ऑफ़र हमेशा स्कैम होते हैं।"
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="प्रतिरूपण और नकली सपोर्ट"
+contentPreview="इथेरियम या ethereum.org से कोई भी आपसे कभी भी पहले संपर्क नहीं करेगा।"
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="रिकवरी स्कैम"
+contentPreview="स्कैम का शिकार होने के बाद, नकली 'क्रिप्टो रिकवरी विशेषज्ञों' से सावधान रहें।"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="फ़िशिंग वेबसाइटें और नकली ऐप"
+contentPreview="स्कैम साइटें आपके क्रेडेंशियल चुराने के लिए असली वॉलेट और एक्सचेंजों की नकल करती हैं।"
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

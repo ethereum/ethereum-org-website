@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-layer-2.json",
-  "generatedAt": "2026-05-01T19:48:45.555Z",
-  "rootHash": "260c8451c393",
+  "generatedAt": "2026-06-22T21:22:04.454Z",
+  "rootHash": "452a7d6247be",
   "tree": {
-    "contentHash": "fbdebf01ec3d",
+    "contentHash": "744e857eb926",
     "anchorHash": "8c59b1df1226",
     "children": {
       "page-layer-2-hero-title": {
@@ -52,11 +52,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-layer-2-meta-title": {
-        "contentHash": "0b25c7767f05",
+        "contentHash": "800a43ff00a1",
         "anchorHash": "e3b0c44298fc"
       },
       "page-layer-2-meta-description": {
-        "contentHash": "1e44a2635076",
+        "contentHash": "c51e62624586",
         "anchorHash": "e3b0c44298fc"
       },
       "page-layer-2-powered-by-ethereum-title": {
@@ -320,5 +320,5 @@
       "page-layer-2-zircuit-description"
     ]
   },
-  "sourceCommitSha": "4a12cb9394943a43a5509983baec11bf9c3d756f"
+  "sourceCommitSha": "b423246b2edddb948d72040dbe55756a989a7837"
 }

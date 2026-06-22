@@ -354,10 +354,10 @@ Użytkownik przesyła powitanie. Może zostanie ono zaktualizowane w następnym 
 - Nowe powitanie zostało przesłane i jest w trakcie przetwarzania
 - Nowe powitanie zostało odrzucone
 
-## Podsumowanie {#conclusion}
+## Podsumowanie
 
-W tym momencie powinieneś być w stanie stworzyć doświadczenie bez gazu dla użytkowników Twojej zdecentralizowanej aplikacji (dapp), kosztem pewnej centralizacji.
+Na tym etapie powinieneś być w stanie stworzyć środowisko bez opłat za gaz dla użytkowników Twojej zdecentralizowanej aplikacji (dapp), kosztem pewnej centralizacji.
 
-Jednak działa to tylko z inteligentnymi kontraktami, które obsługują ERC-712. Aby na przykład przetransferować token ERC-20, konieczne jest, aby transakcja została podpisana przez właściciela, a nie tylko wiadomość. Rozwiązaniem jest [abstrakcja konta (ERC-4337)](https://docs.erc4337.io/index.html). Mam nadzieję napisać o tym przyszły samouczek.
+Działa to jednak tylko z inteligentnymi kontraktami, które obsługują ERC-712. Aby na przykład wykonać transfer tokena ERC-20, konieczne jest, aby to transakcja została podpisana przez właściciela, a nie tylko wiadomość. Najprostszym rozwiązaniem jest przypisanie własności aktywów nie do adresu EOA, lecz do oddzielnego kontraktu (prosta forma [abstrakcji konta](/roadmap/account-abstraction/)). Możesz przeczytać o tym więcej [w kolejnym samouczku](/developers/tutorials/gasless-token).
 
-[Zobacz tutaj więcej moich prac](https://cryptodocguy.pro/).
+[Tutaj znajdziesz więcej moich prac](https://cryptodocguy.pro/).

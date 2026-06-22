@@ -14,7 +14,7 @@ Việc **phát hành** ETH là quá trình tạo ra ETH chưa từng tồn tại
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Tóm tắt về phát hành ETH">
 
 - Trước khi chuyển sang Bằng chứng cổ phần (PoS), các thợ đào được phát hành khoảng 13.000 ETH/ngày
 - Những người đặt cọc được phát hành khoảng 1.700 ETH/ngày, dựa trên tổng số khoảng 14 triệu ETH được đặt cọc

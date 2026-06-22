@@ -85,8 +85,8 @@ lang: ru
 ## Виды мошенничества, которых следует остерегаться {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Мошенничество с раздачами и аирдропами"
+contentPreview="Никто не раздает ETH бесплатно. Подобные предложения — всегда мошенничество."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Самозванцы и поддельная служба поддержки"
+contentPreview="Никто из Эфириума или ethereum.org никогда не свяжется с вами первым."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Мошенничество с возвратом средств"
+contentPreview="Если вас обманули, остерегайтесь поддельных «экспертов по возврату криптовалюты»."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Фишинговые сайты и поддельные приложения"
+contentPreview="Мошеннические сайты имитируют настоящие кошельки и биржи, чтобы украсть ваши учетные данные."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

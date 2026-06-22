@@ -137,5 +137,8 @@
   "page-developers-why-title": "İyi kazanın. Uzaktan çalışın. Geleceği inşa edin.",
   "page-developers-why-subtitle": "Blokzincir kariyerlerinin yarısından fazlası öncelikli olarak uzaktan çalışmaya dayalıdır ve bazı tahminlere göre bu oran %70'e kadar çıkmaktadır.",
   "page-developers-why-avg-salary-dev": "Ortalama geliştirici maaşı",
-  "page-developers-why-avg-salary-blockchain": "Blokzincir endüstrisindeki ortalama maaş"
+  "page-developers-why-avg-salary-blockchain": "Blokzincir endüstrisindeki ortalama maaş",
+  "page-developers-blog-title": "Oluşturucu güncellemeleri",
+  "page-developers-blog-desc": "En son Ethereum oluşturucu kaynakları, araçları ve geliştirmeleri hakkında içgörüler.",
+  "page-developers-blog-view-all": "Tüm güncellemeleri görüntüle"
 }

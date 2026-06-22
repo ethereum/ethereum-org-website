@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-developers-index.json",
-  "generatedAt": "2026-05-26T10:02:50.662Z",
-  "rootHash": "029f8dd7f7d9",
+  "generatedAt": "2026-06-22T21:18:02.439Z",
+  "rootHash": "2d94f1c39f98",
   "tree": {
-    "contentHash": "a6e905a977e2",
-    "anchorHash": "fc982ee94c6e",
+    "contentHash": "f00993b46611",
+    "anchorHash": "ca616d8eb7fb",
     "children": {
       "page-developer-meta-title": {
         "contentHash": "dc4543bddb68",
@@ -582,6 +582,18 @@
       "page-developers-why-avg-salary-blockchain": {
         "contentHash": "d0e0efbfa4c5",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-blog-title": {
+        "contentHash": "d90f62475406",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-blog-desc": {
+        "contentHash": "061e630c45c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-blog-view-all": {
+        "contentHash": "3a59c397db27",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -723,8 +735,11 @@
       "page-developers-why-title",
       "page-developers-why-subtitle",
       "page-developers-why-avg-salary-dev",
-      "page-developers-why-avg-salary-blockchain"
+      "page-developers-why-avg-salary-blockchain",
+      "page-developers-blog-title",
+      "page-developers-blog-desc",
+      "page-developers-blog-view-all"
     ]
   },
-  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+  "sourceCommitSha": "b423246b2edddb948d72040dbe55756a989a7837"
 }
