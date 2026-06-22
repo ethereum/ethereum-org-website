@@ -712,10 +712,10 @@ For prominent numeric displays (e.g., "$3000" prize amounts, statistics). Don't 
 ### Heroes -- `@/components/Hero`
 
 ```tsx
-import { HomeHero, HubHero, MdxHero, PageHero } from "@/components/Hero"
+import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 ```
 
-See `canonical-imports.md` for selection.
+See `canonical-imports.md` for selection. (The former `MdxHero` was removed -- use `PageHero` text-only with `variant="no-divider"`.)
 
 ### Banner-named components
 
