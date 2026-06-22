@@ -14,7 +14,7 @@ Nabídku ETH můžeme rozdělit na dvě hlavní síly: emisi a spalování.
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Emise ETH ve zkratce">
 
 - Před přechodem na důkaz podílem (PoS) bylo těžařům emitováno přibližně 13 000 ETH denně
 - Stakerům je emitováno přibližně 1 700 ETH denně, na základě celkových zhruba 14 milionů stakovaných ETH
