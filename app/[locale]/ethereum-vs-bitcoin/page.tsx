@@ -102,7 +102,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       />
 
       <ContentLayout
-        asidePosition="right-top"
         heroSection={
           <PageHero
             breadcrumbs={{ slug: "learn/ethereum-vs-bitcoin", startDepth: 1 }}

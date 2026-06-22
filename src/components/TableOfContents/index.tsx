@@ -15,17 +15,28 @@ import { cn } from "@/lib/utils/cn"
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
 
-const variants = cva(
-  "sticky flex h-fit max-lg:hidden flex-col items-start overflow-y-auto",
+const variants = cva("sticky", {
+  variants: {
+    variant: {
+      docs: "top-19",
+      card: "top-28",
+      left: "top-28",
+    },
+  },
+  defaultVariants: {
+    variant: "docs",
+  },
+})
+const tocVariants = cva(
+  "flex h-fit max-lg:hidden flex-col items-start overflow-y-auto",
   {
     variants: {
       variant: {
-        docs: "top-19 min-w-48 max-w-[25%] p-4 pb-16 pe-0 gap-4 max-h-[calc(100vh-5rem)]",
+        docs: "min-w-48 max-w-[25%] p-4 pb-16 pe-0 gap-4 max-h-[calc(100vh-5rem)]",
         card: cn(
-          "top-28 min-w-80 max-w-72 lg:p-8 px-3 py-2",
+          "min-w-80 max-w-72 lg:p-8 px-3 py-2",
           "shrink-0 gap-y-2.5 rounded-base bg-accent-a/10 text-body-medium"
         ),
-        left: "top-28 [&_ul]:leading-relaxed",
       },
     },
     defaultVariants: {
@@ -39,7 +50,6 @@ const labelVariants = cva("font-bold", {
     variant: {
       docs: "uppercase text-body-medium font-normal",
       card: "text-lg text-body-medium",
-      left: "mb-8 text-3xl leading-xs",
     },
   },
   defaultVariants: {
@@ -52,7 +62,6 @@ const listVariants = cva("mx-0 gap-2 py-0", {
     variant: {
       docs: "list-none border-s border-s-body-medium ps-4 my-2 text-sm",
       card: "list-decimal list-inside ps-0 my-2",
-      left: "list-none my-0",
     },
   },
   defaultVariants: {
@@ -60,7 +69,7 @@ const listVariants = cva("mx-0 gap-2 py-0", {
   },
 })
 
-export interface TableOfContentsProps extends VariantProps<typeof variants> {
+export interface TableOfContentsProps extends VariantProps<typeof tocVariants> {
   items: Array<ToCItem>
   maxDepth?: number
   isMobile?: boolean
@@ -111,25 +120,25 @@ const TableOfContents = ({
   const style = isDocsVariant ? { style: fadeMask } : {}
 
   return (
-    <nav className={variants({ variant, className })} {...style} {...rest}>
-      {variant === "left" && showDropdown && dropdownLinks && (
-        <div className="relative mb-8 flex w-full items-end justify-end">
-          <ButtonDropdown
-            list={dropdownLinks}
-            className="w-full min-w-[240px]"
-          />
+    <nav className={variants({ variant })}>
+      {variant === "card" && showDropdown && dropdownLinks && (
+        <div className="relative mb-8 flex w-full items-end justify-end max-lg:hidden">
+          <ButtonDropdown list={dropdownLinks} className="w-full min-w-60" />
         </div>
       )}
-      <div className={labelVariants({ variant })}>{t("on-this-page")}</div>
-      <ul className={listVariants({ variant })}>
-        <ItemsList
-          items={items}
-          depth={0}
-          maxDepth={maxDepth ?? 1}
-          activeHash={activeHash}
-          variant={variant}
-        />
-      </ul>
+
+      <div className={tocVariants({ variant, className })} {...style} {...rest}>
+        <div className={labelVariants({ variant })}>{t("on-this-page")}</div>
+        <ul className={listVariants({ variant })}>
+          <ItemsList
+            items={items}
+            depth={0}
+            maxDepth={maxDepth ?? 1}
+            activeHash={activeHash}
+            variant={variant}
+          />
+        </ul>
+      </div>
     </nav>
   )
 }

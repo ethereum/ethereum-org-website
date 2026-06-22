@@ -89,7 +89,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <ContentLayout
-        asidePosition="right-top"
         heroSection={
           <PageHero
             breadcrumbs={{ slug: "learn/what-is-ethereum", startDepth: 1 }}

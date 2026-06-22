@@ -105,7 +105,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       />
 
       <ContentLayout
-        asidePosition="right-top"
         heroSection={
           <PageHero
             breadcrumbs={{

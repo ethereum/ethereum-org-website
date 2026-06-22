@@ -1,3 +1,4 @@
+import { cva, VariantProps } from "class-variance-authority"
 import type { HTMLAttributes } from "react"
 
 import { FileContributor } from "@/lib/types"
@@ -11,7 +12,14 @@ import TableOfContents, {
   type TableOfContentsProps,
 } from "@/components/TableOfContents"
 
-import { cn } from "@/lib/utils/cn"
+const variants = cva("flow flex-1", {
+  variants: {
+    variant: { base: "max-w-4xl", narrow: "max-w-3xl" },
+  },
+  defaultVariants: {
+    variant: "narrow",
+  },
+})
 
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
   Pick<TableOfContentsProps, "dropdownLinks" | "showDropdown"> & {
@@ -20,13 +28,8 @@ type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
     heroSection: React.ReactNode
     contributors: FileContributor[]
     lastEditLocaleTimestamp?: string
-    /**
-     * `"left-bottom"` — Contributors at the foot of the article, TOC rail on the left.
-     * `"right-top"` — Compact contributors + listen byline up top, card TOC on the right.
-     */
-    asidePosition?: "left-bottom" | "right-top"
     listenSlug?: string
-  }
+  } & VariantProps<typeof variants>
 
 export const ContentLayout = ({
   children,
@@ -36,75 +39,37 @@ export const ContentLayout = ({
   heroSection,
   contributors,
   lastEditLocaleTimestamp,
-  asidePosition = "left-bottom",
   listenSlug,
+  variant,
   ...props
 }: ContentLayoutProps) => (
   <div {...props}>
     {heroSection}
 
-    <main
-      className={cn(
-        "p-page",
-        asidePosition === "left-bottom" &&
-          "pt-space-3x max-lg:has-[[role=toolbar]:first-child]:pt-space",
-        asidePosition === "left-bottom" && listenSlug && "pt-0"
-      )}
-    >
-      <div
-        className={cn(
-          "flex justify-between gap-x-space-3x",
-          asidePosition === "left-bottom"
-            ? "flex-col lg:flex-row-reverse"
-            : "max-lg:flex-col-reverse"
-        )}
-      >
-        <MainArticle
-          className={cn(
-            "flow",
-            asidePosition === "right-top"
-              ? "max-w-3xl flex-1"
-              : "shrink grow basis-5xl"
-          )}
-        >
-          {asidePosition === "right-top" && (
-            <FileContributors
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-              variant="compact"
-            />
-          )}
+    <main className="p-page">
+      <div className="flex justify-between gap-x-space-3x max-lg:flex-col-reverse">
+        <MainArticle className={variants({ variant })}>
+          <FileContributors
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            variant="compact"
+          />
           {listenSlug && (
             <ListenToPlayer className="mt-space-half" slug={listenSlug} />
           )}
 
           {children}
-
-          {asidePosition === "left-bottom" && (
-            <FileContributors
-              className="my-10 border-t"
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-            />
-          )}
         </MainArticle>
 
-        <aside
-          className={cn(
-            asidePosition === "left-bottom" &&
-              "basis-md pb-space-3x max-lg:hidden"
-          )}
-        >
-          {asidePosition === "right-top" && (
-            <TableOfContents variant="card" items={tocItems} isMobile />
-          )}
+        <aside>
+          <TableOfContents variant="card" items={tocItems} isMobile />
 
           <TableOfContents
             items={tocItems}
             dropdownLinks={dropdownLinks}
             maxDepth={0}
             showDropdown={showDropdown}
-            variant={asidePosition === "left-bottom" ? "left" : "card"}
+            variant="card"
           />
         </aside>
       </div>
