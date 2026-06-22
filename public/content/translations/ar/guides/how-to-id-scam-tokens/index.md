@@ -14,7 +14,7 @@ lang: ar
 لتوضيح ماهية الرموز المميزة الاحتيالية، وكيفية التعرف عليها، سنلقي نظرة على مثال لأحدها: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). يحاول هذا الرمز المميز أن يبدو مثل الرمز المميز الشرعي [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="ما هو ARB؟"
 contentPreview=''>
 
 أربيتروم هي منظمة تقوم بتطوير وإدارة [تجميعات متفائلة](/developers/docs/scaling/optimistic-rollups/). في البداية، تم تنظيم أربيتروم كشركة هادفة للربح، ولكنها اتخذت بعد ذلك خطوات نحو اللامركزية. وكجزء من هذه العملية، أصدروا [رمز الحوكمة](/dao/#token-based-membership) قابل للتداول.
@@ -22,7 +22,7 @@ contentPreview=''>
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="لماذا يُسمى الرمز المميز الاحتيالي wARB؟"
 contentPreview=''>
 
 هناك عرف في إيثيريوم ينص على أنه عندما لا يكون الأصل متوافقًا مع معيار ERC-20، فإننا ننشئ نسخة "مغلفة" منه يبدأ اسمها بحرف "<span dir="ltr">w</span>". لذلك، على سبيل المثال، لدينا <span dir="ltr">wBTC</span> لعملة بيتكوين و<a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work"><span dir="ltr">wETH</span> لإيثر</a>.
@@ -36,7 +36,7 @@ contentPreview=''>
 الهدف الأساسي من إيثيريوم هو اللامركزية. هذا يعني أنه لا توجد سلطة مركزية يمكنها مصادرة أصولك أو منعك من نشر عقد ذكي. ولكنه يعني أيضًا أنه يمكن للمحتالين نشر أي عقد ذكي يرغبون فيه.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="ما هي العقود الذكية؟"
 contentPreview=''>
 
 [العقود الذكية](/developers/docs/smart-contracts/) هي البرامج التي تعمل فوق سلسلة كتل إيثيريوم. كل رمز ERC-20 مميز، على سبيل المثال، يتم تنفيذه كعقد ذكي.
