@@ -85,8 +85,8 @@ lang: ja
 ## 注意すべき詐欺の種類 {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="ギブアウェイとエアドロップ詐欺"
+contentPreview="無料でETHを配っている人はいません。このようなオファーは常に詐欺です。"
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="なりすましと偽のサポート"
+contentPreview="イーサリアムやethereum.orgから先に連絡してくることは絶対にありません。"
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="リカバリー詐欺"
+contentPreview="詐欺に遭った後は、偽の「暗号資産リカバリー専門家」に注意してください。"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="フィッシングサイトと偽アプリ"
+contentPreview="詐欺サイトは本物のウォレットや取引所を模倣し、あなたの認証情報を盗み出そうとします。"
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >
