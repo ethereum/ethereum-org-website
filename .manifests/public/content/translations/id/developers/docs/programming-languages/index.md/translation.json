@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-17T22:21:36.803Z",
+  "englishManifestHash": "dfd8136ef519",
+  "placeholderOrder": [
+    "LINK-adc8d3",
+    "LINK-068162",
+    "LINK-349d25",
+    "LINK-ca1e9d",
+    "LINK-4fd416",
+    "LINK-a39697",
+    "LINK-50ad93",
+    "LINK-7ca89a",
+    "LINK-981be6",
+    "LINK-010b70",
+    "LINK-a9443d",
+    "LINK-555f2c",
+    "LINK-3b730a",
+    "LINK-6090e6"
+  ],
+  "placeholderMap": {
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-068162": {
+      "type": "link",
+      "values": {
+        "url": "/community/"
+      }
+    },
+    "LINK-349d25": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/dart/"
+      }
+    },
+    "LINK-ca1e9d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/delphi/"
+      }
+    },
+    "LINK-4fd416": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/dot-net/"
+      }
+    },
+    "LINK-a39697": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/elixir/"
+      }
+    },
+    "LINK-50ad93": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/golang/"
+      }
+    },
+    "LINK-7ca89a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/java/"
+      }
+    },
+    "LINK-981be6": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/javascript/"
+      }
+    },
+    "LINK-010b70": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/python/"
+      }
+    },
+    "LINK-a9443d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/ruby/"
+      }
+    },
+    "LINK-555f2c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/rust/"
+      }
+    },
+    "LINK-3b730a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+      }
+    },
+    "LINK-6090e6": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:21:36.803Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,61 +1,55 @@
 ---
-title: Uthibitisho wa Merkle kwa uadilifu wa data nje ya mtandao
-description: Kuhakikisha uadilifu wa data onchain kwa data ambayo imehifadhiwa, zaidi, offchain
+title: Ushahidi wa Merkle kwa uadilifu wa data nje ya mnyororo
+description: Kuhakikisha uadilifu wa data mnyororoni kwa data ambayo imehifadhiwa, zaidi, nje ya mnyororo
 author: Ori Pomerantz
-tags: ["storage"]
+tags: ["uhifadhi"]
 skill: advanced
-breadcrumb: "Uthibitisho wa Merkle"
+breadcrumb: Ushahidi wa Merkle
 lang: sw
 published: 2021-12-30
 ---
 
 ## Utangulizi {#introduction}
 
-Kimsingi tungependa kuhifadhi kila kitu katika ghala la Ethereum, ambalo huhifadhiwa kwenye maelfu ya kompyuta na lina
-upatikanaji wa juu sana (data haiwezi kudhibitiwa) na uadilifu (data haiwezi kurekebishwa kwa njia
-isiyoidhinishwa), lakini kuhifadhi neno la baiti 32 kwa kawaida hugharimu gesi 20,000. Ninapoandika hili, gharama hiyo ni
-sawa na $6.60. Kwa senti 21 kwa kila baiti hii ni ghali sana kwa matumizi mengi.
+Kwa hakika tungependa kuhifadhi kila kitu katika hifadhi ya Ethereum, ambayo imehifadhiwa kwenye maelfu ya kompyuta na ina upatikanaji wa juu sana (data haiwezi kudhibitiwa) na uadilifu (data haiwezi kurekebishwa kwa njia isiyoidhinishwa), lakini kuhifadhi neno la baiti 32 kwa kawaida hugharimu gesi 20,000. Ninapoandika haya, gharama hiyo ni sawa na $6.60. Kwa senti 21 kwa kila baiti hii ni ghali sana kwa matumizi mengi.
 
-Ili kutatua tatizo hili, mfumo ikolojia wa Ethereum ulitengeneza njia nyingi mbadala za kuhifadhi data kwa njia ya ugatuzi
-. Kwa kawaida huhusisha maelewano kati ya upatikanaji
-na bei. Hata hivyo, uadilifu kwa kawaida huhakikishwa.
+Ili kutatua tatizo hili mfumo wa ikolojia wa Ethereum ulitengeneza [njia nyingi mbadala za kuhifadhi data kwa njia iliyogatuliwa](/developers/docs/storage/). Kawaida zinahusisha maelewano kati ya upatikanaji na bei. Hata hivyo, uadilifu kwa kawaida unahakikishwa.
 
-Katika makala hii utajifunza **jinsi** ya kuhakikisha uadilifu wa data bila kuhifadhi data kwenye mnyororo wa bloku, kwa kutumia
-[uthibitisho wa Merkle](https://computersciencewiki.org/index.php/Merkle_proof).
+Katika makala haya unajifunza **jinsi** ya kuhakikisha uadilifu wa data bila kuhifadhi data kwenye mnyororo wa vitalu, ukitumia [ushahidi wa Merkle](https://computersciencewiki.org/index.php/Merkle_proof).
 
 ## Inafanyaje kazi? {#how-does-it-work}
 
-Kimsingi tunaweza tu kuhifadhi hashi ya data onchain, na kutuma data yote katika miamala inayohitaji. Hata hivyo, hii bado ni ghali sana. Baiti moja ya data kwa muamala hugharimu takriban gesi 16, kwa sasa karibu nusu senti, au takriban $5 kwa kila kilobaiti. Kwa $5000 kwa kila megabaiti, hii bado ni ghali sana kwa matumizi mengi, hata bila gharama ya ziada ya kuweka hashi kwenye data.
+Kinadharia tungeweza tu kuhifadhi heshi ya data mnyororoni, na kutuma data yote katika miamala inayoihitaji. Hata hivyo, hii bado ni ghali sana. Baiti ya data kwa muamala inagharimu takriban gesi 16, kwa sasa ni takriban nusu senti, au takriban $5 kwa kila kilobaiti. Kwa $5000 kwa kila megabaiti, hii bado ni ghali sana kwa matumizi mengi, hata bila gharama ya ziada ya uheshiji wa data.
 
-Suluhisho ni kuweka hashi mara kwa mara seti ndogo tofauti za data, kwa hivyo kwa data ambayo huhitaji kutuma unaweza tu kutuma hashi. Unafanya hivi kwa kutumia mti wa Merkle, muundo wa data wa mti ambapo kila nodi ni hashi ya nodi zilizo chini yake:
+Suluhisho ni kuheshi mara kwa mara vijisehemu tofauti vya data, kwa hivyo kwa data ambayo huhitaji kutuma unaweza tu kutuma heshi. Unafanya hivi ukitumia mti wa Merkle, muundo wa data wa mti ambapo kila nodi ni heshi ya nodi zilizo chini yake:
 
-![Mti wa Merkle](tree.png)
+![Merkle Tree](tree.png)
 
-Hashi ya msingi ndiyo sehemu pekee inayohitaji kuhifadhiwa onchain. Ili kuthibitisha thamani fulani, unatoa hashi zote zinazohitaji kuunganishwa nayo ili kupata msingi. Kwa mfano, ili kuthibitisha `C` unatoa `D`, `H(A-B)`, na `H(E-H)`.
+Heshi ya mzizi ndiyo sehemu pekee inayohitaji kuhifadhiwa mnyororoni. Ili kuthibitisha thamani fulani, unatoa heshi zote zinazohitaji kuunganishwa nayo ili kupata mzizi. Kwa mfano, ili kuthibitisha `C` unatoa `D`, `H(A-B)`, na `H(E-H)`.
 
-![Uthibitisho wa thamani ya C](proof-c.png)
+![Proof of the value of C](proof-c.png)
 
 ## Utekelezaji {#implementation}
 
-[Msimbo wa sampuli umetolewa hapa](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
+[Msimbo wa mfano umetolewa hapa](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Msimbo wa offchain {#offchain-code}
+### Msimbo wa nje ya mnyororo {#offchain-code}
 
-Katika makala hii tunatumia JavaScript kwa ajili ya hesabu za offchain. Mifumo mingi iliyotawanywa ina sehemu yake ya offchain katika JavaScript.
+Katika makala haya tunatumia JavaScript kwa ukokotoaji wa nje ya mnyororo. Programu nyingi zilizogatuliwa zina kijenzi chao cha nje ya mnyororo katika JavaScript.
 
 #### Kuunda mzizi wa Merkle {#creating-the-merkle-root}
 
-Kwanza tunahitaji kutoa mzizi wa Merkle kwa mnyororo.
+Kwanza tunahitaji kutoa mzizi wa Merkle kwenye mnyororo.
 
 ```javascript
 const ethers = require("ethers")
 ```
 
-[Tunatumia chaguo la kukokotoa la hashi kutoka kwa kifurushi cha ethers](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
+[Tunatumia kazi ya heshi kutoka kwa kifurushi cha ethers](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
 
 ```javascript
-// Data ghafi ambayo uadilifu wake tunapaswa kuthibitisha. Baiti mbili za kwanza ni
-// kitambulisho cha mtumiaji, na baiti mbili za mwisho ni kiasi cha tokeni ambazo
+// Data ghafi ambayo uadilifu wake tunapaswa kuuthibitisha. Baiti mbili za kwanza n
+// i kitambulisho cha mtumiaji, na baiti mbili za mwisho ni kiasi cha tokeni ambacho
 // mtumiaji anamiliki kwa sasa.
 const dataArray = [
   0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
@@ -63,53 +57,53 @@ const dataArray = [
 ]
 ```
 
-Kusimba kila ingizo katika nambari kamili ya biti-256 husababisha msimbo usioweza kusomeka vizuri kuliko kutumia JSON, kwa mfano. Hata hivyo, hii ina maana ya uchakataji mdogo sana ili kupata data katika mkataba, kwa hiyo gharama za gesi ni za chini sana. [Unaweza kusoma JSON onchain](https://github.com/chrisdotn/jsmnSol), ni wazo baya tu kama linaweza kuepukika.
+Kusimba kila ingizo katika nambari kamili moja ya biti 256 husababisha msimbo usiosomeka sana kuliko kutumia JSON, kwa mfano. Hata hivyo, hii inamaanisha uchakataji mdogo sana ili kupata data katika mkataba, hivyo gharama za chini sana za gesi. [Unaweza kusoma JSON mnyororoni](https://github.com/chrisdotn/jsmnSol), ni wazo baya tu ikiwa linaweza kuepukika.
 
 ```javascript
-// Safu ya thamani za hashi, kama BigInts
+// Orodha ya thamani za heshi, kama BigInts
 const hashArray = dataArray
 ```
 
-Katika kesi hii data yetu ni thamani za biti-256 kuanzia, kwa hivyo hakuna uchakataji unaohitajika. Ikiwa tutatumia muundo wa data mgumu zaidi, kama vile mifuatano, tunahitaji kuhakikisha tunaweka hashi data kwanza ili kupata safu ya hashi. Kumbuka kuwa hii pia ni kwa sababu hatujali ikiwa watumiaji wanajua habari za watumiaji wengine. Vinginevyo tungehitaji kuweka hashi ili mtumiaji 1 asijue thamani ya mtumiaji 0, mtumiaji 2 asijue thamani ya mtumiaji 3, n.k.
+Katika hali hii data yetu ni thamani za biti 256 kuanzia, kwa hivyo hakuna uchakataji unaohitajika. Ikiwa tunatumia muundo wa data mgumu zaidi, kama vile mifuatano, tunahitaji kuhakikisha kuwa tunaheshi data kwanza ili kupata safu ya heshi. Kumbuka kwamba hii pia ni kwa sababu hatujali ikiwa watumiaji wanajua taarifa za watumiaji wengine. Vinginevyo tungelazimika kuheshi ili mtumiaji 1 asijue thamani ya mtumiaji 0, mtumiaji 2 asijue thamani ya mtumiaji 3, n.k.
 
 ```javascript
-// Badilisha kati ya mfuatano ambao chaguo la kukokotoa la hashi linatarajia na
+// Badilisha kati ya mfuatano ambao kazi ya heshi inatarajia na
 // BigInt tunayotumia kila mahali pengine.
 const hash = (x) =>
   BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
 
-Chaguo la kukokotoa la hashi ya ethers linatarajia kupata mfuatano wa JavaScript na nambari ya heksadesimali, kama vile `0x60A7`, na hujibu kwa mfuatano mwingine wenye muundo sawa. Hata hivyo, kwa msimbo uliobaki ni rahisi kutumia `BigInt`, kwa hivyo tunabadilisha kuwa mfuatano wa heksadesimali na kurudi tena.
+Kazi ya heshi ya ethers inatarajia kupata mfuatano wa JavaScript wenye nambari ya heksadesimali, kama vile `0x60A7`, na hujibu kwa mfuatano mwingine wenye muundo sawa. Hata hivyo, kwa msimbo uliosalia ni rahisi kutumia `BigInt`, kwa hivyo tunabadilisha kuwa mfuatano wa heksadesimali na kurudi tena.
 
 ```javascript
-// Hashi linganifu ya jozi ili tusijali ikiwa mpangilio umegeuzwa.
+// Heshi linganifu ya jozi ili tusijali ikiwa mpangilio utageuzwa.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
-Chaguo hili la kukokotoa ni linganifu (hashi ya a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b). Hii ina maana kwamba tunapoangalia uthibitisho wa Merkle hatuhitaji kuwa na wasiwasi kuhusu ikiwa tutaweka thamani kutoka kwa uthibitisho kabla au baada ya thamani iliyokokotolewa. Uthibitishaji wa Merkle unafanywa onchain, kwa hivyo kadri tunavyohitaji kufanya kidogo ndivyo inavyokuwa bora zaidi.
+Kazi hii ni linganifu (heshi ya a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b). Hii inamaanisha kwamba tunapokagua ushahidi wa Merkle hatuhitaji kuwa na wasiwasi kuhusu kama tuweke thamani kutoka kwa ushahidi kabla au baada ya thamani iliyokokotolewa. Ukaguzi wa ushahidi wa Merkle unafanywa mnyororoni, kwa hivyo kadiri tunavyohitaji kufanya kidogo huko ndivyo inavyokuwa bora.
 
 Onyo:
-Kroptografia ni ngumu kuliko inavyoonekana.
-Toleo la awali la makala hii lilikuwa na chaguo la kukokotoa la hashi `hash(a^b)`.
-Hilo lilikuwa wazo **baya** kwa sababu lilimaanisha kwamba kama ungejua thamani halali za `a` na `b` ungeweza kutumia `b' = a^b^a'` kuthibitisha thamani yoyote ya `a'` unayotaka.
-Ukiwa na chaguo hili la kukokotoa ingekubidi ukokotee `b'` kiasi kwamba `hash(a') ^ hash(b')` ni sawa na thamani inayojulikana (tawi linalofuata kwenye njia ya kuelekea kwenye mzizi), ambayo ni ngumu zaidi.
+Kriptografia ni ngumu zaidi kuliko inavyoonekana.
+Toleo la awali la makala haya lilikuwa na kazi ya heshi `hash(a^b)`.
+Hilo lilikuwa wazo **baya** kwa sababu lilimaanisha kwamba ikiwa ulijua thamani halali za `a` na `b` ungeweza kutumia `b' = a^b^a'` kuthibitisha thamani yoyote unayotaka ya `a'`.
+Kwa kazi hii itabidi ukokotoe `b'` kiasi kwamba `hash(a') ^ hash(b')` ni sawa na thamani inayojulikana (tawi linalofuata kwenye njia ya kuelekea kwenye mzizi), ambayo ni ngumu zaidi.
 
 ```javascript
-// Thamani ya kuashiria kuwa tawi fulani ni tupu, halina
+// Thamani ya kuonyesha kwamba tawi fulani ni tupu, halina
 // thamani
 const empty = 0n
 ```
 
-Wakati idadi ya thamani si kielelezo kamili cha mbili tunahitaji kushughulikia matawi tupu. Njia ambayo programu hii hufanya ni kuweka sifuri kama kishika nafasi.
+Wakati idadi ya thamani si nambari kamili ya kipeo cha pili tunahitaji kushughulikia matawi tupu. Njia ambayo programu hii inafanya ni kuweka sifuri kama kishikilia nafasi.
 
-![Mti wa Merkle wenye matawi yanayokosekana](merkle-empty-hash.png)
+![Merkle tree with branches missing](merkle-empty-hash.png)
 
 ```javascript
-// Kokotoa ngazi moja juu ya mti wa safu ya hashi kwa kuchukua hashi ya
+// Kokotoa kiwango kimoja juu ya mti wa orodha ya heshi kwa kuchukua heshi ya
 // kila jozi kwa mfuatano
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // Ili kuepuka kuandika upya ingizo // Ongeza thamani tupu ikiwa ni lazima (tunahitaji majani yote yawe // yameunganishwa kwa jozi)
+  var inp = [...inputArray] // Ili kuepuka kufuta na kuandika juu ya ingizo // Ongeza thamani tupu ikiwa ni lazima (tunahitaji majani yote yawe // yameoanishwa)
 
   if (inp.length % 2 === 1) inp.push(empty)
 
@@ -120,13 +114,13 @@ const oneLevelUp = (inputArray) => {
 } // oneLevelUp
 ```
 
-Chaguo hili la kukokotoa "hupanda" ngazi moja katika mti wa Merkle kwa kuweka hashi jozi za thamani kwenye safu ya sasa. Kumbuka kuwa huu si utekelezaji bora zaidi, tungeweza kuepuka kunakili ingizo na kuongeza tu `hashEmpty` inapofaa katika kitanzi, lakini msimbo huu umeboreshwa kwa ajili ya usomaji.
+Kazi hii "inapanda" kiwango kimoja katika mti wa Merkle kwa kuheshi jozi za thamani kwenye tabaka la sasa. Kumbuka kwamba huu si utekelezaji mzuri zaidi, tungeweza kuepuka kunakili ingizo na kuongeza tu `hashEmpty` inapofaa katika kitanzi, lakini msimbo huu umeboreshwa kwa usomaji.
 
 ```javascript
 const getMerkleRoot = (inputArray) => {
   var result
 
-  result = [...inputArray] // Panda juu ya mti hadi kuwe na thamani moja tu, huo ndio // mzizi. // // Ikiwa safu ina idadi isiyo ya kawaida ya maingizo // msimbo katika oneLevelUp unaongeza thamani tupu, kwa hivyo ikiwa tuna, kwa mfano, // majani 10 tutakuwa na matawi 5 katika safu ya pili, 3 // matawi katika ya tatu, 2 katika ya nne na mzizi ni wa tano
+  result = [...inputArray] // Panda juu ya mti hadi kuwe na thamani moja tu, ambayo ni // mzizi. // // Ikiwa tabaka lina idadi isiyo shufwa ya maingizo // msimbo katika oneLevelUp unaongeza thamani tupu, kwa hivyo ikiwa tuna, kwa mfano, // majani 10 tutakuwa na matawi 5 katika tabaka la pili, matawi 3 // katika la tatu, 2 katika la nne na mzizi ni la tano
 
   while (result.length > 1) result = oneLevelUp(result)
 
@@ -136,46 +130,46 @@ const getMerkleRoot = (inputArray) => {
 
 Ili kupata mzizi, panda hadi kubaki thamani moja tu.
 
-#### Kuunda uthibitisho wa Merkle {#creating-a-merkle-proof}
+#### Kuunda ushahidi wa Merkle {#creating-a-merkle-proof}
 
-Uthibitisho wa Merkle ni thamani za kuweka hashi pamoja na thamani inayothibitishwa ili kurudisha mzizi wa Merkle. Thamani ya kuthibitisha mara nyingi hupatikana kutoka kwa data nyingine, kwa hivyo napendelea kuitoa kando badala ya kuwa sehemu ya msimbo.
+Ushahidi wa Merkle ni thamani za kuheshi pamoja na thamani inayothibitishwa ili kurudisha mzizi wa Merkle. Thamani ya kuthibitisha mara nyingi inapatikana kutoka kwa data nyingine, kwa hivyo napendelea kuitoa kando badala ya kama sehemu ya msimbo.
 
 ```javascript
-// Uthibitisho wa merkle unajumuisha thamani ya orodha ya maingizo ya
-// kuwekea hashi. Kwa sababu tunatumia chaguo la kukokotoa la hashi linganifu, hatuhitaji
-// eneo la kipengee ili kuthibitisha uthibitisho, bali kuunda tu
+// Ushahidi wa Merkle unajumuisha thamani ya orodha ya maingizo ya
+// kuheshi nayo. Kwa sababu tunatumia kazi ya heshi linganifu, hatu
+// hitaji eneo la kipengee ili kuthibitisha ushahidi, isipokuwa tu kuutengeneza
 const getMerkleProof = (inputArray, n) => {
     var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Hadi tufike juu
+    // Hadi tufike kileleni
     while (currentLayer.length > 1) {
-        // Hakuna safu za urefu usio wa kawaida
+        // Hakuna matabaka yenye urefu usio shufwa
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
         result.push(currentN % 2
-               // Ikiwa currentN si shufwa, ongeza na thamani iliyo kabla yake kwenye uthibitisho
+               // Ikiwa currentN si shufwa, ongeza pamoja na thamani iliyo kabla yake kwenye ushahidi
             ? currentLayer[currentN-1]
-               // Ikiwa ni shufwa, ongeza thamani baada yake
+               // Ikiwa ni shufwa, ongeza thamani iliyo baada yake
             : currentLayer[currentN+1])
 
 ```
 
-Tunaweka hashi `(v[0],v[1])`, `(v[2],v[3])`, n.k. Kwa hivyo kwa thamani shufwa tunahitaji inayofuata, kwa thamani witiri tunahitaji iliyotangulia.
+Tunaheshi `(v[0],v[1])`, `(v[2],v[3])`, n.k. Kwa hivyo kwa thamani shufwa tunahitaji inayofuata, kwa thamani witiri tunahitaji iliyotangulia.
 
 ```javascript
-        // Sogeza hadi safu inayofuata juu
+        // Nenda kwenye tabaka linalofuata juu
         currentN = Math.floor(currentN/2)
         currentLayer = oneLevelUp(currentLayer)
-    }   // while currentLayer.length > 1
+    }   // wakati currentLayer.length > 1
 
     return result
 }   // getMerkleProof
 ```
 
-### Msimbo wa onchain {#onchain-code}
+### Msimbo wa mnyororoni {#onchain-code}
 
-Mwishowe tuna msimbo unaoangalia uthibitisho. Msimbo wa onchain umeandikwa katika [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Uboreshaji ni muhimu zaidi hapa kwa sababu gesi ni ghali kiasi.
+Hatimaye tuna msimbo unaokagua ushahidi. Msimbo wa mnyororoni umeandikwa katika [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Uboreshaji ni muhimu zaidi hapa kwa sababu gesi ni ghali kiasi.
 
 ```solidity
 //SPDX-License-Identifier: Public Domain
@@ -184,7 +178,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-Niliandika hii kwa kutumia [mazingira ya uundaji ya Hardhat](https://hardhat.org/), ambayo inaturuhusu kuwa na [tokeo la konsoli kutoka Solidity](https://hardhat.org/docs/cookbook/debug-logs) tunapounda.
+Niliandika hii nikitumia [mazingira ya usanidi ya Hardhat](https://hardhat.org/), ambayo inaturuhusu kuwa na [towe la kiweko kutoka kwa Solidity](https://hardhat.org/docs/cookbook/debug-logs) wakati wa kusanidi.
 
 ```solidity
 
@@ -195,15 +189,15 @@ contract MerkleProof {
       return merkleRoot;
     }
 
-    // Si salama kabisa, katika ufikiaji wa msimbo wa uzalishaji
-    // chaguo hili la kukokotoa LAZIMA liwe na kikomo kikali, pengine kwa
+    // Sio salama kabisa, katika msimbo wa uzalishaji ufikiaji wa
+    // kazi hii LAZIMA uwekewe mipaka madhubuti, labda kwa
     // mmiliki
     function setRoot(uint _merkleRoot) external {
       merkleRoot = _merkleRoot;
     }   // setRoot
 ```
 
-Chaguo za kukokotoa za kuweka na kupata za mzizi wa Merkle. Kumruhusu kila mtu kusasisha mzizi wa Merkle ni _wazo baya sana_ katika mfumo wa uzalishaji. Ninafanya hivi hapa kwa ajili ya kurahisisha msimbo wa sampuli. **Usifanye hivyo kwenye mfumo ambapo uadilifu wa data ni muhimu**.
+Kazi za kuweka na kupata kwa ajili ya mzizi wa Merkle. Kuruhusu kila mtu kusasisha mzizi wa Merkle ni _wazo baya sana_ katika mfumo wa uzalishaji. Ninafanya hapa kwa ajili ya urahisi wa msimbo wa mfano. **Usifanye kwenye mfumo ambapo uadilifu wa data ni muhimu sana**.
 
 ```solidity
     function hash(uint _a) internal pure returns(uint) {
@@ -215,12 +209,12 @@ Chaguo za kukokotoa za kuweka na kupata za mzizi wa Merkle. Kumruhusu kila mtu k
     }
 ```
 
-Chaguo hili la kukokotoa hutengeneza hashi ya jozi. Ni tafsiri ya Solidity tu ya msimbo wa JavaScript wa `hash` na `pairHash`.
+Kazi hii inazalisha heshi ya jozi. Ni tafsiri tu ya Solidity ya msimbo wa JavaScript kwa `hash` na `pairHash`.
 
-**Kumbuka:** Hii ni kesi nyingine ya uboreshaji kwa ajili ya usomaji. Kulingana na [ufafanuzi wa chaguo la kukokotoa](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), inaweza kuwezekana kuhifadhi data kama thamani ya [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) na kuepuka ubadilishaji.
+**Kumbuka:** Hii ni hali nyingine ya uboreshaji kwa usomaji. Kulingana na [ufafanuzi wa kazi](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), inaweza kuwezekana kuhifadhi data kama thamani ya [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) na kuepuka ubadilishaji.
 
 ```solidity
-    // Thibitisha uthibitisho wa Merkle
+    // Thibitisha ushahidi wa Merkle
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;
@@ -236,18 +230,18 @@ Chaguo hili la kukokotoa hutengeneza hashi ya jozi. Ni tafsiri ya Solidity tu ya
 }  // MarkleProof
 ```
 
-Katika nukuu za kihisabati uthibitishaji wa Merkle unaonekana kama hivi: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. Msimbo huu unautekeleza.
+Katika nukuu ya hisabati uthibitishaji wa ushahidi wa Merkle unaonekana hivi: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Msimbo huu unautekeleza.
 
-## Uthibitisho wa Merkle na unda-mpya havichanganyiki {#merkle-proofs-and-rollups}
+## Ushahidi wa Merkle na mikusanyiko haichanganyiki {#merkle-proofs-and-rollups}
 
-Uthibitisho wa Merkle haufanyi kazi vizuri na [unda-mpya](/developers/docs/scaling/#rollups). Sababu ni kwamba unda-mpya huandika data yote ya muamala kwenye L1, lakini huchakata kwenye L2. Gharama ya kutuma uthibitisho wa Merkle na muamala ni wastani wa gesi 638 kwa kila safu (kwa sasa baiti katika data ya wito hugharimu gesi 16 ikiwa si sifuri, na 4 ikiwa ni sifuri). Ikiwa tuna maneno 1024 ya data, uthibitisho wa Merkle unahitaji safu kumi, au jumla ya gesi 6380.
+Ushahidi wa Merkle haufanyi kazi vizuri na [mikusanyiko](/developers/docs/scaling/#rollups). Sababu ni kwamba mikusanyiko huandika data yote ya muamala kwenye tabaka la 1 (l1), lakini huchakata kwenye tabaka la 2 (l2). Gharama ya kutuma ushahidi wa Merkle na muamala ni wastani wa gesi 638 kwa kila tabaka (kwa sasa baiti katika data za mwito inagharimu gesi 16 ikiwa si sifuri, na 4 ikiwa ni sifuri). Ikiwa tuna maneno 1024 ya data, ushahidi wa Merkle unahitaji matabaka kumi, au jumla ya gesi 6380.
 
-Tukiangalia kwa mfano [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), kuandika gesi ya L1 hugharimu takriban gwei 100 na gesi ya L2 hugharimu gwei 0.001 (hiyo ndiyo bei ya kawaida, inaweza kupanda kukiwa na msongamano). Kwa hivyo kwa gharama ya gesi moja ya L1 tunaweza kutumia gesi laki moja kwenye uchakataji wa L2. Tukichukulia kuwa hatuandiki upya kwenye ghala, hii ina maana kwamba tunaweza kuandika takriban maneno matano kwenye ghala kwenye L2 kwa bei ya gesi moja ya L1. Kwa uthibitisho mmoja wa Merkle tunaweza kuandika maneno yote 1024 kwenye ghala (tukichukulia kuwa yanaweza kukokotolewa onchain kuanzia, badala ya kutolewa katika muamala) na bado kubaki na gesi nyingi.
+Tukiangalia kwa mfano [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), kuandika gesi ya tabaka la 1 (l1) kunagharimu takriban Gwei 100 na gesi ya tabaka la 2 (l2) inagharimu Gwei 0.001 (hiyo ni bei ya kawaida, inaweza kupanda kukiwa na msongamano). Kwa hivyo kwa gharama ya gesi moja ya tabaka la 1 (l1) tunaweza kutumia gesi laki moja kwenye uchakataji wa tabaka la 2 (l2). Kwa kudhani hatuandiki juu ya hifadhi, hii inamaanisha kwamba tunaweza kuandika takriban maneno matano kwenye hifadhi kwenye tabaka la 2 (l2) kwa bei ya gesi moja ya tabaka la 1 (l1). Kwa ushahidi mmoja wa Merkle tunaweza kuandika maneno yote 1024 kwenye hifadhi (kwa kudhani yanaweza kukokotolewa mnyororoni kuanzia, badala ya kutolewa katika muamala) na bado kubakiwa na gesi nyingi.
 
 ## Hitimisho {#conclusion}
 
-Katika maisha halisi unaweza usiwahi kutekeleza miti ya Merkle peke yako. Kuna maktaba zinazojulikana na zilizokaguliwa ambazo unaweza kutumia na kwa ujumla ni bora kutotekeleza vianzo vya kroptografia peke yako. Lakini natumai sasa unaelewa uthibitisho wa Merkle vizuri zaidi na unaweza kuamua wakati unafaa kutumia.
+Katika maisha halisi unaweza usitekeleze miti ya Merkle peke yako. Kuna maktaba zinazojulikana na zilizokaguliwa ambazo unaweza kutumia na kwa ujumla ni bora kutotekeleza misingi ya kriptografia peke yako. Lakini natumai kwamba sasa unaelewa ushahidi wa Merkle vizuri zaidi na unaweza kuamua wakati inafaa kuutumia.
 
-Kumbuka kwamba ingawa uthibitisho wa Merkle huhifadhi _uadilifu_, hauhifadhi _upatikanaji_. Kujua kwamba hakuna mtu mwingine anayeweza kuchukua mali zako ni faraja ndogo ikiwa hifadhi ya data itaamua kutoruhusu ufikiaji na huwezi kuunda mti wa Merkle ili kuzifikia pia. Kwa hivyo miti ya Merkle hutumiwa vyema zaidi na aina fulani ya hifadhi iliyogatuliwa, kama vile IPFS.
+Kumbuka kwamba ingawa ushahidi wa Merkle unahifadhi _uadilifu_, hauhifadhi _upatikanaji_. Kujua kwamba hakuna mtu mwingine anayeweza kuchukua rasilimali zako ni faraja ndogo ikiwa hifadhi ya data itaamua kutoruhusu ufikiaji na huwezi kuunda mti wa Merkle ili kuzifikia pia. Kwa hivyo miti ya Merkle inatumiwa vyema na aina fulani ya hifadhi iliyogatuliwa, kama vile IPFS.
 
 [Tazama hapa kwa kazi zangu zaidi](https://cryptodocguy.pro/).

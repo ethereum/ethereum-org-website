@@ -4,7 +4,7 @@ description: Panduan ramah pemula untuk mengirim token menggunakan ethers.js.
 author: Kim YongJun
 tags: ["ETHERS.JS", "ERC-20", "TOKEN"]
 skill: beginner
-breadcrumb: "Kirim token"
+breadcrumb: Kirim token
 lang: id
 published: 2021-04-06
 ---
@@ -19,7 +19,7 @@ published: 2021-04-06
 
 ### Untuk Memulai {#to-get-started}
 
-Untuk memulai, pertama-tama kita harus mengimpor pustaka ethers.js ke dalam javascript kita
+Untuk memulai, pertama-tama kita harus mengimpor pustaka ethers.js ke dalam JavaScript kita
 Sertakan ethers.js(5.0)
 
 ### Menginstal {#install-ethersjs}
@@ -33,7 +33,7 @@ ES6 di Peramban
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // Your code here... // Kode Anda di sini...
+  // Kode Anda di sini...
 </script>
 ```
 
@@ -52,7 +52,7 @@ ES3(UMD) di Peramban
 2. **`send_token_amount`**: Jumlah yang ingin Anda kirim ke penerima
 3. **`to_address`**: Alamat penerima
 4. **`send_account`**: Alamat pengirim
-5. **`private_key`**: Kunci pribadi pengirim untuk menandatangani transaksi dan benar-benar mentransfer token
+5. **`private_key`**: Kunci privat pengirim untuk menandatangani transaksi dan benar-benar mentransfer token
 
 ## Catatan {#notice}
 
@@ -62,7 +62,7 @@ ES3(UMD) di Peramban
 
 ### 1. Terhubung ke jaringan (testnet) {#connect-to-network}
 
-#### Mengatur Penyedia (Infura) {#set-provider}
+#### Atur Penyedia (Infura) {#set-provider}
 
 Terhubung ke testnet Ropsten
 
@@ -70,27 +70,27 @@ Terhubung ke testnet Ropsten
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Membuat dompet {#create-wallet}
+### 2. Buat dompet {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Menghubungkan Dompet ke jaringan {#connect-wallet-to-net}
+### 3. Hubungkan Dompet ke jaringan {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Mendapatkan harga gas saat ini {#get-gas}
+### 4. Dapatkan harga gas saat ini {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // gasPrice // gasPrice
+window.ethersProvider.getGasPrice() // harga gas
 ```
 
-### 5. Mendefinisikan Transaksi {#define-transaction}
+### 5. Tentukan Transaksi {#define-transaction}
 
-Variabel-variabel yang didefinisikan di bawah ini bergantung pada `send_token()`
+Variabel-variabel yang ditentukan di bawah ini bergantung pada `send_token()`
 
 ### Parameter transaksi {#transaction-params}
 
@@ -108,7 +108,7 @@ const tx = {
   to: to_address,
   value: ethers.utils.parseEther(send_token_amount),
   nonce: window.ethersProvider.getTransactionCount(send_account, "latest"),
-  gasLimit: ethers.utils.hexlify(gas_limit), // 100000 // 100000
+  gasLimit: ethers.utils.hexlify(gas_limit), // 100000
   gasPrice: gas_price,
 }
 ```
@@ -147,7 +147,7 @@ send_token(
 
 ### Berhasil! {#success}
 
-![gambar transaksi berhasil dilakukan](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -167,23 +167,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // general token send // pengiriman token umum
+      // pengiriman token umum
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // How many tokens? // Berapa banyak token?
+      // Berapa banyak token?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // Send tokens // Kirim token
+      // Kirim token
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
         alert("sent token")
       })
-    } // ether send // pengiriman ether
+    } // pengiriman ether
     else {
       const tx = {
         from: send_account,
@@ -193,7 +193,7 @@ function send_token(
           send_account,
           "latest"
         ),
-        gasLimit: ethers.utils.hexlify(gas_limit), // 100000 // 100000
+        gasLimit: ethers.utils.hexlify(gas_limit), // 100000
         gasPrice: gas_price,
       }
       console.dir(tx)

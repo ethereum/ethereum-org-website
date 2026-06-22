@@ -14,7 +14,12 @@ import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
-import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
+import {
+  Alert,
+  AlertContent,
+  AlertEmoji,
+  AlertTitle,
+} from "@/components/ui/alert"
 import { CardParagraph, CardTitle } from "@/components/ui/card"
 import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
@@ -204,11 +209,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             <Alert variant="warning">
               <AlertEmoji text="💡" />
               <AlertContent>
-                <p>
+                <AlertTitle>
                   {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
                     strong: Strong,
                   })}
-                </p>
+                </AlertTitle>
                 <p className="mt-2">
                   {t.rich("page-what-is-ether-how-to-buy-eth-description-4", {
                     strong: Strong,
@@ -320,11 +325,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             <Alert variant="warning">
               <AlertEmoji text="💡" />
               <AlertContent>
-                <p>
+                <AlertTitle>
                   {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
                     strong: Strong,
                   })}
-                </p>
+                </AlertTitle>
                 <p>
                   {t("page-what-is-ether-how-to-send-and-receive-eth-callout")}
                 </p>

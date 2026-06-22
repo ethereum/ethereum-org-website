@@ -111,7 +111,7 @@ const MobileFilters = ({
             activeFiltersCount={activeFiltersCount}
           />
         </div>
-        <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2">
+        <div className="flex flex-col-reverse pt-4 sm:flex-row sm:justify-end sm:space-x-2">
           <div className="grid w-full grid-cols-2 items-center sm:w-auto">
             <div>
               <Button variant="ghost" className="gap-1" onClick={resetFilters}>

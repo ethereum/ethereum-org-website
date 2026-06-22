@@ -8,9 +8,9 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GhostCard from "@/components/GhostCard"
 import PageHero from "@/components/Hero/PageHero"
@@ -414,7 +414,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             contributors={contributors}
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
-          <FeedbackCard />
+          <ContentFeedback />
         </Content>
       </PageContainer>
     </I18nProvider>

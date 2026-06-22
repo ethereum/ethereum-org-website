@@ -19,7 +19,7 @@ published: 2021-04-06
 
 ### Per iniziare {#to-get-started}
 
-Per iniziare, dobbiamo prima importare la libreria ethers.js nel nostro javascript
+Per iniziare, dobbiamo prima importare la libreria ethers.js nel nostro JavaScript
 Includere ethers.js(5.0)
 
 ### Installazione {#install-ethersjs}
@@ -48,8 +48,8 @@ ES3(UMD) nel browser
 
 ### Parametri {#param}
 
-1. **`contract_address`**: Indirizzo del contratto del token (l'indirizzo del contratto è necessario quando il token che si desidera trasferire non è ether)
-2. **`send_token_amount`**: L'importo che si desidera inviare al destinatario
+1. **`contract_address`**: Indirizzo del contratto del token (l'indirizzo del contratto è necessario quando il token che vuoi trasferire non è ether)
+2. **`send_token_amount`**: L'importo che vuoi inviare al destinatario
 3. **`to_address`**: L'indirizzo del destinatario
 4. **`send_account`**: L'indirizzo del mittente
 5. **`private_key`**: Chiave privata del mittente per firmare la transazione e trasferire effettivamente i token
@@ -60,11 +60,11 @@ ES3(UMD) nel browser
 
 ## Procedure di invio {#procedure}
 
-### 1. Connettersi alla rete (rete di test) {#connect-to-network}
+### 1. Connettersi alla rete (testnet) {#connect-to-network}
 
-#### Impostare il Provider (Infura) {#set-provider}
+#### Impostare il provider (Infura) {#set-provider}
 
-Connettersi alla rete di test Ropsten
+Connettersi alla testnet Ropsten
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
@@ -97,7 +97,7 @@ Queste variabili definite di seguito dipendono da `send_token()`
 1. **`send_account`**: indirizzo del mittente del token
 2. **`to_address`**: indirizzo del destinatario del token
 3. **`send_token_amount`**: la quantità di token da inviare
-4. **`gas_limit`**: limite del gas
+4. **`gas_limit`**: limite di gas
 5. **`gas_price`**: prezzo del gas
 
 [Vedi sotto per come usarlo](#how-to-use)
@@ -147,7 +147,7 @@ send_token(
 
 ### Successo! {#success}
 
-![immagine della transazione completata con successo](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 

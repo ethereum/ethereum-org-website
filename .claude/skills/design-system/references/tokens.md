@@ -122,6 +122,18 @@ This file also registers:
 
 > **Spacing**: Tailwind v4 generates fractional spacing classes automatically (e.g., `mt-3.5`, `mt-7.5`, `inset-s-3.75`). The custom `--spacing-7_5`, `--spacing-10_5`, etc. defined in this file may be vestigial from v3 and worth verifying as a cleanup item. Don't rely on the underscore notation -- use the v4 native fractional syntax (`mt-7.5`, not `mt-7_5`).
 
+### Layout spacing tokens (`page`, `space`, `hero`)
+
+Beyond the numeric scale, `theme.css` registers three *named, responsive* spacing families (fed by CSS vars in `base.css`). Prefer these over raw `px-4 md:px-8` chains or arbitrary `p-(--var)`/`calc(var(--var)*N)` for the metric they own -- they keep page padding and vertical rhythm coherent from a single variable:
+
+| Family | CSS var (`base.css`) | Responsive value | Utilities | Use for |
+|---|---|---|---|---|
+| `page` | `--page-pad` | 1rem mobile / 2rem (`md`) | `p-page`, `px-page`, `pb-page`, `gap-page`, `*-page-2x` | standard page/section horizontal padding |
+| `space` | `--space` | 1rem mobile / 1.5rem (`lg`) | `mt-space`, `gap-space`, `space-y-space-2x`, `*-space-half/-2x/-3x/-4x` | the `.flow` rhythm unit, used manually outside a flow region |
+| `hero` | `--hero-pad` | 2rem | `p-hero`, `px-hero`, `py-hero-2x`, `pe-hero`, `*-hero-half/-1.5x/-2x/-3x` | `PageHero` internal padding |
+
+`.flow` applies the `space` unit automatically (see `spacing-typography.md`); the explicit `space` utilities are for manual gaps/margins. These are the canonical layout-spacing system -- distinct from the vestigial `--spacing-7_5`-style numeric tokens noted above.
+
 ## Custom Utilities (`utilities.css`)
 
 Things `@theme` can't express are defined as `@utility` directives:

@@ -1,28 +1,28 @@
 ---
-title: "ethers.js ఉపయోగించి టోకెన్‌లను పంపడం"
-description: "ethers.js ఉపయోగించి టోకెన్‌లను పంపడానికి ప్రారంభకులకు అనుకూలమైన మార్గదర్శి."
-author: Kim YongJun
-tags: [ "ETHERS.JS", "ERC-20", "టోకెన్లు" ]
+title: "ethers.js ఉపయోగించి టోకెన్లను పంపడం"
+description: "ethers.js ఉపయోగించి టోకెన్లను పంపడానికి ప్రారంభకులకు అనుకూలమైన గైడ్."
+author: "కిమ్ యోంగ్‌జున్"
+tags: ["ETHERS.JS", "ERC-20", "టోకెన్లు"]
 skill: beginner
-breadcrumb: "టోకెన్లు పంపండి"
+breadcrumb: "టోకెన్లను పంపండి"
 lang: te
 published: 2021-04-06
 ---
 
 ## ethers.js(5.0) ఉపయోగించి టోకెన్‌ను పంపండి {#send-token}
 
-### ఈ ట్యుటోరియల్‌లో మీరు ఎలాగో నేర్చుకుంటారు {#you-learn-about}
+### ఈ ట్యుటోరియల్‌లో మీరు వీటిని ఎలా చేయాలో నేర్చుకుంటారు {#you-learn-about}
 
-- ethers.js ను దిగుమతి చేయండి
-- టోకెన్ బదిలీ
-- నెట్‌వర్క్ ట్రాఫిక్ పరిస్థితి ప్రకారం గ్యాస్ ధరను సెట్ చేయండి
+- ethers.jsని దిగుమతి చేయడం
+- టోకెన్‌ను బదిలీ చేయడం
+- నెట్‌వర్క్ ట్రాఫిక్ పరిస్థితికి అనుగుణంగా గ్యాస్ ధరను సెట్ చేయడం
 
 ### ప్రారంభించడానికి {#to-get-started}
 
-ప్రారంభించడానికి, మనము మొదట మన జావాస్క్రిప్ట్‌లో ethers.js లైబ్రరీని దిగుమతి చేసుకోవాలి
-ethers.js(5.0)ను చేర్చండి
+ప్రారంభించడానికి, మనం ముందుగా మన javascript లోకి ethers.js లైబ్రరీని దిగుమతి చేసుకోవాలి
+ethers.js(5.0)ని చేర్చండి
 
-### ఇన్‌స్టాల్ చేస్తోంది {#install-ethersjs}
+### ఇన్‌స్టాల్ చేయడం {#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -33,7 +33,7 @@ ethers.js(5.0)ను చేర్చండి
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // Your code here...
+  // మీ కోడ్ ఇక్కడ...
 </script>
 ```
 
@@ -46,25 +46,25 @@ ethers.js(5.0)ను చేర్చండి
 ></script>
 ```
 
-### పరామితులు {#param}
+### పారామితులు {#param}
 
-1. **`contract_address`**: టోకెన్ కాంట్రాక్టు చిరునామా (మీరు బదిలీ చేయాలనుకుంటున్న టోకెన్ ఈథర్ కానప్పుడు కాంట్రాక్టు చిరునామా అవసరం)
-2. **`send_token_amount`**: మీరు రిసీవర్‌కు పంపాలనుకుంటున్న మొత్తం
-3. **`to_address`**: రిసీవర్ చిరునామా
+1. **`contract_address`**: టోకెన్ కాంట్రాక్ట్ చిరునామా (మీరు బదిలీ చేయాలనుకుంటున్న టోకెన్ ఈథర్ కానప్పుడు కాంట్రాక్ట్ చిరునామా అవసరం)
+2. **`send_token_amount`**: మీరు స్వీకర్తకు పంపాలనుకుంటున్న మొత్తం
+3. **`to_address`**: స్వీకర్త చిరునామా
 4. **`send_account`**: పంపినవారి చిరునామా
-5. **`private_key`**: లావాదేవీపై సంతకం చేయడానికి మరియు వాస్తవానికి టోకెన్‌లను బదిలీ చేయడానికి పంపినవారి ప్రైవేట్ కీ
+5. **`private_key`**: లావాదేవీపై సంతకం చేయడానికి మరియు వాస్తవానికి టోకెన్లను బదిలీ చేయడానికి పంపినవారి ప్రైవేట్ కీ
 
 ## గమనిక {#notice}
 
-`signTransaction(tx)` తీసివేయబడింది ఎందుకంటే `sendTransaction()` దానిని అంతర్గతంగా చేస్తుంది.
+`sendTransaction()` అంతర్గతంగా దీన్ని చేస్తుంది కాబట్టి `signTransaction(tx)` తీసివేయబడింది.
 
 ## పంపే విధానాలు {#procedure}
 
-### 1. నెట్‌వర్క్‌కు కనెక్ట్ అవ్వండి (టెస్టునెట్) {#connect-to-network}
+### 1. నెట్‌వర్క్ (టెస్ట్‌నెట్)కి కనెక్ట్ చేయండి {#connect-to-network}
 
 #### ప్రొవైడర్‌ను సెట్ చేయండి (Infura) {#set-provider}
 
-Ropsten టెస్టునెట్‌కు కనెక్ట్ అవ్వండి
+Ropsten టెస్ట్‌నెట్‌కి కనెక్ట్ చేయండి
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
@@ -76,7 +76,7 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. వాలెట్‌ను నెట్‌కు కనెక్ట్ చేయండి {#connect-wallet-to-net}
+### 3. వాలెట్‌ను నెట్‌కి కనెక్ట్ చేయండి {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
@@ -85,22 +85,22 @@ let walletSigner = wallet.connect(window.ethersProvider)
 ### 4. ప్రస్తుత గ్యాస్ ధరను పొందండి {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // gasPrice
+window.ethersProvider.getGasPrice() // గ్యాస్ ధర
 ```
 
 ### 5. లావాదేవీని నిర్వచించండి {#define-transaction}
 
-క్రింద నిర్వచించబడిన ఈ వేరియబుల్స్ `send_token()` పై ఆధారపడి ఉంటాయి
+దిగువ నిర్వచించబడిన ఈ వేరియబుల్స్ `send_token()` పై ఆధారపడి ఉంటాయి
 
-### లావాదేవీ పరామితులు {#transaction-params}
+### లావాదేవీ పారామితులు {#transaction-params}
 
 1. **`send_account`**: టోకెన్ పంపినవారి చిరునామా
-2. **`to_address`**: టోకెన్ రిసీవర్ చిరునామా
+2. **`to_address`**: టోకెన్ స్వీకర్త చిరునామా
 3. **`send_token_amount`**: పంపాల్సిన టోకెన్ల మొత్తం
 4. **`gas_limit`**: గ్యాస్ పరిమితి
 5. **`gas_price`**: గ్యాస్ ధర
 
-[ఎలా ఉపయోగించాలో క్రింద చూడండి](#how-to-use)
+[ఎలా ఉపయోగించాలో తెలుసుకోవడానికి దిగువ చూడండి](#how-to-use)
 
 ```javascript
 const tx = {
@@ -147,7 +147,7 @@ send_token(
 
 ### విజయం! {#success}
 
-![లావాదేవీ విజయవంతంగా జరిగిన చిత్రం](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -167,23 +167,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // general token send
+      // సాధారణ టోకెన్ పంపడం
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // How many tokens?
+      // ఎన్ని టోకెన్లు?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // Send tokens
+      // టోకెన్లను పంపండి
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
         alert("sent token")
       })
-    } // ether send
+    } // ఈథర్ పంపడం
     else {
       const tx = {
         from: send_account,

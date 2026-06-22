@@ -1,10 +1,10 @@
 ---
-title: Elewa mkataba-erevu wa tokeni ya ERC-20
-description: Jifunze jinsi ya kutekeleza kiwango cha tokeni cha ERC-20 kwa mfano kamili wa mkataba-erevu wa Solidity na maelezo.
+title: Kuelewa mkataba mahiri wa tokeni ya ERC-20
+description: Jifunze jinsi ya kutekeleza kiwango cha tokeni ya ERC-20 kwa mfano kamili wa mkataba mahiri wa Solidity na maelezo.
 author: "jdourlens"
-tags: [ "mikataba erevu", "tokeni", "uimara", "erc-20" ]
+tags: ["mikataba mahiri", "tokeni", "Solidity", "erc-20"]
 skill: beginner
-breadcrumb: "Misingi ya tokeni ERC-20"
+breadcrumb: Misingi ya tokeni ya ERC-20
 lang: sw
 published: 2020-04-05
 source: EthereumDev
@@ -12,11 +12,11 @@ sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Moja ya [viwango muhimu vya mkataba-erevu](/developers/docs/standards/) kwenye Ethereum inajulikana kama [ERC-20](/developers/docs/standards/tokens/erc-20/), ambayo imeibuka kama kiwango cha kiufundi kinachotumiwa kwa mikataba yote erevu kwenye mnyororo wa bloku wa Ethereum kwa utekelezaji wa tokeni zinazoweza kubadilishwa.
+Moja ya viwango muhimu zaidi vya [mikataba mahiri](/developers/docs/standards/) kwenye Ethereum inajulikana kama [ERC-20](/developers/docs/standards/tokens/erc-20/), ambayo imeibuka kama kiwango cha kiufundi kinachotumiwa kwa mikataba mahiri yote kwenye mnyororo wa vitalu wa Ethereum kwa utekelezaji wa tokheni mbadala.
 
-ERC-20 inafafanua orodha ya kawaida ya sheria ambazo tokeni zote za Ethereum zinazoweza kubadilishwa zinapaswa kuzingatia. Kwa hivyo, kiwango hiki cha tokeni huwawezesha wasanidi programu wa aina zote kutabiri kwa usahihi jinsi tokeni mpya zitakavyofanya kazi ndani ya mfumo mkuu wa Ethereum. Hii hurahisisha kazi za wasanidi programu, kwa sababu wanaweza kuendelea na kazi zao, wakijua kwamba kila mradi mpya hautahitaji kufanywa upya kila wakati tokeni mpya inapotolewa, mradi tu tokeni inafuata sheria.
+ERC-20 inafafanua orodha ya kawaida ya sheria ambazo tokheni mbadala zote za Ethereum zinapaswa kuzingatia. Kwa hivyo, kiwango hiki cha tokeni kinawawezesha wasanidi wa aina zote kutabiri kwa usahihi jinsi tokeni mpya zitakavyofanya kazi ndani ya mfumo mkubwa wa Ethereum. Hii inarahisisha na kupunguza kazi za wasanidi, kwa sababu wanaweza kuendelea na kazi yao, wakijua kwamba kila mradi mpya hautahitaji kufanywa upya kila wakati tokeni mpya inapotolewa, mradi tu tokeni inafuata sheria.
 
-Hizi hapa, zikiwasilishwa kama kiolesura, ni kazi ambazo ERC-20 lazima itekeleze. Ikiwa huna uhakika kuhusu kiolesura ni nini: angalia makala yetu kuhusu [upangaji programu wa OOP katika Solidity](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/).
+Hapa kuna kazi ambazo ERC-20 lazima itekeleze, zilizowasilishwa kama kiolesura. Ikiwa huna uhakika kuhusu kiolesura ni nini: angalia makala yetu kuhusu [upangaji wa OOP katika Solidity](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/).
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -37,27 +37,27 @@ interface IERC20 {
 }
 ```
 
-Haya ni maelezo ya mstari kwa mstari ya kila kazi inafanya nini. Baada ya hili tutawasilisha utekelezaji rahisi wa tokeni ya ERC-20.
+Hapa kuna maelezo ya mstari kwa mstari ya kazi ya kila kipengele. Baada ya haya tutawasilisha utekelezaji rahisi wa tokeni ya ERC-20.
 
-## Vipata {#getters}
+## Vipataji {#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
 ```
 
-Hurejesha kiasi cha tokeni zilizopo. Kazi hii ni kipata na haibadilishi hali ya mkataba. Kumbuka kuwa hakuna 'floats' katika Solidity. Kwa hivyo tokeni nyingi hutumia desimali 18 na zitarejesha jumla ya usambazaji na matokeo mengine kama ifuatavyo 1000000000000000000 kwa tokeni 1. Sio kila tokeni ina desimali 18 na hili ni jambo unalopaswa kulizingatia sana unaposhughulika na tokeni.
+Hurejesha kiasi cha tokeni zilizopo. Kazi hii ni kipataji na haibadilishi hali ya mkataba. Kumbuka kwamba hakuna nambari za desimali (floats) katika Solidity. Kwa hivyo tokeni nyingi huchukua desimali 18 na zitarudisha usambazaji wa jumla na matokeo mengine kama ifuatavyo 1000000000000000000 kwa tokeni 1. Sio kila tokeni ina desimali 18 na hili ni jambo ambalo unahitaji kuliangalia sana unaposhughulika na tokeni.
 
 ```solidity
 function balanceOf(address account) external view returns (uint256);
 ```
 
-Hurejesha kiasi cha tokeni zinazomilikiwa na anwani (`account`). Kazi hii ni kipata na haibadilishi hali ya mkataba.
+Hurejesha kiasi cha tokeni zinazomilikiwa na anwani (`account`). Kazi hii ni kipataji na haibadilishi hali ya mkataba.
 
 ```solidity
 function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-Kiwango cha ERC-20 kinaruhusu anwani kutoa ruhusa kwa anwani nyingine ili iweze kuchukua tokeni kutoka kwayo. Kipata hiki hurejesha idadi iliyobaki ya tokeni ambazo `spender` ataruhusiwa kutumia kwa niaba ya `owner`. Kazi hii ni kipata na haibadilishi hali ya mkataba na inapaswa kurejesha 0 kama chaguo-msingi.
+Kiwango cha ERC-20 kinaruhusu anwani kutoa kibali kwa anwani nyingine ili kuweza kupata tokeni kutoka kwayo. Kipataji hiki hurejesha idadi iliyobaki ya tokeni ambazo `spender` itaruhusiwa kutumia kwa niaba ya `owner`. Kazi hii ni kipataji na haibadilishi hali ya mkataba na inapaswa kurejesha 0 kwa chaguo-msingi.
 
 ## Kazi {#functions}
 
@@ -65,19 +65,19 @@ Kiwango cha ERC-20 kinaruhusu anwani kutoa ruhusa kwa anwani nyingine ili iweze 
 function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-Huhamisha `amount` ya tokeni kutoka kwa anwani ya mwitaji wa kazi (`msg.sender`) hadi kwa anwani ya mpokeaji. Kazi hii hutoa tukio la `Transfer` lililofafanuliwa baadaye. Inarejesha 'true' ikiwa uhamisho uliwezekana.
+Huhamisha `amount` ya tokeni kutoka kwa anwani ya mpigaji wa kazi (`msg.sender`) hadi kwa anwani ya mpokeaji. Kazi hii hutoa tukio la `Transfer` lililofafanuliwa baadaye. Inarejesha kweli (true) ikiwa hamisho liliwezekana.
 
 ```solidity
 function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-Weka kiasi cha `allowance` ambacho `spender` anaruhusiwa kuhamisha kutoka kwenye salio la mwitaji wa kazi (`msg.sender`). Kazi hii hutoa tukio la `Approval`. Kazi hurejesha ikiwa ruhusa iliwekwa kwa mafanikio.
+Weka kiasi cha `allowance` ambacho `spender` inaruhusiwa kuhamisha kutoka kwa salio la mpigaji wa kazi (`msg.sender`). Kazi hii hutoa tukio la Uidhinishaji (Approval). Kazi inarejesha ikiwa kibali kiliwekwa kwa mafanikio.
 
 ```solidity
 function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-Huhamisha `amount` ya tokeni kutoka kwa `sender` kwenda `recipient` kwa kutumia utaratibu wa ruhusa. Kisha `amount` inakatwa kutoka kwa ruhusa ya mwitaji. Kazi hii hutoa tukio la `Transfer`.
+Huhamisha `amount` ya tokeni kutoka `sender` hadi `recipient` kwa kutumia utaratibu wa kibali. kiasi (amount) kisha hukatwa kutoka kwa kibali cha mpigaji. Kazi hii hutoa tukio la `Transfer`.
 
 ## Matukio {#events}
 
@@ -85,19 +85,19 @@ Huhamisha `amount` ya tokeni kutoka kwa `sender` kwenda `recipient` kwa kutumia 
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-Tukio hili hutolewa wakati kiasi cha tokeni (value) kinatumwa kutoka anwani ya `from` kwenda anwani ya `to`.
+Tukio hili hutolewa wakati kiasi cha tokeni (thamani) kinatumwa kutoka kwa anwani ya `from` hadi kwa anwani ya `to`.
 
-Katika kisa cha kutengeneza tokeni mpya, uhamisho huwa `kutoka` kwa anwani ya 0x00..0000 huku katika kisa cha kuchoma tokeni uhamisho huwa `kwenda` 0x00..0000.
+Katika kesi ya ufuzi wa tokeni mpya, hamisho kawaida ni `from` anwani ya 0x00..0000 wakati katika kesi ya kuteketeza tokeni hamisho ni `to` 0x00..0000.
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
 ```
 
-Tukio hili hutolewa wakati kiasi cha tokeni (`value`) kimeidhinishwa na `owner` kutumiwa na `spender`.
+Tukio hili hutolewa wakati kiasi cha tokeni (`value`) kinapoidhinishwa na `owner` kutumiwa na `spender`.
 
-## Utekelezaji wa msingi wa tokeni za ERC-20 {#a-basic-implementation-of-erc-20-tokens}
+## Utekelezaji wa kimsingi wa tokeni za ERC-20 {#a-basic-implementation-of-erc-20-tokens}
 
-Huu ndio msimbo rahisi zaidi wa kutumia kama msingi wa tokeni yako ya ERC-20:
+Hapa kuna msimbo rahisi zaidi wa kutumia kama msingi wa tokeni yako ya ERC-20:
 
 ```solidity
 pragma solidity ^0.8.0;

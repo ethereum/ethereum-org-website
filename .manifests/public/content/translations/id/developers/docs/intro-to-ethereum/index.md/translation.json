@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-18T21:41:01.759Z",
+  "englishManifestHash": "4313a3975d34",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-e4f020",
+    "LINK-d788ef",
+    "LINK-5669ad",
+    "LINK-5a31f3",
+    "LINK-b7715c",
+    "LINK-8c31df",
+    "LINK-c0566c",
+    "LINK-71a431",
+    "LINK-eeaec8",
+    "LINK-e49f7a",
+    "LINK-a7be73",
+    "LINK-ab55fe",
+    "LINK-90b5d2",
+    "LINK-adc8d3",
+    "LINK-17dba8",
+    "LINK-9117e4",
+    "LINK-540746",
+    "LINK-7f5147",
+    "LINK-a19aad",
+    "LINK-21141b",
+    "LINK-c705fb",
+    "LINK-ca7ec2",
+    "LINK-0f7dc8"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-e4f020": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-d788ef": {
+      "type": "link",
+      "values": {
+        "url": "https://andersbrownworth.com/blockchain/blockchain"
+      }
+    },
+    "LINK-5669ad": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ether/"
+      }
+    },
+    "LINK-5a31f3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-b7715c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-8c31df": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-c0566c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-71a431": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-eeaec8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps/"
+      }
+    },
+    "LINK-e49f7a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-a7be73": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-90b5d2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-17dba8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/"
+      }
+    },
+    "LINK-9117e4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-540746": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-7f5147": {
+      "type": "link",
+      "values": {
+        "url": "/whitepaper/"
+      }
+    },
+    "LINK-a19aad": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369"
+      }
+    },
+    "LINK-21141b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge"
+      }
+    },
+    "LINK-c705fb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-ca7ec2": {
+      "type": "link",
+      "values": {
+        "url": "https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ"
+      }
+    },
+    "LINK-0f7dc8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/a-developers-guide-to-ethereum-part-one/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:41:01.759Z",
+      "status": "success"
+    }
+  }
+}

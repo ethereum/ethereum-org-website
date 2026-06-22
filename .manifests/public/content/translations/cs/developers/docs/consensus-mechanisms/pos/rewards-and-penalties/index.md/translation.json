@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-17T21:38:42.028Z",
+  "englishManifestHash": "9378b54fa9a0",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-509bd2",
+    "CODE-4a3d95",
+    "CODE-4a3d95",
+    "CODEBLOCK-eb1645",
+    "CODE-bf33ce",
+    "CODE-e46675",
+    "CODE-0134db",
+    "CODE-b87393",
+    "CODE-4a3d95",
+    "CODE-16a550",
+    "LINK-069704",
+    "CODEBLOCK-ebf0e0",
+    "CODEBLOCK-302c99",
+    "CODE-4da436",
+    "CODE-c1cacd",
+    "CODE-d8e97e",
+    "CODE-9bff2b",
+    "CODE-4a3d95",
+    "CODE-8a520e",
+    "CODE-6e16db",
+    "CODE-0cbef6",
+    "CODE-f56b6d",
+    "CODE-dfb638",
+    "CODE-5be292",
+    "CODE-94c4bc",
+    "LINK-4b72a6",
+    "LINK-3f09d6",
+    "LINK-815597",
+    "LINK-0b2c01",
+    "LINK-796695",
+    "LINK-2e3347",
+    "LINK-79b0de",
+    "LINK-b1efee"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-eb1645": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ebf0e0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-302c99": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-4a3d95": {
+      "type": "inline-code",
+      "values": {
+        "content": "base_reward"
+      }
+    },
+    "CODE-bf33ce": {
+      "type": "inline-code",
+      "values": {
+        "content": "base_reward_factor"
+      }
+    },
+    "CODE-e46675": {
+      "type": "inline-code",
+      "values": {
+        "content": "base_rewards_per_epoch"
+      }
+    },
+    "CODE-0134db": {
+      "type": "inline-code",
+      "values": {
+        "content": "sum(active balance)"
+      }
+    },
+    "CODE-b87393": {
+      "type": "inline-code",
+      "values": {
+        "content": "sqrt(N)"
+      }
+    },
+    "CODE-16a550": {
+      "type": "inline-code",
+      "values": {
+        "content": "1/sqrt(N)"
+      }
+    },
+    "CODE-4da436": {
+      "type": "inline-code",
+      "values": {
+        "content": "64/64 * base_reward == base_reward"
+      }
+    },
+    "CODE-c1cacd": {
+      "type": "inline-code",
+      "values": {
+        "content": "64-8 /64 * base_reward == 7/8 * base_reward"
+      }
+    },
+    "CODE-d8e97e": {
+      "type": "inline-code",
+      "values": {
+        "content": "64-8-2 / 64 * base_reward == 6.75/8 * base_reward"
+      }
+    },
+    "CODE-9bff2b": {
+      "type": "inline-code",
+      "values": {
+        "content": "inclusion_delay_reward"
+      }
+    },
+    "CODE-8a520e": {
+      "type": "inline-code",
+      "values": {
+        "content": "1/delay"
+      }
+    },
+    "CODE-6e16db": {
+      "type": "inline-code",
+      "values": {
+        "content": "delay"
+      }
+    },
+    "CODE-0cbef6": {
+      "type": "inline-code",
+      "values": {
+        "content": "base_reward * 1/1 == base_reward"
+      }
+    },
+    "CODE-f56b6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "base_reward * 1/2"
+      }
+    },
+    "CODE-dfb638": {
+      "type": "inline-code",
+      "values": {
+        "content": "8 / 64 * base_reward"
+      }
+    },
+    "CODE-5be292": {
+      "type": "inline-code",
+      "values": {
+        "content": "slashed_validators_effective_balance / 512"
+      }
+    },
+    "CODE-94c4bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "inclusion_delay"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-509bd2": {
+      "type": "link",
+      "values": {
+        "url": "/staking/deposit-contract/"
+      }
+    },
+    "LINK-069704": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards"
+      }
+    },
+    "LINK-4b72a6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md"
+      }
+    },
+    "LINK-3f09d6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=iaAEGs1DMgQ"
+      }
+    },
+    "LINK-815597": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/altair/part2/incentives"
+      }
+    },
+    "LINK-0b2c01": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/1903.04205.pdf"
+      }
+    },
+    "LINK-796695": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1"
+      }
+    },
+    "LINK-2e3347": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50"
+      }
+    },
+    "LINK-79b0de": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509"
+      }
+    },
+    "LINK-b1efee": {
+      "type": "link",
+      "values": {
+        "url": "https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T21:38:42.028Z",
+      "status": "success"
+    }
+  }
+}

@@ -73,7 +73,7 @@ For prose-like content -- a sequence of mixed headings, paragraphs, and lists --
 </div>
 ```
 
-It's already applied in markdown content -- `ContentContainer` and the `MainArticle` in the `Docs`/`Static`/`Tutorial` layouts -- so MDX prose just works. On React pages, add `flow` to a prose region yourself (it is **not** a default on `MainArticle`, since many pages use it as a grid/layout container).
+It's already applied in markdown content -- the `MainArticle` in the `ContentLayout`, `Docs`, `Static`, and `Tutorial` layouts -- so MDX prose just works. On React pages, add `flow` to a prose region yourself (it is **not** a default on `MainArticle`, since many pages use it as a grid/layout container).
 
 **The rhythm.** One responsive base unit `--space` (`--spacing(4)` = 16px mobile, `--spacing(6)` = 24px from `lg`); every gap is a `margin-top` multiple of it:
 
@@ -135,7 +135,7 @@ If you do need a fractional value, prefer scale syntax over arbitrary syntax. Se
 | Between content blocks within a section | `gap-12` (48px) or `gap-16` (64px) |
 | Between sections on a page | `gap-16` to `gap-24` (64-96px) |
 | Section padding (vertical) | `py-16` to `py-24` |
-| Container horizontal padding | Handled by `Section`/page layout, not per-component |
+| Container horizontal padding | The `page` padding token (`px-page`), via `Section`/page layout -- not per-component |
 
 These are heuristics, not rules. Match what surrounding components use rather than picking arbitrarily.
 
@@ -163,6 +163,33 @@ import { Stack } from "@/components/ui/flex"
 ### `Section` for page-level padding
 
 `@/components/ui/section` handles the `<section>` wrapper with appropriate scroll-margin (so sticky-nav doesn't clip the heading when navigating to anchors). Use it for top-level page sections instead of writing your own `<section className="...">` chain.
+
+### Page padding (`--page-pad`), rhythm (`--space`), hero (`--hero-pad`) tokens
+
+Three responsive design tokens back the standard page metrics; all are registered in `theme.css` so they generate Tailwind spacing utilities (full table in `references/tokens.md`):
+
+- **`--page-pad`** -- standard page/section horizontal padding: `--spacing(4)` (1rem) on mobile, `--spacing(8)` (2rem) from `md`. Use the `page` utilities (`px-page`, `p-page`, `pb-page`, `gap-page`, and the `*-page-2x` step) instead of hard-coding `px-4 md:px-8` or an arbitrary `px-(--page-pad)`. Keeps horizontal page padding consistent across pages.
+- **`--space`** -- the `.flow` rhythm base (`--spacing(4)` mobile, `--spacing(6)` from `lg`). `.flow` applies it automatically; when you need the same unit *manually* (an explicit gap or margin outside a flow region), reach for the `space` utilities (`mt-space`, `gap-space`, `space-y-space-2x`, `mt-space-half`, `mt-space-3x`, ...) rather than re-deriving `mt-4 lg:mt-6`.
+- **`--hero-pad`** -- `PageHero`'s internal padding (`--spacing(8)`, 2rem). Use the `hero` utilities (`p-hero`, `px-hero`, `py-hero-2x`, `pe-hero`, `*-hero-half/-1.5x/-2x/-3x`) rather than arbitrary `p-(--pad)`/`calc(var(--pad)*1.5)`. Mostly internal to `PageHero`, but available for hero-adjacent chrome.
+
+Prefer these tokens over the raw scale for page padding, flow rhythm, and hero padding so the metrics stay coherent and scale from a single variable.
+
+**Canonical app-page skeleton.** Non-markdown pages (`app/[locale]/<route>/page.tsx`) compose these:
+
+```tsx
+<main className="p-page pt-page-2x">              {/* page padding from the `page` token */}
+  <MainArticle className="flow space-y-space-4x">  {/* flow rhythm; `space` gaps between sections */}
+    <Section id="overview">                        {/* chunk with header IDs for anchor nav */}
+      <h2>Overview</h2>                            {/* semantic tags; size from base.css, rhythm from flow */}
+      <p>...</p>
+    </Section>
+    {/* more <Section> blocks */}
+  </MainArticle>
+
+  {/* End-of-page actions live OUTSIDE the article -- see references/layouts.md */}
+  <ContentFeedback />
+</main>
+```
 
 ## Logical Spacing for RTL
 

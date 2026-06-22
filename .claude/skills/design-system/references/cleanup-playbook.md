@@ -443,3 +443,63 @@ After the move:
 - If the section needs a swap-in component (HubHero on a specific slug, content after the markdown), use `config.hubHero` or the `afterContent` prop -- don't fork a new layout.
 
 See `references/layouts.md` for the full inventory and `docs/topic-layout-refactor.md` for the worked migration.
+
+## One-off styled layout/heading wrappers -> semantic tags + `.flow` + `Section`
+
+Older pages defined local styled wrappers to hand-manage heading sizes, margins, and columns -- `const H2 = (p) => <h2 className="mt-12 mb-8 leading-xs" {...p} />`, `Text`, `GappedPage`, `TwoColumnContent`, `Width60`/`Width40`, `Container`, etc. Delete them; the design system owns all three concerns.
+
+```tsx
+// Before:
+const H2 = (props) => <h2 className="mt-12 mb-8 leading-xs" {...props} />
+const Text = ({ className, ...props }) => <p className={cn("mb-6", className)} {...props} />
+const Width60 = (props) => <div className="w-full flex-[3]" {...props} />
+<GappedPage><Content><H2>Title</H2><Text>Body</Text></Content></GappedPage>
+
+// After -- semantic tags in a `flow` region, chunked with `<Section>`:
+<MainArticle className="flow space-y-space-4x">
+  <Section id="title"><h2>Title</h2><p>Body</p></Section>
+</MainArticle>
+```
+
+Heading size comes from `base.css` (`text-h*`), vertical rhythm from `.flow`, page padding + section gaps from the `page`/`space` tokens. Full skeleton in `spacing-typography.md`; end-of-page-action placement in `layouts.md`.
+
+## Per-element `mt-*`/`mb-*` rhythm -> `.flow`
+
+```tsx
+// Before -- every block hand-spaced, often with responsive overrides:
+<h2 className="mt-12 mb-6">Title</h2>
+<p className="mb-6 lg:mb-8">Body</p>
+
+// After -- wrap in a `flow` region; spacing is automatic and responsive:
+<div className="flow"><h2>Title</h2><p>Body</p></div>
+```
+
+`.flow` derives every gap from one responsive `--space` ladder. Don't reintroduce per-element margins inside a flow region.
+
+## Hard-coded / arbitrary page padding -> `page` / `hero` tokens
+
+```tsx
+// Before:
+className="px-8 pb-8 max-lg:pt-12"
+className="p-(--pad) lg:px-[calc(var(--pad)*1.5)] lg:py-[calc(var(--pad)*2)]"
+
+// After -- named, responsive spacing tokens:
+className="px-page pb-page"
+className="p-hero lg:px-hero-1.5x lg:py-hero-2x"
+```
+
+`page` = standard page/section padding; `hero` = `PageHero` padding. Table in `tokens.md`.
+
+## `Page` / `ContentContainer` (MdComponents) -> `<main>` + `<MainArticle className="flow">`
+
+Both were removed (June 2026) -- they were thin wrappers around `Flex`/`MainArticle`.
+
+```tsx
+// Before (import now broken):
+import { Page, ContentContainer } from "@/components/MdComponents"
+<Page><ContentContainer>{children}</ContentContainer></Page>
+
+// After:
+import MainArticle from "@/components/MainArticle"
+<main className="p-page"><MainArticle className="flow">{children}</MainArticle></main>
+```

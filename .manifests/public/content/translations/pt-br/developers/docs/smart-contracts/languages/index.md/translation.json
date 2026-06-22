@@ -1,0 +1,345 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-06-17T22:55:18.582Z",
+  "englishManifestHash": "2c9b43649443",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-cc1adc",
+    "LINK-e94435",
+    "LINK-149ae7",
+    "LINK-dc0d49",
+    "LINK-5b2e82",
+    "LINK-64ebc9",
+    "LINK-33b4df",
+    "LINK-09c1f5",
+    "LINK-7a503e",
+    "LINK-50bbb3",
+    "LINK-149b77",
+    "LINK-06f57c",
+    "LINK-e9e88c",
+    "CODEBLOCK-579fbe",
+    "LINK-e80c03",
+    "LINK-5bb997",
+    "LINK-ace79c",
+    "LINK-59e7cb",
+    "LINK-988e3d",
+    "LINK-3aa779",
+    "LINK-77ae8c",
+    "LINK-149b77",
+    "LINK-c17187",
+    "LINK-a19584",
+    "LINK-440a93",
+    "LINK-9106f9",
+    "LINK-499ae7",
+    "CODEBLOCK-4c8e57",
+    "LINK-68203c",
+    "LINK-6e78b2",
+    "LINK-5a9cb0",
+    "LINK-eb71bb",
+    "LINK-7fa804",
+    "LINK-d3acd7",
+    "LINK-b7477d",
+    "CODE-00defe",
+    "CODEBLOCK-16378e",
+    "LINK-e0b8a2",
+    "LINK-72d285",
+    "LINK-8b1239",
+    "LINK-23ff1f",
+    "LINK-7c3d4b",
+    "LINK-56292d",
+    "CODEBLOCK-efb1f0",
+    "LINK-7290ed",
+    "LINK-e37f2f",
+    "LINK-800b42",
+    "LINK-c28373"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-579fbe": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4c8e57": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-16378e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-efb1f0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-00defe": {
+      "type": "inline-code",
+      "values": {
+        "content": "solc --strict-assembly --bin input.yul"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-cc1adc": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages"
+      }
+    },
+    "LINK-e94435": {
+      "type": "link",
+      "values": {
+        "url": "https://remix.ethereum.org"
+      }
+    },
+    "LINK-149ae7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-dc0d49": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-5b2e82": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/"
+      }
+    },
+    "LINK-64ebc9": {
+      "type": "link",
+      "values": {
+        "url": "https://soliditylang.org/"
+      }
+    },
+    "LINK-33b4df": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/solidity-by-example.html"
+      }
+    },
+    "LINK-09c1f5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/solidity/"
+      }
+    },
+    "LINK-7a503e": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/ethereum/solidity"
+      }
+    },
+    "LINK-50bbb3": {
+      "type": "link",
+      "values": {
+        "url": "https://matrix.to/#/#ethereum_solidity:gitter.im"
+      }
+    },
+    "LINK-149b77": {
+      "type": "link",
+      "values": {
+        "url": "https://reference.auditless.com/cheatsheet"
+      }
+    },
+    "LINK-06f57c": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.soliditylang.org/"
+      }
+    },
+    "LINK-e9e88c": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/solidity_lang"
+      }
+    },
+    "LINK-e80c03": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/contracts.html"
+      }
+    },
+    "LINK-5bb997": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io/en/latest/index.html"
+      }
+    },
+    "LINK-ace79c": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io"
+      }
+    },
+    "LINK-59e7cb": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io/en/latest/vyper-by-example.html"
+      }
+    },
+    "LINK-988e3d": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper-by-example.org/"
+      }
+    },
+    "LINK-3aa779": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/vyperlang/vyper"
+      }
+    },
+    "LINK-77ae8c": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/SdvKC79cJk"
+      }
+    },
+    "LINK-c17187": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/python/"
+      }
+    },
+    "LINK-a19584": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/SupremacyTeam/VyperPunk"
+      }
+    },
+    "LINK-440a93": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/zcor/vyper-dev"
+      }
+    },
+    "LINK-9106f9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts"
+      }
+    },
+    "LINK-499ae7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/spadebuilders/awesome-vyper"
+      }
+    },
+    "LINK-68203c": {
+      "type": "link",
+      "values": {
+        "url": "https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction"
+      }
+    },
+    "LINK-6e78b2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm"
+      }
+    },
+    "LINK-5a9cb0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ewasm"
+      }
+    },
+    "LINK-eb71bb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "LINK-7fa804": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/yul.html"
+      }
+    },
+    "LINK-d3acd7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/fuellabs/yulp"
+      }
+    },
+    "LINK-b7477d": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f"
+      }
+    },
+    "LINK-e0b8a2": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example"
+      }
+    },
+    "LINK-72d285": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/fe"
+      }
+    },
+    "LINK-8b1239": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.fe-lang.org/posts/fe-a-new-language-for-the-ethereum-ecosystem/"
+      }
+    },
+    "LINK-23ff1f": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg"
+      }
+    },
+    "LINK-7c3d4b": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/ywpkAXFjZH"
+      }
+    },
+    "LINK-56292d": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/official_fe"
+      }
+    },
+    "LINK-7290ed": {
+      "type": "link",
+      "values": {
+        "url": "/developers/learning-tools/"
+      }
+    },
+    "LINK-e37f2f": {
+      "type": "link",
+      "values": {
+        "url": "https://reference.auditless.com/cheatsheet/"
+      }
+    },
+    "LINK-800b42": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/5.x/"
+      }
+    },
+    "LINK-c28373": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity-by-example.org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:55:18.582Z",
+      "status": "success"
+    }
+  }
+}

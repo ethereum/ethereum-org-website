@@ -173,11 +173,18 @@ export function normalizeTargetPath(
     p = `src/intl/en/${intlMatch[2]}`
   }
 
-  // 3. Auto-prefix by file type
-  const isJson = p.endsWith(".json")
-  if (isJson && !p.startsWith("src/intl/en/")) {
+  // 3. Auto-prefix by file type. Paths already at/under a source root (the
+  //    bare roots "src/intl/en" and "public/content" included) are left as-is;
+  //    only bare relative paths get prefixed. Note "public/content" has no
+  //    trailing slash, so the root itself must be matched explicitly.
+  const underJsonRoot = p === "src/intl/en" || p.startsWith("src/intl/en/")
+  const underMdRoot =
+    p === "public/content" || p.startsWith("public/content/")
+  if (underJsonRoot || underMdRoot) {
+    // already rooted -- no prefix needed
+  } else if (p.endsWith(".json")) {
     p = `src/intl/en/${p}`
-  } else if (!isJson && !p.startsWith("public/content/")) {
+  } else {
     p = `public/content/${p}`
   }
 

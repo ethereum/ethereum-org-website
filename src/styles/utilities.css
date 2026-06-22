@@ -88,7 +88,7 @@
         100%,
         max(
           var(--grid-item-min, 18rem),
-          calc((100% - (--value(integer) - 1) * 1rem) / --value(integer))
+          calc((100% - (--value(integer) - 1) * var(--grid-gap, 1rem)) / --value(integer))
         )
       ),
       1fr

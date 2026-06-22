@@ -1,34 +1,34 @@
 ---
-title: "NFT'nizi Cüzdanınızda Nasıl Görüntüleyebilirsiniz (NFT Öğretici Serisi Bölüm 3/3)"
-description: "Bu öğretici, MetaMask'ta mevcut bir NFT'nin nasıl görüntüleneceğini açıklar!"
+title: "Cüzdanınızda NFT'nizi Nasıl Görüntülersiniz (NFT Eğitim Serisi Bölüm 3/3)"
+description: "Bu eğitim, MetaMask üzerinde mevcut bir NFT'nin nasıl görüntüleneceğini açıklamaktadır!"
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "Alchemy", "Solidity" ]
+tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
 breadcrumb: "Cüzdanda NFT görüntüleme"
 lang: tr
 published: 2021-04-22
 ---
 
-Bu öğretici, yeni basılmış NFT'mizi görüntülediğimiz NFT Öğretici serisinin Bölüm 3/3'üdür. Ancak, Mainnet veya herhangi bir test ağı dahil olmak üzere MetaMask kullanan herhangi bir ERC-721 token'ı için genel öğreticiyi kullanabilirsiniz. Ethereum üzerinde kendi NFT'nizi nasıl basacağınızı öğrenmek istiyorsanız, <a href="/developers/tutorials/how-to-write-and-deploy-an-nft">Bir NFT Nasıl Yazılır ve Dağıtılır</a> kısmına göz atmalısınız!
+Bu eğitim, yeni bastığımız NFT'yi görüntülediğimiz NFT Eğitim serisinin 3/3. Bölümüdür. Ancak, bu genel eğitimi Ana Ağ veya herhangi bir test ağı dahil olmak üzere MetaMask kullanan herhangi bir ERC-721 Token'ı için kullanabilirsiniz. Ethereum üzerinde kendi NFT'nizi nasıl basacağınızı öğrenmek isterseniz, [Bir NFT akıllı sözleşmesi Nasıl Yazılır ve Dağıtılır konulu 1. Bölüme](/developers/tutorials/how-to-write-and-deploy-an-nft) göz atmalısınız!
 
-Tebrikler! NFT öğretici serimizin en kısa ve en basit kısmına geldiniz: Yeni basılmış NFT'nizi sanal bir cüzdanda görüntüleme. Önceki iki bölümde onu kullandığımızdan dolayı bu örnek için MetaMask kullanacağız.
+Tebrikler! NFT eğitim serimizin en kısa ve en basit kısmına ulaştınız — yeni bastığınız NFT'nizi sanal bir cüzdanda nasıl görüntüleyeceğiniz. Önceki iki bölümde kullandığımız için bu örnekte MetaMask kullanacağız.
 
-Ön koşul olarak, mobil cihazınızda MetaMask'in kurulu olması ve NFT'nizi bastığınız hesabın dahil olması gerekir. Uygulamayı [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) veya [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US) için ücretsiz olarak edinebilirsiniz.
+Ön koşul olarak, mobil cihazınızda MetaMask'ın zaten yüklü olması ve NFT'nizi bastığınız hesabı içermesi gerekir — uygulamayı [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) veya [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US) üzerinden ücretsiz olarak edinebilirsiniz.
 
-## Adım 1: Ağınızı Sepolia olarak ayarlayın {#set-network-to-sepolia}
+## 1. Adım: Ağınızı Sepolia olarak ayarlayın {#set-network-to-sepolia}
 
-Uygulamanın üst kısmındaki "Wallet" (Cüzdan) düğmesine basın, ardından bir ağ seçmeniz istenecektir. NFT'miz Sepolia ağında basıldığı için ağınız olarak Sepolia'yı seçmelisiniz.
+Uygulamanın üst kısmındaki “Cüzdan” (Wallet) düğmesine basın, ardından bir ağ seçmeniz istenecektir. NFT'miz Sepolia ağında basıldığı için ağınız olarak Sepolia'yı seçmek isteyeceksiniz.
 
-![MetaMask Mobile'da ağınızı Sepolia olarak ayarlama](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
 
-## Adım 2: Koleksiyon öğenizi MetaMask'e ekleyin {#add-nft-to-metamask}
+## 2. Adım: Koleksiyonluk öğenizi MetaMask'a ekleyin {#add-nft-to-metamask}
 
-Sepolia ağına girdikten sonra, sağdaki "Collectibles" (Koleksiyon Öğeleri) sekmesini seçip NFT akıllı sözleşme adresini ve NFT'nizin ERC-721 jeton kimliğini ekleyin: Bunu, öğreticimizin 2. Bölümünde dağıtılan NFT'nizin işlem karması temelinde Etherscan'de bulabilirsiniz.
+Sepolia ağında olduğunuzda, sağdaki “Koleksiyonluklar” (Collectibles) sekmesini seçin ve NFT akıllı sözleşme adresini ve NFT'nizin ERC-721 Token kimliğini (ID) ekleyin — bunu, eğitimimizin II. Bölümünde dağıtılan NFT'nizin işlem hash'ine dayanarak Etherscan'de bulabilmeniz gerekir.
 
-![İşlem karmanızı ve ERC-721 jeton kimliğinizi bulma](./findNFTEtherscan.png)
+![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
 
-NFT'nizi görüntülemek için birkaç kez yenilemeniz gerekebilir ancak kesinlikle orada olacaktır <Emoji text="😄" size={1} />!
+NFT'nizi görüntülemek için birkaç kez yenilemeniz gerekebilir — ancak orada olacaktır <Emoji text="😄" size={1} />!
 
-![NFT'nizi MetaMask'e yükleme](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
 
-Tebrikler! Bir NFT'yi başarıyla bastınız ve şimdi onu görüntüleyebilirsiniz! NFT dünyasını nasıl kasıp kavuracağınızı görmek için sabırsızlanıyoruz!
+Tebrikler! Başarıyla bir NFT bastınız ve artık onu görüntüleyebilirsiniz! NFT dünyasını nasıl kasıp kavuracağınızı görmek için sabırsızlanıyoruz!

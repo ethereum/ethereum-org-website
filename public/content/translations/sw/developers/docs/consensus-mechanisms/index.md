@@ -1,92 +1,93 @@
 ---
-title: Utaratibu wa makubaliano
-description: Ufafanuzi wa itifaki za makubaliano katika mifumo iliyosambazwa na jukumu wanalocheza katika Ethereum.
+title: Taratibu za makubaliano
+description: Maelezo ya itifaki za mwafaka katika mifumo iliyosambazwa na jukumu lake katika Ethereum.
 lang: sw
+authors: ["Patrick Collins"]
 ---
 
-Neno 'utaratibu wa makubaliano' mara nyingi hutumika kwa mazungumzo kurejelea 'uthibitisho-wa-stake', 'uthibitisho-wa-kazi' au 'uthibitisho-wa-mamlaka'. Hata hivyo, hivi ni vipengele tu katika utaratibu wa makubaliano unaolinda dhidi ya [mashambulizi ya Sybil](/glossary/#sybil-attack). Mbinu za Makubaliano ni mkusanyiko kamili wa mawazo, itifaki na motisha zinazowezesha seti iliyosambazwa ya nodi kukubaliana juu ya hali ya kiambajengo.
+Neno 'utaratibu wa makubaliano' mara nyingi hutumika kwa mazungumzo kurejelea itifaki za 'Uthibitisho wa Dau (PoS)', 'Uthibitisho wa Kazi (PoW)' au 'uthibitisho wa mamlaka (PoA)'. Hata hivyo, hivi ni vipengele tu katika taratibu za makubaliano ambavyo hulinda dhidi ya [mashambulio ya Sybil](/glossary/#sybil-attack). Taratibu za makubaliano ni mkusanyiko kamili wa mawazo, itifaki na motisha zinazowezesha kundi lililosambazwa la nodi kukubaliana juu ya hali ya mnyororo wa vitalu.
 
-## Mahitaji ya awali {#prerequisites}
+## Mahitaji ya Awali {#prerequisites}
 
-Ili kuelewa ukurasa huu vizuri, tunapendekeza kwanza usome [utangulizi wetu wa Ethereum](/developers/docs/intro-to-ethereum/).
+Ili kuelewa vyema ukurasa huu, tunapendekeza usome kwanza [utangulizi wetu wa Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Makubaliano ni nini? {#what-is-consensus}
+## Mwafaka ni nini? {#what-is-consensus}
 
-Kwa makubaliano, tunamaanisha kuwa makubaliano ya jumla yamefikiwa. Fikiria kikundi cha watu wanaoenda kwenye sinema. Ikiwa hakuna kutokubaliana juu ya uchaguzi uliopendekezwa wa filamu, basi makubaliano yanapatikana. Ikiwa kuna kutokubaliana, kikundi lazima kiwe na njia ya kuamua ni filamu gani itaonyeshwa. Katika hali mbaya, kikundi hatimaye kitagawanyika.
+Kwa mwafaka, tunamaanisha kwamba makubaliano ya jumla yamefikiwa. Fikiria kundi la watu wanaokwenda kwenye jumba la sinema. Ikiwa hakuna kutokubaliana juu ya chaguo lililopendekezwa la filamu, basi mwafaka unafikiwa. Ikiwa kuna kutokubaliana, kundi lazima liwe na njia ya kuamua ni filamu gani ya kutazama. Katika hali mbaya, kundi hatimaye litagawanyika.
 
-Kuhusiana na kiambajengo cha Ethereum, mchakato huo umewekwa rasmi, na kufikia makubaliano ina maana kwamba angalau 66% ya nodi kwenye mtandao hukubaliana juu ya hali ya kimataifa ya mtandao.
+Kuhusiana na mnyororo wa vitalu wa [Ethereum](/), mchakato huo umerasimishwa, na kufikia mwafaka inamaanisha kuwa angalau 66% ya nodi kwenye mtandao zinakubaliana juu ya hali ya kimataifa ya mtandao.
 
 ## Utaratibu wa makubaliano ni nini? {#what-is-a-consensus-mechanism}
 
-Neno utaratibu wa makubaliano hurejelea rundo zima la itifaki, motisha na mawazo ambayo huruhusu mtandao wa nodi kukubaliana juu ya hali ya kiambajengo.
+Neno utaratibu wa makubaliano linarejelea mkusanyiko mzima wa itifaki, motisha na mawazo yanayoruhusu mtandao wa nodi kukubaliana juu ya hali ya mnyororo wa vitalu.
 
-Ethereum hutumia utaratibu wa makubaliano wa uthibitisho wa stake unaopata usalama wake wa kiuchumi wa kripto kutoka kwa seti ya zawadi na adhabu zinazotumika kwa mtaji uliofungwa na wahusika. Muundo huu wa motisha huwahimiza washikadau binafsi kutumia vithibitishaji waaminifu, huwaadhibu wale wasiofanya hivyo, na huleta gharama ya juu sana kushambulia mtandao.
+Ethereum hutumia utaratibu wa makubaliano unaotegemea Uthibitisho wa Dau (PoS) ambao hupata usalama wake wa kiuchumi wa kripto kutoka kwa seti ya tuzo na adhabu zinazotumika kwa mtaji uliofungwa na waweka dhamana. Muundo huu wa motisha unahimiza waweka dhamana binafsi kuendesha wathibitishaji waaminifu, kuwaadhibu wale ambao hawafanyi hivyo, na kuunda gharama kubwa sana ya kushambulia mtandao.
 
-Kisha, kuna itifaki ambayo inasimamia jinsi wathibitishaji waaminifu wanachaguliwa ili kupendekeza au kuthibitisha vitalu, mchakato wa shughuli na kupiga kura kwa maoni yao ya mkuu wa mnyororo. Katika hali nadra ambapo vitalu vingi viko katika nafasi sawa karibu na kichwa cha mnyororo, kuna utaratibu wa kuchagua uma unaochagua vitalu vinavyounda mnyororo 'mzito zaidi', unaopimwa kwa idadi ya viidhinishi vilivyopiga kura kwa vitalu vilivyopimwa kwa salio lao la etha lililowekwa kigingi.
+Kisha, kuna itifaki inayosimamia jinsi wathibitishaji waaminifu wanavyochaguliwa ili kupendekeza au kuthibitisha vitalu, kuchakata miamala na kupiga kura kwa mtazamo wao wa kichwa cha mnyororo. Katika hali nadra ambapo vitalu vingi viko katika nafasi sawa karibu na kichwa cha mnyororo, kuna utaratibu wa kuchagua mchepuko ambao huchagua vitalu vinavyounda mnyororo 'mzito zaidi', unaopimwa na idadi ya wathibitishaji waliopiga kura kwa vitalu hivyo vilivyopimwa kwa uzito wa salio lao la Etha waliloweka dhamana.
 
-Baadhi ya dhana ni muhimu kwa maafikiano ambayo hayajafafanuliwa kwa uwazi katika msimbo, kama vile usalama wa ziada unaotolewa na uratibu wa kijamii wa nje ya bendi kama njia ya mwisho ya ulinzi dhidi ya mashambulizi kwenye mtandao.
+Baadhi ya dhana ni muhimu kwa mwafaka ambazo hazijafafanuliwa wazi katika msimbo, kama vile usalama wa ziada unaotolewa na uratibu wa kijamii unaowezekana nje ya mtandao kama njia ya mwisho ya ulinzi dhidi ya mashambulio kwenye mtandao.
 
 Vipengele hivi kwa pamoja huunda utaratibu wa makubaliano.
 
 ## Aina za taratibu za makubaliano {#types-of-consensus-mechanisms}
 
-### Kulingana na Uthibitisho wa kazi {#proof-of-work}
+### Kulingana na Uthibitisho wa Kazi {#proof-of-work}
 
-Kama Bitcoin, Ethereum hapo awali ilitumia itifaki ya makubaliano inayotegemea **uthibitisho wa kazi (PoW)**.
+Kama Bitcoin, Ethereum iliwahi kutumia itifaki ya mwafaka inayotegemea **Uthibitisho wa Kazi (PoW)**.
 
-#### Uundaji wa Bloku {#pow-block-creation}
+#### Uundaji wa kitalu {#pow-block-creation}
 
-Wachimbaji madini hushindana kuunda vitalu vipya vilivyojazwa na miamala iliyochakatwa. Mshindi hushiriki kitalu kipya na mtandao wengine na hupata ETH mpya iliyotengenezwa hivi karibuni. Mbio hizo hushinda kwa kompyuta ambayo ina uwezo wa kutatua fumbo la hesabu haraka sana. Hii hutoa kiunga cha kriptografia kati ya kitalu cha sasa na kitalu kilichotangulia. Kutatua fumbo hili ni kazi katika "uthibitisho wa kazi". Mnyororo wa canonical kisha huamuliwa na sheria ya kuchagua uma ambayo huchagua seti ya vitalu ambavyo vimekuwa na kazi kubwa zaidi ya kuzichimba.
+Wachimbaji hushindana kuunda vitalu vipya vilivyojazwa na miamala iliyochakatwa. Mshindi hushiriki kitalu kipya na mtandao uliosalia na kupata ETH mpya iliyotengenezwa. Mbio hizo hushindwa na kompyuta ambayo ina uwezo wa kutatua fumbo la hisabati kwa haraka zaidi. Hii inazalisha kiungo cha kriptografia kati ya kitalu cha sasa na kitalu kilichotangulia. Kutatua fumbo hili ndiyo kazi katika "Uthibitisho wa Kazi". Mnyororo wa kisheria kisha huamuliwa na sheria ya kuchagua mchepuko ambayo huchagua seti ya vitalu ambavyo vimefanyiwa kazi nyingi zaidi ili kuvichimba.
 
 #### Usalama {#pow-security}
 
-Mtandao umewekwa salama kwa kuwa utahitaji 51% ya nguvu ya kompyuta ya mtandao ili kulaghai mnyororo. Hii ingehitaji uwekezaji mkubwa kama huu katika vifaa na nishati; una uwezekano wa kutumia zaidi ya unayoweza kupata.
+Mtandao huwekwa salama na ukweli kwamba utahitaji 51% ya nguvu ya kompyuta ya mtandao ili kulaghai mnyororo. Hii itahitaji uwekezaji mkubwa kama huo katika vifaa na nishati; una uwezekano wa kutumia zaidi ya utakavyopata.
 
-Maelezo zaidi kuhusu [uthibitisho wa kazi](/developers/docs/consensus-mechanisms/pow/)
+Zaidi kuhusu [Uthibitisho wa Kazi](/developers/docs/consensus-mechanisms/pow/)
 
-### Kulingana na Uthibitisho wa Rehani {#proof-of-stake}
+### Kulingana na Uthibitisho wa Dau {#proof-of-stake}
 
-Ethereum sasa inatumia itifaki ya makubaliano inayotegemea **uthibitisho wa rehani (PoS)**.
+Ethereum sasa inatumia itifaki ya mwafaka inayotegemea **Uthibitisho wa Dau (PoS)**.
 
-#### Uundaji wa Bloku {#pos-block-creation}
+#### Uundaji wa kitalu {#pos-block-creation}
 
-Kidhibiti cha kuunda kitalu. Kithibitishaji kimoja kimechaguliwa kwa nasibu katika kila nafasi kuwa mpendekezaji wa kitalu. Mteja wao wa makubaliano anaomba fungu la miamala na malipo ya utekelezaji kutoka kwa mteja wao wa utekelezaji waliooanishwa. Wanafunga hii kwa data ya makubaliano ili kuunda kitalu, ambayo hutuma kwa nodi nyingine kwenye mtandao wa Ethereum. Uzalishaji huu wa kitalu hutuzwa katika ETH. Katika hali nadra wakati vitalu vingi vinavyowezekana vipo kwa nafasi moja, au nodi husikia juu ya vitalu kwa nyakati tofauti, algorithm ya uchaguzi wa uma huchagua kitalu kinachounda mnyororo wenye uzito mkubwa wa uthibitisho (ambapo uzani ni idadi ya wathibitishaji wanaothibitisha kupunguzwa kwa usawa wao wa ETH).
+Wathibitishaji huunda vitalu. Mthibitishaji mmoja huchaguliwa kwa nasibu katika kila sloti kuwa mpendekezaji wa bloku. Mteja wa mwafaka wao huomba kifurushi cha miamala kama 'mzigo wa utekelezaji' kutoka kwa kiteja chao cha utekelezaji kilichooanishwa. Wanafunga hii katika data ya mwafaka ili kuunda kitalu, ambacho wanatuma kwa nodi zingine kwenye mtandao wa Ethereum. Uzalishaji huu wa kitalu hutuzwa kwa ETH. Katika hali nadra wakati vitalu vingi vinavyowezekana vipo kwa sloti moja, au nodi zinasikia kuhusu vitalu kwa nyakati tofauti, algoriti ya kuchagua mchepuko huchagua kitalu kinachounda mnyororo wenye uzito mkubwa zaidi wa uthibitisho (ambapo uzito ni idadi ya wathibitishaji wanaothibitisha iliyopimwa na salio lao la ETH).
 
 #### Usalama {#pos-security}
 
-Mfumo wa uthibitisho wa dau ni salama kwa njia ya kripto-kiuchumi kwa sababu mvamizi anayejaribu kuchukua udhibiti wa mnyororo lazima aharibu kiasi kikubwa cha ETH. Mfumo wa zawadi huwapa motisha washikadau binafsi kuwa waaminifu, na adhabu huwakatisha tamaa wadau kutokana na kutenda kwa nia mbaya.
+Mfumo wa Uthibitisho wa Dau ni salama kiuchumi wa kripto kwa sababu mshambuliaji anayejaribu kuchukua udhibiti wa mnyororo lazima aharibu kiasi kikubwa cha ETH. Mfumo wa tuzo huhamasisha waweka dhamana binafsi kuishi kwa uaminifu, na adhabu huwavunja moyo waweka dhamana kutenda kwa nia mbaya.
 
-Maelezo zaidi kuhusu [uthibitisho wa rehani](/developers/docs/consensus-mechanisms/pos/)
+Zaidi kuhusu [Uthibitisho wa Dau](/developers/docs/consensus-mechanisms/pos/)
 
-### Mwongozo wa picha {#types-of-consensus-video}
+### Mwongozo wa kuona {#types-of-consensus-video}
 
-Tazama zaidi kuhusu aina tofauti za mbinu za makubaliano zinazotumika kwenye Ethereum:
+Tazama zaidi kuhusu aina tofauti za taratibu za makubaliano zinazotumika kwenye Ethereum:
 
-<YouTube id="ojxfbN78WFQ" />
+<VideoWatch slug="understanding-consensus-mechanisms" />
 
-### Ukinzani wa Sybil na uteuzi wa mnyororo {#sybil-chain}
+### Upinzani wa Sybil na uteuzi wa mnyororo {#sybil-chain}
 
-Uthibitisho wa kazi na uthibitisho wa stake pekee sio itifaki ya makubaliano, lakini mara nyingi hurejelewa kama hivyo kwa urahisi. Kwa kweli ni mifumo ya upinzani ya Sybil na wateuzi wa waandishi vitalu; wao ni njia ya kuamua nani ni mwandishi wa vitalu hivi karibuni. Sehemu nyingine muhimu ni algorithm ya uteuzi wa mnyororo (aka chaguo la uma) ambayo huwezesha nodi kuchukua kitalu kimoja kilicho sahihi kwenye kichwa cha mnyororo katika hali ambapo vitalu vingi vipo katika nafasi sawa.
+Uthibitisho wa Kazi na Uthibitisho wa Dau pekee sio itifaki za mwafaka, lakini mara nyingi hurejelewa hivyo kwa urahisi. Kwa kweli ni taratibu za upinzani wa Sybil na wateuzi wa mwandishi wa kitalu; ni njia ya kuamua nani ni mwandishi wa kitalu cha hivi punde. Kipengele kingine muhimu ni algoriti ya uteuzi wa mnyororo (inayojulikana pia kama chaguo la mchepuko) inayowezesha nodi kuchagua kitalu kimoja sahihi kwenye kichwa cha mnyororo katika hali ambapo vitalu vingi vipo katika nafasi sawa.
 
-**Ukinzani wa Sybil** hupima jinsi itifaki inavyokabiliana na shambulio la Sybil. Upinzani wa aina hii ya shambulio ni muhimu kwa kiambajengo cha mfumo mtawanyo na kuwawezesha wachimbaji na wathibitishaji kutuzwa kwa usawa kulingana na rasilimali iliyowekwa. Kuanzishwa kwa ishara hizi ni kiini cha kiambajengo ambacho itafunguliwa na kulipwa na mtumiaji kutoka kwa mtumiaji kulingana na kiasi cha fedha kilichowekwa. Ulinzi huu ni kikwazo cha kiuchumi kwa mashambulizi ya Sybil.
+**Upinzani wa Sybil** hupima jinsi itifaki inavyofanya dhidi ya shambulio la Sybil. Upinzani dhidi ya aina hii ya shambulio ni muhimu kwa mnyororo wa vitalu uliogatuliwa na huwezesha wachimbaji na wathibitishaji kutuzwa kwa usawa kulingana na rasilimali zilizowekwa. Uthibitisho wa Kazi na Uthibitisho wa Dau hulinda dhidi ya hili kwa kuwafanya watumiaji kutumia nishati nyingi au kuweka dhamana nyingi. Ulinzi huu ni kizuizi cha kiuchumi kwa mashambulio ya Sybil.
 
-**Kanuni ya uteuzi wa mnyororo** hutumika kuamua ni mnyororo upi ndio "sahihi". Bitcoin hutumia sheria ya "mnyororo mrefu zaidi", ambayo inamaanisha kuwa kiambajengo chochote nikirefu zaidi itakuwa ile ambayo nodi zingine zitakubali kuwa halali na kufanya kazi nayo. Kwa minyororo ya uthibitisho wa kazi, msururu mrefu zaidi hubainishwa na ugumu wa jumla wa uthibitisho wa kazi. Ethereum ilitumia sheria ndefu zaidi ya mnyororo; hata hivyo, kwa kuwa sasa Ethereum inaendeshwa kwa uthibitisho wa stake ilipitisha algorithm iliyosasishwa ya kuchagua uma ambayo inapima 'uzito' wa mnyororo. Uzito ni jumla iliyokusanywa ya kura za kiidhinishaji, zinazopimwa kwa stake ya wadhibiti vilivyowekwa kigingi.
+**Sheria ya uteuzi wa mnyororo** hutumika kuamua ni mnyororo upi ni mnyororo "sahihi". Bitcoin hutumia sheria ya "mnyororo mrefu zaidi", ambayo inamaanisha kuwa mnyororo wa vitalu wowote ulio mrefu zaidi utakuwa ule ambao nodi zingine zinaukubali kama halali na kufanya kazi nao. Kwa minyororo ya Uthibitisho wa Kazi, mnyororo mrefu zaidi huamuliwa na ugumu wa jumla wa Uthibitisho wa Kazi wa mnyororo. Ethereum ilikuwa ikitumia sheria ya mnyororo mrefu zaidi pia; hata hivyo, sasa kwa kuwa Ethereum inaendeshwa kwenye Uthibitisho wa Dau ilipitisha algoriti ya kuchagua mchepuko iliyosasishwa ambayo hupima 'uzito' wa mnyororo. Uzito ni jumla iliyokusanywa ya kura za mthibitishaji, iliyopimwa na salio la etha iliyowekwa dhamana na mthibitishaji.
 
-Ethereum hutumia utaratibu wa makubaliano unaojulikana kama [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) unaochanganya [Uthibitisho wa Rehani wa Casper FFG](https://arxiv.org/abs/1710.09437) na [kanuni ya uteuzi wa uma ya GHOST](https://arxiv.org/abs/2003.03052).
+Ethereum hutumia utaratibu wa makubaliano unaojulikana kama [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) ambao unachanganya [Uthibitisho wa Dau wa Casper FFG](https://arxiv.org/abs/1710.09437) na [sheria ya kuchagua mchepuko ya GHOST](https://arxiv.org/abs/2003.03052).
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-- [Algorithm ya Makubaliano ya Mnyororo wa Bloku ni Nini?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
-- [Makubaliano ya Nakamoto ni nini? Mwongozo Kamili kwa Wanaoanza](https://blockonomi.com/nakamoto-consensus/)
+- [Algoriti ya Mwafaka wa Mnyororo wa Vitalu ni Nini?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
+- [Mwafaka wa Nakamoto ni Nini? Mwongozo Kamili wa Wanaoanza](https://blockonomi.com/nakamoto-consensus/)
 - [Casper Inafanyaje Kazi?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
-- [Kuhusu Usalama na Utendaji wa Minyororo ya Bloku ya Uthibitisho wa Kazi](https://eprint.iacr.org/2016/555.pdf)
+- [Kuhusu Usalama na Utendaji wa Minyororo ya Vitalu ya Uthibitisho wa Kazi](https://eprint.iacr.org/2016/555.pdf)
 - [Kosa la Byzantine](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_Unajua rasilimali ya jamii iliyokusaidia?_ Hariri ukurasa huu na uiongeze!_
+_Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 
 ## Mada zinazohusiana {#related-topics}
 
-- [Uthibitisho wa kazi](/developers/docs/consensus-mechanisms/pow/)
+- [Uthibitisho wa Kazi](/developers/docs/consensus-mechanisms/pow/)
 - [Uchimbaji](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Uthibitisho wa rehani](/developers/docs/consensus-mechanisms/pos/)
-- [Uthibitisho wa Mamlaka](/developers/docs/consensus-mechanisms/poa/)
+- [Uthibitisho wa Dau](/developers/docs/consensus-mechanisms/pos/)
+- [Uthibitisho wa mamlaka](/developers/docs/consensus-mechanisms/poa/)

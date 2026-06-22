@@ -10,7 +10,7 @@ import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 import type { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -342,7 +342,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               </Callout>
             </div>
           </Content>
-          <FeedbackCard />
+          <ContentFeedback />
         </PageContainer>
       </I18nProvider>
     </>
