@@ -14,7 +14,7 @@ L'**emissione** di ETH è il processo di creazione di ETH che prima non esisteva
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="TL;DR sull'emissione di ETH">
 
 - Prima della transizione alla Proof-of-Stake (PoS), ai minatori venivano emessi circa 13.000 ETH al giorno
 - A chi fa staking vengono emessi circa 1.700 ETH al giorno, sulla base di circa 14 milioni di ETH totali messi in staking
