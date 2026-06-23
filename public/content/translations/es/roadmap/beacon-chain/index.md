@@ -1,80 +1,81 @@
 ---
-title: La cadena de baliza
-description: "Descubra todo lo relacionado con la Cadena de Baliza: la actualización que introdujo la prueba de participación en Ethereum."
+title: La cadena de balizas
+description: "Aprende sobre la cadena de balizas, la actualización que introdujo la prueba de participación en Ethereum."
 lang: es
 template: upgrade
 image: /images/upgrades/core.png
-alt:
+alt: 
 summaryPoints:
-  - "La Cadena de Baliza introdujo la prueba de participación en el ecosistema de Ethereum."
-  - "Se fusionó con la cadena de prueba de trabajo original de Ethereum en septiembre de 2022."
-  - "La Cadena de Baliza introdujo la lógica de consenso y el protocolo de gossiping de bloques que ahora asegura Ethereum."
+  - "La cadena de balizas introdujo la prueba de participación en el ecosistema de Ethereum."
+  - "Se fusionó con la cadena original de prueba de trabajo de Ethereum en septiembre de 2022."
+  - "La cadena de balizas introdujo la lógica de consenso y el protocolo de propagación de bloques (gossip) que ahora protege a Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  La Beacon Chain se lanzó el 1 de diciembre de 2020 y formalizó la prueba de participación como el mecanismo de consenso de Ethereum con la actualización The Merge el 15 de septiembre de 2022.
+  La cadena de balizas se lanzó el 1 de diciembre de 2020 y formalizó la prueba de participación como el mecanismo de consenso de Ethereum con la actualización de La Fusión el 15 de septiembre de 2022.
 </UpgradeStatus>
 
-## ¿Qué es la cadena de baliza? {#what-is-the-beacon-chain}
+## ¿Qué es la cadena de balizas? {#what-is-the-beacon-chain}
 
-La cadena de baliza es el nombre original de la cadena de bloques de la prueba de participación que fue lanzada en 2020. Fue creada para mostrar que la lógica de consenso de la prueba de participación era segura y sostenible, antes de habilitarla en la red principal de Ethereum. Por esta razón, estuvo funcionando paralelamente con la prueba de trabajo de Ethereum. La Cadena de Baliza fue una cadena de bloques 'vacios', pero al cambiar a prueba de trabajo y al cambiar a prueba de participación en Ethereum requiere instrucciones a la Cadena de Baliza para aceptar data de transacciones de clientes de ejecución, juntarlos en bloques y después organizarlos en la cadena de bloques usando un mecanismo de consenso usando una base prueba de participación. Al mismo tiempo, los clientes originales de Ethereum apagaron su minería, propagación de bloques y lógica de consenso, confiándolo todo a la cadena de baliza. Este evento se conoció como [The Merge](/roadmap/merge/). Una vez producida La Fusión, ya no había dos cadenas de bloques. En lugar de ello, solo había una prueba de participación en Ethereum, que ahora requiere dos clientes diferentes por nodo. La cadena de baliza es ahora la capa de consenso, una red entre pares de clientes de consenso que maneja el bloque de intercambio de información y la lógica de consenso, mientras que los clientes originales forman la capa de ejecución, que es la responsable del intercambio de información y de la ejecución de transacciones, y de la gestión del estado de Ethereum. Las dos capas pueden comunicarse entre sí usando Engine API.
+La cadena de balizas es el nombre de la cadena de bloques original de prueba de participación (PoS) que se lanzó en 2020. Se creó para garantizar que la lógica de consenso de prueba de participación fuera sólida y sostenible antes de habilitarla en la red principal de [Ethereum](/) (Mainnet). Por lo tanto, se ejecutó junto con el Ethereum original de prueba de trabajo (PoW). La cadena de balizas era una cadena de bloques "vacíos", pero apagar la prueba de trabajo y encender la prueba de participación en Ethereum requería instruir a la cadena de balizas para que aceptara datos de transacciones de los clientes de ejecución, los agrupara en bloques y luego los organizara en una cadena de bloques utilizando un mecanismo de consenso basado en prueba de participación. En ese mismo momento, los clientes originales de Ethereum apagaron su minería, propagación de bloques y lógica de consenso, entregando todo eso a la cadena de balizas. Este evento se conoció como [La Fusión](/roadmap/merge/). Una vez que ocurrió La Fusión, ya no había dos cadenas de bloques. En su lugar, solo había un Ethereum de prueba de participación, que ahora requiere dos clientes diferentes por nodo. La cadena de balizas es ahora la capa de consenso, una red entre pares de clientes de consenso que maneja la propagación de bloques y la lógica de consenso, mientras que los clientes originales forman la capa de ejecución, que es responsable de propagar y ejecutar transacciones, y de gestionar el estado de Ethereum. Las dos capas pueden comunicarse entre sí utilizando la API Engine.
 
-## ¿Qué hace la cadena de baliza? {#what-does-the-beacon-chain-do}
+## ¿Qué hace la cadena de balizas? {#what-does-the-beacon-chain-do}
 
-Beacon Chain es el nombre que se le da a un libro mayor de cuentas que gestionaba y coordinaba la red de [participantes](/staking/) de Ethereum antes de que estos comenzaran a validar bloques reales de Ethereum. No procesa transacciones ni maneja interacciones de contratos inteligentes, porque eso se esta haciendo a través de la capa de ejecución.
-La cadena de baliza es responsable de cosas como la gestión de bloques y certificaciones, de la ejecución del algoritmo de bifurcación y de la gestión de recompensas y penalizaciones.
-Lea más en nuestra [página sobre arquitectura de nodos](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
+La cadena de balizas es el nombre dado a un libro mayor de cuentas que dirigió y coordinó la red de [participantes (stakers)](/staking/) de Ethereum antes de que esos participantes comenzaran a validar bloques reales de Ethereum. Sin embargo, no procesa transacciones ni maneja interacciones de contratos inteligentes porque eso se está haciendo en la capa de ejecución.
+La cadena de balizas es responsable de cosas como el manejo de bloques y atestaciones, la ejecución del algoritmo de elección de bifurcación y la gestión de recompensas y penalizaciones.
+Lee más en nuestra [página de arquitectura de nodos](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-## Impacto de Beacon Chain {#beacon-chain-features}
+## Impacto de la cadena de balizas {#beacon-chain-features}
 
-### Introducción a la participación {#introducing-staking}
+### Introducción del staking {#introducing-staking}
 
-La Beacon Chain introdujo la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) en Ethereum. Esta mantiene la seguridad de Ethereum y permite a los validadores obtener más ETH en el proceso. En la práctica, la participación supone comprometer ETH para poder activar el software de validación. Como participante, se encargará de ejecutar el software que crea y valida los nuevos bloques de la cadena.
+La cadena de balizas introdujo la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) en Ethereum. Esto mantiene a Ethereum seguro y hace que los validadores ganen más ETH en el proceso. En la práctica, el staking implica depositar ETH en garantía para activar el software del validador. Como participante (staker), ejecutas el software que crea y valida nuevos bloques en la cadena.
 
-La participación cumple una función similar a la que antes tenía la [minería](/developers/docs/consensus-mechanisms/pow/mining/), pero es diferente en muchos aspectos. La minería requería de una inversión inicial significativa destinada a la adquisición de un productivo hardware y a cubrir los gastos de consumo energético, lo que derivó en economías de escala y en la promoción de la centralización. La minería tampoco requería la retención de activos colaterales, lo que limitaba los alcances del protocolo a castigar las acciones incorrectas solo tras un ataque.
+El staking tiene un propósito similar al que solía tener la [minería](/developers/docs/consensus-mechanisms/pow/mining/), pero es diferente en muchos aspectos. La minería requería grandes gastos iniciales en forma de hardware potente y consumo de energía, lo que resultaba en economías de escala y promovía la centralización. La minería tampoco venía con ningún requisito de bloquear activos como colateral, lo que limitaba la capacidad del protocolo para castigar a los malos actores después de un ataque.
 
-La transición de Ethereum a la prueba de participación hace que la red sea significativamente más segura y descentralizada en comparación con la prueba de trabajo. Cuantas más personas participan en la red, más descentralizada y menos segura frente a ataques se vuelve.
+La transición a la prueba de participación hizo que Ethereum fuera significativamente más seguro y descentralizado en comparación con la prueba de trabajo. Cuantas más personas participen en la red, más descentralizada y segura contra ataques se vuelve.
+
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Si está interesado en convertirse en validador y ayudar a asegurar Ethereum, [aprenda más sobre la participación](/staking/).
+  Si estás interesado en convertirte en validador y ayudar a proteger Ethereum, [aprende más sobre el staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-### Preparándose para el sharding {#setting-up-for-sharding}
+### Preparación para la fragmentación (sharding) {#setting-up-for-sharding}
 
-Al producirse la fusión entre la cadena de baliza y la red principal de Ethereum, la comunidad de Ethereum comenzó a interesarse por la escalabilidad de la red.
+Desde que la cadena de balizas se fusionó con la red principal de Ethereum original, la comunidad de Ethereum comenzó a buscar formas de escalar la red.
 
-La prueba de participación ofrece las ventajas de contar con un registro de todos los productores de bloques aprobados en cualquier período de tiempo, todos ellos con ETH en participación. Este registro establece el escenario para la posibilidad de «dividir y vencer», pero determina de manera precisa la derivación de responsabilidades de la red.
+La prueba de participación tiene la ventaja de contar con un registro de todos los productores de bloques aprobados en un momento dado, cada uno con ETH en participación. Este registro prepara el escenario para la capacidad de "divide y vencerás", pero dividiendo de manera confiable las responsabilidades específicas de la red.
 
-Esta responsabilidad se diferencia de la responsabilidad de la prueba de trabajo, en donde los mineros no tenían obligaciones con la red, quienes podían detener la minería y desactivar el software del nodo permanentemente sin que esto tuviera repercusiones. Tampoco existía un registro de quién proponía los bloques, por lo que no había forma de dividir apropiadamente las responsabilidades de la red.
+Esta responsabilidad contrasta con la prueba de trabajo, donde los mineros no tienen ninguna obligación con la red y podrían dejar de minar y apagar el software de su nodo permanentemente en un instante sin repercusiones. Tampoco hay un registro de proponentes de bloques conocidos ni una forma confiable de dividir las responsabilidades de la red de manera segura.
 
-[Más sobre sharding](/roadmap/danksharding/)
+[Más sobre la fragmentación](/roadmap/danksharding/)
 
-## Relación entre actualizaciones {#relationship-between-upgrades}
+## Relación entre las actualizaciones {#relationship-between-upgrades}
 
-Las actualizaciones de Ethereum están interrelacionadas de alguna manera. Por tanto y a modo de recapitulación, veamos cómo la cadena de baliza influye en otras actualizaciones.
+Todas las actualizaciones de Ethereum están algo interrelacionadas. Así que recapitulemos cómo la cadena de balizas afecta a las otras actualizaciones.
 
-### Beacon Chain y The Merge {#merge-and-beacon-chain}
+### La cadena de balizas y La Fusión {#merge-and-beacon-chain}
 
-En sus comienzos, la cadena de baliza existía de manera independiente a la red principal de Ethereum, pero se fusionaron en 2022.
+Al principio, la cadena de balizas existía de forma separada de la red principal de Ethereum, pero se fusionaron en 2022.
 
 <ButtonLink href="/roadmap/merge/">
-  The Merge
+  La Fusión
 </ButtonLink>
 
-### Shards y la Beacon Chain {#shards-and-beacon-chain}
+### Fragmentos y la cadena de balizas {#shards-and-beacon-chain}
 
-La fragmentación solo podría implementarse en el ecosistema de Ethereum de manera segura a través del mecanismo de consenso de la prueba de participación. La cadena de baliza introdujo apuestas, que se «fusionaron» con la red principal, allanando el camino para la fragmentación y así contribuir a una mayor escalabilidad de Ethereum.
+La fragmentación solo puede entrar de forma segura en el ecosistema de Ethereum con un mecanismo de consenso de prueba de participación en funcionamiento. La cadena de balizas introdujo el staking, que se "fusionó" con la red principal (Mainnet), allanando el camino para que la fragmentación ayude a escalar aún más a Ethereum.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Cadenas shard
+  Cadenas de fragmentos
 </ButtonLink>
 
-## Seguir leyendo
+## Lecturas adicionales {#further-reading}
 
 - [Más sobre la arquitectura de nodos](/developers/docs/nodes-and-clients/node-architecture)
 - [Más sobre la prueba de participación](/developers/docs/consensus-mechanisms/pos)

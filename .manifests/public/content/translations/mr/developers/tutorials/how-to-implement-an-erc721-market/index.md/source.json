@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/how-to-implement-an-erc721-market/index.md",
+  "generatedAt": "2026-06-17T23:58:45.902Z",
+  "rootHash": "945aaaca3a83",
+  "tree": {
+    "contentHash": "0ab4ae507b03",
+    "anchorHash": "9f1a6661aa53",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "86435d55b995",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "992c9ced653d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0fe99876e92a"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c78b87979e0b"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "594fed4e3c85"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8e0f964acead"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7b7745f54d3b"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a906c94bce35"
+      },
+      "prose:0": {
+        "contentHash": "5eafb5777ef0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "monetization": {
+        "contentHash": "b28951f0b82e",
+        "anchorHash": "5108ae049fe4",
+        "labelHash": "4d07f6012a60",
+        "children": {
+          "_label": {
+            "contentHash": "4d07f6012a60",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "f9cc3c8f0e29",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7a629b3392c0",
+            "anchorHash": "7b80be017fae"
+          },
+          "prose:3": {
+            "contentHash": "102fd71dab20",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "8b596e2048ff",
+            "anchorHash": "1d9a4d8e7167"
+          },
+          "prose:4": {
+            "contentHash": "d0b7d485bd32",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "implementation": {
+        "contentHash": "8d5b54f8758e",
+        "anchorHash": "1ac4a7990c44",
+        "labelHash": "1cff7713912f",
+        "children": {
+          "_label": {
+            "contentHash": "1cff7713912f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "66ca707170ac",
+            "anchorHash": "f4eb0ff26028"
+          },
+          "prose:3": {
+            "contentHash": "35d721c8174a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "5198ac44cbcb",
+            "anchorHash": "1d9a4d8e7167"
+          },
+          "prose:4": {
+            "contentHash": "aa460fdf1ce0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "d944ea1dea00"
+          },
+          "prose:0": {
+            "contentHash": "fec5187ec960",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9f57459ea4bb"
+          },
+          "prose:5": {
+            "contentHash": "304b1013d1b0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "1f090d6c3bb9",
+            "anchorHash": "c9c031a28b10"
+          },
+          "prose:6": {
+            "contentHash": "b74b6da7a47d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:16": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "17b708e44b79"
+          },
+          "code-fence:18": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "54f208f280de"
+          },
+          "code-fence:20": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "578e4e780a57"
+          },
+          "code-fence:22": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7a6b1e589428"
+          },
+          "prose:1": {
+            "contentHash": "e3b46cc98e88",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "code-fence:6",
+          "prose:0",
+          "code-fence:8",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "code-fence:16",
+          "prose:0",
+          "code-fence:18",
+          "prose:0",
+          "code-fence:20",
+          "prose:0",
+          "code-fence:22",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "conclusion": {
+        "contentHash": "cc5084dd9933",
+        "anchorHash": "80a3b219c5c1",
+        "labelHash": "89db2ad881f2",
+        "children": {
+          "_label": {
+            "contentHash": "89db2ad881f2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b71986db26a2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2b9a16dc2789",
+            "anchorHash": "5eaf44d6c933"
+          },
+          "prose:2": {
+            "contentHash": "3619f1f20862",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "prose:0",
+      "monetization",
+      "implementation",
+      "conclusion"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

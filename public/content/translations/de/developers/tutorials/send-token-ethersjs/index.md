@@ -11,15 +11,15 @@ published: 2021-04-06
 
 ## Token senden mit ethers.js(5.0) {#send-token}
 
-### In diesem Tutorial lernen Sie Folgendes {#you-learn-about}
+### In diesem Tutorial lernen Sie Folgendes: {#you-learn-about}
 
 - ethers.js importieren
-- Token übertragen
-- Den Gaspreis entsprechend der Auslastung des Netzwerks festlegen
+- Token transferieren
+- Den Gaspreis entsprechend der Netzwerkauslastung festlegen
 
 ### Erste Schritte {#to-get-started}
 
-Um zu beginnen, müssen wir zunächst die Bibliothek ethers.js in unser JavaScript importieren.
+Um zu beginnen, müssen wir zunächst die ethers.js-Bibliothek in unser JavaScript importieren
 ethers.js(5.0) einbinden
 
 ### Installation {#install-ethersjs}
@@ -48,11 +48,11 @@ ES3(UMD) im Browser
 
 ### Parameter {#param}
 
-1. **`contract_address`**: Token-Vertragsadresse (die Vertragsadresse wird benötigt, wenn der Token, den Sie übertragen möchten, nicht Ether ist)
+1. **`contract_address`**: Token-Vertragsadresse (die Vertragsadresse wird benötigt, wenn der Token, den Sie transferieren möchten, nicht Ether ist)
 2. **`send_token_amount`**: Der Betrag, den Sie an den Empfänger senden möchten
 3. **`to_address`**: Die Adresse des Empfängers
 4. **`send_account`**: Die Adresse des Senders
-5. **`private_key`**: Private-Key des Senders, um die Transaktion zu signieren und die Token tatsächlich zu übertragen
+5. **`private_key`**: Privater Schlüssel des Senders, um die Transaktion zu signieren und die Token tatsächlich zu transferieren
 
 ## Hinweis {#notice}
 
@@ -60,11 +60,11 @@ ES3(UMD) im Browser
 
 ## Sendevorgang {#procedure}
 
-### 1. Mit dem Netzwerk verbinden (Testnet) {#connect-to-network}
+### 1. Mit dem Netzwerk (Testnetz) verbinden {#connect-to-network}
 
 #### Provider festlegen (Infura) {#set-provider}
 
-Mit dem Ropsten-Testnet verbinden
+Mit dem Ropsten-Testnetz verbinden
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
@@ -85,7 +85,7 @@ let walletSigner = wallet.connect(window.ethersProvider)
 ### 4. Aktuellen Gaspreis abrufen {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // gasPrice
+window.ethersProvider.getGasPrice() // Gaspreis
 ```
 
 ### 5. Transaktion definieren {#define-transaction}
@@ -113,7 +113,7 @@ const tx = {
 }
 ```
 
-### 6. Übertragen {#transfer}
+### 6. Transfer {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -147,7 +147,7 @@ send_token(
 
 ### Erfolg! {#success}
 
-![Bild einer erfolgreich durchgeführten Transaktion](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -167,18 +167,18 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // allgemeiner Token-Versand
+      // Allgemeiner Token-Versand
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // Wie viele Tokens?
+      // Wie viele Token?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // Tokens senden
+      // Token senden
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
         alert("sent token")

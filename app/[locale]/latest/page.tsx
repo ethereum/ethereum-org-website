@@ -7,7 +7,7 @@ import {
 
 import type { Lang, PageParams, RSSItem } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -177,7 +177,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Section>
 
           <Section className="px-4 md:px-8">
-            <FeedbackCard />
+            <ContentFeedback />
           </Section>
         </MainArticle>
       </I18nProvider>

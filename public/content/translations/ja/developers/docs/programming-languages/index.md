@@ -1,32 +1,31 @@
 ---
 title: "プログラミング言語"
-description: "JavaScript、Python、Go、Rustなど、さまざまなプログラミング言語のイーサリアム開発リソースを発見する。"
+description: "JavaScript、Python、Go、Rustなど、さまざまなプログラミング言語向けのイーサリアム開発リソースを見つけましょう。"
 lang: ja
 ---
 
-イーサリアム上で構築を行うためには、デベロッパーが[スマートコントラクト](/developers/docs/smart-contracts/)を記述しなければならないというのは、よくある誤解です。 これは間違いです。
-イーサリアムのネットワークとコミュニティの素晴らしさの一つは、ほぼどんなプログラミング言語であっても[参加](/community/)できることにあります。
+イーサリアム上で開発を行うには、開発者が[スマートコントラクト](/developers/docs/smart-contracts/)を記述しなければならないというのはよくある誤解です。これは事実ではありません。
+イーサリアムネットワークとコミュニティの素晴らしい点の1つは、ほぼすべてのプログラミング言語で[参加](/community/)できることです。
 
-イーサリアムとそのコミュニティは、オープンソースを採用しています。 クライアントの実装、API、開発フレームワーク、テストツールなどのコミュニティプロジェクトは、さまざまな言語で記述されています。
+イーサリアムとそのコミュニティはオープンソースを推奨しています。クライアント実装、API、開発フレームワーク、テストツールなどのコミュニティプロジェクトを、多種多様な言語で見つけることができます。
 
 ## 言語の選択 {#data}
 
-以下から使用したい開発言語を選択して、プロジェクト、リソース、仮想コミュニティを見つけられます。
+お好みのプログラミング言語を選択して、プロジェクト、リソース、バーチャルコミュニティを見つけてください。
 
-- [Dartデベロッパーのためのイーサリアム](/developers/docs/programming-languages/dart/)
-- [Delphiデベロッパーのためのイーサリアム](/developers/docs/programming-languages/delphi/)
-- [.NETデベロッパーのためのイーサリアム](/developers/docs/programming-languages/dot-net/)
-- [Elixirデベロッパーのためのイーサリアム](/developers/docs/programming-languages/elixir/)
-- [Goデベロッパーのためのイーサリアム](/developers/docs/programming-languages/golang/)
-- [Javaデベロッパーのためのイーサリアム](/developers/docs/programming-languages/java/)
-- [JavaScriptデベロッパーのためのイーサリアム](/developers/docs/programming-languages/javascript/)
-- [Pythonデベロッパーのためのイーサリアム](/developers/docs/programming-languages/python/)
-- [Rubyデベロッパーのためのイーサリアム](/developers/docs/programming-languages/ruby/)
-- [Rustデベロッパーのためのイーサリアム](/developers/docs/programming-languages/rust/)
+- [Dart開発者向けのイーサリアム](/developers/docs/programming-languages/dart/)
+- [Delphi開発者向けのイーサリアム](/developers/docs/programming-languages/delphi/)
+- [.NET開発者向けのイーサリアム](/developers/docs/programming-languages/dot-net/)
+- [Elixir開発者向けのイーサリアム](/developers/docs/programming-languages/elixir/)
+- [Go開発者向けのイーサリアム](/developers/docs/programming-languages/golang/)
+- [Java開発者向けのイーサリアム](/developers/docs/programming-languages/java/)
+- [JavaScript開発者向けのイーサリアム](/developers/docs/programming-languages/javascript/)
+- [Python開発者向けのイーサリアム](/developers/docs/programming-languages/python/)
+- [Ruby開発者向けのイーサリアム](/developers/docs/programming-languages/ruby/)
+- [Rust開発者向けのイーサリアム](/developers/docs/programming-languages/rust/)
 
-### 使いたい言語がサポートされていなかった場合 {#other-lang}
+### 使用したい言語がサポートされていない場合 {#other-lang}
 
-追加のプログラミング言語のリソースやバーチャルコミュニティへのリンクをご希望の場合は、[issueをオープンする](https://github.com/ethereum/ethereum-org-website/issues/new/choose)ことで、新しいページをリクエストできます。
+追加のプログラミング言語のリソースへのリンクやバーチャルコミュニティの紹介をご希望の場合は、[Issueを作成](https://github.com/ethereum/ethereum-org-website/issues/new/choose)して新しいページをリクエストできます。
 
-現在サポートされていない言語でブロックチェーンのインタフェースのコードを記述したい場合は、
-[JSON-RPCインターフェース](/developers/docs/apis/json-rpc/)を使用してイーサリアムネットワークに接続できます。 このインターフェースは、TCP/IPを使用できるすべての言語で利用可能です。
+現在サポートされていない言語を使用してブロックチェーンとやり取りするコードを書きたい場合は、[JSON-RPCインターフェース](/developers/docs/apis/json-rpc/)を使用してイーサリアムネットワークに接続できます。TCP/IPを使用できるプログラミング言語であれば、このインターフェースを使用できます。

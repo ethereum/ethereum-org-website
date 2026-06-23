@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-18T00:48:07.870Z",
+  "englishManifestHash": "e102cab4aec4",
+  "placeholderOrder": [
+    "LINK-bb0dfc",
+    "LINK-8afcfc",
+    "LINK-ada27d",
+    "LINK-4f0cae",
+    "COMPONENT-f8aa1a",
+    "LINK-02dd94",
+    "LINK-7f43c7",
+    "LINK-e278ab",
+    "LINK-de4853",
+    "LINK-7f43c7",
+    "LINK-bf2a05",
+    "LINK-d7edfc",
+    "LINK-4e330f",
+    "CODE-4afb86",
+    "LINK-107b5f",
+    "LINK-98464c",
+    "LINK-46e500",
+    "LINK-47943c",
+    "LINK-6c4cfe",
+    "LINK-04dbd5",
+    "LINK-d50956",
+    "LINK-02dd94",
+    "LINK-ce8c89",
+    "LINK-6c4cfe",
+    "LINK-62c5ad"
+  ],
+  "placeholderMap": {
+    "COMPONENT-f8aa1a": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/future-proofing",
+        "eventName": "clicked can quantum computers steal my ETH today?"
+      }
+    },
+    "CODE-4afb86": {
+      "type": "inline-code",
+      "values": {
+        "content": "SELFDESTRUCT"
+      }
+    },
+    "LINK-bb0dfc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#cryptography"
+      }
+    },
+    "LINK-8afcfc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validator"
+      }
+    },
+    "LINK-ada27d": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#block"
+      }
+    },
+    "LINK-4f0cae": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/#what-is-kzg"
+      }
+    },
+    "LINK-02dd94": {
+      "type": "link",
+      "values": {
+        "url": "https://pq.ethereum.org"
+      }
+    },
+    "LINK-7f43c7": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/account-abstraction/"
+      }
+    },
+    "LINK-e278ab": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/future-proofing/quantum-resistance/"
+      }
+    },
+    "LINK-de4853": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/"
+      }
+    },
+    "LINK-bf2a05": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/"
+      }
+    },
+    "LINK-d7edfc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#rollups"
+      }
+    },
+    "LINK-4e330f": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/dencun/"
+      }
+    },
+    "LINK-107b5f": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#london"
+      }
+    },
+    "LINK-98464c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#gas"
+      }
+    },
+    "LINK-46e500": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/glamsterdam/"
+      }
+    },
+    "LINK-47943c": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/verkle-trees/"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-04dbd5": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/future-proofing/quantum-resistance/"
+      }
+    },
+    "LINK-d50956": {
+      "type": "link",
+      "values": {
+        "url": "https://strawmap.org/"
+      }
+    },
+    "LINK-ce8c89": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-62c5ad": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:48:07.870Z",
+      "status": "success"
+    }
+  }
+}

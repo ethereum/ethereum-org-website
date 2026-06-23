@@ -1,0 +1,280 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-06-19T22:48:58.694Z",
+  "englishManifestHash": "109f85fbefc7",
+  "placeholderOrder": [
+    "IMAGE-0b2f9b",
+    "LINK-c8e28e",
+    "LINK-f4c7bc",
+    "LINK-e40666",
+    "LINK-500416",
+    "IMAGE-e7aeed",
+    "IMAGE-c54440",
+    "IMAGE-a39d3f",
+    "CODE-9aee6b",
+    "CODE-5bf552",
+    "CODE-4e0a72",
+    "CODE-9aee6b",
+    "CODE-e7a027",
+    "CODE-d84bdb",
+    "CODE-5b7e6b",
+    "LINK-6637f8",
+    "CODE-a20b52",
+    "CODE-a56145",
+    "CODEBLOCK-a05393",
+    "LINK-c84565",
+    "CODE-a4ec13",
+    "CODEBLOCK-fc19e7",
+    "CODE-80d8bd",
+    "LINK-8a1cf8",
+    "LINK-6f7ab3",
+    "LINK-dca13e",
+    "CODEBLOCK-843a33",
+    "CODEBLOCK-a323be",
+    "CODEBLOCK-05b10e",
+    "CODEBLOCK-402497",
+    "CODEBLOCK-a323be",
+    "CODE-e727e4",
+    "CODE-2a9751",
+    "CODEBLOCK-3a1fbf",
+    "LINK-bd6cbf",
+    "CODEBLOCK-f13ac9",
+    "CODEBLOCK-eb0626",
+    "LINK-56d9e1",
+    "LINK-21d2a8",
+    "LINK-f4f753",
+    "LINK-3110ba",
+    "LINK-809a14"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-a05393": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fc19e7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-843a33": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a323be": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-05b10e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-402497": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3a1fbf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f13ac9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-eb0626": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-5bf552": {
+      "type": "inline-code",
+      "values": {
+        "content": "JSON-RPC"
+      }
+    },
+    "CODE-9aee6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "POST"
+      }
+    },
+    "CODE-4e0a72": {
+      "type": "inline-code",
+      "values": {
+        "content": "Content-Type: application/json"
+      }
+    },
+    "CODE-e7a027": {
+      "type": "inline-code",
+      "values": {
+        "content": "jsonrpc"
+      }
+    },
+    "CODE-d84bdb": {
+      "type": "inline-code",
+      "values": {
+        "content": "2.0"
+      }
+    },
+    "CODE-5b7e6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "method"
+      }
+    },
+    "CODE-a20b52": {
+      "type": "inline-code",
+      "values": {
+        "content": "params"
+      }
+    },
+    "CODE-a56145": {
+      "type": "inline-code",
+      "values": {
+        "content": "id"
+      }
+    },
+    "CODE-a4ec13": {
+      "type": "inline-code",
+      "values": {
+        "content": "https://eth-mainnet.alchemyapi.io/v2/**your-api-key"
+      }
+    },
+    "CODE-80d8bd": {
+      "type": "inline-code",
+      "values": {
+        "content": "“https://eth-mainnet.alchemyapi.io/v2/your-api-key\""
+      }
+    },
+    "CODE-e727e4": {
+      "type": "inline-code",
+      "values": {
+        "content": "index.js"
+      }
+    },
+    "CODE-2a9751": {
+      "type": "inline-code",
+      "values": {
+        "content": "demo"
+      }
+    },
+    "IMAGE-0b2f9b": {
+      "type": "image",
+      "values": {
+        "path": "./ethereum-alchemy.png"
+      }
+    },
+    "IMAGE-e7aeed": {
+      "type": "image",
+      "values": {
+        "path": "./alchemy-dashboard.png"
+      }
+    },
+    "IMAGE-c54440": {
+      "type": "image",
+      "values": {
+        "path": "./create-app.png"
+      }
+    },
+    "IMAGE-a39d3f": {
+      "type": "image",
+      "values": {
+        "path": "./pull-api-keys.gif"
+      }
+    },
+    "LINK-c8e28e": {
+      "type": "link",
+      "values": {
+        "url": "https://alchemyapi.io/"
+      }
+    },
+    "LINK-f4c7bc": {
+      "type": "link",
+      "values": {
+        "url": "https://auth.alchemy.com/"
+      }
+    },
+    "LINK-e40666": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemy.com/"
+      }
+    },
+    "LINK-500416": {
+      "type": "link",
+      "values": {
+        "url": "https://shapeshift.com/"
+      }
+    },
+    "LINK-6637f8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc"
+      }
+    },
+    "LINK-c84565": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-mainnet.alchemyapi.io/jsonrpc/demo"
+      }
+    },
+    "LINK-8a1cf8": {
+      "type": "link",
+      "values": {
+        "url": "https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs"
+      }
+    },
+    "LINK-6f7ab3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries"
+      }
+    },
+    "LINK-dca13e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/reference/api-overview"
+      }
+    },
+    "LINK-bd6cbf": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c"
+      }
+    },
+    "LINK-56d9e1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/hello-world-smart-contract"
+      }
+    },
+    "LINK-21d2a8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/tutorials/demo-app"
+      }
+    },
+    "LINK-f4f753": {
+      "type": "link",
+      "values": {
+        "url": "https://auth.alchemy.com/"
+      }
+    },
+    "LINK-3110ba": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/"
+      }
+    },
+    "LINK-809a14": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/AlchemyPlatform"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T22:48:58.694Z",
+      "status": "success"
+    }
+  }
+}

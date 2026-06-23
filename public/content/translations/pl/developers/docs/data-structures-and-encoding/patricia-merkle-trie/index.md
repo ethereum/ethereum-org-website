@@ -5,33 +5,33 @@ lang: pl
 sidebarDepth: 2
 ---
 
-Stan Ethereum (całość wszystkich kont, sald i inteligentnych kontraktów) jest zakodowany w specjalnej wersji struktury danych, znanej w informatyce jako drzewo Merkle. Struktura ta jest przydatna w wielu zastosowaniach w kryptografii, ponieważ tworzy weryfikowalną relację między wszystkimi pojedynczymi fragmentami danych splątanymi w drzewie, co skutkuje pojedynczą wartością **korzenia**, która może być użyta do udowodnienia różnych kwestii dotyczących danych.
+Stan [Ethereum](/) (ogół wszystkich kont, sald i inteligentnych kontraktów) jest zakodowany w specjalnej wersji struktury danych znanej ogólnie w informatyce jako drzewo Merklego. Struktura ta jest przydatna w wielu zastosowaniach w kryptografii, ponieważ tworzy weryfikowalną relację między wszystkimi pojedynczymi fragmentami danych powiązanymi w drzewie, co daje pojedynczą wartość **korzenia** (root), która może być użyta do udowodnienia informacji o danych.
 
-Struktura danych Ethereum to „zmodyfikowane drzewo Merkle-Patricia”, nazwane tak, ponieważ czerpie niektóre cechy z PATRICIA (ang. Practical Algorithm To Retrieve Information Coded in Alphanumeric) i ponieważ jest zaprojektowana do wydajnego odzyskiwania (ang. re**trie**val) danych, które składają się na stan Ethereum.
+Struktura danych Ethereum to „zmodyfikowane drzewo Merkle Patricia”, nazwane tak, ponieważ zapożycza niektóre cechy algorytmu PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric) i ponieważ jest zaprojektowana do wydajnego odzyskiwania (re**trie**val) danych elementów, które składają się na stan Ethereum.
 
-Drzewo Merkle-Patricia jest deterministyczne i weryfikowalne kryptograficznie: jedynym sposobem na wygenerowanie korzenia stanu jest obliczenie go z każdego pojedynczego elementu stanu, a identyczność dwóch stanów można łatwo udowodnić, porównując hasz korzenia i hasze, które do niego doprowadziły (_dowód Merklego_). I odwrotnie, nie ma sposobu na stworzenie dwóch różnych stanów o tym samym haszu korzenia, a każda próba modyfikacji stanu za pomocą różnych wartości spowoduje powstanie innego haszu korzenia stanu. Teoretycznie struktura ta zapewnia „święty Graal” wydajności `O(log(n))` dla operacji wstawiania, wyszukiwania i usuwania.
+Drzewo Merkle Patricia jest deterministyczne i kryptograficznie weryfikowalne: jedynym sposobem na wygenerowanie korzenia stanu jest obliczenie go z każdego pojedynczego fragmentu stanu, a to, że dwa stany są identyczne, można łatwo udowodnić, porównując hash korzenia i hashe, które do niego doprowadziły (_dowód Merklego_). Z drugiej strony, nie ma możliwości utworzenia dwóch różnych stanów z tym samym hashem korzenia, a każda próba modyfikacji stanu za pomocą innych wartości spowoduje powstanie innego hasha korzenia stanu. Teoretycznie struktura ta zapewnia „świętego Graala” wydajności `O(log(n))` dla wstawiania, wyszukiwania i usuwania.
 
-W niedalekiej przyszłości Ethereum planuje migrację do struktury [drzewa Verkle](/roadmap/verkle-trees), co otworzy wiele nowych możliwości przyszłych ulepszeń protokołu.
+W niedalekiej przyszłości Ethereum planuje migrację do struktury [drzewa Verkle](/roadmap/verkle-trees), co otworzy wiele nowych możliwości dla przyszłych ulepszeń protokołu.
 
 ## Wymagania wstępne {#prerequisites}
 
-Aby lepiej zrozumieć tę stronę, pomocna będzie podstawowa znajomość [haszy](https://en.wikipedia.org/wiki/Hash_function), [drzew Merklego](https://en.wikipedia.org/wiki/Merkle_tree), [drzew prefiksowych (tries)](https://en.wikipedia.org/wiki/Trie) i [serializacji](https://en.wikipedia.org/wiki/Serialization). Ten artykuł rozpoczyna się od opisu podstawowego [drzewa pozycyjnego (radix)](https://en.wikipedia.org/wiki/Radix_tree), a następnie stopniowo wprowadza modyfikacje niezbędne dla bardziej zoptymalizowanej struktury danych Ethereum.
+Aby lepiej zrozumieć tę stronę, pomocna będzie podstawowa wiedza na temat [hashy](https://en.wikipedia.org/wiki/Hash_function), [drzew Merklego](https://en.wikipedia.org/wiki/Merkle_tree), [drzew trie](https://en.wikipedia.org/wiki/Trie) i [serializacji](https://en.wikipedia.org/wiki/Serialization). Ten artykuł zaczyna się od opisu podstawowego [drzewa radix](https://en.wikipedia.org/wiki/Radix_tree), a następnie stopniowo wprowadza modyfikacje niezbędne dla bardziej zoptymalizowanej struktury danych Ethereum.
 
-## Podstawowe drzewa pozycyjne {#basic-radix-tries}
+## Podstawowe drzewa radix {#basic-radix-tries}
 
-W podstawowym drzewie pozycyjnym każdy węzeł wygląda następująco:
+W podstawowym drzewie radix każdy węzeł wygląda następująco:
 
 ```
-    [i_0, i_1 ... i_n, wartość]
+[i_0, i_1 ... i_n, value]
 ```
 
-Gdzie `i_0 ... i_n` reprezentują symbole alfabetu (często binarnego lub szesnastkowego), `wartość` jest wartością końcową w węźle, a wartości w `i_0, i_1 ... i_n` slotach są albo `NULL`, albo wskaźnikami (w naszym przypadku haszami) do innych węzłów. Tworzy to podstawowy magazyn `(klucz, wartość)`.
+Gdzie `i_0 ... i_n` reprezentują symbole alfabetu (często binarne lub szesnastkowe), `value` jest wartością końcową w węźle, a wartości w slotach `i_0, i_1 ... i_n` to albo `NULL`, albo wskaźniki do (w naszym przypadku hashe) innych węzłów. Tworzy to podstawowy magazyn `(key, value)`.
 
-Załóżmy, że chcesz użyć struktury danych drzewa pozycyjnego do utrwalenia porządku w zbiorze par klucz-wartość. Aby znaleźć wartość aktualnie przypisaną do klucza `dog` w drzewie, należy najpierw przekonwertować `dog` na litery alfabetu (co daje `64 6f 67`), a następnie zejść w dół drzewa, podążając tą ścieżką, aż do znalezienia wartości. Oznacza to, że zaczynasz od wyszukania haszu korzenia w płaskiej bazie danych klucz/wartość, aby znaleźć węzeł główny drzewa. Jest on reprezentowany jako tablica kluczy wskazujących na inne węzły. Użyjesz wartości o indeksie `6` jako klucza i wyszukasz ją w płaskiej bazie danych klucz/wartość, aby uzyskać węzeł o jeden poziom niżej. Następnie wybierz indeks `4`, aby wyszukać następną wartość, potem indeks `6` i tak dalej, aż po przejściu ścieżki: `korzeń -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, odszukasz wartość węzła i zwrócisz wynik.
+Załóżmy, że chcesz użyć struktury danych drzewa radix do zachowania porządku w zbiorze par klucz-wartość. Aby znaleźć wartość aktualnie zmapowaną do klucza `dog` w drzewie trie, najpierw przekonwertowałbyś `dog` na litery alfabetu (otrzymując `64 6f 67`), a następnie schodziłbyś w dół drzewa podążając tą ścieżką, aż znajdziesz wartość. Oznacza to, że zaczynasz od wyszukania hasha korzenia w płaskiej bazie danych klucz/wartość, aby znaleźć węzeł główny drzewa trie. Jest on reprezentowany jako tablica kluczy wskazujących na inne węzły. Użyłbyś wartości pod indeksem `6` jako klucza i wyszukałbyś ją w płaskiej bazie danych klucz/wartość, aby uzyskać węzeł o jeden poziom niżej. Następnie wybrałbyś indeks `4`, aby wyszukać następną wartość, potem indeks `6` i tak dalej, aż po przejściu ścieżki: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, sprawdziłbyś wartość węzła i zwrócił wynik.
 
-Istnieje różnica między wyszukiwaniem czegoś w „drzewie” a podstawową płaską „bazą danych” klucz/wartość. Oba definiują układy klucz/wartość, ale podstawowa baza danych może wykonać tradycyjne 1-etapowe wyszukiwanie klucza. Wyszukanie klucza w drzewie wymaga wielokrotnego wyszukiwania w podstawowej bazie danych, aby dotrzeć do ostatecznej wartości opisanej powyżej. Aby wyeliminować niejednoznaczność, będziemy nazywać to drugie `ścieżką`.
+Istnieje różnica między wyszukiwaniem czegoś w „drzewie trie” a w bazowej płaskiej „bazie danych” klucz/wartość. Obie definiują układy klucz/wartość, ale bazowa baza danych może wykonać tradycyjne, jednoetapowe wyszukiwanie klucza. Wyszukiwanie klucza w drzewie trie wymaga wielu wyszukiwań w bazowej bazie danych, aby dotrzeć do ostatecznej wartości opisanej powyżej. Nazwijmy to drugie `path`, aby wyeliminować niejednoznaczność.
 
-Operacje aktualizacji i usuwania dla drzew pozycyjnych można zdefiniować w następujący sposób:
+Operacje aktualizacji i usuwania dla drzew radix można zdefiniować następująco:
 
 ```python
     def update(node_hash, path, value):
@@ -64,45 +64,45 @@ Operacje aktualizacji i usuwania dla drzew pozycyjnych można zdefiniować w nas
                 return hash(newnode)
 ```
 
-Drzewo pozycyjne „Merkle” jest zbudowane przez łączenie węzłów przy użyciu deterministycznie generowanych kryptograficznych skrótów haszujących. To adresowanie treści (w bazie danych klucz/wartość `klucz == keccak256(rlp(wartość))`) zapewnia kryptograficzną gwarancję integralności przechowywanych danych. Jeśli hasz korzenia danego drzewa jest publicznie znany, każdy, kto ma dostęp do danych bazowych liści, może skonstruować dowód, że drzewo zawiera daną wartość w określonej ścieżce, podając hasze każdego węzła łączącego określoną wartość z korzeniem drzewa.
+Drzewo radix „Merklego” jest budowane poprzez łączenie węzłów za pomocą deterministycznie generowanych kryptograficznych skrótów (hashy). To adresowanie treścią (w bazie danych klucz/wartość `key == keccak256(rlp(value))`) zapewnia kryptograficzną gwarancję integralności przechowywanych danych. Jeśli hash korzenia danego drzewa trie jest publicznie znany, to każdy, kto ma dostęp do bazowych danych liści, może skonstruować dowód, że drzewo trie zawiera daną wartość na określonej ścieżce, dostarczając hashe każdego węzła łączącego określoną wartość z korzeniem drzewa.
 
-Atakujący nie może przedstawić dowodu na parę `(ścieżka, wartość)`, która nie istnieje, ponieważ hasz korzenia jest ostatecznie oparty na wszystkich haszach znajdujących się pod nim. Każda modyfikacja bazowa zmieniłaby hasz korzenia. Można myśleć o haszu jako o skompresowanej reprezentacji informacji strukturalnych o danych, zabezpieczonej przez ochronę przeciwobrazu funkcji haszującej.
+Niemożliwe jest, aby atakujący dostarczył dowód na istnienie pary `(path, value)`, która nie istnieje, ponieważ hash korzenia ostatecznie opiera się na wszystkich hashach poniżej niego. Jakakolwiek modyfikacja u podstaw zmieniłaby hash korzenia. Możesz myśleć o hashu jako o skompresowanej reprezentacji informacji strukturalnych o danych, zabezpieczonej przez ochronę przed znalezieniem przeciwobrazu funkcji haszującej.
 
-Będziemy odnosić się do jednostki atomowej drzewa pozycyjnego (np. pojedynczego znaku szesnastkowego lub 4-bitowej liczby binarnej) jako „półbajtu”. Podczas przechodzenia ścieżki po jednym półbajcie na raz, jak opisano powyżej, węzły mogą odnosić się maksymalnie do 16 potomków, ale zawierają element `wartość`. Dlatego reprezentujemy je jako tablicę o długości 17. Nazywamy te 17-elementowe tablice „węzłami gałęzi”.
+Będziemy odnosić się do atomowej jednostki drzewa radix (np. pojedynczego znaku szesnastkowego lub 4-bitowej liczby binarnej) jako „półbajtu” (nibble). Podczas przemierzania ścieżki po jednym półbajcie na raz, jak opisano powyżej, węzły mogą maksymalnie odnosić się do 16 dzieci, ale zawierają element `value`. Dlatego reprezentujemy je jako tablicę o długości 17. Nazywamy te 17-elementowe tablice „węzłami gałęzi” (branch nodes).
 
 ## Drzewo Merkle Patricia {#merkle-patricia-trees}
 
-Drzewa pozycyjne mają jedno poważne ograniczenie: są nieefektywne. Jeśli chcesz przechować jedno powiązanie `(ścieżka, wartość)`, gdzie ścieżka, podobnie jak w Ethereum, ma 64 znaki długości (liczba półbajtów w `bytes32`), będziemy potrzebować ponad kilobajt dodatkowej przestrzeni na przechowanie jednego poziomu na znak, a każde wyszukiwanie lub usuwanie zajmie pełne 64 kroki. Drzewo Patricia wprowadzone w dalszej części rozwiązuje ten problem.
+Drzewa radix mają jedno główne ograniczenie: są nieefektywne. Jeśli chcesz przechować jedno powiązanie `(path, value)`, gdzie ścieżka, tak jak w Ethereum, ma 64 znaki długości (liczba półbajtów w `bytes32`), będziemy potrzebować ponad kilobajta dodatkowego miejsca na przechowanie jednego poziomu na znak, a każde wyszukiwanie lub usunięcie zajmie pełne 64 kroki. Drzewo Patricia wprowadzone poniżej rozwiązuje ten problem.
 
 ### Optymalizacja {#optimization}
 
-Węzeł w drzewie Merkle Patricia jest jednym z następujących:
+Węzeł w drzewie Merkle Patricia to jeden z poniższych:
 
-1. `NULL` (reprezentowany jako pusty ciąg znaków)
-2. `gałąź` 17-elementowy węzeł `[ v0 ...` `v15, vt ]`
-3. `liść` 2-elementowy węzeł `[ zakodowanaŚcieżka, wartość ]`
-4. `rozszerzenie` 2-elementowy węzeł `[ zakodowanaŚcieżka, klucz ]`
+1.  `NULL` (reprezentowany jako pusty ciąg znaków)
+2.  `branch` 17-elementowy węzeł `[ v0 ... v15, vt ]`
+3.  `leaf` 2-elementowy węzeł `[ encodedPath, value ]`
+4.  `extension` 2-elementowy węzeł `[ encodedPath, key ]`
 
-Przy ścieżkach o długości 64 znaków nieuniknione jest, że po przejściu przez kilka pierwszych warstw drzewa dotrzemy do węzła, w którym przez przynajmniej część drogi w dół nie istnieje żadna rozbieżna ścieżka. Aby uniknąć konieczności tworzenia do 15 rzadkich węzłów `NULL` wzdłuż ścieżki, skracamy drogę, tworząc węzeł `rozszerzenia` w formie `[ zakodowanaŚcieżka, klucz ]`, gdzie `zakodowanaŚcieżka` zawiera „częściową ścieżkę” do pominięcia (używając kompaktowego kodowania opisanego poniżej), a `klucz` służy do następnego wyszukiwania w bazie danych.
+Przy 64-znakowych ścieżkach jest nieuniknione, że po przejściu pierwszych kilku warstw drzewa trie dotrzesz do węzła, w którym nie istnieje żadna rozbieżna ścieżka przez co najmniej część drogi w dół. Aby uniknąć konieczności tworzenia do 15 rzadkich węzłów `NULL` wzdłuż ścieżki, skracamy zejście, konfigurując węzeł `extension` w postaci `[ encodedPath, key ]`, gdzie `encodedPath` zawiera „częściową ścieżkę” do przeskoczenia (przy użyciu kompaktowego kodowania opisanego poniżej), a `key` służy do następnego wyszukiwania w bazie danych.
 
-W przypadku węzła `liścia`, który może być oznaczony flagą w pierwszym półbajcie `zakodowanejŚcieżki`, ścieżka koduje wszystkie fragmenty ścieżek poprzednich węzłów i możemy bezpośrednio wyszukać `wartość`.
+W przypadku węzła `leaf`, który może być oznaczony flagą w pierwszym półbajcie `encodedPath`, ścieżka koduje wszystkie fragmenty ścieżki poprzedniego węzła i możemy bezpośrednio wyszukać `value`.
 
 Powyższa optymalizacja wprowadza jednak niejednoznaczność.
 
-Podczas przechodzenia ścieżek w półbajtach możemy skończyć z nieparzystą liczbą półbajtów do przejścia, ale ponieważ wszystkie dane są przechowywane w formacie `bajtów`. Nie jest możliwe rozróżnienie, na przykład, półbajtu `1` od półbajtów `01` (oba muszą być przechowywane jako `<01>`). Aby określić nieparzystą długość, częściowa ścieżka jest poprzedzona flagą.
+Przemierzając ścieżki w półbajtach, możemy skończyć z nieparzystą liczbą półbajtów do przejścia, ale ponieważ wszystkie dane są przechowywane w formacie `bytes`, nie jest możliwe odróżnienie na przykład półbajtu `1` od półbajtów `01` (oba muszą być przechowywane jako `<01>`). Aby określić nieparzystą długość, częściowa ścieżka jest poprzedzona flagą.
 
 ### Specyfikacja: Kompaktowe kodowanie sekwencji szesnastkowej z opcjonalnym terminatorem {#specification}
 
-Oznaczanie zarówno _nieparzystej vs. parzystej pozostałej długości częściowej ścieżki_, jak i _węzła liścia vs. rozszerzenia_, jak opisano powyżej, znajduje się w pierwszym półbajcie częściowej ścieżki dowolnego 2-elementowego węzła. Skutkują one następującymi:
+Oznaczanie flagami zarówno _nieparzystej vs. parzystej pozostałej długości częściowej ścieżki_, jak i _węzła liścia vs. węzła rozszerzenia_, jak opisano powyżej, znajduje się w pierwszym półbajcie częściowej ścieżki dowolnego 2-elementowego węzła. Skutkuje to następującym układem:
 
-| znak hex | bity | częściowy typ węzła                | długość ścieżki |
-| -------- | ---- | ---------------------------------- | --------------- |
-| 0        | 0000 | rozszerzenie                       | parzysta        |
-| 1        | 0001 | rozszerzenie                       | nieparzysta     |
-| 2        | 0010 | kończący (liść) | parzysta        |
-| 3        | 0011 | kończący (liść) | nieparzysta     |
+| znak hex | bity | typ węzła częściowego | długość ścieżki |
+| -------- | ---- | --------------------- | --------------- |
+| 0        | 0000 | rozszerzenie          | parzysta        |
+| 1        | 0001 | rozszerzenie          | nieparzysta     |
+| 2        | 0010 | kończący (liść)       | parzysta        |
+| 3        | 0011 | kończący (liść)       | nieparzysta     |
 
-Dla parzystej pozostałej długości ścieżki (`0` lub `2`) zawsze następuje kolejny `0` „dopełniający” półbajt.
+W przypadku parzystej pozostałej długości ścieżki (`0` lub `2`), zawsze będzie po niej następował kolejny półbajt „wypełniający” (padding) `0`.
 
 ```python
     def compact_encode(hexarray):
@@ -115,7 +115,7 @@ Dla parzystej pozostałej długości ścieżki (`0` lub `2`) zawsze następuje k
             hexarray = [flags] + hexarray
         else:
             hexarray = [flags] + [0] + hexarray
-        # hexarray now has an even length whose first nibble is the flags.
+        # hexarray ma teraz parzystą długość, a jego pierwszy półbajt to flagi.
         o = ""
         for i in range(0, len(hexarray), 2):
             o += chr(16 * hexarray[i] + hexarray[i + 1])
@@ -163,50 +163,50 @@ Oto rozszerzony kod do pobierania węzła w drzewie Merkle Patricia:
         return get_helper(node_hash, path2)
 ```
 
-### Przykładowe drzewo {#example-trie}
+### Przykładowe drzewo trie {#example-trie}
 
-Załóżmy, że chcemy mieć drzewo zawierające cztery pary ścieżka/wartość `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
+Załóżmy, że chcemy mieć drzewo trie zawierające cztery pary ścieżka/wartość `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
-Najpierw konwertujemy zarówno ścieżki, jak i wartości na `bajty`. Poniżej, rzeczywiste reprezentacje bajtowe dla _ścieżek_ są oznaczone przez `<>`, chociaż _wartości_ są nadal pokazane jako ciągi znaków, oznaczone przez `''`, dla łatwiejszego zrozumienia (one również w rzeczywistości byłyby `bajtami`):
+Najpierw konwertujemy zarówno ścieżki, jak i wartości na `bytes`. Poniżej rzeczywiste reprezentacje bajtowe dla _ścieżek_ są oznaczone przez `<>`, chociaż _wartości_ są nadal pokazywane jako ciągi znaków, oznaczone przez `''`, dla łatwiejszego zrozumienia (one również byłyby w rzeczywistości `bytes`):
 
 ```
-    <64 6f> : 'verb'
+<64 6f> : 'verb'
     <64 6f 67> : 'puppy'
     <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
-Teraz budujemy takie drzewo z następującymi parami klucz/wartość w podstawowej bazie danych:
+Teraz budujemy takie drzewo trie z następującymi parami klucz/wartość w bazowej bazie danych:
 
 ```
-    rootHash: [ <16>, hashA ]
+rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
     hashB:    [ <00 6f>, hashC ]
     hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
     hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Gdy jeden węzeł jest przywoływany wewnątrz innego węzła, to, co jest dołączane, to `keccak256(rlp.encode(node))`, jeśli `len(rlp.encode(node)) >= 32`, w przeciwnym razie `node`, gdzie `rlp.encode` to funkcja kodowania [RLP](/developers/docs/data-structures-and-encoding/rlp).
+Kiedy jeden węzeł jest odwoływany wewnątrz innego węzła, to co jest dołączane to `keccak256(rlp.encode(node))`, jeśli `len(rlp.encode(node)) >= 32`, w przeciwnym razie `node`, gdzie `rlp.encode` jest funkcją kodującą [RLP](/developers/docs/data-structures-and-encoding/rlp).
 
-Należy pamiętać, że podczas aktualizacji drzewa należy zapisać parę klucz/wartość `(keccak256(x), x)` w trwałej tabeli przeglądowej, _jeśli_ nowo utworzony węzeł ma długość >= 32. Jeśli jednak węzeł jest krótszy, nie trzeba niczego przechowywać, ponieważ funkcja f(x) = x jest odwracalna.
+Zauważ, że podczas aktualizacji drzewa trie należy zapisać parę klucz/wartość `(keccak256(x), x)` w trwałej tabeli wyszukiwania, _jeśli_ nowo utworzony węzeł ma długość >= 32. Jeśli jednak węzeł jest krótszy, nie trzeba niczego zapisywać, ponieważ funkcja f(x) = x jest odwracalna.
 
-## Drzewa w Ethereum {#tries-in-ethereum}
+## Drzewa trie w Ethereum {#tries-in-ethereum}
 
-Wszystkie drzewa Merklego w warstwie wykonawczej Ethereum wykorzystują drzewo Merkle Patricia.
+Wszystkie drzewa Merklego w warstwie wykonawczej Ethereum używają drzewa Merkle Patricia.
 
-Z nagłówka bloku pochodzą 3 korzenie z 3 takich drzew.
+Z nagłówka bloku pochodzą 3 korzenie z 3 takich drzew trie.
 
-1. stateRoot
-2. transactionsRoot
-3. receiptsRoot
+1.  stateRoot
+2.  transactionsRoot
+3.  receiptsRoot
 
 ### Drzewo stanu {#state-trie}
 
-Istnieje jedno globalne drzewo stanu, które jest aktualizowane za każdym razem, gdy klient przetwarza blok. W nim `ścieżka` to zawsze: `keccak256(adresEthereum)`, a `wartość` to zawsze: `rlp(kontoEthereum)`. Dokładniej, `konto` Ethereum to 4-elementowa tablica `[nonce,balance,storageRoot,codeHash]`. W tym momencie warto zauważyć, że ten `storageRoot` jest korzeniem innego drzewa Patricia:
+Istnieje jedno globalne drzewo stanu i jest ono aktualizowane za każdym razem, gdy klient przetwarza blok. W nim `path` to zawsze: `keccak256(ethereumAddress)`, a `value` to zawsze: `rlp(ethereumAccount)`. Dokładniej mówiąc, `account` w Ethereum to 4-elementowa tablica `[nonce,balance,storageRoot,codeHash]`. W tym miejscu warto zauważyć, że ten `storageRoot` jest korzeniem kolejnego drzewa Patricia:
 
-### Drzewo przechowywania {#storage-trie}
+### Drzewo trie pamięci {#storage-trie}
 
-Drzewo przechowywania to miejsce, w którym znajdują się _wszystkie_ dane kontraktu. Dla każdego konta istnieje oddzielne drzewo przechowywania. Aby pobrać wartości na określonych pozycjach przechowywania pod danym adresem, wymagany jest adres przechowywania, pozycja całkowita przechowywanych danych w magazynie oraz identyfikator bloku. Można je następnie przekazać jako argumenty do `eth_getStorageAt` zdefiniowanego w API JSON-RPC, np. aby pobrać dane ze slotu 0 przechowywania dla adresu `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Drzewo trie pamięci to miejsce, w którym znajdują się _wszystkie_ dane kontraktu. Dla każdego konta istnieje oddzielne drzewo trie pamięci. Aby pobrać wartości na określonych pozycjach pamięci pod danym adresem, wymagany jest adres pamięci, całkowita pozycja przechowywanych danych w pamięci oraz identyfikator bloku. Można je następnie przekazać jako argumenty do `eth_getStorageAt` zdefiniowanego w API JSON-RPC, np. aby pobrać dane w slocie pamięci 0 dla adresu `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -215,7 +215,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Pobieranie innych elementów z magazynu jest nieco bardziej skomplikowane, ponieważ najpierw należy obliczyć pozycję w drzewie przechowywania. Pozycja jest obliczana jako hasz `keccak256` adresu i pozycji w magazynie, oba dopełnione z lewej strony zerami do długości 32 bajtów. Na przykład pozycja danych w slocie 1 przechowywania dla adresu `0x391694e7e0b0cce554cb130d723a9d27458f9298` to:
+Pobieranie innych elementów z pamięci jest nieco bardziej skomplikowane, ponieważ najpierw należy obliczyć pozycję w drzewie trie pamięci. Pozycja jest obliczana jako hash `keccak256` adresu i pozycji w pamięci, oba dopełnione z lewej strony zerami do długości 32 bajtów. Na przykład pozycja dla danych w slocie pamięci 1 dla adresu `0x391694e7e0b0cce554cb130d723a9d27458f9298` to:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
@@ -230,7 +230,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-`Ścieżka` jest zatem `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Można to teraz wykorzystać do pobrania danych z drzewa przechowywania, tak jak poprzednio:
+`path` to zatem `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Można to teraz wykorzystać do pobrania danych z drzewa trie pamięci, tak jak poprzednio:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
@@ -238,11 +238,11 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-Uwaga: `storageRoot` dla konta Ethereum jest domyślnie pusty, jeśli nie jest to konto kontraktu.
+Uwaga: `storageRoot` dla konta Ethereum jest domyślnie puste, jeśli nie jest to konto kontraktu.
 
-### Drzewo transakcji {#transaction-trie}
+### Drzewo trie transakcji {#transaction-trie}
 
-Dla każdego bloku istnieje osobne drzewo transakcji, przechowujące pary `(klucz, wartość)`. Ścieżka tutaj to: `rlp(indeksTransakcji)`, która reprezentuje klucz odpowiadający wartości określonej przez:
+Dla każdego bloku istnieje oddzielne drzewo trie transakcji, ponownie przechowujące pary `(key, value)`. Ścieżka tutaj to: `rlp(transactionIndex)`, co reprezentuje klucz odpowiadający wartości określonej przez:
 
 ```python
 if legacyTx:
@@ -251,16 +251,16 @@ else:
   value = TxType | encode(tx)
 ```
 
-Więcej informacji na ten temat można znaleźć w dokumentacji [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
+Więcej informacji na ten temat można znaleźć w dokumentacji [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718).
 
-### Drzewo potwierdzeń {#receipts-trie}
+### Drzewo trie pokwitowań {#receipts-trie}
 
-Każdy blok ma własne drzewo potwierdzeń. `Ścieżka` tutaj to: `rlp(indeksTransakcji)`. `indeksTransakcji` to jego indeks w bloku, w którym został zawarty. Drzewo potwierdzeń nigdy nie jest aktualizowane. Podobnie jak w drzewie transakcji, istnieją bieżące i starsze potwierdzenia. Aby wyszukać określone potwierdzenie w drzewie potwierdzeń, wymagany jest indeks transakcji w jej bloku, ładunek potwierdzenia oraz typ transakcji. Zwrócone potwierdzenie może być typu `Receipt`, który jest zdefiniowany jako konkatenacja `TransactionType` i `ReceiptPayload` lub może być typu `LegacyReceipt`, który jest zdefiniowany jako `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
+Każdy blok ma swoje własne drzewo trie pokwitowań. `path` tutaj to: `rlp(transactionIndex)`. `transactionIndex` to jego indeks w bloku, w którym został zawarty. Drzewo trie pokwitowań nigdy nie jest aktualizowane. Podobnie jak w przypadku drzewa trie transakcji, istnieją obecne i starsze (legacy) pokwitowania. Aby zapytać o konkretne pokwitowanie w drzewie trie pokwitowań, wymagany jest indeks transakcji w jej bloku, ładunek (payload) pokwitowania i typ transakcji. Zwrócone pokwitowanie może być typu `Receipt`, co jest zdefiniowane jako konkatenacja `TransactionType` i `ReceiptPayload`, lub może być typu `LegacyReceipt`, co jest zdefiniowane jako `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
 
-Więcej informacji na ten temat można znaleźć w dokumentacji [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
+Więcej informacji na ten temat można znaleźć w dokumentacji [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718).
 
 ## Dalsza lektura {#further-reading}
 
 - [Zmodyfikowane drzewo Merkle Patricia — jak Ethereum zapisuje stan](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Merkling w Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
-- [Zrozumieć drzewo Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
+- [Merkling w Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
+- [Zrozumienie drzewa trie w Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

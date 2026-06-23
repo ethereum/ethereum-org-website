@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "locale": "pl",
+  "translatedAt": "2026-06-19T22:55:09.646Z",
+  "englishManifestHash": "39b7511bd36d",
+  "placeholderOrder": [
+    "LINK-68e92f",
+    "LINK-dfaf98",
+    "LINK-0e8b9c",
+    "LINK-13a07c",
+    "LINK-a21a82",
+    "LINK-8a46b4",
+    "CODEBLOCK-a323be",
+    "CODE-787fe2",
+    "CODE-787fe2",
+    "CODEBLOCK-f9d152",
+    "LINK-303596",
+    "CODE-0c6e3b",
+    "CODE-787fe2",
+    "CODEBLOCK-922d47",
+    "CODEBLOCK-5f0178",
+    "CODE-787fe2",
+    "CODEBLOCK-6301d1",
+    "CODE-480e30",
+    "LINK-ff7422",
+    "CODE-184f37",
+    "LINK-40c923",
+    "IMAGE-8c17ca",
+    "CODE-7fc331",
+    "CODEBLOCK-7fc59e",
+    "IMAGE-210585",
+    "LINK-88ed30",
+    "IMAGE-5d97c0",
+    "LINK-490ba7",
+    "CODE-787fe2",
+    "CODEBLOCK-2c057a",
+    "CODE-e9cbb0",
+    "CODE-e9cbb0",
+    "CODE-e9cbb0",
+    "CODEBLOCK-12d959",
+    "CODE-e35f5a",
+    "CODE-e9cbb0",
+    "LINK-364bc2",
+    "LINK-a4b1de",
+    "CODE-f7a3ce",
+    "CODE-c21161",
+    "CODE-397a62",
+    "CODE-1c4493",
+    "CODE-1c6014",
+    "CODE-787fe2",
+    "CODEBLOCK-a71d89",
+    "CODE-df334a",
+    "CODEBLOCK-6b8a62",
+    "CODE-480e30",
+    "CODE-787fe2",
+    "CODE-12e598",
+    "CODE-480e30",
+    "CODE-764f39",
+    "IMAGE-3c12db",
+    "CODE-764f39",
+    "IMAGE-c8abbd",
+    "CODEBLOCK-90c689",
+    "CODE-e56b31",
+    "LINK-3d285e",
+    "LINK-88ed30",
+    "IMAGE-4ded4a",
+    "CODE-787fe2",
+    "LINK-c18af1"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-a323be": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f9d152": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-922d47": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5f0178": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6301d1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7fc59e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2c057a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-12d959": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a71d89": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6b8a62": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-90c689": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-787fe2": {
+      "type": "inline-code",
+      "values": {
+        "content": "mint-nft.js"
+      }
+    },
+    "CODE-0c6e3b": {
+      "type": "inline-code",
+      "values": {
+        "content": "MyNFT.json"
+      }
+    },
+    "CODE-480e30": {
+      "type": "inline-code",
+      "values": {
+        "content": "mintNFT"
+      }
+    },
+    "CODE-184f37": {
+      "type": "inline-code",
+      "values": {
+        "content": "https://gateway.pinata.cloud/ipfs/<CID>"
+      }
+    },
+    "CODE-7fc331": {
+      "type": "inline-code",
+      "values": {
+        "content": "nft-metadata.json"
+      }
+    },
+    "CODE-e9cbb0": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env"
+      }
+    },
+    "CODE-e35f5a": {
+      "type": "inline-code",
+      "values": {
+        "content": "mintNFT(tokenData)"
+      }
+    },
+    "CODE-f7a3ce": {
+      "type": "inline-code",
+      "values": {
+        "content": "'from': PUBLIC_KEY"
+      }
+    },
+    "CODE-c21161": {
+      "type": "inline-code",
+      "values": {
+        "content": "'to': contractAddress"
+      }
+    },
+    "CODE-397a62": {
+      "type": "inline-code",
+      "values": {
+        "content": "'nonce': nonce"
+      }
+    },
+    "CODE-1c4493": {
+      "type": "inline-code",
+      "values": {
+        "content": "'gas': estimatedGas"
+      }
+    },
+    "CODE-1c6014": {
+      "type": "inline-code",
+      "values": {
+        "content": "'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()"
+      }
+    },
+    "CODE-df334a": {
+      "type": "inline-code",
+      "values": {
+        "content": "web3.eth.sendSignedTransaction"
+      }
+    },
+    "CODE-12e598": {
+      "type": "inline-code",
+      "values": {
+        "content": "metadata.json"
+      }
+    },
+    "CODE-764f39": {
+      "type": "inline-code",
+      "values": {
+        "content": "https://gateway.pinata.cloud/ipfs/<metadata-hash-code>"
+      }
+    },
+    "CODE-e56b31": {
+      "type": "inline-code",
+      "values": {
+        "content": "node scripts/mint-nft.js"
+      }
+    },
+    "IMAGE-8c17ca": {
+      "type": "image",
+      "values": {
+        "path": "./instructionsPinata.gif"
+      }
+    },
+    "IMAGE-210585": {
+      "type": "image",
+      "values": {
+        "path": "./uploadPinata.gif"
+      }
+    },
+    "IMAGE-5d97c0": {
+      "type": "image",
+      "values": {
+        "path": "./view-contract-etherscan.png"
+      }
+    },
+    "IMAGE-3c12db": {
+      "type": "image",
+      "values": {
+        "path": "./metadataPinata.gif"
+      }
+    },
+    "IMAGE-c8abbd": {
+      "type": "image",
+      "values": {
+        "path": "./metadataJSON.png"
+      }
+    },
+    "IMAGE-4ded4a": {
+      "type": "image",
+      "values": {
+        "path": "./view-nft-etherscan.png"
+      }
+    },
+    "LINK-68e92f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html"
+      }
+    },
+    "LINK-dfaf98": {
+      "type": "link",
+      "values": {
+        "url": "https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b"
+      }
+    },
+    "LINK-0e8b9c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens"
+      }
+    },
+    "LINK-13a07c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-write-and-deploy-an-nft/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-8a46b4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3"
+      }
+    },
+    "LINK-303596": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is"
+      }
+    },
+    "LINK-ff7422": {
+      "type": "link",
+      "values": {
+        "url": "https://app.pinata.cloud"
+      }
+    },
+    "LINK-40c923": {
+      "type": "link",
+      "values": {
+        "url": "https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5"
+      }
+    },
+    "LINK-88ed30": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-sepolia.blockscout.com/"
+      }
+    },
+    "LINK-490ba7": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/api/web3-eth-contract/class/Contract"
+      }
+    },
+    "LINK-364bc2": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce"
+      }
+    },
+    "LINK-a4b1de": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount"
+      }
+    },
+    "LINK-3d285e": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemyapi.io/mempool"
+      }
+    },
+    "LINK-c18af1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-view-nft-in-metamask/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T22:55:09.646Z",
+      "status": "success"
+    }
+  }
+}

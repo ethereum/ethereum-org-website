@@ -1,0 +1,812 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-17T23:43:27.804Z",
+  "englishManifestHash": "2ec8d5b751f9",
+  "placeholderOrder": [
+    "LINK-f9c57f",
+    "LINK-7f43c7",
+    "LINK-ce2ee3",
+    "CODE-bfa3d0",
+    "LINK-749f46",
+    "CODE-c5f58d",
+    "LINK-88dc99",
+    "LINK-41d645",
+    "LINK-b668e5",
+    "LINK-39664e",
+    "CODEBLOCK-fc1930",
+    "CODE-e9cbb0",
+    "CODE-e9ac91",
+    "LINK-8e4d9e",
+    "CODEBLOCK-41b210",
+    "LINK-c207d4",
+    "CODE-4e90ec",
+    "LINK-4b2b17",
+    "CODE-21f167",
+    "LINK-d2827a",
+    "CODE-f40b4c",
+    "CODE-f40b4c",
+    "LINK-04b3ee",
+    "LINK-f15ade",
+    "CODEBLOCK-60b7ee",
+    "LINK-0527ac",
+    "CODE-efa1f3",
+    "LINK-839b74",
+    "CODE-9a4ba6",
+    "CODEBLOCK-32a68e",
+    "LINK-c8c61e",
+    "CODEBLOCK-f78212",
+    "CODE-b2c63e",
+    "CODEBLOCK-9dcc49",
+    "LINK-68d036",
+    "CODEBLOCK-c74dab",
+    "CODEBLOCK-8579d0",
+    "CODEBLOCK-c25d96",
+    "CODEBLOCK-e1369d",
+    "CODE-b2c63e",
+    "CODE-34a040",
+    "CODE-3a6eb0",
+    "CODEBLOCK-a65302",
+    "CODEBLOCK-fe8f2f",
+    "CODE-9750eb",
+    "CODEBLOCK-fd83f9",
+    "CODEBLOCK-2c6fbe",
+    "CODEBLOCK-3d5990",
+    "LINK-33599d",
+    "LINK-232f32",
+    "CODEBLOCK-e52ecd",
+    "LINK-7b881e",
+    "LINK-28cc7f",
+    "LINK-55276b",
+    "LINK-c4ae3b",
+    "CODEBLOCK-0c8352",
+    "CODE-b2c63e",
+    "CODE-b2c63e",
+    "CODEBLOCK-d7add3",
+    "CODE-e9cbb0",
+    "CODEBLOCK-d6e8ad",
+    "CODEBLOCK-a9d3ce",
+    "CODEBLOCK-624c91",
+    "CODEBLOCK-929661",
+    "LINK-b4ec52",
+    "CODEBLOCK-891251",
+    "CODEBLOCK-1200b2",
+    "LINK-a4570d",
+    "LINK-f72062",
+    "CODEBLOCK-13cf15",
+    "CODEBLOCK-e9e1f3",
+    "CODEBLOCK-9cfa46",
+    "CODE-b2c63e",
+    "CODEBLOCK-348cfd",
+    "CODE-c5ebca",
+    "CODEBLOCK-6401cc",
+    "CODEBLOCK-e9e1f3",
+    "CODEBLOCK-a86f7a",
+    "LINK-f3f54d",
+    "LINK-745b36",
+    "LINK-76bd7c",
+    "CODE-c67ea8",
+    "LINK-76bd7c",
+    "CODE-c67ea8",
+    "LINK-1d8ad6",
+    "CODE-d68245",
+    "LINK-2f5f85",
+    "CODEBLOCK-eb853d",
+    "LINK-69a6e6",
+    "CODEBLOCK-c30c15",
+    "CODE-b2c63e",
+    "CODEBLOCK-25b7d6",
+    "LINK-7d9cec",
+    "CODE-11092e",
+    "CODEBLOCK-c3e902",
+    "CODE-6247b2",
+    "CODEBLOCK-a29a10",
+    "CODEBLOCK-9c0963",
+    "CODEBLOCK-d4abc9",
+    "CODEBLOCK-868c0d",
+    "CODEBLOCK-4f6f7e",
+    "CODEBLOCK-f85429",
+    "CODEBLOCK-6f97c3",
+    "CODEBLOCK-7cfb96",
+    "CODE-6247b2",
+    "LINK-f51bdc",
+    "CODE-27f576",
+    "CODEBLOCK-11b08d",
+    "CODEBLOCK-d024e7",
+    "LINK-0527ac",
+    "CODEBLOCK-22ffe0",
+    "LINK-f87144",
+    "CODE-b6e70b",
+    "CODEBLOCK-d36ad3",
+    "CODE-6247b2",
+    "CODEBLOCK-a853ea",
+    "CODEBLOCK-3ba506",
+    "CODEBLOCK-0e899e",
+    "CODE-b2c63e",
+    "LINK-2e5447",
+    "CODEBLOCK-8378a7",
+    "CODE-b2c63e",
+    "CODE-34a040",
+    "CODEBLOCK-0f456d",
+    "CODEBLOCK-68a113",
+    "CODE-f40b4c",
+    "CODEBLOCK-baf1e8",
+    "CODE-b2c63e",
+    "LINK-96591f",
+    "CODE-93408a",
+    "CODEBLOCK-dc62ae",
+    "CODE-6247b2",
+    "CODEBLOCK-528e0d",
+    "CODE-b2c63e",
+    "CODEBLOCK-449f80",
+    "CODE-b2c63e",
+    "CODEBLOCK-75b10a",
+    "CODEBLOCK-4764d3",
+    "CODEBLOCK-7d5c40",
+    "CODE-11092e",
+    "CODEBLOCK-57e968",
+    "CODEBLOCK-fa67ee",
+    "CODEBLOCK-90c403",
+    "LINK-a202b7",
+    "IMAGE-f7def4",
+    "CODE-b2c63e",
+    "IMAGE-d8dbd3",
+    "LINK-4c8a13",
+    "IMAGE-2dec94",
+    "LINK-132b92",
+    "LINK-41d645",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-fc1930": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-41b210": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-60b7ee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-32a68e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f78212": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9dcc49": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c74dab": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8579d0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c25d96": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e1369d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a65302": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fe8f2f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fd83f9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2c6fbe": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3d5990": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e52ecd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0c8352": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d7add3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d6e8ad": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a9d3ce": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-624c91": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-929661": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-891251": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1200b2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-13cf15": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e9e1f3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9cfa46": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-348cfd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6401cc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a86f7a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-eb853d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c30c15": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-25b7d6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c3e902": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a29a10": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9c0963": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d4abc9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-868c0d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4f6f7e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f85429": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6f97c3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7cfb96": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-11b08d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d024e7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-22ffe0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d36ad3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a853ea": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3ba506": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0e899e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8378a7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0f456d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-68a113": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-baf1e8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dc62ae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-528e0d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-449f80": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-75b10a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4764d3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7d5c40": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-57e968": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fa67ee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-90c403": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-c5f58d": {
+      "type": "inline-code",
+      "values": {
+        "content": "tx.origin"
+      }
+    },
+    "CODE-e9cbb0": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env"
+      }
+    },
+    "CODE-e9ac91": {
+      "type": "inline-code",
+      "values": {
+        "content": "SEPOLIA_PRIVATE_KEY"
+      }
+    },
+    "CODE-4e90ec": {
+      "type": "inline-code",
+      "values": {
+        "content": "http://localhost:5173"
+      }
+    },
+    "CODE-21f167": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm run dev"
+      }
+    },
+    "CODE-f40b4c": {
+      "type": "inline-code",
+      "values": {
+        "content": "faucet"
+      }
+    },
+    "CODE-efa1f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "public"
+      }
+    },
+    "CODE-9a4ba6": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonce()"
+      }
+    },
+    "CODE-b2c63e": {
+      "type": "inline-code",
+      "values": {
+        "content": "UserProxy"
+      }
+    },
+    "CODE-34a040": {
+      "type": "inline-code",
+      "values": {
+        "content": "target"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-9750eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "ecrecover"
+      }
+    },
+    "CODE-c5ebca": {
+      "type": "inline-code",
+      "values": {
+        "content": "signedAccess"
+      }
+    },
+    "CODE-c67ea8": {
+      "type": "inline-code",
+      "values": {
+        "content": "Token.jsx"
+      }
+    },
+    "CODE-d68245": {
+      "type": "inline-code",
+      "values": {
+        "content": "Greeter.jsx"
+      }
+    },
+    "CODE-11092e": {
+      "type": "inline-code",
+      "values": {
+        "content": "faucet()"
+      }
+    },
+    "CODE-6247b2": {
+      "type": "inline-code",
+      "values": {
+        "content": "FaucetToken"
+      }
+    },
+    "CODE-27f576": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer"
+      }
+    },
+    "CODE-b6e70b": {
+      "type": "inline-code",
+      "values": {
+        "content": "useEffect"
+      }
+    },
+    "CODE-93408a": {
+      "type": "inline-code",
+      "values": {
+        "content": "encodeFunctionData"
+      }
+    },
+    "IMAGE-f7def4": {
+      "type": "image",
+      "values": {
+        "path": "./fig-1-opaque-calldata.png"
+      }
+    },
+    "IMAGE-d8dbd3": {
+      "type": "image",
+      "values": {
+        "path": "./fig-2-transparent-signature.png"
+      }
+    },
+    "IMAGE-2dec94": {
+      "type": "image",
+      "values": {
+        "path": "./fig-3-truncated-addresses.png"
+      }
+    },
+    "LINK-f9c57f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/gasless/"
+      }
+    },
+    "LINK-7f43c7": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/account-abstraction/"
+      }
+    },
+    "LINK-ce2ee3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/cheatsheet.html#block-and-transaction-properties"
+      }
+    },
+    "LINK-749f46": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/cheatsheet.html#block-and-transaction-properties"
+      }
+    },
+    "LINK-88dc99": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.35-pre.1/security-considerations.html#tx-origin"
+      }
+    },
+    "LINK-41d645": {
+      "type": "link",
+      "values": {
+        "url": "https://eip7702.io/"
+      }
+    },
+    "LINK-b668e5": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en/download"
+      }
+    },
+    "LINK-39664e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.getfoundry.sh/introduction/installation"
+      }
+    },
+    "LINK-8e4d9e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/#sepolia"
+      }
+    },
+    "LINK-c207d4": {
+      "type": "link",
+      "values": {
+        "url": "http://localhost:5173"
+      }
+    },
+    "LINK-4b2b17": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-sepolia.blockscout.com/"
+      }
+    },
+    "LINK-d2827a": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-sepolia.blockscout.com/address/0x4cBedDEDA88fDd9e116618a5cD71BB0E440C2A78?tab=read_write_contract#0xde5f72fd"
+      }
+    },
+    "LINK-04b3ee": {
+      "type": "link",
+      "values": {
+        "url": "#vulnerabilities"
+      }
+    },
+    "LINK-f15ade": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/260315-gasless-tokens/blob/main/contracts/src/UserProxy.sol"
+      }
+    },
+    "LINK-0527ac": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Cryptographic_nonce"
+      }
+    },
+    "LINK-839b74": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-sepolia.blockscout.com/address/0x9Ba259C15B46ee4b72dEf7b93D85Ec18f5f6e50E?tab=read_write_contract#0xaffed0e0"
+      }
+    },
+    "LINK-c8c61e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-712"
+      }
+    },
+    "LINK-68d036": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-712#definition-of-domainseparator"
+      }
+    },
+    "LINK-33599d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/server-components/"
+      }
+    },
+    "LINK-232f32": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/260315-gasless-tokens/blob/main/server/index.js"
+      }
+    },
+    "LINK-7b881e": {
+      "type": "link",
+      "values": {
+        "url": "https://expressjs.com/"
+      }
+    },
+    "LINK-28cc7f": {
+      "type": "link",
+      "values": {
+        "url": "https://vite.dev/"
+      }
+    },
+    "LINK-55276b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/"
+      }
+    },
+    "LINK-c4ae3b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.dotenv.org/"
+      }
+    },
+    "LINK-b4ec52": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Denial-of-service_attack"
+      }
+    },
+    "LINK-a4570d": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/contract/deployContract#deploycontract"
+      }
+    },
+    "LINK-f72062": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/actions/public/waitForTransactionReceipt"
+      }
+    },
+    "LINK-f3f54d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/260315-gasless-tokens/tree/main/server/src"
+      }
+    },
+    "LINK-745b36": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/creating-a-wagmi-ui-for-your-contract/#file-walk-through"
+      }
+    },
+    "LINK-76bd7c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/260315-gasless-tokens/blob/main/server/src/Token.jsx"
+      }
+    },
+    "LINK-1d8ad6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/260301-gasless/blob/main/server/src/Greeter.jsx"
+      }
+    },
+    "LINK-2f5f85": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/gasless/#ui-changes"
+      }
+    },
+    "LINK-69a6e6": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/contract/encodeFunctionData"
+      }
+    },
+    "LINK-7d9cec": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-sepolia.blockscout.com/address/0x4cBedDEDA88fDd9e116618a5cD71BB0E440C2A78?tab=contract"
+      }
+    },
+    "LINK-f51bdc": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code/#transfer-tokens"
+      }
+    },
+    "LINK-f87144": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/reference/react/useEffect"
+      }
+    },
+    "LINK-2e5447": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/gasless/#ui-changes"
+      }
+    },
+    "LINK-96591f": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/contract/encodeFunctionData"
+      }
+    },
+    "LINK-a202b7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/gasless/#dos-on-server"
+      }
+    },
+    "LINK-4c8a13": {
+      "type": "link",
+      "values": {
+        "url": "https://rabby.io/"
+      }
+    },
+    "LINK-132b92": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.erc4337.io/#what-is-erc-4337"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:43:27.804Z",
+      "status": "success"
+    }
+  }
+}

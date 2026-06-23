@@ -1,152 +1,152 @@
 ---
-title: JSON-RPC API
-description: "ایتھریم کلائنٹس کے لیے ایک سٹیٹ لیس، ہلکا پھلکا ریموٹ پروسیجر کال (RPC) پروٹوکول۔"
+title: "جے سن آر پی سی ⁦API⁩"
+description: "ایتھیریم کلائنٹس کے لیے ایک سٹیٹ لیس، ہلکا پھلکا ریموٹ پروسیجر کال (⁦RPC⁩) پروٹوکول۔"
 lang: ur
 ---
 
-کسی بھی سافٹ ویئر ایپلیکیشن کو [ایتھریم](/) بلاک چین کے ساتھ تعامل کرنے کے لیے - چاہے وہ بلاک چین کا ڈیٹا پڑھنا ہو یا نیٹ ورک پر ٹرانزیکشنز بھیجنا ہو - اسے ایک ایتھریم نوڈ سے منسلک ہونا ضروری ہے۔
+کسی سافٹ ویئر ایپلی کیشن کو [ایتھیریم](/) بلاک چین کے ساتھ تعامل کرنے کے لیے - چاہے وہ بلاک چین کا ڈیٹا پڑھنا ہو یا نیٹ ورک پر ٹرانزیکشنز بھیجنا ہو - اسے ایک ایتھیریم نوڈ سے منسلک ہونا ضروری ہے۔
 
-اس مقصد کے لیے، ہر [ایتھریم کلائنٹ](/developers/docs/nodes-and-clients/#execution-clients) ایک [JSON-RPC تصریح](https://github.com/ethereum/execution-apis) کو نافذ کرتا ہے، تاکہ طریقوں (methods) کا ایک یکساں سیٹ موجود ہو جس پر ایپلیکیشنز انحصار کر سکیں، قطع نظر اس کے کہ مخصوص نوڈ یا کلائنٹ کا نفاذ کیا ہے۔
+اس مقصد کے لیے، ہر [ایتھیریم کلائنٹ](/developers/docs/nodes-and-clients/#execution-clients) ایک [جے سن آر پی سی تصریح](https://github.com/ethereum/execution-apis) کو نافذ کرتا ہے، تاکہ طریقوں کا ایک یکساں مجموعہ موجود ہو جس پر ایپلی کیشنز انحصار کر سکیں، قطع نظر اس کے کہ مخصوص نوڈ یا کلائنٹ کا نفاذ کیا ہے۔
 
-[JSON-RPC](https://www.jsonrpc.org/specification) ایک سٹیٹ لیس، ہلکا پھلکا ریموٹ پروسیجر کال (RPC) پروٹوکول ہے۔ یہ کئی ڈیٹا سٹرکچرز اور ان کی پروسیسنگ کے اصولوں کی وضاحت کرتا ہے۔ یہ ٹرانسپورٹ ایگنوسٹک (transport agnostic) ہے، یعنی اس کے تصورات کو ایک ہی پروسیس کے اندر، ساکٹس (sockets) پر، HTTP پر، یا پیغام رسانی کے مختلف ماحول میں استعمال کیا جا سکتا ہے۔ یہ ڈیٹا فارمیٹ کے طور پر JSON (RFC 4627) کا استعمال کرتا ہے۔
+[جے سن آر پی سی](https://www.jsonrpc.org/specification) ایک سٹیٹ لیس، ہلکا پھلکا ریموٹ پروسیجر کال (<span dir="ltr">RPC</span>) پروٹوکول ہے۔ یہ کئی ڈیٹا سٹرکچرز اور ان کی پروسیسنگ کے اصولوں کی وضاحت کرتا ہے۔ یہ ٹرانسپورٹ کے لحاظ سے غیر جانبدار ہے، یعنی ان تصورات کو ایک ہی پروسیس کے اندر، ساکٹس پر، <span dir="ltr">HTTP</span> پر، یا پیغام رسانی کے مختلف ماحول میں استعمال کیا جا سکتا ہے۔ یہ ڈیٹا فارمیٹ کے طور پر <span dir="ltr">JSON (RFC 4627)</span> کا استعمال کرتا ہے۔
 
-## کلائنٹ امپلی مینٹیشنز {#client-implementations}
+## کلائنٹ کے عمل درآمد {#client-implementations}
 
-ایتھریم کلائنٹس JSON-RPC کی تخصیص کو نافذ کرتے وقت مختلف پروگرامنگ زبانیں استعمال کر سکتے ہیں۔ مخصوص پروگرامنگ زبانوں سے متعلق مزید تفصیلات کے لیے انفرادی [کلائنٹ کی دستاویزات](/developers/docs/nodes-and-clients/#execution-clients) دیکھیں۔ ہم تجویز کرتے ہیں کہ تازہ ترین API سپورٹ کی معلومات کے لیے ہر کلائنٹ کی دستاویزات چیک کریں۔
+ایتھیریم کلائنٹس جے سن آر پی سی کی تفصیلات پر عمل درآمد کرتے وقت مختلف پروگرامنگ زبانیں استعمال کر سکتے ہیں۔ مخصوص پروگرامنگ زبانوں سے متعلق مزید تفصیلات کے لیے انفرادی [کلائنٹ کی دستاویزات](/developers/docs/nodes-and-clients/#execution-clients) دیکھیں۔ ہم تجویز کرتے ہیں کہ تازہ ترین <span dir="ltr">API</span> سپورٹ کی معلومات کے لیے ہر کلائنٹ کی دستاویزات چیک کریں۔
 
-## سہولت بخش لائبریریاں {#convenience-libraries}
+## سہولت کی لائبریریاں {#convenience-libraries}
 
-اگرچہ آپ JSON-RPC API کے ذریعے براہ راست Ethereum کلائنٹس کے ساتھ تعامل کرنے کا انتخاب کر سکتے ہیں، لیکن dapp ڈیولپرز کے لیے اکثر آسان اختیارات موجود ہوتے ہیں۔ JSON-RPC API کے اوپر ریپرز (wrappers) فراہم کرنے کے لیے بہت سی [JavaScript](/developers/docs/apis/javascript/#available-libraries) اور [backend API](/developers/docs/apis/backend/#available-libraries) لائبریریاں موجود ہیں۔ ان لائبریریوں کے ساتھ، ڈیولپرز اپنی پسند کی پروگرامنگ زبان میں بدیہی، ایک سطری (one-line) طریقے لکھ سکتے ہیں تاکہ (پس پردہ) JSON-RPC درخواستیں شروع کی جا سکیں جو Ethereum کے ساتھ تعامل کرتی ہیں۔
+اگرچہ آپ جے سن آر پی سی API کے ذریعے ایتھیریم کلائنٹس کے ساتھ براہ راست تعامل کرنے کا انتخاب کر سکتے ہیں، لیکن غیر مرکزی ایپلی کیشن (dapp) کے ڈیولپرز کے لیے اکثر آسان اختیارات موجود ہوتے ہیں۔ بہت سی [JavaScript](/developers/docs/apis/javascript/#available-libraries) اور [بیک اینڈ API](/developers/docs/apis/backend/#available-libraries) لائبریریاں موجود ہیں جو جے سن آر پی سی API کے اوپر ریپرز فراہم کرتی ہیں۔ ان لائبریریوں کی مدد سے، ڈیولپرز اپنی پسند کی پروگرامنگ زبان میں آسان اور ایک لائن کے طریقے (methods) لکھ سکتے ہیں تاکہ (اندرونی طور پر) جے سن آر پی سی درخواستیں شروع کی جا سکیں جو ایتھیریم کے ساتھ تعامل کرتی ہیں۔
 
-## کنسنسس کلائنٹ APIs {#consensus-clients}
+## اتفاقِ رائے کے کلائنٹ کی APIs {#consensus-clients}
 
-یہ صفحہ بنیادی طور پر Ethereum ایگزیکیوشن کلائنٹس کے زیر استعمال JSON-RPC API سے متعلق ہے۔ تاہم، کنسنسس کلائنٹس میں ایک RPC API بھی ہوتا ہے جو صارفین کو نوڈ کے بارے میں معلومات حاصل کرنے، بیکن (Beacon) بلاکس، بیکن اسٹیٹ، اور کنسنسس سے متعلق دیگر معلومات براہ راست نوڈ سے طلب کرنے کی اجازت دیتا ہے۔ اس API کی دستاویزات [بیکن API ویب پیج](https://ethereum.github.io/beacon-APIs/#/) پر موجود ہیں۔
+یہ صفحہ بنیادی طور پر جے سن آر پی سی API سے متعلق ہے جسے ایتھیریم ایگزیکیوشن کلائنٹس استعمال کرتے ہیں۔ تاہم، اتفاقِ رائے کے کلائنٹس میں ایک <span dir="ltr">RPC API</span> بھی ہوتی ہے جو صارفین کو اس بات کی اجازت دیتی ہے کہ وہ براہ راست کسی نوڈ سے نوڈ کے بارے میں معلومات طلب کریں، بیکن بلاکس، بیکن کی حالت، اور اتفاقِ رائے سے متعلق دیگر معلومات کی درخواست کریں۔ اس API کی دستاویزات [بیکن API کے ویب پیج](https://ethereum.github.io/beacon-APIs/#/) پر موجود ہیں۔
 
-ایک نوڈ کے اندر کلائنٹس کے درمیان رابطے کے لیے ایک اندرونی API بھی استعمال کیا جاتا ہے - یعنی، یہ کنسنسس کلائنٹ اور ایگزیکیوشن کلائنٹ کو ڈیٹا کا تبادلہ کرنے کے قابل بناتا ہے۔ اسے 'Engine API' کہا جاتا ہے اور اس کی تفصیلات [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) پر دستیاب ہیں۔
+ایک نوڈ کے اندر کلائنٹس کے درمیان رابطے کے لیے ایک اندرونی API بھی استعمال ہوتی ہے - یعنی، یہ اتفاقِ رائے کے کلائنٹ اور ایگزیکیوشن کلائنٹ کو ڈیٹا کا تبادلہ کرنے کے قابل بناتی ہے۔ اسے '<span dir="ltr">Engine API</span>' کہا جاتا ہے اور اس کی تفصیلات [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) پر دستیاب ہیں۔
 
 ## ایگزیکیوشن کلائنٹ کی تفصیلات {#spec}
 
-[GitHub پر مکمل JSON-RPC API کی تفصیلات پڑھیں](https://github.com/ethereum/execution-apis)۔ اس API کو [Execution API ویب پیج](https://ethereum.github.io/execution-apis/) پر دستاویزی شکل دی گئی ہے اور اس میں تمام دستیاب طریقوں کو آزمانے کے لیے ایک انسپکٹر (Inspector) شامل ہے۔
+[<span dir="ltr">GitHub</span> پر مکمل جے سن آر پی سی <span dir="ltr">API</span> کی تفصیلات پڑھیں](https://github.com/ethereum/execution-apis)۔ اس <span dir="ltr">API</span> کی دستاویزات [ایگزیکیوشن <span dir="ltr">API</span> ویب پیج](https://ethereum.github.io/execution-apis/) پر موجود ہیں اور اس میں تمام دستیاب میتھڈز کو آزمانے کے لیے ایک انسپکٹر شامل ہے۔
 
 ## روایات {#conventions}
 
 ### ہیکس ویلیو انکوڈنگ {#hex-encoding}
 
-JSON پر دو اہم ڈیٹا ٹائپس پاس کی جاتی ہیں: ان فارمیٹڈ بائٹ ایریز (unformatted byte arrays) اور مقداریں (quantities)۔ دونوں کو ہیکس انکوڈنگ کے ساتھ پاس کیا جاتا ہے لیکن فارمیٹنگ کے لیے مختلف تقاضوں کے ساتھ۔
+<span dir="ltr">JSON</span> پر دو اہم ڈیٹا ٹائپس پاس کی جاتی ہیں: غیر فارمیٹ شدہ بائٹ ایریز اور مقداریں۔ دونوں کو ہیکس انکوڈنگ کے ساتھ پاس کیا جاتا ہے لیکن فارمیٹنگ کے لیے مختلف تقاضوں کے ساتھ۔
 
 #### مقداریں {#quantities-encoding}
 
-مقداروں (انٹیجرز، نمبرز) کو انکوڈ کرتے وقت: ہیکس کے طور پر انکوڈ کریں، "0x" کا سابقہ لگائیں، جو کہ سب سے مختصر نمائندگی ہے (معمولی استثنا: صفر کو "0x0" کے طور پر پیش کیا جانا چاہیے)۔
+مقداروں (انٹیجرز، اعداد) کو انکوڈ کرتے وقت: ہیکس کے طور پر انکوڈ کریں، سابقہ <span dir="ltr">"0x"</span> لگائیں، جو کہ سب سے مختصر نمائندگی ہے (معمولی استثنیٰ: صفر کو <span dir="ltr">"0x0"</span> کے طور پر پیش کیا جانا چاہیے)۔
 
 یہاں کچھ مثالیں ہیں:
 
-- 0x41 (اعشاریہ میں 65)
-- 0x400 (اعشاریہ میں 1024)
-- غلط: 0x (ہمیشہ کم از کم ایک ہندسہ ہونا چاہیے - صفر "0x0" ہے)
-- غلط: 0x0400 (شروع میں صفر کی اجازت نہیں ہے)
-- غلط: ff (شروع میں 0x کا سابقہ ہونا ضروری ہے)
+- <span dir="ltr">0x41</span> (اعشاریہ میں 65)
+- <span dir="ltr">0x400</span> (اعشاریہ میں 1024)
+- غلط: <span dir="ltr">0x</span> (ہمیشہ کم از کم ایک ہندسہ ہونا چاہیے - صفر <span dir="ltr">"0x0"</span> ہے)
+- غلط: <span dir="ltr">0x0400</span> (شروع میں صفر کی اجازت نہیں ہے)
+- غلط: <span dir="ltr">ff</span> (سابقہ <span dir="ltr">0x</span> ہونا لازمی ہے)
 
-### ان فارمیٹڈ ڈیٹا {#unformatted-data-encoding}
+### غیر فارمیٹ شدہ ڈیٹا {#unformatted-data-encoding}
 
-ان فارمیٹڈ ڈیٹا (بائٹ ایریز، اکاؤنٹ ایڈریسز، ہیشز، بائٹ کوڈ ایریز) کو انکوڈ کرتے وقت: ہیکس کے طور پر انکوڈ کریں، "0x" کا سابقہ لگائیں، فی بائٹ دو ہیکس ہندسے۔
+غیر فارمیٹ شدہ ڈیٹا (بائٹ ایریز، اکاؤنٹ کے پتے، ہیشز، بائٹ کوڈ ایریز) کو انکوڈ کرتے وقت: ہیکس کے طور پر انکوڈ کریں، سابقہ <span dir="ltr">"0x"</span> لگائیں، فی بائٹ دو ہیکس ہندسے۔
 
 یہاں کچھ مثالیں ہیں:
 
-- 0x41 (سائز 1، "A")
-- 0x004200 (سائز 3، "0B0")
-- 0x (سائز 0، "")
-- غلط: 0xf0f0f (ہندسوں کی تعداد جفت ہونی چاہیے)
-- غلط: 004200 (شروع میں 0x کا سابقہ ہونا ضروری ہے)
+- <span dir="ltr">0x41</span> (سائز 1، <span dir="ltr">"A"</span>)
+- <span dir="ltr">0x004200</span> (سائز 3، <span dir="ltr">"0B0"</span>)
+- <span dir="ltr">0x</span> (سائز 0، "")
+- غلط: <span dir="ltr">0xf0f0f</span> (ہندسوں کی تعداد جفت ہونی چاہیے)
+- غلط: <span dir="ltr">004200</span> (سابقہ <span dir="ltr">0x</span> ہونا لازمی ہے)
 
 ### بلاک پیرامیٹر {#block-parameter}
 
-درج ذیل میتھڈز میں ایک بلاک پیرامیٹر ہوتا ہے:
+مندرجہ ذیل طریقوں (methods) میں ایک بلاک پیرامیٹر ہوتا ہے:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [<span dir="ltr">eth_getBalance</span>](#eth-getbalance)
+- [<span dir="ltr">eth_getCode</span>](#eth-getcode)
+- [<span dir="ltr">eth_getTransactionCount</span>](#eth-gettransactioncount)
+- [<span dir="ltr">eth_getStorageAt</span>](#eth-getstorageat)
+- [<span dir="ltr">eth_call</span>](#eth-call)
 
-جب ایسی درخواستیں کی جاتی ہیں جو Ethereum کی حالت (state) کے بارے میں استفسار کرتی ہیں، تو فراہم کردہ بلاک پیرامیٹر بلاک کی اونچائی (height) کا تعین کرتا ہے۔
+جب ایسی درخواستیں کی جاتی ہیں جو ایتھیریم کی حالت (state) کے بارے میں استفسار کرتی ہیں، تو فراہم کردہ بلاک پیرامیٹر بلاک کی اونچائی (height) کا تعین کرتا ہے۔
 
-بلاک پیرامیٹر کے لیے درج ذیل آپشنز ممکن ہیں:
+بلاک پیرامیٹر کے لیے مندرجہ ذیل اختیارات ممکن ہیں:
 
 - `HEX String` - ایک انٹیجر بلاک نمبر
-- `String "earliest"` - سب سے ابتدائی/جینیسس (genesis) بلاک کے لیے
+- `String "earliest"` سب سے پہلے/ابتدائی بلاک کے لیے
 - `String "latest"` - تازہ ترین تجویز کردہ بلاک کے لیے
 - `String "safe"` - تازہ ترین محفوظ ہیڈ بلاک کے لیے
-- `String "finalized"` - تازہ ترین حتمی (finalized) بلاک کے لیے
-- `String "pending"` - زیر التوا حالت/ٹرانزیکشنز کے لیے
+- `String "finalized"` - تازہ ترین حتمی بلاک کے لیے
+- `String "pending"` - زیر التواء حالت/ٹرانزیکشنز کے لیے
 
-## مثالیں
+## مثالیں {#examples}
 
-اس صفحے پر ہم کمانڈ لائن ٹول، [curl](https://curl.se) کا استعمال کرتے ہوئے انفرادی JSON_RPC API اینڈ پوائنٹس کو استعمال کرنے کی مثالیں فراہم کرتے ہیں۔ یہ انفرادی اینڈ پوائنٹ کی مثالیں نیچے [Curl کی مثالیں](#curl-examples) سیکشن میں دی گئی ہیں۔ صفحے میں مزید نیچے، ہم Geth نوڈ، JSON_RPC API اور curl کا استعمال کرتے ہوئے ایک اسمارٹ کانٹریکٹ کو مرتب اور تعینات کرنے کے لیے ایک [مکمل مثال](#usage-example) بھی فراہم کرتے ہیں۔
+اس صفحے پر ہم کمانڈ لائن ٹول، [<span dir="ltr">curl</span>](https://curl.se) کا استعمال کرتے ہوئے انفرادی جے سن آر پی سی <span dir="ltr">API</span> اینڈ پوائنٹس کو استعمال کرنے کی مثالیں فراہم کرتے ہیں۔ یہ انفرادی اینڈ پوائنٹ کی مثالیں نیچے [<span dir="ltr">Curl</span> کی مثالیں](#curl-examples) کے سیکشن میں مل سکتی ہیں۔ صفحے میں مزید نیچے، ہم ایک <span dir="ltr">Geth</span> نوڈ، جے سن آر پی سی <span dir="ltr">API</span> اور <span dir="ltr">curl</span> کا استعمال کرتے ہوئے ایک سمارٹ کنٹریکٹ کی کمپائلنگ اور اسے تعینات کرنے کے لیے ایک [اینڈ ٹو اینڈ مثال](#usage-example) بھی فراہم کرتے ہیں۔
 
-## curl کی مثالیں {#curl-examples}
+## <span dir="ltr">Curl</span> کی مثالیں {#curl-examples}
 
-Ethereum نوڈ کو [curl](https://curl.se) درخواستیں بھیج کر JSON_RPC API استعمال کرنے کی مثالیں ذیل میں دی گئی ہیں۔ ہر مثال میں مخصوص اینڈ پوائنٹ کی تفصیل، اس کے پیرامیٹرز، ریٹرن ٹائپ، اور اسے استعمال کرنے کے طریقے کی ایک عملی مثال شامل ہے۔
+ایک ایتھیریم نوڈ کو [<span dir="ltr">curl</span>](https://curl.se) درخواستیں بھیج کر جے سن آر پی سی <span dir="ltr">API</span> استعمال کرنے کی مثالیں ذیل میں فراہم کی گئی ہیں۔ ہر مثال میں مخصوص اینڈ پوائنٹ کی تفصیل، اس کے پیرامیٹرز، واپسی کی قسم، اور اسے استعمال کرنے کے طریقے کی ایک عملی مثال شامل ہے۔
 
-curl درخواستیں کنٹینٹ ٹائپ سے متعلق خرابی کا پیغام (error message) واپس کر سکتی ہیں۔ اس کی وجہ یہ ہے کہ `--data` آپشن کنٹینٹ ٹائپ کو `application/x-www-form-urlencoded` پر سیٹ کرتا ہے۔ اگر آپ کا نوڈ اس بارے میں ایرر دیتا ہے، تو کال کے شروع میں `-H "Content-Type: application/json"` رکھ کر دستی طور پر ہیڈر سیٹ کریں۔ مثالوں میں URL/IP اور پورٹ کا امتزاج بھی شامل نہیں ہے جو curl کو دیا جانے والا آخری آرگومنٹ ہونا چاہیے (جیسے، `127.0.0.1:8545`)۔ ان اضافی ڈیٹا پر مشتمل ایک مکمل curl درخواست درج ذیل شکل اختیار کرتی ہے:
+<span dir="ltr">curl</span> کی درخواستیں مواد کی قسم سے متعلق خرابی کا پیغام واپس کر سکتی ہیں۔ اس کی وجہ یہ ہے کہ `--data` آپشن مواد کی قسم کو `application/x-www-form-urlencoded` پر سیٹ کرتا ہے۔ اگر آپ کا نوڈ اس بارے میں ایرر دیتا ہے، تو کال کے آغاز میں `-H "Content-Type: application/json"` رکھ کر دستی طور پر ہیڈر سیٹ کریں۔ مثالوں میں <span dir="ltr">URL/IP</span> اور پورٹ کا امتزاج بھی شامل نہیں ہے جو <span dir="ltr">curl</span> کو دیا جانے والا آخری آرگومنٹ ہونا چاہیے (جیسے، `127.0.0.1:8545`)۔ ان اضافی ڈیٹا پر مشتمل ایک مکمل <span dir="ltr">curl</span> درخواست درج ذیل شکل اختیار کرتی ہے:
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## گاسپ، اسٹیٹ، ہسٹری {#gossip-state-history}
+## گپ شپ، حالت، تاریخ {#gossip-state-history}
 
-چند بنیادی JSON-RPC میتھڈز کو ایتھیریم نیٹ ورک سے ڈیٹا درکار ہوتا ہے، اور یہ باآسانی تین اہم زمروں میں تقسیم ہوتے ہیں: _گاسپ، اسٹیٹ، اور ہسٹری_۔ ہر میتھڈ پر جانے کے لیے ان سیکشنز میں موجود لنکس کا استعمال کریں، یا میتھڈز کی مکمل فہرست دیکھنے کے لیے فہرستِ مضامین کا استعمال کریں۔
+چند بنیادی جے سن آر پی سی طریقوں کو ایتھیریم نیٹ ورک سے ڈیٹا درکار ہوتا ہے، اور یہ صاف طور پر تین اہم زمروں میں آتے ہیں: _گپ شپ، حالت، اور تاریخ_۔ ہر طریقے پر جانے کے لیے ان حصوں میں موجود لنکس کا استعمال کریں، یا طریقوں کی پوری فہرست دریافت کرنے کے لیے فہرستِ مضامین کا استعمال کریں۔
 
-### گاسپ میتھڈز {#gossip-methods}
+### گپ شپ کے طریقے {#gossip-methods}
 
-> یہ میتھڈز چین کے ہیڈ (head) کو ٹریک کرتے ہیں۔ اسی طرح ٹرانزیکشنز نیٹ ورک میں اپنا راستہ بناتی ہیں، بلاکس میں شامل ہوتی ہیں، اور کلائنٹس کو نئے بلاکس کے بارے میں معلوم ہوتا ہے۔
+> یہ طریقے چین کے سرے کو ٹریک کرتے ہیں۔ اسی طرح ٹرانزیکشنز نیٹ ورک میں اپنا راستہ بناتی ہیں، بلاکس میں شامل ہوتی ہیں، اور کلائنٹس کو نئے بلاکس کے بارے میں پتہ چلتا ہے۔
 
-- [eth_blockNumber](#eth_blocknumber)
-- [eth_sendRawTransaction](#eth_sendrawtransaction)
+- [<span dir="ltr">eth_blockNumber</span>](#eth-blocknumber)
+- [<span dir="ltr">eth_sendRawTransaction</span>](#eth-sendrawtransaction)
 
-### اسٹیٹ میتھڈز {#state_methods}
+### حالت کے طریقے {#state-methods}
 
-> وہ میتھڈز جو تمام محفوظ کردہ ڈیٹا کی موجودہ اسٹیٹ کی رپورٹ دیتے ہیں۔ "اسٹیٹ" ایک بڑی شیئرڈ RAM کی طرح ہے، اور اس میں اکاؤنٹ بیلنس، کنٹریکٹ کا ڈیٹا، اور گیس کے تخمینے شامل ہوتے ہیں۔
+> وہ طریقے جو تمام محفوظ کردہ ڈیٹا کی موجودہ حالت کی اطلاع دیتے ہیں۔ "حالت" ایک بڑے مشترکہ <span dir="ltr">RAM</span> کے ٹکڑے کی طرح ہے، اور اس میں اکاؤنٹ کے بیلنس، کنٹریکٹ کا ڈیٹا، اور گیس کے تخمینے شامل ہیں۔
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getCode](#eth_getcode)
-- [eth_call](#eth_call)
-- [eth_estimateGas](#eth_estimategas)
+- [<span dir="ltr">eth_getBalance</span>](#eth-getbalance)
+- [<span dir="ltr">eth_getStorageAt</span>](#eth-getstorageat)
+- [<span dir="ltr">eth_getTransactionCount</span>](#eth-gettransactioncount)
+- [<span dir="ltr">eth_getCode</span>](#eth-getcode)
+- [<span dir="ltr">eth_call</span>](#eth-call)
+- [<span dir="ltr">eth_estimateGas</span>](#eth-estimategas)
 
-### ہسٹری میتھڈز {#history_methods}
+### تاریخ کے طریقے {#history-methods}
 
-> جینیسس (genesis) تک ہر بلاک کا تاریخی ریکارڈ حاصل کرتا ہے۔ یہ ایک بڑی اپینڈ-اونلی (append-only) فائل کی طرح ہے، اور اس میں تمام بلاک ہیڈرز، بلاک باڈیز، انکل (uncle) بلاکس، اور ٹرانزیکشن کی رسیدیں شامل ہوتی ہیں۔
+> ابتدائی بلاک تک ہر بلاک کا تاریخی ریکارڈ حاصل کرتا ہے۔ یہ ایک بڑی ایسی فائل کی طرح ہے جس میں صرف اضافہ کیا جا سکتا ہے، اور اس میں تمام بلاک ہیڈرز، بلاک باڈیز، انکل بلاکس، اور ٹرانزیکشن کی رسیدیں شامل ہیں۔
 
-- [eth_getBlockTransactionCountByHash](#eth_getblocktransactioncountbyhash)
-- [eth_getBlockTransactionCountByNumber](#eth_getblocktransactioncountbynumber)
-- [eth_getUncleCountByBlockHash](#eth_getunclecountbyblockhash)
-- [eth_getUncleCountByBlockNumber](#eth_getunclecountbyblocknumber)
-- [eth_getBlockByHash](#eth_getblockbyhash)
-- [eth_getBlockByNumber](#eth_getblockbynumber)
-- [eth_getTransactionByHash](#eth_gettransactionbyhash)
-- [eth_getTransactionByBlockHashAndIndex](#eth_gettransactionbyblockhashandindex)
-- [eth_getTransactionByBlockNumberAndIndex](#eth_gettransactionbyblocknumberandindex)
-- [eth_getTransactionReceipt](#eth_gettransactionreceipt)
-- [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
-- [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+- [<span dir="ltr">eth_getBlockTransactionCountByHash</span>](#eth-getblocktransactioncountbyhash)
+- [<span dir="ltr">eth_getBlockTransactionCountByNumber</span>](#eth-getblocktransactioncountbynumber)
+- [<span dir="ltr">eth_getUncleCountByBlockHash</span>](#eth-getunclecountbyblockhash)
+- [<span dir="ltr">eth_getUncleCountByBlockNumber</span>](#eth-getunclecountbyblocknumber)
+- [<span dir="ltr">eth_getBlockByHash</span>](#eth-getblockbyhash)
+- [<span dir="ltr">eth_getBlockByNumber</span>](#eth-getblockbynumber)
+- [<span dir="ltr">eth_getTransactionByHash</span>](#eth-gettransactionbyhash)
+- [<span dir="ltr">eth_getTransactionByBlockHashAndIndex</span>](#eth-gettransactionbyblockhashandindex)
+- [<span dir="ltr">eth_getTransactionByBlockNumberAndIndex</span>](#eth-gettransactionbyblocknumberandindex)
+- [<span dir="ltr">eth_getTransactionReceipt</span>](#eth-gettransactionreceipt)
+- [<span dir="ltr">eth_getUncleByBlockHashAndIndex</span>](#eth-getunclebyblockhashandindex)
+- [<span dir="ltr">eth_getUncleByBlockNumberAndIndex</span>](#eth-getunclebyblocknumberandindex)
 
-## JSON-RPC API پلے گراؤنڈ
+## جے سن آر پی سی <span dir="ltr">API</span> پلے گراؤنڈ {#json-rpc-api-playground}
 
-آپ API میتھڈز کو دریافت کرنے اور آزمانے کے لیے [پلے گراؤنڈ ٹول](https://ethereum-json-rpc.com) استعمال کر سکتے ہیں۔ یہ آپ کو یہ بھی دکھاتا ہے کہ مختلف نوڈ پرووائیڈرز کن میتھڈز اور نیٹ ورکس کو سپورٹ کرتے ہیں۔
+آپ <span dir="ltr">API</span> کے طریقوں کو دریافت کرنے اور آزمانے کے لیے [پلے گراؤنڈ ٹول](https://ethereum-json-rpc.com) استعمال کر سکتے ہیں۔ یہ آپ کو یہ بھی دکھاتا ہے کہ مختلف نوڈ فراہم کنندگان کن طریقوں اور نیٹ ورکس کو سپورٹ کرتے ہیں۔
 
-## JSON-RPC API کے طریقے {#json-rpc-methods}
+## جے سن آر پی سی API میتھڈز {#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion {#web3-clientversion}
 
-موجودہ کلائنٹ کا ورژن لوٹاتا ہے۔
+موجودہ کلائنٹ کا ورژن واپس کرتا ہے۔
 
 **پیرامیٹرز**
 
 کوئی نہیں
 
-**واپسی**
+**ریٹرنز**
 
 `String` - موجودہ کلائنٹ کا ورژن
 
@@ -163,13 +163,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### <span dir="ltr">web3_sha3</span> {#web3-sha3}
 
-دیے گئے ڈیٹا کا Keccak-256 (معیاری SHA3-256 _نہیں_) لوٹاتا ہے۔
+دیے گئے ڈیٹا کا کیچاک-۲۵۶ (_نہ کہ_ معیاری <span dir="ltr">SHA3-256</span>) واپس کرتا ہے۔
 
 **پیرامیٹرز**
 
-1. `DATA` - وہ ڈیٹا جسے SHA3 ہیش میں تبدیل کرنا ہے
+1. `DATA` - وہ ڈیٹا جسے <span dir="ltr">SHA3</span> ہیش میں تبدیل کرنا ہے
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
@@ -177,7 +177,7 @@ params: ["0x68656c6c6f20776f726c64"]
 
 **واپسی**
 
-`DATA` - دی گئی سٹرنگ کا SHA3 نتیجہ۔
+`DATA` - دی گئی سٹرنگ کا <span dir="ltr">SHA3</span> نتیجہ۔
 
 **مثال**
 
@@ -192,23 +192,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version {#net-version}
 
-موجودہ نیٹ ورک کی آئی ڈی (id) لوٹاتا ہے۔
+موجودہ نیٹ ورک کی آئی ڈی واپس کرتا ہے۔
 
 **پیرامیٹرز**
 
 کوئی نہیں
 
-**واپسی**
+**ریٹرنز**
 
 `String` - موجودہ نیٹ ورک کی آئی ڈی۔
 
-موجودہ نیٹ ورک IDs کی مکمل فہرست [chainlist.org](https://chainlist.org) پر دستیاب ہے۔ کچھ عام یہ ہیں:
+موجودہ نیٹ ورک آئی ڈیز کی مکمل فہرست [<span dir="ltr">chainlist.org</span>](https://chainlist.org) پر دستیاب ہے۔ کچھ عام یہ ہیں:
 
-- `1`: Ethereum Mainnet
-- `11155111`: Sepolia ٹیسٹ نیٹ
-- `560048` : Hoodi ٹیسٹ نیٹ
+- `1`: ایتھیریم مین نیٹ
+- `11155111`: <span dir="ltr">Sepolia</span> آزمائشی نیٹ ورک
+- `560048` : <span dir="ltr">Hoodi</span> آزمائشی نیٹ ورک
 
 **مثال**
 
@@ -223,9 +223,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening {#net-listening}
 
-اگر کلائنٹ نیٹ ورک کنکشنز کے لیے فعال طور پر سن رہا ہے تو `true` لوٹاتا ہے۔
+اگر کلائنٹ نیٹ ورک کنکشنز کے لیے فعال طور پر سن رہا ہے تو `true` واپس کرتا ہے۔
 
 **پیرامیٹرز**
 
@@ -248,17 +248,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### <span dir="ltr">net_peerCount</span> {#net-peercount}
 
-کلائنٹ سے فی الحال منسلک پیئرز (peers) کی تعداد لوٹاتا ہے۔
+کلائنٹ سے فی الحال منسلک پیئرز کی تعداد واپس کرتا ہے۔
 
 **پیرامیٹرز**
 
 کوئی نہیں
 
-**واپسی**
+**ریٹرنز**
 
-`QUANTITY` - منسلک پیئرز کی تعداد کا انٹیجر (integer)۔
+`QUANTITY` - منسلک پیئرز کی تعداد کا انٹیجر۔
 
 **مثال**
 
@@ -273,17 +273,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion {#eth-protocolversion}
 
-موجودہ Ethereum پروٹوکول کا ورژن لوٹاتا ہے۔ نوٹ کریں کہ یہ طریقہ [Geth میں دستیاب نہیں ہے](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924)۔
+موجودہ ایتھیریم پروٹوکول کا ورژن واپس کرتا ہے۔ نوٹ کریں کہ یہ میتھڈ [Geth میں دستیاب نہیں ہے](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924)۔
 
 **پیرامیٹرز**
 
 کوئی نہیں
 
-**واپسی**
+**ریٹرنز**
 
-`String` - موجودہ Ethereum پروٹوکول کا ورژن
+`String` - موجودہ ایتھیریم پروٹوکول کا ورژن
 
 **مثال**
 
@@ -298,9 +298,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### <span dir="ltr">eth_syncing</span> {#eth-syncing}
 
-سنک (sync) کی صورتحال کے بارے میں ڈیٹا کے ساتھ ایک آبجیکٹ یا `false` لوٹاتا ہے۔
+ہم آہنگی کی حیثیت کے بارے میں ڈیٹا کے ساتھ ایک آبجیکٹ یا `false` واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -310,17 +310,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 
 کوئی نہیں
 
-**واپسی**
+**واپس کرتا ہے**
 
-درست واپسی کا ڈیٹا کلائنٹ کے نفاذ کے درمیان مختلف ہوتا ہے۔ جب نوڈ سنک نہیں ہو رہا ہوتا تو تمام کلائنٹس `False` لوٹاتے ہیں، اور تمام کلائنٹس درج ذیل فیلڈز لوٹاتے ہیں۔
+درست واپسی کا ڈیٹا کلائنٹ کے نفاذ کے درمیان مختلف ہوتا ہے۔ جب نوڈ ہم آہنگ نہیں ہو رہا ہوتا ہے تو تمام کلائنٹس `False` واپس کرتے ہیں، اور تمام کلائنٹس درج ذیل فیلڈز واپس کرتے ہیں۔
 
-`Object|Boolean`، سنک کی صورتحال کے ڈیٹا کے ساتھ ایک آبجیکٹ یا `FALSE`، جب سنک نہیں ہو رہا ہو:
+`Object|Boolean`، ہم آہنگی کی حیثیت کے ڈیٹا کے ساتھ ایک آبجیکٹ یا `FALSE`، جب ہم آہنگ نہ ہو رہا ہو:
 
-- `startingBlock`: `QUANTITY` - وہ بلاک جس پر امپورٹ شروع ہوا (صرف اس وقت ری سیٹ ہوگا، جب سنک اپنے ہیڈ تک پہنچ جائے گا)
-- `currentBlock`: `QUANTITY` - موجودہ بلاک، بالکل eth_blockNumber کی طرح
-- `highestBlock`: `QUANTITY` - تخمینی سب سے اونچا بلاک
+- `startingBlock`: `QUANTITY` - وہ بلاک جس پر امپورٹ شروع ہوا (صرف اسی وقت ری سیٹ ہوگا، جب ہم آہنگی اپنے ہیڈ تک پہنچ جائے گی)
+- `currentBlock`: `QUANTITY` - موجودہ بلاک، بالکل <span dir="ltr">eth_blockNumber</span> کی طرح
+- `highestBlock`: `QUANTITY` - تخمینہ شدہ سب سے اونچا بلاک
 
-تاہم، انفرادی کلائنٹس اضافی ڈیٹا بھی فراہم کر سکتے ہیں۔ مثال کے طور پر Geth درج ذیل لوٹاتا ہے:
+تاہم، انفرادی کلائنٹس اضافی ڈیٹا بھی فراہم کر سکتے ہیں۔ مثال کے طور پر Geth درج ذیل واپس کرتا ہے:
 
 ```json
 {
@@ -345,7 +345,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-جبکہ Besu لوٹاتا ہے:
+جبکہ بیسو (Besu) واپس کرتا ہے:
 
 ```json
 {
@@ -378,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
     highestBlock: '0x454'
   }
 }
-// یا جب سنک نہ ہو رہا ہو
+// یا جب ہم آہنگی نہیں ہو رہی ہو
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -386,23 +386,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase {#eth-coinbase}
 
-کلائنٹ کا کوائن بیس (coinbase) ایڈریس لوٹاتا ہے۔
+کلائنٹ کا کوائن بیس پتہ واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
 </ButtonLink>
 
-> **نوٹ:** یہ طریقہ **v1.14.0** کے بعد سے متروک (deprecated) کر دیا گیا ہے اور اب تعاون یافتہ نہیں ہے۔ اس طریقے کو استعمال کرنے کی کوشش کے نتیجے میں "Method not supported" کی خرابی ظاہر ہوگی۔
+> **نوٹ:** یہ طریقہ **<span dir="ltr">v1.14.0</span>** سے متروک کر دیا گیا ہے اور اب اس کی معاونت نہیں کی جاتی۔ اس طریقے کو استعمال کرنے کی کوشش کے نتیجے میں <span dir="ltr">"Method not supported"</span> کی خرابی ظاہر ہوگی۔
 
 **پیرامیٹرز**
 
 کوئی نہیں
 
-**واپسی**
+**ریٹرنز**
 
-`DATA`، 20 بائٹس - موجودہ کوائن بیس ایڈریس۔
+`DATA`، 20 بائٹس - موجودہ کوائن بیس پتہ۔
 
 **مثال**
 
@@ -417,9 +417,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### <span dir="ltr">eth_chainId</span> {#eth-chainid}
 
-ری پلے سے محفوظ (replay-protected) ٹرانزیکشنز پر دستخط کرنے کے لیے استعمال ہونے والی چین آئی ڈی (chain ID) لوٹاتا ہے۔
+یہ ری پلے سے محفوظ ٹرانزیکشنز پر دستخط کرنے کے لیے استعمال ہونے والی چین کی <span dir="ltr">ID</span> واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -431,7 +431,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 
 **واپسی**
 
-`chainId`، ایک سٹرنگ کے طور پر ہیکسا ڈیسیمل ویلیو جو موجودہ چین آئی ڈی کے انٹیجر کی نمائندگی کرتی ہے۔
+`chainId`، ایک سٹرنگ کے طور پر ہیکسا ڈیسیمل قدر جو موجودہ چین کی <span dir="ltr">ID</span> کے انٹیجر کی نمائندگی کرتی ہے۔
 
 **مثال**
 
@@ -446,9 +446,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### <span dir="ltr">eth_mining</span> {#eth-mining}
 
-اگر کلائنٹ فعال طور پر نئے بلاکس کی مائننگ کر رہا ہے تو `true` لوٹاتا ہے۔ یہ صرف پروف-آف-ورک (proof-of-work) نیٹ ورکس کے لیے `true` لوٹا سکتا ہے اور [The Merge](/roadmap/merge/) کے بعد سے کچھ کلائنٹس میں دستیاب نہیں ہو سکتا ہے۔
+اگر کلائنٹ فعال طور پر نئے بلاکس کی کان کنی کر رہا ہے تو `true` لوٹاتا ہے۔ یہ صرف ثبوتِ کار (<span dir="ltr">PoW</span>) نیٹ ورکس کے لیے `true` لوٹا سکتا ہے اور [دی مرج](/roadmap/merge/) کے بعد سے کچھ کلائنٹس میں دستیاب نہیں ہو سکتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -460,14 +460,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 
 **واپسی**
 
-`Boolean` - اگر کلائنٹ مائننگ کر رہا ہے تو `true` لوٹاتا ہے، بصورت دیگر `false`۔
+`Boolean` - اگر کلائنٹ کان کنی کر رہا ہے تو `true` لوٹاتا ہے، بصورت دیگر `false`۔
 
 **مثال**
 
 ```js
 // درخواست
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
-
+//
 {
   "id":71,
   "jsonrpc": "2.0",
@@ -475,9 +475,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate {#eth-hashrate}
 
-فی سیکنڈ ہیشز کی تعداد لوٹاتا ہے جس کے ساتھ نوڈ مائننگ کر رہا ہے۔ یہ صرف پروف-آف-ورک نیٹ ورکس کے لیے `true` لوٹا سکتا ہے اور [The Merge](/roadmap/merge/) کے بعد سے کچھ کلائنٹس میں دستیاب نہیں ہو سکتا ہے۔
+یہ فی سیکنڈ ہیشز کی وہ تعداد لوٹاتا ہے جس کے ساتھ نوڈ کان کنی کر رہا ہے۔ یہ ثبوتِ کار (PoW) نیٹ ورکس کے لیے صرف `true` لوٹا سکتا ہے اور [دی مرج](/roadmap/merge/) کے بعد سے کچھ کلائنٹس میں دستیاب نہیں ہو سکتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -487,7 +487,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 
 کوئی نہیں
 
-**واپسی**
+**ریٹرنز**
 
 `QUANTITY` - فی سیکنڈ ہیشز کی تعداد۔
 
@@ -504,9 +504,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### <span dir="ltr">eth_gasPrice</span> {#eth-gasprice}
 
-wei میں فی گیس کی موجودہ قیمت کا تخمینہ لوٹاتا ہے۔ مثال کے طور پر، Besu کلائنٹ پچھلے 100 بلاکس کا جائزہ لیتا ہے اور پہلے سے طے شدہ طور پر درمیانی گیس یونٹ کی قیمت لوٹاتا ہے۔
+یہ <span dir="ltr">wei</span> میں فی گیس کی موجودہ قیمت کا تخمینہ لوٹاتا ہے۔ مثال کے طور پر، بیسو (<span dir="ltr">Besu</span>) کلائنٹ پچھلے <span dir="ltr">100</span> بلاکس کا جائزہ لیتا ہے اور پہلے سے طے شدہ طور پر گیس کی درمیانی اکائی کی قیمت لوٹاتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -516,9 +516,9 @@ wei میں فی گیس کی موجودہ قیمت کا تخمینہ لوٹاتا
 
 کوئی نہیں
 
-**واپسی**
+**ریٹرنز**
 
-`QUANTITY` - wei میں موجودہ گیس کی قیمت کا انٹیجر۔
+`QUANTITY` - <span dir="ltr">wei</span> میں موجودہ گیس کی قیمت کا انٹیجر۔
 
 **مثال**
 
@@ -533,9 +533,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts {#eth-accounts}
 
-کلائنٹ کی ملکیت والے ایڈریسز کی فہرست لوٹاتا ہے۔
+کلائنٹ کی ملکیت والے پتوں کی ایک فہرست واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -547,7 +547,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 
 **واپسی**
 
-`Array of DATA`، 20 بائٹس - کلائنٹ کی ملکیت والے ایڈریسز۔
+`Array of DATA`، 20 بائٹس - کلائنٹ کی ملکیت والے پتے۔
 
 **مثال**
 
@@ -562,7 +562,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### <span dir="ltr">eth_blockNumber</span> {#eth-blocknumber}
 
 سب سے حالیہ بلاک کا نمبر لوٹاتا ہے۔
 
@@ -591,9 +591,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance {#eth-getbalance}
 
-کسی دیے گئے ایڈریس پر اکاؤنٹ کا بیلنس لوٹاتا ہے۔
+کسی دیے گئے پتے پر اکاؤنٹ کا بیلنس واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -601,16 +601,16 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 
 **پیرامیٹرز**
 
-1. `DATA`، 20 بائٹس - وہ ایڈریس جس کا بیلنس چیک کرنا ہے۔
+1. `DATA`، <span dir="ltr">20 Bytes</span> - بیلنس چیک کرنے کے لیے پتہ۔
 2. `QUANTITY|TAG` - انٹیجر بلاک نمبر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"`، یا `"finalized"`، دیکھیں [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 ```
 
-**واپسی**
+**ریٹرنز**
 
-`QUANTITY` - wei میں موجودہ بیلنس کا انٹیجر۔
+`QUANTITY` - Wei میں موجودہ بیلنس کا انٹیجر۔
 
 **مثال**
 
@@ -625,9 +625,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### <span dir="ltr">eth_getStorageAt</span> {#eth-getstorageat}
 
-کسی دیے گئے ایڈریس پر سٹوریج کی پوزیشن سے ویلیو لوٹاتا ہے۔
+کسی دیے گئے پتے پر سٹوریج کی پوزیشن سے قدر واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -635,16 +635,16 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 
 **پیرامیٹرز**
 
-1. `DATA`، 20 بائٹس - سٹوریج کا ایڈریس۔
+1. `DATA`، <span dir="ltr">20 Bytes</span> - سٹوریج کا پتہ۔
 2. `QUANTITY` - سٹوریج میں پوزیشن کا انٹیجر۔
-3. `QUANTITY|TAG` - انٹیجر بلاک نمبر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"`، `"finalized"`، دیکھیں [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter)
+3. `QUANTITY|TAG` - انٹیجر بلاک نمبر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"`، `"finalized"`، [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter) دیکھیں۔
 
-**واپسی**
+**ریٹرنز**
 
-`DATA` - اس سٹوریج پوزیشن پر ویلیو۔
+`DATA` - اس سٹوریج پوزیشن پر قدر۔
 
 **مثال**
-درست پوزیشن کا حساب لگانا اس سٹوریج پر منحصر ہے جسے بازیافت کرنا ہے۔ ایڈریس `0x391694e7e0b0cce554cb130d723a9d27458f9298` کے ذریعے `0x295a70b2de5e3953354a6a8344e616ed314d7251` پر تعینات کیے گئے درج ذیل کنٹریکٹ پر غور کریں۔
+درست پوزیشن کا حساب لگانا بازیافت کیے جانے والے سٹوریج پر منحصر ہے۔ فرض کریں کہ درج ذیل کنٹریکٹ پتہ `0x391694e7e0b0cce554cb130d723a9d27458f9298` کے ذریعے `0x295a70b2de5e3953354a6a8344e616ed314d7251` پر تعینات کیا گیا ہے۔
 
 ```
 contract Storage {
@@ -657,20 +657,20 @@ contract Storage {
 }
 ```
 
-pos0 کی ویلیو بازیافت کرنا سیدھا سا ہے:
+<span dir="ltr">pos0</span> کی قدر بازیافت کرنا سیدھا اور آسان ہے:
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 ```
 
-میپ (map) کے کسی عنصر کو بازیافت کرنا مشکل ہے۔ میپ میں کسی عنصر کی پوزیشن کا حساب اس طرح لگایا جاتا ہے:
+میپ کے کسی عنصر کو بازیافت کرنا قدرے مشکل ہے۔ میپ میں کسی عنصر کی پوزیشن کا حساب اس طرح لگایا جاتا ہے:
 
 ```js
 keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
-اس کا مطلب ہے کہ pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] پر سٹوریج بازیافت کرنے کے لیے ہمیں اس کے ساتھ پوزیشن کا حساب لگانے کی ضرورت ہے:
+اس کا مطلب ہے کہ <span dir="ltr">pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"]</span> پر سٹوریج بازیافت کرنے کے لیے ہمیں اس کے ساتھ پوزیشن کا حساب لگانے کی ضرورت ہے:
 
 ```js
 keccak(
@@ -681,7 +681,7 @@ keccak(
 )
 ```
 
-geth کنسول جو web3 لائبریری کے ساتھ آتا ہے، حساب لگانے کے لیے استعمال کیا جا سکتا ہے:
+Web3 لائبریری کے ساتھ آنے والا <span dir="ltr">geth</span> کنسول حساب لگانے کے لیے استعمال کیا جا سکتا ہے:
 
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -697,9 +697,9 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount {#eth-gettransactioncount}
 
-کسی ایڈریس سے _بھیجی گئی_ ٹرانزیکشنز کی تعداد لوٹاتا ہے۔
+کسی پتہ سے _بھیجی گئی_ ٹرانزیکشنز کی تعداد واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -707,8 +707,8 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 **پیرامیٹرز**
 
-1. `DATA`، 20 بائٹس - ایڈریس۔
-2. `QUANTITY|TAG` - انٹیجر بلاک نمبر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"` یا `"finalized"`، دیکھیں [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`، <span dir="ltr">20 Bytes</span> - پتہ۔
+2. `QUANTITY|TAG` - انٹیجر بلاک نمبر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"` یا `"finalized"`، [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter) دیکھیں۔
 
 ```js
 params: [
@@ -719,7 +719,7 @@ params: [
 
 **واپسی**
 
-`QUANTITY` - اس ایڈریس سے بھیجی گئی ٹرانزیکشنز کی تعداد کا انٹیجر۔
+`QUANTITY` - اس پتہ سے بھیجی گئی ٹرانزیکشنز کی تعداد کا انٹیجر۔
 
 **مثال**
 
@@ -734,9 +734,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### <span dir="ltr">eth_getBlockTransactionCountByHash</span> {#eth-getblocktransactioncountbyhash}
 
-دیے گئے بلاک ہیش سے مماثل بلاک میں ٹرانزیکشنز کی تعداد لوٹاتا ہے۔
+دیے گئے بلاک ہیش سے مماثل بلاک میں موجود ٹرانزیکشنز کی تعداد واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -744,15 +744,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 
 **پیرامیٹرز**
 
-1. `DATA`، 32 بائٹس - بلاک کا ہیش
+1. `DATA`، <span dir="ltr">32 Bytes</span> - ایک بلاک کا ہیش
 
 ```js
 params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 ```
 
-**واپسی**
+**ریٹرنز**
 
-`QUANTITY` - اس بلاک میں ٹرانزیکشنز کی تعداد کا انٹیجر۔
+`QUANTITY` - اس بلاک میں موجود ٹرانزیکشنز کی تعداد کا انٹیجر۔
 
 **مثال**
 
@@ -767,9 +767,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### <span dir="ltr">eth_getBlockTransactionCountByNumber</span> {#eth-getblocktransactioncountbynumber}
 
-دیے گئے بلاک نمبر سے مماثل بلاک میں ٹرانزیکشنز کی تعداد لوٹاتا ہے۔
+دیے گئے بلاک نمبر سے مماثل بلاک میں ٹرانزیکشنز کی تعداد واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -777,7 +777,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 
 **پیرامیٹرز**
 
-1. `QUANTITY|TAG` - بلاک نمبر کا انٹیجر، یا سٹرنگ `"earliest"`، `"latest"`، `"pending"`، `"safe"` یا `"finalized"`، جیسا کہ [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter) میں ہے۔
+1. `QUANTITY|TAG` - ایک بلاک نمبر کا انٹیجر، یا سٹرنگ `"earliest"`، `"latest"`، `"pending"`، `"safe"` یا `"finalized"`، جیسا کہ [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter) میں ہے۔
 
 ```js
 params: [
@@ -785,7 +785,7 @@ params: [
 ]
 ```
 
-**واپسی**
+**ریٹرنز**
 
 `QUANTITY` - اس بلاک میں ٹرانزیکشنز کی تعداد کا انٹیجر۔
 
@@ -802,9 +802,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### <span dir="ltr">eth_getUncleCountByBlockHash</span> {#eth-getunclecountbyblockhash}
 
-دیے گئے بلاک ہیش سے مماثل بلاک میں انکلز (uncles) کی تعداد لوٹاتا ہے۔
+دیے گئے بلاک ہیش سے مماثل بلاک سے، ایک بلاک میں انکلز کی تعداد واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -812,13 +812,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 
 **پیرامیٹرز**
 
-1. `DATA`، 32 بائٹس - بلاک کا ہیش
+1. `DATA`، <span dir="ltr">32 Bytes</span> - ایک بلاک کا ہیش
 
 ```js
 params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 ```
 
-**واپسی**
+**واپس کرتا ہے**
 
 `QUANTITY` - اس بلاک میں انکلز کی تعداد کا انٹیجر۔
 
@@ -835,7 +835,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### <span dir="ltr">eth_getUncleCountByBlockNumber</span> {#eth-getunclecountbyblocknumber}
 
 دیے گئے بلاک نمبر سے مماثل بلاک میں انکلز کی تعداد لوٹاتا ہے۔
 
@@ -845,7 +845,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 
 **پیرامیٹرز**
 
-1. `QUANTITY|TAG` - بلاک نمبر کا انٹیجر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"` یا `"finalized"`، دیکھیں [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter)
+1. `QUANTITY|TAG` - بلاک نمبر کا انٹیجر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"` یا `"finalized"`، [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter) دیکھیں۔
 
 ```js
 params: [
@@ -853,7 +853,7 @@ params: [
 ]
 ```
 
-**واپسی**
+**ریٹرنز**
 
 `QUANTITY` - اس بلاک میں انکلز کی تعداد کا انٹیجر۔
 
@@ -870,9 +870,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode {#eth-getcode}
 
-کسی دیے گئے ایڈریس پر کوڈ لوٹاتا ہے۔
+کسی دیے گئے پتے پر کوڈ واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -880,7 +880,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 
 **پیرامیٹرز**
 
-1. `DATA`، 20 بائٹس - ایڈریس
+1. `DATA`، <span dir="ltr">20 Bytes</span> - پتہ
 2. `QUANTITY|TAG` - انٹیجر بلاک نمبر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"` یا `"finalized"`، دیکھیں [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
@@ -892,7 +892,7 @@ params: [
 
 **واپسی**
 
-`DATA` - دیے گئے ایڈریس سے کوڈ۔
+`DATA` - دیے گئے پتے سے کوڈ۔
 
 **مثال**
 
@@ -907,20 +907,20 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 }
 ```
 
-### eth_sign {#eth_sign}
+### <span dir="ltr">eth_sign</span> {#eth-sign}
 
-سائن (sign) کا طریقہ اس کے ساتھ ایک Ethereum مخصوص دستخط کا حساب لگاتا ہے: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`۔
+<span dir="ltr">sign</span> میتھڈ ایک مخصوص ایتھیریم دستخط کا حساب اس کے ساتھ لگاتا ہے: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`۔
 
-پیغام میں ایک سابقہ (prefix) شامل کرنے سے حسابی دستخط کو Ethereum کے مخصوص دستخط کے طور پر پہچانا جا سکتا ہے۔ یہ اس غلط استعمال کو روکتا ہے جہاں ایک بدنیتی پر مبنی ڈیپ (dapp) صوابدیدی ڈیٹا (جیسے، ٹرانزیکشن) پر دستخط کر سکتی ہے اور متاثرہ شخص کا روپ دھارنے کے لیے دستخط کا استعمال کر سکتی ہے۔
+پیغام میں ایک سابقہ شامل کرنے سے حساب شدہ دستخط کو ایتھیریم کے مخصوص دستخط کے طور پر قابل شناخت بنایا جاتا ہے۔ یہ اس غلط استعمال کو روکتا ہے جہاں ایک بدنیتی پر مبنی غیر مرکزی ایپلی کیشن (dapp) من مانے ڈیٹا (جیسے، ٹرانزیکشن) پر دستخط کر سکتی ہے اور متاثرہ شخص کا روپ دھارنے کے لیے دستخط کا استعمال کر سکتی ہے۔
 
-نوٹ: جس ایڈریس سے دستخط کرنا ہے اسے ان لاک (unlocked) ہونا چاہیے۔
+نوٹ: جس پتہ سے دستخط کرنا ہے اس کا ان لاک ہونا ضروری ہے۔
 
 **پیرامیٹرز**
 
-1. `DATA`، 20 بائٹس - ایڈریس
-2. `DATA`، N بائٹس - دستخط کرنے کے لیے پیغام
+1. `DATA`، <span dir="ltr">20 Bytes</span> - پتہ
+2. `DATA`، <span dir="ltr">N Bytes</span> - دستخط کرنے کے لیے پیغام
 
-**واپسی**
+**ریٹرنز**
 
 `DATA`: دستخط
 
@@ -937,26 +937,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### <span dir="ltr">eth_signTransaction</span> {#eth-signtransaction}
 
-ایک ٹرانزیکشن پر دستخط کرتا ہے جسے بعد میں [eth_sendRawTransaction](#eth_sendrawtransaction) کا استعمال کرتے ہوئے نیٹ ورک پر جمع کرایا جا سکتا ہے۔
+ایک ٹرانزیکشن پر دستخط کرتا ہے جسے بعد میں [<span dir="ltr">eth_sendRawTransaction</span>](#eth-sendrawtransaction) کا استعمال کرتے ہوئے نیٹ ورک پر جمع کرایا جا سکتا ہے۔
 
 **پیرامیٹرز**
 
 1. `Object` - ٹرانزیکشن آبجیکٹ
 
 - `type`:
-- `from`: `DATA`، 20 بائٹس - وہ ایڈریس جہاں سے ٹرانزیکشن بھیجی گئی ہے۔
-- `to`: `DATA`، 20 بائٹس - (نیا کنٹریکٹ بناتے وقت اختیاری) وہ ایڈریس جس پر ٹرانزیکشن بھیجی گئی ہے۔
-- `gas`: `QUANTITY` - (اختیاری، ڈیفالٹ: 90000) ٹرانزیکشن پر عمل درآمد کے لیے فراہم کردہ گیس کا انٹیجر۔ یہ غیر استعمال شدہ گیس واپس کر دے گا۔
-- `gasPrice`: `QUANTITY` - (اختیاری، ڈیفالٹ: To-Be-Determined) ہر ادا شدہ گیس کے لیے استعمال ہونے والی gasPrice کا انٹیجر، Wei میں۔
-- `value`: `QUANTITY` - (اختیاری) اس ٹرانزیکشن کے ساتھ بھیجی گئی ویلیو کا انٹیجر، Wei میں۔
-- `data`: `DATA` - کسی کنٹریکٹ کا مرتب شدہ (compiled) کوڈ یا طلب کیے گئے طریقہ کار کے دستخط اور انکوڈ شدہ پیرامیٹرز کا ہیش۔
-- `nonce`: `QUANTITY` - (اختیاری) نانس (nonce) کا انٹیجر۔ یہ آپ کو اپنی زیر التواء ٹرانزیکشنز کو اوور رائٹ کرنے کی اجازت دیتا ہے جو ایک ہی نانس استعمال کرتی ہیں۔
+- `from`: `DATA`، <span dir="ltr">20 Bytes</span> - وہ پتہ جہاں سے ٹرانزیکشن بھیجی گئی ہے۔
+- `to`: `DATA`، <span dir="ltr">20 Bytes</span> - (نیا کنٹریکٹ بناتے وقت اختیاری) وہ پتہ جس پر ٹرانزیکشن بھیجی گئی ہے۔
+- `gas`: `QUANTITY` - (اختیاری، ڈیفالٹ: <span dir="ltr">90000</span>) ٹرانزیکشن کے نفاذ کے لیے فراہم کردہ گیس کا انٹیجر۔ یہ غیر استعمال شدہ گیس واپس کر دے گا۔
+- `gasPrice`: `QUANTITY` - (اختیاری، ڈیفالٹ: طے کیا جانا باقی ہے) ہر ادا شدہ گیس کے لیے استعمال ہونے والی <span dir="ltr">gasPrice</span> کا انٹیجر، <span dir="ltr">Wei</span> میں۔
+- `value`: `QUANTITY` - (اختیاری) اس ٹرانزیکشن کے ساتھ بھیجی گئی ویلیو کا انٹیجر، <span dir="ltr">Wei</span> میں۔
+- `data`: `DATA` - کسی کنٹریکٹ کا مرتب شدہ کوڈ یا کال کیے گئے میتھڈ کے دستخط اور انکوڈ شدہ پیرامیٹرز کا ہیش۔
+- `nonce`: `QUANTITY` - (اختیاری) نانس کا انٹیجر۔ یہ آپ کو اپنی ان زیر التواء ٹرانزیکشنز کو اوور رائٹ کرنے کی اجازت دیتا ہے جو وہی نانس استعمال کرتی ہیں۔
 
-**واپسی**
+**ریٹرنز**
 
-`DATA`، مخصوص اکاؤنٹ کے ذریعے دستخط شدہ RLP-انکوڈ شدہ ٹرانزیکشن آبجیکٹ۔
+`DATA`، مخصوص اکاؤنٹ کے ذریعے دستخط شدہ <span dir="ltr">RLP-encoded</span> ٹرانزیکشن آبجیکٹ۔
 
 **مثال**
 
@@ -971,21 +971,21 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction {#eth-sendtransaction}
 
-نئی میسج کال ٹرانزیکشن یا کنٹریکٹ کی تخلیق کرتا ہے، اگر ڈیٹا فیلڈ میں کوڈ موجود ہو، اور `from` میں بتائے گئے اکاؤنٹ کا استعمال کرتے ہوئے اس پر دستخط کرتا ہے۔
+نئی پیغام کی کال کی ٹرانزیکشن یا کنٹریکٹ کی تخلیق کرتا ہے، اگر ڈیٹا فیلڈ میں کوڈ شامل ہو، اور `from` میں بتائے گئے اکاؤنٹ کا استعمال کرتے ہوئے اس پر دستخط کرتا ہے۔
 
 **پیرامیٹرز**
 
 1. `Object` - ٹرانزیکشن آبجیکٹ
 
-- `from`: `DATA`، 20 بائٹس - وہ ایڈریس جہاں سے ٹرانزیکشن بھیجی گئی ہے۔
-- `to`: `DATA`، 20 بائٹس - (نیا کنٹریکٹ بناتے وقت اختیاری) وہ ایڈریس جس پر ٹرانزیکشن بھیجی گئی ہے۔
-- `gas`: `QUANTITY` - (اختیاری، ڈیفالٹ: 90000) ٹرانزیکشن پر عمل درآمد کے لیے فراہم کردہ گیس کا انٹیجر۔ یہ غیر استعمال شدہ گیس واپس کر دے گا۔
-- `gasPrice`: `QUANTITY` - (اختیاری، ڈیفالٹ: To-Be-Determined) ہر ادا شدہ گیس کے لیے استعمال ہونے والی gasPrice کا انٹیجر۔
-- `value`: `QUANTITY` - (اختیاری) اس ٹرانزیکشن کے ساتھ بھیجی گئی ویلیو کا انٹیجر۔
-- `input`: `DATA` - کسی کنٹریکٹ کا مرتب شدہ کوڈ یا طلب کیے گئے طریقہ کار کے دستخط اور انکوڈ شدہ پیرامیٹرز کا ہیش۔
-- `nonce`: `QUANTITY` - (اختیاری) نانس کا انٹیجر۔ یہ آپ کو اپنی زیر التواء ٹرانزیکشنز کو اوور رائٹ کرنے کی اجازت دیتا ہے جو ایک ہی نانس استعمال کرتی ہیں۔
+- `from`: `DATA`, <span dir="ltr">20 Bytes</span> - وہ پتہ جہاں سے ٹرانزیکشن بھیجی گئی ہے۔
+- `to`: `DATA`, <span dir="ltr">20 Bytes</span> - (نیا کنٹریکٹ بناتے وقت اختیاری) وہ پتہ جس پر ٹرانزیکشن بھیجی گئی ہے۔
+- `gas`: `QUANTITY` - (اختیاری، ڈیفالٹ: <span dir="ltr">90000</span>) ٹرانزیکشن کے نفاذ کے لیے فراہم کردہ گیس کا انٹیجر (Integer)۔ یہ غیر استعمال شدہ گیس واپس کر دے گا۔
+- `gasPrice`: `QUANTITY` - (اختیاری، ڈیفالٹ: طے کیا جانا باقی ہے) ہر ادا شدہ گیس کے لیے استعمال ہونے والی گیس کی قیمت (gasPrice) کا انٹیجر۔
+- `value`: `QUANTITY` - (اختیاری) اس ٹرانزیکشن کے ساتھ بھیجی گئی ویلیو (value) کا انٹیجر۔
+- `input`: `DATA` - کسی کنٹریکٹ کا مرتب شدہ (compiled) کوڈ یا طلب کیے گئے طریقہ کار کے دستخط (method signature) اور انکوڈ شدہ پیرامیٹرز کا ہیش۔
+- `nonce`: `QUANTITY` - (اختیاری) نانس کا انٹیجر۔ یہ آپ کو اپنی ان زیر التواء ٹرانزیکشنز کو اوور رائٹ کرنے کی اجازت دیتا ہے جو ایک ہی نانس استعمال کرتی ہیں۔
 
 ```js
 params: [
@@ -1001,11 +1001,11 @@ params: [
 ]
 ```
 
-**واپسی**
+**ریٹرنز**
 
-`DATA`، 32 بائٹس - ٹرانزیکشن ہیش، یا صفر ہیش اگر ٹرانزیکشن ابھی دستیاب نہیں ہے۔
+`DATA`, <span dir="ltr">32 Bytes</span> - ٹرانزیکشن ہیش، یا صفر ہیش اگر ٹرانزیکشن ابھی تک دستیاب نہیں ہے۔
 
-جب آپ نے کوئی کنٹریکٹ بنایا ہو، تو بلاک میں ٹرانزیکشن تجویز کیے جانے کے بعد، کنٹریکٹ کا ایڈریس حاصل کرنے کے لیے [eth_getTransactionReceipt](#eth_gettransactionreceipt) کا استعمال کریں۔
+جب آپ نے کوئی کنٹریکٹ بنایا ہو، تو ٹرانزیکشن کو کسی بلاک میں تجویز کیے جانے کے بعد کنٹریکٹ کا پتہ حاصل کرنے کے لیے [eth_getTransactionReceipt](#eth-gettransactionreceipt) کا استعمال کریں۔
 
 **مثال**
 
@@ -1020,9 +1020,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth-sendrawtransaction}
 
-دستخط شدہ ٹرانزیکشنز کے لیے نئی میسج کال ٹرانزیکشن یا کنٹریکٹ کی تخلیق کرتا ہے۔
+دستخط شدہ ٹرانزیکشنز کے لیے نئی پیغام کی کال کی ٹرانزیکشن یا کنٹریکٹ کی تخلیق کرتا ہے۔
 
 **پیرامیٹرز**
 
@@ -1034,11 +1034,11 @@ params: [
 ]
 ```
 
-**واپسی**
+**ریٹرنز**
 
-`DATA`، 32 بائٹس - ٹرانزیکشن ہیش، یا صفر ہیش اگر ٹرانزیکشن ابھی دستیاب نہیں ہے۔
+`DATA`، <span dir="ltr">32 Bytes</span> - ٹرانزیکشن ہیش، یا صفر ہیش اگر ٹرانزیکشن ابھی تک دستیاب نہیں ہے۔
 
-جب آپ نے کوئی کنٹریکٹ بنایا ہو، تو بلاک میں ٹرانزیکشن تجویز کیے جانے کے بعد، کنٹریکٹ کا ایڈریس حاصل کرنے کے لیے [eth_getTransactionReceipt](#eth_gettransactionreceipt) کا استعمال کریں۔
+جب آپ نے کوئی کنٹریکٹ بنایا ہو، تو ٹرانزیکشن کو ایک بلاک میں تجویز کیے جانے کے بعد، کنٹریکٹ کا پتہ حاصل کرنے کے لیے [eth_getTransactionReceipt](#eth-gettransactionreceipt) کا استعمال کریں۔
 
 **مثال**
 
@@ -1053,9 +1053,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call {#eth-call}
 
-بلاک چین پر ٹرانزیکشن بنائے بغیر فوری طور پر ایک نئی میسج کال پر عمل درآمد کرتا ہے۔ اکثر صرف پڑھنے کے لیے (read-only) سمارٹ کنٹریکٹ فنکشنز کو چلانے کے لیے استعمال کیا جاتا ہے، مثال کے طور پر ERC-20 کنٹریکٹ کے لیے `balanceOf`۔
+بلاک چین پر ٹرانزیکشن بنائے بغیر فوری طور پر ایک نئی پیغام کی کال انجام دیتا ہے۔ اکثر صرف پڑھنے کے قابل سمارٹ کنٹریکٹ فنکشنز کو انجام دینے کے لیے استعمال ہوتا ہے، مثال کے طور پر <span dir="ltr">ERC-20</span> کنٹریکٹ کے لیے `balanceOf`۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -1065,18 +1065,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 1. `Object` - ٹرانزیکشن کال آبجیکٹ
 
-- `from`: `DATA`، 20 بائٹس - (اختیاری) وہ ایڈریس جہاں سے ٹرانزیکشن بھیجی گئی ہے۔
-- `to`: `DATA`، 20 بائٹس - وہ ایڈریس جس پر ٹرانزیکشن بھیجی گئی ہے۔
-- `gas`: `QUANTITY` - (اختیاری) ٹرانزیکشن پر عمل درآمد کے لیے فراہم کردہ گیس کا انٹیجر۔ eth_call صفر گیس استعمال کرتا ہے، لیکن کچھ عمل درآمد کے لیے اس پیرامیٹر کی ضرورت ہو سکتی ہے۔
-- `gasPrice`: `QUANTITY` - (اختیاری) ہر ادا شدہ گیس کے لیے استعمال ہونے والی gasPrice کا انٹیجر
+- `from`: `DATA`، <span dir="ltr">20 Bytes</span> - (اختیاری) وہ پتہ جہاں سے ٹرانزیکشن بھیجی گئی ہے۔
+- `to`: `DATA`، <span dir="ltr">20 Bytes</span> - وہ پتہ جس پر ٹرانزیکشن بھیجی گئی ہے۔
+- `gas`: `QUANTITY` - (اختیاری) ٹرانزیکشن کے نفاذ کے لیے فراہم کردہ گیس کا انٹیجر۔ <span dir="ltr">eth_call</span> صفر گیس استعمال کرتا ہے، لیکن کچھ ایگزیکیوشنز کو اس پیرامیٹر کی ضرورت ہو سکتی ہے۔
+- `gasPrice`: `QUANTITY` - (اختیاری) ہر ادا شدہ گیس کے لیے استعمال ہونے والی <span dir="ltr">gasPrice</span> کا انٹیجر
 - `value`: `QUANTITY` - (اختیاری) اس ٹرانزیکشن کے ساتھ بھیجی گئی ویلیو کا انٹیجر
-- `input`: `DATA` - (اختیاری) طریقہ کار کے دستخط اور انکوڈ شدہ پیرامیٹرز کا ہیش۔ تفصیلات کے لیے [Solidity دستاویزات میں Ethereum Contract ABI](https://docs.soliditylang.org/en/latest/abi-spec.html) دیکھیں۔
+- `input`: `DATA` - (اختیاری) میتھڈ کے دستخط اور انکوڈ شدہ پیرامیٹرز کا ہیش۔ تفصیلات کے لیے <span dir="ltr">Solidity</span> کی دستاویزات میں [ایتھیریم کنٹریکٹ <span dir="ltr">ABI</span>](https://docs.soliditylang.org/en/latest/abi-spec.html) دیکھیں۔
 
-2. `QUANTITY|TAG` - انٹیجر بلاک نمبر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"` یا `"finalized"`، دیکھیں [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - انٹیجر بلاک نمبر، یا سٹرنگ `"latest"`، `"earliest"`، `"pending"`، `"safe"` یا `"finalized"`، [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter) دیکھیں۔
 
 **واپسی**
 
-`DATA` - عمل میں لائے گئے کنٹریکٹ کی واپسی کی ویلیو۔
+`DATA` - نفاذ شدہ کنٹریکٹ کی واپسی کی ویلیو۔
 
 **مثال**
 
@@ -1091,9 +1091,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas {#eth-estimategas}
 
-اس بات کا تخمینہ تیار کرتا ہے اور لوٹاتا ہے کہ ٹرانزیکشن کو مکمل ہونے دینے کے لیے کتنی گیس ضروری ہے۔ ٹرانزیکشن کو بلاک چین میں شامل نہیں کیا جائے گا۔ نوٹ کریں کہ یہ تخمینہ ٹرانزیکشن کے ذریعے اصل میں استعمال ہونے والی گیس کی مقدار سے نمایاں طور پر زیادہ ہو سکتا ہے، جس کی مختلف وجوہات ہیں جن میں EVM میکینکس اور نوڈ کی کارکردگی شامل ہیں۔
+یہ اندازہ لگاتا ہے اور واپس کرتا ہے کہ ٹرانزیکشن کو مکمل ہونے کے لیے کتنی گیس درکار ہے۔ ٹرانزیکشن کو بلاک چین میں شامل نہیں کیا جائے گا۔ نوٹ کریں کہ یہ اندازہ ٹرانزیکشن کے ذریعے اصل میں استعمال ہونے والی گیس کی مقدار سے نمایاں طور پر زیادہ ہو سکتا ہے، جس کی مختلف وجوہات ہو سکتی ہیں جن میں <span dir="ltr">EVM</span> میکینکس اور نوڈ کی کارکردگی شامل ہیں۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -1101,11 +1101,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 **پیرامیٹرز**
 
-[eth_call](#eth_call) کے پیرامیٹرز دیکھیں، سوائے اس کے کہ تمام خصوصیات اختیاری ہیں۔ اگر گیس کی کوئی حد متعین نہیں کی گئی ہے تو geth زیر التواء بلاک سے بلاک گیس کی حد کو اوپری حد کے طور پر استعمال کرتا ہے۔ نتیجے کے طور پر، جب گیس کی مقدار زیر التواء بلاک گیس کی حد سے زیادہ ہو تو لوٹایا گیا تخمینہ کال/ٹرانزیکشن پر عمل درآمد کے لیے کافی نہیں ہو سکتا ہے۔
+[eth_call](#eth-call) کے پیرامیٹرز دیکھیں، سوائے اس کے کہ تمام خصوصیات اختیاری ہیں۔ اگر گیس کی حد متعین نہیں کی گئی ہے تو <span dir="ltr">Geth</span> زیر التواء بلاک سے بلاک گیس کی حد کو بالائی حد کے طور پر استعمال کرتا ہے۔ نتیجے کے طور پر، جب گیس کی مقدار زیر التواء بلاک گیس کی حد سے زیادہ ہو تو واپس کیا گیا اندازہ کال/ٹرانزیکشن کو انجام دینے کے لیے کافی نہیں ہو سکتا۔
 
 **واپسی**
 
-`QUANTITY` - استعمال شدہ گیس کی مقدار۔
+`QUANTITY` - استعمال ہونے والی گیس کی مقدار۔
 
 **مثال**
 
@@ -1120,9 +1120,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### <span dir="ltr">eth_getBlockByHash</span> {#eth-getblockbyhash}
 
-ہیش کے ذریعے بلاک کے بارے میں معلومات لوٹاتا ہے۔
+ہیش کے ذریعے بلاک کے بارے میں معلومات واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -1130,8 +1130,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 
 **پیرامیٹرز**
 
-1. `DATA`، 32 بائٹس - بلاک کا ہیش۔
-2. `Boolean` - اگر `true` ہے تو یہ مکمل ٹرانزیکشن آبجیکٹس لوٹاتا ہے، اگر `false` ہے تو صرف ٹرانزیکشنز کے ہیشز۔
+1. `DATA`، <span dir="ltr">32 Bytes</span> - بلاک کا ہیش۔
+2. `Boolean` - اگر `true` ہو تو یہ مکمل ٹرانزیکشن آبجیکٹس واپس کرتا ہے، اگر `false` ہو تو صرف ٹرانزیکشنز کے ہیشز۔
 
 ```js
 params: [
@@ -1140,29 +1140,29 @@ params: [
 ]
 ```
 
-**واپسی**
+**نتائج**
 
-`Object` - ایک بلاک آبجیکٹ، یا `null` جب کوئی بلاک نہیں ملا:
+`Object` - ایک بلاک آبجیکٹ، یا جب کوئی بلاک نہ ملے تو `null`:
 
-- `number`: `QUANTITY` - بلاک نمبر۔ `null` جب یہ زیر التواء بلاک ہو۔
-- `hash`: `DATA`، 32 بائٹس - بلاک کا ہیش۔ `null` جب یہ زیر التواء بلاک ہو۔
-- `parentHash`: `DATA`، 32 بائٹس - پیرنٹ (parent) بلاک کا ہیش۔
-- `nonce`: `DATA`، 8 بائٹس - تیار کردہ پروف-آف-ورک کا ہیش۔ `null` جب یہ زیر التواء بلاک ہو، پروف-آف-اسٹیک (proof-of-stake) بلاکس کے لیے `0x0` (The Merge کے بعد سے)
-- `sha3Uncles`: `DATA`، 32 بائٹس - بلاک میں انکلز کے ڈیٹا کا SHA3۔
-- `logsBloom`: `DATA`، 256 بائٹس - بلاک کے لاگز (logs) کے لیے بلوم فلٹر (bloom filter)۔ `null` جب یہ زیر التواء بلاک ہو۔
-- `transactionsRoot`: `DATA`، 32 بائٹس - بلاک کی ٹرانزیکشن ٹرائی (trie) کا روٹ (root)۔
-- `stateRoot`: `DATA`، 32 بائٹس - بلاک کی حتمی اسٹیٹ (state) ٹرائی کا روٹ۔
-- `receiptsRoot`: `DATA`، 32 بائٹس - بلاک کی رسیدوں (receipts) کی ٹرائی کا روٹ۔
-- `miner`: `DATA`، 20 بائٹس - اس مستفید ہونے والے کا ایڈریس جسے بلاک کے انعامات دیے گئے تھے۔
-- `difficulty`: `QUANTITY` - اس بلاک کے لیے مشکل (difficulty) کا انٹیجر۔
-- `totalDifficulty`: `QUANTITY` - اس بلاک تک چین کی کل مشکل کا انٹیجر۔
-- `extraData`: `DATA` - اس بلاک کی "اضافی ڈیٹا" فیلڈ۔
+- `number`: `QUANTITY` - بلاک کا نمبر۔ جب یہ زیر التوا بلاک ہو تو `null`۔
+- `hash`: `DATA`، <span dir="ltr">32 Bytes</span> - بلاک کا ہیش۔ جب یہ زیر التوا بلاک ہو تو `null`۔
+- `parentHash`: `DATA`، <span dir="ltr">32 Bytes</span> - پیرنٹ بلاک کا ہیش۔
+- `nonce`: `DATA`، <span dir="ltr">8 Bytes</span> - تیار کردہ ثبوتِ کار (PoW) کا ہیش۔ جب یہ زیر التوا بلاک ہو تو `null`، حصہ داری کا ثبوت (PoS) بلاکس کے لیے `0x0` (دی مرج کے بعد سے)
+- `sha3Uncles`: `DATA`، <span dir="ltr">32 Bytes</span> - بلاک میں انکلز کے ڈیٹا کا <span dir="ltr">SHA3</span>۔
+- `logsBloom`: `DATA`، <span dir="ltr">256 Bytes</span> - بلاک کے لاگز کے لیے بلوم فلٹر۔ جب یہ زیر التوا بلاک ہو تو `null`۔
+- `transactionsRoot`: `DATA`، <span dir="ltr">32 Bytes</span> - بلاک کی ٹرانزیکشن ٹرائی کا روٹ۔
+- `stateRoot`: `DATA`، <span dir="ltr">32 Bytes</span> - بلاک کی حتمی حالت کی ٹرائی کا روٹ۔
+- `receiptsRoot`: `DATA`، <span dir="ltr">32 Bytes</span> - بلاک کی رسیدوں کی ٹرائی کا روٹ۔
+- `miner`: `DATA`، <span dir="ltr">20 Bytes</span> - اس مستفید کا پتہ جسے بلاک کے انعامات دیے گئے تھے۔
+- `difficulty`: `QUANTITY` - اس بلاک کی دشواری کا انٹیجر۔
+- `totalDifficulty`: `QUANTITY` - اس بلاک تک چین کی کل دشواری کا انٹیجر۔
+- `extraData`: `DATA` - اس بلاک کا "اضافی ڈیٹا" فیلڈ۔
 - `size`: `QUANTITY` - بائٹس میں اس بلاک کے سائز کا انٹیجر۔
-- `gasLimit`: `QUANTITY` - اس بلاک میں زیادہ سے زیادہ گیس کی اجازت۔
-- `gasUsed`: `QUANTITY` - اس بلاک میں تمام ٹرانزیکشنز کے ذریعے استعمال ہونے والی کل گیس۔
-- `timestamp`: `QUANTITY` - یونکس ٹائم اسٹیمپ (unix timestamp) جب بلاک کو مرتب کیا گیا تھا۔
-- `transactions`: `Array` - ٹرانزیکشن آبجیکٹس کی Array، یا آخری دیے گئے پیرامیٹر کے لحاظ سے 32 بائٹس کے ٹرانزیکشن ہیشز۔
-- `uncles`: `Array` - انکل ہیشز کی Array۔
+- `gasLimit`: `QUANTITY` - اس بلاک میں زیادہ سے زیادہ اجازت یافتہ گیس۔
+- `gasUsed`: `QUANTITY` - اس بلاک میں تمام ٹرانزیکشنز کے ذریعے استعمال شدہ کل گیس۔
+- `timestamp`: `QUANTITY` - بلاک مرتب کیے جانے کے وقت کا یونکس ٹائم اسٹیمپ۔
+- `transactions`: `Array` - آخری دیے گئے پیرامیٹر کی بنیاد پر، ٹرانزیکشن آبجیکٹس کی ایرے، یا <span dir="ltr">32 Bytes</span> کے ٹرانزیکشن ہیشز۔
+- `uncles`: `Array` - انکل ہیشز کی ایرے۔
 
 **مثال**
 
@@ -1200,9 +1200,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth-getblockbynumber}
 
-بلاک نمبر کے ذریعے بلاک کے بارے میں معلومات لوٹاتا ہے۔
+بلاک نمبر کے ذریعے کسی بلاک کے بارے میں معلومات فراہم کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByNumber">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -1211,7 +1211,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 **پیرامیٹرز**
 
 1. `QUANTITY|TAG` - بلاک نمبر کا انٹیجر، یا سٹرنگ `"earliest"`، `"latest"`، `"pending"`، `"safe"` یا `"finalized"`، جیسا کہ [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter) میں ہے۔
-2. `Boolean` - اگر `true` ہے تو یہ مکمل ٹرانزیکشن آبجیکٹس لوٹاتا ہے، اگر `false` ہے تو صرف ٹرانزیکشنز کے ہیشز۔
+2. `Boolean` - اگر `true` ہو تو یہ مکمل ٹرانزیکشن آبجیکٹس فراہم کرتا ہے، اگر `false` ہو تو صرف ٹرانزیکشنز کے ہیشز۔
 
 ```js
 params: [
@@ -1221,7 +1221,7 @@ params: [
 ```
 
 **واپسی**
-دیکھیں [eth_getBlockByHash](#eth_getblockbyhash)
+[eth_getBlockByHash](#eth-getblockbyhash) دیکھیں
 
 **مثال**
 
@@ -1230,11 +1230,11 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-نتیجہ دیکھیں [eth_getBlockByHash](#eth_getblockbyhash)
+نتیجہ کے لیے [eth_getBlockByHash](#eth-getblockbyhash) دیکھیں
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth-gettransactionbyhash}
 
-ٹرانزیکشن ہیش کے ذریعے درخواست کردہ ٹرانزیکشن کے بارے میں معلومات لوٹاتا ہے۔
+ٹرانزیکشن ہیش کے ذریعے درخواست کردہ ٹرانزیکشن کے بارے میں معلومات واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -1242,30 +1242,30 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":[
 
 **پیرامیٹرز**
 
-1. `DATA`، 32 بائٹس - ٹرانزیکشن کا ہیش
+1. `DATA`، <span dir="ltr">32 Bytes</span> - ٹرانزیکشن کا ہیش
 
 ```js
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 ```
 
-**واپسی**
+**ریٹرنز**
 
-`Object` - ایک ٹرانزیکشن آبجیکٹ، یا `null` جب کوئی ٹرانزیکشن نہیں ملی:
+`Object` - ایک ٹرانزیکشن آبجیکٹ، یا `null` جب کوئی ٹرانزیکشن نہ ملے:
 
-- `blockHash`: `DATA`، 32 بائٹس - اس بلاک کا ہیش جہاں یہ ٹرانزیکشن تھی۔ `null` جب یہ زیر التواء ہو۔
-- `blockNumber`: `QUANTITY` - وہ بلاک نمبر جہاں یہ ٹرانزیکشن تھی۔ `null` جب یہ زیر التواء ہو۔
-- `from`: `DATA`، 20 بائٹس - بھیجنے والے کا ایڈریس۔
+- `blockHash`: `DATA`، <span dir="ltr">32 Bytes</span> - اس بلاک کا ہیش جس میں یہ ٹرانزیکشن موجود تھی۔ `null` جب یہ زیر التوا ہو۔
+- `blockNumber`: `QUANTITY` - بلاک نمبر جس میں یہ ٹرانزیکشن موجود تھی۔ `null` جب یہ زیر التوا ہو۔
+- `from`: `DATA`، <span dir="ltr">20 Bytes</span> - بھیجنے والے کا پتہ۔
 - `gas`: `QUANTITY` - بھیجنے والے کی طرف سے فراہم کردہ گیس۔
-- `gasPrice`: `QUANTITY` - بھیجنے والے کی طرف سے Wei میں فراہم کردہ گیس کی قیمت۔
-- `hash`: `DATA`، 32 بائٹس - ٹرانزیکشن کا ہیش۔
+- `gasPrice`: `QUANTITY` - بھیجنے والے کی طرف سے <span dir="ltr">Wei</span> میں فراہم کردہ گیس کی قیمت۔
+- `hash`: `DATA`، <span dir="ltr">32 Bytes</span> - ٹرانزیکشن کا ہیش۔
 - `input`: `DATA` - ٹرانزیکشن کے ساتھ بھیجا گیا ڈیٹا۔
 - `nonce`: `QUANTITY` - اس سے پہلے بھیجنے والے کی طرف سے کی گئی ٹرانزیکشنز کی تعداد۔
-- `to`: `DATA`، 20 بائٹس - وصول کنندہ کا ایڈریس۔ `null` جب یہ کنٹریکٹ بنانے کی ٹرانزیکشن ہو۔
-- `transactionIndex`: `QUANTITY` - بلاک میں ٹرانزیکشنز کی انڈیکس پوزیشن کا انٹیجر۔ `null` جب یہ زیر التواء ہو۔
-- `value`: `QUANTITY` - Wei میں منتقل کی گئی ویلیو۔
-- `v`: `QUANTITY` - ECDSA ریکوری آئی ڈی
-- `r`: `QUANTITY` - ECDSA دستخط r
-- `s`: `QUANTITY` - ECDSA دستخط s
+- `to`: `DATA`، <span dir="ltr">20 Bytes</span> - وصول کنندہ کا پتہ۔ `null` جب یہ معاہدے کی تخلیق کی ٹرانزیکشن ہو۔
+- `transactionIndex`: `QUANTITY` - بلاک میں ٹرانزیکشنز کی اشاریہ پوزیشن کا عدد (<span dir="ltr">integer</span>)۔ `null` جب یہ زیر التوا ہو۔
+- `value`: `QUANTITY` - <span dir="ltr">Wei</span> میں منتقل کی گئی قدر۔
+- `v`: `QUANTITY` - <span dir="ltr">ECDSA</span> ریکوری آئی ڈی
+- `r`: `QUANTITY` - <span dir="ltr">ECDSA</span> دستخط <span dir="ltr">r</span>
+- `s`: `QUANTITY` - <span dir="ltr">ECDSA</span> دستخط <span dir="ltr">s</span>
 
 **مثال**
 
@@ -1295,9 +1295,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### <span dir="ltr">eth_getTransactionByBlockHashAndIndex</span> {#eth-gettransactionbyblockhashandindex}
 
-بلاک ہیش اور ٹرانزیکشن انڈیکس پوزیشن کے ذریعے ٹرانزیکشن کے بارے میں معلومات لوٹاتا ہے۔
+بلاک ہیش اور ٹرانزیکشن کے اشاریہ کی پوزیشن کے لحاظ سے ٹرانزیکشن کے بارے میں معلومات لوٹاتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -1305,8 +1305,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 
 **پیرامیٹرز**
 
-1. `DATA`، 32 بائٹس - بلاک کا ہیش۔
-2. `QUANTITY` - ٹرانزیکشن انڈیکس پوزیشن کا انٹیجر۔
+1. `DATA`، <span dir="ltr">32 Bytes</span> - ایک بلاک کا ہیش۔
+2. `QUANTITY` - ٹرانزیکشن کے اشاریہ کی پوزیشن کا عدد۔
 
 ```js
 params: [
@@ -1315,8 +1315,8 @@ params: [
 ]
 ```
 
-**واپسی**
-دیکھیں [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**ریٹرنز**
+[<span dir="ltr">eth_getTransactionByHash</span>](#eth-gettransactionbyhash) دیکھیں
 
 **مثال**
 
@@ -1325,11 +1325,11 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-نتیجہ دیکھیں [eth_getTransactionByHash](#eth_gettransactionbyhash)
+نتیجہ کے لیے [<span dir="ltr">eth_getTransactionByHash</span>](#eth-gettransactionbyhash) دیکھیں
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### <span dir="ltr">eth_getTransactionByBlockNumberAndIndex</span> {#eth-gettransactionbyblocknumberandindex}
 
-بلاک نمبر اور ٹرانزیکشن انڈیکس پوزیشن کے ذریعے ٹرانزیکشن کے بارے میں معلومات لوٹاتا ہے۔
+یہ بلاک نمبر اور ٹرانزیکشن کے اشاریہ کی پوزیشن کے لحاظ سے ٹرانزیکشن کے بارے میں معلومات لوٹاتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -1338,7 +1338,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAnd
 **پیرامیٹرز**
 
 1. `QUANTITY|TAG` - ایک بلاک نمبر، یا سٹرنگ `"earliest"`، `"latest"`، `"pending"`، `"safe"` یا `"finalized"`، جیسا کہ [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter) میں ہے۔
-2. `QUANTITY` - ٹرانزیکشن انڈیکس پوزیشن۔
+2. `QUANTITY` - ٹرانزیکشن کے اشاریہ کی پوزیشن۔
 
 ```js
 params: [
@@ -1347,8 +1347,8 @@ params: [
 ]
 ```
 
-**واپسی**
-دیکھیں [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**ریٹرنز**
+[<span dir="ltr">eth_getTransactionByHash</span>](#eth-gettransactionbyhash) دیکھیں
 
 **مثال**
 
@@ -1357,42 +1357,42 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-نتیجہ دیکھیں [eth_getTransactionByHash](#eth_gettransactionbyhash)
+نتیجہ کے لیے [<span dir="ltr">eth_getTransactionByHash</span>](#eth-gettransactionbyhash) دیکھیں۔
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth-gettransactionreceipt}
 
-ٹرانزیکشن ہیش کے ذریعے ٹرانزیکشن کی رسید لوٹاتا ہے۔
+ٹرانزیکشن ہیش کے ذریعے کسی ٹرانزیکشن کی رسید واپس کرتا ہے۔
 
-**نوٹ** کہ زیر التواء ٹرانزیکشنز کے لیے رسید دستیاب نہیں ہے۔
+**نوٹ** کہ زیر التوا ٹرانزیکشنز کے لیے رسید دستیاب نہیں ہے۔
 
 **پیرامیٹرز**
 
-1. `DATA`، 32 بائٹس - ٹرانزیکشن کا ہیش
+1. `DATA`، <span dir="ltr">32 Bytes</span> - کسی ٹرانزیکشن کا ہیش
 
 ```js
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
 **واپسی**
-`Object` - ایک ٹرانزیکشن رسید آبجیکٹ، یا `null` جب کوئی رسید نہیں ملی:
+`Object` - ایک ٹرانزیکشن کی رسید کا آبجیکٹ، یا `null` جب کوئی رسید نہ ملے:
 
-- `transactionHash `: `DATA`، 32 بائٹس - ٹرانزیکشن کا ہیش۔
-- `transactionIndex`: `QUANTITY` - بلاک میں ٹرانزیکشنز کی انڈیکس پوزیشن کا انٹیجر۔
-- `blockHash`: `DATA`، 32 بائٹس - اس بلاک کا ہیش جہاں یہ ٹرانزیکشن تھی۔
-- `blockNumber`: `QUANTITY` - وہ بلاک نمبر جہاں یہ ٹرانزیکشن تھی۔
-- `from`: `DATA`، 20 بائٹس - بھیجنے والے کا ایڈریس۔
-- `to`: `DATA`، 20 بائٹس - وصول کنندہ کا ایڈریس۔ null جب یہ کنٹریکٹ بنانے کی ٹرانزیکشن ہو۔
-- `cumulativeGasUsed ` : `QUANTITY ` - جب یہ ٹرانزیکشن بلاک میں عمل میں لائی گئی تو استعمال ہونے والی گیس کی کل مقدار۔
-- `effectiveGasPrice ` : `QUANTITY` - گیس کی فی یونٹ ادا کی گئی بنیادی فیس اور ٹپ کا مجموعہ۔
+- `transactionHash `: `DATA`، <span dir="ltr">32 Bytes</span> - ٹرانزیکشن کا ہیش۔
+- `transactionIndex`: `QUANTITY` - بلاک میں ٹرانزیکشنز کی اشاریہ پوزیشن کا انٹیجر۔
+- `blockHash`: `DATA`، <span dir="ltr">32 Bytes</span> - اس بلاک کا ہیش جس میں یہ ٹرانزیکشن موجود تھی۔
+- `blockNumber`: `QUANTITY` - اس بلاک کا نمبر جس میں یہ ٹرانزیکشن موجود تھی۔
+- `from`: `DATA`، <span dir="ltr">20 Bytes</span> - بھیجنے والے کا پتہ۔
+- `to`: `DATA`، <span dir="ltr">20 Bytes</span> - وصول کنندہ کا پتہ۔ جب یہ معاہدے کی تخلیق کی ٹرانزیکشن ہو تو null ہوتا ہے۔
+- `cumulativeGasUsed` : `QUANTITY ` - بلاک میں اس ٹرانزیکشن کے ایگزیکیوٹ ہونے پر استعمال ہونے والی گیس کی کل مقدار۔
+- `effectiveGasPrice` : `QUANTITY` - گیس کی فی اکائی ادا کی گئی بنیادی فیس اور ٹپ کا مجموعہ۔
 - `gasUsed `: `QUANTITY ` - صرف اس مخصوص ٹرانزیکشن کے ذریعے استعمال ہونے والی گیس کی مقدار۔
-- `contractAddress `: `DATA`، 20 بائٹس - بنایا گیا کنٹریکٹ ایڈریس، اگر ٹرانزیکشن کنٹریکٹ کی تخلیق تھی، بصورت دیگر `null`۔
-- `logs`: `Array` - لاگ آبجیکٹس کی Array، جو اس ٹرانزیکشن نے تیار کیے۔
-- `logsBloom`: `DATA`، 256 بائٹس - لائٹ کلائنٹس کے لیے متعلقہ لاگز کو تیزی سے بازیافت کرنے کے لیے بلوم فلٹر۔
-- `type`: `QUANTITY` - ٹرانزیکشن کی قسم کا انٹیجر، پرانی (legacy) ٹرانزیکشنز کے لیے `0x0`، ایکسیس لسٹ (access list) کی اقسام کے لیے `0x1`، متحرک فیس (dynamic fees) کے لیے `0x2`۔
+- `contractAddress `: `DATA`، <span dir="ltr">20 Bytes</span> - تخلیق کردہ کنٹریکٹ کا پتہ، اگر ٹرانزیکشن معاہدے کی تخلیق تھی، بصورت دیگر `null`۔
+- `logs`: `Array` - لاگ آبجیکٹس کی ارے (Array)، جو اس ٹرانزیکشن نے تیار کی ہے۔
+- `logsBloom`: `DATA`، <span dir="ltr">256 Bytes</span> - لائٹ کلائنٹس کے لیے متعلقہ لاگز کو تیزی سے بازیافت کرنے کے لیے بلوم فلٹر۔
+- `type`: `QUANTITY` - ٹرانزیکشن کی قسم کا انٹیجر، لیگیسی ٹرانزیکشنز کے لیے `0x0`، ایکسیس لسٹ کی اقسام کے لیے `0x1`، ڈائنامک فیس کے لیے `0x2`۔
 
-یہ _یا تو_ یہ بھی لوٹاتا ہے:
+یہ ان میں سے _کوئی ایک_ بھی واپس کرتا ہے:
 
-- `root` : `DATA` ٹرانزیکشن کے بعد کی اسٹیٹ روٹ کے 32 بائٹس (Byzantium سے پہلے)
+- `root` : `DATA` پوسٹ-ٹرانزیکشن حالت کے روٹ کے <span dir="ltr">32 bytes</span> (بازنطیم سے پہلے)
 - `status`: `QUANTITY` یا تو `1` (کامیابی) یا `0` (ناکامی)
 
 **مثال**
@@ -1408,7 +1408,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
     "blockHash":
       "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
     "blockNumber": "0xeff35f",
-    "contractAddress": null, // ایڈریس کی سٹرنگ اگر یہ بنایا گیا تھا
+    "contractAddress": null, // پتہ کی سٹرنگ اگر یہ بنایا گیا تھا
     "cumulativeGasUsed": "0xa12515",
     "effectiveGasPrice": "0x5a9c688d4",
     "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
@@ -1427,9 +1427,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### <span dir="ltr">eth_getUncleByBlockHashAndIndex</span> {#eth-getunclebyblockhashandindex}
 
-ہیش اور انکل انڈیکس پوزیشن کے ذریعے بلاک کے انکل کے بارے میں معلومات لوٹاتا ہے۔
+ہیش اور انکل کے اشاریہ کی پوزیشن کے ذریعے ایک بلاک کے انکل کے بارے میں معلومات واپس کرتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -1437,8 +1437,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 
 **پیرامیٹرز**
 
-1. `DATA`، 32 بائٹس - بلاک کا ہیش۔
-2. `QUANTITY` - انکل کی انڈیکس پوزیشن۔
+1. `DATA`، <span dir="ltr">32 Bytes</span> - ایک بلاک کا ہیش۔
+2. `QUANTITY` - انکل کے اشاریہ کی پوزیشن۔
 
 ```js
 params: [
@@ -1447,8 +1447,8 @@ params: [
 ]
 ```
 
-**واپسی**
-دیکھیں [eth_getBlockByHash](#eth_getblockbyhash)
+**ریٹرنز**
+[<span dir="ltr">eth_getBlockByHash</span>](#eth-getblockbyhash) دیکھیں
 
 **مثال**
 
@@ -1457,13 +1457,13 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-نتیجہ دیکھیں [eth_getBlockByHash](#eth_getblockbyhash)
+نتیجہ کے لیے [<span dir="ltr">eth_getBlockByHash</span>](#eth-getblockbyhash) دیکھیں
 
 **نوٹ**: ایک انکل میں انفرادی ٹرانزیکشنز شامل نہیں ہوتیں۔
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### <span dir="ltr">eth_getUncleByBlockNumberAndIndex</span> {#eth-getunclebyblocknumberandindex}
 
-نمبر اور انکل انڈیکس پوزیشن کے ذریعے بلاک کے انکل کے بارے میں معلومات لوٹاتا ہے۔
+نمبر اور انکل کی اشاریہ پوزیشن کے لحاظ سے کسی بلاک کے انکل کے بارے میں معلومات لوٹاتا ہے۔
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
   پلے گراؤنڈ میں اینڈ پوائنٹ آزمائیں
@@ -1472,7 +1472,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 **پیرامیٹرز**
 
 1. `QUANTITY|TAG` - ایک بلاک نمبر، یا سٹرنگ `"earliest"`، `"latest"`، `"pending"`، `"safe"`، `"finalized"`، جیسا کہ [بلاک پیرامیٹر](/developers/docs/apis/json-rpc/#block-parameter) میں ہے۔
-2. `QUANTITY` - انکل کی انڈیکس پوزیشن۔
+2. `QUANTITY` - انکل کی اشاریہ پوزیشن۔
 
 ```js
 params: [
@@ -1481,8 +1481,8 @@ params: [
 ]
 ```
 
-**واپسی**
-دیکھیں [eth_getBlockByHash](#eth_getblockbyhash)
+**ریٹرنز**
+دیکھیں [<span dir="ltr">eth_getBlockByHash</span>](#eth-getblockbyhash)
 
 **نوٹ**: ایک انکل میں انفرادی ٹرانزیکشنز شامل نہیں ہوتیں۔
 
@@ -1493,29 +1493,29 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-نتیجہ دیکھیں [eth_getBlockByHash](#eth_getblockbyhash)
+نتیجہ دیکھیں [<span dir="ltr">eth_getBlockByHash</span>](#eth-getblockbyhash)
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter {#eth-newfilter}
 
-اسٹیٹ تبدیل ہونے (لاگز) پر مطلع کرنے کے لیے، فلٹر کے اختیارات کی بنیاد پر ایک فلٹر آبجیکٹ بناتا ہے۔
-یہ چیک کرنے کے لیے کہ آیا اسٹیٹ تبدیل ہوئی ہے، [eth_getFilterChanges](#eth_getfilterchanges) کو کال کریں۔
+فلٹر کے اختیارات کی بنیاد پر ایک فلٹر آبجیکٹ بناتا ہے، تاکہ حالت تبدیل ہونے (لاگز) پر مطلع کیا جا سکے۔
+یہ چیک کرنے کے لیے کہ آیا حالت تبدیل ہوئی ہے، [eth_getFilterChanges](#eth-getfilterchanges) کو کال کریں۔
 
-**موضوع (topic) کے فلٹرز کی وضاحت پر ایک نوٹ:**
-موضوعات ترتیب پر منحصر ہیں۔ [A, B] موضوعات والے لاگ کے ساتھ ایک ٹرانزیکشن درج ذیل موضوع کے فلٹرز سے مماثل ہوگی:
+**موضوع کے فلٹرز کی وضاحت پر ایک نوٹ:**
+موضوعات ترتیب پر منحصر ہوتے ہیں۔ ایک ٹرانزیکشن جس کے لاگ میں موضوعات <span dir="ltr">[A, B]</span> ہوں، درج ذیل موضوع کے فلٹرز سے مماثل ہوگی:
 
 - `[]` "کچھ بھی"
-- `[A]` "پہلی پوزیشن میں A (اور اس کے بعد کچھ بھی)"
-- `[null, B]` "پہلی پوزیشن میں کچھ بھی اور دوسری پوزیشن میں B (اور اس کے بعد کچھ بھی)"
-- `[A, B]` "پہلی پوزیشن میں A اور دوسری پوزیشن میں B (اور اس کے بعد کچھ بھی)"
-- `[[A, B], [A, B]]` "پہلی پوزیشن میں (A یا B) اور دوسری پوزیشن میں (A یا B) (اور اس کے بعد کچھ بھی)"
+- `[A]` "پہلی پوزیشن پر <span dir="ltr">A</span> (اور اس کے بعد کچھ بھی)"
+- `[null, B]` "پہلی پوزیشن پر کچھ بھی اور دوسری پوزیشن پر <span dir="ltr">B</span> (اور اس کے بعد کچھ بھی)"
+- `[A, B]` "پہلی پوزیشن پر <span dir="ltr">A</span> اور دوسری پوزیشن پر <span dir="ltr">B</span> (اور اس کے بعد کچھ بھی)"
+- `[[A, B], [A, B]]` "پہلی پوزیشن پر (<span dir="ltr">A</span> یا <span dir="ltr">B</span>) اور دوسری پوزیشن پر (<span dir="ltr">A</span> یا <span dir="ltr">B</span>) (اور اس کے بعد کچھ بھی)"
 - **پیرامیٹرز**
 
 1. `Object` - فلٹر کے اختیارات:
 
-- `fromBlock`: `QUANTITY|TAG` - (اختیاری، ڈیفالٹ: `"latest"`) انٹیجر بلاک نمبر، یا آخری تجویز کردہ بلاک کے لیے `"latest"`، تازہ ترین محفوظ بلاک کے لیے `"safe"`، تازہ ترین حتمی بلاک کے لیے `"finalized"`، یا ان ٹرانزیکشنز کے لیے `"pending"`، `"earliest"` جو ابھی تک کسی بلاک میں نہیں ہیں۔
-- `toBlock`: `QUANTITY|TAG` - (اختیاری، ڈیفالٹ: `"latest"`) انٹیجر بلاک نمبر، یا آخری تجویز کردہ بلاک کے لیے `"latest"`، تازہ ترین محفوظ بلاک کے لیے `"safe"`، تازہ ترین حتمی بلاک کے لیے `"finalized"`، یا ان ٹرانزیکشنز کے لیے `"pending"`، `"earliest"` جو ابھی تک کسی بلاک میں نہیں ہیں۔
-- `address`: `DATA|Array`، 20 بائٹس - (اختیاری) کنٹریکٹ کا ایڈریس یا ان ایڈریسز کی فہرست جہاں سے لاگز شروع ہونے چاہئیں۔
-- `topics`: `Array of DATA`، - (اختیاری) 32 بائٹس `DATA` موضوعات کی Array۔ موضوعات ترتیب پر منحصر ہیں۔ ہر موضوع "یا" (or) کے اختیارات کے ساتھ DATA کی ایک Array بھی ہو سکتا ہے۔
+- `fromBlock`: `QUANTITY|TAG` - (اختیاری، ڈیفالٹ: `"latest"`) انٹیجر بلاک نمبر، یا آخری تجویز کردہ بلاک کے لیے `"latest"`، تازہ ترین محفوظ بلاک کے لیے `"safe"`، تازہ ترین حتمی بلاک کے لیے `"finalized"`، یا ان ٹرانزیکشنز کے لیے جو ابھی تک کسی بلاک میں نہیں ہیں `"pending"`، `"earliest"`۔
+- `toBlock`: `QUANTITY|TAG` - (اختیاری، ڈیفالٹ: `"latest"`) انٹیجر بلاک نمبر، یا آخری تجویز کردہ بلاک کے لیے `"latest"`، تازہ ترین محفوظ بلاک کے لیے `"safe"`، تازہ ترین حتمی بلاک کے لیے `"finalized"`، یا ان ٹرانزیکشنز کے لیے جو ابھی تک کسی بلاک میں نہیں ہیں `"pending"`، `"earliest"`۔
+- `address`: `DATA|Array`، <span dir="ltr">20 Bytes</span> - (اختیاری) کنٹریکٹ کا پتہ یا پتوں کی فہرست جہاں سے لاگز شروع ہونے چاہئیں۔
+- `topics`: `Array of DATA`، - (اختیاری) <span dir="ltr">32 Bytes</span> کی ارے `DATA` موضوعات۔ موضوعات ترتیب پر منحصر ہوتے ہیں۔ ہر موضوع "یا" (or) کے اختیارات کے ساتھ ڈیٹا (DATA) کی ایک ارے بھی ہو سکتا ہے۔
 
 ```js
 params: [
@@ -1551,15 +1551,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### <span dir="ltr">eth_newBlockFilter</span> {#eth-newblockfilter}
 
-نیا بلاک آنے پر مطلع کرنے کے لیے، نوڈ میں ایک فلٹر بناتا ہے۔
-یہ چیک کرنے کے لیے کہ آیا اسٹیٹ تبدیل ہوئی ہے، [eth_getFilterChanges](#eth_getfilterchanges) کو کال کریں۔
+نوڈ میں ایک فلٹر بناتا ہے، تاکہ جب کوئی نیا بلاک آئے تو مطلع کیا جا سکے۔
+یہ چیک کرنے کے لیے کہ آیا حالت تبدیل ہوئی ہے، [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges) کو کال کریں۔
 
 **پیرامیٹرز**
 کوئی نہیں
 
-**واپسی**
+**ریٹرنز**
 `QUANTITY` - ایک فلٹر آئی ڈی۔
 
 **مثال**
@@ -1575,15 +1575,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### <span dir="ltr">eth_newPendingTransactionFilter</span> {#eth-newpendingtransactionfilter}
 
-نئی زیر التواء ٹرانزیکشنز آنے پر مطلع کرنے کے لیے، نوڈ میں ایک فلٹر بناتا ہے۔
-یہ چیک کرنے کے لیے کہ آیا اسٹیٹ تبدیل ہوئی ہے، [eth_getFilterChanges](#eth_getfilterchanges) کو کال کریں۔
+نوڈ میں ایک فلٹر بناتا ہے، تاکہ جب نئی زیر التواء ٹرانزیکشنز آئیں تو مطلع کیا جا سکے۔
+یہ چیک کرنے کے لیے کہ آیا حالت تبدیل ہوئی ہے، [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges) کو کال کریں۔
 
 **پیرامیٹرز**
 کوئی نہیں
 
-**واپسی**
+**ریٹرنز**
 `QUANTITY` - ایک فلٹر آئی ڈی۔
 
 **مثال**
@@ -1599,14 +1599,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### <span dir="ltr">eth_uninstallFilter</span> {#eth-uninstallfilter}
 
-دی گئی آئی ڈی کے ساتھ فلٹر کو ان انسٹال کرتا ہے۔ جب مزید نگرانی (watch) کی ضرورت نہ ہو تو اسے ہمیشہ کال کیا جانا چاہیے۔
-مزید برآں، جب ایک مدت تک [eth_getFilterChanges](#eth_getfilterchanges) کے ساتھ فلٹرز کی درخواست نہیں کی جاتی ہے تو وہ ٹائم آؤٹ (timeout) ہو جاتے ہیں۔
+دیے گئے <span dir="ltr">id</span> والے فلٹر کو اَن انسٹال کرتا ہے۔ جب مزید نگرانی کی ضرورت نہ ہو تو اسے ہمیشہ کال کیا جانا چاہیے۔
+مزید برآں، جب ایک مخصوص مدت تک [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges) کے ساتھ فلٹرز کی درخواست نہیں کی جاتی ہے تو وہ ٹائم آؤٹ ہو جاتے ہیں۔
 
 **پیرامیٹرز**
 
-1. `QUANTITY` - فلٹر آئی ڈی۔
+1. `QUANTITY` - فلٹر کی <span dir="ltr">id</span>۔
 
 ```js
 params: [
@@ -1614,8 +1614,9 @@ params: [
 ]
 ```
 
-**واپسی**
-`Boolean` - اگر فلٹر کامیابی سے ان انسٹال ہو گیا تو `true`، بصورت دیگر `false`۔
+**ریٹرنز**
+
+`Boolean` - `true` اگر فلٹر کامیابی سے اَن انسٹال ہو گیا تھا، بصورت دیگر `false`۔
 
 **مثال**
 
@@ -1630,13 +1631,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges {#eth-getfilterchanges}
 
-فلٹر کے لیے پولنگ (polling) کا طریقہ، جو پچھلے پول کے بعد سے ہونے والے لاگز کی ایک Array لوٹاتا ہے۔
+ایک فلٹر کے لیے پولنگ کا طریقہ، جو پچھلے پول کے بعد سے ہونے والے لاگز کی ایک ایرے (array) واپس کرتا ہے۔
 
 **پیرامیٹرز**
 
-1. `QUANTITY` - فلٹر آئی ڈی۔
+1. `QUANTITY` - فلٹر کی شناخت (id)۔
 
 ```js
 params: [
@@ -1645,20 +1646,20 @@ params: [
 ```
 
 **واپسی**
-`Array` - لاگ آبجیکٹس کی Array، یا ایک خالی Array اگر پچھلے پول کے بعد سے کچھ نہیں بدلا ہے۔
+`Array` - لاگ آبجیکٹس کی ایرے، یا اگر پچھلے پول کے بعد سے کچھ نہیں بدلا ہے تو ایک خالی ایرے۔
 
-- `eth_newBlockFilter` کے ساتھ بنائے گئے فلٹرز کے لیے واپسی بلاک ہیشز (`DATA`، 32 بائٹس) ہیں، جیسے، `["0x3454645634534..."]`۔
-- `eth_newPendingTransactionFilter ` کے ساتھ بنائے گئے فلٹرز کے لیے واپسی ٹرانزیکشن ہیشز (`DATA`، 32 بائٹس) ہیں، جیسے، `["0x6345343454645..."]`۔
+- `eth_newBlockFilter` کے ساتھ بنائے گئے فلٹرز کے لیے واپسی بلاک ہیشز (`DATA`، <span dir="ltr">32 Bytes</span>) ہیں، مثال کے طور پر، `["0x3454645634534..."]`۔
+- `eth_newPendingTransactionFilter ` کے ساتھ بنائے گئے فلٹرز کے لیے واپسی ٹرانزیکشن ہیشز (`DATA`، <span dir="ltr">32 Bytes</span>) ہیں، مثال کے طور پر، `["0x6345343454645..."]`۔
 - `eth_newFilter` کے ساتھ بنائے گئے فلٹرز کے لیے لاگز درج ذیل پیرامیٹرز کے ساتھ آبجیکٹس ہیں:
-  - `removed`: `TAG` - `true` جب چین کی تنظیم نو کی وجہ سے لاگ کو ہٹا دیا گیا تھا۔ `false` اگر یہ ایک درست لاگ ہے۔
-  - `logIndex`: `QUANTITY` - بلاک میں لاگ انڈیکس پوزیشن کا انٹیجر۔ `null` جب یہ زیر التواء لاگ ہو۔
-  - `transactionIndex`: `QUANTITY` - ٹرانزیکشنز کی انڈیکس پوزیشن کا انٹیجر جہاں سے لاگ بنایا گیا تھا۔ `null` جب یہ زیر التواء لاگ ہو۔
-  - `transactionHash`: `DATA`، 32 بائٹس - ان ٹرانزیکشنز کا ہیش جہاں سے یہ لاگ بنایا گیا تھا۔ `null` جب یہ زیر التواء لاگ ہو۔
-  - `blockHash`: `DATA`، 32 بائٹس - اس بلاک کا ہیش جہاں یہ لاگ تھا۔ `null` جب یہ زیر التواء ہو۔ `null` جب یہ زیر التواء لاگ ہو۔
-  - `blockNumber`: `QUANTITY` - وہ بلاک نمبر جہاں یہ لاگ تھا۔ `null` جب یہ زیر التواء ہو۔ `null` جب یہ زیر التواء لاگ ہو۔
-  - `address`: `DATA`، 20 بائٹس - وہ ایڈریس جہاں سے یہ لاگ شروع ہوا۔
-  - `data`: `DATA` - متغیر لمبائی (variable-length) کا غیر انڈیکس شدہ لاگ ڈیٹا۔ (_solidity_ میں: صفر یا اس سے زیادہ 32 بائٹس کے غیر انڈیکس شدہ لاگ دلائل۔)
-  - `topics`: `Array of DATA` - انڈیکس شدہ لاگ دلائل کے 0 سے 4 32 بائٹس `DATA` کی Array۔ (_solidity_ میں: پہلا موضوع ایونٹ کے دستخط کا _ہیش_ ہے (جیسے، `Deposit(address,bytes32,uint256)`)، سوائے اس کے کہ آپ نے ایونٹ کو `anonymous` تصریح کنندہ (specifier) کے ساتھ ڈکلیئر کیا ہو۔)
+  - `removed`: `TAG` - `true` جب چین کی تنظیمِ نو کی وجہ سے لاگ کو ہٹا دیا گیا ہو۔ `false` اگر یہ ایک درست لاگ ہے۔
+  - `logIndex`: `QUANTITY` - بلاک میں لاگ کی اشاریہ پوزیشن کا انٹیجر۔ `null` جب یہ زیر التواء لاگ ہو۔
+  - `transactionIndex`: `QUANTITY` - ٹرانزیکشنز کی اشاریہ پوزیشن کا انٹیجر جس سے لاگ بنایا گیا تھا۔ `null` جب یہ زیر التواء لاگ ہو۔
+  - `transactionHash`: `DATA`، <span dir="ltr">32 Bytes</span> - ان ٹرانزیکشنز کا ہیش جن سے یہ لاگ بنایا گیا تھا۔ `null` جب یہ زیر التواء لاگ ہو۔
+  - `blockHash`: `DATA`، <span dir="ltr">32 Bytes</span> - اس بلاک کا ہیش جس میں یہ لاگ تھا۔ `null` جب یہ زیر التواء ہو۔ `null` جب یہ زیر التواء لاگ ہو۔
+  - `blockNumber`: `QUANTITY` - اس بلاک کا نمبر جس میں یہ لاگ تھا۔ `null` جب یہ زیر التواء ہو۔ `null` جب یہ زیر التواء لاگ ہو۔
+  - `address`: `DATA`، <span dir="ltr">20 Bytes</span> - وہ پتہ جہاں سے یہ لاگ شروع ہوا تھا۔
+  - `data`: `DATA` - متغیر لمبائی (variable-length) کا نان انڈیکسڈ لاگ ڈیٹا۔ (_solidity_ میں: صفر یا اس سے زیادہ <span dir="ltr">32 Bytes</span> کے نان انڈیکسڈ لاگ آرگیومنٹس۔)
+  - `topics`: `Array of DATA` - انڈیکسڈ لاگ آرگیومنٹس کے <span dir="ltr">0 to 4</span> <span dir="ltr">32 Bytes</span> `DATA` کی ایرے۔ (_solidity_ میں: پہلا ٹاپک ایونٹ کے دستخط کا _ہیش_ ہوتا ہے (مثال کے طور پر، `Deposit(address,bytes32,uint256)`)، سوائے اس کے کہ آپ نے ایونٹ کو `anonymous` کی تخصیص کے ساتھ ڈکلیئر کیا ہو۔)
 
 - **مثال**
 
@@ -1684,13 +1685,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### <span dir="ltr">eth_getFilterLogs</span> {#eth-getfilterlogs}
 
-دی گئی آئی ڈی کے ساتھ فلٹر سے مماثل تمام لاگز کی ایک Array لوٹاتا ہے۔
+دی گئی <span dir="ltr">id</span> والے فلٹر سے مماثل تمام لاگز کی ایک ایرے واپس کرتا ہے۔
 
 **پیرامیٹرز**
 
-1. `QUANTITY` - فلٹر آئی ڈی۔
+1. `QUANTITY` - فلٹر کی <span dir="ltr">id</span>۔
 
 ```js
 params: [
@@ -1699,7 +1700,7 @@ params: [
 ```
 
 **واپسی**
-دیکھیں [eth_getFilterChanges](#eth_getfilterchanges)
+[<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges) دیکھیں۔
 
 **مثال**
 
@@ -1708,21 +1709,21 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-نتیجہ دیکھیں [eth_getFilterChanges](#eth_getfilterchanges)
+نتیجے کے لیے [<span dir="ltr">eth_getFilterChanges</span>](#eth-getfilterchanges) دیکھیں۔
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs {#eth-getlogs}
 
-کسی دیے گئے فلٹر آبجیکٹ سے مماثل تمام لاگز کی ایک Array لوٹاتا ہے۔
+دیے گئے فلٹر آبجیکٹ سے مماثل تمام لاگز کی ایک صف (array) واپس کرتا ہے۔
 
 **پیرامیٹرز**
 
 1. `Object` - فلٹر کے اختیارات:
 
-- `fromBlock`: `QUANTITY|TAG` - (اختیاری، ڈیفالٹ: `"latest"`) انٹیجر بلاک نمبر، یا آخری تجویز کردہ بلاک کے لیے `"latest"`، تازہ ترین محفوظ بلاک کے لیے `"safe"`، تازہ ترین حتمی بلاک کے لیے `"finalized"`، یا ان ٹرانزیکشنز کے لیے `"pending"`، `"earliest"` جو ابھی تک کسی بلاک میں نہیں ہیں۔
-- `toBlock`: `QUANTITY|TAG` - (اختیاری، ڈیفالٹ: `"latest"`) انٹیجر بلاک نمبر، یا آخری تجویز کردہ بلاک کے لیے `"latest"`، تازہ ترین محفوظ بلاک کے لیے `"safe"`، تازہ ترین حتمی بلاک کے لیے `"finalized"`، یا ان ٹرانزیکشنز کے لیے `"pending"`، `"earliest"` جو ابھی تک کسی بلاک میں نہیں ہیں۔
-- `address`: `DATA|Array`، 20 بائٹس - (اختیاری) کنٹریکٹ کا ایڈریس یا ان ایڈریسز کی فہرست جہاں سے لاگز شروع ہونے چاہئیں۔
-- `topics`: `Array of DATA`، - (اختیاری) 32 بائٹس `DATA` موضوعات کی Array۔ موضوعات ترتیب پر منحصر ہیں۔ ہر موضوع "یا" (or) کے اختیارات کے ساتھ DATA کی ایک Array بھی ہو سکتا ہے۔
-- `blockHash`: `DATA`، 32 بائٹس - (اختیاری، **مستقبل**) EIP-234 کے اضافے کے ساتھ، `blockHash` ایک نیا فلٹر آپشن ہوگا جو لوٹائے گئے لاگز کو 32-بائٹ ہیش `blockHash` والے واحد بلاک تک محدود کرتا ہے۔ `blockHash` کا استعمال `fromBlock` = `toBlock` = ہیش `blockHash` والے بلاک نمبر کے برابر ہے۔ اگر فلٹر کے معیار میں `blockHash` موجود ہے، تو نہ تو `fromBlock` اور نہ ہی `toBlock` کی اجازت ہے۔
+- `fromBlock`: `QUANTITY|TAG` - (اختیاری، ڈیفالٹ: `"latest"`) انٹیجر بلاک نمبر، یا آخری تجویز کردہ بلاک کے لیے `"latest"`، تازہ ترین محفوظ بلاک کے لیے `"safe"`، تازہ ترین حتمی بلاک کے لیے `"finalized"`، یا ان ٹرانزیکشنز کے لیے `"pending"`, `"earliest"` جو ابھی تک کسی بلاک میں نہیں ہیں۔
+- `toBlock`: `QUANTITY|TAG` - (اختیاری، ڈیفالٹ: `"latest"`) انٹیجر بلاک نمبر، یا آخری تجویز کردہ بلاک کے لیے `"latest"`، تازہ ترین محفوظ بلاک کے لیے `"safe"`، تازہ ترین حتمی بلاک کے لیے `"finalized"`، یا ان ٹرانزیکشنز کے لیے `"pending"`, `"earliest"` جو ابھی تک کسی بلاک میں نہیں ہیں۔
+- `address`: `DATA|Array`، <span dir="ltr">20 Bytes</span> - (اختیاری) کنٹریکٹ کا پتہ یا پتوں کی ایک فہرست جہاں سے لاگز شروع ہونے چاہئیں۔
+- `topics`: `Array of DATA`، - (اختیاری) <span dir="ltr">32 Bytes</span> `DATA` کے موضوعات (topics) کی صف (array)۔ موضوعات ترتیب پر منحصر ہوتے ہیں۔ ہر موضوع "or" اختیارات کے ساتھ DATA کی ایک صف بھی ہو سکتا ہے۔
+- `blockHash`: `DATA`، <span dir="ltr">32 Bytes</span> - (اختیاری، **مستقبل**) <span dir="ltr">EIP-234</span> کے اضافے کے ساتھ، `blockHash` ایک نیا فلٹر آپشن ہوگا جو واپس کیے گئے لاگز کو <span dir="ltr">32-byte</span> ہیش `blockHash` والے واحد بلاک تک محدود کر دے گا۔ `blockHash` کا استعمال `fromBlock` = `toBlock` = ہیش `blockHash` والے بلاک نمبر کے برابر ہے۔ اگر فلٹر کے معیار میں `blockHash` موجود ہے، تو نہ تو `fromBlock` اور نہ ہی `toBlock` کی اجازت ہے۔
 
 ```js
 params: [
@@ -1735,7 +1736,7 @@ params: [
 ```
 
 **واپسی**
-دیکھیں [eth_getFilterChanges](#eth_getfilterchanges)
+[eth_getFilterChanges](#eth-getfilterchanges) دیکھیں
 
 **مثال**
 
@@ -1744,15 +1745,15 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-نتیجہ دیکھیں [eth_getFilterChanges](#eth_getfilterchanges)
+نتیجہ کے لیے [eth_getFilterChanges](#eth-getfilterchanges) دیکھیں
 
 ## استعمال کی مثال {#usage-example}
 
-### JSON_RPC کا استعمال کرتے ہوئے کنٹریکٹ کو ڈیپلائے کرنا {#deploying-contract}
+### <span dir="ltr">JSON_RPC</span> کا استعمال کرتے ہوئے کنٹریکٹ تعینات کرنا {#deploying-contract}
 
-اس سیکشن میں یہ دکھایا گیا ہے کہ صرف RPC انٹرفیس کا استعمال کرتے ہوئے کنٹریکٹ کو کیسے ڈیپلائے کیا جائے۔ کنٹریکٹس کو ڈیپلائے کرنے کے متبادل طریقے بھی موجود ہیں جہاں اس پیچیدگی کو چھپا دیا جاتا ہے—مثال کے طور پر، RPC انٹرفیس کے اوپر بنی لائبریریوں کا استعمال کرتے ہوئے جیسے [web3.js](https://web3js.readthedocs.io/) اور [web3.py](https://github.com/ethereum/web3.py)۔ یہ ایبسٹریکشنز عام طور پر سمجھنے میں آسان اور کم غلطیوں کا باعث بنتی ہیں، لیکن پھر بھی یہ سمجھنا مفید ہے کہ پس پردہ کیا ہو رہا ہے۔
+اس حصے میں صرف RPC انٹرفیس کا استعمال کرتے ہوئے کنٹریکٹ تعینات کرنے کا طریقہ کار دکھایا گیا ہے۔ کنٹریکٹس تعینات کرنے کے متبادل طریقے بھی موجود ہیں جہاں اس پیچیدگی کو چھپا دیا جاتا ہے—مثال کے طور پر، RPC انٹرفیس کے اوپر بنی لائبریریوں کا استعمال کرتے ہوئے جیسے [web3.js](https://web3js.readthedocs.io/) اور [web3.py](https://github.com/ethereum/web3.py)۔ یہ تجریدات (abstractions) عام طور پر سمجھنے میں آسان اور کم غلطیوں کا باعث بنتی ہیں، لیکن پھر بھی یہ سمجھنا مفید ہے کہ اندرونی طور پر کیا ہو رہا ہے۔
 
-ذیل میں ایک سیدھا سادہ اسمارٹ کنٹریکٹ ہے جسے `Multiply7` کہا جاتا ہے، جسے JSON-RPC انٹرفیس کا استعمال کرتے ہوئے ایک Ethereum نوڈ پر ڈیپلائے کیا جائے گا۔ یہ ٹیوٹوریل فرض کرتا ہے کہ قاری پہلے سے ہی ایک Geth نوڈ چلا رہا ہے۔ نوڈز اور کلائنٹس کے بارے میں مزید معلومات [یہاں](/developers/docs/nodes-and-clients/run-a-node) دستیاب ہے۔ براہ کرم انفرادی [کلائنٹ](/developers/docs/nodes-and-clients/) کی دستاویزات دیکھیں تاکہ یہ معلوم ہو سکے کہ نان-Geth کلائنٹس کے لیے HTTP JSON-RPC کیسے شروع کیا جائے۔ زیادہ تر کلائنٹس ڈیفالٹ کے طور پر `localhost:8545` پر سروس فراہم کرتے ہیں۔
+درج ذیل ایک سیدھا سادا سمارٹ کنٹریکٹ ہے جسے `Multiply7` کہا جاتا ہے، جسے جے سن آر پی سی انٹرفیس کا استعمال کرتے ہوئے ایتھیریم نوڈ پر تعینات کیا جائے گا۔ یہ ٹیوٹوریل فرض کرتا ہے کہ قاری پہلے ہی Geth نوڈ چلا رہا ہے۔ نوڈز اور کلائنٹس کے بارے میں مزید معلومات [یہاں](/developers/docs/nodes-and-clients/run-a-node) دستیاب ہیں۔ غیر-Geth کلائنٹس کے لیے HTTP جے سن آر پی سی شروع کرنے کا طریقہ دیکھنے کے لیے براہ کرم انفرادی [کلائنٹ](/developers/docs/nodes-and-clients/) کی دستاویزات سے رجوع کریں۔ زیادہ تر کلائنٹس پہلے سے طے شدہ طور پر `localhost:8545` پر سروس فراہم کرتے ہیں۔
 
 ```javascript
 contract Multiply7 {
@@ -1764,7 +1765,7 @@ contract Multiply7 {
 }
 ```
 
-سب سے پہلا کام یہ یقینی بنانا ہے کہ HTTP RPC انٹرفیس فعال ہے۔ اس کا مطلب ہے کہ ہم اسٹارٹ اپ پر Geth کو `--http` فلیگ فراہم کرتے ہیں۔ اس مثال میں ہم ایک پرائیویٹ ڈیولپمنٹ چین پر Geth نوڈ استعمال کرتے ہیں۔ اس طریقے کا استعمال کرتے ہوئے ہمیں اصلی نیٹ ورک پر ether کی ضرورت نہیں ہے۔
+سب سے پہلا کام یہ یقینی بنانا ہے کہ HTTP RPC انٹرفیس فعال ہے۔ اس کا مطلب ہے کہ ہم اسٹارٹ اپ پر Geth کو `--http` فلیگ فراہم کرتے ہیں۔ اس مثال میں ہم ایک نجی ڈیولپمنٹ چین پر Geth نوڈ استعمال کرتے ہیں۔ اس طریقے کا استعمال کرتے ہوئے ہمیں اصلی نیٹ ورک پر ایتھر کی ضرورت نہیں ہوتی۔
 
 ```bash
 geth --http --dev console 2>>geth.log
@@ -1772,7 +1773,7 @@ geth --http --dev console 2>>geth.log
 
 یہ `http://localhost:8545` پر HTTP RPC انٹرفیس شروع کر دے گا۔
 
-ہم [curl](https://curl.se) کا استعمال کرتے ہوئے کوائن بیس ایڈریس (اکاؤنٹس کی ایرے سے پہلا ایڈریس حاصل کر کے) اور بیلنس بازیافت کر کے اس بات کی تصدیق کر سکتے ہیں کہ انٹرفیس چل رہا ہے۔ براہ کرم نوٹ کریں کہ ان مثالوں میں موجود ڈیٹا آپ کے لوکل نوڈ پر مختلف ہوگا۔ اگر آپ ان کمانڈز کو آزمانا چاہتے ہیں، تو دوسری curl درخواست میں موجود درخواست کے پیرامیٹرز کو پہلی درخواست سے واپس آنے والے نتیجے سے تبدیل کریں۔
+ہم [curl](https://curl.se) کا استعمال کرتے ہوئے کوائن بیس پتہ (اکاؤنٹس کی صف سے پہلا پتہ حاصل کر کے) اور بیلنس بازیافت کر کے تصدیق کر سکتے ہیں کہ انٹرفیس چل رہا ہے۔ براہ کرم نوٹ کریں کہ ان مثالوں میں موجود ڈیٹا آپ کے مقامی نوڈ پر مختلف ہوگا۔ اگر آپ ان کمانڈز کو آزمانا چاہتے ہیں، تو دوسری curl درخواست میں موجود درخواست کے پیرامیٹرز کو پہلی درخواست سے واپس آنے والے نتیجے سے تبدیل کریں۔
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
@@ -1782,16 +1783,16 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-چونکہ نمبرز ہیکس انکوڈڈ (hex encoded) ہوتے ہیں، اس لیے بیلنس wei میں ایک ہیکس اسٹرنگ کے طور پر واپس کیا جاتا ہے۔ اگر ہم بیلنس کو ether میں ایک نمبر کے طور پر دیکھنا چاہتے ہیں تو ہم Geth کنسول سے web3 استعمال کر سکتے ہیں۔
+چونکہ نمبرز ہیکس (hex) انکوڈڈ ہوتے ہیں، اس لیے بیلنس Wei میں ہیکس سٹرنگ کے طور پر واپس کیا جاتا ہے۔ اگر ہم بیلنس کو ایتھر میں ایک نمبر کے طور پر دیکھنا چاہتے ہیں تو ہم Geth کنسول سے web3 استعمال کر سکتے ہیں۔
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-اب چونکہ ہماری پرائیویٹ ڈیولپمنٹ چین پر کچھ ether موجود ہے، ہم کنٹریکٹ کو ڈیپلائے کر سکتے ہیں۔ پہلا قدم Multiply7 کنٹریکٹ کو بائٹ کوڈ میں مرتب (compile) کرنا ہے جسے EVM کو بھیجا جا سکے۔ Solidity کمپائلر، solc کو انسٹال کرنے کے لیے، [Solidity کی دستاویزات](https://docs.soliditylang.org/en/latest/installing-solidity.html) پر عمل کریں۔ (آپ شاید ایک پرانا `solc` ریلیز استعمال کرنا چاہیں تاکہ یہ [ہماری مثال کے لیے استعمال ہونے والے کمپائلر کے ورژن](https://github.com/ethereum/solidity/releases/tag/v0.4.20) سے مماثل ہو۔)
+اب چونکہ ہماری نجی ڈیولپمنٹ چین پر کچھ ایتھر موجود ہے، ہم کنٹریکٹ تعینات کر سکتے ہیں۔ پہلا قدم Multiply7 کنٹریکٹ کو بائٹ کوڈ میں کمپائلنگ کرنا ہے جسے EVM کو بھیجا جا سکے۔ solc، جو کہ Solidity کمپائلر ہے، کو انسٹال کرنے کے لیے [Solidity کی دستاویزات](https://docs.soliditylang.org/en/latest/installing-solidity.html) پر عمل کریں۔ (آپ شاید ایک پرانی `solc` ریلیز استعمال کرنا چاہیں تاکہ یہ [ہماری مثال کے لیے استعمال ہونے والے کمپائلر کے ورژن](https://github.com/ethereum/solidity/releases/tag/v0.4.20) سے مماثل ہو۔)
 
-اگلا قدم Multiply7 کنٹریکٹ کو بائٹ کوڈ میں مرتب کرنا ہے جسے EVM کو بھیجا جا سکے۔
+اگلا قدم Multiply7 کنٹریکٹ کو بائٹ کوڈ میں کمپائلنگ کرنا ہے جسے EVM کو بھیجا جا سکے۔
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1801,45 +1802,45 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-اب جب کہ ہمارے پاس مرتب شدہ (compiled) کوڈ موجود ہے، ہمیں یہ طے کرنے کی ضرورت ہے کہ اسے ڈیپلائے کرنے پر کتنی گیس خرچ ہوگی۔ RPC انٹرفیس میں ایک `eth_estimateGas` طریقہ (method) ہے جو ہمیں ایک تخمینہ دے گا۔
+اب جب کہ ہمارے پاس کمپائل شدہ کوڈ موجود ہے، ہمیں یہ تعین کرنے کی ضرورت ہے کہ اسے تعینات کرنے پر کتنی گیس خرچ ہوگی۔ RPC انٹرفیس میں ایک `eth_estimateGas` طریقہ ہے جو ہمیں ایک تخمینہ دے گا۔
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":5,"result":"0x1c31e"}
 ```
 
-اور آخر کار کنٹریکٹ کو ڈیپلائے کریں۔
+اور آخر کار کنٹریکٹ تعینات کریں۔
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "gas": "0x1c31e", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 6}' -H "Content-Type: application/json" localhost:8545
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-ٹرانزیکشن کو نوڈ کے ذریعے قبول کر لیا جاتا ہے اور ایک ٹرانزیکشن ہیش واپس کیا جاتا ہے۔ اس ہیش کو ٹرانزیکشن کو ٹریک کرنے کے لیے استعمال کیا جا سکتا ہے۔ اگلا قدم اس ایڈریس کا تعین کرنا ہے جہاں ہمارا کنٹریکٹ ڈیپلائے ہوا ہے۔ ہر عمل میں لائی گئی ٹرانزیکشن ایک رسید بنائے گی۔ اس رسید میں ٹرانزیکشن کے بارے میں مختلف معلومات ہوتی ہیں جیسے کہ ٹرانزیکشن کس بلاک میں شامل کی گئی تھی اور EVM کے ذریعے کتنی گیس استعمال کی گئی۔ اگر کوئی ٹرانزیکشن ایک کنٹریکٹ بناتی ہے تو اس میں کنٹریکٹ کا ایڈریس بھی شامل ہوگا۔ ہم `eth_getTransactionReceipt` RPC طریقہ استعمال کر کے رسید بازیافت کر سکتے ہیں۔
+ٹرانزیکشن کو نوڈ کے ذریعے قبول کر لیا جاتا ہے اور ایک ٹرانزیکشن ہیش واپس کیا جاتا ہے۔ اس ہیش کو ٹرانزیکشن کو ٹریک کرنے کے لیے استعمال کیا جا سکتا ہے۔ اگلا قدم اس پتہ کا تعین کرنا ہے جہاں ہمارا کنٹریکٹ تعینات کیا گیا ہے۔ ہر عمل میں لائی گئی ٹرانزیکشن ایک رسید بنائے گی۔ اس رسید میں ٹرانزیکشن کے بارے میں مختلف معلومات شامل ہوتی ہیں جیسے کہ ٹرانزیکشن کس بلاک میں شامل کی گئی تھی اور EVM کے ذریعے کتنی گیس استعمال کی گئی تھی۔ اگر کوئی ٹرانزیکشن کنٹریکٹ بناتی ہے تو اس میں کنٹریکٹ کا پتہ بھی شامل ہوگا۔ ہم `eth_getTransactionReceipt` RPC طریقہ استعمال کر کے رسید بازیافت کر سکتے ہیں۔
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-ہمارا کنٹریکٹ `0x4d03d617d700cf81935d7f797f4e2ae719648262` پر بنایا گیا تھا۔ رسید کے بجائے null نتیجہ آنے کا مطلب ہے کہ ٹرانزیکشن ابھی تک کسی بلاک میں شامل نہیں ہوئی ہے۔ کچھ دیر انتظار کریں اور چیک کریں کہ آیا آپ کا کنسینسس کلائنٹ چل رہا ہے اور دوبارہ کوشش کریں۔
+ہمارا کنٹریکٹ `0x4d03d617d700cf81935d7f797f4e2ae719648262` پر بنایا گیا تھا۔ رسید کے بجائے null نتیجہ آنے کا مطلب ہے کہ ٹرانزیکشن ابھی تک کسی بلاک میں شامل نہیں ہوئی ہے۔ کچھ دیر انتظار کریں اور چیک کریں کہ آیا آپ کا اتفاقِ رائے کا کلائنٹ چل رہا ہے اور اسے دوبارہ آزمائیں۔
 
-#### اسمارٹ کنٹریکٹس کے ساتھ تعامل {#interacting-with-smart-contract}
+#### سمارٹ کنٹریکٹس کے ساتھ تعامل کرنا {#interacting-with-smart-contract}
 
-اس مثال میں ہم کنٹریکٹ کے `multiply` طریقے (method) کو `eth_sendTransaction` کا استعمال کرتے ہوئے ایک ٹرانزیکشن بھیجیں گے۔
+اس مثال میں ہم `eth_sendTransaction` کا استعمال کرتے ہوئے کنٹریکٹ کے `multiply` طریقہ پر ایک ٹرانزیکشن بھیجیں گے۔
 
-`eth_sendTransaction` کو کئی دلائل (arguments) کی ضرورت ہوتی ہے، خاص طور پر `from`، `to` اور `data`۔ `From` ہمارے اکاؤنٹ کا پبلک ایڈریس ہے، اور `to` کنٹریکٹ کا ایڈریس ہے۔ `data` دلیل میں ایک پے لوڈ (payload) ہوتا ہے جو یہ طے کرتا ہے کہ کون سا طریقہ (method) کال کیا جانا چاہیے اور کن دلائل کے ساتھ۔ یہیں پر [ABI (ایپلیکیشن بائنری انٹرفیس)](https://docs.soliditylang.org/en/latest/abi-spec.html) کام آتا ہے۔ ABI ایک JSON فائل ہے جو یہ طے کرتی ہے کہ EVM کے لیے ڈیٹا کو کیسے بیان اور انکوڈ کیا جائے۔
+`eth_sendTransaction` کو کئی دلائل کی ضرورت ہوتی ہے، خاص طور پر `from`، `to` اور `data`۔ `From` ہمارے اکاؤنٹ کا عوامی پتہ ہے، اور `to` کنٹریکٹ کا پتہ ہے۔ `data` دلیل میں ایک پے لوڈ ہوتا ہے جو یہ طے کرتا ہے کہ کون سا طریقہ کال کیا جانا چاہیے اور کن دلائل کے ساتھ۔ یہاں [ABI (ایپلیکیشن بائنری انٹرفیس)](https://docs.soliditylang.org/en/latest/abi-spec.html) کا کردار آتا ہے۔ ABI ایک JSON فائل ہے جو یہ طے کرتی ہے کہ EVM کے لیے ڈیٹا کی وضاحت اور انکوڈنگ کیسے کی جائے۔
 
-پے لوڈ کے بائٹس یہ طے کرتے ہیں کہ کنٹریکٹ میں کون سا طریقہ کال کیا گیا ہے۔ یہ فنکشن کے نام اور اس کے آرگومنٹ کی اقسام پر Keccak ہیش کے پہلے 4 بائٹس ہیں، جو ہیکس انکوڈڈ ہوتے ہیں۔ multiply فنکشن ایک uint قبول کرتا ہے جو uint256 کا عرف (alias) ہے۔ اس سے ہمیں یہ ملتا ہے:
+پے لوڈ کے بائٹس یہ طے کرتے ہیں کہ کنٹریکٹ میں کون سا طریقہ کال کیا گیا ہے۔ یہ فنکشن کے نام اور اس کی دلیل کی اقسام پر Keccak ہیش کے پہلے <span dir="ltr">4 bytes</span> ہیں، جو ہیکس انکوڈڈ ہوتے ہیں۔ multiply فنکشن ایک uint قبول کرتا ہے جو کہ <span dir="ltr">uint256</span> کا عرف ہے۔ اس سے ہمیں یہ حاصل ہوتا ہے:
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
 // "0xc6888fa1"
 ```
 
-اگلا قدم دلائل کو انکوڈ کرنا ہے۔ یہاں صرف ایک uint256 ہے، فرض کریں، ویلیو 6۔ ABI کا ایک سیکشن ہے جو یہ بتاتا ہے کہ uint256 اقسام کو کیسے انکوڈ کیا جائے۔
+اگلا قدم دلائل کو انکوڈ کرنا ہے۔ یہاں صرف ایک <span dir="ltr">uint256</span> ہے، فرض کریں، ویلیو 6۔ ABI میں ایک حصہ ہوتا ہے جو یہ بتاتا ہے کہ <span dir="ltr">uint256</span> اقسام کو کیسے انکوڈ کیا جائے۔
 
-`int<M>: enc(X)` X کی بگ-اینڈین ٹوز کمپلیمنٹ (big-endian two’s complement) انکوڈنگ ہے، جسے منفی X کے لیے ہائیر-آرڈر (بائیں) جانب 0xff کے ساتھ اور مثبت X کے لیے صفر بائٹس کے ساتھ پیڈ (padded) کیا جاتا ہے تاکہ لمبائی 32 بائٹس کا ملٹیپل ہو۔
+`int<M>: enc(X)` X کی بگ اینڈِین ٹوز کمپلیمنٹ (two's complement) انکوڈنگ ہے، جسے منفی X کے لیے اعلیٰ درجے (بائیں) جانب <span dir="ltr">0xff</span> کے ساتھ اور مثبت X کے لیے صفر بائٹس کے ساتھ پیڈ کیا جاتا ہے تاکہ لمبائی <span dir="ltr">32 bytes</span> کا ضرب ہو۔
 
 یہ `0000000000000000000000000000000000000000000000000000000000000006` میں انکوڈ ہوتا ہے۔
 
@@ -1852,7 +1853,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":8,"jsonrpc":"2.0","result":"0x759cf065cbc22e9d779748dc53763854e5376eea07409e590c990eafc0869d74"}
 ```
 
-چونکہ ایک ٹرانزیکشن بھیجی گئی تھی، اس لیے ایک ٹرانزیکشن ہیش واپس کیا گیا۔ رسید بازیافت کرنے سے یہ ملتا ہے:
+چونکہ ایک ٹرانزیکشن بھیجی گئی تھی، اس لیے ایک ٹرانزیکشن ہیش واپس کیا گیا۔ رسید بازیافت کرنے سے یہ حاصل ہوتا ہے:
 
 ```javascript
 {
@@ -1876,19 +1877,19 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 }
 ```
 
-رسید میں ایک لاگ (log) ہوتا ہے۔ یہ لاگ ٹرانزیکشن کے نفاذ پر EVM کے ذریعے تیار کیا گیا تھا اور رسید میں شامل کیا گیا تھا۔ `multiply` فنکشن دکھاتا ہے کہ `Print` ایونٹ ان پٹ کو 7 سے ضرب دے کر اٹھایا گیا تھا۔ چونکہ `Print` ایونٹ کے لیے دلیل ایک uint256 تھی، اس لیے ہم اسے ABI کے اصولوں کے مطابق ڈی کوڈ کر سکتے ہیں جس سے ہمیں متوقع اعشاریہ 42 ملے گا۔ ڈیٹا کے علاوہ یہ بات قابل غور ہے کہ ٹاپکس (topics) کا استعمال یہ طے کرنے کے لیے کیا جا سکتا ہے کہ کس ایونٹ نے لاگ بنایا:
+رسید میں ایک لاگ شامل ہوتا ہے۔ یہ لاگ ٹرانزیکشن کے عمل درآمد پر EVM کے ذریعے تیار کیا گیا تھا اور رسید میں شامل کیا گیا تھا۔ `multiply` فنکشن ظاہر کرتا ہے کہ `Print` ایونٹ ان پٹ کو 7 سے ضرب دے کر اٹھایا گیا تھا۔ چونکہ `Print` ایونٹ کی دلیل ایک <span dir="ltr">uint256</span> تھی، ہم اسے ABI کے قواعد کے مطابق ڈی کوڈ کر سکتے ہیں جس سے ہمیں متوقع ڈیسیمل 42 حاصل ہوگا۔ ڈیٹا کے علاوہ یہ بات قابل غور ہے کہ موضوعات (topics) کا استعمال یہ طے کرنے کے لیے کیا جا سکتا ہے کہ کس ایونٹ نے لاگ بنایا:
 
 ```javascript
 web3.sha3("Print(uint256)")
 // "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
 ```
 
-یہ کچھ انتہائی عام کاموں کا صرف ایک مختصر تعارف تھا، جس میں JSON-RPC کا براہ راست استعمال دکھایا گیا ہے۔
+یہ کچھ انتہائی عام کاموں کا صرف ایک مختصر تعارف تھا، جس میں جے سن آر پی سی کے براہ راست استعمال کا مظاہرہ کیا گیا ہے۔
 
 ## متعلقہ موضوعات {#related-topics}
 
-- [JSON-RPC کی تفصیلات](http://www.jsonrpc.org/specification)
+- [جے سن آر پی سی کی تفصیلات](http://www.jsonrpc.org/specification)
 - [نوڈز اور کلائنٹس](/developers/docs/nodes-and-clients/)
-- [JavaScript APIs](/developers/docs/apis/javascript/)
-- [بیک اینڈ APIs](/developers/docs/apis/backend/)
+- [<span dir="ltr">JavaScript APIs</span>](/developers/docs/apis/javascript/)
+- [بیک اینڈ <span dir="ltr">APIs</span>](/developers/docs/apis/backend/)
 - [ایگزیکیوشن کلائنٹس](/developers/docs/nodes-and-clients/#execution-clients)

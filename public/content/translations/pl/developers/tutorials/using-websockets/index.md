@@ -1,29 +1,29 @@
 ---
-title: "Używanie WebSockets"
-description: "Przewodnik korzystania z WebSockets i Alchemy do wysyłania żądań JSON-RPC i subskrybowania zdarzeń."
+title: Korzystanie z WebSockets
+description: "Przewodnik po korzystaniu z WebSockets i Alchemy do wykonywania żądań JSON-RPC i subskrybowania zdarzeń."
 author: "Elan Halpern"
 lang: pl
-tags: [ "Alchemy", "websockets", "zapytania", "JavaScript" ]
+tags: ["Alchemy", "websockets", "zapytania", "JavaScript"]
 skill: beginner
-breadcrumb: "WebSockets"
+breadcrumb: WebSockets
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
-Jest to przewodnik na poziomie podstawowym do korzystania z WebSockets i Alchemy do wykonywania żądań do blockchainu Ethereum.
+To jest przewodnik dla początkujących dotyczący korzystania z WebSockets i Alchemy do wysyłania żądań do blockchaina Ethereum.
 
-## WebSockets vs. HTTP {#websockets-vs-http}
+## WebSockets a HTTP {#websockets-vs-http}
 
-W odróżnieniu od HTTP, z WebSockets, nie musisz ciągle wysyłać żądań, gdy chcesz uzyskać konkretne informacje. WebSockets utrzymuje dla Ciebie połączenie sieciowe (jeżeli zostało nawiązane) i nasłuchuje zmian.
+W przeciwieństwie do HTTP, w przypadku WebSockets nie musisz ciągle wysyłać żądań, gdy chcesz uzyskać konkretne informacje. WebSockets utrzymują dla Ciebie połączenie sieciowe (jeśli są zaimplementowane prawidłowo) i nasłuchują zmian.
 
-Podobnie jak w przypadku jakiegokolwiek połączenia sieciowego, nie należy zakładać, że WebSocket pozostanie otwarty na zawsze bez przerwy, ale właściwa obsługa zerwanego połączenia i ponowne nawiązanie połączenie może zapewnić ciągłość jego prawidłowego działania. Następną niedogodnością WebSocketów jest to, że nie otrzymujesz kodów statusu HTTP w odpowiedzi, ale tylko komunikat o błędzie.
+Podobnie jak w przypadku każdego połączenia sieciowego, nie należy zakładać, że WebSocket pozostanie otwarty na zawsze bez przerw, ale prawidłowa ręczna obsługa zerwanych połączeń i ponownego łączenia może być trudna do poprawnego zaimplementowania. Kolejną wadą WebSockets jest to, że w odpowiedzi nie otrzymujesz kodów statusu HTTP, a jedynie wiadomość o błędzie.
 
-[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automatycznie dodaje obsługę awarii WebSocket i ponownych prób bez konieczności konfiguracji.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automatycznie dodaje obsługę awarii WebSockets i ponownych prób bez konieczności konfiguracji.
 
 ## Wypróbuj {#try-it-out}
 
-Najprostszym sposobem na przetestowanie WebSockets jest zainstalowanie narzędzia wiersza poleceń do tworzenia żądań WebSocket, takiego jak [wscat](https://github.com/websockets/wscat). Używając wscat, możesz wysyłać następujące żądania:
+Najprostszym sposobem na przetestowanie WebSockets jest zainstalowanie narzędzia wiersza poleceń do wysyłania żądań WebSocket, takiego jak [wscat](https://github.com/websockets/wscat). Używając wscat, możesz wysyłać żądania w następujący sposób:
 
 _Uwaga: jeśli masz konto Alchemy, możesz zastąpić `demo` własnym kluczem API. [Zarejestruj darmowe konto Alchemy tutaj!](https://auth.alchemy.com/signup)_
 
@@ -33,20 +33,19 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
 <  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-
 ```
 
-## Jak używać WebSockets {#how-to-use-websockets}
+## Jak korzystać z WebSockets {#how-to-use-websockets}
 
-Aby rozpocząć, otwórz WebSocket za pomocą adresu URL WebSocket dla swojej aplikacji. Możesz znaleźć adres URL WebSocket swojej aplikacji, otwierając stronę aplikacji w [swoim pulpicie nawigacyjnym](https://dashboard.alchemy.com/) i klikając „Wyświetl klucz”. Pamiętaj, że adres URL Twojej aplikacji dla WebSocketów różni się od adresu URL dla żądań HTTP, ale oba można znaleźć klikając „Wyświetl klucz”.
+Aby rozpocząć, otwórz WebSocket, używając adresu URL WebSocket dla swojej aplikacji. Adres URL WebSocket swojej aplikacji znajdziesz, otwierając stronę aplikacji w [swoim panelu](https://dashboard.alchemy.com/) i klikając „View Key”. Zauważ, że adres URL Twojej aplikacji dla WebSockets różni się od adresu URL dla żądań HTTP, ale oba można znaleźć, klikając „View Key”.
 
-![Gdzie znaleźć swój adres URL WebSocket na pulpicie nawigacyjnym Alchemy](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
 
-Dowolne z interfejsów API wymienionych w [Dokumentacji Alchemy API](https://www.alchemy.com/docs/reference/api-overview) można używać za pośrednictwem WebSocket. Aby to zrobić, użyj tego samego ładunku, który zostałby wysłany jako treść żądania HTTP POST, ale zamiast tego wyślij ten ładunek za pośrednictwem protokołu WebSocket.
+Każde z API wymienionych w [Dokumentacji API Alchemy](https://www.alchemy.com/docs/reference/api-overview) może być używane przez WebSocket. Aby to zrobić, użyj tego samego ładunku (payload), który zostałby wysłany jako treść żądania HTTP POST, ale zamiast tego wyślij ten ładunek przez WebSocket.
 
 ## Z Web3 {#with-web3}
 
-Przejście na WebSockets podczas korzystania z biblioteki klienckiej, takiej jak Web3, jest proste. Po prostu przekaż adres URL WebSocket zamiast HTTP podczas tworzenia instancji klienta Web3. Na przykład:
+Przejście na WebSockets podczas korzystania z biblioteki klienta, takiej jak Web3, jest proste. Wystarczy przekazać adres URL WebSocket zamiast adresu HTTP podczas tworzenia instancji klienta Web3. Na przykład:
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -56,7 +55,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ## API subskrypcji {#subscription-api}
 
-Po połączeniu przez WebSocket można użyć dwóch dodatkowych metod: `eth_subscribe` i `eth_unsubscribe`. Te metody pozwolą Ci na wysłuchanie konkretnych wydarzeń i natychmiastowe powiadomienie.
+Po połączeniu przez WebSocket możesz użyć dwóch dodatkowych metod: `eth_subscribe` oraz `eth_unsubscribe`. Metody te pozwolą Ci nasłuchiwać określonych zdarzeń i otrzymywać natychmiastowe powiadomienia.
 
 ### `eth_subscribe` {#eth-subscribe}
 
@@ -64,30 +63,30 @@ Tworzy nową subskrypcję dla określonych zdarzeń. [Dowiedz się więcej o `et
 
 #### Parametry {#parameters}
 
-1. Rodzaj subskrypcji
-2. Parametry opcjonalne
+1. Typy subskrypcji
+2. Opcjonalne parametry
 
-Pierwszy argument określa rodzaj wydarzenia, którego należy nasłuchiwać. Drugi argument zawiera dodatkowe opcje, które zależą od pierwszego argumentu. Poniżej opisano różne rodzaje opisów, ich opcje i obciążenia zdarzeniami.
+Pierwszy argument określa typ zdarzenia, którego należy nasłuchiwać. Drugi argument zawiera dodatkowe opcje, które zależą od pierwszego argumentu. Różne typy subskrypcji, ich opcje i ładunki zdarzeń opisano poniżej.
 
-#### Wartości zwracane {#returns}
+#### Zwraca {#returns}
 
-Identyfikator subskrypcji: Ten identyfikator zostanie dołączony do wszystkich odebranych zdarzeń i może być również użyty do anulowania subskrypcji za pomocą `eth_unsubscribe`.
+ID subskrypcji: To ID będzie dołączone do wszystkich odebranych zdarzeń i może być również użyte do anulowania subskrypcji za pomocą `eth_unsubscribe`.
 
 #### Zdarzenia subskrypcji {#subscription-events}
 
-Podczas gdy subskrypcja jest aktywna, otrzymasz zdarzenia, które są obiektami z następującymi polami:
+Dopóki subskrypcja jest aktywna, będziesz otrzymywać zdarzenia, które są obiektami z następującymi polami:
 
 - `jsonrpc`: Zawsze "2.0"
 - `method`: Zawsze "eth_subscription"
 - `params`: Obiekt z następującymi polami:
-  - `subscription`: Identyfikator subskrypcji zwrócony przez wywołanie `eth_subscribe`, które utworzyło tę subskrypcję.
+  - `subscription`: ID subskrypcji zwrócone przez wywołanie `eth_subscribe`, które utworzyło tę subskrypcję.
   - `result`: Obiekt, którego zawartość różni się w zależności od typu subskrypcji.
 
 #### Typy subskrypcji {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-Zwraca informacje o transakcji dla wszystkich transakcji, które są dodane do stanu oczekującego. Ten typ subskrypcji subskrybuje oczekujące transakcje, podobnie do standardowego wywołania Web3 `web3.eth.subscribe("pendingTransactions")`, ale różni się tym, że emituje _pełne informacje o transakcji_, a nie tylko hasze transakcji.
+Zwraca informacje o transakcji dla wszystkich transakcji, które zostały dodane do stanu oczekującego. Ten typ subskrypcji subskrybuje oczekujące transakcje, podobnie jak standardowe wywołanie Web3 `web3.eth.subscribe("pendingTransactions")`, ale różni się tym, że emituje _pełne informacje o transakcji_, a nie tylko hashe transakcji.
 
 Przykład:
 
@@ -122,9 +121,9 @@ Przykład:
 
 2. `newHeads`
 
-Emituje wydarzenie w dowolnym momencie, gdy nowy nagłówek zostanie dodany do łańcucha, w tym podczas reorganizacji łańcucha.
+Emituje zdarzenie za każdym razem, gdy do łańcucha dodawany jest nowy nagłówek, w tym podczas reorganizacji łańcucha.
 
-Gdy nastąpi reorganizacja łańcucha, ta subskrypcja będzie emitować wydarzenie zawierające wszystkie nowe nagłówki dla nowego łańcucha. Oznacza to w szczególności, że można widzieć wiele emitowanych nagłówków z tą samą wysokością, i kiedy to nastąpi, późniejszy nagłówek powinien być uznany za prawidłowy po reorganizacji.
+Gdy nastąpi reorganizacja łańcucha, ta subskrypcja wyemituje zdarzenie zawierające wszystkie nowe nagłówki dla nowego łańcucha. W szczególności oznacza to, że możesz zobaczyć wiele nagłówków wyemitowanych z tą samą wysokością, a gdy to nastąpi, późniejszy nagłówek powinien zostać uznany za prawidłowy po reorganizacji.
 
 Przykład:
 
@@ -159,26 +158,26 @@ Przykład:
 
 3. `logs`
 
-Emituje logi będące częścią nowo dodanych bloków, które spełniają określone kryteria filtrów.
+Emituje logi, które są częścią nowo dodanych bloków i pasują do określonych kryteriów filtrowania.
 
-Gdy nastąpi reorganizacja łańcucha, logi, które są częścią bloków w starym łańcuchu, zostaną ponownie wyemitowane z właściwością `removed` ustawioną na `true`. Ponadto emitowane są dzienniki będące częścią bloków w nowym łańcuchu, co oznacza, że ​​w przypadku reorganizacji możliwe jest wielokrotne wyświetlanie dzienników dla tej samej transakcji.
+Gdy nastąpi reorganizacja łańcucha, logi będące częścią bloków w starym łańcuchu zostaną wyemitowane ponownie z właściwością `removed` ustawioną na `true`. Ponadto emitowane są logi będące częścią bloków w nowym łańcuchu, co oznacza, że w przypadku reorganizacji możliwe jest wielokrotne zobaczenie logów dla tej samej transakcji.
 
 Parametry
 
-1. Obiekt z następującymi opcjonalnymi kluczami:
+1. Obiekt z następującymi polami:
    - `address` (opcjonalnie): ciąg znaków reprezentujący adres lub tablica takich ciągów.
-     - Tylko logi utworzone z jednego z tych adresów zostaną wysłane.
-   - `topics`: tablica specyfikatorów tematów.
+     - Emitowane będą tylko logi utworzone z jednego z tych adresów.
+   - `topics`: tablica specyfikatorów tematów (topics).
      - Każdy specyfikator tematu to `null`, ciąg znaków reprezentujący temat lub tablica ciągów znaków.
      - Każda pozycja w tablicy, która nie jest `null`, ogranicza emitowane logi tylko do tych, które mają jeden z podanych tematów na tej pozycji.
 
-Przykłady specyfikacji tematu:
+Kilka przykładów specyfikacji tematów:
 
-- `[]`: Dowolne tematy dozwolone.
-- `[A]`: A na pierwszej pozycji (i wszystko, co dalej).
-- `[null, B]`: Cokolwiek na pierwszej pozycji i B na drugiej pozycji (i wszystko, co dalej).
-- `[A, B]`: A na pierwszej pozycji i B na drugiej pozycji (i wszystko, co dalej).
-- `[[A, B], [A, B]]`: (A lub B) na pierwszej pozycji i (A lub B) na drugiej pozycji (i wszystko, co dalej).
+- `[]`: Dozwolone dowolne tematy.
+- `[A]`: A na pierwszej pozycji (i cokolwiek po nim).
+- `[null, B]`: Cokolwiek na pierwszej pozycji i B na drugiej pozycji (i cokolwiek po nim).
+- `[A, B]`: A na pierwszej pozycji i B na drugiej pozycji (i cokolwiek po nim).
+- `[[A, B], [A, B]]`: (A lub B) na pierwszej pozycji i (A lub B) na drugiej pozycji (i cokolwiek po nim).
 
 Przykład:
 
@@ -208,27 +207,25 @@ Przykład:
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-Anuluje istniejącą subskrypcję, aby nie wysyłano żadnych kolejnych wydarzeń.
+Anuluje istniejącą subskrypcję, dzięki czemu nie są wysyłane żadne kolejne zdarzenia.
 
 Parametry
 
-1. Identyfikator subskrypcji, zwrócony wcześniej z wywołania `eth_subscribe`.
+1. ID subskrypcji, wcześniej zwrócone z wywołania `eth_subscribe`.
 
 Zwraca
 
-`true`, jeśli subskrypcja została pomyślnie anulowana, lub `false`, jeśli nie istniała subskrypcja o podanym identyfikatorze.
+`true`, jeśli subskrypcja została pomyślnie anulowana, lub `false`, jeśli nie istniała subskrypcja o podanym ID.
 
 Przykład:
 
-**Zapytanie**
+**Żądanie**
 
 ```
 curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-
-
 ```
 
 **Wynik**
@@ -243,4 +240,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Zarejestruj się za darmo w Alchemy](https://auth.alchemy.com), sprawdź [naszą dokumentację](https://www.alchemy.com/docs/), a żeby być na bieżąco z najnowszymi wiadomościami, obserwuj nas na [Twitterze](https://x.com/AlchemyPlatform).
+[Zarejestruj się w Alchemy](https://auth.alchemy.com) za darmo, sprawdź [naszą dokumentację](https://www.alchemy.com/docs/), a po najnowsze wiadomości śledź nas na [Twitterze](https://x.com/AlchemyPlatform).
