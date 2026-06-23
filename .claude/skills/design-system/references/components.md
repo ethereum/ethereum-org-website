@@ -63,6 +63,7 @@ import {
   CardEmoji,
   CardFooter,
   CardHeader,
+  CardIconContainer,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -129,6 +130,8 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 - `textColor="body"`: re-assert base body color (rare; inherits correctly by default).
 
 **`CardEmoji`**: wraps `<Emoji text=":rocket:" />` in a fixed-size `div` to prevent layout shift on client-side hydration. Typically lives in `CardHeader`.
+
+**`CardIconContainer`**: Lucide counterpart to `CardEmoji` — wraps an icon child, forces it to `size-12` (48px), and tints it `text-primary`. **Preferred over `CardEmoji` for new/refactored cards** as part of the gradual emoji-to-Lucide migration; reach for an emoji only to match existing emoji cards or when no fitting icon exists.
 
 ### `Grid`
 
@@ -753,4 +756,4 @@ The shortcode registry for markdown content. To add a markdown shortcode, add th
 
 ### Markdown shortcode wrapper
 
-- `@/components/MarkdownCard` -- backs the `<Card>` markdown shortcode (registered in `MdComponents`). Composes the `@/components/ui/card` primitives with an MDX-friendly prop shape (`emoji`, `title`, `description`, `ctaLabel`, `href`). Importing it from app code is allowed but rare — most app-code cards should compose the primitives directly from `@/components/ui/card`.
+- `@/components/MarkdownCard` -- backs the `<Card>` markdown shortcode (registered in `MdComponents`). Composes the `@/components/ui/card` primitives with an MDX-friendly prop shape (`emoji` _or_ `icon` (mutually exclusive; prefer a Lucide `icon`), `title`, `description`, `ctaLabel`, `href`). Importing it from app code is allowed but rare — most app-code cards should compose the primitives directly from `@/components/ui/card`.
