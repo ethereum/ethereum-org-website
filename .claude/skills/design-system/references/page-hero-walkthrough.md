@@ -8,10 +8,9 @@ A worked example of adding a page hero correctly.
 
 | Hero | When to use |
 |---|---|
-| `PageHero` | The workhorse for most internal pages. 2-column with image, breadcrumb (or `header` eyebrow), and up to two buttons -- **or** text-only when you omit `heroImg`. Absorbed the former `ContentHero` and `SimpleHero`. |
+| `PageHero` | The workhorse for most internal pages. 2-column with image, breadcrumb (or `header` eyebrow), and up to two buttons -- **or** text-only when you omit `heroImg`. With `variant="no-divider"` and no `heroImg`/`description` it's the minimal breadcrumb + h1 article hero (the `StaticLayout` default). Absorbed the former `ContentHero`, `SimpleHero`, and `MdxHero`. |
 | `HubHero` | Hub/landing pages: full-bleed background image with overlay text card. |
 | `HomeHero` | Homepage only. Async server component with optimized image loading. |
-| `MdxHero` | Long-form articles: minimal breadcrumb + h1, optimized for reading. |
 
 If none of these fit, **stop and ask**. Don't invent a new hero. Always import `PageHero` as a named export from `@/components/Hero`.
 
@@ -74,12 +73,16 @@ Omit `heroImg` for a text-only hero. Add `variant="no-divider"` when the next se
 />
 ```
 
-### `MdxHero` (article-style)
+### `PageHero` article-style (replaces the former `MdxHero`)
+
+For the minimal breadcrumb + h1 reading hero (what `StaticLayout` renders for non-hub pages), use a text-only `PageHero` with `variant="no-divider"` and no `description`. `description` is optional on `PageHero`, so omitting it yields just the breadcrumb and title.
 
 ```tsx
-import { MdxHero } from "@/components/Hero"
-
-<MdxHero breadcrumbs={{ slug: "/developers/docs/" }} title={t("title")} />
+<PageHero
+  breadcrumbs={{ slug }}
+  title={frontmatter.title}
+  variant="no-divider"
+/>
 ```
 
 ## Step 3: Translation, not English

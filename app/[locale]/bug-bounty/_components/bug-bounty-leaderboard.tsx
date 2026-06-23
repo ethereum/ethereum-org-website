@@ -70,12 +70,19 @@ const BugBountyLeaderboard = async ({
                     className="text-body no-underline"
                     href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
                   >
-                    <span className="sr-only">{`In place number ${
-                      idx + 1
-                    } with ${score} points`}</span>
+                    <span className="sr-only">
+                      {t("page-upgrades-bug-bounty-leaderboard-position", {
+                        rank: idx + 1,
+                        score,
+                      })}
+                    </span>
                     {name}{" "}
                     {hasGitHub && (
-                      <span className="sr-only">(See Github Profile)</span>
+                      <span className="sr-only">
+                        {t(
+                          "page-upgrades-bug-bounty-leaderboard-github-profile"
+                        )}
+                      </span>
                     )}
                   </LinkOverlay>
 
