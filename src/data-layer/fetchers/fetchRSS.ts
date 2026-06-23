@@ -6,12 +6,27 @@ import { isValidDate } from "@/lib/utils/date"
 
 import { LATEST_RSS_WINDOW_DAYS, LATEST_SOURCES } from "@/data/latest/sources"
 
+import { uploadToS3 } from "../s3"
+
 import { fetchRetry } from "./fetchRetry"
 
 export const FETCH_RSS_TASK_ID = "fetch-rss"
 
 const IMG_REGEX = /https?:\/\/[^"]*?\.(jpe?g|png|webp)/g
 const DESCRIPTION_MAX_LENGTH = 200
+const RSS_IMAGE_PREFIX = "latest/thumbnails"
+
+/**
+ * Re-host an external RSS cover image on our S3 bucket so /latest never
+ * hot-links third-party hosts. uploadToS3 de-dupes by content hash, so
+ * re-runs of the task don't re-upload unchanged covers. Returns "" when there
+ * is no image or the upload fails, letting the card fall back to its local
+ * placeholder rather than reintroducing a hot-linked URL.
+ */
+async function toHostedImage(remoteUrl: string): Promise<string> {
+  if (!remoteUrl) return ""
+  return (await uploadToS3(remoteUrl, RSS_IMAGE_PREFIX)) ?? ""
+}
 
 /**
  * Fetches XML data from the specified URL.
@@ -116,47 +131,49 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
           ? mainChannel.image[0].url[0]
           : ""
 
-        const parsedRssItems: RSSItem[] = mainChannel.item
-          .filter(
-            (item) =>
-              item.pubDate &&
-              withinWindow(item.pubDate[0]) &&
-              matchesCategoryFilter(item.category)
-          )
-          .sort(
-            (a, b) =>
-              new Date(b.pubDate[0]).getTime() -
-              new Date(a.pubDate[0]).getTime()
-          )
-          .map((item) => {
-            const getImgSrc = () => {
-              // Prefer an explicit image attachment (the post's cover) over
-              // scraping the body — body scraping tends to grab the first
-              // inline image, which is often an ad banner or logo. Guard the
-              // enclosure by type so podcast/audio enclosures aren't treated
-              // as images (e.g. Paragraph feeds carry an image/png cover).
-              const enclosure = item.enclosure?.[0]?.$
-              if (enclosure?.url && enclosure.type?.startsWith("image/"))
-                return enclosure.url
-              if (item["media:content"]) return item["media:content"][0].$.url
-              if (item["content:encoded"]) {
-                const match = item["content:encoded"][0].match(IMG_REGEX)?.[0]
-                if (match) return match
+        const parsedRssItems: RSSItem[] = await Promise.all(
+          mainChannel.item
+            .filter(
+              (item) =>
+                item.pubDate &&
+                withinWindow(item.pubDate[0]) &&
+                matchesCategoryFilter(item.category)
+            )
+            .sort(
+              (a, b) =>
+                new Date(b.pubDate[0]).getTime() -
+                new Date(a.pubDate[0]).getTime()
+            )
+            .map(async (item) => {
+              const getImgSrc = () => {
+                // Prefer an explicit image attachment (the post's cover) over
+                // scraping the body — body scraping tends to grab the first
+                // inline image, which is often an ad banner or logo. Guard the
+                // enclosure by type so podcast/audio enclosures aren't treated
+                // as images (e.g. Paragraph feeds carry an image/png cover).
+                const enclosure = item.enclosure?.[0]?.$
+                if (enclosure?.url && enclosure.type?.startsWith("image/"))
+                  return enclosure.url
+                if (item["media:content"]) return item["media:content"][0].$.url
+                if (item["content:encoded"]) {
+                  const match = item["content:encoded"][0].match(IMG_REGEX)?.[0]
+                  if (match) return match
+                }
+                return channelImage
               }
-              return channelImage
-            }
-            return {
-              pubDate: item.pubDate[0],
-              title: item.title[0],
-              link: rewriteLink(item.link[0]),
-              imgSrc: getImgSrc(),
-              description: toExcerpt(item.description?.[0]),
-              source: name,
-              category,
-              sourceUrl,
-              sourceFeedUrl: url,
-            }
-          })
+              return {
+                pubDate: item.pubDate[0],
+                title: item.title[0],
+                link: rewriteLink(item.link[0]),
+                imgSrc: await toHostedImage(getImgSrc()),
+                description: toExcerpt(item.description?.[0]),
+                source: name,
+                category,
+                sourceUrl,
+                sourceFeedUrl: url,
+              }
+            })
+        )
 
         allItems.push(parsedRssItems)
       } else if ("feed" in response) {
@@ -170,44 +187,46 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
           return firstEl._ || ""
         }
 
-        const parsedAtomItems: RSSItem[] = response.feed.entry
-          .filter((entry) => entry.updated && withinWindow(entry.updated[0]))
-          .sort(
-            (a, b) =>
-              new Date(b.updated[0]).getTime() -
-              new Date(a.updated[0]).getTime()
-          )
-          .map((entry) => {
-            const getHref = (): string => {
-              if (!entry.link) {
-                console.warn(`No link found for RSS url: ${url}`)
-                return ""
+        const parsedAtomItems: RSSItem[] = await Promise.all(
+          response.feed.entry
+            .filter((entry) => entry.updated && withinWindow(entry.updated[0]))
+            .sort(
+              (a, b) =>
+                new Date(b.updated[0]).getTime() -
+                new Date(a.updated[0]).getTime()
+            )
+            .map(async (entry) => {
+              const getHref = (): string => {
+                if (!entry.link) {
+                  console.warn(`No link found for RSS url: ${url}`)
+                  return ""
+                }
+                const link = entry.link[0]
+                if (typeof link === "string") return link
+                return link.$.href || ""
               }
-              const link = entry.link[0]
-              if (typeof link === "string") return link
-              return link.$.href || ""
-            }
-            const getImgSrc = (): string => {
-              const contentMatch = getString(entry.content).match(IMG_REGEX)
-              if (contentMatch) return contentMatch[0]
-              const summaryMatch = getString(entry.summary).match(IMG_REGEX)
-              if (summaryMatch) return summaryMatch[0]
-              return feedImage || ""
-            }
-            return {
-              pubDate: entry.updated[0],
-              title: getString(entry.title),
-              link: rewriteLink(getHref()),
-              imgSrc: getImgSrc(),
-              description: toExcerpt(
-                getString(entry.summary) || getString(entry.content)
-              ),
-              source: name,
-              category,
-              sourceUrl,
-              sourceFeedUrl: url,
-            }
-          })
+              const getImgSrc = (): string => {
+                const contentMatch = getString(entry.content).match(IMG_REGEX)
+                if (contentMatch) return contentMatch[0]
+                const summaryMatch = getString(entry.summary).match(IMG_REGEX)
+                if (summaryMatch) return summaryMatch[0]
+                return feedImage || ""
+              }
+              return {
+                pubDate: entry.updated[0],
+                title: getString(entry.title),
+                link: rewriteLink(getHref()),
+                imgSrc: await toHostedImage(getImgSrc()),
+                description: toExcerpt(
+                  getString(entry.summary) || getString(entry.content)
+                ),
+                source: name,
+                category,
+                sourceUrl,
+                sourceFeedUrl: url,
+              }
+            })
+        )
 
         allItems.push(parsedAtomItems)
       } else {
