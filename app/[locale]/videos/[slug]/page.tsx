@@ -54,7 +54,7 @@ const VideoLandingPage = async (props: {
         transcript={transcriptMdx}
       />
 
-      <main className="max-w-4xl p-page pt-hero-2x">
+      <main className="max-w-4xl p-page pt-hero lg:pt-hero-2x">
         <MainArticle className="flow">
           <Breadcrumbs slug={breadcrumbSlug} startDepth={1} />
 
