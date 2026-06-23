@@ -354,7 +354,7 @@ React hook [`useCallback`](https://react.dev/reference/react/useCallback) 讓我
 - 新的問候語已提交，正在處理中
 - 新的問候語已被拒絕
 
-## 結論
+## 結論 {#conclusion}
 到目前為止，您應該能夠為您的去中心化應用程式 (dapp) 使用者建立免燃料體驗，代價是某種程度的中心化。
 
 然而，這僅適用於支援 ERC-712 的智能合約。舉例來說，要轉帳 ERC-20 代幣，必須由擁有者簽署交易，而不僅僅是簽署訊息。最簡單的解決方案是讓資產不由 EOA 地址擁有，而是由一個獨立的合約擁有（這是[帳戶抽象化](/roadmap/account-abstraction/)的一種簡單形式）。您可以在[後續教學](/developers/tutorials/gasless-token)中閱讀更多相關資訊。

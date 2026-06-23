@@ -354,7 +354,7 @@ Użytkownik przesyła powitanie. Może zostanie ono zaktualizowane w następnym 
 - Nowe powitanie zostało przesłane i jest w trakcie przetwarzania
 - Nowe powitanie zostało odrzucone
 
-## Podsumowanie
+## Podsumowanie {#conclusion}
 
 Na tym etapie powinieneś być w stanie stworzyć środowisko bez opłat za gaz dla użytkowników Twojej zdecentralizowanej aplikacji (dapp), kosztem pewnej centralizacji.
 

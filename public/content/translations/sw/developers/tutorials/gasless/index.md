@@ -354,7 +354,7 @@ Mtumiaji anawasilisha salamu. Labda inasasishwa kwenye kitalu kinachofuata. Labd
 - Salamu mpya imewasilishwa, na iko katika mchakato
 - Salamu mpya imekataliwa
 
-## Hitimisho
+## Hitimisho {#conclusion}
 
 Kufikia hapa, unapaswa kuwa na uwezo wa kuunda uzoefu wa kutotumia gesi kwa watumiaji wa programu tumizi iliyogatuliwa (dapp) yako, kwa gharama ya usimamizi wa kati kiasi.
 

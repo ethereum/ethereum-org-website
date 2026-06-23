@@ -354,7 +354,7 @@ Um usuário envia uma saudação. Talvez ela seja atualizada no próximo bloco. 
 - A nova saudação foi enviada e está em processamento
 - A nova saudação foi rejeitada
 
-## Conclusão
+## Conclusão {#conclusion}
 
 Neste ponto, você deve ser capaz de criar uma experiência sem gás para os usuários do seu aplicativo descentralizado (dapp), ao custo de alguma centralização.
 

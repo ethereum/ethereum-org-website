@@ -354,7 +354,7 @@ Uživatel odešle pozdrav. Možná se aktualizuje v dalším bloku. Možná ne. 
 - Nový pozdrav byl odeslán a zpracovává se
 - Nový pozdrav byl odmítnut
 
-## Závěr
+## Závěr {#conclusion}
 
 V tuto chvíli byste měli být schopni vytvořit pro uživatele vaší decentralizované aplikace (dapp) prostředí bez poplatků za gas, a to za cenu určité centralizace.
 

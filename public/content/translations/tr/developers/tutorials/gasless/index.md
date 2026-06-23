@@ -354,7 +354,7 @@ Bir kullanıcı bir selamlama gönderir. Belki bir sonraki blokta güncellenir. 
 - Yeni selamlama gönderildi ve işlemde
 - Yeni selamlama reddedildi
 
-## Sonuç
+## Sonuç {#conclusion}
 
 Bu noktada, bir miktar merkeziyetleşme pahasına merkeziyetsiz uygulama (dapp) kullanıcılarınız için gazsız bir deneyim yaratabilmelisiniz.
 

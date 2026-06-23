@@ -354,7 +354,7 @@ Một người dùng gửi một lời chào. Có thể nó được cập nhậ
 - Lời chào mới đã được gửi và đang trong quá trình xử lý
 - Lời chào mới đã bị từ chối
 
-## Kết luận
+## Kết luận {#conclusion}
 
 Đến đây, bạn đã có thể tạo ra một trải nghiệm không cần Gas cho người dùng ứng dụng phi tập trung (dapp) của mình, với cái giá là một chút sự tập trung hóa.
 
