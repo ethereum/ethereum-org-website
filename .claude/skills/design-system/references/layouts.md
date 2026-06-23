@@ -24,7 +24,7 @@ When you have a page or section that "needs its own layout," walk this list top-
 1. **Does the page render through `[...slug]` with a markdown source?** Pick the right `template:` value. `TopicLayout` for anything with a sub-nav across sibling pages, `static` otherwise. No new layout.
 2. **Does the page have a sub-nav dropdown linking related sibling pages?** That's exactly what `TopicLayout` is for. Add a `src/data/topics/<key>.ts` config file. Route `layoutMapping[<key>] = TopicLayout`. No new layout.
 3. **Is the variation just a swap-in component (hero, before-content, after-content)?** Use the slots `TopicLayout` already exposes (`afterContent`, `heroSection` override via config `hubHero`) or add a narrow new slot. No new layout.
-4. **Is the page a one-off App Router page (`app/[locale]/<route>/page.tsx`) with non-markdown content?** Compose `ContentLayout` directly (see `/learn/`) and pick its `asidePosition` (see "`ContentLayout` in Practice" below). No new layout — and don't hand-roll the `<main>` / TOC / byline / feedback shell; that's exactly what `ContentLayout` owns.
+4. **Is the page a one-off App Router page (`app/[locale]/<route>/page.tsx`) with non-markdown content?** Compose `ContentLayout` directly (see `/learn/`); it owns the `<main>` / TOC / byline / feedback shell (see "`ContentLayout` in Practice" below). Override the article width with its `variant` prop if needed. No new layout — and don't hand-roll that shell yourself.
 
 If you can stop at any of those steps, you don't need a new layout file.
 
@@ -101,28 +101,34 @@ If your topic needs something none of these expose, the right move is usually a 
   tocItems={tocItems}
   contributors={contributors}
   lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-  asidePosition="right-top"           // optional; see below
-  listenSlug="what-is-ethereum"       // optional; renders the audio player in the byline
+  listenSlug="what-is-ethereum"       // optional; renders the audio player in the top byline
+  // variant="base"                   // optional; widens the article column (see below)
 >
   <Section id="…">…</Section>
   {/* more <Section> blocks */}
 </ContentLayout>
 ```
 
-### `asidePosition` — the two shapes
+### The shape (one arrangement) + `variant` for width
 
-One prop selects between two coherent arrangements (the aside side co-varies with where contributors sit):
+`ContentLayout` renders a single coherent, mobile-first arrangement — there is **no** `asidePosition` and no left-rail option (the TOC `left` variant is deprecated). If a page needs a fundamentally different aside arrangement, that's a layout discussion, not a call-site override.
 
-| `asidePosition` | TOC | Contributors | Article width | Use for |
-|---|---|---|---|---|
-| `"left-bottom"` (default) | left rail (`variant="left"`), hidden on mobile in favour of the sticky `MobileButtonDropdown` | at the **foot** of the article (`border-t`) | wide (`basis-5xl`) | topic hubs + `/learn/`, `/staking/`, `/use-cases/` |
-| `"right-top"` | card (`variant="card"`) in a right-hand `<aside>` | compact **byline at the top** (`FileContributors variant="compact"`, optional `ListenToPlayer`) | capped (`max-w-3xl`) | standalone concept articles — `/what-is-ethereum/` and its siblings (`what-is-ether`, `ethereum-vs-bitcoin`, `what-is-the-ethereum-network`, `ethereum-history-founder-and-ownership`) |
+- **TOC**: a `card`-variant `TableOfContents` in a right-hand `<aside>` on desktop; on mobile it collapses to the sticky `MobileButtonDropdown` (driven by `dropdownLinks` + `showDropdown`).
+- **Byline**: `FileContributors variant="compact"` at the **top** of the article, with the optional `ListenToPlayer` beneath it (`listenSlug`).
+- **Article**: `MainArticle` with `.flow`, then the end-of-page `ContentFeedback`.
+
+The one structural knob is `variant`, which sets the article column width:
+
+| `variant` | Article width | Use for |
+|---|---|---|
+| `"narrow"` (default) | `max-w-3xl` | standalone concept articles — `/what-is-ethereum/` and siblings (`what-is-ether`, `ethereum-vs-bitcoin`, `what-is-the-ethereum-network`, `ethereum-history-founder-and-ownership`); also the current `/learn/`, `/staking/`, `/use-cases/` |
+| `"base"` | `max-w-4xl` | wider content/hub pages that need more room |
 
 Notes:
 - The byline spacing (player `mt-space-half`, first-section gap) is owned by the layout — pages don't hand-tune it.
-- `FileContributors` exposes `variant="compact"` for the top byline; reach for it via `asidePosition="right-top"` rather than overriding `FileContributors` padding with `!`/`[&>div]` hacks at the call site.
+- `FileContributors variant="compact"` is selected by the layout for the top byline; don't override `FileContributors` padding with `!`/`[&>div]` hacks at the call site.
 - `listenSlug` is the only thing that toggles the audio player — omit it on pages without a playlist.
-- This is **not** the future `ArticleLayout` (reserved for Tutorial / Latest / Stories). It's the existing `ContentLayout` with a positional variant.
+- This is **not** the future `ArticleLayout` (reserved for Tutorial / Latest / Stories).
 
 ### Section anchors: `id` on the `Section`, unless it opens with an image
 
