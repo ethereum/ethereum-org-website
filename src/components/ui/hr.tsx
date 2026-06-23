@@ -3,19 +3,14 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils/cn"
 
-const variants = cva("", {
+const variants = cva("my-space-3x", {
   variants: {
     variant: {
-      full: "inline-block w-full border-body-medium opacity-60",
-      narrow: "my-space-3x h-1 w-1/10 bg-primary-high-contrast",
+      narrow: "h-1 w-1/10 bg-primary-high-contrast",
     },
     position: {
-      center: "mx-auto",
       indent: "mx-page",
     },
-  },
-  defaultVariants: {
-    variant: "full",
   },
 })
 
