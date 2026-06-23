@@ -1,15 +1,7 @@
 "use client"
 
-import React, {
-  type ButtonHTMLAttributes,
-  forwardRef,
-  useEffect,
-  useMemo,
-  useState,
-} from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import {
-  ChevronDown,
-  ChevronUp,
   Code,
   ExternalLink,
   GraduationCap,
@@ -31,14 +23,13 @@ import { Flex } from "@/components/ui/flex"
 import Input from "@/components/ui/input"
 import { BaseLink } from "@/components/ui/Link"
 import TabNav from "@/components/ui/TabNav"
-import { Tag, TagButton } from "@/components/ui/tag"
+import { Tag } from "@/components/ui/tag"
+import TagFilter from "@/components/ui/tag-filter"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getTagCounts } from "@/lib/utils/tags"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import {
-  filterTutorialsByLang,
-  getSortedTutorialTagsForLang,
-} from "@/lib/utils/tutorial"
+import { filterTutorialsByLang } from "@/lib/utils/tutorial"
 
 import externalTutorials from "@/data/externalTutorials.json"
 
@@ -47,26 +38,6 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 import useTranslation from "@/hooks/useTranslation"
 
 const MAX_DEFAULT_TAGS = 12
-
-const FilterTag = forwardRef<
-  HTMLButtonElement,
-  { isActive: boolean; name: string } & ButtonHTMLAttributes<HTMLButtonElement>
->((props, ref) => {
-  const { isActive, name, ...rest } = props
-  return (
-    <TagButton
-      ref={ref}
-      variant={isActive ? "solid" : "outline"}
-      status={isActive ? "tag" : "normal"}
-      className="justify-center"
-      {...rest}
-    >
-      {name}
-    </TagButton>
-  )
-})
-
-FilterTag.displayName = "FilterTag"
 
 const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
@@ -104,8 +75,13 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
     [internalTutorials, effectiveLocale]
   )
 
-  const allTags = useMemo(
-    () => getSortedTutorialTagsForLang(filteredTutorialsByLang),
+  // Count-descending tag entries, dropping one-off tags (count <= 1) which add
+  // noise to the filter row.
+  const eligibleTags = useMemo(
+    () =>
+      getTagCounts(filteredTutorialsByLang, (tutorial) => tutorial.tags).filter(
+        ([, count]) => count > 1
+      ),
     [filteredTutorialsByLang]
   )
 
@@ -149,27 +125,6 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
   const [selectedTags, setSelectedTags] = useState<Array<string>>([])
   const [selectedSkill, setSelectedSkill] = useState<string>("all")
   const [searchQuery, setSearchQuery] = useState("")
-  const [showAllTags, setShowAllTags] = useState(false)
-
-  // Split tags into popular (top N by count) and niche (the rest)
-  const { popularTags, nicheTags } = useMemo(() => {
-    const eligible: Array<[string, number]> = []
-
-    Object.entries(allTags).forEach(([tagName, tagCount]) => {
-      const count = tagCount as number
-      if (count <= 1) return
-      eligible.push([tagName, count])
-    })
-
-    // Sort by count descending for visual hierarchy
-    eligible.sort((a, b) => b[1] - a[1])
-
-    // Top tags shown by default, rest behind expander
-    const popular = eligible.slice(0, MAX_DEFAULT_TAGS)
-    const niche = eligible.slice(MAX_DEFAULT_TAGS)
-
-    return { popularTags: popular, nicheTags: niche }
-  }, [allTags])
 
   // Combined filtering: skill + tags + search
   useEffect(() => {
@@ -206,27 +161,22 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
     setFilteredTutorials(tutorials)
   }, [filteredTutorialsByLang, selectedTags, selectedSkill, searchQuery])
 
-  const handleTagSelect = (tagName: string) => {
-    const tempSelectedTags = [...selectedTags]
+  // Assumes a single-tag delta per call (chip toggle or one active-filter
+  // removal) and reports exactly one Matomo event. A multi-tag change (e.g. a
+  // future "clear all") would only track the first diff.
+  const handleTagsChange = (next: Array<string>) => {
+    const added = next.find((tag) => !selectedTags.includes(tag))
+    const removed = selectedTags.find((tag) => !next.includes(tag))
 
-    const index = tempSelectedTags.indexOf(tagName)
-    if (index > -1) {
-      tempSelectedTags.splice(index, 1)
+    if (added || removed) {
       trackCustomEvent({
         eventCategory: "tutorial tags",
         eventAction: "click",
-        eventName: `${tagName} remove`,
-      })
-    } else {
-      tempSelectedTags.push(tagName)
-      trackCustomEvent({
-        eventCategory: "tutorial tags",
-        eventAction: "click",
-        eventName: `${tagName} add`,
+        eventName: `${added ?? removed} ${added ? "add" : "remove"}`,
       })
     }
 
-    setSelectedTags(tempSelectedTags)
+    setSelectedTags(next)
   }
 
   const handleSkillSelect = (key: string) => {
@@ -253,8 +203,6 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
     selectedTags.length > 0 ||
     selectedSkill !== "all" ||
     searchQuery.trim() !== ""
-
-  const visibleTags = showAllTags ? [...popularTags, ...nicheTags] : popularTags
 
   return (
     <>
@@ -299,42 +247,12 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
         <p className="mb-space-half text-xs tracking-wider text-body-medium uppercase">
           <Translation id="page-developers-tutorials:page-tutorial-topics" />
         </p>
-        <div className="flex flex-wrap gap-2">
-          {visibleTags.map(([tagName, tagCount]) => {
-            const isActive = selectedTags.includes(tagName)
-            return (
-              <FilterTag
-                key={tagName}
-                onClick={() => handleTagSelect(tagName)}
-                name={`${tagName} (${tagCount})`}
-                isActive={isActive}
-              />
-            )
-          })}
-
-          {/* Show more / Show less toggle */}
-          {nicheTags.length > 0 && (
-            <button
-              onClick={() => setShowAllTags(!showAllTags)}
-              className="inline-flex items-center gap-1 rounded-full border border-dashed border-body-medium px-3 py-0.5 text-xs text-body-medium uppercase transition-colors hover:border-primary hover:text-primary"
-            >
-              {showAllTags ? (
-                <>
-                  <Translation id="show-less" />{" "}
-                  <ChevronUp className="size-3" />
-                </>
-              ) : (
-                <>
-                  <Translation
-                    id="page-developers-tutorials:page-tutorial-more-tags"
-                    values={{ count: nicheTags.length }}
-                  />{" "}
-                  <ChevronDown className="size-3" />
-                </>
-              )}
-            </button>
-          )}
-        </div>
+        <TagFilter
+          tags={eligibleTags}
+          value={selectedTags}
+          onChange={handleTagsChange}
+          defaultVisible={MAX_DEFAULT_TAGS}
+        />
 
         {/* Row 3: Active filters summary (only when filters active) */}
         {hasActiveFilters && (
@@ -361,7 +279,9 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                 status="tag"
                 variant="solid"
                 className="cursor-pointer gap-1"
-                onClick={() => handleTagSelect(tag)}
+                onClick={() =>
+                  handleTagsChange(selectedTags.filter((t) => t !== tag))
+                }
               >
                 {tag}
                 <X className="size-3" />
