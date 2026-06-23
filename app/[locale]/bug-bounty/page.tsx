@@ -220,7 +220,7 @@ export default async function Page(props: { params: Promise<Params> }) {
         Fusaka vulnerabilities are now part of the Bug Bounty Program!
       </Alert> */}
 
-      <div className="flex justify-between gap-space-3x px-page py-hero-2x *:flex-1 max-lg:flex-col">
+      <div className="flex justify-between gap-space-3x px-page py-hero *:flex-1 max-lg:flex-col lg:pt-hero-2x">
         <div className="max-w-3xl">
           <Breadcrumbs slug="bug-bounty" className="mb-space-2x" />
           <div className="mb-space flex items-center gap-2">
