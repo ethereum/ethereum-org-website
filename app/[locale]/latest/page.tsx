@@ -33,10 +33,18 @@ import BlogPageJsonLD from "./page-jsonld"
 import { getRSSData } from "@/lib/data"
 
 // Hero and the bottom "suggest a resource" banner share one CTA pair.
-// hrefs are placeholders for now (targets to be decided).
+// TODO: swap "submit-resource" to the news-source contributing guide once it
+// lands in the repo (currently a Google Doc); see issue #18388 for the planned
+// dedicated issue templates.
 const CTA_BUTTONS = [
-  { key: "page-latest-cta-submit-resource", href: "#" },
-  { key: "page-latest-cta-propose-article", href: "#" },
+  {
+    key: "page-latest-cta-submit-resource",
+    href: "https://github.com/ethereum/ethereum-org-website/issues/new/choose",
+  },
+  {
+    key: "page-latest-cta-propose-article",
+    href: "/contributing/adding-articles/",
+  },
 ] as const
 
 const Page = async (props: { params: Promise<PageParams> }) => {
