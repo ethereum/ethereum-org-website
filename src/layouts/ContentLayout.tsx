@@ -14,7 +14,10 @@ import TableOfContents, {
 
 const variants = cva("flow flex-1", {
   variants: {
-    variant: { base: "max-w-4xl", narrow: "max-w-3xl" },
+    variant: {
+      base: "max-w-4xl",
+      narrow: "max-w-3xl",
+    },
   },
   defaultVariants: {
     variant: "narrow",
