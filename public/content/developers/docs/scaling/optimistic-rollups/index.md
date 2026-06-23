@@ -256,7 +256,6 @@ More of a visual learner? Watch Finematics explain optimistic rollups:
 ## Further reading on optimistic rollups {#further-reading-on-optimistic-rollups}
 
 - [How do optimistic rollups work (The Complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [What is a Blockchain Rollup? A Technical Introduction](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [The Essential Guide to Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [The Practical Guide To Ethereum Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [The State Of Fraud Proofs In Ethereum L2s](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)

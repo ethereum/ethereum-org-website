@@ -25,9 +25,6 @@
 @utility bg-radial-b {
   background-image: var(--radial-b);
 }
-@utility bg-linear-bug-bounty-title {
-  background-image: var(--linear-bug-bounty-title);
-}
 @utility bg-gradient-staking {
   background-image: var(--gradient-staking);
 }
