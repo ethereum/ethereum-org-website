@@ -2,14 +2,12 @@ import { ExternalLink } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
 import Emoji from "@/components/Emoji"
+import { Avatar } from "@/components/ui/avatar"
+import { Flex } from "@/components/ui/flex"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import { List, ListItem } from "@/components/ui/list"
 
 import { GITHUB_URL } from "@/lib/constants"
-
-import { Avatar } from "./ui/avatar"
-import { Flex } from "./ui/flex"
-import { LinkBox } from "./ui/link-box"
-import { LinkOverlay } from "./ui/link-box"
-import { List, ListItem } from "./ui/list"
 
 type Person = {
   name: string
@@ -17,12 +15,15 @@ type Person = {
   score: number
 }
 
-type LeaderboardProps = {
+type BugBountyLeaderboardProps = {
   content: Person[]
   limit?: number
 }
 
-const Leaderboard = async ({ content, limit = 100 }: LeaderboardProps) => {
+const BugBountyLeaderboard = async ({
+  content,
+  limit = 100,
+}: BugBountyLeaderboardProps) => {
   const t = await getTranslations("page-bug-bounty")
 
   return (
@@ -99,4 +100,4 @@ const Leaderboard = async ({ content, limit = 100 }: LeaderboardProps) => {
   )
 }
 
-export default Leaderboard
+export default BugBountyLeaderboard
