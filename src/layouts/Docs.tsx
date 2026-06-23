@@ -20,7 +20,7 @@ import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
+import { Divider } from "@/components/ui/hr"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
