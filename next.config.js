@@ -270,6 +270,11 @@ module.exports = (phase) => {
        * so the `[locale]` brackets must be escaped to match literally.
        */
       outputFileTracingIncludes: {
+        // Homepage "Latest updates" widget reads builder posts at runtime.
+        "\\[locale\\]": [
+          "./public/content/latest/**/*.md",
+          "./public/content/translations/*/latest/**/*.md",
+        ],
         "\\[locale\\]/latest": [
           "./public/content/latest/**/*.md",
           "./public/content/translations/*/latest/**/*.md",

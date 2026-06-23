@@ -1,6 +1,11 @@
 import type { BlogPost, LatestArticle, RSSItem } from "@/lib/types"
 
+import { getBlogPostsData } from "@/lib/utils/md"
+
+import { LATEST_HIGHLIGHTS } from "@/data/latest/highlights"
 import { BUILDER_CATEGORY, LATEST_MAX_PER_SOURCE } from "@/data/latest/sources"
+
+import { getRSSData } from "@/lib/data"
 
 const toTime = (date: string) => {
   const time = new Date(date).getTime()
@@ -62,4 +67,34 @@ export function mergeLatestArticles(
   return [...builderArticles, ...rssArticles]
     .filter((article) => !excluded.has(article.href))
     .sort((a, b) => toTime(b.date) - toTime(a.date))
+}
+
+export type LatestData = {
+  /** Merged, newest-first stream for the /latest grid and homepage widget. */
+  articles: LatestArticle[]
+  /** Raw builder posts, returned so /latest can build its JSON-LD without re-reading markdown. */
+  blogPosts: BlogPost[]
+}
+
+/**
+ * Single source of truth behind /latest and the homepage "Latest updates"
+ * widget: read first-party builder posts + the cached RSS feeds, merge into one
+ * newest-first stream with the editorial highlights de-duped out. RSS is
+ * supplementary — a missing/unavailable feed cache degrades to builder articles
+ * only rather than throwing.
+ */
+export async function getLatestArticles(locale: string): Promise<LatestData> {
+  const blogPosts = await getBlogPostsData(locale)
+
+  let rssGroups: RSSItem[][] = []
+  try {
+    rssGroups = (await getRSSData()) ?? []
+  } catch (error) {
+    console.warn("Failed to load RSS data for /latest:", error)
+  }
+
+  const highlightHrefs = LATEST_HIGHLIGHTS.map((h) => h.href)
+  const articles = mergeLatestArticles(blogPosts, rssGroups, highlightHrefs)
+
+  return { articles, blogPosts }
 }

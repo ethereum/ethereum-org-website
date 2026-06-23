@@ -5,14 +5,13 @@ import { useLocale } from "next-intl"
 
 import type { LatestArticle } from "@/lib/types"
 
+import LatestCard from "@/components/Latest/LatestCard"
 import { Button } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
 import { TagButton } from "@/components/ui/tag"
 
-import { dateTimeFormat } from "@/lib/utils/date"
+import { formatDate } from "@/lib/utils/date"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import LatestCard from "./LatestCard"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -34,16 +33,6 @@ const LatestArticlesGrid = ({
 }: LatestArticlesGridProps) => {
   const { t } = useTranslation("page-latest")
   const locale = useLocale()
-
-  const formatDate = (date: string) => {
-    const parsed = new Date(date)
-    if (Number.isNaN(parsed.getTime())) return ""
-    return dateTimeFormat(locale, {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    }).format(parsed)
-  }
 
   // Distinct categories (the persistent chip row) and topic tags (revealed via
   // "+ more"), each with a count, sorted by frequency.
@@ -161,7 +150,7 @@ const LatestArticlesGrid = ({
             meta={
               article.date ? (
                 <>
-                  {formatDate(article.date)}
+                  {formatDate(article.date, locale, { month: "short" })}
                   {article.timeToRead ? (
                     <>
                       {" · "}

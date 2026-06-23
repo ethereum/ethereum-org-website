@@ -6,12 +6,13 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { Lang, PageParams, RSSItem } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import ContentFeedback from "@/components/ContentFeedback"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
+import LatestCard from "@/components/Latest/LatestCard"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
@@ -19,9 +20,8 @@ import { BaseLink } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dateTimeFormat } from "@/lib/utils/date"
-import { mergeLatestArticles } from "@/lib/utils/latest"
-import { getBlogPostsData } from "@/lib/utils/md"
+import { formatDate } from "@/lib/utils/date"
+import { getLatestArticles } from "@/lib/utils/latest"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
@@ -30,10 +30,7 @@ import { LATEST_HIGHLIGHTS } from "@/data/latest/highlights"
 import { LATEST_SOURCES } from "@/data/latest/sources"
 
 import LatestArticlesGrid from "./_components/LatestArticlesGrid"
-import LatestCard from "./_components/LatestCard"
 import BlogPageJsonLD from "./page-jsonld"
-
-import { getRSSData } from "@/lib/data"
 
 // Hero and the bottom "suggest a resource" banner share one CTA pair.
 // TODO: swap "submit-resource" to the news-source contributing guide once it
@@ -62,19 +59,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/latest")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const blogPosts = await getBlogPostsData(locale)
-
-  // RSS is supplementary — a missing/unavailable feed cache should degrade to
-  // builder articles only, never take down the page.
-  let rssGroups: RSSItem[][] = []
-  try {
-    rssGroups = (await getRSSData()) ?? []
-  } catch (error) {
-    console.warn("Failed to load RSS data for /latest:", error)
-  }
-
-  const highlightHrefs = LATEST_HIGHLIGHTS.map((h) => h.href)
-  const articles = mergeLatestArticles(blogPosts, rssGroups, highlightHrefs)
+  const { articles, blogPosts } = await getLatestArticles(locale)
 
   const { contributors } = await getAppPageContributorInfo(
     "latest",
@@ -83,16 +68,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const disclaimer =
     locale !== "en" ? t("page-latest-i18n-disclaimer") : undefined
-
-  const formatHighlightDate = (date: string) => {
-    const parsed = new Date(date)
-    if (Number.isNaN(parsed.getTime())) return undefined
-    return dateTimeFormat(locale, {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    }).format(parsed)
-  }
 
   return (
     <>
@@ -136,7 +111,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     description={highlight.description}
                     meta={
                       highlight.date
-                        ? formatHighlightDate(highlight.date)
+                        ? formatDate(highlight.date, locale, { month: "short" })
                         : undefined
                     }
                   />

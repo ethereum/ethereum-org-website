@@ -30,9 +30,10 @@ type LatestCardProps = {
 }
 
 /**
- * The shared card for the /latest page — used for both the editorial highlights
- * and the article grid. The whole card is the link (internal or external, via
- * `BaseLink`), so on-card tags are display-only; filtering lives in the chip row.
+ * The shared card for /latest and the homepage "Latest updates" widget — used
+ * for editorial highlights, the article grid, and the homepage preview. The
+ * whole card is the link (internal or external, via `BaseLink`), so on-card
+ * tags are display-only; filtering lives in the chip row.
  */
 const LatestCard = ({
   href,
