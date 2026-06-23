@@ -2,19 +2,20 @@
 
 import { useEffect, useRef, useState } from "react"
 import dynamic from "next/dynamic"
+import type { Swiper as SwiperType } from "swiper"
 import type { SwiperRef } from "swiper/react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
 import type { Wallet } from "@/lib/types"
 
-import ConnectYourWallet from "@/components/StartWithEthereumFlow/ConnectYourWallet"
-import DownloadAWallet from "@/components/StartWithEthereumFlow/DownloadAWallet"
-import LetUseSomeApps from "@/components/StartWithEthereumFlow/LetUseSomeApps"
+import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 import { Swiper, SwiperContainer, SwiperSlide } from "@/components/ui/swiper"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Skeleton, SkeletonLines } from "../ui/skeleton"
+import ConnectYourWallet from "./ConnectYourWallet"
+import DownloadAWallet from "./DownloadAWallet"
+import LetUseSomeApps from "./LetUseSomeApps"
 
 // Dynamically import Wagmi/RainbowKit components
 const WalletProviders = dynamic(() => import("@/components/WalletProviders"), {
@@ -51,7 +52,7 @@ const StartWithEthereumFlow = ({
     }
   }, [activeIndex]) // Re-check heights when active slide changes
 
-  const handleInit = (swiper) => {
+  const handleInit = (swiper: SwiperType) => {
     setTotalSlides(swiper.slides.length)
 
     updateSlideHeights(swiper)
@@ -70,12 +71,12 @@ const StartWithEthereumFlow = ({
   }
 
   // Separate function to update slide heights
-  const updateSlideHeights = (swiper) => {
+  const updateSlideHeights = (swiper: SwiperType) => {
     const heights = swiper.slides.map((slide) => slide.offsetHeight)
     setSlideHeights(heights)
   }
 
-  const handleSlideChange = (swiper) => {
+  const handleSlideChange = (swiper: SwiperType) => {
     setActiveIndex(swiper.activeIndex + 1)
   }
 
@@ -92,7 +93,11 @@ const StartWithEthereumFlow = ({
   }
 
   const getStyleFromIndex = (index: number) => {
-    const maxHeight = `calc(${slideHeights[activeIndex - 1]}px - ${activeIndex - 1 === index ? 0 : 100}px)`
+    // Active slide renders at natural height so the card's padding is fully
+    // respected. Only inactive slides are clamped shorter (and clipped by the
+    // slide's overflow-hidden) so they peek out behind the active card.
+    if (activeIndex - 1 === index) return {}
+    const maxHeight = `calc(${slideHeights[activeIndex - 1]}px - 100px)`
     return { maxHeight }
   }
 
@@ -102,10 +107,10 @@ const StartWithEthereumFlow = ({
         <SwiperContainer
           ref={containerRef}
           className={cn(
-            "-mx-8",
+            "-mx-page",
             "w-screen",
             "max-w-screen-2xl",
-            "px-4 sm:px-8",
+            "px-page",
             // Cards effect requires overflow-hidden on slides: the maxHeight
             // stacking trick (getStyleFromIndex) only hides inactive-slide
             // content if it's clipped
@@ -131,8 +136,8 @@ const StartWithEthereumFlow = ({
           >
             <SwiperSlide
               className={cn(
-                "from-[#f4effe] to-[#faf6fe] dark:from-[#0f0a19] dark:to-[#0a0811]",
-                "border border-[#ebe0fd] bg-linear-to-r p-4 sm:p-12 dark:border-[#1c112f]"
+                "bg-background from-primary/10 to-primary/5",
+                "border border-primary/10 bg-linear-to-r p-4 sm:p-12"
               )}
             >
               <div style={getStyleFromIndex(0)}>
@@ -144,10 +149,11 @@ const StartWithEthereumFlow = ({
                 />
               </div>
             </SwiperSlide>
+
             <SwiperSlide
               className={cn(
-                "from-[#f4fbfa] to-[#e8f6f5] dark:from-[#02100f] dark:to-[#000908]",
-                "border border-[#b2e2de] bg-linear-to-b p-4 sm:p-12 dark:border-[#083935] dark:bg-linear-to-t"
+                "bg-background from-accent-a/10 to-accent-a/5",
+                "border border-accent-a/10 bg-linear-to-b p-4 sm:p-12"
               )}
             >
               <div style={getStyleFromIndex(1)}>
@@ -158,10 +164,11 @@ const StartWithEthereumFlow = ({
                 />
               </div>
             </SwiperSlide>
+
             <SwiperSlide
               className={cn(
-                "from-[#ecf1fd] to-[#f6f8fe] dark:from-[#070c18] dark:to-[#02060f]",
-                "border border-[#d7e1fc] bg-linear-to-b p-4 sm:p-12 dark:border-[#192853] dark:bg-linear-to-t"
+                "bg-background from-accent-b/10 to-accent-b/5",
+                "border border-accent-b/10 bg-linear-to-b p-4 sm:p-12"
               )}
             >
               <div style={getStyleFromIndex(2)}>
