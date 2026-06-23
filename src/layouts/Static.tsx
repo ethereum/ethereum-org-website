@@ -1,14 +1,13 @@
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
 import ContentFeedback from "@/components/ContentFeedback"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FileContributors from "@/components/FileContributors"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import { HubHero } from "@/components/Hero"
+import { HubHero, PageHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import Logo from "@/components/Logo"
@@ -27,7 +26,7 @@ import WhitepaperBridge from "@/components/WhitepaperBridge"
 import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
 
-import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
+import guideHeroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 // Static layout components
 export const staticComponents = {
@@ -72,21 +71,35 @@ export const StaticLayout = ({
   const isGuidesHub = slug === "/guides/" || slug === "guides"
 
   return (
-    <Flex
-      className="justify-between p-8 lg:py-16"
-      dir={contentNotTranslated ? "ltr" : "unset"}
-    >
-      <main className="max-w-3xl">
-        {isGuidesHub ? (
-          <HubHero
-            heroImg={GuideHeroImage}
-            header={frontmatter.title}
-            description={frontmatter.description}
+    <div dir={contentNotTranslated ? "ltr" : "unset"}>
+      {isGuidesHub ? (
+        <HubHero
+          heroImg={guideHeroImg}
+          header={frontmatter.title}
+          description={frontmatter.description}
+        />
+      ) : (
+        <PageHero
+          breadcrumbs={{ slug }}
+          title={frontmatter.title}
+          variant="no-divider"
+        />
+      )}
+
+      <main className={cn("px-page pb-page", isGuidesHub && "pt-page")}>
+        <Flex className="w-full justify-between gap-x-space-3x max-lg:flex-col">
+          <TableOfContents
+            items={tocItems}
+            maxDepth={frontmatter.sidebarDepth || 2}
+            isMobile
           />
-        ) : (
-          <>
-            <Breadcrumbs slug={slug} />
-            <h1 className="mt-6 lg:mt-8">{frontmatter.title}</h1>
+
+          <MainArticle
+            className={cn(
+              "flow max-w-3xl",
+              "**:[h1]:hidden" // TODO: Remove when non-English Static markdown update to remove `#` h1 line
+            )}
+          >
             <PageActions
               slug={slug}
               isTranslated={!contentNotTranslated}
@@ -94,41 +107,27 @@ export const StaticLayout = ({
               hideEditButton={!!frontmatter.hideEditButton}
               className="my-4"
             />
-          </>
-        )}
 
-        <MainArticle
-          className={cn(
-            "flow",
-            isGuidesHub && "mt-12",
-            "**:[h1]:hidden" // TODO: Remove when non-English Static markdown update to remove `#` h1 line
-          )}
-        >
+            {children}
+
+            {!frontmatter.hideEditButton && (
+              <FileContributors
+                className="mt-space-3x border-t"
+                contributors={contributors}
+                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+              />
+            )}
+          </MainArticle>
+
           <TableOfContents
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth || 2}
-            isMobile
-            className="mb-8 lg:hidden"
           />
-
-          {children}
-
-          {!frontmatter.hideEditButton && (
-            <FileContributors
-              className="my-10 border-t"
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-            />
-          )}
-        </MainArticle>
+        </Flex>
 
         {/* End-of-page actions */}
         <ContentFeedback isArticle />
       </main>
-      <TableOfContents
-        items={tocItems}
-        maxDepth={frontmatter.sidebarDepth || 2}
-      />
-    </Flex>
+    </div>
   )
 }
