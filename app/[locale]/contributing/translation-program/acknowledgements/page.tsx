@@ -131,12 +131,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               "page-contributing-translation-program-acknowledgements-our-translators-1"
             )}
           </p>
-          <LinkBox className="my-8 flex flex-col shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100 md:flex-row">
+          <LinkBox className="my-8 flex flex-col shadow-lg hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-xl hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-xl focus:duration-100 md:flex-row">
             <Flex className="flex h-65 flex-row items-end justify-center bg-linear-to-r from-accent-a/10 to-accent-c/10">
               <Image
                 src={whatIsEthereumImg}
                 alt=""
-                className="max-h-full self-center object-cover p-4"
+                className="max-h-full w-65 shrink-0 self-center object-cover p-4"
                 sizes="260px"
               />
             </Flex>
