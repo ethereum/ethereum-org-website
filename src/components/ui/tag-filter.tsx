@@ -106,7 +106,7 @@ const TagFilter = ({
             </>
           ) : (
             <>
-              {t("show-more")} ({formatCount(tags.length - cutoff)}){" "}
+              {t("show-more")} ({formatCount(tags.length - visible.length)}){" "}
               <ChevronDown className="size-3" />
             </>
           )}
