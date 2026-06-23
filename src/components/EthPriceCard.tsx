@@ -1,9 +1,11 @@
 "use client"
 
+import { useState } from "react"
 import { ArrowUpRight, Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import Tooltip from "@/components/Tooltip"
+import Input from "@/components/ui/input"
 import InlineLink from "@/components/ui/Link"
 import { Skeleton } from "@/components/ui/skeleton"
 
@@ -22,10 +24,21 @@ const EthPriceCard = ({
   const locale = useLocale()
   const { t } = useTranslation()
   const { ethPrice, ethPercentChange24h } = useGasEthPrice()
+  const [ethAmount, setEthAmount] = useState("1")
 
   const isLoading = ethPrice === 0
   const hasChange = typeof ethPercentChange24h === "number"
   const isNegativeChange = hasChange && ethPercentChange24h < 0
+
+  const handleEthAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    // Allow empty string, numbers, and decimals up to 4 places
+    if (value === "" || /^\d*\.?\d{0,4}$/.test(value)) {
+      setEthAmount(value)
+    }
+  }
+
+  const convertedValue = (parseFloat(ethAmount) || 0) * ethPrice
 
   const tooltipContent = (
     <div>
@@ -39,7 +52,7 @@ const EthPriceCard = ({
   return (
     <Flex
       className={cn(
-        "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded-base border p-6",
+        "w-full max-w-[420px] flex-col items-center justify-between rounded-base border p-6",
         isNegativeChange
           ? "bg-linear-to-b from-error/10 dark:border-error/50"
           : "bg-linear-to-t from-success/20 dark:border-success/50",
@@ -93,6 +106,39 @@ const EthPriceCard = ({
           ({t("last-24-hrs")})
         </div>
       </Flex>
+
+      {/* ETH to USD converter */}
+      <div className="mt-4 w-full border-t pt-4">
+        <p className="mb-2 text-center text-sm text-body-medium">
+          {t("eth-convert-to-usd")}
+        </p>
+        <Flex className="flex-col items-center gap-3 sm:flex-row">
+          <div className="relative flex-1">
+            <span className="absolute start-3 top-1/2 -translate-y-1/2 text-sm text-body-medium">
+              ETH
+            </span>
+            <Input
+              type="text"
+              inputMode="decimal"
+              value={ethAmount}
+              onChange={handleEthAmountChange}
+              placeholder="0.0000"
+              disabled={isLoading}
+              className="w-full ps-12 text-end"
+            />
+          </div>
+          <span className="px-2 text-xl text-body-medium">=</span>
+          <div className="flex-1 rounded border bg-background p-2 text-end">
+            {isLoading ? (
+              <Skeleton className="h-6 w-full" />
+            ) : (
+              <span className="text-lg font-medium">
+                {formatPriceUSD(convertedValue, locale)}
+              </span>
+            )}
+          </div>
+        </Flex>
+      </div>
     </Flex>
   )
 }
