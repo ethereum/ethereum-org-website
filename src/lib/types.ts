@@ -1067,10 +1067,21 @@ export type LatestSource = {
 
 /** A hardcoded editorial highlight card. `href` may be internal or external. */
 export type LatestHighlight = {
-  title: string
-  description: string
-  image: string
+  /**
+   * Article href. When it matches an article in the merged /latest stream, the
+   * card's metadata (title, image, date, etc.) is resolved from that article —
+   * so an internal builder highlight needs nothing but its href.
+   */
   href: string
+  /**
+   * Optional overrides applied on top of the resolved article. They also act as
+   * a standalone fallback for an href that isn't in the stream (e.g. an external
+   * post that has aged out of the RSS window) — a `title` is the minimum needed
+   * to render in that case.
+   */
+  title?: string
+  description?: string
+  image?: string
   source?: string
   /** Publication date (ISO `YYYY-MM-DD`), shown in the card footer. */
   date?: string

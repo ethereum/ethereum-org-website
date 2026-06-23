@@ -1,4 +1,9 @@
-import type { BlogPost, LatestArticle, RSSItem } from "@/lib/types"
+import type {
+  BlogPost,
+  LatestArticle,
+  LatestHighlight,
+  RSSItem,
+} from "@/lib/types"
 
 import { getBlogPostsData } from "@/lib/utils/md"
 
@@ -69,7 +74,44 @@ export function mergeLatestArticles(
     .sort((a, b) => toTime(b.date) - toTime(a.date))
 }
 
+/**
+ * Resolve an editorial highlight into a full article card. Metadata comes from
+ * the matching article in the merged stream (keyed by href); the highlight's
+ * own fields override it, and stand in as a fallback when there's no match
+ * (e.g. an external post outside the RSS window). Returns `null` when neither
+ * the stream nor the highlight provides a title to render.
+ */
+const resolveHighlight = (
+  highlight: LatestHighlight,
+  byHref: Map<string, LatestArticle>
+): LatestArticle | null => {
+  const matched = byHref.get(highlight.href)
+  const title = highlight.title ?? matched?.title
+  if (!title) {
+    console.warn(
+      `Latest highlight ${highlight.href} not found in stream and has no fallback title; skipping.`
+    )
+    return null
+  }
+
+  return {
+    title,
+    href: highlight.href,
+    date: highlight.date ?? matched?.date ?? "",
+    source: highlight.source ?? matched?.source ?? "",
+    category: matched?.category ?? "",
+    tags: matched?.tags ?? [],
+    isExternal: matched?.isExternal ?? highlight.href.startsWith("http"),
+    image: highlight.image ?? matched?.image,
+    author: matched?.author,
+    description: highlight.description ?? matched?.description,
+    timeToRead: matched?.timeToRead,
+  }
+}
+
 export type LatestData = {
+  /** Resolved editorial highlights for the feature slot above the grid. */
+  highlights: LatestArticle[]
   /** Merged, newest-first stream for the /latest grid and homepage widget. */
   articles: LatestArticle[]
   /** Raw builder posts, returned so /latest can build its JSON-LD without re-reading markdown. */
@@ -93,8 +135,24 @@ export async function getLatestArticles(locale: string): Promise<LatestData> {
     console.warn("Failed to load RSS data for /latest:", error)
   }
 
-  const highlightHrefs = LATEST_HIGHLIGHTS.map((h) => h.href)
-  const articles = mergeLatestArticles(blogPosts, rssGroups, highlightHrefs)
+  // Index every candidate article by href (RSS un-capped, so a featured post
+  // beyond the per-source grid cap still resolves) for highlight resolution.
+  const byHref = new Map<string, LatestArticle>(
+    [
+      ...blogPosts.map(builderToArticle),
+      ...rssGroups.flat().map(rssToArticle),
+    ].map((article) => [article.href, article])
+  )
 
-  return { articles, blogPosts }
+  const highlights = LATEST_HIGHLIGHTS.map((highlight) =>
+    resolveHighlight(highlight, byHref)
+  ).filter((article): article is LatestArticle => article !== null)
+
+  const articles = mergeLatestArticles(
+    blogPosts,
+    rssGroups,
+    highlights.map((h) => h.href)
+  )
+
+  return { highlights, articles, blogPosts }
 }

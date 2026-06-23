@@ -26,7 +26,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
 
-import { LATEST_HIGHLIGHTS } from "@/data/latest/highlights"
 import { LATEST_SOURCES } from "@/data/latest/sources"
 
 import LatestArticlesGrid from "./_components/LatestArticlesGrid"
@@ -59,7 +58,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/latest")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const { articles, blogPosts } = await getLatestArticles(locale)
+  const { highlights, articles, blogPosts } = await getLatestArticles(locale)
 
   const { contributors } = await getAppPageContributorInfo(
     "latest",
@@ -97,11 +96,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           />
 
           {/* Highlights */}
-          {LATEST_HIGHLIGHTS.length > 0 && (
+          {highlights.length > 0 && (
             <Section className="space-y-8 px-4 md:px-8">
               <h2>{t("page-latest-highlights-heading")}</h2>
               <Grid balanced={2} className="gap-6">
-                {LATEST_HIGHLIGHTS.map((highlight) => (
+                {highlights.map((highlight) => (
                   <LatestCard
                     key={highlight.href}
                     href={highlight.href}
