@@ -294,9 +294,10 @@ Don't inline a `<div className="rounded-full">` for a user avatar -- use `Avatar
 
 ```tsx
 import { Tag, TagButton } from "@/components/ui/tag"
+import TagFilter from "@/components/ui/tag-filter"
 ```
 
-Big variant matrix: `status` × `variant` × `size`. See `references/components.md` for the full set.
+Big variant matrix: `status` × `variant` × `size`. See `references/components.md` for the full set. `TagFilter` is the controlled multi-select chip filter for tag-filtered lists -- prefer it over a hand-rolled `TagButton` row.
 
 ## Tables
 
