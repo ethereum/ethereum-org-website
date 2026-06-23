@@ -121,19 +121,25 @@ If you don't have a transcript, you can leave the body empty and the team will g
 
 #### Step 4: Choose topic tags {#step-4}
 
-Pick topic tags that match the existing categories used in the gallery. Current categories and their tags include:
+Pick topic tags from the list below. Each tag maps directly to a filter category in the video gallery — use the tag name exactly as shown.
 
-- **How Ethereum Works**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Network Upgrades**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Roadmap & Priorities**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Scaling & Layer 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Use Cases**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privacy & Security**: `privacy-and-security`, `privacy`, `authentication`
-- **Community Stories**: `community-stories`, `contributing`, `translations`, `community`
+A video can have multiple tags to appear in multiple gallery filters:
 
-To ensure your video appears in a gallery category shelf, include at least one category key tag (the bold name in kebab-case, e.g. `use-cases` or `scaling-and-layer-2`). Videos without a recognized category tag will only appear in the "All" view and search results.
+| Tag | Gallery filter |
+|---|---|
+| `how-ethereum-works` | How Ethereum Works |
+| `network-upgrades` | Network Upgrades |
+| `roadmap-and-priorities` | Roadmap & Priorities |
+| `scaling-and-layer-2` | Scaling & Layer 2 |
+| `use-cases` | Use Cases |
+| `privacy` | Privacy |
+| `security` | Security |
+| `community-stories` | Community Stories |
+| `events` | Events |
 
-You can also use new tags — they will be available for future category groupings.
+Every video should have at least one tag from this list. Videos without a recognized tag will only appear in the "All" view and search results.
+
+The `community-stories` tag also causes a video to appear on the [Stories page](/stories/).
 
 #### Step 5: Submit your PR {#step-5}
 
