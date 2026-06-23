@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useRef, useState } from "react"
+import { memo, useDeferredValue, useMemo, useRef, useState } from "react"
 import { AppWindowMac, ChevronRight } from "lucide-react"
 
 import AppCard from "@/components/AppCard"
@@ -73,7 +73,12 @@ function getToolSortScore(tool: DeveloperToolWithCategory): number {
   return getToolStars(tool)
 }
 
-function ToolCard({ tool }: { tool: DeveloperToolWithCategory }) {
+// Memoized so a filter/search re-render only re-renders cards whose tool changed
+const ToolCard = memo(function ToolCard({
+  tool,
+}: {
+  tool: DeveloperToolWithCategory
+}) {
   const toolKey = getToolKey(tool)
   return (
     // content-visibility lets the browser skip layout/paint of off-screen
@@ -97,7 +102,7 @@ function ToolCard({ tool }: { tool: DeveloperToolWithCategory }) {
       />
     </div>
   )
-}
+})
 
 type CategorySidebarProps = {
   categories: DeveloperToolsCategory[]
@@ -217,6 +222,12 @@ export default function ToolsCatalog({
   >()
   const resultsTopRef = useRef<HTMLDivElement | null>(null)
 
+  // Defer the heavy filter + grid render so typing and filtering stay responsive
+  const deferredSearch = useDeferredValue(search)
+  const deferredSubcategoryId = useDeferredValue(selectedSubcategoryId)
+  const isStale =
+    search !== deferredSearch || selectedSubcategoryId !== deferredSubcategoryId
+
   const handleSelectSubcategory = (subcategoryId?: string) => {
     setSelectedSubcategoryId(subcategoryId)
     resultsTopRef.current?.scrollIntoView({
@@ -234,11 +245,11 @@ export default function ToolsCatalog({
   }, [tools])
 
   const filteredTools = useMemo(() => {
-    const query = normalize(search)
+    const query = normalize(deferredSearch)
     return tools.filter((tool) => {
       if (
-        selectedSubcategoryId &&
-        tool.subcategory_id !== selectedSubcategoryId
+        deferredSubcategoryId &&
+        tool.subcategory_id !== deferredSubcategoryId
       ) {
         return false
       }
@@ -256,7 +267,13 @@ export default function ToolsCatalog({
         .toLowerCase()
       return searchableText.includes(query)
     })
-  }, [categoryLabels, search, selectedSubcategoryId, subcategoryLabels, tools])
+  }, [
+    categoryLabels,
+    deferredSearch,
+    deferredSubcategoryId,
+    subcategoryLabels,
+    tools,
+  ])
 
   const groupedFilteredTools = useMemo(() => {
     const toolsByCategory = new Map<string, DeveloperToolWithCategory[]>()
@@ -375,7 +392,12 @@ export default function ToolsCatalog({
             {tools.length}
           </p>
 
-          <div className="space-y-8">
+          <div
+            className={cn(
+              "space-y-8 transition-opacity",
+              isStale && "opacity-60"
+            )}
+          >
             {groupedFilteredTools.map(
               ({ category, subcategoryGroups, count }) => (
                 <div key={category.id} className="space-y-4">
