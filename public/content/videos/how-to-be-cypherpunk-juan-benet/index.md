@@ -8,7 +8,7 @@ duration: "0:18:00"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "privacy-and-security"
+  - "privacy"
 format: presentation
 author: Web3Privacy Now
 breadcrumb: "How to Be Cypherpunk"

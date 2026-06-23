@@ -8,8 +8,6 @@ duration: "0:29:13"
 educationLevel: beginner
 topic:
   - "how-ethereum-works"
-  - "blockchain"
-  - "privacy-and-security"
 format: presentation
 author: ETHGlobal
 breadcrumb: "Atoms, Institutions, Blockchains"

@@ -1,151 +1,151 @@
 ---
 title: "Gas và phí"
-metaTitle: "Gas và phí Ethereum: tổng quan kỹ thuật"
-description: "Tìm hiểu về phí gas của Ethereum, cách chúng được tính toán và vai trò của chúng trong bảo mật mạng lưới cũng như xử lý giao dịch."
+metaTitle: "Gas và phí trên Ethereum: tổng quan kỹ thuật"
+description: "Tìm hiểu về phí gas trên Ethereum, cách tính phí và vai trò của chúng trong bảo mật mạng lưới và xử lý giao dịch."
 lang: vi
 ---
 
-Gas rất quan trong cho mạng lưới Ethereum. Nó là nhiên liệu để cho mạng lưới hoạt động, nó tương tự như một chiếc xe hơi cần xăng để chạy.
+Gas là yếu tố thiết yếu đối với mạng lưới [Ethereum](/). Nó là nhiên liệu cho phép mạng lưới hoạt động, giống như cách một chiếc ô tô cần xăng để chạy.
 
 ## Điều kiện tiên quyết {#prerequisites}
 
-Để hiểu rõ hơn về trang này, chúng tôi khuyên bạn nên đọc trước về [các giao dịch](/developers/docs/transactions/) và [EVM](/developers/docs/evm/).
+Để hiểu rõ hơn về trang này, chúng tôi khuyên bạn trước tiên nên đọc về [giao dịch](/developers/docs/transactions/) và [EVM](/developers/docs/evm/).
 
 ## Gas là gì? {#what-is-gas}
 
-Gas đề cập đến đơn vị mà nó đo lường số lượng hiệu quả tính toán cần thiết để thực hiện các hoạt động cụ thể trên mạng lưới Ethereum.
+Gas là đơn vị đo lường lượng nỗ lực tính toán cần thiết để thực thi các hoạt động cụ thể trên mạng lưới Ethereum.
 
-Vì mỗi giao dịch Ethereum cần tài nguyên tính toán để thực hiện, cần thanh toán cho những tài nguyên đó để bảo đảm Ethereum không bị ảnh hưởng bởi spam và không bị kẹt trong các vòng lặp tính toán. Tài nguyên tính toán được trả với dạng phí gas.
+Vì mỗi giao dịch Ethereum yêu cầu tài nguyên tính toán để thực thi, những tài nguyên đó phải được trả phí để đảm bảo Ethereum không dễ bị spam và không bị mắc kẹt trong các vòng lặp tính toán vô hạn. Việc thanh toán cho tính toán được thực hiện dưới dạng phí gas.
 
-Phí gas là **lượng gas được dùng để thực hiện một tác vụ nào đó, nhân với giá của mỗi đơn vị gas**. Phí được thanh toán dù giao dịch thành công hay thất bại.
+Phí gas là **lượng gas được sử dụng để thực hiện một số hoạt động, nhân với chi phí cho mỗi đơn vị gas**. Phí này được thanh toán bất kể giao dịch thành công hay thất bại.
 
-![Sơ đồ cho thấy vị trí cần gas trong các hoạt động EVM](./gas.png)
-_Sơ đồ được phỏng theo [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![A diagram showing where gas is needed in EVM operations](./gas.png)
+_Sơ đồ được phỏng theo [Minh họa EVM của Ethereum](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Phí gas phải được thanh toán bằng đồng tiền bản địa của Ethereum, ether (ETH). Giá gas thường được niêm yết bằng gwei, một đơn vị nhỏ hơn của ETH. Mỗi gwei bằng một phần một tỉ của mỗi ETH. (0,000000001 ETH hay 10<sup>-9</sup> ETH).
+Phí gas phải được thanh toán bằng tiền tệ gốc của Ethereum, ether (ETH). Giá gas thường được báo giá bằng Gwei, là một mệnh giá của ETH. Mỗi Gwei bằng một phần tỷ của một ETH (0.000000001 ETH hoặc 10<sup>-9</sup> ETH).
 
-Ví dụ: thay vì nói rằng giá gas của bạn là 0,000000001 ether, bạn có thể nói rằng giá gas của mình là 1 gwei.
+Ví dụ, thay vì nói rằng gas của bạn có giá 0.000000001 ether, bạn có thể nói gas của bạn có giá 1 Gwei.
 
-Từ ‘gwei’ là dạng rút gọn của ‘giga-wei’, có nghĩa là ‘một tỷ wei’. Một gwei bằng một tỉ wei. Bản thân Wei (được đặt theo tên của [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), người tạo ra [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) là đơn vị nhỏ nhất của ETH.
+Từ 'Gwei' là viết tắt của 'giga-wei', có nghĩa là 'tỷ Wei'. Một Gwei bằng một tỷ Wei. Bản thân Wei (được đặt theo tên của [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), người tạo ra [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) là đơn vị nhỏ nhất của ETH.
 
 ## Phí gas được tính như thế nào? {#how-are-gas-fees-calculated}
 
-Bạn có thể cài đặt lượng gas bạn muốn trả khi bạn gửi một giao dịch. Bằng cách trả giá một lượng gas nhất định, bạn đang đấu giá để giao dịch của mình được đưa vào khối tiếp theo. Nếu như bạn đề nghị quá ít, các nút xác thực sẽ ít khi chọn giao dịch của bạn để thêm vào, nghĩa là giao dịch của bạn sẽ được sử lý sau hoặc không được xử lí. Nếu bạn trả giá có cao, bạn có thể sẽ phí ETH. Vậy thì, làm cách nào để biết nên trả bao nhiêu?
+Bạn có thể thiết lập lượng gas mà bạn sẵn sàng trả khi gửi một giao dịch. Bằng cách đưa ra một lượng gas nhất định, bạn đang đấu giá để giao dịch của mình được đưa vào khối tiếp theo. Nếu bạn đưa ra quá ít, các trình xác thực sẽ ít có khả năng chọn giao dịch của bạn để đưa vào, nghĩa là giao dịch của bạn có thể được thực thi muộn hoặc không bao giờ được thực thi. Nếu bạn đưa ra quá nhiều, bạn có thể lãng phí một số ETH. Vậy, làm thế nào bạn có thể biết nên trả bao nhiêu?
 
-Tổng số gas bạn phải trả được chia thành hai thành phần: `phí cơ bản` và `phí ưu tiên` (tiền boa).
+Tổng số gas bạn trả được chia thành hai thành phần: `base fee` (phí cơ sở) và `priority fee` (phí ưu tiên).
 
-`phí cơ bản` được giao thức quy định—bạn phải trả ít nhất số tiền này để giao dịch của bạn được coi là hợp lệ. `phí ưu tiên` là một khoản tiền boa mà bạn thêm vào phí cơ bản để làm cho giao dịch của bạn hấp dẫn đối với những người xác thực để họ chọn đưa nó vào khối tiếp theo.
+`base fee` được thiết lập bởi giao thức—bạn phải trả ít nhất số tiền này để giao dịch của bạn được coi là hợp lệ. `priority fee` là một khoản phí ưu tiên mà bạn thêm vào phí cơ sở để làm cho giao dịch của bạn hấp dẫn đối với các trình xác thực để họ chọn nó đưa vào khối tiếp theo.
 
-Một giao dịch chỉ trả `phí cơ bản` về mặt kỹ thuật là hợp lệ nhưng hiếm khi được đưa vào vì nó không mang lại động lực cho người xác thực chọn nó thay vì bất kỳ giao dịch nào khác. Phí `ưu tiên` 'vừa đủ' được quyết định bởi độ bận rộn của mạng lưới tại thời điểm bạn gửi giao dịch—nếu có nhiều nhu cầu thì bạn có thể phải đặt phí `ưu tiên` cao hơn, nhưng khi có ít nhu cầu hơn, bạn có thể trả ít hơn.
+Một giao dịch chỉ trả `base fee` về mặt kỹ thuật là hợp lệ nhưng khó có khả năng được đưa vào vì nó không mang lại động lực nào cho các trình xác thực để chọn nó thay vì bất kỳ giao dịch nào khác. Khoản phí `priority` 'chính xác' được xác định bởi mức độ sử dụng mạng lưới tại thời điểm bạn gửi giao dịch—nếu có nhiều nhu cầu thì bạn có thể phải đặt phí `priority` của mình cao hơn, nhưng khi có ít nhu cầu hơn, bạn có thể trả ít hơn.
 
-Lấy ví dụ, giả sử Jordan muốn thanh toán 1 ETH cho Taylor. Một giao dịch ETH cần phải có 21,000 đơn vị Gas, và phí cơ bản là 10 Gwei. Jordan thêm hoa hồng 2 Gwei.
+Ví dụ, giả sử Jordan phải trả cho Taylor 1 ETH. Việc chuyển ETH yêu cầu 21.000 đơn vị gas và phí cơ sở là 10 Gwei. Jordan bao gồm một khoản phí ưu tiên là 2 Gwei.
 
 Tổng phí bây giờ sẽ bằng:
 
-`lượng Gas sử dụng * (phí cơ bản + phí ưu tiên)`
+`units of gas used * (base fee + priority fee)`
 
-trong đó `phí cơ bản` là giá trị do giao thức đặt ra và `phí ưu tiên` là giá trị do người dùng đặt ra như một khoản tiền boa cho người xác thực.
+trong đó `base fee` là một giá trị được thiết lập bởi giao thức và `priority fee` là một giá trị được thiết lập bởi người dùng như một khoản phí ưu tiên cho trình xác thực.
 
-ví dụ: `21.000 * (10 + 2) = 252.000 gwei` (0,000252 ETH).
+ví dụ: `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
 
-Khi mà Jordan gửi tiền, 1,000252 ETH sẽ được lấy từ tài khoản của Jordan. Taylor sẽ nhận được 1,00000 ETH. Nút xác thực sẽ nhận phí ưu tiên 0,000042 ETH. `phí cơ bản` 0,00021 ETH sẽ bị đốt.
+Khi Jordan gửi tiền, 1.000252 ETH sẽ bị trừ khỏi tài khoản của Jordan. Taylor sẽ được cộng 1.0000 ETH. Trình xác thực nhận được khoản phí ưu tiên là 0.000042 ETH. `base fee` là 0.00021 ETH sẽ bị đốt.
 
-### Phí cơ bản {#base-fee}
+### Phí cơ sở {#base-fee}
 
-Mọi khối đều có phí cơ bản đóng vai trò là giá khởi điểm. Để đủ điều kiện đưa vào một khối, giá đề xuất cho mỗi loại gas ít nhất phải bằng mức phí cơ bản. Phí cơ bản được tính toán độc lập với khối hiện tại và thay vào đó được xác định bởi các khối trước đó, giúp cho phí giao dịch trở nên dễ đoán hơn cho người dùng. Khi khối được tạo, **phí cơ bản này sẽ bị "đốt"**, loại bỏ nó khỏi lưu thông.
+Mỗi khối có một phí cơ sở hoạt động như một mức giá khởi điểm. Để đủ điều kiện được đưa vào một khối, giá được đưa ra cho mỗi gas ít nhất phải bằng phí cơ sở. Phí cơ sở được tính toán độc lập với khối hiện tại và thay vào đó được xác định bởi các khối trước nó, làm cho phí giao dịch trở nên dễ dự đoán hơn đối với người dùng. Khi khối được tạo, **phí cơ sở này bị "đốt"**, loại bỏ nó khỏi lưu thông.
 
-Phí cơ bản được tính bằng một công thức so sánh kích thước của khối trước đó (lượng gas được sử dụng cho tất cả các giao dịch) với kích thước mục tiêu (một nửa giới hạn gas). Phí cơ bản sẽ tăng hoặc giảm tối đa 12,5% cho mỗi khối nếu kích thước khối mục tiêu lần lượt cao hơn hoặc thấp hơn mục tiêu. Sự tăng trưởng theo cấp số nhân này khiến việc duy trì kích thước khối ở mức cao vô thời hạn trở nên không khả thi về mặt kinh tế.
+Phí cơ sở được tính bằng một công thức so sánh kích thước của khối trước đó (lượng gas được sử dụng cho tất cả các giao dịch) với kích thước mục tiêu (một nửa giới hạn gas). Phí cơ sở sẽ tăng hoặc giảm tối đa 12,5% mỗi khối nếu kích thước khối mục tiêu cao hơn hoặc thấp hơn mục tiêu tương ứng. Sự tăng trưởng theo cấp số nhân này làm cho việc duy trì kích thước khối ở mức cao vô thời hạn trở nên không khả thi về mặt kinh tế.
 
-| Khối số | Bao gồm Gas | Tăng phí | Phí cơ bản hiện tại |
-| ------- | ----------: | -------: | ------------------: |
-| 1       |    18 triệu |       0% |            100 gwei |
-| 2       |    36 triệu |       0% |            100 gwei |
-| 3       |    36 triệu |    12,5% |          112,5 Gwei |
-| 4       |    36 triệu |    12,5% |          126,6 Gwei |
-| 5       |    36 triệu |    12,5% |          142,4 Gwei |
-| 6       |    36 triệu |    12,5% |          160,2 Gwei |
-| 7       |    36 triệu |    12,5% |          180,2 Gwei |
-| 8       |    36 triệu |    12,5% |          202,7 Gwei |
+| Số khối | Gas được đưa vào | Mức tăng phí | Phí cơ sở hiện tại |
+| ------------ | -----------: | -----------: | ---------------: |
+| 1            |          18M |           0% |         100 Gwei |
+| 2            |          36M |           0% |         100 Gwei |
+| 3            |          36M |        12.5% |       112.5 Gwei |
+| 4            |          36M |        12.5% |       126.6 Gwei |
+| 5            |          36M |        12.5% |       142.4 Gwei |
+| 6            |          36M |        12.5% |       160.2 Gwei |
+| 7            |          36M |        12.5% |       180.2 Gwei |
+| 8            |          36M |        12.5% |       202.7 Gwei |
 
-Trong bảng trên, một ví dụ được minh họa bằng cách sử dụng 36 triệu làm giới hạn gas. Theo ví dụ này, để tạo một giao dịch trên khối số 9, một ví sẽ cho người dùng biết chắc chắn rằng **phí cơ bản tối đa** được thêm vào khối tiếp theo là `phí cơ bản hiện tại * 112,5%` hoặc `202,7 gwei * 112,5% = 228,1 gwei`.
+Trong bảng trên, một ví dụ được minh họa sử dụng 36 triệu làm giới hạn gas. Theo ví dụ này, để tạo một giao dịch trên khối số 9, một ví sẽ cho người dùng biết chắc chắn rằng **phí cơ sở tối đa** được thêm vào khối tiếp theo là `current base fee * 112.5%` hoặc `202.7 gwei * 112.5% = 228.1 gwei`.
 
-Đây là một lưu ý quan trọng vì rất ít khi chúng ta thấy các đợt tăng giá kéo dài của những khối đầy, bởi vì tốc độ tăng của phí cơ sở trước một khối đầy diễn ra rất nhanh.
+Cũng cần lưu ý rằng chúng ta khó có thể thấy các đợt tăng đột biến kéo dài của các khối đầy do tốc độ tăng phí cơ sở trước một khối đầy.
 
-| Khối số                                             |                                         Bao gồm Gas | Tăng phí |                                 Phí cơ bản hiện tại |
-| --------------------------------------------------- | --------------------------------------------------: | -------: | --------------------------------------------------: |
-| 30                                                  |                                            36 triệu |    12,5% |                                         2705,6 Gwei |
-| ... | ... |    12,5% | ... |
-| 50                                                  |                                            36 triệu |    12,5% |                                        28531,3 Gwei |
-| ... | ... |    12,5% | ... |
-| 100                                                 |                                            36 triệu |    12,5% |                                     10302608,6 Gwei |
+| Số khối | Gas được đưa vào | Mức tăng phí | Phí cơ sở hiện tại |
+| ------------ | -----------: | -----------: | ---------------: |
+| 30           |          36M |        12.5% |      2705.6 Gwei |
+| ...          |          ... |        12.5% |              ... |
+| 50           |          36M |        12.5% |     28531.3 Gwei |
+| ...          |          ... |        12.5% |              ... |
+| 100          |          36M |        12.5% |  10302608.6 Gwei |
 
-### Phí ưu tiên (tiền boa) {#priority-fee}
+### Phí ưu tiên {#priority-fee}
 
-Phí ưu tiên (tiền boa) khuyến khích những người xác thực tối đa hóa số lượng giao dịch trong một khối, chỉ bị giới hạn bởi giới hạn gas của khối. Nếu không có tiền boa, một người xác thực hợp lý có thể bao gồm ít giao dịch hơn—hoặc thậm chí không có giao dịch nào—mà không bị phạt trực tiếp từ lớp thực thi hay lớp đồng thuận, vì phần thưởng staking không phụ thuộc vào số lượng giao dịch trong một khối. Ngoài ra, tiền boa cho phép người dùng trả giá cao hơn những người khác để được ưu tiên trong cùng một khối, báo hiệu một cách hiệu quả về tính cấp thiết.
+Phí ưu tiên khuyến khích các trình xác thực tối đa hóa số lượng giao dịch trong một khối, chỉ bị giới hạn bởi giới hạn gas của khối. Nếu không có phí ưu tiên, một trình xác thực hợp lý có thể đưa vào ít giao dịch hơn—hoặc thậm chí không có giao dịch nào—mà không phải chịu bất kỳ hình phạt trực tiếp nào từ lớp thực thi hoặc lớp đồng thuận, vì phần thưởng đặt cọc độc lập với số lượng giao dịch trong một khối. Ngoài ra, phí ưu tiên cho phép người dùng trả giá cao hơn những người khác để được ưu tiên trong cùng một khối, báo hiệu mức độ khẩn cấp một cách hiệu quả. 
 
 ### Phí tối đa {#maxfee}
 
-Để thực hiện một giao dịch trên mạng lưới, người dùng có thể chỉ định giới hạn tối đa mà họ sẵn sàng trả để giao dịch của họ được thực hiện. Tham số tùy chọn này được gọi là `maxFeePerGas`. Để một giao dich được thực hiện, phí tối đã phải lớn hơn tổng của ( phí cơ bản + tiền thưởng). Người dùng sẽ được hoàn lại khoản chênh lệch giữa phí tối đa và tổng chi phí cơ bản + tiền thưởng.
+Để thực thi một giao dịch trên mạng lưới, người dùng có thể chỉ định giới hạn tối đa mà họ sẵn sàng trả để giao dịch của họ được thực thi. Tham số tùy chọn này được gọi là `maxFeePerGas`. Để một giao dịch được thực thi, phí tối đa phải vượt quá tổng của phí cơ sở và phí ưu tiên. Người gửi giao dịch được hoàn lại khoản chênh lệch giữa phí tối đa và tổng của phí cơ sở và phí ưu tiên.
 
 ### Kích thước khối {#block-size}
 
-Mỗi khối có kích thước mục tiêu bằng một nửa giới hạn gas hiện tại, nhưng kích thước của các khối sẽ tăng hoặc giảm theo nhu cầu của mạng, cho đến khi đạt đến giới hạn khối (gấp 2 lần kích thước khối mục tiêu). Giao thức đạt được kích thước khối trung bình cân bằng ở mức mục tiêu thông qua quá trình _tâtonnement_ (thăm dò giá). Điều này có nghĩa là nếu kích thước khối lớn hơn kích thước mục tiêu, giao thức sẽ tăng phí cơ sở cho khối tiếp theo. Tương tự, giao thức sẽ giảm phí cơ sở nếu kích thước khối nhỏ hơn kích thước mục tiêu.
+Mỗi khối có kích thước mục tiêu bằng một nửa giới hạn gas hiện tại, nhưng kích thước của các khối sẽ tăng hoặc giảm theo nhu cầu của mạng lưới, cho đến khi đạt đến giới hạn khối (gấp 2 lần kích thước khối mục tiêu). Giao thức đạt được kích thước khối trung bình cân bằng ở mức mục tiêu thông qua quá trình _tâtonnement_. Điều này có nghĩa là nếu kích thước khối lớn hơn kích thước khối mục tiêu, giao thức sẽ tăng phí cơ sở cho khối tiếp theo. Tương tự, giao thức sẽ giảm phí cơ sở nếu kích thước khối nhỏ hơn kích thước khối mục tiêu.
 
-Mức điều chỉnh của phí cơ sở tỷ lệ thuận với độ chênh lệch giữa kích thước khối hiện tại và kích thước mục tiêu. Đây là một phép tính tuyến tính từ -12,5% cho một khối trống, 0% tại kích thước mục tiêu, cho đến +12,5% cho một khối đạt đến giới hạn gas. Giới hạn gas có thể dao động theo thời gian dựa trên tín hiệu của người xác thực, cũng như thông qua các bản nâng cấp mạng. Bạn có thể [xem các thay đổi về giới hạn gas theo thời gian tại đây](https://eth.blockscout.com/stats/averageGasLimit?interval=threeMonths).
+Mức độ điều chỉnh phí cơ sở tỷ lệ thuận với khoảng cách giữa kích thước khối hiện tại và mục tiêu. Đây là một phép tính tuyến tính từ -12,5% đối với một khối trống, 0% ở kích thước mục tiêu, lên đến +12,5% đối với một khối đạt đến giới hạn gas. Giới hạn gas có thể dao động theo thời gian dựa trên tín hiệu của trình xác thực, cũng như thông qua các bản nâng cấp mạng lưới. Bạn có thể [xem những thay đổi về giới hạn gas theo thời gian tại đây](https://eth.blockscout.com/stats/averageGasLimit?interval=threeMonths).
 
-[Tìm hiểu thêm về các khối](/developers/docs/blocks/)
+[Tìm hiểu thêm về khối](/developers/docs/blocks/)
 
 ### Tính toán phí gas trong thực tế {#calculating-fees-in-practice}
 
-Bạn có thể nêu rõ số tiền mà mình sẵn sàng trả để giao dịch được thực hiện. Tuy nhiên, hầu hết các nhà cung cấp ví sẽ tự động đặt một mức phí giao dịch khuyến nghị (phí cơ sở + phí ưu tiên được đề xuất) để giảm bớt sự phức tạp cho người dùng.
+Bạn có thể nêu rõ số tiền bạn sẵn sàng trả để giao dịch của mình được thực thi. Tuy nhiên, hầu hết các nhà cung cấp ví sẽ tự động thiết lập một khoản phí giao dịch được đề xuất (phí cơ sở + phí ưu tiên được đề xuất) để giảm bớt sự phức tạp đè nặng lên người dùng của họ.
 
-## Tại sao phí Gas tồn tại? {#why-do-gas-fees-exist}
+## Tại sao phí gas lại tồn tại? {#why-do-gas-fees-exist}
 
-Tóm lại, phí Gas giúp giữ cho mạng lưới Ethereum an toàn. Bằng cách yêu cầu trả phí cho mỗi phép tính hoàn tất trên mạng, chúng ta ngăn chặn những kẻ xấu Spam mạng lưới. Để tránh các vòng lặp vô hạn (dù là vô tình hay ác ý) hoặc các sự lãng phí tính toán khác trong mã nguồn, mỗi giao dịch đều phải đặt ra một giới hạn về số bước tính toán có thể sử dụng khi thực thi mã nguồn. Đơn vị cơ bản của tính toán là “Gas”.
+Tóm lại, phí gas giúp giữ cho mạng lưới Ethereum an toàn. Bằng cách yêu cầu một khoản phí cho mỗi tính toán được thực thi trên mạng lưới, chúng tôi ngăn chặn những kẻ xấu spam mạng lưới. Để tránh các vòng lặp vô hạn do vô tình hoặc cố ý hoặc các sự lãng phí tính toán khác trong mã, mỗi giao dịch được yêu cầu thiết lập một giới hạn về số lượng bước tính toán của việc thực thi mã mà nó có thể sử dụng. Đơn vị tính toán cơ bản là "Gas".
 
-Mặc dù một giao dịch có bao gồm một giới hạn, nhưng bất kỳ lượng gas nào không được sử dụng trong giao dịch sẽ được trả lại cho người dùng (ví dụ: `phí tối đa - (phí cơ bản + tiền boa)` sẽ được trả lại).
+Mặc dù một giao dịch bao gồm một giới hạn, bất kỳ lượng gas nào không được sử dụng trong một giao dịch đều được trả lại cho người dùng (ví dụ: `max fee - (base fee + tip)` được trả lại).
 
-![Sơ đồ cho thấy cách gas không sử dụng được hoàn lại](../transactions/gas-tx.png)
-_Sơ đồ được phỏng theo [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
+_Sơ đồ được phỏng theo [Minh họa EVM của Ethereum](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Giới hạn gas là gì? {#what-is-gas-limit}
 
-Giới hạn gas là lượng gas tối đa bạn sẵn sàng trả cho một giao dịch. Các giao dịch phức tạp hơn liên quan đến [hợp đồng thông minh](/developers/docs/smart-contracts/) đòi hỏi nhiều công việc tính toán hơn, vì vậy chúng yêu cầu giới hạn gas cao hơn so với một thanh toán đơn giản. Một giao dịch chuyển ETH tiêu chuẩn yêu cầu giới hạn là 21.000 đơn vị gas.
+Giới hạn gas đề cập đến lượng gas tối đa mà bạn sẵn sàng tiêu thụ cho một giao dịch. Các giao dịch phức tạp hơn liên quan đến [hợp đồng thông minh](/developers/docs/smart-contracts/) yêu cầu nhiều công việc tính toán hơn, vì vậy chúng yêu cầu giới hạn gas cao hơn so với một khoản thanh toán đơn giản. Việc chuyển ETH tiêu chuẩn yêu cầu giới hạn gas là 21.000 đơn vị gas.
 
-Ví dụ, nếu bạn đặt giới hạn Gas là 50.000 cho một giao dịch chuyển ETH đơn giản, EVM sẽ tiêu thụ 21.000 và bạn sẽ nhận lại 29.000 còn dư. Tuy nhiên, nếu bạn đặt quá ít gas, chẳng hạn giới hạn Gas là 20.000 cho một giao dịch chuyển ETH đơn giản, thì giao dịch sẽ thất bại trong giai đoạn xác thực. Nó sẽ bị từ chối trước khi được ghi vào một khối, và gas sẽ không bị tiêu thụ. Ngoài ra, nếu một giao dịch hết Gas trong quá trình thực thi (ví dụ: một hợp đồng thông minh sử dụng hết toàn bộ Gas khi mới chạy được nửa chừng), máy ảo Ethereum sẽ hoàn tác tất cả các thay đổi, nhưng toàn bộ lượng Gas đã cung cấp vẫn sẽ bị tiêu thụ cho phần công việc đã thực hiện.
+Ví dụ, nếu bạn đặt giới hạn gas là 50.000 cho một giao dịch chuyển ETH đơn giản, EVM sẽ tiêu thụ 21.000 và bạn sẽ nhận lại 29.000 còn lại. Tuy nhiên, nếu bạn chỉ định quá ít gas, ví dụ: giới hạn gas là 20.000 cho một giao dịch chuyển ETH đơn giản, giao dịch sẽ thất bại trong giai đoạn xác thực. Nó sẽ bị từ chối trước khi được đưa vào một khối và không có gas nào bị tiêu thụ. Mặt khác, nếu một giao dịch hết gas trong quá trình thực thi (ví dụ: một hợp đồng thông minh sử dụng hết tất cả gas giữa chừng), EVM sẽ hoàn nguyên mọi thay đổi, nhưng tất cả lượng gas được cung cấp vẫn sẽ bị tiêu thụ cho công việc đã thực hiện.
 
-## Tại sao phí gas có thể lên cao đến vậy? {#why-can-gas-fees-get-so-high}
+## Tại sao phí gas có thể trở nên quá cao? {#why-can-gas-fees-get-so-high}
 
-Phí gas cao là do sự phổ biến của Ethereum. Nếu nhu cầu quá cao, người dùng phải đưa ra mức phí ưu tiên lớn hơn để cố gắng trả giá cao hơn các giao dịch của những người dùng khác. Lượng tip cao hơn sẽ tăng cơ hội giao dịch của bạn được ghi vào khối tiếp theo. Đồng thồi, các ứng dụng hợp đồng thông minh phức tạp cần xử lý nhiều tác vụ hơn để thực hiện chức năng của chúng, nên có thể tiêu thụ rất nhiều gas.
+Phí gas cao là do sự phổ biến của Ethereum. Nếu có quá nhiều nhu cầu, người dùng phải đưa ra số tiền phí ưu tiên cao hơn để cố gắng trả giá cao hơn các giao dịch của người dùng khác. Phí ưu tiên cao hơn có thể làm cho giao dịch của bạn có nhiều khả năng được đưa vào khối tiếp theo hơn. Ngoài ra, các ứng dụng hợp đồng thông minh phức tạp hơn có thể đang thực hiện nhiều hoạt động để hỗ trợ các chức năng của chúng, khiến chúng tiêu thụ nhiều gas.
 
 ## Các sáng kiến để giảm chi phí gas {#initiatives-to-reduce-gas-costs}
 
-Các [bản nâng cấp khả năng mở rộng](/roadmap/) của Ethereum cuối cùng sẽ giải quyết một số vấn đề về phí gas, điều này sẽ cho phép nền tảng xử lý hàng nghìn giao dịch mỗi giây và mở rộng quy mô trên toàn cầu.
+Các [bản nâng cấp khả năng mở rộng](/roadmap/) của Ethereum cuối cùng sẽ giải quyết một số vấn đề về phí gas, từ đó sẽ cho phép nền tảng xử lý hàng nghìn giao dịch mỗi giây và mở rộng quy mô trên toàn cầu.
 
-Layer 2 là sáng kiến chính để cải thiện về mặt chi phí gas, trải nghiệm người dùng và khả năng mở rộng quy mô.
+Mở rộng quy mô lớp 2 (l2) là một sáng kiến chính để cải thiện đáng kể chi phí gas, trải nghiệm người dùng và khả năng mở rộng.
 
-[Tìm hiểu thêm về mở rộng quy mô lớp 2](/developers/docs/scaling/#layer-2-scaling)
+[Tìm hiểu thêm về mở rộng quy mô lớp 2 (l2)](/developers/docs/scaling/#layer-2-scaling)
 
-## Giám sát phí gas {#monitoring-gas-fees}
+## Theo dõi phí gas {#monitoring-gas-fees}
 
-Nếu bạn muốn theo dõi phí gas để có thể tiêu ít ETH hơn, bạn có thể tận dụng nhiều công cụ khác nhau như:
+Nếu bạn muốn theo dõi giá gas để có thể gửi ETH của mình với chi phí thấp hơn, bạn có thể sử dụng nhiều công cụ khác nhau như:
 
 - [Etherscan](https://etherscan.io/gastracker) _Công cụ ước tính giá gas giao dịch_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Công cụ ước tính giá gas giao dịch mã nguồn mở_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Giám sát và theo dõi giá gas của Ethereum và L2 để giảm phí giao dịch và tiết kiệm tiền_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Tiện ích mở rộng trên Chrome ước tính gas hỗ trợ cả giao dịch cũ Loại 0 và giao dịch EIP-1559 Loại 2._
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Tính phí gas bằng tiền tệ địa phương của bạn cho các loại giao dịch khác nhau trên Mainnet, Arbitrum và Polygon._
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Theo dõi giá gas Ethereum và L2 để giảm phí giao dịch và tiết kiệm tiền_
+- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Tiện ích mở rộng Chrome ước tính gas hỗ trợ cả giao dịch cũ Loại 0 và giao dịch Loại 2 EIP-1559._
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Tính toán phí gas bằng nội tệ của bạn cho các loại giao dịch khác nhau trên Mạng chính, Arbitrum và Polygon._
 
 ## Các công cụ liên quan {#related-tools}
 
 - [Nền tảng Gas của Blocknative](https://www.blocknative.com/gas) _API ước tính gas được cung cấp bởi nền tảng dữ liệu mempool toàn cầu của Blocknative_
-- [Gas Network](https://gas.network) Các Oracle Gas trên chuỗi. Hỗ trợ hơn 35 chuỗi.
+- [Gas Network](https://gas.network) Oracle Gas trên chuỗi. Hỗ trợ hơn 35 chuỗi. 
 
 ## Đọc thêm {#further-reading}
 
 - [Giải thích về Gas trên Ethereum](https://defiprime.com/gas)
-- [Giảm mức tiêu thụ gas của Hợp đồng thông minh của bạn](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
+- [Giảm mức tiêu thụ gas cho Hợp đồng thông minh của bạn](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Các chiến lược tối ưu hóa gas cho nhà phát triển](https://www.alchemy.com/overviews/solidity-gas-optimization)
-- [Tài liệu về EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [Các tài nguyên về EIP-1559 của Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
-- [EIP-1559: Tách biệt Cơ chế khỏi Meme](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
+- [Tài liệu EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
+- [Tài nguyên EIP-1559 của Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
+- [EIP-1559: Tách biệt cơ chế khỏi meme](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

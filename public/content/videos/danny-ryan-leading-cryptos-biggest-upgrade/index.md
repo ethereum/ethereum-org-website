@@ -7,10 +7,9 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "ethereum"
+  - "how-ethereum-works"
   - "network-upgrades"
   - "community-stories"
-  - "the-merge"
 format: interview
 author: Ethereum Foundation
 breadcrumb: "Danny Ryan Interview"

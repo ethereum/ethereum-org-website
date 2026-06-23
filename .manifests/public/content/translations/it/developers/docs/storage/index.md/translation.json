@@ -1,0 +1,521 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-19T19:26:24.145Z",
+  "englishManifestHash": "bc6bfeeff724",
+  "placeholderOrder": [
+    "LINK-b6d7e3",
+    "LINK-fb76ac",
+    "LINK-2a572d",
+    "LINK-e0faf2",
+    "LINK-06cacf",
+    "LINK-513efa",
+    "LINK-04d4f2",
+    "LINK-05919d",
+    "LINK-efb625",
+    "LINK-b57e58",
+    "LINK-230d7a",
+    "LINK-956873",
+    "LINK-1aa21b",
+    "LINK-8c10c8",
+    "LINK-6f1bd8",
+    "LINK-70de5d",
+    "LINK-230d7a",
+    "LINK-c39d54",
+    "LINK-ac68f1",
+    "LINK-74d94b",
+    "LINK-826964",
+    "LINK-5027cb",
+    "LINK-38e445",
+    "LINK-25f829",
+    "LINK-bfa7e4",
+    "LINK-7aa1ec",
+    "LINK-6c5c71",
+    "LINK-3da5a6",
+    "LINK-519830",
+    "LINK-7553f5",
+    "LINK-aa63d9",
+    "LINK-4a0cc7",
+    "LINK-a7045b",
+    "LINK-d84ad0",
+    "LINK-93dca4",
+    "LINK-303d27",
+    "LINK-4a37c3",
+    "LINK-7ab061",
+    "LINK-2e3718",
+    "LINK-b8c05d",
+    "LINK-575d57",
+    "LINK-1a48d6",
+    "LINK-89566d",
+    "LINK-65db49",
+    "LINK-1aa3a5",
+    "LINK-46a565",
+    "LINK-3aa17e",
+    "LINK-f9fda6",
+    "LINK-a5be0b",
+    "LINK-41f0b8",
+    "LINK-eb2315",
+    "LINK-f1df65",
+    "LINK-fd785b",
+    "LINK-01ba58",
+    "LINK-ff22d2",
+    "LINK-a48cfd",
+    "LINK-d20d0b",
+    "LINK-fb8d75",
+    "LINK-b1b6b3",
+    "LINK-fa9212",
+    "LINK-3d7495",
+    "LINK-e44d32",
+    "LINK-0fafc6",
+    "LINK-088a4a",
+    "LINK-93e3d2",
+    "LINK-d093fe",
+    "LINK-b56900",
+    "LINK-098da2",
+    "LINK-7f0320",
+    "LINK-bc77f2",
+    "LINK-0c65eb",
+    "LINK-2da6c5",
+    "LINK-ea9290"
+  ],
+  "placeholderMap": {
+    "LINK-b6d7e3": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/chartsync/chaindefault"
+      }
+    },
+    "LINK-fb76ac": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas"
+      }
+    },
+    "LINK-2a572d": {
+      "type": "link",
+      "values": {
+        "url": "https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/"
+      }
+    },
+    "LINK-e0faf2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.arweave.org/"
+      }
+    },
+    "LINK-06cacf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.filecoin.io/basics/what-is-filecoin"
+      }
+    },
+    "LINK-513efa": {
+      "type": "link",
+      "values": {
+        "url": "https://sia.tech/"
+      }
+    },
+    "LINK-04d4f2": {
+      "type": "link",
+      "values": {
+        "url": "https://storj.io/"
+      }
+    },
+    "LINK-05919d": {
+      "type": "link",
+      "values": {
+        "url": "https://zus.network/"
+      }
+    },
+    "LINK-efb625": {
+      "type": "link",
+      "values": {
+        "url": "https://crust.network"
+      }
+    },
+    "LINK-b57e58": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethswarm.org/"
+      }
+    },
+    "LINK-230d7a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4everland.org/"
+      }
+    },
+    "LINK-956873": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ipfs.io/concepts/what-is-ipfs/"
+      }
+    },
+    "LINK-1aa21b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.pinata.cloud/"
+      }
+    },
+    "LINK-8c10c8": {
+      "type": "link",
+      "values": {
+        "url": "https://web3.storage/"
+      }
+    },
+    "LINK-6f1bd8": {
+      "type": "link",
+      "values": {
+        "url": "https://infura.io/product/ipfs"
+      }
+    },
+    "LINK-70de5d": {
+      "type": "link",
+      "values": {
+        "url": "https://ipfs-scan.io"
+      }
+    },
+    "LINK-c39d54": {
+      "type": "link",
+      "values": {
+        "url": "https://filebase.com"
+      }
+    },
+    "LINK-ac68f1": {
+      "type": "link",
+      "values": {
+        "url": "https://spheron.network/"
+      }
+    },
+    "LINK-74d94b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-826964": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-5027cb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-38e445": {
+      "type": "link",
+      "values": {
+        "url": "https://ipfs.io/"
+      }
+    },
+    "LINK-25f829": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ipfs.io/"
+      }
+    },
+    "LINK-bfa7e4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ipfs/ipfs"
+      }
+    },
+    "LINK-7aa1ec": {
+      "type": "link",
+      "values": {
+        "url": "https://storj.io/"
+      }
+    },
+    "LINK-6c5c71": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.storj.io/"
+      }
+    },
+    "LINK-3da5a6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/storj/storj"
+      }
+    },
+    "LINK-519830": {
+      "type": "link",
+      "values": {
+        "url": "https://sia.tech/"
+      }
+    },
+    "LINK-7553f5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.sia.tech/"
+      }
+    },
+    "LINK-aa63d9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/SiaFoundation/"
+      }
+    },
+    "LINK-4a0cc7": {
+      "type": "link",
+      "values": {
+        "url": "https://filecoin.io/"
+      }
+    },
+    "LINK-a7045b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.filecoin.io/"
+      }
+    },
+    "LINK-d84ad0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/filecoin-project/"
+      }
+    },
+    "LINK-93dca4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.arweave.org/"
+      }
+    },
+    "LINK-303d27": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.arweave.org/info/"
+      }
+    },
+    "LINK-4a37c3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ArweaveTeam/arweave/"
+      }
+    },
+    "LINK-7ab061": {
+      "type": "link",
+      "values": {
+        "url": "https://zus.network/"
+      }
+    },
+    "LINK-2e3718": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.zus.network/zus-docs/"
+      }
+    },
+    "LINK-b8c05d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/0chain/"
+      }
+    },
+    "LINK-575d57": {
+      "type": "link",
+      "values": {
+        "url": "https://crust.network"
+      }
+    },
+    "LINK-1a48d6": {
+      "type": "link",
+      "values": {
+        "url": "https://wiki.crust.network"
+      }
+    },
+    "LINK-89566d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crustio"
+      }
+    },
+    "LINK-65db49": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethswarm.org/"
+      }
+    },
+    "LINK-1aa3a5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethswarm.org/"
+      }
+    },
+    "LINK-46a565": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethersphere/"
+      }
+    },
+    "LINK-3aa17e": {
+      "type": "link",
+      "values": {
+        "url": "https://orbitdb.org/"
+      }
+    },
+    "LINK-f9fda6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/orbitdb/field-manual/"
+      }
+    },
+    "LINK-a5be0b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/orbitdb/orbit-db/"
+      }
+    },
+    "LINK-41f0b8": {
+      "type": "link",
+      "values": {
+        "url": "https://aleph.cloud/"
+      }
+    },
+    "LINK-eb2315": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.aleph.cloud/"
+      }
+    },
+    "LINK-f1df65": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/aleph-im/"
+      }
+    },
+    "LINK-fd785b": {
+      "type": "link",
+      "values": {
+        "url": "https://ceramic.network/"
+      }
+    },
+    "LINK-01ba58": {
+      "type": "link",
+      "values": {
+        "url": "https://developers.ceramic.network/"
+      }
+    },
+    "LINK-ff22d2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ceramicnetwork/js-ceramic/"
+      }
+    },
+    "LINK-a48cfd": {
+      "type": "link",
+      "values": {
+        "url": "https://filebase.com/"
+      }
+    },
+    "LINK-d20d0b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.filebase.com/"
+      }
+    },
+    "LINK-fb8d75": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/filebase"
+      }
+    },
+    "LINK-b1b6b3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.4everland.org/"
+      }
+    },
+    "LINK-fa9212": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.4everland.org/"
+      }
+    },
+    "LINK-3d7495": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/4everland"
+      }
+    },
+    "LINK-e44d32": {
+      "type": "link",
+      "values": {
+        "url": "https://kaleido.io/"
+      }
+    },
+    "LINK-0fafc6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.kaleido.io/kaleido-services/ipfs/"
+      }
+    },
+    "LINK-088a4a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kaleido-io"
+      }
+    },
+    "LINK-93e3d2": {
+      "type": "link",
+      "values": {
+        "url": "https://spheron.network/"
+      }
+    },
+    "LINK-d093fe": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.spheron.network/"
+      }
+    },
+    "LINK-b56900": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/spheronFdn"
+      }
+    },
+    "LINK-098da2": {
+      "type": "link",
+      "values": {
+        "url": "https://dweb3.wtf"
+      }
+    },
+    "LINK-7f0320": {
+      "type": "link",
+      "values": {
+        "url": "https://www.web3compass.net/"
+      }
+    },
+    "LINK-bc77f2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.web3compass.net/statistics"
+      }
+    },
+    "LINK-0c65eb": {
+      "type": "link",
+      "values": {
+        "url": "https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin"
+      }
+    },
+    "LINK-2da6c5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage"
+      }
+    },
+    "LINK-ea9290": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T19:26:24.145Z",
+      "status": "success"
+    }
+  }
+}
