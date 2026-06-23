@@ -178,7 +178,8 @@ export function normalizeTargetPath(
   //    only bare relative paths get prefixed. Note "public/content" has no
   //    trailing slash, so the root itself must be matched explicitly.
   const underJsonRoot = p === "src/intl/en" || p.startsWith("src/intl/en/")
-  const underMdRoot = p === "public/content" || p.startsWith("public/content/")
+  const underMdRoot =
+    p === "public/content" || p.startsWith("public/content/")
   if (underJsonRoot || underMdRoot) {
     // already rooted -- no prefix needed
   } else if (p.endsWith(".json")) {

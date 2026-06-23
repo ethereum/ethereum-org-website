@@ -3227,7 +3227,8 @@ author: Ori Pomerantz
     })
 
     test("restores a dropped > with locale text glued after", () => {
-      const input = "[Set](<https://en.wikipedia.org/wiki/Set_(mathematics)인"
+      const input =
+        "[Set](<https://en.wikipedia.org/wiki/Set_(mathematics)인"
       const { content, fixCount } = fixDroppedAutolinkClose(input)
       expect(content).toBe(
         "[Set](<https://en.wikipedia.org/wiki/Set_(mathematics)>)인"

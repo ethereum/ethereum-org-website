@@ -99,9 +99,7 @@ export const fetchWithRetry = async (
         errObj?.name === "TypeError" &&
         /fetch failed|terminated|network/i.test(errObj?.message ?? "")
       const isTransient =
-        isAbort ||
-        (code !== undefined && NETWORK_CODES.has(code)) ||
-        isFetchFailed
+        isAbort || (code !== undefined && NETWORK_CODES.has(code)) || isFetchFailed
       if (isTransient && attempt < retries) {
         const wait = backoffMs * Math.pow(2, attempt)
         console.warn(

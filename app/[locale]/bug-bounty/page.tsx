@@ -616,7 +616,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   ).map((key, idx) => (
                     <ListItem
                       key={key}
-                      className="flex items-start gap-4 rounded-base border bg-background p-4"
+                      className="rounded-base flex items-start gap-4 border bg-background p-4"
                     >
                       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
                         {idx + 1}

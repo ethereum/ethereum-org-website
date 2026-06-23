@@ -3509,13 +3509,10 @@ function escapeMdxAngleBrackets(content: string): {
       // paren in `uint256の「より小さい（<）」`. Valid tag-name starts that are
       // preserved: a-zA-Z, /, _, $, > (the <> and </> fragments are handled
       // by the rules above). `a < b` (space after) is preserved too.
-      parts[i] = parts[i].replace(
-        /(?<!&lt|&|\\|`)<(?![a-zA-Z\d/_$>\s])/g,
-        () => {
-          fixCount++
-          return "&lt;"
-        }
-      )
+      parts[i] = parts[i].replace(/(?<!&lt|&|\\|`)<(?![a-zA-Z\d/_$>\s])/g, () => {
+        fixCount++
+        return "&lt;"
+      })
 
       if (parts[i] !== original) changed = true
     }
