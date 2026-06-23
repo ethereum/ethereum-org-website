@@ -2,13 +2,15 @@ import type { FileContributor } from "../types"
 
 export const getAppPageLastCommitDate = (
   gitHubContributors: FileContributor[]
-) =>
-  gitHubContributors
+): string | null => {
+  if (gitHubContributors.length === 0) return null
+  return gitHubContributors
     .reduce((latest, contributor) => {
       const commitDate = new Date(contributor.date)
       return commitDate > latest ? commitDate : latest
     }, new Date(0))
     .toString()
+}
 
 const LABELS_TO_SEARCH = [
   "content",

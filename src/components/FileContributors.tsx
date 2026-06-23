@@ -120,7 +120,7 @@ const Contributor = ({ contributor }: ContributorProps) => {
 type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 export type FileContributorsProps = FlexProps & {
   contributors: FileContributor[]
-  lastEditLocaleTimestamp?: string
+  lastEditLocaleTimestamp?: string | null
   className?: string
 }
 
@@ -133,25 +133,34 @@ const FileContributors = ({
   const [isModalOpen, setModalOpen] = useState(false)
   const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
 
+  const hasContributors = contributors.length > 0
+
+  if (!hasContributors && !lastEditLocaleTimestamp) return null
+
   return (
     <>
-      <Modal
-        open={isModalOpen}
-        onOpenChange={(open) => setModalOpen(open)}
-        size={modalSize}
-        title={<Translation id="contributors" />}
-      >
-        <div className="space-y-4">
-          <p>
-            <Translation id="contributors-thanks" />
-          </p>
-          <ContributorList>
-            {contributors.map((contributor) => (
-              <Contributor contributor={contributor} key={contributor.login} />
-            ))}
-          </ContributorList>
-        </div>
-      </Modal>
+      {hasContributors && (
+        <Modal
+          open={isModalOpen}
+          onOpenChange={(open) => setModalOpen(open)}
+          size={modalSize}
+          title={<Translation id="contributors" />}
+        >
+          <div className="space-y-4">
+            <p>
+              <Translation id="contributors-thanks" />
+            </p>
+            <ContributorList>
+              {contributors.map((contributor) => (
+                <Contributor
+                  contributor={contributor}
+                  key={contributor.login}
+                />
+              ))}
+            </ContributorList>
+          </div>
+        </Modal>
+      )}
 
       <Flex
         className={cn("flex-col p-0 md:flex-row md:p-2", className)}
@@ -163,24 +172,26 @@ const FileContributors = ({
               <Translation id="page-last-update" /> {lastEditLocaleTimestamp}
             </p>
           )}
-          <LinkBox className="flex">
-            <ContributorAvatarGroup contributors={contributors} />
-            <LinkOverlay asChild>
-              <Button
-                variant="ghost"
-                onClick={() => {
-                  setModalOpen(true)
-                  trackCustomEvent({
-                    eventCategory: "see contributors",
-                    eventAction: "click",
-                    eventName: "click",
-                  })
-                }}
-              >
-                <Translation id="see-contributors" />
-              </Button>
-            </LinkOverlay>
-          </LinkBox>
+          {hasContributors && (
+            <LinkBox className="flex">
+              <ContributorAvatarGroup contributors={contributors} />
+              <LinkOverlay asChild>
+                <Button
+                  variant="ghost"
+                  onClick={() => {
+                    setModalOpen(true)
+                    trackCustomEvent({
+                      eventCategory: "see contributors",
+                      eventAction: "click",
+                      eventName: "click",
+                    })
+                  }}
+                >
+                  <Translation id="see-contributors" />
+                </Button>
+              </LinkOverlay>
+            </LinkBox>
+          )}
         </Flex>
       </Flex>
     </>

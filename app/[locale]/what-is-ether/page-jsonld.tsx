@@ -15,7 +15,7 @@ export default async function WhatIsEtherPageJsonLD({
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp: string | null
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-what-is-ether")
@@ -90,7 +90,9 @@ export default async function WhatIsEtherPageJsonLD({
               "A decentralized platform for applications and digital economies powered by smart contracts",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        ...(lastEditLocaleTimestamp && {
+          dateModified: lastEditLocaleTimestamp,
+        }),
       },
     ],
   }

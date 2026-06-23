@@ -15,7 +15,7 @@ export default async function WhatIsEthereumPageJsonLD({
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp: string | null
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-what-is-ethereum")
@@ -88,7 +88,9 @@ export default async function WhatIsEthereumPageJsonLD({
           description:
             "Comprehensive guide to Ethereum, its network, capabilities, and how it works",
         },
-        dateModified: lastEditLocaleTimestamp,
+        ...(lastEditLocaleTimestamp && {
+          dateModified: lastEditLocaleTimestamp,
+        }),
       },
       {
         "@type": "FAQPage",

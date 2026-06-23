@@ -63,7 +63,9 @@ export const getAppPageContributorInfo = async (
   )
 
   const latestCommitDate = getAppPageLastCommitDate(gitHubContributors)
-  const lastEditLocaleTimestamp = getLocaleTimestamp(locale, latestCommitDate)
+  const lastEditLocaleTimestamp = latestCommitDate
+    ? getLocaleTimestamp(locale, latestCommitDate)
+    : null
 
   // if (
   //   (!uniqueGitHubContributors.length || !lastEditLocaleTimestamp) &&

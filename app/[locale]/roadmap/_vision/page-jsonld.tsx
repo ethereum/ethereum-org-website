@@ -15,7 +15,7 @@ export default async function RoadmapVisionPageJsonLD({
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp: string | null
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-roadmap-vision")
@@ -88,7 +88,9 @@ export default async function RoadmapVisionPageJsonLD({
           description:
             "The vision for Ethereum's future development and capabilities",
         },
-        dateModified: lastEditLocaleTimestamp,
+        ...(lastEditLocaleTimestamp && {
+          dateModified: lastEditLocaleTimestamp,
+        }),
       },
     ],
   }
