@@ -29,7 +29,7 @@ Digital feudalism: you create the content, build the communities, generate the d
 
 Their terms change. Your work disappears. 
 
-![A video game explorer character at a blocked door](./tarrance-image-1.png)
+![A video game explorer character standing at a blocked door](./tarrance-image-1.png)
 
 Nowhere is digital feudalism more obvious than in gaming.
 
@@ -37,7 +37,7 @@ When game publisher Ubisoft shut down The Crew, they also revoked every buyer's 
 
 The ['Stop Killing Games' movement](https://en.wikipedia.org/wiki/Stop_Killing_Games) exists because players have had enough. 
 
-![Screenshot of video game with access revoked](./tarrance-2.png)
+![Screenshot of video game with the user's access revoked](./tarrance-2.png)
 
 It’s part of the fabled origin story of Ethereum.
 
@@ -59,7 +59,7 @@ When the Star Wars Galaxies game shut down, thousands logged in to watch 14 year
 
 They lit fireworks and said goodbye. It was a funeral for a world they built and loved but never owned. 
 
-![Screenshot of Star Wars Galaxies game shut down in-game event](./tarrance-4.png) 
+![Screenshot of the game landscape and community during the Star Wars Galaxies game shut down in-game event](./tarrance-4.png) 
 
 ## What happens when players control their worlds {#what-happens-when-players-control-their-worlds}
 
@@ -101,7 +101,7 @@ Play [Loot Survivor](https://www.deathmountain.gg/lootsurvivor).
 
 The future I'm talking about? It's live.
 
-![Screenshot of Loot Survivor video game](./tarrance-9.png) 
+![Screenshot of the Loot Survivor video game picturing a knight fighting a monster](./tarrance-9.png) 
 
 ## Making crypto disappear {#making-crypto-disappear}
 
