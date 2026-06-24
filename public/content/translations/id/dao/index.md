@@ -148,7 +148,7 @@ _Umumnya digunakan untuk pengembangan dan pengembangan tata kelola protokol yang
 
 ### Artikel tentang DAO {#dao-articles}
 
-- [Apa itu DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Apa itu DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [Rumah DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [Apa itu DAO dan apa kegunaannya?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Cara Memulai Komunitas Digital yang Didukung oleh DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

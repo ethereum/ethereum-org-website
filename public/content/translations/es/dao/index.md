@@ -148,7 +148,7 @@ _Normalmente utilizada para el desarrollo descentralizado y la gobernanza de pro
 
 ### Artículos sobre DAO {#further-reading}
 
-- [¿Qué es una DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [¿Qué es una DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [¿Qué es una DAO y para qué sirve?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Cómo iniciar una comunidad digital impulsada por DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

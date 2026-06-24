@@ -150,7 +150,7 @@ _आम तौर पर प्रोटोकॉल और [डैप्स](/g
 
 ### डीएओ लेख {#dao-articles}
 
-- [डीएओ क्या है?](https://aragon.org/dao) – [एरागॉन](https://aragon.org/)
+- [डीएओ क्या है?](https://blog.aragon.org/what-is-a-dao/) – [एरागॉन](https://aragon.org/)
 - [हाउस ऑफ डीएओ](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [डीएओ क्या है और यह किस लिए है?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [डीएओ-संचालित डिजिटल कम्युनिटी कैसे शुरू करें](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

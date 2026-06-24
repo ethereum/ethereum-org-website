@@ -148,7 +148,7 @@ _Genellikle protokollerin ve [merkeziyetsiz uygulamaların](/glossary/#dapp) mer
 
 ### DAO Makaleleri {#dao-articles}
 
-- [DAO nedir?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAO nedir?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO nedir ve ne işe yarar?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAO Destekli Dijital Topluluk Nasıl Başlatılır](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

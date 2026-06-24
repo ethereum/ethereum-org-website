@@ -150,7 +150,7 @@ _Obvykle se používá pro decentralizovaný vývoj a správu protokolů a [dapp
 
 ### Články o DAO {#dao-articles}
 
-- [Co je to DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Co je to DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [Co je DAO a k čemu slouží?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Jak založit digitální komunitu na bázi DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

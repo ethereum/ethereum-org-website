@@ -148,7 +148,7 @@ _Зазвичай використовується для децентраліз
 
 ### Статті про DAO {#dao-articles}
 
-- [Що таке DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Що таке DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [Що таке DAO і для чого вона потрібна?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Як створити цифрову спільноту на основі DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

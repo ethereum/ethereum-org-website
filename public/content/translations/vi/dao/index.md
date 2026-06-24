@@ -148,7 +148,7 @@ _Thường được sử dụng để phát triển và quản trị phi tập t
 
 ### Các bài viết về DAO {#dao-articles}
 
-- [DAO là gì?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAO là gì?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO là gì và dùng để làm gì?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Làm thế nào để bắt đầu một cộng đồng kỹ thuật số được hỗ trợ bởi DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

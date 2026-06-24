@@ -150,7 +150,7 @@ _通常用于协议和[去中心化应用程序](/glossary/#dapp)的去中心化
 
 ### DAO 文章 {#dao-articles}
 
-- [什么是 DAO？](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [什么是 DAO？](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [DAO 之家](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [什么是 DAO，它有什么用？](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [如何启动一个由 DAO 支持的数字社区](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

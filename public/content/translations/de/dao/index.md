@@ -147,7 +147,7 @@ _Wird üblicherweise für die dezentralisierte Entwicklung und Verwaltung von Pr
 
 ### DAO-Artikel {#dao-articles}
 
-- [Was ist eine DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Was ist eine DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [Haus der DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [Was ist eine DAO und wofür ist sie da?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Gründung einer DAO-basierten digitalen Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
