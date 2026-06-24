@@ -68,7 +68,7 @@
 | 52 | Orphaned opening backtick with missing closer | pl #17445 | `` `<nazwa opcodu>(...). `` -- opening backtick with no closing backtick; `repairUnclosedBackticks` needs English comparison and may miss cases where English also has backticks but the translated line lost one | High -- exposed MDX tags |
 | 53 | Crowdin misplaces closing backtick before JSX fragment closer | sw #17521 | EN: `` (`<> ... </>`) `` -> SW: `` (`<> ...` </>) `` -- Crowdin moves closing backtick before `</>`, then `escapeMdxAngleBrackets` escapes the exposed `</>` as `\</>`. Fix: detect `` `<content>` </>) `` pattern and move closing backtick to include `</>` | Critical -- breaks MDX display |
 | 54 | Double punctuation after orphaned tag removal | sw #17521 | `kutoa.</em></em>.` -> `kutoa..` -- `removeOrphanedClosingTags` strips orphaned `</em>` tags but leaves behind double periods where the tag sat between two periods. Fix: collapse `..` to `.` after orphan removal | Low -- cosmetic but noticeable |
-| 55 | Escaped quotes `\"` in MDX JSX attributes | sw #17521 | `<ButtonLink variant=\"outline-color\" href=\"/roadmap/\">` -- Crowdin backslash-escapes quotes in JSX attributes; valid in JSON but breaks MDX compilation | Critical -- breaks build |
+| 55 | Escaped quotes `\"` in MDX JSX attributes | sw #17521 | `<ButtonLink variant=\"outline\" href=\"/roadmap/\">` -- Crowdin backslash-escapes quotes in JSX attributes; valid in JSON but breaks MDX compilation | Critical -- breaks build |
 | 56 | Translated interpolation placeholders in JSON | sw #17521 | EN: `{days}` -> SW: `{siku}` -- Crowdin translates the variable name inside `{}` braces; the app expects the English key name | Critical -- breaks rendering |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
