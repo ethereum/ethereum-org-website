@@ -22,7 +22,9 @@ export const shareOnTwitter = (tweetText: string): void => {
   const tweet = encodeURI(tweetText)
 
   window.open(
-    `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
+    `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`,
+    "_blank",
+    "noopener,noreferrer"
   )
 }
 

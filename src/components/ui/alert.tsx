@@ -98,9 +98,14 @@ const AlertDescription = React.forwardRef<
 ))
 AlertDescription.displayName = "AlertDescription"
 
+/**
+ * Dismiss control for an `Alert`. Env-agnostic: the caller owns the
+ * (required) `aria-label` and any dismissal behaviour (`onClick`), so it
+ * composes into server or client trees alike.
+ */
 const AlertCloseButton = React.forwardRef<
   HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement>
+  React.ButtonHTMLAttributes<HTMLButtonElement> & { "aria-label": string }
 >(({ className, ...props }, ref) => (
   <Button
     ref={ref}
@@ -109,7 +114,6 @@ const AlertCloseButton = React.forwardRef<
     {...props}
   >
     <X className="h-6 w-6" />
-    <span className="sr-only">Close</span>
   </Button>
 ))
 AlertCloseButton.displayName = "AlertCloseButton"

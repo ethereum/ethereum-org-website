@@ -166,15 +166,16 @@ If you use `LinkBox` without `LinkOverlay` somewhere inside, the whole-card-clic
 ## Heroes
 
 ```tsx
-import { HomeHero, HubHero, MdxHero, PageHero } from "@/components/Hero"
+import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 ```
 
 | Hero | Use case |
 |---|---|
-| `PageHero` | The workhorse for most internal pages. 2-column with image, breadcrumb (or `header` eyebrow), and up to two buttons -- **or** text-only when you omit `heroImg`. |
+| `PageHero` | The workhorse for most internal pages. 2-column with image, breadcrumb (or `header` eyebrow), and up to two buttons -- **or** text-only when you omit `heroImg`. With `variant="no-divider"` and no `heroImg`/`description`, it's the minimal breadcrumb + h1 article hero (the `StaticLayout` default). |
 | `HubHero` | Full-bleed hero image with overlay text card. |
 | `HomeHero` | Homepage only. Async server component. |
-| `MdxHero` | Minimal: breadcrumb + h1. For long-form articles. |
+
+> The former `MdxHero` (minimal breadcrumb + h1 for long-form articles) was removed. Use `PageHero` text-only with `variant="no-divider"` instead.
 
 ### `PageHero` props
 
@@ -294,9 +295,10 @@ Don't inline a `<div className="rounded-full">` for a user avatar -- use `Avatar
 
 ```tsx
 import { Tag, TagButton } from "@/components/ui/tag"
+import TagFilter from "@/components/ui/tag-filter"
 ```
 
-Big variant matrix: `status` × `variant` × `size`. See `references/components.md` for the full set.
+Big variant matrix: `status` × `variant` × `size`. See `references/components.md` for the full set. `TagFilter` is the controlled multi-select chip filter for tag-filtered lists -- prefer it over a hand-rolled `TagButton` row.
 
 ## Tables
 

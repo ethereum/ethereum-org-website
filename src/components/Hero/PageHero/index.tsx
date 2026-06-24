@@ -88,7 +88,7 @@ const PageHero = ({
           <Image
             className={cn(
               "object-contain max-lg:max-h-64 max-lg:w-auto max-lg:max-w-full lg:absolute lg:inset-0 lg:size-full",
-              "py-8 pe-hero max-lg:px-hero max-lg:pb-hero-half"
+              "p-page lg:ps-0"
             )}
             src={heroImg}
             alt=""
@@ -97,7 +97,12 @@ const PageHero = ({
           />
         </div>
       )}
-      <div className="max-w-3xl flex-1 p-hero lg:px-hero-1.5x lg:py-hero-2x">
+      <div
+        className={cn(
+          "max-w-3xl flex-1 px-page py-hero lg:pt-hero-2x",
+          description && "lg:mb-hero-2x"
+        )}
+      >
         <div className="mb-space-2x">
           <Eyebrow />
         </div>
@@ -106,9 +111,15 @@ const PageHero = ({
           {title}
         </PrimaryHeading>
 
-        <div className="space-y-[0.5lh] text-lg not-last:mb-space-3x">
-          {typeof description === "string" ? <p>{description}</p> : description}
-        </div>
+        {description && (
+          <div className="space-y-[0.5lh] text-lg not-last:mb-space-3x">
+            {typeof description === "string" ? (
+              <p>{description}</p>
+            ) : (
+              description
+            )}
+          </div>
+        )}
 
         {buttons && (
           <div className="flex flex-col gap-4 md:flex-row">
