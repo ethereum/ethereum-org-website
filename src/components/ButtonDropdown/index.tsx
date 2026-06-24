@@ -1,19 +1,21 @@
 "use client"
 
 import { useCallback, useRef, useState } from "react"
-import { ChevronDown, ChevronUp, Menu } from "lucide-react"
+import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { Button } from "./ui/buttons/Button"
+import { Button } from "../ui/buttons/Button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu"
-import { BaseLink } from "./ui/Link"
+} from "../ui/dropdown-menu"
+import { BaseLink } from "../ui/Link"
+
+import { ScrollChevron } from "./scroll-chevron"
 
 export interface ListItem {
   text: string
@@ -35,31 +37,6 @@ export interface List {
 export type ButtonDropdownProps = {
   list: List
   className?: string
-}
-
-// Decorative scroll affordance pinned to an edge of the menu. The solid
-// background matches the menu surface so the chevron never overlaps list text;
-// it fades in/out via opacity in step with its `hidden` flag.
-const ScrollChevron = ({
-  edge,
-  hidden,
-}: {
-  edge: "top" | "bottom"
-  hidden: boolean
-}) => {
-  const Icon = edge === "top" ? ChevronUp : ChevronDown
-  return (
-    <div
-      aria-hidden
-      className={cn(
-        "pointer-events-none absolute inset-x-0 flex h-6 items-center justify-center bg-background text-body-medium transition-opacity",
-        edge === "top" ? "top-0" : "bottom-0",
-        hidden && "opacity-0"
-      )}
-    >
-      <Icon className="size-4" />
-    </div>
-  )
 }
 
 const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
