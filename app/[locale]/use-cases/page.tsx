@@ -126,7 +126,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         heroSection={<HubHero {...heroContent} />}
         showDropdown={false}
-        variant="narrow"
       >
         <p className="text-lg text-body-medium">
           {t("page-intro-before-link")}{" "}

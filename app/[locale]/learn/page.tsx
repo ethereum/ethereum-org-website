@@ -238,7 +238,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         heroSection={<HubHero {...heroContent} />}
         showDropdown={false}
-        variant="narrow"
       >
         {/* Section 1: Understand Ethereum */}
         <Section id={tocItems[0].id}>
