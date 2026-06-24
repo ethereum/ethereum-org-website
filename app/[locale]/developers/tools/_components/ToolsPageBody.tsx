@@ -50,6 +50,7 @@ const ToolsPageBody = async ({
         <ToolsCatalog
           // Reset client filter/search state when navigating between categories
           key={currentCategoryId ?? "all"}
+          locale={locale}
           tools={tools}
           categories={categories}
           currentCategoryId={currentCategoryId}
@@ -61,6 +62,7 @@ const ToolsPageBody = async ({
             searchPlaceholder: t("page-developers-tools-search-placeholder"),
             allCategories: t("page-developers-tools-categories-title"),
             resultsLabel: t("page-developers-tools-results-label"),
+            noResults: t("page-developers-tools-no-results"),
           }}
         />
         <SuggestAResource
@@ -73,6 +75,7 @@ const ToolsPageBody = async ({
       {/* useSearchParams requires a Suspense boundary on static routes */}
       <Suspense>
         <ToolModal
+          locale={locale}
           tools={tools}
           categoryLabels={categoryLabels}
           subcategoryLabels={subcategoryLabels}

@@ -4,11 +4,13 @@ import { memo, useDeferredValue, useMemo, useRef, useState } from "react"
 import { AppWindowMac, ChevronRight } from "lucide-react"
 
 import AppCard from "@/components/AppCard"
+import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
 import { BaseLink } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import type {
   DeveloperToolsCategory,
@@ -17,6 +19,7 @@ import type {
 import { getToolKey } from "../utils"
 
 type ToolsCatalogProps = {
+  locale: string
   tools: DeveloperToolWithCategory[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
@@ -27,6 +30,7 @@ type ToolsCatalogProps = {
     searchPlaceholder: string
     allCategories: string
     resultsLabel: string
+    noResults: string
   }
   currentCategoryId?: string
 }
@@ -105,6 +109,7 @@ const ToolCard = memo(function ToolCard({
 })
 
 type CategorySidebarProps = {
+  locale: string
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
@@ -118,6 +123,7 @@ type CategorySidebarProps = {
 }
 
 function CategorySidebar({
+  locale,
   categories,
   categoryLabels,
   subcategoryLabels,
@@ -129,6 +135,7 @@ function CategorySidebar({
   selectedSubcategoryId,
   onSelectSubcategory,
 }: CategorySidebarProps) {
+  const nf = numberFormat(locale)
   return (
     <div className="space-y-1">
       <BaseLink
@@ -139,7 +146,9 @@ function CategorySidebar({
         )}
       >
         <span>{allCategoriesLabel}</span>
-        <span className="text-xs text-body-medium">{totalCount}</span>
+        <span className="text-xs text-body-medium">
+          {nf.format(totalCount)}
+        </span>
       </BaseLink>
 
       {categories.map((category) => {
@@ -168,18 +177,20 @@ function CategorySidebar({
                 {getCategoryLabel(category.id, categoryLabels)}
               </span>
               <span className="text-xs text-body-medium">
-                {countByCategory[category.id] || 0}
+                {nf.format(countByCategory[category.id] || 0)}
               </span>
             </BaseLink>
             {isCurrent && (
               <div className="ml-5 space-y-1 border-l pl-2">
                 {category.subcategories.map((subcategory) => (
-                  <button
+                  <Button
                     key={subcategory.id}
+                    variant="ghost"
+                    isSecondary
                     className={cn(
-                      "flex w-full items-center justify-between rounded-md px-3 py-1.5 text-start text-xs hover:bg-background-highlight",
+                      "flex min-h-0 w-full items-center justify-between rounded-md px-3 py-1.5 text-start text-xs font-normal hover:bg-background-highlight",
                       selectedSubcategoryId === subcategory.id &&
-                        "bg-background-highlight text-primary"
+                        "bg-background-highlight"
                     )}
                     onClick={() => {
                       onSelectSubcategory(
@@ -193,9 +204,9 @@ function CategorySidebar({
                       {getSubcategoryLabel(subcategory.id, subcategoryLabels)}
                     </span>
                     <span className="text-[10px] text-body-medium">
-                      {countBySubcategory[subcategory.id] || 0}
+                      {nf.format(countBySubcategory[subcategory.id] || 0)}
                     </span>
-                  </button>
+                  </Button>
                 ))}
               </div>
             )}
@@ -207,6 +218,7 @@ function CategorySidebar({
 }
 
 export default function ToolsCatalog({
+  locale,
   tools,
   categories,
   categoryLabels,
@@ -216,6 +228,7 @@ export default function ToolsCatalog({
   labels,
   currentCategoryId,
 }: ToolsCatalogProps) {
+  const nf = numberFormat(locale)
   const [search, setSearch] = useState("")
   const [selectedSubcategoryId, setSelectedSubcategoryId] = useState<
     string | undefined
@@ -333,6 +346,7 @@ export default function ToolsCatalog({
 
   const sidebar = (
     <CategorySidebar
+      locale={locale}
       categories={categories}
       categoryLabels={categoryLabels}
       subcategoryLabels={subcategoryLabels}
@@ -388,8 +402,9 @@ export default function ToolsCatalog({
           )}
 
           <p className="text-sm text-body-medium">
-            {labels.resultsLabel}: <strong>{filteredTools.length}</strong> /{" "}
-            {tools.length}
+            {labels.resultsLabel}:{" "}
+            <strong>{nf.format(filteredTools.length)}</strong> /{" "}
+            {nf.format(tools.length)}
           </p>
 
           <div
@@ -405,7 +420,9 @@ export default function ToolsCatalog({
                     <h2 className="text-xl font-bold">
                       {getCategoryLabel(category.id, categoryLabels)}
                     </h2>
-                    <span className="text-xs text-body-medium">({count})</span>
+                    <span className="text-xs text-body-medium">
+                      ({nf.format(count)})
+                    </span>
                   </div>
 
                   <div className="space-y-6">
@@ -420,7 +437,7 @@ export default function ToolsCatalog({
                               )}
                             </h3>
                             <span className="text-xs text-body-medium">
-                              ({subcategoryTools.length})
+                              ({nf.format(subcategoryTools.length)})
                             </span>
                           </div>
                           <div className="grid grid-cols-auto-3 gap-x-8">
@@ -438,7 +455,7 @@ export default function ToolsCatalog({
           </div>
           {filteredTools.length === 0 && (
             <div className="rounded-xl border p-8 text-center text-body-medium">
-              No tools found. Try adjusting your search or filters.
+              {labels.noResults}
             </div>
           )}
         </div>

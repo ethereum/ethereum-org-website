@@ -10,6 +10,7 @@ import ToolModalContents, { type ToolModalLabels } from "./ToolModalContents"
 import ToolModalWrapper from "./ToolModalWrapper"
 
 type ToolModalProps = {
+  locale: string
   tools: DeveloperToolWithCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
@@ -23,6 +24,7 @@ type ToolModalProps = {
  * renderable; unknown keys simply leave the modal closed.
  */
 const ToolModal = ({
+  locale,
   tools,
   categoryLabels,
   subcategoryLabels,
@@ -39,9 +41,20 @@ const ToolModal = ({
   )
 
   return (
-    <ToolModalWrapper variant="unstyled" open={!!activeTool}>
+    <ToolModalWrapper
+      variant="unstyled"
+      open={!!activeTool}
+      // Visually-hidden dialog title: the visible name lives in ToolModalContents,
+      // but Radix needs a title to give the dialog an accessible name.
+      title={
+        activeTool ? (
+          <span className="sr-only">{activeTool.name}</span>
+        ) : undefined
+      }
+    >
       {activeTool && (
         <ToolModalContents
+          locale={locale}
           tool={activeTool}
           categoryLabels={categoryLabels}
           subcategoryLabels={subcategoryLabels}

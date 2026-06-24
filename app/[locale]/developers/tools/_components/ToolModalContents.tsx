@@ -6,6 +6,7 @@ import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
+import { numberFormat } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
 
 import type { DeveloperToolWithCategory } from "../types"
@@ -17,23 +18,22 @@ export type ToolModalLabels = {
   social: string
 }
 
-function formatCompactNumber(value: number): string {
-  return new Intl.NumberFormat("en", { notation: "compact" }).format(value)
-}
-
 const ToolModalContents = ({
+  locale,
   tool,
   categoryLabels,
   subcategoryLabels,
   tagLabels,
   labels,
 }: {
+  locale: string
   tool: DeveloperToolWithCategory
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
   tagLabels: Record<string, string>
   labels: ToolModalLabels
 }) => {
+  const compactNumber = numberFormat(locale, { notation: "compact" })
   return (
     <div className="flex min-h-0 flex-1 flex-col bg-background">
       {tool.banner_url && (
@@ -59,7 +59,7 @@ const ToolModalContents = ({
           <p className="text-sm text-body-medium">
             {subcategoryLabels[tool.subcategory_id] || tool.subcategory_id}
           </p>
-          <h2 className="text-3xl">{tool.name}</h2>
+          <h2 className="text-h3">{tool.name}</h2>
           <TagsInlineText
             list={tool.tags.map((tag) => tagLabels[tag] || tag)}
             variant="light"
@@ -102,7 +102,7 @@ const ToolModalContents = ({
                   const label = href.replace(sanitizeRegExp, "")
                   const starsLabel =
                     typeof repo.stargazers === "number"
-                      ? `(${formatCompactNumber(repo.stargazers)} ☆)`
+                      ? `(${compactNumber.format(repo.stargazers)} ☆)`
                       : null
                   return (
                     <ButtonLink
@@ -142,7 +142,7 @@ const ToolModalContents = ({
                   )
                   const downloadsCount =
                     typeof pkg.downloads === "number"
-                      ? formatCompactNumber(pkg.downloads)
+                      ? compactNumber.format(pkg.downloads)
                       : null
                   return (
                     <ButtonLink
@@ -158,7 +158,7 @@ const ToolModalContents = ({
                         <span className="inline-flex items-center text-xs whitespace-nowrap text-primary">
                           ({downloadsCount}
                           <Download
-                            className="ml-1 size-3"
+                            className="ms-1 size-3"
                             aria-hidden="true"
                           />
                           )
