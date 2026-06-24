@@ -72,11 +72,11 @@ The team prefers `tv` for new and refactored components. No bulk migration of ex
 import { tv, type VariantProps } from "tailwind-variants"
 
 const cardVariants = tv({
-  base: "rounded-2xl text-body",
+  base: "rounded-base text-body",
   variants: {
     decoration: {
       none: "",
-      "ghost-shadow": "relative before:absolute before:inset-0 before:translate-x-2 before:translate-y-2 before:bg-background-medium before:rounded-2xl before:-z-10",
+      "ghost-shadow": "relative before:absolute before:inset-0 before:translate-x-2 before:translate-y-2 before:bg-background-medium before:rounded-base before:-z-10",
       "purple-gradient": "border border-primary/10 bg-card-gradient-secondary hover:bg-card-gradient-secondary-hover",
     },
     layout: {
@@ -176,7 +176,6 @@ These are all current candidates for absorption (each is a one-off that could be
 | `SubpageCard.tsx` | `Card` `decoration="purple-gradient"` |
 | `HorizontalCard.tsx` | `Card` `layout="horizontal"` |
 | `FloatingCard.tsx` | `Card` `tone="primary-gradient"` |
-| `FeedbackCard.tsx` | `Card` `tone="feedback-gradient"` |
 
 See `cleanup-playbook.md` for the full list of cleanup-track items.
 

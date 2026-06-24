@@ -63,6 +63,7 @@ import {
   CardEmoji,
   CardFooter,
   CardHeader,
+  CardIconContainer,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -129,6 +130,8 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 - `textColor="body"`: re-assert base body color (rare; inherits correctly by default).
 
 **`CardEmoji`**: wraps `<Emoji text=":rocket:" />` in a fixed-size `div` to prevent layout shift on client-side hydration. Typically lives in `CardHeader`.
+
+**`CardIconContainer`**: Lucide counterpart to `CardEmoji` — wraps an icon child, forces it to `size-12` (48px), and tints it `text-primary`. **Preferred over `CardEmoji` for new/refactored cards** as part of the gradual emoji-to-Lucide migration; reach for an emoji only to match existing emoji cards or when no fitting icon exists.
 
 ### `Grid`
 
@@ -199,7 +202,7 @@ Layout primitives.
 `Stack` supports a `separator` prop that clones a separator element between children:
 
 ```tsx
-<Stack separator={<Divider />}>{items}</Stack>
+<Stack separator={<HR />}>{items}</Stack>
 ```
 
 ### `LinkBox` / `LinkOverlay`
@@ -391,6 +394,25 @@ Big variant matrix.
 **`variant`**: `subtle | high-contrast | solid | outline`
 **`size`**: `small | medium`
 
+### `TagFilter`
+
+```tsx
+import TagFilter from "@/components/ui/tag-filter"
+```
+
+Controlled, presentational multi-select chip filter built on `TagButton` -- a wrapping chip row with an optional show-more/show-less expander. **Reach for this instead of hand-rolling a `TagButton` row** whenever a page filters a list by tags. Selection and match semantics (AND vs OR) live in the parent; the component only renders chips and reports toggles.
+
+```tsx
+<TagFilter
+  tags={getTagCounts(items, (i) => i.tags)} // [name, count][], caller pre-sorts/filters
+  value={selectedTags}
+  onChange={setSelectedTags}
+  defaultVisible={12} // chips before the expander; selected-but-hidden tags stay pinned-visible
+/>
+```
+
+**Props**: `tags` (`[name, count][]`, rendered as-is), `value` / `onChange` (controlled), `defaultVisible` (cutoff; omit to show all), `showCount` (default `true`, formats via `numberFormat(locale)`), `className`. Pair with `getTagCounts` from `@/lib/utils/tags` to build count-descending entries from any item list.
+
 ### `Alert`
 
 ```tsx
@@ -568,13 +590,25 @@ import Spinner from "@/components/ui/spinner"
 
 Wraps `Loader2` from Lucide.
 
-### `Divider` (deprecation track)
+### `HR` (and the deprecated `Divider`)
 
 ```tsx
-import Divider from "@/components/ui/divider"
+import HR from "@/components/ui/hr" // default export
 ```
 
-Project-specific look: `my-16 h-1 w-[10%] bg-primary-high-contrast` purple bar. **Largely deprecated in current usage.** For visual section separation, prefer a border (`border-t border-border` on a subsequent element) over rendering a `<Divider />`. Don't introduce new `Divider` usage; existing uses can be left until a deliberate cleanup.
+The canonical horizontal rule, also wired as the `hr` MDX element. Always carries `my-space-3x` vertical rhythm. Default (no props) is a plain full-width rule. Two optional axes:
+
+- **`variant`**: `narrow` -- the short legacy purple bar (`h-1 w-1/10 bg-primary-high-contrast`). **Deprecated direction** (per design); it exists only to back the `Divider` wrapper. Don't reach for it in new work -- a plain `<HR />` is the going-forward separator.
+- **`position`**: `indent` -- insets both sides by the responsive `page` padding token via `mx-page` (`--spacing-page`, the same `--page-pad` used for page gutters). Use margin (`mx-`), not padding (`px-`): a default `HR` renders its line as the top border, which spans the full border-box and ignores padding -- only margin shortens it. Only for a full-bleed `HR`; skip it when the rule already sits inside a padded section (e.g. a `px-page` `Section`), or you'll double the gutter.
+
+```tsx
+<HR />               // plain full-width rule
+<HR position="indent" /> // inset on both sides by the page gutter
+```
+
+**`Divider` is deprecated** -- a thin `forwardRef` wrapper that renders `<HR variant="narrow" />`, kept only for backward compatibility and exported (named) from the same file: `import { Divider } from "@/components/ui/hr"`. Don't introduce new `Divider` usage; reach for `HR` directly. For plain section separation, a border on a following element (`border-t border-border`) is still lighter than rendering a rule.
+
+> Moved during the MDX-primitive extraction: the old `@/components/ui/divider` file is gone -- both `HR` and `Divider` now live in `@/components/ui/hr`. Siblings `Blockquote` (`@/components/ui/blockquote`) and `KBD` (`@/components/ui/kbd`) were extracted the same way (both default exports, wired as the `blockquote` / `kbd` MDX elements).
 
 ### `Table`
 
@@ -712,10 +746,10 @@ For prominent numeric displays (e.g., "$3000" prize amounts, statistics). Don't 
 ### Heroes -- `@/components/Hero`
 
 ```tsx
-import { HomeHero, HubHero, MdxHero, PageHero } from "@/components/Hero"
+import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 ```
 
-See `canonical-imports.md` for selection.
+See `canonical-imports.md` for selection. (The former `MdxHero` was removed -- use `PageHero` text-only with `variant="no-divider"`.)
 
 ### Banner-named components
 
@@ -753,4 +787,4 @@ The shortcode registry for markdown content. To add a markdown shortcode, add th
 
 ### Markdown shortcode wrapper
 
-- `@/components/MarkdownCard` -- backs the `<Card>` markdown shortcode (registered in `MdComponents`). Composes the `@/components/ui/card` primitives with an MDX-friendly prop shape (`emoji`, `title`, `description`, `ctaLabel`, `href`). Importing it from app code is allowed but rare — most app-code cards should compose the primitives directly from `@/components/ui/card`.
+- `@/components/MarkdownCard` -- backs the `<Card>` markdown shortcode (registered in `MdComponents`). Composes the `@/components/ui/card` primitives with an MDX-friendly prop shape (`emoji` _or_ `icon` (mutually exclusive; prefer a Lucide `icon`), `title`, `description`, `ctaLabel`, `href`). Importing it from app code is allowed but rare — most app-code cards should compose the primitives directly from `@/components/ui/card`.

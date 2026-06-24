@@ -1,0 +1,800 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/scaling/plasma/index.md",
+  "generatedAt": "2026-06-17T22:39:44.229Z",
+  "rootHash": "cba9df3ccfcc",
+  "tree": {
+    "contentHash": "54e07910861b",
+    "anchorHash": "8b27293b58d0",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "252564b4213a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "db6ed6cf2398",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:incomplete": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4e07408562be"
+      },
+      "prose:3": {
+        "contentHash": "399cc6fd20c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:4": {
+        "contentHash": "d29dd96264c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "177cbe0acd36",
+        "anchorHash": "05db58e92d4e"
+      },
+      "prose:5": {
+        "contentHash": "40b44b62da57",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "a3ed0d3cc039",
+        "anchorHash": "36b0991a1869"
+      },
+      "prose:6": {
+        "contentHash": "ddc406175cf7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "89516f974ed9",
+        "anchorHash": "cade5c629763",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "6bd6250e2fc7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "42d7538ac3a1",
+            "anchorHash": "0e11617f9023"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "what-is-plasma": {
+        "contentHash": "aa3ac8510832",
+        "anchorHash": "6bede6691863",
+        "labelHash": "b805948a5e70",
+        "children": {
+          "_label": {
+            "contentHash": "b805948a5e70",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "c2ec7ebb8b48",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "04cd751f8219",
+            "anchorHash": "62c350aa10da"
+          },
+          "prose:4": {
+            "contentHash": "327cd2a10900",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "17f29b073143",
+            "anchorHash": "8f6a6bd63474"
+          },
+          "prose:5": {
+            "contentHash": "3ac66d46c325",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "9c8ae38f81d5",
+            "anchorHash": "e0dcdaf3a7b0"
+          },
+          "prose:6": {
+            "contentHash": "9e9bf4b8b127",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "how-does-plasma-work": {
+        "contentHash": "781712b3aead",
+        "anchorHash": "76e554cfd5b0",
+        "labelHash": "ed46cc364456",
+        "children": {
+          "_label": {
+            "contentHash": "ed46cc364456",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "24db33cfbdd7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "offchain-computation": {
+            "contentHash": "9d9b792cde3b",
+            "anchorHash": "c6382a1fd61b",
+            "labelHash": "67899f504713",
+            "children": {
+              "_label": {
+                "contentHash": "67899f504713",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "06ddf7aa987f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "0da4a8107e74",
+                "anchorHash": "ab199f905ffa"
+              },
+              "prose:2": {
+                "contentHash": "09362ea6b8ad",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "state-commitments": {
+            "contentHash": "a0c495236907",
+            "anchorHash": "a3f46a30481e",
+            "labelHash": "b36974277a12",
+            "children": {
+              "_label": {
+                "contentHash": "b36974277a12",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "f34f2ff94c33",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "ff3660906c61",
+                "anchorHash": "97457fe15b56"
+              },
+              "prose:4": {
+                "contentHash": "936ef4636c9a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "57862879aa34",
+                "anchorHash": "b8fc8f788bd4"
+              },
+              "prose:5": {
+                "contentHash": "3c0b2e85d8f2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "b650583713a0",
+                "anchorHash": "0e3b137c6518"
+              },
+              "prose:6": {
+                "contentHash": "2c3e359a64f9",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "entries-and-exits": {
+            "contentHash": "360027fefc9a",
+            "anchorHash": "f1d8678ea337",
+            "labelHash": "dfda3014b037",
+            "children": {
+              "_label": {
+                "contentHash": "dfda3014b037",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "69fcbdc08cab",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "entering-the-plasma-chain": {
+                "contentHash": "93952a77d7b6",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "2e36dbe8f957",
+                "children": {
+                  "_label": {
+                    "contentHash": "2e36dbe8f957",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "70f041f95765",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "exiting-the-plasma-chain": {
+                "contentHash": "cb8158e72238",
+                "anchorHash": "e4c6e82bd366",
+                "labelHash": "ef9c346cebd2",
+                "children": {
+                  "_label": {
+                    "contentHash": "ef9c346cebd2",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:4": {
+                    "contentHash": "10886fa1e567",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "887fe76478ae",
+                    "anchorHash": "ba0b87665df5"
+                  },
+                  "prose:5": {
+                    "contentHash": "3468e83314c4",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "f0c05e804cae",
+                    "anchorHash": "296c1598b6a5"
+                  },
+                  "prose:6": {
+                    "contentHash": "164935ce66ef",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:2": {
+                    "contentHash": "38f97f5df02f",
+                    "anchorHash": "2e92a6a0eac3"
+                  },
+                  "prose:7": {
+                    "contentHash": "5a907ebaaafe",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:3": {
+                    "contentHash": "10b245ed545a",
+                    "anchorHash": "75d475e0e55b"
+                  },
+                  "prose:8": {
+                    "contentHash": "59b6980e8041",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:4",
+                  "link:0",
+                  "prose:5",
+                  "link:1",
+                  "prose:6",
+                  "link:2",
+                  "prose:7",
+                  "link:3",
+                  "prose:8"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "entering-the-plasma-chain",
+              "exiting-the-plasma-chain"
+            ]
+          },
+          "dispute-arbitration": {
+            "contentHash": "42f01698f161",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "dabd116e4d28",
+            "children": {
+              "_label": {
+                "contentHash": "dabd116e4d28",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "757b494157d8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "offchain-computation",
+          "state-commitments",
+          "entries-and-exits",
+          "dispute-arbitration"
+        ]
+      },
+      "the-mass-exit-problem-in-plasma": {
+        "contentHash": "cedc27c246e3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b10b346bcdbf",
+        "children": {
+          "_label": {
+            "contentHash": "b10b346bcdbf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "13d0d9e10d96",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "pros-and-cons-of-plasma": {
+        "contentHash": "f438d119f2e4",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "cec378a95664",
+        "children": {
+          "_label": {
+            "contentHash": "cec378a95664",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "11d3c3c9f27f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "plasma-vs-layer-2": {
+        "contentHash": "6bfcf5eb7cee",
+        "anchorHash": "fd66fb13307a",
+        "labelHash": "c69c039b2007",
+        "children": {
+          "_label": {
+            "contentHash": "c69c039b2007",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "5f9cc8f6b780",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "864d4cdf3f33",
+            "anchorHash": "3b52f2e35fd0"
+          },
+          "prose:2": {
+            "contentHash": "a66d34fa9ad1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "efficiency": {
+            "contentHash": "33c713a88954",
+            "anchorHash": "4b69acc115b3",
+            "labelHash": "87b180c8f204",
+            "children": {
+              "_label": {
+                "contentHash": "87b180c8f204",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "144ba582ea52",
+                "anchorHash": "7eb4e888e306"
+              },
+              "prose:1": {
+                "contentHash": "63883ea444e3",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "link:0",
+              "prose:1"
+            ]
+          },
+          "support-for-smart-contracts": {
+            "contentHash": "5e493c068448",
+            "anchorHash": "e2fbccddd3e1",
+            "labelHash": "fcd45a90534a",
+            "children": {
+              "_label": {
+                "contentHash": "fcd45a90534a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "86885672e7c7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "65c6c7c9a340",
+                "anchorHash": "b2a6d6f9e5a5"
+              },
+              "prose:6": {
+                "contentHash": "c71f903a32ee",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "65c815a3a56b",
+                "anchorHash": "f68a48502f68"
+              },
+              "prose:7": {
+                "contentHash": "a535acf59480",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "81fbd2f198c9",
+                "anchorHash": "c7308a37e8aa"
+              },
+              "prose:8": {
+                "contentHash": "3db179b201f3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "2961da478324",
+                "anchorHash": "585d8438b20c"
+              },
+              "prose:9": {
+                "contentHash": "a2a8e3e1b2ff",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "13341774e69c",
+                "anchorHash": "2734d54f4f05"
+              },
+              "prose:10": {
+                "contentHash": "42becb81f2e4",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          },
+          "data-unavailability": {
+            "contentHash": "7e8ebfecfa2a",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "9970c0946fd8",
+            "children": {
+              "_label": {
+                "contentHash": "9970c0946fd8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "af9d4dde1bb2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "mass-exit-problem": {
+            "contentHash": "c036e154c51f",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "45192dcaa763",
+            "children": {
+              "_label": {
+                "contentHash": "45192dcaa763",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "045e1f17a89d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "efficiency",
+          "support-for-smart-contracts",
+          "data-unavailability",
+          "mass-exit-problem"
+        ]
+      },
+      "plasma-sidechains-sharding": {
+        "contentHash": "c3b10a842195",
+        "anchorHash": "62e5ff67a072",
+        "labelHash": "b16fd978adae",
+        "children": {
+          "_label": {
+            "contentHash": "b16fd978adae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e1a9acb6ea62",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "plasma-vs-sidechains": {
+            "contentHash": "d9c0935609db",
+            "anchorHash": "4000f0fa54d0",
+            "labelHash": "22452c221acc",
+            "children": {
+              "_label": {
+                "contentHash": "22452c221acc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "559aead08264",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "e8fe3659c103",
+                "anchorHash": "e0dcdaf3a7b0"
+              },
+              "prose:3": {
+                "contentHash": "f81a4f836684",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "d982f029f5c8",
+                "anchorHash": "530595435fc3"
+              },
+              "prose:4": {
+                "contentHash": "e92c067f096f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "plasma-vs-sharding": {
+            "contentHash": "0118f6bd5bd3",
+            "anchorHash": "930c63137e65",
+            "labelHash": "c7ce69223b48",
+            "children": {
+              "_label": {
+                "contentHash": "c7ce69223b48",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "98d43454c165",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d5c7c6294c3d",
+                "anchorHash": "f99c50a31566"
+              },
+              "prose:2": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "use-plasma": {
+            "contentHash": "5850886ee978",
+            "anchorHash": "af1485662b08",
+            "labelHash": "60a97eefc960",
+            "children": {
+              "_label": {
+                "contentHash": "60a97eefc960",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "c858c47fe880",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "0ef705dd99da",
+                "anchorHash": "4dff1441761a"
+              },
+              "prose:2": {
+                "contentHash": "fb52275cce6d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "plasma-vs-sidechains",
+          "plasma-vs-sharding",
+          "use-plasma"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "cfd0a964fd0f",
+        "anchorHash": "ffe8c98dbe0e",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2411a890ddd3",
+            "anchorHash": "c9e0fc294654"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "6e6fb1e2e973",
+            "anchorHash": "6366ada9b204"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "441deae315b7",
+            "anchorHash": "615d682378ac"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "a9d1be517a65",
+            "anchorHash": "2449e9290cd9"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "a7bbfb594bcc",
+            "anchorHash": "01f0b997dbbe"
+          },
+          "prose:10": {
+            "contentHash": "123ee5ac559d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "tutorials": {
+        "contentHash": "59366a6227b4",
+        "anchorHash": "afdfe821c6d9",
+        "labelHash": "acd1a43e0a2e",
+        "children": {
+          "_label": {
+            "contentHash": "acd1a43e0a2e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f66e67420f5c",
+            "anchorHash": "c5ec4912fd95"
+          },
+          "prose:2": {
+            "contentHash": "a2a9d1d3c981",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:incomplete",
+      "frontmatter:sidebarDepth",
+      "prose:3",
+      "link:0",
+      "prose:4",
+      "link:1",
+      "prose:5",
+      "link:2",
+      "prose:6",
+      "prerequisites",
+      "what-is-plasma",
+      "how-does-plasma-work",
+      "the-mass-exit-problem-in-plasma",
+      "pros-and-cons-of-plasma",
+      "plasma-vs-layer-2",
+      "plasma-sidechains-sharding",
+      "further-reading",
+      "tutorials"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

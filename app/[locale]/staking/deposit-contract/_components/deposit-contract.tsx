@@ -1,39 +1,19 @@
 "use client"
+
 import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { Clipboard, ClipboardCheck } from "lucide-react"
+import { useLocale } from "next-intl"
 
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type { TranslationKey } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
-import CardList from "@/components/CardList"
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
-import {
-  Alert,
-  AlertContent,
-  AlertDescription,
-  AlertEmoji,
-} from "@/components/ui/alert"
-import {
-  Button,
-  ButtonLink,
-  type ButtonLinkProps,
-  type ButtonProps,
-} from "@/components/ui/buttons/Button"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardParagraph,
-  CardTitle,
-} from "@/components/ui/card"
+import { Button } from "@/components/ui/buttons/Button"
+import { CardButtonFake, CardParagraph, CardTitle } from "@/components/ui/card"
 import Checkbox from "@/components/ui/checkbox"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
@@ -41,71 +21,14 @@ import InlineLink from "@/components/ui/Link"
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
 import useTranslation from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/navigation"
-import consensys from "@/public/images/projects/consensys.png"
-import blockscout from "@/public/images/resources/blockscout.webp"
-import ef from "@/public/images/staking/ef-blog-logo.png"
-
-const FlexBox = (props: ChildOnlyProp) => (
-  <Flex className="flex-col border-b lg:flex-row" {...props} />
-)
-
-const LeftColumn = (props: ChildOnlyProp) => (
-  <div className="shrink grow basis-1/2 p-8 pt-20" {...props} />
-)
-
-const RightColumn = (props: ChildOnlyProp) => (
-  <Flex
-    className="shrink grow basis-1/2 flex-col items-center p-8 pt-4 lg:pt-36"
-    {...props}
-  />
-)
-
-const Title = (props: ChildOnlyProp) => (
-  <h1 className="py-8 leading-xs" {...props} />
-)
-
-const Subtitle = (props: ChildOnlyProp) => (
-  <p className="mb-14 leading-xs text-body-medium" {...props} />
-)
-
-const H2 = (props: ChildOnlyProp) => (
-  <h2 className="mt-12 mb-8 leading-xs" {...props} />
-)
-
-const StyledButton = ({
-  href,
-  children,
-}: Pick<ButtonLinkProps, "href" | "children">) => (
-  <ButtonLink className="mt-0 mb-12" href={href}>
-    {children}
-  </ButtonLink>
-)
-
-const CopyButton = (props: ButtonProps) => (
-  <Button
-    className="me-0 mt-4 mb-4 md:me-6 md:mt-0"
-    variant="outline"
-    {...props}
-  />
-)
-
-const StyledFakeLink = (props: ButtonProps) => (
-  <Button
-    className="me-2 cursor-pointer px-0 text-primary"
-    variant="ghost"
-    {...props}
-  />
-)
 
 const CHUNKED_ADDRESS =
   DEPOSIT_CONTRACT_ADDRESS.match(/(?:^0x|.{4})/g)?.join(" ")
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
-const DepositContractPage = () => {
-  const pathname = usePathname()
-
+const DepositContract = () => {
+  const locale = useLocale()
   const { t } = useTranslation("page-staking-deposit-contract")
 
   const [state, setState] = useState<{
@@ -131,8 +54,8 @@ const DepositContractPage = () => {
     if (!browserHasTextToSpeechSupport) return
     // Create textToSpeechRequest
     const speech = new SpeechSynthesisUtterance()
-    speech.lang = "en-US"
-    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(",")
+    speech.lang = locale
+    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(", ")
     speech.volume = 1
     speech.rate = 1
     speech.pitch = 1
@@ -181,27 +104,6 @@ const DepositContractPage = () => {
     }
   }
 
-  const addressSources = [
-    {
-      title: "ConsenSys",
-      link: "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
-      image: consensys,
-      alt: "",
-    },
-    {
-      title: "Ethereum Foundation",
-      link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
-      image: ef,
-      alt: "",
-    },
-    {
-      title: "Blockscout",
-      link: `https://eth.blockscout.com/address/${DEPOSIT_CONTRACT_ADDRESS}`,
-      image: blockscout,
-      alt: "",
-    },
-  ]
-
   const isButtonEnabled =
     state.userHasUsedLaunchpad &&
     state.userUnderstandsStaking &&
@@ -214,186 +116,128 @@ const DepositContractPage = () => {
     ? ":speaker_high_volume:"
     : ":speaker:"
 
+  if (!state.showAddress) {
+    return (
+      <>
+        <CardTitle>
+          {t("page-staking-deposit-contract-confirm-address")}
+        </CardTitle>
+        <div>
+          <label className="flex gap-2">
+            <Checkbox
+              className="m-1 shrink-0"
+              checked={state.userHasUsedLaunchpad}
+              onCheckedChange={() =>
+                setState({
+                  ...state,
+                  userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
+                })
+              }
+            />
+            {t("page-staking-deposit-contract-checkbox1")}
+          </label>
+          <label className="flex gap-2">
+            <Checkbox
+              className="m-1 shrink-0"
+              checked={state.userUnderstandsStaking}
+              onCheckedChange={() =>
+                setState({
+                  ...state,
+                  userUnderstandsStaking: !state.userUnderstandsStaking,
+                })
+              }
+            />
+            {t("page-staking-deposit-contract-checkbox2")}
+          </label>
+          <label className="flex gap-2">
+            <Checkbox
+              className="m-1 shrink-0"
+              checked={state.userWillCheckOtherSources}
+              onCheckedChange={() =>
+                setState({
+                  ...state,
+                  userWillCheckOtherSources: !state.userWillCheckOtherSources,
+                })
+              }
+            />
+            {t("page-staking-deposit-contract-checkbox3")}
+          </label>
+        </div>
+        <Button
+          variant="outline"
+          disabled={!isButtonEnabled}
+          onClick={() =>
+            setState({ ...state, showAddress: !state.showAddress })
+          }
+        >
+          <Emoji text=":eyes:" />
+          &nbsp;
+          {t("page-staking-deposit-contract-reveal-address-btn")}
+        </Button>
+      </>
+    )
+  }
+
   return (
     <>
-      <MainArticle className="w-full">
-        <FlexBox>
-          <LeftColumn>
-            <Breadcrumbs slug={pathname} startDepth={1} />
-            <Title>{t("page-staking-deposit-contract-title")}</Title>
-            <Subtitle>{t("page-staking-deposit-contract-subtitle")}</Subtitle>
-            <H2>{t("page-staking-deposit-contract-h2")}</H2>
-            <p className="mb-6">
-              {t("page-staking-deposit-contract-staking")}{" "}
-              <InlineLink href="/staking/">
-                {t("page-staking-deposit-contract-staking-more-link")}
-              </InlineLink>
-            </p>
-            <StyledButton href="https://launchpad.ethereum.org">
-              {t("page-staking-deposit-contract-launchpad")}
-            </StyledButton>
-            <H2>{t("page-staking-deposit-contract-staking-check")}</H2>
-            <p className="mb-6">
-              {t("page-staking-deposit-contract-staking-check-desc")}
-            </p>
-            <CardList items={addressSources} />
-          </LeftColumn>
-          <RightColumn>
-            <Card
-              className="overflow-hidden lg:sticky lg:top-28 lg:max-w-xl"
-              variant="header-bar"
-            >
-              <CardHeader className="items-center justify-center p-2! text-center">
-                <h2 className="text-sm font-normal uppercase">
-                  {t("page-staking-deposit-contract-address-check-btn")}
-                </h2>
-              </CardHeader>
-              <CardContent spacing="md">
-                {!state.showAddress && (
-                  <>
-                    <CardTitle>
-                      {t("page-staking-deposit-contract-confirm-address")}
-                    </CardTitle>
-                    <div>
-                      <label className="flex gap-2">
-                        <Checkbox
-                          className="m-1 shrink-0"
-                          checked={state.userHasUsedLaunchpad}
-                          onCheckedChange={() =>
-                            setState({
-                              ...state,
-                              userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
-                            })
-                          }
-                        />
-                        {t("page-staking-deposit-contract-checkbox1")}
-                      </label>
-                      <label className="flex gap-2">
-                        <Checkbox
-                          className="m-1 shrink-0"
-                          checked={state.userUnderstandsStaking}
-                          onCheckedChange={() =>
-                            setState({
-                              ...state,
-                              userUnderstandsStaking:
-                                !state.userUnderstandsStaking,
-                            })
-                          }
-                        />
-                        {t("page-staking-deposit-contract-checkbox2")}
-                      </label>
-                      <label className="flex gap-2">
-                        <Checkbox
-                          className="m-1 shrink-0"
-                          checked={state.userWillCheckOtherSources}
-                          onCheckedChange={() =>
-                            setState({
-                              ...state,
-                              userWillCheckOtherSources:
-                                !state.userWillCheckOtherSources,
-                            })
-                          }
-                        />
-                        {t("page-staking-deposit-contract-checkbox3")}
-                      </label>
-                    </div>
-                    <CopyButton
-                      disabled={!isButtonEnabled}
-                      onClick={() =>
-                        setState({ ...state, showAddress: !state.showAddress })
-                      }
-                    >
-                      <Emoji text=":eyes:" className="text-md" />
-                      {t("page-staking-deposit-contract-reveal-address-btn")}
-                    </CopyButton>
-                  </>
-                )}
-                {state.showAddress && (
-                  <>
-                    <div className="flex flex-col items-start justify-start md:flex-row md:justify-between">
-                      <div>
-                        <CardTitle>
-                          {t("page-staking-deposit-contract-address")}
-                        </CardTitle>
-                        <CardParagraph>
-                          {t("page-staking-deposit-contract-address-caption")}
-                        </CardParagraph>
-                      </div>
-                      <Image
-                        className="rounded-xs"
-                        src={blockieSrc}
-                        alt=""
-                        height={64}
-                        width={64}
-                      />
-                    </div>
-                    {state.browserHasTextToSpeechSupport && (
-                      <Flex className="mb-8 items-center">
-                        <StyledFakeLink onClick={handleTextToSpeech}>
-                          <Translation
-                            id={textToSpeechText as TranslationKey}
-                          />
-                        </StyledFakeLink>{" "}
-                        <Emoji text={textToSpeechEmoji} className="text-md" />
-                      </Flex>
-                    )}
-                    <Tooltip
-                      content={t("page-staking-deposit-contract-warning")}
-                    >
-                      <div className="mb-4 font-monospace text-3xl/xs text-balance uppercase">
-                        {CHUNKED_ADDRESS}
-                      </div>
-                    </Tooltip>
-                    <div className="flex flex-col-reverse items-start justify-start md:flex-row md:items-center">
-                      <CopyToClipboard text={DEPOSIT_CONTRACT_ADDRESS}>
-                        {(isCopied) => (
-                          <CopyButton>
-                            {!isCopied ? (
-                              <>
-                                {t("page-staking-deposit-contract-copy")}
-                                <Clipboard className="-me-1 mb-0.5" />
-                              </>
-                            ) : (
-                              <>
-                                {t("page-staking-deposit-contract-copied")}
-                                <ClipboardCheck className="-me-1 mb-0.5" />
-                              </>
-                            )}
-                          </CopyButton>
-                        )}
-                      </CopyToClipboard>
-                      <InlineLink
-                        href={`https://eth.blockscout.com/address/${DEPOSIT_CONTRACT_ADDRESS}`}
-                      >
-                        {t("page-staking-deposit-contract-blockexplorer")}
-                      </InlineLink>
-                    </div>
-                  </>
-                )}
-              </CardContent>
-              <CardFooter>
-                <Alert variant="warning">
-                  <AlertEmoji text=":warning:" />
-                  <AlertContent>
-                    <AlertDescription>
-                      {t("page-staking-deposit-contract-warning-2")}{" "}
-                      <InlineLink
-                        className="text-primary"
-                        href="https://launchpad.ethereum.org"
-                      >
-                        {t("page-staking-deposit-contract-launchpad-2")}
-                      </InlineLink>
-                    </AlertDescription>
-                  </AlertContent>
-                </Alert>
-              </CardFooter>
-            </Card>
-          </RightColumn>
-        </FlexBox>
-        <FeedbackCard />
-      </MainArticle>
+      <div className="flex flex-col items-start justify-start gap-4 md:flex-row md:justify-between">
+        <div>
+          <CardTitle>{t("page-staking-deposit-contract-address")}</CardTitle>
+          <CardParagraph>
+            {t("page-staking-deposit-contract-address-caption")}
+          </CardParagraph>
+        </div>
+        <Image
+          className="rounded-xs"
+          src={blockieSrc}
+          alt=""
+          height={64}
+          width={64}
+        />
+      </div>
+      {state.browserHasTextToSpeechSupport && (
+        <Flex className="mb-8 items-center">
+          <Button
+            className="me-2 cursor-pointer px-0 text-primary"
+            variant="ghost"
+            onClick={handleTextToSpeech}
+          >
+            <Translation id={textToSpeechText as TranslationKey} />
+          </Button>{" "}
+          <Emoji text={textToSpeechEmoji} className="text-md" />
+        </Flex>
+      )}
+      <Tooltip content={t("page-staking-deposit-contract-warning")}>
+        <div className="mb-4 font-monospace text-3xl/xs text-balance uppercase">
+          {CHUNKED_ADDRESS}
+        </div>
+      </Tooltip>
+      <div className="flex flex-col-reverse items-start justify-start gap-4 md:flex-row md:items-center">
+        <CopyToClipboard text={DEPOSIT_CONTRACT_ADDRESS}>
+          {(isCopied) => (
+            <CardButtonFake variant="outline">
+              {!isCopied ? (
+                <>
+                  {t("page-staking-deposit-contract-copy")}
+                  <Clipboard className="-me-1 mb-0.5" />
+                </>
+              ) : (
+                <>
+                  {t("page-staking-deposit-contract-copied")}
+                  <ClipboardCheck className="-me-1 mb-0.5" />
+                </>
+              )}
+            </CardButtonFake>
+          )}
+        </CopyToClipboard>
+        <InlineLink
+          href={`https://eth.blockscout.com/address/${DEPOSIT_CONTRACT_ADDRESS}`}
+        >
+          {t("page-staking-deposit-contract-blockexplorer")}
+        </InlineLink>
+      </div>
     </>
   )
 }
 
-export default DepositContractPage
+export default DepositContract

@@ -5,7 +5,7 @@ import { HTMLAttributes } from "react"
 import type { ChildOnlyProp } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { Center, Flex } from "@/components/ui/flex"
@@ -511,7 +511,7 @@ const AssetsPage = () => {
           />
         </Row>
       </MainArticle>
-      <FeedbackCard />
+      <ContentFeedback />
     </Flex>
   )
 }

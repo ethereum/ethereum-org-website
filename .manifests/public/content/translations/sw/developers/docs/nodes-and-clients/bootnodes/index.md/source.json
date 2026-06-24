@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/nodes-and-clients/bootnodes/index.md",
+  "generatedAt": "2026-06-17T22:02:55.877Z",
+  "rootHash": "caa6eb7cc3dc",
+  "tree": {
+    "contentHash": "ad152f2a0057",
+    "anchorHash": "fa63ececf6a0",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "52db304d3feb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "bf408804a403",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "cab80002b15b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "connect-to-a-bootnode": {
+        "contentHash": "eb12d5a69573",
+        "anchorHash": "e5a379c644ee",
+        "labelHash": "9296b878826b",
+        "children": {
+          "_label": {
+            "contentHash": "9296b878826b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "76547f184c82",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "0f660215b4fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "code-fence:2"
+        ]
+      },
+      "run-a-bootnode": {
+        "contentHash": "7c63ffcca583",
+        "anchorHash": "f0de22f09896",
+        "labelHash": "c520f0f37a1d",
+        "children": {
+          "_label": {
+            "contentHash": "c520f0f37a1d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "b0f013a7eb64",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "6425ec11475e",
+            "anchorHash": "b39f4c04d9aa"
+          },
+          "prose:3": {
+            "contentHash": "bc2a89345feb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "add8579019b5",
+            "anchorHash": "c26db745edc6"
+          },
+          "prose:4": {
+            "contentHash": "d042d611d373",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "available-bootnodes": {
+        "contentHash": "9b00c4d06c96",
+        "anchorHash": "cc5d67a95713",
+        "labelHash": "7858ff2b72e7",
+        "children": {
+          "_label": {
+            "contentHash": "7858ff2b72e7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "13e2fb77030d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "fcec91509759",
+            "anchorHash": "bd3520e4153c"
+          },
+          "prose:2": {
+            "contentHash": "342ba8fd203d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "connect-to-a-bootnode",
+      "run-a-bootnode",
+      "available-bootnodes"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

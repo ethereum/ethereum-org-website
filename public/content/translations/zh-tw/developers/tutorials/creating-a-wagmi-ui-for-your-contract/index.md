@@ -1,58 +1,61 @@
 ---
-title: "為你的合約建立一個使用者介面"
-description: "我們將使用 TypeScript、React、Vite 和 Wagmi 等現代元件，探討一個現代但極簡的使用者介面，並學習如何將錢包連接到使用者介面、呼叫智能合約來讀取資訊、將交易傳送到智能合約，以及監視智能合約的事件來識別變更。"
-author: Ori Pomerantz
-tags: [ "TypeScript", "React", "vite", "wagmi", "前端" ]
+title: "為你的合約建立使用者介面"
+description: "使用 TypeScript、React、Vite 和 Wagmi 等現代元件，我們將探討一個現代但極簡的使用者介面，並學習如何將錢包連接到使用者介面、呼叫智慧合約以讀取資訊、發送交易至智慧合約，以及監控智慧合約的事件以識別變更。"
+author: "奧里·波梅蘭茨"
+tags:
+  - typescript
+  - react
+  - vite
+  - wagmi
+  - 前端
 skill: beginner
+breadcrumb: "使用 WAGMI 的 UI"
 published: 2023-11-01
 lang: zh-tw
 sidebarDepth: 3
 ---
 
-你找到了一個我們在以太坊生態系統中需要的功能。 你編寫了智能合約來實作它，甚至可能編寫了一些在鏈外執行的相關程式碼。 這太棒了！ 不幸的是，如果沒有使用者介面，你就不會有任何使用者。而且在你上一次寫網站的時候，人們還在使用撥接數據機，JavaScript 還是個新玩意兒。
+你在以太坊生態系中發現了一個我們需要的功能。你編寫了智慧合約來實作它，甚至可能還寫了一些在鏈下執行的相關程式碼。這太棒了！不幸的是，如果沒有使用者介面，你將不會有任何使用者，而且你上次寫網站時，人們還在使用撥接數據機，JavaScript 也才剛問世。
 
-這篇文章就是為你而寫的。 我假設你懂程式設計，可能也懂一點 JavaScript 和 HTML，但你的使用者介面技能已經生疏過時了。 我們將一起探討一個簡單的現代應用程式，讓你看看現在是怎麼做的。
+這篇文章就是為你準備的。我假設你懂程式設計，或許還懂一點 JavaScript 和 HTML，但你的使用者介面技能已經生疏且過時了。我們將一起探討一個簡單的現代應用程式，讓你了解現在是如何開發的。
 
 ## 為什麼這很重要 {#why-important}
 
-理論上，你可以讓大家直接使用 [Etherscan](https://holesky.etherscan.io/address/0x432d810484add7454ddb3b5311f0ac2e95cecea8#writeContract) 或 [Blockscout](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=write_contract) 來與你的合約互動。 對於經驗豐富的以太坊使用者來說，這很棒。 但我們正試圖為 [另外十億人](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion) 提供服務。 如果沒有出色的使用者體驗，這一切都不會發生，而友善的使用者介面是其中的重要一環。
+理論上，你可以直接讓人們使用 [Etherscan](https://sepolia.etherscan.io/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA#readContract) 或 [Blockscout](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_write_contract) 來與你的合約互動。這對經驗豐富的以太坊使用者來說很棒。但我們正試圖服務[另外十億人](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion)。如果沒有良好的使用者體驗，這是不可能實現的，而友善的使用者介面正是其中的重要部分。
 
 ## Greeter 應用程式 {#greeter-app}
 
-現代 UI 的運作背後有很多理論，也有 [很多好的網站](https://react.dev/learn/thinking-in-react) [對此進行了解釋](https://wagmi.sh/core/getting-started)。 與其重複那些網站已經完成的出色工作，我假設你更喜歡從做中學，從一個你可以實際操作的應用程式開始。 你仍然需要理論來完成工作，我們也會談到它——我們將逐一檢視原始檔，並在遇到問題時進行討論。
+現代 UI 的運作原理背後有許多理論，而且有[許多優秀的網站](https://react.dev/learn/thinking-in-react)[對此進行了解釋](https://wagmi.sh/core/getting-started)。與其重複這些網站的精彩工作，我假設你更喜歡從做中學，並從一個你可以實際操作的應用程式開始。你仍然需要理論來完成工作，我們稍後會提到——我們將逐一檢視原始碼檔案，並在遇到時進行討論。
 
 ### 安裝 {#installation}
 
-1. 如有需要，請將 [Holesky 區塊鏈](https://chainlist.org/?search=holesky&testnets=true) 新增到你的錢包，並 [取得測試 ETH](https://www.holeskyfaucet.io/)。
+1. 該應用程式使用 [Sepolia](https://sepolia.dev/) 測試網路。如有需要，請[取得 Sepolia 測試 ETH](/developers/docs/networks/#sepolia) 並[將 Sepolia 新增至你的錢包](https://chainlist.org/chain/11155111)。
 
-2. 複製 GitHub 儲存庫。
-
-   ```sh
-   git clone https://github.com/qbzzt/20230801-modern-ui.git
-   ```
-
-3. 安裝必要的套件。
+2. 複製 GitHub 儲存庫並安裝必要的套件。
 
    ```sh
-   cd 20230801-modern-ui
-   pnpm install
+   git clone https://github.com/qbzzt/260301-modern-ui-web3.git
+   cd 260301-modern-ui-web3
+   npm install
    ```
+
+3. 該應用程式使用免費的存取點，這會有性能限制。如果你想使用[節點即服務 (Node as a service)](/developers/docs/nodes-and-clients/nodes-as-a-service/) 供應商，請替換 [`src/wagmi.ts`](#wagmi-ts) 中的 URL。
 
 4. 啟動應用程式。
 
    ```sh
-   pnpm dev
+   npm run dev
    ```
 
-5. 瀏覽應用程式顯示的 URL。 在大多數情況下，它是 [http://localhost:5173/](http://localhost:5173/)。
+5. 瀏覽應用程式顯示的 URL。在大多數情況下，它是 [http://localhost:5173/](http://localhost:5173/)。
 
-6. 你可以在 [區塊鏈瀏覽器](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contract) 上看到合約的原始碼，它是 Hardhat 的 Greeter 的一個稍作修改的版本。
+6. 你可以[在區塊鏈瀏覽器上](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code)查看合約原始碼，這是 Hardhat 的 Greeter 的修改版本。
 
-### 檔案走查 {#file-walk-through}
+### 檔案導覽 {#file-walk-through}
 
 #### `index.html` {#index-html}
 
-這個檔案是標準的 HTML 樣板，除了這一行，它匯入了腳本檔案。
+除了這行匯入指令碼檔案的程式碼外，此檔案是一個標準的 HTML 樣板。
 
 ```html
 <script type="module" src="/src/main.tsx"></script>
@@ -60,58 +63,76 @@ sidebarDepth: 3
 
 #### `src/main.tsx` {#main-tsx}
 
-副檔名告訴我們這個檔案是一個用 [TypeScript](https://www.typescriptlang.org/) 編寫的 [React 元件](https://www.w3schools.com/react/react_components.asp)，TypeScript 是 JavaScript 的一個擴充，支援 [型別檢查](https://en.wikipedia.org/wiki/Type_system#Type_checking)。 TypeScript 會被編譯成 JavaScript，所以我們可以用它來進行用戶端執行。
+檔案副檔名表示這是一個用 [TypeScript](https://www.typescriptlang.org/) 編寫的 [React 元件](https://www.w3schools.com/react/react_components.asp)，TypeScript 是支援[型別檢查](https://en.wikipedia.org/wiki/Type_system#Type_checking)的 JavaScript 擴充功能。TypeScript 會被編譯成 JavaScript，因此我們可以在用戶端使用它。
+
+解釋這個檔案主要是為了滿足你的好奇心。通常你不需要修改這個檔案，而是修改 [`src/App.tsx`](#app-tsx) 以及它所匯入的檔案。
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css'
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-import * as React from 'react'
-import * as ReactDOM from 'react-dom/client'
-import { WagmiConfig } from 'wagmi'
-import { chains, config } from './wagmi'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { WagmiProvider } from 'wagmi'
 ```
 
-匯入我們需要的庫程式碼。
+匯入我們需要的函式庫程式碼。
 
 ```tsx
-import { App } from './App'
+import App from './App.tsx'
 ```
 
 匯入實作應用程式的 React 元件（見下文）。
 
 ```tsx
+import { config } from './wagmi.ts'
+```
+
+匯入 [Wagmi](https://wagmi.sh/) 設定，其中包含區塊鏈設定。
+
+```tsx
+const queryClient = new QueryClient()
+```
+
+建立一個 [React Query](https://tanstack.com/query/latest/docs/framework/react/overview) 快取管理器的新實例。此物件將儲存：
+
+- 快取的 RPC 呼叫
+- 合約讀取
+- 背景重新擷取狀態
+
+我們需要快取管理器，因為 Wagmi v3 在內部使用了 React Query。
+
+```tsx
 ReactDOM.createRoot(document.getElementById('root')!).render(
 ```
 
-建立根 React 元件。 `render` 的參數是 [JSX](https://www.w3schools.com/react/react_jsx.asp)，這是一種使用 HTML 和 JavaScript/TypeScript 的擴充語言。 這裡的驚嘆號告訴 TypeScript 元件：「你不知道 `document.getElementById('root')` 將會是 `ReactDOM.createRoot` 的一個有效參數，但別擔心——我是開發者，我告訴你它會是」。
+建立根 React 元件。`render` 的參數是 [JSX](https://www.w3schools.com/react/react_jsx.asp)，這是一種同時使用 HTML 和 JavaScript/TypeScript 的擴充語言。這裡的驚嘆號告訴 TypeScript 元件：「你不知道 `document.getElementById('root')` 會是 `ReactDOM.createRoot` 的有效參數，但別擔心——我是開發者，我告訴你它會是。」
 
 ```tsx
   <React.StrictMode>
 ```
 
-應用程式將放在 [一個 `React.StrictMode` 元件](https://react.dev/reference/react/StrictMode) 內。 此元件會告訴 React 庫插入額外的偵錯檢查，這在開發過程中很有用。
+應用程式將被放置在 [一個 `React.StrictMode` 元件](https://react.dev/reference/react/StrictMode)內。此元件告訴 React 函式庫插入額外的除錯檢查，這在開發過程中非常有用。
 
 ```tsx
-    <WagmiConfig config={config}>
+    <WagmiProvider config={config}>
 ```
 
-應用程式也放在 [一個 `WagmiConfig` 元件](https://wagmi.sh/react/api/WagmiProvider) 內。 [wagmi (we are going to make it) 庫](https://wagmi.sh/) 將 React UI 定義與 [viem 庫](https://viem.sh/) 連接起來，用於編寫以太坊去中心化應用程式。
+應用程式也位於 [一個 `WagmiProvider` 元件](https://wagmi.sh/react/api/WagmiProvider)內。[Wagmi（我們將要建立它）函式庫](https://wagmi.sh/)將 React UI 定義與用於編寫以太坊去中心化應用程式 (dapp) 的 [Viem 函式庫](https://viem.sh/)連接起來。
 
 ```tsx
-      <RainbowKitProvider chains={chains}>
+      <QueryClientProvider client={queryClient}>
 ```
 
-最後是 [一個 `RainbowKitProvider` 元件](https://www.rainbowkit.com/)。 此元件處理登入以及錢包和應用程式之間的通訊。
+最後，新增一個 React Query 提供者，以便任何應用程式元件都可以使用快取的查詢。
 
 ```tsx
         <App />
 ```
 
-現在我們可以擁有應用程式的元件，它實際實作了 UI。 元件結尾的 `/>` 告訴 React，根據 XML 標準，此元件內部沒有任何定義。
+現在我們可以擁有應用程式的元件，它實際實作了 UI。元件末尾的 `/>` 告訴 React，根據 XML 標準，此元件內部沒有任何定義。
 
 ```tsx
-      </RainbowKitProvider>
-    </WagmiConfig>
+      </QueryClientProvider>
+    </WagmiProvider>
   </React.StrictMode>,
 )
 ```
@@ -121,87 +142,211 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 #### `src/App.tsx` {#app-tsx}
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { useAccount } from 'wagmi'
-import { Greeter } from './components/Greeter'
+import {
+  useConnect,
+  useConnection,
+  useDisconnect,
+  useSwitchChain
+} from 'wagmi'
 
-export function App() {
+import { useEffect } from 'react'
+import { Greeter } from './Greeter'
 ```
 
-這是建立 React 元件的標準方法——定義一個函式，每次需要渲染時都會呼叫它。 這個函式通常在頂部有一些 TypeScript 或 JavaScript 程式碼，後面跟著一個回傳 JSX 程式碼的 `return` 陳述式。
+匯入我們需要的函式庫，以及 [`Greeter` 元件](#greeter-tsx)。
 
 ```tsx
-  const { isConnected } = useAccount()
+const SEPOLIA_CHAIN_ID = 11155111
 ```
 
-這裡我們使用 [`useAccount`](https://wagmi.sh/react/api/hooks/useAccount) 來檢查我們是否透過錢包連接到區塊鏈。
+Sepolia 鏈 ID。
 
-按照慣例，在 React 中，名為 `use...` 的函式是回傳某種資料的 [hook](https://www.w3schools.com/react/react_hooks.asp)。 當你使用這樣的 hook 時，你的元件不僅會取得資料，而且當該資料變更時，元件會用更新後的資訊重新渲染。
+```
+function App() {
+```
+
+這是建立 React 元件的標準方法：定義一個在需要渲染時被呼叫的函式。此函式通常包含 TypeScript 或 JavaScript 程式碼，接著是一個回傳 JSX 程式碼的 `return` 敘述。
+
+```tsx
+  const connection = useConnection()
+```
+
+使用 [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) 來取得與目前連線相關的資訊，例如地址和 `chainId`。
+
+按照慣例，在 React 中名為 `use...` 的函式是 [hooks](https://www.w3schools.com/react/react_hooks.asp)。這些函式不僅會將資料回傳給元件；它們還能確保當資料變更時，元件會重新渲染（再次執行元件函式，並將其輸出替換 HTML 中先前的輸出）。
+
+```tsx
+  const { connectors, connect, status, error } = useConnect()
+```
+
+使用 [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect) 來取得有關錢包連線的資訊。
+
+```tsx
+  const { disconnect } = useDisconnect()
+```
+
+[這個 hook](https://wagmi.sh/react/api/hooks/useDisconnect) 提供了我們中斷錢包連線的函式。
+
+```tsx
+  const { switchChain } = useSwitchChain()
+```
+
+[這個 hook](https://wagmi.sh/react/api/hooks/useSwitchChain) 讓我們可以切換鏈。
+
+```tsx
+  useEffect(() => {
+```
+
+React hook [`useEffect`](https://react.dev/reference/react/useEffect) 讓你在變數值變更時執行一個函式，以同步外部系統。
+
+```tsx
+    if (connection.status === 'connected' &&
+        connection.chainId !== SEPOLIA_CHAIN_ID
+    ) {
+      switchChain({ chainId: SEPOLIA_CHAIN_ID })
+    }
+```
+
+如果我們已連線，但不是連線到 Sepolia 區塊鏈，則切換到 Sepolia。
+
+```tsx
+  }, [connection.status, connection.chainId])
+```
+
+每次連線狀態或連線 chainId 變更時，重新執行該函式。
 
 ```tsx
   return (
     <>
 ```
 
-React 元件的 JSX _必須_回傳一個元件。 當我們有多個元件，並且沒有任何東西可以「自然地」包裝它們時，我們使用一個空元件（`<> ... </>`）來將它們變成單一元件。
+React 元件的 JSX <em>必須</em>回傳單一 HTML 元件。當我們有多個元件且不需要容器來包裝它們時，我們使用一個空元件 (`<> ... </>`) 將它們組合成單一元件。
 
 ```tsx
-      <h1>Greeter</h1>
-      <ConnectButton />
+      <h2>Connection</h2>
+      <div>
+        status: {connection.status}
+        <br />
+        addresses: {JSON.stringify(connection.addresses)}
+        <br />
+        chainId: {connection.chainId}
+ 
+</div>
 ```
 
-我們從 RainbowKit 取得 [`ConnectButton` 元件](https://www.rainbowkit.com/docs/connect-button)。 當我們未連接時，它會提供一個 `Connect Wallet` 按鈕，開啟一個說明錢包的強制回應視窗，讓你選擇使用哪一個錢包。 當我們連接時，它會顯示我們使用的區塊鏈、我們的帳戶地址和我們的 ETH 餘額。 我們可以使用這些顯示來切換網路或中斷連接。
+提供有關目前連線的資訊。在 JSX 中，`{<expression>}` 表示將該表達式作為 JavaScript 進行求值。
 
 ```tsx
-      {isConnected && (
+      {connection.status === 'connected' && (
 ```
 
-當我們需要將實際的 JavaScript（或將被編譯為 JavaScript 的 TypeScript）插入 JSX 時，我們使用大括號（`{}`）。
+語法 `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`」。
 
-`a && b` 語法是 [`a ? b : a` 的簡寫](https://www.w3schools.com/react/react_es6_ternary.asp)。 也就是說，如果 `a`為 true，它的評估結果為`b`，否則它的評估結果為 `a`（可以是 `false`、`0` 等）。 這是一種簡單的方法，可以告訴 React 只有在滿足特定條件時才顯示元件。
-
-在這種情況下，我們只想在使用者連接到區塊鏈時向使用者顯示 `Greeter`。
+這是將 if 敘述放入 JSX 中的標準方法。
 
 ```tsx
+        <div>
           <Greeter />
-      )}
-    </>
-  )
-}
+          <hr />
 ```
 
-#### `src/components/Greeter.tsx` {#greeter-tsx}
+JSX 遵循 XML 標準，這比 HTML 更嚴格。如果標籤沒有對應的結束標籤，它_必須_在末尾加上斜線 (`/`) 來終止它。
 
-這個檔案包含了大部分的 UI 功能。 它包含了一些通常會放在多個檔案中的定義，但因為這是一個教學，所以程式的最佳化目標是為了初次閱讀時容易理解，而不是為了效能或易於維護。
+這裡我們有兩個這樣的標籤，`<Greeter />`（它實際上包含與合約通訊的 HTML 程式碼）和[代表水平線的 `<hr />`](https://www.w3schools.com/tags/tag_hr.asp)。
 
 ```tsx
-import { useState, ChangeEventHandler } from 'react'
-import {  useNetwork,
-          useReadContract,
-          usePrepareContractWrite,
-          useContractWrite,
-          useContractEvent
-        } from 'wagmi'
+          <button type="button" onClick={disconnect}>
+            Disconnect
+          </button>
+ 
+</div>
+      )}
 ```
 
-我們使用這些庫函式。 同樣，它們在下面使用到的地方會進行解釋。
+如果使用者點擊此按鈕，則呼叫 `disconnect` 函式。
+
+```tsx
+      {connection.status !== 'connected' && (
+```
+
+如果我們_尚未_連線，則顯示連接到錢包的必要選項。
+
+```tsx
+        <div>
+          <h2>Connect</h2>
+          {connectors.map((connector) => (
+```
+
+在 `connectors` 中，我們有一個連接器清單。我們使用 [`map`](https://www.w3schools.com/jsref/jsref_map.asp) 將其轉換為要顯示的 JSX 按鈕清單。
+
+```tsx
+            <button
+              key={connector.uid}
+```
+
+在 JSX 中，「兄弟」標籤（來自同一個父層的標籤）必須具有不同的識別碼。
+
+```tsx
+              onClick={() => connect({ connector })}
+              type="button"
+            >
+              {connector.name}
+            </button>
+          ))}
+```
+
+連接器按鈕。
+
+```tsx
+          <div>{status}</div>
+          <div>{error?.message}</div>
+ 
+</div>
+      )}
+```
+
+提供額外資訊。表達式語法 `<variable>?.<field>` 告訴 JavaScript，如果變數已定義，則求值為該欄位。如果變數未定義，則此表達式求值為 `undefined`。
+
+當沒有錯誤時，表達式 `error.message` 會引發例外狀況。使用 `error?.message` 可以讓我們避免這個問題。
+
+#### `src/Greeter.tsx` {#greeter-tsx}
+
+此檔案包含大部分的 UI 功能。它包含了通常會放在多個檔案中的定義，但由於這是一個教學課程，程式經過最佳化，以便於初次理解，而不是為了效能或易於維護。
+
+```tsx
+import {
+          useState,
+          useEffect,
+       } from 'react'
+import {  useChainId,
+          useAccount,
+          useReadContract,
+          useWriteContract,
+          useWatchContractEvent,
+          useSimulateContract
+       } from 'wagmi'
+```
+
+我們使用這些函式庫函式。同樣地，它們會在下方使用到的地方進行解釋。
 
 ```tsx
 import { AddressType } from 'abitype'
 ```
 
-[`abitype` 庫](https://abitype.dev/) 為我們提供了各種以太坊資料型別的 TypeScript 定義，例如 [`AddressType`](https://abitype.dev/config#addresstype)。
+[`abitype` 函式庫](https://abitype.dev/)為我們提供了各種以太坊資料型別的 TypeScript 定義，例如 [`AddressType`](https://abitype.dev/config#addresstype)。
 
 ```tsx
 let greeterABI = [
-  .
-  .
-  .
+  { "type": "function", "name": "greet", ... },
+  { "type": "function", "name": "setGreeting", ... },
+  { "type": "event", "name": "SetGreeting", ... },
 ] as const   // greeterABI
 ```
 
 `Greeter` 合約的 ABI。
-如果你同時開發合約和 UI，通常會將它們放在同一個儲存庫中，並將 Solidity 編譯器產生的 ABI 作為一個檔案用在你的應用程式中。 然而，在這裡這不是必要的，因為合約已經開發完成，不會再變更。
+如果你同時開發合約和 UI，通常會將它們放在同一個儲存庫中，並將 Solidity 編譯器產生的 ABI 作為應用程式中的檔案使用。然而，這裡不需要這樣做，因為合約已經開發完成且不會變更。
+
+我們使用 [`as const`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions) 來告訴 TypeScript 這是一個_真正的_常數。通常，當你在 JavaScript 中指定 `const x = {"a": 1}` 時，你可以變更 `x` 中的值，只是不能對其進行賦值。
 
 ```tsx
 type AddressPerBlockchainType = {
@@ -209,38 +354,57 @@ type AddressPerBlockchainType = {
 }
 ```
 
-TypeScript 是強型別的。 我們使用這個定義來指定 `Greeter` 合約在不同鏈上部署的地址。 鍵是一個數字（chainId），值是一個 `AddressType`（一個地址）。
+TypeScript 是強型別的。我們使用此定義來指定 `Greeter` 合約在不同鏈上部署的地址。鍵是一個數字 (chainId)，而值是一個 `AddressType`（一個地址）。
 
 ```tsx
-const contractAddrs: AddressPerBlockchainType = {
-  // Holesky
-  17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
-
+const contractAddrs : AddressPerBlockchainType = {
   // Sepolia
-  11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
+    11155111: '0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA'
 }
 ```
 
-合約在兩個支援的網路上的地址：[Holesky](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contact_code) 和 [Sepolia](https://eth-sepolia.blockscout.com/address/0x7143d5c190F048C8d19fe325b748b081903E3BF0?tab=contact_code)。
+合約在 [Sepolia](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract) 上的地址。
 
-注意：實際上還有第三個定義，針對 Redstone Holesky，下面將會解釋。
+##### `Timer` 元件 {#timer-component}
+
+`Timer` 元件顯示自給定時間以來的秒數。這對於可用性目的很重要。當使用者執行某項操作時，他們期望立即得到反應。在區塊鏈中，這通常是不可能的，因為在交易被放入區塊之前什麼都不會發生。一種解決方案是顯示自使用者執行操作以來經過了多長時間，以便使用者可以決定所需的時間是否合理。
 
 ```tsx
-type ShowObjectAttrsType = {
-  name: string,
-  object: any
+type TimerProps = {
+  lastUpdate: Date
 }
 ```
 
-這個型別被用作 `ShowObject` 元件（稍後解釋）的參數。 它包含物件的名稱和其值，這些是用於偵錯目的而顯示的。
+`Timer` 元件接受一個參數 `lastUpdate`，這是最後一次操作的時間。
 
 ```tsx
-type ShowGreetingAttrsType = {
-  greeting: string | undefined
+const Timer = ({ lastUpdate }: TimerProps) => {
+  const [_, setNow] = useState(new Date())
+```
+
+我們需要有狀態（與元件綁定的變數）並更新它，以便元件能正確運作。但我們永遠不需要讀取它，所以不用費心去建立一個變數。
+
+```tsx
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000)
+    return () => clearInterval(id)
+  }, [])
+```
+
+[`setInterval`](https://www.w3schools.com/jsref/met_win_setinterval.asp) 函式讓我們可以排程一個函式定期執行。在這個例子中，是每秒執行一次。該函式呼叫 `setNow` 來更新狀態，因此 `Timer` 元件將被重新渲染。我們將其包裝在帶有空相依性清單的 [`useEffect`](https://react.dev/reference/react/useEffect) 中，這樣它就只會發生一次，而不是每次渲染元件時都發生。
+
+```tsx
+  const secondsSinceUpdate = Math.floor(
+    (Date.now() - lastUpdate.getTime()) / 1000
+  )
+
+  return (
+    <span>{secondsSinceUpdate} seconds ago</span>
+  )
 }
 ```
 
-在任何時候，我們可能知道問候語是什麼（因為我們從區塊鏈讀取了它），也可能不知道（因為我們還沒有收到它）。 所以有一個可以是字串或什麼都沒有的型別是很有用的。
+計算自上次更新以來的秒數並回傳。
 
 ##### `Greeter` 元件 {#greeter-component}
 
@@ -248,75 +412,144 @@ type ShowGreetingAttrsType = {
 const Greeter = () => {
 ```
 
-最後，我們來定義元件。
+最後，我們來定義這個元件。
 
 ```tsx
-  const { chain } = useNetwork()
+  const chainId = useChainId()
+  const account = useAccount()
 ```
 
-關於我們正在使用的鏈的資訊，由 [wagmi](https://wagmi.sh/react/hooks/useNetwork) 提供。
-因為這是一個 hook (`use...`)，所以每次這個資訊變更時，元件都會被重新繪製。
+關於我們正在使用的鏈和帳戶的資訊，由 [Wagmi](https://wagmi.sh/) 提供。因為這是一個 hook (`use...`)，所以每當此資訊變更時，元件都會重新渲染。
 
 ```tsx
-  const greeterAddr = chain && contractAddrs[chain.id]
+  const greeterAddr = chainId && contractAddrs[chainId] 
 ```
 
-Greeter 合約的地址，它會因鏈而異（如果我們沒有鏈的資訊，或者我們在沒有該合約的鏈上，則為 `undefined`）。
+Greeter 合約的地址，如果我們沒有鏈資訊，或者我們所在的鏈沒有該合約，則為 `undefined`。
 
 ```tsx
   const readResults = useReadContract({
     address: greeterAddr,
     abi: greeterABI,
-    functionName: "greet" , // 無引數
-    watch: true
+    functionName: "greet", // 無參數
   })
 ```
 
-[`useReadContract` hook](https://wagmi.sh/react/api/hooks/useReadContract) 從合約中讀取資訊。 你可以在 UI 中展開 `readResults` 來查看它回傳的確切資訊。 在這種情況下，我們希望它持續檢查，以便在問候語變更時得到通知。
-
-**注意：** 我們可以監聽 [`setGreeting` 事件](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=logs) 來得知問候語何時變更，並以此方式更新。 然而，雖然這樣可能更有效率，但它並不適用於所有情況。 當使用者切換到不同的鏈時，問候語也會變更，但此變更並無伴隨事件。 我們可以讓一部分程式碼監聽事件，另一部分來識別鏈的變更，但這會比僅僅設定 [`watch` 參數](https://wagmi.sh/react/api/hooks/useReadContract#watch-optional) 更複雜。
+[`useReadContract` hook](https://wagmi.sh/react/api/hooks/useReadContract) 呼叫[合約](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract)的 `greet` 函式。
 
 ```tsx
+  const [ currentGreeting, setCurrentGreeting ] = 
+    useState("Please wait while we fetch the greeting from the blockchain...")
   const [ newGreeting, setNewGreeting ] = useState("")
 ```
 
-React 的 [`useState` hook](https://www.w3schools.com/react/react_usestate.asp) 讓我們可以指定一個狀態變數，其值在元件的多次渲染之間保持不變。 初始值是參數，此處為空字串。
+React 的 [`useState` hook](https://www.w3schools.com/react/react_usestate.asp) 讓我們可以指定一個狀態變數，其值在元件的多次渲染之間保持不變。初始值是參數，在這個例子中是空字串。
 
 `useState` hook 回傳一個包含兩個值的清單：
 
 1. 狀態變數的目前值。
-2. 一個在需要時修改狀態變數的函式。 因為這是一個 hook，所以每次呼叫它時，元件都會重新渲染。
+2. 一個在需要時修改狀態變數的函式。由於這是一個 hook，每次呼叫它時，元件都會再次渲染。
 
-在這種情況下，我們使用一個狀態變數來儲存使用者想要設定的新問候語。
+在這個例子中，我們使用一個狀態變數來儲存使用者想要設定的新問候語。
 
 ```tsx
-  const greetingChange : ChangeEventHandler<HTMLInputElement> = (evt) =>
+  const [ lastSetterAddress, setLastSetterAddress ] = useState("")
+```
+
+如果多個使用者同時使用同一個合約，他們可能會覆寫彼此的問候語。這對使用者來說，看起來就像應用程式發生故障。如果應用程式顯示最後是誰設定了問候語，使用者就會知道是其他人做的，且應用程式運作正常。
+
+```tsx
+  const [ status, setStatus ] = useState("")
+  const [ statusTime, setStatusTime ] = useState(new Date())
+```
+
+使用者喜歡看到他們的操作立即產生效果。然而，在區塊鏈上並非如此。這些狀態變數讓我們至少能向使用者顯示一些內容，讓他們知道他們的操作正在進行中。
+
+```tsx
+  useEffect(() => {
+    if (readResults.data) {
+      setCurrentGreeting(readResults.data)
+      setStatus("Greeting fetched from blockchain")
+    }
+  }, [readResults.data])
+```
+
+如果上方的 `readResults` 變更了資料，且未設定為 false 值（例如 `undefined`），則將目前的問候語更新為從區塊鏈讀取的問候語。同時，更新狀態。
+
+```tsx
+  useWatchContractEvent({
+    address: greeterAddr,
+    abi: greeterABI,
+    eventName: 'SetGreeting',
+    chainId,
+```
+
+監聽 `SetGreeting` 事件。
+
+```tsx
+    enabled: !!greeterAddr,
+```
+
+`!!<value>` 表示如果值為 `false`，或求值為 false 的值（例如 `undefined`、`0` 或空字串），則整個表達式為 `false`。對於任何其他值，它都是 `true`。這是一種將值轉換為布林值的方法，因為如果沒有 `greeterAddr`，我們就不想監聽事件。
+
+```tsx
+    onLogs: logs => {
+      const greetingFromContract = logs[0].args.greeting
+      setCurrentGreeting(greetingFromContract)
+      setLastSetterAddress(logs[0].args.sender)
+      updateStatus("Greeting updated by event")
+    },
+  })
+```
+
+當我們看到日誌時（這發生在我們看到新事件時），這意味著問候語已被修改。在這種情況下，我們可以將 `currentGreeting` 和 `lastSetterAddress` 更新為新值。此外，我們也想更新狀態顯示。
+
+```tsx
+  const updateStatus = (newStatus: string) => {
+    setStatus(newStatus)
+    setStatusTime(new Date())
+  }
+```
+
+當我們更新狀態時，我們想做兩件事：
+
+1. 更新狀態字串 (`status`)
+2. 將最後狀態更新時間 (`statusTime`) 更新為現在。
+
+```tsx
+  const greetingChange = (evt) =>
     setNewGreeting(evt.target.value)
 ```
 
-這是當新問候語輸入欄位變更時的事件處理常式。 型別 [`ChangeEventHandler<HTMLInputElement>`](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events/) 指定這是一個 HTML 輸入元素值變更的處理常式。 使用 `<HTMLInputElement>` 部分是因為這是一個 [泛型型別](https://www.w3schools.com/typescript/typescript_basic_generics.php)。
+這是新問候語輸入欄位變更的事件處理常式。我們可以指定 `evt` 參數的型別，但 TypeScript 是一種型別可選的語言。由於此函式只在 HTML 事件處理常式中被呼叫一次，我認為沒有必要。
 
 ```tsx
-  const preparedTx = usePrepareContractWrite({
+  const { writeContractAsync } = useWriteContract()
+```
+
+寫入合約的函式。它類似於 [`writeContracts`](https://wagmi.sh/core/api/actions/writeContracts#writecontracts)，但能提供更好的狀態更新。
+
+```tsx
+  const simulation = useSimulateContract({
     address: greeterAddr,
     abi: greeterABI,
     functionName: 'setGreeting',
-    args: [ newGreeting ]
+    args: [newGreeting],
+    account: account.address    
   })
-  const workingTx = useContractWrite(preparedTx.config)
 ```
 
-這是從用戶端角度提交區塊鏈交易的過程：
+從用戶端角度來看，提交區塊鏈交易的過程如下：
 
-1. 使用 [`eth_estimateGas`](https://docs.alchemy.com/reference/eth-estimategas) 將交易傳送到區塊鏈中的一個節點。
+1. 使用 [`eth_estimateGas`](https://docs.alchemy.com/reference/eth-estimategas) 將交易發送至區塊鏈中的節點。
 2. 等待節點的回應。
-3. 收到回應後，要求使用者透過錢包簽署交易。 這一步驟_必須_在收到節點回應後進行，因為使用者在簽署交易前會看到交易的 gas 成本。
+3. 收到回應後，要求使用者透過錢包簽署交易。此步驟_必須_在收到節點回應後發生，因為在簽署之前，會向使用者顯示交易的 gas 成本。
 4. 等待使用者核准。
-5. 再次傳送交易，這次使用 [`eth_sendRawTransaction`](https://docs.alchemy.com/reference/eth-sendrawtransaction)。
+5. 再次發送交易，這次使用 [`eth_sendRawTransaction`](https://docs.alchemy.com/reference/eth-sendrawtransaction)。
 
-步驟 2 可能會花費一段可觀的時間，在此期間，使用者會想知道他們的指令是否真的被使用者介面接收到，以及為什麼還沒有被要求簽署交易。 這會造成不好的使用者體驗（UX）。
+步驟 2 可能會花費一段可察覺的時間，在此期間，使用者可能會懷疑使用者介面是否收到了他們的指令，以及為什麼還沒有要求他們簽署交易。這會造成糟糕的使用者體驗 (UX)。
 
-解決方案是使用 [prepare hook](https://wagmi.sh/react/prepare-hooks)。 每當參數變更時，立即向節點傳送 `eth_estimateGas` 請求。 然後，當使用者實際想要傳送交易時（在此例中是按下 **更新問候語**），gas 成本是已知的，使用者可以立即看到錢包頁面。
+一種解決方案是每次參數變更時都發送 `eth_estimateGas`。然後，當使用者實際想要發送交易時（在這個例子中是按下 **Update greeting**），gas 成本已經知道了，使用者可以立即看到錢包頁面。
 
 ```tsx
   return (
@@ -327,259 +560,213 @@ React 的 [`useState` hook](https://www.w3schools.com/react/react_usestate.asp) 
 ```tsx
     <>
       <h2>Greeter</h2>
-      {
-        !readResults.isError && !readResults.isLoading &&
-          <ShowGreeting greeting={readResults.data} />
-      }
-      <hr />
+      {currentGreeting}
 ```
 
-建立一個 `ShowGreeting` 元件（下面會解釋），但只有在成功從區塊鏈讀取問候語時才建立。
+顯示目前的問候語。
 
 ```tsx
+      {lastSetterAddress && (
+        <p>Last updated by {
+          lastSetterAddress === account.address ? "you" : lastSetterAddress
+        }</p>
+      )}
+```
+
+如果我們知道最後是誰設定了問候語，則顯示該資訊。`Greeter` 不會追蹤此資訊，而且我們不想回頭尋找 `SetGreeting` 事件，因此我們只有在執行期間問候語被變更時才會取得它。
+
+```tsx
+      <hr />      
       <input type="text"
         value={newGreeting}
         onChange={greetingChange}
-      />
+      />      
+      <br />
 ```
 
-這是使用者可以設定新問候語的輸入文字欄位。 每當使用者按下一個鍵，我們就呼叫 `greetingChange`，它會再呼叫 `setNewGreeting`。 由於 `setNewGreeting` 來自 `useState` hook，它會導致 `Greeter` 元件再次被渲染。 這表示：
+這是使用者可以設定新問候語的輸入文字欄位。每次使用者按下按鍵時，我們都會呼叫 `greetingChange`，它會呼叫 `setNewGreeting`。由於 `setNewGreeting` 來自 `useState`，它會導致 `Greeter` 元件被重新渲染。這意味著：
 
-- 我們需要指定 `value` 來保留新問候語的值，否則它會變回預設的空字串。
-- 每當 `newGreeting` 變更時，`usePrepareContractWrite` 就會被呼叫，這表示它在準備好的交易中永遠會擁有最新的 `newGreeting`。
+- 我們需要指定 `value` 來保留新問候語的值，否則它會變回預設值（空字串）。
+- 每次 `newGreeting` 變更時，`simulation` 也會更新，這意味著我們將獲得帶有正確問候語的模擬。這可能是相關的，因為 gas 成本取決於呼叫資料的大小，而呼叫資料的大小又取決於字串的長度。
 
 ```tsx
-      <button disabled={!workingTx.write}
-              onClick={workingTx.write}
+      <button disabled={!simulation.data}
+```
+
+只有在我們獲得發送交易所需的資訊後，才啟用該按鈕。
+
+```tsx
+        onClick={async () => {
+          updateStatus("Please confirm in wallet...")
+```
+
+更新狀態。此時，使用者需要在錢包中進行確認。
+
+```tsx
+          await writeContractAsync(simulation.data.request)
+          updateStatus("Transaction sent, waiting for greeting to change...")
+        }}
       >
-        更新問候語
+        Update greeting
       </button>
+
 ```
 
-如果沒有 `workingTx.write`，那麼我們仍在等待傳送問候語更新所需的資訊，所以按鈕是停用的。 如果有 `workingTx.write` 值，那麼這就是傳送交易時要呼叫的函式。
+`writeContractAsync` 只有在交易實際發送後才會回傳。這讓我們可以向使用者顯示交易等待被包含在區塊鏈中的時間。
 
 ```tsx
-      <hr />
-      <ShowObject name="readResults" object={readResults} />
-      <ShowObject name="preparedTx" object={preparedTx} />
-      <ShowObject name="workingTx" object={workingTx} />
+      <h4>Status: {status}</h4>
+      <p>Updated <Timer lastUpdate={statusTime} /> </p>
     </>
   )
 }
 ```
 
-最後，為了幫助你了解我們在做什麼，顯示我們使用的三個物件：
+顯示狀態以及自更新以來經過了多長時間。
 
-- `readResults`
-- `preparedTx`
-- `workingTx`
-
-##### `ShowGreeting` 元件 {#showgreeting-component}
-
-此元件顯示
-
-```tsx
-const ShowGreeting = (attrs : ShowGreetingAttrsType) => {
+```
+export {Greeter}
 ```
 
-一個元件函式接收一個包含該元件所有屬性的參數。
-
-```tsx
-  return <b>{attrs.greeting}</b>
-}
-```
-
-##### `ShowObject` 元件 {#showobject-component}
-
-為了提供資訊，我們使用 `ShowObject` 元件來顯示重要的物件（`readResults` 用於讀取問候語，`preparedTx` 和 `workingTx` 用於我們建立的交易）。
-
-```tsx
-const ShowObject = (attrs: ShowObjectAttrsType ) => {
-  const keys = Object.keys(attrs.object)
-  const funs = keys.filter(k => typeof attrs.object[k] == "function")
-  return <>
-    <details>
-```
-
-我們不希望用所有資訊來塞滿 UI，所以為了可以檢視或關閉它們，我們使用了 [`details`](https://www.w3schools.com/tags/tag_details.asp) 標籤。
-
-```tsx
-      <summary>{attrs.name}</summary>
-      <pre>
-        {JSON.stringify(attrs.object, null, 2)}
-```
-
-大部分的欄位都是使用 [`JSON.stringify`](https://www.w3schools.com/js/js_json_stringify.asp) 來顯示的。
-
-```tsx
-      </pre>
-      { funs.length > 0 &&
-        <>
-          函式：
-          <ul>
-```
-
-例外是函式，它們不是 [JSON 標準](https://www.json.org/json-en.html) 的一部分，所以必須分開顯示。
-
-```tsx
-          {funs.map((f, i) =>
-```
-
-在 JSX 中，`{` 大括號 `}` 內的程式碼會被解讀為 JavaScript。 然後，`(` 普通括號 `)` 內的程式碼會再次被解讀為 JSX。
-
-```tsx
-           (<li key={i}>{f}</li>)
-                )}
-```
-
-React 要求 [DOM 樹](https://www.w3schools.com/js/js_htmldom.asp) 中的標籤必須有不同的識別碼。 這表示同一個標籤的子標籤（在此例中為 [無序清單](https://www.w3schools.com/tags/tag_ul.asp)）需要有不同的 `key` 屬性。
-
-```tsx
-          </ul>
-        </>
-      }
-    </details>
-  </>
-}
-```
-
-結束各種 HTML 標籤。
-
-##### 最後的 `export` {#the-final-export}
-
-```tsx
-export { Greeter }
-```
-
-我們需要為應用程式匯出的就是 `Greeter` 元件。
+匯出元件。
 
 #### `src/wagmi.ts` {#wagmi-ts}
 
-最後，與 WAGMI 相關的各種定義都在 `src/wagmi.ts` 中。 我不會在這裡解釋所有內容，因為大部分都是樣板程式碼，你不太可能需要變更。
-
-這裡的程式碼與 [github 上的](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) 不完全相同，因為在文章後面我們會新增另一條鏈 ([Redstone Holesky](https://redstone.xyz/docs/network-info))。
+最後，與 Wagmi 相關的各種定義都在 `src/wagmi.ts` 中。我不會在這裡解釋所有內容，因為其中大部分都是你不太可能需要變更的樣板程式碼。
 
 ```ts
-import { getDefaultWallets } from '@rainbow-me/rainbowkit'
-import { configureChains, createConfig } from 'wagmi'
-import { holesky, sepolia } from 'wagmi/chains'
-```
-
-匯入應用程式支援的區塊鏈。 你可以在 [viem 的 github](https://github.com/wagmi-dev/viem/tree/main/src/chains/definitions) 中看到支援的鏈的清單。
-
-```ts
-import { publicProvider } from 'wagmi/providers/public'
-
-const walletConnectProjectId = 'c96e690bb92b6311e8e9b2a6a22df575'
-```
-
-要能使用 [WalletConnect](https://walletconnect.com/)，你的應用程式需要一個專案 ID。 你可以在 [cloud.walletconnect.com](https://cloud.walletconnect.com/sign-in) 上取得它。
-
-```ts
-const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [ holesky, sepolia ],
-  [
-    publicProvider(),
-  ],
-)
-
-const { connectors } = getDefaultWallets({
-  appName: 'My wagmi + RainbowKit App',
-  chains,
-  projectId: walletConnectProjectId,
-})
+import { http, webSocket, createConfig, fallback } from 'wagmi'
+import { sepolia } from 'wagmi/chains'
+import { injected } from 'wagmi/connectors'
 
 export const config = createConfig({
-  autoConnect: true,
-  connectors,
-  publicClient,
-  webSocketPublicClient,
-})
-
-export { chains }
+  chains: [sepolia],
 ```
 
-### 新增另一條區塊鏈 {#add-blockchain}
+Wagmi 設定包含此應用程式支援的鏈。你可以查看[可用鏈的清單](https://wagmi.sh/core/api/chains)。
 
-現今有很多 [L2 擴展解決方案](/layer-2/)，你可能想要支援一些 viem 尚未支援的方案。 要做到這點，你需要修改 `src/wagmi.ts`。 這些說明解釋了如何新增 [Redstone Holesky](https://redstone.xyz/docs/network-info)。
+```ts
+  connectors: [
+    injected(),
+  ],
+```
 
-1. 從 viem 匯入 `defineChain` 型別。
+[這個連接器](https://wagmi.sh/core/api/connectors/injected)讓我們可以與安裝在瀏覽器中的錢包進行通訊。
 
-   ```ts
-   import { defineChain } from 'viem'
-   ```
+```ts
+  transports: {
+    [sepolia.id]: http()
+```
 
-2. 新增網路定義。
+Viem 隨附的預設 HTTP 端點已經夠好了。如果我們想要不同的 URL，我們可以使用 `http("https:// hostname ")` 或 `webSocket("wss:// hostname ")`。
 
-   ```ts
-   const redstoneHolesky = defineChain({
-      id: 17_001,
-      name: 'Redstone Holesky',
-      network: 'redstone-holesky',
-      nativeCurrency: {
-        decimals: 18,
-        name: 'Ether',
-        symbol: 'ETH',
-      },
-      rpcUrls: {
-        default: {
-          http: ['https://rpc.holesky.redstone.xyz'],
-          webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
-      },
-      public: {
-          http: ['https://rpc.holesky.redstone.xyz'],
-          webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
-        },
-      },
-      blockExplorers: {
-        default: { name: 'Explorer', url: 'https://explorer.holesky.redstone.xyz' },
-      },
-   })
-   ```
+```ts
+  },
+  multiInjectedProviderDiscovery: false,
+})
+```
 
-3. 將新鏈新增到 `configureChains` 呼叫中。
+## 新增另一個區塊鏈 {#add-blockchain}
 
-   ```ts
-    const { chains, publicClient, webSocketPublicClient } = configureChains(
-      [ holesky, sepolia, redstoneHolesky ],
-      [ publicProvider(), ],
-    )
-   ```
+現在有許多 [L2 擴容解決方案](https://ethereum.org/layer-2/)，你可能想要支援一些 Viem 尚未支援的方案。為此，你需要修改 `src/wagmi.ts`。這些指示說明了如何新增 [Optimism Sepolia](https://chainlist.org/chain/11155420)。
 
-4. 確保應用程式知道你的合約在新網路上的地址。 在這種情況下，我們修改 `src/components/Greeter.tsx`：
+1.  編輯 `src/wagmi.ts`
+
+    A. 從 Viem 匯入 `defineChain` 型別。
+
+          ```ts
+          import { defineChain } from 'viem'
+          ```
+
+    B. 新增網路定義。你其實不需要為 Optimism Sepolia 這樣做，[它已經在 `viem` 中了](https://github.com/wevm/viem/blob/main/src/chains/definitions/optimismSepolia.ts)，但透過這種方式，你可以學習如何新增不在 `viem` 中的區塊鏈。
+
+          ```ts
+          const optimismSepolia = defineChain({
+              id: 11_155_420,
+              name: 'OP Sepolia',
+              nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
+              rpcUrls: {
+                default: {
+                  http: ['https://sepolia.optimism.io'],
+                  webSocket: ['wss://optimism-sepolia.drpc.org'],
+                },
+              },
+              blockExplorers: {
+                default: {
+                  name: 'Blockscout',
+                  url: 'https://optimism-sepolia.blockscout.com',
+                  apiUrl: 'https://optimism-sepolia.blockscout.com/api',
+                }
+              },
+          })
+          ```
+
+    C. 將新鏈新增至 `createConfig` 呼叫中。
+
+          ```ts
+          export const config = createConfig({
+            chains: [sepolia, optimismSepolia],
+            connectors: [
+              injected(),
+            ],
+            transports: {
+              [optimismSepolia.id]: http(),
+              [sepolia.id]: http()
+            },
+            multiInjectedProviderDiscovery: false,
+          })
+          ```
+
+2.  編輯 `src/App.tsx` 以註解掉自動切換到 Sepolia 的功能。在正式環境系統上，你可能會顯示帶有連結的按鈕，指向你支援的每個區塊鏈。
 
     ```ts
-    const contractAddrs : AddressPerBlockchainType = {
-      // Holesky
-      17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
-    
-      // Redstone Holesky
-      17001: '0x4919517f82a1B89a32392E1BF72ec827ba9986D3',
-    
+    /*
+    useEffect(() => {
+      if (connection.status === 'connected' &&
+          connection.chainId !== SEPOLIA_CHAIN_ID
+      ) {
+        switchChain({ chainId: SEPOLIA_CHAIN_ID })
+      }
+    }, [connection.status, connection.chainId])
+    */
+    ```
+
+3.  編輯 `src/Greeter.tsx` 以確保應用程式知道你的合約在新網路上的地址。
+
+    ```ts
+    const contractAddrs: AddressPerBlockchainType = {
+      // Optimism Sepolia
+      11155420: "0x4dd85791923E9294E934271522f63875EAe5806f",
+
       // Sepolia
-      11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
+      11155111: "0x7143d5c190F048C8d19fe325b748b081903E3BF0",
     }
     ```
 
+4.  在你的瀏覽器中。
+
+    A. 瀏覽至 [ChainList](https://chainlist.org/chain/11155420?testnets=true)，然後點擊表格右側的其中一個按鈕，將該鏈新增至你的錢包。
+
+    B. 在應用程式中，點擊 **Disconnect**（中斷連線），然後重新連線以變更區塊鏈。有更好的方法來處理這個問題，但這需要修改應用程式。
+
 ## 結論 {#conclusion}
 
-當然，你並不是真的在乎為 `Greeter` 提供使用者介面。 你想要為你自己的合約建立一個使用者介面。 要建立你自己的應用程式，請執行以下步驟：
+當然，你並不真的在乎為 `Greeter` 提供使用者介面。你想要為自己的合約建立使用者介面。要建立你自己的應用程式，請執行以下步驟：
 
-1. 指定建立一個 wagmi 應用程式。
+1. 指定建立一個 Wagmi 應用程式。
 
    ```sh copy
-   pnpm create wagmi
+   npm create wagmi
    ```
 
-2. 為應用程式命名。
+2. 輸入 `y` 繼續。
 
-3. 選擇 **React** 框架。
+3. 為應用程式命名。
 
-4. 選擇 **Vite** 變體。
+4. 選擇 **React** 框架。
 
-5. 你可以 [新增 Rainbow kit](https://www.rainbowkit.com/docs/installation#manual-setup)。
+5. 選擇 **Vite** 變體。
 
-現在去讓你的合約為廣大世界所用吧。
+現在，去讓你的合約能被全世界使用吧。
 
-[在此查看我的更多作品](https://cryptodocguy.pro/)。
-
+[點此查看更多我的作品](https://cryptodocguy.pro/)。

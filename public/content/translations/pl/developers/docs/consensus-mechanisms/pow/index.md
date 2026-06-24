@@ -1,114 +1,114 @@
 ---
-title: Proof of work (PoW)
-description: "Wyjaśnienie protokołu konsensusu proof-of-work i jego roli w Ethereum."
+title: "Dowód pracy (PoW)"
+description: "Wyjaśnienie protokołu konsensusu dowodu pracy i jego roli w Ethereum."
 lang: pl
 ---
 
-Sieć Ethereum na początku używała mechanizmu konsensusu zwanego **[Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow)**. To pozwalało węzłom sieci Ethereum na uzgadnianie stanu wszystkich informacji zarejestrowanych na łańcuchu bloków Ethereum i zapobiegało niektórym rodzajom ataków ekonomicznych. Jednakże w 2022 roku Ethereum wyłączyło mechanizm proof-of-work i zamiast niego zaczęło używać [proof-of-stake](/developers/docs/consensus-mechanisms/pos).
+Sieć [Ethereum](/) początkowo korzystała z mechanizmu konsensusu, który opierał się na **[dowodzie pracy (PoW)](/developers/docs/consensus-mechanisms/pow)**. Pozwalało to węzłom sieci Ethereum na osiągnięcie zgody co do stanu wszystkich informacji zapisanych na blockchainie Ethereum i zapobiegało pewnym rodzajom ataków ekonomicznych. Jednakże w 2022 roku Ethereum wyłączyło dowód pracy i zaczęło zamiast niego używać [dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos).
 
 <Alert variant="update">
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    proof-of-work odtąd został wycofany. Ethereum nie używa już proof-of-work jako części swojego mechanizmu konsensusu. Zamiast tego, używa proof-of-stake. Przeczytaj więcej o [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) i [stakingu](/staking/).
+    Dowód pracy został wycofany. Ethereum nie używa już dowodu pracy jako części swojego mechanizmu konsensusu. Zamiast tego używa dowodu stawki. Przeczytaj więcej o [dowodzie stawki](/developers/docs/consensus-mechanisms/pos/) i [stakingu](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Wymagania wstępne {#prerequisites}
 
-Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznanie się z [transakcjami](/developers/docs/transactions/), [blokami](/developers/docs/blocks/) i [mechanizmami konsensusu](/developers/docs/consensus-mechanisms/).
+Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznać się z [transakcjami](/developers/docs/transactions/), [blokami](/developers/docs/blocks/) oraz [mechanizmami konsensusu](/developers/docs/consensus-mechanisms/).
 
-## Czym jest Proof-of-work (PoW)? {#what-is-pow}
+## Czym jest dowód pracy (PoW)? {#what-is-pow}
 
-Konsensus Nakamoto, który wykorzystuje proof-of-work, to mechanizm, który kiedyś pozwalał zdecentralizowanej sieci Ethereum osiągnąć konsensus (tzn. wszystkie węzły dochodzą do porozumienia) w takich kwestiach, jak salda kont i kolejność transakcji. To uniemożliwiało użytkownikom 'podwójne wydawanie' ich monet i gwarantowało, że łańcuch Ethereum był niezwykle trudny do atakowania i manipulowania. Te właściwości bezpieczeństwa pochodzą teraz z mechanizmu proof-of-stake, wykorzystując mechanizm konsensusu znany jako [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+Konsensus Nakamoto, który wykorzystuje dowód pracy, to mechanizm, który niegdyś pozwalał zdecentralizowanej sieci Ethereum na osiągnięcie konsensusu (tj. zgody wszystkich węzłów) w kwestiach takich jak salda kont i kolejność transakcji. Zapobiegało to „podwójnemu wydawaniu” monet przez użytkowników i zapewniało, że łańcuch Ethereum był niezwykle trudny do zaatakowania lub zmanipulowania. Te właściwości bezpieczeństwa pochodzą teraz z dowodu stawki, wykorzystującego mechanizm konsensusu znany jako [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
-## Proof-of-work i wydobycie {#pow-and-mining}
+## Dowód pracy i kopanie {#pow-and-mining}
 
-proof-of-work jest głównym algorytmem, który ustala trudność oraz zasady pracy wykonywanej przez górników na blockchainie typu proof-of-work. Wydobycie to sama „praca”. Jest to akt dodawania prawidłowych bloków do łańcucha. Jest to ważne, ponieważ długość łańcucha pomaga sieci podążać za prawidłowym rozgałęzieniem blockchainu. Im więcej „pracy” zostanie wykonane, im dłuższy łańcuch i im wyższy numer bloku, tym większa pewność co do aktualnego stanu rzeczy w sieci.
+Dowód pracy to podstawowy algorytm, który ustala trudność i zasady pracy, jaką górnicy wykonują na blockchainach opartych na dowodzie pracy. Kopanie to sama „praca”. Jest to czynność dodawania prawidłowych bloków do łańcucha. Jest to ważne, ponieważ długość łańcucha pomaga sieci podążać za właściwym rozwidleniem blockchaina. Im więcej wykonanej „pracy”, tym dłuższy łańcuch i wyższy numer bloku, a co za tym idzie – tym większą pewność co do obecnego stanu może mieć sieć.
 
-[Więcej o wydobyciu](/developers/docs/consensus-mechanisms/pow/mining/)
+[Więcej o kopaniu](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## Jak działał mechanizm proof-of-work w Ethereum? {#how-it-works}
+## Jak działał dowód pracy w Ethereum? {#how-it-works}
 
-Transakcje Ethereum są przetwarzane w blokach. W wycofanym już mechanizmie proof-of-work w Ethereum każdy blok zawierał:
+Transakcje w Ethereum są przetwarzane w bloki. W wycofanym już Ethereum opartym na dowodzie pracy każdy blok zawierał:
 
-- trudności bloku – na przykład: 3,324,092,183,262,715
+- trudność bloku – na przykład: 3,324,092,183,262,715
 - mixHash – na przykład: `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`
 - nonce – na przykład: `0xd3ee432b4fb3d26b`
 
-Te dane bloku były bezpośrednio związane z mechanizmem proof-of-work.
+Te dane bloku były bezpośrednio związane z dowodem pracy.
 
-### Praca na potrzeby proof-of-work {#the-work}
+### Praca w dowodzie pracy {#the-work}
 
-Protokół proof-of-work, Ethash, wymagał od górników, aby przeszli przez intensywny wyścig prób i błędów w celu znalezienia wartości nonce dla bloku. Tylko bloki z prawidłowym nonce mogły być dodane do łańcucha.
+Protokół dowodu pracy, Ethash, wymagał od górników udziału w intensywnym wyścigu prób i błędów w celu znalezienia wartości nonce dla bloku. Tylko bloki z prawidłowym nonce mogły zostać dodane do łańcucha.
 
-Podczas wyścigu o utworzenie bloku górnik wielokrotnie przepuszczał przez funkcję matematyczną zbiór danych, który można było uzyskać jedynie poprzez pobranie i uruchomienie pełnego łańcucha (tak jak robi to górnik). Ten zbiór danych służył do wygenerowania wartości mixHash poniżej celu, który jest podyktowany trudnością bloku. Najlepszym sposobem na to jest metoda prób i błędów.
+Ścigając się o utworzenie bloku, górnik wielokrotnie przepuszczał przez funkcję matematyczną zbiór danych, który można było uzyskać tylko poprzez pobranie i uruchomienie pełnego łańcucha (co robi górnik). Zbiór danych był używany do wygenerowania wartości mixHash poniżej celu podyktowanego przez trudność bloku. Najlepszym sposobem na to jest metoda prób i błędów.
 
-Trudność określała cel dla haszu. Im niższy cel, tym mniejszy zestaw prawidłowych hashów. Po wygenerowaniu, było to niezwykle łatwe do zweryfikowania przez innych górników i klientów. Nawet gdyby jedna transakcja uległa zmianie, hasz byłby zupełnie inny, co sygnalizowałoby oszustwo.
+Trudność określała cel dla hasha. Im niższy cel, tym mniejszy zbiór prawidłowych hashów. Po wygenerowaniu było to niezwykle łatwe do zweryfikowania przez innych górników i klientów. Nawet gdyby jedna transakcja uległa zmianie, hash byłby zupełnie inny, sygnalizując oszustwo.
 
-Haszowanie ułatwia wykrycie oszustwa. Ale proces proof-of-work był również istotnym czynnikiem zniechęcającym do atakowania łańcucha.
+Haszowanie sprawia, że oszustwo jest łatwe do zauważenia. Jednak dowód pracy jako proces był również dużym czynnikiem odstraszającym przed atakiem na łańcuch.
 
-### Proof-of-work i bezpieczeństwo {#security}
+### Dowód pracy a bezpieczeństwo {#security}
 
-Górnicy mieli motywację, aby wykonywać tę pracę w głównym łańcuchu Ethereum. Niewielka była motywacja, aby podzbiór górników zakładał własny łańcuch — podważa to cały system. Blockchainy opierają się na jednym stanie jako źródle prawdy.
+Górnicy byli motywowani do wykonywania tej pracy na głównym łańcuchu Ethereum. Istniała niewielka zachęta dla podgrupy górników do uruchomienia własnego łańcucha – podważa to system. Blockchainy opierają się na posiadaniu pojedynczego stanu jako źródła prawdy.
 
-Celem proof-of-work było przedłużenie łańcucha. Najdłuższy łańcuch był najbardziej wiarygodny pod względem poprawności, ponieważ wymagał najwięcej mocy obliczeniowej do wygenerowania. W systemie Ethereum proof-of-work niemal niemożliwe było stworzenie nowego bloku, który wymazywał transakcje, tworzył fałszywe transakcje lub utrzymywał drugi łańcuch. Wynikało to z tego, że złośliwy górnik musiałby zawsze rozwiązać nonce bloku szybciej niż wszyscy inni.
+Celem dowodu pracy było wydłużenie łańcucha. Najdłuższy łańcuch był najbardziej wiarygodny jako ten prawidłowy, ponieważ do jego wygenerowania wykonano najwięcej pracy obliczeniowej. W systemie PoW Ethereum było prawie niemożliwe tworzenie nowych bloków, które usuwałyby transakcje, tworzyły fałszywe lub utrzymywały drugi łańcuch. Wynikało to z faktu, że złośliwy górnik musiałby zawsze rozwiązywać nonce bloku szybciej niż wszyscy inni.
 
-Aby konsekwentnie tworzyć złośliwe, ale poprawne bloki, złośliwy górnik musiałby posiadać ponad 51% całej mocy wydobywczej sieci, aby pokonać wszystkich innych. Taka ilość "pracy" wymaga tak wielkiej ilości drogiej mocy obliczeniowej i zużytej energii, że może to przeważyć zyski z wykonanego ataku.
+Aby konsekwentnie tworzyć złośliwe, ale prawidłowe bloki, złośliwy górnik potrzebowałby ponad 51% mocy kopania w sieci, aby pokonać wszystkich innych. Taka ilość „pracy” wymaga ogromnej, drogiej mocy obliczeniowej, a zużyta energia mogłaby nawet przewyższyć zyski z ataku.
 
-### Ekonomia proof-of-work {#economics}
+### Ekonomia dowodu pracy {#economics}
 
-proof-of-work było również odpowiedzialne za emisję nowej waluty do systemu i zachęcenie górników do wykonania pracy.
+Dowód pracy był również odpowiedzialny za emisję nowej waluty do systemu i motywowanie górników do wykonywania pracy.
 
-Od czasu [aktualizacji Constantinople](/ethereum-forks/#constantinople) górnicy, którzy pomyślnie utworzyli blok, byli nagradzani dwoma nowo wybitymi ETH i częścią opłat transakcyjnych. Bloki ommer również otrzymywały 1,75 ETH. Bloki ommer były poprawnymi blokami stworzonymi przez górnika praktycznie w tym samym czasie, gdy inny górnik tworzył blok kanoniczny, co ostatecznie było rozsądzane na podstawie informacji, który łańcuch został zbudowany jako pierwszy. Bloki ommer zdarzały się głównie przez opóźnienie sieci.
+Od czasu aktualizacji [Konstantynopol](/ethereum-forks/#constantinople) górnicy, którym udało się utworzyć blok, byli nagradzani dwoma nowo wyemitowanymi ETH oraz częścią opłat transakcyjnych. Bloki ommer również były rekompensowane kwotą 1,75 ETH. Bloki ommer były prawidłowymi blokami utworzonymi przez górnika praktycznie w tym samym czasie, gdy inny górnik utworzył blok kanoniczny, co ostatecznie zależało od tego, na którym łańcuchu najpierw nadbudowano kolejne bloki. Bloki ommer zazwyczaj powstawały z powodu opóźnień w sieci.
 
-## Nieodwołalność {#finality}
+## Ostateczność {#finality}
 
-Transakcja ma "nieodwołalność" na Ethereum, kiedy jest częścią bloku, którego nie można zmienić.
+Transakcja osiąga „ostateczność” w Ethereum, gdy jest częścią bloku, który nie może ulec zmianie.
 
-Ponieważ górnicy pracowali w zdecentralizowany sposób, dwa poprawne bloki mogły być wykopane w tym samym czasie. Tworzy to tymczasowy fork. Ostatecznie jeden z tych łańcuchów stawał się akceptowanym łańcuchem po wydobyciu i dołączeniu kolejnego bloku, który powodował jego wydłużenie.
+Ponieważ górnicy pracowali w sposób zdecentralizowany, dwa prawidłowe bloki mogły zostać wykopane w tym samym czasie. Tworzy to tymczasowe rozwidlenie. Ostatecznie jeden z tych łańcuchów stawał się łańcuchem zaakceptowanym po tym, jak kolejne bloki zostały wykopane i do niego dodane, czyniąc go dłuższym.
 
-Aby skomplikować jeszcze nieco tę kwestię, transakcje odrzucone na tymczasowym rozgałęzieniu nie mogły zostać zawarte w zaakceptowanym łańcuchu. Oznacza to, że może on zostać odwrócony. Zatem nieodwołalność odnosi się do czasu, w którym należy poczekać przed uznaniem transakcji za nieodwracalną. W poprzedniej wersji Ethereum opartej na proof-of-work, im więcej bloków zostało wykopanych na konkretnym bloku `N`, tym większa była pewność, że transakcje w `N` powiodły się i nie zostaną cofnięte. Teraz, w modelu proof-of-stake, finalizacja jest jawną, a nie probabilistyczną właściwością danego bloku.
+Co więcej, transakcje odrzucone na tymczasowym rozwidleniu mogły nie zostać uwzględnione w zaakceptowanym łańcuchu. Oznacza to, że mogły zostać cofnięte. Zatem ostateczność odnosi się do czasu, jaki należy odczekać przed uznaniem transakcji za nieodwracalną. W poprzednim Ethereum opartym na dowodzie pracy, im więcej bloków zostało wykopanych na wierzchu konkretnego bloku `N`, tym większa była pewność, że transakcje w `N` zakończyły się sukcesem i nie zostaną cofnięte. Obecnie, dzięki dowodowi stawki, finalizacja jest jawną, a nie probabilistyczną właściwością bloku.
 
-## Zużycie energii przez proof-of-work {#energy}
+## Zużycie energii przez dowód pracy {#energy}
 
-Istotnym punktem krytyki modelu proof-of-work jest ilość energii zużywanej do zabezpieczenia sieci. Aby utrzymać bezpieczeństwo i decentralizację, Ethereum w modelu proof-of-work wykorzystywało duże zasoby energii. Krótko przed przejściem na proof-of-stake górnicy Ethereum zużywali łącznie około 70 TWh/rok (mniej więcej tyle samo co Czechy – według [digiconomist](https://digiconomist.net/) z 18 lipca 2022 r.).
+Główną krytyką dowodu pracy jest ilość energii wymagana do zapewnienia bezpieczeństwa sieci. Aby utrzymać bezpieczeństwo i decentralizację, Ethereum oparte na dowodzie pracy zużywało ogromne ilości energii. Krótko przed przejściem na dowód stawki górnicy Ethereum zużywali łącznie około 70 TWh rocznie (mniej więcej tyle samo co Czechy – według [digiconomist](https://digiconomist.net/) z 18 lipca 2022 r.).
 
-## Zalety i wady {#pros-and-cons}
+## Plusy i minusy {#pros-and-cons}
 
-| Zalety                                                                                                                                                                                                                                                                                           | Wady                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Model proof-of-work jest neutralny. Nie potrzebujesz ETH, aby rozpocząć, a nagrody blokowe pozwalają przejść od 0ETH do salda dodatniego. W przypadku [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) na początek potrzebujesz ETH. | Model proof-of-work zużywa tyle energii, że jest szkodliwy dla środowiska.                                                                                                         |
-| Model proof-of-work jest przetestowanym mechanizmem konsensusu, który zapewniał bezpieczeństwo i decentralizację sieciom Bitcoin, jak i Ethereum przez wiele lat.                                                                                                                | Jeśli chcesz kopać, potrzebujesz tak specjalistycznego sprzętu, że na początek jest to duża inwestycja.                                                                            |
-| W porównaniu z proof-of-stake jest to stosunkowo łatwe w realizacji.                                                                                                                                                                                                             | Ze względu na coraz większe zapotrzebowanie obliczeniowe, pule wydobywcze mogą potencjalnie zdominować grę wydobywczą, co prowadzi do centralizacji i zagrożeń dla bezpieczeństwa. |
+| Plusy                                                                                                                                                                                                                         | Minusy                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dowód pracy jest neutralny. Nie potrzebujesz ETH, aby zacząć, a nagrody za bloki pozwalają przejść od 0 ETH do dodatniego salda. W przypadku [dowodu stawki](/developers/docs/consensus-mechanisms/pos/) potrzebujesz ETH na start. | Dowód pracy zużywa tak dużo energii, że jest szkodliwy dla środowiska.                                                                      |
+| Dowód pracy to wypróbowany i przetestowany mechanizm konsensusu, który przez wiele lat zapewniał bezpieczeństwo i decentralizację Bitcoina i Ethereum.                                                                                          | Jeśli chcesz kopać, potrzebujesz tak specjalistycznego sprzętu, że rozpoczęcie działalności wiąże się z dużą inwestycją.                                                |
+| W porównaniu do dowodu stawki jest stosunkowo łatwy do wdrożenia.                                                                                                                                                                | Ze względu na rosnące zapotrzebowanie na obliczenia, pule wydobywcze mogłyby potencjalnie zdominować grę w kopanie, prowadząc do centralizacji i zagrożeń bezpieczeństwa. |
 
-## W porównaniu z proof-of-stake {#compared-to-pos}
+## Porównanie z dowodem stawki {#compared-to-pos}
 
-Na wysokim poziomie, model proof-of-stake ma taki sam cel co proof-of-work: pomóc zdecentralizowanej sieci osiągnąć konsensus w bezpieczny sposób. Ma jednak pewne różnice w procesie i pracownikach:
+Na wysokim poziomie dowód stawki ma ten sam cel końcowy co dowód pracy: pomóc zdecentralizowanej sieci w bezpiecznym osiągnięciu konsensusu. Istnieją jednak pewne różnice w procesie i uczestnikach:
 
-- Model proof-of-stake zamienia moc obliczeniową na zestakowane ETH.
-- Model proof-of-stake zamienia górników na walidatorów. Walidatorzy stawiają ETH w celu aktywacji możliwości tworzenia nowych bloków.
-- Walidatorzy nie konkurują o tworzenie bloków, zamiast tego są wybierani losowo przez algorytm.
-- Nieodwołalność jest jaśniejsza: w niektórych punktach kontrolnych, jeżeli 2/3 zatwierdzających zgadza się co do stanu bloku, jest on uważany za ostateczny. Walidatorzy muszą postawić na to całą swoją stawkę, więc jeśli spróbują się zmówić, stracą ją.
+- Dowód stawki zamienia znaczenie mocy obliczeniowej na stakowane ETH.
+- Dowód stawki zastępuje górników walidatorami. Walidatorzy stakują swoje ETH, aby aktywować możliwość tworzenia nowych bloków.
+- Walidatorzy nie rywalizują o tworzenie bloków, zamiast tego są wybierani losowo przez algorytm.
+- Ostateczność jest wyraźniejsza: w określonych punktach kontrolnych, jeśli 2/3 walidatorów zgadza się co do stanu bloku, jest on uważany za ostateczny. Walidatorzy muszą postawić na to całą swoją stawkę, więc jeśli spróbują później wejść w zmowę, stracą całą swoją stawkę.
 
-[Więcej o proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+[Więcej o dowodzie stawki](/developers/docs/consensus-mechanisms/pos/)
 
-## Jesteś raczej wzrokowcem? Dla wzrokowców {#visual-learner}
+## Wolisz uczyć się wzrokowo? {#visual-learner}
 
-<YouTube id="3EUAcxhuoU4" />
+<VideoWatch slug="proof-of-work-explained" />
 
 ## Dalsza lektura {#further-reading}
 
 - [Atak większościowy](https://en.bitcoin.it/wiki/Majority_attack)
-- [O nieodwołalności rozliczeń](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
+- [O ostateczności rozrachunku](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 
 ### Filmy {#videos}
 
-- [Techniczne wyjaśnienie protokołów proof-of-work](https://youtu.be/9V1bipPkCTU)
+- [Techniczne wyjaśnienie protokołów dowodu pracy](https://youtu.be/9V1bipPkCTU)
 
 ## Powiązane tematy {#related-topics}
 
-- [Wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-- [Proof-of-authority](/developers/docs/consensus-mechanisms/poa/)
+- [Kopanie](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Dowód stawki](/developers/docs/consensus-mechanisms/pos/)
+- [Dowód autorytetu (PoA)](/developers/docs/consensus-mechanisms/poa/)

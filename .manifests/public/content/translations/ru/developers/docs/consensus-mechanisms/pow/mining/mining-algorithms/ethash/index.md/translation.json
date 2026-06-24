@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-17T21:42:00.532Z",
+  "englishManifestHash": "6811ff56cfd6",
+  "placeholderOrder": [
+    "LINK-2655ce",
+    "LINK-14f434",
+    "LINK-2655ce",
+    "LINK-b8c021",
+    "LINK-cebf2c",
+    "LINK-a7c72d",
+    "CODEBLOCK-6f2b26",
+    "LINK-3d1c30",
+    "LINK-9af8fc",
+    "LINK-c04dbe",
+    "CODEBLOCK-0e6b64",
+    "CODEBLOCK-a841ee",
+    "LINK-07a93f",
+    "LINK-6dd98b",
+    "CODEBLOCK-ee2990",
+    "CODEBLOCK-77ca8a",
+    "CODEBLOCK-7f8e4c",
+    "CODE-1e0584",
+    "CODE-78377b",
+    "CODE-34639d",
+    "CODEBLOCK-55d49c",
+    "CODE-f5d590",
+    "CODE-9f0d50",
+    "CODEBLOCK-fc45ac",
+    "CODEBLOCK-b4d4bf",
+    "CODEBLOCK-42c475",
+    "CODEBLOCK-32110b"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-6f2b26": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0e6b64": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a841ee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ee2990": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-77ca8a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7f8e4c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-55d49c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fc45ac": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b4d4bf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-42c475": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-32110b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-1e0584": {
+      "type": "inline-code",
+      "values": {
+        "content": "header"
+      }
+    },
+    "CODE-78377b": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonce"
+      }
+    },
+    "CODE-34639d": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonce[::-1]"
+      }
+    },
+    "CODE-f5d590": {
+      "type": "inline-code",
+      "values": {
+        "content": "fnv"
+      }
+    },
+    "CODE-9f0d50": {
+      "type": "inline-code",
+      "values": {
+        "content": "sha3_256"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-b8c021": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-cebf2c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto"
+      }
+    },
+    "LINK-a7c72d": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Memory-hard_function"
+      }
+    },
+    "LINK-3d1c30": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1803"
+      }
+    },
+    "LINK-9af8fc": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use"
+      }
+    },
+    "LINK-c04dbe": {
+      "type": "link",
+      "values": {
+        "url": "https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057"
+      }
+    },
+    "LINK-07a93f": {
+      "type": "link",
+      "values": {
+        "url": "http://www.hashcash.org/papers/memohash.pdf"
+      }
+    },
+    "LINK-6dd98b": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T21:42:00.532Z",
+      "status": "success"
+    }
+  }
+}

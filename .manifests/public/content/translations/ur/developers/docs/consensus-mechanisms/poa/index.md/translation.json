@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-16T21:57:51.453Z",
+  "englishManifestHash": "2aff4ac441b7",
+  "placeholderOrder": [
+    "LINK-2655ce",
+    "LINK-ab55fe",
+    "LINK-08a3d2",
+    "LINK-540746",
+    "LINK-2655ce",
+    "LINK-75a5ce",
+    "LINK-0d6c43",
+    "LINK-753fde",
+    "LINK-95d8a8",
+    "LINK-018498",
+    "CODE-306cd2",
+    "LINK-0d6c43",
+    "LINK-2d2a27",
+    "LINK-21ca02",
+    "LINK-903ea2",
+    "LINK-0919bf",
+    "LINK-667c71",
+    "LINK-9e16dd",
+    "LINK-259d90",
+    "LINK-8f1f3a",
+    "LINK-97a89d"
+  ],
+  "placeholderMap": {
+    "CODE-306cd2": {
+      "type": "inline-code",
+      "values": {
+        "content": "SIGNER_LIMIT"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-08a3d2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-540746": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-75a5ce": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#genesis-block"
+      }
+    },
+    "LINK-0d6c43": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-225"
+      }
+    },
+    "LINK-753fde": {
+      "type": "link",
+      "values": {
+        "url": "https://besu.hyperledger.org/private-networks/concepts/poa"
+      }
+    },
+    "LINK-95d8a8": {
+      "type": "link",
+      "values": {
+        "url": "https://openethereum.github.io/Chain-specification"
+      }
+    },
+    "LINK-018498": {
+      "type": "link",
+      "values": {
+        "url": "https://academy.binance.com/en/glossary/proof-of-staked-authority-posa"
+      }
+    },
+    "LINK-2d2a27": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md"
+      }
+    },
+    "LINK-21ca02": {
+      "type": "link",
+      "values": {
+        "url": "https://forum.openzeppelin.com/t/proof-of-authority/3577"
+      }
+    },
+    "LINK-903ea2": {
+      "type": "link",
+      "values": {
+        "url": "https://academy.binance.com/en/articles/proof-of-authority-explained"
+      }
+    },
+    "LINK-0919bf": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba"
+      }
+    },
+    "LINK-667c71": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d"
+      }
+    },
+    "LINK-9e16dd": {
+      "type": "link",
+      "values": {
+        "url": "https://openethereum.github.io/Chain-specification"
+      }
+    },
+    "LINK-259d90": {
+      "type": "link",
+      "values": {
+        "url": "https://besu.hyperledger.org/private-networks/concepts/poa"
+      }
+    },
+    "LINK-8f1f3a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-97a89d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T21:57:51.453Z",
+      "status": "success"
+    }
+  }
+}

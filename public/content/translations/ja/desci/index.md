@@ -1,5 +1,5 @@
 ---
-title: "分散型サイエンス(DeSci)"
+title: "分散型科学 (DeSci)"
 description: "イーサリアム上の分散型科学の概要"
 lang: ja
 template: use-cases
@@ -7,132 +7,130 @@ sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
 summaryPoints:
-  - "現在の科学に代わる、グローバルで開かれたシステム。"
-  - "科学者が資金を調達し、実験を行い、データーを共有し、得られた見識を広めることなどを可能にする技術。"
-  - "オープンサイエンス運動の上に構築。"
+  - "現在の科学システムに代わる、グローバルでオープンな選択肢。"
+  - "科学者が資金調達、実験の実施、データの共有、知見の配信などを行えるようにするテクノロジー。"
+  - "オープンサイエンスの運動を基盤としています。"
 ---
 
-## 分散型科学(DeSci)とは何か {#what-is-desci}
+## 分散型科学 (DeSci) とは？ {#what-is-desci}
 
-分散型科学(DeSci)は、[Web3](/glossary/#web3)スタックを使用して、科学的知識の資金調達、創造、レビュー、単位認定、保存、普及を公正かつ公平に行うための公共インフラの構築を目指す運動です。
+分散型科学 (DeSci) は、[Web3](/glossary/#web3)スタックを使用して、科学的知識の資金調達、作成、レビュー、クレジット付与、保存、および普及を公正かつ公平に行うための公共インフラを構築することを目指す運動です。
 
-DeSciは、科学者が自身の研究を公然と共有することにインセンティブを与えられ、そしてその仕事に対する名声を得られ、一方で誰もが簡単にその研究にアクセスし、さらに研究に貢献できるようなエコシステムの形成を目指しています。 DeSciは、科学的知識は誰にでもアクセス可能であり、科学研究のプロセスは透明であるべきという考えに則っています。 DeSciはより非中央集権的で分散型の科学研究モデルを形成することで、中央当局による検閲と管理に対する抵抗力を高めます。 DeSciは、資金調達、科学的ツール、コミュニケーション手段へのアクセスを分散化することによって、慣習にとらわれない新しいアイデアが繁栄する環境を作りたいと考えています。
+DeSciは、科学者が研究をオープンに共有し、その成果に対する評価を得るインセンティブを与えられると同時に、誰もが簡単に研究にアクセスし、貢献できるエコシステムの構築を目指しています。DeSciは、科学的知識は誰もがアクセスできるべきであり、科学研究のプロセスは透明であるべきだという理念に基づいています。DeSciは、より分散化された科学研究モデルを構築し、中央集権的な権威による検閲や管理に対する耐性を高めています。DeSciは、資金調達、科学ツール、コミュニケーションチャネルへのアクセスを分散化することで、斬新で型破りなアイデアが花開く環境を作ることを望んでいます。
 
-分散型科学は、[DAO](/glossary/#dao)や[クアドラティックドネーション](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)からクラウドファンディングなど、より多様な資金源を可能にし、データや手法へのアクセスを容易にし、再現性へのインセンティブも提供します。
+分散型科学は、（[DAO](/glossary/#dao)や[クアドラティック・ドネーション](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)からクラウドファンディングなどに至るまで）より多様な資金源、よりアクセスしやすいデータと手法を可能にし、再現性に対するインセンティブを提供します。
 
-### Juan Benet - DeSci運動
+<VideoWatch slug="desci-movement-juan-benet" />
 
-<YouTube id="zkXM9H90g_E" />
+## DeSciが科学をどのように改善するか {#desci-improves-science}
 
-## DeSciが科学をいかに改善するか {#desci-improves-science}
+科学における主要な問題と、分散型科学がこれらの問題の解決にどのように役立つかを示す不完全なリスト
 
-科学の主要な問題点と、分散型科学でどのような解決が可能かをまとめた現時点におけるリストです。
-
-| **分散型科学**                                                      | **従来の科学**                                                    |
-| -------------------------------------------------------------- | ------------------------------------------------------------ |
-| 資金の分配は、クアドラティックドネーションやDAOなどのメカニズムを用いて**一般の人々によって決定されます**。      | 小規模で閉鎖的な**中央集権化されたグループ**が、資金の分配をコントロールします。                   |
-| ダイナミックなチームで**世界中の**仲間と共同作業ができます。                               | 資金提供団体や所属機関によって、共同研究が**制限されます**。                             |
-| 資金調達の決定は、オンラインかつ**透明性をもって**実行されます。 新しい資金調達のメカニズムが検討されます。       | 資金調達の決定には長い時間がかかり、**限られた透明性**の中で実行されます。 資金調達のメカニズムはほぼ存在しません。 |
-| [Web3](/glossary/#web3)技術を利用することで、研究室サービスの共有がより簡単かつ透明になります。    | 研究室リソースの共有は、しばしば**遅くて不透明です**。                                |
-| 信頼、透明性、普遍的なアクセスのためにWeb3プリミティブを使用する**新しい出版モデル**を開発することができます。    | しばしば**非効率的、偏向的、搾取的**と見なされる既存の経路を通して出版されます。                   |
-| **査読作業でトークンと評価を得る**ことができます。                                    | **査読作業は無報酬**で、営利目的の出版社に利益をもたらします。                            |
-| **あなたが生成した知的財産(IP)を所有**し、透明性のある条件に従って配布します。 | **あなたが生成したIPは、所属機関が所有します**。 知的財産へのアクセスは不透明です。                |
-| すべてのステップをオンチェーンにすることで、失敗した取り組みのデータを含む**すべての研究を共有**します。         | **出版バイアス**とは、研究者が成功した結果の実験を共有する可能性が高いことを意味します。               |
+| **分散型科学**                                                                                         | **伝統的な科学**                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| 資金の分配は、クアドラティック・ドネーションやDAOなどのメカニズムを使用して**一般の人々によって決定**されます。           | 小規模で閉鎖的な**中央集権的グループ**が資金の分配を管理しています。                                           |
+| ダイナミックなチームで**世界中**のピアと協力します。                                              | 資金提供機関や所属機関がコラボレーションを**制限**します。                                         |
+| 資金調達の決定はオンラインで**透明性**を持って行われます。新しい資金調達メカニズムが模索されています。                         | 資金調達の決定には長い時間がかかり、**透明性が限られています**。資金調達メカニズムはほとんど存在しません。 |
+| [Web3](/glossary/#web3)テクノロジーを使用することで、実験室サービスの共有がより簡単かつ透明になります。                            | 実験室リソースの共有は多くの場合、**遅く不透明**です。                                                         |
+| 信頼、透明性、普遍的なアクセスのためにWeb3プリミティブを使用する**新しい出版モデル**を開発できます。 | <strong>非効率的で偏見があり、搾取的</strong>であると頻繁に認識されている既存の経路を通じて出版します。      |
+| ピアレビューの作業に対して**トークンと評判を獲得**できます。                                                       | <strong>ピアレビューの作業は無給</strong>であり、営利目的の出版社に利益をもたらします。                                             |
+| 生成した**知的財産 (IP) を所有**し、透明な条件に従って配布します。             | 生成した**IPは所属機関が所有**します。IPへのアクセスは透明ではありません。                           |
+| すべてのステップをオンチェーンにすることで、失敗した取り組みのデータを含め、**すべての研究を共有**します。          | <strong>出版バイアス</strong>により、研究者は成功した結果をもたらした実験を共有する傾向が高くなります。      |
 
 ## イーサリアムとDeSci {#ethereum-and-desci}
 
-分散型科学のシステムには、堅牢なセキュリティ、最小限の金銭およびトランザクションコスト、そしてアプリケーション開発のための豊富なエコシステムが必要です。 イーサリアムは、分散型科学を構築するのに必要なものを全て備えています。
+分散型科学システムには、堅牢なセキュリティ、最小限の金銭的およびトランザクションコスト、そしてアプリケーション開発のための豊かなエコシステムが必要になります。[イーサリアム](/)は、分散型科学テクノロジーの構築に必要なすべてを提供します。
 
 ## DeSciのユースケース {#use-cases}
 
-DeSciは、従来の学術界をデジタルの世界にオンボーディングさせるための科学的なツールセットを構築しています。 Web3は、科学界にさまざまな利点を提供することができます。以下に一部のユースケースをご紹介します。
+DeSciは、伝統的な学術界をデジタル世界にオンボーディングするための科学的ツールセットを構築しています。以下は、Web3が科学コミュニティに提供できるユースケースのサンプルです。
 
 ### 出版 {#publishing}
 
-科学論文の出版は顕著な問題を抱えており、その背景には、論文の作成にあたり、科学者、査読者、編集者を無報酬で働かせ、法外な出版料を請求する出版社の存在があります。 一般市民は税金という形で科学者の活動費と出版費を間接的に支払っていますが、通常は、出版社に対して追加で支払いを行わないと、出版物を閲覧することはできません。 個々の科学論文を出版するための総費用は、しばしば5桁(米ドル)に上り、科学的知識を[公共財](/glossary/#public-goods)とみなす概念を損なう一方で、少数の出版社に莫大な利益がもたらされています。
+科学出版は、論文を作成するために科学者、査読者、編集者の無償労働に依存しているにもかかわらず、法外な出版費用を請求する出版社によって管理されているため、問題が多いことで有名です。通常、税金を通じて研究や出版費用を間接的に支払っている一般の人々は、出版社に再度支払いをしなければ、その研究にアクセスできないことがよくあります。個々の科学論文を出版するための総費用は、多くの場合5桁（米ドル）に達し、科学的知識は[公共財](/glossary/#public-goods)であるという概念全体を損なう一方で、少数の出版社に莫大な利益をもたらしています。
 
-無料のオープンアクセスプラットフォームは、[ArXiv](https://arxiv.org/)などのプレプリントサーバーの形で存在します。 しかし、これらのプラットフォームは品質管理や[アンチシビルメカニズム](/glossary/#anti-sybil)に欠けており、通常、記事レベルの指標を追跡しません。つまり、従来の出版社に投稿する前に研究を公表するためにのみ使用されているのが普通です。 SciHubでは出版された論文に自由にアクセスできますが、合法ではありません。自由なアクセスは、出版社が料金を受け取った後、厳格に著作権法に則って提供されるべきものです。 科学論文やデーターをアクセスしやすい形で、かつ合法性が担保された枠組みで提供することについては、大きな改善の余地があります。 Web3には、このようなシステムを構築するためのツールが存在します。
+無料でオープンアクセスのプラットフォームは、[ArXivなどの](https://arxiv.org/)プレプリントサーバーの形で存在します。しかし、これらのプラットフォームには品質管理や[アンチ・シビル](/glossary/#anti-sybil)メカニズムが欠けており、一般的に論文レベルの指標を追跡しないため、通常は伝統的な出版社に提出する前に研究を公表するためだけに使用されます。SciHubも出版された論文に無料でアクセスできるようにしていますが、合法ではなく、出版社がすでに支払いを受け取り、厳格な著作権法で作品を保護した後にのみアクセス可能になります。これにより、正当性メカニズムとインセンティブモデルが組み込まれた、アクセス可能な科学論文とデータに重大なギャップが生じています。このようなシステムを構築するためのツールはWeb3に存在します。
 
-### 再現性と複製可能性 {#reproducibility-and-replicability}
+### 再現性と反復可能性 {#reproducibility-and-replicability}
 
-再現可能性と再生可能性は価値ある科学的発見の基礎となるものです。
+再現性と反復可能性は、質の高い科学的発見の基盤です。
 
-- 再現可能な結果とは、同一の研究グループが同じ手法を用いて、繰り返し連続で得られるものです。
-- 再生可能な結果とは、別の研究グループが、同一の実験設定の下で得られるものです。
+- 再現可能な結果とは、同じチームが同じ方法論を使用して、連続して複数回達成できる結果のことです。
+- 反復可能な結果とは、異なるグループが同じ実験設定を使用して達成できる結果のことです。
 
-新しいWeb3ネイティブなツールによって、再現性と複製性が発見の基礎であることが保証できるようになります。 アカデミアの技術的な構造に優れた科学を織り込むことができます。 Web3により、生データ、計算エンジン、アプリケーションの結果といった各分析コンポーネントの[アテステーション](/glossary/#attestation)を作成できます。 コンセンサスシステムの素晴らしいところは、信頼できるネットワークを作成してそれらのコンポーネントを維持する場合に、ネットワークの各参加者が計算の再現と結果の検証に貢献できることにあります。
+新しいWeb3ネイティブツールは、再現性と反復可能性が発見の基盤であることを保証できます。私たちは、質の高い科学を学術界の技術的基盤に組み込むことができます。Web3は、生データ、計算エンジン、アプリケーション結果など、各分析コンポーネントの[証明](/glossary/#attestation)を作成する機能を提供します。コンセンサスシステムの素晴らしい点は、これらのコンポーネントを維持するための信頼できるネットワークが作成されると、各ネットワーク参加者が計算を再現し、各結果を検証する責任を負うことができることです。
 
 ### 資金調達 {#funding}
 
-科学への資金提供における現在の標準モデルでは、個人や科学者のグループが資金配分機関に書面にて申請する手順となっています。 信頼できる少数の識者が申請書を採点し、その後候補者の面接を経て、評価の高かった一部の候補者に資金が提供されます。 助成金の申請から受領までの間に時に**年単位の待ち時間**が生じるボトルネックを生み出すだけでなく、このモデルは審査委員会の**偏見、私利私欲、政治に対して非常に脆弱である**ことが知られています。
+科学の資金調達における現在の標準モデルは、個人または科学者のグループが資金提供機関に書面で申請を行うというものです。信頼できる少数の審査員が申請を採点し、候補者と面接を行った後、ごく一部の申請者に資金を授与します。このモデルは、助成金の申請から受け取りまでに**何年も待つ**ことがあるというボトルネックを生み出すだけでなく、審査委員会の**偏見、利己主義、政治的影響を受けやすい**ことで知られています。
 
-同じ提案であっても同委員会の担当者によって結果が大きく異なることがあり、優れた提案を選択するうえで助成金審査委員会は責務を果たしていないことが研究によって示されています。 資金調達が厳しくなる中で、資金の行く先は保守的なプロジェクトを行う少人数の上席研究者へと集中してきました。 その結果、非常に競争の激しい資金調達環境が生み出され、歪んだインセンティブを根付かせ、イノベーションを妨げることになりました。
+研究によると、同じ提案を異なる審査委員会に提出すると結果が大きく異なるため、助成金審査委員会は質の高い提案を選択する能力が低いことが示されています。資金が不足するにつれて、より知的保守的なプロジェクトを持つ、より少数の上級研究者に資金が集中するようになりました。その結果、競争が激化する資金調達の状況が生まれ、歪んだインセンティブが定着し、イノベーションが阻害されています。
 
-DAOとWeb3によって培われた各種インセンティブモデルを広く試すことで、現在の破綻した資金調達モデルを食い止めることができるかもしれません。 [遡及的な公共財ファンディング](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[クアドラティックファンディング](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[DAOガバナンス](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead)、[トークン化されたインセンティブ構造](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)は、科学の資金調達に革命を起こしうるWeb3ツールの一部です。
+Web3は、DAOやWeb3全般によって開発されたさまざまなインセンティブモデルを実験することで、この破綻した資金調達モデルを破壊する可能性を秘めています。[遡及的公共財資金調達 (RPGF)](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[クアドラティック・ファンディング](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[DAOガバナンス](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead)、および[トークン化されたインセンティブ構造](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)は、科学の資金調達に革命をもたらす可能性のあるWeb3ツールの一部です。
 
 ### IPの所有権と開発 {#ip-ownership}
 
-従来の科学において知的財産(IP)は大きな問題となっています。大学で身動きが取れない状況に陥っていたり、バイオテクノロジー業界で応用されていなかったり、評価ができない状態になってしまっています。 しかし、Web3は[非代替性トークン(NFT)](/glossary/#nft)を使用することで、デジタル資産(科学データや記事など)の所有権を非常にうまく扱うことができます。
+知的財産 (IP) は、伝統的な科学において大きな問題です。大学に留まったままになったり、バイオテクノロジー企業で未使用になったりすることから、価値を評価するのが非常に難しいことまで様々です。しかし、（科学データや論文などの）デジタル資産の所有権は、[非代替性トークン (NFT)](/glossary/#nft)を使用してWeb3が非常にうまく機能する分野です。
 
-NFTが将来の取引の収益を元の作成者に還元できるように、透明性のある価値の帰属チェーンを確立することができます。これにより、研究者やDAOのような管理団体、そしてデータの収集元となった被験者へも報酬を与えることができます。
+NFTが将来のトランザクションの収益を元のクリエイターに還元できるのと同じように、透明性のある価値帰属チェーンを確立して、研究者、管理機関（DAOなど）、さらにはデータが収集された対象者に報酬を与えることができます。
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6)は、実施されている研究実験の分散型データリポジトリへの鍵として機能し、NFTや[DeFi](/glossary/#defi)の金融化(フラクショナル化からレンディングプール、価値評価まで)に接続することも可能です。 また、[VitaDAO](https://www.vitadao.com/)のようなDAOなど、ネイティブにオンチェーンのエンティティが、研究を直接オンチェーンで実施することも可能になります。
-譲渡不可能な["ソウルバウンド"トークン](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)の登場は、個人が自身のイーサリアムアドレスに紐づいた経験や信用情報を証明することを可能にするため、DeSciにおいて重要な役割を果たす可能性があります。
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6)は、実施されている研究実験の分散型データリポジトリへの鍵としても機能し、NFTや[分散型金融 (DeFi)](/glossary/#defi)の金融化（細分化からレンディングプール、価値評価まで）に接続できます。また、[VitaDAO](https://www.vitadao.com/)のようなDAOなどのネイティブなオンチェーンエンティティが、直接オンチェーンで研究を行うことも可能にします。
+譲渡不可能な[「ソウルバウンド」トークン](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)の登場も、個人がイーサリアムアドレスにリンクされた経験や資格を証明できるようにすることで、DeSciにおいて重要な役割を果たす可能性があります。
 
-### データストレージ、アクセス、アーキテクチャ {#data-storage}
+### データの保存、アクセス、アーキテクチャ {#data-storage}
 
-Web3の様式を活用することで科学データへのアクセスが大幅に向上し、分散ストレージによって研究成果を大災害から守ることができます。
+Web3のパターンを使用することで、科学データへのアクセスを大幅に向上させることができ、分散型ストレージにより、壊滅的な出来事から研究を生き残らせることができます。
 
-起点となるシステムは、適切かつ検証可能な認証情報を備えた分散型アイデンティティでアクセスできる必要があります。 そうすることで、冗長性や検閲耐性、結果の再現を可能にし、さらには複数の関係者が協力してデータセットに新しいデータを追加できるようになり、信頼のおける関係者によって機密データを安全に再生することができます。 [コンピュート・トゥ・データ](https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol)のような秘匿コンピューティング手法は、生データの複製に代わるアクセスメカニズムを提供し、最も機密性の高いデータのために信頼できる研究環境を創出します。 信頼できる研究環境は、研究者がコードやプラクティスを共有するための標準化された環境を使用してオンサイトで安全にデータと連携できるエコシステムを作成することで、データプライバシーとコラボレーションの将来を見据えたソリューションとして、[NHSによって言及されています](https://medium.com/weavechain/whats-in-store-for-the-future-of-healthcare-data-b6398745fbbb)。
+出発点は、適切な検証可能なクレデンシャルを保持する分散型アイデンティティ (DID)がアクセスできるシステムでなければなりません。これにより、機密データを信頼できる当事者によって安全に複製できるようになり、冗長性と検閲耐性、結果の再現、さらには複数の当事者が協力してデータセットに新しいデータを追加する機能が可能になります。[コンピュート・トゥ・データ](https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol)のようなコンフィデンシャル・コンピューティング手法は、生データの複製に代わるアクセス・メカニズムを提供し、最も機密性の高いデータのための信頼できる研究環境 (Trusted Research Environments) を構築します。信頼できる研究環境は、コードや実践を共有するための標準化された環境を使用して、研究者がオンサイトで安全にデータを扱えるエコシステムを構築することにより、データプライバシーとコラボレーションの未来志向のソリューションとして[NHSによって言及されています](https://medium.com/weavechain/whats-in-store-for-the-future-of-healthcare-data-b6398745fbbb)。
 
-柔軟なWeb3データソリューションは、上記のシナリオをサポートし、研究者がアクセス許可や手数料なしで公共財を作成できる真のオープンサイエンスの基盤を提供します。 IPFS、Arweave、FilecoinなどのWeb3パブリックデータソリューションは、分散化のために最適化されています。 たとえば、dClimateは、気象観測所や予測気候モデルなどを含む、気候や気象データへの普遍的なアクセスを提供しています。
+柔軟なWeb3データソリューションは上記のシナリオをサポートし、研究者がアクセス許可や料金なしで公共財を作成できる、真のオープンサイエンスの基盤を提供します。IPFS、Arweave、ファイルコインなどのWeb3パブリックデータソリューションは、分散化に最適化されています。たとえばdClimateは、気象観測所や予測気候モデルからのデータを含む、気候および気象データへの普遍的なアクセスを提供します。
 
 ## 参加する {#get-involved}
 
-プロジェクトを探索し、DeSciコミュニティに参加してください。
+プロジェクトを探索し、DeSciコミュニティに参加しましょう。
 
-- [DeSci.Global: 世界的なイベントとミートアップカレンダー](https://desci.global)
-- [Blockchain for Science Telegram](https://t.me/BlockchainForScience)
+- [DeSci.Global: グローバルイベントとミートアップのカレンダー](https://desci.global)
+- [Blockchain for Science テレグラム](https://t.me/BlockchainForScience)
 - [Molecule: 研究プロジェクトへの資金提供と資金調達](https://www.molecule.xyz/)
-- [VitaDAO: 長寿研究のためのスポンサー付き研究契約を通じて資金提供を受ける](https://www.vitadao.com/)
-- [ResearchHub: 科学的成果を投稿し、仲間と会話する](https://www.researchhub.com/)
+- [VitaDAO: 長寿研究のためのスポンサー付き研究契約を通じた資金調達](https://www.vitadao.com/)
+- [ResearchHub: 科学的結果を投稿し、ピアと会話に参加する](https://www.researchhub.com/)
 - [dClimate API: 分散型コミュニティによって収集された気候データをクエリする](https://www.dclimate.net/)
-- [DeSci Foundation: DeSci出版ツールビルダー](https://descifoundation.org/)
+- [DeSci Foundation: DeSci出版ツールのビルダー](https://descifoundation.org/)
 - [DeSci.World: ユーザーが分散型科学を閲覧し、関与するためのワンストップショップ](https://desci.world)
-- [OceanDAO: データ関連科学のためのDAOによる資金調達](https://oceanprotocol.com/)
+- [OceanDAO: データ関連科学のためのDAOガバナンスによる資金調達](https://oceanprotocol.com/)
 - [Opscientia: オープンな分散型科学ワークフロー](https://opsci.io/research/)
-- [Bio.xyz: バイオテクノロジーDAOまたはDeSciプロジェクトのための資金調達](https://www.bio.xyz/)
+- [Bio.xyz: バイオテクノロジーDAOまたはDeSciプロジェクトの資金調達](https://www.bio.xyz/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [IdeaMarkets: 分散型科学の信頼性を実現](https://ideamarket.io/)
+- [IdeaMarkets: 分散型の科学的信頼性を可能にする](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
-- [ValleyDAO: 合成生物学研究に資金提供とトランスレーショナルサポートを提供するオープンなグローバルコミュニティ](https://www.valleydao.bio)
-- [Cerebrum DAO: 脳の健康を促進し、神経変性を予防するためのソリューションのソーシングと育成](https://www.cerebrumdao.com/)
-- [CryoDAO: 人体冷凍保存分野のムーンショット研究への資金提供](https://www.cryodao.org)
-- [Elata: 精神医学の未来に発言権を持つ](https://www.elata.bio/)
+- [ValleyDAO: 合成生物学研究のための資金調達とトランスレーショナルサポートを提供するオープンでグローバルなコミュニティ](https://www.valleydao.bio)
+- [Cerebrum DAO: 脳の健康を促進し、神経変性を防ぐためのソリューションの調達と育成](https://www.cerebrumdao.com/)
+- [CryoDAO: 凍結保存分野におけるムーンショット研究への資金提供](https://www.cryodao.org)
+- [Elata: 脳が日常のアプリを動かすプラットフォーム](https://www.elata.bio/)
 
-新しいプロジェクトの掲載提案を歓迎します。まずは[掲載ポリシー](/contributing/adding-desci-projects/)をご覧ください。
+リストに追加する新しいプロジェクトの提案を歓迎します。まずは[掲載ポリシー](/contributing/adding-desci-projects/)をご覧ください！
 
-## 参考リンク {#further-reading}
+## 参考文献 {#further-reading}
 
 - [Jocelynn PearlとUltrarareによるDeSci Wiki](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
-- [Jocelynn Pearlによる分散型バイオテクノロジーのガイド(a16z future)](https://future.a16z.com/a-guide-to-decentralized-biotech/)
+- [a16z futureのためのJocelynn Pearlによる分散型バイオテクノロジーガイド](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSciの事例](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSciガイド](https://future.com/what-is-decentralized-science-aka-desci/)
-- [分散型科学リソース](https://www.vincentweisser.com/desci)
-- [Moleculeのバイオ医薬品IP-NFT - 技術的説明](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
-- [Jon Starr著『トラストが不要な科学のシステムの構築』](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
-- [Paul Kohlhaas - DeSci: 分散型科学の未来(ポッドキャスト)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
-- [分散型科学のための能動的推論オントロジー: 状況的意味形成から認識論的コモンズまで](https://zenodo.org/record/6320575)
-- [Samuel Akinosho著『DeSci: 研究の未来』](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
-- [Nadia著『科学への資金提供(エピローグ: DeSciと新しい暗号プリミティブ)』](https://nadia.xyz/science-funding)
-- [分散化が医薬品開発を破壊する](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [DeSci(分散型科学)とは何か](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [分散型科学のリソース](https://www.vincentweisser.com/desci)
+- [MoleculeのバイオファーマIP-NFT - 技術的説明](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
+- [Jon Starrによるトラストレスな科学システムの構築](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
+- [Paul Kohlhaas - DeSci: 分散型科学の未来 (ポッドキャスト)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
+- [分散型科学のための能動的推論オントロジー: 状況的センスメイキングから認識論的コモンズへ](https://zenodo.org/record/6320575)
+- [Samuel AkinoshoによるDeSci: 研究の未来](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
+- [Nadiaによる科学の資金調達 (エピローグ: DeSciと新しい暗号資産プリミティブ)](https://nadia.xyz/science-funding)
+- [分散化が医薬品開発を破壊している](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [DeSci（分散型科学）とは何か？](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
-### 動画 {#videos}
+### ビデオ {#videos}
 
-- [分散型科学とは何か](https://www.youtube.com/watch?v=-DeMklVWNdA)
-- [Vitalik Buterinと科学者Aubrey de Greyの対談: 長寿研究と暗号通貨の交差点](https://www.youtube.com/watch?v=x9TSJK1widA)
-- 科学出版は破綻している。 Web3はそれを修正できるか？](https://www.youtube.com/watch?v=WkvzYgCvWj8)
-- [Juan Benet - DeSci、独立研究室、大規模データサイエンス](https://www.youtube.com/watch?v=zkXM9H90g_E)
-- [Sebastian Brunemeier - DeSciはいかにして生物医学研究とベンチャーキャピタルを変革できるか](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
-- [Paige Donner - Web3とブロックチェーンによるオープンサイエンスのツーリング](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)
+- [分散型科学とは？](https://www.youtube.com/watch?v=-DeMklVWNdA)
+- [ヴィタリック・ブテリンと科学者Aubrey de Greyによる、長寿研究と暗号資産の交差点に関する対話](https://www.youtube.com/watch?v=x9TSJK1widA)
+- [科学出版は壊れている。Web3はそれを修正できるか？](https://www.youtube.com/watch?v=WkvzYgCvWj8)
+- [Juan Benet - DeSci、独立系ラボ、大規模データサイエンス](https://www.youtube.com/watch?v=zkXM9H90g_E)
+- [Sebastian Brunemeier - DeSciが生物医学研究とベンチャーキャピタルをどのように変革できるか](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - Web3とブロックチェーンによるオープンサイエンスのツール化](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

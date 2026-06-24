@@ -1,72 +1,82 @@
 ---
 title: Data a analytika
-description: "Jak získat on-chainové analýzy a data pro použití ve vašich dapps"
+description: "Jak získat onchain analytiku a data pro použití ve vašich decentralizovaných aplikacích (dapp)"
 lang: cs
 ---
 
-## Úvod {#Introduction}
+## Úvod {#introduction}
 
-S rostoucím využíváním sítě se stále větší množství cenných informací nachází v on-chain datech. Jak objem dat rychle narůstá, výpočty a agregace těchto informací za účelem reportování nebo provozu dappek se mohou stát časově i procesně náročnými.
+S tím, jak využití sítě neustále roste, bude v onchain datech existovat stále větší množství cenných informací. Vzhledem k rychlému nárůstu objemu dat se může výpočet a agregace těchto informací za účelem reportování nebo řízení decentralizované aplikace (dapp) stát časově a procesně náročným úkolem.
 
-Využití stávajících poskytovatelů dat může urychlit vývoj, přinést přesnější výsledky a snížit náklady na údržbu. To umožní týmům vývojářů dappek soustředit se na hlavní funkce, které jejich projekt poskytuje.
+Využití stávajících poskytovatelů dat může urychlit vývoj, přinést přesnější výsledky a snížit nároky na průběžnou údržbu. To umožní týmu soustředit se na základní funkce, které se jejich projekt snaží poskytovat.
 
 ## Předpoklady {#prerequisites}
 
-Měli byste rozumět základnímu konceptu [průzkumníků bloků](/developers/docs/data-and-analytics/block-explorers/), abyste lépe pochopili jejich použití v kontextu analýzy dat. Kromě toho se seznamte s konceptem [indexu](/glossary/#index), abyste pochopili výhody, které přidávají k designu systému.
+Měli byste rozumět základnímu konceptu [průzkumníků bloků](/developers/docs/data-and-analytics/block-explorers/), abyste lépe pochopili jejich využití v kontextu datové analytiky. Kromě toho se seznamte s konceptem [indexu](/glossary/#index), abyste pochopili výhody, které přinášejí do návrhu systému.
 
-Z hlediska základů architektury pochopení, co jsou [API](https://www.wikipedia.org/wiki/API) a [REST](https://www.wikipedia.org/wiki/Representational_state_transfer), a to i jen teoreticky.
+Z hlediska architektonických základů je dobré alespoň teoreticky chápat, co je to [API](https://www.wikipedia.org/wiki/API) a [REST](https://www.wikipedia.org/wiki/Representational_state_transfer).
 
 ## Průzkumníky bloků {#block-explorers}
 
-Mnoho [průzkumníků bloků](/developers/docs/data-and-analytics/block-explorers/) nabízí [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) brány, které vývojářům poskytnou přehled o datech v reálném čase o blocích, transakcích, validátorech, účtech a dalších on-chain aktivitách.
+Mnoho [průzkumníků bloků](/developers/docs/data-and-analytics/block-explorers/) nabízí [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) brány, které vývojářům poskytnou přehled o datech v reálném čase týkajících se bloků, transakcí, validátorů, účtů a dalších onchain aktivit.
 
-Vývojáři pak mohou tato data zpracovávat a transformovat, aby svým uživatelům poskytli jedinečné vhledy a interakce s [blockchainem](/glossary/#blockchain). Například [Etherscan](https://etherscan.io) a [Blockscout](https://eth.blockscout.com) poskytují exekuční a konsensuální data pro každý 12s slot.
+Vývojáři pak mohou tato data zpracovávat a transformovat, aby svým uživatelům poskytli jedinečné poznatky a interakce s [blockchainem](/glossary/#blockchain). Například [Etherscan](https://etherscan.io) a [Blockscout](https://eth.blockscout.com) poskytují data o provádění a konsensu pro každý 12sekundový slot.
 
 ## The Graph {#the-graph}
 
-[The Graph](https://thegraph.com/) je indexovací protokol, který poskytuje snadný způsob dotazování se na blockchainová data prostřednictvím otevřených API známých jako podgrafy.
+[The Graph](https://thegraph.com/) je indexovací protokol, který poskytuje snadný způsob dotazování na blockchainová data prostřednictvím otevřených API známých jako podgrafy.
 
-Díky The Graph mohou vývojáři využívat:
+S The Graph mohou vývojáři těžit z:
 
-- Decentralizované indexování: Umožňuje indexování blockchainových dat prostřednictvím několika indexerů, čímž se eliminuje jediný bod selhání.
-- GraphQL dotazy: Poskytuje výkonné rozhraní GraphQL pro dotazování na indexovaná data, díky čemuž je získávání dat velmi jednoduché.
-- Přizpůsobení: Definujte si vlastní logiku pro transformaci a ukládání blockchainových dat a znovu použijte podgrafy publikované jinými vývojáři v síti The Graph.
+- Decentralizovaného indexování: Umožňuje indexovat blockchainová data prostřednictvím více indexerů, čímž se eliminuje jakýkoli jediný bod selhání.
+- GraphQL dotazů: Poskytuje výkonné rozhraní GraphQL pro dotazování na indexovaná data, díky čemuž je získávání dat velmi jednoduché.
+- Přizpůsobení: Definujte si vlastní logiku pro transformaci a ukládání blockchainových dat a znovu využijte podgrafy publikované jinými vývojáři v síti The Graph.
 
-Postupujte podle tohoto [rychlého průvodce](https://thegraph.com/docs/en/quick-start/) a vytvořte, nasaďte a dotazujte se na podgraf během 5 minut.
+Postupujte podle tohoto [průvodce pro rychlý start](https://thegraph.com/docs/en/quick-start/) a vytvořte, nasaďte a dotazujte se na podgraf během 5 minut.
 
-## Diverzita klientů {#client-diversity}
+## Klientská diverzita {#client-diversity}
 
-[Diverzita klientů](/developers/docs/nodes-and-clients/client-diversity/) je důležitá pro celkové zdraví sítě Ethereum, protože poskytuje odolnost vůči chybám a exploitům. Nyní existuje několik dashboardů pro diverzitu klientů, včetně [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) a [Ethernodes](https://ethernodes.org/).
+[Klientská diverzita](/developers/docs/nodes-and-clients/client-diversity/) je důležitá pro celkové zdraví sítě Ethereum, protože poskytuje odolnost vůči chybám a zneužitím. Nyní existuje několik řídicích panelů klientské diverzity, včetně [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) a [Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) předzpracovává blockchainová data do tabulek relační databáze (DuneSQL), umožňuje uživatelům dotazovat se na blockchainová data pomocí SQL a vytvářet dashboardy na základě výsledků dotazů. On-chainová data jsou uspořádána do 4 surových tabulek: `blocks`, `transactions`, (událostí) `logs` a (volání) `traces`. Populární kontrakty a protokoly byly dekódovány a každý z nich má svou vlastní sadu událostních a volacích tabulek. Tyto tabulky jsou dále zpracovávány a organizovány do abstraktních tabulek podle typu protokolů, například dex, půjčky, stablecoiny atd.
+[Dune Analytics](https://dune.com/) předzpracovává blockchainová data do tabulek relační databáze (DuneSQL), umožňuje uživatelům dotazovat se na blockchainová data pomocí SQL a vytvářet řídicí panely na základě výsledků dotazů. Onchain data jsou uspořádána do 4 surových tabulek: `blocks`, `transactions`, (události) `logs` a (volání) `traces`. Populární kontrakty a protokoly byly dekódovány a každý má svou vlastní sadu tabulek událostí a volání. Tyto tabulky událostí a volání jsou dále zpracovávány a organizovány do abstrakčních tabulek podle typu protokolů, například dex, půjčování, stablecoiny atd.
 
 ## SQD {#sqd}
 
-[SQD](https://sqd.dev/) je decentralizovaná, hyperškálovatelná datová platforma optimalizovaná pro poskytování efektivního přístupu bez oprávnění k velkým objemům dat. V současné době poskytuje historická on-chainová data, včetně protokolů událostí, potvrzení o transakcích, stop a rozdílů stavů pro každou transakci. SQD nabízí výkonnou sadu nástrojů pro vytváření vlastních kanálů pro extrakci a zpracování dat a dosahuje rychlosti indexování až 150k bloků za sekundu.
+[SQD](https://sqd.dev/) je decentralizovaná hyperškálovatelná datová platforma optimalizovaná pro poskytování efektivního přístupu k velkým objemům dat nevyžadujícího povolení. V současné době poskytuje historická onchain data, včetně protokolů událostí, účtenek transakcí, trasování a rozdílů stavů pro jednotlivé transakce. SQD nabízí výkonnou sadu nástrojů pro vytváření vlastních kanálů pro extrakci a zpracování dat, přičemž dosahuje rychlosti indexování až 150 tisíc bloků za sekundu.
 
-Chcete-li začít, navštivte [dokumentaci](https://docs.sqd.dev/) nebo si prohlédněte [příklady pro EVM](https://github.com/subsquid-labs/squid-evm-examples) toho, co můžete s SQD vytvořit.
+Chcete-li začít, navštivte [dokumentaci](https://docs.sqd.dev/) nebo se podívejte na [příklady EVM](https://github.com/subsquid-labs/squid-evm-examples) toho, co můžete pomocí SQD vytvořit.
 
 ## Síť SubQuery {#subquery-network}
 
-[SubQuery](https://subquery.network/) je přední indexátor dat, který vývojářům poskytuje rychlá, spolehlivá, decentralizovaná a přizpůsobená API pro jejich web3 projekty. SubQuery umožňuje vývojářům z více než 165 ekosystémů (včetně Etherea) používat bohatě indexovaná data k vytváření intuitivních a imersivních zážitků pro jejich uživatele. Síť SubQuery pohání vaše nezastavitelné aplikace díky odolné a decentralizované infrastruktuře. Použijte vývojářskou sadu nástrojů SubQuery pro blockchain k vytváření web3 aplikací budoucnosti, aniž byste museli trávit čas budováním vlastního backendu pro zpracování dat.
+[SubQuery](https://subquery.network/) je přední indexer dat, který vývojářům poskytuje rychlá, spolehlivá, decentralizovaná a přizpůsobená API pro jejich Web3 projekty. SubQuery poskytuje vývojářům z více než 165 ekosystémů (včetně Etherea) bohatá indexovaná data k budování intuitivních a pohlcujících zážitků pro jejich uživatele. Síť SubQuery pohání vaše nezastavitelné aplikace pomocí odolné a decentralizované infrastrukturní sítě. Použijte sadu nástrojů pro vývojáře blockchainu od SubQuery k budování Web3 aplikací budoucnosti, aniž byste trávili čas budováním vlastního backendu pro činnosti zpracování dat.
 
-Začněte tím, že navštívíte [rychlého průvodce pro Ethereum](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) a během několika minut začnete indexovat data z blockchainu Etherea v místním prostředí Dockeru pro účely testování před nasazením na [spravovanou službu SubQuery](https://managedservice.subquery.network/) nebo do [decentralizované sítě SubQuery](https://app.subquery.network/dashboard).
+Chcete-li začít, navštivte [průvodce pro rychlý start na Ethereu](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) a začněte indexovat blockchainová data Etherea během několika minut v lokálním prostředí Docker pro testování, než přejdete do ostrého provozu na [spravované službě SubQuery](https://managedservice.subquery.network/) nebo na [decentralizované síti SubQuery](https://app.subquery.network/dashboard).
 
-## Dotazovací jazyk EVM {#evm-query-language}
+## Codex {#codex}
 
-Dotazovací jazyk EVM (EQL) je jazyk podobný SQL určený k dotazování na řetězce EVM (Ethereum Virtual Machine). Konečným cílem EQL je podporovat komplexní relační dotazy na prvky první třídy řetězce EVM (bloky, účty a transakce) a zároveň poskytovat vývojářům a výzkumníkům ergonomickou syntaxi pro každodenní použití. S EQL mohou vývojáři získávat blockchainová data pomocí známé syntaxe podobné SQL a eliminovat tak potřebu složitého šablonovitého kódu. EQL podporuje standardní požadavky na blockchainová data (např. získání nonce a zůstatku účtu na Ethereu nebo získání aktuální velikosti bloku a časového razítka) a neustále přidává podporu pro složitější požadavky a sady funkcí.
+[Codex](https://www.codex.io/) je API pro blockchainová data v reálném čase, které poskytuje obohacená data pro více než 70 milionů tokenů napříč více než 80 sítěmi. Vývojáři mají přístup ke strukturovaným cenám tokenů, zůstatkům v peněženkách, historii transakcí a agregované analytice (objem, likvidita, unikátní peněženky), aniž by museli udržovat vlastní indexovací infrastrukturu. Codex podporuje doručování dat za méně než sekundu prostřednictvím integrací WebSocket a webhooků.
+
+Chcete-li začít, navštivte [dokumentaci](https://docs.codex.io), vyzkoušejte [Explorer](https://docs.codex.io/explore) nebo se zaregistrujte na [řídicím panelu](https://dashboard.codex.io/signup).
+
+## EVM Query Language {#evm-query-language}
+
+EVM Query Language (EQL) je jazyk podobný SQL navržený pro dotazování na řetězce EVM (Ethereum Virtual Machine). Konečným cílem EQL je podporovat složité relační dotazy na prvotřídní entity EVM řetězce (bloky, účty a transakce) a zároveň poskytnout vývojářům a výzkumníkům ergonomickou syntaxi pro každodenní použití. S EQL mohou vývojáři načítat blockchainová data pomocí známé syntaxe podobné SQL a eliminovat potřebu složitého standardního (boilerplate) kódu. EQL podporuje standardní požadavky na blockchainová data (např. získání nonce a zůstatku účtu na Ethereu nebo načtení aktuální velikosti bloku a časového razítka) a neustále přidává podporu pro složitější požadavky a sady funkcí.
 
 ## Další čtení {#further-reading}
 
-- [Zkoumání krypto dat I: Architektury datových toků](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Přehled sítě The Graph](https://thegraph.com/docs/en/about/)
-- [Hřiště pro dotazy The Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [Příklady kódu API na EtherScanu](https://etherscan.io/apis#contracts)
+- [Zkoumání krypto dat I: Architektury toku dat](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
+- [Přehled sítě Graph](https://thegraph.com/docs/en/about/)
+- [Hřiště pro dotazy Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Příklady kódu API na Etherscanu](https://etherscan.io/apis#contracts)
 - [Dokumentace API na Blockscoutu](https://docs.blockscout.com/devs/apis)
-- [Průzkumník řetězové vazby Beaconcha.in](https://beaconcha.in)
+- [Průzkumník Beacon chainu Beaconcha.in](https://beaconcha.in)
 - [Základy Dune](https://docs.dune.com/#dune-basics)
-- [Rychlý průvodce pro Ethereum od SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [Průvodce pro rychlý start SubQuery na Ethereu](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Přehled sítě SQD](https://docs.sqd.dev/)
-- [Dotazovací jazyk EVM](https://eql.sh/blog/alpha-release-notes)
+- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+
+## Návody: Data a analytika / SQL na Ethereu {#tutorials}
+
+- [Naučte se základní témata Etherea pomocí SQL](/developers/tutorials/learn-foundational-ethereum-topics-with-sql/) _– Dotazujte se na onchain data Etherea pomocí SQL, abyste pochopili základy transakcí, bloků a gasu._

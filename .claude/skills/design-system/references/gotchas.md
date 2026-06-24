@@ -26,7 +26,7 @@ The bare Radix tooltip (`@/components/ui/tooltip`) is hover-only and has no mobi
 
 ### Import heroes from `@/components/Hero`
 
-Heroes are named exports of `@/components/Hero`: `PageHero` (the workhorse), `HubHero`, `MdxHero`, `HomeHero`. `PageHero` takes discrete props -- `breadcrumbs` **or** `header`, `heroImg`, `title`, `description`, `buttons`, `variant`.
+Heroes are named exports of `@/components/Hero`: `PageHero` (the workhorse), `HubHero`, `HomeHero`. `PageHero` takes discrete props -- `breadcrumbs` **or** `header`, `heroImg`, `title`, `description`, `buttons`, `variant`. (The former `MdxHero` was removed -- use `PageHero` text-only with `variant="no-divider"`.)
 
 ## Component Behaviors You'd Miss
 
@@ -142,9 +142,9 @@ Configured in `base.css` lines 97-107. Persian fallback. Triggered by `:lang(ur)
 
 ### One `<h1>` per page
 
-`MdxHero` and `HubHero` both render `<h1>`. Most React-page heroes do. Most markdown layouts auto-render the page `title` from frontmatter as the `<h1>`.
+`PageHero` and `HubHero` both render `<h1>`. Most React-page heroes do. Most markdown layouts auto-render the page `title` from frontmatter as the `<h1>`.
 
-**Exception: the `Static` layout**. It does NOT auto-render `title` as `<h1>`. Pages on the `Static` layout MUST include `# Title` in the markdown body to provide the page heading. That's the only place a markdown `# Title` is correct -- on every other layout, a markdown `# Title` creates a duplicate `<h1>`.
+The `Static` layout now follows this same rule: it renders `frontmatter.title` as the `<h1>` through its hero (`PageHero` for normal pages, `HubHero` for the guides hub), so a markdown `# Title` in the body is **redundant** -- it's hidden via CSS (`**:[h1]:hidden` in `Static.tsx`) and the English content has had it removed. Do NOT add a `# Title` to Static markdown. (The CSS hide is transitional, covering non-English content that still carries the legacy `#` line until the pipeline strips it.)
 
 ### Eyebrow text in `HubHero` is rendered as `<h1>`
 

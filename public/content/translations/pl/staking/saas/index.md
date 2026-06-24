@@ -1,6 +1,6 @@
 ---
 title: "Staking jako usługa"
-description: "Dowiedz się o stakingu jako usłudze"
+description: "Dowiedz się więcej o stakingu jako usłudze"
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
@@ -8,88 +8,88 @@ image: /images/staking/leslie-saas.png
 alt: "Nosorożec Leslie unoszący się w chmurach."
 sidebarDepth: 2
 summaryPoints:
-  - Działanie Twojego walidatora zapewniają zewnętrzni operatorzy węzłów
-  - Świetna opcja dla każdego, kto ma 32 ETH i nie czuje się komfortowo mając do czynienia z techniczną złożonością uruchamiania węzła
-  - Zredukuj zakres koniecznego zaufania i zachowaj kontrolę nad swoimi kluczami
+  - Zewnętrzni operatorzy węzłów zajmują się obsługą Twojego klienta walidatora
+  - Świetna opcja dla każdego, kto posiada 32 ETH, ale nie czuje się na siłach, aby radzić sobie ze złożonością techniczną prowadzenia węzła
+  - Zmniejsz potrzebę zaufania i zachowaj kontrolę nad swoimi kluczami wypłaty
 ---
 
-## Czym są usługi stakingowe? {#what-is-staking-as-a-service}
+## Czym jest staking jako usługa? {#what-is-staking-as-a-service}
 
-Usługi stakingowe („SaaS”) reprezentują kategorię usług stakingowych, w których użytkownik deponuje własne 32 ETH dla walidatora, ale deleguje operacje węzła do zewnętrznego operatora. Proces ten zwykle wymaga bycia przeprowadzonym przez początkową konfigurację, w tym generowanie kluczy i depozyt, a następnie przesłanie kluczy podpisujących do operatora. Dzięki temu usługa może obsługiwać Twój walidator w Twoim imieniu, zwykle za miesięczną opłatą.
+Staking jako usługa (ang. staking as a service – SaaS) to kategoria usług stakingowych, w których deponujesz własne 32 ETH dla walidatora, ale delegujesz operacje węzła zewnętrznemu operatorowi. Proces ten zazwyczaj obejmuje przeprowadzenie przez początkową konfigurację, w tym generowanie kluczy i depozyt, a następnie przesłanie kluczy podpisywania do operatora. Pozwala to usłudze na obsługę walidatora w Twoim imieniu, zazwyczaj za miesięczną opłatą.
 
-## Dlaczego warto postawić na usługę? Dlaczego stakować za pośrednictwem usługi? {#why-stake-with-a-service}
+## Dlaczego warto stakować za pomocą usługi? {#why-stake-with-a-service}
 
-Protokół Ethereum nie wspiera natywnie delegowania stawek, więc stworzone zostały te usługi, aby zaspokoić zapotrzebowanie. Jeśli masz dostępne na poczet stakingu 32 ETH, ale nie czujesz się komfortowo z obsługą sprzętu, usługi SaaS pozwalają Ci na zdelegowanie tych czynności, podczas gdy Ty nadal możesz uzyskiwać natywne nagrody za blok.
+Protokół [Ethereum](/) nie obsługuje natywnie delegowania stawki, dlatego usługi te zostały stworzone, aby zaspokoić to zapotrzebowanie. Jeśli masz 32 ETH do stakowania, ale nie czujesz się komfortowo w pracy ze sprzętem, usługi SaaS pozwalają na delegowanie trudniejszej części, podczas gdy Ty zdobywasz natywne nagrody za bloki.
 
 <Grid>
-  <Card title="Twój własny walidator" emoji=":desktop_computer:" description="Wpłać własne 32 ETH, aby aktywować swój zestaw kluczy do podpisywania, które wezmą udział w konsensusie Ethereum. Monitoruj swoje postępy na dashboardach i obserwuj, jak gromadzą się nagrody w ETH." />
-  <Card title="Łatwy start" emoji="🏁" description="Zapomnij o specyfikacji sprzętu, konfiguracji, utrzymaniu węzła i aktualizacjach. Dostawcy SaaS pozwalają zlecić trudniejszą część: wystarczy, że prześlesz swoje poświadczenia do podpisywania, a oni za niewielką opłatą uruchomią walidatora w Twoim imieniu." />
-  <Card title="Ogranicz swoje ryzyko" emoji=":shield:" description="W wielu przypadkach użytkownicy nie muszą rezygnować z dostępu do kluczy, które umożliwiają wypłatę lub transfer stakowanych środków. Różnią się one od kluczy do podpisywania i mogą być przechowywane osobno, aby ograniczyć (ale nie wyeliminować) ryzyko jako stakera." />
+  <Card title="Twój własny walidator" emoji=":desktop_computer:" description="Zdeponuj własne 32 ETH, aby aktywować swój własny zestaw kluczy do podpisywania, które będą uczestniczyć w konsensusie Ethereum. Monitoruj swoje postępy za pomocą pulpitów nawigacyjnych, aby obserwować, jak gromadzą się te nagrody w ETH." />
+  <Card title="Łatwy start" emoji="🏁" description="Zapomnij o specyfikacjach sprzętowych, konfiguracji, konserwacji węzła i aktualizacjach. Dostawcy SaaS pozwalają na zlecenie najtrudniejszej części na zewnątrz poprzez przesłanie własnych danych uwierzytelniających do podpisywania, co pozwala im na uruchomienie walidatora w Twoim imieniu za niewielką opłatą." />
+  <Card title="Ogranicz swoje ryzyko" emoji=":shield:" description="W wielu przypadkach użytkownicy nie muszą rezygnować z dostępu do kluczy, które umożliwiają wypłatę lub transfer stakowanych środków. Różnią się one od kluczy do podpisywania i mogą być przechowywane oddzielnie, aby ograniczyć (ale nie wyeliminować) Twoje ryzyko jako stakującego." />
 </Grid>
 
 <StakingComparison page="saas" />
 
 ## Co należy wziąć pod uwagę {#what-to-consider}
 
-Powstaje coraz więcej dostawców SaaS, którzy pomogą Ci stakować Twoje ETH, ale każdy z nich ma swoje własne korzyści i ryzyka. Wszystkie opcje SaaS wymagają dodatkowych założeń dotyczących zaufania w porównaniu do domowego stakingu. Opcje SaaS mogą zawierać dodatkowy kod opakowujący klienta Ethereum, który nie będzie otwarty lub skontrolowany. SaaS ma również niekorzystny wpływ na decentralizację sieci. W zależności od konfiguracji możesz nie mieć możliwości kontrolowania swojego walidatora — operator może działać nieuczciwie, używając twojego ETH.
+Istnieje rosnąca liczba dostawców SaaS, którzy pomogą Ci stakować Twoje ETH, ale wszyscy mają swoje własne korzyści i ryzyka. Wszystkie opcje SaaS wymagają dodatkowych założeń dotyczących zaufania w porównaniu do stakingu domowego. Opcje SaaS mogą posiadać dodatkowy kod otaczający klienty Ethereum, który nie jest otwarty ani możliwy do audytu. SaaS ma również szkodliwy wpływ na decentralizację sieci. W zależności od konfiguracji, możesz nie kontrolować swojego walidatora – operator może działać nieuczciwie, wykorzystując Twoje ETH.
 
-Wskaźniki atrybutów są użyte poniżej, aby zasygnalizować godne uwagi mocne lub słabe strony, jakie może mieć wymieniony dostawca SaaS. Użyj tej sekcji jako odniesienia do sposobu definiowania tych atrybutów podczas wybierania usługi, która pomoże Ci w Twojej przygodzie ze stakingiem.
+Poniżej użyto wskaźników atrybutów, aby zasygnalizować znaczące mocne lub słabe strony, jakie może mieć wymieniony dostawca SaaS. Użyj tej sekcji jako odniesienia do tego, jak definiujemy te atrybuty podczas wyboru usługi, która pomoże Ci w Twojej przygodzie ze stakingiem.
 
 <StakingConsiderations page="saas" />
 
 ## Poznaj dostawców usług stakingowych {#saas-providers}
 
-Poniżej znajduje się kilku dostępnych dostawców SaaS. Skorzystaj z powyższych wskaźników, które oprowadzą cię z tymi usługami
+Poniżej znajduje się kilku dostępnych dostawców SaaS. Użyj powyższych wskaźników, aby pomóc sobie w nawigacji po tych usługach.
 
 <ProductDisclaimer />
 
-### Dostawcy SaaS
+### Dostawcy SaaS {#saas-providers-2}
 
 <StakingProductsCardGrid category="saas" />
 
-Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone <em style={{ textTransform: "uppercase" }}>„różnorodność klientów wykonawczych”</em> i <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu.”</em>
+Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza Twoje ryzyko. Usługi, w przypadku których istnieją dowody na ograniczanie korzystania z klientów większościowych, są oznaczone jako <em style={{ textTransform: "uppercase" }}>„różnorodność klientów warstwy wykonawczej”</em> oraz <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu”.</em>
 
-### Generatory kluczy
+### Generatory kluczy {#key-generators}
 
 <StakingProductsCardGrid category="keyGen" />
 
-Masz sugestię dostawcy usług stakingowych, którego pominęliśmy? Zapoznaj się z naszymi [zasadami umieszczania produktów na liście](/contributing/adding-staking-products/), aby sprawdzić, czy Twój produkt będzie pasował, i przesłać go do recenzji.
+Masz propozycję dostawcy stakingu jako usługi, którego pominęliśmy? Zapoznaj się z naszą [polityką dodawania produktów](/contributing/adding-staking-products/), aby sprawdzić, czy będzie on odpowiedni, i prześlij go do weryfikacji.
 
 ## Często zadawane pytania {#faq}
 
 <ExpandableCard title="Kto przechowuje moje klucze?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-Rozwiązania będą się różnić w zależności od dostawcy, ale zazwyczaj zostaniesz poprowadzony przez konfigurację wszystkich potrzebnych kluczy podpisywania (jeden na 32 ETH) i przesłanie ich do dostawcy, aby umożliwić mu walidację w Twoim imieniu. Same klucze podpisywania nie dają żadnej możliwości wypłaty, transferu ani wydawania środków. Zapewniają jednak możliwość oddawania głosów w celu osiągnięcia konsensusu, co w przypadku niewłaściwego wykonania może skutkować karami offline lub cięciem.
+Ustalenia będą się różnić w zależności od dostawcy, ale zazwyczaj zostaniesz przeprowadzony przez proces konfiguracji wszelkich potrzebnych kluczy podpisywania (jeden na 32 ETH) i przesłania ich do dostawcy, aby umożliwić mu walidację w Twoim imieniu. Same klucze podpisywania nie dają możliwości wypłaty, transferu ani wydawania Twoich środków. Zapewniają one jednak możliwość oddawania głosów w celu osiągnięcia konsensusu, co w przypadku nieprawidłowego wykonania może skutkować karami za bycie offline lub cięciem.
 </ExpandableCard>
 
 <ExpandableCard title="Czyli są dwa zestawy kluczy?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Tak. Każde konto składa się zarówno z kluczy <em>podpisujących</em> BLS, jak i kluczy <em>wypłat</em> BLS. Aby walidator mógł poświadczyć stan łańcucha, uczestniczyć w komitetach synchronizacji i proponować bloki, klucze podpisujące muszą być łatwo dostępne dla klienta walidatora. Muszą one być połączone z Internetem w jakiś sposób, a zatem są z natury uważane za klucze „gorące”. Jest to wymagane, aby walidator mógł poświadczyć, a zatem klucze używane do przesyłania lub wypłacania środków są oddzielone ze względów bezpieczeństwa.
+Tak. Każde konto składa się zarówno z kluczy <em>podpisywania</em> BLS, jak i kluczy <em>wypłaty</em> BLS. Aby walidator mógł poświadczać stan łańcucha, uczestniczyć w komitetach synchronizacji i proponować bloki, klucze podpisywania muszą być łatwo dostępne dla klienta walidatora. Muszą one być w jakiejś formie podłączone do internetu, a zatem z natury są uważane za „gorące” klucze. Jest to wymóg, aby Twój walidator mógł poświadczać, dlatego klucze używane do transferu lub wypłaty środków są oddzielone ze względów bezpieczeństwa.
 
-Klucze wypłaty BLS są używane do podpisywania jednorazowej wiadomości, która deklaruje, na które konto warstwy wykonawczej powinny trafić nagrody za stakowanie i wycofane środki. Po nadaniu tej wiadomości klucze <em>wypłat BLS </em> nie są już potrzebne. Zamiast tego kontrola nad wypłaconymi środkami jest na stałe przekazywana na podany adres. Umożliwia to ustawienie adresu wypłaty zabezpieczonego za pomocą własnych zimnych danych, minimalizując ryzyko środków walidatora, nawet jeśli ktoś inny kontroluje klucze podpisywania walidatora.
+Klucze wypłaty BLS służą do podpisania jednorazowej wiadomości, która deklaruje, na które konto warstwy wykonawczej powinny trafić nagrody za staking i wycofane środki. Po rozgłoszeniu tej wiadomości klucze <em>wypłaty BLS</em> nie są już potrzebne. Zamiast tego kontrola nad wypłaconymi środkami jest na stałe delegowana na podany przez Ciebie adres. Pozwala to na ustawienie adresu wypłaty zabezpieczonego za pomocą własnego zimnego portfela (cold storage), minimalizując ryzyko dla środków walidatora, nawet jeśli ktoś inny kontroluje Twoje klucze podpisywania walidatora.
 
-Aktualizowanie danych uwierzytelniających wypłaty jest wymagane, aby umożliwić wypłaty\*. Proces ten obejmuje generowanie kluczy wypłat przy użyciu mnemonicznej frazy odzyskiwania.
+Aktualizacja danych uwierzytelniających wypłaty jest wymaganym krokiem, aby umożliwić wypłaty\*. Proces ten obejmuje wygenerowanie kluczy wypłaty przy użyciu Twojej mnemonicznej frazy odzyskiwania.
 
-<strong>Pamiętaj, aby bezpiecznie utworzyć kopię zapasową tej frazy seed, w przeciwnym razie nie będziesz w stanie wygenerować kluczy do wypłaty, gdy nadejdzie taka potrzeba.</strong>
+<strong>Upewnij się, że bezpiecznie utworzyłeś kopię zapasową tej frazy odzyskiwania, w przeciwnym razie nie będziesz w stanie wygenerować kluczy wypłaty, gdy nadejdzie na to czas.</strong>
 
-\*Stakerzy, którzy podali adres do wypłat przy pierwszej wpłacie, nie muszą tego ustawiać. Skontaktuj się ze swoim dostawcą SaaS, aby uzyskać pomoc dotyczącą przygotowania walidatora.
+\*Osoby stakujące, które podały adres wypłaty przy początkowym depozycie, nie muszą tego ustawiać. Skontaktuj się ze swoim dostawcą SaaS, aby uzyskać wsparcie dotyczące przygotowania walidatora.
 </ExpandableCard>
 
-<ExpandableCard title="Kiedy mogę wypłacić?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Stakerzy muszą podać adres do wypłaty (jeśli nie podano go przy pierwszej wpłacie), a wypłaty nagród zaczną być wypłacane automatycznie co kilka dni.
+<ExpandableCard title="Kiedy mogę dokonać wypłaty?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+Osoby stakujące muszą podać adres wypłaty (jeśli nie został podany przy początkowym depozycie), a wypłaty nagród zaczną być dystrybuowane automatycznie, okresowo co kilka dni.
 
-Walidatorzy mogą również w pełni wyjść jako walidator, co odblokuje ich pozostałe saldo ETH do wypłaty. Konta, które podały adres wypłaty i zakończyły proces wyjścia, otrzymają całe saldo na adres wypłaty podany podczas następnego przeglądu walidatora.
+Walidatorzy mogą również całkowicie wyjść jako walidator, co odblokuje ich pozostałe saldo ETH do wypłaty. Konta, które podały adres wypłaty w warstwie wykonawczej i zakończyły proces wyjścia, otrzymają całe swoje saldo na podany adres wypłaty podczas następnego cyklu sprawdzania walidatorów (validator sweep).
 
 <ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
 </ExpandableCard>
 
-<ExpandableCard title="Co się stanie, jeśli spotka mnie cięcie?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
-Korzystając z usług dostawcy SaaS, powierzasz obsługę swojego węzła komuś innemu. Wiąże się to z ryzykiem niskiej wydajności węzła, na którą nie masz wpływu. W przypadku, gdy Twój walidator zostanie odcięty, saldo walidatora zostanie ukarane i przymusowo usunięte z puli walidatorów.
+<ExpandableCard title="Co się stanie, jeśli zostanę ukarany cięciem?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+Korzystając z usług dostawcy SaaS, powierzasz obsługę swojego węzła komuś innemu. Wiąże się to z ryzykiem słabej wydajności węzła, nad którą nie masz kontroli. W przypadku cięcia Twojego walidatora, saldo walidatora zostanie ukarane i przymusowo usunięte z puli walidatorów.
 
-Po zakończeniu procesu cięcia/wyjścia środki te zostaną przelane na adres wypłaty przypisany do walidatora. Wymaga to podania adresu wypłaty w celu włączenia. Mogło to zostać dostarczone przy pierwszej wpłacie. Jeśli nie, klucze wypłaty walidatora będą musiały zostać użyte do podpisania wiadomości deklarującej adres wypłaty. Jeśli nie podano adresu wypłaty, środki pozostaną zablokowane do czasu jego podania.
+Po zakończeniu procesu cięcia/wyjścia środki te zostaną przetransferowane na adres wypłaty przypisany do walidatora. Wymaga to podania adresu wypłaty, aby było to możliwe. Mógł on zostać podany przy początkowym depozycie. Jeśli nie, klucze wypłaty walidatora będą musiały zostać użyte do podpisania wiadomości deklarującej adres wypłaty. Jeśli nie podano adresu wypłaty, środki pozostaną zablokowane do momentu jego podania.
 
-Skontaktuj się z indywidualnym dostawcą SaaS, aby uzyskać więcej informacji na temat wszelkich gwarancji lub opcji ubezpieczenia, a także instrukcjami dotyczącymi sposobu podania adresu wypłaty. Jeśli wolisz mieć pełną kontrolę nad konfiguracją swojego walidatora, [dowiedz się więcej o solo stakingu ETH](/staking/solo/).
+Skontaktuj się z poszczególnymi dostawcami SaaS, aby uzyskać więcej szczegółów na temat wszelkich gwarancji lub opcji ubezpieczenia, a także instrukcji, jak podać adres wypłaty. Jeśli wolisz mieć pełną kontrolę nad konfiguracją swojego walidatora, [dowiedz się więcej o tym, jak samodzielnie stakować swoje ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Dalsza lektura {#further-reading}
 
-- [Katalog stakingu Ethereum](https://www.staking.directory/) - _Eridian i Spacesider_
-- [Ocena usług stakingowych](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_
+- [Katalog stakingu Ethereum](https://www.staking.directory/) – _Eridian i Spacesider_
+- [Ocena usług stakingowych](https://www.attestant.io/posts/evaluating-staking-services/) – _Jim McDonald 2020_

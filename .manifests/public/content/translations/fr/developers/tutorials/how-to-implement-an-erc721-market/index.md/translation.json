@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-17T23:57:47.224Z",
+  "englishManifestHash": "945aaaca3a83",
+  "placeholderOrder": [
+    "LINK-c35d22",
+    "LINK-2e74c5",
+    "LINK-7896e6",
+    "LINK-e0ebd6",
+    "CODEBLOCK-f4ab47",
+    "CODEBLOCK-995130",
+    "LINK-f91e60",
+    "LINK-1a7838",
+    "LINK-4c2079",
+    "CODEBLOCK-6296e9",
+    "CODEBLOCK-e4ca93",
+    "CODEBLOCK-8a784a",
+    "CODEBLOCK-454ac0",
+    "LINK-fcd844",
+    "LINK-ccd99b"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-f4ab47": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-995130": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6296e9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e4ca93": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8a784a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-454ac0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "LINK-c35d22": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/web2-vs-web3/"
+      }
+    },
+    "LINK-2e74c5": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com"
+      }
+    },
+    "LINK-7896e6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/HQ20/contracts?ref=hackernoon.com"
+      }
+    },
+    "LINK-e0ebd6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com"
+      }
+    },
+    "LINK-f91e60": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com"
+      }
+    },
+    "LINK-1a7838": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com"
+      }
+    },
+    "LINK-4c2079": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com"
+      }
+    },
+    "LINK-fcd844": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol"
+      }
+    },
+    "LINK-ccd99b": {
+      "type": "link",
+      "values": {
+        "url": "https://albertocuesta.es/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:57:47.224Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-16T22:07:02.606Z",
+  "englishManifestHash": "ee424456010c",
+  "placeholderOrder": [
+    "LINK-0071a4",
+    "LINK-21e612",
+    "LINK-8463b2",
+    "LINK-c7ec82",
+    "LINK-e9e68c",
+    "LINK-983990",
+    "LINK-401a5e",
+    "LINK-9c58bf",
+    "LINK-a768f5",
+    "LINK-883555",
+    "LINK-27d442",
+    "LINK-4cb094",
+    "LINK-a9542b",
+    "LINK-df741e",
+    "LINK-57f8aa",
+    "LINK-db3e9b",
+    "LINK-e41c3e",
+    "LINK-76e82f",
+    "LINK-903825",
+    "LINK-324a33",
+    "LINK-e409ad",
+    "LINK-5b3139",
+    "LINK-8cdb8d",
+    "LINK-dedce8",
+    "LINK-403bea",
+    "LINK-cd066a"
+  ],
+  "placeholderMap": {
+    "LINK-0071a4": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work"
+      }
+    },
+    "LINK-21e612": {
+      "type": "link",
+      "values": {
+        "url": "/energy-consumption/"
+      }
+    },
+    "LINK-8463b2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/attack-and-defense"
+      }
+    },
+    "LINK-c7ec82": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51"
+      }
+    },
+    "LINK-e9e68c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas"
+      }
+    },
+    "LINK-983990": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients"
+      }
+    },
+    "LINK-401a5e": {
+      "type": "link",
+      "values": {
+        "url": "/staking"
+      }
+    },
+    "LINK-9c58bf": {
+      "type": "link",
+      "values": {
+        "url": "https://bitcointalk.org/index.php?topic=27787.0"
+      }
+    },
+    "LINK-a768f5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/gasper/"
+      }
+    },
+    "LINK-883555": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing"
+      }
+    },
+    "LINK-27d442": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/block-proposal"
+      }
+    },
+    "LINK-4cb094": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability"
+      }
+    },
+    "LINK-a9542b": {
+      "type": "link",
+      "values": {
+        "url": "https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7"
+      }
+    },
+    "LINK-df741e": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake"
+      }
+    },
+    "LINK-57f8aa": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/altair/part2/incentives/slashing"
+      }
+    },
+    "LINK-db3e9b": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed"
+      }
+    },
+    "LINK-e41c3e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/gasper/#fork-choice"
+      }
+    },
+    "LINK-76e82f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/#finality"
+      }
+    },
+    "LINK-903825": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/weak-subjectivity"
+      }
+    },
+    "LINK-324a33": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme"
+      }
+    },
+    "LINK-e409ad": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/attack-and-defense"
+      }
+    },
+    "LINK-5b3139": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense"
+      }
+    },
+    "LINK-8cdb8d": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo"
+      }
+    },
+    "LINK-dedce8": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@djrtwo/risks-of-lsd"
+      }
+    },
+    "LINK-403bea": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge"
+      }
+    },
+    "LINK-cd066a": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/1710.09437.pdf"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:07:02.606Z",
+      "status": "success"
+    }
+  }
+}

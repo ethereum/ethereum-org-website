@@ -1,0 +1,405 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/nodes-and-clients/archive-nodes/index.md",
+  "generatedAt": "2026-06-17T21:59:56.769Z",
+  "rootHash": "709173cab86a",
+  "tree": {
+    "contentHash": "eed0d191e765",
+    "anchorHash": "195625bd0878",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "a566489953b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "768789c0bf16",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "prose:1": {
+        "contentHash": "bcca7c96ac8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:2": {
+        "contentHash": "858e0fed069e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "261864e70d30",
+        "anchorHash": "5e43119199ba",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "3a2ef796ebab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c8beece22609",
+            "anchorHash": "94d095604d5e"
+          },
+          "prose:6": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "f720981cbef1",
+            "anchorHash": "21e5d0d79e2d"
+          },
+          "prose:7": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "76bbcc4af2c0",
+            "anchorHash": "1d6ccbd6c08d"
+          },
+          "prose:8": {
+            "contentHash": "6c3ec4814568",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "c071cf5f5ed6",
+            "anchorHash": "4b27a10ef117"
+          },
+          "prose:9": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "b5c4c21ab7d6",
+            "anchorHash": "191567028ad9"
+          },
+          "prose:10": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "what-is-an-archive-node": {
+        "contentHash": "076363558545",
+        "anchorHash": "6a0003fb69f6",
+        "labelHash": "a8a628e71ea6",
+        "children": {
+          "_label": {
+            "contentHash": "a8a628e71ea6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "15e46f058523",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "use-cases": {
+            "contentHash": "8dce0b716f84",
+            "anchorHash": "9002e8bce106",
+            "labelHash": "ff27a991e855",
+            "children": {
+              "_label": {
+                "contentHash": "ff27a991e855",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "17cb1f886ffd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "ef1c4b45f2ed",
+                "anchorHash": "c792df881db1"
+              },
+              "prose:2": {
+                "contentHash": "2faacdef5f93",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "use-cases"
+        ]
+      },
+      "implementations-and-usage": {
+        "contentHash": "59dd698b5459",
+        "anchorHash": "85c3f3629be7",
+        "labelHash": "bc0e2ab96914",
+        "children": {
+          "_label": {
+            "contentHash": "bc0e2ab96914",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "fca7c36aa84e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "47df682c10f0",
+            "anchorHash": "0c9b69dac2d8"
+          },
+          "prose:2": {
+            "contentHash": "dc12e3822e2d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "recommended-practices": {
+        "contentHash": "54bc1f7af833",
+        "anchorHash": "376841818dbe",
+        "labelHash": "064bb9f1a8f7",
+        "children": {
+          "_label": {
+            "contentHash": "064bb9f1a8f7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "475273283c4f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e61395d0353d",
+            "anchorHash": "4b27a10ef117"
+          },
+          "prose:4": {
+            "contentHash": "9c77dc3fcf4f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "101fd6a360ae",
+            "anchorHash": "451c56f34f6a"
+          },
+          "prose:5": {
+            "contentHash": "1f19a52a3eb4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "d9a508b2deef",
+            "anchorHash": "746b43abe783"
+          },
+          "prose:6": {
+            "contentHash": "e00b3c83de87",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "hardware": {
+            "contentHash": "e6d20b9a5b6b",
+            "anchorHash": "dab6ea38b452",
+            "labelHash": "7975300f01bc",
+            "children": {
+              "_label": {
+                "contentHash": "7975300f01bc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "3e9b1f55839e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "66517f77ff02",
+                "anchorHash": "9ed429157494"
+              },
+              "prose:6": {
+                "contentHash": "6fcbc26aab9e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "4564c56eb438",
+                "anchorHash": "4b59c5c372e9"
+              },
+              "prose:7": {
+                "contentHash": "e78fa20b2379",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "60bbaad38b22",
+                "anchorHash": "247020a45eaa"
+              },
+              "prose:8": {
+                "contentHash": "1ba93656fc13",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "6531c9bf699f",
+                "anchorHash": "11cead3cc1bd"
+              },
+              "prose:9": {
+                "contentHash": "f2a398ccaf91",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "4985634804eb",
+                "anchorHash": "95d355039684"
+              },
+              "prose:10": {
+                "contentHash": "cc2757844c3c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "hardware"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "1e8a801364fd",
+        "anchorHash": "3cc1ae2cc21d",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2356fbfbe561",
+            "anchorHash": "7d07117de4b1"
+          },
+          "prose:4": {
+            "contentHash": "09f7f8dc66aa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "1cac9b60197e",
+            "anchorHash": "2064474c7819"
+          },
+          "prose:5": {
+            "contentHash": "9516f84db7d9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "76c904508b12",
+            "anchorHash": "9b26f105f28c"
+          },
+          "prose:6": {
+            "contentHash": "ede8ebb0a1a5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "related-topics": {
+        "contentHash": "0dfda34d97da",
+        "anchorHash": "e42363d57d08",
+        "labelHash": "5a38da0df0ab",
+        "children": {
+          "_label": {
+            "contentHash": "5a38da0df0ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "0e034426d05b",
+            "anchorHash": "94d095604d5e"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "94951d0424fb",
+            "anchorHash": "4b27a10ef117"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:sidebarDepth",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "prerequisites",
+      "what-is-an-archive-node",
+      "implementations-and-usage",
+      "recommended-practices",
+      "further-reading",
+      "related-topics"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

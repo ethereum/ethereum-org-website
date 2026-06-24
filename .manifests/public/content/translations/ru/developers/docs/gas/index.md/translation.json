@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-18T21:40:04.336Z",
+  "englishManifestHash": "3471327389e7",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-ab55fe",
+    "LINK-6c4cfe",
+    "IMAGE-8d0f5b",
+    "LINK-fb70b4",
+    "LINK-d6a194",
+    "LINK-487ef0",
+    "CODE-4347a1",
+    "CODE-bc2d4b",
+    "CODE-4347a1",
+    "CODE-bc2d4b",
+    "CODE-4347a1",
+    "CODE-3092a5",
+    "CODE-3092a5",
+    "CODE-139a3a",
+    "CODE-4347a1",
+    "CODE-bc2d4b",
+    "CODE-705f81",
+    "CODE-4347a1",
+    "CODE-8d1633",
+    "CODE-a4e696",
+    "CODE-7c58b1",
+    "LINK-76ff78",
+    "LINK-71a431",
+    "CODE-4a84d8",
+    "IMAGE-a3a784",
+    "LINK-fb70b4",
+    "LINK-adc8d3",
+    "LINK-6cf4d4",
+    "LINK-528387",
+    "LINK-fa46cd",
+    "LINK-28a3a2",
+    "LINK-b40ab7",
+    "LINK-5be5e8",
+    "LINK-57ec81",
+    "LINK-f9d221",
+    "LINK-1363cd",
+    "LINK-9e8957",
+    "LINK-42aa9f",
+    "LINK-bbdc7f",
+    "LINK-bbc24a",
+    "LINK-8c04f8",
+    "LINK-c7593d"
+  ],
+  "placeholderMap": {
+    "CODE-4347a1": {
+      "type": "inline-code",
+      "values": {
+        "content": "base fee"
+      }
+    },
+    "CODE-bc2d4b": {
+      "type": "inline-code",
+      "values": {
+        "content": "priority fee"
+      }
+    },
+    "CODE-3092a5": {
+      "type": "inline-code",
+      "values": {
+        "content": "priority"
+      }
+    },
+    "CODE-139a3a": {
+      "type": "inline-code",
+      "values": {
+        "content": "units of gas used * (base fee + priority fee)"
+      }
+    },
+    "CODE-705f81": {
+      "type": "inline-code",
+      "values": {
+        "content": "21,000 * (10 + 2) = 252,000 gwei"
+      }
+    },
+    "CODE-8d1633": {
+      "type": "inline-code",
+      "values": {
+        "content": "current base fee * 112.5%"
+      }
+    },
+    "CODE-a4e696": {
+      "type": "inline-code",
+      "values": {
+        "content": "202.7 gwei * 112.5% = 228.1 gwei"
+      }
+    },
+    "CODE-7c58b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "maxFeePerGas"
+      }
+    },
+    "CODE-4a84d8": {
+      "type": "inline-code",
+      "values": {
+        "content": "max fee - (base fee + tip)"
+      }
+    },
+    "IMAGE-8d0f5b": {
+      "type": "image",
+      "values": {
+        "path": "./gas.png"
+      }
+    },
+    "IMAGE-a3a784": {
+      "type": "image",
+      "values": {
+        "path": "../transactions/gas-tx.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-fb70b4": {
+      "type": "link",
+      "values": {
+        "url": "https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf"
+      }
+    },
+    "LINK-d6a194": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Wei_Dai"
+      }
+    },
+    "LINK-487ef0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.investopedia.com/terms/b/bmoney.asp"
+      }
+    },
+    "LINK-76ff78": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/stats/averageGasLimit?interval=threeMonths"
+      }
+    },
+    "LINK-71a431": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-6cf4d4": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-528387": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#layer-2-scaling"
+      }
+    },
+    "LINK-fa46cd": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/gastracker"
+      }
+    },
+    "LINK-28a3a2": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/gas-tracker"
+      }
+    },
+    "LINK-b40ab7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethgastracker.com/"
+      }
+    },
+    "LINK-5be5e8": {
+      "type": "link",
+      "values": {
+        "url": "https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm"
+      }
+    },
+    "LINK-57ec81": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptoneur.xyz/gas-fees-calculator"
+      }
+    },
+    "LINK-f9d221": {
+      "type": "link",
+      "values": {
+        "url": "https://www.blocknative.com/gas"
+      }
+    },
+    "LINK-1363cd": {
+      "type": "link",
+      "values": {
+        "url": "https://gas.network"
+      }
+    },
+    "LINK-9e8957": {
+      "type": "link",
+      "values": {
+        "url": "https://defiprime.com/gas"
+      }
+    },
+    "LINK-42aa9f": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a"
+      }
+    },
+    "LINK-bbdc7f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/solidity-gas-optimization"
+      }
+    },
+    "LINK-bbc24a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1559"
+      }
+    },
+    "LINK-8c04f8": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@timbeiko/1559-resources"
+      }
+    },
+    "LINK-c7593d": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:40:04.336Z",
+      "status": "success"
+    }
+  }
+}

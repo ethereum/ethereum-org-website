@@ -55,16 +55,19 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
     "text-body-medium no-underline hover:text-primary hover:after:text-primary"
 
   return (
-    <footer className="px-4 py-4">
-      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light px-4 py-4 md:justify-between">
+    <footer className="border-t">
+      <div className="flex flex-wrap items-center justify-center gap-8 p-4 md:justify-between">
         <p className="text-sm text-body-medium italic">
-          {t("website-last-updated")}: {lastDeployLocaleTimestamp}
+          {t("website-last-updated")}:{" "}
+          {/* Deploy date changes every release; exclude it from visual diffs
+              so it doesn't flake every page snapshot in Chromatic. */}
+          <span data-chromatic="ignore">{lastDeployLocaleTimestamp}</span>
         </p>
 
         <GoToTopButton label={t("go-to-top")} />
       </div>
 
-      <div className="px-4 py-4">
+      <div className="p-4">
         <BaseLink
           href="/"
           className="text-lg font-bold no-underline hover:text-primary"

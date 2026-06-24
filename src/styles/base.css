@@ -15,6 +15,14 @@
     @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
+  /* Tailwind v4 Preflight dropped the v3 rule that gave buttons a pointer
+     cursor (the "buttons use the default cursor" change). Restore it globally
+     so interactive buttons don't fall back to the UA arrow cursor. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
   h1,
   h2,
   h3,
@@ -136,14 +144,13 @@
    of one base unit (--space); no em/lh. `calc(var(--spacing) * N)` == `--spacing(N)`. */
 
 :root {
-  /* The single base unit for the whole rhythm; responsive. */
-  --space: calc(var(--spacing) * 4); /* 16px */
-}
+  /* The single base unit for standard page padding; responsive. */
+  @apply [--page-pad:--spacing(4)] md:[--page-pad:--spacing(8)];
 
-@variant lg {
-  :root {
-    --space: calc(var(--spacing) * 6); /* 24px */
-  }
+  /* The single base unit for the whole rhythm; responsive. */
+  @apply [--space:--spacing(4)] lg:[--space:--spacing(6)];
+
+  @apply [--hero-pad:--spacing(8)];
 }
 
 @layer base {
@@ -155,7 +162,7 @@
 
   /* 1x default between adjacent blocks (heading->content, p->p, p->list, ...). */
   :where(.flow, .flow section:not([data-flow="skip"])) > * + * {
-    margin-top: var(--space);
+    @apply mt-space;
   }
 
   /* 2x above any heading that follows content within a region/section -- a
@@ -164,7 +171,7 @@
      section boundary below provides its break. (Ordered before the 3x rule so a
      top-level markdown h1/h2 still wins 3x.) */
   :where(.flow, .flow section:not([data-flow="skip"])) > * + :is(h2, h3, h4) {
-    margin-top: calc(var(--space) * 2);
+    @apply mt-space-2x;
   }
 
   /* 3x above a section boundary: an explicit <section> (React's <Section>), or a
@@ -174,13 +181,13 @@
      the 1x default below the section top, hugging its heading, not 3x. */
   :where(.flow, .flow section:not([data-flow="skip"])) > * + section,
   :where(.flow) > * + :is(h1, h2) {
-    margin-top: calc(var(--space) * 3);
+    @apply mt-space-3x;
   }
 
   /* CTA / button groups: extra room above. A marker is needed because a button
      group has no element selector; CTAs trail, so only the top gap matters. */
   :where(.flow, .flow section:not([data-flow="skip"])) > * + [data-flow="cta"] {
-    margin-top: calc(var(--space) * 2);
+    @apply mt-space-2x;
   }
 
   /* A list following content needs its top gap restored explicitly: the legacy
@@ -188,7 +195,7 @@
      zero-specificity `* + *` default -- so without this a list has no space above
      it. This rule matches that specificity and, being later, wins. */
   :where(.flow, .flow section:not([data-flow="skip"])) > * + :is(ul, ol) {
-    margin-top: var(--space);
+    @apply mt-space;
   }
 
   /* Lists: flow owns the vertical rhythm (drop the legacy global bottom margin),
@@ -196,14 +203,14 @@
      `ul/ol` start margin for raw lists. Adding our own padding here would double
      the indent (flow is base-layer and can't override the utility `ms-6`). */
   :where(.flow) :is(ul, ol) {
-    margin-bottom: 0;
-  }
+    @apply mb-0;
+}
 
   :where(.flow) li {
-    margin-bottom: 0;
+    @apply mb-0;
   }
 
   :where(.flow) li + li {
-    margin-top: calc(var(--space) * 0.5);
+    @apply mt-space-half;
   }
 }

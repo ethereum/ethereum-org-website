@@ -4,8 +4,8 @@ import type { Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
+import ContentFeedback from "@/components/ContentFeedback"
 import { CopyButton } from "@/components/CopyToClipboard"
-import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
@@ -786,7 +786,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
           </Section>
         </MainArticle>
 
-        <FeedbackCard />
+        <ContentFeedback />
       </VStack>
     </>
   )

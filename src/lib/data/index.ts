@@ -109,9 +109,9 @@ export const getAttestantPosts = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getBeaconchainData = createCachedGetter(
-  dataLayer.getBeaconchainData,
-  ["beaconchain-data"],
+export const getStakedPercentageData = createCachedGetter(
+  dataLayer.getStakedPercentageData,
+  ["staked-percentage-data"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -193,10 +193,18 @@ export const getTranslationGlossary = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+/**
+ * No revalidation: both consumers (/videos and /stories) are statically
+ * generated and read public/content markdown at build time. A finite
+ * revalidate would opt those routes into ISR, whose serverless re-render
+ * can't read public/content (excluded from the function bundle), leaving
+ * their content empty. Thumbnails refresh on deploy.
+ * See: docs/solutions/integration-issues/netlify-isr-404-async-server-components.md
+ */
 export const getVideoThumbnails = createCachedGetter(
   dataLayer.getVideoThumbnails,
   ["video-thumbnails"],
-  CACHE_REVALIDATE_DAY
+  false
 )
 
 /**

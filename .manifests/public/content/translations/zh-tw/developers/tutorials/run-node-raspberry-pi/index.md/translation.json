@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-19T23:14:11.549Z",
+  "englishManifestHash": "2e208c15468b",
+  "placeholderOrder": [
+    "LINK-a05412",
+    "CODEBLOCK-e350f3",
+    "LINK-a1cf79",
+    "CODEBLOCK-a6da21",
+    "CODE-9b7ecc",
+    "CODEBLOCK-3bd525",
+    "CODE-b60d7b",
+    "CODEBLOCK-5dbed8",
+    "CODEBLOCK-466279",
+    "CODEBLOCK-9b20f9",
+    "CODEBLOCK-f457cd",
+    "LINK-079095",
+    "CODE-45d2e5",
+    "CODE-42dc9a",
+    "CODE-a0eb68",
+    "LINK-dc22b8",
+    "CODEBLOCK-7ea951",
+    "LINK-94e315",
+    "CODE-fe3898",
+    "CODE-a318c2",
+    "LINK-16b9fd",
+    "CODEBLOCK-257d8d",
+    "LINK-64102e"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-e350f3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a6da21": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3bd525": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5dbed8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-466279": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9b20f9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f457cd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7ea951": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-257d8d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-9b7ecc": {
+      "type": "inline-code",
+      "values": {
+        "content": "dd"
+      }
+    },
+    "CODE-b60d7b": {
+      "type": "inline-code",
+      "values": {
+        "content": "ethereum"
+      }
+    },
+    "CODE-45d2e5": {
+      "type": "inline-code",
+      "values": {
+        "content": "ipaddress:3000"
+      }
+    },
+    "CODE-42dc9a": {
+      "type": "inline-code",
+      "values": {
+        "content": "user: admin"
+      }
+    },
+    "CODE-a0eb68": {
+      "type": "inline-code",
+      "values": {
+        "content": "passwd: ethereum"
+      }
+    },
+    "CODE-fe3898": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposit new-mnemnonic"
+      }
+    },
+    "CODE-a318c2": {
+      "type": "inline-code",
+      "values": {
+        "content": "+"
+      }
+    },
+    "LINK-a05412": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/Ec_VmUvr80VFjf3RYSU-NzkBmj2JOteDECj8Bibde929Gw?download=1"
+      }
+    },
+    "LINK-a1cf79": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/"
+      }
+    },
+    "LINK-079095": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/"
+      }
+    },
+    "LINK-dc22b8": {
+      "type": "link",
+      "values": {
+        "url": "https://launchpad.ethereum.org/"
+      }
+    },
+    "LINK-94e315": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/staking-deposit-cli"
+      }
+    },
+    "LINK-16b9fd": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/"
+      }
+    },
+    "LINK-64102e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:14:11.549Z",
+      "status": "success"
+    }
+  }
+}

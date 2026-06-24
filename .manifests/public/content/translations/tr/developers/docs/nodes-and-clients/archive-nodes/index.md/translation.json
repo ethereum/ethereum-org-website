@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-06-17T22:01:50.938Z",
+  "englishManifestHash": "709173cab86a",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-98bdc0",
+    "LINK-e71527",
+    "LINK-430f2a",
+    "LINK-f9a430",
+    "LINK-1099ec",
+    "LINK-962e29",
+    "LINK-c8047c",
+    "LINK-f41727",
+    "LINK-968edf",
+    "LINK-9a172c",
+    "LINK-302b79",
+    "LINK-bb0a66",
+    "LINK-d15ac6",
+    "LINK-f15e26",
+    "LINK-a1c49d",
+    "LINK-ec812f",
+    "LINK-6af983",
+    "LINK-cc57e0",
+    "LINK-85eb8f",
+    "LINK-895c69"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-98bdc0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-e71527": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/node-architecture/"
+      }
+    },
+    "LINK-430f2a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#sync-modes"
+      }
+    },
+    "LINK-f9a430": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-1099ec": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-962e29": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/nodes-as-a-service/"
+      }
+    },
+    "LINK-c8047c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/#requirements"
+      }
+    },
+    "LINK-f41727": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-968edf": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ledgerwatch/erigon#key-features"
+      }
+    },
+    "LINK-9a172c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#erigon"
+      }
+    },
+    "LINK-302b79": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cleverfiles.com/help/sata-hard-drive.html"
+      }
+    },
+    "LINK-bb0a66": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences"
+      }
+    },
+    "LINK-d15ac6": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0"
+      }
+    },
+    "LINK-f15e26": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/ZFS"
+      }
+    },
+    "LINK-a1c49d": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/ECC_memory"
+      }
+    },
+    "LINK-ec812f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node"
+      }
+    },
+    "LINK-6af983": {
+      "type": "link",
+      "values": {
+        "url": "https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09"
+      }
+    },
+    "LINK-cc57e0": {
+      "type": "link",
+      "values": {
+        "url": "https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks"
+      }
+    },
+    "LINK-85eb8f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-895c69": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:01:50.938Z",
+      "status": "success"
+    }
+  }
+}

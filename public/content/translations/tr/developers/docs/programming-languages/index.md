@@ -1,17 +1,17 @@
 ---
 title: Programlama dilleri
-description: "JavaScript, Python, Go, Rust ve daha fazlası dâhil olmak üzere çeşitli programlama dilleri için Ethereum geliştirme kaynaklarını keşfedin."
+description: "JavaScript, Python, Go, Rust ve daha fazlası dahil olmak üzere çeşitli programlama dilleri için Ethereum geliştirme kaynaklarını keşfedin."
 lang: tr
 ---
 
-Geliştiricilerin, Ethereum üzerinde inşa etmek için [akıllı sözleşmeler](/developers/docs/smart-contracts/) yazması gerektiği yaygın bir yanlış anlaşılmadır. Bu yanlıştır.
-Ethereum ağının ve topluluğunun güzelliklerinden biri, neredeyse her programlama diliyle [katılabilmenizdir](/community/).
+Geliştiricilerin Ethereum üzerinde uygulama geliştirmek için [akıllı sözleşmeler](/developers/docs/smart-contracts/) yazması gerektiği yaygın bir yanılgıdır. Bu doğru değildir.
+Ethereum ağının ve topluluğunun güzelliklerinden biri, hemen hemen her programlama dilinde [katılım sağlayabilmenizdir](/community/).
 
-Ethereum ve topluluğu açık kaynak ile iç içecidir. Geniş bir dil yelpazesinde topluluk projeleri; istemci uygulamaları, API'ler, geliştirme çerçeveleri, test araçları bulabilirsiniz.
+Ethereum ve topluluğu açık kaynağı benimser. İstemci uygulamaları, API'ler, geliştirme çerçeveleri, test araçları gibi topluluk projelerini çok çeşitli dillerde bulabilirsiniz.
 
 ## Dilinizi seçin {#data}
 
-Projeler, kaynaklar ve sanal topluluklar bulmak için tercih ettiğiniz programlama dilini seçin:
+Projeleri, kaynakları ve sanal toplulukları bulmak için tercih ettiğiniz programlama dilini seçin:
 
 - [Dart geliştiricileri için Ethereum](/developers/docs/programming-languages/dart/)
 - [Delphi geliştiricileri için Ethereum](/developers/docs/programming-languages/delphi/)
@@ -24,9 +24,8 @@ Projeler, kaynaklar ve sanal topluluklar bulmak için tercih ettiğiniz programl
 - [Ruby geliştiricileri için Ethereum](/developers/docs/programming-languages/ruby/)
 - [Rust geliştiricileri için Ethereum](/developers/docs/programming-languages/rust/)
 
-### Ya diliniz desteklenmiyorsa? {#other-lang}
+### Ya dilim desteklenmiyorsa? {#other-lang}
 
-Ek bir programlama dili için kaynaklara bağlantı vermek veya sanal bir topluluğa yönlendirmek istiyorsanız [bir konu açarak](https://github.com/ethereum/ethereum-org-website/issues/new/choose) yeni bir sayfa talep edebilirsiniz.
+Ek bir programlama dili için kaynaklara bağlantı vermek veya sanal bir topluluğu göstermek isterseniz, [bir konu açarak](https://github.com/ethereum/ethereum-org-website/issues/new/choose) yeni bir sayfa talep edebilirsiniz.
 
-Eğer sadece şu anda desteklenmeyen bir dil kullanarak blokzincir ile arayüz oluşturmak için kod yazmak istiyorsanız,
-Ethereum ağına bağlanmak için [JSON-RPC arayüzünü](/developers/docs/apis/json-rpc/) kullanabilirsiniz. TCP/IP kullanabilen herhangi bir programlama dili bu arayüzü kullanabilir.
+Eğer sadece şu anda desteklenmeyen bir dili kullanarak Blokzincir ile etkileşim kuracak kod yazmak istiyorsanız, Ethereum ağına bağlanmak için [JSON-RPC arayüzünü](/developers/docs/apis/json-rpc/) kullanabilirsiniz. TCP/IP kullanabilen herhangi bir programlama dili bu arayüzü kullanabilir.

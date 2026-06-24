@@ -9,8 +9,8 @@ import {
 import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -19,8 +19,8 @@ import MarkdownCard from "@/components/MarkdownCard"
 import Trilemma from "@/components/Trilemma"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
 import { Flex, type FlexProps, VStack } from "@/components/ui/flex"
+import { Divider } from "@/components/ui/hr"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
@@ -269,7 +269,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           />
         </PageContent>
         <Divider />
-        <FeedbackCard />
+        <ContentFeedback />
       </PageContainer>
     </I18nProvider>
   )

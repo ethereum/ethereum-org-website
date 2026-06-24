@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-build-your-own-ai-agent.json",
+  "generatedAt": "2026-06-16T15:01:45.501Z",
+  "rootHash": "c6d730287d27",
+  "tree": {
+    "contentHash": "c366d3c35bde",
+    "anchorHash": "83153bb62b5d",
+    "children": {
+      "elizaos-title": {
+        "contentHash": "3da6e9182de3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "elizaos-tagline": {
+        "contentHash": "b3f20b18d04c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "elizaos-description": {
+        "contentHash": "64b21dc717df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "elizaos-cta": {
+        "contentHash": "0d4bda21ad07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "game-title": {
+        "contentHash": "4a31ab51e9b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "game-tagline": {
+        "contentHash": "8a6c3151c8ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "game-description": {
+        "contentHash": "ba690075945e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "game-cta": {
+        "contentHash": "626c4dd78977",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "elizaos-title",
+      "elizaos-tagline",
+      "elizaos-description",
+      "elizaos-cta",
+      "game-title",
+      "game-tagline",
+      "game-description",
+      "game-cta"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

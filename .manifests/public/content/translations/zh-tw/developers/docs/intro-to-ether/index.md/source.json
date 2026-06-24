@@ -1,0 +1,395 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/intro-to-ether/index.md",
+  "generatedAt": "2026-06-17T21:55:12.007Z",
+  "rootHash": "6d056af4576e",
+  "tree": {
+    "contentHash": "3e0f9184471f",
+    "anchorHash": "9c072b38e6a8",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "b43cb4fe8363",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "4c9dcfed183e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prerequisites": {
+        "contentHash": "2c3337b8195e",
+        "anchorHash": "a9d9cc796044",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "debc29679a6a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a5e272707f84",
+            "anchorHash": "12c27408c3cf"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "what-is-a-cryptocurrency": {
+        "contentHash": "f57491abe02b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2fd34d0eb250",
+        "children": {
+          "_label": {
+            "contentHash": "2fd34d0eb250",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0594fba463cd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-is-ether": {
+        "contentHash": "4884472cc8a4",
+        "anchorHash": "98f172f072f4",
+        "labelHash": "34cf0a0dc30d",
+        "children": {
+          "_label": {
+            "contentHash": "34cf0a0dc30d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "eb966af512d3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c09500586c2c",
+            "anchorHash": "4aaed03eb1e4"
+          },
+          "prose:6": {
+            "contentHash": "4bac1f28e92e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3871f97fc9a1",
+            "anchorHash": "7c0cfc193263"
+          },
+          "prose:7": {
+            "contentHash": "ef1432ac5f43",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "9442293eaa24",
+            "anchorHash": "e9017d5a4a6a"
+          },
+          "prose:8": {
+            "contentHash": "33cebf20ff22",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "3dfd705f6349",
+            "anchorHash": "d08920759d1c"
+          },
+          "prose:9": {
+            "contentHash": "3ddee7f7a968",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "511b67fe38c4",
+            "anchorHash": "bb8621122d48"
+          },
+          "prose:10": {
+            "contentHash": "8e0ec1c7e62d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "minting-ether": {
+        "contentHash": "e8cc0c0abef9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e3b893af92fb",
+        "children": {
+          "_label": {
+            "contentHash": "e3b893af92fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c5e415618893",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "burning-ether": {
+        "contentHash": "aa61ecde72d5",
+        "anchorHash": "d3c6e3dbbfbf",
+        "labelHash": "909afccd2f55",
+        "children": {
+          "_label": {
+            "contentHash": "909afccd2f55",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "8aea14ee5710",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "2a12da17d27c",
+            "anchorHash": "45d3017820de"
+          },
+          "prose:2": {
+            "contentHash": "0f67a50256ee",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "denominations": {
+        "contentHash": "fb1318e2e16b",
+        "anchorHash": "24609e5e4db3",
+        "labelHash": "bda5e1870ff3",
+        "children": {
+          "_label": {
+            "contentHash": "bda5e1870ff3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "99052cda1afd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "bd5a17f986be",
+            "anchorHash": "de75f70e7c5e"
+          },
+          "prose:2": {
+            "contentHash": "a3ee9af3d40d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "transferring-ether": {
+        "contentHash": "02d2f0bbb482",
+        "anchorHash": "6b0aaaee7bd3",
+        "labelHash": "0469bf9d4c16",
+        "children": {
+          "_label": {
+            "contentHash": "0469bf9d4c16",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "08fed976dbb3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "cd42404d52ad"
+          },
+          "prose:4": {
+            "contentHash": "816415191d26",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d0665bba31dc",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:5": {
+            "contentHash": "35b1c94befc4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "702dc99b9323",
+            "anchorHash": "d20c9fa6d21a"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      },
+      "querying-ether": {
+        "contentHash": "eaedf4bedc8e",
+        "anchorHash": "4b9f28a6f2f5",
+        "labelHash": "c7773e7e9309",
+        "children": {
+          "_label": {
+            "contentHash": "c7773e7e9309",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "819c5de27950",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "9af211329b2f",
+            "anchorHash": "d094984b1eaf"
+          },
+          "prose:6": {
+            "contentHash": "59735f1e91e6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5751e048eb6f"
+          },
+          "prose:7": {
+            "contentHash": "5c8bf0029ed2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "d0299bb7f22b",
+            "anchorHash": "fa8d01891bbc"
+          },
+          "prose:8": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "3dee05652774",
+            "anchorHash": "9cd98860b21f"
+          },
+          "prose:9": {
+            "contentHash": "6b383a1fb467",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "1c243b786b79",
+            "anchorHash": "ba18ad29a758"
+          },
+          "prose:10": {
+            "contentHash": "dec982178b3a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "inline-code:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "dbccf4334684",
+        "anchorHash": "8a36bdcd7458",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f906dd4fa683",
+            "anchorHash": "74bd57427fc4"
+          },
+          "prose:4": {
+            "contentHash": "657c7383e9df",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "9c16c962b9f8",
+            "anchorHash": "a360e235e901"
+          },
+          "prose:5": {
+            "contentHash": "56ea529ce5a9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "11444b523350",
+            "anchorHash": "fcd1f6b39529"
+          },
+          "prose:6": {
+            "contentHash": "dea035fd00ff",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prerequisites",
+      "what-is-a-cryptocurrency",
+      "what-is-ether",
+      "minting-ether",
+      "burning-ether",
+      "denominations",
+      "transferring-ether",
+      "querying-ether",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

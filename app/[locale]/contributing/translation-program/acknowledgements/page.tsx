@@ -7,13 +7,14 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import ActionCard from "@/components/ActionCard"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { ListItem, OrderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
@@ -130,18 +131,36 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               "page-contributing-translation-program-acknowledgements-our-translators-1"
             )}
           </p>
-          <ActionCard
-            className="my-8"
-            imageWidth={260}
-            href="/contributing/translation-program/contributors/"
-            title={t(
-              "page-contributing-translation-program-acknowledgements-our-translators-view-all"
-            )}
-            description={t(
-              "page-contributing-translation-program-acknowledgements-our-translators-cta"
-            )}
-            image={whatIsEthereumImg}
-          />
+          <LinkBox className="my-8 flex flex-col shadow-lg hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-xl hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-xl focus:duration-100 md:flex-row">
+            <Flex className="flex h-65 flex-row items-end justify-center bg-linear-to-r from-accent-a/10 to-accent-c/10">
+              <Image
+                src={whatIsEthereumImg}
+                alt=""
+                className="max-h-full w-65 shrink-0 self-center object-cover p-4"
+                sizes="260px"
+              />
+            </Flex>
+            <div className="flex flex-col justify-center p-6">
+              <h3 className="mt-2 mb-4 text-2xl leading-snug">
+                <LinkOverlay asChild>
+                  <InlineLink
+                    href="/contributing/translation-program/contributors/"
+                    hideArrow
+                    className="text-body no-underline"
+                  >
+                    {t(
+                      "page-contributing-translation-program-acknowledgements-our-translators-view-all"
+                    )}
+                  </InlineLink>
+                </LinkOverlay>
+              </h3>
+              <p className={"mb-0 text-body/65"}>
+                {t(
+                  "page-contributing-translation-program-acknowledgements-our-translators-cta"
+                )}
+              </p>
+            </div>
+          </LinkBox>
         </Section>
 
         <Section className="space-y-8" id="certificate">
@@ -209,7 +228,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <p>{t("page-contributing-translation-program-acknowledgements-4")}</p>
         </Section>
 
-        <FeedbackCard />
+        <ContentFeedback />
       </MainArticle>
     </>
   )

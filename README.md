@@ -2226,6 +2226,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/andreivladbrg"><img src="https://avatars.githubusercontent.com/u/99738872?v=4?s=100" width="100px;" alt="Andrei Vlad Birgaoanu"/><br /><sub><b>Andrei Vlad Birgaoanu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aandreivladbrg" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/onchainze"><img src="https://avatars.githubusercontent.com/u/288279120?v=4?s=100" width="100px;" alt="onchainze"/><br /><sub><b>onchainze</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aonchainze" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://defimind.ai"><img src="https://avatars.githubusercontent.com/u/48072017?v=4?s=100" width="100px;" alt="Ian Moore"/><br /><sub><b>Ian Moore</b></sub></a><br /><a href="#tool-icmoore" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sawaadee"><img src="https://avatars.githubusercontent.com/u/170385320?v=4?s=100" width="100px;" alt="sawadee"/><br /><sub><b>sawadee</b></sub></a><br /><a href="#maintenance-sawaadee" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vikramsingh786lemonn"><img src="https://avatars.githubusercontent.com/u/289930201?v=4?s=100" width="100px;" alt="vikramsingh786lemonn"/><br /><sub><b>vikramsingh786lemonn</b></sub></a><br /><a href="#tool-vikramsingh786lemonn" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>

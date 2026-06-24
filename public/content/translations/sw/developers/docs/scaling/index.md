@@ -1,113 +1,118 @@
 ---
-title: Uongezwaji
-description: Utangulizi wa chaguzi tofauti za kuongeza viwango zinazoendelezwa sasa na jumuiya ya Ethereum.
+title: Uongezaji wa Uwezo
+description: Utangulizi wa chaguzi tofauti za uongezaji wa uwezo zinazotengenezwa kwa sasa na jamii ya Ethereum.
 lang: sw
 sidebarDepth: 3
 ---
 
-## Muhtasari wa uongezwaji {#scaling-overview}
+## Muhtasari wa uongezaji wa uwezo {#scaling-overview}
 
-Kwa kuwa idadi ya watu wanaotumia Ethereum imeongezeka, blockchain imefikia mapungufu fulani ya uwezo. Hii imeongeza gharama ya kutumia mtandao, na kujenga hitaji la "suluhisho za kuongeza kiwango." Kuna masuluhisho mengi yanayofanyiwa utafiti, kujaribiwa na kutekelezwa ambayo huchukua mbinu tofauti kufikia malengo sawa.
+Kadiri idadi ya watu wanaotumia [Ethereum](/) inavyoongezeka, mnyororo wa vitalu umefikia vikwazo fulani vya uwezo. Hii imepandisha gharama ya kutumia mtandao, na kujenga hitaji la "suluhisho za uongezaji wa uwezo." Kuna suluhisho nyingi zinazofanyiwa utafiti, kujaribiwa na kutekelezwa ambazo zinachukua mbinu tofauti kufikia malengo yanayofanana.
 
-Lengo kuu la uwezo wa kuongezeka ni kuongeza kasi ya muamala (mwisho wa haraka) na upitishaji wa miamala (idadi kubwa ya miamala kwa sekunde) bila kuathiri ugatuzi au usalama. Kwenye mnyororo wa bloku wa safu ya 1 ya Ethereum, mahitaji makubwa husababisha miamala ya polepole na [bei za gesi](/developers/docs/gas/) zisizowezekana. Kuongeza uwezo wa mtandao kwa suala la kasi na upitishaji ni msingi wa kupitishwa kwa maana na kwa wingi kwa Ethereum.
+Lengo kuu la uwezo wa kuongezeka ni kuongeza kasi ya muamala (ukamilifu wa haraka zaidi) na uwezo wa upitishaji wa muamala (idadi kubwa ya miamala kwa sekunde) bila kuathiri ugatuzi au usalama. Kwenye mnyororo wa vitalu wa tabaka la 1 (l1) la Ethereum, mahitaji makubwa husababisha miamala ya polepole na [bei za gesi](/developers/docs/gas/) zisizowezekana. Kuongeza uwezo wa mtandao kwa upande wa kasi na uwezo wa upitishaji ni msingi kwa upitishaji wa maana na wa umati wa Ethereum.
 
-Ingawa kasi na matokeo ni muhimu, ni muhimu kwamba masuluhisho ya kuongeza viwango yanayowezesha malengo haya yabaki yakiwa yamegawanywa na salama. Kuweka kizuizi cha kuingia kwa waendeshaji wa nodi kuwa chini ni muhimu katika kuzuia maendeleo kuelekea nguvu ya kompyuta ya kati na isiyo salama.
+Ingawa kasi na uwezo wa upitishaji ni muhimu, ni muhimu kwamba suluhisho za uongezaji wa uwezo zinazowezesha malengo haya zibaki zimegatuliwa na salama. Kuweka kizuizi cha kuingia chini kwa waendeshaji wa nodi ni muhimu katika kuzuia maendeleo kuelekea nguvu ya kompyuta iliyowekwa kati na isiyo salama.
 
-Kimsingi, kwanza tunaainisha uongezwaji kama uongezwaji wa onchain au uongezwaji wa offchain.
+Kimawazo kwanza tunaainisha uongezaji wa uwezo kama uongezaji wa uwezo mnyororoni au uongezaji wa uwezo nje ya mnyororo.
 
 ## Mahitaji ya awali {#prerequisites}
 
-Unapaswa kuwa na uelewa mzuri wa mada zote za msingi. Utekelezaji wa suluhisho za uongezwaji ni wa hali ya juu kwani teknolojia haijajaribiwa sana, na inaendelea kutafitiwa na kuendelezwa.
+Unapaswa kuwa na uelewa mzuri wa mada zote za msingi. Kutekeleza suluhisho za uongezaji wa uwezo ni kwa hali ya juu kwani teknolojia haijajaribiwa sana, na inaendelea kufanyiwa utafiti na kuendelezwa.
 
-## Uongezwaji wa Onchain {#onchain-scaling}
+## Uongezaji wa uwezo mnyororoni {#onchain-scaling}
 
-Uongezwaji wa Onchain unahitaji mabadiliko kwenye itifaki ya Ethereum (safu ya 1 ya [Mtandao Mkuu](/glossary/#mainnet)). Kwa muda mrefu, ugawanyaji wa mnyororo wa bloku ulitarajiwa kuongeza Ethereum. Hii ingehusisha kugawanya mnyororo wa bloku katika vipande tofauti (shards) ili kuthibitishwa na vikundi vidogo vya wathibitishaji. Hata hivyo, uongezwaji kwa kutumia unda-mpya za safu-2 umechukua nafasi kama mbinu ya msingi ya uongezwaji. Hili linaungwa mkono na nyongeza ya aina mpya ya data ya bei nafuu iliyoambatishwa kwenye bloku za Ethereum ambayo imeundwa mahususi kufanya unda-mpya ziwe nafuu kwa watumiaji.
+Uongezaji wa uwezo mnyororoni unahitaji mabadiliko kwenye itifaki ya Ethereum ([Mtandao Mkuu](/glossary/#mainnet) wa tabaka la 1). Kwa muda mrefu, kugawanya mnyororo wa vitalu (sharding) kulitarajiwa kuongeza uwezo wa Ethereum. Hii ilikuwa inahusisha kugawanya mnyororo wa vitalu katika vipande tofauti (shadi) ili kuthibitishwa na vikundi vidogo vya wathibitishaji. Hata hivyo, uongezaji wa uwezo kwa mikusanyiko ya tabaka la 2 (l2) umechukua nafasi kama mbinu kuu ya uongezaji wa uwezo. Hili linaungwa mkono na kuongezwa kwa aina mpya ya data ya bei nafuu iliyoambatishwa kwenye vitalu vya Ethereum ambayo imeundwa maalum kufanya mikusanyiko iwe nafuu kwa watumiaji.
 
-### Ugawanyaji {#sharding}
+### Sharding {#sharding}
 
-Ugawanyaji ni mchakato wa kugawanya hifadhidata. Vikundi vidogo vya wathibitishaji vingewajibika kwa shardi binafsi badala ya kufuatilia Ethereum yote. Ugawanyaji ulikuwa kwenye [ramani ya maendeleo](/roadmap/) ya Ethereum kwa muda mrefu, na hapo awali ulikusudiwa kutolewa kabla ya Muungano kuelekea uthibitisho-wa-hisa. Hata hivyo, maendeleo ya haraka ya [unda-mpya za safu 2](#layer-2-scaling) na uvumbuzi wa [Danksharding](/roadmap/danksharding) (kuongeza matone ya data ya unda-mpya kwenye bloku za Ethereum ambazo zinaweza kuthibitishwa kwa ufanisi sana na wathibitishaji) umesababisha jumuiya ya Ethereum kupendelea uongezwaji unaozingatia unda-mpya badala ya uongezwaji kwa ugawanyaji. Hii pia itasaidia kuweka mantiki ya makubaliano ya Ethereum kuwa rahisi.
+Sharding ni mchakato wa kugawanya hifadhidata. Vikundi vidogo vya wathibitishaji vingehusika na shadi binafsi badala ya kufuatilia Ethereum yote. Sharding ilikuwa kwenye [ramani ya njia](/roadmap/) ya Ethereum kwa muda mrefu, na iliwahi kukusudiwa kutolewa kabla ya Unganisho kwenda kwenye Uthibitisho wa Dau (PoS). Hata hivyo, maendeleo ya haraka ya [mikusanyiko ya tabaka la 2](#layer-2-scaling) na uvumbuzi wa [danksharding](/roadmap/danksharding) (kuongeza blobs za data za rollup kwenye vitalu vya Ethereum ambazo zinaweza kuthibitishwa kwa ufanisi sana na wathibitishaji) kumesababisha jamii ya Ethereum kupendelea uongezaji wa uwezo unaozingatia rollup badala ya uongezaji wa uwezo kwa sharding. Hii pia itasaidia kuweka mantiki ya mwafaka ya Ethereum kuwa rahisi zaidi.
 
-## Uongezwaji wa Offchain {#offchain-scaling}
+## Uongezaji wa uwezo nje ya mnyororo {#offchain-scaling}
 
-Suluhisho za Offchain zinatekelezwa kando na Mtandao Mkuu wa safu ya 1 - hazihitaji mabadiliko yoyote kwenye itifaki iliyopo ya Ethereum. Baadhi ya suluhisho, zinazojulikana kama suluhisho za "safu ya 2", hupata usalama wao moja kwa moja kutoka kwa makubaliano ya safu ya 1 ya Ethereum, kama vile [optimistic rollups](/developers/docs/scaling/optimistic-rollups/), [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/) au [chaneli za hali](/developers/docs/scaling/state-channels/). Suluhisho zingine zinahusisha uundaji wa minyororo mipya katika aina mbalimbali ambazo hupata usalama wao kando na Mtandao Mkuu, kama vile [sidechains](#sidechains), [validiums](#validium), au [minyororo ya njozi](#plasma). Suluhisho hizi huwasiliana na Mtandao Mkuu lakini hupata usalama wao kwa njia tofauti ili kufikia malengo mbalimbali.
+Suluhisho za nje ya mnyororo zinatekelezwa kando na Mtandao Mkuu wa tabaka la 1 - hazihitaji mabadiliko yoyote kwenye itifaki iliyopo ya Ethereum. Baadhi ya suluhisho, zinazojulikana kama suluhisho za "tabaka la 2", hupata usalama wao moja kwa moja kutoka kwa mwafaka wa Ethereum wa tabaka la 1, kama vile [mikusanyiko yenye matumaini (optimistic rollups)](/developers/docs/scaling/optimistic-rollups/), [mikusanyiko ya sifuri-maarifa](/developers/docs/scaling/zk-rollups/) au [chaneli za hali](/developers/docs/scaling/state-channels/). Suluhisho zingine zinahusisha uundaji wa minyororo mipya katika aina mbalimbali ambayo hupata usalama wao kando na Mtandao Mkuu, kama vile [minyororo ya kando](#sidechains), [Validium](#validium), au [minyororo ya Plasma](#plasma). Suluhisho hizi huwasiliana na Mtandao Mkuu lakini hupata usalama wao kwa njia tofauti ili kufikia malengo mbalimbali.
 
-### Uongezwaji wa safu ya 2 {#layer-2-scaling}
+### Uongezaji wa uwezo wa tabaka la 2 {#layer-2-scaling}
 
-Aina hii ya suluhisho za offchain hupata usalama wake kutoka kwa Mtandao Mkuu wa Ethereum.
+Kategoria hii ya suluhisho za nje ya mnyororo hupata usalama wake kutoka kwa Mtandao Mkuu wa Ethereum.
 
-Safu ya 2 ni neno la pamoja la suluhisho zilizoundwa kusaidia kuongeza programu yako kwa kushughulikia miamala nje ya Mtandao Mkuu wa Ethereum (safu ya 1) huku ukichukua fursa ya mfumo imara wa usalama wa ugatuzi wa Mtandao Mkuu. Kasi ya muamala hupungua mtandao unapokuwa na shughuli nyingi, na kufanya uzoefu wa mtumiaji kuwa duni kwa aina fulani za dapps. Na mtandao unapozidi kuwa na shughuli nyingi, bei za gesi huongezeka kadri watumaji wa miamala wanavyolenga kushindana kwa bei. Hii inaweza kufanya utumiaji wa Ethereum kuwa ghali sana.
+Tabaka la 2 ni neno la pamoja kwa suluhisho zilizoundwa kusaidia kuongeza uwezo wa programu yako kwa kushughulikia miamala nje ya Mtandao Mkuu wa Ethereum (tabaka la 1) huku ikitumia faida ya muundo thabiti wa usalama uliogatuliwa wa Mtandao Mkuu. Kasi ya muamala huathirika wakati mtandao una shughuli nyingi, na kufanya uzoefu wa mtumiaji kuwa mbaya kwa aina fulani za programu tumizi zilizogatuliwa (dapp). Na kadiri mtandao unavyozidi kuwa na shughuli nyingi, bei za gesi huongezeka kwani watumaji wa miamala wanalenga kushindana kwa bei. Hii inaweza kufanya matumizi ya Ethereum kuwa ghali sana.
 
-Suluhisho nyingi za safu ya 2 huzingatia seva au nguzo ya seva, ambapo kila moja inaweza kujulikana kama nodi, mthibitishaji, mwendeshaji, mratibu wa mfuatano, mtayarishaji wa bloku, au neno linalofanana. Kulingana na utekelezaji, nodi hizi za safu ya 2 zinaweza kuendeshwa na watu binafsi, biashara au mashirika yanayozitumia, au na mwendeshaji wa tatu, au na kundi kubwa la watu binafsi (sawa na Mtandao Mkuu). Kwa ujumla, miamala huwasilishwa kwa nodi hizi za safu ya 2 badala ya kuwasilishwa moja kwa moja kwa safu ya 1 (Mtandao Mkuu). Kwa baadhi ya suluhisho, kisa cha safu ya 2 kisha huviweka katika makundi kabla ya kuvitia nanga kwenye safu ya 1, na baada ya hapo hulindwa na safu ya 1 na haviwezi kubadilishwa. Maelezo ya jinsi hii inafanywa hutofautiana sana kati ya teknolojia na utekelezaji tofauti wa safu ya 2.
+Suluhisho nyingi za tabaka la 2 zinajikita kwenye seva au kikundi cha seva, ambazo kila moja inaweza kuitwa nodi, mthibitishaji, mwendeshaji, mpangaji, mzalishaji wa kitalu, au neno linalofanana. Kulingana na utekelezaji, nodi hizi za tabaka la 2 zinaweza kuendeshwa na watu binafsi, biashara au taasisi zinazozitumia, au na mwendeshaji wa tatu, au na kundi kubwa la watu binafsi (sawa na Mtandao Mkuu). Kwa ujumla, miamala huwasilishwa kwa nodi hizi za tabaka la 2 badala ya kuwasilishwa moja kwa moja kwenye tabaka la 1 (Mtandao Mkuu). Kwa baadhi ya suluhisho, mfumo wa tabaka la 2 kisha huzikusanya katika makundi kabla ya kuziweka kwenye tabaka la 1, baada ya hapo zinalindwa na tabaka la 1 na haziwezi kubadilishwa. Maelezo ya jinsi hii inafanywa yanatofautiana sana kati ya teknolojia na utekelezaji tofauti wa tabaka la 2.
 
-Kisa maalum cha safu ya 2 kinaweza kuwa wazi na kushirikiwa na programu nyingi, au kinaweza kupelekwa na mradi mmoja na kujitolea kusaidia programu yao pekee.
+Mfumo maalum wa tabaka la 2 unaweza kuwa wazi na kushirikiwa na programu nyingi, au unaweza kusambazwa na mradi mmoja na kujitolea kusaidia programu yao pekee.
 
-#### Kwa nini safu ya 2 inahitajika? {#why-is-layer-2-needed}
+#### Kwa nini tabaka la 2 linahitajika? {#why-is-layer-2-needed}
 
 - Kuongezeka kwa miamala kwa sekunde kunaboresha sana uzoefu wa mtumiaji, na kupunguza msongamano wa mtandao kwenye Mtandao Mkuu wa Ethereum.
-- Miamala hukusanywa katika muamala mmoja kwenye Mtandao Mkuu wa Ethereum, na kupunguza ada za gesi kwa watumiaji na kuifanya Ethereum kuwa jumuishi zaidi na kupatikana kwa watu kila mahali.
-- Sasisho zozote za uwezo wa kuongezeka hazipaswi kuwa kwa gharama ya ugatuzi au usalama – safu ya 2 inajengwa juu ya Ethereum.
-- Kuna mitandao ya safu ya 2 maalum kwa programu ambayo huleta seti zao za ufanisi wakati wa kufanya kazi na mali kwa kiwango kikubwa.
+- Miamala inakusanywa kuwa muamala mmoja kwenye Mtandao Mkuu wa Ethereum, kupunguza ada za gesi kwa watumiaji na kufanya Ethereum iwe jumuishi zaidi na kufikiwa na watu kila mahali.
+- Masasisho yoyote ya uwezo wa kuongezeka hayapaswi kuwa kwa gharama ya ugatuzi au usalama – tabaka la 2 linajengwa juu ya Ethereum.
+- Kuna mitandao ya tabaka la 2 maalum kwa programu ambayo huleta seti yao wenyewe ya ufanisi wakati wa kufanya kazi na rasilimali kwa kiwango kikubwa.
 
-[Zaidi kuhusu safu ya 2](/layer-2/).
+[Zaidi kuhusu tabaka la 2](/layer-2/).
 
-#### Unda-mpya {#rollups}
+#### Mikusanyiko {#rollups}
 
-Unda-mpya hutekeleza miamala nje ya safu ya 1 na kisha data huwekwa kwenye safu ya 1 ambapo makubaliano hufikiwa. Kwa vile data ya muamala imejumuishwa katika bloku za safu ya 1, hii inaruhusu unda-mpya kulindwa na usalama asili wa Ethereum.
+Mikusanyiko hufanya utekelezaji wa muamala nje ya tabaka la 1 na kisha data inatumwa kwenye tabaka la 1 ambapo mwafaka unafikiwa. Kwa kuwa data ya muamala inajumuishwa kwenye vitalu vya tabaka la 1, hii inaruhusu mikusanyiko kulindwa na usalama wa asili wa Ethereum.
 
-Kuna aina mbili za unda-mpya zenye miundo tofauti ya usalama:
+Kuna aina mbili za mikusanyiko yenye miundo tofauti ya usalama:
 
-- **Optimistic rollups**: huchukulia miamala kuwa halali kwa chaguo-msingi na huendesha hesabu tu, kupitia [**uthibitisho wa ulaghai**](/glossary/#fraud-proof), endapo kuna changamoto. [Zaidi kuhusu Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
-- **Zero-knowledge rollups**: huendesha hesabu offchain na huwasilisha [**uthibitisho wa uhalali**](/glossary/#validity-proof) kwenye mnyororo. [Zaidi kuhusu zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
+- **Mikusanyiko yenye matumaini (Optimistic rollups)**: huchukulia miamala kuwa halali kwa chaguo-msingi na huendesha tu ukokotoaji, kupitia [**ushahidi wa udanganyifu**](/glossary/#fraud-proof), endapo kutatokea changamoto. [Zaidi kuhusu mikusanyiko yenye matumaini](/developers/docs/scaling/optimistic-rollups/).
+- **Mikusanyiko ya sifuri-maarifa**: huendesha ukokotoaji nje ya mnyororo na kuwasilisha [**uthibitisho wa uhalali**](/glossary/#validity-proof) kwenye mnyororo. [Zaidi kuhusu mikusanyiko ya sifuri-maarifa](/developers/docs/scaling/zk-rollups/).
 
 #### Chaneli za hali {#channels}
 
-Chaneli za hali hutumia mikataba ya multisig kuwezesha washiriki kufanya miamala haraka na kwa uhuru offchain, kisha kukamilisha mwisho na Mtandao Mkuu. Hii inapunguza msongamano wa mtandao, ada, na ucheleweshaji. Aina mbili za chaneli kwa sasa ni chaneli za hali na chaneli za malipo.
+Chaneli za hali hutumia mikataba ya saini-nyingi kuwezesha washiriki kufanya miamala haraka na kwa uhuru nje ya mnyororo, kisha kutatua ukamilifu na Mtandao Mkuu. Hii inapunguza msongamano wa mtandao, ada, na ucheleweshaji. Aina mbili za chaneli kwa sasa ni chaneli za hali na chaneli za malipo.
 
 Jifunze zaidi kuhusu [chaneli za hali](/developers/docs/scaling/state-channels/).
 
-### Sidechains {#sidechains}
+### Minyororo ya kando {#sidechains}
 
-Sidechain ni blockchain huru inayolingana na EVM ambayo inaendeshwa sambamba na Mainnet. Hizi zinapatana na Ethereum kupitia madaraja ya njia mbili na huendeshwa chini ya sheria zao walizochagua za makubaliano na vigezo vya kuzuia.
+Mnyororo wa kando ni mnyororo wa vitalu unaojitegemea unaoendana na EVM ambao unafanya kazi sambamba na Mtandao Mkuu. Hizi zinaendana na Ethereum kupitia madaraja ya njia mbili na zinafanya kazi chini ya sheria zao zilizochaguliwa za mwafaka na vigezo vya kitalu.
 
-Jifunze zaidi kuhusu [Sidechains](/developers/docs/scaling/sidechains/).
+Jifunze zaidi kuhusu [Minyororo ya kando](/developers/docs/scaling/sidechains/).
 
-### Njozi {#plasma}
+### Plasma {#plasma}
 
-Mnyororo wa njozi ni mnyororo wa bloku tofauti ambao umetiwa nanga kwenye mnyororo mkuu wa Ethereum na hutumia uthibitisho wa ulaghai (kama [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) kusuluhisha mizozo.
+Mnyororo wa Plasma ni mnyororo wa vitalu tofauti ambao umewekwa kwenye mnyororo mkuu wa Ethereum na hutumia ushahidi wa udanganyifu (kama [mikusanyiko yenye matumaini](/developers/docs/scaling/optimistic-rollups/)) kusuluhisha mizozo.
 
-Jifunze zaidi kuhusu [Njozi](/developers/docs/scaling/plasma/).
+Jifunze zaidi kuhusu [Plasma](/developers/docs/scaling/plasma/).
 
 ### Validium {#validium}
 
-Mnyororo wa Validium hutumia uthibitisho wa uhalali kama zero-knowledge rollups lakini data haihifadhiwi kwenye mnyororo mkuu wa safu ya 1 ya Ethereum. Hii inaweza kusababisha miamala 10k kwa sekunde kwa kila mnyororo wa Validium na minyororo mingi inaweza kuendeshwa sambamba.
+Mnyororo wa Validium hutumia uthibitisho wa uhalali kama mikusanyiko ya sifuri-maarifa lakini data haihifadhiwi kwenye mnyororo mkuu wa Ethereum wa tabaka la 1. Hii inaweza kusababisha miamala 10k kwa sekunde kwa kila mnyororo wa Validium na minyororo mingi inaweza kuendeshwa sambamba.
 
 Jifunze zaidi kuhusu [Validium](/developers/docs/scaling/validium/).
 
-## Kwa nini suluhisho nyingi za uongezwaji zinahitajika? {#why-do-we-need-these}
+## Kwa nini suluhisho nyingi za uongezaji wa uwezo zinahitajika? {#why-do-we-need-these}
 
-- Suluhisho nyingi zinaweza kusaidia kupunguza msongamano wa jumla kwenye sehemu yoyote ya mtandao na pia kuzuia sehemu moja ya kushindwa.
-- Jumla ni kubwa kuliko jumla ya sehemu zake. Suluhisho tofauti zinaweza kuwepo na kufanya kazi kwa pamoja, kuruhusu athari ya kielelezo kwenye kasi ya muamala ya baadaye na upitishaji.
-- Sio suluhisho zote zinahitaji kutumia kanuni ya makubaliano ya Ethereum moja kwa moja, na mbadala zinaweza kutoa manufaa ambayo vinginevyo yangekuwa magumu kupata.
+- Suluhisho nyingi zinaweza kusaidia kupunguza msongamano wa jumla kwenye sehemu yoyote ya mtandao na pia kuzuia sehemu moja ya kutofaulu.
+- Kwa pamoja ni zaidi ya jumla ya sehemu zake. Suluhisho tofauti zinaweza kuwepo na kufanya kazi kwa upatano, kuruhusu athari kubwa kwenye kasi ya muamala ya baadaye na uwezo wa upitishaji.
+- Sio suluhisho zote zinahitaji kutumia algoriti ya mwafaka ya Ethereum moja kwa moja, na njia mbadala zinaweza kutoa faida ambazo vinginevyo zingekuwa ngumu kupata.
 
-## Wewe ni mwanafunzi wa kuona zaidi? {#visual-learner}
+## Je, unapendelea kujifunza kwa kuona? {#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+<VideoWatch slug="layer-2-scaling-explained" />
 
-_Kumbuka maelezo katika video yanatumia neno "Safu ya 2" kurejelea suluhisho zote za uongezwaji za offchain, wakati sisi tunatofautisha "Safu ya 2" kama suluhisho la offchain ambalo hupata usalama wake kupitia makubaliano ya Mtandao Mkuu wa safu ya 1._
+_Kumbuka maelezo kwenye video yanatumia neno "Tabaka la 2" kurejelea suluhisho zote za uongezaji wa uwezo nje ya mnyororo, wakati sisi tunatofautisha "Tabaka la 2" kama suluhisho la nje ya mnyororo ambalo hupata usalama wake kupitia mwafaka wa Mtandao Mkuu wa tabaka la 1._
 
-<YouTube id="7pWxCklcNsU" />
+<VideoWatch slug="rollups-scaling-strategy" />
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-- [Ramani ya maendeleo ya Ethereum inayozingatia unda-mpya](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
-- [Uchanganuzi wa kisasa kuhusu suluhisho za uongezwaji za Safu ya 2 kwa Ethereum](https://www.l2beat.com/)
-- [Kutathmini Suluhisho za Uongezwaji za safu ya 2 za Ethereum: Mfumo wa Kulinganisha](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Mwongozo Usio Kamili wa Unda-mpya](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
-- [ZK-Rollups zinazoendeshwa na Ethereum: Washindi wa Dunia](https://hackmd.io/@canti/rkUT0BD8K)
-- [Optimistic Rollups dhidi ya ZK Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Kwa nini unda-mpya + vipande vya data ndio suluhisho pekee endelevu kwa uwezo mkubwa wa kuongezeka](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
-- [Ni aina gani za Safu za 3 zina mantiki?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
-- [Upatikanaji wa Data au: Jinsi Unda-mpya zilivyojifunza Kuacha Kuhangaika na Kuipenda Ethereum](https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
-- [Mwongozo wa Vitendo kwa Unda-mpya za Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Ramani ya njia ya Ethereum inayozingatia rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
+- [Uchanganuzi wa kisasa kuhusu suluhisho za uongezaji wa uwezo wa Tabaka la 2 kwa Ethereum](https://www.l2beat.com/)
+- [Kutathmini Suluhisho za Uongezaji wa Uwezo wa tabaka la 2 la Ethereum: Mfumo wa Ulinganisho](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Mwongozo Usiokamilika wa Mikusanyiko](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
+- [Mikusanyiko ya ZK Inayoendeshwa na Ethereum: Washindi wa Dunia](https://hackmd.io/@canti/rkUT0BD8K)
+- [Mikusanyiko Yenye Matumaini dhidi ya Mikusanyiko ya ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
+- [Kwa nini mikusanyiko + shadi za data ndio suluhisho pekee endelevu kwa uwezo wa juu wa kuongezeka](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [Ni aina gani ya Tabaka la 3 inaleta maana?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
+- [Upatikanaji wa Data Au: Jinsi Mikusanyiko Ilivyojifunza Kuacha Kuwa na Wasiwasi na Kuipenda Ethereum](https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
+- [Mwongozo wa Vitendo wa Mikusanyiko ya Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 
-_Unajua rasilimali ya jamii iliyokusaidia?_ Hariri ukurasa huu na uiongeze!_
+_Je, unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
+
+## Mafunzo: Jenga Tabaka la 2 lenye uwezo wa kuongezeka kwenye Ethereum {#tutorials}
+
+- [Yote unayoweza kuhifadhi kwenye kache](/developers/tutorials/all-you-can-cache/) _– Jinsi ya kujenga na kutumia mkataba wa kuhifadhi kwenye kache ili kupunguza gharama za data za mwito kwenye mikusanyiko._
+- [ABI Fupi kwa Uboreshaji wa Data za Mwito](/developers/tutorials/short-abi/) _– Jinsi ya kutumia ABI fupi zaidi kupunguza gharama za data za mwito kwa miamala ya tabaka la 2._

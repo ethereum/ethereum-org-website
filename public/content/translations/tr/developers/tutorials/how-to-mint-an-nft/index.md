@@ -1,10 +1,10 @@
 ---
 title: "Bir NFT Nasıl Basılır (NFT Eğitim Serisi Bölüm 2/3)"
-description: "Bu öğretici, akıllı sözleşmemizi ve Web3'ü kullanarak Ethereum blokzincirinde bir NFT'nin nasıl basılacağını açıklar."
+description: "Bu eğitim, akıllı sözleşmemizi ve Web3'ü kullanarak Ethereum blokzincirinde nasıl bir NFT basılacağını açıklamaktadır."
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "alchemy", "solidity", "akıllı kontratlar" ]
+tags: ["ERC-721", "Alchemy", "Solidity", "akıllı sözleşmeler"]
 skill: beginner
-breadcrumb: "NFT basımı"
+breadcrumb: NFT Basmak
 lang: tr
 published: 2021-04-22
 ---
@@ -13,15 +13,15 @@ published: 2021-04-22
 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 Milyon Dolar
 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 Milyon Dolar
 
-Hepsi, Alchemy'nin güçlü API'sini kullanarak NFT'lerini bastı. Bu öğreticide, aynısını \<10 dakika içinde nasıl yapacağınızı öğreteceğiz.
+Hepsi NFT'lerini Alchemy'nin güçlü API'sini kullanarak bastı. Bu eğitimde, size aynı şeyi 10 dakikadan kısa bir sürede nasıl yapacağınızı öğreteceğiz.
 
-“Bir NFT basmak”, ERC-721 jetonunuzun benzersiz bir örneğini blokzincirde yayınlama eylemidir. [Bu NFT öğretici serisinin 1. Bölümündeki](/developers/tutorials/how-to-write-and-deploy-an-nft/) akıllı sözleşmemizi kullanarak Web3 becerilerimizi sergileyelim ve bir NFT basalım. Bu öğreticinin sonunda, gönlünüzün (ve cüzdanınızın) çektiği kadar NFT basabileceksiniz!
+“Bir NFT basmak”, ERC-721 token'ınızın benzersiz bir örneğini blokzincirinde yayınlama eylemidir. [Bu NFT eğitim serisinin 1. Bölümündeki](/developers/tutorials/how-to-write-and-deploy-an-nft/) akıllı sözleşmemizi kullanarak, Web3 becerilerimizi gösterelim ve bir NFT basalım. Bu eğitimin sonunda, kalbinizin (ve cüzdanınızın) arzu ettiği kadar çok NFT basabileceksiniz!
 
 Hadi başlayalım!
 
-## Adım 1: Web3'ü yükleyin {#install-web3}
+## 1. Adım: Web3'ü Yükleyin {#install-web3}
 
-NFT akıllı sözleşmenizi oluşturmayla ilgili ilk öğreticiyi takip ettiyseniz Ethers.js kullanma konusunda zaten deneyiminiz vardır. Web3, Ethereum blokzincirine istek oluşturmayı kolaylaştırmak için kullanılan bir kütüphane olduğu için Ethers'a benzer. Bu öğreticide, otomatik yeniden denemeler ve sağlam WebSocket desteği sunan gelişmiş bir Web3 kütüphanesi olan [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)'ü kullanacağız.
+NFT akıllı sözleşmenizi oluşturmaya yönelik ilk eğitimi takip ettiyseniz, Ethers.js kullanma konusunda zaten deneyiminiz var demektir. Web3, [Ethereum](/) blokzincirine istek oluşturmayı kolaylaştırmak için kullanılan bir kütüphane olması bakımından Ethers'a benzer. Bu eğitimde, otomatik yeniden denemeler ve sağlam WebSocket desteği sunan gelişmiş bir Web3 kütüphanesi olan [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)'ü kullanacağız.
 
 Projenizin ana dizininde şunu çalıştırın:
 
@@ -29,9 +29,9 @@ Projenizin ana dizininde şunu çalıştırın:
 npm install @alch/alchemy-web3
 ```
 
-## Adım 2: Bir `mint-nft.js` dosyası oluşturun {#create-mintnftjs}
+## 2. Adım: Bir `mint-nft.js` dosyası oluşturun {#create-mintnftjs}
 
-Komut dosyaları dizininizin içinde bir `mint-nft.js` dosyası oluşturun ve aşağıdaki kod satırlarını ekleyin:
+scripts dizininizin içinde bir `mint-nft.js` dosyası oluşturun ve aşağıdaki kod satırlarını ekleyin:
 
 ```js
 require("dotenv").config()
@@ -40,15 +40,15 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Adım 3: Sözleşme ABI'nizi alın {#contract-abi}
+## 3. Adım: Sözleşme ABI'nizi alın {#contract-abi}
 
-Sözleşme ABI'miz (Uygulama İkili Arayüzü), akıllı sözleşmemizle etkileşim kurma arayüzüdür. Sözleşme ABI'leri hakkında daha fazla bilgiyi [buradan](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is) edinebilirsiniz. Hardhat bizim için otomatik olarak bir ABI oluşturur ve bunu `MyNFT.json` dosyasına kaydeder. Bunu kullanabilmek için `mint-nft.js` dosyamıza aşağıdaki kod satırlarını ekleyerek içeriği ayrıştırmamız gerekecek:
+Sözleşme ABI'miz (Uygulama İkili Arayüzü), akıllı sözleşmemizle etkileşime girmek için kullanılan arayüzdür. Sözleşme ABI'leri hakkında daha fazla bilgiyi [buradan](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is) edinebilirsiniz. Hardhat bizim için otomatik olarak bir ABI oluşturur ve bunu `MyNFT.json` dosyasına kaydeder. Bunu kullanmak için, `mint-nft.js` dosyamıza aşağıdaki kod satırlarını ekleyerek içerikleri ayrıştırmamız gerekecek:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 ```
 
-ABI'yi görmek isterseniz konsolunuza yazdırabilirsiniz:
+Eğer ABI'yi görmek isterseniz, konsolunuza yazdırabilirsiniz:
 
 ```js
 console.log(JSON.stringify(contract.abi))
@@ -60,27 +60,27 @@ console.log(JSON.stringify(contract.abi))
 node scripts/mint-nft.js
 ```
 
-## Adım 4: IPFS kullanarak NFT'nizin meta verilerini yapılandırın {#config-meta}
+## 4. Adım: IPFS kullanarak NFT'niz için meta verileri yapılandırın {#config-meta}
 
-1. Bölüm'deki öğreticimizden hatırlayacağınız üzere, `mintNFT` akıllı sözleşme fonksiyonumuz, NFT'nin meta verilerini açıklayan bir JSON belgesine çözümlenmesi gereken bir tokenURI parametresi alır. Bu meta veriler, NFT'yi gerçekten hayata geçiren, ad, açıklama, resim ve diğer nitelikler gibi yapılandırılabilir özelliklere sahip olmasını sağlayan şeydir.
+Bölüm 1'deki eğitimimizden hatırlarsanız, `mintNFT` akıllı sözleşme fonksiyonumuz, NFT'nin meta verilerini açıklayan bir JSON belgesine çözümlenmesi gereken bir tokenURI parametresi alır; bu, NFT'ye hayat veren ve onun bir isim, açıklama, görüntü ve diğer nitelikler gibi yapılandırılabilir özelliklere sahip olmasını sağlayan şeydir.
 
-> _Gezegenler Arası Dosya Sistemi (IPFS), dağıtılmış bir dosya sisteminde veri depolamak ve paylaşmak için merkeziyetsiz bir protokol ve eşler arası ağdır._
+> _Gezegenlerarası Dosya Sistemi (IPFS), dağıtılmış bir dosya sisteminde veri depolamak ve paylaşmak için kullanılan merkeziyetsiz bir protokol ve eşler arası ağdır._
 
-NFT varlığımızı ve meta verilerimizi depolamak ve NFT'mizin gerçekten merkeziyetsiz olmasını sağlamak için kullanışlı bir IPFS API ve araç takımı olan Pinata'yı kullanacağız. Pinata hesabınız yoksa [buradan](https://app.pinata.cloud) ücretsiz bir hesap için kaydolun ve e-postanızı doğrulamak için adımları tamamlayın.
+NFT'mizin gerçekten merkeziyetsiz olmasını sağlamak amacıyla NFT varlığımızı ve meta verilerimizi depolamak için kullanışlı bir IPFS API'si ve araç seti olan Pinata'yı kullanacağız. Bir Pinata hesabınız yoksa, [buradan](https://app.pinata.cloud) ücretsiz bir hesaba kaydolun ve e-postanızı doğrulamak için adımları tamamlayın.
 
 Bir hesap oluşturduktan sonra:
 
-- "Dosyalar" sayfasına gidin ve sayfanın sol üst köşesindeki mavi "Yükle" düğmesine tıklayın.
+- "Files" (Dosyalar) sayfasına gidin ve sayfanın sol üst köşesindeki mavi "Upload" (Yükle) düğmesine tıklayın.
 
-- Pinata'ya bir resim yükleyin — bu, NFT'nizin resim varlığı olacaktır. Varlığa dilediğiniz adı verebilirsiniz
+- Pinata'ya bir görüntü yükleyin — bu, NFT'niz için görüntü varlığı olacaktır. Varlığı istediğiniz gibi adlandırmaktan çekinmeyin.
 
-- Yükleme yaptıktan sonra, "Dosyalar" sayfasındaki tabloda dosya bilgilerini göreceksiniz. Ayrıca bir CID sütunu da göreceksiniz. Yanındaki kopyalama düğmesine tıklayarak CID'yi kopyalayabilirsiniz. Yüklemenizi şu adresten görüntüleyebilirsiniz: `https://gateway.pinata.cloud/ipfs/<CID>`. Örneğin, IPFS'de kullandığımız görseli [burada](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5) bulabilirsiniz.
+- Yükledikten sonra, "Files" sayfasındaki tabloda dosya bilgilerini göreceksiniz. Ayrıca bir CID sütunu da göreceksiniz. Yanındaki kopyala düğmesine tıklayarak CID'yi kopyalayabilirsiniz. Yüklemenizi şu adreste görüntüleyebilirsiniz: `https://gateway.pinata.cloud/ipfs/<CID>`. Örneğin, IPFS'te kullandığımız görüntüyü [burada](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5) bulabilirsiniz.
 
-Görsel öğrenenler için yukarıdaki adımlar burada özetlenmiştir:
+Daha görsel öğrenenler için yukarıdaki adımlar burada özetlenmiştir:
 
-![Resminizi Pinata'ya nasıl yüklersiniz](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.gif)
 
-Şimdi Pinata'ya bir belge daha yükleyeceğiz. Ama bunu yapmadan önce onu oluşturmamız gerekiyor!
+Şimdi, Pinata'ya bir belge daha yüklemek isteyeceğiz. Ancak bunu yapmadan önce onu oluşturmamız gerekiyor!
 
 Kök dizininizde `nft-metadata.json` adında yeni bir dosya oluşturun ve aşağıdaki json kodunu ekleyin:
 
@@ -88,35 +88,35 @@ Kök dizininizde `nft-metadata.json` adında yeni bir dosya oluşturun ve aşağ
 {
   "attributes": [
     {
-      "trait_type": "Cins",
+      "trait_type": "Breed",
       "value": "Maltipoo"
     },
     {
-      "trait_type": "Göz Rengi",
+      "trait_type": "Eye color",
       "value": "Mocha"
     }
   ],
-  "description": "Dünyanın en sevimli ve hassas köpeği.",
+  "description": "The world's most adorable and sensitive pup.",
   "image": "ipfs://QmWmvTJmJU3pozR9ZHFmQC2DNDwi2XJtf3QGyYiiagFSWb",
   "name": "Ramses"
 }
 ```
 
-json'daki verileri değiştirmekten çekinmeyin. Nitelikler bölümüne ekleme veya çıkarma yapabilirsiniz. En önemlisi, resim alanının IPFS resminizin konumunu gösterdiğinden emin olun — aksi takdirde NFT'niz (çok sevimli!) bir fotoğraf içerecektir köpek.
+Json'daki verileri değiştirmekten çekinmeyin. Nitelikler (attributes) bölümünden çıkarma yapabilir veya ekleme yapabilirsiniz. En önemlisi, image alanının IPFS görüntünüzün konumunu işaret ettiğinden emin olun — aksi takdirde NFT'niz (çok sevimli!) bir köpeğin fotoğrafını içerecektir.
 
-JSON dosyasını düzenlemeyi bitirdikten sonra, kaydedin ve resmi yüklemek için yaptığımız adımların aynısını izleyerek Pinata'ya yükleyin.
+JSON dosyasını düzenlemeyi bitirdiğinizde, kaydedin ve görüntüyü yüklemek için yaptığımız adımların aynısını izleyerek Pinata'ya yükleyin.
 
-![nft-metadata.json dosyanızı Pinata'ya nasıl yüklersiniz](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
 
-## Adım 5: Sözleşmenizin bir örneğini oluşturun {#instance-contract}
+## 5. Adım: Sözleşmenizin bir örneğini oluşturun {#instance-contract}
 
-Şimdi, sözleşmemizle etkileşim kurmak için kodumuzda onun bir örneğini oluşturmamız gerekiyor. Bunu yapmak için, sözleşmeyi dağıtmak için kullandığınız adresi arayarak dağıtımdan veya [Blockscout](https://eth-sepolia.blockscout.com/) üzerinden alabileceğimiz sözleşme adresimize ihtiyacımız olacak.
+Şimdi, sözleşmemizle etkileşime girmek için kodumuzda onun bir örneğini oluşturmamız gerekiyor. Bunu yapmak için, dağıtımdan veya sözleşmeyi dağıtmak için kullandığınız adresi aratarak [Blockscout](https://eth-sepolia.blockscout.com/)'tan alabileceğimiz sözleşme adresimize ihtiyacımız olacak.
 
-![Sözleşme adresinizi Etherscan'de görüntüleyin](./view-contract-etherscan.png)
+![View your contract address on Etherscan](./view-contract-etherscan.png)
 
-Yukarıdaki örnekte sözleşme adresimiz 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778'dir.
+Yukarıdaki örnekte, sözleşme adresimiz 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778'dir.
 
-Ardından, ABI ve adresi kullanarak sözleşmemizi oluşturmak için Web3 [sözleşme yöntemini](https://docs.web3js.org/api/web3-eth-contract/class/Contract) kullanacağız. `mint-nft.js` dosyanıza aşağıdakileri ekleyin:
+Ardından, ABI ve adresi kullanarak sözleşmemizi oluşturmak için Web3 [contract metodunu](https://docs.web3js.org/api/web3-eth-contract/class/Contract) kullanacağız. `mint-nft.js` dosyanıza aşağıdakileri ekleyin:
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
@@ -124,11 +124,11 @@ const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
 
-## Adım 6: `.env` dosyasını güncelleyin {#update-env}
+## 6. Adım: `.env` dosyasını güncelleyin {#update-env}
 
-Şimdi, Ethereum zincirine işlem oluşturmak ve göndermek için, hesap nonce'unu (aşağıda açıklanacaktır) almak üzere halka açık Ethereum hesap adresinizi kullanacağız.
+Şimdi, Ethereum zincirine işlemler oluşturmak ve göndermek için, hesap nonce'unu (aşağıda açıklanacaktır) almak üzere açık Ethereum hesap adresinizi kullanacağız.
 
-Açık anahtarınızı `.env` dosyanıza ekleyin — öğreticinin 1. bölümünü tamamladıysanız, `.env` dosyanız şimdi şöyle görünmelidir:
+Açık anahtarınızı `.env` dosyanıza ekleyin — eğitimin 1. bölümünü tamamladıysanız, `.env` dosyamız artık şu şekilde görünmelidir:
 
 ```js
 API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
@@ -136,27 +136,27 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Adım 7: İşleminizi oluşturun {#create-txn}
+## 7. Adım: İşleminizi oluşturun {#create-txn}
 
-Öncelikle, `mintNFT(tokenData)` adında bir fonksiyon tanımlayalım ve aşağıdakileri yaparak işlemimizi oluşturalım:
+İlk olarak, `mintNFT(tokenData)` adında bir fonksiyon tanımlayalım ve aşağıdakileri yaparak işlemimizi oluşturalım:
 
 1. `.env` dosyasından _PRIVATE_KEY_ ve _PUBLIC_KEY_ değerlerinizi alın.
 
-2. Sırada, hesap nonce'unu bulmamız gerekiyor. Nonce belirtimi, adresinizden gönderilen işlem sayısını takip etmek için kullanılır. Buna güvenlik amacıyla ve [tekrar saldırılarını](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce) önlemek için ihtiyacımız vardır. Adresinizden gönderilen işlem sayısını almak için [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount) kullanırız.
+1. Ardından, hesap nonce'unu bulmamız gerekecek. Nonce spesifikasyonu, adresinizden gönderilen işlemlerin sayısını takip etmek için kullanılır — ki buna güvenlik amacıyla ve [tekrarlama saldırılarını (replay attacks)](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce) önlemek için ihtiyacımız vardır. Adresinizden gönderilen işlemlerin sayısını almak için [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount) kullanırız.
 
-3. Son olarak işlemimizi aşağıdaki bilgilerle ayarlayacağız:
+1. Son olarak işlemimizi aşağıdaki bilgilerle kuracağız:
 
-- `'from': PUBLIC_KEY` — İşlemimizin kaynağı, halka açık adresimizdir
+- `'from': PUBLIC_KEY` — İşlemimizin kaynağı açık adresimizdir
 
-- `'to': contractAddress` — Etkileşimde bulunmak ve işlemi göndermek istediğimiz sözleşme
+- `'to': contractAddress` — Etkileşime girmek ve işlemi göndermek istediğimiz sözleşme
 
-- `'nonce': nonce` — Adresimizden gönderilen işlem sayısını içeren hesap nonce'u
+- `'nonce': nonce` — Adresimizden gönderilen işlemlerin sayısını içeren hesap nonce'u
 
 - `'gas': estimatedGas` — İşlemi tamamlamak için gereken tahmini gaz
 
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Bu işlemde gerçekleştirmek istediğimiz hesaplama, ki bu durumda bir NFT basmaktır
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Bu işlemde gerçekleştirmek istediğimiz hesaplama — ki bu durumda bir NFT basmaktır
 
-`mint-nft.js` dosyanız şimdi şöyle görünmelidir:
+`mint-nft.js` dosyanız şimdi şu şekilde görünmelidir:
 
 ```js
    require('dotenv').config();
@@ -185,11 +185,11 @@ PUBLIC_KEY = "your-public-account-address"
    }​
 ```
 
-## Adım 8: İşlemi imzalayın {#sign-txn}
+## 8. Adım: İşlemi imzalayın {#sign-txn}
 
-İşlemimizi oluşturduğumuza göre, göndermek için imzalamamız gerekiyor. İşte burada özel anahtarımızı kullanacağız.
+İşlemimizi oluşturduğumuza göre, onu göndermek için imzalamamız gerekiyor. İşte burada özel anahtarımızı kullanacağız.
 
-`web3.eth.sendSignedTransaction`, bize işlem hash değerini verir. Bunu, işlemimizin mine edildiğinden ve ağ tarafından düşürülmediğinden emin olmak için kullanabiliriz. İşlem imzalama bölümünde, işlemimizin başarılı olup olmadığını bilmemiz için bazı hata denetimleri eklediğimizi fark edeceksiniz.
+`web3.eth.sendSignedTransaction` bize işlem hash'ini verecektir, bunu işlemimizin madenciliğinin yapıldığından ve ağ tarafından düşürülmediğinden emin olmak için kullanabiliriz. İşlem imzalama bölümünde, işlemimizin başarıyla gerçekleşip gerçekleşmediğini bilmek için bazı hata kontrolleri eklediğimizi fark edeceksiniz.
 
 ```js
 require("dotenv").config()
@@ -224,13 +224,13 @@ async function mintNFT(tokenURI) {
         function (err, hash) {
           if (!err) {
             console.log(
-              "İşleminizin hash değeri: ",
+              "The hash of your transaction is: ",
               hash,
-              "\nİşleminizin durumunu görüntülemek için Alchemy'nin Mempool'unu kontrol edin!"
+              "\nCheck Alchemy's Mempool to view the status of your transaction!"
             )
           } else {
             console.log(
-              "İşleminizi gönderirken bir şeyler ters gitti:",
+              "Something went wrong when submitting your transaction:",
               err
             )
           }
@@ -238,24 +238,24 @@ async function mintNFT(tokenURI) {
       )
     })
     .catch((err) => {
-      console.log(" Promise başarısız oldu:", err)
+      console.log(" Promise failed:", err)
     })
 }
 ```
 
-## Adım 9: `mintNFT`'yi çağırın ve `node mint-nft.js`'yi çalıştırın {#call-mintnft-fn}
+## 9. Adım: `mintNFT` çağrısı yapın ve node `mint-nft.js` çalıştırın {#call-mintnft-fn}
 
-Pinata'ya yüklediğiniz `metadata.json`'ı hatırlıyor musunuz? Pinata'dan hash kodunu alın ve `mintNFT` fonksiyonuna parametre olarak şunu geçin: `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
+Pinata'ya yüklediğiniz `metadata.json` dosyasını hatırlıyor musunuz? Pinata'dan onun hash kodunu alın ve aşağıdakini `mintNFT` fonksiyonuna parametre olarak geçirin `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 
-Hash kodu şu şekilde alınır:
+Hash kodunu şu şekilde alabilirsiniz:
 
-![Pinata'da NFT meta veri hash kodunuzu nasıl alırsınız](./metadataPinata.gif)_Pinata'da NFT meta veri hash kodunuzu nasıl alırsınız_
+![How to get your nft metadata hashcode on Pinata](./metadataPinata.gif)_Pinata'da nft meta veri hash kodunuzu nasıl alırsınız_
 
-> `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` adresini ayrı bir pencerede yükleyerek kopyaladığınız hash kodunun **metadata.json** dosyanıza bağlandığını iki kez kontrol edin. Sayfa aşağıdaki ekran görüntüsüne benzer görünmelidir:
+> Ayrı bir pencereye `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` yükleyerek kopyaladığınız hash kodunun **metadata.json** dosyanıza bağlandığını iki kez kontrol edin. Sayfa aşağıdaki ekran görüntüsüne benzer görünmelidir:
 
-![Sayfanız json meta verilerini görüntülemelidir](./metadataJSON.png)_Sayfanız json meta verilerini görüntülemelidir_
+![Your page should display the json metadata](./metadataJSON.png)_Sayfanız json meta verilerini göstermelidir_
 
-Sonuç olarak, kodunuz şuna benzer görünmelidir:
+Bütünüyle, kodunuz şuna benzer görünmelidir:
 
 ```js
 require("dotenv").config()
@@ -290,13 +290,13 @@ async function mintNFT(tokenURI) {
         function (err, hash) {
           if (!err) {
             console.log(
-              "İşleminizin hash değeri: ",
+              "The hash of your transaction is: ",
               hash,
-              "\nİşleminizin durumunu görüntülemek için Alchemy'nin Mempool'unu kontrol edin!"
+              "\nCheck Alchemy's Mempool to view the status of your transaction!"
             )
           } else {
             console.log(
-              "İşleminizi gönderirken bir şeyler ters gitti:",
+              "Something went wrong when submitting your transaction:",
               err
             )
           }
@@ -304,7 +304,7 @@ async function mintNFT(tokenURI) {
       )
     })
     .catch((err) => {
-      console.log("Promise başarısız oldu:", err)
+      console.log("Promise failed:", err)
     })
 }
 
@@ -313,18 +313,16 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
 Şimdi, NFT'nizi dağıtmak için `node scripts/mint-nft.js` komutunu çalıştırın. Birkaç saniye sonra, terminalinizde şuna benzer bir yanıt görmelisiniz:
 
-    ```
-    İşleminizin hash değeri: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
-    
-    İşleminizin durumunu görüntülemek için Alchemy'nin Mempool'unu kontrol edin!
-    ```
+    İşleminizin hash'i: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
 
-Ardından, işleminizin durumunu (beklemede, mine edilmiş veya ağdan düşürülmüş) görmek için [Alchemy mempool'unuzu](https://dashboard.alchemyapi.io/mempool) ziyaret edin. İşleminiz düşürüldüyse, [Blockscout](https://eth-sepolia.blockscout.com/)'u kontrol etmek ve işlem hash değerinizi aramak da yararlıdır.
+    İşleminizin durumunu görüntülemek için Alchemy'nin Bellek Havuzunu kontrol edin!
 
-![NFT işlem hash değerinizi Etherscan'de görüntüleyin](./view-nft-etherscan.png)_NFT işlem hash değerinizi Etherscan'de görüntüleyin_
+Ardından, işleminizin durumunu (beklemede mi, madenciliği yapıldı mı veya ağ tarafından düşürüldü mü) görmek için [Alchemy bellek havuzunuzu](https://dashboard.alchemyapi.io/mempool) ziyaret edin. İşleminiz düşürüldüyse, [Blockscout](https://eth-sepolia.blockscout.com/)'u kontrol etmek ve işlem hash'inizi aramak da yararlı olacaktır.
 
-İşte bu kadar! Artık Ethereum blokzincirinde bir NFT'yi dağıttınız VE bastınız <Emoji text=":money_mouth_face:" size={1} />
+![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Etherscan'de NFT işlem hash'inizi görüntüleyin_
 
-`mint-nft.js` kullanarak gönlünüzün (ve cüzdanınızın) çektiği kadar NFT basabilirsiniz! NFT'nin meta verilerini açıklayan yeni bir tokenURI girdiğinizden emin olun (aksi takdirde, farklı kimliklere sahip bir sürü aynı NFT'yi oluşturmuş olursunuz).
+Ve işte bu kadar! Artık Ethereum blokzincirinde bir NFT dağıttınız VE bastınız <Emoji text=":money_mouth_face:" size={1} />
 
-Muhtemelen NFT'nizi cüzdanınızda sergileyebilmek istersiniz — bu yüzden [Bölüm 3: NFT'nizi Cüzdanınızda Nasıl Görüntülersiniz](/developers/tutorials/how-to-view-nft-in-metamask/) bölümüne göz atmayı unutmayın!
+`mint-nft.js` kullanarak kalbinizin (ve cüzdanınızın) arzu ettiği kadar çok NFT basabilirsiniz! Sadece NFT'nin meta verilerini açıklayan yeni bir tokenURI geçirdiğinizden emin olun (aksi takdirde, farklı kimliklere sahip bir sürü aynı NFT'den yapmış olursunuz).
+
+Muhtemelen NFT'nizi cüzdanınızda sergileyebilmek istersiniz — bu yüzden [Bölüm 3: NFT'nizi Cüzdanınızda Nasıl Görüntülersiniz](/developers/tutorials/how-to-view-nft-in-metamask/) kısmına göz atmayı unutmayın!

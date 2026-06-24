@@ -523,6 +523,179 @@ function verifyPlaceholders(normalized: string, translated: string): string[] {
  * Wrapper placeholders are rebuilt with the (potentially translated) text
  * that Gemini placed between the tags.
  */
+/** Placeholder TYPE -> the extraction-key prefix used in the extractions Map. */
+type WrapperType = "LINK" | "HTMLTAG" | "COMPONENT" | "CODEBLOCK"
+type SelfClosingType = "CODE" | "IMAGE" | "CODEBLOCK" | "COMPONENT"
+
+/**
+ * Rebuild the final markup for a single wrapper extraction, given the
+ * translated text Gemini placed between the (possibly corrupted) tags.
+ *
+ * Returns null when the original cannot be parsed for that type (caller then
+ * leaves the residual untouched).
+ */
+function rebuildWrapper(
+  type: WrapperType,
+  original: string,
+  translatedText: string
+): string | null {
+  switch (type) {
+    case "LINK": {
+      const urlMatch = original.match(/\]\(([^)]+)\)/)
+      if (!urlMatch) return null
+      return `[${translatedText}](${urlMatch[1]})`
+    }
+    case "HTMLTAG": {
+      const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
+      const closingMatch = original.match(/<\/(\w+)>/)
+      if (!tagMatch || !closingMatch) return null
+      return `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
+    }
+    case "COMPONENT": {
+      const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
+      const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
+      if (!openingTagMatch || !closingTagMatch) return null
+      return `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedText}</${closingTagMatch[1]}>`
+    }
+    case "CODEBLOCK": {
+      const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
+      if (!fenceMatch) return null
+      return `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedText.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
+    }
+  }
+}
+
+/**
+ * Positional-fallback recovery for placeholder tokens whose hash was corrupted
+ * by Gemini (observed: a real hash like `a1b2c3` returned as `000000` or `0`).
+ *
+ * The exact-hash passes restore tokens by hash lookup; a corrupted hash misses
+ * and the raw token leaks into output (shipped broken ButtonLinks in PR #18429).
+ *
+ * Strategy, per TYPE: collect the extraction entries of that type whose correct
+ * token was NEVER present in the model's raw output (`originalTranslated`) --
+ * those are the ones the exact-hash pass could not have restored. Collect the
+ * residual tokens of that type still present in `result`, in document order.
+ * ONLY when those two counts match do we map the Nth residual (document order)
+ * to the Nth unconsumed extraction (insertion order) and rebuild it. If the
+ * counts disagree we do not guess -- residuals are left untouched.
+ */
+function recoverPlaceholdersByPosition(
+  result: string,
+  originalTranslated: string,
+  extractions: Map<string, string>
+): string {
+  const wrapperTypes: WrapperType[] = [
+    "LINK",
+    "HTMLTAG",
+    "COMPONENT",
+    "CODEBLOCK",
+  ]
+  const selfClosingTypes: SelfClosingType[] = [
+    "CODE",
+    "IMAGE",
+    "CODEBLOCK",
+    "COMPONENT",
+  ]
+  let recovered = 0
+
+  // --- Wrapper recovery (open/close tag pairs) ---
+  for (const type of wrapperTypes) {
+    const prefix = `${type}:`
+    // Unconsumed extraction entries of this type, in insertion (document) order:
+    // their correctly-hashed open tag was absent from the model's raw output,
+    // so the exact-hash pass could not have restored them.
+    const unconsumed: string[] = []
+    extractions.forEach((original, key) => {
+      if (!key.startsWith(prefix)) return
+      const hash = key.slice(prefix.length)
+      const openTag = `<HTML-PLACEHOLDER-${type}-${hash}>`
+      if (!originalTranslated.includes(openTag)) unconsumed.push(original)
+    })
+    if (unconsumed.length === 0) continue
+
+    // Residual wrapper tokens of this type still in result, in document order.
+    const residualOpenRe = new RegExp(
+      `<HTML-PLACEHOLDER-${type}-([A-Za-z0-9]+)>`,
+      "g"
+    )
+    const residualHashes: string[] = []
+    let m: RegExpExecArray | null
+    while ((m = residualOpenRe.exec(result)) !== null) {
+      residualHashes.push(m[1])
+    }
+    if (residualHashes.length !== unconsumed.length) continue
+
+    // Counts match: map Nth residual -> Nth unconsumed entry.
+    for (let i = 0; i < residualHashes.length; i++) {
+      const hash = residualHashes[i]
+      const openTag = `<HTML-PLACEHOLDER-${type}-${hash}>`
+      const closeTag = `</HTML-PLACEHOLDER-${type}-${hash}>`
+      const openIdx = result.indexOf(openTag)
+      if (openIdx < 0) continue
+      const closeIdx = result.indexOf(closeTag, openIdx)
+      if (closeIdx < 0) continue
+      const translatedText = result.slice(openIdx + openTag.length, closeIdx)
+      const rebuilt = rebuildWrapper(type, unconsumed[i], translatedText)
+      if (rebuilt === null) continue
+      result =
+        result.slice(0, openIdx) +
+        rebuilt +
+        result.slice(closeIdx + closeTag.length)
+      recovered++
+    }
+  }
+
+  // --- Self-closing recovery (single token, replaced verbatim) ---
+  for (const type of selfClosingTypes) {
+    // Block types are keyed by their full token string; CODEBLOCK/COMPONENT
+    // self-closing forms are likewise stored under their full token. Collect
+    // unconsumed entries whose self-closing token was absent from raw output.
+    const unconsumed: string[] = []
+    extractions.forEach((original, key) => {
+      // Wrapper-keyed entries (prefixed) are handled above; skip them here.
+      if (
+        key.startsWith("LINK:") ||
+        key.startsWith("HTMLTAG:") ||
+        key.startsWith("COMPONENT:") ||
+        key.startsWith("CODEBLOCK:")
+      ) {
+        return
+      }
+      const selfCloseRe = new RegExp(
+        `^<HTML-PLACEHOLDER-${type}-([A-Za-z0-9]+) />$`
+      )
+      if (!selfCloseRe.test(key)) return
+      if (!originalTranslated.includes(key)) unconsumed.push(original)
+    })
+    if (unconsumed.length === 0) continue
+
+    const residualRe = new RegExp(
+      `<HTML-PLACEHOLDER-${type}-([A-Za-z0-9]+) />`,
+      "g"
+    )
+    const residualTokens: string[] = []
+    let m: RegExpExecArray | null
+    while ((m = residualRe.exec(result)) !== null) {
+      residualTokens.push(m[0])
+    }
+    if (residualTokens.length !== unconsumed.length) continue
+
+    for (let i = 0; i < residualTokens.length; i++) {
+      result = result.split(residualTokens[i]).join(unconsumed[i])
+      recovered++
+    }
+  }
+
+  if (recovered > 0) {
+    console.warn(
+      `  [normalize] Placeholder hash mismatch: recovered ${recovered} placeholder(s) by position`
+    )
+  }
+
+  return result
+}
+
 function reconstructFromPlaceholders(
   translated: string,
   extractions: Map<string, string>
@@ -641,6 +814,11 @@ function reconstructFromPlaceholders(
       openIdx = result.indexOf(openTag)
     }
   })
+
+  // Final pass: positional fallback for tokens the exact-hash passes could not
+  // restore because Gemini corrupted the hash (e.g. -> 000000). Only fires when
+  // residual/unconsumed counts match per type; otherwise leaves residuals as-is.
+  result = recoverPlaceholdersByPosition(result, translated, extractions)
 
   return result
 }
@@ -912,6 +1090,20 @@ async function translateJsonFile(
 
   // Merge batches into final JSON
   const finalContent = mergeJsonBatches(translatedBatches)
+
+  // Hard guard: a raw placeholder token must never reach a shipped file
+  // (PR #18418 leaked <HTML-PLACEHOLDER-HTMLTAG-...> into 7 locales). Restoration
+  // already strips and reports any survivor per value; if one still reaches the
+  // merged output, fail the file loudly so the caller records it instead of
+  // committing broken markup.
+  const leakedPlaceholder = finalContent.match(
+    /<\/?HTML-PLACEHOLDER-[A-Z]+-[a-f0-9]+(?:\s*\/)?>/
+  )
+  if (leakedPlaceholder) {
+    throw new Error(
+      `${filePath}: unrestored placeholder reached output (${leakedPlaceholder[0]}); refusing to ship`
+    )
+  }
 
   // Final validation: merged result against original English
   if (prepared.batchContents.length > 1) {
@@ -1312,4 +1504,9 @@ function stripCodeBlockWrapping(
   }
 
   return text
+}
+
+/** Test-only exports for internal helpers (not part of the public API). */
+export const _testOnly = {
+  reconstructFromPlaceholders,
 }

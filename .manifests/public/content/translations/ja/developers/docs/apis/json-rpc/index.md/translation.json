@@ -1,0 +1,2019 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-18T20:58:38.093Z",
+  "englishManifestHash": "847b34f78fd1",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-30b8f5",
+    "LINK-530956",
+    "LINK-02dc42",
+    "LINK-efd241",
+    "LINK-0dd5c1",
+    "LINK-622c90",
+    "LINK-b43911",
+    "LINK-3c5c92",
+    "LINK-5f1387",
+    "LINK-428949",
+    "LINK-783737",
+    "LINK-706719",
+    "LINK-479e18",
+    "LINK-d86f5f",
+    "LINK-f9a532",
+    "CODE-112283",
+    "CODE-f2b43d",
+    "CODE-bf90bf",
+    "CODE-b62a2f",
+    "CODE-270ce6",
+    "CODE-9608ae",
+    "LINK-0d93d0",
+    "LINK-bd8d7e",
+    "LINK-f54186",
+    "LINK-0d93d0",
+    "CODE-95048e",
+    "CODE-70f1a5",
+    "CODE-2e0290",
+    "CODE-237d3e",
+    "CODEBLOCK-baf09a",
+    "LINK-fae743",
+    "LINK-c313fb",
+    "LINK-783737",
+    "LINK-d86f5f",
+    "LINK-479e18",
+    "LINK-706719",
+    "LINK-f9a532",
+    "LINK-397d78",
+    "LINK-0f5bef",
+    "LINK-88ee52",
+    "LINK-f718e0",
+    "LINK-fddd23",
+    "LINK-df297d",
+    "LINK-8ec88f",
+    "LINK-d711f8",
+    "LINK-99f21d",
+    "LINK-bb0d9e",
+    "LINK-5b66af",
+    "LINK-3a417b",
+    "LINK-57fa3a",
+    "LINK-62c444",
+    "CODE-b2ef23",
+    "CODEBLOCK-039bfd",
+    "CODE-c97c29",
+    "CODEBLOCK-710133",
+    "CODE-c97c29",
+    "CODEBLOCK-112d4f",
+    "CODE-b2ef23",
+    "LINK-aad027",
+    "CODE-6b86b2",
+    "CODE-a8988e",
+    "CODE-ac9eee",
+    "CODEBLOCK-b5799f",
+    "CODE-b5bea4",
+    "CODE-a066ff",
+    "CODE-b5bea4",
+    "CODE-fcbcf1",
+    "CODEBLOCK-7ec097",
+    "CODE-cfd0e2",
+    "CODEBLOCK-f002e9",
+    "LINK-a3c209",
+    "CODE-b2ef23",
+    "CODEBLOCK-b483f7",
+    "CODE-fcbcf1",
+    "CODE-60a33e",
+    "CODE-2859c5",
+    "CODE-4e523a",
+    "CODE-5f1194",
+    "CODE-cfd0e2",
+    "CODE-90dc15",
+    "CODE-cfd0e2",
+    "CODE-c43063",
+    "CODE-cfd0e2",
+    "CODEBLOCK-96b51c",
+    "CODEBLOCK-e167c3",
+    "CODEBLOCK-926680",
+    "CODE-c97c29",
+    "CODEBLOCK-95fa84",
+    "CODE-be6206",
+    "CODEBLOCK-c02e55",
+    "CODE-b5bea4",
+    "CODE-b5bea4",
+    "LINK-14f434",
+    "CODE-a066ff",
+    "CODE-b5bea4",
+    "CODE-fcbcf1",
+    "CODEBLOCK-86fa0f",
+    "CODE-b5bea4",
+    "LINK-14f434",
+    "CODE-cfd0e2",
+    "CODEBLOCK-e0cd3a",
+    "CODE-cfd0e2",
+    "CODEBLOCK-47057d",
+    "CODE-3ed368",
+    "CODEBLOCK-5321b8",
+    "CODE-cfd0e2",
+    "CODEBLOCK-a48b2d",
+    "CODE-c97c29",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-a319c6",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "LINK-ad4fe3",
+    "CODEBLOCK-bff857",
+    "CODE-cfd0e2",
+    "CODEBLOCK-3dea46",
+    "CODE-c97c29",
+    "CODE-cfd0e2",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-a319c6",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "LINK-ad4fe3",
+    "CODE-c97c29",
+    "CODE-cbb5fe",
+    "CODE-185117",
+    "CODEBLOCK-105993",
+    "CODEBLOCK-20082d",
+    "CODEBLOCK-b0ae04",
+    "CODEBLOCK-6fbe02",
+    "CODEBLOCK-908802",
+    "CODEBLOCK-a35c64",
+    "CODE-c97c29",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-a319c6",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "LINK-ad4fe3",
+    "CODEBLOCK-523c8e",
+    "CODE-cfd0e2",
+    "CODEBLOCK-a0b6ac",
+    "CODE-c97c29",
+    "CODEBLOCK-fece51",
+    "CODE-cfd0e2",
+    "CODEBLOCK-4af414",
+    "CODE-34918e",
+    "LINK-ad4fe3",
+    "CODE-a319c6",
+    "CODE-eb0f1f",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "CODEBLOCK-b2e26a",
+    "CODE-cfd0e2",
+    "CODEBLOCK-b21af2",
+    "CODE-c97c29",
+    "CODEBLOCK-5688ba",
+    "CODE-cfd0e2",
+    "CODEBLOCK-c0f0ee",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-a319c6",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "LINK-ad4fe3",
+    "CODEBLOCK-77ded1",
+    "CODE-cfd0e2",
+    "CODEBLOCK-228363",
+    "CODE-c97c29",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-a319c6",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "LINK-ad4fe3",
+    "CODEBLOCK-bd7192",
+    "CODE-c97c29",
+    "CODEBLOCK-ddce90",
+    "CODE-52d610",
+    "CODE-c97c29",
+    "CODE-c97c29",
+    "CODE-c97c29",
+    "CODEBLOCK-515ed5",
+    "LINK-c313fb",
+    "CODE-62a6da",
+    "CODE-1303c0",
+    "CODE-75857a",
+    "CODE-c97c29",
+    "CODE-663ea1",
+    "CODE-c97c29",
+    "CODE-2fe840",
+    "CODE-cfd0e2",
+    "CODE-31326c",
+    "CODE-cfd0e2",
+    "CODE-cd4240",
+    "CODE-cfd0e2",
+    "CODE-3a6eb0",
+    "CODE-c97c29",
+    "CODE-78377b",
+    "CODE-cfd0e2",
+    "CODE-c97c29",
+    "CODEBLOCK-5bd8ef",
+    "CODE-75857a",
+    "CODE-62a6da",
+    "CODE-75857a",
+    "CODE-c97c29",
+    "CODE-663ea1",
+    "CODE-c97c29",
+    "CODE-2fe840",
+    "CODE-cfd0e2",
+    "CODE-31326c",
+    "CODE-cfd0e2",
+    "CODE-cd4240",
+    "CODE-cfd0e2",
+    "CODE-c96c6d",
+    "CODE-c97c29",
+    "CODE-78377b",
+    "CODE-cfd0e2",
+    "CODEBLOCK-efd752",
+    "CODE-c97c29",
+    "LINK-5b66af",
+    "CODEBLOCK-214430",
+    "CODE-c97c29",
+    "CODEBLOCK-39be62",
+    "CODE-c97c29",
+    "LINK-5b66af",
+    "CODEBLOCK-89c2ac",
+    "CODE-82d62f",
+    "CODE-62a6da",
+    "CODE-75857a",
+    "CODE-c97c29",
+    "CODE-663ea1",
+    "CODE-c97c29",
+    "CODE-2fe840",
+    "CODE-cfd0e2",
+    "CODE-31326c",
+    "CODE-cfd0e2",
+    "CODE-cd4240",
+    "CODE-cfd0e2",
+    "CODE-c96c6d",
+    "CODE-c97c29",
+    "LINK-35ff2a",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-a319c6",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "LINK-ad4fe3",
+    "CODE-c97c29",
+    "CODEBLOCK-3bb07a",
+    "LINK-f9a532",
+    "CODE-cfd0e2",
+    "CODEBLOCK-efc557",
+    "CODE-c97c29",
+    "CODE-a066ff",
+    "CODE-b5bea4",
+    "CODE-fcbcf1",
+    "CODEBLOCK-799732",
+    "CODE-62a6da",
+    "CODE-74234e",
+    "CODE-12886f",
+    "CODE-cfd0e2",
+    "CODE-74234e",
+    "CODE-d04b98",
+    "CODE-c97c29",
+    "CODE-74234e",
+    "CODE-4790e4",
+    "CODE-c97c29",
+    "CODE-78377b",
+    "CODE-c97c29",
+    "CODE-74234e",
+    "CODE-b8ad1b",
+    "CODE-4c0297",
+    "CODE-c97c29",
+    "CODE-0bf889",
+    "CODE-c97c29",
+    "CODE-74234e",
+    "CODE-02961a",
+    "CODE-c97c29",
+    "CODE-b21d35",
+    "CODE-c97c29",
+    "CODE-ce2e3f",
+    "CODE-c97c29",
+    "CODE-8b133a",
+    "CODE-c97c29",
+    "CODE-b129ae",
+    "CODE-cfd0e2",
+    "CODE-ad8512",
+    "CODE-cfd0e2",
+    "CODE-21fd6f",
+    "CODE-c97c29",
+    "CODE-ccdcbe",
+    "CODE-cfd0e2",
+    "CODE-c971d2",
+    "CODE-cfd0e2",
+    "CODE-60fe58",
+    "CODE-cfd0e2",
+    "CODE-323748",
+    "CODE-cfd0e2",
+    "CODE-81dc07",
+    "CODE-f0cf39",
+    "CODE-5ffcda",
+    "CODE-f0cf39",
+    "CODEBLOCK-bb6ff5",
+    "CODE-34918e",
+    "LINK-ad4fe3",
+    "CODE-a319c6",
+    "CODE-eb0f1f",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "CODE-a066ff",
+    "CODE-b5bea4",
+    "CODE-fcbcf1",
+    "CODEBLOCK-b5784c",
+    "LINK-df297d",
+    "CODEBLOCK-3dddf3",
+    "LINK-df297d",
+    "CODE-c97c29",
+    "CODEBLOCK-9c8f84",
+    "CODE-62a6da",
+    "CODE-74234e",
+    "CODE-6e68e0",
+    "CODE-c97c29",
+    "CODE-74234e",
+    "CODE-7a3f89",
+    "CODE-cfd0e2",
+    "CODE-74234e",
+    "CODE-75857a",
+    "CODE-c97c29",
+    "CODE-2fe840",
+    "CODE-cfd0e2",
+    "CODE-31326c",
+    "CODE-cfd0e2",
+    "CODE-d04b98",
+    "CODE-c97c29",
+    "CODE-c96c6d",
+    "CODE-c97c29",
+    "CODE-78377b",
+    "CODE-cfd0e2",
+    "CODE-663ea1",
+    "CODE-c97c29",
+    "CODE-74234e",
+    "CODE-504dea",
+    "CODE-cfd0e2",
+    "CODE-74234e",
+    "CODE-cd4240",
+    "CODE-cfd0e2",
+    "CODE-4c9448",
+    "CODE-cfd0e2",
+    "CODE-454349",
+    "CODE-cfd0e2",
+    "CODE-043a71",
+    "CODE-cfd0e2",
+    "CODEBLOCK-787a8b",
+    "CODE-c97c29",
+    "CODE-cfd0e2",
+    "CODEBLOCK-0146ec",
+    "LINK-d711f8",
+    "CODEBLOCK-be8830",
+    "LINK-d711f8",
+    "CODE-34918e",
+    "LINK-ad4fe3",
+    "CODE-a319c6",
+    "CODE-eb0f1f",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "CODE-cfd0e2",
+    "CODEBLOCK-d9ef96",
+    "LINK-d711f8",
+    "CODEBLOCK-40a081",
+    "LINK-d711f8",
+    "CODE-c97c29",
+    "CODEBLOCK-f13fc0",
+    "CODE-62a6da",
+    "CODE-74234e",
+    "CODE-9f89eb",
+    "CODE-c97c29",
+    "CODE-504dea",
+    "CODE-cfd0e2",
+    "CODE-6e68e0",
+    "CODE-c97c29",
+    "CODE-7a3f89",
+    "CODE-cfd0e2",
+    "CODE-75857a",
+    "CODE-c97c29",
+    "CODE-663ea1",
+    "CODE-c97c29",
+    "CODE-e72af6",
+    "CODE-c8c319",
+    "CODE-a065ef",
+    "CODE-cfd0e2",
+    "CODE-969e13",
+    "CODE-c8c319",
+    "CODE-444ec4",
+    "CODE-c97c29",
+    "CODE-74234e",
+    "CODE-98f38f",
+    "CODE-f0cf39",
+    "CODE-0bf889",
+    "CODE-c97c29",
+    "CODE-1303c0",
+    "CODE-cfd0e2",
+    "CODE-b8ad1b",
+    "CODE-a03279",
+    "CODE-5f6f0f",
+    "CODE-481349",
+    "CODE-c97c29",
+    "CODE-073c16",
+    "CODE-cfd0e2",
+    "CODE-6b86b2",
+    "CODE-5feceb",
+    "CODEBLOCK-c1a4f2",
+    "CODE-c97c29",
+    "CODE-cfd0e2",
+    "CODEBLOCK-0146ec",
+    "LINK-df297d",
+    "CODEBLOCK-4dc864",
+    "LINK-df297d",
+    "CODE-34918e",
+    "LINK-ad4fe3",
+    "CODE-a319c6",
+    "CODE-eb0f1f",
+    "CODE-12adac",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "CODE-cfd0e2",
+    "CODEBLOCK-84811b",
+    "LINK-df297d",
+    "CODEBLOCK-65ee8b",
+    "LINK-df297d",
+    "LINK-834467",
+    "CODE-4f53cd",
+    "CODE-014afd",
+    "CODE-9fe610",
+    "CODE-c44525",
+    "CODE-6f3060",
+    "CODE-62a6da",
+    "CODE-d9c8a2",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-eb0f1f",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "CODE-12adac",
+    "CODE-a319c6",
+    "CODE-d7dcea",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-eb0f1f",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "CODE-12adac",
+    "CODE-a319c6",
+    "CODE-d80c9b",
+    "CODE-e9c1c0",
+    "CODE-f013aa",
+    "CODE-3ed368",
+    "CODE-c97c29",
+    "CODEBLOCK-79f862",
+    "CODE-cfd0e2",
+    "CODEBLOCK-f59095",
+    "LINK-834467",
+    "CODE-cfd0e2",
+    "CODEBLOCK-f29e11",
+    "LINK-834467",
+    "CODE-cfd0e2",
+    "CODEBLOCK-ca7bde",
+    "LINK-834467",
+    "CODE-cfd0e2",
+    "CODEBLOCK-fbc08b",
+    "CODE-a066ff",
+    "CODE-b5bea4",
+    "CODE-fcbcf1",
+    "CODEBLOCK-85a2af",
+    "CODE-cfd0e2",
+    "CODEBLOCK-20ad07",
+    "CODE-f0cf39",
+    "CODE-96609d",
+    "CODE-c97c29",
+    "CODE-dd0fdb",
+    "CODE-176fae",
+    "CODE-c97c29",
+    "CODE-ee898a",
+    "CODE-770074",
+    "CODE-e1f797",
+    "CODE-158f5b",
+    "CODE-b5bea4",
+    "CODE-fcbcf1",
+    "CODE-ea338d",
+    "CODE-cfd0e2",
+    "CODE-74234e",
+    "CODE-504dea",
+    "CODE-cfd0e2",
+    "CODE-74234e",
+    "CODE-986ef1",
+    "CODE-c97c29",
+    "CODE-74234e",
+    "CODE-6e68e0",
+    "CODE-c97c29",
+    "CODE-74234e",
+    "CODE-74234e",
+    "CODE-7a3f89",
+    "CODE-cfd0e2",
+    "CODE-74234e",
+    "CODE-74234e",
+    "CODE-d80c9b",
+    "CODE-c97c29",
+    "CODE-3a6eb0",
+    "CODE-c97c29",
+    "CODE-f013aa",
+    "CODE-3ed368",
+    "CODE-c97c29",
+    "CODE-2f183a",
+    "CODE-1ccb21",
+    "CODEBLOCK-c69f6f",
+    "CODE-cfd0e2",
+    "CODEBLOCK-20ad07",
+    "LINK-834467",
+    "CODEBLOCK-ec04a8",
+    "LINK-834467",
+    "CODE-62a6da",
+    "CODE-d9c8a2",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-eb0f1f",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "CODE-12adac",
+    "CODE-a319c6",
+    "CODE-d7dcea",
+    "CODE-34918e",
+    "CODE-eb0f1f",
+    "CODE-eb0f1f",
+    "CODE-c684a0",
+    "CODE-4d63d9",
+    "CODE-12adac",
+    "CODE-a319c6",
+    "CODE-d80c9b",
+    "CODE-e9c1c0",
+    "CODE-f013aa",
+    "CODE-3ed368",
+    "CODE-c97c29",
+    "CODE-6e68e0",
+    "CODE-c97c29",
+    "CODE-6e68e0",
+    "CODE-6e68e0",
+    "CODE-6e68e0",
+    "CODE-d9c8a2",
+    "CODE-d7dcea",
+    "CODE-6e68e0",
+    "CODE-6e68e0",
+    "CODE-d9c8a2",
+    "CODE-d7dcea",
+    "CODEBLOCK-ac87bd",
+    "LINK-834467",
+    "CODEBLOCK-57a35e",
+    "LINK-834467",
+    "LINK-4873ab",
+    "LINK-200e4f",
+    "CODE-349d6d",
+    "LINK-190313",
+    "LINK-4c84bd",
+    "CODE-bf603f",
+    "CODEBLOCK-6bb710",
+    "CODE-4b696d",
+    "CODEBLOCK-a08282",
+    "CODE-a82b65",
+    "LINK-0d93d0",
+    "CODEBLOCK-775fd1",
+    "CODEBLOCK-b7aa38",
+    "LINK-589631",
+    "LINK-b5944c",
+    "CODE-f2e983",
+    "CODEBLOCK-e6fc34",
+    "CODE-45b8e9",
+    "CODEBLOCK-1764cd",
+    "CODEBLOCK-ee2d5c",
+    "CODE-e4e83e",
+    "CODEBLOCK-11295e",
+    "CODE-717b86",
+    "CODE-beee7c",
+    "CODE-0d31bc",
+    "CODE-beee7c",
+    "CODE-75857a",
+    "CODE-663ea1",
+    "CODE-3a6eb0",
+    "CODE-218197",
+    "CODE-663ea1",
+    "CODE-3a6eb0",
+    "LINK-9bf70a",
+    "CODEBLOCK-acfeab",
+    "CODE-e271fa",
+    "CODE-7908e9",
+    "CODE-3a5dbc",
+    "CODEBLOCK-780d83",
+    "CODEBLOCK-8ead40",
+    "CODE-0d31bc",
+    "CODE-df0fe7",
+    "CODE-df0fe7",
+    "CODEBLOCK-1508f8",
+    "LINK-68ea88",
+    "LINK-85eb8f",
+    "LINK-5c9041",
+    "LINK-1ecd82",
+    "LINK-eeab49"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-baf09a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-039bfd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-710133": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-112d4f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b5799f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7ec097": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f002e9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b483f7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-96b51c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e167c3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-926680": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-95fa84": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c02e55": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-86fa0f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e0cd3a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-47057d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5321b8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a48b2d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bff857": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3dea46": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-105993": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-20082d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b0ae04": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6fbe02": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-908802": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a35c64": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-523c8e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a0b6ac": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fece51": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4af414": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b2e26a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b21af2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5688ba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c0f0ee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-77ded1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-228363": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bd7192": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ddce90": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-515ed5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5bd8ef": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-efd752": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-214430": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-39be62": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-89c2ac": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3bb07a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-efc557": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-799732": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bb6ff5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b5784c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3dddf3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9c8f84": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-787a8b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0146ec": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-be8830": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d9ef96": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-40a081": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f13fc0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c1a4f2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4dc864": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-84811b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-65ee8b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-79f862": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f59095": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f29e11": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ca7bde": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fbc08b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-85a2af": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-20ad07": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c69f6f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ec04a8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ac87bd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-57a35e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6bb710": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a08282": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-775fd1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b7aa38": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e6fc34": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1764cd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ee2d5c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-11295e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-acfeab": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-780d83": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8ead40": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1508f8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-112283": {
+      "type": "inline-code",
+      "values": {
+        "content": "HEX String"
+      }
+    },
+    "CODE-f2b43d": {
+      "type": "inline-code",
+      "values": {
+        "content": "String \"earliest\""
+      }
+    },
+    "CODE-bf90bf": {
+      "type": "inline-code",
+      "values": {
+        "content": "String \"latest\""
+      }
+    },
+    "CODE-b62a2f": {
+      "type": "inline-code",
+      "values": {
+        "content": "String \"safe\""
+      }
+    },
+    "CODE-270ce6": {
+      "type": "inline-code",
+      "values": {
+        "content": "String \"finalized\""
+      }
+    },
+    "CODE-9608ae": {
+      "type": "inline-code",
+      "values": {
+        "content": "String \"pending\""
+      }
+    },
+    "CODE-95048e": {
+      "type": "inline-code",
+      "values": {
+        "content": "--data"
+      }
+    },
+    "CODE-70f1a5": {
+      "type": "inline-code",
+      "values": {
+        "content": "application/x-www-form-urlencoded"
+      }
+    },
+    "CODE-2e0290": {
+      "type": "inline-code",
+      "values": {
+        "content": "-H \"Content-Type: application/json\""
+      }
+    },
+    "CODE-237d3e": {
+      "type": "inline-code",
+      "values": {
+        "content": "127.0.0.1:8545"
+      }
+    },
+    "CODE-b2ef23": {
+      "type": "inline-code",
+      "values": {
+        "content": "String"
+      }
+    },
+    "CODE-c97c29": {
+      "type": "inline-code",
+      "values": {
+        "content": "DATA"
+      }
+    },
+    "CODE-6b86b2": {
+      "type": "inline-code",
+      "values": {
+        "content": "1"
+      }
+    },
+    "CODE-a8988e": {
+      "type": "inline-code",
+      "values": {
+        "content": "11155111"
+      }
+    },
+    "CODE-ac9eee": {
+      "type": "inline-code",
+      "values": {
+        "content": "560048"
+      }
+    },
+    "CODE-b5bea4": {
+      "type": "inline-code",
+      "values": {
+        "content": "true"
+      }
+    },
+    "CODE-a066ff": {
+      "type": "inline-code",
+      "values": {
+        "content": "Boolean"
+      }
+    },
+    "CODE-fcbcf1": {
+      "type": "inline-code",
+      "values": {
+        "content": "false"
+      }
+    },
+    "CODE-cfd0e2": {
+      "type": "inline-code",
+      "values": {
+        "content": "QUANTITY"
+      }
+    },
+    "CODE-60a33e": {
+      "type": "inline-code",
+      "values": {
+        "content": "False"
+      }
+    },
+    "CODE-2859c5": {
+      "type": "inline-code",
+      "values": {
+        "content": "Object|Boolean"
+      }
+    },
+    "CODE-4e523a": {
+      "type": "inline-code",
+      "values": {
+        "content": "FALSE"
+      }
+    },
+    "CODE-5f1194": {
+      "type": "inline-code",
+      "values": {
+        "content": "startingBlock"
+      }
+    },
+    "CODE-90dc15": {
+      "type": "inline-code",
+      "values": {
+        "content": "currentBlock"
+      }
+    },
+    "CODE-c43063": {
+      "type": "inline-code",
+      "values": {
+        "content": "highestBlock"
+      }
+    },
+    "CODE-be6206": {
+      "type": "inline-code",
+      "values": {
+        "content": "chainId"
+      }
+    },
+    "CODE-3ed368": {
+      "type": "inline-code",
+      "values": {
+        "content": "Array of DATA"
+      }
+    },
+    "CODE-34918e": {
+      "type": "inline-code",
+      "values": {
+        "content": "QUANTITY|TAG"
+      }
+    },
+    "CODE-eb0f1f": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"latest\""
+      }
+    },
+    "CODE-a319c6": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"earliest\""
+      }
+    },
+    "CODE-12adac": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"pending\""
+      }
+    },
+    "CODE-c684a0": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"safe\""
+      }
+    },
+    "CODE-4d63d9": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"finalized\""
+      }
+    },
+    "CODE-185117": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x295a70b2de5e3953354a6a8344e616ed314d7251"
+      }
+    },
+    "CODE-cbb5fe": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x391694e7e0b0cce554cb130d723a9d27458f9298"
+      }
+    },
+    "CODE-52d610": {
+      "type": "inline-code",
+      "values": {
+        "content": "sign(keccak256(\"\\x19Ethereum Signed Message:\\n\" + len(message) + message)))"
+      }
+    },
+    "CODE-62a6da": {
+      "type": "inline-code",
+      "values": {
+        "content": "Object"
+      }
+    },
+    "CODE-1303c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "type"
+      }
+    },
+    "CODE-75857a": {
+      "type": "inline-code",
+      "values": {
+        "content": "from"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-2fe840": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas"
+      }
+    },
+    "CODE-31326c": {
+      "type": "inline-code",
+      "values": {
+        "content": "gasPrice"
+      }
+    },
+    "CODE-cd4240": {
+      "type": "inline-code",
+      "values": {
+        "content": "value"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-78377b": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonce"
+      }
+    },
+    "CODE-c96c6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "input"
+      }
+    },
+    "CODE-82d62f": {
+      "type": "inline-code",
+      "values": {
+        "content": "balanceOf"
+      }
+    },
+    "CODE-74234e": {
+      "type": "inline-code",
+      "values": {
+        "content": "null"
+      }
+    },
+    "CODE-12886f": {
+      "type": "inline-code",
+      "values": {
+        "content": "number"
+      }
+    },
+    "CODE-d04b98": {
+      "type": "inline-code",
+      "values": {
+        "content": "hash"
+      }
+    },
+    "CODE-4790e4": {
+      "type": "inline-code",
+      "values": {
+        "content": "parentHash"
+      }
+    },
+    "CODE-b8ad1b": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x0"
+      }
+    },
+    "CODE-4c0297": {
+      "type": "inline-code",
+      "values": {
+        "content": "sha3Uncles"
+      }
+    },
+    "CODE-0bf889": {
+      "type": "inline-code",
+      "values": {
+        "content": "logsBloom"
+      }
+    },
+    "CODE-02961a": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactionsRoot"
+      }
+    },
+    "CODE-b21d35": {
+      "type": "inline-code",
+      "values": {
+        "content": "stateRoot"
+      }
+    },
+    "CODE-ce2e3f": {
+      "type": "inline-code",
+      "values": {
+        "content": "receiptsRoot"
+      }
+    },
+    "CODE-8b133a": {
+      "type": "inline-code",
+      "values": {
+        "content": "miner"
+      }
+    },
+    "CODE-b129ae": {
+      "type": "inline-code",
+      "values": {
+        "content": "difficulty"
+      }
+    },
+    "CODE-ad8512": {
+      "type": "inline-code",
+      "values": {
+        "content": "totalDifficulty"
+      }
+    },
+    "CODE-21fd6f": {
+      "type": "inline-code",
+      "values": {
+        "content": "extraData"
+      }
+    },
+    "CODE-ccdcbe": {
+      "type": "inline-code",
+      "values": {
+        "content": "size"
+      }
+    },
+    "CODE-c971d2": {
+      "type": "inline-code",
+      "values": {
+        "content": "gasLimit"
+      }
+    },
+    "CODE-60fe58": {
+      "type": "inline-code",
+      "values": {
+        "content": "gasUsed"
+      }
+    },
+    "CODE-323748": {
+      "type": "inline-code",
+      "values": {
+        "content": "timestamp"
+      }
+    },
+    "CODE-81dc07": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactions"
+      }
+    },
+    "CODE-f0cf39": {
+      "type": "inline-code",
+      "values": {
+        "content": "Array"
+      }
+    },
+    "CODE-5ffcda": {
+      "type": "inline-code",
+      "values": {
+        "content": "uncles"
+      }
+    },
+    "CODE-6e68e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "blockHash"
+      }
+    },
+    "CODE-7a3f89": {
+      "type": "inline-code",
+      "values": {
+        "content": "blockNumber"
+      }
+    },
+    "CODE-504dea": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactionIndex"
+      }
+    },
+    "CODE-4c9448": {
+      "type": "inline-code",
+      "values": {
+        "content": "v"
+      }
+    },
+    "CODE-454349": {
+      "type": "inline-code",
+      "values": {
+        "content": "r"
+      }
+    },
+    "CODE-043a71": {
+      "type": "inline-code",
+      "values": {
+        "content": "s"
+      }
+    },
+    "CODE-9f89eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactionHash "
+      }
+    },
+    "CODE-e72af6": {
+      "type": "inline-code",
+      "values": {
+        "content": "cumulativeGasUsed"
+      }
+    },
+    "CODE-c8c319": {
+      "type": "inline-code",
+      "values": {
+        "content": "QUANTITY "
+      }
+    },
+    "CODE-a065ef": {
+      "type": "inline-code",
+      "values": {
+        "content": "effectiveGasPrice"
+      }
+    },
+    "CODE-969e13": {
+      "type": "inline-code",
+      "values": {
+        "content": "gasUsed "
+      }
+    },
+    "CODE-444ec4": {
+      "type": "inline-code",
+      "values": {
+        "content": "contractAddress "
+      }
+    },
+    "CODE-98f38f": {
+      "type": "inline-code",
+      "values": {
+        "content": "logs"
+      }
+    },
+    "CODE-a03279": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x1"
+      }
+    },
+    "CODE-5f6f0f": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x2"
+      }
+    },
+    "CODE-481349": {
+      "type": "inline-code",
+      "values": {
+        "content": "root"
+      }
+    },
+    "CODE-073c16": {
+      "type": "inline-code",
+      "values": {
+        "content": "status"
+      }
+    },
+    "CODE-5feceb": {
+      "type": "inline-code",
+      "values": {
+        "content": "0"
+      }
+    },
+    "CODE-4f53cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "[]"
+      }
+    },
+    "CODE-014afd": {
+      "type": "inline-code",
+      "values": {
+        "content": "[A]"
+      }
+    },
+    "CODE-9fe610": {
+      "type": "inline-code",
+      "values": {
+        "content": "[null, B]"
+      }
+    },
+    "CODE-c44525": {
+      "type": "inline-code",
+      "values": {
+        "content": "[A, B]"
+      }
+    },
+    "CODE-6f3060": {
+      "type": "inline-code",
+      "values": {
+        "content": "[[A, B], [A, B]]"
+      }
+    },
+    "CODE-d9c8a2": {
+      "type": "inline-code",
+      "values": {
+        "content": "fromBlock"
+      }
+    },
+    "CODE-d7dcea": {
+      "type": "inline-code",
+      "values": {
+        "content": "toBlock"
+      }
+    },
+    "CODE-d80c9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address"
+      }
+    },
+    "CODE-e9c1c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "DATA|Array"
+      }
+    },
+    "CODE-f013aa": {
+      "type": "inline-code",
+      "values": {
+        "content": "topics"
+      }
+    },
+    "CODE-96609d": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_newBlockFilter"
+      }
+    },
+    "CODE-dd0fdb": {
+      "type": "inline-code",
+      "values": {
+        "content": "[\"0x3454645634534...\"]"
+      }
+    },
+    "CODE-176fae": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_newPendingTransactionFilter "
+      }
+    },
+    "CODE-ee898a": {
+      "type": "inline-code",
+      "values": {
+        "content": "[\"0x6345343454645...\"]"
+      }
+    },
+    "CODE-770074": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_newFilter"
+      }
+    },
+    "CODE-e1f797": {
+      "type": "inline-code",
+      "values": {
+        "content": "removed"
+      }
+    },
+    "CODE-158f5b": {
+      "type": "inline-code",
+      "values": {
+        "content": "TAG"
+      }
+    },
+    "CODE-ea338d": {
+      "type": "inline-code",
+      "values": {
+        "content": "logIndex"
+      }
+    },
+    "CODE-986ef1": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactionHash"
+      }
+    },
+    "CODE-1ccb21": {
+      "type": "inline-code",
+      "values": {
+        "content": "Deposit(address,bytes32,uint256)"
+      }
+    },
+    "CODE-2f183a": {
+      "type": "inline-code",
+      "values": {
+        "content": "anonymous"
+      }
+    },
+    "CODE-349d6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "Multiply7"
+      }
+    },
+    "CODE-bf603f": {
+      "type": "inline-code",
+      "values": {
+        "content": "localhost:8545"
+      }
+    },
+    "CODE-4b696d": {
+      "type": "inline-code",
+      "values": {
+        "content": "--http"
+      }
+    },
+    "CODE-a82b65": {
+      "type": "inline-code",
+      "values": {
+        "content": "http://localhost:8545"
+      }
+    },
+    "CODE-f2e983": {
+      "type": "inline-code",
+      "values": {
+        "content": "solc"
+      }
+    },
+    "CODE-45b8e9": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_estimateGas"
+      }
+    },
+    "CODE-e4e83e": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_getTransactionReceipt"
+      }
+    },
+    "CODE-717b86": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x4d03d617d700cf81935d7f797f4e2ae719648262"
+      }
+    },
+    "CODE-beee7c": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_sendTransaction"
+      }
+    },
+    "CODE-0d31bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "multiply"
+      }
+    },
+    "CODE-218197": {
+      "type": "inline-code",
+      "values": {
+        "content": "From"
+      }
+    },
+    "CODE-e271fa": {
+      "type": "inline-code",
+      "values": {
+        "content": "int<M>: enc(X)"
+      }
+    },
+    "CODE-7908e9": {
+      "type": "inline-code",
+      "values": {
+        "content": "0000000000000000000000000000000000000000000000000000000000000006"
+      }
+    },
+    "CODE-3a5dbc": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xc6888fa10000000000000000000000000000000000000000000000000000000000000006"
+      }
+    },
+    "CODE-df0fe7": {
+      "type": "inline-code",
+      "values": {
+        "content": "Print"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-30b8f5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-530956": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-apis"
+      }
+    },
+    "LINK-02dc42": {
+      "type": "link",
+      "values": {
+        "url": "https://www.jsonrpc.org/specification"
+      }
+    },
+    "LINK-efd241": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-0dd5c1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/javascript/#available-libraries"
+      }
+    },
+    "LINK-622c90": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/backend/#available-libraries"
+      }
+    },
+    "LINK-b43911": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/beacon-APIs/#/"
+      }
+    },
+    "LINK-3c5c92": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md"
+      }
+    },
+    "LINK-5f1387": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-apis"
+      }
+    },
+    "LINK-428949": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/execution-apis/"
+      }
+    },
+    "LINK-783737": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getbalance"
+      }
+    },
+    "LINK-706719": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getcode"
+      }
+    },
+    "LINK-479e18": {
+      "type": "link",
+      "values": {
+        "url": "#eth-gettransactioncount"
+      }
+    },
+    "LINK-d86f5f": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getstorageat"
+      }
+    },
+    "LINK-f9a532": {
+      "type": "link",
+      "values": {
+        "url": "#eth-call"
+      }
+    },
+    "LINK-0d93d0": {
+      "type": "link",
+      "values": {
+        "url": "https://curl.se"
+      }
+    },
+    "LINK-bd8d7e": {
+      "type": "link",
+      "values": {
+        "url": "#curl-examples"
+      }
+    },
+    "LINK-f54186": {
+      "type": "link",
+      "values": {
+        "url": "#usage-example"
+      }
+    },
+    "LINK-fae743": {
+      "type": "link",
+      "values": {
+        "url": "#eth-blocknumber"
+      }
+    },
+    "LINK-c313fb": {
+      "type": "link",
+      "values": {
+        "url": "#eth-sendrawtransaction"
+      }
+    },
+    "LINK-397d78": {
+      "type": "link",
+      "values": {
+        "url": "#eth-estimategas"
+      }
+    },
+    "LINK-0f5bef": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getblocktransactioncountbyhash"
+      }
+    },
+    "LINK-88ee52": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getblocktransactioncountbynumber"
+      }
+    },
+    "LINK-f718e0": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getunclecountbyblockhash"
+      }
+    },
+    "LINK-fddd23": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getunclecountbyblocknumber"
+      }
+    },
+    "LINK-df297d": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getblockbyhash"
+      }
+    },
+    "LINK-8ec88f": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getblockbynumber"
+      }
+    },
+    "LINK-d711f8": {
+      "type": "link",
+      "values": {
+        "url": "#eth-gettransactionbyhash"
+      }
+    },
+    "LINK-99f21d": {
+      "type": "link",
+      "values": {
+        "url": "#eth-gettransactionbyblockhashandindex"
+      }
+    },
+    "LINK-bb0d9e": {
+      "type": "link",
+      "values": {
+        "url": "#eth-gettransactionbyblocknumberandindex"
+      }
+    },
+    "LINK-5b66af": {
+      "type": "link",
+      "values": {
+        "url": "#eth-gettransactionreceipt"
+      }
+    },
+    "LINK-3a417b": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getunclebyblockhashandindex"
+      }
+    },
+    "LINK-57fa3a": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getunclebyblocknumberandindex"
+      }
+    },
+    "LINK-62c444": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-json-rpc.com"
+      }
+    },
+    "LINK-aad027": {
+      "type": "link",
+      "values": {
+        "url": "https://chainlist.org"
+      }
+    },
+    "LINK-a3c209": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-ad4fe3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/#block-parameter"
+      }
+    },
+    "LINK-35ff2a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/abi-spec.html"
+      }
+    },
+    "LINK-834467": {
+      "type": "link",
+      "values": {
+        "url": "#eth-getfilterchanges"
+      }
+    },
+    "LINK-4873ab": {
+      "type": "link",
+      "values": {
+        "url": "https://web3js.readthedocs.io/"
+      }
+    },
+    "LINK-200e4f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/web3.py"
+      }
+    },
+    "LINK-190313": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node"
+      }
+    },
+    "LINK-4c84bd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-589631": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/installing-solidity.html"
+      }
+    },
+    "LINK-b5944c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/solidity/releases/tag/v0.4.20"
+      }
+    },
+    "LINK-9bf70a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/abi-spec.html"
+      }
+    },
+    "LINK-68ea88": {
+      "type": "link",
+      "values": {
+        "url": "http://www.jsonrpc.org/specification"
+      }
+    },
+    "LINK-85eb8f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-5c9041": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/javascript/"
+      }
+    },
+    "LINK-1ecd82": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/backend/"
+      }
+    },
+    "LINK-eeab49": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T20:58:38.093Z",
+      "status": "success"
+    }
+  }
+}

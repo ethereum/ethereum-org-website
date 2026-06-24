@@ -8,9 +8,9 @@ sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Menschen versammelt an einem Terminal-Tisch
 summaryPoints:
-  - "KI, die mit der Blockchain interagiert und unabhängig handelt"
-  - "Kontrolliert Wallets und Gelder auf der Blockchain"
-  - "Stellt Menschen oder andere Agenten für Arbeiten ein"
+  - "KI, die mit der Blockchain interagiert und eigenständig handelt"
+  - "Kontrolliert Onchain-Wallets und -Guthaben"
+  - "Beauftragt Menschen oder andere Agenten mit Aufgaben"
 buttons:
   - content: Was sind KI-Agenten?
     toId: what-are-ai-agents
@@ -19,9 +19,9 @@ buttons:
     isSecondary: false
 ---
 
-Stellen Sie sich vor, Sie navigieren durch Ethereum mit einem KI-Assistenten, der rund um die Uhr Markttrends auf der Blockchain studiert, Fragen beantwortet und sogar Transaktionen in Ihrem Namen ausführt. Willkommen in der Welt der KI-Agenten – intelligente Systeme, die entwickelt wurden, um Ihr digitales Leben zu vereinfachen.
+Stell dir vor, du navigierst durch Ethereum mit einem KI-Assistenten, der rund um die Uhr Onchain-Markttrends analysiert, Fragen beantwortet und sogar Transaktionen in deinem Namen ausführt. Willkommen in der Welt der KI-Agenten – intelligente Systeme, die entwickelt wurden, um dein digitales Leben zu vereinfachen.
 
-Auf Ethereum sehen wir Innovationen von KI-Agenten, die von virtuellen Influencern und autonomen Content-Erstellern bis hin zu Echtzeit-Marktanalyseplattformen reichen. Sie stärken die Nutzer, indem sie Einblicke, Unterhaltung und betriebliche Effizienz bieten.
+Auf Ethereum sehen wir Innovationen bei KI-Agenten, die von virtuellen Influencern und autonomen Content-Erstellern bis hin zu Echtzeit-Marktanalyseplattformen reichen. Sie stärken die Nutzer, indem sie Einblicke, Unterhaltung und betriebliche Effizienz bieten.
 
 ## Was sind KI-Agenten? {#what-are-ai-agents}
 
@@ -31,79 +31,79 @@ KI-Agenten sind Softwareprogramme, die künstliche Intelligenz nutzen, um Aufgab
 
 Im traditionellen Finanzwesen agieren KI-Agenten oft in zentralisierten Umgebungen mit begrenzten Dateneingaben. Dies behindert ihre Fähigkeit, autonom zu lernen oder Vermögenswerte zu verwalten.
 
-Im Gegensatz dazu bietet das dezentralisierte Ökosystem von Ethereum mehrere entscheidende Vorteile:
+Im Gegensatz dazu bietet das dezentrale Ökosystem von Ethereum mehrere entscheidende Vorteile:
 
 - <strong>Transparente Daten:</strong> Zugriff auf Echtzeit-Blockchain-Informationen.
-- <strong>Echter Besitz von Vermögenswerten:</strong> Digitale Vermögenswerte sind vollständig im Besitz von KI-Agenten.
-- <strong>Robuste Funktionalität auf der Blockchain:</strong> Ermöglicht es KI-Agenten, Transaktionen auszuführen, mit Smart Contracts zu interagieren, Liquidität bereitzustellen und über Protokolle hinweg zusammenzuarbeiten.
+- <strong>Wahrer Besitz von Vermögenswerten:</strong> Digitale Vermögenswerte sind vollständig im Besitz der KI-Agenten.
+- <strong>Robuste Onchain-Funktionalität:</strong> Ermöglicht es KI-Agenten, Transaktionen auszuführen, mit Smart Contracts zu interagieren, Liquidität bereitzustellen und protokollübergreifend zusammenzuarbeiten.
 
 Diese Faktoren verwandeln KI-Agenten von einfachen Bots in dynamische, sich selbst verbessernde Systeme, die in mehreren Sektoren erheblichen Mehrwert bieten:
 
 <Grid>
   <Card title="Automatisiertes DeFi" emoji=":money_with_wings:" description="KI-Agenten behalten Markttrends genau im Auge, führen Trades aus und verwalten Portfolios – was die komplexe Welt von DeFi viel zugänglicher macht."/>
-  <Card title="Neue KI-Agenten-Wirtschaft" emoji="🌎" description="KI-Agenten können andere Agenten (oder Menschen) mit unterschiedlichen Fähigkeiten einstellen, um spezialisierte Aufgaben für sie auszuführen." />
+  <Card title="Neue KI-Agenten-Wirtschaft" emoji="🌎" description="KI-Agenten können andere Agenten (oder Menschen) mit unterschiedlichen Fähigkeiten beauftragen, um spezialisierte Aufgaben für sie zu erledigen." />
   <Card title="Risikomanagement" emoji="🛠️" description="Durch die Überwachung von Transaktionsaktivitäten können KI-Agenten helfen, Betrug zu erkennen und Ihre digitalen Vermögenswerte besser und schneller zu schützen." />
 </Grid>
 
 ## Verifizierbare KI {#verifiable-ai}
 
-KI-Agenten, die Off-Chain laufen, verhalten sich oft wie „Black Boxes“ – ihre Argumentation, Eingaben und Ausgaben können nicht unabhängig verifiziert werden. Ethereum ändert das. Durch die Verankerung des Agentenverhaltens auf der Blockchain können Entwickler Agenten bauen, die _vertrauenslos_, _transparent_ und _wirtschaftlich autonom_ sind. Die Aktionen solcher Agenten können geprüft, eingeschränkt und nachgewiesen werden.
+KI-Agenten, die offchain laufen, verhalten sich oft wie „Black Boxes“ – ihre Argumentation, Eingaben und Ausgaben können nicht unabhängig verifiziert werden. Ethereum ändert das. Durch die Onchain-Verankerung des Agentenverhaltens können Entwickler Agenten erstellen, die _vertrauenslos_ (trustless), _transparent_ und _wirtschaftlich autonom_ sind. Die Aktionen solcher Agenten können geprüft, eingeschränkt und nachgewiesen werden.
 
 ### Verifizierbare Inferenz {#verifiable-inference}
 
-KI-Inferenz findet traditionell Off-Chain statt, wo die Ausführung günstig, aber die Modellausführung undurchsichtig ist. Auf Ethereum können Entwickler Agenten mit verifizierbarer Berechnung unter Verwendung mehrerer Techniken koppeln:
+KI-Inferenz findet traditionell offchain statt, wo die Ausführung günstig, die Modellausführung jedoch undurchsichtig ist. Auf Ethereum können Entwickler Agenten mithilfe verschiedener Techniken mit verifizierbarer Berechnung koppeln:
 
-- [**zkML (Zero-Knowledge Machine Learning)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) lässt Agenten beweisen, dass ein Modell korrekt ausgeführt wurde, ohne das Modell oder die Eingaben preiszugeben
-- [**TEE-Bestätigungen (Trusted Execution Environment)**](https://en.wikipedia.org/wiki/Trusted_execution_environment) ermöglichen hardwaregestützte Beweise, dass ein Agent ein bestimmtes Modell oder einen bestimmten Codepfad ausgeführt hat
-- **Unveränderlichkeit auf der Blockchain** stellt sicher, dass diese Beweise und Bestätigungen von jedem Vertrag oder Agenten referenziert, wiederholt und vertraut werden können
+- [**zkML (Zero-Knowledge Machine Learning)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) ermöglicht es Agenten zu beweisen, dass ein Modell korrekt ausgeführt wurde, ohne das Modell oder die Eingaben preiszugeben
+- [**TEE-Attestierungen (Trusted Execution Environment)**](https://en.wikipedia.org/wiki/Trusted_execution_environment) ermöglichen hardwaregestützte Beweise dafür, dass ein Agent ein bestimmtes Modell oder einen bestimmten Codepfad ausgeführt hat
+- **Onchain-Unveränderlichkeit** stellt sicher, dass diese Beweise und Attestierungen von jedem Vertrag oder Agenten referenziert, wiederholt und als vertrauenswürdig eingestuft werden können
 
 ## Zahlungen und Handel mit x402 {#x402}
 
 Das [x402-Protokoll](https://www.x402.org/), das auf Ethereum und L2s bereitgestellt wird, bietet Agenten eine native Möglichkeit, für Ressourcen zu bezahlen und ohne menschliches Eingreifen wirtschaftlich zu interagieren. Agenten können:
 
-- Für Rechenleistung, Daten und API-Aufrufe mit Stablecoins bezahlen
-- Bestätigungen von anderen Agenten oder Diensten anfordern oder verifizieren
+- Mit Stablecoins für Rechenleistung, Daten und API-Aufrufe bezahlen
+- Attestierungen von anderen Agenten oder Diensten anfordern oder verifizieren
 - Am Agent-zu-Agent-Handel teilnehmen und Rechenleistung, Daten oder Modellausgaben kaufen und verkaufen
 
-x402 verwandelt Ethereum in eine programmierbare wirtschaftliche Ebene für autonome Agenten und ermöglicht Pay-per-Use-Interaktionen anstelle von Konten, Abonnements oder zentralisierter Abrechnung.
+x402 macht Ethereum zu einer programmierbaren wirtschaftlichen Schicht für autonome Agenten und ermöglicht Pay-per-Use-Interaktionen anstelle von Konten, Abonnements oder zentralisierter Abrechnung.
 
-### Sicherheit im agentenbasierten Finanzwesen {#agentic-finance-security}
+### Sicherheit für agentenbasierte Finanzen {#agentic-finance-security}
 
 Autonome Agenten benötigen Leitplanken. Ethereum bietet diese auf Wallet- und Vertragsebene:
 
 - [Smart Accounts (EIP-4337)](https://eips.ethereum.org/EIPS/eip-4337) ermöglichen es Entwicklern, Ausgabenlimits, Whitelists, Sitzungsschlüssel und granulare Berechtigungen durchzusetzen
-- Programmierte Einschränkungen in Smart Contracts können beschränken, was ein Agent tun darf
-- Inferenzbasierte Limits (z. B. die Anforderung eines zkML-Beweises vor der Ausführung einer risikoreichen Aktion) fügen eine weitere Sicherheitsebene hinzu
+- Programmierte Einschränkungen in Smart Contracts können begrenzen, was ein Agent tun darf
+- Inferenzbasierte Limits (z. B. die Anforderung eines zkML-Beweises vor der Ausführung einer hochriskanten Aktion) fügen eine weitere Sicherheitsebene hinzu
 
-Diese Kontrollen ermöglichen den Einsatz von autonomen Agenten, die nicht unbegrenzt handeln können.
+Diese Kontrollen ermöglichen die Bereitstellung autonomer Agenten, die nicht grenzenlos agieren können.
 
-### Register auf der Blockchain: ERC-8004 {#erc-8004}
+### Onchain-Register: ERC-8004 {#erc-8004}
 
-[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) definiert Register auf der Blockchain für Agentenidentität, Reputation und Validierung. Es wurde von Mitwirkenden von MetaMask, der Ethereum Foundation, Google und Coinbase mitverfasst und ist in 16 Netzwerken im Einsatz, darunter das Ethereum-Mainnet, Base, Polygon, Arbitrum und andere.
+[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) definiert Onchain-Register für die Identität, Reputation und Validierung von Agenten. Es wurde von Mitwirkenden von MetaMask, der Ethereum Foundation, Google und Coinbase mitverfasst und ist auf 16 Netzwerken bereitgestellt, darunter das Ethereum Mainnet, Base, Polygon, Arbitrum und andere.
 
 Es bietet:
 
 - Ein **Identitätsregister** für portable, zensurresistente Agenten-Identifikatoren
 - Ein **Reputationsregister** für standardisierte Feedback-Signale über Anwendungen hinweg
-- Ein **Validierungsregister** zur Anforderung unabhängiger Verifizierung (zkML, TEE, gestakte Neuausführung)
+- Ein **Validierungsregister** zur Anforderung unabhängiger Verifizierungen (zkML, TEE, gestakte Neuausführung)
 
-ERC-8004 macht es für Agenten einfacher, einander in einer vollständig dezentralisierten Umgebung zu entdecken, zu verifizieren und miteinander zu handeln.
+ERC-8004 macht es Agenten leichter, einander in einer vollständig dezentralen Umgebung zu entdecken, zu verifizieren und miteinander zu transagieren.
 
 ## KI-Agenten auf Ethereum {#ai-agents-on-ethereum}
 
-Wir fangen gerade erst an, das volle Potenzial von KI-Agenten zu erkunden, und Projekte nutzen bereits die Synergie zwischen KI und Blockchain – insbesondere bei Transparenz und Monetarisierung.
+Wir fangen gerade erst an, das volle Potenzial von KI-Agenten zu erkunden, und Projekte nutzen bereits die Synergie zwischen KI und Blockchain – insbesondere in Bezug auf Transparenz und Monetarisierung.
 
 <AiAgentProductLists list="ai-agents" />
 
 <strong>Lunas erster Auftritt als Podcast-Gast</strong>
 
-<YouTube id="ZCsOMxnIruA" />
+<VideoWatch slug="ai-agents-interview-luna" />
 
-## Von Agenten kontrollierte Wallets {#agent-controlled-wallets}
+## Agentengesteuerte Wallets {#agent-controlled-wallets}
 
-Agenten wie Luna oder AIXBT kontrollieren ihr eigenes Wallet auf der Blockchain ([AIXBTs Wallet](https://clusters.xyz/aixbt), [Lunas Wallet](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)), was es ihnen ermöglicht, Fans Trinkgeld zu geben und an wirtschaftlichen Aktivitäten teilzunehmen.
+Agenten wie Luna oder AIXBT kontrollieren ihre eigene Onchain-Wallet ([AIXBTs Wallet](https://clusters.xyz/aixbt), [Lunas Wallet](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)), was es ihnen ermöglicht, Fans Trinkgeld zu geben und an wirtschaftlichen Aktivitäten teilzunehmen.
 
-Während Lunas X-Social-Kampagne #LunaMuralChallenge wählte und belohnte Luna die Gewinner über ihr Base-Wallet – dies markiert <strong>das erste Mal, dass eine KI Menschen für eine Krypto-Belohnung einstellt</strong>.
+Während Lunas Social-Media-Kampagne #LunaMuralChallenge auf X wählte und belohnte Luna die Gewinner über ihre Base-Wallet – dies markiert <strong>das erste Mal, dass eine KI Menschen gegen eine Krypto-Belohnung beauftragt hat</strong>.
 
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
@@ -113,9 +113,9 @@ Während Lunas X-Social-Kampagne #LunaMuralChallenge wählte und belohnte Luna d
 </AlertContent>
 </Alert>
 
-## Steuern Sie Ihr Wallet mit Chat-Befehlen {#control-your-wallet-using-chat-commands}
+## Steuere deine Wallet mit Chat-Befehlen {#control-your-wallet-using-chat-commands}
 
-Sie können die komplizierten Schnittstellen von DeFi überspringen und Ihre Kryptowährungen mit einfachen Chat-Befehlen verwalten.
+Du kannst die komplizierten Benutzeroberflächen von Dezentralisierten Finanzen (DeFi) überspringen und deine Krypto-Werte mit einfachen Chat-Befehlen verwalten.
 
 Dieser intuitive Ansatz macht Transaktionen schneller, einfacher und weniger fehleranfällig, wie z. B. das Senden von Geldern an die falsche Adresse oder das Überbezahlen von Gebühren.
 
@@ -123,21 +123,21 @@ Dieser intuitive Ansatz macht Transaktionen schneller, einfacher und weniger feh
 
 ## KI-Agenten vs. KI-Bots {#ai-agents-vs-ai-bots}
 
-Die Unterscheidung zwischen KI-Agenten und KI-Bots kann manchmal verwirrend sein, da beide automatisierte Aktionen basierend auf Eingaben ausführen.
+Die Unterscheidung zwischen KI-Agenten und KI-Bots kann manchmal verwirrend sein, da beide basierend auf Eingaben automatisierte Aktionen ausführen.
 
-- KI-Bots sind wie automatisierte Assistenten – sie befolgen spezifische, vorprogrammierte Anweisungen, um Routineaufgaben auszuführen.
-- KI-Agenten sind eher wie intelligente Begleiter – sie lernen aus Erfahrung, passen sich an neue Informationen an und treffen eigene Entscheidungen.
+- KI-Bots sind wie automatisierte Assistenten – sie befolgen spezifische, vorprogrammierte Anweisungen, um Routineaufgaben zu erledigen.
+- KI-Agenten sind eher wie intelligente Begleiter – sie lernen aus Erfahrung, passen sich an neue Informationen an und treffen eigenständig Entscheidungen.
 
 |                     | KI-Agenten                                                              | KI-Bots                                     |
 | ------------------- | ---------------------------------------------------------------------- | ------------------------------------------- |
 | **Interaktionen**    | Komplex, anpassungsfähig, autonom                                         | Einfach, vordefinierter Umfang, fest codiert        |
-| **Lernen**        | Lernt kontinuierlich, kann experimentieren und sich in Echtzeit an neue Daten anpassen | Arbeitet mit vortrainierten Daten oder festen Regeln |
+| **Lernen**        | Lernt kontinuierlich, kann experimentieren und sich in Echtzeit an neue Daten anpassen | Arbeitet mit vorab trainierten Daten oder festen Regeln |
 | **Aufgabenerfüllung** | Zielt darauf ab, umfassendere Ziele zu erreichen                                     | Konzentriert sich nur auf spezifische Aufgaben              |
 
 ## Tiefer eintauchen {#dive-deeper}
 
 <AiAgentProductLists list="dive-deeper" />
 
-## Sie können Ihren eigenen KI-Agenten bauen {#you-can-build-your-own-ai-agent}
+## Du kannst deinen eigenen KI-Agenten bauen {#you-can-build-your-own-ai-agent}
 
 <BuildYourOwnAIAgent />

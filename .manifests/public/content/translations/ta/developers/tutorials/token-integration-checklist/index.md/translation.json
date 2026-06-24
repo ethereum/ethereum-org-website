@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "locale": "ta",
+  "translatedAt": "2026-06-18T00:31:32.604Z",
+  "englishManifestHash": "691192cb6452",
+  "placeholderOrder": [
+    "LINK-3abe87",
+    "LINK-4da5ed",
+    "CODEBLOCK-fa6fd5",
+    "CODEBLOCK-ed4670",
+    "LINK-663f50",
+    "LINK-82ba96",
+    "LINK-9f9bab",
+    "LINK-f1cc28",
+    "LINK-4c5deb",
+    "LINK-7da477",
+    "LINK-95be60",
+    "LINK-9516e8",
+    "CODE-4e4820",
+    "LINK-3be650",
+    "LINK-3be650"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-fa6fd5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ed4670": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-4e4820": {
+      "type": "inline-code",
+      "values": {
+        "content": "balances[token_address][msg.sender]"
+      }
+    },
+    "LINK-3abe87": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither#tools"
+      }
+    },
+    "LINK-4da5ed": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/"
+      }
+    },
+    "LINK-663f50": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/blockchain-security-contacts"
+      }
+    },
+    "LINK-82ba96": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/ERC-Conformance"
+      }
+    },
+    "LINK-9f9bab": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729"
+      }
+    },
+    "LINK-f1cc28": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Property-generation"
+      }
+    },
+    "LINK-4c5deb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/echidna"
+      }
+    },
+    "LINK-7da477": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/verifier.html"
+      }
+    },
+    "LINK-95be60": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Printer-documentation#human-summary"
+      }
+    },
+    "LINK-9516e8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary"
+      }
+    },
+    "LINK-3be650": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:31:32.604Z",
+      "status": "success"
+    }
+  }
+}

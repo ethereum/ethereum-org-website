@@ -1,0 +1,1159 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/scaling/optimistic-rollups/index.md",
+  "generatedAt": "2026-06-17T22:39:38.787Z",
+  "rootHash": "29058db0bec9",
+  "tree": {
+    "contentHash": "7bc62156e805",
+    "anchorHash": "b4af5616819e",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "be340bc7ade4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "4fe64b4597b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:5": {
+        "contentHash": "9379318942e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:6": {
+        "contentHash": "38bef40f472b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "9c8ae38f81d5",
+        "anchorHash": "e0dcdaf3a7b0"
+      },
+      "prose:7": {
+        "contentHash": "741f29b29324",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "b3a3398bf400",
+        "anchorHash": "eacb4595ad89"
+      },
+      "prose:8": {
+        "contentHash": "add15b2e98ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "inline-code:3": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6ba9f2ab1a28"
+      },
+      "prose:9": {
+        "contentHash": "55eb23ec51cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:4": {
+        "contentHash": "3aa3a994ea2f",
+        "anchorHash": "375512cb1465"
+      },
+      "prose:10": {
+        "contentHash": "6da2584aeb0c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "f27aa31c0d43",
+        "anchorHash": "b1f9e6a70a0b",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "d462b6da6b84",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "42d7538ac3a1",
+            "anchorHash": "0e11617f9023"
+          },
+          "prose:3": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "0c6eea24ed5f",
+            "anchorHash": "3b52f2e35fd0"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "what-is-an-optimistic-rollup": {
+        "contentHash": "cde8b2c94111",
+        "anchorHash": "bab197e6d670",
+        "labelHash": "6347c93c417d",
+        "children": {
+          "_label": {
+            "contentHash": "6347c93c417d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "47e6df635b82",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:6": {
+            "contentHash": "55eb23ec51cf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3aa3a994ea2f",
+            "anchorHash": "375512cb1465"
+          },
+          "prose:7": {
+            "contentHash": "f9219a4cca73",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "2d4423395bfd",
+            "anchorHash": "7eb4e888e306"
+          },
+          "prose:8": {
+            "contentHash": "a8087610174a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "da0992525b70",
+            "anchorHash": "a4a2d84f7d3b"
+          },
+          "prose:9": {
+            "contentHash": "58658152f74d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "b8ab18f76aa1",
+            "anchorHash": "05db58e92d4e"
+          },
+          "prose:10": {
+            "contentHash": "dea58d70c218",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "inline-code:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "optimistic-rollups-and-ethereum": {
+        "contentHash": "f7f202263175",
+        "anchorHash": "8283bcd5175f",
+        "labelHash": "9ef5bd0d0c54",
+        "children": {
+          "_label": {
+            "contentHash": "9ef5bd0d0c54",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "a54c286f7940",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f83515ffcee0",
+            "anchorHash": "ff4e7ce5aa25"
+          },
+          "prose:4": {
+            "contentHash": "09826497dd81",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "65c815a3a56b",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:5": {
+            "contentHash": "db3d912bedaa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "9c8ae38f81d5",
+            "anchorHash": "e0dcdaf3a7b0"
+          },
+          "prose:6": {
+            "contentHash": "b0c379392e55",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "data-availability": {
+            "contentHash": "a6c4de242817",
+            "anchorHash": "1c50460e2dfa",
+            "labelHash": "188a992e372f",
+            "children": {
+              "_label": {
+                "contentHash": "188a992e372f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "f481c6c25e90",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "6ba9f2ab1a28"
+              },
+              "prose:4": {
+                "contentHash": "7175517a370b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "3aa3a994ea2f",
+                "anchorHash": "375512cb1465"
+              },
+              "prose:5": {
+                "contentHash": "7654af205e63",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "188a992e372f",
+                "anchorHash": "2d66881d658b"
+              },
+              "prose:6": {
+                "contentHash": "3c6df755d79d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "inline-code:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "censorship-resistance": {
+            "contentHash": "2a3e1f772b71",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "cae4d9818fc9",
+            "children": {
+              "_label": {
+                "contentHash": "cae4d9818fc9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "97f5400e051f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "settlement": {
+            "contentHash": "2ffc44d2293f",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "711b5c6af517",
+            "children": {
+              "_label": {
+                "contentHash": "711b5c6af517",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "71b36b4b87b2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "data-availability",
+          "censorship-resistance",
+          "settlement"
+        ]
+      },
+      "how-optimistic-rollups-work": {
+        "contentHash": "1386477a04c9",
+        "anchorHash": "a19ad1f67c2c",
+        "labelHash": "4de7d013aab9",
+        "children": {
+          "_label": {
+            "contentHash": "4de7d013aab9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "transaction-execution-and-aggregation": {
+            "contentHash": "dad127a20c86",
+            "anchorHash": "c9299b049e74",
+            "labelHash": "359ccc7e5bd7",
+            "children": {
+              "_label": {
+                "contentHash": "359ccc7e5bd7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "17d5ef8bf699",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d72e049e2751",
+                "anchorHash": "0e500613f6a4"
+              },
+              "prose:2": {
+                "contentHash": "a9542e3693de",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "submitting-blocks-to-ethereum": {
+                "contentHash": "e32c105e4fd7",
+                "anchorHash": "11a6aced8384",
+                "labelHash": "32bc1398fc53",
+                "children": {
+                  "_label": {
+                    "contentHash": "32bc1398fc53",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:15": {
+                    "contentHash": "86d13af48359",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:0": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:16": {
+                    "contentHash": "213cd9d5e068",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:1": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:17": {
+                    "contentHash": "f4e053402831",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:2": {
+                    "contentHash": "c064fbca9d9d",
+                    "anchorHash": "88f015060148"
+                  },
+                  "prose:18": {
+                    "contentHash": "30ac7d31c4ff",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:3": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:19": {
+                    "contentHash": "3ff93883f2aa",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:4": {
+                    "contentHash": "d912cbceafc9",
+                    "anchorHash": "cd0b17dfb4ed"
+                  },
+                  "prose:20": {
+                    "contentHash": "42b63cec4375",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:5": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:21": {
+                    "contentHash": "4fca427a6d49",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:6": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:22": {
+                    "contentHash": "c4608189c344",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:7": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:23": {
+                    "contentHash": "03aa6e7ef809",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:8": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:24": {
+                    "contentHash": "9c2af1a987a0",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:9": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:25": {
+                    "contentHash": "a7f23f5e82b6",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:10": {
+                    "contentHash": "73300871f44c",
+                    "anchorHash": "84f3b99483fe"
+                  },
+                  "prose:26": {
+                    "contentHash": "b9bcf2c17027",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:11": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "f6dcab0675bd"
+                  },
+                  "prose:27": {
+                    "contentHash": "255650b2f083",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:12": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:28": {
+                    "contentHash": "650595025ebd",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:13": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ba9f2ab1a28"
+                  },
+                  "prose:29": {
+                    "contentHash": "c7bf5ccf390f",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:14": {
+                    "contentHash": "d5c7c6294c3d",
+                    "anchorHash": "f99c50a31566"
+                  },
+                  "prose:30": {
+                    "contentHash": "cdb4ee2aea69",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:15",
+                  "inline-code:0",
+                  "prose:16",
+                  "inline-code:1",
+                  "prose:17",
+                  "link:2",
+                  "prose:18",
+                  "inline-code:3",
+                  "prose:19",
+                  "link:4",
+                  "prose:20",
+                  "inline-code:5",
+                  "prose:21",
+                  "inline-code:6",
+                  "prose:22",
+                  "inline-code:7",
+                  "prose:23",
+                  "inline-code:8",
+                  "prose:24",
+                  "inline-code:9",
+                  "prose:25",
+                  "link:10",
+                  "prose:26",
+                  "inline-code:11",
+                  "prose:27",
+                  "inline-code:12",
+                  "prose:28",
+                  "inline-code:13",
+                  "prose:29",
+                  "link:14",
+                  "prose:30"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2",
+              "submitting-blocks-to-ethereum"
+            ]
+          },
+          "state-commitments": {
+            "contentHash": "a3b1ecf8709c",
+            "anchorHash": "09affb976a5e",
+            "labelHash": "b36974277a12",
+            "children": {
+              "_label": {
+                "contentHash": "b36974277a12",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "d76b1dace4f3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "57862879aa34",
+                "anchorHash": "b8fc8f788bd4"
+              },
+              "prose:3": {
+                "contentHash": "1a34efade538",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "b650583713a0",
+                "anchorHash": "973e284d67f9"
+              },
+              "prose:4": {
+                "contentHash": "c35d3551ad54",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "fraud-proving": {
+            "contentHash": "65bcbf5d182c",
+            "anchorHash": "e1ffd3e69e7a",
+            "labelHash": "20be8c369ed2",
+            "children": {
+              "_label": {
+                "contentHash": "20be8c369ed2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "49f0beb90ea1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "multi-round-interactive-proving": {
+                "contentHash": "c957b47f32a2",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "9d2ed41de34e",
+                "children": {
+                  "_label": {
+                    "contentHash": "9d2ed41de34e",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "b4ba39b8a3f1",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "fraud-proof-benefits": {
+                "contentHash": "1c66f4da7438",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "80c3009e2fc5",
+                "children": {
+                  "_label": {
+                    "contentHash": "80c3009e2fc5",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "eefe37cbe785",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "multi-round-interactive-proving",
+              "fraud-proof-benefits"
+            ]
+          },
+          "l1-l2-interoperability": {
+            "contentHash": "bfd52343516a",
+            "anchorHash": "a1191d337eb7",
+            "labelHash": "d95f096b3f58",
+            "children": {
+              "_label": {
+                "contentHash": "d95f096b3f58",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "fc796115eaf8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "c40cc25b38bd",
+                "anchorHash": "585d8438b20c"
+              },
+              "prose:2": {
+                "contentHash": "37c028873b8c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "asset-movement": {
+                "contentHash": "84fe8852d36a",
+                "anchorHash": "b5e5288e4ae7",
+                "labelHash": "f5255498869d",
+                "children": {
+                  "_label": {
+                    "contentHash": "f5255498869d",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "_auto:entering-the-rollup": {
+                    "contentHash": "b0bb67a3d1a6",
+                    "anchorHash": "12b372065d3b",
+                    "labelHash": "b141f6fce73d",
+                    "children": {
+                      "_label": {
+                        "contentHash": "b141f6fce73d",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:1": {
+                        "contentHash": "6509d8eb70b5",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "link:0": {
+                        "contentHash": "17f29b073143",
+                        "anchorHash": "8f6a6bd63474"
+                      },
+                      "prose:2": {
+                        "contentHash": "d7c8af5a6fbd",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "_label",
+                      "prose:1",
+                      "link:0",
+                      "prose:2"
+                    ]
+                  },
+                  "_auto:exiting-the-rollup": {
+                    "contentHash": "d2ffffe7fee0",
+                    "anchorHash": "4b9f7d802648",
+                    "labelHash": "f7aa949288f7",
+                    "children": {
+                      "_label": {
+                        "contentHash": "f7aa949288f7",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:0": {
+                        "contentHash": "b4e1cb795536",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "_label",
+                      "prose:0"
+                    ]
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "_auto:entering-the-rollup",
+                  "_auto:exiting-the-rollup"
+                ]
+              },
+              "evm-compatibility": {
+                "contentHash": "bf3edc0e8c4e",
+                "anchorHash": "bbac39e077e8",
+                "labelHash": "6bd06433df47",
+                "children": {
+                  "_label": {
+                    "contentHash": "6bd06433df47",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:2": {
+                    "contentHash": "00304dce8fca",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "6676f17ddccb",
+                    "anchorHash": "f68a48502f68"
+                  },
+                  "prose:3": {
+                    "contentHash": "77a4d7a09468",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "d85867fddc99",
+                    "anchorHash": "de75f70e7c5e"
+                  },
+                  "prose:4": {
+                    "contentHash": "09118bbd3a0c",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:2",
+                  "link:0",
+                  "prose:3",
+                  "link:1",
+                  "prose:4"
+                ]
+              },
+              "cross-chain-contract-calls": {
+                "contentHash": "10e024d79d72",
+                "anchorHash": "35038a8ebcf9",
+                "labelHash": "5b73b13966fb",
+                "children": {
+                  "_label": {
+                    "contentHash": "5b73b13966fb",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "1da2358a5843",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "fd3f22b1450a",
+                    "anchorHash": "d08920759d1c"
+                  },
+                  "prose:2": {
+                    "contentHash": "7316a66fe09e",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0",
+                  "prose:2"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2",
+              "asset-movement",
+              "evm-compatibility",
+              "cross-chain-contract-calls"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "transaction-execution-and-aggregation",
+          "state-commitments",
+          "fraud-proving",
+          "l1-l2-interoperability"
+        ]
+      },
+      "how-do-optimistic-rollup-fees-work": {
+        "contentHash": "8e2f260c74b0",
+        "anchorHash": "bc813e75833d",
+        "labelHash": "76104aeed7d0",
+        "children": {
+          "_label": {
+            "contentHash": "76104aeed7d0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:8": {
+            "contentHash": "7455366a9018",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "fa2c8cc4f281"
+          },
+          "prose:9": {
+            "contentHash": "14f3668b4b2c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "485d37d61486",
+            "anchorHash": "f8f55ea8fe5a"
+          },
+          "prose:10": {
+            "contentHash": "3065357d4e8f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "fa2c8cc4f281"
+          },
+          "prose:11": {
+            "contentHash": "709daf68a05b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:12": {
+            "contentHash": "38c65b28522b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "9b0f2d1fbdba",
+            "anchorHash": "4df6bc2645bd"
+          },
+          "prose:13": {
+            "contentHash": "4414703ead46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "0164198dd9bc",
+            "anchorHash": "2be2a692f09f"
+          },
+          "prose:14": {
+            "contentHash": "9bd0bf09ef0d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6ba9f2ab1a28"
+          },
+          "prose:15": {
+            "contentHash": "b87e334c3539",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "c7a92c33416a",
+            "anchorHash": "146a7bea92ac"
+          },
+          "prose:16": {
+            "contentHash": "62d639437fbd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:8",
+          "inline-code:0",
+          "prose:9",
+          "link:1",
+          "prose:10",
+          "inline-code:2",
+          "prose:11",
+          "inline-code:3",
+          "prose:12",
+          "link:4",
+          "prose:13",
+          "link:5",
+          "prose:14",
+          "inline-code:6",
+          "prose:15",
+          "link:7",
+          "prose:16"
+        ]
+      },
+      "scaling-ethereum-with-optimistic-rollups": {
+        "contentHash": "3c7eb9cb119b",
+        "anchorHash": "a5813cd468d5",
+        "labelHash": "cbf0799b6cf8",
+        "children": {
+          "_label": {
+            "contentHash": "cbf0799b6cf8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "707732eef037",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "5733f9e10e35",
+            "anchorHash": "7de092b00b2b"
+          },
+          "prose:5": {
+            "contentHash": "932dc0611f63",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "84393add8c48",
+            "anchorHash": "50e61fec4e1f"
+          },
+          "prose:6": {
+            "contentHash": "d767a7a94c30",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "105d535a8197",
+            "anchorHash": "375512cb1465"
+          },
+          "prose:7": {
+            "contentHash": "11c4ebce6074",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "1945d236048e"
+          },
+          "prose:8": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "optimistic-rollups-pros-and-cons": {
+            "contentHash": "9ff7057a7d21",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "6b46ad9087a4",
+            "children": {
+              "_label": {
+                "contentHash": "6b46ad9087a4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "26b4a3063b90",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "optimistic-video": {
+            "contentHash": "9915e40f0c5c",
+            "anchorHash": "7d8219338705",
+            "labelHash": "4beed8562328",
+            "children": {
+              "_label": {
+                "contentHash": "4beed8562328",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "ac54b3cedf71",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "f5818652a990",
+                "anchorHash": "5c196721dae8",
+                "children": {
+                  "attr:slug": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "a8d8388dac8e"
+                  },
+                  "attr:startTime": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "4be84111a613"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:slug",
+                  "attr:startTime"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "inline-code:3",
+          "prose:8",
+          "optimistic-rollups-pros-and-cons",
+          "optimistic-video"
+        ]
+      },
+      "further-reading-on-optimistic-rollups": {
+        "contentHash": "120f26c072a5",
+        "anchorHash": "ccb8bce963b6",
+        "labelHash": "5476efe809ef",
+        "children": {
+          "_label": {
+            "contentHash": "5476efe809ef",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "5a551230db4e",
+            "anchorHash": "80b3f313b0c2"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "dc7f5a7f3451",
+            "anchorHash": "2b190934f5de"
+          },
+          "prose:10": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "ab086a7d292e",
+            "anchorHash": "912cd8e4a1b3"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "eb8d62e27b94",
+            "anchorHash": "f79a0f0d8bbc"
+          },
+          "prose:12": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "d3fdad0a91f1",
+            "anchorHash": "60cde4bb51a3"
+          },
+          "prose:13": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "c380dab70fb2",
+            "anchorHash": "1162d04db93b"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "02a76fb92912",
+            "anchorHash": "c41332817c12"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "b91fbf78e8be",
+            "anchorHash": "c6773e4d2235"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:8",
+          "link:0",
+          "prose:9",
+          "link:1",
+          "prose:10",
+          "link:2",
+          "prose:11",
+          "link:3",
+          "prose:12",
+          "link:4",
+          "prose:13",
+          "link:5",
+          "prose:14",
+          "link:6",
+          "prose:15",
+          "link:7"
+        ]
+      },
+      "tutorials": {
+        "contentHash": "be4507f79feb",
+        "anchorHash": "b40304d32c33",
+        "labelHash": "7759c0988130",
+        "children": {
+          "_label": {
+            "contentHash": "7759c0988130",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "010362b76438",
+            "anchorHash": "c36e8cf5bb0d"
+          },
+          "prose:2": {
+            "contentHash": "fa01b6bf5cef",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:5",
+      "link:0",
+      "prose:6",
+      "link:1",
+      "prose:7",
+      "link:2",
+      "prose:8",
+      "inline-code:3",
+      "prose:9",
+      "link:4",
+      "prose:10",
+      "prerequisites",
+      "what-is-an-optimistic-rollup",
+      "optimistic-rollups-and-ethereum",
+      "how-optimistic-rollups-work",
+      "how-do-optimistic-rollup-fees-work",
+      "scaling-ethereum-with-optimistic-rollups",
+      "further-reading-on-optimistic-rollups",
+      "tutorials"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

@@ -1,165 +1,163 @@
 ---
 title: DAO ni nini?
-metaTitle: DAO ni nini? | Shirika Linalojitawala Lililogatuliwa
-description: Muhtasari wa DAO juu ya Ethereum
+metaTitle: DAO ni nini? | Shirika Linalojitegemea Lililogatuliwa
+description: Muhtasari wa DAO kwenye Ethereum
 lang: sw
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Uwakilishi wa DAO wa kupiga kura juu ya pendekezo.
+alt: Uwakilishi wa DAO ikipiga kura kwenye pendekezo.
 summaryPoints:
-  - "Jamii zinazomilikiwa na wanachama bila miongozo ya serikali."
-  - "Njia salama ya kushirikiana na wageni wa mtandaoni."
-  - "Sehemu salama ya kutoa fedha kwa sababu maalumu."
+  - "Jumuiya zinazomilikiwa na wanachama bila uongozi wa kati."
+  - "Njia salama ya kushirikiana na wageni kwenye mtandao."
+  - "Mahali salama pa kuweka fedha kwa ajili ya lengo maalum."
 ---
 
-## DAOs ni nini? {#what-are-daos}
+## DAO ni nini? {#what-are-daos}
 
-Mashirika huru gatuzi (DAO) ni mashirika yanayomilikiwa kwa pamoja kufanya kazi kuelekea malengo ya kushirikishana.
+DAO ni shirika linalomilikiwa kwa pamoja linalofanya kazi kufikia lengo la pamoja.
 
-Mashirika huru yaliogatuliwa (DAOs) yanaturuhusu kufanya kazi na watu wenye mielekeo kama yetu ulimwenguni kote pasipokuwepo kuamini kiongozi mwema atakae simamia fedha au operesheni zetu. Hakuna mkurugenzi mtendaji ambaye atatumia fedha kwa mpigo wala afisa mkuu wa fedha wakuharibu vitabu vya fesha. Badala yake, sheria za minyororo ya bloku zilizookwa kwenye kanunu, zinafafanua vile shirika linafanya kazi na vile fedha zinatumika.
+DAO huturuhusu kufanya kazi na watu wenye nia moja kote ulimwenguni bila kumwamini kiongozi mkarimu kusimamia fedha au shughuli. Hakuna Mkurugenzi Mtendaji (CEO) anayeweza kutumia fedha apendavyo au Afisa Mkuu wa Fedha (CFO) anayeweza kuchezea vitabu vya hesabu. Badala yake, sheria zinazotegemea mnyororo wa vitalu zilizowekwa kwenye msimbo hufafanua jinsi shirika linavyofanya kazi na jinsi fedha zinavyotumika.
 
-Wana hazina zilizojengwa ndani ambazo hakuna mtu mwenye mamlaka ya kuzipata bila idhini ya kikundi. Maamuzi hutawaliwa na mapendekezo na upigaji kura ili kuhakikisha kila mtu katika shirika ana sauti, na kila kitu hutokea kwa uwazi [kwenye mnyororo](/glossary/#onchain).
+Zina hazina zilizojengewa ndani ambazo hakuna mtu aliye na mamlaka ya kuzifikia bila idhini ya kikundi. Maamuzi yanatawaliwa na mapendekezo na kura ili kuhakikisha kila mtu katika shirika ana sauti, na kila kitu kinafanyika kwa uwazi [mnyororoni](/glossary/#onchain).
 
-## Kwanini tunahitaji DAO? {#why-dao}
+## Kwa nini tunahitaji DAO? {#why-dao}
 
-Kuanzisha shirika na mtu anayehusisha ufadhili na pesa kunahitaji uaminifu mkubwa kwa watu unaofanya kazi nao. Lakini ni vigumu kumwamini mtu ambaye umesiliana naye mtandaoni tu. Ukiwa na DAO huhitaji kumwamini mtu mwingine yeyote kwenye kikundi, ila msimbo wa DAO pekee, ambao uko wazi 100% na unaweza kuthibitishwa na mtu yeyote.
+Kuanzisha shirika na mtu ambalo linahusisha ufadhili na pesa kunahitaji uaminifu mkubwa kwa watu unaofanya nao kazi. Lakini ni vigumu kumwamini mtu ambaye umewahi kuwasiliana naye kwenye mtandao pekee. Ukiwa na DAO huhitaji kumwamini mtu mwingine yeyote katika kikundi, isipokuwa msimbo wa DAO, ambao ni wazi kwa 100% na unaweza kuthibitishwa na mtu yeyote.
 
 Hii inafungua fursa nyingi mpya za ushirikiano na uratibu wa kimataifa.
 
 ### Ulinganisho {#dao-comparison}
 
-| DAO                                                                                                                                                        | Shirika la jadi                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Huwa ni tambarare, na iliyo na demokrasia kamili.                                                                                          | Kwa kawaida huwa na madaraja.                                                                                        |
-| Ili mabadilioko yoyote yafanyike wanachama lazima wapige kura.                                                                             | Mabadiliko yanaweza kuhitajika kutoka chama pekee, ama upigaji wa kura utakuwepo, kwa kutegemea muundo.              |
-| Kura zitahesabiwa, na matokeo yatatekelezwa kwa njia ya otomatiki bila kutumia mpatanishi.                                                 | Kama upigaji kura utaruhusiwa, kura zitahesabiwa ndani, na matokeo ya upigaji kura lazima yashughulikiwe kwa mikono. |
-| Huduma zinazotolewa zinatekelwza kwa njia ya otomatiki kwa namna iliogatuliwa (kwa mfano ugawanyaji wa pesa za hisani). | Inahitaji kutekelezwa na binandamu, ama mfumo wa otomatiki wa kiserikali, ambao unakua hatarini kufanyiwa ghiliba.   |
-| Shughuli zote ziko wazi kwa jamii.                                                                                                         | Shughuli zote zinafanywa kwa siri, na hazitolewi kwa umma.                                                           |
+| DAO                                                                                                                     | Shirika la kitamaduni                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Kawaida ni tambarare, na la kidemokrasia kikamilifu.                                                                                   | Kawaida lina mfumo wa kitabaka.                                                                            |
+| Kura inahitajika na wanachama ili mabadiliko yoyote yatekelezwe.                                                           | Kulingana na muundo, mabadiliko yanaweza kudaiwa kutoka kwa upande mmoja, au upigaji kura unaweza kutolewa.     |
+| Kura huhesabiwa, na matokeo kutekelezwa kiotomatiki bila mpatanishi anayeaminika.                                      | Ikiwa upigaji kura unaruhusiwa, kura huhesabiwa ndani, na matokeo ya upigaji kura lazima yashughulikiwe kwa mikono. |
+| Huduma zinazotolewa hushughulikiwa kiotomatiki kwa njia iliyogatuliwa (kwa mfano usambazaji wa fedha za hisani). | Inahitaji ushughulikiaji wa binadamu, au otomatiki inayodhibitiwa na kituo kikuu, ambayo inaweza kuchezewa.              |
+| Shughuli zote ni wazi na za umma kikamilifu.                                                                           | Shughuli kwa kawaida ni za faragha, na zimezuiwa kwa umma.                                        |
 
 ### Mifano ya DAO {#dao-examples}
 
-Ili kuongeza uelewa juu ya haya, angalia mifano kadhaa ya DAO ambayo ungeweza kutumia:
+Ili kusaidia hili kuleta maana zaidi, hapa kuna mifano michache ya jinsi unavyoweza kutumia DAO:
 
-- **Shirika la hisani** – unaweza kukubali michango kutoka kwa mtu yeyote duniani na kupiga kura ni sababu zipi za kufadhili.
-- **Umiliki wa pamoja** – unaweza kununua mali halisi au za kidijitali na wanachama wanaweza kupiga kura jinsi ya kuzitumia.
-- **Ubia na ruzuku** – unaweza kuunda mfuko wa ubia unaokusanya mtaji wa uwekezaji na kupiga kura kuhusu ubia gani wa kuunga mkono. Malipo yanaweza kugawanya baadae miongoni mwa wanachama wa DAO.
+- **Shirika la hisani** – unaweza kupokea michango kutoka kwa mtu yeyote duniani na kupiga kura kuhusu malengo yapi ya kufadhili.
+- **Umiliki wa pamoja** – mnaweza kununua rasilimali za kimwili au za kidijitali na wanachama wanaweza kupiga kura kuhusu jinsi ya kuzitumia.
+- **Miradi na ruzuku** – unaweza kuunda mfuko wa mradi unaokusanya mtaji wa uwekezaji na kupiga kura kuhusu miradi ya kuunga mkono. Pesa zilizolipwa zinaweza kugawiwa tena baadaye miongoni mwa wanachama wa DAO.
 
-<YouTube id="zTStDvUtQWc" />
+<VideoWatch slug="dao-build-next-great-city" />
 
 ## DAO zinafanyaje kazi? {#how-daos-work}
 
-Uti wa mgongo wa DAO ni [mkataba wake mahiri](/glossary/#smart-contract), unaofafanua sheria za shirika na kushikilia hazina ya kikundi. Pale mkataba unapokua hai kwenye Ethereum, hakuna anaeweza kubadili sheria ila kwa kupiga kura tu. Kama mtu yeyote atajaribu kufanya kitu kinyume na sheria na mantiki ya msimbo, hatafanikiwa. Kwasababu mkataba erevu hufafanua hazina, inamaana kwamba hamna mtu anayeweza kutumia pesa bila kuruhusiwa na kundi. Hii inamaana DAO hazihitaji mamlaka ya kati. Badala yake, kundi hutoa maamuzi kwa pamoja, na malipo yanaruhusiwa kwa automatiki pale kura zinapopigwa.
+Uti wa mgongo wa DAO ni [mkataba mahiri](/glossary/#smart-contract) wake, ambao hufafanua sheria za shirika na kushikilia hazina ya kikundi. Pindi mkataba unapokuwa hewani kwenye [Ethereum](/), hakuna anayeweza kubadilisha sheria isipokuwa kwa kura. Ikiwa mtu yeyote atajaribu kufanya jambo ambalo halijashughulikiwa na sheria na mantiki katika msimbo, litashindwa. Na kwa sababu hazina inafafanuliwa na mkataba mahiri pia inamaanisha hakuna anayeweza kutumia pesa bila idhini ya kikundi pia. Hii inamaanisha kuwa DAO hazihitaji mamlaka kuu. Badala yake, kikundi hufanya maamuzi kwa pamoja, na malipo huidhinishwa kiotomatiki kura zinapopita.
 
-Hii inawezekana kwasababu mikataba erevu ina ngao-ya-uvamizi mara inapokua hai kwenye Ethereum. Huwezi kuhariri msimbo (sheria za DAO) bila watu kugundua kwasababu kila kitu kiko wazi kwa umma.
+Hili linawezekana kwa sababu mikataba mahiri haiwezi kuchezewa pindi inapoanza kufanya kazi kwenye Ethereum. Huwezi tu kuhariri msimbo (sheria za DAO) bila watu kugundua kwa sababu kila kitu kiko wazi.
 
-## Ethereum na DAOs {#ethereum-and-daos}
+## Ethereum na DAO {#ethereum-and-daos}
 
-Ethereum ndio msingi thabiti wa DAO kwasababu kadhaa:
+Ethereum ni msingi kamili wa DAO kwa sababu kadhaa:
 
-- Makubaliano ya Ethereum yamesambazwa na yenye nguvu ya kutosha mpaka mashirika kuamini mtandao.
-- Msimbo wa mkataba erevu hauwezi kubadilishwa pale unapokua hai, hata na wamiliki wake. Hii huruhusu DAO kujiendesha na masharti yaliowekwa kwenye msimbo toka mwanzo.
-- Mikataba erevu inaweza kutuma/kupokea fedha. Bila hii ungehitaji mpatanishi unaemuamini ili asimamie fedha za kundi.
-- Jamii ya Ethereum imethibitishwa kuwa ya ushirikiano zaidi kuliko ushindani, na hii imeruhusu utendaji mzuri na mifumo ya usaidizi kuvumbuliwa haraka zaidi.
+- Mwafaka wa Ethereum wenyewe umejengwa kwa ugatuzi na umeimarika vya kutosha kwa mashirika kuamini mtandao.
+- Msimbo wa mkataba mahiri hauwezi kurekebishwa pindi unapokuwa hewani, hata na wamiliki wake. Hii inaruhusu DAO kuendeshwa kwa sheria iliyopangwa nayo.
+- Mikataba mahiri inaweza kutuma/kupokea fedha. Bila hili ungehitaji mpatanishi anayeaminika kusimamia fedha za kikundi.
+- Jumuiya ya Ethereum imethibitisha kuwa yenye ushirikiano zaidi kuliko ushindani, ikiruhusu mbinu bora na mifumo ya usaidizi kuibuka haraka.
 
 ## Utawala wa DAO {#dao-governance}
 
-Kuna mambo mengi ya kuzingatia unapo tawala DAO, kama vile upigaji kura na kazi ya mapendekezo.
+Kuna mambo mengi ya kuzingatia wakati wa kutawala DAO, kama vile jinsi upigaji kura na mapendekezo yanavyofanya kazi.
 
-### Uwakilishi {#governance-delegation}
+### Ukaimishaji {#governance-delegation}
 
-Ujumbe ni kama DAO toleo la wajumbe kidemokrasia. Wamiliki tokeni hukabidhi kura kwa watumizi amabao hujiteua wenyewe na kujitolea kuwakili programu and kukaa kujulishwa.
-
-#### Mfano maarufu {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – Wamiliki wa ENS wanaweza kukabidhi kura zao kwa wanajamii wanaoshiriki kikamilifu ili kuwawakilisha.
-
-### Utawala wa muamala wa kiotomatiki {#governance-example}
-
-Kwa mikataba ya DAO, makubaliano hutekelezwa moja kwa moja kama kiwango cha kura za wanachama zinakubaliana.
+Ukaimishaji ni kama toleo la DAO la demokrasia ya uwakilishi. Wamiliki wa tokeni hukaimisha kura kwa watumiaji wanaojiteua na kujitolea kusimamia itifaki na kuendelea kufahamishwa.
 
 #### Mfano maarufu {#governance-example}
 
-[Nouns](https://nouns.wtf) – Katika Nouns DAO, muamala hutekelezwa kiotomatiki ikiwa akidi ya kura itafikiwa na walio wengi wakipiga kura ya ndiyo, mradi tu haijapingwa na waanzilishi.
+[ENS](https://claim.ens.domains/delegate-ranking) – Wamiliki wa ENS wanaweza kukaimisha kura zao kwa wanachama wa jumuiya wanaoshiriki ili kuwawakilisha.
 
-### Utawala wa Multisig {#governance-example}
+### Utawala wa muamala wa kiotomatiki {#governance-example-2}
 
-Ingawa DAOs zinaweza kuwa na maelfu ya wanachama wapigakura, fedha zinaweza kuwekwa kwenye [mkoba](/glossary/#wallet) unaotumiwa na wanajamii 5-20 hai wanaoaminika na kwa kawaida utambulisho wao ni wa umma (utambulisho wa umma unaojulikana na jamii). Baada ya kura, watia sahihi wa [multisig](/glossary/#multisig) hutekeleza matakwa ya jamii.
+Katika DAO nyingi, miamala itatekelezwa kiotomatiki ikiwa akidi ya wanachama itapiga kura ya ndiyo.
+
+#### Mfano maarufu {#governance-example-3}
+
+[Nouns](https://nouns.wtf) – Katika Nouns DAO, muamala hutekelezwa kiotomatiki ikiwa akidi ya kura inafikiwa na wengi wanapiga kura ya ndiyo, mradi tu haijapigiwa kura ya turufu na waanzilishi.
+
+### Utawala wa saini-nyingi {#governance-example-4}
+
+Ingawa DAO zinaweza kuwa na maelfu ya wanachama wanaopiga kura, fedha zinaweza kuishi katika [mkoba](/glossary/#wallet) unaoshirikiwa na wanachama 5-20 wa jumuiya wanaofanya kazi ambao wanaaminika na kwa kawaida wanajulikana (vitambulisho vya umma vinavyojulikana kwa jumuiya). Baada ya kura, watia saini wa [saini-nyingi](/glossary/#multisig) hutekeleza matakwa ya jumuiya.
 
 ## Sheria za DAO {#dao-laws}
 
-Mwaka wa 1977, eneo la wyoming ilivumbua dhima yenye kikomo (LLC) amabayo hukinga waekezaji na kuweka kikomo cha madeni. Hivi majuzi, walianzisha sheria za DAO ambazo ziliweka kisheria hali ya DAO. Kwa sasa wyoming, vermont na kisiwa cha virgin wana sheria za DAO kwa njia moja ama nyingine.
+Mnamo 1977, Wyoming ilivumbua LLC, ambayo inalinda wajasiriamali na kupunguza dhima yao. Hivi karibuni zaidi, walianzisha sheria ya DAO ambayo inaweka hadhi ya kisheria kwa DAO. Kwa sasa Wyoming, Vermont, na Visiwa vya Virgin vina sheria za DAO kwa namna fulani.
 
 ### Mfano maarufu {#law-example}
 
-[CityDAO](https://citizen.citydao.io/) – CityDAO ilitumia sheria ya DAO ya Wyoming kununua ekari 40 za ardhi karibu na Hifadhi ya Taifa ya Yellowstone.
+[CityDAO](https://citizen.citydao.io/) – CityDAO ilitumia sheria ya DAO ya Wyoming kununua ekari 40 za ardhi karibu na Hifadhi ya Kitaifa ya Yellowstone.
 
 ## Uanachama wa DAO {#dao-membership}
 
-Kuna mifano tofauti tofauti ya uanachama wa DAO. Uanachama unaweza kuamua jinsi upigaji kura utafanya kazi na sehemu nyingine kuu za DAO husika.
+Kuna miundo tofauti ya uanachama wa DAO. Uanachama unaweza kuamua jinsi upigaji kura unavyofanya kazi na sehemu nyingine muhimu za DAO.
 
 ### Uanachama unaotegemea tokeni {#token-based-membership}
 
-Kwa kawaida [haihitaji ruhusa](/glossary/#permissionless) kikamilifu, kulingana na tokeni inayotumika. Mara nyingi tokeni hizi za utawala zinaweza kuuzwa bila ruhusa kwenye [exchange isiyogatuliwa](/glossary/#dex). Tokeni nyingine zitapatikana kwa kutoa ukwasi au baadhi ya 'uthibitisho-wa-kazi'. Kwa vyovyote vile, ukishikilia ruzuku za tokeni zinahukupa nafasi ya kupiga kura.
+Kawaida huwa [bila ruhusa](/glossary/#permissionless) kikamilifu, kulingana na tokeni inayotumika. Mara nyingi tokeni hizi za utawala zinaweza kuuzwa bila ruhusa kwenye [soko la ubadilishanaji lililogatuliwa](/glossary/#dex). Nyingine lazima zipatikane kupitia kutoa ukwasi au 'Uthibitisho wa Kazi (PoW)' mwingine. Vyovyote vile, kushikilia tu tokeni kunatoa ufikiaji wa kupiga kura.
 
 _Kwa kawaida hutumika kutawala itifaki pana zilizogatuliwa na/au tokeni zenyewe._
 
 #### Mfano maarufu {#token-example}
 
-[MakerDAO](https://makerdao.com) – Tokeni ya MakerDAO, MKR, inapatikana kwa wingi kwenye exchange zisizogatuliwa, na mtu yeyote anaweza kuinunua ili awe na uwezo wa kupiga kura kuhusu mustakabali wa itifaki ya Maker.
+[MakerDAO](https://makerdao.com) – Tokeni ya MakerDAO ya MKR inapatikana kwa wingi kwenye masoko ya ubadilishanaji yaliyogatuliwa na mtu yeyote anaweza kununua ili kuwa na uwezo wa kupiga kura kuhusu mustakabali wa itifaki ya Maker.
 
 ### Uanachama unaotegemea hisa {#share-based-membership}
 
-DAO za-hisa zinahitaji ruhusa, ila bado ziko wazi. Mwanachama mtarajiwa yeyote anaweza akatoa pendekezo kujiunga na DAO, mara nyingi hutoa kodi ya thamani fulani katika mfumo wa tokeni au kazi. Hisa hutoa nguvu ya kupiga kura moja kwa moja na umiliki. Washiriki wanaweza kutoka mda wowote na uwiano wao wa sehemu ya hazina.
+DAO zinazotegemea hisa zina ruhusa zaidi, lakini bado ziko wazi kabisa. Wanachama wowote watarajiwa wanaweza kuwasilisha pendekezo la kujiunga na DAO, kwa kawaida wakitoa mchango wa thamani fulani kwa njia ya tokeni au kazi. Hisa zinawakilisha uwezo wa moja kwa moja wa kupiga kura na umiliki. Wanachama wanaweza kujitoa wakati wowote na sehemu yao sawia ya hazina.
 
-_Hua inatumika kwa ajili ya muunganiko wa karibu, mashirika yanayozingatia binadamu kama vile misaada, mikusanyiko ya wafanyakazi na vilabu vya uwekezaji. Inaweza kutawala itifaki na tokeni._
-
-#### Mfano maarufu {#share-example}
-
-[MolochDAO](https://molochdao.com/) – MolochDAO imejikita katika kufadhili miradi ya Ethereum. Inahitaji pendekezo kwenye chama ili kundi lifanye tathmini kama unavigezo vinavyokidhi mahitaji na mtaji kufanya maamuzi sahihi kuhusu wafadhili watarajiwa. Huwezi kununua ufikiaji wa DAO kwenye soko la wazi.
+_Kwa kawaida hutumika kwa mashirika yaliyoungana zaidi, yanayozingatia binadamu kama vile mashirika ya hisani, vikundi vya wafanyakazi, na vilabu vya uwekezaji. Pia inaweza kutawala itifaki na tokeni vilevile._
 
 ### Uanachama unaotegemea sifa {#reputation-based-membership}
 
-Sifa za uanachama zinatoa ushahidi wa ushirika wao na kukupatia nguvu ya upigaji kura kwenye DAO. Kinyume cha tokeni ama uanachama wa msingi wa hisa, uanachama wa msingi wa sifa wa DAO hauhamishi umiliki kwende kwa wachangiaji. Sifa haziwezi kununuliwa, kuhamishwa au kukabidhiwa; wanachama wa DAO lazima wafanye kazi ya kupata sifa hizo kwa kushiriki. Upigaji kura kwenye mnyororo hauhitaji ruhusa na wanachama watarajiwa wanaweza kuwasilisha mapendekezo kwa uhuru ili kujiunga na DAO na kuomba kupokea sifa na tokeni kama zawadi kwa kubadilishana na michango yao.
+Sifa inawakilisha uthibitisho wa ushiriki na inatoa uwezo wa kupiga kura katika DAO. Tofauti na uanachama unaotegemea tokeni au hisa, DAO zinazotegemea sifa hazihamishi umiliki kwa wachangiaji. Sifa haiwezi kununuliwa, kuhamishwa au kukaimishwa; Wanachama wa DAO lazima wapate sifa kupitia ushiriki. Upigaji kura mnyororoni ni bila ruhusa na wanachama watarajiwa wanaweza kuwasilisha mapendekezo kwa uhuru ya kujiunga na DAO na kuomba kupokea sifa na tokeni kama tuzo badala ya michango yao.
 
-_Kwa kawaida hutumika kwa maendeleo yaliyogatuliwa na utawala wa itifaki na [mfumo mtawanyo wa kimamlaka](/glossary/#dapp), lakini pia inafaa kwa mashirika mbalimbali kama vile mashirika ya hisani, jumuiya za wafanyakazi, vilabu vya uwekezaji, n.k._
+_Kwa kawaida hutumika kwa maendeleo yaliyogatuliwa na utawala wa itifaki na [programu tumizi zilizogatuliwa (dapp)](/glossary/#dapp), lakini pia inafaa kwa seti tofauti za mashirika kama vile mashirika ya hisani, vikundi vya wafanyakazi, vilabu vya uwekezaji, n.k._
 
 #### Mfano maarufu {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao ilikuwa kundi huru la kimataifa linalojenga na kutawala itifaki na programu zilizogatuliwa tangu 2019. Ilitumia utawala unaotegemea sifa na [makubaliano ya holografia](/glossary/#holographic-consensus) ili kuratibu na kusimamia fedha, ikimaanisha hakuna mtu angeweza kununua ushawishi wa kuathiri mustakabali wake au utawala.
+[DXdao](https://DXdao.eth.limo) – DXdao ilikuwa kikundi huru cha kimataifa kinachojenga na kutawala itifaki na programu zilizogatuliwa tangu 2019. Ilitumia utawala unaotegemea sifa na [mwafaka wa holagrafia](/glossary/#holographic-consensus) kuratibu na kusimamia fedha, ikimaanisha hakuna mtu angeweza kununua njia yake ya kushawishi mustakabali wake au utawala.
 
-## Jiunge na / anzisha DAO {#join-start-a-dao}
+## Jiunge / anza DAO {#join-start-a-dao}
 
 ### Jiunge na DAO {#join-a-dao}
 
-- [DAOs za jumuiya ya Ethereum](/community/get-involved/#decentralized-autonomous-organizations-daos)
-- [Orodha ya DAOs ya DAOHaus](https://app.daohaus.club/explore)
-- [Orodha ya DAOs ya Tally.xyz](https://www.tally.xyz/explore)
-- [Orodha ya DAOs ya DeGov.AI](https://apps.degov.ai/)
+- [DAO za jumuiya ya Ethereum](/community/get-involved/#decentralized-autonomous-organizations-daos)
+- [Orodha ya DAO ya DAOHaus](https://app.daohaus.club/explore)
+- [Orodha ya DAO ya Tally.xyz](https://www.tally.xyz/explore)
+- [Orodha ya DAO ya DeGov.AI](https://apps.degov.ai/)
 
-### Anzisha DAO {#start-a-dao}
+### Anza DAO {#start-a-dao}
 
-- [Anzisha DAO na DAOHaus](https://app.daohaus.club/summon)
-- [Anzisha Governor DAO na Tally](https://www.tally.xyz/get-started)
+- [Ita DAO ukitumia DAOHaus](https://app.daohaus.club/summon)
+- [Anza DAO ya Gavana ukitumia Tally](https://www.tally.xyz/get-started)
 - [Unda DAO inayoendeshwa na Aragon](https://aragon.org/product)
-- [Anzisha colony](https://colony.io/)
-- [Unda DAO kwa kutumia makubaliano ya holografia ya DAOstack](https://alchemy.daostack.io/daos/create)
-- [Zindua DAO ukitumia DeGov Launcher](https://docs.degov.ai/integration/deploy)
+- [Anza koloni](https://colony.io/)
+- [Unda DAO ukitumia mwafaka wa holagrafia wa DAOstack](https://alchemy.daostack.io/daos/create)
+- [Zindua DAO ukitumia Kizindua cha DeGov](https://docs.degov.ai/integration/deploy)
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
 ### Makala za DAO {#dao-articles}
 
 - [DAO ni nini?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
-- [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
-- [DAO ni nini na inatumika kwa nini?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
+- [Nyumba ya DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [DAO ni nini na inatumika kwa ajili gani?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Jinsi ya Kuanzisha Jumuiya ya Kidijitali Inayoendeshwa na DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [DAO ni nini?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
-- [Makubaliano ya Holografia ni Nini?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAOs si mashirika: ambapo ugatuzi katika mashirika yanayojitawala ni muhimu, na Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
-- [DAOs, DACs, DAs na Zaidi: Mwongozo Usiokamilika wa Istilahi](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blogu ya Ethereum](https://blog.ethereum.org)
+- [Mwafaka wa Holagrafia ni nini?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
+- [DAO sio mashirika: ambapo ugatuzi katika mashirika yanayojitegemea ni muhimu na Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
+- [DAO, DAC, DA na Zaidi: Mwongozo Usiokamilika wa Istilahi](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blogu ya Ethereum](https://blog.ethereum.org)
 
 ### Video {#videos}
 
-- [DAO ni nini katika crypto?](https://youtu.be/KHm0uUPqmVE)
+- [DAO ni nini katika kripto?](https://youtu.be/KHm0uUPqmVE)
 - [Je, DAO Inaweza Kujenga Jiji?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
 
 <Divider />

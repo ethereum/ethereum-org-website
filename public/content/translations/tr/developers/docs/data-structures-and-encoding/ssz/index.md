@@ -1,26 +1,26 @@
 ---
 title: "Basit serileştirme"
-description: "Ethereum'un SSZ biçiminin açıklaması."
+description: "Ethereum'un SSZ formatının açıklaması."
 lang: tr
 sidebarDepth: 2
 ---
 
-**Basit serileştirme (SSZ)**, İşaret Zinciri'nde kullanılan serileştirme yöntemidir. Bu, yürütüm katmanında kullanılan RLP serileştirmesini, eş keşif protokolü hariç fikir birliği katmanının tamamında değiştirir. RLP serileştirmesi hakkında daha fazla bilgi edinmek için [Özyinelemeli uzunluk ön eki (RLP)](/developers/docs/data-structures-and-encoding/rlp/) konusuna bakın. SSZ, belirleyici ve aynı zamanda Merkle işlemini verimli bir şekilde gerçekleştirebilecek şekilde tasarlanmıştır. SSZ'nin iki bileşeni olduğu düşünülebilir: bir serileştirme şeması ve serileştirilmiş veri yapısıyla etkili bir şekilde çalışacak şekilde tasarlanmış bir Merkle işlemi şeması.
+**Basit serileştirme (SSZ)**, İşaret zinciri üzerinde kullanılan serileştirme yöntemidir. Eş keşif protokolü hariç, mutabakat katmanının her yerinde yürütme katmanında kullanılan RLP serileştirmesinin yerini alır. RLP serileştirmesi hakkında daha fazla bilgi edinmek için bkz. [Özyinelemeli uzunluk öneki (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ, deterministik olacak ve aynı zamanda verimli bir şekilde Merkleize edilecek (Merkle ağacına dönüştürülecek) şekilde tasarlanmıştır. SSZ'nin iki bileşeni olduğu düşünülebilir: bir serileştirme şeması ve serileştirilmiş veri yapısıyla verimli bir şekilde çalışmak üzere tasarlanmış bir Merkleizasyon şeması.
 
 ## SSZ nasıl çalışır? {#how-does-ssz-work}
 
 ### Serileştirme {#serialization}
 
-SSZ, kendini tanımlamayan bir serileştirme şemasıdır; aksine önceden bilinmesi gereken bir şemaya dayanır. SSZ serileştirmesinin amacı, nesneleri keyfi karmaşıklıkta bayt dizeleri olarak temsil etmektir. Bu, "temel tipler" için oldukça basit bir süreçtir. Öğe, onaltılık baytlara dönüştürülür. Temel tipler şunlardır:
+SSZ, kendi kendini tanımlamayan bir serileştirme şemasıdır; bunun yerine önceden bilinmesi gereken bir şemaya dayanır. SSZ serileştirmesinin amacı, rastgele karmaşıklıktaki nesneleri bayt dizileri olarak temsil etmektir. Bu, "temel türler" için çok basit bir işlemdir. Öğe basitçe onaltılık (hexadecimal) baytlara dönüştürülür. Temel türler şunları içerir:
 
 - işaretsiz tam sayılar
-- Boole değerleri
+- Boolean'lar (mantıksal değerler)
 
-Karmaşık "bileşik" tipler için serileştirme daha karmaşıktır çünkü bileşik tip, farklı türleri veya farklı boyutları olan birden çok öğeyi veya her ikisini birden içerebilir. Bu nesnelerin tümünün sabit uzunluklara sahip olduğu durumlarda (yani, öğelerin boyutu gerçek değerlerinden bağımsız olarak her zaman sabitse), serileştirme, bileşik türdeki her bir öğenin sıralı olarak little-endian bayt dizelerine dönüştürülmesinden ibarettir. Bu bayt dizileri bir araya getirilir. Serileştirilmiş nesne, sabit uzunluktaki öğelerin bayt listesi temsilini, seri halden çıkarılan nesnede görünen sıra ile aynı düzende içerir.
+Karmaşık "bileşik" türler için serileştirme daha karmaşıktır çünkü bileşik tür, farklı türlere veya farklı boyutlara ya da her ikisine birden sahip olabilen birden fazla öğe içerir. Bu nesnelerin hepsinin sabit uzunluklara sahip olduğu durumlarda (yani, öğelerin boyutu gerçek değerlerinden bağımsız olarak her zaman sabit kalacaktır), serileştirme işlemi basitçe bileşik türdeki her bir öğenin little-endian (küçük sonlu) bayt dizilerine dönüştürülerek sıralanmasıdır. Bu bayt dizileri birbirine eklenir. Serileştirilmiş nesne, sabit uzunluklu öğelerin bayt listesi temsilini, serileştirmeden çıkarılmış (deserialized) nesnede göründükleri sırayla içerir.
 
-Değişken uzunluğa sahip tipler için gerçek veri, serileştirilmiş nesnede o öğenin konumunda bir "kayma" değeri ile değiştirilir. Gerçek veri, serileştirilmiş nesnenin sonunda bir yığına eklenir. Kayma değeri, gerçek verinin yığındaki başlangıç noktasının indeksi olup ilgili baytları gösteren bir işaretçi olarak görev yapar.
+Değişken uzunluklu türler için, serileştirilmiş nesnedeki o öğenin konumunda gerçek verilerin yerini bir "sapma" (offset) değeri alır. Gerçek veriler, serileştirilmiş nesnenin sonundaki bir yığına (heap) eklenir. Sapma değeri, yığındaki gerçek verilerin başlangıcı için bir endekstir ve ilgili baytlara bir işaretçi görevi görür.
 
-Aşağıdaki örnek, hem sabit hem de değişken uzunluktaki öğelere sahip bir kapsayıcı için dengelemenin nasıl çalıştığını gösterir:
+Aşağıdaki örnek, hem sabit hem de değişken uzunluklu öğelere sahip bir kapsayıcı için sapma işleminin nasıl çalıştığını göstermektedir:
 
 ```Rust
 
@@ -44,107 +44,104 @@ Aşağıdaki örnek, hem sabit hem de değişken uzunluktaki öğelere sahip bir
 
 ```
 
-`serialized` aşağıdaki yapıya sahip olacaktır (burada sadece 4 bite doldurulmuş, gerçekte 32 bite doldurulur ve `int` gösterimi açıklık amacıyla tutulur):
+`serialized` aşağıdaki yapıya sahip olacaktır (burada yalnızca 4 bite doldurulmuştur, gerçekte 32 bite doldurulur ve netlik için `int` temsili korunmuştur):
 
 ```
 [37, 0, 0, 0, 55, 0, 0, 0, 16, 0, 0, 0, 22, 0, 0, 0, 1, 2, 3, 4]
 ------------  -----------  -----------  -----------  ----------
       |             |            |           |            |
-   number1       number2    vektör için   number3     vektör için
-                               ofset                     değer
-
+    sayı1         sayı2     vektör için    sayı 3    vektör için
+                               sapma                    değer
 ```
 
-açıklık sağlamak için çizgilere bölünmüştür:
+netlik için satırlara bölünmüştür:
 
 ```
 [
-  37, 0, 0, 0,  # `number1`'in little-endian kodlaması.
-  55, 0, 0, 0,  # `number2`'nin little-endian kodlaması.
-  16, 0, 0, 0,  # `vector` değerinin nerede başladığını gösteren "ofset" (little-endian 16).
-  22, 0, 0, 0,  # `number3`'ün little-endian kodlaması.
+  37, 0, 0, 0,  # `number1` değerinin little-endian kodlaması.
+  55, 0, 0, 0,  # `number2` değerinin little-endian kodlaması.
+  16, 0, 0, 0,  # `vector` değerinin nerede başladığını gösteren "sapma" (little-endian 16).
+  22, 0, 0, 0,  # `number3` değerinin little-endian kodlaması.
   1, 2, 3, 4,   # `vector` içindeki gerçek değerler.
 ]
 ```
 
-Bu hala bir basitleştirmedir; yukarıdaki şemaladaki tam sayılar ve sıfırlar aslında aşağıdaki gibi bayt listeleri olarak depolanır:
+Bu hala bir basitleştirmedir; yukarıdaki şemalardaki tam sayılar ve sıfırlar aslında şu şekilde bayt listeleri olarak saklanacaktır:
 
 ```
 [
-  10100101000000000000000000000000  # `number1`'in little-endian kodlaması
-  10110111000000000000000000000000  # `number2`'nin little-endian kodlaması.
-  10010000000000000000000000000000  # `vector` değerinin nerede başladığını gösteren "ofset" (little-endian 16).
-  10010110000000000000000000000000  # `number3`'ün little-endian kodlaması.
+  10100101000000000000000000000000  # `number1` değerinin little-endian kodlaması
+  10110111000000000000000000000000  # `number2` değerinin little-endian kodlaması.
+  10010000000000000000000000000000  # `vector` değerinin nerede başladığını gösteren "sapma" (little-endian 16).
+  10010110000000000000000000000000  # `number3` değerinin little-endian kodlaması.
   10000001100000101000001110000100   # `bytes` alanının gerçek değeri.
 ]
 ```
 
-Bu nedenle, değişken uzunluktaki tiplerin gerçek değerleri, serileştirilmiş nesnenin sonunda bir yığında saklanır ve kaymaları, sıralı alan listesinde doğru pozisyonlarında depolanır.
+Yani değişken uzunluklu türlerin gerçek değerleri, serileştirilmiş nesnenin sonundaki bir yığında saklanırken, sapmaları sıralı alanlar listesindeki doğru konumlarında saklanır.
 
-Ayrıca, serileştirme sırasında bir uzunluk sınırı eklenmesini ve seri halden çıkarma sırasında kaldırılmasını gerektiren `BitList` türü gibi özel işlem gerektiren bazı durumlar da bulunur. Tüm ayrıntılar [SSZ belirtiminde](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md) mevcuttur.
+Serileştirme sırasında bir uzunluk sınırının eklenmesini ve serileştirmeden çıkarma sırasında kaldırılmasını gerektiren `BitList` türü gibi özel işlem gerektiren bazı özel durumlar da vardır. Tüm detaylar [SSZ spesifikasyonunda](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md) mevcuttur.
 
-### Seriden Çıkarma {#deserialization}
+### Serileştirmeden Çıkarma {#deserialization}
 
-Bu nesneyi seri durumdan çıkarmak için <b>şema</b> gereklidir. Şema, serileştirilmiş verinin kesin düzenini tanımlar, böylece her bir özel öğe, bayt grubundan anlamlı bir nesneye, öğelerin doğru türüne, değerine, boyutuna ve konumuna sahip şekilde seri halden çıkarılabilir. Şema, hangi değerlerin gerçek değerler olduğunu ve hangi değerlerin kayma olduğunu seri durumdan çıkarıcıya bildiren unsurdur. Bir nesne serileştirildiğinde tüm alan adları kaybolur ancak bunlar, seri halden çıkarma sırasında şemaya göre tekrar oluşturulur.
+Bu nesneyi serileştirmeden çıkarmak için <b>şema</b> gereklidir. Şema, serileştirilmiş verilerin kesin düzenini tanımlar, böylece her bir belirli öğe bir bayt blob'undan doğru türe, değere, boyuta ve konuma sahip öğelerle anlamlı bir nesneye dönüştürülebilir. Serileştirmeden çıkarıcıya hangi değerlerin gerçek değerler ve hangilerinin sapma olduğunu söyleyen şemadır. Bir nesne serileştirildiğinde tüm alan adları kaybolur, ancak şemaya göre serileştirmeden çıkarma sırasında yeniden oluşturulur.
 
-Bu konuyla ilgili etkileşimli bir açıklama için [ssz.dev](https://www.ssz.dev/overview) adresine bakın.
+Bu konuda etkileşimli bir açıklama için [ssz.dev](https://www.ssz.dev/overview) adresine bakın.
 
-## Merkle'laştırma {#merkleization}
+## Merkleizasyon {#merkleization}
 
-Bu SSZ serileştirilmiş nesnesi, daha sonra aynı verinin bir Merkle ağacı gösterimine dönüştürülebilir. İlk olarak, serileştirilmiş nesnedeki 32 baytlık parçaların sayısı belirlenir. Bunlar, ağacın "yaprakları"dır. Toplam yaprak sayısı, yaprakları karma hale getirerek sonunda tek bir karma ağaç kökü üretmek için 2'nin bir katı olmalıdır. Eğer bu doğal olarak böyle değilse, 32 baytlık sıfırlar içeren ekstra yapraklar eklenir. Diyagram olarak ifade etmek gerekirse:
+Bu SSZ serileştirilmiş nesnesi daha sonra merkleize edilebilir; yani aynı verilerin bir Merkle ağacı temsiline dönüştürülebilir. İlk olarak, serileştirilmiş nesnedeki 32 baytlık parçaların sayısı belirlenir. Bunlar ağacın "yapraklarıdır". Yaprakların birlikte hashlenmesinin sonunda tek bir hash ağacı kökü (hash-tree-root) üretmesi için toplam yaprak sayısı 2'nin bir kuvveti olmalıdır. Eğer doğal olarak durum böyle değilse, 32 baytlık sıfırlar içeren ek yapraklar eklenir. Şematik olarak:
 
 ```
-        hash tree root
+hash ağacı kökü
             /     \
            /       \
           /         \
          /           \
-   hash of leaves  hash of leaves
-     1 and 2         3 and 4
+   yaprakların hashi  yaprakların hashi
+        1 ve 2             3 ve 4
       /   \            /  \
      /     \          /    \
     /       \        /      \
- leaf1     leaf2  leaf3     leaf4
+ yaprak1   yaprak2 yaprak3   yaprak4
 ```
 
-Ağacın yapraklarının, yukarıdaki örnekte olduğu gibi doğal olarak eşit şekilde dağılmadığı durumlar da vardır. Örneğin yaprak 4, Merkle ağacına ilave "derinlik" eklenmesini gerektiren ve dolayısıyla eşit olmayan bir ağaç oluşmasına yol açan birden fazla öğeye sahip bir kapsayıcı olabilir.
+Ağacın yapraklarının yukarıdaki örnekte olduğu gibi doğal olarak eşit bir şekilde dağılmadığı durumlar da vardır. Örneğin, yaprak 4, Merkle ağacına ek "derinlik" eklenmesini gerektiren ve düzensiz bir ağaç oluşturan birden fazla öğeye sahip bir kapsayıcı olabilir.
 
-Bu ağaç öğelerine yaprak X, düğüm X gibi isimler yerine genelleştirilmiş indeksler verebiliriz. Bu, kök = 1 ile başlayan ve her seviyede soldan sağa sayılan genelleştirilmiş indekslerle yapılır. Bu, yukarıda açıklanan genelleştirilmiş indekstir. Serileştirilmiş listedeki her öğenin `2**depth + idx`'e eşit bir genelleştirilmiş dizini vardır. Burada `idx`, serileştirilmiş nesnedeki sıfır dizinli konumunu, `depth` ise Merkle ağacındaki seviye sayısını belirtir. Derinlik, öğe (yaprak) sayısının iki tabanlı logaritması olarak belirlenebilir.
+Bu ağaç öğelerine yaprak X, düğüm X vb. olarak atıfta bulunmak yerine, kök = 1'den başlayarak ve her seviye boyunca soldan sağa doğru sayarak onlara genelleştirilmiş endeksler verebiliriz. Yukarıda açıklanan genelleştirilmiş endeks budur. Serileştirilmiş listedeki her öğe, `2**depth + idx` değerine eşit genelleştirilmiş bir endekse sahiptir; burada idx, serileştirilmiş nesnedeki sıfır endeksli konumudur ve derinlik, öğe (yaprak) sayısının iki tabanına göre logaritması olarak belirlenebilen Merkle ağacındaki seviye sayısıdır.
 
-## Genelleştirilmiş dizinler {#generalized-indices}
+## Genelleştirilmiş endeksler {#generalized-indices}
 
-Genelleştirilmiş dizin, ikili bir Merkle ağacındaki bir düğümü temsil eden bir tam sayıdır; bu ağaçta her düğümün `2 ** depth + sıradaki dizin` şeklinde bir genelleştirilmiş dizini vardır.
+Genelleştirilmiş bir endeks, her düğümün `2 ** depth + index in row` genelleştirilmiş endeksine sahip olduğu ikili bir Merkle ağacındaki bir düğümü temsil eden bir tam sayıdır.
 
 ```
-        1           --derinlik = 0  2**0 + 0 = 1
+1           --derinlik = 0  2**0 + 0 = 1
     2       3       --derinlik = 1  2**1 + 0 = 2, 2**1+1 = 3
   4   5   6   7     --derinlik = 2  2**2 + 0 = 4, 2**2 + 1 = 5...
-
 ```
 
-Bu gösterim, Merkle ağacındaki her bir veri parçası için bir düğüm oluşturur.
+Bu temsil, Merkle ağacındaki her bir veri parçası için bir düğüm endeksi verir.
 
-## Çoklu kanıtlar {#multiproofs}
+## Çoklu kanıtlar (Multiproofs) {#multiproofs}
 
-Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlamak, onu karma ağaç kökü ile karşılaştırarak doğrulamamıza olanak tanır. Bu kök, gerçekliğin kabul edilmiş versiyonudur. Sağladığımız herhangi bir veri, Merkle ağacında (genelleştirilmiş indeksi tarafından belirlenir) doğru yere yerleştirilerek ve kökün sabit kaldığı gözlemlenerek bu gerçekliğe karşı doğrulanabilir. Belirtimde [burada](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs), belirli bir genelleştirilmiş dizinler kümesinin içeriğini doğrulamak için gereken en küçük düğüm kümesinin nasıl hesaplanacağını gösteren işlevler bulunmaktadır.
+Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlamak, onu hash ağacı köküne karşı doğrulamamıza olanak tanır. Bu kök, bizim kabul ettiğimiz gerçeklik versiyonudur. Bize sağlanan herhangi bir veri, Merkle ağacında doğru yere (genelleştirilmiş endeksi tarafından belirlenir) yerleştirilerek ve kökün sabit kaldığı gözlemlenerek bu gerçekliğe karşı doğrulanabilir. Spesifikasyonda [burada](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs), belirli bir genelleştirilmiş endeks kümesinin içeriğini doğrulamak için gereken minimum düğüm kümesinin nasıl hesaplanacağını gösteren işlevler bulunmaktadır.
 
-Örneğin, aşağıdaki ağaçta indeks 9'daki verileri doğrulamak için 8, 9, 5, 3, 1 indekslerindeki verilerin özetine ihtiyacımız vardır.
-(8,9) karmasının karma (4) ile eşit olması gerekir, bu, 5 ile karma hale getirilerek 2 elde edilir ve bu da 3 ile karma hale getirilerek ağaç kökü 1 elde edilir. 9 için yanlış veri sağlanırsa, kök de değişir; bunu tespit eder ve dalı doğrulayamayız.
+Örneğin, aşağıdaki ağaçta 9. endeksteki verileri doğrulamak için 8, 9, 5, 3, 1 endekslerindeki verilerin hash'ine ihtiyacımız var.
+(8,9)'un hash'i, 2'yi üretmek için 5 ile hashlenen ve ağaç kökü 1'i üretmek için 3 ile hashlenen hash (4)'e eşit olmalıdır. 9 için yanlış veri sağlanmış olsaydı, kök değişirdi; bunu tespit ederdik ve dalı doğrulayamazdık.
 
 ```
-* = kanıt oluşturmak için gereken veriler
+* = kanıt oluşturmak için gereken veri
 
                     1*
           2                      3*
     4          5*          6          7
 8*     9*   10    11   12    13    14    15
-
 ```
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-- [Ethereum'u Yükseltme: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-- [Ethereum'u Yükseltme: Merkle'laştırma](https://eth2book.info/altair/part2/building_blocks/merkleization)
+- [Ethereum'u Yükseltmek: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
+- [Ethereum'u Yükseltmek: Merkleizasyon](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [SSZ uygulamaları](https://github.com/ethereum/consensus-specs/issues/2138)
-- [SSZ hesaplayıcı](https://simpleserialize.com/)
+- [SSZ hesaplayıcısı](https://simpleserialize.com/)
 - [SSZ.dev](https://www.ssz.dev/)

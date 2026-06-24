@@ -15,7 +15,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import PathwayCard from "@/components/cards/pathway-card"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import { CheckCircle } from "@/components/icons/CheckCircle"
@@ -536,7 +536,7 @@ async function Page(props: { params: Promise<PageParams> }) {
               >
                 <Grid
                   balanced={2}
-                  className="gap-8 rounded-2xl bg-background-highlight p-6 text-start md:p-10"
+                  className="gap-8 rounded-base bg-background-highlight p-6 text-start md:p-10"
                 >
                   <div>
                     <h3 className="mb-4 text-2xl font-black">{type.title}</h3>
@@ -862,7 +862,7 @@ async function Page(props: { params: Promise<PageParams> }) {
         </Section>
 
         <Section>
-          <FeedbackCard />
+          <ContentFeedback />
         </Section>
       </MainArticle>
     </I18nProvider>

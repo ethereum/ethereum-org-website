@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { CostLeaderboardData, Lang, PageParams } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import InlineLink from "@/components/ui/Link"
@@ -105,7 +105,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           .
         </p>
 
-        <FeedbackCard />
+        <ContentFeedback />
       </MainArticle>
     </>
   )

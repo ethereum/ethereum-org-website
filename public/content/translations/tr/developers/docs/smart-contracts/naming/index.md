@@ -1,101 +1,101 @@
 ---
-title: "Akıllı sözleşmeleri adlandırma"
-description: "ENS ile Ethereum akıllı sözleşmelerini adlandırmak için en iyi uygulamalar"
+title: "Akıllı sözleşmeleri isimlendirme"
+description: "ENS ile Ethereum akıllı sözleşmelerini isimlendirmek için en iyi uygulamalar"
 lang: tr
 ---
 
-Akıllı sözleşmeler, Ethereum'un merkeziyetsiz altyapısının temel taşıdır ve otonom uygulamaları ve protokolleri mümkün kılar. Ancak sözleşme yetenekleri geliştikçe bile, kullanıcılar ve geliştiriciler bu sözleşmeleri tanımlamak ve referans göstermek için hâlâ ham onaltılık adreslere güvenmektedir.
+Akıllı sözleşmeler, otonom uygulamalara ve protokollere olanak tanıyan Ethereum'un merkeziyetsiz altyapısının temel taşıdır. Ancak sözleşme yetenekleri geliştikçe bile, kullanıcılar ve geliştiriciler bu sözleşmeleri tanımlamak ve bunlara referans vermek için hâlâ ham onaltılık (hexadecimal) adreslere güvenmektedir.
 
-[Ethereum İsim Servisi (ENS)](https://ens.domains/) ile akıllı sözleşmeleri adlandırmak, onaltılık sözleşme adreslerini ortadan kaldırarak kullanıcı deneyimini iyileştirir ve adres zehirlenmesi ve sahtekarlık saldırıları gibi saldırılardan kaynaklanan riski azaltır. Bu kılavuz, akıllı sözleşmeleri adlandırmanın neden önemli olduğunu, nasıl uygulanabileceğini ve süreci basitleştirmek ve geliştiricilerin bu uygulamayı benimsemesine yardımcı olmak için [Enscribe](https://www.enscribe.xyz) gibi mevcut araçları açıklamaktadır.
+Akıllı sözleşmeleri [Ethereum Name Service (ENS)](https://ens.domains/) ile isimlendirmek, onaltılık sözleşme adreslerini ortadan kaldırarak kullanıcı deneyimini iyileştirir ve adres zehirlenmesi (address poisoning) ile kimlik sahtekarlığı (spoofing) gibi saldırı risklerini azaltır. Bu kılavuz, akıllı sözleşmeleri isimlendirmenin neden önemli olduğunu, nasıl uygulanabileceğini ve süreci basitleştirip geliştiricilerin bu uygulamayı benimsemesine yardımcı olmak için [Enscribe](https://www.enscribe.xyz) gibi mevcut araçları açıklamaktadır.
 
-## Akıllı sözleşmeler neden adlandırılmalı? {#why-name-contracts}
+## Akıllı sözleşmeleri neden isimlendirmeliyiz? {#why-name-contracts}
 
 ### İnsan tarafından okunabilir tanımlayıcılar {#human-readable-identifiers}
 
-Geliştiriciler ve kullanıcılar, `0x8f8e...f9e3` gibi anlaşılmaz sözleşme adresleriyle etkileşime girmek yerine, `v2.myapp.eth` gibi insanlar tarafından okunabilir isimleri kullanabilirler. Bu, akıllı sözleşme etkileşimlerini basitleştirir.
+Geliştiriciler ve kullanıcılar, `0x8f8e...f9e3` gibi anlaşılmaz sözleşme adresleriyle etkileşime girmek yerine `v2.myapp.eth` gibi insan tarafından okunabilir isimler kullanabilirler. Bu, akıllı sözleşme etkileşimlerini basitleştirir.
 
-Bu, Ethereum adresleri için merkeziyetsiz bir adlandırma hizmeti sağlayan [Ethereum İsim Servisi](https://ens.domains/) tarafından mümkün kılınmıştır. Bu durum, Alan Adı Servisi'nin (DNS) internet kullanıcılarının `104.18.176.152` gibi bir IP adresi yerine ethereum.org gibi bir isim kullanarak ağ adreslerine erişmesini sağlamasına benzer.
+Bu, Ethereum adresleri için merkeziyetsiz bir isimlendirme hizmeti sunan [Ethereum Name Service](https://ens.domains/) sayesinde mümkün olmaktadır. Bu durum, Alan Adı Sistemi'nin (DNS) internet kullanıcılarının ağ adreslerine `104.18.176.152` gibi bir IP adresi yerine ethereum.org gibi bir isim kullanarak erişmesini sağlamasına benzer.
 
-### Geliştirilmiş güvenlik ve güven {#improved-security-and-trust}
+### Gelişmiş güvenlik ve güven {#improved-security-and-trust}
 
-Adlandırılmış sözleşmeler, yanlış adrese yapılan yanlış işlemleri azaltmaya yardımcı olur. Ayrıca kullanıcıların belirli uygulamalara veya markalara bağlı sözleşmeleri tanımlamasına yardımcı olurlar. Bu, özellikle isimler `uniswap.eth` gibi tanınmış üst alan adlarına eklendiğinde bir itibar güveni katmanı ekler.
+İsimlendirilmiş sözleşmeler, yanlış adrese yapılan kazara işlemleri azaltmaya yardımcı olur. Ayrıca kullanıcıların belirli uygulamalara veya markalara bağlı sözleşmeleri tanımlamasına da yardımcı olurlar. Bu, özellikle isimler `uniswap.eth` gibi iyi bilinen üst alan adlarına (parent domains) eklendiğinde bir itibar güveni katmanı ekler.
 
-Ethereum adreslerinin 42 karakter uzunluğunda olması nedeniyle, kullanıcıların adreslerdeki birkaç karakterin değiştirildiği küçük değişiklikleri fark etmeleri çok zordur. Örneğin `0x58068646C148E313CB414E85d2Fe89dDc3426870` gibi bir adres, cüzdanlar gibi kullanıcıya yönelik uygulamalar tarafından normalde `0x580...870` olarak kısaltılır. Bir kullanıcının birkaç karakterin değiştirildiği kötü niyetli bir adresi fark etmesi pek olası değildir.
+Ethereum adreslerinin 42 karakterlik uzunluğu nedeniyle, kullanıcıların adreslerdeki birkaç karakterin değiştirildiği küçük değişiklikleri fark etmesi çok zordur. Örneğin, `0x58068646C148E313CB414E85d2Fe89dDc3426870` gibi bir adres, cüzdanlar gibi kullanıcıya dönük uygulamalar tarafından normalde `0x580...870` şeklinde kısaltılır. Bir kullanıcının, birkaç karakterin değiştirildiği kötü niyetli bir adresi fark etmesi pek olası değildir.
 
-Bu tür bir teknik, kullanıcıların doğru adresle etkileşime girdiklerine veya para gönderdiklerine inanmaya yönlendirildiği, ancak aslında adresin yalnızca doğru adrese benzediği, ancak aynı olmadığı adres sahtekarlığı ve zehirlenme saldırılarında kullanılır.
+Bu tür bir teknik, kullanıcıların doğru adresle etkileşime girdiklerine veya fon gönderdiklerine inandırıldığı, ancak aslında adresin sadece doğru adrese benzediği ve aynı olmadığı adres sahtekarlığı (spoofing) ve zehirlenmesi (poisoning) saldırılarında kullanılır.
 
-Cüzdanlar ve sözleşmeler için ENS adları bu tür saldırılara karşı koruma sağlar. DNS sahtekarlığı saldırıları gibi, ENS sahtekarlığı saldırıları da barındırılabilir, ancak bir kullanıcının onaltılık bir adresteki küçük bir değişikliği fark etmektense bir ENS adındaki yazım hatasını fark etmesi daha olasıdır.
+Cüzdanlar ve sözleşmeler için ENS isimleri bu tür saldırılara karşı koruma sağlar. DNS sahtekarlığı saldırıları gibi, ENS sahtekarlığı saldırıları da barındırılabilir; ancak bir kullanıcının bir ENS ismindeki yazım hatasını fark etme olasılığı, onaltılık bir adresteki küçük bir değişikliği fark etme olasılığından daha yüksektir.
 
-### Cüzdanlar ve gezginler için daha iyi kullanıcı deneyimi {#better-ux}
+### Cüzdanlar ve tarayıcılar için daha iyi kullanıcı deneyimi (UX) {#better-ux}
 
-Bir akıllı sözleşme bir ENS adı ile yapılandırıldığında, cüzdanlar ve blokzincir gezginleri gibi uygulamaların, onaltılık adresler yerine akıllı sözleşmeler için ENS adlarını görüntülemesi mümkündür. Bu, kullanıcılar için önemli bir kullanıcı deneyimi (UX) iyileştirmesi sağlar.
+Bir akıllı sözleşme bir ENS ismiyle yapılandırıldığında, cüzdanlar ve blokzincir tarayıcıları gibi uygulamaların akıllı sözleşmeler için onaltılık adresler yerine ENS isimlerini görüntülemesi mümkündür. Bu, kullanıcılar için önemli bir kullanıcı deneyimi (UX) artışı sağlar.
 
-Örneğin, Uniswap gibi bir uygulama ile etkileşime girerken, kullanıcılar genellikle etkileşimde bulundukları uygulamanın `uniswap.org` web sitesinde barındırıldığını görürler, ancak Uniswap akıllı sözleşmelerini ENS ile adlandırmadıysa onlara onaltılık bir sözleşme adresi sunulur. Sözleşme adlandırılmışsa, bunun yerine çok daha kullanışlı olan `v4.contracts.uniswap.eth`'i görebilirler.
+Örneğin, Uniswap gibi bir uygulamayla etkileşime girerken, kullanıcılar genellikle etkileşimde bulundukları uygulamanın `uniswap.org` web sitesinde barındırıldığını göreceklerdir, ancak Uniswap akıllı sözleşmelerini ENS ile isimlendirmemişse onlara onaltılık bir sözleşme adresi sunulacaktır. Sözleşme isimlendirilmişse, bunun yerine çok daha kullanışlı olan `v4.contracts.uniswap.eth` adresini görebilirler.
 
-## Dağıtımda adlandırma ve dağıtım sonrası adlandırma {#when-to-name}
+## Dağıtım sırasında ve dağıtım sonrasında isimlendirme {#when-to-name}
 
-Akıllı sözleşmelerin adlandırılabileceği iki nokta vardır:
+Akıllı sözleşmelerin isimlendirilebileceği iki nokta vardır:
 
-- **Dağıtım zamanında**: sözleşme dağıtılırken ona bir ENS adı atamak.
-- **Dağıtımdan sonra**: mevcut bir sözleşme adresini yeni bir ENS adına eşlemek.
+- **Dağıtım sırasında**: sözleşmeye dağıtıldığı anda bir ENS ismi atamak.
+- **Dağıtımdan sonra**: mevcut bir sözleşme adresini yeni bir ENS ismiyle eşleştirmek.
 
-Her iki yaklaşım da ENS kayıtları oluşturabilmek ve ayarlayabilmek için bir ENS alan adına sahip veya yönetici erişimine sahip olmayı gerektirir.
+Her iki yaklaşım da ENS kayıtlarını oluşturabilmeleri ve ayarlayabilmeleri için bir ENS alan adına sahip veya yönetici erişimine dayanır.
 
-## Sözleşmeler için ENS adlandırması nasıl çalışır? {#how-ens-naming-works}
+## Sözleşmeler için ENS isimlendirmesi nasıl çalışır? {#how-ens-naming-works}
 
-ENS adları zincir üstünde saklanır ve ENS çözümleyicileri aracılığıyla Ethereum adreslerine çözümlenir. Bir akıllı sözleşmeyi adlandırmak için:
+ENS isimleri zincir içi olarak saklanır ve ENS çözümleyicileri (resolvers) aracılığıyla Ethereum adreslerine çözümlenir. Bir akıllı sözleşmeyi isimlendirmek için:
 
-1. Bir üst ENS alan adını (ör. `myapp.eth`) kaydedin veya kontrol edin
-2. Bir alt alan adı oluşturun (ör. `v1.myapp.eth`)
+1. Bir üst ENS alan adını kaydedin veya kontrol edin (örn. `myapp.eth`)
+2. Bir alt alan adı (subdomain) oluşturun (örn. `v1.myapp.eth`)
 3. Alt alan adının `address` kaydını sözleşme adresine ayarlayın
-4. Adın adresi aracılığıyla bulunabilmesi için sözleşmenin ters kaydını ENS'e ayarlayın
+4. İsmin adresi aracılığıyla bulunabilmesi için sözleşmenin ters kaydını (reverse record) ENS'ye ayarlayın
 
-ENS adları hiyerarşiktir ve sınırsız sayıda alt adı destekler. Bu kayıtları ayarlamak genellikle ENS kayıt defteri ve genel çözümleyici sözleşmeleriyle etkileşime girmeyi içerir.
+ENS isimleri hiyerarşiktir ve sınırsız alt ismi destekler. Bu kayıtları ayarlamak genellikle ENS kayıt defteri (registry) ve genel çözümleyici (public resolver) sözleşmeleriyle etkileşime girmeyi içerir.
 
-## Sözleşmeleri adlandırma araçları {#tools}
+## Sözleşmeleri isimlendirmek için araçlar {#tools}
 
-Akıllı sözleşmeleri adlandırmak için iki yaklaşım vardır. Ya bazı manuel adımlarla [ENS Uygulamasını](https://app.ens.domains) kullanmak ya da [Enscribe](https://www.enscribe.xyz) kullanmak. Bunlar aşağıda özetlenmiştir.
+Akıllı sözleşmeleri isimlendirmek için iki yaklaşım vardır. Ya bazı manuel adımlarla [ENS App](https://app.ens.domains) kullanmak ya da [Enscribe](https://www.enscribe.xyz) kullanmak. Bunlar aşağıda özetlenmiştir.
 
 ### Manuel ENS kurulumu {#manual-ens-setup}
 
-[ENS Uygulamasını](https://app.ens.domains) kullanarak, geliştiriciler manuel olarak alt adlar oluşturabilir ve ileri adres kayıtlarını ayarlayabilirler. Ancak, ENS uygulaması aracılığıyla ad için ters kaydı ayarlayarak bir akıllı sözleşme için birincil bir ad ayarlayamazlar. [ENS belgelerinde](https://docs.ens.domains/web/naming-contracts/) yer alan manuel adımlar atılmalıdır.
+Geliştiriciler, [ENS App](https://app.ens.domains/) kullanarak manuel olarak alt isimler oluşturabilir ve ileri adres kayıtlarını (forward address records) ayarlayabilirler. Ancak, ENS uygulaması aracılığıyla isim için ters kaydı ayarlayarak bir akıllı sözleşme için birincil isim belirleyemezler. [ENS belgelerinde](https://docs.ens.domains/web/naming-contracts/) kapsanan manuel adımların atılması gerekir.
 
 ### Enscribe {#enscribe}
 
-[Enscribe](https://www.enscribe.xyz), ENS ile akıllı sözleşme adlandırmayı basitleştirir ve kullanıcıların akıllı sözleşmelere olan güvenini artırır. Şunları sağlar:
+[Enscribe](https://www.enscribe.xyz), ENS ile akıllı sözleşme isimlendirmesini basitleştirir ve kullanıcıların akıllı sözleşmelere olan güvenini artırır. Şunları sağlar:
 
-- **Atomik dağıtım ve adlandırma**: Yeni bir sözleşme dağıtırken bir ENS adı atayın
-- **Dağıtım sonrası adlandırma**: Önceden dağıtılmış sözleşmelere adlar ekleyin
+- **Atomik dağıtım ve isimlendirme**: Yeni bir sözleşme dağıtırken bir ENS ismi atayın
+- **Dağıtım sonrası isimlendirme**: Zaten dağıtılmış sözleşmelere isimler ekleyin
 - **Çoklu zincir desteği**: ENS'nin desteklendiği Ethereum ve L2 ağlarında çalışır
-- **Sözleşme doğrulama verileri**: Kullanıcıların güvenini artırmak için birden çok kaynaktan çekilen sözleşme doğrulama verilerini içerir
+- **Sözleşme doğrulama verileri**: Kullanıcılar için güveni artırmak amacıyla birden fazla kaynaktan çekilen sözleşme doğrulama verilerini içerir
 
-Enscribe, kullanıcılar tarafından sağlanan ENS adlarını veya kullanıcının bir ENS adı yoksa kendi alan adlarını destekler.
+Enscribe, kullanıcılar tarafından sağlanan ENS isimlerini veya kullanıcının bir ENS ismi yoksa kendi alan adlarını destekler.
 
-Akıllı sözleşmeleri adlandırmaya ve görüntülemeye başlamak için [Enscribe Uygulamasına](https://app.enscribe.xyz) erişebilirsiniz.
+Akıllı sözleşmeleri isimlendirmeye ve görüntülemeye başlamak için [Enscribe App](https://app.enscribe.xyz)'e erişebilirsiniz.
 
 ## En iyi uygulamalar {#best-practices}
 
-- Sözleşme yükseltmelerini şeffaf hale getirmek için `v1.myapp.eth` gibi **açık, sürümlenmiş adlar kullanın**
-- Cüzdanlar ve blokzincir gezginleri gibi uygulamalarda görünürlük için sözleşmeleri ENS adlarına bağlamak amacıyla **ters kayıtları ayarlayın**.
+- Sözleşme yükseltmelerini şeffaf hâle getirmek için `v1.myapp.eth` gibi **açık, sürümlendirilmiş isimler kullanın**
+- Cüzdanlar ve blokzincir tarayıcıları gibi uygulamalarda görünürlük sağlamak amacıyla sözleşmeleri ENS isimlerine bağlamak için **ters kayıtları ayarlayın**.
 - Sahiplikteki kazara değişiklikleri önlemek istiyorsanız **süre sonlarını yakından izleyin**
-- Kullanıcıların, adlandırılmış sözleşmenin beklendiği gibi davrandığına güvenebilmesi için **sözleşme kaynağını doğrulayın**
+- Kullanıcıların isimlendirilmiş sözleşmenin beklendiği gibi davrandığına güvenebilmesi için **sözleşme kaynağını doğrulayın**
 
 ## Riskler {#risks}
 
-Akıllı sözleşmeleri adlandırmak, Ethereum kullanıcıları için önemli faydalar sağlar, ancak ENS alan adı sahipleri yönetimleri konusunda dikkatli olmalıdır. Önemli riskler şunları içerir:
+Akıllı sözleşmeleri isimlendirmek Ethereum kullanıcıları için önemli faydalar sağlar, ancak ENS alan adı sahipleri bunların yönetimi konusunda dikkatli olmalıdır. Dikkate değer riskler şunları içerir:
 
-- **Süre sonu**: Tıpkı DNS adları gibi, ENS adları kayıtları da sınırlı sürelidir. Bu nedenle, sahiplerin alan adlarının son kullanma tarihlerini izlemeleri ve süreleri dolmadan çok önce yenilemeleri hayati önem taşır. Hem ENS Uygulaması hem de Enscribe, son kullanma tarihi yaklaştığında alan adı sahipleri için görsel göstergeler sağlar.
-- **Sahiplik değişikliği**: ENS kayıtları Ethereum'da değiştirilemez jetonlar olarak temsil edilir; burada belirli bir `.eth` alan adının sahibi, ilişkili değiştirilemez jetonu elinde bulundurur. Bu nedenle, farklı bir hesap bu değiştirilemez jetonun sahipliğini alırsa, yeni sahip uygun gördüğü şekilde herhangi bir ENS kaydını değiştirebilir.
+- **Süre sonu**: Tıpkı DNS isimleri gibi, ENS isim kayıtları da sınırlı bir süreye sahiptir. Bu nedenle, sahiplerin alan adlarının son kullanma tarihlerini izlemeleri ve süreleri dolmadan çok önce yenilemeleri hayati önem taşır. Hem ENS App hem de Enscribe, süre sonu yaklaştığında alan adı sahipleri için görsel göstergeler sağlar.
+- **Sahiplik değişikliği**: ENS kayıtları, belirli bir `.eth` alan adının sahibinin ilgili NFT'ye sahip olduğu Ethereum üzerinde NFT'ler olarak temsil edilir. Bu nedenle, farklı bir hesap bu NFT'nin sahipliğini alırsa, yeni sahip herhangi bir ENS kaydını uygun gördüğü şekilde değiştirebilir.
 
-Bu tür riskleri azaltmak için, `.eth` 2. seviye alan adlarının (2LD) sahip hesabı, sözleşme adlandırmasını yönetmek için oluşturulan alt alan adlarına sahip çoklu imzalı bir cüzdan aracılığıyla güvence altına alınmalıdır. Bu şekilde, alt alan adı düzeyinde sahiplikte herhangi bir kazara veya kötü niyetli değişiklik olması durumunda, bunlar 2LD sahibi tarafından geçersiz kılınabilir.
+Bu tür riskleri azaltmak için, `.eth` 2. seviye alan adları (2LD) için sahip hesabı, sözleşme isimlendirmesini yönetmek üzere oluşturulan alt alan adlarıyla birlikte çoklu imzalı (multi-sig) bir cüzdan aracılığıyla güvence altına alınmalıdır. Bu şekilde, alt alan adı seviyesinde kazara veya kötü niyetli herhangi bir sahiplik değişikliği durumunda, bunlar 2LD sahibi tarafından geçersiz kılınabilir.
 
-## Sözleşme adlandırmanın geleceği {#future}
+## Sözleşme isimlendirmenin geleceği {#future}
 
-Tıpkı alan adlarının web'de IP adreslerinin yerini alması gibi, sözleşme adlandırma da merkeziyetsiz uygulama geliştirme için en iyi uygulama haline geliyor. Cüzdanlar, gezginler ve gösterge panoları gibi daha fazla altyapı, sözleşmeler için ENS çözümlemesini entegre ettikçe, adlandırılmış sözleşmeler ekosistem genelinde güvenliği artıracak ve hataları azaltacaktır.
+Sözleşme isimlendirme, tıpkı alan adlarının web'deki IP adreslerinin yerini almasına benzer şekilde, merkeziyetsiz uygulama (dapp) geliştirme için en iyi uygulama hâline gelmektedir. Cüzdanlar, tarayıcılar ve panolar gibi daha fazla altyapı sözleşmeler için ENS çözümlemesini entegre ettikçe, isimlendirilmiş sözleşmeler ekosistem genelinde güvenliği artıracak ve hataları azaltacaktır.
 
-Akıllı sözleşmeleri tanımayı ve üzerinde mantık yürütmeyi kolaylaştırarak, adlandırma, Ethereum'daki kullanıcılar ve uygulamalar arasındaki boşluğu kapatmaya yardımcı olur, hem güvenliği hem de kullanıcılar için kullanıcı deneyimini iyileştirir.
+Akıllı sözleşmeleri tanımayı ve üzerinde düşünmeyi kolaylaştıran isimlendirme, Ethereum'daki kullanıcılar ve uygulamalar arasındaki boşluğu kapatmaya yardımcı olarak kullanıcılar için hem güvenliği hem de kullanıcı deneyimini (UX) iyileştirir.
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-- [ENS ile Akıllı Sözleşmeleri Adlandırma](https://docs.ens.domains/web/naming-contracts/)
-- [Enscribe ile Akıllı Sözleşmeleri Adlandırma](https://www.enscribe.xyz/docs).
+- [ENS ile Akıllı Sözleşmeleri İsimlendirme](https://docs.ens.domains/web/naming-contracts/)
+- [Enscribe ile Akıllı Sözleşmeleri İsimlendirme](https://www.enscribe.xyz/docs).

@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/networking-layer/portal-network/index.md",
+  "generatedAt": "2026-06-16T22:59:03.726Z",
+  "rootHash": "af1133adf188",
+  "tree": {
+    "contentHash": "be1f6707c76b",
+    "anchorHash": "bd8d61f829d1",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "95ca8ffcf77e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "6e181359ed54",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:2": {
+        "contentHash": "0a09ca139b88",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "e7efd98892bf",
+        "anchorHash": "94d095604d5e"
+      },
+      "why-do-we-need-portal-network": {
+        "contentHash": "ae0de1146dde",
+        "anchorHash": "129d3ade42fe",
+        "labelHash": "cf55dd9c029e",
+        "children": {
+          "_label": {
+            "contentHash": "cf55dd9c029e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "23870287e682",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "623efaf6a378",
+            "anchorHash": "01a1437146e4"
+          },
+          "prose:6": {
+            "contentHash": "a017f64771d8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d7a79cb26737",
+            "anchorHash": "65a6528af02f"
+          },
+          "prose:7": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "72402e1a3db0",
+            "anchorHash": "828277d7474b"
+          },
+          "prose:8": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "7a079c90df8a",
+            "anchorHash": "ceae87f49ade"
+          },
+          "prose:9": {
+            "contentHash": "556efa751a3b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "f0bd65dbf629",
+            "anchorHash": "2aceb588d000"
+          },
+          "prose:10": {
+            "contentHash": "7643fa7641c5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "how-does-portal-network-work": {
+        "contentHash": "cc8420cbc92b",
+        "anchorHash": "bb86eb3fc552",
+        "labelHash": "0b9efb4b7895",
+        "children": {
+          "_label": {
+            "contentHash": "0b9efb4b7895",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "93849d592e99",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "82f5a7b2c99b",
+            "anchorHash": "1b3434d0efb2"
+          },
+          "prose:7": {
+            "contentHash": "74b74f994ff1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "1f922ef2ce2c",
+            "anchorHash": "b0eb37c5e965"
+          },
+          "prose:8": {
+            "contentHash": "fe4c4e1bd5ba",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:2": {
+            "contentHash": "2bb8e9c01468",
+            "anchorHash": "cd374af305cf"
+          },
+          "prose:9": {
+            "contentHash": "3ca2d65edf32",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "376771824ebe",
+            "anchorHash": "191567028ad9"
+          },
+          "prose:10": {
+            "contentHash": "71605b58a0b4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "ca87e1eae03e",
+            "anchorHash": "06516f9f4e32"
+          },
+          "prose:11": {
+            "contentHash": "9608002a03be",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "f7925209bc63",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:12": {
+            "contentHash": "0c39d0ccfac3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "the-portal-networks": {
+            "contentHash": "00171708df2e",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "7edfb1f6ad42",
+            "children": {
+              "_label": {
+                "contentHash": "7edfb1f6ad42",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "773a7e65869f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "image:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5",
+          "prose:12",
+          "the-portal-networks"
+        ]
+      },
+      "client-diversity-as-default": {
+        "contentHash": "5d80ef49ef80",
+        "anchorHash": "72c12d8bb452",
+        "labelHash": "df51a4d2b1f1",
+        "children": {
+          "_label": {
+            "contentHash": "df51a4d2b1f1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "6b678230052c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7aa40eca5e4c",
+            "anchorHash": "dace2603aa00"
+          },
+          "prose:5": {
+            "contentHash": "de70c6d4f12a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "66443efe6ecf",
+            "anchorHash": "91e98f7e107a"
+          },
+          "prose:6": {
+            "contentHash": "f1bfdc1c74a4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "9207ee276932",
+            "anchorHash": "c0ab0050e2ee"
+          },
+          "prose:7": {
+            "contentHash": "8e4585d6d965",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "9770dacb4d60",
+            "anchorHash": "168bf292c91b"
+          },
+          "prose:8": {
+            "contentHash": "e68721ab0c90",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "b111fbae6555",
+        "anchorHash": "ebc8bd221609",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "b1a4beae2765",
+            "anchorHash": "dd68a8072b84"
+          },
+          "prose:4": {
+            "contentHash": "1bff53634dc7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "2f6032750ad7",
+            "anchorHash": "fed475bca9a9"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "bac6ff5fead8",
+            "anchorHash": "1166474d5cea"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "link:0",
+      "prose:2",
+      "link:1",
+      "why-do-we-need-portal-network",
+      "how-does-portal-network-work",
+      "client-diversity-as-default",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

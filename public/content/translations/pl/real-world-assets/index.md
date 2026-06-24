@@ -1,93 +1,93 @@
 ---
-title: "Aktywa ze świata rzeczywistego (AŚR)"
-metaTitle: "Czym są AŚR? | Korzyści i zastosowania aktywów ze świata rzeczywistego"
-description: "Przegląd aktywów ze świata rzeczywistego na Ethereum"
+title: "Aktywa świata rzeczywistego (RWA)"
+metaTitle: "Czym są RWA? | Korzyści i zastosowanie aktywów świata rzeczywistego"
+description: "Przegląd aktywów świata rzeczywistego na Ethereum"
 lang: pl
 template: use-cases
 image: /images/man-and-dog-playing.png
-alt: "Bawiący się mężczyzna i pies."
+alt: "Mężczyzna bawiący się z psem."
 sidebarDepth: 2
 summaryPoints:
-  - "Metoda na przekształcanie wartościowych dóbr w cyfrowe tokeny."
-  - "Możesz teraz posiadać kawałki obiektów lub aktywów z rzeczywistego świata, zamiast kupować całą nieruchomość lub przedmiot."
-  - "Łączy tradycyjne finanse z ekosystemem Ethereum."
+  - "Metoda przekształcania wartościowych towarów w cyfrowe tokeny."
+  - "Możesz teraz posiadać części rzeczywistych obiektów lub aktywów, zamiast kupować całą nieruchomość lub przedmiot."
+  - "Łączy tradycyjne finanse z ekosystemem blockchain."
 ---
 
-Aktywa ze świata rzeczywistego (AŚR) to tokeny reprezentujące istniejące formy majątku, takie jak nieruchomości, złoto, akcje, dzieła sztuki, maszyny czy przedmioty kolekcjonerskie. Tokenizacja tych przedmiotów przekształca je w formę cyfrową, umożliwiając podział między wielu właścicieli i ułatwiając ich handel.
+Aktywa świata rzeczywistego (RWA) to tokeny reprezentujące istniejące formy bogactwa, takie jak nieruchomości, złoto, akcje, sztuka, maszyny czy przedmioty kolekcjonerskie. Tokenizacja tych przedmiotów przekształca je w formę cyfrową, pozwalając na ich podział między wielu właścicieli i ułatwiając handel nimi.
 
-## Czym są AŚR? {#what-are-rwas}
+## Czym są RWA? {#what-are-rwas}
 
-Niektóre AŚR są namacalne — możesz je zobaczyć i dotknąć, na przykład sztabki złota czy budynki komercyjne. Jednak są również nienamacalne, takie jak dług publiczny, własność intelektualna czy udziały w firmie.
+Niektóre RWA są namacalne — to przedmioty, które można zobaczyć i dotknąć, takie jak sztabki złota czy budynki komercyjne. Inne są niematerialne, jak dług państwowy, własność intelektualna czy udziały w firmie.
+ 
+Po tokenizacji aktywa te są przekształcane w jednostki wartości. Ztokenizowane złoto jest dobrym przykładem tego, jak to działa. Firma [Paxos](https://www.paxos.com/) przekształca 400-uncjowe sztabki złota w 400 tokenów na blockchainie Ethereum, z których każdy ma pokrycie w jednej uncji złota. Posiadacze tokenów mogą w dowolnym momencie wymienić swoje tokeny na złoto. Tak samo jest w przypadku tokenów zakupionych od innej firmy zajmującej się RWA, [Tether Gold](https://gold.tether.to/).
 
-Po tokenizacji aktywa te zostają przekształcone w jednostki wartości. Dobrym przykładem tego, jak to działa jest tokenizowane złoto. Firma [Paxos](https://www.paxos.com/) przekształca 400-uncjowe sztabki złota w 400 tokenów na blockchainie Ethereum, z których każdy jest zabezpieczony jedną uncją złota. Posiadacze tokenów mogą w każdej chwili wymienić swoje tokeny na złoto. Tak samo jest w przypadku tokenów zakupionych od innej firmy AŚR, [Tether Gold](https://gold.tether.to/).
+Każdy token można podzielić na jeszcze mniejsze ułamki. Tokeny Tether Gold można na przykład podzielić na części tak małe jak 0,000001.
+ 
+Tokeny RWA nie mają żadnej wartości wewnętrznej. Odzwierciedlają one raczej wartość przedmiotu, który reprezentują, więc wartość tokena zmienia się wraz z wartością tego przedmiotu.
 
-Każdy token może zostać podzielony na jeszcze mniejsze części. Na przykład tokeny Tether Gold mogą zostać podzielone na kawałki tak małe jak 0,000001.
-
-Tokeny AŚR nie mają żadnej naturalnej wartości. Odzwierciedlają one wartość przedmiotu, który reprezentują, dlatego wartość tokena zmienia się wraz z wartością tego przedmiotu.
-
-## Jakie są zalety AŚR? {#rwas-benefits}
+## Jakie są korzyści z RWA? {#rwas-benefits}
 
 <Grid>
-  <Card title="Własność ułamkowa" emoji=":house_buildings:" description="AŚR demokratyzują inwestycje. Jeśli nie stać Cię na inwestowanie w pewne rodzaje aktywów, teraz możesz stać się ich częściowym właścicielem."/>
-  <Card title="Dywersyfikacja inwestycji" emoji="🛒" description="Możesz inwestować w wiele rodzajów aktywów, dywersyfikując swój portfel bez wydawania ogromnych sum pieniędzy." />
-  <Card title="Globalne możliwości" emoji="🌏" description="AŚR usuwają bariery geograficzne w inwestowaniu. Możesz kupować tokeny aktywów zlokalizowanych w dowolnym miejscu na świecie." />
-  <Card title="Zwiększenie płynności aktywów" emoji="🖼️" description="Wiele aktywów jest niepłynnych. Są cenne, ale to nie to samo co gotówka do wydania. Dzięki tokenizacji właściciele mogą zamienić część lub całość aktywów w wartość, którą mogą wykorzystać."/>
-  <Card title="Światowy rynek" emoji="💰" description="Właściciele chcący spieniężyć swoje aktywa mogą dotrzeć do szerszego grona inwestorów, a nie tylko do tych, których stać na ziemię, akcje, dzieła sztuki czy tradycyjne instrumenty finansowe." />
-  <Card title="Bez pośredników" emoji="👩‍💻" description="Tokeny działają w oparciu o smart kontrakty, co oznacza, że można nimi handlować bezpośrednio między osobami, bez pośredników i związanych z nimi opłat." />
+  <Card title="Własność ułamkowa" emoji=":house_buildings:" description="RWA demokratyzują inwestycje. Jeśli nie możesz inwestować w pewne rodzaje aktywów, ponieważ nie stać Cię na wejście na te rynki, teraz możesz to robić jako częściowy właściciel."/>
+  <Card title="Dywersyfikacja inwestycji" emoji="🛒" description="Możesz inwestować w wiele rodzajów aktywów, co pozwala zdywersyfikować portfel bez wydawania kwot dostępnych tylko dla funduszy hedgingowych." />
+  <Card title="Globalne możliwości" emoji="🌏" description="RWA usuwają geograficzne bariery inwestycyjne. Możesz kupować tokeny aktywów zlokalizowanych w dowolnym miejscu na świecie." />
+  <Card title="Nadaj aktywom płynność" emoji="🖼️" description="Wiele aktywów jest niepłynnych. Mają wartość, ale to nie to samo, co gotówka, którą można wydać. Dzięki tokenizacji aktywów właściciele mogą zamienić ich część lub całość na wartość, którą mogą wykorzystać."/>
+  <Card title="Rynek globalny" emoji="💰" description="Właściciele chcący skapitalizować swoje aktywa mogą dotrzeć do szerszego grona inwestorów – nie tylko do osób, które zazwyczaj stać na zakup ziemi, akcji, dzieł sztuki czy tradycyjnych instrumentów finansowych." />
+  <Card title="Pomiń pośredników" emoji="👩‍💻" description="Tokeny działają w oparciu o inteligentne kontrakty, co oznacza, że można nimi handlować bezpośrednio między użytkownikami, bez potrzeby korzystania z pośredników i ponoszenia związanych z nimi opłat." />
 </Grid>
 
-## Jak działają AŚR? {#how-rwas-work}
+## Jak działają RWA? {#how-rwas-work}
 
-Przyjrzyjmy się kilku przykładom z ekosystemu AŚR: nieruchomościom, tradycyjnym produktom finansowym oraz dziełom sztuki.
+Spójrzmy na kilka przykładów z całego ekosystemu RWA: nieruchomości, tradycyjne produkty finansowe i sztukę piękną.
 
 ### Inwestowanie w nieruchomości {#investing-in-real-estate}
 
-Załóżmy, że chcesz zainwestować w nieruchomości, ale zakup całej nieruchomości jest poza Twoim zasięgiem. Zamiast tego możesz kupić AŚR za pośrednictwem projektu takiego jak [RealT](https://realt.co/). Jego tokeny reprezentują udziały w spółce z ograniczoną odpowiedzialnością (sp. z o.o.) utworzonej w celu posiadania aktu własności nieruchomości. Posiadacze tokenów otrzymują dochód z wynajmu w formie stablecoinów proporcjonalnie do ilości posiadanych udziałów; RealT deklaruje, że jak dotąd wypłacili inwestorom 15 milionów dolarów w dochodach z wynajmu.
+Załóżmy, że chciałbyś zainwestować w nieruchomości, ale zakup całej posiadłości jest poza Twoim zasięgiem. Zamiast tego mógłbyś kupić RWA za pośrednictwem projektu takiego jak [RealT](https://realt.co/). Jego tokeny reprezentują udziały w spółce z ograniczoną odpowiedzialnością (LLC) utworzonej w celu posiadania aktu własności nieruchomości. Posiadacze tokenów otrzymują dochód z wynajmu w postaci stablecoinów proporcjonalnie do posiadanej części; RealT twierdzi, że do tej pory zwrócił inwestorom 15 milionów dolarów netto z tytułu wynajmu. 
 
-Inny projekt o podobnym charakterze, [LABS Group](https://x.com/labsgroupio), pozwala na zakup tokenizowanych nieruchomości już od 100 dolarów.
+Inny projekt działający na podobnych zasadach, [LABS Group](https://x.com/labsgroupio), pozwala ludziom inwestować w ztokenizowane nieruchomości kwotami już od 100 USD.
 
 ### Inwestowanie w produkty finansowe {#investing-in-financial-products}
 
-Istnieje szereg projektów łączących świat tradycyjnych finansów ze zdecentralizowanymi finansami (DeFi), przenosząc papiery wartościowe, akcje, obligacje oraz inne instrumenty finansowe na blockchain.
+Kilka projektów łączy świat tradycyjnych finansów i zdecentralizowanych finansów (DeFi), wprowadzając papiery wartościowe, akcje, obligacje i inne instrumenty finansowe na blockchain.
 
-Na przykład opierająca się na Ethereum firma [Securitize](https://securitize.io/) specjalizuje się w tokenizacji tradycyjnych produktów finansowych. W 2024 roku nawiązała współpracę z BlackRock w celu uruchomienia funduszu AŚR. BlackRock deklaruje, że w przyszłości planuje ztokenizowanie aktyw o wartości 10 bilionów dolarów. CEO firmy, Larry Fink, nazwał tokenizację „następną generacją dla rynków”.
+Na przykład oparta na Ethereum firma [Securitize](https://securitize.io/) specjalizuje się w tokenizacji tradycyjnych produktów finansowych. W 2024 roku nawiązała współpracę z BlackRock w celu uruchomienia funduszu RWA. BlackRock twierdzi, że ostatecznie planuje ztokenizować 10 bilionów dolarów swoich aktywów: jego dyrektor generalny, Larry Fink, nazwał tokenizację „następną generacją dla rynków”.
 
-### Inwestowanie w dzieła sztuki {#investing-in-fine-art}
+### Inwestowanie w sztukę piękną {#investing-in-fine-art}
 
-Istnieje kilka różnych mechanizmów inwestowania w dzieła sztuki. [Masterworks](https://www.masterworks.com/) kupuje dzieła sztuki, dokonuje ich sekurutyzacji i sprzedaje udziały w formie tokenów. Następnie planuje sprzedać dzieło i rozdzielić zyski pomiędzy posiadaczy tokenów.
+Istnieje kilka różnych mechanizmów inwestowania w sztukę piękną. [Masterworks](https://www.masterworks.com/) kupuje dzieła sztuki, sekurytyzuje każde z nich i sprzedaje udziały w formie tokenów. Planuje później sprzedać dzieła sztuki i rozdzielić zyski między posiadaczy tokenów.
 
-Posiadacze tokenów nie mają kontroli nad przechowywaniem ani przyszłą sprzedażą dzieła sztuki. Mogą natomiast decydować, jak długo będą trzymać swoje tokeny, których wartość rośnie i spada wraz z wartością dzieła sztuki.
-
-Tymczasem oparty na blockchainie rejestr dzieł sztuki cyfrowej [Artory](https://www.artory.com/) weryfikuje autentyczność dzieł oraz rejestruje historię poprzednich właścicieli.
+Posiadacze tokenów nie kontrolują przechowywania ani przyszłej sprzedaży dzieł sztuki. Decydują raczej o tym, jak długo będą trzymać swoje tokeny, których wartość rośnie i spada wraz z wartością sztuki.
+ 
+Tymczasem oparty na blockchainie cyfrowy rejestr sztuki [Artory](https://www.artory.com/) weryfikuje autentyczność dzieł sztuki i rejestruje historię ich własności.
 
 ### Inwestowanie w przedmioty kolekcjonerskie {#investing-in-collectibles}
 
-Dotychczasowe przykłady przedstawiają głównie, w jaki sposób tokenizacja umożliwia częściowe posiadanie różnych form majątku. Kolejną zaletą tokenizacji jest to, że pozwala ona na handel cennymi przedmiotami, takimi jak dobra kolekcjonerskie, na światowym rynku.
+Jak dotąd większość z tych przykładów pokazuje, jak tokenizacja pozwala na częściową własność różnych rodzajów bogactwa. Kolejną korzyścią z tokenizacji jest to, że umożliwia ona handel wartościowymi przedmiotami, takimi jak przedmioty kolekcjonerskie, na rynku globalnym.
 
-Jednym z przykładów jest [Courtyard](https://courtyard.io/), który tokenizuje karty kolekcjonerskie takie jak karty baseballowe, futbolowe czy Pokemon. Właściciele wysyłają swoje karty do bezpiecznego magazynu w USA. Następnie karty są wybijane jako cyfrowe tokeny i dodawane do portfeli właścicieli w celu handlu na rynku Courtyard. Courtyard akceptuje jedynie uwierzytelnione karty, czyli takie, których autentyczność i stan zostały potwierdzone przez niezależną stronę trzecią oraz ocenione w skali od zniszczonych po nienaruszone.
+Jednym z przykładów jest [Courtyard](https://courtyard.io/), który tokenizuje karty kolekcjonerskie – pomyśl o kartach baseballowych, piłkarskich lub kartach Pokemon. Właściciele kart wysyłają je do bezpiecznego magazynu w USA. Karty są wybijane jako cyfrowe tokeny i dodawane do portfeli właścicieli w celu handlu na rynku Courtyard. Courtyard akceptuje tylko karty ocenione (graded): to znaczy takie, których autentyczność została potwierdzona przez stronę trzecią, która przyznała im ocenę na podstawie ich stanu, od zniszczonego po nieskazitelny.
 
-Courtyard oferuje również rodzaj systemu tantiem. Za każdym razem, gdy karta jest sprzedawana, osoba, która ją tokenizowała otrzymuje 1% przychodu. Tylko pierwotni właściciele kart są nagradzani w ten sposób. Właściciel w dowolnym momencie może wymienić swoje cyfrowe karty na karty fizyczne, niezależnie od tego, gdzie się znajduje na świecie.
+Courtyard oferuje również pewien rodzaj systemu tantiem. Za każdym razem, gdy karta zostaje sprzedana, osoba, która ją ztokenizowała, otrzymuje jeden procent przychodu. Tylko pierwotni właściciele kart są nagradzani w ten sposób. W dowolnym momencie właściciel może wymienić swoje cyfrowe karty na fizyczne, bez względu na to, gdzie na świecie się znajduje. 
 
-## Jakie są ograniczenia AŚR? {#rwas-limitations}
+## Jakie są ograniczenia RWA? {#rwas-limitations}
 
-Jednym z wyzwań związanych z AŚR na tym wczesnym etapie ich rozwoju jest zapewnienie powiązania między rzeczywistymi przedmiotami a ich cyfrowymi reprezentacjami.
+Jednym z wyzwań związanych z RWA na tym wczesnym etapie jest zapewnienie powiązania między rzeczywistymi obiektami a ich cyfrowymi reprezentacjami.
 
-Dobrym sygnałem jest sytuacja, gdy projekty AŚR dostarczają inwestorom dowodów rezerw, czyli gwarancji, że są oni prawnymi właścicielami fizycznych aktywów zabezpieczających cyfrowe tokeny. Przykładem mogą być wcześniej wspomniane Paxos, Tether Gold czy Courtyard, wszystkie te podmioty przechowują swoje aktywa w bezpiecznych magazynach i oferują właścicielom możliwość wymiany tokena na jego fizyczny odpowiednik w dowolnym momencie.
+Dobrym znakiem jest, gdy projekty RWA dostarczają inwestorom dowód rezerw (proof of reserves) – gwarancję, że są oni prawnymi właścicielami fizycznych obiektów stanowiących pokrycie cyfrowych tokenów. Pomyśl o wspomnianych wcześniej Paxos, Tether Gold czy Courtyard, z których wszystkie przechowują swoje aktywa w bezpiecznych magazynach i oferują właścicielom możliwość wymiany tokena na jego fizyczny odpowiednik w dowolnym momencie.
 
-Innym ograniczeniem jest to, czy własność tokenów jest uznawana przez systemy prawne na całym świecie. Innymi słowy, czy inteligentne kontrakty są egzekwowalne w sądzie lub czy posiadacz tokena AŚR może rościć sobie prawo własności do rzeczywistego przedmiotu?
+Kolejnym ograniczeniem jest to, czy własność tokenów jest uznawana przez systemy prawne na całym świecie. Innymi słowy, czy inteligentne kontrakty są egzekwowalne w sądzie, lub czy posiadacz tokena RWA może rościć sobie prawo własności do rzeczywistego przedmiotu?
 
-Do czołowych krajów w zakresie tworzenia ram prawnych uznających tokenizację należą Singapur, Zjednoczone Emiraty Arabskie, Hongkong i Szwajcaria, która w 2021 roku wprowadziła ustawę znaną jako „Ustawa Blockchain” regulującą technologie takie jak tokenizacja. Unia Europejska rozpoczęła proces regulacji AŚR, podczas gdy w Stanach Zjednoczonych oczekuje się, że Komisja Papierów Wartościowych i Giełd wyda w pewnym momencie wytyczne dotyczące AŚR.
+Do liderów w zakresie tworzenia ram prawnych specjalnie w celu uznania tokenizacji należą Singapur, Zjednoczone Emiraty Arabskie, Hongkong i Szwajcaria, która w 2021 r. wprowadziła przepisy zwane potocznie „Ustawą o blockchainie” (Blockchain Act), aby uregulować technologie takie jak tokenizacja. Unia Europejska rozpoczęła proces regulacji RWA, podczas gdy w Stanach Zjednoczonych oczekuje się, że Komisja Papierów Wartościowych i Giełd (SEC) wyda w pewnym momencie wytyczne dotyczące RWA.
 
 ## Dowiedz się więcej {#learn-more}
 
-Zanurz się w temacie [inteligentnych kontraktów](/smart-contracts/) lub dowiedz się więcej o innej klasie tokenów, [tokenach niewymienialnych (NFT)](/nft/).
+Zagłęb się w [inteligentne kontrakty](/smart-contracts/) lub dowiedz się więcej o innej klasie tokenów, [niewymienialnych tokenach (NFT)](/nft/).
 
 ## Dalsza lektura {#further-reading}
 
-- [Czym jest tokenizacja aktywów](https://www.britannica.com/money/real-world-asset-tokenization) — Britannica
-- [Jak tokenizacja zmienia globalne finanse i inwestycje](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/) — World Economic Forum
-- [Co kryptowalutowi inwestorzy powinni wiedzieć o tokenizacji aktywów ze świata rzeczywistego](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/) — Forbes
-- [Jak inteligentne kontrakty współpracują z blockchainem](https://www.britannica.com/money/how-smart-contracts-work) — Britannica
-- [Jak tokenizowane aktywa ze świata rzeczywistego zmieniają DeFi](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a) — Medium
-- [Czym jest AŚR w krypto? Wyjaśnienie jego roli w blockchainie](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) — BitDegree
-- [Najpopularniejsze monety AŚR według kapitalizacji rynkowej](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/) — Forbes
+- [Czym jest tokenizacja aktywów?](https://www.britannica.com/money/real-world-asset-tokenization) w Britannica
+- [Jak tokenizacja przekształca globalne finanse i inwestycje](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/) na Światowym Forum Ekonomicznym
+- [Co inwestorzy krypto muszą wiedzieć o tokenizacji aktywów świata rzeczywistego](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/) w Forbes
+- [Jak inteligentne kontrakty współpracują z blockchainem](https://www.britannica.com/money/how-smart-contracts-work) w Britannica
+- [Jak ztokenizowane aktywa świata rzeczywistego przekształcają DeFi](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a) na Medium
+- [Czym są RWA w krypto? Wyjaśnienie ich roli w blockchainie](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) na BitDegree
+- [Najlepsze monety aktywów świata rzeczywistego (RWA) według kapitalizacji rynkowej](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/) w Forbes

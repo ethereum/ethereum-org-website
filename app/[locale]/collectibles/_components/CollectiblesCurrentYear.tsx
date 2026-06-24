@@ -72,7 +72,7 @@ const HighlightCardBody = ({
   className,
   children,
 }: HighlightCardContentProps) => (
-  <div className={cn("flex flex-1 gap-4 p-4 ring", className)}>
+  <div className={cn("flex flex-1 gap-4 p-4", className)}>
     <Link href={href} hideArrow className="group">
       <Image
         src={src}

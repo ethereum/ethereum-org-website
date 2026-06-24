@@ -5,6 +5,22 @@
    (e.g. .dark containers). */
 
 @theme inline {
+  /* Layout spacing */
+  --spacing-page: var(--page-pad); /* The single base unit for standard page padding; responsive. */
+  --spacing-page-2x: calc(var(--page-pad) * 2);
+
+  --spacing-hero-half: calc(var(--hero-pad) * 0.5);
+  --spacing-hero: var(--hero-pad); /* The single base unit for standard page hero padding. */
+  --spacing-hero-1.5x:  calc(var(--hero-pad) * 1.5);
+  --spacing-hero-2x:  calc(var(--hero-pad) * 2);
+  --spacing-hero-3x:  calc(var(--hero-pad) * 3);
+  
+  --spacing-space-half: calc(var(--space) * 0.5);
+  --spacing-space: var(--space); /* The single base unit for the whole flow rhythm; responsive */
+  --spacing-space-2x: calc(var(--space) * 2);
+  --spacing-space-3x: calc(var(--space) * 3);
+  --spacing-space-4x: calc(var(--space) * 4);
+
   /* Reset default breakpoints (project uses non-standard sm=480) */
   --breakpoint-*: initial;
 
@@ -209,7 +225,7 @@
   --spacing-128: 32rem;
 
   /* Border radius */
-  --radius-4xl: 2rem;
+  --radius-base: var(--radius-2xl);
 
   /* Box shadows */
   --shadow-table-box: var(--table-box-shadow);

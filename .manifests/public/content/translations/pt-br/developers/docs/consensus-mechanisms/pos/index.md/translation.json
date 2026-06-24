@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "locale": "pt-br",
+  "translatedAt": "2026-06-18T21:09:02.395Z",
+  "englishManifestHash": "7367afbe696a",
+  "placeholderOrder": [
+    "LINK-74d94b",
+    "LINK-8d5f08",
+    "LINK-540746",
+    "LINK-9df1a4",
+    "LINK-13ddc8",
+    "LINK-faa750",
+    "LINK-df1f46",
+    "LINK-15a1d8",
+    "LINK-293225",
+    "LINK-cf08c6",
+    "LINK-46f60a",
+    "LINK-068df1",
+    "LINK-94f7b5",
+    "LINK-b99e6b",
+    "LINK-0b2ddf",
+    "LINK-fc7569",
+    "LINK-fa02c5",
+    "LINK-3d4251",
+    "LINK-02631b",
+    "LINK-663f61",
+    "LINK-622ee2",
+    "LINK-3b237e",
+    "LINK-632354",
+    "LINK-72bf61",
+    "LINK-45febb",
+    "LINK-422e4f",
+    "LINK-5fe4af",
+    "LINK-7ca194",
+    "LINK-7c873d",
+    "LINK-4208a5",
+    "LINK-8f1f3a",
+    "LINK-110521"
+  ],
+  "placeholderMap": {
+    "LINK-74d94b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-8d5f08": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow"
+      }
+    },
+    "LINK-540746": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-9df1a4": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-13ddc8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-faa750": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.org/v6/"
+      }
+    },
+    "LINK-df1f46": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/"
+      }
+    },
+    "LINK-15a1d8": {
+      "type": "link",
+      "values": {
+        "url": "https://web3py.readthedocs.io/en/v5/"
+      }
+    },
+    "LINK-293225": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-cf08c6": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/#priority-fee"
+      }
+    },
+    "LINK-46f60a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/#base-fee"
+      }
+    },
+    "LINK-068df1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-client"
+      }
+    },
+    "LINK-94f7b5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.flashbots.net/flashbots-auction/overview"
+      }
+    },
+    "LINK-b99e6b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/mev/#mev-extraction"
+      }
+    },
+    "LINK-0b2ddf": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networking-layer/#connecting-clients"
+      }
+    },
+    "LINK-fc7569": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/#fork-choice"
+      }
+    },
+    "LINK-fa02c5": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/1710.09437"
+      }
+    },
+    "LINK-3d4251": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2016/05/09/on-settlement-finality"
+      }
+    },
+    "LINK-02631b": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/bellatrix/part2/incentives/inactivity"
+      }
+    },
+    "LINK-663f61": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty"
+      }
+    },
+    "LINK-622ee2": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/2003.03052.pdf"
+      }
+    },
+    "LINK-3b237e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.investopedia.com/terms/1/51-attack.asp"
+      }
+    },
+    "LINK-632354": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2017/12/31/pos_faq.html"
+      }
+    },
+    "LINK-72bf61": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/"
+      }
+    },
+    "LINK-45febb": {
+      "type": "link",
+      "values": {
+        "url": "https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463"
+      }
+    },
+    "LINK-422e4f": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2020/11/06/pos2020.html"
+      }
+    },
+    "LINK-5fe4af": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity"
+      }
+    },
+    "LINK-7ca194": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs"
+      }
+    },
+    "LINK-7c873d": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51"
+      }
+    },
+    "LINK-4208a5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=3yrqBG-7EVE"
+      }
+    },
+    "LINK-8f1f3a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-110521": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/poa/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:09:02.395Z",
+      "status": "success"
+    }
+  }
+}

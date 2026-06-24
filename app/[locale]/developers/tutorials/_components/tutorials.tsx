@@ -1,15 +1,7 @@
 "use client"
 
-import React, {
-  type ButtonHTMLAttributes,
-  forwardRef,
-  useEffect,
-  useMemo,
-  useState,
-} from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import {
-  ChevronDown,
-  ChevronUp,
   Code,
   ExternalLink,
   GraduationCap,
@@ -31,14 +23,13 @@ import { Flex } from "@/components/ui/flex"
 import Input from "@/components/ui/input"
 import { BaseLink } from "@/components/ui/Link"
 import TabNav from "@/components/ui/TabNav"
-import { Tag, TagButton } from "@/components/ui/tag"
+import { Tag } from "@/components/ui/tag"
+import TagFilter from "@/components/ui/tag-filter"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getTagCounts } from "@/lib/utils/tags"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import {
-  filterTutorialsByLang,
-  getSortedTutorialTagsForLang,
-} from "@/lib/utils/tutorial"
+import { filterTutorialsByLang } from "@/lib/utils/tutorial"
 
 import externalTutorials from "@/data/externalTutorials.json"
 
@@ -47,26 +38,6 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 import useTranslation from "@/hooks/useTranslation"
 
 const MAX_DEFAULT_TAGS = 12
-
-const FilterTag = forwardRef<
-  HTMLButtonElement,
-  { isActive: boolean; name: string } & ButtonHTMLAttributes<HTMLButtonElement>
->((props, ref) => {
-  const { isActive, name, ...rest } = props
-  return (
-    <TagButton
-      ref={ref}
-      variant={isActive ? "solid" : "outline"}
-      status={isActive ? "tag" : "normal"}
-      className="justify-center"
-      {...rest}
-    >
-      {name}
-    </TagButton>
-  )
-})
-
-FilterTag.displayName = "FilterTag"
 
 const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
@@ -104,8 +75,13 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
     [internalTutorials, effectiveLocale]
   )
 
-  const allTags = useMemo(
-    () => getSortedTutorialTagsForLang(filteredTutorialsByLang),
+  // Count-descending tag entries, dropping one-off tags (count <= 1) which add
+  // noise to the filter row.
+  const eligibleTags = useMemo(
+    () =>
+      getTagCounts(filteredTutorialsByLang, (tutorial) => tutorial.tags).filter(
+        ([, count]) => count > 1
+      ),
     [filteredTutorialsByLang]
   )
 
@@ -149,27 +125,6 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
   const [selectedTags, setSelectedTags] = useState<Array<string>>([])
   const [selectedSkill, setSelectedSkill] = useState<string>("all")
   const [searchQuery, setSearchQuery] = useState("")
-  const [showAllTags, setShowAllTags] = useState(false)
-
-  // Split tags into popular (top N by count) and niche (the rest)
-  const { popularTags, nicheTags } = useMemo(() => {
-    const eligible: Array<[string, number]> = []
-
-    Object.entries(allTags).forEach(([tagName, tagCount]) => {
-      const count = tagCount as number
-      if (count <= 1) return
-      eligible.push([tagName, count])
-    })
-
-    // Sort by count descending for visual hierarchy
-    eligible.sort((a, b) => b[1] - a[1])
-
-    // Top tags shown by default, rest behind expander
-    const popular = eligible.slice(0, MAX_DEFAULT_TAGS)
-    const niche = eligible.slice(MAX_DEFAULT_TAGS)
-
-    return { popularTags: popular, nicheTags: niche }
-  }, [allTags])
 
   // Combined filtering: skill + tags + search
   useEffect(() => {
@@ -206,27 +161,22 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
     setFilteredTutorials(tutorials)
   }, [filteredTutorialsByLang, selectedTags, selectedSkill, searchQuery])
 
-  const handleTagSelect = (tagName: string) => {
-    const tempSelectedTags = [...selectedTags]
+  // Assumes a single-tag delta per call (chip toggle or one active-filter
+  // removal) and reports exactly one Matomo event. A multi-tag change (e.g. a
+  // future "clear all") would only track the first diff.
+  const handleTagsChange = (next: Array<string>) => {
+    const added = next.find((tag) => !selectedTags.includes(tag))
+    const removed = selectedTags.find((tag) => !next.includes(tag))
 
-    const index = tempSelectedTags.indexOf(tagName)
-    if (index > -1) {
-      tempSelectedTags.splice(index, 1)
+    if (added || removed) {
       trackCustomEvent({
         eventCategory: "tutorial tags",
         eventAction: "click",
-        eventName: `${tagName} remove`,
-      })
-    } else {
-      tempSelectedTags.push(tagName)
-      trackCustomEvent({
-        eventCategory: "tutorial tags",
-        eventAction: "click",
-        eventName: `${tagName} add`,
+        eventName: `${added ?? removed} ${added ? "add" : "remove"}`,
       })
     }
 
-    setSelectedTags(tempSelectedTags)
+    setSelectedTags(next)
   }
 
   const handleSkillSelect = (key: string) => {
@@ -254,224 +204,192 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
     selectedSkill !== "all" ||
     searchQuery.trim() !== ""
 
-  const visibleTags = showAllTags ? [...popularTags, ...nicheTags] : popularTags
-
   return (
     <>
-      <div className="my-8 w-full max-w-screen-lg shadow-table-box">
-        {/* Skill level TabNav + Search */}
-        <div className="flex flex-col gap-6 px-8 pt-6 md:max-lg:w-fit lg:flex-row lg:items-center">
-          <TabNav
-            sections={skillSections}
-            activeSection={selectedSkill}
-            onSelect={handleSkillSelect}
-            useMotion
-            motionLayoutId="tutorial-skill-highlight"
-            className="w-auto justify-start md:w-fit [&>nav]:mx-0 [&>nav]:w-auto [&>nav]:max-w-none"
-            customEventOptions={{
-              eventCategory: "tutorial tags",
-              eventAction: "click",
-            }}
+      {/* Skill level TabNav + Search */}
+      <div className="flex gap-6 px-page pt-page max-lg:flex-col md:max-lg:w-fit lg:items-center">
+        <TabNav
+          sections={skillSections}
+          activeSection={selectedSkill}
+          onSelect={handleSkillSelect}
+          useMotion
+          motionLayoutId="tutorial-skill-highlight"
+          className="w-auto justify-start md:w-fit [&>nav]:mx-0 [&>nav]:w-auto [&>nav]:max-w-none"
+          customEventOptions={{
+            eventCategory: "tutorial tags",
+            eventAction: "click",
+          }}
+        />
+        <div className="relative w-full lg:ms-auto lg:w-44">
+          <Search className="pointer-events-none absolute inset-s-3 top-1/2 size-4 -translate-y-1/2 text-body-medium" />
+          <Input
+            type="text"
+            placeholder={t("page-tutorial-search-placeholder")}
+            aria-label={t("page-tutorial-search-placeholder")}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full ps-9 text-sm"
           />
-          <div className="relative w-full lg:ms-auto lg:w-44">
-            <Search className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-body-medium" />
-            <Input
-              type="text"
-              placeholder={t("page-tutorial-search-placeholder")}
-              aria-label={t("page-tutorial-search-placeholder")}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full ps-9 text-sm"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery("")}
-                className="absolute end-3 top-1/2 -translate-y-1/2 text-body-medium hover:text-body"
-              >
-                <X className="size-4" />
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Filter controls */}
-        <div className="border-b border-border px-8 pt-5 pb-6">
-          {/* Row 2: Topic tags */}
-          <div className="mt-5">
-            <p className="mb-3 text-xs tracking-wider text-body-medium uppercase">
-              <Translation id="page-developers-tutorials:page-tutorial-topics" />
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {visibleTags.map(([tagName, tagCount]) => {
-                const isActive = selectedTags.includes(tagName)
-                return (
-                  <FilterTag
-                    key={tagName}
-                    onClick={() => handleTagSelect(tagName)}
-                    name={`${tagName} (${tagCount})`}
-                    isActive={isActive}
-                  />
-                )
-              })}
-
-              {/* Show more / Show less toggle */}
-              {nicheTags.length > 0 && (
-                <button
-                  onClick={() => setShowAllTags(!showAllTags)}
-                  className="inline-flex items-center gap-1 rounded-full border border-dashed border-body-medium px-3 py-0.5 text-xs text-body-medium uppercase transition-colors hover:border-primary hover:text-primary"
-                >
-                  {showAllTags ? (
-                    <>
-                      <Translation id="show-less" />{" "}
-                      <ChevronUp className="size-3" />
-                    </>
-                  ) : (
-                    <>
-                      <Translation
-                        id="page-developers-tutorials:page-tutorial-more-tags"
-                        values={{ count: nicheTags.length }}
-                      />{" "}
-                      <ChevronDown className="size-3" />
-                    </>
-                  )}
-                </button>
-              )}
-            </div>
-          </div>
-
-          {/* Row 3: Active filters summary (only when filters active) */}
-          {hasActiveFilters && (
-            <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-border pt-4">
-              <span className="text-xs text-body-medium">
-                <Translation id="page-developers-tutorials:page-tutorial-filtering-by" />
-              </span>
-
-              {selectedSkill !== "all" && (
-                <Tag
-                  status="tag"
-                  variant="solid"
-                  className="cursor-pointer gap-1"
-                  onClick={() => setSelectedSkill("all")}
-                >
-                  {t(`page-tutorial-${selectedSkill}`)}
-                  <X className="size-3" />
-                </Tag>
-              )}
-
-              {selectedTags.map((tag) => (
-                <Tag
-                  key={tag}
-                  status="tag"
-                  variant="solid"
-                  className="cursor-pointer gap-1"
-                  onClick={() => handleTagSelect(tag)}
-                >
-                  {tag}
-                  <X className="size-3" />
-                </Tag>
-              ))}
-
-              {searchQuery.trim() && (
-                <Tag
-                  status="accent-a"
-                  variant="subtle"
-                  className="cursor-pointer gap-1"
-                  onClick={() => setSearchQuery("")}
-                >
-                  &ldquo;{searchQuery.trim()}&rdquo;
-                  <X className="size-3" />
-                </Tag>
-              )}
-
-              <Button
-                className="cursor-pointer p-0 text-xs text-primary underline"
-                variant="ghost"
-                size="sm"
-                onClick={handleClearAll}
-              >
-                <Translation id="page-developers-tutorials:page-find-wallet-clear" />
-              </Button>
-            </div>
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery("")}
+              className="absolute inset-e-3 top-1/2 -translate-y-1/2 text-body-medium hover:text-body"
+            >
+              <X className="size-4" />
+            </button>
           )}
         </div>
-
-        {/* Empty state */}
-        {filteredTutorials.length === 0 ? (
-          <div className="mt-0 p-12 text-center">
-            <Emoji text=":crying_face:" className="my-8 text-5xl" />
-            <h2 className="mt-12 mb-8 leading-xs">
-              <Translation id="page-developers-tutorials:page-tutorial-tags-error" />
-            </h2>
-            <Translation id="page-developers-tutorials:page-find-wallet-try-removing" />
-          </div>
-        ) : (
-          <h2 className="sr-only">{t("page-tutorials-available")}</h2>
-        )}
-
-        {/* Tutorial cards */}
-        {filteredTutorials.map((tutorial) => (
-          <BaseLink
-            key={tutorial.href}
-            href={tutorial.href ?? undefined}
-            className="block w-full space-y-6 border-b p-8 no-underline duration-100 hover:bg-background-highlight"
-            hideArrow
-          >
-            <Flex className="flex-col items-start justify-between gap-y-4 md:flex-row">
-              <h3 className="relative me-0 text-2xl text-body md:me-24">
-                {tutorial.title}
-                {tutorial.isExternal && (
-                  <ExternalLink className="ms-[0.25em] mb-[0.25em] inline-block size-[0.875em]" />
-                )}
-              </h3>
-              {tutorial.skill && (
-                <Tag
-                  variant="outline"
-                  status={
-                    tutorial.skill === "beginner"
-                      ? "tag-green"
-                      : tutorial.skill === "intermediate"
-                        ? "tag-yellow"
-                        : tutorial.skill === "advanced"
-                          ? "tag-red"
-                          : "normal"
-                  }
-                >
-                  <Translation id={getSkillTranslationId(tutorial.skill)} />
-                </Tag>
-              )}
-            </Flex>
-            <p className="text-body-medium uppercase">
-              <Emoji text=":writing_hand:" className="me-2 text-sm" />
-              {tutorial.author}
-              {tutorial.published ? (
-                <> •{published(locale, tutorial.published!)}</>
-              ) : null}
-              {tutorial.timeToRead && (
-                <>
-                  {" "}
-                  •
-                  <Emoji text=":stopwatch:" className="mx-2 text-sm" />
-                  {tutorial.timeToRead}{" "}
-                  <Translation id="page-developers-tutorials:page-tutorial-read-time" />
-                </>
-              )}
-              {tutorial.isExternal && (
-                <>
-                  {" "}
-                  •<Emoji text=":link:" className="mx-2 text-sm" />
-                  <span className="cursor-pointer text-primary">
-                    <Translation id="page-developers-tutorials:page-tutorial-external-link" />
-                  </span>
-                </>
-              )}
-            </p>
-            <p className="text-body-medium">{tutorial.description}</p>
-            <Flex className="w-full flex-wrap">
-              <TutorialTags tags={tutorial.tags ?? []} />
-            </Flex>
-          </BaseLink>
-        ))}
       </div>
+
+      {/* Filter controls */}
+      <div className="border-b p-page">
+        {/* Row 2: Topic tags */}
+        <p className="mb-space-half text-xs tracking-wider text-body-medium uppercase">
+          <Translation id="page-developers-tutorials:page-tutorial-topics" />
+        </p>
+        <TagFilter
+          tags={eligibleTags}
+          value={selectedTags}
+          onChange={handleTagsChange}
+          defaultVisible={MAX_DEFAULT_TAGS}
+        />
+
+        {/* Row 3: Active filters summary (only when filters active) */}
+        {hasActiveFilters && (
+          <div className="mt-4 flex flex-wrap items-center gap-2 border-t pt-4">
+            <span className="text-xs text-body-medium">
+              <Translation id="page-developers-tutorials:page-tutorial-filtering-by" />
+            </span>
+
+            {selectedSkill !== "all" && (
+              <Tag
+                status="tag"
+                variant="solid"
+                className="cursor-pointer gap-1"
+                onClick={() => setSelectedSkill("all")}
+              >
+                {t(`page-tutorial-${selectedSkill}`)}
+                <X className="size-3" />
+              </Tag>
+            )}
+
+            {selectedTags.map((tag) => (
+              <Tag
+                key={tag}
+                status="tag"
+                variant="solid"
+                className="cursor-pointer gap-1"
+                onClick={() =>
+                  handleTagsChange(selectedTags.filter((t) => t !== tag))
+                }
+              >
+                {tag}
+                <X className="size-3" />
+              </Tag>
+            ))}
+
+            {searchQuery.trim() && (
+              <Tag
+                status="accent-a"
+                variant="subtle"
+                className="cursor-pointer gap-1"
+                onClick={() => setSearchQuery("")}
+              >
+                &ldquo;{searchQuery.trim()}&rdquo;
+                <X className="size-3" />
+              </Tag>
+            )}
+
+            <Button
+              className="cursor-pointer p-0 text-xs text-primary underline"
+              variant="ghost"
+              size="sm"
+              onClick={handleClearAll}
+            >
+              <Translation id="page-developers-tutorials:page-find-wallet-clear" />
+            </Button>
+          </div>
+        )}
+      </div>
+
+      {/* Empty state */}
+      {filteredTutorials.length === 0 ? (
+        <div className="flow px-page py-page-2x text-center">
+          <Emoji text=":crying_face:" className="text-6xl" />
+          <h2>
+            <Translation id="page-developers-tutorials:page-tutorial-tags-error" />
+          </h2>
+          <p className="text-body-medium">
+            <Translation id="page-developers-tutorials:page-find-wallet-try-removing" />
+          </p>
+        </div>
+      ) : (
+        <h2 className="sr-only">{t("page-tutorials-available")}</h2>
+      )}
+
+      {/* Tutorial cards */}
+      {filteredTutorials.map((tutorial) => (
+        <BaseLink
+          key={tutorial.href}
+          href={tutorial.href ?? undefined}
+          className="flow block border-b px-page py-8 no-underline duration-100 hover:bg-background-highlight"
+          hideArrow
+        >
+          <Flex className="items-start justify-between gap-4 max-md:flex-col">
+            <h3 className="relative me-0 text-2xl text-body md:me-24">
+              {tutorial.title}
+              {tutorial.isExternal && (
+                <ExternalLink className="ms-[0.25em] mb-[0.25em] inline-block size-[0.875em]" />
+              )}
+            </h3>
+            {tutorial.skill && (
+              <Tag
+                variant="outline"
+                status={
+                  tutorial.skill === "beginner"
+                    ? "tag-green"
+                    : tutorial.skill === "intermediate"
+                      ? "tag-yellow"
+                      : tutorial.skill === "advanced"
+                        ? "tag-red"
+                        : "normal"
+                }
+              >
+                <Translation id={getSkillTranslationId(tutorial.skill)} />
+              </Tag>
+            )}
+          </Flex>
+          <p className="text-body-medium uppercase">
+            <Emoji text=":writing_hand:" className="me-2 text-sm" />
+            {tutorial.author}
+            {tutorial.published ? (
+              <> •{published(locale, tutorial.published!)}</>
+            ) : null}
+            {tutorial.timeToRead && (
+              <>
+                {" "}
+                •
+                <Emoji text=":stopwatch:" className="mx-2 text-sm" />
+                {tutorial.timeToRead}{" "}
+                <Translation id="page-developers-tutorials:page-tutorial-read-time" />
+              </>
+            )}
+            {tutorial.isExternal && (
+              <>
+                {" "}
+                •<Emoji text=":link:" className="mx-2 text-sm" />
+                <span className="cursor-pointer text-primary">
+                  <Translation id="page-developers-tutorials:page-tutorial-external-link" />
+                </span>
+              </>
+            )}
+          </p>
+          <p className="text-body-medium">{tutorial.description}</p>
+          <Flex className="flex-wrap gap-2">
+            <TutorialTags tags={tutorial.tags ?? []} />
+          </Flex>
+        </BaseLink>
+      ))}
     </>
   )
 }
