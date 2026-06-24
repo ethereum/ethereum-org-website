@@ -93,5 +93,5 @@ Kanıtlama için gizliliği araştıran bazı projeler şunları içerir: [İste
 - [Ethereum'un Gizlilik Temsilcileri](https://pse.dev/) (PSE), ekosistem için gizliliğe odaklanmış bir Ethereum Foundation araştırma ve geliştirme laboratuvarı
 - [Web3PrivacyNow](https://web3privacy.info/), çevrimiçi insan haklarını koruyan ve ilerleten insan, proje ve uyumlu kuruluşlardan oluşan bir ağ
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), cüzdanların kapsamlı bir listesini, işlevselliklerini, uygulamalarını ve belirli standartlara desteklerini sağlamayı amaçlayan bir Ethereum cüzdan derecelendirme sitesidir.
-- [Zk-kit](https://zkkit.pse.dev/): Farklı projelerde ve sıfır bilgi protokollerinde yeniden kullanılabilen bir kütüphane seti (algoritmalar, yardımcı fonksiyonlar ve veri yapıları).
+- [Zk-kit](https://zkkit.org/): Farklı projelerde ve sıfır bilgi protokollerinde yeniden kullanılabilen bir kütüphane seti (algoritmalar, yardımcı fonksiyonlar ve veri yapıları).
 - [Gizlilik Uygulamaları](/apps/categories/privacy/) - Ethereum'da çalışan, özenle seçilmiş Gizlilik uygulamalarının bir listesini keşfedin.
