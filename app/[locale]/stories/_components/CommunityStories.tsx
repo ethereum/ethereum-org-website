@@ -6,7 +6,7 @@ import type { Story } from "@/lib/types"
 
 import StoryCard from "@/components/StoryCard"
 import { Button } from "@/components/ui/buttons/Button"
-import { TagButton } from "@/components/ui/tag"
+import TagFilter from "@/components/ui/tag-filter"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -29,9 +29,10 @@ const parseCategories = (raw?: string) =>
 const CommunityStories = ({ stories }: CommunityStoriesProps) => {
   const { t } = useTranslation("page-stories")
 
-  // Distinct categories sorted by frequency, deduped case-insensitively (the
-  // mock data has casing drift, e.g. "Self-custody" vs "Self-Custody").
-  const categories = useMemo(() => {
+  // Distinct categories as [label, count] entries, sorted by frequency and
+  // deduped case-insensitively (the data has casing drift, e.g. "Self-custody"
+  // vs "Self-Custody"); the first-seen casing wins as the display label.
+  const tagCounts = useMemo<Array<[string, number]>>(() => {
     const byKey = new Map<string, { label: string; count: number }>()
     for (const story of stories) {
       for (const category of parseCategories(story.category)) {
@@ -41,56 +42,53 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
         else byKey.set(key, { label: category, count: 1 })
       }
     }
-    return [...byKey.values()].sort((a, b) => b.count - a.count)
+    return [...byKey.values()]
+      .sort((a, b) => b.count - a.count)
+      .map(({ label, count }): [string, number] => [label, count])
   }, [stories])
 
   const [storiesToShow, setStoriesToShow] = useState(STORIES_SHOWN)
-  // Single-select, toggleable: no tag selected shows all stories; selecting one
-  // filters to it, selecting another swaps, and clicking the active one clears
-  // the filter (back to all).
-  const [selectedTag, setSelectedTag] = useState<string>()
+  const [selectedTags, setSelectedTags] = useState<Array<string>>([])
 
+  // OR matching (case-insensitive): a story shows if any of its categories is
+  // among the selected tags. An empty selection shows everything.
   const filteredStories = useMemo(() => {
-    if (!selectedTag) return stories
-    const selected = selectedTag.toLowerCase()
+    if (selectedTags.length === 0) return stories
+    const selected = new Set(selectedTags.map((tag) => tag.toLowerCase()))
     return stories.filter((story) =>
-      parseCategories(story.category)
-        .map((c) => c.toLowerCase())
-        .includes(selected)
+      parseCategories(story.category).some((c) => selected.has(c.toLowerCase()))
     )
-  }, [stories, selectedTag])
+  }, [stories, selectedTags])
 
   const visibleStories = filteredStories.slice(0, storiesToShow)
 
-  const handleTagSelect = (label: string) => {
-    const isActive = label === selectedTag
+  // Single-tag delta per call (chip toggle); resets pagination and tracks the
+  // one changed tag.
+  const handleTagsChange = (next: Array<string>) => {
+    const added = next.find((tag) => !selectedTags.includes(tag))
+    const removed = selectedTags.find((tag) => !next.includes(tag))
+
     setStoriesToShow(STORIES_SHOWN)
-    setSelectedTag(isActive ? undefined : label)
-    trackCustomEvent({
-      eventCategory: "community-stories",
-      eventAction: "click",
-      eventName: `story filter ${label} ${isActive ? "clear" : "apply"}`,
-    })
+    setSelectedTags(next)
+
+    if (added || removed) {
+      trackCustomEvent({
+        eventCategory: "community-stories",
+        eventAction: "click",
+        eventName: `story filter ${added ?? removed} ${added ? "apply" : "clear"}`,
+      })
+    }
   }
 
   return (
     <div className="flex flex-col gap-8">
-      {categories.length > 0 && (
-        <div className="flex flex-wrap items-center justify-start gap-2 lg:justify-center">
-          {categories.map(({ label, count }) => {
-            const isActive = label === selectedTag
-            return (
-              <TagButton
-                key={label}
-                variant={isActive ? "solid" : "outline"}
-                status={isActive ? "tag" : "normal"}
-                onClick={() => handleTagSelect(label)}
-              >
-                {label} ({count})
-              </TagButton>
-            )
-          })}
-        </div>
+      {tagCounts.length > 0 && (
+        <TagFilter
+          className="items-center lg:justify-center"
+          tags={tagCounts}
+          value={selectedTags}
+          onChange={handleTagsChange}
+        />
       )}
 
       {/* CSS multi-column gives true masonry packing with zero JS, so the
