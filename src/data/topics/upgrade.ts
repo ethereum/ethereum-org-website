@@ -42,6 +42,11 @@ export const upgrade: TopicConfig = {
         href: "/roadmap/glamsterdam/",
         matomoEvent: "/roadmap/glamsterdam/",
       },
+      {
+        textKey: "page-upgrades-upgrades-forks",
+        href: "/ethereum-forks/",
+        matomoEvent: "/ethereum-forks/",
+      },
     ],
   },
   showLastUpdatedInHero: true,
