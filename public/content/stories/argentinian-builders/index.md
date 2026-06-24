@@ -24,7 +24,11 @@ For most people of my generation, this story starts in 2001. The financial crisi
 
 This would lead to 20+ years of on and off currency controls, followed by three-digit yearly inflation.
 
-![Image of a passage from The Infinite Machine by Camila Russo](./santiago1.jpeg) 
+> "The seed that would lead [Argentinians] to seek money that's immune to government control or profilgacy was planted in December 2001. [...] It was Monday, December 3, and the Argentine government had published a decree over the weekend prohibiting savers from withdrawing more than $250 or 250 pesos per week, and banning most inernational money transfers. Essentially, it meant people's savings were trapped in the national banking system. It would also suck liquidity from the economy, paralyzing commerce and leaving those in the informaal sector, or about half of the working population, with no earnings. [...] 
+> 
+> On December 20, the president resigned. [...] The immediate replacement lasted only a week, and Eduardo Duhalde, who followed, stopped the practice of pegging the peso to the dollar and established a new official exchange rate at 1.4 pesos per dollar, devaluing the currency by 40 percent. All dollar deposits were converted to pesos at the official exchange rate, effectively slashing savings. People still couldn't withdraw their own money." 
+> 
+> — *From The Infinite Machine by Camila Russo*
 
 Stablecoins became a way to access the broader financial system, and to act as a store of value against the continuously depreciating peso.
 
@@ -116,8 +120,17 @@ We can fulfill the promise of the infinite garden. Turn Ethereum to a protocol f
 
 Starting here, in Argentina. 
 
-![Screenshot of the Ethereum Foundation explainer about the Infinite Garden](./santiago11.jpeg)
+> *"A finite game is played for the purpose of winning. An infinite game for the purpose of continuing the play."*
+>
+> *~ James P. Carse*
+>
+> Our vision for Ethereum is the Infinite Garden. Ethereum is more than a technology, it is a diverse ecosystem of individuals and organizations that build and grow alongside a protocol. The Ethereum ecosystem wasn't something that was designed by any one individual or organization, but it organically evolved with the support of people who nurture the ecosystem to become more vibrant and diverse.
+>
+> Ethereum is a protocol for human coordination. Coordination is a game, but not one that is played to win. Coordination is more like tending a garden, where one works only that the garden may continue to thrive.
+> 
+> 
+> The Infinite Garden is an embodiment of the spirit of the Ethereum Foundation as one gardener in a vast ecosystem — nurture and grow, but do not control, and continue to play.
 
-_[Source](https://ethereum.foundation/infinitegarden)._
+_[Quote source - Ethereum Foundation](https://ethereum.foundation/infinitegarden)._
 
  
