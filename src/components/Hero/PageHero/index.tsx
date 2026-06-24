@@ -107,7 +107,7 @@ const PageHero = ({
           <Eyebrow />
         </div>
 
-        <PrimaryHeading className="text-4xl font-black not-last:mb-space lg:text-6xl">
+        <PrimaryHeading className="text-4xl not-last:mb-space lg:text-6xl">
           {title}
         </PrimaryHeading>
 

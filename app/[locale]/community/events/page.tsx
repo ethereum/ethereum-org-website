@@ -269,7 +269,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 }}
               >
                 <div className="rounded-full border border-dashed border-primary p-3">
-                  <Plus className="size-4 transition-transform group-hover:scale-150 group-hover:transition-transform" />
+                  <Plus className="size-4 transition-transform group-hover:scale-150" />
                 </div>
                 {t("page-events-hub-apply-cta")}
               </ButtonLink>

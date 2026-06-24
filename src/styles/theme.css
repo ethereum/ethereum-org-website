@@ -216,13 +216,6 @@
   --color-search-background: var(--search-background);
   --color-gradient-step-1: var(--gradient-step-1);
 
-  /* Custom spacing (additions to built-in scale) */
-  --spacing-7_5: 1.875rem;
-  --spacing-10_5: 2.625rem;
-  --spacing-19: 4.75rem;
-  --spacing-31: 7.75rem;
-  --spacing-128: 32rem;
-
   /* Border radius */
   --radius-base: var(--radius-2xl);
 

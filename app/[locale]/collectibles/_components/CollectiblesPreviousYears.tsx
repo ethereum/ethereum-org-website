@@ -96,7 +96,7 @@ const CollectiblesPreviousYears = ({
                         sizes="80px"
                         src={badge.image}
                         alt={badge.name}
-                        className="size-16 transition-transform group-hover:scale-105 group-hover:transition-transform md:size-20"
+                        className="size-16 transition-transform group-hover:scale-105 md:size-20"
                       />
                       <div className="text-xs text-primary md:text-sm">
                         {label}

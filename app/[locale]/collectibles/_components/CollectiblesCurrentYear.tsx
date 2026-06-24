@@ -80,7 +80,7 @@ const HighlightCardBody = ({
         height={500}
         alt={alt}
         sizes="(min-width: 768px) 160px, 128px"
-        className="w-32 transition-transform group-hover:scale-105 group-hover:transition-transform md:w-40"
+        className="w-32 transition-transform group-hover:scale-105 md:w-40"
       />
     </Link>
     <div className="w-full">{children}</div>
@@ -524,7 +524,7 @@ const CollectiblesCurrentYear = ({
                   alt={badge.name}
                   sizes="(min-width: 768px) 128px, 96px"
                   className={cn(
-                    "size-24 transition-transform group-hover:scale-105 group-hover:transition-transform md:size-32",
+                    "size-24 transition-transform group-hover:scale-105 md:size-32",
                     address && !badge.owned && "grayscale"
                   )}
                 />
