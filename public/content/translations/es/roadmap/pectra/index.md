@@ -121,7 +121,6 @@ _Actualización Pectra de Ethereum: lo que los participantes deben saber, Blockd
 
 - [Hoja de ruta de Ethereum](/roadmap/)
 - [Preguntas frecuentes sobre Pectra](https://epf.wiki/#/wiki/pectra-faq)
-- [Página de información pectra.wtf](https://pectra.wtf)
 - [Cómo Pectra mejora la experiencia de los participantes ](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Página de información de EIP7702](https://eip7702.io/)
 - [Redes de desarrollo Pectra](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

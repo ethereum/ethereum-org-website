@@ -116,7 +116,6 @@ Maboresho ya ufanisi na usalama wa itifaki:
 </ul>
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [Jinsi Pectra itakavyoboresha uzoefu wa kusimamisha](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Soma vigezo vya sasisho la Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Maswali Yanayoulizwa Mara kwa Mara kuhusu Prague-Electra ("Pectra")](/roadmap/pectra/)

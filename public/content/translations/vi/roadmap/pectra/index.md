@@ -121,7 +121,6 @@ _Bản nâng cấp Pectra của Ethereum: Những điều người đặt cượ
 
 - [Lộ trình Ethereum](/roadmap/)
 - [Câu hỏi thường gặp về Pectra](https://epf.wiki/#/wiki/pectra-faq)
-- [Trang thông tin Pectra.wtf](https://pectra.wtf)
 - [Cách Pectra nâng cao trải nghiệm của người đặt cược](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Trang thông tin EIP7702](https://eip7702.io/)
 - [Các mạng devnet của Pectra](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)

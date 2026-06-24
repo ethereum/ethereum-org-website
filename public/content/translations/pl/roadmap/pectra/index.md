@@ -121,7 +121,6 @@ _Uaktualnienie Pectra: co muszą wiedzieć stakerzy — Blockdaemon_
 
 - [Plan działania Ethereum](/roadmap/)
 - [Pectra FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Strona informacyjna pectra.wtf](https://pectra.wtf)
 - [Jak Pectra poprawia doświadczenia użytkowników](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Strona informacyjna EIP7702](https://eip7702.io/)
 - [Sieci deweloperskie Pectra](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

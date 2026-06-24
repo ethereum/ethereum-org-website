@@ -116,7 +116,6 @@ sidebarDepth: 1
 </ul>
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [پیکٹرا اسٹیکنگ کے تجربے کو کیسے بہتر بنائے گا](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [الیکٹرا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [پراگ-الیکٹرا ("پیکٹرا") عمومی سوالات](/roadmap/pectra/)

@@ -116,7 +116,6 @@ Cải thiện hiệu quả và bảo mật giao thức:
 </ul>
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [Cách Pectra sẽ nâng cao trải nghiệm đặt cược](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Đọc thông số kỹ thuật nâng cấp Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
 - [Câu hỏi thường gặp về Prague-Electra ("Pectra")](/roadmap/pectra/)

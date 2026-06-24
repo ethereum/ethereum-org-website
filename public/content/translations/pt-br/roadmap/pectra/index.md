@@ -121,7 +121,6 @@ _Atualização do Ethereum Pectra: O que os stakers precisam saber — Blockdaem
 
 - [Roteiro do Ethereum](/roadmap/)
 - [Pectra FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Página de informações Pectra.wtf](https://pectra.wtf)
 - [Como a Pectra aprimora a experiência do staker](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Página de informações do EIP7702](https://eip7702.io/)
 - [Redes de teste Pectra](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)
