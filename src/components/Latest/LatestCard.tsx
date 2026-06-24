@@ -21,10 +21,7 @@ type LatestCardProps = {
   description?: string
   /** Display-only category/topic pills. */
   tags?: string[]
-  /**
-   * Uppercase footer line (e.g. date · read time). Omitted for highlights,
-   * which carry no date — the only structural difference between the two uses.
-   */
+  /** Rendered footer line (e.g. date · read time), typically a TagsInlineText. */
   meta?: ReactNode
   customEventOptions?: CardProps["customEventOptions"]
 }
@@ -79,11 +76,7 @@ const LatestCard = ({
         </div>
       )}
 
-      {meta && (
-        <CardParagraph variant="uppercase" size="sm">
-          {meta}
-        </CardParagraph>
-      )}
+      {meta}
     </CardContent>
   </Card>
 )

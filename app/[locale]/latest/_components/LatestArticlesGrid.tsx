@@ -15,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { TagsInlineText } from "@/components/ui/tag"
 import TagFilter from "@/components/ui/tag-filter"
 
 import { formatDate } from "@/lib/utils/date"
@@ -157,19 +158,20 @@ const LatestArticlesGrid = ({
             description={article.description}
             tags={article.tags}
             meta={
-              article.date ? (
-                <>
-                  {formatDate(article.date, locale, { month: "short" })}
-                  {article.timeToRead ? (
-                    <>
-                      {" · "}
-                      {t("page-latest:page-latest-minute-read", {
+              <TagsInlineText
+                variant="light"
+                className="uppercase"
+                list={[
+                  article.date
+                    ? formatDate(article.date, locale, { month: "short" })
+                    : undefined,
+                  article.timeToRead
+                    ? t("page-latest:page-latest-minute-read", {
                         minutes: article.timeToRead,
-                      })}
-                    </>
-                  ) : null}
-                </>
-              ) : undefined
+                      })
+                    : undefined,
+                ]}
+              />
             }
             customEventOptions={{
               eventCategory: "latest-articles",

@@ -4,6 +4,7 @@ import LatestCard from "@/components/Latest/LatestCard"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
 import { Section, SectionHeader } from "@/components/ui/section"
+import { TagsInlineText } from "@/components/ui/tag"
 
 import { formatDate } from "@/lib/utils/date"
 import { getLatestArticles } from "@/lib/utils/latest"
@@ -54,19 +55,20 @@ const LatestUpdates = async ({
               description={article.description}
               tags={article.tags}
               meta={
-                article.date ? (
-                  <>
-                    {formatDate(article.date, locale, { month: "short" })}
-                    {article.timeToRead ? (
-                      <>
-                        {" · "}
-                        {tLatest("page-latest-minute-read", {
+                <TagsInlineText
+                  variant="light"
+                  className="uppercase"
+                  list={[
+                    article.date
+                      ? formatDate(article.date, locale, { month: "short" })
+                      : undefined,
+                    article.timeToRead
+                      ? tLatest("page-latest-minute-read", {
                           minutes: article.timeToRead,
-                        })}
-                      </>
-                    ) : null}
-                  </>
-                ) : undefined
+                        })
+                      : undefined,
+                  ]}
+                />
               }
               customEventOptions={{
                 eventCategory,

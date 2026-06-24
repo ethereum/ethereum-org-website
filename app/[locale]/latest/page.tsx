@@ -18,6 +18,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
 import { BaseLink } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import { TagsInlineText } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { formatDate } from "@/lib/utils/date"
@@ -110,9 +111,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     byline={getArticleByline(highlight)}
                     description={highlight.description}
                     meta={
-                      highlight.date
-                        ? formatDate(highlight.date, locale, { month: "short" })
-                        : undefined
+                      <TagsInlineText
+                        variant="light"
+                        className="uppercase"
+                        list={[
+                          highlight.date
+                            ? formatDate(highlight.date, locale, {
+                                month: "short",
+                              })
+                            : undefined,
+                        ]}
+                      />
                     }
                   />
                 ))}
