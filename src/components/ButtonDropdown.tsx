@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useState } from "react"
-import { Menu } from "lucide-react"
+import { useCallback, useRef, useState } from "react"
+import { ChevronDown, ChevronUp, Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -37,18 +37,65 @@ export type ButtonDropdownProps = {
   className?: string
 }
 
+// Decorative scroll affordance pinned to an edge of the menu. The solid
+// background matches the menu surface so the chevron never overlaps list text;
+// it fades in/out via opacity in step with its `hidden` flag.
+const ScrollChevron = ({
+  edge,
+  hidden,
+}: {
+  edge: "top" | "bottom"
+  hidden: boolean
+}) => {
+  const Icon = edge === "top" ? ChevronUp : ChevronDown
+  return (
+    <div
+      aria-hidden
+      className={cn(
+        "pointer-events-none absolute inset-x-0 flex h-6 items-center justify-center bg-background text-body-medium transition-opacity",
+        edge === "top" ? "top-0" : "bottom-0",
+        hidden && "opacity-0"
+      )}
+    >
+      <Icon className="size-4" />
+    </div>
+  )
+}
+
 const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
   const [selectedItem, setSelectedItem] = useState(list.text)
+
+  // Track whether the menu has content scrolled out of view above/below so we
+  // can surface chevron affordances. The content is portaled and only mounted
+  // while open, so a callback ref wires up measurement when it appears.
+  const scrollRef = useRef<HTMLDivElement | null>(null)
+  const observerRef = useRef<ResizeObserver | null>(null)
+  const [canScrollUp, setCanScrollUp] = useState(false)
+  const [canScrollDown, setCanScrollDown] = useState(false)
+
+  const updateScrollIndicators = useCallback(() => {
+    const el = scrollRef.current
+    if (!el) return
+    const { scrollTop, scrollHeight, clientHeight } = el
+    setCanScrollUp(scrollTop > 0)
+    setCanScrollDown(Math.ceil(scrollTop + clientHeight) < scrollHeight)
+  }, [])
+
+  const setScrollRef = useCallback(
+    (node: HTMLDivElement | null) => {
+      observerRef.current?.disconnect()
+      scrollRef.current = node
+      if (!node) return
+      updateScrollIndicators()
+      observerRef.current = new ResizeObserver(updateScrollIndicators)
+      observerRef.current.observe(node)
+    },
+    [updateScrollIndicators]
+  )
+
   const handleClick = (item: ListItem, idx: number) => {
-    const { matomo, callback } = item
-
-    if (matomo) {
-      trackCustomEvent(matomo)
-    }
-
-    if (callback) {
-      callback(idx)
-    }
+    if (item.matomo) trackCustomEvent(item.matomo)
+    item.callback?.(idx)
     setSelectedItem(item.text)
   }
 
@@ -57,47 +104,57 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
+          aria-label={list.ariaLabel}
           className={cn("flex justify-between", className)}
         >
-          <Menu />
+          <Menu aria-hidden />
           <span className="flex-1 text-center">{selectedItem}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-[var(--radix-dropdown-menu-trigger-width)]"
+        className="relative flex max-h-(--radix-dropdown-menu-content-available-height) w-(--radix-dropdown-menu-trigger-width) flex-col p-0"
+        collisionPadding={16}
         sideOffset={8}
       >
-        {list.items.map((item, idx) => {
-          const { text, href } = item
+        <ScrollChevron edge="top" hidden={!canScrollUp} />
 
-          if (href) {
-            return (
-              <DropdownMenuItem
-                key={item.text}
-                className="justify-center text-center"
-                onClick={() => handleClick(item, idx)}
-                asChild
-              >
-                <BaseLink
-                  href={item.href!}
-                  className="text-body no-underline focus-visible:outline-0"
-                >
-                  <span>{text}</span>
-                </BaseLink>
-              </DropdownMenuItem>
-            )
-          }
-
-          return (
+        <div
+          ref={setScrollRef}
+          onScroll={updateScrollIndicators}
+          className={cn(
+            // `scroll-py-6` keeps keyboard-focused items clear of the 1.5rem
+            // (h-6) chevron bars when scrolled into view.
+            "min-h-0 scroll-py-6 overflow-y-auto py-2",
+            // Fade content as it scrolls under a bar: the transparent stop lands
+            // at the bar's inner edge, with a 0.5rem fade band just below it.
+            canScrollUp &&
+              "mask-t-from-[calc(100%-2rem)] mask-t-to-[calc(100%-1.5rem)]",
+            canScrollDown &&
+              "mask-b-from-[calc(100%-2rem)] mask-b-to-[calc(100%-1.5rem)]"
+          )}
+        >
+          {list.items.map((item, idx) => (
             <DropdownMenuItem
               key={item.text}
               className="justify-center text-center"
               onClick={() => handleClick(item, idx)}
+              asChild={!!item.href}
             >
-              <span>{text}</span>
+              {item.href ? (
+                <BaseLink
+                  href={item.href}
+                  className="text-body no-underline focus-visible:outline-0"
+                >
+                  {item.text}
+                </BaseLink>
+              ) : (
+                <span>{item.text}</span>
+              )}
             </DropdownMenuItem>
-          )
-        })}
+          ))}
+        </div>
+
+        <ScrollChevron edge="bottom" hidden={!canScrollDown} />
       </DropdownMenuContent>
     </DropdownMenu>
   )
