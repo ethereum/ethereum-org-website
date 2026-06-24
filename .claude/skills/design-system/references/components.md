@@ -202,7 +202,7 @@ Layout primitives.
 `Stack` supports a `separator` prop that clones a separator element between children:
 
 ```tsx
-<Stack separator={<Divider />}>{items}</Stack>
+<Stack separator={<HR />}>{items}</Stack>
 ```
 
 ### `LinkBox` / `LinkOverlay`
@@ -590,13 +590,25 @@ import Spinner from "@/components/ui/spinner"
 
 Wraps `Loader2` from Lucide.
 
-### `Divider` (deprecation track)
+### `HR` (and the deprecated `Divider`)
 
 ```tsx
-import Divider from "@/components/ui/divider"
+import HR from "@/components/ui/hr" // default export
 ```
 
-Project-specific look: `my-16 h-1 w-[10%] bg-primary-high-contrast` purple bar. **Largely deprecated in current usage.** For visual section separation, prefer a border (`border-t border-border` on a subsequent element) over rendering a `<Divider />`. Don't introduce new `Divider` usage; existing uses can be left until a deliberate cleanup.
+The canonical horizontal rule, also wired as the `hr` MDX element. Always carries `my-space-3x` vertical rhythm. Default (no props) is a plain full-width rule. Two optional axes:
+
+- **`variant`**: `narrow` -- the short legacy purple bar (`h-1 w-1/10 bg-primary-high-contrast`). **Deprecated direction** (per design); it exists only to back the `Divider` wrapper. Don't reach for it in new work -- a plain `<HR />` is the going-forward separator.
+- **`position`**: `indent` -- insets both sides by the responsive `page` padding token via `mx-page` (`--spacing-page`, the same `--page-pad` used for page gutters). Use margin (`mx-`), not padding (`px-`): a default `HR` renders its line as the top border, which spans the full border-box and ignores padding -- only margin shortens it. Only for a full-bleed `HR`; skip it when the rule already sits inside a padded section (e.g. a `px-page` `Section`), or you'll double the gutter.
+
+```tsx
+<HR />               // plain full-width rule
+<HR position="indent" /> // inset on both sides by the page gutter
+```
+
+**`Divider` is deprecated** -- a thin `forwardRef` wrapper that renders `<HR variant="narrow" />`, kept only for backward compatibility and exported (named) from the same file: `import { Divider } from "@/components/ui/hr"`. Don't introduce new `Divider` usage; reach for `HR` directly. For plain section separation, a border on a following element (`border-t border-border`) is still lighter than rendering a rule.
+
+> Moved during the MDX-primitive extraction: the old `@/components/ui/divider` file is gone -- both `HR` and `Divider` now live in `@/components/ui/hr`. Siblings `Blockquote` (`@/components/ui/blockquote`) and `KBD` (`@/components/ui/kbd`) were extracted the same way (both default exports, wired as the `blockquote` / `kbd` MDX elements).
 
 ### `Table`
 
