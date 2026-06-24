@@ -150,7 +150,7 @@ Uma rede de teste para o [Optimism](https://www.optimism.io/).
 - [Faucet da Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet da Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Faucet da Optimism Sepolia ethfaucet.com](https://ethfaucet.com/networks/optimism)
-- [Faucet da rede de teste](https://docs.optimism.io/builders/tools/build/faucets)
+- [Faucet da rede de teste](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 

@@ -150,7 +150,7 @@ lang: te
 - [ఆల్కెమీ ఫాసెట్](https://www.alchemy.com/faucets/optimism-sepolia)
 - [చైన్‌లింక్ ఫాసెట్](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com ఆప్టిమిజం సెపోలియా ఫాసెట్](https://ethfaucet.com/networks/optimism)
-- [టెస్టునెట్ ఫాసెట్](https://docs.optimism.io/builders/tools/build/faucets)
+- [టెస్టునెట్ ఫాసెట్](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### స్టార్క్‌నెట్ సెపోలియా {#starknet-sepolia}
 

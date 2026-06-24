@@ -150,7 +150,7 @@ Ephemery — это уникальный вид тестовой сети, ко
 - [Кран Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Кран Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Кран ethfaucet.com Optimism Sepolia](https://ethfaucet.com/networks/optimism)
-- [Кран тестовой сети](https://docs.optimism.io/builders/tools/build/faucets)
+- [Кран тестовой сети](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 

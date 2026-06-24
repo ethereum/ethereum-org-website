@@ -150,7 +150,7 @@ Un réseau de test pour [Optimism](https://www.optimism.io/).
 - [Robinet d'Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Robinet de Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Robinet Optimism Sepolia d'ethfaucet.com](https://ethfaucet.com/networks/optimism)
-- [Robinet du réseau de test](https://docs.optimism.io/builders/tools/build/faucets)
+- [Robinet du réseau de test](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 

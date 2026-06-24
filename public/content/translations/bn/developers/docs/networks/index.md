@@ -150,7 +150,7 @@ lang: bn
 - [অ্যালকেমি ফসেট](https://www.alchemy.com/faucets/optimism-sepolia)
 - [চেইনলিংক ফসেট](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com অপ্টিমিজম সেপোলিয়া ফসেট](https://ethfaucet.com/networks/optimism)
-- [টেস্টনেট ফসেট](https://docs.optimism.io/builders/tools/build/faucets)
+- [টেস্টনেট ফসেট](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### স্টার্কনেট সেপোলিয়া {#starknet-sepolia}
 

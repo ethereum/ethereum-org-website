@@ -150,7 +150,7 @@ Holesky test ağı Eylül 2025 itibarıyla kullanımdan kaldırılmıştır. His
 - [Alchemy Musluğu](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Musluğu](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com Optimism Sepolia Musluğu](https://ethfaucet.com/networks/optimism)
-- [Test Ağı Musluğu](https://docs.optimism.io/builders/tools/build/faucets)
+- [Test Ağı Musluğu](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
