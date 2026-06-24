@@ -46,6 +46,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               description: t("nav-ethereum-vs-bitcoin-description"),
               href: "/ethereum-vs-bitcoin/",
             },
+            {
+              label: t("nav-stories-label"),
+              description: t("nav-stories-description"),
+              href: "/stories/",
+            },
           ],
         },
         {

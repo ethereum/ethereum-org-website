@@ -19,6 +19,7 @@ import LocaleDateTime from "@/components/LocaleDateTime"
 import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
+import TweetEmbed from "@/components/TweetEmbed"
 import * as AlertComponents from "@/components/ui/alert"
 import Blockquote from "@/components/ui/blockquote"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -114,6 +115,7 @@ export const reactComponents = {
   IssuesList,
   RestakingList,
   Tag,
+  TweetEmbed,
   WhatAreAppsStories,
   YouTube,
 }
