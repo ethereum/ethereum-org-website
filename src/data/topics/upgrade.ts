@@ -22,6 +22,26 @@ export const upgrade: TopicConfig = {
         href: "/roadmap/merge/",
         matomoEvent: "/roadmap/merge/",
       },
+      {
+        textKey: "page-upgrades-upgrades-dencun",
+        href: "/roadmap/dencun/",
+        matomoEvent: "/roadmap/dencun/",
+      },
+      {
+        textKey: "page-upgrades-upgrades-pectra",
+        href: "/roadmap/pectra/",
+        matomoEvent: "/roadmap/pectra/",
+      },
+      {
+        textKey: "page-upgrades-upgrades-fusaka",
+        href: "/roadmap/fusaka/",
+        matomoEvent: "/roadmap/fusaka/",
+      },
+      {
+        textKey: "page-upgrades-upgrades-glamsterdam",
+        href: "/roadmap/glamsterdam/",
+        matomoEvent: "/roadmap/glamsterdam/",
+      },
     ],
   },
   showLastUpdatedInHero: true,

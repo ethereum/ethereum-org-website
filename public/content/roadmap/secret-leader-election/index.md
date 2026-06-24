@@ -2,6 +2,7 @@
 title: Secret leader election
 description: Explanation of how secret leader election can help protect validators from attacks
 lang: en
+template: roadmap
 summaryPoints:
   - The IP address of block proposers can be known in advance, making them vulnerable to attacks
   - Secret leader election hides the identity of validators so that they are not knowable in advance
