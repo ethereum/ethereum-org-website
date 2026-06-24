@@ -20,7 +20,7 @@ const variants = cva("flow flex-1", {
     },
   },
   defaultVariants: {
-    variant: "narrow",
+    variant: "base",
   },
 })
 

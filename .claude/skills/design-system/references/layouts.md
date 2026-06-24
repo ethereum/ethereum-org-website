@@ -102,7 +102,7 @@ If your topic needs something none of these expose, the right move is usually a 
   contributors={contributors}
   lastEditLocaleTimestamp={lastEditLocaleTimestamp}
   listenSlug="what-is-ethereum"       // optional; renders the audio player in the top byline
-  // variant="base"                   // optional; widens the article column (see below)
+  // variant="narrow"                 // optional; narrows the article column (see below)
 >
   <Section id="…">…</Section>
   {/* more <Section> blocks */}
@@ -121,8 +121,8 @@ The one structural knob is `variant`, which sets the article column width:
 
 | `variant` | Article width | Use for |
 |---|---|---|
-| `"narrow"` (default) | `max-w-3xl` | standalone concept articles — `/what-is-ethereum/` and siblings (`what-is-ether`, `ethereum-vs-bitcoin`, `what-is-the-ethereum-network`, `ethereum-history-founder-and-ownership`); also the current `/learn/`, `/staking/`, `/use-cases/` |
-| `"base"` | `max-w-4xl` | wider content/hub pages that need more room |
+| `"base"` (default) | `max-w-4xl` | wider content/hub pages — `TopicLayout` pages and `/staking/`; the default, so no `variant` prop needed |
+| `"narrow"` | `max-w-3xl` | standalone concept articles that read better in a tighter column — `/what-is-ethereum/` and siblings (`what-is-ether`, `ethereum-vs-bitcoin`, `what-is-the-ethereum-network`, `ethereum-history-founder-and-ownership`); also `/learn/` and `/use-cases/`. Must be declared explicitly |
 
 Notes:
 - The byline spacing (player `mt-space-half`, first-section gap) is owned by the layout — pages don't hand-tune it.

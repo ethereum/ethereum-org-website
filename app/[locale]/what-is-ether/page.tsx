@@ -119,6 +119,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         tocItems={tocItems}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        variant="narrow"
       >
         <Section id={getId(tocItems[0].url)}>
           <p>{t("page-what-is-ether-what-is-ether-description-1")}</p>

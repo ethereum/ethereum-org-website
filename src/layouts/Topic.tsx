@@ -134,7 +134,6 @@ export const TopicLayout = async ({
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={heroSection}
       showDropdown={frontmatter.showDropdown ?? true}
-      variant="base"
     >
       {/*
         The `!` overrides defeat the `flow` region's `*:first:mt-0` (which

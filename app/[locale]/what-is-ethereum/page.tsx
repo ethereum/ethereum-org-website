@@ -106,6 +106,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         listenSlug="what-is-ethereum"
+        variant="narrow"
       >
         <Section id={getId(tocItems[0].url)}>
           <p>

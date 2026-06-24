@@ -92,6 +92,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         tocItems={tocItems}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        variant="narrow"
       >
         <Section id={getId(tocItems[0].url)}>
           <p>{t("page-what-is-ethereum-network-section-description-1")}</p>
