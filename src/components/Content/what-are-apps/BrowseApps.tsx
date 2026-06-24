@@ -52,7 +52,7 @@ const BrowseApps = () => {
                 }`}
               >
                 <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:items-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-drop">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-lg">
                     <Image
                       src={app.logo}
                       alt={app.name}

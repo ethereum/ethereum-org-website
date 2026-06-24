@@ -12,7 +12,7 @@ type WindowBoxProps = {
 const WindowBox = ({ title, svg, children, className }: WindowBoxProps) => (
   <div
     className={cn(
-      "flex max-w-screen-md flex-col overflow-hidden rounded-base border shadow-window-box",
+      "flex max-w-screen-md flex-col overflow-hidden rounded-base border shadow-primary-xl",
       className
     )}
   >

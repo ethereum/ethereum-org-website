@@ -14,7 +14,7 @@ const cardVariants = cva(
     "flex flex-col",
     "[--banner-radius:--spacing(1)] rounded-[calc(var(--card-pad)+var(--banner-radius))]",
     "text-body no-underline hover:text-body",
-    "transition-all duration-300 hover:transition-all hover:duration-300",
+    "transition-all duration-300",
     "**:data-[label=card-header]:pb-0 **:data-[label=card-footer]:pt-0"
   ),
   {
@@ -37,7 +37,7 @@ const cardVariants = cva(
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
       hoverEffect: {
-        lift: "hover:shadow-md hover:scale-[1.005]",
+        lift: "hover-lift-base",
       },
     },
     defaultVariants: {
@@ -344,7 +344,11 @@ const CardTitle = React.forwardRef<
     <Comp
       ref={ref}
       data-label="card-title"
-      className={cn(titleVariants({ size: variant, spacing }), className)}
+      className={cn(
+        titleVariants({ size: variant, spacing }),
+        className,
+        "hover-lift-base/10"
+      )}
       {...props}
     />
   )

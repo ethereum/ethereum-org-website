@@ -547,10 +547,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
           <Section
             id="docs"
-            className={cn(
-              "shadow-table-item-box",
-              "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
-            )}
+            className="-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
           >
             <div className="w-full scroll-mt-24 px-8 py-4">
               <h2>{t("page-developers-explore-documentation")}</h2>

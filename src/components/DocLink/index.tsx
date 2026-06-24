@@ -10,33 +10,26 @@ export type DocLinkProps = {
   isExternal?: boolean
 }
 
-const DocLink = ({ href, children, isExternal }: DocLinkProps) => {
-  const durationClasses =
-    "duration-300 hover:duration-300 group-hover:duration-300"
-
-  return (
-    <Link
-      href={href}
-      hideArrow
+const DocLink = ({ href, children, isExternal }: DocLinkProps) => (
+  <Link
+    href={href}
+    hideArrow
+    className={cn(
+      "group flex gap-4 rounded-base border p-4 text-current no-underline",
+      "hover:bg-background-highlight hover:no-underline",
+      "hover-lift-xs"
+    )}
+  >
+    <ScrollText className="shrink-0 self-center" />
+    <p className="flex-1 font-semibold">{children}</p>
+    <ArrowRight
       className={cn(
-        "group flex gap-4 rounded-base border p-4 text-current no-underline",
-        "hover:bg-background-highlight hover:no-underline",
-        "transition-all hover:scale-[1.005] hover:shadow hover:transition-all",
-        durationClasses
+        "mx-6 shrink-0 self-center",
+        "transition-transform duration-300 group-hover:scale-120 group-hover:text-primary",
+        isExternal ? "-rotate-45 rtl:-rotate-135" : "rotate-0 rtl:rotate-180"
       )}
-    >
-      <ScrollText className="shrink-0 self-center" />
-      <p className="flex-1 font-semibold">{children}</p>
-      <ArrowRight
-        className={cn(
-          "mx-6 shrink-0 self-center",
-          "transition-transform group-hover:scale-120 group-hover:text-primary group-hover:transition-transform",
-          isExternal ? "-rotate-45 rtl:-rotate-135" : "rotate-0 rtl:rotate-180",
-          durationClasses
-        )}
-      />
-    </Link>
-  )
-}
+    />
+  </Link>
+)
 
 export default DocLink

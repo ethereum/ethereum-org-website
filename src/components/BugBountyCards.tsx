@@ -6,7 +6,7 @@ import type { TranslationKey } from "@/lib/types"
 import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink } from "./ui/buttons/Button"
-import { CardParagraph, CardTitle } from "./ui/card"
+import { Card, CardParagraph, CardTitle } from "./ui/card"
 import { Center } from "./ui/flex"
 import { Grid } from "./ui/grid"
 
@@ -99,12 +99,11 @@ const BugBountyCards = async () => {
   return (
     <Grid>
       {bugBountyCardsInfo.map((card, idx) => (
-        <div
+        <Card
           key={`bug-bounty-card-${idx}`}
-          className={cn(
-            "overflow-hidden rounded border bg-background shadow-table-box",
-            "hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:transition-transform hover:duration-100"
-          )}
+          variant="nested"
+          className="overflow-hidden border"
+          hoverEffect="lift"
         >
           <Banner card={card} />
 
@@ -124,7 +123,7 @@ const BugBountyCards = async () => {
               {t(card.styledButtonTranslationId)}
             </ButtonLink>
           </div>
-        </div>
+        </Card>
       ))}
     </Grid>
   )

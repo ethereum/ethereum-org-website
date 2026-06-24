@@ -212,7 +212,6 @@
 
   /* Colors: misc / deprecated */
   --color-switch-background: hsla(var(--switch-background));
-  --color-tooltip-shadow: var(--tooltip-shadow);
   --color-hub-hero-content: var(--hub-hero-content);
   --color-search-background: var(--search-background);
   --color-gradient-step-1: var(--gradient-step-1);
@@ -226,23 +225,6 @@
 
   /* Border radius */
   --radius-base: var(--radius-2xl);
-
-  /* Box shadows */
-  --shadow-table-box: var(--table-box-shadow);
-  --shadow-table: 0 14px 66px rgba(0, 0, 0, 0.07), 0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
-  --shadow-drop: 0 4px 17px 0 rgba(0, 0, 0, 0.08);
-  --shadow-table-box-hover: 0px 8px 17px rgba(0, 0, 0, 0.15);
-  --shadow-table-item-box: var(--table-item-box-shadow);
-  --shadow-table-item-box-hover: 0 0 1px hsla(var(--primary));
-  --shadow-grid-yellow-box-shadow: 8px 8px 0px 0px #ffe78e;
-  --shadow-grid-blue-box-shadow: 8px 8px 0px 0px #a7d0f4;
-  --shadow-menu-accordion: 0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset;
-  --shadow-tooltip: 0 0 16px var(--tooltip-shadow);
-  --shadow-svg-button-link: var(--shadow-svg-button-link-1), var(--shadow-svg-button-link-2), var(--shadow-svg-button-link-3), var(--shadow-svg-button-link-4);
-  --shadow-svg-button-link-hover: var(--shadow-svg-button-link-1-hover), var(--shadow-svg-button-link-2-hover), var(--shadow-svg-button-link-3-hover), var(--shadow-svg-button-link-4-hover);
-  --shadow-card-hover: var(--shadow-body-md), var(--shadow-body-lg);
-  --shadow-window-box: var(--shadow-window-box-1), var(--shadow-window-box-2), var(--shadow-window-box-3), var(--shadow-window-box-4), var(--shadow-window-box-5);
-  --shadow-widget: var(--shadow-widget);
 
   /* Animations — tokens */
   --animate-accordion-down: accordion-down 0.2s ease-out;

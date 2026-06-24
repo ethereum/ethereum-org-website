@@ -170,3 +170,27 @@
 @utility animate-pause {
   animation-play-state: paused;
 }
+
+@utility shadow-primary-xl {
+  @apply shadow-primary-low-contrast/80 dark:shadow-primary-low-contrast/50 shadow-xl;
+}
+
+@utility shadow-primary-no-blur-* {
+  box-shadow: calc(--value(number) * var(--spacing)) calc(--value(number) * var(--spacing)) hsla(var(--primary-low-contrast));
+}
+
+@utility hover-lift-xs {
+  @apply scale-100 shadow-none duration-300 hover:scale-[1.005] hover:shadow hover:duration-300;
+}
+
+@utility hover-lift-base {
+  @apply scale-100 shadow-none duration-300 hover:scale-101 hover:shadow-md hover:duration-300;
+}
+
+@utility hover-lift-sm {
+  @apply scale-100 shadow-sm duration-300 hover:scale-101 hover:shadow-lg hover:duration-300;
+}
+
+@utility hover-lift-md {
+  @apply scale-100 shadow-md duration-300 hover:scale-101 hover:shadow-xl hover:duration-300;
+}

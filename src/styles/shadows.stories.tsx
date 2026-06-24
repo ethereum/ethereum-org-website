@@ -1,29 +1,29 @@
-import { type CSSProperties, type ReactNode } from "react"
+import { type CSSProperties } from "react"
 import type { Meta, StoryObj } from "@storybook/nextjs"
+
+import { Grid } from "@/components/ui/grid"
 
 import { cn } from "@/lib/utils/cn"
 
 /**
- * SHADOW AUDIT
+ * SHADOW REFERENCE
  *
- * Companion to the gradient and color audits. Single-pane inventory of every
- * box-shadow on the site, grouped by how it's produced, so the sprawl is
- * visible and can be unified.
+ * Post-cleanup inventory of the project's box-shadows. The old multi-layer
+ * CSS-variable token set (shadow-window-box, shadow-table-box, shadow-drop,
+ * shadow-svg-button-link, shadow-widget, etc.) has been removed in favor of
+ * Tailwind defaults plus two small custom utilities.
  *
  * KEY: each shadow is demoed on a box whose SIZE matches its real-world use --
  * a full-width-card shadow looks wrong on a thumbnail, and a table-row hairline
  * disappears on a large box. `size` (sm/md/lg) drives the demo box dimensions.
  *
- * Toggle light/dark with the Storybook theme switcher -- shadows that have
- * dark-mode token variants flip natively.
+ * Toggle light/dark with the Storybook theme switcher.
  *
  * Buckets:
- *   1. Named tokens   - CSS-variable-backed shadow utilities (the canonical set).
- *   2. Tailwind defaults - shadow-md/lg/xl/2xl/xs (framework primitives).
- *   3. Arbitrary one-offs - shadow-[...] / inline boxShadow (the sprawl).
+ *   1. Custom utilities  - shadow-primary-xl, shadow-primary-no-blur-* (utilities.css).
+ *   2. Tailwind defaults - shadow-md/lg/xl/2xl/xs (framework primitives, the default choice).
+ *   3. Arbitrary one-offs - remaining inline shadow-[...] values.
  *   4. Color-only smell  - shadow-<color> with no size class (likely no-ops).
- *
- * Full written inventory lives in docs/shadow-audit.md (local, git-excluded).
  */
 
 const meta = {
@@ -132,12 +132,6 @@ const ShadowSwatch = ({ spec }: { spec: ShadowSpec }) => (
   </div>
 )
 
-const Grid = ({ children }: { children: ReactNode }) => (
-  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-    {children}
-  </div>
-)
-
 const Section = ({
   title,
   description,
@@ -152,7 +146,7 @@ const Section = ({
       <h2 className="text-2xl font-bold">{title}</h2>
       <p className="max-w-4xl text-sm text-body-medium">{description}</p>
     </div>
-    <Grid>
+    <Grid columns={3}>
       {specs.map((spec) => (
         <ShadowSwatch key={spec.name} spec={spec} />
       ))}
@@ -161,146 +155,45 @@ const Section = ({
 )
 
 /* ------------------------------------------------------------------ */
-/* 1. NAMED TOKENS                                                    */
+/* 1. CUSTOM UTILITIES                                                */
 /* ------------------------------------------------------------------ */
 
-const namedTokens: ShadowSpec[] = [
+const customUtilities: ShadowSpec[] = [
   {
-    name: "shadow-window-box",
-    className: "shadow-window-box",
+    name: "shadow-primary-xl",
+    className: "shadow-primary-xl",
     size: "lg",
     valueClass: "token",
-    value: "5-layer purple-tinted elevation (--shadow-window-box-1..5)",
-    element: "large floating windows / modal-like cards",
-    usage: ["WindowBox:15", "HighlightCard:9", "DownloadAWallet:73"],
+    value:
+      "shadow-xl tinted with primary-low-contrast (80% light / 50% dark)",
+    element: "large framed boxes / window-style containers",
+    usage: ["WindowBox:15", "HighlightCard/IconBox:9", "DownloadAWallet:80"],
   },
   {
-    name: "shadow-widget",
-    className: "shadow-widget",
+    name: "shadow-primary-no-blur-* (e.g. -1)",
+    className: "shadow-primary-no-blur-1",
     size: "md",
     valueClass: "token",
-    value: "4-layer directional widget shadow (RTL-aware, --shadow-widget)",
-    element: "floating widget panel (audio player)",
-    usage: ["ListenToPlayer/PlayerWidget:143"],
-  },
-  {
-    name: "shadow-svg-button-link",
-    className: "shadow-svg-button-link",
-    size: "md",
-    valueClass: "token",
-    value: "4-layer purple glow (--shadow-svg-button-link-1..4)",
-    element: "interactive SVG link buttons",
-    usage: ["ProductTable/PresetFilters:87"],
-  },
-  {
-    name: "shadow-svg-button-link-hover",
-    className: "shadow-svg-button-link-hover",
-    size: "md",
-    valueClass: "token",
-    value: "hover glow variant of shadow-svg-button-link (shown un-hovered)",
-    element: "SVG link buttons on hover",
-    usage: ["PresetFilters:87 (hover)"],
-  },
-  {
-    name: "shadow-card-hover",
-    className: "shadow-card-hover",
-    size: "md",
-    valueClass: "token",
-    value: "--shadow-body-md + --shadow-body-lg (gray elevation lift)",
-    element: "cards on hover (shown un-hovered)",
-    usage: ["card hover states"],
-  },
-  {
-    name: "shadow-table-box",
-    className: "shadow-table-box",
-    size: "lg",
-    valueClass: "token",
-    value: "3-layer soft elevation (--table-box-shadow)",
-    element: "full-width table / list containers",
+    value:
+      "N x --spacing offset, no blur, primary-low-contrast (functional: -1 = 4px, -0.5 = 2px)",
+    element: "buttons / avatars / FAQ icon / app tiles on hover",
     usage: [
-      "ActionCard:44",
-      "BugBountyCards:105",
-      "DataProductCard:42",
-      "tutorials:261",
+      "Button:25 (hover-link)",
+      "ui/avatar (0.5 & 1)",
+      "Faq:24",
+      "LetUseSomeApps:142",
     ],
-  },
-  {
-    name: "shadow-table-box-hover",
-    className: "shadow-table-box-hover",
-    size: "lg",
-    valueClass: "token",
-    value: "0px 8px 17px rgba(0,0,0,.15)",
-    element: "table/card containers on hover (shown un-hovered)",
-    usage: ["BugBountyCards:106", "ActionCard:44"],
-  },
-  {
-    name: "shadow-table-item-box",
-    className: "shadow-table-item-box",
-    size: "sm",
-    valueClass: "token",
-    value: "0 1px 1px rgba(0,0,0,.1) (hairline)",
-    element: "individual table rows / list items",
-    usage: [
-      "FeedbackWidget/FixedDot:27",
-      "community/page:196",
-      "bug-bounty/page:381,760",
-    ],
-  },
-  {
-    name: "shadow-drop",
-    className: "shadow-drop",
-    size: "md",
-    valueClass: "token",
-    value: "0 4px 17px 0 rgba(0,0,0,.08)",
-    element: "floating widgets / browse boxes / dropdowns",
-    usage: ["Quiz/QuizWidget:109", "BrowseApps:55", "layer-2/page:371"],
-  },
-  {
-    name: "shadow-tooltip",
-    className: "shadow-tooltip",
-    size: "sm",
-    valueClass: "token",
-    value: "0 0 16px var(--tooltip-shadow)",
-    element: "tooltips (small floating)",
-    usage: ["tooltip surfaces"],
-  },
-  {
-    name: "shadow-menu-accordion",
-    className: "shadow-menu-accordion",
-    size: "sm",
-    valueClass: "token",
-    value: "inset top+bottom rgba shadows (recessed)",
-    element: "nav menu accordion (inset)",
-    usage: ["nav menu accordion"],
-  },
-  {
-    name: "shadow-grid-yellow-box-shadow",
-    className: "shadow-grid-yellow-box-shadow",
-    size: "sm",
-    valueClass: "token",
-    value: "8px 8px 0px 0px #ffe78e (solid offset, no blur)",
-    element: "colored accent block (solid offset)",
-    usage: ["grid accent blocks"],
     notes:
-      "Hardcoded brand-ish hex baked into a token; solid offset, not blur.",
-  },
-  {
-    name: "shadow-grid-blue-box-shadow",
-    className: "shadow-grid-blue-box-shadow",
-    size: "sm",
-    valueClass: "token",
-    value: "8px 8px 0px 0px #a7d0f4 (solid offset, no blur)",
-    element: "colored accent block (solid offset)",
-    usage: ["grid accent blocks"],
+      "Raw box-shadow utility -- immune to the global dark-mode --tw-shadow-color override that recolors Tailwind-pipeline shadows.",
   },
 ]
 
-export const NamedTokens: StoryObj = {
+export const CustomUtilities: StoryObj = {
   render: () => (
     <Section
-      title="1. Named tokens (CSS-variable-backed)"
-      description="The canonical shadow set in semantic-tokens.css + theme.css. Several are multi-layer, theme-aware (light/dark), and RTL-aware. Hover variants are shown in their resting (applied) state so the recipe is visible."
-      specs={namedTokens}
+      title="1. Custom utilities"
+      description="The project-specific shadow utilities in utilities.css after the cleanup. Both write box-shadow directly (so they keep their color in dark mode). Everything else uses Tailwind defaults."
+      specs={customUtilities}
     />
   ),
 }
@@ -371,7 +264,7 @@ export const TailwindDefaults: StoryObj = {
   render: () => (
     <Section
       title="2. Tailwind default shadows"
-      description="Framework elevation primitives used directly. Coherent on their own, but they sit alongside the named-token set above with no clear rule for when to use which (shadow-none also appears ~11x as a reset)."
+      description="Framework elevation primitives -- now the default choice for most surfaces (cards, dialogs, popovers, panels). shadow-none also appears as a reset."
       specs={tailwindDefaults}
     />
   ),
@@ -383,80 +276,23 @@ export const TailwindDefaults: StoryObj = {
 
 const arbitrary: ShadowSpec[] = [
   {
-    name: "avatar offset (2px / 4px)",
-    style: { boxShadow: "4px 4px 0 hsla(var(--primary-low-contrast))" },
-    size: "sm",
-    valueClass: "arbitrary",
-    value: "shadow-[2px_2px_0_var(--avatar-base-shadow-color)] (4px on larger)",
-    element: "avatars on hover (size-6 .. size-16)",
-    usage: ["ui/avatar:25,30,35,40"],
-    notes:
-      "Real value uses --avatar-base-shadow-color; demoed here with primary-low-contrast. Solid offset, scales by avatar size.",
-  },
-  {
-    name: "link/icon hover offset",
-    className: "shadow-[4px_4px_hsla(var(--primary-low-contrast))]",
-    size: "md",
-    valueClass: "arbitrary",
-    value: "4px 4px hsla(var(--primary-low-contrast)) (solid offset)",
-    element: "links / app tiles / FAQ icon on hover",
-    usage: [
-      "ui/buttons/Button:24",
-      "Faq/index:24",
-      "StartWithEthereumFlow/LetUseSomeApps:142",
-    ],
-    notes:
-      "Same offset recipe re-spelled across files -- candidate for one named offset-accent shadow.",
-  },
-  {
     name: "tag offset shadow-[2px_2px]",
     className: "shadow-[2px_2px]",
     size: "sm",
     valueClass: "arbitrary",
-    value: "2px 2px (no color -> uses current color)",
-    element: "tags",
+    value: "2px 2px (no color -> uses --tw-shadow-color / current color)",
+    element: "tag buttons on hover",
     usage: ["ui/tag:156"],
-    notes: "Color-less offset; relies on inherited shadow color.",
-  },
-  {
-    name: "dialog modal blur",
-    style: {
-      boxShadow:
-        "hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px",
-    },
-    size: "lg",
-    valueClass: "arbitrary",
-    value: "2-layer deep blur, hsl-based",
-    element: "modal dialogs",
-    usage: ["ui/dialog-modal:14"],
-    notes: "Bespoke modal blur -- overlaps shadow-window-box intent.",
-  },
-  {
-    name: "side-nav edge line",
-    style: { boxShadow: "1px 0px 0px rgba(0,0,0,0.1)" },
-    size: "md",
-    valueClass: "arbitrary",
-    value: "1px 0px 0px rgba(0,0,0,.1) (right hairline)",
-    element: "side nav (used as a border)",
-    usage: ["SideNav:140"],
-    notes: "Shadow used as a 1px border -- prefer a real border token.",
-  },
-  {
-    name: "data-product inset line",
-    style: { boxShadow: "rgb(0 0 0 / 10%) 0px -1px 0px inset" },
-    size: "md",
-    valueClass: "arbitrary",
-    value: "inset top hairline",
-    element: "image placeholder top edge",
-    usage: ["DataProductCard:48"],
+    notes:
+      "Color-less offset; pairs with the status hover:shadow-<color> to tint. Could fold into shadow-primary-no-blur-0.5 if it standardizes on primary.",
   },
 ]
 
 export const ArbitraryOneOffs: StoryObj = {
   render: () => (
     <Section
-      title="3. Arbitrary one-offs (the sprawl)"
-      description="Inline shadow-[...] / boxShadow values hand-written per site. Offset-accent shadows (avatars, links, FAQ, tags) repeat the same recipe; a couple use box-shadow as a border substitute."
+      title="3. Arbitrary one-offs"
+      description="Remaining inline shadow-[...] values. The avatar, link/icon, FAQ, and app-tile offsets and the modal/side-nav shadows were migrated to shadow-primary-no-blur-* / Tailwind defaults; only the tag offset remains."
       specs={arbitrary}
     />
   ),
@@ -520,6 +356,54 @@ export const ColorOnlySmell: StoryObj = {
 }
 
 /* ------------------------------------------------------------------ */
+/* Tailwind default scale (quick reference)                           */
+/* ------------------------------------------------------------------ */
+
+/** The full Tailwind v4 default box-shadow scale, smallest to largest. */
+const tailwindScale = [
+  "shadow-none",
+  "shadow",
+  "shadow-2xs",
+  "shadow-xs",
+  "shadow-sm",
+  "shadow-md",
+  "shadow-lg",
+  "shadow-xl",
+  "shadow-2xl",
+] as const
+
+/**
+ * Plain reference grid: every default Tailwind shadow class on an identical
+ * landscape box, ~4 across. No usage/recipe metadata -- just the visual scale.
+ */
+export const TailwindScale: StoryObj = {
+  render: () => (
+    <section className="flex flex-col gap-5 px-6 py-8">
+      <div className="space-y-1">
+        <h2 className="text-2xl font-bold">Tailwind default shadow scale</h2>
+        <p className="max-w-4xl text-sm text-body-medium">
+          Every framework-default <code>shadow-*</code> utility on an identical
+          landscape box. Toggle light/dark with the theme switcher.
+        </p>
+      </div>
+      <Grid columns={4}>
+        {tailwindScale.map((shadow) => (
+          <div key={shadow} className="flex flex-col items-center gap-3">
+            <div
+              className={cn(
+                "h-40 w-full rounded-lg bg-background-highlight",
+                shadow
+              )}
+            />
+            <span className="font-mono text-xs font-bold">{shadow}</span>
+          </div>
+        ))}
+      </Grid>
+    </section>
+  ),
+}
+
+/* ------------------------------------------------------------------ */
 /* Overview                                                           */
 /* ------------------------------------------------------------------ */
 
@@ -529,18 +413,18 @@ const overviewSections: {
   specs: ShadowSpec[]
 }[] = [
   {
-    title: "1. Named tokens",
-    description: "CSS-variable-backed canonical set.",
-    specs: namedTokens,
+    title: "1. Custom utilities",
+    description: "shadow-primary-xl + shadow-primary-no-blur-*.",
+    specs: customUtilities,
   },
   {
     title: "2. Tailwind defaults",
-    description: "Framework elevation primitives.",
+    description: "Framework elevation primitives (the default choice).",
     specs: tailwindDefaults,
   },
   {
     title: "3. Arbitrary one-offs",
-    description: "Inline shadow recipes -- the sprawl.",
+    description: "Remaining inline shadow recipes.",
     specs: arbitrary,
   },
   {

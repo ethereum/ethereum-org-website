@@ -77,7 +77,7 @@ const DownloadAWallet = ({
         </div>
       </div>
       <div className="flex w-full flex-1 flex-col gap-8">
-        <div className="flex flex-col overflow-hidden rounded-base border shadow-window-box">
+        <div className="flex flex-col overflow-hidden rounded-base border shadow-primary-xl">
           {newToCryptoWallets.map((wallet) => (
             <LinkBox
               key={wallet.name}

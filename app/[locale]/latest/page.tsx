@@ -61,7 +61,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         variant="no-divider"
       />
 
-      <MainArticle className="mx-auto my-page w-full max-w-screen-lg shadow-table-box">
+      <MainArticle className="mx-auto my-page w-full max-w-screen-lg shadow-xl">
         {blogPosts.length === 0 ? (
           <p className="p-12 text-center text-body-medium">
             {t("page-latest-no-posts")}
