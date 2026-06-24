@@ -196,6 +196,21 @@ const CardEmoji = React.forwardRef<
 ))
 CardEmoji.displayName = "CardEmoji"
 
+const CardIconContainer = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, children, ...props }, ref) => (
+  <div
+    ref={ref}
+    data-label="card-icon"
+    className={cn("text-primary *:size-12", className)}
+    {...props}
+  >
+    {children}
+  </div>
+))
+CardIconContainer.displayName = "CardIconContainer"
+
 const cardBannerVariants = cva(
   cn(
     "overflow-hidden rounded-(--banner-radius)",
@@ -373,6 +388,7 @@ export {
   CardEmoji,
   CardFooter,
   CardHeader,
+  CardIconContainer,
   CardParagraph,
   CardTitle,
 }

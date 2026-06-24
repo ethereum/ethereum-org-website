@@ -53,7 +53,6 @@ The two public testnets that client developers are currently maintaining are Sep
 - [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Ethereum Ecosystem Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 - [ethfaucet.com Sepolia Faucet](https://ethfaucet.com/networks/ethereum)
 - [Google Cloud Web3 Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)

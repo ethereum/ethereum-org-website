@@ -39,19 +39,26 @@ const DownloadAWallet = ({
           <p>{t("page-start-download-wallet-description")}</p>
         </div>
         <div className="hidden flex-col gap-8 lg:flex">
-          <div
-            className="group flex cursor-pointer flex-row items-center gap-2 hover:text-primary-hover"
-            onClick={() => {
-              setHasWallet(!hasWallet)
-              trackCustomEvent({
-                eventCategory: "start page",
-                eventAction: "wallet checkbox",
-                eventName: "I have a wallet",
-              })
-            }}
-          >
-            <Checkbox className="size-6 [&_svg]:text-xl" checked={hasWallet} />
-            <p>{t("page-start-download-wallet-checkbox")}</p>
+          <div className="group flex flex-row items-center gap-2">
+            <Checkbox
+              id="has-wallet-desktop"
+              className="size-6 [&_svg]:text-xl"
+              checked={hasWallet}
+              onCheckedChange={(checked) => {
+                setHasWallet(checked === true)
+                trackCustomEvent({
+                  eventCategory: "start page",
+                  eventAction: "wallet checkbox",
+                  eventName: "I have a wallet",
+                })
+              }}
+            />
+            <label
+              htmlFor="has-wallet-desktop"
+              className="cursor-pointer group-hover:text-primary-hover"
+            >
+              {t("page-start-download-wallet-checkbox")}
+            </label>
           </div>
           <Button
             disabled={!hasWallet}
@@ -116,19 +123,26 @@ const DownloadAWallet = ({
           ))}
         </div>
         <div className="flex flex-col gap-8 lg:hidden">
-          <div
-            className="group flex cursor-pointer flex-row items-center gap-2 hover:text-primary-hover"
-            onClick={() => {
-              setHasWallet(!hasWallet)
-              trackCustomEvent({
-                eventCategory: "start page",
-                eventAction: "wallet checkbox",
-                eventName: "I have a wallet",
-              })
-            }}
-          >
-            <Checkbox className="size-6 [&_svg]:text-xl" checked={hasWallet} />
-            <p>{t("page-start-download-wallet-checkbox")}</p>
+          <div className="group flex flex-row items-center gap-2">
+            <Checkbox
+              id="has-wallet-mobile"
+              className="size-6 [&_svg]:text-xl"
+              checked={hasWallet}
+              onCheckedChange={(checked) => {
+                setHasWallet(checked === true)
+                trackCustomEvent({
+                  eventCategory: "start page",
+                  eventAction: "wallet checkbox",
+                  eventName: "I have a wallet",
+                })
+              }}
+            />
+            <label
+              htmlFor="has-wallet-mobile"
+              className="cursor-pointer group-hover:text-primary-hover"
+            >
+              {t("page-start-download-wallet-checkbox")}
+            </label>
           </div>
           <Button
             disabled={!hasWallet}

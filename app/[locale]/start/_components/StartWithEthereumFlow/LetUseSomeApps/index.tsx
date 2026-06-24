@@ -108,9 +108,9 @@ const LetUseSomeApps = ({
           {dappsList.map((dapp) => (
             <LinkBox
               key={dapp.name}
-              className="group flex cursor-pointer flex-col items-center justify-between gap-4 rounded-xl border-b border-background p-4 last:border-b-0 hover:bg-background-highlight sm:flex-row"
+              className="group flex cursor-pointer flex-col items-center justify-between gap-4 rounded-base border-b p-4 last:border-b-0 hover:bg-background-highlight sm:flex-row"
               onClick={() => {
-                window.open(dapp.url, "_blank")
+                window.open(dapp.url, "_blank", "noopener,noreferrer")
                 trackCustomEvent({
                   eventCategory: "start page",
                   eventAction: "dapps",
@@ -120,7 +120,7 @@ const LetUseSomeApps = ({
             >
               <div className="flex flex-row items-center gap-4">
                 <Image
-                  className="rounded-xl"
+                  className="rounded-base"
                   src={dapp.image}
                   alt={dapp.name}
                   width={48}
@@ -159,7 +159,7 @@ const LetUseSomeApps = ({
               })
             }}
           >
-            Explore more
+            {t("page-start-apps-explore-more")}
           </Link>
         </div>
       </div>
