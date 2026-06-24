@@ -93,7 +93,7 @@ It started with [Dom Hofmann’s](https://domhofmann.com/) [Loot project](https:
 - Builders like [Cartridge](https://cartridge.gg/) turned it into reality.
 - Engines like [Dojo](https://dojoengine.org/) make worlds open by default.
 
-![Screenshot of list of Loot project game assets](./tarrance-8.png) 
+![Loot NFT bag listing eight items: "Grim Shout" Grave Wand of Skill +1, Hard Leather Armor, Divine Hood, Hard Leather Belt, "Death Root" Ornate Greaves of Skill, Studded Leather Gloves, Necklace of Enlightenment, Gold Ring](./tarrance-8.png)
 
 If you want to know what escaping digital feudalism feels like, don't take my word for it.
 
