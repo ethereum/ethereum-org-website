@@ -98,7 +98,7 @@ const TagFilter = ({
           type="button"
           onClick={() => setExpanded((prev) => !prev)}
           aria-expanded={expanded}
-          className="inline-flex items-center gap-1 rounded-full border border-dashed border-body-medium px-3 py-0.5 text-xs text-body-medium uppercase transition-colors hover:border-primary hover:text-primary"
+          className="inline-flex min-h-8 items-center gap-1 rounded-full border border-dashed border-body-medium px-3 py-0.5 text-xs text-body-medium uppercase transition-colors hover:border-primary hover:text-primary"
         >
           {expanded ? (
             <>
