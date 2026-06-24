@@ -469,7 +469,7 @@ _हे कन्सेन्सस लेयर व्हॅलिडेटर 
 - [इथेरियम स्टेकिंग मार्गदर्शक](https://github.com/SomerEsat/ethereum-staking-guides) - _सोमर एसॅट, वारंवार अद्यतनित_
 - [मार्गदर्शक | मेननेटवर इथेरियम स्टेकिंगसाठी व्हॅलिडेटर कसे सेट करावे](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– कॉइनकॅश्यू, वारंवार अद्यतनित_
 - [टेस्टनेट्सवर व्हॅलिडेटर्स चालवण्यावर ETHStaker मार्गदर्शक](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, नियमितपणे अद्यतनित_
-- [इथेरियम नोड्ससाठी सॅम्पल AWS ब्लॉकचेन नोड रनर ॲप](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, वारंवार अद्यतनित_
+- [इथेरियम नोड्ससाठी सॅम्पल AWS ब्लॉकचेन नोड रनर ॲप](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, वारंवार अद्यतनित_
 - [नोड ऑपरेटर्ससाठी द मर्ज FAQ](https://notes.ethereum.org/@launchpad/node-faq-merge) - _जुलै २०२२_
 - [इथेरियम पूर्ण प्रमाणित नोड होण्यासाठी हार्डवेअर आवश्यकतांचे विश्लेषण](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– अल्बर्ट पलाऊ, २४ सप्टेंबर २०१८_
 - [Ethereum फुल नोड्स चालवणे: केवळ प्रेरित लोकांसाठी एक मार्गदर्शक](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _- जस्टिन लेरॉक्स, 7 नोव्हेंबर 2019_

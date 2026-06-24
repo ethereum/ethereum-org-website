@@ -467,7 +467,7 @@ Là một phần trong quá trình giám sát, hãy đảm bảo bạn theo dõi
 - [Hướng dẫn Đặt cọc Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, thường xuyên cập nhật_
 - [Hướng dẫn | Cách thiết lập trình xác thực để đặt cược Ethereum trên mạng chính](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, thường xuyên cập nhật_
 - [Hướng dẫn của ETHStaker về việc chạy các trình xác thực trên các mạng thử nghiệm](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, được cập nhật thường xuyên_
-- [Ứng dụng mẫu AWS Blockchain Node Runner cho các Nút Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, thường xuyên cập nhật_
+- [Ứng dụng mẫu AWS Blockchain Node Runner cho các Nút Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, thường xuyên cập nhật_
 - [Câu hỏi thường gặp về The Merge cho các nhà khai thác nút](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Tháng 7 năm 2022_
 - [Phân tích các yêu cầu phần cứng để trở thành một nút xác thực đầy đủ của Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 tháng 9 năm 2018_
 - [Chạy các nút đầy đủ Ethereum: Hướng dẫn cho người có ít động lực](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, ngày 7 tháng 11 năm 2019_

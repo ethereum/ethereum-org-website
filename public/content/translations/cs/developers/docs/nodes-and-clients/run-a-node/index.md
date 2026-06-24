@@ -469,7 +469,7 @@ V rámci monitorování se ujistěte, že sledujete výkon vašeho stroje. Běhe
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) – _Somer Esat, často aktualizováno_
 - [Průvodce | Jak nastavit validátor pro staking na mainnetu Etherea](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, často aktualizováno_
 - [Průvodci ETHStaker k provozování validátorů na testnetech](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, pravidelně aktualizováno_
-- [Ukázková aplikace AWS Blockchain Node Runner pro uzly Etherea](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) – _AWS, často aktualizováno_
+- [Ukázková aplikace AWS Blockchain Node Runner pro uzly Etherea](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) – _AWS, často aktualizováno_
 - [Časté dotazy ke Sloučení pro operátory uzlů](https://notes.ethereum.org/@launchpad/node-faq-merge) – _červenec 2022_
 - [Analýza hardwarových požadavků pro plně validovaný uzel Etherea](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24. září 2018_
 - [Provozování plných uzlů Ethereum: Příručka pro sotva motivované](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7. listopadu 2019_
