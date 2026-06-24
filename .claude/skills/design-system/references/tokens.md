@@ -94,7 +94,9 @@ This is where you get colors for Claude-driven work. Light mode in `:root`, dark
 **Domain-specific:**
 - `--staking-gold` / `--staking-green` / `--staking-blue` / `--staking-red` (with `-fill` variants)
 
-**Gradients & shadows** also live here (`--radial-a`, `--card-gradient`, `--gradient-main`, complex shadows).
+**Gradients** also live here (`--radial-a`, `--card-gradient`, `--gradient-main`).
+
+**Shadows** are not CSS-variable tokens. Elevation uses the Tailwind default scale (`shadow-md`/`-lg`/`-xl`); only two custom utilities exist in `utilities.css` (`shadow-primary-xl`, `shadow-primary-no-blur-*`). Don't add new custom shadows -- see the rule in SKILL.md and the deprecation map in `cleanup-playbook.md`.
 
 ### Layer 3: Tailwind Registration (`theme.css`)
 

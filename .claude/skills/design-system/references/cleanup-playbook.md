@@ -388,6 +388,27 @@ className="bg-linear-to-b from-purple-700 to-purple-500"
 - Duplicate aliases (e.g. two utilities pointing at the same `--gradient-*` var) should collapse to one name.
 - A gradient `@utility` with zero references is dead - remove it rather than carry it.
 
+## Deprecated shadow tokens -> Tailwind defaults / two custom utilities
+
+The old multi-layer CSS-variable shadow set was removed in favor of the Tailwind default scale plus two custom utilities. Map any remaining reference to a default first; only the brand-tinted cases use a custom. The consistent swaps:
+
+| Old custom | Replace with | Notes |
+|---|---|---|
+| `shadow-table-box` | `shadow-xl` | full-width list/article containers |
+| `shadow-drop` | `shadow-lg` | floating tiles / widgets / dropdowns |
+| `shadow-widget` | `shadow-lg` | |
+| `shadow-svg-button-link` | `shadow-lg` | |
+| `shadow-window-box` | `shadow-primary-xl` (custom) | brand-tinted large framed boxes |
+| `shadow-[4px_4px_…primary-low-contrast]` | `shadow-primary-no-blur-1` (custom) | solid hover offset (`-1` = 4px, `-0.5` = 2px) |
+| `shadow-table-item-box` | drop it | hairline rarely read; remove unless clearly needed |
+| `shadow-table-box-hover` (hover lift) | `Card hoverEffect="lift"` / `hover-lift-*` | not a manual shadow swap |
+| `shadow-[1px_0px_0px_…]` (edge line) | a real `border` / `border-e` | shadow-as-border is a smell |
+
+Rules:
+- **Default to the Tailwind scale** (`shadow-md`/`-lg`/`-xl`). A custom shadow needs a brand-tint justification.
+- **Hover elevation is `hover-lift-*`** (`-xs`/`-base`/`-sm`/`-md`) or `Card hoverEffect="lift"`, never a per-component resting/hover shadow pair.
+- **Custom shadows are raw `box-shadow`** (`@utility` writing the property directly), never arbitrary `shadow-[...]` -- arbitrary shadows route color through `--tw-shadow-color`, which `* { dark:shadow-body }` overrides to gray in dark mode.
+
 ## Inline `<div className="flex flex-col gap-2">` -> `Stack`
 
 ```tsx
