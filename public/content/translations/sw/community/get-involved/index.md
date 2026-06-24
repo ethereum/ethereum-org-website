@@ -63,7 +63,7 @@ Kwa kusimamisha hisa zako za ETH unaweza kupata zawadi huku ukisaidia kulinda mt
 
 Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayoleta tofauti katika Ethereum. Kwa mchango mdigo tu unaweza kuunga mkono na kuruhsu kazi muhimu kutekelezwa.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fedha](https://clr.fund/#/about)
 
 ## Wataalamu wa Kifedha & Akaunti <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}

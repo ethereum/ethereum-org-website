@@ -82,7 +82,7 @@ Ao utilizar seu ETH em uma participação, você pode ganhar recompensas e, ao m
 
 O objetivo do ecossistema Ethereum é financiar bens públicos e projetos com impacto. Por meio de pequenas doações você pode demonstrar o seu apoio e permitir a realização de um trabalho importante.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Profissionais financeiros e contadores <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

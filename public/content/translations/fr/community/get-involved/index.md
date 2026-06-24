@@ -82,7 +82,7 @@ En misant votre ETH, vous pouvez gagner des récompenses tout en aidant à sécu
 
 L'écosystème Ethereum a pour mission de financer des biens publics et des projets ayant un impact certain. Avec de très petits dons, vous pouvez montrer votre soutien et permettre la réalisation d'un travail important.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Professionnels de la finance et comptables <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

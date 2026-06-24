@@ -82,7 +82,7 @@ Mettendo in staking i tuoi ETH puoi guadagnare ricompense aiutando a rendere la 
 
 L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di grande impatto. Con donazioni molto piccole puoi mostrare il tuo supporto e permettere che questo importante lavoro si realizzi.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Professionisti finanziari e Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}

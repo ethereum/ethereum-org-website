@@ -82,7 +82,7 @@ lang: mr
 
 इथेरियम इकोसिस्टम सार्वजनिक वस्तू आणि प्रभावी प्रकल्पांना निधी देण्याच्या ध्येयावर आहे. अगदी लहान देणग्या देऊन तुम्ही तुमचे समर्थन दर्शवू शकता आणि महत्त्वपूर्ण काम साकार होण्यास मदत करू शकता.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## आर्थिक व्यावसायिक आणि अकाऊंटंट <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

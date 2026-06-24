@@ -82,7 +82,7 @@ lang: zh
 
 以太坊生态系统的使命是资助公共物品和有影响力的项目。 只需很少的捐赠，你就可以表达自己的支持，并让重要的工作得以完成。
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## 金融专业人士和会计师 <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

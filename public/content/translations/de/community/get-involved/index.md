@@ -82,7 +82,7 @@ Durch das Staking Ihrer eigenen ETH können Sie Belohnungen verdienen und gleich
 
 Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und wirkungsvolle Projekte zu finanzieren. Mit sehr kleinen Spenden können Sie Ihre Unterstützung zeigen und wichtige Arbeiten ermöglichen.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Finanzfachleute und Buchhalter:innen <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}

@@ -63,7 +63,7 @@ Dengan menaruhkan ETH Anda, Anda dapat mendapatkan hadiah sementara menolong men
 
 Ekosistem Ethereum bertujuan mendanai fasilitas publik dan proyek yang berdampak. Dengan donasi yang sangat kecil, Anda dapat menunjukkan dukungan Anda dan memungkinkan pekerjaan penting dapat diwujudkan.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Ahli keuangan & Akuntan <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}

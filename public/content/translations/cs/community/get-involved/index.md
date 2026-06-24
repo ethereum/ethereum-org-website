@@ -82,7 +82,7 @@ Stakování ETH vám umožní vydělávat na odměnách při zajišťování bez
 
 Ekosystém Etherea má za cíl financovat veřejné statky a významné projekty. I velmi malými dary můžete vyjádřit svou podporu a umožnit realizaci důležitých projektů.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Finanční profesionálové a účetní <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

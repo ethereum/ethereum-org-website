@@ -82,7 +82,7 @@ Stakując swoje ETH, możesz zdobywać nagrody, jednocześnie pomagając zabezpi
 
 Ekosystem Ethereum ma misję finansowania dóbr publicznych i wpływowych projektów. Z każdą małą darowizną możesz okazać swoje wsparcie i umożliwić realizację ważnej pracy.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Specjaliści finansowi i księgowi <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

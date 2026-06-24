@@ -82,7 +82,7 @@ lang: ta
 
 எத்தீரியம் சுற்றுச்சூழல் பொதுப் பொருட்களுக்கும் தாக்கத்தை ஏற்படுத்தும் திட்டங்களுக்கும் நிதியளிக்கும் ஒரு பணியில் உள்ளது. மிகச் சிறிய நன்கொடைகள் மூலம் உங்கள் ஆதரவைக் காட்டலாம் மற்றும் முக்கியமான பணிகள் நிறைவேற அனுமதிக்கலாம்.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## நிதி வல்லுநர்கள் & கணக்காளர்கள் <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

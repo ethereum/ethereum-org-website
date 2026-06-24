@@ -82,7 +82,7 @@ Al apostar sus ETH, puede ganar recompensas mientras ayuda a proteger la red Eth
 
 El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proyectos con gran repercusión. A través de donaciones muy pequeñas puede mostrar su apoyo y permitir que se realice un trabajo importante.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Profesionales financieros y contables <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
