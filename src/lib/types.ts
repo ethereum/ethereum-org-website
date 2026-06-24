@@ -607,6 +607,15 @@ export type BlogPost = {
   image?: string
 }
 
+/** Card preview for a long-form story, sourced from its markdown frontmatter. */
+export type StoryPreview = {
+  slug: string
+  title: string
+  description: string
+  image: string
+  published: string
+}
+
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
   activeAddresses: Record<string, number | undefined>
@@ -1424,6 +1433,8 @@ export type Story = {
   twitter: string | null
   country: string | null
   date: string
+  /** Comma-separated category labels used by the /stories community filter. */
+  category?: string
 }
 
 export type SectionNavDetails = {
