@@ -12,6 +12,10 @@
   "page-latest-articles-heading": "Latest Ethereum articles",
   "page-latest-sources-heading": "Read more on these websites",
   "page-latest-see-more": "See more ({count})",
+  "page-latest-sort-label": "Sort articles",
+  "page-latest-sort-newest": "Newest first",
+  "page-latest-sort-oldest": "Oldest first",
+  "page-latest-sort-az": "A–Z",
   "page-latest-i18n-disclaimer": "Some articles are shown in their original language (English).",
   "page-latest-suggest-heading": "Suggest a resource",
   "page-latest-suggest-description": "Know an Ethereum newsletter or research publication that should be listed here, or have a builder article topic in mind? Open an issue to submit your resource."
