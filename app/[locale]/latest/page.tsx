@@ -22,6 +22,7 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { formatDate } from "@/lib/utils/date"
 import { getLatestArticles } from "@/lib/utils/latest"
+import { getArticleByline } from "@/lib/utils/latestByline"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
@@ -106,7 +107,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     href={highlight.href}
                     title={highlight.title}
                     image={highlight.image}
-                    byline={highlight.source}
+                    byline={getArticleByline(highlight)}
                     description={highlight.description}
                     meta={
                       highlight.date

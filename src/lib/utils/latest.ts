@@ -28,6 +28,7 @@ const builderToArticle = (post: BlogPost): LatestArticle => ({
   isExternal: false,
   image: post.image,
   author: post.author || undefined,
+  team: post.team || undefined,
   description: post.description,
   timeToRead: post.timeToRead,
 })
@@ -104,6 +105,7 @@ const resolveHighlight = (
     isExternal: matched?.isExternal ?? highlight.href.startsWith("http"),
     image: highlight.image ?? matched?.image,
     author: matched?.author,
+    team: matched?.team,
     description: highlight.description ?? matched?.description,
     timeToRead: matched?.timeToRead,
   }

@@ -11,6 +11,7 @@ import { Grid } from "@/components/ui/grid"
 import TagFilter from "@/components/ui/tag-filter"
 
 import { formatDate } from "@/lib/utils/date"
+import { getArticleByline } from "@/lib/utils/latestByline"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getTagCounts } from "@/lib/utils/tags"
 
@@ -92,7 +93,7 @@ const LatestArticlesGrid = ({
             href={article.href}
             title={article.title}
             image={article.image}
-            byline={article.author ?? article.source}
+            byline={getArticleByline(article)}
             description={article.description}
             tags={article.tags}
             meta={

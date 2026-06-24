@@ -1105,6 +1105,8 @@ export type LatestArticle = {
   isExternal: boolean
   image?: string
   author?: string
+  /** Authoring team/org behind a builder post; paired with `author` in the byline. */
+  team?: string
   description?: string
   timeToRead?: number
 }

@@ -7,6 +7,7 @@ import { Section, SectionHeader } from "@/components/ui/section"
 
 import { formatDate } from "@/lib/utils/date"
 import { getLatestArticles } from "@/lib/utils/latest"
+import { getArticleByline } from "@/lib/utils/latestByline"
 
 type LatestUpdatesProps = {
   className?: string
@@ -49,7 +50,7 @@ const LatestUpdates = async ({
               href={article.href}
               title={article.title}
               image={article.image}
-              byline={article.author ?? article.source}
+              byline={getArticleByline(article)}
               description={article.description}
               tags={article.tags}
               meta={
