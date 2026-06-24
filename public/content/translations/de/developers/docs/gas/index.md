@@ -123,7 +123,7 @@ Wenn Sie die Gaspreise überwachen möchten, damit Sie Ihre ETH günstiger versc
 
 - [Etherscan](https://etherscan.io/gastracker) _Transaktionsgaspreis-Schätzer_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Chrome-Erweiterung zur Gasschätzung, die sowohl Typ 0 Legacy-Transaktionen als auch Typ 2 EIP-1559-Transaktionen unterstützt_
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Berechnen Sie Gasgebühren in Ihrer lokalen Währung für verschiedene Transaktionsarten im Mainnet, Arbitrum und Polygon._
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Berechnen Sie Gasgebühren in Ihrer lokalen Währung für verschiedene Transaktionsarten im Mainnet, Arbitrum und Polygon._
 
 ## Verwandte Werkzeuge {#related-tools}
 

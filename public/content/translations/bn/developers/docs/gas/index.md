@@ -134,7 +134,7 @@ Ethereum [স্কেলেবিলিটি আপগ্রেড](/roadmap/)
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _ওপেন সোর্স লেনদেন গ্যাস মূল্য অনুমানকারী_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _লেনদেন ফি কমাতে এবং অর্থ সঞ্চয় করতে Ethereum এবং L2 গ্যাসের দাম নিরীক্ষণ এবং ট্র্যাক করুন_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _গ্যাস অনুমানকারী ক্রোম এক্সটেনশন যা টাইপ 0 লিগ্যাসি লেনদেন এবং টাইপ 2 EIP-1559 লেনদেন উভয়ই সমর্থন করে।_
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _মেইননেট, আরবিট্রাম এবং পলিগনে বিভিন্ন ধরনের লেনদেনের জন্য আপনার স্থানীয় মুদ্রায় গ্যাস ফি গণনা করুন।_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _মেইননেট, আরবিট্রাম এবং পলিগনে বিভিন্ন ধরনের লেনদেনের জন্য আপনার স্থানীয় মুদ্রায় গ্যাস ফি গণনা করুন।_
 
 ## সম্পর্কিত টুলস {#related-tools}
 
