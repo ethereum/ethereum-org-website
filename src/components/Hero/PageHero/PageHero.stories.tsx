@@ -27,7 +27,7 @@ export default meta
 type Story = StoryObj<typeof PageHeroComponent>
 
 // Shared, translated content so each story below only declares the props that
-// make its variation distinct (image, divider).
+// make its variation distinct (image, component, eyebrow, divider).
 const useBaseProps = () => {
   const t = useTranslations("page-learn")
 
@@ -97,6 +97,45 @@ export const PageHeroNoDivider: Story = {
       heroImg={heroImg}
       {...useBaseProps()}
       variant="no-divider"
+    />
+  ),
+}
+
+/**
+ * `heroComponent` renders an arbitrary node where the image would sit. On
+ * desktop it sits beside the text; on mobile it folds *below* the text
+ * (whereas `heroImg` stacks *above*). Use for widgets like a leaderboard or
+ * stats panel. Mutually exclusive with `heroImg` at the type level.
+ */
+export const PageHeroWithComponent: Story = {
+  render: () => (
+    <PageHeroComponent
+      breadcrumbs={{ slug: "/run-a-node/" }}
+      heroComponent={
+        <div className="grid min-h-48 place-items-center rounded-2xl border bg-background-highlight p-8 text-center text-body-medium">
+          Custom component slot
+        </div>
+      }
+      {...useBaseProps()}
+    />
+  ),
+}
+
+/**
+ * `eyebrow` renders arbitrary content between the breadcrumbs and the title,
+ * e.g. a status indicator or tag.
+ */
+export const PageHeroWithEyebrow: Story = {
+  render: () => (
+    <PageHeroComponent
+      breadcrumbs={{ slug: "/run-a-node/" }}
+      eyebrow={
+        <div className="flex items-center gap-2">
+          <div className="size-2 rounded-full bg-success" />
+          <p className="text-sm uppercase">Active</p>
+        </div>
+      }
+      {...useBaseProps()}
     />
   ),
 }

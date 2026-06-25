@@ -64,16 +64,16 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="mx-auto w-full max-w-screen-2xl space-y-16 pb-16 md:space-y-24">
         <PageHero
-          variant="no-divider"
           breadcrumbs={{ slug: "stories" }}
+          heroImg={storiesHero}
           title={t("page-stories-hero-title")}
           description={t("page-stories-hero-description")}
-          heroImg={storiesHero}
           buttons={[
             <ButtonLink key="share" href={SHARE_STORY_URL}>
               {t("page-stories-hero-cta")}
             </ButtonLink>,
           ]}
+          variant="no-divider"
         />
 
         {featuredStories.length > 0 && (
@@ -163,7 +163,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
                       size="sm"
                       className="inline-flex items-center gap-1"
                     >
-                      <Timer className="mb-0.75 -ms-px size-[1em]" />
+                      <Timer className="-ms-px mb-0.75 size-[1em]" />
                       {video.duration}
                     </CardParagraph>
                   </CardContent>
@@ -184,7 +184,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
         </Section>
 
         <Section id="share" className="px-4 md:px-8">
-          <div className="flex flex-col items-center gap-12 rounded-4xl bg-radial-a px-4 pb-8 pt-20 md:px-8">
+          <div className="flex flex-col items-center gap-12 rounded-4xl bg-radial-a px-4 pt-20 pb-8 md:px-8">
             <div className="flex flex-col items-center gap-2 text-center">
               <h2>{t("page-stories-banner-title")}</h2>
               <p className="max-w-[42rem] text-lg text-body-medium lg:text-2xl">

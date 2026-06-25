@@ -11,25 +11,41 @@ import { breakpointAsNumber, screens } from "@/lib/utils/screen"
 
 import { CallToAction } from "../CallToAction"
 
-const variants = cva(
-  cn(
-    "flex flex-col border-b",
-    "[--space:--spacing(4)] lg:[--space:--spacing(6)]" // Base spacing relative to primary header font-size
-  ),
-  {
-    variants: {
-      variant: {
-        "no-divider": "border-none",
-      },
+const variants = cva("flex border-b", {
+  variants: {
+    variant: {
+      "no-divider": "border-none",
     },
-  }
-)
+  },
+})
+
+/**
+ * The hero aside is either a decorative image or an arbitrary component, never
+ * both. `heroImg` stacks *above* the text on mobile; `heroComponent` folds
+ * *below* it. Either may be omitted for a text-only hero.
+ */
+type HeroMediaProps =
+  | {
+      /** Decorative hero image. Stacks *above* the text on mobile. */
+      heroImg?: CommonHeroProps["heroImg"]
+      /** Blur placeholder data URL applied to `heroImg` on prerender. */
+      blurDataURL?: CommonHeroProps["blurDataURL"]
+      heroComponent?: never
+    }
+  | {
+      /**
+       * A component rendered in the hero aside, in place of `heroImg`. Folds
+       * *below* the text on mobile while sitting beside it on desktop.
+       */
+      heroComponent?: ReactNode
+      heroImg?: never
+      blurDataURL?: never
+    }
 
 export type PageHeroProps = Omit<
   CommonHeroProps,
   "heroImg" | "header" | "blurDataURL" | "breadcrumbs"
 > &
-  Partial<Pick<CommonHeroProps, "blurDataURL" | "heroImg">> &
   VariantProps<typeof variants> & {
     /**
      * Breadcrumbs to render. Pass a `BreadcrumbsProps` object to use the
@@ -37,11 +53,18 @@ export type PageHeroProps = Omit<
      * element when the slug-derived links don't map to real routes.
      */
     breadcrumbs: BreadcrumbsProps | ReactNode
-  }
+    /**
+     * Optional content rendered between the breadcrumbs and the title, e.g. a
+     * status indicator or tag.
+     */
+    eyebrow?: ReactNode
+  } & HeroMediaProps
 
 const PageHero = ({
   breadcrumbs,
+  eyebrow,
   heroImg,
+  heroComponent,
   title,
   description,
   buttons,
@@ -55,24 +78,13 @@ const PageHero = ({
     <div
       className={cn(
         variants({ variant }),
-        heroImg ? "lg:flex-row-reverse" : "lg:flex-row",
+        // Both the image and the component render _after_ the text, landing at
+        // the end (right) on desktop. On mobile the column stacks the aside
+        // _below_ the text, except an image is lifted _above_ it via reverse.
+        heroImg ? "max-lg:flex-col-reverse" : "max-lg:flex-col",
         className
       )}
     >
-      {heroImg && (
-        <div className="grid flex-1 place-items-center lg:relative">
-          <Image
-            className={cn(
-              "object-contain max-lg:max-h-64 max-lg:w-auto max-lg:max-w-full lg:absolute lg:inset-0 lg:size-full",
-              "p-page lg:ps-0"
-            )}
-            src={heroImg}
-            alt=""
-            preload
-            sizes={`(max-width: ${screens.lg}) 100vw, (max-width: ${screens["2xl"]}) 50vw, ${breakpointAsNumber["2xl"] / 2}px`}
-          />
-        </div>
-      )}
       <div
         className={cn(
           "max-w-3xl flex-1 px-page py-hero lg:pt-hero-2x",
@@ -86,6 +98,8 @@ const PageHero = ({
             <Breadcrumbs {...(breadcrumbs as BreadcrumbsProps)} />
           )}
         </div>
+
+        {eyebrow && <div className="mb-space-2x">{eyebrow}</div>}
 
         <h1 className="text-4xl font-black not-last:mb-space lg:text-6xl">
           {title}
@@ -115,6 +129,24 @@ const PageHero = ({
           </div>
         )}
       </div>
+
+      {heroImg && (
+        <div className="grid flex-1 place-items-center lg:relative">
+          <Image
+            className="object-contain p-page max-lg:max-h-64 max-lg:w-auto max-lg:max-w-full lg:absolute lg:inset-0 lg:size-full lg:ps-0"
+            src={heroImg}
+            alt=""
+            preload
+            sizes={`(max-width: ${screens.lg}) 100vw, (max-width: ${screens["2xl"]}) 50vw, ${breakpointAsNumber["2xl"] / 2}px`}
+          />
+        </div>
+      )}
+
+      {heroComponent && (
+        <div className="flex-1 px-page pb-hero lg:pt-hero-2x">
+          {heroComponent}
+        </div>
+      )}
     </div>
   )
 }

@@ -443,9 +443,9 @@ async function Page(props: { params: Promise<PageParams> }) {
       <MainArticle className="mx-auto my-0 w-full flex-col items-center">
         <PageHero
           breadcrumbs={{ slug: "/stablecoins" }}
+          heroImg={heroImg}
           title={t("page-stablecoins-hero-header")}
           description={t("page-stablecoins-hero-subtitle")}
-          heroImg={heroImg}
           buttons={[
             {
               content: t("page-stablecoins-hero-button"),
