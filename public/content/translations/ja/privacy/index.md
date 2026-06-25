@@ -93,5 +93,5 @@ _例: [UmbraCash](https://app.umbra.cash/faq)、[FluidKey](https://www.fluidkey.
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE)、エコシステムのプライバシーに焦点を当てたイーサリアム・ファウンデーションの研究開発ラボ
 - [Web3PrivacyNow](https://web3privacy.info/)、オンラインでの人権を保護し、推進する人々、プロジェクト、そして志を同じくする組織のネットワーク
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/)、ウォレット、その機能、慣行、特定の標準への対応の包括的なリストの提供を目的としたイーサリアムウォレット評価サイト。
-- [Zk-kit](https://zkkit.org/): さまざまなプロジェクトやゼロ知識プロトコルで再利用できるライブラリ (アルゴリズム、ユーティリティ関数、データ構造) のセット。
+- [Zk-kit](https://zkkit.pse.dev/): さまざまなプロジェクトやゼロ知識プロトコルで再利用できるライブラリ (アルゴリズム、ユーティリティ関数、データ構造) のセット。
 - [プライバシーアプリ](/apps/categories/privacy/) - イーサリアム上で実行される、厳選されたプライバシーアプリケーションのリストをご覧ください。

@@ -93,5 +93,5 @@ Một số dự án khám phá quyền riêng tư để chứng minh bao gồm [
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), một phòng thí nghiệm nghiên cứu và phát triển của Ethereum Foundation tập trung vào quyền riêng tư cho hệ sinh thái
 - [Web3PrivacyNow](https://web3privacy.info/), một mạng lưới gồm những người, dự án và các tổ chức liên kết bảo vệ và thúc đẩy quyền con người trực tuyến
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), một trang web xếp hạng ví Ethereum nhằm mục đích cung cấp một danh sách toàn diện các ví, chức năng, thực tiễn và hỗ trợ cho các tiêu chuẩn nhất định của chúng.
-- [Zk-kit](https://zkkit.org/): Một bộ các thư viện (các thuật toán, các hàm tiện ích và các cấu trúc dữ liệu) có thể được tái sử dụng trong các dự án khác nhau và các giao thức không kiến thức.
+- [Zk-kit](https://zkkit.pse.dev/): Một bộ các thư viện (các thuật toán, các hàm tiện ích và các cấu trúc dữ liệu) có thể được tái sử dụng trong các dự án khác nhau và các giao thức không kiến thức.
 - [Ứng dụng về Quyền riêng tư](/apps/categories/privacy/) - Khám phá danh sách các ứng dụng Quyền riêng tư được tuyển chọn chạy trên Ethereum.

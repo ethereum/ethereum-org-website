@@ -93,5 +93,5 @@ Certains projets explorant la confidentialité pour la preuve incluent [Client S
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), un laboratoire de recherche et développement de la Fondation Ethereum axé sur la confidentialité de l'écosystème
 - [Web3PrivacyNow](https://web3privacy.info/), un réseau de personnes, de projets et d'organisations alignées qui protègent et font progresser les droits de l'homme en ligne
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), un site de notation de portefeuilles Ethereum visant à fournir une liste complète des portefeuilles, de leurs fonctionnalités, de leurs pratiques et de leur prise en charge de certaines normes.
-- [Zk-kit](https://zkkit.org/) : Un ensemble de bibliothèques (algorithmes, fonctions utilitaires et structures de données) qui peuvent être réutilisées dans différents projets et protocoles à divulgation nulle de connaissance.
+- [Zk-kit](https://zkkit.pse.dev/) : Un ensemble de bibliothèques (algorithmes, fonctions utilitaires et structures de données) qui peuvent être réutilisées dans différents projets et protocoles à divulgation nulle de connaissance.
 - [Applications de confidentialité](/apps/categories/privacy/) - Découvrez une liste d'applications de confidentialité sélectionnées qui fonctionnent sur Ethereum.
