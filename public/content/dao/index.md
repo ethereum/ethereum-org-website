@@ -139,7 +139,6 @@ _Typically used for decentralized development and governance of protocols and [d
 - [Start a Governor DAO with Tally](https://www.tally.xyz/get-started)
 - [Create an Aragon-powered DAO](https://aragon.org/product)
 - [Start a colony](https://colony.io/)
-- [Create a DAO with DAOstack's holographic consensus](https://alchemy.daostack.io/daos/create)
 - [Launch a DAO with the DeGov Launcher](https://docs.degov.ai/integration/deploy)
 
 ## Further reading {#further-reading}
