@@ -184,7 +184,7 @@ Beklenmeyen girdilerin yanlış işlenmesi, istenmeyen yürütmelere neden olup 
 
 ### Akıllı sözleşmelerde özellik tabanlı testleri çalıştırma yönergeleri {#running-property-based-tests}
 
-Özellik tabanlı test çalıştırmak genellikle bir akıllı sözleşmede doğrulamak istediğiniz bir özelliği (örneğin [tamsayı taşmalarının](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow) olmaması) veya özellikler koleksiyonunu tanımlamakla başlar. Özellik testleri yazarken, programın işlem girdileri için veri üretebileceği bir değer aralığı tanımlamanız da gerekebilir.
+Özellik tabanlı test çalıştırmak genellikle bir akıllı sözleşmede doğrulamak istediğiniz bir özelliği (örneğin [tamsayı taşmalarının](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow) olmaması) veya özellikler koleksiyonunu tanımlamakla başlar. Özellik testleri yazarken, programın işlem girdileri için veri üretebileceği bir değer aralığı tanımlamanız da gerekebilir.
 
 Testinizi düzgün bir şekilde yapılandırdıktan sonra özellik test aracı akıllı sözleşmelerde fonksiyonlarınızı rastgele üretilmiş girdilerle yürütür. Herhangi bir sav ihlali varsa, değerlendirilmekte olan özellikleri ihlal eden somut girdi verilerini içeren bir rapor almalısınız. Farklı araçlarla özellik tabanlı testler çalıştırmaya başlamakla ilgili kılavuzlara bakabilirsiniz:
 
@@ -195,7 +195,7 @@ Testinizi düzgün bir şekilde yapılandırdıktan sonra özellik test aracı a
 - **[Echidna ile sözleşmeleri bulandırma](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Wake ile sözleşmeleri bulandırma](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Manticore ile akıllı sözleşmelerin sembolik yürütmesi](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Mythril ile akıllı sözleşmelerin sembolik yürütmesi](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
+- **[Mythril ile akıllı sözleşmelerin sembolik yürütmesi](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
 ## Akıllı sözleşmeler için manuel test {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _EVM bayt kodunu analiz etmek için dinamik sembolik yürütme çerçevesi._
 
-- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _Leke analizi, konkolik analiz ve kontrol akışı denetimi kullanarak sözleşme güvenlik açıklarını tespit etmek için EVM bayt kodu değerlendirme aracı._
+- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _Leke analizi, konkolik analiz ve kontrol akışı denetimi kullanarak sözleşme güvenlik açıklarını tespit etmek için EVM bayt kodu değerlendirme aracı._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble, akıllı sözleşmeleri Diligence Fuzzing veya MythX gibi araçlarla otomatik olarak test etmenizi sağlayan özelliklerle donatmanıza olanak tanıyan bir belirtim dili ve çalışma zamanı doğrulama aracıdır._
 

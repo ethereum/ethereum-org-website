@@ -184,7 +184,7 @@ Solidity اسمارٹ معاہدوں کے لیے یونٹ ٹیسٹنگ فریم 
 
 ### اسمارٹ معاہدوں کے لیے پراپرٹی پر مبنی ٹیسٹنگ چلانے کے لیے رہنما خطوط {#running-property-based-tests}
 
-پراپرٹی پر مبنی ٹیسٹنگ عام طور پر ایک پراپرٹی (مثلاً، [انٹیجر اوور فلو](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow) کی عدم موجودگی) یا پراپرٹیز کا ایک مجموعہ کی وضاحت کے ساتھ شروع ہوتی ہے جسے آپ اسمارٹ معاہدے میں تصدیق کرنا چاہتے ہیں۔ آپ کو اقدار کی ایک رینج کی وضاحت کرنے کی بھی ضرورت ہو سکتی ہے جس کے اندر پروگرام پراپرٹی ٹیسٹ لکھتے وقت لین دین کے ان پٹس کے لیے ڈیٹا تیار کر سکتا ہے۔
+پراپرٹی پر مبنی ٹیسٹنگ عام طور پر ایک پراپرٹی (مثلاً، [انٹیجر اوور فلو](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow) کی عدم موجودگی) یا پراپرٹیز کا ایک مجموعہ کی وضاحت کے ساتھ شروع ہوتی ہے جسے آپ اسمارٹ معاہدے میں تصدیق کرنا چاہتے ہیں۔ آپ کو اقدار کی ایک رینج کی وضاحت کرنے کی بھی ضرورت ہو سکتی ہے جس کے اندر پروگرام پراپرٹی ٹیسٹ لکھتے وقت لین دین کے ان پٹس کے لیے ڈیٹا تیار کر سکتا ہے۔
 
 ایک بار مناسب طریقے سے ترتیب دینے کے بعد، پراپرٹی ٹیسٹنگ ٹول آپ کے اسمارٹ معاہدے کے فنکشنز کو بے ترتیب طور پر تیار کردہ ان پٹس کے ساتھ عمل میں لائے گا۔ اگر کوئی دعوے کی خلاف ورزی ہوتی ہے، تو آپ کو ٹھوس ان پٹ ڈیٹا کے ساتھ ایک رپورٹ ملنی چاہئے جو زیر تشخیص پراپرٹی کی خلاف ورزی کرتی ہے۔ مختلف ٹولز کے ساتھ پراپرٹی پر مبنی ٹیسٹنگ چلانے کے ساتھ شروع کرنے کے لیے ذیل میں کچھ گائیڈز دیکھیں:
 
@@ -195,7 +195,7 @@ Solidity اسمارٹ معاہدوں کے لیے یونٹ ٹیسٹنگ فریم 
 - **[Echidna کے ساتھ معاہدوں کی فزنگ](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Wake کے ساتھ معاہدوں کی فزنگ](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Manticore کے ساتھ اسمارٹ معاہدوں کا علامتی عمل درآمد](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Mythril کے ساتھ اسمارٹ معاہدوں کا علامتی عمل درآمد](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
+- **[Mythril کے ساتھ اسمارٹ معاہدوں کا علامتی عمل درآمد](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
 ## اسمارٹ معاہدوں کے لیے دستی جانچ {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Solidity اسمارٹ معاہدوں کے لیے یونٹ ٹیسٹنگ فریم 
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _EVM بائٹ کوڈ کا تجزیہ کرنے کے لیے متحرک علامتی عمل درآمد کا فریم ورک۔_
 
-- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _ٹینٹ تجزیہ، کونکولک تجزیہ، اور کنٹرول فلو چیکنگ کا استعمال کرتے ہوئے معاہدے کی کمزوریوں کا پتہ لگانے کے لیے EVM بائٹ کوڈ کی تشخیص کا ٹول۔_
+- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _ٹینٹ تجزیہ، کونکولک تجزیہ، اور کنٹرول فلو چیکنگ کا استعمال کرتے ہوئے معاہدے کی کمزوریوں کا پتہ لگانے کے لیے EVM بائٹ کوڈ کی تشخیص کا ٹول۔_
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble ایک تفصیلات کی زبان اور رن ٹائم تصدیق کا ٹول ہے جو آپ کو اسمارٹ معاہدوں کو ایسی خصوصیات کے ساتھ تشریح کرنے کی اجازت دیتا ہے جو آپ کو Diligence Fuzzing یا MythX جیسے ٹولز کے ساتھ معاہدوں کی خود بخود جانچ کرنے کی اجازت دیتی ہیں۔_
 

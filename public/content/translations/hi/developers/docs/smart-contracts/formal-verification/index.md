@@ -271,8 +271,8 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **मिथ्रिल** - _एथेरियम स्मार्ट अनुबंधों में कमजोरियों का पता लगाने के लिए एक सिंबॉलिक निष्पादन उपकरण_
 
-- [गिटहब](https://github.com/ConsenSysDiligence/mythril)
-- [प्रलेखन](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
+- [गिटहब](https://github.com/ConsenSys/mythril-classic)
+- [प्रलेखन](https://mythril-classic.readthedocs.io/en/develop/)
 
 ## आगे की रीडिंग {#further-reading}
 

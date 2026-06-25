@@ -184,7 +184,7 @@ function auctionEnd() external {
 
 ### 运行智能合约的基于属性的测试指南 {#running-property-based-tests}
 
-运行基于属性的测试通常从定义要在智能合约中验证的一个或一组属性（例如，不存在[整数溢出](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)）开始。 在编写属性测试时，你可能需要定义一个数值范围，程序可以在此范围生成用于交易输入的数据。
+运行基于属性的测试通常从定义要在智能合约中验证的一个或一组属性（例如，不存在[整数溢出](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)）开始。 在编写属性测试时，你可能需要定义一个数值范围，程序可以在此范围生成用于交易输入的数据。
 
 配置正确后，属性测试工具将使用随机生成的输入执行你的智能合约函数。 如果存在任何断言违规情况，你应该获得一份报告，其中包含违反正在评估的属性的具体输入数据。 请参阅下面的指南，了解如何使用不同的工具开始运行基于属性的测试：
 
@@ -195,7 +195,7 @@ function auctionEnd() external {
 - **[使用 Echidna 对合约进行模糊测试](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[使用 Wake 对合约进行模糊测试](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[使用 Manticore 对智能合约进行符号执行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[使用 Mythril 对智能合约进行符号执行](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
+- **[使用 Mythril 对智能合约进行符号执行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
 ## 智能合约的手动测试 {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ function auctionEnd() external {
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _用于分析 EVM 字节码的动态符号执行框架。_
 
-- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _EVM 字节码评估工具，使用污点分析、混合执行分析和控制流检查来检测合约漏洞。_
+- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _EVM 字节码评估工具，使用污点分析、混合执行分析和控制流检查来检测合约漏洞。_
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble 是一种规范语言和运行时验证工具，可让你为智能合约添加属性注释，以便使用 Diligence Fuzzing或 MythX 等工具自动测试合约。_
 

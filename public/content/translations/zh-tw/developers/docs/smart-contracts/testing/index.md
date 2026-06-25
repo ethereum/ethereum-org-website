@@ -184,7 +184,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 ### 執行智能合約屬性測試的指南 {#running-property-based-tests}
 
-執行屬性測試通常從定義一個你想要在智能合約中驗證的屬性（例如，沒有[整數溢位](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)）或屬性集合開始。 在編寫屬性測試時，你可能還需要定義一個數值範圍，使程式能夠在該範圍内為交易輸入生成資料。
+執行屬性測試通常從定義一個你想要在智能合約中驗證的屬性（例如，沒有[整數溢位](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)）或屬性集合開始。 在編寫屬性測試時，你可能還需要定義一個數值範圍，使程式能夠在該範圍内為交易輸入生成資料。
 
 設定正確後，屬性測試工具會使用隨機產生的輸入來執行你的智慧型合約函式。 如果有任何斷言違規情況，你應該會獲得一份報告，其中包含違反正在評估的屬性的具體輸入資料。 請參閱下面的指南，了解如何使用不同的工具開始執行基於屬性的測試：
 
@@ -195,7 +195,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 - **[使用 Echidna 對合約進行模糊測試](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[使用 Wake 對合約進行模糊測試](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[使用 Manticore 進行智能合約的符號執行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[使用 Mythril 進行智能合約的符號執行](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
+- **[使用 Mythril 進行智能合約的符號執行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
 ## 智能合約的手動測試 {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _用於分析 EVM 位元組碼的動態符號執行框架。_
 
-- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _EVM 位元組碼評估工具，使用污點分析、混合執行分析和控制流程檢查來偵測合約漏洞。_
+- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _EVM 位元組碼評估工具，使用污點分析、混合執行分析和控制流程檢查來偵測合約漏洞。_
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble 是一種規範語言和執行期驗證工具，可讓你用屬性來註解智能合約，以便使用 Diligence Fuzzing 或 MythX 等工具自動測試合約。_
 

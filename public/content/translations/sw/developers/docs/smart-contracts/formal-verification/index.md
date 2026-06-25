@@ -271,8 +271,8 @@ Pia, si mara zote inawezekana kwa wathibitishaji wa programu kubaini kama sifa (
 
 **Mythril** - _Zana ya utekelezaji wa kiishara ya kugundua udhaifu katika mikataba-erevu ya Ethereum_
 
-- [GitHub](https://github.com/ConsenSysDiligence/mythril)
-- [Nyaraka](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
+- [GitHub](https://github.com/ConsenSys/mythril-classic)
+- [Nyaraka](https://mythril-classic.readthedocs.io/en/develop/)
 
 ## Masomo zaidi {#further-reading}
 

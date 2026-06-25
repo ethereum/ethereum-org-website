@@ -271,8 +271,8 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **Mythril** - _ఇతీరియము స్మార్ట్ కాంట్రాక్టులలో దుర్బలత్వాలను గుర్తించడానికి ఒక సింబాలిక్ ఎగ్జిక్యూషన్ ఉపకరణం_
 
-- [GitHub](https://github.com/ConsenSysDiligence/mythril)
-- [డాక్యుమెంటేషన్](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
+- [GitHub](https://github.com/ConsenSys/mythril-classic)
+- [డాక్యుమెంటేషన్](https://mythril-classic.readthedocs.io/en/develop/)
 
 ## మరింత సమాచారం {#further-reading}
 

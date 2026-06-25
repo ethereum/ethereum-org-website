@@ -271,8 +271,8 @@ Ngoài ra, không phải lúc nào các trình xác minh chương trình cũng c
 
 **Mythril** - _Một công cụ thực thi biểu tượng để phát hiện các lỗ hổng trong các hợp đồng thông minh Ethereum_
 
-- [GitHub](https://github.com/ConsenSysDiligence/mythril)
-- [Tài liệu tham khảo](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
+- [GitHub](https://github.com/ConsenSys/mythril-classic)
+- [Tài liệu tham khảo](https://mythril-classic.readthedocs.io/en/develop/)
 
 ## Đọc thêm {#further-reading}
 
