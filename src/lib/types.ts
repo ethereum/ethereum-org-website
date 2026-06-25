@@ -848,6 +848,12 @@ export type WalletData = {
   mpc?: boolean
   new_to_crypto?: boolean
   privacy?: boolean
+  /**
+   * One-line, human-readable fee summary shown on the wallet card
+   * (e.g. "Swap fee: 0.85%" or "Device: $149"). Omitted when the wallet
+   * has no fee to surface.
+   */
+  fee_summary?: string
 }
 
 export type Wallet = WalletData & {
