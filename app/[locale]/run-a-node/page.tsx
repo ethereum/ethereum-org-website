@@ -42,8 +42,8 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import { Divider } from "@/components/ui/divider"
 import { Grid } from "@/components/ui/grid"
+import { Divider } from "@/components/ui/hr"
 import InlineLink, { BaseLink, LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"

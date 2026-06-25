@@ -1,0 +1,380 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-19T19:01:52.434Z",
+  "englishManifestHash": "5e5c362c0744",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-92152c",
+    "LINK-061e30",
+    "LINK-18bff2",
+    "LINK-263c3e",
+    "LINK-0dd731",
+    "LINK-cadfd1",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "LINK-6c4cfe",
+    "LINK-76de4c",
+    "LINK-5b71ef",
+    "CODE-6ba9f2",
+    "LINK-2655ce",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "LINK-dfc295",
+    "CODE-6ba9f2",
+    "LINK-58ecac",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "LINK-e115ea",
+    "LINK-b20517",
+    "LINK-3ef573",
+    "LINK-cd2782",
+    "LINK-b90680",
+    "LINK-71c926",
+    "LINK-f41db6",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "LINK-c0e28e",
+    "CODE-6ba9f2",
+    "CODE-6ba9f2",
+    "LINK-5f3d12",
+    "LINK-c17057",
+    "LINK-de073e",
+    "LINK-7f9e6d",
+    "CODE-6ba9f2",
+    "LINK-6a562e",
+    "LINK-8c43d7",
+    "LINK-aaffef",
+    "LINK-eb1869",
+    "LINK-b6eec8",
+    "LINK-9557d1",
+    "LINK-0c3e60",
+    "LINK-d17628",
+    "LINK-d78516",
+    "LINK-e5cbde",
+    "LINK-9df345",
+    "LINK-3b4325",
+    "LINK-fc8443",
+    "LINK-e78d3a",
+    "LINK-264c5c",
+    "LINK-22c2b3",
+    "LINK-49ab3e",
+    "LINK-a58330",
+    "LINK-f9df09",
+    "LINK-76c253",
+    "LINK-01f215",
+    "LINK-c66f7c",
+    "LINK-84aeb9",
+    "LINK-3d59b9"
+  ],
+  "placeholderMap": {
+    "CODE-6ba9f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldata"
+      }
+    },
+    "LINK-92152c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-061e30": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-18bff2": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2"
+      }
+    },
+    "LINK-263c3e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validity-proof"
+      }
+    },
+    "LINK-0dd731": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "LINK-cadfd1": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#fraud-proof"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-76de4c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/sidechains/"
+      }
+    },
+    "LINK-5b71ef": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/validium/"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-dfc295": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/#memory"
+      }
+    },
+    "LINK-58ecac": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs"
+      }
+    },
+    "LINK-e115ea": {
+      "type": "link",
+      "values": {
+        "url": "/whitepaper/#merkle-trees"
+      }
+    },
+    "LINK-b20517": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/merkle-proofs-for-offline-data-integrity/"
+      }
+    },
+    "LINK-3ef573": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2202.06877"
+      }
+    },
+    "LINK-cd2782": {
+      "type": "link",
+      "values": {
+        "url": "https://eprint.iacr.org/2018/046"
+      }
+    },
+    "LINK-b90680": {
+      "type": "link",
+      "values": {
+        "url": "https://zkproof.org/2021/06/30/setup-ceremonies/amp/"
+      }
+    },
+    "LINK-71c926": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-f41db6": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@yezhang/S1_KMMbGt#Why-possible-now"
+      }
+    },
+    "LINK-c0e28e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1559"
+      }
+    },
+    "LINK-5f3d12": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/#how-are-gas-fees-calculated"
+      }
+    },
+    "LINK-c17057": {
+      "type": "link",
+      "values": {
+        "url": "https://l2fees.info/"
+      }
+    },
+    "LINK-de073e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/#block-size"
+      }
+    },
+    "LINK-7f9e6d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/#optimistic-pros-and-cons"
+      }
+    },
+    "LINK-6a562e": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/zkevm/"
+      }
+    },
+    "LINK-8c43d7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/privacy-scaling-explorations/zkevm-specs"
+      }
+    },
+    "LINK-aaffef": {
+      "type": "link",
+      "values": {
+        "url": "https://polygon.technology/solutions/polygon-zkevm"
+      }
+    },
+    "LINK-eb1869": {
+      "type": "link",
+      "values": {
+        "url": "https://scroll.io/blog/zkEVM"
+      }
+    },
+    "LINK-b6eec8": {
+      "type": "link",
+      "values": {
+        "url": "https://taiko.xyz"
+      }
+    },
+    "LINK-9557d1": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2022/08/04/zkevm.html"
+      }
+    },
+    "LINK-0c3e60": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.zksync.io/"
+      }
+    },
+    "LINK-d17628": {
+      "type": "link",
+      "values": {
+        "url": "https://starkware.co/starknet/"
+      }
+    },
+    "LINK-d78516": {
+      "type": "link",
+      "values": {
+        "url": "https://www.morphl2.io/"
+      }
+    },
+    "LINK-e5cbde": {
+      "type": "link",
+      "values": {
+        "url": "https://linea.build"
+      }
+    },
+    "LINK-9df345": {
+      "type": "link",
+      "values": {
+        "url": "https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups"
+      }
+    },
+    "LINK-3b4325": {
+      "type": "link",
+      "values": {
+        "url": "https://alchemy.com/blog/zero-knowledge-rollups"
+      }
+    },
+    "LINK-fc8443": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups"
+      }
+    },
+    "LINK-e78d3a": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/"
+      }
+    },
+    "LINK-264c5c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/zkevm"
+      }
+    },
+    "LINK-22c2b3": {
+      "type": "link",
+      "values": {
+        "url": "https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4"
+      }
+    },
+    "LINK-49ab3e": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@yezhang/S1_KMMbGt"
+      }
+    },
+    "LINK-a58330": {
+      "type": "link",
+      "values": {
+        "url": "https://linea.mirror.xyz/qD18IaQ4BROn_Y40EBMTUTdJHYghUtdECscSWyMvm8M"
+      }
+    },
+    "LINK-f9df09": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/LuozhuZhang/awesome-zkevm"
+      }
+    },
+    "LINK-76c253": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html"
+      }
+    },
+    "LINK-01f215": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2021/01/26/snarks.html"
+      }
+    },
+    "LINK-c66f7c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/secret-state/"
+      }
+    },
+    "LINK-84aeb9": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/stealth-addr/"
+      }
+    },
+    "LINK-3d59b9": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/ethereum-for-web2-auth/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T19:01:52.434Z",
+      "status": "success"
+    }
+  }
+}

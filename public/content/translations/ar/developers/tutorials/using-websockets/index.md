@@ -1,30 +1,31 @@
 ---
-title: "استخدام WebSockets"
-description: "دليل لاستخدام WebSockets و Alchemy لإجراء طلبات JSON-RPC والاشتراك في الأحداث."
-author: "Elan Halpern"
+title: "استخدام ⁦WebSockets⁩"
+description: "دليل لاستخدام ⁦WebSockets⁩ و⁦Alchemy⁩ لإجراء طلبات ⁦JSON-RPC⁩ والاشتراك في الأحداث."
+author: "إيلان هالبرن"
 lang: ar
 tags: ["Alchemy", "websockets", "الاستعلام", "JavaScript"]
 skill: beginner
+breadcrumb: "⁦WebSockets⁩"
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
-هذا دليل للمبتدئين حول استخدام WebSockets و Alchemy لإجراء طلبات إلى البلوك تشين الخاص بإيثريوم.
+هذا دليل للمبتدئين حول استخدام <span dir="ltr">WebSockets</span> و<span dir="ltr">Alchemy</span> لإجراء طلبات إلى سلسلة الكتل لإيثيريوم.
 
-## WebSockets مقابل HTTP {#websockets-vs-http}
+## <span dir="ltr">WebSockets</span> مقابل <span dir="ltr">HTTP</span> {#websockets-vs-http}
 
-على عكس HTTP، مع WebSockets، لا تحتاج إلى إجراء طلبات مستمرة عندما تريد معلومات محددة. تحافظ WebSockets على اتصال شبكة لك (إذا تم إجراؤه بشكل صحيح) وتستمع إلى التغييرات.
+على عكس <span dir="ltr">HTTP</span>، مع <span dir="ltr">WebSockets</span>، لا تحتاج إلى إجراء طلبات باستمرار عندما تريد معلومات محددة. تحافظ <span dir="ltr">WebSockets</span> على اتصال شبكة لك (إذا تم إجراؤه بشكل صحيح) وتستمع إلى التغييرات.
 
-كما هو الحال مع أي اتصال شبكة، يجب ألا تفترض أن WebSocket سيظل مفتوحًا إلى الأبد دون انقطاع، ولكن التعامل الصحيح مع الاتصالات المقطوعة وإعادة الاتصال يدويًا قد يكون من الصعب إجراؤه بشكل صحيح. عيب آخر لـ WebSockets هو أنك لا تحصل على رموز حالة HTTP في الاستجابة، بل تحصل فقط على رسالة الخطأ.
+كما هو الحال مع أي اتصال شبكة، يجب ألا تفترض أن <span dir="ltr">WebSocket</span> سيظل مفتوحًا إلى الأبد دون انقطاع، ولكن التعامل الصحيح مع الاتصالات المقطوعة وإعادة الاتصال يدويًا قد يكون من الصعب إجراؤه بشكل صحيح. جانب سلبي آخر لـ <span dir="ltr">WebSockets</span> هو أنك لا تحصل على رموز حالة <span dir="ltr">HTTP</span> في الاستجابة، بل تحصل فقط على رسالة الخطأ.
 
-يضيف [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) تلقائيًا معالجة لفشل WebSocket وإعادة المحاولة دون الحاجة إلى أي تكوين.
+يضيف [<span dir="ltr">Alchemy Web3</span>](https://docs.alchemy.com/reference/api-overview) تلقائيًا معالجة لفشل <span dir="ltr">WebSocket</span> وإعادة المحاولة دون الحاجة إلى أي تكوين.
 
-## جربه بنفسك {#try-it-out}
+## جربها {#try-it-out}
 
-أسهل طريقة لاختبار WebSockets هي تثبيت أداة سطر أوامر لإجراء طلبات WebSocket مثل [wscat](https://github.com/websockets/wscat). باستخدام wscat، يمكنك إرسال الطلبات على النحو التالي:
+أسهل طريقة لاختبار <span dir="ltr">WebSockets</span> هي تثبيت أداة سطر أوامر لإجراء طلبات <span dir="ltr">WebSocket</span> مثل [<span dir="ltr">wscat</span>](https://github.com/websockets/wscat). باستخدام <span dir="ltr">wscat</span>، يمكنك إرسال الطلبات على النحو التالي:
 
-_ملاحظة: إذا كان لديك حساب Alchemy، يمكنك استبدال `demo` بمفتاح API الخاص بك. [سجل للحصول على حساب Alchemy مجاني هنا!](https://auth.alchemy.com/signup)_
+_ملاحظة: إذا كان لديك حساب <span dir="ltr">Alchemy</span>، يمكنك استبدال `demo` بمفتاح <span dir="ltr">API</span> الخاص بك. [سجل للحصول على حساب <span dir="ltr">Alchemy</span> مجاني هنا!](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -32,30 +33,29 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
 <  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-
 ```
 
-## كيفية استخدام WebSockets {#how-to-use-websockets}
+## كيفية استخدام <span dir="ltr">WebSockets</span> {#how-to-use-websockets}
 
-للبدء، افتح WebSocket باستخدام عنوان URL الخاص بـ WebSocket لتطبيقك. يمكنك العثور على عنوان URL الخاص بـ WebSocket لتطبيقك عن طريق فتح صفحة التطبيق في [لوحة التحكم الخاصة بك](https://dashboard.alchemy.com/) والنقر على "View Key". لاحظ أن عنوان URL لتطبيقك الخاص بـ WebSockets يختلف عن عنوان URL الخاص بطلبات HTTP، ولكن يمكن العثور على كليهما بالنقر على "View Key".
+للبدء، افتح <span dir="ltr">WebSocket</span> باستخدام عنوان <span dir="ltr">URL</span> لـ <span dir="ltr">WebSocket</span> الخاص بتطبيقك. يمكنك العثور على عنوان <span dir="ltr">URL</span> لـ <span dir="ltr">WebSocket</span> الخاص بتطبيقك عن طريق فتح صفحة التطبيق في [لوحة التحكم الخاصة بك](https://dashboard.alchemy.com/) والنقر على "عرض المفتاح" (<span dir="ltr">View Key</span>). لاحظ أن عنوان <span dir="ltr">URL</span> لتطبيقك لـ <span dir="ltr">WebSockets</span> يختلف عن عنوان <span dir="ltr">URL</span> الخاص به لطلبات <span dir="ltr">HTTP</span>، ولكن يمكن العثور على كليهما بالنقر على "عرض المفتاح".
 
-![أين تجد عنوان URL الخاص بـ WebSocket في لوحة تحكم Alchemy](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
 
-يمكن استخدام أي من واجهات برمجة التطبيقات (APIs) المدرجة في [مرجع Alchemy API](https://www.alchemy.com/docs/reference/api-overview) عبر WebSocket. للقيام بذلك، استخدم نفس الحمولة التي سيتم إرسالها كجسم لطلب HTTP POST، ولكن بدلاً من ذلك أرسل تلك الحمولة عبر WebSocket.
+يمكن استخدام أي من واجهات برمجة التطبيقات (<span dir="ltr">APIs</span>) المدرجة في [مرجع <span dir="ltr">API</span> لـ <span dir="ltr">Alchemy</span>](https://www.alchemy.com/docs/reference/api-overview) عبر <span dir="ltr">WebSocket</span>. للقيام بذلك، استخدم نفس الحمولة التي سيتم إرسالها كجسم لطلب <span dir="ltr">HTTP POST</span>، ولكن بدلاً من ذلك أرسل تلك الحمولة من خلال <span dir="ltr">WebSocket</span>.
 
-## مع Web3 {#with-web3}
+## مع <span dir="ltr">Web3</span> {#with-web3}
 
-الانتقال إلى WebSockets أثناء استخدام مكتبة عميل مثل Web3 أمر بسيط. ما عليك سوى تمرير عنوان URL الخاص بـ WebSocket بدلاً من عنوان HTTP عند إنشاء عميل Web3 الخاص بك. على سبيل المثال:
+الانتقال إلى <span dir="ltr">WebSockets</span> أثناء استخدام مكتبة عميل مثل <span dir="ltr">Web3</span> أمر بسيط. ما عليك سوى تمرير عنوان <span dir="ltr">URL</span> لـ <span dir="ltr">WebSocket</span> بدلاً من عنوان <span dir="ltr">HTTP</span> عند إنشاء مثيل لعميل <span dir="ltr">Web3</span> الخاص بك. على سبيل المثال:
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 
-web3.eth.getBlockNumber().then(console.log) // -> 7946893 // -> 7946893
+web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## واجهة برمجة تطبيقات الاشتراك (Subscription API) {#subscription-api}
+## <span dir="ltr">API</span> الاشتراك {#subscription-api}
 
-عند الاتصال عبر WebSocket، يمكنك استخدام طريقتين إضافيتين: `eth_subscribe` و `eth_unsubscribe`. ستسمح لك هذه الطرق بالاستماع إلى أحداث معينة وتلقي إشعارات فورية.
+عند الاتصال من خلال <span dir="ltr">WebSocket</span>، يمكنك استخدام طريقتين إضافيتين: `eth_subscribe` و`eth_unsubscribe`. ستسمح لك هذه الطرق بالاستماع إلى أحداث معينة وإعلامك على الفور.
 
 ### `eth_subscribe` {#eth-subscribe}
 
@@ -66,7 +66,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893 // -> 7946893
 1. أنواع الاشتراك
 2. معلمات اختيارية
 
-تحدد الوسيطة الأولى نوع الحدث الذي يجب الاستماع إليه. تحتوي الوسيطة الثانية على خيارات إضافية تعتمد على الوسيطة الأولى. يتم وصف أنواع الوصف المختلفة وخياراتها وحمولات الأحداث الخاصة بها أدناه.
+تحدد الوسيطة الأولى نوع الحدث الذي يجب الاستماع إليه. تحتوي الوسيطة الثانية على خيارات إضافية تعتمد على الوسيطة الأولى. يتم وصف أنواع الوصف المختلفة وخياراتها وحمولات أحداثها أدناه.
 
 #### المخرجات {#returns}
 
@@ -76,8 +76,8 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893 // -> 7946893
 
 أثناء تنشيط الاشتراك، ستتلقى أحداثًا عبارة عن كائنات تحتوي على الحقول التالية:
 
-- `jsonrpc`: دائمًا "2.0"
-- `method`: دائمًا "eth_subscription"
+- `jsonrpc`: دائمًا <span dir="ltr">"2.0"</span>
+- `method`: دائمًا <span dir="ltr">"eth_subscription"</span>
 - `params`: كائن يحتوي على الحقول التالية:
   - `subscription`: معرف الاشتراك الذي تم إرجاعه بواسطة استدعاء `eth_subscribe` الذي أنشأ هذا الاشتراك.
   - `result`: كائن تختلف محتوياته بناءً على نوع الاشتراك.
@@ -86,7 +86,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893 // -> 7946893
 
 1. `alchemy_newFullPendingTransactions`
 
-يُرجع معلومات المعاملة لجميع المعاملات التي تمت إضافتها إلى حالة الانتظار. يشترك هذا النوع من الاشتراك في المعاملات المعلقة، على غرار استدعاء Web3 القياسي `web3.eth.subscribe("pendingTransactions")`، ولكنه يختلف في أنه يُصدر _معلومات المعاملة الكاملة_ بدلاً من مجرد التجزئة (هاش) الخاصة بالمعاملة.
+يُرجع معلومات المعاملة لجميع المعاملات التي تمت إضافتها إلى حالة الانتظار. يشترك نوع الاشتراك هذا في المعاملات المعلقة، على غرار استدعاء <span dir="ltr">Web3</span> القياسي `web3.eth.subscribe("pendingTransactions")`، ولكنه يختلف في أنه يصدر _معلومات المعاملة الكاملة_ بدلاً من مجرد تجزئات المعاملة.
 
 مثال:
 
@@ -121,9 +121,9 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893 // -> 7946893
 
 2. `newHeads`
 
-يُصدر حدثًا في أي وقت تتم فيه إضافة ترويسة جديدة إلى السلسلة، بما في ذلك أثناء إعادة تنظيم السلسلة.
+يصدر حدثًا في أي وقت تتم فيه إضافة ترويسة جديدة إلى السلسلة، بما في ذلك أثناء إعادة التنظيم للسلسلة.
 
-عند حدوث إعادة تنظيم للسلسلة، سيُصدر هذا الاشتراك حدثًا يحتوي على جميع الترويسات الجديدة للسلسلة الجديدة. على وجه الخصوص، هذا يعني أنك قد ترى ترويسات متعددة مُصدرة بنفس الارتفاع، وعندما يحدث هذا، يجب اعتبار الترويسة اللاحقة هي الترويسة الصحيحة بعد إعادة التنظيم.
+عند حدوث إعادة التنظيم للسلسلة، سيصدر هذا الاشتراك حدثًا يحتوي على جميع الترويسات الجديدة للسلسلة الجديدة. على وجه الخصوص، هذا يعني أنك قد ترى ترويسات متعددة صادرة بنفس الارتفاع، وعندما يحدث هذا، يجب اعتبار الترويسة اللاحقة هي الترويسة الصحيحة بعد إعادة التنظيم.
 
 مثال:
 
@@ -158,26 +158,26 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893 // -> 7946893
 
 3. `logs`
 
-يُصدر السجلات التي تعد جزءًا من الكتل المضافة حديثًا والتي تتطابق مع معايير التصفية المحددة.
+يصدر السجلات التي تعد جزءًا من الكتل المضافة حديثًا والتي تتطابق مع معايير التصفية المحددة.
 
-عند حدوث إعادة تنظيم للسلسلة، سيتم إصدار السجلات التي تعد جزءًا من الكتل الموجودة على السلسلة القديمة مرة أخرى مع تعيين الخاصية `removed` إلى `true`. علاوة على ذلك، يتم إصدار السجلات التي تعد جزءًا من الكتل الموجودة على السلسلة الجديدة، مما يعني أنه من الممكن رؤية السجلات لنفس المعاملة عدة مرات في حالة إعادة التنظيم.
+عند حدوث إعادة التنظيم للسلسلة، سيتم إصدار السجلات التي تعد جزءًا من الكتل الموجودة على السلسلة القديمة مرة أخرى مع تعيين الخاصية `removed` إلى `true`. علاوة على ذلك، يتم إصدار السجلات التي تعد جزءًا من الكتل الموجودة على السلسلة الجديدة، مما يعني أنه من الممكن رؤية سجلات لنفس المعاملة عدة مرات في حالة إعادة التنظيم.
 
 المعلمات
 
 1. كائن يحتوي على الحقول التالية:
-   - `address` (اختياري): إما سلسلة نصية تمثل عنوان أو مصفوفة من هذه السلاسل النصية.
+   - `address` (اختياري): إما سلسلة نصية تمثل عنوانًا أو مصفوفة من هذه السلاسل النصية.
      - سيتم إصدار السجلات التي تم إنشاؤها من أحد هذه العناوين فقط.
    - `topics`: مصفوفة من محددات المواضيع.
-     - كل محدد موضوع إما أن يكون `null`، أو سلسلة نصية تمثل موضوعًا، أو مصفوفة من السلاسل النصية.
-     - كل موضع في المصفوفة ليس `null` يقيد السجلات المُصدرة بتلك التي تحتوي على أحد المواضيع المحددة في ذلك الموضع فقط.
+     - كل محدد موضوع هو إما `null`، أو سلسلة نصية تمثل موضوعًا، أو مصفوفة من السلاسل النصية.
+     - كل موضع في المصفوفة ليس `null` يقيد السجلات الصادرة بتلك التي تحتوي على أحد المواضيع المحددة في ذلك الموضع فقط.
 
 بعض الأمثلة على مواصفات المواضيع:
 
 - `[]`: يُسمح بأي مواضيع.
-- `[A]`: A في الموضع الأول (وأي شيء بعده).
-- `[null, B]`: أي شيء في الموضع الأول و B في الموضع الثاني (وأي شيء بعده).
-- `[A, B]`: A في الموضع الأول و B في الموضع الثاني (وأي شيء بعده).
-- `[[A, B], [A, B]]`: (A أو B) في الموضع الأول و (A أو B) في الموضع الثاني (وأي شيء بعده).
+- `[A]`: <span dir="ltr">A</span> في الموضع الأول (وأي شيء بعده).
+- `[null, B]`: أي شيء في الموضع الأول و<span dir="ltr">B</span> في الموضع الثاني (وأي شيء بعده).
+- `[A, B]`: <span dir="ltr">A</span> في الموضع الأول و<span dir="ltr">B</span> في الموضع الثاني (وأي شيء بعده).
+- `[[A, B], [A, B]]`: (<span dir="ltr">A</span> أو <span dir="ltr">B</span>) في الموضع الأول و(<span dir="ltr">A</span> أو <span dir="ltr">B</span>) في الموضع الثاني (وأي شيء بعده).
 
 مثال:
 
@@ -207,7 +207,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893 // -> 7946893
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-يُلغي اشتراكًا حاليًا بحيث لا يتم إرسال أي أحداث أخرى.
+يلغي اشتراكًا حاليًا بحيث لا يتم إرسال أي أحداث أخرى.
 
 المعلمات
 
@@ -226,7 +226,6 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-
 ```
 
 **النتيجة**
@@ -241,4 +240,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[سجل مع Alchemy](https://auth.alchemy.com) مجانًا، واطلع على [مستنداتنا](https://www.alchemy.com/docs/)، وللحصول على أحدث الأخبار، تابعنا على [Twitter](https://x.com/AlchemyPlatform).
+[سجل مع <span dir="ltr">Alchemy</span>](https://auth.alchemy.com) مجانًا، واطلع على [وثائقنا](https://www.alchemy.com/docs/)، وللحصول على أحدث الأخبار، تابعنا على [تويتر](https://x.com/AlchemyPlatform).

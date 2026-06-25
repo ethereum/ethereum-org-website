@@ -60,7 +60,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 
 ### File Naming
 
-- **Components**: PascalCase (e.g., `ActionCard.tsx`)
+- **Components**: kebab-case (e.g., `button-group.tsx`)
 - **Utilities**: camelCase (e.g., `cn.ts`, `relativePath.ts`)
 - **Pages**: kebab-case following Next.js conventions
 - **Assets**: kebab-case (e.g., `eth-logo.png`)

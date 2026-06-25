@@ -85,7 +85,7 @@ export const WithCloseButton: Story = {
             <AlertTitle>{DEMO_TITLE}</AlertTitle>
             <AlertDescription>{DEMO_DESC}</AlertDescription>
           </AlertContent>
-          <AlertCloseButton />
+          <AlertCloseButton aria-label="Close" />
         </Alert>
       ))}
     </div>

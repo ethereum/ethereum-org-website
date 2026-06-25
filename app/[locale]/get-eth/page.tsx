@@ -31,9 +31,9 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import { Divider } from "@/components/ui/divider"
 import { Stack } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
+import { Divider } from "@/components/ui/hr"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 

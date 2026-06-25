@@ -1,0 +1,337 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-19T19:08:16.005Z",
+  "englishManifestHash": "b6195521b95b",
+  "placeholderOrder": [
+    "LINK-adc8d3",
+    "CODE-49a25f",
+    "CODE-c064fb",
+    "CODEBLOCK-570830",
+    "CODEBLOCK-8df021",
+    "LINK-a21a82",
+    "CODE-d80c9b",
+    "CODE-d80c9b",
+    "LINK-5b6fb7",
+    "LINK-90ba02",
+    "LINK-4190c6",
+    "CODE-e8aac7",
+    "CODE-bfa3d0",
+    "CODE-3bed2c",
+    "CODE-3c4623",
+    "CODE-252f10",
+    "CODE-19c104",
+    "CODE-1bc8c7",
+    "CODE-efa1f3",
+    "CODE-715dc8",
+    "CODE-efa1f3",
+    "CODE-715dc8",
+    "CODEBLOCK-fa6f73",
+    "CODE-473287",
+    "CODE-cd4240",
+    "CODE-25346e",
+    "CODE-efa1f3",
+    "CODE-2bcb43",
+    "CODEBLOCK-304696",
+    "CODEBLOCK-681cb2",
+    "LINK-0de33c",
+    "LINK-4534bf",
+    "CODE-45c423",
+    "CODE-2bcb43",
+    "CODE-b8ba2e",
+    "CODE-e3c170",
+    "CODE-e3c170",
+    "CODEBLOCK-52eb23",
+    "CODEBLOCK-9827d9",
+    "CODE-3fc17b",
+    "CODE-7e3c95",
+    "CODEBLOCK-a5c78e",
+    "CODE-e3c170",
+    "CODE-e798fb",
+    "LINK-bf7eba",
+    "CODEBLOCK-b8dddc",
+    "CODEBLOCK-9de97c",
+    "CODEBLOCK-e54137",
+    "LINK-124cbf",
+    "LINK-fee1ce",
+    "LINK-efc0b7",
+    "LINK-149ae7",
+    "LINK-5e4867",
+    "LINK-5f21e5",
+    "LINK-fdaba1"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-570830": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8df021": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fa6f73": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-304696": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-681cb2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-52eb23": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9827d9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a5c78e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b8dddc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9de97c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e54137": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-49a25f": {
+      "type": "inline-code",
+      "values": {
+        "content": "storage"
+      }
+    },
+    "CODE-c064fb": {
+      "type": "inline-code",
+      "values": {
+        "content": "memory"
+      }
+    },
+    "CODE-d80c9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address"
+      }
+    },
+    "CODE-e8aac7": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.timestamp"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-3bed2c": {
+      "type": "inline-code",
+      "values": {
+        "content": "internal"
+      }
+    },
+    "CODE-3c4623": {
+      "type": "inline-code",
+      "values": {
+        "content": "external"
+      }
+    },
+    "CODE-252f10": {
+      "type": "inline-code",
+      "values": {
+        "content": "f"
+      }
+    },
+    "CODE-19c104": {
+      "type": "inline-code",
+      "values": {
+        "content": "f()"
+      }
+    },
+    "CODE-1bc8c7": {
+      "type": "inline-code",
+      "values": {
+        "content": "this.f()"
+      }
+    },
+    "CODE-efa1f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "public"
+      }
+    },
+    "CODE-715dc8": {
+      "type": "inline-code",
+      "values": {
+        "content": "private"
+      }
+    },
+    "CODE-cd4240": {
+      "type": "inline-code",
+      "values": {
+        "content": "value"
+      }
+    },
+    "CODE-473287": {
+      "type": "inline-code",
+      "values": {
+        "content": "string"
+      }
+    },
+    "CODE-25346e": {
+      "type": "inline-code",
+      "values": {
+        "content": "update_name"
+      }
+    },
+    "CODE-2bcb43": {
+      "type": "inline-code",
+      "values": {
+        "content": "view"
+      }
+    },
+    "CODE-45c423": {
+      "type": "inline-code",
+      "values": {
+        "content": "selfdestruct"
+      }
+    },
+    "CODE-b8ba2e": {
+      "type": "inline-code",
+      "values": {
+        "content": "pure"
+      }
+    },
+    "CODE-e3c170": {
+      "type": "inline-code",
+      "values": {
+        "content": "constructor"
+      }
+    },
+    "CODE-3fc17b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address.send()"
+      }
+    },
+    "CODE-7e3c95": {
+      "type": "inline-code",
+      "values": {
+        "content": "send(address)"
+      }
+    },
+    "CODE-e798fb": {
+      "type": "inline-code",
+      "values": {
+        "content": "dapp_name"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-5b6fb7": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types"
+      }
+    },
+    "LINK-90ba02": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/types.html#value-types"
+      }
+    },
+    "LINK-4190c6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack"
+      }
+    },
+    "LINK-0de33c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.7.0/contracts.html#events"
+      }
+    },
+    "LINK-4534bf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts"
+      }
+    },
+    "LINK-bf7eba": {
+      "type": "link",
+      "values": {
+        "url": "https://remix.ethereum.org"
+      }
+    },
+    "LINK-124cbf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/"
+      }
+    },
+    "LINK-fee1ce": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.vyperlang.org/en/stable/"
+      }
+    },
+    "LINK-efc0b7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-149ae7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-5e4867": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/"
+      }
+    },
+    "LINK-5f21e5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/logging-events-smart-contracts/"
+      }
+    },
+    "LINK-fdaba1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/interact-with-other-contracts-from-solidity/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T19:08:16.005Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,147 +1,147 @@
 ---
 title: API JSON-RPC
-description: "Bezstanowy, lekki protokół zdalnego wywoływania procedur (RPC) dla klientów Ethereum."
+description: "Bezstanowy, lekki protokół zdalnego wywołania procedur (RPC) dla klientów Ethereum."
 lang: pl
 ---
 
-Aby aplikacja mogła wchodzić w interakcję z blockchainem Ethereum – odczytywać dane blockchainu lub wysyłać transakcje do sieci – musi łączyć się z węzłem Ethereum.
+Aby aplikacja mogła wchodzić w interakcję z blockchainem [Ethereum](/) – poprzez odczytywanie danych z blockchaina lub wysyłanie transakcji do sieci – musi połączyć się z węzłem Ethereum.
 
-W tym celu każdy [klient Ethereum](/developers/docs/nodes-and-clients/#execution-clients) implementuje [specyfikację JSON-RPC](https://github.com/ethereum/execution-apis), więc istnieje jednolity zestaw metod, na których aplikacje mogą polegać niezależnie od konkretnej implementacji węzła lub klienta.
+W tym celu każdy [klient Ethereum](/developers/docs/nodes-and-clients/#execution-clients) implementuje [specyfikację JSON-RPC](https://github.com/ethereum/execution-apis), dzięki czemu istnieje jednolity zestaw metod, na których aplikacje mogą polegać niezależnie od konkretnego węzła lub implementacji klienta.
 
-[JSON-RPC](https://www.jsonrpc.org/specification) to bezstanowy, lekki protokół zdalnego wywoływania procedur (RPC). Definiuje kilka struktur danych i zasady dotyczące ich przetwarzania. Jest niezależny od transportu, ponieważ koncepcje te mogą być używane w ramach tego samego procesu, przez gniazda, przez HTTP lub w wielu różnych środowiskach przekazywania komunikatów. Używa formatu danych JSON (RFC 4627).
+[JSON-RPC](https://www.jsonrpc.org/specification) to bezstanowy, lekki protokół zdalnego wywołania procedur (RPC). Definiuje on kilka struktur danych oraz zasady ich przetwarzania. Jest on niezależny od warstwy transportowej, co oznacza, że jego koncepcje mogą być używane w ramach tego samego procesu, przez gniazda (sockets), przez HTTP lub w wielu różnych środowiskach przekazywania wiadomości. Jako format danych wykorzystuje JSON (RFC 4627).
 
-## Implementacje klienta {#client-implementations}
+## Implementacje klientów {#client-implementations}
 
-Klienci Ethereum mogą wykorzystywać różne języki programowania podczas wdrażania specyfikacji JSON-RPC. Więcej szczegółów na temat konkretnych języków programowania można znaleźć w dokumentacji poszczególnych [klientów](/developers/docs/nodes-and-clients/#execution-clients). Zalecamy sprawdzenie dokumentacji każdego klienta w celu uzyskania najnowszych informacji o obsłudze API.
+Klienty Ethereum mogą wykorzystywać różne języki programowania podczas implementacji specyfikacji JSON-RPC. Zobacz [dokumentację poszczególnych klientów](/developers/docs/nodes-and-clients/#execution-clients), aby uzyskać więcej szczegółów związanych z konkretnymi językami programowania. Zalecamy sprawdzanie dokumentacji każdego klienta w celu uzyskania najnowszych informacji o obsłudze API.
 
-## Biblioteki ułatwiające {#convenience-libraries}
+## Biblioteki pomocnicze {#convenience-libraries}
 
-Chociaż można zdecydować się na bezpośrednią interakcję z klientami Ethereum za pośrednictwem interfejsu API JSON-RPC, często istnieją łatwiejsze opcje dla deweloperów dapp. Istnieje wiele bibliotek [JavaScript](/developers/docs/apis/javascript/#available-libraries) i [API backendowych](/developers/docs/apis/backend/#available-libraries), które zapewniają wrappery na API JSON-RPC. Dzięki tym bibliotekom deweloperzy mogą pisać intuicyjne, jednowierszowe metody w wybranym przez siebie języku programowania, aby inicjować żądania JSON-RPC (w tle), które wchodzą w interakcję z Ethereum.
+Chociaż możesz zdecydować się na bezpośrednią interakcję z klientami Ethereum za pośrednictwem API JSON-RPC, często istnieją łatwiejsze opcje dla twórców dappów. Istnieje wiele bibliotek [JavaScript](/developers/docs/apis/javascript/#available-libraries) i [API backendowych](/developers/docs/apis/backend/#available-libraries), które stanowią nakładki na API JSON-RPC. Dzięki tym bibliotekom programiści mogą pisać intuicyjne, jednolinijkowe metody w wybranym przez siebie języku programowania, aby inicjować żądania JSON-RPC (wewnętrznie), które wchodzą w interakcję z Ethereum.
 
-## Interfejsy API klienta konsensusu {#consensus-clients}
+## API klientów konsensusu {#consensus-clients}
 
-Ta strona dotyczy głównie interfejsu API JSON-RPC używanego przez klientów wykonawczych Ethereum. Jednak klienci konsensusu mają również interfejs API RPC, który pozwala użytkownikom na wysyłanie zapytań o informacje o węźle, żądanie bloków Beacon, stanu Beacon i innych informacji związanych z konsensusem bezpośrednio z węzła. Ten interfejs API jest udokumentowany na [stronie internetowej Beacon API](https://ethereum.github.io/beacon-APIs/#/).
+Ta strona dotyczy głównie API JSON-RPC używanego przez klienty warstwy wykonawczej Ethereum. Jednakże klienty konsensusu również posiadają API RPC, które pozwala użytkownikom na zapytania o informacje dotyczące węzła, żądanie bloków Beacon, stanu Beacon oraz innych informacji związanych z konsensusem bezpośrednio z węzła. To API jest udokumentowane na [stronie internetowej Beacon API](https://ethereum.github.io/beacon-APIs/#/).
 
-Wewnętrzny interfejs API jest również używany do komunikacji między klientami w węźle – to znaczy, umożliwia klientowi konsensusu i klientowi wykonawczemu wymianę danych. Nazywa się to „Engine API”, a specyfikacje są dostępne na [GitHubie](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Wewnętrzne API jest również używane do komunikacji między klientami wewnątrz węzła - to znaczy umożliwia klientowi konsensusu i klientowi warstwy wykonawczej wymianę danych. Nazywa się to „Engine API”, a jego specyfikacje są dostępne na [GitHubie](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
-## Specyfikacja klienta wykonawczego {#spec}
+## Specyfikacja klienta warstwy wykonawczej {#spec}
 
-[Przeczytaj pełną specyfikację API JSON-RPC na GitHubie](https://github.com/ethereum/execution-apis). Ten interfejs API jest udokumentowany na [stronie Execution API](https://ethereum.github.io/execution-apis/) i zawiera Inspektor, który pozwala wypróbować wszystkie dostępne metody.
+[Przeczytaj pełną specyfikację API JSON-RPC na GitHubie](https://github.com/ethereum/execution-apis). To API jest udokumentowane na [stronie Execution API](https://ethereum.github.io/execution-apis/) i zawiera narzędzie Inspector, które pozwala wypróbować wszystkie dostępne metody.
 
 ## Konwencje {#conventions}
 
 ### Kodowanie wartości szesnastkowych {#hex-encoding}
 
-Dwa kluczowe typy danych są przekazywane przez JSON: niesformatowane tablice bajtów i ilości. Oba są przekazywane z kodowaniem szesnastkowym, ale z różnymi wymaganiami dotyczącymi formatowania.
+Przez JSON przekazywane są dwa kluczowe typy danych: niesformatowane tablice bajtów i wielkości. Oba są przekazywane w kodowaniu szesnastkowym, ale mają różne wymagania dotyczące formatowania.
 
-#### Ilości {#quantities-encoding}
+#### Wielkości {#quantities-encoding}
 
-Podczas kodowania ilości (liczb całkowitych, liczb): zakoduj jako hex, poprzedź prefiksem "0x", najbardziej kompaktowa reprezentacja (niewielki wyjątek: zero powinno być reprezentowane jako "0x0").
-
-Oto kilka przykładów:
-
-- 0x41 (65 dziesiętnie)
-- 0x400 (1024 dziesiętnie)
-- BŁĄD: 0x (powinien zawsze mieć co najmniej jedną cyfrę - zero to "0x0")
-- BŁĄD: 0x0400 (niedozwolone zera wiodące)
-- BŁĄD: ff (musi być poprzedzone 0x)
-
-### Dane niesformatowane {#unformatted-data-encoding}
-
-Podczas kodowania niesformatowanych danych (tablice bajtów, adresy kont, hasze, tablice kodu bajtowego): koduj jako hex, poprzedź prefiksem "0x", dwie cyfry szesnastkowe na bajt.
+Podczas kodowania wielkości (liczb całkowitych, liczb): zakoduj jako wartość szesnastkową, dodaj prefiks „0x”, używając najbardziej kompaktowej reprezentacji (drobny wyjątek: zero powinno być reprezentowane jako „0x0”).
 
 Oto kilka przykładów:
 
-- 0x41 (rozmiar 1, "A")
-- 0x004200 (rozmiar 3, "0B0")
+- 0x41 (65 w systemie dziesiętnym)
+- 0x400 (1024 w systemie dziesiętnym)
+- ŹLE: 0x (zawsze powinna być co najmniej jedna cyfra - zero to „0x0”)
+- ŹLE: 0x0400 (wiodące zera są niedozwolone)
+- ŹLE: ff (musi mieć prefiks 0x)
+
+### Niesformatowane dane {#unformatted-data-encoding}
+
+Podczas kodowania niesformatowanych danych (tablic bajtów, adresów kont, hashów, tablic kodu bajtowego): zakoduj jako wartość szesnastkową, dodaj prefiks „0x”, po dwie cyfry szesnastkowe na bajt.
+
+Oto kilka przykładów:
+
+- 0x41 (rozmiar 1, „A”)
+- 0x004200 (rozmiar 3, „0B0”)
 - 0x (rozmiar 0, "")
-- BŁĄD: 0xf0f0f (musi być parzysta liczba cyfr)
-- BŁĄD: 004200 (musi być poprzedzone 0x)
+- ŹLE: 0xf0f0f (musi być parzysta liczba cyfr)
+- ŹLE: 004200 (musi mieć prefiks 0x)
 
 ### Parametr bloku {#block-parameter}
 
 Następujące metody mają parametr bloku:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getCode](#eth-getcode)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_call](#eth-call)
 
-Kiedy składane są żądania dotyczące stanu Ethereum, podany parametr bloku określa wysokość bloku.
+Gdy wysyłane są żądania odpytujące stan Ethereum, podany parametr bloku określa wysokość bloku.
 
 Dla parametru bloku możliwe są następujące opcje:
 
-- `Ciąg HEX` - numer bloku w postaci liczby całkowitej
-- `Ciąg znaków "earliest"` dla najwcześniejszego/genezy bloku
-- `Ciąg znaków "latest"` – dla ostatniego zaproponowanego bloku
-- `Ciąg znaków "safe"` – dla ostatniego bezpiecznego bloku głównego
-- `Ciąg znaków "finalized"` – dla ostatniego sfinalizowanego bloku
-- `Ciąg znaków "pending"` – dla oczekującego stanu/transakcji
+- `HEX String` - numer bloku w postaci liczby całkowitej
+- `String "earliest"` - dla najwcześniejszego bloku / bloku genezy
+- `String "latest"` - dla najnowszego zaproponowanego bloku
+- `String "safe"` - dla najnowszego bezpiecznego bloku czołowego
+- `String "finalized"` - dla najnowszego sfinalizowanego bloku
+- `String "pending"` - dla oczekującego stanu/transakcji
 
-## Przykłady
+## Przykłady {#examples}
 
-Na tej stronie przedstawiamy przykłady użycia poszczególnych punktów końcowych API JSON_RPC za pomocą narzędzia wiersza poleceń, [curl](https://curl.se). Te indywidualne przykłady punktów końcowych znajdują się poniżej w sekcji [Przykłady Curl](#curl-examples). W dalszej części strony przedstawiamy również [kompletny przykład](#usage-example) kompilowania i wdrażania inteligentnego kontraktu za pomocą węzła Geth, interfejsu API JSON_RPC i curl.
+Na tej stronie przedstawiamy przykłady użycia poszczególnych punktów końcowych API JSON_RPC za pomocą narzędzia wiersza poleceń [curl](https://curl.se). Przykłady dla poszczególnych punktów końcowych znajdują się poniżej w sekcji [Przykłady użycia curl](#curl-examples). W dalszej części strony udostępniamy również [kompleksowy przykład](#usage-example) kompilacji i wdrożenia inteligentnego kontraktu przy użyciu węzła Geth, API JSON_RPC oraz narzędzia curl.
 
-## Przykłady Curl {#curl-examples}
+## Przykłady użycia curl {#curl-examples}
 
-Poniżej przedstawiono przykłady użycia interfejsu API JSON_RPC poprzez wysyłanie żądań [curl](https://curl.se) do węzła Ethereum. Każdy przykład
-zawiera opis konkretnego punktu końcowego, jego parametrów, typu zwrotnego i praktyczny przykład jego użycia.
+Poniżej znajdują się przykłady użycia API JSON-RPC poprzez wysyłanie żądań [curl](https://curl.se) do węzła Ethereum. Każdy przykład
+zawiera opis konkretnego punktu końcowego, jego parametrów, zwracanego typu oraz praktyczny przykład jego użycia.
 
-Żądania curl mogą zwrócić komunikat o błędzie związany z typem zawartości. Dzieje się tak, ponieważ opcja `--data` ustawia typ zawartości na `application/x-www-form-urlencoded`. Jeśli twój węzeł zgłasza ten problem, ręcznie ustaw nagłówek, umieszczając `-H "Content-Type: application/json"` na początku wywołania. Przykłady nie zawierają również kombinacji URL/IP i portu, która musi być ostatnim argumentem podanym do curl (np. `127.0.0.1:8545`). Pełne żądanie curl zawierające te dodatkowe dane ma następującą postać:
+Żądania curl mogą zwrócić komunikat o błędzie związany z typem zawartości (content type). Dzieje się tak, ponieważ opcja `--data` ustawia typ zawartości na `application/x-www-form-urlencoded`. Jeśli twój węzeł zgłasza z tego powodu błąd, ustaw nagłówek ręcznie, umieszczając `-H "Content-Type: application/json"` na początku wywołania. Przykłady nie zawierają również kombinacji adresu URL/IP i portu, która musi być ostatnim argumentem przekazanym do curl (np. `127.0.0.1:8545`). Kompletne żądanie curl uwzględniające te dodatkowe dane przyjmuje następującą postać:
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## Plotki, stan, historia {#gossip-state-history}
+## Gossip, stan, historia {#gossip-state-history}
 
-Kilka podstawowych metod JSON-RPC wymaga danych z sieci Ethereum i dzieli się na trzy główne kategorie: _Plotki, Stan i Historia_. Użyj linków w tych sekcjach, aby przejść do każdej metody, lub użyj spisu treści, aby przejrzeć całą listę metod.
+Garść podstawowych metod JSON-RPC wymaga danych z sieci Ethereum i dzieli się na trzy główne kategorie: _Gossip, stan i historia_. Użyj linków w tych sekcjach, aby przejść do każdej metody, lub skorzystaj ze spisu treści, aby zapoznać się z całą listą metod.
 
-### Metody plotkowania {#gossip-methods}
+### Metody Gossip {#gossip-methods}
 
-> Metody te śledzą nagłówek łańcucha. W ten sposób transakcje krążą po sieci, trafiają do bloków, a klienci dowiadują się o nowych blokach.
+> Te metody śledzą czoło łańcucha. W ten sposób transakcje rozprzestrzeniają się w sieci, trafiają do bloków, a klienty dowiadują się o nowych blokach.
 
-- [eth_blockNumber](#eth_blocknumber)
-- [eth_sendRawTransaction](#eth_sendrawtransaction)
+- [eth_blockNumber](#eth-blocknumber)
+- [eth_sendRawTransaction](#eth-sendrawtransaction)
 
-### Metody stanu {#state_methods}
+### Metody stanu {#state-methods}
 
-> Metody, które raportują aktualny stan wszystkich przechowywanych danych. "Stan" jest jak jeden duży, współdzielony fragment pamięci RAM i obejmuje salda kont, dane kontraktów i szacunki gazu.
+> Metody, które raportują obecny stan wszystkich przechowywanych danych. „Stan” jest jak jeden wielki współdzielony fragment pamięci RAM i obejmuje salda kont, dane kontraktów oraz szacunki gazu.
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getCode](#eth_getcode)
-- [eth_call](#eth_call)
-- [eth_estimateGas](#eth_estimategas)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getCode](#eth-getcode)
+- [eth_call](#eth-call)
+- [eth_estimateGas](#eth-estimategas)
 
-### Metody historii {#history_methods}
+### Metody historii {#history-methods}
 
-> Pobiera historyczne zapisy każdego bloku aż do bloku genezy. Jest to jak jeden duży plik tylko do dołączania i zawiera wszystkie nagłówki bloków, treści bloków, bloki uncle i potwierdzenia transakcji.
+> Pobierają historyczne rekordy każdego bloku aż do genezy. Przypomina to jeden duży plik, do którego można tylko dopisywać dane (append-only), i obejmuje wszystkie nagłówki bloków, ciała bloków, bloki uncle oraz pokwitowania transakcji.
 
-- [eth_getBlockTransactionCountByHash](#eth_getblocktransactioncountbyhash)
-- [eth_getBlockTransactionCountByNumber](#eth_getblocktransactioncountbynumber)
-- [eth_getUncleCountByBlockHash](#eth_getunclecountbyblockhash)
-- [eth_getUncleCountByBlockNumber](#eth_getunclecountbyblocknumber)
-- [eth_getBlockByHash](#eth_getblockbyhash)
-- [eth_getBlockByNumber](#eth_getblockbynumber)
-- [eth_getTransactionByHash](#eth_gettransactionbyhash)
-- [eth_getTransactionByBlockHashAndIndex](#eth_gettransactionbyblockhashandindex)
-- [eth_getTransactionByBlockNumberAndIndex](#eth_gettransactionbyblocknumberandindex)
-- [eth_getTransactionReceipt](#eth_gettransactionreceipt)
-- [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
-- [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+- [eth_getBlockTransactionCountByHash](#eth-getblocktransactioncountbyhash)
+- [eth_getBlockTransactionCountByNumber](#eth-getblocktransactioncountbynumber)
+- [eth_getUncleCountByBlockHash](#eth-getunclecountbyblockhash)
+- [eth_getUncleCountByBlockNumber](#eth-getunclecountbyblocknumber)
+- [eth_getBlockByHash](#eth-getblockbyhash)
+- [eth_getBlockByNumber](#eth-getblockbynumber)
+- [eth_getTransactionByHash](#eth-gettransactionbyhash)
+- [eth_getTransactionByBlockHashAndIndex](#eth-gettransactionbyblockhashandindex)
+- [eth_getTransactionByBlockNumberAndIndex](#eth-gettransactionbyblocknumberandindex)
+- [eth_getTransactionReceipt](#eth-gettransactionreceipt)
+- [eth_getUncleByBlockHashAndIndex](#eth-getunclebyblockhashandindex)
+- [eth_getUncleByBlockNumberAndIndex](#eth-getunclebyblocknumberandindex)
 
-## Plac zabaw API JSON-RPC
+## Playground API JSON-RPC {#json-rpc-api-playground}
 
-Możesz użyć [narzędzia placu zabaw](https://ethereum-json-rpc.com), aby odkryć i wypróbować metody API. Pokazuje również, które metody i sieci są obsługiwane przez różnych dostawców węzłów.
+Możesz użyć [narzędzia playground](https://ethereum-json-rpc.com), aby odkrywać i testować metody API. Pokazuje ono również, które metody i sieci są obsługiwane przez różnych dostawców węzłów.
 
 ## Metody API JSON-RPC {#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion {#web3-clientversion}
 
-Zwraca bieżącą wersję klienta.
+Zwraca aktualną wersję klienta.
 
 **Parametry**
 
@@ -149,14 +149,14 @@ Brak
 
 **Zwraca**
 
-`String` - aktualna wersja klienta
+`String` - Aktualna wersja klienta
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
-// Result
+// Wynik
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -164,13 +164,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### web3_sha3 {#web3-sha3}
 
-Zwraca Keccak-256 (_nie_ standaryzowany SHA3-256) podanych danych.
+Zwraca Keccak-256 (_nie_ ustandaryzowane SHA3-256) dla podanych danych.
 
 **Parametry**
 
-1. `DATA` - dane do przekształcenia w hasz SHA3
+1. `DATA` - Dane do przekonwertowania na hash SHA3
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
@@ -178,14 +178,14 @@ params: ["0x68656c6c6f20776f726c64"]
 
 **Zwraca**
 
-`DATA` - wynik SHA3 podanego ciągu.
+`DATA` - Wynik SHA3 dla podanego ciągu znaków.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f20776f726c64"],"id":64}'
-// Result
+// Wynik
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -193,9 +193,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version {#net-version}
 
-Zwraca bieżący identyfikator sieci.
+Zwraca aktualny identyfikator sieci.
 
 **Parametry**
 
@@ -203,20 +203,20 @@ Brak
 
 **Zwraca**
 
-`String` - bieżący identyfikator sieci.
+`String` - Aktualny identyfikator sieci.
 
 Pełna lista aktualnych identyfikatorów sieci jest dostępna na stronie [chainlist.org](https://chainlist.org). Niektóre z popularnych to:
 
-- `1`: Sieć główna Ethereum
-- `11155111`: Sieć testowa Sepolia
-- `560048` : Sieć testowa Hoodi
+- `1`: sieć główna Ethereum
+- `11155111`: sieć testowa Sepolia
+- `560048` : sieć testowa Hoodi
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67}'
-// Result
+// Wynik
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -224,7 +224,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening {#net-listening}
 
 Zwraca `true`, jeśli klient aktywnie nasłuchuje połączeń sieciowych.
 
@@ -234,14 +234,14 @@ Brak
 
 **Zwraca**
 
-`Boolean` - `true` podczas słuchania, w przeciwnym razie `false`.
+`Boolean` - `true` podczas nasłuchiwania, w przeciwnym razie `false`.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":67}'
-// Result
+// Wynik
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -249,9 +249,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount {#net-peercount}
 
-Zwraca liczbę peerów aktualnie podłączonych do klienta.
+Zwraca liczbę peerów aktualnie połączonych z klientem.
 
 **Parametry**
 
@@ -259,14 +259,14 @@ Brak
 
 **Zwraca**
 
-`QUANTITY` - liczba całkowita połączonych peerów.
+`QUANTITY` - liczba całkowita określająca liczbę połączonych peerów.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}'
-// Result
+// Wynik
 {
   "id":74,
   "jsonrpc": "2.0",
@@ -274,9 +274,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion {#eth-protocolversion}
 
-Zwraca aktualną wersję protokołu Ethereum. Należy pamiętać, że ta metoda jest [niedostępna w Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
+Zwraca aktualną wersję protokołu Ethereum. Należy pamiętać, że ta metoda [nie jest dostępna w Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
 
 **Parametry**
 
@@ -284,14 +284,14 @@ Brak
 
 **Zwraca**
 
-`String` - bieżąca wersja protokołu Ethereum
+`String` - Aktualna wersja protokołu Ethereum
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
-// Result
+// Wynik
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -299,12 +299,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### eth_syncing {#eth-syncing}
 
-Zwraca obiekt z danymi o stanie synchronizacji lub `false`.
+Zwraca obiekt z danymi o statusie synchronizacji lub `false`.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w piaskownicy
 </ButtonLink>
 
 **Parametry**
@@ -313,15 +313,15 @@ Brak
 
 **Zwraca**
 
-Dokładne zwracane dane różnią się w zależności od implementacji klienta. Wszyscy klienci zwracają `False`, gdy węzeł nie jest synchronizowany, i wszyscy klienci zwracają następujące pola.
+Dokładne zwracane dane różnią się w zależności od implementacji klienta. Wszystkie klienty zwracają `False`, gdy węzeł się nie synchronizuje, i wszystkie klienty zwracają następujące pola.
 
-`Object|Boolean`, obiekt z danymi o stanie synchronizacji lub `FALSE`, gdy nie synchronizuje:
+`Object|Boolean`, Obiekt z danymi o statusie synchronizacji lub `FALSE`, gdy się nie synchronizuje:
 
-- `startingBlock`: `QUANTITY` - blok, od którego rozpoczął się import (zostanie zresetowany dopiero po osiągnięciu przez synchronizację nagłówka)
-- `currentBlock`: `QUANTITY` - bieżący blok, tak samo jak eth_blockNumber
-- `highestBlock`: `QUANTITY` - szacowany najwyższy blok
+- `startingBlock`: `QUANTITY` - Blok, od którego rozpoczął się import (zostanie zresetowany dopiero po tym, jak synchronizacja osiągnie wierzchołek)
+- `currentBlock`: `QUANTITY` - Obecny blok, to samo co eth_blockNumber
+- `highestBlock`: `QUANTITY` - Szacowany najwyższy blok
 
-Jednak poszczególni klienci mogą również dostarczać dodatkowe dane. Na przykład Geth zwraca następujące informacje:
+Jednakże poszczególne klienty mogą również dostarczać dodatkowe dane. Na przykład Geth zwraca następujące dane:
 
 ```json
 {
@@ -362,14 +362,14 @@ Natomiast Besu zwraca:
 }
 ```
 
-Więcej szczegółów można znaleźć w dokumentacji konkretnego klienta.
+Więcej szczegółów znajdziesz w dokumentacji swojego konkretnego klienta.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -379,7 +379,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
     highestBlock: '0x454'
   }
 }
-// Or when not syncing
+// Lub gdy nie ma synchronizacji
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -387,15 +387,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase {#eth-coinbase}
 
 Zwraca adres coinbase klienta.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
-> **Uwaga:** ta metoda została wycofana od wersji **v1.14.0** i nie jest już obsługiwana. Próba użycia tej metody spowoduje błąd "Metoda nie jest obsługiwana".
+> **Uwaga:** Ta metoda została wycofana w wersji **v1.14.0** i nie jest już obsługiwana. Próba użycia tej metody spowoduje błąd „Method not supported”.
 
 **Parametry**
 
@@ -408,9 +408,9 @@ Brak
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
-// Result
+// Wynik
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -418,12 +418,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### eth_chainId {#eth-chainid}
 
-Zwraca identyfikator łańcucha używany do podpisywania transakcji chronionych przed powtórzeniem.
+Zwraca identyfikator łańcucha używany do podpisywania transakcji chronionych przed atakami typu replay.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
@@ -432,14 +432,14 @@ Brak
 
 **Zwraca**
 
-`chainId`, wartość szesnastkowa jako ciąg reprezentujący liczbę całkowitą bieżącego identyfikatora łańcucha.
+`chainId`, wartość szesnastkowa w postaci ciągu znaków reprezentująca liczbę całkowitą aktualnego identyfikatora łańcucha.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
-// Result
+// Wynik
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -447,12 +447,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining {#eth-mining}
 
-Zwraca `true`, jeśli klient aktywnie wydobywa nowe bloki. Może to zwrócić `true` tylko dla sieci proof-of-work i może nie być dostępne w niektórych klientach od czasu [The Merge](/roadmap/merge/).
+Zwraca `true`, jeśli klient aktywnie kopie nowe bloki. Może to zwrócić `true` tylko dla sieci opartych na dowodzie pracy (PoW) i może nie być dostępne w niektórych klientach od czasu [The Merge](/roadmap/merge/).
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj punkt końcowy w piaskownicy
 </ButtonLink>
 
 **Parametry**
@@ -461,12 +461,12 @@ Brak
 
 **Zwraca**
 
-`Boolean` - zwraca `true`, jeśli klient wydobywa, w przeciwnym razie `false`.
+`Boolean` - zwraca `true`, jeśli klient kopie, w przeciwnym razie `false`.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
 //
 {
@@ -476,12 +476,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate {#eth-hashrate}
 
-Zwraca liczbę haszy na sekundę, z jaką kopie węzeł. Może to zwrócić `true` tylko dla sieci proof-of-work i może nie być dostępne w niektórych klientach od czasu [The Merge](/roadmap/merge/).
+Zwraca liczbę hashy na sekundę, z jaką kopie węzeł. Może to zwrócić `true` tylko dla sieci opartych na dowodzie pracy i może nie być dostępne w niektórych klientach od czasu [The Merge](/roadmap/merge/).
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
@@ -490,14 +490,14 @@ Brak
 
 **Zwraca**
 
-`QUANTITY` - liczba haszy na sekundę.
+`QUANTITY` - liczba hashy na sekundę.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":71}'
-// Result
+// Wynik
 {
   "id":71,
   "jsonrpc": "2.0",
@@ -505,12 +505,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### eth_gasPrice {#eth-gasprice}
 
-Zwraca szacunkową bieżącą cenę za gaz w wei. Na przykład klient Besu domyślnie sprawdza ostatnie 100 bloków i zwraca medianę ceny jednostki gazu.
+Zwraca szacunkową obecną cenę za gaz w wei. Na przykład klient Besu domyślnie bada ostatnie 100 bloków i zwraca medianę ceny jednostki gazu.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
@@ -519,14 +519,14 @@ Brak
 
 **Zwraca**
 
-`QUANTITY` - liczba całkowita bieżącej ceny gazu w wei.
+`QUANTITY` - liczba całkowita określająca obecną cenę gazu w wei.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
-// Result
+// Wynik
 {
   "id":73,
   "jsonrpc": "2.0",
@@ -534,12 +534,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts {#eth-accounts}
 
 Zwraca listę adresów należących do klienta.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w piaskownicy
 </ButtonLink>
 
 **Parametry**
@@ -553,9 +553,9 @@ Brak
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -563,12 +563,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### eth_blockNumber {#eth-blocknumber}
 
-Zwraca numer ostatniego bloku.
+Zwraca numer najnowszego bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_blockNumber">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
@@ -577,14 +577,14 @@ Brak
 
 **Zwraca**
 
-`QUANTITY` - liczba całkowita bieżącego numeru bloku, na którym znajduje się klient.
+`QUANTITY` - liczba całkowita oznaczająca numer bieżącego bloku, na którym znajduje się klient.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'
-// Result
+// Wynik
 {
   "id":83,
   "jsonrpc": "2.0",
@@ -592,18 +592,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance {#eth-getbalance}
 
-Zwraca saldo konta pod podanym adresem.
+Zwraca saldo konta pod danym adresem.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj punkt końcowy w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 20 bajtów - adres do sprawdzenia salda.
-2. `QUANTITY|TAG` - numer bloku w postaci liczby całkowitej lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"` lub `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 bajtów - adres, którego saldo ma zostać sprawdzone.
+2. `QUANTITY|TAG` - liczba całkowita określająca numer bloku lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"` lub `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -611,14 +611,14 @@ params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 
 **Zwraca**
 
-`QUANTITY` - liczba całkowita bieżącego salda w wei.
+`QUANTITY` - liczba całkowita określająca obecne saldo w wei.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -626,26 +626,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt {#eth-getstorageat}
 
-Zwraca wartość z pozycji przechowywania pod danym adresem.
+Zwraca wartość z pozycji pamięci pod danym adresem.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 20 bajtów - adres pamięci masowej.
-2. `QUANTITY` - liczba całkowita pozycji w pamięci.
-3. `QUANTITY|TAG` - numer bloku w postaci liczby całkowitej lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 bajtów - adres pamięci.
+2. `QUANTITY` - liczba całkowita określająca pozycję w pamięci.
+3. `QUANTITY|TAG` - liczba całkowita określająca numer bloku lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Zwraca**
 
-`DATA` - wartość w tej pozycji pamięci.
+`DATA` - wartość na tej pozycji w pamięci.
 
 **Przykład**
-Obliczenie prawidłowej pozycji zależy od pamięci, którą należy pobrać. Rozważ następujący kontrakt wdrożony pod adresem `0x295a70b2de5e3953354a6a8344e616ed314d7251` z adresu `0x391694e7e0b0cce554cb130d723a9d27458f9298`.
+Obliczenie prawidłowej pozycji zależy od pamięci, którą chcemy pobrać. Rozważmy następujący kontrakt wdrożony pod adresem `0x295a70b2de5e3953354a6a8344e616ed314d7251` przez adres `0x391694e7e0b0cce554cb130d723a9d27458f9298`.
 
 ```
 contract Storage {
@@ -665,13 +665,13 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 ```
 
-Pobranie elementu mapy jest trudniejsze. Pozycję elementu w mapie oblicza się za pomocą:
+Pobranie elementu z mapy jest trudniejsze. Pozycja elementu w mapie jest obliczana za pomocą:
 
 ```js
-keccak(LeftPad32(klucz, 0), LeftPad32(pozycja w mapie, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
-Oznacza to, że aby pobrać pamięć z pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] musimy obliczyć pozycję za pomocą:
+Oznacza to, że aby pobrać pamięć dla pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"], musimy obliczyć pozycję za pomocą:
 
 ```js
 keccak(
@@ -682,7 +682,7 @@ keccak(
 )
 ```
 
-Konsola geth, która jest dostarczana z biblioteką web3, może być użyta do wykonania obliczeń:
+Konsola Geth, która jest dostarczana z biblioteką Web3, może zostać użyta do wykonania tego obliczenia:
 
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -698,12 +698,12 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount {#eth-gettransactioncount}
 
-Zwraca liczbę transakcji _wysłanych_ z adresu.
+Zwraca liczbę transakcji _wysłanych_ z danego adresu.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
@@ -714,20 +714,20 @@ Zwraca liczbę transakcji _wysłanych_ z adresu.
 ```js
 params: [
   "0x407d73d8a49eeb85d32cf465507dd71d507100c1",
-  "latest", // stan w ostatnim bloku
+  "latest", // stan w najnowszym bloku
 ]
 ```
 
 **Zwraca**
 
-`QUANTITY` - liczba całkowita transakcji wysłanych z tego adresu.
+`QUANTITY` - liczba całkowita określająca liczbę transakcji wysłanych z tego adresu.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1","latest"],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -735,17 +735,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash {#eth-getblocktransactioncountbyhash}
 
-Zwraca liczbę transakcji w bloku z bloku pasującego do podanego haszu bloku.
+Zwraca liczbę transakcji w bloku pasującym do podanego hasha bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajty - hasz bloku
+1. `DATA`, 32 bajty - hash bloku
 
 ```js
 params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
@@ -753,14 +753,14 @@ params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 
 **Zwraca**
 
-`QUANTITY` - liczba całkowita liczby transakcji w tym bloku.
+`QUANTITY` - liczba całkowita określająca liczbę transakcji w tym bloku.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -768,17 +768,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber {#eth-getblocktransactioncountbynumber}
 
 Zwraca liczbę transakcji w bloku pasującym do podanego numeru bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj punkt końcowy w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` - liczba całkowita numeru bloku lub ciąg `"earliest"`, `"latest"`, `"pending"`, `"safe"` lub `"finalized"`, jak w [parametrze bloku](/developers/docs/apis/json-rpc/#block-parameter).
+1. `QUANTITY|TAG` - liczba całkowita będąca numerem bloku lub ciąg znaków `"earliest"`, `"latest"`, `"pending"`, `"safe"` lub `"finalized"`, zgodnie z [parametrem bloku](/developers/docs/apis/json-rpc/#block-parameter).
 
 ```js
 params: [
@@ -788,14 +788,14 @@ params: [
 
 **Zwraca**
 
-`QUANTITY` - liczba całkowita liczby transakcji w tym bloku.
+`QUANTITY` - liczba całkowita określająca liczbę transakcji w tym bloku.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -803,17 +803,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash {#eth-getunclecountbyblockhash}
 
-Zwraca liczbę bloków uncle w bloku pasującym do podanego haszu bloku.
+Zwraca liczbę wujków w bloku na podstawie podanego hasha bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajty - hasz bloku
+1. `DATA`, 32 bajty – hash bloku
 
 ```js
 params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
@@ -821,14 +821,14 @@ params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 
 **Zwraca**
 
-`QUANTITY` - liczba całkowita liczby bloków uncle w tym bloku.
+`QUANTITY` – liczba całkowita reprezentująca liczbę wujków w tym bloku.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -836,17 +836,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber {#eth-getunclecountbyblocknumber}
 
-Zwraca liczbę bloków uncle w bloku pasującym do podanego numeru bloku.
+Zwraca liczbę wujków w bloku pasującym do podanego numeru bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` - numer bloku w postaci liczby całkowitej lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"` lub `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+1. `QUANTITY|TAG` - liczba całkowita będąca numerem bloku lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"` lub `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -856,14 +856,14 @@ params: [
 
 **Zwraca**
 
-`QUANTITY` - liczba całkowita liczby bloków uncle w tym bloku.
+`QUANTITY` - liczba całkowita określająca liczbę wujków w tym bloku.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params":["0xe8"],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -871,18 +871,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode {#eth-getcode}
 
-Zwraca kod pod podanym adresem.
+Zwraca kod pod danym adresem.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
 1. `DATA`, 20 bajtów - adres
-2. `QUANTITY|TAG` - numer bloku w postaci liczby całkowitej lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"` lub `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - całkowity numer bloku lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"` lub `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -898,9 +898,9 @@ params: [
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -908,18 +908,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign {#eth-sign}
 
-Metoda podpisu oblicza specyficzny dla Ethereum podpis za pomocą: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
+Metoda sign oblicza specyficzny dla Ethereum podpis za pomocą: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-Dodanie prefiksu do komunikatu sprawia, że obliczony podpis jest rozpoznawalny jako podpis specyficzny dla Ethereum. Zapobiega to nadużyciom, w których złośliwa dappka może podpisywać dowolne dane (np. transakcję) i używać podpisu do podszywania się pod ofiarę.
+Dodanie prefiksu do wiadomości sprawia, że obliczony podpis jest rozpoznawalny jako specyficzny dla Ethereum. Zapobiega to nadużyciom, w których złośliwa zdecentralizowana aplikacja (dapp) może podpisać dowolne dane (np. transakcję) i użyć podpisu do podszycia się pod ofiarę.
 
-Uwaga: adres, którym się podpisujesz, musi być odblokowany.
+Uwaga: adres, za pomocą którego ma zostać złożony podpis, musi być odblokowany.
 
 **Parametry**
 
 1. `DATA`, 20 bajtów - adres
-2. `DATA`, N bajtów - komunikat do podpisania
+2. `DATA`, N bajtów - wiadomość do podpisania
 
 **Zwraca**
 
@@ -928,9 +928,9 @@ Uwaga: adres, którym się podpisujesz, musi być odblokowany.
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "0xdeadbeaf"],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -938,33 +938,33 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### eth_signTransaction {#eth-signtransaction}
 
-Podpisuje transakcję, która może być przesłana do sieci w późniejszym czasie za pomocą [eth_sendRawTransaction](#eth_sendrawtransaction).
+Podpisuje transakcję, która może zostać przesłana do sieci w późniejszym czasie za pomocą [eth_sendRawTransaction](#eth-sendrawtransaction).
 
 **Parametry**
 
-1. `Object` – obiekt transakcji
+1. `Object` - Obiekt transakcji
 
 - `type`:
-- `from`: `DATA`, 20 bajtów - adres, z którego wysyłana jest transakcja.
-- `to`: `DATA`, 20 bajtów - (opcjonalnie przy tworzeniu nowego kontraktu) adres, na który kierowana jest transakcja.
-- `gas`: `QUANTITY` - (opcjonalnie, domyślnie: 90000) Liczba całkowita gazu przeznaczonego na wykonanie transakcji. Zwróci niewykorzystany gaz.
-- `gasPrice`: `QUANTITY` - (opcjonalne, domyślne: do ustalenia) Liczba całkowita gasPrice używana dla każdego opłaconego gazu, w Wei.
-- `value`: `QUANTITY` - (opcjonalnie) Liczba całkowita wartości wysłanej z tą transakcją, w Wei.
-- `data`: `DATA` - skompilowany kod kontraktu LUB hasz wywołanej sygnatury metody i zakodowanych parametrów.
-- `nonce`: `QUANTITY` - (opcjonalne) Liczba całkowita nonce. Pozwala to na nadpisanie własnych oczekujących transakcji, które używają tego samego nonce.
+- `from`: `DATA`, 20 bajtów - Adres, z którego wysyłana jest transakcja.
+- `to`: `DATA`, 20 bajtów - (opcjonalne przy tworzeniu nowego kontraktu) Adres, do którego skierowana jest transakcja.
+- `gas`: `QUANTITY` - (opcjonalne, domyślnie: 90000) Liczba całkowita określająca gaz dostarczony do wykonania transakcji. Zwróci niewykorzystany gaz.
+- `gasPrice`: `QUANTITY` - (opcjonalne, domyślnie: do ustalenia) Liczba całkowita określająca gasPrice użyty dla każdej opłaconej jednostki gazu, w wei.
+- `value`: `QUANTITY` - (opcjonalne) Liczba całkowita określająca wartość wysłaną z tą transakcją, w wei.
+- `data`: `DATA` - Skompilowany kod kontraktu LUB hash podpisu wywoływanej metody i zakodowanych parametrów.
+- `nonce`: `QUANTITY` - (opcjonalne) Liczba całkowita określająca nonce. Pozwala to na nadpisanie własnych oczekujących transakcji, które używają tego samego nonce.
 
 **Zwraca**
 
-`DATA`, obiekt transakcji zakodowany w RLP i podpisany przez określone konto.
+`DATA`, Zakodowany w RLP obiekt transakcji podpisany przez określone konto.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","params": [{"data":"0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675","from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","gas": "0x76c0","gasPrice": "0x9184e72a000","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","value": "0x9184e72a"}]}'
-// Result
+// Wynik
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -972,21 +972,21 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction {#eth-sendtransaction}
 
-Tworzy nową transakcję wywołania komunikatu lub tworzy kontrakt, jeśli pole danych zawiera kod, i podpisuje ją za pomocą konta określonego w `from`.
+Tworzy nową transakcję wywołania wiadomości lub utworzenia kontraktu, jeśli pole danych zawiera kod, i podpisuje ją za pomocą konta określonego w `from`.
 
 **Parametry**
 
-1. `Object` – obiekt transakcji
+1. `Object` - Obiekt transakcji
 
-- `from`: `DATA`, 20 bajtów - adres, z którego wysyłana jest transakcja.
-- `to`: `DATA`, 20 bajtów - (opcjonalnie przy tworzeniu nowego kontraktu) adres, na który kierowana jest transakcja.
-- `gas`: `QUANTITY` - (opcjonalnie, domyślnie: 90000) Liczba całkowita gazu przeznaczonego na wykonanie transakcji. Zwróci niewykorzystany gaz.
-- `gasPrice`: `QUANTITY` - (opcjonalne, domyślne: do ustalenia) Liczba całkowita gasPrice używana dla każdego opłaconego gazu.
-- `value`: `QUANTITY` - (opcjonalnie) Liczba całkowita wartości wysłanej w ramach tej transakcji.
-- `input`: `DATA` - skompilowany kod kontraktu LUB hasz wywołanej sygnatury metody i zakodowanych parametrów.
-- `nonce`: `QUANTITY` - (opcjonalne) Liczba całkowita nonce. Pozwala to na nadpisanie własnych oczekujących transakcji, które używają tego samego nonce.
+- `from`: `DATA`, 20 bajtów - Adres, z którego wysyłana jest transakcja.
+- `to`: `DATA`, 20 bajtów - (opcjonalne przy tworzeniu nowego kontraktu) Adres, do którego skierowana jest transakcja.
+- `gas`: `QUANTITY` - (opcjonalne, domyślnie: 90000) Liczba całkowita określająca gaz dostarczony do wykonania transakcji. Niewykorzystany gaz zostanie zwrócony.
+- `gasPrice`: `QUANTITY` - (opcjonalne, domyślnie: do ustalenia) Liczba całkowita określająca cenę gazu (gasPrice) używaną dla każdej opłaconej jednostki gazu.
+- `value`: `QUANTITY` - (opcjonalne) Liczba całkowita określająca wartość wysłaną wraz z tą transakcją.
+- `input`: `DATA` - Skompilowany kod kontraktu LUB hash podpisu wywoływanej metody i zakodowanych parametrów.
+- `nonce`: `QUANTITY` - (opcjonalne) Liczba całkowita określająca nonce. Pozwala to na nadpisanie własnych oczekujących transakcji, które używają tego samego nonce.
 
 ```js
 params: [
@@ -1004,16 +1004,16 @@ params: [
 
 **Zwraca**
 
-`DATA`, 32 bajty - hasz transakcji lub hasz zerowy, jeśli transakcja nie jest jeszcze dostępna.
+`DATA`, 32 bajty - hash transakcji lub zerowy hash, jeśli transakcja nie jest jeszcze dostępna.
 
-Użyj [eth_getTransactionReceipt](#eth_gettransactionreceipt), aby uzyskać adres kontraktu po zaproponowaniu transakcji w bloku, gdy utworzyłeś kontrakt.
+Użyj [eth_getTransactionReceipt](#eth-gettransactionreceipt), aby uzyskać adres kontraktu po tym, jak transakcja została zaproponowana w bloku, w przypadku utworzenia kontraktu.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{see above}],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1021,13 +1021,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth-sendrawtransaction}
 
-Tworzy nową transakcję wywołania wiadomości lub tworzenie kontraktu dla podpisanych transakcji.
+Tworzy nową transakcję wywołania wiadomości lub transakcję utworzenia kontraktu dla podpisanych transakcji.
 
 **Parametry**
 
-1. `DATA`, dane podpisanej transakcji.
+1. `DATA`, Podpisane dane transakcji.
 
 ```js
 params: [
@@ -1037,16 +1037,16 @@ params: [
 
 **Zwraca**
 
-`DATA`, 32 bajty - hasz transakcji lub hasz zerowy, jeśli transakcja nie jest jeszcze dostępna.
+`DATA`, 32 bajty - hash transakcji, lub zerowy hash, jeśli transakcja nie jest jeszcze dostępna.
 
-Użyj [eth_getTransactionReceipt](#eth_gettransactionreceipt), aby uzyskać adres kontraktu po zaproponowaniu transakcji w bloku, gdy utworzyłeś kontrakt.
+Użyj [eth_getTransactionReceipt](#eth-gettransactionreceipt), aby uzyskać adres kontraktu po tym, jak transakcja została zaproponowana w bloku, jeśli utworzyłeś kontrakt.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{see above}],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1054,26 +1054,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call {#eth-call}
 
-Wykonuje natychmiastowe wywołanie nowego komunikatu bez tworzenia transakcji na blockchainie. Często używane do wykonywania funkcji inteligentnych kontraktów tylko do odczytu, na przykład `balanceOf` dla kontraktu ERC-20.
+Wykonuje nowe wywołanie wiadomości natychmiast, bez tworzenia transakcji na blockchainie. Często używane do wykonywania funkcji inteligentnych kontraktów tylko do odczytu, na przykład `balanceOf` dla kontraktu ERC-20.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj punkt końcowy w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `Object` - obiekt wywołania transakcji
+1. `Object` - Obiekt wywołania transakcji
 
-- `from`: `DATA`, 20 bajtów - (opcjonalnie) adres, z którego wysyłana jest transakcja.
-- `to`: `DATA`, 20 bajtów - adres, na który kierowana jest transakcja.
-- `gas`: `QUANTITY` - (opcjonalnie) Liczba całkowita gazu przeznaczonego na wykonanie transakcji. eth_call zużywa zero gazu, ale ten parametr może być potrzebny w niektórych wykonaniach.
-- `gasPrice`: `QUANTITY` - (opcjonalne) Liczba całkowita gasPrice użyta dla każdego opłaconego gazu
-- `value`: `QUANTITY` - (opcjonalnie) Liczba całkowita wartości wysłanej w tej transakcji
-- `input`: `DATA` - (opcjonalnie) hasz sygnatury metody i zakodowanych parametrów. Szczegółowe informacje można znaleźć w [ABI kontraktu Ethereum w dokumentacji Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `from`: `DATA`, 20 bajtów - (opcjonalnie) Adres, z którego wysyłana jest transakcja.
+- `to`: `DATA`, 20 bajtów - Adres, do którego kierowana jest transakcja.
+- `gas`: `QUANTITY` - (opcjonalnie) Liczba całkowita określająca gaz dostarczony do wykonania transakcji. eth_call zużywa zero gazu, ale ten parametr może być wymagany przez niektóre wykonania.
+- `gasPrice`: `QUANTITY` - (opcjonalnie) Liczba całkowita określająca cenę gazu używaną dla każdej opłaconej jednostki gazu
+- `value`: `QUANTITY` - (opcjonalnie) Liczba całkowita określająca wartość wysłaną z tą transakcją
+- `input`: `DATA` - (opcjonalnie) Hash podpisu metody i zakodowanych parametrów. Szczegółowe informacje można znaleźć w [ABI kontraktu Ethereum w dokumentacji Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - numer bloku w postaci liczby całkowitej lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"` lub `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - liczba całkowita określająca numer bloku lub ciąg znaków `"latest"`, `"earliest"`, `"pending"`, `"safe"` lub `"finalized"`, zobacz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Zwraca**
 
@@ -1082,9 +1082,9 @@ Wykonuje natychmiastowe wywołanie nowego komunikatu bez tworzenia transakcji na
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1092,17 +1092,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas {#eth-estimategas}
 
-Generuje i zwraca oszacowanie, ile gazu jest potrzebne, aby transakcja mogła zostać ukończona. Transakcja nie zostanie dodana do blockchainu. Należy pamiętać, że szacunkowa wartość może być znacznie wyższa niż ilość gazu faktycznie zużytego przez transakcję z różnych powodów, w tym z powodu mechaniki EVM i wydajności węzła.
+Generuje i zwraca szacunkową ilość gazu niezbędną do zakończenia transakcji. Transakcja nie zostanie dodana do blockchaina. Należy pamiętać, że szacunkowa wartość może być znacznie wyższa niż ilość gazu faktycznie zużyta przez transakcję z różnych powodów, w tym ze względu na mechanikę EVM i wydajność węzła.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj punkt końcowy w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-Zobacz parametry [eth_call](#eth_call), z wyjątkiem tego, że wszystkie właściwości są opcjonalne. Jeśli nie określono limitu gazu, geth używa limitu gazu z bloku oczekującego jako górnej granicy. W rezultacie zwrócona estymacja może nie być wystarczająca do wykonania wywołania/transakcji, gdy ilość gazu jest wyższa niż limit gazu w oczekującym bloku.
+Zobacz parametry [eth_call](#eth-call), z tą różnicą, że wszystkie właściwości są opcjonalne. Jeśli nie określono limitu gazu, Geth używa limitu gazu z oczekującego bloku jako górnej granicy. W rezultacie zwrócona szacunkowa wartość może nie wystarczyć do wykonania wywołania/transakcji, gdy ilość gazu jest wyższa niż limit gazu oczekującego bloku.
 
 **Zwraca**
 
@@ -1111,9 +1111,9 @@ Zobacz parametry [eth_call](#eth_call), z wyjątkiem tego, że wszystkie właśc
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see above}],"id":1}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1121,18 +1121,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash {#eth-getblockbyhash}
 
-Zwraca informacje o bloku po haszu.
+Zwraca informacje o bloku na podstawie jego hasha.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajty - hasz bloku.
-2. `Boolean` - jeśli `true`, zwraca pełne obiekty transakcji, jeśli `false`, tylko hasze transakcji.
+1. `DATA`, 32 bajty - Hash bloku.
+2. `Boolean` - Jeśli `true`, zwraca pełne obiekty transakcji, jeśli `false`, tylko hashe transakcji.
 
 ```js
 params: [
@@ -1143,27 +1143,27 @@ params: [
 
 **Zwraca**
 
-`Object` - obiekt bloku lub `null`, jeśli nie znaleziono bloku:
+`Object` - Obiekt bloku lub `null`, gdy nie znaleziono bloku:
 
 - `number`: `QUANTITY` - numer bloku. `null`, gdy jest to blok oczekujący.
-- `hash`: `DATA`, 32 bajty - hasz bloku. `null`, gdy jest to blok oczekujący.
-- `parentHash`: `DATA`, 32 bajty - hasz bloku nadrzędnego.
-- `nonce`: `DATA`, 8 bajtów - hasz wygenerowanego dowodu pracy. `null`, gdy jest to blok oczekujący, `0x0` dla bloków proof-of-stake (od czasu The Merge)
-- `sha3Uncles`: `DATA`, 32 bajty - SHA3 danych bloków uncle w bloku.
+- `hash`: `DATA`, 32 bajty - hash bloku. `null`, gdy jest to blok oczekujący.
+- `parentHash`: `DATA`, 32 bajty - hash bloku nadrzędnego.
+- `nonce`: `DATA`, 8 bajtów - hash wygenerowanego dowodu pracy (PoW). `null`, gdy jest to blok oczekujący, `0x0` dla bloków dowodu stawki (PoS) (od czasu The Merge).
+- `sha3Uncles`: `DATA`, 32 bajty - SHA3 danych uncles w bloku.
 - `logsBloom`: `DATA`, 256 bajtów - filtr Blooma dla logów bloku. `null`, gdy jest to blok oczekujący.
 - `transactionsRoot`: `DATA`, 32 bajty - korzeń drzewa transakcji bloku.
 - `stateRoot`: `DATA`, 32 bajty - korzeń końcowego drzewa stanu bloku.
-- `receiptsRoot`: `DATA`, 32 bajty - korzeń drzewa potwierdzeń bloku.
+- `receiptsRoot`: `DATA`, 32 bajty - korzeń drzewa pokwitowań bloku.
 - `miner`: `DATA`, 20 bajtów - adres beneficjenta, któremu przyznano nagrody za blok.
-- `difficulty`: `QUANTITY` - liczba całkowita trudności dla tego bloku.
-- `totalDifficulty`: `QUANTITY` - liczba całkowita całkowitej trudności łańcucha aż do tego bloku.
-- `extraData`: `DATA` - pole "dodatkowych danych" tego bloku.
-- `size`: `QUANTITY` - liczba całkowita rozmiaru tego bloku w bajtach.
+- `difficulty`: `QUANTITY` - liczba całkowita określająca trudność tego bloku.
+- `totalDifficulty`: `QUANTITY` - liczba całkowita określająca całkowitą trudność łańcucha do tego bloku.
+- `extraData`: `DATA` - pole "extra data" tego bloku.
+- `size`: `QUANTITY` - liczba całkowita określająca rozmiar tego bloku w bajtach.
 - `gasLimit`: `QUANTITY` - maksymalna ilość gazu dozwolona w tym bloku.
-- `gasUsed`: `QUANTITY` - całkowity zużyty gaz przez wszystkie transakcje w tym bloku.
-- `timestamp`: `QUANTITY` - znacznik czasu uniksowego, kiedy blok został zebrany.
-- `transactions`: `Array` - tablica obiektów transakcji lub 32-bajtowe hasze transakcji w zależności od ostatniego podanego parametru.
-- `uncles`: `Array` - tablica haszy bloków uncle.
+- `gasUsed`: `QUANTITY` - całkowita ilość gazu zużyta przez wszystkie transakcje w tym bloku.
+- `timestamp`: `QUANTITY` - znacznik czasu Unix (timestamp) momentu zestawienia bloku.
+- `transactions`: `Array` - tablica obiektów transakcji lub 32-bajtowe hashe transakcji, w zależności od ostatniego podanego parametru.
+- `uncles`: `Array` - tablica hashy uncles.
 
 **Przykład**
 
@@ -1201,18 +1201,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth-getblockbynumber}
 
-Zwraca informacje o bloku po numerze bloku.
+Zwraca informacje o bloku na podstawie jego numeru.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByNumber">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` - liczba całkowita numeru bloku lub ciąg `"earliest"`, `"latest"`, `"pending"`, `"safe"` lub `"finalized"`, jak w [parametrze bloku](/developers/docs/apis/json-rpc/#block-parameter).
-2. `Boolean` - jeśli `true`, zwraca pełne obiekty transakcji, jeśli `false`, tylko hasze transakcji.
+1. `QUANTITY|TAG` - liczba całkowita będąca numerem bloku lub ciąg znaków `"earliest"`, `"latest"`, `"pending"`, `"safe"` lub `"finalized"`, zgodnie z [parametrem bloku](/developers/docs/apis/json-rpc/#block-parameter).
+2. `Boolean` - Jeśli `true`, zwraca pełne obiekty transakcji, jeśli `false`, tylko hashe transakcji.
 
 ```js
 params: [
@@ -1222,28 +1222,28 @@ params: [
 ```
 
 **Zwraca**
-Zobacz [eth_getBlockByHash](#eth_getblockbyhash)
+Zobacz [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-Wynik zobacz [eth_getBlockByHash](#eth_getblockbyhash)
+Wynik: zobacz [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth-gettransactionbyhash}
 
-Zwraca informacje o transakcji żądanej przez hasz transakcji.
+Zwraca informacje o transakcji na podstawie żądanego hasha transakcji.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajty - hasz transakcji
+1. `DATA`, 32 bajty - hash transakcji
 
 ```js
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
@@ -1251,19 +1251,19 @@ params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 
 **Zwraca**
 
-`Object` - obiekt transakcji lub `null`, gdy nie znaleziono transakcji:
+`Object` - Obiekt transakcji lub `null`, gdy nie znaleziono transakcji:
 
-- `blockHash`: `DATA`, 32 bajty - hasz bloku, w którym znajdowała się ta transakcja. `null`, gdy oczekuje.
-- `blockNumber`: `QUANTITY` - numer bloku, w którym znajdowała się ta transakcja. `null`, gdy oczekuje.
+- `blockHash`: `DATA`, 32 bajty - hash bloku, w którym znajdowała się ta transakcja. `null`, gdy jest oczekująca.
+- `blockNumber`: `QUANTITY` - numer bloku, w którym znajdowała się ta transakcja. `null`, gdy jest oczekująca.
 - `from`: `DATA`, 20 bajtów - adres nadawcy.
 - `gas`: `QUANTITY` - gaz dostarczony przez nadawcę.
-- `gasPrice`: `QUANTITY` - cena gazu podana przez nadawcę w Wei.
-- `hash`: `DATA`, 32 bajty - hasz transakcji.
-- `input`: `DATA` - dane wysyłane wraz z transakcją.
-- `nonce`: `QUANTITY` - liczba transakcji wykonanych przez nadawcę przed tą.
+- `gasPrice`: `QUANTITY` - cena gazu dostarczona przez nadawcę w wei.
+- `hash`: `DATA`, 32 bajty - hash transakcji.
+- `input`: `DATA` - dane wysłane wraz z transakcją.
+- `nonce`: `QUANTITY` - liczba transakcji wykonanych przez nadawcę przed tą transakcją.
 - `to`: `DATA`, 20 bajtów - adres odbiorcy. `null`, gdy jest to transakcja utworzenia kontraktu.
-- `transactionIndex`: `QUANTITY` - liczba całkowita indeksu pozycji transakcji w bloku. `null`, gdy oczekuje.
-- `value`: `QUANTITY` - wartość przeniesiona w Wei.
+- `transactionIndex`: `QUANTITY` - liczba całkowita określająca pozycję indeksu transakcji w bloku. `null`, gdy jest oczekująca.
+- `value`: `QUANTITY` - przesłana wartość w wei.
 - `v`: `QUANTITY` - identyfikator odzyskiwania ECDSA
 - `r`: `QUANTITY` - podpis ECDSA r
 - `s`: `QUANTITY` - podpis ECDSA s
@@ -1271,9 +1271,9 @@ params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"],"id":1}'
-// Result
+// Wynik
 {
   "jsonrpc":"2.0",
   "id":1,
@@ -1296,18 +1296,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex {#eth-gettransactionbyblockhashandindex}
 
-Zwraca informacje o transakcji według haszu bloku i pozycji indeksu transakcji.
+Zwraca informacje o transakcji na podstawie hasha bloku i pozycji indeksu transakcji.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajty - hasz bloku.
-2. `QUANTITY` - liczba całkowita pozycji indeksu transakcji.
+1. `DATA`, 32 bajty - hash bloku.
+2. `QUANTITY` - liczba całkowita określająca pozycję indeksu transakcji.
 
 ```js
 params: [
@@ -1317,28 +1317,28 @@ params: [
 ```
 
 **Zwraca**
-Zobacz [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Zobacz [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Wynik zobacz [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Wynik: zobacz [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex {#eth-gettransactionbyblocknumberandindex}
 
-Zwraca informacje o transakcji według numeru bloku i pozycji indeksu transakcji.
+Zwraca informacje o transakcji na podstawie numeru bloku i pozycji indeksu transakcji.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` - numer bloku lub ciąg `"earliest"`, `"latest"`, `"pending"`, `"safe"` lub `"finalized"`, jak w [parametrze bloku](/developers/docs/apis/json-rpc/#block-parameter).
+1. `QUANTITY|TAG` - numer bloku lub ciąg znaków `"earliest"`, `"latest"`, `"pending"`, `"safe"` lub `"finalized"`, tak jak w [parametrze bloku](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - pozycja indeksu transakcji.
 
 ```js
@@ -1349,59 +1349,59 @@ params: [
 ```
 
 **Zwraca**
-Zobacz [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Zobacz [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-Wynik zobacz [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Wynik zobacz w [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth-gettransactionreceipt}
 
-Zwraca potwierdzenie transakcji według haszu transakcji.
+Zwraca pokwitowanie transakcji na podstawie hasha transakcji.
 
-**Uwaga** Potwierdzenie nie jest dostępne dla oczekujących transakcji.
+**Uwaga** Pokwitowanie nie jest dostępne dla oczekujących transakcji.
 
 **Parametry**
 
-1. `DATA`, 32 bajty - hasz transakcji
+1. `DATA`, 32 bajty - hash transakcji
 
 ```js
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
 **Zwraca**
-`Object` - obiekt potwierdzenia transakcji lub `null`, gdy nie znaleziono potwierdzenia:
+`Object` - Obiekt pokwitowania transakcji lub `null`, gdy nie znaleziono pokwitowania:
 
-- `transactionHash `: `DATA`, 32 bajty - hasz transakcji.
-- `transactionIndex`: `QUANTITY` - liczba całkowita indeksu pozycji transakcji w bloku.
-- `blockHash`: `DATA`, 32 bajty - hasz bloku, w którym znajdowała się ta transakcja.
+- `transactionHash `: `DATA`, 32 bajty - hash transakcji.
+- `transactionIndex`: `QUANTITY` - liczba całkowita określająca pozycję indeksu transakcji w bloku.
+- `blockHash`: `DATA`, 32 bajty - hash bloku, w którym znajdowała się ta transakcja.
 - `blockNumber`: `QUANTITY` - numer bloku, w którym znajdowała się ta transakcja.
 - `from`: `DATA`, 20 bajtów - adres nadawcy.
 - `to`: `DATA`, 20 bajtów - adres odbiorcy. null, gdy jest to transakcja utworzenia kontraktu.
-- `cumulativeGasUsed`: `QUANTITY ` - całkowita ilość gazu zużytego podczas wykonywania tej transakcji w bloku.
-- `effectiveGasPrice`: `QUANTITY` - suma opłaty podstawowej i napiwku zapłaconego za jednostkę gazu.
-- `gasUsed `: `QUANTITY ` - ilość gazu zużytego tylko przez tę konkretną transakcję.
-- `contractAddress `: `DATA`, 20 bajtów – adres utworzonego kontraktu, jeśli transakcja była utworzeniem kontraktu, w przeciwnym razie `null`.
-- `logs`: `Array` - tablica obiektów logów, które wygenerowała ta transakcja.
-- `logsBloom`: `DATA`, 256 bajtów - filtr Blooma dla lekkich klientów do szybkiego pobierania powiązanych logów.
-- `type`: `QUANTITY` - liczba całkowita typu transakcji, `0x0` dla transakcji starszego typu, `0x1` dla typów z listą dostępu, `0x2` dla opłat dynamicznych.
+- `cumulativeGasUsed` : `QUANTITY ` - Całkowita ilość gazu zużyta podczas wykonywania tej transakcji w bloku.
+- `effectiveGasPrice` : `QUANTITY` - Suma opłaty podstawowej i opłaty priorytetowej zapłaconej za jednostkę gazu.
+- `gasUsed `: `QUANTITY ` - Ilość gazu zużyta wyłącznie przez tę konkretną transakcję.
+- `contractAddress `: `DATA`, 20 bajtów - Adres utworzonego kontraktu, jeśli transakcja była transakcją utworzenia kontraktu, w przeciwnym razie `null`.
+- `logs`: `Array` - Tablica obiektów logów, które wygenerowała ta transakcja.
+- `logsBloom`: `DATA`, 256 bajtów - Filtr Blooma dla lekkich klientów do szybkiego pobierania powiązanych logów.
+- `type`: `QUANTITY` - liczba całkowita określająca typ transakcji, `0x0` dla starszych transakcji (legacy), `0x1` dla typów z listą dostępu (access list), `0x2` dla opłat dynamicznych.
 
-Zwraca również _albo_ :
+Zwraca również _jedno z poniższych_:
 
-- `root` : `DATA` 32 bajty korzenia stanu po transakcji (przed Byzantium)
+- `root` : `DATA` 32 bajty korzenia stanu po transakcji (przed aktualizacją Bizancjum)
 - `status`: `QUANTITY` albo `1` (sukces), albo `0` (niepowodzenie)
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"],"id":1}'
-// Result
+// Wynik
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -1409,7 +1409,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
     "blockHash":
       "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
     "blockNumber": "0xeff35f",
-    "contractAddress": null, // string adresu, jeśli został utworzony
+    "contractAddress": null, // ciąg znaków adresu, jeśli został utworzony
     "cumulativeGasUsed": "0xa12515",
     "effectiveGasPrice": "0x5a9c688d4",
     "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
@@ -1428,18 +1428,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex {#eth-getunclebyblockhashandindex}
 
-Zwraca informacje o bloku-stryju na podstawie jego haszu i pozycji indeksu stryja.
+Zwraca informacje o wujku bloku na podstawie hasha i pozycji indeksu wujka.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj punkt końcowy w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajty - hasz bloku.
-2. `QUANTITY` - pozycja indeksu bloku uncle.
+1. `DATA`, 32 bajty – hash bloku.
+2. `QUANTITY` – pozycja indeksu wujka.
 
 ```js
 params: [
@@ -1449,31 +1449,31 @@ params: [
 ```
 
 **Zwraca**
-Zobacz [eth_getBlockByHash](#eth_getblockbyhash)
+Zobacz [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Wynik zobacz [eth_getBlockByHash](#eth_getblockbyhash)
+Wynik, zobacz [eth_getBlockByHash](#eth-getblockbyhash)
 
-**Uwaga**: blok uncle nie zawiera pojedynczych transakcji.
+**Uwaga**: Wujek nie zawiera pojedynczych transakcji.
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex {#eth-getunclebyblocknumberandindex}
 
-Zwraca informacje o bloku-stryju na podstawie jego numeru i pozycji indeksu stryja.
+Zwraca informacje o wujku bloku na podstawie numeru bloku i pozycji indeksu wujka.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
-  Wypróbuj punkt końcowy w placu zabaw
+  Wypróbuj endpoint w środowisku testowym
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` - numer bloku lub ciąg `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, jak w [parametrze bloku](/developers/docs/apis/json-rpc/#block-parameter).
-2. `QUANTITY` - pozycja indeksu bloku uncle.
+1. `QUANTITY|TAG` - numer bloku lub ciąg znaków `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, tak jak w [parametrze bloku](/developers/docs/apis/json-rpc/#block-parameter).
+2. `QUANTITY` - pozycja indeksu wujka.
 
 ```js
 params: [
@@ -1483,40 +1483,40 @@ params: [
 ```
 
 **Zwraca**
-Zobacz [eth_getBlockByHash](#eth_getblockbyhash)
+Zobacz [eth_getBlockByHash](#eth-getblockbyhash)
 
-**Uwaga**: blok uncle nie zawiera pojedynczych transakcji.
+**Uwaga**: Wujek nie zawiera pojedynczych transakcji.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-Wynik zobacz [eth_getBlockByHash](#eth_getblockbyhash)
+Wynik, zobacz [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter {#eth-newfilter}
 
-Tworzy obiekt filtra w oparciu o opcje filtrowania, aby powiadamiać o zmianie stanu (logi).
-Aby sprawdzić, czy stan się zmienił, wywołaj [eth_getFilterChanges](#eth_getfilterchanges).
+Tworzy obiekt filtra na podstawie opcji filtrowania, aby powiadamiać o zmianach stanu (logach).
+Aby sprawdzić, czy stan uległ zmianie, wywołaj [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Uwaga dotycząca określania filtrów tematów:**
-Tematy zależą od kolejności. Transakcja z logiem z tematami [A, B] będzie dopasowana przez następujące filtry tematów:
+Tematy są zależne od kolejności. Transakcja z logiem zawierającym tematy [A, B] zostanie dopasowana przez następujące filtry tematów:
 
 - `[]` "cokolwiek"
-- `[A]` "A na pierwszej pozycji (i cokolwiek po)"
-- `[null, B]` "cokolwiek na pierwszej pozycji ORAZ B na drugiej pozycji (i cokolwiek po)"
-- `[A, B]` "A na pierwszej pozycji ORAZ B na drugiej pozycji (i cokolwiek po)"
-- `[[A, B], [A, B]]` "(A LUB B) na pierwszej pozycji ORAZ (A LUB B) na drugiej pozycji (i cokolwiek po)"
+- `[A]` "A na pierwszej pozycji (i cokolwiek po nim)"
+- `[null, B]` "cokolwiek na pierwszej pozycji ORAZ B na drugiej pozycji (i cokolwiek po nim)"
+- `[A, B]` "A na pierwszej pozycji ORAZ B na drugiej pozycji (i cokolwiek po nim)"
+- `[[A, B], [A, B]]` "(A LUB B) na pierwszej pozycji ORAZ (A LUB B) na drugiej pozycji (i cokolwiek po nim)"
 - **Parametry**
 
-1. `Object` – opcje filtra:
+1. `Object` - Opcje filtra:
 
-- `fromBlock`: `QUANTITY|TAG` - (opcjonalnie, domyślnie: `"latest"`) Liczba całkowita numeru bloku lub `"latest"` dla ostatniego proponowanego bloku, `"safe"` dla ostatniego bezpiecznego bloku, `"finalized"` dla ostatniego sfinalizowanego bloku lub `"pending"`, `"earliest"` dla transakcji, które nie są jeszcze w bloku.
-- `toBlock`: `QUANTITY|TAG` - (opcjonalnie, domyślnie: `"latest"`) Liczba całkowita numeru bloku lub `"latest"` dla ostatniego proponowanego bloku, `"safe"` dla ostatniego bezpiecznego bloku, `"finalized"` dla ostatniego sfinalizowanego bloku lub `"pending"`, `"earliest"` dla transakcji, które nie są jeszcze w bloku.
+- `fromBlock`: `QUANTITY|TAG` - (opcjonalnie, domyślnie: `"latest"`) Całkowity numer bloku, lub `"latest"` dla ostatniego zaproponowanego bloku, `"safe"` dla najnowszego bezpiecznego bloku, `"finalized"` dla najnowszego sfinalizowanego bloku, lub `"pending"`, `"earliest"` dla transakcji, które nie są jeszcze w bloku.
+- `toBlock`: `QUANTITY|TAG` - (opcjonalnie, domyślnie: `"latest"`) Całkowity numer bloku, lub `"latest"` dla ostatniego zaproponowanego bloku, `"safe"` dla najnowszego bezpiecznego bloku, `"finalized"` dla najnowszego sfinalizowanego bloku, lub `"pending"`, `"earliest"` dla transakcji, które nie są jeszcze w bloku.
 - `address`: `DATA|Array`, 20 bajtów - (opcjonalnie) Adres kontraktu lub lista adresów, z których powinny pochodzić logi.
-- `topics`: `Array of DATA` - (opcjonalnie) Tablica 32-bajtowych tematów `DATA`. Tematy zależą od kolejności. Każdy temat może być również tablicą DATA z opcjami "lub".
+- `topics`: `Array of DATA`, - (opcjonalnie) Tablica 32-bajtowych tematów `DATA`. Tematy są zależne od kolejności. Każdy temat może być również tablicą DATA z opcjami „lub”.
 
 ```js
 params: [
@@ -1537,14 +1537,14 @@ params: [
 ```
 
 **Zwraca**
-`QUANTITY` - identyfikator filtra.
+`QUANTITY` - Identyfikator filtra.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics":["0x12341234"]}],"id":73}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1552,23 +1552,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### eth_newBlockFilter {#eth-newblockfilter}
 
 Tworzy filtr w węźle, aby powiadamiać o nadejściu nowego bloku.
-Aby sprawdzić, czy stan się zmienił, wywołaj [eth_getFilterChanges](#eth_getfilterchanges).
+Aby sprawdzić, czy stan uległ zmianie, wywołaj [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parametry**
 Brak
 
 **Zwraca**
-`QUANTITY` - identyfikator filtra.
+`QUANTITY` - Identyfikator filtra.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":73}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1576,23 +1576,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter {#eth-newpendingtransactionfilter}
 
 Tworzy filtr w węźle, aby powiadamiać o nadejściu nowych oczekujących transakcji.
-Aby sprawdzić, czy stan się zmienił, wywołaj [eth_getFilterChanges](#eth_getfilterchanges).
+Aby sprawdzić, czy stan uległ zmianie, wywołaj [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parametry**
 Brak
 
 **Zwraca**
-`QUANTITY` - identyfikator filtra.
+`QUANTITY` - Identyfikator filtru.
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1600,14 +1600,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### eth_uninstallFilter {#eth-uninstallfilter}
 
-Odinstalowuje filtr o podanym identyfikatorze. Należy zawsze wywoływać, gdy obserwacja nie jest już potrzebna.
-Dodatkowo filtry ulegają przedawnieniu, jeśli przez pewien czas nie są wywoływane za pomocą [eth_getFilterChanges](#eth_getfilterchanges).
+Odinstalowuje filtr o podanym identyfikatorze. Należy zawsze wywoływać tę metodę, gdy obserwowanie nie jest już potrzebne.
+Dodatkowo filtry wygasają, gdy nie są odpytywane za pomocą [eth_getFilterChanges](#eth-getfilterchanges) przez pewien czas.
 
 **Parametry**
 
-1. `QUANTITY` - identyfikator filtra.
+1. `QUANTITY` - Identyfikator filtra.
 
 ```js
 params: [
@@ -1621,9 +1621,9 @@ params: [
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xb"],"id":73}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1631,13 +1631,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges {#eth-getfilterchanges}
 
-Metoda odpytywania filtra, która zwraca tablicę logów, które wystąpiły od ostatniego odpytania.
+Metoda odpytywania dla filtru, która zwraca tablicę logów, które wystąpiły od ostatniego odpytania.
 
 **Parametry**
 
-1. `QUANTITY` - identyfikator filtra.
+1. `QUANTITY` - identyfikator filtru.
 
 ```js
 params: [
@@ -1646,29 +1646,27 @@ params: [
 ```
 
 **Zwraca**
-`Array` - tablica obiektów logów lub pusta tablica, jeśli od ostatniego odpytania nic się nie zmieniło.
+`Array` - Tablica obiektów logów lub pusta tablica, jeśli nic się nie zmieniło od ostatniego odpytania.
 
-- Dla filtrów utworzonych za pomocą `eth_newBlockFilter` zwracane są hasze bloków (`DATA`, 32 bajty), np. `["0x3454645634534..."]`.
-
-- Dla filtrów utworzonych za pomocą `eth_newPendingTransactionFilter` zwracane są hasze transakcji (`DATA`, 32 bajty), np. `["0x6345343454645..."]`.
-
-- Dla filtrów utworzonych za pomocą `eth_newFilter` logi są obiektami z następującymi parametrami:
+- Dla filtrów utworzonych za pomocą `eth_newBlockFilter` zwracane są hashe bloków (`DATA`, 32 bajty), np. `["0x3454645634534..."]`.
+- Dla filtrów utworzonych za pomocą `eth_newPendingTransactionFilter ` zwracane są hashe transakcji (`DATA`, 32 bajty), np. `["0x6345343454645..."]`.
+- Dla filtrów utworzonych za pomocą `eth_newFilter` logi są obiektami o następujących parametrach:
   - `removed`: `TAG` - `true`, gdy log został usunięty z powodu reorganizacji łańcucha. `false`, jeśli jest to prawidłowy log.
-  - `logIndex`: `QUANTITY` - liczba całkowita indeksu pozycji logu w bloku. `null`, gdy jest to log oczekujący.
-  - `transactionIndex`: `QUANTITY` - liczba całkowita indeksu pozycji transakcji, z której utworzono log. `null`, gdy jest to log oczekujący.
-  - `transactionHash`: `DATA`, 32 bajty - hasz transakcji, z których ten log został utworzony. `null`, gdy jest to log oczekujący.
-  - `blockHash`: `DATA`, 32 bajty - hasz bloku, w którym znajdował się ten log. `null`, gdy oczekuje. `null`, gdy jest to log oczekujący.
-  - `blockNumber`: `QUANTITY` - numer bloku, w którym znajdował się ten log. `null`, gdy oczekuje. `null`, gdy jest to log oczekujący.
+  - `logIndex`: `QUANTITY` - liczba całkowita określająca pozycję indeksu logu w bloku. `null`, gdy jest to log oczekujący.
+  - `transactionIndex`: `QUANTITY` - liczba całkowita określająca pozycję indeksu transakcji, z której utworzono log. `null`, gdy jest to log oczekujący.
+  - `transactionHash`: `DATA`, 32 bajty - hash transakcji, z której utworzono ten log. `null`, gdy jest to log oczekujący.
+  - `blockHash`: `DATA`, 32 bajty - hash bloku, w którym znajdował się ten log. `null`, gdy jest oczekujący. `null`, gdy jest to log oczekujący.
+  - `blockNumber`: `QUANTITY` - numer bloku, w którym znajdował się ten log. `null`, gdy jest oczekujący. `null`, gdy jest to log oczekujący.
   - `address`: `DATA`, 20 bajtów - adres, z którego pochodzi ten log.
-  - `data`: `DATA` - nieindeksowane dane logu o zmiennej długości. (W _solidity_: zero lub więcej 32-bajtowych nieindeksowanych argumentów logu).
-  - `topics`: `Array of DATA` - tablica od 0 do 4 32-bajtowych `DATA` indeksowanych argumentów logów. (W _solidity_: Pierwszym tematem jest _hasz_ sygnatury zdarzenia (np. `Deposit(address,bytes32,uint256)`), chyba że zadeklarowano zdarzenie ze specyfikatorem `anonymous`).
+  - `data`: `DATA` - nieindeksowane dane logu o zmiennej długości. (W języku _Solidity_: zero lub więcej 32-bajtowych nieindeksowanych argumentów logu.)
+  - `topics`: `Array of DATA` - Tablica od 0 do 4 32-bajtowych `DATA` indeksowanych argumentów logu. (W języku _Solidity_: Pierwszy temat to _hash_ podpisu zdarzenia (np. `Deposit(address,bytes32,uint256)`), chyba że zdarzenie zostało zadeklarowane ze specyfikatorem `anonymous`.)
 
 - **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":73}'
-// Result
+// Wynik
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1687,13 +1685,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### eth_getFilterLogs {#eth-getfilterlogs}
 
 Zwraca tablicę wszystkich logów pasujących do filtra o podanym identyfikatorze.
 
 **Parametry**
 
-1. `QUANTITY` - identyfikator filtra.
+1. `QUANTITY` - Identyfikator filtra.
 
 ```js
 params: [
@@ -1702,30 +1700,30 @@ params: [
 ```
 
 **Zwraca**
-Zobacz [eth_getFilterChanges](#eth_getfilterchanges)
+Zobacz [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-Wynik zobacz [eth_getFilterChanges](#eth_getfilterchanges)
+Wynik: zobacz [eth_getFilterChanges](#eth-getfilterchanges)
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs {#eth-getlogs}
 
-Zwraca tablicę wszystkich logów pasujących do danego obiektu filtra.
+Zwraca tablicę wszystkich logów pasujących do podanego obiektu filtru.
 
 **Parametry**
 
-1. `Object` – opcje filtra:
+1. `Object` - Opcje filtru:
 
-- `fromBlock`: `QUANTITY|TAG` - (opcjonalnie, domyślnie: `"latest"`) Liczba całkowita numeru bloku lub `"latest"` dla ostatniego proponowanego bloku, `"safe"` dla ostatniego bezpiecznego bloku, `"finalized"` dla ostatniego sfinalizowanego bloku lub `"pending"`, `"earliest"` dla transakcji, które nie są jeszcze w bloku.
-- `toBlock`: `QUANTITY|TAG` - (opcjonalnie, domyślnie: `"latest"`) Liczba całkowita numeru bloku lub `"latest"` dla ostatniego proponowanego bloku, `"safe"` dla ostatniego bezpiecznego bloku, `"finalized"` dla ostatniego sfinalizowanego bloku lub `"pending"`, `"earliest"` dla transakcji, które nie są jeszcze w bloku.
+- `fromBlock`: `QUANTITY|TAG` - (opcjonalnie, domyślnie: `"latest"`) Numer bloku jako liczba całkowita, lub `"latest"` dla ostatniego zaproponowanego bloku, `"safe"` dla najnowszego bezpiecznego bloku, `"finalized"` dla najnowszego sfinalizowanego bloku, lub `"pending"`, `"earliest"` dla transakcji, które nie są jeszcze w bloku.
+- `toBlock`: `QUANTITY|TAG` - (opcjonalnie, domyślnie: `"latest"`) Numer bloku jako liczba całkowita, lub `"latest"` dla ostatniego zaproponowanego bloku, `"safe"` dla najnowszego bezpiecznego bloku, `"finalized"` dla najnowszego sfinalizowanego bloku, lub `"pending"`, `"earliest"` dla transakcji, które nie są jeszcze w bloku.
 - `address`: `DATA|Array`, 20 bajtów - (opcjonalnie) Adres kontraktu lub lista adresów, z których powinny pochodzić logi.
-- `topics`: `Array of DATA` - (opcjonalnie) Tablica 32-bajtowych tematów `DATA`. Tematy zależą od kolejności. Każdy temat może być również tablicą DATA z opcjami "lub".
-- `blockHash`: `DATA`, 32 bajty - (opcjonalnie, **w przyszłości**) Wraz z dodaniem EIP-234, `blockHash` będzie nową opcją filtra, która ogranicza zwracane logi do pojedynczego bloku z 32-bajtowym haszem `blockHash`. Użycie `blockHash` jest równoznaczne z `fromBlock` = `toBlock` = numer bloku z haszem `blockHash`. Jeśli `blockHash` jest obecny w kryteriach filtra, to ani `fromBlock`, ani `toBlock` nie są dozwolone.
+- `topics`: `Array of DATA`, - (opcjonalnie) Tablica 32-bajtowych tematów `DATA`. Tematy zależą od kolejności. Każdy temat może być również tablicą DANYCH z opcjami „lub”.
+- `blockHash`: `DATA`, 32 bajty - (opcjonalnie, **w przyszłości**) Wraz z dodaniem EIP-234, `blockHash` będzie nową opcją filtru, która ogranicza zwracane logi do pojedynczego bloku o 32-bajtowym hashu `blockHash`. Użycie `blockHash` jest równoznaczne z `fromBlock` = `toBlock` = numer bloku z hashem `blockHash`. Jeśli `blockHash` jest obecny w kryteriach filtru, to ani `fromBlock`, ani `toBlock` nie są dozwolone.
 
 ```js
 params: [
@@ -1738,24 +1736,24 @@ params: [
 ```
 
 **Zwraca**
-Zobacz [eth_getFilterChanges](#eth_getfilterchanges)
+Zobacz [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Przykład**
 
 ```js
-// Request
+// Żądanie
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-Wynik zobacz [eth_getFilterChanges](#eth_getfilterchanges)
+Wynik zobacz w [eth_getFilterChanges](#eth-getfilterchanges)
 
 ## Przykład użycia {#usage-example}
 
 ### Wdrażanie kontraktu za pomocą JSON_RPC {#deploying-contract}
 
-Ta sekcja zawiera demonstrację, jak wdrożyć kontrakt, używając tylko interfejsu RPC. Istnieją alternatywne sposoby wdrażania kontraktów, w których ta złożoność jest ukryta — na przykład za pomocą bibliotek zbudowanych na bazie interfejsu RPC, takich jak [web3.js](https://web3js.readthedocs.io/) i [web3.py](https://github.com/ethereum/web3.py). Te abstrakcje są na ogół łatwiejsze do zrozumienia i mniej podatne na błędy, ale nadal warto zrozumieć, co dzieje się pod spodem.
+Ta sekcja zawiera demonstrację, jak wdrożyć kontrakt używając tylko interfejsu RPC. Istnieją alternatywne sposoby wdrażania kontraktów, w których ta złożoność jest ukryta — na przykład przy użyciu bibliotek zbudowanych na interfejsie RPC, takich jak [Web3.js](https://web3js.readthedocs.io/) i [Web3.py](https://github.com/ethereum/web3.py). Te abstrakcje są na ogół łatwiejsze do zrozumienia i mniej podatne na błędy, ale nadal warto wiedzieć, jak to działa od podszewki.
 
-Poniżej znajduje się prosty inteligentny kontrakt o nazwie `Multiply7`, który zostanie wdrożony za pomocą interfejsu JSON-RPC na węźle Ethereum. Ten samouczek zakłada, że czytelnik ma już uruchomiony węzeł Geth. Więcej informacji o węzłach i klientach jest dostępnych [tutaj](/developers/docs/nodes-and-clients/run-a-node). Proszę zapoznać się z dokumentacją poszczególnych [klientów](/developers/docs/nodes-and-clients/), aby dowiedzieć się, jak uruchomić HTTP JSON-RPC dla klientów innych niż Geth. Większość klientów domyślnie działa na `localhost:8545`.
+Poniżej znajduje się prosty inteligentny kontrakt o nazwie `Multiply7`, który zostanie wdrożony za pomocą interfejsu JSON-RPC w węźle Ethereum. Ten samouczek zakłada, że czytelnik ma już uruchomiony węzeł Geth. Więcej informacji o węzłach i klientach jest dostępnych [tutaj](/developers/docs/nodes-and-clients/run-a-node). Zapoznaj się z dokumentacją poszczególnych [klientów](/developers/docs/nodes-and-clients/), aby dowiedzieć się, jak uruchomić HTTP JSON-RPC dla klientów innych niż Geth. Większość klientów domyślnie nasłuchuje na `localhost:8545`.
 
 ```javascript
 contract Multiply7 {
@@ -1767,15 +1765,15 @@ contract Multiply7 {
 }
 ```
 
-Pierwszą rzeczą, którą należy zrobić, jest upewnienie się, że interfejs HTTP RPC jest włączony. Oznacza to, że przy uruchomieniu Geth podajemy flagę `--http`. W tym przykładzie używamy węzła Geth w prywatnym łańcuchu deweloperskim. Używając tego podejścia nie potrzebujemy etheru w prawdziwej sieci.
+Pierwszą rzeczą, którą należy zrobić, jest upewnienie się, że interfejs HTTP RPC jest włączony. Oznacza to, że podczas uruchamiania przekazujemy do Geth flagę `--http`. W tym przykładzie używamy węzła Geth w prywatnym łańcuchu deweloperskim. Dzięki takiemu podejściu nie potrzebujemy etheru w prawdziwej sieci.
 
 ```bash
 geth --http --dev console 2>>geth.log
 ```
 
-Spowoduje to uruchomienie interfejsu HTTP RPC pod adresem `http://localhost:8545`.
+Spowoduje to uruchomienie interfejsu HTTP RPC na `http://localhost:8545`.
 
-Możemy zweryfikować, czy interfejs działa, pobierając adres coinbase (uzyskując pierwszy adres z tablicy kont) i saldo za pomocą [curl](https://curl.se). Proszę zauważyć, że dane w tych przykładach będą się różnić na Twoim lokalnym węźle. Jeśli chcesz wypróbować te polecenia, zastąp parametry żądania w drugim żądaniu curl wynikiem zwróconym z pierwszego.
+Możemy sprawdzić, czy interfejs działa, pobierając adres Coinbase (uzyskując pierwszy adres z tablicy kont) i saldo za pomocą [curl](https://curl.se). Należy pamiętać, że dane w tych przykładach będą się różnić w Twoim lokalnym węźle. Jeśli chcesz wypróbować te polecenia, zastąp parametry żądania w drugim wywołaniu curl wynikiem zwróconym z pierwszego.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
@@ -1785,69 +1783,69 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-Ponieważ liczby są kodowane szesnastkowo, saldo jest zwracane w wei jako ciąg szesnastkowy. Jeśli chcemy mieć saldo w etherze jako liczbę, możemy użyć web3 z konsoli Geth.
+Ponieważ liczby są zakodowane szesnastkowo, saldo jest zwracane w wei jako ciąg szesnastkowy. Jeśli chcemy uzyskać saldo w etherze jako liczbę, możemy użyć web3 z konsoli Geth.
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-Teraz, gdy mamy trochę etheru w naszym prywatnym łańcuchu deweloperskim, możemy wdrożyć kontrakt. Pierwszym krokiem jest skompilowanie kontraktu Multiply7 do kodu bajtowego, który można wysłać do EVM. Aby zainstalować solc, kompilator Solidity, postępuj zgodnie z [dokumentacją Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Możesz chcieć użyć starszej wersji `solc`, aby dopasować ją do [wersji kompilatora użytej w naszym przykładzie](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
+Teraz, gdy na naszym prywatnym łańcuchu deweloperskim znajduje się trochę etheru, możemy wdrożyć kontrakt. Pierwszym krokiem jest kompilacja kontraktu Multiply7 do kodu bajtowego, który może zostać wysłany do EVM. Aby zainstalować solc, kompilator Solidity, postępuj zgodnie z [dokumentacją Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Możesz chcieć użyć starszej wersji `solc`, aby dopasować ją do [wersji kompilatora użytej w naszym przykładzie](https://github.com/ethereum/solidity/releases/tag/v0.4.20)).
 
-Następnym krokiem jest skompilowanie kontraktu Multiply7 do kodu bajtowego, który można wysłać do EVM.
+Kolejnym krokiem jest kompilacja kontraktu Multiply7 do kodu bajtowego, który może zostać wysłany do EVM.
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
 
 ======= <stdin>:Multiply7 =======
-Binarny:
+Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-Teraz, gdy mamy skompilowany kod, musimy określić, ile gazu kosztuje jego wdrożenie. Interfejs RPC ma metodę `eth_estimateGas`, która da nam szacunkową wartość.
+Teraz, gdy mamy skompilowany kod, musimy ustalić, ile gazu będzie kosztować jego wdrożenie. Interfejs RPC posiada metodę `eth_estimateGas`, która poda nam szacunkową wartość.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":5,"result":"0x1c31e"}
 ```
 
-I w końcu wdrożenie kontraktu.
+I wreszcie wdrożyć kontrakt.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "gas": "0x1c31e", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 6}' -H "Content-Type: application/json" localhost:8545
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-Transakcja jest akceptowana przez węzeł i zwracany jest hasz transakcji. Ten hasz może być użyty do śledzenia transakcji. Następnym krokiem jest ustalenie adresu, pod którym wdrożono nasz kontrakt. Każda wykonana transakcja utworzy potwierdzenie. To potwierdzenie zawiera różne informacje o transakcji, takie jak blok, w którym transakcja została uwzględniona, i ile gazu zużyła EVM. Jeśli transakcja
-tworzy kontrakt, będzie również zawierać adres kontraktu. Możemy pobrać potwierdzenie za pomocą metody RPC `eth_getTransactionReceipt`.
+Transakcja zostaje zaakceptowana przez węzeł i zwracany jest hash transakcji. Ten hash może posłużyć do śledzenia transakcji. Kolejnym krokiem jest określenie adresu, pod którym wdrożono nasz kontrakt. Każda wykonana transakcja utworzy pokwitowanie. To pokwitowanie zawiera różne informacje o transakcji, takie jak to, w którym bloku transakcja została zawarta i ile gazu zużyła maszyna EVM. Jeśli transakcja
+tworzy kontrakt, będzie również zawierać adres kontraktu. Możemy pobrać pokwitowanie za pomocą metody RPC `eth_getTransactionReceipt`.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-Nasz kontrakt został utworzony pod adresem `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Wynik null zamiast potwierdzenia oznacza, że transakcja nie została jeszcze uwzględniona w bloku. Poczekaj chwilę, sprawdź, czy Twój klient konsensusu jest uruchomiony i spróbuj ponownie.
+Nasz kontrakt został utworzony pod adresem `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Wynik null zamiast pokwitowania oznacza, że transakcja nie została jeszcze włączona do bloku. Poczekaj chwilę, sprawdź, czy Twój klient konsensusu jest uruchomiony i spróbuj ponownie.
 
 #### Interakcja z inteligentnymi kontraktami {#interacting-with-smart-contract}
 
 W tym przykładzie wyślemy transakcję za pomocą `eth_sendTransaction` do metody `multiply` kontraktu.
 
-`eth_sendTransaction` wymaga kilku argumentów, w szczególności `from`, `to` i `data`. `From` to adres publiczny naszego konta, a `to` to adres kontraktu. Argument `data` zawiera ładunek, który definiuje, która metoda musi zostać wywołana i z jakimi argumentami. W tym miejscu do gry wchodzi [ABI (binarny interfejs aplikacji)](https://docs.soliditylang.org/en/latest/abi-spec.html). ABI to plik JSON, który definiuje sposób definiowania i kodowania danych dla EVM.
+`eth_sendTransaction` wymaga kilku argumentów, w szczególności `from`, `to` i `data`. `From` to publiczny adres naszego konta, a `to` to adres kontraktu. Argument `data` zawiera ładunek (payload), który określa, jaka metoda ma zostać wywołana i z jakimi argumentami. W tym miejscu do gry wkracza [ABI (binarny interfejs aplikacji)](https://docs.soliditylang.org/en/latest/abi-spec.html). ABI to plik JSON, który określa, jak definiować i kodować dane dla EVM.
 
-Bajty ładunku definiują, która metoda w kontrakcie jest wywoływana. Są to pierwsze 4 bajty z haszu Keccak nazwy funkcji i typów jej argumentów, zakodowane szesnastkowo. Funkcja multiply akceptuje uint, który jest aliasem dla uint256. Pozostawia nas to z:
+Bajty ładunku określają, która metoda w kontrakcie jest wywoływana. Są to pierwsze 4 bajty z hasha Keccak nazwy funkcji i typów jej argumentów, zakodowane szesnastkowo. Funkcja multiply przyjmuje uint, który jest aliasem dla uint256. Daje nam to:
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
 // "0xc6888fa1"
 ```
 
-Następnym krokiem jest zakodowanie argumentów. Jest tylko jeden uint256, powiedzmy, o wartości 6. ABI ma sekcję, która określa, jak kodować typy uint256.
+Kolejnym krokiem jest zakodowanie argumentów. Mamy tylko jeden uint256, powiedzmy, wartość 6. ABI posiada sekcję, która określa, jak kodować typy uint256.
 
-`int<M>: enc(X)` jest kodowaniem X w uzupełnieniu do dwóch w porządku big-endian, dopełnionym po stronie wyższego rzędu (lewej) wartością 0xff dla ujemnego X i zerowymi bajtami dla dodatniego X, tak aby długość była wielokrotnością 32 bajtów.
+`int<M>: enc(X)` to kodowanie X w kodzie uzupełnień do dwóch w formacie big-endian, uzupełnione po stronie wyższego rzędu (z lewej) wartością 0xff dla ujemnego X i bajtami zerowymi dla dodatniego X, tak aby długość była wielokrotnością 32 bajtów.
 
-Koduje się to do `0000000000000000000000000000000000000000000000000000000000000006`.
+Koduje się to jako `0000000000000000000000000000000000000000000000000000000000000006`.
 
-Łącząc selektor funkcji i zakodowany argument, nasze dane będą wyglądać następująco: `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`.
+Łącząc selektor funkcji i zakodowany argument, nasze dane będą miały postać `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`.
 
 Można to teraz wysłać do węzła:
 
@@ -1856,7 +1854,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":8,"jsonrpc":"2.0","result":"0x759cf065cbc22e9d779748dc53763854e5376eea07409e590c990eafc0869d74"}
 ```
 
-Ponieważ transakcja została wysłana, zwrócony został jej hasz. Pobranie potwierdzenia daje:
+Ponieważ transakcja została wysłana, zwrócono hash transakcji. Pobranie pokwitowania daje:
 
 ```javascript
 {
@@ -1880,7 +1878,7 @@ Ponieważ transakcja została wysłana, zwrócony został jej hasz. Pobranie pot
 }
 ```
 
-Potwierdzenie zawiera log. Ten log został wygenerowany przez EVM podczas wykonywania transakcji i zawarty w potwierdzeniu. Funkcja `multiply` pokazuje, że zdarzenie `Print` zostało wywołane z wartością wejściową pomnożoną przez 7. Ponieważ argumentem dla zdarzenia `Print` był uint256, możemy go zdekodować zgodnie z regułami ABI, co pozostawi nas z oczekiwaną wartością dziesiętną 42. Oprócz danych warto zauważyć, że tematy można wykorzystać do określenia, które zdarzenie utworzyło log:
+Pokwitowanie zawiera log. Ten log został wygenerowany przez EVM podczas wykonywania transakcji i dołączony do pokwitowania. Funkcja `multiply` pokazuje, że zdarzenie `Print` zostało wywołane z wartością wejściową pomnożoną przez 7. Ponieważ argumentem dla zdarzenia `Print` był uint256, możemy go zdekodować zgodnie z regułami ABI, co da nam oczekiwaną wartość dziesiętną 42. Oprócz danych warto zauważyć, że tematy (topics) mogą być użyte do określenia, które zdarzenie utworzyło log:
 
 ```javascript
 web3.sha3("Print(uint256)")
@@ -1892,7 +1890,7 @@ To było tylko krótkie wprowadzenie do niektórych z najczęstszych zadań, dem
 ## Powiązane tematy {#related-topics}
 
 - [Specyfikacja JSON-RPC](http://www.jsonrpc.org/specification)
-- [Węzły i klienci](/developers/docs/nodes-and-clients/)
+- [Węzły i klienty](/developers/docs/nodes-and-clients/)
 - [API JavaScript](/developers/docs/apis/javascript/)
-- [Backendowe API](/developers/docs/apis/backend/)
-- [Klienci wykonawczy](/developers/docs/nodes-and-clients/#execution-clients)
+- [API backendowe](/developers/docs/apis/backend/)
+- [Klienty warstwy wykonawczej](/developers/docs/nodes-and-clients/#execution-clients)

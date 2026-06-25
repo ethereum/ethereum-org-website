@@ -155,7 +155,7 @@ import { Stack } from "@/components/ui/flex"
 `Stack` defaults to `flex flex-col gap-2`. It also has a `separator` prop:
 
 ```tsx
-<Stack separator={<Divider />}>{items}</Stack>
+<Stack separator={<HR />}>{items}</Stack>
 ```
 
 `HStack` (`flex-row items-center`) and `VStack` (`flex-col items-center`) are also available.
@@ -168,7 +168,7 @@ import { Stack } from "@/components/ui/flex"
 
 Three responsive design tokens back the standard page metrics; all are registered in `theme.css` so they generate Tailwind spacing utilities (full table in `references/tokens.md`):
 
-- **`--page-pad`** -- standard page/section horizontal padding: `--spacing(4)` (1rem) on mobile, `--spacing(8)` (2rem) from `md`. Use the `page` utilities (`px-page`, `p-page`, `pb-page`, `gap-page`, and the `*-page-2x` step) instead of hard-coding `px-4 md:px-8` or an arbitrary `px-(--page-pad)`. Keeps horizontal page padding consistent across pages.
+- **`--page-pad`** -- standard page/section horizontal padding: `--spacing(4)` (1rem) on mobile, `--spacing(8)` (2rem) from `md`. Use the `page` utilities (`px-page`, `p-page`, `pb-page`, `gap-page`, and the `*-page-2x` step) instead of hard-coding `px-4 md:px-8` or an arbitrary `px-(--page-pad)`. Keeps horizontal page padding consistent across pages. If you must hand-roll a full-bleed breakout, pair `px-page` with `-mx-page` (never a fixed `-mx-8`) so the negative margin tracks the responsive token and stays aligned across the `md` boundary -- but prefer a primitive's built-in full-bleed treatment (`Alert variant="banner"`, `HubHero`, `Card variant="ghost"`/`size="xs"`) over hand-rolling.
 - **`--space`** -- the `.flow` rhythm base (`--spacing(4)` mobile, `--spacing(6)` from `lg`). `.flow` applies it automatically; when you need the same unit *manually* (an explicit gap or margin outside a flow region), reach for the `space` utilities (`mt-space`, `gap-space`, `space-y-space-2x`, `mt-space-half`, `mt-space-3x`, ...) rather than re-deriving `mt-4 lg:mt-6`.
 - **`--hero-pad`** -- `PageHero`'s internal padding (`--spacing(8)`, 2rem). Use the `hero` utilities (`p-hero`, `px-hero`, `py-hero-2x`, `pe-hero`, `*-hero-half/-1.5x/-2x/-3x`) rather than arbitrary `p-(--pad)`/`calc(var(--pad)*1.5)`. Mostly internal to `PageHero`, but available for hero-adjacent chrome.
 

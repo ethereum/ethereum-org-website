@@ -1741,6 +1741,7 @@ const exchangesByCountry = {
   ],
   // India
   IN: [
+    "coinswitch",
     "coinmama",
     "simplex",
     "wyre",

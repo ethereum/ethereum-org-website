@@ -1,19 +1,19 @@
 ---
-title: Compiler des contrat intelligents
-description: "Explication de la raison d'une compilation et pourquoi elle est nécessaire pour les contrats intelligents"
+title: Compiler les contrats intelligents
+description: "Une explication des raisons pour lesquelles vous devez compiler les contrats intelligents et de ce que fait réellement la compilation."
 lang: fr
 incomplete: true
 ---
 
-Vous devez compiler vos contrats pour que votre application Web et la machine virtuelle Ethereum (EVM) puissent les comprendre.
+Vous devez compiler votre contrat afin que votre application web et la machine virtuelle Ethereum (EVM) puissent le comprendre.
 
 ## Prérequis {#prerequisites}
 
-Il peut être utile d'avoir lu notre introduction aux [contrats intelligents](/developers/docs/smart-contracts/) et à la [machine virtuelle Ethereum](/developers/docs/evm/) avant d'aborder la compilation.
+Il peut être utile d'avoir lu notre introduction aux [contrats intelligents](/developers/docs/smart-contracts/) et à la [machine virtuelle Ethereum](/developers/docs/evm/) avant de lire sur la compilation.
 
 ## L'EVM {#the-evm}
 
-Pour que l'[EVM](/developers/docs/evm/) puisse exécuter votre contrat, il doit être en **bytecode**. La compilation a pour effet de transformer ceci :
+Pour que l'[EVM](/developers/docs/evm/) puisse exécuter votre contrat, celui-ci doit être en **bytecode**. La compilation transforme ceci :
 
 ```solidity
 pragma solidity 0.4.24;
@@ -27,25 +27,25 @@ contract Greeter {
 }
 ```
 
-**en ceci :**
+**en cela**
 
 ```
 PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH29 0x100000000000000000000000000000000000000000000000000000000 SWAP1 DIV PUSH4 0xFFFFFFFF AND DUP1 PUSH4 0xCFAE3217 EQ PUSH2 0x46 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x52 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x5B PUSH2 0xD6 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 DUP1 PUSH1 0x20 ADD DUP3 DUP2 SUB DUP3 MSTORE DUP4 DUP2 DUP2 MLOAD DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP DUP1 MLOAD SWAP1 PUSH1 0x20 ADD SWAP1 DUP1 DUP4 DUP4 PUSH1 0x0 JUMPDEST DUP4 DUP2 LT ISZERO PUSH2 0x9B JUMPI DUP1 DUP3 ADD MLOAD DUP2 DUP5 ADD MSTORE PUSH1 0x20 DUP2 ADD SWAP1 POP PUSH2 0x80 JUMP JUMPDEST POP POP POP POP SWAP1 POP SWAP1 DUP2 ADD SWAP1 PUSH1 0x1F AND DUP1 ISZERO PUSH2 0xC8 JUMPI DUP1 DUP3 SUB DUP1 MLOAD PUSH1 0x1 DUP4 PUSH1 0x20 SUB PUSH2 0x100 EXP SUB NOT AND DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP JUMPDEST POP SWAP3 POP POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x60 PUSH1 0x40 DUP1 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x5 DUP2 MSTORE PUSH1 0x20 ADD PUSH32 0x48656C6C6F000000000000000000000000000000000000000000000000000000 DUP2 MSTORE POP SWAP1 POP SWAP1 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 SLT 0xec 0xe 0xf5 0xf8 SLT 0xc7 0x2d STATICCALL ADDRESS SHR 0xdb COINBASE 0xb1 BALANCE 0xe8 0xf8 DUP14 0xda 0xad DUP13 LOG1 0x4c 0xb4 0x26 0xc2 DELEGATECALL PUSH7 0x8994D3E002900
 ```
 
-C'est ce que l'on appelle des **codes d'opérations**. Les codes d'opérations sont les instructions de bas niveau que la machine virtuelle Ethereum (EVM) peut exécuter. Chaque code d'opération représente une opération spécifique, comme des opérations arithmétiques, des opérations logique, des manipulations de données, des flux de contrôle, etc.
+Ceux-ci sont appelés **codes d'opération**. Les codes d'opération de l'EVM sont les instructions de bas niveau que la machine virtuelle Ethereum (EVM) peut exécuter. Chaque code d'opération représente une opération spécifique, telle que des opérations arithmétiques, des opérations logiques, la manipulation de données, le flux de contrôle, etc.
 
-[En savoir plus sur les codes d'opérations](/developers/docs/evm/opcodes/)
+[En savoir plus sur les codes d'opération](/developers/docs/evm/opcodes/)
 
-## Applications Web {#web-applications}
+## Applications web {#web-applications}
 
-Le compilateur produira également l'**interface binaire d'application (ABI)**, dont vous avez besoin pour que votre application comprenne le contrat et appelle les fonctions du contrat.
+Le compilateur produira également l'**interface binaire d'application (ABI)** dont vous avez besoin pour que votre application comprenne le contrat et appelle les fonctions du contrat.
 
-L'ABI est un fichier JSON qui décrit le contrat déployé et ses fonctions de contrat intelligent. Cela aide à combler le fossé entre Web2 et Web3
+L'ABI est un fichier JSON qui décrit le contrat déployé et les fonctions de son contrat intelligent. Cela aide à faire le pont entre le Web2 et le Web3.
 
-Une [bibliothèque cliente JavaScript](/developers/docs/apis/javascript/) lira l'**ABI** pour vous permettre d'appeler votre contrat intelligent depuis l'interface de votre application web.
+Une [bibliothèque cliente JavaScript](/developers/docs/apis/javascript/) lira l'**ABI** afin que vous puissiez faire appel à votre contrat intelligent dans l'interface de votre application web.
 
-Vous trouverez ci-dessous l’ABI pour le contrat de jetons ERC-20. Un jeton ERC-20 est un jeton que vous pouvez échanger sur Ethereum.
+Ci-dessous se trouve l'ABI pour le contrat de jeton ERC-20. Un ERC-20 est un jeton que vous pouvez échanger sur Ethereum.
 
 ```json
 [
@@ -272,7 +272,7 @@ Vous trouverez ci-dessous l’ABI pour le contrat de jetons ERC-20. Un jeton ERC
 ]
 ```
 
-## En savoir plus {#further-reading}
+## Lectures complémentaires {#further-reading}
 
 - [Spécification de l'ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _– Solidity_
 
