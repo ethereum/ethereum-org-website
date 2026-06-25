@@ -60,6 +60,6 @@ Die meisten etablierten IDEs haben Plugins entwickelt, um die Ethereum-Entwicklu
 
 ## Weiterführende Informationen {#further-reading}
 
-- [Ethereum IDEs](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Liste von Alchemy über Ethereum-IDEs_
+- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Liste von Alchemy über Ethereum-IDEs_
 
 _Kennst du eine Community-Ressource, die dir geholfen hat? Bearbeite diese Seite und füge sie hinzu!_

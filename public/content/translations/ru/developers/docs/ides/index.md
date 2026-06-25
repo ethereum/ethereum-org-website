@@ -59,6 +59,6 @@ lang: ru
 
 ## Дополнительные материалы {#further-reading}
 
-- [Ethereum IDEs](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- список IDE для Ethereum от Alchemy_
+- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- список IDE для Ethereum от Alchemy_
 
 _Знаете ресурс сообщества, который вам пригодился? Измените эту страницу и добавьте его!_

@@ -59,6 +59,6 @@ lang: bn
 
 ## আরও পড়ুন {#further-reading}
 
-- [Ethereum IDEs](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Alchemy-র Ethereum IDEs-এর তালিকা_
+- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy-র Ethereum IDEs-এর তালিকা_
 
 _এমন কোনো কমিউনিটি রিসোর্স সম্পর্কে জানেন যা আপনাকে সাহায্য করেছে? এই পৃষ্ঠাটি সম্পাদনা করুন এবং এটি যোগ করুন!_

@@ -59,6 +59,6 @@ Většina zavedených IDE má vytvořené pluginy pro zlepšení vývojového pr
 
 ## Další čtení {#further-reading}
 
-- [Ethereum IDEs](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _– Seznam Ethereum IDE od Alchemy_
+- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _– Seznam Ethereum IDE od Alchemy_
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
