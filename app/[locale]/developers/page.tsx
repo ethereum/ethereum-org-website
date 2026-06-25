@@ -1,12 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
-import { ChildOnlyProp } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
 import ContentFeedback from "@/components/ContentFeedback"
 import { CopyButton } from "@/components/CopyToClipboard"
-import HubHero from "@/components/Hero/HubHero"
+import { HubHero } from "@/components/Hero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
@@ -25,9 +24,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
-import { VStack } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
-import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import { TagsInlineText } from "@/components/ui/tag"
@@ -46,7 +43,7 @@ import BuilderSwiper from "./_components/BuilderSwiper/lazy"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
-import DevelopersPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 import { getBuilderPaths, getHackathons, getVideoCourses } from "./utils"
 
 import resourcesBanner from "@/public/images/developers/resources-banner.png"
@@ -56,32 +53,6 @@ import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.
 import dogeImage from "@/public/images/doge-computer.png"
 import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
-
-const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
-
-const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
-
-const Column = (props: ChildOnlyProp) => (
-  <div className="me-8 mb-6 w-full flex-1 basis-1/3" {...props} />
-)
-const RightColumn = (props: ChildOnlyProp) => (
-  <div className="me-0 mb-6 w-full flex-1 basis-1/3" {...props} />
-)
-
-const Scroller = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => {
-  return (
-    <div
-      className={cn(
-        "relative flex w-screen gap-6 overflow-x-auto pb-2 max-2xl:-mx-8 max-2xl:px-8 max-sm:hidden lg:gap-8 2xl:w-full",
-        className
-      )}
-      {...props}
-    />
-  )
-}
 
 const WhyGrid = () => {
   const items = [
@@ -127,6 +98,28 @@ const WhyGrid = () => {
     </div>
   )
 }
+
+const DocsColumn = ({
+  heading,
+  links,
+  children,
+}: {
+  heading: string
+  links: { href: string; label: string; description: string }[]
+  children?: React.ReactNode
+}) => (
+  <div className="flow">
+    <h3>{heading}</h3>
+    {links.map(({ href, label, description }) => (
+      <div key={href}>
+        <InlineLink href={href}>{label}</InlineLink>
+        <p className="text-body-medium">{description}</p>
+      </div>
+    ))}
+    {children}
+  </div>
+)
+
 const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
@@ -154,28 +147,30 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <>
-      <DevelopersPageJsonLD
+      <PageJsonLD
         locale={locale}
         paths={paths}
         courses={courses}
         hackathons={hackathons}
         contributors={contributors}
       />
-      <VStack className="mx-auto my-0 w-full">
-        <HubHero
-          heroImg={heroImage}
-          header={`${t("page-developers-title-1")} ${t(
-            "page-developers-title-2"
-          )} ${t("page-developers-title-3")}`}
-          title={tCommon("developers")}
-          description={t("page-developers-subtitle")}
-        />
 
-        <MainArticle className="w-full space-y-12 px-8 py-4">
-          <Section id="build" className="space-y-4 py-10 md:py-12">
+      <HubHero
+        heroImg={heroImage}
+        header={`${t("page-developers-title-1")} ${t(
+          "page-developers-title-2"
+        )} ${t("page-developers-title-3")}`}
+        title={tCommon("developers")}
+        description={t("page-developers-subtitle")}
+      />
+
+      <main className="pb-page">
+        <MainArticle className="flow *:[section]:px-page">
+          {/* Get started */}
+          <Section id="build" className="py-space-3x">
             <h2>{t("page-developers-get-started")}</h2>
-
             <p>{t("page-developers-build-section-desc")}</p>
+
             {/* Desktop */}
             <Grid balanced={4} className="max-md:hidden">
               {paths.map((path, idx) => (
@@ -186,19 +181,18 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Grid>
 
             {/* Mobile */}
-            <div className="-mx-8 md:hidden">
+            <div className="-mx-page md:hidden">
               <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
             </div>
           </Section>
 
+          {/* Why build on Ethereum */}
           <Section
             id="why"
-            className={cn(
-              "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
-              "-mx-8 w-screen max-w-screen-2xl items-center bg-background-highlight px-8 py-10 md:py-20"
-            )}
+            data-flow="skip"
+            className="grid grid-cols-1 items-center gap-6 bg-background-highlight py-space-3x md:gap-10 lg:grid-cols-2"
           >
-            <div className="space-y-4">
+            <div className="flow">
               <h2>{t("page-developers-why-title")}</h2>
               <p>{t("page-developers-why-subtitle")}</p>
               <div className="flex flex-wrap gap-x-6 md:gap-x-8">
@@ -225,9 +219,11 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <WhyGrid />
           </Section>
 
+          {/* ETHSKILLS */}
           <Section
             id="ethskills"
-            className="flex flex-col gap-8 py-10 sm:items-center md:py-16"
+            data-flow="skip"
+            className="flex flex-col gap-8 py-space-3x sm:items-center"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -256,6 +252,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <ButtonLink
               href="https://ethskills.com/"
               size="lg"
+              className="max-md:w-full"
               customEventOptions={{
                 eventCategory: "ethskills",
                 eventAction: "click",
@@ -266,191 +263,192 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </ButtonLink>
           </Section>
 
+          {/* Resources */}
           <Section
             id="resources"
-            className={cn(
-              "grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8",
-              "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
-            )}
+            data-flow="skip"
+            className="bg-background-highlight py-space-3x"
           >
             <h2 className="sr-only">
               {t("page-developers-resources-section-title")}
             </h2>
 
-            {/* Quickstart your idea */}
-            <Card variant="nested" size="lg">
-              <CardHeader>
-                <CardBanner background="none" size="lg">
-                  <Image
-                    src={scaffoldDebugScreenshot}
-                    alt=""
-                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                    className="h-56 object-cover"
-                  />
-                </CardBanner>
-              </CardHeader>
-              <CardContent>
-                <CardTitle size="lg">
-                  {t("page-developers-jump-right-in-title")}
-                </CardTitle>
-                <CardParagraph>
-                  {t("page-developers-quickstart-scaffold-subtext")}{" "}
-                  <Link
-                    href="https://docs.scaffoldeth.io/"
+            <Grid columns={2} size="wide">
+              {/* Quickstart your idea */}
+              <Card variant="nested" size="lg">
+                <CardHeader>
+                  <CardBanner background="none" size="lg">
+                    <Image
+                      src={scaffoldDebugScreenshot}
+                      alt=""
+                      sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                      className="h-56 object-cover"
+                    />
+                  </CardBanner>
+                </CardHeader>
+                <CardContent>
+                  <CardTitle size="lg">
+                    {t("page-developers-jump-right-in-title")}
+                  </CardTitle>
+                  <CardParagraph>
+                    {t("page-developers-quickstart-scaffold-subtext")}{" "}
+                    <InlineLink
+                      href="https://docs.scaffoldeth.io/"
+                      customEventOptions={{
+                        eventCategory: "mid_boxes",
+                        eventAction: "click",
+                        eventName: "scaffold-docs",
+                      }}
+                      rel="noopener"
+                    >
+                      {t("page-developers-quickstart-scaffold-docs")}
+                    </InlineLink>
+                  </CardParagraph>
+
+                  <div className="flex items-center rounded-lg border bg-background px-3 py-1">
+                    <span className="flex-1 font-mono text-sm">
+                      npx create-eth@latest
+                    </span>
+                    <CopyButton
+                      message="npx create-eth@latest"
+                      size="sm"
+                      customEventOptions={{
+                        eventCategory: "mid_boxes",
+                        eventAction: "click",
+                        eventName: "scaffold-npx-copy",
+                      }}
+                    />
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <InlineLink
+                    href="https://docs.scaffoldeth.io/llms-full.txt"
                     customEventOptions={{
                       eventCategory: "mid_boxes",
                       eventAction: "click",
-                      eventName: "scaffold-docs",
+                      eventName: "scaffold-llms-full",
                     }}
-                    rel="noopener"
                   >
-                    {t("page-developers-quickstart-scaffold-docs")}
-                  </Link>
-                </CardParagraph>
+                    Scaffold-ETH 2 <code>llms-full.txt</code>
+                  </InlineLink>
+                </CardFooter>
+              </Card>
 
-                <div className="flex items-center rounded-lg border bg-background px-3 py-1">
-                  <span className="flex-1 font-mono text-sm">
-                    npx create-eth@latest
-                  </span>
-                  <CopyButton
-                    message="npx create-eth@latest"
-                    size="sm"
+              {/* Get help */}
+              <Card variant="nested" size="lg">
+                <CardHeader>
+                  <CardBanner background="none" size="lg">
+                    <Image
+                      src={stackExchangeScreenshot}
+                      alt=""
+                      sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                      className="object-top"
+                    />
+                  </CardBanner>
+                </CardHeader>
+                <CardContent>
+                  <CardTitle size="lg">
+                    {t("page-developers-get-help-title")}
+                  </CardTitle>
+                  <CardParagraph>
+                    {t("page-developers-get-help-desc")}
+                  </CardParagraph>
+                </CardContent>
+                <CardFooter>
+                  <ButtonLink
+                    variant="outline"
+                    isSecondary
+                    href="https://ethereum.stackexchange.com/"
                     customEventOptions={{
                       eventCategory: "mid_boxes",
                       eventAction: "click",
-                      eventName: "scaffold-npx-copy",
+                      eventName: "stack-exchange",
                     }}
-                  />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Link
-                  href="https://docs.scaffoldeth.io/llms-full.txt"
-                  customEventOptions={{
-                    eventCategory: "mid_boxes",
-                    eventAction: "click",
-                    eventName: "scaffold-llms-full",
-                  }}
-                >
-                  Scaffold-ETH 2 <code>llms-full.txt</code>
-                </Link>
-              </CardFooter>
-            </Card>
+                  >
+                    {t("page-developers-stack-exchange")}
+                  </ButtonLink>
+                </CardFooter>
+              </Card>
 
-            {/* Get help */}
-            <Card variant="nested" size="lg">
-              <CardHeader>
-                <CardBanner background="none" size="lg">
-                  <Image
-                    src={stackExchangeScreenshot}
-                    alt=""
-                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                    className="object-top"
-                  />
-                </CardBanner>
-              </CardHeader>
-              <CardContent>
-                <CardTitle size="lg">
-                  {t("page-developers-get-help-title")}
-                </CardTitle>
-                <CardParagraph>
-                  {t("page-developers-get-help-desc")}
-                </CardParagraph>
-              </CardContent>
-              <CardFooter>
-                <ButtonLink
-                  variant="outline"
-                  isSecondary
-                  href="https://ethereum.stackexchange.com/"
-                  customEventOptions={{
-                    eventCategory: "mid_boxes",
-                    eventAction: "click",
-                    eventName: "stack-exchange",
-                  }}
-                >
-                  {t("page-developers-stack-exchange")}
-                </ButtonLink>
-              </CardFooter>
-            </Card>
+              {/* Resources */}
+              <Card variant="nested" size="lg">
+                <CardHeader>
+                  <CardBanner background="none" size="lg" fit="contain">
+                    <Image
+                      src={resourcesBanner}
+                      alt=""
+                      sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                    />
+                  </CardBanner>
+                </CardHeader>
+                <CardContent>
+                  <CardTitle size="lg">
+                    {t("page-developers-resources-title")}
+                  </CardTitle>
+                  <CardParagraph>
+                    {t("page-developers-resources-desc")}
+                  </CardParagraph>
+                </CardContent>
+                <CardFooter>
+                  <ButtonLink
+                    variant="outline"
+                    isSecondary
+                    href="/developers/learning-tools/"
+                    customEventOptions={{
+                      eventCategory: "mid_boxes",
+                      eventAction: "click",
+                      eventName: "play-with-code",
+                    }}
+                  >
+                    {t("page-developers-play-code")}
+                  </ButtonLink>
+                </CardFooter>
+              </Card>
 
-            {/* Resources */}
-            <Card variant="nested" size="lg">
-              <CardHeader>
-                <CardBanner background="none" size="lg" fit="contain">
-                  <Image
-                    src={resourcesBanner}
-                    alt=""
-                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                  />
-                </CardBanner>
-              </CardHeader>
-              <CardContent>
-                <CardTitle size="lg">
-                  {t("page-developers-resources-title")}
-                </CardTitle>
-                <CardParagraph>
-                  {t("page-developers-resources-desc")}
-                </CardParagraph>
-              </CardContent>
-              <CardFooter>
-                <ButtonLink
-                  variant="outline"
-                  isSecondary
-                  href="/developers/learning-tools/"
-                  customEventOptions={{
-                    eventCategory: "mid_boxes",
-                    eventAction: "click",
-                    eventName: "play-with-code",
-                  }}
-                >
-                  {t("page-developers-play-code")}
-                </ButtonLink>
-              </CardFooter>
-            </Card>
-
-            {/* Tutorials */}
-            <Card variant="nested" size="lg">
-              <CardHeader>
-                <CardBanner background="none" size="lg" fit="contain">
-                  <Image
-                    src={tutorialTagsBanner}
-                    // src={resourcesBanner}
-                    alt=""
-                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                  />
-                </CardBanner>
-              </CardHeader>
-              <CardContent>
-                <CardTitle size="lg">
-                  {t("page-developers-tutorials-title")}
-                </CardTitle>
-                <CardParagraph>
-                  {t("page-developers-tutorials-desc")}
-                </CardParagraph>
-              </CardContent>
-              <CardFooter>
-                <ButtonLink
-                  variant="outline"
-                  isSecondary
-                  href="/developers/tutorials/"
-                  customEventOptions={{
-                    eventCategory: "mid_boxes",
-                    eventAction: "click",
-                    eventName: "view-tutorials",
-                  }}
-                >
-                  {t("page-developers-learn-tutorials-cta")}
-                </ButtonLink>
-              </CardFooter>
-            </Card>
+              {/* Tutorials */}
+              <Card variant="nested" size="lg">
+                <CardHeader>
+                  <CardBanner background="none" size="lg" fit="contain">
+                    <Image
+                      src={tutorialTagsBanner}
+                      alt=""
+                      sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                    />
+                  </CardBanner>
+                </CardHeader>
+                <CardContent>
+                  <CardTitle size="lg">
+                    {t("page-developers-tutorials-title")}
+                  </CardTitle>
+                  <CardParagraph>
+                    {t("page-developers-tutorials-desc")}
+                  </CardParagraph>
+                </CardContent>
+                <CardFooter>
+                  <ButtonLink
+                    variant="outline"
+                    isSecondary
+                    href="/developers/tutorials/"
+                    customEventOptions={{
+                      eventCategory: "mid_boxes",
+                      eventAction: "click",
+                      eventName: "view-tutorials",
+                    }}
+                  >
+                    {t("page-developers-learn-tutorials-cta")}
+                  </ButtonLink>
+                </CardFooter>
+              </Card>
+            </Grid>
           </Section>
 
-          <Section id="courses" className="space-y-4 py-6">
+          {/* Video courses */}
+          <Section id="courses">
             <h2>{t("page-developers-video-courses-title")}</h2>
             <p>{t("page-developers-video-courses-desc")}</p>
 
-            {/* DESKTOP */}
-            <Scroller>
+            {/* Desktop */}
+            <div className="relative flex w-screen gap-6 overflow-x-auto pb-2 max-2xl:-mx-page max-2xl:px-page max-sm:hidden lg:gap-8 2xl:w-full">
               {courses.map((course, idx) => (
                 <VideoCourseCard
                   key={idx}
@@ -458,20 +456,20 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   className="w-[20%] max-w-[271px] flex-1 max-2xl:min-w-[20rem] xl:w-full"
                 />
               ))}
-            </Scroller>
+            </div>
 
-            {/* MOBILE */}
-            <div className="w-screen max-xl:-ms-8 sm:hidden xl:w-full">
+            {/* Mobile */}
+            <div className="w-screen max-xl:-ms-page sm:hidden xl:w-full">
               <VideoCourseSwiper courses={courses} />
             </div>
           </Section>
 
           {recentPosts.length > 0 && (
-            <Section id="blog" className="space-y-4 py-10 md:py-12">
+            <Section id="blog">
               <h2>{t("page-developers-blog-title")}</h2>
               <p>{t("page-developers-blog-desc")}</p>
 
-              <EdgeScrollContainer className="[--edge-spacing:2rem]">
+              <EdgeScrollContainer>
                 {recentPosts.map((post) => (
                   <EdgeScrollItem
                     key={post.href}
@@ -533,6 +531,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               <div className="flex justify-center max-sm:*:w-full">
                 <ButtonLink
                   href="/latest/"
+                  className="max-md:w-full"
                   customEventOptions={{
                     eventCategory: "builder-blog",
                     eventAction: "click",
@@ -545,133 +544,153 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Section>
           )}
 
+          {/* Explore the documentation */}
           <Section
             id="docs"
-            className={cn(
-              "shadow-table-item-box",
-              "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
-            )}
+            className="bg-background-highlight py-space-3x shadow-table-item-box"
           >
-            <div className="w-full scroll-mt-24 px-8 py-4">
+            <div className="flow">
               <h2>{t("page-developers-explore-documentation")}</h2>
               <p>{t("page-developers-docs-section-desc")}</p>
             </div>
 
-            <div className="flex flex-col items-start justify-between px-8 py-0 lg:flex-row">
-              <Column>
-                <H3>{t("page-developers-docs-introductions")}</H3>
-                <InlineLink href="/developers/docs/intro-to-ethereum/">
-                  {t("page-developers-intro-eth-link")}
-                </InlineLink>
-                <Text>{t("page-developers-into-eth-desc")}</Text>
-
-                <InlineLink href="/developers/docs/intro-to-ether/">
-                  {t("page-developers-intro-ether-link")}
-                </InlineLink>
-                <Text>{t("page-developers-intro-ether-desc")}</Text>
-
-                <InlineLink href="/developers/docs/dapps/">
-                  {t("page-developers-intro-dapps-link")}
-                </InlineLink>
-                <Text>{t("page-developers-intro-dapps-desc")}</Text>
-
-                <InlineLink href="/developers/docs/ethereum-stack/">
-                  {t("page-developers-intro-stack")}
-                </InlineLink>
-                <Text>{t("page-developers-intro-stack-desc")}</Text>
-
-                <InlineLink href="/developers/docs/web2-vs-web3/">
-                  {t("page-developers-web3-link")}
-                </InlineLink>
-                <Text>{t("page-developers-web3-desc")}</Text>
-
-                <InlineLink href="/developers/docs/programming-languages/">
-                  {t("page-developers-languages")}
-                </InlineLink>
-                <Text>{t("page-developers-language-desc")}</Text>
+            <Grid columns={3}>
+              <DocsColumn
+                heading={t("page-developers-docs-introductions")}
+                links={[
+                  {
+                    href: "/developers/docs/intro-to-ethereum/",
+                    label: t("page-developers-intro-eth-link"),
+                    description: t("page-developers-into-eth-desc"),
+                  },
+                  {
+                    href: "/developers/docs/intro-to-ether/",
+                    label: t("page-developers-intro-ether-link"),
+                    description: t("page-developers-intro-ether-desc"),
+                  },
+                  {
+                    href: "/developers/docs/dapps/",
+                    label: t("page-developers-intro-dapps-link"),
+                    description: t("page-developers-intro-dapps-desc"),
+                  },
+                  {
+                    href: "/developers/docs/ethereum-stack/",
+                    label: t("page-developers-intro-stack"),
+                    description: t("page-developers-intro-stack-desc"),
+                  },
+                  {
+                    href: "/developers/docs/web2-vs-web3/",
+                    label: t("page-developers-web3-link"),
+                    description: t("page-developers-web3-desc"),
+                  },
+                  {
+                    href: "/developers/docs/programming-languages/",
+                    label: t("page-developers-languages"),
+                    description: t("page-developers-language-desc"),
+                  },
+                ]}
+              >
                 <Image
-                  className="mt-16 hidden max-w-[400px] lg:block"
+                  className="hidden max-w-100 lg:block"
                   src={dogeImage}
                   alt={t("page-assets-doge")}
                   sizes="400px"
                 />
-              </Column>
-              <Column>
-                <H3>{t("page-developers-fundamentals")}</H3>
-                <InlineLink href="/developers/docs/accounts/">
-                  {t("page-developers-accounts-link")}
-                </InlineLink>
-                <Text>{t("page-developers-account-desc")}</Text>
+              </DocsColumn>
 
-                <InlineLink href="/developers/docs/transactions/">
-                  {t("page-developers-transactions-link")}
-                </InlineLink>
-                <Text>{t("page-developers-transactions-desc")}</Text>
+              <DocsColumn
+                heading={t("page-developers-fundamentals")}
+                links={[
+                  {
+                    href: "/developers/docs/accounts/",
+                    label: t("page-developers-accounts-link"),
+                    description: t("page-developers-account-desc"),
+                  },
+                  {
+                    href: "/developers/docs/transactions/",
+                    label: t("page-developers-transactions-link"),
+                    description: t("page-developers-transactions-desc"),
+                  },
+                  {
+                    href: "/developers/docs/blocks/",
+                    label: t("page-developers-blocks-link"),
+                    description: t("page-developers-block-desc"),
+                  },
+                  {
+                    href: "/developers/docs/evm/",
+                    label: t("page-developers-evm-link"),
+                    description: t("page-developers-evm-desc"),
+                  },
+                  {
+                    href: "/developers/docs/gas/",
+                    label: t("page-developers-gas-link"),
+                    description: t("page-developers-gas-desc"),
+                  },
+                  {
+                    href: "/developers/docs/nodes-and-clients/",
+                    label: t("page-developers-node-clients-link"),
+                    description: t("page-developers-node-clients-desc"),
+                  },
+                  {
+                    href: "/developers/docs/networks/",
+                    label: t("page-developers-networks-link"),
+                    description: t("page-developers-networks-desc"),
+                  },
+                ]}
+              />
 
-                <InlineLink href="/developers/docs/blocks/">
-                  {t("page-developers-blocks-link")}
-                </InlineLink>
-                <Text>{t("page-developers-block-desc")}</Text>
-
-                <InlineLink href="/developers/docs/evm/">
-                  {t("page-developers-evm-link")}
-                </InlineLink>
-                <Text>{t("page-developers-evm-desc")}</Text>
-
-                <InlineLink href="/developers/docs/gas/">
-                  {t("page-developers-gas-link")}
-                </InlineLink>
-                <Text>{t("page-developers-gas-desc")}</Text>
-
-                <InlineLink href="/developers/docs/nodes-and-clients/">
-                  {t("page-developers-node-clients-link")}
-                </InlineLink>
-                <Text>{t("page-developers-node-clients-desc")}</Text>
-
-                <InlineLink href="/developers/docs/networks/">
-                  {t("page-developers-networks-link")}
-                </InlineLink>
-                <Text>{t("page-developers-networks-desc")}</Text>
-              </Column>
-              <RightColumn>
-                <H3>{t("page-developers-stack")}</H3>
-                <InlineLink href="/developers/docs/smart-contracts/">
-                  {t("page-developers-smart-contracts-link")}
-                </InlineLink>
-                <Text>{t("page-developers-smart-contracts-desc")}</Text>
-                <InlineLink href="/developers/docs/frameworks/">
-                  {t("page-developers-frameworks-link")}
-                </InlineLink>
-                <Text>{t("page-developers-frameworks-desc")}</Text>
-                <InlineLink href="/developers/docs/apis/javascript/">
-                  {t("page-developers-js-libraries-link")}
-                </InlineLink>
-                <Text>{t("page-developers-js-libraries-desc")}</Text>
-                <InlineLink href="/developers/docs/apis/backend/">
-                  {t("page-developers-api-link")}
-                </InlineLink>
-                <Text>{t("page-developers-api-desc")}</Text>
-                <InlineLink href="/developers/docs/data-and-analytics/block-explorers/">
-                  {t("page-developers-block-explorers-link")}
-                </InlineLink>
-                <Text>{t("page-developers-block-explorers-desc")}</Text>
-                <InlineLink href="/developers/docs/smart-contracts/security/">
-                  {t("page-developers-smart-contract-security-link")}
-                </InlineLink>
-                <Text>{t("page-developers-smart-contract-security-desc")}</Text>
-                <InlineLink href="/developers/docs/storage/">
-                  {t("page-developers-storage-link")}
-                </InlineLink>
-                <Text>{t("page-developers-storage-desc")}</Text>
-                <InlineLink href="/developers/docs/ides/">
-                  {t("page-developers-dev-env-link")}
-                </InlineLink>
-                <Text>{t("page-developers-dev-env-desc")}</Text>
-              </RightColumn>
-            </div>
+              <DocsColumn
+                heading={t("page-developers-stack")}
+                links={[
+                  {
+                    href: "/developers/docs/smart-contracts/",
+                    label: t("page-developers-smart-contracts-link"),
+                    description: t("page-developers-smart-contracts-desc"),
+                  },
+                  {
+                    href: "/developers/docs/frameworks/",
+                    label: t("page-developers-frameworks-link"),
+                    description: t("page-developers-frameworks-desc"),
+                  },
+                  {
+                    href: "/developers/docs/apis/javascript/",
+                    label: t("page-developers-js-libraries-link"),
+                    description: t("page-developers-js-libraries-desc"),
+                  },
+                  {
+                    href: "/developers/docs/apis/backend/",
+                    label: t("page-developers-api-link"),
+                    description: t("page-developers-api-desc"),
+                  },
+                  {
+                    href: "/developers/docs/data-and-analytics/block-explorers/",
+                    label: t("page-developers-block-explorers-link"),
+                    description: t("page-developers-block-explorers-desc"),
+                  },
+                  {
+                    href: "/developers/docs/smart-contracts/security/",
+                    label: t("page-developers-smart-contract-security-link"),
+                    description: t(
+                      "page-developers-smart-contract-security-desc"
+                    ),
+                  },
+                  {
+                    href: "/developers/docs/storage/",
+                    label: t("page-developers-storage-link"),
+                    description: t("page-developers-storage-desc"),
+                  },
+                  {
+                    href: "/developers/docs/ides/",
+                    label: t("page-developers-dev-env-link"),
+                    description: t("page-developers-dev-env-desc"),
+                  },
+                ]}
+              />
+            </Grid>
           </Section>
 
-          <Section id="hackathons" className="space-y-4 py-10 md:py-12">
+          {/* Hackathons */}
+          <Section id="hackathons">
             <h2>{t("page-developers-hackathons-title")}</h2>
             <p>{t("page-developers-hackathons-desc")}</p>
 
@@ -729,9 +748,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               })}
             </EdgeScrollContainer>
 
-            <div className="flex justify-center">
+            <div
+              className={cn("flex", hackathons.length > 0 && "justify-center")}
+            >
               <ButtonLink
                 href="https://ethglobal.com/"
+                className="max-md:w-full"
                 customEventOptions={{
                   eventCategory: "hackathons",
                   eventAction: "click",
@@ -743,7 +765,8 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </div>
           </Section>
 
-          <Section id="founders" className="py-10 md:py-12">
+          {/* Founders */}
+          <Section id="founders">
             <div
               className={cn(
                 "mx-auto max-w-screen-lg",
@@ -786,8 +809,11 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
           </Section>
         </MainArticle>
 
-        <ContentFeedback />
-      </VStack>
+        {/* End-of-page actions */}
+        <div className="px-page">
+          <ContentFeedback />
+        </div>
+      </main>
     </>
   )
 }
