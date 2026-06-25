@@ -121,6 +121,7 @@ _Vylepšení Ethereum Pectra: Co potřebují stakeři vědět — Blockdaemon_
 
 - [Plán rozvoje Etherea](/roadmap/)
 - [Často kladené otázky o Pectra](https://epf.wiki/#/wiki/pectra-faq)
+- [Informační stránka Pectra.wtf](https://pectra.wtf)
 - [Jak Pectra vylepšuje zkušenost stakerů](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Informační stránka o EIP7702](https://eip7702.io/)
 - [Vývojářské sítě Pectra](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)

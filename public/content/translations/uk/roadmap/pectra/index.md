@@ -121,6 +121,7 @@ _Оновлення Ethereum Pectra: що потрібно знати стейк
 
 - [Дорожня карта Ethereum](/roadmap/)
 - [Часті питання про Pectra](https://epf.wiki/#/wiki/pectra-faq)
+- [Інформаційна сторінка Pectra.wtf](https://pectra.wtf)
 - [Як Pectra покращує досвід стейкерів](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Інформаційна сторінка EIP7702](https://eip7702.io/)
 - [Девнети Pectra](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

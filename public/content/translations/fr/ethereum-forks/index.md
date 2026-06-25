@@ -116,6 +116,7 @@ Améliorations de l'efficacité et de la sécurité du protocole :
 </ul>
 </ExpandableCard>
 
+- [Pectra.wtf](https://pectra.wtf)
 - [Comment Pectra améliorera l'expérience de la mise en jeu](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Lire les spécifications de la mise à niveau Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
 - [FAQ sur Prague-Electra (« Pectra »)](/roadmap/pectra/)

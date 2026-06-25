@@ -121,6 +121,7 @@ _이더리움 Pectra 업그레이드: 스테이커가 알아야 할 사항 — B
 
 - [이더리움 로드맵](/roadmap/)
 - [Pectra FAQ](https://epf.wiki/#/wiki/pectra-faq)
+- [Pectra.wtf 정보 페이지](https://pectra.wtf)
 - [Pectra가 스테이커 경험을 향상시키는 방법](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 정보 페이지](https://eip7702.io/)
 - [Pectra 개발넷](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)

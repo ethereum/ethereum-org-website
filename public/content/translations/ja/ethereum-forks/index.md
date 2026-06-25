@@ -116,6 +116,7 @@ Ethereumの基礎となるソフトウェアは二つに分けることができ
 </ul>
 </ExpandableCard>
 
+- [Pectra.wtf](https://pectra.wtf)
 - [Pectraがステーキング体験を向上させる方法](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Electraアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Prague-Electra(「Pectra」) FAQ](/roadmap/pectra/)

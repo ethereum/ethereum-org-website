@@ -116,6 +116,7 @@ Protokol verimliliği ve güvenlik iyileştirmeleri:
 </ul>
 </ExpandableCard>
 
+- [Pectra.wtf](https://pectra.wtf)
 - [Pectra hisseleme deneyimini nasıl geliştirecek?](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Electra yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Prag-Electra ("Pectra") SSS](/roadmap/pectra/)

@@ -116,6 +116,7 @@ The software that underlies Ethereum is composed of two halves, known as the [ex
 </ul>
 </ExpandableCard>
 
+- [Pectra.wtf](https://pectra.wtf)
 - [Як Pectra покращить досвід стейкінгу](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Ознайомтеся зі специфікаціями оновлення Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [ЧаПи про Prague-Electra («Pectra»)](/roadmap/pectra/)

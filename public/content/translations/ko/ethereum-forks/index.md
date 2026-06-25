@@ -117,6 +117,7 @@ sidebarDepth: 1
 </ul>
 </ExpandableCard>
 
+- [Pectra.wtf](https://pectra.wtf)
 - [Pectra가 스테이킹 경험을 향상시키는 방법](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [일렉트라 업그레이드 사양 읽기](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
 - [프라하-일렉트라("펙트라") FAQ](/roadmap/pectra/)

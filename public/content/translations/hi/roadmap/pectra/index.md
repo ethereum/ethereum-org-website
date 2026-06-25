@@ -121,6 +121,7 @@ _इथेरियम पेक्ट्रा अपग्रेड: स्ट
 
 - [इथेरियम रोडमैप](/roadmap/)
 - [पेक्ट्रा अक्सर पूछे जाने वाले प्रश्न](https://epf.wiki/#/wiki/pectra-faq)
+- [पेक्ट्रा.wtf जानकारी पृष्ठ](https://pectra.wtf)
 - [पेक्ट्रा स्टेकर के अनुभव को कैसे बेहतर बनाता है](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 जानकारी पृष्ठ](https://eip7702.io/)
 - [पेक्ट्रा डेवनेट](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)

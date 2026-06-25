@@ -116,6 +116,7 @@ Prague-Electra（“Pectra”）升级包括对以太坊协议的几项改进，
 </ul>
 </ExpandableCard>
 
+- [Pectra.wtf](https://pectra.wtf)
 - [Pectra 将如何提升质押体验](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [阅读 Electra 升级规范](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [布拉格-Electra（“Pectra”）升级常见问题解答](/roadmap/pectra/)
