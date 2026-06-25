@@ -83,7 +83,7 @@ Cette fonction est une `view`, ce qui signifie qu'elle peut lire l'état de la b
 
 ### Événements {#events}
 
-Des [événements](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts) sont émis pour informer les utilisateurs et les serveurs en dehors de la blockchain. Notez que le contenu des événements n'est pas disponible pour les contrats sur la blockchain.
+Des [événements](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) sont émis pour informer les utilisateurs et les serveurs en dehors de la blockchain. Notez que le contenu des événements n'est pas disponible pour les contrats sur la blockchain.
 
 ```python
 # @dev Émet lorsque la propriété d'un NFT change par n'importe quel mécanisme. Cet événement est émis lorsque des NFT sont

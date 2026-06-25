@@ -95,7 +95,7 @@ Tato funkce je `view`, což znamená, že může číst stav blockchainu, ale ne
 
 ### Události {#events}
 
-[Události](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts)
+[Události](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e)
 se vysílají za účelem informování uživatelů a serverů mimo blockchain o událostech. Všimněte si, že obsah událostí
 není dostupný pro kontrakty na blockchainu.
 

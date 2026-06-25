@@ -96,7 +96,7 @@ Hàm này là một `chế độ xem`, có nghĩa là nó có thể đọc trạ
 
 ### Sự kiện {#events}
 
-[Các sự kiện](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts)
+[Các sự kiện](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e)
 được phát ra để thông báo cho người dùng và các máy chủ bên ngoài chuỗi khối về các sự kiện. Lưu ý rằng nội dung của các sự kiện
 không có sẵn cho các hợp đồng trên chuỗi khối.
 

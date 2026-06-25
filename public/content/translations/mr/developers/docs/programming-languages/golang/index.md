@@ -81,4 +81,4 @@ incomplete: true
 ## इतर एकत्रित याद्या {#other-aggregated-lists}
 
 - [Awesome इथेरियम](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: इथेरियम डेव्हलपर साधनांची एक निश्चित सूची](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: इथेरियम डेव्हलपर साधनांची एक निश्चित सूची](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub सोर्स](https://github.com/ConsenSys/ethereum-developer-tools-list)

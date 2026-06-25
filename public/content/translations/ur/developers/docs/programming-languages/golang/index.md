@@ -81,4 +81,4 @@ incomplete: true
 ## دیگر مجموعی فہرستیں {#other-aggregated-lists}
 
 - [شاندار ایتھریم](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: ایتھریم ڈیولپر ٹولز کی ایک حتمی فہرست](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: ایتھریم ڈیولپر ٹولز کی ایک حتمی فہرست](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub سورس](https://github.com/ConsenSys/ethereum-developer-tools-list)

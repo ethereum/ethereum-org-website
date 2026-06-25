@@ -81,7 +81,7 @@ Questa funzione è una `view`, ovvero può leggere lo stato della blockchain, ma
 
 ### Eventi {#events}
 
-Gli [eventi](https://consensys.io/blog/guide-to-events-and-logs-in-ethereum-smart-contracts) sono emessi per informare gli utenti e i server al di fuori della blockchain degli eventi. Nota che il contenuto degli eventi non è disponibile per i contratti sulla blockchain.
+Gli [eventi](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) sono emessi per informare gli utenti e i server al di fuori della blockchain degli eventi. Nota che il contenuto degli eventi non è disponibile per i contratti sulla blockchain.
 
 ```python
 # @dev Emits when ownership of any NFT changes by any mechanism. This event emits when NFTs are

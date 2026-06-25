@@ -81,4 +81,4 @@ Tìm kiếm thêm tài nguyên? Tham khảo [ethereum.org/developers](/developer
 ## Các danh sách tổng hợp khác {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: Danh sách đầy đủ các công cụ dành cho nhà phát triển Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: Danh sách đầy đủ các công cụ dành cho nhà phát triển Ethereum](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Nguồn trên GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)

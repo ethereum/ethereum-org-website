@@ -277,6 +277,7 @@ Ngoài ra, không phải lúc nào các trình xác minh chương trình cũng c
 ## Đọc thêm {#further-reading}
 
 - [Cách Hoạt động của Xác minh Hình thức đối với Hợp đồng Thông minh](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
+- [Cách Xác minh Hình thức có thể Đảm bảo Hợp đồng Thông minh Không có Lỗi](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [Tổng quan về các Dự án Xác minh Hình thức trong Hệ sinh thái Ethereum](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [Xác minh Hình thức Từ đầu đến cuối Hợp đồng Thông minh Ký gửi Ethereum 2.0](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [Xác minh hình thức Hợp đồng thông minh phổ biến nhất thế giới](https://www.zellic.io/blog/formal-verification-weth)

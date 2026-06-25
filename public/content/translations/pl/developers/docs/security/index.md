@@ -259,6 +259,7 @@ Chociaż nic nie zastąpi zrozumienia podstaw bezpieczeństwa Ethereum i zaanga�
 **Informacje na temat weryfikacji formalnej**
 
 - [Jak działa formalna weryfikacja inteligentnych kontaktów](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _20 lipca 2018 – Brian Marick_
+- [Jak weryfikacja formalna może zapewnić bezbłędne inteligentne kontrakty](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _29 stycznia 2018 — Bernard Mueller_
 
 ### Korzystanie z narzędzi {#using-tools}
 

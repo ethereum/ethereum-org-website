@@ -277,6 +277,7 @@ function safe_add(uint x, uint y) returns(uint z){
 ## आगे की रीडिंग {#further-reading}
 
 - [स्मार्ट अनुबंधों का औपचारिक सत्यापन कैसे काम करता है](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
+- [औपचारिक सत्यापन कैसे दोषरहित स्मार्ट अनुबंध सुनिश्चित कर सकता है](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [एथेरियम इकोसिस्टम में औपचारिक सत्यापन परियोजनाओं का अवलोकन](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [एथेरियम 2.0 डिपॉजिट स्मार्ट अनुबंध का एंड-टू-एंड औपचारिक सत्यापन](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [दुनिया के सबसे लोकप्रिय स्मार्ट अनुबंध का औपचारिक रूप से सत्यापन](https://www.zellic.io/blog/formal-verification-weth)

@@ -277,6 +277,7 @@ function safe_add(uint x, uint y) returns(uint z){
 ## Для подальшого читання {#further-reading}
 
 - [Як працює формальна верифікація смарт-контрактів](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
+- [Як формальна верифікація може забезпечити бездоганні смарт-контракти](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [Огляд проєктів формальної верифікації в екосистемі Ethereum](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [Наскрізна формальна верифікація депозитного смарт-контракту Ethereum 2.0](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [Формальна верифікація найпопулярнішого смарт-контракту у світі](https://www.zellic.io/blog/formal-verification-weth)

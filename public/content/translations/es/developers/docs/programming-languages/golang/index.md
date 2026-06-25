@@ -82,4 +82,4 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 ## Otras listas agregadas {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: Una lista definitiva de herramientas para desarrolladores de Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: Una lista definitiva de herramientas para desarrolladores de Ethereum](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Fuente en GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)
