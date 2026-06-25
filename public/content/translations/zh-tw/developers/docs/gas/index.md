@@ -134,7 +134,7 @@ _圖表改編自 [以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _開源交易燃料價格估算器_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _監控和追蹤以太坊和 L2 的燃料價格，以降低交易費用並節省資金_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _支援類型 0 傳統交易和類型 2 EIP-1559 交易的燃料估算 Chrome 擴充功能。_
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _在主網、Arbitrum 和 Polygon 上，為不同交易類型以您的當地貨幣計算燃料費用。_
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _在主網、Arbitrum 和 Polygon 上，為不同交易類型以您的當地貨幣計算燃料費用。_
 
 ## 相關工具 {#related-tools}
 

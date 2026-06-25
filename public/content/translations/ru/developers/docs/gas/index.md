@@ -134,7 +134,7 @@ _Схема адаптирована из [Ethereum EVM illustrated](https://tak
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Оценщик цены газа для транзакций с открытым исходным кодом_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Мониторинг и отслеживание цен на газ в Ethereum и L2 для снижения комиссий за транзакции и экономии денег_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Расширение Chrome для оценки газа, поддерживающее как устаревшие транзакции типа 0, так и транзакции типа 2 EIP-1559._
-- [Калькулятор комиссий за газ Cryptoneur](https://cryptoneur.xyz/en/gas-fees-calculator) _Рассчитывайте комиссии за газ в вашей местной валюте для различных типов транзакций в Mainnet, Arbitrum и Polygon._
+- [Калькулятор комиссий за газ Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _Рассчитывайте комиссии за газ в вашей местной валюте для различных типов транзакций в Mainnet, Arbitrum и Polygon._
 
 ## Связанные инструменты {#related-tools}
 

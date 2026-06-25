@@ -151,7 +151,7 @@ Jika ingin memantau harga gas, sehingga Anda dapat mengirim ETH lebih murah, And
 - [Penaksir Gas ETH Blocknative](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Ekstensi Chrome penaksir gas mendukung transaksi lama Tipe 0 dan transaksi Tipe 2 EIP-1559._
 
 - [Stasiun Gas ETH](https://ethgasstation.info/) _Metrik yang berorientasi pelanggan untuk pasar gas Ethereum_
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
 
 ## Peralatan terkait {#related-tools}
 

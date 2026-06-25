@@ -134,7 +134,7 @@ Pokud chcete monitorovat poplatky za palivo, abyste mohli odesílat své ETH za 
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Open-source odhad ceny transakčního paliva_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitorujte a sledujte ceny paliva na Ethereu a L2, abyste snížili transakční poplatky a ušetřili peníze_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Rozšíření pro Chrome pro odhad paliva, které podporuje jak starší transakce typu 0, tak transakce typu 2 EIP-1559._
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Vypočítejte poplatky za palivo ve vaší místní měně pro různé typy transakcí na hlavní síti (Mainnet), Arbitrum a Polygonu._
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Vypočítejte poplatky za palivo ve vaší místní měně pro různé typy transakcí na hlavní síti (Mainnet), Arbitrum a Polygonu._
 
 ## Související nástroje {#related-tools}
 
