@@ -14,7 +14,6 @@ import { CallToAction } from "../CallToAction"
 const variants = cva(
   cn(
     "flex flex-col border-b",
-    "[--pad:--spacing(8)]",
     "[--space:--spacing(4)] lg:[--space:--spacing(6)]" // Base spacing relative to primary header font-size
   ),
   {
@@ -89,7 +88,7 @@ const PageHero = ({
           <Image
             className={cn(
               "object-contain max-lg:max-h-64 max-lg:w-auto max-lg:max-w-full lg:absolute lg:inset-0 lg:size-full",
-              "py-8 pe-(--pad) max-lg:px-(--pad) max-lg:pb-[calc(var(--pad)/2)]"
+              "p-page lg:ps-0"
             )}
             src={heroImg}
             alt=""
@@ -98,18 +97,29 @@ const PageHero = ({
           />
         </div>
       )}
-      <div className="max-w-3xl flex-1 p-(--pad) lg:px-[calc(var(--pad)*1.5)] lg:py-[calc(var(--pad)*2)]">
-        <div className="mb-[calc(var(--space)*2)]">
+      <div
+        className={cn(
+          "max-w-3xl flex-1 px-page py-hero lg:pt-hero-2x",
+          description && "lg:mb-hero-2x"
+        )}
+      >
+        <div className="mb-space-2x">
           <Eyebrow />
         </div>
 
-        <PrimaryHeading className="text-4xl font-black not-last:mb-(--space) lg:text-6xl">
+        <PrimaryHeading className="text-4xl font-black not-last:mb-space lg:text-6xl">
           {title}
         </PrimaryHeading>
 
-        <div className="space-y-[0.5lh] text-lg not-last:mb-[calc(var(--space)*3)]">
-          {typeof description === "string" ? <p>{description}</p> : description}
-        </div>
+        {description && (
+          <div className="space-y-[0.5lh] text-lg not-last:mb-space-3x">
+            {typeof description === "string" ? (
+              <p>{description}</p>
+            ) : (
+              description
+            )}
+          </div>
+        )}
 
         {buttons && (
           <div className="flex flex-col gap-4 md:flex-row">

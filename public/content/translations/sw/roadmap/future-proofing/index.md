@@ -1,53 +1,96 @@
 ---
-title: Kujenga jamii ya Ethereum ambazo zinaweza kustahimili mabadiliko ya teknolojia na soko
-description: "''Maboresho haya yanaimarisha Ethereum kama safu ya msingi yenye uthabiti na usambazaji wa madaraka na kuifanya iwe tayari kustahimili changamoto zozote zitakazojitokeza.\""
+title: Kuimarisha Ethereum kwa siku zijazo na usalama wa kwanta wa kriptografia
+description: Maboresho haya yanaimarisha Ethereum kama tabaka la msingi thabiti na lililogatuliwa kwa ajili ya siku zijazo, haijalishi nini kitatokea.
 lang: sw
 image: /images/roadmap/roadmap-future.png
-alt: "Ramani ya maendeleo ya Ethereum"
+alt: "Ramani ya njia ya Ethereum"
 template: roadmap
+summaryPoints:
+  - Kriptografia ya baada ya kwanta inahakikisha Ethereum inaweza kustahimili vitisho vya maunzi ya hali ya juu kadiri kompyuta za kwanta zinavyoendelea
+  - Kurahisisha itifaki hufanya Ethereum iwe rahisi kudumisha, kukagua, na kulinda
+  - Maboresho ya hivi karibuni tayari yameleta maendeleo makubwa ya ufanisi
 ---
 
-Kuna baadhi ya mambo kwenye ramani ya maendeleo ambayo si ya haraka kwa ukuaji au usalama wa Ethereum sasa, lakini yanaandaa Ethereum kuwa thabiti na ya kuaminika hata miaka mingi zijazo
+Baadhi ya sehemu za ramani ya njia hazihusu kuongeza uwezo au kulinda Ethereum sasa hivi. Zinahusu kuifanya Ethereum **iwe thabiti na ya kutegemewa kwa siku zijazo**. Hii inamaanisha kujiandaa kwa aina mpya za vitisho na kuondoa utata usio wa lazima kutoka kwenye itifaki.
 
-## Ukinzani wa quantum {#quantum-resistance}
+## Ustahimilivu dhidi ya kwanta {#quantum-resistance}
 
-Baadhi ya [kriptografia](/glossary/#cryptography) inayolinda Ethereum ya sasa itahujumiwa wakati kompyuta ya quantum itakapokuwa ukweli. Ingawa huenda kompyuta za quantum ziko miongo mingi kabla ya kuwa tishio la kweli kwa kriptografia ya kisasa, Ethereum inajengwa kuwa salama kwa karne nyingi zijazo. Hii inamaanisha kuifanya [Ethereum iwe na ukinzani wa quantum](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) haraka iwezekanavyo.
+Ethereum hutumia [kriptografia](/glossary/#cryptography) kuweka mtandao salama na kulinda fedha za watumiaji. Hatimaye, baadhi ya mbinu hizi za kriptografia zitakuwa **katika hatari dhidi ya kompyuta za kwanta**, ambazo zinaweza kutatua matatizo maalum ya hisabati kwa haraka sana kuliko mashine za kawaida.
 
-Changamoto inayowakabili wasanidi programu wa Ethereum ni kwamba itifaki ya sasa ya [proof-of-stake](/glossary/#pos) inategemea mpango mzuri sana wa sahihi unaojulikana kama BLS ili kujumlisha kura kwenye [bloku](/glossary/#block) halali. Mpango huu wa sahihi unavunjwa na kompyuta za quantum, lakini njia mbadala zenye ukinzani wa quantum hazina ufanisi sawa.
+**Hakuna kompyuta ya kwanta inayoweza kuvunja kriptografia ya Ethereum leo.** Maunzi yanayohitajika bado hayapo kwa kiwango kikubwa. Lakini utafiti wa hivi karibuni unapendekeza pengo linapungua kwa kasi zaidi kuliko ilivyotarajiwa hapo awali. Mnamo Machi 2026, Google Quantum AI ilichapisha karatasi inayokadiria kuwa kuvunja kriptografia ya tao la duaradufu ya biti 256 (aina ambayo Ethereum hutumia kwa sahihi za akaunti) kunaweza kuhitaji takriban kiyubiti (qubits) za kimantiki 1,200, karibu mara 20 chini ya makadirio ya awali. Google imeweka tarehe ya mwisho ya ndani ya 2029 kwa ajili ya kuhamisha mifumo yake yenyewe kwenda kwenye kriptografia salama dhidi ya kwanta.
 
-Mipango ya ahadi ya [“KZG”](/roadmap/danksharding/#what-is-kzg) inayotumiwa katika maeneo kadhaa kwenye Ethereum ili kutengeneza siri za kriptografia inajulikana kuwa inaweza kuathiriwa na quantum. Kwa sasa, hili linakwepwa kwa kutumia “mipangilio inayoaminika” (ambapo sherehe kuu ya usanidi ilikamilika kwa mafanikio mwaka wa 2023), ambapo watumiaji wengi walitengeneza nasibu isiyoweza kubadilishwa na kompyuta ya quantum. Hata hivyo, suluhisho bora la muda mrefu litakuwa ni kujumuisha kriptografia salama dhidi ya quantum badala yake. Kuna mbinu mbili kuu ambazo zinaweza kuwa mbadala bora kwa mpango wa BLS: usahihi wa [kulingana na STARK](https://hackmd.io/@vbuterin/stark_aggregation) na [kulingana na lattice](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Hizi bado zinafanyiwa utafiti na kujaribiwa kikamilifu**.
+Mabadiliko ya kriptografia huchukua miaka kupanga na kutekeleza kwa usalama. Kwa sababu muundo wa usalama wa Ethereum umeundwa kudumu kwa miongo kadhaa, maandalizi ya baada ya kwanta yalikuwa kwenye ramani ya njia ya Ethereum kabla hayajawa kwenye vichwa vya habari kuu. Maandalizi ya mtandao yanafanyika sasa ili kuhakikisha mpito usio na mshikemshike, si kama jibu la dharura.
 
-[Soma kuhusu KZG na mipangilio inayoaminika](/roadmap/danksharding#what-is-kzg)
+### Nini kiko hatarini? {#what-is-at-risk}
+
+Maeneo manne makuu ya kriptografia ya Ethereum yametambuliwa kama yanayohitaji maboresho ya baada ya kwanta:
+
+1. **Sahihi za mwafaka (BLS)**: [Wathibitishaji](/glossary/#validator) hutumia sahihi za BLS kupiga kura kwenye [vitalu](/glossary/#block) halali. Kompyuta ya kwanta inaweza kughushi sahihi hizi.
+2. **Upatikanaji wa data (mafungamanisho ya KZG)**: [Mifumo ya ufungamanisho](/roadmap/danksharding/#what-is-kzg) inayosaidia Ethereum kuongeza uwezo inategemea hisabati (haswa, uoanishaji wa tao la duaradufu) ambayo iko hatarini dhidi ya mashambulizi ya kwanta.
+3. **Sahihi za akaunti (ECDSA)**: Mfumo wa sahihi unaolinda akaunti binafsi za Ethereum. Wakati akaunti inatuma muamala, ufunguo wa umma wake unawekwa wazi mnyororoni. Kompyuta ya kwanta inaweza kupata ufunguo wa siri kutoka kwenye ufunguo huu wa umma uliowekwa wazi, na hivyo kuruhusu wizi wa fedha.
+4. **Uthibitisho wa ZK wa tabaka la programu**: Mifumo ya uthibitisho wa maarifa-sifuri inayotumiwa na mikusanyiko na programu zingine inategemea dhana za kriptografia ambazo kompyuta za kwanta zinaweza kudhoofisha.
+
+<ExpandableCard title="Je, kompyuta za kwanta zinaweza kuiba ETH yangu leo?" eventCategory="/roadmap/future-proofing" eventName="clicked can quantum computers steal my ETH today?">
+
+Hapana. Hakuna kompyuta ya kwanta leo inayoweza kuvunja kriptografia ya Ethereum. Kazi iliyoelezwa kwenye ukurasa huu ni maandalizi kwa ajili ya siku zijazo, si jibu kwa tishio linaloendelea. Wakati mikoba ya baada ya kwanta itakapopatikana, programu ya mkoba itakuongoza kupitia uhamishaji. Kwa sasa, hakuna unachohitaji kufanya.
+
+</ExpandableCard>
+
+### Nini kinafanyika? {#what-is-being-done}
+
+Ethereum kwa sasa ndiye mtetezi anayechukua hatua zaidi dhidi ya vitisho vya kwanta katika mfumo wa ikolojia wa mnyororo wa vitalu. Taasisi ya Ethereum iliunda **Timu ya Usalama ya Baada ya Kwanta** maalum mnamo Januari 2026, na kazi inayoendelea inahusisha timu nyingi za wateja na vikundi vya utafiti. Kazi ya timu ya Baada ya Kwanta ya EF inafuatiliwa hadharani kwenye [pq.ethereum.org](https://pq.ethereum.org).
+
+Kazi inayoendelea inajumuisha:
+
+- **Sahihi zinazotegemea heshi (leanXMSS)**: Mbadala salama dhidi ya kwanta kwa sahihi za mthibitishaji, zilizojengwa kwenye vitendaji vya heshi ambavyo kompyuta za kwanta haziwezi kuvunja kwa ufanisi.
+- **zkVM ya kiwango cha chini (leanVM)**: Kwa sababu sahihi salama dhidi ya kwanta ni kubwa kuliko sahihi zinazotumiwa sasa, leanXMSS inaunganishwa na zkVM ya kiwango cha chini (leanVM). Injini hii inakusanya sahihi salama dhidi ya kwanta kwa ufanisi, ikikandamiza data kwa mara 250, ili mtandao ubaki na kasi baada ya mpito.
+- **Upimaji wa mwingiliano wa kila wiki**: Zaidi ya timu 10 za wateja zinashiriki katika mitandao ya wasanidi (devnets) ya baada ya kwanta ya mara kwa mara.
+- **Upatikanaji wa data:** Kuboresha kriptografia ya msingi inayotumiwa kushughulikia kiasi kikubwa cha data ya mtandao kutahakikisha Ethereum inabaki na kasi na nafuu kutumia bila kuhatarisha udhaifu wa kwanta wa siku zijazo.
+- **Tuzo ya Poseidon**: Tuzo ya utafiti ya dola milioni 1 inayolenga maboresho katika misingi ya kriptografia inayotegemea heshi.
+- **Viwango vya NIST**: Taasisi ya Kitaifa ya Viwango na Teknolojia ya Marekani ilikamilisha viwango vitatu vya kriptografia ya baada ya kwanta mnamo Agosti 2024 (ML-KEM, ML-DSA, SLH-DSA). Kazi ya Ethereum inajengwa kwenye misingi hii.
+
+Sehemu muhimu ya mkakati wa mpito ni **EIP-8141**, ambayo inaleta [udhanifu wa akaunti](/roadmap/account-abstraction/) asilia. Hii inaruhusu akaunti binafsi kuchagua uthibitishaji wao wenyewe wa sahihi, ikimaanisha watumiaji wanaweza kubadili kwenda kwenye sahihi salama dhidi ya kwanta **bila kusubiri uhamishaji mmoja wa itifaki nzima**. EIP-8141 inafikiriwa kwa ajili ya mchepuo mgumu wa Hegotá (uliopangwa kwa nusu ya pili ya 2026).
+
+Taasisi ya Ethereum imeainisha hatua muhimu za mchepuo zilizopangwa zinazolenga kukamilisha miundombinu ya msingi ya baada ya kwanta ifikapo takriban 2029. Haya ni malengo ya kupanga, si ahadi zilizohakikishwa.
+
+[Soma mwongozo wetu wa kina kuhusu kriptografia ya baada ya kwanta kwenye Ethereum](/roadmap/future-proofing/quantum-resistance/)
 
 ## Ethereum rahisi na yenye ufanisi zaidi {#simpler-more-efficient-ethereum}
 
-Utata huleta fursa za hitilafu au udhaifu ambao unaweza kutumiwa na washambuliaji. Kwa hivyo, sehemu ya ramani ni kurahisisha Ethereum na kuondoa au kurekebisha msimbo ambao umedumu kupitia masasisho mbalimbali lakini hauhitajiki tena au sasa unaweza kuboreshwa. Msingi wa msimbo mwepesi na rahisi ni rahisi kwa wasanidi programu kudumisha na kufikiria.
+Utata hutengeneza fursa za hitilafu na udhaifu. Sehemu ya ramani ya njia inalenga **kurahisisha Ethereum na kuondoa deni la kiufundi** ili itifaki iwe rahisi kudumisha, kukagua, na kuelewa.
 
-Ili kufanya [Mashine Halisi ya Ethereum (EVM)](/developers/docs/evm) iwe rahisi na yenye ufanisi zaidi, maboresho yanaendelea kufanyiwa utafiti na kutekelezwa. Hii inahusisha kushughulikia vipengele vya zamani na kuanzisha uboreshaji.
+### Nini kimetolewa {#what-has-been-delivered}
 
-**Mabadiliko ya Hivi Karibuni Yaliyotekelezwa:**
+Maboresho kadhaa ya hivi karibuni yameifanya Ethereum kuwa rahisi na yenye ufanisi zaidi:
 
-- **Marekebisho ya Ukokotoaji wa Gesi:** Njia ambayo [gesi](/glossary/#gas) inakokotolewa iliboreshwa kwa kiasi kikubwa na **EIP-1559 (iliyotekelezwa katika sasisho la London, 2021)**, na kuanzisha ada ya msingi na utaratibu wa kuchoma kwa bei ya muamala inayotabirika zaidi.
-- **Vizuizi vya `SELFDESTRUCT`:** Opcode ya `SELFDESTRUCT`, ingawa haitumiki sana, ilileta hatari zinazowezekana. Utendakazi wake **ulizuiliwa sana katika sasisho la Dencun (Machi 2024) kupitia EIP-6780** ili kupunguza hatari, hasa kuhusu usimamizi wa hali.
-- **Aina za Miamala za Kisasa:** Fomati mpya za miamala zimeanzishwa (k.m., kupitia **EIP-2718** na **EIP-4844** kwa blopu katika sasisho la Dencun) ili kusaidia vipengele vipya na kuboresha ufanisi juu ya aina za zamani.
+- **[Pectra (Mei 2025)](/roadmap/pectra/)**: Ilileta EIP-7702, ambayo inaruhusu akaunti zinazomilikiwa na watu wa nje kukaimisha kwa muda kwenye msimbo wa mkataba mahiri, hatua kuelekea [udhanifu wa akaunti](/roadmap/account-abstraction/) kamili. Pia iliongeza prikampaili ya BLS12-381 (EIP-2537), ushughulikiaji wa amana mnyororoni (EIP-6110), ufikiaji wa heshi ya kitalu cha kihistoria katika EVM (EIP-2935), na kuongeza salio la juu zaidi la ufanisi kwa wathibitishaji (EIP-7251).
+- **[Fusaka (Desemba 2025)](/roadmap/fusaka/)**: Ilisambaza PeerDAS (EIP-7594), mfumo wa sampuli wa upatikanaji wa data wa rika-kwa-rika ambao unasambaza mzigo wa kazi wa upatikanaji wa data kwenye mtandao. Pia iliongeza vigezo vya blobu, ikipanua uwezo wa upitishaji wa data kwa ajili ya [mikusanyiko](/glossary/#rollups).
+- **[Dencun (Machi 2024)](/roadmap/dencun/)**: Ilileta miamala ya blobu (EIP-4844) kwa ajili ya data ya rollup ya bei nafuu na kuzuia `SELFDESTRUCT` (EIP-6780) ili kuondoa chanzo cha muda mrefu cha utata.
+- **[London (Agosti 2021)](/ethereum-forks/#london)**: Ilifanyia marekebisho makubwa upangaji bei wa [gesi](/glossary/#gas) kwa EIP-1559, ikileta ada ya msingi na utaratibu wa kuteketeza kwa ajili ya gharama za muamala zinazotabirika zaidi.
 
-**Malengo yanayoendelea na ya baadaye:**
+### Nini kinaendelea {#what-is-in-progress}
 
-- **Ushughulikiaji Zaidi wa `SELFDESTRUCT`:** Ingawa imezuiliwa, **uwezekano wa kuondolewa kabisa** kwa opcode ya `SELFDESTRUCT` bado unafikiriwa kwa masasisho yajayo ili kurahisisha zaidi hali ya EVM. ([Muktadha zaidi kuhusu masuala ya SELFDESTRUCT](https://hackmd.io/@vbuterin/selfdestruct)).
-- **Kuondoa Miamala ya Kizamani Taratibu:** Ingawa [wateja wa Ethereum](/glossary/#consensus-client) bado wanaauni aina za zamani za miamala kwa ajili ya uoanifu wa nyuma, lengo ni kuhimiza uhamiaji kwenda aina mpya na **uwezekano wa kuacha kutumia au kuondoa kabisa usaidizi kwa fomati za zamani zaidi** katika siku zijazo.
-- **Utafiti Unaoendelea wa Ufanisi wa Gesi:** Utafiti unaendelea kuhusu **marekebisho zaidi ya ukokotoaji wa gesi**, ikiwezekana ikijumuisha dhana kama gesi ya pande nyingi ili kuonyesha vizuri zaidi matumizi ya rasilimali.
-- **Operesheni za Kriptografia Zilizoboreshwa:** Juhudi zinaendelea **kuleta mbinu bora zaidi za hesabu** zinazotegemeza operesheni za kriptografia zinazotumiwa ndani ya EVM.
-
-Vile vile, kuna masasisho yanayoweza kufanywa kwa sehemu nyingine za wateja wa sasa wa Ethereum. Mfano mmoja ni kwamba wateja wa sasa wa utekelezaji na makubaliano wanatumia aina tofauti ya ukandamizaji wa data. Itakuwa rahisi zaidi na dhahiri kushiriki data kati ya wateja wakati mpango wa ukandamizaji utakapounganishwa kwenye mtandao mzima. Hili linabaki kuwa eneo la utafiti.
+- **[Glamsterdam (iliyopangwa nusu ya kwanza ya 2026)](/roadmap/glamsterdam/)**: Inafikiriwa kujumuishwa: utengano wa mpendekezaji na mjengaji (PBS) uliowekwa rasmi (EIP-7732), orodha za ufikiaji za kiwango cha kitalu (EIP-7928), na kupanga upya bei ya gesi ili kuoanisha vyema gharama na matumizi halisi ya rasilimali.
+- **Hegotá (iliyopangwa nusu ya pili ya 2026)**: Inafikiriwa kujumuishwa: [Miti ya Verkle](/roadmap/verkle-trees/), ikibadilisha muundo wa sasa wa data na ule wenye ufanisi zaidi unaowezesha wateja wasio na hali (stateless clients). Pia inalengwa kwa EIP-8141 (udhanifu wa akaunti asilia).
+- **Inayoendelea**: Juhudi za kurahisisha [EVM](/developers/docs/evm/), kuoanisha utekelezaji wa wateja, na kuondoa hatua kwa hatua vipengele vilivyopitwa na wakati zinaendelea katika jumuiya nzima ya maendeleo ya Ethereum.
 
 ## Maendeleo ya sasa {#current-progress}
 
-Mengi ya masasisho ya muda mrefu ya kujiandaa kwa siku zijazo, hasa **ukinzani kamili wa quantum kwa itifaki za msingi, bado ziko katika hatua ya utafiti na zinaweza kuwa miaka kadhaa mbali** na kutekelezwa.
+Kufikia mapema 2026:
 
-Hata hivyo, **maendeleo makubwa tayari yamefanywa katika juhudi za kurahisisha.** Kwa mfano, mabadiliko muhimu kama vile **kizuizi cha `SELFDESTRUCT` (EIP-6780)** na kuanzishwa kwa **miamala inayobeba blopu (EIP-4844)** yalitekelezwa katika **sasisho la Dencun (Machi 2024)**. Kazi ya kuoanisha mipango ya ukandamizaji ya wateja na maboresho mengine ya ufanisi pia inaendelea.
+**Kurahisisha na ufanisi**: Pectra na Fusaka zilileta maboresho halisi katika unyumbufu wa akaunti, upatikanaji wa data, na shughuli za mthibitishaji. Glamsterdam na Hegotá ziko katika maendeleo endelevu zikiwa na malengo wazi ya kuufanya mtandao uwe thabiti na wenye ufanisi zaidi, huku zikiondoa utegemezi wa nje.
 
-**Kusoma zaidi**
+**Kriptografia ya baada ya kwanta**: Utafiti unaoendelea na utekelezaji wa mapema unafanyika. Mfumo wa ikolojia umefadhili tuzo za utafiti na kuendesha mitandao ya wasanidi (devnets) ya mwingiliano ya kila wiki kwenye wateja wengi, pamoja na utafiti unaofanywa na timu maalum ya Baada ya Kwanta ya Taasisi ya Ethereum. Ingawa hatua muhimu za mchepuo zilizopangwa zinalenga takriban 2029 kwa ajili ya kukamilika, utafiti wa mapema unatoa vidokezo vya uthibitisho vinavyoonekana vinavyoonyesha kuwa utekelezaji wa baada ya kwanta unawezekana leo.
 
-- [Gesi](/developers/docs/gas)
-- [EVM](/developers/docs/evm)
-- [Miundo ya data](/developers/docs/data-structures-and-encoding)
+**Udhanifu wa akaunti na wepesi wa sahihi**: EIP-7702 ilitolewa katika Pectra. EIP-8141, inayofikiriwa kwa ajili ya Hegotá, itaruhusu akaunti kutumia mfumo wowote wa sahihi, ikiwapa watumiaji njia ya kupitisha sahihi salama dhidi ya kwanta kabla ya mpito kamili wa itifaki kukamilika.
+
+Hakuna sehemu ya kazi hii iliyokamilika. Ratiba ni malengo, si ahadi. Lakini upeo na kasi ya maendeleo inayoendelea inawakilisha dhamira ya wazi ya kuiweka Ethereum salama na yenye ufanisi kwa muda mrefu.
+
+**Usomaji zaidi**
+
+- [Kriptografia ya baada ya kwanta kwenye Ethereum](/roadmap/future-proofing/quantum-resistance/)
+- [strawmap.org](https://strawmap.org/) - _Usanifu wa EF_
+- [pq.ethereum.org](https://pq.ethereum.org)
+- [Gesi](/developers/docs/gas/)
+- [EVM](/developers/docs/evm/)
+- [Miundo ya data](/developers/docs/data-structures-and-encoding/)

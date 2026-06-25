@@ -8,54 +8,54 @@ lang: id
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash adalah algoritma penambangan proof-of-work Ethereum. Proof-of-work kini telah **dimatikan sepenuhnya** dan Ethereum sekarang diamankan menggunakan [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) sebagai gantinya. Baca lebih lanjut tentang [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) dan [mengunci](/staking/). Halaman ini hanya untuk kepentingan sejarah!
+   Ethash adalah algoritma penambangan Bukti Kerja (PoW) Ethereum. Bukti Kerja (PoW) kini telah **dimatikan sepenuhnya** dan Ethereum sekarang diamankan menggunakan [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos/). Baca lebih lanjut tentang [The Merge](/roadmap/merge/), [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos/), dan [staking](/staking/). Halaman ini hanya untuk kepentingan sejarah!  
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Ethash adalah versi modifikasi dari algoritma [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Proof-of-work Ethash bersifat [memory hard](https://wikipedia.org/wiki/Memory-hard_function), yang sebelumnya dianggap membuat algoritma ini tahan terhadap ASIC. ASIC Ethash pada akhirnya dikembangkan tetapi penambangan GPU masih menjadi pilihan yang layak sampai proof-of-work dimatikan. Ethash masih digunakan untuk menambang koin lain di jaringan proof-of-work non-Ethereum lainnya.
+Ethash adalah versi modifikasi dari algoritma [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Bukti Kerja (PoW) Ethash bersifat [memory hard](https://wikipedia.org/wiki/Memory-hard_function), yang dianggap membuat algoritma ini tahan terhadap ASIC. ASIC Ethash pada akhirnya dikembangkan tetapi penambangan GPU masih menjadi pilihan yang layak hingga Bukti Kerja (PoW) dimatikan. Ethash masih digunakan untuk menambang koin lain di jaringan Bukti Kerja (PoW) non-Ethereum lainnya.
 
 ## Bagaimana cara kerja Ethash? {#how-does-ethash-work}
 
-Sifat memory hard dicapai dengan algoritma proof-of-work yang membutuhkan pemilihan subset dari sumber daya tetap yang bergantung pada nonce dan header blok. Sumber daya ini (berukuran beberapa gigabyte) disebut DAG. DAG diubah setiap 30000 blok, sebuah jendela waktu ~125 jam yang disebut epoch (sekitar 5,2 hari) dan membutuhkan waktu untuk dihasilkan. Karena DAG hanya bergantung pada tinggi blok, ia dapat dihasilkan sebelumnya, tetapi jika tidak, klien harus menunggu hingga akhir proses ini untuk menghasilkan sebuah blok. Jika klien tidak menghasilkan sebelumnya dan menyimpan DAG dalam cache lebih awal, jaringan mungkin mengalami penundaan blok yang masif pada setiap transisi epoch. Perhatikan bahwa DAG tidak perlu dihasilkan untuk memverifikasi proof-of-work, yang pada dasarnya memungkinkan verifikasi dengan CPU rendah dan memori kecil.
+Sifat memory hard dicapai dengan algoritma Bukti Kerja (PoW) yang memerlukan pemilihan subset dari sumber daya tetap yang bergantung pada nonce dan header blok. Sumber daya ini (berukuran beberapa gigabita) disebut DAG. DAG diubah setiap 30000 blok, sebuah jendela waktu ~125 jam yang disebut Epok (sekitar 5,2 hari) dan membutuhkan waktu untuk dihasilkan. Karena DAG hanya bergantung pada tinggi blok, ia dapat dihasilkan sebelumnya, tetapi jika tidak, klien perlu menunggu hingga akhir proses ini untuk menghasilkan sebuah blok. Jika klien tidak menghasilkan sebelumnya dan menyimpan DAG dalam cache lebih awal, jaringan mungkin mengalami penundaan blok yang masif pada setiap transisi Epok. Perhatikan bahwa DAG tidak perlu dihasilkan untuk memverifikasi Bukti Kerja (PoW), yang pada dasarnya memungkinkan verifikasi dengan CPU rendah dan memori kecil.
 
-Rute umum yang diambil oleh algoritma adalah sebagai berikut:
+Rute umum yang diambil oleh algoritma ini adalah sebagai berikut:
 
 1. Terdapat sebuah **seed** yang dapat dihitung untuk setiap blok dengan memindai melalui header blok hingga titik tersebut.
 2. Dari seed tersebut, seseorang dapat menghitung **cache pseudorandom 16 MB**. Klien ringan menyimpan cache ini.
-3. Dari cache tersebut, kita dapat menghasilkan **dataset 1 GB**, dengan properti bahwa setiap item dalam dataset hanya bergantung pada sejumlah kecil item dari cache. Klien penuh dan penambang menyimpan dataset ini. Dataset tumbuh secara linear seiring waktu.
-4. Penambangan melibatkan pengambilan irisan acak dari dataset dan melakukan hash bersama-sama. Verifikasi dapat dilakukan dengan memori rendah dengan menggunakan cache untuk menghasilkan kembali bagian-bagian spesifik dari dataset yang Anda butuhkan, sehingga Anda hanya perlu menyimpan cache.
+3. Dari cache tersebut, kita dapat menghasilkan **dataset 1 GB**, dengan properti bahwa setiap item dalam dataset hanya bergantung pada sejumlah kecil item dari cache. Klien penuh dan penambang menyimpan dataset ini. Dataset tumbuh secara linier seiring waktu.
+4. Penambangan melibatkan pengambilan potongan acak dari dataset dan melakukan proses hash bersama-sama. Verifikasi dapat dilakukan dengan memori rendah dengan menggunakan cache untuk menghasilkan kembali bagian spesifik dari dataset yang Anda butuhkan, sehingga Anda hanya perlu menyimpan cache.
 
-Dataset besar ini diperbarui setiap 30000 blok, sehingga sebagian besar upaya penambang akan dihabiskan untuk membaca dataset, bukan membuat perubahan padanya.
+Dataset besar diperbarui setiap 30000 blok, sehingga sebagian besar upaya penambang akan dihabiskan untuk membaca dataset, bukan membuat perubahan padanya.
 
 ## Definisi {#definitions}
 
 Kami menggunakan definisi berikut:
 
 ```
-WORD_BYTES = 4                    # bytes in word
-DATASET_BYTES_INIT = 2**30        # bytes in dataset at genesis
-DATASET_BYTES_GROWTH = 2**23      # dataset growth per epoch
-CACHE_BYTES_INIT = 2**24          # bytes in cache at genesis
-CACHE_BYTES_GROWTH = 2**17        # cache growth per epoch
-CACHE_MULTIPLIER=1024             # Size of the DAG relative to the cache
-EPOCH_LENGTH = 30000              # blocks per epoch
-MIX_BYTES = 128                   # width of mix
-HASH_BYTES = 64                   # hash length in bytes
-DATASET_PARENTS = 256             # number of parents of each dataset element
-CACHE_ROUNDS = 3                  # number of rounds in cache production
-ACCESSES = 64                     # number of accesses in hashimoto loop
+WORD_BYTES = 4                    # byte dalam word
+DATASET_BYTES_INIT = 2**30        # byte dalam dataset pada genesis
+DATASET_BYTES_GROWTH = 2**23      # pertumbuhan dataset per Epok
+CACHE_BYTES_INIT = 2**24          # byte dalam cache pada genesis
+CACHE_BYTES_GROWTH = 2**17        # pertumbuhan cache per Epok
+CACHE_MULTIPLIER=1024             # Ukuran DAG relatif terhadap cache
+EPOCH_LENGTH = 30000              # blok per Epok
+MIX_BYTES = 128                   # lebar mix
+HASH_BYTES = 64                   # panjang hash dalam byte
+DATASET_PARENTS = 256             # jumlah induk dari setiap elemen dataset
+CACHE_ROUNDS = 3                  # jumlah putaran dalam produksi cache
+ACCESSES = 64                     # jumlah akses dalam loop hashimoto
 ```
 
 ### Penggunaan 'SHA3' {#sha3}
 
-Pengembangan Ethereum bertepatan dengan pengembangan standar SHA3, dan proses standar membuat perubahan terlambat pada padding dari algoritma hash yang difinalisasi, sehingga hash "sha3_256" dan "sha3_512" Ethereum bukanlah hash sha3 standar, melainkan varian yang sering disebut sebagai "Keccak-256" dan "Keccak-512" dalam konteks lain. Lihat diskusi, mis., [di sini](https://eips.ethereum.org/EIPS/eip-1803), [di sini](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), atau [di sini](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Pengembangan Ethereum bertepatan dengan pengembangan standar SHA3, dan proses standar tersebut membuat perubahan di akhir pada padding algoritma hash yang difinalisasi, sehingga hash "sha3_256" dan "sha3_512" Ethereum bukanlah hash sha3 standar, melainkan varian yang sering disebut sebagai "Keccak-256" dan "Keccak-512" dalam konteks lain. Lihat diskusi, mis., [di sini](https://eips.ethereum.org/EIPS/eip-1803), [di sini](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), atau [di sini](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Harap diingat hal tersebut karena hash "sha3" dirujuk dalam deskripsi algoritma di bawah ini.
 
 ## Parameter {#parameters}
 
-Parameter untuk cache dan dataset Ethash bergantung pada nomor blok. Ukuran cache dan ukuran dataset keduanya tumbuh secara linear; namun, kami selalu mengambil bilangan prima tertinggi di bawah ambang batas yang tumbuh secara linear untuk mengurangi risiko keteraturan yang tidak disengaja yang mengarah pada perilaku siklik.
+Parameter untuk cache dan dataset Ethash bergantung pada nomor blok. Ukuran cache dan ukuran dataset keduanya tumbuh secara linier; namun, kami selalu mengambil bilangan prima tertinggi di bawah ambang batas yang tumbuh secara linier untuk mengurangi risiko keteraturan yang tidak disengaja yang mengarah pada perilaku siklik.
 
 ```python
 def get_cache_size(block_number):
@@ -83,12 +83,12 @@ Sekarang, kami menentukan fungsi untuk menghasilkan cache:
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Sequentially produce the initial dataset # Hasilkan dataset awal secara berurutan
+    # Hasilkan dataset awal secara berurutan
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Use a low-round version of randmemohash # Gunakan versi putaran rendah dari randmemohash
+    # Gunakan versi putaran rendah dari randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Proses produksi cache melibatkan pengisian memori 32 MB secara berurutan terlebih dahulu, kemudian melakukan dua lintasan algoritma _RandMemoHash_ dari Sergio Demian Lerner dari [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Outputnya adalah sekumpulan 524288 nilai 64-byte.
+Proses produksi cache melibatkan pengisian memori 32 MB secara berurutan terlebih dahulu, kemudian melakukan dua lintasan algoritma _RandMemoHash_ karya Sergio Demian Lerner dari [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Outputnya adalah sekumpulan 524288 nilai 64-byte.
 
 ## Fungsi agregasi data {#date-aggregation-function}
 
@@ -110,7 +110,7 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-Harap dicatat, meskipun yellow paper menentukan fnv sebagai v1\*(FNV_PRIME ^ v2), semua implementasi saat ini secara konsisten menggunakan definisi di atas.
+Harap dicatat, meskipun kertas kuning menentukan fnv sebagai v1\*(FNV_PRIME ^ v2), semua implementasi saat ini secara konsisten menggunakan definisi di atas.
 
 ## Perhitungan dataset penuh {#full-dataset-calculation}
 
@@ -120,18 +120,18 @@ Setiap item 64-byte dalam dataset penuh 1 GB dihitung sebagai berikut:
 def calc_dataset_item(cache, i):
     n = len(cache)
     r = HASH_BYTES // WORD_BYTES
-    # initialize the mix # inisialisasi campuran
+    # inisialisasi campuran
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # fnv it with a lot of random cache nodes based on i # terapkan fnv padanya dengan banyak node cache acak berdasarkan i
+    # lakukan fnv padanya dengan banyak node cache acak berdasarkan i
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
     return sha3_512(mix)
 ```
 
-Pada dasarnya, kami menggabungkan data dari 256 node cache yang dipilih secara pseudorandom, dan melakukan hash untuk menghitung node dataset. Seluruh dataset kemudian dihasilkan oleh:
+Pada dasarnya, kami menggabungkan data dari 256 node cache yang dipilih secara pseudorandom, dan melakukan proses hash untuk menghitung node dataset. Seluruh dataset kemudian dihasilkan oleh:
 
 ```python
 def calc_dataset(full_size, cache):
@@ -140,27 +140,27 @@ def calc_dataset(full_size, cache):
 
 ## Loop utama {#main-loop}
 
-Sekarang, kami menentukan loop utama yang mirip dengan "hashimoto", di mana kami mengagregasi data dari dataset penuh untuk menghasilkan nilai akhir kami untuk header dan nonce tertentu. Dalam kode di bawah ini, `header` mewakili _hash_ SHA3-256 dari representasi RLP dari header blok yang _dipotong_, yaitu, dari header yang mengecualikan bidang **mixHash** dan **nonce**. `nonce` adalah delapan byte dari bilangan bulat tak bertanda 64 bit dalam urutan big-endian. Jadi `nonce[::-1]` adalah representasi little-endian delapan byte dari nilai tersebut:
+Sekarang, kami menentukan loop utama yang mirip "hashimoto", di mana kami mengagregasi data dari dataset penuh untuk menghasilkan nilai akhir kami untuk header dan nonce tertentu. Dalam kode di bawah ini, `header` mewakili _hash_ SHA3-256 dari representasi RLP dari header blok yang _dipotong_, yaitu, dari header yang mengecualikan bidang **mixHash** dan **nonce**. `nonce` adalah delapan byte dari bilangan bulat tak bertanda 64 bit dalam urutan big-endian. Jadi `nonce[::-1]` adalah representasi little-endian delapan byte dari nilai tersebut:
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # combine header+nonce into a 64 byte seed # gabungkan header+nonce menjadi seed 64 byte
+    # gabungkan header+nonce menjadi seed 64 byte
     s = sha3_512(header + nonce[::-1])
-    # start the mix with replicated s # mulai campuran dengan s yang direplikasi
+    # mulai campuran dengan s yang direplikasi
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # mix in random dataset nodes # campurkan node dataset acak
+    # campurkan node dataset acak
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
         for j in range(MIX_BYTES / HASH_BYTES):
             newdata.extend(dataset_lookup(p + j))
         mix = map(fnv, mix, newdata)
-    # compress mix # kompres campuran
+    # kompres campuran
     cmix = []
     for i in range(0, len(mix), 4):
         cmix.append(fnv(fnv(fnv(mix[i], mix[i+1]), mix[i+2]), mix[i+3]))
@@ -176,7 +176,7 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-Pada dasarnya, kami mempertahankan "campuran" selebar 128 byte, dan berulang kali mengambil 128 byte secara berurutan dari dataset penuh dan menggunakan fungsi `fnv` untuk menggabungkannya dengan campuran tersebut. Akses berurutan 128 byte digunakan sehingga setiap putaran algoritma selalu mengambil halaman penuh dari RAM, meminimalkan kegagalan translation lookaside buffer yang secara teoritis dapat dihindari oleh ASIC.
+Pada dasarnya, kami mempertahankan "mix" selebar 128 byte, dan secara berulang mengambil 128 byte secara berurutan dari dataset penuh dan menggunakan fungsi `fnv` untuk menggabungkannya dengan mix tersebut. Akses berurutan 128 byte digunakan sehingga setiap putaran algoritma selalu mengambil halaman penuh dari RAM, meminimalkan kegagalan translation lookaside buffer yang secara teoritis dapat dihindari oleh ASIC.
 
 Jika output dari algoritma ini berada di bawah target yang diinginkan, maka nonce tersebut valid. Perhatikan bahwa penerapan ekstra `sha3_256` di akhir memastikan bahwa terdapat nonce perantara yang dapat diberikan untuk membuktikan bahwa setidaknya sejumlah kecil pekerjaan telah dilakukan; verifikasi PoW luar yang cepat ini dapat digunakan untuk tujuan anti-DDoS. Ini juga berfungsi untuk memberikan jaminan statistik bahwa hasilnya adalah angka 256-bit yang tidak bias.
 
@@ -186,7 +186,7 @@ Algoritma penambangan didefinisikan sebagai berikut:
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # zero-pad target to compare with hash on the same digit # tambahkan padding nol pada target untuk dibandingkan dengan hash pada digit yang sama
+    # tambahkan padding nol pada target untuk membandingkannya dengan hash pada digit yang sama
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -207,7 +207,7 @@ Untuk menghitung hash seed yang akan digunakan untuk menambang di atas blok tert
      return s
 ```
 
-Perhatikan bahwa untuk penambangan dan verifikasi yang lancar, kami merekomendasikan untuk menghitung sebelumnya hash seed dan dataset masa depan dalam thread terpisah.
+Perhatikan bahwa untuk penambangan dan verifikasi yang lancar, kami menyarankan untuk menghitung sebelumnya hash seed dan dataset masa depan dalam thread terpisah.
 
 ## Bacaan lebih lanjut {#further-reading}
 
@@ -215,12 +215,12 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 
 ## Lampiran {#appendix}
 
-Kode berikut harus ditambahkan di awal jika Anda tertarik untuk menjalankan spesifikasi python di atas sebagai kode.
+Kode berikut harus ditambahkan di awal jika Anda tertarik untuk menjalankan spesifikasi Python di atas sebagai kode.
 
 ```python
 import sha3, copy
 
-# Assumes little endian bit ordering (same as Intel architectures) # Mengasumsikan pengurutan bit little endian (sama dengan arsitektur Intel)
+# Mengasumsikan pengurutan bit little-endian (sama seperti arsitektur Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 hash function, outputs 64 bytes # fungsi hash sha3, menghasilkan 64 byte
+# fungsi hash sha3, menghasilkan 64 byte
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -267,7 +267,7 @@ def isprime(x):
 
 ### Ukuran Data {#data-sizes}
 
-Tabel pencarian berikut menyediakan sekitar 2048 epoch yang ditabulasi dari ukuran data dan ukuran cache.
+Tabel pencarian berikut menyediakan sekitar 2048 Epok yang ditabulasi dari ukuran data dan ukuran cache.
 
 ```python
 def get_datasize(block_number):

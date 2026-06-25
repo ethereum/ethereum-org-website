@@ -109,6 +109,7 @@ export default function FilterEvents({ events }: FilterProps) {
           className="w-full max-w-xl"
           onChange={handleSearch}
           placeholder={t("page-events-search-placeholder")}
+          aria-label={t("page-events-search-placeholder")}
           aria-describedby="input-instruction"
         />
         {/* hidden for attachment to input only */}

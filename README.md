@@ -29,7 +29,7 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 
 ## How to contribute
 
-This project follows the [all-contributors](https://allcontributors.org/docs/en/overview) specification. Contributions of any kind are welcome!
+This project follows the [all-contributors](https://allcontributors.org/en/reference/) specification. Contributions of any kind are welcome!
 
 Before you start, please take a moment to read our [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
@@ -2227,6 +2227,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/onchainze"><img src="https://avatars.githubusercontent.com/u/288279120?v=4?s=100" width="100px;" alt="onchainze"/><br /><sub><b>onchainze</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aonchainze" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://defimind.ai"><img src="https://avatars.githubusercontent.com/u/48072017?v=4?s=100" width="100px;" alt="Ian Moore"/><br /><sub><b>Ian Moore</b></sub></a><br /><a href="#tool-icmoore" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sawaadee"><img src="https://avatars.githubusercontent.com/u/170385320?v=4?s=100" width="100px;" alt="sawadee"/><br /><sub><b>sawadee</b></sub></a><br /><a href="#maintenance-sawaadee" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/alerodriargui"><img src="https://avatars.githubusercontent.com/u/80339818?v=4?s=100" width="100px;" alt="Alejandro Rodríguez"/><br /><sub><b>Alejandro Rodríguez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aalerodriargui" title="Bug reports">🐛</a> <a href="#maintenance-alerodriargui" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vikramsingh786lemonn"><img src="https://avatars.githubusercontent.com/u/289930201?v=4?s=100" width="100px;" alt="vikramsingh786lemonn"/><br /><sub><b>vikramsingh786lemonn</b></sub></a><br /><a href="#tool-vikramsingh786lemonn" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lufa23"><img src="https://avatars.githubusercontent.com/u/67415638?v=4?s=100" width="100px;" alt="lufa23"/><br /><sub><b>lufa23</b></sub></a><br /><a href="#maintenance-lufa23" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>

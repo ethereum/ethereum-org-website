@@ -8,8 +8,8 @@ The Card system is driven by CSS custom properties set at the `Card` level (`--c
 
 ```
 Card                         <- parent wrapper, owns CSS vars + variant
-  CardHeader                 <- optional; often holds a CardBanner or CardEmoji
-    CardBanner | CardEmoji
+  CardHeader                 <- optional; often holds a CardBanner, CardEmoji, or CardIconContainer
+    CardBanner | CardEmoji | CardIconContainer
   CardContent                <- the body; expands to fill height
     CardTitle
     CardParagraph
@@ -158,6 +158,24 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 
 - Renders a large emoji inside a fixed-size `div` so there's no layout shift when the client-side `Emoji` component hydrates.
 - Typically lives in `CardHeader`. If you don't use a header, you can drop it directly in `CardContent`, but the header placement is the standard.
+- **Prefer `CardIconContainer` with a Lucide icon for new/refactored cards** (see below). We're migrating card glyphs from emoji to Lucide over time — reach for `CardEmoji` only when matching existing emoji-based cards or when no suitable icon exists.
+
+### `CardIconContainer`
+
+```tsx
+import { Sparkles } from "lucide-react"
+
+<CardHeader>
+  <CardIconContainer>
+    <Sparkles />
+  </CardIconContainer>
+</CardHeader>
+```
+
+- The Lucide counterpart to `CardEmoji`: wraps any icon child, forces it to `size-12` (48px) via `*:size-12`, and tints it `text-primary`. Don't set width/height on the icon yourself — the container handles sizing.
+- Same placement rules as `CardEmoji` (lives in `CardHeader` by convention).
+- **Preferred for new and refactored cards.** Part of the gradual emoji-to-Lucide migration — favor a Lucide icon over an emoji glyph wherever a fitting icon is available.
+- Via `MarkdownCard`, pass the `icon` prop instead of `emoji` (they're mutually exclusive): `<MarkdownCard icon={<Sparkles />} ... />`.
 
 ### `CardTitle`
 

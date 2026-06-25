@@ -1,265 +1,269 @@
 ---
-title: Optimistic rollups
-description: "Utangulizi wa optimistic rollups—suluhisho la kuongeza ukubwa linalotumiwa na jamii ya Ethereum."
+title: Mikusanyiko ya Optimistic
+description: "Utangulizi wa mikusanyiko ya optimistic—suluhisho la kuongeza uwezo linalotumiwa na jamii ya Ethereum."
 lang: sw
 ---
 
-Optimistic rollups ni itifaki za safu ya 2 (L2) zilizoundwa kuongeza kasi ya usindikaji wa safu ya msingi ya Ethereum. Hupunguza hesabu kwenye mnyororo mkuu wa Ethereum kwa kushughulikia miamala nje ya mnyororo, na hivyo kutoa maboresho makubwa katika kasi za usindikaji. Tofauti na suluhisho zingine za kuongeza ukubwa, kama vile [sidechains](/developers/docs/scaling/sidechains/), optimistic rollups hupata usalama kutoka kwa Mtandao Mkuu kwa kuchapisha matokeo ya muamala kwenye mnyororo, au [minyororo ya plasma](/developers/docs/scaling/plasma/), ambayo pia huthibitisha miamala kwenye Ethereum kwa kutumia thibitisho za ulaghai, lakini huhifadhi data ya muamala mahali pengine.
+Mikusanyiko ya optimistic ni itifaki za tabaka la 2 (l2) zilizoundwa kupanua uwezo wa upitishaji wa tabaka la msingi la Ethereum. Zinapunguza ukokotoaji kwenye mnyororo mkuu wa [Ethereum](/) kwa kuchakata miamala nje ya mnyororo, na kutoa maboresho makubwa katika kasi ya uchakataji. Tofauti na masuluhisho mengine ya kuongeza uwezo, kama vile [minyororo ya kando (sidechains)](/developers/docs/scaling/sidechains/), mikusanyiko ya optimistic hupata usalama kutoka kwa Mtandao Mkuu kwa kuchapisha matokeo ya muamala mnyororoni, au [minyororo ya Plasma](/developers/docs/scaling/plasma/), ambayo pia huthibitisha miamala kwenye Ethereum kwa ushahidi wa udanganyifu, lakini huhifadhi data ya muamala kwingineko.
 
-Kwa kuwa hesabu ni sehemu ya polepole na ya gharama kubwa ya kutumia Ethereum, optimistic rollups zinaweza kutoa maboresho ya hadi mara 10-100 katika kuongeza ukubwa. Optimistic rollups pia huandika miamala kwa Ethereum kama `calldata` au katika [blobs](/roadmap/danksharding/), na hivyo kupunguza gharama za gesi kwa watumiaji.
+Kwa kuwa ukokotoaji ni sehemu ya polepole na ghali ya kutumia Ethereum, mikusanyiko ya optimistic inaweza kutoa maboresho ya hadi mara 10-100 katika uwezo wa kuongezeka. Mikusanyiko ya optimistic pia huandika miamala kwenye Ethereum kama `calldata` au katika [mablobu](/roadmap/danksharding/), na kupunguza gharama za gesi kwa watumiaji.
 
-## Mahitaji ya awali {#prerequisites}
+## Mahitaji ya Awali {#prerequisites}
 
-Unapaswa kuwa umesoma na kuelewa kurasa zetu kuhusu [Uongezwaji wa Ethereum](/developers/docs/scaling/) na [safu ya 2](/layer-2/).
+Unapaswa kuwa umesoma na kuelewa kurasa zetu kuhusu [kuongeza uwezo wa Ethereum](/developers/docs/scaling/) na [tabaka la 2 (l2)](/layer-2/).
 
-## Optimistic rollup ni nini? {#what-is-an-optimistic-rollup}
+## Rollup ya optimistic ni nini? {#what-is-an-optimistic-rollup}
 
-Optimistic rollup ni mbinu ya kuongeza ukubwa wa Ethereum ambayo inahusisha kuhamisha hesabu na hifadhi ya hali nje ya mnyororo. Optimistic rollups hutekeleza miamala nje ya Ethereum, lakini hutuma data ya muamala kwa Mtandao Mkuu kama `calldata` au katika [blobs](/roadmap/danksharding/).
+Rollup ya optimistic ni mbinu ya kuongeza uwezo wa Ethereum inayohusisha kuhamisha ukokotoaji na uhifadhi wa hali nje ya mnyororo. Mikusanyiko ya optimistic hutekeleza miamala nje ya Ethereum, lakini huchapisha data ya muamala kwenye Mtandao Mkuu kama `calldata` au katika [mablobu](/roadmap/danksharding/).
 
-Waendeshaji wa optimistic rollup hukusanya miamala mingi ya nje ya mnyororo pamoja katika makundi makubwa kabla ya kuiwasilisha kwa Ethereum. Mbinu hii huwezesha kueneza gharama zisizobadilika kwa miamala mingi katika kila kundi, na hivyo kupunguza ada kwa watumiaji wa mwisho. Optimistic rollups pia hutumia mbinu za ukandamizaji ili kupunguza kiasi cha data inayotumwa kwenye Ethereum.
+Waendeshaji wa mikusanyiko ya optimistic hukusanya miamala mingi ya nje ya mnyororo pamoja katika mafungu makubwa kabla ya kuiwasilisha kwenye Ethereum. Mbinu hii inawezesha kusambaza gharama zisizobadilika kwenye miamala mingi katika kila fungu, na kupunguza ada kwa watumiaji wa mwisho. Mikusanyiko ya optimistic pia hutumia mbinu za kubana ili kupunguza kiasi cha data kinachochapishwa kwenye Ethereum.
 
-Uboreshaji wa matumaini unachukuliwa kuwa "wenye matumaini" kwa sababu wanadhania kwamba miamala ya nje ya mtandao ni halali na haichapishi uthibitisho wa uhalali wa bechi za miamala zilizochapishwa kwenye mnyororo. Hii hutenganisha optimistic rollups na [zero-knowledge rollups](/developers/docs/scaling/zk-rollups) ambazo huchapisha [thibitisho za uhalali](/glossary/#validity-proof) za kriptografia kwa miamala ya nje ya mnyororo.
+Mikusanyiko ya optimistic inachukuliwa kuwa "optimistic" kwa sababu inachukulia kuwa miamala ya nje ya mnyororo ni halali na haichapishi uthibitisho wa uhalali kwa mafungu ya miamala yaliyochapishwa mnyororoni. Hii inatofautisha mikusanyiko ya optimistic na [mikusanyiko ya sifuri-maarifa](/developers/docs/scaling/zk-rollups) ambayo huchapisha [uthibitisho wa uhalali](/glossary/#validity-proof) wa kificho kwa miamala ya nje ya mnyororo.
 
-Badala yake, optimistic rollups hutegemea mpango wa kuthibitisha ulaghai ili kugundua visa ambapo miamala haijahesabiwa kwa usahihi. Baada ya kundi la rollup kuwasilishwa kwenye Ethereum, kuna muda maalum (unaoitwa kipindi cha changamoto) ambapo mtu yeyote anaweza kupinga matokeo ya muamala wa rollup kwa kukokotoa [thibitisho la ulaghai](/glossary/#fraud-proof).
+Badala yake, mikusanyiko ya optimistic hutegemea mpango wa kuthibitisha udanganyifu ili kugundua matukio ambapo miamala haikokotolewi kwa usahihi. Baada ya fungu la rollup kuwasilishwa kwenye Ethereum, kuna dirisha la muda (linaloitwa kipindi cha changamoto) ambapo mtu yeyote anaweza kupinga matokeo ya muamala wa rollup kwa kukokotoa [ushahidi wa udanganyifu](/glossary/#fraud-proof).
 
-Ikiwa thibitisho la ulaghai litafaulu, itifaki ya rollup hutekeleza tena muamala (miamala) na kusasisha hali ya rollup ipasavyo. Athari nyingine ya uthibitisho wa ulaghai uliofaulu ni kwamba mfuataji wa mpangilio anayehusika na kujumuisha muamala uliotekelezwa vibaya kwenye kizuizi hupokea adhabu.
+Ikiwa ushahidi wa udanganyifu utafaulu, itifaki ya rollup hutekeleza upya muamala (au miamala) na kusasisha hali ya rollup ipasavyo. Athari nyingine ya ushahidi wa udanganyifu uliofaulu ni kwamba mpangaji anayehusika na kujumuisha muamala uliotekelezwa vibaya katika kitalu hupokea adhabu.
 
-Ikiwa kundi la makusanyoa litasalia bila kupingwa (yaani, miamala yote itatekelezwa ipasavyo) baada ya kipindi cha changamoto kuisha, itachukuliwa kuwa halali na kukubaliwa kwenye Ethereum. Wengine wanaweza kuendelea kujenga juu ya kizuizi ambacho hakijathibitishwa, lakini kwa tahadhari: matokeo ya muamala yatatenguliwa ikiwa kulingana na muamala usio sahihi uliochapishwa hapo awali.
+Ikiwa fungu la rollup litasalia bila kupingwa (yaani, miamala yote imetekelezwa kwa usahihi) baada ya kipindi cha changamoto kupita, linachukuliwa kuwa halali na kukubaliwa kwenye Ethereum. Wengine wanaweza kuendelea kujenga kwenye kitalu cha rollup ambacho hakijathibitishwa, lakini kwa tahadhari: matokeo ya muamala yatabadilishwa ikiwa yanatokana na muamala uliotekelezwa vibaya uliochapishwa hapo awali.
 
-## Je, optimistic rollups huingilianaje na Ethereum? {#optimistic-rollups-and-Ethereum}
+## Mikusanyiko ya optimistic huingiliana vipi na Ethereum? {#optimistic-rollups-and-ethereum}
 
-Optimistic rollups ni [suluhisho za kuongeza ukubwa nje ya mnyororo](/developers/docs/scaling/#offchain-scaling) zilizoundwa ili kufanya kazi juu ya Ethereum. Kila optimistic rollup husimamiwa na seti ya mikataba-erevu iliyotumwa kwenye mtandao wa Ethereum. Usambazaji wenye matumaini huchakata miamala kutoka kwa mnyororo mkuu wa Ethereum, lakini miamala ya baada ya nje ya mnyororo (kwa makundi) hadi kwenye mkataba wa kukuza mtandao wa mnyororo. Kama mnyororo wa bloku wa Ethereum, rekodi hii ya muamala haibadiliki na huunda "mnyororo wa optimistic rollup."
+Mikusanyiko ya optimistic ni [masuluhisho ya kuongeza uwezo nje ya mnyororo](/developers/docs/scaling/#offchain-scaling) yaliyojengwa kufanya kazi juu ya Ethereum. Kila rollup ya optimistic inasimamiwa na seti ya mikataba mahiri iliyosambazwa kwenye mtandao wa Ethereum. Mikusanyiko ya optimistic huchakata miamala nje ya mnyororo mkuu wa Ethereum, lakini huchapisha miamala ya nje ya mnyororo (katika mafungu) kwenye mkataba wa rollup mnyororoni. Kama mnyororo wa vitalu wa Ethereum, rekodi hii ya muamala ni isiyobadilika na huunda "mnyororo wa rollup ya optimistic."
 
-Muundo wa optimistic rollup unajumuisha sehemu zifuatazo:
+Usanifu wa rollup ya optimistic unajumuisha sehemu zifuatazo:
 
-**Mikataba ya kwenye mnyororo**: Uendeshaji wa optimistic rollup unadhibitiwa na mikataba-erevu inayoendeshwa kwenye Ethereum. Hii inajumuisha mikataba inayohifadhi bloku za rollup, kufuatilia sasisho za hali kwenye rollup, na kufuatilia amana za watumiaji. Kwa maana hii, Ethereum hutumika kama safu ya msingi au "safu ya 1" kwa optimistic rollups.
+**Mikataba mnyororoni**: Uendeshaji wa rollup ya optimistic unadhibitiwa na mikataba mahiri inayoendeshwa kwenye Ethereum. Hii inajumuisha mikataba inayohifadhi vitalu vya rollup, kufuatilia masasisho ya hali kwenye rollup, na kufuatilia amana za watumiaji. Kwa maana hii, Ethereum hutumika kama tabaka la msingi au "tabaka la 1 (l1)" kwa mikusanyiko ya optimistic.
 
-**Mashine halisi ya nje ya mnyororo (VM)**: Ingawa mikataba inayosimamia itifaki ya optimistic rollup inaendeshwa kwenye Ethereum, itifaki ya rollup hufanya hesabu na hifadhi ya hali kwenye mashine nyingine halisi tofauti na [Mashine Halisi ya Ethereum](/developers/docs/evm/). Nje ya mnyrooro VM ni mahali ambapo maombi mubashara na mabadiliko ya hali yanatekelezwa; hutumika kama safu ya juu au "safu ya 2" kwa safu ya matumaini.
+**Mashine pepe ya nje ya mnyororo (VM)**: Ingawa mikataba inayosimamia itifaki ya rollup ya optimistic inaendeshwa kwenye Ethereum, itifaki ya rollup hufanya ukokotoaji na uhifadhi wa hali kwenye mashine pepe nyingine tofauti na [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm/). VM ya nje ya mnyororo ndipo programu zinapoishi na mabadiliko ya hali yanapotekelezwa; inatumika kama tabaka la juu au "tabaka la 2 (l2)" kwa rollup ya optimistic.
 
-Kwa vile makusanyo ya matumaini yameundwa ili kuendesha programu ama zilizoandikwa au kukusanywa kwa ajili ya EVM, VM ya nje ya mnyororo hujumuisha vipimo vingi vya muundo wa EVM. Zaidi ya hayo, thibitisho za ulaghai zilizokokotwa kwenye mnyororo huuruhusu mtandao wa Ethereum kutekeleza uhalali wa mabadiliko ya hali yaliyokokotwa kwenye VM ya nje ya mnyororo.
+Kwa kuwa mikusanyiko ya optimistic imeundwa kuendesha programu zilizoandikwa au kukusanywa kwa ajili ya EVM, VM ya nje ya mnyororo inajumuisha vipimo vingi vya muundo wa EVM. Zaidi ya hayo, ushahidi wa udanganyifu uliokokotolewa mnyororoni huruhusu mtandao wa Ethereum kutekeleza uhalali wa mabadiliko ya hali yaliyokokotolewa katika VM ya nje ya mnyororo.
 
-Mipangilio yenye matumaini inafafanuliwa kuwa 'suluhisho mseto za kuongeza uwezu wa mtandao ' kwa sababu, ingawa zipo kama itifaki tofauti, sifa zao za usalama zinatokana na Ethereum. Miongoni mwa mambo mengine, Ethereum inahakikisha usahihi wa hesabu ya nje ya mnyororo ya makusanyo na upatikanaji wa data nyuma ya hesabu. Hii inafanya optimistic rollups kuwa salama zaidi kuliko itifaki za uongezaji za nje ya mnyororo (k.m., [sidechains](/developers/docs/scaling/sidechains/)) ambazo hazitegemei Ethereum kwa usalama.
+Mikusanyiko ya optimistic inaelezewa kama 'masuluhisho mseto ya kuongeza uwezo' kwa sababu, ingawa yapo kama itifaki tofauti, sifa zao za usalama zinatokana na Ethereum. Miongoni mwa mambo mengine, Ethereum inahakikisha usahihi wa ukokotoaji wa nje ya mnyororo wa rollup na upatikanaji wa data nyuma ya ukokotoaji. Hii inafanya mikusanyiko ya optimistic kuwa salama zaidi kuliko itifaki safi za kuongeza uwezo nje ya mnyororo (k.m., [minyororo ya kando](/developers/docs/scaling/sidechains/)) ambazo hazitegemei Ethereum kwa usalama.
 
-Optimistic rollups hutegemea itifaki kuu ya Ethereum kwa yafuatayo:
+Mikusanyiko ya optimistic hutegemea itifaki kuu ya Ethereum kwa yafuatayo:
 
 ### Upatikanaji wa data {#data-availability}
 
-Kama ilivyoelezwa, optimistic rollups huchapisha data ya muamala kwenye Ethereum kama `calldata` au [blobs](/roadmap/danksharding/). Kwa kuwa utekelezaji wa mnyororo wa rollup unategemea miamala iliyowasilishwa, mtu yeyote anaweza kutumia taarifa hii—iliyotiwa nanga kwenye safu ya msingi ya Ethereum—kutekeleza hali ya rollup na kuthibitisha usahihi wa mabadiliko ya hali.
+Kama ilivyotajwa, mikusanyiko ya optimistic huchapisha data ya muamala kwenye Ethereum kama `calldata` au [mablobu](/roadmap/danksharding/). Kwa kuwa utekelezaji wa mnyororo wa rollup unategemea miamala iliyowasilishwa, mtu yeyote anaweza kutumia maelezo haya—yaliyowekwa kwenye tabaka la msingi la Ethereum—kutekeleza hali ya rollup na kuthibitisha usahihi wa mabadiliko ya hali.
 
-Upatikanaji wa data ni muhimu sana kwa sababu bila ufikiaji wa data ya hali, wapinzani hawawezi kuunda thibitisho za ulaghai ili kupinga utendakazi batili wa rollup. Huku Ethereum ikitoa upatikanaji wa data, hatari ya waendeshaji orodha kuepuka vitendo viovu (k.m., kuwasilisha vizuizi batili) hupunguzwa.
+[Upatikanaji wa data](/developers/docs/data-availability/) ni muhimu kwa sababu bila ufikiaji wa data ya hali, wapingaji hawawezi kuunda ushahidi wa udanganyifu ili kupinga shughuli batili za rollup. Kwa Ethereum kutoa upatikanaji wa data, hatari ya waendeshaji wa rollup kufanikiwa na vitendo viovu (k.m., kuwasilisha vitalu batili) inapunguzwa.
 
-### Ukinzani dhidi ya udhibiti {#censorship-resistance}
+### Upinzani wa udhibiti {#censorship-resistance}
 
-Optimistic rollups pia hutegemea Ethereum kwa ajili ya ukinzani dhidi ya udhibiti. Katika optimistic rollup, huluki ya kati (opereta) inawajibika kwa kuchakata miamala na kuwasilisha bloku za rollup kwa Ethereum. Hii ina baadhi ya athari:
+Mikusanyiko ya optimistic pia hutegemea Ethereum kwa upinzani wa udhibiti. Katika rollup ya optimistic, chombo kilichowekwa kati (mwendeshaji) kinawajibika kuchakata miamala na kuwasilisha vitalu vya rollup kwenye Ethereum. Hii ina athari kadhaa:
 
-- Waendeshaji wa rollup wanaweza kudhibiti watumiaji kwa kutokuwa mtandaoni kabisa, au kwa kukataa kutoa bloku zinazojumuisha miamala fulani ndani yake.
+- Waendeshaji wa rollup wanaweza kudhibiti watumiaji kwa kwenda nje ya mtandao kabisa, au kwa kukataa kuzalisha vitalu vinavyojumuisha miamala fulani ndani yake.
 
-- Waendeshaji wa makusanyo wanaweza kuzuia watumiaji kutoa pesa zilizowekwa katika mkataba wa uwasilishaji kwa kushikilia data ya majimbo muhimu kwa uthibitisho wa umiliki wa Merkle. Data ya jimbo iliyozuiliwa inaweza pia kuficha hali ya uwasilishaji kutoka kwa watumiaji na kuwazuia kuingiliana na ukusanyaji.
+- Waendeshaji wa rollup wanaweza kuzuia watumiaji kutoa fedha zilizowekwa kwenye mkataba wa rollup kwa kuzuia data ya hali inayohitajika kwa ushahidi wa Merkle wa umiliki. Kuzuia data ya hali pia kunaweza kuficha hali ya rollup kutoka kwa watumiaji na kuwazuia kuingiliana na rollup.
 
-Mkusanyo yenye matumaini hutatua tatizo hili kwa kuwalazimisha waendeshaji kuchapisha data inayohusiana na maboresho ya jimbo kwenye Ethereum. Kuchapisha data ya rollup kwenye mnyororo kuna faida zifuatazo:
+Mikusanyiko ya optimistic hutatua tatizo hili kwa kulazimisha waendeshaji kuchapisha data inayohusiana na masasisho ya hali kwenye Ethereum. Kuchapisha data ya rollup mnyororoni kuna faida zifuatazo:
 
-- Ikiwa opereta wa optimistic rollup ataenda nje ya mtandao au ataacha kutoa makundi ya miamala, nodi nyingine inaweza kutumia data inayopatikana ili kuzalisha upya hali ya mwisho ya rollup na kuendelea na uzalishaji wa bloku.
+- Ikiwa mwendeshaji wa rollup ya optimistic ataenda nje ya mtandao au kuacha kuzalisha mafungu ya miamala, nodi nyingine inaweza kutumia data inayopatikana kuzalisha upya hali ya mwisho ya rollup na kuendelea na uzalishaji wa kitalu.
 
-- Watumiaji wanaweza kutumia data ya muamala kuunda thibitisho za Merkle zinazothibitisha umiliki wa fedha na kutoa mali zao kutoka kwenye rollup.
+- Watumiaji wanaweza kutumia data ya muamala kuunda ushahidi wa Merkle unaothibitisha umiliki wa fedha na kutoa mali zao kutoka kwenye rollup.
 
-- Watumiaji wanaweza pia kuwasilisha miamala yao kwenye L1 badala ya kwa mratibu wa mfuatano, ambapo mratibu wa mfuatano atalazimika kujumuisha muamala huo ndani ya muda maalum ili kuendelea kutoa bloku halali.
+- Watumiaji pia wanaweza kuwasilisha miamala yao kwenye tabaka la 1 (l1) badala ya kwa mpangaji, ambapo mpangaji anapaswa kujumuisha muamala ndani ya kikomo fulani cha muda ili kuendelea kuzalisha vitalu halali.
 
-### Marekebisho {#settlement}
+### Ukamilishaji {#settlement}
 
-Jukumu lingine ambalo Ethereum inacheza katika muktadha wa optimistic rollups ni lile la safu ya suluhu. Safu ya suluhu hutia nanga mfumo mzima wa mnyororo wa bloku, huanzisha usalama, na hutoa umalizikaji wenye lengo ikiwa mzozo utatokea kwenye mnyororo mwingine (optimistic rollups katika kesi hii) unaohitaji usuluhishi.
+Jukumu jingine ambalo Ethereum inacheza katika muktadha wa mikusanyiko ya optimistic ni lile la tabaka la ukamilishaji. Tabaka la ukamilishaji huweka msingi wa mfumo mzima wa mnyororo wa vitalu, huanzisha usalama, na kutoa ukamilifu wa lengo ikiwa mzozo utatokea kwenye mnyororo mwingine (mikusanyiko ya optimistic katika kesi hii) unaohitaji usuluhishi.
 
-Mtandao Mkuu wa Ethereum hutoa kitovu kwa optimistic rollups kuthibitisha thibitisho za ulaghai na kutatua mizozo. Zaidi ya hayo, miamala inayofanywa kwenye rollup inakuwa ya mwisho _baada ya_ bloku ya rollup kukubaliwa kwenye Ethereum. Mara tu muamala wa rollup unapowekwa kwenye safu ya msingi ya Ethereum, hauwezi kurejeshwa nyuma (isipokuwa katika kisa kisichowezekana kabisa cha upangaji upya wa mnyororo).
+Mtandao Mkuu wa Ethereum hutoa kitovu kwa mikusanyiko ya optimistic kuthibitisha ushahidi wa udanganyifu na kutatua mizozo. Zaidi ya hayo, miamala inayofanywa kwenye rollup inakuwa ya mwisho tu _baada_ ya kitalu cha rollup kukubaliwa kwenye Ethereum. Pindi muamala wa rollup unapowekwa kwenye tabaka la msingi la Ethereum, hauwezi kurudishwa nyuma (isipokuwa katika hali isiyowezekana sana ya upangaji upya wa mnyororo).
 
-## Je, optimistic rollups hufanyaje kazi? {#how-optimistic-rollups-work}
+## Mikusanyiko ya optimistic inafanyaje kazi? {#how-optimistic-rollups-work}
 
-### Utekelezaji na mkusanyiko wa miamala {#transaction-execution-and-aggregation}
+### Utekelezaji na ujumuishaji wa muamala {#transaction-execution-and-aggregation}
 
-Watumiaji huwasilisha miamala kwa “waendeshaji”, ambao ni nodi zinazohusika na kuchakata miamala kwenye optimistic rollup. Pia anajulikana kama “mthibitishaji” au “mkusanyaji”, mwendeshaji hukusanya miamala, hubana data ya msingi, na kuchapisha bloku kwenye Ethereum.
+Watumiaji huwasilisha miamala kwa "waendeshaji", ambao ni nodi zinazowajibika kuchakata miamala kwenye rollup ya optimistic. Pia inajulikana kama "mthibitishaji" au "mjumuishaji", mwendeshaji hujumuisha miamala, kubana data ya msingi, na kuchapisha kitalu kwenye Ethereum.
 
-Ingawa mtu yeyote anaweza kuwa mthibitishaji, wathibitishaji wa optimistic rollup lazima watoe dhamana kabla ya kutoa bloku, sawa na [mfumo wa uthibitisho wa hisa](/developers/docs/consensus-mechanisms/pos/). Dhamana hii inaweza kupunguzwa ikiwa mthibitishaji atachapisha bloku batili au kujenga juu ya bloku ya zamani lakini batili (hata kama bloku yake ni halali). Kwa njia hii optimistic rollups hutumia motisha za kiuchumi za kripto kuhakikisha wathibitishaji wanatenda kwa uaminifu.
+Ingawa mtu yeyote anaweza kuwa mthibitishaji, wathibitishaji wa rollup ya optimistic lazima watoe dhamana kabla ya kuzalisha vitalu, sawa na [mfumo wa Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos/). Dhamana hii inaweza kukatwa (ukataji) ikiwa mthibitishaji atachapisha kitalu batili au kujenga kwenye kitalu cha zamani lakini batili (hata kama kitalu chao ni halali). Kwa njia hii mikusanyiko ya optimistic hutumia motisha za kiuchumi za kificho ili kuhakikisha wathibitishaji wanatenda kwa uaminifu.
 
-Wathibitishaji wengine kwenye mnyororo wa optimistic rollup wanatarajiwa kutekeleza miamala iliyowasilishwa kwa kutumia nakala yao ya hali ya rollup. Ikiwa hali ya mwisho ya mthibitishaji ni tofauti na hali iliyopendekezwa na opereta, wanaweza kuanzisha changamoto na kukokotoa ushahidi wa ulaghai.
+Wathibitishaji wengine kwenye mnyororo wa rollup ya optimistic wanatarajiwa kutekeleza miamala iliyowasilishwa kwa kutumia nakala yao ya hali ya rollup. Ikiwa hali ya mwisho ya mthibitishaji ni tofauti na hali iliyopendekezwa na mwendeshaji, wanaweza kuanzisha changamoto na kukokotoa ushahidi wa udanganyifu.
 
-Baadhi ya ukusanyaji wenye matumaini yanaweza kuacha mfumo wa kiidhinishaji usio na ruhusa na kutumia "kifuatiliaji" kimoja kutekeleza mnyororo. Kama vile kihalalishaji, kiratibu huchakata miamala, hutengeneza vizuizi, na kuwasilisha miamala ya kusambaza kwa mnyororo wa L1 (Ethereum).
+Baadhi ya mikusanyiko ya optimistic inaweza kuacha mfumo wa mthibitishaji bila ruhusa na kutumia "mpangaji" mmoja kutekeleza mnyororo. Kama mthibitishaji, mpangaji huchakata miamala, huzalisha vitalu vya rollup, na kuwasilisha miamala ya rollup kwenye mnyororo wa tabaka la 1 (l1) (Ethereum).
 
-Mfuatano ni tofauti na mwendeshaji wa kawaida wa kusambaza kwa sababu wana udhibiti mkubwa zaidi wa upangaji wa miamala. Pia, mfuatano wa mpangilio una ufikiaji wa kipaumbele kwa mnyororo wa kusambaza na ndiyo huluki pekee iliyoidhinishwa kuwasilisha miamala kwa mkataba wa ndani ya mnyororo. Miamala kutoka kwa nodi zisizo za mpangilio au watumiaji wa kawaida hupangwa tu kwenye kisanduku pokezi tofauti hadi kipanga mpangilio kijumuishe kwenye kundi jipya.
+Mpangaji ni tofauti na mwendeshaji wa kawaida wa rollup kwa sababu wana udhibiti mkubwa zaidi juu ya upangaji wa miamala. Pia, mpangaji ana ufikiaji wa kipaumbele kwenye mnyororo wa rollup na ndiye chombo pekee kilichoidhinishwa kuwasilisha miamala kwenye mkataba mnyororoni. Miamala kutoka kwa nodi zisizo za mpangaji au watumiaji wa kawaida hupangwa tu kwenye foleni katika kikasha tofauti hadi mpangaji aijumuishe katika fungu jipya.
 
-#### Kuwasilisha bloku za rollup kwa Ethereum {#submitting-blocks-to-ethereum}
+#### Kuwasilisha vitalu vya rollup kwenye Ethereum {#submitting-blocks-to-ethereum}
 
-Kama ilivyotajwa, mwendeshaji wa kusanyo la matumaini hukusanya miamala ya nje ya mnyororo kwenye kundi na kuituma kwa Ethereum kwa uthibitishaji. Mchakato huu unahusisha kubana data inayohusiana na muamala na kuichapisha kwenye Ethereum kama `calldata` au kwa blobs.
+Kama ilivyotajwa, mwendeshaji wa rollup ya optimistic hukusanya miamala ya nje ya mnyororo katika fungu na kuituma kwenye Ethereum kwa uthibitisho. Mchakato huu unahusisha kubana data inayohusiana na muamala na kuichapisha kwenye Ethereum kama `calldata` au katika mablobu.
 
-`calldata` ni eneo lisiloweza kurekebishwa, lisilo la kudumu katika mkataba-erevu ambalo hufanya kazi kwa kiasi kikubwa kama [kumbukumbu](/developers/docs/smart-contracts/anatomy/#memory). Wakati `calldata` hudumu kwenye mnyororo kama sehemu ya [kumbukumbu za historia](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) za mnyororo wa bloku, haihifadhiwi kama sehemu ya hali ya Ethereum. Kwa sababu `calldata` haigusi sehemu yoyote ya hali ya Ethereum, ni nafuu zaidi kuliko hali kwa kuhifadhi data kwenye mnyororo.
+`calldata` ni eneo lisiloweza kurekebishwa, lisilodumu katika mkataba mahiri ambalo hufanya kazi zaidi kama [kumbukumbu](/developers/docs/smart-contracts/anatomy/#memory). Ingawa `calldata` hudumu mnyororoni kama sehemu ya [kumbukumbu za historia](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) za mnyororo wa vitalu, haihifadhiwi kama sehemu ya hali ya Ethereum. Kwa sababu `calldata` haigusi sehemu yoyote ya hali ya Ethereum, ni nafuu kuliko hali kwa kuhifadhi data mnyororoni.
 
-Neno msingi `calldata` pia hutumiwa katika Solidity kupitisha hoja kwa kazi ya mkataba-erevu wakati wa utekelezaji. `calldata` hubainisha kazi inayoitwa wakati wa muamala na hushikilia ingizo kwa kazi hiyo katika mfumo wa mfuatano holela wa baiti.
+Neno kuu la `calldata` pia hutumika katika Solidity kupitisha hoja kwenye utendakazi wa mkataba mahiri wakati wa utekelezaji. `calldata` hutambua utendakazi unaoitwa wakati wa muamala na hushikilia ingizo kwenye utendakazi katika mfumo wa mfuatano wa kiholela wa baiti.
 
-Katika muktadha wa optimistic rollups, `calldata` hutumiwa kutuma data ya muamala iliyobanwa kwa mkataba wa kwenye mnyororo. Mtoa huduma wa kusambaza huongeza awamu mpya kwa kuita kitendaji kazi kinachohitajika katika mkataba wa kusambaza na kupitisha data iliyobanwa kama hoja za utendaji kazi. Kutumia `calldata` hupunguza ada za mtumiaji kwa kuwa gharama nyingi ambazo rollups huingia hutokana na kuhifadhi data kwenye mnyororo.
+Katika muktadha wa mikusanyiko ya optimistic, `calldata` hutumika kutuma data ya muamala iliyobanwa kwenye mkataba mnyororoni. Mwendeshaji wa rollup huongeza fungu jipya kwa kuita utendakazi unaohitajika katika mkataba wa rollup na kupitisha data iliyobanwa kama hoja za utendakazi. Kutumia `calldata` hupunguza ada za watumiaji kwa kuwa gharama nyingi ambazo mikusanyiko huingia hutokana na kuhifadhi data mnyororoni.
 
-Huu ni [mfano](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) wa uwasilishaji wa kundi la rollup kuonyesha jinsi dhana hii inavyofanya kazi. Mratibu wa mfuatano alianzisha mbinu ya `appendSequencerBatch()` na kupitisha data ya muamala iliyobanwa kama ingizo kwa kutumia `calldata`.
+Huu hapa ni [mfano](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) wa uwasilishaji wa fungu la rollup ili kuonyesha jinsi dhana hii inavyofanya kazi. Mpangaji aliita mbinu ya `appendSequencerBatch()` na kupitisha data ya muamala iliyobanwa kama ingizo kwa kutumia `calldata`.
 
-Baadhi ya rollups sasa hutumia blobs kuchapisha makundi ya miamala kwenye Ethereum.
+Baadhi ya mikusanyiko sasa hutumia mablobu kuchapisha mafungu ya miamala kwenye Ethereum.
 
-Blobs hazirekebishiki na si za kudumu (kama vile `calldata`) lakini hupunguzwa kutoka kwenye historia baada ya takriban siku 18. Kwa maelezo zaidi kuhusu blobs, angalia [Danksharding](/roadmap/danksharding).
+Mablobu hayawezi kurekebishwa na hayadumu (kama tu `calldata`) lakini hupunguzwa kutoka kwenye historia baada ya takriban siku 18. Kwa maelezo zaidi kuhusu mablobu, tazama [danksharding](/roadmap/danksharding).
 
 ### Ahadi za hali {#state-commitments}
 
-Wakati wowote, hali ya optimistic rollup (akaunti, salio, msimbo wa mkataba, n.k.) hupangwa kama [Mti wa Merkle](/whitepaper/#merkle-trees) unaoitwa “mti wa hali”. Mzizi wa mti huu wa Merkle (mzizi wa jimbo), ambao unarejelea hali ya hivi punde ya upandaji, huharakishwa na kuhifadhiwa katika mkataba wa kuorodhesha. Kila mpito wa jimbo kwenye mnyoro huzalisha hali mpya ya kusambaza, ambayo mtoa huduma hujitolea kwa kukokotoa mzizi wa jimbo jipya.
+Wakati wowote, hali ya rollup ya optimistic (akaunti, salio, msimbo wa mkataba, n.k.) hupangwa kama [mti wa Merkle](/whitepaper/#merkle-trees) unaoitwa "mti wa hali". Mzizi wa mti huu wa Merkle (mzizi wa hali), ambao unarejelea hali ya hivi punde ya rollup, huwekwa heshi na kuhifadhiwa katika mkataba wa rollup. Kila mabadiliko ya hali kwenye mnyororo huzalisha hali mpya ya rollup, ambayo mwendeshaji huahidi kwa kukokotoa mzizi mpya wa hali.
 
-Opereta anahitajika kuwasilisha mizizi ya zamani ya hali na mizizi mipya ya hali anapochapisha makundi. Ikiwa mzizi wa hali ya zamani unalingana na mzizi wa jimbo uliopo katika mkataba wa ndani ya mnyororo, mwisho hutupwa na kubadilishwa na mzizi wa jimbo jipya.
+Mwendeshaji anahitajika kuwasilisha mizizi ya hali ya zamani na mizizi ya hali mpya wakati wa kuchapisha mafungu. Ikiwa mzizi wa hali ya zamani unalingana na mzizi wa hali uliopo katika mkataba mnyororoni, wa mwisho hutupwa na kubadilishwa na mzizi mpya wa hali.
 
-Opereta wa rollup pia anahitajika kuweka mzizi wa Merkle kwa kundi la muamala lenyewe. Hii inaruhusu mtu yeyote kuthibitisha ujumuishwaji wa muamala katika kundi (kwenye L1) kwa kuwasilisha [uthibitisho wa Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/).
+Mwendeshaji wa rollup pia anahitajika kuahidi mzizi wa Merkle kwa fungu la muamala lenyewe. Hii inaruhusu mtu yeyote kuthibitisha ujumuishaji wa muamala katika fungu (kwenye tabaka la 1 (l1)) kwa kuwasilisha [ushahidi wa Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/).
 
-Ahadi za hali, hasa mizizi ya hali, ni muhimu kwa kuthibitisha usahihi wa mabadiliko ya hali katika optimistic rollup. Mkataba wa ugawaji hukubali mizizi ya jimbo jipya kutoka kwa waendeshaji mara tu baada ya kuchapishwa, lakini inaweza baadaye kufuta mizizi batili ya hali ili kurejesha uwasilishaji katika hali yake sahihi.
+Ahadi za hali, hasa mizizi ya hali, ni muhimu kwa kuthibitisha usahihi wa mabadiliko ya hali katika rollup ya optimistic. Mkataba wa rollup hukubali mizizi mipya ya hali kutoka kwa waendeshaji mara tu baada ya kuchapishwa, lakini baadaye unaweza kufuta mizizi batili ya hali ili kurejesha rollup katika hali yake sahihi.
 
-### Uthibitishaji wa ulaghai {#fraud-proving}
+### Kuthibitisha udanganyifu {#fraud-proving}
 
-Kama ilivyoelezwa, optimistic rollups huruhusu mtu yeyote kuchapisha bloku bila kutoa thibitisho za uhalali. Hata hivyo, ili kuhakikisha kuwa mnyoror unasalia kuwa salama, uwasilishaji wa matumaini hubainisha muda ambao mtu yeyote anaweza kupinga mabadiliko ya jimbo. Hivyo, bloku za rollup huitwa “madai” kwani mtu yeyote anaweza kupinga uhalali wake.
+Kama ilivyoelezwa, mikusanyiko ya optimistic inaruhusu mtu yeyote kuchapisha vitalu bila kutoa uthibitisho wa uhalali. Hata hivyo, ili kuhakikisha mnyororo unasalia salama, mikusanyiko ya optimistic hubainisha dirisha la muda ambapo mtu yeyote anaweza kupinga mabadiliko ya hali. Kwa hivyo, vitalu vya rollup huitwa "madai" kwa kuwa mtu yeyote anaweza kupinga uhalali wake.
 
-Ikiwa mtu atapinga dai, basi itifaki ya rollup itaanzisha ukokotoaji wa ushahidi wa ulaghai. Kila aina ya ushahidi wa ulaghai ni wa mwingiliano—mtu lazima achapishe dai kabla ya mtu mwingine kulipinga. Tofauti iko katika raundi ngapi za mwingiliano zinahitajika ili kukokotoa ushahidi wa ulaghai.
+Ikiwa mtu atapinga dai, basi itifaki ya rollup itaanzisha ukokotoaji wa ushahidi wa udanganyifu. Kila aina ya ushahidi wa udanganyifu ni mwingiliano—mtu lazima achapishe dai kabla ya mtu mwingine kulipinga. Tofauti iko katika ni raundi ngapi za mwingiliano zinahitajika ili kukokotoa ushahidi wa udanganyifu.
 
-Mifumo ya uthibitishaji wa mwingiliano wa raundi moja hurudia miamala iliyopingwa kwenye L1 ili kugundua madai batili. Itifaki ya ujumuishaji huiga utekelezaji upya wa miamala iliyobishaniwa kwenye L1 (Ethereum) kwa kutumia mkataba wa kithibitishaji, huku hali iliyokokotwa ikibainisha ni nani atashinda shindano hilo. Ikiwa dai la mpinzani kuhusu hali sahihi ya uwasilishaji ni sahihi, mwendeshaji ataadhibiwa kwa kukatwa dhamana yake.
+Mipango ya uthibitishaji mwingiliano wa raundi moja hucheza tena miamala inayobishaniwa kwenye tabaka la 1 (l1) ili kugundua madai batili. Itifaki ya rollup huiga utekelezaji upya wa muamala unaobishaniwa kwenye tabaka la 1 (l1) (Ethereum) kwa kutumia mkataba wa mhakiki, huku mzizi wa hali uliokokotolewa ukiamua nani atashinda changamoto. Ikiwa dai la mpingaji kuhusu hali sahihi ya rollup ni sahihi, mwendeshaji huadhibiwa kwa kukatwa dhamana yao.
 
-Hata hivyo, kutekeleza tena miamala kwenye L1 ili kugundua ulaghai kunahitaji uchapishaji wa ahadi za jimbo kwa miamala ya mtu binafsi na kuongeza orodha za data lazima zichapishwe kwenye mnyororo. Kurudia miamala pia husababisha gharama kubwa za gesi. Kwa sababu hizi, uboreshaji wa matumaini unabadilika hadi uthibitishaji wa mwingiliano wa pande nyingi, ambao unafikia lengo sawa (yaani, kugundua utendakazi batili) kwa ufanisi zaidi.
+Hata hivyo, kutekeleza upya miamala kwenye tabaka la 1 (l1) ili kugundua udanganyifu kunahitaji kuchapisha ahadi za hali kwa miamala ya kibinafsi na huongeza data ambayo mikusanyiko lazima ichapishe mnyororoni. Kucheza tena miamala pia huingiza gharama kubwa za gesi. Kwa sababu hizi, mikusanyiko ya optimistic inabadilika kwenda kwenye uthibitishaji mwingiliano wa raundi nyingi, ambao hufikia lengo sawa (yaani, kugundua shughuli batili za rollup) kwa ufanisi zaidi.
 
-#### Uthibitishaji wa mwingiliano wa raundi nyingi {#multi-round-interactive-proving}
+#### Uthibitishaji mwingiliano wa raundi nyingi {#multi-round-interactive-proving}
 
-Uthibitishaji wa mwingiliano wa pande nyingi unahusisha itifaki ya kurudi na kwenda kati ya mdai na mpinzani inayosimamiwa na mkataba wa kithibitishaji cha L1, ambao hatimaye huamua mhusika mwongo. Baada ya nodi ya L2 kupinga dai, mdai anahitajika kugawanya dai lililopingwa katika nusu mbili sawa. Kila dai la kibinafsi katika kesi hii litakuwa na hatua nyingi za ukokotoaji kama lile lingine.
+Uthibitishaji mwingiliano wa raundi nyingi unahusisha itifaki ya kwenda na kurudi kati ya mdai na mpingaji inayosimamiwa na mkataba wa mhakiki wa tabaka la 1 (l1), ambao hatimaye huamua upande unaodanganya. Baada ya nodi ya tabaka la 2 (l2) kupinga dai, mdai anahitajika kugawanya dai linalobishaniwa katika nusu mbili sawa. Kila dai la kibinafsi katika kesi hii litakuwa na hatua nyingi za ukokotoaji kama lingine.
 
-Mpinzani atachagua dai gani anataka kupinga. Mchakato wa kugawanya (unaoitwa “itifaki ya sehemu mbili”) unaendelea hadi pande zote mbili zinapinga dai kuhusu hatua _moja_ ya utekelezaji. Katika hatua hii, mkataba wa L1 utatatua mzozo kwa kutathmini maagizo (na matokeo yake) ili kumkamata mhusika mdanganyifu.
+Mpingaji kisha atachagua dai gani anataka kupinga. Mchakato wa kugawanya (unaoitwa "itifaki ya kugawanya mara mbili") unaendelea hadi pande zote mbili zinabishania dai kuhusu hatua _moja_ ya utekelezaji. Katika hatua hii, mkataba wa tabaka la 1 (l1) utatatua mzozo kwa kutathmini maagizo (na matokeo yake) ili kumkamata mhusika mdanganyifu.
 
-Mdai anahitajika kutoa “uthibitisho wa hatua moja” unaothibitisha uhalali wa ukokotoaji wa hatua moja uliopingwa. Ikiwa mdai atashindwa kutoa uthibitisho wa hatua moja, au mthibitishaji wa L1 akiona uthibitisho huo ni batili, wanapoteza changamoto.
+Mdai anahitajika kutoa "ushahidi wa hatua moja" unaothibitisha uhalali wa ukokotoaji wa hatua moja unaobishaniwa. Ikiwa mdai atashindwa kutoa ushahidi wa hatua moja, au mhakiki wa tabaka la 1 (l1) ataona ushahidi huo ni batili, wanashindwa changamoto.
 
-Baadhi ya dokezo kuhusu aina hii ya ushahidi wa ulaghai:
+Baadhi ya maelezo kuhusu aina hii ya ushahidi wa udanganyifu:
 
-1. Uthibitishaji wa ulaghai wa mwingiliano wa raundi nyingi unachukuliwa kuwa na ufanisi kwa sababu unapunguza kazi ambayo mnyororo wa L1 lazima ufanye katika usuluhishi wa mizozo. Badala ya kurudia muamala mzima, mnyororo wa L1 unahitaji tu kutekeleza tena hatua moja katika utekelezaji wa rollup.
+1. Uthibitishaji mwingiliano wa udanganyifu wa raundi nyingi unachukuliwa kuwa mzuri kwa sababu unapunguza kazi ambayo mnyororo wa tabaka la 1 (l1) lazima ufanye katika usuluhishi wa mizozo. Badala ya kucheza tena muamala mzima, mnyororo wa tabaka la 1 (l1) unahitaji tu kutekeleza upya hatua moja katika utekelezaji wa rollup.
 
-2. Itifaki za sehemu mbili hupunguza kiasi cha data iliyochapishwa kwenye mnyororo (hakuna haja ya kuchapisha ahadi za hali kwa kila muamala). Pia, miamala ya optimistic rollup haibanwi na kikomo cha gesi cha Ethereum. Kinyume chake, optimistic rollups zinazotekeleza tena miamala lazima zihakikishe muamala wa L2 una kikomo cha chini cha gesi ili kuiga utekelezaji wake ndani ya muamala mmoja wa Ethereum.
+2. Itifaki za kugawanya mara mbili hupunguza kiasi cha data kinachochapishwa mnyororoni (hakuna haja ya kuchapisha ahadi za hali kwa kila muamala). Pia, miamala ya rollup ya optimistic haizuiliwi na kikomo cha gesi cha Ethereum. Kinyume chake, mikusanyiko ya optimistic inayotekeleza upya miamala lazima ihakikishe muamala wa tabaka la 2 (l2) una kikomo cha gesi cha chini ili kuiga utekelezaji wake ndani ya muamala mmoja wa Ethereum.
 
-3. Sehemu ya dhamana ya mdai mwenye nia mbaya hupewa mpinzani, huku sehemu nyingine ikichomwa. Uchomaji huo huzuia kula njama miongoni mwa wathibitishaji; ikiwa wathibitishaji wawili watakula njama kuanzisha changamoto za uwongo, bado watapoteza sehemu kubwa ya hisa yote.
+3. Sehemu ya dhamana ya mdai mwovu hutolewa kwa mpingaji, huku sehemu nyingine inateketezwa. Kuteketeza huzuia njama kati ya wathibitishaji; ikiwa wathibitishaji wawili watakula njama kuanzisha changamoto za uongo, bado watapoteza sehemu kubwa ya dhamana nzima.
 
-4. Uthibitishaji wa mwingiliano wa raundi nyingi huhitaji pande zote mbili (mdai na mpinzani) kuchukua hatua ndani ya muda maalum. Kushindwa kuchukua hatua kabla ya muda uliopangwa kuisha husababisha mhusika aliyeshindwa kupoteza changamoto.
+4. Uthibitishaji mwingiliano wa raundi nyingi unahitaji pande zote mbili (mdai na mpingaji) kufanya hatua ndani ya dirisha la muda lililobainishwa. Kushindwa kuchukua hatua kabla ya tarehe ya mwisho kuisha husababisha upande ulioshindwa kupoteza changamoto.
 
-#### Kwa nini thibitisho za ulaghai ni muhimu kwa optimistic rollups {#fraud-proof-benefits}
+#### Kwa nini ushahidi wa udanganyifu ni muhimu kwa mikusanyiko ya optimistic {#fraud-proof-benefits}
 
-Thibitisho za ulaghai ni muhimu kwa sababu huwezesha _umalizikaji usio na uaminifu_ katika optimistic rollups. Umalizikaji usio na uaminifu ni ubora wa optimistic rollups unaohakikisha kwamba muamala—mradi tu ni halali—hatimaye utathibitishwa.
+Ushahidi wa udanganyifu ni muhimu kwa sababu huwezesha _ukamilifu bila hitaji la uaminifu_ katika mikusanyiko ya optimistic. Ukamilifu bila hitaji la uaminifu ni sifa ya mikusanyiko ya optimistic inayohakikisha kwamba muamala—ilimradi ni halali—hatimaye utathibitishwa.
 
-Nodi zenye nia mbaya zinaweza kujaribu kuchelewesha uthibitisho wa bloku halali ya rollup kwa kuanzisha changamoto za uwongo. Hata hivyo, thibitisho za ulaghai hatimaye zitathibitisha uhalali wa bloku ya rollup na kusababisha ithibitishwe.
+Nodi mbovu zinaweza kujaribu kuchelewesha uthibitisho wa kitalu halali cha rollup kwa kuanzisha changamoto za uongo. Hata hivyo, ushahidi wa udanganyifu hatimaye utathibitisha uhalali wa kitalu cha rollup na kusababisha kithibitishwe.
 
-Hii pia inahusiana na sifa nyingine ya usalama ya optimistic rollups: uhalali wa mnyororo unategemea kuwepo kwa nodi _moja_ ya uaminifu. Nodi ya uaminifu inaweza kuendeleza mnyororo kwa usahihi kwa kuchapisha madai halali au kupinga madai batili. Vyovyote iwavyo, nodi zenye nia mbaya zinazoingia kwenye mizozo na nodi ya uaminifu zitapoteza hisa zao wakati wa mchakato wa uthibitishaji wa ulaghai.
+Hii pia inahusiana na sifa nyingine ya usalama ya mikusanyiko ya optimistic: uhalali wa mnyororo unategemea kuwepo kwa nodi _moja_ ya uaminifu. Nodi ya uaminifu inaweza kuendeleza mnyororo kwa usahihi kwa kuchapisha madai halali au kupinga madai batili. Vyovyote iwavyo, nodi mbovu zinazoingia katika mizozo na nodi ya uaminifu zitapoteza dhamana zao wakati wa mchakato wa kuthibitisha udanganyifu.
 
-### Uwezo wa kushirikiana wa L1/L2 {#l1-l2-interoperability}
+### Mwingiliano wa L1/L2 {#l1-l2-interoperability}
 
-Ukusanyaji wenye matumaini imeundwa kwa ajili ya ushirikiano na Ethereum Mtandao mkuu na kuruhusu watumiaji kupitisha ujumbe na data kiholela kati ya L1 na L2. Pia zinaoana na EVM, kwa hivyo unaweza kuhamisha [mfumo mtawanyo wa kimamlaka](/developers/docs/dapps/) zilizopo kwenda optimistic rollups au kuunda mfumo mtawanyo wa kimamlaka mpya kwa kutumia zana za maendeleo za Ethereum.
+Mikusanyiko ya optimistic imeundwa kwa ajili ya mwingiliano na Mtandao Mkuu wa Ethereum na kuruhusu watumiaji kupitisha ujumbe na data ya kiholela kati ya tabaka la 1 (l1) na tabaka la 2 (l2). Pia zinaendana na EVM, kwa hivyo unaweza kuhamisha [programu tumizi zilizogatuliwa (dapps)](/developers/docs/dapps/) zilizopo kwenye mikusanyiko ya optimistic au kuunda dapps mpya kwa kutumia zana za ukuzaji za Ethereum.
 
-#### 1. Uhamisho wa mali {#asset-movement}
+#### 1. Usogezi wa mali {#asset-movement}
 
 ##### Kuingia kwenye rollup
 
-Ili kutumia optimistic rollup, watumiaji huweka ETH, tokeni za ERC-20, na mali zingine zinazokubalika katika mkataba wa [daraja](/developers/docs/bridges/) la rollup kwenye L1. Mkataba wa daraja utarejesha muamala hadi L2, ambapo kiasi sawa cha vipengele hutungwa na kutumwa kwa anwani iliyochaguliwa na mtumiaji kwenye orodha ya matumaini.
+Ili kutumia rollup ya optimistic, watumiaji huweka ETH, tokeni za ERC-20, na mali nyingine zinazokubaliwa katika mkataba wa [daraja](/developers/docs/bridges/) la rollup kwenye tabaka la 1 (l1). Mkataba wa daraja utapitisha muamala kwenye tabaka la 2 (l2), ambapo kiasi sawa cha mali hufuliwa na kutumwa kwa anwani iliyochaguliwa na mtumiaji kwenye rollup ya optimistic.
 
-Miamala inayotokana na mtumiaji (kama vile amana ya L1 > L2) kwa kawaida huwekwa kwenye foleni hadi mratibu wa mfuatano atakapoziwasilisha tena kwenye mkataba wa rollup. Hata hivyo, ili kuhifadhi upinzani wa udhibiti, uwasilishaji wenye matumaini huruhusu watumiaji kuwasilisha muamala moja kwa moja kwa mkataba wa uongezaji wa mtandao ikiwa umecheleweshwa kupita muda wa juu unaoruhusiwa.
+Miamala inayozalishwa na mtumiaji (kama amana ya L1 > L2) kwa kawaida hupangwa kwenye foleni hadi mpangaji aiwasilishe tena kwenye mkataba wa rollup. Hata hivyo, ili kuhifadhi upinzani wa udhibiti, mikusanyiko ya optimistic inaruhusu watumiaji kuwasilisha muamala moja kwa moja kwenye mkataba wa rollup mnyororoni ikiwa umecheleweshwa kupita muda wa juu unaoruhusiwa.
 
-Baadhi ya optimistic rollups huchukua mbinu ya moja kwa moja zaidi kuzuia waratibu wa mfuatano kudhibiti watumiaji. Hapa, kizuizi kinafafanuliwa na miamala yote iliyowasilishwa kwa mkataba wa L1 tangu kizuizi cha awali (k.m., amana) pamoja na miamala iliyochakatwa kwenye mnyororo wa usambazaji. Ikiwa mfuatano utapuuza shughuli ya L1, itachapisha (inawezekana) mzizi wa hali mbaya; kwa hivyo, wafuataji ufuatano hawawezi kuchelewesha jumbe zinazozalishwa na mtumiaji mara tu zitakapowekwa kwenye L1.
+Baadhi ya mikusanyiko ya optimistic inachukua mbinu ya moja kwa moja zaidi ili kuzuia wapangaji kudhibiti watumiaji. Hapa, kitalu kinafafanuliwa na miamala yote iliyowasilishwa kwenye mkataba wa tabaka la 1 (l1) tangu kitalu kilichopita (k.m., amana) pamoja na miamala iliyochakatwa kwenye mnyororo wa rollup. Ikiwa mpangaji atapuuza muamala wa tabaka la 1 (l1), atachapisha mzizi wa hali usio sahihi (unaothibitishwa); kwa hivyo, wapangaji hawawezi kuchelewesha ujumbe unaozalishwa na mtumiaji pindi unapochapishwa kwenye tabaka la 1 (l1).
 
 ##### Kutoka kwenye rollup
 
-Kutoa pesa kutoka kwa optimistic rollup kwenda Ethereum ni ngumu zaidi kutokana na mpango wa uthibitishaji wa ulaghai. Ikiwa mtumiaji ataanzisha muamala wa L2 > L1 ili kutoa fedha zilizowekwa kwenye L1, lazima asubiri hadi kipindi cha changamoto—kinachodumu takriban siku saba—kiishe. Hata hivyo, mchakato wa kutoa pesa wenyewe ni rahisi.
+Kutoa kutoka kwenye rollup ya optimistic kwenda Ethereum ni vigumu zaidi kutokana na mpango wa kuthibitisha udanganyifu. Ikiwa mtumiaji ataanzisha muamala wa L2 > L1 ili kutoa fedha zilizowekwa kwenye tabaka la 1 (l1), lazima asubiri hadi kipindi cha changamoto—kinachodumu takriban siku saba—kipite. Hata hivyo, mchakato wa utoaji wenyewe ni wa moja kwa moja.
 
-Baada ya ombi la uondoaji kuanzishwa kwenye utayarishaji wa L2, muamala hujumuishwa kwenye kundi linalofuata, huku mali za mtumiaji kwenye uwekaji zikiteketezwa. Pindi kundi linapochapishwa kwenye Ethereum, mtumiaji anaweza kukokotoa uthibitisho wa Merkle unaothibitisha kujumuishwa kwa muamala wao wa kuondoka kwenye kizuizi. Kisha ni suala la kusubiri kupitia kipindi cha kuchelewa ili kukamilisha shughuli kwenye L1 na kutoa fedha kwa Mtandao mkuu.
+Baada ya ombi la utoaji kuanzishwa kwenye rollup ya tabaka la 2 (l2), muamala unajumuishwa katika fungu linalofuata, huku mali za mtumiaji kwenye rollup zikiteketezwa. Pindi fungu linapochapishwa kwenye Ethereum, mtumiaji anaweza kukokotoa ushahidi wa Merkle unaothibitisha ujumuishaji wa muamala wao wa kujitoa katika kitalu. Kisha ni suala la kusubiri kupitia kipindi cha kuchelewa ili kukamilisha muamala kwenye tabaka la 1 (l1) na kutoa fedha kwenye Mtandao Mkuu.
 
-Ili kuepuka kusubiri wiki moja kabla ya kutoa fedha kwenda Ethereum, watumiaji wa optimistic rollup wanaweza kutumia **mtoa huduma wa ukwasi** (LP). Mtoa huduma wa ukwasi huchukua umiliki wa uondoaji unaosubiri wa L2 na humlipa mtumiaji kwenye L1 (kwa kubadilishana na ada).
+Ili kuepuka kusubiri wiki moja kabla ya kutoa fedha kwenye Ethereum, watumiaji wa rollup ya optimistic wanaweza kutumia **mtoa ukwasi** (LP). Mtoa ukwasi huchukua umiliki wa utoaji unaosubiri wa tabaka la 2 (l2) na kumlipa mtumiaji kwenye tabaka la 1 (l1) (kwa kubadilishana na ada).
 
-Watoa huduma za ukwasi wanaweza kuangalia uhalali wa ombi la mtumiaji la kujiondoa (kwa kutekeleza mnyororo wenyewe) kabla ya kutoa pesa. Kwa njia hii wanakuwa na uhakika kwamba muamala utathibitishwa hatimaye (yaani, umalizikaji usio na uaminifu).
+Watoa ukwasi wanaweza kuangalia uhalali wa ombi la utoaji la mtumiaji (kwa kutekeleza mnyororo wenyewe) kabla ya kutoa fedha. Kwa njia hii wana uhakika kwamba muamala utathibitishwa hatimaye (yaani, ukamilifu bila hitaji la uaminifu).
 
-#### 2. Upatanifu wa EVM {#evm-compatibility}
+#### 2. Utangamano wa EVM {#evm-compatibility}
 
-Kwa wasanidi programu, faida ya optimistic rollups ni utangamano wao—au, bora zaidi, usawa—na [Mashine Halisi ya Ethereum (EVM)](/developers/docs/evm/). Rollups zinazoendana na EVM zinatii masharti katika [Karatasi ya Njano ya Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf) na kuunga mkono EVM katika kiwango cha bytecode.
+Kwa wasanidi programu, faida ya mikusanyiko ya optimistic ni utangamano wao—au, bora zaidi, usawa—na [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm/). Mikusanyiko inayoendana na EVM inatii vipimo katika [waraka wa manjano wa Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf) na inasaidia EVM katika kiwango cha msimbo wa baiti.
 
-Utangamano wa EVM katika optimistic rollups una faida zifuatazo:
+Utangamano wa EVM katika mikusanyiko ya optimistic una faida zifuatazo:
 
-i. Wasanifu programu wanaweza kuhamisha mkataba mahiri zilizopo kwenye Ethereum hadi kwa minyororo ya kusambaza yenye matumaini bila kulazimika kurekebisha misingi ya msimbo kwa upana. Hii inaweza kuokoa muda wa timu za maendeleo wakati wa kupeleka mikataba-erevu ya Ethereum kwenye L2.
+i. Wasanidi programu wanaweza kuhamisha mikataba mahiri iliyopo kwenye Ethereum kwenda kwenye minyororo ya rollup ya optimistic bila kulazimika kurekebisha misingi ya msimbo kwa kiasi kikubwa. Hii inaweza kuokoa muda wa timu za ukuzaji wakati wa kusambaza mikataba mahiri ya Ethereum kwenye tabaka la 2 (l2).
 
-ii. Wasanidi programu na timu za mradi zinazotumia optimistic rollups wanaweza kutumia miundombinu ya Ethereum. Hii inajumuisha lugha za programu, maktaba za msimbo, zana za majaribio, programu za wateja, miundombinu ya upelekaji, na kadhalika.
+ii. Wasanidi programu na timu za miradi zinazotumia mikusanyiko ya optimistic zinaweza kuchukua faida ya miundombinu ya Ethereum. Hii inajumuisha lugha za programu, maktaba za msimbo, zana za majaribio, programu za mteja, miundombinu ya usambazaji, na kadhalika.
 
-Kutumia zana zilizopo ni muhimu kwa sababu zana hizi zimekaguliwa kwa kina, zimerekebishwa, na kuboreshwa kwa miaka mingi. Pia huondoa hitaji la wasanidi wa Ethereum kujifunza jinsi ya kujenga na rundo jipya kabisa la maendeleo.
+Kutumia zana zilizopo ni muhimu kwa sababu zana hizi zimekaguliwa kwa kina, kurekebishwa makosa, na kuboreshwa kwa miaka mingi. Pia huondoa hitaji la wasanidi programu wa Ethereum kujifunza jinsi ya kujenga kwa kutumia mrundikano mpya kabisa wa ukuzaji.
 
-#### 3. Wito wa mkataba wa minyororo-tofauti {#cross-chain-contract-calls}
+#### 3. Wito wa mkataba wa mtambuko-mnyororo {#cross-chain-contract-calls}
 
-Watumiaji (akaunti zinazomilikiwa na kampuni ya nje) huingiliana na mikataba ya L2 kwa kuwasilisha muamala kwa mkataba wa kusajili au kuwa na mfuatano au kithibitishaji kuwafanyia hivyo. Machapisho yenye matumaini pia huruhusu akaunti za mikataba kwenye Ethereum kuingiliana na mikataba ya L2 kwa kutumia mikataba ya kuweka madaraja kutuma ujumbe na kupitisha data kati ya L1 na L2. Hii inamaanisha kuwa unaweza kupanga mkataba wa L1 kwenye Ethereum mtandao mkuu ili kuomba utendaji kazi wa mikataba kwenye uwasilishaji wa matumaini wa L2.
+Watumiaji (akaunti zinazomilikiwa na nje) huingiliana na mikataba ya tabaka la 2 (l2) kwa kuwasilisha muamala kwenye mkataba wa rollup au kuwa na mpangaji au mthibitishaji kuwafanyia. Mikusanyiko ya optimistic pia inaruhusu akaunti za mkataba kwenye Ethereum kuingiliana na mikataba ya tabaka la 2 (l2) kwa kutumia mikataba ya daraja kupitisha ujumbe na kupitisha data kati ya tabaka la 1 (l1) na tabaka la 2 (l2). Hii inamaanisha unaweza kupanga mkataba wa tabaka la 1 (l1) kwenye Mtandao Mkuu wa Ethereum ili kuita utendakazi wa mikataba kwenye rollup ya optimistic ya tabaka la 2 (l2).
 
-Wito wa mkataba wa minyororo-tofauti hufanyika bila mpangilio maalum—ikimaanisha wito huanzishwa kwanza, kisha hutekelezwa baadaye. Hii ni tofauti na wito kati ya mikataba miwili kwenye Ethereum, ambapo wito hutoa matokeo mara moja.
+Wito wa mkataba wa mtambuko-mnyororo hutokea kwa njia isiyolingana—ikimaanisha wito huanzishwa kwanza, kisha hutekelezwa baadaye. Hii ni tofauti na wito kati ya mikataba miwili kwenye Ethereum, ambapo wito hutoa matokeo mara moja.
 
-Mfano wa wito wa mkataba wa minyororo-tofauti ni uwekaji wa tokeni ulioelezewa hapo awali. Mkataba kwenye L1 huondoa tokeni za mtumiaji na kutuma ujumbe kwa mkataba wa L2 uliooanishwa ili kutengeneza kiasi sawa cha tokeni kwenye ukusanyaji.
+Mfano wa wito wa mkataba wa mtambuko-mnyororo ni amana ya tokeni iliyoelezwa hapo awali. Mkataba kwenye tabaka la 1 (l1) huweka tokeni za mtumiaji na kutuma ujumbe kwa mkataba wa tabaka la 2 (l2) uliounganishwa ili kufua kiasi sawa cha tokeni kwenye rollup.
 
-Kwa vile wito wa ujumbe wa minyororo-tofauti husababisha utekelezaji wa mkataba, mtumaji kwa kawaida huhitajika kulipia [gharama za gesi](/developers/docs/gas/) kwa ajili ya ukokotoaji. Inashauriwa kuweka kikomo cha juu cha gesi ili kuzuia muamala ushindwe kwenye mnyororo lengwa. Hali ya kuweka daraja la ishara ni mfano mzuri; ikiwa upande wa L1 wa shughuli (kuweka ishara) hufanya kazi, lakini upande wa L2 (kutengeneza ishara mpya) hushindwa kutokana na gharama ya muamala ya chini, amana inakuwa isiyoweza kurejeshwa.
+Kwa kuwa wito wa ujumbe wa mtambuko-mnyororo husababisha utekelezaji wa mkataba, mtumaji kwa kawaida anahitajika kulipia [gharama za gesi](/developers/docs/gas/) kwa ukokotoaji. Inashauriwa kuweka kikomo cha gesi cha juu ili kuzuia muamala kushindwa kwenye mnyororo lengwa. Hali ya daraja la tokeni ni mfano mzuri; ikiwa upande wa tabaka la 1 (l1) wa muamala (kuweka tokeni) unafanya kazi, lakini upande wa tabaka la 2 (l2) (kufua tokeni mpya) unashindwa kutokana na gesi ndogo, amana inakuwa isiyoweza kurejeshwa.
 
-Hatimaye, tunapaswa kutambua kwamba wito wa ujumbe wa L2 > L1 kati ya mikataba unahitaji kuzingatia ucheleweshaji (wito wa L1 > L2 kwa kawaida hutekelezwa baada ya dakika chache). Hii ni kwa sababu ujumbe uliotumwa kwa Mtandao Mkuu kutoka kwa optimistic rollup hauwezi kutekelezwa hadi dirisha la changamoto liishe.
+Hatimaye, tunapaswa kutambua kwamba wito wa ujumbe wa L2 > L1 kati ya mikataba unahitaji kuzingatia ucheleweshaji (wito wa L1 > L2 kwa kawaida hutekelezwa baada ya dakika chache). Hii ni kwa sababu ujumbe uliotumwa kwenye Mtandao Mkuu kutoka kwenye rollup ya optimistic hauwezi kutekelezwa hadi dirisha la changamoto liishe.
 
-## Ada za optimistic rollup hufanyaje kazi? {#how-do-optimistic-rollup-fees-work}
+## Ada za rollup ya optimistic zinafanyaje kazi? {#how-do-optimistic-rollup-fees-work}
 
-Optimistic rollups hutumia mpango wa ada ya gesi, sawa na Ethereum, kuashiria ni kiasi gani watumiaji hulipa kwa kila muamala. Ada zinazotozwa kwenye optimistic rollups hutegemea vipengele vifuatavyo:
+Mikusanyiko ya optimistic hutumia mpango wa ada ya gesi, sawa na Ethereum, kuashiria kiasi ambacho watumiaji wanalipa kwa kila muamala. Ada zinazotozwa kwenye mikusanyiko ya optimistic zinategemea vipengele vifuatavyo:
 
-1. **Uandishi wa hali**: Optimistic rollups huchapisha data ya muamala na vichwa vya bloku (vinavyojumuisha hashi ya kichwa cha bloku iliyopita, mzizi wa hali, mzizi wa kundi) kwa Ethereum kama `blob`, au "binary large object". [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) ilianzisha suluhisho la gharama nafuu la kujumuisha data kwenye mnyororo. `blob` ni sehemu mpya ya muamala ambayo inaruhusu rollups kuchapisha data ya mabadiliko ya hali iliyobanwa kwa Ethereum L1. Tofauti na `calldata`, ambayo hubaki kwenye mnyororo kabisa, blobs ni za muda mfupi na zinaweza kupunguzwa kutoka kwa wateja baada ya [epochs 4096](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (takriban siku 18). Kwa kutumia blobs kuchapisha makundi ya miamala iliyobanwa, optimistic rollups zinaweza kupunguza kwa kiasi kikubwa gharama ya kuandika miamala kwenye L1.
+1. **Uandishi wa hali**: Mikusanyiko ya optimistic huchapisha data ya muamala na vichwa vya kizuizi (vinavyojumuisha heshi ya kichwa cha kizuizi kilichopita, mzizi wa hali, mzizi wa fungu) kwenye Ethereum kama `blob`, au "binary large object". [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) ilianzisha suluhisho la gharama nafuu la kujumuisha data mnyororoni. `blob` ni uwanja mpya wa muamala unaoruhusu mikusanyiko kuchapisha data iliyobanwa ya mabadiliko ya hali kwenye tabaka la 1 (l1) la Ethereum. Tofauti na `calldata`, ambayo inasalia mnyororoni kabisa, mablobu ni ya muda mfupi na yanaweza kupunguzwa kutoka kwa wateja baada ya [zama 4096](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (takriban siku 18). Kwa kutumia mablobu kuchapisha mafungu ya miamala iliyobanwa, mikusanyiko ya optimistic inaweza kupunguza kwa kiasi kikubwa gharama ya kuandika miamala kwenye tabaka la 1 (l1).
 
-2. **Gesi ya blob iliyotumika**: Miamala inayobeba blob hutumia utaratibu wa ada unaobadilika sawa na ule ulioletwa na [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). Ada ya gesi kwa miamala ya aina-3 inazingatia ada ya msingi ya blobs, ambayo huamuliwa na mtandao kulingana na mahitaji ya nafasi ya blob na matumizi ya nafasi ya blob ya muamala unaotumwa.
+2. **Gesi ya blobu iliyotumika**: Miamala inayobeba blobu hutumia utaratibu wa ada unaobadilika sawa na ule ulioanzishwa na [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). Ada ya gesi kwa miamala ya aina ya 3 inazingatia ada ya msingi kwa mablobu, ambayo huamuliwa by mtandao kulingana na mahitaji ya nafasi ya blobu na matumizi ya nafasi ya blobu ya muamala unaotumwa.
 
-3. **Ada za opereta wa L2**: Hiki ni kiasi kinacholipwa kwa nodi za rollup kama fidia kwa gharama za ukokotoaji zinazotumika katika kuchakata miamala, sawa na ada za gesi kwenye Ethereum. Nodi za rollup hutoza ada za chini za muamala kwa kuwa L2s zina uwezo wa juu wa uchakataji na hazikabiliwi na msongamano wa mtandao unaowalazimisha wathibitishaji kwenye Ethereum kutoa kipaumbele kwa miamala yenye ada za juu.
+3. **Ada za mwendeshaji wa L2**: Hiki ni kiasi kinacholipwa kwa nodi za rollup kama fidia kwa gharama za ukokotoaji zinazoingia katika kuchakata miamala, sawa na ada za gesi kwenye Ethereum. Nodi za rollup hutoza ada za chini za muamala kwa kuwa tabaka za 2 (l2) zina uwezo mkubwa wa kuchakata na hazikabiliwi na msongamano wa mtandao unaolazimisha wathibitishaji kwenye Ethereum kutoa kipaumbele kwa miamala yenye ada kubwa.
 
-Optimistic rollups hutumia mifumo kadhaa kupunguza ada kwa watumiaji, ikiwa ni pamoja na kuweka miamala katika makundi na kubana `calldata` ili kupunguza gharama za uchapishaji wa data. Unaweza kuangalia [kifuatiliaji cha ada za L2](https://l2fees.info/) kwa muhtasari wa wakati halisi wa gharama ya kutumia optimistic rollups zinazotegemea Ethereum.
+Mikusanyiko ya optimistic hutumia taratibu kadhaa kupunguza ada kwa watumiaji, ikiwa ni pamoja na ukusanyaji wa mafungu ya miamala na kubana `calldata` ili kupunguza gharama za uchapishaji wa data. Unaweza kuangalia [kifuatiliaji cha ada cha L2](https://l2fees.info/) kwa muhtasari wa wakati halisi wa kiasi gani inagharimu kutumia mikusanyiko ya optimistic inayotegemea Ethereum.
 
-## Je, optimistic rollups huongezaje ukubwa wa Ethereum? {#scaling-ethereum-with-optimistic-rollups}
+## Mikusanyiko ya optimistic inaongezaje uwezo wa Ethereum? {#scaling-ethereum-with-optimistic-rollups}
 
-Kama ilivyoelezwa, optimistic rollups huchapisha data ya muamala iliyobanwa kwenye Ethereum ili kuhakikisha upatikanaji wa data. Uwezo wa kubana data iliyochapishwa kwenye mnyororo ni muhimu ili kuongeza upitishaji kwenye Ethereum kwa kutumia optimistic rollups.
+Kama ilivyoelezwa, mikusanyiko ya optimistic huchapisha data ya muamala iliyobanwa kwenye Ethereum ili kuhakikisha upatikanaji wa data. Uwezo wa kubana data iliyochapishwa mnyororoni ni muhimu kwa kuongeza uwezo wa upitishaji kwenye Ethereum kwa mikusanyiko ya optimistic.
 
-Mnyororo mkuu wa Ethereum huweka vikomo vya kiasi cha data ambacho bloku zinaweza kushikilia, kinachopimwa kwa vitengo vya gesi ([ukubwa wa wastani wa bloku](/developers/docs/blocks/#block-size) ni gesi milioni 15). Ingawa hii inazuia kiasi cha gesi ambacho kila muamala unaweza kutumia, inamaanisha pia tunaweza kuongeza miamala inayochakatwa kwa kila bloku kwa kupunguza data inayohusiana na muamala—na hivyo kuboresha moja kwa moja uongezaji.
+Mnyororo mkuu wa Ethereum huweka mipaka ya kiasi cha data ambacho vitalu vinaweza kushikilia, kinachotajwa katika vipimo vya gesi ([ukubwa wa wastani wa kitalu](/developers/docs/blocks/#block-size) ni gesi milioni 15). Ingawa hii inazuia kiasi cha gesi ambacho kila muamala unaweza kutumia, pia inamaanisha tunaweza kuongeza miamala inayochakatwa kwa kila kitalu kwa kupunguza data inayohusiana na muamala—kuboresha moja kwa moja uwezo wa kuongezeka.
 
-Optimistic rollups hutumia mbinu kadhaa kufikia ubanaji wa data ya muamala na kuboresha viwango vya TPS. Kwa mfano, [makala](https://vitalik.eth.limo/general/2021/01/05/rollup.html) hii inalinganisha data ambayo muamala wa msingi wa mtumiaji (kutuma ether) huzalisha kwenye Mtandao Mkuu dhidi ya kiasi cha data ambacho muamala huo huo huzalisha kwenye rollup:
+Mikusanyiko ya optimistic hutumia mbinu kadhaa kufikia ubanaji wa data ya muamala na kuboresha viwango vya TPS. Kwa mfano, [makala](https://vitalik.eth.limo/general/2021/01/05/rollup.html) hii inalinganisha data ambayo muamala wa msingi wa mtumiaji (kutuma Etha) unazalisha kwenye Mtandao Mkuu dhidi ya kiasi cha data ambacho muamala huo huo unazalisha kwenye rollup:
 
-| Kigezo      | Ethereum (L1)                     | Rollup (L2)       |
-| ----------- | ---------------------------------------------------- | ------------------------------------ |
-| Nonce       | ~3                                   | 0                                    |
-| Bei ya gesi | ~8                                   | 0-0.5                |
-| Gesi        | 3                                                    | 0-0.5                |
-| Kwa         | 21                                                   | 4                                    |
-| Thamani     | 9                                                    | ~3                   |
-| Sahihi      | ~68 (2 + 33 + 33) | ~0.5 |
-| Kutoka      | 0 (imerejeshwa kutoka kwa sig)    | 4                                    |
-| **Jumla**   | **\~baiti 112**                       | **\~baiti 12**        |
+| Kigezo | Ethereum (L1)          | Rollup (L2)   |
+| --------- | ---------------------- | ------------- |
+| Nonsi     | ~3                     | 0             |
+| Bei ya gesi  | ~8                     | 0-0.5         |
+| Gesi       | 3                      | 0-0.5         |
+| Kwenda        | 21                     | 4             |
+| Thamani     | 9                      | ~3            |
+| Sahihi | ~68 (2 + 33 + 33)      | ~0.5          |
+| Kutoka      | 0 (iliyorejeshwa kutoka kwa sahihi) | 4             |
+| **Jumla** | **\~baiti 112**         | **\~baiti 12** |
 
-Kufanya hesabu zisizo sahihi kwenye takwimu hizi kunaweza kusaidia kuonyesha uboreshaji wa uwezo wa kupanuka unaotolewa na uwasilishaji wa matumaini:
+Kufanya baadhi ya ukokotoaji wa makadirio kwenye takwimu hizi kunaweza kusaidia kuonyesha maboresho ya uwezo wa kuongezeka yanayotolewa na rollup ya optimistic:
 
-1. Ukubwa unaolengwa kwa kila bloku ni gesi milioni 15 na inagharimu gesi 16 kuthibitisha baiti moja ya data. Kugawa ukubwa wa wastani wa bloku kwa gesi 16 (15,000,000/16) kunaonyesha kuwa bloku ya wastani inaweza kushikilia **baiti 937,500 za data**.
-2. Ikiwa muamala wa msingi wa rollup unatumia baiti 12, basi bloku ya wastani ya Ethereum inaweza kuchakata **miamala 78,125 ya rollup** (937,500/12) au **makundi 39 ya rollup** (ikiwa kila kundi lina wastani wa miamala 2,000).
-3. Ikiwa bloku mpya inazalishwa kwenye Ethereum kila sekunde 15, basi kasi ya uchakataji ya rollup ingekuwa takriban **miamala 5,208 kwa sekunde**. Hii inafanywa kwa kugawa idadi ya miamala ya msingi ya rollup ambayo bloku ya Ethereum inaweza kushikilia (**78,125**) kwa wastani wa muda wa bloku (**sekunde 15**).
+1. Ukubwa unaolengwa kwa kila kitalu ni gesi milioni 15 na inagharimu gesi 16 kuthibitisha baiti moja ya data. Kugawanya ukubwa wa wastani wa kitalu kwa gesi 16 (15,000,000/16) kunaonyesha kitalu cha wastani kinaweza kushikilia **baiti 937,500 za data**.
+2. Ikiwa muamala wa msingi wa rollup unatumia baiti 12, basi kitalu cha wastani cha Ethereum kinaweza kuchakata **miamala 78,125 ya rollup** (937,500/12) au **mafungu 39 ya rollup** (ikiwa kila fungu linashikilia wastani wa miamala 2,000).
+3. Ikiwa kitalu kipya kinazalishwa kwenye Ethereum kila sekunde 15, basi kasi ya uchakataji ya rollup itafikia takriban **miamala 5,208 kwa sekunde**. Hii inafanywa kwa kugawanya idadi ya miamala ya msingi ya rollup ambayo kitalu cha Ethereum kinaweza kushikilia (**78,125**) kwa muda wa kitalu wa wastani (**sekunde 15**).
 
-Huu ni makadirio ya matumaini, kwa kuzingatia kwamba miamala ya optimistic rollup haiwezi kujumuisha bloku nzima kwenye Ethereum. Hata hivyo, inaweza kutoa wazo potofu la ni kiasi gani cha faida za scalability ambazo matoleo yenye matumaini yanaweza kumudu watumiaji wa Ethereum (utekelezaji wa sasa unatoa hadi TPS 2,000).
+Hili ni kadirio la matumaini kiasi, ikizingatiwa kwamba miamala ya rollup ya optimistic haiwezi kujumuisha kitalu kizima kwenye Ethereum. Hata hivyo, inaweza kutoa wazo la makadirio la kiasi gani cha faida za uwezo wa kuongezeka ambazo mikusanyiko ya optimistic inaweza kuwapa watumiaji wa Ethereum (utekelezaji wa sasa unatoa hadi TPS 2,000).
 
-Kuanzishwa kwa [ugawanyaji wa data](/roadmap/danksharding/) kwenye Ethereum kunatarajiwa kuboresha uongezaji katika optimistic rollups. Kwa sababu miamala ya rollup lazima ishiriki nafasi ya bloku na miamala mingine isiyo ya rollup, uwezo wao wa uchakataji umewekewa mipaka na upitishaji wa data kwenye mnyororo mkuu wa Ethereum. Danksharding itaongeza nafasi inayopatikana kwa minyororo ya L2 kuchapisha data kwa kila bloku, kwa kutumia hifadhi ya "blob" ya bei nafuu, isiyo ya kudumu badala ya `CALLDATA` ya gharama kubwa, ya kudumu.
+Kuanzishwa kwa [kugawanya data (data sharding)](/roadmap/danksharding/) kwenye Ethereum kunatarajiwa kuboresha uwezo wa kuongezeka katika mikusanyiko ya optimistic. Kwa sababu miamala ya rollup lazima ishiriki nafasi ya kitalu na miamala mingine isiyo ya rollup, uwezo wao wa kuchakata unazuiliwa na uwezo wa upitishaji wa data kwenye mnyororo mkuu wa Ethereum. Danksharding itaongeza nafasi inayopatikana kwa minyororo ya tabaka la 2 (l2) kuchapisha data kwa kila kitalu, kwa kutumia hifadhi ya "blobu" ya bei nafuu, isiyodumu badala ya `CALLDATA` ghali, ya kudumu.
 
-### Faida na hasara za optimistic rollups {#optimistic-rollups-pros-and-cons}
+### Faida na hasara za mikusanyiko ya optimistic {#optimistic-rollups-pros-and-cons}
 
-| Faida                                                                                                                                                                                                     | Hasara                                                                                                                                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hutoa maboresho makubwa katika uongezaji bila kuathiri usalama au hali ya kutokuwa na uaminifu.                                                                                           | Ucheleweshaji katika umalizikaji wa muamala kutokana na changamoto zinazowezekana za ulaghai.                                                                         |
-| Data ya muamala huhifadhiwa kwenye mnyororo wa safu ya 1, na kuboresha uwazi, usalama, ukinzani dhidi ya udhibiti, na ugatuzi.                                                            | Waendeshaji wa rollup wa kati (waratibu wa mfuatano) wanaweza kuathiri mpangilio wa miamala.                                                       |
-| Uthibitishaji wa ulaghai huhakikisha umalizikaji usio na uaminifu na huruhusu walio wachache waaminifu kulinda mnyororo.                                                                  | Ikiwa hakuna nodi za uaminifu, opereta mwenye nia mbaya anaweza kuiba fedha kwa kuchapisha bloku batili na ahadi za hali.                                             |
-| Kukokotoa thibitisho za ulaghai kuko wazi kwa nodi ya kawaida ya L2, tofauti na thibitisho za uhalali (zinazotumika katika ZK-rollups) ambazo zinahitaji vifaa maalum. | Mfumo wa usalama unategemea angalau nodi moja ya uaminifu inayotekeleza miamala ya rollup na kuwasilisha thibitisho za ulaghai ili kupinga mabadiliko batili ya hali. |
-| Rollups hunufaika na "uhai usio na uaminifu" (mtu yeyote anaweza kulazimisha mnyororo kuendelea kwa kutekeleza miamala na kuchapisha madai)                                            | Watumiaji lazima wasubiri kipindi cha changamoto cha wiki moja kiishe kabla ya kutoa fedha kurudi Ethereum.                                                           |
-| Optimistic rollups hutegemea motisha za kiuchumi za kripto zilizoundwa vizuri ili kuongeza usalama kwenye mnyororo.                                                                       | Rollups lazima zichapishe data zote za muamala kwenye mnyororo, jambo ambalo linaweza kuongeza gharama.                                                               |
-| Utangamano na EVM na Solidity huruhusu wasanidi programu kuhamisha mikataba-erevu asilia ya Ethereum kwenda kwa rollups au kutumia zana zilizopo kuunda mfumo mtawanyo wa kimamlaka mpya. |                                                                                                                                                                                       |
+| Faida                                                                                                                                                  | Hasara                                                                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Inatoa maboresho makubwa katika uwezo wa kuongezeka bila kutoa kafara usalama au hali ya kutohitaji kuamini.                                                             | Ucheleweshaji katika ukamilifu wa muamala kutokana na changamoto zinazowezekana za udanganyifu.                                                                                   |
+| Data ya muamala inahifadhiwa kwenye mnyororo wa tabaka la 1 (l1), kuboresha uwazi, usalama, upinzani wa udhibiti, na ugatuzi.                       | Waendeshaji wa rollup waliowekwa kati (wapangaji) wanaweza kuathiri upangaji wa muamala.                                                                       |
+| Kuthibitisha udanganyifu kunahakikisha ukamilifu bila hitaji la uaminifu na kuruhusu wachache waaminifu kulinda mnyororo.                                                         | Ikiwa hakuna nodi za uaminifu mwendeshaji mwovu anaweza kuiba fedha kwa kuchapisha vitalu batili na ahadi za hali.                                  |
+| Kukokotoa ushahidi wa udanganyifu kuko wazi kwa nodi ya kawaida ya tabaka la 2 (l2), tofauti na uthibitisho wa uhalali (unaotumika katika mikusanyiko ya ZK) unaohitaji maunzi maalum.                         | Muundo wa usalama unategemea angalau nodi moja ya uaminifu inayotekeleza miamala ya rollup na kuwasilisha ushahidi wa udanganyifu ili kupinga mabadiliko batili ya hali. |
+| Mikusanyiko inafaidika na "uhai bila hitaji la uaminifu" (mtu yeyote anaweza kulazimisha mnyororo kusonga mbele kwa kutekeleza miamala na kuchapisha madai)                    | Watumiaji lazima wasubiri kipindi cha changamoto cha wiki moja kiishe kabla ya kutoa fedha kurudi kwenye Ethereum.                                              |
+| Mikusanyiko ya optimistic inategemea motisha za kiuchumi za kificho zilizoundwa vizuri ili kuongeza usalama kwenye mnyororo.                                                 | Mikusanyiko lazima ichapishe data yote ya muamala mnyororoni, ambayo inaweza kuongeza gharama.                                                                          |
+| Utangamano na EVM na Solidity unaruhusu wasanidi programu kuhamisha mikataba mahiri asili ya Ethereum kwenye mikusanyiko au kutumia zana zilizopo kuunda dapps mpya. |
 
-### Maelezo ya kuona ya optimistic rollups {#optimistic-video}
+### Maelezo ya kuona ya mikusanyiko ya optimistic {#optimistic-video}
 
-Wewe ni mwanafunzi wa kuona zaidi? Tazama Finematics ikielezea optimistic rollups:
+Je, wewe ni mwanafunzi wa kuona zaidi? Tazama Finematics akielezea mikusanyiko ya optimistic:
 
-<YouTube id="7pWxCklcNsU" start="263" />
+<VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Masomo zaidi kuhusu optimistic rollups
+## Usomaji zaidi kuhusu mikusanyiko ya optimistic {#further-reading-on-optimistic-rollups}
 
-- [Jinsi optimistic rollups zinavyofanya kazi (Mwongozo Kamili)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Rollup ya Mnyororo wa Bloku ni Nini? Utangulizi wa Kiufundi](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
+- [Mikusanyiko ya optimistic inafanyaje kazi (Mwongozo Kamili)](https://www.alchemy.com/overviews/optimistic-rollups)
+- [Rollup ya Mnyororo wa Vitalu ni nini? Utangulizi wa Kiufundi](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Mwongozo Muhimu wa Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
-- [Mwongozo wa Vitendo wa Rollups za Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [Hali ya Thibitisho za Ulaghai katika L2s za Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [Je, Rollup ya Optimism inafanyaje kazi kweli?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Uchambuzi wa Kina wa OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
-- [Mashine Halisi ya Matumaini ni Nini?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
+- [Mwongozo wa Vitendo wa Mikusanyiko ya Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Hali ya Ushahidi wa Udanganyifu katika L2 za Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [Rollup ya Optimism inafanyaje kazi hasa?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
+- [Uchunguzi wa Kina wa OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Mashine Pepe ya Optimistic ni nini?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
+
+## Mafunzo: Mikusanyiko ya optimistic na madaraja kwenye Ethereum {#tutorials}
+
+- [Mapitio ya mkataba wa daraja la kawaida la Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Mapitio ya msimbo yaliyofafanuliwa ya daraja la kawaida la Optimism kwa kusogeza mali kati ya tabaka la 1 (l1) na tabaka la 2 (l2)._

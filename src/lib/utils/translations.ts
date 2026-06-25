@@ -60,6 +60,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   // Ordering matters: /videos/ MUST be before /learn/ to prevent false positive matching
   // (because /videos/ paths are prefixed with /learn/ in some contexts or just to avoid overly greedy matches)
   ["/videos/", "page-videos"],
+  ["/stories/", "page-stories"],
   ["/learn/", "page-learn"],
   ["/gas/", "page-gas"],
   ["/what-is-ethereum/", "page-what-is-ethereum"],

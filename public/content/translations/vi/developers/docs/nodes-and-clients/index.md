@@ -1,319 +1,319 @@
 ---
-title: "Nodes và máy khách"
-description: "Tổng quan về các nút Ethereum và phần mềm client, cộng thêm cách thiết lập một nút và tại sao bạn nên làm điều đó."
+title: "Các nút và máy khách"
+description: "Tổng quan về các nút và phần mềm máy khách Ethereum, cùng với cách thiết lập một nút và lý do bạn nên làm điều đó."
 lang: vi
 sidebarDepth: 2
 ---
 
-Ethereum là một mạng lưới phân tán gồm các máy tính (gọi là nút) chạy phần mềm có khả năng xác minh các khối và dữ liệu giao dịch. Phần mềm phải được chạy trên máy tính của bạn để biến nó thành một nút Ethereum. Có hai phần mềm riêng biệt (được gọi là 'clients') cần thiết để hình thành một nút.
+[Ethereum](/) là một mạng lưới phân tán gồm các máy tính (được gọi là các nút) chạy phần mềm có thể xác minh các khối và dữ liệu giao dịch. Phần mềm này phải được chạy trên máy tính của bạn để biến nó thành một nút Ethereum. Cần có hai phần mềm riêng biệt (được gọi là 'máy khách') để tạo thành một nút.
 
 ## Điều kiện tiên quyết {#prerequisites}
 
-Bạn nên hiểu khái niệm về mạng ngang hàng và [những điều cơ bản về EVM](/developers/docs/evm/) trước khi tìm hiểu sâu hơn và chạy phiên bản máy khách Ethereum của riêng bạn. Hãy xem [phần giới thiệu về Ethereum](/developers/docs/intro-to-ethereum/) của chúng tôi.
+Bạn nên hiểu khái niệm về mạng lưới ngang hàng và [những điều cơ bản về EVM](/developers/docs/evm/) trước khi tìm hiểu sâu hơn và chạy phiên bản máy khách Ethereum của riêng bạn. Hãy xem qua [phần giới thiệu về Ethereum](/developers/docs/intro-to-ethereum/) của chúng tôi.
 
-Nếu bạn mới tìm hiểu về chủ đề nút, chúng tôi khuyên bạn nên xem qua phần giới thiệu thân thiện với người dùng của chúng tôi về [việc chạy một nút Ethereum](/run-a-node).
+Nếu bạn mới làm quen với chủ đề về các nút, chúng tôi khuyên bạn trước tiên nên xem qua phần giới thiệu thân thiện với người dùng của chúng tôi về [việc chạy một nút Ethereum](/run-a-node).
 
-## Node và clients là gì? {#what-are-nodes-and-clients}
+## Các nút và máy khách là gì? {#what-are-nodes-and-clients}
 
-Một "Node" là bất kỳ phiên bản nào của phần mềm client Ethereum được kết nối với các máy tính khác cũng chạy phần mềm Ethereum, tạo thành một mạng. Một client (cơ chế)  là một phiên bản của Ethereum xác thực dữ liệu theo quy tắc của giao thức và giữ cho mạng an toàn. Một nút cần chạy hai cơ chế : một cơ chế đồng thuận và một cơ chế thực thi.
+Một "nút" là bất kỳ phiên bản phần mềm máy khách Ethereum nào được kết nối với các máy tính khác cũng đang chạy phần mềm Ethereum, tạo thành một mạng lưới. Máy khách là một bản triển khai của Ethereum giúp xác minh dữ liệu dựa trên các quy tắc Giao thức và giữ cho mạng lưới an toàn. Một nút phải chạy hai máy khách: một ứng dụng khách đồng thuận và một máy khách thực thi.
 
-- Cơ chế thực thi (còn được gọi là động cơ thực thi, cơ chế EL hoặc trước đây là cơ chế Eth1) lắng nghe các giao dịch mới được phát sóng trong mạng, thực thi chúng trong EVM và giữ trạng thái và cơ sở dữ liệu mới nhất của tất cả dữ liệu Ethereum hiện tại.
-- Cơ chế đồng thuận (còn được gọi là Beacon Node, cơ chế CL hoặc trước đây là cơ chế Eth2) sử dụng thuật toán đồng thuận proof-of-stake, giúp mạng lưới đạt được sự đồng thuận dựa trên dữ liệu đã được xác thực từ cơ chế thực thi. Còn có một phần mềm thứ ba, gọi là 'validator', có thể được thêm vào cơ chế đồng thuận, giúp một nút tham gia vào việc bảo mật mạng lưới.
+- Máy khách thực thi (còn được gọi là Execution Engine, máy khách EL hoặc trước đây là máy khách Eth1) lắng nghe các giao dịch mới được phát trên mạng lưới, thực thi chúng trong EVM và lưu giữ trạng thái mới nhất cũng như cơ sở dữ liệu của tất cả dữ liệu Ethereum hiện tại.
+- Ứng dụng khách đồng thuận (còn được gọi là nút Beacon, máy khách CL hoặc trước đây là máy khách Eth2) triển khai thuật toán đồng thuận Bằng chứng cổ phần (PoS), cho phép mạng lưới đạt được sự đồng thuận dựa trên dữ liệu đã được xác thực từ máy khách thực thi. Ngoài ra còn có một phần mềm thứ ba, được gọi là 'trình xác thực' có thể được thêm vào ứng dụng khách đồng thuận, cho phép một nút tham gia vào việc bảo mật mạng lưới.
 
-Những cơ chế này làm việc cùng nhau để theo dõi đầu của chuỗi Ethereum và cho phép người dùng tương tác với mạng Ethereum. Thiết kế mô-đun với nhiều phần mềm hoạt động cùng nhau được gọi là [sự phức tạp được đóng gói](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Cách tiếp cận này giúp việc thực hiện [The Merge](/roadmap/merge) liền mạch hơn, giúp phần mềm máy khách dễ bảo trì và phát triển hơn, đồng thời cho phép tái sử dụng các máy khách riêng lẻ, ví dụ, trong [hệ sinh thái lớp 2](/layer-2/).
+Các máy khách này hoạt động cùng nhau để theo dõi phần đầu của Chuỗi Ethereum và cho phép người dùng tương tác với mạng lưới Ethereum. Thiết kế mô-đun với nhiều phần mềm hoạt động cùng nhau được gọi là [sự phức tạp được đóng gói](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Cách tiếp cận này giúp thực hiện [The Merge](/roadmap/merge) một cách liền mạch dễ dàng hơn, làm cho phần mềm máy khách dễ bảo trì và phát triển hơn, đồng thời cho phép tái sử dụng các máy khách riêng lẻ, ví dụ như trong [hệ sinh thái lớp 2 (l2)](/layer-2/).
 
-![Máy khách thực thi và máy khách đồng thuận được ghép nối](./eth1eth2client.png)
-Sơ đồ đơn giản hóa về một máy khách thực thi và máy khách đồng thuận được ghép nối.
+![Coupled execution and consensus clients](./eth1eth2client.png)
+Sơ đồ đơn giản hóa của một máy khách thực thi và ứng dụng khách đồng thuận được ghép nối.
 
-### Sự đa dạng của ứng dụng khách {#client-diversity}
+### Sự đa dạng máy khách {#client-diversity}
 
-Cả [máy khách thực thi](/developers/docs/nodes-and-clients/#execution-clients) và [máy khách đồng thuận](/developers/docs/nodes-and-clients/#consensus-clients) đều tồn tại ở nhiều ngôn ngữ lập trình khác nhau do các nhóm khác nhau phát triển.
+Cả [máy khách thực thi](/developers/docs/nodes-and-clients/#execution-clients) và [ứng dụng khách đồng thuận](/developers/docs/nodes-and-clients/#consensus-clients) đều tồn tại bằng nhiều ngôn ngữ lập trình khác nhau do các nhóm khác nhau phát triển.
 
-Việc có nhiều cơ chế triển khai có thể làm cho mạng mạnh hơn bằng cách giảm sự phụ thuộc vào một mã nguồn duy nhất. Mục tiêu lý tưởng là đạt được sự đa dạng mà không có cơ chế nào chiếm ưu thế trong mạng lưới, từ đó loại bỏ một điểm yếu tiềm ẩn duy nhất.
-Sự đa dạng về ngôn ngữ cũng thu hút một cộng đồng lập trình viên rộng lớn hơn và cho phép họ tạo ra các ngôn ngữ tích hợp mà họ thích.
+Nhiều bản triển khai máy khách có thể làm cho mạng lưới mạnh mẽ hơn bằng cách giảm sự phụ thuộc vào một cơ sở mã duy nhất. Mục tiêu lý tưởng là đạt được sự đa dạng mà không có bất kỳ máy khách nào thống trị mạng lưới, từ đó loại bỏ một điểm lỗi tiềm ẩn duy nhất.
+Sự đa dạng về ngôn ngữ cũng thu hút một cộng đồng nhà phát triển rộng lớn hơn và cho phép họ tạo ra các tích hợp bằng ngôn ngữ ưa thích của mình.
 
-Tìm hiểu thêm về [sự đa dạng của máy khách](/developers/docs/nodes-and-clients/client-diversity/).
+Tìm hiểu thêm về [sự đa dạng máy khách](/developers/docs/nodes-and-clients/client-diversity/).
 
-Những triển khai này có điểm chung là chúng đều tuân theo một quy định duy nhất. Thông số kỹ thuật quyết định cách mà mạng lưới và blockchain Ethereum hoạt động. Mọi chi tiết kỹ thuật đều được định nghĩa và các thông số có thể được tìm thấy như sau:
+Điểm chung của các bản triển khai này là tất cả đều tuân theo một đặc tả duy nhất. Các đặc tả quy định cách thức hoạt động của mạng lưới và Chuỗi khối Ethereum. Mọi chi tiết kỹ thuật đều được xác định và các đặc tả có thể được tìm thấy dưới dạng:
 
-- Ban đầu, [Sách Vàng Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
-- [Thông số kỹ thuật thực thi](https://github.com/ethereum/execution-specs/)
-- [Thông số kỹ thuật đồng thuận](https://github.com/ethereum/consensus-specs)
-- [Các EIP](https://eips.ethereum.org/) được triển khai trong các [bản nâng cấp mạng](/ethereum-forks/) khác nhau
+- Ban đầu là [sách vàng Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Đặc tả thực thi](https://github.com/ethereum/execution-specs/)
+- [Đặc tả đồng thuận](https://github.com/ethereum/consensus-specs)
+- Các [EIP](https://eips.ethereum.org/) được triển khai trong nhiều [bản nâng cấp mạng lưới](/ethereum-forks/) khác nhau
 
-### Theo dõi các nút trong mạng {#network-overview}
+### Theo dõi các nút trong mạng lưới {#network-overview}
 
-Nhiều trình theo dõi cung cấp cái nhìn tổng quát theo thời gian thực về các nút trong mạng lưới Ethereum. Lưu ý rằng do tính chất của các mạng phi tập trung, những trình thu thập thông tin này chỉ có thể cung cấp một cái nhìn hạn chế về mạng và có thể đưa ra những kết quả khác nhau.
+Nhiều trình theo dõi cung cấp cái nhìn tổng quan theo thời gian thực về các nút trong mạng lưới Ethereum. Lưu ý rằng do bản chất của các mạng lưới phi tập trung, các trình thu thập dữ liệu này chỉ có thể cung cấp một cái nhìn hạn chế về mạng lưới và có thể báo cáo các kết quả khác nhau.
 
-- [Bản đồ các nút](https://etherscan.io/nodetracker) của Etherscan
-- [Ethernodes](https://ethernodes.org/) của Bitfly
-- [Nodewatch](https://www.nodewatch.io/) của Chainsafe, thu thập dữ liệu các nút đồng thuận
-- [Monitoreth](https://monitoreth.io/) - của MigaLabs, một công cụ giám sát mạng phi tập trung
-- [Báo cáo tình trạng mạng hàng tuần](https://probelab.io) - của ProbeLab, sử dụng [Nebula crawler](https://github.com/dennis-tra/nebula) và các công cụ khác
+- [Bản đồ các nút](https://etherscan.io/nodetracker) bởi Etherscan
+- [Ethernodes](https://ethernodes.org/) bởi Bitfly
+- [Nodewatch](https://www.nodewatch.io/) bởi Chainsafe, thu thập dữ liệu các nút đồng thuận
+- [Monitoreth](https://monitoreth.io/) - bởi MigaLabs, Một công cụ giám sát mạng lưới phân tán
+- [Báo cáo Sức khỏe Mạng lưới Hàng tuần](https://probelab.io) - bởi ProbeLab, Sử dụng [trình thu thập dữ liệu Nebula](https://github.com/dennis-tra/nebula) và các công cụ khác
 
 ## Các loại nút {#node-types}
 
-Nếu bạn muốn [chạy nút của riêng mình](/developers/docs/nodes-and-clients/run-a-node/), bạn nên hiểu rằng có các loại nút khác nhau tiêu thụ dữ liệu theo những cách khác nhau. In fact, clients can run three different types of nodes: light, full and archive. Trên thực tế, ứng dụng có thể chạy ba loại nút khác nhau: nút nhẹ, nút đầy đủ và nút lưu trữ. Đồng bộ hóa có nghĩa là nó có thể lấy thông tin mới nhất về trạng thái của Ethereum nhanh như thế nào.
+Nếu bạn muốn [chạy nút của riêng mình](/developers/docs/nodes-and-clients/run-a-node/), bạn nên hiểu rằng có các loại nút khác nhau tiêu thụ dữ liệu theo những cách khác nhau. Trên thực tế, các máy khách có thể chạy ba loại nút khác nhau: node nhẹ, nút đầy đủ và nút lưu trữ. Cũng có các tùy chọn về các chiến lược đồng bộ hóa khác nhau cho phép thời gian đồng bộ hóa nhanh hơn. Đồng bộ hóa đề cập đến tốc độ nó có thể nhận được thông tin cập nhật nhất về trạng thái của Ethereum.
 
 ### Nút đầy đủ {#full-node}
 
-Các nút đầy đủ sẽ xác thực từng khối một của blockchain, bao gồm việc tải về và kiểm tra nội dung khối và dữ liệu trạng thái cho mỗi khối. Có nhiều loại nút đầy đủ khác nhau - một số bắt đầu từ khối genesis và xác minh từng khối trong toàn bộ lịch sử của blockchain. Các nút khác bắt đầu xác minh tại một khối gần đây hơn mà chúng tin là hợp lệ (ví dụ: 'đồng bộ hóa snap' của Geth). Bất kể bắt đầu xác thực ở đâu, các nút đầy đủ chỉ giữ một bản sao cục bộ của dữ liệu tương đối mới (thường là 128 khối mới nhất), cho phép xóa dữ liệu cũ để tiết kiệm không gian ổ đĩa. Dữ liệu cũ có thể được tạo lại khi cần.
+Các nút đầy đủ thực hiện xác thực khối theo từng khối của Chuỗi khối, bao gồm việc tải xuống và xác minh phần thân khối và dữ liệu trạng thái cho mỗi khối. Có các lớp nút đầy đủ khác nhau - một số bắt đầu từ khối nguyên thủy và xác minh từng khối một trong toàn bộ lịch sử của Chuỗi khối. Những nút khác bắt đầu quá trình xác minh của chúng ở một khối gần đây hơn mà chúng tin là hợp lệ (ví dụ: 'snap sync' của Geth). Bất kể quá trình xác minh bắt đầu từ đâu, các nút đầy đủ chỉ giữ một bản sao cục bộ của dữ liệu tương đối gần đây (thường là 128 khối gần nhất), cho phép xóa dữ liệu cũ hơn để tiết kiệm dung lượng ổ đĩa. Dữ liệu cũ hơn có thể được tạo lại khi cần thiết.
 
-- Lưu trữ toàn bộ dữ liệu blockchain (mặc dù điều này sẽ được làm sạch định kỳ nên nút đầy đủ không lưu trữ tất cả dữ liệu trạng thái từ lúc khởi đầu).
-- Tham gia vào quá trình xác thực khối, xác minh tất cả các khối và trạng thái.
-- Tất cả các trạng thái có thể được truy xuất từ bộ nhớ cục bộ hoặc được tái tạo từ 'ảnh chụp' bởi một nút đầy đủ.
-- Đáp ứng mạng lưới và cung cấp dữ liệu theo yêu cầu.
+- Lưu trữ toàn bộ dữ liệu Chuỗi khối (mặc dù dữ liệu này được cắt tỉa định kỳ để một nút đầy đủ không lưu trữ tất cả dữ liệu trạng thái trở lại khối nguyên thủy)
+- Tham gia vào việc xác thực khối, xác minh tất cả các khối và trạng thái.
+- Tất cả các trạng thái có thể được truy xuất từ bộ nhớ cục bộ hoặc được tạo lại từ các 'ảnh chụp nhanh' bởi một nút đầy đủ.
+- Phục vụ mạng lưới và cung cấp dữ liệu theo yêu cầu.
 
 ### Nút lưu trữ {#archive-node}
 
-Các nút lưu trữ là những nút đầy đủ, chúng xác minh mọi khối từ lúc bắt đầu và không bao giờ xóa bất kỳ dữ liệu nào đã tải xuống.
+Các nút lưu trữ là các nút đầy đủ xác minh mọi khối từ khối nguyên thủy và không bao giờ xóa bất kỳ dữ liệu nào đã tải xuống.
 
-- Lưu trữ mọi thứ được giữ trong nút đầy đủ và xây dựng một kho lưu trữ các lịch sử trạng thái. Nó cần thiết nếu bạn muốn kiểm tra một cái gì đó như số dư tài khoản ở khối #4,000,000, hoặc chỉ đơn giản và đáng tin cậy để kiểm tra bộ giao dịch của bạn mà không cần xác minh chúng bằng cách theo dõi.
-- Dữ liệu này thể hiện đơn vị terabyte, điều này khiến các nút lưu trữ trở nên không hấp dẫn với người dùng bình thường nhưng có thể hữu ích cho các dịch vụ như trình khám phá khối, nhà cung cấp ví và phân tích chuỗi.
+- Lưu trữ mọi thứ được giữ trong nút đầy đủ và xây dựng một kho lưu trữ các trạng thái lịch sử. Điều này là cần thiết nếu bạn muốn truy vấn một thứ gì đó như số dư Tài khoản ở khối #4.000.000, hoặc đơn giản và đáng tin cậy là kiểm tra tập hợp các giao dịch của riêng bạn mà không cần xác thực chúng bằng cách sử dụng tính năng theo dõi.
+- Dữ liệu này lên tới hàng terabyte, điều này làm cho các nút lưu trữ kém hấp dẫn hơn đối với người dùng trung bình nhưng có thể hữu ích cho các dịch vụ như trình khám phá khối, nhà cung cấp Ví và phân tích Chuỗi.
 
-Việc đồng bộ ứng dụng ở chế độ khác ngoài lưu trữ sẽ dẫn đến dữ liệu blockchain bị cắt giảm. Điều này có nghĩa là không có kho lưu trữ tất cả các lịch sử trạng thái nhưng nút đầy đủ có thể xây dựng chúng theo yêu cầu.
+Việc đồng bộ hóa các máy khách ở bất kỳ chế độ nào khác ngoài chế độ lưu trữ sẽ dẫn đến dữ liệu Chuỗi khối bị cắt tỉa. Điều này có nghĩa là không có kho lưu trữ của tất cả các trạng thái lịch sử nhưng nút đầy đủ có thể xây dựng chúng theo yêu cầu.
 
-Tìm hiểu thêm về [các nút lưu trữ](/developers/docs/nodes-and-clients/archive-nodes).
+Tìm hiểu thêm về [Các nút lưu trữ](/developers/docs/nodes-and-clients/archive-nodes).
 
-### Nút nhẹ {#light-node}
+### Node nhẹ {#light-node}
 
-Thay vì tải xuống từng khối, các nút nhẹ chỉ tải xuống tiêu đề của các khối. Những tiêu đề này chứa thông tin tóm tắt về nội dung của các khối. Bất kỳ thông tin nào khác mà nút nhẹ yêu cầu sẽ được yêu cầu từ một nút đầy đủ. Nút nhẹ sau đó có thể độc lập xác minh dữ liệu mà họ nhận được với các gốc trạng thái trong đầu khối. Cụm nút nhẹ cho phép người dùng tham gia vào mạng Ethereum mà không cần phần cứng mạnh mẽ hoặc băng thông cao cần thiết để chạy các nút hoàn chỉnh. Cuối cùng, các nút nhẹ có thể chạy trên điện thoại di động hoặc các thiết bị nhúng. Các nút nhẹ không tham gia vào sự đồng thuận (tức là chúng không thể là trình xác thực), nhưng chúng có thể truy cập chuỗi khối Ethereum với cùng chức năng và đảm bảo bảo mật như một nút đầy đủ.
+Thay vì tải xuống mọi khối, các node nhẹ chỉ tải xuống các tiêu đề khối. Các tiêu đề này chứa thông tin tóm tắt về nội dung của các khối. Bất kỳ thông tin nào khác mà node nhẹ yêu cầu đều được yêu cầu từ một nút đầy đủ. Sau đó, node nhẹ có thể xác minh độc lập dữ liệu mà chúng nhận được dựa trên các gốc trạng thái trong các tiêu đề khối. Các node nhẹ cho phép người dùng tham gia vào mạng lưới Ethereum mà không cần phần cứng mạnh mẽ hoặc băng thông cao cần thiết để chạy các nút đầy đủ. Cuối cùng, các node nhẹ có thể chạy trên điện thoại di động hoặc các thiết bị nhúng. Các node nhẹ không tham gia vào sự đồng thuận (tức là chúng không thể là các trình xác thực), nhưng chúng có thể truy cập Chuỗi khối Ethereum với cùng chức năng và đảm bảo bảo mật như một nút đầy đủ.
 
-Các ứng dụng nhẹ là một lĩnh vực đang được phát triển tích cực cho Ethereum và chúng tôi mong đợi sẽ thấy các ứng dụng nhẹ mới cho lớp đồng thuận và lớp thực thi trong thời gian tới.
-Cũng có những tuyến tiềm năng để cung cấp dữ liệu máy khách nhẹ qua [mạng gossip](https://www.ethportal.net/). Điều này có lợi vì mạng lưới tin đồn có thể hỗ trợ một mạng lưới các nút nhẹ mà không cần yêu cầu các nút đầy đủ phục vụ các yêu cầu.
+Các máy khách nhẹ là một lĩnh vực đang được phát triển tích cực cho Ethereum và chúng tôi hy vọng sẽ sớm thấy các máy khách nhẹ mới cho lớp đồng thuận và lớp thực thi.
+Cũng có những lộ trình tiềm năng để cung cấp dữ liệu máy khách nhẹ qua [mạng lưới gossip](https://www.ethportal.net/). Điều này rất có lợi vì mạng lưới gossip có thể hỗ trợ một mạng lưới các node nhẹ mà không yêu cầu các nút đầy đủ phục vụ các yêu cầu.
 
-Ethereum chưa hỗ trợ một số lượng lớn các nút nhẹ, nhưng hỗ trợ nút nhẹ là một lĩnh vực dự kiến sẽ phát triển nhanh chóng trong tương lai gần. Cụ thể, các máy khách như [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios) và [LodeStar](https://lodestar.chainsafe.io/) hiện đang tập trung nhiều vào các nút nhẹ.
+Ethereum chưa hỗ trợ một số lượng lớn các node nhẹ, nhưng hỗ trợ node nhẹ là một lĩnh vực dự kiến sẽ phát triển nhanh chóng trong tương lai gần. Đặc biệt, các máy khách như [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios) và [Lodestar](https://lodestar.chainsafe.io/) hiện đang tập trung mạnh vào các node nhẹ.
 
-## Tại sao tôi nên vận hành một nút Ethereum? {#why-should-i-run-an-ethereum-node}
+## Tại sao tôi nên chạy một nút Ethereum? {#why-should-i-run-an-ethereum-node}
 
-Chạy một nút cho phép bạn sử dụng Ethereum trực tiếp, không cần tin tưởng và riêng tư, đồng thời hỗ trợ mạng lưới bằng cách giúp nó mạnh mẽ và phi tập trung hơn.
+Việc chạy một nút cho phép bạn sử dụng Ethereum một cách trực tiếp, không cần tin cậy và riêng tư trong khi hỗ trợ mạng lưới bằng cách giữ cho nó mạnh mẽ và phi tập trung hơn.
 
 ### Lợi ích cho bạn {#benefits-to-you}
 
-Việc chạy nút riêng của bạn cho phép bạn sử dụng Ethereum một cách riêng tư, tự cung cấp và không cần tin tưởng. Bạn không cần phải tin tưởng vào mạng vì bạn có thể tự xác minh dữ liệu với ứng dụng của mình. "Đừng tin tưởng, hãy xác minh" là một phương châm phổ biến trong blockchain.
+Việc chạy nút của riêng bạn cho phép bạn sử dụng Ethereum một cách riêng tư, tự túc và không cần tin cậy. Bạn không cần phải tin tưởng mạng lưới vì bạn có thể tự mình xác minh dữ liệu bằng máy khách của mình. "Đừng tin tưởng, hãy xác minh" là một câu thần chú phổ biến trong Chuỗi khối.
 
-- Nút của bạn xác minh tất cả các giao dịch và khối theo quy tắc đồng thuận một cách độc lập. Điều này có nghĩa là bạn không cần phải dựa vào bất kỳ nút nào khác trong mạng hoặc hoàn toàn tin tưởng chúng.
-- Bạn có thể sử dụng ví Ethereum với nút riêng của mình. Bạn có thể sử dụng dapps một cách an toàn và riêng tư hơn vì bạn sẽ không phải làm lộ địa chỉ và số dư của mình cho các bên trung gian. Mọi thứ có thể được kiểm tra với ứng dụng của bạn. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) và [nhiều loại ví khác](/wallets/find-wallet/) cung cấp tính năng nhập RPC, cho phép chúng sử dụng nút của bạn.
-- Bạn có thể chạy và tự lưu trữ các dịch vụ khác mà phụ thuộc vào dữ liệu từ Ethereum. Chẳng hạn, điều này có thể là một trình xác thực Beacon Chain, phần mềm giống như layer 2, hạ tầng, công cụ khám phá khối, bộ xử lý thanh toán, v.v.
-- Bạn có thể cung cấp các [điểm cuối RPC](/developers/docs/apis/json-rpc/) tùy chỉnh của riêng mình. Bạn thậm chí có thể cung cấp các điểm kết nối này công khai cho cộng đồng để giúp họ tránh xa những nhà cung cấp trung tâm lớn.
-- Bạn có thể kết nối với nút của mình bằng **Giao tiếp giữa các tiến trình (IPC)** hoặc viết lại nút để tải chương trình của bạn dưới dạng một plugin. Điều này cho phép độ trễ thấp, rất hữu ích, ví dụ: khi xử lý nhiều dữ liệu bằng các thư viện web3 hoặc khi bạn cần thay thế các giao dịch của mình nhanh nhất có thể (tức là giao dịch đi trước).
-- Bạn có thể trực tiếp staking ETH để bảo vệ mạng lưới và nhận thưởng. Xem [đặt cược solo](/staking/solo/) để bắt đầu.
+- Nút của bạn tự xác minh tất cả các giao dịch và khối dựa trên các quy tắc đồng thuận. Điều này có nghĩa là bạn không phải dựa vào bất kỳ nút nào khác trong mạng lưới hoặc hoàn toàn tin tưởng chúng.
+- Bạn có thể sử dụng một Ví Ethereum với nút của riêng bạn. Bạn có thể sử dụng các ứng dụng phi tập trung (dapp) một cách an toàn và riêng tư hơn vì bạn sẽ không phải rò rỉ địa chỉ và số dư của mình cho các bên trung gian. Mọi thứ đều có thể được kiểm tra bằng máy khách của riêng bạn. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) và [nhiều Ví khác](/wallets/find-wallet/) cung cấp tính năng nhập RPC, cho phép chúng sử dụng nút của bạn.
+- Bạn có thể chạy và tự lưu trữ các dịch vụ khác phụ thuộc vào dữ liệu từ Ethereum. Ví dụ: đây có thể là một trình xác thực Chuỗi Beacon, phần mềm như lớp 2 (l2), cơ sở hạ tầng, trình khám phá khối, bộ xử lý thanh toán, v.v.
+- Bạn có thể cung cấp các [điểm cuối RPC](/developers/docs/apis/json-rpc/) tùy chỉnh của riêng mình. Bạn thậm chí có thể cung cấp các điểm cuối này một cách công khai cho cộng đồng để giúp họ tránh các nhà cung cấp tập trung lớn.
+- Bạn có thể kết nối với nút của mình bằng cách sử dụng **Giao tiếp liên tiến trình (IPC)** hoặc viết lại nút để tải chương trình của bạn dưới dạng một plugin. Điều này mang lại độ trễ thấp, giúp ích rất nhiều, ví dụ: khi xử lý nhiều dữ liệu bằng các thư viện Web3 hoặc khi bạn cần thay thế các giao dịch của mình càng nhanh càng tốt (tức là chạy trước - frontrunning).
+- Bạn có thể trực tiếp đặt cọc ETH để bảo mật mạng lưới và kiếm phần thưởng. Xem [đặt cọc độc lập](/staking/solo/) để bắt đầu.
 
-![Cách bạn truy cập Ethereum qua ứng dụng và các nút của bạn](./nodes.png)
+![How you access Ethereum via your application and nodes](./nodes.png)
 
-### Lợi ích cho mạng {#network-benefits}
+### Lợi ích mạng lưới {#network-benefits}
 
-Một tập hợp đa dạng các nút là rất quan trọng cho sức khỏe, an ninh và khả năng hoạt động bền vững của Ethereum.
+Một tập hợp đa dạng các nút rất quan trọng đối với sức khỏe, bảo mật và khả năng phục hồi hoạt động của Ethereum.
 
-- Các nút hoàn chỉnh thực thi các quy tắc đồng thuận nên họ không thể bị đánh lừa để chấp nhận các khối không tuân theo. Điều này cung cấp thêm bảo mật cho mạng vì nếu tất cả các nút đều là nút nhẹ, không thực hiện xác minh đầy đủ, thì các xác thực viên có thể tấn công mạng.
-- Trong trường hợp một cuộc tấn công vượt qua các hàng rào phòng thủ kinh tế-mã hóa của [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/#what-is-pos), một cuộc khôi phục xã hội có thể được thực hiện bởi các nút đầy đủ chọn theo chuỗi trung thực.
-- Nhiều nút trong mạng sẽ tạo ra một mạng lưới đa dạng và mạnh mẽ hơn, đó là mục tiêu cuối cùng của việc phi tập trung, giúp tạo ra một hệ thống đáng tin cậy và không bị kiểm duyệt.
-- Các nút hoàn thiện cung cấp quyền truy cập vào dữ liệu blockchain cho các client nhẹ phụ thuộc vào nó. Các nút nhẹ không lưu trữ toàn bộ chuỗi khối, thay vào đó chúng xác minh dữ liệu thông qua [các gốc trạng thái trong phần đầu khối](/developers/docs/blocks/#block-anatomy). Họ có thể yêu cầu thêm thông tin từ các hoàn thiện nếu họ cần.
+- Các nút đầy đủ thực thi các quy tắc đồng thuận để chúng không thể bị lừa chấp nhận các khối không tuân theo các quy tắc đó. Điều này cung cấp thêm bảo mật trong mạng lưới vì nếu tất cả các nút đều là các node nhẹ, vốn không thực hiện xác minh đầy đủ, các trình xác thực có thể tấn công mạng lưới.
+- Trong trường hợp xảy ra một cuộc tấn công vượt qua các hệ thống phòng thủ kinh tế tiền mã hóa của [Bằng chứng cổ phần (PoS)](/developers/docs/consensus-mechanisms/pos/#what-is-pos), một quá trình khôi phục xã hội có thể được thực hiện bởi các nút đầy đủ chọn đi theo Chuỗi trung thực.
+- Nhiều nút hơn trong mạng lưới dẫn đến một mạng lưới đa dạng và mạnh mẽ hơn, mục tiêu cuối cùng của sự phi tập trung, cho phép một hệ thống chống kiểm duyệt và đáng tin cậy.
+- Các nút đầy đủ cung cấp quyền truy cập vào dữ liệu Chuỗi khối cho các máy khách nhẹ phụ thuộc vào nó. Các node nhẹ không lưu trữ toàn bộ Chuỗi khối, thay vào đó chúng xác minh dữ liệu thông qua các [gốc trạng thái trong các tiêu đề khối](/developers/docs/blocks/#block-anatomy). Chúng có thể yêu cầu thêm thông tin từ các nút đầy đủ nếu cần.
 
-Nếu bạn vận hành một nút hoàn thiện, toàn bộ mạng Ethereum sẽ được hưởng lợi từ điều đó, ngay cả khi bạn không vận hành một trình xác nhận.
+Nếu bạn chạy một nút đầy đủ, toàn bộ mạng lưới Ethereum sẽ được hưởng lợi từ nó, ngay cả khi bạn không chạy một trình xác thực.
 
 ## Chạy nút của riêng bạn {#running-your-own-node}
 
-Bạn có muốn chạy client Ethereum của riêng mình không?
+Bạn quan tâm đến việc chạy máy khách Ethereum của riêng mình?
 
 Để có phần giới thiệu thân thiện với người mới bắt đầu, hãy truy cập trang [chạy một nút](/run-a-node) của chúng tôi để tìm hiểu thêm.
 
-Nếu bạn là người dùng có kỹ thuật hơn, hãy tìm hiểu sâu hơn về các chi tiết và tùy chọn về cách [khởi chạy nút của riêng bạn](/developers/docs/nodes-and-clients/run-a-node/).
+Nếu bạn là một người dùng am hiểu kỹ thuật hơn, hãy đi sâu vào các chi tiết và tùy chọn về cách [khởi chạy nút của riêng bạn](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Các lựa chọn thay thế {#alternatives}
 
-Setting up your own node can cost you time and resources but you don’t always need to run your own instance. Trong trường hợp này, bạn có thể sử dụng một nhà cung cấp API bên thứ ba. Để có cái nhìn tổng quan về việc sử dụng các dịch vụ này, hãy xem [nút dưới dạng dịch vụ](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Việc thiết lập nút của riêng bạn có thể tiêu tốn thời gian và tài nguyên của bạn nhưng bạn không phải lúc nào cũng cần chạy phiên bản của riêng mình. Trong trường hợp này, bạn có thể sử dụng nhà cung cấp API của bên thứ ba. Để có cái nhìn tổng quan về việc sử dụng các dịch vụ này, hãy xem [các nút dưới dạng dịch vụ](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Nếu có ai đó chạy một nút Ethereum với API công cộng trong cộng đồng của bạn, bạn có thể điều chỉnh ví của mình tới một nút cộng đồng qua tùy biến RPC và có được sự riêng tư hơn so với việc sử dụng một bên thứ ba nào đó mà bạn tin tưởng.
+Nếu ai đó chạy một nút Ethereum với API công khai trong cộng đồng của bạn, bạn có thể trỏ các Ví của mình đến một nút cộng đồng thông qua RPC tùy chỉnh và có được nhiều quyền riêng tư hơn so với một bên thứ ba đáng tin cậy ngẫu nhiên nào đó.
 
-Mặt khác, nếu bạn điều hành một khách hàng, bạn có thể chia sẻ nó với bạn bè của mình, những người có thể cần đến.
+Mặt khác, nếu bạn chạy một máy khách, bạn có thể chia sẻ nó với những người bạn có thể cần nó.
 
-## Các ứng dụng thực thi {#execution-clients}
+## Máy khách thực thi {#execution-clients}
 
-Cộng đồng Ethereum duy trì nhiều client thực thi mã nguồn mở (trước đây gọi là 'client Eth1' hoặc đơn giản là 'client Ethereum'), được phát triển bởi các đội ngũ khác nhau sử dụng các ngôn ngữ lập trình khác nhau. Điều này giúp mạng mạnh hơn và [đa dạng](/developers/docs/nodes-and-clients/client-diversity/) hơn. Mục tiêu lý tưởng là đạt được sự đa dạng mà không có khách hàng nào chiếm ưu thế để giảm thiểu bất kỳ điểm thất bại nào.
+Cộng đồng Ethereum duy trì nhiều máy khách thực thi mã nguồn mở (trước đây được gọi là 'máy khách Eth1', hoặc chỉ là 'máy khách Ethereum'), được phát triển bởi các nhóm khác nhau sử dụng các ngôn ngữ lập trình khác nhau. Điều này làm cho mạng lưới mạnh mẽ và [đa dạng](/developers/docs/nodes-and-clients/client-diversity/) hơn. Mục tiêu lý tưởng là đạt được sự đa dạng mà không có bất kỳ máy khách nào thống trị để giảm thiểu bất kỳ điểm lỗi duy nhất nào.
 
-Bảng này tóm tắt các clients khác nhau. Tất cả chúng đều vượt qua các [bài kiểm tra máy khách](https://github.com/ethereum/tests) và được bảo trì tích cực để luôn cập nhật các bản nâng cấp mạng.
+Bảng này tóm tắt các máy khách khác nhau. Tất cả chúng đều vượt qua [các bài kiểm tra máy khách](https://github.com/ethereum/tests) và được duy trì tích cực để luôn cập nhật với các bản nâng cấp mạng lưới.
 
-| Client                                                                                      | Ngôn ngữ                 | Hệ điều hành          | Mạng                      | Chiến lược đồng bộ                                                              | State pruning   |
-| ------------------------------------------------------------------------------------------- | ------------------------ | --------------------- | ------------------------- | ------------------------------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                                          | Go                       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Full](#full-sync)                                          | Archive, Pruned |
-| [Nethermind](https://www.nethermind.io/)                                                    | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync) (không phục vụ), Fast, [Full](#full-sync) | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/)                                             | Java                     | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)                      | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                                             | Go                       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                                                              | Archive, Pruned |
-| [Reth](https://reth.rs/)                                                                    | Rust                     | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                                                              | Archive, Pruned |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript               | Linux, Windows, macOS | Sepolia, Holesky          | [Full](#full-sync)                                                              | Pruned          |
+| Máy khách                                                                   | Ngôn ngữ   | Hệ điều hành     | Mạng lưới                | Chiến lược đồng bộ hóa                                            | Cắt tỉa trạng thái   |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Đầy đủ](#full-sync)                     | Lưu trữ, Đã cắt tỉa |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Nhanh, [Đầy đủ](#full-sync)               | Lưu trữ, Đã cắt tỉa |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Nhanh](#fast-sync), [Đầy đủ](#full-sync) | Lưu trữ, Đã cắt tỉa |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Đầy đủ](#full-sync)                                         | Lưu trữ, Đã cắt tỉa |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Đầy đủ](#full-sync)                                         | Lưu trữ, Đã cắt tỉa |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Đầy đủ](#full-sync)                                         | Đã cắt tỉa          |
 
-Để biết thêm về các mạng được hỗ trợ, hãy đọc về [các mạng Ethereum](/developers/docs/networks/).
+Để biết thêm về các mạng lưới được hỗ trợ, hãy đọc về [các mạng lưới Ethereum](/developers/docs/networks/).
 
-Mỗi khách hàng có những trường hợp sử dụng và lợi thế riêng, vì vậy bạn nên chọn một cái dựa trên sở thích của chính mình. Sự đa dạng cho phép các ứng dụng tập trung vào các tính năng khác nhau và các đối tượng người dùng khác nhau. Bạn có thể muốn chọn một ứng dụng dựa trên các tính năng, hỗ trợ, ngôn ngữ lập trình hoặc giấy phép.
+Mỗi máy khách có các trường hợp sử dụng và lợi thế riêng, vì vậy bạn nên chọn một máy khách dựa trên sở thích của riêng mình. Sự đa dạng cho phép các bản triển khai tập trung vào các tính năng và đối tượng người dùng khác nhau. Bạn có thể muốn chọn một máy khách dựa trên các tính năng, sự hỗ trợ, ngôn ngữ lập trình hoặc giấy phép.
 
 ### Besu {#besu}
 
-Hyperledger Besu là một ứng dụng Ethereum cấp doanh nghiệp dành cho các mạng công cộng và có quyền truy cập. Nó cung cấp tất cả các tính năng của Ethereum Mainnet, từ việc theo dõi đến GraphQL, có khả năng giám sát rộng rãi và được hỗ trợ bởi ConsenSys, cả trong các kênh cộng đồng mở và thông qua các thỏa thuận mức dịch vụ thương mại cho các doanh nghiệp. Bạn có thể muốn chọn một ứng dụng dựa trên các tính năng, hỗ trợ, ngôn ngữ lập trình hoặc giấy phép.
+Hyperledger Besu là một máy khách Ethereum cấp doanh nghiệp dành cho các mạng lưới công khai và có cấp phép. Nó chạy tất cả các tính năng của Mạng chính Ethereum, từ theo dõi đến GraphQL, có khả năng giám sát mở rộng và được hỗ trợ bởi ConsenSys, cả trong các kênh cộng đồng mở và thông qua các SLA thương mại dành cho doanh nghiệp. Nó được viết bằng Java và được cấp phép Apache-2.0.
 
 [Tài liệu](https://besu.hyperledger.org/en/stable/) mở rộng của Besu sẽ hướng dẫn bạn qua tất cả các chi tiết về các tính năng và thiết lập của nó.
 
 ### Erigon {#erigon}
 
-Erigon, trước đây được biết đến với tên gọi Turbo-Geth, bắt đầu như một nhánh của Go Ethereum hướng tới hiệu suất tốc độ và tiết kiệm không gian ổ đĩa. Erigon là một triển khai hoàn toàn được thiết kế lại của Ethereum, hiện đang được viết bằng ngôn ngữ Go nhưng cũng có các triển khai bằng ngôn ngữ khác đang được phát triển. Mục tiêu của Erigon là cung cấp một triển khai Ethereum nhanh hơn, linh hoạt hơn và tối ưu hơn. Nó có thể thực hiện việc đồng bộ nút lưu trữ đầy đủ sử dụng khoảng 2TB dung lượng ổ đĩa, trong vòng chưa đầy 3 ngày.
+Erigon, trước đây được gọi là Turbo-Geth, bắt đầu như một bản Phân nhánh của Go Ethereum hướng tới tốc độ và hiệu quả không gian đĩa. Erigon là một bản triển khai được thiết kế lại hoàn toàn của Ethereum, hiện được viết bằng Go nhưng với các bản triển khai bằng các ngôn ngữ khác đang được phát triển. Mục tiêu của Erigon là cung cấp một bản triển khai Ethereum nhanh hơn, mô-đun hơn và tối ưu hóa hơn. Nó có thể thực hiện đồng bộ hóa nút lưu trữ đầy đủ bằng cách sử dụng khoảng 2TB dung lượng đĩa, trong vòng chưa đầy 3 ngày.
 
 ### Go Ethereum {#geth}
 
-Go Ethereum (viết tắt là Geth) là một trong những triển khai gốc của giao thức Ethereum. Hiện nay, đây là ứng dụng phổ biến nhất với số lượng người dùng lớn nhất và đa dạng công cụ dành cho người sử dụng và nhà phát triển. Nó được viết bằng ngôn ngữ Go, hoàn toàn mã nguồn mở và được cấp phép theo GNU LGPL v3.
+Go Ethereum (gọi tắt là Geth) là một trong những bản triển khai ban đầu của Giao thức Ethereum. Hiện tại, nó là máy khách phổ biến nhất với cơ sở người dùng lớn nhất và nhiều công cụ đa dạng cho người dùng và nhà phát triển. Nó được viết bằng Go, hoàn toàn mã nguồn mở và được cấp phép theo GNU LGPL v3.
 
-Tìm hiểu thêm về Geth trong [tài liệu](https://geth.ethereum.org/docs/) của nó.
+Tìm hiểu thêm về Geth trong [tài liệu](https://geth.ethereum.org/docs) của nó.
 
 ### Nethermind {#nethermind}
 
-Nethermind là một triển khai của Ethereum được tạo ra với công nghệ C# .NET, được cấp phép với LGPL-3.0, hoạt động trên tất cả các nền tảng chính bao gồm ARM. Nó cung cấp hiệu suất tuyệt vời với:
+Nethermind là một bản triển khai Ethereum được tạo bằng ngăn xếp công nghệ C# .NET, được cấp phép LGPL-3.0, chạy trên tất cả các nền tảng chính bao gồm cả ARM. Nó cung cấp hiệu suất tuyệt vời với:
 
 - một máy ảo được tối ưu hóa
-- Truy cập trạng thái
+- quyền truy cập trạng thái
 - mạng lưới và các tính năng phong phú như bảng điều khiển Prometheus/Grafana, hỗ trợ ghi nhật ký doanh nghiệp seq, theo dõi JSON-RPC và các plugin phân tích.
 
-Nethermind cũng có [tài liệu chi tiết](https://docs.nethermind.io), hỗ trợ nhà phát triển mạnh mẽ, một cộng đồng trực tuyến và hỗ trợ 24/7 cho người dùng cao cấp.
+Nethermind cũng có [tài liệu chi tiết](https://docs.nethermind.io), hỗ trợ nhà phát triển mạnh mẽ, một cộng đồng trực tuyến và hỗ trợ 24/7 dành cho người dùng cao cấp.
 
 ### Reth {#reth}
 
-Reth (viết tắt của Rust Ethereum) là một triển khai nút đầy đủ Ethereum, tập trung vào việc thân thiện với người dùng, có tính mô-đun cao, nhanh chóng và hiệu quả. Reth ban đầu được xây dựng và phát triển bởi Paradigm, và được cấp phép theo các giấy phép Apache và MIT.
+Reth (viết tắt của Rust Ethereum) là một bản triển khai nút đầy đủ Ethereum tập trung vào tính thân thiện với người dùng, tính mô-đun cao, nhanh chóng và hiệu quả. Reth ban đầu được xây dựng và thúc đẩy bởi Paradigm, và được cấp phép theo giấy phép Apache-2.0 và MIT.
 
-Reth đã sẵn sàng cho sản xuất và phù hợp để sử dụng trong các môi trường quan trọng như staking hoặc dịch vụ yêu cầu thời gian hoạt động cao. Hoạt động tốt trong các trường hợp sử dụng mà yêu cầu hiệu suất cao với biên lợi nhuận lớn như RPC, MEV, lập chỉ mục, mô phỏng và các hoạt động P2P.
+Reth đã sẵn sàng cho sản xuất và phù hợp để sử dụng trong các môi trường quan trọng như đặt cọc hoặc các dịch vụ có thời gian hoạt động cao. Hoạt động tốt trong các trường hợp sử dụng yêu cầu hiệu suất cao với biên độ lớn như RPC, MEV, lập chỉ mục, mô phỏng và các hoạt động P2P.
 
-Tìm hiểu thêm bằng cách xem [Sách Reth](https://reth.rs/), hoặc [kho GitHub của Reth](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
+Tìm hiểu thêm bằng cách xem [Sách Reth](https://reth.rs/) hoặc [kho lưu trữ GitHub của Reth](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
 ### Đang phát triển {#execution-in-development}
 
-Những ứng dụng này vẫn đang ở giai đoạn phát triển sớm và chưa được khuyến nghị sử dụng trong sản xuất.
+Các máy khách này vẫn đang trong giai đoạn phát triển ban đầu và chưa được khuyến nghị sử dụng trong sản xuất.
 
 #### EthereumJS {#ethereumjs}
 
-Khách hàng thực thi EthereumJS (EthereumJS) được viết bằng TypeScript và bao gồm một số gói, bao gồm các nguyên tố Ethereum cốt lõi được thể hiện qua các lớp Block, Transaction và Merkle-Patricia Trie, cũng như các thành phần cốt lõi của khách hàng bao gồm việc triển khai Máy ảo Ethereum (EVM), một lớp blockchain, và ngăn xếp mạng DevP2P.
+Máy khách thực thi EthereumJS (EthereumJS) được viết bằng TypeScript và bao gồm một số gói, bao gồm các nguyên thủy Ethereum cốt lõi được đại diện bởi các lớp Khối, Giao dịch và Merkle-Patricia Trie cùng các thành phần máy khách cốt lõi bao gồm một bản triển khai của Máy ảo Ethereum (EVM), một lớp Chuỗi khối và ngăn xếp mạng lưới devp2p.
 
 Tìm hiểu thêm về nó bằng cách đọc [tài liệu](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master) của nó
 
-## Các ứng dụng đồng thuận {#consensus-clients}
+## Ứng dụng khách đồng thuận {#consensus-clients}
 
-Có nhiều máy khách đồng thuận (trước đây gọi là máy khách 'Eth2') để hỗ trợ các [nâng cấp đồng thuận](/roadmap/beacon-chain/). Chúng chịu trách nhiệm cho tất cả logic liên quan đến sự đồng thuận bao gồm thuật toán chọn phân nhánh, xử lý các chứng thực và quản lý phần thưởng cũng như hình phạt của [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos).
+Có nhiều ứng dụng khách đồng thuận (trước đây được gọi là máy khách 'Eth2') để hỗ trợ [các bản nâng cấp đồng thuận](/roadmap/beacon-chain/). Chúng chịu trách nhiệm cho tất cả logic liên quan đến đồng thuận bao gồm thuật toán lựa chọn Phân nhánh, xử lý các chứng thực và quản lý phần thưởng cũng như hình phạt của [Bằng chứng cổ phần (PoS)](/developers/docs/consensus-mechanisms/pos).
 
-| Client                                                        | Ngôn ngữ   | Hệ điều hành          | Mạng                                                                |
-| ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Chuỗi Hải Đăng, Holesky, Pyrmont, Sepolia, và nhiều hơn nữa         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Chuỗi Hải Đăng, Holesky, Sepolia, và nhiều hơn nữa                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Chuỗi Hải Đăng, Holesky, Sepolia, và nhiều hơn nữa                  |
-| [Prysm](https://prysm.offchainlabs.com/docs/)                 | Go         | Linux, Windows, macOS | Chuỗi Hải Đăng, Gnosis, Holesky, Pyrmont, Sepolia, và nhiều hơn nữa |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Chuỗi Hải Đăng, Gnosis, Holesky, Sepolia, và nhiều hơn nữa          |
-| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Chuỗi Hải Đăng, Holesky, Sepolia, và nhiều hơn nữa                  |
+| Máy khách                                                        | Ngôn ngữ   | Hệ điều hành     | Mạng lưới                                                |
+| ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Chuỗi Beacon, Hoodi, Pyrmont, Sepolia và nhiều mạng lưới khác         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Chuỗi Beacon, Hoodi, Sepolia và nhiều mạng lưới khác                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Chuỗi Beacon, Hoodi, Sepolia và nhiều mạng lưới khác                  |
+| [Prysm](https://prysm.offchainlabs.com/docs/)                 | Go         | Linux, Windows, macOS | Chuỗi Beacon, Gnosis, Hoodi, Pyrmont, Sepolia và nhiều mạng lưới khác |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Chuỗi Beacon, Gnosis, Hoodi, Sepolia và nhiều mạng lưới khác          |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Chuỗi Beacon, Hoodi, Sepolia và nhiều mạng lưới khác                  |
 
 ### Lighthouse {#lighthouse}
 
-Lighthouse là một bản triển khai hệ thống đồng thuận, được viết bằng ngôn ngữ Rust và phát hành theo giấy phép Apache-2.0. Lighthouse được duy trì bởi Sigma Prime và đã ổn định, sẵn sàng cho môi trường sản xuất kể từ khi Chuỗi Hải Đăng ra đời. Nhiều doanh nghiệp, nhóm Cổ phần và cá nhân đang tin dùng. Nó hướng tới mục tiêu bảo mật, hiệu năng cao và khả năng tương tác trong nhiều môi trường khác nhau, từ máy tính cá nhân đến các hệ thống triển khai tự động phức tạp.
+Lighthouse là một bản triển khai ứng dụng khách đồng thuận được viết bằng Rust theo giấy phép Apache-2.0. Nó được duy trì bởi Sigma Prime và đã ổn định cũng như sẵn sàng cho sản xuất kể từ khối nguyên thủy của Chuỗi Beacon. Nó được tin cậy bởi nhiều doanh nghiệp, nhóm đặt cọc và cá nhân. Nó hướng tới mục tiêu bảo mật, hiệu suất cao và có khả năng tương tác trong nhiều môi trường khác nhau, từ máy tính để bàn đến các đợt triển khai tự động tinh vi.
 
 Tài liệu có thể được tìm thấy trong [Sách Lighthouse](https://lighthouse-book.sigmaprime.io/)
 
 ### Lodestar {#lodestar}
 
-Lodestar là một bản triển khai hệ thống đồng thuận đã sẵn sàng cho môi trường sản xuất, được viết bằng Typescript theo giấy phép LGPL-3.0. Nó được duy trì bởi Lưới Bảo vệ Hệ thống và là hệ thống đồng thuận mới nhất dành cho người đóng góp cổ phần cá nhân, nhà phát triển và nhà nghiên cứu. Lodestar bao gồm một nút ngọn hải đăng và một hệ thống xác thực, được vận hành bởi các triển khai giao thức Ethereum viết bằng JavaScript. Lodestar hướng đến việc cải thiện khả năng sử dụng của Ethereum thông qua hệ thống ánh sáng, mở rộng khả năng tiếp cận cho nhiều nhà phát triển hơn và tiếp tục đóng góp vào sự đa dạng của hệ sinh thái.
+Lodestar là một bản triển khai ứng dụng khách đồng thuận sẵn sàng cho sản xuất được viết bằng TypeScript theo giấy phép LGPL-3.0. Nó được duy trì bởi ChainSafe Systems và là ứng dụng khách đồng thuận mới nhất dành cho những người đặt cọc độc lập, nhà phát triển và nhà nghiên cứu. Lodestar bao gồm một nút Beacon và máy khách trình xác thực được cung cấp bởi các bản triển khai JavaScript của các Giao thức Ethereum. Lodestar nhằm mục đích cải thiện khả năng sử dụng Ethereum với các máy khách nhẹ, mở rộng khả năng tiếp cận cho một nhóm lớn hơn các nhà phát triển và đóng góp thêm vào sự đa dạng của hệ sinh thái.
 
-Thông tin thêm có thể được tìm thấy trên [trang web Lodestar](https://lodestar.chainsafe.io/)
+Bạn có thể tìm thêm thông tin trên [trang web Lodestar](https://lodestar.chainsafe.io/)
 
 ### Nimbus {#nimbus}
 
-Nimbus là một bản triển khai của hệ thống đồng thuận được viết bằng ngôn ngữ Nim, phát hành theo giấy phép Apache-2.0. Đây là một hệ thống đã sẵn sàng cho môi trường sản xuất, hiện đang được sử dụng bởi những người gửi cổ phần độc lập và các hồ cổ phần. Nimbus được thiết kế với hiệu quả tài nguyên làm trọng tâm, cho phép chạy dễ dàng trên cả các thiết bị hạn chế tài nguyên lẫn hạ tầng doanh nghiệp, mà vẫn đảm bảo tính ổn định và hiệu suất phần thưởng. Dấu chân tài nguyên nhẹ hơn đồng nghĩa với việc hệ thống có biên độ an toàn lớn hơn khi mạng lưới rơi vào tình trạng căng thẳng hoặc quá tải.
+Nimbus là một bản triển khai ứng dụng khách đồng thuận được viết bằng Nim theo giấy phép Apache-2.0. Nó là một máy khách sẵn sàng cho sản xuất được sử dụng bởi những người đặt cọc độc lập và các nhóm đặt cọc. Nimbus được thiết kế để mang lại hiệu quả tài nguyên, giúp dễ dàng chạy trên các thiết bị bị hạn chế tài nguyên và cơ sở hạ tầng doanh nghiệp một cách dễ dàng như nhau, mà không ảnh hưởng đến tính ổn định hoặc hiệu suất phần thưởng. Mức tiêu thụ tài nguyên nhẹ hơn có nghĩa là máy khách có biên độ an toàn lớn hơn khi mạng lưới chịu áp lực.
 
 Tìm hiểu thêm trong [tài liệu Nimbus](https://nimbus.guide/)
 
 ### Prysm {#prysm}
 
-Prysm là một hệ thống đồng thuận đầy đủ tính năng, mã nguồn mở, được viết bằng Go và phân phối theo giấy phép GPL-3.0. Prysm đi kèm với tùy chọn giao diện phần mềm web UI, đồng thời ưu tiên trải nghiệm người dùng, tài liệu hướng dẫn rõ ràng và khả năng tùy chỉnh cao, phù hợp cho cả người dùng tự gửi cổ phần tại nhà lẫn tổ chức cổ phần quy mô lớn.
+Prysm là một ứng dụng khách đồng thuận mã nguồn mở, đầy đủ tính năng được viết bằng Go theo giấy phép GPL-3.0. Nó có giao diện người dùng ứng dụng web tùy chọn và ưu tiên trải nghiệm người dùng, tài liệu và khả năng cấu hình cho cả người dùng đặt cọc tại nhà và người dùng tổ chức.
 
 Truy cập [tài liệu Prysm](https://prysm.offchainlabs.com/docs/) để tìm hiểu thêm.
 
 ### Teku {#teku}
 
-Teku là một trong những hệ thống đồng thuận gốc từ thời Chuỗi Hải Đăng sự sáng thế, được phát triển ngay từ những ngày đầu của Ethereum Bằng chứng Cổ phần. Bên cạnh những mục tiêu quen thuộc (bảo mật, độ bền vững, tính ổn định, khả năng sử dụng và hiệu năng), Teku đặc biệt hướng đến việc tuân thủ đầy đủ mọi tiêu chuẩn của các hệ thống đồng thuận.
+Teku là một trong những máy khách nguyên thủy ban đầu của Chuỗi Beacon. Bên cạnh các mục tiêu thông thường (bảo mật, mạnh mẽ, ổn định, khả năng sử dụng, hiệu suất), Teku đặc biệt hướng tới việc tuân thủ đầy đủ tất cả các tiêu chuẩn ứng dụng khách đồng thuận khác nhau.
 
-Teku cung cấp các tùy chọn triển khai hết sức linh hoạt. Nút Ngọn hải đăng và hệ thống xác thực có thể được chạy cùng nhau trong một tiến trình duy nhất, điều này vô cùng tiện lợi cho những người cổ phần cá nhân; hoặc chúng cũng có thể được chạy tách biệt để phục vụ các hoạt động cổ phần phức tạp hơn. Ngoài ra, Teku hoàn toàn có thể tương tác với [Web3Signer](https://github.com/ConsenSys/web3signer/) để bảo mật khóa ký và bảo vệ chống chém.
+Teku cung cấp các tùy chọn triển khai rất linh hoạt. Nút Beacon và máy khách trình xác thực có thể được chạy cùng nhau như một tiến trình duy nhất, điều này cực kỳ thuận tiện cho những người đặt cọc độc lập, hoặc các nút có thể được chạy riêng biệt cho các hoạt động đặt cọc tinh vi. Ngoài ra, Teku hoàn toàn có khả năng tương tác với [Web3Signer](https://github.com/ConsenSys/web3signer/) để bảo mật khóa ký và bảo vệ khỏi phạt cắt giảm.
 
-Teku được viết bằng Java và có giấy phép Apache 2,0. Teku được viết bằng Java và có giấy phép Apache 2.0. Tìm hiểu thêm trong [tài liệu Teku](https://docs.teku.consensys.net/en/latest/).
+Teku được viết bằng Java và được cấp phép Apache-2.0. Nó được phát triển bởi nhóm Giao thức tại ConsenSys, nhóm cũng chịu trách nhiệm cho Besu và Web3Signer. Tìm hiểu thêm trong [tài liệu Teku](https://docs.teku.consensys.net/en/latest/).
 
 ### Grandine {#grandine}
 
-Grandine là một thực hiện khách đồng thuận, được viết bằng Rust theo giấy phép GPL-3.0. Nó được duy trì bởi Đội ngũ Cốt lõi Grandine và nhanh chóng, hiệu suất cao và nhẹ. Nó phù hợp với nhiều loại stakers khác nhau, từ những stakers đơn lẻ chạy trên các thiết bị tài nguyên thấp như Raspberry Pi đến tổ chức stakers lớn điều hành hàng chục nghìn trình xác thực.
+Grandine là một bản triển khai ứng dụng khách đồng thuận, được viết bằng Rust theo giấy phép GPL-3.0. Nó được duy trì bởi Nhóm Cốt lõi Grandine và có tốc độ nhanh, hiệu suất cao và nhẹ. Nó phù hợp với nhiều đối tượng người đặt cọc, từ những người đặt cọc độc lập chạy trên các thiết bị có tài nguyên thấp như Raspberry Pi đến những người đặt cọc tổ chức lớn chạy hàng chục nghìn trình xác thực.
 
 Tài liệu có thể được tìm thấy trong [Sách Grandine](https://docs.grandine.io/)
 
 ## Các chế độ đồng bộ hóa {#sync-modes}
 
-Để theo dõi và xác minh dữ liệu hiện tại trên mạng, khách hàng Ethereum cần đồng bộ với trạng thái mạng mới nhất. Điều này được thực hiện bằng cách tải dữ liệu từ các đồng nghiệp, xác minh tính toàn vẹn của chúng một cách an toàn bằng mật mã, và xây dựng một cơ sở dữ liệu blockchain cục bộ.
+Để theo dõi và xác minh dữ liệu hiện tại trong mạng lưới, máy khách Ethereum cần đồng bộ hóa với trạng thái mạng lưới mới nhất. Điều này được thực hiện bằng cách tải xuống dữ liệu từ các thiết bị ngang hàng, xác minh tính toàn vẹn của chúng bằng mật mã và xây dựng một cơ sở dữ liệu Chuỗi khối cục bộ.
 
-Chế độ đồng bộ hóa đại diện cho các phương pháp khác nhau trong quá trình này với nhiều thỏa hiệp khác nhau. Khách hàng cũng khác nhau trong việc triển khai các thuật toán đồng bộ. Luôn tham khảo tài liệu chính thức của khách hàng mà bạn đã chọn để biết thông tin chi tiết về cách triển khai.
+Các chế độ đồng bộ hóa đại diện cho các cách tiếp cận khác nhau đối với quá trình này với nhiều sự đánh đổi khác nhau. Các máy khách cũng khác nhau trong việc triển khai các thuật toán đồng bộ hóa. Luôn tham khảo tài liệu chính thức của máy khách bạn đã chọn để biết chi tiết cụ thể về việc triển khai.
 
-### Các chế độ đồng bộ hóa của lớp thực thi {#execution-layer-sync-modes}
+### Các chế độ đồng bộ hóa lớp thực thi {#execution-layer-sync-modes}
 
-Lớp thực thi có thể hoạt động ở các chế độ khác nhau để phù hợp với các trường hợp sử dụng khác nhau, từ việc tái thực thi trạng thái toàn cầu của chuỗi khối đến việc chỉ đồng bộ với đỉnh của chuỗi từ một điểm kiểm tra đáng tin cậy.
+Lớp thực thi có thể được chạy ở các chế độ khác nhau để phù hợp với các trường hợp sử dụng khác nhau, từ việc thực thi lại trạng thái thế giới của Chuỗi khối cho đến việc chỉ đồng bộ hóa với phần đầu của Chuỗi từ một điểm kiểm tra đáng tin cậy.
 
 #### Đồng bộ hóa đầy đủ {#full-sync}
 
-Một đồng bộ hoàn chỉnh tải xuống tất cả các khối (bao gồm tiêu đề và nội dung khối) và tái tạo trạng thái của chuỗi khối theo từng bước bằng cách thực hiện từng khối từ khởi nguồn.
+Đồng bộ hóa đầy đủ tải xuống tất cả các khối (bao gồm tiêu đề và phần thân khối) và tạo lại trạng thái của Chuỗi khối một cách tăng dần bằng cách thực thi mọi khối từ khối nguyên thủy.
 
-- Giảm thiểu sự tin cậy và cung cấp mức độ an ninh cao nhất bằng cách xác minh từng giao dịch.
-- Với số lượng giao dịch ngày càng tăng, quá trình xử lý tất cả các giao dịch có thể mất từ vài ngày đến vài tuần.
+- Giảm thiểu sự tin cậy và cung cấp bảo mật cao nhất bằng cách xác minh mọi giao dịch.
+- Với số lượng giao dịch ngày càng tăng, có thể mất từ vài ngày đến vài tuần để xử lý tất cả các giao dịch.
 
-[Các nút lưu trữ](#archive-node) thực hiện đồng bộ hóa đầy đủ để xây dựng (và giữ lại) lịch sử hoàn chỉnh về các thay đổi trạng thái được thực hiện bởi mọi giao dịch trong mọi khối.
+[Các nút lưu trữ](#archive-node) thực hiện đồng bộ hóa đầy đủ để xây dựng (và giữ lại) một lịch sử hoàn chỉnh về các thay đổi trạng thái được thực hiện bởi mọi giao dịch trong mọi khối.
 
 #### Đồng bộ hóa nhanh {#fast-sync}
 
-Giống như việc đồng bộ hoàn chỉnh, việc đồng bộ nhanh tải xuống tất cả các khối (bao gồm tiêu đề, giao dịch và biên nhận). Tuy nhiên, thay vì xử lý lại các giao dịch lịch sử, một quá trình đồng bộ nhanh dựa vào các biên lai cho đến khi đạt đến đỉnh gần đây, khi đó nó chuyển sang nhập và xử lý các khối để cung cấp một nút hoàn chỉnh.
+Giống như đồng bộ hóa đầy đủ, đồng bộ hóa nhanh tải xuống tất cả các khối (bao gồm tiêu đề, giao dịch và biên lai). Tuy nhiên, thay vì xử lý lại các giao dịch lịch sử, đồng bộ hóa nhanh dựa vào các biên lai cho đến khi nó đạt đến một phần đầu gần đây, khi đó nó chuyển sang nhập và xử lý các khối để cung cấp một nút đầy đủ.
 
-- Chiến lược đồng bộ nhanh.
+- Chiến lược đồng bộ hóa nhanh.
 - Giảm nhu cầu xử lý để ưu tiên sử dụng băng thông.
 
 #### Đồng bộ hóa snap {#snap-sync}
 
-Đồng bộ snap cũng xác minh chuỗi từng khối một. Tuy nhiên, thay vì bắt đầu từ khối genesis, một bản đồng bộ snap sẽ bắt đầu từ một điểm kiểm tra 'đáng tin' gần đây hơn, mà đã được biết là một phần của chuỗi khối thực. Nút lưu lại các điểm kiểm tra định kỳ trong khi xóa dữ liệu cũ hơn một khoảng thời gian nhất định. Các bức ảnh chụp này được sử dụng để tái tạo dữ liệu trạng thái khi cần thiết, thay vì lưu trữ nó mãi mãi.
+Đồng bộ hóa snap cũng xác minh Chuỗi theo từng khối. Tuy nhiên, thay vì bắt đầu ở khối nguyên thủy, đồng bộ hóa snap bắt đầu ở một điểm kiểm tra 'đáng tin cậy' gần đây hơn được biết là một phần của Chuỗi khối thực sự. Nút lưu các điểm kiểm tra định kỳ trong khi xóa dữ liệu cũ hơn một độ tuổi nhất định. Các ảnh chụp nhanh này được sử dụng để tạo lại dữ liệu trạng thái khi cần, thay vì lưu trữ nó mãi mãi.
 
-- Chiến lược đồng bộ nhanh nhất, hiện đang là mặc định trên mạng chính Ethereum.
-- Tiết kiệm rất nhiều dung lượng đĩa và băng thông mạng mà không hi sinh tính bảo mật.
+- Chiến lược đồng bộ hóa nhanh nhất, hiện là mặc định trong Mạng chính Ethereum.
+- Tiết kiệm rất nhiều dung lượng đĩa và băng thông mạng lưới mà không làm giảm tính bảo mật.
 
-[Thêm về đồng bộ hóa snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
+[Tìm hiểu thêm về đồng bộ hóa snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
 #### Đồng bộ hóa nhẹ {#light-sync}
 
-Client nhẹ tải xuống tất cả các tiêu đề khối, dữ liệu khối và kiểm tra một số một cách ngẫu nhiên. Chỉ đồng bộ hóa đầu chuỗi từ điểm kiểm tra tin cậy.
+Chế độ máy khách nhẹ tải xuống tất cả các tiêu đề khối, dữ liệu khối và xác minh ngẫu nhiên một số khối. Chỉ đồng bộ hóa phần đầu của Chuỗi từ điểm kiểm tra đáng tin cậy.
 
-- Chỉ nhận được trạng thái mới nhất trong khi dựa vào sự tin tưởng vào các nhà phát triển và cơ chế đồng thuận.
-- Khách hàng sẵn sàng sử dụng với trạng thái mạng hiện tại trong vài phút.
+- Chỉ nhận trạng thái mới nhất trong khi dựa vào sự tin cậy đối với các nhà phát triển và cơ chế đồng thuận.
+- Máy khách sẵn sàng sử dụng với trạng thái mạng lưới hiện tại trong vài phút.
 
-**Lưu ý** Đồng bộ hóa nhẹ chưa hoạt động với Ethereum bằng chứng cổ phần - các phiên bản mới của đồng bộ hóa nhẹ sẽ sớm được phát hành!
+**Lưu ý** Đồng bộ hóa nhẹ chưa hoạt động với Ethereum Bằng chứng cổ phần (PoS) - các phiên bản mới của đồng bộ hóa nhẹ sẽ sớm được phát hành!
 
-[Thêm về các máy khách nhẹ](/developers/docs/nodes-and-clients/light-clients/)
+[Tìm hiểu thêm về máy khách nhẹ](/developers/docs/nodes-and-clients/light-clients/)
 
-### Các chế độ đồng bộ hóa của lớp đồng thuận {#consensus-layer-sync-modes}
+### Các chế độ đồng bộ hóa lớp đồng thuận {#consensus-layer-sync-modes}
 
 #### Đồng bộ hóa lạc quan {#optimistic-sync}
 
-Đồng bộ lạc quan là một chiến lược đồng bộ sau khi hợp nhất, được thiết kế theo dạng tùy chọn và tương thích ngược, cho phép các nút thực hiện đồng bộ thông qua những phương thức đã được thiết lập sẵn. Công cụ thực thi có thể nhập các khối beacon một cách _lạc quan_ mà không cần xác minh đầy đủ, tìm phần đầu mới nhất, sau đó bắt đầu đồng bộ hóa chuỗi bằng các phương pháp trên. Sau đó, khi client thực thi đã đồng bộ, nó sẽ thông báo cho client đồng thuận về tính hợp lệ của các giao dịch trong Beacon Chain.
+Đồng bộ hóa lạc quan là một chiến lược đồng bộ hóa sau The Merge được thiết kế để chọn tham gia và tương thích ngược, cho phép các nút thực thi đồng bộ hóa thông qua các phương pháp đã được thiết lập. Execution engine có thể nhập các khối Beacon một cách _lạc quan_ mà không cần xác minh đầy đủ chúng, tìm phần đầu mới nhất, và sau đó bắt đầu đồng bộ hóa Chuỗi bằng các phương pháp trên. Sau đó, sau khi máy khách thực thi đã bắt kịp, nó sẽ thông báo cho ứng dụng khách đồng thuận về tính hợp lệ của các giao dịch trong Chuỗi Beacon.
 
-[Thêm về đồng bộ hóa lạc quan](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[Tìm hiểu thêm về đồng bộ hóa lạc quan](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### Đồng bộ hóa điểm kiểm tra {#checkpoint-sync}
 
-Một đồng bộ hóa checkpoint, còn được biết đến là đồng bộ hóa chủ yếu yếu, tạo ra trải nghiệm người dùng tốt hơn cho việc đồng bộ hóa một Nút Beacon. Nó dựa trên các giả định về [tính chủ quan yếu](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) cho phép đồng bộ hóa Chuỗi Hải Đăng từ một điểm kiểm tra tính chủ quan yếu gần đây thay vì từ khối khởi nguyên. Đồng bộ hóa điểm kiểm tra giúp thời gian đồng bộ hóa ban đầu nhanh hơn đáng kể với các giả định tin cậy tương tự như đồng bộ hóa từ [khối khởi nguyên](/glossary/#genesis-block).
+Đồng bộ hóa điểm kiểm tra, còn được gọi là đồng bộ hóa tính chủ quan yếu, tạo ra trải nghiệm người dùng vượt trội để đồng bộ hóa một nút Beacon. Nó dựa trên các giả định về [tính chủ quan yếu](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) cho phép đồng bộ hóa Chuỗi Beacon từ một điểm kiểm tra tính chủ quan yếu gần đây thay vì khối nguyên thủy. Đồng bộ hóa điểm kiểm tra làm cho thời gian đồng bộ hóa ban đầu nhanh hơn đáng kể với các giả định tin cậy tương tự như đồng bộ hóa từ [khối nguyên thủy](/glossary/#genesis-block).
 
-Trên thực tế, điều này có nghĩa là nút của bạn kết nối với một dịch vụ từ xa để tải về các trạng thái đã hoàn tất gần đây và tiếp tục xác minh dữ liệu từ điểm đó. Bên thứ ba cung cấp dữ liệu được tin cậy và nên được lựa chọn một cách cẩn thận.
+Trong thực tế, điều này có nghĩa là nút của bạn kết nối với một dịch vụ từ xa để tải xuống các trạng thái đã chung cuộc gần đây và tiếp tục xác minh dữ liệu từ điểm đó. Bên thứ ba cung cấp dữ liệu được tin cậy và nên được chọn cẩn thận.
 
-[Thêm về đồng bộ hóa điểm kiểm tra](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
+Tìm hiểu thêm về [đồng bộ hóa điểm kiểm tra](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Đọc thêm {#further-reading}
 
-- [Ethereum 101 - Phần 2 - Tìm hiểu về các nút](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, ngày 13 tháng 2 năm 2019_
-- [Chạy các nút đầy đủ Ethereum: Hướng dẫn cho người có ít động lực](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, ngày 7 tháng 11 năm 2019_
+- [Ethereum 101 - Phần 2 - Hiểu về các nút](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, ngày 13 tháng 2 năm 2019_
+- [Chạy các nút đầy đủ Ethereum: Hướng dẫn cho những người ít động lực](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, ngày 7 tháng 11 năm 2019_
 
 ## Các chủ đề liên quan {#related-topics}
 
 - [Các khối](/developers/docs/blocks/)
-- [Các mạng](/developers/docs/networks/)
+- [Các mạng lưới](/developers/docs/networks/)
 
 ## Các hướng dẫn liên quan {#related-tutorials}
 
-- [Biến Raspberry Pi 4 của bạn thành một nút trình xác thực chỉ bằng cách flash thẻ MicroSD – Hướng dẫn cài đặt](/developers/tutorials/run-node-raspberry-pi/) _– Flash Raspberry Pi 4 của bạn, cắm cáp ethernet, kết nối ổ SSD và bật nguồn thiết bị để biến Raspberry Pi 4 thành một nút Ethereum đầy đủ chạy lớp thực thi (Mainnet) và/hoặc lớp đồng thuận (Chuỗi Hải Đăng / trình xác thực)._
+- [Biến Raspberry Pi 4 của bạn thành một nút trình xác thực chỉ bằng cách flash thẻ MicroSD – Hướng dẫn cài đặt](/developers/tutorials/run-node-raspberry-pi/) _– Flash Raspberry Pi 4 của bạn, cắm cáp ethernet, kết nối ổ đĩa SSD và bật nguồn thiết bị để biến Raspberry Pi 4 thành một nút đầy đủ Ethereum chạy lớp thực thi (Mạng chính) và / hoặc lớp đồng thuận (Chuỗi Beacon / trình xác thực)._

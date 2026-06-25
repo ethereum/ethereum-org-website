@@ -1,53 +1,96 @@
 ---
-title: "Příprava na budoucnost Etherea"
-description: "Neustávající práce na vylepšeních činí Ethereum odolnou, decentralizovanou základní vrstvou, bez ohledu na to, co nám budoucnost přinese."
+title: "Příprava Etherea a kryptografie na kvantovou budoucnost"
+description: "Tyto upgrady upevňují pozici Etherea jako odolné, decentralizované základní vrstvy pro budoucnost, ať už přinese cokoli."
 lang: cs
 image: /images/roadmap/roadmap-future.png
-alt: "Plán Etherea"
+alt: "Plán vývoje Etherea"
 template: roadmap
+summaryPoints:
+  - Postkvantová kryptografie zajišťuje, že Ethereum dokáže přežít pokročilé hardwarové hrozby s tím, jak postupuje vývoj kvantových počítačů
+  - Zjednodušení protokolu usnadňuje údržbu, audit a zabezpečení Etherea
+  - Nedávné upgrady již přinesly smysluplná zlepšení efektivity
 ---
 
-Některé části plánu nejsou nezbytně nutné pro škálování nebo zabezpečení Etherea v blízké budoucnosti, ale pro stabilitu a spolehlivost ve vzdálené budoucnosti.
+Některé části plánu vývoje se netýkají současného škálování nebo zabezpečení Etherea. Jsou o tom, aby bylo Ethereum **stabilní a spolehlivé i v daleké budoucnosti**. To znamená přípravu na nové druhy hrozeb a odstranění zbytečné složitosti z protokolu.
 
-## Kvantová odolnost {#quantum-resistance}
+## Odolnost vůči kvantovým počítačům {#quantum-resistance}
 
-Až se kvantové počítače stanou realitou, bude část [kryptografie](/glossary/#cryptography), která zabezpečuje dnešní Ethereum, kompromitována. Přestože kvantové počítače jsou pravděpodobně desítky let vývoje daleko od toho, aby se staly skutečnou hrozbou pro moderní kryptografii, Ethereum je budováno tak, aby bylo bezpečné po celá staletí. To znamená, že [Ethereum musí být co nejdříve kvantově odolné](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/).
+Ethereum využívá [kryptografii](/glossary/#cryptography) k udržení bezpečnosti sítě a ochraně prostředků uživatelů. Časem budou některé z těchto kryptografických metod **zranitelné vůči kvantovým počítačům**, které dokážou řešit specifické matematické problémy exponenciálně rychleji než klasické stroje.
 
-Výzva, které čelí vývojáři Etherea, spočívá v tom, že současný protokol [proof-of-stake](/glossary/#pos) se spoléhá na velmi účinné schéma podpisů známé jako BLS k agregaci hlasů pro platné [bloky](/glossary/#block). Toto schéma podpisu je ohroženo kvantovými počítači, ale kvantově odolné alternativy nejsou tak účinné.
+**Žádný kvantový počítač dnes nedokáže prolomit kryptografii Etherea.** Potřebný hardware zatím v dostatečném měřítku neexistuje. Nedávný výzkum však naznačuje, že se tato propast uzavírá rychleji, než se dříve očekávalo. V březnu 2026 publikovala společnost Google Quantum AI článek, ve kterém odhaduje, že prolomení 256bitové kryptografie eliptických křivek (typ, který Ethereum používá pro podpisy účtů) by mohlo vyžadovat zhruba 1 200 logických qubitů, což je asi 20krát méně než dřívější odhady. Google si stanovil interní termín do roku 2029 pro migraci vlastních systémů na kryptografii bezpečnou proti kvantovým počítačům.
 
-Je známo, že schémata závazků [„KZG“](/roadmap/danksharding/#what-is-kzg) používaná na několika místech v síti Ethereum ke generování kryptografických tajemství jsou kvantově zranitelná. V současné době se to obchází pomocí „důvěryhodných nastavení“ (pro která byla hlavní ustavující ceremonie úspěšně dokončena v roce 2023), kde mnoho uživatelů generovalo náhodnost, kterou nelze zpětně analyzovat kvantovým počítačem. Ideálním dlouhodobým řešením by však bylo místo toho začlenit kvantově bezpečnou kryptografii. Existují dva hlavní přístupy, které by se mohly stát účinnými náhradami za schéma BLS: podepisování [založené na STARK](https://hackmd.io/@vbuterin/stark_aggregation) a podepisování [založené na mřížce](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Tyto přístupy jsou stále aktivně zkoumány a prototypovány**.
+Plánování a bezpečné provedení kryptografických přechodů trvá roky. Protože je bezpečnostní model Etherea navržen tak, aby vydržel desítky let, byla postkvantová příprava v plánu vývoje Etherea ještě předtím, než se objevila v hlavních zprávách. Příprava sítě probíhá již nyní, aby se zajistil hladký přechod, a nejedná se o reakci na stav nouze.
 
-[Přečtěte si o KZG a důvěryhodných nastaveních](/roadmap/danksharding#what-is-kzg)
+### Co je v ohrožení? {#what-is-at-risk}
+
+Byly identifikovány čtyři hlavní oblasti kryptografie Etherea, které vyžadují postkvantové upgrady:
+
+1. **Podpisy konsensu (BLS)**: [Validátory](/glossary/#validator) používají podpisy BLS k hlasování o platných [blocích](/glossary/#block). Kvantový počítač by mohl tyto podpisy zfalšovat.
+2. **Dostupnost dat (závazky KZG)**: [Závazková schémata](/roadmap/danksharding/#what-is-kzg), která pomáhají Ethereu škálovat, spoléhají na matematiku (konkrétně párování eliptických křivek), která je zranitelná vůči kvantovým útokům.
+3. **Podpisy účtů (ECDSA)**: Schéma podpisu, které chrání jednotlivé účty Etherea. Když účet odešle transakci, jeho veřejný klíč je odhalen onchain. Kvantový počítač by mohl z tohoto odhaleného veřejného klíče odvodit soukromý klíč, což by potenciálně umožnilo krádež prostředků.
+4. **Důkazy s nulovou znalostí (ZK-proofs) na aplikační vrstvě**: Systémy důkazů s nulovou znalostí používané rollupy a dalšími aplikacemi spoléhají na kryptografické předpoklady, které by kvantové počítače mohly narušit.
+
+<ExpandableCard title="Mohou mi dnes kvantové počítače ukrást ETH?" eventCategory="/roadmap/future-proofing" eventName="clicked can quantum computers steal my ETH today?">
+
+Ne. Žádný kvantový počítač dnes nedokáže prolomit kryptografii Etherea. Práce popsaná na této stránce je přípravou na budoucnost, nikoli reakcí na aktivní hrozbu. Až budou k dispozici postkvantové peněženky, software peněženky vás provede migrací. Prozatím nemusíte dělat vůbec nic.
+
+</ExpandableCard>
+
+### Co se s tím dělá? {#what-is-being-done}
+
+Ethereum je v současnosti nejproaktivnějším obráncem proti kvantovým hrozbám v blockchainovém ekosystému. Nadace Ethereum vytvořila v lednu 2026 specializovaný **tým pro postkvantovou bezpečnost** a aktivní práce probíhá napříč mnoha týmy klientů a výzkumnými skupinami. Práce postkvantového týmu Nadace Ethereum je veřejně sledována na [pq.ethereum.org](https://pq.ethereum.org).
+
+Aktivní práce zahrnuje:
+
+- **Podpisy založené na hashi (leanXMSS)**: Náhrada za podpisy validátorů bezpečná proti kvantovým počítačům, postavená na hashovacích funkcích, které kvantové počítače nedokážou efektivně prolomit.
+- **Minimální zkVM (leanVM)**: Protože jsou podpisy bezpečné proti kvantovým počítačům větší než v současnosti používané podpisy, je leanXMSS spárován s minimálním zkVM (leanVM). Tento engine efektivně agreguje podpisy bezpečné proti kvantovým počítačům a komprimuje data 250krát, takže síť zůstane i po přechodu rychlá.
+- **Týdenní testování interoperability**: Více než 10 týmů klientů se účastní pravidelných postkvantových devnetů.
+- **Dostupnost dat:** Upgrade základní kryptografie používané ke zpracování velkého množství síťových dat zajistí, že Ethereum zůstane rychlé a cenově dostupné, aniž by riskovalo budoucí kvantové zranitelnosti.
+- **Cena Poseidon**: Výzkumná cena ve výši 1 milionu dolarů zaměřená na vylepšení kryptografických primitiv založených na hashi.
+- **Standardy NIST**: Americký Národní institut standardů a technologie (NIST) dokončil v srpnu 2024 tři standardy postkvantové kryptografie (ML-KEM, ML-DSA, SLH-DSA). Práce Etherea staví na těchto základech.
+
+Klíčovou součástí strategie přechodu je **EIP-8141**, který zavádí nativní [abstrakci účtu](/roadmap/account-abstraction/). To umožňuje jednotlivým účtům zvolit si vlastní ověření podpisu, což znamená, že by uživatelé mohli přejít na podpisy bezpečné proti kvantovým počítačům, **aniž by museli čekat na jedinou migraci v rámci celého protokolu**. O EIP-8141 se uvažuje pro hard fork Hegotá (plánovaný na druhou polovinu roku 2026).
+
+Nadace Ethereum nastínila strukturované milníky forků, jejichž cílem je dokončení základní postkvantové infrastruktury přibližně do roku 2029. Jedná se o plánované cíle, nikoli o zaručené závazky.
+
+[Přečtěte si našeho podrobného průvodce postkvantovou kryptografií na Ethereu](/roadmap/future-proofing/quantum-resistance/)
 
 ## Jednodušší a efektivnější Ethereum {#simpler-more-efficient-ethereum}
 
-Složitost vytváří příležitosti pro chyby nebo zranitelnosti, které mohou útočníci zneužít. Součástí plánu je proto zjednodušení Etherea a odstranění nebo úprava kódu, který přetrval z různých vylepšení, ale již není potřeba nebo ho lze nyní vylepšit. Štíhlý a jednoduchý kód je pro vývojáře snazší udržovat a rozvíjet.
+Složitost vytváří příležitosti pro chyby a zranitelnosti. Část plánu vývoje se zaměřuje na **zjednodušení Etherea a odstranění technického dluhu**, aby bylo snazší protokol udržovat, auditovat a logicky analyzovat.
 
-Aby byl [Ethereum Virtual Machine (EVM)](/developers/docs/evm) jednodušší a efektivnější, neustále se zkoumají a implementují vylepšení. To zahrnuje jak řešení zastaralých komponent, tak zavádění optimalizací.
+### Co již bylo dodáno {#what-has-been-delivered}
 
-**Nedávno implementované změny:**
+Několik nedávných upgradů učinilo Ethereum jednodušším a efektivnějším:
 
-- **Přepracování výpočtu poplatků:** Způsob, jakým se počítá [gas (palivo)](/glossary/#gas), byl výrazně vylepšen pomocí **EIP-1559 (implementováno ve vylepšení London, 2021)**, které zavedlo základní poplatek a mechanismus pálení pro předvídatelnější ceny transakcí.
-- **Omezení `SELFDESTRUCT`:** Operační kód `SELFDESTRUCT` sice byl zřídka používán, ale představoval potenciální rizika. Jeho funkčnost byla výrazně **omezena ve vylepšení Dencun (březen 2024) prostřednictvím EIP-6780**, aby se zmírnila rizika, zejména pokud jde o správu stavu.
-- **Modernizované typy transakcí:** Byly zavedeny nové formáty transakcí (např. prostřednictvím **EIP-2718** a **EIP-4844** pro bloby ve vylepšení Dencun) pro podporu nových funkcí a zlepšení efektivity oproti starším typům.
+- **[Pectra (květen 2025)](/roadmap/pectra/)**: Zavedl EIP-7702, který umožňuje externě vlastněným účtům dočasně delegovat na kód chytrého kontraktu, což je odrazový můstek k plné [abstrakci účtu](/roadmap/account-abstraction/). Dále přidal předkompilovaný kontrakt BLS12-381 (EIP-2537), zpracování vkladů onchain (EIP-6110), přístup k historickým hashům bloků v EVM (EIP-2935) a zvýšil maximální efektivní zůstatek pro validátory (EIP-7251).
+- **[Fusaka (prosinec 2025)](/roadmap/fusaka/)**: Nasadil PeerDAS (EIP-7594), peer-to-peer systém vzorkování dostupnosti dat, který rozděluje zátěž dostupnosti dat napříč sítí. Také zvýšil parametry blobů, čímž rozšířil propustnost dat pro [rollupy](/glossary/#rollups).
+- **[Dencun (březen 2024)](/roadmap/dencun/)**: Zavedl blobové transakce (EIP-4844) pro levnější data rollupů a omezil `SELFDESTRUCT` (EIP-6780), aby odstranil dlouhodobý zdroj složitosti.
+- **[London (srpen 2021)](/ethereum-forks/#london)**: Přepracoval cenotvorbu [gasu](/glossary/#gas) pomocí EIP-1559, čímž zavedl základní poplatek a mechanismus spalování pro předvídatelnější transakční náklady.
 
-**Probíhající a budoucí cíle:**
+### Na čem se pracuje {#what-is-in-progress}
 
-- **Další řešení `SELFDESTRUCT`:** Ačkoli je operační kód `SELFDESTRUCT` omezen, stále se zvažuje jeho **potenciální úplné odstranění** v budoucích vylepšeních pro další zjednodušení stavu EVM. ([Více kontextu k problémům se SELFDESTRUCT](https://hackmd.io/@vbuterin/selfdestruct)).
-- **Postupné odstraňování starších typů transakcí:** Ačkoli [klienti Etherea](/glossary/#consensus-client) stále podporují starší typy transakcí pro zpětnou kompatibilitu, cílem je podpořit přechod na novější typy a v budoucnu **potenciálně ukončit podporu nebo plně odstranit nejstarší formáty**.
-- **Pokračující výzkum efektivity gasu:** Pokračuje zkoumání **dalších vylepšení výpočtu gasu**, což může zahrnovat koncepty jako vícerozměrný gas pro lepší zohlednění využití zdrojů.
-- **Optimalizované kryptografické operace:** Pokračuje úsilí o **zavedení účinnějších metod pro aritmetiku**, která je základem kryptografických operací používaných v EVM.
+- **[Glamsterdam (plánováno na první polovinu roku 2026)](/roadmap/glamsterdam/)**: Zvažuje se zahrnutí: zakotvené oddělení navrhovatele a tvůrce (PBS) (EIP-7732), seznamy přístupů na úrovni bloku (EIP-7928) a přecenění gasu pro lepší sladění nákladů se skutečným využitím zdrojů.
+- **Hegotá (plánováno na druhou polovinu roku 2026)**: Zvažuje se zahrnutí: [Verkle stromy](/roadmap/verkle-trees/), které nahradí současnou datovou strukturu efektivnější, jež umožní bezstavové klienty. Cílí se také na EIP-8141 (nativní abstrakce účtu).
+- **Probíhající**: Úsilí o zjednodušení [EVM](/developers/docs/evm/), harmonizaci implementací klientů a postupné vyřazování zastaralých funkcí pokračuje napříč vývojářskou komunitou Etherea.
 
-Podobně existují aktualizace, které lze provést v jiných částech současných klientů Etherea. Jedním z příkladů je, že současní exekutivní a konsensuální klienti používají jiný typ komprese dat. Sdílení dat mezi klienty bude mnohem jednodušší a intuitivnější, když bude schéma komprese jednotné v celé síti. Tato oblast zůstává předmětem zkoumání.
+## Současný pokrok {#current-progress}
 
-## Aktuální postup {#current-progress}
+Začátkem roku 2026:
 
-Mnoho dlouhodobých vylepšení pro budoucí odolnost, zejména **úplná kvantová odolnost pro klíčové protokoly, je stále ve fázi výzkumu a jejich implementace může být vzdálená několik let**.
+**Zjednodušení a efektivita**: Pectra a Fusaka přinesly skutečná zlepšení ve flexibilitě účtů, dostupnosti dat a operacích validátorů. Glamsterdam a Hegotá jsou v aktivním vývoji s jasnými cíli učinit síť odolnější a efektivnější a zároveň odstranit externí závislosti.
 
-Nicméně **v úsilí o zjednodušení již bylo dosaženo významného pokroku.** Například klíčové změny jako **omezení `SELFDESTRUCT` (EIP-6780)** a zavedení **transakcí přenášejících bloby (EIP-4844)** byly implementovány ve **vylepšení Dencun (březen 2024)**. Pokračuje také práce na harmonizaci kompresních schémat klientů a dalších vylepšeních efektivity.
+**Postkvantová kryptografie**: Probíhá aktivní výzkum a raná implementace. Ekosystém financoval výzkumné ceny a provozuje týdenní devnety pro interoperabilitu napříč mnoha klienty, a to navíc k výzkumu prováděnému specializovaným postkvantovým týmem Nadace Ethereum. Ačkoli strukturované milníky forků cílí na dokončení přibližně v roce 2029, raný výzkum přináší hmatatelné důkazy, které ukazují, že postkvantové provádění je životaschopné již dnes.
 
-**Další informace**
+**Abstrakce účtu a agilita podpisů**: EIP-7702 byl nasazen v Pectře. EIP-8141, o kterém se uvažuje pro Hegotá, umožní účtům používat jakékoli schéma podpisu, což uživatelům poskytne cestu k přijetí podpisů bezpečných proti kvantovým počítačům ještě před dokončením úplného přechodu protokolu.
 
-- [Gas (palivo)](/developers/docs/gas)
-- [EVM](/developers/docs/evm)
-- [Datové struktury](/developers/docs/data-structures-and-encoding)
+Žádná část této práce není dokončena. Časové osy jsou cíle, nikoli záruky. Rozsah a tempo aktivního vývoje však představují jasný závazek udržet Ethereum dlouhodobě bezpečné a efektivní.
+
+**Další čtení**
+
+- [Postkvantová kryptografie na Ethereu](/roadmap/future-proofing/quantum-resistance/)
+- [strawmap.org](https://strawmap.org/) - _Architektura EF_
+- [pq.ethereum.org](https://pq.ethereum.org)
+- [Gas](/developers/docs/gas/)
+- [EVM](/developers/docs/evm/)
+- [Datové struktury](/developers/docs/data-structures-and-encoding/)

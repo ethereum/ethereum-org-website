@@ -7,8 +7,7 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "consensus"
-  - "blockchain"
+  - "how-ethereum-works"
 format: explainer
 author: Tech in Asia
 breadcrumb: "Consensus Mechanisms"

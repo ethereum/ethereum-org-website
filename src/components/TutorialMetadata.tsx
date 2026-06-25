@@ -50,7 +50,7 @@ const TutorialMetadata = ({
       {hasTopRow && (
         <Flex className="mb-8 w-full items-center justify-between">
           {hasTags && (
-            <Flex className="w-full flex-wrap">
+            <Flex className="w-full flex-wrap gap-2">
               <TutorialTags tags={frontmatter.tags!} />
             </Flex>
           )}

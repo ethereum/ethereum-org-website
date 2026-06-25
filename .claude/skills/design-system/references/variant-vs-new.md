@@ -176,7 +176,6 @@ These are all current candidates for absorption (each is a one-off that could be
 | `SubpageCard.tsx` | `Card` `decoration="purple-gradient"` |
 | `HorizontalCard.tsx` | `Card` `layout="horizontal"` |
 | `FloatingCard.tsx` | `Card` `tone="primary-gradient"` |
-| `FeedbackCard.tsx` | `Card` `tone="feedback-gradient"` |
 
 See `cleanup-playbook.md` for the full list of cleanup-track items.
 

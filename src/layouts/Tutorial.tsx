@@ -5,9 +5,9 @@ import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -60,55 +60,60 @@ export const TutorialLayout = ({
     slug.startsWith("latest/") || !!frontmatter.hideEditButton
 
   return (
-    <div className="flex w-full gap-8">
-      <MainArticle
-        className="flow max-w-screen-lg min-w-0 px-8 lg:py-8"
+    <div className="flex justify-between gap-8">
+      <main
+        className="max-w-4xl min-w-0 px-4 py-8 md:px-8 lg:py-16"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <Breadcrumbs
-          slug={[
-            ...slug.split("/").slice(0, -1),
-            frontmatter.breadcrumb || slug.split("/").slice(-1),
-          ].join("/")}
-          startDepth={1}
-        />
-        <h1>{frontmatter.title}</h1>
-        <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
-        <PageActions
-          slug={slug}
-          isTranslated={!contentNotTranslated}
-          editPath={absoluteEditPath}
-          hideEditButton={hideEditButton}
-          className="-ms-2 mb-6 lg:mt-6"
-        />
-        <TableOfContents
-          className="pt-6"
-          items={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
-          isMobile
-        />
-        {heroImage && (
-          <Image
-            src={heroImage}
-            alt=""
-            width={frontmatter.imageWidth ?? 1200}
-            height={frontmatter.imageHeight ?? 630}
-            blurDataURL={frontmatter.blurDataURL}
-            preload
-            sizes="(max-width: 1024px) 100vw, 1024px"
-            className="my-6 max-h-128 w-full rounded-xl object-cover"
+        <MainArticle className="flow">
+          <Breadcrumbs
+            slug={[
+              ...slug.split("/").slice(0, -1),
+              frontmatter.breadcrumb || slug.split("/").slice(-1),
+            ].join("/")}
+            startDepth={1}
           />
-        )}
-        {children}
-        {!frontmatter.hideEditButton && (
-          <FileContributors
-            className="my-10 border-t"
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          <h1>{frontmatter.title}</h1>
+          <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
+          <PageActions
+            slug={slug}
+            isTranslated={!contentNotTranslated}
+            editPath={absoluteEditPath}
+            hideEditButton={hideEditButton}
+            className="-ms-2 mb-6 lg:mt-6"
           />
-        )}
-        <FeedbackCard />
-      </MainArticle>
+          <TableOfContents
+            className="pt-6"
+            items={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+            isMobile
+          />
+          {heroImage && (
+            <Image
+              src={heroImage}
+              alt=""
+              width={frontmatter.imageWidth ?? 1200}
+              height={frontmatter.imageHeight ?? 630}
+              blurDataURL={frontmatter.blurDataURL}
+              preload
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="my-6 max-h-128 w-full rounded-xl object-cover"
+            />
+          )}
+          {children}
+          {!frontmatter.hideEditButton && (
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          )}
+        </MainArticle>
+
+        {/* End-of-page actions */}
+        <ContentFeedback />
+      </main>
+
       {tocItems && (
         <TableOfContents
           className="pt-16"

@@ -12,7 +12,7 @@ The site has **six** layouts. All live in `src/layouts/`. Each maps to a `templa
 | `StaticLayout` | `src/layouts/Static.tsx` | One-off markdown pages with no sub-nav. | `static` (default fallback) |
 | `DocsLayout` | `src/layouts/Docs.tsx` | Developer docs with the docs sidebar. | `docs` |
 | `TutorialLayout` | `src/layouts/Tutorial.tsx` | Long-form developer tutorials with author/date/skill metadata. | `tutorial` |
-| `ContentLayout` | `src/layouts/ContentLayout.tsx` | **Not a top-level layout.** Underlying scaffold consumed by the four above plus a handful of app-router pages (e.g. `/learn/`). | n/a (composed, not selected) |
+| `ContentLayout` | `src/layouts/ContentLayout.tsx` | **Not a top-level layout.** Composition scaffold (hero + TOC aside + `MainArticle` + contributors + feedback). Consumed by `TopicLayout`, and composed directly by app-router content pages (`/learn/`, `/staking/`, `/use-cases/`, `/what-is-ethereum/`). NOT used by Docs/Static/Tutorial — they build their own scaffold. | n/a (composed, not selected) |
 | `BaseLayout` | `src/layouts/BaseLayout.tsx` | Root document scaffold (`<html>`, providers). Applied automatically by the App Router. | n/a |
 
 That's the whole inventory. If a UI need can be met by configuring one of these (especially `TopicLayout`), it should be.
@@ -24,13 +24,13 @@ When you have a page or section that "needs its own layout," walk this list top-
 1. **Does the page render through `[...slug]` with a markdown source?** Pick the right `template:` value. `TopicLayout` for anything with a sub-nav across sibling pages, `static` otherwise. No new layout.
 2. **Does the page have a sub-nav dropdown linking related sibling pages?** That's exactly what `TopicLayout` is for. Add a `src/data/topics/<key>.ts` config file. Route `layoutMapping[<key>] = TopicLayout`. No new layout.
 3. **Is the variation just a swap-in component (hero, before-content, after-content)?** Use the slots `TopicLayout` already exposes (`afterContent`, `heroSection` override via config `hubHero`) or add a narrow new slot. No new layout.
-4. **Is the page a one-off App Router page (`app/[locale]/<route>/page.tsx`) with non-markdown content?** Compose `ContentLayout` directly (see `/learn/`). No new layout.
+4. **Is the page a one-off App Router page (`app/[locale]/<route>/page.tsx`) with non-markdown content?** Compose `ContentLayout` directly (see `/learn/`); it owns the `<main>` / TOC / byline / feedback shell (see "`ContentLayout` in Practice" below). Override the article width with its `variant` prop if needed. No new layout — and don't hand-roll that shell yourself.
 
 If you can stop at any of those steps, you don't need a new layout file.
 
 ## `TopicLayout` in Practice
 
-`TopicLayout` is the canonical "topic hub" layout. It renders a hero, a TOC, content, a contributors block, a feedback card, and a sub-nav dropdown linking sibling pages. Everything per-topic comes from data.
+`TopicLayout` is the canonical "topic hub" layout. It renders a hero, a TOC, content, a contributors block, a feedback prompt (`ContentFeedback`), and a sub-nav dropdown linking sibling pages. Everything per-topic comes from data.
 
 ### Adding a new topic
 
@@ -91,6 +91,68 @@ When the topic genuinely needs something extra:
 
 If your topic needs something none of these expose, the right move is usually a narrow new slot on `TopicLayout`, not a new layout file.
 
+## `ContentLayout` in Practice
+
+`ContentLayout` is the shared scaffold for hub/article-style pages: it renders the hero, a TOC aside, the `MainArticle` (with `.flow`), the `FileContributors` block, the end-of-page `ContentFeedback`, and the mobile sub-nav dropdown. App-router content pages compose it directly — **don't hand-roll the `<main>` / flex / TOC / byline / feedback shell on the page**; pass content as `children` and let the layout own the structure.
+
+```tsx
+<ContentLayout
+  heroSection={<PageHero … />}        // or HubHero
+  tocItems={tocItems}
+  contributors={contributors}
+  lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+  listenSlug="what-is-ethereum"       // optional; renders the audio player in the top byline
+  // variant="narrow"                 // optional; narrows the article column (see below)
+>
+  <Section id="…">…</Section>
+  {/* more <Section> blocks */}
+</ContentLayout>
+```
+
+### The shape (one arrangement) + `variant` for width
+
+`ContentLayout` renders a single coherent, mobile-first arrangement — there is **no** `asidePosition` and no left-rail option (the TOC `left` variant is deprecated). If a page needs a fundamentally different aside arrangement, that's a layout discussion, not a call-site override.
+
+- **TOC**: a `card`-variant `TableOfContents` in a right-hand `<aside>` on desktop; on mobile it collapses to the sticky `MobileButtonDropdown` (driven by `dropdownLinks` + `showDropdown`).
+- **Byline**: `FileContributors variant="compact"` at the **top** of the article, with the optional `ListenToPlayer` beneath it (`listenSlug`).
+- **Article**: `MainArticle` with `.flow`, then the end-of-page `ContentFeedback`.
+
+The one structural knob is `variant`, which sets the article column width:
+
+| `variant` | Article width | Use for |
+|---|---|---|
+| `"base"` (default) | `max-w-4xl` | wider content/hub pages — `TopicLayout` pages and `/staking/`; the default, so no `variant` prop needed |
+| `"narrow"` | `max-w-3xl` | standalone concept articles that read better in a tighter column — `/what-is-ethereum/` and siblings (`what-is-ether`, `ethereum-vs-bitcoin`, `what-is-the-ethereum-network`, `ethereum-history-founder-and-ownership`); also `/learn/` and `/use-cases/`. Must be declared explicitly |
+
+Notes:
+- The byline spacing (player `mt-space-half`, first-section gap) is owned by the layout — pages don't hand-tune it.
+- `FileContributors variant="compact"` is selected by the layout for the top byline; don't override `FileContributors` padding with `!`/`[&>div]` hacks at the call site.
+- `listenSlug` is the only thing that toggles the audio player — omit it on pages without a playlist.
+- This is **not** the future `ArticleLayout` (reserved for Tutorial / Latest / Stories).
+
+### Section anchors: `id` on the `Section`, unless it opens with an image
+
+Each `<Section>` you pass as a child is a TOC anchor target. By default put the `id` on the `<Section>` -- it scrolls into view correctly on its own (`scroll-mt` is automatic; see `gotchas.md`).
+
+The exception is a section that **opens with a decorative image**: with the `id` on the `<Section>`, the anchor lands on the image, above the heading. Instead, move the `id` to the heading and label the section by it:
+
+```tsx
+// Heading-first section -> id on the Section
+<Section id="staking">
+  <h2>Staking</h2>
+  …
+</Section>
+
+// Image-leading section -> id on the <h2>, aria-labelledby on the Section
+<Section aria-labelledby="layer-2s">
+  <Image … alt="" />
+  <h2 id="layer-2s">Layer 2s</h2>
+  …
+</Section>
+```
+
+Never put the same `id` on both the `<Section>` and its heading -- that's a duplicate id and an ambiguous anchor.
+
 ## When a New Layout IS the Answer
 
 The bar is high. A new layout is justified only when:
@@ -113,6 +175,28 @@ If you encounter a `src/layouts/md/<Something>.tsx` that exports its own `<Somet
 
 See `docs/topic-layout-refactor.md` for the worked example.
 
+## Where end-of-page actions live (`<article>` vs `<main>`)
+
+`MainArticle` renders the page's `<article>`, and it's reserved for **article content** -- the prose itself plus the `FileContributors` block that credits it. End-of-page *actions* are page-level UI, not part of the article, so they live **outside** the `<article>` as siblings: `DocsNav`, `ContentFeedback`, and `CallToContribute`.
+
+The four content layouts (`Docs`, `Static`, `Tutorial`, `ContentLayout`) express this by closing `MainArticle` and rendering the actions after it, behind an `{/* End-of-page actions */}` marker comment:
+
+```tsx
+<main className="...">
+  <MainArticle className="flow">
+    {children}
+    <FileContributors ... /> {/* credits the article -> stays inside */}
+  </MainArticle>
+
+  {/* End-of-page actions */}
+  {isPageIncomplete && <CallToContribute editPath={...} />}
+  <DocsNav ... />
+  <ContentFeedback isArticle />
+</main>
+```
+
+Not every page needs a `<main>` wrapper. But when a page does need to wrap its article plus end-of-page actions in something, `<main>` is the element to reach for -- not a bare `<div>`.
+
 ## Pre-Merge Checklist for Layout Work
 
 Before opening a PR that touches anything in `src/layouts/`:
@@ -123,5 +207,6 @@ Before opening a PR that touches anything in `src/layouts/`:
 - [ ] Have I read `docs/topic-layout-refactor.md` for context on why the topic layouts were consolidated?
 - [ ] If introducing a new layout (very rare), do I have explicit signoff from a maintainer?
 - [ ] If extending `ContentLayout`, is the new prop genuinely shared across multiple consumers — not a one-section special case?
+- [ ] End-of-page actions (`ContentFeedback`, `DocsNav`, `CallToContribute`) sit *outside* `MainArticle` as siblings in `<main>`; only `FileContributors` stays inside the `<article>`.
 
 If you can't say yes to all of these and you're about to add `src/layouts/<NewName>.tsx`, stop and re-read the top of this file.

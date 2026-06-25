@@ -44,7 +44,9 @@ test("restores every occurrence when the translation duplicates a wrapper", () =
   const batch = prepared.batchContents[0]
 
   const openTok = firstWrapperOpenToken(batch)
-  const hash = openTok.replace("<HTML-PLACEHOLDER-HTMLTAG-", "").replace(">", "")
+  const hash = openTok
+    .replace("<HTML-PLACEHOLDER-HTMLTAG-", "")
+    .replace(">", "")
   const closeTok = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
 
   // Simulate a translated batch where the wrapper pair appears TWICE (the real
@@ -52,9 +54,15 @@ test("restores every occurrence when the translation duplicates a wrapper", () =
   const parsedBatch = JSON.parse(batch) as Record<string, string>
   const onePair = `${openTok}proof-of-work${closeTok}`
   const twoPairs = `${onePair} ... and again ${onePair}`
-  parsedBatch["ommer-like"] = parsedBatch["ommer-like"].replace(onePair, twoPairs)
+  parsedBatch["ommer-like"] = parsedBatch["ommer-like"].replace(
+    onePair,
+    twoPairs
+  )
 
-  const { content, failures } = restoreJsonBatch(JSON.stringify(parsedBatch), map)
+  const { content, failures } = restoreJsonBatch(
+    JSON.stringify(parsedBatch),
+    map
+  )
   const value = (JSON.parse(content) as Record<string, string>)["ommer-like"]
 
   // No placeholder may survive, regardless of count mismatch.
@@ -97,7 +105,10 @@ test("reports a failure rather than silently shipping a residual placeholder", (
   >
   parsedBatch.k = `${parsedBatch.k} ${orphan}`
 
-  const { content, failures } = restoreJsonBatch(JSON.stringify(parsedBatch), map)
+  const { content, failures } = restoreJsonBatch(
+    JSON.stringify(parsedBatch),
+    map
+  )
   const value = (JSON.parse(content) as Record<string, string>).k
 
   expect(value).not.toContain("HTML-PLACEHOLDER")

@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-17T22:50:14.868Z",
+  "englishManifestHash": "59ad22d4fa1f",
+  "placeholderOrder": [
+    "LINK-687406",
+    "LINK-80ff82",
+    "LINK-3a6050",
+    "LINK-91dba4",
+    "LINK-9d37fd",
+    "CODE-e62a02",
+    "CODE-cd41a6",
+    "CODE-e62a02",
+    "CODE-cd41a6",
+    "LINK-6f022d",
+    "CODE-e62a02",
+    "CODE-cd41a6",
+    "LINK-d99d65",
+    "LINK-35ab5a",
+    "LINK-aea0ef",
+    "LINK-9899d8",
+    "LINK-35c09d",
+    "LINK-d4e2c4",
+    "LINK-875a28"
+  ],
+  "placeholderMap": {
+    "CODE-cd41a6": {
+      "type": "inline-code",
+      "values": {
+        "content": "exchange A"
+      }
+    },
+    "CODE-e62a02": {
+      "type": "inline-code",
+      "values": {
+        "content": "exchange B"
+      }
+    },
+    "LINK-687406": {
+      "type": "link",
+      "values": {
+        "url": "https://uniswap.exchange/swap"
+      }
+    },
+    "LINK-80ff82": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts"
+      }
+    },
+    "LINK-3a6050": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts"
+      }
+    },
+    "LINK-91dba4": {
+      "type": "link",
+      "values": {
+        "url": "/apps/#what-are-dapps"
+      }
+    },
+    "LINK-9d37fd": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/naval/status/1444366754650656770"
+      }
+    },
+    "LINK-6f022d": {
+      "type": "link",
+      "values": {
+        "url": "/defi/#flash-loans"
+      }
+    },
+    "LINK-d99d65": {
+      "type": "link",
+      "values": {
+        "url": "/dao/"
+      }
+    },
+    "LINK-35ab5a": {
+      "type": "link",
+      "values": {
+        "url": "https://client.aragon.org/"
+      }
+    },
+    "LINK-aea0ef": {
+      "type": "link",
+      "values": {
+        "url": "https://www.spruceid.com/"
+      }
+    },
+    "LINK-9899d8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/"
+      }
+    },
+    "LINK-35c09d": {
+      "type": "link",
+      "values": {
+        "url": "https://a16zcrypto.com/posts/article/how-composability-unlocks-crypto-and-everything-else/"
+      }
+    },
+    "LINK-d4e2c4": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/why-composability-matters-for-web3"
+      }
+    },
+    "LINK-875a28": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.aragon.org/what-is-composability/#:~:text=Aragon,connect%20to%20every%20other%20piece."
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:50:14.868Z",
+      "status": "success"
+    }
+  }
+}

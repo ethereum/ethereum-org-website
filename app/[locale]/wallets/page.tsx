@@ -9,7 +9,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import CardList from "@/components/CardList"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import HorizontalCard from "@/components/HorizontalCard"
@@ -23,8 +23,11 @@ import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
-import { Divider } from "@/components/ui/divider"
+import { Grid } from "@/components/ui/grid"
+import { Divider } from "@/components/ui/hr"
+import { Section } from "@/components/ui/section"
 
+import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -146,7 +149,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ]
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
+    <>
       <WalletsPageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
@@ -197,122 +200,99 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         variant="no-divider"
       />
 
-      <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">
-          <div className="-mb-8 w-full px-8 py-4 pb-0">
-            <ListenToPlayer slug="/wallets/" />
-          </div>
-          <div className="w-full px-8 py-4 pb-0">
-            <h2 className="mt-12 mb-0 text-2xl leading-[1.4] md:text-[2rem]">
-              {t("page-wallets-whats-a-wallet")}
-            </h2>
-          </div>
-          <div className="mb-0 flex flex-col justify-between p-8 lg:flex-row">
-            <div className="me-0 flex-[0_1_50%] lg:me-8 lg:mt-0 lg:max-w-full">
-              <p className="mb-[1.45rem] text-md leading-base">
-                <Translation id="page-wallets:page-wallets-description" />
-              </p>
-              <p className="mb-[1.45rem] text-md leading-base">
-                {t("page-wallets-desc-2")}
-              </p>
-              <CardList items={guides} className="mb-6 lg:mb-0" />
-            </div>
-            <div className="max-w-full flex-[0_1_50%] lg:ms-8">
-              <p className="mb-[1.45rem] text-md leading-base">
-                {t("page-wallets-desc-3")}
-              </p>
-              <p className="mb-[1.45rem] text-md leading-base">
-                {t("page-wallets-desc-4")}
-              </p>
-            </div>
-          </div>
-          <div className="flex w-full flex-wrap gap-8 px-8 py-4">
-            {cards.map((card, idx) => (
-              <MarkdownCard
-                key={idx}
-                emoji={card.emoji}
-                title={card.title}
-                description={card.description}
-                variant="nested"
-                className="max-w-full min-w-[280px] flex-1 md:max-w-[46%] lg:max-w-[31%]"
-              />
-            ))}
-          </div>
-        </div>
+      <main className="pb-page">
+        <I18nProvider locale={locale} messages={messages}>
+          <MainArticle className="flow *:[section]:px-page">
+            <Section
+              id="what-is-a-wallet"
+              className={cn(
+                "bg-background-highlight p-page pb-16",
+                locale !== "en" && "pt-16" // Adjust padding-top when no ListenToPlayer
+              )}
+            >
+              {locale === "en" && <ListenToPlayer slug="/wallets/" />}
 
-        <div className="mt-8 -mb-8 flex flex-col justify-between p-8 lg:flex-row">
-          <div className="max-w-full flex-[0_1_50%] lg:me-8">
-            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
-              {t("page-wallets-accounts-addresses")}
-            </h2>
-            <p className="mb-[1.45rem] text-md leading-base">
-              {t("page-wallets-accounts-addresses-desc")}
-            </p>
-            <ul>
-              <li>
-                <p className="mb-[1.45rem] text-md leading-base">
-                  <Translation id="page-wallets:page-wallets-ethereum-account" />
-                </p>
-              </li>
-              <li>
-                <p className="mb-[1.45rem] text-md leading-base">
-                  <Translation id="page-wallets:page-wallets-accounts-ethereum-addresses" />
-                </p>
-              </li>
-              <li>
-                <p className="mb-[1.45rem] text-md leading-base">
-                  <Translation id="page-wallets:page-wallets-ethereum-wallet" />
-                </p>
-              </li>
-            </ul>
-            <p className="mb-[1.45rem] text-md leading-base">
-              {t("page-wallets-most-wallets")}
-            </p>
-          </div>
-          <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
-            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
-              {t("page-wallets-types")}
-            </h2>
-            <p className="mb-[1.45rem] text-md leading-base">
-              {t("page-wallets-types-desc")}
-            </p>
-            <div className="flex flex-col gap-2">
-              {types.map((type, idx) => (
-                <HorizontalCard
-                  key={idx}
-                  emoji={type.emoji}
-                  description={type.description}
-                  className="my-0.5 w-[100%]"
-                  emojiClassName="text-[2.5rem]"
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {locale === "en" ? (
-          <div className="my-20 w-full px-0 py-4">
-            <Suspense>
-              <WalletSimulator>
-                <p className="mb-2 text-lg leading-base text-body-medium italic md:text-xl lg:text-2xl">
-                  Interactive tutorial
-                </p>
-                <h2 className="m-0 text-3xl leading-[115%] lg:text-5xl">
-                  How to use a wallet
-                </h2>
-              </WalletSimulator>
-            </Suspense>
-          </div>
-        ) : (
-          <div className="my-12 mt-4 w-full border-t bg-gradient-main px-0 py-16 lg:mt-8">
-            <div className="w-full px-8 py-4">
-              <div className="mb-8 flex flex-col items-center">
-                <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
-                  {t("page-wallets-features-title")}
-                </h2>
-                <div className="mb-6 text-center text-xl leading-base">
-                  {t("page-wallets-features-desc")}
+              <h2>{t("page-wallets-whats-a-wallet")}</h2>
+              <div className="flex flex-col gap-x-16 gap-y-8 *:flex-1 lg:flex-row">
+                <div className="flow">
+                  <p>
+                    <Translation id="page-wallets:page-wallets-description" />
+                  </p>
+                  <p>{t("page-wallets-desc-2")}</p>
+                  <CardList items={guides} />
                 </div>
+                <div className="flow">
+                  <p>{t("page-wallets-desc-3")}</p>
+                  <p>{t("page-wallets-desc-4")}</p>
+                </div>
+              </div>
+              <Grid columns={3}>
+                {cards.map((card, idx) => (
+                  <MarkdownCard
+                    key={idx}
+                    emoji={card.emoji}
+                    title={card.title}
+                    description={card.description}
+                    variant="nested"
+                  />
+                ))}
+              </Grid>
+            </Section>
+
+            <Section id="terms-and-types" className="py-16">
+              <Grid balanced={2} className="gap-x-8 gap-y-8 lg:gap-x-16">
+                <div className="flow">
+                  <h2>{t("page-wallets-accounts-addresses")}</h2>
+                  <p>{t("page-wallets-accounts-addresses-desc")}</p>
+                  <ul>
+                    <li>
+                      <Translation id="page-wallets:page-wallets-ethereum-account" />
+                    </li>
+                    <li>
+                      <Translation id="page-wallets:page-wallets-accounts-ethereum-addresses" />
+                    </li>
+                    <li>
+                      <Translation id="page-wallets:page-wallets-ethereum-wallet" />
+                    </li>
+                  </ul>
+                  <p>{t("page-wallets-most-wallets")}</p>
+                </div>
+                <div className="flow">
+                  <h2>{t("page-wallets-types")}</h2>
+                  <p>{t("page-wallets-types-desc")}</p>
+                  <div className="space-y-2">
+                    {types.map((type, idx) => (
+                      <HorizontalCard
+                        key={idx}
+                        emoji={type.emoji}
+                        description={type.description}
+                        emojiClassName="text-[2.5rem]"
+                      />
+                    ))}
+                  </div>
+                </div>
+              </Grid>
+            </Section>
+
+            {locale === "en" ? (
+              <Suspense>
+                <WalletSimulator>
+                  <div className="flex flex-col-reverse gap-space">
+                    <h2 className="text-h1">How to use a wallet</h2>
+                    <p className="text-h4 text-body-medium italic">
+                      Interactive tutorial
+                    </p>
+                  </div>
+                </WalletSimulator>
+              </Suspense>
+            ) : (
+              <Section
+                className={cn(
+                  "flow flex flex-col items-center bg-gradient-main py-20 text-center"
+                )}
+              >
+                <h2>{t("page-wallets-features-title")}</h2>
+                <p className="text-xl">{t("page-wallets-features-desc")}</p>
                 <ButtonLink
                   href="/wallets/find-wallet/"
                   customEventOptions={{
@@ -326,126 +306,119 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <Image
                   src={FindWalletImage}
                   alt=""
-                  className="mt-8 w-full max-w-[800px] bg-cover bg-no-repeat"
-                  sizes="(max-width: 864px) calc(100vw - 64px), 800px"
+                  className="w-full max-w-3xl"
+                  sizes="(max-width: 864px) calc(100vw - 64px), 768px"
                 />
-              </div>
-            </div>
-          </div>
-        )}
+              </Section>
+            )}
 
-        <div className="mb-12 flex flex-col justify-between p-8 lg:flex-row">
-          <div className="max-w-full flex-[0_1_50%] lg:me-8">
-            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
-              {t("page-wallets-stay-safe")}
-            </h2>
-            <p className="mb-6 leading-xs">
-              <Translation id="page-wallets:page-wallets-stay-safe-desc" />
-            </p>
-            <div className="flex flex-col gap-4">
-              <HorizontalCard
-                key="0"
-                emoji=":white_check_mark:"
-                title={t("page-wallets-take-responsibility")}
-                description={t("page-wallets-take-responsibility-desc")}
-                emojiClassName="text-2xl"
-                className="items-start"
-              />
-              <HorizontalCard
-                key="1"
-                emoji=":white_check_mark:"
-                title={
-                  <Translation id="page-wallets:page-wallets-seed-phrase" />
-                }
-                description={t("page-wallets-seed-phrase-desc")}
-                emojiClassName="text-2xl"
-                className="items-start"
-              >
-                <p className="mb-[1.45rem] text-md leading-base">
-                  {t("page-wallets-seed-phrase-example")}
-                </p>
-                <div className="mb-4 rounded-base bg-black p-2">
-                  <p className="font-mono text-sm text-white">
-                    {t("page-wallets-seed-phrase-snippet")}
+            <Section id="safety" className="py-16">
+              <Grid balanced={2} className="gap-x-8 gap-y-8 lg:gap-x-16">
+                <div className="flow">
+                  <h2>{t("page-wallets-stay-safe")}</h2>
+                  <p>
+                    <Translation id="page-wallets:page-wallets-stay-safe-desc" />
                   </p>
+
+                  <HorizontalCard
+                    key="0"
+                    emoji=":white_check_mark:"
+                    title={t("page-wallets-take-responsibility")}
+                    description={t("page-wallets-take-responsibility-desc")}
+                    emojiClassName="text-2xl"
+                    className="items-start"
+                  />
+                  <HorizontalCard
+                    key="1"
+                    emoji=":white_check_mark:"
+                    title={
+                      <Translation id="page-wallets:page-wallets-seed-phrase" />
+                    }
+                    description={t("page-wallets-seed-phrase-desc")}
+                    emojiClassName="text-2xl"
+                    className="items-start"
+                  >
+                    <p>{t("page-wallets-seed-phrase-example")}</p>
+                    <div className="rounded-md bg-black p-2">
+                      <p className="font-mono text-sm text-white">
+                        {t("page-wallets-seed-phrase-snippet")}
+                      </p>
+                    </div>
+                    <p>{t("page-wallets-seed-phrase-write-down")}</p>
+                  </HorizontalCard>
+                  <HorizontalCard
+                    key="2"
+                    emoji=":white_check_mark:"
+                    title={t("page-wallets-bookmarking")}
+                    description={t("page-wallets-bookmarking-desc")}
+                    emojiClassName="text-2xl"
+                    className="items-start"
+                  />
+                  <HorizontalCard
+                    key="3"
+                    emoji=":white_check_mark:"
+                    title={t("page-wallets-triple-check")}
+                    description={t("page-wallets-triple-check-desc")}
+                    emojiClassName="text-2xl"
+                    className="items-start"
+                  />
                 </div>
-                <p className="mb-[1.45rem] text-md leading-base">
-                  {t("page-wallets-seed-phrase-write-down")}
-                </p>
-              </HorizontalCard>
-              <HorizontalCard
-                key="2"
-                emoji=":white_check_mark:"
-                title={t("page-wallets-bookmarking")}
-                description={t("page-wallets-bookmarking-desc")}
-                emojiClassName="text-2xl"
-                className="items-start"
+                <div className="flow">
+                  <h2>{t("page-wallets-tips")}</h2>
+                  <p>{t("page-wallets-tips-community")}</p>
+                  <CardList items={articles} />
+                </div>
+              </Grid>
+            </Section>
+
+            <Divider className="mx-page" />
+
+            <Section id="explore">
+              <h2>{t("page-wallets-explore")}</h2>
+              <Grid balanced={2}>
+                <Callout
+                  image={ETHImage}
+                  title={t("page-wallets-get-some")}
+                  description={t("page-wallets-get-some-desc")}
+                  as="h3"
+                >
+                  <ButtonLink href="/get-eth/">
+                    {t("page-wallets-get-some-btn")}
+                  </ButtonLink>
+                </Callout>
+                <Callout
+                  image={DappsImage}
+                  title={t("page-wallets-try-dapps")}
+                  description={t("page-wallets-try-dapps-desc")}
+                  as="h3"
+                >
+                  <ButtonLink href="/apps/">
+                    {t("page-wallets-more-on-dapps-btn")}
+                  </ButtonLink>
+                </Callout>
+              </Grid>
+            </Section>
+
+            <Section id="quiz" className="py-16">
+              <StandaloneQuizWidget quizKey="wallets" />
+            </Section>
+
+            <Section id="contributors">
+              <FileContributors
+                className="my-10 border-t"
+                contributors={contributors}
+                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
               />
-              <HorizontalCard
-                key="3"
-                emoji=":white_check_mark:"
-                title={t("page-wallets-triple-check")}
-                description={t("page-wallets-triple-check-desc")}
-                emojiClassName="text-2xl"
-                className="items-start"
-              />
-            </div>
-          </div>
-          <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
-            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
-              {t("page-wallets-tips")}
-            </h2>
-            <p className="mb-6 leading-xs">
-              {t("page-wallets-tips-community")}
-            </p>
-            <CardList items={articles} />
-          </div>
-        </div>
+            </Section>
+          </MainArticle>
+        </I18nProvider>
 
-        <div className="w-full px-8 py-4">
-          <Divider />
-
-          <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
-            {t("page-wallets-explore")}
-          </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <Callout
-              image={ETHImage}
-              title={t("page-wallets-get-some")}
-              description={t("page-wallets-get-some-desc")}
-              as="h3"
-            >
-              <ButtonLink href="/get-eth/">
-                {t("page-wallets-get-some-btn")}
-              </ButtonLink>
-            </Callout>
-            <Callout
-              image={DappsImage}
-              title={t("page-wallets-try-dapps")}
-              description={t("page-wallets-try-dapps-desc")}
-              as="h3"
-            >
-              <ButtonLink href="/apps/">
-                {t("page-wallets-more-on-dapps-btn")}
-              </ButtonLink>
-            </Callout>
-          </div>
+        {/* End-of-page actions */}
+        <div className="px-page">
+          <ContentFeedback />
         </div>
-
-        <div className="w-full px-8 py-4">
-          <StandaloneQuizWidget quizKey="wallets" />
-        </div>
-
-        <div className="w-full px-8 py-4">
-          <FileContributors
-            className="my-10 border-t"
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          />
-          <FeedbackCard />
-        </div>
-      </MainArticle>
-    </I18nProvider>
+      </main>
+    </>
   )
 }
 

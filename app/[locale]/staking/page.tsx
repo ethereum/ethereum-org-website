@@ -1,4 +1,3 @@
-import { type HTMLAttributes, type ReactNode } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -6,36 +5,24 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type {
-  ChildOnlyProp,
-  Lang,
-  PageParams,
-  StakingStatsData,
-} from "@/lib/types"
+import type { Lang, PageParams, StakingStatsData } from "@/lib/types"
 
 import { type List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
-import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
+import { Emphasis } from "@/components/IntlStringElements"
 import MarkdownCard, { MarkdownCardProps } from "@/components/MarkdownCard"
-import { ContentContainer, Page as MdPage } from "@/components/MdComponents"
-import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
-import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import { AccordionContainer } from "@/components/ui/accordion"
-import {
-  ButtonLink,
-  type ButtonLinkProps,
-} from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
-import { Flex, Stack } from "@/components/ui/flex"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
+import { Divider } from "@/components/ui/hr"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
+import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -48,38 +35,9 @@ import { staking } from "@/data/topics/staking"
 import StakingCommunityCallout from "./_components/StakingCommunityCallout"
 import StakingPageJsonLD from "./page-jsonld"
 
+import { ContentLayout } from "@/layouts/ContentLayout"
 import { getStakedPercentageData, getTotalEthStakedData } from "@/lib/data"
 import heroImg from "@/public/images/upgrades/upgrade_rhino.png"
-
-const ComparisonGrid = (props: ChildOnlyProp) => (
-  <div
-    className="grid auto-rows-[minmax(64px,_auto)] grid-cols-[1fr] gap-x-12 [grid-template-areas:'solo-title''solo-rewards''solo-risks''solo-reqs''solo-cta''saas-title''saas-rewards''saas-risks''saas-reqs''saas-cta''pool-title''pool-rewards''pool-risks''pool-reqs''pool-cta'] xl:grid-cols-[repeat(3,_1fr)] xl:[grid-template-areas:'solo-title_saas-title_pool-title''solo-rewards_saas-rewards_pool-rewards''solo-risks_saas-risks_pool-risks''solo-reqs_saas-reqs_pool-reqs''solo-cta_saas-cta_pool-cta'] [&_h4]:text-[#787878]"
-    {...props}
-  />
-)
-
-const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className="mt-0 mb-8 text-2xl leading-xs md:text-[2rem]" {...props} />
-)
-
-const ColorH3 = ({
-  color,
-  children,
-}: {
-  color: `text-${string} dark:text-${string}`
-  children: ReactNode
-}) => <h3 className={cn("my-8", color)}>{children}</h3>
-
-const H4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <h4 className="my-8" {...props} />
-)
-
-const StyledButtonLink = ({
-  href,
-  children,
-}: Pick<ButtonLinkProps, "href" | "children">) => (
-  <ButtonLink href={href}>{children}</ButtonLink>
-)
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -190,332 +148,322 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   })
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
+    <>
       <StakingPageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />
 
-      <PageHero
-        header={t("page-staking-hero-title")}
-        heroImg={heroImg}
-        title={t("page-staking-hero-header")}
-        description={t("page-staking-hero-subtitle")}
-        variant="no-divider"
-      />
+      <ContentLayout
+        tocItems={tocArray}
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        dropdownLinks={dropdownLinks}
+        heroSection={
+          <>
+            <PageHero
+              header={t("page-staking-hero-title")}
+              heroImg={heroImg}
+              title={t("page-staking-hero-header")}
+              description={t("page-staking-hero-subtitle")}
+              variant="no-divider"
+            />
+            <div className="flex justify-center border-b py-4">
+              <StakingStatsBox data={data} />
+            </div>
+          </>
+        }
+      >
+        <Section id={tocItems.whatIsStaking.id}>
+          <h2>{tocItems.whatIsStaking.title}</h2>
+          <p>
+            <Translation id="page-staking:page-staking-description" />
+          </p>
+        </Section>
 
-      <div className="flex justify-center border-b py-4">
-        <StakingStatsBox data={data} />
-      </div>
+        <Section id={tocItems.whyStakeYourEth.id}>
+          <h2>{tocItems.whyStakeYourEth.title}</h2>
+          <Grid columns={3}>
+            {benefits.map(
+              ({ title, description, emoji, ctaLabel, href }, idx) => (
+                <MarkdownCard
+                  key={idx}
+                  emoji={emoji}
+                  title={title}
+                  description={description}
+                >
+                  {href && ctaLabel && (
+                    <InlineLink href={href}>{ctaLabel}</InlineLink>
+                  )}
+                </MarkdownCard>
+              )
+            )}
+          </Grid>
+        </Section>
 
-      <MdPage>
-        <TableOfContents
-          items={tocArray}
-          variant="left"
-          dropdownLinks={dropdownLinks}
-        />
-        <ContentContainer>
-          <Flex className="mt-16 flex-col gap-16 lg:mt-0">
-            <div>
-              <H2 id={tocItems.whatIsStaking.id}>
-                {tocItems.whatIsStaking.title}
-              </H2>
-              <p>
-                <Translation id="page-staking:page-staking-description" />
-              </p>
-            </div>
-            <div>
-              <H2 id={tocItems.whyStakeYourEth.id}>
-                {tocItems.whyStakeYourEth.title}
-              </H2>
-              <Grid columns={3}>
-                {benefits.map(
-                  ({ title, description, emoji, ctaLabel, href }, idx) => (
-                    <MarkdownCard
-                      key={idx}
-                      emoji={emoji}
-                      title={title}
-                      description={description}
-                    >
-                      {href && ctaLabel && (
-                        <InlineLink href={href}>{ctaLabel}</InlineLink>
-                      )}
-                    </MarkdownCard>
-                  )
-                )}
-              </Grid>
-            </div>
-            <div>
-              <H2 id={tocItems.howToStakeYourEth.id}>
-                {tocItems.howToStakeYourEth.title}
-              </H2>
-              <Stack className="gap-[1.45rem]">
-                <p>{t("page-staking-section-why-p1")}</p>
-                <p>{t("page-staking-section-why-p2")}</p>
-              </Stack>
-            </div>
+        <Section id={tocItems.howToStakeYourEth.id}>
+          <h2>{tocItems.howToStakeYourEth.title}</h2>
+          <p>{t("page-staking-section-why-p1")}</p>
+          <p>{t("page-staking-section-why-p2")}</p>
+          <I18nProvider locale={locale} messages={messages}>
             <StakingHierarchy />
-            <div>
-              <p className="mt-4">
-                <Translation id="page-staking:page-staking-hierarchy-subtext" />
-              </p>
-            </div>
-            <Divider />
-            <div>
-              <H2 id={tocItems.comparisonOfOptions.id}>
-                {tocItems.comparisonOfOptions.title}
-              </H2>
-              <p className="mb-[1.45rem]">
-                {t("page-staking-section-comparison-subtitle")}
-              </p>
-              <ComparisonGrid>
-                <ColorH3 color="text-[#be8d10] dark:text-[#f2bb2f]">
-                  {t("page-staking-dropdown-solo")}
-                </ColorH3>
-                <div className="border-b-[1px] border-b-[#3335] [grid-area:solo-rewards]">
-                  <H4>{t("page-staking-section-comparison-rewards-title")}</H4>
-                  <UnorderedList>
-                    <ListItem>
-                      {t("page-staking-section-comparison-solo-rewards-li1")}
-                    </ListItem>
-                    <ListItem>
-                      {t("page-staking-section-comparison-solo-rewards-li2")}
-                    </ListItem>
-                    <ListItem>
-                      {t("page-staking-section-comparison-solo-rewards-li3")}
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div className="border-b-[1px] border-b-[#3335] [grid-area:solo-risks]">
-                  <H4>{t("page-staking-section-comparison-risks-title")}</H4>
-                  <UnorderedList>
-                    <ListItem>
-                      {t("page-staking-section-comparison-solo-risks-li1")}
-                    </ListItem>
-                    <ListItem>
-                      {t("page-staking-section-comparison-solo-risks-li2")}
-                    </ListItem>
-                    <ListItem>
-                      {t("page-staking-section-comparison-solo-risks-li3")}
-                    </ListItem>
-                    <ListItem>
-                      {t("page-staking-section-comparison-solo-risks-li4")}
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div className="[grid-area:solo-reqs]">
-                  <H4>
-                    {t("page-staking-section-comparison-requirements-title")}
-                  </H4>
-                  <UnorderedList>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li1" />
-                    </ListItem>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li2" />
-                    </ListItem>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li3" />
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div className="[grid-area:solo-cta]">
-                  <StyledButtonLink href="/staking/solo/">
-                    {t("page-staking-more-on-solo")}
-                  </StyledButtonLink>
-                </div>
-                <ColorH3 color="text-[#129e5b] dark:text-[#49de96]">
-                  {t("page-staking-dropdown-saas")}
-                </ColorH3>
-                <div className="border-b-[1px] border-b-[#3335] [grid-area:saas-rewards]">
-                  <H4>{t("page-staking-section-comparison-rewards-title")}</H4>
-                  <UnorderedList>
-                    <ListItem>
-                      {t("page-staking-section-comparison-saas-rewards-li1")}
-                    </ListItem>
-                    <ListItem>
-                      {t("page-staking-section-comparison-saas-rewards-li2")}
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div className="border-b-[1px] border-b-[#3335] [grid-area:saas-risks]">
-                  <H4>{t("page-staking-section-comparison-risks-title")}</H4>
-                  <UnorderedList>
-                    <ListItem>
-                      {t("page-staking-section-comparison-saas-risks-li1")}
-                    </ListItem>
-                    <ListItem>
-                      {t("page-staking-section-comparison-saas-risks-li2")}
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div className="[grid-area:saas-reqs]">
-                  <H4>
-                    {t("page-staking-section-comparison-requirements-title")}
-                  </H4>
-                  <UnorderedList>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-saas-requirements-li1" />
-                    </ListItem>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-saas-requirements-li2" />
-                    </ListItem>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-saas-requirements-li3" />
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div className="[grid-area:saas-cta]">
-                  <StyledButtonLink href="/staking/saas">
-                    {t("page-staking-more-on-saas")}
-                  </StyledButtonLink>
-                </div>
+          </I18nProvider>
+          <p>{t.rich("page-staking-hierarchy-subtext", { em: Emphasis })}</p>
+        </Section>
 
-                <ColorH3 color="text-[#0b83dc] dark:text-[#a9d3f2]">
-                  {t("page-staking-dropdown-pools")}
-                </ColorH3>
-                <div className="border-b-[1px] border-b-[#3335] [grid-area:pool-rewards]">
-                  <H4>{t("page-staking-section-comparison-rewards-title")}</H4>
-                  <UnorderedList>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li1" />
-                    </ListItem>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li2" />
-                    </ListItem>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li3" />
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div className="border-b-[1px] border-b-[#3335] [grid-area:pool-risks]">
-                  <H4>{t("page-staking-section-comparison-risks-title")}</H4>
-                  <UnorderedList>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-pools-risks-li1" />
-                    </ListItem>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-pools-risks-li2" />
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div className="[grid-area:pool-reqs]">
-                  <H4>
-                    {t("page-staking-section-comparison-requirements-title")}
-                  </H4>
-                  <UnorderedList>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-pools-requirements-li1" />
-                    </ListItem>
-                    <ListItem>
-                      <Translation id="page-staking:page-staking-section-comparison-pools-requirements-li2" />
-                    </ListItem>
-                  </UnorderedList>
-                </div>
-                <div className="[grid-area:pool-cta]">
-                  <StyledButtonLink href="/staking/pools/">
-                    {t("page-staking-more-on-pools")}
-                  </StyledButtonLink>
-                </div>
-              </ComparisonGrid>
-            </div>
-            <Divider />
-            <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
-            <div>
-              <H2 id={tocItems.faq.id}>{tocItems.faq.title}</H2>
-              <AccordionContainer>
-                <ExpandableCard title={t("page-staking-faq-4-question")}>
-                  <p>{t("page-staking-faq-4-answer-p1")}</p>
-                  <p>{t("page-staking-faq-4-answer-p2")}</p>
-                  <p>{t("page-staking-faq-4-answer-p3")}</p>
-                  <ButtonLink className="self-start" href="/roadmap/merge/">
-                    {t("page-upgrades-merge-btn")}
-                  </ButtonLink>
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-5-question")}>
-                  <p>{t("page-staking-faq-5-answer-p1")}</p>
-                  <p>{t("page-staking-faq-5-answer-p2")}</p>
-                  <ButtonLink
-                    className="self-start"
-                    href="/staking/withdrawals/"
-                  >
-                    {t("page-staking-faq-5-answer-link")}
-                  </ButtonLink>
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-1-question")}>
-                  <Translation id="page-staking:page-staking-faq-1-answer" />
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-2-question")}>
-                  {t("page-staking-faq-2-answer")}
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-3-question")}>
-                  <p>{t("page-staking-faq-3-answer-p1")}</p>
-                  <p>
-                    <Translation id="page-staking:page-staking-faq-3-answer-p2" />
-                  </p>
-                </ExpandableCard>
-              </AccordionContainer>
-            </div>
-            <div>
-              <H2 id={tocItems.further.id}>{tocItems.further.title}</H2>
+        <Divider />
+
+        <Section id={tocItems.comparisonOfOptions.id}>
+          <h2>{tocItems.comparisonOfOptions.title}</h2>
+          <p>{t("page-staking-section-comparison-subtitle")}</p>
+
+          <div
+            className={cn(
+              "grid auto-cols-fr auto-rows-[minmax(64px,auto)] gap-x-12 **:[h4]:text-body-medium",
+              // h3 and h4 spacing
+              "**:[:is(h3,h4)]:my-space **:[h3]:mt-space-2x",
+              // Full-width text-centered button links
+              "**:data-[label=button-link]:w-full **:data-[label=button-link]:text-center",
+              // Mobile grid area assignment
+              "[grid-template-areas:'solo-title''solo-rewards''solo-risks''solo-reqs''solo-cta''saas-title''saas-rewards''saas-risks''saas-reqs''saas-cta''pool-title''pool-rewards''pool-risks''pool-reqs''pool-cta']",
+              // Desktop grid area assignment
+              "xl:[grid-template-areas:'solo-title_saas-title_pool-title''solo-rewards_saas-rewards_pool-rewards''solo-risks_saas-risks_pool-risks''solo-reqs_saas-reqs_pool-reqs''solo-cta_saas-cta_pool-cta']",
+              // ButtonLink spacing and border
+              "**:has-data-[label=button-link]:mt-space **:has-data-[label=button-link]:max-xl:border-b **:has-data-[label=button-link]:max-xl:pb-space-2x",
+              // h4 section spacing
+              "xl:**:[:is([data-label=rewards],[data-label=risks])]:mb-8 xl:**:[:is([data-label=rewards],[data-label=risks])]:border-b xl:**:[:is([data-label=rewards],[data-label=risks])]:pb-8"
+            )}
+          >
+            <h3 className="text-[#be8d10] dark:text-[#f2bb2f]">
+              {t("page-staking-dropdown-solo")}
+            </h3>
+            <div data-label="rewards" className="[grid-area:solo-rewards]">
+              <h4>{t("page-staking-section-comparison-rewards-title")}</h4>
               <UnorderedList>
                 <ListItem>
-                  <InlineLink href="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
-                    {t("page-staking-further-reading-2-link")}
-                  </InlineLink>{" "}
-                  -{" "}
-                  <i>
-                    {t("page-staking-further-reading-author-vitalik-buterin")}
-                  </i>
+                  {t("page-staking-section-comparison-solo-rewards-li1")}
                 </ListItem>
                 <ListItem>
-                  <InlineLink href="https://hackmd.io/@benjaminion/eth2_news">
-                    {t("page-staking-further-reading-4-link")}
-                  </InlineLink>{" "}
-                  - <i>{t("page-staking-further-reading-4-author")}</i>
+                  {t("page-staking-section-comparison-solo-rewards-li2")}
                 </ListItem>
                 <ListItem>
-                  <InlineLink href="https://blog.ethereum.org/2022/01/31/finalized-no-33/">
-                    {t("page-staking-further-reading-5-link")}
-                  </InlineLink>{" "}
-                  - <i>{t("page-staking-further-reading-5-author")}</i>
-                </ListItem>
-                <ListItem>
-                  <InlineLink href="https://www.attestant.io/posts/">
-                    {t("page-staking-further-reading-6-link")}
-                  </InlineLink>
-                </ListItem>
-                <ListItem>
-                  <InlineLink href="https://beaconcha.in/education">
-                    {t("page-staking-further-reading-8-link")}
-                  </InlineLink>
-                </ListItem>
-                <ListItem>
-                  <InlineLink href="https://launchpad.ethereum.org/en/faq">
-                    {t("page-staking-further-reading-9-link")}
-                  </InlineLink>
-                </ListItem>
-                <ListItem>
-                  <InlineLink href="https://ethstaker.gitbook.io/ethstaker-knowledge-base/">
-                    {t("page-staking-further-reading-10-link")}
-                  </InlineLink>
+                  {t("page-staking-section-comparison-solo-rewards-li3")}
                 </ListItem>
               </UnorderedList>
-              <FileContributors
-                className="my-10 border-t"
-                contributors={contributors}
-                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-              />
             </div>
-            <div>
-              <FeedbackCard />
+            <div data-label="risks" className="[grid-area:solo-risks]">
+              <h4>{t("page-staking-section-comparison-risks-title")}</h4>
+              <UnorderedList>
+                <ListItem>
+                  {t("page-staking-section-comparison-solo-risks-li1")}
+                </ListItem>
+                <ListItem>
+                  {t("page-staking-section-comparison-solo-risks-li2")}
+                </ListItem>
+                <ListItem>
+                  {t("page-staking-section-comparison-solo-risks-li3")}
+                </ListItem>
+                <ListItem>
+                  {t("page-staking-section-comparison-solo-risks-li4")}
+                </ListItem>
+              </UnorderedList>
             </div>
-          </Flex>
-        </ContentContainer>
-        <MobileButtonDropdown list={dropdownLinks} />
-      </MdPage>
-    </I18nProvider>
+            <div className="[grid-area:solo-reqs]">
+              <h4>{t("page-staking-section-comparison-requirements-title")}</h4>
+              <UnorderedList>
+                <ListItem>
+                  {t("page-staking-section-comparison-solo-requirements-li1")}
+                </ListItem>
+                <ListItem>
+                  <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li2" />
+                </ListItem>
+                <ListItem>
+                  <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li3" />
+                </ListItem>
+              </UnorderedList>
+            </div>
+            <div className="[grid-area:solo-cta]">
+              <ButtonLink href="/staking/solo/">
+                {t("page-staking-more-on-solo")}
+              </ButtonLink>
+            </div>
+
+            <h3 className="text-[#129e5b] dark:text-[#49de96]">
+              {t("page-staking-dropdown-saas")}
+            </h3>
+            <div data-label="rewards" className="[grid-area:saas-rewards]">
+              <h4>{t("page-staking-section-comparison-rewards-title")}</h4>
+              <UnorderedList>
+                <ListItem>
+                  {t("page-staking-section-comparison-saas-rewards-li1")}
+                </ListItem>
+                <ListItem>
+                  {t("page-staking-section-comparison-saas-rewards-li2")}
+                </ListItem>
+              </UnorderedList>
+            </div>
+            <div data-label="risks" className="[grid-area:saas-risks]">
+              <h4>{t("page-staking-section-comparison-risks-title")}</h4>
+              <UnorderedList>
+                <ListItem>
+                  {t("page-staking-section-comparison-saas-risks-li1")}
+                </ListItem>
+                <ListItem>
+                  {t("page-staking-section-comparison-saas-risks-li2")}
+                </ListItem>
+              </UnorderedList>
+            </div>
+            <div className="[grid-area:saas-reqs]">
+              <h4>{t("page-staking-section-comparison-requirements-title")}</h4>
+              <UnorderedList>
+                <ListItem>
+                  {t("page-staking-section-comparison-saas-requirements-li1")}
+                </ListItem>
+                <ListItem>
+                  {t("page-staking-section-comparison-saas-requirements-li2")}
+                </ListItem>
+                <ListItem>
+                  {t("page-staking-section-comparison-saas-requirements-li3")}
+                </ListItem>
+              </UnorderedList>
+            </div>
+            <div className="[grid-area:saas-cta]">
+              <ButtonLink href="/staking/saas">
+                {t("page-staking-more-on-saas")}
+              </ButtonLink>
+            </div>
+
+            <h3 className="text-[#0b83dc] dark:text-[#a9d3f2]">
+              {t("page-staking-dropdown-pools")}
+            </h3>
+            <div data-label="rewards" className="[grid-area:pool-rewards]">
+              <h4>{t("page-staking-section-comparison-rewards-title")}</h4>
+              <UnorderedList>
+                <ListItem>
+                  {t("page-staking-section-comparison-pools-rewards-li1")}
+                </ListItem>
+                <ListItem>
+                  <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li2" />
+                </ListItem>
+                <ListItem>
+                  <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li3" />
+                </ListItem>
+              </UnorderedList>
+            </div>
+            <div data-label="risks" className="[grid-area:pool-risks]">
+              <h4>{t("page-staking-section-comparison-risks-title")}</h4>
+              <UnorderedList>
+                <ListItem>
+                  {t("page-staking-section-comparison-pools-risks-li1")}
+                </ListItem>
+                <ListItem>
+                  <Translation id="page-staking:page-staking-section-comparison-pools-risks-li2" />
+                </ListItem>
+              </UnorderedList>
+            </div>
+            <div className="[grid-area:pool-reqs]">
+              <h4>{t("page-staking-section-comparison-requirements-title")}</h4>
+              <UnorderedList>
+                <ListItem>
+                  {t("page-staking-section-comparison-pools-requirements-li1")}
+                </ListItem>
+                <ListItem>
+                  {t("page-staking-section-comparison-pools-requirements-li2")}
+                </ListItem>
+              </UnorderedList>
+            </div>
+            <div className="[grid-area:pool-cta]">
+              <ButtonLink href="/staking/pools/">
+                {t("page-staking-more-on-pools")}
+              </ButtonLink>
+            </div>
+          </div>
+        </Section>
+
+        <Divider />
+
+        <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
+
+        <Section id={tocItems.faq.id}>
+          <h2>{tocItems.faq.title}</h2>
+          <AccordionContainer>
+            <ExpandableCard title={t("page-staking-faq-4-question")}>
+              <p>{t("page-staking-faq-4-answer-p1")}</p>
+              <p>{t("page-staking-faq-4-answer-p2")}</p>
+              <p>{t("page-staking-faq-4-answer-p3")}</p>
+              <ButtonLink className="self-start" href="/roadmap/merge/">
+                {t("page-upgrades-merge-btn")}
+              </ButtonLink>
+            </ExpandableCard>
+            <ExpandableCard title={t("page-staking-faq-5-question")}>
+              <p>{t("page-staking-faq-5-answer-p1")}</p>
+              <p>{t("page-staking-faq-5-answer-p2")}</p>
+              <ButtonLink className="self-start" href="/staking/withdrawals/">
+                {t("page-staking-faq-5-answer-link")}
+              </ButtonLink>
+            </ExpandableCard>
+            <ExpandableCard title={t("page-staking-faq-1-question")}>
+              {t.rich("page-staking-faq-1-answer", { em: Emphasis })}
+            </ExpandableCard>
+            <ExpandableCard title={t("page-staking-faq-2-question")}>
+              {t("page-staking-faq-2-answer")}
+            </ExpandableCard>
+            <ExpandableCard title={t("page-staking-faq-3-question")}>
+              <p>{t("page-staking-faq-3-answer-p1")}</p>
+              <p>
+                <Translation id="page-staking:page-staking-faq-3-answer-p2" />
+              </p>
+            </ExpandableCard>
+          </AccordionContainer>
+        </Section>
+
+        <Section id={tocItems.further.id}>
+          <h2>{tocItems.further.title}</h2>
+          <UnorderedList>
+            <ListItem>
+              <InlineLink href="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
+                {t("page-staking-further-reading-2-link")}
+              </InlineLink>{" "}
+              -{" "}
+              <i>{t("page-staking-further-reading-author-vitalik-buterin")}</i>
+            </ListItem>
+            <ListItem>
+              <InlineLink href="https://hackmd.io/@benjaminion/eth2_news">
+                {t("page-staking-further-reading-4-link")}
+              </InlineLink>{" "}
+              - <i>{t("page-staking-further-reading-4-author")}</i>
+            </ListItem>
+            <ListItem>
+              <InlineLink href="https://blog.ethereum.org/2022/01/31/finalized-no-33/">
+                {t("page-staking-further-reading-5-link")}
+              </InlineLink>{" "}
+              - <i>{t("page-staking-further-reading-5-author")}</i>
+            </ListItem>
+            <ListItem>
+              <InlineLink href="https://www.attestant.io/posts/">
+                {t("page-staking-further-reading-6-link")}
+              </InlineLink>
+            </ListItem>
+            <ListItem>
+              <InlineLink href="https://beaconcha.in/education">
+                {t("page-staking-further-reading-8-link")}
+              </InlineLink>
+            </ListItem>
+            <ListItem>
+              <InlineLink href="https://launchpad.ethereum.org/en/faq">
+                {t("page-staking-further-reading-9-link")}
+              </InlineLink>
+            </ListItem>
+            <ListItem>
+              <InlineLink href="https://ethstaker.gitbook.io/ethstaker-knowledge-base/">
+                {t("page-staking-further-reading-10-link")}
+              </InlineLink>
+            </ListItem>
+          </UnorderedList>
+        </Section>
+      </ContentLayout>
+    </>
   )
 }
 

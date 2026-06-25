@@ -10,7 +10,7 @@ import Emoji, { type EmojiProps } from "../Emoji"
 import { Button } from "./buttons/Button"
 
 const alertVariants = cva(
-  "flex gap-4 items-center rounded-base border p-4 text-body/70",
+  "flex gap-4 items-center rounded-base border p-4 text-body/80 **:[:is(h2,h3,h4,h5,h6,strong)]:text-body",
   {
     variants: {
       variant: {
@@ -75,7 +75,7 @@ const AlertTitle = React.forwardRef<HTMLParagraphElement, AlertTitleProps>(
     return (
       <Comp
         ref={ref}
-        className={cn("font-bold text-body dark:text-body", className)}
+        className={cn("font-bold text-body", className)}
         {...props}
       />
     )
@@ -98,9 +98,14 @@ const AlertDescription = React.forwardRef<
 ))
 AlertDescription.displayName = "AlertDescription"
 
+/**
+ * Dismiss control for an `Alert`. Env-agnostic: the caller owns the
+ * (required) `aria-label` and any dismissal behaviour (`onClick`), so it
+ * composes into server or client trees alike.
+ */
 const AlertCloseButton = React.forwardRef<
   HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement>
+  React.ButtonHTMLAttributes<HTMLButtonElement> & { "aria-label": string }
 >(({ className, ...props }, ref) => (
   <Button
     ref={ref}
@@ -109,7 +114,6 @@ const AlertCloseButton = React.forwardRef<
     {...props}
   >
     <X className="h-6 w-6" />
-    <span className="sr-only">Close</span>
   </Button>
 ))
 AlertCloseButton.displayName = "AlertCloseButton"

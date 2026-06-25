@@ -1,212 +1,209 @@
 ---
 title: Fedha zilizogatuliwa (DeFi)
-metaTitle: Nini ni DeFi (Uchumi Gatuzi)? manufaa na utumizi wa fedha huru kati
-description: Maelezo ya jumla ya DeFi kwenye Ethereum
+metaTitle: DeFi ni nini? | Faida na Matumizi ya Fedha Zilizogatuliwa
+description: Muhtasari wa DeFi kwenye Ethereum
 lang: sw
 template: use-cases
 image: /images/use-cases/defi.png
-alt: |-
-  Nembo ya Eth kufanywa
-   kwa matofali ya matofali.
+alt: Nembo ya Eth iliyotengenezwa kwa matofali ya lego.
 sidebarDepth: 2
 summaryPoints:
-  - "Mpango mwingine wa kimataifa, ulio wazi kwa mfumo wa sasa wa kifedha."
-  - "Bidhaa ambayo Kuazima, kuhifadhi kufanya biashara, na zaidi."
-  - "Kulingana na teknolojia ya chanzo wazi ambayo mtu yeyote anaweza Mpango na."
+  - "Mbadala wa kimataifa na wazi kwa mfumo wa sasa wa kifedha."
+  - "Bidhaa zinazokuruhusu kukopa, kuweka akiba, kuwekeza, kufanya biashara, na zaidi."
+  - "Inategemea teknolojia ya chanzo wazi ambayo mtu yeyote anaweza kuitumia kuunda programu."
 ---
 
-DeFi ni mfumo wa kifedha wa wazi na wa kimataifa uliojengwa kwa enzi ya mzunguko - chaguo wa mfumo ambao hauna uwazi, bila udhibiti kwa nguvu, na kushikamana na miundombinu na taratibu ya miongo kadhaa. Anatoa udhibiti na kujulikana kwa pesa zako. Anatoa ufikiaji wa masoko ya kimataifa na kwa sarafu yako ya ndani au chaguzi za benki. Bidhaa za DeFi hufungua huduma za kifedha kwa mtu yeyote aliye na kiungo wa shirikisho na kwa kiasi kikubwa inayoshikilia na kuhifadhiwa na watumiaji wao. Hadi sasa, kripto yenye thamani ya makumi ya mabilioni ya dola imepita kwenye programu za DeFi na inaendelea kukua kila siku.
+DeFi ni mfumo wa kifedha ulio wazi na wa kimataifa uliojengwa kwa ajili ya enzi ya intaneti – mbadala wa mfumo ambao haueleweki, unaodhibitiwa kwa uthabiti, na unaoshikiliwa pamoja na miundombinu na michakato ya miongo kadhaa iliyopita. Inakupa udhibiti na mwonekano juu ya pesa zako. Inakupa fursa ya kufikia masoko ya kimataifa na mbadala wa sarafu yako ya ndani au chaguzi za kibenki. Bidhaa za DeFi hufungua huduma za kifedha kwa mtu yeyote aliye na muunganisho wa intaneti na zinamilikiwa na kudumishwa kwa kiasi kikubwa na watumiaji wake. Kufikia sasa, makumi ya mabilioni ya dola za thamani ya kripto yamepita kwenye programu tumizi zilizogatuliwa (dapps) za DeFi na inakua kila siku.
 
 ## DeFi ni nini? {#what-is-defi}
 
-DeFi ni neno la pamoja la bidhaa na huduma za kifedha ambazo kupatikana kwa mtu yeyote anayeweza kutumia Ethereum mtu yeyote aliye na Shirikisho uhusiano. Pamoja na DeFi, masoko huwa wazi kila wakati na hakuna mamlaka kuu ambayo inaweza kuzuia malipo au kukataa ufikiaji wa chochote. Huduma ambazo hapo awali zilikuwa polepole na hatari ya makosa ya kibinadamu ni moja kwa moja na salama zaidi sasa kwamba ni kushughulikia na kanuni kwamba mtu yeyote anaweza kukagua na kuchunguza.
+DeFi ni neno la pamoja kwa bidhaa na huduma za kifedha zinazopatikana kwa mtu yeyote anayeweza kutumia [Ethereum](/) – mtu yeyote aliye na muunganisho wa intaneti. Ukiwa na DeFi, masoko huwa wazi kila wakati na hakuna mamlaka kuu zinazoweza kuzuia malipo au kukunyima ufikiaji wa chochote. Huduma ambazo hapo awali zilikuwa za polepole na zilizo katika hatari ya makosa ya kibinadamu sasa ni za kiotomatiki na salama zaidi kwa kuwa zinashughulikiwa na msimbo ambao mtu yeyote anaweza kuukagua na kuuchunguza.
 
-Kuna uchumi unaositawi huko nje, ambapo unaweza kukopesha, kuomba, kwa muda mrefu / mfupi, kupata riba, na zaidi. Wakazi wa pwani wenye ujuzi wa uchumi kutumika DeFi kutoroka kulemaza wa bei. Makampuni yameanza kutazama mishahara ya wafanya kazi wao kwa wakati halisi. Watu wengine hata wamechukua na kulipa mikopo yenye thamani ya mamilioni ya dola bila uhitaji wa utambulisho wowote wa kibinafsi.
+Kuna uchumi wa kripto unaostawi huko nje, ambapo unaweza kufanya ukopeshaji, ukopaji, kuwekeza kwa muda mrefu/mfupi, kupata riba, na zaidi. Waajentina wanaoelewa kripto wametumia DeFi kuepuka mfumuko wa bei unaolemaza. Kampuni zimeanza kuwatumia wafanyakazi wao mishahara yao kwa wakati halisi. Baadhi ya watu hata wamechukua na kulipa mikopo yenye thamani ya mamilioni ya dola bila hitaji la kitambulisho chochote cha kibinafsi.
 
-<YouTube id="H-O3r2YMWJ4" />
+<VideoWatch slug="defi-future-of-finance" />
 
 ## DeFi dhidi ya fedha za jadi {#defi-vs-tradfi}
 
-Moja ya njia bora ya kuona uwezo wa DeFi ni kuelewa matatizo kuwepo leo.
+Mojawapo ya njia bora za kuona uwezo wa DeFi ni kuelewa matatizo yaliyopo leo.
 
-- Baadhi ya watu sio kufungua kuanzisha ya benki au kutumia huduma za kifedha.
-- Ukosefu wa huduma za kifedha unaweza kuwazuia watu kupata kazi.
-- Huduma za kifedha zinaweza kuzuia kulipwa.
-- Malipo ya siri ya huduma za kifedha ni takwimu yako binafsi.
-- Serikali na taasisi za serikali kuu zinaweza kufunga masoko kwa hiari.
-- Saa za biashara mara nyingi huwa na kikomo cha saa za kazi za ukanda maalum wa saa.
-- Uhamisho wa fedha unaweza kuchukua siku kutokana na taratibu ya ndani ya binadamu.
-- Kuna tuzo za huduma za fedha kwasababu mpatanishi anahitaji makato yake.
+- Baadhi ya watu hawapewi ufikiaji wa kufungua akaunti ya benki au kutumia huduma za kifedha.
+- Ukosefu wa ufikiaji wa huduma za kifedha unaweza kuzuia watu kuajirika.
+- Huduma za kifedha zinaweza kukuzuia kulipwa.
+- Gharama iliyofichwa ya huduma za kifedha ni data yako ya kibinafsi.
+- Serikali na taasisi kuu zinaweza kufunga masoko kwa mapenzi yao.
+- Saa za biashara mara nyingi hupunguzwa kwa saa za kazi za ukanda maalum wa saa.
+- Uhamishaji wa pesa unaweza kuchukua siku kutokana na michakato ya ndani ya kibinadamu.
+- Kuna gharama ya ziada kwa huduma za kifedha kwa sababu taasisi za kati zinahitaji mgao wao.
 
 ### Ulinganisho {#defi-comparison}
 
-| DeFi                                                                                                                           | Fedha za jadi                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Unashikilia hela yako.                                                                                         | Pesa zako uendeshaji na makampuni.                                                                                                          |
-| Wewe ndiye kudhibiti pesa zako huenda wapi na alitumia.                                                        | Lazima uamini makampuni si kwa usimamizi mbaya wa fedha yako, kama kukopesha kwa watoaji wa mikopo hatari.                                  |
-| Uhamisho wa fedha hufanywa kwa dakika chache.                                                                  | Malipo yanaweza kuchukua siku kadhaa kwasababu ya utendaji kazi wa mikono.                                                                  |
-| Shughuli ya shughuli ni jina bandia.                                                                           | Shughuli za kifedha pamoja sana na utambulisho wako.                                                                                        |
-| DeFi iko wazi kwa kila mmoja.                                                                                  | Lazima kutumika kutumia huduma za kifedha.                                                                                                  |
-| Masoko yako wazi sikuzote.                                                                                     | Masoko hufungwa kwa sababu wafanyakazi haja mapumziko.                                                                                      |
-| Ni kujengwa juu ya uwazi - mtu yeyote anaweza kuangalia binafsi ya bidhaa na kukagua jinsi mfumo hufanya kazi. | Taasisi za kifedha ni vitabu kufungwa: huwezi kuuliza kuona mkopo historia yao, rekodi ya mali zao kuongozwa, na kadhalika. |
+| DeFi                                                                                               | Fedha za jadi                                                                                                            |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Unashikilia pesa zako.                                                                               | Pesa zako zinashikiliwa na kampuni.                                                                                               |
+| Unadhibiti mahali pesa zako zinaenda na jinsi zinavyotumika.                                              | Inabidi uamini kampuni kutotumia vibaya pesa zako, kama vile kuwakopesha wakopaji walio katika hatari.                                      |
+| Uhamishaji wa fedha hufanyika kwa dakika.                                                              | Malipo yanaweza kuchukua siku kutokana na michakato ya mikono.                                                                                |
+| Shughuli za muamala hutumia majina bandia.                                                              | Shughuli za kifedha zinahusishwa kwa karibu na utambulisho wako.                                                                      |
+| DeFi iko wazi kwa mtu yeyote.                                                                            | Lazima utume maombi ili kutumia huduma za kifedha.                                                                                      |
+| Masoko huwa wazi kila wakati.                                                                       | Masoko hufungwa kwa sababu wafanyakazi wanahitaji mapumziko.                                                                                   |
+| Imejengwa kwa uwazi – mtu yeyote anaweza kuangalia data ya bidhaa na kukagua jinsi mfumo unavyofanya kazi. | Taasisi za kifedha ni vitabu vilivyofungwa: huwezi kuomba kuona historia yao ya mikopo, rekodi ya mali zao zinazosimamiwa, na kadhalika. |
 
 <ButtonLink href="/apps/categories/defi">
-  Chunguza programu za DeFi
+  Gundua programu za DeFi
 </ButtonLink>
 
 ## Ilianza na Bitcoin... {#bitcoin}
 
-Bitcoin kwa njia nyingi ilikuwa maombi ya kwanza ya DeFi. Bitcoin kweli ruhusa wewe kweli kumiliki na kudhibiti thamani na kupeleka popote duniani kote. Hufanya hivyo kwa kutoa njia kwa idadi kubwa ya watu, ambao hawana imani na kila mmoja, kukubaliana juu ya kitabu cha hesabu bila ya haja ya mpatanishi wa kuaminika. Bitcoin iko wazi kwa kila mmoja na hamna mwenye uwezo wa kubadili masharti yake. Sheria za Bitcoin, kama upungufu mhusika na uwazi wa mhusika, zimeandikwa katika teknolojia. Si kama fedha za jadi ambapo serikali zinaweza kuandika pesa ambazo punguza thamani ya akiba yako na kampuni zinaweza kufunga masoko.
+Bitcoin kwa njia nyingi ilikuwa programu tumizi iliyogatuliwa (dapp) ya kwanza ya DeFi. Bitcoin inakuruhusu kumiliki na kudhibiti thamani kikweli na kuituma popote ulimwenguni. Inafanya hivi kwa kutoa njia kwa idadi kubwa ya watu, ambao hawaaminiani, kukubaliana juu ya leja ya akaunti bila hitaji la mpatanishi anayeaminika. Bitcoin iko wazi kwa mtu yeyote na hakuna aliye na mamlaka ya kubadilisha sheria zake. Sheria za Bitcoin, kama vile uhaba wake na uwazi wake, zimeandikwa kwenye teknolojia. Sio kama fedha za jadi ambapo serikali zinaweza kuchapisha pesa zinazoshusha thamani ya akiba yako na kampuni zinaweza kufunga masoko.
 
-Ethereum hujenga juu ya hii. Kama Bitcoin, kanuni haziwezi kubadilika kwako na kila mtu ana kupatikana. Lakini pia inafanya fedha hizi za kidijitali ziweze kupangwa, kwa kutumia [mikataba-erevu](/glossary/#smart-contract), ili uweze kufanya zaidi ya kuhifadhi na kutuma thamani.
+Ethereum inajenga juu ya hili. Kama Bitcoin, sheria haziwezi kubadilika kwako na kila mtu ana ufikiaji. Lakini pia inafanya pesa hii ya kidijitali iweze kupangwa, kwa kutumia [mikataba mahiri](/glossary/#smart-contract), ili uweze kwenda zaidi ya kuhifadhi na kutuma thamani.
 
-<YouTube id="qFBYB4W2tqU" />
+<VideoWatch slug="defi-history-inception-to-2021" />
 
-## Fedha zinazoweza kupangwa {#programmable-money}
+## Pesa inayoweza kupangwa {#programmable-money}
 
-Hii inaonekana ya ajabu... "kwa nini nitake kupanga pesa zangu"? Hata hivyo, hii ni zaidi ya kipengele chaguo-msingi tu cha tokeni kwenye Ethereum. Mtu yeyote anaweza mpango hoja katika malipo. Hivyo unaweza kupata udhibiti na usalama wa Bitcoin mchanganyiko na huduma hutumiwa na taasisi za fedha. Hii ambayo Kuazima kufanya vitu na sarafu za kijamii kwamba huwezi kufanya na Bitcoin kama kukopesha na mkopo, malipo ya ratiba, kuchangia katika fedha faharisi na zaidi.
+Hii inasikika kuwa ya ajabu... "kwa nini nitake kupanga pesa zangu"? Hata hivyo, hii ni zaidi ya kipengele cha msingi cha tokeni kwenye Ethereum. Mtu yeyote anaweza kupanga mantiki kwenye malipo. Kwa hivyo unaweza kupata udhibiti na usalama wa Bitcoin uliochanganywa na huduma zinazotolewa na taasisi za kifedha. Hii inakuruhusu kufanya mambo na sarafu-fiche ambayo huwezi kufanya na Bitcoin kama vile ukopeshaji na ukopaji, kupanga malipo, kuwekeza katika fedha za faharisi na zaidi.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Chunguza mapendekezo yetu ya mpango za DeFi kujaribu ikiwa wewe ni mpya kwa Ethereum.</div>
+  <div>Gundua mapendekezo yetu ya programu za DeFi za kujaribu ikiwa wewe ni mgeni kwa Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
-    Chunguza programu za DeFi
+    Gundua programu za DeFi
   </ButtonLink>
 </AlertContent>
 </Alert>
 
 ## Unaweza kufanya nini na DeFi? {#defi-use-cases}
 
-Kuna madaraka mwingine kwa huduma nyingi za kifedha. Lakini Ethereum inatoa nafasi ya kuunda bidhaa za kifedha ambazo ni mpya kabisa. Hii ni orodha inayoendelea kukua.
+Kuna mbadala uliogatuliwa kwa huduma nyingi za kifedha. Lakini Ethereum pia inaunda fursa za kuunda bidhaa za kifedha ambazo ni mpya kabisa. Hii ni orodha inayoendelea kukua.
 
 - [Tuma pesa kote ulimwenguni](#send-money)
 - [Tiririsha pesa kote ulimwenguni](#stream-money)
-- [Pata sarafu thabiti](#stablecoins)
-- [Kopa fedha kwa dhamana](#lending)
+- [Fikia sarafu thabiti](#stablecoins)
+- [Kopa fedha kwa dhamana](#lending-2)
 - [Kopa bila dhamana](#flash-loans)
-- [Anza akiba ya kripto](#saving)
+- [Anza kuweka akiba ya kripto](#saving)
 - [Fanya biashara ya tokeni](#swaps)
-- [Kuza kwingineko lako](#investing)
+- [Kuza jalada lako](#investing)
 - [Fadhili mawazo yako](#crowdfunding)
 - [Nunua bima](#insurance)
-- [Dhibiti kwingineko lako](#aggregators)
+- [Dhibiti jalada lako](#aggregators)
 
 <Divider />
 
 ### Tuma pesa kote ulimwenguni haraka {#send-money}
 
-Kama mlolongo wa vizuizi, Ethereum ni iliyoundwa kwa ajili ya kutumia shughuli katika njia salama na kimataifa. Kama Bitcoin, Ethereum hurahisisha kutumia pesa kuwa kama kutumia barua pepe. Weka tu [jina la ENS](/glossary/#ens) la mpokeaji wako (kama bob.eth) au anwani ya akaunti yake kutoka kwa mkoba wako na malipo yako yatakwenda moja kwa moja kwake kwa dakika chache (kawaida). Ili kutuma au kupokea malipo, utahitaji [mkoba](/wallets/).
+Kama mnyororo wa vitalu, Ethereum imeundwa kwa ajili ya kutuma miamala kwa njia salama na ya kimataifa. Kama Bitcoin, Ethereum hufanya kutuma pesa kote ulimwenguni kuwa rahisi kama kutuma barua pepe. Ingiza tu [jina la ENS](/glossary/#ens) la mpokeaji wako (kama bob.eth) au anwani ya akaunti yao kutoka kwenye mkoba wako na malipo yako yataenda moja kwa moja kwao kwa dakika (kawaida). Ili kutuma au kupokea malipo, utahitaji [mkoba](/wallets/). [Jifunze zaidi kuhusu malipo ya kripto](/payments/).
 
 <ButtonLink href="/apps/categories/defi">
-  Angalia mfumo mtawanyo wa kimamlaka wa malipo
+  Tazama dapps za malipo
 </ButtonLink>
 
-#### Pata mkondo wa pesa duniani kote... {#stream-money}
+#### Tiririsha pesa kote ulimwenguni... {#stream-money}
 
-Unaweza kupata mkondo wa pesa juu ya Ethereum. Hii ambayo kulipa mtu mshahara yao kwa sekunde, kuwapa pata wa fedha zao wakati wowote haja. Au kukodisha kitu ndani ya sekunde kama kufuli la hazina ama skuta ya umeme.
+Unaweza pia kutiririsha pesa kupitia Ethereum. Hii inakuruhusu kumlipa mtu mshahara wake kwa sekunde, na kuwapa ufikiaji wa pesa zao wakati wowote wanapozihitaji. Au kukodisha kitu kwa sekunde kama vile kabati la kuhifadhia au skuta ya umeme.
 
-Na kama hutaki kutuma au kutiririsha [ETH](/glossary/#ether) kwa sababu thamani yake inaweza kubadilika sana, kuna sarafu mbadala kwenye Ethereum: [sarafu-imara](/glossary/#stablecoin).
+Na ikiwa hutaki kutuma au kutiririsha [ETH](/glossary/#ether) kwa sababu ya jinsi thamani yake inavyoweza kubadilika, kuna sarafu mbadala kwenye Ethereum: [sarafu thabiti](/glossary/#stablecoin).
 
 <Divider />
 
-### Pata sarafu thabiti {#stablecoins}
+### Fikia sarafu thabiti {#stablecoins}
 
-Kutokuwa na uhakika kwa sarafu ni tatizo kwa bidhaa nyingi za kifedha na matumizi ya jumla. Jumuiya ya DeFi kurekebishwa hili kwa sarafu imara. Thamani yake huambukizwa kutoka kwenye mali nyingine, kwa kawaida ni sarafu mashuhuri kama dola.
+Kubadilika-badilika kwa sarafu-fiche ni tatizo kwa bidhaa nyingi za kifedha na matumizi ya jumla. Jumuiya ya DeFi imetatua hili kwa sarafu thabiti. Thamani yake inabaki imefungwa kwa mali nyingine, kwa kawaida sarafu maarufu kama dola.
 
-Sarafu kama Dai au USDC zina thamani ambayo kukaa ndani ya senti chache za dola. Hii hufanya kamili kwa ajili ya mapato au rejareja. Watu wengi katika Amerika ya Kusini kutumika sarafu imara kama njia ya kulinda akiba zao katika wakati wa kutokuwa na uhakika mkubwa na sarafu zao zilizotolewa na serikali.
+Sarafu kama DAI au USDC zina thamani ambayo inabaki ndani ya senti chache za dola. Hii inazifanya ziwe kamilifu kwa mapato au rejareja. Watu wengi katika Amerika ya Kusini wametumia sarafu thabiti kama njia ya kulinda akiba zao katika wakati wa kutokuwa na uhakika mkubwa na sarafu zao zinazotolewa na serikali.
 
 <ButtonLink href="/stablecoins/">
-Zaidi juu ya sarafu imara
+  Zaidi kuhusu sarafu thabiti
 </ButtonLink>
 
 <Divider />
 
-### Kukopa {#lending}
+### Ukopaji {#lending}
 
-Kukopa fedha kutoka kwa watoaji madaraka huja katika aina kuu mbili.
+Ukopaji wa pesa kutoka kwa watoa huduma waliogatuliwa huja katika aina mbili kuu.
 
-- Rika-kwa-rika, kwa maana kwamba mkopaji atapewa pesa kutoka kwa mkopeshaji maalum.
-- Msako msingi ambapo mkopeshaji kutoa fedha (upungufu wa fedha) kwa msako ambayo wanaweza wapeni fedha kutoka.
+- Rika-kwa-rika, ikimaanisha mkopaji atakopa moja kwa moja kutoka kwa mkopeshaji maalum.
+- Kulingana na bwawa ambapo wakopeshaji hutoa fedha (ukwasi) kwenye bwawa ambalo wakopaji wanaweza kukopa.
 
 <ButtonLink href="/apps/categories/defi">
-  Angalia mfumo mtawanyo wa kimamlaka wa kukopa
+  Tazama dapps za ukopaji
 </ButtonLink>
 
-Kuna faida nyingi kwa kutumia mkopeshaji madaraka...
+Kuna faida nyingi za kutumia mkopeshaji uliogatuliwa...
 
-#### Kukopa kwa faragha {#borrowing-privacy}
+#### Ukopaji kwa faragha {#borrowing-privacy}
 
-Leo, kukopesha na ukopeshaji fedha hutegemea watu mmoja-mmoja wanaohusika. Benki haja kujua kama wewe ni uwezekano wa kulipa mkopo kabla ya kukopesha.
+Leo, ukopeshaji na ukopaji wa pesa unazunguka watu wanaohusika. Benki zinahitaji kujua kama una uwezekano wa kulipa mkopo kabla ya kukopesha.
 
-Utoaji mkopo usio wa kati hufanya kazi bila yeyote kati ya pande hizo kuwa na wajibu wa kutambua. Badala yake, mkopeshaji lazima atoe dhamana ambayo mkopeshaji atapokea moja kwa moja ikiwa mkopo wao kurudishwa. Baadhi ya wakopeshaji hata hukubali [NFTs](/glossary/#nft) kama dhamana. NFT ni mkataba kwenda kwenye mali ya kipekee, kama mchoro au kazi ya mchoraji. [Zaidi kuhusu NFTs](/nft/)
+Ukopeshaji uliogatuliwa hufanya kazi bila upande wowote kulazimika kujitambulisha. Badala yake, mkopaji lazima aweke dhamana ambayo mkopeshaji atapokea kiotomatiki ikiwa mkopo wao hautalipwa. Baadhi ya wakopeshaji hata wanakubali [NFTs](/glossary/#nft) kama dhamana. NFTs ni hati ya mali ya kipekee, kama vile mchoro. [Zaidi kuhusu NFTs](/nft/)
 
-Hii inakuruhusu kukopa hela bila hitaji la kuchunguzwa ama kutoa taarifa zako za faragha.
+Hii inakuruhusu kukopa pesa bila ukaguzi wa mkopo au kukabidhi taarifa za faragha.
 
-#### Upatikanaji wa fedha za kimataifa {#access-global-funds}
+#### Ufikiaji wa fedha za kimataifa {#access-global-funds}
 
-Unapotumia mkopaji aliegatuliwa unaweza kufikia fedha zilizowekwa popote duniani, sio fedha zilizo chini ya mipaka ya benki yako au taasisi. Hii inafanya mikopo ipatikane kwa urahisi zaidi na inaboresha viwango vya riba.
+Unapotumia mkopeshaji uliogatuliwa una ufikiaji wa fedha zilizowekwa kutoka kote ulimwenguni, sio tu fedha zilizo chini ya ulinzi wa benki au taasisi uliyochagua. Hii inafanya mikopo ipatikane zaidi na inaboresha viwango vya riba.
 
 #### Ufanisi wa kodi {#tax-efficiencies}
 
-Ukikopa unapata pesa bila kuuza ETH yako (tukio litakalohisha kukatwa kodi). Badala yake unaweza kutumia ETH kama dhamana ya mkopo wa sarafu-imara. Hii inakupa mzunguko wa pesa unaohitaji na unakua umetunza ETH yako. Sarafu-imara ni tokeni zilizo bora kwako unapohitaji pesa kwasababu hazina utete wa thamani kama ETH. [Zaidi kuhusu sarafu-imara](#stablecoins)
+Ukopaji unaweza kukupa ufikiaji wa fedha unazohitaji bila kuhitaji kuuza ETH yako (tukio linalotozwa kodi). Badala yake, unaweza kutumia ETH kama dhamana kwa mkopo wa sarafu thabiti. Hii inakupa mtiririko wa pesa unaohitaji na inakuruhusu kuweka ETH yako. Sarafu thabiti ni tokeni ambazo ni bora zaidi kwa wakati unapohitaji pesa taslimu kwani hazibadiliki thamani kama ETH. [Zaidi kuhusu sarafu thabiti](#stablecoins)
 
-#### Mikopo ya haraka {#flash-loans}
+#### Mikopo ya ghafla {#flash-loans}
 
-Mikopo myepesi iko kwenye majaribio ya ukopeshaji uliogatuliwa unaokuwezesha kukopa bila ya dhamana au kutoa taarifa binafsi.
+Mikopo ya ghafla ni aina ya majaribio zaidi ya ukopeshaji uliogatuliwa ambayo inakuruhusu kukopa bila dhamana au kutoa taarifa yoyote ya kibinafsi.
 
-Wao ni hakuna kwa watu wasio wa kiufundi kwa sasa lakini wao kidokezo kile kinachoweza kufanyika kwa kila mtu katika siku zijazo.
+Hazipatikani kwa urahisi kwa watu wasio wa kiufundi hivi sasa lakini zinadokeza kile kinachoweza kuwezekana kwa kila mtu katika siku zijazo.
 
-Ni kazi juu ya msingi kwamba mkopo ni kuchukuliwa na kulipwa nyuma ndani ya shughuli hiyo. Ikiwa haiwezi kulipwa tena, shughuli hiyo rudi nyuma kana kwamba hakuna kilichotokea.
+Inafanya kazi kwa msingi kwamba mkopo unachukuliwa na kulipwa ndani ya muamala huo huo. Ikiwa haiwezi kulipwa, muamala unarudi nyuma kana kwamba hakuna kilichotokea.
 
-Fedha ambazo hutumiwa mara nyingi huhifadhiwa katika makundi ya fedha (makundi makubwa ya fedha kutumika kwa ajili ya ukopeshaji). Kama si kutumika katika wakati fulani, hii
-hujenga fursa kwa mtu ukopeshaji fedha hizi, kufanya biashara nao, na kulipa yao katika kamili kabisa asili wakati huo huo wao ni ukopeshaji.
+Fedha ambazo mara nyingi hutumiwa zinashikiliwa katika mabwawa ya ukwasi (mabwawa makubwa ya fedha yanayotumika kwa ukopaji). Ikiwa hazitumiwi kwa wakati fulani, hii inaunda fursa kwa mtu kukopa fedha hizi, kufanya biashara nazo, na kuzilipa kikamilifu kwa wakati mmoja zinapokopwa.
 
-Hii ina maana mengi ya ufahamu lazima ni pamoja na katika shughuli sana bora. Mfano rahisi inaweza kuwa mtu kutumia mkopo mwangaza wa ghafula kopa kama kiasi cha mali kwa bei moja ili waweze kuuza katika kupeana tofauti ambapo bei ni ya juu.
+Hii inamaanisha mantiki nyingi lazima ijumuishwe katika muamala maalum sana. Mfano rahisi unaweza kuwa mtu anayetumia mkopo wa ghafla kukopa kiasi kikubwa cha mali kwa bei moja ili waweze kuiuza kwenye soko tofauti ambapo bei ni ya juu.
 
-Kwa hiyo katika shughuli moja, yafuatayo hutokea:
+Kwa hivyo katika muamala mmoja, yafuatayo hutokea:
 
-- Unakopa kiasi X cha mali $asset kwa $1.00 kutoka kwa jukwaa la mabadilishano A
-- Wewe uza X $asset kwenye jukwaa la kupeana B kwa $1.10
-- Wewe kulipa nyuma mkopo kupeana A
-- Wewe kuweka faida chini ada ya shughuli
+- Unakopa kiasi X cha $asset kwa $1.00 kutoka soko A
+- Unauza X $asset kwenye soko B kwa $1.10
+- Unalipa mkopo kwa soko A
+- Unaweka faida ukiondoa ada ya muamala
 
-Kama kupeana B ya ugavi pungua ghafla na mtumiaji hakuwa na uwezo wa kununua kutosha ili kufidia mkopo wa awali, shughuli ingekuwa tu kushindwa.
+Ikiwa usambazaji wa soko B ungeshuka ghafla na mtumiaji asiweze kununua kiasi cha kutosha kufidia mkopo wa asili, muamala ungeshindwa tu.
 
-Ili uweze kufanya mfano hapo juu katika ulimwengu wa jadi wa kifedha, wewe ingekuwa kiasi kikubwa cha pesa. Mfumo huu wa upataji fedha unaweza kufikiwa na hao wenye utajiri. Mikopo ya haraka ni mfano wa mustakabali ambapo kuwa na pesa si lazima iwe sharti la kupata pesa.
+Ili kuweza kufanya mfano ulio hapo juu katika ulimwengu wa fedha za jadi, ungehitaji kiasi kikubwa cha pesa. Mikakati hii ya kutengeneza pesa inapatikana tu kwa wale walio na utajiri uliopo. Mikopo ya ghafla ni mfano wa siku zijazo ambapo kuwa na pesa sio lazima iwe sharti la kutengeneza pesa.
 
 <ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
-  Zaidi kuhusu mikopo ya haraka
+  Zaidi kuhusu mikopo ya ghafla
 </ButtonLink>
 
 <Divider />
 
-### Anza kuweka akiba kwa kutumia kripto {#saving}
+### Anza kuweka akiba na kripto {#saving}
 
-#### Kukopesha {#lending}
+#### Ukopeshaji {#lending-2}
 
-Unaweza pata riba kwenye kripto zako kwa kukopesha na kuona fedha zako zinakuwa kwa muda halisi. Kwa sasa kiwango cha riba ni kikubwa zaidi ya nini weza kupata kwenye benki ya mji wako (Kama una bahati kufikia moja wapo). Mfano huu hapa:
+Unaweza kupata riba kwenye kripto yako kwa kuikopesha na kuona fedha zako zikikua kwa wakati halisi. Hivi sasa viwango vya riba ni vya juu zaidi kuliko kile unachoweza kupata kwenye benki yako ya ndani (ikiwa una bahati ya kuweza kufikia moja). Huu hapa ni mfano:
 
-- Unakopesha Dai yako 100, [sarafu-imara](/stablecoins/), kwa bidhaa kama Aave.
-- Wewe pokea 100 mfumo wa kifedha usio na kituo Dai ( jukwaa la mikopo) ambayo ni ishara ambayo wakilisha Dai yako mkopo.
-- Jukwaa la mikopo yako ongezeko kulingana na viwango vya riba na unaweza kuona salio lako kukua kwenye mkoba wako. Kulingana na [APR](/glossary/#apr), salio la mkoba wako litaonyesha kitu kama 100.1234 baada ya siku chache au hata saa!
-- Unaweza kuondoa kiasi cha kawaida mikopo kwamba ni sawa na salio lako mikopo wakati wowote.
+- Unakopesha DAI yako 100, [sarafu thabiti](/stablecoins/), kwa bidhaa kama Aave.
+- Unapokea Aave Dai (aDai) 100 ambayo ni tokeni inayowakilisha DAI yako iliyokopeshwa.
+- aDai yako itaongezeka kulingana na viwango vya riba na unaweza kuona salio lako likikua kwenye mkoba wako. Kulingana na [APR](/glossary/#apr), salio la mkoba wako litasoma kitu kama 100.1234 baada ya siku chache au hata saa!
+- Unaweza kutoa kiasi cha DAI ya kawaida ambacho ni sawa na salio lako la aDai wakati wowote.
 
 <ButtonLink href="/apps/categories/defi">
-  Angalia mfumo mtawanyo wa kimamlaka wa kukopesha
+  Tazama dapps za ukopeshaji
 </ButtonLink>
 
 #### Bahati nasibu zisizo na hasara {#no-loss-lotteries}
 
-Mashindano ya bahati nasibu yasiyo na hasara kama Kucheza Pamoja ni njia mpya ya kufurahisha na ya ubunifu ya kuokoa pesa.
+Bahati nasibu zisizo na hasara kama PoolTogether ni njia mpya ya kufurahisha na ya ubunifu ya kuweka akiba ya pesa.
 
-- Wewe kununua tiketi 100 kwa kutumia ishara 100 za mkopo.
-- Wewe kupokea 100 sarafu thabiti mkopo kuwakilisha yako 100 tiketi.
-- Kama moja ya tiketi yako ni kuchaguliwa kama mshindi, yako salio sarafu thabiti ongezeko kwa kiasi cha bwawa tuzo.
-- Kama huna kushinda, yako 100 salio mikunjo juu ya wiki ijayo sare.
-- Unaweza kuondoa kiasi cha kawaida Dai kwamba ni sawa na salio lako salio wakati wowote.
+- Unanunua tikiti 100 ukitumia tokeni 100 za DAI.
+- Unapokea plDai 100 zinazowakilisha tikiti zako 100.
+- Ikiwa moja ya tikiti zako itachaguliwa kama mshindi, salio lako la plDai litaongezeka kwa kiasi cha bwawa la zawadi.
+- Ikiwa hutashinda, plDai yako 100 itasonga mbele hadi kwenye droo ya wiki ijayo.
+- Unaweza kutoa kiasi cha DAI ya kawaida ambacho ni sawa na salio lako la plDai wakati wowote.
 
-Bwawa tuzo ni kuzalisha na riba yote kuzalisha na kukopesha amana tiketi kama katika mkopo mfano hapo juu.
+Bwawa la zawadi linatolewa na riba yote inayotokana na kukopesha amana za tikiti kama katika mfano wa ukopeshaji hapo juu.
 
 <ButtonLink isSecondary href="https://pooltogether.com">
   Jaribu PoolTogether
@@ -216,64 +213,64 @@ Bwawa tuzo ni kuzalisha na riba yote kuzalisha na kukopesha amana tiketi kama ka
 
 ### Badilishana tokeni {#swaps}
 
-Kuna maelfu ya tokeni kwenye Ethereum. Kubadilisha madaraka (Masoko ya tarakimu) kuruhusu biashara ishara tofauti wakati wowote unataka. Kamwe usiache udhibiti wa mali zako. Kufanya hivyo ni kama kusafiri katika nchi ya kigeni na kubadilisha sarufi. Lakini toleo la DeFi halifungwi kamwe. Masoko ni 24/7, 365 siku kwa mwaka na teknolojia dhamana kutakuwa daima mtu kukubali biashara.
+Kuna maelfu ya tokeni kwenye Ethereum. Mabadilishano yaliyogatuliwa (DEXs) yanakuruhusu kufanya biashara ya tokeni tofauti wakati wowote unapotaka. Huachi kamwe udhibiti wa mali zako. Hii ni kama kutumia ubadilishaji wa sarafu unapotembelea nchi tofauti. Lakini toleo la DeFi halifungwi kamwe. Masoko ni 24/7, siku 365 kwa mwaka na teknolojia inahakikisha kutakuwa na mtu wa kukubali biashara kila wakati.
 
-Kwa mfano, kama unataka kutumia hakuna-hasara bahati nasibu kucheza pamoja (ilivyoelezwa hapo juu), unahitaji ishara kama Dai au USDC. Hizi Masoko ya tarakimu kuruhusu wewe kubadilisha ETH yako kwa ishara hizo na nyuma tena wakati wewe ni kumaliza.
+Kwa mfano, ikiwa unataka kutumia bahati nasibu isiyo na hasara ya PoolTogether (iliyoelezwa hapo juu), utahitaji tokeni kama DAI au USDC. DEX hizi zinakuruhusu kufanya badilishano la ETH yako kwa tokeni hizo na kurudi tena unapomaliza.
 
 <ButtonLink href="/apps/categories/defi">
-  Angalia mabadilishano ya tokeni
+  Tazama mabadilishano ya tokeni
 </ButtonLink>
 
 <Divider />
 
 ### Biashara ya hali ya juu {#trading}
 
-Kuna chaguzi zaidi ya juu kwa wauzaji ambao kama kuongoza zaidi kidogo. Amri za kikomo, kudumu, biashara ya ukingo na zaidi yote inawezekana. Pamoja na biashara ya madaraka kupata kudhibiti wa fedha za kimataifa, soko kamwe kufunga, na wewe ni daima katika udhibiti wa mali yake.
+Kuna chaguzi za hali ya juu zaidi kwa wafanyabiashara wanaopenda udhibiti zaidi kidogo. Maagizo ya kikomo, mikataba ya kudumu, biashara ya ukingo na zaidi yote yanawezekana. Ukiwa na biashara iliyogatuliwa unapata ufikiaji wa ukwasi wa kimataifa, soko halifungwi kamwe, na unadhibiti mali zako kila wakati.
 
-Wakati matumizi ya kuu kati una kuweka mali yako kabla ya biashara na kuamini yao kuangalia baada yao. Wakati mali yako ni zilizowekwa, wao ni katika hatari kama kati kuu ni malengo ya kuvutia kwa walaghai.
+Unapotumia ubadilishaji mkuu inabidi uweke mali zako kabla ya biashara na uwaamini kuzitunza. Wakati mali zako zimewekwa, ziko hatarini kwani mabadilishano makuu ni malengo ya kuvutia kwa wadukuzi.
 
 <ButtonLink href="/apps/categories/defi">
-  Angalia mfumo mtawanyo wa kimamlaka wa biashara
+  Tazama dapps za biashara
 </ButtonLink>
 
 <Divider />
 
-### Kuza kwingineko lako {#investing}
+### Kuza jalada lako {#investing}
 
-Fedha ya usimamizi wa bidhaa kwenye Ethereum ambayo jaribu kukua soko lako kulingana na mpango wa uteuzi wako. Hii ni moja kwa moja, wazi kwa kila mtu, na haina haja ya meneja binadamu kuchukua kukata ya faida yako.
+Kuna bidhaa za usimamizi wa fedha kwenye Ethereum ambazo zitajaribu kukuza jalada lako kulingana na mkakati unaochagua. Hii ni ya kiotomatiki, iko wazi kwa kila mtu, na haihitaji meneja wa kibinadamu kuchukua mgao wa faida yako.
 
-Mfano mzuri ni hazina ya [DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Hii ni mfuko ambao kusawazisha upya usawa moja kwa moja ili kuhakikisha mkusanyiko wako daima ishara za juu za DeFi kwa mtaji wa soko. Hauhitaji kusimamia kila maelezo na unaweza kutoa fedha wakati wowote ule.
+Kwa mfano, kuna fedha za faharisi zilizowekwa kwenye tokeni ambazo husawazisha kiotomatiki ili kuhakikisha jalada lako linajumuisha tokeni kuu za DeFi kila wakati kwa mtaji wa soko. Sio lazima udhibiti maelezo yoyote na unaweza kutoa kutoka kwenye mfuko wakati wowote upendao.
 
 <ButtonLink href="/apps/categories/defi">
-  Angalia mfumo mtawanyo wa kimamlaka wa uwekezaji
+  Tazama dapps za uwekezaji
 </ButtonLink>
 
 <Divider />
 
 ### Fadhili mawazo yako {#crowdfunding}
 
-Ethereum ni mfumo zuri wa kukusanya fedha:
+Ethereum ni jukwaa bora kwa ufadhili wa umati:
 
-- Wafadhili wa muhimu wanaweza kutoka popote - Ethereum na tokeni zake ziko huru kwa mtu yeyote, mahali popote ulimwenguni huu.
-- Ni wazi hivyo wakusanya fedha wanaweza kuthibitisha mkusanyo pesa. Unaweza hata kufuatilia jinsi fedha tumika kadri muda kwenda.
-- Wakusanya fedha wanaweza weka fedha kurudishwa moja kwa moja, kwa mfano, kuna muda wa mwisho maalumu na kiasi cha chini cha fedha ambacho haijafika mahitaji.
+- Wafadhili watarajiwa wanaweza kutoka popote – Ethereum na tokeni zake ziko wazi kwa mtu yeyote, popote ulimwenguni.
+- Ni wazi kwa hivyo wachangishaji wanaweza kuthibitisha ni kiasi gani cha pesa kimekusanywa. Unaweza hata kufuatilia jinsi fedha zinavyotumika baadaye.
+- Wachangishaji wanaweza kuweka marejesho ya kiotomatiki ikiwa, kwa mfano, kuna tarehe ya mwisho maalum na kiasi cha chini ambacho hakijafikiwa.
 
 <ButtonLink href="/apps/categories/defi">
-  Angalia mfumo mtawanyo wa kimamlaka wa uchangishaji wa umma
+  Tazama dapps za ufadhili wa umati
 </ButtonLink>
 
 #### Ufadhili wa kipeo cha pili {#quadratic-funding}
 
-Ethereum ni ratiba ya chanzo wazi na mengi ya kazi hadi sasa imekuwa kufadhiliwa na jamii. Hii kuongozwa ukuaji wa mtindo mpya wa kuvutia wa kukusanya fedha: fedha wa mraba. Hii ina uwezo wa kuboresha jinsi tunavyofadhili aina zote za bidhaa za umma katika siku zijazo.
+Ethereum ni programu ya chanzo wazi na kazi nyingi hadi sasa zimefadhiliwa na jumuiya. Hii imesababisha ukuaji wa mtindo mpya wa kuvutia wa kuchangisha fedha: ufadhili wa kipeo cha pili. Hii ina uwezo wa kuboresha jinsi tunavyofadhili aina zote za bidhaa za umma katika siku zijazo.
 
-Ufadhili wa kwadaratiki huhakikisha kuwa miradi inayopokea ufadhili mwingi ni ile yenye mahitaji ya kipekee. Kwa maneno mengine, miradi ambayo inasimama kuboresha maisha ya watu wengi. Hivi ndivyo jinsi gani kazi:
+Ufadhili wa kipeo cha pili unahakikisha kwamba miradi inayopokea ufadhili zaidi ni ile iliyo na mahitaji ya kipekee zaidi. Kwa maneno mengine, miradi inayosimama kuboresha maisha ya watu wengi zaidi. Hivi ndivyo inavyofanya kazi:
 
-1. Kuna kiasi kilekile cha pesa kuchangia.
-2. Mzunguko wa fedha za umma huanza.
-3. Watu wanaweza kuonyesha mahitaji yao kwa mradi kwa kutoa mchango wa pesa.
-4. Mara mzunguko ni juu, bwawa lingana ni kugawanywa kwa miradi. Hao wenye mahitaji ya kipekee wanapata kiasi kikubwa kutoka kwenye mfuko wa fedha.
+1. Kuna bwawa linalolingana la fedha zilizotolewa.
+2. Duru ya ufadhili wa umma inaanza.
+3. Watu wanaweza kuashiria mahitaji yao kwa mradi kwa kuchangia kiasi cha pesa.
+4. Mara tu duru inapokamilika, bwawa linalolingana linasambazwa kwa miradi. Wale walio na mahitaji ya kipekee zaidi hupata kiasi cha juu zaidi kutoka kwenye bwawa linalolingana.
 
-Hii inamaanisha kuwa mradi A na mchango wao wa dola 100 unaweza ikapata fedha zaidi ya mradi B ambao una mchango mmoja wa dola 10,000 (inategemea na ukubwa wa mfuko wa fedha).
+Hii inamaanisha Mradi A na michango yake 100 ya dola 1 inaweza kuishia na ufadhili zaidi kuliko Mradi B na mchango mmoja wa dola 10,000 (kulingana na ukubwa wa bwawa linalolingana).
 
 <ButtonLink href="https://wtfisqf.com">
   Zaidi kuhusu ufadhili wa kipeo cha pili
@@ -283,86 +280,94 @@ Hii inamaanisha kuwa mradi A na mchango wao wa dola 100 unaweza ikapata fedha za
 
 ### Bima {#insurance}
 
-Bima madaraka ina lengo la kufanya bima kuwa nafuu, kulipa haraka, na uwazi zaidi. Pamoja na utumiaji wa mitambo endesha zaidi, chanjo ni zaidi nafuu na malipo ni mengi kwa kasi. Takwimu kutumika kuamua juu ya madai yako ni wazi kabisa.
+Bima iliyogatuliwa inalenga kufanya bima iwe nafuu, haraka kulipa, na wazi zaidi. Kwa otomatiki zaidi, chanjo inapatikana zaidi na malipo ni ya haraka sana. Data inayotumika kuamua juu ya dai lako ni wazi kabisa.
 
-Bidhaa Ethereum, kama ratiba yoyote, wanaweza kuteseka kutokana na mende na kutumia. Kwa hiyo sasa bidhaa nyingi za bima katika nafasi ya kuzingatia kulinda watumiaji wao dhidi ya kupoteza fedha. Hata hivyo, kuna miradi kuanzia kujenga chanjo kwa kila kitu ambacho maisha yanaweza kutupa. Mfano mzuri wa hili ni Bima ya Mazao ya Etherisc ambayo inalenga [kuwalinda wakulima wadogo nchini Kenya dhidi ya ukame na mafuriko](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Bima madaraka inaweza kutoa chanjo ya bei nafuu kwa wakulima ambao mara nyingi hulipwa nje ya bima ya jadi.
+Bidhaa za Ethereum, kama programu yoyote, zinaweza kuteseka kutokana na hitilafu na unyonyaji. Kwa hivyo hivi sasa bidhaa nyingi za bima katika nafasi hii zinalenga kulinda watumiaji wao dhidi ya upotezaji wa fedha. Hata hivyo, kuna miradi inayoanza kujenga chanjo kwa kila kitu ambacho maisha yanaweza kutupa. Mfano mzuri wa hili ni bima ya Mazao ya Etherisc ambayo inalenga [kuwalinda wakulima wadogo nchini Kenya dhidi ya ukame na mafuriko](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Bima iliyogatuliwa inaweza kutoa bima ya bei nafuu kwa wakulima ambao mara nyingi hutengwa na bima ya jadi kwa sababu ya bei.
 
 <ButtonLink href="/apps/categories/defi">
-  Angalia mfumo mtawanyo wa kimamlaka wa bima
+  Tazama dapps za bima
 </ButtonLink>
 
 <Divider />
 
-### Vikusanyaji na wasimamizi wa kwingineko {#aggregators}
+### Vijumlishi na wasimamizi wa jalada {#aggregators}
 
-Kwa kuwa kuna kwenda mengi sana, hitaji njia ya kufuatilia changia kwa mradi wako wote, mikopo, na biashara. Kuna bidhaa nyingi kukuacha kuratibu shughuli zako zote za DeFi kutoka sehemu moja. Huu ndio uzuri wa uwazi wa muundo wa DeFi. Timu wanaweza kujenga nje kiunganishi ambapo huwezi tu kuona mizani yako katika bidhaa, unaweza kutumia makala yao pia. Unaweza kupata hii muhimu kama wewe kuchunguza zaidi ya DeFi.
+Kwa mambo mengi yanayoendelea, utahitaji njia ya kufuatilia uwekezaji, mikopo, na biashara zako zote. Kuna bidhaa nyingi zinazokuruhusu kuratibu shughuli zako zote za DeFi kutoka sehemu moja. Huu ndio uzuri wa usanifu wazi wa DeFi. Timu zinaweza kuunda miingiliano ambapo huwezi tu kuona salio lako kwenye bidhaa zote, unaweza kutumia vipengele vyake pia. Unaweza kupata hii kuwa muhimu unapochunguza zaidi DeFi.
 
 <ButtonLink href="/apps/categories/defi">
-  Angalia mfumo mtawanyo wa kimamlaka wa kwingineko
+  Tazama dapps za jalada
 </ButtonLink>
 
 <Divider />
 
-## Je, DeFi hufanya kazi? {#how-defi-works}
+## DeFi inafanyaje kazi? {#how-defi-works}
 
-DeFi hutumia Sarafu za tarakimu na mikataba Mzuri wa akili kutoa huduma ambazo si kufanya wapatanishi. Katika ulimwengu wa leo wa kifedha, taasisi za kifedha hutenda kama wakunga wa shughuli za kifedha. Hii anatoa taasisi hizi nguvu kubwa kwa sababu pesa zako mtiririko kupitia kwao. Zaidi ya hayo, mabilioni ya watu kote ulimwenguni hawawezi hata kupata akaunti ya benki.
+DeFi hutumia sarafu-fiche na mikataba mahiri kutoa huduma ambazo hazihitaji wapatanishi. Katika ulimwengu wa kifedha wa leo, taasisi za kifedha hufanya kama wadhamini wa miamala. Hii inazipa taasisi hizi nguvu kubwa kwa sababu pesa zako zinapita kupitia kwao. Zaidi ya hayo, mabilioni ya watu ulimwenguni kote hawawezi hata kufikia akaunti ya benki.
 
-Kwenye DeFi, mkataba erevu inachukua nafasi ya mashirika ya fedha kwenye kufanya muamala. Mkataba erevu ni aina ya hesabu Ethereum ambayo inaweza kushikilia fedha na inaweza kuweka / malipo yao kulingana na hali fulani. Hakuna mtu anaweza kubadilisha kwamba mkataba erevu wakati ni kuishi daima kukimbia kama kupangwa.
+Katika DeFi, mkataba mahiri unachukua nafasi ya taasisi ya kifedha katika muamala. Mkataba mahiri ni aina ya akaunti ya Ethereum inayoweza kushikilia fedha na inaweza kuzituma/kuzirejesha kulingana na masharti fulani. Hakuna anayeweza kubadilisha mkataba huo mahiri unapokuwa hewani – utaendeshwa kila wakati kama ulivyopangwa.
 
-Mkataba ambao iliyoundwa kutoa posho au pesa za mfukoni unaweza kupangwa Kuweka pesa kutoka Akaunti A kwenda Akaunti B kila Ijumaa. Na itafanya hivyo tu kwa muda mrefu kama Akaunti A ina fedha kuhitajika. Hakuna mtu anayeweza kubadilisha mkataba na kuongeza Akaunti C kama mpokeaji kuiba fedha.
+Mkataba ambao umeundwa kutoa kibali au pesa za matumizi unaweza kupangwa kutuma pesa kutoka Akaunti A hadi Akaunti B kila Ijumaa. Na itafanya hivyo tu mradi Akaunti A ina fedha zinazohitajika. Hakuna anayeweza kubadilisha mkataba na kuongeza Akaunti C kama mpokeaji ili kuiba fedha.
 
-Mikataba pia ni ya umma kwa mtu yeyote kukagua na ukaguzi. Hii ina maana mikataba mbaya mara nyingi kuja chini ya uchunguzi wa jamii rembo haraka.
+Mikataba pia ni ya umma kwa mtu yeyote kukagua na kufanya ukaguzi. Hii inamaanisha mikataba mibaya mara nyingi itachunguzwa na jumuiya haraka sana.
 
-Hii haina maana kuna sasa haja ya kuamini wanachama zaidi ya kiufundi ya jamii Ethereum ambao wanaweza kusoma kanuni. Jamii ya chanzo wazi husaidia kuweka watengenezaji katika udhibiti, lakini hitaji hili kupungua kwa muda kama mikataba erevu kuwa rahisi kusoma na njia nyingine za kuthibitisha uaminifu wa kanuni ni maendeleo.
+Hii inamaanisha kwa sasa kuna hitaji la kuwaamini wanachama wa kiufundi zaidi wa jumuiya ya Ethereum ambao wanaweza kusoma msimbo. Jumuiya inayotegemea chanzo wazi husaidia kuwaweka wasanidi programu chini ya uangalizi, lakini hitaji hili litapungua kadiri muda unavyopita kadiri mikataba mahiri inavyokuwa rahisi kusoma na njia zingine za kuthibitisha uaminifu wa msimbo zinatengenezwa.
 
 ## Ethereum na DeFi {#ethereum-and-defi}
 
-Ethereum ni msingi kamili kwa DeFi kwa sababu kadhaa:
+Ethereum ni msingi kamili wa DeFi kwa sababu kadhaa:
 
-- Hakuna anayemiliki Ethereum au mikataba erevu kuishi juu yake ⁇ hii inatoa kila mtu fursa ya kutumia DeFi. Hii pia inamaanisha hakuna mtu anayeweza kubadilisha utawala juu yako.
-- Bidhaa za DeFi zote kusema lugha moja nyuma ya pazia: Ethereum. Hii inamaanisha bidhaa nyingi hufanya kazi pamoja bila mshono. Unaweza kukopesha ishara kwenye jukwaa moja na Kubadilika ishara ya riba katika soko tofauti kwenye kupangwa tofauti kabisa. Hii ni kama kutoa tiketi ya uaminifu kwenye benki yako.
-- Ishara na sarafu za kijamii ni kujengwa katika Ethereum, pamoja kitabu - kufuatilia shughuli na Uki wa mali ni kinda kitu Ethereum ya.
-- Ethereum kuruhusu uhuru kamili wa kifedha - bidhaa nyingi usichukue kamwe ulinzi wa fedha zako, kuondoka katika udhibiti.
+- Hakuna anayemiliki Ethereum au mikataba mahiri inayoishi juu yake – hii inampa kila mtu fursa ya kutumia DeFi. Hii pia inamaanisha hakuna anayeweza kubadilisha sheria kwako.
+- Bidhaa zote za DeFi zinazungumza lugha moja nyuma ya pazia: Ethereum. Hii inamaanisha nyingi ya bidhaa hufanya kazi pamoja bila mshono. Unaweza kukopesha tokeni kwenye jukwaa moja na kubadilishana tokeni inayozaa riba katika soko tofauti kwenye programu tofauti kabisa. Hii ni kama kuweza kubadilisha pointi za uaminifu kuwa pesa taslimu kwenye benki yako.
+- Tokeni na sarafu-fiche zimejengwa ndani ya Ethereum, leja iliyoshirikiwa – kufuatilia miamala na umiliki ni aina ya jambo la Ethereum.
+- Ethereum inaruhusu uhuru kamili wa kifedha – bidhaa nyingi hazitachukua ulinzi wa fedha zako, na kukuacha ukiwa na udhibiti.
 
 Unaweza kufikiria DeFi katika tabaka:
 
-1. Mtandao wa vizuizi - Ethereum ina historia ya shughuli na hali ya Hesabu.
+1. Mnyororo wa vitalu – Ethereum ina historia ya muamala na hali ya akaunti.
 2. Mali – [ETH](/what-is-ether/) na tokeni zingine (sarafu).
-3. Itifaki – [mikataba-erevu](/glossary/#smart-contract) ambayo hutoa utendaji, kwa mfano, huduma inayoruhusu ukopeshaji uliogatuliwa wa mali.
-4. [Programu](/apps/) – bidhaa tunazotumia kudhibiti na kupata itifaki.
+3. Itifaki – [mikataba mahiri](/glossary/#smart-contract) inayotoa utendakazi, kwa mfano, huduma inayoruhusu ukopeshaji uliogatuliwa wa mali.
+4. [Programu](/apps/) – bidhaa tunazotumia kudhibiti na kufikia itifaki.
 
-Kumbuka: sehemu kubwa ya DeFi hutumia [kiwango cha ERC-20](/glossary/#erc-20). Usajili katika DeFi hutumia ukusanyaji cha ETH mkusanyo wa Ether (WETH). [Jifunze zaidi kuhusu ether iliyofungwa](/wrapped-eth).
+Kumbuka: sehemu kubwa ya DeFi inatumia [kiwango cha ERC-20](/glossary/#erc-20). Programu katika DeFi hutumia kanga kwa ETH inayoitwa ether iliyofungwa (weth). [Jifunze zaidi kuhusu ether iliyofungwa](/wrapped-eth).
 
 ## Jenga DeFi {#build-defi}
 
-DeFi ni harakati ya chanzo wazi. Itifaki na matumizi ya DeFi yote yako wazi kwa ajili yako kukagua, kugawanya, na kubuni. Kwa sababu ya hii kuchanganya vitu vilivyo na tabaka (wao wote kushiriki Mtandao wa vizuizi msingi huo na mali), itifaki inaweza kuwa mchanganyiko na linganishwa kufungua kipekee fursa mchanganyiko.
+DeFi ni vuguvugu la chanzo wazi. Itifaki na programu za DeFi zote ziko wazi kwako kukagua, kufanya mchepuo, na kuvumbua. Kwa sababu ya mrundikano huu wa tabaka (zote zinashiriki mnyororo wa vitalu wa msingi na mali sawa), itifaki zinaweza kuchanganywa na kulinganishwa ili kufungua fursa za kipekee za mchanganyiko.
 
 <ButtonLink href="/developers/docs/dapps/">
-  Zaidi kuhusu kujenga mfumo mtawanyo wa kimamlaka
+  Zaidi kuhusu kujenga dapps
 </ButtonLink>
 
-## Masomo zaidi {#further-reading}
+## Zaidi ya DeFi ya jadi {#beyond-traditional-defi}
 
-### Data za DeFi {#defi-data}
+Mfumo wa ikolojia wa DeFi unaendelea kupanuka katika maeneo mapya:
+
+- **[Masoko ya utabiri](/prediction-markets/)** – Majukwaa yaliyogatuliwa ambapo unaweza kuweka dau juu ya matokeo ya matukio ya baadaye, kuanzia chaguzi hadi matukio ya michezo, bila wapatanishi.
+- **[Mali za ulimwengu halisi (RWAs)](/real-world-assets/)** – Kuweka mali halisi kama vile mali isiyohamishika, bidhaa, na hati fungani kwenye tokeni kwenye Ethereum, na kuleta matrilioni ya dola za thamani mnyororoni.
+- **[Malipo](/payments/)** – Kutumia Ethereum na sarafu thabiti kwa malipo ya haraka, ya gharama nafuu ya kimataifa bila miundombinu ya jadi ya kibenki.
+- **[Mawakala wa AI](/ai-agents/)** – Mawakala wa programu wanaojitegemea ambao wanaweza kufanya miamala kwenye Ethereum, kuwezesha aina mpya za biashara ya kiotomatiki, usimamizi wa jalada, na mwingiliano mnyororoni.
+
+## Usomaji zaidi {#further-reading}
+
+### Data ya DeFi {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
 ### Makala za DeFi {#defi-articles}
 
-- [Mwongozo wa wanaoanza wa DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, Januari 6, 2020_
-- [Miongozo ya Kutathmini Hatari ya DeFi ya EEA](https://entethalliance.org/specs/defi-risks/) – Muhtasari unaoungwa mkono na sekta kuhusu jinsi ya kutambua na kutathmini hatari muhimu katika itifaki za DeFi.
+- [Mwongozo wa wanaoanza kwa DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, Januari 6, 2020_
+- [Miongozo ya Tathmini ya Hatari ya DeFi ya EEA](https://entethalliance.org/specs/defi-risks/) – Muhtasari unaoungwa mkono na tasnia wa jinsi ya kutambua na kutathmini hatari kuu katika itifaki za DeFi.
 
 ### Video {#videos}
 
 - [Finematics - elimu ya fedha zilizogatuliwa](https://finematics.com/) – _Video kuhusu DeFi_
-- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Misingi ya DeFi: Kila kitu unachohitaji kujua ili kuanza katika nafasi hii ambayo wakati mwingine inachanganya._
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Misingi ya DeFi: Kila kitu unachohitaji kujua ili kuanza katika nafasi hii inayotatanisha mara kwa mara._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _DeFi ni nini?_
 
 ### Jumuiya {#communities}
 
 - [Seva ya Discord ya DeFi Llama](https://discord.defillama.com/)
-- [Seva ya Discord ya DeFi Pulse](https://discord.gg/Gx4TCTk)
 
 <Divider />
 

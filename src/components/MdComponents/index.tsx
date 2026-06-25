@@ -1,6 +1,4 @@
-import { type ComponentProps, type HTMLAttributes } from "react"
-
-import type { ChildOnlyProp } from "@/lib/types"
+import { type HTMLAttributes } from "react"
 
 import Codeblock from "@/components/Codeblock"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
@@ -18,15 +16,16 @@ import IdAnchor from "@/components/IdAnchor"
 import MarkdownImage from "@/components/Image/MarkdownImage" // TODO: Pull into MdComponents
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
-import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
+import TweetEmbed from "@/components/TweetEmbed"
 import * as AlertComponents from "@/components/ui/alert"
+import Blockquote from "@/components/ui/blockquote"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
-import { Flex } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
+import HR, { Divider } from "@/components/ui/hr"
+import KBD from "@/components/ui/kbd"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import { Tag } from "@/components/ui/tag"
@@ -63,24 +62,6 @@ export const Pre = (props: HTMLAttributes<HTMLDivElement>) => {
   return <Codeblock codeLanguage={codeLanguage} {...props} />
 }
 
-export const Blockquote = (props: ChildOnlyProp) => (
-  <blockquote
-    className="border-s-2 border-accent-a bg-accent-a/10 p-6"
-    {...props}
-  />
-)
-
-const KBD = (props: HTMLAttributes<HTMLElement>) => (
-  <kbd
-    className="rounded-xs border-2 border-primary px-2 py-0.5 align-middle"
-    {...props}
-  />
-)
-
-export const HR = () => (
-  <hr className="inline-block w-full border-body-medium opacity-60" />
-)
-
 // All base html element components
 export const htmlElements = {
   a: TooltipLink,
@@ -108,26 +89,6 @@ const AlertWithMargins = ({ className, ...props }) => (
   <Alert className={cn(className)} {...props} />
 )
 
-export const Page = ({
-  className,
-  ...props
-}: HTMLAttributes<HTMLDivElement>) => (
-  <Flex
-    className={cn(
-      "mx-auto mb-16 w-full flex-col justify-between lg:flex-row lg:pt-16",
-      className
-    )}
-    {...props}
-  />
-)
-
-export const ContentContainer = (props: ComponentProps<"article">) => (
-  <MainArticle
-    className="flow relative flex-[1_1_992px] px-8 pb-8 max-lg:pt-12"
-    {...props}
-  />
-)
-
 export const ExpandableCardWithMargin = ({
   className,
   ...props
@@ -142,7 +103,6 @@ export const reactComponents = {
   BrowseApps,
   ButtonLink,
   Card: MarkdownCard,
-  ContentContainer,
   Contributors,
   Divider,
   DocLink,
@@ -151,11 +111,11 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   Grid,
-  Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
   RestakingList,
   Tag,
+  TweetEmbed,
   WhatAreAppsStories,
   YouTube,
 }

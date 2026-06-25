@@ -1,8 +1,11 @@
 ---
 title: "ethers.js वापरून टोकन पाठवणे"
-description: "ethers.js वापरून टोकन पाठवण्यासाठी नवशिक्यांसाठी सोपे मार्गदर्शक."
-author: Kim YongJun
-tags: [ "ETHERS.JS", "ERC-20", "टोकन्स" ]
+description: "ethers.js वापरून टोकन पाठवण्यासाठी नवशिक्यांसाठी अनुकूल मार्गदर्शक."
+author: "किम योंग-जुन"
+tags:
+  - ETHERS.JS
+  - ERC-20
+  - टोकन्स
 skill: beginner
 breadcrumb: "टोकन पाठवा"
 lang: mr
@@ -11,18 +14,18 @@ published: 2021-04-06
 
 ## ethers.js(5.0) वापरून टोकन पाठवा {#send-token}
 
-### या ट्यूटोरियलमध्ये तुम्ही काय शिकाल {#you-learn-about}
+### या ट्युटोरियलमध्ये तुम्ही काय शिकाल {#you-learn-about}
 
-- ethers.js आयात करा
-- टोकन हस्तांतरित करा
-- नेटवर्क ट्रॅफिकच्या परिस्थितीनुसार गॅसची किंमत सेट करा
+- ethers.js इम्पोर्ट करणे
+- टोकन हस्तांतरण करणे
+- नेटवर्क ट्रॅफिकच्या परिस्थितीनुसार गॅसची किंमत सेट करणे
 
 ### सुरुवात करण्यासाठी {#to-get-started}
 
-सुरुवात करण्यासाठी, आपण प्रथम आपल्या जावास्क्रिप्टमध्ये ethers.js लायब्ररी आयात करणे आवश्यक आहे
+सुरुवात करण्यासाठी, आपण प्रथम आपल्या JavaScript मध्ये ethers.js लायब्ररी इम्पोर्ट केली पाहिजे
 ethers.js(5.0) समाविष्ट करा
 
-### इंस्टॉल करणे {#install-ethersjs}
+### इन्स्टॉल करणे {#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -48,47 +51,47 @@ ethers.js(5.0) समाविष्ट करा
 
 ### पॅरामीटर्स {#param}
 
-1. **`contract_address`**: टोकन करार पत्ता (जेव्हा तुम्हाला हस्तांतरित करायचे असलेले टोकन इथर नसेल तेव्हा करार पत्त्याची आवश्यकता असते)
-2. **`send_token_amount`**: प्राप्तकर्त्याला पाठवायची असलेली रक्कम
+1. **`contract_address`**: टोकन कॉन्ट्रॅक्ट पत्ता (जेव्हा तुम्हाला हस्तांतरण करायचे असलेले टोकन इथर नसते तेव्हा कॉन्ट्रॅक्ट पत्ता आवश्यक असतो)
+2. **`send_token_amount`**: तुम्हाला प्राप्तकर्त्याला पाठवायची असलेली रक्कम
 3. **`to_address`**: प्राप्तकर्त्याचा पत्ता
 4. **`send_account`**: प्रेषकाचा पत्ता
-5. **`private_key`**: व्यवहारावर स्वाक्षरी करण्यासाठी आणि प्रत्यक्षात टोकन हस्तांतरित करण्यासाठी प्रेषकाची खाजगी की
+5. **`private_key`**: व्यवहारावर स्वाक्षरी करण्यासाठी आणि प्रत्यक्षात टोकन हस्तांतरण करण्यासाठी प्रेषकाची खाजगी की
 
 ## सूचना {#notice}
 
-`signTransaction(tx)` काढून टाकले आहे कारण `sendTransaction()` ते आंतरिकरित्या करते.
+`signTransaction(tx)` काढून टाकले आहे कारण `sendTransaction()` ते अंतर्गतपणे करते.
 
-## पाठवण्याची प्रक्रिया {#procedure}
+## पाठवण्याच्या प्रक्रिया {#procedure}
 
-### १. नेटवर्कशी कनेक्ट करा (टेस्टनेट) {#connect-to-network}
+### 1. नेटवर्कशी कनेक्ट करा (टेस्टनेट) {#connect-to-network}
 
-#### प्रदाता सेट करा (Infura) {#set-provider}
+#### प्रोव्हायडर सेट करा (Infura) {#set-provider}
 
-Ropsten टेस्टनेटशी कनेक्ट करा
+रॉप्स्टन् टेस्टनेटशी कनेक्ट करा
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### २. वॉलेट तयार करा {#create-wallet}
+### 2. वॉलेट तयार करा {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### ३. वॉलेट नेटशी कनेक्ट करा {#connect-wallet-to-net}
+### 3. वॉलेट नेटवर्कशी कनेक्ट करा {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### ४. सध्याची गॅस किंमत मिळवा {#get-gas}
+### 4. सध्याची गॅसची किंमत मिळवा {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // gasPrice
+window.ethersProvider.getGasPrice() // गॅसची किंमत
 ```
 
-### ५. व्यवहार परिभाषित करा {#define-transaction}
+### 5. व्यवहार परिभाषित करा {#define-transaction}
 
 खाली परिभाषित केलेले हे व्हेरिएबल्स `send_token()` वर अवलंबून आहेत
 
@@ -96,9 +99,9 @@ window.ethersProvider.getGasPrice() // gasPrice
 
 1. **`send_account`**: टोकन प्रेषकाचा पत्ता
 2. **`to_address`**: टोकन प्राप्तकर्त्याचा पत्ता
-3. **`send_token_amount`**: पाठवायच्या टोकनची रक्कम
+3. **`send_token_amount`**: पाठवायच्या टोकन्सची रक्कम
 4. **`gas_limit`**: गॅस मर्यादा
-5. **`gas_price`**: गॅस किंमत
+5. **`gas_price`**: गॅसची किंमत
 
 [कसे वापरावे यासाठी खाली पहा](#how-to-use)
 
@@ -118,7 +121,7 @@ const tx = {
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("पाठवणे पूर्ण झाले!")
+  alert("Send finished!")
 })
 ```
 
@@ -145,9 +148,9 @@ send_token(
 )
 ```
 
-### यशस्वी! {#success}
+### यश! {#success}
 
-![यशस्वीरित्या पूर्ण झालेल्या व्यवहाराची प्रतिमा](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -174,14 +177,14 @@ function send_token(
         walletSigner
       )
 
-      // किती टोकन्स?
+      // किती टोकन?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // टोकन्स पाठवा
+      // टोकन पाठवा
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("टोकन पाठवले")
+        alert("sent token")
       })
     } // इथर पाठवणे
     else {
@@ -200,10 +203,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("पाठवणे पूर्ण झाले!")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("पाठवण्यात अयशस्वी!!")
+        alert("failed to send!!")
       }
     }
   })

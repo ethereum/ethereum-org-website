@@ -1,0 +1,254 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-19T18:55:49.335Z",
+  "englishManifestHash": "6759b4dbf857",
+  "placeholderOrder": [
+    "LINK-c42188",
+    "LINK-5e5e9b",
+    "LINK-6857cb",
+    "LINK-1200a5",
+    "LINK-456e6f",
+    "LINK-0ab4bf",
+    "LINK-1c625d",
+    "LINK-8b924d",
+    "LINK-9b9bff",
+    "LINK-c593cb",
+    "LINK-64579f",
+    "LINK-ecbe55",
+    "LINK-a0b1fb",
+    "LINK-3c2f9f",
+    "LINK-507007",
+    "LINK-55e4a7",
+    "LINK-15e599",
+    "LINK-680aaa",
+    "LINK-372ff5",
+    "LINK-885049",
+    "LINK-39a5d0",
+    "LINK-771fc2",
+    "LINK-a6341b",
+    "LINK-e67162",
+    "LINK-c73902",
+    "LINK-b95d62",
+    "LINK-bd444f",
+    "LINK-5bc430",
+    "LINK-228c73",
+    "LINK-ae97bb",
+    "LINK-848838",
+    "LINK-42169e",
+    "LINK-949b5f",
+    "LINK-c195c0"
+  ],
+  "placeholderMap": {
+    "LINK-c42188": {
+      "type": "link",
+      "values": {
+        "url": "/learn/"
+      }
+    },
+    "LINK-5e5e9b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-6857cb": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained"
+      }
+    },
+    "LINK-1200a5": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract"
+      }
+    },
+    "LINK-456e6f": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract"
+      }
+    },
+    "LINK-0ab4bf": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment"
+      }
+    },
+    "LINK-1c625d": {
+      "type": "link",
+      "values": {
+        "url": "https://openethereum.github.io/"
+      }
+    },
+    "LINK-8b924d": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd"
+      }
+    },
+    "LINK-9b9bff": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/"
+      }
+    },
+    "LINK-c593cb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/paritytech/pwasm-tutorial"
+      }
+    },
+    "LINK-64579f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/openethereum/pwasm-ethereum"
+      }
+    },
+    "LINK-ecbe55": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52"
+      }
+    },
+    "LINK-a0b1fb": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb"
+      }
+    },
+    "LINK-3c2f9f": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/"
+      }
+    },
+    "LINK-507007": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/paritytech/pwasm-ethereum"
+      }
+    },
+    "LINK-55e4a7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/sigp/lighthouse"
+      }
+    },
+    "LINK-15e599": {
+      "type": "link",
+      "values": {
+        "url": "https://ewasm.readthedocs.io/en/mkdocs/"
+      }
+    },
+    "LINK-680aaa": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rs/oasis-std/latest/oasis_std/index.html"
+      }
+    },
+    "LINK-372ff5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/paritytech/sol-rs"
+      }
+    },
+    "LINK-885049": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/rust-blockchain/evm"
+      }
+    },
+    "LINK-39a5d0": {
+      "type": "link",
+      "values": {
+        "url": "https://wavelet.perlin.net/docs/smart-contracts"
+      }
+    },
+    "LINK-771fc2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/foundry-rs/foundry"
+      }
+    },
+    "LINK-a6341b": {
+      "type": "link",
+      "values": {
+        "url": "https://alloy.rs"
+      }
+    },
+    "LINK-e67162": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/gakonst/ethers-rs"
+      }
+    },
+    "LINK-c73902": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/second-state/SewUp"
+      }
+    },
+    "LINK-b95d62": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/streamingfast/substreams"
+      }
+    },
+    "LINK-bd444f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/paradigmxyz/reth"
+      }
+    },
+    "LINK-5bc430": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Vid201/awesome-ethereum-rust"
+      }
+    },
+    "LINK-228c73": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OffchainLabs/stylus"
+      }
+    },
+    "LINK-ae97bb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-848838": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/ewasm/Lobby"
+      }
+    },
+    "LINK-42169e": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/Oasis-official/Lobby"
+      }
+    },
+    "LINK-949b5f": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/paritytech/parity"
+      }
+    },
+    "LINK-c195c0": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/SJK32GY"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T18:55:49.335Z",
+      "status": "success"
+    }
+  }
+}

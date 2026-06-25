@@ -4,10 +4,10 @@ import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import CallToContribute from "@/components/CallToContribute"
+import ContentFeedback from "@/components/ContentFeedback"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import MainArticle from "@/components/MainArticle"
@@ -20,21 +20,12 @@ import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
-import InlineLink from "@/components/ui/Link"
+import { Divider } from "@/components/ui/hr"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { addSlashes } from "@/lib/utils/url"
-
-const BackToTop = (props: ChildOnlyProp) => (
-  <div className="display-none mt-12 flex border-t pt-8" {...props}>
-    <InlineLink href="#top">
-      <Translation id="page-developers-docs:back-to-top" /> ↑
-    </InlineLink>
-  </div>
-)
 
 export const docsComponents = {
   ...mdxTableComponents,
@@ -86,33 +77,38 @@ export const DocsLayout = ({
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <SideNav path={addSlashes(slug)} />
-        <MainArticle className="flow min-w-0 flex-1 px-8 pt-8 pb-8 md:px-16 md:pt-12 md:pb-16">
-          <h1 id="top">{frontmatter.title}</h1>
-          <PageActions
-            slug={slug}
-            isTranslated={!contentNotTranslated}
-            editPath={absoluteEditPath}
-            hideEditButton={!!frontmatter.hideEditButton}
-            className="-ms-2 mb-10 lg:mb-12"
-          />
-          <TableOfContents
-            items={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
-            isMobile
-          />
-          {children}
-          {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
-          {!frontmatter.hideEditButton && (
-            <FileContributors
-              className="my-10 border-t"
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+
+        <main className="min-w-0 flex-1 p-8 xl:p-16">
+          <MainArticle className="flow">
+            <h1 id="top">{frontmatter.title}</h1>
+            <PageActions
+              slug={slug}
+              isTranslated={!contentNotTranslated}
+              editPath={absoluteEditPath}
+              hideEditButton={!!frontmatter.hideEditButton}
+              className="-ms-2 mb-10 lg:mb-12"
             />
-          )}
-          <BackToTop />
-          <FeedbackCard isArticle />
+            <TableOfContents
+              items={tocItems}
+              maxDepth={frontmatter.sidebarDepth!}
+              isMobile
+            />
+            {children}
+            {!frontmatter.hideEditButton && (
+              <FileContributors
+                className="my-10 border-t"
+                contributors={contributors}
+                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+              />
+            )}
+          </MainArticle>
+
+          {/* End-of-page actions */}
+          {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <DocsNav contentNotTranslated={contentNotTranslated} />
-        </MainArticle>
+          <ContentFeedback isArticle />
+        </main>
+
         {tocItems && (
           <TableOfContents
             className={isPageIncomplete ? "pt-20" : "pt-12"}

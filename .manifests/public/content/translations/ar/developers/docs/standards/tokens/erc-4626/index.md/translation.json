@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-17T23:14:49.228Z",
+  "englishManifestHash": "1ce2895966f6",
+  "placeholderOrder": [
+    "LINK-5925ea",
+    "CODE-c3b9fb",
+    "CODE-c26f22",
+    "CODE-dc6f17",
+    "CODE-2e5106",
+    "LINK-0daf77",
+    "LINK-935083",
+    "LINK-d0ae01",
+    "LINK-fb2e62",
+    "CODEBLOCK-047cab",
+    "CODEBLOCK-9c1480",
+    "CODEBLOCK-d1c821",
+    "CODE-4a6460",
+    "CODE-8bf729",
+    "CODEBLOCK-25caeb",
+    "CODE-8bf729",
+    "CODE-4a6460",
+    "CODEBLOCK-edfe29",
+    "LINK-5c2454",
+    "CODE-c3b9fb",
+    "CODE-81bae8",
+    "CODEBLOCK-c1f75c",
+    "CODEBLOCK-ec45d0",
+    "CODE-8bf729",
+    "CODE-4a6460",
+    "CODE-81bae8",
+    "CODEBLOCK-48ea83",
+    "LINK-18baca",
+    "CODE-dc6f17",
+    "CODE-81bae8",
+    "CODEBLOCK-74159d",
+    "CODEBLOCK-6225bb",
+    "CODE-4a6460",
+    "CODE-81bae8",
+    "CODE-8bf729",
+    "CODEBLOCK-6d5224",
+    "CODE-4c1029",
+    "LINK-11ade3",
+    "CODE-c26f22",
+    "CODEBLOCK-fbc507",
+    "CODEBLOCK-cd80ca",
+    "CODE-4a6460",
+    "CODE-4c1029",
+    "CODE-8bf729",
+    "CODE-81bae8",
+    "CODEBLOCK-3aee1f",
+    "CODE-4c1029",
+    "LINK-ac5e6e",
+    "CODE-2e5106",
+    "CODEBLOCK-75d478",
+    "CODEBLOCK-80eec2",
+    "CODE-4a6460",
+    "CODE-4c1029",
+    "CODE-8bf729",
+    "CODE-81bae8",
+    "CODEBLOCK-98b1f3",
+    "CODEBLOCK-ab0e2f",
+    "CODE-4c1029",
+    "IMAGE-b19432",
+    "LINK-18baca",
+    "CODE-dc6f17",
+    "LINK-5c2454",
+    "CODE-c3b9fb",
+    "CODEBLOCK-d27fae",
+    "CODE-0a367b",
+    "CODE-8bf729",
+    "CODE-4a6460",
+    "CODE-4a6460",
+    "CODE-4c1029",
+    "LINK-ac5e6e",
+    "CODE-2e5106",
+    "LINK-11ade3",
+    "CODE-c26f22",
+    "CODEBLOCK-ab5b32",
+    "CODE-0a367b",
+    "CODE-4a6460",
+    "CODE-4c1029",
+    "CODE-8bf729",
+    "CODE-81bae8",
+    "CODE-8bf729",
+    "LINK-3e0e45",
+    "LINK-02191d"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-047cab": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9c1480": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d1c821": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-25caeb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-edfe29": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c1f75c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ec45d0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-48ea83": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-74159d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6225bb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6d5224": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fbc507": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cd80ca": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3aee1f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-75d478": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-80eec2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-98b1f3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ab0e2f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d27fae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ab5b32": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-c3b9fb": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposit"
+      }
+    },
+    "CODE-c26f22": {
+      "type": "inline-code",
+      "values": {
+        "content": "withdraw"
+      }
+    },
+    "CODE-dc6f17": {
+      "type": "inline-code",
+      "values": {
+        "content": "mint"
+      }
+    },
+    "CODE-2e5106": {
+      "type": "inline-code",
+      "values": {
+        "content": "redeem"
+      }
+    },
+    "CODE-4a6460": {
+      "type": "inline-code",
+      "values": {
+        "content": "shares"
+      }
+    },
+    "CODE-8bf729": {
+      "type": "inline-code",
+      "values": {
+        "content": "assets"
+      }
+    },
+    "CODE-81bae8": {
+      "type": "inline-code",
+      "values": {
+        "content": "receiver"
+      }
+    },
+    "CODE-4c1029": {
+      "type": "inline-code",
+      "values": {
+        "content": "owner"
+      }
+    },
+    "CODE-0a367b": {
+      "type": "inline-code",
+      "values": {
+        "content": "sender"
+      }
+    },
+    "IMAGE-b19432": {
+      "type": "image",
+      "values": {
+        "path": "./map-of-erc-4626.png"
+      }
+    },
+    "LINK-5925ea": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4626"
+      }
+    },
+    "LINK-0daf77": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7540"
+      }
+    },
+    "LINK-935083": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7575"
+      }
+    },
+    "LINK-d0ae01": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-5c2454": {
+      "type": "link",
+      "values": {
+        "url": "#deposit"
+      }
+    },
+    "LINK-18baca": {
+      "type": "link",
+      "values": {
+        "url": "#mint"
+      }
+    },
+    "LINK-11ade3": {
+      "type": "link",
+      "values": {
+        "url": "#withdraw"
+      }
+    },
+    "LINK-ac5e6e": {
+      "type": "link",
+      "values": {
+        "url": "#redeem"
+      }
+    },
+    "LINK-3e0e45": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4626"
+      }
+    },
+    "LINK-02191d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:14:49.228Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,94 +1,94 @@
 ---
-title: Co je DAO?
-metaTitle: "Co je DAO? | Decentralizovaná autonomní organizace"
+title: Co je to DAO?
+metaTitle: "Co je to DAO? | Decentralizovaná autonomní organizace"
 description: "Přehled DAO na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: "Vyobrazení decentralizované autonomní organizace hlasující o návrhu."
+alt: "Znázornění DAO hlasující o návrhu."
 summaryPoints:
-  - "Členské komunity bez centralizovaného vedení."
-  - "Bezpečný způsob, jak spolupracovat s lidmi na internetu."
-  - "Bezpečné místo pro vložení prostředků na konkrétní věc."
+  - "Komunity vlastněné členy bez centralizovaného vedení."
+  - "Bezpečný způsob spolupráce s cizími lidmi na internetu."
+  - "Bezpečné místo pro vložení prostředků na konkrétní účel."
 ---
 
-## Co jsou DAO? {#what-are-daos}
+## Co jsou to DAO? {#what-are-daos}
 
-DAO je kolektivně vlastněná organizace sloužící k dosažení společně vytyčeného cíle.
+DAO je kolektivně vlastněná organizace pracující na společné misi.
 
-DAO nám umožňují pracovat s podobně smýšlejícími lidmi po celém světě, aniž bychom věřili benevolentnímu lídrovi, aby spravoval finanční prostředky nebo operace. Není zde žádný výkonný ředitel, který by rozmarně utrácel peníze nebo výkonný finanční ředitel, který by mohl manipulovat s rozvahou firmy. Namísto toho jsou do kódu zavedena pravidla založená na blockchainu, která definují, jak organizace funguje a jak je s finančními prostředky vynaloženo.
+DAO nám umožňují spolupracovat s podobně smýšlejícími lidmi po celém světě, aniž bychom museli důvěřovat benevolentnímu vůdci, že bude spravovat prostředky nebo operace. Neexistuje žádný generální ředitel (CEO), který by mohl utrácet prostředky z rozmaru, ani finanční ředitel (CFO), který by mohl manipulovat s účetnictvím. Místo toho pravidla založená na blockchainu, která jsou pevně zakódována, definují, jak organizace funguje a jak se utrácejí prostředky.
 
-Mají zabudované pokladny, do kterých nikdo nemá přístup bez souhlasu skupiny. Rozhodnutí se řídí návrhy a hlasováním, aby se zajistilo, že každý v organizaci bude mít svůj hlas a vše probíhá transparentně [na blockchainu](/glossary/#onchain).
+Mají zabudované pokladny, ke kterým nemá nikdo oprávnění přistupovat bez schválení skupiny. Rozhodnutí se řídí návrhy a hlasováním, aby se zajistilo, že každý v organizaci má hlas, a vše probíhá transparentně [onchain](/glossary/#onchain).
 
 ## Proč potřebujeme DAO? {#why-dao}
 
-Zakládání nové organizace s někým dalším vyžaduje nejen počáteční finanční prostředky, ale také velkou důvěru v lidi, s nimiž budete spolupracovat. Může být ale těžké důvěřovat někomu, s kým jste dosud komunikovali pouze přes internet. V DAO však nemusíte důvěřovat nikomu dalšímu, protože veškeré procesy dané organizace jsou založené na počítačovém kódu, který je 100% transparentní a kýmkoliv ověřitelný.
+Založení organizace s někým, což zahrnuje financování a peníze, vyžaduje velkou důvěru v lidi, se kterými spolupracujete. Je ale těžké důvěřovat někomu, s kým jste komunikovali pouze na internetu. U DAO nemusíte důvěřovat nikomu dalšímu ve skupině, pouze kódu DAO, který je 100% transparentní a kýmkoli ověřitelný.
 
-Tento princip tak otevírá mnoho nových příležitostí ke globální spolupráci a koordinaci.
+To otevírá mnoho nových příležitostí pro globální spolupráci a koordinaci.
 
 ### Srovnání {#dao-comparison}
 
-| DAO                                                                                                                                           | Tradiční organizace                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Obvykle má horizontální strukturu a je plně demokratická.                                                                     | Obvykle má hierarchickou strukturu.                                                                    |
-| Veškeré plánované změny vyžadují členské hlasování.                                                                           | V závislosti na struktuře se změny dějí buď pomocí hlasování nebo rozhodnutím členů s výhradním právem. |
-| Výsledky hlasování jsou zpracovávané automaticky bez nutnosti důvěryhodného prostředníka.                                     | Pokud je hlasování povoleno, je vyřizováno ručně a výsledek je zpracováván interně.                    |
-| Služby jsou řízeny automatickým a decentralizovaným způsobem (například distribuce filantropických fondů). | Vyžaduje lidskou manipulaci nebo centrálně řízenou automatizaci náchylnou k falšování.                 |
-| Veškerá činnost je transparentní a zcela veřejná.                                                                             | Aktivity jsou obvykle soukromé a skryté před veřejností.                                               |
+| DAO                                                                                                                     | Tradiční organizace                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Obvykle plochá a plně demokratizovaná.                                                                                  | Obvykle hierarchická.                                                                                                        |
+| K provedení jakýchkoli změn je vyžadováno hlasování členů.                                                              | V závislosti na struktuře mohou být změny vyžadovány jedinou stranou, nebo může být nabídnuto hlasování.                     |
+| Hlasy jsou sečteny a výsledek je implementován automaticky bez důvěryhodného zprostředkovatele.                         | Pokud je hlasování povoleno, hlasy se sčítají interně a výsledek hlasování se musí zpracovat ručně.                          |
+| Nabízené služby jsou zpracovávány automaticky decentralizovaným způsobem (například distribuce filantropických prostředků). | Vyžaduje lidskou obsluhu nebo centrálně řízenou automatizaci, která je náchylná k manipulaci.                                |
+| Veškerá aktivita je transparentní a plně veřejná.                                                                       | Aktivita je obvykle soukromá a pro veřejnost omezená.                                                                        |
 
 ### Příklady DAO {#dao-examples}
 
-Několik příkladů, k čemu je možné DAO využít:
+Aby to dávalo větší smysl, zde je několik příkladů, jak byste mohli DAO využít:
 
-- **Charitativní organizace** – můžete přijímat dary od kohokoliv na světě a hlasovat o tom, které projekty budou s jejich pomocí financovány.
-- **Kolektivní vlastnictví** – můžete zakoupit fyzická či digitální aktiva a členové mohou hlasovat o tom, jak je používat.
-- **Podnikatelské záměry a granty** – můžete vytvořit fond rizikového kapitálu, který sdružuje investiční kapitál, a hlasovat o tom, které záměry podpoříte. Splacené peníze mohou být později přerozděleny mezi členy DAO.
+- **Charita** – mohli byste přijímat dary od kohokoli na světě a hlasovat o tom, jaké účely financovat.
+- **Kolektivní vlastnictví** – mohli byste nakupovat fyzická nebo digitální aktiva a členové mohou hlasovat o tom, jak je využít.
+- **Rizikový kapitál a granty** – mohli byste vytvořit fond rizikového kapitálu, který shromažďuje investiční kapitál a hlasuje o tom, jaké projekty podpořit. Splacené peníze by se později mohly přerozdělit mezi členy DAO.
 
-<YouTube id="zTStDvUtQWc" />
+<VideoWatch slug="dao-build-next-great-city" />
 
-## Jak fungují DAO? {#how-daos-work}
+## Jak DAO fungují? {#how-daos-work}
 
-Základem DAO je její [chytrý kontrakt](/glossary/#smart-contract), který definuje pravidla organizace a spravuje pokladnu skupiny. Jakmile je kontrakt nasazen na Ethereu, nikdo nemůže změnit pravidla jinak než hlasováním. Pokud by se tedy někdo pokusil provést akci, která není definována pravidly a logikou počítačového kódu, skončí to neúspěchem. Stejně tak i finanční prostředky jsou řízeny chytrým kontraktem, takže nikdo nemůže utratit peníze bez souhlasu skupiny. Znamená to tedy, že DAO nepotřebuje žádnou ústřední entitu a namísto toho jsou všechna rozhodnutí i platby prováděny kolektivně na základě společného hlasování.
+Páteří DAO je jeho [chytrý kontrakt](/glossary/#smart-contract), který definuje pravidla organizace a spravuje pokladnu skupiny. Jakmile je kontrakt spuštěn na [Ethereu](/), nikdo nemůže změnit pravidla jinak než hlasováním. Pokud se někdo pokusí udělat něco, co není pokryto pravidly a logikou v kódu, selže to. A protože je pokladna také definována chytrým kontraktem, znamená to, že nikdo nemůže utratit peníze bez schválení skupiny. To znamená, že DAO nepotřebují centrální autoritu. Místo toho skupina rozhoduje kolektivně a platby jsou automaticky autorizovány, když návrhy projdou hlasováním.
 
-To je možné z toho důvodu, že chytré kontrakty jsou po nasazení na Ethereum chráněny proti nedovolené manipulaci. Pravidla DAO jsou totiž zapsaná pomocí veřejně dostupného kódu a nelze je tak upravovat bez povšimnutí.
+To je možné, protože chytré kontrakty jsou po spuštění na Ethereu odolné proti neoprávněné manipulaci. Nemůžete jen tak upravit kód (pravidla DAO), aniž by si toho lidé všimli, protože vše je veřejné.
 
 ## Ethereum a DAO {#ethereum-and-daos}
 
-Ethereum je ideálním ekosystémem pro založení DAO a to hned z několika důvodů:
+Ethereum je dokonalým základem pro DAO z několika důvodů:
 
-- Vlastní konsenzus sítě Ethereum je natolik distribuovaný a zavedený, že mu organizace mohou důvěřovat.
-- Kód chytrého kontraktu nemůže být po svém nasazení upraven a to ani vlastními majiteli. To umožňuje řídit DAO podle pravidel, se kterými byla naprogramována.
-- Chytré kontrakty mohou posílat i přijímat finanční prostředky, což umožňuje správu společných financí bez existence důvěryhodného prostředníka.
-- Komunita kolem Etherea prokazuje schopnost spolupracovat, což umožňuje vznik osvědčených postupů a podpůrných systémů.
+- Vlastní konsensus Etherea je decentralizovaný a dostatečně zavedený na to, aby organizace mohly síti důvěřovat.
+- Kód chytrého kontraktu nelze po spuštění upravovat, a to ani jeho vlastníky. To umožňuje DAO fungovat podle pravidel, se kterými bylo naprogramováno.
+- Chytré kontrakty mohou odesílat/přijímat prostředky. Bez toho byste ke správě skupinových prostředků potřebovali důvěryhodného zprostředkovatele.
+- Komunita Etherea se ukázala být spíše spolupracující než konkurenční, což umožňuje rychlý vznik osvědčených postupů a systémů podpory.
 
 ## Správa DAO {#dao-governance}
 
-Při řízení DAO je třeba zvážit mnoho aspektů, například způsob hlasování a navrhování.
+Při správě DAO je třeba zvážit mnoho věcí, například jak funguje hlasování a návrhy.
 
-### Delegování {#governance-delegation}
+### Delegace {#governance-delegation}
 
-Delegování je něco jako DAO verze zastupitelské demokracie. Držitelé tokenu delegují hlasy uživatelům, kteří se nabídnou a slíbí, že budou spravovat protokol a zůstanou o něm informováni.
-
-#### Známý příklad {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – Držitelé ENS mohou delegovat své hlasy angažovaným členům komunity, aby je zastupovali.
-
-### Automatická správa transakcí {#governance-example}
-
-V mnoha DAO budou transakce provedeny automaticky, pokud bude dostatečně uživatelů hlasovat pro.
+Delegace je jako DAO verze zastupitelské demokracie. Držitelé tokenů delegují hlasy na uživatele, kteří se sami nominují a zavazují se ke správě protokolu a k tomu, že budou informováni.
 
 #### Známý příklad {#governance-example}
 
-[Nouns](https://nouns.wtf) – V Nouns DAO se transakce automaticky provede, pokud je dosaženo kvóra hlasů a většina hlasuje pro, pokud ji zakladatelé nevetují.
+[ENS](https://claim.ens.domains/delegate-ranking) – Držitelé ENS mohou delegovat své hlasy na angažované členy komunity, aby je zastupovali.
 
-### Správa pomocí multisig {#governance-example}
+### Automatická správa transakcí {#governance-example-2}
 
-Ačkoli DAO mohou mít tisíce hlasujících členů, prostředky mohou být uloženy v [peněžence](/glossary/#wallet) sdílené 5–20 aktivními členy komunity, kteří jsou důvěryhodní a obvykle mají zveřejněnou identitu (veřejná identita známá komunitě). Po hlasování signatáři s [vícenásobným podpisem](/glossary/#multisig) vykonají vůli komunity.
+V mnoha DAO budou transakce automaticky provedeny, pokud pro ně bude hlasovat usnášeníschopná většina (kvorum) členů.
+
+#### Známý příklad {#governance-example-3}
+
+[Nouns](https://nouns.wtf) – V Nouns DAO je transakce automaticky provedena, pokud je dosaženo kvora hlasů a většina hlasuje kladně, pokud ji zakladatelé nevetují.
+
+### Správa pomocí multisig {#governance-example-4}
+
+Zatímco DAO mohou mít tisíce hlasujících členů, prostředky mohou být uloženy v [peněžence](/glossary/#wallet) sdílené 5-20 aktivními členy komunity, kteří jsou důvěryhodní a obvykle doxxovaní (jejich veřejná identita je komunitě známa). Po hlasování podepisující osoby [multisig](/glossary/#multisig) peněženky vykonají vůli komunity.
 
 ## Zákony o DAO {#dao-laws}
 
-V roce 1977 představil stát Wyoming LLC, typ společnosti ekvivalentní k české společnosti s ručením omezením, který chrání podnikatele a omezuje jejich odpovědnost. V nedávné době se stal průkopníkem zákona DAO, který pro organizaci zavádí právní status. V současné době mají Wyoming, Vermont a Panenské ostrovy v nějaké formě zákony DAO.
+V roce 1977 stát Wyoming vynalezl LLC (společnost s ručením omezeným), která chrání podnikatele a omezuje jejich ručení. Nedávno se stali průkopníky zákona o DAO, který pro DAO zavádí právní status. V současné době mají zákony o DAO v nějaké formě Wyoming, Vermont a Panenské ostrovy.
 
 ### Známý příklad {#law-example}
 
@@ -96,72 +96,68 @@ V roce 1977 představil stát Wyoming LLC, typ společnosti ekvivalentní k čes
 
 ## Členství v DAO {#dao-membership}
 
-Existují různé typy členství v DAO. Na základně nich je pak určeno, jak v dané DAO funguje hlasování a další klíčové principy.
+Existují různé modely členství v DAO. Členství může určovat, jak funguje hlasování a další klíčové části DAO.
 
-### Členství na základě tokenů {#token-based-membership}
+### Členství založené na tokenech {#token-based-membership}
 
-Obvykle zcela [bez oprávnění](/glossary/#permissionless), v závislosti na použitém tokenu. S těmito tokeny pro správu lze většinou obchodovat bez oprávnění na [decentralizované burze](/glossary/#dex). Ostatní mohou být získávány poskytnutím likvidity anebo těženy nějakým „důkazem prací“. Ve všech případech ale pouhé držení tokenu umožňuje přístup k hlasování.
+Obvykle plně [nevyžadující povolení](/glossary/#permissionless), v závislosti na použitém tokenu. Většinou lze tyto tokeny pro správu obchodovat bez povolení na [decentralizované burze](/glossary/#dex). Jiné je nutné získat poskytováním likvidity nebo nějakým jiným „důkazem prací (PoW)“. Ať tak či onak, pouhé držení tokenu poskytuje přístup k hlasování.
 
-_Obvykle se používá k řízení rozsáhlých decentralizovaných protokolů a/nebo tokenů samotných._
+_Typicky se používá ke správě širokých decentralizovaných protokolů a/nebo samotných tokenů._
 
 #### Známý příklad {#token-example}
 
-[MakerDAO](https://makerdao.com) – Token MKR od MakerDAO je široce dostupný na decentralizovaných burzách a kdokoli si může zakoupit hlasovací právo o budoucnosti protokolu Maker.
+[MakerDAO](https://makerdao.com) – Token MKR od MakerDAO je široce dostupný na decentralizovaných burzách a kdokoli si může koupit hlasovací právo o budoucnosti protokolu Maker.
 
-### Členství na základě podílů {#share-based-membership}
+### Členství založené na podílech {#share-based-membership}
 
-DAO založené na akciích jsou přísnější, ale stále docela otevřené. Každý potenciální člen může předložit návrh na přijetí, který obvykle nabízí hodnotu ve formě tokenů nebo určitého typu práce. Akcie pak představují přímou hlasovací sílu a vlastnictví. Členové mohou z takové DAO kdykoli vystoupit a to se svým poměrným podílem celkových prostředků.
+DAO založené na podílech jsou více s řízeným přístupem, ale stále poměrně otevřené. Kdokoli z potenciálních členů může podat návrh na připojení k DAO, obvykle s nabídkou příspěvku určité hodnoty ve formě tokenů nebo práce. Podíly představují přímou hlasovací sílu a vlastnictví. Členové mohou kdykoli provést výstup se svým poměrným podílem z pokladny.
 
-_Obvykle se používá u lidskoprávních organizací, jako jsou charity a odborové svazy nebo u investičních klubů. Může být použita také k řízení protokolů nebo správě tokenů._
+_Typicky se používá pro úžeji propojené organizace zaměřené na lidi, jako jsou charity, zaměstnanecké kolektivy a investiční kluby. Může také spravovat protokoly a tokeny._
 
-#### Známý příklad {#share-example}
+### Členství založené na reputaci {#reputation-based-membership}
 
-[MolochDAO](https://molochdao.com/) – MolochDAO se zaměřuje na financování projektů na Ethereu. Pro získání členství je potřeba předložit návrh, na jehož základě skupina posoudí, má-li zájemce potřebné odborné znalosti a kapitál, aby mohl činit informované úsudky o potenciálních grantech. Přístup k takovému DAO tedy nelze koupit na otevřeném trhu.
+Reputace představuje důkaz o účasti a uděluje hlasovací právo v DAO. Na rozdíl od členství založeného na tokenech nebo podílech, DAO založené na reputaci nepřevádějí vlastnictví na přispěvatele. Reputaci nelze koupit, převést ani delegovat; členové DAO si musí reputaci zasloužit svou účastí. Hlasování onchain je nevyžadující povolení a potenciální členové mohou volně podávat návrhy na připojení k DAO a žádat o získání reputace a tokenů jako odměny výměnou za své příspěvky.
 
-### Členství na základě reputace {#reputation-based-membership}
-
-Reputace je důkazem účasti a poskytuje hlasovací práva v DAO. Na rozdíl od tokenových či podílových členství, organizace DAO založené na reputaci nepřevádějí vlastnictví na přispěvatele. Reputaci nelze koupit, převést či delegovat; členové DAO si ji musí získat prostřednictvím účasti. Hlasování na blockchainu je veřejně dostupné a budoucí členové mohou svobodně předložit návrhy na vstup do DAO a požádat o získání reputace a tokenů jako odměnu za své příspěvky.
-
-_Obvykle se používá pro decentralizovaný vývoj a správu protokolů a [dapps](/glossary/#dapp), ale dobře se hodí i pro různé organizace, jako jsou charity, pracovní družstva, investiční kluby atd._
+_Typicky se používá pro decentralizovaný vývoj a správu protokolů a [decentralizovaných aplikací (dapp)](/glossary/#dapp), ale také se dobře hodí pro rozmanitou škálu organizací, jako jsou charity, zaměstnanecké kolektivy, investiční kluby atd._
 
 #### Známý příklad {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao byl globální suverénní kolektiv, který od roku 2019 budoval a spravoval decentralizované protokoly a aplikace. Využívalo správu založenou na reputaci a [holografický konsensus](/glossary/#holographic-consensus) ke koordinaci a správě prostředků, což znamenalo, že si nikdo nemohl koupit vliv na jeho budoucnost nebo správu.
+[DXdao](https://DXdao.eth.limo) – DXdao byl globální suverénní kolektiv, který od roku 2019 budoval a spravoval decentralizované protokoly a aplikace. Využíval správu založenou na reputaci a [holografický konsenzus](/glossary/#holographic-consensus) ke koordinaci a správě prostředků, což znamenalo, že si nikdo nemohl koupit vliv na jeho budoucnost nebo správu.
 
-## Připojit se k DAO / založit DAO {#join-start-a-dao}
+## Připojte se / založte DAO {#join-start-a-dao}
 
-### Připojit se k DAO {#join-a-dao}
+### Připojte se k DAO {#join-a-dao}
 
 - [Komunitní DAO na Ethereu](/community/get-involved/#decentralized-autonomous-organizations-daos)
-- [Seznam DAO na DAOHaus](https://app.daohaus.club/explore)
+- [Seznam DAO od DAOHaus](https://app.daohaus.club/explore)
 - [Seznam DAO na Tally.xyz](https://www.tally.xyz/explore)
 - [Seznam DAO na DeGov.AI](https://apps.degov.ai/)
 
-### Založit DAO {#start-a-dao}
+### Založte DAO {#start-a-dao}
 
-- [Svolejte DAO s DAOHaus](https://app.daohaus.club/summon)
-- [Založte Governor DAO s Tally](https://www.tally.xyz/get-started)
-- [Vytvořte DAO na platformě Aragon](https://aragon.org/product)
+- [Vyvolejte DAO pomocí DAOHaus](https://app.daohaus.club/summon)
+- [Založte Governor DAO pomocí Tally](https://www.tally.xyz/get-started)
+- [Vytvořte DAO poháněné Aragonem](https://aragon.org/product)
 - [Založte kolonii](https://colony.io/)
-- [Vytvořte DAO s holografickým konsensem od DAOstacku](https://alchemy.daostack.io/daos/create)
-- [Spusťte DAO pomocí DeGov Launcheru](https://docs.degov.ai/integration/deploy)
+- [Vytvořte DAO s holografickým konsenzem od DAOstack](https://alchemy.daostack.io/daos/create)
+- [Spusťte DAO pomocí DeGov Launcher](https://docs.degov.ai/integration/deploy)
 
 ## Další čtení {#further-reading}
 
 ### Články o DAO {#dao-articles}
 
 - [Co je to DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
-- [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
-- [Co je DAO a k čemu slouží?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
-- [Jak založit digitální komunitu na bázi DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [Dům DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [Co je to DAO a k čemu slouží?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
+- [Jak založit digitální komunitu poháněnou DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Co je to DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
-- [Co je to holografický konsensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO nejsou korporace: kde na decentralizaci v autonomních organizacích záleží](https://vitalik.eth.limo/general/2022/09/20/daos.html) od Vitalika
-- [DAO, DAC, DA a další: Neúplný terminologický průvodce](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blog Etherea](https://blog.ethereum.org)
+- [Co je to holografický konsenzus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
+- [DAO nejsou korporace: kde záleží na decentralizaci v autonomních organizacích od Vitalika](https://vitalik.eth.limo/general/2022/09/20/daos.html)
+- [DAO, DAC, DA a další: Neúplný průvodce terminologií](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blog Etherea](https://blog.ethereum.org)
 
 ### Videa {#videos}
 
-- [Co je DAO v kryptoměnách?](https://youtu.be/KHm0uUPqmVE)
+- [Co je to DAO v kryptu?](https://youtu.be/KHm0uUPqmVE)
 - [Může DAO postavit město?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
 
 <Divider />
