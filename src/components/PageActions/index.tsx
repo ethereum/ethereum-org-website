@@ -33,6 +33,8 @@ const PageActions = ({
 
   return (
     <div
+      role="toolbar"
+      aria-label={t("page-actions")}
       className={cn(
         "flex flex-row flex-wrap items-center gap-x-3 gap-y-2 sm:gap-x-4",
         className
