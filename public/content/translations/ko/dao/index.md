@@ -148,7 +148,7 @@ _일반적으로 프로토콜과 [탈중앙화앱](/glossary/#dapp)의 탈중앙
 
 ### DAO 관련 문서 {#dao-articles}
 
-- [DAO란 무엇인가?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
+- [DAO란 무엇인가?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO란 무엇이며, 어떤 용도로 사용되는가?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAO 기반 디지털 커뮤니티 시작하는 방법](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

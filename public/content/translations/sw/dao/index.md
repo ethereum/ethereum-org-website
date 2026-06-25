@@ -148,7 +148,7 @@ _Kwa kawaida hutumika kwa maendeleo yaliyogatuliwa na utawala wa itifaki na [mfu
 
 ### Makala za DAO {#dao-articles}
 
-- [DAO ni nini?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
+- [DAO ni nini?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO ni nini na inatumika kwa nini?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Jinsi ya Kuanzisha Jumuiya ya Kidijitali Inayoendeshwa na DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

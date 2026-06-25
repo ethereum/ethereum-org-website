@@ -150,7 +150,7 @@ _Обычно используется для децентрализованно
 
 ### Статьи о DAO {#dao-articles}
 
-- [Что такое DAO?](https://blog.aragon.org/what-is-a-dao/) — [Aragon](https://aragon.org/)
+- [Что такое DAO?](https://aragon.org/dao) — [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) — [Metagame](https://wiki.metagame.wtf/)
 - [Что такое DAO и для чего она нужна?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) — [DAOhaus](https://daohaus.club/)
 - [Как создать цифровое сообщество на базе DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) — [DAOhaus](https://daohaus.club/)

@@ -148,7 +148,7 @@ _सामान्यतः प्रोटोकॉल आणि [dapps](/glos
 
 ### DAO लेख {#dao-articles}
 
-- [DAO म्हणजे काय?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
+- [DAO म्हणजे काय?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO म्हणजे काय आणि ते कशासाठी आहे?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAO-चालित डिजिटल समुदाय कसा सुरू करावा](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

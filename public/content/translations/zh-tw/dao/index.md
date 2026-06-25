@@ -148,7 +148,7 @@ _通常用於協定和[去中心化應用程式](/glossary/#dapp)的去中心化
 
 ### 去中心化自治組織相關文章 {#dao-articles}
 
-- [什麼是去中心化自治組織？](https://blog.aragon.org/what-is-a-dao/)– [Aragon](https://aragon.org/)
+- [什麼是去中心化自治組織？](https://aragon.org/dao)– [Aragon](https://aragon.org/)
 - [去中心化自治組織之家](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [何謂去中心化自治組織？它有何用途？](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for)– [DAOhaus](https://daohaus.club/)
 - [如何創立由去中心化自治組織支援的數位社群](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

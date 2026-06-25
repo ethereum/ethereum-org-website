@@ -148,7 +148,7 @@ _সাধারণত প্রোটোকল এবং [ডিএ্যাপ
 
 ### DAO নিবন্ধ {#dao-articles}
 
-- [DAO কী?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
+- [DAO কী?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
 - [হাউস অফ DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO কী এবং এটি কীসের জন্য?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [কীভাবে একটি DAO-চালিত ডিজিটাল কমিউনিটি শুরু করবেন](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
