@@ -145,7 +145,7 @@ export const TopicLayout = async ({
         slug={slug}
         isTranslated={!contentNotTranslated}
         editPath={getEditPath(slug)}
-        className="-ms-2 !mt-8 mb-8 lg:!mt-0 [&+h2]:!mt-0"
+        className="-ms-2 mb-8 [&+h2]:mt-0!"
       />
       {children}
     </ContentLayout>

@@ -14333,12 +14333,31 @@
       ]
     },
     {
+      "login": "alerodriargui",
+      "name": "Alejandro Rodríguez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80339818?v=4",
+      "profile": "https://github.com/alerodriargui",
+      "contributions": [
+        "bug",
+        "maintenance"
+      ]
+    },
+    {
       "login": "vikramsingh786lemonn",
       "name": "vikramsingh786lemonn",
       "avatar_url": "https://avatars.githubusercontent.com/u/289930201?v=4",
       "profile": "https://github.com/vikramsingh786lemonn",
       "contributions": [
         "tool"
+      ]
+    },
+    {
+      "login": "lufa23",
+      "name": "lufa23",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67415638?v=4",
+      "profile": "https://github.com/lufa23",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],

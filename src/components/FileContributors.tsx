@@ -1,8 +1,9 @@
 "use client"
 
 import { BaseHTMLAttributes, useState } from "react"
+import { cva, type VariantProps } from "class-variance-authority"
 
-import type { ChildOnlyProp, FileContributor } from "@/lib/types"
+import type { FileContributor } from "@/lib/types"
 
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
@@ -18,12 +19,6 @@ import Modal from "./ui/dialog-modal"
 import { LinkBox, LinkOverlay } from "./ui/link-box"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
-
-const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
-  <ScrollArea className="h-64 w-full">
-    <UnorderedList className="m-0">{children}</UnorderedList>
-  </ScrollArea>
-)
 
 const ContributorAvatar = ({
   contributor,
@@ -117,17 +112,29 @@ const Contributor = ({ contributor }: ContributorProps) => {
   )
 }
 
-type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
-export type FileContributorsProps = FlexProps & {
+const variants = cva("", {
+  variants: {
+    variant: {
+      base: "my-4 me-4 md:p-2 lg:mb-0",
+      compact: "",
+    },
+  },
+  defaultVariants: {
+    variant: "base",
+  },
+})
+
+export type FileContributorsProps = BaseHTMLAttributes<HTMLDivElement> & {
   contributors: FileContributor[]
   lastEditLocaleTimestamp?: string
   className?: string
-}
+} & VariantProps<typeof variants>
 
 const FileContributors = ({
   contributors,
   lastEditLocaleTimestamp,
   className,
+  variant,
   ...props
 }: FileContributorsProps) => {
   const [isModalOpen, setModalOpen] = useState(false)
@@ -145,44 +152,44 @@ const FileContributors = ({
           <p>
             <Translation id="contributors-thanks" />
           </p>
-          <ContributorList>
-            {contributors.map((contributor) => (
-              <Contributor contributor={contributor} key={contributor.login} />
-            ))}
-          </ContributorList>
+          <ScrollArea className="h-64 w-full">
+            <UnorderedList className="m-0">
+              {contributors.map((contributor) => (
+                <Contributor
+                  contributor={contributor}
+                  key={contributor.login}
+                />
+              ))}
+            </UnorderedList>
+          </ScrollArea>
         </div>
       </Modal>
 
-      <Flex
-        className={cn("flex-col p-0 md:flex-row md:p-2", className)}
-        {...props}
-      >
-        <Flex className="my-4 me-4 flex-1 flex-col items-start lg:mb-0">
-          {lastEditLocaleTimestamp && (
-            <p className="mb-2 text-body-medium">
-              <Translation id="page-last-update" /> {lastEditLocaleTimestamp}
-            </p>
-          )}
-          <LinkBox className="flex">
-            <ContributorAvatarGroup contributors={contributors} />
-            <LinkOverlay asChild>
-              <Button
-                variant="ghost"
-                onClick={() => {
-                  setModalOpen(true)
-                  trackCustomEvent({
-                    eventCategory: "see contributors",
-                    eventAction: "click",
-                    eventName: "click",
-                  })
-                }}
-              >
-                <Translation id="see-contributors" />
-              </Button>
-            </LinkOverlay>
-          </LinkBox>
-        </Flex>
-      </Flex>
+      <aside className={cn(variants({ variant }), className)} {...props}>
+        {lastEditLocaleTimestamp && (
+          <p className="mb-2 text-body-medium">
+            <Translation id="page-last-update" /> {lastEditLocaleTimestamp}
+          </p>
+        )}
+        <LinkBox className="flex">
+          <ContributorAvatarGroup contributors={contributors} />
+          <LinkOverlay asChild>
+            <Button
+              variant="ghost"
+              onClick={() => {
+                setModalOpen(true)
+                trackCustomEvent({
+                  eventCategory: "see contributors",
+                  eventAction: "click",
+                  eventName: "click",
+                })
+              }}
+            >
+              <Translation id="see-contributors" />
+            </Button>
+          </LinkOverlay>
+        </LinkBox>
+      </aside>
     </>
   )
 }

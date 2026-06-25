@@ -283,10 +283,6 @@ module.exports = (phase) => {
           "./public/content/developers/tutorials/**/*.md",
           "./public/content/translations/*/developers/tutorials/**/*.md",
         ],
-        "\\[locale\\]/videos": [
-          "./public/content/videos/**/*.md",
-          "./public/content/translations/*/videos/**/*.md",
-        ],
         "\\[locale\\]/developers": [
           "./public/content/latest/**/*.md",
           "./public/content/translations/*/latest/**/*.md",
