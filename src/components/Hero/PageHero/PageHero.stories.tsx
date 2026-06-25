@@ -27,7 +27,7 @@ export default meta
 type Story = StoryObj<typeof PageHeroComponent>
 
 // Shared, translated content so each story below only declares the props that
-// make its variation distinct (eyebrow type, image, divider).
+// make its variation distinct (image, divider).
 const useBaseProps = () => {
   const t = useTranslations("page-learn")
 
@@ -81,21 +81,6 @@ export const PageHeroTextOnly: Story = {
   render: () => (
     <PageHeroComponent
       breadcrumbs={{ slug: "/run-a-node/" }}
-      {...useBaseProps()}
-    />
-  ),
-}
-
-/**
- * Eyebrow: pass `header` instead of `breadcrumbs` (the two are mutually
- * exclusive). The eyebrow becomes the page `<h1>` and `title` is demoted to an
- * `<h2>`.
- */
-export const PageHeroHeaderEyebrow: Story = {
-  render: () => (
-    <PageHeroComponent
-      header="Run a node"
-      heroImg={heroImg}
       {...useBaseProps()}
     />
   ),

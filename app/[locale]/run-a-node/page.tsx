@@ -162,7 +162,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <PageHero
-        header={t("page-run-a-node-title")}
+        breadcrumbs={{ slug: "run-a-node" }}
         heroImg={heroImg}
         title={<Translation id="page-run-a-node:page-run-a-node-hero-header" />}
         description={t("page-run-a-node-hero-subtitle")}

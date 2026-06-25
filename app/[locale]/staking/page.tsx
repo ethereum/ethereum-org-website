@@ -163,7 +163,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         heroSection={
           <>
             <PageHero
-              header={t("page-staking-hero-title")}
+              breadcrumbs={{ slug: "staking" }}
               heroImg={heroImg}
               title={t("page-staking-hero-header")}
               description={t("page-staking-hero-subtitle")}

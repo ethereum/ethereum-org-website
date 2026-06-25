@@ -8,7 +8,6 @@ import {
 
 import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
 import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import FileContributors from "@/components/FileContributors"
@@ -134,13 +133,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
       <PageContainer>
         <PageHero
-          header={t("page-roadmap-vision-title")}
+          breadcrumbs={{ slug: SLUG, startDepth: 1 }}
           heroImg={heroImg}
           title={t("page-roadmap-vision-future")}
           description={t("page-roadmap-vision-subtitle")}
         />
         <PageContent>
-          <Breadcrumbs slug={SLUG} startDepth={1} />
           <CentralContent>
             <CenterH2>{t("page-roadmap-vision-upgrade-needs")}</CenterH2>
             <Text>{t("page-roadmap-vision-upgrade-needs-desc")}</Text>
