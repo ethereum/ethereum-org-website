@@ -48,7 +48,7 @@ published: 2021-10-06
 
 В этом уроке мы сосредоточимся на части 2, вызывая существующую функцию создания смарт-контракта NFT с помощью нашего пользовательского интерфейса React.
 
-[Вот ссылка](https://www.alchemy.com/docs/how-to-create-an-nft) на смарт-контракт NFT стандарта ERC-721, который мы будем вызывать в этом руководстве. Если вы хотите узнать, как мы его создали, настоятельно рекомендуем ознакомиться с нашим другим руководством, [«Как создать NFT»](https://www.alchemy.com/docs/how-to-create-an-nft).
+[Вот ссылка](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) на смарт-контракт NFT стандарта ERC-721, который мы будем вызывать в этом руководстве. Если вы хотите узнать, как мы его создали, настоятельно рекомендуем ознакомиться с нашим другим руководством, [«Как создать NFT»](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 Отлично, теперь, когда мы понимаем, как работает создание NFT, давайте клонируем наши стартовые файлы!
 
@@ -209,7 +209,7 @@ return (
 
 ### Получите ether из крана {#add-ether-from-faucet}
 
-Чтобы выпускать наши NFT (или подписывать любые транзакции в блокчейне Ethereum), нам понадобится немного фальшивых Eth. Чтобы получить ETH, вы можете перейти к [крану Ropsten](https://www.alchemy.com/faucets/ethereum-sepolia), ввести адрес своего аккаунта Ropsten и нажать «Отправить ETH из Ropsten». Вскоре после этого вы должны увидеть Eth в своей учетной записи MetaMask!
+Чтобы выпускать наши NFT (или подписывать любые транзакции в блокчейне Ethereum), нам понадобится немного фальшивых Eth. Чтобы получить ETH, вы можете перейти к [крану Ropsten](https://faucet.ropsten.be/), ввести адрес своего аккаунта Ropsten и нажать «Отправить ETH из Ropsten». Вскоре после этого вы должны увидеть Eth в своей учетной записи MetaMask!
 
 ### Проверьте свой баланс {#check-your-balance}
 
@@ -581,7 +581,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 Теперь, когда у нас есть способ загрузить метаданные NFT в IPFS с помощью функции `pinJSONToIPFS`, нам нужно создать способ загрузки экземпляра нашего смарт-контракта, чтобы мы могли вызвать его функцию `mintNFT`.
 
-Как мы упоминали ранее, в этом руководстве мы будем использовать [этот существующий смарт-контракт NFT](https://www.alchemy.com/docs/how-to-create-an-nft); однако, если вы хотите узнать, как мы его создали, или создать его самостоятельно, мы настоятельно рекомендуем вам ознакомиться с другим нашим руководством, [«Как создать NFT»](https://www.alchemy.com/docs/how-to-create-an-nft).
+Как мы упоминали ранее, в этом руководстве мы будем использовать [этот существующий смарт-контракт NFT](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); однако, если вы хотите узнать, как мы его создали, или создать его самостоятельно, мы настоятельно рекомендуем вам ознакомиться с другим нашим руководством, [«Как создать NFT»](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 ### ABI контракта {#contract-abi}
 
@@ -608,7 +608,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 ```
 
 Теперь, когда у нас есть ABI контракта и ключ API Alchemy, мы готовы загрузить наш смарт-контракт с помощью [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
@@ -750,7 +750,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Проверьте свою транзакцию в Etherscan: https://sepolia.etherscan.io/tx/" +
+      "✅ Проверьте свою транзакцию в Etherscan: https://ropsten.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -820,7 +820,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Проверьте свою транзакцию в Etherscan: https://sepolia.etherscan.io/tx/" +
+        "✅ Проверьте свою транзакцию в Etherscan: https://ropsten.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {

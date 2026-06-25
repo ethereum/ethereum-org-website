@@ -48,7 +48,7 @@ Los metadatos de un NFT son realmente lo que le dan vida, permitiéndole tener p
 
 En este tutorial, vamos a centrarnos en la parte 2, donde invocaremos la función de minteo de un contrato inteligente de NFT existente utilizando nuestra interfaz de usuario de React.
 
-[Este es un enlace](https://www.alchemy.com/docs/how-to-create-an-nft) al smart contract del NFT ERC-721 al que llamaremos en este tutorial. Si desea saber cómo lo hicimos, le recomendamos que consulte nuestro otro tutorial, ["Cómo crear un NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
+[Este es un enlace](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) al smart contract del NFT ERC-721 al que llamaremos en este tutorial. Si desea saber cómo lo hicimos, le recomendamos que consulte nuestro otro tutorial, ["Cómo crear un NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 Bien, ahora que entendemos cómo es crear un NFT, ¡clonemos nuestros archivos de inicio!
 
@@ -209,7 +209,7 @@ Puede descargar y crear una cuenta de MetaMask gratis [aquí](https://metamask.i
 
 ### Añada ether desde un Faucet {#add-ether-from-faucet}
 
-Para mintear nuestros NFTs (o firmar cualquier transacción en la cadena de bloques de Ethereum), necesitaremos algo de Eth de prueba (de mentira). Para obtener Eth, puede ir al [faucet de Ropsten](https://www.alchemy.com/faucets/ethereum-sepolia) e introducir la dirección de su cuenta de Ropsten, y luego hacer clic en «Send Ropsten Eth». Debería ver el Eth en su cuenta de MetaMask poco después.
+Para mintear nuestros NFTs (o firmar cualquier transacción en la cadena de bloques de Ethereum), necesitaremos algo de Eth de prueba (de mentira). Para obtener Eth, puede ir al [faucet de Ropsten](https://faucet.ropsten.be/) e introducir la dirección de su cuenta de Ropsten, y luego hacer clic en «Send Ropsten Eth». Debería ver el Eth en su cuenta de MetaMask poco después.
 
 ### Compruebe su saldo {#check-your-balance}
 
@@ -581,7 +581,7 @@ Al igual que con los tipos de retorno de nuestra función `connectWallet`, estam
 
 Ahora que tenemos una forma de subir los metadatos de nuestro NFT a IPFS a través de nuestra función `pinJSONToIPFS`, vamos a necesitar una forma de cargar una instancia de nuestro smart contract para poder llamar a su función `mintNFT`.
 
-Como mencionamos anteriormente, en este tutorial utilizaremos [este smart contract de NFT existente](https://www.alchemy.com/docs/how-to-create-an-nft); sin embargo, si le gustaría aprender cómo lo hicimos, o hacer uno usted mismo, le recomendamos encarecidamente que consulte nuestro otro tutorial, [«Cómo crear un NFT»](https://www.alchemy.com/docs/how-to-create-an-nft).
+Como mencionamos anteriormente, en este tutorial utilizaremos [este smart contract de NFT existente](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); sin embargo, si le gustaría aprender cómo lo hicimos, o hacer uno usted mismo, le recomendamos encarecidamente que consulte nuestro otro tutorial, [«Cómo crear un NFT»](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 ### El ABI del contrato {#contract-abi}
 
@@ -608,7 +608,7 @@ Asigne un nombre a la aplicación (nosotros elegimos "Mi primer NFT"), ofrezca u
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 ```
 
 Ahora que tenemos nuestro ABI del contrato y nuestra clave de API de Alchemy, estamos listos para cargar nuestro smart contract usando [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
@@ -750,7 +750,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Consulte su transacción en Etherscan: https://sepolia.etherscan.io/tx/" +
+      "✅ Consulte su transacción en Etherscan: https://ropsten.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -820,7 +820,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Consulte su transacción en Etherscan: https://sepolia.etherscan.io/tx/" +
+        "✅ Consulte su transacción en Etherscan: https://ropsten.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {

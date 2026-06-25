@@ -48,7 +48,7 @@ published: 2021-10-06
 
 У цьому посібнику ми зосередимося на частині 2: виклику функції карбування існуючого смарт-контракту NFT за допомогою нашого інтерфейсу користувача на React.
 
-[Ось посилання](https://www.alchemy.com/docs/how-to-create-an-nft) на смарт-контракт NFT ERC-721, який ми будемо викликати в цьому посібнику. Якщо ви хочете дізнатися, як ми його створили, ми наполегливо рекомендуємо вам ознайомитися з іншим нашим посібником [«Як створити NFT»](https://www.alchemy.com/docs/how-to-create-an-nft).
+[Ось посилання](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) на смарт-контракт NFT ERC-721, який ми будемо викликати в цьому посібнику. Якщо ви хочете дізнатися, як ми його створили, ми наполегливо рекомендуємо вам ознайомитися з іншим нашим посібником [«Як створити NFT»](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 Чудово, тепер, коли ми розуміємо, як працює створення NFT, давайте клонуємо наші стартові файли!
 
@@ -209,7 +209,7 @@ return (
 
 ### Додайте ефір із крана (Faucet) {#add-ether-from-faucet}
 
-Щоб карбувати наші NFT (або підписувати будь-які транзакції в блокчейні Ethereum), нам знадобиться трохи тестового Eth. Щоб отримати Eth, ви можете перейти до [крана Ropsten](https://www.alchemy.com/faucets/ethereum-sepolia), ввести адресу свого облікового запису Ropsten, а потім натиснути «Надіслати Ropsten Eth». Незабаром ви маєте побачити Eth у своєму обліковому записі MetaMask!
+Щоб карбувати наші NFT (або підписувати будь-які транзакції в блокчейні Ethereum), нам знадобиться трохи тестового Eth. Щоб отримати Eth, ви можете перейти до [крана Ropsten](https://faucet.ropsten.be/), ввести адресу свого облікового запису Ropsten, а потім натиснути «Надіслати Ropsten Eth». Незабаром ви маєте побачити Eth у своєму обліковому записі MetaMask!
 
 ### Перевірте свій баланс {#check-your-balance}
 
@@ -579,7 +579,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 Тепер, коли ми маємо спосіб завантажувати наші метадані NFT в IPFS за допомогою нашої функції `pinJSONToIPFS`, нам знадобиться спосіб завантажити екземпляр нашого смарт-контракту, щоб ми могли викликати його функцію `mintNFT`.
 
-Як ми вже згадували раніше, в цьому посібнику ми будемо використовувати [цей існуючий смарт-контракт NFT](https://www.alchemy.com/docs/how-to-create-an-nft); однак, якщо ви хочете дізнатися, як ми його створили, або створити свій власний, ми наполегливо рекомендуємо вам ознайомитися з іншим нашим посібником, [«Як створити NFT».](https://www.alchemy.com/docs/how-to-create-an-nft).
+Як ми вже згадували раніше, в цьому посібнику ми будемо використовувати [цей існуючий смарт-контракт NFT](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); однак, якщо ви хочете дізнатися, як ми його створили, або створити свій власний, ми наполегливо рекомендуємо вам ознайомитися з іншим нашим посібником, [«Як створити NFT».](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 ### ABI контракту {#contract-abi}
 
@@ -606,7 +606,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 ```
 
 Тепер, коли у нас є ABI нашого контракту та ключ API Alchemy, ми готові завантажити наш смарт-контракт за допомогою [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
@@ -748,7 +748,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Перегляньте свою транзакцію на Etherscan: https://sepolia.etherscan.io/tx/" +
+      "✅ Перегляньте свою транзакцію на Etherscan: https://ropsten.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -818,7 +818,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Перегляньте свою транзакцію на Etherscan: https://sepolia.etherscan.io/tx/" +
+        "✅ Перегляньте свою транзакцію на Etherscan: https://ropsten.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {

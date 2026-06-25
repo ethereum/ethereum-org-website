@@ -40,7 +40,7 @@ published: 2021-10-06
 
 在此教程內，我們將會專注於第二部分，它是有關使用我們的 React UI 呼叫一個現存 NFT 智慧型合約的鑄造功能。
 
-[這個連結](https://www.alchemy.com/docs/how-to-create-an-nft) 是我們在本教學中將會呼叫的 ERC-721 NFT 智能合約。 如果你想學習我們是如何製作它的，我們強烈推薦你查看我們的另一篇教學：["如何建立一個 NFT"](https://www.alchemy.com/docs/how-to-create-an-nft)。
+[這個連結](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) 是我們在本教學中將會呼叫的 ERC-721 NFT 智能合約。 如果你想學習我們是如何製作它的，我們強烈推薦你查看我們的另一篇教學：["如何建立一個 NFT"](https://www.alchemy.com/docs/how-to-create-an-nft)。
 
 好的，現在我們明白了讓一個NFT運作的原理，讓我們複製我們的起始檔案們吧！
 
@@ -201,7 +201,7 @@ return (
 
 ### 從水龍頭取得以太幣 {#add-ether-from-faucet}
 
-為了要鑄造我們的 NFT（或是簽署任何在以太坊區塊鏈的交易），我們將需要一些假 ETH。 要取得 Eth，你可以前往 [Ropsten 水龍頭](https://www.alchemy.com/faucets/ethereum-sepolia)，輸入你的 Ropsten 帳戶位址，然後點擊「Send Ropsten Eth」。 你應該很快便能在你的MetaMask帳戶裡看見ETH！
+為了要鑄造我們的 NFT（或是簽署任何在以太坊區塊鏈的交易），我們將需要一些假 ETH。 要取得 Eth，你可以前往 [Ropsten 水龍頭](https://faucet.ropsten.be/)，輸入你的 Ropsten 帳戶位址，然後點擊「Send Ropsten Eth」。 你應該很快便能在你的MetaMask帳戶裡看見ETH！
 
 ### 檢查你的餘額 {#check-your-balance}
 
@@ -571,7 +571,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 既然我們有辦法透過我們的 `pinJSONToIPFS` 函式將我們的 NFT 元資料上傳到 IPFS，我們就需要一種方法來載入我們智能合約的實例，以便我們可以呼叫它的 `mintNFT` 函式。
 
-如前所述，在本教學中，我們將使用[這個現有的 NFT 智能合約](https://www.alchemy.com/docs/how-to-create-an-nft)；然而，如果你想學習我們是如何製作它的，或自己製作一個，我們強烈建議你查看我們的另一篇教學，["如何建立一個 NFT"](https://www.alchemy.com/docs/how-to-create-an-nft)。
+如前所述，在本教學中，我們將使用[這個現有的 NFT 智能合約](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)；然而，如果你想學習我們是如何製作它的，或自己製作一個，我們強烈建議你查看我們的另一篇教學，["如何建立一個 NFT"](https://www.alchemy.com/docs/how-to-create-an-nft)。
 
 ### 合約 ABI {#contract-abi}
 
@@ -598,7 +598,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 ```
 
 現在我們有了合約 ABI 和 Alchemy API 金鑰，我們準備好使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 來載入我們的智能合約了。
@@ -740,7 +740,7 @@ try {
   return {
     success: true,
     status:
-      "✅ 在 Etherscan 上查看你的交易：https://sepolia.etherscan.io/tx/" +
+      "✅ 在 Etherscan 上查看你的交易：https://ropsten.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -810,7 +810,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ 在 Etherscan 上查看你的交易：https://sepolia.etherscan.io/tx/" +
+        "✅ 在 Etherscan 上查看你的交易：https://ropsten.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {
