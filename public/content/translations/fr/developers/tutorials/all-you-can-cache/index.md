@@ -756,7 +756,7 @@ C'est la manière de vérifier que le code [émet un événement correctement](h
 
 ### Le client {#the-client}
 
-Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScript que vous pouvez copier et coller dans votre propre application. Pour écrire ce code, j'ai déployé WORM sur [Optimism Goerli](https://docs.optimism.io/op-stack/introduction/op-stack), le nouveau réseau de test d'[Optimism](https://www.optimism.io/). Il se trouve à l'adresse [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://testnet-explorer.optimism.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScript que vous pouvez copier et coller dans votre propre application. Pour écrire ce code, j'ai déployé WORM sur [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), le nouveau réseau de test d'[Optimism](https://www.optimism.io/). Il se trouve à l'adresse [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Vous pouvez voir le code JavaScript pour le client ici](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Pour l'utiliser :
 
@@ -783,8 +783,8 @@ Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScri
 
    | Paramètre                                                     | Valeur                                                                                                                                                                                                                          |
    | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC                                                      | La mnémonique d'un compte qui dispose de suffisamment d'ETH pour payer une transaction. [Vous pouvez obtenir de l'ETH gratuit pour le réseau Optimism Goerli ici](https://docs.optimism.io/app-developers/tools/faucets). |
-   | OPTIMISM_GOERLI_URL | URL vers Optimism Goerli. Le point de terminaison public, `https://sepolia.optimism.io`, a un débit limité mais suffisant pour ce dont nous avons besoin ici.                                    |
+   | MNEMONIC                                                      | La mnémonique d'un compte qui dispose de suffisamment d'ETH pour payer une transaction. [Vous pouvez obtenir de l'ETH gratuit pour le réseau Optimism Goerli ici](https://optimismfaucet.xyz/). |
+   | OPTIMISM_GOERLI_URL | URL vers Optimism Goerli. Le point de terminaison public, `https://goerli.optimism.io`, a un débit limité mais suffisant pour ce dont nous avons besoin ici.                                    |
 
 5. Exécutez `index.js`.
 

@@ -760,7 +760,7 @@ Così, verifichiamo che il codice [emetta un evento correttamente](https://book.
 
 ### Il client {#the-client}
 
-Una cosa che non ottieni con i test in Solidity è il codice in JavaScript che puoi tagliare e incollare nella tua applicazione. Per scrivere quel codice, ho distribuito WORM a [Optimism Goerli](https://docs.optimism.io/op-stack/introduction/op-stack), la nuova rete di prova di [Optimism](https://www.optimism.io/). Si trova all'indirizzo [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://testnet-explorer.optimism.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Una cosa che non ottieni con i test in Solidity è il codice in JavaScript che puoi tagliare e incollare nella tua applicazione. Per scrivere quel codice, ho distribuito WORM a [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), la nuova rete di prova di [Optimism](https://www.optimism.io/). Si trova all'indirizzo [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Puoi visualizzare qui il codice in JavaScript per il client](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Per utilizzarlo:
 
@@ -787,8 +787,8 @@ Una cosa che non ottieni con i test in Solidity è il codice in JavaScript che p
 
    | Parametro             | Valore                                                                                                                                                                               |
    | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | MNEMONIC              | La frase mnemonica per un account avente abbastanza ETH da pagare per una transazione. [Puoi ottenere ETH gratuiti per la rete Goerli di Optimism qui](https://docs.optimism.io/app-developers/tools/faucets). |
-   | OPTIMISM_GOERLI_URL | URL per Goerli di Optimism. L'endpoint pubblico, `https://sepolia.optimism.io`, è limitato ma sufficiente per ciò che ci occorre qui                                                  |
+   | MNEMONIC              | La frase mnemonica per un account avente abbastanza ETH da pagare per una transazione. [Puoi ottenere ETH gratuiti per la rete Goerli di Optimism qui](https://optimismfaucet.xyz/). |
+   | OPTIMISM_GOERLI_URL | URL per Goerli di Optimism. L'endpoint pubblico, `https://goerli.optimism.io`, è limitato ma sufficiente per ciò che ci occorre qui                                                  |
 
 5. Esegui `index.js`.
 

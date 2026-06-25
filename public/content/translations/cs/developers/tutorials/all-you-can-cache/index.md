@@ -757,7 +757,7 @@ Toto je způsob, jak ve Foundry ověřit, že kód [správně emituje událost](
 
 ### Klient {#the-client}
 
-Jedna věc, kterou se testy v Solidity nezískáte, je JavaScriptový kód, který můžete zkopírovat a vložit do své vlastní aplikace. Abych mohl napsat tento kód, nasadil jsem WORM na [Optimism Goerli](https://docs.optimism.io/op-stack/introduction/op-stack), nový testnet [Optimismu](https://www.optimism.io/). Je na adrese [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://testnet-explorer.optimism.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Jedna věc, kterou se testy v Solidity nezískáte, je JavaScriptový kód, který můžete zkopírovat a vložit do své vlastní aplikace. Abych mohl napsat tento kód, nasadil jsem WORM na [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), nový testnet [Optimismu](https://www.optimism.io/). Je na adrese [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [Zde si můžete prohlédnout JavaScriptový kód pro klienta](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Použití:
 
@@ -784,8 +784,8 @@ Jedna věc, kterou se testy v Solidity nezískáte, je JavaScriptový kód, kter
 
    | Parametr                                                      | Hodnota                                                                                                                                                                                             |
    | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC                                                      | Mnemotechnická pomůcka pro účet, který má dostatek ETH na zaplacení transakce. [Zde můžete získat ETH zdarma pro síť Optimism Goerli](https://docs.optimism.io/app-developers/tools/faucets). |
-   | OPTIMISM_GOERLI_URL | URL k Optimism Goerli. Veřejný koncový bod `https://sepolia.optimism.io` má omezenou rychlost, ale pro naše potřeby je dostačující.                                  |
+   | MNEMONIC                                                      | Mnemotechnická pomůcka pro účet, který má dostatek ETH na zaplacení transakce. [Zde můžete získat ETH zdarma pro síť Optimism Goerli](https://optimismfaucet.xyz/). |
+   | OPTIMISM_GOERLI_URL | URL k Optimism Goerli. Veřejný koncový bod `https://goerli.optimism.io` má omezenou rychlost, ale pro naše potřeby je dostačující.                                  |
 
 5. Spusťte `index.js`.
 
