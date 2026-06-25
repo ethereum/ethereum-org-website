@@ -179,21 +179,18 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
           <li>{t("page-roadmap-fusaka-peerdas-item-2")}</li>
         </ul>
         <p>
-          <strong>Blob Parameter Only (BPO) Forks</strong>
+          <strong>{t("page-roadmap-fusaka-bpo-title")}</strong>
         </p>
         <ul>
-          <li>Allows flexible blob count increases between major upgrades</li>
-          <li>
-            Enables faster adaptation to L2 scaling needs without waiting for
-            coordinated hard forks
-          </li>
+          <li>{t("page-roadmap-fusaka-bpo-item-1")}</li>
+          <li>{t("page-roadmap-fusaka-bpo-item-2")}</li>
         </ul>
         <p>
-          <strong>Gas Limit & DoS Hardening</strong>
+          <strong>{t("page-roadmap-fusaka-gas-title")}</strong>
         </p>
         <ul>
-          <li>Transaction gas limit cap of 16.7M gas per transaction</li>
-          <li>Default gas limit increase to ~60M (from current 45M)</li>
+          <li>{t("page-roadmap-fusaka-gas-item-1")}</li>
+          <li>{t("page-roadmap-fusaka-gas-item-2")}</li>
         </ul>
       </>
     ),
