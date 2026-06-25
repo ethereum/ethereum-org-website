@@ -82,7 +82,7 @@ lang: uk
 
 Екосистема Ethereum має на меті фінансувати суспільні блага та впливові проєкти. Навіть дуже невеликими пожертвуваннями ви можете продемонструвати підтримку й дати змогу реалізувати важливу роботу.
 
-- [Gitcoin](https://grants.gitcoin.co/)
+- [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Фінансові фахівці та бухгалтери <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

@@ -82,7 +82,7 @@ lang: bn
 
 ইথেরিয়াম ইকোসিস্টেমের লক্ষ্য হলো পাবলিক গুডস এবং প্রভাবশালী প্রকল্পগুলোতে অর্থায়ন করা। খুব ছোট অনুদানের মাধ্যমে আপনি আপনার সমর্থন দেখাতে পারেন এবং গুরুত্বপূর্ণ কাজ বাস্তবায়িত হতে দিতে পারেন।
 
-- [Gitcoin](https://grants.gitcoin.co/)
+- [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
 ## আর্থিক পেশাদার এবং হিসাবরক্ষক <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

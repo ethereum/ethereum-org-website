@@ -82,7 +82,7 @@ lang: hi
 
 एथेरियम इकोसिस्टम, सार्वजनिक वस्तुओं और प्रभावी परियोजनाओं को धन देने के मिशन पर है। बहुत कम दान से आप अपना सहयोग दिखा सकते हैं और महत्वपूर्ण काम को साकार करने की अनुमति दे सकते हैं।
 
-- [गिटकॉइन](https://grants.gitcoin.co/)
+- [गिटकॉइन](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
 ## वित्तीय पेशेवर और अकाउंटेंट <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

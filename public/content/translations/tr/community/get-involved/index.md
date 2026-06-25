@@ -82,7 +82,7 @@ ETH'nizi hisseleyerek Ethereum ağının güvenliğini sağlamaya yardımcı olu
 
 Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna sahiptir. Çok küçük bağışlarla desteğinizi gösterebilir ve önemli işlerin gerçekleşmesine olanak sağlayabilirsiniz.
 
-- [Gitcoin](https://grants.gitcoin.co/)
+- [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Finans uzmanları ve Muhasebeciler <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

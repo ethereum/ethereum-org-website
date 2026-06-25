@@ -82,7 +82,7 @@ lang: zh-tw
 
 以太坊生態系統正在進行一項任務，即尋找有益於公眾且有影響力的專案。 僅需非常小額的捐款，就能表達你對此的支援，從而實現重要工作。
 
-- [Gitcoin](https://grants.gitcoin.co/)
+- [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
 ## 金融專業人士和會計師 <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

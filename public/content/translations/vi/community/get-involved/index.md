@@ -82,7 +82,7 @@ Bằng cách Stake ETH, bạn có thể nhận phần thưởng đồng thời g
 
 Hệ sinh thái Ethereum đang nỗ lực tài trợ cho các sản phẩm công cộng và những dự án có tác động tích cực. Chỉ với những khoản đóng góp nhỏ, bạn đã có thể thể hiện sự ủng hộ và giúp những công việc quan trọng được hiện thực hóa.
 
-- [Gitcoin](https://grants.gitcoin.co/)
+- [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Chuyên gia tài chính & Kế toán viên <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
