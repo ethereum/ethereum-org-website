@@ -402,7 +402,7 @@ Es gibt mehrere Oracle Anwendungen, die du in den Ethereum Dapp integrieren kann
 
 **[Pyth Network](https://pyth.network/)** – _Das Pyth-Netzwerk ist ein First-Party-Finanz-Oracle-Netzwerk, das darauf ausgelegt ist, kontinuierlich Daten aus der realen Welt onchain in einer manipulationssicheren, dezentralen und autarken Umgebung zu veröffentlichen._
 
-**[API3 DAO](https://api3.org/)** – _API3 DAO liefert First-Party-Oracle-Lösungen, die eine größere Quellentransparenz, Sicherheit und Skalierbarkeit in einer dezentralen Lösung für Smart Contracts bieten_
+**[API3 DAO](https://www.api3.org/)** – _API3 DAO liefert First-Party-Oracle-Lösungen, die eine größere Quellentransparenz, Sicherheit und Skalierbarkeit in einer dezentralen Lösung für Smart Contracts bieten_
 
 **[Supra](https://supra.com/)** – Ein vertikal integriertes Toolkit mit kettenübergreifenden Lösungen, das alle Blockchains, ob öffentlich (L1s und L2s) oder privat (Unternehmen), miteinander verbindet und dezentrale Oracle-Preis-Feeds bereitstellt, die für Onchain- und Offchain-Anwendungsfälle genutzt werden können.
 

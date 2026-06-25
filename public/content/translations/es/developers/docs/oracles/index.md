@@ -402,7 +402,7 @@ Hay múltiples aplicaciones de oráculo que puede integrar en su DApp de Ethereu
 
 **[Pyth Network](https://pyth.network/)** - _La red Pyth es una red de oráculos financieros de primera parte diseñada para publicar datos del mundo real de manera continua onchain en un entorno resistente a manipulaciones, descentralizado y autosostenible._
 
-**[API3 DAO](https://api3.org/)** - _API3 DAO está ofreciendo soluciones de oráculo de primera parte que proporcionan mayor transparencia sobre el origen, seguridad y escalabilidad en una solución descentralizada para smart contracts_
+**[API3 DAO](https://www.api3.org/)** - _API3 DAO está ofreciendo soluciones de oráculo de primera parte que proporcionan mayor transparencia sobre el origen, seguridad y escalabilidad en una solución descentralizada para smart contracts_
 
 **[Supra](https://supra.com/)** - Un conjunto de herramientas verticalmente integrado de soluciones cross-chain que interconectan todas las blockchains, ya sean públicas (L1s y L2s) o privadas (empresas), proporcionando feeds de precios de oráculo descentralizados que pueden usarse tanto para casos de uso onchain como offchain.
 

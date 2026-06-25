@@ -404,7 +404,7 @@ Istnieje wiele aplikacji wyroczni, które możesz zintegrować do swojej zdecent
 
 **[Pyth Network](https://pyth.network/)** – _Sieć Pyth to sieć wyroczni finansowych pierwszej strony, zaprojektowana do publikowania ciągłych danych ze świata rzeczywistego w łańcuchu, w środowisku odpornym na manipulacje, zdecentralizowanym i samowystarczalnym._
 
-**[API3 DAO](https://api3.org/)** – _API3 DAO dostarcza rozwiązania wyroczni pierwszej strony, które zapewniają większą przejrzystość źródła, bezpieczeństwo i skalowalność w zdecentralizowanym rozwiązaniu dla inteligentnych kontraktów_
+**[API3 DAO](https://www.api3.org/)** – _API3 DAO dostarcza rozwiązania wyroczni pierwszej strony, które zapewniają większą przejrzystość źródła, bezpieczeństwo i skalowalność w zdecentralizowanym rozwiązaniu dla inteligentnych kontraktów_
 
 **[Supra](https://supra.com/)** – Pionowo zintegrowany zestaw narzędzi rozwiązań międzyłańcuchowych, które łączą wszystkie blockchainy, publiczne (L1 i L2) lub prywatne (dla przedsiębiorstw), dostarczając zdecentralizowane kanały cenowe wyroczni, które mogą być używane do zastosowań w łańcuchu i poza nim.
 

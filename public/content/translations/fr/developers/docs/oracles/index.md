@@ -402,7 +402,7 @@ Il existe de multiples applications oracle que vous pouvez intégrer dans votre 
 
 **[Pyth Network](https://pyth.network/)** - _Le réseau Pyth est un réseau d'oracles financiers de premier ordre conçu pour publier des données du monde réel en continu et en chaîne dans un environnement inviolable, décentralisé et autonome._
 
-**[API3 DAO](https://api3.org/)** - _L'API3 DAO fournit des solutions d'oracle de première partie qui offrent une plus grande transparence des sources, une sécurité et une évolutivité accrues dans une solution décentralisée pour les contrats intelligents_
+**[API3 DAO](https://www.api3.org/)** - _L'API3 DAO fournit des solutions d'oracle de première partie qui offrent une plus grande transparence des sources, une sécurité et une évolutivité accrues dans une solution décentralisée pour les contrats intelligents_
 
 **[Supra](https://supra.com/)** - Une boîte à outils verticalement intégrée de solutions inter-chaînes qui relient toutes les blockchains, publiques (L1 et L2) ou privées (entreprises), fournissant des flux de prix d'oracle décentralisés qui peuvent être utilisés pour des cas d'utilisation en chaîne et hors chaîne.
 

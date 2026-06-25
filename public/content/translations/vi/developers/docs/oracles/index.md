@@ -402,7 +402,7 @@ Có nhiều ứng dụng oracle mà bạn có thể tích hợp vào dapp Ethere
 
 **[Pyth Network](https://pyth.network/)** - _Mạng Pyth là một mạng oracle tài chính của bên thứ nhất được thiết kế để xuất bản dữ liệu thế giới thực liên tục trên chuỗi trong một môi trường chống giả mạo, phi tập trung và tự duy trì._
 
-**[API3 DAO](https://api3.org/)** - _API3 DAO đang cung cấp các giải pháp oracle của bên thứ nhất mang lại sự minh bạch, bảo mật và khả năng mở rộng nguồn lớn hơn trong một giải pháp phi tập trung cho các hợp đồng thông minh_
+**[API3 DAO](https://www.api3.org/)** - _API3 DAO đang cung cấp các giải pháp oracle của bên thứ nhất mang lại sự minh bạch, bảo mật và khả năng mở rộng nguồn lớn hơn trong một giải pháp phi tập trung cho các hợp đồng thông minh_
 
 **[Supra](https://supra.com/)** - Một bộ công cụ tích hợp theo chiều dọc gồm các giải pháp chuỗi chéo liên kết tất cả các chuỗi khối, công khai (L1 và L2) hoặc riêng tư (doanh nghiệp), cung cấp các nguồn cấp dữ liệu giá oracle phi tập trung có thể được sử dụng cho các trường hợp sử dụng trên chuỗi và ngoài chuỗi.
 
