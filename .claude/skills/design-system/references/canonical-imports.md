@@ -171,7 +171,7 @@ import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 
 | Hero | Use case |
 |---|---|
-| `PageHero` | The workhorse for most internal pages. 2-column with image, breadcrumb (or `header` eyebrow), and up to two buttons -- **or** text-only when you omit `heroImg`. With `variant="no-divider"` and no `heroImg`/`description`, it's the minimal breadcrumb + h1 article hero (the `StaticLayout` default). |
+| `PageHero` | The workhorse for most internal pages. 2-column with breadcrumbs, an optional `eyebrow`, an aside (`heroImg` **or** `heroComponent`), and up to two buttons -- **or** text-only when you pass neither aside. With `variant="no-divider"` and no aside/`description`, it's the minimal breadcrumb + h1 article hero (the `StaticLayout` default). |
 | `HubHero` | Full-bleed hero image with overlay text card. |
 | `HomeHero` | Homepage only. Async server component. |
 
@@ -185,7 +185,7 @@ import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 import { PageHero } from "@/components/Hero"
 ```
 
-Pass `breadcrumbs` **or** `header` (mutually exclusive eyebrow slot), plus `heroImg` (optional -- omit for text-only), `title`, `description`, `buttons` (up to two), and `variant`.
+Pass `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element), an optional `eyebrow` (`ReactNode` above the title), an optional aside -- `heroImg` **or** `heroComponent`, mutually exclusive (omit both for text-only) -- plus `title`, `description`, `buttons` (up to two), and `variant`. `title` is always the `<h1>` (there is no `header` prop).
 
 ## Banners / Callouts / Alerts
 
