@@ -469,7 +469,7 @@ Dans le cadre de votre surveillance, assurez-vous de garder un œil sur les perf
 - [Guides de mise en jeu Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, mis à jour souvent_
 - [Guide | Comment configurer un validateur pour la mise en jeu Ethereum sur le réseau principal](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, mis à jour souvent_
 - [Guides ETHStaker sur l'exécution de validateurs sur des réseaux de test](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, mis à jour régulièrement_
-- [Exemple d'application AWS Blockchain Node Runner pour les nœuds Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, mis à jour souvent_
+- [Exemple d'application AWS Blockchain Node Runner pour les nœuds Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, mis à jour souvent_
 - [FAQ sur La Fusion pour les opérateurs de nœuds](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Juillet 2022_
 - [Analyser les exigences matérielles pour être un nœud entièrement validé d'Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 septembre 2018_
 - [Exécuter des nœuds complets Ethereum : un guide pour les moins motivés](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 novembre 2019_

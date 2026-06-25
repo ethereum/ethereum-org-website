@@ -469,7 +469,7 @@ Behalten Sie im Rahmen der Überwachung auch die Leistung Ihres Rechners im Auge
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) – _Somer Esat, wird häufig aktualisiert_
 - [Anleitung | Wie man einen Validator für Ethereum Staking auf Mainnet einrichtet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, wird häufig aktualisiert_
 - [ETHStaker-Anleitungen zum Ausführen von Validatoren in Testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, wird regelmäßig aktualisiert_
-- [Beispiel AWS Blockchain Node Runner App für Ethereum Nodes](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) – _AWS, wird häufig aktualisiert_
+- [Beispiel AWS Blockchain Node Runner App für Ethereum Nodes](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) – _AWS, wird häufig aktualisiert_
 - [The Merge FAQ für Node-Betreiber](https://notes.ethereum.org/@launchpad/node-faq-merge) – _Juli 2022_
 - [Analyse der Hardware-Anforderungen für einen Ethereum Full Validated Node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24. September 2018_
 - [Ethereum Full Nodes betreiben: Eine Anleitung für die kaum Motivierten](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7. November 2019_

@@ -469,7 +469,7 @@ W ramach monitorowania należy mieć oko na wydajność maszyny. Podczas począt
 - [Przewodniki po stakingu Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) – _Somer Esat, często aktualizowane_
 - [Przewodnik | Jak skonfigurować walidatora do stakingu Ethereum w sieci głównej](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, często aktualizowane_
 - [Przewodniki ETHStaker dotyczące uruchamiania walidatorów w sieciach testowych](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, regularnie aktualizowane_
-- [Przykładowa aplikacja AWS Blockchain Node Runner dla węzłów Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) – _AWS, często aktualizowane_
+- [Przykładowa aplikacja AWS Blockchain Node Runner dla węzłów Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) – _AWS, często aktualizowane_
 - [The Merge – FAQ dla operatorów węzłów](https://notes.ethereum.org/@launchpad/node-faq-merge) – _lipiec 2022_
 - [Analiza wymagań sprzętowych, aby stać się pełnym zwalidowanym węzłem Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 września 2018_
 - [Uruchamianie pełnych węzłów Ethereum: przewodnik dla słabo zmotywowanych](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 listopada 2019_
