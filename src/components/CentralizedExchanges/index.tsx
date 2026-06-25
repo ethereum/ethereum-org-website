@@ -94,14 +94,6 @@ const CentralizedExchanges = ({
           className="z-50"
         />
       </div>
-      {!hasSelectedCountry && (
-        <EmptyStateContainer>
-          <Emoji text=":world_map:" className="text-[80px]" />
-          <EmptyStateText>
-            {t("page-get-eth-exchanges-empty-state-text")}
-          </EmptyStateText>
-        </EmptyStateContainer>
-      )}
       {/* No results */}
       {hasSelectedCountry && !hasExchangeResults && (
         <ResultsContainer>
