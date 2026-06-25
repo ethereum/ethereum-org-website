@@ -10,20 +10,11 @@
 @utility bg-gradient-banner {
   background-image: var(--gradient-banner);
 }
-@utility bg-main-gradient {
-  background-image: var(--gradient-main);
-}
-@utility bg-feedback-gradient {
-  background-image: var(--feedback-gradient);
-}
 @utility bg-banner-grid-gradient {
   background-image: var(--banner-grid-gradient);
 }
 @utility bg-radial-a {
   background-image: var(--radial-a);
-}
-@utility bg-radial-b {
-  background-image: var(--radial-b);
 }
 @utility bg-gradient-staking {
   background-image: var(--gradient-staking);
@@ -194,3 +185,47 @@
 @utility hover-lift-md {
   @apply scale-100 shadow-md duration-300 hover:scale-101 hover:shadow-xl hover:duration-300;
 }
+
+/* Tinted gradient from a theme color. Optional /N modifier sets the
+   light-mode "from" opacity (default 5); light to = 3x, dark from = 2x,
+   dark to = 4x. e.g. bg-tint-primary/8. Override direction inline via
+   --tint-dir (use underscores), e.g. bg-tint-primary [--tint-dir:to_top].
+   Stop positions honor the native from-* and to-* utilities, e.g.
+   bg-tint-primary from-25% to-75% (omit both for a full 0%->100% fade). */
+@utility bg-tint-* {
+  --tint-color: --value(--color-*);
+  --tint-base: --modifier(integer);
+  background-image: linear-gradient(
+    var(--tint-dir, to bottom),
+    --alpha(var(--tint-color) / calc(var(--tint-base, 5) * 1%)) var(--tw-gradient-from-position, ),
+    --alpha(var(--tint-color) / calc(var(--tint-base, 5) * 3%)) var(--tw-gradient-to-position, )
+  );
+  @variant dark {
+    background-image: linear-gradient(
+      var(--tint-dir, to bottom),
+      --alpha(var(--tint-color) / calc(var(--tint-base, 5) * 2%)) var(--tw-gradient-from-position, ),
+      --alpha(var(--tint-color) / calc(var(--tint-base, 5) * 4%)) var(--tw-gradient-to-position, )
+    );
+  }
+}
+
+@utility bg-fade-* {
+  --fade-color: --value(--color-*);
+  --fade-base: --modifier(integer);
+  background-image: linear-gradient(
+    var(--fade-dir, to right),
+    --alpha(var(--fade-color) / calc(var(--fade-base, 5) * 1%)) var(--tw-gradient-from-position, ),
+    --alpha(var(--fade-color) / calc(var(--fade-base, 5) * 3%)) var(--tw-gradient-to-position, )
+  );
+  @variant dark {
+    background-image: linear-gradient(
+      var(--fade-dir, to right),
+      --alpha(var(--fade-color) / calc(var(--fade-base, 5) * 4%)) var(--tw-gradient-from-position, ),
+      --alpha(var(--fade-color) / calc(var(--fade-base, 5) * 2%)) var(--tw-gradient-to-position, )
+    );
+  }
+}
+
+@utility tint-reverse { --tint-dir: to top; }
+
+@utility fade-reverse { --fade-dir: to left; }
