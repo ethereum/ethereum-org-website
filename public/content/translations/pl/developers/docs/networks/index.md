@@ -150,7 +150,7 @@ Sieć testowa dla [Optimism](https://www.optimism.io/).
 - [Kran Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Kran Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Kran ethfaucet.com Optimism Sepolia](https://ethfaucet.com/networks/optimism)
-- [Kran sieci testowej](https://docs.optimism.io/app-developers/tools/faucets)
+- [Kran sieci testowej](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 

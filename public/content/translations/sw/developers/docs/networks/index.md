@@ -150,7 +150,7 @@ Testnet kwa ajili ya [Optimism](https://www.optimism.io/).
 - [Bomba la Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Bomba la Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Bomba la ethfaucet.com Optimism Sepolia](https://ethfaucet.com/networks/optimism)
-- [Bomba la Testnet](https://docs.optimism.io/app-developers/tools/faucets)
+- [Bomba la Testnet](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 

@@ -150,7 +150,7 @@ Một mạng thử nghiệm cho [Optimism](https://www.optimism.io/).
 - [Vòi Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Vòi Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Vòi ethfaucet.com Optimism Sepolia](https://ethfaucet.com/networks/optimism)
-- [Vòi mạng thử nghiệm](https://docs.optimism.io/app-developers/tools/faucets)
+- [Vòi mạng thử nghiệm](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
