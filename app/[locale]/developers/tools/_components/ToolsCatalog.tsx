@@ -99,7 +99,7 @@ const ToolCard = memo(function ToolCard({
         fallbackIcon={
           <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />
         }
-        href={`?tool=${encodeURIComponent(toolKey)}`}
+        href={`/developers/tools/${tool.categoryId}/${toolKey}/`}
         layout="horizontal"
         imageSize="thumbnail"
         className="h-fit p-4"

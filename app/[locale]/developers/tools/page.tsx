@@ -11,11 +11,12 @@ import { getToolsPageData } from "./page-data"
 import DevelopersToolsJsonLD from "./page-jsonld"
 
 // Re-render statically generated page daily to pick up tools data updates
+// (no `searchParams` read here — that would opt the page into dynamic
+// rendering and forfeit static/edge caching).
 export const revalidate = 86400
 
 const Page = async (props: { params: Promise<PageParams> }) => {
-  const params = await props.params
-  const { locale } = params
+  const { locale } = await props.params
 
   setRequestLocale(locale)
   const t = await getTranslations({
@@ -29,7 +30,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     countByCategory,
     categoryLabels,
     subcategoryLabels,
-    tagLabels,
     contributors,
   } = await getToolsPageData(locale)
 
@@ -53,7 +53,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         categories={categories}
         categoryLabels={categoryLabels}
         subcategoryLabels={subcategoryLabels}
-        tagLabels={tagLabels}
         countByCategory={countByCategory}
         totalCount={allTools.length}
       />

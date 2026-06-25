@@ -33,7 +33,6 @@ const Page = async (props: {
     countByCategory,
     categoryLabels,
     subcategoryLabels,
-    tagLabels,
     contributors,
   } = await getToolsPageData(locale)
 
@@ -63,7 +62,6 @@ const Page = async (props: {
         categories={categories}
         categoryLabels={categoryLabels}
         subcategoryLabels={subcategoryLabels}
-        tagLabels={tagLabels}
         countByCategory={countByCategory}
         totalCount={allTools.length}
         currentCategoryId={category}

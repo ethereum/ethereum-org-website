@@ -6,6 +6,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { normalizeDeveloperToolsData } from "@/lib/utils/developerToolsData"
 
 import type { DeveloperToolWithCategory } from "./types"
+import { getToolKey } from "./utils"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
@@ -77,3 +78,37 @@ export async function getToolsPageData(locale: string) {
 }
 
 export type ToolsPageData = Awaited<ReturnType<typeof getToolsPageData>>
+
+/**
+ * Server-side data for a single tool detail view, shared by the canonical
+ * full-page route and the intercepting modal slots. Returns `null` when the
+ * `category`/`toolKey` pair doesn't resolve to a tool.
+ */
+export async function getToolDetailData(
+  locale: string,
+  category: string,
+  toolKey: string
+) {
+  const [{ allTools, categoryLabels, subcategoryLabels, tagLabels }, t] =
+    await Promise.all([
+      getToolsPageData(locale),
+      getTranslations({ locale, namespace: "page-developers-tools" }),
+    ])
+
+  const tool = allTools.find(
+    (item) => item.categoryId === category && getToolKey(item) === toolKey
+  )
+  if (!tool) return null
+
+  return {
+    tool,
+    categoryLabels,
+    subcategoryLabels,
+    tagLabels,
+    labels: {
+      links: t("page-developers-tools-modal-links"),
+      website: t("page-developers-tools-modal-website"),
+      social: t("page-developers-tools-modal-social"),
+    },
+  }
+}
