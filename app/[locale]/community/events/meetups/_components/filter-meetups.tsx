@@ -1,16 +1,15 @@
 "use client"
 
 import { useState } from "react"
-import { Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import type { EventItem } from "@/lib/types"
 
-import { Alert, AlertContent } from "@/components/ui/alert"
 import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 
-import EventCard from "../../_components/EventCard"
+import EventCard from "../../_components/event-card"
+import NoResultsAlert from "../../_components/no-results-alert"
 import { sanitize } from "../../utils"
 
 import useTranslation from "@/hooks/useTranslation"
@@ -68,10 +67,7 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
           ))}
         </Grid>
       ) : (
-        <Alert variant="warning" role="status">
-          <Info className="size-6 !text-current" />
-          <AlertContent>{t("page-events-search-no-results")}</AlertContent>
-        </Alert>
+        <NoResultsAlert>{t("page-events-search-no-results")}</NoResultsAlert>
       )}
     </>
   )

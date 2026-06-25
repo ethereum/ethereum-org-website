@@ -49,7 +49,7 @@ function EventCardGrid({
         matomoEvent={customEventOptions}
       >
         <div className="flex gap-3">
-          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-linear-to-b from-body/5 to-body/10 text-2xl dark:from-body/10 dark:to-body/20">
+          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-linear-to-b from-body/5 to-body/15 dark:from-body/10 dark:to-body/20">
             {event.logoImage && !logoError ? (
               <Image
                 src={event.logoImage}
@@ -104,7 +104,7 @@ function EventCardHighlight({
         hideArrow
         matomoEvent={customEventOptions}
       >
-        <div className="relative h-[200px] w-full overflow-hidden rounded-xl bg-linear-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20">
+        <div className="relative h-50 w-full overflow-hidden rounded-xl bg-linear-to-b from-body/5 to-body/15 dark:from-body/10 dark:to-body/20">
           {bannerSrc && !bannerError ? (
             <Image
               src={bannerSrc}
@@ -121,7 +121,7 @@ function EventCardHighlight({
           )}
         </div>
         <div className="flex gap-3">
-          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-body/5 dark:bg-body/10">
+          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-linear-to-b from-body/5 to-body/15 dark:from-body/10 dark:to-body/20">
             {event.logoImage && !logoError ? (
               <Image
                 src={event.logoImage}
@@ -135,12 +135,10 @@ function EventCardHighlight({
               <MapPin className="size-8 text-body-medium" />
             )}
           </div>
-          <div className="space-y-1">
+          <div className="space-y-1 *:[p]:text-sm *:[p]:text-body-medium">
             <h3>{event.title}</h3>
-            <p className="text-sm text-body-medium">{event.location}</p>
-            <p className="text-sm text-body-medium">
-              {formatDateRange(event.startTime, event.endTime, locale)}
-            </p>
+            <p>{event.location}</p>
+            <p>{formatDateRange(event.startTime, event.endTime, locale)}</p>
           </div>
         </div>
       </LinkOverlay>
