@@ -27,7 +27,7 @@ Le terme « couche 2 » (L2) est utilisé pour le rollup ou tout autre système 
 
 Les [rollups optimistes](/developers/docs/scaling/optimistic-rollups) doivent conserver un enregistrement de chaque transaction historique afin que n'importe qui puisse les parcourir et vérifier que l'état actuel est correct.
 Le moyen le plus économique d'inscrire des données sur le réseau principal d'Ethereum est de les écrire en tant que données d'appel.
-Cette solution a été choisie à la fois par [Optimism](https://docs.optimism.io/op-stack/protocol/overview) et [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Cette solution a été choisie à la fois par [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) et [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
 ### Coût des transactions L2 {#cost-of-l2-transactions}
 

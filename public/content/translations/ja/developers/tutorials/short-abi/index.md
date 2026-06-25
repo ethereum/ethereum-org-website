@@ -27,7 +27,7 @@ published: 2022-04-01
 
 [オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups)は、誰もがそれらを参照して現在の状態が正しいことを検証できるように、すべての過去のトランザクションの記録を保存する必要があります。
 Ethereumメインネットにデータを取り込む最も安価な方法は、コールデータとして書き込むことです。
-このソリューションは、[Optimism](https://docs.optimism.io/op-stack/protocol/overview)と[Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups)の両方で採用されました。
+このソリューションは、[Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-)と[Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups)の両方で採用されました。
 
 ### L2トランザクションのコスト {#cost-of-l2-transactions}
 

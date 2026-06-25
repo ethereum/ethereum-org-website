@@ -27,7 +27,7 @@ Neno 'safu ya 2' (L2) hutumika kwa rollup au mfumo mwingine wowote unaotegemea L
 
 [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) zinapaswa kuhifadhi rekodi ya kila muamala wa kihistoria ili mtu yeyote aweze kuzipitia na kuthibitisha kwamba hali ya sasa ni sahihi.
 Njia ya bei nafuu zaidi ya kuingiza data kwenye Mtandao Mkuu wa Ethereum ni kuiandika kama calldata.
-Suluhisho hili lilichaguliwa na [Optimism](https://docs.optimism.io/op-stack/protocol/overview) na [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Suluhisho hili lilichaguliwa na [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) na [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
 ### Gharama ya miamala ya L2 {#cost-of-l2-transactions}
 

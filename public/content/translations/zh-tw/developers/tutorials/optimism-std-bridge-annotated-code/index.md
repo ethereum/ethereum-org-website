@@ -76,7 +76,7 @@ lang: zh-tw
 // SPDX-License-Identifier: MIT
 ```
 
-[Optimism 的大部分程式碼都是在 MIT 授權條款下釋出](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE)。
+[Optimism 的大部分程式碼都是在 MIT 授權條款下釋出](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-)。
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

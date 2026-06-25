@@ -76,7 +76,7 @@ Optimism(또는 다른 L2)에서 L1 자산을 사용하려면 자산을 [/bridge
 // SPDX-License-Identifier: MIT
 ```
 
-[대부분의 Optimism 코드는 MIT 라이선스에 따라 릴리스됩니다](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
+[대부분의 Optimism 코드는 MIT 라이선스에 따라 릴리스됩니다](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

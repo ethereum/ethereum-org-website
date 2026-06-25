@@ -76,7 +76,7 @@ ERC-20 டோக்கன்களைப் பாலமிடுவதற்க
 // SPDX-License-Identifier: MIT
 ```
 
-[ஆப்டிமிசத்தின் பெரும்பாலான குறியீடு MIT உரிமத்தின் கீழ் வெளியிடப்படுகிறது](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
+[ஆப்டிமிசத்தின் பெரும்பாலான குறியீடு MIT உரிமத்தின் கீழ் வெளியிடப்படுகிறது](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

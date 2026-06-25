@@ -76,7 +76,7 @@ Optimism (లేదా ఏదైనా ఇతర L2)లో L1 ఆస్తుల
 // SPDX-License-Identifier: MIT
 ```
 
-[ఆప్టిమిజం యొక్క చాలా కోడ్ MIT లైసెన్సు క్రింద విడుదల చేయబడింది](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
+[ఆప్టిమిజం యొక్క చాలా కోడ్ MIT లైసెన్సు క్రింద విడుదల చేయబడింది](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;

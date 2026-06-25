@@ -27,7 +27,7 @@ published: 2022-04-01
 
 乐观卷叠必须保留每笔历史交易的记录，以便任何人都能检查这些交易并验证当前状态是否正确。
 将数据输入以太坊主网的最便宜方法是将其写为 calldata。
-[Optimism](https://docs.optimism.io/op-stack/protocol/overview) 和 [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) 都选择了这个解决方案。
+[Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) 和 [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) 都选择了这个解决方案。
 
 ### L2 交易成本 {#cost-of-l2-transactions}
 

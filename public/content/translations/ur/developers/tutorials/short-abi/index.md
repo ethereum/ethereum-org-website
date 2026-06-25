@@ -27,7 +27,7 @@ published: 2022-04-01
 
 [آپٹیمسٹک رول اپس](/developers/docs/scaling/optimistic-rollups) کو ہر تاریخی ٹرانزیکشن کا ریکارڈ محفوظ رکھنا ہوتا ہے تاکہ کوئی بھی ان کا جائزہ لے سکے اور اس بات کی تصدیق کر سکے کہ موجودہ اسٹیٹ درست ہے۔
 Ethereum Mainnet میں ڈیٹا داخل کرنے کا سب سے سستا طریقہ اسے کال ڈیٹا کے طور پر لکھنا ہے۔
-یہ حل [Optimism](https://docs.optimism.io/op-stack/protocol/overview) اور [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) دونوں نے منتخب کیا تھا۔
+یہ حل [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) اور [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) دونوں نے منتخب کیا تھا۔
 
 ### L2 ٹرانزیکشنز کی لاگت {#cost-of-l2-transactions}
 

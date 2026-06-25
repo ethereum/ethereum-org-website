@@ -76,7 +76,7 @@ Optimism (یا کسی دوسرے L2) پر L1 اثاثے استعمال کرنے 
 // SPDX-License-Identifier: MIT
 ```
 
-[Optimism کا زیادہ تر کوڈ MIT لائسنس کے تحت جاری کیا گیا ہے](https://github.com/ethereum-optimism/optimism/blob/develop/LICENSE).
+[Optimism کا زیادہ تر کوڈ MIT لائسنس کے تحت جاری کیا گیا ہے](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;
