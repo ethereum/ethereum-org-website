@@ -44,7 +44,15 @@ export type PageHeroProps = Omit<
 > &
   Partial<Pick<CommonHeroProps, "blurDataURL" | "heroImg">> &
   VariantProps<typeof variants> &
-  EyebrowProps
+  EyebrowProps & {
+    /**
+     * Optional element overlaid on top of `heroImg` (e.g. a live data
+     * widget). Rendered as a sibling of the image inside its container,
+     * which becomes positioned (`relative`) so the overlay can be absolutely
+     * placed. Has no effect without `heroImg`.
+     */
+    imageOverlay?: ReactNode
+  }
 
 const PageHero = ({
   breadcrumbs,
@@ -56,6 +64,7 @@ const PageHero = ({
   blurDataURL,
   variant,
   className,
+  imageOverlay,
 }: PageHeroProps) => {
   if (blurDataURL && heroImg) heroImg.blurDataURL = blurDataURL
 
@@ -84,7 +93,12 @@ const PageHero = ({
       )}
     >
       {heroImg && (
-        <div className="grid flex-1 place-items-center lg:relative">
+        <div
+          className={cn(
+            "grid flex-1 place-items-center",
+            imageOverlay ? "relative" : "lg:relative"
+          )}
+        >
           <Image
             className={cn(
               "object-contain max-lg:max-h-64 max-lg:w-auto max-lg:max-w-full lg:absolute lg:inset-0 lg:size-full",
@@ -95,6 +109,7 @@ const PageHero = ({
             preload
             sizes={`(max-width: ${screens.lg}) 100vw, (max-width: ${screens["2xl"]}) 50vw, ${breakpointAsNumber["2xl"] / 2}px`}
           />
+          {imageOverlay}
         </div>
       )}
       <div

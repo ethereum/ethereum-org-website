@@ -20,6 +20,7 @@ import CardList, {
   type CardProps as CardListCardProps,
 } from "@/components/CardList"
 import ContentFeedback from "@/components/ContentFeedback"
+import EthPriceCard from "@/components/EthPriceCard"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -157,6 +158,9 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         variant="no-divider"
         breadcrumbs={{ slug: "get-eth", startDepth: 1 }}
         heroImg={ethCoins}
+        imageOverlay={
+          <EthPriceCard className="absolute inset-x-0 top-1/2 mx-auto -translate-y-1/2" />
+        }
         title={t("page-get-eth-hero-title")}
         description={t("page-get-eth-hero-subtitle")}
         buttons={[
