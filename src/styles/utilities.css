@@ -3,35 +3,7 @@
    named z-index scales, etc. Each @utility automatically supports
    all Tailwind variants (hover, responsive, dark, etc.). */
 
-/* Background images (gradients referencing CSS custom properties) */
-@utility bg-gradient-main {
-  background-image: var(--gradient-main);
-}
-@utility bg-gradient-banner {
-  background-image: var(--gradient-banner);
-}
-@utility bg-banner-grid-gradient {
-  background-image: var(--banner-grid-gradient);
-}
-@utility bg-radial-a {
-  background-image: var(--radial-a);
-}
-@utility bg-gradient-staking {
-  background-image: var(--gradient-staking);
-}
-@utility bg-card-gradient {
-  background-image: var(--card-gradient);
-}
-@utility bg-card-gradient-secondary {
-  background-image: var(--card-gradient-secondary);
-}
-@utility bg-card-gradient-secondary-hover {
-  background-image: var(--card-gradient-secondary-hover);
-}
-@utility bg-ten-year-gradient {
-  background-image: var(--ten-year-gradient);
-}
-
+/* font-size */
 @utility text-h1 {
   @apply text-4xl lg:text-5xl;
 }
@@ -76,7 +48,10 @@
         100%,
         max(
           var(--grid-item-min, 18rem),
-          calc((100% - (--value(integer) - 1) * var(--grid-gap, 1rem)) / --value(integer))
+          calc(
+            (100% - (--value(integer) - 1) * var(--grid-gap, 1rem)) /
+              --value(integer)
+          )
         )
       ),
       1fr
@@ -162,12 +137,14 @@
   animation-play-state: paused;
 }
 
+/* box-shadow */
 @utility shadow-primary-xl {
-  @apply shadow-primary-low-contrast/80 dark:shadow-primary-low-contrast/50 shadow-xl;
+  @apply shadow-xl shadow-primary-low-contrast/80 dark:shadow-primary-low-contrast/50;
 }
 
 @utility shadow-primary-no-blur-* {
-  box-shadow: calc(--value(number) * var(--spacing)) calc(--value(number) * var(--spacing)) hsla(var(--primary-low-contrast));
+  box-shadow: calc(--value(number) * var(--spacing))
+    calc(--value(number) * var(--spacing)) hsla(var(--primary-low-contrast));
 }
 
 @utility hover-lift-xs {
@@ -186,46 +163,129 @@
   @apply scale-100 shadow-md duration-300 hover:scale-101 hover:shadow-xl hover:duration-300;
 }
 
-/* Tinted gradient from a theme color. Optional /N modifier sets the
-   light-mode "from" opacity (default 5); light to = 3x, dark from = 2x,
-   dark to = 4x. e.g. bg-tint-primary/8. Override direction inline via
-   --tint-dir (use underscores), e.g. bg-tint-primary [--tint-dir:to_top].
-   Stop positions honor the native from-* and to-* utilities, e.g.
-   bg-tint-primary from-25% to-75% (omit both for a full 0%->100% fade). */
+/* background-image (gradients) */
+@utility bg-linear-primary {
+  @apply bg-linear-to-r from-primary/15 to-accent-a/15;
+}
+
+@utility bg-linear-secondary {
+  @apply bg-linear-to-r from-purple-500/10 to-purple-600/10 dark:from-purple-500/15 dark:to-purple-600/15;
+}
+
+@utility bg-linear-tertiary {
+  @apply bg-linear-to-r from-purple-400/20 to-purple-600/20;
+}
+
+@utility bg-radial-primary {
+  @apply bg-radial-[120%_80%_at_50%_calc(-30%+var(--offset-y,0%))] from-purple-500/24 from-33% via-blue-500/8 via-66%;
+  @variant dark {
+    @apply from-purple-500/48 via-blue-500/16;
+  }
+}
+
+/* Theme-color gradient wash. /N sets base opacity % (default 5); each stop adds
+   a fixed offset (light 0/+10, dark +5/+15 -- dark nudged up for dark surfaces,
+   constant interval at any base). Positions via native from-* / to-*. Engine
+   shared by bg-tint-* (vertical) and bg-fade-* (horizontal); full usage in the
+   design-system skill / gradients story. */
+@utility gradient-core {
+  background-image: linear-gradient(
+    calc(var(--grad-angle, 180deg) + var(--grad-rev, 0deg)),
+    --alpha(
+        var(--grad-color) /
+          calc(
+            (var(--grad-base, 5) + var(--grad-from, var(--grad-light-from))) *
+              1%
+          )
+      )
+      var(--tw-gradient-from-position,),
+    --alpha(
+        var(--grad-color) /
+          calc(
+            (var(--grad-base, 5) + var(--grad-to, var(--grad-light-to))) * 1%
+          )
+      )
+      var(--tw-gradient-to-position,)
+  );
+  @variant dark {
+    background-image: linear-gradient(
+      calc(var(--grad-angle, 180deg) + var(--grad-rev, 0deg)),
+      --alpha(
+          var(--grad-color) /
+            calc(
+              (var(--grad-base, 5) + var(--grad-from, var(--grad-dark-from))) *
+                1%
+            )
+        )
+        var(--tw-gradient-from-position,),
+      --alpha(
+          var(--grad-color) /
+            calc(
+              (var(--grad-base, 5) + var(--grad-to, var(--grad-dark-to))) * 1%
+            )
+        )
+        var(--tw-gradient-to-position,)
+    );
+  }
+}
+
+/* Vertical wash (to bottom). */
 @utility bg-tint-* {
-  --tint-color: --value(--color-*);
-  --tint-base: --modifier(integer);
-  background-image: linear-gradient(
-    var(--tint-dir, to bottom),
-    --alpha(var(--tint-color) / calc(var(--tint-base, 5) * 1%)) var(--tw-gradient-from-position, ),
-    --alpha(var(--tint-color) / calc(var(--tint-base, 5) * 3%)) var(--tw-gradient-to-position, )
-  );
-  @variant dark {
-    background-image: linear-gradient(
-      var(--tint-dir, to bottom),
-      --alpha(var(--tint-color) / calc(var(--tint-base, 5) * 2%)) var(--tw-gradient-from-position, ),
-      --alpha(var(--tint-color) / calc(var(--tint-base, 5) * 4%)) var(--tw-gradient-to-position, )
-    );
-  }
+  --grad-color: --value(--color- *);
+  --grad-base: --modifier(integer);
+  @apply gradient-core [--grad-dark-from:5] [--grad-dark-to:15] [--grad-light-from:0] [--grad-light-to:10];
 }
 
+/* Horizontal wash (to right); dark stops inverted vs tint. */
 @utility bg-fade-* {
-  --fade-color: --value(--color-*);
-  --fade-base: --modifier(integer);
-  background-image: linear-gradient(
-    var(--fade-dir, to right),
-    --alpha(var(--fade-color) / calc(var(--fade-base, 5) * 1%)) var(--tw-gradient-from-position, ),
-    --alpha(var(--fade-color) / calc(var(--fade-base, 5) * 3%)) var(--tw-gradient-to-position, )
-  );
-  @variant dark {
-    background-image: linear-gradient(
-      var(--fade-dir, to right),
-      --alpha(var(--fade-color) / calc(var(--fade-base, 5) * 4%)) var(--tw-gradient-from-position, ),
-      --alpha(var(--fade-color) / calc(var(--fade-base, 5) * 2%)) var(--tw-gradient-to-position, )
-    );
-  }
+  --grad-color: --value(--color- *);
+  --grad-base: --modifier(integer);
+  @apply gradient-core [--grad-angle:90deg] [--grad-dark-from:15] [--grad-dark-to:5] [--grad-light-from:0] [--grad-light-to:10];
 }
 
-@utility tint-reverse { --tint-dir: to top; }
+/* Flip direction 180deg: tint -> to top, fade -> to left. */
+@utility gradient-reverse {
+  --grad-rev: 180deg;
+}
 
-@utility fade-reverse { --fade-dir: to left; }
+/* Force one mode's intensity across both modes (e.g. soften dark for contrast).
+   use-dark reads the family's own dark set, so it tracks fade's inversion. */
+@utility gradient-use-light {
+  --grad-from: var(--grad-light-from);
+  --grad-to: var(--grad-light-to);
+}
+@utility gradient-use-dark {
+  --grad-from: var(--grad-dark-from);
+  --grad-to: var(--grad-dark-to);
+}
+
+/* 1px gradient-border ring: color from the name, radius from an optional
+   modifier (default 4xl). e.g. gradient-ring-accent-a/3xl. Full usage + gotchas
+   live in the design-system skill. */
+@utility gradient-ring-* {
+  --gr-color: --value(--color- *);
+  --gr-radius: --modifier(--radius- *, [length]);
+  @apply relative bg-background;
+  border-radius: var(--gr-radius, var(--radius-4xl));
+
+  &::before {
+    @apply absolute -inset-px bottom-0 z-hide content-[''];
+    border-radius: calc(var(--gr-radius, var(--radius-4xl)) + 1px);
+    background-image: linear-gradient(
+      to bottom,
+      --alpha(var(--gr-color) / 24%),
+      --alpha(var(--gr-color) / 8%)
+    );
+    @variant dark {
+      background-image: linear-gradient(
+        to bottom,
+        --alpha(var(--gr-color) / 40%),
+        --alpha(var(--gr-color) / 20%)
+      );
+    }
+  }
+
+  & > :first-child {
+    border-radius: var(--gr-radius, var(--radius-4xl));
+  }
+}

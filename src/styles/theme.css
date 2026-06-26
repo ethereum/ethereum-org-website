@@ -210,12 +210,6 @@
   --color-staking-red: hsla(var(--staking-red));
   --color-staking-red-fill: hsla(var(--staking-red-fill));
 
-  /* Colors: misc / deprecated */
-  --color-switch-background: hsla(var(--switch-background));
-  --color-hub-hero-content: var(--hub-hero-content);
-  --color-search-background: var(--search-background);
-  --color-gradient-step-1: var(--gradient-step-1);
-
   /* Border radius */
   --radius-base: var(--radius-2xl);
 
