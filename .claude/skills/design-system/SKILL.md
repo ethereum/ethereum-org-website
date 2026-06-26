@@ -43,7 +43,7 @@ These are landmines where the code looks reasonable but the pattern is wrong. Th
 - **Cards**: `import { Card } from "@/components/ui/card"` is canonical for app code. The `<Card>` markdown shortcode is backed by `@/components/MarkdownCard` — that wrapper is rarely imported from app code, since composing the `ui/card` parts directly is more flexible.
 - **Tooltips**: `import Tooltip from "@/components/Tooltip"` (mobile-aware, Matomo-tracked, scroll-close). **Not** `import { Tooltip } from "@/components/ui/tooltip"` (that's the bare Radix primitive used internally).
 - **Modals**: `import Modal from "@/components/ui/dialog-modal"` (default export, the high-level convenience) for typical modal needs. `@/components/ui/dialog` is the vanilla shadcn-style primitive for fine-grained Radix control. Same names exported from both files; **do not mix sources within a feature**.
-- **Heroes**: import from `@/components/Hero` (`PageHero`, `HubHero`, `HomeHero`). `PageHero` is the canonical workhorse, covering image, text-only, and article-style heroes (`variant="no-divider"`, no `heroImg`). The old `MdxHero` was removed -- use `PageHero` text-only for the breadcrumb + h1 article shape it used to provide.
+- **Heroes**: import from `@/components/Hero` (`PageHero`, `HubHero`, `HomeHero`). `PageHero` is the canonical workhorse, covering image, component-aside (`heroComponent`), text-only, and article-style heroes (`variant="no-divider"`, no aside). `title` is always the `<h1>` (no `header` prop); an optional `eyebrow` sits above it. The old `MdxHero` was removed -- use `PageHero` text-only for the breadcrumb + h1 article shape it used to provide.
 
 ### Stale shadcn token names that don't resolve
 

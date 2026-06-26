@@ -80,7 +80,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="mx-auto w-full max-w-screen-2xl space-y-16 pb-16 md:space-y-24">
           <PageHero
-            variant="no-divider"
             breadcrumbs={{ slug: "latest" }}
             title={t("page-latest-title")}
             description={t("page-latest-subtitle")}
@@ -95,6 +94,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 variant: "outline",
               },
             ]}
+            variant="no-divider"
           />
 
           {/* Highlights */}
