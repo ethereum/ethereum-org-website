@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
+import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -13,6 +14,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { Section } from "@/components/ui/section"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { normalizeDeveloperToolsData } from "@/lib/utils/developerToolsData"
@@ -51,93 +53,112 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   } = detail
 
   return (
-    <MainArticle className="flex flex-col gap-10 px-page py-10">
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/developers/tools/">
-              {t("page-developers-tools-title")}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-            /
-          </BreadcrumbSeparator>
-          <BreadcrumbItem>
-            <BreadcrumbLink href={`/developers/tools/${category}/`}>
-              {categoryLabels[category] || category}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-            /
-          </BreadcrumbSeparator>
-          <BreadcrumbItem>
-            <BreadcrumbPage>{tool.name}</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-
-      {tool.banner_url && (
-        <Image
-          src={tool.banner_url}
-          alt=""
-          width={1200}
-          height={300}
-          className="h-40 w-full rounded-lg object-cover sm:h-56"
-        />
-      )}
-
-      <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
-        {tool.thumbnail_url && (
-          <Image
-            src={tool.thumbnail_url}
-            alt={tool.name}
-            width={124}
-            height={124}
-            className="size-16 shrink-0 rounded-xl object-cover xl:size-[124px]"
-          />
-        )}
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <div>
-              <Tag status={getCategoryTagStyle(tool.categoryId)}>
-                {categoryLabels[tool.categoryId] || tool.categoryId}
-              </Tag>
-            </div>
-            <h1 className="mt-0">{tool.name}</h1>
-            <p className="text-sm text-body-medium">
-              {subcategoryLabels[tool.subcategory_id] || tool.subcategory_id}
-            </p>
-            <TagsInlineText
-              list={tool.tags.map((tag) => tagLabels[tag] || tag)}
-              variant="light"
-              className="lowercase"
-            />
-          </div>
-          <ToolLinks
-            locale={locale}
-            tool={tool}
-            labels={{ website: labels.website, social: labels.social }}
-          />
-        </div>
+    <>
+      {/* Breadcrumb sits outside <main>, matching PageHero's eyebrow inset on
+          the catalog/category pages so it stays aligned across navigation. */}
+      <div className="p-hero lg:px-hero-1.5x lg:py-hero-2x">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+              /
+            </BreadcrumbSeparator>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/developers/tools/">
+                {t("page-developers-tools-title")}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+              /
+            </BreadcrumbSeparator>
+            <BreadcrumbItem>
+              <BreadcrumbLink href={`/developers/tools/${category}/`}>
+                {categoryLabels[category] || category}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+              /
+            </BreadcrumbSeparator>
+            <BreadcrumbItem>
+              <BreadcrumbPage>{tool.name}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
       </div>
 
-      {tool.description && (
-        <p className="max-w-3xl whitespace-pre-line">{tool.description}</p>
-      )}
+      <main className="pb-page">
+        <MainArticle className="flex flex-col gap-10 px-page">
+          {tool.banner_url && (
+            <Image
+              src={tool.banner_url}
+              alt=""
+              width={1200}
+              height={300}
+              className="h-40 w-full rounded-lg object-cover sm:h-56"
+            />
+          )}
 
-      {relatedTools.length > 0 && (
-        <section className="space-y-4">
-          <h2 className="text-h4">
-            {t("page-developers-tools-related-title")}
-          </h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {relatedTools.map((related) => (
-              <ToolCard key={getToolKey(related)} tool={related} />
-            ))}
+          <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
+            {tool.thumbnail_url && (
+              <Image
+                src={tool.thumbnail_url}
+                alt={tool.name}
+                width={124}
+                height={124}
+                className="size-16 shrink-0 rounded-xl object-cover xl:size-[124px]"
+              />
+            )}
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
+                <div>
+                  <Tag status={getCategoryTagStyle(tool.categoryId)}>
+                    {categoryLabels[tool.categoryId] || tool.categoryId}
+                  </Tag>
+                </div>
+                <h1 className="mt-0">{tool.name}</h1>
+                <p className="text-sm text-body-medium">
+                  {subcategoryLabels[tool.subcategory_id] ||
+                    tool.subcategory_id}
+                </p>
+                <TagsInlineText
+                  list={tool.tags.map((tag) => tagLabels[tag] || tag)}
+                  variant="light"
+                  className="lowercase"
+                />
+              </div>
+              <ToolLinks
+                locale={locale}
+                tool={tool}
+                labels={{ website: labels.website, social: labels.social }}
+              />
+            </div>
           </div>
-        </section>
-      )}
-    </MainArticle>
+
+          {tool.description && (
+            <p className="max-w-3xl whitespace-pre-line">{tool.description}</p>
+          )}
+
+          {relatedTools.length > 0 && (
+            <section className="space-y-4">
+              <h2 className="text-h4">
+                {t("page-developers-tools-related-title")}
+              </h2>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {relatedTools.map((related) => (
+                  <ToolCard key={getToolKey(related)} tool={related} />
+                ))}
+              </div>
+            </section>
+          )}
+        </MainArticle>
+
+        <Section className="px-page">
+          <ContentFeedback />
+        </Section>
+      </main>
+    </>
   )
 }
 

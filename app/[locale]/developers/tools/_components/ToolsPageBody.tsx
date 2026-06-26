@@ -1,7 +1,9 @@
 import { getTranslations } from "next-intl/server"
 
+import ContentFeedback from "@/components/ContentFeedback"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Section } from "@/components/ui/section"
 
 import type {
   DeveloperToolsCategory,
@@ -45,38 +47,44 @@ const ToolsPageBody = async ({
   })
 
   return (
-    <MainArticle className="space-y-20 px-page pt-4 pb-10">
-      <ToolsCatalog
-        // Reset client filter/search state when navigating between categories
-        key={currentCategoryId ?? "all"}
-        locale={locale}
-        tools={tools}
-        categories={categories}
-        currentCategoryId={currentCategoryId}
-        countByCategory={countByCategory}
-        totalCount={totalCount}
-        categoryLabels={categoryLabels}
-        subcategoryLabels={subcategoryLabels}
-        labels={{
-          searchPlaceholder: t("page-developers-tools-search-placeholder"),
-          allCategories: t("page-developers-tools-categories-title"),
-          resultsLabel: t("page-developers-tools-results-label"),
-          noResults: t("page-developers-tools-no-results"),
-        }}
-      />
-      <div className="flex flex-col items-center gap-4 rounded-base bg-radial-a p-12">
-        <h2>{t("page-developers-tools-suggest-resource-title")}</h2>
-        <p>{t("page-developers-tools-suggest-resource-description")}</p>
-        <ButtonLink
-          href={SUGGEST_RESOURCE_ISSUE_URL}
-          variant="outline"
-          className="w-fit"
-          hideArrow
-        >
-          {t("page-developers-tools-suggest-resource-button")}
-        </ButtonLink>
-      </div>
-    </MainArticle>
+    <main className="pb-page">
+      <MainArticle className="space-y-20 px-page pt-4">
+        <ToolsCatalog
+          // Reset client filter/search state when navigating between categories
+          key={currentCategoryId ?? "all"}
+          locale={locale}
+          tools={tools}
+          categories={categories}
+          currentCategoryId={currentCategoryId}
+          countByCategory={countByCategory}
+          totalCount={totalCount}
+          categoryLabels={categoryLabels}
+          subcategoryLabels={subcategoryLabels}
+          labels={{
+            searchPlaceholder: t("page-developers-tools-search-placeholder"),
+            allCategories: t("page-developers-tools-categories-title"),
+            resultsLabel: t("page-developers-tools-results-label"),
+            noResults: t("page-developers-tools-no-results"),
+          }}
+        />
+        <div className="flex flex-col items-center gap-4 rounded-base bg-radial-a p-12">
+          <h2>{t("page-developers-tools-suggest-resource-title")}</h2>
+          <p>{t("page-developers-tools-suggest-resource-description")}</p>
+          <ButtonLink
+            href={SUGGEST_RESOURCE_ISSUE_URL}
+            variant="outline"
+            className="w-fit"
+            hideArrow
+          >
+            {t("page-developers-tools-suggest-resource-button")}
+          </ButtonLink>
+        </div>
+      </MainArticle>
+
+      <Section className="px-page">
+        <ContentFeedback />
+      </Section>
+    </main>
   )
 }
 
