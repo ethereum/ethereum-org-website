@@ -57,7 +57,7 @@ import ethCoins from "@/public/images/get-eth-coins.png"
 import wallet from "@/public/images/wallet.png"
 
 const Eyebrow = ({ children }: { children: ReactNode }) => (
-  <p className="mb-3 text-sm font-bold tracking-wide text-primary uppercase">
+  <p className="text-sm font-bold tracking-wide text-primary-high-contrast uppercase">
     {children}
   </p>
 )
@@ -177,7 +177,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       <main className="p-page pt-page-2x">
         <MainArticle className="flow space-y-space-4x">
           <Section id="ways">
-            <h2 className="mb-space-2x text-center">
+            <h2 className="mb-space-2x text-center text-h1">
               {t("page-get-eth-ways-you-can-get-eth")}
             </h2>
             <Grid columns={3}>
@@ -201,7 +201,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               )}
             </Grid>
 
-            <p className="mt-space">
+            <p className="mt-space text-body-medium">
               <em>
                 {t("listing-policy-disclaimer")}{" "}
                 <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
@@ -227,25 +227,33 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <Section
             id="country-picker"
             data-flow="skip"
-            className="flex flex-col items-center rounded-2xl bg-background-highlight py-16"
+            className="flex flex-col items-center rounded-2xl bg-background-highlight py-24"
           >
-            <Eyebrow>{t("page-get-eth-exchanges-eyebrow")}</Eyebrow>
-            <h2 className="mb-4 text-center">
-              {t("page-get-eth-find-exchange-title")}
-            </h2>
-            <p className="mb-8 max-w-2xl text-center text-body-medium">
-              {t("page-get-eth-find-exchange-desc")}
-            </p>
+            <div className="flex flex-col items-center gap-6">
+              <Eyebrow>{t("page-get-eth-exchanges-eyebrow")}</Eyebrow>
+              <h2 className="text-center text-h1">
+                {t("page-get-eth-find-exchange-title")}
+              </h2>
+              <p className="max-w-2xl text-center text-lg text-body-medium">
+                {t("page-get-eth-find-exchange-desc")}
+              </p>
+            </div>
 
             {/* CLIENT SIDE */}
-            <I18nProvider locale={locale} messages={messages}>
-              <CentralizedExchanges
-                lastDataUpdateDate={exchangesByCountryLastUpdated}
-              />
-            </I18nProvider>
+            <div className="mt-6 flex w-full flex-col items-center">
+              <I18nProvider locale={locale} messages={messages}>
+                <CentralizedExchanges
+                  lastDataUpdateDate={exchangesByCountryLastUpdated}
+                />
+              </I18nProvider>
+            </div>
           </Section>
 
-          <Section id="safety">
+          <Section
+            id="safety"
+            data-flow="skip"
+            className="rounded-2xl bg-background-highlight p-8 md:p-16"
+          >
             <Grid balanced={2} className="items-center gap-8">
               <Image
                 src={wallet}
@@ -253,18 +261,20 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 sizes={`(max-width: ${screens.sm}) 100vw, (max-width: ${screens.md}) 60vw, calc(${screens["2xl"]} / 2)`}
                 alt=""
               />
-              <div className="flow">
+              <div className="flex flex-col gap-6">
                 <Eyebrow>{t("page-get-eth-safety-eyebrow")}</Eyebrow>
-                <h2 className="text-2xl leading-tight md:text-3xl">
-                  {t("page-get-eth-keep-it-safe")}
-                </h2>
-                <p>{t("page-get-eth-description")}</p>
-                <p>{t("page-get-eth-security")}</p>
+                <h2 className="text-h1">{t("page-get-eth-keep-it-safe")}</h2>
+                <p className="text-lg text-body-medium">
+                  {t("page-get-eth-description")}
+                </p>
+                <p className="text-lg text-body-medium">
+                  {t("page-get-eth-security")}
+                </p>
               </div>
             </Grid>
 
             <Grid columns={3} className="mt-space-2x">
-              <Card>
+              <Card variant="nested">
                 <CardContent>
                   <CardTitle>
                     {t("page-get-eth-protect-eth-in-wallet")}
@@ -278,14 +288,14 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card variant="nested">
                 <CardContent>
                   <CardTitle>{t("page-get-eth-your-address")}</CardTitle>
                   <CardParagraph>
                     {t("page-get-eth-your-address-desc")}
                   </CardParagraph>
                   <div className="select-none">
-                    <div className="rounded bg-background p-2">
+                    <div className="rounded bg-background-highlight p-2">
                       <p className="mb-0 font-monospace text-xs break-all text-body-medium">
                         0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
                       </p>
@@ -300,7 +310,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card variant="nested">
                 <CardContent>
                   <CardTitle>{t("page-get-eth-wallet-instructions")}</CardTitle>
                   <CardParagraph>
@@ -314,7 +324,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </Grid>
 
             <div className="mx-auto mt-space-2x flex w-full max-w-2xl flex-col items-center gap-space">
-              <h3 className="text-center text-xl leading-6 md:text-2xl">
+              <h3 className="text-center">
                 {t("page-get-eth-community-safety")}
               </h3>
               <CardList className="w-full" items={safetyArticles} />
