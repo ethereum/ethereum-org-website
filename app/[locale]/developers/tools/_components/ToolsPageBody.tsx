@@ -1,14 +1,17 @@
 import { getTranslations } from "next-intl/server"
 
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import type {
   DeveloperToolsCategory,
   DeveloperToolWithCategory,
 } from "../types"
 
-import SuggestAResource from "./SuggestAResource"
 import ToolsCatalog from "./ToolsCatalog"
+
+const SUGGEST_RESOURCE_ISSUE_URL =
+  "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
 
 type ToolsPageBodyProps = {
   locale: string
@@ -61,11 +64,18 @@ const ToolsPageBody = async ({
           noResults: t("page-developers-tools-no-results"),
         }}
       />
-      <SuggestAResource
-        title={t("page-developers-tools-suggest-resource-title")}
-        description={t("page-developers-tools-suggest-resource-description")}
-        buttonLabel={t("page-developers-tools-suggest-resource-button")}
-      />
+      <div className="flex flex-col items-center gap-4 rounded-2xl bg-radial-a p-12">
+        <h2>{t("page-developers-tools-suggest-resource-title")}</h2>
+        <p>{t("page-developers-tools-suggest-resource-description")}</p>
+        <ButtonLink
+          href={SUGGEST_RESOURCE_ISSUE_URL}
+          variant="outline"
+          className="w-fit"
+          hideArrow
+        >
+          {t("page-developers-tools-suggest-resource-button")}
+        </ButtonLink>
+      </div>
     </MainArticle>
   )
 }

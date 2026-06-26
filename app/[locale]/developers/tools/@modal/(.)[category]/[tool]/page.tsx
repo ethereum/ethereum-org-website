@@ -6,7 +6,7 @@ const Page = async (props: {
 }) => {
   const { locale, category, tool } = await props.params
   return (
-    <InterceptedToolDetail locale={locale} category={category} tool={tool} />
+    <InterceptedToolDetail locale={locale} category={category} toolKey={tool} />
   )
 }
 
