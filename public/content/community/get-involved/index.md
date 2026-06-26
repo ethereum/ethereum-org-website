@@ -80,7 +80,7 @@ By staking your ETH you can earn rewards whilst helping to secure the Ethereum n
 
 The Ethereum ecosystem is on a mission to fund public goods and impactful projects. With very small donations you can show your support and allow important work to be realized.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Financial professionals & Accountants <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
