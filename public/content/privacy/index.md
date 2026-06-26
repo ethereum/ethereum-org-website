@@ -93,5 +93,5 @@ Some projects exploring privacy for proving include [Client Side Proving](https:
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), an Ethereum Foundation research and development lab focused on privacy for the ecosystem
 - [Web3PrivacyNow](https://web3privacy.info/), a network of people, projects, and aligned organizations who protect and advance human rights online
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), an Ethereum wallet rating site aiming to provide a comprehensive list of wallets, their functionality, practices, and support for certain standards.
-- [Zk-kit](https://zkkit.pse.dev/): A set of libraries (algorithms, utility functions, and data structures) that can be reused in different projects and zero-knowledge protocols.
+- [Zk-kit](https://zkkit.org/): A set of libraries (algorithms, utility functions, and data structures) that can be reused in different projects and zero-knowledge protocols.
 - [Privacy Apps](/apps/categories/privacy/) - Discover a list of curated Privacy applications that run on Ethereum.
