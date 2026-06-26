@@ -43,7 +43,7 @@ test.describe("Placeholder positional fallback", () => {
   test("count mismatch: does not force-restore when residuals outnumber unconsumed entries", () => {
     // Only ONE unconsumed COMPONENT extraction, but TWO residual tokens.
     const extractions = new Map<string, string>([
-      ["COMPONENT:abc123", "<ButtonLink href=\"https://x\">Try it</ButtonLink>"],
+      ["COMPONENT:abc123", '<ButtonLink href="https://x">Try it</ButtonLink>'],
     ])
     const translated =
       "<HTML-PLACEHOLDER-COMPONENT-000000>label one</HTML-PLACEHOLDER-COMPONENT-000000> " +
@@ -59,10 +59,7 @@ test.describe("Placeholder positional fallback", () => {
 
   test("uncorrupted case: exact-hash path restores, fallback is a no-op", () => {
     const extractions = new Map<string, string>([
-      [
-        "LINK:def456",
-        "[ethers.org docs](https://docs.ethers.org)",
-      ],
+      ["LINK:def456", "[ethers.org docs](https://docs.ethers.org)"],
     ])
     // Hash matches the extraction key exactly -> exact-hash pass handles it.
     const translated =
@@ -70,9 +67,7 @@ test.describe("Placeholder positional fallback", () => {
 
     const result = reconstructFromPlaceholders(translated, extractions)
 
-    expect(result).toBe(
-      "Lee la [documentación](https://docs.ethers.org) aquí."
-    )
+    expect(result).toBe("Lee la [documentación](https://docs.ethers.org) aquí.")
     expect(result).not.toContain("HTML-PLACEHOLDER")
   })
 })

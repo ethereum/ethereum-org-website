@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server"
+
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
@@ -6,40 +8,38 @@ import FarcasterLogo from "@/public/images/dapps/farcaster.png"
 import UniswapLogo from "@/public/images/dapps/uni.png"
 import EthereumLogo from "@/public/images/layer-2/ethereum.png"
 
-const apps = [
-  {
-    name: "Aave",
-    description: "Lend your tokens to earn interest and withdraw any time.",
-    logo: AaveLogo,
-    website: "https://aave.com",
-  },
-  {
-    name: "Farcaster",
-    description: "The social and community platform of crypto.",
-    logo: FarcasterLogo,
-    website: "https://farcaster.xyz",
-  },
-  {
-    name: "Uniswap",
-    description: "Swap your tokens for different ones globally.",
-    logo: UniswapLogo,
-    website: "https://uniswap.org",
-  },
-]
+const BrowseApps = async () => {
+  const t = await getTranslations("component-browse-apps")
 
-const BrowseApps = () => {
+  const apps = [
+    {
+      name: "Aave",
+      description: t("aave-description"),
+      logo: AaveLogo,
+      website: "https://aave.com",
+    },
+    {
+      name: "Farcaster",
+      description: t("farcaster-description"),
+      logo: FarcasterLogo,
+      website: "https://farcaster.xyz",
+    },
+    {
+      name: "Uniswap",
+      description: t("uniswap-description"),
+      logo: UniswapLogo,
+      website: "https://uniswap.org",
+    },
+  ]
+
   return (
-    <div className="mt-16 flex flex-col items-center justify-center rounded-3xl bg-radial-b p-8 md:p-20">
+    <div className="bg-radial-b mt-16 flex flex-col items-center justify-center rounded-3xl p-8 md:p-20">
       <div className="flex max-w-2xl flex-col items-center justify-center gap-2 text-center">
-        <h2>Browse apps</h2>
-        <p className="text-body-medium">
-          We&apos;ve listed some of the most popular apps out there so you can
-          try one out. You&apos;ll need ETH and a wallet to get the most out of
-          them.
-        </p>
+        <h2>{t("title")}</h2>
+        <p className="text-body-medium">{t("description")}</p>
       </div>
       <ButtonLink href="/apps" className="mt-14">
-        Take a look
+        {t("take-a-look")}
       </ButtonLink>
       <div className="mt-14">
         <div className="flex flex-col gap-6">
@@ -73,7 +73,7 @@ const BrowseApps = () => {
                     variant="outline"
                     className="w-full"
                   >
-                    Go
+                    {t("go")}
                   </ButtonLink>
                 </div>
               </div>
@@ -91,7 +91,7 @@ const BrowseApps = () => {
               height: "24px",
             }}
           />
-          <p>Powered by Ethereum</p>
+          <p>{t("powered-by-ethereum")}</p>
         </div>
       </div>
     </div>

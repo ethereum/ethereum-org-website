@@ -155,7 +155,7 @@ import { Stack } from "@/components/ui/flex"
 `Stack` defaults to `flex flex-col gap-2`. It also has a `separator` prop:
 
 ```tsx
-<Stack separator={<Divider />}>{items}</Stack>
+<Stack separator={<HR />}>{items}</Stack>
 ```
 
 `HStack` (`flex-row items-center`) and `VStack` (`flex-col items-center`) are also available.

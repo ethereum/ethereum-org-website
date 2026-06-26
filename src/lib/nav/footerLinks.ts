@@ -20,6 +20,7 @@ export const buildFooterLinkSections = (
       { href: "/run-a-node/", text: t("run-a-node") },
       { href: "/security/", text: t("ethereum-security") },
       { href: "/quizzes/", text: t("quizzes-title") },
+      { href: "/stories/", text: t("nav-stories-label") },
       { href: "/glossary/", text: t("ethereum-glossary") },
     ],
   },

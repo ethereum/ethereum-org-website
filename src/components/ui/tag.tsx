@@ -183,7 +183,7 @@ export interface TagsInlineTextProps
 
 const TagsInlineText = forwardRef<HTMLParagraphElement, TagsInlineTextProps>(
   ({ className, list, delimiter = "·", max, variant, ...props }, ref) => {
-    const renderList = list.filter(String)
+    const renderList = list.filter(Boolean)
     if (renderList.length < 1) return null
     return (
       <p

@@ -3509,10 +3509,13 @@ function escapeMdxAngleBrackets(content: string): {
       // paren in `uint256の「より小さい（<）」`. Valid tag-name starts that are
       // preserved: a-zA-Z, /, _, $, > (the <> and </> fragments are handled
       // by the rules above). `a < b` (space after) is preserved too.
-      parts[i] = parts[i].replace(/(?<!&lt|&|\\|`)<(?![a-zA-Z\d/_$>\s])/g, () => {
-        fixCount++
-        return "&lt;"
-      })
+      parts[i] = parts[i].replace(
+        /(?<!&lt|&|\\|`)<(?![a-zA-Z\d/_$>\s])/g,
+        () => {
+          fixCount++
+          return "&lt;"
+        }
+      )
 
       if (parts[i] !== original) changed = true
     }
@@ -4080,7 +4083,7 @@ function fixImagePathDotSlash(content: string): {
  * Fix backslash-escaped quotes in JSX/MDX attributes.
  *
  * Crowdin sometimes backslash-escapes double quotes in JSX attributes:
- *   <ButtonLink variant=\"outline-color\" href=\"/path/\">
+ *   <ButtonLink variant=\"outline\" href=\"/path/\">
  * This is valid in JSON but breaks MDX compilation.
  * Fix: remove the backslash before quotes in JSX-like tag attributes.
  */

@@ -11,6 +11,7 @@ import type { PageParams } from "@/lib/types"
 import HomeHero from "@/components/Hero/HomeHero"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
+import LatestUpdates from "@/components/Homepage/LatestUpdates"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -121,6 +122,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             />
 
             <FeatureCards eventCategory={eventCategory} />
+
+            <LatestUpdates eventCategory={eventCategory} />
 
             <GetStartedGrid eventCategory={eventCategory} />
           </div>

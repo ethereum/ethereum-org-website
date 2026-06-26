@@ -83,30 +83,11 @@ const Scroller = ({
   )
 }
 
-const WhyGrid = () => {
-  const items = [
-    {
-      heading: "Money you can program",
-      description:
-        "Write code that defines how value moves, when, and to whom. No banks, no intermediaries, just logic you define.",
-    },
-    {
-      heading: "Future-proof skills",
-      description:
-        "Learn the building blocks of the next internet. The tech might evolve, but the principles of web3 are here to stay.",
-    },
-    {
-      heading: "Censorship resistance",
-      description:
-        "Build projects and commerce that can't be silenced by governments, corporations, or algorithms. If it matters, it stays online.",
-    },
-    {
-      heading: "Digital sovereignty",
-      description:
-        "Own your identity, assets, and creations online without relying on platforms that can delete you.",
-    },
-  ]
-
+const WhyGrid = ({
+  items,
+}: {
+  items: { heading: string; description: string }[]
+}) => {
   return (
     <div
       className={cn(
@@ -140,6 +121,25 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
     description: t("page-developers-speedrunethereum-description"),
     ctaLabel: t("page-developers-speedrunethereum-link"),
   }
+
+  const whyGridItems = [
+    {
+      heading: t("page-developers-why-grid-money-heading"),
+      description: t("page-developers-why-grid-money-desc"),
+    },
+    {
+      heading: t("page-developers-why-grid-skills-heading"),
+      description: t("page-developers-why-grid-skills-desc"),
+    },
+    {
+      heading: t("page-developers-why-grid-censorship-heading"),
+      description: t("page-developers-why-grid-censorship-desc"),
+    },
+    {
+      heading: t("page-developers-why-grid-sovereignty-heading"),
+      description: t("page-developers-why-grid-sovereignty-desc"),
+    },
+  ]
 
   const courses = await getVideoCourses()
 
@@ -222,7 +222,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </BigNumber>
               </div>
             </div>
-            <WhyGrid />
+            <WhyGrid items={whyGridItems} />
           </Section>
 
           <Section

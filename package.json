@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.11.0",
+  "version": "11.12.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -98,6 +98,7 @@
     "react-hook-form": "^7.52.1",
     "react-lite-youtube-embed": "^2.4.0",
     "react-select": "5.8.0",
+    "react-tweet": "^3.3.1",
     "reading-time": "^1.5.0",
     "recharts": "^2.13.3",
     "remark-gfm": "^4.0.1",

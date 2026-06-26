@@ -340,9 +340,11 @@ body
       ]
       // A string replacement would expand "$14" -> capture group 1 + "4"
       // (injecting `title="`). The function replacer keeps it literal.
-      const { content, appliedCount } = applyAttributeTranslations(locale, leaves, [
-        "Hasta $14, menos de $0.01",
-      ])
+      const { content, appliedCount } = applyAttributeTranslations(
+        locale,
+        leaves,
+        ["Hasta $14, menos de $0.01"]
+      )
       expect(content).toBe(`<Card title="Hasta $14, menos de $0.01" />`)
       expect(appliedCount).toBe(1)
     })

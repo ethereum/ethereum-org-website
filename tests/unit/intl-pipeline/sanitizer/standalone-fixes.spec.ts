@@ -2507,10 +2507,10 @@ author: Ori Pomerantz
   test.describe("fixEscapedQuotesInJsxAttributes", () => {
     test("removes backslash-escaped quotes in JSX attributes", () => {
       const input =
-        '<ButtonLink variant=\\"outline-color\\" href=\\"/roadmap/danksharding/\\">Zaidi</ButtonLink>'
+        '<ButtonLink variant=\\"outline\\" href=\\"/roadmap/danksharding/\\">Zaidi</ButtonLink>'
       const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
       expect(content).toBe(
-        '<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Zaidi</ButtonLink>'
+        '<ButtonLink variant="outline" href="/roadmap/danksharding/">Zaidi</ButtonLink>'
       )
       expect(fixCount).toBeGreaterThan(0)
     })
@@ -3227,8 +3227,7 @@ author: Ori Pomerantz
     })
 
     test("restores a dropped > with locale text glued after", () => {
-      const input =
-        "[Set](<https://en.wikipedia.org/wiki/Set_(mathematics)인"
+      const input = "[Set](<https://en.wikipedia.org/wiki/Set_(mathematics)인"
       const { content, fixCount } = fixDroppedAutolinkClose(input)
       expect(content).toBe(
         "[Set](<https://en.wikipedia.org/wiki/Set_(mathematics)>)인"

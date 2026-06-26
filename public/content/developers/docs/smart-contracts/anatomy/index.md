@@ -49,7 +49,7 @@ Other types include:
 
 For more explanation, take a look at the docs:
 
-- [See Vyper types](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [See Vyper types](https://docs.vyperlang.org/en/stable/types.html#value-types)
 - [See Solidity types](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Memory {#memory}
@@ -112,12 +112,12 @@ function balanceOf(address _owner) public view returns (uint256 _balance) {
 ```
 
 ```python
-dappName: public(string)
+dappName: public(String[64])
 
 @view
-@public
-def readName() -> string:
-  return dappName
+@external
+def readName() -> String[64]:
+  return self.dappName
 ```
 
 What is considered modifying state:
@@ -151,7 +151,7 @@ constructor() public {
 ```python
 # Vyper example
 
-@external
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
